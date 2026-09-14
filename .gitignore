@@ -1,0 +1,13 @@
+# Ephemeral TODOs (keep folder and its control files)
+artifacts/tmp/*
+**/tmp-results/**
+**/results-incoming/**
+**/manual-results/**
+*.stderr
+todos/ephemeral/*
+!todos/ephemeral/.gitkeep
+!todos/ephemeral/.gitignore
+.agent/
+CLINE.md
+.cline
+.clinerules
