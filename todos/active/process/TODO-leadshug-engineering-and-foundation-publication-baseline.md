@@ -5,7 +5,7 @@
 - **Approved by:** `Gabriel / user — 2026-09-14 — APROVADO`
 - **Approval scope:** preparar, em diretórios de staging descartáveis, os manifestos selecionados, a checagem de dependências, a varredura de segredos e a prova de instalação limpa para dois novos repositórios LeadsHug: Engineering e Foundation.
 - **Authority model:** o usuário aprova o TODO; Codex executa e consolida a evidência; Claude Code realiza revisão técnica sênior nos checkpoints e na entrega final.
-- **Not authorized by this TODO:** criar repositórios remotos, fazer push, definir visibilidade/licença/owner, apagar o histórico existente ou publicar credenciais.
+- **Not authorized beyond the explicit remote authorization below:** create additional repositories, change visibility or ownership, add a public license, delete existing history, publish credentials, or change paid GitHub plans.
 - **Renewed approval required when:** a seleção exigir descartar material LeadsHug potencialmente canônico, revelar segredo/dado privado, exigir nova infraestrutura/credencial, ou alterar o escopo dos dois repositórios.
 
 ## Remote Publication Authorization
