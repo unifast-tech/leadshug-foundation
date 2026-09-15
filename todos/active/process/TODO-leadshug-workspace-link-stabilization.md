@@ -10,9 +10,9 @@
 
 ## Delivery Status Canon
 
-- **Current delivery stage:** `Blocked-On-Tracked-Surface-Classification`
-- **Qualifiers:** `Native-Links-Installed + Inventory-Complete + Git-Policy-Decision-Required`
-- **Next exact step:** decidir o destino Git de `CLAUDE.md`, `.claude/settings.json` e `.agents/.sync_agent_links.lock` antes de alterar índice, ignore rules ou bootstrap.
+- **Current delivery stage:** `Awaiting-Native-Replay-Evidence`
+- **Qualifiers:** `Native-Links-Installed + Inventory-Complete + Generated-Installation-Policy-Applied + Bootstrap-Implemented`
+- **Next exact step:** replay the canonical bootstrap twice from a Windows-integrated user shell, capture both outputs, then run Claude technical review and closeout guards.
 
 ## Objective
 
@@ -30,11 +30,11 @@ Os nomes de compatibilidade `delphi-ai` e `foundation_documentation` não repres
 ## Scope
 
 - [x] Inventariar links, arquivos reais, reparse points, backups de reparação e o `git status` inicial de `LeadsHug`, sem apagar nem sobrescrever conteúdo; evidence recorded below.
-- [ ] Definir a política canônica de versionamento para artefatos de instalação: o que deve ser rastreado, ignorado, regenerado ou preservado como alteração do usuário.
-- [ ] Implementar um bootstrap idempotente e documentado para uma nova máquina/clone, usando apenas os dois repositórios de autoridade locais e links legíveis pelo Windows.
-- [ ] Ajustar os scripts de Engineering somente quando necessário para que `verify_context.sh --repair` e `sync_agent_rules.sh` não recriem links LX/WSL nem apontem para superfícies ausentes.
-- [ ] Preservar a regra em camadas de `.agents/rules/`; não substituir esse diretório por um único link de regras.
-- [ ] Validar no projeto raiz, API e Web que PowerShell/Git/Claude Code conseguem ler cada superfície vinculada.
+- [x] Definir a política canônica de versionamento para artefatos de instalação: o que deve ser rastreado, ignorado, regenerado ou preservado como alteração do usuário.
+- [x] Implementar um bootstrap idempotente e documentado para uma nova máquina/clone, usando apenas os dois repositórios de autoridade locais e links legíveis pelo Windows; native replay remains pending external-shell evidence.
+- [x] Ajustar os scripts de Engineering somente quando necessário para que `verify_context.sh --repair` e `sync_agent_rules.sh` não recriem links LX/WSL nem apontem para superfícies ausentes.
+- [x] Preservar a regra em camadas de `.agents/rules/`; não substituir esse diretório por um único link de regras.
+- [x] Validar no projeto raiz, API e Web que PowerShell/Git/Claude Code conseguem ler cada superfície vinculada.
 - [ ] Registrar topologia, política Git, comandos de bootstrap, exceções e evidências no Foundation e no Engineering corretos.
 - [ ] Executar checkpoint e revisão final do Claude Code; integrar qualquer finding material antes do encerramento.
 
@@ -61,6 +61,19 @@ The current topology cannot become clean and reproducible without choosing one o
 2. **Project-owned bridge files:** retain those three paths as tracked files in `LeadsHug`; replace hard links with deliberately versioned bridge/config files; and change bootstrap so it never overwrites them. This preserves product-local Git cleanliness but requires explicit synchronization whenever Engineering instructions/settings change.
 
 No option has been applied. The decision is material because the existing tracked `CLAUDE.md` contains product context while the new Engineering bootloader contains the current agent authority.
+
+## Git Policy Decision
+
+- **Approved by:** `Gabriel / user — 2026-09-15 — Aprovo`
+- **Decision:** apply option 1, generated installation surfaces. Remove `CLAUDE.md`, `.claude/settings.json` and `.agents/.sync_agent_links.lock` from the product index without deleting working files; add precise ignore rules; retain Git history; and bootstrap them only from Engineering.
+
+## Execution Evidence — In Progress
+
+- Product Git policy was committed locally as `d83ec11` on `LeadsHug/add_typeform_cloud`: the three approved paths were removed from the Git index only, their working files remain present as native hard links, and `.gitignore` now excludes only generated installation surfaces and repair backups.
+- Engineering bootstrap was committed locally as `4f69edd`: `tools/bootstrap_leadshug_workspace.sh` creates only the two compatibility junctions, refuses real-directory conflicts, then runs repair/sync/verify. `README.md` and the tool manifest document the command.
+- `tools/lib/native_links.sh` now resolves a file target relative to its link parent before identity comparison, and `native_link_creation_test.sh` covers the `../target-file.txt` pattern used by the synchronizer.
+- Engineering validation passed locally: `bash tools/self_check.sh` returned `OK`, including native-link, bootstrap syntax, routing and delivery-guard tests.
+- A direct PowerShell read check passed for all 18 linked directories and six linked files across root, API and Web after restoring native surfaces. The agent's noninteractive WSL lacks executable Windows-binary interop and is not valid evidence for the required bootstrap replay.
 
 ## Definition of Done
 
