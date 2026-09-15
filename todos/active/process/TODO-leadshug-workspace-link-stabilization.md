@@ -2,7 +2,7 @@
 
 ## Approval
 
-- **Approved by:** `<pending explicit APROVADO>`
+- **Approved by:** `Gabriel / user — 2026-09-15 — APROVADO`
 - **Approval scope:** estabilizar a instalação local que conecta `LeadsHug` a `leadshug-engineering` e `leadshug-foundation`, definindo links nativos Windows, bootstrap reproduzível, política de Git para superfícies geradas e evidência de leitura por Codex e Claude Code.
 - **Authority model:** o usuário aprova o contrato; Codex implementa e consolida evidências; Claude Code faz revisão técnica sênior; o usuário continua como autoridade final.
 - **Not authorized by this TODO:** apagar ou sobrescrever alterações existentes no worktree de `LeadsHug`, alterar comportamento funcional do produto, publicar dados, mudar repositórios/remotos, criar infraestrutura ou enfraquecer regras de revisão.
@@ -10,9 +10,9 @@
 
 ## Delivery Status Canon
 
-- **Current delivery stage:** `Awaiting-User-Approval`
-- **Qualifiers:** `Native-Links-Installed + Git-Policy-Unresolved + Bootstrap-Not-Yet-Canonicalized`
-- **Next exact step:** após `APROVADO`, inventariar as superfícies vinculadas e o estado Git existente antes de propor ou aplicar qualquer alteração de política.
+- **Current delivery stage:** `Blocked-On-Tracked-Surface-Classification`
+- **Qualifiers:** `Native-Links-Installed + Inventory-Complete + Git-Policy-Decision-Required`
+- **Next exact step:** decidir o destino Git de `CLAUDE.md`, `.claude/settings.json` e `.agents/.sync_agent_links.lock` antes de alterar índice, ignore rules ou bootstrap.
 
 ## Objective
 
@@ -29,7 +29,7 @@ Os nomes de compatibilidade `delphi-ai` e `foundation_documentation` não repres
 
 ## Scope
 
-- [ ] Inventariar links, arquivos reais, reparse points, backups de reparação e o `git status` inicial de `LeadsHug`, sem apagar nem sobrescrever conteúdo.
+- [x] Inventariar links, arquivos reais, reparse points, backups de reparação e o `git status` inicial de `LeadsHug`, sem apagar nem sobrescrever conteúdo; evidence recorded below.
 - [ ] Definir a política canônica de versionamento para artefatos de instalação: o que deve ser rastreado, ignorado, regenerado ou preservado como alteração do usuário.
 - [ ] Implementar um bootstrap idempotente e documentado para uma nova máquina/clone, usando apenas os dois repositórios de autoridade locais e links legíveis pelo Windows.
 - [ ] Ajustar os scripts de Engineering somente quando necessário para que `verify_context.sh --repair` e `sync_agent_rules.sh` não recriem links LX/WSL nem apontem para superfícies ausentes.
@@ -44,6 +44,23 @@ Os nomes de compatibilidade `delphi-ai` e `foundation_documentation` não repres
 - Não assumir que os `M` atuais de `CLAUDE.md` e `.claude/settings.json` são gerados: classificá-los antes de ignorar, substituir ou versionar.
 - Não copiar conteúdo histórico dos diretórios aposentados; os únicos provedores ativos são os dois repositórios novos.
 - Não transformar junctions/hard links locais em substitutos silenciosos de um processo de bootstrap documentado.
+
+## Inventory Evidence — 2026-09-15
+
+- `delphi-ai/` and `foundation_documentation/` are native Windows junctions resolving only to `leadshug-engineering` and `leadshug-foundation` respectively.
+- The root, API and Web surfaces contain the expected 18 directory junctions and six file hard links; a direct PowerShell read check passed for every one.
+- `CLAUDE.md` and `.claude/settings.json` are already tracked by the product. Their current hard-linked Engineering content differs from `LeadsHug` HEAD by 7/179 and 6/159 lines respectively. They were already modified before this TODO's execution and therefore remain user-owned until classified.
+- `.agents/.sync_agent_links.lock` is also tracked even though it is a generated synchronization lock. The remaining `.agents/`, `.claude/rules`, `.claude/skills`, API and Web installation surfaces are currently untracked and not ignored.
+- `rules.backup_20260827/` is an untracked historical repair backup. It must be preserved during this TODO and cannot be deleted as cleanup.
+
+## Git Policy Decision Required
+
+The current topology cannot become clean and reproducible without choosing one of these policies for the three tracked workspace artifacts:
+
+1. **Recommended — generated installation surfaces:** remove `CLAUDE.md`, `.claude/settings.json` and `.agents/.sync_agent_links.lock` from the product Git index without deleting their working files; add precise ignore rules; retain the existing contents in Git history; and make bootstrap regenerate them from Engineering. This makes Engineering the sole active authority for agent configuration.
+2. **Project-owned bridge files:** retain those three paths as tracked files in `LeadsHug`; replace hard links with deliberately versioned bridge/config files; and change bootstrap so it never overwrites them. This preserves product-local Git cleanliness but requires explicit synchronization whenever Engineering instructions/settings change.
+
+No option has been applied. The decision is material because the existing tracked `CLAUDE.md` contains product context while the new Engineering bootloader contains the current agent authority.
 
 ## Definition of Done
 
