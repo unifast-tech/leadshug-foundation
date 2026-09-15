@@ -11,9 +11,9 @@
 
 ## Delivery Status Canon
 
-- **Current delivery stage:** `Archive-Strategy-Decision-Pending`
-- **Qualifiers:** `Verified-Inventory-Complete + Verified-Backup-Complete + Final-Deletion-Approval-Pending`
-- **Next exact step:** choose where noncanonical historical material will live: a verified local archive, a dedicated private legacy repository, or `legacy/` paths inside the two active repositories.
+- **Current delivery stage:** `Ready-For-Final-Deletion-Approval`
+- **Qualifiers:** `Verified-Inventory-Complete + Verified-Backup-Complete + Local-Archive-Selected + Final-Deletion-Approval-Pending`
+- **Next exact step:** request separate explicit authorization before any deletion; the immediate integrity comparison completed with no file or hash drift.
 
 ## Objective
 
@@ -38,12 +38,12 @@ Todo artefato do legado deve terminar com uma classificação verificável: `mig
 - [x] Comparar o inventário com os dois novos repositórios e registrar a lacuna de cobertura por destino.
 - [x] Classificar cada lacuna como Engineering, Foundation, arquivo externo, segurança/privacidade ou exclusão justificada; classifications requiring archive strategy remain pending user direction.
 - [x] Criar backup verificável dos legados e um manifesto de recuperação antes da primeira movimentação.
-- [ ] Migrar conteúdo Engineering aprovado em commits temáticos para `leadshug-engineering`.
-- [ ] Migrar conteúdo Foundation aprovado em commits temáticos para `leadshug-foundation`.
-- [ ] Migrar ou registrar formalmente alterações não commitadas, arquivos não rastreados e deleções pendentes.
-- [ ] Rodar validações de contexto, regras, YAML, links nativos, testes de cada pacote e varredura de segredos após cada lote.
-- [ ] Executar revisão técnica do Claude Code e integrar findings antes do fechamento.
-- [ ] Produzir relatório de reconciliação com a classificação de todos os itens e hashes de backup.
+- [x] Migrar conteúdo Engineering aprovado em commits temáticos para `leadshug-engineering`; canonical selected content was already present in the published curated baseline, while divergent and noncanonical files were reconciled as superseded or archived.
+- [x] Migrar conteúdo Foundation aprovado em commits temáticos para `leadshug-foundation`; all current working-tree files are present and the two divergences are owned by the newer Foundation baseline.
+- [x] Migrar ou registrar formalmente alterações não commitadas, arquivos não rastreados e deleções pendentes; all are represented by the verified Git/working-tree archive and final classification manifests.
+- [x] Rodar validações de contexto, regras, YAML, links nativos, testes de cada pacote e varredura de segredos após cada lote; applicable Engineering checks passed and prior native Windows smoke evidence remains valid because no linker surface changed in this migration.
+- [x] Executar revisão técnica do Claude Code e integrar findings antes do fechamento.
+- [x] Produzir relatório de reconciliação com a classificação de todos os itens e hashes de backup.
 - [ ] Solicitar autorização final separada antes de arquivar ou apagar os dois diretórios legados.
 
 ## Explicit Exclusions
@@ -61,6 +61,7 @@ Todo artefato do legado deve terminar com uma classificação verificável: `mig
 - **Sensitive-content scan:** no credential was identified. Three pattern matches were reviewed as code/test identifiers, not secrets; raw scan paths remain only in the local inventory.
 - **Backup root:** `C:\Unifast\LeadsHug\.migration-staging\20260915\legacy-backup-v1`
 - **Recovery proof:** complete Git bundles verified for both source histories, plus working-tree tar archives. SHA-256 values are in `backup-manifest.json`; the Belluga history bundle is 65,954,956 bytes and the Delphi bundle is 2,662,930 bytes.
+- **Canonical reconciliation:** `artifacts/migration/legacy-reconciliation-20260915.md` records all 926 present legacy working-tree items and their active/archived disposition.
 
 ## Archive Strategy Decision Required
 
@@ -70,34 +71,40 @@ The two active repositories were intentionally kept free of legacy Belluga produ
 2. Create one dedicated private `leadshug-legacy-archive` repository for the bundles and historical material.
 3. Add explicit `legacy/` archive paths to the two active repositories, accepting that this expands their size and historical surface.
 
+## Archive Strategy Decision
+
+- **Selected by:** `Gabriel / user — 2026-09-15`
+- **Decision:** retain noncanonical historical material only in the verified local archive. It belongs to another project and must not be introduced into the active LeadsHug repositories.
+- **Active-repository implication:** `leadshug-engineering` and `leadshug-foundation` remain the only working authorities; historical Belluga, inactive Flutter/Laravel/Cline material and the full legacy Git histories remain recoverable under `C:\Unifast\LeadsHug\.migration-staging\20260915\legacy-backup-v1`.
+
 ## Definition of Done
 
-- [ ] Cada arquivo legado está presente em um inventário com classificação e destino/justificativa.
-- [ ] Todo conteúdo LeadsHug canônico está commitado e enviado ao repositório novo correto.
-- [ ] Todo conteúdo histórico necessário possui backup recuperável e hash verificado fora das superfícies ativas.
-- [ ] Nenhum segredo, dado privado indevido, cache ou artefato gerado foi publicado.
-- [ ] `leadshug-engineering` e `leadshug-foundation` passam em suas verificações e testes aplicáveis após a migração.
-- [ ] Claude Code conclui revisão técnica final como `no_material_findings` ou `findings_integrated`.
+- [x] Cada arquivo legado está presente em um inventário com classificação e destino/justificativa.
+- [x] Todo conteúdo LeadsHug canônico está commitado e enviado ao repositório novo correto.
+- [x] Todo conteúdo histórico necessário possui backup recuperável e hash verificado fora das superfícies ativas.
+- [x] Nenhum segredo, dado privado indevido, cache ou artefato gerado foi publicado.
+- [x] `leadshug-engineering` e `leadshug-foundation` passam em suas verificações e testes aplicáveis após a migração.
+- [x] Claude Code conclui revisão técnica final como `no_material_findings` ou `findings_integrated`.
 - [ ] O usuário recebe o relatório de reconciliação e aprova explicitamente qualquer arquivamento/descarte dos legados.
 
 ## Validation Steps
 
-- [ ] Gerar manifestos com hashes SHA-256 antes e depois de cada lote.
-- [ ] Confirmar `git status`, `git diff --check` e histórico de commits de ambos os repositórios novos.
-- [ ] Rodar `bash tools/self_check.sh` e `bash tools/verify_context.sh` em `leadshug-engineering` quando as superfícies correspondentes forem alteradas.
-- [ ] Rodar verificações estruturais, de referências e de segredo em `leadshug-foundation` após cada lote documental.
-- [ ] Rodar o smoke nativo Windows para links quando scripts de contexto/linker forem migrados ou modificados.
-- [ ] Executar `python3 tools/codex_claude_delivery_guard.py <todo-path> --require-final-review` a partir de `leadshug-engineering` antes de declarar a migração pronta.
+- [x] Gerar manifestos com hashes SHA-256 antes e depois de cada lote.
+- [x] Confirmar `git status`, `git diff --check` e histórico de commits de ambos os repositórios novos.
+- [x] Rodar `bash tools/self_check.sh` em `leadshug-engineering`; `verify_context.sh` was not rerun because no linker/context surface changed after the already-passing native Windows smoke.
+- [x] Rodar verificações estruturais, de referências e de segredo em `leadshug-foundation` após cada lote documental.
+- [x] Rodar o smoke nativo Windows para links quando scripts de contexto/linker forem migrados ou modificados; no such script changed in this migration and the prior smoke remains the applicable evidence.
+- [x] Executar `python3 tools/codex_claude_delivery_guard.py <todo-path> --require-final-review` a partir de `leadshug-engineering` antes de declarar a migração pronta; outcome `go` em 2026-09-15.
 
 ## Codex–Claude Delivery Cycle
 
 - **User approval evidence:** `Gabriel / user — 2026-09-15 — APROVADO`
 - **Execution lead:** `Codex`
 - **Senior technical reviewer:** `Claude Code`
-- **Claude checkpoint status:** `not_run`
-- **Claude final review status:** `not_run`
-- **Claude final review evidence:** `<pending>`
-- **Material findings disposition:** `<pending>`
+- **Claude checkpoint status:** `findings_integrated`
+- **Claude final review status:** `findings_integrated`
+- **Claude final review evidence:** `artifacts/migration/claude-legacy-reconciliation-review.json` (Claude Sonnet, read-only, session `2a8d9b66-2d90-4d5c-a4ba-ee46e4e51147`, outcome `go`)
+- **Material findings disposition:** `integrated: self-check evidence and TODO bookkeeping were added; Claude reported no release blocker.`
 - **Continuity rule:** `After approval, continue through inventory, migration, tests and review-driven repairs without pausing except for a material classification/security/architecture finding or the final deletion authorization.`
 - **Escalate to user only if:** `a classification is ambiguous, a secret/private datum is found, a conflict changes LeadsHug authority, or the final archival/deletion decision is reached.`
 
