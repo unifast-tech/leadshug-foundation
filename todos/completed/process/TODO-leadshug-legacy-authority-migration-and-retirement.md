@@ -11,9 +11,9 @@
 
 ## Delivery Status Canon
 
-- **Current delivery stage:** `Ready-For-Final-Deletion-Approval`
-- **Qualifiers:** `Verified-Inventory-Complete + Verified-Backup-Complete + Local-Archive-Selected + Final-Deletion-Approval-Pending`
-- **Next exact step:** request separate explicit authorization before any deletion; the immediate integrity comparison completed with no file or hash drift.
+- **Current delivery stage:** `Completed`
+- **Qualifiers:** `Verified-Inventory-Complete + Verified-Backup-Complete + Local-Archive-Selected + Explicit-Deletion-Authorization-Executed`
+- **Next exact step:** none; retain the verified local archive according to the archive strategy.
 
 ## Objective
 
@@ -44,7 +44,7 @@ Todo artefato do legado deve terminar com uma classificação verificável: `mig
 - [x] Rodar validações de contexto, regras, YAML, links nativos, testes de cada pacote e varredura de segredos após cada lote; applicable Engineering checks passed and prior native Windows smoke evidence remains valid because no linker surface changed in this migration.
 - [x] Executar revisão técnica do Claude Code e integrar findings antes do fechamento.
 - [x] Produzir relatório de reconciliação com a classificação de todos os itens e hashes de backup.
-- [ ] Solicitar autorização final separada antes de arquivar ou apagar os dois diretórios legados.
+- [x] Solicitar autorização final separada antes de arquivar ou apagar os dois diretórios legados; `Gabriel / user — 2026-09-15 — APROVADO PARA EXCLUIR delphi-ai e belluga_now_foundation_documentation`.
 
 ## Explicit Exclusions
 
@@ -85,7 +85,7 @@ The two active repositories were intentionally kept free of legacy Belluga produ
 - [x] Nenhum segredo, dado privado indevido, cache ou artefato gerado foi publicado.
 - [x] `leadshug-engineering` e `leadshug-foundation` passam em suas verificações e testes aplicáveis após a migração.
 - [x] Claude Code conclui revisão técnica final como `no_material_findings` ou `findings_integrated`.
-- [ ] O usuário recebe o relatório de reconciliação e aprova explicitamente qualquer arquivamento/descarte dos legados.
+- [x] O usuário recebe o relatório de reconciliação e aprova explicitamente qualquer arquivamento/descarte dos legados; the two authorized legacy directories were removed only after recovery artifacts were verified.
 
 ## Validation Steps
 

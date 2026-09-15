@@ -29,6 +29,8 @@ The textual `git status --porcelain` snapshots now expand a few previously colla
 
 `leadshug-engineering` also passed `bash tools/self_check.sh`: stack-capability validation, native-link fallback test, agent-role routing guard, Codex–Claude delivery guard and the Engineering self-check all returned OK.
 
-## Retirement Boundary
+## Retirement Completion
 
-The reconciliation does not authorize deletion. A separate explicit user approval is required before permanently removing the legacy directories. The verified archive must remain available until that approval is executed and a final recovery check passes.
+The user supplied separate explicit authorization on 2026-09-15: `APROVADO PARA EXCLUIR delphi-ai e belluga_now_foundation_documentation`. Before executing it, all four recovery artifacts matched the backup manifest's size and SHA-256 values; both Git bundles also verified as complete histories. Only the two authorized legacy directories were then permanently removed, and their absence was confirmed.
+
+The verified local archive remains available at `C:\Unifast\LeadsHug\.migration-staging\20260915\legacy-backup-v1` and is the recovery source for the retired histories and working trees.
