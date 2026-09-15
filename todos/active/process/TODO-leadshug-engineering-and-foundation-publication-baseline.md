@@ -16,9 +16,9 @@
 
 ## Delivery Status Canon
 
-- **Current delivery stage:** `Remote-Publication-Authorized`
-- **Qualifiers:** `Publishing + Remote-Hardening-Pending`
-- **Next exact step:** create both approved private GitHub repositories, push their selected local baselines to `main`, and apply the approved branch protection.
+- **Current delivery stage:** `Remote-Published`
+- **Qualifiers:** `Branch-Protection-Blocked-By-GitHub-Plan + Remote-Hardening-Pending`
+- **Next exact step:** retain both repositories as private and decide whether to upgrade the `unifast-tech` GitHub plan to enable the approved `main` branch protection; do not reduce repository privacy as a workaround.
 
 ## Objective
 
@@ -55,6 +55,7 @@ Create evidence-backed clean baselines for two future repositories, without inhe
 | `D-04` | Codex is execution lead; Claude Code is senior technical reviewer; user remains final human authority. | approved direction | user conversation |
 | `D-05` | Publication occurs only after a clean, tested baseline and explicit remote metadata decisions. | approved direction | user conversation |
 | `D-06` | Publish private repositories `unifast-tech/leadshug-engineering` and `unifast-tech/leadshug-foundation`, with no public license and protected `main`; user is the human approver. | approved | user approval — 2026-09-14 |
+| `D-07` | Keep both repositories private when GitHub rejects branch protection on the current plan; require an explicit user decision before any plan upgrade or visibility change. | applied | GitHub REST response 403 — 2026-09-15 |
 
 ## Execution Plan
 
@@ -121,6 +122,8 @@ Create evidence-backed clean baselines for two future repositories, without inhe
 | Native link repair | passed | v5 proved UTF-16LE/base64 PowerShell link creation and native readability for every required installation surface |
 | Deterministic contracts | integrated | Engineering `deterministic/core/.gitkeep` preserves the target of `.agents/deterministic/core`; Foundation `deterministic/.gitkeep` preserves the target of `.agents/deterministic/local` |
 | Claude B2 | integrated | Engineering received the same diff check and credential scan as Foundation; both passed before tree hash capture |
+| Remote publication | published | private `https://github.com/unifast-tech/leadshug-engineering` at `6d22f884ae7b7bfb004f9174db8581218e955c86`; private `https://github.com/unifast-tech/leadshug-foundation` initial baseline at `dbd7dded455182de6beb5803b47d8c336d440782`, with this follow-up recording the remote outcome |
+| Main branch protection | blocked by GitHub plan | GitHub Branch Protection API returned HTTP 403: private repositories require GitHub Pro/Team or public visibility. Privacy is retained; no workaround was applied. |
 
 ## Hardening Follow-Ups Before Remote Publication
 
@@ -130,6 +133,7 @@ Create evidence-backed clean baselines for two future repositories, without inhe
 - Keep the active-stack scan command and its historical-TODO allowance documented with the publication manifests.
 - Detect an existing native Windows junction before the safe-backup branch of `verify_context.sh`, avoiding backup litter on repeated repairs when WSL does not classify a junction as `-L`.
 - Preserve the suppressed native symlink creation error in a WARN-level diagnostic when the junction/hardlink fallback succeeds.
+- After an approved `unifast-tech` plan upgrade, apply the intended `main` protection: one PR approval, stale-review dismissal, last-push approval, linear history, conversation resolution, and no force-push or deletion. Add required status checks only when CI workflows exist.
 
 ## Native Windows Smoke Evidence
 
