@@ -4,7 +4,7 @@
 
 - **Approved by:** user (2026-09-01)
 - **Approval scope:** define and implement the first bounded integration between LeadsHug and Typebot for automations/chatbots, preserving LeadsHug authority over tenants, users, contacts, conversations and WhatsApp channels.
-- **Authority:** `delphi-ai` executes and validates this TODO.
+- **Authority:** `leadshug-foundation` governa o contrato; `leadshug-engineering` fornece método e guardas; Codex executa e Claude Code revisa.
 
 ## Delivery Status Canon
 
@@ -81,7 +81,7 @@ The three management improvements above are part of this TODO's next delivery sl
 - [x] Run `task test:tela` against the built Web and API processes.
 - [x] Run `npm run test:cov` in `apps/api`.
 - [x] Run the Typebot-focused unit and BFF regression tests.
-- [x] Run the Delphi rule-spirit scan for the changed LeadsHug API/Web surfaces.
+- [x] Run the Engineering rule-spirit scan for the changed LeadsHug API/Web surfaces.
 - [ ] Send and observe one real Typebot response through an official WhatsApp number.
 
 ### Execution evidence
@@ -133,7 +133,7 @@ The three management improvements above are part of this TODO's next delivery sl
 - [x] Every automated test created by this TODO passes, including unit, API authorization/contract boundaries, integration and browser tests, against the declared local topology.
 - [x] No test is skipped, weakened or removed to obtain approval; any intentional exception requires a new user decision.
 - [x] `task check` and CI-equivalent application checks pass.
-- [ ] Delphi-ai authority, completion and closeout guards pass.
+- [ ] Engineering/Foundation authority, completion and closeout guards pass.
 - [ ] Completion evidence matrix is filled with all criteria passed before closeout.
 
 ## Local CI-Equivalent Suite Matrix
@@ -156,7 +156,7 @@ The three management improvements above are part of this TODO's next delivery sl
 
 | Reviewer Surface / Package | Review Focus | Status | Evidence Artifact / Command | Findings | Resolution / Notes |
 | --- | --- | --- | --- | --- | --- |
-| LeadsHug API/Web changed surfaces | Secret leakage, browser-owned provider calls, tenant bypass and test-only shortcuts | passed | Delphi `rule_spirit_anti_pattern_scan.sh --repo ... --stack docker --path apps/api/src --path apps/web/src --path apps/web/e2e` | 22 heuristic review findings, max severity `review`; no blocker findings. | Findings are local URL/test fixtures or validation regexes; no unresolved high-priority bypass was found. |
+| LeadsHug API/Web changed surfaces | Secret leakage, browser-owned provider calls, tenant bypass and test-only shortcuts | passed | Engineering `rule_spirit_anti_pattern_scan.sh --repo ... --stack docker --path apps/api/src --path apps/web/src --path apps/web/e2e` | 22 heuristic review findings, max severity `review`; no blocker findings. | Findings are local URL/test fixtures or validation regexes; no unresolved high-priority bypass was found. |
 | Typebot delivery package | Confirm new-tab UX and provider fallback do not bypass server authority | passed | `integracao.controller.ts`; `Typebot.tsx`; focused Typebot tests | No blocker findings; token is not returned to Web and Cloud failure no longer becomes a 500. | Keep the real provider exchange as the explicit manual validation gate. |
 
 ## Completion Evidence Matrix
@@ -188,22 +188,22 @@ The three management improvements above are part of this TODO's next delivery sl
 | DOD-07 | Definition of Done | Every automated test created by this TODO passes, including unit, API authorization/contract boundaries, integration and browser tests, against the declared local topology. | test | `task check`; `task test:e2e`; `task test:tela`; `npm run test:cov` | local | passed | 103 API unit, 16 Web unit, 217 API E2E, 20 browser and 320 coverage tests passed. |
 | DOD-08 | Definition of Done | No test is skipped, weakened or removed to obtain approval; any intentional exception requires a new user decision. | review | Git diff/test review; guardrails | local | passed | No Typebot test was skipped or weakened. |
 | DOD-09 | Definition of Done | `task check` and CI-equivalent application checks pass. | test | `task check`; `task test:e2e`; `task test:tela`; `npm run test:cov` | local | passed | All recorded application gates pass. |
-| DOD-10 | Definition of Done | Delphi-ai authority, completion and closeout guards pass. | guard | `todo_authority_guard.py`; `todo_closeout_guard.py`; completion guard output | foundation | blocked | Authority and closeout are being refreshed after this matrix update; completion remains blocked by open criteria. |
+| DOD-10 | Definition of Done | Engineering/Foundation authority, completion and closeout guards pass. | guard | `todo_authority_guard.py`; `todo_closeout_guard.py`; completion guard output | foundation | blocked | Authority and closeout are being refreshed after this matrix update; completion remains blocked by open criteria. |
 | DOD-11 | Definition of Done | Completion evidence matrix is filled with all criteria passed before closeout. | TODO closeout | This matrix plus blocked AC-07/SCOPE-06/DOD-03/DOD-06 rows | foundation | blocked | Closeout cannot claim complete while external validation and audit contract remain open. |
 | VAL-01 | Validation Steps | Run `task check`. | command | `task check` | local | passed | 103 API unit, 16 Web unit and 56 guardrails passed. |
 | VAL-02 | Validation Steps | Run `task test:e2e` against PostgreSQL and the applied Prisma migrations. | command | `task test:e2e` | local | passed | 20 files and 217 tests passed; all 17 migration versions were current. |
 | VAL-03 | Validation Steps | Run `task test:tela` against the built Web and API processes. | command | Playwright `task test:tela` | local | passed | Web build succeeded and 20/20 browser tests passed. |
 | VAL-04 | Validation Steps | Run `npm run test:cov` in `apps/api`. | command | `npm run test:cov` | local | passed | 36 files and 320 tests passed; 90.19% statements. |
 | VAL-05 | Validation Steps | Run the Typebot-focused unit and BFF regression tests. | command | `npx vitest run src/surfaces/bff/integracao.typebot.spec.ts src/integrations/typebot/typebot.client.spec.ts` | local | passed | 6 focused tests passed. |
-| VAL-06 | Validation Steps | Run the Delphi rule-spirit scan for the changed LeadsHug API/Web surfaces. | guard | Delphi `rule_spirit_anti_pattern_scan.sh` | local | passed | 22 review-level heuristic findings, no blocker or P1/P2. |
+| VAL-06 | Validation Steps | Run the Engineering rule-spirit scan for the changed LeadsHug API/Web surfaces. | guard | Engineering `rule_spirit_anti_pattern_scan.sh` | local | passed | 22 review-level heuristic findings, no blocker or P1/P2. |
 | VAL-07 | Validation Steps | Send and observe one real Typebot response through an official WhatsApp number. | manual external validation | Typebot Cloud + official WhatsApp | stage/prod | blocked | Awaiting available official number and user confirmation. |
 
 ## Rules Acknowledgement / Ingestion
 
 | Source | Why It Applies Now | Must Preserve | Must Avoid | Execution Impact |
 | --- | --- | --- | --- | --- |
-| `delphi-ai/workflows/docker/todo-driven-execution-method.md` | governs TODO execution | approved boundary and evidence | implementation before decisions | stop at decision gate |
-| `delphi-ai/rules/stacks/nestjs/leadshug-backend.md` | governs API/integration work | tenant scope and server authority | browser-held secrets | add contract/security tests |
+| `leadshug-engineering/workflows/docker/todo-driven-execution-method.md` | governs TODO execution | approved boundary and evidence | implementation before decisions | stop at decision gate |
+| `leadshug-engineering/rules/stacks/nestjs/leadshug-backend.md` | governs API/integration work | tenant scope and server authority | browser-held secrets | add contract/security tests |
 
 ## Agent Routing Preflight
 
@@ -219,7 +219,7 @@ The three management improvements above are part of this TODO's next delivery sl
 
 ## Next Action
 
-Delphi-ai may execute the TODO and will stop only if a new product or security decision is required.
+Codex may execute the TODO using the `leadshug-engineering` method and stops only if a new product or security decision is required.
 
 ## TODO Closeout Disposition
 

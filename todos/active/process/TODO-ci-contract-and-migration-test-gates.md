@@ -4,7 +4,7 @@
 
 - **Approved by:** Gabriel / user - 2026-08-31
 - **Approval scope:** strengthen TODO governance so every implementation that changes API responses, database schema, migrations, environment topology or user flows updates the corresponding contract tests and validates the same commands/configuration used by GitHub Actions.
-- **Authority:** `delphi-ai` executes and validates this TODO.
+- **Authority:** `leadshug-foundation` governa o contrato; `leadshug-engineering` fornece método e guardas; Codex executa e Claude Code revisa.
 
 ## Delivery Status Canon
 
@@ -15,7 +15,7 @@
 ## Scope
 
 - [x] Update LeadsHug constitution with contract/migration/CI/E2E parity requirements.
-- [x] Update Delphi TODO template with mandatory CI-equivalent and contract-test checks.
+- [x] Update the Engineering TODO template with mandatory CI-equivalent and contract-test checks.
 - [x] Require migration validation whenever Prisma schema or migration files change.
 - [x] Require response-shape expectation updates whenever API projections or DTOs change.
 - [x] Require Playwright to use the same `DATABASE_URL`, API port and refreshed web build as CI.
@@ -26,7 +26,7 @@
 - [x] Future TODOs explicitly identify affected contracts and their tests.
 - [x] Future TODOs explicitly identify migration and environment validation when applicable.
 - [x] Future TODOs cannot claim completion with aggregate test evidence only.
-- [x] Process changes are documented in canonical Foundation/Delphi sources.
+- [x] Process changes are documented in canonical Foundation/Engineering sources.
 
 ## Validation Steps
 
@@ -38,7 +38,7 @@
 | Criterion ID | Source Section | Criterion | Evidence Type | Evidence Artifact / Command | Runtime Target | Status | Notes |
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | S01 | Scope | Update LeadsHug constitution with contract/migration/CI/E2E parity requirements. | doc | project_constitution.md | local | passed | |
-| S02 | Scope | Update Delphi TODO template with mandatory CI-equivalent and contract-test checks. | doc | todo_template.md | local | passed | |
+| S02 | Scope | Update the Engineering TODO template with mandatory CI-equivalent and contract-test checks. | doc | todo_template.md | local | passed | |
 | S03 | Scope | Require migration validation whenever Prisma schema or migration files change. | doc | template persistence gate | local | passed | |
 | S04 | Scope | Require response-shape expectation updates whenever API projections or DTOs change. | doc | template contract-test gate | local | passed | |
 | S05 | Scope | Require Playwright to use the same `DATABASE_URL`, API port and refreshed web build as CI. | doc | template browser parity gate | local | passed | |
@@ -46,13 +46,13 @@
 | D01 | Definition of Done | Future TODOs explicitly identify affected contracts and their tests. | doc | updated template | local | passed | |
 | D02 | Definition of Done | Future TODOs explicitly identify migration and environment validation when applicable. | doc | updated template | local | passed | |
 | D03 | Definition of Done | Future TODOs cannot claim completion with aggregate test evidence only. | doc | completion evidence rules | local | passed | |
-| D04 | Definition of Done | Process changes are documented in canonical Foundation/Delphi sources. | review | constitution and template changes | local | passed | |
+| D04 | Definition of Done | Process changes are documented in canonical Foundation/Engineering sources. | review | constitution and template changes | local | passed | |
 
 ## Rules Acknowledgement / Ingestion
 | Source | Why It Applies Now | Must Preserve | Must Avoid | Execution Impact |
 | --- | --- | --- | --- | --- |
-| `delphi-ai/workflows/docker/todo-delivery-gates-method.md` | governs delivery evidence | exact commands and artifacts | aggregate-only claims | require matrices |
-| `delphi-ai/rules/stacks/nestjs/leadshug-backend.md` | governs Prisma/API changes | schema and contract alignment | drift between code and tests | require migration tests |
+| `leadshug-engineering/workflows/docker/todo-delivery-gates-method.md` | governs delivery evidence | exact commands and artifacts | aggregate-only claims | require matrices |
+| `leadshug-engineering/rules/stacks/nestjs/leadshug-backend.md` | governs Prisma/API changes | schema and contract alignment | drift between code and tests | require migration tests |
 
 ## Agent Routing Preflight
 - **Client surface:** codex

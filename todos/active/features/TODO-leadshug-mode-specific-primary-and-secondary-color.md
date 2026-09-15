@@ -4,7 +4,7 @@
 
 - **Approved by:** pending user approval
 - **Approval scope:** allow the account to configure a primary color for light mode and another for dark mode, remove the configurable secondary-color field, use fixed dark-theme color `#121212`, and preserve the current light-theme color.
-- **Authority:** `delphi-ai` executes and validates this TODO.
+- **Authority:** `leadshug-foundation` governa o contrato; `leadshug-engineering` fornece método e guardas; Codex executa e Claude Code revisa.
 
 ## Delivery Status Canon
 
@@ -52,15 +52,15 @@ Improve LeadsHug branding flexibility by allowing the primary action color to va
 - [ ] Existing accounts remain valid and retain branding according to the approved migration decision.
 - [ ] Automated tests cover persistence, authorization, theme switching and contrast.
 - [ ] `task check` and relevant Playwright scenarios pass.
-- [ ] Delphi-ai authority, completion and closeout guards pass.
+- [ ] Engineering/Foundation authority, completion and closeout guards pass.
 - [ ] Evidence matrix is complete before closeout.
 
 ## Rules Acknowledgement / Ingestion
 
 | Source | Why It Applies Now | Must Preserve | Must Avoid | Execution Impact |
 | --- | --- | --- | --- | --- |
-| `delphi-ai/workflows/docker/todo-driven-execution-method.md` | governs TODO execution | user decisions and evidence | implementation before approval | stop at decision gate |
-| `delphi-ai/rules/stacks/react/leadshug-frontend.md` | governs React visual behavior | API boundary and test coverage | theme-specific token drift | update UI and E2E tests |
+| `leadshug-engineering/workflows/docker/todo-driven-execution-method.md` | governs TODO execution | user decisions and evidence | implementation before approval | stop at decision gate |
+| `leadshug-engineering/rules/stacks/react/leadshug-frontend.md` | governs React visual behavior | API boundary and test coverage | theme-specific token drift | update UI and E2E tests |
 
 ## Agent Routing Preflight
 

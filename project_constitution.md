@@ -11,9 +11,9 @@ Esta constituição governa o LeadsHug, uma central multi-tenant de relacionamen
 1. Decisões aprovadas e documentos canônicos deste foundation.
 2. TODO tático ativo e aprovado.
 3. Código e testes do repositório LeadsHug.
-4. Regras e workflows reutilizáveis do `delphi-ai`.
+4. Regras e workflows reutilizáveis do `leadshug-engineering`.
 
-Quando houver conflito, a regra mais específica do projeto prevalece sobre a regra genérica do Delphi.
+Quando houver conflito, a regra mais específica do produto prevalece sobre a regra genérica de engenharia.
 
 ## System invariants
 
