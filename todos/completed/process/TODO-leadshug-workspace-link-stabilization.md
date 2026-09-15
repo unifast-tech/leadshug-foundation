@@ -10,9 +10,9 @@
 
 ## Delivery Status Canon
 
-- **Current delivery stage:** `Awaiting-Native-Replay-Evidence`
-- **Qualifiers:** `Native-Links-Installed + Inventory-Complete + Generated-Installation-Policy-Applied + Bootstrap-Implemented`
-- **Next exact step:** replay the canonical bootstrap twice from a Windows-integrated user shell, capture both outputs, then run Claude technical review and closeout guards.
+- **Current delivery stage:** `Completed`
+- **Qualifiers:** `Native-Links-Installed + Inventory-Complete + Generated-Installation-Policy-Applied + Bootstrap-Implemented + Native-Replay-Evidenced + Claude-Reviewed`
+- **Closeout evidence:** `artifacts/workspace-link-stabilization-20260915.md`
 
 ## Objective
 
@@ -35,8 +35,8 @@ Os nomes de compatibilidade `delphi-ai` e `foundation_documentation` não repres
 - [x] Ajustar os scripts de Engineering somente quando necessário para que `verify_context.sh --repair` e `sync_agent_rules.sh` não recriem links LX/WSL nem apontem para superfícies ausentes.
 - [x] Preservar a regra em camadas de `.agents/rules/`; não substituir esse diretório por um único link de regras.
 - [x] Validar no projeto raiz, API e Web que PowerShell/Git/Claude Code conseguem ler cada superfície vinculada.
-- [ ] Registrar topologia, política Git, comandos de bootstrap, exceções e evidências no Foundation e no Engineering corretos.
-- [ ] Executar checkpoint e revisão final do Claude Code; integrar qualquer finding material antes do encerramento.
+- [x] Registrar topologia, política Git, comandos de bootstrap, exceções e evidências no Foundation e no Engineering corretos.
+- [x] Executar checkpoint e revisão final do Claude Code; integrar qualquer finding material antes do encerramento.
 
 ## Explicit Exclusions
 
@@ -67,32 +67,34 @@ No option has been applied. The decision is material because the existing tracke
 - **Approved by:** `Gabriel / user — 2026-09-15 — Aprovo`
 - **Decision:** apply option 1, generated installation surfaces. Remove `CLAUDE.md`, `.claude/settings.json` and `.agents/.sync_agent_links.lock` from the product index without deleting working files; add precise ignore rules; retain Git history; and bootstrap them only from Engineering.
 
-## Execution Evidence — In Progress
+## Execution Evidence
 
 - Product Git policy was committed locally as `d83ec11` on `LeadsHug/add_typeform_cloud`: the three approved paths were removed from the Git index only, their working files remain present as native hard links, and `.gitignore` now excludes only generated installation surfaces and repair backups.
 - Engineering bootstrap was committed locally as `4f69edd`: `tools/bootstrap_leadshug_workspace.sh` creates only the two compatibility junctions, refuses real-directory conflicts, then runs repair/sync/verify. `README.md` and the tool manifest document the command.
 - `tools/lib/native_links.sh` now resolves a file target relative to its link parent before identity comparison, and `native_link_creation_test.sh` covers the `../target-file.txt` pattern used by the synchronizer.
 - Engineering validation passed locally: `bash tools/self_check.sh` returned `OK`, including native-link, bootstrap syntax, routing and delivery-guard tests.
 - A direct PowerShell read check passed for all 18 linked directories and six linked files across root, API and Web after restoring native surfaces. The agent's noninteractive WSL lacks executable Windows-binary interop and is not valid evidence for the required bootstrap replay.
+- The canonical native PowerShell bootstrap, `tools/bootstrap_leadshug_workspace.ps1 -ProjectRoot C:\\Unifast\\LeadsHug\\LeadsHug`, was replayed twice on 2026-09-15. Each execution recreated only managed native junctions/hard links, ended in `Environment Verified: PACED-Ready.`, and ended in `Workspace bootstrap complete with native Windows links`.
+- The post-replay PowerShell read check completed with `Windows-native reads: 18 directories and 6 files OK`. The complete topology, commands, outputs and review disposition are recorded in `artifacts/workspace-link-stabilization-20260915.md`.
 
 ## Definition of Done
 
-- [ ] Todo link da topologia acima aponta ao destino de autoridade correto e é legível por um cliente Windows nativo.
-- [ ] Reexecutar o bootstrap não cria links LX/WSL, backups espúrios nem drift de destino.
-- [ ] A política Git separa claramente artefatos de instalação gerados de alterações intencionais do produto, com decisão registrada para cada caminho atualmente alterado.
-- [ ] Uma nova instalação local consegue executar o fluxo documentado e encerrar em `Environment Verified: PACED-Ready.`
-- [ ] `leadshug-engineering` passa `bash tools/self_check.sh` após os ajustes necessários.
-- [ ] Claude Code conclui a revisão final como `no_material_findings` ou `findings_integrated`.
-- [ ] O TODO inclui evidência específica, é fechado em `todos/completed/process/` e os repositórios de autoridade ficam sincronizados.
+- [x] Todo link da topologia acima aponta ao destino de autoridade correto e é legível por um cliente Windows nativo.
+- [x] Reexecutar o bootstrap não cria links LX/WSL, backups espúrios nem drift de destino.
+- [x] A política Git separa claramente artefatos de instalação gerados de alterações intencionais do produto, com decisão registrada para cada caminho atualmente alterado.
+- [x] Uma nova instalação local consegue executar o fluxo documentado e encerrar em `Environment Verified: PACED-Ready.`
+- [x] `leadshug-engineering` passa `bash tools/self_check.sh` após os ajustes necessários.
+- [x] Claude Code conclui a revisão final como `no_material_findings` ou `findings_integrated`.
+- [x] O TODO inclui evidência específica, é fechado em `todos/completed/process/` e os repositórios de autoridade ficam sincronizados.
 
 ## Validation Steps
 
-- [ ] Capturar inventário pré-alteração: atributos/targets de reparse points, hashes de arquivos vinculados e `git status --porcelain=v1` do produto.
-- [ ] Rodar em um shell Windows-integrado: `bash delphi-ai/tools/verify_context.sh --repair`, `bash delphi-ai/tools/sync_agent_rules.sh` e `bash delphi-ai/tools/verify_context.sh`.
-- [ ] Ler, via PowerShell com `-ErrorAction Stop`, regras/skills/workflows e `CLAUDE.md` no root, `apps/api` e `apps/web`.
-- [ ] Reexecutar a sequência de bootstrap e comparar destino, tipo de link e status Git contra o inventário esperado.
-- [ ] Rodar `bash tools/self_check.sh` em `leadshug-engineering` e os testes focados alterados.
-- [ ] Rodar `git diff --check`, os guardas aplicáveis e `python3 tools/codex_claude_delivery_guard.py <todo-path> --require-final-review` a partir de `leadshug-engineering` antes do fechamento.
+- [x] Capturar inventário pré-alteração: atributos/targets de reparse points, hashes de arquivos vinculados e `git status --porcelain=v1` do produto.
+- [x] Rodar o bootstrap canônico PowerShell em um shell Windows nativo duas vezes. O bootstrap substitui a antiga sequência Bash nesta topologia porque a sessão Bash sem ponte Windows cria links LX/WSL; a evidência está no artefato de fechamento.
+- [x] Ler, via PowerShell com `-ErrorAction Stop`, regras/skills/workflows e `CLAUDE.md` no root, `apps/api` e `apps/web`.
+- [x] Reexecutar a sequência de bootstrap e comparar destino, tipo de link e status Git contra o inventário esperado.
+- [x] Rodar `bash tools/self_check.sh` em `leadshug-engineering` e os testes focados alterados.
+- [x] Rodar `git diff --check`, os guardas aplicáveis e `python3 tools/codex_claude_delivery_guard.py <todo-path> --require-final-review` a partir de `leadshug-engineering` antes do fechamento.
 
 ## Evidence Plan
 
@@ -106,13 +108,13 @@ No option has been applied. The decision is material because the existing tracke
 
 ## Codex–Claude Delivery Cycle
 
-- **User approval evidence:** `<pending explicit APROVADO>`
+- **User approval evidence:** `Gabriel / user — 2026-09-15 — APROVADO; policy confirmation: Aprovo.`
 - **Execution lead:** `Codex`
 - **Senior technical reviewer:** `Claude Code`
-- **Claude checkpoint status:** `not_run`
-- **Claude final review status:** `not_run`
-- **Claude final review evidence:** `<pending>`
-- **Material findings disposition:** `<pending>`
+- **Claude checkpoint status:** `completed`
+- **Claude final review status:** `findings_integrated`
+- **Claude final review evidence:** `Claude Code session bbdad2c6-2e3a-44fe-aa92-6ce473970610, read-only senior review on 2026-09-15; report and native replay evidence: artifacts/workspace-link-stabilization-20260915.md.`
+- **Material findings disposition:** `No code safety/correctness defect. The review initially blocked closure because native replay evidence and tracking fields were absent; Codex replayed the Windows PowerShell bootstrap twice, captured native read evidence, and reconciled this TODO before closure. Minor operational notes (bootstrap prerequisite on fresh clone; Bash required only for LX cleanup fallback) are documented as accepted constraints.`
 - **Continuity rule:** `Após aprovação, continuar por inventário, implementação, testes e reparos guiados por revisão sem pausar, exceto por mudança material de escopo, arquitetura, risco, dependência ou classificação de alteração do usuário.`
 - **Escalate to user only if:** `a política Git exigir descartar/sobrescrever alteração existente, uma classificação de arquivo for ambígua, ou a topologia exigir arquitetura/infraestrutura além do escopo.`
 
