@@ -2,7 +2,7 @@
 
 ## Approval
 
-- **Approved by:** `pending explicit APROVADO`
+- **Approved by:** `Gabriel / user — 2026-09-15 — APROVADO`
 - **Approval scope:** produzir um dossiê executivo, completo e verificável, do estado atual do LeadsHug para compartilhamento com a liderança. O dossiê descreve arquitetura, capacidades, canais, mensageria, dados, segurança, operação, legado, maturidade e próximos passos; não altera produto, infraestrutura, integrações ou decisões de arquitetura.
 - **Renewed approval required when:** o trabalho exigir acesso a produção, dados de clientes, credenciais, uma alegação de saúde/deploy não comprovada localmente, uma mudança de arquitetura/escopo, ou a produção de material externo além do dossiê Markdown aprovado.
 
@@ -37,14 +37,14 @@ Criar `artifacts/analysis/leadshug-executive-system-dossier-YYYYMMDD.md`, escrit
 
 ## Scope
 
-- [ ] Inventariar o núcleo atual `LeadsHug/apps/api` e `LeadsHug/apps/web` por módulos, superfícies de entrada, fluxos e contratos efetivamente presentes.
-- [ ] Reconciliar o inventário com ADRs, Foundation, TODOs ativos, manifests, migrations, definições Docker/Railway e evidência de testes.
-- [ ] Documentar os canais e a mensageria com estado verificável, limitações e fluxos ponta a ponta.
-- [ ] Produzir diagramas textuais ou Mermaid que sejam compreensíveis sem acesso ao código.
-- [ ] Distinguir capacidade implementada de hipótese, pendência, validação externa e estado de runtime não comprovado.
-- [ ] Incluir matriz executiva de maturidade, riscos, dependências e próximos passos para decisão da liderança.
-- [ ] Fazer revisão técnica sênior somente leitura com Claude Code e integrar achados pertinentes.
-- [ ] Não alterar código, configurações, dados, infraestrutura, integrações, credenciais, legados ou ADRs.
+- [x] Inventariar o núcleo atual `LeadsHug/apps/api` e `LeadsHug/apps/web` por módulos, superfícies de entrada, fluxos e contratos efetivamente presentes.
+- [x] Reconciliar o inventário com ADRs, Foundation, TODOs ativos, manifests, migrations, definições Docker/Railway e evidência de testes.
+- [x] Documentar os canais e a mensageria com estado verificável, limitações e fluxos ponta a ponta.
+- [x] Produzir diagramas textuais ou Mermaid que sejam compreensíveis sem acesso ao código.
+- [x] Distinguir capacidade implementada de hipótese, pendência, validação externa e estado de runtime não comprovado.
+- [x] Incluir matriz executiva de maturidade, riscos, dependências e próximos passos para decisão da liderança.
+- [x] Fazer revisão técnica sênior somente leitura com Claude Code e integrar achados pertinentes.
+- [x] Não alterar código, configurações, dados, infraestrutura, integrações, credenciais, legados ou ADRs.
 
 ## Evidence and framing rules
 
@@ -58,29 +58,30 @@ Criar `artifacts/analysis/leadshug-executive-system-dossier-YYYYMMDD.md`, escrit
 
 ## Definition of Done
 
-- [ ] O dossiê permite a uma pessoa não técnica entender o produto, a arquitetura e o estágio de entrega sem navegar o repositório.
-- [ ] Cada camada do sistema, canal e fluxo de mensageria possui descrição e diagrama rastreáveis.
-- [ ] A matriz de maturidade diferencia claramente implementado, validação pendente, pendente de decisão, planejado e legado/referência.
-- [ ] Nenhuma afirmação de deploy, produção, segurança ou provedor ultrapassa sua evidência disponível.
-- [ ] Riscos, dependências e decisões necessárias estão priorizados e acionáveis para a liderança.
-- [ ] O documento contém índice de evidências e links locais válidos.
-- [ ] Revisão final do Claude Code, checagens documentais e o guard Codex–Claude passam.
+- [x] O dossiê permite a uma pessoa não técnica entender o produto, a arquitetura e o estágio de entrega sem navegar o repositório.
+- [x] Cada camada do sistema, canal e fluxo de mensageria possui descrição e diagrama rastreáveis.
+- [x] A matriz de maturidade diferencia claramente implementado, validação pendente, pendente de decisão, planejado e legado/referência.
+- [x] Nenhuma afirmação de deploy, produção, segurança ou provedor ultrapassa sua evidência disponível.
+- [x] Riscos, dependências e decisões necessárias estão priorizados e acionáveis para a liderança.
+- [x] O documento contém índice de evidências e links locais válidos.
+- [x] Revisão final do Claude Code, checagens documentais e o guard Codex–Claude passam.
 
 ## Validation Steps
 
-- [ ] Verificar links, caminhos e referências de evidência no dossiê.
-- [ ] Rodar `git diff --check` e buscas de consistência entre maturidade declarada, TODOs ativos e fronteiras legadas.
-- [ ] Realizar revisão Claude Code somente leitura sobre precisão factual, clareza executiva, omissões materiais e extrapolação de evidência.
-- [ ] Rodar `python3 tools/codex_claude_delivery_guard.py <todo-path> --require-final-review` antes do fechamento.
+- [x] Verificar links, caminhos e referências de evidência no dossiê: 19 links locais resolvidos em 2026-09-15.
+- [x] Rodar `git diff --check` e buscas de consistência entre maturidade declarada, TODOs ativos e fronteiras legadas.
+- [x] Rodar `task check` no produto em 2026-09-15: lint e typecheck de API/Web; 104 testes unitários da API e 16 da Web; amostras de hooks/guardrails passaram. A diferença para o checkpoint Typebot histórico (103 testes API) foi preservada no dossiê como evidência de momentos distintos.
+- [x] Realizar revisão Claude Code somente leitura sobre precisão factual, clareza executiva, omissões materiais e extrapolação de evidência; achados materiais integrados no dossiê final.
+- [x] Rodar `python3 tools/codex_claude_delivery_guard.py <todo-path> --require-final-review` antes do fechamento.
 
 ## Codex–Claude Delivery Cycle
 
-- **User approval evidence:** `<pending explicit APROVADO>`
+- **User approval evidence:** `Gabriel / user — 2026-09-15 — APROVADO`
 - **Execution lead:** `Codex`
 - **Senior technical reviewer:** `Claude Code`
-- **Claude checkpoint status:** `not_run`
-- **Claude final review status:** `not_run`
-- **Claude final review evidence:** `<pending>`
-- **Material findings disposition:** `<pending>`
+- **Claude checkpoint status:** `findings_integrated_required`
+- **Claude final review status:** `findings_integrated`
+- **Claude final review evidence:** `Read-only review session f16abda2-5a3c-419c-ab0f-161e3016e374; its HIGH and LOW findings were reconciled in the final dossier and validation evidence below.`
+- **Material findings disposition:** `F1 (HIGH) integrado no dossiê como lacuna P0: runtime Typebot permite gatilho global sem filtro de Mantenedora; nenhuma correção de código foi feita neste TODO documental e uma tarefa própria, com regressão cross-tenant, é obrigatória antes de automações globais. F2 (LOW) integrado: o checkpoint Typebot histórico de 103 testes API foi distinguido da execução atual de task check com 104.`
 - **Continuity rule:** `Após aprovação, continuar o inventário, a redação, as verificações e os reparos de revisão sem pausar; apresentar somente decisões materiais ou validações externas necessárias.`
 - **Escalate to user only if:** `a fonte contradisser uma decisão aceita, a evidência exigir alegação de runtime/produção, houver dado sensível, ou uma decisão de produto/arquitetura mudar materialmente o dossiê.`
