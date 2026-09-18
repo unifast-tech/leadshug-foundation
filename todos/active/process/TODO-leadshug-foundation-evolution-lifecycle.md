@@ -33,13 +33,13 @@ A Foundation atual define autoridade, entidades, constituição, quatro fases de
 
 - **Current delivery stage:** `Pending`
 - **Qualifiers:** `none`
-- **Next exact step:** obter validação do usuário para o escopo revisado após os findings independentes de arquitetura e planejamento.
+- **Next exact step:** congelar e publicar o baseline validado para iniciar a nova rodada independente.
 
 ## Active Work State
 
 - **Work state:** `review`
-- **Why this state now:** os primeiros reviews independentes encontraram ambiguidades materiais; o contrato foi reconduzido ao loop de planejamento.
-- **Exit condition:** usuário valida o escopo revisado, novo baseline é publicado, reviews reconvergem e os guards pré-aprovação passam.
+- **Why this state now:** o usuário validou o escopo revisado; o contrato aguarda freeze, reconvergência das revisões e guards pré-aprovação.
+- **Exit condition:** novo baseline publicado, reviews reconvergidos e guards pré-aprovação com resultado satisfatório.
 
 ## Scope
 
@@ -257,23 +257,25 @@ A Foundation atual define autoridade, entidades, constituição, quatro fases de
 - **Planned decision promotion targets:** `evolution_lifecycle.md`, `system_roadmap.md`, `project_constitution.md`, `modules/README.md`, `contracts/README.md`.
 - **Module decision consolidation targets:** seção de autoridade e schema futuro em `modules/README.md`; nenhum módulo individual é migrado neste TODO.
 
-## Decision Pending
+## Decision Validation
 
-- [ ] O usuário deve validar o escopo reduzido e as decisões D-01..D-11 integradas após os findings independentes antes do novo baseline/review.
+- [x] Usuário validou o escopo reduzido e as decisões `D-01..D-11` em 2026-09-18 com a resposta explícita `Valido`.
 
-## Proposed Decisions (Pending User Validation)
+## Decision Baseline (Frozen Before Implementation)
 
-- [ ] `D-01` Preservar as quatro fases atuais como temas estratégicos e usar horizonte ortogonal `Now|Next|Later|Unscheduled`; horizonte não representa prazo, e datas/releases exigem aprovação explícita. Ref: `system_roadmap.md`.
-- [ ] `D-02` Criar `foundation_documentation/backlog/` para candidatos não aprovados. `todos/active/` contém contratos táticos vivos em `Draft|Review|Approved|In-Progress`; estar na pasta nunca concede execução, que exige `APROVADO` explícito e authority guard `go`. Ref: constituição `TODO governance`.
-- [ ] `D-03` Manter `artifacts/feature-briefs/` como evidência de descoberta não autoritativa e, após handoff, somente com link para o registro vivo; briefs não duplicam estado operacional. Ref: feature brief ST-01.
-- [ ] `D-04` Definir máquinas ortogonais: candidato `Proposed|Under-Review|Selected-for-Planning|Deferred|Rejected`; capacidade `Not-Assessed|Discovery|Planned|In-Progress|Delivered|Retired`; TODO `Draft|Review|Approved|In-Progress|Completed|Cancelled`; decisão `Proposed|Accepted|Superseded|Rejected`; contrato `Not-Assessed|Documented|Verified|Deprecated`. `Blocked` é qualifier com razão, owner e estado anterior, nunca estado destrutivo.
-- [ ] `D-05` Registrar decisões duráveis em `decisions/` como racional/proveniência. Uma decisão `Accepted` só é efetiva depois que seus alvos canônicos nomeados são consolidados; constituição/módulos mantêm a verdade corrente.
-- [ ] `D-06` Adotar owner único por campo: backlog possui disposição e próximo gate; roadmap possui tema, horizonte, resultado, dependências e exit gate; módulos possuem ownership, invariantes, capacidades estáveis e contratos locais; TODO possui aprovação/execução/evidência; decisions possui racional/histórico; lifecycle possui schemas/transições; contracts README é índice; briefs são evidência.
-- [ ] `D-07` Não retroajustar artifacts/TODOs concluídos nem os três TODOs ativos alheios ao ST-01. A estrutura passa a reger registros novos; um TODO legado só adota o novo schema quando receber futura alteração material autorizada. Documentos históricos mantêm marcador de contexto e ficam fora dos validadores correntes.
-- [ ] `D-08` Registrar ST-02 e ST-03 como `Selected-for-Planning` com gate após ST-01; registrar ST-04 como `Deferred` até conclusão dos ST-02/ST-03. Nenhum recebe TODO ativo neste escopo.
-- [ ] `D-09` Não criar validator permanente neste TODO. Strategic é owner do follow-up; abrir TODO próprio quando houver mais de dez registros vivos somados em backlog/decisions/roadmap ou na primeira recorrência comprovada de drift de schema/autoridade. Até lá, usar checks exatos e reproduzíveis deste TODO.
-- [ ] `D-10` Usar IDs imutáveis baseados em namespace e slug (`BLG-<slug>`, `DEC-<slug>`, `CAP-<slug>`); títulos e filenames podem mudar, mas o ID e os links de supersessão permanecem.
-- [ ] `D-11` Definir papéis provider-neutral: human decision authority, strategic steward, module owner, TODO owner/executor e assurance reviewer. Ferramentas/agentes concretos são adapters da política de engenharia, não autoridade de produto.
+User-validated on 2026-09-18; execution remains pending explicit `APROVADO`.
+
+- [x] `D-01` Preservar as quatro fases atuais como temas estratégicos e usar horizonte ortogonal `Now|Next|Later|Unscheduled`; horizonte não representa prazo, e datas/releases exigem aprovação explícita. Ref: `system_roadmap.md`.
+- [x] `D-02` Criar `foundation_documentation/backlog/` para candidatos não aprovados. `todos/active/` contém contratos táticos vivos em `Draft|Review|Approved|In-Progress`; estar na pasta nunca concede execução, que exige `APROVADO` explícito e authority guard `go`. Ref: constituição `TODO governance`.
+- [x] `D-03` Manter `artifacts/feature-briefs/` como evidência de descoberta não autoritativa e, após handoff, somente com link para o registro vivo; briefs não duplicam estado operacional. Ref: feature brief ST-01.
+- [x] `D-04` Definir máquinas ortogonais: candidato `Proposed|Under-Review|Selected-for-Planning|Deferred|Rejected`; capacidade `Not-Assessed|Discovery|Planned|In-Progress|Delivered|Retired`; TODO `Draft|Review|Approved|In-Progress|Completed|Cancelled`; decisão `Proposed|Accepted|Superseded|Rejected`; contrato `Not-Assessed|Documented|Verified|Deprecated`. `Blocked` é qualifier com razão, owner e estado anterior, nunca estado destrutivo.
+- [x] `D-05` Registrar decisões duráveis em `decisions/` como racional/proveniência. Uma decisão `Accepted` só é efetiva depois que seus alvos canônicos nomeados são consolidados; constituição/módulos mantêm a verdade corrente.
+- [x] `D-06` Adotar owner único por campo: backlog possui disposição e próximo gate; roadmap possui tema, horizonte, resultado, dependências e exit gate; módulos possuem ownership, invariantes, capacidades estáveis e contratos locais; TODO possui aprovação/execução/evidência; decisions possui racional/histórico; lifecycle possui schemas/transições; contracts README é índice; briefs são evidência.
+- [x] `D-07` Não retroajustar artifacts/TODOs concluídos nem os três TODOs ativos alheios ao ST-01. A estrutura passa a reger registros novos; um TODO legado só adota o novo schema quando receber futura alteração material autorizada. Documentos históricos mantêm marcador de contexto e ficam fora dos validadores correntes.
+- [x] `D-08` Registrar ST-02 e ST-03 como `Selected-for-Planning` com gate após ST-01; registrar ST-04 como `Deferred` até conclusão dos ST-02/ST-03. Nenhum recebe TODO ativo neste escopo.
+- [x] `D-09` Não criar validator permanente neste TODO. Strategic é owner do follow-up; abrir TODO próprio quando houver mais de dez registros vivos somados em backlog/decisions/roadmap ou na primeira recorrência comprovada de drift de schema/autoridade. Até lá, usar checks exatos e reproduzíveis deste TODO.
+- [x] `D-10` Usar IDs imutáveis baseados em namespace e slug (`BLG-<slug>`, `DEC-<slug>`, `CAP-<slug>`); títulos e filenames podem mudar, mas o ID e os links de supersessão permanecem.
+- [x] `D-11` Definir papéis provider-neutral: human decision authority, strategic steward, module owner, TODO owner/executor e assurance reviewer. Ferramentas/agentes concretos são adapters da política de engenharia, não autoridade de produto.
 
 ## Module Decision Baseline Snapshot
 
@@ -285,9 +287,9 @@ A Foundation atual define autoridade, entidades, constituição, quatro fases de
 | `audit-and-history#invariants` | histórico persistente, tenant/BU scoped, leitura separada de escrita | Preserve | `modules/audit-and-history.md` |
 | `integrations-and-channels#invariants` | providers são adapters, segredos não vazam, erros determinísticos | Preserve | `modules/integrations-and-channels.md` |
 
-## Decision Baseline (Frozen Before Implementation)
+## Decision Freeze Evidence
 
-- [ ] `D-01` a `D-11` formam o baseline revisado pendente de validação do usuário, novo freeze e reconvergência dos reviewers.
+- [x] `D-01` a `D-11` formam o baseline de decisão validado pelo usuário em 2026-09-18; qualquer mudança material exige nova validação e futuro `APROVADO` renovado.
 
 ## Architecture Change Governance
 
@@ -332,8 +334,8 @@ A Foundation atual define autoridade, entidades, constituição, quatro fases de
 - **Decision review lifecycle:** `after diagnosis is closed and before APROVADO`
 - **Decision review kind:** `architecture_opinion`
 - **Decision review package:** `bounded-file-set`
-- **Decision review status:** `findings_integrated`
-- **Decision review evidence / resolution:** reviewer `/root/st01_architecture_review`; findings ST01-ARCH-001..007 integrados no contrato revisado; nova rodada será exigida após validação do usuário e refreeze.
+- **Decision review status:** `pending_freeze_rerun`
+- **Decision review evidence / resolution:** reviewer inicial `/root/st01_architecture_review`; findings ST01-ARCH-001..007 integrados; nova rodada fresh/no-context aguarda o baseline validado.
 - **Architecture adherence review:** `required`
 - **Adherence review lifecycle:** `after implementation and before Completed`
 - **Adherence review kind:** `architecture_adherence`
@@ -347,9 +349,9 @@ A Foundation atual define autoridade, entidades, constituição, quatro fases de
 - **Why this decision:** o TODO é `medium`, transversal e estabelece arquitetura documental.
 - **Trigger stage:** `before the first planning-side review or guard run`
 - **Baseline branch:** `foundation_documentation/main`
-- **Baseline commit:** `pending user scope validation and refreeze`
+- **Baseline commit:** `pending validated freeze commit`
 - **Baseline push reference:** `origin/main@pending`
-- **Gate status:** `pending_user_validation`
+- **Gate status:** `pending_freeze_commit`
 - **Findings summary:** o baseline original `565ff17a81a6faa663f9e024e9784e396cd50bfe` sustentou as primeiras revisões; findings materiais exigiram escopo reduzido, decisões revisadas e novo freeze.
 - **Evidence / reference:** baseline original `565ff17a81a6faa663f9e024e9784e396cd50bfe`; evidence-only commit `0c2c050861af97f76ffd44724ddcd26be7af6174`; novo baseline pendente.
 - **Waiver authority / reference:** `n/a`
@@ -368,7 +370,7 @@ A Foundation atual define autoridade, entidades, constituição, quatro fases de
 
 ## Questions To Close
 
-- [ ] Usuário valida o escopo reduzido e D-01..D-11 após integração dos findings?
+- [x] Usuário validou o escopo reduzido e `D-01..D-11` em 2026-09-18 (`Valido`).
 - [x] `AMB-03`: fases são temas; horizonte é `Now|Next|Later|Unscheduled`, sem datas implícitas (`D-01`).
 - [x] `AMB-04`: adotar `foundation_documentation/backlog/` fora de `todos/active/` (`D-02`).
 
@@ -510,7 +512,7 @@ A Foundation atual define autoridade, entidades, constituição, quatro fases de
 
 - **Assumptions:** nenhuma premissa viva; C-01..C-04 são constraints/decisões verificáveis.
 - **Unknowns:** baseline histórico exato da transposição pertence ao ST-02, não a este TODO.
-- **Confidence:** high no escopo revisado; nova rodada independente obrigatória após validação/refreeze.
+- **Confidence:** high no escopo validado; nova rodada independente obrigatória após o refreeze.
 
 ## Additional Architectural Opinions
 
@@ -556,8 +558,8 @@ A Foundation atual define autoridade, entidades, constituição, quatro fases de
 - **Internal reviewer mandate:** `required after freeze; reviewer cannot implement`
 - **Canonical multi-lane audit protocol:** `n/a`
 - **Critique lenses:** `correctness|performance|elegance|structural-soundness|risk`
-- **Critique status:** `findings_integrated`
-- **Findings summary:** autoridade, diff schema, assumptions, owners, DoD/evidence, audit floor e taxonomia foram revisados; nova rodada exigida após validação/refreeze.
+- **Critique status:** `pending_freeze_rerun`
+- **Findings summary:** autoridade, diff schema, assumptions, owners, DoD/evidence, audit floor e taxonomia foram revisados; nova rodada fresh/no-context aguarda o baseline validado.
 - **Evidence / reference:** reviewer `/root/st01_plan_critique`, findings `ST01-R01..R08`.
 - **Waiver authority / reference:** `n/a`
 
@@ -587,7 +589,7 @@ A Foundation atual define autoridade, entidades, constituição, quatro fases de
 - **Guard scope:** `none; verify no live Assumptions Preview rows remain`
 - **Guard command:** `python3 delphi-ai/tools/assumption_code_coherence_guard.py --todo foundation_documentation/todos/active/process/TODO-leadshug-foundation-evolution-lifecycle.md`
 - **Gate status:** `not_run`
-- **Findings summary:** aguardando validação do usuário, refreeze e nova crítica.
+- **Findings summary:** aguardando refreeze e nova crítica independente.
 - **Evidence / reference:** `pending`
 - **Waiver authority / reference:** `n/a`
 
@@ -614,8 +616,8 @@ A Foundation atual define autoridade, entidades, constituição, quatro fases de
 - **Client surface:** `codex`
 - **Current governed action:** `todo-approval`
 - **Selected role:** `primary-chat`
-- **Selected model:** `current session model`
-- **Selected effort:** `max-or-closest-equivalent`
+- **Selected model:** `gpt-5.4` (`chat_orchestrator` contract lane)
+- **Selected effort:** `max`
 - **Proof mode:** `declared`
 - **Exception reason:** `n/a`
 - **Subagent / delegation authorization:** `required by independent no-context critique skill after freeze`
@@ -623,24 +625,24 @@ A Foundation atual define autoridade, entidades, constituição, quatro fases de
 - **Worktree / auxiliary-checkout authorization:** `not-authorized`
 - **Worktree authorization evidence:** `n/a`
 - **Writer scheduling policy:** `single-writer-serialized`
-- **Guard outcome:** `review-required`
-- **Waiver / exception reference:** `routing guard pending after planning reviews`
+- **Guard outcome:** `go`; declared routing preflight on 2026-09-18
+- **Waiver / exception reference:** `n/a`
 
 ## Decision Adherence Validation (Mandatory Before Delivery)
 
 | Decision ID | Status (`Adherent`/`Exception`) | Evidence | Notes |
 | --- | --- | --- | --- |
-| `D-01` | pending | planned canonical diff + lifecycle walkthrough | pending validation and implementation |
-| `D-02` | pending | planned backlog/TODO authority walkthrough | pending validation and implementation |
-| `D-03` | pending | planned feature-brief handoff review | pending validation and implementation |
-| `D-04` | pending | planned transition-table positive/negative scenarios | pending validation and implementation |
-| `D-05` | pending | planned decision-to-canonical-target trace | pending validation and implementation |
-| `D-06` | pending | planned field-owner matrix audit | pending validation and implementation |
-| `D-07` | pending | planned historical-surface diff check | pending validation and implementation |
-| `D-08` | pending | planned ST-02/ST-03/ST-04 disposition trace | pending validation and implementation |
-| `D-09` | pending | planned threshold/owner check | pending validation and implementation |
-| `D-10` | pending | planned ID/schema check | pending validation and implementation |
-| `D-11` | pending | planned provider-neutral role review | pending validation and implementation |
+| `D-01` | pending | planned canonical diff + lifecycle walkthrough | pending implementation |
+| `D-02` | pending | planned backlog/TODO authority walkthrough | pending implementation |
+| `D-03` | pending | planned feature-brief handoff review | pending implementation |
+| `D-04` | pending | planned transition-table positive/negative scenarios | pending implementation |
+| `D-05` | pending | planned decision-to-canonical-target trace | pending implementation |
+| `D-06` | pending | planned field-owner matrix audit | pending implementation |
+| `D-07` | pending | planned historical-surface diff check | pending implementation |
+| `D-08` | pending | planned ST-02/ST-03/ST-04 disposition trace | pending implementation |
+| `D-09` | pending | planned threshold/owner check | pending implementation |
+| `D-10` | pending | planned ID/schema check | pending implementation |
+| `D-11` | pending | planned provider-neutral role review | pending implementation |
 
 Only `Adherent` or an explicitly approved `Exception` is valid at delivery.
 
@@ -662,9 +664,9 @@ Only `Adherent` or an explicitly approved `Exception` is valid at delivery.
 ## TODO Closeout Disposition
 
 - **Disposition:** `keep-active`
-- **Disposition reason:** contrato em revalidação após findings materiais; nenhuma implementação canônica iniciada.
+- **Disposition reason:** escopo validado pelo usuário; contrato aguarda freeze, reviews e preflight; nenhuma implementação canônica iniciada.
 - **Post-commit/push status:** `pending`
-- **Next path/status action:** usuário valida o escopo revisado; então novo baseline, reviews e preflight.
+- **Next path/status action:** publicar o baseline validado, rerodar reviews e executar o preflight.
 
 ## Security Risk Assessment
 
