@@ -341,7 +341,7 @@ User-validated on 2026-09-18; execution remains pending explicit `APROVADO`.
 - **Decision review lifecycle:** `after diagnosis is closed and before APROVADO`
 - **Decision review kind:** `architecture_opinion`
 - **Decision review package:** `bounded-file-set`
-- **Decision review status:** `pending_freeze_rerun`
+- **Decision review status:** `not_run`
 - **Decision review evidence / resolution:** reviewer inicial `/root/st01_architecture_review`; findings ST01-ARCH-001..007 integrados; nova rodada fresh/no-context aguarda o baseline validado.
 - **Architecture adherence review:** `required`
 - **Adherence review lifecycle:** `after implementation and before Completed`
@@ -565,7 +565,7 @@ User-validated on 2026-09-18; execution remains pending explicit `APROVADO`.
 - **Internal reviewer mandate:** `required after freeze; reviewer cannot implement`
 - **Canonical multi-lane audit protocol:** `n/a`
 - **Critique lenses:** `correctness|performance|elegance|structural-soundness|risk`
-- **Critique status:** `pending_freeze_rerun`
+- **Critique status:** `not_run`
 - **Findings summary:** autoridade, diff schema, assumptions, owners, DoD/evidence, audit floor e taxonomia foram revisados; nova rodada fresh/no-context aguarda o baseline validado.
 - **Evidence / reference:** reviewer `/root/st01_plan_critique`, findings `ST01-R01..R08`.
 - **Waiver authority / reference:** `n/a`
