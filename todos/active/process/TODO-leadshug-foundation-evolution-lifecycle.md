@@ -287,6 +287,13 @@ User-validated on 2026-09-18; execution remains pending explicit `APROVADO`.
 | `audit-and-history#invariants` | histórico persistente, tenant/BU scoped, leitura separada de escrita | Preserve | `modules/audit-and-history.md` |
 | `integrations-and-channels#invariants` | providers são adapters, segredos não vazam, erros determinísticos | Preserve | `modules/integrations-and-channels.md` |
 
+## Module Coherence Gate
+
+- **Status:** `no_material_findings`
+- **Checked against:** `project_constitution.md`, `system_roadmap.md`, `modules/README.md` e os quatro módulos individuais em 2026-09-18.
+- **Evidence:** os quatro módulos individuais permanecem sem diff desde `d8626df1fb0ff64751d7fae10ae93cf41ab1a458`; suas invariantes são preservadas. A frase atual da constituição que associa `todos/active/` à autoridade de execução é a ambiguidade intencionalmente aposentada por `D-02`, não uma decisão de módulo silenciosamente superseded.
+- **Outcome:** o baseline pode entrar em architecture opinion; qualquer proposta que altere invariantes de módulo exige retorno ao usuário.
+
 ## Decision Freeze Evidence
 
 - [x] `D-01` a `D-11` formam o baseline de decisão validado pelo usuário em 2026-09-18; qualquer mudança material exige nova validação e futuro `APROVADO` renovado.
@@ -531,7 +538,7 @@ User-validated on 2026-09-18; execution remains pending explicit `APROVADO`.
 
 - **Canonical method:** `wf-docker-audit-escalation-method`
 - **Guard command:** `python3 delphi-ai/tools/audit_escalation_guard.py --todo foundation_documentation/todos/active/process/TODO-leadshug-foundation-evolution-lifecycle.md`
-- **Latest TEACH evidence / artifact:** guard `go`, fingerprint `ef66891d75b2`; deve rerodar após `high_severity_plan_review_issue=yes`.
+- **Latest TEACH evidence / artifact:** guard `go` em 2026-09-18, fingerprint `75992daf3f8f`; critique `required/expanded`, test-quality `recommended/full`, final review `required/expanded`, verification debt `required`, architecture decision/adherence reviews `required`, demais lanes `not_needed`.
 
 | Trigger | Value | Notes |
 | --- | --- | --- |
