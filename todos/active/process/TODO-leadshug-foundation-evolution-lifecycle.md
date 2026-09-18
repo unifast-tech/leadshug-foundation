@@ -308,11 +308,11 @@ A Foundation atual define autoridade, entidades, constituição, quatro fases de
 - **Why this decision:** o TODO é `medium`, transversal e estabelece arquitetura documental.
 - **Trigger stage:** `before the first planning-side review or guard run`
 - **Baseline branch:** `foundation_documentation/main`
-- **Baseline commit:** `pending`
-- **Baseline push reference:** `origin/main@pending`
-- **Gate status:** `running`
-- **Findings summary:** branch recuperada; commit/push do baseline ainda pendentes.
-- **Evidence / reference:** Branch Recovery Evidence deste TODO.
+- **Baseline commit:** `565ff17a81a6faa663f9e024e9784e396cd50bfe`
+- **Baseline push reference:** `origin/main@565ff17a81a6faa663f9e024e9784e396cd50bfe`
+- **Gate status:** `no_material_findings`
+- **Findings summary:** feature brief e TODO foram commitados e publicados na autoridade `foundation_documentation/main`; nenhum arquivo preexistente não pertencente ao pacote foi incluído.
+- **Evidence / reference:** commit `565ff17a81a6faa663f9e024e9784e396cd50bfe`; push `d8626df1..565ff17a main -> main`.
 - **Waiver authority / reference:** `n/a`
 
 ## Gate: Review Scope Drift
