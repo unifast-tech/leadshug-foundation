@@ -33,7 +33,7 @@ A Foundation atual define autoridade, entidades, constituição, quatro fases de
 
 - **Current delivery stage:** `Pending`
 - **Qualifiers:** `none`
-- **Next exact step:** congelar e publicar o baseline validado para iniciar a nova rodada independente.
+- **Next exact step:** executar a nova revisão de arquitetura fresh/no-context sobre o baseline validado.
 
 ## Active Work State
 
@@ -349,11 +349,11 @@ User-validated on 2026-09-18; execution remains pending explicit `APROVADO`.
 - **Why this decision:** o TODO é `medium`, transversal e estabelece arquitetura documental.
 - **Trigger stage:** `before the first planning-side review or guard run`
 - **Baseline branch:** `foundation_documentation/main`
-- **Baseline commit:** `pending validated freeze commit`
-- **Baseline push reference:** `origin/main@pending`
-- **Gate status:** `pending_freeze_commit`
+- **Baseline commit:** `accdd4057d6dbd1b1bfc9fcb005f60aacd3f2e0c`
+- **Baseline push reference:** `origin/main@accdd4057d6dbd1b1bfc9fcb005f60aacd3f2e0c`
+- **Gate status:** `satisfied`
 - **Findings summary:** o baseline original `565ff17a81a6faa663f9e024e9784e396cd50bfe` sustentou as primeiras revisões; findings materiais exigiram escopo reduzido, decisões revisadas e novo freeze.
-- **Evidence / reference:** baseline original `565ff17a81a6faa663f9e024e9784e396cd50bfe`; evidence-only commit `0c2c050861af97f76ffd44724ddcd26be7af6174`; novo baseline pendente.
+- **Evidence / reference:** baseline original `565ff17a81a6faa663f9e024e9784e396cd50bfe`; evidence-only commit original `0c2c050861af97f76ffd44724ddcd26be7af6174`; freeze revisado `accdd4057d6dbd1b1bfc9fcb005f60aacd3f2e0c`, publicado em `origin/main` em 2026-09-18.
 - **Waiver authority / reference:** `n/a`
 
 ## Gate: Review Scope Drift
@@ -666,7 +666,7 @@ Only `Adherent` or an explicitly approved `Exception` is valid at delivery.
 - **Disposition:** `keep-active`
 - **Disposition reason:** escopo validado pelo usuário; contrato aguarda freeze, reviews e preflight; nenhuma implementação canônica iniciada.
 - **Post-commit/push status:** `pending`
-- **Next path/status action:** publicar o baseline validado, rerodar reviews e executar o preflight.
+- **Next path/status action:** rerodar architecture opinion e crítica independente sobre `accdd405`, depois executar coherence, scope-drift e preflight.
 
 ## Security Risk Assessment
 
