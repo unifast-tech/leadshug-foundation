@@ -33,13 +33,13 @@ A Foundation atual define autoridade, entidades, constituição, quatro fases de
 
 - **Current delivery stage:** `Pending`
 - **Qualifiers:** `none`
-- **Next exact step:** publicar o review baseline R3 revalidado e repetir a crítica fresh/no-context.
+- **Next exact step:** obter revalidação explícita do usuário para `ST01-R4-001..003`, publicar novo freeze e repetir a crítica fresh/no-context.
 
 ## Active Work State
 
 - **Work state:** `review`
-- **Why this state now:** o usuário revalidou explicitamente em 2026-09-21 as correções `ST01-R3-001..006`; o contrato aguarda freeze publicado, crítica conclusiva e guards pré-aprovação.
-- **Exit condition:** novo baseline publicado, crítica reconvergida e guards pré-aprovação com resultado satisfatório.
+- **Why this state now:** a crítica V4 confirmou todas as correções R3 e D-01..D-11, mas encontrou três blockers operacionais; as correções R4 estão integradas e alteram Validation Steps/Execution Plan, exigindo revalidação.
+- **Exit condition:** correções R4 revalidadas, novo baseline publicado, crítica reconvergida e guards pré-aprovação com resultado satisfatório.
 
 ## Scope
 
@@ -191,8 +191,8 @@ A Foundation atual define autoridade, entidades, constituição, quatro fases de
 - [ ] `VAL-04` No cwd raiz do workspace, executar `Exact Validation Command Contracts / VAL-04`; o fixture temporário deve receber exit `2` e ao menos uma violação `APPROVAL-EVIDENCE-MISSING|APPROVAL-TOKEN-MISSING|APPROVAL-SCOPE-MISSING`, enquanto o wrapper retorna `0` e remove os fixtures via `trap`.
 - [ ] `VAL-05` Comparar 1-1 as decisões e o conteúdo atual dos quatro módulos, comprovando que permaneceram inalterados.
 - [ ] `VAL-06` Executar `bash delphi-ai/tools/verify_context.sh`.
-- [ ] `VAL-07` Executar os comandos exatos de autoridade, expectativa de diff, conclusão e closeout listados neste TODO e exigir `Overall outcome: go` no gate correspondente.
-- [ ] `VAL-08` Executar o comando `git -C foundation_documentation diff --check ...` exato da seção `Commands` e exigir exit `0` e saída vazia.
+- [ ] `VAL-07` Antes de solicitar aprovação, exigir `todo_authority_guard.py ... --pre-approval` com `Overall outcome: preflight-go`; após `APROVADO` e ingestão, exigir o guard normal sem flag com `Overall outcome: go` antes de qualquer implementação. Executar também os guards de diff, conclusão e closeout nos gates correspondentes.
+- [ ] `VAL-08` No cwd raiz do workspace, executar `Exact Validation Command Contracts / VAL-08`; exigir exit `0` e `OK: tracked and untracked ST-01 files pass whitespace checks`.
 - [ ] `VAL-09` Recalcular os oito hashes preexistentes registrados e exigir igualdade byte a byte.
 - [ ] `VAL-10` No cwd raiz do workspace, executar `Exact Validation Command Contracts / VAL-10`; exigir exit `0` e `OK: no secret-like assignments or private keys in ST-01 paths`.
 - [ ] `VAL-11` Concluir crítica pré-aprovação, revisão final e auditorias derivadas pelo piso determinístico.
@@ -220,8 +220,8 @@ A Foundation atual define autoridade, entidades, constituição, quatro fases de
 | `VAL-04` | Validation Steps | cenário negativo active sem approval | test+guard | `mktemp` fixture + authority guard; inner exit `2`, approval violation, wrapper exit `0` | local | planned | `trap` remove fixture/output |
 | `VAL-05` | Validation Steps | módulos preservados | review | Module Decision Consistency Validation | n/a | planned | conteúdo 1-1 |
 | `VAL-06` | Validation Steps | contexto Delphi | test | `bash delphi-ai/tools/verify_context.sh` | local | planned | expected PACED-Ready |
-| `VAL-07` | Validation Steps | guards | test | commands in `Commands`; expected gate-specific `go` | local | planned | deterministic |
-| `VAL-08` | Validation Steps | whitespace patch | test | `git -C foundation_documentation diff --check d8626df1fb0ff64751d7fae10ae93cf41ab1a458 -- <ST-01 paths>` | local | planned | exit `0`; expected empty |
+| `VAL-07` | Validation Steps | authority/delivery guards | test | pre-approval authority → `preflight-go`; post-approval normal authority → `go`; demais comandos em `Commands` | local | planned | resultados não são intercambiáveis |
+| `VAL-08` | Validation Steps | whitespace tracked/untracked | test | exact shell wrapper em `Exact Validation Command Contracts / VAL-08` | local | planned | tracked exit `0`; untracked probes exit `1` sem output; wrapper `OK` |
 | `VAL-09` | Validation Steps | hashes preexistentes | test | `sha256sum` against recorded values | local | planned | eight exact matches |
 | `VAL-10` | Validation Steps | secret patterns | security | exact shell wrapper em `Exact Validation Command Contracts / VAL-10` | local | planned | `rg` exit `1` é sucesso; match bloqueia |
 | `VAL-11` | Validation Steps | independent gates | review | critique/final-review/audit evidence | n/a | planned | fresh no-context |
@@ -242,12 +242,19 @@ from urllib.parse import unquote
 
 repo = Path("foundation_documentation")
 baseline = "d8626df1fb0ff64751d7fae10ae93cf41ab1a458"
-changed = subprocess.run(
+tracked = subprocess.run(
     ["git", "-C", str(repo), "diff", "--name-only", baseline, "--", "*.md"],
     check=True,
     capture_output=True,
     text=True,
 ).stdout.splitlines()
+untracked = subprocess.run(
+    ["git", "-C", str(repo), "ls-files", "--others", "--exclude-standard", "--", "*.md"],
+    check=True,
+    capture_output=True,
+    text=True,
+).stdout.splitlines()
+changed = sorted(set(tracked + untracked))
 missing = []
 for relative in changed:
     source = repo / relative
@@ -340,16 +347,53 @@ rg -q 'APPROVAL-(EVIDENCE-MISSING|TOKEN-MISSING|SCOPE-MISSING)' "$output"
 
 Expected: o guard interno retorna `2`, o output contém uma violação de aprovação e o wrapper retorna `0`; `trap` remove os dois fixtures em qualquer saída.
 
+### VAL-08 — Tracked and Untracked Whitespace Integrity
+
+```bash
+set -euo pipefail
+baseline='d8626df1fb0ff64751d7fae10ae93cf41ab1a458'
+pathspecs=(
+  README.md project_constitution.md evolution_lifecycle.md backlog decisions system_roadmap.md
+  modules/README.md contracts/README.md artifacts/README.md
+  artifacts/feature-briefs/leadshug-pre-code-evolution-program-20260918.md
+  todos/README.md todos/active/process/TODO-leadshug-foundation-evolution-lifecycle.md
+  todos/completed/process/TODO-leadshug-foundation-evolution-lifecycle.md
+)
+git -C foundation_documentation diff --check "$baseline" -- "${pathspecs[@]}"
+mapfile -t untracked_paths < <(git -C foundation_documentation ls-files --others --exclude-standard -- "${pathspecs[@]}")
+for relative_path in "${untracked_paths[@]}"; do
+  set +e
+  output="$(git diff --no-index --check /dev/null "foundation_documentation/$relative_path" 2>&1)"
+  rc=$?
+  set -e
+  if [ "$rc" -ne 1 ] || [ -n "$output" ]; then
+    printf '%s\n' "$output" >&2
+    exit 1
+  fi
+done
+echo 'OK: tracked and untracked ST-01 files pass whitespace checks'
+```
+
+Expected: tracked diff retorna `0`; cada arquivo untracked retorna `1` sem output no probe `--no-index`; o wrapper retorna `0` e imprime a mensagem `OK`. Qualquer diagnóstico de whitespace ou erro bloqueia.
+
 ### VAL-10 — Scoped Secret Pattern Scan
 
 ```bash
 set -euo pipefail
-mapfile -t relative_paths < <(git -C foundation_documentation diff --name-only d8626df1fb0ff64751d7fae10ae93cf41ab1a458 -- \
-  README.md project_constitution.md evolution_lifecycle.md backlog decisions system_roadmap.md \
-  modules/README.md contracts/README.md artifacts/README.md \
-  artifacts/feature-briefs/leadshug-pre-code-evolution-program-20260918.md \
-  todos/README.md todos/active/process/TODO-leadshug-foundation-evolution-lifecycle.md \
-  todos/completed/process/TODO-leadshug-foundation-evolution-lifecycle.md)
+mapfile -t relative_paths < <({
+  git -C foundation_documentation diff --name-only d8626df1fb0ff64751d7fae10ae93cf41ab1a458 -- \
+    README.md project_constitution.md evolution_lifecycle.md backlog decisions system_roadmap.md \
+    modules/README.md contracts/README.md artifacts/README.md \
+    artifacts/feature-briefs/leadshug-pre-code-evolution-program-20260918.md \
+    todos/README.md todos/active/process/TODO-leadshug-foundation-evolution-lifecycle.md \
+    todos/completed/process/TODO-leadshug-foundation-evolution-lifecycle.md
+  git -C foundation_documentation ls-files --others --exclude-standard -- \
+    README.md project_constitution.md evolution_lifecycle.md backlog decisions system_roadmap.md \
+    modules/README.md contracts/README.md artifacts/README.md \
+    artifacts/feature-briefs/leadshug-pre-code-evolution-program-20260918.md \
+    todos/README.md todos/active/process/TODO-leadshug-foundation-evolution-lifecycle.md \
+    todos/completed/process/TODO-leadshug-foundation-evolution-lifecycle.md
+} | sort -u)
 test "${#relative_paths[@]}" -gt 0
 scan_paths=()
 for relative_path in "${relative_paths[@]}"; do
@@ -527,8 +571,8 @@ User-validated on 2026-09-18 and revalidated after the R2 and R3 contract correc
 - **Baseline source:** `Review Baseline Freeze -> Baseline commit`
 - **Guard command:** `python3 delphi-ai/tools/review_scope_drift_guard.py --todo foundation_documentation/todos/active/process/TODO-leadshug-foundation-evolution-lifecycle.md`
 - **Gate status:** `not_run`
-- **Findings summary:** o `no-go` R3 de revalidação foi satisfeito pela resposta explícita `Valido` em 2026-09-21; aguarda novo freeze e execução conclusiva do guard.
-- **Evidence / reference:** baseline anterior `956b26d8ba5b5bc0a64d07f59e82129d63d5452a`; `REVIEW-SCOPE-DRIFT-MATERIAL-CHANGE`; revalidação do usuário em 2026-09-21.
+- **Findings summary:** guard executado após integrar R4 retornou `no-go` de revalidação (não hard rejection) para Validation Steps, Questions To Close e Execution Plan.
+- **Evidence / reference:** baseline R3 `075a91efc49481780044fd3d3feb35912598aa0d`; `REVIEW-SCOPE-DRIFT-MATERIAL-CHANGE`; próximo gate é revalidação explícita, refreeze e crítica reconvergida.
 - **Waiver authority / reference:** `n/a`
 
 ## Questions To Close
@@ -539,6 +583,7 @@ User-validated on 2026-09-18 and revalidated after the R2 and R3 contract correc
 - [x] Usuário revalidou em 2026-09-21 o contrato corrigido após `ST01-R2-001..007`, sem mudança nas decisões `D-01..D-11` (`valido`).
 - [x] `AMB-05`: diferida para o framing de ST-03 ou TODO próprio; ST-01 não altera `policies/**` nem autoriza uso acoplado/cópia de `whatsflow_v2`.
 - [x] Usuário revalidou em 2026-09-21 as correções `ST01-R3-001..006`, sem mudança em `D-01..D-11` (`Valido`).
+- [ ] Usuário revalida as correções `ST01-R4-001..003`, sem mudança em `D-01..D-11`.
 
 ## Assumptions Preview
 
@@ -567,14 +612,15 @@ User-validated on 2026-09-18 and revalidated after the R2 and R3 contract correc
 
 ### Ordered Steps
 
-1. Revalidação concluída em 2026-09-21 para as correções contratuais `ST01-R3-001..006`; `D-01..D-11` permanecem conceitualmente inalteradas.
+1. Revalidar com o usuário as correções contratuais `ST01-R4-001..003`; `D-01..D-11` permanecem conceitualmente inalteradas.
 2. Congelar/publicar novo baseline e repetir a crítica fresh/no-context com `README.md` incluído; repetir architecture opinion somente se alguma decisão arquitetural mudar.
-3. Rodar coherence/scope-drift/pre-approval guards e solicitar `APROVADO`.
-4. Implementar authority matrix, papéis, state machines e lifecycle central.
-5. Implementar backlog, decisions, roadmap e navegação sem duplicar estado vivo.
-6. Atualizar somente `modules/README.md` e `contracts/README.md`; preservar módulos individuais.
-7. Registrar ST-02/ST-03/ST-04 com as disposições D-08 e validar cenários positivo/negativo.
-8. Executar validações, decision/module adherence, auditorias, revisão final e closeout.
+3. Rodar coherence/scope-drift/pre-approval guards e solicitar `APROVADO`; `preflight-go` não concede execução.
+4. Após `APROVADO`, registrar aprovação/ingestão e executar `todo_authority_guard.py <todo>` sem `--pre-approval`; exigir `Overall outcome: go` antes de qualquer alteração canônica.
+5. Implementar authority matrix, papéis, state machines e lifecycle central.
+6. Implementar backlog, decisions, roadmap e navegação sem duplicar estado vivo.
+7. Atualizar somente `modules/README.md` e `contracts/README.md`; preservar módulos individuais.
+8. Registrar ST-02/ST-03/ST-04 com as disposições D-08 e validar cenários positivo/negativo.
+9. Executar validações, decision/module adherence, auditorias, revisão final e closeout.
 
 ### Test Strategy
 
@@ -608,7 +654,7 @@ User-validated on 2026-09-18 and revalidated after the R2 and R3 contract correc
 
 ## Plan Review Gate
 
-- **Status:** `findings_integrated`; correções R3 revalidadas, pendentes de novo freeze e crítica reconvergida.
+- **Status:** `findings_integrated`; correções R4 integradas, pendentes de revalidação, novo freeze e crítica reconvergida.
 
 ### Review Sections
 
@@ -702,7 +748,7 @@ User-validated on 2026-09-18 and revalidated after the R2 and R3 contract correc
 
 - **Assumptions:** nenhuma premissa viva; C-01..C-04 são constraints/decisões verificáveis.
 - **Unknowns:** baseline histórico exato da transposição pertence ao ST-02, não a este TODO.
-- **Confidence:** high nas decisões D-01..D-11 e nas correções operacionais R3 revalidadas; nova rodada independente obrigatória após o refreeze.
+- **Confidence:** high nas decisões D-01..D-11 e nas correções R3 confirmadas; as correções operacionais R4 aguardam revalidação e nova rodada independente.
 
 ## Additional Architectural Opinions
 
@@ -749,9 +795,9 @@ User-validated on 2026-09-18 and revalidated after the R2 and R3 contract correc
 - **Internal reviewer mandate:** `required after freeze; reviewer cannot implement`
 - **Canonical multi-lane audit protocol:** `n/a`
 - **Critique lenses:** `correctness|performance|elegance|structural-soundness|risk`
-- **Critique status:** `not_run`
-- **Findings summary:** a rodada V3 confirmou D-01..D-11; suas seis correções foram integradas e revalidadas, e a rodada conclusiva aguarda o novo freeze publicado.
-- **Evidence / reference:** reviewers `/root/st01_plan_critique` (`ST01-R01..R08`), `/root/st01_plan_critique_v2` (`ST01-R2-001..007`) e `/root/st01_plan_critique_v3` (`ST01-R3-001..006`).
+- **Critique status:** `findings_integrated`
+- **Findings summary:** a rodada V4 confirmou D-01..D-11 e todas as correções R3, mas encontrou três blockers operacionais; todos foram integrados e aguardam revalidação/refreeze antes da rodada conclusiva.
+- **Evidence / reference:** reviewers `/root/st01_plan_critique` (`ST01-R01..R08`), `/root/st01_plan_critique_v2` (`ST01-R2-001..007`), `/root/st01_plan_critique_v3` (`ST01-R3-001..006`) e `/root/st01_plan_critique_v4` (`ST01-R4-001..003`).
 - **Waiver authority / reference:** `n/a`
 
 | Finding ID | Resolution | Usefulness | Formalizable | Candidate Rule Level | Candidate Rule ID | Rationale / Evidence |
@@ -784,6 +830,20 @@ User-validated on 2026-09-18 and revalidated after the R2 and R3 contract correc
 | `ST01-R3-004` | Integrated | useful | yes | paced | `Agent Routing Preflight` | reviewer e executor desacoplados; delegação futura marcada `not-requested` |
 | `ST01-R3-005` | Integrated | useful | yes | paced | `pcv-1 registries` | deadlines e minimum evidence IDs canônicos restaurados |
 | `ST01-R3-006` | Integrated | useful | yes | paced | `VAL-10` | scan aceita secrets quoted/unquoted e inclui probes fail-first |
+| `ST01-R4-001` | Integrated | useful | yes | paced | `Post-approval authority gate` | guard normal `go` inserido entre `APROVADO` e implementação; distinto de `preflight-go` |
+| `ST01-R4-002` | Integrated | useful | yes | paced | `VAL-01/08/10` | descoberta usa união tracked + untracked; whitespace de novos arquivos possui probe próprio |
+| `ST01-R4-003` | Integrated | useful | yes | project | `Review lifecycle state` | narrativas sincronizadas para revalidação → refreeze → crítica |
+
+## Promotion Finding Routing Ledger
+
+| Finding ID | Severity | Classification | Routing Decision | Same TODO / Split Rationale | Status | Approval / Follow-up Reference |
+| --- | --- | --- | --- | --- | --- | --- |
+| `ST01-R2-001..006` | high/medium | `release-blocker` | integrate in ST-01 | execução dos gates dependia das correções | resolved | resolution rows acima + revalidação R2 |
+| `ST01-R2-007` | medium | `follow-up-hardening` | deferred Delphi hardening | gap de reason code negativo não altera produto/runtime | deferred | PCV schema gap + future Delphi self-improvement candidate |
+| `ST01-R3-001..006` | high/medium | `release-blocker` | integrate in ST-01 | traceabilidade, schema e validação pertencem ao contrato atual | resolved | resolution rows acima + revalidação R3 |
+| `ST01-R4-001` | high | `release-blocker` | integrate in ST-01 | authority pós-aprovação é pré-condição da execução atual | resolved-pending-revalidation | Execution Plan + VAL-07 + Commands |
+| `ST01-R4-002` | high | `release-blocker` | integrate in ST-01 | falso verde invalidaria a evidência deste pacote | resolved-pending-revalidation | VAL-01/08/10 exact contracts |
+| `ST01-R4-003` | medium | `release-blocker` | integrate in ST-01 | estado operacional precisa permanecer inequívoco | resolved-pending-revalidation | lifecycle status fields |
 
 ## Gate: Assumption Code Coherence
 
@@ -793,7 +853,7 @@ User-validated on 2026-09-18 and revalidated after the R2 and R3 contract correc
 - **Guard scope:** `none; verify no live Assumptions Preview rows remain`
 - **Guard command:** `python3 delphi-ai/tools/assumption_code_coherence_guard.py --todo foundation_documentation/todos/active/process/TODO-leadshug-foundation-evolution-lifecycle.md`
 - **Gate status:** `not_run`
-- **Findings summary:** `Assumptions Preview` mantém zero premissas vivas porque `AMB-05` foi diferida explicitamente em C-05; aguarda freeze e crítica conclusiva.
+- **Findings summary:** `Assumptions Preview` mantém zero premissas vivas porque `AMB-05` foi diferida explicitamente em C-05; aguarda revalidação/refreeze e crítica conclusiva.
 - **Evidence / reference:** `pending`
 - **Waiver authority / reference:** `n/a`
 
@@ -875,9 +935,9 @@ Only `Adherent` or an explicitly approved `Exception` is valid at delivery.
 ## TODO Closeout Disposition
 
 - **Disposition:** `keep-active`
-- **Disposition reason:** correções R3 integradas e revalidadas; aguarda novo freeze, crítica conclusiva e preflight; nenhuma implementação canônica iniciada.
+- **Disposition reason:** correções R4 integradas; aguarda revalidação, novo freeze, crítica conclusiva e preflight; nenhuma implementação canônica iniciada.
 - **Post-commit/push status:** `pending`
-- **Next path/status action:** publicar novo freeze, repetir crítica com o pacote completo e então executar coherence, scope-drift e preflight.
+- **Next path/status action:** revalidar R4, publicar novo freeze, repetir crítica com o pacote completo e então executar coherence, scope-drift e preflight.
 
 ## Security Risk Assessment
 
@@ -962,12 +1022,13 @@ Only `Adherent` or an explicitly approved `Exception` is valid at delivery.
 - `python3 delphi-ai/tools/assumption_code_coherence_guard.py --todo foundation_documentation/todos/active/process/TODO-leadshug-foundation-evolution-lifecycle.md`
 - `python3 delphi-ai/tools/review_scope_drift_guard.py --todo foundation_documentation/todos/active/process/TODO-leadshug-foundation-evolution-lifecycle.md`
 - `python3 delphi-ai/tools/todo_authority_guard.py foundation_documentation/todos/active/process/TODO-leadshug-foundation-evolution-lifecycle.md --pre-approval`
+- `python3 delphi-ai/tools/todo_authority_guard.py foundation_documentation/todos/active/process/TODO-leadshug-foundation-evolution-lifecycle.md` somente após registrar `APROVADO`/ingestão e antes de implementar; exigir `Overall outcome: go`.
 - `python3 delphi-ai/tools/todo_diff_expectation_guard.py --repo-root foundation_documentation foundation_documentation/todos/active/process/TODO-leadshug-foundation-evolution-lifecycle.md`
 - `python3 delphi-ai/tools/todo_completion_guard.py --require-delivery foundation_documentation/todos/active/process/TODO-leadshug-foundation-evolution-lifecycle.md`
 - `python3 delphi-ai/tools/todo_closeout_guard.py --repo foundation_documentation foundation_documentation/todos/active/process/TODO-leadshug-foundation-evolution-lifecycle.md`
 - `python3 delphi-ai/tools/git_write_authority_guard.py --repo foundation_documentation --action git-commit` antes de qualquer commit Foundation; exigir `Overall outcome: go`.
 - `python3 delphi-ai/tools/git_write_authority_guard.py --repo foundation_documentation --action git-push` antes de qualquer push Foundation; exigir `Overall outcome: go`.
-- `git -C foundation_documentation diff --check d8626df1fb0ff64751d7fae10ae93cf41ab1a458 -- README.md project_constitution.md evolution_lifecycle.md backlog decisions system_roadmap.md modules/README.md contracts/README.md artifacts/README.md artifacts/feature-briefs/leadshug-pre-code-evolution-program-20260918.md todos/README.md todos/active/process/TODO-leadshug-foundation-evolution-lifecycle.md todos/completed/process/TODO-leadshug-foundation-evolution-lifecycle.md`
+- Executar `Exact Validation Command Contracts / VAL-08` para cobrir conjuntamente arquivos tracked e untracked do allowlist ST-01.
 - `git -C foundation_documentation diff --exit-code d8626df1fb0ff64751d7fae10ae93cf41ab1a458 -- modules/identity-and-tenancy.md modules/inbox-and-conversations.md modules/audit-and-history.md modules/integrations-and-channels.md`
 - `sha256sum foundation_documentation/.gitattributes foundation_documentation/.gitignore foundation_documentation/artifacts/migration/claude-legacy-reconciliation-review.prompt.txt foundation_documentation/artifacts/publication-manifest.txt foundation_documentation/deterministic/.gitkeep foundation_documentation/todos/ephemeral/.gitignore foundation_documentation/todos/ephemeral/.gitkeep foundation_documentation/todos/promotion_lane/.gitkeep` (comparar exatamente com a tabela de preservação).
 - Executar `Exact Validation Command Contracts / VAL-10`; os probes quoted/unquoted devem passar e o scan dos paths ST-01 deve retornar a mensagem `OK` sem matches.
