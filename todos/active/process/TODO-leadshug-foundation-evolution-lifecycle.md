@@ -33,13 +33,13 @@ A Foundation atual define autoridade, entidades, constituição, quatro fases de
 
 - **Current delivery stage:** `Pending`
 - **Qualifiers:** `none`
-- **Next exact step:** obter revalidação explícita do usuário para `ST01-R4-001..003`, publicar novo freeze e repetir a crítica fresh/no-context.
+- **Next exact step:** executar a crítica V5 fresh/no-context sobre o baseline R4 revalidado e publicado.
 
 ## Active Work State
 
 - **Work state:** `review`
-- **Why this state now:** a crítica V4 confirmou todas as correções R3 e D-01..D-11, mas encontrou três blockers operacionais; as correções R4 estão integradas e alteram Validation Steps/Execution Plan, exigindo revalidação.
-- **Exit condition:** correções R4 revalidadas, novo baseline publicado, crítica reconvergida e guards pré-aprovação com resultado satisfatório.
+- **Why this state now:** as correções R4 foram revalidadas pelo usuário e o novo baseline foi publicado; a crítica V5 e os guards pré-aprovação são os próximos gates.
+- **Exit condition:** crítica V5 sem findings materiais e coherence/scope-drift/preflight com resultados satisfatórios.
 
 ## Scope
 
@@ -558,11 +558,11 @@ User-validated on 2026-09-18 and revalidated after the R2, R3 and R4 contract co
 - **Why this decision:** o TODO é `medium`, transversal e estabelece arquitetura documental.
 - **Trigger stage:** `before the first planning-side review or guard run`
 - **Baseline branch:** `foundation_documentation/main`
-- **Baseline commit:** `075a91efc49481780044fd3d3feb35912598aa0d`
+- **Baseline commit:** `17ced7b867aaa6e73650f3726f7b20b513dd7ddd`
 - **Baseline push reference:** `origin/main`
-- **Gate status:** `not_run`
-- **Findings summary:** o freeze R3 sustentou a crítica V4; as correções R4 agora revalidadas aguardam novo freeze publicado.
-- **Evidence / reference:** freezes anteriores `565ff17a81a6faa663f9e024e9784e396cd50bfe`, `accdd4057d6dbd1b1bfc9fcb005f60aacd3f2e0c` e `956b26d8ba5b5bc0a64d07f59e82129d63d5452a`; freeze vigente `075a91efc49481780044fd3d3feb35912598aa0d`, publicado em `origin/main` em 2026-09-21.
+- **Gate status:** `no_material_findings`
+- **Findings summary:** o pacote com `ST01-R4-001..003` integrado e a revalidação explícita do usuário foi congelado e publicado antes da crítica V5.
+- **Evidence / reference:** freezes anteriores `565ff17a81a6faa663f9e024e9784e396cd50bfe`, `accdd4057d6dbd1b1bfc9fcb005f60aacd3f2e0c`, `956b26d8ba5b5bc0a64d07f59e82129d63d5452a` e `075a91efc49481780044fd3d3feb35912598aa0d`; freeze vigente `17ced7b867aaa6e73650f3726f7b20b513dd7ddd`, publicado em `origin/main` em 2026-09-21.
 - **Waiver authority / reference:** `n/a`
 
 ## Gate: Review Scope Drift
@@ -573,8 +573,8 @@ User-validated on 2026-09-18 and revalidated after the R2, R3 and R4 contract co
 - **Baseline source:** `Review Baseline Freeze -> Baseline commit`
 - **Guard command:** `python3 delphi-ai/tools/review_scope_drift_guard.py --todo foundation_documentation/todos/active/process/TODO-leadshug-foundation-evolution-lifecycle.md`
 - **Gate status:** `not_run`
-- **Findings summary:** o `no-go` R4 de revalidação foi satisfeito pela resposta explícita `valido` em 2026-09-21; aguarda novo freeze e execução conclusiva do guard.
-- **Evidence / reference:** baseline anterior `075a91efc49481780044fd3d3feb35912598aa0d`; `REVIEW-SCOPE-DRIFT-MATERIAL-CHANGE`; revalidação do usuário em 2026-09-21.
+- **Findings summary:** o `no-go` R4 foi satisfeito pela revalidação explícita e pelo freeze `17ced7b8`; execução conclusiva aguarda a crítica V5.
+- **Evidence / reference:** baseline vigente `17ced7b867aaa6e73650f3726f7b20b513dd7ddd`; crítica V5 pendente de dispatch.
 - **Waiver authority / reference:** `n/a`
 
 ## Questions To Close
@@ -656,7 +656,7 @@ User-validated on 2026-09-18 and revalidated after the R2, R3 and R4 contract co
 
 ## Plan Review Gate
 
-- **Status:** `findings_integrated`; correções R4 integradas, pendentes de revalidação, novo freeze e crítica reconvergida.
+- **Status:** `findings_integrated`; correções R4 revalidadas e congeladas, crítica V5 pendente de dispatch.
 
 ### Review Sections
 
@@ -750,7 +750,7 @@ User-validated on 2026-09-18 and revalidated after the R2, R3 and R4 contract co
 
 - **Assumptions:** nenhuma premissa viva; C-01..C-04 são constraints/decisões verificáveis.
 - **Unknowns:** baseline histórico exato da transposição pertence ao ST-02, não a este TODO.
-- **Confidence:** high nas decisões D-01..D-11 e nas correções R3 confirmadas; as correções operacionais R4 aguardam revalidação e nova rodada independente.
+- **Confidence:** high nas decisões D-01..D-11 e nas correções R3/R4; crítica V5 é o gate independente restante.
 
 ## Additional Architectural Opinions
 
@@ -797,8 +797,8 @@ User-validated on 2026-09-18 and revalidated after the R2, R3 and R4 contract co
 - **Internal reviewer mandate:** `required after freeze; reviewer cannot implement`
 - **Canonical multi-lane audit protocol:** `n/a`
 - **Critique lenses:** `correctness|performance|elegance|structural-soundness|risk`
-- **Critique status:** `findings_integrated`
-- **Findings summary:** a rodada V4 confirmou D-01..D-11 e todas as correções R3, mas encontrou três blockers operacionais; todos foram integrados e aguardam revalidação/refreeze antes da rodada conclusiva.
+- **Critique status:** `not_run`
+- **Findings summary:** a rodada V4 confirmou D-01..D-11 e R3; seus três blockers foram integrados, revalidados e congelados em `17ced7b8`; V5 aguarda dispatch.
 - **Evidence / reference:** reviewers `/root/st01_plan_critique` (`ST01-R01..R08`), `/root/st01_plan_critique_v2` (`ST01-R2-001..007`), `/root/st01_plan_critique_v3` (`ST01-R3-001..006`) e `/root/st01_plan_critique_v4` (`ST01-R4-001..003`).
 - **Waiver authority / reference:** `n/a`
 
@@ -843,9 +843,9 @@ User-validated on 2026-09-18 and revalidated after the R2, R3 and R4 contract co
 | `ST01-R2-001..006` | high/medium | `release-blocker` | integrate in ST-01 | execução dos gates dependia das correções | resolved | resolution rows acima + revalidação R2 |
 | `ST01-R2-007` | medium | `follow-up-hardening` | deferred Delphi hardening | gap de reason code negativo não altera produto/runtime | deferred | PCV schema gap + future Delphi self-improvement candidate |
 | `ST01-R3-001..006` | high/medium | `release-blocker` | integrate in ST-01 | traceabilidade, schema e validação pertencem ao contrato atual | resolved | resolution rows acima + revalidação R3 |
-| `ST01-R4-001` | high | `release-blocker` | integrate in ST-01 | authority pós-aprovação é pré-condição da execução atual | resolved-pending-revalidation | Execution Plan + VAL-07 + Commands |
-| `ST01-R4-002` | high | `release-blocker` | integrate in ST-01 | falso verde invalidaria a evidência deste pacote | resolved-pending-revalidation | VAL-01/08/10 exact contracts |
-| `ST01-R4-003` | medium | `release-blocker` | integrate in ST-01 | estado operacional precisa permanecer inequívoco | resolved-pending-revalidation | lifecycle status fields |
+| `ST01-R4-001` | high | `release-blocker` | integrate in ST-01 | authority pós-aprovação é pré-condição da execução atual | resolved | Execution Plan + VAL-07 + Commands + revalidação R4 |
+| `ST01-R4-002` | high | `release-blocker` | integrate in ST-01 | falso verde invalidaria a evidência deste pacote | resolved | VAL-01/08/10 exact contracts + revalidação R4 |
+| `ST01-R4-003` | medium | `release-blocker` | integrate in ST-01 | estado operacional precisa permanecer inequívoco | resolved | lifecycle status fields + revalidação R4 |
 
 ## Gate: Assumption Code Coherence
 
@@ -855,7 +855,7 @@ User-validated on 2026-09-18 and revalidated after the R2, R3 and R4 contract co
 - **Guard scope:** `none; verify no live Assumptions Preview rows remain`
 - **Guard command:** `python3 delphi-ai/tools/assumption_code_coherence_guard.py --todo foundation_documentation/todos/active/process/TODO-leadshug-foundation-evolution-lifecycle.md`
 - **Gate status:** `not_run`
-- **Findings summary:** `Assumptions Preview` mantém zero premissas vivas porque `AMB-05` foi diferida explicitamente em C-05; aguarda revalidação/refreeze e crítica conclusiva.
+- **Findings summary:** `Assumptions Preview` mantém zero premissas vivas porque `AMB-05` foi diferida explicitamente em C-05; execução do guard aguarda a crítica V5.
 - **Evidence / reference:** `pending`
 - **Waiver authority / reference:** `n/a`
 
@@ -937,9 +937,9 @@ Only `Adherent` or an explicitly approved `Exception` is valid at delivery.
 ## TODO Closeout Disposition
 
 - **Disposition:** `keep-active`
-- **Disposition reason:** correções R4 integradas; aguarda revalidação, novo freeze, crítica conclusiva e preflight; nenhuma implementação canônica iniciada.
+- **Disposition reason:** correções R4 revalidadas e congeladas; aguarda crítica V5 e guards finais; nenhuma implementação canônica iniciada.
 - **Post-commit/push status:** `pending`
-- **Next path/status action:** revalidar R4, publicar novo freeze, repetir crítica com o pacote completo e então executar coherence, scope-drift e preflight.
+- **Next path/status action:** executar crítica V5 com o pacote completo e então coherence, scope-drift e preflight.
 
 ## Security Risk Assessment
 
