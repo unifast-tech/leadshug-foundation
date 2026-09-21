@@ -33,13 +33,13 @@ A Foundation atual define autoridade, entidades, constituição, quatro fases de
 
 - **Current delivery stage:** `Pending`
 - **Qualifiers:** `none`
-- **Next exact step:** executar a crítica independente fresh/no-context sobre o baseline validado e a arquitetura reconvergida.
+- **Next exact step:** obter a revalidação explícita do usuário para as correções contratuais `ST01-R2-001..007`, publicar novo freeze e repetir a crítica fresh/no-context com o pacote completo.
 
 ## Active Work State
 
 - **Work state:** `review`
-- **Why this state now:** o usuário validou o escopo revisado; o contrato aguarda freeze, reconvergência das revisões e guards pré-aprovação.
-- **Exit condition:** novo baseline publicado, reviews reconvergidos e guards pré-aprovação com resultado satisfatório.
+- **Why this state now:** a crítica independente R2 encontrou lacunas reproduzíveis no contrato de validação, routing, baseline e metadados; as correções estão integradas no TODO, mas alteram headings materiais e exigem revalidação.
+- **Exit condition:** correções R2 revalidadas pelo usuário, novo baseline publicado, crítica reconvergida e guards pré-aprovação com resultado satisfatório.
 
 ## Scope
 
@@ -184,16 +184,16 @@ A Foundation atual define autoridade, entidades, constituição, quatro fases de
 
 ## Validation Steps
 
-- [ ] `VAL-01` Resolver todos os links relativos Markdown adicionados ou alterados e exigir zero destinos ausentes.
-- [ ] `VAL-02` Verificar IDs, campos obrigatórios e valores de enum em todos os registros criados neste TODO.
+- [ ] `VAL-01` No cwd raiz do workspace, executar `Exact Validation Command Contracts / VAL-01`; exigir exit `0` e `OK: all changed Markdown links resolve`.
+- [ ] `VAL-02` No cwd raiz do workspace, executar `Exact Validation Command Contracts / VAL-02`; exigir exit `0` e `OK: IDs, candidate records, and lifecycle enums are coherent`.
 - [ ] `VAL-03` Simular ST-03 da descoberta ao backlog e confirmar que `Selected-for-Planning` não concede `APROVADO`.
-- [ ] `VAL-04` Criar temporariamente um cenário negativo de TODO em `active/` sem aprovação e confirmar que o contrato o mantém sem autoridade de execução.
+- [ ] `VAL-04` No cwd raiz do workspace, executar `Exact Validation Command Contracts / VAL-04`; o fixture temporário deve receber exit `2` e ao menos uma violação `APPROVAL-EVIDENCE-MISSING|APPROVAL-TOKEN-MISSING|APPROVAL-SCOPE-MISSING`, enquanto o wrapper retorna `0` e remove os fixtures via `trap`.
 - [ ] `VAL-05` Comparar 1-1 as decisões e o conteúdo atual dos quatro módulos, comprovando que permaneceram inalterados.
 - [ ] `VAL-06` Executar `bash delphi-ai/tools/verify_context.sh`.
 - [ ] `VAL-07` Executar os comandos exatos de autoridade, expectativa de diff, conclusão e closeout listados neste TODO e exigir `Overall outcome: go` no gate correspondente.
-- [ ] `VAL-08` Executar `git diff --check d8626df1fb0ff64751d7fae10ae93cf41ab1a458 --` e exigir saída vazia para o patch pertencente ao ST-01.
+- [ ] `VAL-08` Executar o comando `git -C foundation_documentation diff --check ...` exato da seção `Commands` e exigir exit `0` e saída vazia.
 - [ ] `VAL-09` Recalcular os oito hashes preexistentes registrados e exigir igualdade byte a byte.
-- [ ] `VAL-10` Executar scan de padrões de segredo somente nos arquivos adicionados/modificados pelo ST-01 e exigir zero ocorrências não explicadas.
+- [ ] `VAL-10` No cwd raiz do workspace, executar `Exact Validation Command Contracts / VAL-10`; exigir exit `0` e `OK: no secret-like assignments or private keys in ST-01 paths`.
 - [ ] `VAL-11` Concluir crítica pré-aprovação, revisão final e auditorias derivadas pelo piso determinístico.
 
 ## Completion Evidence Matrix
@@ -213,17 +213,164 @@ A Foundation atual define autoridade, entidades, constituição, quatro fases de
 | `DOD-11` | Definition of Done | navegação e papéis coerentes | review | README/constitution/TODO/artifacts cross-check | n/a | planned | provider-neutral roles |
 | `DOD-12` | Definition of Done | gatilho de validator | doc | `evolution_lifecycle.md#deterministic-adoption-trigger` | n/a | planned | owner + limiar mensurável |
 | `DOD-13` | Definition of Done | escopo preservado | diff | diff guard + SHA-256 comparison | local | planned | arquivos alheios intactos |
-| `VAL-01` | Validation Steps | links relativos | test | Markdown target resolver over changed `.md` files; expected missing count `0` | local | planned | comando registrado no execution log |
-| `VAL-02` | Validation Steps | IDs/campos/enums | test | exact `rg`/field matrix checks; expected invalid count `0` | local | planned | sem parser permanente nesta story |
+| `VAL-01` | Validation Steps | links relativos | test | exact inline Python em `Exact Validation Command Contracts / VAL-01`; exit `0` + mensagem `OK` | local | planned | sem artefato persistente |
+| `VAL-02` | Validation Steps | IDs/campos/enums | test | exact inline Python em `Exact Validation Command Contracts / VAL-02`; exit `0` + mensagem `OK` | local | planned | sem parser permanente nesta story |
 | `VAL-03` | Validation Steps | cenário positivo ST-03 | review | lifecycle trace table | n/a | planned | sem execução implícita |
-| `VAL-04` | Validation Steps | cenário negativo active sem approval | review+guard | temporary fixture under `artifacts/tmp/`; expected authority `no-go` | local | planned | fixture descartável |
+| `VAL-04` | Validation Steps | cenário negativo active sem approval | test+guard | `mktemp` fixture + authority guard; inner exit `2`, approval violation, wrapper exit `0` | local | planned | `trap` remove fixture/output |
 | `VAL-05` | Validation Steps | módulos preservados | review | Module Decision Consistency Validation | n/a | planned | conteúdo 1-1 |
 | `VAL-06` | Validation Steps | contexto Delphi | test | `bash delphi-ai/tools/verify_context.sh` | local | planned | expected PACED-Ready |
 | `VAL-07` | Validation Steps | guards | test | commands in `Commands`; expected gate-specific `go` | local | planned | deterministic |
-| `VAL-08` | Validation Steps | whitespace patch | test | `git diff --check d8626df1fb0ff64751d7fae10ae93cf41ab1a458 --` | local | planned | expected empty |
+| `VAL-08` | Validation Steps | whitespace patch | test | `git -C foundation_documentation diff --check d8626df1fb0ff64751d7fae10ae93cf41ab1a458 -- <ST-01 paths>` | local | planned | exit `0`; expected empty |
 | `VAL-09` | Validation Steps | hashes preexistentes | test | `sha256sum` against recorded values | local | planned | eight exact matches |
-| `VAL-10` | Validation Steps | secret patterns | security | scoped `rg` over ST-01 paths | local | planned | zero unexplained matches |
+| `VAL-10` | Validation Steps | secret patterns | security | exact shell wrapper em `Exact Validation Command Contracts / VAL-10` | local | planned | `rg` exit `1` é sucesso; match bloqueia |
 | `VAL-11` | Validation Steps | independent gates | review | critique/final-review/audit evidence | n/a | planned | fresh no-context |
+
+## Exact Validation Command Contracts
+
+Todos os comandos abaixo executam a partir da raiz do workspace, não criam arquivos persistentes e têm os critérios de saída declarados.
+
+### VAL-01 — Relative Markdown Links
+
+```bash
+python3 - <<'PY'
+import re
+import subprocess
+import sys
+from pathlib import Path
+from urllib.parse import unquote
+
+repo = Path("foundation_documentation")
+baseline = "d8626df1fb0ff64751d7fae10ae93cf41ab1a458"
+changed = subprocess.run(
+    ["git", "-C", str(repo), "diff", "--name-only", baseline, "--", "*.md"],
+    check=True,
+    capture_output=True,
+    text=True,
+).stdout.splitlines()
+missing = []
+for relative in changed:
+    source = repo / relative
+    if not source.is_file():
+        continue
+    for raw in re.findall(r"!?\[[^\]]*\]\(([^)]+)\)", source.read_text(encoding="utf-8")):
+        target = raw.strip()
+        if target.startswith("<") and ">" in target:
+            target = target[1:target.index(">")]
+        else:
+            target = target.split(maxsplit=1)[0]
+        if not target or target.startswith(("#", "http://", "https://", "mailto:", "data:", "app://")):
+            continue
+        target = unquote(target.split("#", 1)[0].split("?", 1)[0])
+        resolved = Path(target) if Path(target).is_absolute() else source.parent / target
+        if not resolved.exists():
+            missing.append(f"{relative} -> {target}")
+if missing:
+    print("Missing Markdown targets:", *missing, sep="\n- ")
+    sys.exit(1)
+print("OK: all changed Markdown links resolve")
+PY
+```
+
+Expected: exit `0` and exactly one final `OK` line; any missing target prints its source mapping and exits `1`.
+
+### VAL-02 — IDs, Candidate Records, and Enums
+
+```bash
+python3 - <<'PY'
+import re
+import sys
+from pathlib import Path
+
+backlog = Path("foundation_documentation/backlog/README.md").read_text(encoding="utf-8")
+lifecycle = Path("foundation_documentation/evolution_lifecycle.md").read_text(encoding="utf-8")
+expected_candidates = {
+    "BLG-central-whatsapp-capability-study": "Selected-for-Planning",
+    "BLG-whatsflow-channel-attendance-study": "Selected-for-Planning",
+    "BLG-leadshug-evolution-synthesis": "Deferred",
+}
+errors = []
+for candidate_id, state in expected_candidates.items():
+    if len(re.findall(rf"(?<![A-Za-z0-9-]){re.escape(candidate_id)}(?![A-Za-z0-9-])", backlog)) != 1:
+        errors.append(f"{candidate_id}: expected exactly one backlog record")
+    record = next((line for line in backlog.splitlines() if candidate_id in line), "")
+    if state not in record:
+        errors.append(f"{candidate_id}: expected state {state} on its record line")
+all_ids = re.findall(r"(?<![A-Za-z0-9-])(?:BLG|DEC|CAP)-[A-Za-z0-9-]+", backlog + "\n" + lifecycle)
+for value in all_ids:
+    if not re.fullmatch(r"(?:BLG|DEC|CAP)-[a-z0-9]+(?:-[a-z0-9]+)*", value):
+        errors.append(f"invalid immutable ID: {value}")
+required_enums = [
+    "Proposed|Under-Review|Selected-for-Planning|Deferred|Rejected",
+    "Not-Assessed|Discovery|Planned|In-Progress|Delivered|Retired",
+    "Draft|Review|Approved|In-Progress|Completed|Cancelled",
+    "Proposed|Accepted|Superseded|Rejected",
+    "Not-Assessed|Documented|Verified|Deprecated",
+]
+for enum in required_enums:
+    if enum not in lifecycle:
+        errors.append(f"missing lifecycle enum: {enum}")
+if errors:
+    print("Contract validation failures:", *errors, sep="\n- ")
+    sys.exit(1)
+print("OK: IDs, candidate records, and lifecycle enums are coherent")
+PY
+```
+
+Expected: exit `0` and exactly one final `OK` line; duplicate/missing candidate, wrong disposition, malformed ID or absent enum exits `1`.
+
+### VAL-04 — Negative Approval Fixture
+
+```bash
+set -euo pipefail
+fixture="$(mktemp --suffix=.md)"
+output="$(mktemp)"
+trap 'rm -f "$fixture" "$output"' EXIT
+sed -E \
+  -e 's|^- \*\*Approved by:\*\*.*|- **Approved by:** `pending`|' \
+  -e 's|^- \*\*Approval scope:\*\*.*|- **Approval scope:** `pending`|' \
+  foundation_documentation/todos/active/process/TODO-leadshug-foundation-evolution-lifecycle.md > "$fixture"
+set +e
+python3 delphi-ai/tools/todo_authority_guard.py "$fixture" > "$output" 2>&1
+rc=$?
+set -e
+test "$rc" -eq 2
+rg -q 'APPROVAL-(EVIDENCE-MISSING|TOKEN-MISSING|SCOPE-MISSING)' "$output"
+```
+
+Expected: o guard interno retorna `2`, o output contém uma violação de aprovação e o wrapper retorna `0`; `trap` remove os dois fixtures em qualquer saída.
+
+### VAL-10 — Scoped Secret Pattern Scan
+
+```bash
+set -euo pipefail
+mapfile -t relative_paths < <(git -C foundation_documentation diff --name-only d8626df1fb0ff64751d7fae10ae93cf41ab1a458 -- \
+  README.md project_constitution.md evolution_lifecycle.md backlog decisions system_roadmap.md \
+  modules/README.md contracts/README.md artifacts/README.md \
+  artifacts/feature-briefs/leadshug-pre-code-evolution-program-20260918.md \
+  todos/README.md todos/active/process/TODO-leadshug-foundation-evolution-lifecycle.md \
+  todos/completed/process/TODO-leadshug-foundation-evolution-lifecycle.md)
+test "${#relative_paths[@]}" -gt 0
+scan_paths=()
+for relative_path in "${relative_paths[@]}"; do
+  test -f "foundation_documentation/$relative_path" && scan_paths+=("foundation_documentation/$relative_path")
+done
+test "${#scan_paths[@]}" -gt 0
+set +e
+output="$(rg -n --pcre2 '(?i)(api[_-]?key|client[_-]?secret|password|authorization)\s*[:=]\s*["'"''][^"'"'']+|BEGIN [A-Z ]*PRIVATE KEY' "${scan_paths[@]}" 2>&1)"
+rc=$?
+set -e
+if [ "$rc" -eq 1 ]; then
+  echo 'OK: no secret-like assignments or private keys in ST-01 paths'
+elif [ "$rc" -eq 0 ]; then
+  printf '%s\n' "$output"
+  exit 1
+else
+  printf '%s\n' "$output" >&2
+  exit "$rc"
+fi
+```
+
+Expected: `rg` exit `1` (nenhum match) é convertido em exit `0` com a mensagem `OK`; qualquer match ou erro bloqueia.
 
 ## External Dependency Readiness
 
@@ -235,13 +382,14 @@ A Foundation atual define autoridade, entidades, constituição, quatro fases de
 
 - **Primary execution profile:** `strategic-cto`
 - **Active technical scope:** `cross-stack`
-- **Expected supporting profiles:** `assurance-tester-quality` para revisão independente; nenhum implementador de produto.
+- **Expected supporting profiles:** `routine-executor` para a implementação documental pós-`APROVADO` e `assurance-tester-quality` para revisão independente; nenhum implementador de produto/runtime.
 - **Scope-check command:** `python3 delphi-ai/tools/profile_scope_check.py --profile strategic-cto`
 
 ### Handoff Log
 
 | From Profile | To Profile | Why the Handoff Exists | Touched Surfaces | Status / Evidence |
 | --- | --- | --- | --- | --- |
+| strategic-cto | routine-executor | implementar somente o pacote documental aprovado | paths esperados do ST-01 | planned after `APROVADO`; single writer |
 | strategic-cto | assurance-tester-quality | crítica e revisão final independentes | TODO + diff documental limitado | planned |
 
 ## Complexity
@@ -292,7 +440,7 @@ User-validated on 2026-09-18; execution remains pending explicit `APROVADO`.
 - **Status:** `no_material_findings`
 - **Checked against:** `project_constitution.md`, `system_roadmap.md`, `modules/README.md` e os quatro módulos individuais em 2026-09-18.
 - **Evidence:** os quatro módulos individuais permanecem sem diff desde `d8626df1fb0ff64751d7fae10ae93cf41ab1a458`; suas invariantes são preservadas. A frase atual da constituição que associa `todos/active/` à autoridade de execução é a ambiguidade intencionalmente aposentada por `D-02`, não uma decisão de módulo silenciosamente superseded.
-- **Outcome:** o baseline pode entrar em architecture opinion; qualquer proposta que altere invariantes de módulo exige retorno ao usuário.
+- **Outcome:** a architecture opinion R2 permaneceu limpa; a correção do contrato de validação não altera invariantes de módulo, mas exige revalidação por tocar headings materiais do TODO.
 
 ## Decision Freeze Evidence
 
@@ -332,7 +480,7 @@ User-validated on 2026-09-18; execution remains pending explicit `APROVADO`.
 | Harness Type | Surface | Command / Rule / Artifact | Regression It Must Catch | Adoption Timing | Evidence Plan / Follow-up |
 | --- | --- | --- | --- | --- | --- |
 | rule | execução | `project_constitution.md` + `todos/README.md` | candidato tratado como TODO aprovado | implement-in-this-todo | revisão 1-1 |
-| guard | TODO | `todo_authority_guard.py`, `todo_completion_guard.py` | execução/closeout sem autoridade/evidência | already-enforced | outputs no TODO |
+| guard | tactical contract files | `todo_authority_guard.py`, `todo_completion_guard.py` | execução/closeout sem autoridade/evidência | already-enforced | registrar stdout, exit code e timestamp na Completion Evidence Matrix antes do closeout |
 | audit | Foundation | resolved-link, IDs/enums e positive/negative traceability checks | links, estados e transições inconsistentes | manual-only-with-rationale | comandos exatos neste TODO; follow-up automático pelo gatilho D-09 |
 
 ## Architecture Review Gates
@@ -357,8 +505,8 @@ User-validated on 2026-09-18; execution remains pending explicit `APROVADO`.
 - **Trigger stage:** `before the first planning-side review or guard run`
 - **Baseline branch:** `foundation_documentation/main`
 - **Baseline commit:** `accdd4057d6dbd1b1bfc9fcb005f60aacd3f2e0c`
-- **Baseline push reference:** `origin/main@accdd4057d6dbd1b1bfc9fcb005f60aacd3f2e0c`
-- **Gate status:** `satisfied`
+- **Baseline push reference:** `origin/main`
+- **Gate status:** `no_material_findings`
 - **Findings summary:** o baseline original `565ff17a81a6faa663f9e024e9784e396cd50bfe` sustentou as primeiras revisões; findings materiais exigiram escopo reduzido, decisões revisadas e novo freeze.
 - **Evidence / reference:** baseline original `565ff17a81a6faa663f9e024e9784e396cd50bfe`; evidence-only commit original `0c2c050861af97f76ffd44724ddcd26be7af6174`; freeze revisado `accdd4057d6dbd1b1bfc9fcb005f60aacd3f2e0c`, publicado em `origin/main` em 2026-09-18.
 - **Waiver authority / reference:** `n/a`
@@ -371,8 +519,8 @@ User-validated on 2026-09-18; execution remains pending explicit `APROVADO`.
 - **Baseline source:** `Review Baseline Freeze -> Baseline commit`
 - **Guard command:** `python3 delphi-ai/tools/review_scope_drift_guard.py --todo foundation_documentation/todos/active/process/TODO-leadshug-foundation-evolution-lifecycle.md`
 - **Gate status:** `not_run`
-- **Findings summary:** drift material reconhecido pelas revisões; guard será executado somente após validação do usuário, refreeze e reconvergência.
-- **Evidence / reference:** `pending`
+- **Findings summary:** guard executado em 2026-09-21 retornou `no-go` de revalidação (não hard rejection) para cinco seções materiais: Validation Steps, Questions To Close, Assumptions Preview, Execution Plan e Performance & Concurrency Risk Assessment.
+- **Evidence / reference:** baseline `accdd4057d6dbd1b1bfc9fcb005f60aacd3f2e0c`; `REVIEW-SCOPE-DRIFT-MATERIAL-CHANGE`; próximo gate é a revalidação explícita do usuário seguida de novo freeze.
 - **Waiver authority / reference:** `n/a`
 
 ## Questions To Close
@@ -380,6 +528,13 @@ User-validated on 2026-09-18; execution remains pending explicit `APROVADO`.
 - [x] Usuário validou o escopo reduzido e `D-01..D-11` em 2026-09-18 (`Valido`).
 - [x] `AMB-03`: fases são temas; horizonte é `Now|Next|Later|Unscheduled`, sem datas implícitas (`D-01`).
 - [x] `AMB-04`: adotar `foundation_documentation/backlog/` fora de `todos/active/` (`D-02`).
+- [ ] Usuário revalida o contrato corrigido após `ST01-R2-001..007`, sem mudança nas decisões `D-01..D-11`.
+
+## Assumptions Preview
+
+| Assumption ID | Assumption | Confidence | Validation / Handling |
+| --- | --- | --- | --- |
+| `n/a` | Nenhuma premissa viva; o escopo depende somente de constraints e decisões validadas abaixo. | high | placeholder intencional para o guard; nenhuma implementação pode depender desta linha |
 
 ## Confirmed Constraints (No Live Assumptions)
 
@@ -401,8 +556,8 @@ User-validated on 2026-09-18; execution remains pending explicit `APROVADO`.
 
 ### Ordered Steps
 
-1. Validar com o usuário o escopo reduzido e D-01..D-11 após os primeiros reviews.
-2. Atualizar o feature brief, congelar/publicar novo baseline e rerodar reviews afetados.
+1. Revalidar com o usuário as correções contratuais `ST01-R2-001..007`; `D-01..D-11` permanecem conceitualmente inalteradas.
+2. Congelar/publicar novo baseline e repetir a crítica fresh/no-context com `README.md` incluído; repetir architecture opinion somente se alguma decisão arquitetural mudar.
 3. Rodar coherence/scope-drift/pre-approval guards e solicitar `APROVADO`.
 4. Implementar authority matrix, papéis, state machines e lifecycle central.
 5. Implementar backlog, decisions, roadmap e navegação sem duplicar estado vivo.
@@ -442,7 +597,7 @@ User-validated on 2026-09-18; execution remains pending explicit `APROVADO`.
 
 ## Plan Review Gate
 
-- **Status:** `findings_integrated`; escopo materialmente revisado e pendente de validação do usuário, refreeze e nova rodada.
+- **Status:** `findings_integrated`; correções R2 integradas, pendentes de revalidação do usuário, novo freeze e crítica reconvergida.
 
 ### Review Sections
 
@@ -461,50 +616,65 @@ User-validated on 2026-09-18; execution remains pending explicit `APROVADO`.
 #### PR-01 — Horizonte do roadmap
 
 - **Severity:** medium
-- **Evidence:** `system_roadmap.md` possui fases sem estado, dependência ou saída.
+- **Evidence:** `foundation_documentation/system_roadmap.md:4` inicia as quatro fases; até `:22` não há estado, dependência ou exit gate.
 - **Why now:** os próximos estudos precisam de um local previsível sem falsa promessa de data.
-- **A:** quarters/releases; maior previsibilidade temporal, maior risco de compromisso fictício.
-- **B:** fases como temas + `Now/Next/Later/Unscheduled`; separa estratégia de agendamento sem datas falsas.
-- **C:** manter fases atuais; esforço zero, problema permanece.
 - **Recommendation:** B (`D-01`); melhor equilíbrio entre clareza, manutenção, elegância e risco.
+
+| Option | Effort | Risk | Blast radius | Maintenance | Performance | Elegance | Structural soundness |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| A — quarters/releases | medium | high: datas fictícias | roadmap | recurring date churn | neutral | medium | low without delivery evidence |
+| B — temas + horizontes | medium | low | roadmap + backlog links | low | neutral | high | high: dimensões ortogonais |
+| C — manter fases | none | high: baixa previsibilidade | roadmap consumers | high manual interpretation | neutral | low | low |
 
 #### PR-02 — Local do backlog
 
 - **Severity:** medium
-- **Evidence:** constituição cita `backlog/`, `todos/README.md` cita `todos/active/backlog/`, e nenhum existe.
-- **A:** `todos/active/backlog`; simples, mas mistura não aprovado com execução ativa.
-- **B:** `foundation_documentation/backlog/`; autoridade separada e transição explícita.
-- **C:** somente feature briefs; falta disposição canônica e priorização.
+- **Evidence:** `foundation_documentation/project_constitution.md:38` cita `backlog/`; `foundation_documentation/todos/README.md:7` cita `todos/active/backlog/`; nenhum dos caminhos existe no baseline.
 - **Recommendation:** B (`D-02`); menor acoplamento e melhor coerência estrutural.
+
+| Option | Effort | Risk | Blast radius | Maintenance | Performance | Elegance | Structural soundness |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| A — `todos/active/backlog` | low | high: confunde autoridade | TODO governance | medium | neutral | low | low |
+| B — `backlog/` separado | medium | low | navigation + governance | low | neutral | high | high: boundary explícita |
+| C — feature briefs | low | medium: sem disposição viva | artifacts | high manual triage | neutral | medium | medium-low |
 
 #### PR-03 — Automação de proteção
 
 - **Severity:** low
-- **Evidence:** não existe validator canônico de IA documental na Foundation.
-- **A:** criar validator permanente agora; maior cobertura, amplia escopo e manutenção.
-- **B:** usar guards existentes + checks reproduzíveis e observar recorrência.
-- **C:** apenas revisão manual; menor esforço, menor previsibilidade.
+- **Evidence:** `delphi-ai/tools/manifest.md:1` é o inventário canônico de tooling e o baseline Foundation contém apenas `foundation_documentation/deterministic/.gitkeep:1`, sem validator documental próprio.
 - **Recommendation:** B (`D-09`), com owner e gatilho mensurável para validator permanente.
+
+| Option | Effort | Risk | Blast radius | Maintenance | Performance | Elegance | Structural soundness |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| A — validator agora | high | medium: escopo prematuro | Foundation + Delphi tooling | high | negligible runtime | medium | medium until schema stabilizes |
+| B — checks exatos + gatilho | low | low | ST-01 only | low until trigger | neutral | high | high: proportional control |
+| C — revisão manual | low | medium: não reproduzível | review process | high | neutral | low | low |
 
 #### PR-04 — Contrato vivo versus execução aprovada
 
 - **Severity:** high
-- **Evidence:** o fluxo de refinamento exige TODO em `active/` antes do `APROVADO`.
+- **Evidence:** `delphi-ai/workflows/docker/todo-driven-execution-method.md:30` exige aguardar `APROVADO`, e `:38` proíbe implementação anterior à aprovação.
 - **Why now:** tratar localização como aprovação tornaria o próprio processo circular.
-- **A:** manter `active = approved`; incompatível com o workflow.
-- **B:** `active = live tactical contract`; execução exige `APROVADO` + authority guard `go`.
-- **C:** criar uma nova árvore `draft/`; aumenta movimentações e tooling sem necessidade.
 - **Recommendation:** B (`D-02`); separa estado documental de autoridade de execução.
+
+| Option | Effort | Risk | Blast radius | Maintenance | Performance | Elegance | Structural soundness |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| A — `active = approved` | low | critical: circular | every TODO | low but unsafe | neutral | low | invalid against workflow |
+| B — active vivo + gate | medium | low | TODO governance | low | neutral | high | high: state/authority separated |
+| C — nova árvore `draft/` | high | medium: tooling drift | paths + guards | high | neutral | medium-low | medium |
 
 #### PR-05 — Owner dos campos vivos
 
 - **Severity:** high
-- **Evidence:** o plano inicial repetia estado/dependências entre backlog, roadmap, modules, decisions e TODO.
+- **Evidence:** `foundation_documentation/modules/README.md:3` já atribui contratos/workflows locais aos módulos, enquanto `foundation_documentation/system_roadmap.md:22` separa roadmap de autoridade de implementação; duplicar campos vivos entre essas superfícies violaria ambos os limites.
 - **Why now:** sincronização N-way destruiria previsibilidade e aumentaria custo operacional.
-- **A:** duplicar campos e exigir revisão manual; frágil.
-- **B:** matriz de owner único com IDs/links; simples e auditável.
-- **C:** centralizar tudo em um único arquivo; reduz ownership modular.
 - **Recommendation:** B (`D-06`); maior elegância e solidez estrutural.
+
+| Option | Effort | Risk | Blast radius | Maintenance | Performance | Elegance | Structural soundness |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| A — duplicar campos | low initially | high: drift N-way | all planning docs | high | neutral | low | low |
+| B — owner único + links | medium | low | all planning docs | low | neutral | high | high |
+| C — arquivo central único | high migration | medium: perde boundaries | whole Foundation | medium-high | neutral | medium | low-medium |
 
 ### Failure Modes & Edge Cases
 
@@ -519,7 +689,7 @@ User-validated on 2026-09-18; execution remains pending explicit `APROVADO`.
 
 - **Assumptions:** nenhuma premissa viva; C-01..C-04 são constraints/decisões verificáveis.
 - **Unknowns:** baseline histórico exato da transposição pertence ao ST-02, não a este TODO.
-- **Confidence:** high no escopo validado; nova rodada independente obrigatória após o refreeze.
+- **Confidence:** high nas decisões D-01..D-11; o contrato de validação corrigido aguarda revalidação e nova rodada independente após o refreeze.
 
 ## Additional Architectural Opinions
 
@@ -561,14 +731,14 @@ User-validated on 2026-09-18; execution remains pending explicit `APROVADO`.
 - **Why this decision:** complexidade medium com blast radius cross-module.
 - **Impact signals in scope:** `cross-module blast radius`
 - **Package mode:** `bounded-file-set`
-- **Package minimum contents:** feature brief, TODO congelado e documentos canônicos tocados.
+- **Package minimum contents:** feature brief, TODO congelado e todos os documentos canônicos tocados, incluindo explicitamente `foundation_documentation/README.md`.
 - **Critique isolation mode:** `fresh internal no-context reviewer`
 - **Internal reviewer mandate:** `required after freeze; reviewer cannot implement`
 - **Canonical multi-lane audit protocol:** `n/a`
 - **Critique lenses:** `correctness|performance|elegance|structural-soundness|risk`
-- **Critique status:** `not_run`
-- **Findings summary:** autoridade, diff schema, assumptions, owners, DoD/evidence, audit floor e taxonomia foram revisados; nova rodada fresh/no-context aguarda o baseline validado.
-- **Evidence / reference:** reviewer `/root/st01_plan_critique`, findings `ST01-R01..R08`.
+- **Critique status:** `findings_integrated`
+- **Findings summary:** a rodada R2 confirmou D-01..D-11, mas exigiu sete correções em baseline, assumptions, rule ingestion/routing, pacote, comandos reproduzíveis, issue cards e PCV; as correções foram integradas e aguardam revalidação/refreeze antes da rodada conclusiva.
+- **Evidence / reference:** reviewers `/root/st01_plan_critique` (`ST01-R01..R08`) e `/root/st01_plan_critique_v2` (`ST01-R2-001..007`).
 - **Waiver authority / reference:** `n/a`
 
 | Finding ID | Resolution | Usefulness | Formalizable | Candidate Rule Level | Candidate Rule ID | Rationale / Evidence |
@@ -588,6 +758,13 @@ User-validated on 2026-09-18; execution remains pending explicit `APROVADO`.
 | `ST01-ARCH-005` | Integrated | useful | yes | project | `D-11` | papéis provider-neutral |
 | `ST01-ARCH-006` | Integrated | useful | yes | project | `D-09` | validator trigger mensurável |
 | `ST01-ARCH-007` | Integrated | useful | yes | project | `D-08` | disposições por story reconciliadas |
+| `ST01-R2-001` | Integrated | useful | yes | project | `Review Baseline Freeze` | ref real `origin/main`, status canônico e narrativas sincronizadas |
+| `ST01-R2-002` | Integrated | useful | yes | paced | `Assumptions Preview` | heading parseável com placeholder `n/a`; constraints seguem separadas |
+| `ST01-R2-003` | Integrated | useful | yes | paced | `Rules Acknowledgement / Agent Routing` | paths concretos, tuple de implementação e guards de git explícitos |
+| `ST01-R2-004` | Integrated | useful | yes | project | `Critique package` | `foundation_documentation/README.md` incluído explicitamente |
+| `ST01-R2-005` | Integrated | useful | yes | project | `Exact Validation Command Contracts` | cwd, fixtures, exits e outputs definidos para VAL-01/02/04/08/10 |
+| `ST01-R2-006` | Integrated | useful | yes | project | `Plan Review Issue Cards` | file:line e matrizes A/B/C completas |
+| `ST01-R2-007` | Deferred hardening | useful | yes | paced | `pcv-1 negative-reason gap` | schema completo com `n/a` explícito; pcv-1 não oferece reason code negativo, sem impacto de produto/runtime; candidato a self-improvement futuro |
 
 ## Gate: Assumption Code Coherence
 
@@ -597,7 +774,7 @@ User-validated on 2026-09-18; execution remains pending explicit `APROVADO`.
 - **Guard scope:** `none; verify no live Assumptions Preview rows remain`
 - **Guard command:** `python3 delphi-ai/tools/assumption_code_coherence_guard.py --todo foundation_documentation/todos/active/process/TODO-leadshug-foundation-evolution-lifecycle.md`
 - **Gate status:** `not_run`
-- **Findings summary:** aguardando refreeze e nova crítica independente.
+- **Findings summary:** `Assumptions Preview` restaurado com linha `n/a`; execução aguarda revalidação, refreeze e crítica conclusiva antes do guard.
 - **Evidence / reference:** `pending`
 - **Waiver authority / reference:** `n/a`
 
@@ -613,19 +790,24 @@ User-validated on 2026-09-18; execution remains pending explicit `APROVADO`.
 | Source | Why It Applies Now | Must Preserve | Must Avoid | Execution Impact |
 | --- | --- | --- | --- | --- |
 | `delphi-ai/main_instructions.md` | autoridade e Foundation main-only | documentação antes de código | branch/worktree paralelo | freeze/push canônico |
-| `rule-docker-shared-core-instructions-always-on` | disciplina geral | hierarquia e segurança | atalhos de workflow | gates obrigatórios |
-| `rule-docker-shared-project-mandate-always-on` | mandato e core docs | propósito/invariantes | drift de produto | revisão 1-1 |
-| `rule-docker-shared-foundation-docs-sync-model-decision` | sincronização Foundation | roadmap/módulos coerentes | side notes concorrentes | consolidação canônica |
-| `wf-docker-todo-driven-execution-method` | entrega governada | TODO, aprovação, evidência | implementação pré-APROVADO | execução por fases |
-| `wf-docker-todo-*` phase methods | lifecycle do TODO | freeze, review, guards, closeout | pular gates | sequência registrada |
+| `delphi-ai/rules/core/core-instructions-always-on.md` | disciplina geral | hierarquia e segurança | atalhos de workflow | gates obrigatórios |
+| `delphi-ai/rules/core/project-mandate-always-on.md` | mandato e core docs | propósito/invariantes | drift de produto | revisão 1-1 |
+| `delphi-ai/rules/core/foundation-docs-sync-model-decision.md` | sincronização Foundation | roadmap/módulos coerentes | side notes concorrentes | consolidação canônica |
+| `delphi-ai/rules/core/todo-driven-execution-model-decision.md` | decisão de governança do TODO | fases e autoridade explícita | implementação pré-APROVADO | execução governada |
+| `delphi-ai/rules/core/audit-escalation-model-decision.md` | piso de auditoria | lanes derivadas pelo guard | seleção subjetiva | gates proporcionais |
+| `delphi-ai/workflows/docker/todo-driven-execution-method.md` | entrega governada | TODO, aprovação, evidência | implementação pré-APROVADO | execução por fases |
+| `delphi-ai/workflows/docker/todo-approval-gates-method.md` | fase atual | freeze, crítica, scope drift e preflight | pedir aprovação cedo | sequência pré-APROVADO |
+| `delphi-ai/workflows/docker/todo-execution-boundary-method.md` | próxima fase | boundary após aprovação | implementação implícita | handoff explícito |
+| `delphi-ai/workflows/docker/effort-selection-method.md` | seleção de effort/model | routing conforme superfície | reviewer como writer | tuple verificável |
 
 ## Agent Routing Preflight
 
 - **Client surface:** `codex`
-- **Current governed action:** `todo-approval`
-- **Selected role:** `primary-chat`
-- **Selected model:** `gpt-5.4` (`chat_orchestrator` contract lane)
-- **Selected effort:** `max`
+- **Current governed action:** `implementation`
+- **Routing lifecycle note:** tuple planejado para a lane pós-`APROVADO`; não concede autoridade antes da aprovação explícita.
+- **Selected role:** `routine-executor`
+- **Selected model:** `gpt-5.6-terra`
+- **Selected effort:** `medium`
 - **Proof mode:** `declared`
 - **Exception reason:** `n/a`
 - **Subagent / delegation authorization:** `required by independent no-context critique skill after freeze`
@@ -633,7 +815,8 @@ User-validated on 2026-09-18; execution remains pending explicit `APROVADO`.
 - **Worktree / auxiliary-checkout authorization:** `not-authorized`
 - **Worktree authorization evidence:** `n/a`
 - **Writer scheduling policy:** `single-writer-serialized`
-- **Guard outcome:** `go`; declared routing preflight on 2026-09-18
+- **Guard outcome:** `go`
+- **Guard evidence:** implementation routing preflight declarado em 2026-09-21; tuple acima retornou `Overall outcome: go`.
 - **Waiver / exception reference:** `n/a`
 
 ## Decision Adherence Validation (Mandatory Before Delivery)
@@ -672,9 +855,9 @@ Only `Adherent` or an explicitly approved `Exception` is valid at delivery.
 ## TODO Closeout Disposition
 
 - **Disposition:** `keep-active`
-- **Disposition reason:** escopo validado pelo usuário; contrato aguarda freeze, reviews e preflight; nenhuma implementação canônica iniciada.
+- **Disposition reason:** correções contratuais R2 integradas; aguarda revalidação do usuário, novo freeze, crítica conclusiva e preflight; nenhuma implementação canônica iniciada.
 - **Post-commit/push status:** `pending`
-- **Next path/status action:** executar crítica independente sobre `accdd405`, depois coherence, scope-drift e preflight.
+- **Next path/status action:** após revalidação, publicar novo freeze, repetir crítica com o pacote completo e então executar coherence, scope-drift e preflight.
 
 ## Security Risk Assessment
 
@@ -692,12 +875,14 @@ Only `Adherent` or an explicitly approved `Exception` is valid at delivery.
 - **Why this level:** no endpoint, UI, backend mutation, queue or runtime change.
 - **Current delivery stage at review time:** `Pending`
 
-| Lane ID | Lane | Trigger Result | Trigger Severity | Trigger Reason Code | Gate Deadline | Minimum Evidence Rule | State | Residual Risk | Uncertainty Reason Code |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| `EPS` | endpoint-performance-scrutiny | `not_needed` | low | `EPS-DATA-PATH-CHANGED` | before_local_implemented | `EPS-E1` | `not_applicable` | none | none |
-| `FRC` | frontend-race-condition-validation | `not_needed` | low | `FRC-LIFECYCLE-ASYNC-EFFECT` | before_local_implemented | `FRC-POLICY` | `not_applicable` | none | none |
-| `BCI` | backend-concurrency-idempotency-validation | `not_needed` | low | `BCI-NON-IDEMPOTENT-WRITE` | before_local_implemented | `BCI-INV` | `not_applicable` | none | none |
-| `RLS` | runtime-load-stress-validation | `not_needed` | low | `RLS-SLO-CLAIM` | before_production_ready | `RLS-E1` | `not_applicable` | none | none |
+| Policy Schema Version | Lane ID | Lane | Trigger Result | Trigger Severity | Trigger Reason Code | Trigger Rationale | Gate Deadline | Minimum Evidence Rule ID | State | Residual Risk | Uncertainty Reason Code | Recorded At UTC | Executor ID |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| `pcv-1` | `EPS` | endpoint-performance-scrutiny | `not_needed` | low | `n/a — pcv-1 has no negative reason code` | docs-only; nenhum endpoint, lookup, query shape ou data path muda | `n/a` | `n/a` | `not_applicable` | none | none | `2026-09-21T13:02:56Z` | `codex:/root` |
+| `pcv-1` | `FRC` | frontend-race-condition-validation | `not_needed` | low | `n/a — pcv-1 has no negative reason code` | docs-only; nenhum async UI lifecycle, navigation ou race surface muda | `n/a` | `n/a` | `not_applicable` | none | none | `2026-09-21T13:02:56Z` | `codex:/root` |
+| `pcv-1` | `BCI` | backend-concurrency-idempotency-validation | `not_needed` | low | `n/a — pcv-1 has no negative reason code` | docs-only; nenhuma mutação, idempotency key, transaction ou lock muda | `n/a` | `n/a` | `not_applicable` | none | none | `2026-09-21T13:02:56Z` | `codex:/root` |
+| `pcv-1` | `RLS` | runtime-load-stress-validation | `not_needed` | low | `n/a — pcv-1 has no negative reason code` | docs-only; nenhum runtime, workload, SLO ou topology muda | `n/a` | `n/a` | `not_applicable` | none | none | `2026-09-21T13:02:56Z` | `codex:/root` |
+
+- **PCV schema gap:** `pcv-1` não possui reason codes negativos/not-triggered; `n/a` explícito evita atribuir falsamente um trigger positivo. O gap é follow-up de hardening do Delphi, sem impacto em produto/runtime e fora do ST-01.
 
 ## Verification Debt Assessment
 
@@ -760,6 +945,8 @@ Only `Adherent` or an explicitly approved `Exception` is valid at delivery.
 - `python3 delphi-ai/tools/todo_diff_expectation_guard.py --repo-root foundation_documentation foundation_documentation/todos/active/process/TODO-leadshug-foundation-evolution-lifecycle.md`
 - `python3 delphi-ai/tools/todo_completion_guard.py --require-delivery foundation_documentation/todos/active/process/TODO-leadshug-foundation-evolution-lifecycle.md`
 - `python3 delphi-ai/tools/todo_closeout_guard.py --repo foundation_documentation foundation_documentation/todos/active/process/TODO-leadshug-foundation-evolution-lifecycle.md`
+- `python3 delphi-ai/tools/git_write_authority_guard.py --repo foundation_documentation --action git-commit` antes de qualquer commit Foundation; exigir `Overall outcome: go`.
+- `python3 delphi-ai/tools/git_write_authority_guard.py --repo foundation_documentation --action git-push` antes de qualquer push Foundation; exigir `Overall outcome: go`.
 - `git -C foundation_documentation diff --check d8626df1fb0ff64751d7fae10ae93cf41ab1a458 -- README.md project_constitution.md evolution_lifecycle.md backlog decisions system_roadmap.md modules/README.md contracts/README.md artifacts/README.md artifacts/feature-briefs/leadshug-pre-code-evolution-program-20260918.md todos/README.md todos/active/process/TODO-leadshug-foundation-evolution-lifecycle.md todos/completed/process/TODO-leadshug-foundation-evolution-lifecycle.md`
 - `git -C foundation_documentation diff --exit-code d8626df1fb0ff64751d7fae10ae93cf41ab1a458 -- modules/identity-and-tenancy.md modules/inbox-and-conversations.md modules/audit-and-history.md modules/integrations-and-channels.md`
 - `sha256sum foundation_documentation/.gitattributes foundation_documentation/.gitignore foundation_documentation/artifacts/migration/claude-legacy-reconciliation-review.prompt.txt foundation_documentation/artifacts/publication-manifest.txt foundation_documentation/deterministic/.gitkeep foundation_documentation/todos/ephemeral/.gitignore foundation_documentation/todos/ephemeral/.gitkeep foundation_documentation/todos/promotion_lane/.gitkeep` (comparar exatamente com a tabela de preservação).
