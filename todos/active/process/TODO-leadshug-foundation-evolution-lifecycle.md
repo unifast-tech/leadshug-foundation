@@ -458,10 +458,11 @@ Expected: os probes quoted/unquoted retornam `0`; no scan real, `rg` exit `1` (n
 - [x] Usuário validou o escopo reduzido e as decisões `D-01..D-11` em 2026-09-18 com a resposta explícita `Valido`.
 - [x] Usuário revalidou em 2026-09-21 as correções contratuais `ST01-R2-001..007` com a resposta explícita `valido`; `D-01..D-11` permanecem inalteradas.
 - [x] Usuário revalidou em 2026-09-21 as correções contratuais `ST01-R3-001..006` com a resposta explícita `Valido`; `D-01..D-11` permanecem inalteradas.
+- [x] Usuário revalidou em 2026-09-21 as correções contratuais `ST01-R4-001..003` com a resposta explícita `valido`; `D-01..D-11` permanecem inalteradas.
 
 ## Decision Baseline (Frozen Before Implementation)
 
-User-validated on 2026-09-18 and revalidated after the R2 and R3 contract corrections on 2026-09-21; execution remains pending explicit `APROVADO`.
+User-validated on 2026-09-18 and revalidated after the R2, R3 and R4 contract corrections on 2026-09-21; execution remains pending explicit `APROVADO`.
 
 - [x] `D-01` Preservar as quatro fases atuais como temas estratégicos e usar horizonte ortogonal `Now|Next|Later|Unscheduled`; horizonte não representa prazo, e datas/releases exigem aprovação explícita. Ref: `system_roadmap.md`.
 - [x] `D-02` Criar `foundation_documentation/backlog/` para candidatos não aprovados. `todos/active/` contém contratos táticos vivos em `Draft|Review|Approved|In-Progress`; estar na pasta nunca concede execução, que exige `APROVADO` explícito e authority guard `go`. Ref: constituição `TODO governance`.
@@ -497,6 +498,7 @@ User-validated on 2026-09-18 and revalidated after the R2 and R3 contract correc
 - [x] `D-01` a `D-11` formam o baseline de decisão validado pelo usuário em 2026-09-18; qualquer mudança material exige nova validação e futuro `APROVADO` renovado.
 - [x] `ST01-R2-001..007` foram integradas sem alterar `D-01..D-11` e revalidadas pelo usuário em 2026-09-21 (`valido`).
 - [x] `ST01-R3-001..006` foram integradas sem alterar `D-01..D-11` e revalidadas pelo usuário em 2026-09-21 (`Valido`).
+- [x] `ST01-R4-001..003` foram integradas sem alterar `D-01..D-11` e revalidadas pelo usuário em 2026-09-21 (`valido`).
 
 ## Architecture Change Governance
 
@@ -558,8 +560,8 @@ User-validated on 2026-09-18 and revalidated after the R2 and R3 contract correc
 - **Baseline branch:** `foundation_documentation/main`
 - **Baseline commit:** `075a91efc49481780044fd3d3feb35912598aa0d`
 - **Baseline push reference:** `origin/main`
-- **Gate status:** `no_material_findings`
-- **Findings summary:** o pacote com `ST01-R3-001..006` integrado e a revalidação explícita do usuário foi congelado e publicado antes da crítica V4.
+- **Gate status:** `not_run`
+- **Findings summary:** o freeze R3 sustentou a crítica V4; as correções R4 agora revalidadas aguardam novo freeze publicado.
 - **Evidence / reference:** freezes anteriores `565ff17a81a6faa663f9e024e9784e396cd50bfe`, `accdd4057d6dbd1b1bfc9fcb005f60aacd3f2e0c` e `956b26d8ba5b5bc0a64d07f59e82129d63d5452a`; freeze vigente `075a91efc49481780044fd3d3feb35912598aa0d`, publicado em `origin/main` em 2026-09-21.
 - **Waiver authority / reference:** `n/a`
 
@@ -571,8 +573,8 @@ User-validated on 2026-09-18 and revalidated after the R2 and R3 contract correc
 - **Baseline source:** `Review Baseline Freeze -> Baseline commit`
 - **Guard command:** `python3 delphi-ai/tools/review_scope_drift_guard.py --todo foundation_documentation/todos/active/process/TODO-leadshug-foundation-evolution-lifecycle.md`
 - **Gate status:** `not_run`
-- **Findings summary:** guard executado após integrar R4 retornou `no-go` de revalidação (não hard rejection) para Validation Steps, Questions To Close e Execution Plan.
-- **Evidence / reference:** baseline R3 `075a91efc49481780044fd3d3feb35912598aa0d`; `REVIEW-SCOPE-DRIFT-MATERIAL-CHANGE`; próximo gate é revalidação explícita, refreeze e crítica reconvergida.
+- **Findings summary:** o `no-go` R4 de revalidação foi satisfeito pela resposta explícita `valido` em 2026-09-21; aguarda novo freeze e execução conclusiva do guard.
+- **Evidence / reference:** baseline anterior `075a91efc49481780044fd3d3feb35912598aa0d`; `REVIEW-SCOPE-DRIFT-MATERIAL-CHANGE`; revalidação do usuário em 2026-09-21.
 - **Waiver authority / reference:** `n/a`
 
 ## Questions To Close
@@ -583,7 +585,7 @@ User-validated on 2026-09-18 and revalidated after the R2 and R3 contract correc
 - [x] Usuário revalidou em 2026-09-21 o contrato corrigido após `ST01-R2-001..007`, sem mudança nas decisões `D-01..D-11` (`valido`).
 - [x] `AMB-05`: diferida para o framing de ST-03 ou TODO próprio; ST-01 não altera `policies/**` nem autoriza uso acoplado/cópia de `whatsflow_v2`.
 - [x] Usuário revalidou em 2026-09-21 as correções `ST01-R3-001..006`, sem mudança em `D-01..D-11` (`Valido`).
-- [ ] Usuário revalida as correções `ST01-R4-001..003`, sem mudança em `D-01..D-11`.
+- [x] Usuário revalidou em 2026-09-21 as correções `ST01-R4-001..003`, sem mudança em `D-01..D-11` (`valido`).
 
 ## Assumptions Preview
 
@@ -612,7 +614,7 @@ User-validated on 2026-09-18 and revalidated after the R2 and R3 contract correc
 
 ### Ordered Steps
 
-1. Revalidar com o usuário as correções contratuais `ST01-R4-001..003`; `D-01..D-11` permanecem conceitualmente inalteradas.
+1. Revalidação concluída em 2026-09-21 para as correções contratuais `ST01-R4-001..003`; `D-01..D-11` permanecem conceitualmente inalteradas.
 2. Congelar/publicar novo baseline e repetir a crítica fresh/no-context com `README.md` incluído; repetir architecture opinion somente se alguma decisão arquitetural mudar.
 3. Rodar coherence/scope-drift/pre-approval guards e solicitar `APROVADO`; `preflight-go` não concede execução.
 4. Após `APROVADO`, registrar aprovação/ingestão e executar `todo_authority_guard.py <todo>` sem `--pre-approval`; exigir `Overall outcome: go` antes de qualquer alteração canônica.
