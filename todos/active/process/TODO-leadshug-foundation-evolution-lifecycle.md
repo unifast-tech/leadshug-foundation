@@ -512,11 +512,11 @@ User-validated on 2026-09-18 and revalidated after the R2 and R3 contract correc
 - **Why this decision:** o TODO é `medium`, transversal e estabelece arquitetura documental.
 - **Trigger stage:** `before the first planning-side review or guard run`
 - **Baseline branch:** `foundation_documentation/main`
-- **Baseline commit:** `956b26d8ba5b5bc0a64d07f59e82129d63d5452a`
+- **Baseline commit:** `075a91efc49481780044fd3d3feb35912598aa0d`
 - **Baseline push reference:** `origin/main`
-- **Gate status:** `not_run`
-- **Findings summary:** o freeze R2 sustentou a crítica V3; as correções R3 agora revalidadas aguardam novo freeze publicado.
-- **Evidence / reference:** freezes anteriores `565ff17a81a6faa663f9e024e9784e396cd50bfe` e `accdd4057d6dbd1b1bfc9fcb005f60aacd3f2e0c`; freeze vigente `956b26d8ba5b5bc0a64d07f59e82129d63d5452a`, publicado em `origin/main` em 2026-09-21.
+- **Gate status:** `no_material_findings`
+- **Findings summary:** o pacote com `ST01-R3-001..006` integrado e a revalidação explícita do usuário foi congelado e publicado antes da crítica V4.
+- **Evidence / reference:** freezes anteriores `565ff17a81a6faa663f9e024e9784e396cd50bfe`, `accdd4057d6dbd1b1bfc9fcb005f60aacd3f2e0c` e `956b26d8ba5b5bc0a64d07f59e82129d63d5452a`; freeze vigente `075a91efc49481780044fd3d3feb35912598aa0d`, publicado em `origin/main` em 2026-09-21.
 - **Waiver authority / reference:** `n/a`
 
 ## Gate: Review Scope Drift
