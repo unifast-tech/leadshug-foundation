@@ -33,13 +33,13 @@ A Foundation atual define autoridade, entidades, constituição, quatro fases de
 
 - **Current delivery stage:** `Pending`
 - **Qualifiers:** `none`
-- **Next exact step:** solicitar `APROVADO` explícito, incluindo a autorização humana para delegar a implementação documental ao `routine-executor`; depois registrar a aprovação e exigir o authority guard normal em `go` antes de implementar.
+- **Next exact step:** delegar a implementação documental aprovada ao `routine-executor` no checkout principal, single-writer e sem worktrees.
 
 ## Active Work State
 
-- **Work state:** `review`
-- **Why this state now:** a crítica V5 concluiu `no_material_findings`; coherence e scope-drift retornaram `go`, e o authority preflight retornou `preflight-go`.
-- **Exit condition:** `APROVADO` explícito registrado com o escopo e a delegação documental; em seguida, authority guard normal em `go` antes de qualquer implementação.
+- **Work state:** `implementation`
+- **Why this state now:** `APROVADO`, ingestão vinculante, routing guard e authority guard normal foram registrados e retornaram `go`; a implementação documental está autorizada.
+- **Exit condition:** pacote documental implementado e validado, com handoff para auditorias, adherence review e revisão final independentes.
 
 ## Scope
 
@@ -437,7 +437,7 @@ Expected: os probes quoted/unquoted retornam `0`; no scan real, `rg` exit `1` (n
 
 | From Profile | To Profile | Why the Handoff Exists | Touched Surfaces | Status / Evidence |
 | --- | --- | --- | --- | --- |
-| strategic-cto | routine-executor | implementar somente o pacote documental aprovado | paths esperados do ST-01 | planned after `APROVADO`; single writer |
+| strategic-cto | routine-executor | implementar somente o pacote documental aprovado | paths esperados do ST-01 | authorized em 2026-09-21; principal checkout, single writer, sem worktrees |
 | strategic-cto | assurance-tester-quality | crítica e revisão final independentes | TODO + diff documental limitado | planned |
 
 ## Complexity
@@ -462,7 +462,7 @@ Expected: os probes quoted/unquoted retornam `0`; no scan real, `rg` exit `1` (n
 
 ## Decision Baseline (Frozen Before Implementation)
 
-User-validated on 2026-09-18 and revalidated after the R2, R3 and R4 contract corrections on 2026-09-21; execution remains pending explicit `APROVADO`.
+User-validated on 2026-09-18, revalidated after the R2, R3 and R4 contract corrections on 2026-09-21, and explicitly approved for execution on 2026-09-21.
 
 - [x] `D-01` Preservar as quatro fases atuais como temas estratégicos e usar horizonte ortogonal `Now|Next|Later|Unscheduled`; horizonte não representa prazo, e datas/releases exigem aprovação explícita. Ref: `system_roadmap.md`.
 - [x] `D-02` Criar `foundation_documentation/backlog/` para candidatos não aprovados. `todos/active/` contém contratos táticos vivos em `Draft|Review|Approved|In-Progress`; estar na pasta nunca concede execução, que exige `APROVADO` explícito e authority guard `go`. Ref: constituição `TODO governance`.
@@ -861,8 +861,8 @@ User-validated on 2026-09-18 and revalidated after the R2, R3 and R4 contract co
 
 ## Approval
 
-- **Approved by:** `pending explicit APROVADO after preflight-go`
-- **Approval scope:** `pending`
+- **Approved by:** usuário em 2026-09-21, com a resposta explícita `APROVADO — incluindo delegação da implementação documental ao routine-executor, no checkout principal, single-writer, sem worktrees.`
+- **Approval scope:** implementar exclusivamente o pacote documental ST-01 descrito em `Scope`, conforme `D-01..D-11`, por `routine-executor` no checkout principal, em regime single-writer e sem worktrees/branches/checkouts auxiliares.
 - **Pre-approval authority evidence:** `todo_authority_guard.py --pre-approval` em 2026-09-21: `Overall outcome: preflight-go`, sem violações; esse resultado não concede execução.
 - **Execution not authorized by approval:** código/produto/referências, execução de ST-02/ST-03/ST-04, migração dos módulos individuais e mudanças de domínio.
 - **Renewed approval required when:** qualquer decisão D-01..D-11, escopo, validator, contrato de produto ou arquivo esperado mudar materialmente.
@@ -881,6 +881,9 @@ User-validated on 2026-09-18 and revalidated after the R2, R3 and R4 contract co
 | `delphi-ai/workflows/docker/todo-approval-gates-method.md` | fase atual | freeze, crítica, scope drift e preflight | pedir aprovação cedo | sequência pré-APROVADO |
 | `delphi-ai/workflows/docker/todo-execution-boundary-method.md` | próxima fase | boundary após aprovação | implementação implícita | handoff explícito |
 | `delphi-ai/workflows/docker/effort-selection-method.md` | seleção de effort/model | routing conforme superfície | reviewer como writer | tuple verificável |
+| `delphi-ai/workflows/docker/subagent-orchestration-method.md` | delegação aprovada | executor único no checkout principal | worktree ou writers concorrentes | handoff delimitado e serializado |
+
+- **Binding ingestion evidence:** fontes acima recarregadas após o `APROVADO` em 2026-09-21; nenhuma regra revelou conflito material com o escopo aprovado.
 
 ## Agent Routing Preflight
 
@@ -892,14 +895,16 @@ User-validated on 2026-09-18 and revalidated after the R2, R3 and R4 contract co
 - **Selected effort:** `medium`
 - **Proof mode:** `declared`
 - **Exception reason:** `n/a`
-- **Subagent / delegation authorization:** `not-requested`
-- **Delegation note:** reviewers fresh/no-context pertencem aos gates de assurance; eventual `routine-executor` de implementação exige referência humana explícita no próximo `APROVADO`.
+- **Subagent / delegation authorization:** `approved`
+- **Delegation note:** autorização humana explícita em 2026-09-21: `APROVADO — incluindo delegação da implementação documental ao routine-executor, no checkout principal, single-writer, sem worktrees.`
 - **Execution topology:** `primary-checkout-single-writer`
 - **Worktree / auxiliary-checkout authorization:** `not-authorized`
 - **Worktree authorization evidence:** `n/a`
 - **Writer scheduling policy:** `single-writer-serialized`
 - **Guard outcome:** `go`
-- **Guard evidence:** implementation routing preflight declarado em 2026-09-21; tuple acima retornou `Overall outcome: go`.
+- **Guard evidence:** tuple pós-aprovação revalidado em 2026-09-21 por `agent_role_routing_guard.py`; `Overall outcome: go`, lane `executor`, `max_concurrent_writers: 1`.
+- **Post-approval authority outcome:** `go`
+- **Post-approval authority evidence:** `todo_authority_guard.py` sem `--pre-approval` em 2026-09-21; `execution_authority_granted: True`, 11 regras/workflows ingeridos e nenhuma violação.
 - **Waiver / exception reference:** `n/a`
 
 ## Decision Adherence Validation (Mandatory Before Delivery)
@@ -938,9 +943,9 @@ Only `Adherent` or an explicitly approved `Exception` is valid at delivery.
 ## TODO Closeout Disposition
 
 - **Disposition:** `keep-active`
-- **Disposition reason:** crítica V5 e guards pré-aprovação concluídos satisfatoriamente; aguarda `APROVADO` explícito e authority guard normal; nenhuma implementação canônica iniciada.
+- **Disposition reason:** implementação documental autorizada após routing e authority guards em `go`; TODO permanece ativo durante execução e delivery gates.
 - **Post-commit/push status:** `pending`
-- **Next path/status action:** solicitar `APROVADO` com autorização humana explícita para a delegação documental planejada; registrar a aprovação antes do authority guard normal e da implementação.
+- **Next path/status action:** despachar o `routine-executor` autorizado para executar os passos 5–8 do plano, sem sair do allowlist documental.
 
 ## Security Risk Assessment
 
