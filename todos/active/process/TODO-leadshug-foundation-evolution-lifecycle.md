@@ -33,13 +33,13 @@ A Foundation atual define autoridade, entidades, constituição, quatro fases de
 
 - **Current delivery stage:** `Pending`
 - **Qualifiers:** `none`
-- **Next exact step:** obter revalidação explícita do usuário para `ST01-R3-001..006`, publicar novo freeze e repetir a crítica fresh/no-context.
+- **Next exact step:** publicar o review baseline R3 revalidado e repetir a crítica fresh/no-context.
 
 ## Active Work State
 
 - **Work state:** `review`
-- **Why this state now:** a crítica V3 confirmou D-01..D-11, mas encontrou seis lacunas operacionais no contrato; as correções estão integradas e alteram headings materiais, exigindo revalidação.
-- **Exit condition:** correções R3 revalidadas, novo baseline publicado, crítica reconvergida e guards pré-aprovação com resultado satisfatório.
+- **Why this state now:** o usuário revalidou explicitamente em 2026-09-21 as correções `ST01-R3-001..006`; o contrato aguarda freeze publicado, crítica conclusiva e guards pré-aprovação.
+- **Exit condition:** novo baseline publicado, crítica reconvergida e guards pré-aprovação com resultado satisfatório.
 
 ## Scope
 
@@ -413,10 +413,11 @@ Expected: os probes quoted/unquoted retornam `0`; no scan real, `rg` exit `1` (n
 
 - [x] Usuário validou o escopo reduzido e as decisões `D-01..D-11` em 2026-09-18 com a resposta explícita `Valido`.
 - [x] Usuário revalidou em 2026-09-21 as correções contratuais `ST01-R2-001..007` com a resposta explícita `valido`; `D-01..D-11` permanecem inalteradas.
+- [x] Usuário revalidou em 2026-09-21 as correções contratuais `ST01-R3-001..006` com a resposta explícita `Valido`; `D-01..D-11` permanecem inalteradas.
 
 ## Decision Baseline (Frozen Before Implementation)
 
-User-validated on 2026-09-18 and revalidated after the R2 contract corrections on 2026-09-21; execution remains pending explicit `APROVADO`.
+User-validated on 2026-09-18 and revalidated after the R2 and R3 contract corrections on 2026-09-21; execution remains pending explicit `APROVADO`.
 
 - [x] `D-01` Preservar as quatro fases atuais como temas estratégicos e usar horizonte ortogonal `Now|Next|Later|Unscheduled`; horizonte não representa prazo, e datas/releases exigem aprovação explícita. Ref: `system_roadmap.md`.
 - [x] `D-02` Criar `foundation_documentation/backlog/` para candidatos não aprovados. `todos/active/` contém contratos táticos vivos em `Draft|Review|Approved|In-Progress`; estar na pasta nunca concede execução, que exige `APROVADO` explícito e authority guard `go`. Ref: constituição `TODO governance`.
@@ -451,6 +452,7 @@ User-validated on 2026-09-18 and revalidated after the R2 contract corrections o
 
 - [x] `D-01` a `D-11` formam o baseline de decisão validado pelo usuário em 2026-09-18; qualquer mudança material exige nova validação e futuro `APROVADO` renovado.
 - [x] `ST01-R2-001..007` foram integradas sem alterar `D-01..D-11` e revalidadas pelo usuário em 2026-09-21 (`valido`).
+- [x] `ST01-R3-001..006` foram integradas sem alterar `D-01..D-11` e revalidadas pelo usuário em 2026-09-21 (`Valido`).
 
 ## Architecture Change Governance
 
@@ -512,8 +514,8 @@ User-validated on 2026-09-18 and revalidated after the R2 contract corrections o
 - **Baseline branch:** `foundation_documentation/main`
 - **Baseline commit:** `956b26d8ba5b5bc0a64d07f59e82129d63d5452a`
 - **Baseline push reference:** `origin/main`
-- **Gate status:** `no_material_findings`
-- **Findings summary:** o pacote com `ST01-R2-001..007` integrado e a revalidação explícita do usuário foi congelado e publicado antes da crítica conclusiva.
+- **Gate status:** `not_run`
+- **Findings summary:** o freeze R2 sustentou a crítica V3; as correções R3 agora revalidadas aguardam novo freeze publicado.
 - **Evidence / reference:** freezes anteriores `565ff17a81a6faa663f9e024e9784e396cd50bfe` e `accdd4057d6dbd1b1bfc9fcb005f60aacd3f2e0c`; freeze vigente `956b26d8ba5b5bc0a64d07f59e82129d63d5452a`, publicado em `origin/main` em 2026-09-21.
 - **Waiver authority / reference:** `n/a`
 
@@ -525,8 +527,8 @@ User-validated on 2026-09-18 and revalidated after the R2 contract corrections o
 - **Baseline source:** `Review Baseline Freeze -> Baseline commit`
 - **Guard command:** `python3 delphi-ai/tools/review_scope_drift_guard.py --todo foundation_documentation/todos/active/process/TODO-leadshug-foundation-evolution-lifecycle.md`
 - **Gate status:** `not_run`
-- **Findings summary:** guard executado após integrar R3 retornou `no-go` de revalidação (não hard rejection) para quatro seções materiais: Out of Scope, Questions To Close, Execution Plan e Performance & Concurrency Risk Assessment.
-- **Evidence / reference:** baseline `956b26d8ba5b5bc0a64d07f59e82129d63d5452a`; `REVIEW-SCOPE-DRIFT-MATERIAL-CHANGE`; próximo gate é revalidação explícita, refreeze e crítica reconvergida.
+- **Findings summary:** o `no-go` R3 de revalidação foi satisfeito pela resposta explícita `Valido` em 2026-09-21; aguarda novo freeze e execução conclusiva do guard.
+- **Evidence / reference:** baseline anterior `956b26d8ba5b5bc0a64d07f59e82129d63d5452a`; `REVIEW-SCOPE-DRIFT-MATERIAL-CHANGE`; revalidação do usuário em 2026-09-21.
 - **Waiver authority / reference:** `n/a`
 
 ## Questions To Close
@@ -536,7 +538,7 @@ User-validated on 2026-09-18 and revalidated after the R2 contract corrections o
 - [x] `AMB-04`: adotar `foundation_documentation/backlog/` fora de `todos/active/` (`D-02`).
 - [x] Usuário revalidou em 2026-09-21 o contrato corrigido após `ST01-R2-001..007`, sem mudança nas decisões `D-01..D-11` (`valido`).
 - [x] `AMB-05`: diferida para o framing de ST-03 ou TODO próprio; ST-01 não altera `policies/**` nem autoriza uso acoplado/cópia de `whatsflow_v2`.
-- [ ] Usuário revalida as correções `ST01-R3-001..006`, sem mudança em `D-01..D-11`.
+- [x] Usuário revalidou em 2026-09-21 as correções `ST01-R3-001..006`, sem mudança em `D-01..D-11` (`Valido`).
 
 ## Assumptions Preview
 
@@ -565,7 +567,7 @@ User-validated on 2026-09-18 and revalidated after the R2 contract corrections o
 
 ### Ordered Steps
 
-1. Revalidar com o usuário as correções contratuais `ST01-R3-001..006`; `D-01..D-11` permanecem conceitualmente inalteradas.
+1. Revalidação concluída em 2026-09-21 para as correções contratuais `ST01-R3-001..006`; `D-01..D-11` permanecem conceitualmente inalteradas.
 2. Congelar/publicar novo baseline e repetir a crítica fresh/no-context com `README.md` incluído; repetir architecture opinion somente se alguma decisão arquitetural mudar.
 3. Rodar coherence/scope-drift/pre-approval guards e solicitar `APROVADO`.
 4. Implementar authority matrix, papéis, state machines e lifecycle central.
@@ -606,7 +608,7 @@ User-validated on 2026-09-18 and revalidated after the R2 contract corrections o
 
 ## Plan Review Gate
 
-- **Status:** `findings_integrated`; correções R3 integradas, pendentes de revalidação, novo freeze e crítica reconvergida.
+- **Status:** `findings_integrated`; correções R3 revalidadas, pendentes de novo freeze e crítica reconvergida.
 
 ### Review Sections
 
@@ -700,7 +702,7 @@ User-validated on 2026-09-18 and revalidated after the R2 contract corrections o
 
 - **Assumptions:** nenhuma premissa viva; C-01..C-04 são constraints/decisões verificáveis.
 - **Unknowns:** baseline histórico exato da transposição pertence ao ST-02, não a este TODO.
-- **Confidence:** high nas decisões D-01..D-11; as correções operacionais R3 aguardam revalidação e nova rodada independente após o refreeze.
+- **Confidence:** high nas decisões D-01..D-11 e nas correções operacionais R3 revalidadas; nova rodada independente obrigatória após o refreeze.
 
 ## Additional Architectural Opinions
 
@@ -747,8 +749,8 @@ User-validated on 2026-09-18 and revalidated after the R2 contract corrections o
 - **Internal reviewer mandate:** `required after freeze; reviewer cannot implement`
 - **Canonical multi-lane audit protocol:** `n/a`
 - **Critique lenses:** `correctness|performance|elegance|structural-soundness|risk`
-- **Critique status:** `findings_integrated`
-- **Findings summary:** a rodada V3 confirmou D-01..D-11 e o bounded package completo, mas encontrou seis lacunas operacionais; todas foram integradas e aguardam revalidação/refreeze antes da rodada conclusiva.
+- **Critique status:** `not_run`
+- **Findings summary:** a rodada V3 confirmou D-01..D-11; suas seis correções foram integradas e revalidadas, e a rodada conclusiva aguarda o novo freeze publicado.
 - **Evidence / reference:** reviewers `/root/st01_plan_critique` (`ST01-R01..R08`), `/root/st01_plan_critique_v2` (`ST01-R2-001..007`) e `/root/st01_plan_critique_v3` (`ST01-R3-001..006`).
 - **Waiver authority / reference:** `n/a`
 
@@ -791,7 +793,7 @@ User-validated on 2026-09-18 and revalidated after the R2 contract corrections o
 - **Guard scope:** `none; verify no live Assumptions Preview rows remain`
 - **Guard command:** `python3 delphi-ai/tools/assumption_code_coherence_guard.py --todo foundation_documentation/todos/active/process/TODO-leadshug-foundation-evolution-lifecycle.md`
 - **Gate status:** `not_run`
-- **Findings summary:** `Assumptions Preview` mantém zero premissas vivas porque `AMB-05` foi diferida explicitamente em C-05; aguarda revalidação/refreeze e crítica conclusiva.
+- **Findings summary:** `Assumptions Preview` mantém zero premissas vivas porque `AMB-05` foi diferida explicitamente em C-05; aguarda freeze e crítica conclusiva.
 - **Evidence / reference:** `pending`
 - **Waiver authority / reference:** `n/a`
 
@@ -873,9 +875,9 @@ Only `Adherent` or an explicitly approved `Exception` is valid at delivery.
 ## TODO Closeout Disposition
 
 - **Disposition:** `keep-active`
-- **Disposition reason:** correções R3 integradas; aguarda revalidação, novo freeze, crítica conclusiva e preflight; nenhuma implementação canônica iniciada.
+- **Disposition reason:** correções R3 integradas e revalidadas; aguarda novo freeze, crítica conclusiva e preflight; nenhuma implementação canônica iniciada.
 - **Post-commit/push status:** `pending`
-- **Next path/status action:** revalidar R3, publicar novo freeze, repetir crítica com o pacote completo e então executar coherence, scope-drift e preflight.
+- **Next path/status action:** publicar novo freeze, repetir crítica com o pacote completo e então executar coherence, scope-drift e preflight.
 
 ## Security Risk Assessment
 
