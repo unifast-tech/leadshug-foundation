@@ -33,7 +33,7 @@ A Foundation atual define autoridade, entidades, constituição, quatro fases de
 
 - **Current delivery stage:** `Pending`
 - **Qualifiers:** `none`
-- **Next exact step:** executar a nova revisão de arquitetura fresh/no-context sobre o baseline validado.
+- **Next exact step:** executar a crítica independente fresh/no-context sobre o baseline validado e a arquitetura reconvergida.
 
 ## Active Work State
 
@@ -341,8 +341,8 @@ User-validated on 2026-09-18; execution remains pending explicit `APROVADO`.
 - **Decision review lifecycle:** `after diagnosis is closed and before APROVADO`
 - **Decision review kind:** `architecture_opinion`
 - **Decision review package:** `bounded-file-set`
-- **Decision review status:** `not_run`
-- **Decision review evidence / resolution:** reviewer inicial `/root/st01_architecture_review`; findings ST01-ARCH-001..007 integrados; nova rodada fresh/no-context aguarda o baseline validado.
+- **Decision review status:** `no_material_findings`
+- **Decision review evidence / resolution:** reviewer inicial `/root/st01_architecture_review` produziu ST01-ARCH-001..007, todos integrados; após o freeze `accdd4057d6dbd1b1bfc9fcb005f60aacd3f2e0c`, o primeiro dispatch V2 terminou objetivamente por limite de uso e o único retry permitido `/root/st01_architecture_review_v2_retry` concluiu em 2026-09-21 com `no_material_findings`, recomendando preservar D-01..D-11 sem alteração.
 - **Architecture adherence review:** `required`
 - **Adherence review lifecycle:** `after implementation and before Completed`
 - **Adherence review kind:** `architecture_adherence`
@@ -525,14 +525,15 @@ User-validated on 2026-09-18; execution remains pending explicit `APROVADO`.
 
 - **Needed:** `yes`
 - **Why ambiguity remains:** governança transversal exige crítica externa sobre complexidade acidental e autoridade duplicada.
-- **Opinion count:** `1`
+- **Opinion count:** `2 completed; initial corrective review + freeze-backed clean rerun`
 - **Package mode:** `bounded-file-set`
 - **Internal reviewer mandate:** `required; fresh no-context reviewer after baseline freeze`
 - **Required lenses:** `correctness|performance|elegance|structural-soundness|operational-fit`
 
 | Reviewer | Recommendation | Performance view | Elegance view | Structural soundness view | Resolution | Evidence |
 | --- | --- | --- | --- | --- | --- | --- |
-| `/root/st01_architecture_review` | corrigir autoridade, owners, transições, papéis e proteção | runtime neutro; evitar sincronização N-way | owner único + IDs/links | máquinas ortogonais antes de aprovação | Integrated; rerun required | findings `ST01-ARCH-001..007` |
+| `/root/st01_architecture_review` | corrigir autoridade, owners, transições, papéis e proteção | runtime neutro; evitar sincronização N-way | owner único + IDs/links | máquinas ortogonais antes de aprovação | Integrated; clean rerun completed | findings `ST01-ARCH-001..007` |
+| `/root/st01_architecture_review_v2_retry` | preservar D-01..D-11 e seguir para crítica/coherence/scope-drift/preflight | acceptable; runtime-neutral | strong | sound | `no_material_findings` | freeze-backed review em 2026-09-21; primeiro dispatch V2 falhou terminalmente por limite de uso |
 
 ## Audit Trigger Matrix
 
@@ -673,7 +674,7 @@ Only `Adherent` or an explicitly approved `Exception` is valid at delivery.
 - **Disposition:** `keep-active`
 - **Disposition reason:** escopo validado pelo usuário; contrato aguarda freeze, reviews e preflight; nenhuma implementação canônica iniciada.
 - **Post-commit/push status:** `pending`
-- **Next path/status action:** rerodar architecture opinion e crítica independente sobre `accdd405`, depois executar coherence, scope-drift e preflight.
+- **Next path/status action:** executar crítica independente sobre `accdd405`, depois coherence, scope-drift e preflight.
 
 ## Security Risk Assessment
 
