@@ -33,13 +33,13 @@ A Foundation atual define autoridade, entidades, constituição, quatro fases de
 
 - **Current delivery stage:** `Pending`
 - **Qualifiers:** `none`
-- **Next exact step:** executar a crítica V5 fresh/no-context sobre o baseline R4 revalidado e publicado.
+- **Next exact step:** solicitar `APROVADO` explícito, incluindo a autorização humana para delegar a implementação documental ao `routine-executor`; depois registrar a aprovação e exigir o authority guard normal em `go` antes de implementar.
 
 ## Active Work State
 
 - **Work state:** `review`
-- **Why this state now:** as correções R4 foram revalidadas pelo usuário e o novo baseline foi publicado; a crítica V5 e os guards pré-aprovação são os próximos gates.
-- **Exit condition:** crítica V5 sem findings materiais e coherence/scope-drift/preflight com resultados satisfatórios.
+- **Why this state now:** a crítica V5 concluiu `no_material_findings`; coherence e scope-drift retornaram `go`, e o authority preflight retornou `preflight-go`.
+- **Exit condition:** `APROVADO` explícito registrado com o escopo e a delegação documental; em seguida, authority guard normal em `go` antes de qualquer implementação.
 
 ## Scope
 
@@ -572,9 +572,9 @@ User-validated on 2026-09-18 and revalidated after the R2, R3 and R4 contract co
 - **Trigger stage:** `after planning review converges and before APROVADO`
 - **Baseline source:** `Review Baseline Freeze -> Baseline commit`
 - **Guard command:** `python3 delphi-ai/tools/review_scope_drift_guard.py --todo foundation_documentation/todos/active/process/TODO-leadshug-foundation-evolution-lifecycle.md`
-- **Gate status:** `not_run`
-- **Findings summary:** o `no-go` R4 foi satisfeito pela revalidação explícita e pelo freeze `17ced7b8`; execução conclusiva aguarda a crítica V5.
-- **Evidence / reference:** baseline vigente `17ced7b867aaa6e73650f3726f7b20b513dd7ddd`; crítica V5 pendente de dispatch.
+- **Gate status:** `no_material_findings`
+- **Findings summary:** o guard concluiu `go`; nenhuma das 22 seções materiais mudou em relação ao baseline R4 revalidado.
+- **Evidence / reference:** `review_scope_drift_guard.py` em 2026-09-21: baseline `17ced7b867aaa6e73650f3726f7b20b513dd7ddd`, ref `origin/main`, `0/22` seções materiais alteradas; reviewer `/root/st01_plan_critique_v5` em `no_material_findings`.
 - **Waiver authority / reference:** `n/a`
 
 ## Questions To Close
@@ -656,7 +656,7 @@ User-validated on 2026-09-18 and revalidated after the R2, R3 and R4 contract co
 
 ## Plan Review Gate
 
-- **Status:** `findings_integrated`; correções R4 revalidadas e congeladas, crítica V5 pendente de dispatch.
+- **Status:** `no_material_findings`; correções R4 revalidadas/congeladas e crítica V5 limpa.
 
 ### Review Sections
 
@@ -750,7 +750,7 @@ User-validated on 2026-09-18 and revalidated after the R2, R3 and R4 contract co
 
 - **Assumptions:** nenhuma premissa viva; C-01..C-04 são constraints/decisões verificáveis.
 - **Unknowns:** baseline histórico exato da transposição pertence ao ST-02, não a este TODO.
-- **Confidence:** high nas decisões D-01..D-11 e nas correções R3/R4; crítica V5 é o gate independente restante.
+- **Confidence:** high; decisões D-01..D-11 e correções R3/R4 reconvergiram sem findings materiais na V5.
 
 ## Additional Architectural Opinions
 
@@ -770,7 +770,7 @@ User-validated on 2026-09-18 and revalidated after the R2, R3 and R4 contract co
 
 - **Canonical method:** `wf-docker-audit-escalation-method`
 - **Guard command:** `python3 delphi-ai/tools/audit_escalation_guard.py --todo foundation_documentation/todos/active/process/TODO-leadshug-foundation-evolution-lifecycle.md`
-- **Latest TEACH evidence / artifact:** guard `go` em 2026-09-18, fingerprint `75992daf3f8f`; critique `required/expanded`, test-quality `recommended/full`, final review `required/expanded`, verification debt `required`, architecture decision/adherence reviews `required`, demais lanes `not_needed`.
+- **Latest TEACH evidence / artifact:** guard `go` em 2026-09-21, fingerprint `75992daf3f8f`; critique `required/expanded`, test-quality `recommended/full`, final review `required/expanded`, verification debt `required`, architecture decision/adherence reviews `required`, demais lanes `not_needed`.
 
 | Trigger | Value | Notes |
 | --- | --- | --- |
@@ -797,9 +797,9 @@ User-validated on 2026-09-18 and revalidated after the R2, R3 and R4 contract co
 - **Internal reviewer mandate:** `required after freeze; reviewer cannot implement`
 - **Canonical multi-lane audit protocol:** `n/a`
 - **Critique lenses:** `correctness|performance|elegance|structural-soundness|risk`
-- **Critique status:** `not_run`
-- **Findings summary:** a rodada V4 confirmou D-01..D-11 e R3; seus três blockers foram integrados, revalidados e congelados em `17ced7b8`; V5 aguarda dispatch.
-- **Evidence / reference:** reviewers `/root/st01_plan_critique` (`ST01-R01..R08`), `/root/st01_plan_critique_v2` (`ST01-R2-001..007`), `/root/st01_plan_critique_v3` (`ST01-R3-001..006`) e `/root/st01_plan_critique_v4` (`ST01-R4-001..003`).
+- **Critique status:** `no_material_findings`
+- **Findings summary:** V5 confirmou D-01..D-11, R3/R4, commands, promotion ledger, baseline e riscos sem finding material; updates futuros somente de evidência não reabrem a crítica salvo drift material.
+- **Evidence / reference:** reviewers `/root/st01_plan_critique` (`ST01-R01..R08`), `/root/st01_plan_critique_v2` (`ST01-R2-001..007`), `/root/st01_plan_critique_v3` (`ST01-R3-001..006`), `/root/st01_plan_critique_v4` (`ST01-R4-001..003`) e `/root/st01_plan_critique_v5` (`no_material_findings`, 2026-09-21).
 - **Waiver authority / reference:** `n/a`
 
 | Finding ID | Resolution | Usefulness | Formalizable | Candidate Rule Level | Candidate Rule ID | Rationale / Evidence |
@@ -854,15 +854,16 @@ User-validated on 2026-09-18 and revalidated after the R2, R3 and R4 contract co
 - **Trigger stage:** `after critique convergence and before APROVADO`
 - **Guard scope:** `none; verify no live Assumptions Preview rows remain`
 - **Guard command:** `python3 delphi-ai/tools/assumption_code_coherence_guard.py --todo foundation_documentation/todos/active/process/TODO-leadshug-foundation-evolution-lifecycle.md`
-- **Gate status:** `not_run`
-- **Findings summary:** `Assumptions Preview` mantém zero premissas vivas porque `AMB-05` foi diferida explicitamente em C-05; execução do guard aguarda a crítica V5.
-- **Evidence / reference:** `pending`
+- **Gate status:** `no_material_findings`
+- **Findings summary:** zero premissas vivas; `AMB-05` foi diferida explicitamente em C-05 e a crítica V5 não encontrou incoerência.
+- **Evidence / reference:** `assumption_code_coherence_guard.py` em 2026-09-21: `Overall outcome: go`; `Live assumptions checked: 0`; decisão/status `required / no_material_findings`.
 - **Waiver authority / reference:** `n/a`
 
 ## Approval
 
 - **Approved by:** `pending explicit APROVADO after preflight-go`
 - **Approval scope:** `pending`
+- **Pre-approval authority evidence:** `todo_authority_guard.py --pre-approval` em 2026-09-21: `Overall outcome: preflight-go`, sem violações; esse resultado não concede execução.
 - **Execution not authorized by approval:** código/produto/referências, execução de ST-02/ST-03/ST-04, migração dos módulos individuais e mudanças de domínio.
 - **Renewed approval required when:** qualquer decisão D-01..D-11, escopo, validator, contrato de produto ou arquivo esperado mudar materialmente.
 
@@ -937,9 +938,9 @@ Only `Adherent` or an explicitly approved `Exception` is valid at delivery.
 ## TODO Closeout Disposition
 
 - **Disposition:** `keep-active`
-- **Disposition reason:** correções R4 revalidadas e congeladas; aguarda crítica V5 e guards finais; nenhuma implementação canônica iniciada.
+- **Disposition reason:** crítica V5 e guards pré-aprovação concluídos satisfatoriamente; aguarda `APROVADO` explícito e authority guard normal; nenhuma implementação canônica iniciada.
 - **Post-commit/push status:** `pending`
-- **Next path/status action:** executar crítica V5 com o pacote completo e então coherence, scope-drift e preflight.
+- **Next path/status action:** solicitar `APROVADO` com autorização humana explícita para a delegação documental planejada; registrar a aprovação antes do authority guard normal e da implementação.
 
 ## Security Risk Assessment
 
