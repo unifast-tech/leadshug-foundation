@@ -33,13 +33,13 @@ A Foundation atual define autoridade, entidades, constituição, quatro fases de
 
 - **Current delivery stage:** `Pending`
 - **Qualifiers:** `none`
-- **Next exact step:** obter a revalidação explícita do usuário para as correções contratuais `ST01-R2-001..007`, publicar novo freeze e repetir a crítica fresh/no-context com o pacote completo.
+- **Next exact step:** publicar o novo review baseline revalidado e repetir a crítica fresh/no-context com o pacote completo.
 
 ## Active Work State
 
 - **Work state:** `review`
-- **Why this state now:** a crítica independente R2 encontrou lacunas reproduzíveis no contrato de validação, routing, baseline e metadados; as correções estão integradas no TODO, mas alteram headings materiais e exigem revalidação.
-- **Exit condition:** correções R2 revalidadas pelo usuário, novo baseline publicado, crítica reconvergida e guards pré-aprovação com resultado satisfatório.
+- **Why this state now:** o usuário revalidou explicitamente em 2026-09-21 as correções `ST01-R2-001..007`; o contrato aguarda freeze publicado, crítica conclusiva e guards pré-aprovação.
+- **Exit condition:** novo baseline publicado, crítica reconvergida e guards pré-aprovação com resultado satisfatório.
 
 ## Scope
 
@@ -408,10 +408,11 @@ Expected: `rg` exit `1` (nenhum match) é convertido em exit `0` com a mensagem 
 ## Decision Validation
 
 - [x] Usuário validou o escopo reduzido e as decisões `D-01..D-11` em 2026-09-18 com a resposta explícita `Valido`.
+- [x] Usuário revalidou em 2026-09-21 as correções contratuais `ST01-R2-001..007` com a resposta explícita `valido`; `D-01..D-11` permanecem inalteradas.
 
 ## Decision Baseline (Frozen Before Implementation)
 
-User-validated on 2026-09-18; execution remains pending explicit `APROVADO`.
+User-validated on 2026-09-18 and revalidated after the R2 contract corrections on 2026-09-21; execution remains pending explicit `APROVADO`.
 
 - [x] `D-01` Preservar as quatro fases atuais como temas estratégicos e usar horizonte ortogonal `Now|Next|Later|Unscheduled`; horizonte não representa prazo, e datas/releases exigem aprovação explícita. Ref: `system_roadmap.md`.
 - [x] `D-02` Criar `foundation_documentation/backlog/` para candidatos não aprovados. `todos/active/` contém contratos táticos vivos em `Draft|Review|Approved|In-Progress`; estar na pasta nunca concede execução, que exige `APROVADO` explícito e authority guard `go`. Ref: constituição `TODO governance`.
@@ -440,11 +441,12 @@ User-validated on 2026-09-18; execution remains pending explicit `APROVADO`.
 - **Status:** `no_material_findings`
 - **Checked against:** `project_constitution.md`, `system_roadmap.md`, `modules/README.md` e os quatro módulos individuais em 2026-09-18.
 - **Evidence:** os quatro módulos individuais permanecem sem diff desde `d8626df1fb0ff64751d7fae10ae93cf41ab1a458`; suas invariantes são preservadas. A frase atual da constituição que associa `todos/active/` à autoridade de execução é a ambiguidade intencionalmente aposentada por `D-02`, não uma decisão de módulo silenciosamente superseded.
-- **Outcome:** a architecture opinion R2 permaneceu limpa; a correção do contrato de validação não altera invariantes de módulo, mas exige revalidação por tocar headings materiais do TODO.
+- **Outcome:** a architecture opinion R2 permaneceu limpa; a correção do contrato de validação não altera invariantes de módulo e foi revalidada pelo usuário em 2026-09-21.
 
 ## Decision Freeze Evidence
 
 - [x] `D-01` a `D-11` formam o baseline de decisão validado pelo usuário em 2026-09-18; qualquer mudança material exige nova validação e futuro `APROVADO` renovado.
+- [x] `ST01-R2-001..007` foram integradas sem alterar `D-01..D-11` e revalidadas pelo usuário em 2026-09-21 (`valido`).
 
 ## Architecture Change Governance
 
@@ -506,7 +508,7 @@ User-validated on 2026-09-18; execution remains pending explicit `APROVADO`.
 - **Baseline branch:** `foundation_documentation/main`
 - **Baseline commit:** `accdd4057d6dbd1b1bfc9fcb005f60aacd3f2e0c`
 - **Baseline push reference:** `origin/main`
-- **Gate status:** `no_material_findings`
+- **Gate status:** `not_run`
 - **Findings summary:** o baseline original `565ff17a81a6faa663f9e024e9784e396cd50bfe` sustentou as primeiras revisões; findings materiais exigiram escopo reduzido, decisões revisadas e novo freeze.
 - **Evidence / reference:** baseline original `565ff17a81a6faa663f9e024e9784e396cd50bfe`; evidence-only commit original `0c2c050861af97f76ffd44724ddcd26be7af6174`; freeze revisado `accdd4057d6dbd1b1bfc9fcb005f60aacd3f2e0c`, publicado em `origin/main` em 2026-09-18.
 - **Waiver authority / reference:** `n/a`
@@ -519,8 +521,8 @@ User-validated on 2026-09-18; execution remains pending explicit `APROVADO`.
 - **Baseline source:** `Review Baseline Freeze -> Baseline commit`
 - **Guard command:** `python3 delphi-ai/tools/review_scope_drift_guard.py --todo foundation_documentation/todos/active/process/TODO-leadshug-foundation-evolution-lifecycle.md`
 - **Gate status:** `not_run`
-- **Findings summary:** guard executado em 2026-09-21 retornou `no-go` de revalidação (não hard rejection) para cinco seções materiais: Validation Steps, Questions To Close, Assumptions Preview, Execution Plan e Performance & Concurrency Risk Assessment.
-- **Evidence / reference:** baseline `accdd4057d6dbd1b1bfc9fcb005f60aacd3f2e0c`; `REVIEW-SCOPE-DRIFT-MATERIAL-CHANGE`; próximo gate é a revalidação explícita do usuário seguida de novo freeze.
+- **Findings summary:** o `no-go` anterior de revalidação foi satisfeito pela resposta explícita `valido` em 2026-09-21; aguarda novo freeze e execução conclusiva do guard.
+- **Evidence / reference:** drift anterior contra `accdd4057d6dbd1b1bfc9fcb005f60aacd3f2e0c`: `REVIEW-SCOPE-DRIFT-MATERIAL-CHANGE`; revalidação do usuário em 2026-09-21.
 - **Waiver authority / reference:** `n/a`
 
 ## Questions To Close
@@ -528,7 +530,7 @@ User-validated on 2026-09-18; execution remains pending explicit `APROVADO`.
 - [x] Usuário validou o escopo reduzido e `D-01..D-11` em 2026-09-18 (`Valido`).
 - [x] `AMB-03`: fases são temas; horizonte é `Now|Next|Later|Unscheduled`, sem datas implícitas (`D-01`).
 - [x] `AMB-04`: adotar `foundation_documentation/backlog/` fora de `todos/active/` (`D-02`).
-- [ ] Usuário revalida o contrato corrigido após `ST01-R2-001..007`, sem mudança nas decisões `D-01..D-11`.
+- [x] Usuário revalidou em 2026-09-21 o contrato corrigido após `ST01-R2-001..007`, sem mudança nas decisões `D-01..D-11` (`valido`).
 
 ## Assumptions Preview
 
@@ -556,7 +558,7 @@ User-validated on 2026-09-18; execution remains pending explicit `APROVADO`.
 
 ### Ordered Steps
 
-1. Revalidar com o usuário as correções contratuais `ST01-R2-001..007`; `D-01..D-11` permanecem conceitualmente inalteradas.
+1. Revalidação concluída em 2026-09-21 para as correções contratuais `ST01-R2-001..007`; `D-01..D-11` permanecem conceitualmente inalteradas.
 2. Congelar/publicar novo baseline e repetir a crítica fresh/no-context com `README.md` incluído; repetir architecture opinion somente se alguma decisão arquitetural mudar.
 3. Rodar coherence/scope-drift/pre-approval guards e solicitar `APROVADO`.
 4. Implementar authority matrix, papéis, state machines e lifecycle central.
@@ -597,7 +599,7 @@ User-validated on 2026-09-18; execution remains pending explicit `APROVADO`.
 
 ## Plan Review Gate
 
-- **Status:** `findings_integrated`; correções R2 integradas, pendentes de revalidação do usuário, novo freeze e crítica reconvergida.
+- **Status:** `findings_integrated`; correções R2 revalidadas pelo usuário, pendentes de novo freeze e crítica reconvergida.
 
 ### Review Sections
 
@@ -689,7 +691,7 @@ User-validated on 2026-09-18; execution remains pending explicit `APROVADO`.
 
 - **Assumptions:** nenhuma premissa viva; C-01..C-04 são constraints/decisões verificáveis.
 - **Unknowns:** baseline histórico exato da transposição pertence ao ST-02, não a este TODO.
-- **Confidence:** high nas decisões D-01..D-11; o contrato de validação corrigido aguarda revalidação e nova rodada independente após o refreeze.
+- **Confidence:** high nas decisões D-01..D-11 e no contrato de validação revalidado; nova rodada independente obrigatória após o refreeze.
 
 ## Additional Architectural Opinions
 
@@ -736,8 +738,8 @@ User-validated on 2026-09-18; execution remains pending explicit `APROVADO`.
 - **Internal reviewer mandate:** `required after freeze; reviewer cannot implement`
 - **Canonical multi-lane audit protocol:** `n/a`
 - **Critique lenses:** `correctness|performance|elegance|structural-soundness|risk`
-- **Critique status:** `findings_integrated`
-- **Findings summary:** a rodada R2 confirmou D-01..D-11, mas exigiu sete correções em baseline, assumptions, rule ingestion/routing, pacote, comandos reproduzíveis, issue cards e PCV; as correções foram integradas e aguardam revalidação/refreeze antes da rodada conclusiva.
+- **Critique status:** `not_run`
+- **Findings summary:** a rodada R2 confirmou D-01..D-11 e suas sete correções foram integradas e revalidadas; a rodada conclusiva aguarda o novo freeze publicado.
 - **Evidence / reference:** reviewers `/root/st01_plan_critique` (`ST01-R01..R08`) e `/root/st01_plan_critique_v2` (`ST01-R2-001..007`).
 - **Waiver authority / reference:** `n/a`
 
@@ -774,7 +776,7 @@ User-validated on 2026-09-18; execution remains pending explicit `APROVADO`.
 - **Guard scope:** `none; verify no live Assumptions Preview rows remain`
 - **Guard command:** `python3 delphi-ai/tools/assumption_code_coherence_guard.py --todo foundation_documentation/todos/active/process/TODO-leadshug-foundation-evolution-lifecycle.md`
 - **Gate status:** `not_run`
-- **Findings summary:** `Assumptions Preview` restaurado com linha `n/a`; execução aguarda revalidação, refreeze e crítica conclusiva antes do guard.
+- **Findings summary:** `Assumptions Preview` restaurado com linha `n/a`; execução aguarda freeze e crítica conclusiva antes do guard.
 - **Evidence / reference:** `pending`
 - **Waiver authority / reference:** `n/a`
 
@@ -855,9 +857,9 @@ Only `Adherent` or an explicitly approved `Exception` is valid at delivery.
 ## TODO Closeout Disposition
 
 - **Disposition:** `keep-active`
-- **Disposition reason:** correções contratuais R2 integradas; aguarda revalidação do usuário, novo freeze, crítica conclusiva e preflight; nenhuma implementação canônica iniciada.
+- **Disposition reason:** correções contratuais R2 integradas e revalidadas; aguarda novo freeze, crítica conclusiva e preflight; nenhuma implementação canônica iniciada.
 - **Post-commit/push status:** `pending`
-- **Next path/status action:** após revalidação, publicar novo freeze, repetir crítica com o pacote completo e então executar coherence, scope-drift e preflight.
+- **Next path/status action:** publicar novo freeze, repetir crítica com o pacote completo e então executar coherence, scope-drift e preflight.
 
 ## Security Risk Assessment
 
