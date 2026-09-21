@@ -33,13 +33,13 @@ A Foundation atual define autoridade, entidades, constituição, quatro fases de
 
 - **Current delivery stage:** `Pending`
 - **Qualifiers:** `none`
-- **Next exact step:** publicar o novo review baseline revalidado e repetir a crítica fresh/no-context com o pacote completo.
+- **Next exact step:** obter revalidação explícita do usuário para `ST01-R3-001..006`, publicar novo freeze e repetir a crítica fresh/no-context.
 
 ## Active Work State
 
 - **Work state:** `review`
-- **Why this state now:** o usuário revalidou explicitamente em 2026-09-21 as correções `ST01-R2-001..007`; o contrato aguarda freeze publicado, crítica conclusiva e guards pré-aprovação.
-- **Exit condition:** novo baseline publicado, crítica reconvergida e guards pré-aprovação com resultado satisfatório.
+- **Why this state now:** a crítica V3 confirmou D-01..D-11, mas encontrou seis lacunas operacionais no contrato; as correções estão integradas e alteram headings materiais, exigindo revalidação.
+- **Exit condition:** correções R3 revalidadas, novo baseline publicado, crítica reconvergida e guards pré-aprovação com resultado satisfatório.
 
 ## Scope
 
@@ -95,6 +95,7 @@ A Foundation atual define autoridade, entidades, constituição, quatro fases de
 - [ ] Limpar, normalizar ou incluir mudanças preexistentes não pertencentes a este TODO.
 - [ ] Criar worktree, branch auxiliar, checkout alternativo ou cópia gravável da Foundation.
 - [ ] Migrar individualmente os quatro módulos atuais para um novo schema ou declarar maturidade/capacidades não verificadas.
+- [ ] Generalizar neste ST-01 a política de referência independente para `whatsflow_v2`; `AMB-05` fica diferida para o framing de ST-03 ou TODO próprio antes de qualquer estudo que possa ser interpretado como permissão de copiar/acoplar.
 
 ## Diff Expectation Contract
 
@@ -355,8 +356,11 @@ for relative_path in "${relative_paths[@]}"; do
   test -f "foundation_documentation/$relative_path" && scan_paths+=("foundation_documentation/$relative_path")
 done
 test "${#scan_paths[@]}" -gt 0
+secret_pattern="(?i)(?:api[_-]?key|client[_-]?secret|password)\s*[:=]\s*(?:\"[^\"]+\"|'[^']+'|[^\s#]+)|authorization\s*:\s*bearer\s+[^\s#]+|BEGIN [A-Z ]*PRIVATE KEY"
+printf '%s%s\n' 'API_' 'KEY=sk_live_example' | rg -q --pcre2 "$secret_pattern"
+printf '%s%s\n' 'API_' 'KEY="sk_live_example"' | rg -q --pcre2 "$secret_pattern"
 set +e
-output="$(rg -n --pcre2 '(?i)(api[_-]?key|client[_-]?secret|password|authorization)\s*[:=]\s*["'"''][^"'"'']+|BEGIN [A-Z ]*PRIVATE KEY' "${scan_paths[@]}" 2>&1)"
+output="$(rg -n --pcre2 "$secret_pattern" "${scan_paths[@]}" 2>&1)"
 rc=$?
 set -e
 if [ "$rc" -eq 1 ]; then
@@ -370,7 +374,7 @@ else
 fi
 ```
 
-Expected: `rg` exit `1` (nenhum match) é convertido em exit `0` com a mensagem `OK`; qualquer match ou erro bloqueia.
+Expected: os probes quoted/unquoted retornam `0`; no scan real, `rg` exit `1` (nenhum match) é convertido em exit `0` com a mensagem `OK`; qualquer match ou erro bloqueia.
 
 ## External Dependency Readiness
 
@@ -521,8 +525,8 @@ User-validated on 2026-09-18 and revalidated after the R2 contract corrections o
 - **Baseline source:** `Review Baseline Freeze -> Baseline commit`
 - **Guard command:** `python3 delphi-ai/tools/review_scope_drift_guard.py --todo foundation_documentation/todos/active/process/TODO-leadshug-foundation-evolution-lifecycle.md`
 - **Gate status:** `not_run`
-- **Findings summary:** o `no-go` anterior de revalidação foi satisfeito pela resposta explícita `valido` em 2026-09-21; aguarda novo freeze e execução conclusiva do guard.
-- **Evidence / reference:** drift anterior contra `accdd4057d6dbd1b1bfc9fcb005f60aacd3f2e0c`: `REVIEW-SCOPE-DRIFT-MATERIAL-CHANGE`; revalidação do usuário em 2026-09-21.
+- **Findings summary:** guard executado após integrar R3 retornou `no-go` de revalidação (não hard rejection) para quatro seções materiais: Out of Scope, Questions To Close, Execution Plan e Performance & Concurrency Risk Assessment.
+- **Evidence / reference:** baseline `956b26d8ba5b5bc0a64d07f59e82129d63d5452a`; `REVIEW-SCOPE-DRIFT-MATERIAL-CHANGE`; próximo gate é revalidação explícita, refreeze e crítica reconvergida.
 - **Waiver authority / reference:** `n/a`
 
 ## Questions To Close
@@ -531,6 +535,8 @@ User-validated on 2026-09-18 and revalidated after the R2 contract corrections o
 - [x] `AMB-03`: fases são temas; horizonte é `Now|Next|Later|Unscheduled`, sem datas implícitas (`D-01`).
 - [x] `AMB-04`: adotar `foundation_documentation/backlog/` fora de `todos/active/` (`D-02`).
 - [x] Usuário revalidou em 2026-09-21 o contrato corrigido após `ST01-R2-001..007`, sem mudança nas decisões `D-01..D-11` (`valido`).
+- [x] `AMB-05`: diferida para o framing de ST-03 ou TODO próprio; ST-01 não altera `policies/**` nem autoriza uso acoplado/cópia de `whatsflow_v2`.
+- [ ] Usuário revalida as correções `ST01-R3-001..006`, sem mudança em `D-01..D-11`.
 
 ## Assumptions Preview
 
@@ -546,6 +552,7 @@ User-validated on 2026-09-18 and revalidated after the R2 contract corrections o
 | `C-02` | As quatro fases atuais serão preservadas por decisão de escopo, não por inferência de validade completa. | `D-01` | frozen after user validation |
 | `C-03` | Os quatro módulos atuais e seu conteúdo permanecem inalterados neste recorte. | Out of Scope + Diff Expectation Contract | preserve |
 | `C-04` | Datas não entram sem aprovação explícita. | `D-01` | frozen after user validation |
+| `C-05` | A política de referência para `whatsflow_v2` não muda no ST-01; `AMB-05` deve ser resolvida no framing de ST-03 ou TODO próprio antes do estudo. | feature brief `AMB-05` + Out of Scope | defer explicitly; no copy/coupling authority |
 
 ## Execution Plan
 
@@ -558,7 +565,7 @@ User-validated on 2026-09-18 and revalidated after the R2 contract corrections o
 
 ### Ordered Steps
 
-1. Revalidação concluída em 2026-09-21 para as correções contratuais `ST01-R2-001..007`; `D-01..D-11` permanecem conceitualmente inalteradas.
+1. Revalidar com o usuário as correções contratuais `ST01-R3-001..006`; `D-01..D-11` permanecem conceitualmente inalteradas.
 2. Congelar/publicar novo baseline e repetir a crítica fresh/no-context com `README.md` incluído; repetir architecture opinion somente se alguma decisão arquitetural mudar.
 3. Rodar coherence/scope-drift/pre-approval guards e solicitar `APROVADO`.
 4. Implementar authority matrix, papéis, state machines e lifecycle central.
@@ -599,7 +606,7 @@ User-validated on 2026-09-18 and revalidated after the R2 contract corrections o
 
 ## Plan Review Gate
 
-- **Status:** `findings_integrated`; correções R2 revalidadas pelo usuário, pendentes de novo freeze e crítica reconvergida.
+- **Status:** `findings_integrated`; correções R3 integradas, pendentes de revalidação, novo freeze e crítica reconvergida.
 
 ### Review Sections
 
@@ -632,25 +639,27 @@ User-validated on 2026-09-18 and revalidated after the R2 contract corrections o
 
 - **Severity:** medium
 - **Evidence:** `foundation_documentation/project_constitution.md:38` cita `backlog/`; `foundation_documentation/todos/README.md:7` cita `todos/active/backlog/`; nenhum dos caminhos existe no baseline.
+- **Why now:** os estudos ST-02/ST-03 precisam de uma disposição viva e não autorizativa assim que ST-01 encerrar.
 - **Recommendation:** B (`D-02`); menor acoplamento e melhor coerência estrutural.
 
 | Option | Effort | Risk | Blast radius | Maintenance | Performance | Elegance | Structural soundness |
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | A — `todos/active/backlog` | low | high: confunde autoridade | TODO governance | medium | neutral | low | low |
 | B — `backlog/` separado | medium | low | navigation + governance | low | neutral | high | high: boundary explícita |
-| C — feature briefs | low | medium: sem disposição viva | artifacts | high manual triage | neutral | medium | medium-low |
+| C — não criar backlog | none | high: candidatos sem disposição viva | artifacts + planning | high manual triage | neutral | low | low |
 
 #### PR-03 — Automação de proteção
 
 - **Severity:** low
 - **Evidence:** `delphi-ai/tools/manifest.md:1` é o inventário canônico de tooling e o baseline Foundation contém apenas `foundation_documentation/deterministic/.gitkeep:1`, sem validator documental próprio.
+- **Why now:** o ST-01 precisa de checks reproduzíveis, mas o volume e a recorrência ainda não justificam uma ferramenta permanente.
 - **Recommendation:** B (`D-09`), com owner e gatilho mensurável para validator permanente.
 
 | Option | Effort | Risk | Blast radius | Maintenance | Performance | Elegance | Structural soundness |
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | A — validator agora | high | medium: escopo prematuro | Foundation + Delphi tooling | high | negligible runtime | medium | medium until schema stabilizes |
 | B — checks exatos + gatilho | low | low | ST-01 only | low until trigger | neutral | high | high: proportional control |
-| C — revisão manual | low | medium: não reproduzível | review process | high | neutral | low | low |
+| C — não adicionar controle | none | high: drift não detectado | review process | high manual recovery | neutral | low | low |
 
 #### PR-04 — Contrato vivo versus execução aprovada
 
@@ -691,7 +700,7 @@ User-validated on 2026-09-18 and revalidated after the R2 contract corrections o
 
 - **Assumptions:** nenhuma premissa viva; C-01..C-04 são constraints/decisões verificáveis.
 - **Unknowns:** baseline histórico exato da transposição pertence ao ST-02, não a este TODO.
-- **Confidence:** high nas decisões D-01..D-11 e no contrato de validação revalidado; nova rodada independente obrigatória após o refreeze.
+- **Confidence:** high nas decisões D-01..D-11; as correções operacionais R3 aguardam revalidação e nova rodada independente após o refreeze.
 
 ## Additional Architectural Opinions
 
@@ -738,9 +747,9 @@ User-validated on 2026-09-18 and revalidated after the R2 contract corrections o
 - **Internal reviewer mandate:** `required after freeze; reviewer cannot implement`
 - **Canonical multi-lane audit protocol:** `n/a`
 - **Critique lenses:** `correctness|performance|elegance|structural-soundness|risk`
-- **Critique status:** `not_run`
-- **Findings summary:** a rodada R2 confirmou D-01..D-11 e suas sete correções foram integradas e revalidadas; a rodada conclusiva aguarda o novo freeze publicado.
-- **Evidence / reference:** reviewers `/root/st01_plan_critique` (`ST01-R01..R08`) e `/root/st01_plan_critique_v2` (`ST01-R2-001..007`).
+- **Critique status:** `findings_integrated`
+- **Findings summary:** a rodada V3 confirmou D-01..D-11 e o bounded package completo, mas encontrou seis lacunas operacionais; todas foram integradas e aguardam revalidação/refreeze antes da rodada conclusiva.
+- **Evidence / reference:** reviewers `/root/st01_plan_critique` (`ST01-R01..R08`), `/root/st01_plan_critique_v2` (`ST01-R2-001..007`) e `/root/st01_plan_critique_v3` (`ST01-R3-001..006`).
 - **Waiver authority / reference:** `n/a`
 
 | Finding ID | Resolution | Usefulness | Formalizable | Candidate Rule Level | Candidate Rule ID | Rationale / Evidence |
@@ -767,6 +776,12 @@ User-validated on 2026-09-18 and revalidated after the R2 contract corrections o
 | `ST01-R2-005` | Integrated | useful | yes | project | `Exact Validation Command Contracts` | cwd, fixtures, exits e outputs definidos para VAL-01/02/04/08/10 |
 | `ST01-R2-006` | Integrated | useful | yes | project | `Plan Review Issue Cards` | file:line e matrizes A/B/C completas |
 | `ST01-R2-007` | Deferred hardening | useful | yes | paced | `pcv-1 negative-reason gap` | schema completo com `n/a` explícito; pcv-1 não oferece reason code negativo, sem impacto de produto/runtime; candidato a self-improvement futuro |
+| `ST01-R3-001` | Integrated | useful | yes | project | `C-05 / AMB-05` | ambiguidade explicitamente diferida para ST-03 ou TODO próprio; policy fora do ST-01 |
+| `ST01-R3-002` | Integrated | useful | partial | project | `Review lifecycle state` | narrativas sincronizadas para revalidação → refreeze → crítica |
+| `ST01-R3-003` | Integrated | useful | yes | paced | `Plan Review Issue Cards` | `Why now` e opção C do-nothing adicionados a PR-02/PR-03 |
+| `ST01-R3-004` | Integrated | useful | yes | paced | `Agent Routing Preflight` | reviewer e executor desacoplados; delegação futura marcada `not-requested` |
+| `ST01-R3-005` | Integrated | useful | yes | paced | `pcv-1 registries` | deadlines e minimum evidence IDs canônicos restaurados |
+| `ST01-R3-006` | Integrated | useful | yes | paced | `VAL-10` | scan aceita secrets quoted/unquoted e inclui probes fail-first |
 
 ## Gate: Assumption Code Coherence
 
@@ -776,7 +791,7 @@ User-validated on 2026-09-18 and revalidated after the R2 contract corrections o
 - **Guard scope:** `none; verify no live Assumptions Preview rows remain`
 - **Guard command:** `python3 delphi-ai/tools/assumption_code_coherence_guard.py --todo foundation_documentation/todos/active/process/TODO-leadshug-foundation-evolution-lifecycle.md`
 - **Gate status:** `not_run`
-- **Findings summary:** `Assumptions Preview` restaurado com linha `n/a`; execução aguarda freeze e crítica conclusiva antes do guard.
+- **Findings summary:** `Assumptions Preview` mantém zero premissas vivas porque `AMB-05` foi diferida explicitamente em C-05; aguarda revalidação/refreeze e crítica conclusiva.
 - **Evidence / reference:** `pending`
 - **Waiver authority / reference:** `n/a`
 
@@ -812,7 +827,8 @@ User-validated on 2026-09-18 and revalidated after the R2 contract corrections o
 - **Selected effort:** `medium`
 - **Proof mode:** `declared`
 - **Exception reason:** `n/a`
-- **Subagent / delegation authorization:** `required by independent no-context critique skill after freeze`
+- **Subagent / delegation authorization:** `not-requested`
+- **Delegation note:** reviewers fresh/no-context pertencem aos gates de assurance; eventual `routine-executor` de implementação exige referência humana explícita no próximo `APROVADO`.
 - **Execution topology:** `primary-checkout-single-writer`
 - **Worktree / auxiliary-checkout authorization:** `not-authorized`
 - **Worktree authorization evidence:** `n/a`
@@ -857,9 +873,9 @@ Only `Adherent` or an explicitly approved `Exception` is valid at delivery.
 ## TODO Closeout Disposition
 
 - **Disposition:** `keep-active`
-- **Disposition reason:** correções contratuais R2 integradas e revalidadas; aguarda novo freeze, crítica conclusiva e preflight; nenhuma implementação canônica iniciada.
+- **Disposition reason:** correções R3 integradas; aguarda revalidação, novo freeze, crítica conclusiva e preflight; nenhuma implementação canônica iniciada.
 - **Post-commit/push status:** `pending`
-- **Next path/status action:** publicar novo freeze, repetir crítica com o pacote completo e então executar coherence, scope-drift e preflight.
+- **Next path/status action:** revalidar R3, publicar novo freeze, repetir crítica com o pacote completo e então executar coherence, scope-drift e preflight.
 
 ## Security Risk Assessment
 
@@ -879,10 +895,10 @@ Only `Adherent` or an explicitly approved `Exception` is valid at delivery.
 
 | Policy Schema Version | Lane ID | Lane | Trigger Result | Trigger Severity | Trigger Reason Code | Trigger Rationale | Gate Deadline | Minimum Evidence Rule ID | State | Residual Risk | Uncertainty Reason Code | Recorded At UTC | Executor ID |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| `pcv-1` | `EPS` | endpoint-performance-scrutiny | `not_needed` | low | `n/a — pcv-1 has no negative reason code` | docs-only; nenhum endpoint, lookup, query shape ou data path muda | `n/a` | `n/a` | `not_applicable` | none | none | `2026-09-21T13:02:56Z` | `codex:/root` |
-| `pcv-1` | `FRC` | frontend-race-condition-validation | `not_needed` | low | `n/a — pcv-1 has no negative reason code` | docs-only; nenhum async UI lifecycle, navigation ou race surface muda | `n/a` | `n/a` | `not_applicable` | none | none | `2026-09-21T13:02:56Z` | `codex:/root` |
-| `pcv-1` | `BCI` | backend-concurrency-idempotency-validation | `not_needed` | low | `n/a — pcv-1 has no negative reason code` | docs-only; nenhuma mutação, idempotency key, transaction ou lock muda | `n/a` | `n/a` | `not_applicable` | none | none | `2026-09-21T13:02:56Z` | `codex:/root` |
-| `pcv-1` | `RLS` | runtime-load-stress-validation | `not_needed` | low | `n/a — pcv-1 has no negative reason code` | docs-only; nenhum runtime, workload, SLO ou topology muda | `n/a` | `n/a` | `not_applicable` | none | none | `2026-09-21T13:02:56Z` | `codex:/root` |
+| `pcv-1` | `EPS` | endpoint-performance-scrutiny | `not_needed` | low | `n/a — pcv-1 has no negative reason code` | docs-only; nenhum endpoint, lookup, query shape ou data path muda | `before_local_implemented` | `EPS-E1` | `not_applicable` | none | none | `2026-09-21T13:02:56Z` | `codex:/root` |
+| `pcv-1` | `FRC` | frontend-race-condition-validation | `not_needed` | low | `n/a — pcv-1 has no negative reason code` | docs-only; nenhum async UI lifecycle, navigation ou race surface muda | `before_local_implemented` | `FRC-POLICY` | `not_applicable` | none | none | `2026-09-21T13:02:56Z` | `codex:/root` |
+| `pcv-1` | `BCI` | backend-concurrency-idempotency-validation | `not_needed` | low | `n/a — pcv-1 has no negative reason code` | docs-only; nenhuma mutação, idempotency key, transaction ou lock muda | `before_local_implemented` | `BCI-INV` | `not_applicable` | none | none | `2026-09-21T13:02:56Z` | `codex:/root` |
+| `pcv-1` | `RLS` | runtime-load-stress-validation | `not_needed` | low | `n/a — pcv-1 has no negative reason code` | docs-only; nenhum runtime, workload, SLO ou topology muda | `before_production_ready` | `RLS-E1` | `not_applicable` | none | none | `2026-09-21T13:02:56Z` | `codex:/root` |
 
 - **PCV schema gap:** `pcv-1` não possui reason codes negativos/not-triggered; `n/a` explícito evita atribuir falsamente um trigger positivo. O gap é follow-up de hardening do Delphi, sem impacto em produto/runtime e fora do ST-01.
 
@@ -952,4 +968,4 @@ Only `Adherent` or an explicitly approved `Exception` is valid at delivery.
 - `git -C foundation_documentation diff --check d8626df1fb0ff64751d7fae10ae93cf41ab1a458 -- README.md project_constitution.md evolution_lifecycle.md backlog decisions system_roadmap.md modules/README.md contracts/README.md artifacts/README.md artifacts/feature-briefs/leadshug-pre-code-evolution-program-20260918.md todos/README.md todos/active/process/TODO-leadshug-foundation-evolution-lifecycle.md todos/completed/process/TODO-leadshug-foundation-evolution-lifecycle.md`
 - `git -C foundation_documentation diff --exit-code d8626df1fb0ff64751d7fae10ae93cf41ab1a458 -- modules/identity-and-tenancy.md modules/inbox-and-conversations.md modules/audit-and-history.md modules/integrations-and-channels.md`
 - `sha256sum foundation_documentation/.gitattributes foundation_documentation/.gitignore foundation_documentation/artifacts/migration/claude-legacy-reconciliation-review.prompt.txt foundation_documentation/artifacts/publication-manifest.txt foundation_documentation/deterministic/.gitkeep foundation_documentation/todos/ephemeral/.gitignore foundation_documentation/todos/ephemeral/.gitkeep foundation_documentation/todos/promotion_lane/.gitkeep` (comparar exatamente com a tabela de preservação).
-- `rg -n '(api[_-]?key|client[_-]?secret|password|authorization:[[:space:]]*bearer|BEGIN [A-Z ]*PRIVATE KEY)'` limitado aos paths pertencentes ao ST-01; qualquer ocorrência exige classificação explícita antes da entrega.
+- Executar `Exact Validation Command Contracts / VAL-10`; os probes quoted/unquoted devem passar e o scan dos paths ST-01 deve retornar a mensagem `OK` sem matches.
