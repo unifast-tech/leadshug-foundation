@@ -15,12 +15,12 @@
 
 - **Current delivery stage:** `Local-Implemented`
 - **Qualifiers:** `none`
-- **Next exact step:** publicar o pacote Foundation e validar a crítica independente e a revisão final sobre os commits congelados antes do closeout.
+- **Next exact step:** congelar o pacote corrigido e executar nova crítica independente sem contexto sobre os commits publicados.
 
 ## Active Work State
 
 - **Work state:** `review`
-- **Why this state now:** as duas correções autorizadas foram implementadas; resta publicar/congelar Foundation e concluir as revisões independentes.
+- **Why this state now:** `CI-CRIT-R-001/002/003` foram corrigidos e a revisão independente do novo pacote publicado é o gate seguinte.
 - **Exit condition:** correções implementadas, publicadas nos dois repositórios, crítica/final review limpas e guards em `go`.
 
 ## Scope
@@ -36,7 +36,7 @@
 
 - [x] Alterar código de produto, schema Prisma, migrations, pipeline, runtime ou testes do LeadsHug.
 - [x] Alegar execução retroativa de suites API, Web ou Playwright sem artefato rastreável.
-- [x] Alterar o template de Engineering durante esta revalidação; a tarefa é comprovar o contrato publicado e fechar o registro histórico.
+- [x] Alterar qualquer superfície Engineering além de `delphi-ai/templates/todo_template.md`.
 
 ## Diff Expectation Contract
 
@@ -91,15 +91,15 @@
 | Criterion ID | Source Section | Criterion | Evidence Type | Evidence Artifact / Command | Runtime Target | Status | Notes |
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | `S01` | Scope | Update LeadsHug constitution with contract/migration/CI/E2E parity requirements. | doc | `foundation_documentation/project_constitution.md:20-23` — contract, migration, CI and E2E/Playwright invariants | local documentation | passed | Linhas versionadas desde `dbd7dded455182de6beb5803b47d8c336d440782`. |
-| `S02` | Scope | Update the Engineering TODO template with mandatory CI-equivalent and contract-test checks. | doc | `delphi-ai/templates/todo_template.md:137-153,328-335` — contract-test criterion evidence and Local CI-Equivalent matrix | local documentation | passed | O conteúdo também existe em `delphi-ai` `origin/main@2f2fa7722243fc0cd5b2b0d192d2f8371b03db6f`. |
-| `S03` | Scope | Require migration validation whenever Prisma schema or migration files change. | doc | Prisma schema/migration contract em `foundation_documentation/project_constitution.md:21`; migration evidence em `delphi-ai/templates/todo_template.md:140` at `55ead9bd457db5d5e10ffbfb363d138ae88bfacb` | local documentation | passed | Schema ou migration file agora acionam comando aplicável de validation/deploy/migration-state e database evidence. |
+| `S02` | Scope | Update the Engineering TODO template with mandatory CI-equivalent and contract-test checks. | doc | `delphi-ai/templates/todo_template.md:137-153,328-335` at `9ba43e8bba3618d029320bf6d7b40415881a0287` — contract-test criterion evidence and Local CI-Equivalent matrix | local documentation | passed | Match das identidades aplicáveis é obrigatório; mismatch bloqueia, `n/a` exige justificativa e o gatilho de schema limita-se à persistência/database migration. |
+| `S03` | Scope | Require migration validation whenever Prisma schema or migration files change. | doc | Prisma schema/migration contract em `foundation_documentation/project_constitution.md:21`; migration evidence em `delphi-ai/templates/todo_template.md:140` at `9ba43e8bba3618d029320bf6d7b40415881a0287` | local documentation | passed | Schema persistente ou database migration file agora acionam comando aplicável de validation/deploy/migration-state e database evidence. |
 | `S04` | Scope | Require response-shape expectation updates whenever API projections or DTOs change. | doc | `foundation_documentation/project_constitution.md:20`; API projection/DTO evidence em `delphi-ai/templates/todo_template.md:142,322` | local documentation | passed | O contrato exige atualização de contract-test expectation no mesmo TODO. |
-| `S05` | Scope | Require Playwright to use the same `DATABASE_URL`, API port and refreshed web build as CI. | doc | Playwright web/build contract em `foundation_documentation/project_constitution.md:22-23`; Playwright web provenance/parity em `delphi-ai/templates/todo_template.md:146` at `55ead9bd457db5d5e10ffbfb363d138ae88bfacb` | documentary CI/runtime contract | passed | LeadsHug exige `DATABASE_URL` e API port/endpoint iguais ao job CI-equivalent; template exige comparação redigida e agnóstica dessas identidades/configurações. |
+| `S05` | Scope | Require Playwright to use the same `DATABASE_URL`, API port and refreshed web build as CI. | doc | Playwright web/build contract em `foundation_documentation/project_constitution.md:22-23`; Playwright web provenance/parity em `delphi-ai/templates/todo_template.md:146` at `9ba43e8bba3618d029320bf6d7b40415881a0287` | documentary CI/runtime contract | passed | LeadsHug exige `DATABASE_URL` e API port/endpoint iguais ao job CI-equivalent; template exige match redigido e agnóstico, bloqueia mismatch e admite `n/a` apenas quando inaplicável e justificado. |
 | `S06` | Scope | Require evidence of the exact CI commands before TODO closeout. | doc | `delphi-ai/templates/todo_template.md:328-335` — exact Local CI-Equivalent command and evidence columns | local documentation | passed | Evidência agregada não substitui comando e cenário específicos. |
 | `D01` | Definition of Done | Future TODOs explicitly identify affected contracts and their tests. | doc | `delphi-ai/templates/todo_template.md:137-153,321-335` — contract/test and flow/CI matrices | local documentation | passed | O template exige critério e evidência específicos. |
-| `D02` | Definition of Done | Future TODOs explicitly identify migration and environment validation when applicable. | doc | `foundation_documentation/project_constitution.md:21-23`; `delphi-ai/templates/todo_template.md:140,146,338` at `55ead9bd457db5d5e10ffbfb363d138ae88bfacb` | local documentation | passed | Contrato explícito para migration e environment parity; structure-only, sem navigation/browser própria para esta edição documental. |
+| `D02` | Definition of Done | Future TODOs explicitly identify migration and environment validation when applicable. | doc | `foundation_documentation/project_constitution.md:21-23`; `delphi-ai/templates/todo_template.md:140,146,338` at `9ba43e8bba3618d029320bf6d7b40415881a0287` | local documentation | passed | Contrato explícito para migration e environment parity; structure-only, sem navigation/browser própria para esta edição documental. |
 | `D03` | Definition of Done | Future TODOs cannot claim completion with aggregate test evidence only. | doc | `delphi-ai/templates/todo_template.md:137-153` — aggregate summaries are supporting notes only | local documentation | passed | A matriz exige prova 1:1 por critério e validation step. |
-| `D04` | Definition of Done | Process changes are documented in canonical Foundation/Engineering sources. | review | `foundation_documentation/project_constitution.md:20-23` + `delphi-ai/templates/todo_template.md:137-153,321-335` at `55ead9bd457db5d5e10ffbfb363d138ae88bfacb` | local documentation | passed | Regra específica está na Foundation; método reutilizável e sem hard-code de projeto está no Engineering. |
+| `D04` | Definition of Done | Process changes are documented in canonical Foundation/Engineering sources. | review | `foundation_documentation/project_constitution.md:20-23` + `delphi-ai/templates/todo_template.md:137-153,321-335` at `9ba43e8bba3618d029320bf6d7b40415881a0287` | local documentation | passed | Regra específica está na Foundation; método reutilizável, aplicável e sem hard-code de projeto está no Engineering. |
 | `VAL-01` | Validation Steps | Inspect updated constitution and TODO template. | review | `nl -ba foundation_documentation/project_constitution.md`; `nl -ba delphi-ai/templates/todo_template.md` executados em 2026-09-23 | local documentation | passed | Inspeção confirmou invariantes nas linhas 20-23 e matrizes nas linhas 137-153/321-335. |
 | `VAL-02` | Validation Steps | Run authority and completion guards on this TODO. | test | `python3 delphi-ai/tools/todo_authority_guard.py foundation_documentation/todos/active/process/TODO-ci-contract-and-migration-test-gates.md --require-delivery-gates`; `python3 delphi-ai/tools/todo_completion_guard.py foundation_documentation/todos/active/process/TODO-ci-contract-and-migration-test-gates.md --require-delivery` | `foundation_documentation:main` local checkout | passed | Executados em 2026-09-23: authority/completion deram `go` antes da crítica; após integrar blockers, completion deve retornar `no-go` até S03/S05/D02/D04 serem satisfeitos. |
 
@@ -118,8 +118,8 @@
 
 | From Profile | To Profile | Why the Handoff Exists | Touched Surfaces | Status / Evidence |
 | --- | --- | --- | --- | --- |
-| `Strategic / CTO-Tech-Lead` | `routine-executor / delphi-self-maintenance` | a constituição é autoridade estratégica; o template Engineering é uma superfície agnóstica de execução | `foundation_documentation/project_constitution.md`; `delphi-ai/templates/todo_template.md` | completed; Engineering `55ead9bd457db5d5e10ffbfb363d138ae88bfacb` |
-| `routine-executor / delphi-self-maintenance` | `Assurance / Tester-Quality` | crítica e revisão final precisam validar as duas correções após publicação | TODO + duas fontes canônicas | active após publicação Foundation |
+| `Strategic / CTO-Tech-Lead` | `routine-executor / delphi-self-maintenance` | a constituição é autoridade estratégica; o template Engineering é uma superfície agnóstica de execução | `foundation_documentation/project_constitution.md`; `delphi-ai/templates/todo_template.md` | completed; Engineering `9ba43e8bba3618d029320bf6d7b40415881a0287` |
+| `routine-executor / delphi-self-maintenance` | `Assurance / Tester-Quality` | crítica e revisão final precisam validar as duas correções após publicação | TODO + duas fontes canônicas | active; novo pacote aguarda crítica sem contexto |
 
 ## Audit Trigger Matrix
 
@@ -152,8 +152,8 @@
 - **Internal reviewer mandate:** `required; reviewer cannot implement`
 - **Critique lenses:** `correctness|performance|elegance|structural-soundness|risk`
 - **Critique status:** `running`
-- **Findings summary:** cinco findings: `CI-CRIT-001/002/005` integrados; `CI-CRIT-003/004` autorizados para implementação e aguardando revalidação independente.
-- **Evidence / reference:** `/root/ci_gate_closeout_critique`, 2026-09-23; `overall_assessment=material_findings_present; not ready for closeout`.
+- **Findings summary:** `CI-CRIT-R-001/002/003` foram integrados; nova crítica independente será executada sobre o pacote republicado.
+- **Evidence / reference:** `/root/ci_gate_critique_revalidation`, 2026-09-23; `overall_assessment=material_findings_present; do_not_close`.
 - **Waiver authority / reference:** `n/a`
 
 ## Gate: Review Baseline Freeze
@@ -164,9 +164,9 @@
 - **Baseline branch:** `main`
 - **Baseline commit:** `130aca9ce385fbafd35ca61251a90142a58bda76`
 - **Baseline push reference:** `origin/main`
-- **Gate status:** `no_material_findings`
-- **Findings summary:** pacote corrigido congelado e publicado nos dois repositórios sem mudanças fora do diff autorizado.
-- **Evidence / reference:** Foundation `main@130aca9ce385fbafd35ca61251a90142a58bda76`; Engineering `feat/add-stack-capabilities@55ead9bd457db5d5e10ffbfb363d138ae88bfacb`, ambos publicados nos respectivos remotes em 2026-09-23.
+- **Gate status:** `pending_revalidation`
+- **Findings summary:** novo template publicado; Foundation aguarda commit de congelamento do pacote revalidável.
+- **Evidence / reference:** Foundation `main@130aca9ce385fbafd35ca61251a90142a58bda76`; Engineering `feat/add-stack-capabilities@9ba43e8bba3618d029320bf6d7b40415881a0287`, publicado em 2026-09-23.
 - **Waiver authority / reference:** `n/a`
 
 ## Independent Test Quality Audit Gate
@@ -233,7 +233,7 @@
 | Rule / Principle Surface | Bypass or Anti-Pattern Search Lens | Status | Evidence Artifact / Command | Findings | Resolution / Notes |
 | --- | --- | --- | --- | --- | --- |
 | CI-Equivalent evidence hygiene | claim genérico sem comando, branch@sha ou artefato | passed | remoção das linhas históricas `task check`/Playwright e substituição por `n/a` docs-only | alegação histórica fraca encontrada | Integrada nesta revalidação; nenhum produto foi declarado validado. |
-| Contract/migration parity | regra ausente nas fontes canônicas | passed | `project_constitution.md:20-23`; `delphi-ai/templates/todo_template.md:140,146` at `55ead9bd457db5d5e10ffbfb363d138ae88bfacb` | none after remediation | `CI-CRIT-003/004` integrados sem hard-code de projeto no template Engineering. |
+| Contract/migration parity | regra ausente ou semanticamente insuficiente nas fontes canônicas | passed | `project_constitution.md:20-23`; `delphi-ai/templates/todo_template.md:140,146` at `9ba43e8bba3618d029320bf6d7b40415881a0287` | none after remediation | Foundation está correta; template exige match/bloqueio/n-a aplicável e limita schema ao contexto persistente. |
 
 ## Promotion Finding Routing Ledger
 
@@ -242,9 +242,12 @@
 | `CI-GATE-REVAL-001` | medium | release-blocker | integrar evidência específica e remover falsa alegação CI-equivalent | mesmo TODO; afeta diretamente a validade do closeout | resolved | revalidação de 2026-09-23; matrizes deste arquivo |
 | `CI-CRIT-001` | high | release-blocker | corrigir SHA e separar baseline de conteúdo do commit de freeze | mesmo TODO; erro de rastreabilidade | resolved | baseline `7dcdecf37b98613af4f235fb1c207cde680366e2`; freeze `f4bf50e6fc23b779ee0c480dc779fc7cacb7d840` |
 | `CI-CRIT-002` | medium | release-blocker | registrar comandos exatos e outcomes | mesmo TODO; evidência do VAL-02 | resolved | Completion Evidence Matrix `VAL-02` |
-| `CI-CRIT-003` | medium | release-blocker | ampliar regra canônica para mudanças em migration files | mesmo TODO; obrigação aprovada não satisfeita | resolved | `project_constitution.md:21`; Engineering `55ead9bd457db5d5e10ffbfb363d138ae88bfacb` |
-| `CI-CRIT-004` | medium | release-blocker | explicitar paridade de `DATABASE_URL` e API port no Playwright | mesmo TODO; obrigação aprovada não satisfeita | resolved | `project_constitution.md:23`; Engineering `55ead9bd457db5d5e10ffbfb363d138ae88bfacb` |
+| `CI-CRIT-003` | medium | release-blocker | ampliar regra canônica para mudanças em migration files | mesmo TODO; obrigação aprovada não satisfeita | resolved | `project_constitution.md:21`; Engineering `9ba43e8bba3618d029320bf6d7b40415881a0287` |
+| `CI-CRIT-004` | medium | release-blocker | explicitar paridade de `DATABASE_URL` e API port no Playwright | mesmo TODO; obrigação aprovada não satisfeita | resolved | `project_constitution.md:23`; Engineering `9ba43e8bba3618d029320bf6d7b40415881a0287` |
 | `CI-CRIT-005` | low | release-blocker | usar qualifier canônico | mesmo TODO; schema de status | resolved | `Qualifiers: Provisional+Blocked` |
+| `CI-CRIT-R-001` | medium | release-blocker | exigir match de identidades aplicáveis, bloquear mismatch e permitir `n/a` justificado | mesmo TODO; suficiência do gate Playwright genérico | resolved | Engineering `9ba43e8bba3618d029320bf6d7b40415881a0287`, linha 146 |
+| `CI-CRIT-R-002` | low | release-blocker | restringir o gatilho a schema persistente/database migration | mesmo TODO; evita exigir database evidence para schemas não persistentes | resolved | Engineering `9ba43e8bba3618d029320bf6d7b40415881a0287`, linha 140 |
+| `CI-CRIT-R-003` | low | release-blocker | alinhar status e próximo passo ao pacote já publicado | mesmo TODO; rastreabilidade do estado ativo | resolved | Delivery Status Canon, Active Work State e Closeout Disposition corrigidos nesta integração |
 
 ## Security Risk Assessment
 
@@ -272,7 +275,7 @@
 ## Verification Debt Assessment
 
 - **Audit outcome:** `none`
-- **Why this outcome:** `CI-CRIT-003/004` foram resolvidos nas fontes canônicas; o helper anterior marcou vocabulário estrutural do próprio TODO, sem dívida inline de código.
+- **Why this outcome:** `CI-CRIT-003/004` foram resolvidos nas fontes canônicas; `CI-CRIT-R-001/002` são findings de conteúdo em correção, não dívida de verificação aceita.
 - **Inline code TODO debt:** `none`
 - **Evidence / audit artifact:** `tr -d '\r' < delphi-ai/tools/verification_debt_audit.sh | bash -s -- --repo foundation_documentation --todo todos/active/process/TODO-ci-contract-and-migration-test-gates.md --scan-git-modified`, 2026-09-23; heurística `high`, adjudicada 1:1.
 - **Accepted residual debt:** `none`
@@ -280,6 +283,6 @@
 ## TODO Closeout Disposition
 
 - **Disposition:** `keep-active`
-- **Disposition reason:** implementação documental concluída; publicação Foundation e revisões independentes ainda estão em andamento.
-- **Post-commit/push status:** `Engineering published at 55ead9bd457db5d5e10ffbfb363d138ae88bfacb; Foundation implementation published at 130aca9ce385fbafd35ca61251a90142a58bda76`
-- **Next path/status action:** publicar Foundation, validar a crítica e a final review independentes e mover para `todos/completed/process/` se os guards estiverem verdes.
+- **Disposition reason:** implementação corretiva publicada; nova crítica e revisão final ainda bloqueiam o movimento para `completed/`.
+- **Post-commit/push status:** `Engineering published at 9ba43e8bba3618d029320bf6d7b40415881a0287; Foundation implementation published at 130aca9ce385fbafd35ca61251a90142a58bda76`
+- **Next path/status action:** congelar/publicar o novo pacote Foundation, repetir crítica/final review e mover para `todos/completed/process/` somente com guards verdes.
