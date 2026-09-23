@@ -13,15 +13,15 @@
 
 ## Delivery Status Canon
 
-- **Current delivery stage:** `Local-Implemented`
+- **Current delivery stage:** `Production-Ready`
 - **Qualifiers:** `none`
-- **Next exact step:** executar a revisão final independente sem contexto sobre o pacote publicado após crítica limpa.
+- **Next exact step:** mover este TODO de `todos/active/process/` para `todos/completed/process/`, publicar o closeout e confirmar o guard global de ativos.
 
 ## Active Work State
 
 - **Work state:** `review`
-- **Why this state now:** `CI-CRIT-R-001/002/003` foram corrigidos e a revisão independente do novo pacote publicado é o gate seguinte.
-- **Exit condition:** correções implementadas, publicadas nos dois repositórios, crítica/final review limpas e guards em `go`.
+- **Why this state now:** implementação, publicação, crítica e revisão final estão limpas; resta somente o movimento governado e sua publicação.
+- **Exit condition:** TODO movido para `completed/process/`, commit publicado e guard global de ativos em `go`.
 
 ## Scope
 
@@ -119,7 +119,7 @@
 | From Profile | To Profile | Why the Handoff Exists | Touched Surfaces | Status / Evidence |
 | --- | --- | --- | --- | --- |
 | `Strategic / CTO-Tech-Lead` | `routine-executor / delphi-self-maintenance` | a constituição é autoridade estratégica; o template Engineering é uma superfície agnóstica de execução | `foundation_documentation/project_constitution.md`; `delphi-ai/templates/todo_template.md` | completed; Engineering `9ba43e8bba3618d029320bf6d7b40415881a0287` |
-| `routine-executor / delphi-self-maintenance` | `Assurance / Tester-Quality` | crítica e revisão final precisam validar as duas correções após publicação | TODO + duas fontes canônicas | critique completed clean; final review queued |
+| `routine-executor / delphi-self-maintenance` | `Assurance / Tester-Quality` | crítica e revisão final precisam validar as duas correções após publicação | TODO + duas fontes canônicas | completed; critique and final review clean |
 
 ## Audit Trigger Matrix
 
@@ -190,9 +190,9 @@
 - **Review isolation mode:** `fresh internal no-context reviewer`
 - **Internal reviewer mandate:** `required; reviewer cannot implement`
 - **Review focus:** `adherence|regressions|validation evidence|security/performance residuals|elegance|structural soundness|verification debt`
-- **Final review status:** `not_run`
-- **Findings summary:** crítica independente limpa; revisão final ainda não executada.
-- **Evidence / reference:** `pending final review of published post-critique package`
+- **Final review status:** `no_material_findings`
+- **Findings summary:** nenhum finding material; aderência, regressões, evidência, segurança/performance residual, elegância, solidez estrutural e dívida de verificação validadas.
+- **Evidence / reference:** `/root/ci_gate_independent_final_review`, 2026-09-23; Foundation `origin/main@8e88a367ad114f0905869d494d0d2702c0fac9b8`; Engineering `origin/feat/add-stack-capabilities@9ba43e8bba3618d029320bf6d7b40415881a0287`; `final_review_status=no_material_findings; closeout=ready`.
 - **Waiver authority / reference:** `n/a`
 
 ## Rules Acknowledgement / Ingestion
@@ -226,7 +226,7 @@
 
 | Reviewer Surface / Package | Review Focus | Status | Evidence Artifact / Command | Findings | Resolution / Notes |
 | --- | --- | --- | --- | --- | --- |
-| Foundation documentary package | consistência documental e qualidade da evidência | n/a | bounded package encaminhado à revisão independente | none | O diff não altera workflow de CI e não há finding P1/P2 aberto; findings documentais da revisão final serão classificados antes do closeout. |
+| Foundation documentary package | consistência documental e qualidade da evidência | n/a | `/root/ci_gate_independent_final_review` sobre Foundation `8e88a367ad114f0905869d494d0d2702c0fac9b8` e Engineering `9ba43e8bba3618d029320bf6d7b40415881a0287` | none | O diff não altera workflow de CI; revisão final não encontrou finding P1/P2 ou material. |
 
 ## Rule-Spirit Anti-Pattern Hunt
 
@@ -244,7 +244,7 @@
 | `CI-CRIT-002` | medium | release-blocker | registrar comandos exatos e outcomes | mesmo TODO; evidência do VAL-02 | resolved | Completion Evidence Matrix `VAL-02` |
 | `CI-CRIT-003` | medium | release-blocker | ampliar regra canônica para mudanças em migration files | mesmo TODO; obrigação aprovada não satisfeita | resolved | `project_constitution.md:21`; Engineering `9ba43e8bba3618d029320bf6d7b40415881a0287` |
 | `CI-CRIT-004` | medium | release-blocker | explicitar paridade de `DATABASE_URL` e API port no Playwright | mesmo TODO; obrigação aprovada não satisfeita | resolved | `project_constitution.md:23`; Engineering `9ba43e8bba3618d029320bf6d7b40415881a0287` |
-| `CI-CRIT-005` | low | release-blocker | usar qualifier canônico | mesmo TODO; schema de status | resolved | `Qualifiers: Provisional+Blocked` |
+| `CI-CRIT-005` | low | release-blocker | usar qualifier canônico | mesmo TODO; schema de status | resolved | qualifier foi normalizado durante o bloqueio; estado final usa `Qualifiers: none` após resolver todos os blockers |
 | `CI-CRIT-R-001` | medium | release-blocker | exigir match de identidades aplicáveis, bloquear mismatch e permitir `n/a` justificado | mesmo TODO; suficiência do gate Playwright genérico | resolved | Engineering `9ba43e8bba3618d029320bf6d7b40415881a0287`, linha 146 |
 | `CI-CRIT-R-002` | low | release-blocker | restringir o gatilho a schema persistente/database migration | mesmo TODO; evita exigir database evidence para schemas não persistentes | resolved | Engineering `9ba43e8bba3618d029320bf6d7b40415881a0287`, linha 140 |
 | `CI-CRIT-R-003` | low | release-blocker | alinhar status e próximo passo ao pacote já publicado | mesmo TODO; rastreabilidade do estado ativo | resolved | Delivery Status Canon, Active Work State e Closeout Disposition corrigidos nesta integração |
@@ -263,7 +263,7 @@
 - **Policy schema version:** `pcv-1`
 - **Global sensitivity level:** `none`
 - **Why this level:** nenhum endpoint, query, async UI, mutação, worker ou runtime muda.
-- **Current delivery stage at review time:** `Local-Implemented`
+- **Current delivery stage at review time:** `Production-Ready`
 
 | Lane ID | Lane | Trigger Result | Trigger Severity | Trigger Reason Code | Gate Deadline | Minimum Evidence Rule | State | Residual Risk | Uncertainty Reason Code |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -275,14 +275,14 @@
 ## Verification Debt Assessment
 
 - **Audit outcome:** `none`
-- **Why this outcome:** `CI-CRIT-003/004` foram resolvidos nas fontes canônicas; `CI-CRIT-R-001/002` são findings de conteúdo em correção, não dívida de verificação aceita.
+- **Why this outcome:** `CI-CRIT-003/004` e `CI-CRIT-R-001/002` foram resolvidos; a heurística alta decorre de vocabulário estrutural do próprio TODO e não representa dívida inline ou waiver real.
 - **Inline code TODO debt:** `none`
-- **Evidence / audit artifact:** `tr -d '\r' < delphi-ai/tools/verification_debt_audit.sh | bash -s -- --repo foundation_documentation --todo todos/active/process/TODO-ci-contract-and-migration-test-gates.md --scan-git-modified`, 2026-09-23; heurística `high`, adjudicada 1:1.
+- **Evidence / audit artifact:** `tr -d '\r' < delphi-ai/tools/verification_debt_audit.sh | bash -s -- --repo foundation_documentation --todo todos/active/process/TODO-ci-contract-and-migration-test-gates.md --scan-git-modified`, 2026-09-23; heurística `high`, com zero inline debt, zero checklist aberto e adjudicação final confirmada por `/root/ci_gate_independent_final_review`.
 - **Accepted residual debt:** `none`
 
 ## TODO Closeout Disposition
 
-- **Disposition:** `keep-active`
-- **Disposition reason:** implementação corretiva e crítica limpa publicadas; revisão final ainda bloqueia o movimento para `completed/`.
+- **Disposition:** `move-completed`
+- **Disposition reason:** implementação e publicação concluídas; crítica e revisão final independentes sem findings materiais; guards determinísticos aptos ao closeout.
 - **Post-commit/push status:** `Engineering published at 9ba43e8bba3618d029320bf6d7b40415881a0287; Foundation review package published at d71ff593f8a053715a29d137662df29814d4f48c`
-- **Next path/status action:** executar final review independente e mover para `todos/completed/process/` somente se ela e os guards permanecerem verdes.
+- **Next path/status action:** mover exatamente para `todos/completed/process/TODO-ci-contract-and-migration-test-gates.md`, publicar em `origin/main` e rodar `todo_closeout_guard --all-active`.
