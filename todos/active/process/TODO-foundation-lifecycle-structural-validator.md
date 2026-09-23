@@ -167,7 +167,7 @@ Preencher somente se o guard retornar `no-go`; qualquer novo path ou change type
 
 - **Decision:** `required only for publication/Production-Ready; not needed for local implementation`
 - **Rationale:** parser/tests usam apenas arquivos locais, mas freeze e closeout exigem `origin/main`; GitHub/origin deve estar acessível e sincronizado antes dessas alegações.
-- **Current evidence:** `origin/main@4af3a247f27c1754dfc5c7f28cb55021ee08aea7` estava sincronizado no pacote revisado; revalidar antes do próximo freeze/push.
+- **Current evidence:** `origin/main@e5901f91e034714ba0df09a779687d89d3748a3a` contains the validated freeze; revalidate again before closeout publication.
 
 ## Profile Scope & Handoffs
 
@@ -315,10 +315,10 @@ Preencher somente se o guard retornar `no-go`; qualquer novo path ou change type
 - **Trigger stage:** `after D-01..D-10 validation and before renewed planning-side reviews`
 - **Baseline branch:** `main`
 - **Baseline commit:** `504a978568960f5fb7c32105e2cb9e0c14986682`
-- **Baseline push reference:** `pending — origin/main remains at 4af3a247f27c1754dfc5c7f28cb55021ee08aea7 because this environment lacks GitHub HTTPS credentials`
-- **Gate status:** `frozen-locally-pending-publication`
-- **Findings summary:** revised `D-01..D-10` were validated and frozen locally; planning-side reviews remain blocked until the baseline is pushed.
-- **Evidence / reference:** local commit `504a978568960f5fb7c32105e2cb9e0c14986682`, 2026-09-23; publication retry required.
+- **Baseline push reference:** `origin/main contains 504a978568960f5fb7c32105e2cb9e0c14986682; freeze bookkeeping published through e5901f91e034714ba0df09a779687d89d3748a3a`
+- **Gate status:** `frozen-published`
+- **Findings summary:** revised `D-01..D-10` were validated, frozen and published before renewed planning-side reviews.
+- **Evidence / reference:** commits `504a978568960f5fb7c32105e2cb9e0c14986682` and `e5901f91e034714ba0df09a779687d89d3748a3a`, pushed to `origin/main` on 2026-09-23 through the authenticated Windows Git credential path.
 - **Waiver authority / reference:** `n/a`
 
 ## Gate: Review Scope Drift
@@ -696,7 +696,7 @@ Predeclared for pre-approval readiness; reload and bind after `APROVADO`.
 
 - **Disposition:** `keep-active`
 - **Disposition reason:** material review findings were integrated; revised decisions require renewed human validation, refreeze and fresh reviews.
-- **Post-commit/push status:** `refined Review contract committed locally; publication pending because the current environment has no GitHub HTTPS credentials; no implementation claim`
+- **Post-commit/push status:** `validated Review contract and freeze published on origin/main through authenticated Windows Git; no implementation claim`
 - **Next path/status action:** obtain renewed validation of `D-01..D-10`, then refreeze and rerun all planning-side gates; no implementation before a later post-gate APROVADO and authority guard `go`.
 
 ## Commands
