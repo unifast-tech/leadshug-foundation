@@ -1,16 +1,20 @@
 # LeadsHug Foundation Documentation
 
-Este repositório é a autoridade documental do LeadsHug: mandato, entidades, constituição, módulos, roadmap,
-políticas, contratos e TODOs táticos.
+Este repositório é a autoridade documental do LeadsHug: mandato, entidades, constituição, lifecycle, backlog,
+módulos, roadmap, políticas, decisões, contratos e TODOs táticos.
 
 ## Autoridade
 
 - `project_mandate.md`: propósito e princípios permanentes.
 - `domain_entities.md`: vocabulário e entidades do domínio.
 - `project_constitution.md`: regras sistêmicas e limites de arquitetura.
-- `system_roadmap.md`: fases estratégicas.
-- `modules/`: contratos locais por contexto.
-- `todos/active/`: execução aprovada e rastreável.
+- `evolution_lifecycle.md`: schemas, transições, papéis e owner único por campo.
+- `backlog/`: candidatos ainda não aprovados, sua disposição e próximo gate.
+- `system_roadmap.md`: temas/fases, horizontes relativos, resultados, dependências e exit gates.
+- `modules/`: verdade local por contexto.
+- `decisions/`: racional, proveniência e histórico de supersessão.
+- `contracts/`: índice e regra de verificação de contratos definidos por módulos.
+- `todos/active/`: contratos táticos vivos; execução exige `APROVADO` explícito e authority guard `go`.
 
 O conteúdo deste repositório é específico do LeadsHug. As regras, workflows e guardas de engenharia ficam no repositório irmão `../leadshug-engineering`.
 
@@ -22,7 +26,7 @@ Todo desenvolvimento deve possuir um TODO ativo aprovado antes da implementaçã
 
 ## Divisão de autoridade
 
-`leadshug-engineering` é a autoridade de prática de engenharia: fornece regras, workflows e guardas reutilizáveis. Este repositório é a autoridade de produto e governança: mantém TODOs aprovados, contratos, decisões, critérios de aceite e o histórico de execução. O usuário aprova o escopo, Codex executa, e Claude Code revisa tecnicamente em modo somente leitura. Nenhum fluxo deve contornar essas autoridades para implementar trabalho registrado aqui.
+`leadshug-engineering` é a autoridade de prática de engenharia: fornece regras, workflows e guardas reutilizáveis. Este repositório é a autoridade de produto e governança: mantém TODOs aprovados, contratos, decisões, critérios de aceite e o histórico de execução. A autoridade humana de decisão aprova escopo material; o strategic steward mantém a coerência sistêmica; o module owner mantém verdade local; o TODO owner/executor mantém execução/evidência; e o assurance reviewer revisa independentemente. Ferramentas e agentes concretos são adapters desses papéis. Nenhum fluxo deve contornar essas autoridades para implementar trabalho registrado aqui.
 
 ## Navegação de estado atual
 

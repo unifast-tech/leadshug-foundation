@@ -8,7 +8,7 @@ Esta constituição governa o LeadsHug, uma central multi-tenant de relacionamen
 
 ## Authority hierarchy
 
-1. Decisões aprovadas e documentos canônicos deste foundation.
+1. Documentos canônicos vigentes deste foundation. Uma decisão `Accepted` só se torna efetiva depois que todos os seus alvos canônicos nomeados forem consolidados; sua direção passa a valer por meio desses alvos atualizados, nunca por sobreposição do registro de decisão. Antes disso, o registro preserva racional e proveniência, mas não compete com a verdade corrente.
 2. TODO tático ativo e aprovado.
 3. Código e testes do repositório LeadsHug.
 4. Regras e workflows reutilizáveis do `leadshug-engineering`.
@@ -35,16 +35,33 @@ Quando houver conflito, a regra mais específica do produto prevalece sobre a re
 
 ## TODO governance
 
-`todos/active/` é a autoridade de execução. `backlog/` registra ideias ainda não aprovadas. Um TODO concluído
-deve conter evidência específica, validação e referência de branch/commit.
+`backlog/` registra candidatos não aprovados e é separado de `todos/active/`. `todos/active/` contém contratos
+táticos vivos, mas sua localização nunca concede execução: somente `APROVADO` explícito e o authority guard em
+`go` a concedem. Um TODO concluído deve conter evidência específica, validação e referência de branch/commit.
+
+O lifecycle canônico em [evolution_lifecycle.md](evolution_lifecycle.md) define schemas, transições, papéis
+neutros de fornecedor e owner singular por campo. Backlog possui disposição/próximo gate; roadmap possui tema,
+horizonte, resultado, dependências e exit gate; módulos possuem verdade local estável; TODOs possuem
+aprovação/execução/evidência; decisões possuem racional/histórico; briefs e artifacts são evidência, não
+autoridade concorrente.
 
 ## Profiles and handoffs
 
 - Genesis define a primeira arquitetura documental.
-- Strategic/CTO-Tech-Lead governa constituição e roadmap.
+- Strategic/CTO-Tech-Lead governa constituição, lifecycle e roadmap.
 - Operational/Coder implementa backend, frontend e testes por TODO.
 - Operational/DevOps governa Docker, Railway, CI e runtime.
-- Assurance valida qualidade e segurança.
+- Assurance valida qualidade, aderência e segurança.
+
+## Lifecycle roles
+
+- A autoridade humana de decisão valida escopo, produto e aprovação material.
+- O strategic steward governa constituição, lifecycle e roadmap.
+- O module owner governa ownership, invariantes e contratos locais.
+- O TODO owner/executor executa somente o contrato aprovado e mantém suas evidências.
+- O assurance reviewer valida qualidade, aderência e segurança sem adquirir autoridade de produto.
+
+Ferramentas, agentes e fornecedores concretos são adapters desses papéis, não autoridade de produto.
 
 ## Explicit non-goals
 

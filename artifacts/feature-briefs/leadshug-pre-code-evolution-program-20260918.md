@@ -2,7 +2,7 @@
 
 **Data:** 2026-09-18
 
-**Estado:** enquadramento estratégico; não autoriza implementação
+**Estado:** evidência de descoberta; estados vivos pertencem aos registros canônicos vinculados; este brief não autoriza implementação
 
 **Perfil:** Strategic / CTO-Tech-Lead
 
@@ -12,6 +12,10 @@
 
 - **Why this brief exists now:** a iniciativa combina evolução de governança, estudo de dois sistemas de referência e possíveis decisões de domínio. Ela ainda é ampla demais para um único TODO tático seguro.
 - **What this brief is not:** documentação canônica de módulo, constituição, roadmap, ADR, TODO tático ou autorização para alterar o código do LeadsHug ou dos projetos de referência.
+
+## ST-01 canonical handoff
+
+The ST-01 tactical contract and its execution state live only in [the governing TODO](../../todos/active/process/TODO-leadshug-foundation-evolution-lifecycle.md). Its canonical targets are [evolution_lifecycle.md](../../evolution_lifecycle.md), [the backlog](../../backlog/README.md), [system_roadmap.md](../../system_roadmap.md), and [decisions](../../decisions/README.md). Candidate dispositions and next gates live only in the backlog. This brief remains discovery evidence and intentionally does not restate any live state.
 
 ## Source Idea / Request
 
@@ -127,14 +131,16 @@ O estudo deve validar se “fila”, “equipe”, “mesa de atendimento” ou 
 
 Cada linha abaixo deve virar, no máximo, um TODO tático próprio. Nenhum TODO deve cobrir o programa inteiro.
 
-| Story ID | Story / User Value | Primary Module | Secondary Modules | Acceptance Boundary | Candidate Validation Signal | Candidate TODO Decision (`create-now\|defer\|split-further\|merge-with-other`) | Dependencies / Blockers | Notes |
+| Story ID | Story / User Value | Primary Module | Secondary Modules | Acceptance Boundary | Candidate Validation Signal | Canonical handoff (live status elsewhere) | Dependencies / Blockers | Notes |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| `ST-01` | Definir a arquitetura da informação e o modelo de previsibilidade da Foundation. | Foundation/governança | todos os módulos | Taxonomia, estados, horizontes, dependências, registro de decisões e rastreabilidade são propostos e validados sem alterar código do produto. | Auditoria cruzada da navegação e simulação de uma ideia atravessando todo o lifecycle. | `create-now` | Resolver `AMB-03` e `AMB-04`. | Primeira entrega recomendada, pois define onde os estudos seguintes serão registrados. |
-| `ST-02` | Produzir um catálogo de diferenças de capacidade entre LeadsHug e Central-Whatsapp. | integrations-and-channels | inbox-and-conversations, audit-and-history, futuro CRM | Cada capacidade relevante tem evidência, estado no LeadsHug, valor, risco, dependência e disposição; nenhum código é portado. | Amostragem bidirecional entre catálogo, código/documentação dos três produtos e arquitetura vigente. | `create-now` | Determinar baseline de comparação (`AMB-06`). | Dividir em oficial, não oficial e capacidades transversais se o inventário ultrapassar um TODO manejável. |
-| `ST-03` | Modelar conceitualmente canais, filas/equipes e formas de atendimento a partir das lições do whatsflow_v2. | inbox-and-conversations | integrations-and-channels, identity-and-tenancy, audit-and-history | Diagrama conceitual, cardinalidades, vocabulário, invariantes, estados, roteamento, autorização e anti-padrões são documentados; nenhuma decisão é silenciosamente canonizada. | Cenários de entrada, atribuição, capacidade, transferência, SLA, múltiplas BUs e isolamento entre Mantenedoras. | `create-now` | Resolver `AMB-01` e, antes de canonizar, `AMB-02`. | Deve separar inspiração útil de dívida observada. |
-| `ST-04` | Sintetizar os estudos em mapa de capacidades, decisões e sequência de evolução do LeadsHug. | system roadmap | módulos e contracts | O roadmap passa a apontar para capacidades e decisões priorizadas, com dependências e critérios de saída; candidatos não aprovados permanecem fora de `todos/active/`. | Revisão de rastreabilidade: cada prioridade volta à evidência e avança para um TODO apenas quando aprovada. | `defer` | Depende de `ST-01`, `ST-02` e `ST-03`. | É a convergência do programa, não uma implementação de produto. |
+| `ST-01` | Definir a arquitetura da informação e o modelo de previsibilidade da Foundation. | Foundation/governança | todos os módulos | Taxonomia, estados, horizontes, dependências, registro de decisões e rastreabilidade são propostos e validados sem alterar código do produto. | Auditoria cruzada da navegação e simulação de uma ideia atravessando todo o lifecycle. | [Governing ST-01 TODO](../../todos/active/process/TODO-leadshug-foundation-evolution-lifecycle.md) | Resolver `AMB-03` e `AMB-04`. | Primeira entrega recomendada, pois define onde os estudos seguintes serão registrados. |
+| `ST-02` | Produzir um catálogo de diferenças de capacidade entre LeadsHug e Central-Whatsapp. | integrations-and-channels | inbox-and-conversations, audit-and-history, futuro CRM | Cada capacidade relevante tem evidência, estado no LeadsHug, valor, risco, dependência e disposição; nenhum código é portado. | Amostragem bidirecional entre catálogo, código/documentação dos três produtos e arquitetura vigente. | [`BLG-central-whatsapp-capability-study`](../../backlog/README.md) | Determinar baseline de comparação (`AMB-06`). | Dividir em oficial, não oficial e capacidades transversais se o inventário ultrapassar um TODO manejável. |
+| `ST-03` | Modelar conceitualmente canais, filas/equipes e formas de atendimento a partir das lições do whatsflow_v2. | inbox-and-conversations | integrations-and-channels, identity-and-tenancy, audit-and-history | Diagrama conceitual, cardinalidades, vocabulário, invariantes, estados, roteamento, autorização e anti-padrões são documentados; nenhuma decisão é silenciosamente canonizada. | Cenários de entrada, atribuição, capacidade, transferência, SLA, múltiplas BUs e isolamento entre Mantenedoras. | [`BLG-whatsflow-channel-attendance-study`](../../backlog/README.md) | Resolver `AMB-01` e, antes de canonizar, `AMB-02`. | Deve separar inspiração útil de dívida observada. |
+| `ST-04` | Sintetizar os estudos em mapa de capacidades, decisões e sequência de evolução do LeadsHug. | system roadmap | módulos e contracts | O roadmap passa a apontar para capacidades e decisões priorizadas, com dependências e critérios de saída; candidatos não aprovados permanecem fora de `todos/active/`. | Revisão de rastreabilidade: cada prioridade volta à evidência e avança para um TODO apenas quando aprovada. | [`BLG-leadshug-evolution-synthesis`](../../backlog/README.md) | Depende de `ST-01`, `ST-02` e `ST-03`. | É a convergência do programa, não uma implementação de produto. |
 
-## Recommended Sequence
+## Historical Recommended Sequence
+
+The sequence below is retained as discovery provenance, not as live disposition or execution authority. Consult [the canonical backlog](../../backlog/README.md) for current candidate state and next gates.
 
 1. Executar `ST-01` para criar a estrutura documental que receberá os resultados sem transformar descoberta em autoridade prematura.
 2. Executar `ST-02` e `ST-03` como estudos independentes e comparáveis.
