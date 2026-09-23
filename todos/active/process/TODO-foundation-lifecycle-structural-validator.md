@@ -506,6 +506,22 @@ Preencher somente se o guard retornar `no-go`; qualquer novo path ou change type
 - **Critique lenses:** `correctness|performance|elegance|structural-soundness|risk`
 - **Critique status:** `findings_integrated`
 - **Findings summary:** `F-01..F-11` integrados no contrato revisado; material changes require renewed validation, refreeze and fresh critique.
+- **Resolution ledger:** prior findings are recorded individually below for deterministic carry-forward.
+
+| Finding ID | Resolution (`Integrated|Challenged|Deferred`) | Usefulness (`useful|noise|mixed|unknown`) | Formalizable (`yes|partial|no|unknown`) | Candidate Rule Level (`paced|project|none|unknown`) | Candidate Rule ID | Rationale / Evidence |
+| --- | --- | --- | --- | --- | --- | --- |
+| `F-01` | Integrated | useful | yes | project | n/a | canonical six-column assumptions schema now covers `A-01..A-05` |
+| `F-02` | Integrated | useful | yes | project | n/a | explicit source graph and opaque-prose dependency boundary added in `D-01/D-02/D-10` |
+| `F-03` | Integrated | useful | partial | project | n/a | `D-09` separates valid `pending-effect` from structural eligibility and semantic truth |
+| `F-04` | Integrated | useful | yes | project | n/a | historical admission is now decided only through the explicit source graph |
+| `F-05` | Integrated | useful | yes | none | n/a | earlier review-order defect caused renewed validation, refreeze and fresh-review requirement |
+| `F-06` | Integrated | useful | yes | project | n/a | cutover now requires same-SHA dual-run, deliverable existence and `active XOR completed` |
+| `F-07` | Integrated | useful | yes | project | n/a | test-first strategy and `T-01..T-12` positive/mutation matrix added |
+| `F-08` | Integrated | useful | yes | project | n/a | whitespace, diff-scope and secret hygiene validations are separated in `VAL-05` |
+| `F-09` | Integrated | useful | yes | none | n/a | planned implementation routing now names `routine-executor` with single-writer/no-worktree topology |
+| `F-10` | Integrated | useful | yes | project | n/a | CI-equivalent is explicitly `n/a`; local validator/unittest evidence has its own matrix |
+| `F-11` | Integrated | useful | yes | none | n/a | lifecycle, freeze, approval and closeout state were reconciled before renewed validation |
+
 - **Evidence / reference:** `/root/validator_plan_critique`, 2026-09-23; `overall_assessment=material_findings_present; approval_contract=renewal_required`.
 - **Waiver authority / reference:** `n/a`
 
