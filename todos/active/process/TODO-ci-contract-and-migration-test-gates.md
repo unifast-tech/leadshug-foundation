@@ -142,11 +142,11 @@
 - **Why this decision:** a crítica precisa avaliar um pacote versionado e imutável.
 - **Trigger stage:** `before the retrospective independent critique`
 - **Baseline branch:** `main`
-- **Baseline commit:** `to be recorded after baseline commit`
+- **Baseline commit:** `7dcdecf371598ba628188a335b6b7cf298754fb0`
 - **Baseline push reference:** `origin/main`
-- **Gate status:** `not_run`
-- **Findings summary:** `baseline package being prepared`
-- **Evidence / reference:** `to be recorded`
+- **Gate status:** `no_material_findings`
+- **Findings summary:** pacote de revalidação congelado e publicado sem mudanças fora do TODO.
+- **Evidence / reference:** `foundation_documentation:main@7dcdecf371598ba628188a335b6b7cf298754fb0`, sincronizado com `origin/main` em 2026-09-23.
 - **Waiver authority / reference:** `n/a`
 
 ## Independent Test Quality Audit Gate
