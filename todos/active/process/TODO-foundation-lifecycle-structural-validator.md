@@ -35,12 +35,12 @@ O lifecycle da Foundation exige um validator permanente quando backlog, decisõe
 - **Current delivery stage:** `Pending`
 - **Tactical TODO lifecycle state:** `Review`
 - **Qualifiers:** `none`
-- **Next exact step:** publicar a baseline congelada de `D-01..D-08` e executar architecture decision review, plan review, crítica, coherence/scope-drift guards e authority preflight antes da confirmação final de execução.
+- **Next exact step:** obter validação humana das decisões revisadas `D-01..D-10`, congelar uma nova baseline e repetir architecture opinion, plan critique e guards pré-aprovação.
 
 ## Active Work State
 
 - **Work state:** `review`
-- **Why this state now:** `D-01..D-08` foram validadas pelo usuário; a baseline e os reviews pré-execução ainda precisam ser congelados e concluídos.
+- **Why this state now:** architecture opinion e crítica encontraram findings materiais; o contrato foi reconvergido e exige nova validação humana antes de outro freeze.
 - **Exit condition:** decisões validadas, baseline congelada/publicada, reviews e guards pré-aprovação verdes, seguidos de `APROVADO` explícito ou cancelamento com racional.
 
 ## Trigger Evidence
@@ -53,12 +53,12 @@ O lifecycle da Foundation exige um validator permanente quando backlog, decisõe
 ## Scope
 
 - [ ] `S-01` Criar `deterministic/validate_foundation_lifecycle.py`, executável com Python standard library, que derive regras dos owners canônicos sempre que possível e nunca se torne owner concorrente de estado vivo.
-- [ ] `S-02` Validar fail-closed os schemas/colunas obrigatórias e enums dos registros vivos de backlog, decisões e roadmap.
-- [ ] `S-03` Validar sintaxe e unicidade dos IDs `BLG-*`, `DEC-*` e `CAP-*` nos respectivos registros autoritativos, permitindo referências repetidas fora do owner.
-- [ ] `S-04` Validar owner singular por campo/registro, dependências e handoffs resolvíveis, links internos existentes e ausência de disposição/estado vivo em superfícies não autoritativas cobertas.
-- [ ] `S-05` Validar que decisões `Accepted` nomeiem targets canônicos existentes e possuam evidência de consolidação para cada target antes de serem tratadas como efetivas.
-- [ ] `S-06` Preservar a exceção histórica: documentos concluídos, artifacts históricos e legado intocado ficam fora do scan corrente até alteração material separadamente autorizada.
-- [ ] `S-07` Criar testes determinísticos positivos e mutation/fail-first negativos para cada família de invariantes, usando fixtures temporárias e sem modificar a Foundation real.
+- [ ] `S-02` Validar fail-closed os headings/tabelas, schemas/colunas obrigatórias e enums do source graph enumerado para lifecycle, backlog, decisões e roadmap.
+- [ ] `S-03` Validar sintaxe e unicidade dos IDs `BLG-*` e `DEC-*` somente nos registros autoritativos admitidos, permitindo referências repetidas fora do owner; `CAP-*` fica fora deste slice.
+- [ ] `S-04` Validar owner singular por registro admitido, links Markdown e decision-target paths confinados/resolvíveis; campos de dependência/next-gate em prosa são obrigatórios, mas não fingem ser IDs resolvíveis.
+- [ ] `S-05` Distinguir decisão `Accepted` válida porém `pending-effect` de structurally eligible for effectiveness: exigir targets existentes, únicos e mapeados 1:1 a evidências não-placeholder, sem alegar validação semântica do conteúdo consolidado.
+- [ ] `S-06` Preservar a exceção histórica por construção: somente o source graph explícito é escaneado; histórico entra apenas após TODO material atualizar o source graph canônico.
+- [ ] `S-07` Criar testes test-first positivos e mutation/fail-first negativos, com oráculos independentes do parser, fixtures temporárias e prova byte-for-byte read-only.
 - [ ] `S-08` Documentar owner, comando, cobertura, códigos de saída e mensagens de diagnóstico em `deterministic/README.md`, além de atualizar o lifecycle e o índice raiz com o handoff canônico.
 - [ ] `S-09` Substituir os exact checks do ST-01 como controle corrente somente depois que o novo comando e sua suíte passarem no checkout principal consolidado.
 
@@ -66,11 +66,12 @@ O lifecycle da Foundation exige um validator permanente quando backlog, decisõe
 
 - [ ] `OOS-01` Alterar backend, frontend, banco, runtime, Docker, Railway, CI/CD ou contratos de produto do LeadsHug.
 - [ ] `OOS-02` Editar workflows de GitHub Actions ou alegar integração remota neste TODO.
-- [ ] `OOS-03` Reabrir ou reescrever decisões `D-01..D-11` do ST-01 ou mudar os enums/schemas definidos por elas.
+- [ ] `OOS-03` Reabrir/reformular a direção de decisões `D-01..D-11` do ST-01 ou mudar seus enums/schemas; validação estrutural não adjudica verdade semântica da consolidação.
 - [ ] `OOS-04` Retroajustar TODOs concluídos, artifacts históricos ou documentos legados apenas para fazê-los passar no novo validator.
 - [ ] `OOS-05` Copiar contagens, títulos, disposições ou conteúdo específico do ST-01 para o código do validator como verdade permanente.
 - [ ] `OOS-06` Criar configuração paralela que replique schemas, enums, owners ou estados já pertencentes a documentos canônicos.
 - [ ] `OOS-07` Integrar o validator aos guards genéricos do `delphi-ai`; esta entrega permanece project-specific em `foundation_documentation/`.
+- [ ] `OOS-08` Validar registros `CAP-*`, módulos, TODOs ou contract-verification records neste slice; sua admissão futura exige source-graph/schema próprios.
 
 ## Execution Lane Tracking
 
@@ -136,22 +137,23 @@ Preencher somente se o guard retornar `no-go`; qualquer novo path ou change type
 ## Definition of Done
 
 - [ ] `DOD-01` O validator retorna `0` para a Foundation canônica válida e código diferente de zero para qualquer violação coberta, sem alterar arquivos.
-- [ ] `DOD-02` Cada família `S-02..S-06` possui teste positivo e negativo que prova mensagem diagnóstica e exit behavior.
-- [ ] `DOD-03` Mutation tests detectam ID inválido/duplicado, enum inválido, coluna ausente, owner concorrente, link/target quebrado e decisão `Accepted` sem consolidação completa.
+- [ ] `DOD-02` Cada regra enumerada na Test Rule Matrix possui fail-first positivo/negativo, mensagem/exit assertions e oráculo independente do helper sob teste.
+- [ ] `DOD-03` Mutations detectam estrutura Markdown ambígua, ID inválido/duplicado, enum inválido, coluna/owner ausente, link/anchor/target inválido, path/symlink escape, evidência 1:1 ausente/contraditória e output não redigido; referências repetidas válidas e `pending-effect` válido passam.
 - [ ] `DOD-04` O validator deriva enums/owners dos documentos canônicos ou usa assertions estruturais documentadas; não mantém segundo catálogo editável de estado vivo.
-- [ ] `DOD-05` A exceção histórica possui teste que prova exclusão de concluídos/intocados sem mascarar registros vivos inválidos.
+- [ ] `DOD-05` Testes provam histórico fora do source graph ignorado, inclusão apenas após source-graph explícito e impossibilidade de excluir registro vivo inválido.
 - [ ] `DOD-06` `deterministic/README.md`, `evolution_lifecycle.md` e `README.md` apontam para um único comando e declaram que CI remoto não foi alterado.
-- [ ] `DOD-07` O comando permanente substitui formalmente o controle temporário do ST-01 somente após passar sobre o checkout consolidado.
+- [ ] `DOD-07` O comando permanente substitui o controle temporário somente após dual-run old/new no mesmo branch@sha consolidado, com paridade verde e ordem de cutover registrada.
 - [ ] `DOD-08` Diff expectation, decisões, evidence matrix, audits, crítica, test-quality audit, final review e closeout guards estão completos e verdes.
 
 ## Validation Steps
 
 - [ ] `VAL-01` Executar `python3 foundation_documentation/deterministic/validate_foundation_lifecycle.py --root foundation_documentation` e exigir exit `0` com resumo determinístico.
 - [ ] `VAL-02` Executar `python3 -m unittest discover -s foundation_documentation/deterministic/tests -p 'test_*.py'` e exigir todos os testes verdes.
-- [ ] `VAL-03` Executar mutation cases isolados para cada falha de `DOD-03` e provar exit não-zero sem tocar os documentos reais.
+- [ ] `VAL-03` Executar a Test Rule Matrix inteira, incluindo root confinement, symlink/`..` escape, anchors, Unicode/HTML, read-only byte snapshot, `pending-effect` válido e evidência contraditória.
 - [ ] `VAL-04` Executar `python3 -m py_compile foundation_documentation/deterministic/validate_foundation_lifecycle.py foundation_documentation/deterministic/tests/test_validate_foundation_lifecycle.py`.
-- [ ] `VAL-05` Executar `git -C foundation_documentation diff --check` e confirmar ausência de secrets, dados privados e arquivos fora do contrato.
-- [ ] `VAL-06` Executar diff, authority, completion e closeout guards; exigir `go` antes do movimento final.
+- [ ] `VAL-05` Executar separadamente `git diff --check`, diff expectation guard e scan redigido de secret/private-key patterns; nenhum comando isolado pode alegar as três capacidades.
+- [ ] `VAL-06` Executar diff, authority, completion e closeout guards; exigir `go` antes do movimento final e provar todos os deliverables esperados mais exclusividade `active XOR completed`.
+- [ ] `VAL-07` No mesmo branch@sha final, executar os Exact Check Command Contracts aplicáveis do ST-01 (`VAL-01`, `VAL-02`, `VAL-08`, `VAL-10`) e o novo validator/tests; exigir dual-run verde antes de atualizar o handoff/cutover.
 
 ## Completion Evidence Matrix
 
@@ -163,8 +165,9 @@ Preencher somente se o guard retornar `no-go`; qualquer novo path ou change type
 
 ## External Dependency Readiness
 
-- **Decision:** `not_needed`
-- **Rationale:** implementação e validação usam Python standard library, Git e arquivos locais; nenhuma API, runtime, banco, device, browser ou serviço externo é requisito.
+- **Decision:** `required only for publication/Production-Ready; not needed for local implementation`
+- **Rationale:** parser/tests usam apenas arquivos locais, mas freeze e closeout exigem `origin/main`; GitHub/origin deve estar acessível e sincronizado antes dessas alegações.
+- **Current evidence:** `origin/main@4af3a247f27c1754dfc5c7f28cb55021ee08aea7` estava sincronizado no pacote revisado; revalidar antes do próximo freeze/push.
 
 ## Profile Scope & Handoffs
 
@@ -197,20 +200,43 @@ Preencher somente se o guard retornar `no-go`; qualquer novo path ou change type
 - **Decision consolidation targets:** `evolution_lifecycle.md`; `deterministic/README.md`; `README.md`
 - **Module docs:** `n/a — no product module behavior or contract changes`
 
+### Validator Source Graph (Revised Contract)
+
+| Owner Path | Unique Heading / Record Surface | Required Structure | Validation Boundary |
+| --- | --- | --- | --- |
+| `evolution_lifecycle.md` | `Authority matrix`, five `State machines`, `Historical-document exception`, `Deterministic-adoption trigger` | headings unique; schemas/enums readable; authority rows unique | source of schemas/enums/owner semantics; no live record discovery outside rows below |
+| `backlog/README.md` | `## Candidates` | exact eight-column table; unique `BLG-*`; state from Candidates enum; nonempty fields | Markdown links resolve; freeform Dependencies/Next gate are required prose, not IDs |
+| `decisions/README.md` | `## Records` | Markdown links enumerate decision record files | only linked records are admitted; no unrestricted `decisions/*.md` glob |
+| linked decision record files | unique decision table | exact six columns; unique `DEC-*`; state from Decisions enum | targets unique/existing/root-confined; evidence segments map 1:1 structurally; semantics remain review-owned |
+| `system_roadmap.md` | unique six-column roadmap table | unique phase rows; valid Horizon/Gate status; nonempty dependencies/outcome/exit gate | prose dependencies are required but not treated as resolvable IDs |
+
+### Narrow Markdown Grammar (Revised Contract)
+
+- UTF-8 strict input; reject undecodable bytes and hidden Unicode format controls in identifiers, enum values and paths.
+- Required headings/tables are unique; duplicate/missing/reordered headers or row cardinality mismatch fail closed.
+- Pipe tables are parsed structurally with inline code/link awareness; ambiguous escaped pipes/code spans fail with a diagnostic instead of silent token shifting.
+- Markdown links/anchors and decision target paths must be relative, remain under `--root`, resolve without absolute paths, `..` escape or symlink escape, and never cause content echo in diagnostics.
+- Discovery depth is exactly the source graph above. Historical/completed/artifact content can be a resolved reference target without becoming a scanned live owner.
+- Decision effectiveness output is structural only: `Accepted + valid targets + incomplete mapping = pending-effect` is valid; complete 1:1 target/evidence mapping is `structurally-eligible`, never a semantic truth claim.
+
 ## Decision Pending
 
-- `none — D-01..D-08 validated by Gabriel/user on 2026-09-23 through the phrase APROVADO; this pre-gate token validates the decisions but does not grant implementation authority.`
+| Decision ID | Revised Recommended Direction | Review Finding Source | Human Validation Needed |
+| --- | --- | --- | --- |
+| `D-01` | Admit only the explicit source graph above; validate `BLG-*` and `DEC-*`; exclude `CAP-*`, modules, TODO records and contract-verification records from this slice. | `AR-02/03`, `F-02` | confirm revised boundary |
+| `D-02` | Add the source graph and narrow Markdown grammar to `evolution_lifecycle.md`; derive from those authorities without a parallel mutable catalog. | `AR-02/04`, `F-02` | confirm extraction contract |
+| `D-03` | Make the validator read-only/fail-closed with mandatory root/symlink confinement, byte-preservation and bounded/redacted diagnostics. | `AR-04`, `F-07/08` | confirm safety contract |
+| `D-04` | Implement the historical boundary through explicit source-graph admission, not heuristics or Git-time inference; a later material TODO must update the graph to admit a new owner. | `AR-02`, `F-04` | confirm adoption rule |
+| `D-05` | Deliver local validation only; record CI-equivalent as `n/a — no repo-owned CI`; remote CI integration stays in another TODO. | preserved; `F-10` terminology fix | confirm two-stage adoption |
+| `D-06` | Use Python stdlib + unittest with `test-first` strategy, independent fixture oracles and a 1:1 rule/mutation matrix. | `AR-04`, `F-07` | confirm stack/testing |
+| `D-07` | Keep owner project-specific in Foundation and route implementation to routine-executor; no `delphi-ai` implementation changes. | preserved; `F-09` routing fix | confirm ownership/routing |
+| `D-08` | Cut over only after old/new dual-run on the same final branch@sha, audits/reviews, publication, deliverable existence and `active XOR completed` checks. | `AR-05`, `F-06` | confirm cutover |
+| `D-09` | Treat `Accepted` with incomplete consolidation as valid `pending-effect`; validator may report structurally eligible mapping but never claim semantic effectiveness. | `AR-01`, `F-03` | confirm validity/effectiveness split |
+| `D-10` | Treat prose dependencies/next gates as required nonempty text; validate only explicit Markdown links/anchors as resolvable references. | `F-02` | confirm dependency grammar |
 
 ## Decisions
 
-- [x] `D-01` Cobrir somente registros vivos e owners canônicos de lifecycle, backlog, decisões e roadmap, incluindo links/handoffs; não escanear todo Markdown.
-- [x] `D-02` Derivar enums, schemas e owners dos documentos canônicos sempre que possível; assertions codificadas serão apenas invariantes estruturais documentadas, nunca catálogo concorrente.
-- [x] `D-03` Operar fail-closed e read-only, com exit `0` em sucesso e não-zero mais diagnóstico `regra + arquivo + registro` em falha.
-- [x] `D-04` Excluir concluídos, históricos e legado intocado; entrada no scan corrente exige owner vivo ou adoção material autorizada.
-- [x] `D-05` Entregar comando local permanente e documentação; integração GitHub Actions/CI pertence a TODO próprio.
-- [x] `D-06` Usar Python standard library e `unittest`, com fixtures temporárias e mutation cases para todas as famílias de invariantes.
-- [x] `D-07` Manter owner estratégico no lifecycle, implementação project-specific em `deterministic/` e nenhum código no `delphi-ai`.
-- [x] `D-08` Substituir o controle temporário ST-01 somente após validator, tests, reviews e guards verdes no checkout principal.
+- `pending renewed human validation of revised D-01..D-10`
 
 ## Module Decision Baseline Snapshot
 
@@ -225,16 +251,10 @@ Preencher somente se o guard retornar `no-go`; qualquer novo path ou change type
 
 ## Decision Baseline
 
-- [x] `D-01` Cobertura limitada a registros vivos/owners canônicos e seus links/handoffs.
-- [x] `D-02` Fonte única derivada; sem catálogo concorrente.
-- [x] `D-03` Validator read-only e fail-closed com diagnóstico acionável.
-- [x] `D-04` Exceção histórica preservada sem bypass de registro vivo.
-- [x] `D-05` Comando local neste TODO; CI em TODO próprio.
-- [x] `D-06` Python standard library + unittest + temporary mutation fixtures.
-- [x] `D-07` Owner project-specific em Foundation; sem mudança Delphi.
-- [x] `D-08` Cutover somente após pacote integralmente verde e publicado.
-- **Freeze status:** `frozen-published`
-- **Validation evidence:** Gabriel/user, 2026-09-23, phrase `APROVADO`; accepted here as validation of `D-01..D-08`, not as post-gate execution authority.
+- **Prior freeze:** `D-01..D-08` at `b685fb52fa00b245b4bfb58ded6b8d7212f7f6eb`, invalidated by material findings `AR-01..05` and `F-01..11`.
+- **Freeze status:** `not_frozen — revised D-01..D-10 pending renewed validation`
+- **Frozen decisions:** `none current`
+- **Historical validation evidence:** Gabriel/user, 2026-09-23, phrase `APROVADO`; preserved as provenance, not execution authority.
 
 ## Architecture Change Governance
 
@@ -268,7 +288,7 @@ Preencher somente se o guard retornar `no-go`; qualquer novo path ou change type
 
 | Harness Type | Surface | Command / Rule / Artifact | Regression It Must Catch | Adoption Timing | Evidence Plan / Follow-up |
 | --- | --- | --- | --- | --- | --- |
-| guard | live Foundation | `python3 foundation_documentation/deterministic/validate_foundation_lifecycle.py --root foundation_documentation` | schemas/IDs/owners/links/effectiveness inválidos | implement-in-this-todo | `VAL-01`, `DOD-01/04` |
+| guard | live Foundation | `python3 foundation_documentation/deterministic/validate_foundation_lifecycle.py --root foundation_documentation` | schemas/IDs/owners/links/target-evidence mapping estrutural inválidos | implement-in-this-todo | `VAL-01`, `DOD-01/04` |
 | test | validator rules | `python3 -m unittest discover -s foundation_documentation/deterministic/tests -p 'test_*.py'` | falsos verdes e regressões por mutation | implement-in-this-todo | `VAL-02/03`, `DOD-02/03/05` |
 | rule | usage contract | `foundation_documentation/deterministic/README.md` | uso sem boundary/owner/exit semantics | implement-in-this-todo | `DOD-06` |
 | audit | delivered package | critique + test-quality audit + final review | fragilidade, duplicação e dívida de verificação | implement-in-this-todo | gate evidence no TODO |
@@ -279,8 +299,8 @@ Preencher somente se o guard retornar `no-go`; qualquer novo path ou change type
 - **Decision review lifecycle:** `after diagnosis is closed and before APROVADO`
 - **Decision review kind:** `architecture_opinion`
 - **Decision review package:** `bounded-file-set`
-- **Decision review status:** `not_run`
-- **Decision review evidence / resolution:** `pending D-01..D-08 validation and review baseline freeze`
+- **Decision review status:** `findings_integrated`
+- **Decision review evidence / resolution:** `/root/validator_architecture_opinion`, 2026-09-23: `AR-01..AR-05` materiais integrados; approval contract requer renovação e nova review após freeze revisado.
 - **Architecture adherence review:** `required`
 - **Adherence review lifecycle:** `after implementation and before Completed`
 - **Adherence review kind:** `architecture_adherence`
@@ -293,12 +313,12 @@ Preencher somente se o guard retornar `no-go`; qualquer novo path ou change type
 
 - **Gate decision:** `required`
 - **Why this decision:** TODO medium de architecture enforcement requer pacote estável/publicado antes da crítica.
-- **Trigger stage:** `after D-01..D-08 validation and before planning-side reviews`
+- **Trigger stage:** `after D-01..D-10 validation and before renewed planning-side reviews`
 - **Baseline branch:** `main`
 - **Baseline commit:** `b685fb52fa00b245b4bfb58ded6b8d7212f7f6eb`
 - **Baseline push reference:** `origin/main@b685fb52fa00b245b4bfb58ded6b8d7212f7f6eb`
-- **Gate status:** `no_material_findings`
-- **Findings summary:** decisions and bounded planning package frozen without implementation changes.
+- **Gate status:** `findings_integrated`
+- **Findings summary:** baseline foi congelada corretamente, mas reviews materiais invalidaram o approval contract; nova baseline será exigida após validação de `D-01..D-10`.
 - **Evidence / reference:** commit `b685fb52fa00b245b4bfb58ded6b8d7212f7f6eb`, pushed to `origin/main` on 2026-09-23.
 - **Waiver authority / reference:** `n/a`
 
@@ -318,17 +338,17 @@ Preencher somente se o guard retornar `no-go`; qualquer novo path ou change type
 
 ## Questions To Close
 
-- `none — D-01..D-08 validated; review findings may reopen only with concrete evidence.`
+- `Q-01` A autoridade humana valida o contrato revisado `D-01..D-10`, que substitui a baseline anterior?
 
 ## Assumptions Preview
 
-| Assumption ID | Assumption | Evidence | Confidence | Contract Impact if False |
-| --- | --- | --- | --- | --- |
-| `A-01` | `deterministic/` é a superfície project-owned reservada para enforcement local. | diretório versionado com `.gitkeep`; trigger decision | high | outro path exige atualizar diff/handoff |
-| `A-02` | Python 3 está disponível no contexto de validação Foundation. | guards e exact checks ST-01 usam Python 3 | high | stack/commands precisam revisão |
-| `A-03` | Exact checks ST-01 são referência de casos, não código a copiar literalmente. | D-09 + adoption trigger | high | copiar snapshot viola `D-02/OOS-05` |
-| `A-04` | Não existe CI repo-owned para Foundation que deva ser espelhado neste slice. | ausência de `.github/workflows`; CI fora do scope | high | descoberta exige handoff DevOps e renewed approval |
-| `A-05` | Nenhum fluxo de usuário/runtime é afetado. | diff restrito a Foundation tooling/docs/tests | high | produto/runtime exige split |
+| Assumption ID | Assumption | Evidence | If False | Confidence | Handling |
+| --- | --- | --- | --- | --- | --- |
+| `A-01` | `deterministic/` é a superfície project-owned para enforcement local. | diretório versionado com `.gitkeep`; `DEC-validator-adoption-trigger`; expected diff | outro path exige renovar diff/handoff | High | Promote to Decision (`D-07`) |
+| `A-02` | Python 3 está disponível no contexto de validação Foundation. | guards e exact checks ST-01 usam Python 3 | stack/commands precisam revisão | High | Keep as Assumption |
+| `A-03` | Exact checks ST-01 são oráculo temporário de paridade, não código a copiar. | lifecycle trigger + `D-02/D-08` | cutover/test plan muda materialmente | High | Promote to Decision (`D-02,D-08`) |
+| `A-04` | Não existe CI repo-owned Foundation a espelhar. | tree sem `.github/workflows`; `D-05` | exige handoff DevOps e renewed approval | High | Promote to Decision (`D-05`) |
+| `A-05` | Nenhum fluxo de usuário/runtime é afetado. | diff/out-of-scope restritos a Foundation tooling/docs/tests | exige split e runtime evidence | High | Promote to Decision (`D-01,D-07`) |
 
 ## Execution Plan
 
@@ -342,7 +362,7 @@ Preencher somente se o guard retornar `no-go`; qualquer novo path ou change type
 
 ### Ordered Steps
 
-1. Após validação humana, congelar `D-01..D-08`, publicar baseline e concluir plan/architecture critique + guards pré-aprovação.
+1. Após validação humana, congelar `D-01..D-10`, publicar baseline e concluir plan/architecture critique + guards pré-aprovação.
 2. Após `APROVADO` e authority guard `go`, implementar parser/diagnostics read-only derivados dos owners.
 3. Criar fixtures temporárias e testes; executar mutations fail-first antes de aceitar implementação.
 4. Documentar comando, boundary, exit contract e owner; atualizar somente handoffs esperados.
@@ -352,11 +372,28 @@ Preencher somente se o guard retornar `no-go`; qualquer novo path ou change type
 
 ### Test Strategy
 
-- Unit tests do parser/regras sobre fixtures mínimas válidas.
-- Mutation tests em cópias temporárias para cada falha, verificando exit e diagnóstico.
-- Real-repository acceptance com `VAL-01` após testes isolados.
-- Teste read-only comparando hashes/estado das entradas quando proporcional.
-- Nenhum browser/device/backend test: estrutura documental sem comportamento de produto.
+- **Strategy:** `test-first`
+- **Why:** validator e testes podem compartilhar o mesmo erro; cada regra deve falhar contra uma fixture/mutation independente antes do código que a satisfaz.
+- **Fail-first targets:** source graph/headers, table cardinality, BLG/DEC syntax+uniqueness, enums, link/anchor/path confinement, pending-effect versus structurally-eligible mapping, historical exclusion/admission, Unicode/HTML, bounded/redacted diagnostics e byte-for-byte read-only.
+- Fixtures/oráculos são escritos manualmente em temporary directories e não reutilizam helpers internos do parser para construir o expected result.
+- Real-repository acceptance e dual-run ST-01/new ocorrem somente após todos os fail-first cases convergirem.
+
+### Test Rule Matrix
+
+| Rule ID | Positive Control | Required Mutation / Negative Case | Required Assertion |
+| --- | --- | --- | --- |
+| `T-01` | unique required heading/table | missing, duplicate or reordered heading/header | non-zero + rule/path |
+| `T-02` | exact row cardinality | missing/extra cell, ambiguous pipe/code span | non-zero + row locator |
+| `T-03` | unique valid `BLG-*`/`DEC-*` owners | invalid case/slug, duplicate owner | non-zero + ID |
+| `T-04` | repeated reference outside owner | duplicate reference only | remains zero |
+| `T-05` | enum from lifecycle | invalid/hidden Unicode/HTML state | non-zero + normalized diagnostic |
+| `T-06` | valid relative link/anchor | missing anchor/path, absolute, `..`, symlink escape | non-zero without content leak |
+| `T-07` | `Accepted` with incomplete mapping | pending-effect fixture | remains zero + pending-effect classification |
+| `T-08` | complete 1:1 target/evidence mapping | duplicate target, absent/contradictory segment | non-zero; never semantic-effective claim |
+| `T-09` | history outside source graph | historical file invalid but unadmitted | remains zero |
+| `T-10` | explicitly admitted live record | invalid live/admitted record | non-zero; cannot be excluded heuristically |
+| `T-11` | bounded/redacted diagnostic | secret-like fixture payload | diagnostic omits value and respects limit |
+| `T-12` | read-only tree | full validation pass/fail | byte hashes and symlink metadata unchanged |
 
 ### Pre-APROVADO RED Evidence Capture
 
@@ -373,8 +410,15 @@ Preencher somente se o guard retornar `no-go`; qualquer novo path ou change type
 
 | Repository / CI Surface | Why In Scope | Behavior / Scenario Covered | Fixture / Seed / Runtime Preconditions | Local CI-Equivalent Command | Required Before | Status | Evidence Artifact / Command | Notes |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| Foundation structural validator | comando autoritativo local do slice | Foundation real satisfaz schemas, owners, IDs, links e effectiveness | checkout consolidado com branch@sha | `python3 foundation_documentation/deterministic/validate_foundation_lifecycle.py --root foundation_documentation` | Local-Implemented | planned | stdout/exit + branch@sha | não alegar CI remoto |
-| Validator unit/mutation suite | prova detecção fail-closed | fixtures e mutations de `DOD-03` | temporary directories criados pela suite | `python3 -m unittest discover -s foundation_documentation/deterministic/tests -p 'test_*.py'` | Local-Implemented | planned | unittest output + branch@sha | enumerar cenários no evidence final |
+| Foundation repository | nenhum job/suite CI repo-owned existe neste slice | `n/a — local validation only` | `n/a` | `n/a — no CI-equivalent claim` | APROVADO | n/a | source tree + `D-05` | validator/unittest ficam na matriz local abaixo |
+
+### Local Validation Matrix
+
+| Surface | Behavior / Scenario | Preconditions | Command | Required Before | Status |
+| --- | --- | --- | --- | --- | --- |
+| validator acceptance | source graph real válido | consolidated branch@sha | `python3 foundation_documentation/deterministic/validate_foundation_lifecycle.py --root foundation_documentation` | Local-Implemented | planned |
+| unittest/mutations | `T-01..T-12` | isolated temporary fixtures | `python3 -m unittest discover -s foundation_documentation/deterministic/tests -p 'test_*.py'` | Local-Implemented | planned |
+| cutover parity | old exact checks + new validator/tests agree | same final branch@sha, before handoff update | ST-01 `VAL-01/02/08/10` exact contracts + commands above | Production-Ready | planned |
 
 ### Runtime / Rollout Notes
 
@@ -383,9 +427,26 @@ Preencher somente se o guard retornar `no-go`; qualquer novo path ou change type
 
 ## Plan Review Gate
 
-- **Status:** `running — baseline published; architecture opinion and independent critique dispatched next`
+- **Status:** `findings_integrated — original package no-go; revised package awaits human validation, refreeze and fresh review`
 - **Required lenses:** Architecture, Code Quality, Tests, Performance, Security, Elegance, Structural Soundness.
 - **Expected focus:** evitar parser frágil, catálogo duplicado, cobertura superficial, bypass histórico e expansão para CI.
+
+### Review Sections
+
+- [x] Architecture — source graph/effectiveness/history findings integrated.
+- [x] Code Quality — narrow grammar, confinement and diagnostics contract added.
+- [x] Tests — test-first and `T-01..T-12` matrix added.
+- [x] Performance — bounded linear scan; no specialized lane triggered.
+- [x] Security — root/symlink confinement and redaction made mandatory.
+- [x] Elegance — one project-owned stdlib validator; no parallel catalog.
+- [x] Structural Soundness — old/new parity and explicit cutover added.
+
+### Issue Cards
+
+- **Issue ID:** `PLAN-01` — decision validity/effectiveness conflated (`high`). Option A: structural `pending-effect`/eligible split (recommended, medium effort/low risk/local blast/low maintenance/neutral performance/high elegance+soundness); Option B: atomic Accepted (high effort/risk/cross-doc); Option C: do nothing (high false-block risk). **Resolution:** integrated into `D-09`, `S-05`, `T-07/08`.
+- **Issue ID:** `PLAN-02` — open scan universe/history (`high`). Option A: explicit source graph + grammar (recommended, medium effort/low risk); Option B: hard-code snapshot (low effort/high maintenance); Option C: broad scan (high false-positive risk). **Resolution:** integrated into source graph, `D-01/02/04/10`.
+- **Issue ID:** `PLAN-03` — parser/read-only/security proof incomplete (`high`). Option A: mandatory narrow grammar, confinement, redaction and byte snapshot (recommended, medium effort/low risk); Option B: external parser (medium supply-chain risk); Option C: do nothing (high false-green risk). **Resolution:** integrated into `D-03/06`, `T-01..T-12`.
+- **Issue ID:** `PLAN-04` — cutover/test/routing evidence incomplete (`high`). Option A: test-first + dual-run + exact implementation routing (recommended, medium effort/low risk); Option B: cut over after new-only local green (medium risk); Option C: do nothing (control gap). **Resolution:** integrated into `D-05/07/08`, matrices and routing.
 
 ### Failure Modes & Edge Cases
 
@@ -416,7 +477,7 @@ Preencher somente se o guard retornar `no-go`; qualquer novo path ou change type
 
 - **Canonical method:** `wf-docker-audit-escalation-method`
 - **Guard command:** `python3 delphi-ai/tools/audit_escalation_guard.py --todo foundation_documentation/todos/active/process/TODO-foundation-lifecycle-structural-validator.md`
-- **Latest TEACH evidence / artifact:** `go` rerun after freeze on 2026-09-23; fingerprint `35a8c129de37`; critique/test-quality/final/verification-debt/architecture decision/adherence `required`; triple/security/performance-concurrency `not_needed`.
+- **Latest TEACH evidence / artifact:** `prepared-pre-freeze` diagnostic on revised package, 2026-09-23, fingerprint `b82442926521`; critique/test-quality/final/verification-debt/architecture decision/adherence `required`; triple/security/performance-concurrency `not_needed`; rerun after renewed freeze for gate evidence.
 
 | Trigger | Value | Notes |
 | --- | --- | --- |
@@ -429,7 +490,7 @@ Preencher somente se o guard retornar `no-go`; qualquer novo path ou change type
 | `touches_tests` | `yes` | nova suíte unittest/mutation |
 | `critical_user_journey` | `no` | governança interna |
 | `release_or_promotion_critical` | `no` | não promove produto |
-| `high_severity_plan_review_issue` | `no` | plan review ainda não executado |
+| `high_severity_plan_review_issue` | `yes` | `PLAN-01..04` high integrated; fresh review still required |
 | `explicit_three_lane_request` | `no` | não solicitado |
 
 ## Independent No-Context Critique Gate
@@ -444,17 +505,17 @@ Preencher somente se o guard retornar `no-go`; qualquer novo path ou change type
 - **Canonical multi-lane audit protocol:** `n/a — deterministic floor says triple_review=not_needed`
 - **Audit session / round evidence:** `n/a unless triggered`
 - **Critique lenses:** `correctness|performance|elegance|structural-soundness|risk`
-- **Critique status:** `not_run`
-- **Findings summary:** `pending decision freeze and review baseline`
-- **Evidence / reference:** `pending`
+- **Critique status:** `findings_integrated`
+- **Findings summary:** `F-01..F-11` integrados no contrato revisado; material changes require renewed validation, refreeze and fresh critique.
+- **Evidence / reference:** `/root/validator_plan_critique`, 2026-09-23; `overall_assessment=material_findings_present; approval_contract=renewal_required`.
 - **Waiver authority / reference:** `n/a`
 
 ## Gate: Assumption Code Coherence
 
 - **Gate decision:** `required`
-- **Why this decision:** assumptions `A-01..A-04` govern paths, interpreter and CI surface.
+- **Why this decision:** assumptions `A-01..A-05` govern paths, interpreter, CI and runtime boundary.
 - **Trigger stage:** `after critique convergence and before APROVADO`
-- **Guard scope:** `A-01,A-02,A-03,A-04`
+- **Guard scope:** `A-01,A-02,A-03,A-04,A-05`
 - **Guard command:** `python3 delphi-ai/tools/assumption_code_coherence_guard.py --todo foundation_documentation/todos/active/process/TODO-foundation-lifecycle-structural-validator.md`
 - **Gate status:** `not_run`
 - **Findings summary:** `pending`
@@ -464,11 +525,11 @@ Preencher somente se o guard retornar `no-go`; qualquer novo path ou change type
 ## Approval
 
 - **Approved by:** `pending`
-- **Approval scope:** `pending after D-01..D-08 validation and planning gates`
+- **Approval scope:** `pending after D-01..D-10 validation and planning gates`
 - **Execution not authorized by approval:** `CI/CD, product/runtime, historical rewrites, delphi-ai changes, worktrees or auxiliary checkouts unless separately named`
 - **Renewed approval required when:** scope, invariant semantics, validation, expected paths, architecture, risk, exception or CI adoption changes materially.
 - **Execution authority:** `not_granted`
-- **Pre-gate human token:** Gabriel/user, 2026-09-23, `APROVADO`; recorded as decision validation only because architecture review, critique, coherence, scope-drift and authority preflight were not yet complete.
+- **Pre-gate human token:** Gabriel/user, 2026-09-23, `APROVADO`; it validated the superseded `D-01..D-08` only. Material findings require renewed validation and a new post-gate `APROVADO`.
 
 ## Rules Acknowledgement / Ingestion
 
@@ -488,25 +549,26 @@ Predeclared for pre-approval readiness; reload and bind after `APROVADO`.
 ## Agent Routing Preflight
 
 - **Client surface:** `codex`
-- **Current governed action:** `todo-approval`
-- **Selected role:** `primary-chat`
-- **Selected model:** `gpt-5.4`
-- **Selected effort:** `xhigh`
+- **Current governed action:** `implementation`
+- **Selected role:** `routine-executor`
+- **Selected model:** `gpt-5.6-terra`
+- **Selected effort:** `medium`
 - **Proof mode:** `declared`
 - **Exception reason:** `n/a`
-- **Subagent / delegation authorization:** `not-requested for implementation`
+- **Subagent / delegation authorization:** `pending explicit inclusion in renewed APROVADO`
 - **Execution topology:** `primary-checkout-single-writer`
 - **Worktree / auxiliary-checkout authorization:** `not-authorized`
 - **Worktree authorization evidence:** `n/a`
 - **Writer scheduling policy:** `single-writer-serialized`
 - **Guard outcome:** `go`
+- **Routing evidence:** `agent_role_routing_guard.py`, 2026-09-23; `implementation/routine-executor/gpt-5.6-terra/medium/primary-checkout-single-writer/no-worktree`.
 - **Waiver / exception reference:** `n/a`
 
 ## Decision Adherence Validation
 
 | Decision ID | Status | Evidence | Notes |
 | --- | --- | --- | --- |
-| `D-01..D-08` | planned | implementation/tests/docs after approval | expand 1:1 before delivery |
+| `D-01..D-10` | planned | implementation/tests/docs after approval | expand 1:1 before delivery |
 
 ## Module Decision Consistency Validation
 
@@ -536,9 +598,11 @@ Predeclared for pre-approval readiness; reload and bind after `APROVADO`.
 
 ## Promotion Finding Routing Ledger
 
-| Finding ID | Finding Source | Severity | Classification | Required Action | Status | Rationale / Follow-up Reference |
+| Finding ID | Severity | Classification | Routing Decision | Same TODO / Split Rationale | Status | Approval / Follow-up Reference |
 | --- | --- | --- | --- | --- | --- | --- |
-| `none-yet` | `n/a` | `n/a` | `by-design/no-action` | no action | accepted | replace with real findings if produced |
+| `AR-01..AR-05` | high/medium | release-blocker | integrate in current TODO | mesmos objetivo e boundary do validador; não requer split | fixed-pending-revalidation | revised `D-01..D-10`, source graph, grammar, tests and cutover |
+| `F-01..F-08` | high/medium | release-blocker | integrate in current TODO | correções do mesmo contrato de planejamento e verificação | fixed-pending-revalidation | assumptions schema, boundary/effectiveness/history, tests, security and cutover revised |
+| `F-09..F-11` | medium | release-blocker | integrate in current TODO | correções de routing, CI terminology, PCV/state bookkeeping | fixed-pending-revalidation | routing, CI terminology, PCV/state bookkeeping revised |
 
 ## Security Risk Assessment
 
@@ -562,6 +626,36 @@ Predeclared for pre-approval readiness; reload and bind after `APROVADO`.
 | `FRC` | `frontend-race-condition-validation` | `not_needed` | `low` | `n/a — no frontend` | `before_local_implemented` | `FRC-POLICY` | `not_applicable` | `none` | `none` |
 | `BCI` | `backend-concurrency-idempotency-validation` | `not_needed` | `low` | `n/a — no backend mutation` | `before_local_implemented` | `BCI-INV` | `not_applicable` | `none` | `none` |
 | `RLS` | `runtime-load-stress-validation` | `not_needed` | `low` | `n/a — local docs tooling` | `before_production_ready` | `RLS-E1` | `not_applicable` | `none` | `none` |
+
+### Lane Detail Packets
+
+#### `EPS`
+- **Policy schema version:** `pcv-1`
+- **Trigger rationale:** no endpoint, repository query or data-access path is changed.
+- **Recorded at (UTC):** `2026-09-23T21:21:29Z`
+- **Executor ID:** `primary-orchestrator`
+- **Evidence object:** `n/a — trigger_result=not_needed and state=not_applicable`
+
+#### `FRC`
+- **Policy schema version:** `pcv-1`
+- **Trigger rationale:** no frontend, async UI or retriggerable user flow is changed.
+- **Recorded at (UTC):** `2026-09-23T21:21:29Z`
+- **Executor ID:** `primary-orchestrator`
+- **Evidence object:** `n/a — trigger_result=not_needed and state=not_applicable`
+
+#### `BCI`
+- **Policy schema version:** `pcv-1`
+- **Trigger rationale:** validator is read-only and does not create backend mutation/idempotency surfaces.
+- **Recorded at (UTC):** `2026-09-23T21:21:29Z`
+- **Executor ID:** `primary-orchestrator`
+- **Evidence object:** `n/a — trigger_result=not_needed and state=not_applicable`
+
+#### `RLS`
+- **Policy schema version:** `pcv-1`
+- **Trigger rationale:** no runtime/queue/worker/realtime/bulk production path or SLO claim changes.
+- **Recorded at (UTC):** `2026-09-23T21:21:29Z`
+- **Executor ID:** `primary-orchestrator`
+- **Evidence object:** `n/a — trigger_result=not_needed and state=not_applicable`
 
 ## Verification Debt Assessment
 
@@ -601,9 +695,9 @@ Predeclared for pre-approval readiness; reload and bind after `APROVADO`.
 ## TODO Closeout Disposition
 
 - **Disposition:** `keep-active`
-- **Disposition reason:** decisões validadas; freeze publication, reviews, post-gate approval confirmation and implementation remain pending.
-- **Post-commit/push status:** `refined Review contract published on origin/main; no implementation claim`
-- **Next path/status action:** publicar a decision/review baseline e concluir todos os gates pré-aprovação; não implementar antes da confirmação final pós-gates e authority guard `go`.
+- **Disposition reason:** material review findings were integrated; revised decisions require renewed human validation, refreeze and fresh reviews.
+- **Post-commit/push status:** `refined Review contract committed locally; publication pending because the current environment has no GitHub HTTPS credentials; no implementation claim`
+- **Next path/status action:** obtain renewed validation of `D-01..D-10`, then refreeze and rerun all planning-side gates; no implementation before a later post-gate APROVADO and authority guard `go`.
 
 ## Commands
 
