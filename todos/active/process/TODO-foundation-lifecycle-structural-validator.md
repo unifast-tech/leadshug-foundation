@@ -35,12 +35,12 @@ O lifecycle da Foundation exige um validator permanente quando backlog, decisõe
 - **Current delivery stage:** `Pending`
 - **Tactical TODO lifecycle state:** `Review`
 - **Qualifiers:** `none`
-- **Next exact step:** obter validação humana das decisões revisadas `D-01..D-10`, congelar uma nova baseline e repetir architecture opinion, plan critique e guards pré-aprovação.
+- **Next exact step:** publicar a nova baseline congelada e repetir architecture opinion, plan critique e guards pré-aprovação.
 
 ## Active Work State
 
 - **Work state:** `review`
-- **Why this state now:** architecture opinion e crítica encontraram findings materiais; o contrato foi reconvergido e exige nova validação humana antes de outro freeze.
+- **Why this state now:** `D-01..D-10` foram validadas; a baseline revisada deve ser congelada/publicada antes de repetir os reviews e guards pré-aprovação.
 - **Exit condition:** decisões validadas, baseline congelada/publicada, reviews e guards pré-aprovação verdes, seguidos de `APROVADO` explícito ou cancelamento com racional.
 
 ## Trigger Evidence
@@ -221,22 +221,20 @@ Preencher somente se o guard retornar `no-go`; qualquer novo path ou change type
 
 ## Decision Pending
 
-| Decision ID | Revised Recommended Direction | Review Finding Source | Human Validation Needed |
-| --- | --- | --- | --- |
-| `D-01` | Admit only the explicit source graph above; validate `BLG-*` and `DEC-*`; exclude `CAP-*`, modules, TODO records and contract-verification records from this slice. | `AR-02/03`, `F-02` | confirm revised boundary |
-| `D-02` | Add the source graph and narrow Markdown grammar to `evolution_lifecycle.md`; derive from those authorities without a parallel mutable catalog. | `AR-02/04`, `F-02` | confirm extraction contract |
-| `D-03` | Make the validator read-only/fail-closed with mandatory root/symlink confinement, byte-preservation and bounded/redacted diagnostics. | `AR-04`, `F-07/08` | confirm safety contract |
-| `D-04` | Implement the historical boundary through explicit source-graph admission, not heuristics or Git-time inference; a later material TODO must update the graph to admit a new owner. | `AR-02`, `F-04` | confirm adoption rule |
-| `D-05` | Deliver local validation only; record CI-equivalent as `n/a — no repo-owned CI`; remote CI integration stays in another TODO. | preserved; `F-10` terminology fix | confirm two-stage adoption |
-| `D-06` | Use Python stdlib + unittest with `test-first` strategy, independent fixture oracles and a 1:1 rule/mutation matrix. | `AR-04`, `F-07` | confirm stack/testing |
-| `D-07` | Keep owner project-specific in Foundation and route implementation to routine-executor; no `delphi-ai` implementation changes. | preserved; `F-09` routing fix | confirm ownership/routing |
-| `D-08` | Cut over only after old/new dual-run on the same final branch@sha, audits/reviews, publication, deliverable existence and `active XOR completed` checks. | `AR-05`, `F-06` | confirm cutover |
-| `D-09` | Treat `Accepted` with incomplete consolidation as valid `pending-effect`; validator may report structurally eligible mapping but never claim semantic effectiveness. | `AR-01`, `F-03` | confirm validity/effectiveness split |
-| `D-10` | Treat prose dependencies/next gates as required nonempty text; validate only explicit Markdown links/anchors as resolvable references. | `F-02` | confirm dependency grammar |
+- `none — revised D-01..D-10 validated by Gabriel/user on 2026-09-23 through the exact phrase VALIDO D-01..D-10; this validates the planning contract but does not grant implementation authority.`
 
 ## Decisions
 
-- `pending renewed human validation of revised D-01..D-10`
+- [x] `D-01` Admit only the explicit source graph; validate `BLG-*` and `DEC-*`; exclude `CAP-*`, modules, TODO records and contract-verification records from this slice.
+- [x] `D-02` Add the source graph and narrow Markdown grammar to `evolution_lifecycle.md`; derive from those authorities without a parallel mutable catalog.
+- [x] `D-03` Make the validator read-only/fail-closed with mandatory root/symlink confinement, byte-preservation and bounded/redacted diagnostics.
+- [x] `D-04` Implement the historical boundary through explicit source-graph admission, never heuristics or Git-time inference; admitting a new owner requires a later material TODO.
+- [x] `D-05` Deliver local validation only; CI-equivalent is `n/a — no repo-owned CI`; remote CI integration remains a separate TODO.
+- [x] `D-06` Use Python stdlib + unittest with `test-first`, independent fixture oracles and a 1:1 rule/mutation matrix.
+- [x] `D-07` Keep ownership project-specific in Foundation and route implementation to `routine-executor`; make no `delphi-ai` implementation changes.
+- [x] `D-08` Cut over only after old/new dual-run on the same final branch@sha, audits/reviews, publication, deliverable existence and `active XOR completed` checks.
+- [x] `D-09` Treat `Accepted` with incomplete consolidation as valid `pending-effect`; report only structural eligibility, never semantic effectiveness.
+- [x] `D-10` Treat prose dependencies/next gates as required nonempty text; validate only explicit Markdown links/anchors as resolvable references.
 
 ## Module Decision Baseline Snapshot
 
@@ -252,8 +250,9 @@ Preencher somente se o guard retornar `no-go`; qualquer novo path ou change type
 ## Decision Baseline
 
 - **Prior freeze:** `D-01..D-08` at `b685fb52fa00b245b4bfb58ded6b8d7212f7f6eb`, invalidated by material findings `AR-01..05` and `F-01..11`.
-- **Freeze status:** `not_frozen — revised D-01..D-10 pending renewed validation`
-- **Frozen decisions:** `none current`
+- **Freeze status:** `frozen-locally — publication required before planning-side reviews`
+- **Frozen decisions:** `D-01..D-10`
+- **Validation evidence:** Gabriel/user, 2026-09-23, exact phrase `VALIDO D-01..D-10`; planning-contract validation only, not implementation approval.
 - **Historical validation evidence:** Gabriel/user, 2026-09-23, phrase `APROVADO`; preserved as provenance, not execution authority.
 
 ## Architecture Change Governance
@@ -338,7 +337,7 @@ Preencher somente se o guard retornar `no-go`; qualquer novo path ou change type
 
 ## Questions To Close
 
-- `Q-01` A autoridade humana valida o contrato revisado `D-01..D-10`, que substitui a baseline anterior?
+- `none — Q-01 closed by Gabriel/user on 2026-09-23 with VALIDO D-01..D-10.`
 
 ## Assumptions Preview
 
@@ -530,6 +529,7 @@ Preencher somente se o guard retornar `no-go`; qualquer novo path ou change type
 - **Renewed approval required when:** scope, invariant semantics, validation, expected paths, architecture, risk, exception or CI adoption changes materially.
 - **Execution authority:** `not_granted`
 - **Pre-gate human token:** Gabriel/user, 2026-09-23, `APROVADO`; it validated the superseded `D-01..D-08` only. Material findings require renewed validation and a new post-gate `APROVADO`.
+- **Renewed validation token:** Gabriel/user, 2026-09-23, exact phrase `VALIDO D-01..D-10`; validates the revised decisions, but does not grant implementation authority.
 
 ## Rules Acknowledgement / Ingestion
 
