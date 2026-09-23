@@ -31,18 +31,18 @@ A Foundation atual define autoridade, entidades, constituição, quatro fases de
 
 ## Delivery Status Canon
 
-- **Current delivery stage:** `Local-Implemented`
-- **Tactical TODO lifecycle state:** `In-Progress`
-- **Lifecycle state evidence:** aprovação humana explícita `APROVADO` e authority guard pós-aprovação `go`; o work state `review` abaixo é uma fase de assurance pós-implementação, não o estado lifecycle `Review` pré-aprovação.
+- **Current delivery stage:** `Production-Ready`
+- **Tactical TODO lifecycle state:** `Completed`
+- **Lifecycle state evidence:** pacote documental publicado em `foundation_documentation/main@ad6a0cc8475bc412fd1b767e9cc19ad0123fb6fe`; authority/diff/completion/closeout guards, auditorias e revisão final retornaram `go`/`no_material_findings` antes do closeout.
 - **TODO owner/executor:** strategic steward como TODO owner; implementação documental delegada ao routine-executor sob single-writer no checkout principal.
 - **Qualifiers:** `none`
-- **Next exact step:** executar os guards finais em `go`, publicar o pacote em `foundation_documentation/main` e concluir o closeout.
+- **Next exact step:** `n/a — completed`; qualquer trabalho futuro do validator pertence ao TODO separado em `todos/active/process/`.
 
 ## Active Work State
 
-- **Work state:** `review`
-- **Why this state now:** o pacote documental aprovado foi implementado no checkout principal e os checks locais primários passaram; permanecem as lanes independentes e os guards finais de entrega.
-- **Exit condition:** nenhuma finding `release-blocker`, matrizes de evidência completas, audits/reviews satisfatórios e guards de diff/authority/completion/closeout em `go`.
+- **Work state:** `n/a once moved out of active`
+- **Why this state now:** entrega publicada e TODO movido para `completed/` após guards pré-movimento em `go`.
+- **Exit condition:** `n/a — completed`.
 
 ## Scope
 
@@ -86,7 +86,7 @@ A Foundation atual define autoridade, entidades, constituição, quatro fases de
 
 | Scope Item | Local Branch/Commit | PR to lane threshold | PR to `stage` | PR to `main` | Current Status |
 | --- | --- | --- | --- | --- | --- |
-| Foundation evolution lifecycle | `foundation_documentation:main@pending` | `n/a — main-only authority` | `n/a` | `direct governed Foundation write; pending` | `pending` |
+| Foundation evolution lifecycle | `foundation_documentation:main@ad6a0cc8475bc412fd1b767e9cc19ad0123fb6fe` | `n/a — main-only authority` | `n/a` | `direct governed Foundation write; ad6a0cc8475bc412fd1b767e9cc19ad0123fb6fe` | `Production-Ready; closeout commit pending` |
 
 ## Out of Scope
 
@@ -315,7 +315,7 @@ expected_candidates = {
     "BLG-leadshug-evolution-synthesis": "Deferred",
 }
 expected_handoffs = {
-    "ST-01": ("Governing ST-01 TODO", "../../todos/active/process/TODO-leadshug-foundation-evolution-lifecycle.md"),
+    "ST-01": ("Governing ST-01 TODO", "../../todos/completed/process/TODO-leadshug-foundation-evolution-lifecycle.md"),
     "ST-02": ("BLG-central-whatsapp-capability-study", "../../backlog/README.md"),
     "ST-03": ("BLG-whatsflow-channel-attendance-study", "../../backlog/README.md"),
     "ST-04": ("BLG-leadshug-evolution-synthesis", "../../backlog/README.md"),
@@ -364,7 +364,7 @@ expected_decisions = {
     "DEC-validator-adoption-trigger": {
         "direction": "Use exact manual checks now and require a validator TODO after a measurable volume/drift trigger.",
         "rationale": "Immediate tooling was disproportionate; no control left drift undetected.",
-        "targets": {"evolution_lifecycle.md", "todos/active/process/TODO-leadshug-foundation-evolution-lifecycle.md", "todos/active/process/TODO-foundation-lifecycle-structural-validator.md"},
+        "targets": {"evolution_lifecycle.md", "todos/completed/process/TODO-leadshug-foundation-evolution-lifecycle.md", "todos/active/process/TODO-foundation-lifecycle-structural-validator.md"},
     },
     "DEC-immutable-lifecycle-identifiers": {
         "direction": "Use immutable namespace-and-slug IDs for candidates, decisions, and capabilities.",
@@ -386,7 +386,7 @@ expected_decision_evidence = {
     "DEC-single-field-authority": "`evolution_lifecycle.md` owns the authority matrix; `project_constitution.md` encodes governance; `README.md` routes canonical owners; `modules/README.md`, `contracts/README.md`, `artifacts/README.md`, and `todos/README.md` each state their bounded authority.",
     "DEC-historical-adoption-boundary": "`evolution_lifecycle.md` contains the historical-document exception and future-adoption condition.",
     "DEC-pre-code-study-dispositions": "`backlog/README.md` contains three immutable records with live dispositions and next gates.",
-    "DEC-validator-adoption-trigger": "`evolution_lifecycle.md` records both triggers and the observed activation; `todos/active/process/TODO-leadshug-foundation-evolution-lifecycle.md` contains the current exact checks; `todos/active/process/TODO-foundation-lifecycle-structural-validator.md` owns the triggered follow-up in Review without execution authority.",
+    "DEC-validator-adoption-trigger": "`evolution_lifecycle.md` records both triggers and the observed activation; `todos/completed/process/TODO-leadshug-foundation-evolution-lifecycle.md` contains the exact checks and delivery evidence; `todos/active/process/TODO-foundation-lifecycle-structural-validator.md` owns the triggered follow-up in Review without execution authority.",
     "DEC-immutable-lifecycle-identifiers": "`evolution_lifecycle.md` defines syntax; `backlog/README.md` instantiates BLG IDs; `decisions/ST-01-foundation-lifecycle-decisions.md` instantiates DEC IDs.",
     "DEC-provider-neutral-lifecycle-roles": "`evolution_lifecycle.md` defines role authority; `project_constitution.md` maps lifecycle roles; `README.md` declares tools and agents as adapters.",
 }
@@ -428,7 +428,7 @@ expected_target_assertions = {
     },
     "DEC-validator-adoption-trigger": {
         "evolution_lifecycle.md": ("more than ten live records combined across backlog, decisions, and roadmap", "first proven recurrence of schema/field-authority drift", "ST-01 reached the volume threshold with 18 live records"),
-        "todos/active/process/TODO-leadshug-foundation-evolution-lifecycle.md": ("`D-09` Não criar validator permanente neste TODO.", "### VAL-02 — IDs, Candidate Records, and Enums"),
+        "todos/completed/process/TODO-leadshug-foundation-evolution-lifecycle.md": ("`D-09` Não criar validator permanente neste TODO.", "### VAL-02 — IDs, Candidate Records, and Enums"),
         "todos/active/process/TODO-foundation-lifecycle-structural-validator.md": ("**Observed count:** `18`", "**Execution authority:** `none`"),
     },
     "DEC-immutable-lifecycle-identifiers": {
@@ -675,7 +675,7 @@ trap 'rm -f "$fixture" "$output"' EXIT
 sed -E \
   -e 's|^- \*\*Approved by:\*\*.*|- **Approved by:** `pending`|' \
   -e 's|^- \*\*Approval scope:\*\*.*|- **Approval scope:** `pending`|' \
-  foundation_documentation/todos/active/process/TODO-leadshug-foundation-evolution-lifecycle.md > "$fixture"
+  foundation_documentation/todos/completed/process/TODO-leadshug-foundation-evolution-lifecycle.md > "$fixture"
 set +e
 python3 delphi-ai/tools/todo_authority_guard.py "$fixture" > "$output" 2>&1
 rc=$?
@@ -901,11 +901,11 @@ User-validated on 2026-09-18, revalidated after the R2, R3 and R4 contract corre
 - **Why this decision:** o TODO é `medium`, transversal e estabelece arquitetura documental.
 - **Trigger stage:** `before the first planning-side review or guard run`
 - **Baseline branch:** `foundation_documentation/main`
-- **Baseline commit:** `17ced7b867aaa6e73650f3726f7b20b513dd7ddd`
+- **Baseline commit:** `ad6a0cc8475bc412fd1b767e9cc19ad0123fb6fe`
 - **Baseline push reference:** `origin/main`
 - **Gate status:** `no_material_findings`
-- **Findings summary:** o pacote com `ST01-R4-001..003` integrado e a revalidação explícita do usuário foi congelado e publicado antes da crítica V5.
-- **Evidence / reference:** freezes anteriores `565ff17a81a6faa663f9e024e9784e396cd50bfe`, `accdd4057d6dbd1b1bfc9fcb005f60aacd3f2e0c`, `956b26d8ba5b5bc0a64d07f59e82129d63d5452a` e `075a91efc49481780044fd3d3feb35912598aa0d`; freeze vigente `17ced7b867aaa6e73650f3726f7b20b513dd7ddd`, publicado em `origin/main` em 2026-09-21.
+- **Findings summary:** o pacote completo, incluindo auditorias, final review e follow-up D-09, foi congelado no commit de implementação publicado antes do closeout.
+- **Evidence / reference:** freezes históricos `565ff17a81a6faa663f9e024e9784e396cd50bfe`, `accdd4057d6dbd1b1bfc9fcb005f60aacd3f2e0c`, `956b26d8ba5b5bc0a64d07f59e82129d63d5452a`, `075a91efc49481780044fd3d3feb35912598aa0d` e `17ced7b867aaa6e73650f3726f7b20b513dd7ddd`; freeze de entrega vigente `ad6a0cc8475bc412fd1b767e9cc19ad0123fb6fe`, publicado em `origin/main` em 2026-09-23.
 - **Waiver authority / reference:** `n/a`
 
 ## Gate: Review Scope Drift
@@ -914,10 +914,10 @@ User-validated on 2026-09-18, revalidated after the R2, R3 and R4 contract corre
 - **Why this decision:** o diff final deve permanecer no ST-01 documental.
 - **Trigger stage:** `after planning review converges and before APROVADO`
 - **Baseline source:** `Review Baseline Freeze -> Baseline commit`
-- **Guard command:** `python3 delphi-ai/tools/review_scope_drift_guard.py --todo foundation_documentation/todos/active/process/TODO-leadshug-foundation-evolution-lifecycle.md`
-- **Gate status:** `findings_integrated`
-- **Findings summary:** o guard original concluiu `go`; as correções pós-implementação tocaram redações materiais de Scope/DoD/VAL sem alterar D-01..D-11. O usuário renovou explicitamente a validação/continuação; o baseline será atualizado para o commit publicado do pacote corrigido antes do closeout.
-- **Evidence / reference:** baseline pré-implementação `17ced7b867aaa6e73650f3726f7b20b513dd7ddd` permanece histórico; `review_scope_drift_guard.py` identificou as correções pós-review e o usuário respondeu `APROVADO para continuar` em 2026-09-21. Rerun obrigatório após o refresh do baseline publicado.
+- **Guard command:** `python3 delphi-ai/tools/review_scope_drift_guard.py --todo foundation_documentation/todos/completed/process/TODO-leadshug-foundation-evolution-lifecycle.md`
+- **Gate status:** `no_material_findings`
+- **Findings summary:** o baseline foi atualizado para o pacote publicado; nenhum dos 22 blocos materiais mudou entre `ad6a0cc8` e o estado de closeout.
+- **Evidence / reference:** `review_scope_drift_guard.py` em 2026-09-23: `Overall outcome: go`, baseline `foundation_documentation/main@ad6a0cc8475bc412fd1b767e9cc19ad0123fb6fe`, `Changed material sections: 0`.
 - **Waiver authority / reference:** `n/a`
 
 ## Questions To Close
@@ -1114,7 +1114,7 @@ Este recorte não possui job de produto/runtime: a matriz é a prova local compl
 ## Audit Trigger Matrix
 
 - **Canonical method:** `wf-docker-audit-escalation-method`
-- **Guard command:** `python3 delphi-ai/tools/audit_escalation_guard.py --todo foundation_documentation/todos/active/process/TODO-leadshug-foundation-evolution-lifecycle.md`
+- **Guard command:** `python3 delphi-ai/tools/audit_escalation_guard.py --todo foundation_documentation/todos/completed/process/TODO-leadshug-foundation-evolution-lifecycle.md`
 - **Latest TEACH evidence / artifact:** guard `go` em 2026-09-21, fingerprint `75992daf3f8f`; critique `required/expanded`, test-quality `recommended/full`, final review `required/expanded`, verification debt `required`, architecture decision/adherence reviews `required`, demais lanes `not_needed`.
 
 | Trigger | Value | Notes |
@@ -1240,7 +1240,7 @@ Este recorte não possui job de produto/runtime: a matriz é a prova local compl
 - **Why this decision:** o primeiro review encontrou assumptions inadequadas; após promovê-las para constraints/decisions, o guard deve confirmar que nenhuma assumption viva permanece.
 - **Trigger stage:** `after critique convergence and before APROVADO`
 - **Guard scope:** `none; verify no live Assumptions Preview rows remain`
-- **Guard command:** `python3 delphi-ai/tools/assumption_code_coherence_guard.py --todo foundation_documentation/todos/active/process/TODO-leadshug-foundation-evolution-lifecycle.md`
+- **Guard command:** `python3 delphi-ai/tools/assumption_code_coherence_guard.py --todo foundation_documentation/todos/completed/process/TODO-leadshug-foundation-evolution-lifecycle.md`
 - **Gate status:** `no_material_findings`
 - **Findings summary:** zero premissas vivas; `AMB-05` foi diferida explicitamente em C-05 e a crítica V5 não encontrou incoerência.
 - **Evidence / reference:** `assumption_code_coherence_guard.py` em 2026-09-21: `Overall outcome: go`; `Live assumptions checked: 0`; decisão/status `required / no_material_findings`.
@@ -1341,10 +1341,10 @@ Only `Adherent` or an explicitly approved `Exception` is valid at delivery.
 
 ## TODO Closeout Disposition
 
-- **Disposition:** `keep-active`
-- **Disposition reason:** implementação, auditorias e critérios concluídos; TODO permanece ativo somente até os guards finais, publicação e closeout.
-- **Post-commit/push status:** `pending`
-- **Next path/status action:** executar o rerun final de completion, publicar o pacote em `foundation_documentation/main` e mover este TODO para `todos/completed/process/`.
+- **Disposition:** `move-completed`
+- **Disposition reason:** entrega documental publicada, critérios completos, auditorias limpas e decisões consolidadas; não resta trabalho de execução neste TODO.
+- **Post-commit/push status:** `implementation package pushed at ad6a0cc8475bc412fd1b767e9cc19ad0123fb6fe; completed-path closeout is represented by the commit containing this file`
+- **Next path/status action:** `completed`; nenhum movimento ou execução permanece neste TODO.
 
 ## Security Risk Assessment
 
@@ -1425,14 +1425,14 @@ Only `Adherent` or an explicitly approved `Exception` is valid at delivery.
 ## Commands (Run Locally)
 
 - `bash delphi-ai/tools/verify_context.sh`
-- `python3 delphi-ai/tools/audit_escalation_guard.py --todo foundation_documentation/todos/active/process/TODO-leadshug-foundation-evolution-lifecycle.md`
-- `python3 delphi-ai/tools/assumption_code_coherence_guard.py --todo foundation_documentation/todos/active/process/TODO-leadshug-foundation-evolution-lifecycle.md`
-- `python3 delphi-ai/tools/review_scope_drift_guard.py --todo foundation_documentation/todos/active/process/TODO-leadshug-foundation-evolution-lifecycle.md`
-- `python3 delphi-ai/tools/todo_authority_guard.py foundation_documentation/todos/active/process/TODO-leadshug-foundation-evolution-lifecycle.md --pre-approval`
-- `python3 delphi-ai/tools/todo_authority_guard.py foundation_documentation/todos/active/process/TODO-leadshug-foundation-evolution-lifecycle.md` somente após registrar `APROVADO`/ingestão e antes de implementar; exigir `Overall outcome: go`.
-- `python3 delphi-ai/tools/todo_diff_expectation_guard.py --repo-root foundation_documentation foundation_documentation/todos/active/process/TODO-leadshug-foundation-evolution-lifecycle.md`
-- `python3 delphi-ai/tools/todo_completion_guard.py --require-delivery foundation_documentation/todos/active/process/TODO-leadshug-foundation-evolution-lifecycle.md`
-- `python3 delphi-ai/tools/todo_closeout_guard.py --repo foundation_documentation foundation_documentation/todos/active/process/TODO-leadshug-foundation-evolution-lifecycle.md`
+- `python3 delphi-ai/tools/audit_escalation_guard.py --todo foundation_documentation/todos/completed/process/TODO-leadshug-foundation-evolution-lifecycle.md`
+- `python3 delphi-ai/tools/assumption_code_coherence_guard.py --todo foundation_documentation/todos/completed/process/TODO-leadshug-foundation-evolution-lifecycle.md`
+- `python3 delphi-ai/tools/review_scope_drift_guard.py --todo foundation_documentation/todos/completed/process/TODO-leadshug-foundation-evolution-lifecycle.md`
+- `python3 delphi-ai/tools/todo_authority_guard.py foundation_documentation/todos/completed/process/TODO-leadshug-foundation-evolution-lifecycle.md --pre-approval`
+- `python3 delphi-ai/tools/todo_authority_guard.py foundation_documentation/todos/completed/process/TODO-leadshug-foundation-evolution-lifecycle.md` somente após registrar `APROVADO`/ingestão e antes de implementar; exigir `Overall outcome: go`.
+- `python3 delphi-ai/tools/todo_diff_expectation_guard.py --repo-root foundation_documentation foundation_documentation/todos/completed/process/TODO-leadshug-foundation-evolution-lifecycle.md`
+- `python3 delphi-ai/tools/todo_completion_guard.py --require-delivery foundation_documentation/todos/completed/process/TODO-leadshug-foundation-evolution-lifecycle.md`
+- `python3 delphi-ai/tools/todo_closeout_guard.py --repo foundation_documentation foundation_documentation/todos/completed/process/TODO-leadshug-foundation-evolution-lifecycle.md`
 - `python3 delphi-ai/tools/git_write_authority_guard.py --repo foundation_documentation --action git-commit` antes de qualquer commit Foundation; exigir `Overall outcome: go`.
 - `python3 delphi-ai/tools/git_write_authority_guard.py --repo foundation_documentation --action git-push` antes de qualquer push Foundation; exigir `Overall outcome: go`.
 - Executar `Exact Check Command Contracts / VAL-08` para cobrir conjuntamente arquivos tracked e untracked do allowlist ST-01.

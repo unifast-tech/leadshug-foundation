@@ -38,7 +38,7 @@ O lifecycle da Foundation exige um validator permanente quando backlog, decisõe
 
 - **Trigger:** mais de dez registros vivos combinados em backlog, decisões e roadmap.
 - **Observed count:** `18` em 2026-09-23 (`3` candidatos + `11` decisões Accepted + `4` linhas de roadmap).
-- **Source:** [ST-01 D-09](TODO-leadshug-foundation-evolution-lifecycle.md) e [Deterministic-adoption trigger](../../../evolution_lifecycle.md#deterministic-adoption-trigger).
+- **Source:** [ST-01 D-09](../../completed/process/TODO-leadshug-foundation-evolution-lifecycle.md) e [Deterministic-adoption trigger](../../../evolution_lifecycle.md#deterministic-adoption-trigger).
 - **Execution authority:** `none`; abertura do TODO não equivale a `APROVADO`.
 
 ## Scope
