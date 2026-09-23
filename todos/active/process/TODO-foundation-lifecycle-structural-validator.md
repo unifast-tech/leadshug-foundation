@@ -233,7 +233,7 @@ Preencher somente se o guard retornar `no-go`; qualquer novo path ou change type
 - [x] `D-06` Python standard library + unittest + temporary mutation fixtures.
 - [x] `D-07` Owner project-specific em Foundation; sem mudança Delphi.
 - [x] `D-08` Cutover somente após pacote integralmente verde e publicado.
-- **Freeze status:** `frozen-pending-publication`
+- **Freeze status:** `frozen-published`
 - **Validation evidence:** Gabriel/user, 2026-09-23, phrase `APROVADO`; accepted here as validation of `D-01..D-08`, not as post-gate execution authority.
 
 ## Architecture Change Governance
@@ -295,11 +295,11 @@ Preencher somente se o guard retornar `no-go`; qualquer novo path ou change type
 - **Why this decision:** TODO medium de architecture enforcement requer pacote estável/publicado antes da crítica.
 - **Trigger stage:** `after D-01..D-08 validation and before planning-side reviews`
 - **Baseline branch:** `main`
-- **Baseline commit:** `pending`
-- **Baseline push reference:** `pending`
-- **Gate status:** `not_run`
-- **Findings summary:** `n/a`
-- **Evidence / reference:** `pending`
+- **Baseline commit:** `b685fb52fa00b245b4bfb58ded6b8d7212f7f6eb`
+- **Baseline push reference:** `origin/main@b685fb52fa00b245b4bfb58ded6b8d7212f7f6eb`
+- **Gate status:** `no_material_findings`
+- **Findings summary:** decisions and bounded planning package frozen without implementation changes.
+- **Evidence / reference:** commit `b685fb52fa00b245b4bfb58ded6b8d7212f7f6eb`, pushed to `origin/main` on 2026-09-23.
 - **Waiver authority / reference:** `n/a`
 
 ## Gate: Review Scope Drift
@@ -383,7 +383,7 @@ Preencher somente se o guard retornar `no-go`; qualquer novo path ou change type
 
 ## Plan Review Gate
 
-- **Status:** `prepared-pre-freeze — decisions validated; do not mark passed until baseline commit is published`
+- **Status:** `running — baseline published; architecture opinion and independent critique dispatched next`
 - **Required lenses:** Architecture, Code Quality, Tests, Performance, Security, Elegance, Structural Soundness.
 - **Expected focus:** evitar parser frágil, catálogo duplicado, cobertura superficial, bypass histórico e expansão para CI.
 
@@ -416,7 +416,7 @@ Preencher somente se o guard retornar `no-go`; qualquer novo path ou change type
 
 - **Canonical method:** `wf-docker-audit-escalation-method`
 - **Guard command:** `python3 delphi-ai/tools/audit_escalation_guard.py --todo foundation_documentation/todos/active/process/TODO-foundation-lifecycle-structural-validator.md`
-- **Latest TEACH evidence / artifact:** `prepared-pre-freeze`; prior diagnostic returned fingerprint `35a8c129de37`, but must be rerun after Review Baseline Freeze before it becomes gate evidence.
+- **Latest TEACH evidence / artifact:** `go` rerun after freeze on 2026-09-23; fingerprint `35a8c129de37`; critique/test-quality/final/verification-debt/architecture decision/adherence `required`; triple/security/performance-concurrency `not_needed`.
 
 | Trigger | Value | Notes |
 | --- | --- | --- |
