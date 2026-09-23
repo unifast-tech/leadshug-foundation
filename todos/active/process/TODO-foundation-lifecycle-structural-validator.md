@@ -35,12 +35,12 @@ O lifecycle da Foundation exige um validator permanente quando backlog, decisõe
 - **Current delivery stage:** `Pending`
 - **Tactical TODO lifecycle state:** `Review`
 - **Qualifiers:** `none`
-- **Next exact step:** obter validação humana conjunta de `D-01..D-08`; depois congelar a baseline de decisões e executar os gates de planejamento antes de solicitar `APROVADO`.
+- **Next exact step:** publicar a baseline congelada de `D-01..D-08` e executar architecture decision review, plan review, crítica, coherence/scope-drift guards e authority preflight antes da confirmação final de execução.
 
 ## Active Work State
 
 - **Work state:** `review`
-- **Why this state now:** o contrato foi estruturado, mas as oito decisões materiais ainda aguardam validação humana e nenhum gate de aprovação foi concluído.
+- **Why this state now:** `D-01..D-08` foram validadas pelo usuário; a baseline e os reviews pré-execução ainda precisam ser congelados e concluídos.
 - **Exit condition:** decisões validadas, baseline congelada/publicada, reviews e guards pré-aprovação verdes, seguidos de `APROVADO` explícito ou cancelamento com racional.
 
 ## Trigger Evidence
@@ -199,20 +199,18 @@ Preencher somente se o guard retornar `no-go`; qualquer novo path ou change type
 
 ## Decision Pending
 
-| Decision ID | Recommended Direction | Alternatives Rejected / Trade-off | Human Validation Needed |
-| --- | --- | --- | --- |
-| `D-01` | Cobrir somente registros vivos e owners canônicos de lifecycle, backlog, decisões e roadmap, incluindo links/handoffs. | Scan de todo Markdown aumentaria falso positivo e violaria exceção histórica. | confirmar boundary |
-| `D-02` | Derivar enums, schemas e owners dos documentos canônicos sempre que possível; assertions codificadas serão apenas invariantes estruturais documentadas. | Duplicar configuração seria segunda fonte de verdade. | confirmar fonte única |
-| `D-03` | Operar fail-closed, read-only, com exit `0` em sucesso e não-zero mais diagnóstico `regra + arquivo + registro` em falha. | Warning-only não protege gates. | confirmar severidade bloqueante |
-| `D-04` | Excluir documentos concluídos/históricos/intocados; entrada no scan ocorre apenas por owner vivo ou adoção material autorizada. | Migração retroativa foi rejeitada no ST-01. | confirmar exceção histórica |
-| `D-05` | Entregar comando local permanente e documentação; integração GitHub Actions/CI fica para TODO próprio. | Misturar CI amplia blast radius antes da semântica estabilizar. | confirmar adoção em duas etapas |
-| `D-06` | Usar Python standard library e `unittest`, com fixtures temporárias e mutation cases para todas as famílias. | Dependências externas e testes apenas no repo real elevam fragilidade. | confirmar stack/testes |
-| `D-07` | Manter owner estratégico no lifecycle, implementação project-specific em `deterministic/` e nenhum código no `delphi-ai`. | Generalização Delphi seria outro objetivo. | confirmar ownership |
-| `D-08` | Substituir controle temporário ST-01 somente após validator + tests + reviews + guards verdes no checkout principal. | Cutover antecipado deixaria lacuna. | confirmar condição de cutover |
+- `none — D-01..D-08 validated by Gabriel/user on 2026-09-23 through the phrase APROVADO; this pre-gate token validates the decisions but does not grant implementation authority.`
 
 ## Decisions
 
-- `pending — D-01..D-08 must be validated before freeze`
+- [x] `D-01` Cobrir somente registros vivos e owners canônicos de lifecycle, backlog, decisões e roadmap, incluindo links/handoffs; não escanear todo Markdown.
+- [x] `D-02` Derivar enums, schemas e owners dos documentos canônicos sempre que possível; assertions codificadas serão apenas invariantes estruturais documentadas, nunca catálogo concorrente.
+- [x] `D-03` Operar fail-closed e read-only, com exit `0` em sucesso e não-zero mais diagnóstico `regra + arquivo + registro` em falha.
+- [x] `D-04` Excluir concluídos, históricos e legado intocado; entrada no scan corrente exige owner vivo ou adoção material autorizada.
+- [x] `D-05` Entregar comando local permanente e documentação; integração GitHub Actions/CI pertence a TODO próprio.
+- [x] `D-06` Usar Python standard library e `unittest`, com fixtures temporárias e mutation cases para todas as famílias de invariantes.
+- [x] `D-07` Manter owner estratégico no lifecycle, implementação project-specific em `deterministic/` e nenhum código no `delphi-ai`.
+- [x] `D-08` Substituir o controle temporário ST-01 somente após validator, tests, reviews e guards verdes no checkout principal.
 
 ## Module Decision Baseline Snapshot
 
@@ -227,9 +225,16 @@ Preencher somente se o guard retornar `no-go`; qualquer novo path ou change type
 
 ## Decision Baseline
 
-- **Freeze status:** `not_frozen`
-- **Freeze condition:** validação humana explícita de `D-01..D-08` e incorporação de ajustes materiais.
-- **Frozen decisions:** `none`
+- [x] `D-01` Cobertura limitada a registros vivos/owners canônicos e seus links/handoffs.
+- [x] `D-02` Fonte única derivada; sem catálogo concorrente.
+- [x] `D-03` Validator read-only e fail-closed com diagnóstico acionável.
+- [x] `D-04` Exceção histórica preservada sem bypass de registro vivo.
+- [x] `D-05` Comando local neste TODO; CI em TODO próprio.
+- [x] `D-06` Python standard library + unittest + temporary mutation fixtures.
+- [x] `D-07` Owner project-specific em Foundation; sem mudança Delphi.
+- [x] `D-08` Cutover somente após pacote integralmente verde e publicado.
+- **Freeze status:** `frozen-pending-publication`
+- **Validation evidence:** Gabriel/user, 2026-09-23, phrase `APROVADO`; accepted here as validation of `D-01..D-08`, not as post-gate execution authority.
 
 ## Architecture Change Governance
 
@@ -313,7 +318,7 @@ Preencher somente se o guard retornar `no-go`; qualquer novo path ou change type
 
 ## Questions To Close
 
-- `Q-01` A autoridade humana valida em conjunto as direções recomendadas `D-01..D-08`?
+- `none — D-01..D-08 validated; review findings may reopen only with concrete evidence.`
 
 ## Assumptions Preview
 
@@ -378,7 +383,7 @@ Preencher somente se o guard retornar `no-go`; qualquer novo path ou change type
 
 ## Plan Review Gate
 
-- **Status:** `not_run — blocked on D-01..D-08 validation and review baseline freeze`
+- **Status:** `prepared-pre-freeze — decisions validated; do not mark passed until baseline commit is published`
 - **Required lenses:** Architecture, Code Quality, Tests, Performance, Security, Elegance, Structural Soundness.
 - **Expected focus:** evitar parser frágil, catálogo duplicado, cobertura superficial, bypass histórico e expansão para CI.
 
@@ -411,7 +416,7 @@ Preencher somente se o guard retornar `no-go`; qualquer novo path ou change type
 
 - **Canonical method:** `wf-docker-audit-escalation-method`
 - **Guard command:** `python3 delphi-ai/tools/audit_escalation_guard.py --todo foundation_documentation/todos/active/process/TODO-foundation-lifecycle-structural-validator.md`
-- **Latest TEACH evidence / artifact:** `go` em 2026-09-23; fingerprint `35a8c129de37`; critique/test-quality/final/verification-debt/architecture decision/adherence `required`; triple/security/performance-concurrency `not_needed`.
+- **Latest TEACH evidence / artifact:** `prepared-pre-freeze`; prior diagnostic returned fingerprint `35a8c129de37`, but must be rerun after Review Baseline Freeze before it becomes gate evidence.
 
 | Trigger | Value | Notes |
 | --- | --- | --- |
@@ -463,6 +468,7 @@ Preencher somente se o guard retornar `no-go`; qualquer novo path ou change type
 - **Execution not authorized by approval:** `CI/CD, product/runtime, historical rewrites, delphi-ai changes, worktrees or auxiliary checkouts unless separately named`
 - **Renewed approval required when:** scope, invariant semantics, validation, expected paths, architecture, risk, exception or CI adoption changes materially.
 - **Execution authority:** `not_granted`
+- **Pre-gate human token:** Gabriel/user, 2026-09-23, `APROVADO`; recorded as decision validation only because architecture review, critique, coherence, scope-drift and authority preflight were not yet complete.
 
 ## Rules Acknowledgement / Ingestion
 
@@ -595,9 +601,9 @@ Predeclared for pre-approval readiness; reload and bind after `APROVADO`.
 ## TODO Closeout Disposition
 
 - **Disposition:** `keep-active`
-- **Disposition reason:** TODO refinado em Review; decisões, freeze, reviews, approval e implementação continuam pendentes.
+- **Disposition reason:** decisões validadas; freeze publication, reviews, post-gate approval confirmation and implementation remain pending.
 - **Post-commit/push status:** `refined Review contract published on origin/main; no implementation claim`
-- **Next path/status action:** obter validação explícita de `D-01..D-08`; não implementar antes do posterior `APROVADO` e authority guard `go`.
+- **Next path/status action:** publicar a decision/review baseline e concluir todos os gates pré-aprovação; não implementar antes da confirmação final pós-gates e authority guard `go`.
 
 ## Commands
 
