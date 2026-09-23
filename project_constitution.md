@@ -18,9 +18,9 @@ Quando houver conflito, a regra mais específica do produto prevalece sobre a re
 ## System invariants
 
 - API, DTO and response projection changes require matching contract-test expectation updates in the same TODO.
-- Prisma schema changes require a versioned migration, `prisma migrate deploy` and CI database validation.
+- Prisma schema changes require an applicable versioned migration; changes to either the schema or migration files require `prisma migrate deploy` and CI database validation.
 - Environment, port and topology changes require local validation with the same configuration as CI.
-- Web-flow changes require Playwright against a freshly built bundle and the real validation backend.
+- Web-flow changes require Playwright against a freshly built bundle and the real validation backend using the same `DATABASE_URL` and resolved API port/endpoint as the CI-equivalent job, without exposing secrets.
 
 - Toda implementação possui um TODO ativo, escopo, Definition of Done e evidência de validação.
 - A Mantenedora contém Setores; a Business Unit é o número de WhatsApp.
