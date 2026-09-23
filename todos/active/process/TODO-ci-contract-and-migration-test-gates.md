@@ -10,7 +10,13 @@
 
 - **Current delivery stage:** `Local-Implemented`
 - **Qualifiers:** `validated-local`
-- **Next exact step:** record evidence and close after guards pass.
+- **Next exact step:** validar as evidências registradas, executar os guards de delivery e closeout e decidir se este TODO deve ser movido para `todos/completed/process/`.
+
+## Active Work State
+
+- **Work state:** `review`
+- **Why this state now:** the process changes and local evidence are recorded, but this TODO remains in `active/` until its historical evidence is revalidated against the current guards and a governed closeout disposition is confirmed.
+- **Exit condition:** authority, completion and closeout guards return `go`, then the TODO is either moved to `todos/completed/process/` or kept active with a concrete unresolved review action.
 
 ## Scope
 
@@ -79,3 +85,10 @@
 | --- | --- | --- | --- | --- | --- |
 | Contract parity | changed response without expectation update | passed | PR failure analysis | found and formalized | template gate added |
 | Migration parity | schema changed without deploy validation | passed | PR failure analysis | found and formalized | constitution gate added |
+
+## TODO Closeout Disposition
+
+- **Disposition:** `keep-active`
+- **Disposition reason:** the implementation is recorded as local and validated, but the evidence and current deterministic closeout requirements still need revalidation before movement.
+- **Post-commit/push status:** `pending closeout revalidation`
+- **Next path/status action:** validate the existing evidence with the current authority, completion and closeout guards; if all return `go`, move this TODO to `todos/completed/process/`.
