@@ -162,11 +162,11 @@
 - **Why this decision:** a crítica precisa avaliar um pacote versionado e imutável.
 - **Trigger stage:** `before the retrospective independent critique`
 - **Baseline branch:** `main`
-- **Baseline commit:** `130aca9ce385fbafd35ca61251a90142a58bda76`
+- **Baseline commit:** `d71ff593f8a053715a29d137662df29814d4f48c`
 - **Baseline push reference:** `origin/main`
-- **Gate status:** `pending_revalidation`
-- **Findings summary:** novo template publicado; Foundation aguarda commit de congelamento do pacote revalidável.
-- **Evidence / reference:** Foundation `main@130aca9ce385fbafd35ca61251a90142a58bda76`; Engineering `feat/add-stack-capabilities@9ba43e8bba3618d029320bf6d7b40415881a0287`, publicado em 2026-09-23.
+- **Gate status:** `no_material_findings`
+- **Findings summary:** pacote corrigido congelado e publicado nos dois repositórios sem mudanças fora do diff autorizado.
+- **Evidence / reference:** Foundation `main@d71ff593f8a053715a29d137662df29814d4f48c`; Engineering `feat/add-stack-capabilities@9ba43e8bba3618d029320bf6d7b40415881a0287`, ambos publicados em 2026-09-23.
 - **Waiver authority / reference:** `n/a`
 
 ## Independent Test Quality Audit Gate
@@ -284,5 +284,5 @@
 
 - **Disposition:** `keep-active`
 - **Disposition reason:** implementação corretiva publicada; nova crítica e revisão final ainda bloqueiam o movimento para `completed/`.
-- **Post-commit/push status:** `Engineering published at 9ba43e8bba3618d029320bf6d7b40415881a0287; Foundation implementation published at 130aca9ce385fbafd35ca61251a90142a58bda76`
-- **Next path/status action:** congelar/publicar o novo pacote Foundation, repetir crítica/final review e mover para `todos/completed/process/` somente com guards verdes.
+- **Post-commit/push status:** `Engineering published at 9ba43e8bba3618d029320bf6d7b40415881a0287; Foundation review package published at d71ff593f8a053715a29d137662df29814d4f48c`
+- **Next path/status action:** repetir crítica/final review e mover para `todos/completed/process/` somente com guards verdes.
