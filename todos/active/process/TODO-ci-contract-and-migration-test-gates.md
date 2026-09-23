@@ -162,11 +162,11 @@
 - **Why this decision:** a crítica precisa avaliar um pacote versionado e imutável.
 - **Trigger stage:** `before the retrospective independent critique`
 - **Baseline branch:** `main`
-- **Baseline commit:** `7dcdecf37b98613af4f235fb1c207cde680366e2`
+- **Baseline commit:** `130aca9ce385fbafd35ca61251a90142a58bda76`
 - **Baseline push reference:** `origin/main`
 - **Gate status:** `no_material_findings`
-- **Findings summary:** pacote de revalidação congelado e publicado sem mudanças fora do TODO.
-- **Evidence / reference:** conteúdo congelado em `foundation_documentation:main@7dcdecf37b98613af4f235fb1c207cde680366e2`; registro do freeze em `f4bf50e6fc23b779ee0c480dc779fc7cacb7d840`, ambos publicados em `origin/main` em 2026-09-23.
+- **Findings summary:** pacote corrigido congelado e publicado nos dois repositórios sem mudanças fora do diff autorizado.
+- **Evidence / reference:** Foundation `main@130aca9ce385fbafd35ca61251a90142a58bda76`; Engineering `feat/add-stack-capabilities@55ead9bd457db5d5e10ffbfb363d138ae88bfacb`, ambos publicados nos respectivos remotes em 2026-09-23.
 - **Waiver authority / reference:** `n/a`
 
 ## Independent Test Quality Audit Gate
@@ -281,5 +281,5 @@
 
 - **Disposition:** `keep-active`
 - **Disposition reason:** implementação documental concluída; publicação Foundation e revisões independentes ainda estão em andamento.
-- **Post-commit/push status:** `Engineering published at 55ead9bd457db5d5e10ffbfb363d138ae88bfacb; Foundation implementation package pending publication`
+- **Post-commit/push status:** `Engineering published at 55ead9bd457db5d5e10ffbfb363d138ae88bfacb; Foundation implementation published at 130aca9ce385fbafd35ca61251a90142a58bda76`
 - **Next path/status action:** publicar Foundation, validar a crítica e a final review independentes e mover para `todos/completed/process/` se os guards estiverem verdes.
