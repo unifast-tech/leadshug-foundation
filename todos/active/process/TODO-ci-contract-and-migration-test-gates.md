@@ -15,7 +15,7 @@
 
 - **Current delivery stage:** `Local-Implemented`
 - **Qualifiers:** `none`
-- **Next exact step:** congelar o pacote corrigido e executar nova crítica independente sem contexto sobre os commits publicados.
+- **Next exact step:** executar a revisão final independente sem contexto sobre o pacote publicado após crítica limpa.
 
 ## Active Work State
 
@@ -119,7 +119,7 @@
 | From Profile | To Profile | Why the Handoff Exists | Touched Surfaces | Status / Evidence |
 | --- | --- | --- | --- | --- |
 | `Strategic / CTO-Tech-Lead` | `routine-executor / delphi-self-maintenance` | a constituição é autoridade estratégica; o template Engineering é uma superfície agnóstica de execução | `foundation_documentation/project_constitution.md`; `delphi-ai/templates/todo_template.md` | completed; Engineering `9ba43e8bba3618d029320bf6d7b40415881a0287` |
-| `routine-executor / delphi-self-maintenance` | `Assurance / Tester-Quality` | crítica e revisão final precisam validar as duas correções após publicação | TODO + duas fontes canônicas | active; novo pacote aguarda crítica sem contexto |
+| `routine-executor / delphi-self-maintenance` | `Assurance / Tester-Quality` | crítica e revisão final precisam validar as duas correções após publicação | TODO + duas fontes canônicas | critique completed clean; final review queued |
 
 ## Audit Trigger Matrix
 
@@ -151,9 +151,9 @@
 - **Critique isolation mode:** `fresh internal no-context reviewer`
 - **Internal reviewer mandate:** `required; reviewer cannot implement`
 - **Critique lenses:** `correctness|performance|elegance|structural-soundness|risk`
-- **Critique status:** `running`
-- **Findings summary:** `CI-CRIT-R-001/002/003` foram integrados; nova crítica independente será executada sobre o pacote republicado.
-- **Evidence / reference:** `/root/ci_gate_critique_revalidation`, 2026-09-23; `overall_assessment=material_findings_present; do_not_close`.
+- **Critique status:** `no_material_findings`
+- **Findings summary:** nenhum finding material; `CI-CRIT-003/004` e `CI-CRIT-R-001/002/003` confirmados como resolvidos.
+- **Evidence / reference:** `/root/ci_gate_critique_final_pass`, 2026-09-23; Foundation `origin/main@12daf9d09105012dd577bfa8d2c51205b4c377dc`; Engineering `origin/feat/add-stack-capabilities@9ba43e8bba3618d029320bf6d7b40415881a0287`; `overall_assessment=no_material_findings; closeout=ready`.
 - **Waiver authority / reference:** `n/a`
 
 ## Gate: Review Baseline Freeze
@@ -191,8 +191,8 @@
 - **Internal reviewer mandate:** `required; reviewer cannot implement`
 - **Review focus:** `adherence|regressions|validation evidence|security/performance residuals|elegance|structural soundness|verification debt`
 - **Final review status:** `not_run`
-- **Findings summary:** será executada sobre o pacote corrigido e publicado.
-- **Evidence / reference:** `pending corrected package`
+- **Findings summary:** crítica independente limpa; revisão final ainda não executada.
+- **Evidence / reference:** `pending final review of published post-critique package`
 - **Waiver authority / reference:** `n/a`
 
 ## Rules Acknowledgement / Ingestion
@@ -283,6 +283,6 @@
 ## TODO Closeout Disposition
 
 - **Disposition:** `keep-active`
-- **Disposition reason:** implementação corretiva publicada; nova crítica e revisão final ainda bloqueiam o movimento para `completed/`.
+- **Disposition reason:** implementação corretiva e crítica limpa publicadas; revisão final ainda bloqueia o movimento para `completed/`.
 - **Post-commit/push status:** `Engineering published at 9ba43e8bba3618d029320bf6d7b40415881a0287; Foundation review package published at d71ff593f8a053715a29d137662df29814d4f48c`
-- **Next path/status action:** repetir crítica/final review e mover para `todos/completed/process/` somente com guards verdes.
+- **Next path/status action:** executar final review independente e mover para `todos/completed/process/` somente se ela e os guards permanecerem verdes.
