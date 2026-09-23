@@ -273,5 +273,5 @@
 
 - **Disposition:** `blocked`
 - **Disposition reason:** crítica independente comprovou duas obrigações aprovadas ainda não explicitadas nas fontes canônicas; fechamento seria incorreto.
-- **Post-commit/push status:** `review baseline published; blocker record pending publication`
+- **Post-commit/push status:** `review baseline and blocker record published through 305966075d1828fa269133191ca4c63965f1467b`
 - **Next path/status action:** manter em `todos/active/process/` e solicitar autorização para editar `project_constitution.md` e `delphi-ai/templates/todo_template.md` exclusivamente para resolver `CI-CRIT-003/004`.
