@@ -314,11 +314,11 @@ Preencher somente se o guard retornar `no-go`; qualquer novo path ou change type
 - **Why this decision:** TODO medium de architecture enforcement requer pacote estável/publicado antes da crítica.
 - **Trigger stage:** `after D-01..D-10 validation and before renewed planning-side reviews`
 - **Baseline branch:** `main`
-- **Baseline commit:** `b685fb52fa00b245b4bfb58ded6b8d7212f7f6eb`
-- **Baseline push reference:** `origin/main@b685fb52fa00b245b4bfb58ded6b8d7212f7f6eb`
-- **Gate status:** `findings_integrated`
-- **Findings summary:** baseline foi congelada corretamente, mas reviews materiais invalidaram o approval contract; nova baseline será exigida após validação de `D-01..D-10`.
-- **Evidence / reference:** commit `b685fb52fa00b245b4bfb58ded6b8d7212f7f6eb`, pushed to `origin/main` on 2026-09-23.
+- **Baseline commit:** `504a978568960f5fb7c32105e2cb9e0c14986682`
+- **Baseline push reference:** `pending — origin/main remains at 4af3a247f27c1754dfc5c7f28cb55021ee08aea7 because this environment lacks GitHub HTTPS credentials`
+- **Gate status:** `frozen-locally-pending-publication`
+- **Findings summary:** revised `D-01..D-10` were validated and frozen locally; planning-side reviews remain blocked until the baseline is pushed.
+- **Evidence / reference:** local commit `504a978568960f5fb7c32105e2cb9e0c14986682`, 2026-09-23; publication retry required.
 - **Waiver authority / reference:** `n/a`
 
 ## Gate: Review Scope Drift
