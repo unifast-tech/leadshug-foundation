@@ -35,12 +35,12 @@ O lifecycle da Foundation exige um validator permanente quando backlog, decisõe
 - **Current delivery stage:** `Pending`
 - **Tactical TODO lifecycle state:** `Review`
 - **Qualifiers:** `none`
-- **Next exact step:** executar ciclos exploratórios de convergência sobre o conjunto provisório até uma rodada completa de arquitetura + duas críticas não encontrar nova decisão material; somente então solicitar validação humana do conjunto final.
+- **Next exact step:** obter o token humano exato `VALIDO D-01..D-46`; então congelar/publicar a replacement baseline e executar os gates formais pós-freeze antes de solicitar `APROVADO`.
 
 ## Active Work State
 
 - **Work state:** `review`
-- **Why this state now:** por direção humana, o TODO entrou em convergência pré-freeze para esgotar decisões antes de novo token `VALIDO`; R-10 vinculou o verifier pós-commit aos bytes de HEAD e limitou probes de proveniência, integrados em `D-45/D-46`.
+- **Why this state now:** R-11 completou arquitetura + duas críticas independentes sem decisão material nova; a convergência pré-freeze foi satisfeita em `D-01..D-46` e aguarda validação humana integral.
 - **Exit condition:** decisões validadas, baseline congelada/publicada, reviews e guards pré-aprovação verdes, seguidos de `APROVADO` explícito ou cancelamento com racional.
 
 ## Trigger Evidence
@@ -402,8 +402,8 @@ Placeholder tokens are the whole-segment, case-insensitive set `PENDING|N/A|TBD|
 ## Decision Baseline
 
 - **Prior freezes:** `D-01..D-08@b685fb52` invalidated by `AR-01..05/F-01..11`; `D-01..D-10@504a9785` invalidated by `AR-R01..AR-R05/F-12..F-17`; `D-01..D-11@2562f62e` invalidated by `AR-F01..AR-F05/F-18..F-21`; `D-01..D-14@e26d7183` invalidated by `AR-N01/F-22..F-24`; `D-01..D-17@3dce63b3` invalidated by `C2-F01/C2-F02/C2-F04`; `D-01..D-20@0cd991e6` invalidated by `C3-F01..C3-F03`.
-- **Freeze status:** `not_frozen — pre-freeze convergence active; provisional D-01..D-46 require a clean exploratory round before final human validation`
-- **Frozen decisions:** `none current; D-01..D-20 remain validated provenance; D-21..D-46 are provisional convergence decisions`
+- **Freeze status:** `not_frozen — R-11 convergence clean; provisional D-01..D-46 await exact human validation token`
+- **Frozen decisions:** `none current; D-01..D-20 remain validated provenance; D-01..D-46 are the converged provisional replacement set`
 - **Current validation evidence:** Gabriel/user, 2026-09-24, exact phrase `VALIDO D-01..D-20`; preserved as provenance but superseded for approval by material review findings that introduced `D-21..D-23`.
 - **Prior validation evidence:** Gabriel/user, 2026-09-24, exact phrase `VALIDO D-01..D-17`; preserved as provenance but superseded by material review findings that introduced `D-18..D-20`.
 - **Prior validation evidence:** Gabriel/user, 2026-09-23, exact phrase `VALIDO D-01..D-14`; preserved as provenance but superseded for approval by material review findings that introduced `D-15..D-17`.
@@ -491,8 +491,8 @@ Placeholder tokens are the whole-segment, case-insensitive set `PENDING|N/A|TBD|
 - **Baseline branch:** `main`
 - **Baseline commit:** `0cd991e61ff4d8ed1ff495c62113227db9c9f730`
 - **Baseline push reference:** `origin/main contains 0cd991e61ff4d8ed1ff495c62113227db9c9f730; freeze bookkeeping published through 3a4e6e956070d8612540afe23adda81e8bfbb3cb`
-- **Gate status:** `findings_integrated`
-- **Findings summary:** published D-01..D-20 freeze was invalidated; user-directed pre-freeze convergence now runs exploratory rounds until one complete round finds no new material decisions.
+- **Gate status:** `not_run`
+- **Findings summary:** published D-01..D-20 freeze was invalidated; R-11 satisfied pre-freeze convergence with three clean exploratory reviewers over provisional D-01..D-46.
 - **Evidence / reference:** commits `0cd991e61ff4d8ed1ff495c62113227db9c9f730` and `3a4e6e956070d8612540afe23adda81e8bfbb3cb`, pushed to origin/main on 2026-09-24.
 - **Waiver authority / reference:** `n/a`
 
@@ -512,7 +512,7 @@ Placeholder tokens are the whole-segment, case-insensitive set `PENDING|N/A|TBD|
 
 ## Questions To Close
 
-- `none while pre-freeze convergence is active; generate one final full-set validation question only after a clean exploratory round`
+- `VALIDO D-01..D-46` — required to validate the converged replacement decision set; this token does not grant implementation authority.
 
 ## Pre-Freeze Decision Convergence Cycle
 
@@ -534,6 +534,7 @@ Placeholder tokens are the whole-segment, case-insensitive set `PENDING|N/A|TBD|
 | `R-08` | `9202554b` | `R8-ARCH-01` | `R8-CRIT1-01` | `R8-CRIT2-01..02` | add `D-39..D-41`; reject Git config includes; bound resources; run verifier from materialized bytes | integrated; next round required |
 | `R-09` | `3711727a` | `R9-ARCH-01` | `R9-CRIT1-01` | `R9-CRIT2-01..02` | add `D-42..D-44`; orthogonalize context/cwd; require POSIX substrate; narrow transition claims | integrated; next round required |
 | `R-10` | `f6e1dd95` | clean | `R10-CRIT1-01` | `R10-CRIT2-01` | add `D-45/D-46`; execute post-commit verifier from HEAD bytes; bound provenance probes | integrated; next round required |
+| `R-11` | `3465c130` | clean | clean | clean | no new approval-material decision | converged; request final human validation |
 
 ## Assumptions Preview
 
@@ -655,7 +656,7 @@ Placeholder tokens are the whole-segment, case-insensitive set `PENDING|N/A|TBD|
 | unittest/mutations | `T-01..T-42` | isolated temporary fixtures | `python3 -m unittest discover -s foundation_documentation/deterministic/tests -p 'test_*.py'` | Local-Implemented | planned |
 | legacy transition matrix | pre-migration baseline runs ST-01 `VAL-01/02/08/10`; candidate/terminal Git layer runs `VAL-01/08/10`; `VAL-02` is superseded after approved schema/target mutation | exact contracts read from completed ST-01 TODO; phase identified deterministically | phase matrix `D-19/VAL-07/T-23` + new validator/tests | before delivery reviews | planned |
 | terminal-tree confirmation | permanent checks stay green after atomic move/retarget/cutover | read-only materialization of captured tree OID with `active XOR completed`; unchanged index/OID proof and no relevant divergence | validator + unittest on materialized bytes; compatible guards there; Git-metadata guards against the same index/tree OID | before closeout commit | planned |
-| immutable publication | committed tree equals validated staged tree and terminal outcomes are immutably self-attested outside that tree | commit body contains deterministic attestation manifest; trailers contain tree OID and manifest digest | `--verify-attestation --commit HEAD`; verify `HEAD^{tree}`, clean tree and remote ref equality; do not claim externally reproducible execution proof | Production-Ready | planned |
+| immutable publication | committed tree equals validated staged tree and terminal outcomes are immutably self-attested outside that tree | commit body contains deterministic attestation manifest; trailers contain tree OID and manifest digest | materialize HEAD and run committed `--verify-attestation --commit <oid>` under Post-Commit Verification Protocol; verify tree, clean state and remote ref equality; do not claim externally reproducible execution proof | Production-Ready | planned |
 
 ### Runtime / Rollout Notes
 
@@ -664,7 +665,7 @@ Placeholder tokens are the whole-segment, case-insensitive set `PENDING|N/A|TBD|
 
 ## Plan Review Gate
 
-- **Status:** `exploratory convergence running — R-10 integrated into provisional D-01..D-46; R-11 required`
+- **Status:** `exploratory convergence satisfied — R-11 clean; provisional D-01..D-46 await human validation`
 - **Required lenses:** Architecture, Code Quality, Tests, Performance, Security, Elegance, Structural Soundness.
 - **Expected focus:** evitar parser frágil, catálogo duplicado, cobertura superficial, bypass histórico e expansão para CI.
 
@@ -745,9 +746,9 @@ Placeholder tokens are the whole-segment, case-insensitive set `PENDING|N/A|TBD|
 
 ## Additional Architectural Opinions
 
-- **Needed:** `yes — exploratory R-11 before final validation; formal rerun after final freeze`
-- **Why ambiguity remains:** R-10 bound post-commit verification code to HEAD and brought provenance probes inside the closed resource boundary; convergence is not yet proven.
-- **Opinion count:** `R-01 through R-10: three fresh exploratory reviewers each completed; R-10 architecture was clean but critiques were material; R-11 pending`
+- **Needed:** `no additional exploratory opinion; formal architecture/critique reruns remain required after validation and freeze`
+- **Why ambiguity remains:** `none approval-material in R-11; implementation evidence is intentionally deferred until final validation, freeze, formal gates and APROVADO`.
+- **Opinion count:** `R-01 through R-11 complete; R-11 architecture + critique A + critique B all clean`
 - **Package mode:** `bounded-file-set`
 - **Internal reviewer mandate:** `required after freeze; reviewer cannot implement`
 - **Required lenses:** `correctness|performance|elegance|structural-soundness|operational-fit`
@@ -849,7 +850,7 @@ Placeholder tokens are the whole-segment, case-insensitive set `PENDING|N/A|TBD|
 - **Execution authority:** `not_granted`
 - **Pre-gate human token:** Gabriel/user, 2026-09-23, `APROVADO`; it validated the superseded `D-01..D-08` only. Material findings require renewed validation and a new post-gate `APROVADO`.
 - **Renewed validation token:** Gabriel/user, 2026-09-23, exact phrase `VALIDO D-01..D-10`; validates the revised decisions, but does not grant implementation authority.
-- **Renewal status:** `pre-freeze convergence active; do not request another validation token until one complete exploratory round finds no new material decisions.`
+- **Renewal status:** `R-11 convergence criterion satisfied; request exact token VALIDO D-01..D-46, then freeze/publish and rerun formal planning gates.`
 - **Latest validation token:** Gabriel/user, 2026-09-24, exact phrase `VALIDO D-01..D-20`; validated and froze the historical baseline, now superseded for approval by `D-21..D-23`; it never granted implementation authority.
 
 ## Rules Acknowledgement / Ingestion
@@ -890,7 +891,7 @@ Predeclared for pre-approval readiness; reload and bind after `APROVADO`.
 | Decision ID | Status | Evidence | Notes |
 | --- | --- | --- | --- |
 | `D-01..D-20` | validated-historical | exact token `VALIDO D-01..D-20`; freeze `0cd991e6` | preserved directions; approval baseline superseded by convergence work |
-| `D-21..D-46` | provisional-convergence | R-01..R-10 integrated contract | do not request validation until convergence criterion is satisfied |
+| `D-21..D-46` | provisional-converged | R-01..R-11; R-11 three-lane clean round | awaiting exact full-set validation token before freeze |
 
 ## Module Decision Consistency Validation
 
@@ -1059,9 +1060,9 @@ Predeclared for pre-approval readiness; reload and bind after `APROVADO`.
 ## TODO Closeout Disposition
 
 - **Disposition:** `keep-active`
-- **Disposition reason:** user-directed pre-freeze convergence is active; R-10 material decisions are integrated into provisional `D-01..D-46` and require R-11.
-- **Post-commit/push status:** R-10 convergence changes are local pending validation/publication checks; no implementation claim.
-- **Next path/status action:** validate and publish R-10 integration, run exploratory R-11, and continue until the convergence criterion is satisfied; then request one final full-set validation.
+- **Disposition reason:** R-11 satisfied the user-directed convergence criterion with no new approval-material decision; TODO remains active awaiting validation/freeze/formal gates/approval.
+- **Post-commit/push status:** R-11 clean convergence bookkeeping is local pending validation/publication checks; no implementation claim.
+- **Next path/status action:** publish R-11 bookkeeping and obtain `VALIDO D-01..D-46`; then freeze/publish the baseline and run formal gates before requesting `APROVADO`.
 
 ## Commands
 
