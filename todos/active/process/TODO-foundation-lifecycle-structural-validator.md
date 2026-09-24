@@ -274,7 +274,7 @@ Placeholder tokens are the whole-segment, case-insensitive set `PENDING|N/A|TBD|
 ## Decision Baseline
 
 - **Prior freezes:** `D-01..D-08@b685fb52` invalidated by `AR-01..05/F-01..11`; `D-01..D-10@504a9785` invalidated by `AR-R01..AR-R05/F-12..F-17`; `D-01..D-11@2562f62e` invalidated by `AR-F01..AR-F05/F-18..F-21`.
-- **Freeze status:** `frozen-locally — publication required before renewed reviews`
+- **Freeze status:** `frozen-published — replacement baseline available on origin/main`
 - **Frozen decisions:** `D-01..D-14`
 - **Current validation evidence:** Gabriel/user, 2026-09-23, exact phrase `VALIDO D-01..D-14`; freezes the expanded replacement decision set but does not grant implementation authority.
 - **Latest prior validation evidence:** Gabriel/user, 2026-09-23, exact phrase `VALIDO D-01..D-11`; preserved as provenance but superseded by material full-owner findings.
@@ -355,10 +355,10 @@ Placeholder tokens are the whole-segment, case-insensitive set `PENDING|N/A|TBD|
 - **Trigger stage:** `after D-01..D-14 validation and before renewed planning-side reviews`
 - **Baseline branch:** `main`
 - **Baseline commit:** `e26d71830ae8530af5e0b553c1f67e7fb400fad4`
-- **Baseline push reference:** `pending publication of replacement freeze commit e26d71830ae8530af5e0b553c1f67e7fb400fad4 to origin/main`
-- **Gate status:** `frozen-locally-pending-publication`
-- **Findings summary:** published `D-01..D-11` was invalidated by material findings; validated replacement `D-01..D-14` is frozen locally and awaits publication before renewed reviews.
-- **Evidence / reference:** local freeze commit `e26d71830ae8530af5e0b553c1f67e7fb400fad4`, created on 2026-09-23; publication pending.
+- **Baseline push reference:** `origin/main contains e26d71830ae8530af5e0b553c1f67e7fb400fad4; freeze bookkeeping published through 1f2c85a5a0387c29569ea097a5c4748836c85c63`
+- **Gate status:** `frozen-published`
+- **Findings summary:** replacement `D-01..D-14` is validated, frozen and published; renewed full-owner reviews may proceed against the immutable baseline commit.
+- **Evidence / reference:** commits `e26d71830ae8530af5e0b553c1f67e7fb400fad4` and `1f2c85a5a0387c29569ea097a5c4748836c85c63`, pushed to `origin/main` on 2026-09-23.
 - **Waiver authority / reference:** `n/a`
 
 ## Gate: Review Scope Drift
