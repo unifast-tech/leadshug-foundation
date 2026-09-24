@@ -354,11 +354,11 @@ Placeholder tokens are the whole-segment, case-insensitive set `PENDING|N/A|TBD|
 - **Why this decision:** TODO medium de architecture enforcement requer pacote estável/publicado antes da crítica.
 - **Trigger stage:** `after D-01..D-14 validation and before renewed planning-side reviews`
 - **Baseline branch:** `main`
-- **Baseline commit:** `2562f62e86cbc15bcaa7865b652e240cb49fcb0e`
-- **Baseline push reference:** `origin/main contains 2562f62e86cbc15bcaa7865b652e240cb49fcb0e; freeze bookkeeping published through 490096774f22fd2fe7c97a88274ca179747d4266`
+- **Baseline commit:** `e26d71830ae8530af5e0b553c1f67e7fb400fad4`
+- **Baseline push reference:** `pending publication of replacement freeze commit e26d71830ae8530af5e0b553c1f67e7fb400fad4 to origin/main`
 - **Gate status:** `frozen-locally-pending-publication`
 - **Findings summary:** published `D-01..D-11` was invalidated by material findings; validated replacement `D-01..D-14` is frozen locally and awaits publication before renewed reviews.
-- **Evidence / reference:** commits `2562f62e86cbc15bcaa7865b652e240cb49fcb0e` and `490096774f22fd2fe7c97a88274ca179747d4266`, pushed to `origin/main` on 2026-09-23.
+- **Evidence / reference:** local freeze commit `e26d71830ae8530af5e0b553c1f67e7fb400fad4`, created on 2026-09-23; publication pending.
 - **Waiver authority / reference:** `n/a`
 
 ## Gate: Review Scope Drift
