@@ -35,12 +35,12 @@ O lifecycle da Foundation exige um validator permanente quando backlog, decisõe
 - **Current delivery stage:** `Pending`
 - **Tactical TODO lifecycle state:** `Review`
 - **Qualifiers:** `none`
-- **Next exact step:** obter validação humana do conjunto ampliado `D-01..D-17`, publicar a replacement baseline e repetir somente os gates afetados.
+- **Next exact step:** publicar a replacement baseline congelada de `D-01..D-17` e repetir somente os gates afetados.
 
 ## Active Work State
 
 - **Work state:** `review`
-- **Why this state now:** a freeze publicada de `D-01..D-14` habilitou reviews renovados; `AR-N01..AR-N02/F-22..F-25` revelaram três lacunas materiais, integradas como `D-15..D-17`, e inconsistências de bookkeeping agora reconciliadas.
+- **Why this state now:** a autoridade humana validou `D-01..D-17`; a replacement baseline está congelada localmente e precisa ser publicada antes dos reviews afetados.
 - **Exit condition:** decisões validadas, baseline congelada/publicada, reviews e guards pré-aprovação verdes, seguidos de `APROVADO` explícito ou cancelamento com racional.
 
 ## Trigger Evidence
@@ -241,11 +241,7 @@ Placeholder tokens are the whole-segment, case-insensitive set `PENDING|N/A|TBD|
 
 ## Decision Pending
 
-| Decision ID | Expanded Recommended Direction | Review Finding Source | Human Validation Needed |
-| --- | --- | --- | --- |
-| `D-15` | Strengthen the terminal protocol so checks consume a read-only materialization of the captured tree OID; prove the index OID is unchanged afterward and reject relevant index/worktree/untracked divergence before committing. | `AR-N01`, `F-22` | confirm exact-byte binding |
-| `D-16` | Resolve Markdown destinations from the containing document directory and inline-code canonical decision targets from Foundation root, applying confinement after normalization/symlink resolution. | `F-23` | confirm the two path bases |
-| `D-17` | Preserve the seven-column row schema and require exactly one unique nonempty per-file `Provenance` field, located before the decision table and explicitly applicable to every row. | `F-24` | confirm provenance structure |
+- `none — D-01..D-17 validated by Gabriel/user on 2026-09-24 with exact phrase VALIDO D-01..D-17`
 
 ## Decisions
 
@@ -263,9 +259,9 @@ Placeholder tokens are the whole-segment, case-insensitive set `PENDING|N/A|TBD|
 - [x] `D-12` Extend decision records to seven columns with `Successor decision` and enforce the state-conditioned grammar plus closed placeholder dialect.
 - [x] `D-13` Require `Exit-Gate-Met` roadmap rows to carry at least one confined relative evidence link in `Exit gate`; allow nonempty prose for `Open`.
 - [x] `D-14` Admit the ST-01 decision record as an expected closeout change and atomically retarget `DEC-validator-adoption-trigger` to the completed TODO path/evidence in the validated final tree.
-- [ ] `D-15` Bind all terminal validation to the exact captured tree OID through read-only materialization and unchanged-index/divergence proofs.
-- [ ] `D-16` Use distinct deterministic resolution bases for Markdown links and canonical decision-target tokens.
-- [ ] `D-17` Require one unique nonempty per-file provenance field applying to every decision row, without changing the seven-column schema.
+- [x] `D-15` Bind all terminal validation to the exact captured tree OID through read-only materialization and unchanged-index/divergence proofs.
+- [x] `D-16` Use distinct deterministic resolution bases for Markdown links and canonical decision-target tokens.
+- [x] `D-17` Require one unique nonempty per-file provenance field applying to every decision row, without changing the seven-column schema.
 
 ## Module Decision Baseline Snapshot
 
@@ -281,9 +277,10 @@ Placeholder tokens are the whole-segment, case-insensitive set `PENDING|N/A|TBD|
 ## Decision Baseline
 
 - **Prior freezes:** `D-01..D-08@b685fb52` invalidated by `AR-01..05/F-01..11`; `D-01..D-10@504a9785` invalidated by `AR-R01..AR-R05/F-12..F-17`; `D-01..D-11@2562f62e` invalidated by `AR-F01..AR-F05/F-18..F-21`.
-- **Freeze status:** `not_frozen — published D-01..D-14 baseline invalidated for approval by material AR-N01/F-22..F-24; D-01..D-17 await validation`
-- **Frozen decisions:** `none current; D-01..D-14 remain validated provenance but the approval baseline must include D-15..D-17`
-- **Current validation evidence:** Gabriel/user, 2026-09-23, exact phrase `VALIDO D-01..D-14`; preserved as provenance but superseded for approval by material review findings that introduced `D-15..D-17`.
+- **Freeze status:** `frozen-locally — publication required before affected reviews`
+- **Frozen decisions:** `D-01..D-17`
+- **Current validation evidence:** Gabriel/user, 2026-09-24, exact phrase `VALIDO D-01..D-17`; freezes the complete replacement decision set but does not grant implementation authority.
+- **Prior validation evidence:** Gabriel/user, 2026-09-23, exact phrase `VALIDO D-01..D-14`; preserved as provenance but superseded for approval by material review findings that introduced `D-15..D-17`.
 - **Latest prior validation evidence:** Gabriel/user, 2026-09-23, exact phrase `VALIDO D-01..D-11`; preserved as provenance but superseded by material full-owner findings.
 - **Prior validation evidence:** Gabriel/user, 2026-09-23, exact phrase `VALIDO D-01..D-10`; preserved as provenance but superseded by the material review findings.
 - **Historical validation evidence:** Gabriel/user, 2026-09-23, phrase `APROVADO`; preserved as provenance, not execution authority.
@@ -365,7 +362,7 @@ Placeholder tokens are the whole-segment, case-insensitive set `PENDING|N/A|TBD|
 - **Baseline branch:** `main`
 - **Baseline commit:** `e26d71830ae8530af5e0b553c1f67e7fb400fad4`
 - **Baseline push reference:** `origin/main contains e26d71830ae8530af5e0b553c1f67e7fb400fad4; freeze bookkeeping published through 1f2c85a5a0387c29569ea097a5c4748836c85c63`
-- **Gate status:** `findings_integrated — replacement freeze required`
+- **Gate status:** `running`
 - **Findings summary:** the published `D-01..D-14` freeze enabled renewed reviews; material `AR-N01/F-22..F-24` expanded the contract to `D-01..D-17`, invalidating that freeze for approval.
 - **Evidence / reference:** historical freeze commits `e26d71830ae8530af5e0b553c1f67e7fb400fad4` and `1f2c85a5a0387c29569ea097a5c4748836c85c63`; renewed reviewers `/root/validator_architecture_d014` and `/root/validator_critique_d014`, 2026-09-23.
 - **Waiver authority / reference:** `n/a`
@@ -386,7 +383,7 @@ Placeholder tokens are the whole-segment, case-insensitive set `PENDING|N/A|TBD|
 
 ## Questions To Close
 
-- `Q-04` A autoridade humana valida o conjunto completo `D-01..D-17`, incluindo exact-tree byte binding, bases distintas de path e proveniência por arquivo?
+- `none — Q-04 closed by exact token VALIDO D-01..D-17 on 2026-09-24`
 
 ## Assumptions Preview
 
@@ -577,7 +574,7 @@ Placeholder tokens are the whole-segment, case-insensitive set `PENDING|N/A|TBD|
 - **Canonical multi-lane audit protocol:** `n/a — deterministic floor says triple_review=not_needed`
 - **Audit session / round evidence:** `n/a unless triggered`
 - **Critique lenses:** `correctness|performance|elegance|structural-soundness|risk`
-- **Critique status:** `findings_integrated — renewed validation required`
+- **Critique status:** `findings_integrated`
 - **Findings summary:** `F-01..F-25` integrated; `F-22..F-24` materially expand the approval baseline to `D-01..D-17`, while `F-25` reconciles bookkeeping. Fresh critique remains required after replacement freeze.
 - **Resolution ledger:** prior findings are recorded individually below for deterministic carry-forward.
 
@@ -633,8 +630,8 @@ Placeholder tokens are the whole-segment, case-insensitive set `PENDING|N/A|TBD|
 - **Execution authority:** `not_granted`
 - **Pre-gate human token:** Gabriel/user, 2026-09-23, `APROVADO`; it validated the superseded `D-01..D-08` only. Material findings require renewed validation and a new post-gate `APROVADO`.
 - **Renewed validation token:** Gabriel/user, 2026-09-23, exact phrase `VALIDO D-01..D-10`; validates the revised decisions, but does not grant implementation authority.
-- **Renewal status:** `D-01..D-14 validation preserved as provenance but superseded for approval by AR-N01/F-22..F-24; D-01..D-17 require a new validation token.`
-- **Latest validation token:** Gabriel/user, 2026-09-23, exact phrase `VALIDO D-01..D-14`; validated and froze the historical baseline, now superseded for approval by `D-15..D-17`; it never granted implementation authority.
+- **Renewal status:** `D-01..D-17 validation satisfied; replacement freeze publication and affected planning gates remain pending.`
+- **Latest validation token:** Gabriel/user, 2026-09-24, exact phrase `VALIDO D-01..D-17`; validates and freezes the complete replacement decisions, but does not grant implementation authority.
 
 ## Rules Acknowledgement / Ingestion
 
@@ -673,8 +670,7 @@ Predeclared for pre-approval readiness; reload and bind after `APROVADO`.
 
 | Decision ID | Status | Evidence | Notes |
 | --- | --- | --- | --- |
-| `D-01..D-14` | validated-historical | exact token `VALIDO D-01..D-14` | preserved directions; approval baseline superseded by D-15..D-17 |
-| `D-15..D-17` | pending-validation | `AR-N01/F-22..F-24` integrated contract | validate full D-01..D-17 set before replacement freeze |
+| `D-01..D-17` | validated-frozen-locally | exact token `VALIDO D-01..D-17` | publish replacement baseline, then expand 1:1 during authorized implementation |
 
 ## Module Decision Consistency Validation
 
@@ -713,6 +709,8 @@ Predeclared for pre-approval readiness; reload and bind after `APROVADO`.
 | `F-12..F-17` | high/medium | release-blocker | integrate in current TODO | mesmos approval/readiness boundaries; nenhum split necessário | fixed-pending-revalidation | full-owner package, lifecycle state, mapping, membership, cutover and anchor grammar revised |
 | `AR-F01..AR-F05` | high/medium | release-blocker | integrate in current TODO | same validator architecture and closeout boundary; no split needed | fixed-pending-revalidation | state grammar, canonical membership, identifiers and terminal commit protocol revised |
 | `F-18..F-21` | high/medium | release-blocker | integrate in current TODO | same delivery contract and target lifecycle; no split needed | fixed-pending-revalidation | target relocation, state grammar, validated tree and bookkeeping revised |
+| `AR-N01..AR-N02` | high/medium | release-blocker | integrate in current TODO | exact-byte closeout and bookkeeping remain inside the same validator boundary | fixed-revalidated | `D-15`; lifecycle state reconciled; exact token `VALIDO D-01..D-17` |
+| `F-22..F-25` | high/medium | release-blocker | integrate in current TODO | exact-byte binding, path bases, provenance and bookkeeping are part of the existing validator contract | fixed-revalidated | `D-15..D-17`; exact token `VALIDO D-01..D-17` |
 
 ## Security Risk Assessment
 
@@ -805,9 +803,9 @@ Predeclared for pre-approval readiness; reload and bind after `APROVADO`.
 ## TODO Closeout Disposition
 
 - **Disposition:** `keep-active`
-- **Disposition reason:** renewed material findings were integrated as `D-15..D-17`; the expanded set requires renewed human validation, replacement freeze and affected fresh reviews.
-- **Post-commit/push status:** `D-01..D-14` was validated/frozen/published and reviewed; `AR-N01..AR-N02/F-22..F-25` are integrated and published through `92637bf5` in the pending `D-01..D-17` contract; no implementation claim.
-- **Next path/status action:** obtain renewed validation of `D-01..D-17`, publish a replacement freeze and rerun affected planning-side gates; no implementation before a later post-gate `APROVADO` and authority guard `go`.
+- **Disposition reason:** `D-01..D-17` are validated and frozen locally; publication and affected fresh reviews remain required.
+- **Post-commit/push status:** validation token recorded locally; replacement freeze publication pending; no implementation claim.
+- **Next path/status action:** publish the replacement freeze and rerun affected planning-side gates; no implementation before a later post-gate `APROVADO` and authority guard `go`.
 
 ## Commands
 
