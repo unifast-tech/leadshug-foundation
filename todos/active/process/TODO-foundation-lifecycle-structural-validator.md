@@ -40,7 +40,7 @@ O lifecycle da Foundation exige um validator permanente quando backlog, decisõe
 ## Active Work State
 
 - **Work state:** `review`
-- **Why this state now:** por direção humana, o TODO entrou em convergência pré-freeze para esgotar decisões antes de novo token `VALIDO`; R-07 fechou ambiente e subprocessos para toda a suíte, integrados em `D-38`.
+- **Why this state now:** por direção humana, o TODO entrou em convergência pré-freeze para esgotar decisões antes de novo token `VALIDO`; R-08 fechou Git includes, resource bounds e fonte executada do verifier, integrados em `D-39..D-41`.
 - **Exit condition:** decisões validadas, baseline congelada/publicada, reviews e guards pré-aprovação verdes, seguidos de `APROVADO` explícito ou cancelamento com racional.
 
 ## Trigger Evidence
@@ -265,30 +265,31 @@ Placeholder tokens are the whole-segment, case-insensitive set `PENDING|N/A|TBD|
 ### Approved Attested Command Registry
 
 - Registry templates are UTF-8/LF records in the table order below. Tokens are the only `{...}` forms allowed; unknown, nested or partially embedded tokens fail.
-- `{PYTHON}`, `{GIT}` and `{BASH}` resolve once, before execution, to canonical realpath bytes of the executable selected from `PATH`; those exact bytes are executed and bound by provenance. `{TREE}` resolves to the lowercase captured Git OID. Absolute bytes are permitted only through executable-token expansion; no literal absolute workspace or temporary-directory path is admitted in child argv.
+- `{PYTHON}`, `{GIT}` and `{BASH}` resolve once, before execution, to canonical realpath bytes of the executable selected from the parent launch environment; those exact bytes are executed and bound by provenance. `{TREE}` resolves to the lowercase captured Git OID. `{FOUNDATION}` is allowed only in `tree-consistency` and resolves to the canonical principal Foundation root after its worktree bytes are proven equal to the index before child execution. Absolute bytes are permitted only through executable-token expansion and this single verified root token; no literal absolute workspace or temporary-directory path is admitted in child argv.
 - `{ST01_VAL01}`, `{ST01_VAL08}` and `{ST01_VAL10}` expand to the exact bytes between the opening `bash` fence LF and the LF immediately before the closing fence under the uniquely named heading in the completed ST-01 TODO. The source blob/OID and expanded bytes digest are bound; these are the only allowed `bash -c` payloads.
 - `materialized-tree` commands run with cwd at the read-only materialized Foundation root and use only relative paths. `foundation-index` commands run at the principal Foundation root and must prove `git write-tree == {TREE}`. `workspace-governance` commands run at workspace root, may read the bound clean Delphi checkout and principal Foundation Git metadata, and must not mutate either repository.
 - Every child environment is constructed from empty, never inherited. Its complete allowlist is `PATH={TOOL_DIR}`, `HOME={EMPTY_HOME}`, `XDG_CONFIG_HOME={EMPTY_XDG}`, `TMPDIR={RUN_TMP}`, `PYTHONDONTWRITEBYTECODE=1`, `PYTHONNOUSERSITE=1`, `LC_ALL=C.UTF-8`, `LANG=C.UTF-8`, `TZ=UTC`, `TERM=dumb`, `GIT_CONFIG_NOSYSTEM=1`, `GIT_CONFIG_GLOBAL=/dev/null`, `GIT_TERMINAL_PROMPT=0`, `GIT_PAGER=cat` and `PAGER=cat`; no other variable is passed. `{EMPTY_HOME}`/`{EMPTY_XDG}` are empty read-only directories and `{RUN_TMP}` is the only writable scratch directory, all outside admitted repositories. All direct Python argv place `-E -s -S -B` immediately after `{PYTHON}`; their only non-stdlib import roots are the attested script directory/cwd. Canonical sorted `NAME=value\0` template bytes are part of `registry-sha256` and separately bound by `environment-sha256`; physical capsule paths are represented only by their literal tokens.
 - The runner creates one private read-only `{TOOL_DIR}` for every registry command, containing only verified aliases for `git`, `rg`, `sort`, `bash` and a fixed `python3` launcher that `exec`s the bound `{PYTHON}` with `-E -s -S -B`. Direct argv still execute bound absolute token resolutions; every descendant PATH lookup, including Delphi guards, is confined to these aliases. Launcher template/digest and alias target identities are registry-bound; directory entries, targets and bytes are verified before and after each command. PATH shadowing, substitution, unknown executable demand or capsule mutation fails.
-- Git user/system configuration and ambient repository override variables are absent by construction. Local repository configuration remains required Git metadata and is bound through `git-config-manifest-sha256`, calculated over canonical path/type/bytes records for each file returned by `git rev-parse --git-path config` and the optional `config.worktree` in Foundation and Delphi. Any config drift between capture and post-command verification fails.
+- Git user/system configuration and ambient repository override variables are absent by construction. Local repository configuration remains required Git metadata and is bound through `git-config-manifest-sha256`, calculated over canonical path/type/bytes records for each file returned by `git rev-parse --git-path config` and the optional `config.worktree` in Foundation and Delphi. Before execution, bound Git runs with `--includes=false` to detect case-insensitively any `include.path` or `includeIf.*.path`; any unconditional/conditional include is rejected rather than resolved. Any config drift between capture and post-command verification fails.
+- Every registry row binds a monotonic timeout plus independent stdout/stderr byte caps. The runner streams each pipe in 64 KiB chunks directly into SHA-256 and bounded diagnostic buffers, counts raw bytes, and never accumulates an unbounded stream. On timeout or first cap breach it sends SIGTERM to the isolated process group, waits exactly 2 seconds, then SIGKILLs remaining descendants; it emits a redacted machine result with `outcome=timeout|stdout-overflow|stderr-overflow`, byte counts and command ID, emits no attestation, and removes `{TOOL_DIR}`, empty homes and `{RUN_TMP}` in `finally` on every outcome.
 - `argv-sha256` hashes fully expanded NUL-joined argv bytes. `registry-sha256` hashes the immutable templates and metadata, before `{TREE}`/legacy expansion. The verifier reconstructs both domains; it never trusts runner-supplied hashes. Relocating the materialization must not change either digest.
-- The registry digest domain is `Registry-v1` followed by one NUL byte, then every row/field in table order (`id`, `context`, `cwd`, argv arguments in order, permitted-input/provenance cell, success/phase cell). Each field is encoded as eight lowercase hexadecimal UTF-8 byte-length digits, one colon, the exact field bytes, then one NUL. Markdown presentation markers are excluded; inline-code contents are the field values. Duplicate/missing fields or noncanonical encoding fail.
+- The registry digest domain is `Registry-v1` followed by one NUL byte, then every row/field in table order (`id`, `context`, `cwd`, argv arguments in order, permitted-input/provenance cell, bounds cell, success/phase cell). Each field is encoded as eight lowercase hexadecimal UTF-8 byte-length digits, one colon, the exact field bytes, then one NUL. Markdown presentation markers are excluded; inline-code contents are the field values. Duplicate/missing fields or noncanonical encoding fail.
 
-| Command ID | Context / cwd | Exact argv template | Permitted inputs / direct provenance | Success / phase |
-| --- | --- | --- | --- | --- |
-| `foundation-validator` | `materialized-tree` / `materialized-foundation` | `{PYTHON}` `-E` `-s` `-S` `-B` `deterministic/validate_foundation_lifecycle.py` `--root` `.` | attested Foundation tree + isolated Python | exit `0`; terminal |
-| `foundation-unittest` | `materialized-tree` / `materialized-foundation` | `{PYTHON}` `-E` `-s` `-S` `-B` `-m` `unittest` `discover` `-s` `deterministic/tests` `-p` `test_*.py` | attested Foundation tree + isolated Python | exit `0`; terminal |
-| `foundation-compile-no-write` | `materialized-tree` / `materialized-foundation` | `{PYTHON}` `-E` `-s` `-S` `-B` `-c` `from pathlib import Path; import sys; [compile(Path(p).read_bytes(), p, 'exec') for p in sys.argv[1:]]` `deterministic/validate_foundation_lifecycle.py` `deterministic/foundation_lifecycle/__init__.py` `deterministic/foundation_lifecycle/parser.py` `deterministic/foundation_lifecycle/attestation.py` `deterministic/foundation_lifecycle/runner.py` `deterministic/tests/test_validate_foundation_lifecycle.py` `deterministic/tests/test_foundation_attestation.py` `deterministic/tests/test_foundation_runner.py` | attested Foundation tree + isolated Python | exit `0`, manifest unchanged; terminal |
-| `legacy-val01` | `workspace-governance` / `workspace` | `{BASH}` `-c` `{ST01_VAL01}` | completed ST-01 blob + Bash + Python + Git | exit `0`, exact final `OK`; terminal until cutover commit |
-| `legacy-val08` | `workspace-governance` / `workspace` | `{BASH}` `-c` `{ST01_VAL08}` | completed ST-01 blob + Bash + Git | exit `0`, exact final `OK`; terminal until cutover commit |
-| `legacy-val10` | `workspace-governance` / `workspace` | `{BASH}` `-c` `{ST01_VAL10}` | completed ST-01 blob + Bash + Git + rg + sort | exit `0`, exact final `OK`; terminal until cutover commit |
-| `delivery-secret-scan` | `materialized-tree` / `materialized-foundation` | `{PYTHON}` `-E` `-s` `-S` `-B` `deterministic/validate_foundation_lifecycle.py` `--scan-delivery-secrets` `--root` `.` `--todo` `todos/completed/process/TODO-foundation-lifecycle-structural-validator.md` | attested Foundation tree + isolated Python; scan set equals final Expected Changed Paths regular files, with active source absent and completed destination present | exit `0`, redacted `OK`; terminal; legacy VAL-10 is compatibility only |
-| `git-diff-check` | `foundation-index` / `foundation` | `{GIT}` `diff` `--cached` `--check` | matching Foundation index/tree + Git | exit `0`; terminal |
-| `diff-expectation` | `workspace-governance` / `workspace` | `{PYTHON}` `-E` `-s` `-S` `-B` `delphi-ai/tools/todo_diff_expectation_guard.py` `--repo-root` `foundation_documentation` `foundation_documentation/todos/completed/process/TODO-foundation-lifecycle-structural-validator.md` | bound Delphi tree + matching Foundation index/tree + isolated Python/Git | exit `0`, `Overall outcome: go`; terminal |
-| `authority-guard` | `workspace-governance` / `workspace` | `{PYTHON}` `-E` `-s` `-S` `-B` `delphi-ai/tools/todo_authority_guard.py` `foundation_documentation/todos/completed/process/TODO-foundation-lifecycle-structural-validator.md` `--require-delivery-gates` | bound Delphi tree + matching Foundation index/tree + isolated Python/Git | exit `0`, `Overall outcome: go`; terminal |
-| `completion-guard` | `workspace-governance` / `workspace` | `{PYTHON}` `-E` `-s` `-S` `-B` `delphi-ai/tools/todo_completion_guard.py` `foundation_documentation/todos/completed/process/TODO-foundation-lifecycle-structural-validator.md` `--require-delivery` | bound Delphi tree + matching Foundation index/tree + isolated Python/Git | exit `0`, no blocking violation; terminal |
-| `closeout-guard` | `workspace-governance` / `workspace` | `{PYTHON}` `-E` `-s` `-S` `-B` `delphi-ai/tools/todo_closeout_guard.py` `foundation_documentation/todos/completed/process/TODO-foundation-lifecycle-structural-validator.md` `--repo` `foundation_documentation` | bound Delphi tree + matching Foundation index/tree + isolated Python/Git | exit `0`, no blocking violation; terminal |
-| `tree-consistency` | `foundation-index` / `foundation` | `{PYTHON}` `-E` `-s` `-S` `-B` `deterministic/validate_foundation_lifecycle.py` `--verify-tree-context` `--root` `.` `--tree` `{TREE}` | attested Foundation tree/blob + matching index/tree + isolated Python/Git | exit `0`, exact tree binding; terminal immediately before commit |
+| Command ID | Context / cwd | Exact argv template | Permitted inputs / direct provenance | Bounds | Success / phase |
+| --- | --- | --- | --- | --- | --- |
+| `foundation-validator` | `materialized-tree` / `materialized-foundation` | `{PYTHON}` `-E` `-s` `-S` `-B` `deterministic/validate_foundation_lifecycle.py` `--root` `.` | attested Foundation tree + isolated Python | `60s`; `1MiB` each stream | exit `0`; terminal |
+| `foundation-unittest` | `materialized-tree` / `materialized-foundation` | `{PYTHON}` `-E` `-s` `-S` `-B` `-m` `unittest` `discover` `-s` `deterministic/tests` `-p` `test_*.py` | attested Foundation tree + isolated Python | `180s`; `8MiB` each stream | exit `0`; terminal |
+| `foundation-compile-no-write` | `materialized-tree` / `materialized-foundation` | `{PYTHON}` `-E` `-s` `-S` `-B` `-c` `from pathlib import Path; import sys; [compile(Path(p).read_bytes(), p, 'exec') for p in sys.argv[1:]]` `deterministic/validate_foundation_lifecycle.py` `deterministic/foundation_lifecycle/__init__.py` `deterministic/foundation_lifecycle/parser.py` `deterministic/foundation_lifecycle/attestation.py` `deterministic/foundation_lifecycle/runner.py` `deterministic/tests/test_validate_foundation_lifecycle.py` `deterministic/tests/test_foundation_attestation.py` `deterministic/tests/test_foundation_runner.py` | attested Foundation tree + isolated Python | `60s`; `1MiB` each stream | exit `0`, manifest unchanged; terminal |
+| `legacy-val01` | `workspace-governance` / `workspace` | `{BASH}` `-c` `{ST01_VAL01}` | completed ST-01 blob + Bash + Python + Git | `120s`; `4MiB` each stream | exit `0`, exact final `OK`; terminal until cutover commit |
+| `legacy-val08` | `workspace-governance` / `workspace` | `{BASH}` `-c` `{ST01_VAL08}` | completed ST-01 blob + Bash + Git | `120s`; `4MiB` each stream | exit `0`, exact final `OK`; terminal until cutover commit |
+| `legacy-val10` | `workspace-governance` / `workspace` | `{BASH}` `-c` `{ST01_VAL10}` | completed ST-01 blob + Bash + Git + rg + sort | `120s`; `4MiB` each stream | exit `0`, exact final `OK`; terminal until cutover commit |
+| `delivery-secret-scan` | `materialized-tree` / `materialized-foundation` | `{PYTHON}` `-E` `-s` `-S` `-B` `deterministic/validate_foundation_lifecycle.py` `--scan-delivery-secrets` `--root` `.` `--todo` `todos/completed/process/TODO-foundation-lifecycle-structural-validator.md` | attested Foundation tree + isolated Python; scan set equals final Expected Changed Paths regular files, with active source absent and completed destination present | `60s`; `1MiB` each stream | exit `0`, redacted `OK`; terminal; legacy VAL-10 is compatibility only |
+| `git-diff-check` | `foundation-index` / `foundation` | `{GIT}` `diff` `--cached` `--check` | matching Foundation index/tree + Git | `60s`; `2MiB` each stream | exit `0`; terminal |
+| `diff-expectation` | `workspace-governance` / `workspace` | `{PYTHON}` `-E` `-s` `-S` `-B` `delphi-ai/tools/todo_diff_expectation_guard.py` `--repo-root` `foundation_documentation` `foundation_documentation/todos/completed/process/TODO-foundation-lifecycle-structural-validator.md` | bound Delphi tree + matching Foundation index/tree + isolated Python/Git | `120s`; `4MiB` each stream | exit `0`, `Overall outcome: go`; terminal |
+| `authority-guard` | `workspace-governance` / `workspace` | `{PYTHON}` `-E` `-s` `-S` `-B` `delphi-ai/tools/todo_authority_guard.py` `foundation_documentation/todos/completed/process/TODO-foundation-lifecycle-structural-validator.md` `--require-delivery-gates` | bound Delphi tree + matching Foundation index/tree + isolated Python/Git | `120s`; `4MiB` each stream | exit `0`, `Overall outcome: go`; terminal |
+| `completion-guard` | `workspace-governance` / `workspace` | `{PYTHON}` `-E` `-s` `-S` `-B` `delphi-ai/tools/todo_completion_guard.py` `foundation_documentation/todos/completed/process/TODO-foundation-lifecycle-structural-validator.md` `--require-delivery` | bound Delphi tree + matching Foundation index/tree + isolated Python/Git | `120s`; `4MiB` each stream | exit `0`, no blocking violation; terminal |
+| `closeout-guard` | `workspace-governance` / `workspace` | `{PYTHON}` `-E` `-s` `-S` `-B` `delphi-ai/tools/todo_closeout_guard.py` `foundation_documentation/todos/completed/process/TODO-foundation-lifecycle-structural-validator.md` `--repo` `foundation_documentation` | bound Delphi tree + matching Foundation index/tree + isolated Python/Git | `120s`; `4MiB` each stream | exit `0`, no blocking violation; terminal |
+| `tree-consistency` | `foundation-index` / `materialized-foundation` | `{PYTHON}` `-E` `-s` `-S` `-B` `deterministic/validate_foundation_lifecycle.py` `--verify-tree-context` `--root` `.` `--principal-foundation` `{FOUNDATION}` `--tree` `{TREE}` | executable/package bytes from attested materialization; read-only principal Foundation worktree/Git metadata + matching index/tree + isolated Python/Git | `60s`; `1MiB` each stream | exit `0`, exact tree binding and pre-execution worktree divergence rejection; terminal immediately before commit |
 
 ### Legacy VAL-02 Transition Map
 
@@ -321,6 +322,9 @@ Placeholder tokens are the whole-segment, case-insensitive set `PENDING|N/A|TBD|
 | `D-36` | Freeze the entire `Validation-Attestation-v1` commit-message envelope: exact subject, blank lines, delimiters, payload, two ordered trailers, final LF/EOF, and prohibition of any unrelated text/trailer or duplicate/alternate form. | `R6-CRIT1-01` | confirm canonical commit-message bytes |
 | `D-37` | Execute nested legacy tools through a runner-created read-only PATH containing only verified aliases and a fixed isolated-Python launcher; bind launcher/alias templates and verify identities before/after, while canonicalizing the physical temp path as `{TOOL_DIR}`. | `R6-CRIT2-01` | confirm nested legacy executable identity |
 | `D-38` | Construct every child environment from a complete explicit allowlist, use the verified private tool directory for all descendant lookups (including Delphi guards), isolate HOME/XDG/TMP/Git controls, bind local Git config manifests, and reject any ambient variable, unknown tool, PATH/config/capsule drift before acceptance. | `R7-ARCH-01`, `R7-CRIT1-01`, `R7-CRIT2-01` | confirm full descendant executable and inherited-environment closure |
+| `D-39` | Reject any case-variant local `include.path` or `includeIf.*.path` in Foundation/Delphi config using bound Git with includes disabled; do not expand the trust graph to external config files. | `R8-ARCH-01`, `R8-CRIT2-01` | confirm closed Git config graph |
+| `D-40` | Bind per-command monotonic timeout and per-stream byte caps; use 64 KiB streaming digests/bounded diagnostics, isolated process groups, SIGTERM then fixed 2-second SIGKILL escalation, no attestation on timeout/overflow and unconditional scratch cleanup. | `R8-CRIT1-01` | confirm deterministic runner resource/failure bounds |
+| `D-41` | Execute `tree-consistency` code/package exclusively from the read-only materialized tree; runner must reject principal worktree/index divergence before execution and pass the verified principal root only as the dedicated `{FOUNDATION}` token for read-only metadata/data comparison. | `R8-CRIT2-02` | confirm verifier executes attested code bytes |
 
 ## Decisions
 
@@ -362,6 +366,9 @@ Placeholder tokens are the whole-segment, case-insensitive set `PENDING|N/A|TBD|
 - [ ] `D-36` Enforce one exact complete commit-message envelope for Validation-Attestation-v1.
 - [ ] `D-37` Route nested legacy executable lookup through a verified read-only tool directory with pre/post identity proof.
 - [ ] `D-38` Build all child environments from a complete allowlist and close descendant tool/Git configuration identity across every command context.
+- [ ] `D-39` Reject local Git config include/includeIf directives instead of admitting unbound external config graphs.
+- [ ] `D-40` Bind command time/output limits, process-group termination and cleanup semantics into the registry.
+- [ ] `D-41` Run tree-consistency from materialized code and reject worktree/index divergence before that code executes.
 
 ## Module Decision Baseline Snapshot
 
@@ -377,8 +384,8 @@ Placeholder tokens are the whole-segment, case-insensitive set `PENDING|N/A|TBD|
 ## Decision Baseline
 
 - **Prior freezes:** `D-01..D-08@b685fb52` invalidated by `AR-01..05/F-01..11`; `D-01..D-10@504a9785` invalidated by `AR-R01..AR-R05/F-12..F-17`; `D-01..D-11@2562f62e` invalidated by `AR-F01..AR-F05/F-18..F-21`; `D-01..D-14@e26d7183` invalidated by `AR-N01/F-22..F-24`; `D-01..D-17@3dce63b3` invalidated by `C2-F01/C2-F02/C2-F04`; `D-01..D-20@0cd991e6` invalidated by `C3-F01..C3-F03`.
-- **Freeze status:** `not_frozen — pre-freeze convergence active; provisional D-01..D-38 require a clean exploratory round before final human validation`
-- **Frozen decisions:** `none current; D-01..D-20 remain validated provenance; D-21..D-38 are provisional convergence decisions`
+- **Freeze status:** `not_frozen — pre-freeze convergence active; provisional D-01..D-41 require a clean exploratory round before final human validation`
+- **Frozen decisions:** `none current; D-01..D-20 remain validated provenance; D-21..D-41 are provisional convergence decisions`
 - **Current validation evidence:** Gabriel/user, 2026-09-24, exact phrase `VALIDO D-01..D-20`; preserved as provenance but superseded for approval by material review findings that introduced `D-21..D-23`.
 - **Prior validation evidence:** Gabriel/user, 2026-09-24, exact phrase `VALIDO D-01..D-17`; preserved as provenance but superseded by material review findings that introduced `D-18..D-20`.
 - **Prior validation evidence:** Gabriel/user, 2026-09-23, exact phrase `VALIDO D-01..D-14`; preserved as provenance but superseded for approval by material review findings that introduced `D-15..D-17`.
@@ -506,6 +513,7 @@ Placeholder tokens are the whole-segment, case-insensitive set `PENDING|N/A|TBD|
 | `R-05` | `0e72fd7a` | clean | `R5-CRIT1-01` | `R5-CRIT2-01` | add `D-33/D-34`; complete terminal secret coverage; bind no-bytecode environment/argv | integrated; next round required |
 | `R-06` | `63f1fbee` | `R6-ARCH-01` | `R6-CRIT1-01` | `R6-CRIT2-01` | add `D-35..D-37`; isolate Python startup; freeze full commit envelope; verify nested legacy tools | integrated; next round required |
 | `R-07` | `5bd89d41` | `R7-ARCH-01` | `R7-CRIT1-01` | `R7-CRIT2-01` | add `D-38`; construct closed child environments; extend verified tool/config closure to every command | integrated; next round required |
+| `R-08` | `9202554b` | `R8-ARCH-01` | `R8-CRIT1-01` | `R8-CRIT2-01..02` | add `D-39..D-41`; reject Git config includes; bound resources; run verifier from materialized bytes | integrated; next round required |
 
 ## Assumptions Preview
 
@@ -541,7 +549,7 @@ Placeholder tokens are the whole-segment, case-insensitive set `PENDING|N/A|TBD|
 
 1. Concluir o ciclo exploratório; após validação humana do conjunto final, congelar/publicar a baseline e repetir os gates formais com TODO + owners + exact contracts do ST-01 no pacote.
 2. Após `APROVADO` e authority guard `go`, escrever fixtures/oráculos fail-first e implementar kernel/parser/diagnostics mais consolidações canônicas aprovadas.
-3. Implementar até `T-01..T-34` convergir; manter o TODO ativo e o decision target apontando ao active path no candidate SHA.
+3. Implementar até `T-01..T-37` convergir; manter o TODO ativo e o decision target apontando ao active path no candidate SHA.
 4. Executar acceptance, old/new parity, adherence, test-quality audit e final review no candidate SHA.
 5. Montar a árvore terminal com TODO movido, evidence final, handoffs/cutover e `DEC-validator-adoption-trigger` retargeted para completed; stagear tudo e capturar o tree OID.
 6. Materializar o tree OID em diretório temporário read-only e executar os checks sobre esses bytes; guards dependentes de metadata Git provam o mesmo index/tree OID. Depois, provar OID inalterado e ausência de divergência relevante; qualquer diferença exige restage e rerun integral.
@@ -593,6 +601,9 @@ Placeholder tokens are the whole-segment, case-insensitive set `PENDING|N/A|TBD|
 | `T-32` | exact complete commit-message envelope | changed subject/preamble, missing/extra blank line, unrelated/duplicate trailer or body, trailer reorder, text after trailers, missing/extra final LF | independent byte oracle and verifier reject every alternate envelope |
 | `T-33` | verified read-only legacy `{TOOL_DIR}` aliases and isolated Python launcher | PATH shadow, missing/extra alias, alias/target/launcher replacement before or during execution, writable tool dir, unknown nested executable | fail before acceptance; pre/post identity matches bound tool and launcher digests |
 | `T-34` | every command gets the complete from-empty environment, verified descendant tool directory and bound Git config manifest | unexpected inherited variable, `BASH_ENV`/`ENV`, Git override/config injection, HOME/XDG influence, alternate index/worktree/object dir, PATH shadow in Delphi guard, capsule/config mutation | fail before/during execution; exact allowlist and pre/post tool/config/capsule identities; scratch writes only under `{RUN_TMP}` |
+| `T-35` | Foundation/Delphi local config without includes | unconditional/conditional, relative/absolute and case-variant `include.path`/`includeIf.*.path` | bound Git with `--includes=false` detects and rejects before suite execution; external config is never read |
+| `T-36` | every registry command completes below its bound timeout/stream caps | hung child, hung descendant, stdout overflow, stderr overflow, TERM-resistant process and cleanup failure | bounded streaming memory; process-group TERM then 2s KILL; deterministic redacted outcome; no attestation; all capsule paths removed |
+| `T-37` | `tree-consistency` entrypoint/package bytes come from materialized tree after runner preflight | unchanged staged tree with modified principal worktree verifier/package or worktree/index data drift | runner rejects before executing worktree code; materialized verifier can only read verified principal root through `{FOUNDATION}` |
 
 ### Pre-APROVADO RED Evidence Capture
 
@@ -616,7 +627,7 @@ Placeholder tokens are the whole-segment, case-insensitive set `PENDING|N/A|TBD|
 | Surface | Behavior / Scenario | Preconditions | Command | Required Before | Status |
 | --- | --- | --- | --- | --- | --- |
 | validator acceptance | source graph real válido | consolidated branch@sha | `python3 foundation_documentation/deterministic/validate_foundation_lifecycle.py --root foundation_documentation` | Local-Implemented | planned |
-| unittest/mutations | `T-01..T-34` | isolated temporary fixtures | `python3 -m unittest discover -s foundation_documentation/deterministic/tests -p 'test_*.py'` | Local-Implemented | planned |
+| unittest/mutations | `T-01..T-37` | isolated temporary fixtures | `python3 -m unittest discover -s foundation_documentation/deterministic/tests -p 'test_*.py'` | Local-Implemented | planned |
 | legacy transition matrix | pre-migration baseline runs ST-01 `VAL-01/02/08/10`; candidate/terminal Git layer runs `VAL-01/08/10`; `VAL-02` is superseded after approved schema/target mutation | exact contracts read from completed ST-01 TODO; phase identified deterministically | phase matrix `D-19/VAL-07/T-23` + new validator/tests | before delivery reviews | planned |
 | terminal-tree confirmation | permanent checks stay green after atomic move/retarget/cutover | read-only materialization of captured tree OID with `active XOR completed`; unchanged index/OID proof and no relevant divergence | validator + unittest on materialized bytes; compatible guards there; Git-metadata guards against the same index/tree OID | before closeout commit | planned |
 | immutable publication | committed tree equals validated staged tree and terminal outcomes are immutably self-attested outside that tree | commit body contains deterministic attestation manifest; trailers contain tree OID and manifest digest | `--verify-attestation --commit HEAD`; verify `HEAD^{tree}`, clean tree and remote ref equality; do not claim externally reproducible execution proof | Production-Ready | planned |
@@ -628,7 +639,7 @@ Placeholder tokens are the whole-segment, case-insensitive set `PENDING|N/A|TBD|
 
 ## Plan Review Gate
 
-- **Status:** `exploratory convergence running — R-07 integrated into provisional D-01..D-38; R-08 required`
+- **Status:** `exploratory convergence running — R-08 integrated into provisional D-01..D-41; R-09 required`
 - **Required lenses:** Architecture, Code Quality, Tests, Performance, Security, Elegance, Structural Soundness.
 - **Expected focus:** evitar parser frágil, catálogo duplicado, cobertura superficial, bypass histórico e expansão para CI.
 
@@ -636,7 +647,7 @@ Placeholder tokens are the whole-segment, case-insensitive set `PENDING|N/A|TBD|
 
 - [x] Architecture — canonical membership, state-conditioned grammar, immutable identifiers and validated-tree closeout integrated.
 - [x] Code Quality — narrow grammar, confinement and diagnostics contract added.
-- [x] Tests — test-first and `T-01..T-34` matrix added.
+- [x] Tests — test-first and `T-01..T-37` matrix added.
 - [x] Performance — bounded linear scan; no specialized lane triggered.
 - [x] Security — root/symlink confinement and redaction made mandatory.
 - [x] Elegance — one project-owned stdlib validator; no parallel catalog.
@@ -682,6 +693,9 @@ Placeholder tokens are the whole-segment, case-insensitive set `PENDING|N/A|TBD|
 - **Issue ID:** `PLAN-36` — attestation payload grammar omitted the surrounding Git message byte envelope (`high`). Option A: exact subject/body/trailer/final-LF grammar (recommended); Option B: arbitrary preamble/trailers; Option C: rely on Git heuristics. **Resolution:** integrated into `D-36`, byte grammar and `T-32`.
 - **Issue ID:** `PLAN-37` — legacy shell payloads could PATH-resolve different binaries from those attested (`high`). Option A: verified private read-only tool directory and isolated Python launcher (recommended); Option B: rewrite historical scripts; Option C: trust ambient PATH. **Resolution:** integrated into `D-37`, environment contract and `T-33`.
 - **Issue ID:** `PLAN-38` — non-legacy guards and Bash/Git startup still admitted ambient environment and child lookup (`high`). Option A: construct all child environments from a complete allowlist, extend verified tool dir globally and bind local Git config (recommended); Option B: enumerate only known risky vars; Option C: treat controllable inputs as transitive risk. **Resolution:** integrated into `D-38`, payload/environment contract and `T-34`.
+- **Issue ID:** `PLAN-39` — local Git configs could include unbound files (`high`). Option A: reject all include/includeIf directives (recommended); Option B: recursively bind external graph; Option C: ignore includes. **Resolution:** integrated into `D-39`, config contract and `T-35`.
+- **Issue ID:** `PLAN-40` — attested children had no timeout/output/capture bounds (`high`). Option A: per-command limits, streaming digests and process-group termination (recommended); Option B: global unbound default; Option C: unbounded capture. **Resolution:** integrated into `D-40`, registry Bounds and `T-36`.
+- **Issue ID:** `PLAN-41` — tree-consistency executed mutable worktree code (`high`). Option A: execute materialized code after runner divergence preflight (recommended); Option B: capsule indexed blobs separately; Option C: post-execution detection. **Resolution:** integrated into `D-41`, registry and `T-37`.
 
 ### Failure Modes & Edge Cases
 
@@ -701,9 +715,9 @@ Placeholder tokens are the whole-segment, case-insensitive set `PENDING|N/A|TBD|
 
 ## Additional Architectural Opinions
 
-- **Needed:** `yes — exploratory R-08 before final validation; formal rerun after final freeze`
-- **Why ambiguity remains:** R-07 closed inherited environments, descendant tool lookup and repository config influence for every command class; convergence is not yet proven.
-- **Opinion count:** `R-01 through R-07: three fresh exploratory reviewers each completed with material findings in the round aggregate; R-08 pending`
+- **Needed:** `yes — exploratory R-09 before final validation; formal rerun after final freeze`
+- **Why ambiguity remains:** R-08 closed Git config includes, runner resource bounds and the executed source of tree-consistency; convergence is not yet proven.
+- **Opinion count:** `R-01 through R-08: three fresh exploratory reviewers each completed with material findings in the round aggregate; R-09 pending`
 - **Package mode:** `bounded-file-set`
 - **Internal reviewer mandate:** `required after freeze; reviewer cannot implement`
 - **Required lenses:** `correctness|performance|elegance|structural-soundness|operational-fit`
@@ -846,7 +860,7 @@ Predeclared for pre-approval readiness; reload and bind after `APROVADO`.
 | Decision ID | Status | Evidence | Notes |
 | --- | --- | --- | --- |
 | `D-01..D-20` | validated-historical | exact token `VALIDO D-01..D-20`; freeze `0cd991e6` | preserved directions; approval baseline superseded by convergence work |
-| `D-21..D-38` | provisional-convergence | R-01..R-07 integrated contract | do not request validation until convergence criterion is satisfied |
+| `D-21..D-41` | provisional-convergence | R-01..R-08 integrated contract | do not request validation until convergence criterion is satisfied |
 
 ## Module Decision Consistency Validation
 
@@ -915,6 +929,9 @@ Predeclared for pre-approval readiness; reload and bind after `APROVADO`.
 | `R6-CRIT1-01` | high | release-blocker | integrate in current TODO | canonical attestation requires a complete unambiguous Git message envelope | fixed-pending-convergence | `D-36`, exact envelope and `T-32` |
 | `R6-CRIT2-01` | high | release-blocker | integrate in current TODO | legacy nested tool lookup must execute the identities recorded in provenance | fixed-pending-convergence | `D-37`, verified private PATH/launcher and `T-33` |
 | `R7-ARCH-01/R7-CRIT1-01/R7-CRIT2-01` | high | release-blocker | integrate in current TODO | every child process and repository-config input must remain inside the attested execution boundary | fixed-pending-convergence | `D-38`, from-empty environment, global verified tool dir/config manifest and `T-34` |
+| `R8-ARCH-01/R8-CRIT2-01` | high | release-blocker | integrate in current TODO | local Git include graphs would escape the bound config manifest | fixed-pending-convergence | `D-39`, include rejection and `T-35` |
+| `R8-CRIT1-01` | high | release-blocker | integrate in current TODO | unbounded children/streams can hang or exhaust the attested runner | fixed-pending-convergence | `D-40`, registry Bounds and `T-36` |
+| `R8-CRIT2-02` | high | release-blocker | integrate in current TODO | verifier results must be produced by attested code bytes | fixed-pending-convergence | `D-41`, materialized tree-consistency and `T-37` |
 
 ## Security Risk Assessment
 
@@ -928,8 +945,8 @@ Predeclared for pre-approval readiness; reload and bind after `APROVADO`.
 ## Performance & Concurrency Risk Assessment
 
 - **Policy schema version:** `pcv-1`
-- **Global sensitivity level:** `none`
-- **Why this level:** pequeno conjunto Markdown local; sem endpoint/query/async/concurrency/runtime.
+- **Global sensitivity level:** `low`
+- **Why this level:** sem endpoint/query/runtime de produto, mas o runner local cria subprocessos e captura streams; `D-40` limita tempo, bytes, memória, descendants e cleanup por comando.
 - **Current delivery stage at review time:** `Pending`
 
 | Lane ID | Lane | Trigger Result | Trigger Severity | Trigger Reason Code | Gate Deadline | Minimum Evidence Rule | State | Residual Risk | Uncertainty Reason Code |
@@ -1007,9 +1024,9 @@ Predeclared for pre-approval readiness; reload and bind after `APROVADO`.
 ## TODO Closeout Disposition
 
 - **Disposition:** `keep-active`
-- **Disposition reason:** user-directed pre-freeze convergence is active; R-07 material decisions are integrated into provisional `D-01..D-38` and require R-08.
-- **Post-commit/push status:** R-07 convergence changes are local pending validation/publication checks; no implementation claim.
-- **Next path/status action:** validate and publish R-07 integration, run exploratory R-08, and continue until the convergence criterion is satisfied; then request one final full-set validation.
+- **Disposition reason:** user-directed pre-freeze convergence is active; R-08 material decisions are integrated into provisional `D-01..D-41` and require R-09.
+- **Post-commit/push status:** R-08 convergence changes are local pending validation/publication checks; no implementation claim.
+- **Next path/status action:** validate and publish R-08 integration, run exploratory R-09, and continue until the convergence criterion is satisfied; then request one final full-set validation.
 
 ## Commands
 
