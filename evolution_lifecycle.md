@@ -132,7 +132,7 @@ This lifecycle governs new or materially changed records. Historical artifacts, 
 
 ## Deterministic-adoption trigger
 
-The strategic steward owns a follow-up tactical TODO for a permanent validator when either condition occurs: more than ten live records combined across backlog, decisions, and roadmap, or the first proven recurrence of schema/field-authority drift. ST-01 reached the volume threshold with 18 live records and opened [the separate validator TODO](todos/active/process/TODO-foundation-lifecycle-structural-validator.md) in `Review`; that TODO has no execution authority until its own explicit approval and authority guard. Until the validator is separately approved and delivered, the exact reproducible checks in the governing ST-01 TODO remain the required control; no permanent validator is claimed here.
+The strategic steward opens a follow-up tactical TODO for a permanent validator when either condition occurs: more than ten live records combined across backlog, decisions, and roadmap, or the first proven recurrence of schema/field-authority drift. ST-01 reached the volume threshold with 18 live records. The implemented control under validation is [`deterministic/validate_foundation_lifecycle.py`](deterministic/validate_foundation_lifecycle.py); its bounded source graph, read-only behavior, and exit contract are defined in [`deterministic/README.md`](deterministic/README.md). CI adoption remains a separately governed decision.
 
 ## Walkthroughs
 

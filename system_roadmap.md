@@ -8,7 +8,7 @@ The roadmap owns strategic theme/phase, relative horizon, expected outcome, depe
 
 `Now`, `Next`, `Later`, and `Unscheduled` are relative planning horizons, not dates, releases, or delivery promises. A roadmap phase is a strategic theme; it is orthogonal to horizon and capability maturity. Dates or release commitments require separate explicit approval.
 
-`Gate status` is a derived roadmap signal, not a sixth lifecycle state machine and not a projection of capability state. It is `Open` while the row's exit gate lacks accepted evidence and becomes `Exit-Gate-Met` only when links to the responsible canonical module/TODO evidence satisfy that gate. It cannot be advanced by editing this table alone.
+`Gate status` is a derived roadmap signal, not a sixth lifecycle state machine and not a projection of capability state. It is `Open` while the row's exit gate lacks accepted evidence and becomes `Exit-Gate-Met` only when its `Exit gate` cell contains resolvable Foundation-relative links to at least one responsible `modules/**` record and one completed `todos/completed/**` tactical TODO. It cannot be advanced by editing this table alone; the local structural check is [`deterministic/validate_foundation_lifecycle.py`](deterministic/validate_foundation_lifecycle.py).
 
 | Phase / theme | Horizon | Gate status | Dependencies | Expected outcome | Exit gate |
 | --- | --- | --- | --- | --- | --- |

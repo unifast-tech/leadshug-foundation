@@ -36,12 +36,12 @@ Create one Python standard-library CLI with a small parser module and focused un
 - **Current delivery stage:** `Pending`
 - **Tactical TODO lifecycle state:** `In-Progress`
 - **Qualifiers:** `none`
-- **Next exact step:** execute the approved validator test-first in the principal checkout, then run delivery gates.
+- **Next exact step:** complete the fresh final-review rerun, verification-debt audit and atomic closeout guards.
 
 ## Active Work State
 
-- **Work state:** `implementation`
-- **Why this state now:** the user supplied exact `APROVADO`, rules/package evidence are loaded and the normal authority guard returned `go`.
+- **Work state:** `review`
+- **Why this state now:** implementation and package-matched architecture/test-quality audits are complete; final evidence and closeout gates remain.
 - **Exit condition:** simplified decisions validated/frozen, pre-approval gates green, explicit `APROVADO`, implementation/evidence complete, and TODO promoted to `completed/`.
 
 ## Trigger Evidence
@@ -52,13 +52,13 @@ Create one Python standard-library CLI with a small parser module and focused un
 
 ## Scope
 
-- [ ] `S-01` Implement `deterministic/validate_foundation_lifecycle.py` as a read-only Python standard-library CLI.
-- [ ] `S-02` Implement bounded structural parsing in `deterministic/foundation_lifecycle/parser.py`.
-- [ ] `S-03` Validate live backlog, decision index/records, lifecycle schemas and roadmap gate-evidence structure.
-- [ ] `S-04` Enforce ID uniqueness, required headings/tables, exact columns, allowed states, reference resolution and root confinement.
-- [ ] `S-05` Preserve the historical-document exception: only admitted live owners are scanned as authorities.
-- [ ] `S-06` Add independent positive and mutation tests using temporary fixtures.
-- [ ] `S-07` Document the CLI, structural boundary, exit behavior and canonical owners.
+- [x] `S-01` Implement `deterministic/validate_foundation_lifecycle.py` as a read-only Python standard-library CLI.
+- [x] `S-02` Implement bounded structural parsing in `deterministic/foundation_lifecycle/parser.py`.
+- [x] `S-03` Validate live backlog, decision index/records, lifecycle schemas and roadmap gate-evidence structure.
+- [x] `S-04` Enforce ID uniqueness, required headings/tables, exact columns, allowed states, reference resolution and root confinement.
+- [x] `S-05` Preserve the historical-document exception: only admitted live owners are scanned as authorities.
+- [x] `S-06` Add independent positive and mutation tests using temporary fixtures.
+- [x] `S-07` Document the CLI, structural boundary, exit behavior and canonical owners.
 - [ ] `S-08` Align directly affected lifecycle/index/roadmap guidance and retarget the validator-adoption decision at closeout.
 
 ## Out of Scope
@@ -74,17 +74,17 @@ Create one Python standard-library CLI with a small parser module and focused un
 
 ## Execution Lane Tracking
 
-- **Current lane:** `planning/review`
-- **Execution authority:** `none`
+- **Current lane:** `implementation/delivery-validation`
+- **Execution authority:** `granted by explicit APROVADO; todo_authority_guard outcome go`
 - **Topology:** `principal checkout, single writer, no worktrees`
-- **Implementation owner after approval:** `routine-executor / Operational Coder`
-- **Assurance handoff:** `Assurance / Tester-Quality` after implementation.
+- **Implementation owner after approval:** `routine-executor / Operational Coder`; implementation completed locally.
+- **Assurance handoff:** `Assurance / Tester-Quality`; fresh delivery audits in progress.
 
 ## Promotion Evidence
 
 - **Branch:** `main`
 - **Promotion target:** `foundation_documentation:main`
-- **Current claim:** planning only; no implementation claim.
+- **Current claim:** local implementation under validation; no delivery/closeout claim.
 
 ## Diff Expectation Contract
 
@@ -141,38 +141,52 @@ Any unclassified path blocks delivery until classified as scope deviation, neces
 
 ## Definition of Done
 
-- [ ] `DOD-01` CLI validates the real live Foundation owner graph and returns zero.
-- [ ] `DOD-02` Every structural rule has a positive control and meaningful mutation test.
-- [ ] `DOD-03` Input trees remain byte-for-byte unchanged on success and failure.
-- [ ] `DOD-04` Minimal bootstrap kernel detects removal/rename of required owners, headings, schemas and enums without copying live records.
-- [ ] `DOD-05` Paths/references are root-confined and diagnostics do not echo sensitive content.
-- [ ] `DOD-06` README/lifecycle/decision guidance names the validator without duplicating live state.
-- [ ] `DOD-07` Legacy ST-01 checks are classified as parity evidence or retired controls, not embedded implementation.
+- [x] `DOD-01` CLI validates the real live Foundation owner graph and returns zero.
+- [x] `DOD-02` Every structural rule has a positive control and meaningful mutation test.
+- [x] `DOD-03` Input trees remain byte-for-byte unchanged on success and failure.
+- [x] `DOD-04` Minimal bootstrap kernel detects removal/rename of required owners, headings, schemas and enums without copying live records.
+- [x] `DOD-05` Paths/references are root-confined and diagnostics do not echo sensitive content.
+- [x] `DOD-06` README/lifecycle/decision guidance names the validator without duplicating live state.
+- [x] `DOD-07` Legacy ST-01 checks are classified as parity evidence or retired controls, not embedded implementation.
 - [ ] `DOD-08` Required audits/reviews and deterministic TODO guards pass before closeout.
 
 ## Validation Steps
 
-- [ ] `VAL-01` `python3 foundation_documentation/deterministic/validate_foundation_lifecycle.py --root foundation_documentation`
-- [ ] `VAL-02` `python3 -m unittest discover -s foundation_documentation/deterministic/tests -p 'test_*.py'`
-- [ ] `VAL-03` Run mutations for IDs, tables, links, paths, observable current-row state/target/evidence, roadmap evidence and read-only behavior.
-- [ ] `VAL-04` Run a no-write compile check with `python3 -B` over delivered Python files.
-- [ ] `VAL-05` Run compatible ST-01 checks once as migration parity evidence and record retired assertions.
+- [x] `VAL-01` `python3 foundation_documentation/deterministic/validate_foundation_lifecycle.py --root foundation_documentation`
+- [x] `VAL-02` `PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=foundation_documentation/deterministic python3 -m unittest discover -s foundation_documentation/deterministic/tests -p 'test_*.py'`
+- [x] `VAL-03` Run mutations for IDs, tables, links, paths, observable current-row state/target/evidence, roadmap evidence and read-only behavior.
+- [x] `VAL-04` Run a no-write compile check with `python3 -B` over delivered Python files.
+- [x] `VAL-05` Run compatible ST-01 checks once as migration parity evidence and record retired assertions.
 - [ ] `VAL-06` Run `git diff --check`, diff expectation, authority and completion guards at required phases.
-- [ ] `VAL-07` Confirm the final diff contains no runner, attestation, registry, subprocess/provenance or CI implementation.
+- [x] `VAL-07` Confirm the final diff contains no runner, attestation, registry, subprocess/provenance or CI implementation.
 
 ## Completion Evidence Matrix
 
-| Criterion | Required Evidence | Status |
-| --- | --- | --- |
-| `DOD-01` | real repository CLI output | planned |
-| `DOD-02` | unittest output + mutation mapping | planned |
-| `DOD-03` | fixture manifest/hash before and after success/failure | planned |
-| `DOD-04` | bootstrap deletion/rename mutations | planned |
-| `DOD-05` | confinement/redaction mutations | planned |
-| `DOD-06` | final documentation diff review | planned |
-| `DOD-07` | legacy transition table + parity output | planned |
-| `DOD-08` | gate/guard evidence in this TODO | planned |
-| `VAL-01..VAL-07` | exact command outputs or criterion-specific evidence | planned |
+| Criterion ID | Source Section | Criterion | Evidence Type | Evidence Artifact / Command | Runtime Target | Status | Notes |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| `S-01` | Scope | `S-01` Implement `deterministic/validate_foundation_lifecycle.py` as a read-only Python standard-library CLI. | code+test | live CLI exit 0; read-only fixture manifests | local | passed | public CLI implemented |
+| `S-02` | Scope | `S-02` Implement bounded structural parsing in `deterministic/foundation_lifecycle/parser.py`. | code+review | parser + architecture audit v9 | local | passed | bounded admitted grammar |
+| `S-03` | Scope | `S-03` Validate live backlog, decision index/records, lifecycle schemas and roadmap gate-evidence structure. | test | 110-test T-01..T-13 suite against lifecycle schema artifacts with owner-specific mutations | local | passed | each owner has positive/mutation coverage |
+| `S-04` | Scope | `S-04` Enforce ID uniqueness, required headings/tables, exact columns, allowed states, reference resolution and root confinement. | test | parser suite + independent adversarial probes | local | passed | fail-closed cases green |
+| `S-05` | Scope | `S-05` Preserve the historical-document exception: only admitted live owners are scanned as authorities. | test | excluded-history vs live-owner paired test | local | passed | history remains non-authoritative |
+| `S-06` | Scope | `S-06` Add independent positive and mutation tests using temporary fixtures. | test+audit | independent parser/CLI fixtures; test-quality audit v10 | local | passed | no shared production oracle |
+| `S-07` | Scope | `S-07` Document the CLI, structural boundary, exit behavior and canonical owners. | doc+review | `deterministic/README.md` and root guidance diff | n/a | passed | commands and boundaries explicit |
+| `S-08` | Scope | `S-08` Align directly affected lifecycle/index/roadmap guidance and retarget the validator-adoption decision at closeout. | doc+move | canonical docs aligned; decision retarget waits for atomic completed-path move | n/a | pending | closeout-only remaining scope item |
+| `DOD-01` | Definition of Done | `DOD-01` CLI validates the real live Foundation owner graph and returns zero. | test | exact VAL-01 exit 0 | local | passed | no diagnostics on live graph |
+| `DOD-02` | Definition of Done | `DOD-02` Every structural rule has a positive control and meaningful mutation test. | test+audit | 110 tests; test-quality audit v10 approved exact snapshot | local | passed | T-01..T-13 substantive |
+| `DOD-03` | Definition of Done | `DOD-03` Input trees remain byte-for-byte unchanged on success and failure. | test | success/failure manifest tests | local | passed | no source writes |
+| `DOD-04` | Definition of Done | `DOD-04` Minimal bootstrap kernel detects removal/rename of required owners, headings, schemas and enums without copying live records. | test | five machines, identifiers, authority/transition schemas | local | passed | section-anchored; no live rows/counts |
+| `DOD-05` | Definition of Done | `DOD-05` Paths/references are root-confined and diagnostics do not echo sensitive content. | test | symlink/escape/redaction/cap mutations | local | passed | absolute/raw content absent |
+| `DOD-06` | Definition of Done | `DOD-06` README/lifecycle/decision guidance names the validator without duplicating live state. | doc+review | strict doc diff + architecture audit v9 | n/a | passed | links and structural rules only |
+| `DOD-07` | Definition of Done | `DOD-07` Legacy ST-01 checks are classified as parity evidence or retired controls, not embedded implementation. | parity+review | Legacy Check Transition + compatible link/module/secret checks | local | passed | fixed snapshots/history scans retired |
+| `DOD-08` | Definition of Done | `DOD-08` Required audits/reviews and deterministic TODO guards pass before closeout. | guard+review | authority/diff go; final review/completion/closeout pending | local | pending | procedural final gates only |
+| `VAL-01` | Validation Steps | `VAL-01` `python3 foundation_documentation/deterministic/validate_foundation_lifecycle.py --root foundation_documentation` | test | exact command exit 0 | local | passed | live acceptance |
+| `VAL-02` | Validation Steps | `VAL-02` `PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=foundation_documentation/deterministic python3 -m unittest discover -s foundation_documentation/deterministic/tests -p 'test_*.py'` | test | exact command: 110/110 | local | passed | no bytecode residue |
+| `VAL-03` | Validation Steps | `VAL-03` Run mutations for IDs, tables, links, paths, observable current-row state/target/evidence, roadmap evidence and read-only behavior. | test+audit | T-01..T-13 suite and independent probes | local | passed | all demonstrated false greens fixed |
+| `VAL-04` | Validation Steps | `VAL-04` Run a no-write compile check with `python3 -B` over delivered Python files. | test | five Python sources compile in memory | local | passed | no pyc/pyo |
+| `VAL-05` | Validation Steps | `VAL-05` Run compatible ST-01 checks once as migration parity evidence and record retired assertions. | migration parity | legacy links, module diff and secret scan exit 0 as migration parity evidence | local | passed | incompatible snapshots intentionally retired |
+| `VAL-06` | Validation Steps | `VAL-06` Run `git diff --check`, diff expectation, authority and completion guards at required phases. | guard | diff/authority go; completion/closeout pending atomic move | local | pending | rerun at final closeout |
+| `VAL-07` | Validation Steps | `VAL-07` Confirm the final diff contains no runner, attestation, registry, subprocess/provenance or CI implementation. | review+scan | strict diff + rule-spirit 0 findings + reviews | local | passed | test subprocess only invokes CLI |
 
 ## External Dependency Readiness
 
@@ -199,8 +213,8 @@ Any unclassified path blocks delivery until classified as scope deviation, neces
 
 | From | To | Purpose | Status |
 | --- | --- | --- | --- |
-| Strategic / CTO-Tech-Lead | Operational / Coder | implement bounded validator/tests after approval | planned |
-| Operational / Coder | Assurance / Tester-Quality | challenge mutations, false greens and read-only behavior | planned |
+| Strategic / CTO-Tech-Lead | Operational / Coder | implement bounded validator/tests after approval | completed |
+| Operational / Coder | Assurance / Tester-Quality | challenge mutations, false greens and read-only behavior | completed |
 
 ## Complexity
 
@@ -262,7 +276,7 @@ The admitted current decision file uses one nonempty file-level `Provenance` fie
 | feature-brief/history scans outside live graph | retire from current structural authority |
 | compatible link, whitespace and secret hygiene checks | keep as external delivery evidence where useful |
 
-## Decision Pending — Simplified Replacement Set
+## Simplified Replacement Decision Set
 
 | Decision ID | Direction | Why It Matters |
 | --- | --- | --- |
@@ -308,7 +322,7 @@ The admitted current decision file uses one nonempty file-level `Provenance` fie
 - **Replacement status:** `SD-01..SD-10 and post-review refinements validated by the user on 2026-09-24`
 - **Freeze status:** `renewed post-review baseline frozen at pushed commit e3642929 including schema-only preflight normalization`
 - **Validation evidence:** exact user tokens `VALIDO SD-01..SD-10` and `VALIDO SD-01..SD-10 POS-REVIEW`
-- **Implementation authority:** `none`
+- **Implementation authority:** `granted by explicit APROVADO; normal authority guard returned go on 2026-09-24`
 
 ## Architecture Change Governance
 
@@ -355,8 +369,9 @@ The admitted current decision file uses one nonempty file-level `Provenance` fie
 - **Decision review package:** `bounded-file-set`
 - **Decision review status:** `findings_integrated`
 - **Decision review evidence / resolution:** `fresh no-context architecture_opinion requested two localized contract corrections; integrated preservation of concrete evidence for Accepted→Rejected, deterministic structural roadmap-link classes and explicit file-level provenance cardinality in dc66744b. Fresh no-context revalidation on 2026-09-24 returned approve_with_findings with no blockers; the sole low finding was this transient metadata cleanup. Direction approved as proportional, elegant, linear-cost and structurally sound.`
-- **Architecture adherence review:** `required after implementation before Completed`
-- **Adherence review status:** `not_run`
+- **Architecture adherence review:** `required`
+- **Adherence review status:** `no_material_findings`
+- **Adherence review evidence:** fresh no-context architecture review `/root/foundation_validator_arch_audit_v9` approved the exact 110-test snapshot on 2026-09-24 after strict-Markdown, outerless-table and lexical/resolved-confinement findings were integrated; SD-01..SD-10 remain adherent and proportional.
 
 ## Gate: Review Baseline Freeze
 
@@ -451,18 +466,18 @@ The admitted current decision file uses one nonempty file-level `Provenance` fie
 
 ### Local CI-Equivalent Suite Matrix
 
-| Repository | CI-Equivalent | Rationale |
-| --- | --- | --- |
-| Foundation | `n/a` | no repo-owned CI lane; do not claim CI equivalence |
+| Repository / CI Surface | Why In Scope | Behavior / Scenario Covered | Fixture / Seed / Runtime Preconditions | Local CI-Equivalent Command | Required Before (`APROVADO|Local-Implemented|promotion`) | Status (`planned|passed|blocked|waived|n/a`) | Evidence Artifact / Command | Notes |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Foundation documentary validator | local Foundation code/docs changed, but this repository owns no CI job | n/a — no repo-owned CI-equivalent surface exists | n/a | `n/a` | Local-Implemented | n/a | local CLI, 110 unittests and deterministic guards are validation evidence, not CI equivalence | do not claim CI equivalence; future CI adoption is a separate approved TODO |
 
 ### Local Validation Matrix
 
 | Behavior | Preconditions | Command | Status |
 | --- | --- | --- | --- |
-| live structure | canonical checkout | validator CLI | planned |
-| mutations | temporary fixtures | unittest discovery | planned |
-| syntax/no artifacts | delivered Python + `-B` | no-write compile | planned |
-| diff/process | final expected diff | Delphi guards | planned |
+| live structure | canonical checkout | validator CLI | passed |
+| mutations | independent temporary fixtures | unittest discovery | passed — 110 tests |
+| syntax/no artifacts | delivered Python + `-B` | no-write compile | passed — five files, no pyc/pyo |
+| diff/process | final expected diff | Delphi guards | passed so far — diff expectation go; completion/closeout rerun at final gate |
 
 ### Runtime / Rollout Notes
 
@@ -523,6 +538,19 @@ The admitted current decision file uses one nonempty file-level `Provenance` fie
 - **Evidence / reference:** `formal critique and two fresh revalidations on 2026-09-24; final position approve_with_findings; no critical/high/medium/blocking findings; performance, security, test-oracle independence, elegance and structural soundness accepted`
 - **Waiver authority / reference (required if waived):** `not applicable`
 
+| Finding ID | Resolution (`Integrated|Challenged|Deferred`) | Usefulness (`useful|noise|mixed|unknown`) | Formalizable (`yes|partial|no|unknown`) | Candidate Rule Level (`paced|project|none|unknown`) | Candidate Rule ID | Rationale / Evidence |
+| --- | --- | --- | --- | --- | --- | --- |
+| `CF-01` | Challenged | noise | no | none | `n/a` | lexical provenance hit; SD-07/OOS-03 exclude a toolchain-provenance subsystem while file-level decision provenance remains intentional metadata |
+| `FV-TQA-01..03` | Integrated | useful | yes | project | `T-01..T-13` | independent mutations and assertions integrated; superseded by exact-snapshot audit v10 |
+| `FV-ARCH-01..N` | Integrated | useful | yes | project | `SD-01..SD-10` | strict Markdown, owner and confinement findings integrated; superseded by architecture audit v9 |
+| `FV-FINAL-01..06` | Integrated | useful | yes | project | `SD-03` | entity/path/table/autolink/reference-definition bypasses closed with regressions |
+| `FV-FINAL-V3-01..05` | Integrated | useful | yes | project | `T-02,T-05,T-06,T-12` | multiline links, separators, CAP kernel and canonical aliases fail closed |
+| `FV-FINAL-V3-06` | Integrated | useful | yes | paced | `delivery-gates` | machine-checkable resolution rows and criterion-specific evidence normalized; final guards remain explicit until atomic closeout |
+| `FV-TQA-V8-01` | Integrated | useful | yes | project | `T-04,T-06` | state/evidence branch mutations and Open/terminal positive controls added |
+| `FV-ARCH-V7-01` | Integrated | useful | yes | project | `T-01` | canonical tables reject outerless GFM rows and duplicate tables |
+| `FV-ARCH-V8-01` | Integrated | useful | yes | project | `T-05` | normalized lexical and resolved confinement enforced independently |
+| `FV-TQA-V9-01` | Integrated | useful | yes | project | `T-06` | Accepted/Rejected/Superseded supported evidence forms have positive controls |
+
 ## Gate: Assumption Code Coherence
 
 - **Gate decision:** `required`
@@ -543,11 +571,11 @@ The admitted current decision file uses one nonempty file-level `Provenance` fie
 - **Execution authority:** `granted; normal todo_authority_guard outcome go on 2026-09-24`
 - **Prior tokens:** D-01..D-55 history is provenance only and does not authorize the replacement contract.
 - **Validation evidence:** exact `VALIDO SD-01..SD-10` received on 2026-09-24.
-- **Renewed approval required after gates:** exact `APROVADO`.
+- **Renewed approval rule:** not required for the approved package; only a material scope deviation requires renewed validation and `APROVADO`.
 
 ## Rules Acknowledgement / Ingestion
 
-Reloaded after `APROVADO` on 2026-09-24; execution remains conditional on the normal authority guard.
+Reloaded after `APROVADO` on 2026-09-24; the normal authority guard returned `go` before implementation.
 
 | Source | Why It Applies Now | Must Preserve | Must Avoid | Execution Impact |
 | --- | --- | --- | --- | --- |
@@ -578,45 +606,64 @@ Reloaded after `APROVADO` on 2026-09-24; execution remains conditional on the no
 
 ## Decision Adherence Validation
 
-| Decision Set | Status | Evidence |
-| --- | --- | --- |
-| `D-01..D-55` | retired-before-implementation | Git through `80aaab40`; user-directed simplification |
-| `SD-01..SD-10` | validated | exact `VALIDO SD-01..SD-10` received on 2026-09-24 |
+| Decision ID | Status (`Adherent`/`Exception`) | Evidence | Notes |
+| --- | --- | --- | --- |
+| `SD-01` | Adherent | parser admits only lifecycle, backlog, decision index/records and roadmap | history remains link-target-only |
+| `SD-02` | Adherent | section-anchored bootstrap tests for identifiers, authority table and five schemas/enums/transitions | no live IDs, row contents or counts copied |
+| `SD-03` | Adherent | read-only manifest tests, confinement probes and redacted/capped diagnostics | malformed or ambiguous Markdown fails closed |
+| `SD-04` | Adherent | exact Records grammar, root membership, global DEC uniqueness, provenance and positional evidence tests | successor topology remains review-owned |
+| `SD-05` | Adherent | roadmap requires resolvable Markdown module and completed-TODO links | semantic sufficiency remains review-owned |
+| `SD-06` | Adherent | stdlib-only CLI/parser and independent parser/CLI fixtures; 110 tests | no external dependency or shared oracle |
+| `SD-07` | Adherent | public surface is only `validate_foundation_lifecycle.py --root` | no production subprocess/runner/registry/attestation |
+| `SD-08` | Adherent | compatible legacy links/modules/secret checks passed once; rigid snapshots retired | transition documented under Legacy Check Transition |
+| `SD-09` | Adherent | normal TODO evidence, commits and guards only | publication/closeout remains normal Git workflow |
+| `SD-10` | Adherent | no `.github` or CI path in strict diff | CI future remains separately governed |
 
 ## Module Decision Consistency Validation
 
-| Module Decision | Planned Handling | Status |
-| --- | --- | --- |
-| `DEC-validator-adoption-trigger` | Preserve | planned |
-| `DEC-single-field-authority` | Preserve | planned |
-| `DEC-historical-adoption-boundary` | Preserve | planned |
-| `DEC-decision-effectiveness-after-consolidation` | Preserve | planned |
-| `DEC-immutable-lifecycle-identifiers` | Preserve | planned |
-| `DEC-provider-neutral-lifecycle-roles` | Preserve | planned |
+| Module Decision Ref | Planned Handling | Delivery Status (`Preserved|Superseded (Approved)|Regression`) | Evidence | Notes |
+| --- | --- | --- | --- | --- |
+| `DEC-validator-adoption-trigger` | satisfy with simple validator | Preserved | `evolution_lifecycle.md`; live CLI; strict diff | closeout retarget remains S-08 |
+| `DEC-single-field-authority` | derive from canonical owners | Preserved | parser contains schemas/enums only, no live rows/IDs/counts | owner graph explicit |
+| `DEC-historical-adoption-boundary` | scan only admitted live graph | Preserved | invalid completed history ignored while same live mutation fails | history is not authority |
+| `DEC-decision-effectiveness-after-consolidation` | enforce structural target/evidence mapping | Preserved | positional target/evidence and canonical-target tests | semantic effectiveness remains review-owned |
+| `DEC-immutable-lifecycle-identifiers` | enforce declared grammar | Preserved | BLG/DEC grammar and uniqueness mutations | declarations section-anchored |
+| `DEC-provider-neutral-lifecycle-roles` | avoid provider behavior | Preserved | no provider-specific implementation; module files unchanged | tooling remains an adapter |
 
 ## Pipeline/Copilot P1/P2 Preflight
 
-| Package | Focus | Status | Evidence |
-| --- | --- | --- | --- |
-| validator + tests + docs | false greens, parser fragility, scope creep | planned | fresh final review |
+| Reviewer Surface / Package | Review Focus | Status | Evidence Artifact / Command | Findings | Resolution / Notes |
+| --- | --- | --- | --- | --- | --- |
+| bounded validator + tests + docs diff | false greens, parser fragility, confinement and scope creep | passed | architecture audit v9 + test-quality audit v10; 110 tests; live CLI; diff guard | all implementation findings integrated; none remaining | fresh final no-context rerun remains the distinct closeout gate |
 
 ## Rule-Spirit Anti-Pattern Hunt
 
-| Principle | Search | Status |
-| --- | --- | --- |
-| single-field authority | live records/enums duplicated in Python | planned |
-| simplicity | runner/attestation/provenance/CI reintroduced | planned |
-| historical boundary | broad ignore hides live failure | planned |
-| fail-closed | invalid input returns zero/warning | planned |
-| strict diff | unrelated paths changed | planned |
+| Rule / Principle Surface | Bypass or Anti-Pattern Search Lens | Status | Evidence Artifact / Command | Findings | Resolution / Notes |
+| --- | --- | --- | --- | --- | --- |
+| single-field authority | live records/IDs/counts duplicated in Python | passed | parser inspection + architecture audit v9 | none | only structural schema/enums are bootstrapped |
+| simplicity | runner/attestation/provenance/CI reintroduced | passed | `bash <(sed 's/\r$//' delphi-ai/tools/rule_spirit_anti_pattern_scan.sh) --repo foundation_documentation --stack docker` exit 0; `Findings: 0` | none | one CLI, parser and tests only; CR-stripped read-only invocation works around pre-existing wrapper line endings |
+| historical boundary | broad ignore hides live failure | passed | paired excluded-history/live-owner mutations | none | explicit graph stays authoritative |
+| fail-closed | invalid input returns zero/warning | passed | 110 tests + independent adversarial probes | none remaining | ambiguous unsupported Markdown is rejected |
+| strict diff | unrelated paths changed | passed | `python3 delphi-ai/tools/todo_diff_expectation_guard.py --repo-root foundation_documentation foundation_documentation/todos/active/process/TODO-foundation-lifecycle-structural-validator.md` exit 0 with `Overall outcome: go` | none | 12 classified changed paths, 0 forbidden/unclassified |
 
 ## Promotion Finding Routing Ledger
 
-| Finding ID | Severity | Classification | Routing Decision | Same TODO / Split Rationale | Status | Approval / Follow-up Reference |
+| Finding ID | Finding Source | Severity | Classification | Required Action | Status | Rationale / Follow-up Reference |
 | --- | --- | --- | --- | --- | --- | --- |
-| `PR-01` | medium | by-design/no-action | retain simplified structural core | belongs to SD-01..SD-06/SD-08 | retained-simplified | user validations on 2026-09-24 |
-| `PR-02` | high | by-design/no-action | retire D-25..D-55 infrastructure | reopen only under separate demonstrated need | retired-before-implementation | user-directed reduction |
-| `PR-03` | high | release-blocker | replace overengineered baseline with SD-01..SD-10 | same TODO because correction precedes implementation | integrated | `VALIDO SD-01..SD-10 POS-REVIEW` |
+| `PR-01` | planning review | medium | by-design/no-action | retain simplified structural core | accepted | SD-01..SD-10 validations on 2026-09-24 |
+| `PR-02` | user-directed reduction | high | by-design/no-action | keep D-25..D-55 retired | accepted | reopen only under separate demonstrated need |
+| `PR-03` | pre-approval review | high | release-blocker | replace overengineered baseline | fixed | `VALIDO SD-01..SD-10 POS-REVIEW` |
+| `FV-TQA-01..03` | independent test-quality audits | medium/high | release-blocker | close false-green and mutation-evidence gaps in current TODO | fixed | test-quality v5 approved frozen 84-test package |
+| `FV-ARCH-01..N` | architecture adherence adversarial review | medium/high | release-blocker | make narrow Markdown/source graph fail closed without scope expansion | fixed | architecture audit v4 approved with no material findings |
+| `FV-FINAL-01..06` | first final-review lane | medium/high | release-blocker | close entity, unsafe-path, table-cell, autolink and reference-definition bypasses | fixed | 96-test intermediate package; superseded by later exact-snapshot reviews |
+| `FV-FINAL-V3-01..05` | correctly routed final review v3 | high/P2 | release-blocker | close multiline-link, non-CommonMark-separator, CAP-kernel and canonical-alias gaps; refresh audits | fixed | parser/tests now cover each case; audits v9/v10 approve 110-test snapshot |
+| `FV-FINAL-V3-06` | correctly routed final review v3 | P2 | release-blocker | complete finding ledger, verification-debt and deterministic closeout evidence | fixed | machine-checkable ledger and criterion-specific evidence normalized; final/debt guards remain ordinary closeout gates |
+| `FV-TQA-V8-01` | test-quality audit v8 | high | release-blocker | add independent state/evidence branch mutations | fixed | invalid decision/roadmap states, Open, Proposed and Rejected branches covered |
+| `FV-ARCH-V7-01` | architecture audit v7 | high | release-blocker | fail closed on outerless GFM canonical rows/tables | fixed | owner rows and duplicate-table mutation coverage; audit v9 approval |
+| `FV-ARCH-V8-01` | architecture audit v8 | high | release-blocker | require lexical and resolved root confinement independently | fixed | three owner leave/reenter mutations; audit v9 approval |
+| `FV-TQA-V9-01` | test-quality audit v9 | medium | release-blocker | add positive terminal-state evidence controls | fixed | Accepted/Rejected/Superseded PENDING/concrete matrix; audit v10 approval |
+| `FV-FINAL-V4-01` | final review v4 | P2 | release-blocker | replace planned-sounding strict-diff evidence with concrete result | fixed | exact command records 12 classified paths, 0 forbidden/unclassified and guard `go` |
+| `FV-FINAL-V4-02` | final review v4 | low/P2 | release-blocker | remove stale live pending-decision heading | fixed | heading now reflects frozen Simplified Replacement Decision Set |
 
 ## Security Risk Assessment
 
@@ -644,19 +691,20 @@ Reloaded after `APROVADO` on 2026-09-24; execution remains conditional on the no
 ## Verification Debt Assessment
 
 - **Audit decision:** `required because complexity=medium`
-- **Audit status:** `not_run`
+- **Audit status:** `no_material_findings`
 - **Why:** parser/rules can create false-green debt.
-- **Evidence / audit artifact:** `pending implementation`
-- **Accepted residual debt:** `none planned`
+- **Evidence / audit artifact:** `verification_debt_audit.sh --scan-git-modified` executed through read-only CRLF normalization on 2026-09-24; heuristic `high` was manually adjudicated as the three explicit atomic-closeout items plus governed `TODO`/`PENDING` vocabulary in historical/templates, not hidden verification debt. Exact-snapshot architecture audit v9, test-quality audit v10, 110/110 tests and finding carry-forward extraction are green.
+- **Inline code TODO debt:** `none`; the three deterministic-source matches are the required literal lifecycle schema phrase `immutable TODO path`, not debt markers.
+- **Accepted residual debt:** `none`
 
 ## Independent Test Quality Audit Gate
 
 - **Audit decision:** `required`
 - **Why this decision:** trust depends on independent mutations/negative assertions.
 - **Trigger signals in scope:** `complexity=medium; touches_tests=yes; fail-closed enforcement`
-- **Audit status:** `not_run`
-- **Findings summary:** `pending implementation`
-- **Evidence / reference:** `pending delivery audit`
+- **Audit status:** `no_material_findings`
+- **Findings summary:** all T-01..T-13 areas substantive; prior membership, provenance, positional evidence, strict-Markdown and assertion-strength gaps integrated; no skips, bypasses or weak status-only assertions remain.
+- **Evidence / reference:** `/root/foundation_validator_test_audit_v10`; exact current snapshot approved; live CLI and 110/110 tests passed on 2026-09-24.
 - **Waiver authority / reference (required if waived):** `not applicable`
 
 ## Independent No-Context Final Review Gate
@@ -665,17 +713,25 @@ Reloaded after `APROVADO` on 2026-09-24; execution remains conditional on the no
 - **Why this decision:** shared structural enforcement needs post-implementation challenge.
 - **Package mode:** `bounded-file-set`
 - **Review isolation mode:** `fresh internal no-context reviewer`
-- **Final review status:** `not_run`
-- **Findings summary:** `pending implementation`
-- **Evidence / reference:** `pending delivery review`
+- **Final review status:** `findings_integrated`
+- **Findings summary:** final-review blockers through FV-FINAL-V3-06 were integrated within the approved parser/test/evidence boundary; a fresh clean verdict is still required.
+- **Evidence / reference:** `/root/foundation_validator_final_review` and `/root/foundation_validator_final_review_v3`; remediation proven by 110-test package and exact-snapshot audits v9/v10; clean rerun pending.
 - **Waiver authority / reference (required if waived):** `not applicable`
+
+| Finding ID | Resolution (`Integrated|Challenged|Deferred`) | Usefulness (`useful|noise|mixed|unknown`) | Formalizable (`yes|partial|no|unknown`) | Candidate Rule Level (`paced|project|none|unknown`) | Candidate Rule ID | Rationale / Evidence |
+| --- | --- | --- | --- | --- | --- | --- |
+| `FV-FINAL-01..06` | Integrated | useful | yes | project | `SD-03` | entity/path/table/autolink/reference-definition bypasses closed with mutations |
+| `FV-FINAL-V3-01..05` | Integrated | useful | yes | project | `T-02,T-05,T-06,T-12` | multiline links, separators, CAP kernel and canonical aliases fail closed |
+| `FV-FINAL-V3-06` | Integrated | useful | yes | paced | `delivery-gates` | resolution/evidence contracts normalized; clean rerun remains required before closeout |
+| `FV-FINAL-V4-01` | Integrated | useful | yes | paced | `completion-evidence` | strict-diff evidence states the concrete guard result without planned vocabulary |
+| `FV-FINAL-V4-02` | Integrated | useful | yes | project | `SD-01..SD-10` | stale pending-decision heading renamed to match the frozen decision set |
 
 ## TODO Closeout Disposition
 
 - **Disposition:** `keep-active`
-- **Disposition reason:** all pre-approval reviews and deterministic guards are green; explicit `APROVADO` is the only remaining authority gate.
-- **Post-commit/push status:** approval-ready baseline is published at `foundation_documentation:main@e3642929`; final green guard evidence is local pending publication.
-- **Next path/status action:** publish approval-ready evidence and request exact `APROVADO`.
+- **Disposition reason:** implementation and exact-snapshot architecture/test-quality audits are complete; final review, verification-debt and atomic closeout gates remain.
+- **Post-commit/push status:** implementation evidence is uncommitted and unpublished.
+- **Next path/status action:** run required delivery gates and reviews before any closeout action.
 
 ## Commands
 
@@ -688,7 +744,7 @@ Reloaded after `APROVADO` on 2026-09-24; execution remains conditional on the no
 ### Planned implementation validation
 
 - `python3 foundation_documentation/deterministic/validate_foundation_lifecycle.py --root foundation_documentation`
-- `python3 -m unittest discover -s foundation_documentation/deterministic/tests -p 'test_*.py'`
+- `PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=foundation_documentation/deterministic python3 -m unittest discover -s foundation_documentation/deterministic/tests -p 'test_*.py'`
 - `git -C foundation_documentation diff --check`
 
 ## Files Expected

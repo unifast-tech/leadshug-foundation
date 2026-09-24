@@ -24,6 +24,10 @@ O produto usa NestJS 11, React 18/Vite 5, PostgreSQL 16 com Prisma 6, Docker e R
 
 Todo desenvolvimento deve possuir um TODO ativo aprovado antes da implementação.
 
+## Validação estrutural do lifecycle
+
+O controle local e somente leitura do grafo vivo do lifecycle é [`deterministic/validate_foundation_lifecycle.py`](deterministic/validate_foundation_lifecycle.py). Ele não aprova TODOs, não avalia qualidade semântica e não substitui revisão humana. Uso, limites, saída e o comando de testes estão em [`deterministic/README.md`](deterministic/README.md).
+
 ## Divisão de autoridade
 
 `leadshug-engineering` é a autoridade de prática de engenharia: fornece regras, workflows e guardas reutilizáveis. Este repositório é a autoridade de produto e governança: mantém TODOs aprovados, contratos, decisões, critérios de aceite e o histórico de execução. A autoridade humana de decisão aprova escopo material; o strategic steward mantém a coerência sistêmica; o module owner mantém verdade local; o TODO owner/executor mantém execução/evidência; e o assurance reviewer revisa independentemente. Ferramentas e agentes concretos são adapters desses papéis. Nenhum fluxo deve contornar essas autoridades para implementar trabalho registrado aqui.

@@ -8,6 +8,8 @@ This index is the canonical home for durable decision rationale, provenance, alt
 
 New decision records use an immutable `DEC-<slug>` ID and identify the question, alternatives, rationale, evidence/provenance, state, and named canonical targets. Lifecycle state definitions and transitions live in [`../evolution_lifecycle.md`](../evolution_lifecycle.md).
 
+`## Records` indexes every current root-level decision record in this directory exactly once; historical and completed material is not admitted as a current decision owner. Each indexed record has one nonempty file-level `Provenance` field, and its decision table keeps one positional target-consolidation-evidence segment per named canonical target.
+
 An `Accepted` decision is effective only after its named canonical targets are consolidated. Until then it records a chosen direction but does not override those targets. A superseded decision retains its provenance and links its immutable successor.
 
 ## Records
