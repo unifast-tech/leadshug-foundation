@@ -35,12 +35,12 @@ O lifecycle da Foundation exige um validator permanente quando backlog, decisõe
 - **Current delivery stage:** `Pending`
 - **Tactical TODO lifecycle state:** `Review`
 - **Qualifiers:** `none`
-- **Next exact step:** capturar/publicar o replacement freeze de `D-01..D-46` e executar os gates formais pós-freeze antes de solicitar `APROVADO`.
+- **Next exact step:** executar arquitetura, crítica independente, audit-floor, assumption coherence, scope drift e authority preflight sobre o replacement freeze publicado antes de solicitar `APROVADO`.
 
 ## Active Work State
 
 - **Work state:** `review`
-- **Why this state now:** R-11 convergiu e Gabriel/user validou integralmente `D-01..D-46` em 2026-09-24; replacement freeze/publicação e gates formais estão em andamento.
+- **Why this state now:** R-11 convergiu, Gabriel/user validou `D-01..D-46` e o replacement freeze `3f351daf` foi publicado; gates formais pós-freeze estão em andamento.
 - **Exit condition:** decisões validadas, baseline congelada/publicada, reviews e guards pré-aprovação verdes, seguidos de `APROVADO` explícito ou cancelamento com racional.
 
 ## Trigger Evidence
@@ -402,7 +402,7 @@ Placeholder tokens are the whole-segment, case-insensitive set `PENDING|N/A|TBD|
 ## Decision Baseline
 
 - **Prior freezes:** `D-01..D-08@b685fb52` invalidated by `AR-01..05/F-01..11`; `D-01..D-10@504a9785` invalidated by `AR-R01..AR-R05/F-12..F-17`; `D-01..D-11@2562f62e` invalidated by `AR-F01..AR-F05/F-18..F-21`; `D-01..D-14@e26d7183` invalidated by `AR-N01/F-22..F-24`; `D-01..D-17@3dce63b3` invalidated by `C2-F01/C2-F02/C2-F04`; `D-01..D-20@0cd991e6` invalidated by `C3-F01..C3-F03`.
-- **Freeze status:** `frozen — D-01..D-46 validated; replacement freeze commit pending capture/publication`
+- **Freeze status:** `frozen and published — D-01..D-46@3f351daff331d2c0c4a49f09823f636e9469fbf7`
 - **Frozen decisions:** `D-01..D-46`
 - **Current validation evidence:** Gabriel/user, 2026-09-24, exact phrase `VALIDO D-01..D-46`; validates the complete R-11-converged replacement set and does not grant implementation authority.
 - **Prior validation evidence:** Gabriel/user, 2026-09-24, exact phrase `VALIDO D-01..D-20`; preserved as provenance but superseded by the complete D-01..D-46 validation.
@@ -490,11 +490,11 @@ Placeholder tokens are the whole-segment, case-insensitive set `PENDING|N/A|TBD|
 - **Why this decision:** TODO medium de architecture enforcement requer pacote estável/publicado antes da crítica.
 - **Trigger stage:** `after final converged decision-set validation and before renewed planning-side reviews`
 - **Baseline branch:** `main`
-- **Baseline commit:** `0cd991e61ff4d8ed1ff495c62113227db9c9f730`
-- **Baseline push reference:** `origin/main contains 0cd991e61ff4d8ed1ff495c62113227db9c9f730; freeze bookkeeping published through 3a4e6e956070d8612540afe23adda81e8bfbb3cb`
-- **Gate status:** `not_run`
-- **Findings summary:** published D-01..D-20 freeze was invalidated; R-11 satisfied pre-freeze convergence with three clean exploratory reviewers over provisional D-01..D-46.
-- **Evidence / reference:** commits `0cd991e61ff4d8ed1ff495c62113227db9c9f730` and `3a4e6e956070d8612540afe23adda81e8bfbb3cb`, pushed to origin/main on 2026-09-24.
+- **Baseline commit:** `3f351daff331d2c0c4a49f09823f636e9469fbf7`
+- **Baseline push reference:** `origin/main contains 3f351daff331d2c0c4a49f09823f636e9469fbf7`
+- **Gate status:** `no_material_findings`
+- **Findings summary:** D-01..D-46 were validated after R-11 clean convergence, committed without implementation and published before formal planning-side review dispatch.
+- **Evidence / reference:** commit `3f351daff331d2c0c4a49f09823f636e9469fbf7`, pushed to `origin/main` on 2026-09-24.
 - **Waiver authority / reference:** `n/a`
 
 ## Gate: Review Scope Drift
@@ -666,7 +666,7 @@ Placeholder tokens are the whole-segment, case-insensitive set `PENDING|N/A|TBD|
 
 ## Plan Review Gate
 
-- **Status:** `decision set validated — D-01..D-46 frozen pending commit capture/publication and formal gates`
+- **Status:** `decision set frozen/published — formal post-freeze gates running`
 - **Required lenses:** Architecture, Code Quality, Tests, Performance, Security, Elegance, Structural Soundness.
 - **Expected focus:** evitar parser frágil, catálogo duplicado, cobertura superficial, bypass histórico e expansão para CI.
 
@@ -1060,9 +1060,9 @@ Predeclared for pre-approval readiness; reload and bind after `APROVADO`.
 ## TODO Closeout Disposition
 
 - **Disposition:** `keep-active`
-- **Disposition reason:** R-11 satisfied the user-directed convergence criterion with no new approval-material decision; TODO remains active awaiting validation/freeze/formal gates/approval.
-- **Post-commit/push status:** R-11 clean convergence bookkeeping is local pending validation/publication checks; no implementation claim.
-- **Next path/status action:** publish R-11 bookkeeping and obtain `VALIDO D-01..D-46`; then freeze/publish the baseline and run formal gates before requesting `APROVADO`.
+- **Disposition reason:** D-01..D-46 are validated and frozen/published; TODO remains active for formal planning gates and renewed approval.
+- **Post-commit/push status:** replacement freeze `3f351daf` is on `origin/main`; no implementation claim.
+- **Next path/status action:** complete formal gates on the published freeze and request `APROVADO` only if all blockers are resolved.
 
 ## Commands
 
