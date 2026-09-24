@@ -174,7 +174,7 @@ Preencher somente se o guard retornar `no-go`; qualquer novo path ou change type
 
 - **Decision:** `required only for publication/Production-Ready; not needed for local implementation`
 - **Rationale:** parser/tests usam apenas arquivos locais, mas freeze e closeout exigem `origin/main`; GitHub/origin deve estar acessível e sincronizado antes dessas alegações.
-- **Current evidence:** `origin/main` contains the validated `D-01..D-17` freeze commit `3dce63b31268ad5abbd1499f8851af5a7e0241a2` and bookkeeping through `29688bb3b76d00c2de60d6f2e6437a83680e733b`.
+- **Current evidence:** `origin/main` contains the historical `D-01..D-17` freeze and the expanded pending-validation `D-01..D-20` contract through `0295779685ece54067181626e0c2a670724c17f2`; validation must precede its replacement freeze.
 
 ## Profile Scope & Handoffs
 
@@ -828,8 +828,8 @@ Predeclared for pre-approval readiness; reload and bind after `APROVADO`.
 
 - **Disposition:** `keep-active`
 - **Disposition reason:** substantive review findings were integrated as `D-18..D-20`; the expanded set requires renewed human validation, replacement freeze and affected fresh reviews.
-- **Post-commit/push status:** D-01..D-17 freeze was published/reviewed; D-18..D-20 are integrated locally pending publication and validation; no implementation claim.
-- **Next path/status action:** publish the integrated review state, obtain renewed validation of `D-01..D-20`, publish a replacement freeze and rerun affected planning-side gates; no implementation before a later post-gate `APROVADO` and authority guard `go`.
+- **Post-commit/push status:** D-01..D-17 freeze was published/reviewed; D-18..D-20 are integrated and published through `02957796` pending validation; no implementation claim.
+- **Next path/status action:** obtain renewed validation of `D-01..D-20`, publish a replacement freeze and rerun affected planning-side gates; no implementation before a later post-gate `APROVADO` and authority guard `go`.
 
 ## Commands
 
