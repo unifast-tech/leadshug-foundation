@@ -34,14 +34,14 @@ Create one Python standard-library CLI with a small parser module and focused un
 ## Delivery Status Canon
 
 - **Current delivery stage:** `Pending`
-- **Tactical TODO lifecycle state:** `Review`
+- **Tactical TODO lifecycle state:** `In-Progress`
 - **Qualifiers:** `none`
-- **Next exact step:** obtain exact `APROVADO`, record approval/rule ingestion, rerun the normal authority guard and only then begin implementation.
+- **Next exact step:** execute the approved validator test-first in the principal checkout, then run delivery gates.
 
 ## Active Work State
 
-- **Work state:** `review`
-- **Why this state now:** architecture/critique, assumption coherence, scope drift and authority preflight are green; explicit implementation approval is the remaining gate.
+- **Work state:** `implementation`
+- **Why this state now:** the user supplied exact `APROVADO`, rules/package evidence are loaded and the normal authority guard returned `go`.
 - **Exit condition:** simplified decisions validated/frozen, pre-approval gates green, explicit `APROVADO`, implementation/evidence complete, and TODO promoted to `completed/`.
 
 ## Trigger Evidence
@@ -179,6 +179,14 @@ Any unclassified path blocks delivery until classified as scope deviation, neces
 - Python 3 and Git are existing local prerequisites.
 - No network, hosted service, external package or sibling-repository runtime dependency is required.
 - Delphi guards remain external workflow tools and are not imported or executed by validator code.
+
+## Package-First Assessment
+
+- **Queries executed:** `bash delphi-ai/tools/query_packages.sh --project-root /mnt/c/unifast/leadshug/leadshug_now_docker --search "markdown validator"`; same command with `--search "foundation"`.
+- **Relevant packages found:** `none` in local or ecosystem registries.
+- **READMEs read:** `none required`.
+- **Decision:** local Foundation implementation in the approved `deterministic/` surface; no new proprietary or external package.
+- **Rationale:** the bounded grammar is Foundation-specific and Python stdlib is frozen by SD-06.
 
 ## Profile Scope & Handoffs
 
@@ -529,17 +537,17 @@ The admitted current decision file uses one nonempty file-level `Provenance` fie
 
 ## Approval
 
-- **Approved by:** `pending`
-- **Approval scope:** `ready for explicit APROVADO: implement only the SD-01..SD-10 Foundation validator/tests/directly affected docs boundary`
+- **Approved by:** `user on 2026-09-24 with exact token APROVADO`
+- **Approval scope:** `implement only the validated SD-01..SD-10 Foundation validator, focused tests and directly affected canonical Foundation docs declared by the strict diff contract`
 - **Execution not authorized by approval:** `CI/CD, product/runtime, Delphi changes, worktrees, attestation/provenance/runner infrastructure`
-- **Execution authority:** `not_granted`
+- **Execution authority:** `granted; normal todo_authority_guard outcome go on 2026-09-24`
 - **Prior tokens:** D-01..D-55 history is provenance only and does not authorize the replacement contract.
 - **Validation evidence:** exact `VALIDO SD-01..SD-10` received on 2026-09-24.
 - **Renewed approval required after gates:** exact `APROVADO`.
 
 ## Rules Acknowledgement / Ingestion
 
-Predeclared for readiness; reload after `APROVADO`.
+Reloaded after `APROVADO` on 2026-09-24; execution remains conditional on the normal authority guard.
 
 | Source | Why It Applies Now | Must Preserve | Must Avoid | Execution Impact |
 | --- | --- | --- | --- | --- |
@@ -560,7 +568,7 @@ Predeclared for readiness; reload after `APROVADO`.
 - **Selected effort:** `medium`
 - **Proof mode:** `declared`
 - **Exception reason:** `n/a`
-- **Subagent / delegation authorization:** `not-requested before APROVADO`
+- **Subagent / delegation authorization:** `authorized by APROVADO against the published routine-executor implementation plan on 2026-09-24`
 - **Execution topology:** `primary-checkout-single-writer`
 - **Worktree / auxiliary-checkout authorization:** `not-authorized`
 - **Worktree authorization evidence:** `n/a`
