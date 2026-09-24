@@ -173,7 +173,7 @@ Preencher somente se o guard retornar `no-go`; qualquer novo path ou change type
 
 - **Decision:** `required only for publication/Production-Ready; not needed for local implementation`
 - **Rationale:** parser/tests usam apenas arquivos locais, mas freeze e closeout exigem `origin/main`; GitHub/origin deve estar acessível e sincronizado antes dessas alegações.
-- **Current evidence:** `origin/main@490096774f22fd2fe7c97a88274ca179747d4266` contains the validated `D-01..D-11` replacement freeze.
+- **Current evidence:** `origin/main` contains the reviewed `D-01..D-11` freeze and the expanded pending-validation contract through `80e03cdebcf69af63bff410bd7f6e551e5762639`; revalidate the exact head before the next freeze.
 
 ## Profile Scope & Handoffs
 
@@ -787,7 +787,7 @@ Predeclared for pre-approval readiness; reload and bind after `APROVADO`.
 
 - **Disposition:** `keep-active`
 - **Disposition reason:** material review findings were integrated; revised decisions require renewed human validation, refreeze and fresh reviews.
-- **Post-commit/push status:** `D-01..D-11 full-owner review completed with material findings; expanded D-01..D-14 not yet frozen; no implementation claim`
+- **Post-commit/push status:** `D-01..D-11 full-owner review completed; expanded D-01..D-14 contract published pending validation and not frozen; no implementation claim`
 - **Next path/status action:** obtain renewed validation of `D-01..D-14`, publish a replacement freeze and rerun all planning-side gates with the full owner package; no implementation before a later post-gate APROVADO and authority guard `go`.
 
 ## Commands
