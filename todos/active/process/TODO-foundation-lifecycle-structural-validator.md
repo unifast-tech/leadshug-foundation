@@ -35,12 +35,12 @@ O lifecycle da Foundation exige um validator permanente quando backlog, decisõe
 - **Current delivery stage:** `Pending`
 - **Tactical TODO lifecycle state:** `Review`
 - **Qualifiers:** `none`
-- **Next exact step:** anexar o fechamento executável Delphi D-55 ao pacote R-17, refinar disponibilidade de regeneração em D-54, publicar e executar R-17 até nenhum reviewer descobrir decisão approval-material nova.
+- **Next exact step:** obter uma única validação humana exata `VALIDO D-01..D-55`; somente então congelar/publicar a replacement baseline e rerodar os gates formais pré-APROVADO.
 
 ## Active Work State
 
 - **Work state:** `review`
-- **Why this state now:** D-55 foi publicada em `71f34fb1`; R-16 confirmou a identidade, mas exigiu bytes executáveis reviewable e qualificou regeneração permanente pela disponibilidade do objeto aprovado. O apêndice R-17 precede validação; implementação continua proibida.
+- **Why this state now:** R-17 convergiu nas três lanes sem nova decisão approval-material e aceitou explicitamente o apêndice Delphi D-55; falta somente a validação humana do conjunto completo antes do replacement freeze. Implementação continua proibida.
 - **Exit condition:** decisões validadas, baseline congelada/publicada, reviews e guards pré-aprovação verdes, seguidos de `APROVADO` explícito ou cancelamento com racional.
 
 ## Trigger Evidence
@@ -429,7 +429,7 @@ Placeholder tokens are the whole-segment, case-insensitive set `PENDING|N/A|TBD|
 ## Decision Baseline
 
 - **Prior freezes:** `D-01..D-08@b685fb52` invalidated by `AR-01..05/F-01..11`; `D-01..D-10@504a9785` invalidated by `AR-R01..AR-R05/F-12..F-17`; `D-01..D-11@2562f62e` invalidated by `AR-F01..AR-F05/F-18..F-21`; `D-01..D-14@e26d7183` invalidated by `AR-N01/F-22..F-24`; `D-01..D-17@3dce63b3` invalidated by `C2-F01/C2-F02/C2-F04`; `D-01..D-20@0cd991e6` invalidated by `C3-F01..C3-F03`; `D-01..D-46@3f351daf` invalidated by `ARCH-POSTFREEZE-01/F-27..F-29`.
-- **Freeze status:** `invalidated — provisional D-01..D-55 must reconverge and receive a new full-set validation`
+- **Freeze status:** `invalidated — D-01..D-55 reconverged in R-17 and require new full-set validation before replacement freeze`
 - **Frozen decisions:** `none current; prior D-01..D-46 retained as provenance`
 - **Current validation evidence:** `pending after convergence of D-01..D-55`.
 - **Prior validation evidence:** Gabriel/user, 2026-09-24, exact phrase `VALIDO D-01..D-46`; preserved as provenance but superseded by material formal-gate findings that introduced `D-47..D-50`.
@@ -484,7 +484,7 @@ Placeholder tokens are the whole-segment, case-insensitive set `PENDING|N/A|TBD|
 - **Decision review kind:** `architecture_opinion`
 - **Decision review package:** `bounded-file-set`
 - **Decision review status:** `findings_integrated`
-- **Decision review evidence / resolution:** R-16 fresh architecture review over package SHA-256 `647e8434f7037e3f3945d2ea070bd1520d0c9c67063a9561006655ac4f030bbd` at published head `71f34fb1`, 2026-09-24, found no approval-material architecture issue. Critiques required embedded external executable bytes and conditional regeneration, so an extended R-17 package and post-freeze rerun remain required.
+- **Decision review evidence / resolution:** R-17 fresh architecture review over extended package SHA-256 `9ce61a37e226dbc2ddd6e409a198be67671c8f4144be0bc3c2f57d3a46b8cb12` at published head `6bc0be28`, 2026-09-24, found no new approval-material decision and explicitly accepted the embedded D-55 seven-file Delphi closure for commit/tree `9ba43e8.../d44d5d06...`. Exploratory convergence is clean; formal post-freeze rerun remains required.
 
 | Finding ID | Resolution | Usefulness | Formalizable | Candidate Rule Level | Candidate Rule ID | Rationale / Evidence |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -544,7 +544,7 @@ Placeholder tokens are the whole-segment, case-insensitive set `PENDING|N/A|TBD|
 
 ## Questions To Close
 
-- `none for the human while the autonomous convergence cycle runs; after a clean round, request one exact full-set token for D-01..D-55`
+- `one human action remains: exact token VALIDO D-01..D-55; it validates decisions only and does not authorize implementation`
 
 ## Pre-Freeze Decision Convergence Cycle
 
@@ -572,7 +572,7 @@ Placeholder tokens are the whole-segment, case-insensitive set `PENDING|N/A|TBD|
 | `R-14` | `11e6c5af`; package `1d24eb16...` | clean | bookkeeping `R14-CRIT1-01` | `R14-CRIT2-01` + bookkeeping `R14-CRIT2-02` | refine `D-38/D-45`; disable Git replacement objects in all object-read paths | integrated; next round required |
 | `R-15` | `a8c371ac`; package `f0f01758...` | bookkeeping `R15-ARCH-01` | `R15-CRIT1-01` + bookkeeping `R15-CRIT1-02` | bookkeeping `R15-CRIT2-01` | add `D-55`; freeze exact reviewed Delphi commit/tree for Registry-v1 | integrated; next round required |
 | `R-16` | `71f34fb1`; package `647e8434...` | clean | `R16-CRIT1-01..03` | `R16-CRIT2-01..02` | refine `D-54/D-55`; require embedded Delphi closure/disposition and qualify regeneration availability | integrated; next round required |
-| `R-17` | `origin/main at dispatch; exact commit + package SHA captured before review` | pending | pending | pending | no outcome yet | convergence round required with extended Delphi appendix |
+| `R-17` | `6bc0be28`; package `9ce61a37...` | clean; Delphi closure accepted | clean; Delphi closure accepted; bookkeeping `R17-CRIT1-01` | clean; Delphi closure accepted | no new approval-material decision; exact external executable trust root accepted | converged; request full-set validation |
 
 ## Assumptions Preview
 
@@ -719,7 +719,7 @@ Each checkpoint is serialized in the principal checkout, records evidence in thi
 
 ## Plan Review Gate
 
-- **Status:** `R-15 finding being integrated as D-55 — D-01..D-55 reconvergence running; prior freeze invalidated`
+- **Status:** `R-17 clean convergence — D-01..D-55 awaiting one renewed human validation; prior freeze invalidated`
 - **Required lenses:** Architecture, Code Quality, Tests, Performance, Security, Elegance, Structural Soundness.
 - **Expected focus:** evitar parser frágil, catálogo duplicado, cobertura superficial, bypass histórico e expansão para CI.
 
@@ -812,9 +812,9 @@ Each checkpoint is serialized in the principal checkout, records evidence in thi
 
 ## Additional Architectural Opinions
 
-- **Needed:** `R-17 extended-package reconvergence with the exact D-55 seven-file Delphi appendix; formal architecture/critique reruns remain required after replacement validation and freeze`
-- **Why ambiguity remains:** `reviewers must explicitly accept or reject the embedded external executable bytes, not only their hashes`.
-- **Opinion count:** `R-01 through R-16 complete; R-17 pending`
+- **Needed:** `no additional exploratory opinion; formal architecture/critique reruns remain required after replacement validation and freeze`
+- **Why ambiguity remains:** `none approval-material after R-17; implementation evidence remains deferred until validation, freeze, formal gates and APROVADO`.
+- **Opinion count:** `R-01 through R-17 complete; R-17 architecture + critique A + critique B all clean for decision convergence`
 - **Package mode:** `bounded-file-set`
 - **Internal reviewer mandate:** `required after freeze; reviewer cannot implement`
 - **Required lenses:** `correctness|performance|elegance|structural-soundness|operational-fit`
@@ -852,7 +852,7 @@ Each checkpoint is serialized in the principal checkout, records evidence in thi
 - **Audit session / round evidence:** `n/a unless triggered`
 - **Critique lenses:** `correctness|performance|elegance|structural-soundness|risk`
 - **Critique status:** `findings_integrated`
-- **Findings summary:** R-16 architecture was clean; both critiques agreed that D-55 hashes lacked reviewable executable bytes, critique A also qualified permanent regeneration availability, and both found stale bookkeeping. D-54/D-55, package minimums and T-48/T-49 are refined; fresh extended R-17 convergence and post-freeze critique remain required.
+- **Findings summary:** R-17 architecture and both critiques found no new approval-material decision and explicitly accepted the exact embedded D-55 Delphi closure. `R17-CRIT1-01` was low-severity bookkeeping and is reconciled. Exploratory convergence is clean; renewed validation and formal post-freeze critique remain required.
 - **Resolution ledger:** prior findings are recorded individually below for deterministic carry-forward.
 
 | Finding ID | Resolution (`Integrated|Challenged|Deferred`) | Usefulness (`useful|noise|mixed|unknown`) | Formalizable (`yes|partial|no|unknown`) | Candidate Rule Level (`paced|project|none|unknown`) | Candidate Rule ID | Rationale / Evidence |
@@ -909,8 +909,9 @@ Each checkpoint is serialized in the principal checkout, records evidence in thi
 | `R16-CRIT1-01/R16-CRIT2-01` | Integrated | useful | yes | project | `external-executable-review-package-completeness` | accepting packages must embed the exact seven-file Delphi closure, hashes and explicit reviewer disposition; pending reconvergence/revalidation |
 | `R16-CRIT1-02` | Integrated | useful | partial | project | `versioned-registry-dependency-retention` | permanent decode/verify is guaranteed while regeneration is explicitly conditional on locally available approved Delphi objects; pending reconvergence/revalidation |
 | `R16-CRIT1-03/R16-CRIT2-02` | Integrated | useful | yes | paced | `review-package-current-state-coherence` | lifecycle/status fields reconciled to published R-16 outcome and extended R-17 next step |
+| `R17-CRIT1-01` | Integrated | useful | yes | paced | `review-package-current-state-coherence` | Plan Review and closeout summaries reconciled to completed R-16 refinements and clean R-17 convergence |
 
-- **Evidence / reference:** R-16 critiques over package SHA-256 `647e8434f7037e3f3945d2ea070bd1520d0c9c67063a9561006655ac4f030bbd` at published head `71f34fb1`, 2026-09-24; both reported `material_findings_present; approval_not_ready` because the bounded package omitted the executable appendix.
+- **Evidence / reference:** R-17 critiques over extended package SHA-256 `9ce61a37e226dbc2ddd6e409a198be67671c8f4144be0bc3c2f57d3a46b8cb12` at published head `6bc0be28`, 2026-09-24; both explicitly accepted the exact Delphi closure and reported no approval-material finding.
 - **Waiver authority / reference:** `n/a`
 
 ## Gate: Assumption Code Coherence
@@ -934,7 +935,7 @@ Each checkpoint is serialized in the principal checkout, records evidence in thi
 - **Execution authority:** `not_granted`
 - **Pre-gate human token:** Gabriel/user, 2026-09-23, `APROVADO`; it validated the superseded `D-01..D-08` only. Material findings require renewed validation and a new post-gate `APROVADO`.
 - **Renewed validation token:** Gabriel/user, 2026-09-23, exact phrase `VALIDO D-01..D-10`; validates the revised decisions, but does not grant implementation authority.
-- **Renewal status:** `D-01..D-55 provisional; R-16+ convergence, renewed full-set validation, replacement freeze/publication and formal planning gates are required before APROVADO.`
+- **Renewal status:** `D-01..D-55 converged in R-17; exact renewed full-set validation, replacement freeze/publication and formal planning gates are required before APROVADO.`
 - **Latest validation token:** Gabriel/user, 2026-09-24, exact phrase `VALIDO D-01..D-46`; retained as provenance but superseded by `ARCH-POSTFREEZE-01/F-27..F-29` and never grants implementation authority.
 
 ## Rules Acknowledgement / Ingestion
@@ -977,7 +978,7 @@ Predeclared for pre-approval readiness; reload and bind after `APROVADO`.
 | `D-01..D-46` | superseded-validation | exact token `VALIDO D-01..D-46`; R-11 clean convergence; formal findings at package `d557ed6e...` | prior freeze invalidated by approval-material findings |
 | `D-47..D-50` | superseded-pending-set | `ARCH-POSTFREEZE-01/F-27..F-29` integrated provisionally; later rounds exposed additional boundaries | included in expanded D-01..D-55 reconvergence |
 | `D-51..D-54` | superseded-pending-set | `R12-ARCH-01/R12-CRIT2-01..05` plus R-13/R-14 refinements | included in expanded D-01..D-55 reconvergence |
-| `D-55` | pending-convergence-validation | `R15-CRIT1-01`; exact Delphi commit/tree captured from clean checkout | require clean R-16+ and one exact `VALIDO D-01..D-55` token |
+| `D-55` | converged-pending-validation | R-17 extended package embedded/hashed seven-file closure; all three reviewers explicitly accepted exact Delphi commit/tree bytes | require one exact `VALIDO D-01..D-55` token |
 
 ## Module Decision Consistency Validation
 
@@ -1072,6 +1073,7 @@ Predeclared for pre-approval readiness; reload and bind after `APROVADO`.
 | `R16-CRIT1-01/R16-CRIT2-01` | high | release-blocker | expand immutable review package | hashes establish identity but semantic acceptance requires exact executable bytes | fixed-pending-convergence | D-55 appendix contract + R-17 embedded seven-file closure; full-set revalidation required |
 | `R16-CRIT1-02` | medium | release-blocker | qualify regeneration availability | no governed archive exists for an unconditional permanent external-object rerun promise | fixed-pending-convergence | refined `D-54/T-48`; decode/verify permanent, regeneration availability-conditional |
 | `R16-CRIT1-03/R16-CRIT2-02` | medium | release-blocker | reconcile bookkeeping | R-16 package must not describe already-published D-55 as pending | resolved | current state points to extended R-17 review |
+| `R17-CRIT1-01` | low | release-blocker | reconcile bookkeeping | clean convergence must be reflected consistently before validation request | resolved | Plan Review/closeout/current step now point to `VALIDO D-01..D-55` |
 
 ## Security Risk Assessment
 
@@ -1165,9 +1167,9 @@ Predeclared for pre-approval readiness; reload and bind after `APROVADO`.
 ## TODO Closeout Disposition
 
 - **Disposition:** `keep-active`
-- **Disposition reason:** R-15 expanded the provisional contract to D-01..D-55; TODO remains active in autonomous reconvergence with no implementation authority.
-- **Post-commit/push status:** invalidated freeze `3f351daf` and snapshots through R-16 head `71f34fb1` remain published provenance; D-54/D-55 appendix refinements must be verified on `origin/main` immediately before R-17 dispatch.
-- **Next path/status action:** publish/verify refined D-01..D-55, run extended R-17+ until a clean round, then request one renewed full-set validation before replacement freeze and formal gates.
+- **Disposition reason:** R-17 achieved clean three-lane convergence for D-01..D-55, including explicit acceptance of the external Delphi closure; TODO remains active awaiting human validation with no implementation authority.
+- **Post-commit/push status:** invalidated freeze `3f351daf` and convergence snapshots through R-17 head `6bc0be28` remain published provenance; clean R-17 bookkeeping is pending publication.
+- **Next path/status action:** publish R-17 bookkeeping and obtain exact `VALIDO D-01..D-55`; then create/publish the replacement freeze and rerun formal gates before requesting `APROVADO`.
 
 ## Commands
 
