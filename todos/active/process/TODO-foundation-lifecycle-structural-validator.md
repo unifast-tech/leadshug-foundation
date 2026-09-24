@@ -36,12 +36,12 @@ Create one Python standard-library CLI with a small parser module and focused un
 - **Current delivery stage:** `Pending`
 - **Tactical TODO lifecycle state:** `Review`
 - **Qualifiers:** `none`
-- **Next exact step:** obtain renewed human validation with exact token `VALIDO SD-01..SD-10 POS-REVIEW`, refresh the freeze and rerun the affected final guards before requesting `APROVADO`.
+- **Next exact step:** rerun review-scope-drift and authority preflight against the renewed post-review freeze, then request `APROVADO` if green.
 
 ## Active Work State
 
 - **Work state:** `review`
-- **Why this state now:** architecture/critique converged and assumption coherence is green, but scope drift detected the post-review normalization of Assumptions Preview and requires renewed human validation.
+- **Why this state now:** architecture/critique converged, assumption coherence is green and the user renewed validation of the post-review contract; final deterministic pre-approval guards remain.
 - **Exit condition:** simplified decisions validated/frozen, pre-approval gates green, explicit `APROVADO`, implementation/evidence complete, and TODO promoted to `completed/`.
 
 ## Trigger Evidence
@@ -297,9 +297,9 @@ The admitted current decision file uses one nonempty file-level `Provenance` fie
 
 - **Historical design:** D-01..D-55 and freeze `3f351daf` remain in Git history but are not the active implementation contract.
 - **Retirement rationale:** D-25..D-55 expanded a documentation validator into a provenance/runner subsystem without a demonstrated need; related special-tree/attestation decisions retire with it.
-- **Replacement status:** `SD-01..SD-10 validated by the user on 2026-09-24; post-review refinements pending renewed validation`
-- **Freeze status:** `refreshed and frozen at pushed commit e5bb735a after final residual cleanup`
-- **Validation evidence:** exact user token `VALIDO SD-01..SD-10`
+- **Replacement status:** `SD-01..SD-10 and post-review refinements validated by the user on 2026-09-24`
+- **Freeze status:** `renewed post-review baseline frozen at pushed commit 9a2c677f`
+- **Validation evidence:** exact user tokens `VALIDO SD-01..SD-10` and `VALIDO SD-01..SD-10 POS-REVIEW`
 - **Implementation authority:** `none`
 
 ## Architecture Change Governance
@@ -353,11 +353,11 @@ The admitted current decision file uses one nonempty file-level `Provenance` fie
 - **Why this decision:** reviews must evaluate a stable simplified contract.
 - **Trigger stage:** `after VALIDO SD-01..SD-10 and before formal critique`
 - **Baseline branch:** `main`
-- **Baseline commit:** `e5bb735a`
+- **Baseline commit:** `9a2c677f`
 - **Baseline push reference:** `origin/main`
 - **Gate status:** `no_material_findings`
-- **Findings summary:** `user-validated SD-01..SD-10 direction plus architecture/critique reductions and final residual cleanup committed and pushed before final critique revalidation`
-- **Evidence / reference:** original user-validated freeze `f3deae28`; architecture refresh `dc66744b`; critique reduction `728cb305`; final residual cleanup `e5bb735a`; all published on `origin/main` on 2026-09-24
+- **Findings summary:** `post-review contract, gate evidence and normalized Assumptions Preview were explicitly revalidated by the user after scope-drift detection`
+- **Evidence / reference:** original validation freeze `f3deae28`; reviewed candidate `9a2c677f`; exact renewed token `VALIDO SD-01..SD-10 POS-REVIEW`; both published on `origin/main` on 2026-09-24
 - **Waiver authority / reference (required if waived):** `not applicable`
 
 ## Gate: Review Scope Drift
@@ -367,14 +367,14 @@ The admitted current decision file uses one nonempty file-level `Provenance` fie
 - **Trigger stage:** `after formal review convergence and before APROVADO`
 - **Baseline source:** `Review Baseline Freeze -> Baseline commit`
 - **Guard command:** `python3 delphi-ai/tools/review_scope_drift_guard.py --todo foundation_documentation/todos/active/process/TODO-foundation-lifecycle-structural-validator.md`
-- **Gate status:** `blocked`
-- **Findings summary:** `one changed material section (Assumptions Preview): A-01..A-05 handling was normalized from informal labels to Promote to Decision after reviews confirmed those boundaries are already frozen in SD decisions/scope; renewed human validation is required before approval resumes.`
-- **Evidence / reference:** `2026-09-24 review_scope_drift_guard no-go against e5bb735a; 1/22 material sections changed; no other material drift`
+- **Gate status:** `running`
+- **Findings summary:** `the sole prior drift (Assumptions Preview handling normalization) was explicitly revalidated by the user; guard rerun against renewed baseline 9a2c677f is pending`
+- **Evidence / reference:** `prior no-go against e5bb735a found 1/22 changed sections; exact renewed token VALIDO SD-01..SD-10 POS-REVIEW received on 2026-09-24`
 - **Waiver authority / reference (required if waived):** `not applicable`
 
 ## Questions To Close
 
-- Renewed validation of the post-review refinements: exact token `VALIDO SD-01..SD-10 POS-REVIEW`.
+- None before the remaining deterministic pre-approval guards; post-review refinements were revalidated with exact token `VALIDO SD-01..SD-10 POS-REVIEW`.
 
 ## Assumptions Preview
 
@@ -527,7 +527,7 @@ The admitted current decision file uses one nonempty file-level `Provenance` fie
 ## Approval
 
 - **Approved by:** `pending`
-- **Approval scope:** `blocked pending exact renewed validation VALIDO SD-01..SD-10 POS-REVIEW, refreshed freeze and final pre-approval guards`
+- **Approval scope:** `pending final review-scope-drift and authority preflight for the renewed SD-01..SD-10 post-review baseline`
 - **Execution not authorized by approval:** `CI/CD, product/runtime, Delphi changes, worktrees, attestation/provenance/runner infrastructure`
 - **Execution authority:** `not_granted`
 - **Prior tokens:** D-01..D-55 history is provenance only and does not authorize the replacement contract.
@@ -657,9 +657,9 @@ Predeclared for readiness; reload after `APROVADO`.
 ## TODO Closeout Disposition
 
 - **Disposition:** `keep-active`
-- **Disposition reason:** post-review contract has no review blockers and assumption coherence is green, but scope drift requires renewed human validation before approval resumes.
-- **Post-commit/push status:** final reviewed freeze remains `e5bb735a`; post-review gate evidence and assumption normalization are local pending publication as a candidate baseline.
-- **Next path/status action:** publish the candidate, obtain `VALIDO SD-01..SD-10 POS-REVIEW`, refresh freeze, rerun scope/authority guards and request `APROVADO` if green.
+- **Disposition reason:** post-review contract has no review blockers, renewed validation is recorded and only final deterministic pre-approval guards remain.
+- **Post-commit/push status:** renewed post-review baseline is published at `foundation_documentation:main@9a2c677f`; validation/freeze annotation is local pending publication.
+- **Next path/status action:** rerun scope-drift and authority preflight, publish approval-ready evidence and request `APROVADO` if green.
 
 ## Commands
 
