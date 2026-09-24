@@ -35,12 +35,12 @@ O lifecycle da Foundation exige um validator permanente quando backlog, decisõe
 - **Current delivery stage:** `Pending`
 - **Tactical TODO lifecycle state:** `Review`
 - **Qualifiers:** `none`
-- **Next exact step:** publicar a replacement baseline congelada de `D-01..D-20` e repetir os reviews afetados.
+- **Next exact step:** repetir architecture opinion e crítica no-context sobre a baseline publicada de `D-01..D-20`.
 
 ## Active Work State
 
 - **Work state:** `review`
-- **Why this state now:** a autoridade humana validou `D-01..D-20`; a replacement baseline está congelada localmente e precisa ser publicada antes dos reviews afetados.
+- **Why this state now:** a autoridade humana validou `D-01..D-20` e a replacement baseline foi congelada/publicada; os reviews afetados podem ser executados.
 - **Exit condition:** decisões validadas, baseline congelada/publicada, reviews e guards pré-aprovação verdes, seguidos de `APROVADO` explícito ou cancelamento com racional.
 
 ## Trigger Evidence
@@ -174,7 +174,7 @@ Preencher somente se o guard retornar `no-go`; qualquer novo path ou change type
 
 - **Decision:** `required only for publication/Production-Ready; not needed for local implementation`
 - **Rationale:** parser/tests usam apenas arquivos locais, mas freeze e closeout exigem `origin/main`; GitHub/origin deve estar acessível e sincronizado antes dessas alegações.
-- **Current evidence:** `origin/main` contains the historical `D-01..D-17` freeze and the expanded pending-validation `D-01..D-20` contract through `0295779685ece54067181626e0c2a670724c17f2`; validation must precede its replacement freeze.
+- **Current evidence:** `origin/main` contains the validated D-01..D-20 freeze commit `0cd991e61ff4d8ed1ff495c62113227db9c9f730` and bookkeeping through `3a4e6e956070d8612540afe23adda81e8bfbb3cb`.
 
 ## Profile Scope & Handoffs
 
@@ -281,7 +281,7 @@ Placeholder tokens are the whole-segment, case-insensitive set `PENDING|N/A|TBD|
 ## Decision Baseline
 
 - **Prior freezes:** `D-01..D-08@b685fb52` invalidated by `AR-01..05/F-01..11`; `D-01..D-10@504a9785` invalidated by `AR-R01..AR-R05/F-12..F-17`; `D-01..D-11@2562f62e` invalidated by `AR-F01..AR-F05/F-18..F-21`; `D-01..D-14@e26d7183` invalidated by `AR-N01/F-22..F-24`; `D-01..D-17@3dce63b3` invalidated by `C2-F01/C2-F02/C2-F04`.
-- **Freeze status:** `frozen-locally — publication required before affected reviews`
+- **Freeze status:** `frozen-published — replacement baseline available on origin/main`
 - **Frozen decisions:** `D-01..D-20`
 - **Current validation evidence:** Gabriel/user, 2026-09-24, exact phrase `VALIDO D-01..D-20`; freezes the complete replacement decision set but does not grant implementation authority.
 - **Prior validation evidence:** Gabriel/user, 2026-09-24, exact phrase `VALIDO D-01..D-17`; preserved as provenance but superseded by material review findings that introduced `D-18..D-20`.
@@ -368,10 +368,10 @@ Placeholder tokens are the whole-segment, case-insensitive set `PENDING|N/A|TBD|
 - **Trigger stage:** `after D-01..D-20 validation and before renewed planning-side reviews`
 - **Baseline branch:** `main`
 - **Baseline commit:** `0cd991e61ff4d8ed1ff495c62113227db9c9f730`
-- **Baseline push reference:** `pending publication of replacement freeze commit 0cd991e61ff4d8ed1ff495c62113227db9c9f730 to origin/main`
-- **Gate status:** `running`
-- **Findings summary:** validated D-01..D-20 replacement baseline is committed locally; publication is pending before affected reviews.
-- **Evidence / reference:** local freeze commit `0cd991e61ff4d8ed1ff495c62113227db9c9f730`, created on 2026-09-24; publication pending.
+- **Baseline push reference:** `origin/main contains 0cd991e61ff4d8ed1ff495c62113227db9c9f730; freeze bookkeeping published through 3a4e6e956070d8612540afe23adda81e8bfbb3cb`
+- **Gate status:** `no_material_findings`
+- **Findings summary:** validated D-01..D-20 replacement baseline is frozen and published; affected reviews may proceed.
+- **Evidence / reference:** commits `0cd991e61ff4d8ed1ff495c62113227db9c9f730` and `3a4e6e956070d8612540afe23adda81e8bfbb3cb`, pushed to origin/main on 2026-09-24.
 - **Waiver authority / reference:** `n/a`
 
 ## Gate: Review Scope Drift
@@ -687,7 +687,7 @@ Predeclared for pre-approval readiness; reload and bind after `APROVADO`.
 
 | Decision ID | Status | Evidence | Notes |
 | --- | --- | --- | --- |
-| `D-01..D-20` | validated-frozen-locally | exact token `VALIDO D-01..D-20` | publish replacement baseline, then expand 1:1 only during authorized implementation |
+| `D-01..D-20` | validated-frozen-published | exact token `VALIDO D-01..D-20`; freeze `0cd991e6` | expand 1:1 only during authorized implementation |
 
 ## Module Decision Consistency Validation
 
@@ -823,9 +823,9 @@ Predeclared for pre-approval readiness; reload and bind after `APROVADO`.
 ## TODO Closeout Disposition
 
 - **Disposition:** `keep-active`
-- **Disposition reason:** `D-01..D-20` are validated and frozen locally; publication and affected fresh reviews remain required.
-- **Post-commit/push status:** validation token recorded locally; replacement freeze publication pending; no implementation claim.
-- **Next path/status action:** publish the replacement freeze and rerun affected planning-side gates; no implementation before a later post-gate `APROVADO` and authority guard `go`.
+- **Disposition reason:** `D-01..D-20` are validated, frozen and published; affected fresh reviews remain required.
+- **Post-commit/push status:** replacement freeze `0cd991e6` and bookkeeping `3a4e6e95` published; no implementation claim.
+- **Next path/status action:** rerun affected planning-side reviews and guards; no implementation before a later post-gate `APROVADO` and authority guard `go`.
 
 ## Commands
 
