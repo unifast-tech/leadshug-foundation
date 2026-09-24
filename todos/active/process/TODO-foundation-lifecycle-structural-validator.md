@@ -328,11 +328,11 @@ Preencher somente se o guard retornar `no-go`; qualquer novo path ou change type
 - **Why this decision:** TODO medium de architecture enforcement requer pacote estável/publicado antes da crítica.
 - **Trigger stage:** `after D-01..D-11 validation and before renewed planning-side reviews`
 - **Baseline branch:** `main`
-- **Baseline commit:** `504a978568960f5fb7c32105e2cb9e0c14986682`
-- **Baseline push reference:** `origin/main contains 504a978568960f5fb7c32105e2cb9e0c14986682; freeze bookkeeping published through e5901f91e034714ba0df09a779687d89d3748a3a`
-- **Gate status:** `findings_integrated`
-- **Findings summary:** the published `D-01..D-10` baseline enabled the required reviews, whose material findings invalidated it; replacement `D-01..D-11` remains unfrozen pending human validation.
-- **Evidence / reference:** commits `504a978568960f5fb7c32105e2cb9e0c14986682` and `e5901f91e034714ba0df09a779687d89d3748a3a`, pushed to `origin/main` on 2026-09-23 through the authenticated Windows Git credential path.
+- **Baseline commit:** `2562f62e86cbc15bcaa7865b652e240cb49fcb0e`
+- **Baseline push reference:** `pending publication to origin/main`
+- **Gate status:** `frozen-locally-pending-publication`
+- **Findings summary:** validated `D-01..D-11` were frozen locally; reviews remain blocked until publication.
+- **Evidence / reference:** local commit `2562f62e86cbc15bcaa7865b652e240cb49fcb0e`, 2026-09-23.
 - **Waiver authority / reference:** `n/a`
 
 ## Gate: Review Scope Drift
@@ -574,7 +574,7 @@ Preencher somente se o guard retornar `no-go`; qualquer novo path ou change type
 - **Execution authority:** `not_granted`
 - **Pre-gate human token:** Gabriel/user, 2026-09-23, `APROVADO`; it validated the superseded `D-01..D-08` only. Material findings require renewed validation and a new post-gate `APROVADO`.
 - **Renewed validation token:** Gabriel/user, 2026-09-23, exact phrase `VALIDO D-01..D-10`; validates the revised decisions, but does not grant implementation authority.
-- **Renewal status:** `D-01..D-10 validation superseded by AR-R01..AR-R05/F-12..F-17; D-01..D-11 require a new validation token before refreeze.`
+- **Renewal status:** `satisfied for replacement freeze by the D-01..D-11 validation token; post-gate APROVADO remains required.`
 - **Latest validation token:** Gabriel/user, 2026-09-23, exact phrase `VALIDO D-01..D-11`; validates the reconverged decisions, but does not grant implementation authority.
 
 ## Rules Acknowledgement / Ingestion
