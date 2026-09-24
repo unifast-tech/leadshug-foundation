@@ -36,12 +36,12 @@ Create one Python standard-library CLI with a small parser module and focused un
 - **Current delivery stage:** `Pending`
 - **Tactical TODO lifecycle state:** `Review`
 - **Qualifiers:** `none`
-- **Next exact step:** rerun review-scope-drift and authority preflight against the renewed post-review freeze, then request `APROVADO` if green.
+- **Next exact step:** obtain exact `APROVADO`, record approval/rule ingestion, rerun the normal authority guard and only then begin implementation.
 
 ## Active Work State
 
 - **Work state:** `review`
-- **Why this state now:** architecture/critique converged, assumption coherence is green and the user renewed validation of the post-review contract; final deterministic pre-approval guards remain.
+- **Why this state now:** architecture/critique, assumption coherence, scope drift and authority preflight are green; explicit implementation approval is the remaining gate.
 - **Exit condition:** simplified decisions validated/frozen, pre-approval gates green, explicit `APROVADO`, implementation/evidence complete, and TODO promoted to `completed/`.
 
 ## Trigger Evidence
@@ -298,7 +298,7 @@ The admitted current decision file uses one nonempty file-level `Provenance` fie
 - **Historical design:** D-01..D-55 and freeze `3f351daf` remain in Git history but are not the active implementation contract.
 - **Retirement rationale:** D-25..D-55 expanded a documentation validator into a provenance/runner subsystem without a demonstrated need; related special-tree/attestation decisions retire with it.
 - **Replacement status:** `SD-01..SD-10 and post-review refinements validated by the user on 2026-09-24`
-- **Freeze status:** `renewed post-review baseline frozen at pushed commit 4b1158d5 including the human revalidation record`
+- **Freeze status:** `renewed post-review baseline frozen at pushed commit e3642929 including schema-only preflight normalization`
 - **Validation evidence:** exact user tokens `VALIDO SD-01..SD-10` and `VALIDO SD-01..SD-10 POS-REVIEW`
 - **Implementation authority:** `none`
 
@@ -356,11 +356,11 @@ The admitted current decision file uses one nonempty file-level `Provenance` fie
 - **Why this decision:** reviews must evaluate a stable simplified contract.
 - **Trigger stage:** `after VALIDO SD-01..SD-10 and before formal critique`
 - **Baseline branch:** `main`
-- **Baseline commit:** `4b1158d5`
+- **Baseline commit:** `e3642929`
 - **Baseline push reference:** `origin/main`
 - **Gate status:** `no_material_findings`
-- **Findings summary:** `post-review contract, normalized Assumptions Preview and the human revalidation record are committed and pushed before final guards`
-- **Evidence / reference:** original validation freeze `f3deae28`; reviewed candidate `9a2c677f`; renewed validated freeze `4b1158d5`; exact token `VALIDO SD-01..SD-10 POS-REVIEW`; all published on `origin/main` on 2026-09-24
+- **Findings summary:** `post-review contract, human revalidation record and semantically equivalent preflight-schema normalization are committed and pushed before final guards`
+- **Evidence / reference:** original validation freeze `f3deae28`; reviewed candidate `9a2c677f`; renewed validation `4b1158d5`; schema-normalized freeze `e3642929`; exact token `VALIDO SD-01..SD-10 POS-REVIEW`; all published on `origin/main` on 2026-09-24
 - **Waiver authority / reference (required if waived):** `not applicable`
 
 ## Gate: Review Scope Drift
@@ -370,9 +370,9 @@ The admitted current decision file uses one nonempty file-level `Provenance` fie
 - **Trigger stage:** `after formal review convergence and before APROVADO`
 - **Baseline source:** `Review Baseline Freeze -> Baseline commit`
 - **Guard command:** `python3 delphi-ai/tools/review_scope_drift_guard.py --todo foundation_documentation/todos/active/process/TODO-foundation-lifecycle-structural-validator.md`
-- **Gate status:** `running`
-- **Findings summary:** `post-revalidation run was green at 0/22; authority preflight then required schema-only field/table normalization in Architecture Change Governance. Content and scope are unchanged; refresh/rerun pending.`
-- **Evidence / reference:** `go against 4b1158d5 before schema normalization; subsequent no-go identified only Architecture Change Governance formatting; preflight-go confirms normalized required schema`
+- **Gate status:** `no_material_findings`
+- **Findings summary:** `0/22 material sections differ from the schema-normalized renewed baseline; no scope drift remains`
+- **Evidence / reference:** `2026-09-24 review_scope_drift_guard outcome go against foundation_documentation:main@e3642929`
 - **Waiver authority / reference (required if waived):** `not applicable`
 
 ## Questions To Close
@@ -530,7 +530,7 @@ The admitted current decision file uses one nonempty file-level `Provenance` fie
 ## Approval
 
 - **Approved by:** `pending`
-- **Approval scope:** `pending final scope-drift rerun after schema-only normalization; authority preflight already returned preflight-go`
+- **Approval scope:** `ready for explicit APROVADO: implement only the SD-01..SD-10 Foundation validator/tests/directly affected docs boundary`
 - **Execution not authorized by approval:** `CI/CD, product/runtime, Delphi changes, worktrees, attestation/provenance/runner infrastructure`
 - **Execution authority:** `not_granted`
 - **Prior tokens:** D-01..D-55 history is provenance only and does not authorize the replacement contract.
@@ -665,9 +665,9 @@ Predeclared for readiness; reload after `APROVADO`.
 ## TODO Closeout Disposition
 
 - **Disposition:** `keep-active`
-- **Disposition reason:** reviews and renewed validation are complete; authority preflight is green and only a scope-drift rerun against the schema-normalized freeze remains.
-- **Post-commit/push status:** validated baseline is published at `4b1158d5`; schema-only normalization and guard evidence are local pending publication.
-- **Next path/status action:** publish/refreeze schema normalization, rerun scope-drift and authority preflight, then request `APROVADO` if green.
+- **Disposition reason:** all pre-approval reviews and deterministic guards are green; explicit `APROVADO` is the only remaining authority gate.
+- **Post-commit/push status:** approval-ready baseline is published at `foundation_documentation:main@e3642929`; final green guard evidence is local pending publication.
+- **Next path/status action:** publish approval-ready evidence and request exact `APROVADO`.
 
 ## Commands
 
