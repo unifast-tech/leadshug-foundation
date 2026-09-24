@@ -35,12 +35,12 @@ O lifecycle da Foundation exige um validator permanente quando backlog, decisõe
 - **Current delivery stage:** `Pending`
 - **Tactical TODO lifecycle state:** `Review`
 - **Qualifiers:** `none`
-- **Next exact step:** obter validação humana das decisões reconvergidas `D-01..D-11`, congelar/publicar uma replacement baseline e repetir os reviews sobre TODO mais owners canônicos explícitos.
+- **Next exact step:** publicar a replacement baseline congelada e repetir architecture opinion, plan critique e guards sobre TODO mais owners canônicos explícitos.
 
 ## Active Work State
 
 - **Work state:** `review`
-- **Why this state now:** a revisão da baseline publicada encontrou `AR-R01..AR-R05` e `F-12..F-17`; as correções materiais foram incorporadas e exigem nova validação humana.
+- **Why this state now:** `D-01..D-11` foram validadas; a replacement baseline precisa ser congelada/publicada antes dos reviews e guards pré-aprovação.
 - **Exit condition:** decisões validadas, baseline congelada/publicada, reviews e guards pré-aprovação verdes, seguidos de `APROVADO` explícito ou cancelamento com racional.
 
 ## Trigger Evidence
@@ -224,23 +224,21 @@ Preencher somente se o guard retornar `no-go`; qualquer novo path ou change type
 
 ## Decision Pending
 
-| Decision ID | Reconverged Recommended Direction | Review Finding Source | Human Validation Needed |
-| --- | --- | --- | --- |
-| `D-01` | Admit only the explicit source graph; validate `BLG-*` and `DEC-*`; exclude `CAP-*`, modules, TODO records and contract-verification records. | preserved | reconfirm boundary |
-| `D-02` | Keep lifecycle as semantic owner while a versioned bootstrap trust kernel hard-codes only mandatory owner identities, headings, schemas/columns and current required enums; never live records or dispositions. | `AR-R01` | confirm trust-root boundary |
-| `D-03` | Keep the validator read-only/fail-closed with root/symlink confinement, byte preservation and bounded/redacted diagnostics. | preserved | reconfirm safety |
-| `D-04` | Define current decisions bidirectionally: index links must equal root-level `decisions/*.md` except README; subdirectories remain historical until a material boundary change. | `AR-R02`, `F-15` | confirm membership/history rule |
-| `D-05` | Deliver local validation only; CI-equivalent remains `n/a`; remote CI integration stays in another TODO. | preserved | reconfirm adoption stage |
-| `D-06` | Use Python stdlib + unittest, test-first, independent fixture oracles and a 1:1 rule/mutation matrix. | preserved | reconfirm stack/testing |
-| `D-07` | Keep ownership project-specific in Foundation and route implementation to routine-executor; no `delphi-ai` implementation changes. | preserved | reconfirm ownership/routing |
-| `D-08` | Validate old/new on a candidate SHA already containing handoffs but no cutover claim; after reviews/publication/TODO move, rerun closeout checks and declare cutover only on the closeout SHA. | `F-16` | confirm two-SHA cutover sequence |
-| `D-09` | Require exactly one positional evidence segment per target: literal `PENDING` is valid pending-effect; concrete non-placeholder evidence is structural coverage; missing/extra/duplicate/contradictory mapping fails. | `AR-R03`, `F-14` | confirm mapping truth table |
-| `D-10` | Treat prose dependencies/next gates as required nonempty text; validate only explicit Markdown paths/fragments as resolvable references. | preserved | reconfirm dependency grammar |
-| `D-11` | Use the constrained ASCII heading-fragment dialect defined above; reject percent-encoded, Unicode-derived and HTML anchors instead of emulating an unspecified renderer. | `AR-R04`, `F-17` | confirm anchor dialect |
+- `none — reconverged D-01..D-11 validated by Gabriel/user on 2026-09-23 through the exact phrase VALIDO D-01..D-11; this validates the planning contract but does not grant implementation authority.`
 
 ## Decisions
 
-- `pending renewed human validation of reconverged D-01..D-11`
+- [x] `D-01` Admit only the explicit source graph; validate `BLG-*` and `DEC-*`; exclude `CAP-*`, modules, TODO records and contract-verification records.
+- [x] `D-02` Keep lifecycle as semantic owner while a versioned bootstrap trust kernel hard-codes only mandatory owner identities, headings, schemas/columns and current required enums; never live records or dispositions.
+- [x] `D-03` Keep the validator read-only/fail-closed with root/symlink confinement, byte preservation and bounded/redacted diagnostics.
+- [x] `D-04` Define current decisions bidirectionally: index links must equal root-level `decisions/*.md` except README; subdirectories remain historical until a material boundary change.
+- [x] `D-05` Deliver local validation only; CI-equivalent remains `n/a`; remote CI integration stays in another TODO.
+- [x] `D-06` Use Python stdlib + unittest, test-first, independent fixture oracles and a 1:1 rule/mutation matrix.
+- [x] `D-07` Keep ownership project-specific in Foundation and route implementation to routine-executor; no `delphi-ai` implementation changes.
+- [x] `D-08` Validate old/new on a candidate SHA already containing handoffs but no cutover claim; after reviews/publication/TODO move, rerun closeout checks and declare cutover only on the closeout SHA.
+- [x] `D-09` Require exactly one positional evidence segment per target: literal `PENDING` is valid pending-effect; concrete non-placeholder evidence is structural coverage; missing/extra/duplicate/contradictory mapping fails.
+- [x] `D-10` Treat prose dependencies/next gates as required nonempty text; validate only explicit Markdown paths/fragments as resolvable references.
+- [x] `D-11` Use the constrained ASCII heading-fragment dialect defined above; reject percent-encoded, Unicode-derived and HTML anchors instead of emulating an unspecified renderer.
 
 ## Module Decision Baseline Snapshot
 
@@ -256,8 +254,9 @@ Preencher somente se o guard retornar `no-go`; qualquer novo path ou change type
 ## Decision Baseline
 
 - **Prior freezes:** `D-01..D-08@b685fb52` invalidated by `AR-01..05/F-01..11`; `D-01..D-10@504a9785` published and invalidated by `AR-R01..AR-R05/F-12..F-17`.
-- **Freeze status:** `not_frozen — reconverged D-01..D-11 pending renewed validation`
-- **Frozen decisions:** `none current`
+- **Freeze status:** `frozen-locally — publication required before planning-side reviews`
+- **Frozen decisions:** `D-01..D-11`
+- **Validation evidence:** Gabriel/user, 2026-09-23, exact phrase `VALIDO D-01..D-11`; planning-contract validation only, not implementation approval.
 - **Prior validation evidence:** Gabriel/user, 2026-09-23, exact phrase `VALIDO D-01..D-10`; preserved as provenance but superseded by the material review findings.
 - **Historical validation evidence:** Gabriel/user, 2026-09-23, phrase `APROVADO`; preserved as provenance, not execution authority.
 
@@ -352,7 +351,7 @@ Preencher somente se o guard retornar `no-go`; qualquer novo path ou change type
 
 ## Questions To Close
 
-- `Q-02` A autoridade humana valida o contrato reconvergido `D-01..D-11`, substituindo a baseline `D-01..D-10` invalidada pelos reviews?
+- `none — Q-02 closed by Gabriel/user on 2026-09-23 with VALIDO D-01..D-11.`
 
 ## Assumptions Preview
 
@@ -576,6 +575,7 @@ Preencher somente se o guard retornar `no-go`; qualquer novo path ou change type
 - **Pre-gate human token:** Gabriel/user, 2026-09-23, `APROVADO`; it validated the superseded `D-01..D-08` only. Material findings require renewed validation and a new post-gate `APROVADO`.
 - **Renewed validation token:** Gabriel/user, 2026-09-23, exact phrase `VALIDO D-01..D-10`; validates the revised decisions, but does not grant implementation authority.
 - **Renewal status:** `D-01..D-10 validation superseded by AR-R01..AR-R05/F-12..F-17; D-01..D-11 require a new validation token before refreeze.`
+- **Latest validation token:** Gabriel/user, 2026-09-23, exact phrase `VALIDO D-01..D-11`; validates the reconverged decisions, but does not grant implementation authority.
 
 ## Rules Acknowledgement / Ingestion
 
@@ -744,8 +744,8 @@ Predeclared for pre-approval readiness; reload and bind after `APROVADO`.
 
 - **Disposition:** `keep-active`
 - **Disposition reason:** material review findings were integrated; revised decisions require renewed human validation, refreeze and fresh reviews.
-- **Post-commit/push status:** `the D-01..D-10 review baseline was published and reviewed; reconverged D-01..D-11 are not yet frozen; no implementation claim`
-- **Next path/status action:** obtain renewed validation of `D-01..D-11`, then publish a replacement freeze and rerun all planning-side gates with the full owner package; no implementation before a later post-gate APROVADO and authority guard `go`.
+- **Post-commit/push status:** `reconverged D-01..D-11 frozen locally; replacement publication pending; no implementation claim`
+- **Next path/status action:** publish the replacement freeze and rerun all planning-side gates with the full owner package; no implementation before a later post-gate APROVADO and authority guard `go`.
 
 ## Commands
 
