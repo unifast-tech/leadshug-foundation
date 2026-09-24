@@ -36,12 +36,12 @@ Create one Python standard-library CLI with a small parser module and focused un
 - **Current delivery stage:** `Pending`
 - **Tactical TODO lifecycle state:** `Review`
 - **Qualifiers:** `none`
-- **Next exact step:** validate the simplified decision set `SD-01..SD-10`, freeze/publish it, run proportionate pre-approval gates and request `APROVADO` before implementation.
+- **Next exact step:** freeze/publish the user-validated `SD-01..SD-10` baseline, run proportionate pre-approval gates and request `APROVADO` before implementation.
 
 ## Active Work State
 
 - **Work state:** `review`
-- **Why this state now:** the prior D-01..D-55 design was deliberately reduced to the initial structural-validator objective; the simplified contract is awaiting review and human validation.
+- **Why this state now:** the user validated the deliberately simplified contract; review-baseline freeze and formal pre-approval gates remain pending.
 - **Exit condition:** simplified decisions validated/frozen, pre-approval gates green, explicit `APROVADO`, implementation/evidence complete, and TODO promoted to `completed/`.
 
 ## Trigger Evidence
@@ -265,16 +265,16 @@ Only observable current-state structure is enforced. Historical transition truth
 
 ## Decisions
 
-- [ ] `SD-01` Explicit live source graph only.
-- [ ] `SD-02` Minimal bootstrap kernel without live-state duplication.
-- [ ] `SD-03` Read-only, fail-closed, confined and redacted behavior.
-- [ ] `SD-04` Current-decision membership and observable lifecycle grammar.
-- [ ] `SD-05` Structural roadmap evidence only.
-- [ ] `SD-06` Standard-library thin CLI/parser plus independent unittests.
-- [ ] `SD-07` Ordinary validation only; no infrastructure subsystem.
-- [ ] `SD-08` One-time legacy parity and intentional retirement map.
-- [ ] `SD-09` Normal Git/TODO evidence without special commit protocol.
-- [ ] `SD-10` Local adoption only; future CI is separate.
+- [x] `SD-01` Explicit live source graph only.
+- [x] `SD-02` Minimal bootstrap kernel without live-state duplication.
+- [x] `SD-03` Read-only, fail-closed, confined and redacted behavior.
+- [x] `SD-04` Current-decision membership and observable lifecycle grammar.
+- [x] `SD-05` Structural roadmap evidence only.
+- [x] `SD-06` Standard-library thin CLI/parser plus independent unittests.
+- [x] `SD-07` Ordinary validation only; no infrastructure subsystem.
+- [x] `SD-08` One-time legacy parity and intentional retirement map.
+- [x] `SD-09` Normal Git/TODO evidence without special commit protocol.
+- [x] `SD-10` Local adoption only; future CI is separate.
 
 ## Module Decision Baseline Snapshot
 
@@ -291,9 +291,9 @@ Only observable current-state structure is enforced. Historical transition truth
 
 - **Historical design:** D-01..D-55 and freeze `3f351daf` remain in Git history but are not the active implementation contract.
 - **Retirement rationale:** D-25..D-55 expanded a documentation validator into a provenance/runner subsystem without a demonstrated need; related special-tree/attestation decisions retire with it.
-- **Replacement status:** `SD-01..SD-10 pending human validation`
-- **Freeze status:** `not frozen`
-- **Required validation token:** `VALIDO SD-01..SD-10`
+- **Replacement status:** `SD-01..SD-10 validated by the user on 2026-09-24`
+- **Freeze status:** `validated; authoritative pushed commit pending capture in Gate: Review Baseline Freeze`
+- **Validation evidence:** exact user token `VALIDO SD-01..SD-10`
 - **Implementation authority:** `none`
 
 ## Architecture Change Governance
@@ -367,7 +367,7 @@ Only observable current-state structure is enforced. Historical transition truth
 
 ## Questions To Close
 
-- Human validation of the deliberately simplified set: `VALIDO SD-01..SD-10`.
+- None before formal pre-approval review; the simplified set was validated with exact token `VALIDO SD-01..SD-10` on 2026-09-24.
 
 ## Assumptions Preview
 
@@ -457,7 +457,7 @@ Only observable current-state structure is enforced. Historical transition truth
 
 ## Plan Review Gate
 
-- **Status:** `simplified contract drafted; consolidated review pending human validation/freeze`
+- **Status:** `simplified contract validated; formal review pending pushed baseline freeze`
 - **Required lenses:** Architecture, Code Quality, Tests, Performance, Security, Elegance, Structural Soundness.
 - **Primary guardrail:** attestation, subprocess supervision, provenance, Registry-v1 or special commit mechanics require a separate demonstrated need/TODO.
 
@@ -526,7 +526,7 @@ Only observable current-state structure is enforced. Historical transition truth
 - **Execution not authorized by approval:** `CI/CD, product/runtime, Delphi changes, worktrees, attestation/provenance/runner infrastructure`
 - **Execution authority:** `not_granted`
 - **Prior tokens:** D-01..D-55 history is provenance only and does not authorize the replacement contract.
-- **Renewed validation required:** exact `VALIDO SD-01..SD-10`.
+- **Validation evidence:** exact `VALIDO SD-01..SD-10` received on 2026-09-24.
 - **Renewed approval required after gates:** exact `APROVADO`.
 
 ## Rules Acknowledgement / Ingestion
@@ -560,7 +560,7 @@ Predeclared for readiness; reload after `APROVADO`.
 | Decision Set | Status | Evidence |
 | --- | --- | --- |
 | `D-01..D-55` | retired-before-implementation | Git through `80aaab40`; user-directed simplification |
-| `SD-01..SD-10` | pending-validation | exact `VALIDO SD-01..SD-10` required |
+| `SD-01..SD-10` | validated | exact `VALIDO SD-01..SD-10` received on 2026-09-24 |
 
 ## Module Decision Consistency Validation
 
@@ -652,9 +652,9 @@ Predeclared for readiness; reload after `APROVADO`.
 ## TODO Closeout Disposition
 
 - **Disposition:** `keep-active`
-- **Disposition reason:** simplified SD-01..SD-10 contract is drafted but not validated, frozen or approved.
-- **Post-commit/push status:** deterministic TODO, audit-floor and diff-expectation guards pass; simplified baseline publication is pending.
-- **Next path/status action:** validate/publish simplified TODO, obtain `VALIDO SD-01..SD-10`, then run formal pre-approval gates.
+- **Disposition reason:** simplified SD-01..SD-10 contract is validated but not yet review-frozen, formally reviewed or approved.
+- **Post-commit/push status:** deterministic TODO, audit-floor and diff-expectation guards pass; validated baseline freeze publication is pending.
+- **Next path/status action:** publish the review freeze, run formal pre-approval gates and request `APROVADO`.
 
 ## Commands
 
