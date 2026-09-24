@@ -296,7 +296,7 @@ The admitted current decision file uses one nonempty file-level `Provenance` fie
 - **Historical design:** D-01..D-55 and freeze `3f351daf` remain in Git history but are not the active implementation contract.
 - **Retirement rationale:** D-25..D-55 expanded a documentation validator into a provenance/runner subsystem without a demonstrated need; related special-tree/attestation decisions retire with it.
 - **Replacement status:** `SD-01..SD-10 validated by the user on 2026-09-24`
-- **Freeze status:** `frozen at pushed commit f3deae28`
+- **Freeze status:** `refreshed and frozen at pushed commit dc66744b after integrating architecture findings`
 - **Validation evidence:** exact user token `VALIDO SD-01..SD-10`
 - **Implementation authority:** `none`
 
@@ -351,11 +351,11 @@ The admitted current decision file uses one nonempty file-level `Provenance` fie
 - **Why this decision:** reviews must evaluate a stable simplified contract.
 - **Trigger stage:** `after VALIDO SD-01..SD-10 and before formal critique`
 - **Baseline branch:** `main`
-- **Baseline commit:** `f3deae28`
+- **Baseline commit:** `dc66744b`
 - **Baseline push reference:** `origin/main`
 - **Gate status:** `no_material_findings`
-- **Findings summary:** `user-validated SD-01..SD-10 baseline committed and pushed before formal review`
-- **Evidence / reference:** `foundation_documentation:main@f3deae28`; exact user token `VALIDO SD-01..SD-10`; push `origin/main` completed on 2026-09-24
+- **Findings summary:** `user-validated SD-01..SD-10 direction plus localized architecture corrections committed and pushed before revalidation/critique`
+- **Evidence / reference:** original user-validated freeze `foundation_documentation:main@f3deae28`; refreshed review freeze `foundation_documentation:main@dc66744b`; both pushed to `origin/main` on 2026-09-24
 - **Waiver authority / reference (required if waived):** `not applicable`
 
 ## Gate: Review Scope Drift
@@ -658,8 +658,8 @@ Predeclared for readiness; reload after `APROVADO`.
 
 - **Disposition:** `keep-active`
 - **Disposition reason:** simplified SD-01..SD-10 direction remains validated; localized architecture findings were integrated and require refreshed freeze/revalidation before critique and approval.
-- **Post-commit/push status:** original review baseline is published at `foundation_documentation:main@f3deae28`; architecture-review corrections are local pending validation/publication.
-- **Next path/status action:** validate and publish the corrected review baseline, rerun architecture opinion, then continue formal pre-approval gates.
+- **Post-commit/push status:** refreshed review baseline with integrated architecture findings is published at `foundation_documentation:main@dc66744b`; freeze-evidence annotation is pending publication.
+- **Next path/status action:** publish the refreshed freeze evidence, rerun architecture opinion, then continue formal pre-approval gates.
 
 ## Commands
 
