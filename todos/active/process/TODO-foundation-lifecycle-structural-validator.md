@@ -235,9 +235,13 @@ Any unclassified path blocks delivery until classified as scope deviation, neces
 | `Proposed` | valid targets with positional `PENDING` | `N/A` |
 | `Accepted` | one segment per target: `PENDING` or concrete target-prefixed evidence | `N/A` |
 | `Superseded` | preserved target/evidence shape | exact `DEC-*` successor; acyclic chain ends at eligible Accepted |
-| `Rejected` | preserved targets with positional `PENDING` | `N/A` |
+| `Rejected` | one positional segment per preserved target: `PENDING` when never consolidated or the existing concrete evidence when previously consolidated | `N/A` |
 
 Only observable current-state structure is enforced. Historical transition truth and semantic adequacy remain review-owned.
+
+For roadmap rows, `Open` requires no acceptance inference. `Exit-Gate-Met` requires the `Exit gate` cell to contain root-confined, resolvable relative links to at least one responsible canonical module under `modules/**` and at least one completed tactical TODO under `todos/completed/**`. The validator checks presence, resolution and target class only; whether those linked records semantically satisfy the gate remains review-owned.
+
+The admitted current decision file uses one nonempty file-level `Provenance` field that applies to every decision row in that file. The validator does not infer different row-level provenance; a future need for mixed provenance in one file requires an explicit schema decision rather than parser guesswork.
 
 ### Legacy Check Transition
 
@@ -336,8 +340,8 @@ Only observable current-state structure is enforced. Historical transition truth
 - **Decision review lifecycle:** `after simplified decisions are validated/frozen and before APROVADO`
 - **Decision review kind:** `architecture_opinion`
 - **Decision review package:** `bounded-file-set`
-- **Decision review status:** `not_run`
-- **Decision review evidence / resolution:** `pending simplified baseline validation/freeze`
+- **Decision review status:** `findings_integrated; revalidation_pending`
+- **Decision review evidence / resolution:** `fresh no-context architecture_opinion on 2026-09-24 returned request_changes: integrated preservation of concrete evidence for Accepted→Rejected, deterministic structural roadmap-link classes, explicit file-level provenance cardinality and stale-freeze metadata cleanup; direction remained approved as proportional and structurally sound; fresh revalidation required before critique`
 - **Architecture adherence review:** `required after implementation before Completed`
 - **Adherence review status:** `not_run`
 
@@ -414,8 +418,8 @@ Only observable current-state structure is enforced. Historical transition truth
 | `T-05` paths/links | confined relative target | absolute, `..`, missing, symlink escape, bad fragment |
 | `T-06` target/evidence | positional mapping | missing/extra/duplicate/placeholder mismatch |
 | `T-07` successors | acyclic chain to Accepted | label/file mismatch, self-link, cycle, bad terminal |
-| `T-08` roadmap | valid Open/Exit-Gate-Met | missing completed TODO, forbidden target |
-| `T-09` provenance | one nonempty field/file | missing, duplicate, empty, misplaced |
+| `T-08` roadmap | Open or Exit-Gate-Met with resolvable module + completed-TODO links in `Exit gate` | missing either target class, unresolved/out-of-root link, forbidden target |
+| `T-09` decision source evidence | one nonempty file-level Provenance applying to all rows in the admitted decision file | missing, duplicate, empty, misplaced, attempted implicit row-level override |
 | `T-10` history boundary | invalid excluded history ignored | same invalid live owner fails |
 | `T-11` read-only | identical fixture manifest | mutation on success/failure |
 | `T-12` diagnostics | bounded rule/path | sensitive/unbounded content output |
@@ -504,7 +508,7 @@ Only observable current-state structure is enforced. Historical transition truth
 - **Package mode:** `bounded-file-set`
 - **Critique isolation mode:** `fresh internal no-context reviewer`
 - **Critique status:** `not_run`
-- **Findings summary:** `pending simplified baseline validation/freeze`
+- **Findings summary:** `pending fresh critique after architecture-opinion revalidation`
 - **Evidence / reference:** `pending formal critique`
 - **Waiver authority / reference (required if waived):** `not applicable`
 
@@ -523,7 +527,7 @@ Only observable current-state structure is enforced. Historical transition truth
 ## Approval
 
 - **Approved by:** `pending`
-- **Approval scope:** `pending validation/freeze/formal gates for SD-01..SD-10`
+- **Approval scope:** `pending architecture revalidation, critique and remaining pre-approval gates for SD-01..SD-10`
 - **Execution not authorized by approval:** `CI/CD, product/runtime, Delphi changes, worktrees, attestation/provenance/runner infrastructure`
 - **Execution authority:** `not_granted`
 - **Prior tokens:** D-01..D-55 history is provenance only and does not authorize the replacement contract.
@@ -653,9 +657,9 @@ Predeclared for readiness; reload after `APROVADO`.
 ## TODO Closeout Disposition
 
 - **Disposition:** `keep-active`
-- **Disposition reason:** simplified SD-01..SD-10 contract is validated and review-frozen but not yet formally reviewed or approved.
-- **Post-commit/push status:** validated review baseline is published at `foundation_documentation:main@f3deae28`; freeze-evidence annotation is pending publication.
-- **Next path/status action:** publish the freeze evidence, run formal pre-approval gates and request `APROVADO`.
+- **Disposition reason:** simplified SD-01..SD-10 direction remains validated; localized architecture findings were integrated and require refreshed freeze/revalidation before critique and approval.
+- **Post-commit/push status:** original review baseline is published at `foundation_documentation:main@f3deae28`; architecture-review corrections are local pending validation/publication.
+- **Next path/status action:** validate and publish the corrected review baseline, rerun architecture opinion, then continue formal pre-approval gates.
 
 ## Commands
 
