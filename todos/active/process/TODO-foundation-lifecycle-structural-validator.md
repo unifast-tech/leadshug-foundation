@@ -35,12 +35,12 @@ O lifecycle da Foundation exige um validator permanente quando backlog, decisõe
 - **Current delivery stage:** `Pending`
 - **Tactical TODO lifecycle state:** `Review`
 - **Qualifiers:** `none`
-- **Next exact step:** publicar a replacement baseline congelada e repetir architecture opinion, plan critique e guards sobre TODO mais owners canônicos explícitos.
+- **Next exact step:** obter validação humana das decisões ampliadas `D-01..D-14`, publicar nova baseline e repetir os reviews sobre o pacote completo.
 
 ## Active Work State
 
 - **Work state:** `review`
-- **Why this state now:** `D-01..D-11` foram validadas; a replacement baseline precisa ser congelada/publicada antes dos reviews e guards pré-aprovação.
+- **Why this state now:** os full-owner reviews encontraram `AR-F01..AR-F05` e `F-18..F-21`; os findings materiais foram integrados e invalidaram a baseline `D-01..D-11`.
 - **Exit condition:** decisões validadas, baseline congelada/publicada, reviews e guards pré-aprovação verdes, seguidos de `APROVADO` explícito ou cancelamento com racional.
 
 ## Trigger Evidence
@@ -60,13 +60,15 @@ O lifecycle da Foundation exige um validator permanente quando backlog, decisõe
 - [ ] `S-06` Preservar a exceção histórica por construção e provar completude: o conjunto de links em `decisions/README.md` deve ser exatamente igual aos arquivos `decisions/*.md` no nível raiz, exceto `README.md`; subdiretórios permanecem históricos/não admitidos até TODO material alterar o boundary.
 - [ ] `S-07` Criar testes test-first positivos e mutation/fail-first negativos, com oráculos independentes do parser, fixtures temporárias e prova byte-for-byte read-only.
 - [ ] `S-08` Documentar owner, comando, cobertura, códigos de saída e mensagens de diagnóstico em `deterministic/README.md`, além de atualizar o lifecycle e o índice raiz com o handoff canônico.
-- [ ] `S-09` Substituir os exact checks do ST-01 somente após validar um candidate SHA que já contenha código, testes e handoffs, mas ainda não alegue cutover; após review/publicação/movimento do TODO, rerodar validator/tests/guards no closeout SHA antes da declaração final.
+- [ ] `S-09` Substituir os exact checks somente depois de candidate validation/reviews e de uma árvore terminal já contendo move, retarget, evidência e cutover passar integralmente antes do commit imutável.
+- [ ] `S-10` Formalizar gramática por estado: decision records ganham coluna `Successor decision`; roadmap `Exit-Gate-Met` exige link relativo de evidência no próprio `Exit gate`; lifecycle define o slug ASCII exato.
+- [ ] `S-11` No closeout, atualizar atomicamente `DEC-validator-adoption-trigger` para o path concluído e validar a árvore Git final antes do commit; o commit de closeout carrega trailer `Validated-Tree: <tree-oid>` e é publicado sem alterar a árvore testada.
 
 ## Out of Scope
 
 - [ ] `OOS-01` Alterar backend, frontend, banco, runtime, Docker, Railway, CI/CD ou contratos de produto do LeadsHug.
 - [ ] `OOS-02` Editar workflows de GitHub Actions ou alegar integração remota neste TODO.
-- [ ] `OOS-03` Reabrir/reformular a direção de decisões `D-01..D-11` do ST-01 ou mudar seus enums/schemas; validação estrutural não adjudica verdade semântica da consolidação.
+- [ ] `OOS-03` Reabrir/reformular as direções aceitas ou enums do ST-01; a extensão estrutural `Successor decision` e a atualização de target do validator são autorizadas somente pelo contrato `D-12/D-14`.
 - [ ] `OOS-04` Retroajustar TODOs concluídos, artifacts históricos ou documentos legados apenas para fazê-los passar no novo validator.
 - [ ] `OOS-05` Copiar contagens, títulos, disposições ou conteúdo específico do ST-01 para o código do validator como verdade permanente.
 - [ ] `OOS-06` Criar configuração paralela editável ou copiar registros vivos; o bootstrap kernel v1 é uma assertion de compatibilidade versionada e só muda junto com uma alteração material do contrato canônico.
@@ -108,6 +110,8 @@ O lifecycle da Foundation exige um validator permanente quando backlog, decisõe
 | Foundation | `deterministic/README.md` | `A` | contrato de uso, owner, cobertura e diagnóstico |
 | Foundation | `evolution_lifecycle.md` | `M` | substituir o handoff temporário pelo comando permanente entregue |
 | Foundation | `README.md` | `M` | expor navegação e comando canônico sem duplicar regras |
+| Foundation | `decisions/README.md` | `M` | canonicalizar membership de records atuais e schema por estado |
+| Foundation | `decisions/ST-01-foundation-lifecycle-decisions.md` | `M` | adicionar successor column e mover atomicamente o target do validator no closeout |
 | Foundation | `todos/active/process/TODO-foundation-lifecycle-structural-validator.md` | `M, D, R` | contrato, evidência e movimento de closeout |
 | Foundation | `todos/completed/process/TODO-foundation-lifecycle-structural-validator.md` | `A, M, R` | destino governado após todos os gates |
 
@@ -117,7 +121,6 @@ O lifecycle da Foundation exige um validator permanente quando backlog, decisõe
 | --- | --- | --- | --- |
 | Foundation | `project_constitution.md` | `any` | invariantes constitucionais já definidos; mudança exigiria nova decisão material |
 | Foundation | `backlog/**` | `any` | registros vivos serão lidos, não reescritos |
-| Foundation | `decisions/**` | `any` | decisões existentes são baseline, não alvo de alteração |
 | Foundation | `system_roadmap.md` | `any` | roadmap é entrada de validação, não alvo desta entrega |
 | Foundation | `modules/**` | `any` | nenhum contrato de produto/módulo muda |
 | Foundation | `contracts/**` | `any` | nenhum contrato de produto muda |
@@ -141,9 +144,10 @@ Preencher somente se o guard retornar `no-go`; qualquer novo path ou change type
 - [ ] `DOD-03` Mutations detectam estrutura Markdown ambígua, ID inválido/duplicado, enum inválido, coluna/owner ausente, link/anchor/target inválido, path/symlink escape, sentinel/evidência 1:1 ausente/duplicada/contraditória e output não redigido; referências repetidas válidas e `PENDING` explícito passam.
 - [ ] `DOD-04` O validator deriva estado vivo dos documentos canônicos e mantém apenas o bootstrap kernel v1 documentado — paths de owners, surfaces/headings, schemas/colunas e enums obrigatórios — sem copiar registros vivos, contagens, títulos ou disposições.
 - [ ] `DOD-05` Testes provam igualdade bidirecional entre o index de decisões e `decisions/*.md`, com mutations de unlink, orphan e duplicate-link; histórico em subdiretórios fica ignorado até mudança material do boundary.
-- [ ] `DOD-06` `deterministic/README.md`, `evolution_lifecycle.md` e `README.md` apontam para um único comando e declaram que CI remoto não foi alterado.
-- [ ] `DOD-07` O candidate SHA contendo implementação, testes e handoffs passa dual-run old/new sem ainda declarar substituição; após audits, publicação e `active XOR completed`, o closeout SHA reroda validator/tests/guards e somente então declara o cutover.
+- [ ] `DOD-06` `deterministic/README.md`, `evolution_lifecycle.md` e `README.md` apontam para um único comando; `decisions/README.md` possui membership/schema canônicos e o ST-01 record usa a coluna successor e target correspondente à fase; CI remoto não foi alterado.
+- [ ] `DOD-07` Proposed, Accepted, Superseded e Rejected obedecem à gramática state-conditioned; `Exit-Gate-Met` exige evidência linkada; identifiers obedecem ao slug ASCII canônico.
 - [ ] `DOD-08` Diff expectation, decisões, evidence matrix, audits, crítica, test-quality audit, final review e closeout guards estão completos e verdes.
+- [ ] `DOD-09` A árvore final staged contém TODO movido, handoffs/cutover e target/evidence do validator apontando ao completed path; todos os checks passam nessa árvore, seu OID aparece no trailer `Validated-Tree`, o commit possui exatamente a mesma árvore e é publicado sem novo diff.
 
 ## Validation Steps
 
@@ -153,16 +157,17 @@ Preencher somente se o guard retornar `no-go`; qualquer novo path ou change type
 - [ ] `VAL-04` Executar `python3 -m py_compile foundation_documentation/deterministic/validate_foundation_lifecycle.py foundation_documentation/deterministic/tests/test_validate_foundation_lifecycle.py`.
 - [ ] `VAL-05` Executar separadamente `git diff --check`, diff expectation guard e scan redigido de secret/private-key patterns; nenhum comando isolado pode alegar as três capacidades.
 - [ ] `VAL-06` Executar diff, authority, completion e closeout guards; exigir `go` antes do movimento final e provar todos os deliverables esperados mais exclusividade `active XOR completed`.
-- [ ] `VAL-07` No candidate SHA que já contém código/testes/handoffs, executar os Exact Check Command Contracts aplicáveis do ST-01 (`VAL-01`, `VAL-02`, `VAL-08`, `VAL-10`) e o novo validator/tests; exigir dual-run verde antes de declarar substituição.
-- [ ] `VAL-08` Após publicação e movimento `active -> completed`, rerodar validator, unittest, diff/authority/completion/closeout guards no closeout SHA e só então registrar a declaração final de cutover.
+- [ ] `VAL-07` No candidate SHA com implementação/testes e sem cutover, executar os Exact Check Command Contracts aplicáveis do ST-01 (`VAL-01`, `VAL-02`, `VAL-08`, `VAL-10`) e o novo validator/tests; exigir dual-run verde antes dos delivery reviews.
+- [ ] `VAL-08` Montar e stagear a árvore final — TODO completed, handoffs/cutover e decisão target atualizada —; executar validator, unittest, diff/authority/completion/closeout guards nessa árvore antes do commit.
+- [ ] `VAL-09` Capturar `git write-tree`, criar o commit de closeout com trailer `Validated-Tree: <tree-oid>`, verificar `HEAD^{tree}` igual ao trailer, working tree limpa e publicar esse commit imutado; a verificação remota final não modifica documentação.
 
 ## Completion Evidence Matrix
 
 | Criterion ID | Source Section | Criterion | Evidence Type | Evidence Artifact / Command | Runtime Target | Status | Notes |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| `S-01..S-09` | Scope | implementação e adoção documental do validator | code+test+doc | paths esperados + `VAL-01..VAL-05` | local Foundation | planned | expandir 1:1 após implementação |
-| `DOD-01..DOD-08` | Definition of Done | critérios de entrega | test+review | comandos e gates correspondentes | local Foundation | planned | evidência agregada não substituirá linhas finais 1:1 |
-| `VAL-01..VAL-08` | Validation Steps | comandos obrigatórios | test | stdout/exit e referências versionadas | local Foundation | planned | registrar candidate SHA, closeout SHA, comando e resultado |
+| `S-01..S-11` | Scope | implementação e adoção documental do validator | code+test+doc | paths esperados + `VAL-01..VAL-06` | local Foundation | planned | expandir 1:1 após implementação |
+| `DOD-01..DOD-09` | Definition of Done | critérios de entrega | test+review | comandos e gates correspondentes | local Foundation | planned | evidência agregada não substituirá linhas finais 1:1 |
+| `VAL-01..VAL-09` | Validation Steps | comandos obrigatórios | test | stdout/exit, staged tree OID e commit trailer | local Foundation | planned | registrar candidate SHA, validated tree, closeout commit e resultado |
 
 ## External Dependency Readiness
 
@@ -205,16 +210,17 @@ Preencher somente se o guard retornar `no-go`; qualquer novo path ou change type
 
 | Owner Path | Unique Heading / Record Surface | Required Structure | Validation Boundary |
 | --- | --- | --- | --- |
-| bootstrap trust kernel v1 in validator | fixed identities for the four owner files; lifecycle authority/state-machine headings; exact table columns; required current enums | removal, duplication or rename fails until a material contract update changes kernel and lifecycle together | immutable parser trust root only; never stores live record IDs/counts/titles/dispositions |
-| `evolution_lifecycle.md` | `Authority matrix`, five `State machines`, `Historical-document exception`, `Deterministic-adoption trigger` | kernel-required headings/schemas/enums present and unique; authority rows unique | canonical semantic owner; validator kernel proves the v1 contract was not silently weakened |
+| bootstrap trust kernel v1 in validator | fixed identities for the four owner files; lifecycle `Immutable identifiers`, authority/state-machine headings; exact table columns; required current enums | removal, duplication or rename fails until a material contract update changes kernel and lifecycle together | immutable parser trust root only; never stores live record IDs/counts/titles/dispositions |
+| `evolution_lifecycle.md` | `Immutable identifiers`, `Authority matrix`, five `State machines`, `Historical-document exception`, `Deterministic-adoption trigger` | kernel-required headings/schemas/enums present and unique; exact ASCII slug grammar; authority rows unique | canonical semantic owner; validator kernel proves the v1 contract was not silently weakened |
 | `backlog/README.md` | `## Candidates` | exact eight-column table; unique `BLG-*`; state from Candidates enum; nonempty fields | Markdown links resolve; freeform Dependencies/Next gate are required prose, not IDs |
-| `decisions/README.md` | `## Records` | normalized record links are unique and exactly equal root-level `decisions/*.md` except `README.md` | immediate-child discovery exists only to prove index completeness; decision subdirectories are historical/unadmitted |
-| indexed root-level decision record files | unique decision table | exact six columns; unique `DEC-*`; state from Decisions enum | targets and semicolon-delimited evidence segments map positionally 1:1; semantics remain review-owned |
-| `system_roadmap.md` | unique six-column roadmap table | unique phase rows; valid Horizon/Gate status; nonempty dependencies/outcome/exit gate | prose dependencies are required but not treated as resolvable IDs |
+| `decisions/README.md` | `Decision record rule`, `## Records` | canonical rule declares root-level `decisions/*.md` current and indexed; normalized links are unique and exactly equal those files except README | physical membership is canonicalized here; subdirectories are historical/unadmitted until a material rule change |
+| indexed root-level decision record files | unique decision table | exact seven columns including `Successor decision`; unique `DEC-*`; state from Decisions enum | state-conditioned targets/evidence/successor grammar below; semantics remain review-owned |
+| `system_roadmap.md` | unique six-column roadmap table | unique phase rows; valid Horizon/Gate status; nonempty dependencies/outcome/exit gate | `Open` allows prose exit gate; `Exit-Gate-Met` requires at least one confined relative evidence link in `Exit gate` |
 
 ### Narrow Markdown Grammar (Revised Contract)
 
 - UTF-8 strict input; reject undecodable bytes and hidden Unicode format controls in identifiers, enum values and paths.
+- Lifecycle IDs use exact ASCII grammar `^(BLG|DEC|CAP)-[a-z0-9]+(?:-[a-z0-9]+)*$`; this slice admits only `BLG-*` and `DEC-*` owners.
 - Required headings/tables are unique; duplicate/missing/reordered headers or row cardinality mismatch fail closed.
 - Pipe tables are parsed structurally with inline code/link awareness; ambiguous escaped pipes/code spans fail with a diagnostic instead of silent token shifting.
 - Markdown paths and decision targets must be relative, remain under `--root`, resolve without absolute paths, `..` escape or symlink escape, and never cause content echo in diagnostics.
@@ -222,23 +228,39 @@ Preencher somente se o guard retornar `no-go`; qualquer novo path ou change type
 - Discovery depth is exactly the source graph above. Historical/completed/artifact content can be a resolved reference target without becoming a scanned live owner.
 - Decision targets and target-consolidation evidence are split on semicolons outside inline code/links and mapped positionally. Exactly one evidence segment is required per target: literal `PENDING` yields valid `pending-effect`; a concrete non-placeholder segment yields structural coverage; missing/extra/duplicate/contradictory segments fail. Complete structural coverage is `structurally-eligible`, never a semantic truth claim.
 
+### Decision State Grammar
+
+| State | Named canonical targets | Target-consolidation evidence | Successor decision |
+| --- | --- | --- | --- |
+| `Proposed` | one or more unique confined relative paths | exactly one literal `PENDING` per target | literal `N/A` |
+| `Accepted` | one or more unique confined relative paths | one segment per target: literal `PENDING` or concrete evidence beginning with that exact inline-code target token plus non-placeholder text | literal `N/A` |
+| `Superseded` | preserve one or more targets | same positional grammar as `Accepted` | exactly one relative Markdown link to an indexed `DEC-*` successor distinct from self |
+| `Rejected` | literal `N/A` | literal `N/A` | literal `N/A` |
+
+Placeholder tokens are the whole-segment, case-insensitive set `PENDING|N/A|TBD|TODO|UNKNOWN|-`; only exact uppercase `PENDING` and `N/A` are valid where the table permits them. Any other placeholder, missing/extra segment, self-successor or unresolved successor fails.
+
 ## Decision Pending
 
-- `none — reconverged D-01..D-11 validated by Gabriel/user on 2026-09-23 through the exact phrase VALIDO D-01..D-11; this validates the planning contract but does not grant implementation authority.`
+| Decision ID | Expanded Recommended Direction | Review Finding Source | Human Validation Needed |
+| --- | --- | --- | --- |
+| `D-01` | Keep the explicit BLG/DEC source graph and exclusions already validated. | preserved | reconfirm boundary |
+| `D-02` | Extend the v1 trust kernel to include `Immutable identifiers` and exact ASCII slug grammar, without live records. | `AR-F05` | confirm trust-root extension |
+| `D-03` | Keep read-only/fail-closed behavior, confinement, byte preservation and redacted diagnostics. | preserved | reconfirm safety |
+| `D-04` | Canonicalize root-level current-decision membership in `decisions/README.md`, then require exact index/file equality; subdirectories remain historical. | `AR-F03` | confirm canonical membership rule |
+| `D-05` | Keep local-only validation and CI-equivalent `n/a`. | preserved | reconfirm adoption stage |
+| `D-06` | Keep Python stdlib + unittest, test-first, independent oracles and mutation matrix. | preserved | reconfirm stack/testing |
+| `D-07` | Keep Foundation ownership, routine-executor implementation and no Delphi changes. | preserved | reconfirm routing |
+| `D-08` | Replace post-commit mutation with a terminal staged-tree protocol: assemble final tree, run all gates, capture tree OID, commit it unchanged with `Validated-Tree` trailer, verify exact tree and push unchanged. | `AR-F04`, `F-20` | confirm terminal commit protocol |
+| `D-09` | Keep positional target/evidence mapping and explicit `PENDING`, refined by the state grammar below. | preserved + `F-19` | confirm mapping contract |
+| `D-10` | Keep prose dependencies nonempty and only explicit paths/fragments resolvable. | preserved | reconfirm dependency grammar |
+| `D-11` | Keep the constrained ASCII anchor dialect. | preserved | reconfirm anchor dialect |
+| `D-12` | Extend decision records to seven columns with `Successor decision` and enforce the state-conditioned Proposed/Accepted/Superseded/Rejected grammar plus closed placeholder dialect. | `AR-F02`, `F-19` | confirm schema/state rules |
+| `D-13` | Require `Exit-Gate-Met` roadmap rows to contain at least one confined relative evidence link in `Exit gate`; `Open` rows retain nonempty prose. | `AR-F02` | confirm roadmap state rule |
+| `D-14` | Admit the ST-01 decision record as an expected closeout change and atomically retarget `DEC-validator-adoption-trigger` from active to completed TODO path/evidence in the validated final tree. | `F-18` | confirm closeout target relocation |
 
 ## Decisions
 
-- [x] `D-01` Admit only the explicit source graph; validate `BLG-*` and `DEC-*`; exclude `CAP-*`, modules, TODO records and contract-verification records.
-- [x] `D-02` Keep lifecycle as semantic owner while a versioned bootstrap trust kernel hard-codes only mandatory owner identities, headings, schemas/columns and current required enums; never live records or dispositions.
-- [x] `D-03` Keep the validator read-only/fail-closed with root/symlink confinement, byte preservation and bounded/redacted diagnostics.
-- [x] `D-04` Define current decisions bidirectionally: index links must equal root-level `decisions/*.md` except README; subdirectories remain historical until a material boundary change.
-- [x] `D-05` Deliver local validation only; CI-equivalent remains `n/a`; remote CI integration stays in another TODO.
-- [x] `D-06` Use Python stdlib + unittest, test-first, independent fixture oracles and a 1:1 rule/mutation matrix.
-- [x] `D-07` Keep ownership project-specific in Foundation and route implementation to routine-executor; no `delphi-ai` implementation changes.
-- [x] `D-08` Validate old/new on a candidate SHA already containing handoffs but no cutover claim; after reviews/publication/TODO move, rerun closeout checks and declare cutover only on the closeout SHA.
-- [x] `D-09` Require exactly one positional evidence segment per target: literal `PENDING` is valid pending-effect; concrete non-placeholder evidence is structural coverage; missing/extra/duplicate/contradictory mapping fails.
-- [x] `D-10` Treat prose dependencies/next gates as required nonempty text; validate only explicit Markdown paths/fragments as resolvable references.
-- [x] `D-11` Use the constrained ASCII heading-fragment dialect defined above; reject percent-encoded, Unicode-derived and HTML anchors instead of emulating an unspecified renderer.
+- `pending human validation of expanded D-01..D-14`
 
 ## Module Decision Baseline Snapshot
 
@@ -253,10 +275,10 @@ Preencher somente se o guard retornar `no-go`; qualquer novo path ou change type
 
 ## Decision Baseline
 
-- **Prior freezes:** `D-01..D-08@b685fb52` invalidated by `AR-01..05/F-01..11`; `D-01..D-10@504a9785` published and invalidated by `AR-R01..AR-R05/F-12..F-17`.
-- **Freeze status:** `frozen-locally — publication required before planning-side reviews`
-- **Frozen decisions:** `D-01..D-11`
-- **Validation evidence:** Gabriel/user, 2026-09-23, exact phrase `VALIDO D-01..D-11`; planning-contract validation only, not implementation approval.
+- **Prior freezes:** `D-01..D-08@b685fb52` invalidated by `AR-01..05/F-01..11`; `D-01..D-10@504a9785` invalidated by `AR-R01..AR-R05/F-12..F-17`; `D-01..D-11@2562f62e` invalidated by `AR-F01..AR-F05/F-18..F-21`.
+- **Freeze status:** `not_frozen — expanded D-01..D-14 pending renewed validation`
+- **Frozen decisions:** `none current`
+- **Latest prior validation evidence:** Gabriel/user, 2026-09-23, exact phrase `VALIDO D-01..D-11`; preserved as provenance but superseded by material full-owner findings.
 - **Prior validation evidence:** Gabriel/user, 2026-09-23, exact phrase `VALIDO D-01..D-10`; preserved as provenance but superseded by the material review findings.
 - **Historical validation evidence:** Gabriel/user, 2026-09-23, phrase `APROVADO`; preserved as provenance, not execution authority.
 
@@ -304,7 +326,7 @@ Preencher somente se o guard retornar `no-go`; qualquer novo path ou change type
 - **Decision review kind:** `architecture_opinion`
 - **Decision review package:** `bounded-file-set`
 - **Decision review status:** `findings_integrated`
-- **Decision review evidence / resolution:** `/root/validator_architecture_revalidation`, 2026-09-23: `AR-R01..AR-R05` classificados como release-blocker e integrados; nova validação, freeze e architecture opinion ainda são obrigatórios.
+- **Decision review evidence / resolution:** `/root/validator_architecture_d011_final`, 2026-09-23: `AR-F01..AR-F05` classificados como release-blocker e integrados; nova validação, freeze e architecture opinion ainda são obrigatórios.
 
 | Finding ID | Resolution | Usefulness | Formalizable | Candidate Rule Level | Candidate Rule ID | Rationale / Evidence |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -313,6 +335,11 @@ Preencher somente se o guard retornar `no-go`; qualquer novo path ou change type
 | `AR-R03` | Integrated | useful | yes | project | n/a | explicit `PENDING` sentinel and positional mapping truth table added |
 | `AR-R04` | Integrated | useful | yes | project | n/a | constrained ASCII heading-fragment dialect defined |
 | `AR-R05` | Integrated | useful | yes | none | n/a | lifecycle/status fields returned to renewed-validation state |
+| `AR-F01` | Integrated | useful | yes | paced | n/a | lifecycle fields returned to expanded-decision validation state |
+| `AR-F02` | Integrated | useful | yes | project | n/a | decision and roadmap state-conditioned grammars added |
+| `AR-F03` | Integrated | useful | yes | project | n/a | decision membership rule scheduled for canonical decisions index |
+| `AR-F04` | Integrated | useful | partial | project | n/a | terminal validated-tree commit protocol replaces post-completion mutation |
+| `AR-F05` | Integrated | useful | yes | project | n/a | immutable-identifier surface and exact slug grammar added to kernel |
 
 - **Architecture adherence review:** `required`
 - **Adherence review lifecycle:** `after implementation and before Completed`
@@ -326,12 +353,12 @@ Preencher somente se o guard retornar `no-go`; qualquer novo path ou change type
 
 - **Gate decision:** `required`
 - **Why this decision:** TODO medium de architecture enforcement requer pacote estável/publicado antes da crítica.
-- **Trigger stage:** `after D-01..D-11 validation and before renewed planning-side reviews`
+- **Trigger stage:** `after D-01..D-14 validation and before renewed planning-side reviews`
 - **Baseline branch:** `main`
 - **Baseline commit:** `2562f62e86cbc15bcaa7865b652e240cb49fcb0e`
 - **Baseline push reference:** `origin/main contains 2562f62e86cbc15bcaa7865b652e240cb49fcb0e; freeze bookkeeping published through 490096774f22fd2fe7c97a88274ca179747d4266`
-- **Gate status:** `frozen-published`
-- **Findings summary:** validated `D-01..D-11` replacement baseline was frozen and published before renewed reviews.
+- **Gate status:** `findings_integrated`
+- **Findings summary:** published `D-01..D-11` enabled full-owner reviews; their material findings invalidated it. Expanded `D-01..D-14` remain unfrozen pending validation.
 - **Evidence / reference:** commits `2562f62e86cbc15bcaa7865b652e240cb49fcb0e` and `490096774f22fd2fe7c97a88274ca179747d4266`, pushed to `origin/main` on 2026-09-23.
 - **Waiver authority / reference:** `n/a`
 
@@ -351,7 +378,7 @@ Preencher somente se o guard retornar `no-go`; qualquer novo path ou change type
 
 ## Questions To Close
 
-- `none — Q-02 closed by Gabriel/user on 2026-09-23 with VALIDO D-01..D-11.`
+- `Q-03` A autoridade humana valida `D-01..D-14`, incluindo schema por estado, target relocation e terminal validated-tree protocol?
 
 ## Assumptions Preview
 
@@ -375,19 +402,19 @@ Preencher somente se o guard retornar `no-go`; qualquer novo path ou change type
 
 ### Ordered Steps
 
-1. Após validação humana, congelar `D-01..D-11`, publicar replacement baseline e repetir plan/architecture reviews com TODO + todos os owners do source graph no pacote.
-2. Após `APROVADO` e authority guard `go`, escrever primeiro fixtures/oráculos fail-first e então implementar bootstrap kernel, parser e diagnostics read-only.
-3. Implementar as regras até `T-01..T-14` convergirem, mantendo estado vivo somente nos owners canônicos.
-4. Documentar comando/boundary/exit contract e atualizar handoffs no candidate SHA, sem ainda declarar cutover.
-5. Executar validator, unittest, py_compile, hygiene e old/new dual-run no candidate SHA; depois executar adherence/audits/final review.
-6. Publicar o pacote aprovado e mover o TODO para `completed/process/` somente com deliverables existentes e `active XOR completed`.
-7. Rerodar validator/tests/guards no closeout SHA e então registrar o cutover permanente.
+1. Após validação humana, congelar `D-01..D-14`, publicar baseline e repetir reviews com TODO + owners completos.
+2. Após `APROVADO` e authority guard `go`, escrever fixtures/oráculos fail-first e implementar kernel/parser/diagnostics mais consolidações canônicas aprovadas.
+3. Implementar até `T-01..T-18` convergir; manter o TODO ativo e o decision target apontando ao active path no candidate SHA.
+4. Executar acceptance, old/new parity, adherence, test-quality audit e final review no candidate SHA.
+5. Montar a árvore terminal com TODO movido, evidence final, handoffs/cutover e `DEC-validator-adoption-trigger` retargeted para completed; stagear tudo.
+6. Executar novamente validator/tests e todos os guards contra essa árvore final staged; qualquer ajuste exige restage e rerun integral.
+7. Capturar `git write-tree`, commitar a árvore imutável com trailer `Validated-Tree`, provar `HEAD^{tree}` igual ao trailer, working tree limpa e push do mesmo commit; nenhuma declaração documental posterior é permitida.
 
 ### Test Strategy
 
 - **Strategy:** `test-first`
 - **Why:** validator e testes podem compartilhar o mesmo erro; cada regra deve falhar contra uma fixture/mutation independente antes do código que a satisfaz.
-- **Fail-first targets:** bootstrap weakening, source graph/headers, index↔record completeness, table cardinality, BLG/DEC syntax+uniqueness, enums, link/anchor/path confinement, `PENDING` versus structurally-eligible mapping, historical exclusion/admission, Unicode/HTML, bounded/redacted diagnostics e byte-for-byte read-only.
+- **Fail-first targets:** bootstrap weakening, identifier grammar, source graph/headers, index↔record completeness, table cardinality, BLG/DEC syntax+uniqueness, state-conditioned decision/roadmap rules, successor links, link/anchor/path confinement, `PENDING` versus structurally-eligible mapping, historical exclusion/admission, closeout target relocation, Unicode/HTML, bounded/redacted diagnostics e byte-for-byte read-only.
 - Fixtures/oráculos são escritos manualmente em temporary directories e não reutilizam helpers internos do parser para construir o expected result.
 - Real-repository acceptance e dual-run ST-01/new ocorrem somente após todos os fail-first cases convergirem.
 
@@ -409,6 +436,10 @@ Preencher somente se o guard retornar `no-go`; qualquer novo path ou change type
 | `T-12` | read-only tree | full validation pass/fail | byte hashes and symlink metadata unchanged |
 | `T-13` | complete bootstrap kernel surfaces | remove mandatory owner, heading, schema column or enum member | non-zero + kernel/version diagnostic |
 | `T-14` | valid constrained ASCII fragment | duplicate slug, Unicode/encoded/HTML fragment, punctuation/case mismatch | deterministic pass/fail per v1 dialect |
+| `T-15` | valid row for each decision state | missing/forbidden target, evidence, successor or self/unresolved successor | non-zero + state/column diagnostic |
+| `T-16` | `Open` roadmap prose and `Exit-Gate-Met` linked evidence | met gate without confined relative evidence link | non-zero + roadmap row diagnostic |
+| `T-17` | exact ASCII lifecycle IDs | Unicode, empty component, repeated/leading/trailing separator or uppercase slug | non-zero + identifier diagnostic |
+| `T-18` | active target in candidate and completed target in terminal tree | move without atomic decision target/evidence relocation | candidate/final tree each pass only in matching phase |
 
 ### Pre-APROVADO RED Evidence Capture
 
@@ -432,9 +463,10 @@ Preencher somente se o guard retornar `no-go`; qualquer novo path ou change type
 | Surface | Behavior / Scenario | Preconditions | Command | Required Before | Status |
 | --- | --- | --- | --- | --- | --- |
 | validator acceptance | source graph real válido | consolidated branch@sha | `python3 foundation_documentation/deterministic/validate_foundation_lifecycle.py --root foundation_documentation` | Local-Implemented | planned |
-| unittest/mutations | `T-01..T-14` | isolated temporary fixtures | `python3 -m unittest discover -s foundation_documentation/deterministic/tests -p 'test_*.py'` | Local-Implemented | planned |
-| candidate parity | old exact checks + new validator/tests agree | candidate SHA already contains code/tests/handoffs but no cutover claim | ST-01 `VAL-01/02/08/10` exact contracts + commands above | before delivery reviews | planned |
-| closeout confirmation | permanent checks stay green after TODO move/publication bookkeeping | closeout SHA with `active XOR completed` | validator + unittest + diff/authority/completion/closeout guards | Production-Ready | planned |
+| unittest/mutations | `T-01..T-18` | isolated temporary fixtures | `python3 -m unittest discover -s foundation_documentation/deterministic/tests -p 'test_*.py'` | Local-Implemented | planned |
+| candidate parity | old exact checks + new validator/tests agree | candidate SHA keeps active TODO target and has no cutover claim | ST-01 `VAL-01/02/08/10` exact contracts + commands above | before delivery reviews | planned |
+| terminal-tree confirmation | permanent checks stay green after atomic move/retarget/cutover | fully staged final tree with `active XOR completed` | validator + unittest + diff/authority/completion/closeout guards + `git write-tree` | before closeout commit | planned |
+| immutable publication | committed tree equals validated staged tree | closeout commit trailer contains captured tree OID | compare `HEAD^{tree}` to `Validated-Tree`, clean tree, remote ref equality | Production-Ready | planned |
 
 ### Runtime / Rollout Notes
 
@@ -443,19 +475,19 @@ Preencher somente se o guard retornar `no-go`; qualquer novo path ou change type
 
 ## Plan Review Gate
 
-- **Status:** `findings_integrated — AR-R01..AR-R05/F-12..F-17 reconverged; D-01..D-11 await human validation, replacement freeze and fresh review`
+- **Status:** `findings_integrated — AR-F01..AR-F05/F-18..F-21 reconverged; D-01..D-14 await human validation, replacement freeze and fresh review`
 - **Required lenses:** Architecture, Code Quality, Tests, Performance, Security, Elegance, Structural Soundness.
 - **Expected focus:** evitar parser frágil, catálogo duplicado, cobertura superficial, bypass histórico e expansão para CI.
 
 ### Review Sections
 
-- [x] Architecture — trust kernel, bidirectional membership, evidence truth table and anchor dialect integrated.
+- [x] Architecture — canonical membership, state-conditioned grammar, immutable identifiers and validated-tree closeout integrated.
 - [x] Code Quality — narrow grammar, confinement and diagnostics contract added.
-- [x] Tests — test-first and `T-01..T-14` matrix added.
+- [x] Tests — test-first and `T-01..T-18` matrix added.
 - [x] Performance — bounded linear scan; no specialized lane triggered.
 - [x] Security — root/symlink confinement and redaction made mandatory.
 - [x] Elegance — one project-owned stdlib validator; no parallel catalog.
-- [x] Structural Soundness — two-SHA cutover, membership completeness and trust-root protection added.
+- [x] Structural Soundness — atomic target relocation and terminal validated-tree commit protocol replace self-referential closeout.
 
 ### Issue Cards
 
@@ -467,7 +499,12 @@ Preencher somente se o guard retornar `no-go`; qualquer novo path ou change type
 - **Issue ID:** `PLAN-06` — index-only decision admission permits silent unlink (`high`). Option A: exact equality with root-level decision files (recommended, low effort/low risk); Option B: dedicated directory migration (higher scope); Option C: keep index-only (false-green). **Resolution:** integrated into `D-04`, `S-06`, `DOD-05`, `T-10`.
 - **Issue ID:** `PLAN-07` — pending mapping pass/fail contradiction (`high`). Option A: explicit positional `PENDING` sentinel (recommended, low effort/clear oracle); Option B: new schema columns (higher migration scope); Option C: infer from prose (ambiguous). **Resolution:** integrated into `D-09`, grammar, `T-07/08`.
 - **Issue ID:** `PLAN-08` — renderer anchor dialect unspecified (`medium`). Option A: constrained ASCII v1 grammar (recommended, low complexity); Option B: emulate GitHub fully (higher maintenance); Option C: skip anchors (coverage gap). **Resolution:** integrated into `D-11`, grammar, `T-14`.
-- **Issue ID:** `PLAN-09` — same-SHA cutover chronology impossible after TODO move (`medium`). Option A: candidate SHA parity plus closeout SHA rerun (recommended); Option B: single mutable claim (contradictory); Option C: no parity. **Resolution:** integrated into `D-08`, `DOD-07`, `VAL-07/08`.
+- **Issue ID:** `PLAN-09` — same-SHA cutover chronology impossible after TODO move (`medium`). Initial two-SHA resolution was invalidated by `AR-F04/F-20`; the authoritative replacement is `PLAN-12` terminal validated-tree protocol.
+- **Issue ID:** `PLAN-10` — TODO relocation breaks a canonical decision target (`high`). Option A: atomically retarget the decision record in the terminal tree (recommended); Option B: retain active shim (violates XOR); Option C: broken target. **Resolution:** integrated into `D-14`, expected paths, `T-18`.
+- **Issue ID:** `PLAN-11` — decision/roadmap state obligations under-specified (`high`). Option A: seven-column decision schema plus state truth table and Exit-Gate-Met link rule (recommended); Option B: parser heuristics (false-green risk); Option C: ignore lifecycle obligations. **Resolution:** integrated into `D-12/D-13`, grammar, `T-15/16`.
+- **Issue ID:** `PLAN-12` — post-validation cutover write invalidates tested SHA (`high`). Option A: validate final staged tree and bind it in commit trailer (recommended); Option B: post-commit doc mutation (untested tree); Option C: external unbound prose. **Resolution:** integrated into `D-08`, `DOD-09`, `VAL-08/09`.
+- **Issue ID:** `PLAN-13` — directory membership rule lacked canonical authority (`high`). Option A: consolidate it into decisions index (recommended); Option B: inferred filesystem policy (hidden authority); Option C: index-only omission risk. **Resolution:** integrated into `D-04` and expected canonical changes.
+- **Issue ID:** `PLAN-14` — identifier kernel omitted its semantic owner (`medium`). Option A: include Immutable identifiers + exact grammar (recommended); Option B: code-only grammar; Option C: weak slug oracle. **Resolution:** integrated into `D-02`, source graph, `T-17`.
 
 ### Failure Modes & Edge Cases
 
@@ -487,9 +524,9 @@ Preencher somente se o guard retornar `no-go`; qualquer novo path ou change type
 
 ## Additional Architectural Opinions
 
-- **Needed:** `yes — rerun after D-01..D-11 replacement freeze`
+- **Needed:** `yes — rerun after D-01..D-14 replacement freeze`
 - **Why ambiguity remains:** os findings materiais foram integrados, mas a arquitetura reconvergida precisa de nova confirmação independente sobre o pacote completo de owners.
-- **Opinion count:** `1 completed with material findings; 1 fresh rerun pending`
+- **Opinion count:** `2 completed with material findings; 1 fresh rerun pending`
 - **Package mode:** `bounded-file-set`
 - **Internal reviewer mandate:** `required after freeze; reviewer cannot implement`
 - **Required lenses:** `correctness|performance|elegance|structural-soundness|operational-fit`
@@ -511,7 +548,7 @@ Preencher somente se o guard retornar `no-go`; qualquer novo path ou change type
 | `touches_tests` | `yes` | nova suíte unittest/mutation |
 | `critical_user_journey` | `no` | governança interna |
 | `release_or_promotion_critical` | `no` | não promove produto |
-| `high_severity_plan_review_issue` | `yes` | `PLAN-01..09` include integrated high findings; fresh review still required |
+| `high_severity_plan_review_issue` | `yes` | `PLAN-01..14` include integrated high findings; fresh review still required |
 | `explicit_three_lane_request` | `no` | não solicitado |
 
 ## Independent No-Context Critique Gate
@@ -527,7 +564,7 @@ Preencher somente se o guard retornar `no-go`; qualquer novo path ou change type
 - **Audit session / round evidence:** `n/a unless triggered`
 - **Critique lenses:** `correctness|performance|elegance|structural-soundness|risk`
 - **Critique status:** `findings_integrated`
-- **Findings summary:** prior `F-01..F-11` plus renewed `F-12..F-17` integrated; the latest review found the package approval-not-ready and requires renewed validation, replacement freeze and a full-owner fresh critique.
+- **Findings summary:** `F-01..F-21` integrated; the latest full-owner review remains approval-not-ready and requires renewed validation, replacement freeze and fresh critique.
 - **Resolution ledger:** prior findings are recorded individually below for deterministic carry-forward.
 
 | Finding ID | Resolution (`Integrated|Challenged|Deferred`) | Usefulness (`useful|noise|mixed|unknown`) | Formalizable (`yes|partial|no|unknown`) | Candidate Rule Level (`paced|project|none|unknown`) | Candidate Rule ID | Rationale / Evidence |
@@ -547,10 +584,14 @@ Preencher somente se o guard retornar `no-go`; qualquer novo path ou change type
 | `F-13` | Integrated | useful | yes | paced | n/a | all lifecycle fields now return to renewed-validation and replacement-freeze state |
 | `F-14` | Integrated | useful | yes | project | n/a | explicit positional `PENDING` truth table removes pass/fail contradiction |
 | `F-15` | Integrated | useful | yes | project | n/a | bidirectional decisions index/root-file equality proves live membership completeness |
-| `F-16` | Integrated | useful | yes | project | n/a | candidate SHA parity and closeout SHA rerun establish coherent cutover ordering |
+| `F-16` | Integrated | useful | yes | project | n/a | initial two-SHA resolution was later invalidated; authoritative replacement is `F-20` terminal validated-tree protocol |
 | `F-17` | Integrated | useful | yes | project | n/a | constrained ASCII fragment dialect supplies independent test oracle |
+| `F-18` | Integrated | useful | yes | project | n/a | terminal tree atomically retargets validator decision to completed TODO path |
+| `F-19` | Integrated | useful | yes | project | n/a | seven-column state grammar and closed placeholder dialect added |
+| `F-20` | Integrated | useful | partial | paced | n/a | validated staged-tree OID is bound in immutable closeout commit trailer |
+| `F-21` | Integrated | useful | yes | paced | n/a | operational fields returned to D-01..D-14 validation state |
 
-- **Evidence / reference:** `/root/validator_plan_revalidation`, 2026-09-23; `overall_assessment=material_findings_present; approval_not_ready`.
+- **Evidence / reference:** `/root/validator_critique_d011_final`, 2026-09-23; `overall_assessment=material_findings_present; approval_not_ready`.
 - **Waiver authority / reference:** `n/a`
 
 ## Gate: Assumption Code Coherence
@@ -568,13 +609,13 @@ Preencher somente se o guard retornar `no-go`; qualquer novo path ou change type
 ## Approval
 
 - **Approved by:** `pending`
-- **Approval scope:** `pending after D-01..D-11 validation and planning gates`
+- **Approval scope:** `pending after D-01..D-14 validation and planning gates`
 - **Execution not authorized by approval:** `CI/CD, product/runtime, historical rewrites, delphi-ai changes, worktrees or auxiliary checkouts unless separately named`
 - **Renewed approval required when:** scope, invariant semantics, validation, expected paths, architecture, risk, exception or CI adoption changes materially.
 - **Execution authority:** `not_granted`
 - **Pre-gate human token:** Gabriel/user, 2026-09-23, `APROVADO`; it validated the superseded `D-01..D-08` only. Material findings require renewed validation and a new post-gate `APROVADO`.
 - **Renewed validation token:** Gabriel/user, 2026-09-23, exact phrase `VALIDO D-01..D-10`; validates the revised decisions, but does not grant implementation authority.
-- **Renewal status:** `satisfied for replacement freeze by the D-01..D-11 validation token; post-gate APROVADO remains required.`
+- **Renewal status:** `D-01..D-11 validation superseded by AR-F01..AR-F05/F-18..F-21; D-01..D-14 require a new validation token.`
 - **Latest validation token:** Gabriel/user, 2026-09-23, exact phrase `VALIDO D-01..D-11`; validates the reconverged decisions, but does not grant implementation authority.
 
 ## Rules Acknowledgement / Ingestion
@@ -614,7 +655,7 @@ Predeclared for pre-approval readiness; reload and bind after `APROVADO`.
 
 | Decision ID | Status | Evidence | Notes |
 | --- | --- | --- | --- |
-| `D-01..D-11` | pending-validation | reconverged TODO contract | expand 1:1 only after replacement freeze and approval |
+| `D-01..D-14` | pending-validation | expanded TODO contract | expand 1:1 only after replacement freeze and approval |
 
 ## Module Decision Consistency Validation
 
@@ -651,6 +692,8 @@ Predeclared for pre-approval readiness; reload and bind after `APROVADO`.
 | `F-09..F-11` | medium | release-blocker | integrate in current TODO | correções de routing, CI terminology, PCV/state bookkeeping | fixed-pending-revalidation | routing, CI terminology, PCV/state bookkeeping revised |
 | `AR-R01..AR-R05` | high/medium | release-blocker | integrate in current TODO | mesma arquitetura do validator; trust root, membership, mapping, anchors e state bookkeeping | fixed-pending-revalidation | reconverged `D-02/D-04/D-08/D-09/D-11`; fresh review required |
 | `F-12..F-17` | high/medium | release-blocker | integrate in current TODO | mesmos approval/readiness boundaries; nenhum split necessário | fixed-pending-revalidation | full-owner package, lifecycle state, mapping, membership, cutover and anchor grammar revised |
+| `AR-F01..AR-F05` | high/medium | release-blocker | integrate in current TODO | same validator architecture and closeout boundary; no split needed | fixed-pending-revalidation | state grammar, canonical membership, identifiers and terminal commit protocol revised |
+| `F-18..F-21` | high/medium | release-blocker | integrate in current TODO | same delivery contract and target lifecycle; no split needed | fixed-pending-revalidation | target relocation, state grammar, validated tree and bookkeeping revised |
 
 ## Security Risk Assessment
 
@@ -744,8 +787,8 @@ Predeclared for pre-approval readiness; reload and bind after `APROVADO`.
 
 - **Disposition:** `keep-active`
 - **Disposition reason:** material review findings were integrated; revised decisions require renewed human validation, refreeze and fresh reviews.
-- **Post-commit/push status:** `reconverged D-01..D-11 replacement freeze published on origin/main; no implementation claim`
-- **Next path/status action:** publish the replacement freeze and rerun all planning-side gates with the full owner package; no implementation before a later post-gate APROVADO and authority guard `go`.
+- **Post-commit/push status:** `D-01..D-11 full-owner review completed with material findings; expanded D-01..D-14 not yet frozen; no implementation claim`
+- **Next path/status action:** obtain renewed validation of `D-01..D-14`, publish a replacement freeze and rerun all planning-side gates with the full owner package; no implementation before a later post-gate APROVADO and authority guard `go`.
 
 ## Commands
 
