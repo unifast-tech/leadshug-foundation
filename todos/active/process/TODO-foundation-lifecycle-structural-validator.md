@@ -154,7 +154,7 @@ Any unclassified path blocks delivery until classified as scope deviation, neces
 
 - [ ] `VAL-01` `python3 foundation_documentation/deterministic/validate_foundation_lifecycle.py --root foundation_documentation`
 - [ ] `VAL-02` `python3 -m unittest discover -s foundation_documentation/deterministic/tests -p 'test_*.py'`
-- [ ] `VAL-03` Run mutations for IDs, tables, links, paths, states, successors, roadmap evidence and read-only behavior.
+- [ ] `VAL-03` Run mutations for IDs, tables, links, paths, observable current-row state/target/evidence, roadmap evidence and read-only behavior.
 - [ ] `VAL-04` Run a no-write compile check with `python3 -B` over delivered Python files.
 - [ ] `VAL-05` Run compatible ST-01 checks once as migration parity evidence and record retired assertions.
 - [ ] `VAL-06` Run `git diff --check`, diff expectation, authority and completion guards at required phases.
@@ -261,7 +261,7 @@ The admitted current decision file uses one nonempty file-level `Provenance` fie
 | `SD-01` | Validate only the explicit live source graph; do not broad-scan history/artifacts. | prevents hidden authority expansion |
 | `SD-02` | Keep a minimal bootstrap kernel for required owners/headings/schemas/enums, never live IDs/counts/content. | prevents self-weakening without duplicating truth |
 | `SD-03` | Make validation read-only, fail-closed, root-confined and redacted. | protects integrity and makes failure actionable |
-| `SD-04` | Enforce decision index ↔ root-record membership and observable state/successor grammar. | detects orphan, duplicate and broken records |
+| `SD-04` | Enforce decision index ↔ root-record membership and observable current-row state/target/evidence grammar. | detects orphan, duplicate and structurally broken current records without inventing successor storage |
 | `SD-05` | Enforce roadmap evidence structure while leaving semantic sufficiency review-owned. | separates structure from judgment |
 | `SD-06` | Use Python stdlib, a thin CLI/parser and independent unittest fixtures/oracles. | keeps maintenance small |
 | `SD-07` | Expose only ordinary `--root` validation; no runner, attestation, registry or provenance. | preserves the initial idea |
@@ -508,8 +508,8 @@ The admitted current decision file uses one nonempty file-level `Provenance` fie
 - **Package mode:** `bounded-file-set`
 - **Critique isolation mode:** `fresh internal no-context reviewer`
 - **Critique status:** `findings_integrated`
-- **Findings summary:** `fresh no-context critique returned request_changes: unsupported successor automation removed; system_roadmap.md made exclusive roadmap owner; link/confinement/diagnostic allowlist made explicit; brittle symbol-scanner T-15 removed; read-only attempt detection retained as code-review evidence without runner/sandbox expansion`
-- **Evidence / reference:** `formal critique on 2026-09-24 against dc66744b/181cac8f; localized reductions integrated locally; fresh revalidation required`
+- **Findings summary:** `fresh critique blockers were integrated by removing unsupported successor automation, making system_roadmap.md the exclusive owner, defining a small link/confinement/diagnostic grammar, removing brittle symbol scanning and keeping read-only attempt detection as code-review evidence. First revalidation found two residual successor promises in VAL-03/SD-04; both were removed without scope expansion.`
+- **Evidence / reference:** `formal critique on 2026-09-24 against dc66744b/181cac8f; first revalidation against 728cb305/be9c6d24; final fresh revalidation pending after residual cleanup`
 - **Waiver authority / reference (required if waived):** `not applicable`
 
 ## Gate: Assumption Code Coherence
@@ -658,8 +658,8 @@ Predeclared for readiness; reload after `APROVADO`.
 
 - **Disposition:** `keep-active`
 - **Disposition reason:** simplified SD-01..SD-10 direction remains validated; localized architecture findings were integrated and require refreshed freeze/revalidation before critique and approval.
-- **Post-commit/push status:** critique-reduced review baseline is published at `foundation_documentation:main@728cb305`; freeze-evidence annotation is pending publication.
-- **Next path/status action:** publish freeze evidence, rerun critique, then run assumption/scope guards and authority preflight.
+- **Post-commit/push status:** critique-reduced baseline and annotation are published through `be9c6d24`; final residual successor cleanup is local pending publication.
+- **Next path/status action:** publish/refreeze the residual cleanup, rerun critique once, then run assumption/scope guards and authority preflight.
 
 ## Commands
 
