@@ -40,7 +40,7 @@ O lifecycle da Foundation exige um validator permanente quando backlog, decisõe
 ## Active Work State
 
 - **Work state:** `review`
-- **Why this state now:** por direção humana, o TODO entrou em convergência pré-freeze para esgotar decisões antes de novo token `VALIDO`; R-04 fechou registry/substituições e modularidade, integrados em `D-31/D-32`.
+- **Why this state now:** por direção humana, o TODO entrou em convergência pré-freeze para esgotar decisões antes de novo token `VALIDO`; R-05 adicionou cobertura terminal de segredos e no-bytecode, integrados em `D-33/D-34`.
 - **Exit condition:** decisões validadas, baseline congelada/publicada, reviews e guards pré-aprovação verdes, seguidos de `APROVADO` explícito ou cancelamento com racional.
 
 ## Trigger Evidence
@@ -150,25 +150,25 @@ Preencher somente se o guard retornar `no-go`; qualquer novo path ou change type
 
 - [ ] `DOD-01` O validator retorna `0` para a Foundation canônica válida e código diferente de zero para qualquer violação coberta, sem alterar arquivos.
 - [ ] `DOD-02` Cada regra enumerada na Test Rule Matrix possui fail-first positivo/negativo, mensagem/exit assertions e oráculo independente do helper sob teste.
-- [ ] `DOD-03` Mutations detectam estrutura Markdown ambígua, ID inválido/duplicado, enum inválido, coluna/owner/proveniência ausente, link/anchor/target inválido, base de resolução trocada, path/symlink escape, successor ambíguo/não efetivo, transição Rejected inválida, evidência roadmap fora das classes admitidas, sentinel/evidência 1:1 ausente/duplicada/contraditória, staged/worktree split, qualquer mudança portável no manifest completo da fixture e output não redigido; referências repetidas válidas e `PENDING` explícito passam.
+- [ ] `DOD-03` Mutations detectam estrutura Markdown ambígua, ID inválido/duplicado, enum inválido, coluna/owner/proveniência ausente, link/anchor/target inválido, base de resolução trocada, path/symlink escape, successor ambíguo/não efetivo, transição Rejected inválida, evidência roadmap fora das classes admitidas, sentinel/evidência 1:1 ausente/duplicada/contraditória, staged/worktree split, segredo em qualquer surface entregue, bytecode/write residual, qualquer mudança portável no manifest completo da fixture e output não redigido; referências repetidas válidas e `PENDING` explícito passam.
 - [ ] `DOD-04` O validator deriva estado vivo dos documentos canônicos e mantém apenas o bootstrap kernel v1 documentado — paths de owners, surfaces/headings, schemas/colunas e enums obrigatórios — sem copiar registros vivos, contagens, títulos ou disposições.
 - [ ] `DOD-05` Testes provam igualdade bidirecional entre o index de decisões e `decisions/*.md`, com mutations de unlink, orphan e duplicate-link; histórico em subdiretórios fica ignorado até mudança material do boundary.
 - [ ] `DOD-06` `deterministic/README.md`, `evolution_lifecycle.md` e `README.md` apontam para um único comando; lifecycle possui as gramáticas finais de decisão e roadmap, `decisions/README.md` possui membership/guidance canônicos, `system_roadmap.md` aponta ao owner sem regra concorrente e o ST-01 record usa a coluna successor e target correspondente à fase; CI remoto não foi alterado.
 - [ ] `DOD-07` Proposed, Accepted, Superseded e Rejected obedecem à gramática state-conditioned; `Exit-Gate-Met` exige um TODO concluído e limita links adicionais a owners canônicos admitidos; identifiers obedecem ao slug ASCII canônico.
 - [ ] `DOD-08` Diff expectation, decisões, evidence matrix e gates pré-terminais estão completos e verdes dentro da árvore; resultados que só existem após materializar/validar o tree OID ficam exclusivamente no attestation manifest imutável do commit, sem alegação circular dentro do TODO concluído.
-- [ ] `DOD-09` A árvore final staged contém TODO movido, handoffs/cutover e target/evidence do validator apontando ao completed path; a interface fechada executa cada check no contexto declarado, prova o mesmo tree OID e a proveniência direta de Foundation/Delphi/Python/Git, o commit message contém o self-attestation manifest e trailers `Validated-Tree`/`Validation-Attestation-SHA256`, o verifier confirma os bindings, e o commit possui exatamente essa árvore e é publicado sem novo diff.
+- [ ] `DOD-09` A árvore final staged contém TODO movido, handoffs/cutover e target/evidence do validator apontando ao completed path; a interface fechada executa cada check no contexto declarado, prova o mesmo tree OID, scan completo, ambiente no-bytecode e proveniência direta de Foundation/Delphi/toolchain, o commit message contém o self-attestation manifest e trailers `Validated-Tree`/`Validation-Attestation-SHA256`, o verifier confirma os bindings, e o commit possui exatamente essa árvore e é publicado sem novo diff.
 
 ## Validation Steps
 
 - [ ] `VAL-01` Executar `python3 foundation_documentation/deterministic/validate_foundation_lifecycle.py --root foundation_documentation` e exigir exit `0` com resumo determinístico.
 - [ ] `VAL-02` Executar `python3 -m unittest discover -s foundation_documentation/deterministic/tests -p 'test_*.py'` e exigir todos os testes verdes.
 - [ ] `VAL-03` Executar a Test Rule Matrix inteira, incluindo bootstrap deletion, unlink/orphan decision records, bases distintas de path, provenance, root confinement, symlink/`..` escape, anchor dialect, Unicode/HTML, read-only byte snapshot, staged/worktree split, `PENDING` válido e evidência contraditória.
-- [ ] `VAL-04` Executar o compile oracle sem escrita `python3 -c "from pathlib import Path; import sys; [compile(Path(p).read_bytes(), p, 'exec') for p in sys.argv[1:]]" foundation_documentation/deterministic/validate_foundation_lifecycle.py foundation_documentation/deterministic/tests/test_validate_foundation_lifecycle.py`; nenhum `__pycache__` pode ser criado.
-- [ ] `VAL-05` Executar separadamente `git diff --check`, diff expectation guard e scan redigido de secret/private-key patterns; nenhum comando isolado pode alegar as três capacidades.
+- [ ] `VAL-04` Com `PYTHONDONTWRITEBYTECODE=1`, executar o compile oracle sem escrita `python3 -B -c "from pathlib import Path; import sys; [compile(Path(p).read_bytes(), p, 'exec') for p in sys.argv[1:]]"` sobre o entrypoint, os quatro package files e os três test files aprovados; nenhum `__pycache__`/`.pyc` pode existir ou ser criado.
+- [ ] `VAL-05` Executar separadamente `git diff --check`, diff expectation guard e `delivery-secret-scan` sobre exatamente todos os arquivos regulares do final Expected Changed Paths; legacy VAL-10 permanece compatibilidade histórica e não substitui a cobertura terminal. Nenhum comando isolado pode alegar as três capacidades.
 - [ ] `VAL-06` Executar diff, authority, completion e closeout guards; exigir `go` antes do movimento final e provar todos os deliverables esperados mais exclusividade `active XOR completed`.
 - [ ] `VAL-07` Aplicar a matriz legada por fase: no baseline pré-migração executar ST-01 `VAL-01/02/08/10`; após a primeira mudança de schema/target, `VAL-02` fica explicitamente superseded por `T-15/T-18` e pelo novo validator, enquanto `VAL-01/08/10` permanecem obrigatórios no candidate e na camada Git terminal. Nenhum check pode ser omitido por interpretação livre de “aplicável”.
 - [ ] `VAL-08` Montar e stagear a árvore final — TODO completed, handoffs/cutover e decisão target atualizada —; capturar `git write-tree`, materializar esse tree OID em diretório temporário read-only e executar ali somente os comandos `materialized-tree`; comandos `foundation-index` provam separadamente o mesmo index/tree OID e `workspace-governance` usam o checkout Delphi limpo capturado.
-- [ ] `VAL-09` Após os checks, provar que o index ainda produz o mesmo tree OID, rejeitar divergência index/worktree e untracked files nas surfaces admitidas, capturar/verificar commit+tree Delphi e versão+SHA-256 dos executáveis Python/Git, usar `--run-attested-suite` com o registry canônico/contextos fechados para gerar o self-attestation determinístico, criar o commit com esse manifest e trailers `Validated-Tree`/`Validation-Attestation-SHA256`, executar `--verify-attestation --commit HEAD`, verificar `HEAD^{tree}`, working tree limpa e publicar esse commit imutado; qualquer divergência exige restage e rerun integral.
+- [ ] `VAL-09` Após os checks, provar que o index ainda produz o mesmo tree OID, rejeitar divergência index/worktree e untracked files nas surfaces admitidas, capturar/verificar commit+tree Delphi, toolchain direto e ambiente no-bytecode, usar `--run-attested-suite` com o registry canônico/contextos fechados para gerar o self-attestation determinístico, criar o commit com esse manifest e trailers `Validated-Tree`/`Validation-Attestation-SHA256`, executar `--verify-attestation --commit HEAD`, verificar `HEAD^{tree}`, working tree limpa e publicar esse commit imutado; qualquer divergência exige restage e rerun integral.
 
 ## Completion Evidence Matrix
 
@@ -251,8 +251,8 @@ Placeholder tokens are the whole-segment, case-insensitive set `PENDING|N/A|TBD|
 ### Validation-Attestation-v1 Byte Grammar
 
 - Commit message contains exactly one `Validation-Attestation-v1-Begin` line, one payload, one `Validation-Attestation-v1-End` line, then exactly one `Validated-Tree` and one `Validation-Attestation-SHA256` trailer.
-- Payload is UTF-8 without BOM, LF-only, ends with one LF, and uses fixed order: `version`, `git-object-format`, `tree`, `registry-sha256`, `delphi-commit`, `delphi-tree`, `tool-count`, ordered tool records, `command-count`, then command records numbered from `01` without gaps. Tool IDs are exactly `bash`, `git`, `python3`, `rg`, `sort`; each record contains `id`, resolved-executable byte SHA-256 and SHA-256 over raw version-command stdout, one NUL byte, then raw stderr (`<tool> --version`, except `python3 --version`).
-- Required command IDs, in order, are `foundation-validator`, `foundation-unittest`, `foundation-compile-no-write`, `legacy-val01`, `legacy-val08`, `legacy-val10`, `git-diff-check`, `diff-expectation`, `authority-guard`, `completion-guard`, `closeout-guard`, `tree-consistency`.
+- Payload is UTF-8 without BOM, LF-only, ends with one LF, and uses fixed order: `version`, `git-object-format`, `tree`, `registry-sha256`, `environment-sha256`, `delphi-commit`, `delphi-tree`, `tool-count`, ordered tool records, `command-count`, then command records numbered from `01` without gaps. Tool IDs are exactly `bash`, `git`, `python3`, `rg`, `sort`; each record contains `id`, resolved-executable byte SHA-256 and SHA-256 over raw version-command stdout, one NUL byte, then raw stderr (`<tool> --version`, except `python3 --version`).
+- Required command IDs, in order, are `foundation-validator`, `foundation-unittest`, `foundation-compile-no-write`, `legacy-val01`, `legacy-val08`, `legacy-val10`, `delivery-secret-scan`, `git-diff-check`, `diff-expectation`, `authority-guard`, `completion-guard`, `closeout-guard`, `tree-consistency`.
 - Each command record has fixed fields in order: `id`, `context` (`materialized-tree|foundation-index|workspace-governance`), `cwd` (`workspace|foundation|materialized-foundation`), `argv-sha256` over exact NUL-joined UTF-8 argv bytes, decimal `exit`, `stdout-sha256` over raw stdout bytes, and `stderr-sha256` over raw stderr bytes. No normalization is allowed.
 - `Validation-Attestation-SHA256` hashes exactly the payload bytes between delimiters, including its final LF and excluding delimiters, trailers and the digest itself. Missing, duplicate, unknown, reordered or malformed fields/commands fail.
 - Golden tests construct expected payload bytes and digests independently of the production serializer/parser; mutations cover field/command reorder, newline/encoding change, stream swap, missing/duplicate command, altered argv/output bytes and trailer mismatch.
@@ -265,26 +265,28 @@ Placeholder tokens are the whole-segment, case-insensitive set `PENDING|N/A|TBD|
 ### Approved Attested Command Registry
 
 - Registry templates are UTF-8/LF records in the table order below. Tokens are the only `{...}` forms allowed; unknown, nested or partially embedded tokens fail.
-- `{PYTHON}`, `{GIT}` and `{BASH}` resolve to logical argv names `python3`, `git` and `bash`; their actual executables are resolved without shell interpolation and bound by the provenance fields. `{TREE}` resolves to the lowercase captured Git OID. No absolute workspace or temporary-directory path is admitted in child argv.
+- `{PYTHON}`, `{GIT}` and `{BASH}` resolve once, before execution, to canonical realpath bytes of the executable selected from `PATH`; those exact bytes are executed and bound by provenance. `{TREE}` resolves to the lowercase captured Git OID. Absolute bytes are permitted only through executable-token expansion; no literal absolute workspace or temporary-directory path is admitted in child argv.
 - `{ST01_VAL01}`, `{ST01_VAL08}` and `{ST01_VAL10}` expand to the exact bytes between the opening `bash` fence LF and the LF immediately before the closing fence under the uniquely named heading in the completed ST-01 TODO. The source blob/OID and expanded bytes digest are bound; these are the only allowed `bash -c` payloads.
 - `materialized-tree` commands run with cwd at the read-only materialized Foundation root and use only relative paths. `foundation-index` commands run at the principal Foundation root and must prove `git write-tree == {TREE}`. `workspace-governance` commands run at workspace root, may read the bound clean Delphi checkout and principal Foundation Git metadata, and must not mutate either repository.
+- Every child receives the fixed environment overlay `PYTHONDONTWRITEBYTECODE=1`; all direct Python argv also place `-B` immediately after `{PYTHON}`. The overlay's canonical `NAME=value\0` bytes are part of `registry-sha256` and separately bound by `environment-sha256`. The runner rejects override/removal, and complete before/after manifests prove that even privileged execution creates no bytecode.
 - `argv-sha256` hashes fully expanded NUL-joined argv bytes. `registry-sha256` hashes the immutable templates and metadata, before `{TREE}`/legacy expansion. The verifier reconstructs both domains; it never trusts runner-supplied hashes. Relocating the materialization must not change either digest.
 - The registry digest domain is `Registry-v1` followed by one NUL byte, then every row/field in table order (`id`, `context`, `cwd`, argv arguments in order, permitted-input/provenance cell, success/phase cell). Each field is encoded as eight lowercase hexadecimal UTF-8 byte-length digits, one colon, the exact field bytes, then one NUL. Markdown presentation markers are excluded; inline-code contents are the field values. Duplicate/missing fields or noncanonical encoding fail.
 
 | Command ID | Context / cwd | Exact argv template | Permitted inputs / direct provenance | Success / phase |
 | --- | --- | --- | --- | --- |
-| `foundation-validator` | `materialized-tree` / `materialized-foundation` | `{PYTHON}` `deterministic/validate_foundation_lifecycle.py` `--root` `.` | attested Foundation tree + Python | exit `0`; terminal |
-| `foundation-unittest` | `materialized-tree` / `materialized-foundation` | `{PYTHON}` `-m` `unittest` `discover` `-s` `deterministic/tests` `-p` `test_*.py` | attested Foundation tree + Python | exit `0`; terminal |
-| `foundation-compile-no-write` | `materialized-tree` / `materialized-foundation` | `{PYTHON}` `-c` `from pathlib import Path; import sys; [compile(Path(p).read_bytes(), p, 'exec') for p in sys.argv[1:]]` `deterministic/validate_foundation_lifecycle.py` `deterministic/foundation_lifecycle/__init__.py` `deterministic/foundation_lifecycle/parser.py` `deterministic/foundation_lifecycle/attestation.py` `deterministic/foundation_lifecycle/runner.py` `deterministic/tests/test_validate_foundation_lifecycle.py` `deterministic/tests/test_foundation_attestation.py` `deterministic/tests/test_foundation_runner.py` | attested Foundation tree + Python | exit `0`, manifest unchanged; terminal |
+| `foundation-validator` | `materialized-tree` / `materialized-foundation` | `{PYTHON}` `-B` `deterministic/validate_foundation_lifecycle.py` `--root` `.` | attested Foundation tree + Python | exit `0`; terminal |
+| `foundation-unittest` | `materialized-tree` / `materialized-foundation` | `{PYTHON}` `-B` `-m` `unittest` `discover` `-s` `deterministic/tests` `-p` `test_*.py` | attested Foundation tree + Python | exit `0`; terminal |
+| `foundation-compile-no-write` | `materialized-tree` / `materialized-foundation` | `{PYTHON}` `-B` `-c` `from pathlib import Path; import sys; [compile(Path(p).read_bytes(), p, 'exec') for p in sys.argv[1:]]` `deterministic/validate_foundation_lifecycle.py` `deterministic/foundation_lifecycle/__init__.py` `deterministic/foundation_lifecycle/parser.py` `deterministic/foundation_lifecycle/attestation.py` `deterministic/foundation_lifecycle/runner.py` `deterministic/tests/test_validate_foundation_lifecycle.py` `deterministic/tests/test_foundation_attestation.py` `deterministic/tests/test_foundation_runner.py` | attested Foundation tree + Python | exit `0`, manifest unchanged; terminal |
 | `legacy-val01` | `workspace-governance` / `workspace` | `{BASH}` `-c` `{ST01_VAL01}` | completed ST-01 blob + Bash + Python + Git | exit `0`, exact final `OK`; terminal until cutover commit |
 | `legacy-val08` | `workspace-governance` / `workspace` | `{BASH}` `-c` `{ST01_VAL08}` | completed ST-01 blob + Bash + Git | exit `0`, exact final `OK`; terminal until cutover commit |
 | `legacy-val10` | `workspace-governance` / `workspace` | `{BASH}` `-c` `{ST01_VAL10}` | completed ST-01 blob + Bash + Git + rg + sort | exit `0`, exact final `OK`; terminal until cutover commit |
+| `delivery-secret-scan` | `materialized-tree` / `materialized-foundation` | `{PYTHON}` `-B` `deterministic/validate_foundation_lifecycle.py` `--scan-delivery-secrets` `--root` `.` `--todo` `todos/completed/process/TODO-foundation-lifecycle-structural-validator.md` | attested Foundation tree + Python; scan set equals final Expected Changed Paths regular files, with active source absent and completed destination present | exit `0`, redacted `OK`; terminal; legacy VAL-10 is compatibility only |
 | `git-diff-check` | `foundation-index` / `foundation` | `{GIT}` `diff` `--cached` `--check` | matching Foundation index/tree + Git | exit `0`; terminal |
-| `diff-expectation` | `workspace-governance` / `workspace` | `{PYTHON}` `delphi-ai/tools/todo_diff_expectation_guard.py` `--repo-root` `foundation_documentation` `foundation_documentation/todos/completed/process/TODO-foundation-lifecycle-structural-validator.md` | bound Delphi tree + matching Foundation index/tree + Python/Git | exit `0`, `Overall outcome: go`; terminal |
-| `authority-guard` | `workspace-governance` / `workspace` | `{PYTHON}` `delphi-ai/tools/todo_authority_guard.py` `foundation_documentation/todos/completed/process/TODO-foundation-lifecycle-structural-validator.md` `--require-delivery-gates` | bound Delphi tree + matching Foundation index/tree + Python/Git | exit `0`, `Overall outcome: go`; terminal |
-| `completion-guard` | `workspace-governance` / `workspace` | `{PYTHON}` `delphi-ai/tools/todo_completion_guard.py` `foundation_documentation/todos/completed/process/TODO-foundation-lifecycle-structural-validator.md` `--require-delivery` | bound Delphi tree + matching Foundation index/tree + Python/Git | exit `0`, no blocking violation; terminal |
-| `closeout-guard` | `workspace-governance` / `workspace` | `{PYTHON}` `delphi-ai/tools/todo_closeout_guard.py` `foundation_documentation/todos/completed/process/TODO-foundation-lifecycle-structural-validator.md` `--repo` `foundation_documentation` | bound Delphi tree + matching Foundation index/tree + Python/Git | exit `0`, no blocking violation; terminal |
-| `tree-consistency` | `foundation-index` / `foundation` | `{PYTHON}` `deterministic/validate_foundation_lifecycle.py` `--verify-tree-context` `--root` `.` `--tree` `{TREE}` | attested Foundation tree/blob + matching index/tree + Python/Git | exit `0`, exact tree binding; terminal immediately before commit |
+| `diff-expectation` | `workspace-governance` / `workspace` | `{PYTHON}` `-B` `delphi-ai/tools/todo_diff_expectation_guard.py` `--repo-root` `foundation_documentation` `foundation_documentation/todos/completed/process/TODO-foundation-lifecycle-structural-validator.md` | bound Delphi tree + matching Foundation index/tree + Python/Git | exit `0`, `Overall outcome: go`; terminal |
+| `authority-guard` | `workspace-governance` / `workspace` | `{PYTHON}` `-B` `delphi-ai/tools/todo_authority_guard.py` `foundation_documentation/todos/completed/process/TODO-foundation-lifecycle-structural-validator.md` `--require-delivery-gates` | bound Delphi tree + matching Foundation index/tree + Python/Git | exit `0`, `Overall outcome: go`; terminal |
+| `completion-guard` | `workspace-governance` / `workspace` | `{PYTHON}` `-B` `delphi-ai/tools/todo_completion_guard.py` `foundation_documentation/todos/completed/process/TODO-foundation-lifecycle-structural-validator.md` `--require-delivery` | bound Delphi tree + matching Foundation index/tree + Python/Git | exit `0`, no blocking violation; terminal |
+| `closeout-guard` | `workspace-governance` / `workspace` | `{PYTHON}` `-B` `delphi-ai/tools/todo_closeout_guard.py` `foundation_documentation/todos/completed/process/TODO-foundation-lifecycle-structural-validator.md` `--repo` `foundation_documentation` | bound Delphi tree + matching Foundation index/tree + Python/Git | exit `0`, no blocking violation; terminal |
+| `tree-consistency` | `foundation-index` / `foundation` | `{PYTHON}` `-B` `deterministic/validate_foundation_lifecycle.py` `--verify-tree-context` `--root` `.` `--tree` `{TREE}` | attested Foundation tree/blob + matching index/tree + Python/Git | exit `0`, exact tree binding; terminal immediately before commit |
 
 ### Legacy VAL-02 Transition Map
 
@@ -311,6 +313,8 @@ Placeholder tokens are the whole-segment, case-insensitive set `PENDING|N/A|TBD|
 | `D-30` | Make lifecycle `Roadmap gate evidence grammar` the single semantic owner of `D-28`; admit `system_roadmap.md` as a changed path only to remove its broader local rule and link authoring guidance to that owner; validate absence of competing guidance. | `R3-CRIT1-01` | confirm canonical roadmap rule owner and expected-path expansion |
 | `D-31` | Freeze the complete registry table above before approval: exact ordered argv templates, closed token/legacy-fence substitution grammar, contexts/cwds, permitted inputs, direct provenance, success and phase. Hash immutable templates separately from fully expanded NUL-joined argv; reject absolute/transient child paths and reconstruct all digests during verification. | `R4-CRIT1-01`, `R4-CRIT2-01` | confirm approval-complete command registry and relocation-stable digest domains |
 | `D-32` | Keep one public CLI but split implementation into the bounded `foundation_lifecycle` package: `parser.py` owns parsing/diagnostics, `attestation.py` owns registry/codec/verifier, `runner.py` owns contexts/provenance/subprocess capture, and `__init__.py` has no logic; split tests by the same seams without sharing production oracle helpers. | `R4-CRIT1-03` | confirm modular implementation boundary and expanded expected paths |
+| `D-33` | Add `delivery-secret-scan` to the terminal registry: derive an exact scan set from final Expected Changed Paths in the completed TODO, require active-source absence/completed-destination presence, scan every regular delivered file with redacted diagnostics, and treat legacy VAL-10 only as compatibility evidence. | `R5-CRIT1-01` | confirm complete terminal secret-scan coverage |
+| `D-34` | Make no-bytecode execution part of the registry: fixed `PYTHONDONTWRITEBYTECODE=1` overlay for every child, explicit `-B` for direct Python argv, separately attested environment digest, and complete manifest equality around each materialized-tree command including privileged-runner tests. | `R5-CRIT2-01` | confirm deterministic read-only Python execution |
 
 ## Decisions
 
@@ -346,6 +350,8 @@ Placeholder tokens are the whole-segment, case-insensitive set `PENDING|N/A|TBD|
 - [ ] `D-30` Consolidate roadmap gate-evidence semantics in lifecycle and make system roadmap point to that owner without duplicating the rule.
 - [ ] `D-31` Freeze the approval-complete command registry, token substitution grammar and separate template/resolved-argv digest domains.
 - [ ] `D-32` Use a thin CLI plus bounded parser/attestation/runner modules and independently separated test files.
+- [ ] `D-33` Add a terminal secret scan whose input set exactly covers every final delivered regular file; keep legacy VAL-10 as compatibility only.
+- [ ] `D-34` Bind the fixed no-bytecode environment and Python `-B` argv into registry/attestation and prove no writes for every materialized command.
 
 ## Module Decision Baseline Snapshot
 
@@ -361,8 +367,8 @@ Placeholder tokens are the whole-segment, case-insensitive set `PENDING|N/A|TBD|
 ## Decision Baseline
 
 - **Prior freezes:** `D-01..D-08@b685fb52` invalidated by `AR-01..05/F-01..11`; `D-01..D-10@504a9785` invalidated by `AR-R01..AR-R05/F-12..F-17`; `D-01..D-11@2562f62e` invalidated by `AR-F01..AR-F05/F-18..F-21`; `D-01..D-14@e26d7183` invalidated by `AR-N01/F-22..F-24`; `D-01..D-17@3dce63b3` invalidated by `C2-F01/C2-F02/C2-F04`; `D-01..D-20@0cd991e6` invalidated by `C3-F01..C3-F03`.
-- **Freeze status:** `not_frozen — pre-freeze convergence active; provisional D-01..D-32 require a clean exploratory round before final human validation`
-- **Frozen decisions:** `none current; D-01..D-20 remain validated provenance; D-21..D-32 are provisional convergence decisions`
+- **Freeze status:** `not_frozen — pre-freeze convergence active; provisional D-01..D-34 require a clean exploratory round before final human validation`
+- **Frozen decisions:** `none current; D-01..D-20 remain validated provenance; D-21..D-34 are provisional convergence decisions`
 - **Current validation evidence:** Gabriel/user, 2026-09-24, exact phrase `VALIDO D-01..D-20`; preserved as provenance but superseded for approval by material review findings that introduced `D-21..D-23`.
 - **Prior validation evidence:** Gabriel/user, 2026-09-24, exact phrase `VALIDO D-01..D-17`; preserved as provenance but superseded by material review findings that introduced `D-18..D-20`.
 - **Prior validation evidence:** Gabriel/user, 2026-09-23, exact phrase `VALIDO D-01..D-14`; preserved as provenance but superseded for approval by material review findings that introduced `D-15..D-17`.
@@ -487,6 +493,7 @@ Placeholder tokens are the whole-segment, case-insensitive set `PENDING|N/A|TBD|
 | `R-02` | `f2ee3906` | `R2-ARCH-01..03` | `R2-CRIT1-01..03` | `R2-CRIT2-01..04` | refine `D-21/D-22/D-25`; add `D-27/D-28`; replace write-producing compile check | integrated; next round required |
 | `R-03` | `e4cedcf9` | `R3-ARCH-01` | `R3-CRIT1-01..02` | `R3-CRIT2-01..03` | add `D-29/D-30`; bind direct tool/context provenance; admit roadmap guidance alignment | integrated; next round required |
 | `R-04` | `f0e9e1ee` | `R4-ARCH-01` | `R4-CRIT1-01..03` | `R4-CRIT2-01` | add `D-31/D-32`; freeze full registry/substitution domains; modularize bounded implementation; reconcile surface lists | integrated; next round required |
+| `R-05` | `0e72fd7a` | clean | `R5-CRIT1-01` | `R5-CRIT2-01` | add `D-33/D-34`; complete terminal secret coverage; bind no-bytecode environment/argv | integrated; next round required |
 
 ## Assumptions Preview
 
@@ -522,7 +529,7 @@ Placeholder tokens are the whole-segment, case-insensitive set `PENDING|N/A|TBD|
 
 1. Concluir o ciclo exploratório; após validação humana do conjunto final, congelar/publicar a baseline e repetir os gates formais com TODO + owners + exact contracts do ST-01 no pacote.
 2. Após `APROVADO` e authority guard `go`, escrever fixtures/oráculos fail-first e implementar kernel/parser/diagnostics mais consolidações canônicas aprovadas.
-3. Implementar até `T-01..T-28` convergir; manter o TODO ativo e o decision target apontando ao active path no candidate SHA.
+3. Implementar até `T-01..T-30` convergir; manter o TODO ativo e o decision target apontando ao active path no candidate SHA.
 4. Executar acceptance, old/new parity, adherence, test-quality audit e final review no candidate SHA.
 5. Montar a árvore terminal com TODO movido, evidence final, handoffs/cutover e `DEC-validator-adoption-trigger` retargeted para completed; stagear tudo e capturar o tree OID.
 6. Materializar o tree OID em diretório temporário read-only e executar os checks sobre esses bytes; guards dependentes de metadata Git provam o mesmo index/tree OID. Depois, provar OID inalterado e ausência de divergência relevante; qualquer diferença exige restage e rerun integral.
@@ -568,6 +575,8 @@ Placeholder tokens are the whole-segment, case-insensitive set `PENDING|N/A|TBD|
 | `T-26` | roadmap authoring guidance links uniquely to lifecycle `Roadmap gate evidence grammar` | missing/duplicate owner link or competing broader local rule | non-zero + owner/guidance diagnostic; lifecycle remains the only semantic rule |
 | `T-27` | implemented registry equals the approved table byte-for-byte and reconstructs both digest domains | unknown/reordered entry/field, unknown/nested token, literal transient/absolute path, relocation, legacy fence drift, token escape/substitution mismatch or template/resolved digest confusion | relocation passes without digest drift; every mutation fails before child execution |
 | `T-28` | Touched Surfaces and Files Expected exactly cover the authoritative Expected Changed Paths | omit/add a delivery surface in either summary | deterministic equality assertion fails with missing/extra path |
+| `T-29` | `delivery-secret-scan` covers every final delivered regular file including deterministic package/tests/docs and completed TODO | secret/private-key mutation in each class; omitted/missing/extra scan path; active/completed phase mismatch | non-zero with redacted path/rule diagnostic; exact scan-set equality; legacy VAL-10 alone cannot satisfy terminal coverage |
+| `T-30` | fixed no-bytecode overlay plus Python `-B` on every applicable command | unset/override overlay, remove `-B`, import-heavy command, preexisting/new `.pyc` or `__pycache__`, privileged-runner write attempt | reject registry/env drift; complete before/after materialized-tree manifest equality for each command |
 
 ### Pre-APROVADO RED Evidence Capture
 
@@ -591,7 +600,7 @@ Placeholder tokens are the whole-segment, case-insensitive set `PENDING|N/A|TBD|
 | Surface | Behavior / Scenario | Preconditions | Command | Required Before | Status |
 | --- | --- | --- | --- | --- | --- |
 | validator acceptance | source graph real válido | consolidated branch@sha | `python3 foundation_documentation/deterministic/validate_foundation_lifecycle.py --root foundation_documentation` | Local-Implemented | planned |
-| unittest/mutations | `T-01..T-28` | isolated temporary fixtures | `python3 -m unittest discover -s foundation_documentation/deterministic/tests -p 'test_*.py'` | Local-Implemented | planned |
+| unittest/mutations | `T-01..T-30` | isolated temporary fixtures | `python3 -m unittest discover -s foundation_documentation/deterministic/tests -p 'test_*.py'` | Local-Implemented | planned |
 | legacy transition matrix | pre-migration baseline runs ST-01 `VAL-01/02/08/10`; candidate/terminal Git layer runs `VAL-01/08/10`; `VAL-02` is superseded after approved schema/target mutation | exact contracts read from completed ST-01 TODO; phase identified deterministically | phase matrix `D-19/VAL-07/T-23` + new validator/tests | before delivery reviews | planned |
 | terminal-tree confirmation | permanent checks stay green after atomic move/retarget/cutover | read-only materialization of captured tree OID with `active XOR completed`; unchanged index/OID proof and no relevant divergence | validator + unittest on materialized bytes; compatible guards there; Git-metadata guards against the same index/tree OID | before closeout commit | planned |
 | immutable publication | committed tree equals validated staged tree and terminal outcomes are immutably self-attested outside that tree | commit body contains deterministic attestation manifest; trailers contain tree OID and manifest digest | `--verify-attestation --commit HEAD`; verify `HEAD^{tree}`, clean tree and remote ref equality; do not claim externally reproducible execution proof | Production-Ready | planned |
@@ -603,7 +612,7 @@ Placeholder tokens are the whole-segment, case-insensitive set `PENDING|N/A|TBD|
 
 ## Plan Review Gate
 
-- **Status:** `exploratory convergence running — R-04 integrated into provisional D-01..D-32; R-05 required`
+- **Status:** `exploratory convergence running — R-05 integrated into provisional D-01..D-34; R-06 required`
 - **Required lenses:** Architecture, Code Quality, Tests, Performance, Security, Elegance, Structural Soundness.
 - **Expected focus:** evitar parser frágil, catálogo duplicado, cobertura superficial, bypass histórico e expansão para CI.
 
@@ -611,7 +620,7 @@ Placeholder tokens are the whole-segment, case-insensitive set `PENDING|N/A|TBD|
 
 - [x] Architecture — canonical membership, state-conditioned grammar, immutable identifiers and validated-tree closeout integrated.
 - [x] Code Quality — narrow grammar, confinement and diagnostics contract added.
-- [x] Tests — test-first and `T-01..T-28` matrix added.
+- [x] Tests — test-first and `T-01..T-30` matrix added.
 - [x] Performance — bounded linear scan; no specialized lane triggered.
 - [x] Security — root/symlink confinement and redaction made mandatory.
 - [x] Elegance — one project-owned stdlib validator; no parallel catalog.
@@ -651,6 +660,8 @@ Placeholder tokens are the whole-segment, case-insensitive set `PENDING|N/A|TBD|
 - **Issue ID:** `PLAN-30` — roadmap published a broader evidence rule while lifecycle/validator planned a closed one (`high`). Option A: lifecycle owns semantics and roadmap links to it without duplicating the rule (recommended); Option B: duplicate exact rules; Option C: hidden validator-only semantics. **Resolution:** integrated into `D-30`, expected paths, source graph, `DOD-06`, `T-26`.
 - **Issue ID:** `PLAN-31` — registry named commands but left argv, substitutions and digest domains to post-approval implementation (`high`). Option A: freeze the complete table and closed token grammar now (recommended); Option B: implementation-owned registry semantics; Option C: unhashed transient paths. **Resolution:** integrated into `D-31`, approved registry section, `T-27`.
 - **Issue ID:** `PLAN-32` — a single validator file would combine parser, runner, provenance and codec responsibilities (`medium`). Option A: thin CLI plus three bounded internal modules and parallel test seams (recommended); Option B: monolith; Option C: open-ended package. **Resolution:** integrated into `D-32`, expected paths and touched surfaces.
+- **Issue ID:** `PLAN-33` — legacy VAL-10 omits new deterministic and completed-TODO delivery surfaces (`high`). Option A: add a terminal scan derived from exact final Expected Changed Paths and retain VAL-10 as compatibility only (recommended); Option B: extend historical script; Option C: claim incomplete coverage. **Resolution:** integrated into `D-33`, registry, `VAL-05`, `T-29`.
+- **Issue ID:** `PLAN-34` — normal Python execution may create bytecode in a declared read-only materialization (`high`). Option A: global fixed no-bytecode overlay plus explicit `-B` and manifest proof (recommended); Option B: rely on permissions; Option C: ignore privileged runners. **Resolution:** integrated into `D-34`, payload/environment binding, registry and `T-30`.
 
 ### Failure Modes & Edge Cases
 
@@ -670,9 +681,9 @@ Placeholder tokens are the whole-segment, case-insensitive set `PENDING|N/A|TBD|
 
 ## Additional Architectural Opinions
 
-- **Needed:** `yes — exploratory R-05 before final validation; formal rerun after final freeze`
-- **Why ambiguity remains:** R-04 froze the complete registry/substitution model and bounded package layout; convergence is not yet proven.
-- **Opinion count:** `R-01 through R-04: three fresh exploratory reviewers each completed; R-04 had material critique findings; R-05 pending`
+- **Needed:** `yes — exploratory R-06 before final validation; formal rerun after final freeze`
+- **Why ambiguity remains:** R-05 added terminal secret-scan completeness and a bound no-bytecode execution contract; convergence is not yet proven.
+- **Opinion count:** `R-01 through R-05: three fresh exploratory reviewers each completed; R-05 architecture was clean but critiques were material; R-06 pending`
 - **Package mode:** `bounded-file-set`
 - **Internal reviewer mandate:** `required after freeze; reviewer cannot implement`
 - **Required lenses:** `correctness|performance|elegance|structural-soundness|operational-fit`
@@ -815,7 +826,7 @@ Predeclared for pre-approval readiness; reload and bind after `APROVADO`.
 | Decision ID | Status | Evidence | Notes |
 | --- | --- | --- | --- |
 | `D-01..D-20` | validated-historical | exact token `VALIDO D-01..D-20`; freeze `0cd991e6` | preserved directions; approval baseline superseded by convergence work |
-| `D-21..D-32` | provisional-convergence | R-01..R-04 integrated contract | do not request validation until convergence criterion is satisfied |
+| `D-21..D-34` | provisional-convergence | R-01..R-05 integrated contract | do not request validation until convergence criterion is satisfied |
 
 ## Module Decision Consistency Validation
 
@@ -878,6 +889,8 @@ Predeclared for pre-approval readiness; reload and bind after `APROVADO`.
 | `R4-CRIT1-01/R4-CRIT2-01` | high | release-blocker | integrate in current TODO | registry identity and transient-path substitution are approval-material terminal trust semantics | fixed-pending-convergence | `D-31`, approved registry table and `T-27` |
 | `R4-CRIT1-03` | medium | release-blocker | integrate in current TODO | module boundaries affect maintainability, independent testing and allowed diff | fixed-pending-convergence | `D-32`, bounded package/test seams |
 | `R4-ARCH-01/R4-CRIT1-02` | low/medium | release-blocker | integrate in current TODO | inconsistent surface summaries could misroute implementation or evidence | resolved | Touched Surfaces and Files Expected synchronized; `T-28` |
+| `R5-CRIT1-01` | high | release-blocker | integrate in current TODO | terminal security coverage must include every newly delivered and moved surface | fixed-pending-convergence | `D-33`, `delivery-secret-scan`, `VAL-05`, `T-29` |
+| `R5-CRIT2-01` | high | release-blocker | integrate in current TODO | Python bytecode writes contradict exact read-only tree validation | fixed-pending-convergence | `D-34`, environment/argv binding and `T-30` |
 
 ## Security Risk Assessment
 
@@ -970,9 +983,9 @@ Predeclared for pre-approval readiness; reload and bind after `APROVADO`.
 ## TODO Closeout Disposition
 
 - **Disposition:** `keep-active`
-- **Disposition reason:** user-directed pre-freeze convergence is active; R-04 material decisions are integrated into provisional `D-01..D-32` and require R-05.
-- **Post-commit/push status:** R-04 convergence changes are local pending validation/publication checks; no implementation claim.
-- **Next path/status action:** validate and publish R-04 integration, run exploratory R-05, and continue until the convergence criterion is satisfied; then request one final full-set validation.
+- **Disposition reason:** user-directed pre-freeze convergence is active; R-05 material decisions are integrated into provisional `D-01..D-34` and require R-06.
+- **Post-commit/push status:** R-05 convergence changes are local pending validation/publication checks; no implementation claim.
+- **Next path/status action:** validate and publish R-05 integration, run exploratory R-06, and continue until the convergence criterion is satisfied; then request one final full-set validation.
 
 ## Commands
 
@@ -986,7 +999,7 @@ Predeclared for pre-approval readiness; reload and bind after `APROVADO`.
 
 - `python3 foundation_documentation/deterministic/validate_foundation_lifecycle.py --root foundation_documentation`
 - `python3 -m unittest discover -s foundation_documentation/deterministic/tests -p 'test_*.py'`
-- `python3 -c "from pathlib import Path; import sys; [compile(Path(p).read_bytes(), p, 'exec') for p in sys.argv[1:]]" foundation_documentation/deterministic/validate_foundation_lifecycle.py foundation_documentation/deterministic/foundation_lifecycle/__init__.py foundation_documentation/deterministic/foundation_lifecycle/parser.py foundation_documentation/deterministic/foundation_lifecycle/attestation.py foundation_documentation/deterministic/foundation_lifecycle/runner.py foundation_documentation/deterministic/tests/test_validate_foundation_lifecycle.py foundation_documentation/deterministic/tests/test_foundation_attestation.py foundation_documentation/deterministic/tests/test_foundation_runner.py`
+- `PYTHONDONTWRITEBYTECODE=1 python3 -B -c "from pathlib import Path; import sys; [compile(Path(p).read_bytes(), p, 'exec') for p in sys.argv[1:]]" foundation_documentation/deterministic/validate_foundation_lifecycle.py foundation_documentation/deterministic/foundation_lifecycle/__init__.py foundation_documentation/deterministic/foundation_lifecycle/parser.py foundation_documentation/deterministic/foundation_lifecycle/attestation.py foundation_documentation/deterministic/foundation_lifecycle/runner.py foundation_documentation/deterministic/tests/test_validate_foundation_lifecycle.py foundation_documentation/deterministic/tests/test_foundation_attestation.py foundation_documentation/deterministic/tests/test_foundation_runner.py`
 - `git -C foundation_documentation diff --check`
 
 ## Files Expected
