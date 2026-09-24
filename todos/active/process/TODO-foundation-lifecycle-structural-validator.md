@@ -36,12 +36,12 @@ Create one Python standard-library CLI with a small parser module and focused un
 - **Current delivery stage:** `Pending`
 - **Tactical TODO lifecycle state:** `Review`
 - **Qualifiers:** `none`
-- **Next exact step:** freeze/publish the user-validated `SD-01..SD-10` baseline, run proportionate pre-approval gates and request `APROVADO` before implementation.
+- **Next exact step:** run the remaining pre-approval critique/coherence/scope/authority gates and request `APROVADO` before implementation.
 
 ## Active Work State
 
 - **Work state:** `review`
-- **Why this state now:** the user validated the deliberately simplified contract; review-baseline freeze and formal pre-approval gates remain pending.
+- **Why this state now:** the user-validated simplified contract is frozen and its architecture opinion converged; the remaining pre-approval gates are in progress.
 - **Exit condition:** simplified decisions validated/frozen, pre-approval gates green, explicit `APROVADO`, implementation/evidence complete, and TODO promoted to `completed/`.
 
 ## Trigger Evidence
@@ -212,32 +212,34 @@ Any unclassified path blocks delivery until classified as scope deviation, neces
 
 | Owner | Admitted Surface | Structural Boundary |
 | --- | --- | --- |
-| `evolution_lifecycle.md` | identifiers, authority/state-machine tables, roadmap evidence grammar | required headings/schemas/enums and narrow identifier grammar |
+| `evolution_lifecycle.md` | identifiers and authority/state-machine tables | required headings/schemas/enums and narrow identifier grammar |
 | `backlog/README.md` | `## Candidates` table | exact columns, unique `BLG-*`, allowed state, valid links |
 | `decisions/README.md` | root-level current-record index/rule | exact index ↔ root `decisions/*.md` membership |
-| indexed root decision records | decision tables + one file provenance field | unique `DEC-*`, state, target/evidence/successor shape |
-| `system_roadmap.md` | roadmap table + lifecycle guidance link | exact columns/state and structural exit-gate evidence |
+| indexed root decision records | decision tables + one file provenance field | unique `DEC-*`, state and target/evidence shape; successor topology remains review-owned until a canonical field exists |
+| `system_roadmap.md` | exclusive owner of roadmap columns, gate states and exit-gate evidence grammar | exact columns/state and structural exit-gate evidence |
 
 ### Narrow Markdown Grammar
 
 - UTF-8 strict input; reject hidden format controls in identifiers, states and paths.
 - Required headings/tables are unique and use exact declared columns.
 - Tables are parsed structurally with bounded inline-code/link awareness; ambiguity fails closed.
-- Markdown links resolve from their source file; canonical targets resolve from Foundation root.
-- Absolute paths, lexical `..`, symlink escape and targets outside Foundation fail.
-- Fragments use the lifecycle-owned constrained ASCII heading dialect; unsupported forms fail instead of being guessed.
+- Markdown destinations use relative POSIX syntax only: no scheme/network form, backslash, angle-bracket destination, query or percent encoding; an optional fragment must match `[a-z0-9]+(?:-[a-z0-9]+)*`.
+- Links resolve from their source file and canonical targets from Foundation root. In-root `..` traversal from nested owners is allowed; absolute paths, normalized/realpath escape, symlink escape and missing targets fail.
+- Diagnostics expose only a stable rule code, Foundation-relative owner path and structural coordinate; never raw cell/link content or an absolute path. Findings are sorted by `(path, coordinate, rule)` and capped at 100 plus an omitted-count summary.
 - Historical/completed/artifact documents may be link targets without becoming live owners.
 
 ### Decision State Grammar
 
-| State | Target/Evidence Shape | Successor Shape |
+| State | Target/Evidence Shape | Validator Boundary |
 | --- | --- | --- |
-| `Proposed` | valid targets with positional `PENDING` | `N/A` |
-| `Accepted` | one segment per target: `PENDING` or concrete target-prefixed evidence | `N/A` |
-| `Superseded` | preserved target/evidence shape | exact `DEC-*` successor; acyclic chain ends at eligible Accepted |
-| `Rejected` | one positional segment per preserved target: `PENDING` when never consolidated or the existing concrete evidence when previously consolidated | `N/A` |
+| `Proposed` | valid targets with positional `PENDING` | validate current row only |
+| `Accepted` | one segment per target: `PENDING` or concrete target-prefixed evidence | validate current row only |
+| `Superseded` | preserved target/evidence shape | validate current row; successor topology is not automated until its canonical field/cardinality exists |
+| `Rejected` | one positional segment per preserved target: `PENDING` when never consolidated or the existing concrete evidence when previously consolidated | validate current row only |
 
 Only observable current-state structure is enforced. Historical transition truth and semantic adequacy remain review-owned.
+
+The lifecycle requires a supersession link, but the admitted decision table currently has no canonical successor field. Version 1 therefore does not scrape prose, invent a column or claim successor/cycle coverage. Adding that field and its validation requires a separately governed schema change.
 
 For roadmap rows, `Open` requires no acceptance inference. `Exit-Gate-Met` requires the `Exit gate` cell to contain root-confined, resolvable relative links to at least one responsible canonical module under `modules/**` and at least one completed tactical TODO under `todos/completed/**`. The validator checks presence, resolution and target class only; whether those linked records semantically satisfy the gate remains review-owned.
 
@@ -340,8 +342,8 @@ The admitted current decision file uses one nonempty file-level `Provenance` fie
 - **Decision review lifecycle:** `after simplified decisions are validated/frozen and before APROVADO`
 - **Decision review kind:** `architecture_opinion`
 - **Decision review package:** `bounded-file-set`
-- **Decision review status:** `findings_integrated; revalidation_pending`
-- **Decision review evidence / resolution:** `fresh no-context architecture_opinion on 2026-09-24 returned request_changes: integrated preservation of concrete evidence for Accepted→Rejected, deterministic structural roadmap-link classes, explicit file-level provenance cardinality and stale-freeze metadata cleanup; direction remained approved as proportional and structurally sound; fresh revalidation required before critique`
+- **Decision review status:** `findings_integrated`
+- **Decision review evidence / resolution:** `fresh no-context architecture_opinion requested two localized contract corrections; integrated preservation of concrete evidence for Accepted→Rejected, deterministic structural roadmap-link classes and explicit file-level provenance cardinality in dc66744b. Fresh no-context revalidation on 2026-09-24 returned approve_with_findings with no blockers; the sole low finding was this transient metadata cleanup. Direction approved as proportional, elegant, linear-cost and structurally sound.`
 - **Architecture adherence review:** `required after implementation before Completed`
 - **Adherence review status:** `not_run`
 
@@ -415,17 +417,15 @@ The admitted current decision file uses one nonempty file-level `Provenance` fie
 | `T-02` identifiers | unique valid BLG/DEC | bad grammar, duplicate owner, repeated reference allowed |
 | `T-03` membership | index equals root record set | orphan/stale/missing/duplicate entry |
 | `T-04` states | allowed states | unknown/case/hidden Unicode |
-| `T-05` paths/links | confined relative target | absolute, `..`, missing, symlink escape, bad fragment |
+| `T-05` paths/links | confined relative POSIX target | scheme/network/absolute/backslash/query/percent/angle form, normalized or symlink escape, missing target, bad fragment |
 | `T-06` target/evidence | positional mapping | missing/extra/duplicate/placeholder mismatch |
-| `T-07` successors | acyclic chain to Accepted | label/file mismatch, self-link, cycle, bad terminal |
-| `T-08` roadmap | Open or Exit-Gate-Met with resolvable module + completed-TODO links in `Exit gate` | missing either target class, unresolved/out-of-root link, forbidden target |
-| `T-09` decision source evidence | one nonempty file-level Provenance applying to all rows in the admitted decision file | missing, duplicate, empty, misplaced, attempted implicit row-level override |
-| `T-10` history boundary | invalid excluded history ignored | same invalid live owner fails |
-| `T-11` read-only | identical fixture manifest | mutation on success/failure |
-| `T-12` diagnostics | bounded rule/path | sensitive/unbounded content output |
-| `T-13` bootstrap | owners/contracts present | owner/heading/schema/enum removal |
-| `T-14` real repo | live Foundation passes | controlled live-copy mutation fails |
-| `T-15` simplicity | declared files/imports only | dependency, subprocess, network, attestation/runner symbol |
+| `T-07` roadmap | Open or Exit-Gate-Met with resolvable module + completed-TODO links in `Exit gate` | missing either target class, unresolved/out-of-root link, forbidden target |
+| `T-08` decision source evidence | one nonempty file-level Provenance applying to all rows in the admitted decision file | missing, duplicate, empty, misplaced, attempted implicit row-level override |
+| `T-09` history boundary | invalid excluded history ignored | same invalid live owner fails |
+| `T-10` read-only | identical fixture manifest | mutation on success/failure; production-file open modes are reviewed at closeout |
+| `T-11` diagnostics | stable code + relative path + coordinate, sorted and capped at 100 | raw content, absolute path, unstable order, unbounded output |
+| `T-12` bootstrap | owners/contracts present | owner/heading/schema/enum removal |
+| `T-13` real repo | live Foundation passes | controlled live-copy mutation fails |
 
 ### Pre-APROVADO RED Evidence Capture
 
@@ -462,19 +462,19 @@ The admitted current decision file uses one nonempty file-level `Provenance` fie
 
 ## Plan Review Gate
 
-- **Status:** `simplified contract validated and review-frozen; formal reviews pending`
+- **Status:** `formal critique findings integrated through additional scope reduction; fresh critique revalidation pending`
 - **Required lenses:** Architecture, Code Quality, Tests, Performance, Security, Elegance, Structural Soundness.
 - **Primary guardrail:** attestation, subprocess supervision, provenance, Registry-v1 or special commit mechanics require a separate demonstrated need/TODO.
 
 ### Failure Modes & Edge Cases
 
-- malformed pipes/code spans; duplicate owner vs repeated reference; ambiguous fragments; symlink/path escape; incomplete multi-target evidence; successor cycles; hidden Unicode; invalid history accidentally admitted; source mutation/content exposure.
+- malformed pipes/code spans; duplicate owner vs repeated reference; unsupported fragments; symlink/path escape; incomplete multi-target evidence; hidden Unicode; invalid history accidentally admitted; source mutation/content exposure.
 
 ### Residual Unknowns / Risks
 
 - Small parser helpers may be needed but remain implementation-local.
 - Semantic quality remains outside automation.
-- Future syntax changes require explicit contract updates.
+- Successor topology and future syntax changes require explicit canonical schema updates before automation.
 
 ## Additional Architectural Opinions
 
@@ -485,7 +485,7 @@ The admitted current decision file uses one nonempty file-level `Provenance` fie
 
 - **Canonical method:** `wf-docker-audit-escalation-method`
 - **Guard command:** `python3 delphi-ai/tools/audit_escalation_guard.py --todo foundation_documentation/todos/active/process/TODO-foundation-lifecycle-structural-validator.md`
-- **Latest evidence:** `2026-09-24: guard outcome go; trigger fingerprint 35a8c129de37; critique, test-quality audit, final review, verification-debt audit, architecture decision review and architecture adherence review required; triple/security/performance-concurrency reviews not triggered.`
+- **Latest evidence:** `2026-09-24: guard outcome go; trigger fingerprint b82442926521; critique, test-quality audit, final review, verification-debt audit, architecture decision review and architecture adherence review required; triple/security/performance-concurrency reviews not triggered.`
 
 | Trigger | Value | Notes |
 | --- | --- | --- |
@@ -498,7 +498,7 @@ The admitted current decision file uses one nonempty file-level `Provenance` fie
 | `touches_tests` | `yes` | new unittest suite |
 | `critical_user_journey` | `no` | internal governance |
 | `release_or_promotion_critical` | `no` | no product promotion |
-| `high_severity_plan_review_issue` | `no` | overengineered design retired before approval |
+| `high_severity_plan_review_issue` | `yes` | formal critique found an undefined successor representation; resolved by removing unsupported successor automation from v1 |
 | `explicit_three_lane_request` | `no` | none |
 
 ## Independent No-Context Critique Gate
@@ -507,9 +507,9 @@ The admitted current decision file uses one nonempty file-level `Provenance` fie
 - **Why this decision:** medium shared-governance validator with fail-closed logic.
 - **Package mode:** `bounded-file-set`
 - **Critique isolation mode:** `fresh internal no-context reviewer`
-- **Critique status:** `not_run`
-- **Findings summary:** `pending fresh critique after architecture-opinion revalidation`
-- **Evidence / reference:** `pending formal critique`
+- **Critique status:** `findings_integrated`
+- **Findings summary:** `fresh no-context critique returned request_changes: unsupported successor automation removed; system_roadmap.md made exclusive roadmap owner; link/confinement/diagnostic allowlist made explicit; brittle symbol-scanner T-15 removed; read-only attempt detection retained as code-review evidence without runner/sandbox expansion`
+- **Evidence / reference:** `formal critique on 2026-09-24 against dc66744b/181cac8f; localized reductions integrated locally; fresh revalidation required`
 - **Waiver authority / reference (required if waived):** `not applicable`
 
 ## Gate: Assumption Code Coherence
@@ -658,8 +658,8 @@ Predeclared for readiness; reload after `APROVADO`.
 
 - **Disposition:** `keep-active`
 - **Disposition reason:** simplified SD-01..SD-10 direction remains validated; localized architecture findings were integrated and require refreshed freeze/revalidation before critique and approval.
-- **Post-commit/push status:** refreshed review baseline with integrated architecture findings is published at `foundation_documentation:main@dc66744b`; freeze-evidence annotation is pending publication.
-- **Next path/status action:** publish the refreshed freeze evidence, rerun architecture opinion, then continue formal pre-approval gates.
+- **Post-commit/push status:** refreshed review baseline is published at `foundation_documentation:main@dc66744b`; freeze annotation is published at `181cac8f`; architecture revalidation has no blockers.
+- **Next path/status action:** run critique, assumption/scope guards and authority preflight, then request `APROVADO`.
 
 ## Commands
 
