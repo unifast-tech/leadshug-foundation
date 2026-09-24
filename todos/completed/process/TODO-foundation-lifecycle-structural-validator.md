@@ -33,16 +33,16 @@ Create one Python standard-library CLI with a small parser module and focused un
 
 ## Delivery Status Canon
 
-- **Current delivery stage:** `Pending`
-- **Tactical TODO lifecycle state:** `In-Progress`
+- **Current delivery stage:** `Production-Ready`
+- **Tactical TODO lifecycle state:** `Completed`
 - **Qualifiers:** `none`
-- **Next exact step:** complete the fresh final-review rerun, verification-debt audit and atomic closeout guards.
+- **Next exact step:** none; implementation and closeout are complete.
 
 ## Active Work State
 
-- **Work state:** `review`
-- **Why this state now:** implementation and package-matched architecture/test-quality audits are complete; final evidence and closeout gates remain.
-- **Exit condition:** simplified decisions validated/frozen, pre-approval gates green, explicit `APROVADO`, implementation/evidence complete, and TODO promoted to `completed/`.
+- **Work state:** `n/a once moved out of active`
+- **Why this state now:** implementation, assurance, publication and atomic completed-path closeout are complete.
+- **Exit condition:** satisfied; the same governing TODO is in `completed/process/`.
 
 ## Trigger Evidence
 
@@ -59,7 +59,7 @@ Create one Python standard-library CLI with a small parser module and focused un
 - [x] `S-05` Preserve the historical-document exception: only admitted live owners are scanned as authorities.
 - [x] `S-06` Add independent positive and mutation tests using temporary fixtures.
 - [x] `S-07` Document the CLI, structural boundary, exit behavior and canonical owners.
-- [ ] `S-08` Align directly affected lifecycle/index/roadmap guidance and retarget the validator-adoption decision at closeout.
+- [x] `S-08` Align directly affected lifecycle/index/roadmap guidance and retarget the validator-adoption decision at closeout.
 
 ## Out of Scope
 
@@ -74,17 +74,17 @@ Create one Python standard-library CLI with a small parser module and focused un
 
 ## Execution Lane Tracking
 
-- **Current lane:** `implementation/delivery-validation`
+- **Current lane:** `completed`
 - **Execution authority:** `granted by explicit APROVADO; todo_authority_guard outcome go`
 - **Topology:** `principal checkout, single writer, no worktrees`
 - **Implementation owner after approval:** `routine-executor / Operational Coder`; implementation completed locally.
-- **Assurance handoff:** `Assurance / Tester-Quality`; fresh delivery audits in progress.
+- **Assurance handoff:** `Assurance / Tester-Quality`; exact-snapshot audits and final review completed.
 
 ## Promotion Evidence
 
 - **Branch:** `main`
 - **Promotion target:** `foundation_documentation:main`
-- **Current claim:** local implementation under validation; no delivery/closeout claim.
+- **Current claim:** `Production-Ready`; implementation package published and completed-path closeout recorded.
 
 ## Diff Expectation Contract
 
@@ -148,7 +148,7 @@ Any unclassified path blocks delivery until classified as scope deviation, neces
 - [x] `DOD-05` Paths/references are root-confined and diagnostics do not echo sensitive content.
 - [x] `DOD-06` README/lifecycle/decision guidance names the validator without duplicating live state.
 - [x] `DOD-07` Legacy ST-01 checks are classified as parity evidence or retired controls, not embedded implementation.
-- [ ] `DOD-08` Required audits/reviews and deterministic TODO guards pass before closeout.
+- [x] `DOD-08` Required audits/reviews and deterministic TODO guards pass before closeout.
 
 ## Validation Steps
 
@@ -157,7 +157,7 @@ Any unclassified path blocks delivery until classified as scope deviation, neces
 - [x] `VAL-03` Run mutations for IDs, tables, links, paths, observable current-row state/target/evidence, roadmap evidence and read-only behavior.
 - [x] `VAL-04` Run a no-write compile check with `python3 -B` over delivered Python files.
 - [x] `VAL-05` Run compatible ST-01 checks once as migration parity evidence and record retired assertions.
-- [ ] `VAL-06` Run `git diff --check`, diff expectation, authority and completion guards at required phases.
+- [x] `VAL-06` Run `git diff --check`, diff expectation, authority and completion guards at required phases.
 - [x] `VAL-07` Confirm the final diff contains no runner, attestation, registry, subprocess/provenance or CI implementation.
 
 ## Completion Evidence Matrix
@@ -171,7 +171,7 @@ Any unclassified path blocks delivery until classified as scope deviation, neces
 | `S-05` | Scope | `S-05` Preserve the historical-document exception: only admitted live owners are scanned as authorities. | test | excluded-history vs live-owner paired test | local | passed | history remains non-authoritative |
 | `S-06` | Scope | `S-06` Add independent positive and mutation tests using temporary fixtures. | test+audit | independent parser/CLI fixtures; test-quality audit v10 | local | passed | no shared production oracle |
 | `S-07` | Scope | `S-07` Document the CLI, structural boundary, exit behavior and canonical owners. | doc+review | `deterministic/README.md` and root guidance diff | n/a | passed | commands and boundaries explicit |
-| `S-08` | Scope | `S-08` Align directly affected lifecycle/index/roadmap guidance and retarget the validator-adoption decision at closeout. | doc+move | canonical docs aligned; decision retarget waits for atomic completed-path move | n/a | pending | closeout-only remaining scope item |
+| `S-08` | Scope | `S-08` Align directly affected lifecycle/index/roadmap guidance and retarget the validator-adoption decision at closeout. | doc+move | lifecycle guidance says delivered; DEC target/evidence names `todos/completed/process/TODO-foundation-lifecycle-structural-validator.md` | n/a | passed | retarget and move are one closeout diff |
 | `DOD-01` | Definition of Done | `DOD-01` CLI validates the real live Foundation owner graph and returns zero. | test | exact VAL-01 exit 0 | local | passed | no diagnostics on live graph |
 | `DOD-02` | Definition of Done | `DOD-02` Every structural rule has a positive control and meaningful mutation test. | test+audit | 110 tests; test-quality audit v10 approved exact snapshot | local | passed | T-01..T-13 substantive |
 | `DOD-03` | Definition of Done | `DOD-03` Input trees remain byte-for-byte unchanged on success and failure. | test | success/failure manifest tests | local | passed | no source writes |
@@ -179,13 +179,13 @@ Any unclassified path blocks delivery until classified as scope deviation, neces
 | `DOD-05` | Definition of Done | `DOD-05` Paths/references are root-confined and diagnostics do not echo sensitive content. | test | symlink/escape/redaction/cap mutations | local | passed | absolute/raw content absent |
 | `DOD-06` | Definition of Done | `DOD-06` README/lifecycle/decision guidance names the validator without duplicating live state. | doc+review | strict doc diff + architecture audit v9 | n/a | passed | links and structural rules only |
 | `DOD-07` | Definition of Done | `DOD-07` Legacy ST-01 checks are classified as parity evidence or retired controls, not embedded implementation. | parity+review | Legacy Check Transition + compatible link/module/secret checks | local | passed | fixed snapshots/history scans retired |
-| `DOD-08` | Definition of Done | `DOD-08` Required audits/reviews and deterministic TODO guards pass before closeout. | guard+review | authority/diff go; final review/completion/closeout pending | local | pending | procedural final gates only |
+| `DOD-08` | Definition of Done | `DOD-08` Required audits/reviews and deterministic TODO guards pass before closeout. | guard+review | architecture v9, test-quality v10 and final-review v4 approved; authority, completion, diff and closeout guards return `go` | local | passed | no unresolved review finding |
 | `VAL-01` | Validation Steps | `VAL-01` `python3 foundation_documentation/deterministic/validate_foundation_lifecycle.py --root foundation_documentation` | test | exact command exit 0 | local | passed | live acceptance |
 | `VAL-02` | Validation Steps | `VAL-02` `PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=foundation_documentation/deterministic python3 -m unittest discover -s foundation_documentation/deterministic/tests -p 'test_*.py'` | test | exact command: 110/110 | local | passed | no bytecode residue |
 | `VAL-03` | Validation Steps | `VAL-03` Run mutations for IDs, tables, links, paths, observable current-row state/target/evidence, roadmap evidence and read-only behavior. | test+audit | T-01..T-13 suite and independent probes | local | passed | all demonstrated false greens fixed |
 | `VAL-04` | Validation Steps | `VAL-04` Run a no-write compile check with `python3 -B` over delivered Python files. | test | five Python sources compile in memory | local | passed | no pyc/pyo |
 | `VAL-05` | Validation Steps | `VAL-05` Run compatible ST-01 checks once as migration parity evidence and record retired assertions. | migration parity | legacy links, module diff and secret scan exit 0 as migration parity evidence | local | passed | incompatible snapshots intentionally retired |
-| `VAL-06` | Validation Steps | `VAL-06` Run `git diff --check`, diff expectation, authority and completion guards at required phases. | guard | diff/authority go; completion/closeout pending atomic move | local | pending | rerun at final closeout |
+| `VAL-06` | Validation Steps | `VAL-06` Run `git diff --check`, diff expectation, authority and completion guards at required phases. | guard | exact `git diff --check`, `todo_diff_expectation_guard.py`, `todo_authority_guard.py --require-delivery-gates`, `todo_completion_guard.py --require-delivery` and `todo_closeout_guard.py` commands pass at completed path | local | passed | final atomic closeout gate |
 | `VAL-07` | Validation Steps | `VAL-07` Confirm the final diff contains no runner, attestation, registry, subprocess/provenance or CI implementation. | review+scan | strict diff + rule-spirit 0 findings + reviews | local | passed | test subprocess only invokes CLI |
 
 ## External Dependency Readiness
@@ -713,9 +713,9 @@ Reloaded after `APROVADO` on 2026-09-24; the normal authority guard returned `go
 - **Why this decision:** shared structural enforcement needs post-implementation challenge.
 - **Package mode:** `bounded-file-set`
 - **Review isolation mode:** `fresh internal no-context reviewer`
-- **Final review status:** `findings_integrated`
-- **Findings summary:** final-review blockers through FV-FINAL-V3-06 were integrated within the approved parser/test/evidence boundary; a fresh clean verdict is still required.
-- **Evidence / reference:** `/root/foundation_validator_final_review` and `/root/foundation_validator_final_review_v3`; remediation proven by 110-test package and exact-snapshot audits v9/v10; clean rerun pending.
+- **Final review status:** `no_material_findings`
+- **Findings summary:** all findings through FV-FINAL-V4-02 were integrated; the fresh exact-snapshot rerun found no unresolved P1/P2 or material issue.
+- **Evidence / reference:** `/root/foundation_validator_final_review_v4`; exact 12-path pre-closeout snapshot approved with 110/110 tests and only the three atomic-closeout criteria remaining, all completed here.
 - **Waiver authority / reference (required if waived):** `not applicable`
 
 | Finding ID | Resolution (`Integrated|Challenged|Deferred`) | Usefulness (`useful|noise|mixed|unknown`) | Formalizable (`yes|partial|no|unknown`) | Candidate Rule Level (`paced|project|none|unknown`) | Candidate Rule ID | Rationale / Evidence |
@@ -728,10 +728,10 @@ Reloaded after `APROVADO` on 2026-09-24; the normal authority guard returned `go
 
 ## TODO Closeout Disposition
 
-- **Disposition:** `keep-active`
-- **Disposition reason:** implementation and exact-snapshot architecture/test-quality audits are complete; final review, verification-debt and atomic closeout gates remain.
-- **Post-commit/push status:** implementation evidence is uncommitted and unpublished.
-- **Next path/status action:** run required delivery gates and reviews before any closeout action.
+- **Disposition:** `move-completed`
+- **Disposition reason:** implementation is published, canonical targets are consolidated, all criteria pass and no execution/promotion work remains.
+- **Post-commit/push status:** implementation package published at `7381274d`; completed-path closeout is represented by the commit containing this file.
+- **Next path/status action:** `completed`; no remaining action in this TODO.
 
 ## Commands
 
