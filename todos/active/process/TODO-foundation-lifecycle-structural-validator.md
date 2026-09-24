@@ -298,43 +298,46 @@ The admitted current decision file uses one nonempty file-level `Provenance` fie
 - **Historical design:** D-01..D-55 and freeze `3f351daf` remain in Git history but are not the active implementation contract.
 - **Retirement rationale:** D-25..D-55 expanded a documentation validator into a provenance/runner subsystem without a demonstrated need; related special-tree/attestation decisions retire with it.
 - **Replacement status:** `SD-01..SD-10 and post-review refinements validated by the user on 2026-09-24`
-- **Freeze status:** `renewed post-review baseline frozen at pushed commit 9a2c677f`
+- **Freeze status:** `renewed post-review baseline frozen at pushed commit 4b1158d5 including the human revalidation record`
 - **Validation evidence:** exact user tokens `VALIDO SD-01..SD-10` and `VALIDO SD-01..SD-10 POS-REVIEW`
 - **Implementation authority:** `none`
 
 ## Architecture Change Governance
 
 - **Applicability (`required|not_needed`):** `required`
-- **Why:** establishes the permanent project-owned structural command and retires duplicated ad hoc checks.
-- **Target steady state:** one read-only CLI plus focused tests; canonical docs remain the only live truth owners.
-- **Temporary exception:** compatible ST-01 checks may run once for migration parity.
-- **Cutover condition:** real repository/mutation suite green, parity classified, docs aligned, reviews/guards complete.
+- **Why this applies:** establishes the permanent project-owned structural command while preserving canonical documents as the only live truth owners.
+- **Deviation / debt being retired:** structural checks embedded in a completed TODO and the rejected runner/attestation/provenance-subsystem design.
+- **Target steady-state after closeout:** one read-only stdlib CLI plus focused tests; no duplicated live records or infrastructure subsystem.
+- **Temporary exceptions allowed:** compatible ST-01 checks may run once for migration parity only.
+- **Cutover / removal condition:** real repository and mutation suite green, parity classified, directly affected docs aligned, and required delivery gates complete.
 
 ### Patterns To Enforce
 
-| Pattern | Enforcement |
-| --- | --- |
-| canonical-source derivation | source graph + bootstrap-deletion mutations |
-| single-field authority | no live IDs/counts/content hard-coded in Python |
-| fail-closed structure | negative fixtures return nonzero with rule/path diagnostics |
-| historical boundary | invalid excluded history does not affect current validation |
+| Pattern / Decision | Source / ID | Scope | Why It Must Hold After Cutover |
+| --- | --- | --- | --- |
+| canonical-source derivation | `SD-01/SD-02` | validator/parser | avoid copied live state |
+| single-field authority | `DEC-single-field-authority` | parser constants | no live IDs/counts/content hard-coded in Python |
+| fail-closed structure | `SD-03` | CLI diagnostics/exit | invalid admitted structure cannot pass silently |
+| historical boundary | `SD-01/SD-08` | source graph | excluded history cannot become competing authority |
 
 ### Prohibited Anti-Patterns
 
-- hard-coded snapshot of current BLG/DEC records;
-- regex-only parsing that silently accepts malformed tables;
-- warning-only structural failures;
-- rewriting source files;
-- expansion into subprocess, provenance, attestation or CI infrastructure.
+| Anti-Pattern / Wrong Path | Detection Signal | Why It Is Forbidden After Cutover | Exception Policy |
+| --- | --- | --- | --- |
+| hard-coded current BLG/DEC snapshots | review/tests find live IDs/counts in Python | duplicates canonical state | none |
+| permissive regex-only acceptance | malformed-table mutation returns zero | creates false greens | none |
+| warning-only structural failure | invalid fixture exits zero | violates fail-closed behavior | none |
+| source rewriting | fixture manifest changes | validator must remain read-only | none |
+| runner/attestation/provenance subsystem or CI | imports/files/diff exceed declared boundary | reintroduces disproportionate infrastructure | separate need-driven TODO and approval |
 
 ### Architecture Protection Harness
 
-| Surface | Protection |
-| --- | --- |
-| live Foundation | validator CLI |
-| parser/rules | unittest mutation suite |
-| usage/boundary | `deterministic/README.md` |
-| delivered diff | critique, test-quality audit and final review |
+| Harness Type | Surface | Command / Rule / Artifact | Regression It Must Catch | Adoption Timing | Evidence Plan / Follow-up |
+| --- | --- | --- | --- | --- | --- |
+| guard | live Foundation | `deterministic/validate_foundation_lifecycle.py` | broken admitted structure | implement-in-this-todo | live CLI output |
+| test | parser/rules | unittest mutation suite | false greens and parser drift | implement-in-this-todo | test output + mutation mapping |
+| documentation | usage/boundary | `deterministic/README.md` | undocumented scope/exit behavior | implement-in-this-todo | final doc review |
+| audit | delivered diff | critique, test-quality audit and final review | scope creep and weak tests | implement-in-this-todo | TODO gate evidence |
 
 ## Architecture Review Gates
 
@@ -353,11 +356,11 @@ The admitted current decision file uses one nonempty file-level `Provenance` fie
 - **Why this decision:** reviews must evaluate a stable simplified contract.
 - **Trigger stage:** `after VALIDO SD-01..SD-10 and before formal critique`
 - **Baseline branch:** `main`
-- **Baseline commit:** `9a2c677f`
+- **Baseline commit:** `4b1158d5`
 - **Baseline push reference:** `origin/main`
 - **Gate status:** `no_material_findings`
-- **Findings summary:** `post-review contract, gate evidence and normalized Assumptions Preview were explicitly revalidated by the user after scope-drift detection`
-- **Evidence / reference:** original validation freeze `f3deae28`; reviewed candidate `9a2c677f`; exact renewed token `VALIDO SD-01..SD-10 POS-REVIEW`; both published on `origin/main` on 2026-09-24
+- **Findings summary:** `post-review contract, normalized Assumptions Preview and the human revalidation record are committed and pushed before final guards`
+- **Evidence / reference:** original validation freeze `f3deae28`; reviewed candidate `9a2c677f`; renewed validated freeze `4b1158d5`; exact token `VALIDO SD-01..SD-10 POS-REVIEW`; all published on `origin/main` on 2026-09-24
 - **Waiver authority / reference (required if waived):** `not applicable`
 
 ## Gate: Review Scope Drift
@@ -368,8 +371,8 @@ The admitted current decision file uses one nonempty file-level `Provenance` fie
 - **Baseline source:** `Review Baseline Freeze -> Baseline commit`
 - **Guard command:** `python3 delphi-ai/tools/review_scope_drift_guard.py --todo foundation_documentation/todos/active/process/TODO-foundation-lifecycle-structural-validator.md`
 - **Gate status:** `running`
-- **Findings summary:** `the sole prior drift (Assumptions Preview handling normalization) was explicitly revalidated by the user; guard rerun against renewed baseline 9a2c677f is pending`
-- **Evidence / reference:** `prior no-go against e5bb735a found 1/22 changed sections; exact renewed token VALIDO SD-01..SD-10 POS-REVIEW received on 2026-09-24`
+- **Findings summary:** `post-revalidation run was green at 0/22; authority preflight then required schema-only field/table normalization in Architecture Change Governance. Content and scope are unchanged; refresh/rerun pending.`
+- **Evidence / reference:** `go against 4b1158d5 before schema normalization; subsequent no-go identified only Architecture Change Governance formatting; preflight-go confirms normalized required schema`
 - **Waiver authority / reference (required if waived):** `not applicable`
 
 ## Questions To Close
@@ -527,7 +530,7 @@ The admitted current decision file uses one nonempty file-level `Provenance` fie
 ## Approval
 
 - **Approved by:** `pending`
-- **Approval scope:** `pending final review-scope-drift and authority preflight for the renewed SD-01..SD-10 post-review baseline`
+- **Approval scope:** `pending final scope-drift rerun after schema-only normalization; authority preflight already returned preflight-go`
 - **Execution not authorized by approval:** `CI/CD, product/runtime, Delphi changes, worktrees, attestation/provenance/runner infrastructure`
 - **Execution authority:** `not_granted`
 - **Prior tokens:** D-01..D-55 history is provenance only and does not authorize the replacement contract.
@@ -538,15 +541,15 @@ The admitted current decision file uses one nonempty file-level `Provenance` fie
 
 Predeclared for readiness; reload after `APROVADO`.
 
-| Source | Applies To | Must Preserve | Must Avoid |
-| --- | --- | --- | --- |
-| `delphi-ai/rules/core/todo-driven-execution-model-decision.md` | tactical execution | approval/diff/evidence | implementation before authority |
-| `delphi-ai/workflows/docker/todo-driven-execution-method.md` | lifecycle | phase order | skipped gates |
-| `delphi-ai/workflows/docker/todo-contract-refinement-method.md` | planning | bounded contract | speculative expansion |
-| `delphi-ai/workflows/docker/todo-approval-gates-method.md` | next phase | freeze/reviews/preflight | premature approval |
-| `delphi-ai/skills/test-creation-standard/SKILL.md` | tests | meaningful mutations | happy-path-only tests |
-| `foundation_documentation/project_constitution.md` | project authority | TODO hierarchy | product drift |
-| `foundation_documentation/evolution_lifecycle.md` | semantic owner | schemas/owners/history | competing code owner |
+| Source | Why It Applies Now | Must Preserve | Must Avoid | Execution Impact |
+| --- | --- | --- | --- | --- |
+| `delphi-ai/rules/core/todo-driven-execution-model-decision.md` | tactical execution | approval/diff/evidence | implementation before authority | keep execution behind guards |
+| `delphi-ai/workflows/docker/todo-driven-execution-method.md` | lifecycle orchestration | phase order | skipped gates | follow approval→execution→delivery order |
+| `delphi-ai/workflows/docker/todo-contract-refinement-method.md` | frozen contract | bounded scope | speculative expansion | renew approval on material change |
+| `delphi-ai/workflows/docker/todo-approval-gates-method.md` | current phase | freeze/reviews/preflight | premature approval | require preflight-go before request |
+| `delphi-ai/skills/test-creation-standard/SKILL.md` | new tests | meaningful mutations | happy-path-only tests | test-first independent fixtures |
+| `foundation_documentation/project_constitution.md` | project authority | TODO hierarchy | product drift | Foundation-only changes |
+| `foundation_documentation/evolution_lifecycle.md` | semantic owner | schemas/owners/history | competing code owner | parser derives bounded structure |
 
 ## Agent Routing Preflight
 
@@ -556,9 +559,14 @@ Predeclared for readiness; reload after `APROVADO`.
 - **Selected model:** `gpt-5.6-terra`
 - **Selected effort:** `medium`
 - **Proof mode:** `declared`
+- **Exception reason:** `n/a`
+- **Subagent / delegation authorization:** `not-requested before APROVADO`
 - **Execution topology:** `primary-checkout-single-writer`
 - **Worktree / auxiliary-checkout authorization:** `not-authorized`
-- **Guard outcome:** `pending rerun before APROVADO`
+- **Worktree authorization evidence:** `n/a`
+- **Writer scheduling policy:** `single-writer-serialized`
+- **Guard outcome:** `go`
+- **Waiver / exception reference:** `n/a`
 
 ## Decision Adherence Validation
 
@@ -596,11 +604,11 @@ Predeclared for readiness; reload after `APROVADO`.
 
 ## Promotion Finding Routing Ledger
 
-| Finding Group | Classification | Routing | Status |
-| --- | --- | --- | --- |
-| structural findings through D-24 | useful core requirements | consolidate into `SD-01..SD-06/SD-08` | retained-simplified |
-| attestation/runner/provenance D-25..D-55 | disproportionate solution | retire; reopen only as separate need-driven initiative | retired-before-implementation |
-| user overengineering correction | project-scope recalibration | simplify TODO and invalidate prior baseline | integrated |
+| Finding ID | Severity | Classification | Routing Decision | Same TODO / Split Rationale | Status | Approval / Follow-up Reference |
+| --- | --- | --- | --- | --- | --- | --- |
+| `PR-01` | medium | by-design/no-action | retain simplified structural core | belongs to SD-01..SD-06/SD-08 | retained-simplified | user validations on 2026-09-24 |
+| `PR-02` | high | by-design/no-action | retire D-25..D-55 infrastructure | reopen only under separate demonstrated need | retired-before-implementation | user-directed reduction |
+| `PR-03` | high | release-blocker | replace overengineered baseline with SD-01..SD-10 | same TODO because correction precedes implementation | integrated | `VALIDO SD-01..SD-10 POS-REVIEW` |
 
 ## Security Risk Assessment
 
@@ -657,9 +665,9 @@ Predeclared for readiness; reload after `APROVADO`.
 ## TODO Closeout Disposition
 
 - **Disposition:** `keep-active`
-- **Disposition reason:** post-review contract has no review blockers, renewed validation is recorded and only final deterministic pre-approval guards remain.
-- **Post-commit/push status:** renewed post-review baseline is published at `foundation_documentation:main@9a2c677f`; validation/freeze annotation is local pending publication.
-- **Next path/status action:** rerun scope-drift and authority preflight, publish approval-ready evidence and request `APROVADO` if green.
+- **Disposition reason:** reviews and renewed validation are complete; authority preflight is green and only a scope-drift rerun against the schema-normalized freeze remains.
+- **Post-commit/push status:** validated baseline is published at `4b1158d5`; schema-only normalization and guard evidence are local pending publication.
+- **Next path/status action:** publish/refreeze schema normalization, rerun scope-drift and authority preflight, then request `APROVADO` if green.
 
 ## Commands
 
