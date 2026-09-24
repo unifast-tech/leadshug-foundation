@@ -348,7 +348,8 @@ Only observable current-state structure is enforced. Historical transition truth
 - **Trigger stage:** `after VALIDO SD-01..SD-10 and before formal critique`
 - **Baseline branch:** `main`
 - **Baseline commit:** `f3deae28`
-- **Gate status:** `passed`
+- **Baseline push reference:** `origin/main`
+- **Gate status:** `no_material_findings`
 - **Findings summary:** `user-validated SD-01..SD-10 baseline committed and pushed before formal review`
 - **Evidence / reference:** `foundation_documentation:main@f3deae28`; exact user token `VALIDO SD-01..SD-10`; push `origin/main` completed on 2026-09-24
 - **Waiver authority / reference (required if waived):** `not applicable`
