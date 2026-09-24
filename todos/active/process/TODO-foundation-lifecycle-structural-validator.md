@@ -168,7 +168,7 @@ Preencher somente se o guard retornar `no-go`; qualquer novo path ou change type
 
 - **Decision:** `required only for publication/Production-Ready; not needed for local implementation`
 - **Rationale:** parser/tests usam apenas arquivos locais, mas freeze e closeout exigem `origin/main`; GitHub/origin deve estar acessível e sincronizado antes dessas alegações.
-- **Current evidence:** `origin/main@e43658ef59b87dc6eec8b4b446781a02ac48abeb` contains the reviewed `D-01..D-10` package; the reconverged `D-01..D-11` working state still requires publication after validation.
+- **Current evidence:** `origin/main@490096774f22fd2fe7c97a88274ca179747d4266` contains the validated `D-01..D-11` replacement freeze.
 
 ## Profile Scope & Handoffs
 
@@ -329,10 +329,10 @@ Preencher somente se o guard retornar `no-go`; qualquer novo path ou change type
 - **Trigger stage:** `after D-01..D-11 validation and before renewed planning-side reviews`
 - **Baseline branch:** `main`
 - **Baseline commit:** `2562f62e86cbc15bcaa7865b652e240cb49fcb0e`
-- **Baseline push reference:** `pending publication to origin/main`
-- **Gate status:** `frozen-locally-pending-publication`
-- **Findings summary:** validated `D-01..D-11` were frozen locally; reviews remain blocked until publication.
-- **Evidence / reference:** local commit `2562f62e86cbc15bcaa7865b652e240cb49fcb0e`, 2026-09-23.
+- **Baseline push reference:** `origin/main contains 2562f62e86cbc15bcaa7865b652e240cb49fcb0e; freeze bookkeeping published through 490096774f22fd2fe7c97a88274ca179747d4266`
+- **Gate status:** `frozen-published`
+- **Findings summary:** validated `D-01..D-11` replacement baseline was frozen and published before renewed reviews.
+- **Evidence / reference:** commits `2562f62e86cbc15bcaa7865b652e240cb49fcb0e` and `490096774f22fd2fe7c97a88274ca179747d4266`, pushed to `origin/main` on 2026-09-23.
 - **Waiver authority / reference:** `n/a`
 
 ## Gate: Review Scope Drift
@@ -744,7 +744,7 @@ Predeclared for pre-approval readiness; reload and bind after `APROVADO`.
 
 - **Disposition:** `keep-active`
 - **Disposition reason:** material review findings were integrated; revised decisions require renewed human validation, refreeze and fresh reviews.
-- **Post-commit/push status:** `reconverged D-01..D-11 frozen locally; replacement publication pending; no implementation claim`
+- **Post-commit/push status:** `reconverged D-01..D-11 replacement freeze published on origin/main; no implementation claim`
 - **Next path/status action:** publish the replacement freeze and rerun all planning-side gates with the full owner package; no implementation before a later post-gate APROVADO and authority guard `go`.
 
 ## Commands
