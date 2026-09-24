@@ -292,7 +292,7 @@ Only observable current-state structure is enforced. Historical transition truth
 - **Historical design:** D-01..D-55 and freeze `3f351daf` remain in Git history but are not the active implementation contract.
 - **Retirement rationale:** D-25..D-55 expanded a documentation validator into a provenance/runner subsystem without a demonstrated need; related special-tree/attestation decisions retire with it.
 - **Replacement status:** `SD-01..SD-10 validated by the user on 2026-09-24`
-- **Freeze status:** `validated; authoritative pushed commit pending capture in Gate: Review Baseline Freeze`
+- **Freeze status:** `frozen at pushed commit f3deae28`
 - **Validation evidence:** exact user token `VALIDO SD-01..SD-10`
 - **Implementation authority:** `none`
 
@@ -347,10 +347,10 @@ Only observable current-state structure is enforced. Historical transition truth
 - **Why this decision:** reviews must evaluate a stable simplified contract.
 - **Trigger stage:** `after VALIDO SD-01..SD-10 and before formal critique`
 - **Baseline branch:** `main`
-- **Baseline commit:** `pending`
-- **Gate status:** `not_run`
-- **Findings summary:** `simplified baseline not yet validated/frozen`
-- **Evidence / reference:** `pending validation`
+- **Baseline commit:** `f3deae28`
+- **Gate status:** `passed`
+- **Findings summary:** `user-validated SD-01..SD-10 baseline committed and pushed before formal review`
+- **Evidence / reference:** `foundation_documentation:main@f3deae28`; exact user token `VALIDO SD-01..SD-10`; push `origin/main` completed on 2026-09-24
 - **Waiver authority / reference (required if waived):** `not applicable`
 
 ## Gate: Review Scope Drift
@@ -457,7 +457,7 @@ Only observable current-state structure is enforced. Historical transition truth
 
 ## Plan Review Gate
 
-- **Status:** `simplified contract validated; formal review pending pushed baseline freeze`
+- **Status:** `simplified contract validated and review-frozen; formal reviews pending`
 - **Required lenses:** Architecture, Code Quality, Tests, Performance, Security, Elegance, Structural Soundness.
 - **Primary guardrail:** attestation, subprocess supervision, provenance, Registry-v1 or special commit mechanics require a separate demonstrated need/TODO.
 
@@ -652,9 +652,9 @@ Predeclared for readiness; reload after `APROVADO`.
 ## TODO Closeout Disposition
 
 - **Disposition:** `keep-active`
-- **Disposition reason:** simplified SD-01..SD-10 contract is validated but not yet review-frozen, formally reviewed or approved.
-- **Post-commit/push status:** deterministic TODO, audit-floor and diff-expectation guards pass; validated baseline freeze publication is pending.
-- **Next path/status action:** publish the review freeze, run formal pre-approval gates and request `APROVADO`.
+- **Disposition reason:** simplified SD-01..SD-10 contract is validated and review-frozen but not yet formally reviewed or approved.
+- **Post-commit/push status:** validated review baseline is published at `foundation_documentation:main@f3deae28`; freeze-evidence annotation is pending publication.
+- **Next path/status action:** publish the freeze evidence, run formal pre-approval gates and request `APROVADO`.
 
 ## Commands
 
