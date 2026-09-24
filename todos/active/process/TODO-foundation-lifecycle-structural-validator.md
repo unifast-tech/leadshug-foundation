@@ -35,12 +35,12 @@ O lifecycle da Foundation exige um validator permanente quando backlog, decisõe
 - **Current delivery stage:** `Pending`
 - **Tactical TODO lifecycle state:** `Review`
 - **Qualifiers:** `none`
-- **Next exact step:** integrar e reconvergir os achados formais `ARCH-POSTFREEZE-01/F-27..F-29`, publicar o contrato provisório `D-01..D-50` e repetir o ciclo até nenhum reviewer descobrir decisão approval-material nova.
+- **Next exact step:** integrar `R12-ARCH-01/R12-CRIT2-01..05` como `D-51..D-54`, publicar o contrato provisório e repetir o ciclo até nenhum reviewer descobrir decisão approval-material nova.
 
 ## Active Work State
 
 - **Work state:** `review`
-- **Why this state now:** o freeze `D-01..D-46@3f351daf` foi invalidado por quatro achados materiais dos gates formais; `D-47..D-50` estão em reconvergência e implementação continua proibida.
+- **Why this state now:** o freeze `D-01..D-46@3f351daf` segue invalidado; R-12 encontrou trust-boundary, lifecycle e total-deadline gaps após `D-47..D-50`, agora em integração como `D-51..D-54`; implementação continua proibida.
 - **Exit condition:** decisões validadas, baseline congelada/publicada, reviews e guards pré-aprovação verdes, seguidos de `APROVADO` explícito ou cancelamento com racional.
 
 ## Trigger Evidence
@@ -203,7 +203,7 @@ Preencher somente se o guard retornar `no-go`; qualquer novo path ou change type
 
 ## Complexity
 
-- **Level:** `high`
+- **Level:** `big`
 - **Checkpoint policy:** arquitetura e crítica independentes antes do `APROVADO`; threat-model review explícito; test-quality, verification-debt, architecture-adherence e final review após implementação.
 - **Why this level:** além do parser estrutural e da suíte de mutações, o escopo inclui codec canônico, runner POSIX com subprocess supervision, provenance/toolchain binding, materialização Git e autoatestação de entrega. O impacto de produto segue nulo, mas a complexidade operacional e de assurance é alta.
 
@@ -256,10 +256,10 @@ Placeholder tokens are the whole-segment, case-insensitive set `PENDING|N/A|TBD|
 - Each command record has fixed fields in order: `id`, `context` (`materialized-tree|foundation-index|workspace-governance`), `cwd` (`workspace|foundation|materialized-foundation`), `argv-sha256` over exact NUL-joined UTF-8 argv bytes, decimal `exit`, `stdout-sha256` over raw stdout bytes, and `stderr-sha256` over raw stderr bytes. No normalization is allowed.
 - `Validation-Attestation-SHA256` hashes exactly the payload bytes between delimiters, including its final LF and excluding delimiters, trailers and the digest itself. Missing, duplicate, unknown, reordered or malformed fields/commands fail.
 - Golden tests construct expected payload bytes and digests independently of the production serializer/parser; mutations cover field/command reorder, newline/encoding change, stream swap, missing/duplicate command, altered argv/output bytes and trailer mismatch.
-- `deterministic/README.md` owns one exact argv registry and its command-contract digest. The validator exposes the delivery-only `--run-attested-suite --tree <oid> --materialized-root <path>` to execute that closed registry, capture raw streams and emit only the canonical block, plus delivery-only `--verify-attestation --commit <sha>` to verify message grammar, tree/trailers, registry digest and internal digest consistency. Normal steady-state validation uses only `--root`, never resolves the sibling Delphi checkout and never runs legacy/governance commands.
-- Every registry entry declares exactly one execution context: `materialized-tree` reads only the read-only tree materialization; `foundation-index` may read Foundation Git metadata but must prove its index/tree equals the attested OID; `workspace-governance` may invoke the clean sibling Delphi checkout while binding its captured commit and tree. No registered command may silently cross contexts.
+- `deterministic/README.md` owns the immutable exact `Registry-v1` argv profile and its command-contract digest. The validator permanently exposes lazy delivery/forensics modes `--run-attested-suite --tree <oid> --materialized-root <path>` and `--verify-attestation --commit <sha>` for that approved version; any new generation profile requires a new version and decision. Normal steady-state validation uses only `--root`, never resolves the sibling Delphi checkout and never runs legacy/governance commands.
+- Every registry entry declares exactly one execution context as a provenance/permitted-input contract, not an OS sandbox: `materialized-tree` is designed to consume the read-only tree materialization; `foundation-index` may consume Foundation Git metadata but must prove its index/tree equals the attested OID; `workspace-governance` may invoke the clean sibling Delphi checkout while binding its captured commit and tree. The implementation rejects undeclared inputs it can observe, but does not claim filesystem/network/process containment. Reviewed validator and exact legacy payload bytes are trusted executable inputs; Markdown/fixture data remains untrusted parser input.
 - Direct execution provenance is part of the registry digest: Foundation scripts bind through the attested tree/blob; Delphi guards bind a clean checkout commit+tree; every directly invoked external executable in the approved registry (`python3`, `git`, `bash`, `rg`, `sort`) binds resolved-path content SHA-256 plus exact version output where supported. Shell-evaluated strings are forbidden except the three immutable legacy code-fence expansions explicitly listed in the approved registry. The verifier checks these bindings before accepting the self-attestation.
-- The manifest is an immutable self-attestation, not cryptographic proof that execution occurred: raw command outputs are intentionally not retained in-tree, so an independent verifier can validate canonical field shape/order, inclusion of recorded stream digests in the signed byte domain, registry/argv reconstruction and internal digest consistency, but cannot recompute stream digests or establish that they correspond to actual executions. Verifier success text/evidence classification must state this limit; no stronger provenance claim is permitted.
+- The manifest is an immutable self-attestation, not cryptographic proof that execution occurred: raw command outputs are intentionally not retained in-tree, so an independent verifier can validate canonical field shape/order, inclusion of recorded stream digests in the signed byte domain, registry/argv reconstruction and internal digest consistency, but cannot recompute stream digests or establish that they correspond to actual executions. Correctness also depends on prior human/reviewer acceptance of the committed implementation bytes; executing a verifier from the same tree proves byte identity, not semantic correctness. Verifier success text/evidence classification must state both limits; no stronger provenance claim is permitted.
 - This is not a hermetic environment claim: OS kernel, shared libraries and other transitive runtime inputs remain unbound and must be named as residual operational risk.
 
 ### Approved Attested Command Registry
@@ -267,11 +267,12 @@ Placeholder tokens are the whole-segment, case-insensitive set `PENDING|N/A|TBD|
 - Registry templates are UTF-8/LF records in the table order below. Tokens are the only `{...}` forms allowed; unknown, nested or partially embedded tokens fail.
 - `{PYTHON}`, `{GIT}` and `{BASH}` resolve once, before execution, to canonical realpath bytes of the executable selected from the parent launch environment; those exact bytes are executed and bound by provenance. `{TREE}` resolves to the lowercase captured tree OID. `{FOUNDATION}` is allowed only in `tree-consistency` and the post-commit verifier, resolving to the canonical principal Foundation root after the applicable divergence preflight. `{COMMIT}` exists only post-commit and resolves to the captured full lowercase commit OID. Absolute bytes are permitted only through executable-token expansion and the verified root token; no literal absolute workspace or temporary-directory path is admitted in child argv.
 - `{ST01_VAL01}`, `{ST01_VAL08}` and `{ST01_VAL10}` expand to the exact bytes between the opening `bash` fence LF and the LF immediately before the closing fence under the uniquely named heading in the completed ST-01 TODO. The source blob/OID and expanded bytes digest are bound; these are the only allowed `bash -c` payloads.
-- Execution context and cwd are orthogonal registry fields. `materialized-tree` authorizes only the read-only materialized Foundation inputs. `foundation-index` authorizes verified principal Foundation worktree/index/Git metadata and requires `git write-tree == {TREE}`; its normal cwd is `foundation`, while `tree-consistency` is the sole row with cwd `materialized-foundation`, materialized executable bytes and principal access only through `{FOUNDATION}` after runner divergence preflight. `workspace-governance` authorizes the bound clean Delphi checkout plus verified principal Foundation metadata and uses cwd `workspace`. No context implies a cwd or input not explicitly present in its row.
+- Execution context and cwd are orthogonal registry fields and enforce provenance/accounting rather than adversarial containment. `materialized-tree` declares the read-only materialized Foundation inputs; `foundation-index` declares verified principal Foundation worktree/index/Git metadata and requires `git write-tree == {TREE}`; its normal cwd is `foundation`, while `tree-consistency` is the sole row with cwd `materialized-foundation`, materialized executable bytes and principal access through `{FOUNDATION}` after runner divergence preflight. `workspace-governance` declares the bound clean Delphi checkout plus verified principal Foundation metadata and uses cwd `workspace`. Undeclared crossings detected by the runner fail, but the same-user process is not claimed incapable of accessing other OS resources.
 - Every child environment is constructed from empty, never inherited. Its complete allowlist is `PATH={TOOL_DIR}`, `HOME={EMPTY_HOME}`, `XDG_CONFIG_HOME={EMPTY_XDG}`, `TMPDIR={RUN_TMP}`, `PYTHONDONTWRITEBYTECODE=1`, `PYTHONNOUSERSITE=1`, `LC_ALL=C.UTF-8`, `LANG=C.UTF-8`, `TZ=UTC`, `TERM=dumb`, `GIT_CONFIG_NOSYSTEM=1`, `GIT_CONFIG_GLOBAL=/dev/null`, `GIT_TERMINAL_PROMPT=0`, `GIT_PAGER=cat` and `PAGER=cat`; no other variable is passed. `{EMPTY_HOME}`/`{EMPTY_XDG}` are empty read-only directories and `{RUN_TMP}` is the only writable scratch directory, all outside admitted repositories. All direct Python argv place `-E -s -S -B` immediately after `{PYTHON}`; their only non-stdlib import roots are the attested script directory/cwd. Canonical sorted `NAME=value\0` template bytes are part of `registry-sha256` and separately bound by `environment-sha256`; physical capsule paths are represented only by their literal tokens.
 - The runner creates one private read-only `{TOOL_DIR}` for every registry command, containing only verified aliases for `git`, `rg`, `sort`, `bash` and a fixed `python3` launcher that `exec`s the bound `{PYTHON}` with `-E -s -S -B`. Direct argv still execute bound absolute token resolutions; every descendant PATH lookup, including Delphi guards, is confined to these aliases. Launcher template/digest and alias target identities are registry-bound; directory entries, targets and bytes are verified before and after each command. PATH shadowing, substitution, unknown executable demand or capsule mutation fails.
 - Git user/system configuration and ambient repository override variables are absent by construction. Local repository configuration remains required Git metadata and is bound through `git-config-manifest-sha256`, calculated over canonical path/type/bytes records for each file returned by `git rev-parse --git-path config` and the optional `config.worktree` in Foundation and Delphi. Before execution, bound Git runs with `--includes=false` to detect case-insensitively any `include.path` or `includeIf.*.path`; any unconditional/conditional include is rejected rather than resolved. Any config drift between capture and post-command verification fails.
-- Every registry row binds a monotonic timeout plus independent stdout/stderr byte caps. The runner streams each pipe in 64 KiB chunks directly into SHA-256 and bounded diagnostic buffers, counts raw bytes, and never accumulates an unbounded stream. On timeout or first cap breach it sends SIGTERM to the isolated process group, waits exactly 2 seconds, then SIGKILLs remaining descendants; it emits a redacted machine result with `outcome=timeout|stdout-overflow|stderr-overflow`, byte counts and command ID, emits no attestation, and removes `{TOOL_DIR}`, empty homes and `{RUN_TMP}` in `finally` on every outcome.
+- Every registry row binds a monotonic timeout plus independent stdout/stderr byte caps. The runner streams each pipe in 64 KiB chunks directly into SHA-256 and bounded diagnostic buffers, counts raw bytes, and never accumulates an unbounded stream. On timeout or first cap breach it sends SIGTERM to the launched process group, waits exactly 2 seconds, then SIGKILLs that group; this is bounded best-effort supervision for trusted reviewed commands, not containment of an adversary able to escape the group or transiently mutate same-user files. It emits a redacted machine result with `outcome=timeout|stdout-overflow|stderr-overflow`, byte counts and command ID, emits no attestation, and attempts removal of `{TOOL_DIR}`, empty homes and `{RUN_TMP}` in `finally`; cleanup failure is terminal and escaped descendants remain an explicit residual risk.
+- A `30m` monotonic end-to-end deadline covers capsule setup, five probes, all registry commands, materialization, identity/config checks, post-commit verification and cleanup, reserving the final `30s` for cleanup. The suite stops launching work when the remaining budget cannot cover the next fixed command bound plus cleanup reserve; deadline or blocking setup/cleanup yields deterministic `suite-timeout|cleanup-timeout`, no attestation and a nonzero exit.
 - Provenance probes run before the registry suite in tool-ID order with exact argv `{BASH} --version`, `{GIT} --version`, `{PYTHON} -E -s -S -B --version`, resolved `rg --version`, and resolved `sort --version`. Each uses the same from-empty environment/capsule/process-group/64 KiB streaming algorithm, a `10s` timeout and `256KiB` cap per stream, with executable bytes verified immediately before and after. Nonzero exit, timeout, overflow, identity drift, descendant survival or cleanup failure suppresses attestation.
 
 ### Post-Commit Verification Protocol
@@ -340,8 +341,12 @@ Placeholder tokens are the whole-segment, case-insensitive set `PENDING|N/A|TBD|
 | `D-46` | Run all five executable-version provenance probes through a closed ordered protocol with exact argv, from-empty environment, isolated process group, `10s` timeout, `256KiB` per-stream caps, streaming hashes, pre/post identity and unconditional cleanup; any abnormal outcome suppresses attestation. | `R10-CRIT2-01` | confirm bounded provenance capture |
 | `D-47` | Apply the universal isolated-Python invariant to provenance too: the exact Python version probe is `{PYTHON} -E -s -S -B --version`; bind those argv bytes consistently in registry, payload, verifier and tests. | `ARCH-POSTFREEZE-01` | confirm one mechanically uniform direct-Python boundary |
 | `D-48` | Limit verifier claims to independently checkable facts: canonical shape/order, signed-domain inclusion, reconstructed registry/argv and internal digest consistency. It must never claim that unrecoverable stdout/stderr digests prove actual execution; success messages and evidence classification state self-attestation explicitly. | `F-27` | confirm honest verifier outcome semantics |
-| `D-49` | Retain the provenance runner in this TODO because it closes the same immutable-delivery boundary, but classify the work as high complexity with medium security/operational risk, an explicit local threat model, expanded implementation budget and required architecture, critique, test-quality, verification-debt, adherence and final-review gates. | `F-28` | confirm same-TODO retention with honest risk/resources |
-| `D-50` | Separate permanent validator availability from one-delivery governance: normal `--root` validation depends only on Foundation/Python stdlib; legacy ST-01 and sibling Delphi commands exist only in the terminal attestation/publication mode for this cutover and are not runtime dependencies of ordinary validation. Future delivery governance remains external orchestration, not a duplicated permanent rule catalog in the validator. | `F-29` | confirm explicit cutover and steady-state dependency boundary |
+| `D-49` | Retain the provenance runner in this TODO because it closes the same immutable-delivery boundary, but classify the work as `big` complexity with medium security/operational risk, an explicit local threat model, expanded implementation budget and required architecture, critique, test-quality, verification-debt, adherence and final-review gates. | `F-28` | confirm same-TODO retention with honest risk/resources |
+| `D-50` | Separate permanent validator availability from delivery governance: normal `--root` validation depends only on Foundation/Python stdlib; legacy ST-01 and sibling Delphi commands exist only in the lazy Registry-v1 delivery/forensics mode and are never runtime dependencies of ordinary validation. External orchestration decides when an approved registry version runs; the validator does not derive a second live governance catalog. | `F-29` | confirm explicit mode and steady-state dependency boundary |
+| `D-51` | Treat reviewed validator/package bytes and exact reviewed legacy fence payloads as trusted executable inputs. Execution contexts, read-only materialization, private PATH and pre/post manifests are integrity/provenance and accidental-write controls, not filesystem/network/process sandboxes; untrusted Markdown/fixture data remains parser input. | `R12-CRIT2-01/02` | confirm implementable security boundary without containment overclaim |
+| `D-52` | Make prior human/reviewer acceptance of the implementation tree an explicit verifier trust prerequisite. Same-tree materialization establishes byte identity only; self-attestation verification cannot independently prove implementation correctness or actual execution. | `R12-CRIT2-03` | confirm honest code trust root and success wording |
+| `D-53` | Define process-group termination as bounded best-effort supervision for trusted commands, keep escaped descendants/transient same-user mutation as residual risk, and impose one `30m` end-to-end monotonic suite deadline with a final `30s` cleanup reserve and deterministic no-attestation failures. | `R12-CRIT2-02/05` | confirm operational bounds and residual-risk handling |
+| `D-54` | Retain attestation/runner and the versioned `Registry-v1` as a permanent supported Foundation delivery/forensics surface after cutover, while keeping it lazy and separate from ordinary `--root` validation. The ST-01/Delphi rows remain the immutable v1 profile; any future generation profile or registry change requires a new approved version/decision, while external orchestration decides when to invoke it. | `R12-ARCH-01`, `R12-CRIT2-04` | confirm post-cutover ownership, support and evolution boundary |
 
 ## Decisions
 
@@ -393,8 +398,12 @@ Placeholder tokens are the whole-segment, case-insensitive set `PENDING|N/A|TBD|
 - [x] `D-46` Apply the same closed resource/execution boundary to all executable provenance probes.
 - [ ] `D-47` Use `{PYTHON} -E -s -S -B --version` as the exact Python provenance probe everywhere.
 - [ ] `D-48` Restrict verifier success to canonical/internal self-attestation consistency and prohibit execution-truth claims.
-- [ ] `D-49` Reclassify the retained runner/attestation delivery slice as high complexity with medium security/operational risk and expanded assurance gates.
-- [ ] `D-50` Keep normal validator execution independent from legacy and sibling governance after cutover; confine those dependencies to this delivery's terminal mode.
+- [ ] `D-49` Reclassify the retained runner/attestation delivery slice as `big` complexity with medium security/operational risk and expanded assurance gates.
+- [ ] `D-50` Keep normal validator execution independent from legacy and sibling governance; confine those dependencies to the lazy versioned delivery/forensics mode.
+- [ ] `D-51` Trust only reviewed executable bytes; treat contexts/manifests as provenance and integrity controls, never adversarial containment.
+- [ ] `D-52` Require prior review acceptance of implementation bytes and prohibit same-tree verifier success from claiming independent semantic correctness or execution proof.
+- [ ] `D-53` Use best-effort process-group supervision plus a 30-minute whole-suite deadline and explicit cleanup/residual-risk semantics.
+- [ ] `D-54` Retain the lazy delivery/forensics subsystem and immutable Registry-v1 profile as a permanent supported surface with versioned future evolution.
 
 ## Module Decision Baseline Snapshot
 
@@ -410,9 +419,9 @@ Placeholder tokens are the whole-segment, case-insensitive set `PENDING|N/A|TBD|
 ## Decision Baseline
 
 - **Prior freezes:** `D-01..D-08@b685fb52` invalidated by `AR-01..05/F-01..11`; `D-01..D-10@504a9785` invalidated by `AR-R01..AR-R05/F-12..F-17`; `D-01..D-11@2562f62e` invalidated by `AR-F01..AR-F05/F-18..F-21`; `D-01..D-14@e26d7183` invalidated by `AR-N01/F-22..F-24`; `D-01..D-17@3dce63b3` invalidated by `C2-F01/C2-F02/C2-F04`; `D-01..D-20@0cd991e6` invalidated by `C3-F01..C3-F03`; `D-01..D-46@3f351daf` invalidated by `ARCH-POSTFREEZE-01/F-27..F-29`.
-- **Freeze status:** `invalidated — provisional D-01..D-50 must reconverge and receive a new full-set validation`
+- **Freeze status:** `invalidated — provisional D-01..D-54 must reconverge and receive a new full-set validation`
 - **Frozen decisions:** `none current; prior D-01..D-46 retained as provenance`
-- **Current validation evidence:** `pending after convergence of D-01..D-50`.
+- **Current validation evidence:** `pending after convergence of D-01..D-54`.
 - **Prior validation evidence:** Gabriel/user, 2026-09-24, exact phrase `VALIDO D-01..D-46`; preserved as provenance but superseded by material formal-gate findings that introduced `D-47..D-50`.
 - **Prior validation evidence:** Gabriel/user, 2026-09-24, exact phrase `VALIDO D-01..D-20`; preserved as provenance but superseded by the complete D-01..D-46 validation.
 - **Prior validation evidence:** Gabriel/user, 2026-09-24, exact phrase `VALIDO D-01..D-17`; preserved as provenance but superseded by material review findings that introduced `D-18..D-20`.
@@ -465,7 +474,7 @@ Placeholder tokens are the whole-segment, case-insensitive set `PENDING|N/A|TBD|
 - **Decision review kind:** `architecture_opinion`
 - **Decision review package:** `bounded-file-set`
 - **Decision review status:** `findings_integrated`
-- **Decision review evidence / resolution:** formal fresh no-context architecture review over package SHA-256 `d557ed6e4e83c966302dc1bc21eec5e9d2f6e13fc55123e8cfd15b57a14ffa3c` at published head `a960a2e5`, 2026-09-24, found `ARCH-POSTFREEZE-01`; integrated provisionally as `D-47`, exact probe grammar and `T-42`. Fresh convergence and post-freeze rerun required.
+- **Decision review evidence / resolution:** R-12 fresh architecture review over package SHA-256 `5c4d73bb6bd8f0a2ce6071b6bba500a3719954de340abaef756dd6a4bc5dd01b` at published head `97bb8b88`, 2026-09-24, found `R12-ARCH-01`; integrated provisionally as the permanent/versioned post-cutover disposition `D-54/T-48`. Fresh R-13 convergence and post-freeze rerun required.
 
 | Finding ID | Resolution | Usefulness | Formalizable | Candidate Rule Level | Candidate Rule ID | Rationale / Evidence |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -485,6 +494,7 @@ Placeholder tokens are the whole-segment, case-insensitive set `PENDING|N/A|TBD|
 | `AR2-01` | Integrated | useful | yes | paced | n/a | current-state fields returned to D-01..D-20 validation/replacement-freeze state |
 | `AR3-01` | Integrated | useful | yes | paced | n/a | current-state fields returned to D-01..D-23 validation/replacement-freeze state |
 | `ARCH-POSTFREEZE-01` | Integrated | useful | yes | project | `attested-python-argv-uniformity` | exact Python provenance probe now uses the same `-E -s -S -B` invariant as every direct Python argv; pending reconvergence/revalidation |
+| `R12-ARCH-01` | Integrated | useful | yes | project | `delivery-only-code-post-cutover-disposition` | delivery/forensics code and Registry-v1 now have an explicit permanent lazy support/evolution lifecycle; pending reconvergence/revalidation |
 
 - **Architecture adherence review:** `required`
 - **Adherence review lifecycle:** `after implementation and before Completed`
@@ -503,7 +513,7 @@ Placeholder tokens are the whole-segment, case-insensitive set `PENDING|N/A|TBD|
 - **Baseline commit:** `3f351daff331d2c0c4a49f09823f636e9469fbf7`
 - **Baseline push reference:** `origin/main contains 3f351daff331d2c0c4a49f09823f636e9469fbf7`
 - **Gate status:** `findings_integrated`
-- **Findings summary:** freeze ordering was correct, but formal reviews invalidated its contents through `ARCH-POSTFREEZE-01/F-27..F-29`; a replacement freeze is required after D-01..D-50 reconverge and are validated.
+- **Findings summary:** freeze ordering was correct, but formal reviews and R-12 invalidated its contents through `ARCH-POSTFREEZE-01/F-27..F-29/R12-ARCH-01/R12-CRIT2-01..05`; a replacement freeze is required after D-01..D-54 reconverge and are validated.
 - **Evidence / reference:** commit `3f351daff331d2c0c4a49f09823f636e9469fbf7`, pushed to `origin/main` on 2026-09-24.
 - **Waiver authority / reference:** `n/a`
 
@@ -523,7 +533,7 @@ Placeholder tokens are the whole-segment, case-insensitive set `PENDING|N/A|TBD|
 
 ## Questions To Close
 
-- `none for the human while the autonomous convergence cycle runs; after a clean round, request one exact full-set token for D-01..D-50`
+- `none for the human while the autonomous convergence cycle runs; after a clean round, request one exact full-set token for D-01..D-54`
 
 ## Pre-Freeze Decision Convergence Cycle
 
@@ -546,7 +556,8 @@ Placeholder tokens are the whole-segment, case-insensitive set `PENDING|N/A|TBD|
 | `R-09` | `3711727a` | `R9-ARCH-01` | `R9-CRIT1-01` | `R9-CRIT2-01..02` | add `D-42..D-44`; orthogonalize context/cwd; require POSIX substrate; narrow transition claims | integrated; next round required |
 | `R-10` | `f6e1dd95` | clean | `R10-CRIT1-01` | `R10-CRIT2-01` | add `D-45/D-46`; execute post-commit verifier from HEAD bytes; bound provenance probes | integrated; next round required |
 | `R-11` | `3465c130` | clean | clean | clean | no new approval-material decision | converged; request final human validation |
-| `R-12` | `pending publication` | pending | pending | pending | formal-gate findings provisionally integrated as `D-47..D-50` | convergence round required |
+| `R-12` | `97bb8b88` | `R12-ARCH-01` | clean | `R12-CRIT2-01..05` | add `D-51..D-54`; narrow containment/trust claims, bind full-suite deadline and permanent delivery-surface lifecycle | integrated; next round required |
+| `R-13` | `pending publication` | pending | pending | pending | no outcome yet | convergence round required |
 
 ## Assumptions Preview
 
@@ -582,11 +593,20 @@ Placeholder tokens are the whole-segment, case-insensitive set `PENDING|N/A|TBD|
 
 1. Concluir o ciclo exploratório; após validação humana do conjunto final, congelar/publicar a baseline e repetir os gates formais com TODO + owners + exact contracts do ST-01 no pacote.
 2. Após `APROVADO` e authority guard `go`, escrever fixtures/oráculos fail-first e implementar kernel/parser/diagnostics mais consolidações canônicas aprovadas.
-3. Implementar até `T-01..T-44` convergir; manter o TODO ativo e o decision target apontando ao active path no candidate SHA.
+3. Implementar até `T-01..T-48` convergir; manter o TODO ativo e o decision target apontando ao active path no candidate SHA.
 4. Executar acceptance, old/new parity, adherence, test-quality audit e final review no candidate SHA.
 5. Montar a árvore terminal com TODO movido, evidence final, handoffs/cutover e `DEC-validator-adoption-trigger` retargeted para completed; stagear tudo e capturar o tree OID.
 6. Materializar o tree OID em diretório temporário read-only e executar os checks sobre esses bytes; guards dependentes de metadata Git provam o mesmo index/tree OID. Depois, provar OID inalterado e ausência de divergência relevante; qualquer diferença exige restage e rerun integral.
 7. Executar `--run-attested-suite` contra o tree materializado para gerar o self-attestation determinístico fora da árvore; commitar a árvore imutável com o manifest no commit message e trailers `Validated-Tree`/`Validation-Attestation-SHA256`, executar `--verify-attestation`, confirmar working tree limpa e fazer push do mesmo commit; nenhuma declaração documental posterior é permitida.
+
+### High-Complexity Delivery Checkpoints
+
+1. `HC-01 parser`: `T-01..T-21` green with no runner/process implementation mixed into parser modules.
+2. `HC-02 codec/trust`: `T-22..T-35`, `T-43/T-45/T-46/T-48` green; architecture spot-check confirms byte domains, trust wording and versioned Registry-v1.
+3. `HC-03 runner/operations`: `T-24/T-30..T-42/T-44/T-47` green; security review challenges injection, identity drift, deadlines, cleanup and residual claims.
+4. `HC-04 integrated delivery`: full `T-01..T-48`, acceptance/parity, immutable-tree protocol and all required independent delivery gates green before closeout.
+
+Each checkpoint is serialized in the principal checkout, records evidence in this TODO and may return to implementation without claiming delivery. No calendar estimate is asserted; budget is four reviewable checkpoints rather than one monolithic implementation pass.
 
 ### Test Strategy
 
@@ -644,6 +664,10 @@ Placeholder tokens are the whole-segment, case-insensitive set `PENDING|N/A|TBD|
 | `T-42` | ordered bounded provenance probes for all five tool IDs; Python exact argv includes `-E -s -S -B` | removed/reordered Python isolation flag; hang, forked descendant, stdout/stderr overflow, nonzero version exit, executable replacement during probe, cleanup failure | registry/payload/verifier exact bytes agree; same streaming/process-group/failure semantics as commands; no attestation on abnormal result |
 | `T-43` | verifier reports only canonical/internal self-attestation consistency | mutate recorded stream digest while keeping a canonically rehashed payload; assert or fixture containing execution-proof/reproduced-output success language | verifier can accept internally consistent bytes only with explicit self-attestation classification and never claims actual execution truth |
 | `T-44` | steady-state `--root` validator is independent of sibling Delphi, legacy fences, origin and external Git tooling | remove/dirty/unavailable sibling checkout and PATH tools while validating a valid/invalid isolated Foundation fixture | ordinary validation remains deterministic and produces the same result; delivery-only modes fail closed when their extra prerequisites are absent |
+| `T-45` | reviewed executable-input trust model and non-containment wording | adversarial Markdown/fixture content attempts path/token/shell influence; success/help/docs mutation claims sandboxing or denies same-user residual access | parser data remains confined/fail-closed; only exact reviewed executable bytes run; output/docs state integrity/provenance boundary without containment claim |
+| `T-46` | implementation review is an explicit verifier trust prerequisite | remove/change trust-prerequisite wording or emit independent-correctness/execution-proof success text | golden help/result assertions fail; accepted outcome names reviewed tree identity plus self-attestation limits |
+| `T-47` | whole-suite `30m` deadline with `30s` cleanup reserve and best-effort process supervision | cumulative near-timeouts, insufficient next-command budget, blocking setup/cleanup, group escape simulation where supported | no new work past budget; deterministic `suite-timeout|cleanup-timeout`, nonzero/no attestation; residual escaped-descendant risk reported without false containment claim |
+| `T-48` | permanent lazy delivery/forensics surface keeps immutable Registry-v1 separate from normal validation | invoke `--root` with delivery dependencies absent; mutate v1 row; attempt unapproved v2/generation profile | ordinary mode remains independent; v1 mutation/unapproved profile fails; docs/help state permanent support and versioned evolution rule |
 
 ### Pre-APROVADO RED Evidence Capture
 
@@ -667,7 +691,7 @@ Placeholder tokens are the whole-segment, case-insensitive set `PENDING|N/A|TBD|
 | Surface | Behavior / Scenario | Preconditions | Command | Required Before | Status |
 | --- | --- | --- | --- | --- | --- |
 | validator acceptance | source graph real válido | consolidated branch@sha | `python3 foundation_documentation/deterministic/validate_foundation_lifecycle.py --root foundation_documentation` | Local-Implemented | planned |
-| unittest/mutations | `T-01..T-44` | isolated temporary fixtures | `python3 -m unittest discover -s foundation_documentation/deterministic/tests -p 'test_*.py'` | Local-Implemented | planned |
+| unittest/mutations | `T-01..T-48` | isolated temporary fixtures | `python3 -m unittest discover -s foundation_documentation/deterministic/tests -p 'test_*.py'` | Local-Implemented | planned |
 | legacy transition matrix | pre-migration baseline runs ST-01 `VAL-01/02/08/10`; candidate/terminal Git layer runs `VAL-01/08/10`; `VAL-02` is superseded after approved schema/target mutation | exact contracts read from completed ST-01 TODO; phase identified deterministically | phase matrix `D-19/VAL-07/T-23` + new validator/tests | before delivery reviews | planned |
 | terminal-tree confirmation | permanent checks stay green after atomic move/retarget/cutover | read-only materialization of captured tree OID with `active XOR completed`; unchanged index/OID proof and no relevant divergence | validator + unittest on materialized bytes; compatible guards there; Git-metadata guards against the same index/tree OID | before closeout commit | planned |
 | immutable publication | committed tree equals validated staged tree and terminal outcomes are immutably self-attested outside that tree | commit body contains deterministic attestation manifest; trailers contain tree OID and manifest digest | materialize HEAD and run committed `--verify-attestation --commit <oid>` under Post-Commit Verification Protocol; verify tree, clean state and remote ref equality; do not claim externally reproducible execution proof | Production-Ready | planned |
@@ -679,7 +703,7 @@ Placeholder tokens are the whole-segment, case-insensitive set `PENDING|N/A|TBD|
 
 ## Plan Review Gate
 
-- **Status:** `formal findings integrated — D-01..D-50 reconvergence running; prior freeze invalidated`
+- **Status:** `R-12 findings integrated — D-01..D-54 reconvergence running; prior freeze invalidated`
 - **Required lenses:** Architecture, Code Quality, Tests, Performance, Security, Elegance, Structural Soundness.
 - **Expected focus:** evitar parser frágil, catálogo duplicado, cobertura superficial, bypass histórico e expansão para CI.
 
@@ -687,7 +711,7 @@ Placeholder tokens are the whole-segment, case-insensitive set `PENDING|N/A|TBD|
 
 - [x] Architecture — canonical membership, state-conditioned grammar, immutable identifiers and validated-tree closeout integrated.
 - [x] Code Quality — narrow grammar, confinement and diagnostics contract added.
-- [x] Tests — test-first and `T-01..T-44` matrix added.
+- [x] Tests — test-first and `T-01..T-48` matrix added.
 - [x] Performance — bounded linear scan; no specialized lane triggered.
 - [x] Security — root/symlink confinement and redaction made mandatory.
 - [x] Elegance — one project-owned stdlib validator; no parallel catalog.
@@ -745,6 +769,10 @@ Placeholder tokens are the whole-segment, case-insensitive set `PENDING|N/A|TBD|
 - **Issue ID:** `PLAN-48` — verifier wording could overclaim execution-result truth although raw streams are unavailable (`high`). Option A: restrict claims to canonical/internal consistency (recommended); Option B: retain raw outputs as a new authority. **Resolution:** integrated into `D-48`, verifier protocol and `T-43`.
 - **Issue ID:** `PLAN-49` — medium complexity/risk understated the provenance-runner subsystem (`high`). Option A: retain and reclassify/resource it honestly (recommended because it closes the same immutable-delivery boundary); Option B: split it; Option C: remove immutable attestation. **Resolution:** integrated into `D-49`, risk and gate sections.
 - **Issue ID:** `PLAN-50` — delivery-time sibling/legacy dependencies could be mistaken for permanent validator runtime dependencies (`medium`). Option A: separate ordinary `--root` validation from delivery-only modes (recommended); Option B: permanently couple normal validation. **Resolution:** integrated into `D-50` and `T-44`.
+- **Issue ID:** `PLAN-51` — declared contexts/read-only controls were described more strongly than same-user execution can enforce (`high`). Option A: trust reviewed executable bytes and narrow claims to integrity/provenance (recommended); Option B: introduce an OS sandbox/privilege boundary. **Resolution:** integrated into `D-51` and `T-45`.
+- **Issue ID:** `PLAN-52` — same-tree verifier bytes lacked an independently stated semantic trust prerequisite (`high`). Option A: require prior review acceptance and narrow success claims (recommended); Option B: create a separately controlled verifier. **Resolution:** integrated into `D-52` and `T-46`.
+- **Issue ID:** `PLAN-53` — process groups were not adversarial containment and per-child bounds lacked a total deadline (`high`). Option A: best-effort supervision plus residual-risk disclosure and a 30-minute suite deadline (recommended); Option B: cgroup/container isolation. **Resolution:** integrated into `D-53` and `T-47`.
+- **Issue ID:** `PLAN-54` — delivery subsystem lifecycle after cutover was undefined (`high`). Option A: retain it as a permanent lazy/versioned delivery-forensics feature (recommended); Option B: add a second removal commit/TODO and archived verifier. **Resolution:** integrated into `D-54` and `T-48`.
 
 ### Failure Modes & Edge Cases
 
@@ -764,9 +792,9 @@ Placeholder tokens are the whole-segment, case-insensitive set `PENDING|N/A|TBD|
 
 ## Additional Architectural Opinions
 
-- **Needed:** `R-12 exploratory reconvergence after material formal-gate findings; formal architecture/critique reruns remain required after replacement validation and freeze`
-- **Why ambiguity remains:** `D-47..D-50 must survive one clean three-reviewer round before another human validation request`.
-- **Opinion count:** `R-01 through R-11 complete; R-12 pending`
+- **Needed:** `R-13 exploratory reconvergence after R-12 trust/lifecycle/deadline findings; formal architecture/critique reruns remain required after replacement validation and freeze`
+- **Why ambiguity remains:** `D-47..D-54 must survive one clean three-reviewer round before another human validation request`.
+- **Opinion count:** `R-01 through R-12 complete; R-13 pending`
 - **Package mode:** `bounded-file-set`
 - **Internal reviewer mandate:** `required after freeze; reviewer cannot implement`
 - **Required lenses:** `correctness|performance|elegance|structural-soundness|operational-fit`
@@ -775,11 +803,11 @@ Placeholder tokens are the whole-segment, case-insensitive set `PENDING|N/A|TBD|
 
 - **Canonical method:** `wf-docker-audit-escalation-method`
 - **Guard command:** `python3 delphi-ai/tools/audit_escalation_guard.py --todo foundation_documentation/todos/active/process/TODO-foundation-lifecycle-structural-validator.md`
-- **Latest TEACH evidence / artifact:** post-freeze guard at `D-01..D-46`, 2026-09-24, fingerprint `b82442926521`; critique/test-quality/final/verification-debt/architecture decision/adherence `required`; triple/security/performance-concurrency deterministically `not_needed`. `D-49` manually escalates security review because the retained runner executes bounded child processes and legacy shell payloads; rerun after D-01..D-50 convergence.
+- **Latest TEACH evidence / artifact:** guard over provisional D-01..D-54, 2026-09-24, fingerprint `5b2211433237`; critique/test-quality/final/verification-debt/architecture decision/adherence `required`; triple/security/performance-concurrency deterministically `not_needed`. `D-49` manually escalates security review because the retained runner executes bounded child processes and legacy shell payloads; rerun after replacement freeze and after implementation trigger changes.
 
 | Trigger | Value | Notes |
 | --- | --- | --- |
-| `complexity` | `high` | structural enforcement plus canonical codec, subprocess runner, provenance and immutable-delivery protocol |
+| `complexity` | `big` | structural enforcement plus canonical codec, subprocess runner, provenance and immutable-delivery protocol |
 | `blast_radius` | `cross-stack` | governa Foundation compartilhada, sem produto |
 | `behavioral_change_or_bugfix` | `yes` | cria comportamento fail-closed |
 | `changes_public_contract` | `no` | sem API/schema/route/auth público |
@@ -794,7 +822,7 @@ Placeholder tokens are the whole-segment, case-insensitive set `PENDING|N/A|TBD|
 ## Independent No-Context Critique Gate
 
 - **Critique decision:** `required`
-- **Why this decision:** piso expandido para high-complexity, cross-stack governance, provenance runner e test logic.
+- **Why this decision:** piso expandido para `big`, cross-stack governance, provenance runner e test logic.
 - **Impact signals in scope:** `cross-stack documentary governance; deterministic enforcement; tests`
 - **Package mode:** `bounded-file-set`
 - **Package minimum contents:** exact baseline-bound bytes plus SHA-256 boundaries for the frozen TODO, `evolution_lifecycle.md`, `backlog/README.md`, `decisions/README.md`, every linked root-level decision record, `system_roadmap.md`, `project_constitution.md`, `README.md`, and the referenced ST-01 Exact Check Command Contracts.
@@ -804,7 +832,7 @@ Placeholder tokens are the whole-segment, case-insensitive set `PENDING|N/A|TBD|
 - **Audit session / round evidence:** `n/a unless triggered`
 - **Critique lenses:** `correctness|performance|elegance|structural-soundness|risk`
 - **Critique status:** `findings_integrated`
-- **Findings summary:** formal expanded critique found `F-27..F-29`; all are useful. `F-27/F-28` are release blockers integrated as `D-48/D-49`; `F-29` is partially accepted and integrated as the explicit normal-versus-delivery mode boundary `D-50`. Fresh convergence and post-freeze critique remain required.
+- **Findings summary:** R-12 critique A was clean; critique B found `R12-CRIT2-01..05`. The shared containment/trust-root/lifecycle/deadline gaps are integrated as `D-51..D-54` and `T-45..T-48`; fresh R-13 convergence and post-freeze critique remain required.
 - **Resolution ledger:** prior findings are recorded individually below for deterministic carry-forward.
 
 | Finding ID | Resolution (`Integrated|Challenged|Deferred`) | Usefulness (`useful|noise|mixed|unknown`) | Formalizable (`yes|partial|no|unknown`) | Candidate Rule Level (`paced|project|none|unknown`) | Candidate Rule ID | Rationale / Evidence |
@@ -846,8 +874,13 @@ Placeholder tokens are the whole-segment, case-insensitive set `PENDING|N/A|TBD|
 | `F-27` | Integrated | useful | yes | project | `self-attestation-claim-boundary` | verifier outcomes now distinguish canonical/internal consistency from unrecoverable execution truth; pending reconvergence/revalidation |
 | `F-28` | Integrated | useful | partial | paced | `scope-complexity-reclassification` | runner retained in the same immutable-delivery boundary but complexity, security/operations risk, threat model and assurance budget are elevated; pending reconvergence/revalidation |
 | `F-29` | Integrated | useful | partial | project | `validator-delivery-mode-boundary` | ordinary `--root` validation is sibling/legacy independent; those prerequisites are delivery-only for this cutover; pending reconvergence/revalidation |
+| `R12-CRIT2-01` | Integrated | useful | partial | project | `attested-execution-trust-boundary` | reviewed executable bytes are trusted; contexts are provenance/integrity contracts, not sandboxes; pending reconvergence/revalidation |
+| `R12-CRIT2-02` | Integrated | useful | partial | project | `subprocess-containment-claim` | process groups/manifests are best-effort supervision/drift detection with explicit same-user residual risk; pending reconvergence/revalidation |
+| `R12-CRIT2-03` | Integrated | useful | yes | project | `self-attestation-code-trust-root` | prior review acceptance of committed implementation bytes is now an explicit verifier prerequisite; pending reconvergence/revalidation |
+| `R12-CRIT2-04` | Integrated | useful | yes | project | `validator-delivery-surface-lifecycle` | delivery/forensics subsystem and Registry-v1 are permanently supported, lazy and version-gated; pending reconvergence/revalidation |
+| `R12-CRIT2-05` | Integrated | useful | yes | project | `attested-suite-total-deadline` | one 30-minute monotonic suite deadline includes setup, execution, verification and cleanup reserve; pending reconvergence/revalidation |
 
-- **Evidence / reference:** formal fresh no-context critique over package SHA-256 `d557ed6e4e83c966302dc1bc21eec5e9d2f6e13fc55123e8cfd15b57a14ffa3c` at published head `a960a2e5`, 2026-09-24; `overall_assessment=material_findings_present; approval_not_ready`.
+- **Evidence / reference:** R-12 critiques over package SHA-256 `5c4d73bb6bd8f0a2ce6071b6bba500a3719954de340abaef756dd6a4bc5dd01b` at published head `97bb8b88`, 2026-09-24: critique A clean; critique B `material_findings_present; approval_not_ready`.
 - **Waiver authority / reference:** `n/a`
 
 ## Gate: Assumption Code Coherence
@@ -871,7 +904,7 @@ Placeholder tokens are the whole-segment, case-insensitive set `PENDING|N/A|TBD|
 - **Execution authority:** `not_granted`
 - **Pre-gate human token:** Gabriel/user, 2026-09-23, `APROVADO`; it validated the superseded `D-01..D-08` only. Material findings require renewed validation and a new post-gate `APROVADO`.
 - **Renewed validation token:** Gabriel/user, 2026-09-23, exact phrase `VALIDO D-01..D-10`; validates the revised decisions, but does not grant implementation authority.
-- **Renewal status:** `D-01..D-50 provisional; R-12+ convergence, renewed full-set validation, replacement freeze/publication and formal planning gates are required before APROVADO.`
+- **Renewal status:** `D-01..D-54 provisional; R-13+ convergence, renewed full-set validation, replacement freeze/publication and formal planning gates are required before APROVADO.`
 - **Latest validation token:** Gabriel/user, 2026-09-24, exact phrase `VALIDO D-01..D-46`; retained as provenance but superseded by `ARCH-POSTFREEZE-01/F-27..F-29` and never grants implementation authority.
 
 ## Rules Acknowledgement / Ingestion
@@ -912,7 +945,8 @@ Predeclared for pre-approval readiness; reload and bind after `APROVADO`.
 | Decision ID | Status | Evidence | Notes |
 | --- | --- | --- | --- |
 | `D-01..D-46` | superseded-validation | exact token `VALIDO D-01..D-46`; R-11 clean convergence; formal findings at package `d557ed6e...` | prior freeze invalidated by approval-material findings |
-| `D-47..D-50` | pending-convergence-validation | `ARCH-POSTFREEZE-01/F-27..F-29` integrated provisionally | require clean R-12+ and one exact `VALIDO D-01..D-50` token |
+| `D-47..D-50` | superseded-pending-set | `ARCH-POSTFREEZE-01/F-27..F-29` integrated provisionally; R-12 exposed additional boundaries | included in expanded D-01..D-54 reconvergence |
+| `D-51..D-54` | pending-convergence-validation | `R12-ARCH-01/R12-CRIT2-01..05` integrated provisionally | require clean R-13+ and one exact `VALIDO D-01..D-54` token |
 
 ## Module Decision Consistency Validation
 
@@ -991,16 +1025,20 @@ Predeclared for pre-approval readiness; reload and bind after `APROVADO`.
 | `R10-CRIT2-01` | high | release-blocker | integrate in current TODO | mandatory provenance probes need the same bounded execution semantics | fixed-pending-convergence | `D-46`, bounded probe protocol and `T-42` |
 | `ARCH-POSTFREEZE-01` | high | release-blocker | integrate in current TODO | exact Python probe bytes contradicted the universal isolation invariant | fixed-pending-convergence | `D-47`, probe grammar and `T-42`; full-set revalidation required |
 | `F-27` | high | release-blocker | integrate in current TODO | honest self-attestation claims are part of the immutable-delivery trust boundary | fixed-pending-convergence | `D-48`, verifier protocol and `T-43`; full-set revalidation required |
-| `F-28` | high | release-blocker | retain and reclassify in current TODO | runner/attestation closes this TODO's exact-tree delivery; split would divide one atomic acceptance boundary | fixed-pending-convergence | `D-49`; high complexity, medium security/operational risk and expanded gates; full-set revalidation required |
+| `F-28` | high | release-blocker | retain and reclassify in current TODO | runner/attestation closes this TODO's exact-tree delivery; split would divide one atomic acceptance boundary | fixed-pending-convergence | `D-49`; `big` complexity, medium security/operational risk and expanded gates; full-set revalidation required |
 | `F-29` | medium | release-blocker | integrate bounded cutover separation | critique is valid for ordinary availability, while delivery governance intentionally remains an external terminal prerequisite | fixed-pending-convergence | `D-50` and `T-44`; full-set revalidation required |
+| `R12-ARCH-01/R12-CRIT2-04` | high | release-blocker | retain as permanent versioned surface | explicit permanent support avoids an undefined disposable-code lifecycle while lazy mode separation protects ordinary availability | fixed-pending-convergence | `D-54/T-48`; full-set revalidation required |
+| `R12-CRIT2-01/R12-CRIT2-02` | high | release-blocker | narrow trust/containment claims | same-user controls cannot provide adversarial containment without a new sandbox substrate | fixed-pending-convergence | `D-51/D-53`, protocol wording and `T-45/T-47`; full-set revalidation required |
+| `R12-CRIT2-03` | high | release-blocker | integrate implementation trust prerequisite | same-tree byte identity is not independent semantic correctness | fixed-pending-convergence | `D-52/T-46`; full-set revalidation required |
+| `R12-CRIT2-05` | medium | release-blocker | integrate whole-suite deadline | operator-visible boundedness requires one deadline beyond per-command caps | fixed-pending-convergence | `D-53/T-47`; full-set revalidation required |
 
 ## Security Risk Assessment
 
 - **Risk level:** `medium`
 - **Why this risk level:** o parser é local/read-only, mas o delivery-only runner materializa árvores, executa subprocessos e três payloads shell legados sob uma cápsula controlada.
 - **Attack surface in scope:** filesystem/Markdown não confiável, link/symlink escape, argv/token expansion, shell-fence extraction, PATH/executable substitution, Git config includes, unbounded child output/process lifetime and diagnostic secret echo.
-- **Threat model / trust boundaries:** Foundation tree and legacy fence bytes are untrusted inputs; direct executable identities and clean Delphi commit/tree are bound but OS/shared libraries remain residual; ordinary `--root` mode must not cross into sibling/governance inputs; runner fails closed before shell/process execution on unknown tokens, path escape, identity/config drift or dirty context.
-- **Attack simulation decision:** `required before Completed by manual escalation under D-49`, focused on token/shell injection, path/symlink escape, executable/config substitution, stream exhaustion, descendant survival and secret-bearing diagnostics.
+- **Threat model / trust boundaries:** Markdown/fixture data is untrusted parser input. Validator/package bytes and exact legacy fence payloads become trusted executable inputs only after the required human/reviewer acceptance of their committed identity; contexts and manifests provide provenance/integrity/drift detection, not same-user filesystem/network/process containment. Direct executable identities and clean Delphi commit/tree are bound, while OS/shared libraries, transient same-user mutation and escaped descendants remain residual; ordinary `--root` mode must not cross into sibling/governance inputs.
+- **Attack simulation decision:** `required before Completed by manual escalation under D-49`, focused on untrusted-data token/shell injection, path/symlink escape, executable/config substitution, stream exhaustion, deadline/cleanup behavior, honest descendant residuals and secret-bearing diagnostics; it must not claim sandbox escape prevention.
 - **Review evidence:** deterministic audit floor returned `SEC-NOT-TRIGGERED` at D-01..D-46; the plan intentionally escalates this to required because the formal critique reclassified the runner risk.
 - **Residual security risk:** malformed Markdown may deny validation by design; diagnostics must remain bounded; direct provenance is non-hermetic and cannot attest kernel/shared-library behavior.
 
@@ -1050,7 +1088,7 @@ Predeclared for pre-approval readiness; reload and bind after `APROVADO`.
 
 ## Verification Debt Assessment
 
-- **Audit decision:** `required because complexity=high`
+- **Audit decision:** `required because complexity=big`
 - **Audit status:** `not_run`
 - **Why this outcome:** guard logic/assertions can create hidden false-green debt.
 - **Inline code TODO debt:** `pending implementation scan`
@@ -1061,7 +1099,7 @@ Predeclared for pre-approval readiness; reload and bind after `APROVADO`.
 
 - **Audit decision:** `required`
 - **Why this decision:** validator trust depends on mutation coverage and negative assertions.
-- **Trigger signals in scope:** `complexity=high; touches_tests=yes; fail-closed enforcement; subprocess/provenance runner`
+- **Trigger signals in scope:** `complexity=big; touches_tests=yes; fail-closed enforcement; subprocess/provenance runner`
 - **Required evidence matrix:** each `DOD-02/03/05` scenario, expected failure and assertion quality.
 - **Audit status:** `not_run`
 - **Findings summary:** `pending`
@@ -1086,9 +1124,9 @@ Predeclared for pre-approval readiness; reload and bind after `APROVADO`.
 ## TODO Closeout Disposition
 
 - **Disposition:** `keep-active`
-- **Disposition reason:** formal gates invalidated D-01..D-46 and provisionally introduced D-47..D-50; TODO remains active in autonomous reconvergence with no implementation authority.
-- **Post-commit/push status:** invalidated freeze `3f351daf` and its bookkeeping `a960a2e5` remain published provenance; integrated finding resolution is pending publication.
-- **Next path/status action:** publish D-01..D-50, run R-12+ until a clean round, then request one renewed full-set validation before replacement freeze and formal gates.
+- **Disposition reason:** R-12 expanded the provisional contract to D-01..D-54; TODO remains active in autonomous reconvergence with no implementation authority.
+- **Post-commit/push status:** invalidated freeze `3f351daf`, bookkeeping `a960a2e5` and D-01..D-50 snapshot `97bb8b88` remain published provenance; R-12 resolution is pending publication.
+- **Next path/status action:** publish D-01..D-54, run R-13+ until a clean round, then request one renewed full-set validation before replacement freeze and formal gates.
 
 ## Commands
 
