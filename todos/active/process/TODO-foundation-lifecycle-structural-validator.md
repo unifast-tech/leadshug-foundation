@@ -40,7 +40,7 @@ O lifecycle da Foundation exige um validator permanente quando backlog, decisõe
 ## Active Work State
 
 - **Work state:** `review`
-- **Why this state now:** por direção humana, o TODO entrou em convergência pré-freeze para esgotar decisões antes de novo token `VALIDO`; R-08 fechou Git includes, resource bounds e fonte executada do verifier, integrados em `D-39..D-41`.
+- **Why this state now:** por direção humana, o TODO entrou em convergência pré-freeze para esgotar decisões antes de novo token `VALIDO`; R-09 separou contexto/cwd, declarou o substrate POSIX e limitou Rejected ao que o estado atual prova, integrados em `D-42..D-44`.
 - **Exit condition:** decisões validadas, baseline congelada/publicada, reviews e guards pré-aprovação verdes, seguidos de `APROVADO` explícito ou cancelamento com racional.
 
 ## Trigger Evidence
@@ -150,7 +150,7 @@ Preencher somente se o guard retornar `no-go`; qualquer novo path ou change type
 
 - [ ] `DOD-01` O validator retorna `0` para a Foundation canônica válida e código diferente de zero para qualquer violação coberta, sem alterar arquivos.
 - [ ] `DOD-02` Cada regra enumerada na Test Rule Matrix possui fail-first positivo/negativo, mensagem/exit assertions e oráculo independente do helper sob teste.
-- [ ] `DOD-03` Mutations detectam estrutura Markdown ambígua, ID inválido/duplicado, enum inválido, coluna/owner/proveniência ausente, link/anchor/target inválido, base de resolução trocada, path/symlink escape, successor ambíguo/não efetivo, transição Rejected inválida, evidência roadmap fora das classes admitidas, sentinel/evidência 1:1 ausente/duplicada/contraditória, staged/worktree split, segredo em qualquer surface entregue, bytecode/write residual, qualquer mudança portável no manifest completo da fixture e output não redigido; referências repetidas válidas e `PENDING` explícito passam.
+- [ ] `DOD-03` Mutations detectam estrutura Markdown ambígua, ID inválido/duplicado, enum inválido, coluna/owner/proveniência ausente, link/anchor/target inválido, base de resolução trocada, path/symlink escape, successor ambíguo/não efetivo, shape Rejected inválido, evidência roadmap fora das classes admitidas, sentinel/evidência 1:1 ausente/duplicada/contraditória, staged/worktree split, segredo em qualquer surface entregue, bytecode/write residual, qualquer mudança portável no manifest completo da fixture e output não redigido; referências repetidas válidas e `PENDING` explícito passam.
 - [ ] `DOD-04` O validator deriva estado vivo dos documentos canônicos e mantém apenas o bootstrap kernel v1 documentado — paths de owners, surfaces/headings, schemas/colunas e enums obrigatórios — sem copiar registros vivos, contagens, títulos ou disposições.
 - [ ] `DOD-05` Testes provam igualdade bidirecional entre o index de decisões e `decisions/*.md`, com mutations de unlink, orphan e duplicate-link; histórico em subdiretórios fica ignorado até mudança material do boundary.
 - [ ] `DOD-06` `deterministic/README.md`, `evolution_lifecycle.md` e `README.md` apontam para um único comando; lifecycle possui as gramáticas finais de decisão e roadmap, `decisions/README.md` possui membership/guidance canônicos, `system_roadmap.md` aponta ao owner sem regra concorrente e o ST-01 record usa a coluna successor e target correspondente à fase; CI remoto não foi alterado.
@@ -181,7 +181,7 @@ Preencher somente se o guard retornar `no-go`; qualquer novo path ou change type
 ## External Dependency Readiness
 
 - **Decision:** `required for terminal validation and publication; not needed for validator-unit implementation`
-- **Rationale:** parser/tests usam Python standard library e arquivos Foundation; a suíte terminal exige Git com object-format compatível, toolchain direto identificado (`python3`, `git`, `bash`, `rg`, `sort`), checkout irmão `delphi-ai` limpo e capturado por commit/tree, além de `origin/main` acessível para publicação. Essas dependências devem estar prontas e vinculadas antes do self-attestation.
+- **Rationale:** parser/tests usam Python standard library e arquivos Foundation; a suíte terminal exige Linux/WSL POSIX com process groups/signals/symlinks/`/dev/null`/permission operations/`C.UTF-8`, Git com object-format compatível, toolchain direto identificado (`python3`, `git`, `bash`, `rg`, `sort`), checkout irmão `delphi-ai` limpo e capturado por commit/tree, além de `origin/main` acessível para publicação. O platform preflight bloqueia antes da suíte; Windows Git pode somente publicar depois, nunca produzir o attestation.
 - **Current evidence:** `origin/main` contains the historical D-01..D-20 freeze and the expanded pending-validation D-01..D-23 contract through `c5b91dd87c01de2631e5f49df6198ebc6feb337a`; validation must precede its replacement freeze.
 
 ## Profile Scope & Handoffs
@@ -244,15 +244,15 @@ Preencher somente se o guard retornar `no-go`; qualquer novo path ou change type
 | `Proposed` | one or more unique confined relative paths | exactly one literal `PENDING` per target | literal `N/A` |
 | `Accepted` | one or more unique confined relative paths | one segment per target: literal `PENDING` or concrete evidence beginning with that exact inline-code target token plus non-placeholder text | literal `N/A` |
 | `Superseded` | preserve one or more targets | same positional grammar as `Accepted` | exactly one no-fragment relative Markdown link whose label is the exact successor `DEC-*` ID and whose destination is its unique owner file; the acyclic immediate-successor chain terminates at one `Accepted` structurally eligible decision |
-| `Rejected` | allowed only from `Proposed`; retain one or more structurally valid targets | exactly one literal `PENDING` per target, truthfully preserving that consolidation never occurred | literal `N/A` |
+| `Rejected` | retain one or more structurally valid targets | exactly one literal `PENDING` per target, structurally representing no consolidation in the current record | literal `N/A` |
 
-Placeholder tokens are the whole-segment, case-insensitive set `PENDING|N/A|TBD|TODO|UNKNOWN|-`; only exact uppercase `PENDING` and `N/A` are valid where the table permits them. Any other placeholder, missing/extra segment, label/destination owner mismatch, fragment, self/unresolved successor, successor cycle, or chain whose terminal is not Accepted+structurally-eligible fails. `Accepted` decisions retire only through `Superseded`; `Rejected` is restricted to `Proposed -> Rejected`, preventing fabricated consolidation and preserving accepted history.
+Placeholder tokens are the whole-segment, case-insensitive set `PENDING|N/A|TBD|TODO|UNKNOWN|-`; only exact uppercase `PENDING` and `N/A` are valid where the table permits them. Any other placeholder, missing/extra segment, label/destination owner mismatch, fragment, self/unresolved successor, successor cycle, or chain whose terminal is not Accepted+structurally-eligible fails. Lifecycle semantics reserve `Rejected` for an unconsolidated proposal and require an accepted decision to retire through `Superseded`, but the current-state validator enforces only the observable row shapes/graph; transition-history fidelity remains review-owned unless a future approved source graph admits canonical history.
 
 ### Validation-Attestation-v1 Byte Grammar
 
 - The complete commit message is exactly: subject `feat(foundation): add lifecycle structural validator`, LF, one blank LF, `Validation-Attestation-v1-Begin`, LF, the payload, `Validation-Attestation-v1-End`, LF, one blank LF, `Validated-Tree: <tree-oid>`, LF, `Validation-Attestation-SHA256: <64-lowercase-hex>`, final LF and EOF. No preamble, unrelated body text/trailer, extra blank line, duplicate block or alternate final-newline form is allowed.
 - Payload is UTF-8 without BOM, LF-only, ends with one LF, and uses fixed order: `version`, `git-object-format`, `tree`, `registry-sha256`, `environment-sha256`, `git-config-manifest-sha256`, `delphi-commit`, `delphi-tree`, `tool-count`, ordered tool records, `command-count`, then command records numbered from `01` without gaps. Tool IDs are exactly `bash`, `git`, `python3`, `rg`, `sort`; each record contains `id`, resolved-executable byte SHA-256 and SHA-256 over raw version-command stdout, one NUL byte, then raw stderr (`<tool> --version`, except `python3 --version`).
-- Required command IDs, in order, are `foundation-validator`, `foundation-unittest`, `foundation-compile-no-write`, `legacy-val01`, `legacy-val08`, `legacy-val10`, `delivery-secret-scan`, `git-diff-check`, `diff-expectation`, `authority-guard`, `completion-guard`, `closeout-guard`, `tree-consistency`.
+- Required command IDs, in order, are `platform-preflight`, `foundation-validator`, `foundation-unittest`, `foundation-compile-no-write`, `legacy-val01`, `legacy-val08`, `legacy-val10`, `delivery-secret-scan`, `git-diff-check`, `diff-expectation`, `authority-guard`, `completion-guard`, `closeout-guard`, `tree-consistency`.
 - Each command record has fixed fields in order: `id`, `context` (`materialized-tree|foundation-index|workspace-governance`), `cwd` (`workspace|foundation|materialized-foundation`), `argv-sha256` over exact NUL-joined UTF-8 argv bytes, decimal `exit`, `stdout-sha256` over raw stdout bytes, and `stderr-sha256` over raw stderr bytes. No normalization is allowed.
 - `Validation-Attestation-SHA256` hashes exactly the payload bytes between delimiters, including its final LF and excluding delimiters, trailers and the digest itself. Missing, duplicate, unknown, reordered or malformed fields/commands fail.
 - Golden tests construct expected payload bytes and digests independently of the production serializer/parser; mutations cover field/command reorder, newline/encoding change, stream swap, missing/duplicate command, altered argv/output bytes and trailer mismatch.
@@ -267,7 +267,7 @@ Placeholder tokens are the whole-segment, case-insensitive set `PENDING|N/A|TBD|
 - Registry templates are UTF-8/LF records in the table order below. Tokens are the only `{...}` forms allowed; unknown, nested or partially embedded tokens fail.
 - `{PYTHON}`, `{GIT}` and `{BASH}` resolve once, before execution, to canonical realpath bytes of the executable selected from the parent launch environment; those exact bytes are executed and bound by provenance. `{TREE}` resolves to the lowercase captured Git OID. `{FOUNDATION}` is allowed only in `tree-consistency` and resolves to the canonical principal Foundation root after its worktree bytes are proven equal to the index before child execution. Absolute bytes are permitted only through executable-token expansion and this single verified root token; no literal absolute workspace or temporary-directory path is admitted in child argv.
 - `{ST01_VAL01}`, `{ST01_VAL08}` and `{ST01_VAL10}` expand to the exact bytes between the opening `bash` fence LF and the LF immediately before the closing fence under the uniquely named heading in the completed ST-01 TODO. The source blob/OID and expanded bytes digest are bound; these are the only allowed `bash -c` payloads.
-- `materialized-tree` commands run with cwd at the read-only materialized Foundation root and use only relative paths. `foundation-index` commands run at the principal Foundation root and must prove `git write-tree == {TREE}`. `workspace-governance` commands run at workspace root, may read the bound clean Delphi checkout and principal Foundation Git metadata, and must not mutate either repository.
+- Execution context and cwd are orthogonal registry fields. `materialized-tree` authorizes only the read-only materialized Foundation inputs. `foundation-index` authorizes verified principal Foundation worktree/index/Git metadata and requires `git write-tree == {TREE}`; its normal cwd is `foundation`, while `tree-consistency` is the sole row with cwd `materialized-foundation`, materialized executable bytes and principal access only through `{FOUNDATION}` after runner divergence preflight. `workspace-governance` authorizes the bound clean Delphi checkout plus verified principal Foundation metadata and uses cwd `workspace`. No context implies a cwd or input not explicitly present in its row.
 - Every child environment is constructed from empty, never inherited. Its complete allowlist is `PATH={TOOL_DIR}`, `HOME={EMPTY_HOME}`, `XDG_CONFIG_HOME={EMPTY_XDG}`, `TMPDIR={RUN_TMP}`, `PYTHONDONTWRITEBYTECODE=1`, `PYTHONNOUSERSITE=1`, `LC_ALL=C.UTF-8`, `LANG=C.UTF-8`, `TZ=UTC`, `TERM=dumb`, `GIT_CONFIG_NOSYSTEM=1`, `GIT_CONFIG_GLOBAL=/dev/null`, `GIT_TERMINAL_PROMPT=0`, `GIT_PAGER=cat` and `PAGER=cat`; no other variable is passed. `{EMPTY_HOME}`/`{EMPTY_XDG}` are empty read-only directories and `{RUN_TMP}` is the only writable scratch directory, all outside admitted repositories. All direct Python argv place `-E -s -S -B` immediately after `{PYTHON}`; their only non-stdlib import roots are the attested script directory/cwd. Canonical sorted `NAME=value\0` template bytes are part of `registry-sha256` and separately bound by `environment-sha256`; physical capsule paths are represented only by their literal tokens.
 - The runner creates one private read-only `{TOOL_DIR}` for every registry command, containing only verified aliases for `git`, `rg`, `sort`, `bash` and a fixed `python3` launcher that `exec`s the bound `{PYTHON}` with `-E -s -S -B`. Direct argv still execute bound absolute token resolutions; every descendant PATH lookup, including Delphi guards, is confined to these aliases. Launcher template/digest and alias target identities are registry-bound; directory entries, targets and bytes are verified before and after each command. PATH shadowing, substitution, unknown executable demand or capsule mutation fails.
 - Git user/system configuration and ambient repository override variables are absent by construction. Local repository configuration remains required Git metadata and is bound through `git-config-manifest-sha256`, calculated over canonical path/type/bytes records for each file returned by `git rev-parse --git-path config` and the optional `config.worktree` in Foundation and Delphi. Before execution, bound Git runs with `--includes=false` to detect case-insensitively any `include.path` or `includeIf.*.path`; any unconditional/conditional include is rejected rather than resolved. Any config drift between capture and post-command verification fails.
@@ -277,6 +277,7 @@ Placeholder tokens are the whole-segment, case-insensitive set `PENDING|N/A|TBD|
 
 | Command ID | Context / cwd | Exact argv template | Permitted inputs / direct provenance | Bounds | Success / phase |
 | --- | --- | --- | --- | --- | --- |
+| `platform-preflight` | `materialized-tree` / `materialized-foundation` | `{PYTHON}` `-E` `-s` `-S` `-B` `deterministic/validate_foundation_lifecycle.py` `--platform-preflight` | attested Foundation tree + isolated Python + POSIX kernel/filesystem/locale capabilities | `30s`; `1MiB` each stream | exit `0` before any other registry command; terminal |
 | `foundation-validator` | `materialized-tree` / `materialized-foundation` | `{PYTHON}` `-E` `-s` `-S` `-B` `deterministic/validate_foundation_lifecycle.py` `--root` `.` | attested Foundation tree + isolated Python | `60s`; `1MiB` each stream | exit `0`; terminal |
 | `foundation-unittest` | `materialized-tree` / `materialized-foundation` | `{PYTHON}` `-E` `-s` `-S` `-B` `-m` `unittest` `discover` `-s` `deterministic/tests` `-p` `test_*.py` | attested Foundation tree + isolated Python | `180s`; `8MiB` each stream | exit `0`; terminal |
 | `foundation-compile-no-write` | `materialized-tree` / `materialized-foundation` | `{PYTHON}` `-E` `-s` `-S` `-B` `-c` `from pathlib import Path; import sys; [compile(Path(p).read_bytes(), p, 'exec') for p in sys.argv[1:]]` `deterministic/validate_foundation_lifecycle.py` `deterministic/foundation_lifecycle/__init__.py` `deterministic/foundation_lifecycle/parser.py` `deterministic/foundation_lifecycle/attestation.py` `deterministic/foundation_lifecycle/runner.py` `deterministic/tests/test_validate_foundation_lifecycle.py` `deterministic/tests/test_foundation_attestation.py` `deterministic/tests/test_foundation_runner.py` | attested Foundation tree + isolated Python | `60s`; `1MiB` each stream | exit `0`, manifest unchanged; terminal |
@@ -305,7 +306,7 @@ Placeholder tokens are the whole-segment, case-insensitive set `PENDING|N/A|TBD|
 | Decision ID | Expanded Recommended Direction | Review Finding Source | Human Validation Needed |
 | --- | --- | --- | --- |
 | `D-21` | Preserve immutable immediate successor edges; require each no-fragment link label to equal the successor `DEC-*` ID and its normalized destination to equal that ID's unique owner file; require an acyclic indexed chain terminating at one `Accepted` structurally eligible decision. | `C3-F01`, `R1-ARCH-01`, `C4-F01`, `R2-CRIT2-01` | confirm durable, unambiguous multi-hop successor invariant |
-| `D-22` | Permit `Rejected` only as `Proposed -> Rejected`: retain the proposed targets with exact positional `PENDING`, require successor `N/A`, and retire an `Accepted` decision only through `Superseded`. | `C3-F02`, `R1-ARCH-03`, `C4-F02`, `R2-ARCH-01/02`, `R2-CRIT2-02` | confirm truthful rejection transition and accepted-history preservation |
+| `D-22` | Enforce the observable `Rejected` current-state shape: retained targets, exact positional `PENDING` and successor `N/A`. Lifecycle semantics reserve it for unconsolidated proposals and retire Accepted through Superseded, but historical transition fidelity is review-owned because no canonical prior-state source is admitted. | `C3-F02`, `R1-ARCH-03`, `C4-F02`, `R2-ARCH-01/02`, `R2-CRIT2-02`, `R9-CRIT2-01` | confirm truthful structural rule without unverifiable transition claim |
 | `D-23` | Split read-only proof into a portable filesystem manifest (paths, entry types, regular bytes, symlink target bytes, directory presence) and a Git-backed tree/index manifest for tracked modes `100644|100755|120000`; exclude directory permissions and symlink chmod claims. | `C3-F03`, `R1-ARCH-04`, `C4-F03` | confirm two-layer portable oracle |
 | `D-24` | Consolidate the final decision state/successor/rejection grammar in `evolution_lifecycle.md`; keep membership/usage guidance in `decisions/README.md`; the validator only enforces those owners. | `R1-ARCH-02` | confirm canonical-owner consolidation |
 | `D-25` | Define `Validation-Attestation-v1` as a closed LF/UTF-8 payload grammar with fixed delimiters/field order, tree/object-format/registry and direct-tool provenance fields, ordered required command IDs, per-command context/cwd/argv digest/exit/raw stdout+stderr digests, duplicate rejection and a non-circular payload digest trailer verified by independent golden fixtures. | `C4-F04`, convergence critique 2 | confirm canonical attestation byte grammar |
@@ -325,6 +326,9 @@ Placeholder tokens are the whole-segment, case-insensitive set `PENDING|N/A|TBD|
 | `D-39` | Reject any case-variant local `include.path` or `includeIf.*.path` in Foundation/Delphi config using bound Git with includes disabled; do not expand the trust graph to external config files. | `R8-ARCH-01`, `R8-CRIT2-01` | confirm closed Git config graph |
 | `D-40` | Bind per-command monotonic timeout and per-stream byte caps; use 64 KiB streaming digests/bounded diagnostics, isolated process groups, SIGTERM then fixed 2-second SIGKILL escalation, no attestation on timeout/overflow and unconditional scratch cleanup. | `R8-CRIT1-01` | confirm deterministic runner resource/failure bounds |
 | `D-41` | Execute `tree-consistency` code/package exclusively from the read-only materialized tree; runner must reject principal worktree/index divergence before execution and pass the verified principal root only as the dedicated `{FOUNDATION}` token for read-only metadata/data comparison. | `R8-CRIT2-02` | confirm verifier executes attested code bytes |
+| `D-42` | Treat execution context and cwd as independent closed fields: context grants inputs/trust, cwd grants only location; `tree-consistency` is the sole `foundation-index` row with materialized cwd/code and principal access only through verified `{FOUNDATION}`. | `R9-ARCH-01`, `R9-CRIT2-02` | confirm unambiguous context/cwd semantics |
+| `D-43` | Constrain terminal attested execution to a preflighted Linux/WSL POSIX substrate providing process groups, SIGTERM/SIGKILL, symlinks, `/dev/null`, permission operations and `C.UTF-8`; native Windows Git may publish the already-attested immutable commit only and cannot replace suite execution. | `R9-CRIT1-01` | confirm platform capability boundary |
+| `D-44` | Distinguish canonical lifecycle transition policy from current-state enforcement: validator proves Rejected targets/PENDING/N/A and Superseded successor graphs, but never claims a historical Proposed→Rejected or Accepted→Superseded transition without an admitted history owner. | `R9-CRIT2-01` | confirm honest current-state validation boundary |
 
 ## Decisions
 
@@ -349,7 +353,7 @@ Placeholder tokens are the whole-segment, case-insensitive set `PENDING|N/A|TBD|
 - [x] `D-19` Replace ambiguous legacy “applicability” with the explicit phase/supersession matrix for ST-01 `VAL-01/02/08/10`.
 - [x] `D-20` Require complete fixture-tree manifest equality for the read-only oracle on both success and failure.
 - [ ] `D-21` Preserve immediate successor history, bind link label/destination to the unique successor owner and validate an acyclic multi-hop chain terminating at Accepted+structurally-eligible.
-- [ ] `D-22` Restrict Rejected to Proposed rows with retained targets/exact PENDING; retire Accepted only through Superseded.
+- [ ] `D-22` Enforce Rejected retained-target/exact-PENDING/N/A shape and keep unverifiable transition history review-owned.
 - [ ] `D-23` Separate portable filesystem-content and Git-backed tracked-mode read-only oracles.
 - [ ] `D-24` Consolidate final decision semantics into lifecycle/index owners before validator enforcement.
 - [ ] `D-25` Use the closed canonical `Validation-Attestation-v1` byte grammar and independent golden oracle.
@@ -369,6 +373,9 @@ Placeholder tokens are the whole-segment, case-insensitive set `PENDING|N/A|TBD|
 - [ ] `D-39` Reject local Git config include/includeIf directives instead of admitting unbound external config graphs.
 - [ ] `D-40` Bind command time/output limits, process-group termination and cleanup semantics into the registry.
 - [ ] `D-41` Run tree-consistency from materialized code and reject worktree/index divergence before that code executes.
+- [ ] `D-42` Make execution context and cwd orthogonal, with one explicit materialized-code foundation-index bridge.
+- [ ] `D-43` Require a POSIX Linux/WSL terminal substrate preflight; reserve Windows Git for publication only.
+- [ ] `D-44` Enforce only observable current-state rejection/supersession structure and avoid historical transition claims.
 
 ## Module Decision Baseline Snapshot
 
@@ -384,8 +391,8 @@ Placeholder tokens are the whole-segment, case-insensitive set `PENDING|N/A|TBD|
 ## Decision Baseline
 
 - **Prior freezes:** `D-01..D-08@b685fb52` invalidated by `AR-01..05/F-01..11`; `D-01..D-10@504a9785` invalidated by `AR-R01..AR-R05/F-12..F-17`; `D-01..D-11@2562f62e` invalidated by `AR-F01..AR-F05/F-18..F-21`; `D-01..D-14@e26d7183` invalidated by `AR-N01/F-22..F-24`; `D-01..D-17@3dce63b3` invalidated by `C2-F01/C2-F02/C2-F04`; `D-01..D-20@0cd991e6` invalidated by `C3-F01..C3-F03`.
-- **Freeze status:** `not_frozen — pre-freeze convergence active; provisional D-01..D-41 require a clean exploratory round before final human validation`
-- **Frozen decisions:** `none current; D-01..D-20 remain validated provenance; D-21..D-41 are provisional convergence decisions`
+- **Freeze status:** `not_frozen — pre-freeze convergence active; provisional D-01..D-44 require a clean exploratory round before final human validation`
+- **Frozen decisions:** `none current; D-01..D-20 remain validated provenance; D-21..D-44 are provisional convergence decisions`
 - **Current validation evidence:** Gabriel/user, 2026-09-24, exact phrase `VALIDO D-01..D-20`; preserved as provenance but superseded for approval by material review findings that introduced `D-21..D-23`.
 - **Prior validation evidence:** Gabriel/user, 2026-09-24, exact phrase `VALIDO D-01..D-17`; preserved as provenance but superseded by material review findings that introduced `D-18..D-20`.
 - **Prior validation evidence:** Gabriel/user, 2026-09-23, exact phrase `VALIDO D-01..D-14`; preserved as provenance but superseded for approval by material review findings that introduced `D-15..D-17`.
@@ -514,6 +521,7 @@ Placeholder tokens are the whole-segment, case-insensitive set `PENDING|N/A|TBD|
 | `R-06` | `63f1fbee` | `R6-ARCH-01` | `R6-CRIT1-01` | `R6-CRIT2-01` | add `D-35..D-37`; isolate Python startup; freeze full commit envelope; verify nested legacy tools | integrated; next round required |
 | `R-07` | `5bd89d41` | `R7-ARCH-01` | `R7-CRIT1-01` | `R7-CRIT2-01` | add `D-38`; construct closed child environments; extend verified tool/config closure to every command | integrated; next round required |
 | `R-08` | `9202554b` | `R8-ARCH-01` | `R8-CRIT1-01` | `R8-CRIT2-01..02` | add `D-39..D-41`; reject Git config includes; bound resources; run verifier from materialized bytes | integrated; next round required |
+| `R-09` | `3711727a` | `R9-ARCH-01` | `R9-CRIT1-01` | `R9-CRIT2-01..02` | add `D-42..D-44`; orthogonalize context/cwd; require POSIX substrate; narrow transition claims | integrated; next round required |
 
 ## Assumptions Preview
 
@@ -549,7 +557,7 @@ Placeholder tokens are the whole-segment, case-insensitive set `PENDING|N/A|TBD|
 
 1. Concluir o ciclo exploratório; após validação humana do conjunto final, congelar/publicar a baseline e repetir os gates formais com TODO + owners + exact contracts do ST-01 no pacote.
 2. Após `APROVADO` e authority guard `go`, escrever fixtures/oráculos fail-first e implementar kernel/parser/diagnostics mais consolidações canônicas aprovadas.
-3. Implementar até `T-01..T-37` convergir; manter o TODO ativo e o decision target apontando ao active path no candidate SHA.
+3. Implementar até `T-01..T-40` convergir; manter o TODO ativo e o decision target apontando ao active path no candidate SHA.
 4. Executar acceptance, old/new parity, adherence, test-quality audit e final review no candidate SHA.
 5. Montar a árvore terminal com TODO movido, evidence final, handoffs/cutover e `DEC-validator-adoption-trigger` retargeted para completed; stagear tudo e capturar o tree OID.
 6. Materializar o tree OID em diretório temporário read-only e executar os checks sobre esses bytes; guards dependentes de metadata Git provam o mesmo index/tree OID. Depois, provar OID inalterado e ausência de divergência relevante; qualquer diferença exige restage e rerun integral.
@@ -581,7 +589,7 @@ Placeholder tokens are the whole-segment, case-insensitive set `PENDING|N/A|TBD|
 | `T-12` | portable filesystem manifest plus Git-backed tracked-mode manifest before each pass/fail run | create/delete/rename entry; alter regular bytes, symlink target, or Git modes `100644|100755|120000` | filesystem path/type/bytes/target equality and separate index/tree mode equality; no directory-mode or symlink-chmod dependency |
 | `T-13` | complete bootstrap kernel surfaces | remove mandatory owner, heading, schema column or enum member | non-zero + kernel/version diagnostic |
 | `T-14` | valid constrained ASCII fragment | duplicate slug, Unicode/encoded/HTML fragment, punctuation/case mismatch | deterministic pass/fail per v1 dialect |
-| `T-15` | valid row for each decision state and acyclic successor chain | Accepted→Rejected, Rejected with concrete evidence, missing/forbidden target/evidence, successor label/owner mismatch, fragment, self/unresolved/cyclic successor, same-file multi-row ambiguity, or chain terminating Proposed/Rejected/pending-effect | non-zero + state/column/chain diagnostic; Proposed→Rejected with retained targets/exact PENDING and A→B→C with B Superseded and eligible C Accepted pass |
+| `T-15` | valid current row for each decision state and acyclic successor chain | Rejected with concrete evidence, missing/forbidden target/evidence, successor label/owner mismatch, fragment, self/unresolved/cyclic successor, same-file multi-row ambiguity, or chain terminating Proposed/Rejected/pending-effect | non-zero + state/column/chain diagnostic; Rejected retained targets/exact PENDING and A→B→C with B Superseded and eligible C Accepted pass; no historical transition claim |
 | `T-16` | `Open` roadmap prose and `Exit-Gate-Met` with completed-TODO proof plus optional canonical module/contract links | missing completed TODO; active TODO, artifact/history, README, roadmap-self, escape or other target class | non-zero + roadmap row/target-class diagnostic |
 | `T-17` | exact ASCII lifecycle IDs | Unicode, empty component, repeated/leading/trailing separator or uppercase slug | non-zero + identifier diagnostic |
 | `T-18` | active target in candidate and completed target in terminal tree | move without atomic decision target/evidence relocation | candidate/final tree each pass only in matching phase |
@@ -604,6 +612,9 @@ Placeholder tokens are the whole-segment, case-insensitive set `PENDING|N/A|TBD|
 | `T-35` | Foundation/Delphi local config without includes | unconditional/conditional, relative/absolute and case-variant `include.path`/`includeIf.*.path` | bound Git with `--includes=false` detects and rejects before suite execution; external config is never read |
 | `T-36` | every registry command completes below its bound timeout/stream caps | hung child, hung descendant, stdout overflow, stderr overflow, TERM-resistant process and cleanup failure | bounded streaming memory; process-group TERM then 2s KILL; deterministic redacted outcome; no attestation; all capsule paths removed |
 | `T-37` | `tree-consistency` entrypoint/package bytes come from materialized tree after runner preflight | unchanged staged tree with modified principal worktree verifier/package or worktree/index data drift | runner rejects before executing worktree code; materialized verifier can only read verified principal root through `{FOUNDATION}` |
+| `T-38` | context and cwd independently match each registry row; only tree-consistency bridges materialized cwd to foundation-index inputs | infer cwd from context, give another command the bridge, omit `{FOUNDATION}` verification or admit undeclared input | verifier/runner reject before execution; registry digest preserves both independent fields |
+| `T-39` | Linux/WSL POSIX platform provides process group/signals, symlink, `/dev/null`, chmod/read-only operations and `C.UTF-8` | each missing capability and native-Windows suite attempt | platform-preflight fails before remaining commands; Windows Git publication-only path cannot satisfy attestation |
+| `T-40` | current-state Rejected shape and Superseded graph | concrete Rejected evidence or invalid successor graph; fixture claims prior state absent canonical history | structural failures are detected; validator emits no historical transition success/failure claim |
 
 ### Pre-APROVADO RED Evidence Capture
 
@@ -627,7 +638,7 @@ Placeholder tokens are the whole-segment, case-insensitive set `PENDING|N/A|TBD|
 | Surface | Behavior / Scenario | Preconditions | Command | Required Before | Status |
 | --- | --- | --- | --- | --- | --- |
 | validator acceptance | source graph real válido | consolidated branch@sha | `python3 foundation_documentation/deterministic/validate_foundation_lifecycle.py --root foundation_documentation` | Local-Implemented | planned |
-| unittest/mutations | `T-01..T-37` | isolated temporary fixtures | `python3 -m unittest discover -s foundation_documentation/deterministic/tests -p 'test_*.py'` | Local-Implemented | planned |
+| unittest/mutations | `T-01..T-40` | isolated temporary fixtures | `python3 -m unittest discover -s foundation_documentation/deterministic/tests -p 'test_*.py'` | Local-Implemented | planned |
 | legacy transition matrix | pre-migration baseline runs ST-01 `VAL-01/02/08/10`; candidate/terminal Git layer runs `VAL-01/08/10`; `VAL-02` is superseded after approved schema/target mutation | exact contracts read from completed ST-01 TODO; phase identified deterministically | phase matrix `D-19/VAL-07/T-23` + new validator/tests | before delivery reviews | planned |
 | terminal-tree confirmation | permanent checks stay green after atomic move/retarget/cutover | read-only materialization of captured tree OID with `active XOR completed`; unchanged index/OID proof and no relevant divergence | validator + unittest on materialized bytes; compatible guards there; Git-metadata guards against the same index/tree OID | before closeout commit | planned |
 | immutable publication | committed tree equals validated staged tree and terminal outcomes are immutably self-attested outside that tree | commit body contains deterministic attestation manifest; trailers contain tree OID and manifest digest | `--verify-attestation --commit HEAD`; verify `HEAD^{tree}`, clean tree and remote ref equality; do not claim externally reproducible execution proof | Production-Ready | planned |
@@ -639,7 +650,7 @@ Placeholder tokens are the whole-segment, case-insensitive set `PENDING|N/A|TBD|
 
 ## Plan Review Gate
 
-- **Status:** `exploratory convergence running — R-08 integrated into provisional D-01..D-41; R-09 required`
+- **Status:** `exploratory convergence running — R-09 integrated into provisional D-01..D-44; R-10 required`
 - **Required lenses:** Architecture, Code Quality, Tests, Performance, Security, Elegance, Structural Soundness.
 - **Expected focus:** evitar parser frágil, catálogo duplicado, cobertura superficial, bypass histórico e expansão para CI.
 
@@ -647,7 +658,7 @@ Placeholder tokens are the whole-segment, case-insensitive set `PENDING|N/A|TBD|
 
 - [x] Architecture — canonical membership, state-conditioned grammar, immutable identifiers and validated-tree closeout integrated.
 - [x] Code Quality — narrow grammar, confinement and diagnostics contract added.
-- [x] Tests — test-first and `T-01..T-37` matrix added.
+- [x] Tests — test-first and `T-01..T-40` matrix added.
 - [x] Performance — bounded linear scan; no specialized lane triggered.
 - [x] Security — root/symlink confinement and redaction made mandatory.
 - [x] Elegance — one project-owned stdlib validator; no parallel catalog.
@@ -696,6 +707,9 @@ Placeholder tokens are the whole-segment, case-insensitive set `PENDING|N/A|TBD|
 - **Issue ID:** `PLAN-39` — local Git configs could include unbound files (`high`). Option A: reject all include/includeIf directives (recommended); Option B: recursively bind external graph; Option C: ignore includes. **Resolution:** integrated into `D-39`, config contract and `T-35`.
 - **Issue ID:** `PLAN-40` — attested children had no timeout/output/capture bounds (`high`). Option A: per-command limits, streaming digests and process-group termination (recommended); Option B: global unbound default; Option C: unbounded capture. **Resolution:** integrated into `D-40`, registry Bounds and `T-36`.
 - **Issue ID:** `PLAN-41` — tree-consistency executed mutable worktree code (`high`). Option A: execute materialized code after runner divergence preflight (recommended); Option B: capsule indexed blobs separately; Option C: post-execution detection. **Resolution:** integrated into `D-41`, registry and `T-37`.
+- **Issue ID:** `PLAN-42` — global context prose contradicted tree-consistency cwd/source (`high`). Option A: make trust context and cwd orthogonal with one explicit bridge (recommended); Option B: fourth context; Option C: implicit exception. **Resolution:** integrated into `D-42`, registry prose and `T-38`.
+- **Issue ID:** `PLAN-43` — POSIX process/signal/filesystem/locale requirements were undeclared (`medium`). Option A: Linux/WSL capability preflight and Windows publication-only exception (recommended); Option B: cross-platform implementation expansion; Option C: late failure. **Resolution:** integrated into `D-43`, registry, readiness and `T-39`.
+- **Issue ID:** `PLAN-44` — current sources cannot prove historical Proposed→Rejected transitions (`high`). Option A: enforce observable row/graph and keep history review-owned (recommended); Option B: admit canonical history source; Option C: overclaim. **Resolution:** integrated into refined `D-22`, `D-44`, state grammar and `T-15/T-40`.
 
 ### Failure Modes & Edge Cases
 
@@ -715,9 +729,9 @@ Placeholder tokens are the whole-segment, case-insensitive set `PENDING|N/A|TBD|
 
 ## Additional Architectural Opinions
 
-- **Needed:** `yes — exploratory R-09 before final validation; formal rerun after final freeze`
-- **Why ambiguity remains:** R-08 closed Git config includes, runner resource bounds and the executed source of tree-consistency; convergence is not yet proven.
-- **Opinion count:** `R-01 through R-08: three fresh exploratory reviewers each completed with material findings in the round aggregate; R-09 pending`
+- **Needed:** `yes — exploratory R-10 before final validation; formal rerun after final freeze`
+- **Why ambiguity remains:** R-09 reconciled context/cwd, declared POSIX capabilities and separated lifecycle transition policy from observable enforcement; convergence is not yet proven.
+- **Opinion count:** `R-01 through R-09: three fresh exploratory reviewers each completed with material findings in the round aggregate; R-10 pending`
 - **Package mode:** `bounded-file-set`
 - **Internal reviewer mandate:** `required after freeze; reviewer cannot implement`
 - **Required lenses:** `correctness|performance|elegance|structural-soundness|operational-fit`
@@ -860,7 +874,7 @@ Predeclared for pre-approval readiness; reload and bind after `APROVADO`.
 | Decision ID | Status | Evidence | Notes |
 | --- | --- | --- | --- |
 | `D-01..D-20` | validated-historical | exact token `VALIDO D-01..D-20`; freeze `0cd991e6` | preserved directions; approval baseline superseded by convergence work |
-| `D-21..D-41` | provisional-convergence | R-01..R-08 integrated contract | do not request validation until convergence criterion is satisfied |
+| `D-21..D-44` | provisional-convergence | R-01..R-09 integrated contract | do not request validation until convergence criterion is satisfied |
 
 ## Module Decision Consistency Validation
 
@@ -932,6 +946,9 @@ Predeclared for pre-approval readiness; reload and bind after `APROVADO`.
 | `R8-ARCH-01/R8-CRIT2-01` | high | release-blocker | integrate in current TODO | local Git include graphs would escape the bound config manifest | fixed-pending-convergence | `D-39`, include rejection and `T-35` |
 | `R8-CRIT1-01` | high | release-blocker | integrate in current TODO | unbounded children/streams can hang or exhaust the attested runner | fixed-pending-convergence | `D-40`, registry Bounds and `T-36` |
 | `R8-CRIT2-02` | high | release-blocker | integrate in current TODO | verifier results must be produced by attested code bytes | fixed-pending-convergence | `D-41`, materialized tree-consistency and `T-37` |
+| `R9-ARCH-01/R9-CRIT2-02` | high | release-blocker | integrate in current TODO | execution context and cwd/source semantics must not contradict | fixed-pending-convergence | `D-42`, orthogonal fields/sole bridge and `T-38` |
+| `R9-CRIT1-01` | medium | release-blocker | integrate in current TODO | terminal process/resource semantics require a declared capable substrate | fixed-pending-convergence | `D-43`, platform-preflight and `T-39` |
+| `R9-CRIT2-01` | high | release-blocker | integrate in current TODO | current-state graph cannot prove unadmitted historical transitions | fixed-pending-convergence | refined `D-22`, `D-44` and `T-15/T-40` |
 
 ## Security Risk Assessment
 
@@ -1024,9 +1041,9 @@ Predeclared for pre-approval readiness; reload and bind after `APROVADO`.
 ## TODO Closeout Disposition
 
 - **Disposition:** `keep-active`
-- **Disposition reason:** user-directed pre-freeze convergence is active; R-08 material decisions are integrated into provisional `D-01..D-41` and require R-09.
-- **Post-commit/push status:** R-08 convergence changes are local pending validation/publication checks; no implementation claim.
-- **Next path/status action:** validate and publish R-08 integration, run exploratory R-09, and continue until the convergence criterion is satisfied; then request one final full-set validation.
+- **Disposition reason:** user-directed pre-freeze convergence is active; R-09 material decisions are integrated into provisional `D-01..D-44` and require R-10.
+- **Post-commit/push status:** R-09 convergence changes are local pending validation/publication checks; no implementation claim.
+- **Next path/status action:** validate and publish R-09 integration, run exploratory R-10, and continue until the convergence criterion is satisfied; then request one final full-set validation.
 
 ## Commands
 
