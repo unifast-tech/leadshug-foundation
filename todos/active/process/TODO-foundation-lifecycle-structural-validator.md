@@ -40,7 +40,7 @@ O lifecycle da Foundation exige um validator permanente quando backlog, decisõe
 ## Active Work State
 
 - **Work state:** `review`
-- **Why this state now:** por direção humana, o TODO entrou em convergência pré-freeze para esgotar decisões antes de novo token `VALIDO`; R-06 fechou isolamento Python, envelope do commit e PATH legado, integrados em `D-35..D-37`.
+- **Why this state now:** por direção humana, o TODO entrou em convergência pré-freeze para esgotar decisões antes de novo token `VALIDO`; R-07 fechou ambiente e subprocessos para toda a suíte, integrados em `D-38`.
 - **Exit condition:** decisões validadas, baseline congelada/publicada, reviews e guards pré-aprovação verdes, seguidos de `APROVADO` explícito ou cancelamento com racional.
 
 ## Trigger Evidence
@@ -251,7 +251,7 @@ Placeholder tokens are the whole-segment, case-insensitive set `PENDING|N/A|TBD|
 ### Validation-Attestation-v1 Byte Grammar
 
 - The complete commit message is exactly: subject `feat(foundation): add lifecycle structural validator`, LF, one blank LF, `Validation-Attestation-v1-Begin`, LF, the payload, `Validation-Attestation-v1-End`, LF, one blank LF, `Validated-Tree: <tree-oid>`, LF, `Validation-Attestation-SHA256: <64-lowercase-hex>`, final LF and EOF. No preamble, unrelated body text/trailer, extra blank line, duplicate block or alternate final-newline form is allowed.
-- Payload is UTF-8 without BOM, LF-only, ends with one LF, and uses fixed order: `version`, `git-object-format`, `tree`, `registry-sha256`, `environment-sha256`, `delphi-commit`, `delphi-tree`, `tool-count`, ordered tool records, `command-count`, then command records numbered from `01` without gaps. Tool IDs are exactly `bash`, `git`, `python3`, `rg`, `sort`; each record contains `id`, resolved-executable byte SHA-256 and SHA-256 over raw version-command stdout, one NUL byte, then raw stderr (`<tool> --version`, except `python3 --version`).
+- Payload is UTF-8 without BOM, LF-only, ends with one LF, and uses fixed order: `version`, `git-object-format`, `tree`, `registry-sha256`, `environment-sha256`, `git-config-manifest-sha256`, `delphi-commit`, `delphi-tree`, `tool-count`, ordered tool records, `command-count`, then command records numbered from `01` without gaps. Tool IDs are exactly `bash`, `git`, `python3`, `rg`, `sort`; each record contains `id`, resolved-executable byte SHA-256 and SHA-256 over raw version-command stdout, one NUL byte, then raw stderr (`<tool> --version`, except `python3 --version`).
 - Required command IDs, in order, are `foundation-validator`, `foundation-unittest`, `foundation-compile-no-write`, `legacy-val01`, `legacy-val08`, `legacy-val10`, `delivery-secret-scan`, `git-diff-check`, `diff-expectation`, `authority-guard`, `completion-guard`, `closeout-guard`, `tree-consistency`.
 - Each command record has fixed fields in order: `id`, `context` (`materialized-tree|foundation-index|workspace-governance`), `cwd` (`workspace|foundation|materialized-foundation`), `argv-sha256` over exact NUL-joined UTF-8 argv bytes, decimal `exit`, `stdout-sha256` over raw stdout bytes, and `stderr-sha256` over raw stderr bytes. No normalization is allowed.
 - `Validation-Attestation-SHA256` hashes exactly the payload bytes between delimiters, including its final LF and excluding delimiters, trailers and the digest itself. Missing, duplicate, unknown, reordered or malformed fields/commands fail.
@@ -268,8 +268,9 @@ Placeholder tokens are the whole-segment, case-insensitive set `PENDING|N/A|TBD|
 - `{PYTHON}`, `{GIT}` and `{BASH}` resolve once, before execution, to canonical realpath bytes of the executable selected from `PATH`; those exact bytes are executed and bound by provenance. `{TREE}` resolves to the lowercase captured Git OID. Absolute bytes are permitted only through executable-token expansion; no literal absolute workspace or temporary-directory path is admitted in child argv.
 - `{ST01_VAL01}`, `{ST01_VAL08}` and `{ST01_VAL10}` expand to the exact bytes between the opening `bash` fence LF and the LF immediately before the closing fence under the uniquely named heading in the completed ST-01 TODO. The source blob/OID and expanded bytes digest are bound; these are the only allowed `bash -c` payloads.
 - `materialized-tree` commands run with cwd at the read-only materialized Foundation root and use only relative paths. `foundation-index` commands run at the principal Foundation root and must prove `git write-tree == {TREE}`. `workspace-governance` commands run at workspace root, may read the bound clean Delphi checkout and principal Foundation Git metadata, and must not mutate either repository.
-- Every child receives a closed environment overlay that removes `PYTHONPATH`, `PYTHONHOME`, `PYTHONSTARTUP`, `PYTHONUSERBASE` and `PYTHONINSPECT`, sets `PYTHONDONTWRITEBYTECODE=1`, `PYTHONNOUSERSITE=1`, `LC_ALL=C.UTF-8` and `LANG=C.UTF-8`, and for legacy commands sets `PATH={TOOL_DIR}` only. All direct Python argv place `-E -s -S -B` immediately after `{PYTHON}`; their only non-stdlib import roots are the attested script directory/cwd. The overlay's canonical sorted `NAME=<unset|value>\0` template bytes are part of `registry-sha256` and separately bound by `environment-sha256`. The runner rejects override/removal, and complete before/after manifests prove that even privileged execution creates no bytecode.
-- For legacy Bash payloads, the runner creates a private read-only `{TOOL_DIR}` containing only verified aliases for `git`, `rg`, `sort` and a fixed `python3` launcher that `exec`s the bound `{PYTHON}` with `-E -s -S -B`. The launcher template/digest and alias target identities are registry-bound; the runner verifies directory entries, targets and bytes before and after every legacy command and rejects PATH shadowing or substitution. The physical temp path is not a semantic field; canonical environment bytes contain literal `{TOOL_DIR}`.
+- Every child environment is constructed from empty, never inherited. Its complete allowlist is `PATH={TOOL_DIR}`, `HOME={EMPTY_HOME}`, `XDG_CONFIG_HOME={EMPTY_XDG}`, `TMPDIR={RUN_TMP}`, `PYTHONDONTWRITEBYTECODE=1`, `PYTHONNOUSERSITE=1`, `LC_ALL=C.UTF-8`, `LANG=C.UTF-8`, `TZ=UTC`, `TERM=dumb`, `GIT_CONFIG_NOSYSTEM=1`, `GIT_CONFIG_GLOBAL=/dev/null`, `GIT_TERMINAL_PROMPT=0`, `GIT_PAGER=cat` and `PAGER=cat`; no other variable is passed. `{EMPTY_HOME}`/`{EMPTY_XDG}` are empty read-only directories and `{RUN_TMP}` is the only writable scratch directory, all outside admitted repositories. All direct Python argv place `-E -s -S -B` immediately after `{PYTHON}`; their only non-stdlib import roots are the attested script directory/cwd. Canonical sorted `NAME=value\0` template bytes are part of `registry-sha256` and separately bound by `environment-sha256`; physical capsule paths are represented only by their literal tokens.
+- The runner creates one private read-only `{TOOL_DIR}` for every registry command, containing only verified aliases for `git`, `rg`, `sort`, `bash` and a fixed `python3` launcher that `exec`s the bound `{PYTHON}` with `-E -s -S -B`. Direct argv still execute bound absolute token resolutions; every descendant PATH lookup, including Delphi guards, is confined to these aliases. Launcher template/digest and alias target identities are registry-bound; directory entries, targets and bytes are verified before and after each command. PATH shadowing, substitution, unknown executable demand or capsule mutation fails.
+- Git user/system configuration and ambient repository override variables are absent by construction. Local repository configuration remains required Git metadata and is bound through `git-config-manifest-sha256`, calculated over canonical path/type/bytes records for each file returned by `git rev-parse --git-path config` and the optional `config.worktree` in Foundation and Delphi. Any config drift between capture and post-command verification fails.
 - `argv-sha256` hashes fully expanded NUL-joined argv bytes. `registry-sha256` hashes the immutable templates and metadata, before `{TREE}`/legacy expansion. The verifier reconstructs both domains; it never trusts runner-supplied hashes. Relocating the materialization must not change either digest.
 - The registry digest domain is `Registry-v1` followed by one NUL byte, then every row/field in table order (`id`, `context`, `cwd`, argv arguments in order, permitted-input/provenance cell, success/phase cell). Each field is encoded as eight lowercase hexadecimal UTF-8 byte-length digits, one colon, the exact field bytes, then one NUL. Markdown presentation markers are excluded; inline-code contents are the field values. Duplicate/missing fields or noncanonical encoding fail.
 
@@ -310,7 +311,7 @@ Placeholder tokens are the whole-segment, case-insensitive set `PENDING|N/A|TBD|
 | `D-26` | Decompose legacy `VAL-02`: replace structural ID/enum/cardinality/target-evidence checks with mapped new rules; intentionally retire fixed record/count/content maps, feature-brief state scans and target-content assertions at schema mutation because they duplicate live/semantic truth outside the admitted graph; retain ST-01 `VAL-01/08/10` through terminal Git validation. | convergence critique 2 | confirm per-control legacy retirement map |
 | `D-27` | Use a project-owned closed attestation interface and exact argv registry: `--run-attested-suite` executes/captures the fixed suite and emits canonical bytes; `--verify-attestation` verifies commit/tree/registry/digest bindings. Classify the result explicitly as immutable self-attestation because raw streams are not retained for independent re-execution proof. | `R2-ARCH-03`, `R2-CRIT1-02`, `R2-CRIT2-03` | confirm executable interface and honest trust boundary |
 | `D-28` | For `Exit-Gate-Met`, require at least one confined relative link to `todos/completed/**/TODO-*.md`; allow other evidence links only to `modules/*.md`, `contracts/*.md` or completed TODOs, and reject active TODO, artifact/history, README and roadmap-self targets. Semantic sufficiency remains review-owned. | `R2-CRIT1-01` | confirm closed structural roadmap-evidence classes |
-| `D-29` | Partition the attested registry into closed execution contexts and bind direct tool provenance: attested Foundation tree/blob, matching Foundation index/tree, clean Delphi commit/tree, and resolved Python/Git executable version+content digest. Reject drift, forbid shell strings, and state that OS/shared-library transitive inputs remain outside the non-hermetic self-attestation claim. | `R3-ARCH-01`, `R3-CRIT1-02`, `R3-CRIT2-01..03` | confirm executable provenance, substrate and bounded trust claim |
+| `D-29` | Partition the attested registry into closed execution contexts and bind direct tool provenance: attested Foundation tree/blob, matching Foundation index/tree, clean Delphi commit/tree, and every resolved registry-tool executable version+content digest. Reject drift, forbid unapproved shell strings, and state that OS/shared-library transitive inputs remain outside the non-hermetic self-attestation claim. | `R3-ARCH-01`, `R3-CRIT1-02`, `R3-CRIT2-01..03` | confirm executable provenance, substrate and bounded trust claim |
 | `D-30` | Make lifecycle `Roadmap gate evidence grammar` the single semantic owner of `D-28`; admit `system_roadmap.md` as a changed path only to remove its broader local rule and link authoring guidance to that owner; validate absence of competing guidance. | `R3-CRIT1-01` | confirm canonical roadmap rule owner and expected-path expansion |
 | `D-31` | Freeze the complete registry table above before approval: exact ordered argv templates, closed token/legacy-fence substitution grammar, contexts/cwds, permitted inputs, direct provenance, success and phase. Hash immutable templates separately from fully expanded NUL-joined argv; reject absolute/transient child paths and reconstruct all digests during verification. | `R4-CRIT1-01`, `R4-CRIT2-01` | confirm approval-complete command registry and relocation-stable digest domains |
 | `D-32` | Keep one public CLI but split implementation into the bounded `foundation_lifecycle` package: `parser.py` owns parsing/diagnostics, `attestation.py` owns registry/codec/verifier, `runner.py` owns contexts/provenance/subprocess capture, and `__init__.py` has no logic; split tests by the same seams without sharing production oracle helpers. | `R4-CRIT1-03` | confirm modular implementation boundary and expanded expected paths |
@@ -319,6 +320,7 @@ Placeholder tokens are the whole-segment, case-insensitive set `PENDING|N/A|TBD|
 | `D-35` | Close Python startup influence: unset/reject Python path/home/startup/user variables, set no-user-site/no-bytecode, run every direct Python with `-E -s -S -B`, and admit only attested script/cwd plus system stdlib while keeping shared/system library code in the explicit non-hermetic residual boundary. | `R6-ARCH-01` | confirm controllable Python isolation boundary |
 | `D-36` | Freeze the entire `Validation-Attestation-v1` commit-message envelope: exact subject, blank lines, delimiters, payload, two ordered trailers, final LF/EOF, and prohibition of any unrelated text/trailer or duplicate/alternate form. | `R6-CRIT1-01` | confirm canonical commit-message bytes |
 | `D-37` | Execute nested legacy tools through a runner-created read-only PATH containing only verified aliases and a fixed isolated-Python launcher; bind launcher/alias templates and verify identities before/after, while canonicalizing the physical temp path as `{TOOL_DIR}`. | `R6-CRIT2-01` | confirm nested legacy executable identity |
+| `D-38` | Construct every child environment from a complete explicit allowlist, use the verified private tool directory for all descendant lookups (including Delphi guards), isolate HOME/XDG/TMP/Git controls, bind local Git config manifests, and reject any ambient variable, unknown tool, PATH/config/capsule drift before acceptance. | `R7-ARCH-01`, `R7-CRIT1-01`, `R7-CRIT2-01` | confirm full descendant executable and inherited-environment closure |
 
 ## Decisions
 
@@ -359,6 +361,7 @@ Placeholder tokens are the whole-segment, case-insensitive set `PENDING|N/A|TBD|
 - [ ] `D-35` Isolate direct Python startup from mutable environment/user-site customization and bind the closed overlay/flags.
 - [ ] `D-36` Enforce one exact complete commit-message envelope for Validation-Attestation-v1.
 - [ ] `D-37` Route nested legacy executable lookup through a verified read-only tool directory with pre/post identity proof.
+- [ ] `D-38` Build all child environments from a complete allowlist and close descendant tool/Git configuration identity across every command context.
 
 ## Module Decision Baseline Snapshot
 
@@ -374,8 +377,8 @@ Placeholder tokens are the whole-segment, case-insensitive set `PENDING|N/A|TBD|
 ## Decision Baseline
 
 - **Prior freezes:** `D-01..D-08@b685fb52` invalidated by `AR-01..05/F-01..11`; `D-01..D-10@504a9785` invalidated by `AR-R01..AR-R05/F-12..F-17`; `D-01..D-11@2562f62e` invalidated by `AR-F01..AR-F05/F-18..F-21`; `D-01..D-14@e26d7183` invalidated by `AR-N01/F-22..F-24`; `D-01..D-17@3dce63b3` invalidated by `C2-F01/C2-F02/C2-F04`; `D-01..D-20@0cd991e6` invalidated by `C3-F01..C3-F03`.
-- **Freeze status:** `not_frozen — pre-freeze convergence active; provisional D-01..D-37 require a clean exploratory round before final human validation`
-- **Frozen decisions:** `none current; D-01..D-20 remain validated provenance; D-21..D-37 are provisional convergence decisions`
+- **Freeze status:** `not_frozen — pre-freeze convergence active; provisional D-01..D-38 require a clean exploratory round before final human validation`
+- **Frozen decisions:** `none current; D-01..D-20 remain validated provenance; D-21..D-38 are provisional convergence decisions`
 - **Current validation evidence:** Gabriel/user, 2026-09-24, exact phrase `VALIDO D-01..D-20`; preserved as provenance but superseded for approval by material review findings that introduced `D-21..D-23`.
 - **Prior validation evidence:** Gabriel/user, 2026-09-24, exact phrase `VALIDO D-01..D-17`; preserved as provenance but superseded by material review findings that introduced `D-18..D-20`.
 - **Prior validation evidence:** Gabriel/user, 2026-09-23, exact phrase `VALIDO D-01..D-14`; preserved as provenance but superseded for approval by material review findings that introduced `D-15..D-17`.
@@ -502,6 +505,7 @@ Placeholder tokens are the whole-segment, case-insensitive set `PENDING|N/A|TBD|
 | `R-04` | `f0e9e1ee` | `R4-ARCH-01` | `R4-CRIT1-01..03` | `R4-CRIT2-01` | add `D-31/D-32`; freeze full registry/substitution domains; modularize bounded implementation; reconcile surface lists | integrated; next round required |
 | `R-05` | `0e72fd7a` | clean | `R5-CRIT1-01` | `R5-CRIT2-01` | add `D-33/D-34`; complete terminal secret coverage; bind no-bytecode environment/argv | integrated; next round required |
 | `R-06` | `63f1fbee` | `R6-ARCH-01` | `R6-CRIT1-01` | `R6-CRIT2-01` | add `D-35..D-37`; isolate Python startup; freeze full commit envelope; verify nested legacy tools | integrated; next round required |
+| `R-07` | `5bd89d41` | `R7-ARCH-01` | `R7-CRIT1-01` | `R7-CRIT2-01` | add `D-38`; construct closed child environments; extend verified tool/config closure to every command | integrated; next round required |
 
 ## Assumptions Preview
 
@@ -537,7 +541,7 @@ Placeholder tokens are the whole-segment, case-insensitive set `PENDING|N/A|TBD|
 
 1. Concluir o ciclo exploratório; após validação humana do conjunto final, congelar/publicar a baseline e repetir os gates formais com TODO + owners + exact contracts do ST-01 no pacote.
 2. Após `APROVADO` e authority guard `go`, escrever fixtures/oráculos fail-first e implementar kernel/parser/diagnostics mais consolidações canônicas aprovadas.
-3. Implementar até `T-01..T-33` convergir; manter o TODO ativo e o decision target apontando ao active path no candidate SHA.
+3. Implementar até `T-01..T-34` convergir; manter o TODO ativo e o decision target apontando ao active path no candidate SHA.
 4. Executar acceptance, old/new parity, adherence, test-quality audit e final review no candidate SHA.
 5. Montar a árvore terminal com TODO movido, evidence final, handoffs/cutover e `DEC-validator-adoption-trigger` retargeted para completed; stagear tudo e capturar o tree OID.
 6. Materializar o tree OID em diretório temporário read-only e executar os checks sobre esses bytes; guards dependentes de metadata Git provam o mesmo index/tree OID. Depois, provar OID inalterado e ausência de divergência relevante; qualquer diferença exige restage e rerun integral.
@@ -578,7 +582,7 @@ Placeholder tokens are the whole-segment, case-insensitive set `PENDING|N/A|TBD|
 | `T-21` | captured tree materialization exactly matches committed bytes | invalid staged/valid worktree split, relevant untracked input or index change after checks | terminal protocol fails before commit and requires full rerun |
 | `T-22` | canonical `Validation-Attestation-v1` bytes bound to tree OID and exact argv registry | golden mutations for delimiters/order/encoding/newlines/commands/argv/registry/streams/digests/trailers | independent expected bytes/digest; `--verify-attestation` fails before publication and reports self-attestation trust boundary |
 | `T-23` | explicit per-control legacy transition map | omit retained check, fail to replace structural subcontrol, or keep retired snapshot as blocker | deterministic replaced/retired/retained classification; no wholesale/freeform applicability |
-| `T-24` | `--run-attested-suite` exact registry execution, closed contexts and canonical stdout | unknown/missing/reordered command, changed argv contract, context swap/escape, dirty or changed Delphi checkout, Foundation index/tree mismatch, changed Python/Git version or executable bytes, unexpected output or nonzero child | fail closed; direct provenance/context bindings and captured raw stream digests match independent fixture oracle; transitive OS/library inputs remain explicitly outside claim |
+| `T-24` | `--run-attested-suite` exact registry execution, closed contexts and canonical stdout | unknown/missing/reordered command, changed argv contract, context swap/escape, dirty or changed Delphi checkout, Foundation index/tree mismatch, changed registry-tool version or executable bytes, unexpected output or nonzero child | fail closed; direct provenance/context bindings and captured raw stream digests match independent fixture oracle; transitive OS/library inputs remain explicitly outside claim |
 | `T-25` | no-write source compilation on read-only materialization | syntax mutation or any created `__pycache__`/`.pyc` entry | syntax failure is non-zero; valid run leaves complete filesystem manifest unchanged |
 | `T-26` | roadmap authoring guidance links uniquely to lifecycle `Roadmap gate evidence grammar` | missing/duplicate owner link or competing broader local rule | non-zero + owner/guidance diagnostic; lifecycle remains the only semantic rule |
 | `T-27` | implemented registry equals the approved table byte-for-byte and reconstructs both digest domains | unknown/reordered entry/field, unknown/nested token, literal transient/absolute path, relocation, legacy fence drift, token escape/substitution mismatch or template/resolved digest confusion | relocation passes without digest drift; every mutation fails before child execution |
@@ -588,6 +592,7 @@ Placeholder tokens are the whole-segment, case-insensitive set `PENDING|N/A|TBD|
 | `T-31` | isolated direct Python with closed unset/set overlay and `-E -s -S -B` | injected `PYTHONPATH`, `PYTHONHOME`, startup/user-site/sitecustomize/usercustomize module or removed flag | influence never loads; registry/env drift fails before execution; system stdlib-only residual is reported |
 | `T-32` | exact complete commit-message envelope | changed subject/preamble, missing/extra blank line, unrelated/duplicate trailer or body, trailer reorder, text after trailers, missing/extra final LF | independent byte oracle and verifier reject every alternate envelope |
 | `T-33` | verified read-only legacy `{TOOL_DIR}` aliases and isolated Python launcher | PATH shadow, missing/extra alias, alias/target/launcher replacement before or during execution, writable tool dir, unknown nested executable | fail before acceptance; pre/post identity matches bound tool and launcher digests |
+| `T-34` | every command gets the complete from-empty environment, verified descendant tool directory and bound Git config manifest | unexpected inherited variable, `BASH_ENV`/`ENV`, Git override/config injection, HOME/XDG influence, alternate index/worktree/object dir, PATH shadow in Delphi guard, capsule/config mutation | fail before/during execution; exact allowlist and pre/post tool/config/capsule identities; scratch writes only under `{RUN_TMP}` |
 
 ### Pre-APROVADO RED Evidence Capture
 
@@ -611,7 +616,7 @@ Placeholder tokens are the whole-segment, case-insensitive set `PENDING|N/A|TBD|
 | Surface | Behavior / Scenario | Preconditions | Command | Required Before | Status |
 | --- | --- | --- | --- | --- | --- |
 | validator acceptance | source graph real válido | consolidated branch@sha | `python3 foundation_documentation/deterministic/validate_foundation_lifecycle.py --root foundation_documentation` | Local-Implemented | planned |
-| unittest/mutations | `T-01..T-33` | isolated temporary fixtures | `python3 -m unittest discover -s foundation_documentation/deterministic/tests -p 'test_*.py'` | Local-Implemented | planned |
+| unittest/mutations | `T-01..T-34` | isolated temporary fixtures | `python3 -m unittest discover -s foundation_documentation/deterministic/tests -p 'test_*.py'` | Local-Implemented | planned |
 | legacy transition matrix | pre-migration baseline runs ST-01 `VAL-01/02/08/10`; candidate/terminal Git layer runs `VAL-01/08/10`; `VAL-02` is superseded after approved schema/target mutation | exact contracts read from completed ST-01 TODO; phase identified deterministically | phase matrix `D-19/VAL-07/T-23` + new validator/tests | before delivery reviews | planned |
 | terminal-tree confirmation | permanent checks stay green after atomic move/retarget/cutover | read-only materialization of captured tree OID with `active XOR completed`; unchanged index/OID proof and no relevant divergence | validator + unittest on materialized bytes; compatible guards there; Git-metadata guards against the same index/tree OID | before closeout commit | planned |
 | immutable publication | committed tree equals validated staged tree and terminal outcomes are immutably self-attested outside that tree | commit body contains deterministic attestation manifest; trailers contain tree OID and manifest digest | `--verify-attestation --commit HEAD`; verify `HEAD^{tree}`, clean tree and remote ref equality; do not claim externally reproducible execution proof | Production-Ready | planned |
@@ -623,7 +628,7 @@ Placeholder tokens are the whole-segment, case-insensitive set `PENDING|N/A|TBD|
 
 ## Plan Review Gate
 
-- **Status:** `exploratory convergence running — R-06 integrated into provisional D-01..D-37; R-07 required`
+- **Status:** `exploratory convergence running — R-07 integrated into provisional D-01..D-38; R-08 required`
 - **Required lenses:** Architecture, Code Quality, Tests, Performance, Security, Elegance, Structural Soundness.
 - **Expected focus:** evitar parser frágil, catálogo duplicado, cobertura superficial, bypass histórico e expansão para CI.
 
@@ -631,7 +636,7 @@ Placeholder tokens are the whole-segment, case-insensitive set `PENDING|N/A|TBD|
 
 - [x] Architecture — canonical membership, state-conditioned grammar, immutable identifiers and validated-tree closeout integrated.
 - [x] Code Quality — narrow grammar, confinement and diagnostics contract added.
-- [x] Tests — test-first and `T-01..T-33` matrix added.
+- [x] Tests — test-first and `T-01..T-34` matrix added.
 - [x] Performance — bounded linear scan; no specialized lane triggered.
 - [x] Security — root/symlink confinement and redaction made mandatory.
 - [x] Elegance — one project-owned stdlib validator; no parallel catalog.
@@ -667,7 +672,7 @@ Placeholder tokens are the whole-segment, case-insensitive set `PENDING|N/A|TBD|
 - **Issue ID:** `PLAN-26` — wholesale VAL-02 retirement hid controls outside the new source graph (`high`). Option A: per-control replaced/retired/retained map (recommended); Option B: impossible wholesale parity; Option C: silent retirement. **Resolution:** integrated into `D-26`, transition map, `T-23`.
 - **Issue ID:** `PLAN-27` — attestation bytes lacked an executable command registry and could overstate independent proof (`high`). Option A: closed runner/verifier interface plus explicit self-attestation boundary (recommended); Option B: retain raw outputs externally (new artifact authority); Option C: unverifiable prose. **Resolution:** integrated into `D-27`, byte grammar, `VAL-09`, `T-22/T-24`.
 - **Issue ID:** `PLAN-28` — any confined link could satisfy `Exit-Gate-Met` (`high`). Option A: require completed tactical TODO proof and close optional links to canonical module/contract owners (recommended); Option B: broad links plus semantic review; Option C: prose-only. **Resolution:** integrated into `D-28`, source graph, `DOD-07`, `T-16`.
-- **Issue ID:** `PLAN-29` — argv and output digests did not bind external implementation bytes or execution substrate (`high`). Option A: closed contexts plus Foundation/Delphi/Python/Git direct provenance and an explicit non-hermetic boundary (recommended); Option B: downgrade external guards to advisory; Option C: claim hermeticity without evidence. **Resolution:** integrated into `D-29`, `S-13`, attestation grammar, `VAL-08/09`, `T-24`.
+- **Issue ID:** `PLAN-29` — argv and output digests did not bind external implementation bytes or execution substrate (`high`). Option A: closed contexts plus Foundation/Delphi/direct-toolchain provenance and an explicit non-hermetic boundary (recommended); Option B: downgrade external guards to advisory; Option C: claim hermeticity without evidence. **Resolution:** integrated into `D-29`, `S-13`, attestation grammar, `VAL-08/09`, `T-24`.
 - **Issue ID:** `PLAN-30` — roadmap published a broader evidence rule while lifecycle/validator planned a closed one (`high`). Option A: lifecycle owns semantics and roadmap links to it without duplicating the rule (recommended); Option B: duplicate exact rules; Option C: hidden validator-only semantics. **Resolution:** integrated into `D-30`, expected paths, source graph, `DOD-06`, `T-26`.
 - **Issue ID:** `PLAN-31` — registry named commands but left argv, substitutions and digest domains to post-approval implementation (`high`). Option A: freeze the complete table and closed token grammar now (recommended); Option B: implementation-owned registry semantics; Option C: unhashed transient paths. **Resolution:** integrated into `D-31`, approved registry section, `T-27`.
 - **Issue ID:** `PLAN-32` — a single validator file would combine parser, runner, provenance and codec responsibilities (`medium`). Option A: thin CLI plus three bounded internal modules and parallel test seams (recommended); Option B: monolith; Option C: open-ended package. **Resolution:** integrated into `D-32`, expected paths and touched surfaces.
@@ -676,6 +681,7 @@ Placeholder tokens are the whole-segment, case-insensitive set `PENDING|N/A|TBD|
 - **Issue ID:** `PLAN-35` — bound Python executable still admitted mutable startup path/user customization (`high`). Option A: closed unset/set overlay plus `-E -s -S -B` (recommended); Option B: bind an entire virtualenv; Option C: call it transitive risk. **Resolution:** integrated into `D-35`, registry and `T-31`.
 - **Issue ID:** `PLAN-36` — attestation payload grammar omitted the surrounding Git message byte envelope (`high`). Option A: exact subject/body/trailer/final-LF grammar (recommended); Option B: arbitrary preamble/trailers; Option C: rely on Git heuristics. **Resolution:** integrated into `D-36`, byte grammar and `T-32`.
 - **Issue ID:** `PLAN-37` — legacy shell payloads could PATH-resolve different binaries from those attested (`high`). Option A: verified private read-only tool directory and isolated Python launcher (recommended); Option B: rewrite historical scripts; Option C: trust ambient PATH. **Resolution:** integrated into `D-37`, environment contract and `T-33`.
+- **Issue ID:** `PLAN-38` — non-legacy guards and Bash/Git startup still admitted ambient environment and child lookup (`high`). Option A: construct all child environments from a complete allowlist, extend verified tool dir globally and bind local Git config (recommended); Option B: enumerate only known risky vars; Option C: treat controllable inputs as transitive risk. **Resolution:** integrated into `D-38`, payload/environment contract and `T-34`.
 
 ### Failure Modes & Edge Cases
 
@@ -695,9 +701,9 @@ Placeholder tokens are the whole-segment, case-insensitive set `PENDING|N/A|TBD|
 
 ## Additional Architectural Opinions
 
-- **Needed:** `yes — exploratory R-07 before final validation; formal rerun after final freeze`
-- **Why ambiguity remains:** R-06 closed direct/nested execution identity and the complete commit-message envelope; convergence is not yet proven.
-- **Opinion count:** `R-01 through R-06: three fresh exploratory reviewers each completed with material findings in the round aggregate; R-07 pending`
+- **Needed:** `yes — exploratory R-08 before final validation; formal rerun after final freeze`
+- **Why ambiguity remains:** R-07 closed inherited environments, descendant tool lookup and repository config influence for every command class; convergence is not yet proven.
+- **Opinion count:** `R-01 through R-07: three fresh exploratory reviewers each completed with material findings in the round aggregate; R-08 pending`
 - **Package mode:** `bounded-file-set`
 - **Internal reviewer mandate:** `required after freeze; reviewer cannot implement`
 - **Required lenses:** `correctness|performance|elegance|structural-soundness|operational-fit`
@@ -840,7 +846,7 @@ Predeclared for pre-approval readiness; reload and bind after `APROVADO`.
 | Decision ID | Status | Evidence | Notes |
 | --- | --- | --- | --- |
 | `D-01..D-20` | validated-historical | exact token `VALIDO D-01..D-20`; freeze `0cd991e6` | preserved directions; approval baseline superseded by convergence work |
-| `D-21..D-37` | provisional-convergence | R-01..R-06 integrated contract | do not request validation until convergence criterion is satisfied |
+| `D-21..D-38` | provisional-convergence | R-01..R-07 integrated contract | do not request validation until convergence criterion is satisfied |
 
 ## Module Decision Consistency Validation
 
@@ -908,6 +914,7 @@ Predeclared for pre-approval readiness; reload and bind after `APROVADO`.
 | `R6-ARCH-01` | high | release-blocker | integrate in current TODO | mutable Python startup paths are direct controllable execution inputs | fixed-pending-convergence | `D-35`, isolated flags/overlay and `T-31` |
 | `R6-CRIT1-01` | high | release-blocker | integrate in current TODO | canonical attestation requires a complete unambiguous Git message envelope | fixed-pending-convergence | `D-36`, exact envelope and `T-32` |
 | `R6-CRIT2-01` | high | release-blocker | integrate in current TODO | legacy nested tool lookup must execute the identities recorded in provenance | fixed-pending-convergence | `D-37`, verified private PATH/launcher and `T-33` |
+| `R7-ARCH-01/R7-CRIT1-01/R7-CRIT2-01` | high | release-blocker | integrate in current TODO | every child process and repository-config input must remain inside the attested execution boundary | fixed-pending-convergence | `D-38`, from-empty environment, global verified tool dir/config manifest and `T-34` |
 
 ## Security Risk Assessment
 
@@ -1000,9 +1007,9 @@ Predeclared for pre-approval readiness; reload and bind after `APROVADO`.
 ## TODO Closeout Disposition
 
 - **Disposition:** `keep-active`
-- **Disposition reason:** user-directed pre-freeze convergence is active; R-06 material decisions are integrated into provisional `D-01..D-37` and require R-07.
-- **Post-commit/push status:** R-06 convergence changes are local pending validation/publication checks; no implementation claim.
-- **Next path/status action:** validate and publish R-06 integration, run exploratory R-07, and continue until the convergence criterion is satisfied; then request one final full-set validation.
+- **Disposition reason:** user-directed pre-freeze convergence is active; R-07 material decisions are integrated into provisional `D-01..D-38` and require R-08.
+- **Post-commit/push status:** R-07 convergence changes are local pending validation/publication checks; no implementation claim.
+- **Next path/status action:** validate and publish R-07 integration, run exploratory R-08, and continue until the convergence criterion is satisfied; then request one final full-set validation.
 
 ## Commands
 
