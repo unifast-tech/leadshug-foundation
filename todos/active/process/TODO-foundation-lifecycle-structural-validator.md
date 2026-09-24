@@ -35,12 +35,12 @@ O lifecycle da Foundation exige um validator permanente quando backlog, decisõe
 - **Current delivery stage:** `Pending`
 - **Tactical TODO lifecycle state:** `Review`
 - **Qualifiers:** `none`
-- **Next exact step:** obter validação humana das decisões ampliadas `D-01..D-14`, publicar nova baseline e repetir os reviews sobre o pacote completo.
+- **Next exact step:** publicar a replacement baseline congelada de `D-01..D-14` e repetir os reviews sobre o pacote completo.
 
 ## Active Work State
 
 - **Work state:** `review`
-- **Why this state now:** os full-owner reviews encontraram `AR-F01..AR-F05` e `F-18..F-21`; os findings materiais foram integrados e invalidaram a baseline `D-01..D-11`.
+- **Why this state now:** a autoridade humana validou `D-01..D-14`; a replacement baseline está congelada localmente e precisa ser publicada antes dos full-owner reviews renovados.
 - **Exit condition:** decisões validadas, baseline congelada/publicada, reviews e guards pré-aprovação verdes, seguidos de `APROVADO` explícito ou cancelamento com racional.
 
 ## Trigger Evidence
@@ -241,26 +241,24 @@ Placeholder tokens are the whole-segment, case-insensitive set `PENDING|N/A|TBD|
 
 ## Decision Pending
 
-| Decision ID | Expanded Recommended Direction | Review Finding Source | Human Validation Needed |
-| --- | --- | --- | --- |
-| `D-01` | Keep the explicit BLG/DEC source graph and exclusions already validated. | preserved | reconfirm boundary |
-| `D-02` | Extend the v1 trust kernel to include `Immutable identifiers` and exact ASCII slug grammar, without live records. | `AR-F05` | confirm trust-root extension |
-| `D-03` | Keep read-only/fail-closed behavior, confinement, byte preservation and redacted diagnostics. | preserved | reconfirm safety |
-| `D-04` | Canonicalize root-level current-decision membership in `decisions/README.md`, then require exact index/file equality; subdirectories remain historical. | `AR-F03` | confirm canonical membership rule |
-| `D-05` | Keep local-only validation and CI-equivalent `n/a`. | preserved | reconfirm adoption stage |
-| `D-06` | Keep Python stdlib + unittest, test-first, independent oracles and mutation matrix. | preserved | reconfirm stack/testing |
-| `D-07` | Keep Foundation ownership, routine-executor implementation and no Delphi changes. | preserved | reconfirm routing |
-| `D-08` | Replace post-commit mutation with a terminal staged-tree protocol: assemble final tree, run all gates, capture tree OID, commit it unchanged with `Validated-Tree` trailer, verify exact tree and push unchanged. | `AR-F04`, `F-20` | confirm terminal commit protocol |
-| `D-09` | Keep positional target/evidence mapping and explicit `PENDING`, refined by the state grammar below. | preserved + `F-19` | confirm mapping contract |
-| `D-10` | Keep prose dependencies nonempty and only explicit paths/fragments resolvable. | preserved | reconfirm dependency grammar |
-| `D-11` | Keep the constrained ASCII anchor dialect. | preserved | reconfirm anchor dialect |
-| `D-12` | Extend decision records to seven columns with `Successor decision` and enforce the state-conditioned Proposed/Accepted/Superseded/Rejected grammar plus closed placeholder dialect. | `AR-F02`, `F-19` | confirm schema/state rules |
-| `D-13` | Require `Exit-Gate-Met` roadmap rows to contain at least one confined relative evidence link in `Exit gate`; `Open` rows retain nonempty prose. | `AR-F02` | confirm roadmap state rule |
-| `D-14` | Admit the ST-01 decision record as an expected closeout change and atomically retarget `DEC-validator-adoption-trigger` from active to completed TODO path/evidence in the validated final tree. | `F-18` | confirm closeout target relocation |
+- `none — D-01..D-14 validated by Gabriel/user on 2026-09-23 with exact phrase VALIDO D-01..D-14`
 
 ## Decisions
 
-- `pending human validation of expanded D-01..D-14`
+- [x] `D-01` Keep the explicit BLG/DEC source graph and its declared exclusions.
+- [x] `D-02` Include `Immutable identifiers` and the exact ASCII slug grammar in bootstrap trust kernel v1, without live records.
+- [x] `D-03` Enforce read-only/fail-closed behavior, root confinement, byte preservation and redacted diagnostics.
+- [x] `D-04` Canonicalize root-level current-decision membership in `decisions/README.md` and require exact index/file equality; keep subdirectories historical.
+- [x] `D-05` Keep adoption local-only and CI-equivalent `n/a` in this slice.
+- [x] `D-06` Use Python standard library plus unittest, test-first independent oracles and the mutation matrix.
+- [x] `D-07` Keep ownership in Foundation, implementation routed to `routine-executor`, and make no Delphi changes.
+- [x] `D-08` Use the terminal staged-tree protocol: validate the final tree, capture its OID, commit it unchanged with `Validated-Tree`, verify exact equality and push unchanged.
+- [x] `D-09` Enforce positional target/evidence mapping and explicit `PENDING` under the state grammar.
+- [x] `D-10` Require nonempty prose dependencies and resolve only explicit paths/fragments.
+- [x] `D-11` Use the constrained ASCII anchor dialect.
+- [x] `D-12` Extend decision records to seven columns with `Successor decision` and enforce the state-conditioned grammar plus closed placeholder dialect.
+- [x] `D-13` Require `Exit-Gate-Met` roadmap rows to carry at least one confined relative evidence link in `Exit gate`; allow nonempty prose for `Open`.
+- [x] `D-14` Admit the ST-01 decision record as an expected closeout change and atomically retarget `DEC-validator-adoption-trigger` to the completed TODO path/evidence in the validated final tree.
 
 ## Module Decision Baseline Snapshot
 
@@ -276,8 +274,9 @@ Placeholder tokens are the whole-segment, case-insensitive set `PENDING|N/A|TBD|
 ## Decision Baseline
 
 - **Prior freezes:** `D-01..D-08@b685fb52` invalidated by `AR-01..05/F-01..11`; `D-01..D-10@504a9785` invalidated by `AR-R01..AR-R05/F-12..F-17`; `D-01..D-11@2562f62e` invalidated by `AR-F01..AR-F05/F-18..F-21`.
-- **Freeze status:** `not_frozen — expanded D-01..D-14 pending renewed validation`
-- **Frozen decisions:** `none current`
+- **Freeze status:** `frozen-locally — publication required before renewed reviews`
+- **Frozen decisions:** `D-01..D-14`
+- **Current validation evidence:** Gabriel/user, 2026-09-23, exact phrase `VALIDO D-01..D-14`; freezes the expanded replacement decision set but does not grant implementation authority.
 - **Latest prior validation evidence:** Gabriel/user, 2026-09-23, exact phrase `VALIDO D-01..D-11`; preserved as provenance but superseded by material full-owner findings.
 - **Prior validation evidence:** Gabriel/user, 2026-09-23, exact phrase `VALIDO D-01..D-10`; preserved as provenance but superseded by the material review findings.
 - **Historical validation evidence:** Gabriel/user, 2026-09-23, phrase `APROVADO`; preserved as provenance, not execution authority.
@@ -357,8 +356,8 @@ Placeholder tokens are the whole-segment, case-insensitive set `PENDING|N/A|TBD|
 - **Baseline branch:** `main`
 - **Baseline commit:** `2562f62e86cbc15bcaa7865b652e240cb49fcb0e`
 - **Baseline push reference:** `origin/main contains 2562f62e86cbc15bcaa7865b652e240cb49fcb0e; freeze bookkeeping published through 490096774f22fd2fe7c97a88274ca179747d4266`
-- **Gate status:** `findings_integrated`
-- **Findings summary:** published `D-01..D-11` enabled full-owner reviews; their material findings invalidated it. Expanded `D-01..D-14` remain unfrozen pending validation.
+- **Gate status:** `frozen-locally-pending-publication`
+- **Findings summary:** published `D-01..D-11` was invalidated by material findings; validated replacement `D-01..D-14` is frozen locally and awaits publication before renewed reviews.
 - **Evidence / reference:** commits `2562f62e86cbc15bcaa7865b652e240cb49fcb0e` and `490096774f22fd2fe7c97a88274ca179747d4266`, pushed to `origin/main` on 2026-09-23.
 - **Waiver authority / reference:** `n/a`
 
@@ -378,7 +377,7 @@ Placeholder tokens are the whole-segment, case-insensitive set `PENDING|N/A|TBD|
 
 ## Questions To Close
 
-- `Q-03` A autoridade humana valida `D-01..D-14`, incluindo schema por estado, target relocation e terminal validated-tree protocol?
+- `none — Q-03 closed by exact token VALIDO D-01..D-14 on 2026-09-23`
 
 ## Assumptions Preview
 
@@ -615,8 +614,8 @@ Placeholder tokens are the whole-segment, case-insensitive set `PENDING|N/A|TBD|
 - **Execution authority:** `not_granted`
 - **Pre-gate human token:** Gabriel/user, 2026-09-23, `APROVADO`; it validated the superseded `D-01..D-08` only. Material findings require renewed validation and a new post-gate `APROVADO`.
 - **Renewed validation token:** Gabriel/user, 2026-09-23, exact phrase `VALIDO D-01..D-10`; validates the revised decisions, but does not grant implementation authority.
-- **Renewal status:** `D-01..D-11 validation superseded by AR-F01..AR-F05/F-18..F-21; D-01..D-14 require a new validation token.`
-- **Latest validation token:** Gabriel/user, 2026-09-23, exact phrase `VALIDO D-01..D-11`; validates the reconverged decisions, but does not grant implementation authority.
+- **Renewal status:** `D-01..D-14 validation satisfied; replacement freeze/publication and renewed planning gates remain pending.`
+- **Latest validation token:** Gabriel/user, 2026-09-23, exact phrase `VALIDO D-01..D-14`; validates and freezes the expanded decisions, but does not grant implementation authority.
 
 ## Rules Acknowledgement / Ingestion
 
@@ -655,7 +654,7 @@ Predeclared for pre-approval readiness; reload and bind after `APROVADO`.
 
 | Decision ID | Status | Evidence | Notes |
 | --- | --- | --- | --- |
-| `D-01..D-14` | pending-validation | expanded TODO contract | expand 1:1 only after replacement freeze and approval |
+| `D-01..D-14` | validated-frozen-locally | exact token `VALIDO D-01..D-14` | publish replacement baseline, then expand 1:1 during authorized implementation |
 
 ## Module Decision Consistency Validation
 
