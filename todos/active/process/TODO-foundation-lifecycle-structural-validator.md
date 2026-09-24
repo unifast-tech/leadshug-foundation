@@ -35,12 +35,12 @@ O lifecycle da Foundation exige um validator permanente quando backlog, decisõe
 - **Current delivery stage:** `Pending`
 - **Tactical TODO lifecycle state:** `Review`
 - **Qualifiers:** `none`
-- **Next exact step:** obter o token humano exato `VALIDO D-01..D-46`; então congelar/publicar a replacement baseline e executar os gates formais pós-freeze antes de solicitar `APROVADO`.
+- **Next exact step:** capturar/publicar o replacement freeze de `D-01..D-46` e executar os gates formais pós-freeze antes de solicitar `APROVADO`.
 
 ## Active Work State
 
 - **Work state:** `review`
-- **Why this state now:** R-11 completou arquitetura + duas críticas independentes sem decisão material nova; a convergência pré-freeze foi satisfeita em `D-01..D-46` e aguarda validação humana integral.
+- **Why this state now:** R-11 convergiu e Gabriel/user validou integralmente `D-01..D-46` em 2026-09-24; replacement freeze/publicação e gates formais estão em andamento.
 - **Exit condition:** decisões validadas, baseline congelada/publicada, reviews e guards pré-aprovação verdes, seguidos de `APROVADO` explícito ou cancelamento com racional.
 
 ## Trigger Evidence
@@ -361,32 +361,32 @@ Placeholder tokens are the whole-segment, case-insensitive set `PENDING|N/A|TBD|
 - [x] `D-18` Bind post-validation outcomes outside the tree in an immutable structured commit attestation, while keeping only protocol/pre-terminal evidence in-tree.
 - [x] `D-19` Replace ambiguous legacy “applicability” with the explicit phase/supersession matrix for ST-01 `VAL-01/02/08/10`.
 - [x] `D-20` Require complete fixture-tree manifest equality for the read-only oracle on both success and failure.
-- [ ] `D-21` Preserve immediate successor history, bind link label/destination to the unique successor owner and validate an acyclic multi-hop chain terminating at Accepted+structurally-eligible.
-- [ ] `D-22` Enforce Rejected retained-target/exact-PENDING/N/A shape and keep unverifiable transition history review-owned.
-- [ ] `D-23` Separate portable filesystem-content and Git-backed tracked-mode read-only oracles.
-- [ ] `D-24` Consolidate final decision semantics into lifecycle/index owners before validator enforcement.
-- [ ] `D-25` Use the closed canonical `Validation-Attestation-v1` byte grammar and independent golden oracle.
-- [ ] `D-26` Classify every legacy VAL-02 subcontrol as replaced or intentionally retired, retaining VAL-01/08/10 through terminal validation.
-- [ ] `D-27` Use a closed executable attestation interface/argv registry and state its self-attestation trust boundary without overstating independent proof.
-- [ ] `D-28` Restrict Exit-Gate-Met evidence to completed tactical TODOs plus optional canonical module/contract evidence, with at least one completed TODO mandatory.
-- [ ] `D-29` Bind every attested command to a closed execution context and direct tool provenance, with an explicit non-hermetic residual boundary.
-- [ ] `D-30` Consolidate roadmap gate-evidence semantics in lifecycle and make system roadmap point to that owner without duplicating the rule.
-- [ ] `D-31` Freeze the approval-complete command registry, token substitution grammar and separate template/resolved-argv digest domains.
-- [ ] `D-32` Use a thin CLI plus bounded parser/attestation/runner modules and independently separated test files.
-- [ ] `D-33` Add a terminal secret scan whose input set exactly covers every final delivered regular file; keep legacy VAL-10 as compatibility only.
-- [ ] `D-34` Bind the fixed no-bytecode environment and Python `-B` argv into registry/attestation and prove no writes for every materialized command.
-- [ ] `D-35` Isolate direct Python startup from mutable environment/user-site customization and bind the closed overlay/flags.
-- [ ] `D-36` Enforce one exact complete commit-message envelope for Validation-Attestation-v1.
-- [ ] `D-37` Route nested legacy executable lookup through a verified read-only tool directory with pre/post identity proof.
-- [ ] `D-38` Build all child environments from a complete allowlist and close descendant tool/Git configuration identity across every command context.
-- [ ] `D-39` Reject local Git config include/includeIf directives instead of admitting unbound external config graphs.
-- [ ] `D-40` Bind command time/output limits, process-group termination and cleanup semantics into the registry.
-- [ ] `D-41` Run tree-consistency from materialized code and reject worktree/index divergence before that code executes.
-- [ ] `D-42` Make execution context and cwd orthogonal, with one explicit materialized-code foundation-index bridge.
-- [ ] `D-43` Require a POSIX Linux/WSL terminal substrate preflight; reserve Windows Git for publication only.
-- [ ] `D-44` Enforce only observable current-state rejection/supersession structure and avoid historical transition claims.
-- [ ] `D-45` Execute post-commit attestation verification exclusively from a read-only materialization of the captured HEAD tree.
-- [ ] `D-46` Apply the same closed resource/execution boundary to all executable provenance probes.
+- [x] `D-21` Preserve immediate successor history, bind link label/destination to the unique successor owner and validate an acyclic multi-hop chain terminating at Accepted+structurally-eligible.
+- [x] `D-22` Enforce Rejected retained-target/exact-PENDING/N/A shape and keep unverifiable transition history review-owned.
+- [x] `D-23` Separate portable filesystem-content and Git-backed tracked-mode read-only oracles.
+- [x] `D-24` Consolidate final decision semantics into lifecycle/index owners before validator enforcement.
+- [x] `D-25` Use the closed canonical `Validation-Attestation-v1` byte grammar and independent golden oracle.
+- [x] `D-26` Classify every legacy VAL-02 subcontrol as replaced or intentionally retired, retaining VAL-01/08/10 through terminal validation.
+- [x] `D-27` Use a closed executable attestation interface/argv registry and state its self-attestation trust boundary without overstating independent proof.
+- [x] `D-28` Restrict Exit-Gate-Met evidence to completed tactical TODOs plus optional canonical module/contract evidence, with at least one completed TODO mandatory.
+- [x] `D-29` Bind every attested command to a closed execution context and direct tool provenance, with an explicit non-hermetic residual boundary.
+- [x] `D-30` Consolidate roadmap gate-evidence semantics in lifecycle and make system roadmap point to that owner without duplicating the rule.
+- [x] `D-31` Freeze the approval-complete command registry, token substitution grammar and separate template/resolved-argv digest domains.
+- [x] `D-32` Use a thin CLI plus bounded parser/attestation/runner modules and independently separated test files.
+- [x] `D-33` Add a terminal secret scan whose input set exactly covers every final delivered regular file; keep legacy VAL-10 as compatibility only.
+- [x] `D-34` Bind the fixed no-bytecode environment and Python `-B` argv into registry/attestation and prove no writes for every materialized command.
+- [x] `D-35` Isolate direct Python startup from mutable environment/user-site customization and bind the closed overlay/flags.
+- [x] `D-36` Enforce one exact complete commit-message envelope for Validation-Attestation-v1.
+- [x] `D-37` Route nested legacy executable lookup through a verified read-only tool directory with pre/post identity proof.
+- [x] `D-38` Build all child environments from a complete allowlist and close descendant tool/Git configuration identity across every command context.
+- [x] `D-39` Reject local Git config include/includeIf directives instead of admitting unbound external config graphs.
+- [x] `D-40` Bind command time/output limits, process-group termination and cleanup semantics into the registry.
+- [x] `D-41` Run tree-consistency from materialized code and reject worktree/index divergence before that code executes.
+- [x] `D-42` Make execution context and cwd orthogonal, with one explicit materialized-code foundation-index bridge.
+- [x] `D-43` Require a POSIX Linux/WSL terminal substrate preflight; reserve Windows Git for publication only.
+- [x] `D-44` Enforce only observable current-state rejection/supersession structure and avoid historical transition claims.
+- [x] `D-45` Execute post-commit attestation verification exclusively from a read-only materialization of the captured HEAD tree.
+- [x] `D-46` Apply the same closed resource/execution boundary to all executable provenance probes.
 
 ## Module Decision Baseline Snapshot
 
@@ -402,9 +402,10 @@ Placeholder tokens are the whole-segment, case-insensitive set `PENDING|N/A|TBD|
 ## Decision Baseline
 
 - **Prior freezes:** `D-01..D-08@b685fb52` invalidated by `AR-01..05/F-01..11`; `D-01..D-10@504a9785` invalidated by `AR-R01..AR-R05/F-12..F-17`; `D-01..D-11@2562f62e` invalidated by `AR-F01..AR-F05/F-18..F-21`; `D-01..D-14@e26d7183` invalidated by `AR-N01/F-22..F-24`; `D-01..D-17@3dce63b3` invalidated by `C2-F01/C2-F02/C2-F04`; `D-01..D-20@0cd991e6` invalidated by `C3-F01..C3-F03`.
-- **Freeze status:** `not_frozen — R-11 convergence clean; provisional D-01..D-46 await exact human validation token`
-- **Frozen decisions:** `none current; D-01..D-20 remain validated provenance; D-01..D-46 are the converged provisional replacement set`
-- **Current validation evidence:** Gabriel/user, 2026-09-24, exact phrase `VALIDO D-01..D-20`; preserved as provenance but superseded for approval by material review findings that introduced `D-21..D-23`.
+- **Freeze status:** `frozen — D-01..D-46 validated; replacement freeze commit pending capture/publication`
+- **Frozen decisions:** `D-01..D-46`
+- **Current validation evidence:** Gabriel/user, 2026-09-24, exact phrase `VALIDO D-01..D-46`; validates the complete R-11-converged replacement set and does not grant implementation authority.
+- **Prior validation evidence:** Gabriel/user, 2026-09-24, exact phrase `VALIDO D-01..D-20`; preserved as provenance but superseded by the complete D-01..D-46 validation.
 - **Prior validation evidence:** Gabriel/user, 2026-09-24, exact phrase `VALIDO D-01..D-17`; preserved as provenance but superseded by material review findings that introduced `D-18..D-20`.
 - **Prior validation evidence:** Gabriel/user, 2026-09-23, exact phrase `VALIDO D-01..D-14`; preserved as provenance but superseded for approval by material review findings that introduced `D-15..D-17`.
 - **Latest prior validation evidence:** Gabriel/user, 2026-09-23, exact phrase `VALIDO D-01..D-11`; preserved as provenance but superseded by material full-owner findings.
@@ -512,7 +513,7 @@ Placeholder tokens are the whole-segment, case-insensitive set `PENDING|N/A|TBD|
 
 ## Questions To Close
 
-- `VALIDO D-01..D-46` — required to validate the converged replacement decision set; this token does not grant implementation authority.
+- `none — full-set validation is satisfied; next human token is APROVADO only after freeze-backed formal gates pass`
 
 ## Pre-Freeze Decision Convergence Cycle
 
@@ -665,7 +666,7 @@ Placeholder tokens are the whole-segment, case-insensitive set `PENDING|N/A|TBD|
 
 ## Plan Review Gate
 
-- **Status:** `exploratory convergence satisfied — R-11 clean; provisional D-01..D-46 await human validation`
+- **Status:** `decision set validated — D-01..D-46 frozen pending commit capture/publication and formal gates`
 - **Required lenses:** Architecture, Code Quality, Tests, Performance, Security, Elegance, Structural Soundness.
 - **Expected focus:** evitar parser frágil, catálogo duplicado, cobertura superficial, bypass histórico e expansão para CI.
 
@@ -850,8 +851,8 @@ Placeholder tokens are the whole-segment, case-insensitive set `PENDING|N/A|TBD|
 - **Execution authority:** `not_granted`
 - **Pre-gate human token:** Gabriel/user, 2026-09-23, `APROVADO`; it validated the superseded `D-01..D-08` only. Material findings require renewed validation and a new post-gate `APROVADO`.
 - **Renewed validation token:** Gabriel/user, 2026-09-23, exact phrase `VALIDO D-01..D-10`; validates the revised decisions, but does not grant implementation authority.
-- **Renewal status:** `R-11 convergence criterion satisfied; request exact token VALIDO D-01..D-46, then freeze/publish and rerun formal planning gates.`
-- **Latest validation token:** Gabriel/user, 2026-09-24, exact phrase `VALIDO D-01..D-20`; validated and froze the historical baseline, now superseded for approval by `D-21..D-23`; it never granted implementation authority.
+- **Renewal status:** `D-01..D-46 validated; replacement freeze/publication and formal planning gates are required before APROVADO.`
+- **Latest validation token:** Gabriel/user, 2026-09-24, exact phrase `VALIDO D-01..D-46`; validates the frozen decision set and never grants implementation authority.
 
 ## Rules Acknowledgement / Ingestion
 
@@ -890,8 +891,7 @@ Predeclared for pre-approval readiness; reload and bind after `APROVADO`.
 
 | Decision ID | Status | Evidence | Notes |
 | --- | --- | --- | --- |
-| `D-01..D-20` | validated-historical | exact token `VALIDO D-01..D-20`; freeze `0cd991e6` | preserved directions; approval baseline superseded by convergence work |
-| `D-21..D-46` | provisional-converged | R-01..R-11; R-11 three-lane clean round | awaiting exact full-set validation token before freeze |
+| `D-01..D-46` | validated-frozen | exact token `VALIDO D-01..D-46`; R-11 three-lane clean convergence | replacement freeze commit/publication and formal adherence rerun pending |
 
 ## Module Decision Consistency Validation
 
