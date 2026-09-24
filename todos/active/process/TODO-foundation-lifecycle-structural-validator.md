@@ -35,7 +35,7 @@ O lifecycle da Foundation exige um validator permanente quando backlog, decisõe
 - **Current delivery stage:** `Pending`
 - **Tactical TODO lifecycle state:** `Review`
 - **Qualifiers:** `none`
-- **Next exact step:** publicar o estado integrado dos reviews, obter validação humana do conjunto ampliado `D-01..D-17`, publicar a replacement baseline e repetir somente os gates afetados.
+- **Next exact step:** obter validação humana do conjunto ampliado `D-01..D-17`, publicar a replacement baseline e repetir somente os gates afetados.
 
 ## Active Work State
 
@@ -173,7 +173,7 @@ Preencher somente se o guard retornar `no-go`; qualquer novo path ou change type
 
 - **Decision:** `required only for publication/Production-Ready; not needed for local implementation`
 - **Rationale:** parser/tests usam apenas arquivos locais, mas freeze e closeout exigem `origin/main`; GitHub/origin deve estar acessível e sincronizado antes dessas alegações.
-- **Current evidence:** `origin/main` contains the historical `D-01..D-14` freeze and bookkeeping through `2db06a8b74df45b28adc64f7b1b54d2dd21fd634`; the expanded `D-01..D-17` contract must be published after validation as a new freeze.
+- **Current evidence:** `origin/main` contains the historical `D-01..D-14` freeze and the expanded pending-validation `D-01..D-17` contract through `92637bf5cbaef7568498272cc20a59dc9d0332be`; validation must precede its new freeze.
 
 ## Profile Scope & Handoffs
 
@@ -806,8 +806,8 @@ Predeclared for pre-approval readiness; reload and bind after `APROVADO`.
 
 - **Disposition:** `keep-active`
 - **Disposition reason:** renewed material findings were integrated as `D-15..D-17`; the expanded set requires renewed human validation, replacement freeze and affected fresh reviews.
-- **Post-commit/push status:** `D-01..D-14` was validated/frozen/published and reviewed; `AR-N01..AR-N02/F-22..F-25` are integrated locally into the pending `D-01..D-17` contract; no implementation claim.
-- **Next path/status action:** publish the integrated review state, obtain renewed validation of `D-01..D-17`, publish a replacement freeze and rerun affected planning-side gates; no implementation before a later post-gate `APROVADO` and authority guard `go`.
+- **Post-commit/push status:** `D-01..D-14` was validated/frozen/published and reviewed; `AR-N01..AR-N02/F-22..F-25` are integrated and published through `92637bf5` in the pending `D-01..D-17` contract; no implementation claim.
+- **Next path/status action:** obtain renewed validation of `D-01..D-17`, publish a replacement freeze and rerun affected planning-side gates; no implementation before a later post-gate `APROVADO` and authority guard `go`.
 
 ## Commands
 
