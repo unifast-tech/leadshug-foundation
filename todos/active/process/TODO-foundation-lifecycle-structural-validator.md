@@ -36,12 +36,12 @@ Create one Python standard-library CLI with a small parser module and focused un
 - **Current delivery stage:** `Pending`
 - **Tactical TODO lifecycle state:** `Review`
 - **Qualifiers:** `none`
-- **Next exact step:** run the remaining pre-approval critique/coherence/scope/authority gates and request `APROVADO` before implementation.
+- **Next exact step:** obtain renewed human validation with exact token `VALIDO SD-01..SD-10 POS-REVIEW`, refresh the freeze and rerun the affected final guards before requesting `APROVADO`.
 
 ## Active Work State
 
 - **Work state:** `review`
-- **Why this state now:** the user-validated simplified contract is frozen and its architecture opinion converged; the remaining pre-approval gates are in progress.
+- **Why this state now:** architecture/critique converged and assumption coherence is green, but scope drift detected the post-review normalization of Assumptions Preview and requires renewed human validation.
 - **Exit condition:** simplified decisions validated/frozen, pre-approval gates green, explicit `APROVADO`, implementation/evidence complete, and TODO promoted to `completed/`.
 
 ## Trigger Evidence
@@ -297,7 +297,7 @@ The admitted current decision file uses one nonempty file-level `Provenance` fie
 
 - **Historical design:** D-01..D-55 and freeze `3f351daf` remain in Git history but are not the active implementation contract.
 - **Retirement rationale:** D-25..D-55 expanded a documentation validator into a provenance/runner subsystem without a demonstrated need; related special-tree/attestation decisions retire with it.
-- **Replacement status:** `SD-01..SD-10 validated by the user on 2026-09-24`
+- **Replacement status:** `SD-01..SD-10 validated by the user on 2026-09-24; post-review refinements pending renewed validation`
 - **Freeze status:** `refreshed and frozen at pushed commit e5bb735a after final residual cleanup`
 - **Validation evidence:** exact user token `VALIDO SD-01..SD-10`
 - **Implementation authority:** `none`
@@ -367,24 +367,24 @@ The admitted current decision file uses one nonempty file-level `Provenance` fie
 - **Trigger stage:** `after formal review convergence and before APROVADO`
 - **Baseline source:** `Review Baseline Freeze -> Baseline commit`
 - **Guard command:** `python3 delphi-ai/tools/review_scope_drift_guard.py --todo foundation_documentation/todos/active/process/TODO-foundation-lifecycle-structural-validator.md`
-- **Gate status:** `not_run`
-- **Findings summary:** `pending`
-- **Evidence / reference:** `pending formal review`
+- **Gate status:** `blocked`
+- **Findings summary:** `one changed material section (Assumptions Preview): A-01..A-05 handling was normalized from informal labels to Promote to Decision after reviews confirmed those boundaries are already frozen in SD decisions/scope; renewed human validation is required before approval resumes.`
+- **Evidence / reference:** `2026-09-24 review_scope_drift_guard no-go against e5bb735a; 1/22 material sections changed; no other material drift`
 - **Waiver authority / reference (required if waived):** `not applicable`
 
 ## Questions To Close
 
-- None before formal pre-approval review; the simplified set was validated with exact token `VALIDO SD-01..SD-10` on 2026-09-24.
+- Renewed validation of the post-review refinements: exact token `VALIDO SD-01..SD-10 POS-REVIEW`.
 
 ## Assumptions Preview
 
 | ID | Assumption | Evidence | If False | Confidence | Handling |
 | --- | --- | --- | --- | --- | --- |
-| `A-01` | `deterministic/` is the Foundation tooling surface. | directory + adoption decision | path/diff changes | High | promote as SD-06 |
-| `A-02` | Python 3 stdlib is available. | ST-01 checks/Delphi tools | runtime choice changes | High | keep |
-| `A-03` | canonical owners expose sufficient structure. | lifecycle/index/roadmap | bounded doc alignment | High | keep |
-| `A-04` | no Foundation CI must change now. | repository tree + simplification direction | separate CI TODO | High | promote as SD-10 |
-| `A-05` | product/runtime is unaffected. | expected diff/scope | split/renew approval | High | keep |
+| `A-01` | `deterministic/` is the Foundation tooling surface. | directory + adoption decision | path/diff changes | High | Promote to Decision |
+| `A-02` | Python 3 stdlib is available. | ST-01 checks/Delphi tools | runtime choice changes | High | Promote to Decision |
+| `A-03` | canonical owners expose sufficient structure. | lifecycle/index/roadmap | bounded doc alignment | High | Promote to Decision |
+| `A-04` | no Foundation CI must change now. | repository tree + simplification direction | separate CI TODO | High | Promote to Decision |
+| `A-05` | product/runtime is unaffected. | expected diff/scope | split/renew approval | High | Promote to Decision |
 
 ## Execution Plan
 
@@ -462,7 +462,7 @@ The admitted current decision file uses one nonempty file-level `Provenance` fie
 
 ## Plan Review Gate
 
-- **Status:** `formal critique findings integrated through additional scope reduction; fresh critique revalidation pending`
+- **Status:** `converged; architecture and critique gates have no blocking findings`
 - **Required lenses:** Architecture, Code Quality, Tests, Performance, Security, Elegance, Structural Soundness.
 - **Primary guardrail:** attestation, subprocess supervision, provenance, Registry-v1 or special commit mechanics require a separate demonstrated need/TODO.
 
@@ -508,8 +508,8 @@ The admitted current decision file uses one nonempty file-level `Provenance` fie
 - **Package mode:** `bounded-file-set`
 - **Critique isolation mode:** `fresh internal no-context reviewer`
 - **Critique status:** `findings_integrated`
-- **Findings summary:** `fresh critique blockers were integrated by removing unsupported successor automation, making system_roadmap.md the exclusive owner, defining a small link/confinement/diagnostic grammar, removing brittle symbol scanning and keeping read-only attempt detection as code-review evidence. First revalidation found two residual successor promises in VAL-03/SD-04; both were removed without scope expansion.`
-- **Evidence / reference:** `formal critique on 2026-09-24 against dc66744b/181cac8f; first revalidation against 728cb305/be9c6d24; final fresh revalidation pending after residual cleanup`
+- **Findings summary:** `fresh critique blockers were integrated by further reducing scope. Final fresh revalidation against e5bb735a/92c24770 returned approve_with_findings with no blocker. CF-01 (low) is Challenged as lexical only: OOS-03/SD-07/VAL-07 exclude an execution/toolchain provenance subsystem, while the explicitly retained file-level Provenance field is canonical decision metadata.`
+- **Evidence / reference:** `formal critique and two fresh revalidations on 2026-09-24; final position approve_with_findings; no critical/high/medium/blocking findings; performance, security, test-oracle independence, elegance and structural soundness accepted`
 - **Waiver authority / reference (required if waived):** `not applicable`
 
 ## Gate: Assumption Code Coherence
@@ -519,15 +519,15 @@ The admitted current decision file uses one nonempty file-level `Provenance` fie
 - **Trigger stage:** `after formal critique convergence and before APROVADO`
 - **Guard scope:** `A-01..A-05`
 - **Guard command:** `python3 delphi-ai/tools/assumption_code_coherence_guard.py --todo foundation_documentation/todos/active/process/TODO-foundation-lifecycle-structural-validator.md`
-- **Gate status:** `not_run`
-- **Findings summary:** `pending`
-- **Evidence / reference:** `pending formal critique`
+- **Gate status:** `no_material_findings`
+- **Findings summary:** `A-01..A-05 are no longer live assumptions: their boundaries are frozen in SD-01/SD-02/SD-06/SD-10 plus Scope/Out of Scope; no unsupported code assumption remains.`
+- **Evidence / reference:** `2026-09-24 assumption_code_coherence_guard outcome go; zero live assumptions; A-01..A-05 normalized to Promote to Decision`
 - **Waiver authority / reference (required if waived):** `not applicable`
 
 ## Approval
 
 - **Approved by:** `pending`
-- **Approval scope:** `pending architecture revalidation, critique and remaining pre-approval gates for SD-01..SD-10`
+- **Approval scope:** `blocked pending exact renewed validation VALIDO SD-01..SD-10 POS-REVIEW, refreshed freeze and final pre-approval guards`
 - **Execution not authorized by approval:** `CI/CD, product/runtime, Delphi changes, worktrees, attestation/provenance/runner infrastructure`
 - **Execution authority:** `not_granted`
 - **Prior tokens:** D-01..D-55 history is provenance only and does not authorize the replacement contract.
@@ -657,9 +657,9 @@ Predeclared for readiness; reload after `APROVADO`.
 ## TODO Closeout Disposition
 
 - **Disposition:** `keep-active`
-- **Disposition reason:** simplified SD-01..SD-10 direction remains validated; localized architecture findings were integrated and require refreshed freeze/revalidation before critique and approval.
-- **Post-commit/push status:** final residual cleanup is published at `foundation_documentation:main@e5bb735a`; refreshed freeze annotation is pending publication.
-- **Next path/status action:** publish the refreshed freeze annotation, rerun critique once, then run assumption/scope guards and authority preflight.
+- **Disposition reason:** post-review contract has no review blockers and assumption coherence is green, but scope drift requires renewed human validation before approval resumes.
+- **Post-commit/push status:** final reviewed freeze remains `e5bb735a`; post-review gate evidence and assumption normalization are local pending publication as a candidate baseline.
+- **Next path/status action:** publish the candidate, obtain `VALIDO SD-01..SD-10 POS-REVIEW`, refresh freeze, rerun scope/authority guards and request `APROVADO` if green.
 
 ## Commands
 
