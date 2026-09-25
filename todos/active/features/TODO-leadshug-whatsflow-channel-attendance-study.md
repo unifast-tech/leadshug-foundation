@@ -33,7 +33,7 @@ O `whatsflow_v2` contém soluções de conexão, inbox, departamentos, atendente
 ## Delivery Status Canon (Required)
 
 - **Current delivery stage:** `Pending`
-- **Qualifiers:** `conteúdo concluído; delivery gates e final review em fechamento`
+- **Qualifiers:** `Provisional`
 - **Next exact step:** executar a revisão final independente do pacote consolidado e, se limpa, passar os guards de conclusão e publicar o closeout em `completed/features/`.
 - **Current checkout identity:** `foundation_documentation:main@3a4819e236970415b2126c445ea0da572fbb5a4e` é o checkpoint final de conteúdo; diff `f2a1ad88..3a4819e2` tem SHA-256 `4f409805de2928c1bb344a56c7f28fe996a70a9f465b03de43cef80f8ce8fa05`. O pacote final registra também o checkpoint substantivo anterior `d1167a30`.
 
@@ -251,7 +251,7 @@ As lanes runtime `pcv-1` continuam `not_needed`; os itens abaixo são requisitos
 
 | From Profile | To Profile | Why the Handoff Exists | Touched Surfaces | Status / Evidence |
 | --- | --- | --- | --- | --- |
-| Strategic / CTO-Tech-Lead | Assurance / Tester-Quality | desafiar o modelo, rastreabilidade e conclusões sem contexto prévio | TODO e estudo | checkpoint atual: correção documental pós-R4; próximo checkpoint ainda sem SHA até commit; re-review obrigatório |
+| Strategic / CTO-Tech-Lead | Assurance / Tester-Quality | desafiar o modelo, rastreabilidade e conclusões sem contexto prévio | TODO e estudo | conteúdo em `3a4819e2`; TQA R8 e confirmação R6 limpas; final review R1 encontrou apenas `ST03-FR-R1-001..002`, integrados em metadados para novo review |
 
 ## Complexity
 
@@ -659,6 +659,8 @@ As fontes abaixo foram recarregadas após `APROVADO` e vinculadas ao escopo docu
 | `ST03-CONF-R5-001` | high | release-blocker | mesmo TODO | manifesto omitia funções serverless admitidas | closed / verified | confirmação R6 |
 | `ST03-CONF-R5-002` | medium | release-blocker | mesmo TODO | intervalos E-04/E-19 incompletos | closed / verified | confirmação R6 |
 | `ST03-CONF-R5-003` | medium | release-blocker | mesmo TODO | retry do provider confundido com recuperação interna | closed / verified | confirmação R6 |
+| `ST03-FR-R1-001` | medium | release-blocker | mesmo TODO | qualifier fora do enum canônico | integrated / pending re-review | final review R1; corrigido para `Provisional` |
+| `ST03-FR-R1-002` | medium | release-blocker | mesmo TODO | proveniência de handoff, segurança e findings estava stale | integrated / pending re-review | final review R1; campos atualizados nesta integração |
 
 ## Rule-Spirit Anti-Pattern Hunt
 
@@ -673,7 +675,7 @@ As fontes abaixo foram recarregadas após `APROVADO` e vinculadas ao escopo docu
 - **Why this risk level:** leitura de legado pode expor material sensível se a allowlist for ignorada; nenhum runtime muda.
 - **Attack surface in scope:** somente risco documental de segredo/PII.
 - **Attack simulation decision:** `not_needed`
-- **Review evidence:** revisão de conteúdo sensível planejada em `VAL-05`.
+- **Review evidence:** `VAL-05` passou por scan sanitizado e revisão manual do diff; TQA R8 e confirmação R6 não encontraram exposição sensível ou cópia indevida.
 - **Residual security risk:** evidência estática deve permanecer resumida e sanitizada.
 
 ## Performance & Concurrency Risk Assessment
@@ -706,7 +708,7 @@ As fontes abaixo foram recarregadas após `APROVADO` e vinculadas ao escopo docu
 - **Why this decision:** validação documental não altera testes, mas a complexidade medium recomenda auditoria focada da qualidade das evidências.
 - **Audit status:** `passed`
 - **Audit focus:** eficácia da validação documental e rastreabilidade dos cenários.
-- **Findings received:** `ST03-TQA-001`, `ST03-TQA-002`, `ST03-TQA-R2-001`, `ST03-TQA-R2-002`, `ST03-TQA-R3-001`, `ST03-TQA-R5-001..004`, `ST03-TQA-R6-001..005` e `ST03-R3B-001..003`.
+- **Findings received:** `ST03-TQA-001`, `ST03-TQA-002`, `ST03-TQA-R2-001`, `ST03-TQA-R2-002`, `ST03-TQA-R3-001`, `ST03-TQA-R5-001..004`, `ST03-TQA-R6-001..005`, `ST03-R3B-001..003` e `ST03-TQA-R7-001..003`; a confirmação factual adicional registrou `ST03-CONF-R5-001..003` no ledger de promoção.
 - **Rerun status:** `passed`; R8 retornou `clean/no_material_findings` e `release_blocker: false`; a confirmação factual R6, executada depois das últimas correções, retornou `clean/no_material_findings` e `release_blocker: no`.
 - **Embedded R4 result (historical, non-green now):** reviewer `/root/st03_test_quality_reaudit_r4`; pacote/checkpoint então revisado: TODO+estudo antes desta onda; resultado `clean/no_material_findings`; verificação 1:1 cobriu `ST03-TQA-001`, `002`, `R2-001`, `R2-002`, `R3-001`. Este resultado não é evidência da onda atual e não depende de dispatch externo.
 
@@ -737,7 +739,7 @@ As fontes abaixo foram recarregadas após `APROVADO` e vinculadas ao escopo docu
 
 - **Final review decision:** `required`
 - **Why this decision:** baseline final do audit floor para uma entrega cross-module.
-- **Final review status:** `not_run`
+- **Final review status:** `findings_integrated / rerun_required`; R1 identificou somente `ST03-FR-R1-001..002`, ambos release-blockers documentais integrados sem mudança no estudo ou no escopo.
 - **Review focus:** aderência, rastreabilidade, conclusões, riscos e ausência de canonização silenciosa.
 
 ## Independent Cutover Integrity Audit Gate
