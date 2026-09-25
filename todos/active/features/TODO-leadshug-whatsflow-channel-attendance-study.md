@@ -35,7 +35,7 @@ O `whatsflow_v2` contém soluções de conexão, inbox, departamentos, atendente
 - **Current delivery stage:** `Pending`
 - **Qualifiers:** `none`
 - **Next exact step:** publicar o próximo pacote manual autocontido (SHA ainda inexistente), repetir evidência/quality review e executar P1/P2, rule-spirit e final review; o pacote R3 `040fa4f7` foi revisado, mas não fecha esta nova onda.
-- **Current checkout identity:** `foundation_documentation:main@c65a985476d09228a9c1466aad1338b722459abc` é o checkpoint revisado; pacote R3 `040fa4f7`; esta nova onda está somente no working tree e seu SHA só existirá após próximo commit autorizado.
+- **Current checkout identity:** `foundation_documentation:main@9eec6324633fce414f4327e6eacf5ad025104bd3` é o checkpoint R4 revisado; pacote `5f6a2f8a...`; esta nova onda está somente no working tree e seu SHA só existirá após próximo commit autorizado.
 
 ## Active Work State (Required While TODO Remains In `active/`)
 
@@ -86,7 +86,7 @@ O `whatsflow_v2` contém soluções de conexão, inbox, departamentos, atendente
 
 | Repository | Path | Baseline ref | Comparison mode |
 | --- | --- | --- | --- |
-| Foundation | `foundation_documentation` | `main@c65a985476d09228a9c1466aad1338b722459abc` | `working_tree` |
+| Foundation | `foundation_documentation` | `main@9eec6324633fce414f4327e6eacf5ad025104bd3` | `working_tree` |
 | whatsflow_v2 | `/mnt/c/Unifast/LeadsHug/Inspirações LeadsHug/whatsflow_v2` | `3a36436c83ebefc6839380eb8fac1a6f13f4700a` | `working_tree` |
 
 ### Snapshot Manifest Contract
@@ -636,16 +636,23 @@ As fontes abaixo foram recarregadas após `APROVADO` e vinculadas ao escopo docu
 
 | Finding ID | Severity | Classification | Routing Decision | Same TODO / Split Rationale | Status | Approval / Follow-up Reference |
 | --- | --- | --- | --- | --- | --- | --- |
-| `ST03-P1-evidence-supersession` | P1 | release-blocker | corrigido no mesmo TODO; exige re-review | E-03/E-17/E-18 e C-02/C-03 | integrated / pending re-review | ST-03 checkpoint pending |
-| `ST03-P2-scope-and-auth-evidence` | P2 | release-blocker | corrigido no mesmo TODO; exige re-review | webhooks/router/sector matrix, ausência e actor×operação | integrated / pending re-review | ST-03 checkpoint pending |
-| `ST03-R2-schema-and-role-matrix` | R2 | release-blocker | corrigido no mesmo TODO; exige re-review | schema por alegação e matriz sem allow/deny inventado | integrated / pending re-review | ST-03 checkpoint pending |
-| `ST03-R5-lifecycle-sla-and-scan` | R5 | release-blocker | corrigido no mesmo TODO; exige re-review | E-23..E-29, SLA, scan classificado e hygiene | integrated / pending re-review | ST-03 checkpoint pending |
-| `ST03-TQA-R5-001` | R5 | release-blocker | corrigido no mesmo TODO; exige re-review | matriz ator×operação/fail-open | integrated / pending re-review | 1:1 audit table |
-| `ST03-TQA-R5-002` | R5 | release-blocker | corrigido no mesmo TODO; exige re-review | call paths/posição de SLA | integrated / pending re-review | 1:1 audit table |
-| `ST03-TQA-R5-003` | R5 | release-blocker | corrigido no mesmo TODO; exige re-review | cobertura operacional/protocolo limitado | integrated / pending re-review | 1:1 audit table |
-| `ST03-TQA-R5-004` | R5 | release-blocker | corrigido no mesmo TODO; exige re-review | hygiene/identidade/statuses | integrated / pending re-review | 1:1 audit table |
-| `ST03-TQA-R6-001..005` | R6 | release-blocker | corrigido no mesmo TODO; exige re-review | E-NF limitado; E-30/E-31; E-28a/b; C-04/C-01; E-23 | integrated / pending re-review | mapeamento 1:1 na tabela TQA |
-| `ST03-TQA-R3B-001..003` | R3B | release-blocker | corrigido no mesmo TODO; exige re-review | identidade, Scope matrix e status pending | integrated / pending re-review | mapeamento 1:1 na tabela TQA |
+| `ST03-TQA-001` | high | release-blocker | mesmo TODO | evidência congelada | integrated / pending re-review | audit 1:1 |
+| `ST03-TQA-002` | medium | release-blocker | mesmo TODO | cenários C-04 | integrated / pending re-review | audit 1:1 |
+| `ST03-TQA-R2-001` | high | release-blocker | mesmo TODO | persistência/atomicidade | integrated / pending re-review | audit 1:1 |
+| `ST03-TQA-R2-002` | high | release-blocker | mesmo TODO | provider e corpus | integrated / pending re-review | audit 1:1 |
+| `ST03-TQA-R3-001` | medium | release-blocker | mesmo TODO | status/configuração | integrated / pending re-review | audit 1:1 |
+| `ST03-TQA-R5-001` | high | release-blocker | mesmo TODO | matriz/ACL | integrated / pending re-review | audit 1:1 |
+| `ST03-TQA-R5-002` | medium | release-blocker | mesmo TODO | SLA | integrated / pending re-review | audit 1:1 |
+| `ST03-TQA-R5-003` | high | release-blocker | mesmo TODO | cobertura | integrated / pending re-review | audit 1:1 |
+| `ST03-TQA-R5-004` | medium | release-blocker | mesmo TODO | hygiene | integrated / pending re-review | audit 1:1 |
+| `ST03-TQA-R6-001` | high | release-blocker | mesmo TODO | schema | integrated / pending re-review | audit 1:1 |
+| `ST03-TQA-R6-002` | high | release-blocker | mesmo TODO | inventário | integrated / pending re-review | audit 1:1 |
+| `ST03-TQA-R6-003` | medium | release-blocker | mesmo TODO | elegibilidade | integrated / pending re-review | audit 1:1 |
+| `ST03-TQA-R6-004` | high | release-blocker | mesmo TODO | reachability | integrated / pending re-review | audit 1:1 |
+| `ST03-TQA-R6-005` | medium | release-blocker | mesmo TODO | proveniência | integrated / pending re-review | audit 1:1 |
+| `ST03-R3B-001` | high | release-blocker | mesmo TODO | inventário | integrated / pending re-review | audit 1:1 |
+| `ST03-R3B-002` | medium | release-blocker | mesmo TODO | Scope matrix | integrated / pending re-review | audit 1:1 |
+| `ST03-R3B-003` | medium | release-blocker | mesmo TODO | checkpoint | integrated / pending re-review | audit 1:1 |
 
 ## Rule-Spirit Anti-Pattern Hunt
 
@@ -748,11 +755,11 @@ As fontes abaixo foram recarregadas após `APROVADO` e vinculadas ao escopo docu
 - `git.exe -C 'C:/Unifast/LeadsHug/Inspirações LeadsHug/whatsflow_v2' status --short --branch`
 - `git.exe -C 'C:/Unifast/LeadsHug/Inspirações LeadsHug/whatsflow_v2' rev-parse HEAD^{tree}`
 - `python3 foundation_documentation/deterministic/validate_foundation_lifecycle.py --root foundation_documentation`
-- `base=f2a1ad88926201de63b703d22dc57c1939f357c4; checkpoint=c65a985476d09228a9c1466aad1338b722459abc; git -C foundation_documentation diff --no-ext-diff "$base..$checkpoint" -- todos/active/features/TODO-leadshug-whatsflow-channel-attendance-study.md artifacts/analysis/leadshug-whatsflow-channel-attendance-conceptual-model-20260925.md | sha256sum` (range imutável; working changes pending serão capturadas no próximo SHA)
+- `base=f2a1ad88926201de63b703d22dc57c1939f357c4; checkpoint=9eec6324633fce414f4327e6eacf5ad025104bd3; git -C foundation_documentation diff --no-ext-diff "$base..$checkpoint" -- todos/active/features/TODO-leadshug-whatsflow-channel-attendance-study.md artifacts/analysis/leadshug-whatsflow-channel-attendance-conceptual-model-20260925.md | sha256sum; git -C foundation_documentation diff --check "$base..$checkpoint"` (range imutável; working changes pending serão capturadas no próximo SHA)
 - `git -C foundation_documentation diff --check` (somente higiene de whitespace; não é prova de conteúdo)
 - `git diff --check --no-index /dev/null foundation_documentation/artifacts/analysis/leadshug-whatsflow-channel-attendance-conceptual-model-20260925.md` (aceitar exit `1` somente por arquivo novo e exigir stdout vazio)
-- `base=f2a1ad88926201de63b703d22dc57c1939f357c4; checkpoint=c65a985476d09228a9c1466aad1338b722459abc; git -C foundation_documentation diff --no-ext-diff "$base..$checkpoint" -- todos/active/features/TODO-leadshug-whatsflow-channel-attendance-study.md artifacts/analysis/leadshug-whatsflow-channel-attendance-conceptual-model-20260925.md`
-- `rg -n -i '(api[_-]?key|authorization:|bearer |secret|token|password)' foundation_documentation/artifacts/analysis/leadshug-whatsflow-channel-attendance-conceptual-model-20260925.md foundation_documentation/todos/active/features/TODO-leadshug-whatsflow-channel-attendance-study.md` (scan fail-closed/classificado: qualquer hit não explicitamente classificado como termo de política/descrição bloqueia rerun; referências `@SHA` são identificadores congelados, não segredos; não persistir valores)
+- `base=f2a1ad88926201de63b703d22dc57c1939f357c4; checkpoint=9eec6324633fce414f4327e6eacf5ad025104bd3; git -C foundation_documentation diff --no-ext-diff "$base..$checkpoint" -- todos/active/features/TODO-leadshug-whatsflow-channel-attendance-study.md artifacts/analysis/leadshug-whatsflow-channel-attendance-conceptual-model-20260925.md`
+- `checkpoint=9eec6324633fce414f4327e6eacf5ad025104bd3; git -C foundation_documentation show "$checkpoint:artifacts/analysis/leadshug-whatsflow-channel-attendance-conceptual-model-20260925.md" | rg -n -i '(api[_-]?key|authorization:|bearer |secret|token|password)'` (scan commit-scoped; working tree será escaneada no próximo pacote; classificar apenas termos de política/descrição)
 
 ## Files Expected
 
