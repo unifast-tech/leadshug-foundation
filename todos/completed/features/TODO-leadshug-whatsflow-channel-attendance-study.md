@@ -32,16 +32,17 @@ O `whatsflow_v2` contém soluções de conexão, inbox, departamentos, atendente
 
 ## Delivery Status Canon (Required)
 
-- **Current delivery stage:** `Local-Implemented`
+- **Current delivery stage:** `Lane-Promoted`
+- **Tactical TODO lifecycle state:** `Completed`
 - **Qualifiers:** `none`
-- **Next exact step:** passar os guards finais, mover o mesmo TODO para `completed/features/` e publicar a Foundation `main`; ST-04 permanece fora deste closeout.
-- **Current checkout identity:** `foundation_documentation:main@73cdf42e` é o checkpoint final revisado; o conteúdo está em `3a4819e2`, com checkpoint substantivo anterior `d1167a30`. A final review R2 revisou o pacote completo desde `f2a1ad88` e ficou limpa.
+- **Next exact step:** `n/a — completed`; o próximo trabalho é o framing/refinement separado do ST-04, ainda sem autorização de implementação.
+- **Current checkout identity:** o delivery checkpoint `foundation_documentation:main@f1a3e999` foi publicado em `origin/main`; o closeout atômico contém o movimento para `completed/features/` e os links factuais finais.
 
 ## Active Work State (Required While TODO Remains In `active/`)
 
-- **Work state:** `review`
-- **Why this state now:** estudo, TQA R8, confirmação R6 e final review R2 estão limpos; resta somente o movimento/publicação de closeout.
-- **Exit condition:** estudo, evidências, auditorias e guards finais concluídos, seguido de closeout para `completed/features/`.
+- **Work state:** `n/a once moved out of active`
+- **Why this state now:** estudo, evidências, auditorias, guards e publicação foram concluídos; o TODO foi movido para `completed/features/`.
+- **Exit condition:** satisfeita; estudo publicado e TODO concluído sem mudança de produto ou canonização.
 
 ## Scope
 
@@ -73,7 +74,7 @@ O `whatsflow_v2` contém soluções de conexão, inbox, departamentos, atendente
 
 | Scope Item | Local Branch/Commit | PR to lane threshold | PR to `stage` | PR to `main` | Current Status |
 | --- | --- | --- | --- | --- | --- |
-| TODO e estudo ST-03 | revisão final em `foundation_documentation:main@73cdf42e`; conteúdo `3a4819e2`; checkpoint substantivo `d1167a30` | `n/a` | `n/a` | `direct publication pending` | Local-Implemented; TQA R8, confirmação R6 e final review R2 limpas |
+| TODO e estudo ST-03 | delivery publicado em `foundation_documentation:main@f1a3e999`; revisão final `73cdf42e`; conteúdo `3a4819e2` | `n/a` | `n/a` | `direct publication completed` | Lane-Promoted; TQA R8, confirmação R6, final review R2 e guards limpos |
 
 ## Diff Expectation Contract
 
@@ -752,14 +753,14 @@ As fontes abaixo foram recarregadas após `APROVADO` e vinculadas ao escopo docu
 
 - [x] Confirmar no closeout que ST-03 não alterou módulos canônicos.
 - [x] Registrar no backlog/feature brief apenas o handoff factual para ST-04.
-- [ ] Mover o TODO para `completed/features/` somente após evidências e guards.
+- [x] Mover o TODO para `completed/features/` somente após evidências e guards.
 
 ## TODO Closeout Disposition
 
 - **Disposition:** `move-completed`
 - **Disposition reason:** estudo, evidências, auditorias, final review e guards convergiram sem finding material; nenhuma canonização ou mudança de produto foi realizada.
-- **Post-commit/push status:** `pending`
-- **Next path/status action:** mover este mesmo arquivo para `todos/completed/features/`, atualizar os links factuais e publicar `foundation_documentation:main`.
+- **Post-commit/push status:** delivery checkpoint publicado até `foundation_documentation:main@f1a3e999`; o commit atômico de closeout contém o movimento e os espelhos factuais finais.
+- **Next path/status action:** `completed`; ST-04 exige framing/refinement e aprovação próprios antes de qualquer síntese ou mudança canônica.
 
 ## Commands (Run Locally)
 
