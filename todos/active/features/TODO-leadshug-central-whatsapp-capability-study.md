@@ -36,12 +36,12 @@ Este trabalho é um estudo de capacidades e comportamentos. O Central-Whatsapp p
 
 - **Current delivery stage:** `Pending`
 - **Qualifiers:** `none`
-- **Next exact step:** publicar a baseline com a integração validada de `RC-01..RC-04` e executar os gates finais pré-aprovação.
+- **Next exact step:** solicitar e registrar `APROVADO`; somente depois iniciar a execução do catálogo ST-02.
 
 ## Active Work State (Required While TODO Remains In `active/`)
 
 - **Work state:** `review`
-- **Why this state now:** integração de `RC-01..RC-04` foi validada sem novas decisões; freeze e gates finais permanecem em andamento.
+- **Why this state now:** decisões e integração foram validadas; crítica, coherence, scope drift, validação determinística, routing e authority preflight passaram; falta apenas autorização explícita de execução.
 - **Exit condition:** decisões revisadas revalidadas, novo freeze publicado, gates pré-aprovação concluídos e `APROVADO` explícito registrado.
 
 ## Scope
@@ -80,7 +80,7 @@ Este trabalho é um estudo de capacidades e comportamentos. O Central-Whatsapp p
 | --- | --- | --- | --- | --- | --- |
 | Catálogo ST-02 e closeout | `main@pending` | `n/a` | `n/a` | `direct documentation publication` | pending |
 
-## Diff Expectation Contract (Required Before Delivery)
+## Diff Expectation Contract
 
 - **Contract status:** `required`
 - **Policy:** `strict; unclassified or forbidden paths block delivery`
@@ -92,11 +92,10 @@ Este trabalho é um estudo de capacidades e comportamentos. O Central-Whatsapp p
 | Repository | Path | Baseline ref | Comparison mode |
 | --- | --- | --- | --- |
 | Foundation | `foundation_documentation` | `main@6344bf64d8bb7330d8c992aaff93833fc65ca6ed` | `working_tree` |
-| LeadsHug API | `api-app` | `5db3fbe2043428749895fc3ff6441e9457467dd0` | `read_only_snapshot` |
-| LeadsHug Web | `web-app` | `6c99c27dafdce8ed9b461d17aaaaa491b8ae16e9` | `read_only_snapshot` |
-| Central oficial | `.../Central-Whatsapp/api-oficial` | `337f3e4839cef8ca400de87b3de088a79d512944` | `read_only_snapshot` |
-| Central hub | `.../Central-Whatsapp/hub-whatsapp` | `51bc16e544c7625a71c3012d8adef656c6392c37` | `read_only_snapshot` |
-| LeadsHug legado | `.../Backup LeadsHug/LeadsHug` | `994e1e8ccb2ae00899c13e3e7bb103dfa7bf46c2` | `read_only_historical_snapshot` |
+| LeadsHug API | `api-app` | `5db3fbe2043428749895fc3ff6441e9457467dd0` | `working_tree` |
+| LeadsHug Web | `web-app` | `6c99c27dafdce8ed9b461d17aaaaa491b8ae16e9` | `working_tree` |
+
+Central oficial, Central hub e LeadsHug legado são fontes externas somente leitura, governadas pelo `Snapshot Manifest Contract`; não são superfícies de diff/escrita deste TODO.
 
 ### Snapshot Manifest Contract
 
@@ -128,9 +127,6 @@ Evidência de fonte usa somente `repo@sha:path:symbol-or-commit`; código/payloa
 | --- | --- | --- | --- |
 | LeadsHug API | `api-app/**` | `any` | estudo sem código |
 | LeadsHug Web | `web-app/**` | `any` | estudo sem código |
-| Central oficial | `.../Central-Whatsapp/api-oficial/**` | `any` | referência somente leitura |
-| Central hub | `.../Central-Whatsapp/hub-whatsapp/**` | `any` | referência somente leitura |
-| LeadsHug legado | `.../Backup LeadsHug/LeadsHug/**` | `any` | referência histórica somente leitura |
 | Foundation | `modules/**` | `any` | nenhuma decisão de produto será promovida neste estudo |
 | Foundation | `contracts/**` | `any` | contratos de runtime permanecem inalterados |
 | Foundation | `project_constitution.md` | `any` | arquitetura permanece inalterada |
@@ -171,6 +167,25 @@ O catálogo é Markdown, mas usa o schema fechado abaixo. Tooling/schema execut�
 Cada linha também contém a matriz de aplicabilidade exigida pela policy: `tenancy`, `BU`, `conversation`, `provider_adapter`, `audit` e `channel_policy`, cada uma como `applies|not_applicable|unknown` com evidência ou justificativa. `cross_origin` é derivado de `origins[]`; não é origem autônoma.
 
 `not_found_after_protocol` exige: definir o fingerprint comportamental e sinônimos; executar buscas por SHA em todos os pathspecs allowlisted do API e Web; verificar contratos/módulos canônicos relacionados; registrar consultas/pathspecs sem persistir payload; e obter uma segunda checagem dirigida na superfície esperada. Superfície inacessível, busca incompleta ou conflito vira `uncertain`, nunca ausência.
+
+## Source Ledger Contract
+
+O ledger muitos-para-muitos usa este schema Markdown fechado:
+
+| Field | Type / cardinality | Allowed values / rule |
+| --- | --- | --- |
+| `source_unit_id` | required unique string | `SU-` + primeiros 16 hex de SHA-256 do UTF-8 exato `origin|sha|path|locator|source_unit_type`; `/` é o separador de path |
+| `origin` | required enum | `official|hub|legacy_overlay` |
+| `sha` | required full commit SHA | deve pertencer ao intervalo/snapshot da origem |
+| `path` | required string | path relativo admitido pela allowlist literal da origem |
+| `locator` | required string | símbolo estável ou ordinal `surface-NNN` no snapshot congelado |
+| `source_unit_type` | required enum | `code_symbol|ui_flow|migration_contract|documentation_behavior|test_evidence|commit_surface` |
+| `capability_ids[]` | required set | zero ou mais `CAP-###` existentes |
+| `supports[]` | required set | zero ou mais `CAP-###` existentes |
+| `duplicate_of[]` | required set | zero ou mais `SU-*` existentes; sem autorreferência ou ciclo |
+| `excluded_reason` | nullable enum + rationale | `non_behavioral_chore|generated_or_vendor|duplicate_change|outside_st02|sensitive_unreadable|superseded_fix` |
+
+Integridade: ao menos um entre `capability_ids[]`, `supports[]`, `duplicate_of[]` ou `excluded_reason` deve estar preenchido. `excluded_reason` é mutuamente exclusivo com `capability_ids[]` e `supports[]`; `duplicate_of[]` pode coexistir somente com `excluded_reason=duplicate_change`. Todo ID referenciado deve resolver no mesmo ledger/catálogo. `mapping-kind` é derivado (`capability`, `support`, `duplicate`, `excluded`) da presença desses campos; uma unidade entra em cada estrato derivado aplicável. A entrada textual exata usada no hash é preservada na linha, tornando seleção e reexecução determinísticas.
 
 ## Definition of Done
 
@@ -291,22 +306,35 @@ Cada linha também contém a matriz de aplicabilidade exigida pela policy: `tena
 
 ## Gate: Review Baseline Freeze
 
-- **Gate decision:** `required`.
+- **Gate decision:** `required`
+- **Why this decision:** crítica formal e guards precisam de um contrato reproduzível publicado antes de emitir evidência.
+- **Trigger stage:** `before the first planning-side review or guard run`.
 - **Status:** `passed`; integração validada, commitada e publicada antes da crítica final de planejamento.
-- **Gate status:** `no_material_findings`.
+- **Gate status:** `no_material_findings`
 - **Freeze target:** decisões, manifesto/schema, escopo, DoD, validação, estratégia de auditoria e diff contract.
-- **Baseline branch:** `foundation_documentation:main`.
-- **Baseline commit:** `707b336b`.
-- **Baseline push reference:** `origin/main`.
+- **Baseline branch:** `main`
+- **Baseline commit:** `707b336b`
+- **Baseline push reference:** `origin/main`
 - **Evidence / reference:** `git_write_authority_guard.py` retornou `go`; `git.exe push origin main` publicou `0ff8a5c3..707b336b` em 2026-09-25.
+- **Findings summary:** decisões e integração `IC/RC` congeladas; nenhum blocker de publicação.
 - **Historical invalidation evidence:** baseline `cff19546`, crítica `IC-01..IC-06`, verdict `findings`.
 - **Current invalidation evidence:** baseline `1dac5eaf`, crítica renovada `RC-01..RC-04`, verdict `findings`.
 - **Waiver authority / reference (required if waived):** `n/a`.
+- **Pre-freeze packet-prep rule:** `pre-freeze evidence remained provisional until the recorded commit/push completed`.
 
 ## Gate: Review Scope Drift
 
-- **Status:** `pending execution`
-- **Rule:** implementação, promoção canônica ou entrega independente exige novo contrato/aprovação.
+- **Gate decision:** `required`
+- **Why this decision:** confirmar que integrações pós-crítica não alteraram materialmente o contrato validado.
+- **Trigger stage:** `after the planning-side review/guard cycle converges and before APROVADO`.
+- **Baseline source:** `Review Baseline Freeze -> 707b336b`.
+- **Material sections compared:** `Context|Contract Boundary|Scope|Out of Scope|Definition of Done|Validation Steps|Execution Lane Tracking|Canonical Module Anchors|Decisions|Decision Baseline|Architecture Change Governance|Questions To Close|Assumptions Preview|Execution Plan|Flow Evidence Planning Matrix|Local CI-Equivalent Suite Matrix|Runtime / Rollout Notes|Security Risk Assessment|Performance & Concurrency Risk Assessment`.
+- **Guard command:** `python3 delphi-ai/tools/review_scope_drift_guard.py --todo foundation_documentation/todos/active/features/TODO-leadshug-central-whatsapp-capability-study.md`.
+- **No-go handling rule:** `return to review/revalidation; no automatic rollback`.
+- **Gate status:** `no_material_findings`
+- **Findings summary:** `0 de 22 seções materiais alteradas em relação a main@707b336b`.
+- **Evidence / reference:** `foundation_documentation/artifacts/tmp/leadshug-central-whatsapp-capability-study-scope-drift.json`; guard retornou `Overall outcome: go` em 2026-09-25.
+- **Waiver authority / reference (required if waived):** `n/a`.
 
 ## Questions To Close
 
@@ -374,7 +402,7 @@ Cada linha também contém a matriz de aplicabilidade exigida pela policy: `tena
 
 ## Plan Review Gate
 
-- **Status:** `integration validated; refreeze and final planning critique pending`.
+- **Status:** `all planning findings integrated; all pre-approval guards passed; execution approval pending`.
 - **Review baseline:** `foundation_documentation:main@cff19546` com evidência de freeze em `d2837312`.
 - **Review scope:** cobertura, falsos positivos/negativos, separação histórica, segurança e suficiência da amostragem.
 - **Outcome:** revisão primária encontrou dois riscos operacionais; crítica independente encontrou quatro altos e dois médios. Todos foram integrados, alterando materialmente o contrato.
@@ -395,6 +423,9 @@ Cada linha também contém a matriz de aplicabilidade exigida pela policy: `tena
 | `RC-02` | high | Ledger um-para-um e amostragem por capacidade não provavam cobertura fonte→catálogo. | Unidade-fonte atômica muitos-para-muitos e auditorias determinísticas independentes nos dois sentidos. | Integrated |
 | `RC-03` | high | Schema não fechava tipos/domínios, epoch cross-origin e protocolo de ausência. | Schema Markdown fechado, `origin_epochs{}` e protocolo completo; tooling novo rejeitado como complexidade sem valor probatório. | Integrated/Challenged |
 | `RC-04` | medium | Espelhos de estado continuavam contraditórios. | Estado consolidado para integração pendente; baseline `1dac5eaf` invalidada explicitamente. | Integrated |
+| `FC-01` | high | Ledger muitos-para-muitos não tinha tipos, identidade e integridade referencial fechados. | `Source Ledger Contract` define schema, hash/ID estável, domínios, cardinalidades e regras referenciais. | Integrated |
+| `FC-02` | medium | Scanner imprimia a linha que poderia conter segredo. | Scanner usa `rg -q` e mensagens redigidas; nenhum match é ecoado. | Integrated |
+| `FC-03` | medium | Espelhos ainda diziam que freeze/crítica estavam pendentes após publicação. | Next step, Active Work State, Plan Review, Critique e coherence gate foram reconciliados. | Integrated |
 
 ### Failure Modes & Edge Cases
 
@@ -413,7 +444,7 @@ Cada linha também contém a matriz de aplicabilidade exigida pela policy: `tena
 
 - **Canonical method:** `wf-docker-audit-escalation-method`
 - **Guard command:** `python3 delphi-ai/tools/audit_escalation_guard.py --todo foundation_documentation/todos/active/features/TODO-leadshug-central-whatsapp-capability-study.md`
-- **Latest TEACH evidence / artifact:** `foundation_documentation/artifacts/tmp/leadshug-central-whatsapp-capability-study-audit-escalation-v2.json`; fingerprint `75992daf3f8f`; `Overall outcome: go`.
+- **Latest TEACH evidence / artifact:** `foundation_documentation/artifacts/tmp/leadshug-central-whatsapp-capability-study-audit-escalation-v3.json`; fingerprint `75992daf3f8f`; `Overall outcome: go`.
 
 | Trigger | Value | Notes |
 | --- | --- | --- |
@@ -431,7 +462,7 @@ Cada linha também contém a matriz de aplicabilidade exigida pela policy: `tena
 
 ## Independent No-Context Critique Gate
 
-- **Critique decision:** `required`.
+- **Critique decision:** `required`
 - **Why this decision:** baseline obrigatória e depth expandido por complexidade média com blast radius cross-module (`CRITIQUE-BASELINE-ALWAYS`, `CRITIQUE-EXPANDED-RISK-SIGNALS`).
 - **Impact signals in scope:** `cross-module blast radius`.
 - **Package mode:** `bounded-file-set`.
@@ -441,9 +472,9 @@ Cada linha também contém a matriz de aplicabilidade exigida pela policy: `tena
 - **Canonical multi-lane audit protocol:** `n/a`.
 - **Audit session / round evidence:** `n/a`.
 - **Critique lenses:** `correctness|performance|elegance|structural-soundness|risk`.
-- **Critique status:** `not_run`; crítica final de planejamento aguarda a nova baseline.
-- **Findings summary:** primeira crítica `IC-01..IC-06`; segunda crítica `RC-01..RC-03 high`, `RC-04 medium`; correções integradas sem mudar `D-01..D-06`.
-- **Evidence / reference:** revisores internos stateless `/root/st02_independent_critique` sobre `cff19546` e `/root/st02_revised_critique` sobre `1dac5eaf`, ambos verdict `findings`, 2026-09-25.
+- **Critique status:** `findings_integrated`
+- **Findings summary:** `IC-01..IC-06`, `RC-01..RC-04` e `FC-01..FC-03` possuem resolução explícita; riscos residuais aceitos são julgamento na decomposição, limite de evidência estática e natureza heurística do scanner.
+- **Evidence / reference:** revisores internos stateless `/root/st02_independent_critique` (`cff19546`), `/root/st02_revised_critique` (`1dac5eaf`) e `/root/st02_final_planning_critique` (`707b336b`), verdicts `findings`, 2026-09-25.
 - **Waiver authority / reference:** `n/a`.
 
 | Finding ID | Resolution | Usefulness | Formalizable | Candidate Rule Level | Candidate Rule ID | Rationale / Evidence |
@@ -458,17 +489,20 @@ Cada linha também contém a matriz de aplicabilidade exigida pela policy: `tena
 | `RC-02` | Integrated | useful | no | none | n/a | ledger muitos-para-muitos e duas auditorias |
 | `RC-03` | Integrated | useful | partial | none | n/a | schema Markdown fechado; tooling executável desnecessário foi desafiado |
 | `RC-04` | Integrated | useful | no | none | n/a | máquina de estado novamente reconciliada |
+| `FC-01` | Integrated | useful | no | none | n/a | schema fechado do source ledger |
+| `FC-02` | Integrated | useful | no | none | n/a | scanner silencioso/redigido |
+| `FC-03` | Integrated | useful | no | none | n/a | espelhos de estado reconciliados |
 
 ## Gate: Assumption Code Coherence
 
-- **Gate decision:** `required`.
+- **Gate decision:** `required`
 - **Why this decision:** o estudo depende de snapshots de código para distinguir presença, parcialidade e ausência após protocolo.
 - **Trigger stage:** `after critique convergence and before APROVADO`.
 - **Guard scope:** `snapshot manifest, implementation-state protocol and cited source paths`.
 - **Guard command:** `python3 delphi-ai/tools/assumption_code_coherence_guard.py --todo foundation_documentation/todos/active/features/TODO-leadshug-central-whatsapp-capability-study.md`.
-- **Gate status:** `not_run`; aguarda novo freeze e crítica convergente.
-- **Findings summary:** `none yet on revised baseline`.
-- **Evidence / reference:** `pending revised review baseline`.
+- **Gate status:** `no_material_findings`
+- **Findings summary:** `A-01/A-02 paths and frozen repository heads verified locally; no wrong-code assumption found`.
+- **Evidence / reference:** `test -f` on four cited code files; API/Web and Central head checks on 2026-09-25.
 - **Waiver authority / reference:** `n/a`.
 
 ## Approval
@@ -479,18 +513,31 @@ Cada linha também contém a matriz de aplicabilidade exigida pela policy: `tena
 
 ## Rules Acknowledgement / Ingestion
 
-- Pendente até `APROVADO`. Na execução, preservar política de legado independente, modelo tenant/BU/conversa e limite estrito de escrita documental.
+| Source | Why It Applies Now | Must Preserve | Must Avoid | Execution Impact |
+| --- | --- | --- | --- | --- |
+| `delphi-ai/workflows/docker/todo-driven-execution-method.md` | governa a execução do ST-02 por TODO | autoridade, sequência de gates e evidência | iniciar execução antes de aprovação | manter o TODO em `review` até `APROVADO` e guards verdes |
+| `delphi-ai/workflows/docker/todo-approval-gates-method.md` | governa o preflight atual | freeze, drift, assumptions, regras e routing | solicitar aprovação com gate pendente | exigir `preflight-go` antes do pedido de `APROVADO` |
+| `delphi-ai/workflows/docker/audit-escalation-method.md` | define o piso de auditoria proporcional | decisões de crítica/final review/test quality/verification debt | inventar ou omitir lanes requeridas | preservar fingerprint `75992daf3f8f` e executar gates de delivery derivados |
+| `delphi-ai/workflows/docker/independent-critique-method.md` | a crítica independente era obrigatória antes da aprovação | isolamento do revisor, baseline congelada e tratamento explícito | auto-revisão ou achado silenciosamente descartado | conservar `IC`, `RC` e `FC` com resolução e evidência |
+| `foundation_documentation/policies/central_whatsapp_independent_legacy_policy.md` | Central é referência independente, não componente do LeadsHug | proveniência por origem, separação oficial/não oficial e soberania do LeadsHug | copiar código/segredos ou criar vínculo de runtime | limitar a execução a leitura de snapshots e publicação documental |
 
 ## Agent Routing Preflight
 
-- **Client surface:** codex
-- **Current governed action:** contract-refinement
-- **Selected role:** strategic-cto
-- **Selected effort:** medium
-- **Proof mode:** declared
-- **Execution topology:** primary-checkout-single-writer
+- **Client surface:** `codex`
+- **Current governed action:** `implementation`
+- **Selected role:** `routine-executor`
+- **Selected model:** `gpt-5.6-terra`
+- **Selected effort:** `medium`
+- **Proof mode:** `declared`
+- **Exception reason:** `n/a`
+- **Subagent / delegation authorization:** `not authorized; execution remains with the primary agent`
+- **Execution topology:** `primary-checkout-single-writer`
+- **Worktree / auxiliary-checkout authorization:** `not-authorized`
+- **Worktree authorization evidence:** `n/a`
 - **Writer scheduling policy:** one writer in canonical checkout; reviewers read-only
-- **Guard outcome:** pending decisions and approval gates
+- **Guard outcome:** `go`
+- **Routing evidence:** `agent_role_routing_guard.py` confirmou lane executor, modelo/esforço e topologia em 2026-09-25.
+- **Waiver / exception reference:** `n/a`
 
 ## Decision Adherence Validation (Mandatory Before Delivery)
 
@@ -518,17 +565,23 @@ Cada linha também contém a matriz de aplicabilidade exigida pela policy: `tena
 
 ## Independent Test Quality Audit Gate
 
-- **Audit decision:** `recommended`, full, antes de `Completed` (`TQA-MEDIUM-OR-BIG-DEFAULT`).
+- **Audit decision:** `recommended`
+- **Audit status:** `not_run`
+- **Evidence / reference:** `TQA-MEDIUM-OR-BIG-DEFAULT`; auditoria full da estratégia de amostragem programada para delivery.
 - **Applicability:** focar a qualidade da estratégia de amostragem; não há testes de produto.
 
 ## Independent No-Context Final Review Gate
 
-- **Audit decision:** `required`, expanded, antes de `Completed` (`FINAL-BASELINE-ALWAYS`, `FINAL-EXPANDED-RISK-SIGNALS`).
-- **Status:** `pending delivery`
+- **Final review decision:** `required`
+- **Final review status:** `not_run`
+- **Evidence / reference:** `FINAL-BASELINE-ALWAYS` e `FINAL-EXPANDED-RISK-SIGNALS`; revisão expanded programada para antes de `Completed`.
 - **Required focus:** rastreabilidade, linguagem não prescritiva, cobertura, privacidade e ausência de implementação.
 
 ## Independent Cutover Integrity Audit Gate
 
+- **Cutover audit decision:** `not_needed`
+- **Cutover audit status:** `no_material_findings`
+- **Evidence / reference:** não há cutover, rollout, migração de dados ou mudança executável no escopo.
 - **Applicability:** `not_needed`; não há cutover.
 
 ## Delivery Confidence Gate
@@ -577,11 +630,18 @@ done
 test "${#scan_paths[@]}" -gt 0
 secret_pattern="(?i)(?:api[_-]?key|client[_-]?secret|password)\s*[:=]\s*(?:\"[^\"]+\"|'[^']+'|[^\s#]+)|authorization\s*:\s*bearer\s+[^\s#]+|BEGIN [A-Z ]*PRIVATE KEY"
 set +e
-output="$(rg -n --pcre2 "$secret_pattern" "${scan_paths[@]}" 2>&1)"
+rg -q --pcre2 "$secret_pattern" "${scan_paths[@]}"
 rc=$?
 set -e
-test "$rc" -eq 1 || { printf '%s\n' "$output"; exit 1; }
-echo 'OK: no secret-like values in ST-02 delivery paths'
+if [ "$rc" -eq 1 ]; then
+  echo 'OK: no secret-like values in ST-02 delivery paths'
+elif [ "$rc" -eq 0 ]; then
+  echo 'BLOCKED: secret-like value detected; output redacted'
+  exit 1
+else
+  echo 'BLOCKED: sensitive-content scanner failed without exposing matches'
+  exit "$rc"
+fi
 ```
 
 ## Files Expected
