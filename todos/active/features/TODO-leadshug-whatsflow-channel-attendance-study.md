@@ -34,7 +34,8 @@ O `whatsflow_v2` contém soluções de conexão, inbox, departamentos, atendente
 
 - **Current delivery stage:** `Pending`
 - **Qualifiers:** `none`
-- **Next exact step:** publicar o checkpoint documental e executar os preflights P1/P2, rule-spirit e final review.
+- **Next exact step:** publicar o próximo checkpoint documental (SHA ainda inexistente), repetir evidência/quality review e executar P1/P2, rule-spirit e final review.
+- **Current checkout identity:** `foundation_documentation:main@ce2af2765b1bb5a3437125537787b6c701221b98` + working-tree documental não commitado; o SHA do próximo checkpoint só existirá após commit autorizado.
 
 ## Active Work State (Required While TODO Remains In `active/`)
 
@@ -72,7 +73,7 @@ O `whatsflow_v2` contém soluções de conexão, inbox, departamentos, atendente
 
 | Scope Item | Local Branch/Commit | PR to lane threshold | PR to `stage` | PR to `main` | Current Status |
 | --- | --- | --- | --- | --- | --- |
-| TODO e estudo ST-03 | `foundation_documentation:main@9cf4b1d` | `n/a` | `n/a` | `direct publication pending` | planning |
+| TODO e estudo ST-03 | `foundation_documentation:main@ce2af276` + corrective working tree | `n/a` | `n/a` | `direct publication pending` | implementation; exact review SHA will be frozen by the next bounded packet |
 
 ## Diff Expectation Contract
 
@@ -92,8 +93,8 @@ O `whatsflow_v2` contém soluções de conexão, inbox, departamentos, atendente
 
 | Reference | Branch / Commit | Tree | Verified | Role |
 | --- | --- | --- | --- | --- |
-| primary evidence | `origin/stage@3a36436c83ebefc6839380eb8fac1a6f13f4700a` | `6befe605dda039a7066a7fd48403807ea93f8408` | fetch + clean status, 2026-09-25 | complete ST-03 inspection baseline |
-| comparison landmark | `origin/main@cfe0aa120503687943ee81930172994a1ea9ab1a` | `d739d0a517651a4ed1621940c62e7a3107ee29ef` | fetch + ancestry/count, 2026-09-25 | demonstrates stage is 59 commits ahead; not a second study population |
+| primary evidence | objeto local `3a36436c83ebefc6839380eb8fac1a6f13f4700a` | `6befe605dda039a7066a7fd48403807ea93f8408` | `status`, `rev-parse HEAD`, objeto/tree locais, 2026-09-25 | baseline imutável utilizável; frescura remota não confirmada |
+| comparison landmark | objeto local `cfe0aa120503687943ee81930172994a1ea9ab1a` | `d739d0a517651a4ed1621940c62e7a3107ee29ef` | `rev-list` local 0/59, 2026-09-25 | comparação local, não segunda população |
 
 ### Expected Changed Paths
 
@@ -185,31 +186,31 @@ As lanes runtime `pcv-1` continuam `not_needed`; os itens abaixo são requisitos
 
 ## Definition of Done
 
-- [x] `DOD-01` Manifesto, alcance/supersessão e call paths tornam cada alegação operacional reprodutível; schema efetivo é exigido quando há persistência e `not_applicable` caso contrário; histórico, órfão e declarativo não são tratados como comportamento.
-- [x] `DOD-02` A matriz única `C-01..C-12` liga cada conceito a fontes, evidência, constraints, modelo, cenários, disposição e conclusão.
-- [x] `DOD-03` Diagrama e glossário separam transporte, BU, unidade de atendimento, equipe, fila, política, capacidade e atribuição.
-- [x] `DOD-04` Cardinalidades, invariantes e estados/transições cobrem o ciclo de atendimento e seus casos unknown/conflicting.
-- [x] `DOD-05` A matriz 1:1 de invariantes canônicos passa nos walkthroughs positivos e negativos previstos.
-- [x] `DOD-06` A rubrica documental de concorrência/performance cobre claim, capacidade, corridas, presença, filas, SLA e fan-out.
-- [x] `DOD-07` Padrões úteis, limitações e anti-padrões possuem evidência e não viram prescrição automática.
-- [x] `DOD-08` Recomendações indicam decisão futura, dependências e risco sem prioridade ou autorização.
-- [x] `DOD-09` Artefato não contém segredo, PII, payload real ou código legado copiado.
+- [ ] `DOD-01` Manifesto, alcance/supersessão e call paths tornam cada alegação operacional reprodutível; schema efetivo é exigido quando há persistência e `not_applicable` caso contrário; histórico, órfão e declarativo não são tratados como comportamento. (rerun pending)
+- [ ] `DOD-02` A matriz única `C-01..C-12` liga cada conceito a fontes, evidência, constraints, modelo, cenários, disposição e conclusão. (rerun pending)
+- [ ] `DOD-03` Diagrama e glossário separam transporte, BU, unidade de atendimento, equipe, fila, política, capacidade e atribuição. (rerun pending)
+- [ ] `DOD-04` Cardinalidades, invariantes e estados/transições cobrem o ciclo de atendimento e seus casos unknown/conflicting. (rerun pending)
+- [ ] `DOD-05` A matriz 1:1 de invariantes canônicos passa nos walkthroughs positivos e negativos previstos. (rerun pending)
+- [ ] `DOD-06` A rubrica documental de concorrência/performance cobre claim, capacidade, corridas, presença, filas, SLA e fan-out. (rerun pending)
+- [ ] `DOD-07` Padrões úteis, limitações e anti-padrões possuem evidência e não viram prescrição automática. (rerun pending)
+- [ ] `DOD-08` Recomendações indicam decisão futura, dependências e risco sem prioridade ou autorização. (rerun pending)
+- [ ] `DOD-09` Artefato não contém segredo, PII, payload real ou código legado copiado. (rerun pending)
 - [ ] `DOD-10` Validators, guards e revisões documentais aplicáveis passam antes do closeout.
 
 ## Validation Steps
 
-- [x] `VAL-01` Revalidar limpeza, branch, head, tree e ancestralidade do snapshot antes da execução.
-- [x] `VAL-02` Classificar alcance/supersessão e resolver schema efetivo apenas nas alegações persistence-backed — registrando `not_applicable` nas demais — antes da auditoria bidirecional `C-01..C-12`.
-- [x] `VAL-03` Executar todos os walkthroughs da matriz de invariantes, incluindo troca de transporte, replay/reordenação, falha/capability do provider e matriz de atores/operações.
-- [x] `VAL-04` Executar a rubrica de concorrência/performance com source evidence, invariant esperado e disposição explícita `pattern|limitation|anti_pattern|unknown`.
-- [x] `VAL-05` Revisar explicitamente segredos, PII, payloads e cópia indevida no diff final.
+- [ ] `VAL-01` Revalidar limpeza, branch, head, tree e ancestralidade do snapshot antes da execução. (rerun pending)
+- [ ] `VAL-02` Classificar alcance/supersessão e resolver schema efetivo apenas nas alegações persistence-backed — registrando `not_applicable` nas demais — antes da auditoria bidirecional `C-01..C-12`. (rerun pending)
+- [ ] `VAL-03` Executar todos os walkthroughs da matriz de invariantes, incluindo troca de transporte, replay/reordenação, falha/capability do provider e matriz de atores/operações. (rerun pending)
+- [ ] `VAL-04` Executar a rubrica de concorrência/performance com source evidence, invariant esperado e disposição explícita `pattern|limitation|anti_pattern|unknown`. (rerun pending)
+- [ ] `VAL-05` Revisar explicitamente segredos, PII, payloads e cópia indevida no diff final. (rerun pending)
 - [ ] `VAL-06` Executar validador estrutural, `git diff --check` e guards de autoridade, diff, conclusão e closeout aplicáveis.
 
 ## Completion Evidence Matrix (Required Before Delivery Claim)
 
 | Criterion ID | Source Section | Criterion | Evidence Type | Evidence Artifact / Command | Runtime Target | Status | Notes |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| `DOD-01` | Definition of Done | evidência operacional distingue call path atual e schema persistence-backed de artefato histórico/órfão | doc+review | `artifacts/analysis/leadshug-whatsflow-channel-attendance-conceptual-model-20260925.md#manifesto-reprodutível-e-protocolo-de-evidência` | n/a | passed | schema `not_applicable` explícito fora de persistência |
+| `DOD-01` | Definition of Done | evidência operacional distingue call path atual e schema persistence-backed de artefato histórico/órfão | doc+review | artefato, manifesto/matriz | n/a | pending | correção de supersessão, schema e ausência requer rerun |
 | `DOD-02` | Definition of Done | matriz única cobre `C-01..C-12` | doc+integrity review | artefato, `#matriz-única-de-cobertura-c-01c-12` | n/a | passed | 12/12 IDs, uma linha por conceito |
 | `DOD-03` | Definition of Done | diagrama/glossário separam os conceitos | doc+review | artefato, `#modelo-conceitual-proposto-para-discussão-posterior` | n/a | passed | sem colisão Setor/Canal/BU |
 | `DOD-04` | Definition of Done | cardinalidades/estados cobrem conflitos e unknowns | doc+review | artefato, modelo + C-01..C-12 | n/a | passed | sem coerência inventada |
@@ -219,8 +220,8 @@ As lanes runtime `pcv-1` continuam `not_needed`; os itens abaixo são requisitos
 | `DOD-08` | Definition of Done | recomendações sem prioridade/autoridade | doc+review | artefato, `#recomendações-sem-priorização` | n/a | passed | somente handoff ST-04 |
 | `DOD-09` | Definition of Done | conteúdo sensível/cópia excluídos | scan+manual review | `rg` sanitizado + revisão do diff | Foundation diff | passed | sem payload/dump ou valores sensíveis |
 | `DOD-10` | Definition of Done | gates documentais passam | guard+review | validator/guards/reviews | Foundation | planned | closeout somente após tudo green |
-| `VAL-01` | Validation Steps | snapshot revalidado | command | `git status/rev-parse/rev-list` no snapshot | frozen reference | passed | `stage=origin/stage@3a36436`; tree `6befe605`; 59 ahead |
-| `VAL-02` | Validation Steps | alcance/supersessão e schema aplicável resolvidos antes da auditoria bidirecional | command+review | artefato, manifesto + matriz C-01..C-12 | read-only | passed | `partial`, `conflicting`, `superseded` e `not_found_after_protocol` explícitos |
+| `VAL-01` | Validation Steps | snapshot revalidado | command | `git status/rev-parse/rev-list` local | frozen reference | pending | objetos locais confirmados; frescura remota e rerun pendentes |
+| `VAL-02` | Validation Steps | alcance/supersessão e schema aplicável resolvidos antes da auditoria bidirecional | command+review | artefato, manifesto + matriz C-01..C-12 | read-only | pending | E-17/E-18 e novo alcance exigem rerun |
 | `VAL-03` | Validation Steps | walkthroughs dos invariantes | scenario review | artefato, walkthrough 1:1 | n/a | passed | positivos e negativos |
 | `VAL-04` | Validation Steps | rubrica operacional | scenario review | artefato, rubrica documental | n/a | passed | source + invariante + disposição |
 | `VAL-05` | Validation Steps | revisão sensível/cópia | scan+manual review | `rg` sanitizado + `git diff --check` | Foundation diff | passed | nenhum payload/dump persistido |
@@ -243,7 +244,7 @@ As lanes runtime `pcv-1` continuam `not_needed`; os itens abaixo são requisitos
 
 | From Profile | To Profile | Why the Handoff Exists | Touched Surfaces | Status / Evidence |
 | --- | --- | --- | --- | --- |
-| Strategic / CTO-Tech-Lead | Assurance / Tester-Quality | desafiar o modelo, rastreabilidade e conclusões sem contexto prévio | TODO e estudo | executado em quatro passes frescos; R4 `clean/no_material_findings` após integração de `ST03-TQA-001..002`, `R2-001..002` e `R3-001` |
+| Strategic / CTO-Tech-Lead | Assurance / Tester-Quality | desafiar o modelo, rastreabilidade e conclusões sem contexto prévio | TODO e estudo | checkpoint atual: correção documental pós-R4; próximo checkpoint ainda sem SHA até commit; re-review obrigatório |
 
 ## Complexity
 
@@ -267,7 +268,7 @@ As lanes runtime `pcv-1` continuam `not_needed`; os itens abaixo são requisitos
 
 ## Decisions (Resolved Before Freeze)
 
-- [x] `D-01` Usar `origin/stage@3a36436c83ebefc6839380eb8fac1a6f13f4700a` como fonte principal porque está 59 commits à frente de `origin/main`; manter `origin/main@cfe0aa12` apenas como marco de comparação. O fetch de 2026-09-25 confirmou os SHAs e trees congelados.
+- [x] `D-01` Usar o objeto local `3a36436c83ebefc6839380eb8fac1a6f13f4700a` como fonte principal porque a comparação local registra 59 commits à frente de `cfe0aa12`; manter este último apenas como landmark. Objetos/trees locais foram verificados; frescura remota não é alegada.
 - [x] `D-02` Interpretar “várias formas de atendimento” como combinação de dimensões independentes — unidade/equipe, fila, distribuição, capacidade, modalidade humana/automação e transferência — e não como subtipos pertencentes ao Canal.
 - [x] `D-03` Preservar `Setor`, `BU` e `Canal` com os significados atuais durante o estudo; usar termos neutros (`unidade de atendimento`, `equipe`, `fila`, `política de roteamento`) e deixar qualquer renomeação/canonização para decisão posterior.
 - **Human validation:** usuário, `VALIDO D-01..D-03`, conversa de 2026-09-25.
@@ -358,7 +359,7 @@ As lanes runtime `pcv-1` continuam `not_needed`; os itens abaixo são requisitos
 
 | Assumption ID | Assumption | Evidence | If False | Confidence | Handling |
 | --- | --- | --- | --- | --- | --- |
-| `A-01` | o snapshot está limpo e pode ser estudado sem executar runtime | Git fetch/status: local `stage` = `origin/stage@3a36436`; manifesto registra head/tree e superfícies congeladas | congelar outra fonte ou bloquear alegações | High | Resolved into Contract |
+| `A-01` | o snapshot local congelado está limpo e pode ser estudado sem executar runtime | status/rev-parse locais: `HEAD=3a36436`, tree `6befe605`; manifesto registra superfícies congeladas; fetch remoto indisponível | congelar outra fonte ou bloquear alegações | High | Resolved into Contract |
 | `A-02` | presença estática demonstra somente existência; comportamento exige call path executável atual e teste/corroborante, mais schema efetivo somente quando persistence-backed | primeira crítica confirmou `distribution_state` sem consumidor observado e contratos concorrentes de assignment; evidence contract, DOD-01 e VAL-02 incorporam a restrição | sem alcance/supersessão resolvidos, classificar como partial, documented_only, conflicting ou unknown; nunca comportamento operacional | High | Resolved into Contract |
 
 - **Resolved planning fact:** `central_whatsapp_independent_legacy_policy.md` não nomeia `whatsflow_v2`; a fronteira read-only específica deste estudo já é contratual no feature brief e neste TODO. Eventual política genérica permanece fora do ST-03.
@@ -596,7 +597,7 @@ As fontes abaixo foram recarregadas após `APROVADO` e vinculadas ao escopo docu
 
 | Decision ID | Status | Evidence |
 | --- | --- | --- |
-| `D-01` | Adherent | manifesto do estudo usa exclusivamente `origin/stage@3a36436c83ebefc6839380eb8fac1a6f13f4700a`; `origin/main@cfe0aa12` aparece apenas como landmark |
+| `D-01` | Adherent | manifesto usa exclusivamente o objeto local congelado `3a36436c83ebefc6839380eb8fac1a6f13f4700a`; `cfe0aa12` aparece apenas como landmark e nenhuma frescura remota é alegada |
 | `D-02` | Adherent | matriz C-04/C-06/C-07/C-08/C-09 separa unidade/equipe, fila, política, capacidade, atendimento humano/automação e transferência |
 | `D-03` | Adherent | diagrama, glossário e recomendações preservam Setor, BU e Canal; termos novos permanecem hipóteses/future decisions, sem canonização |
 
@@ -622,13 +623,14 @@ As fontes abaixo foram recarregadas após `APROVADO` e vinculadas ao escopo docu
 
 | Reviewer Surface / Package | Review Focus | Status | Evidence Artifact / Command | Findings | Resolution / Notes |
 | --- | --- | --- | --- | --- | --- |
-| ST-03 documentary checkpoint | correctness/contract and CI/evidence integrity | pending | bounded packet after checkpoint commit | pending | required before final review |
+| ST-03 documentary checkpoint | correctness/contract and CI/evidence integrity | pending | próximo checkpoint commit ainda inexistente; pacote = TODO + estudo + diff | P1/P2 abaixo | required before final review |
 
 ## Promotion Finding Routing Ledger
 
 | Finding ID | Severity | Classification | Routing Decision | Same TODO / Split Rationale | Status | Approval / Follow-up Reference |
 | --- | --- | --- | --- | --- | --- | --- |
-| `pending-review` | n/a | n/a | await P1/P2 and final-review findings | no routing before findings exist | pending | n/a |
+| `ST03-P1-evidence-supersession` | P1 | release-blocker | corrigido no mesmo TODO; exige re-review | E-03/E-17/E-18 e C-02/C-03 | integrated / pending re-review | ST-03 checkpoint pending |
+| `ST03-P2-scope-and-auth-evidence` | P2 | release-blocker | corrigido no mesmo TODO; exige re-review | webhooks/router/sector matrix, ausência e actor×operação | integrated / pending re-review | ST-03 checkpoint pending |
 
 ## Rule-Spirit Anti-Pattern Hunt
 
@@ -674,11 +676,11 @@ As fontes abaixo foram recarregadas após `APROVADO` e vinculadas ao escopo docu
 
 - **Audit decision:** `recommended`
 - **Why this decision:** validação documental não altera testes, mas a complexidade medium recomenda auditoria focada da qualidade das evidências.
-- **Audit status:** `passed`
+- **Audit status:** `findings_integrated`
 - **Audit focus:** eficácia da validação documental e rastreabilidade dos cenários.
 - **Findings received:** `ST03-TQA-001`, `ST03-TQA-002`, `ST03-TQA-R2-001`, `ST03-TQA-R2-002`, `ST03-TQA-R3-001`.
-- **Rerun status:** `passed`; quarto reviewer fresco retornou `clean/no_material_findings` e verificou 1:1 todas as resoluções anteriores.
-- **Evidence / reference:** `foundation_documentation/artifacts/tmp/st03-execution/test-quality-reaudit-r4-dispatch.json`; reviewer `/root/st03_test_quality_reaudit_r4`, 2026-09-25.
+- **Rerun status:** `pending`; a correção posterior invalida o clean anterior.
+- **Embedded R4 result (historical, non-green now):** reviewer `/root/st03_test_quality_reaudit_r4`; pacote/checkpoint então revisado: TODO+estudo antes desta onda; resultado `clean/no_material_findings`; verificação 1:1 cobriu `ST03-TQA-001`, `002`, `R2-001`, `R2-002`, `R3-001`. Este resultado não é evidência da onda atual e não depende de dispatch externo.
 
 | Finding ID | Evidence | Resolution integrated | Status |
 | --- | --- | --- | --- |
@@ -720,6 +722,10 @@ As fontes abaixo foram recarregadas após `APROVADO` e vinculadas ao escopo docu
 - `git.exe -C 'C:/Unifast/LeadsHug/Inspirações LeadsHug/whatsflow_v2' rev-parse HEAD^{tree}`
 - `python3 foundation_documentation/deterministic/validate_foundation_lifecycle.py --root foundation_documentation`
 - `git -C foundation_documentation diff --check`
+- `git diff --check --no-index /dev/null foundation_documentation/artifacts/analysis/leadshug-whatsflow-channel-attendance-conceptual-model-20260925.md` (aceitar exit `1` somente por arquivo novo e exigir stdout vazio)
+- `git -C foundation_documentation diff --no-ext-diff 9cf4b1d110477fff12b557481d1ebdb223a1001f -- todos/active/features/TODO-leadshug-whatsflow-channel-attendance-study.md artifacts/analysis/leadshug-whatsflow-channel-attendance-conceptual-model-20260925.md`
+- `git -C foundation_documentation diff --no-ext-diff --check 9cf4b1d110477fff12b557481d1ebdb223a1001f -- todos/active/features/TODO-leadshug-whatsflow-channel-attendance-study.md` (tracked range; o artefato novo usa o comando `--no-index` acima)
+- `rg -n -i '(api[_-]?key|authorization:|bearer |secret|token|password|@[A-Za-z0-9._%+-]+)' foundation_documentation/artifacts/analysis/leadshug-whatsflow-channel-attendance-conceptual-model-20260925.md foundation_documentation/todos/active/features/TODO-leadshug-whatsflow-channel-attendance-study.md` (revisar somente ocorrências estruturais/sanitizadas; não persistir valores)
 
 ## Files Expected
 
