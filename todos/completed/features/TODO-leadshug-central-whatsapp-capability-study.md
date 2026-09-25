@@ -34,15 +34,16 @@ Este trabalho é um estudo de capacidades e comportamentos. O Central-Whatsapp p
 
 ## Delivery Status Canon (Required)
 
-- **Current delivery stage:** `Local-Implemented`
+- **Current delivery stage:** `Production-Ready`
+- **Tactical TODO lifecycle state:** `Completed`
 - **Qualifiers:** `none`
-- **Next exact step:** concluir assurance, revisão final independente e guards de closeout sobre o catálogo já produzido.
+- **Next exact step:** `n/a — completed`; o próximo trabalho do programa é o framing separado do ST-03.
 
 ## Active Work State (Required While TODO Remains In `active/`)
 
-- **Work state:** `review`
-- **Why this state now:** catálogo e ledger foram produzidos dentro do escopo aprovado; validações e revisões de delivery estão em curso.
-- **Exit condition:** catálogo, ledger, auditorias e evidências de delivery concluídos; TODO publicado e movido para `completed/features/`.
+- **Work state:** `n/a once moved out of active`
+- **Why this state now:** catálogo, ledger, validações e revisões foram concluídos; o TODO segue para `completed/features/` no mesmo closeout.
+- **Exit condition:** satisfeita; catálogo publicado, gates verdes e TODO movido para `completed/features/`.
 
 ## Scope
 
@@ -78,7 +79,7 @@ Este trabalho é um estudo de capacidades e comportamentos. O Central-Whatsapp p
 
 | Scope Item | Local Branch/Commit | PR to lane threshold | PR to `stage` | PR to `main` | Current Status |
 | --- | --- | --- | --- | --- | --- |
-| Catálogo ST-02 e closeout | `main@pending` | `n/a` | `n/a` | `direct documentation publication` | pending |
+| Catálogo ST-02 e closeout | `main@81024932` + atomic closeout commit | `n/a` | `n/a` | `direct documentation publication` | passed |
 
 ## Diff Expectation Contract
 
@@ -195,10 +196,10 @@ Integridade: ao menos um entre `capability_ids[]`, `supports[]`, `duplicate_of[]
 - [x] `DOD-04` Itens posteriores à baseline estão separados dos itens que já existiam na baseline mas não foram reimplementados.
 - [x] `DOD-05` Lições negativas e exclusões estão explícitas; uma rejeição como não desejada exige `canonical_rejection_ref`, caso contrário permanece recomendação.
 - [x] `DOD-06` O ledger mapeia toda a população admitida para capacidade, duplicata ou exclusão justificada; a auditoria estratificada não encontra item relevante sem mapeamento.
-- [x] `DOD-10` Cada capacidade avalia `tenancy`, `BU`, `conversation`, `provider_adapter`, `audit` e `channel_policy` como `applies|not_applicable|unknown`, com evidência/justificativa.
+- [x] `DOD-10` Cada capacidade avalia `tenancy`, `BU`, `conversation`, `provider_adapter`, `audit` e `channel_policy` como `applies`, `not_applicable` ou `unknown`, com evidência/justificativa.
 - [x] `DOD-07` O catálogo não contém segredos, dados pessoais, payloads sensíveis nem trechos de código copiados.
 - [x] `DOD-08` Nenhuma recomendação é apresentada como prioridade aprovada ou autorização de implementação.
-- [ ] `DOD-09` Gates documentais e revisão final passam; feature brief/backlog refletem apenas o estado factual concluído.
+- [x] `DOD-09` Gates documentais e revisão final passam; feature brief/backlog refletem apenas o estado factual concluído.
 
 ## Validation Steps
 
@@ -207,36 +208,36 @@ Integridade: ao menos um entre `capability_ids[]`, `supports[]`, `duplicate_of[]
 - [x] `VAL-03` Comparar o único commit do overlay que toca `hub-whatsapp/**` entre `beb655cd..994e1e8`, excluindo `secrets/**`.
 - [x] `VAL-04` Verificar o ledger completo e auditar deterministicamente 100% de `not_found_after_protocol`, `uncertain`, rejeições canônicas, itens cross-origin e alegações sensíveis; amostrar de forma estratificada os estados positivos restantes.
 - [x] `VAL-05` Usar comandos allowlisted sem patch/body ou metadados pessoais por padrão; não persistir outputs brutos; executar scanner de segredo no diff final e revisão explícita de PII sem alegar garantia absoluta.
-- [ ] `VAL-06` Executar validador estrutural, `git diff --check` e guards de diff, autoridade, conclusão e closeout aplicáveis.
+- [x] `VAL-06` Executar validador estrutural, `git diff --check` e guards de diff, autoridade, conclusão e closeout aplicáveis.
 
 ## Completion Evidence Matrix (Required Before Delivery Claim)
 
 | Criterion ID | Source Section | Criterion | Evidence Type | Evidence Artifact / Command | Runtime Target | Status | Notes |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| `S-01` | Scope | Publicar no catálogo um manifesto reproduzível com identidade, base, head, tree, pathspec permitido, papel e comandos exatos de verificação para cada snapshot. | doc+command | catálogo §§3–3.1; revalidação Git por SHA/tree em 2026-09-25 | read-only snapshots | passed | cinco identidades com papel/pathspec/comando |
-| `S-02` | Scope | Inventariar capacidades relevantes do Central oficial surgidas ou alteradas após a baseline de importação. | doc+ledger | catálogo §§4 e 7; 129 commits oficiais | central-official frozen SHA | passed | 126 tocam allowlist; 3 sentinelas fail-closed |
-| `S-03` | Scope | Inventariar capacidades relevantes do hub não oficial surgidas ou alteradas após a baseline de importação. | doc+ledger | catálogo §§4 e 7; 66 commits do hub | central-hub frozen SHA | passed | 64 tocam allowlist; 2 sentinelas fail-closed |
-| `S-04` | Scope | Examinar separadamente o overlay local do hub incorporado ao antigo LeadsHug, sem atribuí-lo ao Central independente. | doc+ledger | catálogo §§3, 7 e 8.2; `SU-4b78629f9cae4e5e` | legacy frozen SHA | passed | único commit allowlisted, excluído como infraestrutura |
-| `S-05` | Scope | Comparar cada capacidade candidata com o LeadsHug API/Web atual e seus contratos canônicos. | doc+review | catálogo §§4.2 e 6; API/Web nos SHAs congelados | LeadsHug API/Web | passed | presença, parcialidade ou protocolo de ausência por CAP |
-| `S-06` | Scope | Classificar cada item por `origins[]`, época, transversalidade derivada, presença observada no LeadsHug, força da evidência, valor, risco, dependências e disposição recomendada. | doc+integrity check | catálogo §§4.1–5 | n/a | passed | 27/27 linhas atendem o schema e a policy |
-| `S-07` | Scope | Registrar lições negativas e exclusões explícitas para evitar que antipadrões legados sejam tratados como oportunidades. | doc+review | catálogo §9 e exclusões do ledger | n/a | passed | antipadrões não viraram oportunidades |
-| `S-08` | Scope | Manter um ledger completo da população analisada, validar por amostragem bidirecional determinística/estratificada e publicar um único artefato de análise. | doc+command+review | catálogo §§7–8; verificador local: 204 IDs únicos, 0 issues | local/read-only | passed | amostra catálogo 23/27; ledger 83/204 |
-| `DOD-01` | Definition of Done | O manifesto registra bases, heads, trees, pathspecs, papéis e comandos verificáveis para todos os snapshots. | doc+command | catálogo §§3–3.1; heads/trees revalidados | read-only snapshots | passed | identidades e comandos reproduzíveis |
-| `DOD-02` | Definition of Done | Cada capacidade tem evidência do Central e evidência/estado correspondente no LeadsHug, ou incerteza explícita. | doc+integrity check | catálogo §4.2 e §6 | frozen snapshots | passed | 27/27 capacidades resolvem evidência/estado |
-| `DOD-03` | Definition of Done | Cada capacidade informa `origins[]`, `epoch`, `cross_origin`, `implementation_state`, `evidence_strength`, valor, riscos, dependências e disposição recomendada sem misturar presença e desejabilidade. | doc+review | catálogo §§4.1–4.2 | n/a | passed | presença não foi confundida com desejabilidade |
-| `DOD-04` | Definition of Done | Itens posteriores à baseline estão separados dos itens que já existiam na baseline mas não foram reimplementados. | doc+review | `origin_epochs{}` em catálogo §4.1 | n/a | passed | `preexisting_gap` e `post_baseline_evolution` explícitos |
-| `DOD-05` | Definition of Done | Lições negativas e exclusões estão explícitas; uma rejeição como não desejada exige `canonical_rejection_ref`, caso contrário permanece recomendação. | doc+review | catálogo §§4.1 e 9 | n/a | passed | descarte canônico somente quando há referência; demais são recomendações |
-| `DOD-06` | Definition of Done | O ledger mapeia toda a população admitida para capacidade, duplicata ou exclusão justificada; a auditoria estratificada não encontra item relevante sem mapeamento. | command+review | catálogo §§7–8; 204/204 IDs válidos, 0 unmapped | local/read-only | passed | 177 mapeamentos capability/support e 27 exclusões específicas |
-| `DOD-07` | Definition of Done | O catálogo não contém segredos, dados pessoais, payloads sensíveis nem trechos de código copiados. | scan+manual review | exact sensitive-content check + revisão PII/payload no diff | Foundation diff | passed | scan silencioso sem match; revisão explícita sem PII/payload/código copiado |
-| `DOD-08` | Definition of Done | Nenhuma recomendação é apresentada como prioridade aprovada ou autorização de implementação. | doc+review | catálogo §§1, 4.1 e 10 | n/a | passed | agrupamento do ST-04 é explicitamente não priorizado |
-| `DOD-09` | Definition of Done | Gates documentais e revisão final passam; feature brief/backlog refletem apenas o estado factual concluído. | guard+review | delivery gates, feature brief e backlog | Foundation | in-progress | depende de revisão final e closeout |
-| `DOD-10` | Definition of Done | Cada capacidade avalia `tenancy`, `BU`, `conversation`, `provider_adapter`, `audit` e `channel_policy` como `applies|not_applicable|unknown`, com evidência/justificativa. | doc+integrity review | catálogo §5; 162/162 células justificadas | n/a | passed | 27/27 capacidades têm seis chaves e rationale explícito |
-| `VAL-01` | Validation Steps | Revalidar bases, heads e trees do manifesto com comandos Git por SHA e confirmar alcance dos commits de importação. | command | `cat-file`, `merge-base`, `rev-parse` e `rev-list` em 2026-09-25 | frozen snapshots | passed | hashes/ancestralidade iguais ao manifesto |
-| `VAL-02` | Validation Steps | Comparar os intervalos completos `6517f197..337f3e4` (129 não-merge) e `94ce80aa..51bc16e` (66 não-merge) somente nos pathspecs permitidos. | command+ledger | 129 oficial + 66 hub; catálogo §§3.1 e 7 | frozen snapshots | passed | 126/64 allowlisted; cinco sentinelas fora da allowlist |
-| `VAL-03` | Validation Steps | Comparar o único commit do overlay que toca `hub-whatsapp/**` entre `beb655cd..994e1e8`, excluindo `secrets/**`. | command+ledger | total 88, allowlisted 1; catálogo §§3.1, 7 e 8.2 | legacy snapshot | passed | `secrets/**` não enumerado nem lido |
-| `VAL-04` | Validation Steps | Verificar o ledger completo e auditar deterministicamente 100% de `not_found_after_protocol`, `uncertain`, rejeições canônicas, itens cross-origin e alegações sensíveis; amostrar de forma estratificada os estados positivos restantes. | command+review | catálogo §8; hash da lista `acb1de38...e63`; semantic checker 0 issues | local/read-only | passed | 100% dos estados/alegações de risco revisados |
-| `VAL-05` | Validation Steps | Usar comandos allowlisted sem patch/body ou metadados pessoais por padrão; não persistir outputs brutos; executar scanner de segredo no diff final e revisão explícita de PII sem alegar garantia absoluta. | scan+manual review | exact sensitive-content check; revisão explícita PII/payload | Foundation diff | passed | scan pós-integração `PASS` em 3 arquivos; revisão sem PII/payload/código copiado |
-| `VAL-06` | Validation Steps | Executar validador estrutural, `git diff --check` e guards de diff, autoridade, conclusão e closeout aplicáveis. | command | lifecycle validator e `diff --check` exit 0; guards pendentes | Foundation | in-progress | completion/closeout somente após review final |
+| `S-01` | Scope | `S-01` Publicar no catálogo um manifesto reproduzível com identidade, base, head, tree, pathspec permitido, papel e comandos exatos de verificação para cada snapshot. | doc+command | catálogo §§3–3.1; revalidação Git por SHA/tree em 2026-09-25 | read-only snapshots | passed | cinco identidades com papel/pathspec/comando |
+| `S-02` | Scope | `S-02` Inventariar capacidades relevantes do Central oficial surgidas ou alteradas após a baseline de importação. | doc+ledger | catálogo §§4 e 7; 129 commits oficiais | central-official frozen SHA | passed | 126 tocam allowlist; 3 sentinelas fail-closed |
+| `S-03` | Scope | `S-03` Inventariar capacidades relevantes do hub não oficial surgidas ou alteradas após a baseline de importação. | doc+ledger | catálogo §§4 e 7; 66 commits do hub | central-hub frozen SHA | passed | 64 tocam allowlist; 2 sentinelas fail-closed |
+| `S-04` | Scope | `S-04` Examinar separadamente o overlay local do hub incorporado ao antigo LeadsHug, sem atribuí-lo ao Central independente. | doc+ledger | catálogo §§3, 7 e 8.2; `SU-4b78629f9cae4e5e` | legacy frozen SHA | passed | único commit allowlisted, excluído como infraestrutura |
+| `S-05` | Scope | `S-05` Comparar cada capacidade candidata com o LeadsHug API/Web atual e seus contratos canônicos. | doc+review | catálogo §§4.2 e 6; API/Web nos SHAs congelados | LeadsHug API/Web | passed | presença, parcialidade ou protocolo de ausência por CAP |
+| `S-06` | Scope | `S-06` Classificar cada item por `origins[]`, época, transversalidade derivada, presença observada no LeadsHug, força da evidência, valor, risco, dependências e disposição recomendada. | doc+integrity check | catálogo §§4.1–5 | n/a | passed | 27/27 linhas atendem o schema e a policy |
+| `S-07` | Scope | `S-07` Registrar lições negativas e exclusões explícitas para evitar que antipadrões legados sejam tratados como oportunidades. | doc+review | catálogo §9 e exclusões do ledger | n/a | passed | antipadrões não viraram oportunidades |
+| `S-08` | Scope | `S-08` Manter um ledger completo da população analisada, validar por amostragem bidirecional determinística/estratificada e publicar um único artefato de análise. | doc+command+review | catálogo §§7–8; verificador local: 204 IDs únicos, 0 issues | local/read-only | passed | amostra catálogo 23/27; ledger 83/204 |
+| `DOD-01` | Definition of Done | `DOD-01` O manifesto registra bases, heads, trees, pathspecs, papéis e comandos verificáveis para todos os snapshots. | doc+command | catálogo §§3–3.1; heads/trees revalidados | read-only snapshots | passed | identidades e comandos reproduzíveis |
+| `DOD-02` | Definition of Done | `DOD-02` Cada capacidade tem evidência do Central e evidência/estado correspondente no LeadsHug, ou incerteza explícita. | doc+integrity check | catálogo §4.2 e §6 | frozen snapshots | passed | 27/27 capacidades resolvem evidência/estado |
+| `DOD-03` | Definition of Done | `DOD-03` Cada capacidade informa `origins[]`, `epoch`, `cross_origin`, `implementation_state`, `evidence_strength`, valor, riscos, dependências e disposição recomendada sem misturar presença e desejabilidade. | doc+review | catálogo §§4.1–4.2 | n/a | passed | presença não foi confundida com desejabilidade |
+| `DOD-04` | Definition of Done | `DOD-04` Itens posteriores à baseline estão separados dos itens que já existiam na baseline mas não foram reimplementados. | doc+review | `origin_epochs{}` em catálogo §4.1 | n/a | passed | `preexisting_gap` e `post_baseline_evolution` explícitos |
+| `DOD-05` | Definition of Done | `DOD-05` Lições negativas e exclusões estão explícitas; uma rejeição como não desejada exige `canonical_rejection_ref`, caso contrário permanece recomendação. | doc+review | catálogo §§4.1 e 9 | n/a | passed | descarte canônico somente quando há referência; demais são recomendações |
+| `DOD-06` | Definition of Done | `DOD-06` O ledger mapeia toda a população admitida para capacidade, duplicata ou exclusão justificada; a auditoria estratificada não encontra item relevante sem mapeamento. | command+review | catálogo §§7–8; 204/204 IDs válidos, 0 unmapped | local/read-only | passed | 177 mapeamentos capability/support e 27 exclusões específicas |
+| `DOD-07` | Definition of Done | `DOD-07` O catálogo não contém segredos, dados pessoais, payloads sensíveis nem trechos de código copiados. | scan+manual review | exact sensitive-content check + revisão PII/payload no diff | Foundation diff | passed | scan silencioso sem match; revisão explícita sem PII/payload/código copiado |
+| `DOD-08` | Definition of Done | `DOD-08` Nenhuma recomendação é apresentada como prioridade aprovada ou autorização de implementação. | doc+review | catálogo §§1, 4.1 e 10 | n/a | passed | agrupamento do ST-04 é explicitamente não priorizado |
+| `DOD-09` | Definition of Done | `DOD-09` Gates documentais e revisão final passam; feature brief/backlog refletem apenas o estado factual concluído. | guard+review | final delta review `no_material_findings`; brief/backlog/closeout reconciliados | Foundation | passed | nenhum finding material permanece |
+| `DOD-10` | Definition of Done | `DOD-10` Cada capacidade avalia `tenancy`, `BU`, `conversation`, `provider_adapter`, `audit` e `channel_policy` como `applies`, `not_applicable` ou `unknown`, com evidência/justificativa. | doc+integrity review | catálogo §5; 162/162 células justificadas | n/a | passed | 27/27 capacidades têm seis chaves e rationale explícito |
+| `VAL-01` | Validation Steps | `VAL-01` Revalidar bases, heads e trees do manifesto com comandos Git por SHA e confirmar alcance dos commits de importação. | command | `cat-file`, `merge-base`, `rev-parse` e `rev-list` em 2026-09-25 | frozen snapshots | passed | hashes/ancestralidade iguais ao manifesto |
+| `VAL-02` | Validation Steps | `VAL-02` Comparar os intervalos completos `6517f197..337f3e4` (129 não-merge) e `94ce80aa..51bc16e` (66 não-merge) somente nos pathspecs permitidos. | command+ledger | 129 oficial + 66 hub; catálogo §§3.1 e 7 | frozen snapshots | passed | 126/64 allowlisted; cinco sentinelas fora da allowlist |
+| `VAL-03` | Validation Steps | `VAL-03` Comparar o único commit do overlay que toca `hub-whatsapp/**` entre `beb655cd..994e1e8`, excluindo `secrets/**`. | command+ledger | total 88, allowlisted 1; catálogo §§3.1, 7 e 8.2 | legacy snapshot | passed | `secrets/**` não enumerado nem lido |
+| `VAL-04` | Validation Steps | `VAL-04` Verificar o ledger completo e auditar deterministicamente 100% de `not_found_after_protocol`, `uncertain`, rejeições canônicas, itens cross-origin e alegações sensíveis; amostrar de forma estratificada os estados positivos restantes. | command+review | catálogo §8; hash da lista `acb1de38...e63`; semantic checker 0 issues | local/read-only | passed | 100% dos estados/alegações de risco revisados |
+| `VAL-05` | Validation Steps | `VAL-05` Usar comandos allowlisted sem patch/body ou metadados pessoais por padrão; não persistir outputs brutos; executar scanner de segredo no diff final e revisão explícita de PII sem alegar garantia absoluta. | scan+manual review | exact sensitive-content check; revisão explícita PII/payload | Foundation diff | passed | scan pós-integração `PASS` em 3 arquivos; revisão sem PII/payload/código copiado |
+| `VAL-06` | Validation Steps | `VAL-06` Executar validador estrutural, `git diff --check` e guards de diff, autoridade, conclusão e closeout aplicáveis. | command | lifecycle/TODO validators, `diff --check`, diff/authority/completion/closeout guards | Foundation | passed | rerun final no caminho completed antes da publicação |
 
 ## External Dependency Readiness (Required When External Systems Matter)
 
@@ -630,7 +631,10 @@ Recarregado após `APROVADO` em 2026-09-25; execução permanece documental, sin
 ## Verification Debt Assessment (Required Before `Completed`)
 
 - **Audit decision:** `required` antes de `Completed` (`VDA-MEDIUM-BIG-OR-RELEASE`).
-- Pendente. Lacunas de amostragem e classificações `Incerto` serão dívida explícita, nunca ocultada.
+- **Audit outcome:** `none` após adjudicação humana.
+- **Evidence / audit artifact:** `verification_debt_audit.sh --scan-git-modified`, executado via normalização CRLF somente leitura em 2026-09-25; a heurística `high` refletiu os campos `planned/pending` e checkboxes abertos durante assurance, além do vocabulário estrutural do TODO. Após fechamento, 24/24 critérios têm evidência específica e nenhum finding material permanece nas revisões.
+- **Inline code TODO debt:** `none`; não houve mudança de código/teste/runtime.
+- **Accepted residual debt:** `none`; limite de evidência estática e julgamento de decomposição são riscos metodológicos explícitos, não verificação omitida.
 
 ## Independent Test Quality Audit Gate
 
@@ -646,10 +650,10 @@ Recarregado após `APROVADO` em 2026-09-25; execução permanece documental, sin
 ## Independent No-Context Final Review Gate
 
 - **Final review decision:** `required`
-- **Final review status:** `findings_integrated`
-- **Evidence / reference:** reviewer stateless `/root/st02_independent_final_review` sobre `foundation_documentation:main@196a8de7`, 2026-09-25; verdict `findings` (`ST02-FR-01..05`).
+- **Final review status:** `no_material_findings`
+- **Evidence / reference:** primeira revisão stateless `/root/st02_independent_final_review` sobre `main@196a8de7` encontrou `ST02-FR-01..05`; revisão stateless do delta `/root/st02_final_delta_review` aprovou `196a8de7..81024932` sem achado material em 2026-09-25.
 - **Required focus:** rastreabilidade, linguagem não prescritiva, cobertura, privacidade e ausência de implementação.
-- **Integration summary:** comandos/pathspecs completos; 162 células justificadas; 97 refs normalizadas; 21 exclusões ambíguas tornadas específicas; linguagem/VAL-05 reconciliados. Revisão bounded do delta permanece obrigatória.
+- **Integration summary:** comandos/pathspecs completos; 162 células justificadas; 97 refs normalizadas; 21 exclusões ambíguas tornadas específicas; linguagem/VAL-05 reconciliados; delta revalidado sem finding material.
 
 | Finding ID | Resolution (`Integrated|Challenged|Deferred`) | Usefulness (`useful|noise|mixed|unknown`) | Formalizable (`yes|partial|no|unknown`) | Candidate Rule Level (`paced|project|none|unknown`) | Candidate Rule ID | Rationale / Evidence |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -668,12 +672,19 @@ Recarregado após `APROVADO` em 2026-09-25; execução permanece documental, sin
 
 ## Delivery Confidence Gate
 
-- **Status:** `pending`
-- **Required outcome:** critérios/evidências passam sem recomendação apresentada como decisão aprovada.
+- **Status:** `passed`
+- **Outcome:** critérios/evidências passam; catálogo preserva recomendações como input não priorizado do ST-04 e não autoriza implementação.
 
 ## Module Consolidation Gate
 
 - **Status:** `not applicable for product decisions`; somente feature brief/backlog recebem atualização factual de conclusão.
+
+## TODO Closeout Disposition
+
+- **Disposition:** `move-completed`
+- **Disposition reason:** catálogo e ledger publicados; `ST02-FR-01..05` integrados e aprovados no delta; auditorias, critérios e guards aplicáveis sem finding material.
+- **Post-commit/push status:** delivery candidate e correções publicados até `foundation_documentation:main@81024932`; o commit atômico de closeout contém o movimento e os espelhos factuais finais.
+- **Next path/status action:** `completed`; nenhum trabalho permanece neste TODO. ST-03 exige framing e aprovação próprios.
 
 ## Commands (Run Locally)
 
@@ -728,9 +739,9 @@ fi
 
 ## Files Expected
 
-- `foundation_documentation/todos/active/features/TODO-leadshug-central-whatsapp-capability-study.md`
-- `foundation_documentation/artifacts/analysis/leadshug-central-whatsapp-capability-gap-catalog-20260925.md` após aprovação.
-- Feature brief/backlog e movimento para `completed/features/` apenas no closeout.
+- `foundation_documentation/todos/completed/features/TODO-leadshug-central-whatsapp-capability-study.md`
+- `foundation_documentation/artifacts/analysis/leadshug-central-whatsapp-capability-gap-catalog-20260925.md`.
+- Feature brief/backlog reconciliados no closeout.
 
 ## COMENTÁRIO:
 

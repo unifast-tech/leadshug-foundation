@@ -12,8 +12,13 @@ Each new record carries an immutable ID, title, state, source/evidence, value/ri
 
 | Immutable ID | Title | State | Source / evidence | Value / risk | Dependencies | Disposition owner | Next gate |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| BLG-central-whatsapp-capability-study | Central-Whatsapp capability study (ST-02) | Selected-for-Planning | [delivery candidate and active TODO](../todos/active/features/TODO-leadshug-central-whatsapp-capability-study.md) | identify reusable capability gaps without mechanical porting | comparison baseline resolved; delivery gates in progress | strategic steward | complete review and governed closeout |
 | BLG-whatsflow-channel-attendance-study | whatsflow_v2 channel and attendance study (ST-03) | Selected-for-Planning | [pre-code evolution brief](../artifacts/feature-briefs/leadshug-pre-code-evolution-program-20260918.md) | clarify attendance concepts without importing legacy debt or vocabulary collisions | resolve attendance-model ambiguity before canonization | strategic steward | frame a separate study TODO after ST-01 |
-| BLG-leadshug-evolution-synthesis | LeadsHug evolution synthesis (ST-04) | Deferred | [pre-code evolution brief](../artifacts/feature-briefs/leadshug-pre-code-evolution-program-20260918.md) | synthesize evidence only after both independent studies; early synthesis risks false priority | ST-02 in assurance; ST-03 pending | strategic steward | reassess after both studies conclude |
+| BLG-leadshug-evolution-synthesis | LeadsHug evolution synthesis (ST-04) | Deferred | [pre-code evolution brief](../artifacts/feature-briefs/leadshug-pre-code-evolution-program-20260918.md) | synthesize evidence only after both independent studies; early synthesis risks false priority | ST-02 delivered; ST-03 pending | strategic steward | reassess after ST-03 concludes |
 
 The IDs above are references for future planning; their live disposition and next gate remain only in this table.
+
+## Fulfilled candidate handoffs
+
+| Immutable ID | Fulfilled by | Evidence | Downstream use |
+| --- | --- | --- | --- |
+| BLG-central-whatsapp-capability-study | [completed ST-02 TODO](../todos/completed/features/TODO-leadshug-central-whatsapp-capability-study.md) | [27-capability catalog and 204-unit ledger](../artifacts/analysis/leadshug-central-whatsapp-capability-gap-catalog-20260925.md) | input to ST-04 after ST-03; no capability is prioritized or authorized by this handoff |
