@@ -678,7 +678,7 @@ As fontes abaixo foram recarregadas após `APROVADO` e vinculadas ao escopo docu
 
 - **Audit decision:** `recommended`
 - **Why this decision:** validação documental não altera testes, mas a complexidade medium recomenda auditoria focada da qualidade das evidências.
-- **Audit status:** `findings_integrated`
+- **Audit status:** `running`
 - **Audit focus:** eficácia da validação documental e rastreabilidade dos cenários.
 - **Findings received:** `ST03-TQA-001`, `ST03-TQA-002`, `ST03-TQA-R2-001`, `ST03-TQA-R2-002`, `ST03-TQA-R3-001`, `ST03-TQA-R5-001`.
 - **Rerun status:** `pending`; a correção posterior invalida o clean anterior.
