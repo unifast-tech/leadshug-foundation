@@ -89,7 +89,7 @@ No recorte congelado e revalidado pelo ST-02, os dois repositórios somam 195 co
 - grupos, comunidades, agrupamentos reutilizáveis e agendamentos no transporte não oficial;
 - permissões específicas para números e integrações.
 
-O inventário deverá classificar cada item como `já existe`, `parcial`, `ausente`, `não desejado` ou `incerto`, sempre com valor, risco, dependências e evidência.
+A formulação inicial `já existe|parcial|ausente|não desejado|incerto` fica preservada apenas como proveniência de discovery e foi supersedida no ST-02. O catálogo separa `implementation_state` (`observed_present|partial|not_found_after_protocol|uncertain`), `evidence_strength` e `disposition_recommendation` (`discard|study|candidate_st04`), sempre com valor, risco, dependências e evidência; presença, qualidade produtiva e desejabilidade não são equivalentes.
 
 ### whatsflow_v2 — canais e atendimento
 
