@@ -246,9 +246,10 @@ Qualquer caminho não classificado deve ser analisado antes da entrega. Expansã
 
 ## Gate: Review Baseline Freeze
 
-- **Status:** `prepared-pre-freeze`; validação humana concluída, aguardando commit/push da baseline de revisão.
+- **Status:** `passed`; baseline decisória congelada, commitada e publicada antes dos reviews/guards formais.
 - **Freeze target:** `D-01..D-06`, snapshots, escopo e diff contract.
-- **Baseline branch/commit/push:** `pending-freeze`.
+- **Baseline branch/commit/push:** `foundation_documentation:main@cff19546`, publicado em `origin/main` em 2026-09-25.
+- **Evidence:** `git_write_authority_guard.py` retornou `Overall outcome: go` para commit e push; `git.exe push origin main` publicou `6344bf64..cff19546`.
 
 ## Gate: Review Scope Drift
 
@@ -318,7 +319,7 @@ Qualquer caminho não classificado deve ser analisado antes da entrega. Expansã
 
 - **Canonical method:** `wf-docker-audit-escalation-method`
 - **Guard command:** `python3 delphi-ai/tools/audit_escalation_guard.py --todo foundation_documentation/todos/active/features/TODO-leadshug-central-whatsapp-capability-study.md`
-- **Latest TEACH evidence / artifact:** `pending-freeze`
+- **Latest TEACH evidence / artifact:** `pending audit-escalation run after review baseline cff19546`
 
 | Trigger | Value | Notes |
 | --- | --- | --- |
