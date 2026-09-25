@@ -269,13 +269,13 @@ Cada linha também contém a matriz de aplicabilidade exigida pela policy: `tena
 ## Gate: Review Baseline Freeze
 
 - **Gate decision:** `required`.
-- **Status:** `prepared-pre-freeze`; contrato revisado revalidado, aguardando commit/push.
-- **Gate status:** `not_run`.
+- **Status:** `passed`; contrato revisado revalidado, commitado e publicado antes dos novos reviews/guards formais.
+- **Gate status:** `no_material_findings`.
 - **Freeze target:** decisões, manifesto/schema, escopo, DoD, validação, estratégia de auditoria e diff contract.
 - **Baseline branch:** `foundation_documentation:main`.
-- **Baseline commit:** `pending-freeze`.
+- **Baseline commit:** `1dac5eaf`.
 - **Baseline push reference:** `origin/main`.
-- **Evidence / reference:** `pending-freeze`.
+- **Evidence / reference:** `git_write_authority_guard.py` retornou `go`; `git.exe push origin main` publicou `d2837312..1dac5eaf` em 2026-09-25.
 - **Historical invalidation evidence:** baseline `cff19546`, crítica `IC-01..IC-06`, verdict `findings`.
 - **Waiver authority / reference (required if waived):** `n/a`.
 
