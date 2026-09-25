@@ -34,8 +34,8 @@ O `whatsflow_v2` contém soluções de conexão, inbox, departamentos, atendente
 
 - **Current delivery stage:** `Pending`
 - **Qualifiers:** `none`
-- **Next exact step:** publicar o próximo checkpoint documental (SHA ainda inexistente), repetir evidência/quality review e executar P1/P2, rule-spirit e final review.
-- **Current checkout identity:** `foundation_documentation:main@ce2af2765b1bb5a3437125537787b6c701221b98` + working-tree documental não commitado; o SHA do próximo checkpoint só existirá após commit autorizado.
+- **Next exact step:** publicar o próximo pacote manual autocontido (SHA ainda inexistente), repetir evidência/quality review e executar P1/P2, rule-spirit e final review; o pacote R2 foi temporário e insuficiente.
+- **Current checkout identity:** `foundation_documentation:main@bc4032ef7af8a19f5397543ea6ab4a49013faa8c` é o checkpoint R2 revisado; esta nova onda está somente no working tree e seu SHA só existirá após próximo commit autorizado.
 
 ## Active Work State (Required While TODO Remains In `active/`)
 
@@ -73,7 +73,7 @@ O `whatsflow_v2` contém soluções de conexão, inbox, departamentos, atendente
 
 | Scope Item | Local Branch/Commit | PR to lane threshold | PR to `stage` | PR to `main` | Current Status |
 | --- | --- | --- | --- | --- | --- |
-| TODO e estudo ST-03 | `foundation_documentation:main@ce2af276` + corrective working tree | `n/a` | `n/a` | `direct publication pending` | implementation; exact review SHA will be frozen by the next bounded packet |
+| TODO e estudo ST-03 | `foundation_documentation:main@bc4032ef` (checkpoint R2 revisado) + nova corrective working tree | `n/a` | `n/a` | `direct publication pending` | pacote R2 temporário/insuficiente; próximo pacote manual autocontido ainda sem SHA |
 
 ## Diff Expectation Contract
 
@@ -86,7 +86,7 @@ O `whatsflow_v2` contém soluções de conexão, inbox, departamentos, atendente
 
 | Repository | Path | Baseline ref | Comparison mode |
 | --- | --- | --- | --- |
-| Foundation | `foundation_documentation` | `main@9cf4b1d110477fff12b557481d1ebdb223a1001f` | `working_tree` |
+| Foundation | `foundation_documentation` | `main@bc4032ef7af8a19f5397543ea6ab4a49013faa8c` | `working_tree` |
 | whatsflow_v2 | `/mnt/c/Unifast/LeadsHug/Inspirações LeadsHug/whatsflow_v2` | `3a36436c83ebefc6839380eb8fac1a6f13f4700a` | `working_tree` |
 
 ### Snapshot Manifest Contract
@@ -211,21 +211,21 @@ As lanes runtime `pcv-1` continuam `not_needed`; os itens abaixo são requisitos
 | Criterion ID | Source Section | Criterion | Evidence Type | Evidence Artifact / Command | Runtime Target | Status | Notes |
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | `DOD-01` | Definition of Done | evidência operacional distingue call path atual e schema persistence-backed de artefato histórico/órfão | doc+review | artefato, manifesto/matriz | n/a | pending | correção de supersessão, schema e ausência requer rerun |
-| `DOD-02` | Definition of Done | matriz única cobre `C-01..C-12` | doc+integrity review | artefato, `#matriz-única-de-cobertura-c-01c-12` | n/a | passed | 12/12 IDs, uma linha por conceito |
-| `DOD-03` | Definition of Done | diagrama/glossário separam os conceitos | doc+review | artefato, `#modelo-conceitual-proposto-para-discussão-posterior` | n/a | passed | sem colisão Setor/Canal/BU |
-| `DOD-04` | Definition of Done | cardinalidades/estados cobrem conflitos e unknowns | doc+review | artefato, modelo + C-01..C-12 | n/a | passed | sem coerência inventada |
-| `DOD-05` | Definition of Done | invariantes canônicos cobertos 1:1 | scenario review | artefato, `#walkthrough-11-dos-invariantes-já-canônicos` | n/a | passed | positivos e negativos documentados |
-| `DOD-06` | Definition of Done | rubrica concorrência/performance completa | scenario review | artefato, `#rubrica-de-concorrência-e-desempenho-documental` | n/a | passed | análise, sem load test |
-| `DOD-07` | Definition of Done | patterns/limitations/anti-patterns fundamentados | doc+review | artefato, `#padrões-limitações-anti-padrões-e-incógnitas` | n/a | passed | legado não vira prescrição |
-| `DOD-08` | Definition of Done | recomendações sem prioridade/autoridade | doc+review | artefato, `#recomendações-sem-priorização` | n/a | passed | somente handoff ST-04 |
-| `DOD-09` | Definition of Done | conteúdo sensível/cópia excluídos | scan+manual review | `rg` sanitizado + revisão do diff | Foundation diff | passed | sem payload/dump ou valores sensíveis |
-| `DOD-10` | Definition of Done | gates documentais passam | guard+review | validator/guards/reviews | Foundation | planned | closeout somente após tudo green |
+| `DOD-02` | Definition of Done | matriz única cobre `C-01..C-12` | doc+integrity review | artefato, `#matriz-única-de-cobertura-c-01c-12` | n/a | pending | rerun 1:1 pendente |
+| `DOD-03` | Definition of Done | diagrama/glossário separam os conceitos | doc+review | artefato, `#modelo-conceitual-proposto-para-discussão-posterior` | n/a | pending | rerun pendente |
+| `DOD-04` | Definition of Done | cardinalidades/estados cobrem conflitos e unknowns | doc+review | artefato, modelo + C-01..C-12 | n/a | pending | rerun pendente |
+| `DOD-05` | Definition of Done | invariantes canônicos cobertos 1:1 | scenario review | artefato, `#walkthrough-11-dos-invariantes-já-canônicos` | n/a | pending | rerun pendente |
+| `DOD-06` | Definition of Done | rubrica concorrência/performance completa | scenario review | artefato, `#rubrica-de-concorrência-e-desempenho-documental` | n/a | pending | rerun pendente |
+| `DOD-07` | Definition of Done | patterns/limitations/anti-patterns fundamentados | doc+review | artefato, `#padrões-limitações-anti-padrões-e-incógnitas` | n/a | pending | rerun pendente |
+| `DOD-08` | Definition of Done | recomendações sem prioridade/autoridade | doc+review | artefato, `#recomendações-sem-priorização` | n/a | pending | rerun pendente |
+| `DOD-09` | Definition of Done | conteúdo sensível/cópia excluídos | scan+manual review | `rg` sanitizado + revisão do diff | Foundation diff | pending | scan/classificação rerun pendente |
+| `DOD-10` | Definition of Done | gates documentais passam | guard+review | validator/guards/reviews | Foundation | pending | closeout não executado |
 | `VAL-01` | Validation Steps | snapshot revalidado | command | `git status/rev-parse/rev-list` local | frozen reference | pending | objetos locais confirmados; frescura remota e rerun pendentes |
 | `VAL-02` | Validation Steps | alcance/supersessão e schema aplicável resolvidos antes da auditoria bidirecional | command+review | artefato, manifesto + matriz C-01..C-12 | read-only | pending | E-17/E-18 e novo alcance exigem rerun |
-| `VAL-03` | Validation Steps | walkthroughs dos invariantes | scenario review | artefato, walkthrough 1:1 | n/a | passed | positivos e negativos |
-| `VAL-04` | Validation Steps | rubrica operacional | scenario review | artefato, rubrica documental | n/a | passed | source + invariante + disposição |
-| `VAL-05` | Validation Steps | revisão sensível/cópia | scan+manual review | `rg` sanitizado + `git diff --check` | Foundation diff | passed | nenhum payload/dump persistido |
-| `VAL-06` | Validation Steps | validators/guards | command | exact command outputs | Foundation | planned | inclui completion/closeout no final |
+| `VAL-03` | Validation Steps | walkthroughs dos invariantes | scenario review | artefato, walkthrough 1:1 | n/a | pending | rerun pendente |
+| `VAL-04` | Validation Steps | rubrica operacional | scenario review | artefato, rubrica documental | n/a | pending | rerun pendente |
+| `VAL-05` | Validation Steps | revisão sensível/cópia | scan+manual review | `rg` sanitizado + `git diff --check` | Foundation diff | pending | scan/classificação rerun pendente |
+| `VAL-06` | Validation Steps | validators/guards | command | exact command outputs | Foundation | pending | rerun pendente; não é closeout |
 
 ## External Dependency Readiness (Required When External Systems Matter)
 
@@ -398,8 +398,8 @@ As lanes runtime `pcv-1` continuam `not_needed`; os itens abaixo são requisitos
 
 | Repository / CI Surface | Why In Scope | Behavior / Scenario Covered | Fixture / Preconditions | Local CI-Equivalent Command | Required Before | Status | Evidence Artifact / Command | Notes |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| Foundation lifecycle | TODO/análise/backlog/brief | estrutura e referências válidas | Foundation checkout | `python3 foundation_documentation/deterministic/validate_foundation_lifecycle.py --root foundation_documentation` | APROVADO/delivery | passed | exit `0`, 2026-09-25 | validação documental apenas |
-| Markdown/git hygiene | documentação | diff bem formado | Foundation checkout | `git -C foundation_documentation diff --check` | delivery | passed | exit `0`, 2026-09-25 | sem testes de produto |
+| Foundation lifecycle | TODO/análise/backlog/brief | estrutura e referências válidas | Foundation checkout | `python3 foundation_documentation/deterministic/validate_foundation_lifecycle.py --root foundation_documentation` | delivery | pending | rerun desta onda pendente | validação documental apenas |
+| Markdown/git hygiene | documentação | diff bem formado | Foundation checkout | `git -C foundation_documentation diff --check` | delivery | pending | rerun desta onda pendente | sem testes de produto |
 
 ### Runtime / Rollout Notes
 
@@ -631,6 +631,8 @@ As fontes abaixo foram recarregadas após `APROVADO` e vinculadas ao escopo docu
 | --- | --- | --- | --- | --- | --- | --- |
 | `ST03-P1-evidence-supersession` | P1 | release-blocker | corrigido no mesmo TODO; exige re-review | E-03/E-17/E-18 e C-02/C-03 | integrated / pending re-review | ST-03 checkpoint pending |
 | `ST03-P2-scope-and-auth-evidence` | P2 | release-blocker | corrigido no mesmo TODO; exige re-review | webhooks/router/sector matrix, ausência e actor×operação | integrated / pending re-review | ST-03 checkpoint pending |
+| `ST03-R2-schema-and-role-matrix` | R2 | release-blocker | corrigido no mesmo TODO; exige re-review | schema por alegação e matriz sem allow/deny inventado | integrated / pending re-review | ST-03 checkpoint pending |
+| `ST03-R5-lifecycle-sla-and-scan` | R5 | release-blocker | corrigido no mesmo TODO; exige re-review | E-23..E-29, SLA, scan classificado e hygiene | integrated / pending re-review | ST-03 checkpoint pending |
 
 ## Rule-Spirit Anti-Pattern Hunt
 
@@ -678,17 +680,18 @@ As fontes abaixo foram recarregadas após `APROVADO` e vinculadas ao escopo docu
 - **Why this decision:** validação documental não altera testes, mas a complexidade medium recomenda auditoria focada da qualidade das evidências.
 - **Audit status:** `findings_integrated`
 - **Audit focus:** eficácia da validação documental e rastreabilidade dos cenários.
-- **Findings received:** `ST03-TQA-001`, `ST03-TQA-002`, `ST03-TQA-R2-001`, `ST03-TQA-R2-002`, `ST03-TQA-R3-001`.
+- **Findings received:** `ST03-TQA-001`, `ST03-TQA-002`, `ST03-TQA-R2-001`, `ST03-TQA-R2-002`, `ST03-TQA-R3-001`, `ST03-TQA-R5-001`.
 - **Rerun status:** `pending`; a correção posterior invalida o clean anterior.
 - **Embedded R4 result (historical, non-green now):** reviewer `/root/st03_test_quality_reaudit_r4`; pacote/checkpoint então revisado: TODO+estudo antes desta onda; resultado `clean/no_material_findings`; verificação 1:1 cobriu `ST03-TQA-001`, `002`, `R2-001`, `R2-002`, `R3-001`. Este resultado não é evidência da onda atual e não depende de dispatch externo.
 
 | Finding ID | Evidence | Resolution integrated | Status |
 | --- | --- | --- | --- |
-| `ST03-TQA-001` | Cada linha C-01..C-12 precisava de referência congelada exata, e ausências precisavam registrar busca/escopo reproduzível. | O artefato recebeu o registro `E-01..E-10` com `whatsflow_v2@3a36436c83ebefc6839380eb8fac1a6f13f4700a:path:symbol-or-lines`; cada C cita seus `E-xx`. `E-NF-01` fixa o comando, escopo e resultado limitado de `not_found_after_protocol`. | integrated; verified clean in R4 |
-| `ST03-TQA-002` | C-04 não distinguia cenário positivo de negativo para unidade/equipe. | C-04 agora exige positivamente membership da unidade **e** grant da BU e nega explicitamente view/claim por membership isolado ou coincidência de `department_id`. | integrated; verified clean in R4 |
-| `ST03-TQA-R2-001` | E-06 agrupava canSend, diálogo e transferências e fazia a persistência estática parecer prova runtime/atômica. | E-06 foi repartida em `E-06a..d` com as linhas verificadas do blob; `E-13` isola o upsert de assignment. C-08, C-09 e C-12 agora distinguem caminho UI, fonte estática e ausência de CAS/atomicidade runtime. | integrated; verified clean in R4 |
-| `ST03-TQA-R2-002` | A ausência de presença/capacidade podia incluir indevidamente presença de provider, e a busca admitia corpus documental amplo. | `E-11` registra provider-presence efetivo; `E-12` registra o fallback/catch silencioso como limitation/anti-pattern. `E-NF-01` agora usa vocabulário de distribuição/atendente, allowlist sanitizada e exclui explicitamente corpus bruto; a ausência se limita a scheduler/claim/capacidade/presença de atendente. | integrated; verified clean in R4 |
-| `ST03-TQA-R3-001` | O estudo ainda omitia superfícies que montam dashboard/configuração e que leem/polling/upsertam `agent_status`, contagens e modos de distribuição. | Foram adicionados `E-14` (MensageriaPage), `E-15` (AgentDashboard) e `E-16` (DepartmentManager), e a allowlist de `E-NF-01` foi ampliada somente com esses caminhos sanitizados. C-07/C-08 e a rubrica registram status/contagem/modo como direto ou `declarative_only`, sem inferir scheduler, CAS, reserva, grant BU ou TTL/freshness. | integrated; verified clean in R4 |
+| `ST03-TQA-001` | Cada linha C-01..C-12 precisava de referência congelada exata, e ausências precisavam registrar busca/escopo reproduzível. | Registro E e E-NF-01 ampliados e classificados; esta onda requer rerun. | integrated / pending re-review |
+| `ST03-TQA-002` | C-04 não distinguia cenário positivo de negativo para unidade/equipe. | C-04 preserva os cenários de constraint; esta onda requer rerun. | integrated / pending re-review |
+| `ST03-TQA-R2-001` | Persistência estática não pode parecer prova runtime/atômica. | E-06, E-13, E-23/E-28 e C-08..C-12 separam write, schema parcial e ausência de CAS/atomicidade. | integrated / pending re-review |
+| `ST03-TQA-R2-002` | Ausência de capacidade não pode incluir provider-presence, nem busca admitir corpus bruto. | E-11/E-12 e E-NF-01 distinguem provider, atendente e corpus sanitizado/classificado. | integrated / pending re-review |
+| `ST03-TQA-R3-001` | Status/configuração não demonstram scheduler, CAS, reserva, grant ou freshness. | E-14..E-16/E-NF-01 e C-07/C-08 mantêm essas lacunas explícitas. | integrated / pending re-review |
+| `ST03-TQA-R5-001` | Schema por claim, matriz sem role allow/deny, resolve/SLA/auto-assignment e hygiene precisavam reclassificação. | E-23..E-29, schema por alegação, matriz `future_decision/unknown`, ledger e comandos foram integrados. | findings_integrated / pending rerun |
 
 ## Independent No-Context Final Review Gate
 
@@ -721,11 +724,11 @@ As fontes abaixo foram recarregadas após `APROVADO` e vinculadas ao escopo docu
 - `git.exe -C 'C:/Unifast/LeadsHug/Inspirações LeadsHug/whatsflow_v2' status --short --branch`
 - `git.exe -C 'C:/Unifast/LeadsHug/Inspirações LeadsHug/whatsflow_v2' rev-parse HEAD^{tree}`
 - `python3 foundation_documentation/deterministic/validate_foundation_lifecycle.py --root foundation_documentation`
-- `git -C foundation_documentation diff --check`
+- `base=f2a1ad88926201de63b703d22dc57c1939f357c4; checkpoint=bc4032ef7af8a19f5397543ea6ab4a49013faa8c; git -C foundation_documentation diff --no-ext-diff "$base..$checkpoint" -- todos/active/features/TODO-leadshug-whatsflow-channel-attendance-study.md artifacts/analysis/leadshug-whatsflow-channel-attendance-conceptual-model-20260925.md | sha256sum` (range imutável; registrar SHA256, não usar diff vazio como prova)
+- `git -C foundation_documentation diff --check` (somente higiene de whitespace; não é prova de conteúdo)
 - `git diff --check --no-index /dev/null foundation_documentation/artifacts/analysis/leadshug-whatsflow-channel-attendance-conceptual-model-20260925.md` (aceitar exit `1` somente por arquivo novo e exigir stdout vazio)
-- `git -C foundation_documentation diff --no-ext-diff 9cf4b1d110477fff12b557481d1ebdb223a1001f -- todos/active/features/TODO-leadshug-whatsflow-channel-attendance-study.md artifacts/analysis/leadshug-whatsflow-channel-attendance-conceptual-model-20260925.md`
-- `git -C foundation_documentation diff --no-ext-diff --check 9cf4b1d110477fff12b557481d1ebdb223a1001f -- todos/active/features/TODO-leadshug-whatsflow-channel-attendance-study.md` (tracked range; o artefato novo usa o comando `--no-index` acima)
-- `rg -n -i '(api[_-]?key|authorization:|bearer |secret|token|password|@[A-Za-z0-9._%+-]+)' foundation_documentation/artifacts/analysis/leadshug-whatsflow-channel-attendance-conceptual-model-20260925.md foundation_documentation/todos/active/features/TODO-leadshug-whatsflow-channel-attendance-study.md` (revisar somente ocorrências estruturais/sanitizadas; não persistir valores)
+- `base=f2a1ad88926201de63b703d22dc57c1939f357c4; checkpoint=bc4032ef7af8a19f5397543ea6ab4a49013faa8c; git -C foundation_documentation diff --no-ext-diff "$base..$checkpoint" -- todos/active/features/TODO-leadshug-whatsflow-channel-attendance-study.md artifacts/analysis/leadshug-whatsflow-channel-attendance-conceptual-model-20260925.md`
+- `rg -n -i '(api[_-]?key|authorization:|bearer |secret|token|password)' foundation_documentation/artifacts/analysis/leadshug-whatsflow-channel-attendance-conceptual-model-20260925.md foundation_documentation/todos/active/features/TODO-leadshug-whatsflow-channel-attendance-study.md` (scan fail-closed/classificado: qualquer hit não explicitamente classificado como termo de política/descrição bloqueia rerun; referências `@SHA` são identificadores congelados, não segredos; não persistir valores)
 
 ## Files Expected
 
