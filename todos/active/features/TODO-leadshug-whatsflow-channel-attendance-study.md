@@ -34,7 +34,7 @@ O `whatsflow_v2` contém soluções de conexão, inbox, departamentos, atendente
 
 - **Current delivery stage:** `Pending`
 - **Qualifiers:** `none`
-- **Next exact step:** publicar o baseline renovado e repetir os guards finais de scope drift e autoridade.
+- **Next exact step:** obter `APROVADO`; depois registrar a aprovação, recarregar as regras predeclaradas e executar o authority guard normal antes do estudo.
 
 ## Active Work State (Required While TODO Remains In `active/`)
 
@@ -326,11 +326,11 @@ As lanes runtime `pcv-1` continuam `not_needed`; os itens abaixo são requisitos
 - **Why this decision:** uma crítica formal deve partir de contrato publicado e reprodutível.
 - **Trigger stage:** `before the first planning-side review or guard run`.
 - **Baseline branch:** `main`
-- **Baseline commit:** `pending renewed baseline after A-01..A-03 validation`
+- **Baseline commit:** `27359d64b7cfd92d25eabeb18ce437f2e60cba4c`
 - **Baseline push reference:** `origin/main`
-- **Gate status:** `not_run`
-- **Findings summary:** reclassificação de A-01..A-03 validada; aguarda publicação da baseline renovada.
-- **Evidence / reference:** validação humana registrada abaixo; `f3eed1fd` permanece como baseline histórica que detectou corretamente o drift.
+- **Gate status:** `no_material_findings`
+- **Findings summary:** reclassificação de A-01..A-03 validada e congelada sem mudança de escopo.
+- **Evidence / reference:** guards de escrita retornaram `go`; commit `27359d64` publicado como `origin/main` em 2026-09-25. `f3eed1fd` permanece como baseline histórica que detectou corretamente o drift.
 - **Waiver authority / reference:** `n/a`
 
 ## Gate: Review Scope Drift
@@ -338,12 +338,12 @@ As lanes runtime `pcv-1` continuam `not_needed`; os itens abaixo são requisitos
 - **Gate decision:** `required`
 - **Why this decision:** impedir que integrações pós-crítica ampliem o estudo sem revalidação.
 - **Trigger stage:** `after the planning-side review/guard cycle converges and before APROVADO`.
-- **Baseline source:** `Review Baseline Freeze -> pending renewed baseline after A-01..A-03 validation`.
+- **Baseline source:** `Review Baseline Freeze -> 27359d64b7cfd92d25eabeb18ce437f2e60cba4c`.
 - **Guard command:** `python3 delphi-ai/tools/review_scope_drift_guard.py --todo foundation_documentation/todos/active/features/TODO-leadshug-whatsflow-channel-attendance-study.md`.
 - **No-go handling rule:** return to review/revalidation; no automatic rollback.
-- **Gate status:** `not_run`
-- **Findings summary:** o único drift detectado contra `f3eed1fd` foi validado pelo usuário; aguarda nova baseline e rerun.
-- **Evidence / reference:** checkpoint histórico em `foundation_documentation/artifacts/tmp/st03-planning-review/review-scope-drift.json`; validação humana registrada abaixo.
+- **Gate status:** `no_material_findings`
+- **Findings summary:** 22 seções materiais comparadas contra `27359d64`; zero alterações materiais após o freeze renovado.
+- **Evidence / reference:** `foundation_documentation/artifacts/tmp/st03-planning-review/review-scope-drift-final.json`; `Overall outcome: go`.
 - **Waiver authority / reference:** `n/a`
 
 ## Questions To Close
@@ -568,21 +568,29 @@ As lanes runtime `pcv-1` continuam `not_needed`; os itens abaixo são requisitos
 
 ## Rules Acknowledgement / Ingestion
 
-- `pending after APROVADO`; current framing used the feature-framing, lane-framing and TODO-contract-refinement methods.
+As fontes abaixo estão predeclaradas para o preflight. Após `APROVADO`, serão recarregadas e vinculadas ao escopo final antes de qualquer execução.
+
+| Source | Why It Applies Now | Must Preserve | Must Avoid | Execution Impact |
+| --- | --- | --- | --- | --- |
+| `delphi-ai/rules/core/todo-driven-execution-model-decision.md` | governa autoridade, baseline, execução e evidência do TODO | escopo aprovado, single-writer e gates por fase | implementar antes de aprovação ou ampliar escopo silenciosamente | bloquear execução até approval evidence, reload e authority guard normal |
+| `delphi-ai/workflows/docker/todo-driven-execution-method.md` | roteia o TODO do approval ao closeout | máquina de estados e mesmo TODO governante | pular execution/delivery/closeout gates | carregar somente a fase aplicável e manter transições explícitas |
+| `delphi-ai/workflows/docker/todo-execution-boundary-method.md` | governará o estudo documental após aprovação | snapshot read-only, limites elásticos e diff contract | mutar legado, produto ou cânone | revalidar manifesto e executar apenas as sete etapas aprovadas |
+| `delphi-ai/workflows/docker/todo-delivery-gates-method.md` | governará evidência e revisão antes da entrega | matriz por critério, guards e auditorias derivadas | aceitar evidência agregada ou concluir com dívida oculta | preencher DOD/VAL, CI-equivalent documental e revisões finais |
+| `delphi-ai/workflows/docker/todo-closeout-promotion-method.md` | governará consolidação e encerramento | handoff factual para ST-04 sem canonização | deixar TODO entregue em active ou promover recomendações como decisões | validar closeout, mover para completed e atualizar backlog/brief |
 
 ## Agent Routing Preflight
 
 - **Client surface:** `codex`
-- **Current governed action:** `todo-approval`
-- **Selected role:** `primary-chat`
-- **Selected model:** `inherited current model`
-- **Selected effort:** `inherited current effort`
+- **Current governed action:** `implementation`
+- **Selected role:** `routine-executor`
+- **Selected model:** `gpt-5.6-terra`
+- **Selected effort:** `medium`
 - **Proof mode:** `declared`
-- **Subagent / delegation authorization:** `not-requested`
+- **Subagent / delegation authorization:** `planned only after APROVADO under the mandatory execution workflow; no execution started`
 - **Execution topology:** `primary-checkout-single-writer`
 - **Worktree / auxiliary-checkout authorization:** `not-authorized`
 - **Writer scheduling policy:** `single-writer-serialized`
-- **Guard outcome:** `pending`
+- **Guard outcome:** `go`
 
 ## Security Risk Assessment
 
@@ -638,9 +646,9 @@ As lanes runtime `pcv-1` continuam `not_needed`; os itens abaixo são requisitos
 ## TODO Closeout Disposition
 
 - **Disposition:** `keep-active`
-- **Disposition reason:** crítica e revalidações humanas convergiram; baseline renovada e guards finais ainda pendentes.
+- **Disposition reason:** planejamento, crítica, revalidações, baseline e guards pré-aprovação convergiram; execução ainda depende de `APROVADO`.
 - **Post-commit/push status:** `pending`
-- **Next path/status action:** publicar baseline renovada e repetir scope-drift/authority preflight.
+- **Next path/status action:** obter `APROVADO`, registrar evidência e executar o authority guard normal antes do estudo.
 
 ## Commands (Run Locally)
 

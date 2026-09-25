@@ -12,7 +12,7 @@ Each new record carries an immutable ID, title, state, source/evidence, value/ri
 
 | Immutable ID | Title | State | Source / evidence | Value / risk | Dependencies | Disposition owner | Next gate |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| BLG-whatsflow-channel-attendance-study | whatsflow_v2 channel and attendance study (ST-03) | Selected-for-Planning | [active planning TODO](../todos/active/features/TODO-leadshug-whatsflow-channel-attendance-study.md) | clarify attendance concepts without importing legacy debt or vocabulary collisions | critique and human revalidations converged; no canonization | strategic steward | publish renewed baseline and rerun final pre-approval guards |
+| BLG-whatsflow-channel-attendance-study | whatsflow_v2 channel and attendance study (ST-03) | Selected-for-Planning | [active planning TODO](../todos/active/features/TODO-leadshug-whatsflow-channel-attendance-study.md) | clarify attendance concepts without importing legacy debt or vocabulary collisions | critique, human revalidations and pre-approval guards converged; no canonization | strategic steward | obtain APROVADO for documentary execution |
 | BLG-leadshug-evolution-synthesis | LeadsHug evolution synthesis (ST-04) | Deferred | [pre-code evolution brief](../artifacts/feature-briefs/leadshug-pre-code-evolution-program-20260918.md) | synthesize evidence only after both independent studies; early synthesis risks false priority | ST-02 delivered; ST-03 pending | strategic steward | reassess after ST-03 concludes |
 
 The IDs above are references for future planning; their live disposition and next gate remain only in this table.
