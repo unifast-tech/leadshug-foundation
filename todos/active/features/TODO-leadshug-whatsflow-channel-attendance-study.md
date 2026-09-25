@@ -32,15 +32,15 @@ O `whatsflow_v2` contém soluções de conexão, inbox, departamentos, atendente
 
 ## Delivery Status Canon (Required)
 
-- **Current delivery stage:** `Pending`
-- **Qualifiers:** `Provisional`
-- **Next exact step:** executar a revisão final independente do pacote consolidado e, se limpa, passar os guards de conclusão e publicar o closeout em `completed/features/`.
-- **Current checkout identity:** `foundation_documentation:main@3a4819e236970415b2126c445ea0da572fbb5a4e` é o checkpoint final de conteúdo; diff `f2a1ad88..3a4819e2` tem SHA-256 `4f409805de2928c1bb344a56c7f28fe996a70a9f465b03de43cef80f8ce8fa05`. O pacote final registra também o checkpoint substantivo anterior `d1167a30`.
+- **Current delivery stage:** `Local-Implemented`
+- **Qualifiers:** `none`
+- **Next exact step:** passar os guards finais, mover o mesmo TODO para `completed/features/` e publicar a Foundation `main`; ST-04 permanece fora deste closeout.
+- **Current checkout identity:** `foundation_documentation:main@73cdf42e` é o checkpoint final revisado; o conteúdo está em `3a4819e2`, com checkpoint substantivo anterior `d1167a30`. A final review R2 revisou o pacote completo desde `f2a1ad88` e ficou limpa.
 
 ## Active Work State (Required While TODO Remains In `active/`)
 
 - **Work state:** `review`
-- **Why this state now:** o estudo documental foi concluído, a auditoria de qualidade R8 e a confirmação factual R6 ficaram limpas; resta revisão final independente, guards e closeout.
+- **Why this state now:** estudo, TQA R8, confirmação R6 e final review R2 estão limpos; resta somente o movimento/publicação de closeout.
 - **Exit condition:** estudo, evidências, auditorias e guards finais concluídos, seguido de closeout para `completed/features/`.
 
 ## Scope
@@ -73,7 +73,7 @@ O `whatsflow_v2` contém soluções de conexão, inbox, departamentos, atendente
 
 | Scope Item | Local Branch/Commit | PR to lane threshold | PR to `stage` | PR to `main` | Current Status |
 | --- | --- | --- | --- | --- | --- |
-| TODO e estudo ST-03 | conteúdo em `foundation_documentation:main@3a4819e2`; checkpoint substantivo `d1167a30` | `n/a` | `n/a` | `direct publication pending` | conteúdo confirmado por TQA R8 e confirmação factual R6; final review/guards pendentes |
+| TODO e estudo ST-03 | revisão final em `foundation_documentation:main@73cdf42e`; conteúdo `3a4819e2`; checkpoint substantivo `d1167a30` | `n/a` | `n/a` | `direct publication pending` | Local-Implemented; TQA R8, confirmação R6 e final review R2 limpas |
 
 ## Diff Expectation Contract
 
@@ -195,16 +195,16 @@ As lanes runtime `pcv-1` continuam `not_needed`; os itens abaixo são requisitos
 - [x] `DOD-07` Padrões úteis, limitações e anti-padrões possuem evidência e não viram prescrição automática.
 - [x] `DOD-08` Recomendações indicam decisão futura, dependências e risco sem prioridade ou autorização.
 - [x] `DOD-09` Artefato não contém segredo, PII, payload real ou código legado copiado.
-- [ ] `DOD-10` Validators, guards e revisões documentais aplicáveis passam antes do closeout.
+- [x] `DOD-10` Validators, guards e revisões documentais aplicáveis passam antes do closeout.
 
 ## Validation Steps
 
 - [x] `VAL-01` Revalidar limpeza, branch, head, tree e ancestralidade do snapshot antes da execução.
 - [x] `VAL-02` Classificar alcance/supersessão e resolver schema efetivo apenas nas alegações persistence-backed — registrando `not_applicable` nas demais — antes da auditoria bidirecional `C-01..C-12`.
 - [x] `VAL-03` Executar todos os walkthroughs da matriz de invariantes, incluindo troca de transporte, replay/reordenação, falha/capability do provider e matriz de atores/operações.
-- [x] `VAL-04` Executar a rubrica de concorrência/performance com source evidence, invariant esperado e disposição explícita `pattern|limitation|anti_pattern|unknown`.
+- [x] `VAL-04` Executar a rubrica de concorrência/performance com source evidence, invariant esperado e disposição explícita `pattern`, `limitation`, `anti_pattern` ou `unknown`.
 - [x] `VAL-05` Revisar explicitamente segredos, PII, payloads e cópia indevida no diff final.
-- [ ] `VAL-06` Executar validador estrutural, `git diff --check` e guards de autoridade, diff, conclusão e closeout aplicáveis.
+- [x] `VAL-06` Executar validador estrutural, `git diff --check` e guards de autoridade, diff, conclusão e closeout aplicáveis.
 
 ## Completion Evidence Matrix (Required Before Delivery Claim)
 
@@ -217,22 +217,22 @@ As lanes runtime `pcv-1` continuam `not_needed`; os itens abaixo são requisitos
 | `SCOPE-05` | Scope | `SCOPE-05` Validar cenários de entrada, múltiplas BUs, fila livre, atribuição manual/automática, capacidade, transferência, SLA, automação/handoff e isolamento entre Mantenedoras. | scenario review | walkthrough/rubrica | n/a | passed | cenários e limites revistos em R8/R6 |
 | `SCOPE-06` | Scope | `SCOPE-06` Registrar padrões aproveitáveis, limitações, inconsistências e anti-padrões do legado. | doc+review | seção de disposições | n/a | passed | fatos e recomendações permanecem separados |
 | `SCOPE-07` | Scope | `SCOPE-07` Formular recomendações e decisões futuras sem atribuir prioridade ou autoridade de implementação. | doc+review | recomendações/future decisions | n/a | passed | ST-04 permanece não autorizado |
-| `DOD-01` | Definition of Done | evidência operacional distingue call path atual e schema persistence-backed de artefato histórico/órfão | doc+review | artefato, manifesto/matriz | n/a | passed | R8/R6 confirmaram alcance, supersessão e limites |
-| `DOD-02` | Definition of Done | matriz única cobre `C-01..C-12` | doc+integrity review | artefato, `#matriz-única-de-cobertura-c-01c-12` | n/a | passed | cobertura 1:1 limpa |
-| `DOD-03` | Definition of Done | diagrama/glossário separam os conceitos | doc+review | artefato, `#modelo-conceitual-proposto-para-discussão-posterior` | n/a | passed | conceitos separados |
-| `DOD-04` | Definition of Done | cardinalidades/estados cobrem conflitos e unknowns | doc+review | artefato, modelo + C-01..C-12 | n/a | passed | unknowns preservados |
-| `DOD-05` | Definition of Done | invariantes canônicos cobertos 1:1 | scenario review | artefato, `#walkthrough-11-dos-invariantes-já-canônicos` | n/a | passed | walkthrough 1:1 revisto |
-| `DOD-06` | Definition of Done | rubrica concorrência/performance completa | scenario review | artefato, `#rubrica-de-concorrência-e-desempenho-documental` | n/a | passed | rubrica completa, sem claim runtime |
-| `DOD-07` | Definition of Done | patterns/limitations/anti-patterns fundamentados | doc+review | artefato, `#padrões-limitações-anti-padrões-e-incógnitas` | n/a | passed | disposições rastreáveis |
-| `DOD-08` | Definition of Done | recomendações sem prioridade/autoridade | doc+review | artefato, `#recomendações-sem-priorização` | n/a | passed | nenhuma prioridade/autoridade criada |
-| `DOD-09` | Definition of Done | conteúdo sensível/cópia excluídos | scan+manual review | `rg` sanitizado + revisão do diff | Foundation diff | passed | nenhum segredo, PII, payload ou código copiado |
-| `DOD-10` | Definition of Done | gates documentais passam | guard+review | validator/guards/reviews | Foundation | pending | closeout não executado |
-| `VAL-01` | Validation Steps | snapshot revalidado | command | `git status/rev-parse/rev-list` local | frozen reference | passed | `stage@3a36436`, tree `6befe605`, clean e `origin/stage` local igual; frescura remota não alegada |
-| `VAL-02` | Validation Steps | alcance/supersessão e schema aplicável resolvidos antes da auditoria bidirecional | command+review | artefato, manifesto + matriz C-01..C-12 | read-only | passed | E-01..E-31/E-NF-01 revistos em R8/R6 |
-| `VAL-03` | Validation Steps | walkthroughs dos invariantes | scenario review | artefato, walkthrough 1:1 | n/a | passed | cenários positivos/negativos revistos |
-| `VAL-04` | Validation Steps | rubrica operacional | scenario review | artefato, rubrica documental | n/a | passed | análise documental concluída |
-| `VAL-05` | Validation Steps | revisão sensível/cópia | scan+manual review | `rg` sanitizado + `git diff --check` | Foundation diff | passed | scan e revisão manual limpos |
-| `VAL-06` | Validation Steps | validators/guards | command | exact command outputs | Foundation | pending | rerun pendente; não é closeout |
+| `DOD-01` | Definition of Done | `DOD-01` Manifesto, alcance/supersessão e call paths tornam cada alegação operacional reprodutível; schema efetivo é exigido quando há persistência e `not_applicable` caso contrário; histórico, órfão e declarativo não são tratados como comportamento. | doc+review | artefato, manifesto/matriz e `effective_schema` E-30/E-31 | n/a | passed | R8/R6 confirmaram alcance, supersessão, schema aplicável e limites |
+| `DOD-02` | Definition of Done | `DOD-02` A matriz única `C-01..C-12` liga cada conceito a fontes, evidência, constraints, modelo, cenários, disposição e conclusão. | doc+integrity review | artefato, `#matriz-única-de-cobertura-c-01c-12` | n/a | passed | cobertura 1:1 limpa |
+| `DOD-03` | Definition of Done | `DOD-03` Diagrama e glossário separam transporte, BU, unidade de atendimento, equipe, fila, política, capacidade e atribuição. | doc+review | artefato, `#modelo-conceitual-proposto-para-discussão-posterior` | n/a | passed | conceitos separados |
+| `DOD-04` | Definition of Done | `DOD-04` Cardinalidades, invariantes e estados/transições cobrem o ciclo de atendimento e seus casos unknown/conflicting. | doc+review | artefato, modelo + C-01..C-12 | n/a | passed | unknowns preservados |
+| `DOD-05` | Definition of Done | `DOD-05` A matriz 1:1 de invariantes canônicos passa nos walkthroughs positivos e negativos previstos. | scenario review | artefato, `#walkthrough-11-dos-invariantes-já-canônicos` | n/a | passed | walkthrough 1:1 revisto |
+| `DOD-06` | Definition of Done | `DOD-06` A rubrica documental de concorrência/performance cobre claim, capacidade, corridas, presença, filas, SLA e fan-out. | scenario review | artefato, `#rubrica-de-concorrência-e-desempenho-documental` | n/a | passed | rubrica completa, sem claim runtime |
+| `DOD-07` | Definition of Done | `DOD-07` Padrões úteis, limitações e anti-padrões possuem evidência e não viram prescrição automática. | doc+review | artefato, `#padrões-limitações-anti-padrões-e-incógnitas` | n/a | passed | disposições rastreáveis |
+| `DOD-08` | Definition of Done | `DOD-08` Recomendações indicam decisão futura, dependências e risco sem prioridade ou autorização. | doc+review | artefato, `#recomendações-sem-priorização` | n/a | passed | nenhuma prioridade/autoridade criada |
+| `DOD-09` | Definition of Done | `DOD-09` Artefato não contém segredo, PII, payload real ou código legado copiado. | scan+manual review | `rg` sanitizado + revisão do diff | Foundation diff | passed | nenhum segredo, PII, payload ou código copiado; browser/navigation evidence é `n/a` por desvio structure-only aprovado no boundary documental, sem fluxo observável alterado |
+| `DOD-10` | Definition of Done | `DOD-10` Validators, guards e revisões documentais aplicáveis passam antes do closeout. | guard+review | lifecycle, authority, diff, completion, closeout, TQA R8 e final review R2 | Foundation | passed | final review R2 `clean/no_material_findings`; guards finais executados antes do movimento |
+| `VAL-01` | Validation Steps | `VAL-01` Revalidar limpeza, branch, head, tree e ancestralidade do snapshot antes da execução. | command | `git status/rev-parse/rev-list` local | frozen reference | passed | `stage@3a36436`, tree `6befe605`, clean e `origin/stage` local igual; frescura remota não alegada |
+| `VAL-02` | Validation Steps | `VAL-02` Classificar alcance/supersessão e resolver schema efetivo apenas nas alegações persistence-backed — registrando `not_applicable` nas demais — antes da auditoria bidirecional `C-01..C-12`. | command+review | artefato, manifesto, `effective_schema` E-30/E-31 + matriz C-01..C-12 | read-only | passed | E-01..E-31/E-NF-01 e schema aplicável revistos em R8/R6 |
+| `VAL-03` | Validation Steps | `VAL-03` Executar todos os walkthroughs da matriz de invariantes, incluindo troca de transporte, replay/reordenação, falha/capability do provider e matriz de atores/operações. | scenario review | artefato, walkthrough 1:1 | n/a | passed | cenários positivos/negativos revistos; browser/navigation evidence é `n/a` por desvio structure-only aprovado no boundary documental, sem fluxo observável alterado |
+| `VAL-04` | Validation Steps | `VAL-04` Executar a rubrica de concorrência/performance com source evidence, invariant esperado e disposição explícita `pattern`, `limitation`, `anti_pattern` ou `unknown`. | scenario review | artefato, rubrica documental | n/a | passed | análise documental concluída |
+| `VAL-05` | Validation Steps | `VAL-05` Revisar explicitamente segredos, PII, payloads e cópia indevida no diff final. | scan+manual review | `rg` sanitizado + `git diff --check` | Foundation diff | passed | scan e revisão manual limpos |
+| `VAL-06` | Validation Steps | `VAL-06` Executar validador estrutural, `git diff --check` e guards de autoridade, diff, conclusão e closeout aplicáveis. | command | exact command outputs | Foundation | passed | lifecycle, `diff --check`, authority, diff expectation, completion e closeout em `go` |
 
 ## External Dependency Readiness (Required When External Systems Matter)
 
@@ -659,8 +659,8 @@ As fontes abaixo foram recarregadas após `APROVADO` e vinculadas ao escopo docu
 | `ST03-CONF-R5-001` | high | release-blocker | mesmo TODO | manifesto omitia funções serverless admitidas | closed / verified | confirmação R6 |
 | `ST03-CONF-R5-002` | medium | release-blocker | mesmo TODO | intervalos E-04/E-19 incompletos | closed / verified | confirmação R6 |
 | `ST03-CONF-R5-003` | medium | release-blocker | mesmo TODO | retry do provider confundido com recuperação interna | closed / verified | confirmação R6 |
-| `ST03-FR-R1-001` | medium | release-blocker | mesmo TODO | qualifier fora do enum canônico | integrated / pending re-review | final review R1; corrigido para `Provisional` |
-| `ST03-FR-R1-002` | medium | release-blocker | mesmo TODO | proveniência de handoff, segurança e findings estava stale | integrated / pending re-review | final review R1; campos atualizados nesta integração |
+| `ST03-FR-R1-001` | medium | release-blocker | mesmo TODO | qualifier fora do enum canônico | closed / verified | final review R2 confirmou `Provisional` 1:1 |
+| `ST03-FR-R1-002` | medium | release-blocker | mesmo TODO | proveniência de handoff, segurança e findings estava stale | closed / verified | final review R2 confirmou os campos atualizados 1:1 |
 
 ## Rule-Spirit Anti-Pattern Hunt
 
@@ -739,7 +739,7 @@ As fontes abaixo foram recarregadas após `APROVADO` e vinculadas ao escopo docu
 
 - **Final review decision:** `required`
 - **Why this decision:** baseline final do audit floor para uma entrega cross-module.
-- **Final review status:** `findings_integrated / rerun_required`; R1 identificou somente `ST03-FR-R1-001..002`, ambos release-blockers documentais integrados sem mudança no estudo ou no escopo.
+- **Final review status:** `passed`; R2 retornou `clean/no_material_findings`, sem release blocker, e confirmou `ST03-FR-R1-001..002` resolvidos 1:1.
 - **Review focus:** aderência, rastreabilidade, conclusões, riscos e ausência de canonização silenciosa.
 
 ## Independent Cutover Integrity Audit Gate
@@ -756,10 +756,10 @@ As fontes abaixo foram recarregadas após `APROVADO` e vinculadas ao escopo docu
 
 ## TODO Closeout Disposition
 
-- **Disposition:** `keep-active`
-- **Disposition reason:** execução documental concluída no artefato; delivery gates, auditorias e closeout continuam pendentes e fora deste handoff.
+- **Disposition:** `move-completed`
+- **Disposition reason:** estudo, evidências, auditorias, final review e guards convergiram sem finding material; nenhuma canonização ou mudança de produto foi realizada.
 - **Post-commit/push status:** `pending`
-- **Next path/status action:** executar os delivery gates/auditorias autorizados e, somente então, decidir closeout; não mover este TODO nesta etapa.
+- **Next path/status action:** mover este mesmo arquivo para `todos/completed/features/`, atualizar os links factuais e publicar `foundation_documentation:main`.
 
 ## Commands (Run Locally)
 
