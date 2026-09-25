@@ -34,8 +34,8 @@ O `whatsflow_v2` contém soluções de conexão, inbox, departamentos, atendente
 
 - **Current delivery stage:** `Pending`
 - **Qualifiers:** `none`
-- **Next exact step:** publicar o próximo pacote manual autocontido (SHA ainda inexistente), repetir evidência/quality review e executar P1/P2, rule-spirit e final review; o pacote R3 `040fa4f7` foi revisado, mas não fecha esta nova onda.
-- **Current checkout identity:** `foundation_documentation:main@9eec6324633fce414f4327e6eacf5ad025104bd3` é o checkpoint R4 revisado; pacote `5f6a2f8a...`; esta nova onda está somente no working tree e seu SHA só existirá após próximo commit autorizado.
+- **Next exact step:** executar a confirmação independente do checkpoint de conteúdo `100ba62c` e, se limpa, registrar os gates factuais, rule-spirit e final review.
+- **Current checkout identity:** `foundation_documentation:main@100ba62c2135892fc7ff432c5fe241bf0f4adef1` é o checkpoint imutável de conteúdo; diff `f2a1ad88..100ba62c` tem SHA-256 `f29fcf7bdeda90f2a7fd7bb1a58bdbcc895e708ab99ae85c449e48f69cd7847f`. A alteração posterior desta linha é somente metadado de proveniência e será incluída no pacote final.
 
 ## Active Work State (Required While TODO Remains In `active/`)
 
@@ -73,7 +73,7 @@ O `whatsflow_v2` contém soluções de conexão, inbox, departamentos, atendente
 
 | Scope Item | Local Branch/Commit | PR to lane threshold | PR to `stage` | PR to `main` | Current Status |
 | --- | --- | --- | --- | --- | --- |
-| TODO e estudo ST-03 | `foundation_documentation:main@c65a9854` (checkpoint revisado) + nova corrective working tree | `n/a` | `n/a` | `direct publication pending` | pacote R3 `040fa4f7` revisado; próximo pacote manual autocontido ainda sem SHA |
+| TODO e estudo ST-03 | conteúdo em `foundation_documentation:main@100ba62c`; metadado de proveniência posterior | `n/a` | `n/a` | `direct publication pending` | confirmação independente pendente sobre pacote final autocontido |
 
 ## Diff Expectation Contract
 
@@ -86,7 +86,7 @@ O `whatsflow_v2` contém soluções de conexão, inbox, departamentos, atendente
 
 | Repository | Path | Baseline ref | Comparison mode |
 | --- | --- | --- | --- |
-| Foundation | `foundation_documentation` | `main@9eec6324633fce414f4327e6eacf5ad025104bd3` | `working_tree` |
+| Foundation | `foundation_documentation` | content checkpoint `main@100ba62c2135892fc7ff432c5fe241bf0f4adef1` | `working_tree` |
 | whatsflow_v2 | `/mnt/c/Unifast/LeadsHug/Inspirações LeadsHug/whatsflow_v2` | `3a36436c83ebefc6839380eb8fac1a6f13f4700a` | `working_tree` |
 
 ### Snapshot Manifest Contract
@@ -719,10 +719,10 @@ As fontes abaixo foram recarregadas após `APROVADO` e vinculadas ao escopo docu
 | `ST03-TQA-R6-002` | Busca não é prova fail-closed de ausência. | E-NF-01 virou inventário limitado; lacunas `unknown after bounded inspection`. | findings_integrated / pending rerun |
 | `ST03-TQA-R6-003` | Cenários positivos introduziam autorização não canônica. | C-04 registra apenas condições necessárias; role×operação permanece future decision. | findings_integrated / pending rerun |
 | `ST03-TQA-R6-004` | Reachability/failure semantics incompletas. | E-28a/b separam reopen ativo de claimed_at órfão; E-23/C-10 registram divergência; C-11 limita SLA tenant-era. | findings_integrated / pending rerun |
-| `ST03-TQA-R6-005` | Proveniência stale e R5 sem rastreio 1:1. | c65a9854/pacote R3 registrados e R5-001..004 separados nesta tabela. | findings_integrated / pending rerun |
+| `ST03-TQA-R6-005` | Proveniência stale e R5 sem rastreio 1:1. | content checkpoint `100ba62c`, hash `f29fcf7b...` e R5-001..004 separados nesta tabela. | findings_integrated / pending rerun |
 | `ST03-R3B-001` | Protocolo de ausência não fechava sobre o corpus. | E-NF-01 não faz mais claim de ausência; lacunas permanecem unknown. | findings_integrated / pending rerun |
 | `ST03-R3B-002` | Completion Matrix não cobria os sete itens de Scope. | SCOPE-01..07 e linhas 1:1 pending foram adicionados. | findings_integrated / pending rerun |
-| `ST03-R3B-003` | TODO/comandos apontavam checkpoint anterior. | c65a9854 e pacote R3 040fa4f7 estão registrados; working tree ainda sem SHA. | findings_integrated / pending rerun |
+| `ST03-R3B-003` | TODO/comandos apontavam checkpoint anterior. | content checkpoint `100ba62c` e hash `f29fcf7b...` registrados; metadado posterior será coberto pelo pacote final. | findings_integrated / pending rerun |
 
 ## Independent No-Context Final Review Gate
 
@@ -755,11 +755,11 @@ As fontes abaixo foram recarregadas após `APROVADO` e vinculadas ao escopo docu
 - `git.exe -C 'C:/Unifast/LeadsHug/Inspirações LeadsHug/whatsflow_v2' status --short --branch`
 - `git.exe -C 'C:/Unifast/LeadsHug/Inspirações LeadsHug/whatsflow_v2' rev-parse HEAD^{tree}`
 - `python3 foundation_documentation/deterministic/validate_foundation_lifecycle.py --root foundation_documentation`
-- `base=f2a1ad88926201de63b703d22dc57c1939f357c4; checkpoint=9eec6324633fce414f4327e6eacf5ad025104bd3; git -C foundation_documentation diff --no-ext-diff "$base..$checkpoint" -- todos/active/features/TODO-leadshug-whatsflow-channel-attendance-study.md artifacts/analysis/leadshug-whatsflow-channel-attendance-conceptual-model-20260925.md | sha256sum; git -C foundation_documentation diff --check "$base..$checkpoint"` (range imutável; working changes pending serão capturadas no próximo SHA)
+- `base=f2a1ad88926201de63b703d22dc57c1939f357c4; checkpoint=100ba62c2135892fc7ff432c5fe241bf0f4adef1; git -C foundation_documentation diff --no-ext-diff "$base..$checkpoint" -- todos/active/features/TODO-leadshug-whatsflow-channel-attendance-study.md artifacts/analysis/leadshug-whatsflow-channel-attendance-conceptual-model-20260925.md | sha256sum; git -C foundation_documentation diff --check "$base..$checkpoint"` (checkpoint de conteúdo imutável; SHA-256 esperado `f29fcf7bdeda90f2a7fd7bb1a58bdbcc895e708ab99ae85c449e48f69cd7847f`)
 - `git -C foundation_documentation diff --check` (somente higiene de whitespace; não é prova de conteúdo)
 - `git diff --check --no-index /dev/null foundation_documentation/artifacts/analysis/leadshug-whatsflow-channel-attendance-conceptual-model-20260925.md` (aceitar exit `1` somente por arquivo novo e exigir stdout vazio)
-- `base=f2a1ad88926201de63b703d22dc57c1939f357c4; checkpoint=9eec6324633fce414f4327e6eacf5ad025104bd3; git -C foundation_documentation diff --no-ext-diff "$base..$checkpoint" -- todos/active/features/TODO-leadshug-whatsflow-channel-attendance-study.md artifacts/analysis/leadshug-whatsflow-channel-attendance-conceptual-model-20260925.md`
-- `checkpoint=9eec6324633fce414f4327e6eacf5ad025104bd3; git -C foundation_documentation show "$checkpoint:artifacts/analysis/leadshug-whatsflow-channel-attendance-conceptual-model-20260925.md" | rg -n -i '(api[_-]?key|authorization:|bearer |secret|token|password)'` (scan commit-scoped; working tree será escaneada no próximo pacote; classificar apenas termos de política/descrição)
+- `base=f2a1ad88926201de63b703d22dc57c1939f357c4; checkpoint=100ba62c2135892fc7ff432c5fe241bf0f4adef1; git -C foundation_documentation diff --no-ext-diff "$base..$checkpoint" -- todos/active/features/TODO-leadshug-whatsflow-channel-attendance-study.md artifacts/analysis/leadshug-whatsflow-channel-attendance-conceptual-model-20260925.md`
+- `checkpoint=100ba62c2135892fc7ff432c5fe241bf0f4adef1; git -C foundation_documentation show "$checkpoint:artifacts/analysis/leadshug-whatsflow-channel-attendance-conceptual-model-20260925.md" | rg -n -i '(api[_-]?key|authorization:|bearer |secret|token|password)'` (scan commit-scoped; classificar apenas termos de política/descrição)
 
 ## Files Expected
 
