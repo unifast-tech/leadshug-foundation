@@ -34,7 +34,7 @@ O `whatsflow_v2` contém soluções de conexão, inbox, departamentos, atendente
 
 - **Current delivery stage:** `Pending`
 - **Qualifiers:** `none`
-- **Next exact step:** revalidar a integração de `ST03-CRIT-001..004`, publicar o baseline renovado e repetir crítica/guards antes de solicitar `APROVADO`.
+- **Next exact step:** publicar o baseline renovado e executar crítica/guards pré-aprovação.
 
 ## Active Work State (Required While TODO Remains In `active/`)
 
@@ -125,7 +125,7 @@ Não aplicável enquanto nenhuma divergência existir; qualquer path não classi
 ## Study Evidence Contract
 
 - Cada observação material aponta para `whatsflow_v2@sha:path:symbol-or-section` e recebe força `direct|corroborated|inferred|conflicting`.
-- Presença estática prova somente que um artefato existe. Uma alegação `observed_operational_path` exige schema efetivo no SHA congelado e read/write call paths atuais, teste ou superfície corroborante.
+- Presença estática prova somente que um artefato existe. Uma alegação `observed_operational_path` exige call path executável e atual mais teste ou superfície corroborante; schema efetivo é obrigatório apenas para comportamento apoiado em persistência e deve ser marcado explicitamente `not_applicable` nos demais casos.
 - Cada evidência recebe natureza `effective_runtime|effective_schema|test|documentation|historical|superseded|orphaned|declarative_only|conflicting`; itens sem alcance ou supersessão resolvidos não sustentam comportamento operacional.
 - Cada conceito recebe estado `observed_operational_path|partial|documented_only|conflicting|unknown|not_found_after_protocol`.
 - Alegação de ausência exige busca em código, schema/migrações e documentação admitidos; sem isso, permanece `not_found_after_protocol` ou `unknown`, conforme a evidência.
@@ -185,7 +185,7 @@ As lanes runtime `pcv-1` continuam `not_needed`; os itens abaixo são requisitos
 
 ## Definition of Done
 
-- [ ] `DOD-01` Manifesto, schema efetivo, alcance/supersessão e call paths tornam cada alegação operacional reprodutível; histórico, órfão e declarativo não são tratados como comportamento.
+- [ ] `DOD-01` Manifesto, alcance/supersessão e call paths tornam cada alegação operacional reprodutível; schema efetivo é exigido quando há persistência e `not_applicable` caso contrário; histórico, órfão e declarativo não são tratados como comportamento.
 - [ ] `DOD-02` A matriz única `C-01..C-12` liga cada conceito a fontes, evidência, constraints, modelo, cenários, disposição e conclusão.
 - [ ] `DOD-03` Diagrama e glossário separam transporte, BU, unidade de atendimento, equipe, fila, política, capacidade e atribuição.
 - [ ] `DOD-04` Cardinalidades, invariantes e estados/transições cobrem o ciclo de atendimento e seus casos unknown/conflicting.
@@ -199,7 +199,7 @@ As lanes runtime `pcv-1` continuam `not_needed`; os itens abaixo são requisitos
 ## Validation Steps
 
 - [ ] `VAL-01` Revalidar limpeza, branch, head, tree e ancestralidade do snapshot antes da execução.
-- [ ] `VAL-02` Resolver schema efetivo e classificar alcance/supersessão de cada fonte antes de auditar bidirecionalmente a matriz `C-01..C-12`.
+- [ ] `VAL-02` Classificar alcance/supersessão e resolver schema efetivo apenas nas alegações persistence-backed — registrando `not_applicable` nas demais — antes da auditoria bidirecional `C-01..C-12`.
 - [ ] `VAL-03` Executar todos os walkthroughs da matriz de invariantes, incluindo troca de transporte, replay/reordenação, falha/capability do provider e matriz de atores/operações.
 - [ ] `VAL-04` Executar a rubrica de concorrência/performance com source evidence, invariant esperado e disposição explícita `pattern|limitation|anti_pattern|unknown`.
 - [ ] `VAL-05` Revisar explicitamente segredos, PII, payloads e cópia indevida no diff final.
@@ -209,7 +209,7 @@ As lanes runtime `pcv-1` continuam `not_needed`; os itens abaixo são requisitos
 
 | Criterion ID | Source Section | Criterion | Evidence Type | Evidence Artifact / Command | Runtime Target | Status | Notes |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| `DOD-01` | Definition of Done | evidência operacional distingue schema/call path efetivos de artefato histórico/órfão | doc+review | manifest + source classification | n/a | planned | reprovar alegação sem alcance/supersessão resolvidos |
+| `DOD-01` | Definition of Done | evidência operacional distingue call path atual e schema persistence-backed de artefato histórico/órfão | doc+review | manifest + source classification | n/a | planned | schema obrigatório só com persistência; `not_applicable` explícito nos demais casos |
 | `DOD-02` | Definition of Done | matriz única cobre `C-01..C-12` | doc+integrity review | concept coverage matrix | n/a | planned | 12/12 IDs e colunas obrigatórias |
 | `DOD-03` | Definition of Done | diagrama/glossário separam os conceitos | doc+review | model sections | n/a | planned | sem colisão Setor/Canal/BU |
 | `DOD-04` | Definition of Done | cardinalidades/estados cobrem conflitos e unknowns | doc+review | model sections | n/a | planned | sem coerência inventada |
@@ -220,7 +220,7 @@ As lanes runtime `pcv-1` continuam `not_needed`; os itens abaixo são requisitos
 | `DOD-09` | Definition of Done | conteúdo sensível/cópia excluídos | scan+manual review | final diff review | Foundation diff | planned | sem garantia absoluta |
 | `DOD-10` | Definition of Done | gates documentais passam | guard+review | validator/guards/reviews | Foundation | planned | closeout somente após tudo green |
 | `VAL-01` | Validation Steps | snapshot revalidado | command | Git manifest commands | frozen reference | planned | branch pode avançar sem mover SHA |
-| `VAL-02` | Validation Steps | schema/alcance resolvidos e auditoria bidirecional | command+review | source classification + crosswalk | read-only | planned | itens unresolved viram partial/unknown |
+| `VAL-02` | Validation Steps | alcance/supersessão e schema aplicável resolvidos antes da auditoria bidirecional | command+review | source classification + crosswalk | read-only | planned | itens unresolved viram partial/unknown; schema não aplicável é explícito |
 | `VAL-03` | Validation Steps | walkthroughs dos invariantes | scenario review | invariant results | n/a | planned | positivos e negativos |
 | `VAL-04` | Validation Steps | rubrica operacional | scenario review | concurrency/performance results | n/a | planned | source + expected invariant + disposition |
 | `VAL-05` | Validation Steps | revisão sensível/cópia | scan+manual review | final diff | Foundation diff | planned | nenhum payload/dump persistido |
@@ -326,11 +326,11 @@ As lanes runtime `pcv-1` continuam `not_needed`; os itens abaixo são requisitos
 - **Why this decision:** uma crítica formal deve partir de contrato publicado e reprodutível.
 - **Trigger stage:** `before the first planning-side review or guard run`.
 - **Baseline branch:** `main`
-- **Baseline commit:** `pending renewed baseline`
+- **Baseline commit:** `pending renewed baseline after round 2`
 - **Baseline push reference:** `origin/main`
 - **Gate status:** `not_run`
-- **Findings summary:** `ST03-CRIT-001..004` alteraram evidência, DoD e validação; aguarda revalidação humana e freeze renovado.
-- **Evidence / reference:** baseline histórico `5eca5c43066d4534f884b9b4bba086dd0aa158d9` foi publicado e corretamente invalidado pela crítica; novo commit pendente.
+- **Findings summary:** `ST03-CRIT-R2-001..002` ajustaram evidência e registros de review; aguarda revalidação humana e freeze renovado.
+- **Evidence / reference:** baseline histórico `cd07904c39012446a86708c9de4b8281dc1104a7` foi publicado e corretamente invalidado pela segunda crítica; `5eca5c43` permanece como proveniência da primeira rodada.
 - **Waiver authority / reference:** `n/a`
 
 ## Gate: Review Scope Drift
@@ -338,7 +338,7 @@ As lanes runtime `pcv-1` continuam `not_needed`; os itens abaixo são requisitos
 - **Gate decision:** `required`
 - **Why this decision:** impedir que integrações pós-crítica ampliem o estudo sem revalidação.
 - **Trigger stage:** `after the planning-side review/guard cycle converges and before APROVADO`.
-- **Baseline source:** `Review Baseline Freeze -> pending renewed baseline`.
+- **Baseline source:** `Review Baseline Freeze -> pending renewed baseline after round 2`.
 - **Guard command:** `python3 delphi-ai/tools/review_scope_drift_guard.py --todo foundation_documentation/todos/active/features/TODO-leadshug-whatsflow-channel-attendance-study.md`.
 - **No-go handling rule:** return to review/revalidation; no automatic rollback.
 - **Gate status:** `not_run`
@@ -350,15 +350,16 @@ As lanes runtime `pcv-1` continuam `not_needed`; os itens abaixo são requisitos
 
 - [x] Validar conjuntamente `D-01..D-03`.
 - [x] Revalidar a integração de `ST03-CRIT-001..004` sem novas decisões de produto.
+- [x] Revalidar a integração de `ST03-CRIT-R2-001..002` sem novas decisões de produto.
 - [ ] Após revisão independente e guards de planejamento, registrar `APROVADO` para executar o estudo.
 
 ## Assumptions Preview (Required Before Plan Review)
 
 | Assumption ID | Assumption | Evidence | If False | Confidence | Handling |
 | --- | --- | --- | --- | --- | --- |
-| `A-01` | o snapshot está limpo e pode ser estudado sem executar runtime | fetch e status limpo; local `stage` = `origin/stage@3a36436`; código/schema/docs disponíveis | congelar outra fonte ou bloquear alegações | High | Keep as Assumption |
-| `A-02` | presença estática demonstra somente existência de artefato; comportamento exige schema efetivo, alcance atual e read/write call paths, teste ou superfície corroborante | no snapshot, `distribution_state` existe em migration sem consumidor observado e assignment aparece em contratos concorrentes | sem alcance resolvido, classificar como `partial|documented_only|conflicting|unknown`, nunca comportamento operacional | High | Keep as Assumption |
-| `A-03` | a política de referência independente da Central não cobre nominalmente whatsflow_v2, mas o feature brief já impõe fronteira read-only equivalente | policy + feature brief Constraints | propor política geral em TODO separado; não ampliar ST-03 | High | Keep as Assumption |
+| `A-01` | o snapshot está limpo e pode ser estudado sem executar runtime | Git fetch/status: local `stage` = `origin/stage@3a36436`; fontes em `src/**`, `supabase/migrations/**` e `docs/**` no SHA congelado | congelar outra fonte ou bloquear alegações | High | Keep as Assumption |
+| `A-02` | presença estática demonstra somente existência; comportamento exige call path executável atual e teste/corroborante, mais schema efetivo somente quando persistence-backed | `supabase/migrations/20260325210134_all_phases_feature_parity.sql` cria `distribution_state`; busca congelada não encontrou consumidor; assignment aparece em `src/hooks/whatsapp/useConversations.ts` e `src/components/whatsapp/panels/ChatPanel.tsx` | sem alcance/supersessão resolvidos, classificar como `partial|documented_only|conflicting|unknown`, nunca comportamento operacional | High | Keep as Assumption |
+| `A-03` | a policy Central não cobre nominalmente whatsflow_v2, mas o feature brief já impõe fronteira read-only equivalente | `foundation_documentation/policies/central_whatsapp_independent_legacy_policy.md`; `foundation_documentation/artifacts/feature-briefs/leadshug-pre-code-evolution-program-20260918.md#Constraints--Non-Goals` | propor política geral em TODO separado; não ampliar ST-03 | High | Keep as Assumption |
 
 ## Execution Plan (Required Before `APROVADO`)
 
@@ -370,7 +371,7 @@ As lanes runtime `pcv-1` continuam `not_needed`; os itens abaixo são requisitos
 ### Ordered Steps
 
 1. Revalidar/fixar o manifesto Git e declarar allowlist de superfícies.
-2. Resolver schema efetivo, alcance/supersessão e call paths das fontes admitidas.
+2. Resolver alcance/supersessão e call paths das fontes; resolver schema efetivo quando persistence-backed e marcar `not_applicable` nos demais casos.
 3. Preencher a matriz única `C-01..C-12`, com evidência e estado.
 4. Extrair relações, cardinalidades, invariantes, estados e fluxos sem fundir contratos conflitantes.
 5. Executar os walkthroughs canônicos e a rubrica de concorrência/performance.
@@ -402,7 +403,7 @@ As lanes runtime `pcv-1` continuam `not_needed`; os itens abaixo são requisitos
 
 ## Plan Review Gate
 
-- **Status:** `prepared-pre-freeze`; primeira revisão foi superada pela integração de `ST03-CRIT-001..004` e será renovada após validação humana e novo freeze.
+- **Status:** `prepared-pre-freeze`; segunda crítica foi integrada e a revisão será renovada após validação humana e novo freeze.
 - **Module coherence:** `prepared-pre-freeze`; o plano preserva a identidade de Setor/BU/Canal, a conversa por BU/contato, adapters de transporte, isolamento por Mantenedora/BU e histórico auditável.
 - **Architecture:** `prepared-pre-freeze` — análise não canoniza nem altera contratos.
 - **Code Quality:** `n/a` — nenhum código será escrito; o contrato exige evidência sanitizada e estados explícitos.
@@ -414,10 +415,57 @@ As lanes runtime `pcv-1` continuam `not_needed`; os itens abaixo são requisitos
 
 ### Issue Cards
 
-- `ST03-CRIT-001` — high, integrated: presença estática não prova comportamento; schema efetivo, alcance/supersessão e call paths agora são obrigatórios.
-- `ST03-CRIT-002` — high, integrated: invariantes canônicos ganharam matriz 1:1 e walkthroughs explícitos.
-- `ST03-CRIT-003` — medium, integrated: rubrica documental cobre concorrência/performance sem ativar lanes runtime.
-- `ST03-CRIT-004` — medium, integrated: catálogo estável `C-01..C-12` substitui listas concorrentes e a matriz de evidência foi expandida.
+- **Issue ID:** `ST03-CRIT-001`
+  - **Severity:** `high`
+  - **Evidence:** `distribution_state` sem consumidor observado e contratos concorrentes de assignment no snapshot congelado.
+  - **Why it matters now:** presença estática poderia produzir um modelo operacional falso.
+  - **Option A (Recommended):** exigir call path atual + teste/corroborante; schema efetivo somente quando persistence-backed; classificar histórico/superseded/orphaned/declarative.
+    - **Effort / Risk / Blast radius / Maintenance:** medium / low / local / low.
+    - **Performance / Elegance / Structural soundness:** neutral / improves / improves.
+  - **Option B:** aceitar schema/UI como evidência suficiente, com disclaimer geral.
+    - **Effort / Risk / Blast radius / Maintenance:** low / high / cross-module / high.
+    - **Performance / Elegance / Structural soundness:** unknown / regresses / regresses.
+  - **Option C (Do Nothing):** manter a inferência estática sem qualificação; rejeitada por permitir canonização de código morto.
+  - **Recommendation:** `Option A`, integrada no evidence contract, A-02, DOD-01 e VAL-02.
+
+- **Issue ID:** `ST03-CRIT-002`
+  - **Severity:** `high`
+  - **Evidence:** snapshot inicial comprimia os doze invariantes em quatro resumos e omitia cenários negativos.
+  - **Why it matters now:** recomendações poderiam violar idempotência, BU grants, capability do canal ou leitura histórica independente.
+  - **Option A (Recommended):** matriz 1:1 dos doze invariantes com walkthroughs positivos/negativos e papéis/operações.
+    - **Effort / Risk / Blast radius / Maintenance:** medium / low / cross-module / low.
+    - **Performance / Elegance / Structural soundness:** neutral / improves / improves.
+  - **Option B:** manter cross-check narrativo genérico no closeout.
+    - **Effort / Risk / Blast radius / Maintenance:** low / high / cross-module / medium.
+    - **Performance / Elegance / Structural soundness:** neutral / mixed / regresses.
+  - **Option C (Do Nothing):** aceitar cobertura implícita; rejeitada por não ser auditável.
+  - **Recommendation:** `Option A`, integrada nas matrizes canônica e de baseline modular.
+
+- **Issue ID:** `ST03-CRIT-003`
+  - **Severity:** `medium`
+  - **Evidence:** claim, capacity, transfer e polling do legado apresentam riscos concorrentes/escala sem rubrica original.
+  - **Why it matters now:** PCV runtime `not_needed` não elimina performance/concorrência como objeto conceitual.
+  - **Option A (Recommended):** rubrica documental para atomic claim, capacidade, corridas, presença, paginação, SLA e fan-out.
+    - **Effort / Risk / Blast radius / Maintenance:** medium / low / local / low.
+    - **Performance / Elegance / Structural soundness:** improves / improves / improves.
+  - **Option B:** registrar apenas observações livres no estudo.
+    - **Effort / Risk / Blast radius / Maintenance:** low / medium / local / medium.
+    - **Performance / Elegance / Structural soundness:** unknown / mixed / mixed.
+  - **Option C (Do Nothing):** omitir os riscos; rejeitada por degradar utilidade operacional.
+  - **Recommendation:** `Option A`, sem ativar load tests ou lanes runtime.
+
+- **Issue ID:** `ST03-CRIT-004`
+  - **Severity:** `medium`
+  - **Evidence:** scope, DoD e plano usavam agrupamentos conceituais concorrentes e evidência agregada.
+  - **Why it matters now:** conceitos poderiam desaparecer sem que a auditoria bidirecional detectasse.
+  - **Option A (Recommended):** catálogo estável `C-01..C-12`, uma matriz crosswalk e evidência planejada por critério.
+    - **Effort / Risk / Blast radius / Maintenance:** medium / low / local / low.
+    - **Performance / Elegance / Structural soundness:** neutral / improves / improves.
+  - **Option B:** manter listas paralelas e reconciliar manualmente no closeout.
+    - **Effort / Risk / Blast radius / Maintenance:** low-now/high-later / medium / local / high.
+    - **Performance / Elegance / Structural soundness:** neutral / regresses / regresses.
+  - **Option C (Do Nothing):** aceitar cobertura subjetiva; rejeitada por impedir prova de completude.
+  - **Recommendation:** `Option A`, integrada no catálogo e Completion Evidence Matrix.
 
 ### Failure Modes & Edge Cases
 
@@ -445,7 +493,7 @@ As lanes runtime `pcv-1` continuam `not_needed`; os itens abaixo são requisitos
 | `touches_tests` | `no` | validação documental |
 | `critical_user_journey` | `no` | nenhum fluxo entregue agora |
 | `release_or_promotion_critical` | `no` | sem release de produto |
-| `high_severity_plan_review_issue` | `no` | nenhum issue registrado |
+| `high_severity_plan_review_issue` | `yes` | `ST03-CRIT-001` e `ST03-CRIT-002` foram high e estão integrados; severidade histórica permanece visível |
 | `explicit_three_lane_request` | `no` | não solicitado |
 
 ## Independent No-Context Critique Gate
@@ -459,8 +507,8 @@ As lanes runtime `pcv-1` continuam `not_needed`; os itens abaixo são requisitos
 - **Review routing:** `codex / formal-review / formal-reviewer / critique / gpt-5.6-sol / max / declared`
 - **Critique status:** `not_run`
 - **Internal reviewer mandate:** `required`
-- **Findings summary:** rodada inicial encontrou `ST03-CRIT-001..004`; todos integrados, e uma crítica renovada é obrigatória após validação humana e novo freeze.
-- **Evidence / reference:** dispatch `artifacts/tmp/st03-planning-review/critique-dispatch.json`; reviewer `st03-planning-critique-fresh-reviewer`; audit floor `ef66891d75b2`.
+- **Findings summary:** rodada 1 encontrou `ST03-CRIT-001..004`; rodada 2 confirmou sua resolução e encontrou `ST03-CRIT-R2-001..002`; todos integrados, com nova crítica obrigatória após revalidação e freeze.
+- **Evidence / reference:** dispatches `critique-dispatch.json` e `critique-round-2-dispatch.json`; reviewers frescos das duas rodadas; audit floor será recalculado pelo trigger high corrigido.
 
 ### Historical Critique Round 1 Resolution
 
@@ -472,6 +520,15 @@ As lanes runtime `pcv-1` continuam `not_needed`; os itens abaixo são requisitos
 | `ST03-CRIT-004` | Integrated | useful | partial | project | n/a | stable `C-01..C-12` catalog and per-criterion evidence matrix replace parallel coverage lists |
 
 - **Human integration validation:** usuário, `VALIDO INTEGRAÇÃO ST03-CRIT-001..004 SEM NOVAS DECISÕES`, conversa de 2026-09-25.
+
+### Historical Critique Round 2 Resolution
+
+| Finding ID | Resolution | Usefulness | Formalizable | Candidate Rule Level | Candidate Rule ID | Rationale / Evidence |
+| --- | --- | --- | --- | --- | --- | --- |
+| `ST03-CRIT-R2-001` | Integrated | useful | yes | paced | n/a | schema agora é obrigatório somente para alegações persistence-backed; call path executável + teste/corroborante sustenta comportamento não persistente |
+| `ST03-CRIT-R2-002` | Integrated | useful | yes | paced | n/a | issue cards passam a carregar adjudicação completa e o trigger high reflete a severidade histórica real |
+
+- **Human integration validation:** usuário, `VALIDO INTEGRAÇÃO ST03-CRIT-R2-001..002 SEM NOVAS DECISÕES`, conversa de 2026-09-25.
 
 ## Gate: Assumption Code Coherence
 
@@ -564,9 +621,9 @@ As lanes runtime `pcv-1` continuam `not_needed`; os itens abaixo são requisitos
 ## TODO Closeout Disposition
 
 - **Disposition:** `keep-active`
-- **Disposition reason:** decisões validadas e achados integrados; revalidação, freeze renovado, crítica, guards e aprovação ainda pendentes.
+- **Disposition reason:** segunda crítica integrada e revalidada; novo freeze, crítica, guards e aprovação ainda pendentes.
 - **Post-commit/push status:** `pending`
-- **Next path/status action:** revalidar `ST03-CRIT-001..004`, renovar o baseline e repetir os gates pré-aprovação.
+- **Next path/status action:** renovar o baseline e repetir os gates pré-aprovação.
 
 ## Commands (Run Locally)
 
