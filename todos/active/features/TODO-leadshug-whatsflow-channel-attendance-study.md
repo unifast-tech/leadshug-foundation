@@ -34,7 +34,7 @@ O `whatsflow_v2` contém soluções de conexão, inbox, departamentos, atendente
 
 - **Current delivery stage:** `Pending`
 - **Qualifiers:** `none`
-- **Next exact step:** publicar o baseline renovado e executar crítica/guards pré-aprovação.
+- **Next exact step:** publicar o baseline renovado e repetir os guards finais de scope drift e autoridade.
 
 ## Active Work State (Required While TODO Remains In `active/`)
 
@@ -326,11 +326,11 @@ As lanes runtime `pcv-1` continuam `not_needed`; os itens abaixo são requisitos
 - **Why this decision:** uma crítica formal deve partir de contrato publicado e reprodutível.
 - **Trigger stage:** `before the first planning-side review or guard run`.
 - **Baseline branch:** `main`
-- **Baseline commit:** `pending renewed baseline after round 2`
+- **Baseline commit:** `pending renewed baseline after A-01..A-03 validation`
 - **Baseline push reference:** `origin/main`
 - **Gate status:** `not_run`
-- **Findings summary:** `ST03-CRIT-R2-001..002` ajustaram evidência e registros de review; aguarda revalidação humana e freeze renovado.
-- **Evidence / reference:** baseline histórico `cd07904c39012446a86708c9de4b8281dc1104a7` foi publicado e corretamente invalidado pela segunda crítica; `5eca5c43` permanece como proveniência da primeira rodada.
+- **Findings summary:** reclassificação de A-01..A-03 validada; aguarda publicação da baseline renovada.
+- **Evidence / reference:** validação humana registrada abaixo; `f3eed1fd` permanece como baseline histórica que detectou corretamente o drift.
 - **Waiver authority / reference:** `n/a`
 
 ## Gate: Review Scope Drift
@@ -338,12 +338,12 @@ As lanes runtime `pcv-1` continuam `not_needed`; os itens abaixo são requisitos
 - **Gate decision:** `required`
 - **Why this decision:** impedir que integrações pós-crítica ampliem o estudo sem revalidação.
 - **Trigger stage:** `after the planning-side review/guard cycle converges and before APROVADO`.
-- **Baseline source:** `Review Baseline Freeze -> pending renewed baseline after round 2`.
+- **Baseline source:** `Review Baseline Freeze -> pending renewed baseline after A-01..A-03 validation`.
 - **Guard command:** `python3 delphi-ai/tools/review_scope_drift_guard.py --todo foundation_documentation/todos/active/features/TODO-leadshug-whatsflow-channel-attendance-study.md`.
 - **No-go handling rule:** return to review/revalidation; no automatic rollback.
 - **Gate status:** `not_run`
-- **Findings summary:** `pending`
-- **Evidence / reference:** `pending`
+- **Findings summary:** o único drift detectado contra `f3eed1fd` foi validado pelo usuário; aguarda nova baseline e rerun.
+- **Evidence / reference:** checkpoint histórico em `foundation_documentation/artifacts/tmp/st03-planning-review/review-scope-drift.json`; validação humana registrada abaixo.
 - **Waiver authority / reference:** `n/a`
 
 ## Questions To Close
@@ -351,15 +351,18 @@ As lanes runtime `pcv-1` continuam `not_needed`; os itens abaixo são requisitos
 - [x] Validar conjuntamente `D-01..D-03`.
 - [x] Revalidar a integração de `ST03-CRIT-001..004` sem novas decisões de produto.
 - [x] Revalidar a integração de `ST03-CRIT-R2-001..002` sem novas decisões de produto.
+- [x] Validar a reclassificação de `A-01..A-03` como fatos contratuais resolvidos, sem mudança de escopo ou novas decisões.
 - [ ] Após revisão independente e guards de planejamento, registrar `APROVADO` para executar o estudo.
 
 ## Assumptions Preview (Required Before Plan Review)
 
 | Assumption ID | Assumption | Evidence | If False | Confidence | Handling |
 | --- | --- | --- | --- | --- | --- |
-| `A-01` | o snapshot está limpo e pode ser estudado sem executar runtime | Git fetch/status: local `stage` = `origin/stage@3a36436`; fontes em `src/**`, `supabase/migrations/**` e `docs/**` no SHA congelado | congelar outra fonte ou bloquear alegações | High | Keep as Assumption |
-| `A-02` | presença estática demonstra somente existência; comportamento exige call path executável atual e teste/corroborante, mais schema efetivo somente quando persistence-backed | `supabase/migrations/20260325210134_all_phases_feature_parity.sql` cria `distribution_state`; busca congelada não encontrou consumidor; assignment aparece em `src/hooks/whatsapp/useConversations.ts` e `src/components/whatsapp/panels/ChatPanel.tsx` | sem alcance/supersessão resolvidos, classificar como `partial|documented_only|conflicting|unknown`, nunca comportamento operacional | High | Keep as Assumption |
-| `A-03` | a policy Central não cobre nominalmente whatsflow_v2, mas o feature brief já impõe fronteira read-only equivalente | `foundation_documentation/policies/central_whatsapp_independent_legacy_policy.md`; `foundation_documentation/artifacts/feature-briefs/leadshug-pre-code-evolution-program-20260918.md#Constraints--Non-Goals` | propor política geral em TODO separado; não ampliar ST-03 | High | Keep as Assumption |
+| `A-01` | o snapshot está limpo e pode ser estudado sem executar runtime | Git fetch/status: local `stage` = `origin/stage@3a36436`; manifesto registra head/tree e superfícies congeladas | congelar outra fonte ou bloquear alegações | High | Resolved into Contract |
+| `A-02` | presença estática demonstra somente existência; comportamento exige call path executável atual e teste/corroborante, mais schema efetivo somente quando persistence-backed | primeira crítica confirmou `distribution_state` sem consumidor observado e contratos concorrentes de assignment; evidence contract, DOD-01 e VAL-02 incorporam a restrição | sem alcance/supersessão resolvidos, classificar como partial, documented_only, conflicting ou unknown; nunca comportamento operacional | High | Resolved into Contract |
+
+- **Resolved planning fact:** `central_whatsapp_independent_legacy_policy.md` não nomeia `whatsflow_v2`; a fronteira read-only específica deste estudo já é contratual no feature brief e neste TODO. Eventual política genérica permanece fora do ST-03.
+- **Human reclassification validation:** usuário, `VALIDO RECLASSIFICAÇÃO A-01..A-03 COMO FATOS CONTRATUAIS SEM MUDANÇA DE ESCOPO`, conversa de 2026-09-25.
 
 ## Execution Plan (Required Before `APROVADO`)
 
@@ -403,15 +406,15 @@ As lanes runtime `pcv-1` continuam `not_needed`; os itens abaixo são requisitos
 
 ## Plan Review Gate
 
-- **Status:** `prepared-pre-freeze`; segunda crítica foi integrada e a revisão será renovada após validação humana e novo freeze.
-- **Module coherence:** `prepared-pre-freeze`; o plano preserva a identidade de Setor/BU/Canal, a conversa por BU/contato, adapters de transporte, isolamento por Mantenedora/BU e histórico auditável.
-- **Architecture:** `prepared-pre-freeze` — análise não canoniza nem altera contratos.
+- **Status:** `findings_integrated`; revisão renovada contra `main@f3eed1fd`, com issue-card completeness corrigida após a terceira crítica.
+- **Module coherence:** `passed`; o plano preserva a identidade de Setor/BU/Canal, a conversa por BU/contato, adapters de transporte, isolamento por Mantenedora/BU e histórico auditável.
+- **Architecture:** `passed` — análise não canoniza nem altera contratos.
 - **Code Quality:** `n/a` — nenhum código será escrito; o contrato exige evidência sanitizada e estados explícitos.
-- **Tests:** `prepared-pre-freeze` — walkthroughs e auditoria bidirecional cobrem a entrega documental.
-- **Performance:** `prepared-pre-freeze` — sem runtime; a rubrica analisa capacidade e concorrência como atributos conceituais.
-- **Security:** `prepared-pre-freeze` — legado read-only e exclusão de segredos/PII/payloads.
-- **Elegance:** `prepared-pre-freeze` — doze conceitos usam uma única matriz, sem taxonomia paralela canônica.
-- **Structural Soundness:** `prepared-pre-freeze` — descoberta, recomendação, decisão e implementação permanecem separadas.
+- **Tests:** `passed for planning` — walkthroughs e auditoria bidirecional cobrem a entrega documental.
+- **Performance:** `passed for planning` — sem runtime; a rubrica analisa capacidade e concorrência como atributos conceituais.
+- **Security:** `passed for planning` — legado read-only e exclusão de segredos/PII/payloads.
+- **Elegance:** `passed` — doze conceitos usam uma única matriz, sem taxonomia paralela canônica.
+- **Structural Soundness:** `passed` — descoberta, recomendação, decisão e implementação permanecem separadas.
 
 ### Issue Cards
 
@@ -426,6 +429,8 @@ As lanes runtime `pcv-1` continuam `not_needed`; os itens abaixo são requisitos
     - **Effort / Risk / Blast radius / Maintenance:** low / high / cross-module / high.
     - **Performance / Elegance / Structural soundness:** unknown / regresses / regresses.
   - **Option C (Do Nothing):** manter a inferência estática sem qualificação; rejeitada por permitir canonização de código morto.
+    - **Effort / Risk / Blast radius / Maintenance:** none / high / cross-module / high.
+    - **Performance / Elegance / Structural soundness:** unknown / regresses / regresses.
   - **Recommendation:** `Option A`, integrada no evidence contract, A-02, DOD-01 e VAL-02.
 
 - **Issue ID:** `ST03-CRIT-002`
@@ -439,6 +444,8 @@ As lanes runtime `pcv-1` continuam `not_needed`; os itens abaixo são requisitos
     - **Effort / Risk / Blast radius / Maintenance:** low / high / cross-module / medium.
     - **Performance / Elegance / Structural soundness:** neutral / mixed / regresses.
   - **Option C (Do Nothing):** aceitar cobertura implícita; rejeitada por não ser auditável.
+    - **Effort / Risk / Blast radius / Maintenance:** none / high / cross-module / high.
+    - **Performance / Elegance / Structural soundness:** neutral / regresses / regresses.
   - **Recommendation:** `Option A`, integrada nas matrizes canônica e de baseline modular.
 
 - **Issue ID:** `ST03-CRIT-003`
@@ -452,6 +459,8 @@ As lanes runtime `pcv-1` continuam `not_needed`; os itens abaixo são requisitos
     - **Effort / Risk / Blast radius / Maintenance:** low / medium / local / medium.
     - **Performance / Elegance / Structural soundness:** unknown / mixed / mixed.
   - **Option C (Do Nothing):** omitir os riscos; rejeitada por degradar utilidade operacional.
+    - **Effort / Risk / Blast radius / Maintenance:** none / high / local / high.
+    - **Performance / Elegance / Structural soundness:** regresses / regresses / regresses.
   - **Recommendation:** `Option A`, sem ativar load tests ou lanes runtime.
 
 - **Issue ID:** `ST03-CRIT-004`
@@ -465,6 +474,8 @@ As lanes runtime `pcv-1` continuam `not_needed`; os itens abaixo são requisitos
     - **Effort / Risk / Blast radius / Maintenance:** low-now/high-later / medium / local / high.
     - **Performance / Elegance / Structural soundness:** neutral / regresses / regresses.
   - **Option C (Do Nothing):** aceitar cobertura subjetiva; rejeitada por impedir prova de completude.
+    - **Effort / Risk / Blast radius / Maintenance:** none / high / local / high.
+    - **Performance / Elegance / Structural soundness:** neutral / regresses / regresses.
   - **Recommendation:** `Option A`, integrada no catálogo e Completion Evidence Matrix.
 
 ### Failure Modes & Edge Cases
@@ -505,10 +516,10 @@ As lanes runtime `pcv-1` continuam `not_needed`; os itens abaixo são requisitos
 - **Package mode:** `bounded-file-set`
 - **Package minimum contents:** governing TODO at pushed baseline, current domain entities and four module anchors.
 - **Review routing:** `codex / formal-review / formal-reviewer / critique / gpt-5.6-sol / max / declared`
-- **Critique status:** `not_run`
+- **Critique status:** `findings_integrated`
 - **Internal reviewer mandate:** `required`
-- **Findings summary:** rodada 1 encontrou `ST03-CRIT-001..004`; rodada 2 confirmou sua resolução e encontrou `ST03-CRIT-R2-001..002`; todos integrados, com nova crítica obrigatória após revalidação e freeze.
-- **Evidence / reference:** dispatches `critique-dispatch.json` e `critique-round-2-dispatch.json`; reviewers frescos das duas rodadas; audit floor será recalculado pelo trigger high corrigido.
+- **Findings summary:** rodadas 1–2 convergiram o contrato técnico; rodada 3 confirmou todas as correções e apontou apenas campos ausentes nas opções C (`ST03-CRIT-R3-001`), agora integrados sem mudança material.
+- **Evidence / reference:** dispatches `critique-dispatch.json`, `critique-round-2-dispatch.json` e `critique-round-3-dispatch.json`; três reviewers frescos; audit floor `75992daf3f8f`.
 
 ### Historical Critique Round 1 Resolution
 
@@ -530,16 +541,22 @@ As lanes runtime `pcv-1` continuam `not_needed`; os itens abaixo são requisitos
 
 - **Human integration validation:** usuário, `VALIDO INTEGRAÇÃO ST03-CRIT-R2-001..002 SEM NOVAS DECISÕES`, conversa de 2026-09-25.
 
+### Historical Critique Round 3 Resolution
+
+| Finding ID | Resolution | Usefulness | Formalizable | Candidate Rule Level | Candidate Rule ID | Rationale / Evidence |
+| --- | --- | --- | --- | --- | --- | --- |
+| `ST03-CRIT-R3-001` | Integrated | useful | yes | paced | n/a | todas as Option C agora registram esforço, risco, blast radius, manutenção, performance, elegância e structural soundness; nenhuma seção material mudou |
+
 ## Gate: Assumption Code Coherence
 
-- **Gate decision:** `required`
-- **Why this decision:** A-01 e A-02 dependem da coerência entre código, schema e documentação do legado.
+- **Gate decision:** `not_needed`
+- **Why this decision:** após as críticas e revalidações, A-01 e A-02 foram incorporadas ao manifesto/evidence contract; nenhuma premissa de código permanece viva.
 - **Trigger stage:** `after critique convergence and before APROVADO`.
-- **Guard scope:** `A-01,A-02`.
+- **Guard scope:** `none`.
 - **Guard command:** `python3 delphi-ai/tools/assumption_code_coherence_guard.py --todo foundation_documentation/todos/active/features/TODO-leadshug-whatsflow-channel-attendance-study.md`.
-- **Gate status:** `not_run`
-- **Findings summary:** `pending`
-- **Evidence / reference:** `pending`
+- **Gate status:** `no_material_findings`
+- **Findings summary:** nenhuma premissa viva; tentativas iniciais `no-go` levaram à classificação correta de A-01/A-02 como contrato resolvido e A-03 como fato documental.
+- **Evidence / reference:** `foundation_documentation/artifacts/tmp/st03-planning-review/assumption-code-coherence.json`; rerun final após convergência da terceira crítica.
 - **Waiver authority / reference:** `n/a`
 
 ## Approval
@@ -621,9 +638,9 @@ As lanes runtime `pcv-1` continuam `not_needed`; os itens abaixo são requisitos
 ## TODO Closeout Disposition
 
 - **Disposition:** `keep-active`
-- **Disposition reason:** segunda crítica integrada e revalidada; novo freeze, crítica, guards e aprovação ainda pendentes.
+- **Disposition reason:** crítica e revalidações humanas convergiram; baseline renovada e guards finais ainda pendentes.
 - **Post-commit/push status:** `pending`
-- **Next path/status action:** renovar o baseline e repetir os gates pré-aprovação.
+- **Next path/status action:** publicar baseline renovada e repetir scope-drift/authority preflight.
 
 ## Commands (Run Locally)
 
