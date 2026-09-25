@@ -27,7 +27,7 @@ Este trabalho é um estudo de capacidades e comportamentos. O Central-Whatsapp p
 
 ## Implementation Intent
 
-- **Current delivery:** produzir um único catálogo de gaps de capacidade entre snapshots congelados do Central-Whatsapp e do LeadsHug, com trilhas oficial, não oficial e transversal.
+- **Current delivery:** produzir um único catálogo de gaps de capacidade entre snapshots congelados do Central-Whatsapp e do LeadsHug, preservando todas as origens e derivando transversalidade sem apagar proveniência.
 - **Planned next steps:** `ST-03` estuda separadamente canais no Whatsflow; `ST-04` prioriza oportunidades depois dos dois estudos.
 - **Anticipatory implementation authorized now:** `none`
 - **Rationale:** primeiro separar fatos, lacunas e lições; decisões de produto e implementação continuam fora deste trabalho.
@@ -36,24 +36,24 @@ Este trabalho é um estudo de capacidades e comportamentos. O Central-Whatsapp p
 
 - **Current delivery stage:** `Pending`
 - **Qualifiers:** `none`
-- **Next exact step:** validar em uma única rodada `D-01..D-06`, congelar o contrato e executar os gates pré-aprovação.
+- **Next exact step:** publicar a baseline revisada após `REVALIDO D-01..D-06 APÓS IC-01..IC-06` e repetir os gates pré-aprovação afetados.
 
 ## Active Work State (Required While TODO Remains In `active/`)
 
 - **Work state:** `review`
-- **Why this state now:** o contrato foi refinado, mas decisões e autorização de execução ainda não foram congeladas.
-- **Exit condition:** decisões validadas, gates pré-aprovação concluídos e `APROVADO` explícito registrado.
+- **Why this state now:** decisões revisadas foram revalidadas; freeze e gates renovados ainda estão em andamento.
+- **Exit condition:** decisões revisadas revalidadas, novo freeze publicado, gates pré-aprovação concluídos e `APROVADO` explícito registrado.
 
 ## Scope
 
-- [ ] `S-01` Congelar e registrar os snapshots de comparação e sua proveniência histórica.
+- [ ] `S-01` Publicar no catálogo um manifesto reproduzível com identidade, base, head, tree, pathspec permitido, papel e comandos exatos de verificação para cada snapshot.
 - [ ] `S-02` Inventariar capacidades relevantes do Central oficial surgidas ou alteradas após a baseline de importação.
 - [ ] `S-03` Inventariar capacidades relevantes do hub não oficial surgidas ou alteradas após a baseline de importação.
 - [ ] `S-04` Examinar separadamente o overlay local do hub incorporado ao antigo LeadsHug, sem atribuí-lo ao Central independente.
 - [ ] `S-05` Comparar cada capacidade candidata com o LeadsHug API/Web atual e seus contratos canônicos.
-- [ ] `S-06` Classificar cada item por estado, valor potencial, riscos, dependências e disposição recomendada.
+- [ ] `S-06` Classificar cada item por `origins[]`, época, transversalidade derivada, presença observada no LeadsHug, força da evidência, valor, risco, dependências e disposição recomendada.
 - [ ] `S-07` Registrar lições negativas e exclusões explícitas para evitar que antipadrões legados sejam tratados como oportunidades.
-- [ ] `S-08` Validar cobertura por amostragem bidirecional e publicar um único artefato de análise.
+- [ ] `S-08` Manter um ledger completo da população analisada, validar por amostragem bidirecional determinística/estratificada e publicar um único artefato de análise.
 
 ## Out of Scope
 
@@ -98,6 +98,20 @@ Este trabalho é um estudo de capacidades e comportamentos. O Central-Whatsapp p
 | Central hub | `.../Central-Whatsapp/hub-whatsapp` | `51bc16e544c7625a71c3012d8adef656c6392c37` | `read_only_snapshot` |
 | LeadsHug legado | `.../Backup LeadsHug/LeadsHug` | `994e1e8ccb2ae00899c13e3e7bb103dfa7bf46c2` | `read_only_historical_snapshot` |
 
+### Snapshot Manifest Contract
+
+O catálogo deve reproduzir esta matriz com paths absolutos redigidos para identidade lógica, sem depender do branch ou working tree corrente.
+
+| Identity | Base SHA | Head SHA | Head tree | Allowed pathspec / role |
+| --- | --- | --- | --- | --- |
+| `leadshug-api` | `n/a` | `5db3fbe2043428749895fc3ff6441e9457467dd0` | `4386ac3c732702c9d869f8a9482ccd99750e6ef8` | snapshot completo; alvo de comparação |
+| `leadshug-web` | `n/a` | `6c99c27dafdce8ed9b461d17aaaaa491b8ae16e9` | `8b83239b57e31ec34bfbf911d35af035866e3ff0` | snapshot completo; alvo de comparação |
+| `central-official` | `6517f197c97d0b5bcad886d26eb0d28a813b47ca` | `337f3e4839cef8ca400de87b3de088a79d512944` | `1ee054a4630b0448b4432429e8b68b30f6e87ed5` | snapshot Git por SHA; origem oficial |
+| `central-hub` | `94ce80aa96d2c2ee004abc4d7ddf2c99a331def2` | `51bc16e544c7625a71c3012d8adef656c6392c37` | `e8823e402d1110d3fec0f6d2923490536f97254a` | snapshot Git por SHA com `secrets/**` excluído; origem hub |
+| `legacy-hub-overlay` | `beb655cd3109fc3a537fca38c2b49f8c64853e7b` | `994e1e8ccb2ae00899c13e3e7bb103dfa7bf46c2` | `ff142200b038ae642f24c467b8f084cbc78e6229` | somente `hub-whatsapp/**`, exceto `secrets/**`; origem overlay legado |
+
+Evidência de fonte usa somente `repo@sha:path:symbol-or-commit`; código/payload não é copiado. Inspeção usa objetos Git congelados (`git show`, `git grep <sha>`, `git diff <base>..<head> -- <allowlisted-pathspec>`), nunca confiança implícita no working tree.
+
 ### Expected Changed Paths
 
 | Repository | Path glob | Change types (`A|M|D|R|any`) | Reason |
@@ -131,25 +145,32 @@ Qualquer caminho não classificado deve ser analisado antes da entrega. Expansã
 - **May stay inside this TODO:** novas linhas de capacidade, evidência adicional, correção de classificação e melhorias locais no catálogo único.
 - **Must update or split the TODO:** nova entrega independente, alteração canônica, priorização, implementação ou catálogo acima de 40 capacidades substantivas que deixe de ser revisável como uma unidade.
 
+## Catalog Row Contract
+
+Cada capacidade usa uma linha normalizada com: `capability_id`, `title`, `origins[]`, `epoch`, `cross_origin`, `central_evidence[]`, `leadshug_evidence[]`, `implementation_state`, `evidence_strength`, `user_value`, `risks[]`, `dependencies[]`, `disposition_recommendation`, `canonical_rejection_ref` e `notes`. Evidência aponta para `repo@sha:path:symbol-or-commit`, sem copiar código ou payload.
+
+Cada linha também contém a matriz de aplicabilidade exigida pela policy: `tenancy`, `BU`, `conversation`, `provider_adapter`, `audit` e `channel_policy`, cada uma como `applies|not_applicable|unknown` com evidência ou justificativa. `cross_origin` é derivado de `origins[]`; não é origem autônoma.
+
 ## Definition of Done
 
-- [ ] `DOD-01` Baselines de importação, overlays e snapshots finais estão registrados com hashes verificáveis.
+- [ ] `DOD-01` O manifesto registra bases, heads, trees, pathspecs, papéis e comandos verificáveis para todos os snapshots.
 - [ ] `DOD-02` Cada capacidade tem evidência do Central e evidência/estado correspondente no LeadsHug, ou incerteza explícita.
-- [ ] `DOD-03` Cada capacidade informa trilha, época, estado atual, valor potencial, riscos, dependências e disposição recomendada.
+- [ ] `DOD-03` Cada capacidade informa `origins[]`, `epoch`, `cross_origin`, `implementation_state`, `evidence_strength`, valor, riscos, dependências e disposição recomendada sem misturar presença e desejabilidade.
 - [ ] `DOD-04` Itens posteriores à baseline estão separados dos itens que já existiam na baseline mas não foram reimplementados.
-- [ ] `DOD-05` Lições negativas, exclusões e capacidades não desejadas estão explícitas.
-- [ ] `DOD-06` Amostragem bidirecional não encontra superfícies relevantes sem catálogo ou exclusão justificada.
+- [ ] `DOD-05` Lições negativas e exclusões estão explícitas; uma rejeição como não desejada exige `canonical_rejection_ref`, caso contrário permanece recomendação.
+- [ ] `DOD-06` O ledger mapeia toda a população admitida para capacidade, duplicata ou exclusão justificada; a auditoria estratificada não encontra item relevante sem mapeamento.
+- [ ] `DOD-10` Cada capacidade avalia `tenancy`, `BU`, `conversation`, `provider_adapter`, `audit` e `channel_policy` como `applies|not_applicable|unknown`, com evidência/justificativa.
 - [ ] `DOD-07` O catálogo não contém segredos, dados pessoais, payloads sensíveis nem trechos de código copiados.
 - [ ] `DOD-08` Nenhuma recomendação é apresentada como prioridade aprovada ou autorização de implementação.
 - [ ] `DOD-09` Gates documentais e revisão final passam; feature brief/backlog refletem apenas o estado factual concluído.
 
 ## Validation Steps
 
-- [ ] `VAL-01` Revalidar snapshots e commits exatos de importação com `git rev-parse`/`git show`.
-- [ ] `VAL-02` Comparar históricos `6517f197..9368421` e `94ce80aa..51bc16e` por commits, arquivos e comportamentos.
-- [ ] `VAL-03` Comparar o overlay do hub entre a importação `beb655cd` e o snapshot legado `994e1e8` em trilha separada.
-- [ ] `VAL-04` Fazer amostragem Central → catálogo e catálogo → Central/LeadsHug em cada trilha.
-- [ ] `VAL-05` Verificar ausência de `secrets/**`, credenciais, dados pessoais e blocos de código copiados.
+- [ ] `VAL-01` Revalidar bases, heads e trees do manifesto com comandos Git por SHA e confirmar alcance dos commits de importação.
+- [ ] `VAL-02` Comparar os intervalos completos `6517f197..337f3e4` (129 não-merge) e `94ce80aa..51bc16e` (66 não-merge) somente nos pathspecs permitidos.
+- [ ] `VAL-03` Comparar o único commit do overlay que toca `hub-whatsapp/**` entre `beb655cd..994e1e8`, excluindo `secrets/**`.
+- [ ] `VAL-04` Verificar o ledger completo e auditar deterministicamente 100% de `not_found_after_protocol`, `uncertain`, rejeições canônicas, itens cross-origin e alegações sensíveis; amostrar de forma estratificada os estados positivos restantes.
+- [ ] `VAL-05` Usar comandos allowlisted sem patch/body ou metadados pessoais por padrão; não persistir outputs brutos; executar scanner de segredo no diff final e revisão explícita de PII sem alegar garantia absoluta.
 - [ ] `VAL-06` Executar validador estrutural, `git diff --check` e guards de diff, autoridade, conclusão e closeout aplicáveis.
 
 ## Completion Evidence Matrix (Required Before Delivery Claim)
@@ -157,7 +178,7 @@ Qualquer caminho não classificado deve ser analisado antes da entrega. Expansã
 | Criterion ID | Source Section | Criterion | Evidence Type | Evidence Artifact / Command | Runtime Target | Status | Notes |
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | `S-01..S-08` | Scope | Entrega integral do estudo | doc+review | catálogo + rastreabilidade | n/a | planned | detalhar por critério antes do closeout |
-| `DOD-01..DOD-09` | Definition of Done | Critérios do catálogo | doc+review+guard | catálogo, amostras, guards e revisões | n/a | planned | detalhar por critério antes do closeout |
+| `DOD-01..DOD-10` | Definition of Done | Critérios do catálogo | doc+review+guard | catálogo, ledger, auditoria, guards e revisões | n/a | planned | detalhar por critério antes do closeout |
 | `VAL-01..VAL-06` | Validation Steps | Validações reproduzíveis | command+manual review | comandos e relatório | local/read-only | planned | registrar resultados exatos |
 
 ## External Dependency Readiness (Required When External Systems Matter)
@@ -183,7 +204,7 @@ Qualquer caminho não classificado deve ser analisado antes da entrega. Expansã
 
 - **Level (`small|medium|big`):** `medium`
 - **Checkpoint policy:** um checkpoint consolidado antes de `APROVADO` e revisão final após o catálogo.
-- **Why this level:** vários repositórios e três trilhas de evidência, porém uma entrega documental, sem runtime nem implementação.
+- **Why this level:** vários repositórios e três origens de evidência, porém uma entrega documental, sem runtime nem implementação.
 
 ## Canonical Module Anchors (Required Before APROVADO)
 
@@ -196,44 +217,45 @@ Qualquer caminho não classificado deve ser analisado antes da entrega. Expansã
 
 ## Decision Pending (Resolve Before Freeze)
 
-- Nenhuma decisão material pendente após a validação conjunta de `D-01..D-06` em 2026-09-25.
+- Nenhuma decisão material pendente após `REVALIDO D-01..D-06 APÓS IC-01..IC-06` em 2026-09-25.
 
 ## Decisions (Resolved Before Freeze)
 
-- [x] `D-01` Usar baselines por repositório: oficial `6517f197c97d0b5bcad886d26eb0d28a813b47ca`; hub `94ce80aa96d2c2ee004abc4d7ddf2c99a331def2`; não uma data única. O catálogo cobre diferenças entre os estados atuais e usa essas baselines para separar capacidade preexistente não reimplementada de evolução posterior.
-- [x] `D-02` Tratar o overlay local do hub no LeadsHug legado até `994e1e8ccb2ae00899c13e3e7bb103dfa7bf46c2` como trilha separada, não evolução do Central.
-- [x] `D-03` Comparar capacidades/comportamentos, não arquivos: cada item será reescrito como problema ou oportunidade do LeadsHug.
-- [x] `D-04` Usar os estados `Entregue`, `Parcial`, `Ausente`, `Não desejado` e `Incerto`, com evidência obrigatória para estados afirmados.
-- [x] `D-05` Manter oficial, não oficial e transversal no mesmo catálogo, com limite de 40 capacidades; ultrapassar pausa a execução para propor divisão.
-- [x] `D-06` Tratar disposições (`descartar`, `estudar`, `candidata ao ST-04`) como recomendação fundamentada, nunca prioridade ou autorização de implementação.
-- **Human validation:** usuário, `VALIDO D-01..D-06`, conversa de 2026-09-25.
+- [x] `D-01` Usar o manifesto por repositório com base/head/tree/pathspec e comparar o intervalo oficial completo até `337f3e4839cef8ca400de87b3de088a79d512944`; categorizar gaps preexistentes e evolução posterior.
+- [x] `D-02` Preservar `official`, `hub` e `legacy_overlay` em `origins[]`; `cross_origin` é derivado e nunca substitui a proveniência.
+- [x] `D-03` Comparar capacidades/comportamentos, não arquivos, com evidência `repo@sha:path:symbol-or-commit` e avaliação dos seis limites da policy por capacidade.
+- [x] `D-04` Separar `implementation_state` (`observed_present|partial|not_found_after_protocol|uncertain`) de `evidence_strength` e `disposition_recommendation`; rejeição do produto exige `canonical_rejection_ref`. Presença observada não afirma saúde produtiva.
+- [x] `D-05` Manter um ledger completo da população e um catálogo único até 40 capacidades; acima disso, pausar para propor divisão. Auditar 100% dos estados/alegações de maior risco e amostrar deterministicamente os positivos.
+- [x] `D-06` Tratar disposições (`descartar`, `estudar`, `candidata ao ST-04`) apenas como recomendação fundamentada; prioridade e canonização pertencem ao `ST-04` ou a TODO futuro aprovado.
+- **Human revalidation:** usuário, `REVALIDO D-01..D-06 APÓS IC-01..IC-06`, conversa de 2026-09-25.
 
 ### Decision Validation Review (Prepared Pre-Freeze)
 
 | Decision | Technical validation | Evidence | Outcome |
 | --- | --- | --- | --- |
-| `D-01` | Os commits-base são exatos e permanecem alcançáveis nos repositórios atuais. | O tree `76e80538...` de `api-oficial@6517f197` é idêntico ao subtree importado por `LeadsHug legado@4ac8ddee`; o tree `f926eca3...` de `hub-whatsapp@94ce80aa` é idêntico ao subtree importado por `beb655cd`. | technically-valid; pending-human-validation |
-| `D-02` | O overlay incorporado é uma linha histórica distinta. | Entre `beb655cd` e `994e1e8`, apenas `994e1e8` toca `hub-whatsapp/`; ele não é commit do Central independente. | technically-valid; pending-human-validation |
-| `D-03` | Comparação por arquivo produziria ruído e falsas equivalências. | Desde as baselines há 455 commits no oficial e 240 no hub, distribuídos entre backend, frontend, migrations, docs e correções; vários commits representam a mesma capacidade. | technically-valid; pending-human-validation |
-| `D-04` | A taxonomia cobre presença integral, parcial, ausência, rejeição intencional e falta de evidência. | Os cinco estados distinguem fato observado, decisão negativa e incerteza sem converter inferência em verdade. | technically-valid; pending-human-validation |
-| `D-05` | Um catálogo único preserva leitura transversal; o limite evita uma entrega irrevisável. | O feature brief admite divisão apenas se o inventário exceder um TODO manejável; 40 capacidades é o stop condition explícito, não meta de preenchimento. | technically-valid; pending-human-validation |
-| `D-06` | Recomendações não podem adquirir autoridade de roadmap neste estudo. | O backlog é dono da disposição e `ST-04` é a story de síntese/priorização; o policy boundary proíbe adoção automática. | technically-valid; pending-human-validation |
+| `D-01` | Os commits-base são exatos; manifesto e intervalo oficial foram corrigidos até o head atual congelado. | Trees importados `76e80538...` e `f926eca3...`; head oficial `337f3e4`, tree `1ee054a4...`. | critique-integrated; pending-human-revalidation |
+| `D-02` | O overlay incorporado é uma origem histórica distinta e transversalidade não apaga origem. | Entre `beb655cd` e `994e1e8`, apenas `994e1e8` toca `hub-whatsapp/`; `cross_origin` passa a ser derivado. | critique-integrated; pending-human-revalidation |
+| `D-03` | Comparação por capacidade continua correta, agora com schema/proveniência e policy applicability explícitos. | 129 commits não-merge no oficial e 66 no hub; policy exige seis limites por inspiração. | critique-integrated; pending-human-revalidation |
+| `D-04` | Presença técnica, força da evidência e desejabilidade foram separadas. | Crítica `IC-03`; evidência estática não comprova saúde operacional e rejeição exige autoridade canônica. | critique-integrated; pending-human-revalidation |
+| `D-05` | Ledger completo + auditoria estratificada substituem amostragem aberta. | Crítica `IC-02`; limite 40 permanece stop condition, nunca truncamento. | critique-integrated; pending-human-revalidation |
+| `D-06` | Recomendações continuam sem autoridade de roadmap. | O backlog é dono da disposição e `ST-04` da síntese/priorização. | critique-integrated; pending-human-revalidation |
 
-**Material-decision sweep:** nenhuma decisão adicional é necessária para congelar o contrato. Novas escolhas de produto descobertas durante o estudo serão evidência para `ST-04`, não expansão silenciosa deste TODO.
+**Material-decision sweep:** `IC-01..IC-06` foram absorvidos nos mesmos seis IDs; nenhum `D-07` é necessário. A versão revisada requer revalidação antes de novo freeze.
 
 ## Module Decision Baseline Snapshot (Required Before APROVADO)
 
 | Module Decision Ref | Current Module Decision | Planned Handling | Evidence |
 | --- | --- | --- | --- |
-| `integrations-and-channels#provider-boundary` | provedores ficam atrás de adapters e payloads não vazam ao core | Preserve | `modules/integrations-and-channels.md` |
-| `inbox-and-conversations#conversation-identity` | conversa é única por BU/contato e independente do transporte | Preserve | `modules/inbox-and-conversations.md` |
-| `audit-and-history#append-oriented-history` | histórico auditável e tenant/BU-scoped | Preserve | `modules/audit-and-history.md` |
+| `modules/integrations-and-channels.md#Invariants` | provider como adapter; segredo fora de logs/docs/fixtures/client; falha determinística | Preserve | três invariantes explícitos do módulo |
+| `modules/inbox-and-conversations.md#Invariants` | conversa única BU/contato; webhook idempotente; janela/capacidade do canal | Preserve | três invariantes explícitos do módulo |
+| `modules/audit-and-history.md#Invariants` | histórico append-oriented; tenant/BU scope; leitura independente de escrita | Preserve | três invariantes explícitos do módulo |
 
 ## Decision Baseline (Frozen Before Implementation)
 
-- [x] `D-01..D-06` congeladas exatamente como registradas em `Decisions`.
-- **Freeze scope:** decisões, snapshots, Scope/Out of Scope, Definition of Done, Validation Steps e Diff Expectation Contract deste TODO.
-- **Renewal trigger:** qualquer mudança material nesses campos requer nova validação do usuário e novo `APROVADO`.
+- [x] `D-01..D-06` revisadas e revalidadas exatamente como registradas em `Decisions`.
+- **Historical invalidated baseline:** `cff19546`; preservado como proveniência da primeira crítica.
+- **Current freeze scope:** decisões, manifesto/schema, Scope/Out of Scope, Definition of Done, Validation Steps, Test Strategy e Diff Expectation Contract.
+- **Renewal trigger:** qualquer mudança material nesses campos requer nova validação e novo `APROVADO`.
 
 ## Architecture Change Governance
 
@@ -246,10 +268,16 @@ Qualquer caminho não classificado deve ser analisado antes da entrega. Expansã
 
 ## Gate: Review Baseline Freeze
 
-- **Status:** `passed`; baseline decisória congelada, commitada e publicada antes dos reviews/guards formais.
-- **Freeze target:** `D-01..D-06`, snapshots, escopo e diff contract.
-- **Baseline branch/commit/push:** `foundation_documentation:main@cff19546`, publicado em `origin/main` em 2026-09-25.
-- **Evidence:** `git_write_authority_guard.py` retornou `Overall outcome: go` para commit e push; `git.exe push origin main` publicou `6344bf64..cff19546`.
+- **Gate decision:** `required`.
+- **Status:** `prepared-pre-freeze`; contrato revisado revalidado, aguardando commit/push.
+- **Gate status:** `not_run`.
+- **Freeze target:** decisões, manifesto/schema, escopo, DoD, validação, estratégia de auditoria e diff contract.
+- **Baseline branch:** `foundation_documentation:main`.
+- **Baseline commit:** `pending-freeze`.
+- **Baseline push reference:** `origin/main`.
+- **Evidence / reference:** `pending-freeze`.
+- **Historical invalidation evidence:** baseline `cff19546`, crítica `IC-01..IC-06`, verdict `findings`.
+- **Waiver authority / reference (required if waived):** `n/a`.
 
 ## Gate: Review Scope Drift
 
@@ -258,7 +286,7 @@ Qualquer caminho não classificado deve ser analisado antes da entrega. Expansã
 
 ## Questions To Close
 
-- [x] Validar conjuntamente `D-01..D-06`.
+- [x] Revalidar conjuntamente `D-01..D-06` revisadas após `IC-01..IC-06`.
 - [ ] Após os gates de planejamento, registrar `APROVADO` para executar o catálogo.
 
 ## Assumptions Preview (Required Before Plan Review)
@@ -279,7 +307,7 @@ Qualquer caminho não classificado deve ser analisado antes da entrega. Expansã
 ### Ordered Steps
 
 1. Revalidar hashes, proveniência e limpeza das árvores de referência.
-2. Gerar inventários por histórico e superfícies funcionais nas três trilhas.
+2. Gerar inventários por histórico e superfícies funcionais nas três origens.
 3. Normalizar capacidades, deduplicar e separar evolução pós-baseline de lacunas preexistentes.
 4. Verificar cada candidato no LeadsHug e confrontar módulos/contratos canônicos.
 5. Preencher valor, risco, dependências, disposição e exclusões sem definir prioridade.
@@ -289,9 +317,12 @@ Qualquer caminho não classificado deve ser analisado antes da entrega. Expansã
 ### Test Strategy
 
 - Validação documental e histórica somente leitura.
-- Amostragem por trilha: cinco superfícies ou todas, quando houver menos de cinco.
-- Amostra catálogo → fontes: ao menos 25% das linhas, mínimo de cinco, incluindo todas `Não desejado` ou `Incerto`.
-- Amostra fontes → catálogo: cada item selecionado resulta em capacidade catalogada ou exclusão explícita.
+- População do ledger: todos os 195 commits não-merge pós-baseline admitidos (129 oficial, 66 hub), o único commit do overlay que toca `hub-whatsapp/**` e as superfícies funcionais atuais identificadas nos snapshots allowlisted.
+- Cada unidade da população recebe exatamente um destino: `capability_id`, `duplicate_of`, `supporting_evidence_for` ou `excluded` com justificativa.
+- Auditoria de 100% dos itens `not_found_after_protocol`, `uncertain`, com rejeição canônica, cross-origin ou alegação sensível.
+- Nos estados positivos restantes, seleção determinística por estratos `origin × epoch × implementation_state`: ordenar por `capability_id` e revisar todos quando o estrato tiver até cinco itens; acima disso, mínimo de cinco mais os IDs cujo SHA-256 textual tenha primeiro byte divisível por quatro.
+- Amostra fonte → catálogo e catálogo → fontes deve falhar se encontrar unidade relevante sem destino ou evidência que não resolve no snapshot.
+- O limite de 40 capacidades aciona proposta de divisão; nunca interrompe ou trunca o ledger.
 
 ### Flow Evidence Planning Matrix
 
@@ -312,14 +343,42 @@ Qualquer caminho não classificado deve ser analisado antes da entrega. Expansã
 
 ## Plan Review Gate
 
-- **Status:** `pending after decision validation`
-- **Required review:** cobertura, falsos positivos/negativos, separação histórica e suficiência da amostragem.
+- **Status:** `critique findings integrated; reconvergence pending human revalidation and new freeze`.
+- **Review baseline:** `foundation_documentation:main@cff19546` com evidência de freeze em `d2837312`.
+- **Review scope:** cobertura, falsos positivos/negativos, separação histórica, segurança e suficiência da amostragem.
+- **Outcome:** revisão primária encontrou dois riscos operacionais; crítica independente encontrou quatro altos e dois médios. Todos foram integrados, alterando materialmente o contrato.
+
+### Issue Cards
+
+| ID | Severity | Finding | Resolution | Status |
+| --- | --- | --- | --- | --- |
+| `PR-01` | medium | O checkout Windows aparece totalmente modificado quando lido pelo Git do WSL devido a LF/CRLF, criando risco de diff falso ou pull inseguro. | Usar `git.exe` para estado/diff dos dois Central e manter hashes como autoridade reproduzível. | Integrated |
+| `PR-02` | medium | Enumeração ampla do hub poderia atravessar `secrets/**`, mesmo sem intenção de publicar valores. | Excluir o path da enumeração/leitura e validar o artefato final por ausência de segredo/PII. | Integrated |
+| `IC-01` | high | Intervalo oficial terminava no snapshot antigo e working tree podia contaminar evidência. | Manifesto base/head/tree/pathspec e intervalo corrigido até `337f3e4`; evidência por objeto Git congelado. | Integrated |
+| `IC-02` | high | Amostragem aberta não sustentava cobertura. | Ledger completo da população, auditoria determinística/estratificada e 100% dos estados de maior risco. | Integrated |
+| `IC-03` | high | Origem, transversalidade, presença e desejabilidade estavam misturadas. | `Catalog Row Contract` separa `origins[]`, época, estado, força, recomendação e rejeição canônica. | Integrated |
+| `IC-04` | high | Faltavam os seis limites da policy e invariantes completos dos módulos. | Matriz por capacidade e baseline modular corrigida para todos os invariantes. | Integrated |
+| `IC-05` | medium | Proteção de segredo/PII não era fail-closed nos intermediários. | Comandos allowlisted, sem patch/body/metadados pessoais, sem output bruto persistido e revisão final de segredo/PII. | Integrated |
+| `IC-06` | medium | Estado do TODO contradizia validação/freeze/crítica. | Máquina de estado consolidada como `review`, baseline anterior invalidada e revalidação explicitamente pendente. | Integrated |
+
+### Failure Modes & Edge Cases
+
+- Commits distintos podem representar a mesma capacidade: deduplicar sem perder evidência de evolução.
+- Uma capacidade pode atravessar oficial e hub: registrar como transversal e manter evidência de cada origem.
+- Ausência não comprovada permanece `Incerto`, nunca `Ausente` por inferência.
+- Se o catálogo ultrapassar 40 capacidades substantivas, pausar e propor divisão antes de produzir entregas independentes.
+- Branches podem avançar depois do freeze; somente os hashes registrados pertencem ao estudo aprovado.
+
+### Residual Unknowns / Risks
+
+- A relevância de uma superfície pode exigir julgamento; mitigar com amostragem bidirecional e exclusões justificadas.
+- Alguns commits de correção revelam lições operacionais, não capacidades; classificá-los como evidência de risco/antipadrão quando aplicável.
 
 ## Audit Trigger Matrix
 
 - **Canonical method:** `wf-docker-audit-escalation-method`
 - **Guard command:** `python3 delphi-ai/tools/audit_escalation_guard.py --todo foundation_documentation/todos/active/features/TODO-leadshug-central-whatsapp-capability-study.md`
-- **Latest TEACH evidence / artifact:** `pending audit-escalation run after review baseline cff19546`
+- **Latest TEACH evidence / artifact:** `foundation_documentation/artifacts/tmp/leadshug-central-whatsapp-capability-study-audit-escalation.json`; fingerprint `ef66891d75b2`; `Overall outcome: go`.
 
 | Trigger | Value | Notes |
 | --- | --- | --- |
@@ -332,34 +391,50 @@ Qualquer caminho não classificado deve ser analisado antes da entrega. Expansã
 | `touches_tests` | `no` | nenhuma suíte de produto será alterada |
 | `critical_user_journey` | `no` | estudo pré-código |
 | `release_or_promotion_critical` | `no` | não participa de release do produto |
-| `high_severity_plan_review_issue` | `no` | nenhum issue card alto aberto antes da revisão |
+| `high_severity_plan_review_issue` | `yes` | `IC-01..IC-04` foram altos e estão integrados; o audit floor será recalculado após novo freeze |
 | `explicit_three_lane_request` | `no` | nenhuma solicitação de auditoria em três lanes |
 
 ## Independent No-Context Critique Gate
 
-- **Critique decision:** `pending audit-escalation guard`
-- **Why this decision:** complexidade média e blast radius cross-module.
+- **Critique decision:** `required`.
+- **Why this decision:** baseline obrigatória e depth expandido por complexidade média com blast radius cross-module (`CRITIQUE-BASELINE-ALWAYS`, `CRITIQUE-EXPANDED-RISK-SIGNALS`).
 - **Impact signals in scope:** `cross-module blast radius`.
 - **Package mode:** `bounded-file-set`.
 - **Package minimum contents:** TODO congelado, feature brief, policy de legado e três módulos âncora.
 - **Critique isolation mode:** `fresh internal no-context reviewer`.
-- **Internal reviewer mandate:** `pending audit-escalation guard`.
+- **Internal reviewer mandate:** `required; fresh stateless no-context internal reviewer, not the implementing agent`.
 - **Canonical multi-lane audit protocol:** `n/a`.
 - **Audit session / round evidence:** `n/a`.
 - **Critique lenses:** `correctness|performance|elegance|structural-soundness|risk`.
-- **Critique status:** `not_run`.
-- **Findings summary:** `none yet`.
-- **Evidence / reference:** `pending review baseline freeze`.
+- **Critique status:** `not_run`; primeira crítica integrada, nova crítica aguardando baseline revisada.
+- **Findings summary:** `IC-01..IC-04 high`, `IC-05..IC-06 medium`; todos integrados no contrato revisado.
+- **Evidence / reference:** revisor interno stateless `/root/st02_independent_critique`, baseline `cff19546`, verdict `findings`, 2026-09-25.
 - **Waiver authority / reference:** `n/a`.
+
+| Finding ID | Resolution | Usefulness | Formalizable | Candidate Rule Level | Candidate Rule ID | Rationale / Evidence |
+| --- | --- | --- | --- | --- | --- | --- |
+| `IC-01` | Integrated | useful | no | none | n/a | manifesto e intervalo corrigidos |
+| `IC-02` | Integrated | useful | no | none | n/a | ledger e auditoria determinística |
+| `IC-03` | Integrated | useful | no | none | n/a | schema normalizado |
+| `IC-04` | Integrated | useful | no | none | n/a | policy e invariantes completos |
+| `IC-05` | Integrated | useful | no | none | n/a | procedimento fail-closed de leitura/publicação |
+| `IC-06` | Integrated | useful | no | none | n/a | estado/freeze reconciliados |
 
 ## Gate: Assumption Code Coherence
 
-- **Status:** `pending after D-01..D-06`
-- **Required check:** confirmar que termos e estados correspondem às superfícies reais, sem transformar nomes de arquivo em capacidades.
+- **Gate decision:** `required`.
+- **Why this decision:** o estudo depende de snapshots de código para distinguir presença, parcialidade e ausência após protocolo.
+- **Trigger stage:** `after critique convergence and before APROVADO`.
+- **Guard scope:** `snapshot manifest, implementation-state protocol and cited source paths`.
+- **Guard command:** `python3 delphi-ai/tools/assumption_code_coherence_guard.py --todo foundation_documentation/todos/active/features/TODO-leadshug-central-whatsapp-capability-study.md`.
+- **Gate status:** `not_run`; aguarda novo freeze e nova crítica.
+- **Findings summary:** `none yet on revised baseline`.
+- **Evidence / reference:** `pending revised review baseline`.
+- **Waiver authority / reference:** `n/a`.
 
 ## Approval
 
-- **Decision validation:** `pending`
+- **Decision validation:** `REVALIDO D-01..D-06 APÓS IC-01..IC-06`, usuário, 2026-09-25.
 - **Execution approval:** `pending`
 - **Required phrase after plan gates:** `APROVADO`
 
@@ -388,23 +463,28 @@ Qualquer caminho não classificado deve ser analisado antes da entrega. Expansã
 
 ## Security Risk Assessment (Mandatory Before Delivery)
 
+- **Audit decision:** `not_needed` pelo audit floor (`SEC-NOT-TRIGGERED`); risco documental continua controlado localmente.
 - **Risk:** baixo se exclusão de segredos/PII e leitura somente forem mantidas.
-- **Required evidence:** diff sem valores sensíveis, trechos copiados ou acesso a `hub-whatsapp/secrets/**`.
+- **Required evidence:** nenhuma leitura de `hub-whatsapp/secrets/**`; nenhum output bruto persistido; diff sem valor sensível, PII, payload ou trecho copiado; scanner de segredo como apoio, não garantia absoluta.
 
 ## Performance & Concurrency Risk Assessment (Mandatory Before Delivery)
 
+- **Audit decision:** `not_needed` pelo audit floor (`PCV-NOT-TRIGGERED`).
 - **Risk:** `n/a` para runtime; análise local deve permanecer somente leitura e bounded.
 
 ## Verification Debt Assessment (Required Before `Completed`)
 
+- **Audit decision:** `required` antes de `Completed` (`VDA-MEDIUM-BIG-OR-RELEASE`).
 - Pendente. Lacunas de amostragem e classificações `Incerto` serão dívida explícita, nunca ocultada.
 
 ## Independent Test Quality Audit Gate
 
-- **Applicability:** `not_needed`; não há testes de produto. A amostragem será avaliada na crítica e revisão final.
+- **Audit decision:** `recommended`, focused, antes de `Completed` (`TQA-MEDIUM-OR-BIG-DEFAULT`).
+- **Applicability:** focar a qualidade da estratégia de amostragem; não há testes de produto.
 
 ## Independent No-Context Final Review Gate
 
+- **Audit decision:** `required`, expanded, antes de `Completed` (`FINAL-BASELINE-ALWAYS`, `FINAL-EXPANDED-RISK-SIGNALS`).
 - **Status:** `pending delivery`
 - **Required focus:** rastreabilidade, linguagem não prescritiva, cobertura, privacidade e ausência de implementação.
 
@@ -423,9 +503,11 @@ Qualquer caminho não classificado deve ser analisado antes da entrega. Expansã
 
 ## Commands (Run Locally)
 
-- `git rev-parse` e `git show` nos snapshots congelados.
-- `git log --name-status`/`git diff --stat` nos intervalos históricos.
-- `rg` somente em superfícies não sensíveis.
+- `git rev-parse '<sha>^{tree}'` e `git cat-file -e '<sha>^{commit}'` nos snapshots congelados.
+- `git log --no-merges --format='%H' <base>..<head> -- <allowlisted-pathspec>` sem body, autor ou e-mail.
+- `git diff --name-only <base>..<head> -- <allowlisted-pathspec> ':(exclude)secrets/**'`; patches não são persistidos.
+- `git grep -n <pattern> <sha> -- <allowlisted-pathspec> ':(exclude)secrets/**'` somente para hipóteses específicas; conclusões que exigiriam superfície sensível ficam `uncertain`.
+- Nos dois Central em `/mnt/c`, usar `git.exe` para status/objetos a fim de evitar falso diff LF/CRLF; a evidência continua ancorada em SHA/tree.
 - `python3 foundation_documentation/deterministic/validate_foundation_lifecycle.py --root foundation_documentation`.
 - `git -C foundation_documentation diff --check`.
 
