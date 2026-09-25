@@ -651,6 +651,14 @@ Recarregado após `APROVADO` em 2026-09-25; execução permanece documental, sin
 - **Required focus:** rastreabilidade, linguagem não prescritiva, cobertura, privacidade e ausência de implementação.
 - **Integration summary:** comandos/pathspecs completos; 162 células justificadas; 97 refs normalizadas; 21 exclusões ambíguas tornadas específicas; linguagem/VAL-05 reconciliados. Revisão bounded do delta permanece obrigatória.
 
+| Finding ID | Resolution (`Integrated|Challenged|Deferred`) | Usefulness (`useful|noise|mixed|unknown`) | Formalizable (`yes|partial|no|unknown`) | Candidate Rule Level (`paced|project|none|unknown`) | Candidate Rule ID | Rationale / Evidence |
+| --- | --- | --- | --- | --- | --- | --- |
+| `ST02-FR-01` | Integrated | useful | partial | project | `D-01,DOD-01` | allowlists literais e comandos exatos para commit/tree/ancestralidade/intervalos em catálogo §§3–3.1 |
+| `ST02-FR-02` | Integrated | useful | yes | project | `DOD-10` | 162/162 células agora contêm enum e justificativa/evidência |
+| `ST02-FR-03` | Integrated | useful | partial | project | `Source Ledger Contract` | 97 refs literais normalizadas e 27 exclusões com rationale específico; checker 0 issues |
+| `ST02-FR-04` | Integrated | useful | no | none | `D-04,D-06` | resumo e brief separam presença, saúde, evidência, disposição e prioridade |
+| `ST02-FR-05` | Integrated | useful | yes | project | `VAL-05` | scan ficou in-progress durante integração e foi fechado somente após rerun final |
+
 ## Independent Cutover Integrity Audit Gate
 
 - **Cutover audit decision:** `not_needed`
