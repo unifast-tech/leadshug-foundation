@@ -34,8 +34,8 @@ O `whatsflow_v2` contém soluções de conexão, inbox, departamentos, atendente
 
 - **Current delivery stage:** `Pending`
 - **Qualifiers:** `none`
-- **Next exact step:** publicar o próximo pacote manual autocontido (SHA ainda inexistente), repetir evidência/quality review e executar P1/P2, rule-spirit e final review; o pacote R2 foi temporário e insuficiente.
-- **Current checkout identity:** `foundation_documentation:main@bc4032ef7af8a19f5397543ea6ab4a49013faa8c` é o checkpoint R2 revisado; esta nova onda está somente no working tree e seu SHA só existirá após próximo commit autorizado.
+- **Next exact step:** publicar o próximo pacote manual autocontido (SHA ainda inexistente), repetir evidência/quality review e executar P1/P2, rule-spirit e final review; o pacote R3 `040fa4f7` foi revisado, mas não fecha esta nova onda.
+- **Current checkout identity:** `foundation_documentation:main@c65a985476d09228a9c1466aad1338b722459abc` é o checkpoint revisado; pacote R3 `040fa4f7`; esta nova onda está somente no working tree e seu SHA só existirá após próximo commit autorizado.
 
 ## Active Work State (Required While TODO Remains In `active/`)
 
@@ -45,13 +45,13 @@ O `whatsflow_v2` contém soluções de conexão, inbox, departamentos, atendente
 
 ## Scope
 
-- [x] Congelar um manifesto reprodutível do `whatsflow_v2` e registrar branch, commit, tree e superfícies admitidas.
-- [x] Preencher o catálogo conceitual `C-01..C-12` e sua matriz única de cobertura, sem criar uma taxonomia canônica do produto.
-- [x] Produzir diagrama conceitual, cardinalidades, glossário comparativo, invariantes, estados e transições.
-- [x] Confrontar cada conceito com Mantenedora, Setor, BU, Canal, Conversa, Usuário e auditoria do LeadsHug.
-- [x] Validar cenários de entrada, múltiplas BUs, fila livre, atribuição manual/automática, capacidade, transferência, SLA, automação/handoff e isolamento entre Mantenedoras.
-- [x] Registrar padrões aproveitáveis, limitações, inconsistências e anti-padrões do legado.
-- [x] Formular recomendações e decisões futuras sem atribuir prioridade ou autoridade de implementação.
+- [x] `SCOPE-01` Congelar um manifesto reprodutível do `whatsflow_v2` e registrar branch, commit, tree e superfícies admitidas.
+- [x] `SCOPE-02` Preencher o catálogo conceitual `C-01..C-12` e sua matriz única de cobertura, sem criar uma taxonomia canônica do produto.
+- [x] `SCOPE-03` Produzir diagrama conceitual, cardinalidades, glossário comparativo, invariantes, estados e transições.
+- [x] `SCOPE-04` Confrontar cada conceito com Mantenedora, Setor, BU, Canal, Conversa, Usuário e auditoria do LeadsHug.
+- [x] `SCOPE-05` Validar cenários de entrada, múltiplas BUs, fila livre, atribuição manual/automática, capacidade, transferência, SLA, automação/handoff e isolamento entre Mantenedoras.
+- [x] `SCOPE-06` Registrar padrões aproveitáveis, limitações, inconsistências e anti-padrões do legado.
+- [x] `SCOPE-07` Formular recomendações e decisões futuras sem atribuir prioridade ou autoridade de implementação.
 
 ## Out of Scope
 
@@ -73,7 +73,7 @@ O `whatsflow_v2` contém soluções de conexão, inbox, departamentos, atendente
 
 | Scope Item | Local Branch/Commit | PR to lane threshold | PR to `stage` | PR to `main` | Current Status |
 | --- | --- | --- | --- | --- | --- |
-| TODO e estudo ST-03 | `foundation_documentation:main@bc4032ef` (checkpoint R2 revisado) + nova corrective working tree | `n/a` | `n/a` | `direct publication pending` | pacote R2 temporário/insuficiente; próximo pacote manual autocontido ainda sem SHA |
+| TODO e estudo ST-03 | `foundation_documentation:main@c65a9854` (checkpoint revisado) + nova corrective working tree | `n/a` | `n/a` | `direct publication pending` | pacote R3 `040fa4f7` revisado; próximo pacote manual autocontido ainda sem SHA |
 
 ## Diff Expectation Contract
 
@@ -86,7 +86,7 @@ O `whatsflow_v2` contém soluções de conexão, inbox, departamentos, atendente
 
 | Repository | Path | Baseline ref | Comparison mode |
 | --- | --- | --- | --- |
-| Foundation | `foundation_documentation` | `main@bc4032ef7af8a19f5397543ea6ab4a49013faa8c` | `working_tree` |
+| Foundation | `foundation_documentation` | `main@c65a985476d09228a9c1466aad1338b722459abc` | `working_tree` |
 | whatsflow_v2 | `/mnt/c/Unifast/LeadsHug/Inspirações LeadsHug/whatsflow_v2` | `3a36436c83ebefc6839380eb8fac1a6f13f4700a` | `working_tree` |
 
 ### Snapshot Manifest Contract
@@ -128,8 +128,8 @@ O primeiro guard retornou `no-go` somente por defeitos estruturais do contrato: 
 - Cada observação material aponta para `whatsflow_v2@sha:path:symbol-or-section` e recebe força `direct|corroborated|inferred|conflicting`.
 - Presença estática prova somente que um artefato existe. Uma alegação `observed_operational_path` exige call path executável e atual mais teste ou superfície corroborante; schema efetivo é obrigatório apenas para comportamento apoiado em persistência e deve ser marcado explicitamente `not_applicable` nos demais casos.
 - Cada evidência recebe natureza `effective_runtime|effective_schema|test|documentation|historical|superseded|orphaned|declarative_only|conflicting`; itens sem alcance ou supersessão resolvidos não sustentam comportamento operacional.
-- Cada conceito recebe estado `observed_operational_path|partial|documented_only|conflicting|unknown|not_found_after_protocol`.
-- Alegação de ausência exige busca em código, schema/migrações e documentação admitidos; sem isso, permanece `not_found_after_protocol` ou `unknown`, conforme a evidência.
+- Cada conceito recebe estado `observed_operational_path|partial|documented_only|conflicting|unknown`.
+- Busca limitada só inventaria superfícies; não prova ausência. Lacunas permanecem `unknown after bounded inspection`.
 - O estudo separa `legacy_observation`, `leadshug_constraint`, `recommendation` e `future_decision`; recomendação nunca equivale a decisão.
 - Não serão persistidos dumps, patches, payloads ou inventários brutos do legado.
 
@@ -210,6 +210,13 @@ As lanes runtime `pcv-1` continuam `not_needed`; os itens abaixo são requisitos
 
 | Criterion ID | Source Section | Criterion | Evidence Type | Evidence Artifact / Command | Runtime Target | Status | Notes |
 | --- | --- | --- | --- | --- | --- | --- | --- |
+| `SCOPE-01` | Scope | `SCOPE-01` Congelar um manifesto reprodutível do `whatsflow_v2` e registrar branch, commit, tree e superfícies admitidas. | doc+snapshot review | manifesto/E registry | read-only | pending | rerun pendente |
+| `SCOPE-02` | Scope | `SCOPE-02` Preencher o catálogo conceitual `C-01..C-12` e sua matriz única de cobertura, sem criar uma taxonomia canônica do produto. | doc+integrity review | matriz única | n/a | pending | rerun pendente |
+| `SCOPE-03` | Scope | `SCOPE-03` Produzir diagrama conceitual, cardinalidades, glossário comparativo, invariantes, estados e transições. | doc+review | modelo conceitual | n/a | pending | rerun pendente |
+| `SCOPE-04` | Scope | `SCOPE-04` Confrontar cada conceito com Mantenedora, Setor, BU, Canal, Conversa, Usuário e auditoria do LeadsHug. | doc+review | C-01..C-12/invariantes | n/a | pending | rerun pendente |
+| `SCOPE-05` | Scope | `SCOPE-05` Validar cenários de entrada, múltiplas BUs, fila livre, atribuição manual/automática, capacidade, transferência, SLA, automação/handoff e isolamento entre Mantenedoras. | scenario review | walkthrough/rubrica | n/a | pending | rerun pendente |
+| `SCOPE-06` | Scope | `SCOPE-06` Registrar padrões aproveitáveis, limitações, inconsistências e anti-padrões do legado. | doc+review | seção de disposições | n/a | pending | rerun pendente |
+| `SCOPE-07` | Scope | `SCOPE-07` Formular recomendações e decisões futuras sem atribuir prioridade ou autoridade de implementação. | doc+review | recomendações/future decisions | n/a | pending | rerun pendente |
 | `DOD-01` | Definition of Done | evidência operacional distingue call path atual e schema persistence-backed de artefato histórico/órfão | doc+review | artefato, manifesto/matriz | n/a | pending | correção de supersessão, schema e ausência requer rerun |
 | `DOD-02` | Definition of Done | matriz única cobre `C-01..C-12` | doc+integrity review | artefato, `#matriz-única-de-cobertura-c-01c-12` | n/a | pending | rerun 1:1 pendente |
 | `DOD-03` | Definition of Done | diagrama/glossário separam os conceitos | doc+review | artefato, `#modelo-conceitual-proposto-para-discussão-posterior` | n/a | pending | rerun pendente |
@@ -633,6 +640,12 @@ As fontes abaixo foram recarregadas após `APROVADO` e vinculadas ao escopo docu
 | `ST03-P2-scope-and-auth-evidence` | P2 | release-blocker | corrigido no mesmo TODO; exige re-review | webhooks/router/sector matrix, ausência e actor×operação | integrated / pending re-review | ST-03 checkpoint pending |
 | `ST03-R2-schema-and-role-matrix` | R2 | release-blocker | corrigido no mesmo TODO; exige re-review | schema por alegação e matriz sem allow/deny inventado | integrated / pending re-review | ST-03 checkpoint pending |
 | `ST03-R5-lifecycle-sla-and-scan` | R5 | release-blocker | corrigido no mesmo TODO; exige re-review | E-23..E-29, SLA, scan classificado e hygiene | integrated / pending re-review | ST-03 checkpoint pending |
+| `ST03-TQA-R5-001` | R5 | release-blocker | corrigido no mesmo TODO; exige re-review | matriz ator×operação/fail-open | integrated / pending re-review | 1:1 audit table |
+| `ST03-TQA-R5-002` | R5 | release-blocker | corrigido no mesmo TODO; exige re-review | call paths/posição de SLA | integrated / pending re-review | 1:1 audit table |
+| `ST03-TQA-R5-003` | R5 | release-blocker | corrigido no mesmo TODO; exige re-review | cobertura operacional/protocolo limitado | integrated / pending re-review | 1:1 audit table |
+| `ST03-TQA-R5-004` | R5 | release-blocker | corrigido no mesmo TODO; exige re-review | hygiene/identidade/statuses | integrated / pending re-review | 1:1 audit table |
+| `ST03-TQA-R6-001..005` | R6 | release-blocker | corrigido no mesmo TODO; exige re-review | E-NF limitado; E-30/E-31; E-28a/b; C-04/C-01; E-23 | integrated / pending re-review | mapeamento 1:1 na tabela TQA |
+| `ST03-TQA-R3B-001..003` | R3B | release-blocker | corrigido no mesmo TODO; exige re-review | identidade, Scope matrix e status pending | integrated / pending re-review | mapeamento 1:1 na tabela TQA |
 
 ## Rule-Spirit Anti-Pattern Hunt
 
@@ -680,7 +693,7 @@ As fontes abaixo foram recarregadas após `APROVADO` e vinculadas ao escopo docu
 - **Why this decision:** validação documental não altera testes, mas a complexidade medium recomenda auditoria focada da qualidade das evidências.
 - **Audit status:** `running`
 - **Audit focus:** eficácia da validação documental e rastreabilidade dos cenários.
-- **Findings received:** `ST03-TQA-001`, `ST03-TQA-002`, `ST03-TQA-R2-001`, `ST03-TQA-R2-002`, `ST03-TQA-R3-001`, `ST03-TQA-R5-001`.
+- **Findings received:** `ST03-TQA-001`, `ST03-TQA-002`, `ST03-TQA-R2-001`, `ST03-TQA-R2-002`, `ST03-TQA-R3-001`, `ST03-TQA-R5-001..004`, `ST03-TQA-R6-001..005` e `ST03-R3B-001..003`.
 - **Rerun status:** `pending`; a correção posterior invalida o clean anterior.
 - **Embedded R4 result (historical, non-green now):** reviewer `/root/st03_test_quality_reaudit_r4`; pacote/checkpoint então revisado: TODO+estudo antes desta onda; resultado `clean/no_material_findings`; verificação 1:1 cobriu `ST03-TQA-001`, `002`, `R2-001`, `R2-002`, `R3-001`. Este resultado não é evidência da onda atual e não depende de dispatch externo.
 
@@ -688,10 +701,21 @@ As fontes abaixo foram recarregadas após `APROVADO` e vinculadas ao escopo docu
 | --- | --- | --- | --- |
 | `ST03-TQA-001` | Cada linha C-01..C-12 precisava de referência congelada exata, e ausências precisavam registrar busca/escopo reproduzível. | Registro E e E-NF-01 ampliados e classificados; esta onda requer rerun. | integrated / pending re-review |
 | `ST03-TQA-002` | C-04 não distinguia cenário positivo de negativo para unidade/equipe. | C-04 preserva os cenários de constraint; esta onda requer rerun. | integrated / pending re-review |
-| `ST03-TQA-R2-001` | Persistência estática não pode parecer prova runtime/atômica. | E-06, E-13, E-23/E-28 e C-08..C-12 separam write, schema parcial e ausência de CAS/atomicidade. | integrated / pending re-review |
+| `ST03-TQA-R2-001` | Persistência estática não pode parecer prova runtime/atômica. | E-06, E-13, E-23/E-28a e C-08..C-12 separam write, schema parcial e ausência de CAS/atomicidade. | integrated / pending re-review |
 | `ST03-TQA-R2-002` | Ausência de capacidade não pode incluir provider-presence, nem busca admitir corpus bruto. | E-11/E-12 e E-NF-01 distinguem provider, atendente e corpus sanitizado/classificado. | integrated / pending re-review |
 | `ST03-TQA-R3-001` | Status/configuração não demonstram scheduler, CAS, reserva, grant ou freshness. | E-14..E-16/E-NF-01 e C-07/C-08 mantêm essas lacunas explícitas. | integrated / pending re-review |
-| `ST03-TQA-R5-001` | Schema por claim, matriz sem role allow/deny, resolve/SLA/auto-assignment e hygiene precisavam reclassificação. | E-23..E-29, schema por alegação, matriz `future_decision/unknown`, ledger e comandos foram integrados. | findings_integrated / pending rerun |
+| `ST03-TQA-R5-001` | Matriz ator×operação não pode inferir allow/deny e deve registrar fail-open legado. | Cada papel/operação ficou `future_decision/unknown`; E-22 registra o filtro fail-open de UI. | findings_integrated / pending rerun |
+| `ST03-TQA-R5-002` | Call paths e posição de performance do SLA estavam incompletos. | E-24..E-26 separam RPC da conversa selecionada, cálculo local/lista e caminho retirado. | findings_integrated / pending rerun |
+| `ST03-TQA-R5-003` | Protocolo de ausência e cobertura operacional eram estreitos. | E-27..E-29 registram autoassign/reopen/spread; E-NF-01 foi reduzido a inventário sem claim de ausência. | findings_integrated / pending rerun |
+| `ST03-TQA-R5-004` | Hygiene/identidade/statuses. | checkpoint, comandos e gates pending foram atualizados. | findings_integrated / pending rerun |
+| `ST03-TQA-R6-001` | Schema claim-specific incompleto. | E-30/E-31 adicionados como effective_schema estático, sem promover runtime/auth. | findings_integrated / pending rerun |
+| `ST03-TQA-R6-002` | Busca não é prova fail-closed de ausência. | E-NF-01 virou inventário limitado; lacunas `unknown after bounded inspection`. | findings_integrated / pending rerun |
+| `ST03-TQA-R6-003` | Cenários positivos introduziam autorização não canônica. | C-04 registra apenas condições necessárias; role×operação permanece future decision. | findings_integrated / pending rerun |
+| `ST03-TQA-R6-004` | Reachability/failure semantics incompletas. | E-28a/b separam reopen ativo de claimed_at órfão; E-23/C-10 registram divergência; C-11 limita SLA tenant-era. | findings_integrated / pending rerun |
+| `ST03-TQA-R6-005` | Proveniência stale e R5 sem rastreio 1:1. | c65a9854/pacote R3 registrados e R5-001..004 separados nesta tabela. | findings_integrated / pending rerun |
+| `ST03-R3B-001` | Protocolo de ausência não fechava sobre o corpus. | E-NF-01 não faz mais claim de ausência; lacunas permanecem unknown. | findings_integrated / pending rerun |
+| `ST03-R3B-002` | Completion Matrix não cobria os sete itens de Scope. | SCOPE-01..07 e linhas 1:1 pending foram adicionados. | findings_integrated / pending rerun |
+| `ST03-R3B-003` | TODO/comandos apontavam checkpoint anterior. | c65a9854 e pacote R3 040fa4f7 estão registrados; working tree ainda sem SHA. | findings_integrated / pending rerun |
 
 ## Independent No-Context Final Review Gate
 
@@ -724,10 +748,10 @@ As fontes abaixo foram recarregadas após `APROVADO` e vinculadas ao escopo docu
 - `git.exe -C 'C:/Unifast/LeadsHug/Inspirações LeadsHug/whatsflow_v2' status --short --branch`
 - `git.exe -C 'C:/Unifast/LeadsHug/Inspirações LeadsHug/whatsflow_v2' rev-parse HEAD^{tree}`
 - `python3 foundation_documentation/deterministic/validate_foundation_lifecycle.py --root foundation_documentation`
-- `base=f2a1ad88926201de63b703d22dc57c1939f357c4; checkpoint=bc4032ef7af8a19f5397543ea6ab4a49013faa8c; git -C foundation_documentation diff --no-ext-diff "$base..$checkpoint" -- todos/active/features/TODO-leadshug-whatsflow-channel-attendance-study.md artifacts/analysis/leadshug-whatsflow-channel-attendance-conceptual-model-20260925.md | sha256sum` (range imutável; registrar SHA256, não usar diff vazio como prova)
+- `base=f2a1ad88926201de63b703d22dc57c1939f357c4; checkpoint=c65a985476d09228a9c1466aad1338b722459abc; git -C foundation_documentation diff --no-ext-diff "$base..$checkpoint" -- todos/active/features/TODO-leadshug-whatsflow-channel-attendance-study.md artifacts/analysis/leadshug-whatsflow-channel-attendance-conceptual-model-20260925.md | sha256sum` (range imutável; working changes pending serão capturadas no próximo SHA)
 - `git -C foundation_documentation diff --check` (somente higiene de whitespace; não é prova de conteúdo)
 - `git diff --check --no-index /dev/null foundation_documentation/artifacts/analysis/leadshug-whatsflow-channel-attendance-conceptual-model-20260925.md` (aceitar exit `1` somente por arquivo novo e exigir stdout vazio)
-- `base=f2a1ad88926201de63b703d22dc57c1939f357c4; checkpoint=bc4032ef7af8a19f5397543ea6ab4a49013faa8c; git -C foundation_documentation diff --no-ext-diff "$base..$checkpoint" -- todos/active/features/TODO-leadshug-whatsflow-channel-attendance-study.md artifacts/analysis/leadshug-whatsflow-channel-attendance-conceptual-model-20260925.md`
+- `base=f2a1ad88926201de63b703d22dc57c1939f357c4; checkpoint=c65a985476d09228a9c1466aad1338b722459abc; git -C foundation_documentation diff --no-ext-diff "$base..$checkpoint" -- todos/active/features/TODO-leadshug-whatsflow-channel-attendance-study.md artifacts/analysis/leadshug-whatsflow-channel-attendance-conceptual-model-20260925.md`
 - `rg -n -i '(api[_-]?key|authorization:|bearer |secret|token|password)' foundation_documentation/artifacts/analysis/leadshug-whatsflow-channel-attendance-conceptual-model-20260925.md foundation_documentation/todos/active/features/TODO-leadshug-whatsflow-channel-attendance-study.md` (scan fail-closed/classificado: qualquer hit não explicitamente classificado como termo de política/descrição bloqueia rerun; referências `@SHA` são identificadores congelados, não segredos; não persistir valores)
 
 ## Files Expected
