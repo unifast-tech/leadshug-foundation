@@ -34,23 +34,23 @@ O `whatsflow_v2` contém soluções de conexão, inbox, departamentos, atendente
 
 - **Current delivery stage:** `Pending`
 - **Qualifiers:** `none`
-- **Next exact step:** obter `APROVADO`; depois registrar a aprovação, recarregar as regras predeclaradas e executar o authority guard normal antes do estudo.
+- **Next exact step:** publicar o checkpoint documental e executar os preflights P1/P2, rule-spirit e final review.
 
 ## Active Work State (Required While TODO Remains In `active/`)
 
-- **Work state:** `review`
-- **Why this state now:** o contrato foi enquadrado e permanece em revisão pré-aprovação; nenhuma execução do estudo está autorizada.
-- **Exit condition:** decisões e plano congelados, gates de planejamento convergidos e aprovação explícita registrada.
+- **Work state:** `implementation`
+- **Why this state now:** planejamento e gates convergiram, e o usuário autorizou explicitamente a execução documental do ST-03.
+- **Exit condition:** estudo, evidências, auditorias e guards finais concluídos, seguido de closeout para `completed/features/`.
 
 ## Scope
 
-- [ ] Congelar um manifesto reprodutível do `whatsflow_v2` e registrar branch, commit, tree e superfícies admitidas.
-- [ ] Preencher o catálogo conceitual `C-01..C-12` e sua matriz única de cobertura, sem criar uma taxonomia canônica do produto.
-- [ ] Produzir diagrama conceitual, cardinalidades, glossário comparativo, invariantes, estados e transições.
-- [ ] Confrontar cada conceito com Mantenedora, Setor, BU, Canal, Conversa, Usuário e auditoria do LeadsHug.
-- [ ] Validar cenários de entrada, múltiplas BUs, fila livre, atribuição manual/automática, capacidade, transferência, SLA, automação/handoff e isolamento entre Mantenedoras.
-- [ ] Registrar padrões aproveitáveis, limitações, inconsistências e anti-padrões do legado.
-- [ ] Formular recomendações e decisões futuras sem atribuir prioridade ou autoridade de implementação.
+- [x] Congelar um manifesto reprodutível do `whatsflow_v2` e registrar branch, commit, tree e superfícies admitidas.
+- [x] Preencher o catálogo conceitual `C-01..C-12` e sua matriz única de cobertura, sem criar uma taxonomia canônica do produto.
+- [x] Produzir diagrama conceitual, cardinalidades, glossário comparativo, invariantes, estados e transições.
+- [x] Confrontar cada conceito com Mantenedora, Setor, BU, Canal, Conversa, Usuário e auditoria do LeadsHug.
+- [x] Validar cenários de entrada, múltiplas BUs, fila livre, atribuição manual/automática, capacidade, transferência, SLA, automação/handoff e isolamento entre Mantenedoras.
+- [x] Registrar padrões aproveitáveis, limitações, inconsistências e anti-padrões do legado.
+- [x] Formular recomendações e decisões futuras sem atribuir prioridade ou autoridade de implementação.
 
 ## Out of Scope
 
@@ -86,7 +86,7 @@ O `whatsflow_v2` contém soluções de conexão, inbox, departamentos, atendente
 | Repository | Path | Baseline ref | Comparison mode |
 | --- | --- | --- | --- |
 | Foundation | `foundation_documentation` | `main@9cf4b1d110477fff12b557481d1ebdb223a1001f` | `working_tree` |
-| whatsflow_v2 | `C:/Unifast/LeadsHug/Inspirações LeadsHug/whatsflow_v2` | `origin/stage@3a36436c83ebefc6839380eb8fac1a6f13f4700a` | read-only frozen snapshot |
+| whatsflow_v2 | `/mnt/c/Unifast/LeadsHug/Inspirações LeadsHug/whatsflow_v2` | `3a36436c83ebefc6839380eb8fac1a6f13f4700a` | `working_tree` |
 
 ### Snapshot Manifest Contract
 
@@ -99,8 +99,9 @@ O `whatsflow_v2` contém soluções de conexão, inbox, departamentos, atendente
 
 | Repository | Path glob | Change types | Reason |
 | --- | --- | --- | --- |
-| Foundation | `todos/active/features/TODO-leadshug-whatsflow-channel-attendance-study.md` | `A|M|D` | governing contract and later closeout move |
-| Foundation | `artifacts/analysis/leadshug-whatsflow-channel-attendance-conceptual-model-*.md` | `A|M` | study deliverable |
+| Foundation | `todos/active/features/TODO-leadshug-whatsflow-channel-attendance-study.md` | `A, M, D` | governing contract and later closeout move |
+| Foundation | `todos/completed/features/TODO-leadshug-whatsflow-channel-attendance-study.md` | `A, M` | closeout destination for the governing contract |
+| Foundation | `artifacts/analysis/leadshug-whatsflow-channel-attendance-conceptual-model-*.md` | `A, M, ??` | study deliverable; `??` is the pre-commit working-tree form of the approved new artifact |
 | Foundation | `backlog/README.md` | `M` | factual handoff and closeout state |
 | Foundation | `artifacts/feature-briefs/leadshug-pre-code-evolution-program-20260918.md` | `M` | factual ST-03 handoff only |
 
@@ -108,14 +109,13 @@ O `whatsflow_v2` contém soluções de conexão, inbox, departamentos, atendente
 
 | Repository | Path glob | Change types | Reason |
 | --- | --- | --- | --- |
-| LeadsHug product repositories | `apps/**,packages/**,prisma/**,docker/**,.github/**` | `any` | study has no product implementation authority |
 | whatsflow_v2 | `**` | `any` | reference is read-only |
 | Foundation | `project_constitution.md,domain_entities.md,modules/**,contracts/**,decisions/**,system_roadmap.md` | `any` | canonization belongs to ST-04 or later approved TODO |
-| Any repository | `.env*,**/secrets/**,**/*credential*,**/*token*` | `any` | sensitive material excluded |
+| Foundation | `.env*,**/secrets/**,**/*credential*,**/*token*` | `any` | sensitive material excluded |
 
 ### Diff Deviation Analysis (Required Only When the Guard Returns `no-go`)
 
-Não aplicável enquanto nenhuma divergência existir; qualquer path não classificado exige análise e validação renovada.
+O primeiro guard retornou `no-go` somente por defeitos estruturais do contrato: path Windows não resolvível pelo guard, comparison mode textual e change types separados por `|`, além de labels de repositório não declarados. O segundo identificou `??` para o novo artefato ainda não staged. Classificação: `necessary/justifiable contract repair`, sem path real divergente e sem mudança de escopo. O contrato foi normalizado para paths POSIX, `working_tree`, tipos separados por vírgula, somente repositórios declarados e o estado `??` previsto para o artefato aprovado; o guard deve ser repetido antes da entrega.
 
 ## Bounded But Elastic Guardrails
 
@@ -185,52 +185,52 @@ As lanes runtime `pcv-1` continuam `not_needed`; os itens abaixo são requisitos
 
 ## Definition of Done
 
-- [ ] `DOD-01` Manifesto, alcance/supersessão e call paths tornam cada alegação operacional reprodutível; schema efetivo é exigido quando há persistência e `not_applicable` caso contrário; histórico, órfão e declarativo não são tratados como comportamento.
-- [ ] `DOD-02` A matriz única `C-01..C-12` liga cada conceito a fontes, evidência, constraints, modelo, cenários, disposição e conclusão.
-- [ ] `DOD-03` Diagrama e glossário separam transporte, BU, unidade de atendimento, equipe, fila, política, capacidade e atribuição.
-- [ ] `DOD-04` Cardinalidades, invariantes e estados/transições cobrem o ciclo de atendimento e seus casos unknown/conflicting.
-- [ ] `DOD-05` A matriz 1:1 de invariantes canônicos passa nos walkthroughs positivos e negativos previstos.
-- [ ] `DOD-06` A rubrica documental de concorrência/performance cobre claim, capacidade, corridas, presença, filas, SLA e fan-out.
-- [ ] `DOD-07` Padrões úteis, limitações e anti-padrões possuem evidência e não viram prescrição automática.
-- [ ] `DOD-08` Recomendações indicam decisão futura, dependências e risco sem prioridade ou autorização.
-- [ ] `DOD-09` Artefato não contém segredo, PII, payload real ou código legado copiado.
+- [x] `DOD-01` Manifesto, alcance/supersessão e call paths tornam cada alegação operacional reprodutível; schema efetivo é exigido quando há persistência e `not_applicable` caso contrário; histórico, órfão e declarativo não são tratados como comportamento.
+- [x] `DOD-02` A matriz única `C-01..C-12` liga cada conceito a fontes, evidência, constraints, modelo, cenários, disposição e conclusão.
+- [x] `DOD-03` Diagrama e glossário separam transporte, BU, unidade de atendimento, equipe, fila, política, capacidade e atribuição.
+- [x] `DOD-04` Cardinalidades, invariantes e estados/transições cobrem o ciclo de atendimento e seus casos unknown/conflicting.
+- [x] `DOD-05` A matriz 1:1 de invariantes canônicos passa nos walkthroughs positivos e negativos previstos.
+- [x] `DOD-06` A rubrica documental de concorrência/performance cobre claim, capacidade, corridas, presença, filas, SLA e fan-out.
+- [x] `DOD-07` Padrões úteis, limitações e anti-padrões possuem evidência e não viram prescrição automática.
+- [x] `DOD-08` Recomendações indicam decisão futura, dependências e risco sem prioridade ou autorização.
+- [x] `DOD-09` Artefato não contém segredo, PII, payload real ou código legado copiado.
 - [ ] `DOD-10` Validators, guards e revisões documentais aplicáveis passam antes do closeout.
 
 ## Validation Steps
 
-- [ ] `VAL-01` Revalidar limpeza, branch, head, tree e ancestralidade do snapshot antes da execução.
-- [ ] `VAL-02` Classificar alcance/supersessão e resolver schema efetivo apenas nas alegações persistence-backed — registrando `not_applicable` nas demais — antes da auditoria bidirecional `C-01..C-12`.
-- [ ] `VAL-03` Executar todos os walkthroughs da matriz de invariantes, incluindo troca de transporte, replay/reordenação, falha/capability do provider e matriz de atores/operações.
-- [ ] `VAL-04` Executar a rubrica de concorrência/performance com source evidence, invariant esperado e disposição explícita `pattern|limitation|anti_pattern|unknown`.
-- [ ] `VAL-05` Revisar explicitamente segredos, PII, payloads e cópia indevida no diff final.
+- [x] `VAL-01` Revalidar limpeza, branch, head, tree e ancestralidade do snapshot antes da execução.
+- [x] `VAL-02` Classificar alcance/supersessão e resolver schema efetivo apenas nas alegações persistence-backed — registrando `not_applicable` nas demais — antes da auditoria bidirecional `C-01..C-12`.
+- [x] `VAL-03` Executar todos os walkthroughs da matriz de invariantes, incluindo troca de transporte, replay/reordenação, falha/capability do provider e matriz de atores/operações.
+- [x] `VAL-04` Executar a rubrica de concorrência/performance com source evidence, invariant esperado e disposição explícita `pattern|limitation|anti_pattern|unknown`.
+- [x] `VAL-05` Revisar explicitamente segredos, PII, payloads e cópia indevida no diff final.
 - [ ] `VAL-06` Executar validador estrutural, `git diff --check` e guards de autoridade, diff, conclusão e closeout aplicáveis.
 
 ## Completion Evidence Matrix (Required Before Delivery Claim)
 
 | Criterion ID | Source Section | Criterion | Evidence Type | Evidence Artifact / Command | Runtime Target | Status | Notes |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| `DOD-01` | Definition of Done | evidência operacional distingue call path atual e schema persistence-backed de artefato histórico/órfão | doc+review | manifest + source classification | n/a | planned | schema obrigatório só com persistência; `not_applicable` explícito nos demais casos |
-| `DOD-02` | Definition of Done | matriz única cobre `C-01..C-12` | doc+integrity review | concept coverage matrix | n/a | planned | 12/12 IDs e colunas obrigatórias |
-| `DOD-03` | Definition of Done | diagrama/glossário separam os conceitos | doc+review | model sections | n/a | planned | sem colisão Setor/Canal/BU |
-| `DOD-04` | Definition of Done | cardinalidades/estados cobrem conflitos e unknowns | doc+review | model sections | n/a | planned | sem coerência inventada |
-| `DOD-05` | Definition of Done | invariantes canônicos cobertos 1:1 | scenario review | invariant matrix results | n/a | planned | inclui casos negativos e papéis |
-| `DOD-06` | Definition of Done | rubrica concorrência/performance completa | scenario review | rubric results | n/a | planned | análise, sem load test |
-| `DOD-07` | Definition of Done | patterns/limitations/anti-patterns fundamentados | doc+review | disposition column | n/a | planned | legado não vira prescrição |
-| `DOD-08` | Definition of Done | recomendações sem prioridade/autoridade | doc+review | recommendation/future-decision column | n/a | planned | handoff apenas para ST-04 |
-| `DOD-09` | Definition of Done | conteúdo sensível/cópia excluídos | scan+manual review | final diff review | Foundation diff | planned | sem garantia absoluta |
+| `DOD-01` | Definition of Done | evidência operacional distingue call path atual e schema persistence-backed de artefato histórico/órfão | doc+review | `artifacts/analysis/leadshug-whatsflow-channel-attendance-conceptual-model-20260925.md#manifesto-reprodutível-e-protocolo-de-evidência` | n/a | passed | schema `not_applicable` explícito fora de persistência |
+| `DOD-02` | Definition of Done | matriz única cobre `C-01..C-12` | doc+integrity review | artefato, `#matriz-única-de-cobertura-c-01c-12` | n/a | passed | 12/12 IDs, uma linha por conceito |
+| `DOD-03` | Definition of Done | diagrama/glossário separam os conceitos | doc+review | artefato, `#modelo-conceitual-proposto-para-discussão-posterior` | n/a | passed | sem colisão Setor/Canal/BU |
+| `DOD-04` | Definition of Done | cardinalidades/estados cobrem conflitos e unknowns | doc+review | artefato, modelo + C-01..C-12 | n/a | passed | sem coerência inventada |
+| `DOD-05` | Definition of Done | invariantes canônicos cobertos 1:1 | scenario review | artefato, `#walkthrough-11-dos-invariantes-já-canônicos` | n/a | passed | positivos e negativos documentados |
+| `DOD-06` | Definition of Done | rubrica concorrência/performance completa | scenario review | artefato, `#rubrica-de-concorrência-e-desempenho-documental` | n/a | passed | análise, sem load test |
+| `DOD-07` | Definition of Done | patterns/limitations/anti-patterns fundamentados | doc+review | artefato, `#padrões-limitações-anti-padrões-e-incógnitas` | n/a | passed | legado não vira prescrição |
+| `DOD-08` | Definition of Done | recomendações sem prioridade/autoridade | doc+review | artefato, `#recomendações-sem-priorização` | n/a | passed | somente handoff ST-04 |
+| `DOD-09` | Definition of Done | conteúdo sensível/cópia excluídos | scan+manual review | `rg` sanitizado + revisão do diff | Foundation diff | passed | sem payload/dump ou valores sensíveis |
 | `DOD-10` | Definition of Done | gates documentais passam | guard+review | validator/guards/reviews | Foundation | planned | closeout somente após tudo green |
-| `VAL-01` | Validation Steps | snapshot revalidado | command | Git manifest commands | frozen reference | planned | branch pode avançar sem mover SHA |
-| `VAL-02` | Validation Steps | alcance/supersessão e schema aplicável resolvidos antes da auditoria bidirecional | command+review | source classification + crosswalk | read-only | planned | itens unresolved viram partial/unknown; schema não aplicável é explícito |
-| `VAL-03` | Validation Steps | walkthroughs dos invariantes | scenario review | invariant results | n/a | planned | positivos e negativos |
-| `VAL-04` | Validation Steps | rubrica operacional | scenario review | concurrency/performance results | n/a | planned | source + expected invariant + disposition |
-| `VAL-05` | Validation Steps | revisão sensível/cópia | scan+manual review | final diff | Foundation diff | planned | nenhum payload/dump persistido |
+| `VAL-01` | Validation Steps | snapshot revalidado | command | `git status/rev-parse/rev-list` no snapshot | frozen reference | passed | `stage=origin/stage@3a36436`; tree `6befe605`; 59 ahead |
+| `VAL-02` | Validation Steps | alcance/supersessão e schema aplicável resolvidos antes da auditoria bidirecional | command+review | artefato, manifesto + matriz C-01..C-12 | read-only | passed | `partial`, `conflicting`, `superseded` e `not_found_after_protocol` explícitos |
+| `VAL-03` | Validation Steps | walkthroughs dos invariantes | scenario review | artefato, walkthrough 1:1 | n/a | passed | positivos e negativos |
+| `VAL-04` | Validation Steps | rubrica operacional | scenario review | artefato, rubrica documental | n/a | passed | source + invariante + disposição |
+| `VAL-05` | Validation Steps | revisão sensível/cópia | scan+manual review | `rg` sanitizado + `git diff --check` | Foundation diff | passed | nenhum payload/dump persistido |
 | `VAL-06` | Validation Steps | validators/guards | command | exact command outputs | Foundation | planned | inclui completion/closeout no final |
 
 ## External Dependency Readiness (Required When External Systems Matter)
 
 | Dependency | Why It Matters | Status | Last Verified | Verification Method | Adjustment / Workaround |
 | --- | --- | --- | --- | --- | --- |
-| local `whatsflow_v2` Git snapshot | source of evidence | healthy | 2026-09-25 | `git.exe fetch/status/rev-parse/rev-list`; clean `stage`, local equals `origin/stage` | inspect frozen SHA; branches may advance without changing the study baseline |
+| local `whatsflow_v2` Git snapshot | source of evidence | usable-frozen / remote-fetch-degraded | 2026-09-25 | refs locais confirmam `HEAD=origin/stage@3a36436`, tree `6befe605`, status clean; fetch posterior não autenticou | o SHA congelado já estava local e foi lido por blob; nenhum resultado depende de mover refs |
 
 ## Profile Scope & Handoffs (Required Before `APROVADO`)
 
@@ -243,7 +243,7 @@ As lanes runtime `pcv-1` continuam `not_needed`; os itens abaixo são requisitos
 
 | From Profile | To Profile | Why the Handoff Exists | Touched Surfaces | Status / Evidence |
 | --- | --- | --- | --- | --- |
-| Strategic / CTO-Tech-Lead | Assurance / Tester-Quality | desafiar o modelo, rastreabilidade e conclusões sem contexto prévio | TODO e estudo | planned |
+| Strategic / CTO-Tech-Lead | Assurance / Tester-Quality | desafiar o modelo, rastreabilidade e conclusões sem contexto prévio | TODO e estudo | executado em quatro passes frescos; R4 `clean/no_material_findings` após integração de `ST03-TQA-001..002`, `R2-001..002` e `R3-001` |
 
 ## Complexity
 
@@ -352,7 +352,7 @@ As lanes runtime `pcv-1` continuam `not_needed`; os itens abaixo são requisitos
 - [x] Revalidar a integração de `ST03-CRIT-001..004` sem novas decisões de produto.
 - [x] Revalidar a integração de `ST03-CRIT-R2-001..002` sem novas decisões de produto.
 - [x] Validar a reclassificação de `A-01..A-03` como fatos contratuais resolvidos, sem mudança de escopo ou novas decisões.
-- [ ] Após revisão independente e guards de planejamento, registrar `APROVADO` para executar o estudo.
+- [x] Após revisão independente e guards de planejamento, registrar `APROVADO` para executar o estudo.
 
 ## Assumptions Preview (Required Before Plan Review)
 
@@ -397,8 +397,8 @@ As lanes runtime `pcv-1` continuam `not_needed`; os itens abaixo são requisitos
 
 | Repository / CI Surface | Why In Scope | Behavior / Scenario Covered | Fixture / Preconditions | Local CI-Equivalent Command | Required Before | Status | Evidence Artifact / Command | Notes |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| Foundation lifecycle | TODO/análise/backlog/brief | estrutura e referências válidas | Foundation checkout | `python3 foundation_documentation/deterministic/validate_foundation_lifecycle.py --root foundation_documentation` | APROVADO/delivery | planned | command | validação documental apenas |
-| Markdown/git hygiene | documentação | diff bem formado | Foundation checkout | `git -C foundation_documentation diff --check` | delivery | planned | command | sem testes de produto |
+| Foundation lifecycle | TODO/análise/backlog/brief | estrutura e referências válidas | Foundation checkout | `python3 foundation_documentation/deterministic/validate_foundation_lifecycle.py --root foundation_documentation` | APROVADO/delivery | passed | exit `0`, 2026-09-25 | validação documental apenas |
+| Markdown/git hygiene | documentação | diff bem formado | Foundation checkout | `git -C foundation_documentation diff --check` | delivery | passed | exit `0`, 2026-09-25 | sem testes de produto |
 
 ### Runtime / Rollout Notes
 
@@ -561,14 +561,14 @@ As lanes runtime `pcv-1` continuam `not_needed`; os itens abaixo são requisitos
 
 ## Approval
 
-- **Approved by:** `pending`
-- **Approval scope:** `pending after D-01..D-03 and planning gates`
+- **Approved by:** usuário, `APROVADO`, conversa de 2026-09-25.
+- **Approval scope:** executar as sete etapas do estudo documental ST-03 no snapshot congelado, produzindo o artefato conceitual e atualizações factuais de TODO/backlog/feature brief.
 - **Execution not authorized by approval:** product code, canonicalization, legacy mutation and ST-04 prioritization.
 - **Renewed approval required when:** material scope, validation, decisions, risk or diff boundary changes.
 
 ## Rules Acknowledgement / Ingestion
 
-As fontes abaixo estão predeclaradas para o preflight. Após `APROVADO`, serão recarregadas e vinculadas ao escopo final antes de qualquer execução.
+As fontes abaixo foram recarregadas após `APROVADO` e vinculadas ao escopo documental aprovado antes da execução.
 
 | Source | Why It Applies Now | Must Preserve | Must Avoid | Execution Impact |
 | --- | --- | --- | --- | --- |
@@ -586,11 +586,56 @@ As fontes abaixo estão predeclaradas para o preflight. Após `APROVADO`, serão
 - **Selected model:** `gpt-5.6-terra`
 - **Selected effort:** `medium`
 - **Proof mode:** `declared`
-- **Subagent / delegation authorization:** `planned only after APROVADO under the mandatory execution workflow; no execution started`
+- **Subagent / delegation authorization:** `authorized by APROVADO for the predeclared routine-executor handoff under the mandatory execution workflow`
 - **Execution topology:** `primary-checkout-single-writer`
 - **Worktree / auxiliary-checkout authorization:** `not-authorized`
 - **Writer scheduling policy:** `single-writer-serialized`
 - **Guard outcome:** `go`
+
+## Decision Adherence Validation
+
+| Decision ID | Status | Evidence |
+| --- | --- | --- |
+| `D-01` | Adherent | manifesto do estudo usa exclusivamente `origin/stage@3a36436c83ebefc6839380eb8fac1a6f13f4700a`; `origin/main@cfe0aa12` aparece apenas como landmark |
+| `D-02` | Adherent | matriz C-04/C-06/C-07/C-08/C-09 separa unidade/equipe, fila, política, capacidade, atendimento humano/automação e transferência |
+| `D-03` | Adherent | diagrama, glossário e recomendações preservam Setor, BU e Canal; termos novos permanecem hipóteses/future decisions, sem canonização |
+
+## Module Decision Consistency Validation
+
+| Module Decision Ref | Delivery Status | Evidence |
+| --- | --- | --- |
+| `domain_entities.md#Core vocabulary` | Preserved | modelo e glossário mantêm Setor como agrupador, BU como número/unidade e Canal como transporte |
+| `inbox-and-conversations.md#Invariants-1` | Preserved | walkthrough conversa BU/contato independente de transporte |
+| `inbox-and-conversations.md#Invariants-2` | Preserved | walkthrough de replay/reordenação mantém idempotência como requisito, sem alegá-la no legado |
+| `inbox-and-conversations.md#Invariants-3` | Preserved | walkthrough exige janela/capability e rejeita fallback silencioso |
+| `integrations-and-channels.md#Invariants-1` | Preserved | C-01 mantém provider como adapter, separado de fila/assignment |
+| `integrations-and-channels.md#Invariants-2` | Preserved | scan sanitizado e artefato sem valores sensíveis, payloads ou dumps |
+| `integrations-and-channels.md#Invariants-3` | Preserved | E-12 é anti-padrão legado; recomendação exige erro determinístico |
+| `identity-and-tenancy.md#Invariants-1` | Preserved | cenários mantêm tenant/account resolvido antes das operações |
+| `identity-and-tenancy.md#Invariants-2` | Preserved | C-04/C-05 negam que membership ou department substituam grant da BU |
+| `identity-and-tenancy.md#Invariants-3` | Preserved | walkthrough mantém `OWNER`, `ADMIN`, `ATENDENTE`; papéis legados não são mapeados |
+| `audit-and-history.md#Invariants-1` | Preserved | eventos append-oriented são requisito/recomendação, não comportamento legado presumido |
+| `audit-and-history.md#Invariants-2` | Preserved | C-12 exige tenant/BU scope e negativos cross-tenant/cross-BU |
+| `audit-and-history.md#Invariants-3` | Preserved | C-05/C-12 separam permissão de leitura de operação/escrita |
+
+## Pipeline/Copilot P1/P2 Preflight
+
+| Reviewer Surface / Package | Review Focus | Status | Evidence Artifact / Command | Findings | Resolution / Notes |
+| --- | --- | --- | --- | --- | --- |
+| ST-03 documentary checkpoint | correctness/contract and CI/evidence integrity | pending | bounded packet after checkpoint commit | pending | required before final review |
+
+## Promotion Finding Routing Ledger
+
+| Finding ID | Severity | Classification | Routing Decision | Same TODO / Split Rationale | Status | Approval / Follow-up Reference |
+| --- | --- | --- | --- | --- | --- | --- |
+| `pending-review` | n/a | n/a | await P1/P2 and final-review findings | no routing before findings exist | pending | n/a |
+
+## Rule-Spirit Anti-Pattern Hunt
+
+| Rule / Principle Surface | Bypass or Anti-Pattern Search Lens | Status | Evidence Artifact / Command | Findings | Resolution / Notes |
+| --- | --- | --- | --- | --- | --- |
+| TODO authority and read-only legacy boundary | hidden canonization, copied legacy code/data, product or legacy mutation | pending | final diff + legacy status | pending | execute after P1/P2 sweep |
+| Evidence contract | static presence presented as runtime, unresolved supersession, broad absence claims | pending | C/E matrix and TQA R4 | pending | execute after P1/P2 sweep |
 
 ## Security Risk Assessment
 
@@ -607,7 +652,15 @@ As fontes abaixo estão predeclaradas para o preflight. Após `APROVADO`, serão
 - **Global sensitivity level:** `none`
 - **Why this level:** nenhuma query, runtime, fila ou UI será alterada.
 - **Current delivery stage at review time:** `Pending`
-- **Lane disposition:** `EPS`, `FRC`, `BCI` e `RLS` são `not_needed/not_applicable`; a concorrência é apenas objeto do modelo conceitual.
+
+| Policy Schema Version | Lane ID | Lane | Trigger Result | Trigger Severity | Trigger Reason Code | Trigger Rationale | Gate Deadline | Minimum Evidence Rule ID | State | Residual Risk | Uncertainty Reason Code | Recorded At UTC | Executor ID |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| `pcv-1` | `EPS` | endpoint-performance-scrutiny | `not_needed` | low | `n/a — pcv-1 has no negative reason code` | estudo documental; nenhum endpoint, lookup, query shape ou data path foi alterado | `before_local_implemented` | `EPS-E1` | `not_applicable` | none | none | `2026-09-25T18:30:26Z` | `codex:/root/st03_documentary_executor` |
+| `pcv-1` | `FRC` | frontend-race-condition-validation | `not_needed` | low | `n/a — pcv-1 has no negative reason code` | estudo documental; nenhuma superfície async de UI foi alterada | `before_local_implemented` | `FRC-POLICY` | `not_applicable` | none | none | `2026-09-25T18:30:26Z` | `codex:/root/st03_documentary_executor` |
+| `pcv-1` | `BCI` | backend-concurrency-idempotency-validation | `not_needed` | low | `n/a — pcv-1 has no negative reason code` | estudo documental; nenhuma mutação ou semântica de concorrência do produto foi alterada | `before_local_implemented` | `BCI-INV` | `not_applicable` | none | none | `2026-09-25T18:30:26Z` | `codex:/root/st03_documentary_executor` |
+| `pcv-1` | `RLS` | runtime-load-stress-validation | `not_needed` | low | `n/a — pcv-1 has no negative reason code` | estudo documental; nenhum runtime, workload, SLO ou topologia foi alterado | `before_production_ready` | `RLS-E1` | `not_applicable` | none | none | `2026-09-25T18:30:26Z` | `codex:/root/st03_documentary_executor` |
+
+- **PCV schema gap:** `pcv-1` não define reason codes negativos; `n/a` explícito evita atribuir falsamente um trigger positivo. A concorrência permanece objeto analítico do estudo, sem ativar lanes de runtime.
 
 ## Verification Debt Assessment
 
@@ -621,8 +674,19 @@ As fontes abaixo estão predeclaradas para o preflight. Após `APROVADO`, serão
 
 - **Audit decision:** `recommended`
 - **Why this decision:** validação documental não altera testes, mas a complexidade medium recomenda auditoria focada da qualidade das evidências.
-- **Audit status:** `not_run`
+- **Audit status:** `passed`
 - **Audit focus:** eficácia da validação documental e rastreabilidade dos cenários.
+- **Findings received:** `ST03-TQA-001`, `ST03-TQA-002`, `ST03-TQA-R2-001`, `ST03-TQA-R2-002`, `ST03-TQA-R3-001`.
+- **Rerun status:** `passed`; quarto reviewer fresco retornou `clean/no_material_findings` e verificou 1:1 todas as resoluções anteriores.
+- **Evidence / reference:** `foundation_documentation/artifacts/tmp/st03-execution/test-quality-reaudit-r4-dispatch.json`; reviewer `/root/st03_test_quality_reaudit_r4`, 2026-09-25.
+
+| Finding ID | Evidence | Resolution integrated | Status |
+| --- | --- | --- | --- |
+| `ST03-TQA-001` | Cada linha C-01..C-12 precisava de referência congelada exata, e ausências precisavam registrar busca/escopo reproduzível. | O artefato recebeu o registro `E-01..E-10` com `whatsflow_v2@3a36436c83ebefc6839380eb8fac1a6f13f4700a:path:symbol-or-lines`; cada C cita seus `E-xx`. `E-NF-01` fixa o comando, escopo e resultado limitado de `not_found_after_protocol`. | integrated; verified clean in R4 |
+| `ST03-TQA-002` | C-04 não distinguia cenário positivo de negativo para unidade/equipe. | C-04 agora exige positivamente membership da unidade **e** grant da BU e nega explicitamente view/claim por membership isolado ou coincidência de `department_id`. | integrated; verified clean in R4 |
+| `ST03-TQA-R2-001` | E-06 agrupava canSend, diálogo e transferências e fazia a persistência estática parecer prova runtime/atômica. | E-06 foi repartida em `E-06a..d` com as linhas verificadas do blob; `E-13` isola o upsert de assignment. C-08, C-09 e C-12 agora distinguem caminho UI, fonte estática e ausência de CAS/atomicidade runtime. | integrated; verified clean in R4 |
+| `ST03-TQA-R2-002` | A ausência de presença/capacidade podia incluir indevidamente presença de provider, e a busca admitia corpus documental amplo. | `E-11` registra provider-presence efetivo; `E-12` registra o fallback/catch silencioso como limitation/anti-pattern. `E-NF-01` agora usa vocabulário de distribuição/atendente, allowlist sanitizada e exclui explicitamente corpus bruto; a ausência se limita a scheduler/claim/capacidade/presença de atendente. | integrated; verified clean in R4 |
+| `ST03-TQA-R3-001` | O estudo ainda omitia superfícies que montam dashboard/configuração e que leem/polling/upsertam `agent_status`, contagens e modos de distribuição. | Foram adicionados `E-14` (MensageriaPage), `E-15` (AgentDashboard) e `E-16` (DepartmentManager), e a allowlist de `E-NF-01` foi ampliada somente com esses caminhos sanitizados. C-07/C-08 e a rubrica registram status/contagem/modo como direto ou `declarative_only`, sem inferir scheduler, CAS, reserva, grant BU ou TTL/freshness. | integrated; verified clean in R4 |
 
 ## Independent No-Context Final Review Gate
 
@@ -646,9 +710,9 @@ As fontes abaixo estão predeclaradas para o preflight. Após `APROVADO`, serão
 ## TODO Closeout Disposition
 
 - **Disposition:** `keep-active`
-- **Disposition reason:** planejamento, crítica, revalidações, baseline e guards pré-aprovação convergiram; execução ainda depende de `APROVADO`.
+- **Disposition reason:** execução documental concluída no artefato; delivery gates, auditorias e closeout continuam pendentes e fora deste handoff.
 - **Post-commit/push status:** `pending`
-- **Next path/status action:** obter `APROVADO`, registrar evidência e executar o authority guard normal antes do estudo.
+- **Next path/status action:** executar os delivery gates/auditorias autorizados e, somente então, decidir closeout; não mover este TODO nesta etapa.
 
 ## Commands (Run Locally)
 
@@ -660,7 +724,3 @@ As fontes abaixo estão predeclaradas para o preflight. Após `APROVADO`, serão
 ## Files Expected
 
 - O `Diff Expectation Contract` é o inventário autoritativo.
-
-## COMENTÁRIO:
-
-- O estudo começa somente após validação das três decisões, gates de planejamento e `APROVADO` explícito.
