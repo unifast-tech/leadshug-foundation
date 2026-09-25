@@ -33,14 +33,14 @@ O `whatsflow_v2` contém soluções de conexão, inbox, departamentos, atendente
 ## Delivery Status Canon (Required)
 
 - **Current delivery stage:** `Pending`
-- **Qualifiers:** `none`
-- **Next exact step:** executar a confirmação independente do checkpoint de conteúdo `d1167a30` e, se limpa, registrar os gates factuais, rule-spirit e final review.
-- **Current checkout identity:** `foundation_documentation:main@d1167a3009af27f534118ff5ea2056b118e89fb3` é o checkpoint imutável de conteúdo; diff `f2a1ad88..d1167a30` tem SHA-256 `4e850215a3d6822dda5417f3641541d16465eab278e05f4ff028285a6653ef2d`. A alteração posterior desta linha é somente metadado de proveniência e será incluída no pacote final.
+- **Qualifiers:** `conteúdo concluído; delivery gates e final review em fechamento`
+- **Next exact step:** executar a revisão final independente do pacote consolidado e, se limpa, passar os guards de conclusão e publicar o closeout em `completed/features/`.
+- **Current checkout identity:** `foundation_documentation:main@3a4819e236970415b2126c445ea0da572fbb5a4e` é o checkpoint final de conteúdo; diff `f2a1ad88..3a4819e2` tem SHA-256 `4f409805de2928c1bb344a56c7f28fe996a70a9f465b03de43cef80f8ce8fa05`. O pacote final registra também o checkpoint substantivo anterior `d1167a30`.
 
 ## Active Work State (Required While TODO Remains In `active/`)
 
-- **Work state:** `implementation`
-- **Why this state now:** planejamento e gates convergiram, e o usuário autorizou explicitamente a execução documental do ST-03.
+- **Work state:** `review`
+- **Why this state now:** o estudo documental foi concluído, a auditoria de qualidade R8 e a confirmação factual R6 ficaram limpas; resta revisão final independente, guards e closeout.
 - **Exit condition:** estudo, evidências, auditorias e guards finais concluídos, seguido de closeout para `completed/features/`.
 
 ## Scope
@@ -73,7 +73,7 @@ O `whatsflow_v2` contém soluções de conexão, inbox, departamentos, atendente
 
 | Scope Item | Local Branch/Commit | PR to lane threshold | PR to `stage` | PR to `main` | Current Status |
 | --- | --- | --- | --- | --- | --- |
-| TODO e estudo ST-03 | conteúdo em `foundation_documentation:main@d1167a30`; metadado de proveniência posterior | `n/a` | `n/a` | `direct publication pending` | confirmação independente pendente sobre pacote final autocontido |
+| TODO e estudo ST-03 | conteúdo em `foundation_documentation:main@3a4819e2`; checkpoint substantivo `d1167a30` | `n/a` | `n/a` | `direct publication pending` | conteúdo confirmado por TQA R8 e confirmação factual R6; final review/guards pendentes |
 
 ## Diff Expectation Contract
 
@@ -86,7 +86,7 @@ O `whatsflow_v2` contém soluções de conexão, inbox, departamentos, atendente
 
 | Repository | Path | Baseline ref | Comparison mode |
 | --- | --- | --- | --- |
-| Foundation | `foundation_documentation` | content checkpoint `main@d1167a3009af27f534118ff5ea2056b118e89fb3` | `working_tree` |
+| Foundation | `foundation_documentation` | `main@9cf4b1d110477fff12b557481d1ebdb223a1001f` | `working_tree` |
 | whatsflow_v2 | `/mnt/c/Unifast/LeadsHug/Inspirações LeadsHug/whatsflow_v2` | `3a36436c83ebefc6839380eb8fac1a6f13f4700a` | `working_tree` |
 
 ### Snapshot Manifest Contract
@@ -186,52 +186,52 @@ As lanes runtime `pcv-1` continuam `not_needed`; os itens abaixo são requisitos
 
 ## Definition of Done
 
-- [ ] `DOD-01` Manifesto, alcance/supersessão e call paths tornam cada alegação operacional reprodutível; schema efetivo é exigido quando há persistência e `not_applicable` caso contrário; histórico, órfão e declarativo não são tratados como comportamento. (rerun pending)
-- [ ] `DOD-02` A matriz única `C-01..C-12` liga cada conceito a fontes, evidência, constraints, modelo, cenários, disposição e conclusão. (rerun pending)
-- [ ] `DOD-03` Diagrama e glossário separam transporte, BU, unidade de atendimento, equipe, fila, política, capacidade e atribuição. (rerun pending)
-- [ ] `DOD-04` Cardinalidades, invariantes e estados/transições cobrem o ciclo de atendimento e seus casos unknown/conflicting. (rerun pending)
-- [ ] `DOD-05` A matriz 1:1 de invariantes canônicos passa nos walkthroughs positivos e negativos previstos. (rerun pending)
-- [ ] `DOD-06` A rubrica documental de concorrência/performance cobre claim, capacidade, corridas, presença, filas, SLA e fan-out. (rerun pending)
-- [ ] `DOD-07` Padrões úteis, limitações e anti-padrões possuem evidência e não viram prescrição automática. (rerun pending)
-- [ ] `DOD-08` Recomendações indicam decisão futura, dependências e risco sem prioridade ou autorização. (rerun pending)
-- [ ] `DOD-09` Artefato não contém segredo, PII, payload real ou código legado copiado. (rerun pending)
+- [x] `DOD-01` Manifesto, alcance/supersessão e call paths tornam cada alegação operacional reprodutível; schema efetivo é exigido quando há persistência e `not_applicable` caso contrário; histórico, órfão e declarativo não são tratados como comportamento.
+- [x] `DOD-02` A matriz única `C-01..C-12` liga cada conceito a fontes, evidência, constraints, modelo, cenários, disposição e conclusão.
+- [x] `DOD-03` Diagrama e glossário separam transporte, BU, unidade de atendimento, equipe, fila, política, capacidade e atribuição.
+- [x] `DOD-04` Cardinalidades, invariantes e estados/transições cobrem o ciclo de atendimento e seus casos unknown/conflicting.
+- [x] `DOD-05` A matriz 1:1 de invariantes canônicos passa nos walkthroughs positivos e negativos previstos.
+- [x] `DOD-06` A rubrica documental de concorrência/performance cobre claim, capacidade, corridas, presença, filas, SLA e fan-out.
+- [x] `DOD-07` Padrões úteis, limitações e anti-padrões possuem evidência e não viram prescrição automática.
+- [x] `DOD-08` Recomendações indicam decisão futura, dependências e risco sem prioridade ou autorização.
+- [x] `DOD-09` Artefato não contém segredo, PII, payload real ou código legado copiado.
 - [ ] `DOD-10` Validators, guards e revisões documentais aplicáveis passam antes do closeout.
 
 ## Validation Steps
 
-- [ ] `VAL-01` Revalidar limpeza, branch, head, tree e ancestralidade do snapshot antes da execução. (rerun pending)
-- [ ] `VAL-02` Classificar alcance/supersessão e resolver schema efetivo apenas nas alegações persistence-backed — registrando `not_applicable` nas demais — antes da auditoria bidirecional `C-01..C-12`. (rerun pending)
-- [ ] `VAL-03` Executar todos os walkthroughs da matriz de invariantes, incluindo troca de transporte, replay/reordenação, falha/capability do provider e matriz de atores/operações. (rerun pending)
-- [ ] `VAL-04` Executar a rubrica de concorrência/performance com source evidence, invariant esperado e disposição explícita `pattern|limitation|anti_pattern|unknown`. (rerun pending)
-- [ ] `VAL-05` Revisar explicitamente segredos, PII, payloads e cópia indevida no diff final. (rerun pending)
+- [x] `VAL-01` Revalidar limpeza, branch, head, tree e ancestralidade do snapshot antes da execução.
+- [x] `VAL-02` Classificar alcance/supersessão e resolver schema efetivo apenas nas alegações persistence-backed — registrando `not_applicable` nas demais — antes da auditoria bidirecional `C-01..C-12`.
+- [x] `VAL-03` Executar todos os walkthroughs da matriz de invariantes, incluindo troca de transporte, replay/reordenação, falha/capability do provider e matriz de atores/operações.
+- [x] `VAL-04` Executar a rubrica de concorrência/performance com source evidence, invariant esperado e disposição explícita `pattern|limitation|anti_pattern|unknown`.
+- [x] `VAL-05` Revisar explicitamente segredos, PII, payloads e cópia indevida no diff final.
 - [ ] `VAL-06` Executar validador estrutural, `git diff --check` e guards de autoridade, diff, conclusão e closeout aplicáveis.
 
 ## Completion Evidence Matrix (Required Before Delivery Claim)
 
 | Criterion ID | Source Section | Criterion | Evidence Type | Evidence Artifact / Command | Runtime Target | Status | Notes |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| `SCOPE-01` | Scope | `SCOPE-01` Congelar um manifesto reprodutível do `whatsflow_v2` e registrar branch, commit, tree e superfícies admitidas. | doc+snapshot review | manifesto/E registry | read-only | pending | rerun pendente |
-| `SCOPE-02` | Scope | `SCOPE-02` Preencher o catálogo conceitual `C-01..C-12` e sua matriz única de cobertura, sem criar uma taxonomia canônica do produto. | doc+integrity review | matriz única | n/a | pending | rerun pendente |
-| `SCOPE-03` | Scope | `SCOPE-03` Produzir diagrama conceitual, cardinalidades, glossário comparativo, invariantes, estados e transições. | doc+review | modelo conceitual | n/a | pending | rerun pendente |
-| `SCOPE-04` | Scope | `SCOPE-04` Confrontar cada conceito com Mantenedora, Setor, BU, Canal, Conversa, Usuário e auditoria do LeadsHug. | doc+review | C-01..C-12/invariantes | n/a | pending | rerun pendente |
-| `SCOPE-05` | Scope | `SCOPE-05` Validar cenários de entrada, múltiplas BUs, fila livre, atribuição manual/automática, capacidade, transferência, SLA, automação/handoff e isolamento entre Mantenedoras. | scenario review | walkthrough/rubrica | n/a | pending | rerun pendente |
-| `SCOPE-06` | Scope | `SCOPE-06` Registrar padrões aproveitáveis, limitações, inconsistências e anti-padrões do legado. | doc+review | seção de disposições | n/a | pending | rerun pendente |
-| `SCOPE-07` | Scope | `SCOPE-07` Formular recomendações e decisões futuras sem atribuir prioridade ou autoridade de implementação. | doc+review | recomendações/future decisions | n/a | pending | rerun pendente |
-| `DOD-01` | Definition of Done | evidência operacional distingue call path atual e schema persistence-backed de artefato histórico/órfão | doc+review | artefato, manifesto/matriz | n/a | pending | correção de supersessão, schema e ausência requer rerun |
-| `DOD-02` | Definition of Done | matriz única cobre `C-01..C-12` | doc+integrity review | artefato, `#matriz-única-de-cobertura-c-01c-12` | n/a | pending | rerun 1:1 pendente |
-| `DOD-03` | Definition of Done | diagrama/glossário separam os conceitos | doc+review | artefato, `#modelo-conceitual-proposto-para-discussão-posterior` | n/a | pending | rerun pendente |
-| `DOD-04` | Definition of Done | cardinalidades/estados cobrem conflitos e unknowns | doc+review | artefato, modelo + C-01..C-12 | n/a | pending | rerun pendente |
-| `DOD-05` | Definition of Done | invariantes canônicos cobertos 1:1 | scenario review | artefato, `#walkthrough-11-dos-invariantes-já-canônicos` | n/a | pending | rerun pendente |
-| `DOD-06` | Definition of Done | rubrica concorrência/performance completa | scenario review | artefato, `#rubrica-de-concorrência-e-desempenho-documental` | n/a | pending | rerun pendente |
-| `DOD-07` | Definition of Done | patterns/limitations/anti-patterns fundamentados | doc+review | artefato, `#padrões-limitações-anti-padrões-e-incógnitas` | n/a | pending | rerun pendente |
-| `DOD-08` | Definition of Done | recomendações sem prioridade/autoridade | doc+review | artefato, `#recomendações-sem-priorização` | n/a | pending | rerun pendente |
-| `DOD-09` | Definition of Done | conteúdo sensível/cópia excluídos | scan+manual review | `rg` sanitizado + revisão do diff | Foundation diff | pending | scan/classificação rerun pendente |
+| `SCOPE-01` | Scope | `SCOPE-01` Congelar um manifesto reprodutível do `whatsflow_v2` e registrar branch, commit, tree e superfícies admitidas. | doc+snapshot review | manifesto/E-01..E-31; snapshot `3a36436`/tree `6befe605` | read-only | passed | TQA R8 e confirmação R6 limpas |
+| `SCOPE-02` | Scope | `SCOPE-02` Preencher o catálogo conceitual `C-01..C-12` e sua matriz única de cobertura, sem criar uma taxonomia canônica do produto. | doc+integrity review | matriz única `C-01..C-12` | n/a | passed | cobertura 1:1 confirmada em R8/R6 |
+| `SCOPE-03` | Scope | `SCOPE-03` Produzir diagrama conceitual, cardinalidades, glossário comparativo, invariantes, estados e transições. | doc+review | modelo conceitual | n/a | passed | confirmado em R8/R6 |
+| `SCOPE-04` | Scope | `SCOPE-04` Confrontar cada conceito com Mantenedora, Setor, BU, Canal, Conversa, Usuário e auditoria do LeadsHug. | doc+review | C-01..C-12/invariantes | n/a | passed | constraints preservadas; sem canonização |
+| `SCOPE-05` | Scope | `SCOPE-05` Validar cenários de entrada, múltiplas BUs, fila livre, atribuição manual/automática, capacidade, transferência, SLA, automação/handoff e isolamento entre Mantenedoras. | scenario review | walkthrough/rubrica | n/a | passed | cenários e limites revistos em R8/R6 |
+| `SCOPE-06` | Scope | `SCOPE-06` Registrar padrões aproveitáveis, limitações, inconsistências e anti-padrões do legado. | doc+review | seção de disposições | n/a | passed | fatos e recomendações permanecem separados |
+| `SCOPE-07` | Scope | `SCOPE-07` Formular recomendações e decisões futuras sem atribuir prioridade ou autoridade de implementação. | doc+review | recomendações/future decisions | n/a | passed | ST-04 permanece não autorizado |
+| `DOD-01` | Definition of Done | evidência operacional distingue call path atual e schema persistence-backed de artefato histórico/órfão | doc+review | artefato, manifesto/matriz | n/a | passed | R8/R6 confirmaram alcance, supersessão e limites |
+| `DOD-02` | Definition of Done | matriz única cobre `C-01..C-12` | doc+integrity review | artefato, `#matriz-única-de-cobertura-c-01c-12` | n/a | passed | cobertura 1:1 limpa |
+| `DOD-03` | Definition of Done | diagrama/glossário separam os conceitos | doc+review | artefato, `#modelo-conceitual-proposto-para-discussão-posterior` | n/a | passed | conceitos separados |
+| `DOD-04` | Definition of Done | cardinalidades/estados cobrem conflitos e unknowns | doc+review | artefato, modelo + C-01..C-12 | n/a | passed | unknowns preservados |
+| `DOD-05` | Definition of Done | invariantes canônicos cobertos 1:1 | scenario review | artefato, `#walkthrough-11-dos-invariantes-já-canônicos` | n/a | passed | walkthrough 1:1 revisto |
+| `DOD-06` | Definition of Done | rubrica concorrência/performance completa | scenario review | artefato, `#rubrica-de-concorrência-e-desempenho-documental` | n/a | passed | rubrica completa, sem claim runtime |
+| `DOD-07` | Definition of Done | patterns/limitations/anti-patterns fundamentados | doc+review | artefato, `#padrões-limitações-anti-padrões-e-incógnitas` | n/a | passed | disposições rastreáveis |
+| `DOD-08` | Definition of Done | recomendações sem prioridade/autoridade | doc+review | artefato, `#recomendações-sem-priorização` | n/a | passed | nenhuma prioridade/autoridade criada |
+| `DOD-09` | Definition of Done | conteúdo sensível/cópia excluídos | scan+manual review | `rg` sanitizado + revisão do diff | Foundation diff | passed | nenhum segredo, PII, payload ou código copiado |
 | `DOD-10` | Definition of Done | gates documentais passam | guard+review | validator/guards/reviews | Foundation | pending | closeout não executado |
-| `VAL-01` | Validation Steps | snapshot revalidado | command | `git status/rev-parse/rev-list` local | frozen reference | pending | objetos locais confirmados; frescura remota e rerun pendentes |
-| `VAL-02` | Validation Steps | alcance/supersessão e schema aplicável resolvidos antes da auditoria bidirecional | command+review | artefato, manifesto + matriz C-01..C-12 | read-only | pending | E-17/E-18 e novo alcance exigem rerun |
-| `VAL-03` | Validation Steps | walkthroughs dos invariantes | scenario review | artefato, walkthrough 1:1 | n/a | pending | rerun pendente |
-| `VAL-04` | Validation Steps | rubrica operacional | scenario review | artefato, rubrica documental | n/a | pending | rerun pendente |
-| `VAL-05` | Validation Steps | revisão sensível/cópia | scan+manual review | `rg` sanitizado + `git diff --check` | Foundation diff | pending | scan/classificação rerun pendente |
+| `VAL-01` | Validation Steps | snapshot revalidado | command | `git status/rev-parse/rev-list` local | frozen reference | passed | `stage@3a36436`, tree `6befe605`, clean e `origin/stage` local igual; frescura remota não alegada |
+| `VAL-02` | Validation Steps | alcance/supersessão e schema aplicável resolvidos antes da auditoria bidirecional | command+review | artefato, manifesto + matriz C-01..C-12 | read-only | passed | E-01..E-31/E-NF-01 revistos em R8/R6 |
+| `VAL-03` | Validation Steps | walkthroughs dos invariantes | scenario review | artefato, walkthrough 1:1 | n/a | passed | cenários positivos/negativos revistos |
+| `VAL-04` | Validation Steps | rubrica operacional | scenario review | artefato, rubrica documental | n/a | passed | análise documental concluída |
+| `VAL-05` | Validation Steps | revisão sensível/cópia | scan+manual review | `rg` sanitizado + `git diff --check` | Foundation diff | passed | scan e revisão manual limpos |
 | `VAL-06` | Validation Steps | validators/guards | command | exact command outputs | Foundation | pending | rerun pendente; não é closeout |
 
 ## External Dependency Readiness (Required When External Systems Matter)
@@ -403,10 +403,10 @@ As lanes runtime `pcv-1` continuam `not_needed`; os itens abaixo são requisitos
 
 ### Local CI-Equivalent Suite Matrix
 
-| Repository / CI Surface | Why In Scope | Behavior / Scenario Covered | Fixture / Preconditions | Local CI-Equivalent Command | Required Before | Status | Evidence Artifact / Command | Notes |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| Foundation lifecycle | TODO/análise/backlog/brief | estrutura e referências válidas | Foundation checkout | `python3 foundation_documentation/deterministic/validate_foundation_lifecycle.py --root foundation_documentation` | delivery | pending | rerun desta onda pendente | validação documental apenas |
-| Markdown/git hygiene | documentação | diff bem formado | Foundation checkout | `git -C foundation_documentation diff --check` | delivery | pending | rerun desta onda pendente | sem testes de produto |
+| Repository / CI Surface | Why In Scope | Local CI-Equivalent Command | Required Before | Status | Evidence Artifact / Command | Notes |
+| --- | --- | --- | --- | --- | --- | --- |
+| Foundation lifecycle | TODO/análise/backlog/brief | `python3 foundation_documentation/deterministic/validate_foundation_lifecycle.py --root foundation_documentation` | delivery | passed | execução local limpa antes do final review; rerun obrigatório após closeout | estrutura e referências válidas; validação documental apenas |
+| Markdown/git hygiene | documentação | `git -C foundation_documentation diff --check f2a1ad88..HEAD` e working tree | delivery | passed | ambos sem diagnóstico | diff bem formado; sem testes de produto |
 
 ### Runtime / Rollout Notes
 
@@ -630,36 +630,42 @@ As fontes abaixo foram recarregadas após `APROVADO` e vinculadas ao escopo docu
 
 | Reviewer Surface / Package | Review Focus | Status | Evidence Artifact / Command | Findings | Resolution / Notes |
 | --- | --- | --- | --- | --- | --- |
-| ST-03 documentary checkpoint | correctness/contract and CI/evidence integrity | pending | próximo checkpoint commit ainda inexistente; pacote = TODO + estudo + diff | P1/P2 abaixo | required before final review |
+| ST-03 documentary checkpoint | correctness/contract and CI/evidence integrity | passed | pacote R6: `HEAD=3a4819e2`, conteúdo `d1167a30`, base `f2a1ad88`, diff SHA-256 `4f409805de2928c1bb344a56c7f28fe996a70a9f465b03de43cef80f8ce8fa05` | `clean/no_material_findings`; `release_blocker: no` | TQA R8 limpa e confirmação factual R6 limpa |
 
 ## Promotion Finding Routing Ledger
 
 | Finding ID | Severity | Classification | Routing Decision | Same TODO / Split Rationale | Status | Approval / Follow-up Reference |
 | --- | --- | --- | --- | --- | --- | --- |
-| `ST03-TQA-001` | high | release-blocker | mesmo TODO | evidência congelada | integrated / pending re-review | audit 1:1 |
-| `ST03-TQA-002` | medium | release-blocker | mesmo TODO | cenários C-04 | integrated / pending re-review | audit 1:1 |
-| `ST03-TQA-R2-001` | high | release-blocker | mesmo TODO | persistência/atomicidade | integrated / pending re-review | audit 1:1 |
-| `ST03-TQA-R2-002` | high | release-blocker | mesmo TODO | provider e corpus | integrated / pending re-review | audit 1:1 |
-| `ST03-TQA-R3-001` | medium | release-blocker | mesmo TODO | status/configuração | integrated / pending re-review | audit 1:1 |
-| `ST03-TQA-R5-001` | high | release-blocker | mesmo TODO | matriz/ACL | integrated / pending re-review | audit 1:1 |
-| `ST03-TQA-R5-002` | medium | release-blocker | mesmo TODO | SLA | integrated / pending re-review | audit 1:1 |
-| `ST03-TQA-R5-003` | high | release-blocker | mesmo TODO | cobertura | integrated / pending re-review | audit 1:1 |
-| `ST03-TQA-R5-004` | medium | release-blocker | mesmo TODO | hygiene | integrated / pending re-review | audit 1:1 |
-| `ST03-TQA-R6-001` | high | release-blocker | mesmo TODO | schema | integrated / pending re-review | audit 1:1 |
-| `ST03-TQA-R6-002` | high | release-blocker | mesmo TODO | inventário | integrated / pending re-review | audit 1:1 |
-| `ST03-TQA-R6-003` | medium | release-blocker | mesmo TODO | elegibilidade | integrated / pending re-review | audit 1:1 |
-| `ST03-TQA-R6-004` | high | release-blocker | mesmo TODO | reachability | integrated / pending re-review | audit 1:1 |
-| `ST03-TQA-R6-005` | medium | release-blocker | mesmo TODO | proveniência | integrated / pending re-review | audit 1:1 |
-| `ST03-R3B-001` | high | release-blocker | mesmo TODO | inventário | integrated / pending re-review | audit 1:1 |
-| `ST03-R3B-002` | medium | release-blocker | mesmo TODO | Scope matrix | integrated / pending re-review | audit 1:1 |
-| `ST03-R3B-003` | medium | release-blocker | mesmo TODO | checkpoint | integrated / pending re-review | audit 1:1 |
+| `ST03-TQA-001` | high | release-blocker | mesmo TODO | evidência congelada | closed / verified | TQA R8 |
+| `ST03-TQA-002` | medium | release-blocker | mesmo TODO | cenários C-04 | closed / verified | TQA R8 |
+| `ST03-TQA-R2-001` | high | release-blocker | mesmo TODO | persistência/atomicidade | closed / verified | TQA R8 |
+| `ST03-TQA-R2-002` | high | release-blocker | mesmo TODO | provider e corpus | closed / verified | TQA R8 |
+| `ST03-TQA-R3-001` | medium | release-blocker | mesmo TODO | status/configuração | closed / verified | TQA R8 |
+| `ST03-TQA-R5-001` | high | release-blocker | mesmo TODO | matriz/ACL | closed / verified | TQA R8 |
+| `ST03-TQA-R5-002` | medium | release-blocker | mesmo TODO | SLA | closed / verified | TQA R8 |
+| `ST03-TQA-R5-003` | high | release-blocker | mesmo TODO | cobertura | closed / verified | TQA R8 |
+| `ST03-TQA-R5-004` | medium | release-blocker | mesmo TODO | hygiene | closed / verified | TQA R8 |
+| `ST03-TQA-R6-001` | high | release-blocker | mesmo TODO | schema | closed / verified | TQA R8 |
+| `ST03-TQA-R6-002` | high | release-blocker | mesmo TODO | inventário | closed / verified | TQA R8 |
+| `ST03-TQA-R6-003` | medium | release-blocker | mesmo TODO | elegibilidade | closed / verified | TQA R8 |
+| `ST03-TQA-R6-004` | high | release-blocker | mesmo TODO | reachability | closed / verified | TQA R8 |
+| `ST03-TQA-R6-005` | medium | release-blocker | mesmo TODO | proveniência | closed / verified | TQA R8 |
+| `ST03-R3B-001` | high | release-blocker | mesmo TODO | inventário | closed / verified | TQA R8 |
+| `ST03-R3B-002` | medium | release-blocker | mesmo TODO | Scope matrix | closed / verified | TQA R8 |
+| `ST03-R3B-003` | medium | release-blocker | mesmo TODO | checkpoint | closed / verified | TQA R8 |
+| `ST03-TQA-R7-001` | high | release-blocker | mesmo TODO | limite de prova de ausência | closed / verified | TQA R8 |
+| `ST03-TQA-R7-002` | medium | release-blocker | mesmo TODO | semântica de falha no ingresso | closed / verified | TQA R8 |
+| `ST03-TQA-R7-003` | high | release-blocker | mesmo TODO | proveniência do checkpoint | closed / verified | TQA R8 |
+| `ST03-CONF-R5-001` | high | release-blocker | mesmo TODO | manifesto omitia funções serverless admitidas | closed / verified | confirmação R6 |
+| `ST03-CONF-R5-002` | medium | release-blocker | mesmo TODO | intervalos E-04/E-19 incompletos | closed / verified | confirmação R6 |
+| `ST03-CONF-R5-003` | medium | release-blocker | mesmo TODO | retry do provider confundido com recuperação interna | closed / verified | confirmação R6 |
 
 ## Rule-Spirit Anti-Pattern Hunt
 
 | Rule / Principle Surface | Bypass or Anti-Pattern Search Lens | Status | Evidence Artifact / Command | Findings | Resolution / Notes |
 | --- | --- | --- | --- | --- | --- |
-| TODO authority and read-only legacy boundary | hidden canonization, copied legacy code/data, product or legacy mutation | pending | final diff + legacy status | pending | execute after P1/P2 sweep |
-| Evidence contract | static presence presented as runtime, unresolved supersession, broad absence claims | pending | C/E matrix and TQA R4 | pending | execute after P1/P2 sweep |
+| TODO authority and read-only legacy boundary | hidden canonization, copied legacy code/data, product or legacy mutation | passed | Foundation diff + legacy `stage@3a36436` clean | none | somente TODO/artefato/handoff factual mudaram; produto, cânone e legado intactos |
+| Evidence contract | static presence presented as runtime, unresolved supersession, broad absence claims | passed | matriz C/E, TQA R8 e confirmação R6 | none | runtime/schema/teste/histórico permanecem qualificados; ausência não é alegada além da inspeção limitada |
 
 ## Security Risk Assessment
 
@@ -688,41 +694,44 @@ As fontes abaixo foram recarregadas após `APROVADO` e vinculadas ao escopo docu
 
 ## Verification Debt Assessment
 
-- **Audit outcome:** `pending required audit`
-- **Why this outcome:** o audit floor exige `verification-debt-audit` antes de concluir um TODO medium.
+- **Audit outcome:** `none / no material verification debt`
+- **Why this outcome:** a execução heurística inicialmente sinalizou `high/cleanup-required` por vocabulário de governança (`TODO`), estados deliberadamente pendentes antes do closeout e `n/a`; a adjudicação manual após TQA R8 e confirmação R6 não encontrou dívida de verificação material.
 - **Inline code TODO debt:** `none`
-- **Evidence / audit artifact:** `pending`
-- **Accepted residual debt:** `none yet`
+- **Evidence / audit artifact:** `verification_debt_audit.sh --repo . --todo ... --scan-git-modified`; matriz por critério, TQA R8 e confirmação R6; nenhum TODO inline de código ou evidência estável fora da autoridade.
+- **Accepted residual debt:** `none`; não há waiver.
 
 ## Independent Test Quality Audit Gate
 
 - **Audit decision:** `recommended`
 - **Why this decision:** validação documental não altera testes, mas a complexidade medium recomenda auditoria focada da qualidade das evidências.
-- **Audit status:** `running`
+- **Audit status:** `passed`
 - **Audit focus:** eficácia da validação documental e rastreabilidade dos cenários.
 - **Findings received:** `ST03-TQA-001`, `ST03-TQA-002`, `ST03-TQA-R2-001`, `ST03-TQA-R2-002`, `ST03-TQA-R3-001`, `ST03-TQA-R5-001..004`, `ST03-TQA-R6-001..005` e `ST03-R3B-001..003`.
-- **Rerun status:** `pending`; a correção posterior invalida o clean anterior.
+- **Rerun status:** `passed`; R8 retornou `clean/no_material_findings` e `release_blocker: false`; a confirmação factual R6, executada depois das últimas correções, retornou `clean/no_material_findings` e `release_blocker: no`.
 - **Embedded R4 result (historical, non-green now):** reviewer `/root/st03_test_quality_reaudit_r4`; pacote/checkpoint então revisado: TODO+estudo antes desta onda; resultado `clean/no_material_findings`; verificação 1:1 cobriu `ST03-TQA-001`, `002`, `R2-001`, `R2-002`, `R3-001`. Este resultado não é evidência da onda atual e não depende de dispatch externo.
 
 | Finding ID | Evidence | Resolution integrated | Status |
 | --- | --- | --- | --- |
-| `ST03-TQA-001` | Cada linha C-01..C-12 precisava de referência congelada exata, e ausências precisavam registrar busca/escopo reproduzível. | Registro E e E-NF-01 ampliados e classificados; esta onda requer rerun. | integrated / pending re-review |
-| `ST03-TQA-002` | C-04 não distinguia cenário positivo de negativo para unidade/equipe. | C-04 preserva os cenários de constraint; esta onda requer rerun. | integrated / pending re-review |
-| `ST03-TQA-R2-001` | Persistência estática não pode parecer prova runtime/atômica. | E-06, E-13, E-23/E-28a e C-08..C-12 separam write, schema parcial e ausência de CAS/atomicidade. | integrated / pending re-review |
-| `ST03-TQA-R2-002` | Ausência de capacidade não pode incluir provider-presence, nem busca admitir corpus bruto. | E-11/E-12 e E-NF-01 distinguem provider, atendente e corpus sanitizado/classificado. | integrated / pending re-review |
-| `ST03-TQA-R3-001` | Status/configuração não demonstram scheduler, CAS, reserva, grant ou freshness. | E-14..E-16/E-NF-01 e C-07/C-08 mantêm essas lacunas explícitas. | integrated / pending re-review |
-| `ST03-TQA-R5-001` | Matriz ator×operação não pode inferir allow/deny e deve registrar fail-open legado. | Cada papel/operação ficou `future_decision/unknown`; E-22 registra o filtro fail-open de UI. | findings_integrated / pending rerun |
-| `ST03-TQA-R5-002` | Call paths e posição de performance do SLA estavam incompletos. | E-24..E-26 separam RPC da conversa selecionada, cálculo local/lista e caminho retirado. | findings_integrated / pending rerun |
-| `ST03-TQA-R5-003` | Protocolo de ausência e cobertura operacional eram estreitos. | E-27..E-29 registram autoassign/reopen/spread; E-NF-01 foi reduzido a inventário sem claim de ausência. | findings_integrated / pending rerun |
-| `ST03-TQA-R5-004` | Hygiene/identidade/statuses. | checkpoint, comandos e gates pending foram atualizados. | findings_integrated / pending rerun |
-| `ST03-TQA-R6-001` | Schema claim-specific incompleto. | E-30/E-31 adicionados como effective_schema estático, sem promover runtime/auth. | findings_integrated / pending rerun |
-| `ST03-TQA-R6-002` | Busca não é prova fail-closed de ausência. | E-NF-01 virou inventário limitado; lacunas `unknown after bounded inspection`. | findings_integrated / pending rerun |
-| `ST03-TQA-R6-003` | Cenários positivos introduziam autorização não canônica. | C-04 registra apenas condições necessárias; role×operação permanece future decision. | findings_integrated / pending rerun |
-| `ST03-TQA-R6-004` | Reachability/failure semantics incompletas. | E-28a/b separam reopen ativo de claimed_at órfão; E-23/C-10 registram divergência; C-11 limita SLA tenant-era. | findings_integrated / pending rerun |
-| `ST03-TQA-R6-005` | Proveniência stale e R5 sem rastreio 1:1. | content checkpoint `d1167a30`, hash `4e850215...` e R5-001..004 separados nesta tabela. | findings_integrated / pending rerun |
-| `ST03-R3B-001` | Protocolo de ausência não fechava sobre o corpus. | E-NF-01 não faz mais claim de ausência; lacunas permanecem unknown. | findings_integrated / pending rerun |
-| `ST03-R3B-002` | Completion Matrix não cobria os sete itens de Scope. | SCOPE-01..07 e linhas 1:1 pending foram adicionados. | findings_integrated / pending rerun |
-| `ST03-R3B-003` | TODO/comandos apontavam checkpoint anterior. | content checkpoint `d1167a30` e hash `4e850215...` registrados; metadado posterior será coberto pelo pacote final. | findings_integrated / pending rerun |
+| `ST03-TQA-001` | Cada linha C-01..C-12 precisava de referência congelada exata, e ausências precisavam registrar busca/escopo reproduzível. | Registro E e E-NF-01 ampliados e classificados. | verified resolved in R8 |
+| `ST03-TQA-002` | C-04 não distinguia cenário positivo de negativo para unidade/equipe. | C-04 preserva os cenários de constraint. | verified resolved in R8 |
+| `ST03-TQA-R2-001` | Persistência estática não pode parecer prova runtime/atômica. | E-06, E-13, E-23/E-28a e C-08..C-12 separam write, schema parcial e ausência de CAS/atomicidade. | verified resolved in R8 |
+| `ST03-TQA-R2-002` | Ausência de capacidade não pode incluir provider-presence, nem busca admitir corpus bruto. | E-11/E-12 e E-NF-01 distinguem provider, atendente e corpus sanitizado/classificado. | verified resolved in R8 |
+| `ST03-TQA-R3-001` | Status/configuração não demonstram scheduler, CAS, reserva, grant ou freshness. | E-14..E-16/E-NF-01 e C-07/C-08 mantêm essas lacunas explícitas. | verified resolved in R8 |
+| `ST03-TQA-R5-001` | Matriz ator×operação não pode inferir allow/deny e deve registrar fail-open legado. | Cada papel/operação ficou `future_decision/unknown`; E-22 registra o filtro fail-open de UI. | verified resolved in R8 |
+| `ST03-TQA-R5-002` | Call paths e posição de performance do SLA estavam incompletos. | E-24..E-26 separam RPC da conversa selecionada, cálculo local/lista e caminho retirado. | verified resolved in R8 |
+| `ST03-TQA-R5-003` | Protocolo de ausência e cobertura operacional eram estreitos. | E-27..E-29 registram autoassign/reopen/spread; E-NF-01 foi reduzido a inventário sem claim de ausência. | verified resolved in R8 |
+| `ST03-TQA-R5-004` | Hygiene/identidade/statuses. | checkpoint, comandos e gates foram atualizados. | verified resolved in R8 |
+| `ST03-TQA-R6-001` | Schema claim-specific incompleto. | E-30/E-31 adicionados como effective_schema estático, sem promover runtime/auth. | verified resolved in R8 |
+| `ST03-TQA-R6-002` | Busca não é prova fail-closed de ausência. | E-NF-01 virou inventário limitado; lacunas `unknown after bounded inspection`. | verified resolved in R8 |
+| `ST03-TQA-R6-003` | Cenários positivos introduziam autorização não canônica. | C-04 registra apenas condições necessárias; role×operação permanece future decision. | verified resolved in R8 |
+| `ST03-TQA-R6-004` | Reachability/failure semantics incompletas. | E-28a/b separam reopen ativo de claimed_at órfão; E-23/C-10 registram divergência; C-11 limita SLA tenant-era. | verified resolved in R8 |
+| `ST03-TQA-R6-005` | Proveniência stale e R5 sem rastreio 1:1. | checkpoints e findings foram individualizados. | verified resolved in R8 |
+| `ST03-R3B-001` | Protocolo de ausência não fechava sobre o corpus. | E-NF-01 não faz claim de ausência; lacunas permanecem unknown. | verified resolved in R8 |
+| `ST03-R3B-002` | Completion Matrix não cobria os sete itens de Scope. | SCOPE-01..07 foram adicionados 1:1. | verified resolved in R8 |
+| `ST03-R3B-003` | TODO/comandos apontavam checkpoint anterior. | checkpoint `3a4819e2` e hash final de conteúdo registrados. | verified resolved in R8 |
+| `ST03-TQA-R7-001` | O limite de prova de ausência ainda estava inconsistente. | E-NF-01 ficou estritamente como inventário limitado, sem ausência global. | verified resolved in R8 |
+| `ST03-TQA-R7-002` | Retry do provider e durabilidade/recuperação interna estavam misturados. | E-19/E-20 e C-03 separam supressão de retry externo de recuperação interna desconhecida. | verified resolved in R8 |
+| `ST03-TQA-R7-003` | Proveniência do pacote estava desatualizada. | pacote R6 registra HEAD, checkpoint substantivo, base e hash exatos. | verified resolved in R8 |
 
 ## Independent No-Context Final Review Gate
 
@@ -739,8 +748,8 @@ As fontes abaixo foram recarregadas após `APROVADO` e vinculadas ao escopo docu
 
 ## Module Consolidation Gate
 
-- [ ] Confirmar no closeout que ST-03 não alterou módulos canônicos.
-- [ ] Registrar no backlog/feature brief apenas o handoff factual para ST-04.
+- [x] Confirmar no closeout que ST-03 não alterou módulos canônicos.
+- [x] Registrar no backlog/feature brief apenas o handoff factual para ST-04.
 - [ ] Mover o TODO para `completed/features/` somente após evidências e guards.
 
 ## TODO Closeout Disposition

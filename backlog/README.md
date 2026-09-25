@@ -12,8 +12,7 @@ Each new record carries an immutable ID, title, state, source/evidence, value/ri
 
 | Immutable ID | Title | State | Source / evidence | Value / risk | Dependencies | Disposition owner | Next gate |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| BLG-whatsflow-channel-attendance-study | whatsflow_v2 channel and attendance study (ST-03) | Selected-for-Planning | [active planning TODO](../todos/active/features/TODO-leadshug-whatsflow-channel-attendance-study.md) | clarify attendance concepts without importing legacy debt or vocabulary collisions | critique, human revalidations and pre-approval guards converged; no canonization | strategic steward | obtain APROVADO for documentary execution |
-| BLG-leadshug-evolution-synthesis | LeadsHug evolution synthesis (ST-04) | Deferred | [pre-code evolution brief](../artifacts/feature-briefs/leadshug-pre-code-evolution-program-20260918.md) | synthesize evidence only after both independent studies; early synthesis risks false priority | ST-02 delivered; ST-03 pending | strategic steward | reassess after ST-03 concludes |
+| BLG-leadshug-evolution-synthesis | LeadsHug evolution synthesis (ST-04) | Deferred | [pre-code evolution brief](../artifacts/feature-briefs/leadshug-pre-code-evolution-program-20260918.md) | synthesize evidence only after both independent studies; early synthesis risks false priority | ST-01/ST-02 completed; ST-03 content complete and in closeout | strategic steward | select for planning only after ST-03 closeout; no implementation or prioritization is authorized |
 
 The IDs above are references for future planning; their live disposition and next gate remain only in this table.
 
@@ -22,3 +21,4 @@ The IDs above are references for future planning; their live disposition and nex
 | Immutable ID | Fulfilled by | Evidence | Downstream use |
 | --- | --- | --- | --- |
 | BLG-central-whatsapp-capability-study | [completed ST-02 TODO](../todos/completed/features/TODO-leadshug-central-whatsapp-capability-study.md) | [27-capability catalog and 204-unit ledger](../artifacts/analysis/leadshug-central-whatsapp-capability-gap-catalog-20260925.md) | input to ST-04 after ST-03; no capability is prioritized or authorized by this handoff |
+| BLG-whatsflow-channel-attendance-study | [ST-03 TODO em closeout](../todos/active/features/TODO-leadshug-whatsflow-channel-attendance-study.md) | [conceptual channel and attendance model](../artifacts/analysis/leadshug-whatsflow-channel-attendance-conceptual-model-20260925.md) | conteúdo concluído e em final review; input para ST-04 somente após o closeout, sem autorização de produto |
