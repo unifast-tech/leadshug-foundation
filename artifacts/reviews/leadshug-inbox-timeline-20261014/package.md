@@ -33,3 +33,11 @@ Retornar achados concretos com severidade, locus, cenário e correção mínima;
 ## Integração para crítica final
 
 ARCH-TL-01..06 foram integrados no contrato e no plano do TODO. A opção escolhida é cursor anterior scoped com modo read-neutral, marcação atômica antes da query, fronteira inteira de timestamp, três queries por rodada, callback de reconexão/poll, separação de cursores/metadados/draft, EXPLAIN obrigatório e fixtures negativas distintas. Leia architecture-review.json e Issue Cards; não reabra preferência por depois sem apontar risco concreto novo. A crítica deve testar logicamente a integração e reportar quaisquer bloqueios restantes; nenhuma implementação/teste de aplicação é reivindicada.
+
+## Delta de resolução ARCH-TL-03
+
+A crítica inicial (critique-round-1.json) encerrou os outros cinco achados no nível de planejamento e reabriu ARCH-TL-03 com contraprova H=20/T=10/limite=2: ID 450 entra atrás de cursor 400, enquanto a coleção já recebeu H; recapturar T=H omite 450. O contrato atualizado conserva o piso pendente original T entre rodadas, retry e passagens dirty/coalescidas; só promove após atravessar T sem trabalho concorrente pendente. VAL-05 e Flow Evidence exigem a contraprova combinada e comparação de IDs completos.
+
+Fonte adicional explicitamente admitida para A-03: api-app/src/surfaces/public/conversations.controller.ts, método messages; confirmar query própria de mensagens sem chamada thread. API pública continua fora do diff de implementação.
+
+Revisão delta deve verificar a correção do piso e A-03, preservar o rubric completo do dispatch e os achados encerrados salvo nova evidência concreta. O TODO completo e as fontes originalmente admitidas permanecem disponíveis.

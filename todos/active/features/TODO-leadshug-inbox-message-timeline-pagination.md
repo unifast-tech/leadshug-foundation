@@ -80,7 +80,9 @@ Este rascunho define o primeiro recorte proposto. Alterações em contrato, auto
 
 - Manter somente a coleção da conversa ativa por ID; liberar contexto/páginas quando BU/conversa mudar. O cursor histórico pertence ao backfill e não é substituído pelo cursor da página recente de um refresh.
 - Na atualização, capturar uma fronteira fixa T igual ao timestamp da mensagem mais recente conhecida antes da passagem. Buscar página recente sem marcar leitura e caminhar para trás até alcançar timestamp estritamente menor que T, ou esgotar mensagens. Incluir integralmente o grupo empatado em T; encontrar um ID conhecido não encerra a recuperação.
-- Se a coleção ainda é vazia, atualização funciona como página inicial sem efeito de leitura. Inserções concorrentes durante a passagem sinalizam uma nova passagem coalescida; não reiniciar a caminhada a cada evento. A recuperação cobre inserções novas, incluindo IDs menores no timestamp T; importação/backdating de histórico permanece fora deste recorte.
+- Se a coleção ainda é vazia, atualização funciona como página inicial sem efeito de leitura. Separar o piso de cobertura confirmado do maior timestamp mesclado. A recuperação captura um piso pendente T e toda passagem coalescida/retomada/retry conserva esse piso original, mesmo quando a cabeça já avançou para H maior que T.
+- Evento durante a recuperação marca uma nova passagem necessária desde a página recente, ainda com o piso pendente T; terminar a caminhada atual não confirma cobertura. Só promover o piso confirmado quando uma passagem atravessar todo T sem evento/trabalho concorrente pendente. Se houver dirty/pending, conservar T e a indicação de atualização, com o mesmo orçamento de três queries por rodada. Não promover pelo máximo da coleção nem por um poll enquanto houver recuperação pendente.
+- A recuperação cobre inserções novas, incluindo ID menor em T atrás de um cursor já percorrido. Importação/backdating de histórico fora do grupo de cobertura permanece fora deste recorte. Mensagens mais recentes mescladas não eliminam essa prova de continuidade.
 - Recuperação tem cursor/progresso próprios e uma única passagem em voo por contexto. Cada rodada executa no máximo três queries de página, separadas e bounded; uma rodada incompleta mantém indicação visível de atualização/lacuna e cursor para `Continuar atualização`/retry. Novo evento não reinicia seu orçamento; polling pode retomar a rodada pendente. Não afirmar continuidade até cruzar toda a fronteira.
 - Disparadores: evento de mensagem coalescido, socket restabelecido sem depender de outro evento, pós-ação e poll da thread selecionada a cada 60 segundos. Registrar callback de conexão no helper existente; preservar seus consumidores.
 - Backfill altera somente coleção e cursor histórico. Metadados conversa/janela só são aplicados pela leitura atual com versão/frescor adequado; uma página anterior atrasada não desfaz close, troca de status ou atualização de janela.
@@ -199,7 +201,7 @@ Ajustes locais de cursor, queries, mesclagem e CSS podem permanecer neste objeti
 - [ ] VAL-02: no runner Linux Node 22 da API: npm ci; npm run prisma:generate; npm run lint; npm run build; npm test; npm run test:e2e.
 - [ ] VAL-03: fixture base com 251 mensagens, empates maiores que uma página e duas conversas na BU autorizada; outra BU da mesma Mantenedora sem grant; outra Mantenedora/BU. Caminhar páginas, comparar todos os IDs e verificar 400 para cursor alheio em conversa autorizada, 404 antes de validar query em recurso inacessível e ausência de efeitos indevidos.
 - [ ] VAL-04: no runner da Web: npm ci; npm run build; npm test; npm run test:tela; backend real fresco e mesmo DB dedicado via LEADSHUG_E2E_DATABASE_URL.
-- [ ] VAL-05: browser abre recente/carrega anteriores, envia com autoria persistida, recebe evento real do backend, executa close em paralelo com backfill e troca conversa/BU durante envio e request atrasado. Atrasar resposta real, sem fabricar payload BFF. Provar reconexão sem evento posterior, burst acima de 100, grupo empatado e ID menor inserido depois; mais de três páginas mantém estado de recuperação e retoma sem lacuna.
+- [ ] VAL-05: browser abre recente/carrega anteriores, envia com autoria persistida, recebe evento real do backend, executa close em paralelo com backfill e troca conversa/BU durante envio e request atrasado. Atrasar resposta real, sem fabricar payload BFF. Provar reconexão sem evento posterior, burst acima de 100, grupo empatado e ID menor inserido depois; mais de três páginas mantém estado de recuperação e retoma sem lacuna. Combinar H>T, passagem já atrás de parte do grupo T, inserção de ID menor atrás do cursor, evento durante a caminhada e passagem coalescida com o mesmo piso T; comparar IDs completos após cobertura confirmada.
 - [ ] VAL-06: sempre capturar EXPLAIN representativo da query recente, profunda e com grande grupo empatado, registrando SQL, linhas examinadas/ordenadas e decisão de índice. Se criado índice, executar migrate deploy no DB dedicado.
 - [ ] VAL-07: cumprir revisões/guardas exigidos, incluindo aderência arquitetural, qualidade de testes, segurança, performance, dívida de verificação e review final, antes do closeout.
 - [ ] VAL-08: PostgreSQL/browser verificam não lidas: abertura atômica, IN posterior à marcação, backfill/refresh/reconexão read-neutral e entrada concorrente à abertura. Testar também nenhuma escrita quando autorização/query falha.
@@ -266,7 +268,7 @@ Proposta técnica consolidada após ARCH-TL-01..06, submetida à aprovação hum
 - Primeiro recorte BFF de mensagens na inbox; API pública, Consultar e demais stories ficam fora.
 - Cursor anterior scoped, ordem createdAt/id, padrão 50 e teto 100. Não acrescentar cursor depois: ele não elimina a necessidade de sobreposição em timestamps empatados.
 - Marcação atômica antes da consulta somente na abertura humana; refresh/backfill/recuperação são explicitamente read-neutral.
-- Recuperação cruza integralmente o timestamp da fronteira, com três queries por rodada, progresso/retry explícitos e disparo por reconexão/poll.
+- Recuperação cruza integralmente o piso pendente de timestamp, preservado entre passagens coalescidas/retomadas/retry até cobertura sem trabalho concorrente; três queries por rodada, progresso/retry e reconexão/poll.
 - Coleção por conversa, cursor de histórico separado do progresso de recuperação e versionamento local de metadados/efeitos; não criar framework ou cache de todas as conversas.
 - Backend real, PostgreSQL descartável e providers fake somente nas portas externas; query plan obrigatório mesmo sem índice novo.
 - Foundation main; código em branches locais com single writer; sem worktrees, deploy ou mensagens externas reais.
@@ -347,7 +349,7 @@ Proposta técnica congelada para crítica em 2026-10-14 após integração ARCH-
 
 ## Questions To Close
 
-Aprovação humana única do contrato final após revisão. Questões de transferência, mídia e status continuam nas stories posteriores; não serão resolvidas por esta implementação.
+Aprovação humana única do contrato final após crítica convergida; reabertura ARCH-TL-03 foi integrada no mesmo recorte e será verificada no delta. Questões de transferência, mídia e status continuam nas stories posteriores; não serão resolvidas por esta implementação.
 
 ## Pattern References (Optional; Enforced When Cited)
 
@@ -381,7 +383,7 @@ n/a; nenhum ID de pattern é reivindicado.
 | Abrir/carregar anteriores | 251 mensagens | browser recente, scroll, alcançar primeira e última | empates, página vazia, cursor inválido |
 | Enviar/atualizar | Histórico anterior carregado e canal fake | backend persiste e UI mantém coleção | resposta/evento repetido não duplica ID |
 | Reconectar sem evento posterior | Burst acima de 100 e socket cortado | backend persiste; callback/poll recupera IDs completos | nenhuma mensagem extra para disparar a recuperação |
-| Timestamps empatados | Mais de uma página em T, ID menor inserido depois | atravessar integralmente o grupo empatado | inserção durante caminhada; mais de três páginas retoma progresso |
+| Timestamps empatados | Cabeça H>T, grupo T maior que página, ID menor inserido atrás do cursor | Passagem coalescida conserva T e recupera todos os IDs | dirty durante caminhada e mais de três páginas não promovem piso prematuramente |
 | Não lidas | IN antes/depois da abertura atômica | readback no PostgreSQL; background preserva contador | autorização/query inválida não escreve |
 | Mesmo contexto em paralelo | Backfill atrasado e close/envio/refresh | cursor histórico e metadados/draft atuais preservados | resposta real atrasada não restaura estado |
 | Trocar conversa/BU | Duas conversas e dois tenants | browser seleciona destino e conserva contexto | resposta antiga atrasada não substitui destino; sem grant falha |
@@ -419,7 +421,7 @@ Backend de validação e Playwright usam o mesmo banco dedicado. Falta de runner
 | --- | --- | --- | --- | --- |
 | ARCH-TL-01 | high | Background zera não lidas; select/reset perde entrada concorrente | marcarLida=false e abertura atômica antes da query; VAL-08 | Integrated |
 | ARCH-TL-02 | high | Socket retorna sem evento e thread não recupera | Callback de reconexão + poll da thread, paths de tempoReal explicitados | Integrated |
-| ARCH-TL-03 | high | ID novo menor no timestamp empatado some | Cruzar grupo inteiro do timestamp T; teste de inserção tardia empatada | Integrated |
+| ARCH-TL-03 | high | ID menor empatado pode entrar atrás do cursor após cabeça avançar | Cruzar grupo inteiro e conservar piso pendente T em todas as passagens coalescidas; promover só sem trabalho concorrente; teste H>T/ID atrás do cursor | Integrated; delta review pending |
 | ARCH-TL-04 | medium | Mesmo contexto mistura cursores/metadados/draft | Estado mínimo com owners separados, geração e coalescing; races reais | Integrated |
 | ARCH-TL-05 | medium | Índice existente aceito sem plano representativo | EXPLAIN obrigatório recente/profundo/empates mesmo sem migração | Integrated |
 | ARCH-TL-06 | medium | Cursor errado não testado porque recurso já é 404 | Fixtures negativas distintas + browser backend real | Integrated |
@@ -430,7 +432,7 @@ Custo do grupo empatado é medido e cada rodada limitada; inserções concurrent
 
 ## Additional Architectural Opinions (Required When Path Remains Materially Unclear)
 
-Parecer independente concluído em 2026-10-14, modelo gpt-6.1-sol/max, sem contexto herdado. Recomenda cursor anterior com fronteira inteira de timestamp e recuperação bounded; alternativa bidirecional aumenta contrato sem resolver inserções empatadas. Resultado validado pelo subagent_review_merge; arquivo: artifacts/reviews/leadshug-inbox-timeline-20261014/architecture-review.json.
+Parecer independente concluído em 2026-10-14, modelo gpt-6.1-sol/max, sem contexto herdado. Recomenda cursor anterior com fronteira inteira de timestamp e recuperação bounded com piso pendente conservado; alternativa bidirecional aumenta contrato sem resolver inserções empatadas. Resultado validado pelo subagent_review_merge; arquivo: artifacts/reviews/leadshug-inbox-timeline-20261014/architecture-review.json.
 
 ## Audit Trigger Matrix (Required Before Audit Decisions Are Trusted)
 

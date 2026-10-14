@@ -1,0 +1,32 @@
+{
+  "schema_version": "subagent-review-result-v1",
+  "artifact_kind": "subagent_review_result",
+  "dispatch_path": "/mnt/c/Unifast/LeadsHug/leadshug_now_docker/foundation_documentation/artifacts/tmp/inbox-timeline-critique-dispatch.json",
+  "review_kind": "critique",
+  "reviewer_label": "independent-plan-critique-gpt-6.1-sol-max",
+  "findings": [
+    {
+      "finding_id": "ARCH-TL-03",
+      "severity": "high",
+      "category": "architecture",
+      "formalizable_hint": "yes",
+      "candidate_rule_level": "project",
+      "title": "A passagem coalescida pode avançar a fronteira e perder uma inserção empatada já ultrapassada",
+      "rationale": "Reabertura limitada ao mesmo locus porque a resolução atual permanece objetivamente insuficiente. TODO:82 captura T da mensagem mais recente conhecida antes de cada passagem; :83 promete outra passagem coalescida para inserções concorrentes, mas a primeira passagem já mesclou mensagens com timestamp H>T. Considere limite=2, cabeça conhecida em T=10, grupo em T com IDs 900,800,700,600,500,400,300,200,100 e cabeça nova em H=20. A recuperação atravessa (10,500)/(10,400); depois entra ID 450 em T, menor que o ID conhecido 900, e seu evento solicita a passagem coalescida. A caminhada restante, estritamente antes de (10,400), não vê 450 e termina abaixo de T. A passagem seguinte captura T=20 da coleção já mesclada e encerra ao retornar a primeira página abaixo de 20, com 900/800; 450 continua ausente, inclusive nos polls seguintes. Esse cenário usa precisamente a inserção nova empatada em T prometida pelo contrato, sem importar/backdatear histórico nem alterar recebimento. O orçamento de três queries por rodada apenas pausa a caminhada e não corrige a perda. VAL-05 e a matriz de empates não exigem combinar avanço da cabeça com inserção atrás de um cursor já percorrido; um teste somente com todas as mensagens em T pode passar e esconder a falha. Um traço estático do contrato reproduziu essa lacuna; nenhum teste da aplicação foi executado.",
+      "suggested_action": "Separar o piso de cobertura confirmado do maior timestamp da coleção mesclada. Toda passagem coalescida provocada durante uma recuperação deve herdar o piso original pendente, inclusive ao retomar rodadas/retry, até uma passagem cobrir esse piso sem trabalho concorrente pendente; não promover o piso somente porque mensagens mais recentes foram mescladas. Declarar a condição de promoção e manter indicação de atualização enquanto a passagem requerida estiver pendente. Acrescentar prova determinística PostgreSQL/browser com H>T, inserção empatada em T atrás do cursor já percorrido, evento recebido durante a caminhada e continuação além de três queries; comparar os IDs completos após a passagem coalescida. Manter o cursor anterior, o modo read-neutral e o orçamento por rodada existentes, sem ampliar a story ou acrescentar cursor depois.",
+      "affected_paths": [
+        "foundation_documentation/todos/active/features/TODO-leadshug-inbox-message-timeline-pagination.md",
+        "web-app/src/telas/Inbox.tsx",
+        "web-app/src/*timeline*",
+        "api-app/test/*timeline*.e2e-spec.ts",
+        "web-app/e2e/*timeline*.spec.ts"
+      ]
+    }
+  ],
+  "overall_assessment": "O plano ainda não está pronto para APROVADO por uma lacuna concreta de completude na recuperação coalescida descrita em ARCH-TL-03. ARCH-TL-01,02,04,05,06 permanecem encerrados no nível de planejamento: modo read-neutral e reconhecimento atômico antes da consulta; callback de reconexão mais poll; ownership separado de cursores/metadados/draft e contexto capturado; EXPLAIN obrigatório mesmo sem índice novo; negativos de cursor alheio distintos de recurso inacessível e backend real de browser. A aderência ao recorte ST-ATT-01 é boa e não há motivo para reabrir API pública, Consultar, ownership de atendimento, mídia, status ou deploy. A revisão leu o TODO integral, architecture-review.json, Issue Cards, constituição, módulos e fontes allowlisted. A-01,A-02,A-04,A-05 foram corroboradas; A-03 cita um controller público fora do allowlist e não foi verificada diretamente. Baseline documental informada a3c8d3e6312f1a48e97bd4843e1e6843c15c61bc e binding informado em 1b329c57. Nenhuma implementação, suite green, operação Git, mudança de runtime ou aprovação é reivindicada.",
+  "recommended_path": "Refinar somente o ciclo de vida da fronteira de recuperação e sua prova no mesmo TODO, integrar a reabertura de ARCH-TL-03 e renovar o freeze/revisão aplicáveis antes de apresentar o contrato final. Preservar a opção simples de cursor anterior scoped, coleção por ID da conversa ativa, cursor histórico separado e metadados/efeitos com frescor próprio. A performance planejada é aceitável: N+1, teto 100, três consultas de página por rodada, coalescing, progresso visível e EXPLAIN recente/profundo/empates obrigatório; o piso corrigido pode exigir releitura e continua sujeito ao mesmo orçamento. A elegância é adequada sem framework ou paginação bidirecional. A estrutura fica incompleta enquanto o máximo mesclado puder substituir a fronteira ainda não confirmada. O plano operacional é fiel: backend fresco, sessão/guards/domínio/persistência reais, dublês somente nas portas externas, PostgreSQL descartável compartilhado com Playwright, respostas reais atrasadas e nenhum deploy/envio externo. Runner Linux, queries reais e testes permanecem provas de implementação, sem bloqueio artificial por ainda não terem sido executados. No gate Assumption Code Coherence, confirmar A-03 pela fonte apropriada antes de alegar validação das cinco assumptions. Depois da convergência e dos guardas pendentes, solicitar APROVADO explícito; esta crítica não concede execução.",
+  "performance_position": "acceptable",
+  "elegance_position": "acceptable",
+  "structural_soundness_position": "mixed",
+  "operational_fit_position": "acceptable"
+}
