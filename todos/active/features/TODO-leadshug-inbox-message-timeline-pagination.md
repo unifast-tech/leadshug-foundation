@@ -333,9 +333,9 @@ Proposta técnica congelada para crítica em 2026-10-14 após integração ARCH-
 - **Gate decision:** required
 - **Gate status:** no_material_findings
 - **Baseline branch:** main
-- **Baseline commit:** 8f8638442c81c4a688ced1fcd5153be3929503c3
+- **Baseline commit:** a3c8d3e6312f1a48e97bd4843e1e6843c15c61bc
 - **Baseline push reference:** origin/main
-- **Evidence / reference:** git.exe push origin main completado; baseline 8f863844 publicado em 2026-10-14; git_write_authority_guard go para commit/push
+- **Evidence / reference:** git.exe push origin main completado; baseline a3c8d3e6 com integração ARCH-TL-01..06 publicado em 2026-10-14; git_write_authority_guard go para commit/push
 - **Waiver authority / reference (required if waived):** none
 
 ## Gate: Review Scope Drift
@@ -451,10 +451,12 @@ Parecer independente concluído em 2026-10-14, modelo gpt-6.1-sol/max, sem conte
 ## Independent No-Context Critique Gate (Deterministic Floor From Audit Escalation)
 
 - **Gate decision:** required
-- **Why this decision:** API/escopo/consulta e UI interativa com races
-- **Gate status:** not_run
-- **Critique status:** not_run
-- **Evidence / reference:** pacote ainda prepared-pre-freeze; executar revisão no gate correspondente
+- **Why this decision:** piso de audit_escalation_guard; API/escopo/realtime e UI com races.
+- **Package mode:** bounded-file-set
+- **Critique isolation mode:** fresh internal no-context reviewer
+- **Critique status:** running
+- **Gate status:** running
+- **Evidence / reference:** baseline a3c8d3e6; dispatch inbox-timeline-critique-dispatch; architecture-review.json e Issue Cards são carry-forward obrigatório.
 - **Waiver authority / reference:** none
 
 ## Gate: Assumption Code Coherence
