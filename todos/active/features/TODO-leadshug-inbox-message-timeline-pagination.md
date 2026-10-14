@@ -2,7 +2,7 @@
 
 ## Quick Start
 
-Contrato criado a partir de delphi-ai/templates/todo_template.md, revisado e submetido à aprovação humana final; ainda não autoriza execução.
+Contrato criado a partir de delphi-ai/templates/todo_template.md, revisado, congelado e aprovado pelo usuário em 2026-10-14. Execução autorizada pelo authority guard normal; validação e reviews de entrega estão em andamento.
 
 ## Title
 
@@ -11,10 +11,10 @@ Histórico completo e paginado na inbox do LeadsHug.
 ## Artifact Identity
 
 - **Artifact type:** `tactical_execution_contract`
-- **Tactical state:** `Review`
+- **Tactical state:** `In-Progress`
 - **Prepared on:** 2026-10-14
 - **Scope selection source:** atendimento selecionado pelo usuário; revisão e preparação de aprovação autorizadas por “Pode seguir para revisão e aprovação”, em 2026-10-14
-- **Implementation approval:** pendente da apresentação do contrato revisado e do APROVADO final
+- **Implementation approval:** APROVADO explícito do usuário em 2026-10-14; ver Approval e authority guard normal go
 
 ## Context
 
@@ -29,7 +29,7 @@ A thread da inbox busca as primeiras 200 mensagens em ordem crescente, sem metad
 
 ## Contract Boundary
 
-Este rascunho define o primeiro recorte proposto. Alterações em contrato, autorização, escopo ou validação devem ser resolvidas antes do congelamento e da aprovação. O planejamento das demais stories não concede execução neste TODO.
+Este contrato aprovado define somente ST-ATT-01. Mudanças materiais de contrato, autorização, escopo ou obrigação de validação precisam da governança de escopo e aprovação; refinamentos locais fiéis ao contrato são tratados nesta execução. O planejamento das demais stories não concede execução neste TODO.
 
 ## Implementation Intent
 
@@ -40,15 +40,15 @@ Este rascunho define o primeiro recorte proposto. Alterações em contrato, auto
 
 ## Delivery Status Canon (Required)
 
-- **Current delivery stage:** `Pending`
-- **Qualifiers:** `Blocked`
-- **Next exact step:** aguardar APROVADO para o contrato revisado; depois recarregar regras e executar authority guard normal antes de implementar
+- **Current delivery stage:** Pending
+- **Qualifiers:** none
+- **Next exact step:** concluir suites e provas PostgreSQL/browser, revisar independentemente e resolver achados antes do closeout.
 
 ## Active Work State (Required While TODO Remains In `active/`)
 
-- **Work state:** `blocked`
-- **Why this state now:** o TODO está em Draft; execução depende da revisão e aprovação do contrato
-- **Exit condition:** pacote de aprovação completo, aprovação explícita e authority guard em go
+- **Work state:** implementation
+- **Why this state now:** APROVADO e authority guard go registrados; executor único implementa e valida o primeiro recorte.
+- **Exit condition:** implementação e matriz de validação completas para review de entrega.
 
 ## Scope
 
@@ -111,11 +111,7 @@ n/a; nenhuma entrega parcial é reivindicada.
 
 ## Blocker Notes (Required if `Qualifiers` includes `Blocked`)
 
-- **Blocker:** aprovação final da implementação ainda pendente
-- **Why blocked now:** a autorização recebida cobre revisão e preparação da aprovação
-- **What unblocks it:** revisão convergida, preflight-go e APROVADO humano para este contrato
-- **Owner / source:** usuário; workflow local de aprovação de TODOs
-- **Last confirmed truth:** histórico da inbox tem teto de 200; código API/Web mantém as baselines registradas
+n/a; nenhuma decisão material bloqueando execução no início.
 
 ## Execution Lane Tracking (Required)
 
@@ -141,7 +137,7 @@ Pendente no gate de execução/revisão correspondente; nenhuma evidência ou pr
 - Redesenho da lista de conversas ou paginação da lista; a story cobre mensagens de uma conversa.
 - Expansão de infraestrutura, uso de dados reais, integração com runtime legado ou publicação.
 
-## Diff Expectation Contract (Required Before Delivery)
+## Diff Expectation Contract
 
 - **Contract status:** `required`
 - **Policy:** `strict; unclassified or forbidden paths block delivery`
@@ -160,26 +156,75 @@ Pendente no gate de execução/revisão correspondente; nenhuma evidência ou pr
 
 | Repository | Path glob | Change types | Reason |
 | --- | --- | --- | --- |
-| api | src/domain/inbox/conversations.service.ts; src/domain/inbox/*pagination*.ts; src/domain/inbox/*pagination*.spec.ts | A,M | Consulta bounded e cursor validado. |
-| api | src/surfaces/bff/conversations.controller.ts; test/atendimento.e2e-spec.ts; test/*timeline*.e2e-spec.ts; test/browser-server.cjs; test/timeline-fixtures.cjs | A,M | Contrato, escopo, fixtures e bootstrap de teste, sem mudanças no entrypoint de produção. |
-| api | prisma/schema.prisma; prisma/migrations/*timeline*/migration.sql | A,M | Somente índice de paginação, se necessário e justificado por plano de consulta. |
-| web | src/api.ts; src/telas/Inbox.tsx; src/*timeline*; src/estilo.css; src/tempoReal.ts; src/tempoReal.spec.ts | A,M | Types, coleção/cursores, navegação, posição e callback de conexão/reconexão. |
-| web | e2e/telas.spec.ts; e2e/*timeline*.spec.ts; playwright.config.ts | A,M | Fluxo real e correção do path da API. |
-| foundation | todos/active/features/TODO-leadshug-inbox-message-timeline-pagination.md; artifacts/feature-briefs/leadshug-attendance-evolution-20261014.md; artifacts/reviews/leadshug-inbox-timeline-20261014/**; backlog/README.md; modules/inbox-and-conversations.md | A,M | Contrato, framing e evidência específicos. |
+| api | src/domain/inbox/conversations.service.ts | A,M,?? | Consulta bounded e cursor validado. |
+| api | src/domain/inbox/*pagination*.ts | A,M,?? | Consulta bounded e cursor validado. |
+| api | src/domain/inbox/*pagination*.spec.ts | A,M,?? | Consulta bounded e cursor validado. |
+| api | src/surfaces/bff/conversations.controller.ts | A,M,?? | Contrato, escopo, fixtures e bootstrap de teste, sem mudanças no entrypoint de produção. |
+| api | test/atendimento.e2e-spec.ts | A,M,?? | Contrato, escopo, fixtures e bootstrap de teste, sem mudanças no entrypoint de produção. |
+| api | test/*timeline*.e2e-spec.ts | A,M,?? | Contrato, escopo, fixtures e bootstrap de teste, sem mudanças no entrypoint de produção. |
+| api | test/browser-server.cjs | A,M,?? | Contrato, escopo, fixtures e bootstrap de teste, sem mudanças no entrypoint de produção. |
+| api | test/timeline-fixtures.cjs | A,M,?? | Contrato, escopo, fixtures e bootstrap de teste, sem mudanças no entrypoint de produção. |
+| api | prisma/schema.prisma | A,M,?? | Somente índice de paginação, se necessário e justificado por plano de consulta. |
+| api | prisma/migrations/*timeline*/migration.sql | A,M,?? | Somente índice de paginação, se necessário e justificado por plano de consulta. |
+| web | src/api.ts | A,M,?? | Types, coleção/cursores, navegação, posição e callback de conexão/reconexão. |
+| web | src/telas/Inbox.tsx | A,M,?? | Types, coleção/cursores, navegação, posição e callback de conexão/reconexão. |
+| web | src/*timeline* | A,M,?? | Types, coleção/cursores, navegação, posição e callback de conexão/reconexão. |
+| web | src/estilo.css | A,M,?? | Types, coleção/cursores, navegação, posição e callback de conexão/reconexão. |
+| web | src/tempoReal.ts | A,M,?? | Types, coleção/cursores, navegação, posição e callback de conexão/reconexão. |
+| web | src/tempoReal.spec.ts | A,M,?? | Types, coleção/cursores, navegação, posição e callback de conexão/reconexão. |
+| web | e2e/telas.spec.ts | A,M,?? | Fluxo real e correção do path da API. |
+| web | e2e/*timeline*.spec.ts | A,M,?? | Fluxo real e correção do path da API. |
+| web | playwright.config.ts | A,M,?? | Fluxo real e correção do path da API. |
+| foundation | todos/active/features/TODO-leadshug-inbox-message-timeline-pagination.md | A,M,D,R,?? | Contrato, framing e evidência específicos. |
+| foundation | artifacts/feature-briefs/leadshug-attendance-evolution-20261014.md | A,M,?? | Contrato, framing e evidência específicos. |
+| foundation | artifacts/reviews/leadshug-inbox-timeline-20261014/** | A,M,?? | Contrato, framing e evidência específicos. |
+| foundation | backlog/README.md | A,M,?? | Contrato, framing e evidência específicos. |
+| foundation | modules/inbox-and-conversations.md | A,M,?? | Contrato, framing e evidência específicos. |
+
+| foundation | todos/completed/features/TODO-leadshug-inbox-message-timeline-pagination.md | A,M,R,?? | Relocação do mesmo TODO no closeout aprovado, após provas e guardas. |
 
 ### Not Expected Changed Paths
 
 | Repository | Path glob | Change types | Reason |
 | --- | --- | --- | --- |
-| api | src/integrations/**; src/surfaces/public/**; src/domain/inbox/incoming.service.ts | any | Providers, API pública e recebimento fora do recorte. |
-| web | src/telas/Typebot.tsx; src/telas/IdentidadeVisual.tsx | any | Funcionalidades independentes. |
-| foundation | todos/completed/**; project_mandate.md; project_constitution.md; system_roadmap.md; local_packages.yaml | any | Preservar história e autoridades não alteradas por este recorte. |
-| workspace | .env*; .gitmodules; docker-compose.yml; .git/**; .github/** | any | Sem configuração secreta, gitlinks ou expansão do runtime/CI neste TODO. |
-| all | node_modules/**; dist/**; artifacts/tmp/** | any | Saídas locais de validação não são entrega versionada. |
+| api | src/integrations/** | any | Providers, API pública e recebimento fora do recorte. |
+| api | src/surfaces/public/** | any | Providers, API pública e recebimento fora do recorte. |
+| api | src/domain/inbox/incoming.service.ts | any | Providers, API pública e recebimento fora do recorte. |
+| web | src/telas/Typebot.tsx | any | Funcionalidades independentes. |
+| web | src/telas/IdentidadeVisual.tsx | any | Funcionalidades independentes. |
+| foundation | project_mandate.md | any | Preservar história e autoridades não alteradas por este recorte. |
+| foundation | project_constitution.md | any | Preservar história e autoridades não alteradas por este recorte. |
+| foundation | system_roadmap.md | any | Preservar história e autoridades não alteradas por este recorte. |
+| foundation | local_packages.yaml | any | Preservar história e autoridades não alteradas por este recorte. |
+| api | .env* | any | Sem configuração secreta, gitlinks ou expansão do runtime/CI neste TODO. |
+| api | .gitmodules | any | Sem configuração secreta, gitlinks ou expansão do runtime/CI neste TODO. |
+| api | docker-compose.yml | any | Sem configuração secreta, gitlinks ou expansão do runtime/CI neste TODO. |
+| api | .git/** | any | Sem configuração secreta, gitlinks ou expansão do runtime/CI neste TODO. |
+| api | .github/** | any | Sem configuração secreta, gitlinks ou expansão do runtime/CI neste TODO. |
+| web | .env* | any | Sem configuração secreta, gitlinks ou expansão do runtime/CI neste TODO. |
+| web | .gitmodules | any | Sem configuração secreta, gitlinks ou expansão do runtime/CI neste TODO. |
+| web | docker-compose.yml | any | Sem configuração secreta, gitlinks ou expansão do runtime/CI neste TODO. |
+| web | .git/** | any | Sem configuração secreta, gitlinks ou expansão do runtime/CI neste TODO. |
+| web | .github/** | any | Sem configuração secreta, gitlinks ou expansão do runtime/CI neste TODO. |
+| foundation | .env* | any | Sem configuração secreta, gitlinks ou expansão do runtime/CI neste TODO. |
+| foundation | .gitmodules | any | Sem configuração secreta, gitlinks ou expansão do runtime/CI neste TODO. |
+| foundation | docker-compose.yml | any | Sem configuração secreta, gitlinks ou expansão do runtime/CI neste TODO. |
+| foundation | .git/** | any | Sem configuração secreta, gitlinks ou expansão do runtime/CI neste TODO. |
+| foundation | .github/** | any | Sem configuração secreta, gitlinks ou expansão do runtime/CI neste TODO. |
+| api | node_modules/** | any | Saídas locais de validação não são entrega versionada. |
+| api | dist/** | any | Saídas locais de validação não são entrega versionada. |
+| api | artifacts/tmp/** | any | Saídas locais de validação não são entrega versionada. |
+| web | node_modules/** | any | Saídas locais de validação não são entrega versionada. |
+| web | dist/** | any | Saídas locais de validação não são entrega versionada. |
+| web | artifacts/tmp/** | any | Saídas locais de validação não são entrega versionada. |
+| foundation | node_modules/** | any | Saídas locais de validação não são entrega versionada. |
+| foundation | dist/** | any | Saídas locais de validação não são entrega versionada. |
+| foundation | artifacts/tmp/** | any | Saídas locais de validação não são entrega versionada. |
 
 ### Diff Deviation Analysis
 
-Pendente; nenhum diff de implementação foi produzido. Baselines devem ser revalidadas antes do freeze se houver commits novos.
+Análise preliminar: o guard identificou incompatibilidade de representação (heading com sufixo, vários globs numa célula e labels workspace/all não declarados), sem desvio de produto. Corrigida a representação para título exato, um glob por linha e regras por repositório; os mesmos paths e baselines aprovados foram preservados. O tipo `??` explicita o estado ainda não staged dos arquivos novos já autorizados como A; não autoriza novos caminhos. A relocação do próprio TODO active → completed é o closeout já autorizado, sem alterar outros registros históricos. Guard final e diff real serão registrados antes da entrega.
+
 
 ## Bounded But Elastic Guardrails
 
@@ -210,7 +255,7 @@ Ajustes locais de cursor, queries, mesclagem e CSS podem permanecer neste objeti
 
 | Criterion ID | Source Section | Criterion | Evidence Type | Evidence Artifact / Command | Runtime Target | Status | Notes |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| DOD-01 | Definition of Done | Contrato aprovado/consolidado | doc | TODO + modules/inbox-and-conversations.md | foundation | planned | Sem aprovação registrada. |
+| DOD-01 | Definition of Done | Contrato aprovado/consolidado | doc | TODO + modules/inbox-and-conversations.md | foundation | passed | APROVADO explícito e contrato consolidado em modules/inbox-and-conversations.md. |
 | DOD-02 | Definition of Done | Histórico completo e ordenação | test | VAL-03 | PostgreSQL dedicado | planned | 251 mensagens e timestamps empatados. |
 | DOD-03 | Definition of Done | BU/tenant/cursor | test | VAL-03 + test:e2e | PostgreSQL dedicado | planned | Negativos cross-BU/cross-tenant. |
 | DOD-04 | Definition of Done | Fluxo e races de UI | runtime | VAL-05 + test:tela | browser/backend real | planned | Abertura/envio/refresh/troca. |
@@ -238,11 +283,12 @@ Execução local planejada: runner Linux temporário Node 22, conforme imagens N
 
 ## Profile Scope & Handoffs (Required Before `APROVADO`)
 
-- **Current profile:** Strategic / CTO-Tech-Lead, preparação documental
+- **Current profile:** Strategic / CTO-Tech-Lead para consolidação documental, handoff aprovado para Operational / Coder.
 - **Primary execution profile:** operational-coder
-- **Active technical scope:** nestjs, react, vite, postgresql, prisma, docker
-- **Handoff:** Strategic -> Operational/Coder depois de contrato e aprovação; DevOps somente para resolver prontidão com contrato próprio; Assurance para revisão/evidência
-- **Execution topology:** principal checkout, single writer; Foundation main
+- **Active technical scope:** nestjs, react, vite, postgresql, prisma, docker.
+- **Handoff:** executor único implementa/testa API/Web; orchestrator mantém TODO/evidência; reviewers read-only nas fases derivadas.
+- **Execution topology:** primary-checkout-single-writer; Foundation main, API/Web feature/inbox-timeline-pagination, sem worktrees.
+- **Rule ingestion on 2026-10-14:** TODO, constituição/módulos e fontes da tabela Rules Acknowledgement recarregados após APROVADO; também boundary/orchestration e regras de schemas/migrations serão carregadas se houver índice.
 
 ## Complexity
 
@@ -259,11 +305,11 @@ Execução local planejada: runner Linux temporário Node 22, conforme imagens N
 
 ## Decision Pending (Resolve Before Freeze)
 
-Nenhuma decisão de produto é declarada aprovada nesta preparação. O contrato revisado, inclusive parâmetros, superfície BFF e ordem inicial, será submetido em uma aprovação única. Runners e lanes estão definidos abaixo; a revisão pode corrigir detalhes antes do freeze final.
+Nenhuma decisão de produto permanece pendente: o usuário aprovou o contrato congelado com “APROVADO” em 2026-10-14. A implementação segue o recorte ST-ATT-01. A decisão condicional de índice depende dos planos SQL previstos; não amplia o contrato.
 
 ## Decisions (Resolved Before Freeze)
 
-Proposta técnica consolidada após ARCH-TL-01..06, submetida à aprovação humana final:
+Decisões consolidadas após ARCH-TL-01..06 e aprovadas pelo usuário em 2026-10-14:
 
 - Primeiro recorte BFF de mensagens na inbox; API pública, Consultar e demais stories ficam fora.
 - Cursor anterior scoped, ordem createdAt/id, padrão 50 e teto 100. Não acrescentar cursor depois: ele não elimina a necessidade de sobreposição em timestamps empatados.
@@ -281,11 +327,11 @@ Proposta técnica consolidada após ARCH-TL-01..06, submetida à aprovação hum
 | Grants materializados na BU | modules/identity-and-tenancy.md | preserved | Negativos de tenant/BU no banco real. |
 | Histórico e leitura scoped | modules/audit-and-history.md | preserved | Consulta de auditoria não ganha efeito de atendimento. |
 | Janela/capability de envio | modules/inbox-and-conversations.md | preserved | Envio e API pública têm suites de regressão. |
-| Paginação da thread | contrato proposto deste TODO | extend-local-contract | Consolidar no módulo após aprovação e antes da implementação. |
+| Paginação da thread | contrato proposto deste TODO | extend-local-contract | Contrato aprovado consolidado em modules/inbox-and-conversations.md antes da implementação. |
 
 ## Decision Baseline (Frozen Before Implementation)
 
-Proposta técnica congelada para crítica em 2026-10-14 após integração ARCH-TL-01..06: superfície BFF, parâmetros/limites, reconhecimento atômico, recuperação bounded, estado por conversa, paths, DoD e provas reais deste TODO. A referência de versão publicada está em Gate: Review Baseline Freeze. A aprovação humana final ainda é pendente; congelamento não concede implementação.
+Proposta técnica congelada para crítica em 2026-10-14 após integração ARCH-TL-01..06: superfície BFF, parâmetros/limites, reconhecimento atômico, recuperação bounded, estado por conversa, paths, DoD e provas reais deste TODO. A referência de versão publicada está em Gate: Review Baseline Freeze. O congelamento original não concedia implementação; a autorização posterior está registrada em Approval, pelo “APROVADO” explícito de 2026-10-14.
 
 ## Architecture Change Governance (Required When This TODO Establishes, Corrects, or Supersedes Architecture)
 
@@ -324,7 +370,7 @@ Proposta técnica congelada para crítica em 2026-10-14 após integração ARCH-
 
 - **Architecture decision review:** required
 - **Decision review status:** findings_integrated
-- **Decision review evidence:** artifacts/reviews/leadshug-inbox-timeline-20261014/architecture-review.json; resolução ARCH-TL-01..06 neste TODO; crítica seguinte verificará a integração.
+- **Decision review evidence:** artifacts/reviews/leadshug-inbox-timeline-20261014/architecture-review.json; resolução ARCH-TL-01..06 neste TODO e critique-resolution.json verificam a integração no plano.
 - **Architecture adherence review:** required
 - **Adherence review status:** not_run
 - **Adherence review evidence:** executar após implementação, antes de Completed.
@@ -484,14 +530,14 @@ Parecer independente concluído em 2026-10-14, modelo gpt-6.1-sol/max, sem conte
 
 ## Approval
 
-- **Approved by:** pending; não há APROVADO para este contrato
-- **Approval scope:** pendente; a seleção da frente não concede implementação deste Draft
-- **Execution not authorized by approval:** toda implementação até aprovação/guard; stories posteriores permanecem fora do recorte
-- **Renewed approval required when:** contrato, escopo, regras de leitura, validação ou risco mudarem materialmente
+- **Approved by:** usuário, APROVADO explícito nesta conversa em 2026-10-14, após revisão e preflight-go.
+- **Approval scope:** implementar e validar ST-ATT-01 conforme contrato revisado: BFF paginado/read-neutral, inbox/realtime/recovery/estado e suporte de teste, eventual índice justificado por SQL e documentação/evidência/closeout. Executor routine-executor predeclarado autorizado pelo contrato aprovado.
+- **Execution not authorized by approval:** transferência, mídia, estados, CRM/campanhas/Typebot, mudanças da API pública/Consultar, worktrees/cópias auxiliares e deploy/promoção remota de código.
+- **Renewed approval required when:** objetivo, contrato, autorização, escopo, riscos ou validação mudarem materialmente; detalhes locais necessários ao mesmo contrato permanecem no TODO.
 
 ## Rules Acknowledgement / Ingestion (Required After `APROVADO` and Before Execution)
 
-Preparação documental; recarregar fontes vinculantes após aprovação antes de execução.
+Ingestão vinculante após APROVADO realizada em 2026-10-14; fontes da tabela recarregadas para execução, preservando contrato e guards.
 
 | Source | Why It Applies Now | Must Preserve | Must Avoid | Execution Impact |
 | --- | --- | --- | --- | --- |
@@ -512,7 +558,7 @@ Preparação documental; recarregar fontes vinculantes após aprovação antes d
 - **Selected effort:** medium
 - **Proof mode:** declared
 - **Execution topology:** primary-checkout-single-writer
-- **Subagent / delegation authorization:** executor será solicitado por APROVADO para o contrato que predeclara esse handoff; revisão independente já requerida pelo workflow local invocado
+- **Subagent / delegation authorization:** executor autorizado por APROVADO de 2026-10-14; revisão independente já requerida pelo workflow local invocado
 - **Git isolation authorization:** not-authorized
 - **Guard outcome:** go
 - **Guard evidence:** agent_role_routing_guard avaliado em 2026-10-14 para este único tuple; go de routing não é autorização de implementação
@@ -545,9 +591,9 @@ Pendente no gate de execução/revisão correspondente; nenhuma evidência ou pr
 ## TODO Closeout Disposition
 
 - **Disposition:** keep-active
-- **Disposition reason:** contrato em Review, revisão convergida, aguardando aprovação humana da implementação.
-- **Post-commit/push status:** baseline e pareceres publicados; guardas finais registrados no pacote de aprovação.
-- **Next path/status action:** APROVADO, ingestão vinculante, authority guard normal e execução; closeout somente após provas de implementação/entrega.
+- **Disposition reason:** contrato aprovado em implementação, provas de entrega ainda necessárias.
+- **Post-commit/push status:** revisão publicada; registro de aprovação/contrato canônico em execução.
+- **Next path/status action:** implementar, validar e revisar; mover para completed somente com evidência/guardas de closeout.
 
 ## Security Risk Assessment (Mandatory Before Delivery)
 
@@ -560,12 +606,48 @@ Pendente no gate de execução/revisão correspondente; nenhuma evidência ou pr
 ## Performance & Concurrency Risk Assessment (Mandatory Before Delivery)
 
 - **Gate decision:** required
-- **Why this decision:** paginação, realtime e operações assíncronas no atendimento.
-- Queries retornam N+1; custo real é validado por EXPLAIN mesmo sem migração. Grupos grandes de timestamps empatados podem exigir índice composto, a decidir por evidência.
-- Recuperação para trás tem uma passagem em voo e três queries por rodada; coalescer eventos e preservar progresso para não amplificar chamadas ou esconder lacunas.
-- Coleção existe somente para a conversa ativa; histórico cresce por carregamento explícito e contexto é liberado na troca.
-- Separar cursores, metadados e efeitos de ação; nenhuma resposta atrasada muda BU/conversa, restaura estado antigo ou limpa draft novo.
-- Sem execução/prova de aplicação reivindicada nesta revisão documental.
+- **Policy schema version:** `pcv-1`
+- **Global sensitivity level:** medium
+- **Why this level:** paginação e cursores alteram queries; abertura e entrada concorrem na contagem de não lidas; contexto/realtime/ações assíncronas atualizam o histórico visível. Nenhuma promessa de SLO/capacidade foi aprovada.
+- **Current delivery stage at review time:** Pending
+- Registro de classificação na execução do contrato aprovado; não expande funcionalidade nem reduz obrigações de validação.
+
+| Lane ID | Lane | Trigger Result | Trigger Severity | Trigger Reason Code | Gate Deadline | Minimum Evidence Rule | State | Residual Risk | Uncertainty Reason Code |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| `EPS` | `endpoint-performance-scrutiny` | `required` | `medium` | `EPS-QUERY-SHAPE-CHANGED` | `before_local_implemented` | `EPS-E2` | `pending` | Custo depende da distribuição real de mensagens. | `none` |
+| `FRC` | `frontend-race-condition-validation` | `required` | `medium` | `FRC-STALE-RESPONSE` | `before_local_implemented` | `FRC-E2` | `pending` | Estados assíncronos requerem provas determinísticas de overlap. | `none` |
+| `BCI` | `backend-concurrency-idempotency-validation` | `required` | `medium` | `BCI-LOST-UPDATE-RISK` | `before_local_implemented` | `BCI-E2` | `pending` | Reconhecimento e incrementos devem linearizar no PostgreSQL. | `none` |
+| `RLS` | `runtime-load-stress-validation` | `recommended` | `medium` | `RLS-CACHE-INDEX-SENSITIVE-PATH-CHANGED` | `before_production_ready` | `RLS-E1` | `pending` | Amostra local não estabelece capacidade de produção. | `none` |
+
+### Lane Details
+
+#### EPS
+
+- **Trigger rationale:** consulta recente e keyset mudam ordenação, limite e predicado; classificar acesso, auditar caminhos e registrar EXPLAIN recente/profundo/empates mesmo sem migração.
+- **Recorded at (UTC):** `2026-10-14T17:58:46Z`
+- **Executor ID:** `/root/timeline_executor`
+- Evidência mínima planejada: `EPS-SP-STRONG`, `EPS-A2`; ainda não há resultado reivindicado.
+
+#### FRC
+
+- **Trigger rationale:** backfill, recuperação, fechamento, envio e troca de contexto podem sobrepor respostas; uma recuperação em voo e contexto/geração/versionamento de draft protegem o estado.
+- **Recorded at (UTC):** `2026-10-14T17:58:46Z`
+- **Executor ID:** `/root/timeline_executor`
+- Evidência mínima planejada: `FRC-SP-M`, `FRC-A1`, 10 gatilhos × 3 repetições; ainda não há resultado reivindicado.
+
+#### BCI
+
+- **Trigger rationale:** o UPDATE de reconhecimento precede a query, concorrendo com incrementos de entrada; incrementos posteriores devem permanecer não lidos e leituras de background nunca escrever.
+- **Recorded at (UTC):** `2026-10-14T17:58:46Z`
+- **Executor ID:** `/root/timeline_executor`
+- Evidência mínima planejada: `BCI-SP-M`, `BCI-A1`, 10 operações sobrepostas × 3 lotes; ainda não há resultado reivindicado.
+
+#### RLS
+
+- **Trigger rationale:** consultas sensíveis a índice e recuperação realtime têm pressão de runtime; amostra de leitura neutra medirá erros, limites e latência sem promessa de SLO.
+- **Recorded at (UTC):** `2026-10-14T17:58:46Z`
+- **Executor ID:** `/root/timeline_executor`
+- Evidência mínima planejada: `RLS-SP-L`, `RLS-A1`, uma etapa com limiares de correção e métricas; ainda não há resultado reivindicado.
 
 ## Verification Debt Assessment (Required Before `Completed`; mandatory audit for `medium|big` or when debt signals exist)
 
@@ -577,7 +659,7 @@ Pendentes contrato, runner, provas PostgreSQL/browser e revisões. Não reivindi
 - **Why this decision:** API/escopo/consulta e UI interativa com races
 - **Audit status:** not_run
 - **Critique status:** not_run
-- **Evidence / reference:** pacote ainda prepared-pre-freeze; executar revisão no gate correspondente
+- **Evidence / reference:** revisão de entrega após testes completos; pacote de planejamento não substitui TQA. O roteamento technical_review exige gpt-5.6-terra, indisponível nesta sessão; pedido explícito ao usuário para permitir gpt-6.1-sol nesta auditoria está pendente, sem waiver presumido.
 - **Waiver authority / reference:** none
 
 ## Independent No-Context Final Review Gate (Deterministic Floor From Audit Escalation)

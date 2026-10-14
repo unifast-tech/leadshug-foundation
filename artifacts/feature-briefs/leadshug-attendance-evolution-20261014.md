@@ -2,7 +2,7 @@
 
 **Version:** 1.0
 **Data:** 2026-10-14
-**Estado:** proposta de decomposição; prioridade de atendimento escolhida pelo usuário nesta conversa. Os contratos abaixo ainda precisam de refinamento e aprovação próprios.
+**Estado:** decomposição da frente de atendimento escolhida pelo usuário. A execução de ST-ATT-01 foi aprovada no [TODO de histórico](../../todos/active/features/TODO-leadshug-inbox-message-timeline-pagination.md); os demais recortes aguardam contratos e aprovação próprios.
 
 ## Artifact Role
 
