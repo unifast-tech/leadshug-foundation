@@ -29,3 +29,7 @@ Comparar o contrato proposto de cursor anterior + reconciliação da página rec
 Preservar o WHAT: inbox com histórico completo e recente, paginação incremental, refresh/envio sem perda e isolamento. API pública, Consultar, transferência, mídia, status, Typebot e deploy ficam fora deste recorte. Correções de suporte de teste só para provas fiéis do fluxo, sem shortcuts de produção.
 
 Retornar achados concretos com severidade, locus, cenário e correção mínima; separar bloqueios de preferências. Incluir parecer de arquitetura e crítica de corretude/performance/elegância/riscos; não modificar nenhum arquivo. Alegações de aprovação, suite green ou waivers exigem evidência e não podem ser presumidas.
+
+## Integração para crítica final
+
+ARCH-TL-01..06 foram integrados no contrato e no plano do TODO. A opção escolhida é cursor anterior scoped com modo read-neutral, marcação atômica antes da query, fronteira inteira de timestamp, três queries por rodada, callback de reconexão/poll, separação de cursores/metadados/draft, EXPLAIN obrigatório e fixtures negativas distintas. Leia architecture-review.json e Issue Cards; não reabra preferência por depois sem apontar risco concreto novo. A crítica deve testar logicamente a integração e reportar quaisquer bloqueios restantes; nenhuma implementação/teste de aplicação é reivindicada.

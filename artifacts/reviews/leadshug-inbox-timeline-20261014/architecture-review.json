@@ -1,0 +1,113 @@
+{
+  "schema_version": "subagent-review-result-v1",
+  "artifact_kind": "subagent_review_result",
+  "dispatch_path": "/mnt/c/Unifast/LeadsHug/leadshug_now_docker/foundation_documentation/artifacts/tmp/inbox-timeline-architecture-dispatch.json",
+  "review_kind": "architecture_opinion",
+  "reviewer_label": "independent-architecture-review-gpt-6.1-sol-max",
+  "overall_assessment": "O WHAT proposto é viável sem ampliar API pública, Consultar, recebimento, ownership, mídia ou deploy. O contrato precisa de refinamento antes do freeze/APROVADO: ARCH-TL-01..03 impedem garantir leitura e recuperação sem perdas; ARCH-TL-04..06 são requisitos de estado/validação a incorporar ao plano. Revisão independente estática do pacote e fontes allowlisted; baseline documental informado 04be83d43b70e2924e4096ab72819bb525e054ba, com 8f863844 registrado historicamente no TODO. Nenhum teste de aplicação, alteração de código/canônicos, operação Git ou mudança de runtime foi realizado.",
+  "recommended_path": "Recomendo manter uma única paginação para trás por cursor scoped (createdAt,id), com página recente bounded, modo explícito sem efeito de leitura para refresh/recuperação e reconciliação por páginas anteriores. Capturar uma fronteira de recuperação fixa, provar a ponte antes de afirmar continuidade e incluir integralmente o grupo de timestamps empatados nessa fronteira. Separar cursor do histórico, progresso de recuperação e frescor dos metadados em um pequeno estado/reducer da timeline; coalescer eventos por contexto e manter retry explícito. Essa opção reaproveita a query/cursor já propostos e reduz estados de contrato e testes. O custo é reler uma página recente e o trecho necessário de sobreposição, especialmente grupos grandes de timestamps empatados. A alternativa bidirecional com depois pode reduzir releitura e facilitar avanço a partir do topo conhecido, mas acrescenta direção, validação de combinações e metadados de continuação; depois estrito pelo par também perde inserções tardias com timestamp empatado e ID menor, portanto não elimina a necessidade de sobreposição. Não há evidência neste pacote que justifique essa complexidade adicional. A carga inicial melhora de 200 para 50 registros por padrão; memória cresce com o histórico explicitamente carregado da conversa ativa, sem exigir cache de todas as conversas. O bootstrap real de teste com dublês apenas nas portas externas é adequado; completar as provas abaixo antes de alegar entrega.",
+  "performance_position": "mixed",
+  "elegance_position": "acceptable",
+  "structural_soundness_position": "acceptable",
+  "operational_fit_position": "mixed",
+  "findings": [
+    {
+      "finding_id": "ARCH-TL-01",
+      "severity": "high",
+      "category": "architecture",
+      "formalizable_hint": "yes",
+      "candidate_rule_level": "project",
+      "title": "O contrato não distingue abertura de refresh recente sem marcar leitura",
+      "rationale": "TODO linhas 70..76 declara apenas limite/antes: tanto abrir quanto atualizar a página recente usam GET sem cursor. Entretanto a decisão da linha 248 exige que recuperação em background preserve novas não lidas. O serviço atual (conversations.service.ts:90..105) zera unreadCount incondicionalmente, e Inbox.tsx:50,61,69 usa a mesma leitura para evento e pós-ação. Após chegar um burst enquanto o usuário lê páginas antigas, a primeira consulta recente da recuperação pode apagar todas as novas não lidas; omitir a escrita somente quando antes existe não resolve. O select seguido de reset também deixa indefinido quais entradas concorrentes a abertura reconhece.",
+      "suggested_action": "Declarar e validar um modo explícito de leitura no BFF, por exemplo marcarLida=false para toda consulta de background, pós-ação e recuperação; paginação anterior sempre sem esse efeito, abertura humana conserva a marcação prevista. Definir a fronteira/momento de reconhecimento da abertura para não apagar entradas posteriores a ele, sem criar estados de entrega/leitura por mensagem nem alterar incoming.service.ts. Incluir testes PostgreSQL/browser de abertura, chegada de novas IN, paginação anterior, refresh recente e recuperação de várias páginas, com readback de unreadCount; incluir entrada concorrente ao reconhecimento.",
+      "affected_paths": [
+        "foundation_documentation/todos/active/features/TODO-leadshug-inbox-message-timeline-pagination.md",
+        "api-app/src/surfaces/bff/conversations.controller.ts",
+        "api-app/src/domain/inbox/conversations.service.ts",
+        "web-app/src/telas/Inbox.tsx",
+        "api-app/test/atendimento.e2e-spec.ts"
+      ]
+    },
+    {
+      "finding_id": "ARCH-TL-02",
+      "severity": "high",
+      "category": "architecture",
+      "formalizable_hint": "yes",
+      "candidate_rule_level": "project",
+      "title": "Reconectar o socket não dispara recuperação da conversa selecionada",
+      "rationale": "TODO:78 e a matriz de fluxo:356 exigem recuperar mensagens perdidas após reconexão. tempoReal.ts:53..60 informa apenas eventos de mensagem e reconecta sem callback de conexão; Inbox.tsx:52 atualiza somente a lista no poll. Se mais de uma página chegar durante a desconexão e não houver outro evento depois da reconexão, a timeline aberta pode permanecer desatualizada indefinidamente. Implementar somente merge no callback existente não satisfaz esse cenário. tempoReal.ts também não consta dos paths de implementação esperados.",
+      "suggested_action": "Fechar o mecanismo de disparo antes do freeze: a opção mínima dentro dos paths atuais é reconciliar também a thread selecionada, sem efeito de leitura, em um poll com intervalo declarado. Se for escolhido callback de reconexão, incluir tempoReal.ts no contrato de diff antes da aprovação. Testar queda, burst maior que a página, reconexão sem nenhum evento posterior e recuperação integral com os mesmos IDs do banco; não substituir essa prova por um evento sintético enviado após reconectar.",
+      "affected_paths": [
+        "foundation_documentation/todos/active/features/TODO-leadshug-inbox-message-timeline-pagination.md",
+        "web-app/src/tempoReal.ts",
+        "web-app/src/telas/Inbox.tsx",
+        "web-app/e2e/telas.spec.ts"
+      ]
+    },
+    {
+      "finding_id": "ARCH-TL-03",
+      "severity": "high",
+      "category": "architecture",
+      "formalizable_hint": "yes",
+      "candidate_rule_level": "project",
+      "title": "Encontrar um ID conhecido não prova recuperação completa em timestamps empatados",
+      "rationale": "A ordenação por createdAt/id resolve paginação determinística de registros já presentes, mas não estabelece que todo registro recém-inserido fique depois do último ID carregado. Message usa DateTime e uuid independentes (schema.prisma:311,329). Exemplo: há mais de uma página no timestamp T; entre snapshots entra uma mensagem com o mesmo T e ID menor. A página recente ainda pode conter o último ID conhecido, mas omitir a nova mensagem. Parar na primeira interseção deixa lacuna silenciosa; depois estrito pelo par sofre do mesmo problema. TODO:78 não define como a fronteira prova completude, e VAL-03 cobre empates estáticos, não inserções empatadas durante recuperação.",
+      "suggested_action": "Especificar a sobreposição de recuperação, incluindo o grupo inteiro do timestamp da fronteira capturada antes de encerrar a ponte, em vez de parar somente ao encontrar o último ID. Tratar chegada concorrente como nova passagem coalescida e manter estado de lacuna/retry até concluir a prova. Acrescentar teste com mais de uma página empatada e inserções posteriores de IDs menores, além de inserção durante a caminhada. Isso pode usar o mesmo antes; não exige nova sequência/tabela nem alterar o recebimento excluído do escopo.",
+      "affected_paths": [
+        "foundation_documentation/todos/active/features/TODO-leadshug-inbox-message-timeline-pagination.md",
+        "api-app/prisma/schema.prisma",
+        "web-app/src/telas/Inbox.tsx",
+        "api-app/test/atendimento.e2e-spec.ts",
+        "web-app/e2e/telas.spec.ts"
+      ]
+    },
+    {
+      "finding_id": "ARCH-TL-04",
+      "severity": "medium",
+      "category": "structural_soundness",
+      "formalizable_hint": "yes",
+      "candidate_rule_level": "project",
+      "title": "Geração por seleção não separa cursores e metadados concorrentes da mesma conversa",
+      "rationale": "A regra do TODO:282 protege respostas de outro contexto, mas não define ownership entre carregar anteriores, refresh, recuperação e ações da mesma conversa. Um refresh recente pode substituir cursorAnterior/temAnteriores da fronteira histórica por valores relativos apenas à página recente. Uma página anterior iniciada antes de close pode chegar depois e restaurar status/janela antigos se todo Thread for mesclado indiscriminadamente. O callback atual dispara uma leitura por evento (Inbox.tsx:47..50), multiplicando consultas e caminhadas em bursts; o reset de texto após envio (:81) também é um efeito tardio que precisa do contexto capturado.",
+      "suggested_action": "Definir estado mínimo com coleção por ID, fronteira histórica pertencente ao backfill, progresso separado da ponte e versão de frescor dos metadados. Usar contexto BU/conversa/geração capturado para todos os efeitos assíncronos, inclusive erro e limpeza do draft. Permitir uma recuperação em voo por contexto, coalescer novos eventos e não reiniciar a caminhada em cada evento; preservar cursor de retry. Validar anteriores em paralelo com refresh/envio/close e troca de conversa durante envio, usando respostas reais atrasadas, sem framework genérico ou cache permanente de todas as conversas.",
+      "affected_paths": [
+        "foundation_documentation/todos/active/features/TODO-leadshug-inbox-message-timeline-pagination.md",
+        "web-app/src/telas/Inbox.tsx",
+        "web-app/src/api.ts",
+        "web-app/e2e/telas.spec.ts"
+      ]
+    },
+    {
+      "finding_id": "ARCH-TL-05",
+      "severity": "medium",
+      "category": "performance",
+      "formalizable_hint": "yes",
+      "candidate_rule_level": "project",
+      "title": "O gate de plano SQL não deve depender da decisão de criar índice",
+      "rationale": "N+1 limita registros devolvidos, não linhas examinadas ou trabalho de ordenação. O índice existente é conversationId/createdAt (schema.prisma:331), enquanto a nova ordem e comparação incluem id. Grupos grandes de empates e páginas profundas podem exigir sort ou filtrar muitos registros conforme o SQL produzido. O plano ordenado manda avaliar o índice, mas VAL-06:194 condiciona o registro de EXPLAIN à criação de um índice, deixando a decisão de reutilizar o índice sem prova explícita. A fixture de 251 registros demonstra corretude, porém não é suficiente para concluir eficiência em histórico grande.",
+      "suggested_action": "Tornar a evidência de EXPLAIN representativo obrigatória para a query recente e para antes em posição profunda, com grande histórico e empates, mesmo quando nenhum índice for criado. Registrar SQL/plano e volume examinado/ordenado; só então decidir se um índice conversationId/createdAt/id ou ajuste local do predicado é necessário. Se houver mudança de schema, manter a migração e migrate deploy isolados já previstos. Não exigir índice novo por preferência nem ampliar infraestrutura.",
+      "affected_paths": [
+        "foundation_documentation/todos/active/features/TODO-leadshug-inbox-message-timeline-pagination.md",
+        "api-app/prisma/schema.prisma",
+        "api-app/src/domain/inbox/conversations.service.ts"
+      ]
+    },
+    {
+      "finding_id": "ARCH-TL-06",
+      "severity": "medium",
+      "category": "tests",
+      "formalizable_hint": "yes",
+      "candidate_rule_level": "project",
+      "title": "A matriz de fixtures precisa distinguir recurso fora do escopo de cursor alheio",
+      "rationale": "VAL-03:191 especifica duas Mantenedoras e duas BUs, mas não garante BU sem grant na mesma Mantenedora nem duas conversas autorizadas para testar pertencimento do cursor. Se o único cursor alheio vier junto de uma conversa de outro tenant, o resolver retorna 404 antes de exercer a validação do cursor; um teste green pode deixar passar um cursor resolvido globalmente. A suite atual prova cross-tenant no envio (:108..113) e leitura simples (:210..217); o browser atual só abre inbox vazia (telas.spec.ts:302..310), portanto esses resultados históricos não provam o novo contrato.",
+      "suggested_action": "Declarar fixtures com pelo menos duas conversas na BU autorizada, outra BU da mesma Mantenedora sem grant e uma BU de outra Mantenedora. Exigir 400 PAGINACAO_INVALIDA para cursor de outra conversa em recurso autorizado e 404 para recurso fora do escopo inclusive com cursor malformado, com readback de ausência de efeitos indevidos. No novo backend real de browser, manter sessão/guards/domínio/persistência reais, dublar somente portas externas e provar envio persistido com autoria, evento originado do backend, recuperação e IDs esperados no mesmo banco dedicado; atrasar respostas reais para os testes de race em vez de fabricar o BFF.",
+      "affected_paths": [
+        "foundation_documentation/todos/active/features/TODO-leadshug-inbox-message-timeline-pagination.md",
+        "api-app/test/atendimento.e2e-spec.ts",
+        "api-app/test/helpers.ts",
+        "web-app/e2e/telas.spec.ts",
+        "web-app/playwright.config.ts"
+      ]
+    }
+  ]
+}
