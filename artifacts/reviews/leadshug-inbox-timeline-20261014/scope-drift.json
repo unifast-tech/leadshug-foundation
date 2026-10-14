@@ -1,0 +1,51 @@
+{
+  "artifact_kind": "review_scope_drift_guard",
+  "todo_path": "/mnt/c/Unifast/LeadsHug/leadshug_now_docker/foundation_documentation/todos/active/features/TODO-leadshug-inbox-message-timeline-pagination.md",
+  "repo_root": "/mnt/c/Unifast/LeadsHug/leadshug_now_docker/foundation_documentation",
+  "todo_relative_path": "todos/active/features/TODO-leadshug-inbox-message-timeline-pagination.md",
+  "overall_outcome": "go",
+  "baseline_gate": {
+    "section_present": true,
+    "decision": "required",
+    "status": "no_material_findings",
+    "branch": "main",
+    "commit": "649372fbe81f6cccc0f8902b52fe32e2ecfc061a",
+    "push_reference": "origin/main",
+    "evidence_reference": "git.exe push origin main completado; baseline 649372fb com integra\u00e7\u00e3o ARCH-TL-01..06 e resolu\u00e7\u00e3o da cr\u00edtica publicado em 2026-10-14; git_write_authority_guard go para commit/push",
+    "waiver_reference": "none"
+  },
+  "scope_drift_gate": {
+    "section_present": true,
+    "decision": "required",
+    "status": "not_run",
+    "evidence_reference": "executar ap\u00f3s converg\u00eancia da revis\u00e3o contra o baseline publicado",
+    "waiver_reference": "none"
+  },
+  "changed_sections": [],
+  "material_headings": [
+    "## Context",
+    "## Framing Source & Story Slice",
+    "## Contract Boundary",
+    "## Scope",
+    "## Out of Scope",
+    "## Bounded But Elastic Guardrails",
+    "## Definition of Done",
+    "## Validation Steps",
+    "## Execution Lane Tracking",
+    "## Diff Expectation Contract",
+    "## Complexity",
+    "## Canonical Module Anchors",
+    "## Decisions (Resolved Before Freeze)",
+    "## Module Decision Baseline Snapshot",
+    "## Decision Baseline (Frozen Before Implementation)",
+    "## Architecture Change Governance",
+    "## Questions To Close",
+    "## Assumptions Preview",
+    "## Execution Plan",
+    "## Flow Evidence Planning Matrix",
+    "## Runtime / Rollout Notes",
+    "## Security Risk Assessment",
+    "## Performance & Concurrency Risk Assessment"
+  ],
+  "issues": []
+}

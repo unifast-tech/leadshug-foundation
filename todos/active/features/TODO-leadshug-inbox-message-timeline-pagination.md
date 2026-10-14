@@ -2,7 +2,7 @@
 
 ## Quick Start
 
-Rascunho criado a partir de delphi-ai/templates/todo_template.md; ainda não autoriza execução.
+Contrato criado a partir de delphi-ai/templates/todo_template.md, revisado e submetido à aprovação humana final; ainda não autoriza execução.
 
 ## Title
 
@@ -42,7 +42,7 @@ Este rascunho define o primeiro recorte proposto. Alterações em contrato, auto
 
 - **Current delivery stage:** `Pending`
 - **Qualifiers:** `Blocked`
-- **Next exact step:** publicar baseline documental, executar revisão independente e guardas, integrar achados e apresentar contrato para APROVADO
+- **Next exact step:** aguardar APROVADO para o contrato revisado; depois recarregar regras e executar authority guard normal antes de implementar
 
 ## Active Work State (Required While TODO Remains In `active/`)
 
@@ -335,15 +335,15 @@ Proposta técnica congelada para crítica em 2026-10-14 após integração ARCH-
 - **Gate decision:** required
 - **Gate status:** no_material_findings
 - **Baseline branch:** main
-- **Baseline commit:** a3c8d3e6312f1a48e97bd4843e1e6843c15c61bc
+- **Baseline commit:** 649372fbe81f6cccc0f8902b52fe32e2ecfc061a
 - **Baseline push reference:** origin/main
-- **Evidence / reference:** git.exe push origin main completado; baseline a3c8d3e6 com integração ARCH-TL-01..06 publicado em 2026-10-14; git_write_authority_guard go para commit/push
+- **Evidence / reference:** git.exe push origin main completado; baseline 649372fb com integração ARCH-TL-01..06 e resolução da crítica publicado em 2026-10-14; git_write_authority_guard go para commit/push
 - **Waiver authority / reference (required if waived):** none
 
 ## Gate: Review Scope Drift
 
 - **Gate decision:** required
-- **Gate status:** not_run
+- **Gate status:** no_material_findings
 - **Evidence / reference:** executar após convergência da revisão contra o baseline publicado
 - **Waiver authority / reference (required if waived):** none
 
@@ -412,7 +412,7 @@ Backend de validação e Playwright usam o mesmo banco dedicado. Falta de runner
 
 ## Plan Review Gate (Review of the Execution Plan; required for `medium|big`; abbreviated for low-risk `small`)
 
-- **Status:** findings_integrated; aguardando crítica independente da proposta refinada.
+- **Status:** findings_integrated; crítica inicial e resolução delta concluídas sem achados materiais pendentes.
 - **Review output:** parecer de arquitetura no arquivo architecture-review.json.
 
 ### Issue Cards
@@ -421,7 +421,7 @@ Backend de validação e Playwright usam o mesmo banco dedicado. Falta de runner
 | --- | --- | --- | --- | --- |
 | ARCH-TL-01 | high | Background zera não lidas; select/reset perde entrada concorrente | marcarLida=false e abertura atômica antes da query; VAL-08 | Integrated |
 | ARCH-TL-02 | high | Socket retorna sem evento e thread não recupera | Callback de reconexão + poll da thread, paths de tempoReal explicitados | Integrated |
-| ARCH-TL-03 | high | ID menor empatado pode entrar atrás do cursor após cabeça avançar | Cruzar grupo inteiro e conservar piso pendente T em todas as passagens coalescidas; promover só sem trabalho concorrente; teste H>T/ID atrás do cursor | Integrated; delta review pending |
+| ARCH-TL-03 | high | ID menor empatado pode entrar atrás do cursor após cabeça avançar | Cruzar grupo inteiro e conservar piso pendente T em todas as passagens coalescidas; promover só sem trabalho concorrente; teste H>T/ID atrás do cursor | Integrated; verified by critique delta |
 | ARCH-TL-04 | medium | Mesmo contexto mistura cursores/metadados/draft | Estado mínimo com owners separados, geração e coalescing; races reais | Integrated |
 | ARCH-TL-05 | medium | Índice existente aceito sem plano representativo | EXPLAIN obrigatório recente/profundo/empates mesmo sem migração | Integrated |
 | ARCH-TL-06 | medium | Cursor errado não testado porque recurso já é 404 | Fixtures negativas distintas + browser backend real | Integrated |
@@ -429,6 +429,16 @@ Backend de validação e Playwright usam o mesmo banco dedicado. Falta de runner
 ### Residual Risks
 
 Custo do grupo empatado é medido e cada rodada limitada; inserções concurrentes exigem nova passagem e UI de recuperação. Runners e suites serão provados na implementação. Nenhuma suite green ou aprovação material é presumida.
+
+### Resultado da revisão pré-aprovação
+
+- Revisão de arquitetura: seis achados integrados; crítica e delta encerrados sem achados materiais pendentes.
+- Assumption code coherence: go; cinco premissas com fontes reais verificadas.
+- Review scope drift: go; 23 seções comparadas, zero mudanças materiais após baseline 649372fb.
+- Validação estrutural do TODO: PASS; lifecycle Foundation: exit 0.
+- Authority preflight: preflight-go; execution_authority_granted=false.
+- Evidências: artifacts/reviews/leadshug-inbox-timeline-20261014/README.md.
+- Implementação e testes de aplicação continuam pendentes de autorização; nenhum gate de entrega é reivindicado.
 
 ## Additional Architectural Opinions (Required When Path Remains Materially Unclear)
 
@@ -452,23 +462,25 @@ Parecer independente concluído em 2026-10-14, modelo gpt-6.1-sol/max, sem conte
 
 ## Independent No-Context Critique Gate (Deterministic Floor From Audit Escalation)
 
-- **Gate decision:** required
+- **Critique decision:** required
 - **Why this decision:** piso de audit_escalation_guard; API/escopo/realtime e UI com races.
 - **Package mode:** bounded-file-set
-- **Critique isolation mode:** fresh internal no-context reviewer
-- **Critique status:** running
-- **Gate status:** running
-- **Evidence / reference:** baseline a3c8d3e6; dispatch inbox-timeline-critique-dispatch; architecture-review.json e Issue Cards são carry-forward obrigatório.
+- **Critique isolation mode:** fresh internal no-context reviewer; resolução delta pelo mesmo crítico independente, sem contexto de implementação.
+- **Critique status:** findings_integrated
+- **Gate status:** findings_integrated
+- **Evidence / reference:** artifacts/reviews/leadshug-inbox-timeline-20261014/critique-round-1.json e critique-resolution.json; primeiro parecer reabriu ARCH-TL-03; delta verificou resolução e retornou findings vazio. Baseline revisada 649372fb.
 - **Waiver authority / reference:** none
 
 ## Gate: Assumption Code Coherence
 
 - **Gate decision:** required
-- **Why this decision:** revisar A-01..05 contra fontes atuais antes de aprovação.
+- **Why this decision:** A-01..05 exigem evidência de código real antes de aprovação.
 - **Trigger stage:** after critique convergence and before APROVADO
 - **Guard scope:** A-01,A-02,A-03,A-04,A-05
-- **Gate status:** not_run
-- **Evidence / reference:** crítica final deve validar fontes; rodar guard após convergência.
+- **Gate status:** no_material_findings
+- **Findings summary:** revisão independente confirmou A-01/A-02/A-04/A-05 e, no delta, A-03 na query própria do controller público.
+- **Evidence / reference:** artifacts/reviews/leadshug-inbox-timeline-20261014/critique-resolution.json; execução do guard registrada no mesmo diretório.
+- **Waiver authority / reference:** none
 
 ## Approval
 
@@ -533,9 +545,9 @@ Pendente no gate de execução/revisão correspondente; nenhuma evidência ou pr
 ## TODO Closeout Disposition
 
 - **Disposition:** keep-active
-- **Disposition reason:** Draft aguardando refinamento/revisão/aprovação
-- **Post-commit/push status:** not-performed
-- **Next path/status action:** resolver DP-01..03; concluir somente depois de implementação/evidência e guardas
+- **Disposition reason:** contrato em Review, revisão convergida, aguardando aprovação humana da implementação.
+- **Post-commit/push status:** baseline e pareceres publicados; guardas finais registrados no pacote de aprovação.
+- **Next path/status action:** APROVADO, ingestão vinculante, authority guard normal e execução; closeout somente após provas de implementação/entrega.
 
 ## Security Risk Assessment (Mandatory Before Delivery)
 
@@ -561,25 +573,28 @@ Pendentes contrato, runner, provas PostgreSQL/browser e revisões. Não reivindi
 
 ## Independent Test Quality Audit Gate (Deterministic Floor From Audit Escalation)
 
-- **Gate decision:** required
+- **Audit decision:** required
 - **Why this decision:** API/escopo/consulta e UI interativa com races
-- **Gate status:** not_run
+- **Audit status:** not_run
 - **Critique status:** not_run
 - **Evidence / reference:** pacote ainda prepared-pre-freeze; executar revisão no gate correspondente
 - **Waiver authority / reference:** none
 
 ## Independent No-Context Final Review Gate (Deterministic Floor From Audit Escalation)
 
-- **Gate decision:** required
+- **Final review decision:** required
 - **Why this decision:** API/escopo/consulta e UI interativa com races
-- **Gate status:** not_run
+- **Final review status:** not_run
 - **Critique status:** not_run
 - **Evidence / reference:** pacote ainda prepared-pre-freeze; executar revisão no gate correspondente
 - **Waiver authority / reference:** none
 
 ## Independent Cutover Integrity Audit Gate
 
-Pendente no gate de execução/revisão correspondente; nenhuma evidência ou promoção reivindicada neste Draft.
+- **Cutover audit decision:** not_needed
+- **Cutover audit status:** no_material_findings
+- **Why this decision:** recorte de paginação no BFF/inbox atuais; não há substituição de runtime legado, dual-read/dual-write ou exceção de compatibilidade temporária.
+- **Evidence / reference:** Out of Scope e pareceres de arquitetura/crítica mantêm o produto atual como alvo único; nenhuma auditoria de cutover reivindicada.
 
 ## Delivery Confidence Gate (Required for `✅ Production-Ready`)
 

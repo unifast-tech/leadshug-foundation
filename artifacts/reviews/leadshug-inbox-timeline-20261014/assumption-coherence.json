@@ -1,0 +1,96 @@
+{
+  "artifact_kind": "assumption_code_coherence_guard",
+  "todo_path": "/mnt/c/Unifast/LeadsHug/leadshug_now_docker/foundation_documentation/todos/active/features/TODO-leadshug-inbox-message-timeline-pagination.md",
+  "repo_root": "/mnt/c/Unifast/LeadsHug/leadshug_now_docker",
+  "overall_outcome": "go",
+  "live_assumption_ids": [
+    "A-01",
+    "A-02",
+    "A-03",
+    "A-04",
+    "A-05"
+  ],
+  "gate": {
+    "section_present": true,
+    "decision": "required",
+    "status": "no_material_findings",
+    "evidence_reference": "artifacts/reviews/leadshug-inbox-timeline-20261014/critique-resolution.json; execu\u00e7\u00e3o do guard registrada no mesmo diret\u00f3rio.",
+    "waiver_reference": "missing"
+  },
+  "assumptions": [
+    {
+      "assumption_id": "A-01",
+      "handling": "Keep as Assumption",
+      "evidence": "api-app/src/domain/inbox/conversations.service.ts:88",
+      "path_tokens": [
+        "api-app/src/domain/inbox/conversations.service.ts"
+      ],
+      "resolved_paths": [
+        "/mnt/c/Unifast/LeadsHug/leadshug_now_docker/api-app/src/domain/inbox/conversations.service.ts"
+      ],
+      "resolved_code_paths": [
+        "/mnt/c/Unifast/LeadsHug/leadshug_now_docker/api-app/src/domain/inbox/conversations.service.ts"
+      ]
+    },
+    {
+      "assumption_id": "A-02",
+      "handling": "Keep as Assumption",
+      "evidence": "web-app/src/telas/Inbox.tsx:59",
+      "path_tokens": [
+        "web-app/src/telas/Inbox.tsx"
+      ],
+      "resolved_paths": [
+        "/mnt/c/Unifast/LeadsHug/leadshug_now_docker/web-app/src/telas/Inbox.tsx"
+      ],
+      "resolved_code_paths": [
+        "/mnt/c/Unifast/LeadsHug/leadshug_now_docker/web-app/src/telas/Inbox.tsx"
+      ]
+    },
+    {
+      "assumption_id": "A-03",
+      "handling": "Keep as Assumption",
+      "evidence": "api-app/src/surfaces/public/conversations.controller.ts:103",
+      "path_tokens": [
+        "api-app/src/surfaces/public/conversations.controller.ts"
+      ],
+      "resolved_paths": [
+        "/mnt/c/Unifast/LeadsHug/leadshug_now_docker/api-app/src/surfaces/public/conversations.controller.ts"
+      ],
+      "resolved_code_paths": [
+        "/mnt/c/Unifast/LeadsHug/leadshug_now_docker/api-app/src/surfaces/public/conversations.controller.ts"
+      ]
+    },
+    {
+      "assumption_id": "A-04",
+      "handling": "Keep as Assumption",
+      "evidence": "api-app/test/helpers.ts:112",
+      "path_tokens": [
+        "api-app/test/helpers.ts"
+      ],
+      "resolved_paths": [
+        "/mnt/c/Unifast/LeadsHug/leadshug_now_docker/api-app/test/helpers.ts"
+      ],
+      "resolved_code_paths": [
+        "/mnt/c/Unifast/LeadsHug/leadshug_now_docker/api-app/test/helpers.ts"
+      ]
+    },
+    {
+      "assumption_id": "A-05",
+      "handling": "Keep as Assumption",
+      "evidence": "web-app/playwright.config.ts:32; api-app/test/helpers.ts:68",
+      "path_tokens": [
+        "web-app/playwright.config.ts",
+        "api-app/test/helpers.ts"
+      ],
+      "resolved_paths": [
+        "/mnt/c/Unifast/LeadsHug/leadshug_now_docker/web-app/playwright.config.ts",
+        "/mnt/c/Unifast/LeadsHug/leadshug_now_docker/api-app/test/helpers.ts"
+      ],
+      "resolved_code_paths": [
+        "/mnt/c/Unifast/LeadsHug/leadshug_now_docker/web-app/playwright.config.ts",
+        "/mnt/c/Unifast/LeadsHug/leadshug_now_docker/api-app/test/helpers.ts"
+      ]
+    }
+  ],
+  "issues": []
+}
