@@ -12,9 +12,9 @@ Histórico completo e paginado na inbox do LeadsHug.
 
 - **Artifact type:** `tactical_execution_contract`
 - **Tactical state:** `Review`
-- **Prepared on:** 2026-10-14.
-- **Scope selection source:** atendimento selecionado pelo usuário; revisão e preparação de aprovação autorizadas por “Pode seguir para revisão e aprovação”, em 2026-10-14.
-- **Implementation approval:** pendente da apresentação do contrato revisado e do APROVADO final.
+- **Prepared on:** 2026-10-14
+- **Scope selection source:** atendimento selecionado pelo usuário; revisão e preparação de aprovação autorizadas por “Pode seguir para revisão e aprovação”, em 2026-10-14
+- **Implementation approval:** pendente da apresentação do contrato revisado e do APROVADO final
 
 ## Context
 
@@ -24,8 +24,8 @@ A thread da inbox busca as primeiras 200 mensagens em ordem crescente, sem metad
 
 - **Feature brief:** `foundation_documentation/artifacts/feature-briefs/leadshug-attendance-evolution-20261014.md`
 - **Primary story ID:** `ST-ATT-01`
-- **Why this is the right current slice:** CAP-010 estende um fluxo existente, com aceitação verificável e sem depender das decisões ainda abertas de transferência, mídia e estados.
-- **Direct-to-TODO rationale:** n/a; há feature brief para o pacote.
+- **Why this is the right current slice:** CAP-010 estende um fluxo existente, com aceitação verificável e sem depender das decisões ainda abertas de transferência, mídia e estados
+- **Direct-to-TODO rationale:** n/a; há feature brief para o pacote
 
 ## Contract Boundary
 
@@ -33,22 +33,22 @@ Este rascunho define o primeiro recorte proposto. Alterações em contrato, auto
 
 ## Implementation Intent
 
-- **Current delivery:** leitura paginada da thread BFF e navegação incremental na inbox.
-- **Planned next steps:** transferência/ownership, estados e mídia, em TODOs próprios.
-- **Anticipatory implementation authorized now:** none.
-- **Rationale:** reutilizar Conversation/Message e as fronteiras existentes; acrescentar abstrações apenas quando necessárias ao contrato de paginação e mesclagem.
+- **Current delivery:** leitura paginada da thread BFF e navegação incremental na inbox
+- **Planned next steps:** transferência/ownership, estados e mídia, em TODOs próprios
+- **Anticipatory implementation authorized now:** none
+- **Rationale:** reutilizar Conversation/Message e as fronteiras existentes; acrescentar abstrações apenas quando necessárias ao contrato de paginação e mesclagem
 
 ## Delivery Status Canon (Required)
 
 - **Current delivery stage:** `Pending`
 - **Qualifiers:** `Blocked`
-- **Next exact step:** publicar baseline documental, executar revisão independente e guardas, integrar achados e apresentar contrato para APROVADO.
+- **Next exact step:** publicar baseline documental, executar revisão independente e guardas, integrar achados e apresentar contrato para APROVADO
 
 ## Active Work State (Required While TODO Remains In `active/`)
 
 - **Work state:** `blocked`
-- **Why this state now:** o TODO está em Draft; execução depende da revisão e aprovação do contrato.
-- **Exit condition:** pacote de aprovação completo, aprovação explícita e authority guard em go.
+- **Why this state now:** o TODO está em Draft; execução depende da revisão e aprovação do contrato
+- **Exit condition:** pacote de aprovação completo, aprovação explícita e authority guard em go
 
 ## Scope
 
@@ -100,22 +100,22 @@ n/a; nenhuma entrega parcial é reivindicada.
 
 ## Blocker Notes (Required if `Qualifiers` includes `Blocked`)
 
-- **Blocker:** aprovação final da implementação ainda pendente.
-- **Why blocked now:** a autorização recebida cobre revisão e preparação da aprovação.
-- **What unblocks it:** revisão convergida, preflight-go e APROVADO humano para este contrato.
-- **Owner / source:** usuário; workflow local de aprovação de TODOs.
-- **Last confirmed truth:** histórico da inbox tem teto de 200; código API/Web mantém as baselines registradas.
+- **Blocker:** aprovação final da implementação ainda pendente
+- **Why blocked now:** a autorização recebida cobre revisão e preparação da aprovação
+- **What unblocks it:** revisão convergida, preflight-go e APROVADO humano para este contrato
+- **Owner / source:** usuário; workflow local de aprovação de TODOs
+- **Last confirmed truth:** histórico da inbox tem teto de 200; código API/Web mantém as baselines registradas
 
 ## Execution Lane Tracking (Required)
 
-- **Local implementation branches:** api-app:feature/inbox-timeline-pagination; web-app:feature/inbox-timeline-pagination, a criar no checkout principal após aprovação. Foundation:main.
-- **Promotion lane path:** branches locais -> validação local -> evidência/closeout na Foundation; deploy e promoção remota de código fora do recorte.
-- **Lane-promoted threshold for this TODO:** n/a; entrega local validada.
-- **Production-ready threshold for this TODO:** não reivindicado; publicação requer contrato separado.
-- **Execution topology:** primary-checkout-single-writer.
-- **Git isolation authorization:** not-requested; sem worktrees/cópias auxiliares.
-- **Subagent / delegation authorization:** revisão independente requerida pelo skill local wf-docker-todo-approval-gates-method e seu workflow; executor de código será o routine-executor predeclarado somente após APROVADO deste contrato.
-- **Documentation git-write authority:** git_write_authority_guard retornou go para git-commit e git-push de Foundation main; autorização autônoma documental conforme workflow local.
+- **Local implementation branches:** api-app:feature/inbox-timeline-pagination; web-app:feature/inbox-timeline-pagination, a criar no checkout principal após aprovação. Foundation:main
+- **Promotion lane path:** branches locais -> validação local -> evidência/closeout na Foundation; deploy e promoção remota de código fora do recorte
+- **Lane-promoted threshold for this TODO:** n/a; entrega local validada
+- **Production-ready threshold for this TODO:** não reivindicado; publicação requer contrato separado
+- **Execution topology:** primary-checkout-single-writer
+- **Git isolation authorization:** not-requested; sem worktrees/cópias auxiliares
+- **Subagent / delegation authorization:** revisão independente requerida pelo skill local wf-docker-todo-approval-gates-method e seu workflow; executor de código será o routine-executor predeclarado somente após APROVADO deste contrato
+- **Documentation git-write authority:** git_write_authority_guard retornou go para git-commit e git-push de Foundation main; autorização autônoma documental conforme workflow local
 
 ## Promotion Evidence (Required Before `🟣 Lane-Promoted` / `✅ Production-Ready`)
 
@@ -218,24 +218,24 @@ Execução local planejada: runner Linux temporário Node 22, conforme imagens N
 
 ## Profile Scope & Handoffs (Required Before `APROVADO`)
 
-- **Current profile:** Strategic / CTO-Tech-Lead, preparação documental.
-- **Primary execution profile:** operational-coder.
-- **Active technical scope:** nestjs, react, vite, postgresql, prisma, docker.
-- **Handoff:** Strategic -> Operational/Coder depois de contrato e aprovação; DevOps somente para resolver prontidão com contrato próprio; Assurance para revisão/evidência.
-- **Execution topology:** principal checkout, single writer; Foundation main.
+- **Current profile:** Strategic / CTO-Tech-Lead, preparação documental
+- **Primary execution profile:** operational-coder
+- **Active technical scope:** nestjs, react, vite, postgresql, prisma, docker
+- **Handoff:** Strategic -> Operational/Coder depois de contrato e aprovação; DevOps somente para resolver prontidão com contrato próprio; Assurance para revisão/evidência
+- **Execution topology:** principal checkout, single writer; Foundation main
 
 ## Complexity
 
-- **Level:** medium.
-- **Checkpoint policy:** contrato e API, UI integrada, prova browser e closeout; cada checkpoint tem evidência afetada, sem alegar suite ampla antes de sua execução.
-- **Why this level:** alteração de API persistente consumida por UI com cursores, autorização e races de realtime.
+- **Level:** medium
+- **Checkpoint policy:** contrato e API, UI integrada, prova browser e closeout; cada checkpoint tem evidência afetada, sem alegar suite ampla antes de sua execução
+- **Why this level:** alteração de API persistente consumida por UI com cursores, autorização e races de realtime
 
 ## Canonical Module Anchors (Required Before APROVADO)
 
-- **Primary module doc:** foundation_documentation/modules/inbox-and-conversations.md.
-- **Secondary module docs:** identity-and-tenancy.md e audit-and-history.md, para preservar invariantes.
-- **Consolidation target:** somente contrato local da thread e regras de cursor/paginação no módulo inbox-and-conversations.
-- **Source capability:** CAP-010 no catálogo ST-02, referência de evidência e não ID de capacidade canônica nova.
+- **Primary module doc:** foundation_documentation/modules/inbox-and-conversations.md
+- **Secondary module docs:** identity-and-tenancy.md e audit-and-history.md, para preservar invariantes
+- **Consolidation target:** somente contrato local da thread e regras de cursor/paginação no módulo inbox-and-conversations
+- **Source capability:** CAP-010 no catálogo ST-02, referência de evidência e não ID de capacidade canônica nova
 
 ## Decision Pending (Resolve Before Freeze)
 
@@ -266,12 +266,12 @@ Baseline técnico proposto em 2026-10-14: contrato, escopo, DoD, testes e fronte
 
 ## Architecture Change Governance (Required When This TODO Establishes, Corrects, or Supersedes Architecture)
 
-- **Applicability:** required.
-- **Why this applies:** estabelece acesso paginado scoped e mesclagem consistente para uma thread operacional antes truncada.
-- **Deviation / debt being retired:** teto silencioso de 200 mensagens e substituição da coleção após refresh.
-- **Target steady-state after closeout:** acesso determinístico bounded e atualização sem perda de histórico/contexto.
-- **Temporary exceptions allowed:** none.
-- **Cutover / removal condition:** BFF e inbox adotam o contrato aprovado juntos, com regressões passando; nenhum fallback para carregar todas as mensagens.
+- **Applicability:** required
+- **Why this applies:** estabelece acesso paginado scoped e mesclagem consistente para uma thread operacional antes truncada
+- **Deviation / debt being retired:** teto silencioso de 200 mensagens e substituição da coleção após refresh
+- **Target steady-state after closeout:** acesso determinístico bounded e atualização sem perda de histórico/contexto
+- **Temporary exceptions allowed:** none
+- **Cutover / removal condition:** BFF e inbox adotam o contrato aprovado juntos, com regressões passando; nenhum fallback para carregar todas as mensagens
 
 ### Patterns To Enforce
 
@@ -303,11 +303,20 @@ Planejadas revisões de contrato/escopo, performance da query, races e integrida
 
 ## Gate: Review Baseline Freeze
 
-pending-freeze; documentação preparada no checkout principal de Foundation main. Nenhum commit/push realizado ou autorizado por este rascunho.
+- **Gate decision:** required
+- **Gate status:** no_material_findings
+- **Baseline branch:** main
+- **Baseline commit:** 8f8638442c81c4a688ced1fcd5153be3929503c3
+- **Baseline push reference:** origin/main
+- **Evidence / reference:** git.exe push origin main completado; baseline 8f863844 publicado em 2026-10-14; git_write_authority_guard go para commit/push
+- **Waiver authority / reference (required if waived):** none
 
 ## Gate: Review Scope Drift
 
-pending-freeze; comparar baselines e caminhos esperados no pacote refinado antes da revisão.
+- **Gate decision:** required
+- **Gate status:** not_run
+- **Evidence / reference:** executar após convergência da revisão contra o baseline publicado
+- **Waiver authority / reference (required if waived):** none
 
 ## Questions To Close
 
@@ -371,9 +380,9 @@ Backend de validação e Playwright usam o mesmo banco dedicado. Falta de runner
 
 ## Plan Review Gate (Review of the Execution Plan; required for `medium|big`; abbreviated for low-risk `small`)
 
-- **Status:** prepared-pre-freeze.
-- **Required review:** full, por complexidade medium; avaliar contrato, segurança, paginação, custo da query e races.
-- **Issue cards / residual risks:** DP-01..03, runners não resolvidos e possível índice. Nenhum resultado independente reivindicado.
+- **Status:** prepared-pre-freeze
+- **Required review:** full, por complexidade medium; avaliar contrato, segurança, paginação, custo da query e races
+- **Issue cards / residual risks:** DP-01..03, runners não resolvidos e possível índice. Nenhum resultado independente reivindicado
 
 ## Additional Architectural Opinions (Required When Path Remains Materially Unclear)
 
@@ -397,28 +406,28 @@ Pendente somente se o refinamento revelar ambiguidade material; não houve deleg
 
 ## Independent No-Context Critique Gate (Deterministic Floor From Audit Escalation)
 
-- **Gate decision:** required.
-- **Why this decision:** API/escopo/consulta e UI interativa com races.
-- **Gate status:** not_run.
-- **Critique status:** not_run.
-- **Evidence / reference:** pacote ainda prepared-pre-freeze; executar revisão no gate correspondente.
-- **Waiver authority / reference:** none.
+- **Gate decision:** required
+- **Why this decision:** API/escopo/consulta e UI interativa com races
+- **Gate status:** not_run
+- **Critique status:** not_run
+- **Evidence / reference:** pacote ainda prepared-pre-freeze; executar revisão no gate correspondente
+- **Waiver authority / reference:** none
 
 ## Gate: Assumption Code Coherence
 
-- **Gate decision:** required.
-- **Why this decision:** garantir que A-01..04 continuam verdadeiras no baseline refinado.
-- **Trigger stage:** after critique convergence and before APROVADO.
-- **Guard scope:** A-01,A-02,A-03,A-04.
-- **Gate status:** not_run.
-- **Evidence / reference:** prepared-pre-freeze; referências estáticas estão no Assumptions Preview.
+- **Gate decision:** required
+- **Why this decision:** garantir que A-01..04 continuam verdadeiras no baseline refinado
+- **Trigger stage:** after critique convergence and before APROVADO
+- **Guard scope:** A-01,A-02,A-03,A-04
+- **Gate status:** not_run
+- **Evidence / reference:** prepared-pre-freeze; referências estáticas estão no Assumptions Preview
 
 ## Approval
 
-- **Approved by:** pending; não há APROVADO para este contrato.
-- **Approval scope:** pendente; a seleção da frente não concede implementação deste Draft.
-- **Execution not authorized by approval:** toda implementação até aprovação/guard; stories posteriores permanecem fora do recorte.
-- **Renewed approval required when:** contrato, escopo, regras de leitura, validação ou risco mudarem materialmente.
+- **Approved by:** pending; não há APROVADO para este contrato
+- **Approval scope:** pendente; a seleção da frente não concede implementação deste Draft
+- **Execution not authorized by approval:** toda implementação até aprovação/guard; stories posteriores permanecem fora do recorte
+- **Renewed approval required when:** contrato, escopo, regras de leitura, validação ou risco mudarem materialmente
 
 ## Rules Acknowledgement / Ingestion (Required After `APROVADO` and Before Execution)
 
@@ -436,17 +445,17 @@ Preparação documental; recarregar fontes vinculantes após aprovação antes d
 
 ## Agent Routing Preflight (Required Before Execution When Effort/Model Routing Applies)
 
-- **Client surface:** codex.
-- **Current governed action:** implementation.
-- **Selected role:** routine-executor.
-- **Selected model:** gpt-6-luna.
-- **Selected effort:** medium.
-- **Proof mode:** declared.
-- **Execution topology:** primary-checkout-single-writer.
-- **Subagent / delegation authorization:** executor será solicitado por APROVADO para o contrato que predeclara esse handoff; revisão independente já requerida pelo workflow local invocado.
-- **Git isolation authorization:** not-authorized.
-- **Guard outcome:** go.
-- **Guard evidence:** agent_role_routing_guard avaliado em 2026-10-14 para este único tuple; go de routing não é autorização de implementação.
+- **Client surface:** codex
+- **Current governed action:** implementation
+- **Selected role:** routine-executor
+- **Selected model:** gpt-6-luna
+- **Selected effort:** medium
+- **Proof mode:** declared
+- **Execution topology:** primary-checkout-single-writer
+- **Subagent / delegation authorization:** executor será solicitado por APROVADO para o contrato que predeclara esse handoff; revisão independente já requerida pelo workflow local invocado
+- **Git isolation authorization:** not-authorized
+- **Guard outcome:** go
+- **Guard evidence:** agent_role_routing_guard avaliado em 2026-10-14 para este único tuple; go de routing não é autorização de implementação
 
 Review lane separado: formal-reviewer, architecture_opinion/critique, gpt-6.1-sol, max, declared. Guard de critique retornou go; guard específico será executado antes do dispatch de arquitetura.
 
@@ -472,10 +481,10 @@ Pendente no gate de execução/revisão correspondente; nenhuma evidência ou pr
 
 ## TODO Closeout Disposition
 
-- **Disposition:** keep-active.
-- **Disposition reason:** Draft aguardando refinamento/revisão/aprovação.
-- **Post-commit/push status:** not-performed.
-- **Next path/status action:** resolver DP-01..03; concluir somente depois de implementação/evidência e guardas.
+- **Disposition:** keep-active
+- **Disposition reason:** Draft aguardando refinamento/revisão/aprovação
+- **Post-commit/push status:** not-performed
+- **Next path/status action:** resolver DP-01..03; concluir somente depois de implementação/evidência e guardas
 
 ## Security Risk Assessment (Mandatory Before Delivery)
 
@@ -491,21 +500,21 @@ Pendentes contrato, runner, provas PostgreSQL/browser e revisões. Não reivindi
 
 ## Independent Test Quality Audit Gate (Deterministic Floor From Audit Escalation)
 
-- **Gate decision:** required.
-- **Why this decision:** API/escopo/consulta e UI interativa com races.
-- **Gate status:** not_run.
-- **Critique status:** not_run.
-- **Evidence / reference:** pacote ainda prepared-pre-freeze; executar revisão no gate correspondente.
-- **Waiver authority / reference:** none.
+- **Gate decision:** required
+- **Why this decision:** API/escopo/consulta e UI interativa com races
+- **Gate status:** not_run
+- **Critique status:** not_run
+- **Evidence / reference:** pacote ainda prepared-pre-freeze; executar revisão no gate correspondente
+- **Waiver authority / reference:** none
 
 ## Independent No-Context Final Review Gate (Deterministic Floor From Audit Escalation)
 
-- **Gate decision:** required.
-- **Why this decision:** API/escopo/consulta e UI interativa com races.
-- **Gate status:** not_run.
-- **Critique status:** not_run.
-- **Evidence / reference:** pacote ainda prepared-pre-freeze; executar revisão no gate correspondente.
-- **Waiver authority / reference:** none.
+- **Gate decision:** required
+- **Why this decision:** API/escopo/consulta e UI interativa com races
+- **Gate status:** not_run
+- **Critique status:** not_run
+- **Evidence / reference:** pacote ainda prepared-pre-freeze; executar revisão no gate correspondente
+- **Waiver authority / reference:** none
 
 ## Independent Cutover Integrity Audit Gate
 
