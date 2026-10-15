@@ -1,0 +1,177 @@
+
+added 105 packages, and audited 106 packages in 5s
+
+16 packages are looking for funding
+  run `npm fund` for details
+
+9 vulnerabilities (5 moderate, 2 high, 2 critical)
+
+To address issues that do not require attention, run:
+  npm audit fix
+
+To address all issues (including breaking changes), run:
+  npm audit fix --force
+
+Run `npm audit` for details.
+npm notice
+npm notice New major version of npm available! 10.9.9 -> 12.2.0
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.0
+npm notice To update run: npm install -g npm@12.2.0
+npm notice
+
+> @leadshug/web@0.1.0 build
+> tsc -b && vite build
+
+src/componentes/CadastroNumero.tsx(6,29): error TS7010: 'init', which lacks return-type annotation, implicitly has an 'any' return type.
+src/componentes/CadastroNumero.tsx(288,100): error TS2304: Cannot find name 'motivoCapacidade'.
+
+> @leadshug/web@0.1.0 build
+> tsc -b && vite build
+
+vite v5.4.21 building for production...
+transforming...
+✓ 57 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                   0.69 kB │ gzip:  0.44 kB
+dist/assets/index-wuzy3kMN.css    8.32 kB │ gzip:  2.39 kB
+dist/assets/index-DNL6UiE7.js   239.12 kB │ gzip: 74.16 kB
+✓ built in 1.35s
+npm notice
+npm notice New major version of npm available! 10.9.9 -> 12.2.0
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.0
+npm notice To update run: npm install -g npm@12.2.0
+npm notice
+
+> @leadshug/web@0.1.0 test
+> vitest run
+
+
+ RUN  v2.1.9 /app
+
+ ✓ src/timeline.test.ts (2 tests) 3ms
+ ✓ src/cadastroNumero.spec.ts (2 tests) 4ms
+ ✓ src/tempoReal.spec.ts (6 tests) 8ms
+ ✓ src/api.spec.ts (13 tests) 48ms
+
+ Test Files  4 passed (4)
+      Tests  23 passed (23)
+   Start at  17:30:56
+   Duration  542ms (transform 407ms, setup 0ms, collect 636ms, tests 63ms, environment 1ms, prepare 373ms)
+
+
+> @leadshug/web@0.1.0 build
+> tsc -b && vite build
+
+src/componentes/CadastroNumero.tsx(229,18): error TS2339: Property 'attemptId' does not exist on type '{ qrcode: string | null; state: string; }'.
+src/componentes/CadastroNumero.tsx(230,87): error TS2339: Property 'attemptId' does not exist on type '{ qrcode: string | null; state: string; }'.
+npm notice
+npm notice New major version of npm available! 10.9.9 -> 12.2.0
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.0
+npm notice To update run: npm install -g npm@12.2.0
+npm notice
+
+> @leadshug/web@0.1.0 build
+> tsc -b && vite build
+
+vite v5.4.21 building for production...
+transforming...
+✓ 57 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                   0.69 kB │ gzip:  0.45 kB
+dist/assets/index-wuzy3kMN.css    8.32 kB │ gzip:  2.39 kB
+dist/assets/index-BT3ZsHvU.js   239.96 kB │ gzip: 74.38 kB
+✓ built in 1.38s
+npm notice
+npm notice New major version of npm available! 10.9.9 -> 12.2.0
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.0
+npm notice To update run: npm install -g npm@12.2.0
+npm notice
+
+> @leadshug/web@0.1.0 test
+> vitest run
+
+
+ RUN  v2.1.9 /app
+
+ ✓ src/timeline.test.ts (2 tests) 3ms
+ ✓ src/cadastroNumero.spec.ts (2 tests) 4ms
+ ✓ src/tempoReal.spec.ts (6 tests) 8ms
+ ✓ src/api.spec.ts (13 tests) 55ms
+
+ Test Files  4 passed (4)
+      Tests  23 passed (23)
+   Start at  17:32:08
+   Duration  535ms (transform 458ms, setup 0ms, collect 601ms, tests 70ms, environment 1ms, prepare 403ms)
+
+
+> @leadshug/web@0.1.0 build
+> tsc -b && vite build
+
+vite v5.4.21 building for production...
+transforming...
+✓ 57 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                   0.69 kB │ gzip:  0.44 kB
+dist/assets/index-wuzy3kMN.css    8.32 kB │ gzip:  2.39 kB
+dist/assets/index-DKfuu12K.js   240.45 kB │ gzip: 74.60 kB
+✓ built in 1.43s
+npm notice
+npm notice New major version of npm available! 10.9.9 -> 12.2.0
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.0
+npm notice To update run: npm install -g npm@12.2.0
+npm notice
+
+> @leadshug/web@0.1.0 test
+> vitest run
+
+
+ RUN  v2.1.9 /app
+
+ ✓ src/timeline.test.ts (2 tests) 3ms
+ ✓ src/cadastroNumero.spec.ts (2 tests) 4ms
+ ✓ src/tempoReal.spec.ts (6 tests) 8ms
+ ✓ src/api.spec.ts (13 tests) 50ms
+
+ Test Files  4 passed (4)
+      Tests  23 passed (23)
+   Start at  17:32:41
+   Duration  587ms (transform 637ms, setup 0ms, collect 766ms, tests 64ms, environment 1ms, prepare 327ms)
+
+
+> @leadshug/web@0.1.0 build
+> tsc -b && vite build
+
+vite v5.4.21 building for production...
+transforming...
+✓ 57 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                   0.69 kB │ gzip:  0.44 kB
+dist/assets/index-wuzy3kMN.css    8.32 kB │ gzip:  2.39 kB
+dist/assets/index-YIcu9Itp.js   240.62 kB │ gzip: 74.63 kB
+✓ built in 1.40s
+npm notice
+npm notice New major version of npm available! 10.9.9 -> 12.2.0
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.0
+npm notice To update run: npm install -g npm@12.2.0
+npm notice
+
+> @leadshug/web@0.1.0 test
+> vitest run
+
+
+ RUN  v2.1.9 /app
+
+ ✓ src/timeline.test.ts (2 tests) 3ms
+ ✓ src/cadastroNumero.spec.ts (2 tests) 3ms
+ ✓ src/tempoReal.spec.ts (6 tests) 8ms
+ ✓ src/api.spec.ts (13 tests) 49ms
+
+ Test Files  4 passed (4)
+      Tests  23 passed (23)
+   Start at  17:33:13
+   Duration  541ms (transform 487ms, setup 0ms, collect 686ms, tests 64ms, environment 1ms, prepare 349ms)
+

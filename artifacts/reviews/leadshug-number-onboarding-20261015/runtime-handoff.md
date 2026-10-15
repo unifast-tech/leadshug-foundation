@@ -11,7 +11,7 @@ Runtime scope is the approved root Compose file/overlay, gateway template, two l
 ## Observed starting point
 
 - The existing root Compose supplies PostgreSQL 16, API and Web. It requires the old global `WHATSAPP_TOKEN`; remove that requirement in favor of the implemented channel-scoped credential contract.
-- Existing Dockerfiles build with Node 22. The Web final image serves runtime `config.js`; `apiUrl: ""` is supported for a shared origin.
+- Existing Dockerfiles build with Node 22 and install OpenSSL for Prisma. Checkpoint2 tests passed on Node22.23.3-slim but emitted OpenSSL detection warnings; the final source-owned runner must establish a supported explicit OpenSSL setup and regenerate Prisma before validating its runtime. The Web final image serves runtime `config.js`; `apiUrl: ""` is supported for a shared origin.
 - Docker is available through Windows `docker.exe`. A WSL `/mnt/c/...` source bind resolved to an empty directory in the Windows daemon during checkpoint 1; using `wslpath -w` fixed the bind. Verify the mounted source before trusting commands or hashes.
 - Checkpoint 1 used an isolated disposable PostgreSQL 16 database and a Linux named dependency volume. Do not reuse an operational database for destructive fixture cleanup. The second migration directory was renamed to match the approved `*number_onboarding*` glob; prove the final migration set on a fresh disposable database.
 - Existing ignored `.env` files are private operational authority. Do not print, replace, remove, or normalize them. Do not infer that a preexisting token belongs to this test.

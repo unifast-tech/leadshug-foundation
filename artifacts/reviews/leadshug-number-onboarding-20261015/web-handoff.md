@@ -2,6 +2,8 @@
 
 Planned handoff prepared on 2026-10-15, within the approved TODO. Start only after the API writer has delivered a stable validated checkpoint and relinquished product write ownership. Read its final DTO/env/endpoint handoff; this note is not an independent API contract or implementation claim.
 
+Execution admission: API checkpoint2 has stopped with130unit/234E2E passing and42verified source hashes. An independent read-only review now examines its immutable snapshot. Web preparation may proceed as the only product writer, confined to Web source/build/unit checks. Do not mutate API source, browser fixtures, API generated artifacts or runtime during that review. Backend fixture wiring, real-backend Playwright and final PCV remain a later serialized step after review/adjudication; this preparation is not a completed UI delivery claim.
+
 ## Authority
 
 Use `operational-coder`, the active TODO, owner modules and actual React/Nest boundary rules. Principal checkout, one product writer across all repositories. API branch is `feature/number-onboarding`; create the same local feature branch from the existing Web baseline before Web edits. Foundation remains `main` and root-owned. No source push, deployment, worktree, auxiliary checkout, or gitlink edits.
@@ -22,6 +24,8 @@ Allowed Web paths are the exact TODO entries: `src/telas/Numeros.tsx`, `src/api.
 ## Browser proof
 
 Use the built Web bundle and real API, session and disposable PostgreSQL database. Only the external provider/SDK port may be replaced. Never intercept BFF responses to simulate a successful flow. Keep all existing timeline tests meaningful.
+
+The existing browser server, fixture server and timeline freshness helper guard the disposable `leadshug_timeline_*` database family. A separate name within that family can preserve those safeguards for this checkpoint; do not weaken the guard or repoint fixtures to an operational database. The global timeline freshness helper is outside the allowed edit list: compose it with an allowed `number-onboarding*` helper if additional attestation is needed. Disable registration-flow tracing that would persist code/PIN request bodies; keep real authorization and pairing out of automated trace/screenshot capture.
 
 Capture freshness before workers: exact branches/SHAs plus dirty source hashes, built assets, served target, and served-versus-built hash comparison. The source already has a timeline freshness helper; add a number-onboarding helper in the allowed glob and compose/reuse existing behavior without editing unrelated historical tests.
 

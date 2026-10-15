@@ -1,0 +1,10 @@
+
+> @leadshug/api@0.1.0 lint
+> eslint "{src,test}/**/*.ts"
+
+
+/workspace/test/helpers.ts
+  18:251  error  Parsing error: ',' expected
+
+✖ 1 problem (1 error, 0 warnings)
+

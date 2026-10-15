@@ -1,0 +1,488 @@
+{
+  "frozen_at_utc": "2026-10-15T17:23:10.988870+00:00",
+  "packet_path": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/api-checkpoint-packet-v1.md",
+  "packet_sha256": "a5113ac1fd729cfc1ba902bc3b667b7b6c32818e4dbab9534028c00f5d50992a",
+  "packet_bytes": 572226,
+  "packet_lines": 9929,
+  "file_count": 68,
+  "api_baseline": "ae6a9662c29b77276351aa9de653a47276372246",
+  "validation": "build/lint130unit234E2E20migrations; not finalTODOdelivery",
+  "files": [
+    {
+      "path": "foundation_documentation/project_constitution.md",
+      "original_sha256": "f9b8d3397a4f78c74f4c29739eb509d12bfc9ccda84a50fed718bfe7a668566a",
+      "bytes": 4345,
+      "packet_start_line": 19,
+      "packet_end_line": 94
+    },
+    {
+      "path": "foundation_documentation/todos/active/features/TODO-leadshug-channel-connection-readiness.md",
+      "original_sha256": "84fff496269398ba658e9fb9a4d9b0c072a15dde66ec9d244cd2efba0f62d6f0",
+      "bytes": 98708,
+      "packet_start_line": 95,
+      "packet_end_line": 997
+    },
+    {
+      "path": "foundation_documentation/modules/integrations-and-channels.md",
+      "original_sha256": "a248d9b05789689a2f9882e7888458973713821d1183ddfed517d42cfca2034c",
+      "bytes": 17675,
+      "packet_start_line": 998,
+      "packet_end_line": 1078
+    },
+    {
+      "path": "foundation_documentation/modules/identity-and-tenancy.md",
+      "original_sha256": "604371cc509981d4561ce3cf404857990e5d30126ea04bda2a766aa0eeee1c91",
+      "bytes": 2014,
+      "packet_start_line": 1079,
+      "packet_end_line": 1113
+    },
+    {
+      "path": "foundation_documentation/modules/inbox-and-conversations.md",
+      "original_sha256": "592313ddd91cf00b76208b63c4fcdce3ec150109c23bd083301744431529fa5f",
+      "bytes": 12019,
+      "packet_start_line": 1114,
+      "packet_end_line": 1188
+    },
+    {
+      "path": "foundation_documentation/modules/audit-and-history.md",
+      "original_sha256": "e17c81ff017a21865e052f903b4ae4712c7c9313cae4505ff54a4cab6004a886",
+      "bytes": 1612,
+      "packet_start_line": 1189,
+      "packet_end_line": 1217
+    },
+    {
+      "path": "foundation_documentation/artifacts/validation-plans/leadshug-channel-readiness-20261015.md",
+      "original_sha256": "34d6a013db00b5db9b696d24c0bede282efb9d9eca3037c9a37cbd938c74611e",
+      "bytes": 16117,
+      "packet_start_line": 1218,
+      "packet_end_line": 1350
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/checkpoint2-api-handoff.md",
+      "original_sha256": "4209faafdc1a2e64ef8e1d1d4b8c7140805e158538221dd2844247a60ae0aac0",
+      "bytes": 6860,
+      "packet_start_line": 1351,
+      "packet_end_line": 1396
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/checkpoint2-api-source-hashes.sha256",
+      "original_sha256": "4b3ea19dc8e72858360cb1775b3aeeb86012d192eac6938296b003ac5428fb53",
+      "bytes": 4506,
+      "packet_start_line": 1397,
+      "packet_end_line": 1446
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/security-reference-refresh.json",
+      "original_sha256": "e63c9b3a298b9c2ef39af472b370a3b66d583eed003c7591be564af96674d338",
+      "bytes": 3246,
+      "packet_start_line": 1447,
+      "packet_end_line": 1485
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/provider-contract-source-verification.json",
+      "original_sha256": "efdc248c3d584d8743b4356152ed831ff3c4e55780e21d43aa9a5483df4525b7",
+      "bytes": 3849,
+      "packet_start_line": 1486,
+      "packet_end_line": 1561
+    },
+    {
+      "path": "api-app/.env.example",
+      "original_sha256": "774be234aa4da8cba07f7482e8998c3296ac81bc6f4d28952953565624be7ebd",
+      "bytes": 3210,
+      "packet_start_line": 1562,
+      "packet_end_line": 1640
+    },
+    {
+      "path": "api-app/prisma/migrations/20261015120000_number_onboarding_foundation/migration.sql",
+      "original_sha256": "55d84f5eef1b9b9e9a22891695812e522fe4e405041341218984507426ef0946",
+      "bytes": 6681,
+      "packet_start_line": 1641,
+      "packet_end_line": 1778
+    },
+    {
+      "path": "api-app/prisma/migrations/20261015130000_number_onboarding_provider_resource_ownership_immutable/migration.sql",
+      "original_sha256": "a6fa9ad9e99a0b55ed5d9e86b99d42b603b404c13f41f97ac718e6443f29a3fe",
+      "bytes": 880,
+      "packet_start_line": 1779,
+      "packet_end_line": 1807
+    },
+    {
+      "path": "api-app/prisma/migrations/20261015140000_number_onboarding_channel_operation_fence/migration.sql",
+      "original_sha256": "e484edd01e78133bcaf23f12fb47e44e92cba44a89b29803eff1530b103bc496",
+      "bytes": 270,
+      "packet_start_line": 1808,
+      "packet_end_line": 1822
+    },
+    {
+      "path": "api-app/prisma/schema.prisma",
+      "original_sha256": "e0701807a0fac3477f327adc60127f76320e8a7681f146b6177bc33546e89a9c",
+      "bytes": 26384,
+      "packet_start_line": 1823,
+      "packet_end_line": 2534
+    },
+    {
+      "path": "api-app/src/domain/channels/channel-credential-crypto.spec.ts",
+      "original_sha256": "bdc829c987de4d8944ce417aea03c76e5484091f7ad4612246807bd22e524efb",
+      "bytes": 2354,
+      "packet_start_line": 2535,
+      "packet_end_line": 2582
+    },
+    {
+      "path": "api-app/src/domain/channels/channel-credential-crypto.ts",
+      "original_sha256": "4a438a1e73903c011d212962f41b38dfb2a999c539112b6831156664de6d9ef4",
+      "bytes": 3649,
+      "packet_start_line": 2583,
+      "packet_end_line": 2686
+    },
+    {
+      "path": "api-app/src/domain/channels/channel-credential-resolver.ts",
+      "original_sha256": "7a780d39cfdb42cf5bc6a99f89ec7191211dfc4f03a31f6b4c13d3ef2c0e24b3",
+      "bytes": 3087,
+      "packet_start_line": 2687,
+      "packet_end_line": 2755
+    },
+    {
+      "path": "api-app/src/domain/channels/channels.service.ts",
+      "original_sha256": "63f679ad3a3ff77c6b763c4ee459973c0e679d13108ead1b29942f465a392e29",
+      "bytes": 23356,
+      "packet_start_line": 2756,
+      "packet_end_line": 3097
+    },
+    {
+      "path": "api-app/src/domain/channels/number-registration.service.ts",
+      "original_sha256": "4f24fc7cf518685e61d42c300332df9dd64b140f9eeef57901e91ba6a5ff04f4",
+      "bytes": 36044,
+      "packet_start_line": 3098,
+      "packet_end_line": 3551
+    },
+    {
+      "path": "api-app/src/domain/channels/safe-redaction.spec.ts",
+      "original_sha256": "f4b96c233ef4cda079ee80d04a413444902061efd88935220df550771722693e",
+      "bytes": 735,
+      "packet_start_line": 3552,
+      "packet_end_line": 3574
+    },
+    {
+      "path": "api-app/src/domain/channels/safe-redaction.ts",
+      "original_sha256": "66cbcf018a7723849dac83b7f3a6db15c1e795fec11c3f409c7e7d3b69e02123",
+      "bytes": 1447,
+      "packet_start_line": 3575,
+      "packet_end_line": 3606
+    },
+    {
+      "path": "api-app/src/domain/historico/cobertura.ts",
+      "original_sha256": "093f2a2926322ce68c4d7a66f174f7a6c13735c8ce7399ba863766295d1cdbee",
+      "bytes": 7505,
+      "packet_start_line": 3607,
+      "packet_end_line": 3746
+    },
+    {
+      "path": "api-app/src/domain/inbox/conversations.service.ts",
+      "original_sha256": "aed31180b6fb58442850421233bd61a62552144642bbac88e7fbef0efa1d1890",
+      "bytes": 13051,
+      "packet_start_line": 3747,
+      "packet_end_line": 4060
+    },
+    {
+      "path": "api-app/src/domain/inbox/incoming.service.ts",
+      "original_sha256": "57eaf64ba4c896016f83d8ebff1f9cea5ee696d8c9b546f3cc30d53e94af525e",
+      "bytes": 6927,
+      "packet_start_line": 4061,
+      "packet_end_line": 4185
+    },
+    {
+      "path": "api-app/src/domain/inbox/incoming.typebot.integration.spec.ts",
+      "original_sha256": "229cd0805d0543b5cbb38cecf97492e1d8a225fa65e166c5fd96547a587edede",
+      "bytes": 4973,
+      "packet_start_line": 4186,
+      "packet_end_line": 4252
+    },
+    {
+      "path": "api-app/src/domain/inbox/message-acceptance.service.ts",
+      "original_sha256": "c959930ad04633d1423be35727070dca2cd52e592549d9f7c40fc00252da07d4",
+      "bytes": 14448,
+      "packet_start_line": 4253,
+      "packet_end_line": 4544
+    },
+    {
+      "path": "api-app/src/domain/tenancy/tenancy.service.ts",
+      "original_sha256": "c9348f86f1f2bcfd4af3f9bd3e91cb5218d81cf13098989b5f6ea64acbb41398",
+      "bytes": 10923,
+      "packet_start_line": 4545,
+      "packet_end_line": 4810
+    },
+    {
+      "path": "api-app/src/infra/config/modulos.spec.ts",
+      "original_sha256": "e33f72f28f4d41b8899a2b48ea13eacf519e0669d88663d74a818f0f8ae80a59",
+      "bytes": 4445,
+      "packet_start_line": 4811,
+      "packet_end_line": 4913
+    },
+    {
+      "path": "api-app/src/infra/config/modulos.ts",
+      "original_sha256": "42c3fcb8205cb77356da28c756eebc510f8c2597c28ebf22c7314f625359a61c",
+      "bytes": 4329,
+      "packet_start_line": 4914,
+      "packet_end_line": 5024
+    },
+    {
+      "path": "api-app/src/integrations/evolution/evolution.client.spec.ts",
+      "original_sha256": "4de63e227810736164c30fee397d1f47133f292f3733e0864264c7f51d1b5c23",
+      "bytes": 3025,
+      "packet_start_line": 5025,
+      "packet_end_line": 5086
+    },
+    {
+      "path": "api-app/src/integrations/evolution/evolution.client.ts",
+      "original_sha256": "78e810e77d489576b721db10ed629f0145f023d737b3b33ef5efa73f1352763f",
+      "bytes": 4973,
+      "packet_start_line": 5087,
+      "packet_end_line": 5207
+    },
+    {
+      "path": "api-app/src/integrations/meta/meta.client.spec.ts",
+      "original_sha256": "e013ee76b4ba471d5e3b942483e60bc11a6219397fe495f4dc702571b7d2ae13",
+      "bytes": 7607,
+      "packet_start_line": 5208,
+      "packet_end_line": 5343
+    },
+    {
+      "path": "api-app/src/integrations/meta/meta.client.ts",
+      "original_sha256": "e355cde3a8708723193035659ef89d3ae640c5746dc76f50a623f7c899a500c8",
+      "bytes": 9361,
+      "packet_start_line": 5344,
+      "packet_end_line": 5527
+    },
+    {
+      "path": "api-app/src/surfaces/bff/bff.module.ts",
+      "original_sha256": "1addd7e3cb12d6607d488b17734d4ae85eeb2ec0ae951c7ecaebd65d35c09203",
+      "bytes": 5345,
+      "packet_start_line": 5528,
+      "packet_end_line": 5645
+    },
+    {
+      "path": "api-app/src/surfaces/bff/channels.controller.ts",
+      "original_sha256": "773bbb76dc1377b29430f6b5d6e43e9568b24a5e61121b1ca3237cee9f7641f1",
+      "bytes": 6531,
+      "packet_start_line": 5646,
+      "packet_end_line": 5785
+    },
+    {
+      "path": "api-app/src/surfaces/bff/me.controller.ts",
+      "original_sha256": "0edd826d4e9a3c0b8cde4334bf2e88f360f5f5e9d5db99e5dfc4382b5bf71bb0",
+      "bytes": 9442,
+      "packet_start_line": 5786,
+      "packet_end_line": 6035
+    },
+    {
+      "path": "api-app/src/surfaces/bff/number-registrations.controller.ts",
+      "original_sha256": "c57797667ff26a4ea74aa939e4972a8cd8f442c9beafa166b1bdf808e19c236e",
+      "bytes": 5003,
+      "packet_start_line": 6036,
+      "packet_end_line": 6111
+    },
+    {
+      "path": "api-app/src/surfaces/public/public.module.ts",
+      "original_sha256": "b4fc1da7caadb9e8edb0d719b11783227aa35ee55853f4d0e9f1e06065603936",
+      "bytes": 1636,
+      "packet_start_line": 6112,
+      "packet_end_line": 6153
+    },
+    {
+      "path": "api-app/src/surfaces/webhooks/evolution.controller.ts",
+      "original_sha256": "156f96ed98e332b0469acd85b2101f2153bcdbfc28917057b8785ac67a5f1a7d",
+      "bytes": 7904,
+      "packet_start_line": 6154,
+      "packet_end_line": 6302
+    },
+    {
+      "path": "api-app/src/surfaces/webhooks/meta.controller.ts",
+      "original_sha256": "0ce602e50bf51325f0cf41776eba2ce4f6cd84e9db3856778e8491deee7bdf9b",
+      "bytes": 6673,
+      "packet_start_line": 6303,
+      "packet_end_line": 6475
+    },
+    {
+      "path": "api-app/src/surfaces/webhooks/webhooks.module.ts",
+      "original_sha256": "75cbae0a89be972e98a3b4d7b9358864b9888a1ddff91ba1ea7a4483a9bfd7ac",
+      "bytes": 1353,
+      "packet_start_line": 6476,
+      "packet_end_line": 6506
+    },
+    {
+      "path": "api-app/test/api-publica.e2e-spec.ts",
+      "original_sha256": "c880c8365a5ac6862ae176e2add24b008e4c622ac3136605a287a35257d694b4",
+      "bytes": 9039,
+      "packet_start_line": 6507,
+      "packet_end_line": 6713
+    },
+    {
+      "path": "api-app/test/atendimento.e2e-spec.ts",
+      "original_sha256": "20db8f160c957c7bfffea6f88b965f9d498dc088683247c02f6aaea99ad75035",
+      "bytes": 24673,
+      "packet_start_line": 6714,
+      "packet_end_line": 7224
+    },
+    {
+      "path": "api-app/test/browser-server.cjs",
+      "original_sha256": "fd85fa666489fc8b5bf688362e5d142db62e5637384c1606f86b3ecf25c8180e",
+      "bytes": 2830,
+      "packet_start_line": 7225,
+      "packet_end_line": 7281
+    },
+    {
+      "path": "api-app/test/canais.e2e-spec.ts",
+      "original_sha256": "ad54bc3f69a722c6f8454b3f6250d64875940c46afc8b8407bc2dae97d8f903b",
+      "bytes": 6329,
+      "packet_start_line": 7282,
+      "packet_end_line": 7432
+    },
+    {
+      "path": "api-app/test/helpers.ts",
+      "original_sha256": "828ff79c0ed7f15298b5fe220c1082882a9e6425a0d62fdc4d5a3ff9dd00031c",
+      "bytes": 10767,
+      "packet_start_line": 7433,
+      "packet_end_line": 7674
+    },
+    {
+      "path": "api-app/test/modulos.e2e-spec.ts",
+      "original_sha256": "e54caf54ce08a237abeb0b5bae6d6483662d9cc6bda323f35eece637817cdf00",
+      "bytes": 6041,
+      "packet_start_line": 7675,
+      "packet_end_line": 7815
+    },
+    {
+      "path": "api-app/test/number-onboarding-flow.e2e-spec.ts",
+      "original_sha256": "ed2d7b6dfd23169280bfad8babe5728bd8b0c6de01158197998a45b858d0c4ae",
+      "bytes": 14017,
+      "packet_start_line": 7816,
+      "packet_end_line": 8014
+    },
+    {
+      "path": "api-app/test/number-onboarding-message-acceptance.e2e-spec.ts",
+      "original_sha256": "c8b29c16412938b64fb8e2555729f0777d9e3eb69a57d29df3d65b56443c4bac",
+      "bytes": 6700,
+      "packet_start_line": 8015,
+      "packet_end_line": 8141
+    },
+    {
+      "path": "api-app/test/realtime.e2e-spec.ts",
+      "original_sha256": "cf9335f7bfefecf708d69ab966533bf3b65ed7cc5615533691f7f2a841275422",
+      "bytes": 6059,
+      "packet_start_line": 8142,
+      "packet_end_line": 8296
+    },
+    {
+      "path": "api-app/test/webhooks.e2e-spec.ts",
+      "original_sha256": "0de3e64e4dac55fd4224b7ebf087ad95a0d857eaf058fd95251a6c8caebb0d9f",
+      "bytes": 9995,
+      "packet_start_line": 8297,
+      "packet_end_line": 8542
+    },
+    {
+      "path": "api-app/src/infra/session/session.service.ts",
+      "original_sha256": "884618471c7cc58c037f04d20c790979409bbbcfc2fe61b34312b2625b28e200",
+      "bytes": 5483,
+      "packet_start_line": 8543,
+      "packet_end_line": 8690
+    },
+    {
+      "path": "api-app/src/surfaces/bff/session.middleware.ts",
+      "original_sha256": "80d8be0072b817ec34b3eb7d29218835bd218a40670c1f917d0b1787b0b57211",
+      "bytes": 5651,
+      "packet_start_line": 8691,
+      "packet_end_line": 8838
+    },
+    {
+      "path": "api-app/src/surfaces/public/api-key.middleware.ts",
+      "original_sha256": "f76cd8854c8145c4b456e8c9d2d1ab000c17bc5278af76997745b5696edd9877",
+      "bytes": 1274,
+      "packet_start_line": 8839,
+      "packet_end_line": 8886
+    },
+    {
+      "path": "api-app/src/domain/access/access.service.ts",
+      "original_sha256": "2ef3761a138d7c8c386c5ddb4bf2a2000c960328789834bde5e12135a1ea66e7",
+      "bytes": 2390,
+      "packet_start_line": 8887,
+      "packet_end_line": 8956
+    },
+    {
+      "path": "api-app/src/domain/access/scope.ts",
+      "original_sha256": "412f68eb157328855c87cb86b6b89cc1c267eee7068dc59c0abbe085074db26d",
+      "bytes": 5701,
+      "packet_start_line": 8957,
+      "packet_end_line": 9108
+    },
+    {
+      "path": "api-app/src/domain/access/require-role.ts",
+      "original_sha256": "1281da1ad31748e2bd78bffdf2962376d3413c7b37cfe6102448710cc7d7ce61",
+      "bytes": 1142,
+      "packet_start_line": 9109,
+      "packet_end_line": 9146
+    },
+    {
+      "path": "api-app/src/domain/access/role.ts",
+      "original_sha256": "ec92764e75c52b754e430355d196137ca90de89b4c5ed6f3fb49a05da10e1b42",
+      "bytes": 1776,
+      "packet_start_line": 9147,
+      "packet_end_line": 9204
+    },
+    {
+      "path": "api-app/src/infra/http/body-parsers.ts",
+      "original_sha256": "0f65f24e300b2204362fff3ee1c799a35baecb1c57d141fe0ac0957091a5e624",
+      "bytes": 1023,
+      "packet_start_line": 9205,
+      "packet_end_line": 9239
+    },
+    {
+      "path": "api-app/src/surfaces/public/conversations.controller.ts",
+      "original_sha256": "670e8bca048111b0b83d0700632980131a85c0342da3254772b5fe15e8f1c962",
+      "bytes": 9748,
+      "packet_start_line": 9240,
+      "packet_end_line": 9489
+    },
+    {
+      "path": "api-app/src/surfaces/bff/conversations.controller.ts",
+      "original_sha256": "0b5c46a78aafd8085b609ad711bcdb7626263094f434240f37b8700f20291565",
+      "bytes": 5502,
+      "packet_start_line": 9490,
+      "packet_end_line": 9628
+    },
+    {
+      "path": "api-app/src/main.ts",
+      "original_sha256": "05ff096cdcf67a8a153736264ed46a7faf9f5c0f45325c2d3fed95188fb2b1ad",
+      "bytes": 5963,
+      "packet_start_line": 9629,
+      "packet_end_line": 9762
+    },
+    {
+      "path": "api-app/src/app.module.ts",
+      "original_sha256": "a59880adc1bd8250fdbf5d52637fc38fe3177a2615e1b25389716946da7ad420",
+      "bytes": 1857,
+      "packet_start_line": 9763,
+      "packet_end_line": 9812
+    },
+    {
+      "path": "api-app/test/setup-env.ts",
+      "original_sha256": "bfb97c57f39e252868b544437c6bf3128efa70613e5a7765d0aefb52f5b6a849",
+      "bytes": 795,
+      "packet_start_line": 9813,
+      "packet_end_line": 9837
+    },
+    {
+      "path": "api-app/vitest.config.e2e.ts",
+      "original_sha256": "ff76a3b94de4649d18f0f824a24bb45428afcbb751a872a6841a2e388f45f8ff",
+      "bytes": 683,
+      "packet_start_line": 9838,
+      "packet_end_line": 9866
+    },
+    {
+      "path": "api-app/package.json",
+      "original_sha256": "df8551d3e506e7c68516cbd482362c4282671b7ec7eebbf121386390ac080a9d",
+      "bytes": 1670,
+      "packet_start_line": 9867,
+      "packet_end_line": 9927
+    }
+  ]
+}

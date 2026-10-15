@@ -1,0 +1,275 @@
+
+> @leadshug/api@0.1.0 build
+> nest build
+
+npm notice
+npm notice New major version of npm available! 10.9.9 -> 12.2.0
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.0
+npm notice To update run: npm install -g npm@12.2.0
+npm notice
+
+> @leadshug/api@0.1.0 lint
+> eslint "{src,test}/**/*.ts"
+
+
+> @leadshug/api@0.1.0 test
+> vitest run --config vitest.config.ts
+
+[33mThe CJS build of Vite's Node API is deprecated. See https://vite.dev/guide/troubleshooting.html#vite-cjs-node-api-deprecated for more details.[39m
+
+ RUN  v2.1.9 /workspace
+
+ ✓ src/domain/access/role.spec.ts (9 tests) 5ms
+ ✓ src/main.spec.ts (6 tests) 8ms
+ ✓ src/infra/config/modulos.spec.ts (11 tests) 10ms
+ ✓ src/domain/access/scope.spec.ts (22 tests) 9ms
+ ✓ src/domain/channels/channel-credential-crypto.spec.ts (4 tests) 24ms
+[33m[Nest] 119  - [39m10/15/2026, 5:17:29 PM [33m   WARN[39m [38;5;3m[Email] [39m[33mRESEND_API_KEY ausente — "x" não foi enviado para a@b.test.[39m
+[31m[Nest] 119  - [39m10/15/2026, 5:17:29 PM [31m  ERROR[39m [38;5;3m[Email] [39m[31mResend recusou (403): {"message":"domain is not verified"}[39m
+[31m[Nest] 119  - [39m10/15/2026, 5:17:29 PM [31m  ERROR[39m [38;5;3m[Email] [39m[31mFalha de rede ao enviar para a@b.test: Error: getaddrinfo ENOTFOUND[39m
+ ✓ src/integrations/email/email.client.spec.ts (6 tests) 18ms
+ ✓ src/domain/integration/rate-limit.service.spec.ts (3 tests) 17ms
+ ✓ src/domain/inbox/timeline-pagination.spec.ts (11 tests) 16ms
+ ✓ src/integrations/evolution/evolution.client.spec.ts (4 tests) 19ms
+ ✓ src/integrations/typebot/typebot.client.spec.ts (5 tests) 17ms
+ ✓ src/infra/session/session.service.spec.ts (17 tests) 13ms
+ ✓ src/integrations/meta/meta.client.spec.ts (9 tests) 32ms
+ ✓ src/domain/channels/safe-redaction.spec.ts (1 test) 4ms
+ ✓ src/domain/identity/password.service.spec.ts (5 tests) 422ms
+ ✓ src/domain/inbox/historico.service.spec.ts (6 tests) 3ms
+ ✓ src/surfaces/bff/integracao.typebot.spec.ts (2 tests) 6ms
+ ✓ src/domain/integration/api-key.service.spec.ts (2 tests) 5ms
+ ✓ src/domain/channels/channels.service.spec.ts (3 tests) 4ms
+ ✓ src/domain/inbox/incoming.typebot.spec.ts (2 tests) 4ms
+ ✓ src/domain/inbox/incoming.typebot.integration.spec.ts (2 tests) 9ms
+
+ Test Files  20 passed (20)
+      Tests  130 passed (130)
+   Start at  17:17:28
+   Duration  2.80s (transform 12.76s, setup 0ms, collect 23.13s, tests 642ms, environment 6ms, prepare 2.98s)
+
+
+> @leadshug/api@0.1.0 test:e2e
+> vitest run --config vitest.config.e2e.ts --no-file-parallelism --maxWorkers=1
+
+[33mThe CJS build of Vite's Node API is deprecated. See https://vite.dev/guide/troubleshooting.html#vite-cjs-node-api-deprecated for more details.[39m
+
+ RUN  v2.1.9 /workspace
+
+stderr | test/atendimento.e2e-spec.ts > atendimento
+prisma:warn Prisma failed to detect the libssl/openssl version to use, and may not work as expected. Defaulting to "openssl-1.1.x".
+Please manually install OpenSSL via `apt-get update -y && apt-get install -y openssl` and try installing Prisma again. If you're running Prisma on Docker, add this command to your Dockerfile, or switch to an image that already has OpenSSL installed.
+
+stdout | test/atendimento.e2e-spec.ts > atendimento > timeline paginada do atendimento > preserva dez incrementos feitos após o ack e enquanto a página fica bloqueada, em três lotes
+{"prova":"BCI_ACK_COM_SELECT_BLOQUEADO","lote":1,"bloqueioDetectado":true,"sondagens":2,"ackAteSelectBloqueadoMs":51,"dezIncrementosMs":25,"unreadEnquantoSelectBloqueado":10,"unreadDepoisDaResposta":10}
+
+stdout | test/atendimento.e2e-spec.ts > atendimento > timeline paginada do atendimento > preserva dez incrementos feitos após o ack e enquanto a página fica bloqueada, em três lotes
+{"prova":"BCI_ACK_COM_SELECT_BLOQUEADO","lote":2,"bloqueioDetectado":true,"sondagens":2,"ackAteSelectBloqueadoMs":46,"dezIncrementosMs":20,"unreadEnquantoSelectBloqueado":10,"unreadDepoisDaResposta":10}
+
+stdout | test/atendimento.e2e-spec.ts > atendimento > timeline paginada do atendimento > preserva dez incrementos feitos após o ack e enquanto a página fica bloqueada, em três lotes
+{"prova":"BCI_ACK_COM_SELECT_BLOQUEADO","lote":3,"bloqueioDetectado":true,"sondagens":2,"ackAteSelectBloqueadoMs":47,"dezIncrementosMs":20,"unreadEnquantoSelectBloqueado":10,"unreadDepoisDaResposta":10}
+
+ ✓ test/atendimento.e2e-spec.ts (19 tests) 7531ms
+   ✓ atendimento > POST conversations/:id/messages — o trio (ADR-0012 §2) > autorizado: responde, envia pelo canal e assume a conversa 402ms
+   ✓ atendimento > POST conversations/:id/messages — o trio (ADR-0012 §2) > ATENDENTE no escopo responde — estar na BU BASTA (ADR-0018 §3) 472ms
+   ✓ atendimento > POST conversations/:id/messages — o trio (ADR-0012 §2) > CROSS-TENANT: o dono de Beta recebe 404 na conversa da BU de Alfa 362ms
+   ✓ atendimento > janela de 24h — atributo do CANAL (ADR-0009 §3) > a thread informa o estado da janela, para a tela saber que responder está indisponível 319ms
+   ✓ atendimento > janela de 24h — atributo do CANAL (ADR-0009 §3) > no canal NÃO oficial não existe janela: responde mesmo com a conversa velha 317ms
+   ✓ atendimento > fila > assumir trava para outro agente (409), e finalizar libera 471ms
+   ✓ atendimento > fila > responder NÃO rouba conversa de quem já está atendendo 457ms
+   ✓ atendimento > fila > abrir a thread zera as não lidas — abrir É atender 305ms
+   ✓ atendimento > fila > a lista filtra por aba e só enxerga a BU pedida 315ms
+   ✓ atendimento > a inbox pagina — teto silencioso é o que vira "sumiram conversas" > limite acima do teto é aparado, não obedecido 301ms
+   ✓ atendimento > timeline paginada do atendimento > caminha por 251 mensagens na ordem do banco e mantém a página limitada 451ms
+   ✓ atendimento > timeline paginada do atendimento > valida parâmetros depois da autorização e rejeita cursor de outra conversa autorizada 400ms
+   ✓ atendimento > timeline paginada do atendimento > serializa dez chegadas concorrentes com a fronteira de abertura em três lotes 740ms
+   ✓ atendimento > timeline paginada do atendimento > preserva dez incrementos feitos após o ack e enquanto a página fica bloqueada, em três lotes 517ms
+   ✓ atendimento > timeline paginada do atendimento > permite leituras de cursor concorrentes com close sem reescrever status 473ms
+stderr | test/setores.e2e-spec.ts > setores (ADR-0017)
+prisma:warn Prisma failed to detect the libssl/openssl version to use, and may not work as expected. Defaulting to "openssl-1.1.x".
+Please manually install OpenSSL via `apt-get update -y && apt-get install -y openssl` and try installing Prisma again. If you're running Prisma on Docker, add this command to your Dockerfile, or switch to an image that already has OpenSSL installed.
+
+ ✓ test/setores.e2e-spec.ts (26 tests) 9868ms
+   ✓ setores (ADR-0017) > o Geral nasce com a Mantenedora > a primeira BU já vem num setor — nenhum número fica sem 324ms
+   ✓ setores (ADR-0017) > CRUD — o trio (ADR-0012 §2) > papel insuficiente: ATENDENTE recebe 403 ao criar 418ms
+   ✓ setores (ADR-0017) > CRUD — o trio (ADR-0012 §2) > cross-tenant: setor da Mantenedora B responde 404 para o OWNER de A 349ms
+   ✓ setores (ADR-0017) > CRUD — o trio (ADR-0012 §2) > o nome é único DENTRO da Mantenedora — duas contas podem ter "Comercial" 400ms
+   ✓ setores (ADR-0017) > concessão por setor é EXPANSÃO (ADR-0017 §2) > materializa uma linha POR NÚMERO do setor, com proveniência SETOR 402ms
+   ✓ setores (ADR-0017) > concessão por setor é EXPANSÃO (ADR-0017 §2) > BU criada DEPOIS, no setor concedido, já nasce com o grant (regra 3) 395ms
+   ✓ setores (ADR-0017) > concessão por setor é EXPANSÃO (ADR-0017 §2) > revogar o setor NÃO remove grant direto nem o da Mantenedora 395ms
+   ✓ setores (ADR-0017) > ver quem tem o setor — a leitura que faltava > autorizado: lista quem recebeu o setor, com papel e desde quando 374ms
+   ✓ setores (ADR-0017) > ver quem tem o setor — a leitura que faltava > papel insuficiente: ATENDENTE recebe 403 435ms
+   ✓ setores (ADR-0017) > ver quem tem o setor — a leitura que faltava > cross-tenant: setor da Mantenedora B responde 404 355ms
+   ✓ setores (ADR-0017) > ver quem tem o setor — a leitura que faltava > a lista de pessoas diz DE QUAL ORIGEM veio cada acesso 393ms
+   ✓ setores (ADR-0017) > renomear e inativar o número > papel insuficiente: ATENDENTE recebe 403 421ms
+   ✓ setores (ADR-0017) > mover número entre setores — a escrita mais delicada do modelo > quem tinha pelo setor antigo perde; quem tem o novo ganha 484ms
+   ✓ setores (ADR-0017) > mover número entre setores — a escrita mais delicada do modelo > o grant DIRETO sobrevive à mudança de setor 552ms
+   ✓ setores (ADR-0017) > mover número entre setores — a escrita mais delicada do modelo > recusa quando mover deixaria o número sem OWNER 489ms
+   ✓ setores (ADR-0017) > mover número entre setores — a escrita mais delicada do modelo > cross-setor: o atendente do Comercial recebe 404 na conversa do Suporte 573ms
+   ✓ setores (ADR-0017) > conceder um setor VAZIO é lembrado — o número criado depois já nasce com o acesso 368ms
+   ✓ setores (ADR-0017) > revogar apaga a CONCESSÃO — o próximo número não ressuscita o acesso 376ms
+   ✓ setores (ADR-0017) > setor INATIVO não interrompe atendimento — só some do cadastro 302ms
+stderr | test/number-onboarding-flow.e2e-spec.ts > BFF number registration workflow (PostgreSQL)
+prisma:warn Prisma failed to detect the libssl/openssl version to use, and may not work as expected. Defaulting to "openssl-1.1.x".
+Please manually install OpenSSL via `apt-get update -y && apt-get install -y openssl` and try installing Prisma again. If you're running Prisma on Docker, add this command to your Dockerfile, or switch to an image that already has OpenSSL installed.
+
+ ✓ test/number-onboarding-flow.e2e-spec.ts (6 tests) 2636ms
+   ✓ BFF number registration workflow (PostgreSQL) > recovers the same one-use nonce for idempotent create and connects only after provider subscribe plus receipt 476ms
+   ✓ BFF number registration workflow (PostgreSQL) > does not disclose registration state to a different tenant and rejects invalid provider resources 368ms
+   ✓ BFF number registration workflow (PostgreSQL) > recovers a promoted pending registration after expiry with a fresh authorized session 399ms
+   ✓ BFF number registration workflow (PostgreSQL) > reserves immutable provider ownership before register and projects BU-scoped channel authority safely 499ms
+   ✓ BFF number registration workflow (PostgreSQL) > allows only one BU to reserve a concurrently selected provider resource 515ms
+stderr | test/convites.e2e-spec.ts > convite e recuperação de senha (ADR-0025)
+prisma:warn Prisma failed to detect the libssl/openssl version to use, and may not work as expected. Defaulting to "openssl-1.1.x".
+Please manually install OpenSSL via `apt-get update -y && apt-get install -y openssl` and try installing Prisma again. If you're running Prisma on Docker, add this command to your Dockerfile, or switch to an image that already has OpenSSL installed.
+
+[31m[Nest] 987  - [39m10/15/2026, 5:18:09 PM [31m  ERROR[39m [38;5;3m[Recuperacao] [39m[31mToken de recuperação emitido para dono@alfa.test, mas o e-mail NÃO saiu.[39m
+[31m[Nest] 987  - [39m10/15/2026, 5:18:10 PM [31m  ERROR[39m [38;5;3m[Recuperacao] [39m[31mToken de recuperação emitido para dono@alfa.test, mas o e-mail NÃO saiu.[39m
+ ✓ test/convites.e2e-spec.ts (18 tests) 4149ms
+   ✓ convite e recuperação de senha (ADR-0025) > convite substitui a senha provisória > usar o link define a senha e já entra logado 352ms
+   ✓ convite e recuperação de senha (ADR-0025) > o token é de uso único > o mesmo link não funciona duas vezes 343ms
+   ✓ convite e recuperação de senha (ADR-0025) > o token é de uso único > pedir recuperação DUAS vezes deixa só o último link vivo 344ms
+   ✓ convite e recuperação de senha (ADR-0025) > o token é de uso único > definir a senha mata TODOS os pendentes — inclusive o convite antigo 341ms
+stderr | test/webhooks.e2e-spec.ts > webhooks de entrada
+prisma:warn Prisma failed to detect the libssl/openssl version to use, and may not work as expected. Defaulting to "openssl-1.1.x".
+Please manually install OpenSSL via `apt-get update -y && apt-get install -y openssl` and try installing Prisma again. If you're running Prisma on Docker, add this command to your Dockerfile, or switch to an image that already has OpenSSL installed.
+
+ ✓ test/webhooks.e2e-spec.ts (15 tests) 3366ms
+stderr | test/identidade.e2e-spec.ts > identidade
+prisma:warn Prisma failed to detect the libssl/openssl version to use, and may not work as expected. Defaulting to "openssl-1.1.x".
+Please manually install OpenSSL via `apt-get update -y && apt-get install -y openssl` and try installing Prisma again. If you're running Prisma on Docker, add this command to your Dockerfile, or switch to an image that already has OpenSSL installed.
+
+ ✓ test/identidade.e2e-spec.ts (17 tests) 3413ms
+   ✓ identidade > login > bloqueia o e-mail na quinta tentativa errada 482ms
+   ✓ identidade > troca obrigatória de senha > trava tudo menos /me e a troca, e destrava depois de trocar 422ms
+stderr | test/usuarios.e2e-spec.ts > gestão de usuários
+prisma:warn Prisma failed to detect the libssl/openssl version to use, and may not work as expected. Defaulting to "openssl-1.1.x".
+Please manually install OpenSSL via `apt-get update -y && apt-get install -y openssl` and try installing Prisma again. If you're running Prisma on Docker, add this command to your Dockerfile, or switch to an image that already has OpenSSL installed.
+
+ ✓ test/usuarios.e2e-spec.ts (13 tests) 4247ms
+   ✓ gestão de usuários > criar — o trio (ADR-0012 §2) > autorizado: cria com papel e escopo, e SEM credencial — quem entra define a senha 359ms
+   ✓ gestão de usuários > criar — o trio (ADR-0012 §2) > papel insuficiente: MEMBRO não gerencia pessoas 442ms
+   ✓ gestão de usuários > invariantes do modelo > ninguém concede papel maior que o próprio (ADR-0008 §4) 433ms
+   ✓ gestão de usuários > invariantes do modelo > ADMIN não mexe em quem é OWNER — papel ≥ o do alvo (ADR-0008 §4) 417ms
+   ✓ gestão de usuários > reenvio de acesso > reenviar o acesso derruba a sessão e emite um LINK, não uma senha 391ms
+stderr | test/api-publica.e2e-spec.ts > API pública v1
+prisma:warn Prisma failed to detect the libssl/openssl version to use, and may not work as expected. Defaulting to "openssl-1.1.x".
+Please manually install OpenSSL via `apt-get update -y && apt-get install -y openssl` and try installing Prisma again. If you're running Prisma on Docker, add this command to your Dockerfile, or switch to an image that already has OpenSSL installed.
+
+ ✓ test/api-publica.e2e-spec.ts (13 tests) 4842ms
+   ✓ API pública v1 > autenticação pela chave > a chave sai em claro UMA vez, e o prefixo é lh_ 384ms
+   ✓ API pública v1 > autenticação pela chave > cookie de sessão NÃO substitui a chave 303ms
+   ✓ API pública v1 > autenticação pela chave > chave revogada responde igual a inexistente 384ms
+   ✓ API pública v1 > escopo — a Mantenedora sai da CHAVE, nunca do request > escopo nulo devolve só as BUs DESTA Mantenedora 326ms
+   ✓ API pública v1 > escopo — a Mantenedora sai da CHAVE, nunca do request > CROSS-TENANT: pedir a BU de Beta com a chave de Alfa dá 403 SEM_ACESSO_A_CONTA 330ms
+   ✓ API pública v1 > escopo — a Mantenedora sai da CHAVE, nunca do request > escopo restrito não alcança outra BU da MESMA Mantenedora 443ms
+   ✓ API pública v1 > escopo — a Mantenedora sai da CHAVE, nunca do request > criar chave com escopo apontando para BU de outra Mantenedora é recusado 367ms
+   ✓ API pública v1 > contrato > conversations traz janela_aberta e datas em ISO-8601 UTC 302ms
+   ✓ API pública v1 > contrato > messages aceita since para sincronização incremental 336ms
+   ✓ API pública v1 > contrato > POST messages envia e marca a conversa como atendida por EXTERNO 323ms
+   ✓ API pública v1 > limite de taxa (ADR-0010 §7) — fecha o buraco de ritmo do S3 > estoura em 429 LIMITE_DE_TAXA com Retry-After 693ms
+stderr | test/historico.e2e-spec.ts > histórico (Consultar)
+prisma:warn Prisma failed to detect the libssl/openssl version to use, and may not work as expected. Defaulting to "openssl-1.1.x".
+Please manually install OpenSSL via `apt-get update -y && apt-get install -y openssl` and try installing Prisma again. If you're running Prisma on Docker, add this command to your Dockerfile, or switch to an image that already has OpenSSL installed.
+
+ ✓ test/historico.e2e-spec.ts (11 tests) 3484ms
+   ✓ histórico (Consultar) > o par número → número > a resposta traz os DOIS números do par, não só o contato 352ms
+   ✓ histórico (Consultar) > paginação — 20 é o corpo da página, não o tamanho do que existe > a segunda página traz o resto e fecha 303ms
+   ✓ histórico (Consultar) > permissão — o trio (ADR-0012 §2) > autorizado: ATENDENTE no escopo consulta — o grant é a permissão (ADR-0018) 419ms
+   ✓ histórico (Consultar) > permissão — o trio (ADR-0012 §2) > CROSS-TENANT: o dono de Beta recebe 404 no histórico da BU de Alfa 339ms
+   ✓ histórico (Consultar) > permissão — o trio (ADR-0012 §2) > CROSS-TENANT: o CSV também é barrado, e não vaza no corpo 339ms
+stderr | test/historico-atividades.e2e-spec.ts > histórico de atividades (ADR-0020 e 0022)
+prisma:warn Prisma failed to detect the libssl/openssl version to use, and may not work as expected. Defaulting to "openssl-1.1.x".
+Please manually install OpenSSL via `apt-get update -y && apt-get install -y openssl` and try installing Prisma again. If you're running Prisma on Docker, add this command to your Dockerfile, or switch to an image that already has OpenSSL installed.
+
+ ✓ test/historico-atividades.e2e-spec.ts (13 tests) 4141ms
+   ✓ histórico de atividades (ADR-0020 e 0022) > o CHECK torna o vazamento IRREPRESENTÁVEL (ADR-0020 §1.1) > escopo BU sem bu_id falha NO BANCO, não no serviço 343ms
+   ✓ histórico de atividades (ADR-0020 e 0022) > leitura — o trio (ADR-0012 §2) > papel insuficiente: ATENDENTE recebe 403 — gravar é do produto, ler é de quem administra 429ms
+   ✓ histórico de atividades (ADR-0020 e 0022) > leitura — o trio (ADR-0012 §2) > cross-tenant: o ADMIN de A não vê NENHUMA linha de B 348ms
+   ✓ histórico de atividades (ADR-0020 e 0022) > o que NÃO entra > trocar a própria senha não gera linha 408ms
+stderr | test/onboarding.e2e-spec.ts > wizard de onboarding e módulos da conta (ADR-0016) > o portão: senha → wizard → produto > antes de concluir, o resto do BFF responde 409 ONBOARDING_PENDENTE
+prisma:warn Prisma failed to detect the libssl/openssl version to use, and may not work as expected. Defaulting to "openssl-1.1.x".
+Please manually install OpenSSL via `apt-get update -y && apt-get install -y openssl` and try installing Prisma again. If you're running Prisma on Docker, add this command to your Dockerfile, or switch to an image that already has OpenSSL installed.
+
+ ✓ test/onboarding.e2e-spec.ts (13 tests) 3671ms
+   ✓ wizard de onboarding e módulos da conta (ADR-0016) > o portão: senha → wizard → produto > antes de concluir, o resto do BFF responde 409 ONBOARDING_PENDENTE 353ms
+   ✓ wizard de onboarding e módulos da conta (ADR-0016) > o portão: senha → wizard → produto > a troca de senha vem ANTES do wizard — nunca preso entre os dois portões 557ms
+stderr | test/number-onboarding-message-acceptance.e2e-spec.ts > number onboarding keyed message acceptance (PostgreSQL)
+prisma:warn Prisma failed to detect the libssl/openssl version to use, and may not work as expected. Defaulting to "openssl-1.1.x".
+Please manually install OpenSSL via `apt-get update -y && apt-get install -y openssl` and try installing Prisma again. If you're running Prisma on Docker, add this command to your Dockerfile, or switch to an image that already has OpenSSL installed.
+
+ ✓ test/number-onboarding-message-acceptance.e2e-spec.ts (4 tests) 429ms
+stderr | test/cross-tenant.e2e-spec.ts > escopo entre Mantenedoras
+prisma:warn Prisma failed to detect the libssl/openssl version to use, and may not work as expected. Defaulting to "openssl-1.1.x".
+Please manually install OpenSSL via `apt-get update -y && apt-get install -y openssl` and try installing Prisma again. If you're running Prisma on Docker, add this command to your Dockerfile, or switch to an image that already has OpenSSL installed.
+
+ ✓ test/cross-tenant.e2e-spec.ts (9 tests) 2850ms
+   ✓ escopo entre Mantenedoras > GET /api/bff/business-units/:buId > autorizado: o dono enxerga a BU da própria Mantenedora 332ms
+   ✓ escopo entre Mantenedoras > GET /api/bff/business-units > CROSS-TENANT: usuário sem grant nenhum recebe lista VAZIA, nunca "todas" 341ms
+   ✓ escopo entre Mantenedoras > o grant do fundador nasce como expansão (ADR-0008 §4, importado já corrigido) > quem tem grant DIRETO não é alcançado pela expansão — e cai para VIEWER na Mantenedora 441ms
+stderr | test/canais.e2e-spec.ts > canais da BU
+prisma:warn Prisma failed to detect the libssl/openssl version to use, and may not work as expected. Defaulting to "openssl-1.1.x".
+Please manually install OpenSSL via `apt-get update -y && apt-get install -y openssl` and try installing Prisma again. If you're running Prisma on Docker, add this command to your Dockerfile, or switch to an image that already has OpenSSL installed.
+
+ ✓ test/canais.e2e-spec.ts (10 tests) 3445ms
+   ✓ canais da BU > POST channels — o trio (ADR-0012 §2) > a rota legada dá instrução determinística e não chama provider nem grava canal 363ms
+   ✓ canais da BU > POST channels — o trio (ADR-0012 §2) > papel insuficiente: MEMBRO recebe 403 — a BU é dele, o poder é que não alcança 447ms
+   ✓ canais da BU > regras do vínculo > remover exige ADMIN e libera o tipo para ser conectado de novo 448ms
+   ✓ canais da BU > regras do vínculo > listar canais é leitura: VIEWER enxerga 418ms
+stderr | test/realtime.e2e-spec.ts > push em tempo real — com escopo (fecha o risco S8)
+prisma:warn Prisma failed to detect the libssl/openssl version to use, and may not work as expected. Defaulting to "openssl-1.1.x".
+Please manually install OpenSSL via `apt-get update -y && apt-get install -y openssl` and try installing Prisma again. If you're running Prisma on Docker, add this command to your Dockerfile, or switch to an image that already has OpenSSL installed.
+
+ ✓ test/realtime.e2e-spec.ts (7 tests) 5469ms
+   ✓ push em tempo real — com escopo (fecha o risco S8) > CROSS-TENANT: o dono de Beta NÃO recebe evento da BU de Alfa 1844ms
+   ✓ push em tempo real — com escopo (fecha o risco S8) > usuário da MESMA Mantenedora sem grant naquela BU também não recebe 1927ms
+   ✓ push em tempo real — com escopo (fecha o risco S8) > o socket some da lista quando o cliente desconecta 569ms
+stderr | test/modulos.e2e-spec.ts > módulos: env é o teto, a Mantenedora escolhe dentro dele (ADR-0016) > o /me devolve o produto já interseccionado > teto ligado + contratado = ligado, e a marca vem junto
+prisma:warn Prisma failed to detect the libssl/openssl version to use, and may not work as expected. Defaulting to "openssl-1.1.x".
+Please manually install OpenSSL via `apt-get update -y && apt-get install -y openssl` and try installing Prisma again. If you're running Prisma on Docker, add this command to your Dockerfile, or switch to an image that already has OpenSSL installed.
+
+ ✓ test/modulos.e2e-spec.ts (8 tests) 2159ms
+   ✓ módulos: env é o teto, a Mantenedora escolhe dentro dele (ADR-0016) > o /me devolve o produto já interseccionado > teto ligado + contratado = ligado, e a marca vem junto 358ms
+stderr | test/arquivos.e2e-spec.ts > arquivos (ADR-0024) > SEM volume, recusa explicitamente — e o resto do produto funciona
+prisma:warn Prisma failed to detect the libssl/openssl version to use, and may not work as expected. Defaulting to "openssl-1.1.x".
+Please manually install OpenSSL via `apt-get update -y && apt-get install -y openssl` and try installing Prisma again. If you're running Prisma on Docker, add this command to your Dockerfile, or switch to an image that already has OpenSSL installed.
+
+ ✓ test/arquivos.e2e-spec.ts (8 tests) 2163ms
+   ✓ arquivos (ADR-0024) > SEM volume, recusa explicitamente — e o resto do produto funciona 371ms
+   ✓ arquivos (ADR-0024) > com volume > cross-tenant: arquivo de A responde 404 para B 405ms
+stderr | test/rotinas.e2e-spec.ts > rotinas periódicas (ADR-0023) > apaga payload cru com mais de 90 dias e preserva o resto (ADR-0009 §7)
+prisma:warn Prisma failed to detect the libssl/openssl version to use, and may not work as expected. Defaulting to "openssl-1.1.x".
+Please manually install OpenSSL via `apt-get update -y && apt-get install -y openssl` and try installing Prisma again. If you're running Prisma on Docker, add this command to your Dockerfile, or switch to an image that already has OpenSSL installed.
+
+[31m[Nest] 1687  - [39m10/15/2026, 5:19:22 PM [31m  ERROR[39m [38;5;3m[Rotina] [39m[31m{"nome":"rotina-quebrada","linhas":0,"lotes":0,"pulouPorLock":false,"erro":"estourei de propósito","duracaoMs":1}[39m
+ ✓ test/rotinas.e2e-spec.ts (5 tests) 419ms
+stderr | test/surfaces.e2e-spec.ts > superfícies de entrada
+prisma:warn Prisma failed to detect the libssl/openssl version to use, and may not work as expected. Defaulting to "openssl-1.1.x".
+Please manually install OpenSSL via `apt-get update -y && apt-get install -y openssl` and try installing Prisma again. If you're running Prisma on Docker, add this command to your Dockerfile, or switch to an image that already has OpenSSL installed.
+
+ ✓ test/surfaces.e2e-spec.ts (9 tests) 146ms
+stderr | test/cobertura-do-catalogo.e2e-spec.ts > cobertura do catálogo de ações (ADR-0022 §4) > toda rota de escrita está no catálogo OU tem isenção escrita
+prisma:warn Prisma failed to detect the libssl/openssl version to use, and may not work as expected. Defaulting to "openssl-1.1.x".
+Please manually install OpenSSL via `apt-get update -y && apt-get install -y openssl` and try installing Prisma again. If you're running Prisma on Docker, add this command to your Dockerfile, or switch to an image that already has OpenSSL installed.
+
+ ✓ test/cobertura-do-catalogo.e2e-spec.ts (4 tests) 140ms
+stderr | test/painel.e2e-spec.ts > painel
+prisma:warn Prisma failed to detect the libssl/openssl version to use, and may not work as expected. Defaulting to "openssl-1.1.x".
+Please manually install OpenSSL via `apt-get update -y && apt-get install -y openssl` and try installing Prisma again. If you're running Prisma on Docker, add this command to your Dockerfile, or switch to an image that already has OpenSSL installed.
+
+ ✓ test/painel.e2e-spec.ts (4 tests) 1448ms
+   ✓ painel > o ATENDENTE vê os números, e NÃO vê o extrato de atividades 464ms
+   ✓ painel > o ADMIN vê o extrato 315ms
+stderr | test/banco-atrasado.e2e-spec.ts > banco atrás da imagem
+prisma:warn Prisma failed to detect the libssl/openssl version to use, and may not work as expected. Defaulting to "openssl-1.1.x".
+Please manually install OpenSSL via `apt-get update -y && apt-get install -y openssl` and try installing Prisma again. If you're running Prisma on Docker, add this command to your Dockerfile, or switch to an image that already has OpenSSL installed.
+
+[31m[Nest] 1887  - [39m10/15/2026, 5:19:33 PM [31m  ERROR[39m [38;5;3m[Banco] [39m[31mBANCO ATRÁS DA IMAGEM: "public.tokens_de_acesso" não existe (P2021). Rode `npx prisma migrate deploy` de dentro do serviço.[39m
+ ✓ test/banco-atrasado.e2e-spec.ts (2 tests) 429ms
+   ✓ banco atrás da imagem > tabela ausente vira 503 DIZENDO a causa, não 500 opaco 300ms
+
+ Test Files  22 passed (22)
+      Tests  234 passed (234)
+   Start at  17:17:31
+   Duration  111.23s (transform 7.38s, setup 185ms, collect 36.62s, tests 70.44s, environment 4ms, prepare 1.26s)
+

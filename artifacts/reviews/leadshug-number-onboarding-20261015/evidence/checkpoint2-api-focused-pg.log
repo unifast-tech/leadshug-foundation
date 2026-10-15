@@ -1,0 +1,191 @@
+
+> @leadshug/api@0.1.0 test:e2e
+> vitest run --config vitest.config.e2e.ts --no-file-parallelism --maxWorkers=1 test/number-onboarding-flow.e2e-spec.ts test/number-onboarding-message-acceptance.e2e-spec.ts
+
+[33mThe CJS build of Vite's Node API is deprecated. See https://vite.dev/guide/troubleshooting.html#vite-cjs-node-api-deprecated for more details.[39m
+
+ RUN  v2.1.9 /workspace
+
+stderr | test/number-onboarding-flow.e2e-spec.ts > BFF number registration workflow (PostgreSQL)
+prisma:warn Prisma failed to detect the libssl/openssl version to use, and may not work as expected. Defaulting to "openssl-1.1.x".
+Please manually install OpenSSL via `apt-get update -y && apt-get install -y openssl` and try installing Prisma again. If you're running Prisma on Docker, add this command to your Dockerfile, or switch to an image that already has OpenSSL installed.
+
+[31m[Nest] 56  - [39m10/15/2026, 4:57:30 PM [31m  ERROR[39m [38;5;3m[Banco] [39m[31mPrisma P2010: [39m
+ ❯ test/number-onboarding-flow.e2e-spec.ts (4 tests | 4 failed) 1814ms
+   × BFF number registration workflow (PostgreSQL) > recovers the same one-use nonce for idempotent create and connects only after provider subscribe plus receipt 457ms
+     → expected 200 "OK", got 500 "Internal Server Error"
+   × BFF number registration workflow (PostgreSQL) > does not disclose registration state to a different tenant and rejects invalid provider resources 402ms
+     → expected 409 "Conflict", got 400 "Bad Request"
+   × BFF number registration workflow (PostgreSQL) > reserves immutable provider ownership before register and projects BU-scoped channel authority safely 515ms
+     → 
+Invalid `prisma.buChannel.create()` invocation in
+/workspace/test/helpers.ts:151:42
+
+  148   externalResourceId: string,
+  149   options: { status?: 'CONECTADO' | 'CONECTANDO' | 'DESCONECTADO'; requiresWindow?: boolean } = {},
+  150 ) {
+→ 151   const channel = await prisma.buChannel.create(
+Unique constraint failed on the fields: (`bu_id`,`type`)
+   × BFF number registration workflow (PostgreSQL) > allows only one BU to reserve a concurrently selected provider resource 313ms
+     → expected 201 "Created", got 404 "Not Found"
+stderr | test/number-onboarding-message-acceptance.e2e-spec.ts > number onboarding keyed message acceptance (PostgreSQL)
+prisma:warn Prisma failed to detect the libssl/openssl version to use, and may not work as expected. Defaulting to "openssl-1.1.x".
+Please manually install OpenSSL via `apt-get update -y && apt-get install -y openssl` and try installing Prisma again. If you're running Prisma on Docker, add this command to your Dockerfile, or switch to an image that already has OpenSSL installed.
+
+ ❯ test/number-onboarding-message-acceptance.e2e-spec.ts (4 tests | 2 failed) 400ms
+   × number onboarding keyed message acceptance (PostgreSQL) > accepts one incoming key once, creating one conversation and unread increment 28ms
+     → 
+Invalid `prisma.$queryRaw()` invocation:
+
+
+Raw query failed. Code: `N/A`. Message: `Failed to deserialize column of type 'void'. If you're using $queryRaw and this column is explicitly marked as `Unsupported` in your Prisma schema, try casting this column to any supported Prisma type such as `String`.`
+   × number onboarding keyed message acceptance (PostgreSQL) > reports the first conversation once and keeps a second immediate message in the same conversation 5ms
+     → 
+Invalid `prisma.$queryRaw()` invocation:
+
+
+Raw query failed. Code: `N/A`. Message: `Failed to deserialize column of type 'void'. If you're using $queryRaw and this column is explicitly marked as `Unsupported` in your Prisma schema, try casting this column to any supported Prisma type such as `String`.`
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 6 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  test/number-onboarding-flow.e2e-spec.ts > BFF number registration workflow (PostgreSQL) > recovers the same one-use nonce for idempotent create and connects only after provider subscribe plus receipt
+Error: expected 200 "OK", got 500 "Internal Server Error"
+ ❯ test/number-onboarding-flow.e2e-spec.ts:62:72
+     60|     const signature = createHmac('sha256', META_APP_SECRET).update(JSO…
+     61|     await request(app.getHttpServer()).post('/webhooks/meta').set('con…
+     62|       .set('x-hub-signature-256', `sha256=${signature}`).send(webhook)…
+       |                                                                        ^
+     63|     const connected = await bff('get', `/api/bff/number-registrations/…
+     64|     expect(connected.body).toMatchObject({ state: 'CONNECTED', stage: …
+ ❯ Test._assertStatus node_modules/supertest/lib/test.js:309:14
+ ❯ node_modules/supertest/lib/test.js:365:13
+ ❯ Test._assertFunction node_modules/supertest/lib/test.js:342:13
+ ❯ Test.assert node_modules/supertest/lib/test.js:195:23
+ ❯ localAssert node_modules/supertest/lib/test.js:138:14
+ ❯ Server.<anonymous> node_modules/supertest/lib/test.js:152:11
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/6]⎯
+
+ FAIL  test/number-onboarding-flow.e2e-spec.ts > BFF number registration workflow (PostgreSQL) > does not disclose registration state to a different tenant and rejects invalid provider resources
+Error: expected 409 "Conflict", got 400 "Bad Request"
+ ❯ test/number-onboarding-flow.e2e-spec.ts:79:97
+     77|     await request(app.getHttpServer()).get(`/api/bff/number-registrati…
+     78|     await bff('post', `/api/bff/number-registrations/${id}/confirm`)
+     79|       .send({ wabaId: '999999999', phoneNumberId: '987654321', modoReg…
+       |                                                                                                 ^
+     80|     expect(await prisma.buChannel.count({ where: { buId: other.busines…
+     81|   });
+ ❯ Test._assertStatus node_modules/supertest/lib/test.js:309:14
+ ❯ node_modules/supertest/lib/test.js:365:13
+ ❯ Test._assertFunction node_modules/supertest/lib/test.js:342:13
+ ❯ Test.assert node_modules/supertest/lib/test.js:195:23
+ ❯ localAssert node_modules/supertest/lib/test.js:138:14
+ ❯ Server.<anonymous> node_modules/supertest/lib/test.js:152:11
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/6]⎯
+
+ FAIL  test/number-onboarding-flow.e2e-spec.ts > BFF number registration workflow (PostgreSQL) > reserves immutable provider ownership before register and projects BU-scoped channel authority safely
+PrismaClientKnownRequestError: 
+Invalid `prisma.buChannel.create()` invocation in
+/workspace/test/helpers.ts:151:42
+
+  148   externalResourceId: string,
+  149   options: { status?: 'CONECTADO' | 'CONECTANDO' | 'DESCONECTADO'; requiresWindow?: boolean } = {},
+  150 ) {
+→ 151   const channel = await prisma.buChannel.create(
+Unique constraint failed on the fields: (`bu_id`,`type`)
+ ❯ ei.handleRequestError node_modules/@prisma/client/src/runtime/RequestHandler.ts:228:13
+ ❯ ei.handleAndLogRequestError node_modules/@prisma/client/src/runtime/RequestHandler.ts:174:12
+ ❯ ei.request node_modules/@prisma/client/src/runtime/RequestHandler.ts:143:12
+ ❯ a node_modules/@prisma/client/src/runtime/getPrismaClient.ts:833:24
+ ❯ Module.criarCanalVerificado test/helpers.ts:151:19
+    149|   options: { status?: 'CONECTADO' | 'CONECTANDO' | 'DESCONECTADO'; req…
+    150| ) {
+    151|   const channel = await prisma.buChannel.create({ data: {
+       |                   ^
+    152|     buId, type, status: options.status ?? 'CONECTADO', requiresWindow:…
+    153|     ...(type === 'OFICIAL' ? { phoneNumberId: externalResourceId } : {…
+ ❯ test/number-onboarding-flow.e2e-spec.ts:109:5
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[3/6]⎯
+
+ FAIL  test/number-onboarding-flow.e2e-spec.ts > BFF number registration workflow (PostgreSQL) > allows only one BU to reserve a concurrently selected provider resource
+Error: expected 201 "Created", got 404 "Not Found"
+ ❯ createAndAuthorize test/number-onboarding-flow.e2e-spec.ts:120:61
+    118|     const createAndAuthorize = async (buId: string, idempotencyKey: st…
+    119|       const created = await bff('post', '/api/bff/number-registrations…
+    120|         .send({ buId, tipo: 'OFICIAL', operation: 'NOVO' }).expect(201…
+       |                                                             ^
+    121|       await bff('post', `/api/bff/number-registrations/${created.body.…
+    122|         .send({ nonce: created.body.nonce, code: 'fixture-oauth-code' …
+ ❯ test/number-onboarding-flow.e2e-spec.ts:127:7
+ ❯ Test._assertStatus node_modules/supertest/lib/test.js:309:14
+ ❯ node_modules/supertest/lib/test.js:365:13
+ ❯ Test._assertFunction node_modules/supertest/lib/test.js:342:13
+ ❯ Test.assert node_modules/supertest/lib/test.js:195:23
+ ❯ localAssert node_modules/supertest/lib/test.js:138:14
+ ❯ fn node_modules/supertest/lib/test.js:156:7
+ ❯ Test.callback node_modules/superagent/src/node/index.js:904:3
+ ❯ fn node_modules/superagent/src/node/index.js:1183:18
+ ❯ IncomingMessage.<anonymous> node_modules/superagent/src/node/parsers/json.js:19:7
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[4/6]⎯
+
+ FAIL  test/number-onboarding-message-acceptance.e2e-spec.ts > number onboarding keyed message acceptance (PostgreSQL) > accepts one incoming key once, creating one conversation and unread increment
+PrismaClientKnownRequestError: 
+Invalid `prisma.$queryRaw()` invocation:
+
+
+Raw query failed. Code: `N/A`. Message: `Failed to deserialize column of type 'void'. If you're using $queryRaw and this column is explicitly marked as `Unsupported` in your Prisma schema, try casting this column to any supported Prisma type such as `String`.`
+ ❯ ei.handleRequestError node_modules/@prisma/client/src/runtime/RequestHandler.ts:228:13
+ ❯ ei.handleAndLogRequestError node_modules/@prisma/client/src/runtime/RequestHandler.ts:174:12
+ ❯ ei.request node_modules/@prisma/client/src/runtime/RequestHandler.ts:143:12
+ ❯ a node_modules/@prisma/client/src/runtime/getPrismaClient.ts:833:24
+ ❯ MessageAcceptanceService.acceptIncomingConversation src/domain/inbox/message-acceptance.service.ts:199:5
+    197| 
+    198|   private async acceptIncomingConversation(tx: Prisma.TransactionClien…
+    199|     await tx.$queryRaw`SELECT pg_advisory_xact_lock(hashtextextended($…
+       |     ^
+    200|     const existing = await tx.conversation.findUnique({
+    201|       where: { buId_contact: { buId: input.buId, contact: input.contac…
+ ❯ prisma.$transaction.isolationLevel src/domain/inbox/message-acceptance.service.ts:103:40
+ ❯ Proxy._transactionWithCallback node_modules/@prisma/client/src/runtime/getPrismaClient.ts:722:18
+ ❯ MessageAcceptanceService.accept src/domain/inbox/message-acceptance.service.ts:91:14
+ ❯ test/number-onboarding-message-acceptance.e2e-spec.ts:45:20
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[5/6]⎯
+
+ FAIL  test/number-onboarding-message-acceptance.e2e-spec.ts > number onboarding keyed message acceptance (PostgreSQL) > reports the first conversation once and keeps a second immediate message in the same conversation
+PrismaClientKnownRequestError: 
+Invalid `prisma.$queryRaw()` invocation:
+
+
+Raw query failed. Code: `N/A`. Message: `Failed to deserialize column of type 'void'. If you're using $queryRaw and this column is explicitly marked as `Unsupported` in your Prisma schema, try casting this column to any supported Prisma type such as `String`.`
+ ❯ ei.handleRequestError node_modules/@prisma/client/src/runtime/RequestHandler.ts:228:13
+ ❯ ei.handleAndLogRequestError node_modules/@prisma/client/src/runtime/RequestHandler.ts:174:12
+ ❯ ei.request node_modules/@prisma/client/src/runtime/RequestHandler.ts:143:12
+ ❯ a node_modules/@prisma/client/src/runtime/getPrismaClient.ts:833:24
+ ❯ MessageAcceptanceService.acceptIncomingConversation src/domain/inbox/message-acceptance.service.ts:199:5
+    197| 
+    198|   private async acceptIncomingConversation(tx: Prisma.TransactionClien…
+    199|     await tx.$queryRaw`SELECT pg_advisory_xact_lock(hashtextextended($…
+       |     ^
+    200|     const existing = await tx.conversation.findUnique({
+    201|       where: { buId_contact: { buId: input.buId, contact: input.contac…
+ ❯ prisma.$transaction.isolationLevel src/domain/inbox/message-acceptance.service.ts:103:40
+ ❯ Proxy._transactionWithCallback node_modules/@prisma/client/src/runtime/getPrismaClient.ts:722:18
+ ❯ MessageAcceptanceService.accept src/domain/inbox/message-acceptance.service.ts:91:14
+ ❯ test/number-onboarding-message-acceptance.e2e-spec.ts:55:19
+ Test Files  2 failed (2)
+      Tests  6 failed | 2 passed (8)
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[6/6]⎯
+
+   Start at  16:57:21
+   Duration  12.28s (transform 6.67s, setup 56ms, collect 9.59s, tests 2.21s, environment 1ms, prepare 131ms)
+
+npm notice
+npm notice New major version of npm available! 10.9.9 -> 12.2.0
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.0
+npm notice To update run: npm install -g npm@12.2.0
+npm notice

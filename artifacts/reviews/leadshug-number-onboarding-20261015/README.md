@@ -16,6 +16,8 @@ Guarda de coerência: [go](evidence/code-coherence.json), quatro premissas com f
 
 Execução autorizada: [aprovação registrada](evidence/approval-20261015.json), [routing go](evidence/routing-execution.json) e [authority go](evidence/authority-execution.json). Contratos owner consolidados antes do código. [Checkpoint1](evidence/checkpoint1-execution-evidence.md) concluiu persistência/cifra/aceitação keyed com119unitários e3testes PostgreSQL na fonte final desse checkpoint; não equivale à validação final. Checkpoint2 da API em andamento, seguido de UI/runtime, testes finais, reviews e prova real. [Preparação da conta Meta/HTTPS](local-setup.md) e [handoff de runtime planejado](runtime-handoff.md) registram as dependências ainda ausentes. Nova conversa por contato segue como ST-CON-04 antes da importação.
 
+Atualização de execução: [checkpoint2 API](evidence/checkpoint2-api-handoff.md) encerrado para revisão com build/lint,130 testes unitários e234 E2E PostgreSQL passando,20 migrations aplicadas e42 hashes conferidos. O [pacote imutável de revisão API](evidence/api-checkpoint-packet-v1.md) não substitui os gates finais. [Checkpoint3 Web](evidence/checkpoint3-web-handoff.md) concluiu build e23 testes unitários; revisão de fonte encontrou bloqueios de SDK, retomada/refresh e formato da confirmação. Remediação Web serializada em curso nos mesmos paths; browser real-backend, REG-SEC/PCV, runtime e prova externa continuam pendentes. Nenhum checkpoint concede aceite geral.
+
 A validação estrutural v3 inicial encontrou um cabeçalho com prefixo de formatação incorreto na seção de coerência; corrigido sem mudar escopo. O recibo v3-corrected é o resultado PASS vigente; o primeiro resultado permanece como histórico.
 
 Fontes primárias consultadas em2026-10-15:

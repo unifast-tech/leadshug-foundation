@@ -1,0 +1,176 @@
+{
+  "schema_version": "subagent-review-dispatch-v1",
+  "artifact_kind": "subagent_review_dispatch",
+  "authoritative": false,
+  "edit_policy": "derived_dispatch_packet",
+  "review_kind": "architecture_adherence",
+  "bounded_package_path": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/api-checkpoint-packet-v1.md",
+  "reviewer_count": 1,
+  "no_context_required": true,
+  "required_axes": [
+    "adherence",
+    "structural_soundness",
+    "operational_fit",
+    "performance",
+    "elegance"
+  ],
+  "focus_points": [
+    "Compare the delivered bounded package against the frozen Architecture Change Governance contract and Decision Baseline.",
+    "Identify any implementation path, temporary exception, or missing protection harness that diverges from the approved target steady-state.",
+    "Do not redesign the approved architecture unless the delivered evidence exposes a material defect or an approval-breaking divergence.",
+    "For each material finding, add category and formalizable-hint when you can judge them honestly.",
+    "When assessing design, seek the simplest faithful Clean Code/SOLID design for the approved intent. Do not invent future-facing work or erase explicit TODO intent. Planning review may challenge proposed intent; delivery review must preserve approved intent or return for renewed approval."
+  ],
+  "result_contract_fields": [
+    "overall_assessment",
+    "recommended_path",
+    "performance_position",
+    "elegance_position",
+    "structural_soundness_position",
+    "operational_fit_position",
+    "findings[].finding_id (optional)",
+    "findings[].category (optional)",
+    "findings[].formalizable_hint (optional)",
+    "findings[].candidate_rule_level (optional)",
+    "findings[]"
+  ],
+  "todo_path": "foundation_documentation/todos/active/features/TODO-leadshug-channel-connection-readiness.md",
+  "historical_disposition_policy": [
+    "Resolved findings are historical context only. Do not reopen them unless the current bounded package materially changes the same locus/behavior or fresh evidence shows regression.",
+    "Challenged findings stay closed unless the current bounded package materially changes the same locus/behavior or the prior rationale is objectively insufficient.",
+    "Deferred findings must cite the recorded follow-up/waiver path first. Re-raise them only when the current bounded package changes the same locus or closure now depends on that deferred risk.",
+    "Unresolved findings remain valid to re-raise until they are fixed, challenged, or formally deferred with authority."
+  ],
+  "historical_dispositions": [
+    {
+      "source_kind": "promotion_routing",
+      "finding_id": "NUM-ARCH-01",
+      "carry_forward_class": "resolved",
+      "source_disposition": "classification=release-blocker; routing=fix-current-contract; status=fixed-in-plan",
+      "summary": "Typebot tocado exige isolamento tenant j\u00e1 can\u00f4nico",
+      "reference": "D-08; contratos de entrada; REG-SEC-01; VAL-08"
+    },
+    {
+      "source_kind": "promotion_routing",
+      "finding_id": "NUM-ARCH-02",
+      "carry_forward_class": "resolved",
+      "source_disposition": "classification=release-blocker; routing=fix-current-contract; status=fixed-in-plan",
+      "summary": "Recebimento do cadastro n\u00e3o pode duplicar efeitos",
+      "reference": "D-08; unique/transa\u00e7\u00e3o; REG-SEC-02; VAL-08"
+    },
+    {
+      "source_kind": "promotion_routing",
+      "finding_id": "NUM-ARCH-03",
+      "carry_forward_class": "resolved",
+      "source_disposition": "classification=release-blocker; routing=fix-current-contract; status=fixed-in-plan",
+      "summary": "Pareamento exige comprovar n\u00famero antes do conte\u00fado",
+      "reference": "D-06; rejei\u00e7\u00e3o pr\u00e9-identidade; REG-SEC-03; VAL-08"
+    },
+    {
+      "source_kind": "promotion_routing",
+      "finding_id": "NUM-ARCH-04",
+      "carry_forward_class": "resolved",
+      "source_disposition": "classification=release-blocker; routing=fix-current-contract; status=fixed-in-plan",
+      "summary": "Evento atrasado n\u00e3o pode trocar owner BU",
+      "reference": "D-07; tombstone sem transfer\u00eancia; REG-SEC-04; VAL-08"
+    },
+    {
+      "source_kind": "promotion_routing",
+      "finding_id": "NUM-ARCH-05",
+      "carry_forward_class": "resolved",
+      "source_disposition": "classification=release-blocker; routing=fix-current-contract; status=fixed-in-plan",
+      "summary": "Pairing mutante exige POST/anti-CSRF",
+      "reference": "D-06; contrato BFF; REG-SEC-05; VAL-08"
+    },
+    {
+      "source_kind": "promotion_routing",
+      "finding_id": "NUM-ARCH-06",
+      "carry_forward_class": "resolved",
+      "source_disposition": "classification=release-blocker; routing=fix-current-contract; status=fixed-in-plan",
+      "summary": "Reautorizar canal existente sem substituir ativa prematuramente",
+      "reference": "D-03/04; candidata+CAS; REG-SEC-06/07; VAL-08"
+    },
+    {
+      "source_kind": "promotion_routing",
+      "finding_id": "NUM-CRIT-01",
+      "carry_forward_class": "resolved",
+      "source_disposition": "classification=release-blocker; routing=fix-current-contract; status=fixed-in-plan",
+      "summary": "Repareamento j\u00e1 prometido precisa invalidar prova anterior",
+      "reference": "D-06; inst\u00e2ncia por epoch e trust reset; REG-SEC-10"
+    },
+    {
+      "source_kind": "promotion_routing",
+      "finding_id": "NUM-CRIT-02",
+      "carry_forward_class": "resolved",
+      "source_disposition": "classification=release-blocker; routing=fix-current-contract; status=fixed-in-plan",
+      "summary": "Dois writers da mesma Message precisam compartilhar aceita\u00e7\u00e3o",
+      "reference": "D-08; message-acceptance e diff; REG-SEC-11"
+    },
+    {
+      "source_kind": "promotion_routing",
+      "finding_id": "NUM-OBS-01",
+      "carry_forward_class": "resolved",
+      "source_disposition": "classification=by-design/no-action; routing=enforce-existing-requirement; status=covered-in-plan",
+      "summary": "Requisito secret-free j\u00e1 vinculante, sem defeito de gateway implementado alegado; harness concretizado",
+      "reference": "REG-SEC-12; runtime/logs; DOD-03"
+    },
+    {
+      "source_kind": "promotion_routing",
+      "finding_id": "NUM-OBS-02",
+      "carry_forward_class": "resolved",
+      "source_disposition": "classification=by-design/no-action; routing=enforce-existing-requirement; status=covered-in-plan",
+      "summary": "Raw scoped j\u00e1 vinculante; batch por owner agora expl\u00edcito, sem plataforma nova",
+      "reference": "REG-SEC-13; contrato raw; audit owner"
+    },
+    {
+      "source_kind": "promotion_routing",
+      "finding_id": "NUM-OBS-03",
+      "carry_forward_class": "resolved",
+      "source_disposition": "classification=by-design/no-action; routing=enforce-existing-requirement; status=covered-in-plan",
+      "summary": "Harness de tenant/credencial j\u00e1 requerido; observar identificador n\u00e3o secreto e DB real",
+      "reference": "REG-SEC-01/11; VAL-02/08"
+    },
+    {
+      "source_kind": "promotion_routing",
+      "finding_id": "NUM-DELTA-OBS-01",
+      "carry_forward_class": "resolved",
+      "source_disposition": "classification=by-design/no-action; routing=enforce-existing-requirement; status=covered-in-plan",
+      "summary": "Fence at\u00e9 commit j\u00e1 exigido; barrier do webhook em voo concretiza BCI",
+      "reference": "Delta v3; REG-SEC-10, nota de execu\u00e7\u00e3o"
+    },
+    {
+      "source_kind": "promotion_routing",
+      "finding_id": "NUM-DELTA-OBS-02",
+      "carry_forward_class": "resolved",
+      "source_disposition": "classification=by-design/no-action; routing=enforce-existing-requirement; status=covered-in-plan",
+      "summary": "Segredo em logs j\u00e1 proibido, inclusive hub.verify_token",
+      "reference": "Delta v3; REG-SEC-12, nota de execu\u00e7\u00e3o"
+    },
+    {
+      "source_kind": "promotion_routing",
+      "finding_id": "NUM-DELTA-OBS-03",
+      "carry_forward_class": "resolved",
+      "source_disposition": "classification=by-design/no-action; routing=enforce-existing-requirement; status=covered-in-plan",
+      "summary": "Refresh j\u00e1 prometido projeta autoria/conte\u00fado do mesmo ID",
+      "reference": "Delta v3; REG-SEC-11, nota browser; Inbox exclu\u00eddo preservado"
+    },
+    {
+      "source_kind": "critique",
+      "finding_id": "NUM-CRIT-01",
+      "carry_forward_class": "resolved",
+      "source_disposition": "resolution=Integrated; usefulness=useful; formalizable=partial",
+      "summary": "Contrato de epoch/inst\u00e2ncia, D-06, REG-SEC-10; delta v3 confirma resolu\u00e7\u00e3o contratual, produto ainda n\u00e3o verificado.",
+      "reference": "critique:findings_integrated"
+    },
+    {
+      "source_kind": "critique",
+      "finding_id": "NUM-CRIT-02",
+      "carry_forward_class": "resolved",
+      "source_disposition": "resolution=Integrated; usefulness=useful; formalizable=partial",
+      "summary": "Aceita\u00e7\u00e3o keyed de todos os writers OUT, D-08, diff helper, REG-SEC-11.",
+      "reference": "critique:findings_integrated"
+    }
+  ],
+  "goal": "Bounded API implementation security and adherence before consumer integration; no final TODO delivery claim",
+  "review_result_dispatch_path": "/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/api-checkpoint-dispatch-v1.json"
+}

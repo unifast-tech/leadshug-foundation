@@ -1,0 +1,21 @@
+[33mThe CJS build of Vite's Node API is deprecated. See https://vite.dev/guide/troubleshooting.html#vite-cjs-node-api-deprecated for more details.[39m
+
+ RUN  v2.1.9 /workspace
+
+stderr | test/number-onboarding-flow.e2e-spec.ts > BFF number registration workflow (PostgreSQL)
+prisma:warn Prisma failed to detect the libssl/openssl version to use, and may not work as expected. Defaulting to "openssl-1.1.x".
+Please manually install OpenSSL via `apt-get update -y && apt-get install -y openssl` and try installing Prisma again. If you're running Prisma on Docker, add this command to your Dockerfile, or switch to an image that already has OpenSSL installed.
+
+ ✓ test/number-onboarding-flow.e2e-spec.ts (5 tests | 4 skipped) 464ms
+   ✓ BFF number registration workflow (PostgreSQL) > connects Evolution only after pairing proves its own identity and the first keyed inbound message arrives 337ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 4 skipped (5)
+   Start at  17:12:53
+   Duration  8.84s (transform 6.61s, setup 38ms, collect 8.14s, tests 464ms, environment 0ms, prepare 60ms)
+
+npm notice
+npm notice New major version of npm available! 10.9.9 -> 12.2.0
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.0
+npm notice To update run: npm install -g npm@12.2.0
+npm notice

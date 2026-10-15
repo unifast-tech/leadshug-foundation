@@ -41,7 +41,7 @@ Proposta ST-CON-01: jornada de cadastro de número, com infraestrutura local est
 
 - **Current delivery stage:** Pending
 - **Qualifiers:** none
-- **Next exact step:** concluir e validar o checkpoint2 da API com o executor único; depois implementar UI e fazer handoff DevOps para o runtime local.
+- **Next exact step:** revisão independente da API congelada e preparação Web isolada, sem alterar API/fixtures/runtime; depois adjudicar achados e serializar integração browser/DevOps.
 
 ## Active Work State (Required While TODO Remains In `active/`)
 
@@ -235,6 +235,7 @@ n/a; esta proposta não autoriza promoção ou deploy.
 | api | test/timeline-fixtures.cjs | M | Somente credencial de fixture exigida pelo novo resolver. |
 | api | test/webhooks.e2e-spec.ts | M | Receipt, auth e races. |
 | api | test/realtime.e2e-spec.ts | M | Apenas fixture de canal verificado scoped pelo helper comum; preservar asserts de socket/grant/tenant. Admissão de execução documentada abaixo. |
+| api | test/modulos.e2e-spec.ts | M | Expectativas do endpoint aposentado e positivas equivalentes na nova jornada; preservar piso oficial e teto/contratação não oficial. Admissão de execução documentada abaixo. |
 | api | test/api-publica.e2e-spec.ts | M | Credencial e echo-first/sender-first no envio público; contrato preservado. |
 | api | test/atendimento.e2e-spec.ts | M | Credencial, echo-first/sender-first e autoria/ID reconciliados; demais invariantes preservados. |
 | api | test/typebot.e2e-spec.ts | A,?? | Credenciais e negativos de isolamento; comportamento dentro do tenant preservado. |
@@ -286,9 +287,10 @@ n/a; esta proposta não autoriza promoção ou deploy.
 
 ### Diff Deviation Analysis
 
-Uma admissão de fixture em execução está detalhada abaixo. Classificação de gitlinks preexistentes no workspace não concede permissão de alterá-los manualmente. Outras fixtures encontradas necessárias devem ser admitidas antes de editadas; não modificar expectativas de negócio só para passar tests.
+Duas admissões de testes em execução estão detalhadas abaixo. Classificação de gitlinks preexistentes no workspace não concede permissão de alterá-los manualmente. Outras fixtures encontradas necessárias devem ser admitidas antes de editadas; não modificar expectativas de negócio só para passar tests.
 
 - `test/realtime.e2e-spec.ts`: guard de execução encontrou path não classificado. Diff inspecionado pelo orquestrador: somente import do helper `criarCanalVerificado` e substituição da criação direta de BuChannel pela fixture completa de identidade/credencial; nenhum assert, cenário ou comportamento de socket alterado. Necessário para preservar a prova de push scoped após o ingresso passar a exigir identidade durável. Classificação: concretização de fixture da validação SCOPE-07/09 já autorizada, sem nova capacidade, objetivo ou risco material. Admitido esse path exato, sem abrir `test/**`; nenhuma dispensa do guard. A edição precedeu a admissão, falha de sequência registrada e corrigida antes de qualquer entrega; executor instruído a consultar antes de novos paths.
+- `test/modulos.e2e-spec.ts`: novo guard encontrou expectativa201→409 em duas chamadas do endpoint aposentado. A constituição exige atualização correspondente de testes de contrato na mesma entrega; esse path é concretização da validação já aprovada, sem ampliar capacidade ou superfície de produto. Admitido o path exato para aposentadoria E provas positivas na nova jornada. A alteração atual não é suficiente como prova positiva de módulo/piso: nomes ainda alegam conexão mas só409 não a exercita; achado de qualidade aberto para correção após a revisão congelada. As negativas404 de teto/contratação devem ser preservadas. Segunda falha de sequência registrada; não concede `test/**` nem dispensa gates.
 
 ## Bounded But Elastic Guardrails
 
@@ -372,6 +374,7 @@ Register: `foundation_documentation/artifacts/dependency-readiness.md`.
 | From Profile | To Profile | Why the Handoff Exists | Touched Surfaces | Status / Evidence |
 | --- | --- | --- | --- | --- |
 | strategic-cto | operational-coder | Implementar somente contrato aprovado. | API/Web/canon owner | active; aprovação/authority go registrados, checkpoint1 concluído e checkpoint2 API em execução. |
+| operational-coder | assurance-security-adversarial | Revisar correção/segurança/aderência da API antes da integração do consumidor. | Pacote API congelado e relatório, somente leitura de produto | active; routing-api-checkpoint-review-v1 go; writer API parado, revisão não equivale ao gate final. |
 | operational-coder | operational-devops | Configurar e provar callback/target de teste se necessário. | Compose local/variáveis/callback e instância própria | planned; target local confirmado, nenhuma infraestrutura alterada. |
 
 ## Complexity
@@ -878,7 +881,7 @@ Nenhum comentário de aprovação pendente foi tratado como APROVADO.
 ## Execution Checkpoints
 
 - Checkpoint1 concluído em2026-10-15: schema/2migrations, cifra/redaction e owner de aceitação de mensagens. Evidência: artifacts/reviews/leadshug-number-onboarding-20261015/evidence/checkpoint1-execution-evidence.md. Fonte final:119unidades+3PGtargeted+lint/build/migrate.226E2E amplas anteriores ao último hardening não serão reaproveitadas como prova da fonte final do produto.
-- Checkpoint2 API em andamento: adapters, tentativas/controladores, credenciais scoped em todos os consumers, fencing/tenant/dedupe e integração DI. Uma rodada intermediária passou124unitários+8PGfocados e migrações; suíte ampla intermediária223/232, com falhas/fixtures em correção. Lease/cleanup/estado de recebimento recebem hardening adicional, portanto esses resultados não certificam a fonte final. Depois UI, runtime/ingress com handoff DevOps, validação final/reviews e prova real.
+- Checkpoint2 API entregue para revisão independente: build/lint,130unitários/20arquivos,234E2E PostgreSQL/22arquivos e20migrações passaram na fonte registrada em evidence/checkpoint2-api-handoff.md;42hashes conferidos pelo root. Writer parado. Ainda faltam probes REG-SEC/PCV listados no handoff, correções/review, UI, runtime/ingress com handoff DevOps e prova real. Não equivale a aceite geral do TODO.
 - Usuário confirmou nesta execução não ter ainda app Meta/Embedded Signup nem HTTPS e autorizou preparo. A prova oficial permanece pendente dessa configuração na conta do operador; não bloqueia trabalho interno independente.
 - Preparação documental: artifacts/reviews/leadshug-number-onboarding-20261015/local-setup.md; handoff de runtime planejado em runtime-handoff.md no mesmo diretório. Nenhuma criação de app, túnel ou runtime foi reivindicada por esses roteiros.
 - O classificador genérico profile_scope_check não reconhece prefixos api-app Nest; paths unknown foram conferidos contra constituição, owners e Diff Expectation do TODO aprovado. Nenhuma negação de escopo foi ignorada; Delphi/regras não foram modificados.
@@ -891,3 +894,9 @@ O executor identificou que confirmar só a primeira página impossibilitaria sel
 ### Alinhamento do piso PCV — execução
 
 A releitura de performance-concurrency-validation-method.md identificou que EPS medium requer E2/A2 e FRC/BCI high requerem o piso H, enquanto o rascunho aprovado misturava severidade high com amostragem M. Corrigidas as referências e fortalecida a amostragem para20×5 antes de executar esses gates. Nenhuma obrigação foi reduzida, nenhum gate foi dispensado e nenhuma evidência anterior foi reclassificada. RLS permanece a etapa bounded explicitamente contratada, sem claim SLO/capacidade ou carga no provider real.
+
+### Checkpoint3 — preparação Web serializada
+
+Após stop explícito do writer API com130unitários/234E2E, executor novo assume SOMENTE Web como único writer de produto. Review independente lê o pacote imutável API de68fontes, SHA256a5113ac1fd729cfc1ba902bc3b667b7b6c32818e4dbab9534028c00f5d50992a. API/fixtures/artefatos gerados/runtime não podem mudar nessa preparação; browser real-backend será integrado em etapa posterior serializada. Routing Web go e capability audit React/Vite ready, conforme manifests reais. Handoff detalhado: artifacts/reviews/leadshug-number-onboarding-20261015/web-handoff.md. Nenhuma entrega de UI ou gate geral reivindicados.
+
+Checkpoint3 Web parado com build e23 testes/4arquivos passando; seis hashes conferidos. Revisão de fonte pelo root encontrou perda determinística de SDK readiness após reserva, ausência de retomada de tentativa persistida e falta de atualização da etapa por webhook. Achados aceitos como correções do contrato UI já aprovado, nos mesmos paths; executor Web recebe lote serializado de remediação, ainda sem editar API/runtime. Deve também conservar a chave idempotente em retry da mesma reserva quando a resposta é perdida. Provas de browser com backend real seguem pendentes, sem aceitar os testes unitários como substitutos.

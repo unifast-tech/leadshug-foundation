@@ -1,0 +1,69 @@
+
+> @leadshug/api@0.1.0 test:e2e
+> vitest run --config vitest.config.e2e.ts --no-file-parallelism --maxWorkers=1 test/number-onboarding-flow.e2e-spec.ts test/number-onboarding-message-acceptance.e2e-spec.ts
+
+[33mThe CJS build of Vite's Node API is deprecated. See https://vite.dev/guide/troubleshooting.html#vite-cjs-node-api-deprecated for more details.[39m
+
+ RUN  v2.1.9 /workspace
+
+stderr | test/number-onboarding-flow.e2e-spec.ts > BFF number registration workflow (PostgreSQL)
+prisma:warn Prisma failed to detect the libssl/openssl version to use, and may not work as expected. Defaulting to "openssl-1.1.x".
+Please manually install OpenSSL via `apt-get update -y && apt-get install -y openssl` and try installing Prisma again. If you're running Prisma on Docker, add this command to your Dockerfile, or switch to an image that already has OpenSSL installed.
+
+ ❯ test/number-onboarding-flow.e2e-spec.ts (4 tests | 1 failed) 2000ms
+   ✓ BFF number registration workflow (PostgreSQL) > recovers the same one-use nonce for idempotent create and connects only after provider subscribe plus receipt 503ms
+   ✓ BFF number registration workflow (PostgreSQL) > does not disclose registration state to a different tenant and rejects invalid provider resources 388ms
+   × BFF number registration workflow (PostgreSQL) > reserves immutable provider ownership before register and projects BU-scoped channel authority safely 504ms
+     → 
+Invalid `prisma.buChannel.create()` invocation in
+/workspace/test/helpers.ts:151:42
+
+  148   externalResourceId: string,
+  149   options: { status?: 'CONECTADO' | 'CONECTANDO' | 'DESCONECTADO'; requiresWindow?: boolean } = {},
+  150 ) {
+→ 151   const channel = await prisma.buChannel.create(
+Unique constraint failed on the fields: (`bu_id`,`type`)
+   ✓ BFF number registration workflow (PostgreSQL) > allows only one BU to reserve a concurrently selected provider resource 469ms
+stderr | test/number-onboarding-message-acceptance.e2e-spec.ts > number onboarding keyed message acceptance (PostgreSQL)
+prisma:warn Prisma failed to detect the libssl/openssl version to use, and may not work as expected. Defaulting to "openssl-1.1.x".
+Please manually install OpenSSL via `apt-get update -y && apt-get install -y openssl` and try installing Prisma again. If you're running Prisma on Docker, add this command to your Dockerfile, or switch to an image that already has OpenSSL installed.
+
+ ✓ test/number-onboarding-message-acceptance.e2e-spec.ts (4 tests) 425ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  test/number-onboarding-flow.e2e-spec.ts > BFF number registration workflow (PostgreSQL) > reserves immutable provider ownership before register and projects BU-scoped channel authority safely
+PrismaClientKnownRequestError: 
+Invalid `prisma.buChannel.create()` invocation in
+/workspace/test/helpers.ts:151:42
+
+  148   externalResourceId: string,
+  149   options: { status?: 'CONECTADO' | 'CONECTANDO' | 'DESCONECTADO'; requiresWindow?: boolean } = {},
+  150 ) {
+→ 151   const channel = await prisma.buChannel.create(
+Unique constraint failed on the fields: (`bu_id`,`type`)
+ ❯ ei.handleRequestError node_modules/@prisma/client/src/runtime/RequestHandler.ts:228:13
+ ❯ ei.handleAndLogRequestError node_modules/@prisma/client/src/runtime/RequestHandler.ts:174:12
+ ❯ ei.request node_modules/@prisma/client/src/runtime/RequestHandler.ts:143:12
+ ❯ a node_modules/@prisma/client/src/runtime/getPrismaClient.ts:833:24
+ ❯ Module.criarCanalVerificado test/helpers.ts:151:19
+    149|   options: { status?: 'CONECTADO' | 'CONECTANDO' | 'DESCONECTADO'; req…
+    150| ) {
+    151|   const channel = await prisma.buChannel.create({ data: {
+       |                   ^
+    152|     buId, type, status: options.status ?? 'CONECTADO', requiresWindow:…
+    153|     ...(type === 'OFICIAL' ? { phoneNumberId: externalResourceId } : {…
+ ❯ test/number-onboarding-flow.e2e-spec.ts:111:5
+
+ Test Files  1 failed | 1 passed (2)
+      Tests  1 failed | 7 passed (8)
+   Start at  16:57:54
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+   Duration  12.36s (transform 6.56s, setup 43ms, collect 9.50s, tests 2.43s, environment 0ms, prepare 116ms)
+
+npm notice
+npm notice New major version of npm available! 10.9.9 -> 12.2.0
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.0
+npm notice To update run: npm install -g npm@12.2.0
+npm notice
