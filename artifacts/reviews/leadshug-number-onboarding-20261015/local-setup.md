@@ -6,7 +6,9 @@ Atualização do operador: já possui portfólio empresarial Meta, é administra
 
 O operador acionou “Obter conta de sandbox”; o painel orientou executar Cadastro incorporado e selecionar Sandbox Business/Sandbox WhatsApp Account. Ainda não executou essa autorização no LeadsHug. A tela Configuração mostrou webhook, token permanente, telefones e conta de teste, sem configuração Embedded Signup identificada. O painel informa32números de produção e1de teste; isso não comprova posse, saúde ou autorização de alteração de nenhum deles. Também informa que o app não publicado só recebe webhooks de teste do painel. Manter a preparação em sandbox; não publicar o app nem substituir callbacks de números existentes por inferência.
 
-Próximo checkpoint humano: o operador localizou “Adicionar casos de uso / Adicionar produtos” na área principal. Conferir as opções efetivamente oferecidas para Facebook Login para Empresas/Embedded Signup, sem substituir o caso WhatsApp ou presumir que login comum equivale ao fluxo empresarial. Nenhum callback/token precisa ser preenchido antes do gateway HTTPS validado.
+O operador localizou “Adicionar casos de uso / Adicionar produtos”, mas não há opção de login nessa lista. Ao abrir “Torne-se um Provedor de Tecnologia”, encontrou a pergunta sobre prestar serviços a clientes/outras empresas e as etapas Verificação da empresa, Verificação de acesso e Análise do App. O próprio painel informa que a identificação é irreversível. Root explicou que “Sim” corresponde ao modelo de conexão de empresas clientes já aprovado para o LeadsHug, no aplicativo dedicado a ele; a confirmação pelo operador ainda não foi relatada. Nenhuma publicação ou submissão de análise foi executada.
+
+Próximo checkpoint humano: conferir a tela/menu oferecidos depois da identificação, procurando Cadastro incorporado/Embedded Signup ou configuração empresarial. Não substituir o caso WhatsApp nem presumir que login comum equivale ao fluxo empresarial. Nenhum callback/token precisa ser preenchido antes do gateway HTTPS validado.
 
 ## O que pode ser preparado agora na conta Meta
 
