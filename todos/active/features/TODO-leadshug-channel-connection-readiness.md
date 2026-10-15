@@ -2,7 +2,7 @@
 
 ## Quick Start
 
-Rascunho do contrato ST-CON-01, criado de `delphi-ai/templates/todo_template.md` em 2026-10-15. Prioridade confirmada pelo usuário; implementação **não aprovada**. Preparação `prepared-pre-freeze`: ainda não houve freeze, review formal ou guard de aprovação deste contrato. Não executar produto a partir deste draft.
+Contrato proposto ST-CON-01, baseado no template canônico. Usuário autorizou avançar no planejamento do cadastro de números e conversas; Nova conversa informando contato é o próximo ST-CON-04. Esta revisão não é APROVADO. Fonte de produto não alterada. Pacote preparado para freeze e revisões independentes; nenhuma prova externa ou entrega reivindicada.
 
 ## Title
 
@@ -11,7 +11,7 @@ Cadastro e conexão dos números oficiais e não oficiais do LeadsHug, inspirado
 ## Artifact Identity
 
 - **Artifact type:** `tactical_execution_contract`
-- **Tactical state:** `Draft`
+- **Tactical state:** `Review`
 - **Prepared on:** 2026-10-15
 - **Planning authorization:** concordância do usuário com a prioridade de conexões e preparo de testes; confirmação de disponibilidade dos dois canais. Não equivale a APROVADO do contrato.
 
@@ -28,38 +28,87 @@ O usuário esclareceu em2026-10-15 que quer reproduzir os processos de cadastro 
 
 ## Contract Boundary
 
-Este draft define a proposta da primeira entrega. Nenhum checkpoint do histórico anterior autoriza esta execução. Ambiente inicial local confirmado pelo usuário em2026-10-15, com Railway em fase posterior. O contrato deve ser refinado após fixar versão Evolution, wiring local e modalidade da WABA, congelado, revisado e aprovado antes de tocar produto. Mudança material exige reconvergência; refinamento local só cabe no mesmo objetivo e aprovação.
+Proposta ST-CON-01: jornada de cadastro de número, com infraestrutura local estritamente necessária, credenciais e recebimento reais. Local primeiro, Railway depois. Mesmo TODO governa aprovação, execução e closeout. Critérios de cadastro não podem ser substituídos por mock do provedor. O usuário também pediu Nova conversa pelo contato: esse próximo recorte está enquadrado em ST-CON-04 e não é absorvido neste contrato. Mudança material retorna à revisão/aprovação; worktrees, legado e promoção produtiva não estão autorizados.
 
 ## Implementation Intent
 
-- **Current delivery:** cadastro de números: escolha oficial/não oficial, autorização Meta (Embedded Signup) ou pareamento Evolution por QR; diagnóstico subordinado à conclusão da jornada.
-- **Planned next steps:** ST-CON-02 importa histórico Evolution; ST-CON-03 resolve histórico oficial conforme capacidade comprovada. Transferência vem depois desta frente.
+- **Current delivery:** cadastrar/vincular número oficial pela autorização Meta e não oficial por QR, confirmar identidade e habilitar recebimento na BU; primeira IN visível na inbox prova o cadastro.
+- **Planned next steps:** ST-CON-04 Nova conversa por contato e primeiro envio proativo; depois ST-CON-02/03 histórico. Transferência/anexos/status permanecem próprios.
 - **Anticipatory implementation authorized now:** none
-- **Rationale:** reproduzir a experiência observada com adapters e tenancy próprios. Não exigir WABA/token manual do operador comum quando a instalação admitir o fluxo Meta; importação continua separada.
+- **Rationale:** um objetivo de cadastro usável. Nenhuma tela de template, criação manual de conversa ou campanha entra por antecipação.
 
 ## Delivery Status Canon (Required)
 
 - **Current delivery stage:** Pending
 - **Qualifiers:** none
-- **Next exact step:** refinar os contratos das jornadas Meta e QR conforme a correção do usuário, incluindo app Meta, credenciais por conta, runtime local e paths; depois congelar/revisar antes de pedir aprovação.
+- **Next exact step:** publicar baseline desta proposta, obter architecture_opinion e critique independentes, integrar achados e executar preflight antes de solicitar APROVADO.
 
 ## Active Work State (Required While TODO Remains In `active/`)
 
 - **Work state:** review
-- **Why this state now:** elaboração do contrato e fechamento de dependências; nenhuma implementação iniciada.
-- **Exit condition:** contrato concreto, dependências delimitadas, revisões/guardas exigidos aceitos e APROVADO do usuário.
+- **Why this state now:** contrato proposto sendo revisado; nenhuma implementação iniciada.
+- **Exit condition:** pareceres resolvidos, coerência/drift e preflight-go; após APROVADO, authority guard normal go.
 
 ## Scope
 
-- [ ] SCOPE-01: apresentar jornada Adicionar número com apelido/BU e escolha oficial/não oficial; oficial conduz autorização/escolha na Meta, não oficial conduz QR. Confirmar número escolhido, BU, grants e vínculo de um canal por tipo.
-- [ ] SCOPE-02: distinguir estado informado pelo provedor, momento da última verificação, indisponibilidade da verificação e prova operacional de mensagens. Consulta de WABA ou status no banco não equivale a teste ponta a ponta.
-- [ ] SCOPE-03: permitir verificação administrativa explícita com timeout e orçamento bounded, sem alterar estado para conectado por erro ou ausência de resposta; não fazer I/O externo em listagem periódica.
-- [ ] SCOPE-04: reconciliar consulta/evento com geração do vínculo e ordem de observações; resposta velha não pode reativar canal removido/substituído ou sobrescrever evento mais novo.
-- [ ] SCOPE-05: validar QR inicial/renovação/repareamento, persistência da instância e recuperação após interrupção na versão Evolution admitida, com erros compreensíveis.
-- [ ] SCOPE-06: acrescentar testes internos e fluxo browser de número/canal, preservando inbox e isolamento multi-tenant.
-- [ ] SCOPE-07: fornecer procedimento reproduzível de teste real IN/OUT para cada canal, registrando resultado por canal e build; manter pendência explícita se o provedor não puder ser testado.
-- [ ] SCOPE-08: preparar runtime local próprio do LeadsHug para os dois canais, com configuração privada, variáveis necessárias repassadas à API e callback alcançável. Completar os paths de runtime no diff antes do freeze; não reutilizar instância/dados do legado.
-- [ ] SCOPE-09: definir e implementar onboarding oficial por Embedded Signup, incluindo configuração do app, correlação segura da autorização com sessão/BU, troca de código somente no servidor, credenciais scoped por conta, vínculo e resultado de recebimento. Falha/cancelamento não pode aparentar cadastro operacional completo.
+- [ ] SCOPE-01: jornada Adicionar número na gestão de BUs: apelido e modalidade; criar BU conforme regra existente ou selecionar BU administrável, com retry sem duplicar cadastro.
+- [ ] SCOPE-02: oficial por Embedded Signup configurado pela instalação, sessão/BU correlacionadas, número escolhido validado na Meta, cancelamento/falha explícitos e recebimento configurado sem tomar callback alheio.
+- [ ] SCOPE-03: credencial Meta exclusiva do vínculo, cifrada no backend; envio BFF, público e Typebot usam a credencial da BU/canal, sem token de cliente global compartilhado.
+- [ ] SCOPE-04: não oficial por apelido/QR em Evolution própria, com criação idempotente da instância, autenticação do webhook, confirmação do telefone e renovação de QR.
+- [ ] SCOPE-05: estado do cadastro, recebimento e verificação separados; observação atrasada não reativa vínculo removido ou substitui estado mais novo. Listar BUs não consulta provider.
+- [ ] SCOPE-06: receber primeira mensagem real em cada canal de teste e visualizá-la na conversa correta, preservando grants, histórico paginado e regras de janela.
+- [ ] SCOPE-07: testes de contrato/segurança/races/PostgreSQL e Playwright com runtime real; prova externa separada por canal.
+- [ ] SCOPE-08: runtime local próprio do LeadsHug com Evolution fixada, persistência isolada, wiring de variáveis e runbook de callback HTTPS; sem tocar runtime/dados do legado.
+
+## Proposed Registration Contracts
+
+Proposta técnica da jornada, subordinada ao mesmo Scope/DoD e aberta a architecture_opinion.
+
+### BFF e autorização
+
+- `GET /api/bff/number-registrations/capabilities`: sessão válida; expõe apenas appId/configId/Graph version e disponibilidade/explicação por modalidade, nunca app secret/token/chave. Não chama provider.
+- `POST /api/bff/number-registrations`: `Idempotency-Key` UUID obrigatório, body exatamente uma origem (`buId` existente ou `novaBu:{nome,setorId?}`) e `tipo:OFICIAL|NAO_OFICIAL`. BU existente exige ADMIN nela; BU nova exige ADMIN na Mantenedora e herda grants/setor pela mesma regra transacional de TenancyService. Oficial sem app/config/crypto configurados e não oficial sem módulo contratado+teto configurado falham antes de criar BU/provider. Nova BU, reserva do canal e tentativa são atômicas no DB; refatorar reuso transacional da criação existente, preservando audit e expansão dos grants. Mesmo key/payload retorna tentativa original; mesmo key e payload diferente409. Nenhum HTTP de provider dentro da transação.
+- `GET /api/bff/number-registrations/:id`: apenas ADMIN da BU e tenant da tentativa; devolve etapas, número redigido conforme DTO da BU, erro safe e progresso. Nunca devolve código/PIN/token. Sem sessão401, recurso fora do escopo404, papel insuficiente403; autorizar antes de revelar erro de payload/estado.
+- `POST /:id/authorize` (prefixo anterior): oficial, nonce+code recebido no callback SDK. Pertence à sessão exata/usuário da tentativa, hash da sessão/expiração/nonce checados; CAS PENDING→PROCESSING antes de trocar code. Código não persiste nem entra em URL/log/audit. Envelope do token persistido antes dos passos seguintes. Timeout de troca fica AMBIGUO e exige nova autorização; nunca reenvia code consumido automaticamente.
+- `GET /:id/options`: somente depois de autorizar; retorna WABAs/números permitidos pela credencial dessa tentativa. Backend prova app/audience, escopos e pertencimento do recurso; IDs postMessage não são autoridade. Página máxima100 e continuação explícita, sem scan infinito. Número escolhido sempre confirmado pelo operador; nunca escolher primeiro por conveniência.
+- `POST /:id/confirm`: `wabaId,phoneNumberId,modoRegistro` validados contra provider e grant atual. Telefone obtido do provider deve coincidir com BU já numerada; se BU sem telefone, preencher por CAS na mesma transação do vínculo. ProviderID fica único globalmente no canal para não encaminhar webhook a duas BUs; colisão409 sem revelar tenant alheio.
+- `modoRegistro:NOVO` admite PIN6dígitos e passo de register explícito conforme modalidade convencional Cloud API. `modoRegistro:JA_REGISTRADO` não redefine PIN nem chama registro destrutivo; vínculo fica pendente de prova operacional quando a leitura Meta não comprovar readiness. PIN não retorna em DTO/log, só persistência cifrada se necessário à recuperação. Não realizar migração/coexistência/unregister.
+- `POST /:id/advance` e `POST /:id/retry`: uma rodada tem no máximo3requests externos, cada um timeout10s e um único lease de45s por vínculo; persistir estágio/resultado após cada passo. Não há retry automático de mutação ambígua. Read-before-retry reconcilia estágio; se não houver operação segura, declarar pendente/reautorizar em vez de fingir exactly-once externo. Assinar WABA só depois de mapping channel↔providerID local durável; webhook pode chegar antes do fim sem perder o tenant correto. Configurar callback apenas da própria instalação/conta de teste, sem override alheio.
+- `POST /:id/cancel`: antes de side effect externo pode encerrar reserva; depois conserva vínculo/etapas parciais e informa limpeza necessária. Não apagar BU nem conversas, não fazer unsubscribe de WABA compartilhada automaticamente. Consumidores atuais exigem credencial e readiness do vínculo antes do OUT.
+- `POST /api/bff/business-units/:buId/channels/:tipo/verify`: ADMIN, um lease por vínculo, mesmo budget3×10s; listagem nunca faz fan-out. Resultado muda só a dimensão efetivamente observada. Erros externos mapeados para códigos de catálogo, sem texto/token/URL brutos.
+- QR usa rota administrativa existente; pode iniciar/renovar pairing explicitamente, geração da tentativa captura efeito. Resposta contém QR efêmero só ao admin; o QR nunca é persistido em eventos/audit. Nova UI não usa o POST antigo que conecta WABA pelo token global. Rota antiga deve recusar fluxo incompleto com instrução do contrato novo, sem fallback de token; atualizar seus testes de expectativa dentro do escopo.
+
+### Persistência e recuperação
+
+`ChannelRegistrationAttempt` guarda id, Mantenedora/BU/canal, tipo, userId, hash de sessão, nonce hash, idempotencyKey+requestHash, estado, versão, leaseUntil, expiresAt, stage e erro safe. Unique Mantenedora/idempotencyKey e slot BuChannel(buId,type) já existente. IDs externos únicos por tipo; migrations detectam conflito preexistente antes de impor constraint. IDs internos podem ser prealocados sem compromisso de provider.
+
+`ChannelCredential` mantém token/PIN em envelope com keyId/version/nonce/ciphertext/tag, ligado ao canal da BU e geração; não inventar vault genérico nem refletir o envelope no model público. AAD inclui provider/BU/channelID/generation. Tamper/decrypt/key ausente falha fechado, nunca fallback global. Passar credencial por interface de adapter, sem vazá-la a audit ou payload de domínio. Não copiar secrets do ambiente legado.
+
+Cadastro pode ficar `PENDING_AUTH`, `PENDING_NUMBER`, `REGISTERING`, `PENDING_RECEIPT`, `CONNECTED`, `ERROR`, `CANCELLED`, com dimensão de providerConnection/receipt/credential e timestamps. O enum físico e mapeamento para status atual devem ser explícitos na migração; nenhum label mágico na UI. `CONNECTED` exige etapas aplicáveis concluídas, identidade correta e conexão confirmada; oficial já registrado sem endpoint conclusivo não recebe falso CONNECTED só pela lista de números. Primeira IN autenticada pode comprovar recebimento, não validade permanente do token de saída. Teste IN/OUT externo certifica somente a execução observada, não saúde contínua.
+
+Reserva idempotente da instância Evolution usa ID estável do canal e nunca nome do operador+timestamp. Se create retorna timeout, consultar a mesma identidade antes de retry; nenhuma segunda instância. Webhook deve ser configurado e verificado antes de concluir. Leitura de estado e evento usam geração e versionamento; retry de geração anterior não escreve após remove/recreate. Desconectar não apaga histórico. Callback tardio de instância sem vínculo não cria BU/tenant.
+
+A tentativa expira em10min enquanto espera autorização. Após token persistido, operações de recuperação do canal são administrativas e reautorizam grant/sessão corrente; não reaproveitam code/nonce antigos. Lease expirado não é sucesso e requer reconciliação; nenhuma transação DB é mantida durante rede. Não criar worker global ou sistema genérico de jobs neste slice.
+
+### UI e integrações
+
+Wizard: nome/BU → modalidade → janela Meta ou QR → confirmar número → mostrar cadastro/recebimento e ação de retry quando parcial. Cancelar popup, trocar BU, desmontar tela ou nova tentativa invalida callbacks/efeitos antigos no cliente; backend ainda revalida scope. SDK em postMessage aceita apenas origens Meta exatas e formato esperado; evento é dica para seleção e não prova tenant/ID. Callback de login fica preso à geração/attempt/nonce corrente; prova server-side da credencial/ID é obrigatória.
+
+Permissões existentes preservadas: ADMIN da BU para conectar existente; ADMIN da Mantenedora para criar BU; ATENDENTE não ganha gestão; módulo não oficial depende do teto e contratação. Dados sensíveis nunca vão a config.js/bundle. UI mostra ausência de configuração e falhas por etapa, sem exigir WABA/token manual do operador comum no fluxo Meta. Administrador pode reautorizar conta já cadastrada; credencial manual de número já registrado, se usada, é caminho técnico explícito com conferência Meta e cifra, jamais env global implícita.
+
+BFF responder, API pública responder e Typebot continuam com suas regras/DTOs/janelas; somente lookup de credencial é refeito. DI deve convergir nos módulos BFF/público/webhook. Primeira IN cria/reusa conversa pelo contrato existente, não manual. Nova conversa por contato aguardará ST-CON-04.
+
+### Frontend / Consumer Matrix
+
+| Producer | Consumer | Visible behavior / invariant | Validation |
+| --- | --- | --- | --- |
+| capabilities | Numeros/wizard | botão disponível/indisponível com motivo | browser e contrato DTO |
+| attempt/create/options/confirm | wizard | identidade, replay, autorização, cancelamento | PG E2E + Playwright |
+| stage/receipt/provider state | lista BU/detalhe | nenhum falso sucesso/estado antigo | barriers + race browser |
+| credencial scoped | ConversationsService BFF/público | enviar pelo canal correto e janela atual | API E2E e prova OUT |
+| credencial scoped | IncomingService Typebot | responder com credencial da mesma BU | Typebot E2E |
+| webhook | DB/realtime/inbox | primeira IN na conversa BU/contato correta | contrato/webhook real e readback |
+| eventos audit | Histórico de atividades | ator/BU/etapa sem segredo | cobertura catálogo e E2E |
 
 ## Delivery Status Semantics
 
@@ -79,13 +128,15 @@ n/a no estágio de drafting. Dependências técnicas desconhecidas são explicit
 
 ## Execution Lane Tracking (Required)
 
-- **Local implementation branches:** propostas futuras `feature/channel-connection-readiness` em API/Web; ainda não criadas. Foundation em main.
-- **Promotion lane path:** implementação local após aprovação, validação inicial local e prova externa dos providers com backend local; Railway de testes em fase posterior, com readiness e escopo próprios; promoção remota de produto exige autorização separada.
-- **Lane-promoted threshold for this TODO:** n/a
+- **Local implementation branches:** após aprovação, `feature/number-onboarding` em workspace/API/Web; checkout principal. Foundation permanece main.
+- **Promotion lane path:** implementação e commits locais de trabalho → validação local e prova real → publicação documental Foundation. Sem push de código/deploy neste contrato.
+- **Lane-promoted threshold for this TODO:** n/a; entrega local validada com provider de teste.
 - **Production-ready threshold for this TODO:** não reivindicado.
 - **Execution topology:** primary-checkout-single-writer
-- **Git isolation authorization:** not-requested; worktrees/cópias auxiliares proibidos.
-- **Subagent / delegation authorization:** workflow local requer executor serializado e reviewers independentes nas fases aplicáveis; nenhum agente de implementação despachado neste draft.
+- **Git isolation authorization:** not-requested; worktrees e cópias auxiliares proibidos.
+- **Subagent / delegation authorization:** workflow local todo-approval-gates-method requer reviews frescos independentes e main_instructions requer executor único; não implica Git isolation.
+- **Documentation git-write authority:** Foundation main é superfície documental autônoma; git_write_authority_guard antes de commit/push.
+- **Source baselines:** API ae6a9662c29b77276351aa9de653a47276372246; Web4e56f6c1f4515b918d05b8c87e890d42e8542c56; workspacecab23188ec796f79131467dcce0a16acedab8d4f. Nenhuma alteração de produto anterior a esta aprovação.
 
 ## Promotion Evidence (Required Before `🟣 Lane-Promoted` / `✅ Production-Ready`)
 
@@ -93,18 +144,18 @@ n/a; esta proposta não autoriza promoção ou deploy.
 
 ## Out of Scope
 
-- Importação/backfill do aparelho, MESSAGES_SET e dados históricos oficiais; ST-CON-02/03 terão contratos próprios.
-- Coexistência/sincronização de histórico oficial, migração de número em uso, templates, campanhas, transferência, mídia binária e máquina de estados de entrega/leitura. Embedded Signup entra na proposta de cadastro após a correção explícita do usuário; não autoriza implementação antes dos gates.
-- Remover sessões/instâncias existentes do usuário para testar; testes destrutivos só em vínculo descartável explicitamente identificado.
-- Integração com o legado, mudanças de gitlinks/.gitmodules, segredos versionados e alteração de ambiente de produção.
-- Disparar automaticamente uma mensagem de teste ao clicar em verificar conexão. Troca real usa interlocutor definido e procedimento explícito.
+- Nova conversa proativa/manual pelo contato: ST-CON-04 é o próximo recorte solicitado, incluindo abertura oficial por template aprovado quando necessário.
+- Importação de histórico, coexistência Business App, migração de número em uso, download/envio binário, templates/campanhas, transferência e estados de entrega/leitura.
+- Billing/linha de crédito de BSP: modalidade proposta é Tech Provider com cobrança direta da conta de teste; elegibilidade é precondição externa, nunca simulação silenciosa.
+- Alterar callback de app/número de outro sistema, revogar credencial ou apagar instância real em uso. Usar número de teste sem integração concorrente.
+- Deploy/promover código para Railway/produção. Segredos reais em commits; modificação manual de gitlinks/.gitmodules; worktrees/cópias auxiliares.
 
 ## Diff Expectation Contract (Required Before Delivery)
 
 - **Contract status:** required
 - **Policy:** strict; unclassified or forbidden paths block delivery
+- **User validation:** required on deviation
 - **Comparison mode:** working_tree
-- **Draft qualification:** paths abaixo são candidatos; completar a lista exata e a baseline Foundation antes do freeze. Nenhuma permissão de edição de produto é concedida.
 
 ### Repository Baselines
 
@@ -112,64 +163,144 @@ n/a; esta proposta não autoriza promoção ou deploy.
 | --- | --- | --- | --- |
 | api | api-app | ae6a9662c29b77276351aa9de653a47276372246 | working_tree |
 | web | web-app | 4e56f6c1f4515b918d05b8c87e890d42e8542c56 | working_tree |
-| foundation | foundation_documentation | 6665aad58f9b04841df85d981bf89434b1164cdb | working_tree |
+| workspace | . | cab23188ec796f79131467dcce0a16acedab8d4f | working_tree |
+| foundation | foundation_documentation | 41572ceb | working_tree |
 
 ### Expected Changed Paths
 
 | Repository | Path glob | Change types | Reason |
 | --- | --- | --- | --- |
-| api | src/domain/channels/** | A,M,?? | Estado, verificação e concorrência dos vínculos. |
-| api | src/integrations/evolution/** | A,M,?? | Adapter da versão confirmada. |
-| api | src/integrations/meta/** | A,M,?? | Identidade/capacidade do oficial e diagnóstico. |
-| api | src/surfaces/bff/channels.controller.ts | M | Contratos administrativos. |
-| api | src/surfaces/webhooks/evolution.controller.ts | M | Reconciliação de estado com evento. |
-| api | test/*canais* | A,M,?? | Contratos/races e fixtures específicas. |
-| api | test/webhooks.e2e-spec.ts | M | Contrato de evento. |
-| web | src/telas/Numeros.tsx | M | Número, QR, estados e ação de verificação. |
-| web | src/api.ts | M | Projeções tipadas. |
-| web | e2e/*canais* | A,M,?? | Fluxo browser. |
-| foundation | todos/active/features/TODO-leadshug-channel-connection-readiness.md | A,M,?? | Contrato e evidência. |
-| foundation | artifacts/feature-briefs/leadshug-channel-readiness-and-history-20261015.md | A,M,?? | Enquadramento. |
-| foundation | artifacts/validation-plans/leadshug-channel-readiness-20261015.md | A,M,?? | Cenários de validação. |
-| foundation | artifacts/dependency-readiness.md | A,M,?? | Dependências verificáveis. |
-| foundation | backlog/README.md | M | Prioridade confirmada. |
+| api | src/domain/channels/** | A,M,?? | Cadastro, tentativa, credencial e testes. |
+| api | src/integrations/meta/** | A,M,?? | Adapter explicitamente credential-scoped. |
+| api | src/integrations/evolution/** | A,M,?? | Adapter v2.3.7/QR/settings. |
+| api | src/infra/config/modulos.ts | M | Bootstrap coerente antes de vincular cliente. |
+| api | src/infra/config/modulos.spec.ts | M | Teste do contrato de bootstrap. |
+| api | src/domain/tenancy/tenancy.service.ts | M | Reuso transacional da criação BU/grants. |
+| api | src/domain/inbox/conversations.service.ts | M | Apenas resolver credencial do envio existente, sem mudar timeline/público. |
+| api | src/domain/inbox/incoming.service.ts | M | Apenas credencial Typebot e prova de entrada/receipt. |
+| api | src/domain/inbox/incoming.typebot.integration.spec.ts | M | Contrato scoped do caller Meta. |
+| api | src/domain/historico/catalogo.ts | M | Cadastro/etapas sem segredo. |
+| api | src/domain/historico/cobertura.ts | M | Cobertura dos endpoints administrativos novos. |
+| api | src/surfaces/bff/channels.controller.ts | M | Manter QR/remoção/listagem e contratos coerentes. |
+| api | src/surfaces/bff/number-registrations.controller.ts | A,?? | Jornada agregada e tentativas. |
+| api | src/surfaces/bff/me.controller.ts | M | Projeção de cadastro/receipt; permissões atuais. |
+| api | src/surfaces/bff/bff.module.ts | M | Wiring de domínio/secret store. |
+| api | src/surfaces/public/public.module.ts | M | Wiring do consumer Meta. |
+| api | src/surfaces/webhooks/webhooks.module.ts | M | Wiring do consumer Meta. |
+| api | src/surfaces/webhooks/meta.controller.ts | M | Receipt/verificação de vínculo e geração, sem mudar auth de origem. |
+| api | src/surfaces/webhooks/evolution.controller.ts | M | Eventos e geração da instância. |
+| api | prisma/schema.prisma | M | Attempt/credential/status/constraints. |
+| api | prisma/migrations/*number_onboarding*/migration.sql | A,?? | Migração da persistência de cadastro. |
+| api | test/*canais* | A,M,?? | E2E de cadastro e idempotência. |
+| api | test/*number-onboarding* | A,?? | E2E/fixtures próprios. |
+| api | test/helpers.ts | M | DI dos adapters e credenciais de teste. |
+| api | test/setup-env.ts | M | Configuração determinística de testes. |
+| api | test/browser-server.cjs | M | Backend real e fixtures de cadastro. |
+| api | test/timeline-fixtures.cjs | M | Somente credencial de fixture exigida pelo novo resolver. |
+| api | test/webhooks.e2e-spec.ts | M | Receipt, auth e races. |
+| api | test/atendimento.e2e-spec.ts | M | Só setup credential; invariantes existentes preservados. |
+| api | test/typebot.e2e-spec.ts | M | Só setup credential; comportamento preservado. |
+| api | .env.example | M | Novas variáveis sem valores reais. |
+| web | src/telas/Numeros.tsx | M | Wizard de cadastro. |
+| web | src/api.ts | M | Contratos/projeções e idempotency header. |
+| web | src/cadastroNumero* | A,?? | Modelo/helper tipado do wizard e seus testes. |
+| web | src/componentes/CadastroNumero* | A,?? | UI do fluxo e testes. |
+| web | e2e/*canais* | A,?? | Browser de cadastro. |
+| web | e2e/number-onboarding* | A,?? | Fixtures/freshness do fluxo. |
+| web | playwright.config.ts | M | Projeto adicional com mesmo backend real. |
+| workspace | docker-compose.yml | M | Repasse coerente de config não secreta; default local permanece. |
+| workspace | docker-compose.channels.yml | A,?? | Overlay local provider/gateway/volumes próprios. |
+| workspace | docker/local-gateway.conf.template | A,?? | Ingress local único para web/API/callback. |
+| workspace | scripts/test-channels-local.sh | A,?? | Runner Node22/PG16 e freshness source-owned. |
+| workspace | scripts/start-channels-local.sh | A,?? | Startup/config de validação, sem adoção de legado. |
+| workspace | Makefile | M | Entradas locais do pacote. |
+| workspace | README.md | M | Runbook local/providers/precondições. |
+| workspace | .env.example | M | Configuração vazia/redigida. |
+| workspace | api-app | M | Classificar checkout de submódulo já divergente da baseline; observe-only, não autoriza stage/write de gitlink. |
+| workspace | web-app | M | Mesmo contexto observe-only; gitlink pertence à pipeline. |
+| workspace | foundation_documentation | M | Publicações documentais já causam checkout divergente; não stage/write de gitlink. |
+| foundation | todos/active/features/TODO-leadshug-channel-connection-readiness.md | A,M,D,R,?? | Contrato e evidence. |
+| foundation | todos/completed/features/TODO-leadshug-channel-connection-readiness.md | A,R,?? | Relocação do mesmo TODO no closeout. |
+| foundation | artifacts/reviews/leadshug-number-onboarding-20261015/** | A,M,?? | Pacote/reviews/guardas específicos. |
+| foundation | artifacts/feature-briefs/leadshug-channel-readiness-and-history-20261015.md | M | Enquadramento e sequência. |
+| foundation | artifacts/validation-plans/leadshug-channel-readiness-20261015.md | M | Prova por canal. |
+| foundation | artifacts/dependency-readiness.md | M | Configuração/prontidão local. |
+| foundation | backlog/README.md | M | Disposição/next gate. |
+| foundation | modules/integrations-and-channels.md | M | Contratos owner. |
+| foundation | modules/identity-and-tenancy.md | M | Auth das novas rotas. |
+| foundation | modules/audit-and-history.md | M | Eventos sem segredos. |
 
 ### Not Expected Changed Paths
 
 | Repository | Path glob | Change types | Reason |
 | --- | --- | --- | --- |
-| api | .env* | any | Segredos/configuração não pertencem ao diff de produto. |
-| api | src/surfaces/public/** | any | API pública não é este contrato. |
-| web | src/telas/Inbox.tsx | any | Histórico paginado já entregue. |
-| foundation | todos/completed/** | any | Não reescrever história. |
+| api | .env | any | Segredo real não é diff. |
+| api | .env.local | any | Segredo real não é diff. |
+| web | .env* | any | Nada secreto vai para browser. |
+| web | src/telas/Inbox.tsx | any | Nova conversa será ST-CON-04; timeline preservada. |
+| workspace | .env | any | Arquivo privado não versionado. |
+| workspace | .gitmodules | any | Ownership de pipeline. |
+| workspace | .github/** | any | Sem expansão CI neste recorte. |
+| foundation | project_constitution.md | any | Constituição preservada. |
+| foundation | system_roadmap.md | any | Sem avanço de tema/exit gate. |
+| foundation | todos/completed/features/TODO-leadshug-inbox-message-timeline-pagination.md | any | Não reescrever histórico. |
 
-Schema/migração, projeção em tenancy, wiring e bootstrap de testes podem ser necessários; seus paths exatos devem ser admitidos antes do freeze, após decidir persistência da observação. Esta lacuna explícita impede tratar o draft como aprovação-ready.
+### Diff Deviation Analysis
+
+Nenhum desvio autorizado. Classificação de gitlinks preexistentes no workspace não concede permissão de alterá-los manualmente. Fixtures adicionais encontradas necessárias devem ser admitidas antes de editadas; não modificar expectativas de negócio só para passar tests.
 
 ## Bounded But Elastic Guardrails
 
-Somente concretizações do cadastro/conexão oficial Meta e não oficial QR no mesmo objetivo. Importação, coexistência e migração de número em uso exigem contrato próprio; não absorver por conveniência técnica. Embedded Signup foi admitido no draft pela correção do usuário e ainda precisa dos contratos técnicos/revisões antes da aprovação.
+Cadastro/QR/autorização/recebimento pertencem a este objetivo. Nova conversa proativa, modelos, importação e tomada de callback externo não cabem como refinamento. Versão de provider, armazenamento de credencial, semântica de recuperação ou obrigação externa alteradas materialmente exigem nova revisão antes da execução.
 
 ## Definition of Done
 
-- [ ] DOD-01: jornada oficial por autorização Meta e não oficial por QR verificadas por contrato/browser, incluindo cancelamento, falha e conclusão com número/BU corretos e permissões. Configuração técnica indisponível deve ser explícita, sem falso sucesso.
-- [ ] DOD-02: nenhum falso CONECTADO por mera listagem, timeout, resposta inválida ou resultado velho; conexão e saúde de verificação claramente distintas.
-- [ ] DOD-03: polling/listagem sem fan-out externo, verificações bounded e races determinísticas protegidas.
-- [ ] DOD-04: QR, estados/erros/retry e repareamento validados com browser/backend reais.
-- [ ] DOD-05: matriz local CI-equivalent, segurança, concorrência, auditorias independentes e consolidação do módulo aceitas.
-- [ ] DOD-06: prova real de IN/OUT e reconexão registrada por canal no target de teste confirmado. Se indisponível, nenhum claim de canal operacional ou closeout integral deste contrato.
+- [ ] DOD-01: cadastro oficial e QR operáveis por administrador da BU, com número/identidade confirmados e cancelamento/falhas sem falso sucesso.
+- [ ] DOD-02: tentativas de cadastro, credenciais cifradas e número externo scoped; replay/duplo clique/troca de BU/remover-recriar não duplicam ou cruzam vínculo.
+- [ ] DOD-03: credencial por canal é usada por todos os consumidores Meta existentes; sem token de cliente global, logs/DTOs/artefatos sem segredo.
+- [ ] DOD-04: runtime local isolado e migrations aplicáveis, orçamento externo bounded, erro/retry/frescor explícitos e webhook autenticado.
+- [ ] DOD-05: primeira IN real de cada canal cria/reutiliza conversa BU/contato e aparece na inbox; resposta OUT dentro do contrato existente chega ao interlocutor.
+- [ ] DOD-06: CI-equivalent API/Web/workspace, fluxo Playwright com build atual, segurança/PCV e revisões independentes aceitas.
+- [ ] DOD-07: decisões consolidadas no módulo owner, evidence matrix completa, source commits e guardas go antes do closeout local.
 
 ## Validation Steps
 
-- [ ] VAL-01: validar adapters com respostas da versão confirmada, múltiplos números, credencial recusada, timeout e payload inválido.
-- [ ] VAL-02: E2E PostgreSQL com grant autorizado, papel insuficiente, outro tenant/BU; verificação e evento concorrentes, remoção/recriação enquanto consulta está pendente.
-- [ ] VAL-03: Playwright contra build atual/backend real: iniciar cadastro, escolher modalidade, concluir/cancelar/falhar autorização Meta e pareamento QR, confirmar número, repetir sem duplicar vínculo e preservar contexto. Integrar prova externa Meta na conta de teste sem tratar popup simulado como autorização real.
-- [ ] VAL-04: executar matriz local API/Web em execução canônica serializada, com fonte/build servido identificados e banco isolado.
-- [ ] VAL-05: executar checklist real de conexão, IN/OUT e interrupção/retomada por canal; registrar o que está ou não comprovado.
-- [ ] VAL-06: concluir reviews/guardas de aderência, qualidade de testes, segurança, performance/dívida e consolidação antes de encerrar.
+- [ ] VAL-01: unidade/adapter para cifra e AAD, payload Meta/Evolution, erro/timeout, seleção entre múltiplos números e contrato de registro.
+- [ ] VAL-02: PostgreSQL E2E para sessão/grant/tenant, tentativa expirada/cancelada/replay, disputa create/delete/recreate/verificação/evento e persistência de falha parcial.
+- [ ] VAL-03: Playwright do cadastro/QR, popup cancelado/erro/timeout, mudança BU e resposta velha; backend/sessão/DB reais, servidor de provider de teste apenas como porta externa.
+- [ ] VAL-04: migrate deploy e CI-equivalent API/Web/workspace da fonte final; fingerprints do bundle antes dos workers, banco exclusivo e execução sem sobreposição de suites destrutivas.
+- [ ] VAL-05: prova externa local por canal, com autorização Meta/QR real, IN na BU certa, OUT recebida pelo interlocutor e recuperação permitida da conexão.
+- [ ] VAL-06: EPS/FRC/BCI/RLS conforme plano; security, debt, architecture_adherence, TQA, audit especializado e final review antes de completar.
+- [ ] VAL-07: consolidar módulo, validar contrato/diff/coerência e closeout; nenhum claim de produção pronta.
 
 ## Completion Evidence Matrix (Required Before Delivery Claim)
 
-Nenhuma linha passed. Matriz por critério será completada na revisão do contrato; [plano de validação](../../../artifacts/validation-plans/leadshug-channel-readiness-20261015.md) define os sinais planejados e sua separação da prova real.
+Todas as linhas abaixo estão planned. Tipo e runtime não são prova antecipada.
+
+| Criterion ID | Source Section | Criterion | Evidence Type | Evidence Artifact / Command | Runtime Target | Status | Notes |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| SCOPE-01 | Scope | Jornada Adicionar número/BU | browser+db | canais Playwright; canais E2E | local real-backend | planned | Nenhuma execução reivindicada. |
+| SCOPE-02 | Scope | Embedded Signup e vínculo | contract+browser+provider | number-onboarding E2E/Playwright; VAL-05 | local + Meta teste | planned | Nenhuma execução reivindicada. |
+| SCOPE-03 | Scope | Credencial cifrada scoped e consumers | unit+integration | crypto tests; atendimento/public/Typebot E2E | Node22/PG16 | planned | Nenhuma execução reivindicada. |
+| SCOPE-04 | Scope | QR/instância/webhook | browser+provider | canais Playwright; VAL-05 | Evolution própria | planned | Nenhuma execução reivindicada. |
+| SCOPE-05 | Scope | Estado honesto e geração | race | FRC/BCI barriers e negative control | local | planned | Nenhuma execução reivindicada. |
+| SCOPE-06 | Scope | Primeira IN na conversa | provider+browser | VAL-05 e readback | local + dois providers | planned | Nenhuma execução reivindicada. |
+| SCOPE-07 | Scope | Matriz/segurança | test+review | CI-equivalent e security audit | local isolado | planned | Nenhuma execução reivindicada. |
+| SCOPE-08 | Scope | Runtime próprio | runtime | compose config; migrate; health; runbook | local | planned | Nenhuma execução reivindicada. |
+| DOD-01 | Definition of Done | Cadastro oficial e QR usáveis | browser+provider | VAL-03/05 | local | planned | Nenhuma execução reivindicada. |
+| DOD-02 | Definition of Done | Replay/tenant/races | integration+race | VAL-02 + BCI/FRC | PG16/browser | planned | Nenhuma execução reivindicada. |
+| DOD-03 | Definition of Done | Credencial e consumidores | test+audit | VAL-01/02/06 + cutover | local | planned | Nenhuma execução reivindicada. |
+| DOD-04 | Definition of Done | Runtime/migration/erro | runtime+test | VAL-01/04 | local | planned | Nenhuma execução reivindicada. |
+| DOD-05 | Definition of Done | IN/OUT reais por canal | provider+browser | VAL-05 | números teste | planned | Nenhuma execução reivindicada. |
+| DOD-06 | Definition of Done | CI-equivalent e review | test+review | VAL-04/06 | local/review | planned | Nenhuma execução reivindicada. |
+| DOD-07 | Definition of Done | Canon/source/guardas | doc+guard | VAL-07 | Foundation | planned | Nenhuma execução reivindicada. |
+| VAL-01 | Validation Steps | Unidade/adapter/cifra | unit | npm test | Node22 | planned | Nenhuma execução reivindicada. |
+| VAL-02 | Validation Steps | PostgreSQL/auth/races | integration | npm run test:e2e | PG16 exclusivo | planned | Nenhuma execução reivindicada. |
+| VAL-03 | Validation Steps | Browser com backend real | browser | npm run test:tela | bundle atual/local | planned | Nenhuma execução reivindicada. |
+| VAL-04 | Validation Steps | Migration/CI/freshness | runtime+suite | runner scripts/test-channels-local.sh | local principal | planned | Nenhuma execução reivindicada. |
+| VAL-05 | Validation Steps | Prova externa local | provider | checklist por canal e readback | Meta/Evolution teste | planned | Nenhuma execução reivindicada. |
+| VAL-06 | Validation Steps | PCV/reviews | review+runtime | artefatos EPS/FRC/BCI/RLS + reviewers | local/no-context | planned | Nenhuma execução reivindicada. |
+| VAL-07 | Validation Steps | Consolidação/diff/closeout | doc+guard | guardas específicos | Foundation | planned | Nenhuma execução reivindicada. |
 
 ## External Dependency Readiness (Required When External Systems Matter)
 
@@ -180,7 +311,7 @@ Register: `foundation_documentation/artifacts/dependency-readiness.md`.
 | Evolution de teste e versão | Endpoint/payload/sessão reais. | unknown | n/a | Target inicial local confirmado; instância própria e versão ainda a definir. | Não usar instância legada observada no inventário Docker. |
 | Meta/WABA de teste | Identidade e operação oficial. | unknown | n/a | Permissões, modalidade, número e callback. | Disponibilidade oferecida não é health check. |
 | Números/interlocutores de teste | Prova IN/OUT. | unknown | n/a | Usuário confirmou disponibilidade dos dois em2026-10-15. | Confirmar target/destinatário sem publicar números pessoais. |
-| Documentação oficial Meta | Semântica atual/eligibilidade. | rate-limited | 2026-10-15 | HTTP429 nas páginas de onboarding. | Reconsultar antes de congelar decisões dependentes. |
+| Documentação oficial Meta | Cadastro/registro/assinatura. | degraded | 2026-10-15 | Coleção primária Meta Postman acessível; developers direto limitado. | Elegibilidade/app/Graph version ainda dependem de readiness; histórico fora do recorte. |
 
 ## Profile Scope & Handoffs (Required Before `APROVADO`)
 
@@ -200,29 +331,32 @@ Register: `foundation_documentation/artifacts/dependency-readiness.md`.
 ## Complexity
 
 - **Level (`small|medium|big`):** big
-- **Checkpoint policy:** section-by-section
-- **Why this level:** dois providers, onboarding Meta, credenciais scoped por conta, identidade de número, estado assíncrono, grants, browser e prova externa. Scope permanece uma história de cadastro/conexão; decidir subdivisão técnica antes do freeze se necessário.
+- **Checkpoint policy:** section-by-section: segurança/schema, fluxo providers, UI/integração, prova externa/closeout.
+- **Why this level:** onboarding OAuth, credencial por cliente, dois providers, infra local, schema, autorização e concorrência. Uma jornada primária de cadastro; Nova conversa é história separada.
 
 ## Canonical Module Anchors (Required Before APROVADO)
 
 - **Primary module doc:** `foundation_documentation/modules/integrations-and-channels.md`
-- **Secondary module docs:** identity-and-tenancy, inbox-and-conversations, audit-and-history.
-- **Planned decision promotion targets:** integrations-and-channels: identidade, verificação de conexão, frescor/erros e limites operacionais.
-- **Module decision consolidation targets:** mesmas seções, com evidência scoped por canal; não promover interpretação provisória de provider.
+- **Secondary module docs:** `foundation_documentation/modules/identity-and-tenancy.md`, `foundation_documentation/modules/inbox-and-conversations.md`, `foundation_documentation/modules/audit-and-history.md`.
+- **Planned decision promotion targets:** integrations-and-channels: Cadastro de números, Credenciais por canal, Estados e contratos BFF, Callback e operação local; identity-and-tenancy: autorização das rotas de cadastro; audit-and-history: eventos sem segredos.
+- **Module decision consolidation targets:** as mesmas seções antes do código das novas rotas; estado Verified apenas após validação. Constituição preservada; não reescrever decisões históricas/estudos concluídos.
 
 ## Decision Pending (Resolve Before Freeze)
 
-- [ ] D-01: fixar versão Evolution e contrato de payloads/consulta/configuração de webhook suportados.
-- [ ] D-02: fechar Embedded Signup/configuração do app Meta e tratamento de credenciais scoped por conta; política do caminho administrativo manual; seleção explícita do número; separar cadastro/autorização de recebimento e prova IN/OUT.
-- [ ] D-03: fechar persistência, frescor, prioridade de evento/consulta, geração de vínculo e resposta de erro sem mentir conexão.
-- [ ] D-04: fixar budgets/timeouts/concurrency e contrato BFF administrativo; completar todos os paths previstos e testes.
-- [ ] D-05: no ambiente local confirmado, fechar wiring/infra própria, callback e interlocutores; decidir procedimento de interrupção sem remover canal real em uso. Railway permanece fora do primeiro ciclo.
+Nenhuma decisão de produto pendente para a proposta. Credenciais, App/config ID, elegibilidade Meta, número de teste e origem HTTPS são precondições operacionais antes da prova externa; não se presume saúde. O desenho abaixo será desafiado no architecture_opinion antes de seu congelamento final.
 
 ## Decisions (Resolved Before Freeze)
 
-- D-00 confirmado pelo usuário em2026-10-15: começar localmente; Railway poderá ser validado depois. Isso não comprova saúde do ambiente nem autoriza deploy.
-- Enquadramento corrigido pelo usuário em2026-10-15: reproduzir as jornadas de cadastro oficial e não oficial; diagnóstico e importação não substituem essa entrega. Nenhuma decisão técnica congelada anteriormente.
-- Prioridade de planejamento confirmada. Decisões de implementação D-01..05 ainda abertas, nenhuma freeze claim.
+- D-01: uma BU continua representando o número; selecionar BU administrável ou criar pelo endpoint existente; modalidade não cria tenant novo. Telefone canônico não é sobrescrito por número divergente.
+- D-02: Embedded Signup Tech Provider é a jornada oficial; IDs do SDK são apenas candidatos e são verificados com a credencial obtida e o provider. Sem app configurado, botão indisponível com explicação, sem conexão simulada.
+- D-03: tentativas persistidas vinculadas a usuário, Mantenedora, BU, hash da sessão e nonce aleatório; expiram em10min, consumo CAS e retry explicitamente persistido. Nada de transação DB aberta durante HTTP externo.
+- D-04: credencial oficial por BuChannel, envelope AES-256-GCM com chave32bytes e keyId de instalação, nonce único, AAD provider/BU/channelId. Tokens/PIN/code só no backend; código não persiste, PIN cifrado quando necessário. Nenhuma queda para token global de cliente.
+- D-05: oficial tem passos separados autorizar→validar identidade→registrar quando aplicável e explicitamente confirmado→assinar WABA→verificar recebimento; falha parcial recuperável e visível. Não sobrescrever callback de outro sistema.
+- D-06: Evolution v2.3.7 fixada por digest, instância própria reservada com nome derivado do ID estável do vínculo; webhook autenticado configurado antes de afirmar cadastro completo. QR é readout efêmero, não histórico/audit.
+- D-07: providerConnection/registration/receipt/lastVerification são observações distintas; timeout não inventa offline/online. Query/evento têm versão de geração e CAS; listagem apenas DB, verificação explícita bounded.
+- D-08: atualizar todo consumo Meta existente (BFF/público/Typebot) para resolver credencial pelo vínculo; manter contratos públicos de resposta e janela. Bootstrap pode abrir administração/onboarding sem token de cliente já obtido; piso oficial é capacidade configurada, não número previamente conectado.
+- D-09: local primeiro com Evolution/DB/cache próprios e runbook HTTPS sem domínio presumido; Railway, coexistência, histórico e Nova conversa proativa ficam fora desta entrega.
+- D-10: API/Web source e runtime validados serialmente no checkout principal, um executor, sem worktrees ou mudança manual dos gitlinks.
 
 ## Module Decision Baseline Snapshot (Required Before APROVADO)
 
@@ -234,31 +368,92 @@ Register: `foundation_documentation/artifacts/dependency-readiness.md`.
 
 ## Decision Baseline (Frozen Before Implementation)
 
-`pending-freeze`: nenhuma decisão de implementação congelada neste draft.
+Proposta de decisões D-01..D-10 versionada para a revisão. Ainda não há aprovação de implementação. Após architecture_opinion/critique, registrar resolução e congelar os mesmos IDs; divergências materiais retornam ao ciclo. Nenhum reviewer pode considerar a proposta como produto já aprovado.
 
 ## Architecture Change Governance (Required When This TODO Establishes, Corrects, or Supersedes Architecture)
 
-`pending-freeze`: seção reservada para a fase aplicável. Nenhum review, guard, aprovação, medição, dispensa ou evidência de entrega foi executado/concedido neste draft; preencher antes do gate correspondente.
+- **Applicability:** required
+- **Why this applies:** estabelece onboarding e credencial por canal, retirando acoplamento de cliente em token global e estado conectado por simples consulta.
+- **Deviation / debt being retired:** MetaHttpClient lê WHATSAPP_TOKEN global para todas as BUs; bootstrap exige token antes de cadastrar; cadastro oficial escolhe primeiro número e marca conectado; webhook não oficial só atualiza estado sem reconciliação.
+- **Target steady-state after closeout:** uma jornada de cadastro por BU com credencial própria, etapas verificáveis, erro parcial durável e consumidores coerentes.
+- **Temporary exceptions allowed:** none; não introduzir dual token/fallback global. Configuração privada manual de credencial existente só por migração explícita e validação de identidade, não fallback de runtime.
+- **Cutover / removal condition:** source scan prova ausência de consumo global do token de cliente; boot/fixtures atualizados, todos os callers scoped, migration e negativos cross-tenant aceitos.
+
+### Patterns To Enforce
+
+| Pattern / Decision | Source / ID | Scope | Why It Must Hold After Cutover |
+| --- | --- | --- | --- |
+| Provider é adapter | integrations-and-channels#invariants | Meta/Evolution | Payload externo não governa tenant/grant. |
+| Um contexto por operação | identity-and-tenancy#invariants | BFF/OAuth/webhooks | IDs do SDK não são autorização. |
+| Conversa BU/contato e janela | inbox-and-conversations#invariants | Consumers Meta | Cadastro não altera regras do atendimento. |
+
+### Prohibited Anti-Patterns
+
+| Anti-Pattern / Wrong Path | Detection Signal | Why It Is Forbidden After Cutover | Exception Policy |
+| --- | --- | --- | --- |
+| Token de cliente global ou fallback | WHATSAPP_TOKEN lido para envio de qualquer BU | Vazamento/credencial errada entre clientes. | none |
+| Conectado por listagem/cache/timeout | Sem evidência de etapa no provider | Esconde cadastro incompleto. | none |
+| Credencial/OAuth raw no cliente/log | DTO, URL de log, audit ou erro externo bruto | Exposição de segredo e replay. | none |
+| Callback takeover silencioso | override/reconfiguração de integração alheia | Altera operação externa sem escolha do operador. | none |
+
+### Architecture Protection Harness
+
+| Harness Type | Surface | Command / Rule / Artifact | Regression It Must Catch | Adoption Timing | Evidence Plan / Follow-up |
+| --- | --- | --- | --- | --- | --- |
+| test | scopes/credentials | API unit e canais E2E | Tenant trocado, replay, token incorreto e cifra/AAD. | implement-in-this-todo | DOD-02/03; VAL-01/02 |
+| test | races | PostgreSQL barrier + Playwright | Reserva duplicada e resposta antiga após troca/remoção. | implement-in-this-todo | DOD-02/06; VAL-02/03 |
+| audit | global token/callers | scan dos consumers Meta e review cutover | Atualização parcial de BFF/público/Typebot. | implement-in-this-todo | DOD-03/06; VAL-06 |
+| runtime | local deployment | compose config, migrate deploy e prova providers | Configuração válida apenas em fake. | implement-in-this-todo | DOD-04/05; VAL-04/05 |
 
 ## Architecture Review Gates (Deterministically Derived From Architecture Change Governance)
 
-`pending-freeze`: seção reservada para a fase aplicável. Nenhum review, guard, aprovação, medição, dispensa ou evidência de entrega foi executado/concedido neste draft; preencher antes do gate correspondente.
+- **Architecture decision review:** required
+- **Decision review lifecycle:** after diagnosis is closed and before APROVADO
+- **Decision review kind:** architecture_opinion
+- **Decision review package:** bounded-file-set
+- **Decision review status:** not_run
+- **Decision review evidence / resolution:** artifacts/reviews/leadshug-number-onboarding-20261015; pending-freeze
+- **Architecture adherence review:** required
+- **Adherence review lifecycle:** after implementation and before Completed
+- **Adherence review kind:** architecture_adherence
+- **Adherence review package:** bounded-file-set
+- **Adherence review status:** not_run
+- **Adherence review evidence / resolution:** planned; entrega futura
+- **No-go handling:** achado material retorna ao desenho/execução; nenhum gate é dispensado.
 
 ## Gate: Review Baseline Freeze
 
-`pending-freeze`: seção reservada para a fase aplicável. Nenhum review, guard, aprovação, medição, dispensa ou evidência de entrega foi executado/concedido neste draft; preencher antes do gate correspondente.
+- **Gate decision:** required
+- **Why this decision:** revisar contrato exato publicado, sem aparência de evidência antes do freeze.
+- **Trigger stage:** before the first planning-side review or guard run
+- **Baseline branch:** main
+- **Baseline commit:** pending-freeze
+- **Baseline push reference:** origin/main
+- **Gate status:** not_run
+- **Findings summary:** proposta preparada; registrar commit/push antes de reviewers e guardas de planejamento.
+- **Evidence / reference:** artifacts/reviews/leadshug-number-onboarding-20261015/README.md
+- **Waiver authority / reference:** n/a
 
 ## Gate: Review Scope Drift
 
-`pending-freeze`: seção reservada para a fase aplicável. Nenhum review, guard, aprovação, medição, dispensa ou evidência de entrega foi executado/concedido neste draft; preencher antes do gate correspondente.
+- **Gate decision:** required
+- **Why this decision:** fechar material scope após integração de reviews.
+- **Trigger stage:** after planning convergence and before APROVADO
+- **Baseline source:** Review Baseline Freeze -> Baseline commit
+- **Guard command:** python3 delphi-ai/tools/review_scope_drift_guard.py --todo foundation_documentation/todos/active/features/TODO-leadshug-channel-connection-readiness.md
+- **Gate status:** not_run
+- **Findings summary:** pending-freeze
+- **Evidence / reference:** artifacts/reviews/leadshug-number-onboarding-20261015/evidence/scope-drift.json
+- **Waiver authority / reference:** n/a
+- **No-go handling rule:** reconvergir/refazer freeze e reviews afetados; não implementar direção materialmente alterada sem aprovação.
 
 ## Questions To Close
 
-- [x] Ambiente inicial: local; usuário admite Railway posteriormente.
-- [ ] Versão Evolution própria, acesso às suas rotas e persistência isolada, sem depender do legado.
-- [ ] Configuração do app/Embedded Signup e situação do número oficial de teste; contrato vigente Meta e credencial por conta, sem presumir que operador precise informar IDs manualmente.
-- [ ] Callback público de teste e interlocutor permitido para troca real.
-- [ ] Resolver D-01..05 e completar review baseline + revisão/guardas antes de pedir APROVADO.
+- [x] Local primeiro; Railway depois.
+- [x] Reproduzir jornadas de cadastro oficial Meta e não oficial QR.
+- [x] Usuário também quer Nova conversa proativa por contato: próximo ST-CON-04, antes de importação.
+- [ ] Precondições da prova real: app Meta/configId/versão Graph suportada e elegibilidade, número/WABA, credenciais privadas, origem HTTPS e interlocutor de teste. Não impedem preparar código/contrato; impedem declarar prova real enquanto ausentes.
+- [ ] Reviews/guardas e APROVADO deste contrato antes de executar produto.
 
 ## Pattern References (Optional; Enforced When Cited)
 
@@ -268,77 +463,165 @@ Register: `foundation_documentation/artifacts/dependency-readiness.md`.
 
 | Assumption ID | Assumption | Evidence | If False | Confidence | Handling |
 | --- | --- | --- | --- | --- | --- |
-| A-01 | O usuário pode disponibilizar ambos os canais. | Resposta nesta sessão em2026-10-15. | Ajustar gates externos; não mascarar com mocks. | High | Keep as Assumption |
-| A-02 | O oficial atual usa WABA manual e primeiro número. | channels.service.ts:31-74 | Atualizar diagnóstico antes do freeze. | High | Keep as Assumption |
-| A-03 | Não há reconciliação por connectionState no domínio. | Busca estadoDaInstancia em src retorna apenas adapter/interface. | Reavaliar owner existente antes de introduzir fluxo. | High | Keep as Assumption |
+| A-01 | Há uma credencial global Meta hoje. | api-app/src/integrations/meta/meta.client.ts:31; conversations.service.ts:292; incoming.service.ts:125 | Corrigir diagnóstico e consumers antes do freeze. | High | Keep as Assumption |
+| A-02 | Cadastro oficial atual só consulta WABA e escolhe primeiro. | api-app/src/domain/channels/channels.service.ts:31-74 | Reavaliar implementação antes de substituir. | High | Keep as Assumption |
+| A-03 | Middleware BFF já exige sessão e anti-CSRF. | api-app/src/surfaces/bff/session.middleware.ts:80-171 | Reforçar superfície; nunca abrir callback BFF público. | High | Keep as Assumption |
+| A-04 | Listagem UI lê DB; não há consumidor do connectionState. | web-app/src/telas/Numeros.tsx:12-19; api-app/src/integrations/evolution/evolution.client.ts:66-68 | Consolidar owner existente. | High | Keep as Assumption |
+| A-05 | Usuário pode disponibilizar ambos os números de teste. | Resposta explícita nesta sessão em2026-10-15 | VAL-05 fica bloqueado, não substituir por fake. | High | Keep as Assumption |
 
 ## Execution Plan (Required Before `APROVADO`)
 
-`prepared-pre-freeze`: plano candidato, subordinado às decisões ainda abertas.
-
 ### Touched Surfaces
 
-ChannelsService, clients Meta/Evolution, endpoints BFF de onboarding, persistência segura de credenciais scoped, configuração do app Meta, estado do webhook e Numeros/modal de cadastro; testes locais/browser e módulo owner. Paths/schema/migrações e callback de autorização devem ser concretizados antes do freeze; não autorizar pelo antigo diff parcial.
+A lista do Diff Expectation Contract é a autoridade de paths. Alterar callers Meta existentes para credencial scoped, wiring por módulo Nest, domain channels, schema, controllers, Numeros e runtime local; não alterar timeline/Inbox.
 
 ### Ordered Steps
 
-1. Resolver D-01..05; completar diff/contratos/matriz; congelar e publicar baseline antes dos reviews/guards.
-2. Obter decisões/critique independentes, auditar floor, coerência e drift; pedir APROVADO só com preflight-go.
-3. Após aprovação, carregar regras e delegar implementação a executor único no checkout principal.
-4. Provar falhas/races antes da correção; implementar adapter/domínio, estados UI e proteção de observações antigas.
-5. Validar CI-equivalent e browser no target fresco; executar testes reais por canal.
-6. Resolver aderência/TQA/final e guardas; consolidar módulo/artefatos e encerrar conforme limiar aprovado.
+1. Publicar freeze e obter architecture_opinion/critique; resolver achados e guardas antes de pedir APROVADO.
+2. Após aprovação, executor único cria branches locais e consolida contratos dos módulos antes de novas rotas.
+3. Test-first: migration/reserva/idempotência/cifra e isolamento; refatorar consumers Meta e bootstrap para credenciais por canal, sem fallback global.
+4. Cadastro oficial por tentativa/SDK/BFF/Graph e recuperação; não oficial por reserva/QR/webhook, protegendo generation e observações.
+5. Wizard Numeros: escolher/criar BU conforme grants, modalidade, Meta/QR, confirmar número, pendência/erro/retry. Geração de UI protege popup e respostas antigas.
+6. Overlay/runtime local, runner Node22/PG16/freshness; migrations e suites serializadas no banco exclusivo.
+7. Prova real com app/números de teste, IN/OUT e callback. Registrar impedimento de readiness, nunca substituir por fake.
+8. Architecture_adherence, TQA, segurança/PCV/debt, audit especializado com cutover e final review; canon/source/guardas; publicar docs e fechar entrega local.
 
 ### Test Strategy
 
-- **Strategy:** test-first após aprovação, com regressões de falso conectado/estado velho e readback de banco.
-- **Why:** a lacuna é observável e não basta o endpoint retornar200.
+- **Strategy:** test-first
+- **Why:** falso sucesso, erro parcial, replay e cross-tenant precisam de testes discriminantes antes da correção.
+- **Fail-first targets:** tentativa/nonce one-use, Meta token scoped emBFF/público/Typebot, callbacks/múltiplos números, provider indisponível, duplicate submit e estado antigo após delete/recreate. Capturar controle negativo quando meaningful; não alegar TDD retroativo.
 
-### Pre-APROVADO RED Evidence Capture (Optional for bugfix/regression)
+### Pre-APROVADO RED Evidence Capture
 
 - **Decision:** not_needed
-- **Why now:** diagnóstico por código basta para drafting; nenhum teste ou produto pode ser alterado neste estágio.
+- **Why now:** diagnóstico estático concluído; execução/test-support só após aprovação.
+- **Target symptom:** n/a
+- **Allowed surfaces:** none
 - **Status:** not_run
+- **Findings summary:** nenhuma implementação pré-aprovação autorizada.
 
-### Flow Evidence Planning Matrix (Required Before `APROVADO`)
+### Flow Evidence Planning Matrix
 
 | Criterion / Flow | Why Flow-Impacting | Platform Parity | Required Runtime Lane | Mutation Lane Required? | Backend Real-Data Required? | Planned Evidence | Non-Applicability Rationale |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| Número/QR/verificação/retry | Identidade e estado vistos pelo administrador. | web-only | Playwright mutation | yes | yes | Spec de canais e PostgreSQL isolado; build/servido conferidos. | n/a |
-| IN/OUT e reconexão do provider | Canal precisa operar fora do harness. | web-only | Playwright mutation + prova externa | yes | yes | Checklist e readback do mesmo canal/número de teste. | n/a |
+| Criar BU/selecionar existente e iniciar cadastro | Save/readback e grant | web-only | Playwright mutation | yes | yes | canais spec + PG16, contas propias de fixture | n/a |
+| Meta autorizar/confirmar/cancelar/falhar | OAuth e vínculo | web-only | Playwright mutation + prova externa | yes | yes | contrato local com provider stub; SDK/Meta real separado | n/a |
+| QR/renew/retry/close/concluir | UI/async/backend | web-only | Playwright mutation + aparelho | yes | yes | Max-in-flight e destino preservado; QR real | n/a |
+| Primeiro IN e OUT existentes | Consumer de credential e inbox | web-only | Playwright mutation + provider | yes | yes | Mesma BU e interlocutor, readback; regras de janela | n/a |
 
-### Local CI-Equivalent Suite Matrix (Required Before `APROVADO` and Before Delivery Claim)
+### Local CI-Equivalent Suite Matrix
 
 | Repository / CI Surface | Why In Scope | Behavior / Scenario Covered | Fixture / Seed / Runtime Preconditions | Local CI-Equivalent Command | Required Before | Status | Evidence Artifact / Command | Notes |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| API CI light | Domínio/adapters. | Tipos/build e regressões de status/erros. | Node22, dependências exatas. | npm run prisma:generate; npm run lint; npm run build; npm test | Local-Implemented | planned | nenhuma execução | Resolver runner canônico antes do run. |
-| API E2E | Auth, persistência e races. | Negativas tenant/papel e resposta/evento concorrentes. | PG16 isolado, migrations, execução serial. | npm run test:e2e | Local-Implemented | planned | nenhuma execução | Provider substituído prova só contrato interno. |
-| Web | Tela de conexão. | QR/estado/retry/contexto. | Bundle atual e backend/DB isolados. | npm test; npm run test:tela | Local-Implemented | planned | nenhuma execução | Reusar prova de freshness atual; não exigir Flutter. |
-| Providers reais | Validade operacional. | Conexão, IN/OUT e recuperação. | Versão, conta/callback/destinatário confirmados. | Procedimento no plano de validação; comandos específicos após readiness. | Local-Implemented | planned | nenhuma execução | Não substituível por fake; não é CI externo. |
+| API light | Domínio/adapters/boot | Build, cifra, erros e config | Node22/container, deps lockfile | npm run prisma:generate; npm run lint; npm run build; npm test | Local-Implemented | planned | raw stdout das quatro folhas | runner source-owned resolve contexto sem host Node divergente |
+| API E2E | Schema/auth/consumer | Negativas/replay/receipt e regressões público/Typebot | PG16 exclusivo e migrate deploy | npm run test:e2e | Local-Implemented | planned | raw stdout e manifest | serial, sem overlap com browser |
+| Web | Wizard/helper/DTO | Cadastro/cancelamento/QR/races | backend real, fonte e bundle servidos iguais | npm test; npm run test:tela | Local-Implemented | planned | stdout e pre-worker attestation | fixture não substitui BFF/sessão/DB |
+| Workspace Compose | Runtime/wiring | Config coerente, isolamento, serviços e startup | .env privado, dados novos do pacote | docker compose -f docker-compose.yml -f docker-compose.channels.yml config --quiet; make test-api; make test-web | Local-Implemented | planned | resultado sem valores de env | não imprimir config renderizado com segredos; manter superfícies broad da CI |
+| Prova externa | Cadastro real | SDK/QR+IN+OUT em cada canal | app Meta elegível, HTTPS e números de teste | runbook local e checklist VAL-05 | Local-Implemented | planned | evidência redigida por canal/build | não é CI externo ou prova de SLO |
 
 ### Runtime / Rollout Notes
 
-Ambiente inicial local confirmado em2026-10-15; Railway em fase posterior. Leitura do Compose detectou ausência de serviço Evolution e do repasse de variáveis de webhook/instância. Os arquivos de runtime (Compose, exemplos sem segredos, README e comandos de startup/teste) devem ter paths/baseline explicitados antes do freeze. Docker Windows acessível; socket Linux indisponível. Inventário do Compose LeadsHug estava parado; nenhum serviço foi iniciado. Não alterar ambiente real agora. Mudança de schema, se necessária, deve entrar no contrato com migração antes da aprovação. Sem gitlinks, mudança de configuração secreta ou deploy de produção.
+Local primeiro, via Docker Windows nesta sessão (Engine27.1.1 observado), Node22/PG16; nenhum serviço será tratado healthy só por inventário. Overlay channels mantém Evolution v2.3.7 por digest `sha256:1bd8afc4a6cf48822e6cf02469aeae7bd35a12a6b616eacd1291926307f4d339`, Postgres/cache/volumes próprios da Evolution, rede com a API e nomes distintos do legado. O parser/adapter valida versão/payload antes da prova.
+
+Gateway local usa imagem Web/Nginx já construída, config específica no workspace: serve /api,/webhooks,/ws para API, assets/UI para Web e /config.js com apiUrl vazio. Browser/callback partilham uma origem. Porta local dedicada configurável (padrão8082); exposição HTTPS por mecanismo de operador, URL cadastrada/allowlisted no app Meta antes do SDK real; não inventar hostname, não alterar DNS ou abrir túnel persistente automaticamente. Registro de URL só sem segredo.
+
+Variáveis privadas: app Meta ID/secret/configID/Graph version, callback verify secret, chave de cifra/keyId, credenciais Evolution e public origin; exemplos sem valores. Configuração completamente ausente permite administração com etapa indisponível; conjunto parcial é erro de configuração. Retirar exigência de WHATSAPP_TOKEN global como precondição de boot; não aceitar esse token como fallback. Base oficial é capacidade do produto, não cliente já cadastrado. Pin/token de número já existente só entram por caminho administrativo explícito e cifrado, sem ler .env legado.
+
+Migration cria constraints de cadastro e envelope; preflight detecta providerID duplicado/telefone ambíguo e aborta com relatório redigido, não funde/deleta dados. Canal oficial existente sem credential permanece PENDENTE_CREDENCIAL, sem tentativa silenciosa de usar token global; admin reautoriza/importa credencial explicitamente. Rollback preserva BU/conversas e pode inativar o novo vínculo; nunca apaga histórico. Railway/deploy fora deste contrato.
 
 ## Plan Review Gate (Review of the Execution Plan; required for `medium|big`; abbreviated for low-risk `small`)
 
-`pending-freeze`: seção reservada para a fase aplicável. Nenhum review, guard, aprovação, medição, dispensa ou evidência de entrega foi executado/concedido neste draft; preencher antes do gate correspondente.
+Preparação de parecer, não conclusão de gate; review formal após freeze.
+
+### Review Sections
+
+- [ ] Architecture
+- [ ] Code Quality
+- [ ] Tests
+- [ ] Performance
+- [ ] Security
+- [ ] Elegance
+- [ ] Structural Soundness
+
+### Issue Cards
+
+- **Issue ID:** PLAN-NUM-01
+  - **Severity:** high
+  - **Evidence:** meta.client.ts:31 e consumers sem credential explícita.
+  - **Why it matters now:** credenciais de clientes diferentes não podem compartilhar token.
+  - **Option A (Recommended):** secret store por vínculo cifrado e resolver único scoped; esforço alto, risco controlado por migration/testes, blast radius cross-module, manutenção média, performance neutral com lookup indexed, elegância/coerência melhoram.
+  - **Option B:** token por instalação e um cliente por deploy; esforço médio, risco de limitar multitenancy, blast radius cross-stack, manutenção alta, performance neutral, elegância/estrutura regredem no produto multi-tenant.
+  - **Option C (Do Nothing):** esforço baixo, risco alto de credencial incorreta, manutenção alta, performance neutral, elegância/estrutura regredem; rejeitada.
+  - **Recommendation:** A; sem fallback global.
+- **Issue ID:** PLAN-NUM-02
+  - **Severity:** medium
+  - **Evidence:** cadastro externo faz HTTP antes do registro local; QR/callback e token exchange podem falhar parcialmente.
+  - **Why it matters now:** replay/duplo clique pode duplicar instância ou perder código consumido.
+  - **Option A (Recommended):** reserva+tentativa persistida, CAS e retomada por etapas; esforço médio, risco médio, blast radius module, manutenção média, performance bounded, elegância/estrutura melhoram.
+  - **Option B:** HTTP síncrono seguido de create simples; esforço baixo, risco alto, manutenção alta, performance regressa sob retry, estrutura frágil.
+  - **Option C (Do Nothing):** mantém cadastro inconsistente; esforço baixo, risco alto, performance unknown, estrutura/elegância regredem.
+  - **Recommendation:** A.
+
+### Failure Modes & Edge Cases
+
+Cancelar/fechar popup; code expirar; sessão/grant revogado entre etapas; IDs SDK falsos; WABA múltiplos números; nonce repetido; registro parcial; webhook não assinado; provider retornar número diferente; remove/recreate enquanto consulta pendente; resultado do QR de BU antiga; erro de decriptação/keyId ausente; provider em timeout; callback já em outro sistema; credencial expirada depois do cadastro; primeiro IN e envio Typebot usando credencial própria.
+
+### Residual Unknowns / Risks
+
+Meta app/Graph version e número real ainda não verificados; arquitetura pode ser implementada mas não certificada externamente sem readiness. Evolution stable fixada não é prova de compatibilidade em operação. Crypto protege DB, não protege comprometimento da aplicação/key. Não prometer SLO ou produção pronta.
 
 ## Additional Architectural Opinions (Required When Path Remains Materially Unclear)
 
-`pending-freeze`: seção reservada para a fase aplicável. Nenhum review, guard, aprovação, medição, dispensa ou evidência de entrega foi executado/concedido neste draft; preencher antes do gate correspondente.
+Architecture decision review requerida após freeze do pacote e antes do congelamento final de decisões; reviewers fresh no-context, evidence/resolution serão registrados. Nenhum parecer foi antecipado.
 
 ## Audit Trigger Matrix (Required Before Audit Decisions Are Trusted)
 
-`pending-freeze`: seção reservada para a fase aplicável. Nenhum review, guard, aprovação, medição, dispensa ou evidência de entrega foi executado/concedido neste draft; preencher antes do gate correspondente.
+- **Canonical method:** wf-docker-audit-escalation-method
+- **Guard command:** python3 delphi-ai/tools/audit_escalation_guard.py --todo foundation_documentation/todos/active/features/TODO-leadshug-channel-connection-readiness.md
+- **Latest TEACH evidence / artifact:** pending-freeze
+
+| Trigger | Value | Notes |
+| --- | --- | --- |
+| complexity | big | Onboarding e credenciais. |
+| blast_radius | cross-stack | API/Web/Compose. |
+| behavioral_change_or_bugfix | yes | Cadastro novo e correção do vínculo. |
+| changes_public_contract | yes | BFF/schema/config. |
+| touches_auth_or_tenant | yes | OAuth/BU/segredos. |
+| touches_runtime_or_infra | yes | Runtime local/callback. |
+| touches_tests | yes | Testes/fixtures/runners. |
+| critical_user_journey | yes | Cadastro utilizável. |
+| release_or_promotion_critical | no | Local; sem promoção produtiva. |
+| high_severity_plan_review_issue | yes | PLAN-NUM-01. |
+| explicit_three_lane_request | no | Audit especializado derivado, não pedido humano. |
 
 ## Independent No-Context Critique Gate (Deterministic Floor From Audit Escalation)
 
-`pending-freeze`: seção reservada para a fase aplicável. Nenhum review, guard, aprovação, medição, dispensa ou evidência de entrega foi executado/concedido neste draft; preencher antes do gate correspondente.
+- **Critique decision:** required
+- **Why this decision:** big/cross-stack/OAuth/tenant/runtime.
+- **Impact signals in scope:** public contract/schema/api, auth, runtime, cross-module
+- **Package mode:** bounded-file-set
+- **Package minimum contents:** frozen baseline, proposta/limites, código citado, plano, riscos, achados prévios e resolução
+- **Critique isolation mode:** fresh internal no-context reviewer
+- **Internal reviewer mandate:** required; não é executor, sem contexto da conversa; aguardar até terminal sem deadline arbitrário.
+- **Canonical multi-lane audit protocol:** audit-protocol-triple-review; entrega recomendada pelo floor, será executada antes de fechar.
+- **Critique lenses:** correctness, performance, elegance, structural-soundness, risk
+- **Critique status:** not_run
+- **Findings summary:** pending-freeze
+- **Evidence / reference:** artifacts/reviews/leadshug-number-onboarding-20261015/planning-critique.json
+- **Waiver authority / reference:** n/a
 
 ## Gate: Assumption Code Coherence
 
-`pending-freeze`: seção reservada para a fase aplicável. Nenhum review, guard, aprovação, medição, dispensa ou evidência de entrega foi executado/concedido neste draft; preencher antes do gate correspondente.
+- **Gate decision:** required
+- **Why this decision:** as alterações dependem de consumers e superfícies reais.
+- **Trigger stage:** after critique convergence and before APROVADO
+- **Guard scope:** A-01,A-02,A-03,A-04
+- **Guard command:** python3 delphi-ai/tools/assumption_code_coherence_guard.py --todo foundation_documentation/todos/active/features/TODO-leadshug-channel-connection-readiness.md
+- **Gate status:** not_run
+- **Findings summary:** pending-freeze
+- **Evidence / reference:** artifacts/reviews/leadshug-number-onboarding-20261015/evidence/code-coherence.json
+- **Waiver authority / reference:** n/a
 
 ## Approval
 
@@ -349,11 +632,36 @@ Ambiente inicial local confirmado em2026-10-15; Railway em fase posterior. Leitu
 
 ## Rules Acknowledgement / Ingestion (Required After `APROVADO` and Before Execution)
 
-`pending-freeze`: seção reservada para a fase aplicável. Nenhum review, guard, aprovação, medição, dispensa ou evidência de entrega foi executado/concedido neste draft; preencher antes do gate correspondente.
+Planejadas antes de execução; reload binding após APROVADO.
+
+| Source | Why It Applies Now | Must Preserve | Must Avoid | Execution Impact |
+| --- | --- | --- | --- | --- |
+| delphi-ai/main_instructions.md | Fronteira executor/review/Git. | um writer e gates | worktree/gitlink manual | delegar execução |
+| delphi-ai/workflows/docker/todo-approval-gates-method.md | Aprovação tática. | APROVADO+guard | iniciar por concordância genérica | bloquear produto antes do guard |
+| delphi-ai/workflows/docker/environment-readiness-method.md | Compose/runtime. | target próprio | usar legado/segredo em log | readiness antes da prova |
+| delphi-ai/workflows/docker/effort-selection-method.md | Model/role. | execução medium/review max | autodelegação implícita | routing guard |
+| foundation_documentation/policies/scope_subscope_governance.md | Ownership das rotas. | contratos do owner | controller sem owner | doc antes do código |
+| foundation_documentation/policies/central_whatsapp_independent_legacy_policy.md | Inspiração. | comportamento redesenhado | copiar source/runtime/dados | só referência |
+| delphi-ai/workflows/docker/todo-closeout-promotion-method.md | Entrega e fechamento. | mesmo TODO/evidência | claim prematuro | guardas antes de fechar |
 
 ## Agent Routing Preflight (Required Before Execution When Effort/Model Routing Applies)
 
-`pending-freeze`: seção reservada para a fase aplicável. Nenhum review, guard, aprovação, medição, dispensa ou evidência de entrega foi executado/concedido neste draft; preencher antes do gate correspondente.
+- **Client surface:** codex
+- **Current governed action:** implementation
+- **Selected role:** routine-executor
+- **Selected model:** gpt-6-luna
+- **Selected effort:** medium
+- **Proof mode:** declared
+- **Exception reason:** n/a
+- **Subagent / delegation authorization:** requerida por main_instructions e workflow todo-approval-gates-method; execução apenas após APROVADO
+- **Execution topology:** primary-checkout-single-writer
+- **Worktree / auxiliary-checkout authorization:** not-authorized
+- **Worktree authorization evidence:** n/a
+- **Writer scheduling policy:** single-writer-serialized
+- **Guard outcome:** pending; rodar guard antes de aprovação e novamente antes de executar
+- **Waiver / exception reference:** n/a
+
+Reviews serão fresh no-context gpt-6.1-sol/max para architecture_opinion e critique, com routing guard distinto; nenhuma configuração da sessão primária é fingida.
 
 ## Decision Adherence Validation (Mandatory Before Delivery)
 
@@ -378,50 +686,97 @@ Ambiente inicial local confirmado em2026-10-15; Railway em fase posterior. Leitu
 ## TODO Closeout Disposition
 
 - **Disposition:** keep-active
-- **Disposition reason:** draft do contrato; decisões materiais e revisão ainda pendentes.
+- **Disposition reason:** planejamento/revisão, sem implementação aprovada.
 - **Post-commit/push status:** n/a
-- **Next path/status action:** refinar o mesmo TODO após confirmar dependências; não mover ou encerrar antes dos gates.
+- **Next path/status action:** resolver reviews/guardas e solicitar aprovação do contrato; mesmo TODO mantém evidência.
 
 ## Security Risk Assessment (Mandatory Before Delivery)
 
 - **Risk level:** high
-- **Why this risk level:** operação administrativa de canal, credenciais externas, callback e fronteira multi-tenant.
-- **Attack surface in scope:** BFF, identificação do vínculo e webhook existente; não remover autenticação para diagnosticar.
+- **Gate decision:** required
+- **Why this risk level:** OAuth, credential por cliente, popup/origem, webhook e grants mutáveis.
+- **Attack surface in scope:** sessão+anti-CSRF BFF; origem exata Meta no postMessage; código/nonce de uso único; IDs não confiáveis; token cipher/AAD; scopes de caller.
 - **Attack simulation decision:** required
-- **Review evidence:** planned, nenhuma prova nova.
-- **Residual security risk:** resposta de provider e URL de webhook podem conter segredo; projetar erro safe sem devolvê-los em texto bruto.
+- **Review evidence:** planned; negativos de replay, cross-tenant, sessão/grant revogado, origem/popup forjado, ciphertext adulterado, redirect de provider e erro redigido.
+- **Residual security risk:** crypto não protege aplicação comprometida; credenciais não entram em raw webhook/audit, DTO, URL registrada, Playwright trace/screenshot ou artefato. URL Evolution só de configuração allowlisted; não aceitar URL livre do operador.
 
 ## Performance & Concurrency Risk Assessment (Mandatory Before Delivery)
 
-Draft: risco material em verificação concorrente, evento vs consulta, reconnect e remoção/recriação. Classificar EPS/FRC/BCI/RLS e samples pelo schema pcv-1 antes do freeze; não autorizar fan-out externo em polling. Nenhuma medição executada.
+- **Policy schema version:** pcv-1
+- **Global sensitivity level:** high
+- **Why this level:** OAuth/HTTP e DB em etapas, requests retriggerable e observações concorrentes.
+- **Current delivery stage at review time:** Pending
+
+| Lane ID | Lane | Trigger Result | Trigger Severity | Trigger Reason Code | Gate Deadline | Minimum Evidence Rule | State | Residual Risk | Uncertainty Reason Code |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| EPS | endpoint-performance-scrutiny | required | medium | EPS-DATA-PATH-CHANGED | before_local_implemented | EPS-E1 | pending | none | none |
+| FRC | frontend-race-condition-validation | required | high | FRC-DUPLICATE-MUTATION | before_local_implemented | FRC-POLICY | pending | none | none |
+| BCI | backend-concurrency-idempotency-validation | required | high | BCI-DUPLICATE-SUBMIT-OR-REPLAY | before_local_implemented | BCI-INV | pending | none | none |
+| RLS | runtime-load-stress-validation | recommended | medium | RLS-QUEUE-WORKER-REALTIME-CHANGED | before_local_implemented | RLS-E1 | pending | none | none |
+
+#### EPS
+Lookup único por vínculo/tentativa e índice de expiração, EXPLAIN na tabela representativa; sem fan-out em listagem. Perfil EPS-SP-STRONG, aceitação EPS-A1; medição local e limites documentados.
+#### FRC
+Coalescer duplo clique; cancela contexto anterior, descarta versão velha; repetição forte10triggers×3, requests/in-flight e estado/draft observáveis. Perfil FRC-SP-M; FRC-A1.
+#### BCI
+CAS na tentativa, unicidade de slot/providerID e geração;10operações sobrepostas×3 com barriers para criação, finalize/replay e delete/recreate, controle negativo. Perfil BCI-SP-M; BCI-A1. Sem exactly-once de provider afirmado; timeout externo ambíguo fica pending.
+#### RLS
+Uma etapa bounded com cinco clientes e seis leituras por cliente,30verificações internas/conflitos, zero chamada provider em listagem. Perfil RLS-SP-L; RLS-A1. Não é benchmark de capacidade/SLO; provider real não recebe carga sintética.
 
 ## Verification Debt Assessment (Required Before `Completed`; mandatory audit for `medium|big` or when debt signals exist)
 
-`pending-freeze`: seção reservada para a fase aplicável. Nenhum review, guard, aprovação, medição, dispensa ou evidência de entrega foi executado/concedido neste draft; preencher antes do gate correspondente.
+- **Audit outcome:** none
+- **Why this outcome:** nenhum produto alterado ainda; audit obrigatório após implementação.
+- **Inline code TODO debt:** none
+- **Evidence / audit artifact:** planned, sem claim de audit realizado.
+- **Accepted residual debt:** none; VAL-05 externa não pode ser dispensada implicitamente.
 
 ## Independent Test Quality Audit Gate (Deterministic Floor From Audit Escalation)
 
-`pending-freeze`: seção reservada para a fase aplicável. Nenhum review, guard, aprovação, medição, dispensa ou evidência de entrega foi executado/concedido neste draft; preencher antes do gate correspondente.
+- **Audit decision:** required
+- **Why this decision:** big/cross-stack, OAuth/tenant/runtime/testes.
+- **Package mode:** bounded-file-set
+- **Audit isolation mode:** fresh internal no-context reviewer
+- **Internal reviewer mandate:** required; distinto do executor, aguardar terminal sem deadline arbitrário.
+- **Audit status:** not_run
+- **Findings summary:** planejado para após implementação/prova primária; não foi dispensado.
+- **Evidence / reference:** artifacts/reviews/leadshug-number-onboarding-20261015
+- **Canonical multi-lane audit protocol:** audit-protocol-triple-review
+- **Waiver authority / reference:** n/a
 
 ## Independent No-Context Final Review Gate (Deterministic Floor From Audit Escalation)
 
-`pending-freeze`: seção reservada para a fase aplicável. Nenhum review, guard, aprovação, medição, dispensa ou evidência de entrega foi executado/concedido neste draft; preencher antes do gate correspondente.
+- **Final review decision:** required
+- **Why this decision:** big/cross-stack, OAuth/tenant/runtime/testes.
+- **Package mode:** bounded-file-set
+- **Final review isolation mode:** fresh internal no-context reviewer
+- **Internal reviewer mandate:** required; distinto do executor, aguardar terminal sem deadline arbitrário.
+- **Final review status:** not_run
+- **Findings summary:** planejado para após implementação/prova primária; não foi dispensado.
+- **Evidence / reference:** artifacts/reviews/leadshug-number-onboarding-20261015
+- **Canonical multi-lane audit protocol:** audit-protocol-triple-review
+- **Waiver authority / reference:** n/a
 
 ## Independent Cutover Integrity Audit Gate
 
-`pending-freeze`: seção reservada para a fase aplicável. Nenhum review, guard, aprovação, medição, dispensa ou evidência de entrega foi executado/concedido neste draft; preencher antes do gate correspondente.
+- **Audit decision:** required
+- **Why this decision:** credencial global é retirada; todos os consumers precisam convergir, sem shim/fallback.
+- **Audit status:** not_run
+- **Evidence / reference:** audit-protocol-triple-review após implementação; sem dispensa.
 
 ## Delivery Confidence Gate (Required for `✅ Production-Ready`)
 
-`pending-freeze`: seção reservada para a fase aplicável. Nenhum review, guard, aprovação, medição, dispensa ou evidência de entrega foi executado/concedido neste draft; preencher antes do gate correspondente.
+n/a; sem claim Production-Ready ou promoção remota.
 
 ## Module Consolidation Gate (Required Before `Completed`)
 
-`pending-freeze`: seção reservada para a fase aplicável. Nenhum review, guard, aprovação, medição, dispensa ou evidência de entrega foi executado/concedido neste draft; preencher antes do gate correspondente.
+- **Gate decision:** required
+- **Gate status:** not_run
+- **Evidence / reference:** módulos owner e contratos antes do código; Verified somente depois de evidência aceita. Nenhuma alteração de constituição planejada.
 
 ## Commands (Run Locally)
 
-Nenhum comando de produto autorizado. Runners e targets exatos devem ser fechados antes da execução. Leitura de código e checagem documental somente nesta fase.
+Após APROVADO: runner source-owned API/Web e compose local; executar folhas documentadas na matriz. Segredos vêm do ambiente privado e não aparecem em comando/log. Antes de executar, routing e readiness do executor go. Nenhum comando de produto rodado nesta fase.
 
 ## Files Expected (Compatibility Note)
 

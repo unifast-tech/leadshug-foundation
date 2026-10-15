@@ -18,7 +18,7 @@ Registro baseado em `delphi-ai/templates/dependency_readiness_template.md`; mem�
 | Callback do backend local | host/ingress | Provider precisa alcançar webhooks autenticados. | unknown | n/a | Ambiente local confirmado pelo usuário; endereço/mecanismo ainda não definido. | URL incorreta, inacessível ou origem não verificável. | Definir exposição local no contrato; não abrir túnel ou alterar DNS agora. |
 | Docker Windows | service | Engine local para runtime/testes. | healthy | 2026-10-15 | docker.exe version e inventário read-only responderam; Engine27.1.1. | Socket Linux indisponível; esta prova não certifica containers/app. | Usar cliente Windows no preparo local, com paths e wrappers confirmados. |
 | Stack local LeadsHug | service | API/Web/PG e wiring dos providers. | degraded | 2026-10-15 | Leitura do Compose/inventário: containers LeadsHug parados; sem serviço Evolution ou repasse de envs dos providers/webhooks. | Variáveis privadas presentes no host não chegam automaticamente ao container. | Completar contrato de runtime local antes de subir/alterar serviços. |
-| Documentação oficial Meta de onboarding | documentation | Modalidade e capacidades atuais do oficial. | rate-limited | 2026-10-15 | Acesso web às páginas oficiais retornouHTTP429. | Não foi possível confirmar semântica atual de histórico/coexistência. | Retry antes de congelar decisão dependente; não substituir por blog de terceiro. |
+| Documentação oficial Meta de onboarding | documentation | Cadastro/registro/assinatura e limites atuais. | degraded | 2026-10-15 | Developers direto limitado; coleção oficial Meta em Postman acessível para Embedded Signup, register e subscribed_apps. | Elegibilidade/app efetivo e histórico/coexistência ainda não verificados. | Usar fonte primária Postman para cadastro; histórico continua fora do recorte. |
 
 ## Operational Notes
 
@@ -29,3 +29,7 @@ Não há provedor classificado como healthy nesta sessão. Nenhuma credencial fo
 Checagem de `.env` e `api-app/.env` registrou apenas presença/ausência, sem imprimir valores: variáveis de sessão/token interno/token WhatsApp não vazias; variáveis de autenticação dos webhooks e configuração Evolution ausentes/não preenchidas. Isso não prova validade dos tokens existentes. O Compose usa `environment` explícito e não repassa esses campos ausentes; adicionar apenas ao arquivo privado não basta.
 
 O inventário observou uma Evolution associada ao Hub legado. Esse recurso não foi consultado internamente, iniciado, parado ou adotado como dependência do LeadsHug. Sua imagem não seleciona versão para a nova instância própria. Nenhum provider continua classificado healthy; somente a disponibilidade do Engine foi comprovada.
+
+## Versão proposta do provider local
+
+Registry consultado em leitura confirmou `evoapicloud/evolution-api:v2.3.7@sha256:1bd8afc4a6cf48822e6cf02469aeae7bd35a12a6b616eacd1291926307f4d339`. A proposta cria instância/DB/cache próprios no overlay local; não presume compatibilidade ou saúde antes de startup/prova. Origem HTTPS única será declarada pelo operador para SDK/callback; não há domínio escolhido ou túnel aberto nesta sessão.
