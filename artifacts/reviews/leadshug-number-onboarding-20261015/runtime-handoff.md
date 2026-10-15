@@ -36,6 +36,8 @@ Wire the final API configuration, not an independently invented env contract. Cu
 
 ## Validation runner
 
+Post-cp7 source-view boundary: parent Linux workspaces solved Nest's removal of its dist directory without changing compiler configuration or copying a checkout. Before browser freshness, add missing read-only binds for the four tracked public inputs: API `docker/entrypoint.sh`; Web `Dockerfile`, `docker/40-config-js.sh`, and `nginx/default.conf.template`. API `.local-files/` is tracked operational payload data, not source; root's earlier `.gitkeep` assumption was incorrect. Do not mount, inspect, hash, copy, remove or reconcile that data. The browser source diff must use explicit public-source pathspecs before any binary diff, exclude `.local-files/`, and declare that exclusion without claiming those files were deleted on the principal checkout. The public source manifest must match the actual bound inputs. No browser globalSetup has run with this incomplete view.
+
 The source-owned runner must use Node 22/PostgreSQL 16, explicit disposable database ownership and serial destructive suites. Include migration deploy/status, API lint/build/unit/E2E, Web build/unit and the declared Playwright projects. Browser fixtures use the real API/session/database; only the external SDK/provider port may be a test double. Preserve existing timeline behavior.
 
 Before browser workers, record branch/base SHA plus dirty-source hashes, built asset hashes, runtime target and served asset hash comparison. Do not accept a stale container/bundle. Capture meaningful test output and exact commands, without `.env`, session cookies, QR/code/PIN/token or private key values. A successful aggregate suite does not replace the REG-SEC-01..13 behavior matrix.
