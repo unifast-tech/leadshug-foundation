@@ -1,0 +1,42 @@
+{
+  "schema_version": "subagent-review-merge-v2",
+  "artifact_kind": "subagent_review_merge",
+  "authoritative": false,
+  "edit_policy": "derived_merge_packet",
+  "dispatch_path": "/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/artifacts/tmp/inbox-timeline-execution/delivery-tqa-resolution-dispatch.json",
+  "review_kind": "test_quality_audit",
+  "review_count": 1,
+  "reviewer_labels": [
+    "delivery-tqa-resolution-native-no-context"
+  ],
+  "highest_finding_severity": "medium",
+  "axis_summary": {
+    "performance": "mixed",
+    "elegance": "acceptable",
+    "structural_soundness": "acceptable",
+    "operational_fit": "acceptable"
+  },
+  "recommended_paths": [
+    "Repair only the reconnect test sequencing; no product redesign or renewed approval is warranted. Rerun the targeted opening and empty scenarios, the full project-owned Web unit/browser suite, and the required FRC repetitions against a fresh manifest and served-bundle attestation. Preserve the unchanged API, EPS, BCI, and RLS evidence while source identity remains established. Then request a bounded TQA resolution review; do not mark the delivery review gates complete until this remaining evidence gap is closed."
+  ],
+  "exact_next_step": "Record reviewer resolutions in the governing TODO using the machine-checkable resolution table or equivalent gate ledger, then extract the derived resolution packet and decide whether another bounded review pass is still required.",
+  "findings": [
+    {
+      "finding_id": "F-1BACEEF7",
+      "severity": "medium",
+      "title": "[P2] Held-opening reconnect coverage does not isolate the reconnect callback as the recovery trigger",
+      "rationale": "The revision5 scenario starts the held opening before it proves that the initial socket's authenticated connection/onopen has completed; it waits only for sockets.length===1 after opening is already pending. Therefore the first onopen can occur while threadAtual is null and increment invalidacaoAbertura. Concrete counterexample: a regression suppresses the callback only on a subsequent reconnect, while the first connection opens during the held request. The test still observes a second authenticated server frame, then recovery after release caused by the first opening callback, so its read-neutral request and ID assertions pass. This proves that a reconnect coexisted with recovery, but not that the reconnect-onopen caused recovery in the required opening-generation state. This is the remaining unresolved ARCH-DEL-03 evidence gap; it does not reopen the resolved implementation finding.",
+      "suggested_action": "A (recommended): before selecting the conversation, require the first authenticated socket frame so its onopen has run while no conversation is opening. Then hold the actual initial GET, persist the silent DB growth, close that established native socket, require the second authenticated frame, and only then release the response; retain the no-event/no-poll, read-neutral no-antes, full-ID, and unread assertions. Add a focused negative control that suppresses only the reconnect callback and must fail. B: use equivalent real-socket instrumentation that records the callback phase without replacing transport behavior. C: retain the current sequencing, which leaves reconnect-specific routing regressions able to pass.",
+      "reviewer_labels": [
+        "delivery-tqa-resolution-native-no-context"
+      ],
+      "source_finding_ids": [
+        "ARCH-DEL-03-EVID"
+      ],
+      "category": "tests",
+      "formalizable_hint": "yes",
+      "candidate_rule_level": "project",
+      "candidate_rule_id": "timeline-opening-reconnect-must-trigger-recovery"
+    }
+  ]
+}

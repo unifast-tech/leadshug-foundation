@@ -1,0 +1,136 @@
+{
+  "schema_version": "subagent-review-dispatch-v1",
+  "artifact_kind": "subagent_review_dispatch",
+  "authoritative": false,
+  "edit_policy": "derived_dispatch_packet",
+  "review_kind": "architecture_adherence",
+  "bounded_package_path": "foundation_documentation/artifacts/tmp/inbox-timeline-execution/delivery-adherence-resolution-self-contained-package.md",
+  "reviewer_count": 1,
+  "no_context_required": true,
+  "required_axes": [
+    "adherence",
+    "structural_soundness",
+    "operational_fit",
+    "performance",
+    "elegance"
+  ],
+  "focus_points": [
+    "Compare the delivered bounded package against the frozen Architecture Change Governance contract and Decision Baseline.",
+    "Identify any implementation path, temporary exception, or missing protection harness that diverges from the approved target steady-state.",
+    "Do not redesign the approved architecture unless the delivered evidence exposes a material defect or an approval-breaking divergence.",
+    "For each material finding, add category and formalizable-hint when you can judge them honestly.",
+    "When assessing design, seek the simplest faithful Clean Code/SOLID design for the approved intent. Do not invent future-facing work or erase explicit TODO intent. Planning review may challenge proposed intent; delivery review must preserve approved intent or return for renewed approval."
+  ],
+  "result_contract_fields": [
+    "overall_assessment",
+    "recommended_path",
+    "performance_position",
+    "elegance_position",
+    "structural_soundness_position",
+    "operational_fit_position",
+    "findings[].finding_id (optional)",
+    "findings[].category (optional)",
+    "findings[].formalizable_hint (optional)",
+    "findings[].candidate_rule_level (optional)",
+    "findings[]"
+  ],
+  "todo_path": "foundation_documentation/todos/active/features/TODO-leadshug-inbox-message-timeline-pagination.md",
+  "historical_disposition_policy": [
+    "Resolved findings are historical context only. Do not reopen them unless the current bounded package materially changes the same locus/behavior or fresh evidence shows regression.",
+    "Challenged findings stay closed unless the current bounded package materially changes the same locus/behavior or the prior rationale is objectively insufficient.",
+    "Deferred findings must cite the recorded follow-up/waiver path first. Re-raise them only when the current bounded package changes the same locus or closure now depends on that deferred risk.",
+    "Unresolved findings remain valid to re-raise until they are fixed, challenged, or formally deferred with authority."
+  ],
+  "historical_dispositions": [
+    {
+      "source_kind": "promotion_routing",
+      "finding_id": "ARCH-TL-01..03",
+      "carry_forward_class": "resolved",
+      "source_disposition": "classification=release-blocker; routing=fix in current TODO; status=fixed",
+      "summary": "Contrato de leitura/recupera\u00e7\u00e3o pertence \u00e0 mesma story",
+      "reference": "architecture-review.json e Proposed API Contract, a verificar na cr\u00edtica"
+    },
+    {
+      "source_kind": "promotion_routing",
+      "finding_id": "ARCH-TL-04..06",
+      "carry_forward_class": "resolved",
+      "source_disposition": "classification=release-blocker; routing=fix in current TODO; status=fixed",
+      "summary": "Estado/consulta/provas necess\u00e1rios ao mesmo contrato",
+      "reference": "architecture-review.json e testes planejados, a verificar na cr\u00edtica"
+    },
+    {
+      "source_kind": "promotion_routing",
+      "finding_id": "ARCH-DEL-01",
+      "carry_forward_class": "resolved",
+      "source_disposition": "classification=release-blocker; routing=fix in current TODO; status=fixed",
+      "summary": "Budget3 por rodada deve abranger coalescing; evento n\u00e3o renova automaticamente consultas",
+      "reference": "delivery-adherence-delta.json confirmou resolu\u00e7\u00e3o na fonte revision3; Web34/FRC3, incluindo negativos/restaura\u00e7\u00e3o e notifica\u00e7\u00f5es/retomada."
+    },
+    {
+      "source_kind": "promotion_routing",
+      "finding_id": "ARCH-DEL-02",
+      "carry_forward_class": "resolved",
+      "source_disposition": "classification=release-blocker; routing=fix in current TODO; status=fixed",
+      "summary": "Thread inicialmente vazia e notifica\u00e7\u00e3o entre rodadas devem conservar restart pendente at\u00e9 fetch recente",
+      "reference": "delivery-adherence-delta.json confirmou resolu\u00e7\u00e3o na fonte revision3; Web34/FRC3, incluindo negativos/restaura\u00e7\u00e3o e notifica\u00e7\u00f5es/retomada."
+    },
+    {
+      "source_kind": "promotion_routing",
+      "finding_id": "ARCH-DEL-03",
+      "carry_forward_class": "resolved",
+      "source_disposition": "classification=release-blocker; routing=fix in current TODO; status=fixed",
+      "summary": "Notifica\u00e7\u00e3o durante abertura pertence \u00e0 gera\u00e7\u00e3o selecionada e deve recuperar sem esperar outroevento/poll",
+      "reference": "delivery-adherence-delta.json confirmou resolu\u00e7\u00e3o na fonte revision3; Web34/FRC3, incluindo negativos/restaura\u00e7\u00e3o e notifica\u00e7\u00f5es/retomada."
+    },
+    {
+      "source_kind": "promotion_routing",
+      "finding_id": "TQA-TL-01",
+      "carry_forward_class": "unresolved",
+      "source_disposition": "classification=release-blocker; routing=fix with ARCH-DEL-01; status=open",
+      "summary": "Mesmo defeito de budget/single-flight; harness deve contar requests e passagens em voo, n\u00e3o s\u00f3 comparar IDs",
+      "reference": "delivery-tqa-round-1.json; duplicata sem novo escopo"
+    },
+    {
+      "source_kind": "promotion_routing",
+      "finding_id": "TQA-TL-02",
+      "carry_forward_class": "unresolved",
+      "source_disposition": "classification=release-blocker; routing=fix in current TODO; status=open",
+      "summary": "Prova de gera\u00e7\u00e3o exige draft/erro/scroll/metadados do destino em trocas conversa/BU com sucesso/falha/backfill antigos",
+      "reference": "delivery-tqa-round-1.json; novos asserts reais dentro de VAL-05"
+    },
+    {
+      "source_kind": "promotion_routing",
+      "finding_id": "TQA-EVID-03",
+      "carry_forward_class": "unresolved",
+      "source_disposition": "classification=release-blocker; routing=retain exact CI leaf outputs now; status=open",
+      "summary": "Lacuna de evid\u00eancia do claim CI atual; repetir somente generate/lint/build/unit API com logs imut\u00e1veis antes do browser final",
+      "reference": "delivery-tqa-round-1.json; VAL-02, sem repetir API224 unchanged"
+    },
+    {
+      "source_kind": "promotion_routing",
+      "finding_id": "ARCH-DEL-01-ERR",
+      "carry_forward_class": "resolved",
+      "source_disposition": "classification=release-blocker; routing=fix with ARCH-DEL-01; status=fixed",
+      "summary": "Variante objetiva: saldo era debitado ap\u00f3s await; falha+dirty n\u00e3o debitava e permitia mais de3tentativas. Consumir no despacho e provar3aborts+eventos sem4aautom\u00e1tica; erro hist\u00f3rico com dirty deve conservar restart recente, n\u00e3o consumir a notifica\u00e7\u00e3o ao retomar cursor antigo",
+      "reference": "delivery-adherence-delta.json confirmou resolu\u00e7\u00e3o na fonte revision3; Web34/FRC3, incluindo negativos/restaura\u00e7\u00e3o e notifica\u00e7\u00f5es/retomada."
+    },
+    {
+      "source_kind": "promotion_routing",
+      "finding_id": "ARCH-DEL-04",
+      "carry_forward_class": "unresolved",
+      "source_disposition": "classification=release-blocker; routing=fix in current TODO; status=open",
+      "summary": "Retry bem-sucedido deve encerrar alerta do pr\u00f3prio recovery sem apagar erro posterior n\u00e3o relacionado; assert aus\u00eancia no fim dos casos existentes",
+      "reference": "delivery-adherence-delta.json; corre\u00e7\u00e3o faithful HOW, sem nova aprova\u00e7\u00e3o de produto"
+    },
+    {
+      "source_kind": "critique",
+      "finding_id": "ARCH-TL-03",
+      "carry_forward_class": "resolved",
+      "source_disposition": "resolution=Integrated; usefulness=useful; formalizable=yes",
+      "summary": "Piso pendente T conservado entre passagens/dirty/retry e promo\u00e7\u00e3o somente ap\u00f3s cobertura sem evento pendente; cr\u00edtica delta critique-resolution.json confirmou a resolu\u00e7\u00e3o do plano, agora testada no browser.",
+      "reference": "critique:findings_integrated"
+    }
+  ],
+  "goal": "Fresh delivery-adherence-resolution-native: adjudicate ARCH-DEL-04 error ownership fix and current revision4, preserve prior resolved architecture; complete applicable adherence workload and four axes. Separate prior TQA remains live and is not replaced.",
+  "review_result_dispatch_path": "/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/artifacts/tmp/inbox-timeline-execution/delivery-adherence-resolution-dispatch.json"
+}

@@ -1,0 +1,105 @@
+{
+  "policy_schema_version": "pcv-1",
+  "schema_version": "pcv-1",
+  "lane_id": "RLS",
+  "todo_id": "TODO-leadshug-inbox-message-timeline-pagination",
+  "run_id": "rls-read-stage1-20261015",
+  "environment_id": "principal-checkout-linux-node22-postgresql16-disposable",
+  "executor_id": "/root/timeline_executor_resume",
+  "reviewer_id": "delivery-adherence-resolution-native",
+  "recorded_at_utc": "2026-10-15T03:39:44Z",
+  "evidence_type": "one-stage-authenticated-read-load",
+  "sample_profile_id": "RLS-SP-L",
+  "acceptance_rule_id": "RLS-A1",
+  "result_summary": "30/30 reads,5 concurrent×6; p50 23.36ms,p95 64.26ms,max68.5ms; page50,unread7 unchanged,251 messages unchanged,foreign malformed request404. Independently accepted by delivery-adherence-resolution.json; no production SLO claim.",
+  "artifact_payload": {
+    "stage_profile_observed": {
+      "mode": "load",
+      "stages": 1,
+      "concurrency": 5,
+      "batches": 6,
+      "requests": 30,
+      "dataset_messages": 251,
+      "transport": "real authenticated BFF HTTP on disposable test Nest runtime"
+    },
+    "thresholds": {
+      "errors": {
+        "expected": 0,
+        "actual": 0,
+        "passed": true
+      },
+      "response_rows": {
+        "expected": 50,
+        "actual": 50,
+        "passed": true
+      },
+      "has_previous": {
+        "expected": true,
+        "actual": true,
+        "passed": true
+      },
+      "read_neutral": {
+        "expected_unread": 7,
+        "before": 7,
+        "after": 7,
+        "passed": true
+      },
+      "history_unchanged": {
+        "before": 251,
+        "after": 251,
+        "passed": true
+      },
+      "authorization_first": {
+        "expected": 404,
+        "actual": 404,
+        "passed": true
+      },
+      "latency": "measured only; no production SLO threshold authorized"
+    },
+    "metrics_summary": {
+      "runId": "rls-read-stage1-20261015",
+      "sample": {
+        "requests": 30,
+        "concurrency": 5,
+        "batches": 6,
+        "statusCounts": {
+          "200": 30,
+          "errors": 0
+        },
+        "p50Ms": 23.36,
+        "p95Ms": 64.26,
+        "maxMs": 68.5,
+        "messagesPerResponse": 50,
+        "hasPrevious": true
+      },
+      "scope": {
+        "accessibleConversation": "200 x30",
+        "foreignConversationWithMalformedCursor": 404,
+        "unreadBefore": 7,
+        "unreadAfter": 7,
+        "messagesBefore": 251,
+        "messagesAfter": 251
+      },
+      "conclusion": "small disposable one-stage read-neutral sample; no production SLO inferred"
+    },
+    "scope_probe_parameter": "Actual runner sends limite=invalid; raw output key foreignConversationWithMalformedCursor is an imprecise label for malformed query, not a cursor probe. Dedicated API E2E covers actual malformed/foreign cursors.",
+    "threshold_origin": "Fixed stage loops and hard-failing assertions in raw runner before execution; no post-hoc latency acceptance invented.",
+    "raw_artifacts": [
+      {
+        "path": "foundation_documentation/artifacts/reviews/leadshug-inbox-timeline-20261014/evidence/rls-read-sample.log",
+        "sha256": "5b68b1b5f450153c7fa6c36c277aa19d5846860f63ef8124a1eaeb32dd3941fc"
+      },
+      {
+        "path": "foundation_documentation/artifacts/reviews/leadshug-inbox-timeline-20261014/evidence/rls-read-sample.mjs",
+        "sha256": "d59fa9f53ffeb97aec02b32ccf91584868f1e2b1ebcd644278f00881ae3a3321"
+      }
+    ],
+    "residual_risk": "Small warm disposable one-stage sample; no stress, spike, soak, throughput or production capacity certification.",
+    "independent_review": {
+      "reference": "delivery-adherence-resolution.json",
+      "reviewer_id": "delivery-adherence-resolution-native",
+      "assessment": "acceptable within bounded local evidence; API source unchanged"
+    }
+  },
+  "artifact_sha256": "eb0ec62492de2af2d52c5dc40eaa1defc776d9996d62048d554ce890a9991939"
+}

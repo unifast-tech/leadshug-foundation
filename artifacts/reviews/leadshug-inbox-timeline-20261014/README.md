@@ -1,32 +1,26 @@
-# Revisão e prontidão de aprovação da timeline da inbox
+# Histórico paginado da inbox — ST-ATT-01
 
-**Data:** 2026-10-14. Pacote derivado de evidência de planejamento, vinculado ao [TODO](../../../todos/active/features/TODO-leadshug-inbox-message-timeline-pagination.md). O usuário aprovou a implementação em 2026-10-14; os pareceres abaixo comprovam o planejamento, e os resultados de entrega serão acrescentados após execução.
+Implementação aprovada em2026-10-14 e validada localmente em2026-10-15. [TODO governante](../../../todos/active/features/TODO-leadshug-inbox-message-timeline-pagination.md). Estado atual: **Local-Implemented**; aderência, TQA e revisão final aceitas, guardas de entrega go. Commits locais registrados; publicação documental/relocação do TODO em fechamento.
 
-## Pareceres independentes
+A inbox abre as mensagens recentes e oferece todo o histórico por cursor. Atualizações preservam mensagens, leitura, posição, rascunho, contexto e metadados; recuperação pendente tem limite de consultas e continuação explícita. Contrato owner: [inbox-and-conversations](../../../modules/inbox-and-conversations.md).
 
-- [Arquitetura](architecture-review.json): seis achados sobre leitura, recuperação, empates, concorrência, custo de query e testes, integrados no contrato.
-- [Crítica inicial](critique-round-1.json): reabriu ARCH-TL-03 por avanço prematuro do piso na passagem coalescida.
-- [Verificação da resolução](critique-resolution.json): conservado o piso pendente, a contraprova foi resolvida; findings vazio e cinco premissas corroboradas.
-
-## Verificadores
-
-| Controle | Resultado | Evidência |
+| Prova local | Resultado | Evidência |
 | --- | --- | --- |
-| Assumption code coherence | go; cinco premissas | [Relatório](assumption-coherence.json) |
-| Review scope drift | go; 23 seções, zero mudanças | [Relatório](scope-drift.json) |
-| Validação estrutural TODO | PASS | [Relatório](structural-validation.json) |
-| Authority preflight | preflight-go; execução não autorizada | [Relatório](authority-preflight.json) |
-| Piso de auditoria | go; crítica e reviews de entrega exigidos | [Relatório](audit-floor.json) |
-| Lifecycle Foundation | exit 0 | validate_foundation_lifecycle.py --root foundation_documentation |
+| API leafs CI |generate/lint/build exit0,115unit | [stdout](evidence/api-ci-light-revision2-20261015.log) |
+| API PostgreSQL completo |224/224 | [raw](evidence/api-e2e-authority.log) |
+| Web unit + browser completo |20/20unit,36/36browser | [raw final6](evidence/web-authority-revision6-final-full-20261015.log) |
+| FRC repetido |3/3 | [raw final6](evidence/web-authority-revision6-final-frc3-20261015.log) |
+| Fonte/runtime |16hashes conferidos; servido==dist | [attestation full](evidence/attestation-browser-web-authority-revision6-final-full-20261015.json), [FRC](evidence/attestation-browser-web-authority-revision6-final-frc3-20261015.json) |
+| SQL/concorrência/carga limitada | planos e invariantes registrados | [EPS](pcv-eps.json), [BCI](pcv-bci.json), [RLS](pcv-rls.json), [FRC](pcv-frc.json) |
 
-Baseline técnica final revisada: `649372fbe81f6cccc0f8902b52fe32e2ecfc061a`, publicada em Foundation main. Mudanças posteriores de status/evidência não alteram o contrato congelado. [Pacote de revisão](package.md) registra diagnóstico, fontes e resolução.
+[Execução e limites](execution-evidence.md) registra comandos, topology isolada, resultados, contraprovas restauradas e gerações históricas. [Resumo final do executor](evidence/executor-revision6-summary.json) liga os fontes às coletas. Testes source-owned usam Nest/session/grants/PostgreSQL/WebSocket reais e dublês apenas nas portas externas.
 
-## Limite da conclusão
+[Round1 de aderência](delivery-adherence-round-1.json) e [delta](delivery-adherence-delta.json) produziram correções do recovery/alerta; a [resolução independente](delivery-adherence-resolution.json) terminou sem novos achados e aceitou o produto. [TQA inicial](delivery-tqa-round-1.json) e [delta](delivery-tqa-delta.json) exigiram provas mais discriminantes; vazio e gatilho reconnect isolado do primeiroonopen aceitos na [TQA causal](delivery-tqa-causal-resolution.json), com negativo reconnect-only discriminante. [Final review](delivery-final.json) aceito sem achados materiais pendentes. Todos os pareceres são internos no-context, com raw/schema/merge; nenhum waiver.
 
-O contrato está revisado e estruturalmente pronto para APROVADO. Código, migração eventual de índice, prontidão efetiva do runner, custo real de SQL, suites PostgreSQL/browser e reviews de entrega serão comprovados na execução. Não houve implementação, teste de aplicação, deploy ou mensagem real externa nesta revisão.
+[Admissão de testes](test-surface-admission.md), [dívida de verificação](verification-debt.md) e [observações](implementation-observations.md) distinguem escopo, evidência e limites. Os pacotes imutáveis em evidence/ preservam o material exato entregue aos revisores.
 
-## Execução autorizada
+O closeout é local-only em feature/inbox-timeline-pagination para API/Web, com documentação Foundation main. Transferência, estados e anexos permanecem em stories próprias; deploy, promoção remota de produto e Production-Ready não fazem parte desta entrega.
 
-O authority guard normal retornou `go` com `execution_authority_granted=true` após APROVADO. O contrato foi consolidado em [inbox-and-conversations](../../../modules/inbox-and-conversations.md), com estado Documented até prova de execução. API e Web usam a branch local `feature/inbox-timeline-pagination` no checkout principal, com executor único.
+Planejamento histórico: baseline congelada649372fbe81f6cccc0f8902b52fe32e2ecfc061a; [arquitetura](architecture-review.json), [crítica](critique-round-1.json), [resolução](critique-resolution.json), [premissas](assumption-coherence.json), [scope drift](scope-drift.json) e [pacote](package.md). O preflight de planejamento antecede APROVADO e não representa a autoridade atual de execução.
 
-[Observações preliminares de implementação](implementation-observations.md) registram os ajustes solicitados durante inspeção; não constituem revisão independente nem entrega. Suites completas, PCV, aderência, TQA e final review permanecem em execução/pendentes e só serão marcados após evidência real.
+Commits locais: API`ae6a9662c29b77276351aa9de653a47276372246`; Web`4e56f6c1f4515b918d05b8c87e890d42e8542c56`, ambos feature/inbox-timeline-pagination. [Bridge16blobs](evidence/committed-source-attestation.json) liga commits aos snapshots de validação sem reescrevê-los. Guardas finais: [authority](evidence/authority-final.json), [completion](evidence/completion-final.json), [closeout](evidence/closeout-final.json).

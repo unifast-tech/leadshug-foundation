@@ -1,0 +1,42 @@
+{
+  "schema_version": "subagent-review-merge-v2",
+  "artifact_kind": "subagent_review_merge",
+  "authoritative": false,
+  "edit_policy": "derived_merge_packet",
+  "dispatch_path": "/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/artifacts/tmp/inbox-timeline-execution/delivery-adherence-delta-dispatch.json",
+  "review_kind": "architecture_adherence",
+  "review_count": 1,
+  "reviewer_labels": [
+    "delivery-adherence-delta-native"
+  ],
+  "highest_finding_severity": "medium",
+  "axis_summary": {
+    "performance": "acceptable",
+    "elegance": "acceptable",
+    "structural_soundness": "acceptable",
+    "operational_fit": "mixed"
+  },
+  "recommended_paths": [
+    "Keep the frozen architecture and accept the bounded resolutions of ARCH-DEL-01, ARCH-DEL-02, ARCH-DEL-03 and ARCH-DEL-01-ERR, including the dirty historical-error restart variant. Record the supporting resolutions of TQA-TL-01, TQA-TL-02 and TQA-EVID-03 for adjudication by the separate TQA gate. Resolve ARCH-DEL-04 in this TODO by completing the recovery-error lifecycle and adding the missing successful-retry alert assertion to the existing real-network regression. Revalidate the affected Web source with the project-owned unit/browser commands and required refreshed FRC evidence, binding the resulting logs and pre-worker attestations to the final source. Retain API224, API CI leaf output and EPS/BCI/RLS evidence while their source identity remains unchanged. Update the finding ledger and adherence/PCV records after independent resolution, then complete the remaining delivery gates and canonical consolidation before local closeout. Preserve the documented deep-scan and local-load limits; this review grants no deployment, remote CI or production-readiness claim."
+  ],
+  "exact_next_step": "Record reviewer resolutions in the governing TODO using the machine-checkable resolution table or equivalent gate ledger, then extract the derived resolution packet and decide whether another bounded review pass is still required.",
+  "findings": [
+    {
+      "finding_id": "F-8C2EDBCC",
+      "severity": "medium",
+      "title": "[P2] Successful recovery leaves its failure alert visible",
+      "rationale": "web-app/src/telas/Inbox.tsx:179 sets the recovery failure alert, but neither executarRecuperacao's successful completion nor iniciarRodadaAutorizada at :223 clears it. The new regression at web-app/e2e/timeline.spec.ts:299 provides a concrete counterexample: abort three recovery responses, observe the error, then use Continue until complete ordered IDs are recovered and the pending banner disappears. The implementation still renders 'N\u00e3o foi poss\u00edvel atualizar o hist\u00f3rico. Tente novamente.' after completion, while the recovery retry button has disappeared. Only another operation that independently clears erro removes this obsolete failure. The regression asserts the initial alert and final IDs/unread, but omits the final absence of that alert. This is exposed by the current recovery-error locus and newly delivered retry evidence; it does not reopen the resolved generation-protection finding. The frozen contract requires correct, visible and operable recovery/failure/retry states, so this remains a focused delivery correction in the current TODO.",
+      "suggested_action": "A, recommended: clear the error owned by the current recovery when that recovery completes successfully, preserving generation checks and any newer unrelated error. B: clear the recovery error when an authorized retry starts and restore it if that retry fails. C: retain the obsolete alert, leaving the recovery-state defect unresolved. Extend the existing real-network regression to require both pending-state removal and recovery-alert removal after successful coverage. Refresh affected Web validation and source-bound evidence; no architecture redesign or renewed product approval is needed.",
+      "reviewer_labels": [
+        "delivery-adherence-delta-native"
+      ],
+      "source_finding_ids": [
+        "ARCH-DEL-04"
+      ],
+      "category": "adherence",
+      "formalizable_hint": "yes",
+      "candidate_rule_level": "project",
+      "candidate_rule_id": "timeline-recovery-error-lifecycle"
+    }
+  ]
+}

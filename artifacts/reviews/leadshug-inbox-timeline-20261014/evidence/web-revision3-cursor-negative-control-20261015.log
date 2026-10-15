@@ -1,0 +1,69 @@
+v22.23.3
+
+> @leadshug/web@0.1.0 build
+> tsc -b && vite build
+
+vite v5.4.21 building for production...
+transforming...
+✓ 55 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                   0.69 kB │ gzip:  0.44 kB
+dist/assets/index-wuzy3kMN.css    8.32 kB │ gzip:  2.39 kB
+dist/assets/index-3k5pQ0yc.js   223.99 kB │ gzip: 69.69 kB
+✓ built in 1.42s
+npm notice
+npm notice New major version of npm available! 11.16.0 -> 12.2.0
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.0
+npm notice To update run: npm install -g npm@12.2.0
+npm notice
+[WebServer] timeline fixtures listening on 127.0.0.1:3101
+[WebServer] 
+[WebServer] > @leadshug/api@0.1.0 build
+[WebServer] > nest build
+[WebServer] 
+[WebServer] timeline test API listening on 3100; database leadshug_timeline_20261014
+[WebServer] 
+[WebServer] > @leadshug/web@0.1.0 preview
+[WebServer] > vite preview --host 127.0.0.1 --port 4173 --strictPort
+[WebServer] 
+[WebServer]   ➜  Local:   http://127.0.0.1:4173/
+
+Running 1 test using 1 worker
+
+  ✘  1 e2e/timeline.spec.ts:363:3 › timeline da inbox com backend e PostgreSQL reais › erro no cursor histórico reinicia pela cabeça após evento novo (6.3s)
+
+
+  1) e2e/timeline.spec.ts:363:3 › timeline da inbox com backend e PostgreSQL reais › erro no cursor histórico reinicia pela cabeça após evento novo 
+
+    Error: expect(received).toBe(expected) // Object.is equality
+
+    Expected: 2
+    Received: 1
+
+    Call Log:
+    - Timeout 5000ms exceeded while waiting on the predicate
+
+      411 |       await expect(page.getByRole('alert')).toHaveText('Não foi possível atualizar o histórico. Tente novamente.');
+      412 |       await expect(page.getByText('Atualização pendente. O histórico pode ter uma lacuna.')).toBeVisible();
+    > 413 |       await expect.poll(() => requestsRecentes).toBe(2);
+          |                                                 ^
+      414 |       await expect.poll(() => inFlight).toBe(0);
+      415 |       expect(requestsHistoricos).toBe(1);
+      416 |       expect(maxInFlight).toBe(1);
+        at /workspace/web-app/e2e/timeline.spec.ts:413:49
+
+    Error Context: test-results/timeline-timeline-da-inbox-74e82-ela-cabeça-após-evento-novo/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/timeline-timeline-da-inbox-74e82-ela-cabeça-após-evento-novo/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/timeline-timeline-da-inbox-74e82-ela-cabeça-após-evento-novo/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  1 failed
+    e2e/timeline.spec.ts:363:3 › timeline da inbox com backend e PostgreSQL reais › erro no cursor histórico reinicia pela cabeça após evento novo 
+
+EXIT_CODE=1 RUN_ID=web-revision3-cursor-negative-control-20261015 MUTATION=removed-dirty-cursor-restart

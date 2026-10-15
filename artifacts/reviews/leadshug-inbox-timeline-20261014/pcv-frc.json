@@ -1,0 +1,151 @@
+{
+  "policy_schema_version": "pcv-1",
+  "schema_version": "pcv-1",
+  "lane_id": "FRC",
+  "todo_id": "TODO-leadshug-inbox-message-timeline-pagination",
+  "run_id": "web-authority-revision6-final-frc3-20261015",
+  "environment_id": "principal-checkout-linux-node22-postgresql16-chromium-disposable",
+  "executor_id": "/root/timeline_executor_resume",
+  "reviewer_id": "delivery-tqa-causal-native-no-context",
+  "recorded_at_utc": "2026-10-15T05:01:37Z",
+  "evidence_type": "source-owned-playwright-real-backend-races",
+  "sample_profile_id": "FRC-SP-M",
+  "acceptance_rule_id": "FRC-A1",
+  "result_summary": "Web20unit/36browser and FRC3/3 passed on identical final source/build; scheduling, notification, error ownership and destination races independently accepted by delivery-tqa-causal-resolution.json. Local evidence, no production claim.",
+  "artifact_payload": {
+    "concurrency_policy": "serialize",
+    "policy_by_action": [
+      {
+        "action": "recovery",
+        "policy": "serialize",
+        "guard": "single-flight per generation,coalesce dirty,next pass retains pendingT,max3pagequeries per round"
+      },
+      {
+        "action": "context switch",
+        "policy": "cancel previous",
+        "guard": "logical cancellation by BU/conversation/generation on responses/errors/draft/scroll"
+      },
+      {
+        "action": "backfill/send",
+        "policy": "drop duplicate",
+        "guard": "in-flight flags and current-generation draft ref"
+      },
+      {
+        "action": "metadata",
+        "policy": "last-write-wins",
+        "guard": "version-controlled current response; historical pages never overwrite metadata"
+      }
+    ],
+    "burst_profile_observed": {
+      "triggers_per_repetition": 10,
+      "repetitions": 3,
+      "cases_passed": 3,
+      "pushes_asserted_per_repetition": 12,
+      "pushes_note": "one initial head,10 real incoming webhooks during blocked traversal,one new event after third query;12 frames/unread; only3 automatic requests and max1 in flight before explicit Continue",
+      "full_suite": {
+        "cases_passed": 36,
+        "duration_observed": "1.0m"
+      }
+    },
+    "runner_or_manual_path": "web-app/e2e/timeline.spec.ts; npm run test:tela; npx playwright test e2e/timeline.spec.ts --grep=\"preserva o piso T\" --repeat-each=3",
+    "race_matrix": [
+      {
+        "surface": "history",
+        "case": "251 IDs; prepend same visible anchor offset delta<2px, including arrival while delayed actual response"
+      },
+      {
+        "surface": "recovery",
+        "case": "H>T,late lower UUID inT behind walked cursor,dirty restart retains originalT; first authorized round exactly3requests/max1inflight, third-request event cannot mintbudget; full DB/UI ID equality and unread12 after Continue"
+      },
+      {
+        "surface": "reconnect",
+        "case": "real network disconnect and burst130 while offline; recover without subsequent message event"
+      },
+      {
+        "surface": "poll",
+        "case": "60s clock advancement resumes pending>3page recovery without more events or Continue click,full382 IDs"
+      },
+      {
+        "surface": "send/draft/context",
+        "case": "actual delayed POST, persisted author and typednewdraft preservation; full sixsubcase destination protection described below"
+      },
+      {
+        "surface": "metadata",
+        "case": "close wins over delayed historical response; no stale status restoration"
+      },
+      {
+        "surface": "states",
+        "case": "loading,empty,end,error/retry and grant-loss404; no fabricated BFF payloads"
+      },
+      {
+        "surface": "budget/error",
+        "case": "3 aborted actual GETs with real events consume3 attempts, no4th beforeContinue; negative control post-await debit fails3vs5; canonical restoration and full suite green"
+      },
+      {
+        "surface": "historical error/restart",
+        "case": "actual older page aborted while real new head arrives; recent-query restart required without another event, full tied-group IDs/unread after authorized continuations; negative control removedguard fails2vs1 recent reads"
+      },
+      {
+        "surface": "opening",
+        "case": "real initial GET snapshot held, real inbound frame during opening, read-neutral recovery without later trigger; unread preserved"
+      },
+      {
+        "surface": "empty paused recovery",
+        "case": "initiallyempty>3pages plus between-round inbound, retains recent restart through full IDs/currentmetadata"
+      },
+      {
+        "surface": "recovery error lifecycle",
+        "case": "successful coverage clears the current recovery error; newer unrelated send error survives; generation/version ownership and real browser negative-path assertions"
+      },
+      {
+        "surface": "empty resume proof",
+        "case": "past-timestamp backlog and real newer inbound; first authorized resume must be recent/readneutral/noantes, fullIDs/unread and current metadata; old-empty-cursor mutation fails and exact bytes restore"
+      },
+      {
+        "surface": "opening reconnect proof",
+        "case": "first authenticated real socket frame occurs before selecting; then actual GET held, silent DB growth, native socket close and second authenticated frame before release; reconnect-only callback mutation fails with exact restoration; no later event/poll, IDs/unread verified"
+      },
+      {
+        "surface": "context destination",
+        "case": "BOTH BU and conversation, old send success/network failure and backfill; destination selection/draft/error/IDs/metadata/scroll compared after release"
+      }
+    ],
+    "runtime_freshness": {
+      "captured_before_workers": "2026-10-15T05:00:22.318Z",
+      "served_equals_dist_sha256": "7cf5c91378614d35eabf83b7ba2f29aa33b339aaed8ad4c96f960f4037e170e2",
+      "full_attestation_captured_at": "2026-10-15T04:59:11.580Z",
+      "source_manifest_matches_full_suite": true,
+      "root_verified_all16_current_source_hashes": true
+    },
+    "raw_artifacts": [
+      {
+        "path": "foundation_documentation/artifacts/reviews/leadshug-inbox-timeline-20261014/evidence/web-authority-revision6-final-full-20261015.log",
+        "sha256": "b0ea73876b3b9156eac85bbff5358c0101935017443ebf7e170263478419eab1"
+      },
+      {
+        "path": "foundation_documentation/artifacts/reviews/leadshug-inbox-timeline-20261014/evidence/web-authority-revision6-final-frc3-20261015.log",
+        "sha256": "ddb8ecfc4b4008688c92ea85abb9734ffb548085669e9934dfda90925913900c"
+      },
+      {
+        "path": "foundation_documentation/artifacts/reviews/leadshug-inbox-timeline-20261014/evidence/attestation-browser-web-authority-revision6-final-full-20261015.json",
+        "sha256": "d65dd1e089196fe83cdf2b3b4fc47d5208af28a55a89da45793b11013edf7270"
+      },
+      {
+        "path": "foundation_documentation/artifacts/reviews/leadshug-inbox-timeline-20261014/evidence/attestation-browser-web-authority-revision6-final-frc3-20261015.json",
+        "sha256": "e63c9fe324edd2a390051aad88bd0d494ac71ec2856a2b2a756af12aae5731ae"
+      },
+      {
+        "path": "foundation_documentation/artifacts/reviews/leadshug-inbox-timeline-20261014/evidence/executor-revision6-summary.json",
+        "sha256": "472ba112563d191710792d41fdca8a145d4c10aebf1e0037b90f0c24628130e2"
+      }
+    ],
+    "residual_risk": "Bounded active-conversation memory grows as user loads history; no cache of other conversations. Backdated imports earlier thanT group and production traffic/provider transport are outside this approved slice.",
+    "independent_review": {
+      "reference": "delivery-tqa-causal-resolution.json",
+      "reviewer_id": "delivery-tqa-causal-native-no-context",
+      "recorded_at_utc": "2026-10-15T05:05:29.176106+00:00",
+      "assessment": "full applicable test-quality resolution accepted without findings"
+    }
+  },
+  "artifact_sha256": "3148b1ccf77cc0d4f1f980b74077133878a735e20115c941c92313fecb55823c"
+}

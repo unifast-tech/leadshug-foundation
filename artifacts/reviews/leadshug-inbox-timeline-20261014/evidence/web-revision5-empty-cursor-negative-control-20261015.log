@@ -1,0 +1,69 @@
+
+> @leadshug/web@0.1.0 build
+> tsc -b && vite build
+
+vite v5.4.21 building for production...
+transforming...
+✓ 55 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                   0.69 kB │ gzip:  0.44 kB
+dist/assets/index-wuzy3kMN.css    8.32 kB │ gzip:  2.39 kB
+dist/assets/index-CRdJe0yK.js   224.40 kB │ gzip: 69.80 kB
+✓ built in 1.29s
+npm notice
+npm notice New major version of npm available! 11.16.0 -> 12.2.0
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.0
+npm notice To update run: npm install -g npm@12.2.0
+npm notice
+[WebServer] timeline fixtures listening on 127.0.0.1:3101
+[WebServer] 
+[WebServer] > @leadshug/api@0.1.0 build
+[WebServer] > nest build
+[WebServer] 
+[WebServer] timeline test API listening on 3100; database leadshug_timeline_20261014
+[WebServer] 
+[WebServer] > @leadshug/web@0.1.0 preview
+[WebServer] > vite preview --host 127.0.0.1 --port 4173 --strictPort
+[WebServer] 
+[WebServer]   ➜  Local:   http://127.0.0.1:4173/
+
+Running 1 test using 1 worker
+
+  ✘  1 e2e/timeline.spec.ts:262:3 › timeline da inbox com backend e PostgreSQL reais › retoma thread vazia após evento entre rodadas e inclui toda a cabeça sem reler (1.6s)
+
+
+  1) e2e/timeline.spec.ts:262:3 › timeline da inbox com backend e PostgreSQL reais › retoma thread vazia após evento entre rodadas e inclui toda a cabeça sem reler 
+
+    Error: expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 1
+    + Received  + 1
+
+      Object {
+        "marcarLida": "false",
+    -   "temCursor": false,
+    +   "temCursor": true,
+      }
+
+      299 |     await page.getByRole('button', { name: 'Continuar atualização' }).click();
+      300 |     await expect.poll(() => requisicoesRetomada.length).toBeGreaterThan(0);
+    > 301 |     expect(requisicoesRetomada[0]).toEqual({ marcarLida: 'false', temCursor: false });
+          |                                    ^
+      302 |     for (let i = 0; i < 5 && await page.getByRole('button', { name: 'Continuar atualização' }).count(); i += 1) {
+      303 |       if (i > 0) await page.getByRole('button', { name: 'Continuar atualização' }).click();
+      304 |       await page.waitForTimeout(100);
+        at /workspace/web-app/e2e/timeline.spec.ts:301:36
+
+    Error Context: test-results/timeline-timeline-da-inbox-41a5a-lui-toda-a-cabeça-sem-reler/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/timeline-timeline-da-inbox-41a5a-lui-toda-a-cabeça-sem-reler/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/timeline-timeline-da-inbox-41a5a-lui-toda-a-cabeça-sem-reler/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  1 failed
+    e2e/timeline.spec.ts:262:3 › timeline da inbox com backend e PostgreSQL reais › retoma thread vazia após evento entre rodadas e inclui toda a cabeça sem reler 

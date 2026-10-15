@@ -1,0 +1,221 @@
+{
+  "schema_version": "leadshug-rule-spirit-triage-v1",
+  "status": "revision5 final source supporting triage; independent TQA resolution pending",
+  "repository": "web-app",
+  "raw_observations": 42,
+  "deduplicated_locations": 21,
+  "allowlist": "none",
+  "raw_scan_sha256": "7e44d9863746b7afa4b845940440b1d4c585fbfe8f12d73b544e38e4b5c3110c",
+  "findings": [
+    {
+      "location": "playwright.config.ts:5",
+      "evidence": "const API = `http://127.0.0.1:${PORTA_DA_API}`; ",
+      "scanner_keys": [
+        "d0ac253aa5ff151c",
+        "d8e95984315f8f6b"
+      ],
+      "proposed_classification": "by-design/no-action",
+      "rationale": "Owned test-only loopback target or reserved .test identity; no operational target/secret; no suppression."
+    },
+    {
+      "location": "playwright.config.ts:26",
+      "evidence": "    baseURL: 'http://127.0.0.1:4173', ",
+      "scanner_keys": [
+        "2a29ea59c22e2638",
+        "61883216dd8dc12f"
+      ],
+      "proposed_classification": "by-design/no-action",
+      "rationale": "Owned test-only loopback target or reserved .test identity; no operational target/secret; no suppression."
+    },
+    {
+      "location": "playwright.config.ts:32",
+      "evidence": "      url: 'http://127.0.0.1:3101/health', ",
+      "scanner_keys": [
+        "59d1ac46cac22135",
+        "405b3e41f6cda288"
+      ],
+      "proposed_classification": "by-design/no-action",
+      "rationale": "Owned test-only loopback target or reserved .test identity; no operational target/secret; no suppression."
+    },
+    {
+      "location": "playwright.config.ts:80",
+      "evidence": "        WEB_ORIGIN: 'http://127.0.0.1:4173', ",
+      "scanner_keys": [
+        "a1e456347a8821fd",
+        "8a5b48f8f8c6bee4"
+      ],
+      "proposed_classification": "by-design/no-action",
+      "rationale": "Owned test-only loopback target or reserved .test identity; no operational target/secret; no suppression."
+    },
+    {
+      "location": "playwright.config.ts:85",
+      "evidence": "      // `--host 127.0.0.1` NÃO é detalhe: o padrão do `vite preview` é `localhost`, ",
+      "scanner_keys": [
+        "4b7be4c40850487c",
+        "8994854a4b272f6f"
+      ],
+      "proposed_classification": "by-design/no-action",
+      "rationale": "Owned test-only loopback target or reserved .test identity; no operational target/secret; no suppression."
+    },
+    {
+      "location": "playwright.config.ts:88",
+      "evidence": "      // `[::1]:4173` e o Playwright — que pergunta por `127.0.0.1` — bate em ",
+      "scanner_keys": [
+        "5e12863dffbccf69",
+        "a06bafeb722161e4"
+      ],
+      "proposed_classification": "by-design/no-action",
+      "rationale": "Owned test-only loopback target or reserved .test identity; no operational target/secret; no suppression."
+    },
+    {
+      "location": "playwright.config.ts:91",
+      "evidence": "      // Todo o resto do harness já fala 127.0.0.1: a baseURL, o WEB_ORIGIN, o ",
+      "scanner_keys": [
+        "2698063e108a0609",
+        "1a0d611415fc6996"
+      ],
+      "proposed_classification": "by-design/no-action",
+      "rationale": "Owned test-only loopback target or reserved .test identity; no operational target/secret; no suppression."
+    },
+    {
+      "location": "playwright.config.ts:93",
+      "evidence": "      command: 'npm run preview -- --host 127.0.0.1 --port 4173 --strictPort', ",
+      "scanner_keys": [
+        "ac41a31312e558bd",
+        "164bf04d7b0bbb19"
+      ],
+      "proposed_classification": "by-design/no-action",
+      "rationale": "Owned test-only loopback target or reserved .test identity; no operational target/secret; no suppression."
+    },
+    {
+      "location": "playwright.config.ts:97",
+      "evidence": "      url: 'http://127.0.0.1:4173', ",
+      "scanner_keys": [
+        "70831863fa683675",
+        "3c89510b83ba01a9"
+      ],
+      "proposed_classification": "by-design/no-action",
+      "rationale": "Owned test-only loopback target or reserved .test identity; no operational target/secret; no suppression."
+    },
+    {
+      "location": "src/api.ts:75",
+      "evidence": "    const pareceEstatico = res.status === 405 || /^\\s*<(!doctype|html)/i.test(bruto); ",
+      "scanner_keys": [
+        "3c3ff59eaca3694e",
+        "3ebdb512aa908de7"
+      ],
+      "proposed_classification": "by-design/no-action",
+      "rationale": "Unchanged baseline HTML detector regex; not a domain/runtime target; this story adds only Thread.paginacao."
+    },
+    {
+      "location": "src/tempoReal.spec.ts:12",
+      "evidence": "    expect(enderecoDoSocket('http://localhost:3000', 'x')).toBe('ws://localhost:3000/ws'); ",
+      "scanner_keys": [
+        "2a8f09410b6f9592",
+        "edf231b3eac47db3"
+      ],
+      "proposed_classification": "by-design/no-action",
+      "rationale": "Owned test-only loopback target or reserved .test identity; no operational target/secret; no suppression."
+    },
+    {
+      "location": "src/tempoReal.spec.ts:32",
+      "evidence": "    vi.stubGlobal('window', { location: { origin: 'http://localhost' }, setTimeout: (fn: () => void) => { timers.push(fn); return timers.length; }, clearTimeout: vi.fn() }); ",
+      "scanner_keys": [
+        "11de67ec67e28377",
+        "3ae03706d1c501fb"
+      ],
+      "proposed_classification": "by-design/no-action",
+      "rationale": "Owned test-only loopback target or reserved .test identity; no operational target/secret; no suppression."
+    },
+    {
+      "location": "src/tempoReal.spec.ts:58",
+      "evidence": "    vi.stubGlobal('window', { location: { origin: 'http://localhost' }, setTimeout, clearTimeout }); ",
+      "scanner_keys": [
+        "ecd8c6244fc918e1",
+        "ac44ff645d061b9b"
+      ],
+      "proposed_classification": "by-design/no-action",
+      "rationale": "Owned test-only loopback target or reserved .test identity; no operational target/secret; no suppression."
+    },
+    {
+      "location": "e2e/timeline.spec.ts:3",
+      "evidence": "const FIXTURES = 'http://127.0.0.1:3101';",
+      "scanner_keys": [
+        "2c1ee4d9b92a0c18",
+        "bc9bc14a55d2591e"
+      ],
+      "proposed_classification": "by-design/no-action",
+      "rationale": "Owned test-only loopback target or reserved .test identity; no operational target/secret; no suppression."
+    },
+    {
+      "location": "e2e/timeline.spec.ts:5",
+      "evidence": "const API = `http://127.0.0.1:${process.env.LEADSHUG_API_PORT ?? '3100'}`;",
+      "scanner_keys": [
+        "9e49f12c9c12faf6",
+        "c72e0b5f5b133197"
+      ],
+      "proposed_classification": "by-design/no-action",
+      "rationale": "Owned test-only loopback target or reserved .test identity; no operational target/secret; no suppression."
+    },
+    {
+      "location": "e2e/timeline-freshness.ts:45",
+      "evidence": "  const apiEndpoint = `http://127.0.0.1:${apiPort}`;",
+      "scanner_keys": [
+        "e4d3b43c6a981645",
+        "1c70b5070fab5314"
+      ],
+      "proposed_classification": "by-design/no-action",
+      "rationale": "Owned test-only loopback target or reserved .test identity; no operational target/secret; no suppression."
+    },
+    {
+      "location": "e2e/timeline-freshness.ts:48",
+      "evidence": "    fetch('http://127.0.0.1:3101/health'),",
+      "scanner_keys": [
+        "02ced4490c6f1ae3",
+        "a129a7b950a8f0ec"
+      ],
+      "proposed_classification": "by-design/no-action",
+      "rationale": "Owned test-only loopback target or reserved .test identity; no operational target/secret; no suppression."
+    },
+    {
+      "location": "e2e/timeline-freshness.ts:49",
+      "evidence": "    fetch('http://127.0.0.1:4173/'),",
+      "scanner_keys": [
+        "65dcca001d2e41a7",
+        "e5308c3cb7d2f03f"
+      ],
+      "proposed_classification": "by-design/no-action",
+      "rationale": "Owned test-only loopback target or reserved .test identity; no operational target/secret; no suppression."
+    },
+    {
+      "location": "e2e/timeline-freshness.ts:57",
+      "evidence": "  const jsResponse = await fetch(new URL(asset[1], 'http://127.0.0.1:4173'));",
+      "scanner_keys": [
+        "69c95e087f673536",
+        "75ba7c8469649337"
+      ],
+      "proposed_classification": "by-design/no-action",
+      "rationale": "Owned test-only loopback target or reserved .test identity; no operational target/secret; no suppression."
+    },
+    {
+      "location": "e2e/timeline-freshness.ts:60",
+      "evidence": "  const servedPath = resolve(web, 'dist', `.${new URL(asset[1], 'http://127.0.0.1').pathname}`);",
+      "scanner_keys": [
+        "350a9bebcb085e01",
+        "0ceda0f2bb2a2a57"
+      ],
+      "proposed_classification": "by-design/no-action",
+      "rationale": "Owned test-only loopback target or reserved .test identity; no operational target/secret; no suppression."
+    },
+    {
+      "location": "e2e/timeline-freshness.ts:93",
+      "evidence": "    endpoints: { apiHealth: apiHealth.status, fixtureHealth: fixtureHealth.status, preview: htmlResponse.status, servedBundle: new URL(asset[1], 'http://127.0.0.1:4173').pathname }",
+      "scanner_keys": [
+        "0b3266de3272c907",
+        "ea4c693cfacd5dc5"
+      ],
+      "proposed_classification": "by-design/no-action",
+      "rationale": "Owned test-only loopback target or reserved .test identity; no operational target/secret; no suppression."
+    }
+  ]
+}

@@ -1,0 +1,87 @@
+{
+  "policy_schema_version": "pcv-1",
+  "schema_version": "pcv-1",
+  "lane_id": "BCI",
+  "todo_id": "TODO-leadshug-inbox-message-timeline-pagination",
+  "run_id": "bci-ack-barrier-canonical-20261015",
+  "environment_id": "principal-checkout-linux-node22-postgresql16-disposable",
+  "executor_id": "/root/timeline_executor_resume",
+  "reviewer_id": "delivery-adherence-resolution-native",
+  "recorded_at_utc": "2026-10-15T03:36:56Z",
+  "evidence_type": "postgresql-overlap-probe",
+  "sample_profile_id": "BCI-SP-M",
+  "acceptance_rule_id": "BCI-A1",
+  "result_summary": "Three deterministic real PostgreSQL barrier batches retain10 increments after ACK; regression mutation fails10vs0 and exact source restoration passes. Independently accepted by delivery-adherence-resolution.json; local scope only.",
+  "artifact_payload": {
+    "invariant_id": "ST-ATT-01-ACK-BEFORE-PAGE-PRESERVES-LATER-INCREMENTS",
+    "concurrency_policy": "serialize",
+    "probe_profile_observed": {
+      "overlapping_operations_per_batch": 10,
+      "batches": 3,
+      "barrier": "ACCESS EXCLUSIVE on messages; pg_stat_activity proves page SELECT blocked, Conversation updates remain unblocked",
+      "records": [
+        {
+          "prova": "BCI_ACK_COM_SELECT_BLOQUEADO",
+          "lote": 1,
+          "bloqueioDetectado": true,
+          "sondagens": 2,
+          "ackAteSelectBloqueadoMs": 83,
+          "dezIncrementosMs": 42,
+          "unreadEnquantoSelectBloqueado": 10,
+          "unreadDepoisDaResposta": 10
+        },
+        {
+          "prova": "BCI_ACK_COM_SELECT_BLOQUEADO",
+          "lote": 2,
+          "bloqueioDetectado": true,
+          "sondagens": 2,
+          "ackAteSelectBloqueadoMs": 55,
+          "dezIncrementosMs": 24,
+          "unreadEnquantoSelectBloqueado": 10,
+          "unreadDepoisDaResposta": 10
+        },
+        {
+          "prova": "BCI_ACK_COM_SELECT_BLOQUEADO",
+          "lote": 3,
+          "bloqueioDetectado": true,
+          "sondagens": 2,
+          "ackAteSelectBloqueadoMs": 53,
+          "dezIncrementosMs": 26,
+          "unreadEnquantoSelectBloqueado": 10,
+          "unreadDepoisDaResposta": 10
+        }
+      ]
+    },
+    "mutation_control": {
+      "change": "Move ACK after SELECT (old regression)",
+      "observed": "Expected10, received0; failed regression assertion",
+      "restoration": "Exact original bytes restored in finally; SHA log retained; canonical targeted1/1 passes; broad API224 passed before byte-identical mutation/restoration",
+      "test_first_classification": "test-after with negative control, not retroactive TDD"
+    },
+    "coverage": "FullAPI224 also covers real incoming overlap, post-boundary IN=>11, auth/query errors without writes, background neutral and close/read overlap.",
+    "raw_artifacts": [
+      {
+        "path": "foundation_documentation/artifacts/reviews/leadshug-inbox-timeline-20261014/evidence/api-e2e-authority.log",
+        "sha256": "b508ca43e5157fea8fbf6951b2bd2b7c2b860ebde3e4c2dca1971094436317db"
+      },
+      {
+        "path": "foundation_documentation/artifacts/reviews/leadshug-inbox-timeline-20261014/evidence/bci-mutation-control.log",
+        "sha256": "0c2b211c2078240a09519eeff76f2a32a358135090e32df1bb871c619d4e327d"
+      },
+      {
+        "path": "foundation_documentation/artifacts/reviews/leadshug-inbox-timeline-20261014/evidence/bci-canonical-after-mutation.log",
+        "sha256": "90fe5dd92cf6098fc7375258ba7452a29c4d74255d10fafd2efcc4c8b4866b4c"
+      },
+      {
+        "path": "foundation_documentation/artifacts/reviews/leadshug-inbox-timeline-20261014/evidence/bci-source-restored.sha256",
+        "sha256": "c9f7e6985e02086dfc2a79cdf10dc4204ec5b61db7bb3b8913a9abee25bc0625"
+      }
+    ],
+    "independent_review": {
+      "reference": "delivery-adherence-resolution.json",
+      "reviewer_id": "delivery-adherence-resolution-native",
+      "assessment": "acceptable within bounded local evidence; API source unchanged"
+    }
+  },
+  "artifact_sha256": "5ff9ba52415aeb420acf1b805a7ccece7d59194c127b97aa3ce2e22af12842b4"
+}

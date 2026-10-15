@@ -1,0 +1,94 @@
+v22.23.3
+COMMAND npm test
+
+> @leadshug/web@0.1.0 test
+> vitest run
+
+
+ RUN  v2.1.9 /workspace/web-app
+
+ ✓ src/timeline.test.ts (2 tests) 3ms
+ ✓ src/tempoReal.spec.ts (6 tests) 7ms
+ ✓ src/api.spec.ts (12 tests) 48ms
+
+ Test Files  3 passed (3)
+      Tests  20 passed (20)
+   Start at  04:34:02
+   Duration  624ms (transform 434ms, setup 0ms, collect 502ms, tests 59ms, environment 1ms, prepare 302ms)
+
+npm notice
+npm notice New major version of npm available! 11.16.0 -> 12.2.0
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.0
+npm notice To update run: npm install -g npm@12.2.0
+npm notice
+COMMAND npm run test:tela
+
+> @leadshug/web@0.1.0 test:tela
+> npm run build && playwright test
+
+
+> @leadshug/web@0.1.0 build
+> tsc -b && vite build
+
+vite v5.4.21 building for production...
+transforming...
+✓ 55 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                   0.69 kB │ gzip:  0.44 kB
+dist/assets/index-wuzy3kMN.css    8.32 kB │ gzip:  2.39 kB
+dist/assets/index-BFoOk2qo.js   224.39 kB │ gzip: 69.79 kB
+✓ built in 1.36s
+[WebServer] timeline fixtures listening on 127.0.0.1:3101
+[WebServer] 
+[WebServer] > @leadshug/api@0.1.0 build
+[WebServer] > nest build
+[WebServer] 
+[WebServer] timeline test API listening on 3100; database leadshug_timeline_20261014
+[WebServer] 
+[WebServer] > @leadshug/web@0.1.0 preview
+[WebServer] > vite preview --host 127.0.0.1 --port 4173 --strictPort
+[WebServer] 
+[WebServer]   ➜  Local:   http://127.0.0.1:4173/
+
+Running 35 tests using 1 worker
+
+  ✓   1 e2e/telas.spec.ts:78:3 › as telas, no navegador › sem sessão, qualquer URL leva ao login (238ms)
+  ✓   2 e2e/telas.spec.ts:84:3 › as telas, no navegador › entrar leva de volta para a página que se queria abrir (922ms)
+  ✓   3 e2e/telas.spec.ts:96:3 › as telas, no navegador › conta nova cai no wizard, e a Revisão diz qual é o próximo passo (942ms)
+  ✓   4 e2e/telas.spec.ts:138:3 › as telas, no navegador › toda tela do menu abre sem quebrar (1.6s)
+  ✓   5 e2e/telas.spec.ts:167:3 › as telas, no navegador › a paleta é a do desenho, e o tema segue a marca da conta (886ms)
+  ✓   6 e2e/telas.spec.ts:191:3 › as telas, no navegador › os grupos do menu retraem, e a escolha sobrevive à navegação (955ms)
+  ✓   7 e2e/telas.spec.ts:209:3 › as telas, no navegador › o tema é escolha de quem olha, e persiste (882ms)
+  ✓   8 e2e/telas.spec.ts:227:3 › as telas, no navegador › Meu perfil abre pelo rodapé e salva o próprio nome (898ms)
+  ✓   9 e2e/telas.spec.ts:246:3 › as telas, no navegador › a foto de perfil sobe, e a recusa do servidor aparece na tela (1.0s)
+  ✓  10 e2e/telas.spec.ts:276:3 › as telas, no navegador › a barra lateral tem os três grupos do desenho (843ms)
+  ✓  11 e2e/telas.spec.ts:290:3 › as telas, no navegador › Setores abre com o Geral, e o Histórico já mostra o que aconteceu (881ms)
+  ✓  12 e2e/telas.spec.ts:302:3 › as telas, no navegador › a inbox abre, com o número no seletor e sem conversa nenhuma (774ms)
+  ✓  13 e2e/telas.spec.ts:319:3 › as telas, no navegador › Pessoas abre, lista quem já existe e oferece os papéis que existem (840ms)
+  ✓  14 e2e/telas.spec.ts:338:3 › as telas, no navegador › adicionar uma pessoa e conceder um setor a ela (1.1s)
+  ✓  15 e2e/telas.spec.ts:357:3 › as telas, no navegador › convidar mostra o LINK quando o e-mail não sai, e ele leva a definir a senha (1.1s)
+  ✓  16 e2e/telas.spec.ts:380:3 › as telas, no navegador › esqueci minha senha responde igual, exista a conta ou não (227ms)
+  ✓  17 e2e/telas.spec.ts:391:3 › as telas, no navegador › a tela de números mostra a BU e os dois canais desconectados (879ms)
+  ✓  18 e2e/telas.spec.ts:401:3 › as telas, no navegador › sair volta para o login (843ms)
+  ✓  19 e2e/telas.spec.ts:411:3 › as telas, no navegador › identidade visual carrega e salva os campos pós-onboarding (1.1s)
+  ✓  20 e2e/telas.spec.ts:430:3 › as telas, no navegador › Typebot permite buscar, abrir o editor e configurar um gatilho (1.5s)
+  ✓  21 e2e/timeline.spec.ts:56:3 › timeline da inbox com backend e PostgreSQL reais › expõe o estado de abertura enquanto a primeira página aguarda o backend (874ms)
+  ✓  22 e2e/timeline.spec.ts:90:3 › timeline da inbox com backend e PostgreSQL reais › abre a página recente, carrega todas as páginas anteriores e preserva posição (1.2s)
+  ✓  23 e2e/timeline.spec.ts:121:3 › timeline da inbox com backend e PostgreSQL reais › reconecta sem evento posterior e recupera 130 mensagens em mais de uma rodada (1.2s)
+  ✓  24 e2e/timeline.spec.ts:147:3 › timeline da inbox com backend e PostgreSQL reais › o poll retoma uma rodada pendente sem evento novo nem clique de continuação (980ms)
+  ✓  25 e2e/timeline.spec.ts:169:3 › timeline da inbox com backend e PostgreSQL reais › recupera o histórico completo após uma thread vazia receber mais de uma página (794ms)
+  ✓  26 e2e/timeline.spec.ts:182:3 › timeline da inbox com backend e PostgreSQL reais › retoma thread vazia após evento entre rodadas e inclui toda a cabeça sem reler (1.2s)
+  ✓  27 e2e/timeline.spec.ts:213:3 › timeline da inbox com backend e PostgreSQL reais › preserva o piso T após evento coalescido e encontra ID menor inserido atrás do cursor percorrido (1.7s)
+  ✓  28 e2e/timeline.spec.ts:300:3 › timeline da inbox com backend e PostgreSQL reais › falhas de recuperação consomem o orçamento e exigem continuação explícita (1.5s)
+  ✓  29 e2e/timeline.spec.ts:365:3 › timeline da inbox com backend e PostgreSQL reais › erro no cursor histórico reinicia pela cabeça após evento novo (1.3s)
+  ✓  30 e2e/timeline.spec.ts:437:3 › timeline da inbox com backend e PostgreSQL reais › sucesso da recuperação não apaga erro mais recente de envio (1.1s)
+  ✓  31 e2e/timeline.spec.ts:497:3 › timeline da inbox com backend e PostgreSQL reais › preserva a âncora quando uma mensagem chega durante o backfill atrasado (865ms)
+  ✓  32 e2e/timeline.spec.ts:530:3 › timeline da inbox com backend e PostgreSQL reais › mescla envio real com autoria e mantém o novo draft digitado durante o envio (788ms)
+  ✓  33 e2e/timeline.spec.ts:556:3 › timeline da inbox com backend e PostgreSQL reais › mostra thread vazia/fim, falha recuperável e acesso perdido (2.1s)
+  ✓  34 e2e/timeline.spec.ts:582:3 › timeline da inbox com backend e PostgreSQL reais › close vence resposta de backfill atrasada (920ms)
+  ✓  35 e2e/timeline.spec.ts:603:3 › timeline da inbox com backend e PostgreSQL reais › troca de conversa e BU protege resposta atrasada de envio (3.7s)
+
+  35 passed (55.5s)
+
+EXIT_CODE=0 RUN_ID=web-authority-revision4-final-full-20261015

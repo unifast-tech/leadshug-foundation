@@ -1,0 +1,76 @@
+{
+  "schema_version": "subagent-review-merge-v2",
+  "artifact_kind": "subagent_review_merge",
+  "authoritative": false,
+  "edit_policy": "derived_merge_packet",
+  "dispatch_path": "/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/artifacts/tmp/inbox-timeline-execution/delivery-tqa-dispatch.json",
+  "review_kind": "test_quality_audit",
+  "review_count": 1,
+  "reviewer_labels": [
+    "delivery-tqa-native"
+  ],
+  "highest_finding_severity": "medium",
+  "axis_summary": {
+    "performance": "mixed",
+    "elegance": "acceptable",
+    "structural_soundness": "mixed",
+    "operational_fit": "acceptable"
+  },
+  "recommended_paths": [
+    "Return for focused test repair, not a design rewrite: make recovery page-call budget and single-flight behavior directly observable, then add destination-context assertions for stale draft/error/scroll effects. Rerun the full browser suite and repeated FRC case on the corrected test source. Preserve per-command API CI-equivalent raw logs or machine-readable results on the next authoritative run. Keep the documented EPS deep-scan residual explicit; it does not itself justify an unmeasured index change."
+  ],
+  "exact_next_step": "Record reviewer resolutions in the governing TODO using the machine-checkable resolution table or equivalent gate ledger, then extract the derived resolution packet and decide whether another bounded review pass is still required.",
+  "findings": [
+    {
+      "finding_id": "F-6A8ECBE6",
+      "severity": "medium",
+      "title": "Recovery tests do not directly prove the three-page round budget or single-flight invariant",
+      "rationale": "At web-app/e2e/timeline.spec.ts:108, :133, and :168, the pending banner and eventual full-ID equality only infer bounded recovery. With the 382-message setup, an implementation making more than three page requests can still remain pending before it reaches a timestamp below T, and parallel recoveries can deduplicate to the same final IDs. The tests do not count page GETs per round or prove that ten dirty events cannot start a second walk while the delayed walk is in flight. This leaves the approved maximum of three page queries per round and one in-flight pass unprotected.",
+      "suggested_action": "Observe actual BFF page requests around a held real response: assert no more than three recovery page GETs before the pending state, and assert no second traversal starts while the held request remains in flight. Then release it, verify Continue/poll starts the next bounded round, and retain the existing full ordered-ID and unread readbacks.",
+      "reviewer_labels": [
+        "delivery-tqa-native"
+      ],
+      "source_finding_ids": [
+        "TQA-TL-01"
+      ],
+      "category": "tests",
+      "formalizable_hint": "yes",
+      "candidate_rule_level": "project",
+      "candidate_rule_id": "timeline-recovery-observable-round-limits"
+    },
+    {
+      "finding_id": "F-1D14CB0F",
+      "severity": "medium",
+      "title": "Context-switch race coverage omits target draft, stale-error, and stale-scroll assertions",
+      "rationale": "At web-app/e2e/timeline.spec.ts:333, the delayed-send test switches conversation and BU but releases the old response before placing any draft in the destination; it asserts selection, source persistence, and absence of the old bubble only. The delayed-backfill scroll test at :227 remains in the same context, while the same-context draft test at :260 does not exercise generation invalidation. A stale completion, failure, or delayed backfill callback that clears a destination draft, writes its error, or adjusts its scroll after a context switch could therefore pass despite the explicit contract requiring those effects to be ignored.",
+      "suggested_action": "Extend real-response race tests to switch context, type a destination draft, capture destination scroll/state, then release both prior success and failure/backfill responses. Assert the destination draft, error state, messages, metadata, and scroll remain unchanged for both conversation and BU changes.",
+      "reviewer_labels": [
+        "delivery-tqa-native"
+      ],
+      "source_finding_ids": [
+        "TQA-TL-02"
+      ],
+      "category": "tests",
+      "formalizable_hint": "yes",
+      "candidate_rule_level": "project",
+      "candidate_rule_id": "timeline-context-generation-observable-effects"
+    },
+    {
+      "finding_id": "F-1D763DF2",
+      "severity": "low",
+      "title": "API CI-equivalent non-E2E command output is attested but not retained",
+      "rationale": "execution-evidence.md and executor-final-summary.json attest successful prisma generate, lint, build, and 115 API unit tests, but explicitly state that their raw stdout was not preserved. The retained E2E and browser logs are strong complementary evidence, but they do not independently demonstrate unit-test discovery or lint/build output for the frozen source.",
+      "suggested_action": "On the next authoritative run, retain immutable per-command stdout or machine-readable test reports with command, exit status, source manifest, and run identifier; keep the executor attestation as an index rather than the sole record.",
+      "reviewer_labels": [
+        "delivery-tqa-native"
+      ],
+      "source_finding_ids": [
+        "TQA-EVID-03"
+      ],
+      "category": "operational_fit",
+      "formalizable_hint": "yes",
+      "candidate_rule_level": "project",
+      "candidate_rule_id": "ci-equivalent-command-output-retention"
+    }
+  ]
+}

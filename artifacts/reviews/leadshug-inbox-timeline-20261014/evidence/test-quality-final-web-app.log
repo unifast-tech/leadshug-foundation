@@ -1,0 +1,48 @@
+Test Quality Audit
+Repository: /mnt/c/unifast/leadshug/leadshug_now_docker/web-app
+Outcome heuristic: medium
+
+Scan paths:
+  - /mnt/c/unifast/leadshug/leadshug_now_docker/web-app/e2e/timeline-freshness.ts
+  - /mnt/c/unifast/leadshug/leadshug_now_docker/web-app/e2e/timeline.spec.ts
+  - /mnt/c/unifast/leadshug/leadshug_now_docker/web-app/playwright.config.ts
+  - /mnt/c/unifast/leadshug/leadshug_now_docker/web-app/src/tempoReal.spec.ts
+  - /mnt/c/unifast/leadshug/leadshug_now_docker/web-app/src/timeline.test.ts
+
+Hard bypass markers:
+  - none
+
+Test-only support route usage:
+  - none
+
+Auth shortcut hints:
+  - none
+
+Status-only assertion hints:
+  - 9:  expect(response.status()).toBe(201);
+  - 41:  expect(response.status()).toBe(200);
+  - 43:  expect(webhook.status).toBe(200);
+  - 128:    expect(burst.status()).toBe(201);
+  - 150:    expect(burst.status()).toBe(201);
+  - 171:    expect(burst.status()).toBe(201);
+  - 190:    expect(burst.status()).toBe(201);
+  - 257:          expect(lateTie.status()).toBe(201);
+  - 268:          expect(webhook.status).toBe(200);
+  - 337:      expect(event.status).toBe(200);
+  - 407:      expect(secondEvent.status).toBe(200);
+  - 547:    expect(populateSecondary.status()).toBe(201);
+  - 548:    expect(populateOtherBu.status()).toBe(201);
+
+No-exception-only assertion hints:
+  - none
+
+Ambient subject fallback hints:
+  - 73:    completedMigrations = Number(rows[0]?.count ?? 0);
+
+DI override hints:
+  - none
+
+Mock / fallback hints:
+  - none
+
+Counts: hard_bypass=0 test_support=0 auth_shortcut=0 status_only=13 no_exception_only=0 ambient_subject_fallback=1 di_override=0 mock_hint=0

@@ -1,0 +1,104 @@
+{
+  "capturedAtUtc": "2026-10-15T05:12:59.040318+00:00",
+  "status": "local commits created on feature/inbox-timeline-pagination; no push",
+  "authority": "Root authorized local API/Web feature commits after go per-repository git-write guard; no remote write authority used.",
+  "sourceAttestation": "attestation-browser-web-authority-revision6-final-full-20261015.json",
+  "sourceAttestationSha256": "d65dd1e089196fe83cdf2b3b4fc47d5208af28a55a89da45793b11013edf7270",
+  "repositories": {
+    "api-app": {
+      "branch": "feature/inbox-timeline-pagination",
+      "commit": "ae6a9662c29b77276351aa9de653a47276372246",
+      "parent": "5db3fbe2043428749895fc3ff6441e9457467dd0",
+      "workingTree": "clean",
+      "index": "empty",
+      "files": [
+        {
+          "path": "src/domain/inbox/conversations.service.ts",
+          "sha256": "93e69b0a1811533d0d718fe3fd3b105b1376d2a481ab2b22d8f1bfcf5dbe452e"
+        },
+        {
+          "path": "src/domain/inbox/timeline-pagination.spec.ts",
+          "sha256": "a4c128981c7d3a0e93ba51de17392a34320e89f78098e5ed383532011ff6bb4d"
+        },
+        {
+          "path": "src/domain/inbox/timeline-pagination.ts",
+          "sha256": "d2cb9e533c8741f34babb1cef0a771878ae488474a3162e844a2f1d4d3acd6af"
+        },
+        {
+          "path": "src/surfaces/bff/conversations.controller.ts",
+          "sha256": "0b5c46a78aafd8085b609ad711bcdb7626263094f434240f37b8700f20291565"
+        },
+        {
+          "path": "test/atendimento.e2e-spec.ts",
+          "sha256": "1bb4acb19fc522b397424b319ab04563e3608605dcfe307970eecdd0d464b5b8"
+        },
+        {
+          "path": "test/browser-server.cjs",
+          "sha256": "031e9d1e282603c098c4bb594fb13a08ab2bc2f301c9a3ebb5a6362cae6fe42b"
+        },
+        {
+          "path": "test/timeline-fixtures.cjs",
+          "sha256": "bc15f1758ec574dec1f1c66330e0cc9804705e103fb5abab7f9015e5e8563f9f"
+        }
+      ]
+    },
+    "web-app": {
+      "branch": "feature/inbox-timeline-pagination",
+      "commit": "4e56f6c1f4515b918d05b8c87e890d42e8542c56",
+      "parent": "6c99c27dafdce8ed9b461d17aaaaa491b8ae16e9",
+      "workingTree": "clean",
+      "index": "empty",
+      "files": [
+        {
+          "path": "e2e/timeline-freshness.ts",
+          "sha256": "ad41153df34c53f6674325b72887e701259ba7a8e752afd38ff4cdd8728c4cd0"
+        },
+        {
+          "path": "e2e/timeline.spec.ts",
+          "sha256": "36e51ccf9df361ff0f6704660cdf3fe86b821b4845e264a649c9d2583e0e1e4e"
+        },
+        {
+          "path": "playwright.config.ts",
+          "sha256": "d69c084d15cfef29ad23851036cb90309c60aa7a7b16c6810e3ae9b0adbbdd98"
+        },
+        {
+          "path": "src/api.ts",
+          "sha256": "87ba36bd21518725ba0e42221030d77b723144ef8d0581fddb2d9102233e7db2"
+        },
+        {
+          "path": "src/telas/Inbox.tsx",
+          "sha256": "c499895fee74325e5357052186dd5de9d46c7bc867174e614a9950009ced57ae"
+        },
+        {
+          "path": "src/tempoReal.spec.ts",
+          "sha256": "378a97ce29c6382f6a7ae9018121ed99ef2733a2b1c8f01c3889074611fa7dd5"
+        },
+        {
+          "path": "src/tempoReal.ts",
+          "sha256": "118ceedc40649eb8b7ddfa44eee7824224994bf383dc9b51e496f80236da0fcf"
+        },
+        {
+          "path": "src/timeline.test.ts",
+          "sha256": "16d1f1a12d20935e399e4b23e4d93de7047f9015dfd5a65ee6093d0645c38fd4"
+        },
+        {
+          "path": "src/timeline.ts",
+          "sha256": "0bfd7d287f93c8c6393718f3f05cd9c248ce50311758bf9995e6ba80b5cd9311"
+        }
+      ]
+    }
+  },
+  "committedPathCount": 16,
+  "committedBytesMatchAttestedSource": true,
+  "testEvidence": "executor-revision6-summary.json (Web 20 unit, 36 browser, FRC3; API115 unit/224 E2E unchanged; SQL/RLS retained; no tests rerun for commits)",
+  "resources": {
+    "postgresContainer": "removed after final review and committed source-byte proof",
+    "network": "removed; network had only leadshug-timeline-postgres-20261014 attached",
+    "dependencyVolumes": [
+      "leadshug-timeline-api-node-modules-20261014",
+      "leadshug-timeline-web-node-modules-20261014"
+    ],
+    "dependencyImage": "leadshug-timeline-playwright-node22-20261014:latest; retained as cache",
+    "push": "not performed"
+  }
+}

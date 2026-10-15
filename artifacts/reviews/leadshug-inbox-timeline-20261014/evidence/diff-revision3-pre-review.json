@@ -1,0 +1,37 @@
+{
+  "blocked": true,
+  "context": {
+    "actual_change_count": 84,
+    "contract_repository_count": 3,
+    "expected_change_count": 83,
+    "forbidden_change_count": 0,
+    "repo_root": "/mnt/c/unifast/leadshug/leadshug_now_docker",
+    "repositories": {
+      "api": {
+        "actual_change_count": 7,
+        "baseline_commit": "5db3fbe2043428749895fc3ff6441e9457467dd0",
+        "path": "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app"
+      },
+      "foundation": {
+        "actual_change_count": 67,
+        "baseline_commit": "40828a20f2d6c3a1443e7ee132f42483840d6abb",
+        "path": "/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation"
+      },
+      "web": {
+        "actual_change_count": 10,
+        "baseline_commit": "6c99c27dafdce8ed9b461d17aaaaa491b8ae16e9",
+        "path": "/mnt/c/unifast/leadshug/leadshug_now_docker/web-app"
+      }
+    },
+    "todo_path": "/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/todos/active/features/TODO-leadshug-inbox-message-timeline-pagination.md",
+    "unclassified_change_count": 1
+  },
+  "violations": [
+    {
+      "code": "DIFF-UNCLASSIFIED-PATH",
+      "message": "Actual ?? change is outside the expected diff contract: web:test-results/.last-run.json (untracked).",
+      "resolution": "TEACH: analyze each reported item before changing files. Classify it as (a) an actual scope deviation, (b) a necessary/justifiable need, or (c) noise. This no-go is not an automatic rollback: the agent may defend retaining a necessary change with concrete evidence. Clean/remove noise; revert an unnecessary deviation; for a necessary scope expansion, obtain user validation, update the TODO contract, renew approval, and rerun the guard.",
+      "section": "Diff Expectation Contract / Expected Changed Paths"
+    }
+  ]
+}

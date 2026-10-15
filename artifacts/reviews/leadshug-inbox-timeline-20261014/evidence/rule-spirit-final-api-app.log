@@ -1,0 +1,40 @@
+Rule-Spirit Anti-Pattern Scan
+Repository: /mnt/c/unifast/leadshug/leadshug_now_docker/api-app
+Stacks: all
+Findings: 30
+Max active severity: warning
+
+| Stack | Severity | Search Lens | Location | Evidence |
+| --- | --- | --- | --- | --- |
+| shared | review | hard-coded local/domain target in source/config | `test/browser-server.cjs:22` |   process.env.WEB_ORIGIN = 'http://127.0.0.1:4173'; |
+| shared | review | hard-coded local/domain target in source/config | `test/browser-server.cjs:40` |   app.enableCors({ origin: ['http://127.0.0.1:4173'], credentials: true }); |
+| shared | review | hard-coded local/domain target in source/config | `test/timeline-fixtures.cjs:64` |   const response = await fetch(`http://127.0.0.1:${apiPort}/webhooks/meta`, { |
+| shared | review | hard-coded local/domain target in source/config | `test/timeline-fixtures.cjs:75` |       const query = new URL(req.url, 'http://localhost').searchParams; |
+| shared | review | hard-coded local/domain target in source/config | `test/timeline-fixtures.cjs:113` | server.listen(fixturePort, '127.0.0.1', () => console.log(`timeline fixtures listening on 127.0.0.1:${fixturePort}`)); |
+| shared | review | hard-coded local/domain target in source/config | `test/atendimento.e2e-spec.ts:73` |     A = await criarMantenedora(app, 'Alfa', 'dono@alfa.test'); |
+| shared | review | hard-coded local/domain target in source/config | `test/atendimento.e2e-spec.ts:74` |     B = await criarMantenedora(app, 'Beta', 'dono@beta.test'); |
+| shared | review | hard-coded local/domain target in source/config | `test/atendimento.e2e-spec.ts:78` |     cookieOwner = await login(app, 'dono@alfa.test'); |
+| shared | review | hard-coded local/domain target in source/config | `test/atendimento.e2e-spec.ts:102` |       await criarUsuario(prisma, A.mantenedora.id, A.businessUnit.id, 'atendente@alfa.test', 'ATENDENTE'); |
+| shared | review | hard-coded local/domain target in source/config | `test/atendimento.e2e-spec.ts:103` |       const cookie = await login(app, 'atendente@alfa.test'); |
+| shared | review | hard-coded local/domain target in source/config | `test/atendimento.e2e-spec.ts:110` |       const cookieBeta = await login(app, 'dono@beta.test'); |
+| shared | review | hard-coded local/domain target in source/config | `test/atendimento.e2e-spec.ts:177` |       await criarUsuario(prisma, A.mantenedora.id, A.businessUnit.id, 'outro@alfa.test', 'ATENDENTE'); |
+| shared | review | hard-coded local/domain target in source/config | `test/atendimento.e2e-spec.ts:178` |       const cookieOutro = await login(app, 'outro@alfa.test'); |
+| shared | review | hard-coded local/domain target in source/config | `test/atendimento.e2e-spec.ts:203` |       await criarUsuario(prisma, A.mantenedora.id, A.businessUnit.id, 'outro2@alfa.test', 'ATENDENTE'); |
+| shared | review | hard-coded local/domain target in source/config | `test/atendimento.e2e-spec.ts:204` |       const cookieOutro = await login(app, 'outro2@alfa.test'); |
+| docker | warning | hard-coded runtime/domain target in Docker or compose surface | `test/browser-server.cjs:22` |   process.env.WEB_ORIGIN = 'http://127.0.0.1:4173'; |
+| docker | warning | hard-coded runtime/domain target in Docker or compose surface | `test/browser-server.cjs:40` |   app.enableCors({ origin: ['http://127.0.0.1:4173'], credentials: true }); |
+| docker | warning | hard-coded runtime/domain target in Docker or compose surface | `test/timeline-fixtures.cjs:64` |   const response = await fetch(`http://127.0.0.1:${apiPort}/webhooks/meta`, { |
+| docker | warning | hard-coded runtime/domain target in Docker or compose surface | `test/timeline-fixtures.cjs:75` |       const query = new URL(req.url, 'http://localhost').searchParams; |
+| docker | warning | hard-coded runtime/domain target in Docker or compose surface | `test/timeline-fixtures.cjs:113` | server.listen(fixturePort, '127.0.0.1', () => console.log(`timeline fixtures listening on 127.0.0.1:${fixturePort}`)); |
+| docker | warning | hard-coded runtime/domain target in Docker or compose surface | `test/atendimento.e2e-spec.ts:73` |     A = await criarMantenedora(app, 'Alfa', 'dono@alfa.test'); |
+| docker | warning | hard-coded runtime/domain target in Docker or compose surface | `test/atendimento.e2e-spec.ts:74` |     B = await criarMantenedora(app, 'Beta', 'dono@beta.test'); |
+| docker | warning | hard-coded runtime/domain target in Docker or compose surface | `test/atendimento.e2e-spec.ts:78` |     cookieOwner = await login(app, 'dono@alfa.test'); |
+| docker | warning | hard-coded runtime/domain target in Docker or compose surface | `test/atendimento.e2e-spec.ts:102` |       await criarUsuario(prisma, A.mantenedora.id, A.businessUnit.id, 'atendente@alfa.test', 'ATENDENTE'); |
+| docker | warning | hard-coded runtime/domain target in Docker or compose surface | `test/atendimento.e2e-spec.ts:103` |       const cookie = await login(app, 'atendente@alfa.test'); |
+| docker | warning | hard-coded runtime/domain target in Docker or compose surface | `test/atendimento.e2e-spec.ts:110` |       const cookieBeta = await login(app, 'dono@beta.test'); |
+| docker | warning | hard-coded runtime/domain target in Docker or compose surface | `test/atendimento.e2e-spec.ts:177` |       await criarUsuario(prisma, A.mantenedora.id, A.businessUnit.id, 'outro@alfa.test', 'ATENDENTE'); |
+| docker | warning | hard-coded runtime/domain target in Docker or compose surface | `test/atendimento.e2e-spec.ts:178` |       const cookieOutro = await login(app, 'outro@alfa.test'); |
+| docker | warning | hard-coded runtime/domain target in Docker or compose surface | `test/atendimento.e2e-spec.ts:203` |       await criarUsuario(prisma, A.mantenedora.id, A.businessUnit.id, 'outro2@alfa.test', 'ATENDENTE'); |
+| docker | warning | hard-coded runtime/domain target in Docker or compose surface | `test/atendimento.e2e-spec.ts:204` |       const cookieOutro = await login(app, 'outro2@alfa.test'); |
+
+Note: this scanner supports the Rule-Spirit Anti-Pattern Hunt gate; it does not replace rule-specific review or P1/P2 judgment.

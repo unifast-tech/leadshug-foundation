@@ -1,0 +1,66 @@
+v22.23.3
+
+> @leadshug/web@0.1.0 build
+> tsc -b && vite build
+
+vite v5.4.21 building for production...
+transforming...
+✓ 55 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                   0.69 kB │ gzip:  0.44 kB
+dist/assets/index-wuzy3kMN.css    8.32 kB │ gzip:  2.39 kB
+dist/assets/index-CAD021o2.js   223.96 kB │ gzip: 69.69 kB
+✓ built in 1.32s
+npm notice
+npm notice New major version of npm available! 11.16.0 -> 12.2.0
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.0
+npm notice To update run: npm install -g npm@12.2.0
+npm notice
+[WebServer] timeline fixtures listening on 127.0.0.1:3101
+[WebServer] 
+[WebServer] > @leadshug/api@0.1.0 build
+[WebServer] > nest build
+[WebServer] 
+[WebServer] timeline test API listening on 3100; database leadshug_timeline_20261014
+[WebServer] 
+[WebServer] > @leadshug/web@0.1.0 preview
+[WebServer] > vite preview --host 127.0.0.1 --port 4173 --strictPort
+[WebServer] 
+[WebServer]   ➜  Local:   http://127.0.0.1:4173/
+
+Running 1 test using 1 worker
+
+  ✘  1 e2e/timeline.spec.ts:299:3 › timeline da inbox com backend e PostgreSQL reais › falhas de recuperação consomem o orçamento e exigem continuação explícita (1.6s)
+
+
+  1) e2e/timeline.spec.ts:299:3 › timeline da inbox com backend e PostgreSQL reais › falhas de recuperação consomem o orçamento e exigem continuação explícita 
+
+    Error: expect(received).toBe(expected) // Object.is equality
+
+    Expected: 3
+    Received: 5
+
+      343 |     await expect(page.getByRole('button', { name: 'Continuar atualização' })).toBeVisible();
+      344 |     expect(attempts).toBe(3);
+    > 345 |     expect(recoveryRequests).toBe(3);
+          |                              ^
+      346 |     expect(maxInFlight).toBe(1);
+      347 |     await page.waitForTimeout(300);
+      348 |     expect(recoveryRequests).toBe(3);
+        at /workspace/web-app/e2e/timeline.spec.ts:345:30
+
+    Error Context: test-results/timeline-timeline-da-inbox-c0aef-xigem-continuação-explícita/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/timeline-timeline-da-inbox-c0aef-xigem-continuação-explícita/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/timeline-timeline-da-inbox-c0aef-xigem-continuação-explícita/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  1 failed
+    e2e/timeline.spec.ts:299:3 › timeline da inbox com backend e PostgreSQL reais › falhas de recuperação consomem o orçamento e exigem continuação explícita 
+
+EXIT_CODE=1 RUN_ID=web-revision3-budget-negative-control-20261015 MUTATION=decrement-after-await

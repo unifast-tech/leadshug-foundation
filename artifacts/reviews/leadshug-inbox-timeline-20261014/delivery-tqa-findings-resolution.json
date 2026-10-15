@@ -1,0 +1,56 @@
+{
+  "schema_version": "gate-finding-resolution-v1",
+  "artifact_kind": "gate_finding_resolution",
+  "authoritative": false,
+  "edit_policy": "derived_from_todo",
+  "todo_path": "foundation_documentation/todos/active/features/TODO-leadshug-inbox-message-timeline-pagination.md",
+  "review_kind": "test_quality_audit",
+  "gate_status": "findings_integrated",
+  "findings": [
+    {
+      "finding_id": "TQA-TL-01",
+      "resolution": "Integrated",
+      "usefulness": "useful",
+      "formalizable": "yes",
+      "candidate_rule_level": "project",
+      "candidate_rule_id": "n/a",
+      "rationale": "Budget3/max1 inclusive falha/evento, negativos3vs5 e restart2vs1, IDs/unread; delta confirmou."
+    },
+    {
+      "finding_id": "TQA-TL-02",
+      "resolution": "Integrated",
+      "usefulness": "useful",
+      "formalizable": "yes",
+      "candidate_rule_level": "project",
+      "candidate_rule_id": "n/a",
+      "rationale": "Seis destinos conversa/BU\u00d7sucesso/falha/backfill com draft/erro/scroll/metadados; delta confirmou."
+    },
+    {
+      "finding_id": "TQA-EVID-03",
+      "resolution": "Integrated",
+      "usefulness": "useful",
+      "formalizable": "no",
+      "candidate_rule_level": "none",
+      "candidate_rule_id": "n/a",
+      "rationale": "Stdout4leafsAPI115 retido e API224 mesmafonte; delta confirmou."
+    },
+    {
+      "finding_id": "ARCH-DEL-02",
+      "resolution": "Integrated",
+      "usefulness": "useful",
+      "formalizable": "yes",
+      "candidate_rule_level": "project",
+      "candidate_rule_id": "n/a",
+      "rationale": "Ledger ARCH-DEL-02-EVID: backlog passado, headrequest semantes/neutra, status IN_SERVICE/162IDs/unread2 e negativo oldcursor falha; resolu\u00e7\u00e3o TQA aceitou."
+    },
+    {
+      "finding_id": "ARCH-DEL-03-EVID",
+      "resolution": "Integrated",
+      "usefulness": "useful",
+      "formalizable": "yes",
+      "candidate_rule_level": "project",
+      "candidate_rule_id": "n/a",
+      "rationale": "Ledger ARCH-DEL-03-EVID: primeiroframe autenticado antessele\u00e7\u00e3o; socket nativo fechado/reconectado durante openingGETretido, segundoframe antesrelease, sem outroevento/poll e negativo reconnect-only falha; TQA causal aceitou."
+    }
+  ]
+}

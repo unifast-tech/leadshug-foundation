@@ -1,0 +1,64 @@
+DROP INDEX
+ANALYZE
+=== RECENT production-equivalent, conversation_id + order + limit+1 ===
+                                                                                    QUERY PLAN                                                                                     
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Limit  (cost=3.51..11.09 rows=51 width=103) (actual time=0.976..0.984 rows=51 loops=1)
+   Buffers: shared hit=37
+   ->  Incremental Sort  (cost=3.51..3033.76 rows=20382 width=103) (actual time=0.975..0.978 rows=51 loops=1)
+         Sort Key: created_at DESC, id DESC
+         Presorted Key: created_at
+         Full-sort Groups: 1  Sort Method: quicksort  Average Memory: 33kB  Peak Memory: 33kB
+         Pre-sorted Groups: 1  Sort Method: top-N heapsort  Average Memory: 35kB  Peak Memory: 35kB
+         Buffers: shared hit=37
+         ->  Index Scan Backward using messages_conversation_id_created_at_idx on messages  (cost=0.29..2296.08 rows=20382 width=103) (actual time=0.035..0.429 rows=1001 loops=1)
+               Index Cond: (conversation_id = 'f0619bbd-9e54-418f-9bf9-a5cc0b6c5673'::text)
+               Buffers: shared hit=37
+ Planning:
+   Buffers: shared hit=17
+ Planning Time: 0.383 ms
+ Execution Time: 1.094 ms
+(15 rows)
+
+=== DEEP production-equivalent cursor constants ===
+                                                                                                            QUERY PLAN                                                                                                            
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Limit  (cost=3.40..15.79 rows=51 width=103) (actual time=3.375..3.381 rows=51 loops=1)
+   Buffers: shared hit=357
+   ->  Incremental Sort  (cost=3.40..2830.16 rows=11630 width=103) (actual time=3.374..3.377 rows=51 loops=1)
+         Sort Key: created_at DESC, id DESC
+         Presorted Key: created_at
+         Full-sort Groups: 1  Sort Method: quicksort  Average Memory: 33kB  Peak Memory: 33kB
+         Pre-sorted Groups: 1  Sort Method: top-N heapsort  Average Memory: 34kB  Peak Memory: 34kB
+         Buffers: shared hit=357
+         ->  Index Scan Backward using messages_conversation_id_created_at_idx on messages  (cost=0.29..2448.94 rows=11630 width=103) (actual time=2.611..2.974 rows=1000 loops=1)
+               Index Cond: (conversation_id = 'f0619bbd-9e54-418f-9bf9-a5cc0b6c5673'::text)
+               Filter: ((created_at < '2026-10-15 03:34:03.183+00'::timestamp with time zone) OR ((created_at = '2026-10-15 03:34:03.183+00'::timestamp with time zone) AND (id < 'fffb7cf1-cc91-4748-b3b1-d2d91d056f8f'::text)))
+               Rows Removed by Filter: 10001
+               Buffers: shared hit=357
+ Planning:
+   Buffers: shared hit=13
+ Planning Time: 0.313 ms
+ Execution Time: 3.442 ms
+(17 rows)
+
+=== LARGE_TIMESTAMP_TIE production-equivalent cursor constants ===
+                                                                                                            QUERY PLAN                                                                                                            
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Limit  (cost=3.66..11.86 rows=51 width=103) (actual time=0.787..0.793 rows=51 loops=1)
+   Buffers: shared hit=37
+   ->  Incremental Sort  (cost=3.66..3152.18 rows=19570 width=103) (actual time=0.786..0.789 rows=51 loops=1)
+         Sort Key: created_at DESC, id DESC
+         Presorted Key: created_at
+         Full-sort Groups: 1  Sort Method: quicksort  Average Memory: 33kB  Peak Memory: 33kB
+         Pre-sorted Groups: 1  Sort Method: top-N heapsort  Average Memory: 34kB  Peak Memory: 34kB
+         Buffers: shared hit=37
+         ->  Index Scan Backward using messages_conversation_id_created_at_idx on messages  (cost=0.29..2448.94 rows=19570 width=103) (actual time=0.040..0.479 rows=500 loops=1)
+               Index Cond: (conversation_id = 'f0619bbd-9e54-418f-9bf9-a5cc0b6c5673'::text)
+               Filter: ((created_at < '2026-10-15 03:34:13.183+00'::timestamp with time zone) OR ((created_at = '2026-10-15 03:34:13.183+00'::timestamp with time zone) AND (id < '82e12262-6e30-4bd3-affc-47df29d4a9c5'::text)))
+               Rows Removed by Filter: 501
+               Buffers: shared hit=37
+ Planning Time: 0.132 ms
+ Execution Time: 0.850 ms
+(15 rows)
+

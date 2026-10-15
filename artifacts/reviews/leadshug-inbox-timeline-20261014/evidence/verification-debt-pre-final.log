@@ -1,0 +1,114 @@
+Verification Debt Audit
+Repository: /mnt/c/unifast/leadshug/leadshug_now_docker
+TODO: /mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/todos/active/features/TODO-leadshug-inbox-message-timeline-pagination.md
+Outcome heuristic: high
+Inline code TODO debt classification: none
+
+Waiver / skip signals:
+  - 1:# TODO LeadsHug histórico completo e paginado na inbox
+  - 9:Histórico completo e paginado na inbox do LeadsHug.
+  - 21:A thread da inbox busca as primeiras 200 mensagens em ordem crescente, sem metadados de continuação. Uma conversa longa oculta mensagens recentes. A tela Consultar já pagina, mas atende outro contrato e não marca leitura. Esta entrega torna todo o histórico acessível na inbox, preservando BU, sessão, janela de resposta e autoria.
+  - 28:- **Direct-to-TODO rationale:** n/a; há feature brief para o pacote
+  - 36:- **Current delivery:** leitura paginada da thread BFF e navegação incremental na inbox
+  - 56:- [x] Validar paginação por cursor e limites na entrada; autorizar a conversa antes de resolver cursor.
+  - 69:- Sessão e grant ATENDENTE ou superior na BU; resolver/autorizar a conversa antes de validar ou consultar cursores. Sem sessão: 401. Recurso fora do escopo: 404, inclusive com query/cursor malformado.
+  - 75:- Cursor versionado identifica a mensagem-âncora; resolver seus dados somente na conversa autorizada. Paginação anterior usa comparação estrita do par, busca no máximo N+1 registros e nunca escreve não lidas.
+  - 82:- Na atualização, capturar uma fronteira fixa T igual ao timestamp da mensagem mais recente conhecida antes da passagem. Buscar página recente sem marcar leitura e caminhar para trás até alcançar timestamp estritamente menor que T, ou esgotar mensagens. Incluir integralmente o grupo empatado em T; encontrar um ID conhecido não encerra a recuperação.
+  - 106:- `n/a once moved out of active`: use after the TODO moves to `promotion_lane/` or `completed/`.
+  - 110:n/a; nenhuma entrega parcial é reivindicada.
+  - 114:n/a; nenhuma decisão material bloqueando execução no início.
+  - 119:- **Promotion lane path:** branches locais -> validação local -> evidência/closeout na Foundation; deploy e promoção remota de código fora do recorte
+  - 120:- **Lane-promoted threshold for this TODO:** n/a; entrega local validada
+  - 250:- [x] VAL-03: fixture base com 251 mensagens, empates maiores que uma página e duas conversas na BU autorizada; outra BU da mesma Mantenedora sem grant; outra Mantenedora/BU. Caminhar páginas, comparar todos os IDs e verificar 400 para cursor alheio em conversa autorizada, 404 antes de validar query em recurso inacessível e ausência de efeitos indevidos.
+  - 264:| SCOPE-02 | Scope | Validar paginação por cursor e limites na entrada; autorizar a conversa antes de resolver cursor. | PostgreSQL integration | test/atendimento.e2e-spec.ts:317,365,371; api-e2e-authority.log | Node22 / PG16 descartável | passed | Cursor alheio em recurso autorizado400; recurso sem grant404 antes da query; sem sessão401; unread readback preservado. |
+  - 265:| SCOPE-03 | Scope | Retornar a página recente, ordenar deterministicamente e fornecer continuação para mensagens anteriores. | PostgreSQL integration | test/atendimento.e2e-spec.ts:282; api-e2e-authority.log | Node22 / PG16 descartável | passed | 251 IDs, limite37 e grupo empatado; comparação de IDs na ordem real do banco, página recente e continuação bounded. |
+  - 281:| VAL-03 | Validation Steps | VAL-03: fixture base com 251 mensagens, empates maiores que uma página e duas conversas na BU autorizada; outra BU da mesma Mantenedora sem grant; outra Mantenedora/BU. Caminhar páginas, comparar todos os IDs e verificar 400 para cursor alheio em conversa autorizada, 404 antes de validar query em recurso inacessível e ausência de efeitos indevidos. | PostgreSQL integration | test/atendimento.e2e-spec.ts:282,317,365,371; api-e2e-authority.log | PG16 dedicado | passed | 251 IDs e empates; negativos scoped e consulta inválida sem efeitos de leitura. |
+  - 285:| VAL-07 | Validation Steps | VAL-07: cumprir revisões/guardas exigidos, incluindo aderência arquitetural, qualidade de testes, segurança, performance, dívida de verificação e review final, antes do closeout. | test/runtime/review | Validation Steps e relatório específico na execução | local isolado / foundation | planned | Prova futura; não executada nesta revisão. |
+  - 329:- Primeiro recorte BFF de mensagens na inbox; API pública, Consultar e demais stories ficam fora.
+  - 331:- Marcação atômica antes da consulta somente na abertura humana; refresh/backfill/recuperação são explicitamente read-neutral.
+  - 342:| Grants materializados na BU | modules/identity-and-tenancy.md | preserved | Negativos de tenant/BU no banco real. |
+  - 402:- **Waiver authority / reference (required if waived):** none
+  - 409:- **Waiver authority / reference (required if waived):** none
+  - 417:n/a; nenhum ID de pattern é reivindicado.
+  - 461:Compatibilidade de representação: completion guard lê status na coluna5, authority guard na coluna7. Os mesmos resultados são espelhados como Status/Authority status; notas permanecem na coluna8. Nenhuma validação ou comando é substituído.
+  - 494:Custo do grupo empatado é medido e cada rodada limitada; inserções concurrentes exigem nova passagem e UI de recuperação. Runners e suites serão provados na implementação. Nenhuma suite green ou aprovação material é presumida.
+  - 523:| high_severity_plan_review_issue | yes | ARCH-TL-01..03 reportados e integrados na proposta |
+  - 535:- **Waiver authority / reference:** none
+  - 539:| ARCH-TL-03 | Integrated | useful | yes | project | n/a | Piso pendente T conservado entre passagens/dirty/retry e promoção somente após cobertura sem evento pendente; crítica delta critique-resolution.json confirmou a resolução do plano, agora testada no browser. |
+  - 548:- **Findings summary:** revisão independente confirmou A-01/A-02/A-04/A-05 e, no delta, A-03 na query própria do controller público.
+  - 550:- **Waiver authority / reference:** none
+  - 568:| delphi-ai/rules/stacks/nestjs/nestjs-architecture-always-on.md | API | input runtime e serviço de domínio | regra de negócio na UI | Validar cursor/limites |
+  - 595:| Autorização antes de paginação/cursor; erros scoped | Adherent na inspeção | controller thread/resolver e atendimento.e2e:317/365; API224 passa. |
+  - 596:| Últimas N, N+1, ordem DB e cursor de conversa | Adherent na inspeção | ConversationsService.timeline e atendimento.e2e:282; parser unitário. |
+  - 597:| ACK atômico anterior à query; background neutro | Adherent na inspeção | timeline/updateMany antes findMany; teste PostgreSQL com SELECT bloqueado e mutação negativa. |
+  - 600:| Índice condicionado ao EXPLAIN | Adherent na inspeção e round1 | pcv-eps.json e evidence/explain-timeline-exact.sql/.log:20382rows/1000ties; candidato composto piorou buffers e foi removido, sem migração; custo profundo residual explícito. |
+  - 601:| API pública/Consultar e outras stories fora | Adherent na inspeção | Sem diff nesses consumidores; regressões API224. |
+  - 619:| CI API local | Leaf scripts do job tocado | passed | evidence/api-ci-light-revision2-20261015.log; evidence/api-e2e-authority.log; test-surface-admission.md | 0 falhas na execução final | generate/lint/build/unit115 e PostgreSQL224 adicionais, serializados. |
+  - 628:| Scan heurístico API/Web | Domínios/targets e bypass disfarçado | running | scan-triage-api.json e scan-triage-web.json | API30 observações/15 loci; Web42/21 na captura final só de fontes | Proposta by-design para fixtures localhost/.test e regex estática preexistente; sem allowlist. Rerun na fonte final e revisão independentes pendentes. |
+  - 634:| ARCH-TL-01..03 | high | release-blocker | fix in current TODO | Contrato de leitura/recuperação pertence à mesma story | fixed | architecture-review.json e Proposed API Contract, a verificar na crítica |
+  - 635:| ARCH-TL-04..06 | medium | release-blocker | fix in current TODO | Estado/consulta/provas necessários ao mesmo contrato | fixed | architecture-review.json e testes planejados, a verificar na crítica |
+  - 642:| ARCH-DEL-01-ERR | medium | release-blocker | fix with ARCH-DEL-01 | Variante objetiva: saldo era debitado após await; falha+dirty não debitava e permitia mais de3tentativas. Consumir no despacho e provar3aborts+eventos sem4aautomática; erro histórico com dirty deve conservar restart recente, não consumir a notificação ao retomar cursor antigo | open | Inspeção de suporte na revisão2, mesmo contrato/owner; prova negativa em revisão3 |
+  - 655:- Autorizar primeiro; resolver cursor na conversa; limitar sua forma/tamanho e queries. Testar cursor de outra conversa autorizada, outra BU sem grant no mesmo tenant e outro tenant, separadamente.
+  - 664:- **Why this level:** paginação e cursores alteram queries; abertura e entrada concorrem na contagem de não lidas; contexto/realtime/ações assíncronas atualizam o histórico visível. Nenhuma promessa de SLO/capacidade foi aprovada.
+  - 666:- Registro de classificação na execução do contrato aprovado; não expande funcionalidade nem reduz obrigações de validação.
+  - 759:- **Evidence / reference:** revisão de entrega após testes completos; pacote de planejamento não substitui TQA. O roteamento technical_review exige gpt-5.6-terra. Na retomada, o catálogo nativo do Codex confirmou esse modelo, embora não seja selecionável via ferramenta collaboration. Será usado o runner interno subagent_review_run.py com o modelo prescrito e effort max; guard específico go em artifacts/tmp/inbox-timeline-execution/routing-tqa-native.json e probe nativo ephemeral/read-only exit0 MODEL_AVAILABLE (native-model-probe-events.jsonl). Exceção/substituição não é necessária e não foi presumida.
+  - 760:- **Waiver authority / reference:** none
+  - 762:Runner interno codex ephemeral/read-only/no-context gpt-5.6-terra/max terminou com turn.completed, JSON canônico validado/merge. Evidência: delivery-tqa-round-1.json/merge. TQA-TL-01 duplica a proteção de budget/single-flight ARCH-DEL-01; TQA-TL-02 requer asserts no destino para draft/erro/scroll após troca de contexto; TQA-EVID-03 registra falta de stdout API CI. Correções executadas no mesmo TODO; full34/FRC3 e stdoutAPI115 retidos. Review delta independente gpt-5.6-terra/max em execução, dispatch delivery-tqa-delta-dispatch.json e mesmo pacote SHA4e52264e5990846b635c7631450e23dae184ca5e7c66b127a7dbe9864f58da59; sem waiver.
+  - 771:- **Waiver authority / reference:** none
+  - 798:n/a; nenhum comentário pendente do usuário neste arquivo.
+
+Blocker / provisional / closure drift signals:
+  - 43:- **Current delivery stage:** Pending
+  - 84:- Evento durante a recuperação marca uma nova passagem necessária desde a página recente, ainda com o piso pendente T; terminar a caminhada atual não confirma cobertura. Só promover o piso confirmado quando uma passagem atravessar todo T sem evento/trabalho concorrente pendente. Se houver dirty/pending, conservar T e a indicação de atualização, com o mesmo orçamento de três queries por rodada. Não promover pelo máximo da coleção nem por um poll enquanto houver recuperação pendente.
+  - 94:- `Pending`: no meaningful delivery milestone has been reached yet.
+  - 98:- `Provisional`: delivery is intentionally partial/incomplete but useful for unblocking dependent work.
+  - 99:- `Blocked`: work cannot currently proceed; `Blocker Notes` become mandatory.
+  - 105:- `blocked`: execution is paused on an explicit blocker; `Blocker Notes` are mandatory.
+  - 108:## Provisional Notes (Required if `Qualifiers` includes `Provisional`)
+  - 112:## Blocker Notes (Required if `Qualifiers` includes `Blocked`)
+  - 321:## Decision Pending (Resolve Before Freeze)
+  - 378:| Harness Type | Surface | Command / Rule / Artifact | Regression It Must Catch | Adoption Timing | Evidence Plan / Follow-up |
+  - 620:| Revisão independente | Aderência, segurança, desempenho e provável P1/P2 | pending | delivery-package.md preparado | Ainda não executada | Não declarar clean antes do parecer e tratamento de achados. |
+  - 632:| Finding ID | Severity | Classification | Routing Decision | Same TODO / Split Rationale | Status | Approval / Follow-up Reference |
+  - 665:- **Current delivery stage at review time:** Pending
+  - 682:- **State transition:** pending -> running; execução observada e artefato consolidado, aguardando avaliação independente antes de passed.
+  - 692:  - `result_summary`: `Measured recent/deep/tied pages on20382 rows,1000 ties; existing index retained after candidate trial. Independent judgment pending.`
+  - 700:- **State transition:** pending -> running; provas finais revision3 executadas em fonte idêntica, aguardando julgamento independente antes de passed.
+  - 710:  - `result_summary`: `Full34/34 and FRC3/3 passed on identical current source/build; shared3-attempt budget incl failures, retained T/restart, opening and empty notifications, context success/error/backfill covered. Independent delta judgment pending.`
+  - 718:- **State transition:** pending -> running; execução observada e artefato consolidado, aguardando avaliação independente antes de passed.
+  - 728:  - `result_summary`: `Three deterministic real PostgreSQL barrier batches retain10 increments after ACK; regression mutation fails10vs0 and exact source restoration passes. Independent judgment pending.`
+  - 736:- **State transition:** pending -> running; amostra executada, revisão independente pendente antes de passed.
+  - 746:  - `result_summary`: `30/30 reads,5 concurrent×6; p50 23.36ms,p95 64.26ms,max68.5ms; page50,unread7 unchanged,251 messages unchanged,foreign malformed request404. Review pending, no production SLO claim.`
+
+Unchecked checklist items:
+  - 244:- [ ] DOD-07: revisão, guardas de execução/closeout e matriz de evidência específicos completos antes de conclusão.
+  - 254:- [ ] VAL-07: cumprir revisões/guardas exigidos, incluindo aderência arquitetural, qualidade de testes, segurança, performance, dívida de verificação e review final, antes do closeout.
+
+Inline debt scan paths:
+  - /mnt/c/unifast/leadshug/leadshug_now_docker/api-app/src/domain/inbox/conversations.service.ts
+  - /mnt/c/unifast/leadshug/leadshug_now_docker/api-app/src/domain/inbox/timeline-pagination.spec.ts
+  - /mnt/c/unifast/leadshug/leadshug_now_docker/api-app/src/domain/inbox/timeline-pagination.ts
+  - /mnt/c/unifast/leadshug/leadshug_now_docker/api-app/src/surfaces/bff/conversations.controller.ts
+  - /mnt/c/unifast/leadshug/leadshug_now_docker/api-app/test/atendimento.e2e-spec.ts
+  - /mnt/c/unifast/leadshug/leadshug_now_docker/api-app/test/browser-server.cjs
+  - /mnt/c/unifast/leadshug/leadshug_now_docker/api-app/test/timeline-fixtures.cjs
+  - /mnt/c/unifast/leadshug/leadshug_now_docker/web-app/e2e/timeline-freshness.ts
+  - /mnt/c/unifast/leadshug/leadshug_now_docker/web-app/e2e/timeline.spec.ts
+  - /mnt/c/unifast/leadshug/leadshug_now_docker/web-app/playwright.config.ts
+  - /mnt/c/unifast/leadshug/leadshug_now_docker/web-app/src/api.ts
+  - /mnt/c/unifast/leadshug/leadshug_now_docker/web-app/src/telas/Inbox.tsx
+  - /mnt/c/unifast/leadshug/leadshug_now_docker/web-app/src/tempoReal.spec.ts
+  - /mnt/c/unifast/leadshug/leadshug_now_docker/web-app/src/tempoReal.ts
+  - /mnt/c/unifast/leadshug/leadshug_now_docker/web-app/src/timeline.test.ts
+  - /mnt/c/unifast/leadshug/leadshug_now_docker/web-app/src/timeline.ts
+
+Inline debt accepted:
+  - none
+
+Inline debt canonical-link-missing:
+  - none
+
+Inline debt cleanup-required:
+  - none
+
+Counts: waiver=51 blocker=21 unchecked=2 accepted_inline=0 canonical_link_missing=0 cleanup_required=0

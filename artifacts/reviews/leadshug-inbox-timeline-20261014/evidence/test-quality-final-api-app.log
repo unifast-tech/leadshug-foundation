@@ -1,0 +1,35 @@
+Test Quality Audit
+Repository: /mnt/c/unifast/leadshug/leadshug_now_docker/api-app
+Outcome heuristic: medium
+
+Scan paths:
+  - /mnt/c/unifast/leadshug/leadshug_now_docker/api-app/src/domain/inbox/timeline-pagination.spec.ts
+  - /mnt/c/unifast/leadshug/leadshug_now_docker/api-app/test/atendimento.e2e-spec.ts
+  - /mnt/c/unifast/leadshug/leadshug_now_docker/api-app/test/browser-server.cjs
+  - /mnt/c/unifast/leadshug/leadshug_now_docker/api-app/test/timeline-fixtures.cjs
+
+Hard bypass markers:
+  - none
+
+Test-only support route usage:
+  - none
+
+Auth shortcut hints:
+  - none
+
+Status-only assertion hints:
+  - 462:          expect(resposta.status).toBe(200);
+
+No-exception-only assertion hints:
+  - none
+
+Ambient subject fallback hints:
+  - none
+
+DI override hints:
+  - none
+
+Mock / fallback hints:
+  - none
+
+Counts: hard_bypass=0 test_support=0 auth_shortcut=0 status_only=1 no_exception_only=0 ambient_subject_fallback=0 di_override=0 mock_hint=0

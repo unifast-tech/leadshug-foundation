@@ -1,0 +1,121 @@
+{
+  "schema_version": "leadshug-committed-source-bridge-v1",
+  "recorded_at_utc": "2026-10-15T05:14:32.526434+00:00",
+  "validation_attestations": [
+    "attestation-browser-web-authority-revision6-final-full-20261015.json",
+    "attestation-browser-web-authority-revision6-final-frc3-20261015.json"
+  ],
+  "claim": "committed source bytes equal pre-commit validated bytes; attestation HEAD/diff snapshots remain immutable",
+  "repositories": {
+    "api": {
+      "branch": "feature/inbox-timeline-pagination",
+      "commit": "ae6a9662c29b77276351aa9de653a47276372246",
+      "clean": true,
+      "files": [
+        {
+          "path": "src/domain/inbox/conversations.service.ts",
+          "validated_sha256": "93e69b0a1811533d0d718fe3fd3b105b1376d2a481ab2b22d8f1bfcf5dbe452e",
+          "committed_blob_sha256": "93e69b0a1811533d0d718fe3fd3b105b1376d2a481ab2b22d8f1bfcf5dbe452e",
+          "working_tree_sha256": "93e69b0a1811533d0d718fe3fd3b105b1376d2a481ab2b22d8f1bfcf5dbe452e"
+        },
+        {
+          "path": "src/domain/inbox/timeline-pagination.spec.ts",
+          "validated_sha256": "a4c128981c7d3a0e93ba51de17392a34320e89f78098e5ed383532011ff6bb4d",
+          "committed_blob_sha256": "a4c128981c7d3a0e93ba51de17392a34320e89f78098e5ed383532011ff6bb4d",
+          "working_tree_sha256": "a4c128981c7d3a0e93ba51de17392a34320e89f78098e5ed383532011ff6bb4d"
+        },
+        {
+          "path": "src/domain/inbox/timeline-pagination.ts",
+          "validated_sha256": "d2cb9e533c8741f34babb1cef0a771878ae488474a3162e844a2f1d4d3acd6af",
+          "committed_blob_sha256": "d2cb9e533c8741f34babb1cef0a771878ae488474a3162e844a2f1d4d3acd6af",
+          "working_tree_sha256": "d2cb9e533c8741f34babb1cef0a771878ae488474a3162e844a2f1d4d3acd6af"
+        },
+        {
+          "path": "src/surfaces/bff/conversations.controller.ts",
+          "validated_sha256": "0b5c46a78aafd8085b609ad711bcdb7626263094f434240f37b8700f20291565",
+          "committed_blob_sha256": "0b5c46a78aafd8085b609ad711bcdb7626263094f434240f37b8700f20291565",
+          "working_tree_sha256": "0b5c46a78aafd8085b609ad711bcdb7626263094f434240f37b8700f20291565"
+        },
+        {
+          "path": "test/atendimento.e2e-spec.ts",
+          "validated_sha256": "1bb4acb19fc522b397424b319ab04563e3608605dcfe307970eecdd0d464b5b8",
+          "committed_blob_sha256": "1bb4acb19fc522b397424b319ab04563e3608605dcfe307970eecdd0d464b5b8",
+          "working_tree_sha256": "1bb4acb19fc522b397424b319ab04563e3608605dcfe307970eecdd0d464b5b8"
+        },
+        {
+          "path": "test/browser-server.cjs",
+          "validated_sha256": "031e9d1e282603c098c4bb594fb13a08ab2bc2f301c9a3ebb5a6362cae6fe42b",
+          "committed_blob_sha256": "031e9d1e282603c098c4bb594fb13a08ab2bc2f301c9a3ebb5a6362cae6fe42b",
+          "working_tree_sha256": "031e9d1e282603c098c4bb594fb13a08ab2bc2f301c9a3ebb5a6362cae6fe42b"
+        },
+        {
+          "path": "test/timeline-fixtures.cjs",
+          "validated_sha256": "bc15f1758ec574dec1f1c66330e0cc9804705e103fb5abab7f9015e5e8563f9f",
+          "committed_blob_sha256": "bc15f1758ec574dec1f1c66330e0cc9804705e103fb5abab7f9015e5e8563f9f",
+          "working_tree_sha256": "bc15f1758ec574dec1f1c66330e0cc9804705e103fb5abab7f9015e5e8563f9f"
+        }
+      ]
+    },
+    "web": {
+      "branch": "feature/inbox-timeline-pagination",
+      "commit": "4e56f6c1f4515b918d05b8c87e890d42e8542c56",
+      "clean": true,
+      "files": [
+        {
+          "path": "e2e/timeline-freshness.ts",
+          "validated_sha256": "ad41153df34c53f6674325b72887e701259ba7a8e752afd38ff4cdd8728c4cd0",
+          "committed_blob_sha256": "ad41153df34c53f6674325b72887e701259ba7a8e752afd38ff4cdd8728c4cd0",
+          "working_tree_sha256": "ad41153df34c53f6674325b72887e701259ba7a8e752afd38ff4cdd8728c4cd0"
+        },
+        {
+          "path": "e2e/timeline.spec.ts",
+          "validated_sha256": "36e51ccf9df361ff0f6704660cdf3fe86b821b4845e264a649c9d2583e0e1e4e",
+          "committed_blob_sha256": "36e51ccf9df361ff0f6704660cdf3fe86b821b4845e264a649c9d2583e0e1e4e",
+          "working_tree_sha256": "36e51ccf9df361ff0f6704660cdf3fe86b821b4845e264a649c9d2583e0e1e4e"
+        },
+        {
+          "path": "playwright.config.ts",
+          "validated_sha256": "d69c084d15cfef29ad23851036cb90309c60aa7a7b16c6810e3ae9b0adbbdd98",
+          "committed_blob_sha256": "d69c084d15cfef29ad23851036cb90309c60aa7a7b16c6810e3ae9b0adbbdd98",
+          "working_tree_sha256": "d69c084d15cfef29ad23851036cb90309c60aa7a7b16c6810e3ae9b0adbbdd98"
+        },
+        {
+          "path": "src/api.ts",
+          "validated_sha256": "87ba36bd21518725ba0e42221030d77b723144ef8d0581fddb2d9102233e7db2",
+          "committed_blob_sha256": "87ba36bd21518725ba0e42221030d77b723144ef8d0581fddb2d9102233e7db2",
+          "working_tree_sha256": "87ba36bd21518725ba0e42221030d77b723144ef8d0581fddb2d9102233e7db2"
+        },
+        {
+          "path": "src/telas/Inbox.tsx",
+          "validated_sha256": "c499895fee74325e5357052186dd5de9d46c7bc867174e614a9950009ced57ae",
+          "committed_blob_sha256": "c499895fee74325e5357052186dd5de9d46c7bc867174e614a9950009ced57ae",
+          "working_tree_sha256": "c499895fee74325e5357052186dd5de9d46c7bc867174e614a9950009ced57ae"
+        },
+        {
+          "path": "src/tempoReal.spec.ts",
+          "validated_sha256": "378a97ce29c6382f6a7ae9018121ed99ef2733a2b1c8f01c3889074611fa7dd5",
+          "committed_blob_sha256": "378a97ce29c6382f6a7ae9018121ed99ef2733a2b1c8f01c3889074611fa7dd5",
+          "working_tree_sha256": "378a97ce29c6382f6a7ae9018121ed99ef2733a2b1c8f01c3889074611fa7dd5"
+        },
+        {
+          "path": "src/tempoReal.ts",
+          "validated_sha256": "118ceedc40649eb8b7ddfa44eee7824224994bf383dc9b51e496f80236da0fcf",
+          "committed_blob_sha256": "118ceedc40649eb8b7ddfa44eee7824224994bf383dc9b51e496f80236da0fcf",
+          "working_tree_sha256": "118ceedc40649eb8b7ddfa44eee7824224994bf383dc9b51e496f80236da0fcf"
+        },
+        {
+          "path": "src/timeline.test.ts",
+          "validated_sha256": "16d1f1a12d20935e399e4b23e4d93de7047f9015dfd5a65ee6093d0645c38fd4",
+          "committed_blob_sha256": "16d1f1a12d20935e399e4b23e4d93de7047f9015dfd5a65ee6093d0645c38fd4",
+          "working_tree_sha256": "16d1f1a12d20935e399e4b23e4d93de7047f9015dfd5a65ee6093d0645c38fd4"
+        },
+        {
+          "path": "src/timeline.ts",
+          "validated_sha256": "0bfd7d287f93c8c6393718f3f05cd9c248ce50311758bf9995e6ba80b5cd9311",
+          "committed_blob_sha256": "0bfd7d287f93c8c6393718f3f05cd9c248ce50311758bf9995e6ba80b5cd9311",
+          "working_tree_sha256": "0bfd7d287f93c8c6393718f3f05cd9c248ce50311758bf9995e6ba80b5cd9311"
+        }
+      ]
+    }
+  }
+}

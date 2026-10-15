@@ -1,0 +1,18 @@
+CREATE INDEX
+ANALYZE
+=== EXACT_DEEP_CURSOR_WITH_CANDIDATE_INDEX ===
+                                                                                                         QUERY PLAN                                                                                                         
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Limit  (cost=0.41..14.33 rows=51 width=103) (actual time=3.875..3.913 rows=51 loops=1)
+   Buffers: shared hit=9832
+   ->  Index Scan using messages_conversation_created_at_id_timeline_trial_idx on messages  (cost=0.41..3173.07 rows=11630 width=103) (actual time=3.875..3.909 rows=51 loops=1)
+         Index Cond: (conversation_id = 'f0619bbd-9e54-418f-9bf9-a5cc0b6c5673'::text)
+         Filter: ((created_at < '2026-10-15 03:34:03.183+00'::timestamp with time zone) OR ((created_at = '2026-10-15 03:34:03.183+00'::timestamp with time zone) AND (id < 'fffb7cf1-cc91-4748-b3b1-d2d91d056f8f'::text)))
+         Rows Removed by Filter: 10001
+         Buffers: shared hit=9832
+ Planning:
+   Buffers: shared hit=29
+ Planning Time: 0.353 ms
+ Execution Time: 3.942 ms
+(11 rows)
+

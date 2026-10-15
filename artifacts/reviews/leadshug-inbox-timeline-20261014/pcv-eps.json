@@ -1,0 +1,94 @@
+{
+  "policy_schema_version": "pcv-1",
+  "schema_version": "pcv-1",
+  "lane_id": "EPS",
+  "todo_id": "TODO-leadshug-inbox-message-timeline-pagination",
+  "run_id": "explain-exact-20261015",
+  "environment_id": "principal-checkout-linux-node22-postgresql16-disposable",
+  "executor_id": "/root/timeline_executor_resume",
+  "reviewer_id": "delivery-adherence-resolution-native",
+  "recorded_at_utc": "2026-10-15T03:36:56Z",
+  "evidence_type": "explain",
+  "sample_profile_id": "EPS-SP-STRONG",
+  "acceptance_rule_id": "EPS-A2",
+  "result_summary": "Measured recent/deep/tied pages on20382 rows,1000 ties; existing index retained after candidate trial. Independently accepted by delivery-adherence-resolution.json; local scope only.",
+  "artifact_payload": {
+    "access_pattern_classification": {
+      "authorization": "exact conversation/grant lookup before query validation",
+      "anchor": "scoped message id lookup",
+      "page": "conversation_id + strict lexicographic before + DESC(created_at,id) + LIMIT51",
+      "response": "ascending order,50 messages max"
+    },
+    "touched_path_audit_summary": "BFF resolver/parser/service and active-conversation UI consumer; no public API/Consultar changes.",
+    "strong_query_evidence_type": "explain",
+    "fixture": {
+      "conversation_rows": 20382,
+      "maximum_timestamp_tie": 1000,
+      "deep_anchor_offset_for_selection_only": 10000
+    },
+    "measurements": [
+      {
+        "scenario": "recent",
+        "execution_ms": 1.094,
+        "rows_returned": 51,
+        "index_rows": 1001,
+        "shared_hit_buffers": 37,
+        "sort": "incremental/top-N"
+      },
+      {
+        "scenario": "deep",
+        "execution_ms": 3.442,
+        "rows_returned": 51,
+        "index_rows_surviving": 1000,
+        "rows_removed_by_filter": 10001,
+        "shared_hit_buffers": 357,
+        "sort": "incremental/top-N"
+      },
+      {
+        "scenario": "tie",
+        "execution_ms": 0.85,
+        "rows_returned": 51,
+        "index_rows_surviving": 500,
+        "rows_removed_by_filter": 501,
+        "shared_hit_buffers": 37,
+        "sort": "incremental/top-N"
+      }
+    ],
+    "candidate_index": {
+      "columns": [
+        "conversation_id",
+        "created_at DESC",
+        "id DESC"
+      ],
+      "deep_execution_ms": 3.942,
+      "deep_shared_hit_buffers": 9832,
+      "rows_removed_by_filter": 10001,
+      "decision": "not retained; same OR predicate still filters depth, heap access larger than existing index; no measured need for production migration"
+    },
+    "residual_risk": "Deep OR keyset still filters newer rows; timings are local warm data, not a production capacity or SLO claim.",
+    "raw_artifacts": [
+      {
+        "path": "foundation_documentation/artifacts/reviews/leadshug-inbox-timeline-20261014/evidence/explain-timeline-exact.sql",
+        "sha256": "30b7477601cd109ffd3af7d38e9df1e5fbf8a6af56bf90cf52a42f4779ee0cb8"
+      },
+      {
+        "path": "foundation_documentation/artifacts/reviews/leadshug-inbox-timeline-20261014/evidence/explain-timeline-exact.log",
+        "sha256": "6e346b5b0609de7f347481fb2b4eccc93e4ddf8b41219bb1348fbf169af9b9b6"
+      },
+      {
+        "path": "foundation_documentation/artifacts/reviews/leadshug-inbox-timeline-20261014/evidence/explain-index-trial.sql",
+        "sha256": "8ac4343ac0633b5b1535e171ec7466e58c5c6488d1de8abc516b15f6e6b914a3"
+      },
+      {
+        "path": "foundation_documentation/artifacts/reviews/leadshug-inbox-timeline-20261014/evidence/explain-index-trial.log",
+        "sha256": "43251847c09a71819a11aa135c8710b72a3eb4af2188f07bd3c071bfa980171c"
+      }
+    ],
+    "independent_review": {
+      "reference": "delivery-adherence-resolution.json",
+      "reviewer_id": "delivery-adherence-resolution-native",
+      "assessment": "acceptable within bounded local evidence; API source unchanged"
+    }
+  },
+  "artifact_sha256": "248ea237489683aaa67371eb58efecab9e237c9aac08e36f3717b064f4825dfc"
+}

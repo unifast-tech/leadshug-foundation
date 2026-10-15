@@ -1,0 +1,102 @@
+{
+  "policy_schema_version": "pcv-1",
+  "schema_version": "pcv-1",
+  "lane_id": "FRC",
+  "todo_id": "TODO-leadshug-inbox-message-timeline-pagination",
+  "run_id": "frc-strong-final-20261015",
+  "environment_id": "principal-checkout-linux-node22-postgresql16-chromium-disposable",
+  "executor_id": "/root/timeline_executor_resume",
+  "reviewer_id": "delivery-adherence-native",
+  "recorded_at_utc": "2026-10-15T03:42:20Z",
+  "evidence_type": "source-owned-playwright-real-backend-races",
+  "sample_profile_id": "FRC-SP-M",
+  "acceptance_rule_id": "FRC-A1",
+  "result_summary": "10 real repeated incoming pushes×3 independent browser repetitions passed; original T survives H>T and dirty late-ID insertion. Full31/31 and poll-resume regression pass on identical final source/build. Independent judgment pending.",
+  "artifact_payload": {
+    "concurrency_policy": "serialize",
+    "policy_by_action": [
+      {
+        "action": "recovery",
+        "policy": "serialize",
+        "guard": "single-flight per generation,coalesce dirty,next pass retains pendingT,max3pagequeries per round"
+      },
+      {
+        "action": "context switch",
+        "policy": "cancel previous",
+        "guard": "logical cancellation by BU/conversation/generation on responses/errors/draft/scroll"
+      },
+      {
+        "action": "backfill/send",
+        "policy": "drop duplicate",
+        "guard": "in-flight flags and current-generation draft ref"
+      },
+      {
+        "action": "metadata",
+        "policy": "last-write-wins",
+        "guard": "version-controlled current response; historical pages never overwrite metadata"
+      }
+    ],
+    "burst_profile_observed": {
+      "triggers_per_repetition": 10,
+      "repetitions": 3,
+      "cases_passed": 3,
+      "pushes_asserted_per_repetition": 11,
+      "pushes_note": "one real head trigger plus10 repeated real inbound webhooks while traversal blocked; browser waits for11 message frames",
+      "full_suite": {
+        "cases_passed": 31,
+        "duration_seconds": 48.6
+      },
+      "strong_case_duration_seconds": 22.7
+    },
+    "runner_or_manual_path": "web-app/e2e/timeline.spec.ts:168; npx playwright test e2e/timeline.spec.ts --grep=\"preserva o piso T\" --repeat-each=3; full suite: npm run test:tela",
+    "race_matrix": [
+      {
+        "surface": "history",
+        "case": "251 IDs; prepend same visible anchor offset delta<2px, including arrival while delayed actual response"
+      },
+      {
+        "surface": "recovery",
+        "case": "H>T; walkthrough already behind cursor in original T; late lower UUID behind walked range; dirty from10 real pushes; new coalesced pass retains T; full database/UI ID equality and unread11"
+      },
+      {
+        "surface": "reconnect",
+        "case": "real network disconnect and burst130 while offline; recover without subsequent message event"
+      },
+      {
+        "surface": "poll",
+        "case": "60s clock advancement resumes pending>3page recovery without more events or Continue click,full382 IDs"
+      },
+      {
+        "surface": "send/draft/context",
+        "case": "delay actual POST response; persisted author; typed-new draft preserved; switch conversation and BU rejects old response"
+      },
+      {
+        "surface": "metadata",
+        "case": "close wins over delayed historical response; no stale status restoration"
+      },
+      {
+        "surface": "states",
+        "case": "loading,empty,end,error/retry and grant-loss404; no fabricated BFF payloads"
+      }
+    ],
+    "runtime_freshness": {
+      "captured_before_workers": "2026-10-15T03:40:28.312Z",
+      "served_equals_dist_sha256": "549f99b15659969a0fed38a61c029c214b895093e98539a02861873b1b5139c8",
+      "full_attestation_captured_at": "2026-10-15T03:39:29.661Z",
+      "source_manifest_matches_full_suite": true,
+      "root_verified_all16_current_source_hashes": true
+    },
+    "raw_artifacts": [
+      {
+        "path": "foundation_documentation/artifacts/reviews/leadshug-inbox-timeline-20261014/evidence/web-frc-strong-final-3x.log",
+        "sha256": "8cd7c693430ccd215c495b438ae4c39d0824dc0487dd11e3cf279bbdda9572f4"
+      },
+      {
+        "path": "foundation_documentation/artifacts/reviews/leadshug-inbox-timeline-20261014/evidence/attestation-browser-frc-strong-final-20261015.json",
+        "sha256": "926ea3cf6fe140f0b79fea2a235b6a9b8e68352e33bcd1e774dcc1bbb144d723"
+      }
+    ],
+    "residual_risk": "Bounded active-conversation memory grows as user loads history; no cache of other conversations. Backdated imports earlier thanT group and production traffic/provider transport are outside this approved slice."
+  },
+  "artifact_sha256": "9206858a99052977dfb684109d540a1a9e2dd896a34182aea864b0cb3a8e8233"
+}

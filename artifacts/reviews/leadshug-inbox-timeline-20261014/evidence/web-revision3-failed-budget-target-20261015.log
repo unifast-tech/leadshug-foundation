@@ -1,0 +1,275 @@
+v22.23.3
+
+> @leadshug/web@0.1.0 build
+> tsc -b && vite build
+
+vite v5.4.21 building for production...
+transforming...
+✓ 55 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                   0.69 kB │ gzip:  0.44 kB
+dist/assets/index-wuzy3kMN.css    8.32 kB │ gzip:  2.39 kB
+dist/assets/index-3k5pQ0yc.js   223.99 kB │ gzip: 69.69 kB
+✓ built in 1.44s
+npm notice
+npm notice New major version of npm available! 11.16.0 -> 12.2.0
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.0
+npm notice To update run: npm install -g npm@12.2.0
+npm notice
+[WebServer] timeline fixtures listening on 127.0.0.1:3101
+[WebServer] 
+[WebServer] > @leadshug/api@0.1.0 build
+[WebServer] > nest build
+[WebServer] 
+[WebServer] timeline test API listening on 3100; database leadshug_timeline_20261014
+[WebServer] 
+[WebServer] > @leadshug/web@0.1.0 preview
+[WebServer] > vite preview --host 127.0.0.1 --port 4173 --strictPort
+[WebServer] 
+[WebServer]   ➜  Local:   http://127.0.0.1:4173/
+
+Running 1 test using 1 worker
+
+  ✘  1 e2e/timeline.spec.ts:299:3 › timeline da inbox com backend e PostgreSQL reais › falhas de recuperação consomem o orçamento e exigem continuação explícita (1.9s)
+
+
+  1) e2e/timeline.spec.ts:299:3 › timeline da inbox com backend e PostgreSQL reais › falhas de recuperação consomem o orçamento e exigem continuação explícita 
+
+    Error: expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 201
+    + Received  +   0
+
+    @@ -1,207 +1,6 @@
+      Array [
+    -   "0e7c8dc7-7787-42bf-b3f2-778d7c2dfc3b",
+    -   "67cc59d3-767e-4c6d-903c-83e503499dc8",
+    -   "a9d017cb-83c0-424e-8998-a98303a55a95",
+    -   "d05965d1-e195-4f10-9704-53964e0aef07",
+    -   "3a45e16c-5ee6-4b52-9a8f-b564084185cf",
+    -   "25df7d95-1596-4a8f-aa52-11db0d2f9c67",
+    -   "5afe08b3-864b-4644-8c77-efefdb120bae",
+    -   "857370c2-b22c-4869-85eb-06fde3b2b48d",
+    -   "89b76c28-81b0-429c-a29b-0f6d84fffc0d",
+    -   "c35d2424-4131-4bdc-9dfa-55db10a28b4a",
+    -   "b5fd9272-e9ed-4397-b31d-5f2593e2cece",
+    -   "c6d39221-57c4-4702-9864-1dbd80479b4d",
+    -   "90b486f7-b808-49b3-b15d-a554ee3b6af0",
+    -   "21aed75f-585d-49c7-975f-3e2f3c196056",
+    -   "fba58995-14c2-43ed-8f29-f117c5a905d4",
+    -   "9aa9d4d8-4ba5-435c-88a6-f6fb6b32b17f",
+    -   "eb00b7a1-a473-4c28-9314-b7aec7550bce",
+    -   "12a41bee-aede-425a-94d6-80b805362145",
+    -   "f6dac1f4-600c-4f86-a3e6-c3c3dde1a2df",
+    -   "95a9a980-662c-43d1-82f4-9a97535faded",
+    -   "2faa92dd-32be-4aae-a171-0f20303f7212",
+    -   "f0af17b5-d750-48ca-9337-6d20055a6440",
+    -   "530cc3f7-ca4b-4428-9a5d-db3ea5369146",
+    -   "595fc425-1246-4aa2-94af-b32af0a6c0fe",
+    -   "3e88138f-9e29-44a7-9073-35cb15625552",
+    -   "1127d962-1032-42cc-8d24-cdcbb6943ae7",
+    -   "6e44b292-0141-4052-bd14-f578a5e90ad1",
+    -   "5750e3c8-d9c4-42db-9f63-47e89477ac6e",
+    -   "0d1ac8a1-b89f-4c37-80f3-e39c289b971d",
+    -   "d35aecaa-6c91-4eaf-9ad0-445797b0c4ba",
+    -   "d48b3942-bcad-4bd8-80c2-7c1975543859",
+    -   "e4f7e959-bc80-4f85-a981-c4801f41094a",
+    -   "30173b8b-524d-4d00-adef-fec65be8d7fa",
+    -   "635fd39f-1f90-4e9a-9a1d-3f0fde389fb4",
+    -   "ea71e0f8-e8ac-46d0-8553-463c1b7ba045",
+    -   "88698f11-614d-410e-a1a0-3ee27f12b44d",
+    -   "dc297fd6-e9ee-4fb2-bc95-dd7b9163fec6",
+    -   "dfaa10ee-92f7-4b16-8834-050e89c97e72",
+    -   "daec2f7c-39c9-4d66-94eb-7c245cfc73b7",
+    -   "65e64ce5-d0f8-4de0-a0d9-93c13de916ae",
+    -   "698cd76d-8013-4abc-8cf7-24ca1e8be894",
+    -   "49e8538a-f451-450c-8129-949a7b54346b",
+    -   "e788d969-388c-40f4-a33d-416304e9010b",
+    -   "02a838ce-7365-4050-b108-ec1547a4bfee",
+    -   "db61c7b8-ead0-472a-be02-f011a311d923",
+    -   "e0d594fc-49f1-4562-a5ae-80a90ef390fb",
+    -   "fe4b3c73-06cb-428b-a885-f5441c58fe01",
+    -   "1807d4e8-7eda-4bbc-9e94-39e2dc5e6479",
+    -   "614da187-e3ca-4860-bca4-37bb9957dd53",
+    -   "6638f725-6755-40a3-aae1-88d828bbb197",
+    -   "63cfaa22-5916-414d-9f2a-7a6ae9c92687",
+    -   "aeb0e01d-5ec9-4827-8fee-6243b6ba1941",
+    -   "cef217a3-94ea-4928-a892-64ef63583d2c",
+    -   "34cfe28c-6fac-447b-95a1-d4b7a1d78e05",
+    -   "e4114f8d-e9e1-4703-872e-f05477262702",
+    -   "34b4bcba-a1e1-41be-87c0-c202a19bd181",
+    -   "a5daab4c-5c68-40e4-a154-6ccfb0ba1671",
+    -   "ab9a43e5-9614-4c14-8250-6c6f24423548",
+    -   "fb884d1f-7a0c-4077-a17c-31e88168104b",
+    -   "f832de2e-327e-4273-9086-49df31d8a667",
+    -   "723535dc-5e93-42f9-af57-eb2d549a1c92",
+    -   "0af39fa7-18ac-442e-a5e0-ea071e8c7a8e",
+    -   "d0335733-d007-4c43-a503-9f8b39e61a02",
+    -   "479674a2-fc19-498c-93c5-7277f1a24594",
+    -   "bbec826b-06ac-40eb-8c4e-e7f695071eda",
+    -   "27715fd8-ceb7-4a65-bb5b-58693def8a17",
+    -   "f7787f14-1b49-4a62-a183-85c6a1e416fa",
+    -   "5cc86a72-8707-40e8-b589-467ac1e5212a",
+    -   "4f0f7155-aa90-4f88-96be-0119259095ba",
+    -   "671dfff6-345d-49f7-bdcf-33306cf7f17e",
+    -   "ac16d4cb-a51d-407f-9215-2b4e972be484",
+    -   "4bfe0430-d65d-4d85-8ea1-d0d04bc14630",
+    -   "0d9688b7-cffa-4f73-8370-2ee3ea613702",
+    -   "927dbf10-f1da-43e8-8d49-a71648e69c18",
+    -   "aeeb5223-8e94-4eba-89d9-bf7cee82a1ee",
+    -   "6048f50e-b768-4931-a964-eb97078013c1",
+    -   "4599c5f3-f046-44d1-8f81-1d9b53ac6077",
+    -   "28de5506-41fe-41a7-a4aa-3ae498cfff73",
+    -   "b0cca7e8-a8d3-42c3-8500-a04c7d79b8fa",
+    -   "d19f2221-df89-4d47-8a6d-0bbb52f5181f",
+    -   "b5fe1ba0-f36b-4f96-a177-f943edfc628b",
+    -   "6ce36eb3-26a7-48f1-a674-15ad4201aedb",
+    -   "20010632-f1fe-4c8b-aa76-cf659ef09b9d",
+    -   "fe1d6743-ab6a-406d-975a-fc8e68c8e6e8",
+    -   "d6b3e39d-49a2-4046-8969-3110e4c6a7ec",
+    -   "5bc902f5-0566-45f2-8ae2-516ce5551f69",
+    -   "e838f90a-3e2f-4a6c-962c-2283d6d9c794",
+    -   "cd42623a-0167-4773-9fe0-c723204dfed4",
+    -   "564839fb-fcbe-4464-9d38-9c11f25b2ec9",
+    -   "a8fab94a-be70-44f9-98fd-795df0f7a441",
+    -   "a9802366-8727-4d9a-b0d6-34f2f21e489d",
+    -   "404c15cd-adb7-404c-9e8f-6649bda927c1",
+    -   "d06c9447-8a77-430a-ba6d-0332f4be048e",
+    -   "6535d447-bcec-48db-acf3-cb0c769258e4",
+    -   "8f5892e4-9aca-41d4-99e3-567b3e2203d3",
+    -   "45954e42-53a8-4b71-a2fb-4e52afc53613",
+    -   "b2b3385b-de6a-4923-bc2c-bcfe07a3c8b1",
+    -   "63b60b38-d045-4d8f-a9b2-34f31e8fed1b",
+    -   "6e862875-e49a-4008-ad8e-43da80214e1b",
+    -   "87d34c07-e6a6-4d95-8b6b-64e2f5503971",
+    -   "e9513489-936b-438c-996b-b5b4da317e92",
+    -   "995de6fe-b6d8-4b98-80bc-7aa7d55f3840",
+    -   "cf144594-c275-4030-a1e8-72d1047f024e",
+    -   "8b672870-c590-4ec6-b70e-84c8561405fb",
+    -   "d419da8d-d50c-430b-95c4-4aceb80b8035",
+    -   "48011294-c03b-4fb7-be96-d0f57b881055",
+    -   "620c9f99-0cd6-4d04-b7a3-4ce8fda2e801",
+    -   "03a91e3f-7d4e-4a91-a920-7cd9d8f5f91e",
+    -   "0a25bc12-6183-4635-b5c7-078943f7c4fd",
+    -   "6484d48d-d4ce-41e4-bf71-4e95c1fcda4b",
+    -   "f40b78a8-2b06-4bb4-89bd-1e98b37e8031",
+    -   "dc397648-fd6f-479e-bf87-1bdc13878e94",
+    -   "a32a6f58-08e0-4b70-9248-8d4e7589bc73",
+    -   "7ea9c97a-212a-4465-8ba2-3fc8ec45a8df",
+    -   "36bbe6fa-1922-4c5c-930d-2f25fc618e53",
+    -   "c6c338eb-eaf5-44d1-81dd-9b201de45dfd",
+    -   "8fac2158-e3d4-4d7f-8c50-5779e6fba17d",
+    -   "9bfcb94b-6546-4f16-84e0-0aa8c176ff45",
+    -   "d4038022-6a29-4a08-9fbd-61bdf5792b5f",
+    -   "eb9b1743-6d1b-456e-9e0b-cdd093908f05",
+    -   "a0615b14-23e0-4124-8b68-37541c07f5d2",
+    -   "9c7e29c5-7617-4159-91e2-b2d0e69eb2d9",
+    -   "7fce40f0-cb5a-4914-a4e0-75b6d3edd87b",
+    -   "6ff4948c-193d-4d1e-8159-ae030661ff93",
+    -   "03aee50d-d6a9-4317-8380-be0e4d7e9dc6",
+    -   "557e9361-8256-420c-81fb-35577b825598",
+    -   "86b57613-abcc-418d-b550-9fb014630bef",
+    -   "78ec287a-53eb-43d1-84c9-d68862d86b41",
+    -   "67df9b20-73b4-46e6-afd2-cad119b94b66",
+    -   "a7c1af97-9406-4fae-a342-fa53fa0ba853",
+    -   "41cbcbd7-1616-4d58-b485-757b6a7da687",
+    -   "e7dc31d0-7a19-431b-a58e-7ad0edc3c3ec",
+    -   "bffd4ad7-25a1-4feb-a310-810a8fe52227",
+    -   "d47f5fea-13e1-4e34-8d56-24fb78efb72c",
+    -   "70a91db1-0e09-4ed0-b773-98ba3c30448f",
+    -   "8e9407de-87c5-4285-aeae-5c29a6f94db0",
+    -   "2db1cd8a-e593-4a7e-8622-c515926df3da",
+    -   "db4013b6-eb7c-443f-b62b-b422b59efc5a",
+    -   "949caad5-e247-4086-82a1-893a50e71197",
+    -   "687cd67b-a60b-4c8c-a926-9afd79be369f",
+    -   "0115a23c-a3e4-4505-893a-72dd9e3b5fbc",
+    -   "a1502faf-0411-4325-9620-0cce6d6ceaaa",
+    -   "5ed37872-9f64-4530-8d02-87fbea7c7f65",
+    -   "d57007be-d692-47d7-88e8-86e5f1b9835b",
+    -   "3f4bd824-9f4e-4be1-9776-d6953b6ec01f",
+    -   "d165a384-bbd7-4e23-a043-4e60f9f6aaca",
+    -   "638d6217-f54f-4eee-b194-f238d9a3b1cf",
+    -   "e6f7117c-3e7f-4563-a02e-fdee0e56df36",
+    -   "1baa460a-8ea1-40ea-9278-04324e559ba0",
+    -   "6472e8f0-36aa-4a4c-8785-d944540e2dff",
+    -   "c14f4f38-7590-40b8-9d5f-3a0fd93f1b04",
+    -   "313f92a6-ba93-4d89-af68-efcc0f36438b",
+    -   "ad6b6853-cbfb-46e9-a7de-14d062a3f21f",
+    -   "d5304bc2-69c7-4055-93ad-969532ff0d81",
+    -   "42ccb85d-6cf6-4103-b160-d35dc206de5c",
+    -   "94217294-2737-444d-9c82-858d7d771965",
+    -   "39765f49-14e2-498a-895c-73185f3b4e40",
+    -   "85fbbbff-9856-453e-8560-51a9af8b13b7",
+    -   "ff7d78c9-24ed-463e-b225-e55769148fcb",
+    -   "4fc61434-8032-4934-a02a-7531bdfe52b4",
+    -   "e68c3db7-9f1c-4ea2-9124-251642595cd1",
+    -   "c759f816-1c05-46c0-a70b-f1efe085febd",
+    -   "3218bc73-9165-4a9b-bc68-d4b8719060bb",
+    -   "14034001-fbeb-488a-b5e7-cea9ecb98280",
+    -   "1e0266c2-477b-4217-909c-95b9fa319c6e",
+    -   "e1325e53-3951-4bb6-b842-8ef577149dca",
+    -   "dff26888-b662-40c6-91e2-c835c7a98ab7",
+    -   "982b9a6c-9b56-4dd3-9180-8859c367dd6f",
+    -   "2904c474-7f78-4b94-b06c-8e0d05d70cee",
+    -   "d949f046-ad20-4f65-bc45-9672e0488c75",
+    -   "c24bd940-6c0e-4d52-9ff8-4c93553ffe4e",
+    -   "25967095-8b03-448e-a96e-30407b9f5764",
+    -   "88472b16-2945-4cfb-ba55-4bb591a45f55",
+    -   "2621bc08-9aea-45b7-b3ce-9b93002b7ad1",
+    -   "2af5e5e6-de3c-4dbb-8844-ef2df369ee4e",
+    -   "7596ad7c-80d1-40e9-882d-b5b6dd80cd67",
+    -   "eb6229c2-1b33-4b3b-aa4f-afe0d8742cf5",
+    -   "1713f829-ce28-4742-9ff8-4e9d82c2511c",
+    -   "e2214738-bf1e-4169-9a2a-30435ac8956b",
+    -   "6a9408d7-8138-4efe-a854-80a42d268248",
+    -   "5753bd09-021d-4c8b-8dc1-e2665c26f549",
+    -   "4ef73062-0329-4a23-8dc0-6f01de97a899",
+    -   "a998d495-a5c3-4e65-93e9-9b090b0e33b8",
+    -   "887aa9d6-ceb8-40ac-9614-cf2e33702f21",
+    -   "0e3a6126-b30e-4cfb-afd6-9ebd9586ce6f",
+    -   "dee33b0b-e6ef-40aa-b7bd-13d8a14cd1ee",
+    -   "ab7ef3e6-5f86-441b-b534-21305f85e652",
+    -   "b4181bbc-ff0c-4e03-93c4-97315d182b43",
+    -   "11fbd41c-3128-426f-bc04-2edc57fb0174",
+    -   "214546d6-fa88-4a3f-a1ec-73832d2dc048",
+    -   "d57c5f48-85c4-4aa6-b228-02a420572bb6",
+    -   "36ee82e2-a310-4f00-b249-2f03d9fbca56",
+    -   "7b22b8b1-7573-4ceb-8ae2-77173641f773",
+    -   "260661fb-32e4-4f72-884f-2798be9fd909",
+    -   "39db921c-95c3-4d3e-8c84-cbd6a6cec526",
+    -   "16ae20e1-4515-4729-9fb7-dca3c33414eb",
+    -   "d4e33607-c420-47b1-9edb-00d261b6081f",
+    -   "5bd999ad-9e2e-4b6a-b390-644990eb893c",
+    -   "b3e3c2cf-0ec5-4aff-b8cd-0bbd11d891ce",
+    -   "79bef438-b4a6-4604-b250-a1477e5b0e60",
+    -   "54421ebc-f4e8-4512-a464-20bddd20784d",
+        "ab758d99-a2ac-4110-9c87-851048b9badf",
+        "38d68b7e-8e3a-45d1-a6a4-f59951c970bb",
+        "914e2e3a-2c5c-48da-8e23-039ebcd8261c",
+        "26d489d4-f2bb-4cb5-aa64-21739e9276e2",
+        "c946ec17-2046-44f8-9525-3ff51144ded8",
+
+      356 |     const expected = await audit(request, fixture.conversationId);
+      357 |     const ids = await page.locator('.bolha').evaluateAll((els) => els.map((el) => el.getAttribute('data-message-id')));
+    > 358 |     expect(ids).toEqual(expected.messages.map((m: { id: string }) => m.id));
+          |                 ^
+      359 |     expect(expected.unreadCount).toBe(4);
+      360 |     expect(maxInFlight).toBe(1);
+      361 |   });
+        at /workspace/web-app/e2e/timeline.spec.ts:358:17
+
+    Error Context: test-results/timeline-timeline-da-inbox-c0aef-xigem-continuação-explícita/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/timeline-timeline-da-inbox-c0aef-xigem-continuação-explícita/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/timeline-timeline-da-inbox-c0aef-xigem-continuação-explícita/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  1 failed
+    e2e/timeline.spec.ts:299:3 › timeline da inbox com backend e PostgreSQL reais › falhas de recuperação consomem o orçamento e exigem continuação explícita 
+
+EXIT_CODE=1 RUN_ID=web-revision3-failed-budget-target-20261015

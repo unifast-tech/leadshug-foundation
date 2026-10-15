@@ -1,0 +1,161 @@
+{
+  "schema_version": "leadshug-rule-spirit-triage-v1",
+  "status": "final revision3 frozen-source supporting triage; independent delta judgment pending",
+  "repository": "api-app",
+  "raw_observations": 30,
+  "deduplicated_locations": 15,
+  "allowlist": "none",
+  "raw_scan_sha256": "8964a4ec932917b79fd5be679e04fa777db130d1f15d579dcb9d7b414b33057d",
+  "findings": [
+    {
+      "location": "test/browser-server.cjs:22",
+      "evidence": "  process.env.WEB_ORIGIN = 'http://127.0.0.1:4173';",
+      "scanner_keys": [
+        "0979048a3d65a061",
+        "ebc11589454fe381"
+      ],
+      "proposed_classification": "by-design/no-action",
+      "rationale": "Owned test-only loopback target or reserved .test identity; no operational target or secret; no suppression."
+    },
+    {
+      "location": "test/browser-server.cjs:40",
+      "evidence": "  app.enableCors({ origin: ['http://127.0.0.1:4173'], credentials: true });",
+      "scanner_keys": [
+        "4fbbb42b5cb59875",
+        "0917bac08ff24b2c"
+      ],
+      "proposed_classification": "by-design/no-action",
+      "rationale": "Owned test-only loopback target or reserved .test identity; no operational target or secret; no suppression."
+    },
+    {
+      "location": "test/timeline-fixtures.cjs:64",
+      "evidence": "  const response = await fetch(`http://127.0.0.1:${apiPort}/webhooks/meta`, {",
+      "scanner_keys": [
+        "fdfea179a243ad7f",
+        "37bfde4a277e7c3d"
+      ],
+      "proposed_classification": "by-design/no-action",
+      "rationale": "Owned test-only loopback target or reserved .test identity; no operational target or secret; no suppression."
+    },
+    {
+      "location": "test/timeline-fixtures.cjs:75",
+      "evidence": "      const query = new URL(req.url, 'http://localhost').searchParams;",
+      "scanner_keys": [
+        "18168c16c1dedf03",
+        "56b00be64ca0e1ee"
+      ],
+      "proposed_classification": "by-design/no-action",
+      "rationale": "Owned test-only loopback target or reserved .test identity; no operational target or secret; no suppression."
+    },
+    {
+      "location": "test/timeline-fixtures.cjs:113",
+      "evidence": "server.listen(fixturePort, '127.0.0.1', () => console.log(`timeline fixtures listening on 127.0.0.1:${fixturePort}`));",
+      "scanner_keys": [
+        "846e6036025e845c",
+        "7f3ff2bf85a898ae"
+      ],
+      "proposed_classification": "by-design/no-action",
+      "rationale": "Owned test-only loopback target or reserved .test identity; no operational target or secret; no suppression."
+    },
+    {
+      "location": "test/atendimento.e2e-spec.ts:73",
+      "evidence": "    A = await criarMantenedora(app, 'Alfa', 'dono@alfa.test');",
+      "scanner_keys": [
+        "222e4dc3ac247da7",
+        "62cfef2ea2d4aa2b"
+      ],
+      "proposed_classification": "by-design/no-action",
+      "rationale": "Owned test-only loopback target or reserved .test identity; no operational target or secret; no suppression."
+    },
+    {
+      "location": "test/atendimento.e2e-spec.ts:74",
+      "evidence": "    B = await criarMantenedora(app, 'Beta', 'dono@beta.test');",
+      "scanner_keys": [
+        "ec8ad555564a5583",
+        "443d317681c98942"
+      ],
+      "proposed_classification": "by-design/no-action",
+      "rationale": "Owned test-only loopback target or reserved .test identity; no operational target or secret; no suppression."
+    },
+    {
+      "location": "test/atendimento.e2e-spec.ts:78",
+      "evidence": "    cookieOwner = await login(app, 'dono@alfa.test');",
+      "scanner_keys": [
+        "58b70f0495d8269d",
+        "97671a27f5ffbb15"
+      ],
+      "proposed_classification": "by-design/no-action",
+      "rationale": "Owned test-only loopback target or reserved .test identity; no operational target or secret; no suppression."
+    },
+    {
+      "location": "test/atendimento.e2e-spec.ts:102",
+      "evidence": "      await criarUsuario(prisma, A.mantenedora.id, A.businessUnit.id, 'atendente@alfa.test', 'ATENDENTE');",
+      "scanner_keys": [
+        "1f221a9d5648bf5e",
+        "7d6f9d558588c7ab"
+      ],
+      "proposed_classification": "by-design/no-action",
+      "rationale": "Owned test-only loopback target or reserved .test identity; no operational target or secret; no suppression."
+    },
+    {
+      "location": "test/atendimento.e2e-spec.ts:103",
+      "evidence": "      const cookie = await login(app, 'atendente@alfa.test');",
+      "scanner_keys": [
+        "fdb84b2351f2613d",
+        "06c90369c5fa2c4c"
+      ],
+      "proposed_classification": "by-design/no-action",
+      "rationale": "Owned test-only loopback target or reserved .test identity; no operational target or secret; no suppression."
+    },
+    {
+      "location": "test/atendimento.e2e-spec.ts:110",
+      "evidence": "      const cookieBeta = await login(app, 'dono@beta.test');",
+      "scanner_keys": [
+        "2b23b50e8f4a1f3d",
+        "8dbcd394cef3e576"
+      ],
+      "proposed_classification": "by-design/no-action",
+      "rationale": "Owned test-only loopback target or reserved .test identity; no operational target or secret; no suppression."
+    },
+    {
+      "location": "test/atendimento.e2e-spec.ts:177",
+      "evidence": "      await criarUsuario(prisma, A.mantenedora.id, A.businessUnit.id, 'outro@alfa.test', 'ATENDENTE');",
+      "scanner_keys": [
+        "7c7334b879b47440",
+        "1b2227ad2236611a"
+      ],
+      "proposed_classification": "by-design/no-action",
+      "rationale": "Owned test-only loopback target or reserved .test identity; no operational target or secret; no suppression."
+    },
+    {
+      "location": "test/atendimento.e2e-spec.ts:178",
+      "evidence": "      const cookieOutro = await login(app, 'outro@alfa.test');",
+      "scanner_keys": [
+        "7d35f697f2bcba03",
+        "4febe17e8bc29011"
+      ],
+      "proposed_classification": "by-design/no-action",
+      "rationale": "Owned test-only loopback target or reserved .test identity; no operational target or secret; no suppression."
+    },
+    {
+      "location": "test/atendimento.e2e-spec.ts:203",
+      "evidence": "      await criarUsuario(prisma, A.mantenedora.id, A.businessUnit.id, 'outro2@alfa.test', 'ATENDENTE');",
+      "scanner_keys": [
+        "da6f914e2b0bf405",
+        "73a91c5681c0199a"
+      ],
+      "proposed_classification": "by-design/no-action",
+      "rationale": "Owned test-only loopback target or reserved .test identity; no operational target or secret; no suppression."
+    },
+    {
+      "location": "test/atendimento.e2e-spec.ts:204",
+      "evidence": "      const cookieOutro = await login(app, 'outro2@alfa.test');",
+      "scanner_keys": [
+        "8a6ad3385f150106",
+        "f435ef941f2b1e00"
+      ],
+      "proposed_classification": "by-design/no-action",
+      "rationale": "Owned test-only loopback target or reserved .test identity; no operational target or secret; no suppression."
+    }
+  ]
+}

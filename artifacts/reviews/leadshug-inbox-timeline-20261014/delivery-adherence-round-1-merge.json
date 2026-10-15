@@ -1,0 +1,76 @@
+{
+  "schema_version": "subagent-review-merge-v2",
+  "artifact_kind": "subagent_review_merge",
+  "authoritative": false,
+  "edit_policy": "derived_merge_packet",
+  "dispatch_path": "/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/artifacts/tmp/inbox-timeline-execution/delivery-adherence-dispatch.json",
+  "review_kind": "architecture_adherence",
+  "review_count": 1,
+  "reviewer_labels": [
+    "delivery-adherence-native"
+  ],
+  "highest_finding_severity": "medium",
+  "axis_summary": {
+    "performance": "mixed",
+    "elegance": "mixed",
+    "structural_soundness": "mixed",
+    "operational_fit": "mixed"
+  },
+  "recommended_paths": [
+    "Keep the approved architecture and resolve ARCH-DEL-01..03 in this TODO before accepting delivery adherence or promoting FRC to passed. Preserve pending T, distinct cursor ownership, read neutrality and generation checks while correcting budget and notification accounting. Add deterministic regressions for query budget/single-flight, an empty recovery spanning multiple rounds with a between-round notification, and a notification during initial opening. Validate complete IDs, metadata, pending-state transitions and unread readback. Rebuild and rerun affected Web unit/browser suites and the FRC repetitions against the declared Node22/real-backend/disposable-PostgreSQL topology, then bind refreshed evidence to the changed source. Retain unchanged API evidence where source identity remains established. Record the findings and dispositions in the current TODO, obtain a bounded adherence delta review, and complete the separate TQA, security, verification-debt, final-review and closeout gates before claiming completion. Renewed architecture approval is unnecessary for repairs that implement the existing frozen contract."
+  ],
+  "exact_next_step": "Record reviewer resolutions in the governing TODO using the machine-checkable resolution table or equivalent gate ledger, then extract the derived resolution packet and decide whether another bounded review pass is still required.",
+  "findings": [
+    {
+      "finding_id": "F-622089FE",
+      "severity": "medium",
+      "title": "[P2] Opening a thread drops message and connection notifications",
+      "rationale": "web-app/src/telas/Inbox.tsx:258 clears threadAtual while the initial request is pending. Message and connection callbacks invoke reconciliar, but :187 returns immediately when that thread is absent and records no pending work. If the initial GET has read its page, its real response is delayed, and an incoming message or reconnection occurs before delivery, that notification is discarded. Opening then installs the older response at :269 and only reloads the conversation list at :271. The selected thread remains stale until another trigger, ordinarily the 60-second poll. This leaves an uncovered opening transition in the approved message/connection recovery contract. The delayed-opening test checks loading presentation without an overlapping notification.",
+      "suggested_action": "A, recommended: record recovery notifications against the opening conversation/generation and reconcile read-neutrally once its initial page is installed. B: coalesce an invalidated opening read into a subsequent read-neutral refresh with the same context and budget protections. C: rely solely on a later poll, leaving the required notification unhandled. Extend the delayed real-response browser test with an incoming message and a connection callback during opening; require recovery without another event or clock advancement and verify unread preservation.",
+      "reviewer_labels": [
+        "delivery-adherence-native"
+      ],
+      "source_finding_ids": [
+        "ARCH-DEL-03"
+      ],
+      "category": "adherence",
+      "formalizable_hint": "yes",
+      "candidate_rule_level": "project",
+      "candidate_rule_id": "n/a"
+    },
+    {
+      "finding_id": "F-5F7DC78D",
+      "severity": "medium",
+      "title": "[P2] Empty-thread recovery loses notifications received between rounds",
+      "rationale": "For a recovery created with vazio=true, web-app/src/telas/Inbox.tsx:204 deliberately leaves an existing cursor unchanged when a notification arrives while recovery is paused. The subsequent invocation snapshots the already-incremented event counter at :97 and clears dirty at :98. Because the cursor is non-null, :103 skips the recent-page read and continues older pages. On exhaustion, :128 can clear recovery without ever fetching the triggering new head. For example, open an empty thread, receive more than 150 messages, pause after three pages, then receive another message or complete a send. The continuation can declare coverage complete while omitting that message and retaining old metadata. The existing empty-thread test uses 131 messages, which fits one round and cannot expose this transition.",
+      "suggested_action": "A, recommended: retain a restart-needed marker until a recent-page pass has incorporated notifications received between rounds, and require that work to finish before clearing pending coverage. B: share the same dirty-event accounting between empty and non-empty recovery branches while preserving their approved behavior. C: leave the notification discarded, which violates recovery continuity. Add a real-backend browser regression with an initially empty thread, more than three pages, and a notification or send between rounds; compare complete IDs and current metadata before accepting completion.",
+      "reviewer_labels": [
+        "delivery-adherence-native"
+      ],
+      "source_finding_ids": [
+        "ARCH-DEL-02"
+      ],
+      "category": "adherence",
+      "formalizable_hint": "yes",
+      "candidate_rule_level": "project",
+      "candidate_rule_id": "n/a"
+    },
+    {
+      "finding_id": "F-3D945780",
+      "severity": "medium",
+      "title": "[P2] Dirty events automatically renew the three-page recovery budget",
+      "rationale": "web-app/src/telas/Inbox.tsx:99 allocates three queries for every executarRecuperacao invocation. When an event arrives during traversal, :159 resets the cursor, and :177 immediately queues another invocation with a fresh budget. A round that has consumed its three queries can therefore issue another three page requests without Continue or polling. Repeated arrivals can sustain this cycle and repeatedly discard traversal progress. This diverges from the frozen requirement that a new event must not renew the round's budget. The strong browser case exercises this dirty path but asserts neither request count nor maximum concurrent recovery requests, so its green result does not establish the advertised budget protection.",
+      "suggested_action": "Fix within this TODO. A, recommended: share the remaining budget across traversal and coalesced passes, retaining pending T and required restart state when the budget reaches zero. B: defer the dirty pass to the existing Continue/poll entry points after the current budget is exhausted. C: retain immediate budget renewal, which fails the approved contract. Add deterministic request-count and single-flight assertions, including events arriving after the third request; refresh the FRC evidence.",
+      "reviewer_labels": [
+        "delivery-adherence-native"
+      ],
+      "source_finding_ids": [
+        "ARCH-DEL-01"
+      ],
+      "category": "adherence",
+      "formalizable_hint": "yes",
+      "candidate_rule_level": "project",
+      "candidate_rule_id": "n/a"
+    }
+  ]
+}

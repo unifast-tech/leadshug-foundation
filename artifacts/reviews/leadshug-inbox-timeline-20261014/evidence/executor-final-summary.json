@@ -1,0 +1,258 @@
+{
+  "task": "ST-ATT-01 inbox timeline pagination executor evidence",
+  "capturedAtUtc": "2026-10-15T03:40:28.312Z",
+  "status": "source frozen for independent review; no commit/push",
+  "runtimeAndDatabase": {
+    "node": "v22.23.3",
+    "postgres": "PostgreSQL 16.14",
+    "database": "leadshug_timeline_20261014",
+    "migrations": 17,
+    "endpoint": "timeline-postgres:5432 (credentials redacted)",
+    "disposable": true
+  },
+  "source": {
+    "api": {
+      "branch": "feature/inbox-timeline-pagination",
+      "head": "5db3fbe2043428749895fc3ff6441e9457467dd0",
+      "diffSha256": "d3d84c015c24348b1dbc885a90d66ff8f88eadf35a75b0a256a38c3f1230708b",
+      "manifestSha256": "4722038d60e7b73ac3dc04d2adbbd7af9f2a71fda6d2f9f59c87214ca3d70125",
+      "files": [
+        {
+          "path": "src/domain/inbox/conversations.service.ts",
+          "sha256": "93e69b0a1811533d0d718fe3fd3b105b1376d2a481ab2b22d8f1bfcf5dbe452e"
+        },
+        {
+          "path": "src/domain/inbox/timeline-pagination.spec.ts",
+          "sha256": "a4c128981c7d3a0e93ba51de17392a34320e89f78098e5ed383532011ff6bb4d"
+        },
+        {
+          "path": "src/domain/inbox/timeline-pagination.ts",
+          "sha256": "d2cb9e533c8741f34babb1cef0a771878ae488474a3162e844a2f1d4d3acd6af"
+        },
+        {
+          "path": "src/surfaces/bff/conversations.controller.ts",
+          "sha256": "0b5c46a78aafd8085b609ad711bcdb7626263094f434240f37b8700f20291565"
+        },
+        {
+          "path": "test/atendimento.e2e-spec.ts",
+          "sha256": "1bb4acb19fc522b397424b319ab04563e3608605dcfe307970eecdd0d464b5b8"
+        },
+        {
+          "path": "test/browser-server.cjs",
+          "sha256": "031e9d1e282603c098c4bb594fb13a08ab2bc2f301c9a3ebb5a6362cae6fe42b"
+        },
+        {
+          "path": "test/timeline-fixtures.cjs",
+          "sha256": "bc15f1758ec574dec1f1c66330e0cc9804705e103fb5abab7f9015e5e8563f9f"
+        }
+      ]
+    },
+    "web": {
+      "branch": "feature/inbox-timeline-pagination",
+      "head": "6c99c27dafdce8ed9b461d17aaaaa491b8ae16e9",
+      "diffSha256": "5b716dd27f498bfc11f5b7910922ce32fd628973e6039306a9b6159c7e9097d1",
+      "manifestSha256": "1dbc5fd0d5cea01c31c4779c40aca4fe6d354623d8321773fef56da234d6c384",
+      "files": [
+        {
+          "path": "e2e/timeline-freshness.ts",
+          "sha256": "ad41153df34c53f6674325b72887e701259ba7a8e752afd38ff4cdd8728c4cd0"
+        },
+        {
+          "path": "e2e/timeline.spec.ts",
+          "sha256": "266f63fc22a5de3482952b588d463388a048f2d98d13fa06a8107f298779a552"
+        },
+        {
+          "path": "playwright.config.ts",
+          "sha256": "d69c084d15cfef29ad23851036cb90309c60aa7a7b16c6810e3ae9b0adbbdd98"
+        },
+        {
+          "path": "src/api.ts",
+          "sha256": "87ba36bd21518725ba0e42221030d77b723144ef8d0581fddb2d9102233e7db2"
+        },
+        {
+          "path": "src/telas/Inbox.tsx",
+          "sha256": "8076cfabb46c92bc877b4975d70fca4b5d5928babc630f0683c3ace92172c945"
+        },
+        {
+          "path": "src/tempoReal.spec.ts",
+          "sha256": "378a97ce29c6382f6a7ae9018121ed99ef2733a2b1c8f01c3889074611fa7dd5"
+        },
+        {
+          "path": "src/tempoReal.ts",
+          "sha256": "118ceedc40649eb8b7ddfa44eee7824224994bf383dc9b51e496f80236da0fcf"
+        },
+        {
+          "path": "src/timeline.test.ts",
+          "sha256": "16d1f1a12d20935e399e4b23e4d93de7047f9015dfd5a65ee6093d0645c38fd4"
+        },
+        {
+          "path": "src/timeline.ts",
+          "sha256": "0bfd7d287f93c8c6393718f3f05cd9c248ce50311758bf9995e6ba80b5cd9311"
+        }
+      ]
+    },
+    "manifestRecheckAfterRuns": "all 7 API and 9 Web entries match full and FRC attestations; zero mismatches",
+    "gitDiffCheck": "passes with cr-at-eol whitespace configuration; project files use CRLF"
+  },
+  "buildFreshness": {
+    "fullRunId": "full-final31-20261015",
+    "capturedAtUtc": "2026-10-15T03:39:29.661Z",
+    "frcRunId": "frc-strong-final-20261015",
+    "frcCapturedAtUtc": "2026-10-15T03:40:28.312Z",
+    "apiHealth": 200,
+    "fixtureHealth": 200,
+    "preview": 200,
+    "servedBundle": "/assets/index-DSeTAho8.js",
+    "servedBundleSha256": "549f99b15659969a0fed38a61c029c214b895093e98539a02861873b1b5139c8",
+    "distBundleSha256": "549f99b15659969a0fed38a61c029c214b895093e98539a02861873b1b5139c8",
+    "sameServedAssetForFrc": true,
+    "fullAttestation": "attestation-browser-full-final31-20261015.json",
+    "frcAttestation": "attestation-browser-frc-strong-final-20261015.json"
+  },
+  "apiAuthority": {
+    "command": "npm run prisma:generate && npm run lint && npm run build && npm test && npm run test:e2e",
+    "exitCode": 0,
+    "unitTests": {
+      "files": 17,
+      "passed": 115,
+      "failed": 0,
+      "stdoutPersisted": false
+    },
+    "e2e": {
+      "files": 20,
+      "passed": 224,
+      "failed": 0,
+      "durationSeconds": 111.92,
+      "log": "api-e2e-authority.log"
+    },
+    "runtimeLog": "api-runtime-authority.txt",
+    "note": "generate/lint/build/unit stdout was observed in executor output but not separately persisted; detailed final E2E log retained. No rerun after Web-only edits."
+  },
+  "webAuthority": {
+    "unit": {
+      "command": "npm test",
+      "exitCode": 0,
+      "files": 3,
+      "passed": 20,
+      "failed": 0
+    },
+    "browser": {
+      "command": "npm run test:tela",
+      "exitCode": 0,
+      "passed": 31,
+      "failed": 0,
+      "durationSeconds": 48.6,
+      "log": "web-authority-final31.log"
+    },
+    "frc": {
+      "command": "npx playwright test e2e/timeline.spec.ts --grep=\"preserva o piso T\" --repeat-each=3",
+      "exitCode": 0,
+      "passed": 3,
+      "failed": 0,
+      "realWebhookTriggersPerRepeat": 10,
+      "log": "web-frc-strong-final-3x.log"
+    },
+    "pollTargeted": {
+      "command": "npx playwright test e2e/timeline.spec.ts --grep=\"poll retoma uma rodada pendente\"",
+      "exitCode": 0,
+      "passed": 1,
+      "log": "web-poll-targeted.log"
+    },
+    "logoutTargeted": {
+      "repeatEach": 5,
+      "passed": 5,
+      "exitCode": 0,
+      "log": "web-logout-lifecycle-5x.log"
+    }
+  },
+  "bci": {
+    "fullApiE2eIncludesThreeRealPostgresBatches": true,
+    "invariant": "10 unread increments after atomic ack while Message page SELECT waits on a lock; unread stays 10 before/after page; later real inbound makes 11",
+    "negativeControl": "temporarily moved ack after findMany; targeted test failed expected 10 vs actual 0; restored exact saved bytes; canonical focused test passed",
+    "negativeControlLog": "bci-mutation-control.log",
+    "canonicalLog": "bci-canonical-after-mutation.log",
+    "restoredServiceSha256": "93e69b0a1811533d0d718fe3fd3b105b1376d2a481ab2b22d8f1bfcf5dbe452e"
+  },
+  "eps": {
+    "conversationRows": 20382,
+    "largestEqualTimestampGroup": 1000,
+    "recent": {
+      "executionMs": 1.094,
+      "sharedBuffersHit": 37
+    },
+    "deepCursorOffset": 10000,
+    "deep": {
+      "executionMs": 3.442,
+      "sharedBuffersHit": 357,
+      "rowsRemovedByFilter": 10001
+    },
+    "largeTieCursorOffset": 500,
+    "largeTie": {
+      "executionMs": 0.85,
+      "sharedBuffersHit": 37,
+      "rowsRemovedByFilter": 501
+    },
+    "candidateIndexTrial": {
+      "index": "(conversation_id, created_at DESC, id DESC)",
+      "executionMs": 3.942,
+      "sharedBuffersHit": 9832,
+      "rowsRemovedByFilter": 10001,
+      "decision": "no index or migration; trial index removed; existing index retains deep scan residual"
+    },
+    "sql": "explain-timeline-exact.sql",
+    "log": "explain-timeline-exact.log",
+    "candidateSql": "explain-index-trial.sql",
+    "candidateLog": "explain-index-trial.log"
+  },
+  "rlsReadSample": {
+    "requests": 30,
+    "concurrency": 5,
+    "batches": 6,
+    "status200": 30,
+    "errors": 0,
+    "messagesPerResponse": 50,
+    "p50Ms": 23.36,
+    "p95Ms": 64.26,
+    "maxMs": 68.5,
+    "foreignConversationWithMalformedLimitStatus": 404,
+    "unreadBefore": 7,
+    "unreadAfter": 7,
+    "messagesBefore": 251,
+    "messagesAfter": 251,
+    "script": "rls-read-sample.mjs",
+    "log": "rls-read-sample.log",
+    "scopeNote": "foreign request used ?limite=invalid; raw JSON label says malformedCursor but malformed field is limite",
+    "productionSloClaim": false
+  },
+  "historicalDiagnostics": {
+    "invalidEarlierApiRun": "220/222 overlapped Browser cleanup/seed; not authoritative; later clean run 224/224 is authority",
+    "earlierBrowserRun": "29/30 with initial WebSocket logout handshake issue; targeted logout 5/5 and final 31/31 pass after stable Inbox socket lifecycle",
+    "incompleteFrcRepeat": "all-case repeat stopped at 20/30; not evidence; final strong FRC passed 3/3"
+  },
+  "cleanupAndResources": {
+    "generatedWebTestResultsRemoved": true,
+    "databaseContainer": "leadshug-timeline-postgres-20261014 remains running for reviewer",
+    "dependencyVolumes": [
+      "leadshug-timeline-api-node-modules-20261014",
+      "leadshug-timeline-web-node-modules-20261014"
+    ],
+    "noOtherTimelineRunnerContainers": true,
+    "sourceChangesFrozen": true,
+    "disposableProbeRowsKeptForReview": true
+  },
+  "logSha256": {
+    "api-e2e-authority.log": "b508ca43e5157fea8fbf6951b2bd2b7c2b860ebde3e4c2dca1971094436317db",
+    "web-authority-final31.log": "e3a38d01e61fc232878774b78490184c100a9828ce5fde4d2a44140d6d8df482",
+    "web-frc-strong-final-3x.log": "8cd7c693430ccd215c495b438ae4c39d0824dc0487dd11e3cf279bbdda9572f4",
+    "web-poll-targeted.log": "14a49953f93214f078e30f4f449423a01fb2994188e8b60878b0b0580c8978df",
+    "web-logout-lifecycle-5x.log": "4d21a8d1f11eba483a316fd5d15c4a1fc2c35ffca728433b9e00d7edb21a4047",
+    "bci-mutation-control.log": "0c2b211c2078240a09519eeff76f2a32a358135090e32df1bb871c619d4e327d",
+    "bci-canonical-after-mutation.log": "90fe5dd92cf6098fc7375258ba7452a29c4d74255d10fafd2efcc4c8b4866b4c",
+    "explain-timeline-exact.sql": "30b7477601cd109ffd3af7d38e9df1e5fbf8a6af56bf90cf52a42f4779ee0cb8",
+    "explain-timeline-exact.log": "6e346b5b0609de7f347481fb2b4eccc93e4ddf8b41219bb1348fbf169af9b9b6",
+    "explain-index-trial.sql": "8ac4343ac0633b5b1535e171ec7466e58c5c6488d1de8abc516b15f6e6b914a3",
+    "explain-index-trial.log": "43251847c09a71819a11aa135c8710b72a3eb4af2188f07bd3c071bfa980171c",
+    "rls-read-sample.mjs": "d59fa9f53ffeb97aec02b32ccf91584868f1e2b1ebcd644278f00881ae3a3321",
+    "rls-read-sample.log": "5b68b1b5f450153c7fa6c36c277aa19d5846860f63ef8124a1eaeb32dd3941fc"
+  }
+}

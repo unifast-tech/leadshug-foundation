@@ -1,0 +1,35 @@
+v22.23.3
+
+> @leadshug/web@0.1.0 build
+> tsc -b && vite build
+
+vite v5.4.21 building for production...
+transforming...
+✓ 55 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                   0.69 kB │ gzip:  0.44 kB
+dist/assets/index-wuzy3kMN.css    8.32 kB │ gzip:  2.39 kB
+dist/assets/index-CydUyPfN.js   223.31 kB │ gzip: 69.58 kB
+✓ built in 1.44s
+npm notice
+npm notice New major version of npm available! 11.16.0 -> 12.2.0
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.0
+npm notice To update run: npm install -g npm@12.2.0
+npm notice
+
+> @leadshug/web@0.1.0 test
+> vitest run
+
+
+ RUN  v2.1.9 /workspace/web-app
+
+ ✓ src/timeline.test.ts (2 tests) 3ms
+ ✓ src/tempoReal.spec.ts (6 tests) 7ms
+ ✓ src/api.spec.ts (12 tests) 45ms
+
+ Test Files  3 passed (3)
+      Tests  20 passed (20)
+   Start at  03:29:46
+   Duration  561ms (transform 417ms, setup 0ms, collect 485ms, tests 55ms, environment 1ms, prepare 289ms)
+

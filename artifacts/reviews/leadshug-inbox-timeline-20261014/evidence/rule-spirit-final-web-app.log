@@ -1,0 +1,52 @@
+Rule-Spirit Anti-Pattern Scan
+Repository: /mnt/c/unifast/leadshug/leadshug_now_docker/web-app
+Stacks: all
+Findings: 42
+Max active severity: warning
+
+| Stack | Severity | Search Lens | Location | Evidence |
+| --- | --- | --- | --- | --- |
+| shared | review | hard-coded local/domain target in source/config | `src/tempoReal.spec.ts:12` |     expect(enderecoDoSocket('http://localhost:3000', 'x')).toBe('ws://localhost:3000/ws');  |
+| shared | review | hard-coded local/domain target in source/config | `src/tempoReal.spec.ts:32` |     vi.stubGlobal('window', { location: { origin: 'http://localhost' }, setTimeout: (fn: () => void) => { timers.push(fn); return timers.length; }, clearTimeout: vi.fn() });  |
+| shared | review | hard-coded local/domain target in source/config | `src/tempoReal.spec.ts:58` |     vi.stubGlobal('window', { location: { origin: 'http://localhost' }, setTimeout, clearTimeout });  |
+| shared | review | hard-coded local/domain target in source/config | `src/api.ts:75` |     const pareceEstatico = res.status === 405 \|\| /^\s*<(!doctype\|html)/i.test(bruto);  |
+| shared | review | hard-coded local/domain target in source/config | `playwright.config.ts:5` | const API = `http://127.0.0.1:${PORTA_DA_API}`;  |
+| shared | review | hard-coded local/domain target in source/config | `playwright.config.ts:26` |     baseURL: 'http://127.0.0.1:4173',  |
+| shared | review | hard-coded local/domain target in source/config | `playwright.config.ts:32` |       url: 'http://127.0.0.1:3101/health',  |
+| shared | review | hard-coded local/domain target in source/config | `playwright.config.ts:80` |         WEB_ORIGIN: 'http://127.0.0.1:4173',  |
+| shared | review | hard-coded local/domain target in source/config | `playwright.config.ts:85` |       // `--host 127.0.0.1` NÃO é detalhe: o padrão do `vite preview` é `localhost`,  |
+| shared | review | hard-coded local/domain target in source/config | `playwright.config.ts:88` |       // `[::1]:4173` e o Playwright — que pergunta por `127.0.0.1` — bate em  |
+| shared | review | hard-coded local/domain target in source/config | `playwright.config.ts:91` |       // Todo o resto do harness já fala 127.0.0.1: a baseURL, o WEB_ORIGIN, o  |
+| shared | review | hard-coded local/domain target in source/config | `playwright.config.ts:93` |       command: 'npm run preview -- --host 127.0.0.1 --port 4173 --strictPort',  |
+| shared | review | hard-coded local/domain target in source/config | `playwright.config.ts:97` |       url: 'http://127.0.0.1:4173',  |
+| shared | review | hard-coded local/domain target in source/config | `e2e/timeline.spec.ts:3` | const FIXTURES = 'http://127.0.0.1:3101'; |
+| shared | review | hard-coded local/domain target in source/config | `e2e/timeline.spec.ts:5` | const API = `http://127.0.0.1:${process.env.LEADSHUG_API_PORT ?? '3100'}`; |
+| shared | review | hard-coded local/domain target in source/config | `e2e/timeline-freshness.ts:45` |   const apiEndpoint = `http://127.0.0.1:${apiPort}`; |
+| shared | review | hard-coded local/domain target in source/config | `e2e/timeline-freshness.ts:48` |     fetch('http://127.0.0.1:3101/health'), |
+| shared | review | hard-coded local/domain target in source/config | `e2e/timeline-freshness.ts:49` |     fetch('http://127.0.0.1:4173/'), |
+| shared | review | hard-coded local/domain target in source/config | `e2e/timeline-freshness.ts:57` |   const jsResponse = await fetch(new URL(asset[1], 'http://127.0.0.1:4173')); |
+| shared | review | hard-coded local/domain target in source/config | `e2e/timeline-freshness.ts:60` |   const servedPath = resolve(web, 'dist', `.${new URL(asset[1], 'http://127.0.0.1').pathname}`); |
+| shared | review | hard-coded local/domain target in source/config | `e2e/timeline-freshness.ts:93` |     endpoints: { apiHealth: apiHealth.status, fixtureHealth: fixtureHealth.status, preview: htmlResponse.status, servedBundle: new URL(asset[1], 'http://127.0.0.1:4173').pathname } |
+| docker | warning | hard-coded runtime/domain target in Docker or compose surface | `src/tempoReal.spec.ts:12` |     expect(enderecoDoSocket('http://localhost:3000', 'x')).toBe('ws://localhost:3000/ws');  |
+| docker | warning | hard-coded runtime/domain target in Docker or compose surface | `src/tempoReal.spec.ts:32` |     vi.stubGlobal('window', { location: { origin: 'http://localhost' }, setTimeout: (fn: () => void) => { timers.push(fn); return timers.length; }, clearTimeout: vi.fn() });  |
+| docker | warning | hard-coded runtime/domain target in Docker or compose surface | `src/tempoReal.spec.ts:58` |     vi.stubGlobal('window', { location: { origin: 'http://localhost' }, setTimeout, clearTimeout });  |
+| docker | warning | hard-coded runtime/domain target in Docker or compose surface | `src/api.ts:75` |     const pareceEstatico = res.status === 405 \|\| /^\s*<(!doctype\|html)/i.test(bruto);  |
+| docker | warning | hard-coded runtime/domain target in Docker or compose surface | `playwright.config.ts:5` | const API = `http://127.0.0.1:${PORTA_DA_API}`;  |
+| docker | warning | hard-coded runtime/domain target in Docker or compose surface | `playwright.config.ts:26` |     baseURL: 'http://127.0.0.1:4173',  |
+| docker | warning | hard-coded runtime/domain target in Docker or compose surface | `playwright.config.ts:32` |       url: 'http://127.0.0.1:3101/health',  |
+| docker | warning | hard-coded runtime/domain target in Docker or compose surface | `playwright.config.ts:80` |         WEB_ORIGIN: 'http://127.0.0.1:4173',  |
+| docker | warning | hard-coded runtime/domain target in Docker or compose surface | `playwright.config.ts:85` |       // `--host 127.0.0.1` NÃO é detalhe: o padrão do `vite preview` é `localhost`,  |
+| docker | warning | hard-coded runtime/domain target in Docker or compose surface | `playwright.config.ts:88` |       // `[::1]:4173` e o Playwright — que pergunta por `127.0.0.1` — bate em  |
+| docker | warning | hard-coded runtime/domain target in Docker or compose surface | `playwright.config.ts:91` |       // Todo o resto do harness já fala 127.0.0.1: a baseURL, o WEB_ORIGIN, o  |
+| docker | warning | hard-coded runtime/domain target in Docker or compose surface | `playwright.config.ts:93` |       command: 'npm run preview -- --host 127.0.0.1 --port 4173 --strictPort',  |
+| docker | warning | hard-coded runtime/domain target in Docker or compose surface | `playwright.config.ts:97` |       url: 'http://127.0.0.1:4173',  |
+| docker | warning | hard-coded runtime/domain target in Docker or compose surface | `e2e/timeline-freshness.ts:45` |   const apiEndpoint = `http://127.0.0.1:${apiPort}`; |
+| docker | warning | hard-coded runtime/domain target in Docker or compose surface | `e2e/timeline-freshness.ts:48` |     fetch('http://127.0.0.1:3101/health'), |
+| docker | warning | hard-coded runtime/domain target in Docker or compose surface | `e2e/timeline-freshness.ts:49` |     fetch('http://127.0.0.1:4173/'), |
+| docker | warning | hard-coded runtime/domain target in Docker or compose surface | `e2e/timeline-freshness.ts:57` |   const jsResponse = await fetch(new URL(asset[1], 'http://127.0.0.1:4173')); |
+| docker | warning | hard-coded runtime/domain target in Docker or compose surface | `e2e/timeline-freshness.ts:60` |   const servedPath = resolve(web, 'dist', `.${new URL(asset[1], 'http://127.0.0.1').pathname}`); |
+| docker | warning | hard-coded runtime/domain target in Docker or compose surface | `e2e/timeline-freshness.ts:93` |     endpoints: { apiHealth: apiHealth.status, fixtureHealth: fixtureHealth.status, preview: htmlResponse.status, servedBundle: new URL(asset[1], 'http://127.0.0.1:4173').pathname } |
+| docker | warning | hard-coded runtime/domain target in Docker or compose surface | `e2e/timeline.spec.ts:3` | const FIXTURES = 'http://127.0.0.1:3101'; |
+| docker | warning | hard-coded runtime/domain target in Docker or compose surface | `e2e/timeline.spec.ts:5` | const API = `http://127.0.0.1:${process.env.LEADSHUG_API_PORT ?? '3100'}`; |
+
+Note: this scanner supports the Rule-Spirit Anti-Pattern Hunt gate; it does not replace rule-specific review or P1/P2 judgment.

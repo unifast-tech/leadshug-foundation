@@ -1,0 +1,452 @@
+{
+  "active_finding_count": 42,
+  "allowlist_path": null,
+  "allowlisted_finding_count": 0,
+  "expired_allowlist_count": 0,
+  "finding_count": 42,
+  "findings": [
+    {
+      "allowed": false,
+      "allowlist": null,
+      "evidence": "    expect(enderecoDoSocket('http://localhost:3000', 'x')).toBe('ws://localhost:3000/ws'); ",
+      "key": "2a8f09410b6f9592",
+      "lens": "hard-coded local/domain target in source/config",
+      "location": "src/tempoReal.spec.ts:12",
+      "severity": "review",
+      "stack": "shared"
+    },
+    {
+      "allowed": false,
+      "allowlist": null,
+      "evidence": "    vi.stubGlobal('window', { location: { origin: 'http://localhost' }, setTimeout: (fn: () => void) => { timers.push(fn); return timers.length; }, clearTimeout: vi.fn() }); ",
+      "key": "11de67ec67e28377",
+      "lens": "hard-coded local/domain target in source/config",
+      "location": "src/tempoReal.spec.ts:32",
+      "severity": "review",
+      "stack": "shared"
+    },
+    {
+      "allowed": false,
+      "allowlist": null,
+      "evidence": "    vi.stubGlobal('window', { location: { origin: 'http://localhost' }, setTimeout, clearTimeout }); ",
+      "key": "ecd8c6244fc918e1",
+      "lens": "hard-coded local/domain target in source/config",
+      "location": "src/tempoReal.spec.ts:58",
+      "severity": "review",
+      "stack": "shared"
+    },
+    {
+      "allowed": false,
+      "allowlist": null,
+      "evidence": "const API = `http://127.0.0.1:${PORTA_DA_API}`; ",
+      "key": "d0ac253aa5ff151c",
+      "lens": "hard-coded local/domain target in source/config",
+      "location": "playwright.config.ts:5",
+      "severity": "review",
+      "stack": "shared"
+    },
+    {
+      "allowed": false,
+      "allowlist": null,
+      "evidence": "    baseURL: 'http://127.0.0.1:4173', ",
+      "key": "2a29ea59c22e2638",
+      "lens": "hard-coded local/domain target in source/config",
+      "location": "playwright.config.ts:26",
+      "severity": "review",
+      "stack": "shared"
+    },
+    {
+      "allowed": false,
+      "allowlist": null,
+      "evidence": "      url: 'http://127.0.0.1:3101/health', ",
+      "key": "59d1ac46cac22135",
+      "lens": "hard-coded local/domain target in source/config",
+      "location": "playwright.config.ts:32",
+      "severity": "review",
+      "stack": "shared"
+    },
+    {
+      "allowed": false,
+      "allowlist": null,
+      "evidence": "        WEB_ORIGIN: 'http://127.0.0.1:4173', ",
+      "key": "a1e456347a8821fd",
+      "lens": "hard-coded local/domain target in source/config",
+      "location": "playwright.config.ts:80",
+      "severity": "review",
+      "stack": "shared"
+    },
+    {
+      "allowed": false,
+      "allowlist": null,
+      "evidence": "      // `--host 127.0.0.1` N\u00c3O \u00e9 detalhe: o padr\u00e3o do `vite preview` \u00e9 `localhost`, ",
+      "key": "4b7be4c40850487c",
+      "lens": "hard-coded local/domain target in source/config",
+      "location": "playwright.config.ts:85",
+      "severity": "review",
+      "stack": "shared"
+    },
+    {
+      "allowed": false,
+      "allowlist": null,
+      "evidence": "      // `[::1]:4173` e o Playwright \u2014 que pergunta por `127.0.0.1` \u2014 bate em ",
+      "key": "5e12863dffbccf69",
+      "lens": "hard-coded local/domain target in source/config",
+      "location": "playwright.config.ts:88",
+      "severity": "review",
+      "stack": "shared"
+    },
+    {
+      "allowed": false,
+      "allowlist": null,
+      "evidence": "      // Todo o resto do harness j\u00e1 fala 127.0.0.1: a baseURL, o WEB_ORIGIN, o ",
+      "key": "2698063e108a0609",
+      "lens": "hard-coded local/domain target in source/config",
+      "location": "playwright.config.ts:91",
+      "severity": "review",
+      "stack": "shared"
+    },
+    {
+      "allowed": false,
+      "allowlist": null,
+      "evidence": "      command: 'npm run preview -- --host 127.0.0.1 --port 4173 --strictPort', ",
+      "key": "ac41a31312e558bd",
+      "lens": "hard-coded local/domain target in source/config",
+      "location": "playwright.config.ts:93",
+      "severity": "review",
+      "stack": "shared"
+    },
+    {
+      "allowed": false,
+      "allowlist": null,
+      "evidence": "      url: 'http://127.0.0.1:4173', ",
+      "key": "70831863fa683675",
+      "lens": "hard-coded local/domain target in source/config",
+      "location": "playwright.config.ts:97",
+      "severity": "review",
+      "stack": "shared"
+    },
+    {
+      "allowed": false,
+      "allowlist": null,
+      "evidence": "    const pareceEstatico = res.status === 405 || /^\\s*<(!doctype|html)/i.test(bruto); ",
+      "key": "3c3ff59eaca3694e",
+      "lens": "hard-coded local/domain target in source/config",
+      "location": "src/api.ts:75",
+      "severity": "review",
+      "stack": "shared"
+    },
+    {
+      "allowed": false,
+      "allowlist": null,
+      "evidence": "  const apiEndpoint = `http://127.0.0.1:${apiPort}`;",
+      "key": "e4d3b43c6a981645",
+      "lens": "hard-coded local/domain target in source/config",
+      "location": "e2e/timeline-freshness.ts:45",
+      "severity": "review",
+      "stack": "shared"
+    },
+    {
+      "allowed": false,
+      "allowlist": null,
+      "evidence": "    fetch('http://127.0.0.1:3101/health'),",
+      "key": "02ced4490c6f1ae3",
+      "lens": "hard-coded local/domain target in source/config",
+      "location": "e2e/timeline-freshness.ts:48",
+      "severity": "review",
+      "stack": "shared"
+    },
+    {
+      "allowed": false,
+      "allowlist": null,
+      "evidence": "    fetch('http://127.0.0.1:4173/'),",
+      "key": "65dcca001d2e41a7",
+      "lens": "hard-coded local/domain target in source/config",
+      "location": "e2e/timeline-freshness.ts:49",
+      "severity": "review",
+      "stack": "shared"
+    },
+    {
+      "allowed": false,
+      "allowlist": null,
+      "evidence": "  const jsResponse = await fetch(new URL(asset[1], 'http://127.0.0.1:4173'));",
+      "key": "69c95e087f673536",
+      "lens": "hard-coded local/domain target in source/config",
+      "location": "e2e/timeline-freshness.ts:57",
+      "severity": "review",
+      "stack": "shared"
+    },
+    {
+      "allowed": false,
+      "allowlist": null,
+      "evidence": "  const servedPath = resolve(web, 'dist', `.${new URL(asset[1], 'http://127.0.0.1').pathname}`);",
+      "key": "350a9bebcb085e01",
+      "lens": "hard-coded local/domain target in source/config",
+      "location": "e2e/timeline-freshness.ts:60",
+      "severity": "review",
+      "stack": "shared"
+    },
+    {
+      "allowed": false,
+      "allowlist": null,
+      "evidence": "    endpoints: { apiHealth: apiHealth.status, fixtureHealth: fixtureHealth.status, preview: htmlResponse.status, servedBundle: new URL(asset[1], 'http://127.0.0.1:4173').pathname }",
+      "key": "0b3266de3272c907",
+      "lens": "hard-coded local/domain target in source/config",
+      "location": "e2e/timeline-freshness.ts:93",
+      "severity": "review",
+      "stack": "shared"
+    },
+    {
+      "allowed": false,
+      "allowlist": null,
+      "evidence": "const FIXTURES = 'http://127.0.0.1:3101';",
+      "key": "2c1ee4d9b92a0c18",
+      "lens": "hard-coded local/domain target in source/config",
+      "location": "e2e/timeline.spec.ts:3",
+      "severity": "review",
+      "stack": "shared"
+    },
+    {
+      "allowed": false,
+      "allowlist": null,
+      "evidence": "const API = `http://127.0.0.1:${process.env.LEADSHUG_API_PORT ?? '3100'}`;",
+      "key": "9e49f12c9c12faf6",
+      "lens": "hard-coded local/domain target in source/config",
+      "location": "e2e/timeline.spec.ts:5",
+      "severity": "review",
+      "stack": "shared"
+    },
+    {
+      "allowed": false,
+      "allowlist": null,
+      "evidence": "    const pareceEstatico = res.status === 405 || /^\\s*<(!doctype|html)/i.test(bruto); ",
+      "key": "3ebdb512aa908de7",
+      "lens": "hard-coded runtime/domain target in Docker or compose surface",
+      "location": "src/api.ts:75",
+      "severity": "warning",
+      "stack": "docker"
+    },
+    {
+      "allowed": false,
+      "allowlist": null,
+      "evidence": "    expect(enderecoDoSocket('http://localhost:3000', 'x')).toBe('ws://localhost:3000/ws'); ",
+      "key": "edf231b3eac47db3",
+      "lens": "hard-coded runtime/domain target in Docker or compose surface",
+      "location": "src/tempoReal.spec.ts:12",
+      "severity": "warning",
+      "stack": "docker"
+    },
+    {
+      "allowed": false,
+      "allowlist": null,
+      "evidence": "    vi.stubGlobal('window', { location: { origin: 'http://localhost' }, setTimeout: (fn: () => void) => { timers.push(fn); return timers.length; }, clearTimeout: vi.fn() }); ",
+      "key": "3ae03706d1c501fb",
+      "lens": "hard-coded runtime/domain target in Docker or compose surface",
+      "location": "src/tempoReal.spec.ts:32",
+      "severity": "warning",
+      "stack": "docker"
+    },
+    {
+      "allowed": false,
+      "allowlist": null,
+      "evidence": "    vi.stubGlobal('window', { location: { origin: 'http://localhost' }, setTimeout, clearTimeout }); ",
+      "key": "ac44ff645d061b9b",
+      "lens": "hard-coded runtime/domain target in Docker or compose surface",
+      "location": "src/tempoReal.spec.ts:58",
+      "severity": "warning",
+      "stack": "docker"
+    },
+    {
+      "allowed": false,
+      "allowlist": null,
+      "evidence": "const API = `http://127.0.0.1:${PORTA_DA_API}`; ",
+      "key": "d8e95984315f8f6b",
+      "lens": "hard-coded runtime/domain target in Docker or compose surface",
+      "location": "playwright.config.ts:5",
+      "severity": "warning",
+      "stack": "docker"
+    },
+    {
+      "allowed": false,
+      "allowlist": null,
+      "evidence": "    baseURL: 'http://127.0.0.1:4173', ",
+      "key": "61883216dd8dc12f",
+      "lens": "hard-coded runtime/domain target in Docker or compose surface",
+      "location": "playwright.config.ts:26",
+      "severity": "warning",
+      "stack": "docker"
+    },
+    {
+      "allowed": false,
+      "allowlist": null,
+      "evidence": "      url: 'http://127.0.0.1:3101/health', ",
+      "key": "405b3e41f6cda288",
+      "lens": "hard-coded runtime/domain target in Docker or compose surface",
+      "location": "playwright.config.ts:32",
+      "severity": "warning",
+      "stack": "docker"
+    },
+    {
+      "allowed": false,
+      "allowlist": null,
+      "evidence": "        WEB_ORIGIN: 'http://127.0.0.1:4173', ",
+      "key": "8a5b48f8f8c6bee4",
+      "lens": "hard-coded runtime/domain target in Docker or compose surface",
+      "location": "playwright.config.ts:80",
+      "severity": "warning",
+      "stack": "docker"
+    },
+    {
+      "allowed": false,
+      "allowlist": null,
+      "evidence": "      // `--host 127.0.0.1` N\u00c3O \u00e9 detalhe: o padr\u00e3o do `vite preview` \u00e9 `localhost`, ",
+      "key": "8994854a4b272f6f",
+      "lens": "hard-coded runtime/domain target in Docker or compose surface",
+      "location": "playwright.config.ts:85",
+      "severity": "warning",
+      "stack": "docker"
+    },
+    {
+      "allowed": false,
+      "allowlist": null,
+      "evidence": "      // `[::1]:4173` e o Playwright \u2014 que pergunta por `127.0.0.1` \u2014 bate em ",
+      "key": "a06bafeb722161e4",
+      "lens": "hard-coded runtime/domain target in Docker or compose surface",
+      "location": "playwright.config.ts:88",
+      "severity": "warning",
+      "stack": "docker"
+    },
+    {
+      "allowed": false,
+      "allowlist": null,
+      "evidence": "      // Todo o resto do harness j\u00e1 fala 127.0.0.1: a baseURL, o WEB_ORIGIN, o ",
+      "key": "1a0d611415fc6996",
+      "lens": "hard-coded runtime/domain target in Docker or compose surface",
+      "location": "playwright.config.ts:91",
+      "severity": "warning",
+      "stack": "docker"
+    },
+    {
+      "allowed": false,
+      "allowlist": null,
+      "evidence": "      command: 'npm run preview -- --host 127.0.0.1 --port 4173 --strictPort', ",
+      "key": "164bf04d7b0bbb19",
+      "lens": "hard-coded runtime/domain target in Docker or compose surface",
+      "location": "playwright.config.ts:93",
+      "severity": "warning",
+      "stack": "docker"
+    },
+    {
+      "allowed": false,
+      "allowlist": null,
+      "evidence": "      url: 'http://127.0.0.1:4173', ",
+      "key": "3c89510b83ba01a9",
+      "lens": "hard-coded runtime/domain target in Docker or compose surface",
+      "location": "playwright.config.ts:97",
+      "severity": "warning",
+      "stack": "docker"
+    },
+    {
+      "allowed": false,
+      "allowlist": null,
+      "evidence": "const FIXTURES = 'http://127.0.0.1:3101';",
+      "key": "bc9bc14a55d2591e",
+      "lens": "hard-coded runtime/domain target in Docker or compose surface",
+      "location": "e2e/timeline.spec.ts:3",
+      "severity": "warning",
+      "stack": "docker"
+    },
+    {
+      "allowed": false,
+      "allowlist": null,
+      "evidence": "const API = `http://127.0.0.1:${process.env.LEADSHUG_API_PORT ?? '3100'}`;",
+      "key": "c72e0b5f5b133197",
+      "lens": "hard-coded runtime/domain target in Docker or compose surface",
+      "location": "e2e/timeline.spec.ts:5",
+      "severity": "warning",
+      "stack": "docker"
+    },
+    {
+      "allowed": false,
+      "allowlist": null,
+      "evidence": "  const apiEndpoint = `http://127.0.0.1:${apiPort}`;",
+      "key": "1c70b5070fab5314",
+      "lens": "hard-coded runtime/domain target in Docker or compose surface",
+      "location": "e2e/timeline-freshness.ts:45",
+      "severity": "warning",
+      "stack": "docker"
+    },
+    {
+      "allowed": false,
+      "allowlist": null,
+      "evidence": "    fetch('http://127.0.0.1:3101/health'),",
+      "key": "a129a7b950a8f0ec",
+      "lens": "hard-coded runtime/domain target in Docker or compose surface",
+      "location": "e2e/timeline-freshness.ts:48",
+      "severity": "warning",
+      "stack": "docker"
+    },
+    {
+      "allowed": false,
+      "allowlist": null,
+      "evidence": "    fetch('http://127.0.0.1:4173/'),",
+      "key": "e5308c3cb7d2f03f",
+      "lens": "hard-coded runtime/domain target in Docker or compose surface",
+      "location": "e2e/timeline-freshness.ts:49",
+      "severity": "warning",
+      "stack": "docker"
+    },
+    {
+      "allowed": false,
+      "allowlist": null,
+      "evidence": "  const jsResponse = await fetch(new URL(asset[1], 'http://127.0.0.1:4173'));",
+      "key": "75ba7c8469649337",
+      "lens": "hard-coded runtime/domain target in Docker or compose surface",
+      "location": "e2e/timeline-freshness.ts:57",
+      "severity": "warning",
+      "stack": "docker"
+    },
+    {
+      "allowed": false,
+      "allowlist": null,
+      "evidence": "  const servedPath = resolve(web, 'dist', `.${new URL(asset[1], 'http://127.0.0.1').pathname}`);",
+      "key": "0ceda0f2bb2a2a57",
+      "lens": "hard-coded runtime/domain target in Docker or compose surface",
+      "location": "e2e/timeline-freshness.ts:60",
+      "severity": "warning",
+      "stack": "docker"
+    },
+    {
+      "allowed": false,
+      "allowlist": null,
+      "evidence": "    endpoints: { apiHealth: apiHealth.status, fixtureHealth: fixtureHealth.status, preview: htmlResponse.status, servedBundle: new URL(asset[1], 'http://127.0.0.1:4173').pathname }",
+      "key": "ea4c693cfacd5dc5",
+      "lens": "hard-coded runtime/domain target in Docker or compose surface",
+      "location": "e2e/timeline-freshness.ts:93",
+      "severity": "warning",
+      "stack": "docker"
+    }
+  ],
+  "generated_at_utc": "2026-10-15T05:00:50.309988Z",
+  "max_active_severity": "warning",
+  "paths": [
+    "/mnt/c/unifast/leadshug/leadshug_now_docker/web-app/e2e/timeline-freshness.ts",
+    "/mnt/c/unifast/leadshug/leadshug_now_docker/web-app/e2e/timeline.spec.ts",
+    "/mnt/c/unifast/leadshug/leadshug_now_docker/web-app/playwright.config.ts",
+    "/mnt/c/unifast/leadshug/leadshug_now_docker/web-app/src/api.ts",
+    "/mnt/c/unifast/leadshug/leadshug_now_docker/web-app/src/telas/Inbox.tsx",
+    "/mnt/c/unifast/leadshug/leadshug_now_docker/web-app/src/tempoReal.spec.ts",
+    "/mnt/c/unifast/leadshug/leadshug_now_docker/web-app/src/tempoReal.ts",
+    "/mnt/c/unifast/leadshug/leadshug_now_docker/web-app/src/timeline.test.ts",
+    "/mnt/c/unifast/leadshug/leadshug_now_docker/web-app/src/timeline.ts"
+  ],
+  "repository": "/mnt/c/unifast/leadshug/leadshug_now_docker/web-app",
+  "schema_version": "rule-spirit-scan-v1",
+  "severity_taxonomy": [
+    "review",
+    "warning",
+    "blocker"
+  ],
+  "stacks": [
+    "all"
+  ]
+}

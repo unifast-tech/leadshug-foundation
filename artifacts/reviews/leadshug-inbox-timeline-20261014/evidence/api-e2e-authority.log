@@ -1,0 +1,173 @@
+
+> @leadshug/api@0.1.0 test:e2e
+> vitest run --config vitest.config.e2e.ts --no-file-parallelism --maxWorkers=1
+
+[33mThe CJS build of Vite's Node API is deprecated. See https://vite.dev/guide/troubleshooting.html#vite-cjs-node-api-deprecated for more details.[39m
+
+ RUN  v2.1.9 /workspace/api-app
+
+stdout | test/atendimento.e2e-spec.ts > atendimento > timeline paginada do atendimento > preserva dez incrementos feitos após o ack e enquanto a página fica bloqueada, em três lotes
+{"prova":"BCI_ACK_COM_SELECT_BLOQUEADO","lote":1,"bloqueioDetectado":true,"sondagens":2,"ackAteSelectBloqueadoMs":53,"dezIncrementosMs":26,"unreadEnquantoSelectBloqueado":10,"unreadDepoisDaResposta":10}
+
+stdout | test/atendimento.e2e-spec.ts > atendimento > timeline paginada do atendimento > preserva dez incrementos feitos após o ack e enquanto a página fica bloqueada, em três lotes
+{"prova":"BCI_ACK_COM_SELECT_BLOQUEADO","lote":2,"bloqueioDetectado":true,"sondagens":2,"ackAteSelectBloqueadoMs":48,"dezIncrementosMs":21,"unreadEnquantoSelectBloqueado":10,"unreadDepoisDaResposta":10}
+
+stdout | test/atendimento.e2e-spec.ts > atendimento > timeline paginada do atendimento > preserva dez incrementos feitos após o ack e enquanto a página fica bloqueada, em três lotes
+{"prova":"BCI_ACK_COM_SELECT_BLOQUEADO","lote":3,"bloqueioDetectado":true,"sondagens":2,"ackAteSelectBloqueadoMs":51,"dezIncrementosMs":24,"unreadEnquantoSelectBloqueado":10,"unreadDepoisDaResposta":10}
+
+ ✓ test/atendimento.e2e-spec.ts (19 tests) 7720ms
+   ✓ atendimento > POST conversations/:id/messages — o trio (ADR-0012 §2) > autorizado: responde, envia pelo canal e assume a conversa 424ms
+   ✓ atendimento > POST conversations/:id/messages — o trio (ADR-0012 §2) > ATENDENTE no escopo responde — estar na BU BASTA (ADR-0018 §3) 493ms
+   ✓ atendimento > POST conversations/:id/messages — o trio (ADR-0012 §2) > CROSS-TENANT: o dono de Beta recebe 404 na conversa da BU de Alfa 380ms
+   ✓ atendimento > janela de 24h — atributo do CANAL (ADR-0009 §3) > no canal NÃO oficial não existe janela: responde mesmo com a conversa velha 308ms
+   ✓ atendimento > fila > assumir trava para outro agente (409), e finalizar libera 516ms
+   ✓ atendimento > fila > responder NÃO rouba conversa de quem já está atendendo 463ms
+   ✓ atendimento > fila > abrir a thread zera as não lidas — abrir É atender 307ms
+   ✓ atendimento > fila > a lista filtra por aba e só enxerga a BU pedida 323ms
+   ✓ atendimento > a inbox pagina — teto silencioso é o que vira "sumiram conversas" > devolve total e temMais, e a segunda página traz o resto 328ms
+   ✓ atendimento > timeline paginada do atendimento > caminha por 251 mensagens na ordem do banco e mantém a página limitada 480ms
+   ✓ atendimento > timeline paginada do atendimento > valida parâmetros depois da autorização e rejeita cursor de outra conversa autorizada 381ms
+   ✓ atendimento > timeline paginada do atendimento > exige sessão antes de validar query e não altera unread 310ms
+   ✓ atendimento > timeline paginada do atendimento > rejeita cursor/limite repetidos e mantém refresh e backfill sem efeito de leitura 364ms
+   ✓ atendimento > timeline paginada do atendimento > serializa dez chegadas concorrentes com a fronteira de abertura em três lotes 546ms
+   ✓ atendimento > timeline paginada do atendimento > preserva dez incrementos feitos após o ack e enquanto a página fica bloqueada, em três lotes 509ms
+   ✓ atendimento > timeline paginada do atendimento > permite leituras de cursor concorrentes com close sem reescrever status 485ms
+ ✓ test/setores.e2e-spec.ts (26 tests) 10430ms
+   ✓ setores (ADR-0017) > o Geral nasce com a Mantenedora > a primeira BU já vem num setor — nenhum número fica sem 356ms
+   ✓ setores (ADR-0017) > CRUD — o trio (ADR-0012 §2) > autorizado: OWNER cria, renomeia e inativa 345ms
+   ✓ setores (ADR-0017) > CRUD — o trio (ADR-0012 §2) > papel insuficiente: ATENDENTE recebe 403 ao criar 462ms
+   ✓ setores (ADR-0017) > CRUD — o trio (ADR-0012 §2) > cross-tenant: setor da Mantenedora B responde 404 para o OWNER de A 368ms
+   ✓ setores (ADR-0017) > CRUD — o trio (ADR-0012 §2) > o nome é único DENTRO da Mantenedora — duas contas podem ter "Comercial" 407ms
+   ✓ setores (ADR-0017) > CRUD — o trio (ADR-0012 §2) > setor COM número não é excluído — só inativado 305ms
+   ✓ setores (ADR-0017) > concessão por setor é EXPANSÃO (ADR-0017 §2) > materializa uma linha POR NÚMERO do setor, com proveniência SETOR 433ms
+   ✓ setores (ADR-0017) > concessão por setor é EXPANSÃO (ADR-0017 §2) > BU criada DEPOIS, no setor concedido, já nasce com o grant (regra 3) 411ms
+   ✓ setores (ADR-0017) > concessão por setor é EXPANSÃO (ADR-0017 §2) > revogar o setor NÃO remove grant direto nem o da Mantenedora 400ms
+   ✓ setores (ADR-0017) > ver quem tem o setor — a leitura que faltava > autorizado: lista quem recebeu o setor, com papel e desde quando 375ms
+   ✓ setores (ADR-0017) > ver quem tem o setor — a leitura que faltava > papel insuficiente: ATENDENTE recebe 403 436ms
+   ✓ setores (ADR-0017) > ver quem tem o setor — a leitura que faltava > cross-tenant: setor da Mantenedora B responde 404 362ms
+   ✓ setores (ADR-0017) > ver quem tem o setor — a leitura que faltava > a lista de pessoas diz DE QUAL ORIGEM veio cada acesso 401ms
+   ✓ setores (ADR-0017) > renomear e inativar o número > papel insuficiente: ATENDENTE recebe 403 478ms
+   ✓ setores (ADR-0017) > mover número entre setores — a escrita mais delicada do modelo > quem tinha pelo setor antigo perde; quem tem o novo ganha 513ms
+   ✓ setores (ADR-0017) > mover número entre setores — a escrita mais delicada do modelo > o grant DIRETO sobrevive à mudança de setor 574ms
+   ✓ setores (ADR-0017) > mover número entre setores — a escrita mais delicada do modelo > recusa quando mover deixaria o número sem OWNER 495ms
+   ✓ setores (ADR-0017) > mover número entre setores — a escrita mais delicada do modelo > cross-setor: o atendente do Comercial recebe 404 na conversa do Suporte 566ms
+   ✓ setores (ADR-0017) > conceder um setor VAZIO é lembrado — o número criado depois já nasce com o acesso 381ms
+   ✓ setores (ADR-0017) > revogar apaga a CONCESSÃO — o próximo número não ressuscita o acesso 393ms
+   ✓ setores (ADR-0017) > setor INATIVO não interrompe atendimento — só some do cadastro 329ms
+[31m[Nest] 965  - [39m10/15/2026, 3:20:45 AM [31m  ERROR[39m [38;5;3m[Recuperacao] [39m[31mToken de recuperação emitido para dono@alfa.test, mas o e-mail NÃO saiu.[39m
+[31m[Nest] 965  - [39m10/15/2026, 3:20:47 AM [31m  ERROR[39m [38;5;3m[Recuperacao] [39m[31mToken de recuperação emitido para dono@alfa.test, mas o e-mail NÃO saiu.[39m
+ ✓ test/convites.e2e-spec.ts (18 tests) 4799ms
+   ✓ convite e recuperação de senha (ADR-0025) > convite substitui a senha provisória > criar pessoa NÃO aceita mais senha, e envia o convite 341ms
+   ✓ convite e recuperação de senha (ADR-0025) > convite substitui a senha provisória > usar o link define a senha e já entra logado 377ms
+   ✓ convite e recuperação de senha (ADR-0025) > o token é de uso único > o mesmo link não funciona duas vezes 380ms
+   ✓ convite e recuperação de senha (ADR-0025) > o token é de uso único > pedir recuperação DUAS vezes deixa só o último link vivo 370ms
+   ✓ convite e recuperação de senha (ADR-0025) > o token é de uso único > definir a senha mata TODOS os pendentes — inclusive o convite antigo 369ms
+ ✓ test/webhooks.e2e-spec.ts (15 tests) 3457ms
+   ✓ webhooks de entrada > o dado recebido respeita o escopo > CROSS-TENANT: o dono de Beta não enxerga a conversa que entrou na BU de Alfa 303ms
+ ✓ test/identidade.e2e-spec.ts (17 tests) 3660ms
+   ✓ identidade > login > bloqueia o e-mail na quinta tentativa errada 513ms
+   ✓ identidade > troca obrigatória de senha > trava tudo menos /me e a troca, e destrava depois de trocar 461ms
+ ✓ test/api-publica.e2e-spec.ts (13 tests) 5082ms
+   ✓ API pública v1 > autenticação pela chave > a chave sai em claro UMA vez, e o prefixo é lh_ 374ms
+   ✓ API pública v1 > autenticação pela chave > sem chave: 401 NAO_AUTENTICADO 310ms
+   ✓ API pública v1 > autenticação pela chave > cookie de sessão NÃO substitui a chave 374ms
+   ✓ API pública v1 > autenticação pela chave > chave revogada responde igual a inexistente 384ms
+   ✓ API pública v1 > escopo — a Mantenedora sai da CHAVE, nunca do request > escopo nulo devolve só as BUs DESTA Mantenedora 310ms
+   ✓ API pública v1 > escopo — a Mantenedora sai da CHAVE, nunca do request > CROSS-TENANT: pedir a BU de Beta com a chave de Alfa dá 403 SEM_ACESSO_A_CONTA 364ms
+   ✓ API pública v1 > escopo — a Mantenedora sai da CHAVE, nunca do request > escopo restrito não alcança outra BU da MESMA Mantenedora 421ms
+   ✓ API pública v1 > escopo — a Mantenedora sai da CHAVE, nunca do request > criar chave com escopo apontando para BU de outra Mantenedora é recusado 414ms
+   ✓ API pública v1 > contrato > conversations traz janela_aberta e datas em ISO-8601 UTC 349ms
+   ✓ API pública v1 > contrato > messages aceita since para sincronização incremental 342ms
+   ✓ API pública v1 > contrato > POST messages envia e marca a conversa como atendida por EXTERNO 326ms
+   ✓ API pública v1 > contrato > fora da janela, POST messages recusa com JANELA_FECHADA 306ms
+   ✓ API pública v1 > limite de taxa (ADR-0010 §7) — fecha o buraco de ritmo do S3 > estoura em 429 LIMITE_DE_TAXA com Retry-After 636ms
+ ✓ test/usuarios.e2e-spec.ts (13 tests) 4676ms
+   ✓ gestão de usuários > criar — o trio (ADR-0012 §2) > autorizado: cria com papel e escopo, e SEM credencial — quem entra define a senha 359ms
+   ✓ gestão de usuários > criar — o trio (ADR-0012 §2) > papel insuficiente: MEMBRO não gerencia pessoas 512ms
+   ✓ gestão de usuários > invariantes do modelo > ninguém concede papel maior que o próprio (ADR-0008 §4) 464ms
+   ✓ gestão de usuários > invariantes do modelo > ADMIN não mexe em quem é OWNER — papel ≥ o do alvo (ADR-0008 §4) 481ms
+   ✓ gestão de usuários > reenvio de acesso > reenviar o acesso derruba a sessão e emite um LINK, não uma senha 396ms
+   ✓ gestão de usuários > a lista pagina e filtra > busca por nome ou e-mail 309ms
+ ✓ test/historico.e2e-spec.ts (11 tests) 4003ms
+   ✓ histórico (Consultar) > o par número → número > a resposta traz os DOIS números do par, não só o contato 423ms
+   ✓ histórico (Consultar) > o par número → número > filtra pelo número do contato 336ms
+   ✓ histórico (Consultar) > paginação — 20 é o corpo da página, não o tamanho do que existe > devolve as ÚLTIMAS 20 e avisa que há mais 371ms
+   ✓ histórico (Consultar) > paginação — 20 é o corpo da página, não o tamanho do que existe > a segunda página traz o resto e fecha 332ms
+   ✓ histórico (Consultar) > consultar não é atender > ler o histórico NÃO zera as não lidas 301ms
+   ✓ histórico (Consultar) > CSV > usa os mesmos filtros e sai uma linha por mensagem 300ms
+   ✓ histórico (Consultar) > permissão — o trio (ADR-0012 §2) > autorizado: ATENDENTE no escopo consulta — o grant é a permissão (ADR-0018) 441ms
+   ✓ histórico (Consultar) > permissão — o trio (ADR-0012 §2) > CROSS-TENANT: o dono de Beta recebe 404 no histórico da BU de Alfa 363ms
+   ✓ histórico (Consultar) > permissão — o trio (ADR-0012 §2) > CROSS-TENANT: o CSV também é barrado, e não vaza no corpo 352ms
+ ✓ test/historico-atividades.e2e-spec.ts (13 tests) 4533ms
+   ✓ histórico de atividades (ADR-0020 e 0022) > o CHECK torna o vazamento IRREPRESENTÁVEL (ADR-0020 §1.1) > escopo BU sem bu_id falha NO BANCO, não no serviço 394ms
+   ✓ histórico de atividades (ADR-0020 e 0022) > o CHECK torna o vazamento IRREPRESENTÁVEL (ADR-0020 §1.1) > escopo CONTA COM bu_id falha pelo mesmo CHECK 303ms
+   ✓ histórico de atividades (ADR-0020 e 0022) > a escrita acontece dentro da transação > criar setor grava EXATAMENTE uma linha, com a frase pronta 314ms
+   ✓ histórico de atividades (ADR-0020 e 0022) > a escrita acontece dentro da transação > falhar a transação NÃO deixa linha 319ms
+   ✓ histórico de atividades (ADR-0020 e 0022) > a escrita acontece dentro da transação > mover número grava MOVER com de/para preenchidos 325ms
+   ✓ histórico de atividades (ADR-0020 e 0022) > leitura — o trio (ADR-0012 §2) > papel insuficiente: ATENDENTE recebe 403 — gravar é do produto, ler é de quem administra 452ms
+   ✓ histórico de atividades (ADR-0020 e 0022) > leitura — o trio (ADR-0012 §2) > cross-tenant: o ADMIN de A não vê NENHUMA linha de B 364ms
+   ✓ histórico de atividades (ADR-0020 e 0022) > o que NÃO entra > trocar a própria senha não gera linha 420ms
+   ✓ histórico de atividades (ADR-0020 e 0022) > o que NÃO entra > listar e filtrar não geram linha — leitura não registra 304ms
+ ✓ test/onboarding.e2e-spec.ts (13 tests) 4652ms
+   ✓ wizard de onboarding e módulos da conta (ADR-0016) > o portão: senha → wizard → produto > antes de concluir, o resto do BFF responde 409 ONBOARDING_PENDENTE 427ms
+   ✓ wizard de onboarding e módulos da conta (ADR-0016) > o portão: senha → wizard → produto > o /me, a troca de senha e o próprio wizard continuam respondendo 352ms
+   ✓ wizard de onboarding e módulos da conta (ADR-0016) > o portão: senha → wizard → produto > a troca de senha vem ANTES do wizard — nunca preso entre os dois portões 640ms
+   ✓ wizard de onboarding e módulos da conta (ADR-0016) > o portão: senha → wizard → produto > ninguém pode ser convidado antes do wizard — o caso deixa de existir 301ms
+   ✓ wizard de onboarding e módulos da conta (ADR-0016) > o wizard oferece SÓ o que a instalação tem > o canal oficial NÃO aparece — ele é o piso, não uma escolha 306ms
+   ✓ wizard de onboarding e módulos da conta (ADR-0016) > concluir > só o OWNER conclui, e o produto passa a responder 320ms
+   ✓ wizard de onboarding e módulos da conta (ADR-0016) > concluir > recusa papel de convite OWNER — seria transferência disfarçada de cadastro 302ms
+   ✓ wizard de onboarding e módulos da conta (ADR-0016) > concluir > recusa módulo fora do teto — pedido inválido é ERRO, não preferência ignorada 329ms
+   ✓ wizard de onboarding e módulos da conta (ADR-0016) > concluir > recusa módulo que não existe nesta instalação 335ms
+   ✓ wizard de onboarding e módulos da conta (ADR-0016) > concluir > grava a conclusão no histórico 335ms
+   ✓ wizard de onboarding e módulos da conta (ADR-0016) > adicionar e remover módulo depois — mesmo serviço, outra porta > ADMIN edita, e a mudança aparece no /me 346ms
+   ✓ wizard de onboarding e módulos da conta (ADR-0016) > adicionar e remover módulo depois — mesmo serviço, outra porta > RECUSA desligar canal que ainda tem número conectado 358ms
+ ✓ test/canais.e2e-spec.ts (10 tests) 3738ms
+   ✓ canais da BU > POST channels — o trio (ADR-0012 §2) > autorizado: OWNER conecta o canal oficial, e o phone_number_id é capturado na mesma ida 372ms
+   ✓ canais da BU > POST channels — o trio (ADR-0012 §2) > papel insuficiente: MEMBRO recebe 403 — a BU é dele, o poder é que não alcança 472ms
+   ✓ canais da BU > canal não oficial > cria a instância e devolve o QR, com a janela DESLIGADA 301ms
+   ✓ canais da BU > regras do vínculo > a BU aceita um canal de cada tipo, e recusa o segundo do mesmo tipo 311ms
+   ✓ canais da BU > regras do vínculo > remover exige ADMIN e libera o tipo para ser conectado de novo 491ms
+   ✓ canais da BU > regras do vínculo > listar canais é leitura: VIEWER enxerga 494ms
+ ✓ test/cross-tenant.e2e-spec.ts (9 tests) 3039ms
+   ✓ escopo entre Mantenedoras > GET /api/bff/business-units/:buId > autorizado: o dono enxerga a BU da própria Mantenedora 342ms
+   ✓ escopo entre Mantenedoras > GET /api/bff/business-units > CROSS-TENANT: usuário sem grant nenhum recebe lista VAZIA, nunca "todas" 366ms
+   ✓ escopo entre Mantenedoras > o grant do fundador nasce como expansão (ADR-0008 §4, importado já corrigido) > quem tem grant DIRETO não é alcançado pela expansão — e cai para VIEWER na Mantenedora 469ms
+ ✓ test/realtime.e2e-spec.ts (7 tests) 5664ms
+   ✓ push em tempo real — com escopo (fecha o risco S8) > quem tem grant na BU recebe a mensagem que chegou 317ms
+   ✓ push em tempo real — com escopo (fecha o risco S8) > CROSS-TENANT: o dono de Beta NÃO recebe evento da BU de Alfa 1863ms
+   ✓ push em tempo real — com escopo (fecha o risco S8) > usuário da MESMA Mantenedora sem grant naquela BU também não recebe 1983ms
+   ✓ push em tempo real — com escopo (fecha o risco S8) > o socket some da lista quando o cliente desconecta 589ms
+ ✓ test/modulos.e2e-spec.ts (8 tests) 2892ms
+   ✓ módulos: env é o teto, a Mantenedora escolhe dentro dele (ADR-0016) > o /me devolve o produto já interseccionado > teto ligado + contratado = ligado, e a marca vem junto 452ms
+   ✓ módulos: env é o teto, a Mantenedora escolhe dentro dele (ADR-0016) > o /me devolve o produto já interseccionado > a Mantenedora NÃO amplia o teto: contratado sem teto continua desligado 345ms
+   ✓ módulos: env é o teto, a Mantenedora escolhe dentro dele (ADR-0016) > o /me devolve o produto já interseccionado > sem nada contratado, o produto nasce sem módulo e com tema padrão 315ms
+   ✓ módulos: env é o teto, a Mantenedora escolhe dentro dele (ADR-0016) > a migração PRESERVA o módulo de quem já usa o canal — repetível, e é o que sobe em stage 353ms
+   ✓ módulos: env é o teto, a Mantenedora escolhe dentro dele (ADR-0016) > a rota recusa o que o front não deveria nem ter oferecido > autorizado: com teto e contrato, conecta o canal não oficial 357ms
+   ✓ módulos: env é o teto, a Mantenedora escolhe dentro dele (ADR-0016) > a rota recusa o que o front não deveria nem ter oferecido > módulo fora do teto da instalação: 404 MODULO_DESLIGADO, nunca 403 383ms
+   ✓ módulos: env é o teto, a Mantenedora escolhe dentro dele (ADR-0016) > a rota recusa o que o front não deveria nem ter oferecido > teto ligado mas a Mantenedora não contratou: 404 igual 355ms
+   ✓ módulos: env é o teto, a Mantenedora escolhe dentro dele (ADR-0016) > a rota recusa o que o front não deveria nem ter oferecido > o canal OFICIAL nunca é barrado por módulo — ele é o PISO do produto 329ms
+ ✓ test/arquivos.e2e-spec.ts (8 tests) 2772ms
+   ✓ arquivos (ADR-0024) > SEM volume, recusa explicitamente — e o resto do produto funciona 426ms
+   ✓ arquivos (ADR-0024) > com volume > guarda com nome de uuid — o nome do cliente NÃO chega ao disco 309ms
+   ✓ arquivos (ADR-0024) > com volume > recusa .png que não é PNG por dentro — o tipo vem dos BYTES 333ms
+   ✓ arquivos (ADR-0024) > com volume > devolve o arquivo para quem é da mesma Mantenedora 310ms
+   ✓ arquivos (ADR-0024) > com volume > cross-tenant: arquivo de A responde 404 para B 507ms
+   ✓ arquivos (ADR-0024) > com volume > id que não é uuid não vira caminho 346ms
+[31m[Nest] 1517  - [39m10/15/2026, 3:21:59 AM [31m  ERROR[39m [38;5;3m[Rotina] [39m[31m{"nome":"rotina-quebrada","linhas":0,"lotes":0,"pulouPorLock":false,"erro":"estourei de propósito","duracaoMs":2}[39m
+ ✓ test/rotinas.e2e-spec.ts (5 tests) 762ms
+ ✓ test/surfaces.e2e-spec.ts (9 tests) 198ms
+ ✓ test/cobertura-do-catalogo.e2e-spec.ts (4 tests) 294ms
+ ✓ test/painel.e2e-spec.ts (4 tests) 1680ms
+   ✓ painel > conta o atendimento e avisa do número sem canal 384ms
+   ✓ painel > cross-tenant: NENHUM número da Mantenedora B entra na conta de A 311ms
+   ✓ painel > o ATENDENTE vê os números, e NÃO vê o extrato de atividades 500ms
+   ✓ painel > o ADMIN vê o extrato 318ms
+[31m[Nest] 1688  - [39m10/15/2026, 3:22:08 AM [31m  ERROR[39m [38;5;3m[Banco] [39m[31mBANCO ATRÁS DA IMAGEM: "public.tokens_de_acesso" não existe (P2021). Rode `npx prisma migrate deploy` de dentro do serviço.[39m
+ ✓ test/banco-atrasado.e2e-spec.ts (2 tests) 500ms
+   ✓ banco atrás da imagem > tabela ausente vira 503 DIZENDO a causa, não 500 opaco 312ms
+
+ Test Files  20 passed (20)
+      Tests  224 passed (224)
+   Start at  03:20:12
+   Duration  111.92s (transform 6.83s, setup 184ms, collect 33.04s, tests 74.55s, environment 4ms, prepare 1.29s)
+

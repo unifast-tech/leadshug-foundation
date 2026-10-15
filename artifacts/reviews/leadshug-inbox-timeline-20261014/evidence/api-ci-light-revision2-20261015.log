@@ -1,0 +1,67 @@
+v22.23.3
+COMMAND npm run prisma:generate
+
+> @leadshug/api@0.1.0 prisma:generate
+> prisma generate
+
+Environment variables loaded from .env
+Prisma schema loaded from prisma/schema.prisma
+
+✔ Generated Prisma Client (v6.19.3) to ./node_modules/@prisma/client in 227ms
+
+Start by importing your Prisma Client (See: https://pris.ly/d/importing-client)
+
+Tip: Need your database queries to be 1000x faster? Accelerate offers you that and more: https://pris.ly/tip-2-accelerate
+
+npm notice
+npm notice New major version of npm available! 11.16.0 -> 12.2.0
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.0
+npm notice To update run: npm install -g npm@12.2.0
+npm notice
+COMMAND npm run lint
+
+> @leadshug/api@0.1.0 lint
+> eslint "{src,test}/**/*.ts"
+
+COMMAND npm run build
+
+> @leadshug/api@0.1.0 build
+> nest build
+
+COMMAND npm test
+
+> @leadshug/api@0.1.0 test
+> vitest run --config vitest.config.ts
+
+[33mThe CJS build of Vite's Node API is deprecated. See https://vite.dev/guide/troubleshooting.html#vite-cjs-node-api-deprecated for more details.[39m
+
+ RUN  v2.1.9 /workspace/api-app
+
+ ✓ src/main.spec.ts (6 tests) 7ms
+ ✓ src/domain/access/role.spec.ts (9 tests) 7ms
+ ✓ src/infra/config/modulos.spec.ts (10 tests) 9ms
+ ✓ src/domain/access/scope.spec.ts (22 tests) 19ms
+ ✓ src/domain/inbox/timeline-pagination.spec.ts (11 tests) 13ms
+ ✓ src/domain/integration/rate-limit.service.spec.ts (3 tests) 7ms
+[33m[Nest] 196  - [39m10/15/2026, 4:09:50 AM [33m   WARN[39m [38;5;3m[Email] [39m[33mRESEND_API_KEY ausente — "x" não foi enviado para a@b.test.[39m
+[31m[Nest] 196  - [39m10/15/2026, 4:09:50 AM [31m  ERROR[39m [38;5;3m[Email] [39m[31mResend recusou (403): {"message":"domain is not verified"}[39m
+[31m[Nest] 196  - [39m10/15/2026, 4:09:50 AM [31m  ERROR[39m [38;5;3m[Email] [39m[31mFalha de rede ao enviar para a@b.test: Error: getaddrinfo ENOTFOUND[39m
+ ✓ src/integrations/meta/meta.client.spec.ts (4 tests) 11ms
+ ✓ src/integrations/email/email.client.spec.ts (6 tests) 14ms
+ ✓ src/infra/session/session.service.spec.ts (17 tests) 10ms
+ ✓ src/integrations/typebot/typebot.client.spec.ts (5 tests) 11ms
+ ✓ src/domain/inbox/historico.service.spec.ts (6 tests) 4ms
+ ✓ src/domain/integration/api-key.service.spec.ts (2 tests) 5ms
+ ✓ src/domain/inbox/incoming.typebot.integration.spec.ts (2 tests) 8ms
+ ✓ src/surfaces/bff/integracao.typebot.spec.ts (2 tests) 5ms
+ ✓ src/domain/inbox/incoming.typebot.spec.ts (2 tests) 3ms
+ ✓ src/domain/channels/channels.service.spec.ts (3 tests) 4ms
+ ✓ src/domain/identity/password.service.spec.ts (5 tests) 432ms
+
+ Test Files  17 passed (17)
+      Tests  115 passed (115)
+   Start at  04:09:48
+   Duration  2.81s (transform 12.72s, setup 0ms, collect 24.53s, tests 568ms, environment 5ms, prepare 2.96s)
+
+
+EXIT_CODE=0 RUN_ID=api-ci-light-revision2-20261015

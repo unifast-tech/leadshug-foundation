@@ -1,0 +1,62 @@
+
+> @leadshug/web@0.1.0 build
+> tsc -b && vite build
+
+vite v5.4.21 building for production...
+transforming...
+✓ 55 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                   0.69 kB │ gzip:  0.44 kB
+dist/assets/index-wuzy3kMN.css    8.32 kB │ gzip:  2.39 kB
+dist/assets/index-BFoOk2qo.js   224.39 kB │ gzip: 69.79 kB
+✓ built in 1.45s
+npm notice
+npm notice New major version of npm available! 11.16.0 -> 12.2.0
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.0
+npm notice To update run: npm install -g npm@12.2.0
+npm notice
+[WebServer] timeline fixtures listening on 127.0.0.1:3101
+[WebServer] 
+[WebServer] > @leadshug/api@0.1.0 build
+[WebServer] > nest build
+[WebServer] 
+[WebServer] timeline test API listening on 3100; database leadshug_timeline_20261014
+[WebServer] 
+[WebServer] > @leadshug/web@0.1.0 preview
+[WebServer] > vite preview --host 127.0.0.1 --port 4173 --strictPort
+[WebServer] 
+[WebServer]   ➜  Local:   http://127.0.0.1:4173/
+
+Running 2 tests using 1 worker
+
+  ✘  1 e2e/timeline.spec.ts:90:3 › timeline da inbox com backend e PostgreSQL reais › reconecta durante a abertura retida e lê a cabeça sem novo evento (1.1s)
+  ✓  2 e2e/timeline.spec.ts:250:3 › timeline da inbox com backend e PostgreSQL reais › retoma thread vazia após evento entre rodadas e inclui toda a cabeça sem reler (1.4s)
+
+
+  1) e2e/timeline.spec.ts:90:3 › timeline da inbox com backend e PostgreSQL reais › reconecta durante a abertura retida e lê a cabeça sem novo evento 
+
+    Error: cdpSession.send: Protocol error (Network.closeAllConnections): 'Network.closeAllConnections' wasn't found
+
+      138 |     await cdp.send('Network.enable');
+      139 |     await cdp.send('Network.emulateNetworkConditions', { offline: true, latency: 0, downloadThroughput: 0, uploadThroughput: 0 });
+    > 140 |     await cdp.send('Network.closeAllConnections');
+          |               ^
+      141 |     await expect.poll(() => fechamentos).toBe(1);
+      142 |     await cdp.send('Network.emulateNetworkConditions', { offline: false, latency: 0, downloadThroughput: -1, uploadThroughput: -1 });
+      143 |     await expect.poll(() => sockets.length).toBe(2, { timeout: 10_000 });
+        at /workspace/web-app/e2e/timeline.spec.ts:140:15
+
+    Error Context: test-results/timeline-timeline-da-inbox-75424-lê-a-cabeça-sem-novo-evento/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/timeline-timeline-da-inbox-75424-lê-a-cabeça-sem-novo-evento/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/timeline-timeline-da-inbox-75424-lê-a-cabeça-sem-novo-evento/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  1 failed
+    e2e/timeline.spec.ts:90:3 › timeline da inbox com backend e PostgreSQL reais › reconecta durante a abertura retida e lê a cabeça sem novo evento 
+  1 passed (17.9s)

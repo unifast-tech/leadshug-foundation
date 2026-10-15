@@ -1,0 +1,33 @@
+{
+  "generated_at_utc": "2026-10-15T05:15:43.691331Z",
+  "git": {
+    "ahead": 0,
+    "available": true,
+    "behind": 0,
+    "clean": false,
+    "root": "/mnt/c/unifast/leadshug/leadshug_now_docker",
+    "synced": false,
+    "upstream": "origin/main"
+  },
+  "overall_outcome": "go",
+  "rule_id": "paced.todo.closeout-disposition",
+  "todo_count": 1,
+  "todo_results": [
+    {
+      "context": {
+        "closeout_section_present": true,
+        "current_delivery_stage": "Local-Implemented",
+        "delivery_claim": true,
+        "disposition": "move-completed",
+        "next_exact_step": "validar e publicar as evid\u00eancias/documenta\u00e7\u00e3o na Foundation main; depois mover o mesmo TODO para completed e publicar a reloca\u00e7\u00e3o.",
+        "path_state": "active",
+        "post_commit_push_status": "pending",
+        "qualifiers": "none",
+        "todo_path": "/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/todos/active/features/TODO-leadshug-inbox-message-timeline-pagination.md",
+        "work_state": "review"
+      },
+      "violations": []
+    }
+  ],
+  "violations": []
+}

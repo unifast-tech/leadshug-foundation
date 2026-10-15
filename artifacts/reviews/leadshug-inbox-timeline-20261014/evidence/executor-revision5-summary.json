@@ -1,0 +1,430 @@
+{
+  "task": "ST-ATT-01 inbox timeline pagination executor evidence",
+  "capturedAtUtc": "2026-10-15T04:48:43.520398+00:00",
+  "status": "revision 5 source frozen for independent review; no commit/push",
+  "runtimeAndDatabase": {
+    "node": "22.23.3",
+    "postgres": "PostgreSQL 16.14",
+    "database": "leadshug_timeline_20261014",
+    "migrations": 17,
+    "endpoint": "postgresql://timeline-postgres:5432/leadshug_timeline_20261014 (credentials redacted)",
+    "disposable": true
+  },
+  "source": {
+    "api": {
+      "branch": "feature/inbox-timeline-pagination",
+      "head": "5db3fbe2043428749895fc3ff6441e9457467dd0",
+      "diffSha256": "d3d84c015c24348b1dbc885a90d66ff8f88eadf35a75b0a256a38c3f1230708b",
+      "manifestSha256": "4722038d60e7b73ac3dc04d2adbbd7af9f2a71fda6d2f9f59c87214ca3d70125",
+      "files": [
+        {
+          "path": "src/domain/inbox/conversations.service.ts",
+          "sha256": "93e69b0a1811533d0d718fe3fd3b105b1376d2a481ab2b22d8f1bfcf5dbe452e"
+        },
+        {
+          "path": "src/domain/inbox/timeline-pagination.spec.ts",
+          "sha256": "a4c128981c7d3a0e93ba51de17392a34320e89f78098e5ed383532011ff6bb4d"
+        },
+        {
+          "path": "src/domain/inbox/timeline-pagination.ts",
+          "sha256": "d2cb9e533c8741f34babb1cef0a771878ae488474a3162e844a2f1d4d3acd6af"
+        },
+        {
+          "path": "src/surfaces/bff/conversations.controller.ts",
+          "sha256": "0b5c46a78aafd8085b609ad711bcdb7626263094f434240f37b8700f20291565"
+        },
+        {
+          "path": "test/atendimento.e2e-spec.ts",
+          "sha256": "1bb4acb19fc522b397424b319ab04563e3608605dcfe307970eecdd0d464b5b8"
+        },
+        {
+          "path": "test/browser-server.cjs",
+          "sha256": "031e9d1e282603c098c4bb594fb13a08ab2bc2f301c9a3ebb5a6362cae6fe42b"
+        },
+        {
+          "path": "test/timeline-fixtures.cjs",
+          "sha256": "bc15f1758ec574dec1f1c66330e0cc9804705e103fb5abab7f9015e5e8563f9f"
+        }
+      ]
+    },
+    "web": {
+      "branch": "feature/inbox-timeline-pagination",
+      "head": "6c99c27dafdce8ed9b461d17aaaaa491b8ae16e9",
+      "diffSha256": "fcd20d7351338a4703340664f0033fb76e3185fa2cc8f90a93b998bbdf4aa199",
+      "manifestSha256": "15b4a455e8f853d6cbc864deb3e17cdd2155648eb5974b56d3a836a32662f9c0",
+      "files": [
+        {
+          "path": "e2e/timeline-freshness.ts",
+          "sha256": "ad41153df34c53f6674325b72887e701259ba7a8e752afd38ff4cdd8728c4cd0"
+        },
+        {
+          "path": "e2e/timeline.spec.ts",
+          "sha256": "dcc82bed1599480d38df251acf7bd9eea74b0fc76d63745c3ce85cab5511dc49"
+        },
+        {
+          "path": "playwright.config.ts",
+          "sha256": "d69c084d15cfef29ad23851036cb90309c60aa7a7b16c6810e3ae9b0adbbdd98"
+        },
+        {
+          "path": "src/api.ts",
+          "sha256": "87ba36bd21518725ba0e42221030d77b723144ef8d0581fddb2d9102233e7db2"
+        },
+        {
+          "path": "src/telas/Inbox.tsx",
+          "sha256": "c499895fee74325e5357052186dd5de9d46c7bc867174e614a9950009ced57ae"
+        },
+        {
+          "path": "src/tempoReal.spec.ts",
+          "sha256": "378a97ce29c6382f6a7ae9018121ed99ef2733a2b1c8f01c3889074611fa7dd5"
+        },
+        {
+          "path": "src/tempoReal.ts",
+          "sha256": "118ceedc40649eb8b7ddfa44eee7824224994bf383dc9b51e496f80236da0fcf"
+        },
+        {
+          "path": "src/timeline.test.ts",
+          "sha256": "16d1f1a12d20935e399e4b23e4d93de7047f9015dfd5a65ee6093d0645c38fd4"
+        },
+        {
+          "path": "src/timeline.ts",
+          "sha256": "0bfd7d287f93c8c6393718f3f05cd9c248ce50311758bf9995e6ba80b5cd9311"
+        }
+      ]
+    },
+    "manifestRecheckAfterRuns": "All API and Web source manifest entries match both immutable revision 5 final attestations and current checkout; zero mismatches.",
+    "gitDiffCheck": "passes with cr-at-eol whitespace configuration; project files use CRLF"
+  },
+  "buildFreshness": {
+    "fullRunId": "web-authority-revision5-final-full-20261015",
+    "capturedAtUtc": "2026-10-15T04:46:14.137Z",
+    "frcRunId": "web-authority-revision5-final-frc3-20261015",
+    "frcCapturedAtUtc": "2026-10-15T04:47:26.318Z",
+    "apiHealth": 200,
+    "fixtureHealth": 200,
+    "preview": 200,
+    "servedBundle": "/assets/index-BFoOk2qo.js",
+    "servedBundleSha256": "7cf5c91378614d35eabf83b7ba2f29aa33b339aaed8ad4c96f960f4037e170e2",
+    "distBundleSha256": "7cf5c91378614d35eabf83b7ba2f29aa33b339aaed8ad4c96f960f4037e170e2",
+    "sameServedAssetForFrc": true,
+    "fullAttestation": "attestation-browser-web-authority-revision5-final-full-20261015.json",
+    "frcAttestation": "attestation-browser-web-authority-revision5-final-frc3-20261015.json",
+    "attestationSha256": {
+      "attestation-browser-web-authority-revision5-final-full-20261015.json": "718d5e8b936768f52103fe332ee38ed5c22eab5119cd0ad7599b369647960262",
+      "attestation-browser-web-authority-revision5-final-frc3-20261015.json": "0cfc42c77456deb69656a9c2e4c41729004128a87a07b8525bb255e009880cbe"
+    }
+  },
+  "apiAuthority": {
+    "command": "npm run prisma:generate && npm run lint && npm run build && npm test (API E2E remains the unchanged authoritative 224/224 run)",
+    "exitCode": 0,
+    "unitTests": {
+      "files": 17,
+      "passed": 115,
+      "failed": 0,
+      "stdoutPersisted": true,
+      "log": "api-ci-light-revision2-20261015.log"
+    },
+    "e2e": {
+      "files": 20,
+      "passed": 224,
+      "failed": 0,
+      "durationSeconds": 111.92,
+      "log": "api-e2e-authority.log",
+      "sourceUnchanged": true
+    },
+    "runtimeLog": "api-runtime-authority.txt",
+    "note": "Raw stdout retained for all four commands against unchanged API source; API E2E not repeated.",
+    "revision2LightCommands": [
+      {
+        "command": "npm run prisma:generate",
+        "exitCode": 0
+      },
+      {
+        "command": "npm run lint",
+        "exitCode": 0
+      },
+      {
+        "command": "npm run build",
+        "exitCode": 0
+      },
+      {
+        "command": "npm test",
+        "exitCode": 0,
+        "files": 17,
+        "passed": 115,
+        "failed": 0
+      }
+    ],
+    "revision2Log": "api-ci-light-revision2-20261015.log",
+    "revision2LogSha256": "07f3536876fff3e4bf1e6e8caa39ed0215422b44daa6c52b138384b4797ef270"
+  },
+  "webAuthority": {
+    "unit": {
+      "command": "npm test",
+      "exitCode": 0,
+      "files": 3,
+      "passed": 20,
+      "failed": 0,
+      "log": "web-authority-revision5-final-full-20261015.log"
+    },
+    "browser": {
+      "command": "npm run test:tela",
+      "exitCode": 0,
+      "passed": 36,
+      "failed": 0,
+      "duration": "1.0m",
+      "log": "web-authority-revision5-final-full-20261015.log"
+    },
+    "frc": {
+      "command": "npx playwright test e2e/timeline.spec.ts --grep=\"preserva o piso T\" --repeat-each=3",
+      "exitCode": 0,
+      "passed": 3,
+      "failed": 0,
+      "realWebhookTriggersPerRepeat": 10,
+      "log": "web-authority-revision5-final-frc3-20261015.log"
+    },
+    "pollTargeted": {
+      "command": "npx playwright test e2e/timeline.spec.ts --grep=\"poll retoma uma rodada pendente\"",
+      "exitCode": 0,
+      "passed": 1,
+      "log": "web-poll-targeted.log"
+    },
+    "logoutTargeted": {
+      "repeatEach": 5,
+      "passed": 5,
+      "exitCode": 0,
+      "log": "web-logout-lifecycle-5x.log"
+    },
+    "revision2Targeted": {
+      "archRecoveryRegressions": {
+        "command": "npx playwright test e2e/timeline.spec.ts --grep=\"(abertura|thread vazia|piso T)\"",
+        "exitCode": 0,
+        "passed": 3,
+        "log": "web-arch-targeted-second.log"
+      },
+      "contextRaces": {
+        "command": "npx playwright test e2e/timeline.spec.ts --grep=\"troca de conversa e BU\"",
+        "exitCode": 0,
+        "passed": 1,
+        "log": "web-context-revision2-target-20261015b.log"
+      },
+      "contextCoverage": "Both conversation and BU switches cover delayed old-send success, aborted old-send network failure, and delayed real backfill. Destination draft, error absence, IDs/messages, metadata, selection and scroll remain asserted."
+    },
+    "revision3Targeted": {
+      "failedRecoveryBudget": {
+        "command": "npx playwright test e2e/timeline.spec.ts --grep=\"falhas de recuperação consomem\"",
+        "exitCode": 0,
+        "passed": 1,
+        "log": "web-revision3-failed-budget-target-20261015b.log"
+      },
+      "historicalCursorRestart": {
+        "command": "npx playwright test e2e/timeline.spec.ts --grep=\"erro no cursor histórico\"",
+        "exitCode": 0,
+        "passed": 1,
+        "log": "web-revision3-cursor-failure-target-20261015.log"
+      },
+      "contextRaces": {
+        "command": "npx playwright test e2e/timeline.spec.ts --grep=\"troca de conversa e BU\"",
+        "exitCode": 0,
+        "passed": 1,
+        "log": "web-context-revision2-target-20261015b.log"
+      }
+    },
+    "revision4Targeted": {
+      "recoveryErrorLifecycle": {
+        "command": "npx playwright test e2e/timeline.spec.ts --grep=\"(falhas de recuperação consomem|erro no cursor histórico|sucesso da recuperação não apaga)\"",
+        "exitCode": 0,
+        "passed": 3,
+        "failed": 0,
+        "log": "web-revision4-error-lifecycle-target-20261015.log"
+      },
+      "expectedAlerts": "Both recovery failure tests assert alert visible before Continue and absent after successful coverage; a separate test asserts a newer send failure remains visible after coverage."
+    },
+    "revision5Targeted": {
+      "command": "npm run build && npx playwright test e2e/timeline.spec.ts --grep=\"(reconecta durante a abertura retida|retoma thread vazia após evento entre rodadas)\"",
+      "exitCode": 0,
+      "passed": 2,
+      "failed": 0,
+      "log": "web-revision5-targeted-discriminating-20261015.log",
+      "openingReconnect": "The actual initial GET response was held after backend fetch. The native WebSocket was closed through a source-injected reference; a second real authenticated server `conectado` frame was required before releasing the opening response. No later message event or clock advance; recent read-neutral fetch recovered new persisted IDs and preserved unread.",
+      "emptyPausedRestart": "160-message backlog predates two real inbound events. The first post-event Continue request is asserted to be marcarLida=false and without antes; all 162 ordered IDs and unread=2 are checked, plus visible IN_SERVICE status after a real BFF claim during the pause."
+    }
+  },
+  "bci": {
+    "fullApiE2eIncludesThreeRealPostgresBatches": true,
+    "invariant": "10 unread increments after atomic ack while Message page SELECT waits on a lock; unread stays 10 before/after page; later real inbound makes 11",
+    "negativeControl": "temporarily moved ack after findMany; targeted test failed expected 10 vs actual 0; restored exact saved bytes; canonical focused test passed",
+    "negativeControlLog": "bci-mutation-control.log",
+    "canonicalLog": "bci-canonical-after-mutation.log",
+    "restoredServiceSha256": "93e69b0a1811533d0d718fe3fd3b105b1376d2a481ab2b22d8f1bfcf5dbe452e"
+  },
+  "eps": {
+    "conversationRows": 20382,
+    "largestEqualTimestampGroup": 1000,
+    "recent": {
+      "executionMs": 1.094,
+      "sharedBuffersHit": 37
+    },
+    "deepCursorOffset": 10000,
+    "deep": {
+      "executionMs": 3.442,
+      "sharedBuffersHit": 357,
+      "rowsRemovedByFilter": 10001
+    },
+    "largeTieCursorOffset": 500,
+    "largeTie": {
+      "executionMs": 0.85,
+      "sharedBuffersHit": 37,
+      "rowsRemovedByFilter": 501
+    },
+    "candidateIndexTrial": {
+      "index": "(conversation_id, created_at DESC, id DESC)",
+      "executionMs": 3.942,
+      "sharedBuffersHit": 9832,
+      "rowsRemovedByFilter": 10001,
+      "decision": "no index or migration; trial index removed; existing index retains deep scan residual"
+    },
+    "sql": "explain-timeline-exact.sql",
+    "log": "explain-timeline-exact.log",
+    "candidateSql": "explain-index-trial.sql",
+    "candidateLog": "explain-index-trial.log"
+  },
+  "rlsReadSample": {
+    "requests": 30,
+    "concurrency": 5,
+    "batches": 6,
+    "status200": 30,
+    "errors": 0,
+    "messagesPerResponse": 50,
+    "p50Ms": 23.36,
+    "p95Ms": 64.26,
+    "maxMs": 68.5,
+    "foreignConversationWithMalformedLimitStatus": 404,
+    "unreadBefore": 7,
+    "unreadAfter": 7,
+    "messagesBefore": 251,
+    "messagesAfter": 251,
+    "script": "rls-read-sample.mjs",
+    "log": "rls-read-sample.log",
+    "scopeNote": "foreign request used ?limite=invalid; raw JSON label says malformedCursor but malformed field is limite",
+    "productionSloClaim": false
+  },
+  "historicalDiagnostics": {
+    "invalidEarlierApiRun": "220/222 overlapped Browser cleanup/seed; not authoritative; later clean run 224/224 is authority",
+    "earlierBrowserRun": "29/30 with initial WebSocket logout handshake issue; targeted logout 5/5 and final 31/31 pass after stable Inbox socket lifecycle",
+    "incompleteFrcRepeat": "all-case repeat stopped at 20/30; not evidence; final strong FRC passed 3/3"
+  },
+  "cleanupAndResources": {
+    "generatedWebTestResultsRemoved": true,
+    "databaseContainer": "leadshug-timeline-postgres-20261014 remains running for reviewers",
+    "dependencyVolumes": [
+      "leadshug-timeline-api-node-modules-20261014",
+      "leadshug-timeline-web-node-modules-20261014"
+    ],
+    "noOtherTimelineRunnerContainers": true,
+    "sourceChangesFrozen": true,
+    "disposableProbeRowsKeptForReview": true
+  },
+  "logSha256": {
+    "api-ci-light-revision2-20261015.log": "07f3536876fff3e4bf1e6e8caa39ed0215422b44daa6c52b138384b4797ef270",
+    "web-authority-revision2-full-20261015.log": "498b7e02295ddd70df9c64512a81d03d4bd535a5e53ad10fb2a8c107db1855de",
+    "web-authority-revision2-frc3-20261015.log": "628acebdcfa9646cdca559ea5e69245479afb863e63b4dcf9ed273057e926dd7",
+    "web-context-revision2-target-20261015a.log": "0974f0bd565563fd041f6faa070d42f0d664951732efff6a87b1a538bd05715d",
+    "web-context-revision2-target-20261015b.log": "db388b4b9fdaa3cf0f740787f4ed16c7d7ebfd3563897e8b4021b383faf5e075",
+    "web-arch-targeted-second.log": "d2e80466e2fab64303fc30b02aca1d1afdda483e8595907da7eeedb59bfd9dd2",
+    "api-e2e-authority.log": "b508ca43e5157fea8fbf6951b2bd2b7c2b860ebde3e4c2dca1971094436317db",
+    "web-poll-targeted.log": "14a49953f93214f078e30f4f449423a01fb2994188e8b60878b0b0580c8978df",
+    "web-logout-lifecycle-5x.log": "4d21a8d1f11eba483a316fd5d15c4a1fc2c35ffca728433b9e00d7edb21a4047",
+    "bci-mutation-control.log": "0c2b211c2078240a09519eeff76f2a32a358135090e32df1bb871c619d4e327d",
+    "bci-canonical-after-mutation.log": "90fe5dd92cf6098fc7375258ba7452a29c4d74255d10fafd2efcc4c8b4866b4c",
+    "explain-timeline-exact.sql": "30b7477601cd109ffd3af7d38e9df1e5fbf8a6af56bf90cf52a42f4779ee0cb8",
+    "explain-timeline-exact.log": "6e346b5b0609de7f347481fb2b4eccc93e4ddf8b41219bb1348fbf169af9b9b6",
+    "explain-index-trial.sql": "8ac4343ac0633b5b1535e171ec7466e58c5c6488d1de8abc516b15f6e6b914a3",
+    "explain-index-trial.log": "43251847c09a71819a11aa135c8710b72a3eb4af2188f07bd3c071bfa980171c",
+    "rls-read-sample.mjs": "d59fa9f53ffeb97aec02b32ccf91584868f1e2b1ebcd644278f00881ae3a3321",
+    "rls-read-sample.log": "5b68b1b5f450153c7fa6c36c277aa19d5846860f63ef8124a1eaeb32dd3941fc",
+    "web-authority-revision3-final-full-20261015.log": "db751c5b21cef3d774c7d2d0fa44cc373f879ae4c8c35abac65d085d63367e9c",
+    "web-authority-revision3-final-frc3-20261015.log": "bf502bd2d032c2b2a37a50ccf6f2cb08e99dd86f756b20fc8355ede706148a1d",
+    "web-revision3-failed-budget-target-20261015b.log": "5d02c39e207a6b10d06f56f6824e7db51e3a749359a6310f302a4e13c1e0a291",
+    "web-revision3-cursor-failure-target-20261015.log": "c3ef437d10ab5c25d047ca67c7c5daa13bc33019c57ec02f402e62a84cb23f14",
+    "web-revision3-budget-negative-control-20261015.log": "9ef570cf6e0e8829f2d24b705fd5a7184cb784f4317b81e7e56ec10f503b4646",
+    "web-revision3-cursor-negative-control-20261015.log": "bcbadd84ee4327a619fd1b8d01c5530cf5de7bc6d5657d34b3b02c1a7dcf753e",
+    "web-revision3-budget-negative-control-20261015.restore": "b6ddf0218fde28fb3013a6743a7bde0205c80e528ed3cef53f066dcca915e4b1",
+    "web-revision3-cursor-negative-control-20261015.restore": "5f5606b3af229f362c6470fa1b3bd9c67d0ea5b2528d40508f156f5cebafc480",
+    "web-authority-revision4-final-full-20261015.log": "86c6068365c6cb7619e02d73b8c55ab80da365ccc9dadb8d798fc7f7d6f5c9be",
+    "web-authority-revision4-final-frc3-20261015.log": "489c623130bcf0489f80e89df7b95edead851975101e696d55094de25bc0b794",
+    "web-revision4-recovery-error-target-20261015.log": "c30f83706ae36426eee820981646054c92e2b5f1e2626e0848769520fc6cf3d2",
+    "web-revision5-targeted-initial-20261015.log": "9470e971b47a684ce20d49b09a5871b59570bf49c10aea3d7dd73a6f22ed99d5",
+    "web-revision5-targeted-retry-20261015.log": "1b02ac320b4bfd6446895858f88d5b9f45ce940080514781e51c6f2ef648d22b",
+    "web-revision5-targeted-discriminating-20261015.log": "5033895fce35ff598af1b3e9c605b9da883e9463a55623c3553e7dc30c0f240b",
+    "web-revision5-empty-cursor-negative-control-20261015.log": "9aa1c3d8c1f10946881ee31f00f60ade947134a46106c337163d3e46eb6b30b5",
+    "web-revision5-empty-cursor-negative-control-20261015.restore": "23d2e67d723c888e0784a2359920f1360ada8de039b8b1d46408341e256c635d",
+    "web-authority-revision5-final-full-20261015.log": "b1da263d62c36a293bc3e3ebf52eb2d3a5ddc9db176bc54ffd7f4ff5a8d7faef",
+    "web-authority-revision5-final-frc3-20261015.log": "bfdc1b9af6de06f9e864b7593311064cf3dc22c5c9d342c68857f80abb19fc7f",
+    "attestation-browser-web-authority-revision5-final-full-20261015.json": "718d5e8b936768f52103fe332ee38ed5c22eab5119cd0ad7599b369647960262",
+    "attestation-browser-web-authority-revision5-final-frc3-20261015.json": "0cfc42c77456deb69656a9c2e4c41729004128a87a07b8525bb255e009880cbe"
+  },
+  "revision2Findings": {
+    "ARCH-DEL-01": "One shared three-page budget spans the recovery traversal and dirty coalesced passes; the real late event during page three cannot renew it. The browser oracle checks exactly three recovery GETs, single-flight, and explicit Continue completion.",
+    "ARCH-DEL-02": "An initially empty timeline with >150 persisted messages receives a real event between paused rounds; the restart marker survives until recent-head fetch and full ordered ID/unread readback pass.",
+    "ARCH-DEL-03": "A real incoming event arrives while the opening GET response is held after fetch; installation performs read-neutral recovery without another event or clock advance, preserving unread.",
+    "TQA-TL-02": "Context-race tests exercise success, network failure, and delayed backfill for both conversation and BU changes, after entering a destination draft and capturing destination metadata, IDs and scroll.",
+    "testDevelopment": "Test-after implementation; no retroactive TDD claim.",
+    "targetedRunClassification": "Initial context diagnostics exposed fixture-label and text-representation issues in the test harness. Those were corrected; the final targeted context run and the subsequent full 32-test browser run passed. These diagnostics did not establish a product regression."
+  },
+  "revision3Findings": {
+    "ARCH-DEL-01": "Budget is debited immediately before dispatching each page GET, including attempts that fail. Real-network browser regression aborts three real recovery responses with an incoming event during each; verifies exactly 3 requests, single-flight 1, visible error/pending, no fourth request before Continue, then complete IDs and unread after Continue.",
+    "ARCH-DEL-01NegativeControl": {
+      "mutation": "Moved query debits from before await to after await, reproducing reviewed variant.",
+      "result": "Targeted regression failed as expected: expected 3 recovery requests, received 5.",
+      "exitCode": 1,
+      "restore": "Inbox.tsx restored in finally; byte-exact restoration verified.",
+      "restoreProof": "count=4; restoredBytesExact=True; sourceSha256=1af04dee7cad573fc4920cdac7ecb77ddd352200a7ff30dba450508a7f191521",
+      "log": "web-revision3-budget-negative-control-20261015.log"
+    },
+    "ARCH-CURSOR-01": "On a failed historical cursor request, a concurrent dirty/event invalidation resets cursor to null so the next remaining-budget pass fetches recent head; failures without dirty events preserve cursor for retry.",
+    "ARCH-CURSOR-01NegativeControl": {
+      "mutation": "Temporarily removed dirty-error cursor reset.",
+      "result": "Targeted regression failed as expected: expected 2 recent requests, received 1 with no later trigger.",
+      "exitCode": 1,
+      "restore": "Inbox.tsx restored in finally; byte-exact restoration verified.",
+      "restoreProof": "restoredBytesExact=True; sourceSha256=821ce011ce5738e40caeafa2c3fad20b9583053ce2373bb194abbeee567bc783",
+      "log": "web-revision3-cursor-negative-control-20261015.log"
+    },
+    "historicalCursorTarget": "Real tied-timestamp PostgreSQL history; hold real cursor-page response, emit real webhook while in flight, abort response, assert recent-head restart within remaining budget, Continue, then compare all ordered IDs and unread=2.",
+    "testDevelopment": "Test-after implementation; no retroactive TDD claim.",
+    "canonicalInboxSourceSha256": "821ce011ce5738e40caeafa2c3fad20b9583053ce2373bb194abbeee567bc783"
+  },
+  "revision4Finding": {
+    "ARCH-DEL-04": "Recovery errors are versioned by owner and generation. Successful completion clears only the recovery-owned error if its exact version is still current. Other action starts, clears and errors advance the shared error version and invalidate the recovery marker, so late recovery completion cannot clear a newer unrelated error.",
+    "targetedProof": "Budget failure and historical cursor failure regressions assert old recovery alert removal after completion. A real network-aborted send during held successful retry produces `Falha ao enviar mensagem.`; after recovery completes and full ordered IDs are recovered, that newer error remains visible and no outbound row was persisted.",
+    "testDevelopment": "Test-after implementation; no retroactive TDD claim."
+  },
+  "revision5Evidence": {
+    "targetedRun": "web-revision5-targeted-discriminating-20261015.log",
+    "discardedDiagnostics": [
+      {
+        "run": "web-revision5-targeted-initial-20261015.log",
+        "classification": "Harness diagnostic failed because network-offline did not close the already-open WebSocket."
+      },
+      {
+        "run": "web-revision5-targeted-retry-20261015.log",
+        "classification": "Harness diagnostic failed because this Chromium does not implement Network.closeAllConnections."
+      }
+    ],
+    "ARCH-DEL-02NegativeControl": {
+      "mutation": "For empty recovery only, retained the paused cursor on a real between-round event.",
+      "result": "Expected test failure: first resumed request had antes=true; test required a recent head request with no cursor.",
+      "exitCode": 1,
+      "log": "web-revision5-empty-cursor-negative-control-20261015.log",
+      "restore": "Inbox.tsx restored byte-exactly before canonical full run.",
+      "restoreProof": "expectedSha256=c499895fee74325e5357052186dd5de9d46c7bc867174e614a9950009ced57ae\nrestoredSha256=c499895fee74325e5357052186dd5de9d46c7bc867174e614a9950009ced57ae\nrestoredBytesExact=True"
+    },
+    "testDevelopment": "Test-after evidence repair; no retrospective TDD claim. No production/runtime source changed since revision 4.",
+    "runExitFiles": [
+      "web-authority-revision5-final-full-20261015.exit",
+      "web-authority-revision5-final-frc3-20261015.exit",
+      "web-revision5-targeted-discriminating-20261015.exit",
+      "web-revision5-empty-cursor-negative-control-20261015.exit"
+    ]
+  }
+}

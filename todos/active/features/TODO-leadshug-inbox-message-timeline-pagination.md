@@ -40,27 +40,27 @@ Este contrato aprovado define somente ST-ATT-01. Mudanças materiais de contrato
 
 ## Delivery Status Canon (Required)
 
-- **Current delivery stage:** Pending
+- **Current delivery stage:** Local-Implemented
 - **Qualifiers:** none
-- **Next exact step:** concluir suites e provas PostgreSQL/browser, revisar independentemente e resolver achados antes do closeout.
+- **Next exact step:** validar e publicar as evidências/documentação na Foundation main; depois mover o mesmo TODO para completed e publicar a relocação.
 
 ## Active Work State (Required While TODO Remains In `active/`)
 
-- **Work state:** implementation
-- **Why this state now:** APROVADO e authority guard go registrados; executor único implementa e valida o primeiro recorte.
-- **Exit condition:** implementação e matriz de validação completas para review de entrega.
+- **Work state:** review
+- **Why this state now:** entrega Local-Implemented validada/revisada e fonte commitada; documentação/evidências de closeout prontas para publicação e relocação.
+- **Exit condition:** pareceres independentes resolvidos, guardas e consolidação canônica completos para closeout local.
 
 ## Scope
 
-- [ ] Documentar o contrato da thread BFF no módulo inbox-and-conversations antes da alteração da API.
-- [ ] Validar paginação por cursor e limites na entrada; autorizar a conversa antes de resolver cursor.
-- [ ] Retornar a página recente, ordenar deterministicamente e fornecer continuação para mensagens anteriores.
-- [ ] Atualizar tipos/adapter web e inbox para carregar anteriores, manter posição e mesclar atualizações por ID.
-- [ ] Impedir que respostas atrasadas de outra conversa/BU substituam a conversa selecionada.
-- [ ] Preservar histórico, cursor histórico, metadados atuais e draft correto durante envio, claim, close, backfill, poll e eventos/reconexão de socket.
-- [ ] Atualizar testes de contrato, PostgreSQL e Playwright com fixtures determinísticas maiores que 200 mensagens.
-- [ ] Corrigir o caminho ../api para ../api-app no harness; acrescentar bootstrap de teste do backend real com adapters externos determinísticos e fixtures de banco, estritamente para validar este fluxo.
-- [ ] Se o plano de consulta exigir índice composto novo, acrescentar apenas a migração desse índice e validar deploy em banco de teste isolado.
+- [x] Documentar o contrato da thread BFF no módulo inbox-and-conversations antes da alteração da API.
+- [x] Validar paginação por cursor e limites na entrada; autorizar a conversa antes de resolver cursor.
+- [x] Retornar a página recente, ordenar deterministicamente e fornecer continuação para mensagens anteriores.
+- [x] Atualizar tipos/adapter web e inbox para carregar anteriores, manter posição e mesclar atualizações por ID.
+- [x] Impedir que respostas atrasadas de outra conversa/BU substituam a conversa selecionada.
+- [x] Preservar histórico, cursor histórico, metadados atuais e draft correto durante envio, claim, close, backfill, poll e eventos/reconexão de socket.
+- [x] Atualizar testes de contrato, PostgreSQL e Playwright com fixtures determinísticas maiores que 200 mensagens.
+- [x] Corrigir o caminho ../api para ../api-app no harness; acrescentar bootstrap de teste do backend real com adapters externos determinísticos e fixtures de banco, estritamente para validar este fluxo.
+- [x] Se o plano de consulta exigir índice composto novo, acrescentar apenas a migração desse índice e validar deploy em banco de teste isolado.
 
 ## Proposed API Contract
 
@@ -115,7 +115,7 @@ n/a; nenhuma decisão material bloqueando execução no início.
 
 ## Execution Lane Tracking (Required)
 
-- **Local implementation branches:** api-app:feature/inbox-timeline-pagination; web-app:feature/inbox-timeline-pagination, a criar no checkout principal após aprovação. Foundation:main
+- **Local implementation branches:** api-app:feature/inbox-timeline-pagination; web-app:feature/inbox-timeline-pagination no checkout principal. Foundation:main
 - **Promotion lane path:** branches locais -> validação local -> evidência/closeout na Foundation; deploy e promoção remota de código fora do recorte
 - **Lane-promoted threshold for this TODO:** n/a; entrega local validada
 - **Production-ready threshold for this TODO:** não reivindicado; publicação requer contrato separado
@@ -126,7 +126,7 @@ n/a; nenhuma decisão material bloqueando execução no início.
 
 ## Promotion Evidence (Required Before `🟣 Lane-Promoted` / `✅ Production-Ready`)
 
-Pendente no gate de execução/revisão correspondente; nenhuma evidência ou promoção reivindicada neste Draft.
+Esta entrega é local-only: não há autorização/promoção de ambiente ou claim Production-Ready. Provas locais não são SLO ou validação operacional.
 
 ## Out of Scope
 
@@ -175,12 +175,12 @@ Pendente no gate de execução/revisão correspondente; nenhuma evidência ou pr
 | web | e2e/telas.spec.ts | A,M,?? | Fluxo real e correção do path da API. |
 | web | e2e/*timeline*.spec.ts | A,M,?? | Fluxo real e correção do path da API. |
 | web | playwright.config.ts | A,M,?? | Fluxo real e correção do path da API. |
+| web | e2e/timeline-freshness.ts | A,M,?? | globalSetup canônico valida build/runtime servido antes dos testes, suporte de prova já autorizado. |
 | foundation | todos/active/features/TODO-leadshug-inbox-message-timeline-pagination.md | A,M,D,R,?? | Contrato, framing e evidência específicos. |
 | foundation | artifacts/feature-briefs/leadshug-attendance-evolution-20261014.md | A,M,?? | Contrato, framing e evidência específicos. |
 | foundation | artifacts/reviews/leadshug-inbox-timeline-20261014/** | A,M,?? | Contrato, framing e evidência específicos. |
 | foundation | backlog/README.md | A,M,?? | Contrato, framing e evidência específicos. |
 | foundation | modules/inbox-and-conversations.md | A,M,?? | Contrato, framing e evidência específicos. |
-
 | foundation | todos/completed/features/TODO-leadshug-inbox-message-timeline-pagination.md | A,M,R,?? | Relocação do mesmo TODO no closeout aprovado, após provas e guardas. |
 
 ### Not Expected Changed Paths
@@ -225,6 +225,8 @@ Pendente no gate de execução/revisão correspondente; nenhuma evidência ou pr
 
 Análise preliminar: o guard identificou incompatibilidade de representação (heading com sufixo, vários globs numa célula e labels workspace/all não declarados), sem desvio de produto. Corrigida a representação para título exato, um glob por linha e regras por repositório; os mesmos paths e baselines aprovados foram preservados. O tipo `??` explicita o estado ainda não staged dos arquivos novos já autorizados como A; não autoriza novos caminhos. A relocação do próprio TODO active → completed é o closeout já autorizado, sem alterar outros registros históricos. Guard final e diff real serão registrados antes da entrega.
 
+Concretização de suporte de prova em 2026-10-15: `web-app/e2e/timeline-freshness.ts` implementa globalSetup de frescor já exigido pelo contrato aprovado (build fresco, backend real e evidência runtime), pois capturar do host falha quando preview é isolado no container e uma captura posterior à suite não satisfaz a regra temporal. A alternativa de arquivo temporário obrigatório faria clones dependerem de arquivo ausente; o helper versionado é a escolha local reproduzível. Acrescentado somente este path ao contrato. Não há nova story, comportamento de produto, provider, ambiente operacional ou obrigação de validação; é o HOW do suporte de teste já autorizado em Approval, VAL-04/05 e no pedido de continuidade. Sem exceção de modelo/topologia e sem nova aprovação de produto necessária.
+
 
 ## Bounded But Elastic Guardrails
 
@@ -232,44 +234,55 @@ Ajustes locais de cursor, queries, mesclagem e CSS podem permanecer neste objeti
 
 ## Definition of Done
 
-- [ ] DOD-01: contrato aprovado e consolidado no módulo responsável.
-- [ ] DOD-02: histórico maior que 200 é alcançável sem lacunas/repetições, inicial recente, empates estáticos e inserções empatadas durante recuperação.
-- [ ] DOD-03: autorização/cursor não permitem outra conversa, BU ou Mantenedora; recurso inacessível é 404 antes de query inválida.
-- [ ] DOD-04: backfill, envio/refresh/close, troca rápida, reconexão sem evento posterior e recuperação mantêm histórico, posição, cursores, metadados e draft corretos.
-- [ ] DOD-05: limite/cursor/marcarLida, vazio/fim, falha/retry e recuperação pendente têm contrato/UI verificados; entradas posteriores à fronteira de abertura continuam não lidas.
-- [ ] DOD-06: suites API/Web/Playwright passam no backend real e banco isolado; plano SQL recente/profundo/empates registra custo e decisão de índice; migrate deploy validado se houver migração.
-- [ ] DOD-07: revisão, guardas de execução/closeout e matriz de evidência específicos completos antes de conclusão.
+- [x] DOD-01: contrato aprovado e consolidado no módulo responsável.
+- [x] DOD-02: histórico maior que 200 é alcançável sem lacunas/repetições, inicial recente, empates estáticos e inserções empatadas durante recuperação.
+- [x] DOD-03: autorização/cursor não permitem outra conversa, BU ou Mantenedora; recurso inacessível é 404 antes de query inválida.
+- [x] DOD-04: backfill, envio/refresh/close, troca rápida, reconexão sem evento posterior e recuperação mantêm histórico, posição, cursores, metadados e draft corretos.
+- [x] DOD-05: limite/cursor/marcarLida, vazio/fim, falha/retry e recuperação pendente têm contrato/UI verificados; entradas posteriores à fronteira de abertura continuam não lidas.
+- [x] DOD-06: suites API/Web/Playwright passam no backend real e banco isolado; plano SQL recente/profundo/empates registra custo e decisão de índice; migrate deploy validado se houver migração.
+- [x] DOD-07: revisão, guardas de execução/closeout e matriz de evidência específicos completos antes de conclusão.
 
 ## Validation Steps
 
-- [ ] VAL-01: provisionar PostgreSQL 16 descartável com DB exclusivo e porta registrada; aplicar migrations e confirmar DATABASE_URL antes de qualquer helper deleteMany. Não usar banco operacional.
-- [ ] VAL-02: no runner Linux Node 22 da API: npm ci; npm run prisma:generate; npm run lint; npm run build; npm test; npm run test:e2e.
-- [ ] VAL-03: fixture base com 251 mensagens, empates maiores que uma página e duas conversas na BU autorizada; outra BU da mesma Mantenedora sem grant; outra Mantenedora/BU. Caminhar páginas, comparar todos os IDs e verificar 400 para cursor alheio em conversa autorizada, 404 antes de validar query em recurso inacessível e ausência de efeitos indevidos.
-- [ ] VAL-04: no runner da Web: npm ci; npm run build; npm test; npm run test:tela; backend real fresco e mesmo DB dedicado via LEADSHUG_E2E_DATABASE_URL.
-- [ ] VAL-05: browser abre recente/carrega anteriores, envia com autoria persistida, recebe evento real do backend, executa close em paralelo com backfill e troca conversa/BU durante envio e request atrasado. Atrasar resposta real, sem fabricar payload BFF. Provar reconexão sem evento posterior, burst acima de 100, grupo empatado e ID menor inserido depois; mais de três páginas mantém estado de recuperação e retoma sem lacuna. Combinar H>T, passagem já atrás de parte do grupo T, inserção de ID menor atrás do cursor, evento durante a caminhada e passagem coalescida com o mesmo piso T; comparar IDs completos após cobertura confirmada.
-- [ ] VAL-06: sempre capturar EXPLAIN representativo da query recente, profunda e com grande grupo empatado, registrando SQL, linhas examinadas/ordenadas e decisão de índice. Se criado índice, executar migrate deploy no DB dedicado.
-- [ ] VAL-07: cumprir revisões/guardas exigidos, incluindo aderência arquitetural, qualidade de testes, segurança, performance, dívida de verificação e review final, antes do closeout.
-- [ ] VAL-08: PostgreSQL/browser verificam não lidas: abertura atômica, IN posterior à marcação, backfill/refresh/reconexão read-neutral e entrada concorrente à abertura. Testar também nenhuma escrita quando autorização/query falha.
+- [x] VAL-01: provisionar PostgreSQL 16 descartável com DB exclusivo e porta registrada; aplicar migrations e confirmar DATABASE_URL antes de qualquer helper deleteMany. Não usar banco operacional.
+- [x] VAL-02: no runner Linux Node 22 da API: npm ci; npm run prisma:generate; npm run lint; npm run build; npm test; npm run test:e2e.
+- [x] VAL-03: fixture base com 251 mensagens, empates maiores que uma página e duas conversas na BU autorizada; outra BU da mesma Mantenedora sem grant; outra Mantenedora/BU. Caminhar páginas, comparar todos os IDs e verificar 400 para cursor alheio em conversa autorizada, 404 antes de validar query em recurso inacessível e ausência de efeitos indevidos.
+- [x] VAL-04: no runner da Web: npm ci; npm run build; npm test; npm run test:tela; backend real fresco e mesmo DB dedicado via LEADSHUG_E2E_DATABASE_URL.
+- [x] VAL-05: browser abre recente/carrega anteriores, envia com autoria persistida, recebe evento real do backend, executa close em paralelo com backfill e troca conversa/BU durante envio e request atrasado. Atrasar resposta real, sem fabricar payload BFF. Provar reconexão sem evento posterior, burst acima de 100, grupo empatado e ID menor inserido depois; mais de três páginas mantém estado de recuperação e retoma sem lacuna. Combinar H>T, passagem já atrás de parte do grupo T, inserção de ID menor atrás do cursor, evento durante a caminhada e passagem coalescida com o mesmo piso T; comparar IDs completos após cobertura confirmada.
+- [x] VAL-06: sempre capturar EXPLAIN representativo da query recente, profunda e com grande grupo empatado, registrando SQL, linhas examinadas/ordenadas e decisão de índice. Se criado índice, executar migrate deploy no DB dedicado.
+- [x] VAL-07: cumprir revisões/guardas exigidos, incluindo aderência arquitetural, qualidade de testes, segurança, performance, dívida de verificação e review final, antes do closeout.
+- [x] VAL-08: PostgreSQL/browser verificam não lidas: abertura atômica, IN posterior à marcação, backfill/refresh/reconexão read-neutral e entrada concorrente à abertura. Testar também nenhuma escrita quando autorização/query falha.
 
 ## Completion Evidence Matrix (Required Before Delivery Claim)
 
+Um registro por critério de Scope, Definition of Done e Validation Steps; texto integral preserva rastreabilidade. Status não são promovidos por resultado intermediário ou execução contaminada.
+
 | Criterion ID | Source Section | Criterion | Evidence Type | Evidence Artifact / Command | Runtime Target | Status | Notes |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| DOD-01 | Definition of Done | Contrato aprovado/consolidado | doc | TODO + modules/inbox-and-conversations.md | foundation | passed | APROVADO explícito e contrato consolidado em modules/inbox-and-conversations.md. |
-| DOD-02 | Definition of Done | Histórico completo e ordenação | test | VAL-03 | PostgreSQL dedicado | planned | 251 mensagens e timestamps empatados. |
-| DOD-03 | Definition of Done | BU/tenant/cursor | test | VAL-03 + test:e2e | PostgreSQL dedicado | planned | Negativos cross-BU/cross-tenant. |
-| DOD-04 | Definition of Done | Fluxo e races de UI | runtime | VAL-05 + test:tela | browser/backend real | planned | Abertura/envio/refresh/troca. |
-| DOD-05 | Definition of Done | Validação, falha/retry e não lidas | test/runtime | VAL-03 + VAL-05 + VAL-08 | API/browser/PostgreSQL | planned | Cursor inválido, reconhecimento atômico e read-neutral. |
-| DOD-06 | Definition of Done | Suites e índice condicional | test/migration | VAL-01..06 + VAL-08 | local isolado | planned | Sem teste da aplicação executado neste planejamento. |
-| DOD-07 | Definition of Done | Revisões e closeout | review | VAL-07 | foundation | planned | Gates não executados. |
-| VAL-01 | Validation Steps | Executar a etapa VAL-01 conforme contrato acima | test/runtime/review | Validation Steps e relatório específico na execução | local isolado / foundation | planned | Prova futura; não executada nesta revisão. |
-| VAL-02 | Validation Steps | Executar a etapa VAL-02 conforme contrato acima | test/runtime/review | Validation Steps e relatório específico na execução | local isolado / foundation | planned | Prova futura; não executada nesta revisão. |
-| VAL-03 | Validation Steps | Executar a etapa VAL-03 conforme contrato acima | test/runtime/review | Validation Steps e relatório específico na execução | local isolado / foundation | planned | Prova futura; não executada nesta revisão. |
-| VAL-04 | Validation Steps | Executar a etapa VAL-04 conforme contrato acima | test/runtime/review | Validation Steps e relatório específico na execução | local isolado / foundation | planned | Prova futura; não executada nesta revisão. |
-| VAL-05 | Validation Steps | Executar a etapa VAL-05 conforme contrato acima | test/runtime/review | Validation Steps e relatório específico na execução | local isolado / foundation | planned | Prova futura; não executada nesta revisão. |
-| VAL-06 | Validation Steps | Executar a etapa VAL-06 conforme contrato acima | test/runtime/review | Validation Steps e relatório específico na execução | local isolado / foundation | planned | Prova futura; não executada nesta revisão. |
-| VAL-07 | Validation Steps | Executar a etapa VAL-07 conforme contrato acima | test/runtime/review | Validation Steps e relatório específico na execução | local isolado / foundation | planned | Prova futura; não executada nesta revisão. |
-| VAL-08 | Validation Steps | Executar a etapa VAL-08 conforme contrato acima | test/runtime/review | Validation Steps e relatório específico na execução | local isolado / foundation | planned | Prova futura; não executada nesta revisão. |
+| SCOPE-01 | Scope | Documentar o contrato da thread BFF no módulo inbox-and-conversations antes da alteração da API. | doc | Foundation4cabc467 + modules/inbox-and-conversations.md | Foundation main | passed | Contrato consolidado antes do executor alterar API; não é só nota tática. |
+| SCOPE-02 | Scope | Validar paginação por cursor e limites na entrada; autorizar a conversa antes de resolver cursor. | PostgreSQL integration | test/atendimento.e2e-spec.ts:317,365,371; api-e2e-authority.log | Node22 / PG16 descartável | passed | Cursor alheio em recurso autorizado400; recurso sem grant404 antes da query; sem sessão401; unread readback preservado. |
+| SCOPE-03 | Scope | Retornar a página recente, ordenar deterministicamente e fornecer continuação para mensagens anteriores. | PostgreSQL integration | test/atendimento.e2e-spec.ts:282; api-e2e-authority.log | Node22 / PG16 descartável | passed | 251 IDs, limite37 e grupo empatado; comparação de IDs na ordem real do banco, página recente e continuação bounded. |
+| SCOPE-04 | Scope | Atualizar tipos/adapter web e inbox para carregar anteriores, manter posição e mesclar atualizações por ID. | Browser / Playwright navigation/mutation | web-app/e2e/timeline.spec.ts; npm run test:tela (project run_web_navigation_smoke equivalent); evidence/web-authority-revision6-final-full-20261015.log; evidence/attestation-browser-web-authority-revision6-final-full-20261015.json; pcv-frc.json | feature/inbox-timeline-pagination;http://127.0.0.1:4173;realNest/PG16 | passed | 251IDs, prepend preserva âncora inclusive chegada durante await, merge porID e cursor histórico separado. Navegador Chromium, Playwright mutation em branch non-main; build fresco/served==dist SHA7cf5c91378614d35eabf83b7ba2f29aa33b339aaed8ad4c96f960f4037e170e2. Aderência/TQA aceitas; final review é gate separado. |
+| SCOPE-05 | Scope | Impedir que respostas atrasadas de outra conversa/BU substituam a conversa selecionada. | Browser / Playwright navigation/mutation | web-app/e2e/timeline.spec.ts; npm run test:tela (project run_web_navigation_smoke equivalent); evidence/web-authority-revision6-final-full-20261015.log; evidence/attestation-browser-web-authority-revision6-final-full-20261015.json; pcv-frc.json | feature/inbox-timeline-pagination;http://127.0.0.1:4173;realNest/PG16 | passed | Seis subcenários de contexto: conversa/BU × envio antigo com sucesso/falha/backfill. Destino mantém seleção, draft, erro, IDs, metadados e scroll. Navegador Chromium, Playwright mutation em branch non-main; build fresco/served==dist SHA7cf5c91378614d35eabf83b7ba2f29aa33b339aaed8ad4c96f960f4037e170e2. Aderência/TQA aceitas; final review é gate separado. |
+| SCOPE-06 | Scope | Preservar histórico, cursor histórico, metadados atuais e draft correto durante envio, claim, close, backfill, poll e eventos/reconexão de socket. | Browser / Playwright navigation/mutation | web-app/e2e/timeline.spec.ts; npm run test:tela (project run_web_navigation_smoke equivalent); evidence/web-authority-revision6-final-full-20261015.log; evidence/attestation-browser-web-authority-revision6-final-full-20261015.json; pcv-frc.json | feature/inbox-timeline-pagination;http://127.0.0.1:4173;realNest/PG16 | passed | Close vence backfill; autoria/draft/ref; reconnect sem evento; poll60 retoma progresso; T fixo, budget3 inclusive erros e restart obrigatório. Navegador Chromium, Playwright mutation em branch non-main; build fresco/served==dist SHA7cf5c91378614d35eabf83b7ba2f29aa33b339aaed8ad4c96f960f4037e170e2. Aderência/TQA aceitas; final review é gate separado. |
+| SCOPE-07 | Scope | Atualizar testes de contrato, PostgreSQL e Playwright com fixtures determinísticas maiores que 200 mensagens. | PostgreSQL + source-owned Playwright | web-app/e2e/timeline.spec.ts; npm run test:tela (project run_web_navigation_smoke equivalent); evidence/web-authority-revision6-final-full-20261015.log; evidence/attestation-browser-web-authority-revision6-final-full-20261015.json; pcv-frc.json | feature/inbox-timeline-pagination;http://127.0.0.1:4173;realNest/PG16 | passed | Fixtures próprias251+, empates acima de página, grupoT/H>T/lateID, burst e readback DB completo; testes source-owned, sem payload BFF fabricado. Navegador Chromium, Playwright mutation em branch non-main; build fresco/served==dist SHA7cf5c91378614d35eabf83b7ba2f29aa33b339aaed8ad4c96f960f4037e170e2. Aderência/TQA aceitas; final review é gate separado. |
+| SCOPE-08 | Scope | Corrigir o caminho ../api para ../api-app no harness; acrescentar bootstrap de teste do backend real com adapters externos determinísticos e fixtures de banco, estritamente para validar este fluxo. | source + integration | playwright.config.ts + test/browser-server.cjs + test/timeline-fixtures.cjs; execution-evidence.md | backend Nest real / DB exclusivo | passed | Path ../api-app; somente Meta/Evolution fake, sem flags ou rotas de teste no entrypoint de produção; autoria persistida observada. |
+| SCOPE-09 | Scope | Se o plano de consulta exigir índice composto novo, acrescentar apenas a migração desse índice e validar deploy em banco de teste isolado. | SQL EXPLAIN + API e2e | evidence/explain-timeline-exact.sql/.log; evidence/explain-index-trial.sql/.log; pcv-eps.json; atendimento.e2e-spec.ts | PG16 /20382 mensagens/1000 empatadas | passed | Recent1.094ms/deep3.442ms/tie0.850ms; trial composto deep3.942ms e9832buffers contra357 existente. Sem migration nova: condição de índice não demonstrou ganho. Risco de varredura profunda explícito; aceito em delivery-adherence-resolution.json, sem SLO de produção. |
+| DOD-01 | Definition of Done | DOD-01: contrato aprovado e consolidado no módulo responsável. | doc | TODO + modules/inbox-and-conversations.md | foundation | passed | APROVADO explícito e contrato consolidado em modules/inbox-and-conversations.md. |
+| DOD-02 | Definition of Done | DOD-02: histórico maior que 200 é alcançável sem lacunas/repetições, inicial recente, empates estáticos e inserções empatadas durante recuperação. | PostgreSQL + source-owned Playwright | web-app/e2e/timeline.spec.ts; npm run test:tela (project run_web_navigation_smoke equivalent); evidence/web-authority-revision6-final-full-20261015.log; evidence/attestation-browser-web-authority-revision6-final-full-20261015.json; pcv-frc.json | feature/inbox-timeline-pagination;http://127.0.0.1:4173;realNest/PG16 | passed | 251IDs ordenados e grupoT completo com H>T/lateID/dirty; full IDs DB/UI depois de cobertura; FRC10gatilhos×3rep,12frames/unread. Navegador Chromium, Playwright mutation em branch non-main; build fresco/served==dist SHA7cf5c91378614d35eabf83b7ba2f29aa33b339aaed8ad4c96f960f4037e170e2. Aderência/TQA aceitas; final review é gate separado. |
+| DOD-03 | Definition of Done | DOD-03: autorização/cursor não permitem outra conversa, BU ou Mantenedora; recurso inacessível é 404 antes de query inválida. | PostgreSQL integration | test/atendimento.e2e-spec.ts:317,365; api-e2e-authority.log | Node22 / PG16 descartável | passed | Negativos distintos: outra conversa autorizada, outra BU da mesma Mantenedora sem grant e outra Mantenedora. |
+| DOD-04 | Definition of Done | DOD-04: backfill, envio/refresh/close, troca rápida, reconexão sem evento posterior e recuperação mantêm histórico, posição, cursores, metadados e draft corretos. | Browser / Playwright navigation/mutation | web-app/e2e/timeline.spec.ts; npm run test:tela (project run_web_navigation_smoke equivalent); evidence/web-authority-revision6-final-full-20261015.log; evidence/attestation-browser-web-authority-revision6-final-full-20261015.json; pcv-frc.json | feature/inbox-timeline-pagination;http://127.0.0.1:4173;realNest/PG16 | passed | Backfill/envio/close/contextos/reconnect/poll/draft/scroll, mais falha histórica+evento com restart recente sem novo trigger. Navegador Chromium, Playwright mutation em branch non-main; build fresco/served==dist SHA7cf5c91378614d35eabf83b7ba2f29aa33b339aaed8ad4c96f960f4037e170e2. Aderência/TQA aceitas; final review é gate separado. |
+| DOD-05 | Definition of Done | DOD-05: limite/cursor/marcarLida, vazio/fim, falha/retry e recuperação pendente têm contrato/UI verificados; entradas posteriores à fronteira de abertura continuam não lidas. | PostgreSQL + Browser / Playwright mutation | web-app/e2e/timeline.spec.ts; npm run test:tela (project run_web_navigation_smoke equivalent); evidence/web-authority-revision6-final-full-20261015.log; evidence/attestation-browser-web-authority-revision6-final-full-20261015.json; pcv-frc.json | feature/inbox-timeline-pagination;http://127.0.0.1:4173;realNest/PG16 | passed | Parser/escopo/neutralidade API224; loading/vazio/fim/retry/acesso e pendência browser; abertura+evento não se perde, empty>3pages+evento entre rodadas. Navegador Chromium, Playwright mutation em branch non-main; build fresco/served==dist SHA7cf5c91378614d35eabf83b7ba2f29aa33b339aaed8ad4c96f960f4037e170e2. Aderência/TQA aceitas; final review é gate separado. |
+| DOD-06 | Definition of Done | DOD-06: suites API/Web/Playwright passam no backend real e banco isolado; plano SQL recente/profundo/empates registra custo e decisão de índice; migrate deploy validado se houver migração. | scripts + SQL + Playwright mutation | web-app/e2e/timeline.spec.ts; npm run test:tela (project run_web_navigation_smoke equivalent); evidence/web-authority-revision6-final-full-20261015.log; evidence/attestation-browser-web-authority-revision6-final-full-20261015.json; pcv-frc.json | feature/inbox-timeline-pagination;http://127.0.0.1:4173;realNest/PG16 | passed | API115unit/224E2E; Web20unit/36browser; FRC3; SQL20382rows/1000ties. Sem migration: índice candidato não justificou custo. Navegador Chromium, Playwright mutation em branch non-main; build fresco/served==dist SHA7cf5c91378614d35eabf83b7ba2f29aa33b339aaed8ad4c96f960f4037e170e2. Aderência/TQA aceitas; final review é gate separado. |
+| DOD-07 | Definition of Done | DOD-07: revisão, guardas de execução/closeout e matriz de evidência específicos completos antes de conclusão. | independent review + deterministic guards | delivery-adherence-resolution.json; delivery-tqa-causal-resolution.json; delivery-final.json; evidence/authority-final.json; evidence/completion-final.json; evidence/closeout-final.json; evidence/committed-source-attestation.json | checkout principal; API/Web feature; Foundation main; reviewers internos no-context | passed | Reviews terminais aceitos; fonte16 commitada idêntica à validada. Guardas de execução/conclusão/closeout rodados antes da transição final. |
+| VAL-01 | Validation Steps | VAL-01: provisionar PostgreSQL 16 descartável com DB exclusivo e porta registrada; aplicar migrations e confirmar DATABASE_URL antes de qualquer helper deleteMany. Não usar banco operacional. | runtime + migration | evidence/api-e2e-authority.log; evidence/attestation-browser-web-authority-revision5-final-full-20261015.json; execution-evidence.md | postgres:16-alpine / leadshug_timeline_20261014 | passed | 17 migrations; porta5432 somente rede Docker, sem host publish; DATABASE_URL explícita e guard de DB descartável antes do cleanup. |
+| VAL-02 | Validation Steps | VAL-02: no runner Linux Node 22 da API: npm ci; npm run prisma:generate; npm run lint; npm run build; npm test; npm run test:e2e. | scripts completos | evidence/api-ci-light-revision2-20261015.log; evidence/api-e2e-authority.log; evidence/executor-revision5-summary.json; execution-evidence.md | Linux Node22 / principal checkout | passed | npmci no volume Linux; rawgenerate/lint/build/unit115 retido; API224 serializado e mesmafonte7 até revision5. Sem browser concorrente no DB. |
+| VAL-03 | Validation Steps | VAL-03: fixture base com 251 mensagens, empates maiores que uma página e duas conversas na BU autorizada; outra BU da mesma Mantenedora sem grant; outra Mantenedora/BU. Caminhar páginas, comparar todos os IDs e verificar 400 para cursor alheio em conversa autorizada, 404 antes de validar query em recurso inacessível e ausência de efeitos indevidos. | PostgreSQL integration | test/atendimento.e2e-spec.ts:282,317,365,371; api-e2e-authority.log | PG16 dedicado | passed | 251 IDs e empates; negativos scoped e consulta inválida sem efeitos de leitura. |
+| VAL-04 | Validation Steps | VAL-04: no runner da Web: npm ci; npm run build; npm test; npm run test:tela; backend real fresco e mesmo DB dedicado via LEADSHUG_E2E_DATABASE_URL. | Browser / Playwright navigation/mutation | web-app/e2e/timeline.spec.ts; npm run test:tela (project run_web_navigation_smoke equivalent); evidence/web-authority-revision6-final-full-20261015.log; evidence/attestation-browser-web-authority-revision6-final-full-20261015.json; pcv-frc.json | feature/inbox-timeline-pagination;http://127.0.0.1:4173;realNest/PG16 | passed | npmci em volumesLinux; npmrunbuild/test/test:tela; Node22.23.3 e Nest/PG16 reais no mesmo DB descartável exclusivo. Navegador Chromium, Playwright mutation em branch non-main; build fresco/served==dist SHA7cf5c91378614d35eabf83b7ba2f29aa33b339aaed8ad4c96f960f4037e170e2. Aderência/TQA aceitas; final review é gate separado. |
+| VAL-05 | Validation Steps | VAL-05: browser abre recente/carrega anteriores, envia com autoria persistida, recebe evento real do backend, executa close em paralelo com backfill e troca conversa/BU durante envio e request atrasado. Atrasar resposta real, sem fabricar payload BFF. Provar reconexão sem evento posterior, burst acima de 100, grupo empatado e ID menor inserido depois; mais de três páginas mantém estado de recuperação e retoma sem lacuna. Combinar H>T, passagem já atrás de parte do grupo T, inserção de ID menor atrás do cursor, evento durante a caminhada e passagem coalescida com o mesmo piso T; comparar IDs completos após cobertura confirmada. | Browser / Playwright navigation/mutation | web-app/e2e/timeline.spec.ts; npm run test:tela (project run_web_navigation_smoke equivalent); evidence/web-authority-revision6-final-full-20261015.log; evidence/attestation-browser-web-authority-revision6-final-full-20261015.json; pcv-frc.json | feature/inbox-timeline-pagination;http://127.0.0.1:4173;realNest/PG16 | passed | Autoria persistida, eventos/reconnect reais, close/contextos e todos os estados de recuperação. Counts3/max1, erros cobrados no despacho, restart histórico, seis efeitos de destino. Navegador Chromium, Playwright mutation em branch non-main; build fresco/served==dist SHA7cf5c91378614d35eabf83b7ba2f29aa33b339aaed8ad4c96f960f4037e170e2. Aderência/TQA aceitas; final review é gate separado. |
+| VAL-06 | Validation Steps | VAL-06: sempre capturar EXPLAIN representativo da query recente, profunda e com grande grupo empatado, registrando SQL, linhas examinadas/ordenadas e decisão de índice. Se criado índice, executar migrate deploy no DB dedicado. | SQL EXPLAIN + API e2e | evidence/explain-timeline-exact.sql/.log; evidence/explain-index-trial.sql/.log; pcv-eps.json; atendimento.e2e-spec.ts | PG16 /20382 mensagens/1000 empatadas | passed | Recent1.094ms/deep3.442ms/tie0.850ms; trial composto deep3.942ms e9832buffers contra357 existente. Sem migration nova: condição de índice não demonstrou ganho. Risco de varredura profunda explícito; aceito em delivery-adherence-resolution.json, sem SLO de produção. |
+| VAL-07 | Validation Steps | VAL-07: cumprir revisões/guardas exigidos, incluindo aderência arquitetural, qualidade de testes, segurança, performance, dívida de verificação e review final, antes do closeout. | review/security/performance/debt/guards | delivery-adherence-resolution.json; delivery-tqa-causal-resolution.json; delivery-final.json; pcv-eps.json/pcv-frc.json/pcv-bci.json/pcv-rls.json; verification-debt.md; evidence/authority-final.json; evidence/completion-final.json; evidence/closeout-final.json | Node22/PG16 descartável; Foundation; native no-context reviewers | passed | Segurança API224/escopo/ACK, PCV4passed, scans triados e dívida inline none; reviewers aceitos sem achados. Comandos dos guardas efetivos registrados no closeout. |
+| VAL-08 | Validation Steps | VAL-08: PostgreSQL/browser verificam não lidas: abertura atômica, IN posterior à marcação, backfill/refresh/reconexão read-neutral e entrada concorrente à abertura. Testar também nenhuma escrita quando autorização/query falha. | PostgreSQL + Browser / Playwright mutation | web-app/e2e/timeline.spec.ts; npm run test:tela (project run_web_navigation_smoke equivalent); evidence/web-authority-revision6-final-full-20261015.log; evidence/attestation-browser-web-authority-revision6-final-full-20261015.json; pcv-frc.json | feature/inbox-timeline-pagination;http://127.0.0.1:4173;realNest/PG16 | passed | ACK atômico10incrementos×3lotes e INposterior11; background neutro; abertura+INpreserva1; recuperação forte12; erros auth/query sem escrita. Navegador Chromium, Playwright mutation em branch non-main; build fresco/served==dist SHA7cf5c91378614d35eabf83b7ba2f29aa33b339aaed8ad4c96f960f4037e170e2. Aderência/TQA aceitas; final review é gate separado. |
 
 ## External Dependency Readiness (Required When External Systems Matter)
 
@@ -277,13 +290,14 @@ Ajustes locais de cursor, queries, mesclagem e CSS podem permanecer neste objeti
 | --- | --- | --- | --- | --- | --- |
 | Docker local | Runner e PostgreSQL isolado | healthy | 2026-10-14 | Daemon 27.1.1 respondeu | Containers operacionais não são alvos de testes. |
 | Node.js 22 | Build/suites | healthy | 2026-10-14 | node.exe v22.22.2 disponível; node Linux ausente | Execução planejada em runner Linux Node 22 compatível com Dockerfiles; não misturar npm Windows com processos Linux. |
+| Auditor interno TQA | Modelo prescrito gpt-5.6-terra | healthy | 2026-10-14 | codex exec ephemeral/read-only com effort max: exit0 MODEL_AVAILABLE; artifacts/tmp/inbox-timeline-execution/native-model-probe-events.jsonl | Usar runner nativo interno; nenhuma exceção de modelo é necessária. |
 | Meta/Evolution externos | Interfaces de transporte preservadas | unknown | 2026-10-14 | Nenhum probe externo | Bootstrap de teste usa backend real e substitui somente portas externas; não enviar mensagens reais. |
 
 Execução local planejada: runner Linux temporário Node 22, conforme imagens Node 22 dos Dockerfiles; PostgreSQL 16 descartável exclusivo deste TODO, com DB/porta registrados antes de E2E e DATABASE_URL explícita. Sem editar .env/Compose do produto. API e browser compartilham o mesmo DB de teste. A implementação pode acrescentar suporte de teste nos paths previstos; prontidão efetiva será provada antes da suite.
 
 ## Profile Scope & Handoffs (Required Before `APROVADO`)
 
-- **Current profile:** Strategic / CTO-Tech-Lead para consolidação documental, handoff aprovado para Operational / Coder.
+- **Current profile:** Operational / Coder para execução delegada e consolidação local; Assurance / Tester-Quality para os gates independentes, mantendo owners serializados.
 - **Primary execution profile:** operational-coder
 - **Active technical scope:** nestjs, react, vite, postgresql, prisma, docker.
 - **Handoff:** executor único implementa/testa API/Web; orchestrator mantém TODO/evidência; reviewers read-only nas fases derivadas.
@@ -372,8 +386,8 @@ Proposta técnica congelada para crítica em 2026-10-14 após integração ARCH-
 - **Decision review status:** findings_integrated
 - **Decision review evidence:** artifacts/reviews/leadshug-inbox-timeline-20261014/architecture-review.json; resolução ARCH-TL-01..06 neste TODO e critique-resolution.json verificam a integração no plano.
 - **Architecture adherence review:** required
-- **Adherence review status:** not_run
-- **Adherence review evidence:** executar após implementação, antes de Completed.
+- **Adherence review status:** findings_integrated
+- **Adherence review evidence:** delivery-adherence-round-1.json → delivery-adherence-delta.json → delivery-adherence-resolution.json, todos internos gpt-6.1-sol/max no-context, terminais turn.completed/schema/merge. ARCH-DEL-01..04/ERR corrigidos e aceitos, sem novo desvio. Revision5 altera apenas provas browser requeridas pela TQA; conservar parecer por identidade dos fontes de produto. Pacotes imutáveis generation1/revision3/revision4 em evidence/. Nenhum waiver.
 - **Dedicated multi-lane audit:** not_needed pelo piso atual; não substitui crítica, segurança/performance, TQA e final review requeridos.
 
 ## Gate: Review Baseline Freeze
@@ -390,12 +404,12 @@ Proposta técnica congelada para crítica em 2026-10-14 após integração ARCH-
 
 - **Gate decision:** required
 - **Gate status:** no_material_findings
-- **Evidence / reference:** executar após convergência da revisão contra o baseline publicado
+- **Evidence / reference:** scope-drift.json documenta o freeze de planejamento antes de APROVADO; fidelity de execução foi julgada em delivery-adherence-resolution.json/final e no diff guard, sem desvio de produto
 - **Waiver authority / reference (required if waived):** none
 
 ## Questions To Close
 
-Aprovação humana única do contrato final após crítica convergida; reabertura ARCH-TL-03 foi integrada no mesmo recorte e será verificada no delta. Questões de transferência, mídia e status continuam nas stories posteriores; não serão resolvidas por esta implementação.
+Aprovação do contrato resolvida: APROVADO em2026-10-14, após crítica convergida; ARCH-TL-03 foi integrado e confirmado no delta, com contraprova de execução agora registrada. Questões de transferência, mídia e status continuam nas stories posteriores; não serão resolvidas por esta implementação.
 
 ## Pattern References (Optional; Enforced When Cited)
 
@@ -436,12 +450,14 @@ n/a; nenhum ID de pattern é reivindicado.
 
 ### Local CI-Equivalent Suite Matrix
 
-| Surface | Command | Preconditions | Intended behavior | Status |
-| --- | --- | --- | --- | --- |
-| API CI | npm run lint; npm run build; npm test | npm ci + Prisma gerado | Contrato/validação/build atuais | planned |
-| API PostgreSQL | npm run test:e2e | migrations e banco dedicado com fixtures | Paginação, escopo, contrato e regressões | planned |
-| Web CI | npm run build; npm test | npm ci | Types e lógica de coleção | planned |
-| Web browser | npm run test:tela | path ../api-app corrigido, bundles frescos, banco dedicado, Chromium | Fluxos reais e races | planned |
+| Repository / CI Surface | Why In Scope | Local CI-Equivalent Command | Required Before | Status | Evidence Artifact / Command | Authority status | Notes |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| API / CI api | BFF e parser alterados | npm ci; npm run prisma:generate; npm run lint; npm run build; npm test | Local-Implemented | passed | evidence/api-ci-light-revision2-20261015.log; execution-evidence.md | passed | Raw dos4leafsexit0/115unit; LinuxNode22,API7semalteração. Equivalente somente ao job API tocado. |
+| API / PostgreSQL local adicional | Persistência/escopo/concorrência | npm run test:e2e | Local-Implemented | passed | api-e2e-authority.log; atendimento.e2e-spec.ts | passed | 224 testes/20 arquivos; DB exclusivo,17 migrations; não é claim de CI remoto. |
+| Web / CI web | Consumidor/estado/realtime | npm ci; npm run build; npm test | Local-Implemented | passed | evidence/web-authority-revision6-final-full-20261015.log; evidence/attestation-browser-web-authority-revision6-final-full-20261015.json; execution-evidence.md | passed | LinuxNode22;Webunit20/browser36; source/build/served antes dos workers; prova local sem CI remoto. |
+| Web / browser local adicional | Navegação/rolagem/races reais | npm run test:tela | Local-Implemented | passed | evidence/web-authority-revision6-final-full-20261015.log; evidence/attestation-browser-web-authority-revision6-final-full-20261015.json; execution-evidence.md | passed | LinuxNode22;Webunit20/browser36; source/build/served antes dos workers; prova local sem CI remoto. |
+
+Compatibilidade de representação: completion guard lê status na coluna5, authority guard na coluna7. Os mesmos resultados são espelhados como Status/Authority status; notas permanecem na coluna8. Nenhuma validação ou comando é substituído.
 
 ### Frontend / Consumer Matrix
 
@@ -517,6 +533,10 @@ Parecer independente concluído em 2026-10-14, modelo gpt-6.1-sol/max, sem conte
 - **Evidence / reference:** artifacts/reviews/leadshug-inbox-timeline-20261014/critique-round-1.json e critique-resolution.json; primeiro parecer reabriu ARCH-TL-03; delta verificou resolução e retornou findings vazio. Baseline revisada 649372fb.
 - **Waiver authority / reference:** none
 
+| Finding ID | Resolution | Usefulness | Formalizable | Candidate Rule Level | Candidate Rule ID | Rationale |
+| --- | --- | --- | --- | --- | --- | --- |
+| ARCH-TL-03 | Integrated | useful | yes | project | n/a | Piso pendente T conservado entre passagens/dirty/retry e promoção somente após cobertura sem evento pendente; crítica delta critique-resolution.json confirmou a resolução do plano, agora testada no browser. |
+
 ## Gate: Assumption Code Coherence
 
 - **Gate decision:** required
@@ -567,19 +587,42 @@ Review lane separado: formal-reviewer, architecture_opinion/critique, gpt-6.1-so
 
 ## Decision Adherence Validation (Mandatory Before Delivery)
 
-Pendente no gate de execução/revisão correspondente; nenhuma evidência ou promoção reivindicada neste Draft.
+Aderência independente convergida em delivery-adherence-resolution.json (gpt-6.1-sol/max). Revision5 altera somente o teste e mantém os fontes de produto e o bundle aceitos. TQA resolução das novas provas permanece em execução.
+
+| Decision | Status | Evidence |
+| --- | --- | --- |
+| Autorização antes de paginação/cursor; erros scoped | Adherent | API224, parser/cursor e controller; delivery-adherence-resolution.json. |
+| Últimas N, N+1, ordem DB e cursor de conversa | Adherent | API224 e source identity7; delivery-adherence-resolution.json. |
+| ACK atômico anterior à query; background neutro | Adherent | pcv-bci.json,3barreiras10incrementos/IN11,negativoACK e restauração; parecer aceito. |
+| Coleção ativa por ID; piso T conservado e orçamento3 | Adherent | Inbox/timeline, Web36/FRC3; counts3/max1,erro-budget/restart, source invariance revision4aceita. |
+| Contexto/metadados/draft/scroll e socket/poll | Adherent | Seis destinos,owner de errogeração/versão,reconnect/poll; aderência aceita; provasvazio/reconnectreforçadas aguardamTQA. |
+| Índice condicionado ao EXPLAIN | Adherent |20382rows/1000ties, planos exatos e trial composto pior removido; pcv-eps.json e parecer aceito. |
+| API pública/Consultar e outras stories fora | Adherent | DiffcontractAPI7/Web9, API224, sem mudança dos consumidores excluídos. |
 
 ## Module Decision Consistency Validation (1-1 Mandatory Before Delivery)
 
-Pendente no gate de execução/revisão correspondente; nenhuma evidência ou promoção reivindicada neste Draft.
+| Canonical owner / decision | Implementation | Status |
+| --- | --- | --- |
+| inbox-and-conversations / thread BFF paginada | controller + timeline-pagination + ConversationsService.timeline | Adherent; contrato anterior ao código4cabc467,API224,parecer independente aceito. |
+| inbox-and-conversations / recuperação e contexto | Inbox + timeline + tempoReal | Adherent; código revision4 aceito, mesmo produto na provaWeb36/FRC3; Verified local no módulo owner; TQA causal aceitou as provas atuais. |
+| identity-and-tenancy / BU e grant | Resolver/AccessService existentes | Adherent; nenhuma decisão canônica mudou, negativos reais401/404/400 e readback. |
+| audit-and-history / autoria e ações | responder/claim/close existentes | Adherent; autoria/audit preservados, regressões reais e destinations. |
 
 ## Pipeline/Copilot P1/P2 Preflight
 
-Pendente no gate de execução/revisão correspondente; nenhuma evidência ou promoção reivindicada neste Draft.
+| Reviewer Surface | Focus | Status | Evidence | Findings | Resolution |
+| --- | --- | --- | --- | --- | --- |
+| Orquestrador / inspeção bounded | API auth/read-state e UI races; runner/frescor | passed | implementation-observations.md; execution-evidence.md; source manifest revision5 | fixed IMPL-01..14 e ARCH-DEL-01-ERR; sem P1/P2 aberto de produto | Correções fiéis comprovadas, produto aceito pela aderência; TQA independente ainda julga provas reforçadas. |
+| CI API local | Leaf scripts do job tocado | passed | evidence/api-ci-light-revision2-20261015.log; evidence/api-e2e-authority.log; test-surface-admission.md | 0 falhas na execução final | generate/lint/build/unit115 e PostgreSQL224 adicionais, serializados. |
+| Revisão independente | Aderência, segurança, desempenho e provável P1/P2 | passed | delivery-adherence-resolution.json; delivery-tqa-causal-resolution.json | no findings; P1/P2 anteriores fixed | Aderência/TQA convergidas; final review é gate separado antes de entrega. |
 
 ## Rule-Spirit Anti-Pattern Hunt
 
-Pendente no gate de execução/revisão correspondente; nenhuma evidência ou promoção reivindicada neste Draft.
+| Rule Surface | Lens | Status | Evidence | Findings | Resolution |
+| --- | --- | --- | --- | --- | --- |
+| NestJS / parser e limites | Validação runtime, grant antes cursor, ACK e queries bounded | passed | API224; delivery-adherence-resolution.json; scansAPI finais | no findings materiais; hints HTTP acompanhados de readback | Sessão/grants/domínio/PG reais, ACKbarreira e sem mudança público/Consultar. |
+| React / Inbox e socket | Owner/generation, piso T, cursor, lifecycle e poll | passed | delivery-adherence-resolution.json; Web36/FRC3; implementation-observations.md | fixed IMPL-01..14,ARCH-DEL-01..04/ERR | Sem cacheframework/fetchall/budgetrenewal; fonte de produto aceita inalterada. |
+| Scan heurístico API/Web | Domínios/targets e bypass disfarçado | passed | scan-triage-api.json e scan-triage-web.json; rawscansAPI/Webrev5; aderência aceita | no findings materiais; API30/15 e Web42/21 triados | by-design/no-action para loopback/.test de fixture e regexHTML preexistente, sem allowlist/supressão; TQA é gate separado. |
 
 ## Promotion Finding Routing Ledger (Required When Promotion/Review Finds Any Finding)
 
@@ -587,13 +630,27 @@ Pendente no gate de execução/revisão correspondente; nenhuma evidência ou pr
 | --- | --- | --- | --- | --- | --- | --- |
 | ARCH-TL-01..03 | high | release-blocker | fix in current TODO | Contrato de leitura/recuperação pertence à mesma story | fixed | architecture-review.json e Proposed API Contract, a verificar na crítica |
 | ARCH-TL-04..06 | medium | release-blocker | fix in current TODO | Estado/consulta/provas necessários ao mesmo contrato | fixed | architecture-review.json e testes planejados, a verificar na crítica |
+| ARCH-DEL-01 | medium | release-blocker | fix in current TODO | Budget3 por rodada deve abranger coalescing; evento não renova automaticamente consultas | fixed | delivery-adherence-delta.json confirmou resolução na fonte revision3; Web34/FRC3, incluindo negativos/restauração e notificações/retomada. |
+| ARCH-DEL-02 | medium | release-blocker | fix in current TODO | Thread inicialmente vazia e notificação entre rodadas devem conservar restart pendente até fetch recente | fixed | delivery-adherence-delta.json confirmou resolução na fonte revision3; Web34/FRC3, incluindo negativos/restauração e notificações/retomada. |
+| ARCH-DEL-03 | medium | release-blocker | fix in current TODO | Notificação durante abertura pertence à geração selecionada e deve recuperar sem esperar outroevento/poll | fixed | delivery-adherence-delta.json confirmou resolução na fonte revision3; Web34/FRC3, incluindo negativos/restauração e notificações/retomada. |
+| TQA-TL-01 | medium | release-blocker | fix with ARCH-DEL-01 | Mesmo defeito de budget/single-flight; harness deve contar requests e passagens em voo, não só comparar IDs | fixed | delivery-tqa-delta.json confirmou resolução com counts/maxinflight, seis destinos e stdout API leafs; API224 idêntico mantido. |
+| TQA-TL-02 | medium | release-blocker | fix in current TODO | Prova de geração exige draft/erro/scroll/metadados do destino em trocas conversa/BU com sucesso/falha/backfill antigos | fixed | delivery-tqa-delta.json confirmou resolução com counts/maxinflight, seis destinos e stdout API leafs; API224 idêntico mantido. |
+| TQA-EVID-03 | low | release-blocker | retain exact CI leaf outputs now | Lacuna de evidência do claim CI atual; repetir somente generate/lint/build/unit API com logs imutáveis antes do browser final | fixed | delivery-tqa-delta.json confirmou resolução com counts/maxinflight, seis destinos e stdout API leafs; API224 idêntico mantido. |
+| ARCH-DEL-01-ERR | medium | release-blocker | fix with ARCH-DEL-01 | Variante objetiva: saldo era debitado após await; falha+dirty não debitava e permitia mais de3tentativas. Consumir no despacho e provar3aborts+eventos sem4aautomática; erro histórico com dirty deve conservar restart recente, não consumir a notificação ao retomar cursor antigo | fixed | delivery-adherence-delta.json confirmou resolução na fonte revision3; Web34/FRC3, incluindo negativos/restauração e notificações/retomada. |
+
+| ARCH-DEL-04 | medium | release-blocker | fix in current TODO | Retry bem-sucedido deve encerrar alerta do próprio recovery sem apagar erro posterior não relacionado; assert ausência no fim dos casos existentes | fixed | delivery-adherence-resolution.json confirmou ownership geração/versão e os3oracles de erro; revision4Web20/35,FRC3 sem achados novos. |
+
+| ARCH-DEL-02-EVID | medium | release-blocker | repair tests in current TODO | TQA delta: burst futuro tornava IN mais antigo e cursor velho ainda alcançava IDs; semear passado, assert headread no resume e controle negativo | fixed | delivery-tqa-causal-resolution.json aceitou provas revision6, Web36/FRC3 e source identity; ARCH-DEL-02/03 de produto permanecem corrigidos. |
+| ARCH-DEL-03-EVID | medium | release-blocker | repair tests in current TODO | TQA delta: falta reconnect real enquanto openingGET retido/threadnull; provar read-neutral sem outroevento/poll | fixed | delivery-tqa-causal-resolution.json aceitou provas revision6, Web36/FRC3 e source identity; ARCH-DEL-02/03 de produto permanecem corrigidos. |
+
+| GIT-RAW-WS | low | by-design/no-action | preserve immutable evidence | Whitespace emitido por ferramentas em logs/pacotes deve permanecer byteexact para preservar hashes; prose e fonte são verificadas separadamente | accepted | evidence/git-whitespace-evidence-triage.json; nenhuma alteração de produto ou regra compartilhada |
 
 ## TODO Closeout Disposition
 
-- **Disposition:** keep-active
-- **Disposition reason:** contrato aprovado em implementação, provas de entrega ainda necessárias.
-- **Post-commit/push status:** revisão publicada; registro de aprovação/contrato canônico em execução.
-- **Next path/status action:** implementar, validar e revisar; mover para completed somente com evidência/guardas de closeout.
+- **Disposition:** move-completed
+- **Disposition reason:** limiar local concluído e guardas go; publicar evidências na Foundation main e mover o mesmo TODO após o push, sem promoção remota de produto.
+- **Post-commit/push status:** pending
+- **Next path/status action:** após push documental, mover para todos/completed/features e atualizar links/estado do mesmo TODO.
 
 ## Security Risk Assessment (Mandatory Before Delivery)
 
@@ -601,7 +658,7 @@ Pendente no gate de execução/revisão correspondente; nenhuma evidência ou pr
 - **Why this decision:** cursor, grants e mudança de contexto.
 - Autorizar primeiro; resolver cursor na conversa; limitar sua forma/tamanho e queries. Testar cursor de outra conversa autorizada, outra BU sem grant no mesmo tenant e outro tenant, separadamente.
 - Banco descartável dedicado; bootstrap com sessão/guards/domínio/persistência reais e dublês só nas portas externas. Não mascarar BFF nem expor suporte de teste em produção.
-- Evidência de execução permanece planned até testes e revisão de entrega.
+- API224 comprovou precedência401/404, cursor scoped400 e ausência de escrita em query inválida; testes negativos distintos e readback PostgreSQL. Parser rejeita array/repetição e limite/tamanho inválidos. Bootstrap/fixtures estão em test/, recusam DB não descartável, sem rotas de suporte em produção. Aderência round1 confirmou a fronteira API/segurança; delta julga efeitos de contexto Web corrigidos. Sem alegação de pentest ou provider externo validado.
 
 ## Performance & Concurrency Risk Assessment (Mandatory Before Delivery)
 
@@ -614,61 +671,113 @@ Pendente no gate de execução/revisão correspondente; nenhuma evidência ou pr
 
 | Lane ID | Lane | Trigger Result | Trigger Severity | Trigger Reason Code | Gate Deadline | Minimum Evidence Rule | State | Residual Risk | Uncertainty Reason Code |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| `EPS` | `endpoint-performance-scrutiny` | `required` | `medium` | `EPS-QUERY-SHAPE-CHANGED` | `before_local_implemented` | `EPS-E2` | `pending` | Custo depende da distribuição real de mensagens. | `none` |
-| `FRC` | `frontend-race-condition-validation` | `required` | `medium` | `FRC-STALE-RESPONSE` | `before_local_implemented` | `FRC-E2` | `pending` | Estados assíncronos requerem provas determinísticas de overlap. | `none` |
-| `BCI` | `backend-concurrency-idempotency-validation` | `required` | `medium` | `BCI-LOST-UPDATE-RISK` | `before_local_implemented` | `BCI-E2` | `pending` | Reconhecimento e incrementos devem linearizar no PostgreSQL. | `none` |
-| `RLS` | `runtime-load-stress-validation` | `recommended` | `medium` | `RLS-CACHE-INDEX-SENSITIVE-PATH-CHANGED` | `before_production_ready` | `RLS-E1` | `pending` | Amostra local não estabelece capacidade de produção. | `none` |
+| `EPS` | `endpoint-performance-scrutiny` | `required` | `medium` | `EPS-QUERY-SHAPE-CHANGED` | `before_local_implemented` | `EPS-E2` | `passed` | Custo depende da distribuição real de mensagens. | `none` |
+| `FRC` | `frontend-race-condition-validation` | `required` | `medium` | `FRC-STALE-RESPONSE` | `before_local_implemented` | `FRC-E2` | `passed` | Estados assíncronos requerem provas determinísticas de overlap. | `none` |
+| `BCI` | `backend-concurrency-idempotency-validation` | `required` | `medium` | `BCI-LOST-UPDATE-RISK` | `before_local_implemented` | `BCI-E2` | `passed` | Reconhecimento e incrementos devem linearizar no PostgreSQL. | `none` |
+| `RLS` | `runtime-load-stress-validation` | `recommended` | `medium` | `RLS-CACHE-INDEX-SENSITIVE-PATH-CHANGED` | `before_production_ready` | `RLS-E1` | `passed` | Amostra local não estabelece capacidade de produção. | `none` |
 
 ### Lane Details
 
 #### EPS
 
 - **Trigger rationale:** consulta recente e keyset mudam ordenação, limite e predicado; classificar acesso, auditar caminhos e registrar EXPLAIN recente/profundo/empates mesmo sem migração.
-- **Recorded at (UTC):** `2026-10-14T17:58:46Z`
-- **Executor ID:** `/root/timeline_executor`
-- Evidência mínima planejada: `EPS-SP-STRONG`, `EPS-A2`; ainda não há resultado reivindicado.
+- **Recorded at (UTC):** `2026-10-15T03:36:56Z`
+- **Executor ID:** `/root/timeline_executor_resume`
+- **State transition:** pending -> running -> passed; artefato e medição aceitos no parecer independente delivery-adherence-resolution.json, sem mudança da fonte API.
+- **Evidence object:**
+  - `evidence_type`: `explain`
+  - `environment_id`: `principal-checkout-linux-node22-postgresql16-disposable`
+  - `run_id`: `explain-exact-20261015`
+  - `artifact_uri`: `foundation_documentation/artifacts/reviews/leadshug-inbox-timeline-20261014/pcv-eps.json`
+  - `artifact_schema_version`: `pcv-1`
+  - `artifact_sha256`: `248ea237489683aaa67371eb58efecab9e237c9aac08e36f3717b064f4825dfc`
+  - `sample_profile_id`: `EPS-SP-STRONG`
+  - `acceptance_rule_id`: `EPS-A2`
+  - `result_summary`: `Measured recent/deep/tied pages on20382 rows,1000 ties; existing index retained after candidate trial. Independently accepted by delivery-adherence-resolution.json; local scope only.`
+  - `reviewer_id`: `delivery-adherence-resolution-native`
 
 #### FRC
 
 - **Trigger rationale:** backfill, recuperação, fechamento, envio e troca de contexto podem sobrepor respostas; uma recuperação em voo e contexto/geração/versionamento de draft protegem o estado.
-- **Recorded at (UTC):** `2026-10-14T17:58:46Z`
-- **Executor ID:** `/root/timeline_executor`
-- Evidência mínima planejada: `FRC-SP-M`, `FRC-A1`, 10 gatilhos × 3 repetições; ainda não há resultado reivindicado.
+- **Recorded at (UTC):** `2026-10-15T05:01:37Z`
+- **Executor ID:** `/root/timeline_executor_resume`
+- **State transition:** pending -> running -> passed; provas revision6 e correções de oracles aceitas em delivery-tqa-causal-resolution.json, sem waiver.
+- **Evidence object:**
+  - `evidence_type`: `source-owned-playwright-real-backend-races`
+  - `environment_id`: `principal-checkout-linux-node22-postgresql16-chromium-disposable`
+  - `run_id`: `web-authority-revision6-final-frc3-20261015`
+  - `artifact_uri`: `foundation_documentation/artifacts/reviews/leadshug-inbox-timeline-20261014/pcv-frc.json`
+  - `artifact_schema_version`: `pcv-1`
+  - `artifact_sha256`: `3148b1ccf77cc0d4f1f980b74077133878a735e20115c941c92313fecb55823c`
+  - `sample_profile_id`: `FRC-SP-M`
+  - `acceptance_rule_id`: `FRC-A1`
+  - `result_summary`: `Web20unit/36browser and FRC3/3 passed on identical final source/build; scheduling, notification, error ownership and destination races independently accepted by delivery-tqa-causal-resolution.json. Local evidence, no production claim.`
+  - `reviewer_id`: `delivery-tqa-causal-native-no-context`
 
 #### BCI
 
 - **Trigger rationale:** o UPDATE de reconhecimento precede a query, concorrendo com incrementos de entrada; incrementos posteriores devem permanecer não lidos e leituras de background nunca escrever.
-- **Recorded at (UTC):** `2026-10-14T17:58:46Z`
-- **Executor ID:** `/root/timeline_executor`
-- Evidência mínima planejada: `BCI-SP-M`, `BCI-A1`, 10 operações sobrepostas × 3 lotes; ainda não há resultado reivindicado.
+- **Recorded at (UTC):** `2026-10-15T03:36:56Z`
+- **Executor ID:** `/root/timeline_executor_resume`
+- **State transition:** pending -> running -> passed; artefato e medição aceitos no parecer independente delivery-adherence-resolution.json, sem mudança da fonte API.
+- **Evidence object:**
+  - `evidence_type`: `postgresql-overlap-probe`
+  - `environment_id`: `principal-checkout-linux-node22-postgresql16-disposable`
+  - `run_id`: `bci-ack-barrier-canonical-20261015`
+  - `artifact_uri`: `foundation_documentation/artifacts/reviews/leadshug-inbox-timeline-20261014/pcv-bci.json`
+  - `artifact_schema_version`: `pcv-1`
+  - `artifact_sha256`: `5ff9ba52415aeb420acf1b805a7ccece7d59194c127b97aa3ce2e22af12842b4`
+  - `sample_profile_id`: `BCI-SP-M`
+  - `acceptance_rule_id`: `BCI-A1`
+  - `result_summary`: `Three deterministic real PostgreSQL barrier batches retain10 increments after ACK; regression mutation fails10vs0 and exact source restoration passes. Independently accepted by delivery-adherence-resolution.json; local scope only.`
+  - `reviewer_id`: `delivery-adherence-resolution-native`
 
 #### RLS
 
 - **Trigger rationale:** consultas sensíveis a índice e recuperação realtime têm pressão de runtime; amostra de leitura neutra medirá erros, limites e latência sem promessa de SLO.
-- **Recorded at (UTC):** `2026-10-14T17:58:46Z`
-- **Executor ID:** `/root/timeline_executor`
-- Evidência mínima planejada: `RLS-SP-L`, `RLS-A1`, uma etapa com limiares de correção e métricas; ainda não há resultado reivindicado.
+- **Recorded at (UTC):** `2026-10-15T03:39:44Z`
+- **Executor ID:** `/root/timeline_executor_resume`
+- **State transition:** pending -> running -> passed; artefato e medição aceitos no parecer independente delivery-adherence-resolution.json, sem mudança da fonte API.
+- **Evidence object:**
+  - `evidence_type`: `one-stage-authenticated-read-load`
+  - `environment_id`: `principal-checkout-linux-node22-postgresql16-disposable`
+  - `run_id`: `rls-read-stage1-20261015`
+  - `artifact_uri`: `foundation_documentation/artifacts/reviews/leadshug-inbox-timeline-20261014/pcv-rls.json`
+  - `artifact_schema_version`: `pcv-1`
+  - `artifact_sha256`: `eb0ec62492de2af2d52c5dc40eaa1defc776d9996d62048d554ce890a9991939`
+  - `sample_profile_id`: `RLS-SP-L`
+  - `acceptance_rule_id`: `RLS-A1`
+  - `result_summary`: `30/30 reads,5 concurrent×6; p50 23.36ms,p95 64.26ms,max68.5ms; page50,unread7 unchanged,251 messages unchanged,foreign malformed request404. Independently accepted by delivery-adherence-resolution.json; no production SLO claim.`
+  - `reviewer_id`: `delivery-adherence-resolution-native`
 
 ## Verification Debt Assessment (Required Before `Completed`; mandatory audit for `medium|big` or when debt signals exist)
 
-Pendentes contrato, runner, provas PostgreSQL/browser e revisões. Não reivindicar implementação ou fechamento com evidência histórica de outro TODO.
+Auditoria executada: artifacts/reviews/leadshug-inbox-timeline-20261014/verification-debt.md e evidence/verification-debt-pre-final.log. Helper lexical high/exit2 por termos do template/histórico; classificação manual: inline none, nenhum waiver/dívida material escondida de produto/testes. Gates independentes/guardas e consolidação ainda abertos, sem claim de closeout; reavaliar após convergência.
 
 ## Independent Test Quality Audit Gate (Deterministic Floor From Audit Escalation)
 
 - **Audit decision:** required
 - **Why this decision:** API/escopo/consulta e UI interativa com races
-- **Audit status:** not_run
-- **Critique status:** not_run
-- **Evidence / reference:** revisão de entrega após testes completos; pacote de planejamento não substitui TQA. O roteamento technical_review exige gpt-5.6-terra, indisponível nesta sessão; pedido explícito ao usuário para permitir gpt-6.1-sol nesta auditoria está pendente, sem waiver presumido.
+- **Audit status:** findings_integrated
+- **Critique status:** findings_integrated
+- **Evidence / reference:** delivery-tqa-round-1.json → delivery-tqa-delta.json → delivery-tqa-resolution.json → delivery-tqa-causal-resolution.json e merges. Quatro reviews internos no-context gpt-5.6-terra/max, terminais turn.completed, rubric completo. O catálogo nativo suporta o modelo prescrito; guard go e probe registrados, sem substituição. Produto revision4 aceito na aderência, somente testes alterados em revision5/6; Web20/36,FRC3 revision6 e16hashes/bundle conferidos. Pacotes imutáveis em evidence/.
 - **Waiver authority / reference:** none
+
+| Finding ID | Resolution | Usefulness | Formalizable | Candidate Rule Level | Candidate Rule ID | Rationale |
+| --- | --- | --- | --- | --- | --- | --- |
+| TQA-TL-01 | Integrated | useful | yes | project | n/a | Budget3/max1 inclusive falha/evento, negativos3vs5 e restart2vs1, IDs/unread; delta confirmou. |
+| TQA-TL-02 | Integrated | useful | yes | project | n/a | Seis destinos conversa/BU×sucesso/falha/backfill com draft/erro/scroll/metadados; delta confirmou. |
+| TQA-EVID-03 | Integrated | useful | no | none | n/a | Stdout4leafsAPI115 retido e API224 mesmafonte; delta confirmou. |
+| ARCH-DEL-02 | Integrated | useful | yes | project | n/a | Ledger ARCH-DEL-02-EVID: backlog passado, headrequest semantes/neutra, status IN_SERVICE/162IDs/unread2 e negativo oldcursor falha; resolução TQA aceitou. |
+| ARCH-DEL-03-EVID | Integrated | useful | yes | project | n/a | Ledger ARCH-DEL-03-EVID: primeiroframe autenticado antesseleção; socket nativo fechado/reconectado durante openingGETretido, segundoframe antesrelease, sem outroevento/poll e negativo reconnect-only falha; TQA causal aceitou. |
 
 ## Independent No-Context Final Review Gate (Deterministic Floor From Audit Escalation)
 
 - **Final review decision:** required
 - **Why this decision:** API/escopo/consulta e UI interativa com races
-- **Final review status:** not_run
-- **Critique status:** not_run
-- **Evidence / reference:** pacote ainda prepared-pre-freeze; executar revisão no gate correspondente
+- **Final review status:** no_material_findings
+- **Critique status:** no_material_findings
+- **Evidence / reference:** delivery-final.json/merge, interno fresh no-context gpt-6.1-sol/max, turn.completed/schema/merge, findings vazio. Aceitou produto/revisões/TQA/PCV/segurança/dívida e escopo local; remanescentes apenas guardas/commits/registros de closeout. Nenhum waiver.
 - **Waiver authority / reference:** none
 
 ## Independent Cutover Integrity Audit Gate
@@ -680,15 +789,15 @@ Pendentes contrato, runner, provas PostgreSQL/browser e revisões. Não reivindi
 
 ## Delivery Confidence Gate (Required for `✅ Production-Ready`)
 
-Pendente no gate de execução/revisão correspondente; nenhuma evidência ou promoção reivindicada neste Draft.
+Entrega local-only; sem autorização de publicação, promoção operacional ou claim Production-Ready. SLO, tráfego/provider externo e capacidade de produção não foram validados.
 
 ## Module Consolidation Gate (Required Before `Completed`)
 
-Pendente no gate de execução/revisão correspondente; nenhuma evidência ou promoção reivindicada neste Draft.
+Contrato consolidado antes do código no owner modules/inbox-and-conversations.md; coleta atualAPI115/224,Web20/36,FRC3 e SQL/BCI/RLS pronta. Estado Verified local consolidado no owner com API115/224,Web20/36,FRC3,SQL/BCI/RLS e aderência/TQA aceitas. Commits locais APIae6a9662c29b77276351aa9de653a47276372246 e Web4e56f6c1f4515b918d05b8c87e890d42e8542c56 conferidos em evidence/committed-source-attestation.json; outros módulos preservam decisões.
 
 ## Commands (Run Locally)
 
-Comandos de aplicação propostos estão em Validation Steps. Não executá-los contra bancos existentes nem reivindicar green nesta preparação.
+Comandos exatos e resultados efetivos: artifacts/reviews/leadshug-inbox-timeline-20261014/execution-evidence.md. API generate/lint/build/unit115/E2E224 passou em Node22/PG16 descartável; EPS/BCI/RLS executados com artefatos; Web revision6 passou20unit/36browser/FRC3; aderência/TQA/final aceitos. Fonte16 commitada com bridge hash e guardas de closeout específicos. Nunca apontar helpers para bancos operacionais.
 
 ## Files Expected (Compatibility Note)
 
@@ -697,4 +806,3 @@ O contrato de paths e baselines está no Diff Expectation Contract.
 ## COMENTÁRIO:
 
 n/a; nenhum comentário pendente do usuário neste arquivo.
-

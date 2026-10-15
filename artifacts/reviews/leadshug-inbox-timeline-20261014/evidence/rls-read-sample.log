@@ -1,0 +1,27 @@
+v22.23.3
+{
+  "runId": "rls-read-stage1-20261015",
+  "sample": {
+    "requests": 30,
+    "concurrency": 5,
+    "batches": 6,
+    "statusCounts": {
+      "200": 30,
+      "errors": 0
+    },
+    "p50Ms": 23.36,
+    "p95Ms": 64.26,
+    "maxMs": 68.5,
+    "messagesPerResponse": 50,
+    "hasPrevious": true
+  },
+  "scope": {
+    "accessibleConversation": "200 x30",
+    "foreignConversationWithMalformedCursor": 404,
+    "unreadBefore": 7,
+    "unreadAfter": 7,
+    "messagesBefore": 251,
+    "messagesAfter": 251
+  },
+  "conclusion": "small disposable one-stage read-neutral sample; no production SLO inferred"
+}
