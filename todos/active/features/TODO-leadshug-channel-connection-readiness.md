@@ -41,7 +41,7 @@ Proposta ST-CON-01: jornada de cadastro de número, com infraestrutura local est
 
 - **Current delivery stage:** Pending
 - **Qualifiers:** none
-- **Next exact step:** concluir remediação Web e parar esse writer; então executor API corrige NUM-API-01..18 e fortalece harness/fixtures, antes da integração browser e runtime DevOps serializados.
+- **Next exact step:** conferir handoff terminal da remediação API e seu mapeamento de achados/testes; após stop explícito, Web corrige NUM-WEB-01..12 e integra browser real-backend, seguido do runtime DevOps serializado.
 
 ## Active Work State (Required While TODO Remains In `active/`)
 
@@ -379,6 +379,8 @@ Register: `foundation_documentation/artifacts/dependency-readiness.md`.
 | operational-coder | assurance-security-adversarial | Revisar correção/segurança/aderência da API antes da integração do consumidor. | Pacote API congelado e relatório, somente leitura de produto | completed-diagnostic; api-checkpoint-review-v1.json terminal,18 achados aceitos abertos; não equivale ao gate final. |
 | operational-coder | assurance-tester-quality | Diagnosticar UI corrigida antes de integração browser. | Pacote Web imutável, relatório somente | completed-diagnostic; web-checkpoint-review-v1.json terminal,12achados adjudicados; pacote17snapshots SHA256df4bb1403d1b5e64d30685d33ca48eb3f9204d8d8bb26feae9e41f29274a8b50; não substitui TQA/gates finais. |
 | operational-coder | operational-devops | Configurar e provar callback/target de teste se necessário. | Compose local/variáveis/callback e instância própria | preflight read-only delegado após checkpoints2/3; runtime-handoff.md governa paths e isolamento. Nenhuma edição/startup antes do stop do writer Web e handoff explícito do root. |
+
+Concretização de isolamento D-09 antes da ativação DevOps: runtime do operador em projeto novo `leadshug_channels_local`, banco `leadshug_channels_local`, separado do projeto descartável `leadshug_channels_validation`, banco `leadshug_timeline_channels_ci`. Confirmar ausência/ownership dos recursos antes de criar; não adotar homônimos existentes. Fixtures/seed e configuração fictícia ficam só na rede de validação; gateway/túnel público atende somente o runtime do operador. Banco pareado fica fora do allowlist de reset. O handoff detalha bind Windows, proteção dos env privados e prova de logs inclusive rejeição anterior à seleção de location. Recursos ainda não criados; nenhuma saúde alegada.
 
 ## Complexity
 

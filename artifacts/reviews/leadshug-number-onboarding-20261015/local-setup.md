@@ -2,9 +2,11 @@
 
 Status em2026-10-15: implementação em curso. O usuário criou o app Meta e confirmou o produto WhatsApp no painel; configuração Embedded Signup e origem HTTPS de teste ainda não confirmadas. Este roteiro prepara essas dependências; não comprova cadastro de número, conectividade ou recebimento. Os comandos definitivos do runtime serão vinculados ao README depois da validação do runner.
 
-Atualização do operador: já possui portfólio empresarial Meta, é administrador dele e acessa o painel de desenvolvedor. Criou o app usando o caso de uso WhatsApp; o produto aparece no painel. Usar esse portfólio no preparo; essas declarações não comprovam elegibilidade Tech Provider, WABA/número ou permissões de Embedded Signup. Nenhum App ID/configId foi recebido e nenhum segredo solicitado em chat.
+Atualização do operador: já possui portfólio empresarial Meta, é administrador dele e acessa o painel de desenvolvedor. Criou o app usando o caso de uso WhatsApp; o produto aparece no painel. O App ID público apareceu em um link fornecido pelo operador; não é reproduzido em exemplos de configuração. Configuration ID e versão Graph continuam não confirmados, e nenhum segredo foi solicitado em chat. Essas declarações não comprovam elegibilidade Tech Provider, WABA/número ou permissões de Embedded Signup.
 
-Próximo checkpoint humano: localizar Cadastro incorporado / Embedded Signup, Facebook Login para Empresas ou confirmar que só há configuração da API WhatsApp. Seguir as opções efetivamente disponíveis no painel, sem inferir que a presença de WhatsApp certifica Embedded Signup/Tech Provider.
+O operador acionou “Obter conta de sandbox”; o painel orientou executar Cadastro incorporado e selecionar Sandbox Business/Sandbox WhatsApp Account. Ainda não executou essa autorização no LeadsHug. A tela Configuração mostrou webhook, token permanente, telefones e conta de teste, sem configuração Embedded Signup identificada. O painel informa32números de produção e1de teste; isso não comprova posse, saúde ou autorização de alteração de nenhum deles. Também informa que o app não publicado só recebe webhooks de teste do painel. Manter a preparação em sandbox; não publicar o app nem substituir callbacks de números existentes por inferência.
+
+Próximo checkpoint humano: o operador localizou “Adicionar casos de uso / Adicionar produtos” na área principal. Conferir as opções efetivamente oferecidas para Facebook Login para Empresas/Embedded Signup, sem substituir o caso WhatsApp ou presumir que login comum equivale ao fluxo empresarial. Nenhum callback/token precisa ser preenchido antes do gateway HTTPS validado.
 
 ## O que pode ser preparado agora na conta Meta
 
