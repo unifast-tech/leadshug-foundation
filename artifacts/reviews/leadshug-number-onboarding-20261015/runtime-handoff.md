@@ -41,7 +41,7 @@ Before browser workers, record branch/base SHA plus dirty-source hashes, built a
 
 ## HTTPS and operator dependency
 
-The user has now created a Meta app with WhatsApp and obtained the sandbox account; Embedded Signup configuration and public HTTPS remain unconfirmed. [Local setup](local-setup.md) records the account-side prerequisites and observed dashboard. Business eligibility/permissions and phone authorization require the user's own account; do not infer them from app creation or sandbox availability.
+The user has created a Meta app with WhatsApp, obtained the sandbox account and supplied its public App ID and Embedded Signup Configuration ID. The operator reports Graph version `v26.0` from the app request examples. Actual SDK authorization and public HTTPS remain unconfirmed. [Local setup](local-setup.md) records the account-side prerequisites and observed dashboard. Do not hardcode account identifiers in tracked generic configuration. Business eligibility/permissions and phone authorization require the user's own account; do not infer them from app/configuration creation or sandbox availability.
 
 A temporary Quick Tunnel is an allowed test option once the isolated local gateway and served build have been verified. Do not create persistent tunnel/DNS infrastructure. Record the actual generated hostname, process/container handle, target and lifetime. An ephemeral hostname must be updated in the Meta configuration when it changes. Do not guess a public hostname or call tunnel startup proof of provider registration.
 
