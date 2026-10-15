@@ -1,0 +1,68 @@
+{
+  "date_local": "2026-10-15",
+  "scope": "Public primary source investigation only, no provider account/credential/instance calls",
+  "evolution": {
+    "tag": "2.3.7",
+    "tag_object": "6a398a6a08e59eb87dcf98b0f389e8decaf08689",
+    "commit": "cd800f2976e1e5b682fbf86a01ee4d85ae61f370",
+    "image": "evoapicloud/evolution-api:v2.3.7@sha256:1bd8afc4a6cf48822e6cf02469aeae7bd35a12a6b616eacd1291926307f4d339",
+    "sources": [
+      {
+        "url": "https://raw.githubusercontent.com/evolution-foundation/evolution-api/2.3.7/src/api/routes/instance.router.ts",
+        "sha256": "961a89e70ac160ccbf59f3a3027220217cb6401060a37c6841f4ece1d1b27b7f",
+        "facts": [
+          "fetchInstances is GET and accepts instanceName/instanceId filter through InstanceDto.",
+          "Provider connect is GET with external side effect; LeadsHug BFF must expose only its administrative POST."
+        ]
+      },
+      {
+        "url": "https://raw.githubusercontent.com/evolution-foundation/evolution-api/2.3.7/src/api/services/monitor.service.ts",
+        "sha256": "f9b3583c5b70a95f402e7594247ecd42a3825a99e2283c75d336833ef2f9ba17",
+        "facts": [
+          "Filtered instanceInfo uses the exact supplied instance name and returns stored instance details.",
+          "Projection must allowlist identity/status only; do not persist/return/log complete fetchInstances response because it can contain provider credentials."
+        ]
+      },
+      {
+        "url": "https://raw.githubusercontent.com/evolution-foundation/evolution-api/2.3.7/src/api/dto/instance.dto.ts",
+        "sha256": "8eaa94a823b4e5bcd1e5172e3de1191e0c1f6f355458cf5265afa14d63c875e3",
+        "facts": [
+          "Instance shape includes ownerJid, connectionStatus and name, and supports per-instance webhook headers."
+        ]
+      },
+      {
+        "url": "https://raw.githubusercontent.com/evolution-foundation/evolution-api/2.3.7/src/api/integrations/event/webhook/webhook.controller.ts",
+        "sha256": "8d7dd73a3d658cca0a827fdf97f674446c33fc8372fa9f89462921215c5df090",
+        "facts": [
+          "Configured per-instance headers are attached to outbound webhook requests.",
+          "Header authentication is therefore source-supported as the optional callback mechanism already allowed by the approved plan; no runtime proof or selected route change is claimed here."
+        ]
+      }
+    ],
+    "limit": "Pinned source contract is evidence for adapter construction, not identity/connection readiness of any running instance or proof that the pinned image was exercised."
+  },
+  "meta": {
+    "sources": [
+      {
+        "url": "https://www.postman.com/meta/whatsapp-business-platform/collection/du6gzjv/embedded-signup",
+        "facts": [
+          "Signup requires subsequent integration steps; installation eligibility and HTTPS remain prerequisites."
+        ]
+      },
+      {
+        "url": "https://www.postman.com/meta/whatsapp-business-platform/request/mk4p87j/register-phone-number",
+        "facts": [
+          "Explicit phone registration uses six-digit PIN; no unregister/migration or forced re-registration is authorized."
+        ]
+      },
+      {
+        "url": "https://www.postman.com/meta/whatsapp-business-platform/request/0yubu4i/subscribe-app-to-whatsapp-business-account",
+        "facts": [
+          "WABA subscription is a distinct POST after webhook configuration; no callback takeover."
+        ]
+      }
+    ],
+    "direct_developers_documentation": "429 rate limited during this inspection",
+    "limit": "Older generic Postman collection includes BSP credit-line material outside the approved Tech Provider scope; do not adopt that workflow. Actual app configuration/Graph permissions/token exchange/register/subscription still need real proof. Do not invent unsupported readiness fields or use global WHATSAPP_TOKEN."
+  }
+}

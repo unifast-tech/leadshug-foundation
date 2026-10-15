@@ -41,7 +41,7 @@ Proposta ST-CON-01: jornada de cadastro de número, com infraestrutura local est
 
 - **Current delivery stage:** Pending
 - **Qualifiers:** none
-- **Next exact step:** consolidar contratos owner e executar checkpoint de persistência/credenciais/ingresso com um executor no checkout principal.
+- **Next exact step:** concluir e validar o checkpoint2 da API com o executor único; depois implementar UI e fazer handoff DevOps para o runtime local.
 
 ## Active Work State (Required While TODO Remains In `active/`)
 
@@ -861,7 +861,7 @@ n/a; sem claim Production-Ready ou promoção remota.
 
 ## Commands (Run Locally)
 
-Após APROVADO: runner source-owned API/Web e compose local; executar folhas documentadas na matriz. Segredos vêm do ambiente privado e não aparecem em comando/log. Antes de executar, routing e readiness do executor go. Nenhum comando de produto rodado nesta fase.
+Após APROVADO: runner source-owned API/Web e compose local; executar folhas documentadas na matriz. Segredos vêm do ambiente privado e não aparecem em comando/log. Antes de executar, routing e readiness do executor go. Comandos já executados no checkpoint1 constam do relatório específico; a matriz final continua pendente.
 
 ## Files Expected (Compatibility Note)
 
@@ -870,3 +870,13 @@ O Diff Expectation Contract é a referência candidata; paths atualizados após 
 ## COMENTÁRIO:
 
 Nenhum comentário de aprovação pendente foi tratado como APROVADO.
+
+
+## Execution Checkpoints
+
+- Checkpoint1 concluído em2026-10-15: schema/2migrations, cifra/redaction e owner de aceitação de mensagens. Evidência: artifacts/reviews/leadshug-number-onboarding-20261015/evidence/checkpoint1-execution-evidence.md. Fonte final:119unidades+3PGtargeted+lint/build/migrate.226E2E amplas anteriores ao último hardening não serão reaproveitadas como prova da fonte final do produto.
+- Checkpoint2 seguinte: adapters, tentativas/controladores, credenciais scoped em todos os consumers, fencing/tenant/dedupe e integração DI. Depois UI, runtime/ingress com handoff DevOps, validação final/reviews e prova real.
+- Usuário confirmou nesta execução não ter ainda app Meta/Embedded Signup nem HTTPS e autorizou preparo. A prova oficial permanece pendente dessa configuração na conta do operador; não bloqueia trabalho interno independente.
+- Preparação documental: artifacts/reviews/leadshug-number-onboarding-20261015/local-setup.md; handoff de runtime planejado em runtime-handoff.md no mesmo diretório. Nenhuma criação de app, túnel ou runtime foi reivindicada por esses roteiros.
+- O classificador genérico profile_scope_check não reconhece prefixos api-app Nest; paths unknown foram conferidos contra constituição, owners e Diff Expectation do TODO aprovado. Nenhuma negação de escopo foi ignorada; Delphi/regras não foram modificados.
+- Artefatos checkpoint1 inicialmente escritos no prefixo workspace artifacts por ambiguidade do handoff foram movidos byte a byte para foundation_documentation/artifacts, sem mudar stdout/hash. Próximos handoffs usarão caminhos absolutos.

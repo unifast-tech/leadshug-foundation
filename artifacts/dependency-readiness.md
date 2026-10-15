@@ -33,3 +33,10 @@ O inventário observou uma Evolution associada ao Hub legado. Esse recurso não 
 ## Versão proposta do provider local
 
 Registry consultado em leitura confirmou `evoapicloud/evolution-api:v2.3.7@sha256:1bd8afc4a6cf48822e6cf02469aeae7bd35a12a6b616eacd1291926307f4d339`. A proposta cria instância/DB/cache próprios no overlay local; não presume compatibilidade ou saúde antes de startup/prova. Origem HTTPS única será declarada pelo operador para SDK/callback; não há domínio escolhido ou túnel aberto nesta sessão.
+
+
+## Execução aprovada e readiness confirmada pelo usuário
+
+Em2026-10-15 o usuário aprovou ST-CON-01. Informou depois que ainda não possui app Meta Embedded Signup configurado nem HTTPS de teste, e concordou em prepará-los. Essa confirmação é sobre disponibilidade, não um health check. App/autorizações requerem a conta Meta do operador; o ambiente e guia local serão preparados nesta execução. Nenhuma credencial deve ser enviada no chat.
+
+Checkpoint1 usou Node22.23.3/Prisma6.19.3/PG16 descartável separados dos serviços existentes; schema/migration,119unidades e3E2E de aceitação passaram na fonte final desse checkpoint. Isso não prova conexões Meta/Evolution nem substitui a suíte final após o cutover. Detalhes no artefato checkpoint1-execution-evidence.md da revisão de onboarding.

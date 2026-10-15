@@ -1,0 +1,75 @@
+
+> @leadshug/api@0.1.0 prisma:migrate
+> prisma migrate deploy
+
+Environment variables loaded from .env
+Prisma schema loaded from prisma/schema.prisma
+Datasource "db": PostgreSQL database "leadshug_number_onboarding_test", schema "public" at "pg:5432"
+
+18 migrations found in prisma/migrations
+
+Applying migration `20260818125556_nucleo_v1_tenancy_identidade_atendimento`
+Applying migration `20260821175101_modulos_e_marca_por_mantenedora`
+Applying migration `20260821180000_tres_papeis_owner_admin_atendente`
+Applying migration `20260821190000_setor_e_proveniencia_do_grant`
+Applying migration `20260821190500_concessao_de_setor_e_fato_proprio`
+Applying migration `20260821200000_historico_de_atividades`
+Applying migration `20260821210000_wizard_de_onboarding`
+Applying migration `20260821220000_preserva_modulo_ja_em_uso`
+Applying migration `20260824122559_perfil_do_proprio_usuario`
+Applying migration `20260824125224_arquivos_logo_e_avatar`
+Applying migration `20260824125227_arquivos_dono`
+Applying migration `20260824125334_avatar_e_do_usuario_nao_da_bu`
+Applying migration `20260824161138_convite_e_recuperacao_de_senha`
+Applying migration `20260827170000_cor_secundaria`
+Applying migration `20260831130000_cores_primarias_por_tema`
+Applying migration `20260901120000_typebot_bots_and_triggers`
+Applying migration `20260901130000_typebot_sessions`
+Applying migration `20261015120000_number_onboarding_foundation`
+
+The following migration(s) have been applied:
+
+migrations/
+  └─ 20260818125556_nucleo_v1_tenancy_identidade_atendimento/
+    └─ migration.sql
+  └─ 20260821175101_modulos_e_marca_por_mantenedora/
+    └─ migration.sql
+  └─ 20260821180000_tres_papeis_owner_admin_atendente/
+    └─ migration.sql
+  └─ 20260821190000_setor_e_proveniencia_do_grant/
+    └─ migration.sql
+  └─ 20260821190500_concessao_de_setor_e_fato_proprio/
+    └─ migration.sql
+  └─ 20260821200000_historico_de_atividades/
+    └─ migration.sql
+  └─ 20260821210000_wizard_de_onboarding/
+    └─ migration.sql
+  └─ 20260821220000_preserva_modulo_ja_em_uso/
+    └─ migration.sql
+  └─ 20260824122559_perfil_do_proprio_usuario/
+    └─ migration.sql
+  └─ 20260824125224_arquivos_logo_e_avatar/
+    └─ migration.sql
+  └─ 20260824125227_arquivos_dono/
+    └─ migration.sql
+  └─ 20260824125334_avatar_e_do_usuario_nao_da_bu/
+    └─ migration.sql
+  └─ 20260824161138_convite_e_recuperacao_de_senha/
+    └─ migration.sql
+  └─ 20260827170000_cor_secundaria/
+    └─ migration.sql
+  └─ 20260831130000_cores_primarias_por_tema/
+    └─ migration.sql
+  └─ 20260901120000_typebot_bots_and_triggers/
+    └─ migration.sql
+  └─ 20260901130000_typebot_sessions/
+    └─ migration.sql
+  └─ 20261015120000_number_onboarding_foundation/
+    └─ migration.sql
+      
+All migrations have been successfully applied.
+npm notice
+npm notice New major version of npm available! 10.9.9 -> 12.2.0
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.0
+npm notice To update run: npm install -g npm@12.2.0
+npm notice
