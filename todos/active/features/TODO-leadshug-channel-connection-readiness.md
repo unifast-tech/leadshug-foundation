@@ -206,6 +206,7 @@ n/a; esta proposta não autoriza promoção ou deploy.
 | Repository | Path glob | Change types | Reason |
 | --- | --- | --- | --- |
 | api | src/domain/channels/** | A,M,?? | Cadastro, tentativa, credencial e testes. |
+| api | src/domain/channels/channels.service.spec.ts | D | Remover três testes do gerador de slug aposentado junto dos métodos legados sem callers; provas da jornada agregada nos E2E novos. |
 | api | src/integrations/meta/** | A,M,?? | Adapter explicitamente credential-scoped. |
 | api | src/integrations/evolution/** | A,M,?? | Adapter v2.3.7/QR/settings. |
 | api | src/infra/config/modulos.ts | M | Bootstrap coerente antes de vincular cliente. |
@@ -232,7 +233,7 @@ n/a; esta proposta não autoriza promoção ou deploy.
 | api | test/helpers.ts | M | DI dos adapters e credenciais de teste. |
 | api | test/setup-env.ts | M | Configuração determinística de testes. |
 | api | test/browser-server.cjs | M | Backend real e fixtures de cadastro. |
-| api | test/timeline-fixtures.cjs | M | Somente credencial de fixture exigida pelo novo resolver. |
+| api | test/timeline-fixtures.cjs | M | Preservar fixtures de timeline e fornecer controles out-of-band do provider para browser com BFF/sessão/PG reais; nunca expor no gateway do operador. |
 | api | test/webhooks.e2e-spec.ts | M | Receipt, auth e races. |
 | api | test/realtime.e2e-spec.ts | M | Apenas fixture de canal verificado scoped pelo helper comum; preservar asserts de socket/grant/tenant. Admissão de execução documentada abaixo. |
 | api | test/modulos.e2e-spec.ts | M | Expectativas do endpoint aposentado e positivas equivalentes na nova jornada; preservar piso oficial e teto/contratação não oficial. Admissão de execução documentada abaixo. |
@@ -248,6 +249,7 @@ n/a; esta proposta não autoriza promoção ou deploy.
 | web | e2e/*canais* | A,?? | Browser de cadastro. |
 | web | e2e/number-onboarding* | A,?? | Fixtures/freshness do fluxo. |
 | web | playwright.config.ts | M | Projeto adicional com mesmo backend real. |
+| web | .dockerignore | M | Excluir env privados do contexto de build e da carga automática Vite; manter somente exemplo público. |
 | workspace | docker-compose.yml | M | Repasse coerente de config não secreta; default local permanece. |
 | workspace | docker-compose.channels.yml | A,?? | Overlay local provider/gateway/volumes próprios. |
 | workspace | docker/local-gateway.conf.template | A,?? | Ingress local único para web/API/callback. |
@@ -288,11 +290,13 @@ n/a; esta proposta não autoriza promoção ou deploy.
 
 ### Diff Deviation Analysis
 
-Três admissões de testes em execução estão detalhadas abaixo. Classificação de gitlinks preexistentes no workspace não concede permissão de alterá-los manualmente. Outras fixtures encontradas necessárias devem ser admitidas antes de editadas; não modificar expectativas de negócio só para passar tests.
+Admissões concretas de execução estão detalhadas abaixo. Classificação de gitlinks preexistentes no workspace não concede permissão de alterá-los manualmente. Outras fixtures encontradas necessárias devem ser admitidas antes de editadas; não modificar expectativas de negócio só para passar tests.
 
 - `test/realtime.e2e-spec.ts`: guard de execução encontrou path não classificado. Diff inspecionado pelo orquestrador: somente import do helper `criarCanalVerificado` e substituição da criação direta de BuChannel pela fixture completa de identidade/credencial; nenhum assert, cenário ou comportamento de socket alterado. Necessário para preservar a prova de push scoped após o ingresso passar a exigir identidade durável. Classificação: concretização de fixture da validação SCOPE-07/09 já autorizada, sem nova capacidade, objetivo ou risco material. Admitido esse path exato, sem abrir `test/**`; nenhuma dispensa do guard. A edição precedeu a admissão, falha de sequência registrada e corrigida antes de qualquer entrega; executor instruído a consultar antes de novos paths.
 - `test/modulos.e2e-spec.ts`: novo guard encontrou expectativa201→409 em duas chamadas do endpoint aposentado. A constituição exige atualização correspondente de testes de contrato na mesma entrega; esse path é concretização da validação já aprovada, sem ampliar capacidade ou superfície de produto. Admitido o path exato para aposentadoria E provas positivas na nova jornada. A alteração atual não é suficiente como prova positiva de módulo/piso: nomes ainda alegam conexão mas só409 não a exercita; achado de qualidade aberto para correção após a revisão congelada. As negativas404 de teto/contratação devem ser preservadas. Segunda falha de sequência registrada; não concede `test/**` nem dispensa gates.
 - `web/src/api.spec.ts` (path interno Web `src/api.spec.ts`): guard intermediário encontrou path não listado que o handoff do root havia chamado incorretamente de admitido. Diff inspecionado: somente acréscimo de13linhas testando header Idempotency-Key, URL sem correlação e body do novo helper; nenhum assert anterior alterado. Classificação: teste de contrato necessário ao helper já aprovado em src/api.ts, sem nova capacidade/risco/escopo de produto, alinhado à constituição. Admitido esse path exato; falha de sequência de conferência do root registrada, sem abrir outros testes. Web já está parada; pacote de review congelado permanece imutável. Não usar o verde unitário para substituir browser. Guard deve voltar go antes de entrega.
+- `api/src/domain/channels/channels.service.spec.ts` (path interno API): a remoção dos métodos legados sem callers já aceita incluiu seus três testes de slug, deixando o arquivo sem cenários aplicáveis. O glob de domínio admitia escrita mas não o tipo D. Admitido exclusivamente D nesse arquivo, preservando as novas provas positivas de canais/módulos e a aposentadoria HTTP nos E2E; não há autorização genérica de apagar testes. Concretização do mesmo contrato, com conferência de tipo tardia registrada antes da entrega.
+- `web/.dockerignore` (path interno Web): leitura do Dockerfile e ignore constatou `COPY . .` no builder Vite sem exclusão de `.env`/`.env.*`; a API já exclui esses arquivos. Admitido antes de qualquer edição Web para impedir ingestão de configuração privada no build, concretizando DOD-03. Nenhum arquivo privado será lido, alterado ou apagado; nenhum comportamento, dependência, endpoint ou implantação adicional. Verificar build e contexto sem registrar valores privados.
 
 ## Bounded But Elastic Guardrails
 
