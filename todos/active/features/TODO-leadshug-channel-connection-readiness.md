@@ -41,7 +41,7 @@ Proposta ST-CON-01: jornada de cadastro de número, com infraestrutura local est
 
 - **Current delivery stage:** Pending
 - **Qualifiers:** none
-- **Next exact step:** API cp8 parou com137unitários/277E2E e21migrações no runner isolado; manifests antes/depois iguais e conferidos. DevOps cp9 parou com4binds públicos/prefixos de colisão/Graph fixture válidos; root conferiu6hashes declarados. Web cp10 é agora writer único para corrigir freshness/fluxos e executar browser real-backend antes do runtime do operador.
+- **Next exact step:** API cp8 parou com137unitários/277E2E e21migrações no runner isolado; manifests antes/depois iguais e conferidos. DevOps cp9 parou com4binds públicos/prefixos de colisão/Graph fixture válidos; root conferiu6hashes declarados. Web cp10 corrigiu freshness/fluxos e parou no erro pré-worker de dist API ausente; DevOps cp11 acrescentou build prévio e parou após config-only. Web cp12 é agora writer único para concluir browser real-backend e alinhar Graph fixture antes do runtime do operador.
 
 ## Active Work State (Required While TODO Remains In `active/`)
 
@@ -985,3 +985,8 @@ Handoff após STOP: DevOps cp9 único writer root para4binds públicos, prefixos
 ### Checkpoint9 — montagem pública completa antes do browser
 
 DevOps parou após4binds públicos read-only, filtro de colisão aceitando hífen/underscore e Graph fixture v26.0. Sintaxe e config-only passaram sem criar recursos, conforme `evidence/cp9-runtime-config.json`; seis hashes declarados conferidos pelo root. Guard diff cp9 retornou GO256/256paths, zero proibidos ou não classificados (interim, não final). Sem browser/operador executado nesta etapa. Web cp10 ativado como único writer após esse STOP, mantendo API/runtime congelados; corrige diff público antes de Playwright, popup/WABA e casos de cancelamento/retry/contexto faltantes.
+
+
+### Checkpoint10/11 — pré-requisito compilado do browser
+
+Web cp10 parou após build e27unitários, com13hashes verificados pelo root. Freshness restringe o diff binário a paths públicos antes de ler blobs; popup abandon, WABA sem nome e cenários adicionais foram preparados. O browser aplicou21migrações/buildWeb e falhou antes de workers/globalSetup: timeline-fixtures.cjs exige crypto compilado em dist da API, ausente no volume limpo. Nenhum teste/attestation foi reivindicado. Raw e handoff cp10 preservados. DevOps cp11 único writer corrigiu o seletor browser para buildAPI prévio, sem duplicar no seletor all, e parou após syntax/config-only. Web cp12 foi ativado depois do STOP para alinhar os2Graph fixtures do Playwright e concluir a suíte; eventual alteração da ordem de bootstrap deve preservar buildfresh/DB/health/servedhash. Operador permanece não inicializado. Índice REG-SEC cp8 e contexto OWASP são inputs de revisão, não gates aceitos.

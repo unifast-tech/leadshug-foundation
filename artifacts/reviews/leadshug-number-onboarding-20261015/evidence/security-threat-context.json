@@ -1,0 +1,30 @@
+{
+  "status": "review-input-only; not a completed security gate",
+  "retrieved_on": "2026-10-15",
+  "sources": [
+    {
+      "title": "OWASP Multi Tenant Security",
+      "url": "https://cheatsheetseries.owasp.org/cheatsheets/Multi_Tenant_Security_Cheat_Sheet.html",
+      "relevance": "Treat submitted BU/resource identifiers as selectors and verify authorization against server-owned tenant context; inspect async fan-out and raw batch partitioning."
+    },
+    {
+      "title": "OWASP CSRF Prevention",
+      "url": "https://cheatsheetseries.owasp.org/cheatsheets/Cross-Site_Request_Forgery_Prevention_Cheat_Sheet.html",
+      "relevance": "Custom AJAX headers depend on constrained CORS. Review mutation authorization and missing-header rejection; compare exact local and HTTPS origin wiring."
+    },
+    {
+      "title": "OWASP Logging",
+      "url": "https://cheatsheetseries.owasp.org/cheatsheets/Logging_Cheat_Sheet.html",
+      "relevance": "Exclude tokens, sessions, passwords, database connection strings and encryption keys; validate both request success and parser/upstream failures, while retaining safe diagnostics."
+    }
+  ],
+  "attack_hypotheses": [
+    "Cross-BU attempt/nonce/credential access",
+    "Replay or stale generation after cancel/remove/recreate",
+    "Authenticated mixed-owner webhook batch raw payload crossing tenant boundaries",
+    "Unauthenticated/CSRF pairing or retired GET invoking provider",
+    "Provider echo winning before trusted sender data",
+    "Secrets in gateway parser errors or provider callback failure logging"
+  ],
+  "evidence_boundary": "REG-SEC and local runtime logs support reproduced observations. Real Meta/device readiness, dependency vulnerability inventory and production rollout are not inferred from these sources."
+}

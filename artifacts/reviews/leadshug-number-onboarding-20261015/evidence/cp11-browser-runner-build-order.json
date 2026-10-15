@@ -1,0 +1,19 @@
+{
+  "checkpoint": "cp11-browser-runner-build-order",
+  "date": "2026-10-15",
+  "reported_failure": "cp10-browser-validation.log showed MODULE_NOT_FOUND for ../dist/domain/channels/channel-credential-crypto.js while Playwright started test/timeline-fixtures.cjs before workers.",
+  "change": "The browser selector now runs the canonical API npm run build after Prisma generation/dependency installation and before migrations/Playwright startup. The all selector already runs the API build in its api phase, so the browser phase does not repeat it.",
+  "verification": {
+    "bash_n": "passed for scripts/test-channels-local.sh and scripts/start-channels-local.sh",
+    "git_diff_check": "passed",
+    "command": "CHANNELS_CONFIG_ONLY=1 bash scripts/test-channels-local.sh browser",
+    "result": "Validation Compose config is valid; no resources were created.",
+    "browser_or_operator_started": false
+  },
+  "known_handoff_note": "playwright.config.ts starts timeline-fixtures.cjs before the separate API webServer command, which itself runs npm run build; this runner prebuild prevents missing dist on the fixture's first start, but the Web owner should assess the concurrent second build with deleteOutDir before browser validation is accepted.",
+  "sha256": {
+    "scripts/test-channels-local.sh": "e71b9a4974211af7649ca9b324921841781fee422305e8e6395737e6185f57c7",
+    "docker-compose.channels.yml": "1059d2ff74689d5392c001ce0617927221d08d0f69ff743f31aae7acfda930a9",
+    "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp10-browser-validation.log": "2572d630a3a775851fe395daa729df4afa9db2d9858d5115ea4cf652ccc34de6"
+  }
+}

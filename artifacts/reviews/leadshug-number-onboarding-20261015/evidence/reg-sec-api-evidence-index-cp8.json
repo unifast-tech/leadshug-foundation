@@ -1,0 +1,138 @@
+{
+  "status": "provisional-evidence-index; obligations not independently adjudicated",
+  "source_run": "cp8-api-final-validation-final.log",
+  "source_run_sha256": "7dabc94f190d2fb93cb0f0f8e4bb7936791615fa558f8312ccbdd9889f3920e9",
+  "scope": "API source-owned run: 137 unit and277PG-E2E, no actual provider or browser certification",
+  "rows": [
+    {
+      "case_id": "REG-SEC-01",
+      "api_source_paths": [
+        "test/number-onboarding-typebot.e2e-spec.ts",
+        "test/number-onboarding-caller-scoping.e2e-spec.ts"
+      ],
+      "gate_status": "pending-independent-review",
+      "remaining_notes": []
+    },
+    {
+      "case_id": "REG-SEC-02",
+      "api_source_paths": [
+        "test/webhooks.e2e-spec.ts",
+        "test/number-onboarding-message-acceptance.e2e-spec.ts"
+      ],
+      "gate_status": "pending-independent-review",
+      "remaining_notes": []
+    },
+    {
+      "case_id": "REG-SEC-03",
+      "api_source_paths": [
+        "test/number-onboarding-flow.e2e-spec.ts",
+        "test/webhooks.e2e-spec.ts"
+      ],
+      "gate_status": "pending-independent-review",
+      "remaining_notes": []
+    },
+    {
+      "case_id": "REG-SEC-04",
+      "api_source_paths": [
+        "test/number-onboarding-flow.e2e-spec.ts"
+      ],
+      "gate_status": "pending-independent-review",
+      "remaining_notes": []
+    },
+    {
+      "case_id": "REG-SEC-05",
+      "api_source_paths": [
+        "test/number-onboarding-flow.e2e-spec.ts",
+        "test/canais.e2e-spec.ts"
+      ],
+      "gate_status": "pending-independent-review",
+      "remaining_notes": []
+    },
+    {
+      "case_id": "REG-SEC-06",
+      "api_source_paths": [
+        "test/number-onboarding-flow.e2e-spec.ts"
+      ],
+      "gate_status": "pending-independent-review",
+      "remaining_notes": [
+        "Reviewer must assess exact candidate/session/replay assertion coverage; filenames alone do not close the requirement."
+      ]
+    },
+    {
+      "case_id": "REG-SEC-07",
+      "api_source_paths": [
+        "test/number-onboarding-flow.e2e-spec.ts",
+        "test/number-onboarding-bci.e2e-spec.ts"
+      ],
+      "gate_status": "pending-independent-review",
+      "remaining_notes": [
+        "Reviewer must assess exact candidate/session/replay assertion coverage; filenames alone do not close the requirement."
+      ]
+    },
+    {
+      "case_id": "REG-SEC-08",
+      "api_source_paths": [
+        "test/webhooks.e2e-spec.ts",
+        "test/number-onboarding-message-acceptance.e2e-spec.ts",
+        "src/domain/channels/channel-credential-crypto.spec.ts",
+        "src/domain/channels/safe-redaction.spec.ts"
+      ],
+      "gate_status": "pending-independent-review",
+      "remaining_notes": [
+        "Runtime/provider logs and browser trace/storage exclusions still need their own evidence."
+      ]
+    },
+    {
+      "case_id": "REG-SEC-09",
+      "api_source_paths": [
+        "src/domain/channels/channel-credential-crypto.spec.ts",
+        "src/integrations/meta/meta.client.spec.ts"
+      ],
+      "gate_status": "pending-independent-review",
+      "remaining_notes": [
+        "Browser transport/storage and actual HTTPS remain separate from adapter/crypto evidence."
+      ]
+    },
+    {
+      "case_id": "REG-SEC-10",
+      "api_source_paths": [
+        "test/atendimento.e2e-spec.ts",
+        "test/number-onboarding-flow.e2e-spec.ts"
+      ],
+      "gate_status": "pending-independent-review",
+      "remaining_notes": []
+    },
+    {
+      "case_id": "REG-SEC-11",
+      "api_source_paths": [
+        "test/atendimento.e2e-spec.ts",
+        "test/api-publica.e2e-spec.ts",
+        "test/number-onboarding-typebot.e2e-spec.ts",
+        "test/number-onboarding-caller-scoping.e2e-spec.ts",
+        "test/number-onboarding-message-acceptance.e2e-spec.ts"
+      ],
+      "gate_status": "pending-independent-review",
+      "remaining_notes": [
+        "Browser same-ID trusted-content refresh remains pending at this index capture."
+      ]
+    },
+    {
+      "case_id": "REG-SEC-12",
+      "api_source_paths": [
+        "test/webhooks.e2e-spec.ts"
+      ],
+      "gate_status": "pending-independent-review",
+      "remaining_notes": [
+        "Actual gateway success/auth/upstream/parser failures and pinned Evolution header delivery remain pending."
+      ]
+    },
+    {
+      "case_id": "REG-SEC-13",
+      "api_source_paths": [
+        "test/webhooks.e2e-spec.ts"
+      ],
+      "gate_status": "pending-independent-review",
+      "remaining_notes": []
+    }
+  ]
+}
