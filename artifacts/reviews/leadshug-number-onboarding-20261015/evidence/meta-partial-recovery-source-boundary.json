@@ -1,0 +1,30 @@
+{
+  "date": "2026-10-15",
+  "kind": "primary-source-contract-boundary-not-provider-proof",
+  "sources": [
+    {
+      "url": "https://www.postman.com/meta/whatsapp-business-platform/request/tl2wk2j/get-all-subscriptions-for-a-waba",
+      "verified": "Meta-owned request confirms GET /{WABA-ID}/subscribed_apps.",
+      "limit": "Rendered accessible request has no response body/schema. Membership field, paging completeness and override semantics are not established by this page."
+    },
+    {
+      "url": "https://www.postman.com/meta/whatsapp-business-platform/request/un84tul/override-callback-url",
+      "verified": "Callback override is a separate documented operation.",
+      "limit": "This project must not perform callback override as recovery."
+    },
+    {
+      "url": "https://www.postman.com/meta/whatsapp-business-platform/documentation/wlk6lh4/whatsapp-cloud-api?entity=folder-08213e00-c6d0-48a2-8be8-62247b8d29bd",
+      "verified": "Phone listing supplies identity/display data; registration is a separate PIN-bearing POST. Saved registration success example uses exact string true.",
+      "limit": "Listing does not prove registration; saved response is not certification of the app's actual Graph-version schema."
+    },
+    {
+      "url": "https://developers.facebook.com/documentation/business-messaging/whatsapp/solution-providers/manage-webhooks",
+      "verified": false,
+      "limit": "Direct retrieval returned429; third-party mirrors were not accepted as authoritative schema."
+    }
+  ],
+  "adjudication": "NUM-WEB-11 accepts the in-scope need for safe recovery actions/guidance but does not accept its unverified assumption of a conclusive readback. Where provider evidence cannot reconcile an ambiguous mutation, retain visible pending/manual state and use the already approved controlled fresh-authorization path; do not invent fields or replay code/PIN/registration/subscription automatically.",
+  "adapter_parse": "Exact boolean true or documented exact string true can express explicit success. Reject missing, false, false string and other truthy values; 2xx alone is insufficient. Real Graph-version response remains to be observed.",
+  "account_calls": false,
+  "real_provider_readiness": "unverified"
+}

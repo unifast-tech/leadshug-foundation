@@ -1,10 +1,14 @@
 # Preparação do teste local de números
 
-Status em2026-10-15: implementação em curso. O usuário confirmou que ainda não há app Meta/Embedded Signup nem origem HTTPS de teste. Este roteiro prepara essas dependências; não comprova cadastro, conectividade ou recebimento. Os comandos definitivos do runtime serão vinculados ao README depois da validação do runner.
+Status em2026-10-15: implementação em curso. O usuário criou o app Meta e confirmou o produto WhatsApp no painel; configuração Embedded Signup e origem HTTPS de teste ainda não confirmadas. Este roteiro prepara essas dependências; não comprova cadastro de número, conectividade ou recebimento. Os comandos definitivos do runtime serão vinculados ao README depois da validação do runner.
+
+Atualização do operador: já possui portfólio empresarial Meta, é administrador dele e acessa o painel de desenvolvedor. Criou o app usando o caso de uso WhatsApp; o produto aparece no painel. Usar esse portfólio no preparo; essas declarações não comprovam elegibilidade Tech Provider, WABA/número ou permissões de Embedded Signup. Nenhum App ID/configId foi recebido e nenhum segredo solicitado em chat.
+
+Próximo checkpoint humano: localizar Cadastro incorporado / Embedded Signup, Facebook Login para Empresas ou confirmar que só há configuração da API WhatsApp. Seguir as opções efetivamente disponíveis no painel, sem inferir que a presença de WhatsApp certifica Embedded Signup/Tech Provider.
 
 ## O que pode ser preparado agora na conta Meta
 
-1. Acessar [Meus aplicativos](https://developers.facebook.com/apps/) na conta que administrará o teste e verificar o portfólio empresarial que será usado. Se ainda não existir, criar o portfólio pelo fluxo da própria Meta.
+1. Acessar [Meus aplicativos](https://developers.facebook.com/apps/) na conta administradora do portfólio já existente. Concluir o cadastro de desenvolvedor se o painel o exigir e selecionar o portfólio correto no fluxo oferecido pela Meta.
 2. Criar/configurar o aplicativo para WhatsApp Cloud API e a modalidade de Embedded Signup/Tech Provider disponível para essa conta. Conferir no painel elegibilidade, papéis de teste e requisitos de revisão. Ter um app criado não comprova que a modalidade foi liberada.
 3. Configurar Facebook Login for Business e a configuração de Embedded Signup. Anotar **App ID**, **Configuration ID** e a **Graph version** admitida pelo app. Os nomes exatos das telas dependem do painel atual.
 4. Conferir as permissões de gestão e mensagens do WhatsApp necessárias ao fluxo, incluindo `whatsapp_business_management` e `whatsapp_business_messaging`, conforme o app e seus recursos de teste. Não conceder escopos adicionais por conveniência.

@@ -1,0 +1,30 @@
+{
+  "date": "2026-10-15",
+  "kind": "primary-source-preflight-not-runtime-proof",
+  "provider": "Evolution API 2.3.7",
+  "source_commit": "cd800f2976e1e5b682fbf86a01ee4d85ae61f370",
+  "image": "evoapicloud/evolution-api:v2.3.7@sha256:1bd8afc4a6cf48822e6cf02469aeae7bd35a12a6b616eacd1291926307f4d339",
+  "sources": [
+    {
+      "url": "https://github.com/evolution-foundation/evolution-api/blob/cd800f2976e1e5b682fbf86a01ee4d85ae61f370/src/api/integrations/event/webhook/webhook.controller.ts",
+      "evidence": "Lines69-122 load instance headers and pass them into the callback axios client;124-136 and217-243 log callback URL on errors. Header values are not selected into those error metadata objects. LOG_LEVEL filtering is a separate concern."
+    },
+    {
+      "url": "https://github.com/evolution-foundation/evolution-api/blob/cd800f2976e1e5b682fbf86a01ee4d85ae61f370/src/config/logger.config.ts",
+      "evidence": "Lines73-119 gate each logger type using the configured explicit level allowlist."
+    },
+    {
+      "url": "https://github.com/evolution-foundation/evolution-api/blob/cd800f2976e1e5b682fbf86a01ee4d85ae61f370/src/api/integrations/channel/whatsapp/whatsapp.baileys.service.ts",
+      "evidence": "Lines406-410 emit terminal QR through logger.log;638-645 disable Baileys direct printQRInTerminal."
+    }
+  ],
+  "finding": "NUM-RUNTIME-01: callback URL with secret path can leak in provider ERROR output; gateway redaction cannot prevent that output.",
+  "selected_concretization": "Use the already approved conditional per-instance header capability: POST /webhooks/evolution without secret in URL, x-leadshug-webhook-secret carrying private EVOLUTION_WEBHOOK_SECRET; no path-auth fallback. LOG_LEVEL=ERROR,WARN excludes QR/payload log levels while keeping useful provider errors.",
+  "pending_required_proof": [
+    "Adapter request contains exact safe callback URL and private header, no desired owner echo.",
+    "Real pinned local provider delivers header to authenticated backend; missing/wrong header rejected.",
+    "Fictitious markers absent in actual gateway access/error, application and provider logs on success and forced callback failure.",
+    "No real QR, authorization code, PIN or credential collected; real-device proof remains separate."
+  ],
+  "authority": "Governing approved TODO and integrations-and-channels already condition header use on support and proof. Source condition confirmed, runtime condition remains pending; this artifact grants no new product scope or external account authority."
+}

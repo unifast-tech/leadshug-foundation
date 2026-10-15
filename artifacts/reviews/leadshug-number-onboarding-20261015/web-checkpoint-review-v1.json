@@ -1,0 +1,177 @@
+{
+  "schema_version": "subagent-review-result-v1",
+  "artifact_kind": "subagent_review_result",
+  "dispatch_path": "/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/web-checkpoint-dispatch-v1.json",
+  "review_kind": "architecture_adherence",
+  "reviewer_label": "Fresh independent Web checkpoint reviewer — ST-CON-01",
+  "overall_assessment": "Revise this diagnostic Web checkpoint before integration. I read the complete frozen packet incrementally, all 2,898 lines / 221,007 bytes and all 17 snapshots, including the complete approved TODO and module contracts, and read the accompanying manifest, Markdown/JSON dispatch and native result schema. The packet SHA-256 was independently verified as df4bb1403d1b5e64d30685d33ca48eb3f9204d8d8bb26feae9e41f29274a8b50. An initially truncated dispatch JSON output was reread completely; no truncated packet output is being treated as read. This is a bounded Web correctness/security/adherence diagnostic, not final TODO approval, TQA, security, PCV, provider certification or delivery acceptance. No tests, builds, network/provider calls, live API/source inspection, private environment/auth reads or product edits were performed. The only write is this designated report. The frozen source does implement the central repairs for WEB-ROOT-01 (readiness survives invalidation), WEB-ROOT-02 (confirmation wrapper), WEB-ROOT-05 (ordinary same-payload in-memory key reuse) and WEB-ROOT-06 (retention of the WABA choices during an explicitly selected page load). Close preserves a durable attempt, polling exists, login remains synchronous in the click handler, duplicate login launches are fenced, and code/PIN/nonce/QR are kept in transient component memory in the provided Web code. Those observations are source evidence, not browser verification. WEB-ROOT-03/04 remain incomplete through the recovery and ordering defects below, and other concrete Web defects remain. The principal structural weakness is that many asynchronous producers write shared attempt/status/QR state with different guards; attempt identity alone does not order responses or establish the current channel generation. Static request shape is bounded and listing does not itself issue provider calls, so no speculative scale defect is raised; latency/load were not measured. The historical NUM-ARCH/NUM-CRIT fixed-in-plan dispositions are contractual history, not product fixes. NUM-API-01..18 remain accepted remediation in a separate changing API lane; I neither inspected nor assumed that remediation complete. The acknowledged absence of browser/real SDK/provider/runtime proof is not itself a finding.",
+  "recommended_path": "Correct the concrete Web defects below within the existing approved ST-CON-01 contract, then refreeze the Web source and exercise the listed discriminating cases against the refrozen real validation backend/session/PostgreSQL and a controlled SDK/provider boundary. Preserve explicit selection, server authority, one-use code/nonce handling, the existing authorization/module rules and transient secrets. Reassess after the API remediation is independently frozen; do not mark this checkpoint or the declared six fixes as final browser verification, and do not close the TODO or waive its later gates.",
+  "performance_position": "acceptable",
+  "elegance_position": "mixed",
+  "structural_soundness_position": "mixed",
+  "operational_fit_position": "mixed",
+  "findings": [
+    {
+      "finding_id": "NUM-WEB-01",
+      "severity": "medium",
+      "title": "A delayed read can roll the same attempt back to an older version",
+      "rationale": "web-app/src/componentes/CadastroNumero.tsx:112-115 (atualizarTentativa), 125-135 (poll), 232-238 (authorization) and 268-281 (confirmation) apply DTOs after checking only lifecycle and attempt id. TentativaNumero.version and generation are available in web-app/src/cadastroNumero.ts:4-17 but are never compared at these writes. Concrete interleaving: a poll reads version 2/PENDING_NUMBER and its response is delayed; confirmation and the subsequent read apply version 4/PENDING_RECEIPT or CONNECTED; the old poll then satisfies the same id/lifecycle checks and replaces version 4 with version 2, reopening the number-selection step and potentially refetching its old options. Polling can overlap executar, so the shared busy flag does not prevent this. This leaves WEB-ROOT-04 only partially repaired and violates D-07/SCOPE-05 and the approved requirement to discard older observations.",
+      "category": "structural_soundness",
+      "formalizable_hint": "yes",
+      "candidate_rule_level": "project",
+      "affected_paths": [
+        "web-app/src/componentes/CadastroNumero.tsx",
+        "web-app/src/cadastroNumero.ts"
+      ],
+      "suggested_action": "Use one guarded attempt-commit function for all readers and action responses; validate the current lifecycle/id/channel generation and reject a lower attempt version before changing attempt or option state. Required browser case: with the real BFF/session/DB, hold an older GET response, complete confirmation/advance to a higher persisted version, then release the older response. Assert that the higher version and its stage remain displayed and that the selection form and obsolete options never reappear."
+    },
+    {
+      "finding_id": "NUM-WEB-02",
+      "severity": "medium",
+      "title": "A valid SDK callback can lose its code while an unrelated action is busy",
+      "rationale": "In CadastroNumero.tsx:213-240, opening FB.login reserves popupAttemptRef but does not reserve busy. The row actions at 482-483 remain enabled because pending is false while the popup is open. When the callback arrives, lines 225 and 232 clear popup ownership and remove the nonce before executar is called; executar:177-182 silently returns if another job owns busy. Concrete interleaving: open the official popup for attempt A; click Verificar canal on an existing nonofficial BU B and hold that response; deliver A's valid login callback while B is busy. No authorize request is sent, the code is dropped, and A remains PENDING_AUTH with no local nonce. nonceMissing is still false, so the Meta button is disabled without the explicit restart explanation. The server's correct one-use checks cannot repair a callback the Web never submits.",
+      "category": "operational_fit",
+      "formalizable_hint": "yes",
+      "candidate_rule_level": "project",
+      "affected_paths": [
+        "web-app/src/componentes/CadastroNumero.tsx"
+      ],
+      "suggested_action": "Give an open authorization flow explicit operation ownership, or prevent/invalidate conflicting actions before they start. Do not consume the local nonce or accept-and-drop a login callback through a busy no-op; represent any deliberate abandonment as an explicit new-authorization requirement. Required browser case: retain a controlled SDK callback, start and delay a real verification request on another BU, then deliver a valid code. Assert exactly one authorize request for A or an explicit safe abandonment state, with no silent code loss and no permanently unexplained disabled button."
+    },
+    {
+      "finding_id": "NUM-WEB-03",
+      "severity": "medium",
+      "title": "Automatic resume takes away the path to a fresh registration",
+      "rationale": "CadastroNumero.tsx:368-372 automatically resumes whenever exactly one channel in the list has currentAttemptId. It does not ask which BU/modality the operator intends to manage, and it does not filter that shortcut by administrative role or current channel status. Once retomar sets tentativa, the only BU/modality form is hidden by !tentativa at line 396; a live attempt offers cancel/close, and CONNECTED offers no local route to a fresh intent at 424-472. Concrete journey: BU A has one preserved pending authorization; the operator closes it and presses Iniciar cadastro to add nonofficial BU B. The button always resumes A, so B can only be added after cancelling A. A safe projection retaining a terminal currentAttemptId similarly reopens the terminal attempt repeatedly. Preservation/resume under WEB-ROOT-03 must not make cancellation of an unrelated durable attempt a prerequisite for SCOPE-01.",
+      "category": "adherence",
+      "formalizable_hint": "partial",
+      "candidate_rule_level": "project",
+      "affected_paths": [
+        "web-app/src/componentes/CadastroNumero.tsx"
+      ],
+      "suggested_action": "Offer a fresh registration/BU selection independently of the existing resume actions, while retaining every partial attempt. Only offer resume shortcuts for administrable channels and do not let a terminal pointer trap the entry action. Required browser case: create one pending attempt for A, close without cancelling, then begin a registration for B and verify A is unchanged. Repeat with a valid single CONNECTED/currentAttemptId projection and with a user who can read A but cannot administer it."
+    },
+    {
+      "finding_id": "NUM-WEB-04",
+      "severity": "medium",
+      "title": "Preparing a new nonce after cancellation can create another BU",
+      "rationale": "For a novaBu reservation, iniciar at CadastroNumero.tsx:190-203 records result.attempt but never adopts result.attempt.buId as the subsequent form context. novoBu remains true, nomeBu remains the original name and buId remains empty. After an explicit cancel, acaoTentativa:298-302 clears the reservation key and attempt and advertises a new authorization, while invalidate:54-61 leaves those BU form fields unchanged. Concrete journey: reserve a new official BU, cancel before authorization to obtain a new nonce, and press Reservar tentativa again without editing the form. The second POST has a fresh key and novaBu again, rather than buId for the BU that cancellation was required to preserve. It initiates a second BU creation instead of restarting authorization on the existing number. This is a recovery-path residue of WEB-ROOT-03/05, independent of the correctly implemented same-payload network retry helper.",
+      "category": "adherence",
+      "formalizable_hint": "yes",
+      "candidate_rule_level": "project",
+      "affected_paths": [
+        "web-app/src/componentes/CadastroNumero.tsx"
+      ],
+      "suggested_action": "After a successful new-BU reservation, retain the created BU id as the continuation/restart context. Explicit nonce renewal should reserve a new attempt for that preserved BU/appropriate channel state, while an intentional separate BU creation remains a separate operator choice. Required browser case: reserve novaBu, cancel before external effects, then use the offered new-authorization path. Assert one BU in PostgreSQL, a new attempt/nonce, and a second request containing the existing buId rather than novaBu."
+    },
+    {
+      "finding_id": "NUM-WEB-05",
+      "severity": "medium",
+      "title": "Successful cancellation discards the partial result and cleanup explanation",
+      "rationale": "CadastroNumero.tsx:290-301 receives the safe updated attempt from cancel, briefly assigns it, then unconditionally calls invalidate and replaces every result with 'Cadastro cancelado. Você pode reservar uma nova tentativa com um nonce novo.' The updated stage/errorCode are therefore not rendered. The frozen BFF contract explicitly says cancellation after external side effects retains the partial linkage/stages and informs the operator about necessary cleanup; it does not certify an empty slot or clean external state. Concrete journey: authorize/confirm enough to create a durable provider linkage, then cancel and receive the contract's CANCELLED result carrying retained partial/cleanup metadata. The wizard hides that metadata and immediately presents the fresh-reservation form. This is false recovery guidance even if the server correctly refuses a conflicting replacement later.",
+      "category": "operational_fit",
+      "formalizable_hint": "partial",
+      "candidate_rule_level": "project",
+      "affected_paths": [
+        "web-app/src/componentes/CadastroNumero.tsx"
+      ],
+      "suggested_action": "Render and retain the returned cancellation outcome, including its safe partial stage and required cleanup/recovery action. Only advertise a clean new reservation when the returned contract actually permits it; closing the panel may still leave the durable result resumable. Required browser case: produce a real partial provider effect through the controlled adapter, cancel through the real BFF, and assert that the retained stage/cleanup requirement is visible, BU/history persist, and no generic clean-restart claim replaces it. Also preserve the simpler pre-effect cancellation path."
+    },
+    {
+      "finding_id": "NUM-WEB-06",
+      "severity": "medium",
+      "title": "Verification reads a timestamp that its response does not contain",
+      "rationale": "CadastroNumero.tsx:342-350 types the verify response as receiptVerifiedAt and branches on that field. The packet's frozen API boundary explicitly states that verify returns {status, ownNumberVerified, receiptVerified}, not receiptVerifiedAt. Consequently even {receiptVerified:true} always produces 'O estado permanece pendente até haver confirmação de recebimento.' after the refreshed BU list can already say received/confirmed. This is a deterministic Web response-shape defect, not an allegation about the changing API implementation, and conflicts with SCOPE-05's honest separation of observed current states.",
+      "category": "adherence",
+      "formalizable_hint": "yes",
+      "candidate_rule_level": "project",
+      "affected_paths": [
+        "web-app/src/componentes/CadastroNumero.tsx",
+        "web-app/src/cadastroNumero.ts"
+      ],
+      "suggested_action": "Define and consume the actual explicit verification response DTO, keeping its boolean observations separate from persisted channel timestamps. Required browser case: perform real BFF verification with a controlled provider result yielding ownNumberVerified=true and receiptVerified=true; assert a confirmed result message consistent with readback. Repeat with identity confirmed but receiptVerified=false and assert the receipt remains pending."
+    },
+    {
+      "finding_id": "NUM-WEB-07",
+      "severity": "medium",
+      "title": "Old jobs still write errors and status after close or context change",
+      "rationale": "The outer executar catch/finally at CadastroNumero.tsx:177-182 has no lifecycle/operation guard, even when an inner job correctly rejects an obsolete response. There are also writes after a later await without rechecking context, such as verificarCanal:348-350 and pair:321-338. invalidate does not clear erro/mensagem. Concrete interleaving: start a request for A, close the panel, reopen/select B while that request is held, then reject A's request. Its catch writes A's error into B's panel although lifecycle has changed. A verification that passed its first life check and then waits for aoAtualizar can similarly write its message after closing/reopening. These are current stale-effect defects under the explicit close/switch/unmount contract; the existing guards on successful DTO writes are insufficient.",
+      "category": "structural_soundness",
+      "formalizable_hint": "yes",
+      "candidate_rule_level": "project",
+      "affected_paths": [
+        "web-app/src/componentes/CadastroNumero.tsx"
+      ],
+      "suggested_action": "Associate each job, error, message and pending release with its originating lifecycle/operation token, and recheck after every await before committing UI state. Clear obsolete feedback when a form context is invalidated. Required browser case: delay and then fail an A request, close/reopen and choose B before releasing it, and assert no A error/status appears in B. Separately hold the BU refresh after verification, change context, release it and assert its old success/pending message is also discarded."
+    },
+    {
+      "finding_id": "NUM-WEB-08",
+      "severity": "medium",
+      "title": "QR results are not correlated with the current channel generation",
+      "rationale": "The frozen pair response contains channelId, attemptId, generation and pairingEpoch. CadastroNumero.tsx:315-320 drops all correlation fields except optional attemptId and applies qrcode after checking only the component lifecycle. qr is a single unkeyed string at line 34 and is displayed unconditionally at 475; BU/channel readbacks and attempt progression do not invalidate it. Concrete interleaving: A's pair commits and its HTTP response is held; another administrator removes/recreates the channel, and the normal BU poll displays the replacement channel; release A's old response while the component remains mounted. The same lifecycle accepts the retired QR even though the safe list now identifies a different current channel/generation. Backend fences may correctly reject its future events, but the UI still directs the operator to pair the retired instance. The image can also remain displayed after the current attempt reaches CONNECTED.",
+      "category": "adherence",
+      "formalizable_hint": "yes",
+      "candidate_rule_level": "project",
+      "affected_paths": [
+        "web-app/src/componentes/CadastroNumero.tsx",
+        "web-app/src/api.ts"
+      ],
+      "suggested_action": "Keep the QR's BU/channel/attempt/generation/pairingEpoch context and reconcile it with the current safe projection before applying or displaying it. Discard it when that identity is superseded or the pairing step has completed; retain it only in transient memory. Required browser case: hold a real pair response after commit, replace the channel through a second authorized session, wait for replacement readback, then release the old response. Assert that the retired QR is never rendered and cannot replace the new attempt's state. Also assert QR removal after confirmed completion."
+    },
+    {
+      "finding_id": "NUM-WEB-09",
+      "severity": "low",
+      "title": "Meta status messages are accepted without a current popup correlation",
+      "rationale": "CadastroNumero.tsx:354-366 checks the receiving component's current lifecycle/id and the PENDING_AUTH state, but it does not require popupAttemptRef or correlate event.source/session to the popup that emitted the message. mensagemMetaSignup only validates origin/schema. Concrete interleaving: open popup A, resume attempt B (which correctly invalidates A's login callback), then receive a delayed valid-origin CANCEL or ERROR message from A. B's listener accepts it and announces that B's authorization was cancelled/failed, even before B has opened a popup. The login callback path is correctly fenced; this separate message path is not. This does not authorize foreign IDs or prove a server tenant bypass, but it violates the approved stale-callback/status behavior.",
+      "category": "operational_fit",
+      "formalizable_hint": "partial",
+      "candidate_rule_level": "project",
+      "affected_paths": [
+        "web-app/src/componentes/CadastroNumero.tsx",
+        "web-app/src/cadastroNumero.ts"
+      ],
+      "suggested_action": "Only update attempt feedback from a message that can be tied to the current popup/session. Where the SDK port cannot establish that correlation, ignore its status mutation and rely on the already correlated login callback rather than treating an origin check as popup identity. Required browser case: retain A's popup message, switch/resume B, then dispatch A's delayed CANCEL/ERROR through the SDK boundary. Assert B's feedback and popup state are unchanged; also reject a valid-origin status when no current popup exists."
+    },
+    {
+      "finding_id": "NUM-WEB-10",
+      "severity": "medium",
+      "title": "A failed SDK script stays installed and cannot be retried in the journey",
+      "rationale": "CadastroNumero.tsx:83-104 leaves facebook-jssdk in the document after its error event. On every later open, modality change or capabilities refresh, the existing-element branch at line 95 merely attaches a load listener to that already failed element; it neither replaces/retries the request nor records a recoverable load state. Concrete journey: the first sdk.js request fails transiently, the UI says to check the connection and try again, connectivity recovers, and the operator closes/resumes the preserved official attempt. No new script request is made, window.FB remains absent and sdkReady remains false indefinitely in that page. The main WEB-ROOT-01 invalidation bug is fixed, but the required recoverable authorization journey still has this distinct readiness dead end.",
+      "category": "operational_fit",
+      "formalizable_hint": "yes",
+      "candidate_rule_level": "project",
+      "affected_paths": [
+        "web-app/src/componentes/CadastroNumero.tsx"
+      ],
+      "suggested_action": "Track loading/ready/failed SDK state and provide a controlled retry that replaces a failed script while coalescing an already pending load and cleaning up listeners. Preserve the synchronous FB.login invocation once ready. Required browser case: abort the first SDK script request, restore the SDK boundary, close/resume or use the offered retry, and assert exactly one successful replacement load followed by an enabled button whose click invokes login synchronously."
+    },
+    {
+      "finding_id": "NUM-WEB-11",
+      "severity": "medium",
+      "title": "Official ambiguous stages have no exposed safe reconciliation action",
+      "rationale": "For every PENDING_RECEIPT stage ending in _AMBIGUOUS, CadastroNumero.tsx:455-459 removes both advance/retry buttons and displays only that reconciliation is required. The official channel has no separate verification/reconciliation control in the rows at 476-484, which only implement the nonofficial controls. The approved /retry contract specifically provides read-before-retry reconciliation, bounded to the same attempt, and forbids blindly repeating an ambiguous mutation; it does not require abandoning every partial result. Concrete journey: registration or WABA subscription commits externally but its response is lost, leaving a durable ambiguous stage. After the provider can conclusively report that effect, the wizard still offers no way to request its safe reconciliation, leaving cancellation as the only available action. This is an in-scope partial-recovery gap, not a request for a worker or a new provider feature.",
+      "category": "adherence",
+      "formalizable_hint": "partial",
+      "candidate_rule_level": "project",
+      "affected_paths": [
+        "web-app/src/componentes/CadastroNumero.tsx"
+      ],
+      "suggested_action": "Expose the existing contract's safe administrative reconciliation/retry action for recoverable ambiguous stages, with honest text and no blind replay of registration/subscription. Keep fresh authorization mandatory for a consumed/ambiguous code where the contract requires it. Required browser case: through the controlled provider boundary, commit an official external step but lose its response; later make read-before-retry conclusive and use the wizard's reconciliation action. Assert recovery of the same attempt and identity with no duplicate external mutation."
+    },
+    {
+      "finding_id": "NUM-WEB-12",
+      "severity": "low",
+      "title": "Malformed allowed-origin events can throw during schema validation",
+      "rationale": "web-app/src/cadastroNumero.ts:59-79 correctly gates the exact origin and bounds JSON strings, but line 68 coerces untrusted message.event with String rather than checking its primitive type. An otherwise ordinary allowed-origin object or bounded JSON string with {type:'WA_EMBEDDED_SIGNUP',event:{toString:null}} makes String(message.event) throw TypeError. The onMessage caller at CadastroNumero.tsx:358-362 does not catch it, so a malformed schema becomes an uncaught browser error instead of a rejected message. An event value ['CANCEL'] also passes the allowlist coercion and is returned as an array despite the declared event union. This is a concrete failure of the advertised unknown-schema rejection, without claiming arbitrary script execution or tenant authorization.",
+      "category": "structural_soundness",
+      "formalizable_hint": "yes",
+      "candidate_rule_level": "project",
+      "affected_paths": [
+        "web-app/src/cadastroNumero.ts",
+        "web-app/src/cadastroNumero.spec.ts",
+        "web-app/src/componentes/CadastroNumero.tsx"
+      ],
+      "suggested_action": "Require a string event and compare it directly against the enum before returning the typed result; keep parsing total for malformed structured-clone/JSON values. Required browser case: while a pending authorization listener is mounted, deliver both object and JSON-string variants with event={toString:null}, event=['CANCEL'], null/array data and an unknown enum through the SDK boundary. Assert rejection with no pageerror, no feedback/state change and no outbound authorize request; retain the existing valid FINISH/CANCEL/ERROR cases."
+    }
+  ]
+}
