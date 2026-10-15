@@ -1,4 +1,4 @@
-# TODO LeadsHug — conexão verificável dos canais
+# TODO LeadsHug — cadastro e conexão dos números oficiais e não oficiais
 
 ## Quick Start
 
@@ -6,7 +6,7 @@ Rascunho do contrato ST-CON-01, criado de `delphi-ai/templates/todo_template.md`
 
 ## Title
 
-Conexão verificável dos canais oficial e não oficial do LeadsHug.
+Cadastro e conexão dos números oficiais e não oficiais do LeadsHug, inspirado nas jornadas Central-Whatsapp e WhatsFlow.
 
 ## Artifact Identity
 
@@ -17,13 +17,13 @@ Conexão verificável dos canais oficial e não oficial do LeadsHug.
 
 ## Context
 
-A tela de números mostra estado salvo, mas o oficial é marcado CONECTADO após listar números da WABA e o não oficial depende do webhook. O método Evolution de consulta de estado existe sem consumidor. Os testes internos substituem os provedores externos. Precisamos tornar essa conexão verificável para que testes de atendimento representem operação real. Histórico do aparelho ainda não é importado e terá contratos seguintes.
+O usuário esclareceu em2026-10-15 que quer reproduzir os processos de cadastro de números oficiais e não oficiais dos sistemas de inspiração. O objetivo é uma jornada de adicionar número, escolher modalidade e concluir autorização Meta ou pareamento QR. O rascunho anterior priorizava diagnóstico de vínculos existentes; essa interpretação foi corrigida antes de freeze/aprovação. Saúde e recebimento verificáveis apoiam o cadastro; importação permanece posterior. [Fluxos observados e jornada proposta](../../../artifacts/analysis/leadshug-number-registration-reference-flows-20261015.md).
 
 ## Framing Source & Story Slice
 
 - **Feature brief:** `foundation_documentation/artifacts/feature-briefs/leadshug-channel-readiness-and-history-20261015.md`
 - **Primary story ID:** `ST-CON-01`
-- **Why this is the right current slice:** um objetivo: conectar o número certo e conhecer seu estado real o suficiente para testar envio/recebimento. Importação tem identidade/data/efeitos próprios e fica em ST-CON-02/03.
+- **Why this is the right current slice:** um objetivo: cadastrar e conectar um número por uma jornada compreensível, oficial via autorização Meta e não oficial via QR, com número e resultado confirmados. Importação tem identidade/data/efeitos próprios e fica em ST-CON-02/03.
 - **Direct-to-TODO rationale:** n/a; enquadramento separado realizado.
 
 ## Contract Boundary
@@ -32,16 +32,16 @@ Este draft define a proposta da primeira entrega. Nenhum checkpoint do históric
 
 ## Implementation Intent
 
-- **Current delivery:** diagnóstico e representação confiáveis da conexão dos canais existentes, com prova operacional separada.
+- **Current delivery:** cadastro de números: escolha oficial/não oficial, autorização Meta (Embedded Signup) ou pareamento Evolution por QR; diagnóstico subordinado à conclusão da jornada.
 - **Planned next steps:** ST-CON-02 importa histórico Evolution; ST-CON-03 resolve histórico oficial conforme capacidade comprovada. Transferência vem depois desta frente.
 - **Anticipatory implementation authorized now:** none
-- **Rationale:** conexão pode ser validada sem introduzir importador, sincronização de mensagens ou onboarding oficial novo.
+- **Rationale:** reproduzir a experiência observada com adapters e tenancy próprios. Não exigir WABA/token manual do operador comum quando a instalação admitir o fluxo Meta; importação continua separada.
 
 ## Delivery Status Canon (Required)
 
 - **Current delivery stage:** Pending
 - **Qualifiers:** none
-- **Next exact step:** fechar o preparo local (Evolution própria com versão fixada, variáveis e callback), confirmar modalidade oficial e completar o contrato antes do freeze/revisões.
+- **Next exact step:** refinar os contratos das jornadas Meta e QR conforme a correção do usuário, incluindo app Meta, credenciais por conta, runtime local e paths; depois congelar/revisar antes de pedir aprovação.
 
 ## Active Work State (Required While TODO Remains In `active/`)
 
@@ -51,7 +51,7 @@ Este draft define a proposta da primeira entrega. Nenhum checkpoint do históric
 
 ## Scope
 
-- [ ] SCOPE-01: definir identidade do número oficial explicitamente quando houver múltiplos números na WABA; confirmar BU correta, grants e vínculo de um canal por tipo.
+- [ ] SCOPE-01: apresentar jornada Adicionar número com apelido/BU e escolha oficial/não oficial; oficial conduz autorização/escolha na Meta, não oficial conduz QR. Confirmar número escolhido, BU, grants e vínculo de um canal por tipo.
 - [ ] SCOPE-02: distinguir estado informado pelo provedor, momento da última verificação, indisponibilidade da verificação e prova operacional de mensagens. Consulta de WABA ou status no banco não equivale a teste ponta a ponta.
 - [ ] SCOPE-03: permitir verificação administrativa explícita com timeout e orçamento bounded, sem alterar estado para conectado por erro ou ausência de resposta; não fazer I/O externo em listagem periódica.
 - [ ] SCOPE-04: reconciliar consulta/evento com geração do vínculo e ordem de observações; resposta velha não pode reativar canal removido/substituído ou sobrescrever evento mais novo.
@@ -59,6 +59,7 @@ Este draft define a proposta da primeira entrega. Nenhum checkpoint do históric
 - [ ] SCOPE-06: acrescentar testes internos e fluxo browser de número/canal, preservando inbox e isolamento multi-tenant.
 - [ ] SCOPE-07: fornecer procedimento reproduzível de teste real IN/OUT para cada canal, registrando resultado por canal e build; manter pendência explícita se o provedor não puder ser testado.
 - [ ] SCOPE-08: preparar runtime local próprio do LeadsHug para os dois canais, com configuração privada, variáveis necessárias repassadas à API e callback alcançável. Completar os paths de runtime no diff antes do freeze; não reutilizar instância/dados do legado.
+- [ ] SCOPE-09: definir e implementar onboarding oficial por Embedded Signup, incluindo configuração do app, correlação segura da autorização com sessão/BU, troca de código somente no servidor, credenciais scoped por conta, vínculo e resultado de recebimento. Falha/cancelamento não pode aparentar cadastro operacional completo.
 
 ## Delivery Status Semantics
 
@@ -93,7 +94,7 @@ n/a; esta proposta não autoriza promoção ou deploy.
 ## Out of Scope
 
 - Importação/backfill do aparelho, MESSAGES_SET e dados históricos oficiais; ST-CON-02/03 terão contratos próprios.
-- Embedded Signup/coexistência novos, migração de número, templates, campanhas, transferência, mídia binária e máquina de estados de entrega/leitura.
+- Coexistência/sincronização de histórico oficial, migração de número em uso, templates, campanhas, transferência, mídia binária e máquina de estados de entrega/leitura. Embedded Signup entra na proposta de cadastro após a correção explícita do usuário; não autoriza implementação antes dos gates.
 - Remover sessões/instâncias existentes do usuário para testar; testes destrutivos só em vínculo descartável explicitamente identificado.
 - Integração com o legado, mudanças de gitlinks/.gitmodules, segredos versionados e alteração de ambiente de produção.
 - Disparar automaticamente uma mensagem de teste ao clicar em verificar conexão. Troca real usa interlocutor definido e procedimento explícito.
@@ -146,11 +147,11 @@ Schema/migração, projeção em tenancy, wiring e bootstrap de testes podem ser
 
 ## Bounded But Elastic Guardrails
 
-Somente concretizações de conexão/verificação no mesmo objetivo. Importação ou onboarding novo exigem contrato próprio; não absorver por conveniência técnica.
+Somente concretizações do cadastro/conexão oficial Meta e não oficial QR no mesmo objetivo. Importação, coexistência e migração de número em uso exigem contrato próprio; não absorver por conveniência técnica. Embedded Signup foi admitido no draft pela correção do usuário e ainda precisa dos contratos técnicos/revisões antes da aprovação.
 
 ## Definition of Done
 
-- [ ] DOD-01: seleção/identidade do número e permissões verificadas por contrato e fluxo browser.
+- [ ] DOD-01: jornada oficial por autorização Meta e não oficial por QR verificadas por contrato/browser, incluindo cancelamento, falha e conclusão com número/BU corretos e permissões. Configuração técnica indisponível deve ser explícita, sem falso sucesso.
 - [ ] DOD-02: nenhum falso CONECTADO por mera listagem, timeout, resposta inválida ou resultado velho; conexão e saúde de verificação claramente distintas.
 - [ ] DOD-03: polling/listagem sem fan-out externo, verificações bounded e races determinísticas protegidas.
 - [ ] DOD-04: QR, estados/erros/retry e repareamento validados com browser/backend reais.
@@ -161,7 +162,7 @@ Somente concretizações de conexão/verificação no mesmo objetivo. Importaç�
 
 - [ ] VAL-01: validar adapters com respostas da versão confirmada, múltiplos números, credencial recusada, timeout e payload inválido.
 - [ ] VAL-02: E2E PostgreSQL com grant autorizado, papel insuficiente, outro tenant/BU; verificação e evento concorrentes, remoção/recriação enquanto consulta está pendente.
-- [ ] VAL-03: Playwright contra build atual/backend real: selecionar número, parear, consultar estado, falhar/repetir sem falso sucesso e preservar contexto.
+- [ ] VAL-03: Playwright contra build atual/backend real: iniciar cadastro, escolher modalidade, concluir/cancelar/falhar autorização Meta e pareamento QR, confirmar número, repetir sem duplicar vínculo e preservar contexto. Integrar prova externa Meta na conta de teste sem tratar popup simulado como autorização real.
 - [ ] VAL-04: executar matriz local API/Web em execução canônica serializada, com fonte/build servido identificados e banco isolado.
 - [ ] VAL-05: executar checklist real de conexão, IN/OUT e interrupção/retomada por canal; registrar o que está ou não comprovado.
 - [ ] VAL-06: concluir reviews/guardas de aderência, qualidade de testes, segurança, performance/dívida e consolidação antes de encerrar.
@@ -200,7 +201,7 @@ Register: `foundation_documentation/artifacts/dependency-readiness.md`.
 
 - **Level (`small|medium|big`):** big
 - **Checkpoint policy:** section-by-section
-- **Why this level:** dois providers, identidade de número, estado assíncrono, grants, browser e prova externa. Scope permanece uma história de conexão confiável.
+- **Why this level:** dois providers, onboarding Meta, credenciais scoped por conta, identidade de número, estado assíncrono, grants, browser e prova externa. Scope permanece uma história de cadastro/conexão; decidir subdivisão técnica antes do freeze se necessário.
 
 ## Canonical Module Anchors (Required Before APROVADO)
 
@@ -212,7 +213,7 @@ Register: `foundation_documentation/artifacts/dependency-readiness.md`.
 ## Decision Pending (Resolve Before Freeze)
 
 - [ ] D-01: fixar versão Evolution e contrato de payloads/consulta/configuração de webhook suportados.
-- [ ] D-02: confirmar modalidade/WABA e política de seleção explícita do número; separar vínculo configurado, estado observado e prova IN/OUT.
+- [ ] D-02: fechar Embedded Signup/configuração do app Meta e tratamento de credenciais scoped por conta; política do caminho administrativo manual; seleção explícita do número; separar cadastro/autorização de recebimento e prova IN/OUT.
 - [ ] D-03: fechar persistência, frescor, prioridade de evento/consulta, geração de vínculo e resposta de erro sem mentir conexão.
 - [ ] D-04: fixar budgets/timeouts/concurrency e contrato BFF administrativo; completar todos os paths previstos e testes.
 - [ ] D-05: no ambiente local confirmado, fechar wiring/infra própria, callback e interlocutores; decidir procedimento de interrupção sem remover canal real em uso. Railway permanece fora do primeiro ciclo.
@@ -220,6 +221,7 @@ Register: `foundation_documentation/artifacts/dependency-readiness.md`.
 ## Decisions (Resolved Before Freeze)
 
 - D-00 confirmado pelo usuário em2026-10-15: começar localmente; Railway poderá ser validado depois. Isso não comprova saúde do ambiente nem autoriza deploy.
+- Enquadramento corrigido pelo usuário em2026-10-15: reproduzir as jornadas de cadastro oficial e não oficial; diagnóstico e importação não substituem essa entrega. Nenhuma decisão técnica congelada anteriormente.
 - Prioridade de planejamento confirmada. Decisões de implementação D-01..05 ainda abertas, nenhuma freeze claim.
 
 ## Module Decision Baseline Snapshot (Required Before APROVADO)
@@ -254,7 +256,7 @@ Register: `foundation_documentation/artifacts/dependency-readiness.md`.
 
 - [x] Ambiente inicial: local; usuário admite Railway posteriormente.
 - [ ] Versão Evolution própria, acesso às suas rotas e persistência isolada, sem depender do legado.
-- [ ] Número oficial já pertence à WABA? Modalidade de onboarding e número selecionado.
+- [ ] Configuração do app/Embedded Signup e situação do número oficial de teste; contrato vigente Meta e credencial por conta, sem presumir que operador precise informar IDs manualmente.
 - [ ] Callback público de teste e interlocutor permitido para troca real.
 - [ ] Resolver D-01..05 e completar review baseline + revisão/guardas antes de pedir APROVADO.
 
@@ -276,7 +278,7 @@ Register: `foundation_documentation/artifacts/dependency-readiness.md`.
 
 ### Touched Surfaces
 
-ChannelsService, clients Meta/Evolution, controller BFF, estado do webhook e projeção usada por Numeros; testes locais/browser e módulo owner. Paths definitivos pendentes.
+ChannelsService, clients Meta/Evolution, endpoints BFF de onboarding, persistência segura de credenciais scoped, configuração do app Meta, estado do webhook e Numeros/modal de cadastro; testes locais/browser e módulo owner. Paths/schema/migrações e callback de autorização devem ser concretizados antes do freeze; não autorizar pelo antigo diff parcial.
 
 ### Ordered Steps
 

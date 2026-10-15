@@ -11,12 +11,12 @@
 
 ## Source Idea / Request
 
-Em 2026-10-15 o usuário concordou em priorizar confiabilidade de conexão, preparo dos testes e histórico antes de transferência: “Concordo até para poder realizar os testes corretamente e ficar mais fácil”. Confirmou também: “Posso disponibilizar oficial e não oficial”. Isso confirma disponibilidade potencial de números de teste; acesso, configuração e saúde não foram verificados. Em seguida definiu: “Podemos fazer nos dois ambientes mas inicialmente local”. O primeiro ciclo usa backend local; Railway será uma etapa posterior.
+Em 2026-10-15 o usuário concordou em priorizar confiabilidade de conexão, preparo dos testes e histórico antes de transferência: “Concordo até para poder realizar os testes corretamente e ficar mais fácil”. Confirmou também: “Posso disponibilizar oficial e não oficial”. Isso confirma disponibilidade potencial de números de teste; acesso, configuração e saúde não foram verificados. Em seguida definiu: “Podemos fazer nos dois ambientes mas inicialmente local”. O primeiro ciclo usa backend local; Railway será uma etapa posterior. Correção posterior do usuário: o objetivo imediato é reproduzir **os processos de cadastro dos números oficiais e não oficiais**. A interpretação inicial centrada em diagnóstico foi revista antes de aprovação.
 
 ## Problem / Desired Outcome
 
 - **Problem:** oficial recebe CONECTADO após consulta de números da WABA; não oficial depende de eventos de conexão sem reconciliação ativa; não existe importador de histórico do aparelho. A paginação concluída consulta somente mensagens já persistidas.
-- **Desired outcome:** conectar um canal e saber, com evidência e indicação de frescor, se está acessível e se recebe/envia; importar o histórico disponibilizado pelo provedor com identidade, datas e progresso verificáveis.
+- **Desired outcome:** cadastrar e conectar o número numa jornada guiada: oficial pela autorização Meta e não oficial por QR; confirmar identidade/resultado e facilitar os testes. Histórico será importado em recortes posteriores.
 - **Why now:** os dois canais serão disponibilizados para teste e o fluxo é pré-requisito prático da validação das próximas entregas de atendimento.
 
 ## Constraints / Non-Goals
@@ -38,6 +38,8 @@ Em 2026-10-15 o usuário concordou em priorizar confiabilidade de conexão, prep
 - **Candidate record:** `BLG-leadshug-channel-readiness-and-history`, no [backlog](../../backlog/README.md).
 
 ## Evidence / References
+
+[Leitura específica das jornadas de cadastro e proposta](../analysis/leadshug-number-registration-reference-flows-20261015.md): botão Conectar pela Meta e cadastro manual administrativo no oficial; apelido e QR no Hub; experiência alternativa Uazapi no WhatsFlow.
 
 Leitura de código em API `ae6a9662c29b77276351aa9de653a47276372246`, Web `4e56f6c1f4515b918d05b8c87e890d42e8542c56`; nenhuma mudança de produto neste enquadramento.
 
@@ -71,9 +73,9 @@ Fontes primárias consultadas em 2026-10-15:
 
 | Story ID | Story / User Value | Primary Module | Secondary Modules | Acceptance Boundary | Candidate Validation Signal | Candidate TODO Decision | Dependencies / Blockers | Notes |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| ST-CON-01 | Conectar e diagnosticar corretamente os dois canais para testar atendimento | integrations-and-channels | identity-and-tenancy, audit-and-history | Runtime local próprio e callback verificável; número correto; verificação explícita com erro/frescor; webhook e consulta reconciliados sem estado antigo reativar vínculo; QR/repareamento; checklist de operação real separado de estado técnico. | Testes de erro/race/tenant com PostgreSQL, Playwright de conexão/verificação e troca real IN/OUT para cada canal disponível. | create-now: [TODO draft](../../todos/active/features/TODO-leadshug-channel-connection-readiness.md) | Resolver AMB-CON-01/02 e target/destinatário de teste antes do freeze. | Primeira entrega proposta; sem alegar importação ou validação externa antecipada. |
+| ST-CON-01 | Cadastrar e conectar números oficiais e não oficiais com jornada guiada | integrations-and-channels | identity-and-tenancy, audit-and-history | Autorização Meta/Embedded Signup no oficial e apelido/QR no não oficial; runtime local próprio e callback verificável; número correto; verificação explícita com erro/frescor; webhook e consulta reconciliados sem estado antigo reativar vínculo; QR/repareamento; checklist de operação real separado de estado técnico. | Testes de erro/race/tenant com PostgreSQL, Playwright de conexão/verificação e troca real IN/OUT para cada canal disponível. | create-now: [TODO draft](../../todos/active/features/TODO-leadshug-channel-connection-readiness.md) | Resolver AMB-CON-01/02 e target/destinatário de teste antes do freeze. | Primeira entrega proposta; sem alegar importação ou validação externa antecipada. |
 | ST-CON-02 | Importar o histórico disponibilizado pela Evolution com retomada segura | integrations-and-channels | inbox-and-conversations, identity-and-tenancy, audit-and-history | Escopo por BU/canal; idempotência concorrente, timestamps externos, direções, backlog/realtime sem lacunas, lotes/checkpoint/progresso e falhas; nenhum efeito de entrada nova. | Replay e duplicatas concorrentes, interrupção/retomada, datas empatadas e antigas, timeline completa; amostra de aparelho confrontada com provedor e banco. | defer | ST-CON-01; versão/forma de histórico, retenção, limites e regra para mensagens sem ID. | Não resolve mídia binária ou status de entrega; não importar lote cego por IncomingService.registrar. |
-| ST-CON-03 | Disponibilizar histórico oficial conforme capacidade comprovada da conta | integrations-and-channels | inbox-and-conversations, identity-and-tenancy | Matriz de elegibilidade/onboarding/consentimento; importação somente quando suportada; estado explícito quando indisponível. | Contrato oficial vigente, conta elegível e lote real; integridade/idempotência equivalentes ao importador. | split-further | ST-CON-01, leitura oficial Meta acessível e modalidade confirmada. | Coexistência/Embedded Signup não são presumidos nem autorizados neste draft. |
+| ST-CON-03 | Disponibilizar histórico oficial conforme capacidade comprovada da conta | integrations-and-channels | inbox-and-conversations, identity-and-tenancy | Matriz de elegibilidade/onboarding/consentimento; importação somente quando suportada; estado explícito quando indisponível. | Contrato oficial vigente, conta elegível e lote real; integridade/idempotência equivalentes ao importador. | split-further | ST-CON-01, leitura oficial Meta acessível e modalidade confirmada. | Coexistência/histórico não são presumidos; Embedded Signup de cadastro pertence ao ST-CON-01 após correção do usuário e não prova suporte a histórico. |
 
 ## Retire This Brief When
 
