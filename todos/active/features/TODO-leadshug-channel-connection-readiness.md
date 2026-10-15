@@ -219,8 +219,9 @@ n/a; esta proposta não autoriza promoção ou deploy.
 | api | test/browser-server.cjs | M | Backend real e fixtures de cadastro. |
 | api | test/timeline-fixtures.cjs | M | Somente credencial de fixture exigida pelo novo resolver. |
 | api | test/webhooks.e2e-spec.ts | M | Receipt, auth e races. |
+| api | test/api-publica.e2e-spec.ts | M | Fixture de credencial e invariantes do envio público. |
 | api | test/atendimento.e2e-spec.ts | M | Só setup credential; invariantes existentes preservados. |
-| api | test/typebot.e2e-spec.ts | M | Credenciais e negativos de isolamento; comportamento dentro do tenant preservado. |
+| api | test/typebot.e2e-spec.ts | A,?? | Credenciais e negativos de isolamento; comportamento dentro do tenant preservado. |
 | api | .env.example | M | Novas variáveis sem valores reais. |
 | web | src/telas/Numeros.tsx | M | Wizard de cadastro. |
 | web | src/api.ts | M | Contratos/projeções e idempotency header. |
@@ -455,10 +456,10 @@ Proposta revisada D-01..D-10: NUM-ARCH-01..06 integrados nos contratos acima, es
 - **Why this decision:** revisar contrato exato publicado, sem aparência de evidência antes do freeze.
 - **Trigger stage:** before the first planning-side review or guard run
 - **Baseline branch:** main
-- **Baseline commit:** ae503c7b14c3fe51d9cb3488f2fc5df2c5d17301
+- **Baseline commit:** ecdd885ba533d3c43e074c08ac30474bb75c7a06
 - **Baseline push reference:** origin/main
 - **Gate status:** no_material_findings
-- **Findings summary:** proposta publicada em main e origin/main antes de qualquer review/guard de planejamento; atualização deste recibo não altera seções materiais.
+- **Findings summary:** proposta revisada publicada em main e origin/main após integrar seis achados; baseline ecdd885b para crítica, ae503c7b preservada como revisão v1. Este recibo só atualiza metadados.
 - **Evidence / reference:** artifacts/reviews/leadshug-number-onboarding-20261015/README.md
 - **Waiver authority / reference:** n/a
 
