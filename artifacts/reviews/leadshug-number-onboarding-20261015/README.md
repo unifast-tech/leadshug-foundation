@@ -8,6 +8,8 @@ Baseline de fonte: API `ae6a9662c29b77276351aa9de653a47276372246`; Web `4e56f6c1
 
 O parecer [architecture_opinion](planning-architecture.json) preserva o desenho e pede seis ajustes: isolamento Typebot, deduplicação da entrada, identidade antes do conteúdo Evolution, proprietário durável do recurso Meta, pairing via POST e reautorização com credencial candidata. A proposta integra todos no mesmo TODO, com REG-SEC-01..09 no plano de validação. `fixed-in-plan` no ledger é resolução documental, sem implementação. Pacote v1 e parecer bruto são imutáveis; a crítica independente recebe nova versão com o contrato revisado e esses achados completos.
 
+A [crítica v2](planning-critique.json) leu o pacote completo e reconheceu as seis resoluções; pediu dois ajustes nas interações: invalidar/fence a prova anterior ao reparear e compartilhar a aceitação da mensagem entre sender e echo OUT. Ambos foram integrados na proposta. O desenho usa instância por pairingEpoch, com identidade comprovada na instância nova antes de conteúdo; e aceitação keyed compartilhada por todos os writers, preservando ID/autoria/DTO. REG-SEC-10/11 são os testes discriminantes. Observações de logs, batch raw por owner e credencial observável sem segredo concretizam requisitos existentes em REG-SEC-12/13. Revisão delta independente é o próximo gate, ainda sem APROVADO.
+
 Fontes primárias consultadas em2026-10-15:
 
 - [Meta: Embedded Signup](https://www.postman.com/meta/whatsapp-business-platform/collection/du6gzjv/embedded-signup): autorizar cliente é seguido de etapas de integração; elegibilidade do app continua dependência externa.

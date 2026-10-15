@@ -1,0 +1,6 @@
+{
+  "source": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/planning-critique.json",
+  "source_sha256": "8a83a15b28c3416f69fb3a0253854cecd0c47f0500b9364e4bbf2d3e3b1a0e98",
+  "purpose": "schema adapter for deterministic merge only; raw original preserved",
+  "mapping": "blocking_findings verbatim id/title/severity/concrete_failure/recommended_correction/evidence paths; full observations, options and prose positions remain in raw. Axes categorized by orchestrator: performance/operational acceptable; elegance/structural mixed pending two blockers. Derived dispatch records actual immutable package; created after review, not a new review claim."
+}

@@ -1,0 +1,59 @@
+{
+  "schema_version": "subagent-review-merge-v2",
+  "artifact_kind": "subagent_review_merge",
+  "authoritative": false,
+  "edit_policy": "derived_merge_packet",
+  "dispatch_path": "/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/critique-v2-dispatch-derived.json",
+  "review_kind": "critique",
+  "review_count": 1,
+  "reviewer_labels": [
+    "number_onboarding_critique-v2-normalized"
+  ],
+  "highest_finding_severity": "high",
+  "axis_summary": {
+    "performance": "acceptable",
+    "elegance": "mixed",
+    "structural_soundness": "mixed",
+    "operational_fit": "acceptable"
+  },
+  "recommended_paths": [
+    "Retain the proposed architecture. Persisted attempts, separate candidate and active credentials, channel-scoped encryption, durable provider ownership, a short transactional incoming boundary, bounded provider calls and DB-only listing form a coherent solution for ST-CON-01. All six earlier findings have substantial contractual resolutions. Two remaining interactions need a concrete contract and discriminating tests before approval: renewing an already verified Evolution pairing must revoke the old identity proof, and sender persistence must participate in the same identity/message reconciliation promised for outbound echoes. These are bounded gaps in the revised plan, not assertions that unimplemented changes have regressed the product."
+  ],
+  "exact_next_step": "Record reviewer resolutions in the governing TODO using the machine-checkable resolution table or equivalent gate ledger, then extract the derived resolution packet and decide whether another bounded review pass is still required.",
+  "findings": [
+    {
+      "finding_id": "F-9F28D182",
+      "severity": "high",
+      "title": "RENEW must invalidate the previous pairing's own-number proof before new input can be accepted",
+      "rationale": "Start with the existing instance verified as phone X for BU X. An administrator requests RENEW and scans its QR with Y. If the new implementation merely adds the proposed persisted-identity check to the current routing, the old X proof remains true while Y's messages.upsert arrives before its connection observation. Y's content can therefore enter BU X. Merely clearing proof and allowing an old connection.update/open/wuid=X on the same instance to restore it leaves the same gap. A request-local lease or current generation captured when handling that old event does not prove which pairing produced it. This is a missing renewal contract, not a claim that the future implementation already behaves this way.",
+      "suggested_action": "Freeze an explicit pairing trust epoch. Before any INITIAL/RENEW provider side effect, atomically invalidate the previous acceptance proof and fence pending identity/verification observations. Re-enable content only after current-epoch own-number evidence matches the canonical BU phone, with shared compare/fill-by-CAS behavior for an empty BU phone. A same-instance open event or old wuid observation cannot alone restore trust. Specify what positively ties the supported pinned provider's own-number proof to the renewed pairing; if that attribution cannot be established, retain PENDING_IDENTITY or use a generation-specific stable external instance identity and retire the old mapping. Do not present a locally assigned generation on an uncorrelated webhook as external proof. Maintain the chosen safe rejection/no-buffer policy.",
+      "reviewer_labels": [
+        "number_onboarding_critique-v2-normalized"
+      ],
+      "source_finding_ids": [
+        "NUM-CRIT-01"
+      ],
+      "category": "security",
+      "formalizable_hint": "unknown",
+      "candidate_rule_level": "unknown",
+      "candidate_rule_id": "n/a"
+    },
+    {
+      "finding_id": "F-38DBF8E3",
+      "severity": "medium",
+      "title": "The OUT sender and webhook echo must share the same acceptance key and persistence boundary",
+      "rationale": "The existing sender calls Evolution; Evolution delivers an authenticated fromMe echo with external ID E before the send promise resumes. The revised incoming path accepts OUT under resource R/E. The existing sender then inserts another OUT after the provider response. If only credential resolution is changed as permitted, its new resource-key columns remain absent/null and the incoming unique constraint cannot conflict; two timeline entries result. A sequential lookup for a previously persisted send also misses this echo-first ordering. If sender key columns instead become mandatory without reconciliation, the sender fails after a successful provider send. This is an existing send/echo race exposed by the new reconciliation promise, not an alleged implemented regression.",
+      "suggested_action": "Permit the bounded internal OUT-persistence change in ConversationsService and any other actual sender. Resolve the authenticated channel resource identity for a send, populate it on new outbound records, and use one transactional create-or-reconcile path keyed by resource/external message ID for sender results and echoes. Define echo-first, sender-first and duplicate-echo outcomes, including retaining the human/Typebot author and returning the same persisted message to the sender. A unique collision must reconcile the existing message rather than fail a successfully completed send or insert a null-key duplicate. Keep network outside DB transactions, preserve public response/window contracts and do not add external-send retry or exactly-once claims.",
+      "reviewer_labels": [
+        "number_onboarding_critique-v2-normalized"
+      ],
+      "source_finding_ids": [
+        "NUM-CRIT-02"
+      ],
+      "category": "architecture",
+      "formalizable_hint": "unknown",
+      "candidate_rule_level": "unknown",
+      "candidate_rule_id": "n/a"
+    }
+  ]
+}

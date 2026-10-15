@@ -1,0 +1,34 @@
+{
+  "scope": "manual current-source anchoring prepared during independent critique; gate not declared complete",
+  "checks": [
+    {
+      "id": "A-01",
+      "source": "api-app/src/integrations/meta/meta.client.ts",
+      "sha256": "fefdd6fe1152b8dc61b39da5037984b3f48f1c1bd43ed416e067ba9fee433672",
+      "needle": "private readonly token = process.env.WHATSAPP_TOKEN",
+      "position": "confirmed in unchanged current source; proposed correction does not assert already implemented"
+    },
+    {
+      "id": "A-02",
+      "source": "api-app/src/domain/channels/channels.service.ts",
+      "sha256": "c81b8e627b0c0abed13ad7559b1799f86e6e8abeb0780082b5de6762671c8986",
+      "needle": "const numero = numeros[0]",
+      "position": "confirmed in unchanged current source; proposed correction does not assert already implemented"
+    },
+    {
+      "id": "A-03",
+      "source": "api-app/src/surfaces/bff/session.middleware.ts",
+      "sha256": "80d8be0072b817ec34b3eb7d29218835bd218a40670c1f917d0b1787b0b57211",
+      "needle": "exigirCabecalhoAntiCsrf",
+      "position": "confirmed in unchanged current source; proposed correction does not assert already implemented"
+    },
+    {
+      "id": "A-04",
+      "source": "web-app/src/telas/Numeros.tsx",
+      "sha256": "428348ea39eeb065d46e1aaea31821e8e242918b900096410fa2b322553f228d",
+      "needle": "'/business-units'",
+      "position": "confirmed in unchanged current source; proposed correction does not assert already implemented"
+    }
+  ],
+  "caveat": "A-03 CSRF applies only mutating HTTP verbs; NUM-ARCH-05 moves pairing side effect to POST. A-04 connectionState method exists in adapter but no current caller."
+}

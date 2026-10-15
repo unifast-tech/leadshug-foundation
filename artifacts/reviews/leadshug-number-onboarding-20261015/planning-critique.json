@@ -1,0 +1,372 @@
+{
+  "review_kind": "critique",
+  "review_date": "2026-10-15",
+  "verdict": "revise",
+  "planning_only": true,
+  "implementation_authority": "none; this report is advisory and grants neither APROVADO nor a waiver",
+  "reviewed_packet": {
+    "path": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/critique-packet-v2.md",
+    "sha256": "6c29940c895577f71d21bae6db43e0975fbbffc6df5b064d291373f9668b6fd2",
+    "bytes": 270204,
+    "lines_read": 4743,
+    "complete_packet_read": true,
+    "foundation_baseline_declared_in_packet": "850feeb63869de7410b4c279c8e0956804aec68b",
+    "api_baseline_declared_in_packet": "ae6a9662c29b77276351aa9de653a47276372246",
+    "web_baseline_declared_in_packet": "4e56f6c1f4515b918d05b8c87e890d42e8542c56",
+    "workspace_baseline_declared_in_packet": "cab23188ec796f79131467dcce0a16acedab8d4f",
+    "baseline_proof_limit": "The immutable local packet hash was checked. Pushed-baseline and unchanged-source declarations are package inputs; this reviewer made no remote calls or independent remote-ref attestation.",
+    "isolation": "Fresh internal no-context reviewer; no implementation transcript or implementing-agent memory was supplied.",
+    "method": "Read every packet line, including the complete previous architecture opinion, revised contract, source snapshots, canon, validation plan and included tests. Evaluated the six resolutions and the complete plan independently. Source line numbers below refer to the FILE blocks in this immutable packet.",
+    "additional_instruction_context": [
+      "AGENTS.md",
+      "delphi-ai/main_instructions.md",
+      "delphi-ai/system_architecture_principles.md",
+      "delphi-ai/ecosystem_template_configuration.md",
+      "delphi-ai/workflows/docker/profile-selection-method.md",
+      "delphi-ai/workflows/docker/todo-approval-gates-method.md",
+      "delphi-ai/workflows/docker/effort-selection-method.md"
+    ],
+    "readiness_check": "bash delphi-ai/verify_context.sh returned Environment Verified: PACED-Ready; this is instruction-context readiness, not product/provider validation.",
+    "routing_evidence": "evidence/routing-critique.json records go for formal-reviewer / critique / gpt-6.1-sol / max, proof_mode declared; read, not rerun by this reviewer.",
+    "actions_not_performed": [
+      "No product or TODO edits",
+      "No private configuration or credential reads",
+      "No external-provider, network or remote-ref calls",
+      "No product tests, migrations, runtime startup or delivery claims",
+      "No waiver or implementation approval"
+    ]
+  },
+  "overall_assessment": "Retain the proposed architecture. Persisted attempts, separate candidate and active credentials, channel-scoped encryption, durable provider ownership, a short transactional incoming boundary, bounded provider calls and DB-only listing form a coherent solution for ST-CON-01. All six earlier findings have substantial contractual resolutions. Two remaining interactions need a concrete contract and discriminating tests before approval: renewing an already verified Evolution pairing must revoke the old identity proof, and sender persistence must participate in the same identity/message reconciliation promised for outbound echoes. These are bounded gaps in the revised plan, not assertions that unimplemented changes have regressed the product.",
+  "correctness_position": "Revise the two lifecycle/concurrency boundaries below. The initial onboarding, reauthorization, collision, ambiguity and incoming duplicate paths are otherwise described consistently. Preserve current public response and timeline contracts while correcting internal persistence; neither issue requires ST-CON-04, history import or a generic workflow platform.",
+  "security_position": "The revised tenant predicates, server-side Meta resource proof, authenticated webhooks, one-use authorization, candidate isolation, AES-GCM/AAD and fail-closed decryption are sound. Initial Evolution input now has the required identity gate. The same gate needs an explicit trust-reset and stale-observation rule for RENEW, because a persisted proof from a previous pairing is not proof of the phone that has just scanned a new QR. Secret-free request logging and per-resource raw-event scoping remain implementation obligations under the existing contract, with focused harness notes below.",
+  "performance_position": "Favorable, subject to the planned measurements. DB-only listing avoids provider fan-out; indexed attempt/credential/resource lookups and the message uniqueness constraint are appropriate. Three 10-second calls under a 45-second per-link lease bound a recovery round without holding a DB transaction during HTTP. The recommended fixes add short indexed/CAS operations and an indexed outbound upsert/reconciliation, rather than workers or an outbox. The small synthetic workload and pinned digest establish neither production capacity nor a continuous-health SLO.",
+  "elegance_position": "Retain the small domain-specific state machine and explicit provider adapters. Make identity trust a property of the current pairing epoch, and give outbound message acceptance one consistent internal owner. Those changes remove implicit coupling. An in-memory echo cache, ad hoc query-before-insert exceptions, route-specific CSRF exceptions, global token fallback or a generic saga/vault/job framework would weaken this design.",
+  "structural_soundness_position": "The BU remains the number, transports remain BU channels, and conversations remain keyed by BU/contact. Durable provider ownership and separate candidate/active credentials strengthen these boundaries. The two blockers are boundary omissions: channel existence/current generation versus current phone identity during renewal, and incoming uniqueness versus all writers of the same outbound message. Amend the strict expected-change reason for ConversationsService to admit the necessary internal persistence work while preserving DTOs, window rules and timeline behavior.",
+  "operational_fit_position": "Local-first execution, a dedicated pinned Evolution runtime and storage, PostgreSQL 16, Node 22, a single principal-checkout writer, serial destructive suites and served-build attestation fit the declared scope. Meta eligibility/configuration, usable test assets, a real HTTPS callback, actual Evolution payload compatibility and real IN/OUT remain unknown. Their unknown state blocks the corresponding real-proof criterion, not honest planning. No legacy runtime adoption, Railway deployment or source promotion is authorized by this report.",
+  "test_quality_position": "The planned PG E2E, real-backend browser lane, adapter/crypto tests, concurrency barriers, negative controls, source freshness and separate external proof are strong. REG-SEC-02 currently allows a duplicate OUT to pass because it requires only that an echo not become IN; REG-SEC-03 does not distinguish initial unverified pairing from renewing a previously verified instance. Add both discriminating sequences below. Existing fakes record only destination/text, so scoped-credential tests must observe the resource and credential identity at the external port without recording the secret. All assertions and results remain planned, not evidence of implemented safety.",
+  "resolution_assessment": [
+    {
+      "finding_id": "NUM-ARCH-01",
+      "position": "addressed-in-plan",
+      "evidence": "TODO lines 128, 385 and 717; validation-plan REG-SEC-01; packet lines 138, 395, 727 and 4375.",
+      "assessment": "The incoming BU is the source of Mantenedora ownership. A candidate trigger requires that tenant's bot plus exact BU or a global trigger inside the same tenant; resumed sessions must match Mantenedora/BU/contact. The competing-global-trigger and foreign-session negative tests directly distinguish the original defect. This is a planned correction of existing code at IncomingService.executarTypebot, not an implemented fix.",
+      "remaining_condition": "Exercise the real relational predicate and session ownership with two tenants and distinct adapter credential identities; do not satisfy the test by disabling Typebot. No additional architecture change is requested for this original finding."
+    },
+    {
+      "finding_id": "NUM-ARCH-02",
+      "position": "addressed-for-IN-replay; outbound-reconciliation-interaction-needs-revision",
+      "evidence": "TODO line 126 and validation-plan REG-SEC-02; packet lines 136 and 4376.",
+      "assessment": "A PostgreSQL unique key on verified resource/external message ID, transactional Message plus conversation/unread mutation, rollback on duplicate and effects only from the acceptance winner resolve the original incoming replay failure. Equal IDs across distinct resources and missing-ID handling are explicit. Legacy rows may retain null keys without invented backfill. The accepted postcommit publication/bot crash gap is stated honestly.",
+      "remaining_condition": "NUM-CRIT-02 covers the additional promised echo reconciliation. The incoming unique key alone does not reconcile a sender that inserts outside that key."
+    },
+    {
+      "finding_id": "NUM-ARCH-03",
+      "position": "addressed-for-initial-pairing; renewal-trust-boundary-needs-revision",
+      "evidence": "TODO lines 80 and 124; validation-plan REG-SEC-03; packet lines 90, 134 and 4377.",
+      "assessment": "Authentication plus verified own-number identity before content/raw/domain effects, safe 503 before proof, 409 quarantine on mismatch, no reliance on state=open, and fail-closed LID handling address the original initial-pairing disclosure. Rejection without guaranteed replay is an explicit product/runbook limitation rather than a hidden delivery promise.",
+      "remaining_condition": "NUM-CRIT-01 requires the same safety after INITIAL/RENEW is invoked on an instance whose previous own-number proof is already valid."
+    },
+    {
+      "finding_id": "NUM-ARCH-04",
+      "position": "addressed-in-plan",
+      "evidence": "TODO lines 122 and 384; validation-plan REG-SEC-04; packet lines 132, 394 and 4378.",
+      "assessment": "ProviderResourceIdentity retains an immutable BU owner after channel removal, prohibits cross-BU reassignment, and admits only same-BU reactivation. The plan explicitly acknowledges that external Meta events carry no local generation. This resolves the temporal tenant-crossover failure without pretending that local CAS identifies an old webhook's origin generation.",
+      "remaining_condition": "Migration and deletion must preserve the owner row, and both incoming domain effects and receipt updates must use it. Same-owner delayed input after reactivation remains a residual temporal issue, not cross-tenant attribution proof."
+    },
+    {
+      "finding_id": "NUM-ARCH-05",
+      "position": "addressed-in-plan",
+      "evidence": "TODO line 80 and validation-plan REG-SEC-05; packet lines 90 and 4379.",
+      "assessment": "POST pair reuses current ADMIN and mutation-header enforcement; the former GET returns 405 without a provider call. This removes the mutating GET rather than adding a middleware exception. The test distinguishes authorization failure from provider-side mutation.",
+      "remaining_condition": "Keep the no-provider-call assertion on GET, missing-header POST and unauthorized POST. The independently addressed identity-epoch issue does not reopen this HTTP/CSRF resolution."
+    },
+    {
+      "finding_id": "NUM-ARCH-06",
+      "position": "addressed-in-plan",
+      "evidence": "TODO lines 116 and 118; validation-plan REG-SEC-06/07/09; packet lines 126, 128, 4380, 4381 and 4383.",
+      "assessment": "Explicit NOVO versus REAUTORIZAR, occupied-slot reuse with expectedGeneration, a fresh attempt/nonce after consumed or ambiguous code, currentAttemptId, activeCredentialVersion CAS and candidate-to-active re-encryption define a viable recovery/activation path. A valid old credential is preserved until the candidate proves the same resource. Cancel/expiry removes the candidate while preserving the active credential.",
+      "remaining_condition": "The eventual activation transaction must enforce current authorization/session validity and the recorded CAS, rather than relying only on a check before provider HTTP. The contract already requires this and planned revocation/race tests should prove it; no additional blocker is raised for this original finding."
+    }
+  ],
+  "blocking_findings": [
+    {
+      "id": "NUM-CRIT-01",
+      "severity": "high",
+      "blocking": true,
+      "scope_classification": "in-scope lifecycle clarification for SCOPE-04/05/09 and CON-04/REG-SEC-03; no new feature or generic infrastructure",
+      "title": "RENEW must invalidate the previous pairing's own-number proof before new input can be accepted",
+      "evidence": [
+        {
+          "path": "foundation_documentation/todos/active/features/TODO-leadshug-channel-connection-readiness.md",
+          "line": 80,
+          "packet_line": 90,
+          "detail": "INITIAL or RENEW uses the current link/generation, but the pairing action does not specify when an existing verified identity becomes untrusted."
+        },
+        {
+          "path": "foundation_documentation/todos/active/features/TODO-leadshug-channel-connection-readiness.md",
+          "line": 124,
+          "packet_line": 134,
+          "detail": "The acceptance gate requires persisted verified own-number identity; it does not define a pairing epoch or how old same-instance observations are fenced during RENEW."
+        },
+        {
+          "path": "api-app/src/surfaces/webhooks/evolution.controller.ts",
+          "line": 29,
+          "packet_line": 2620,
+          "detail": "Current code routes solely by instance name; own phone is learned separately from connection.update at source line 94. No provider-carried local pairing generation is shown."
+        },
+        {
+          "path": "foundation_documentation/artifacts/validation-plans/leadshug-channel-readiness-20261015.md",
+          "line": 96,
+          "packet_line": 4377,
+          "detail": "REG-SEC-03 covers input before initial confirmation; it does not start from an already verified channel and then renew pairing."
+        }
+      ],
+      "concrete_failure": "Start with the existing instance verified as phone X for BU X. An administrator requests RENEW and scans its QR with Y. If the new implementation merely adds the proposed persisted-identity check to the current routing, the old X proof remains true while Y's messages.upsert arrives before its connection observation. Y's content can therefore enter BU X. Merely clearing proof and allowing an old connection.update/open/wuid=X on the same instance to restore it leaves the same gap. A request-local lease or current generation captured when handling that old event does not prove which pairing produced it. This is a missing renewal contract, not a claim that the future implementation already behaves this way.",
+      "why_now": "Re-pairing/renewal is explicitly promised and tested in this story. The initial identity correction must hold throughout that lifecycle, including the period in which a previous proof already exists.",
+      "recommended_correction": "Freeze an explicit pairing trust epoch. Before any INITIAL/RENEW provider side effect, atomically invalidate the previous acceptance proof and fence pending identity/verification observations. Re-enable content only after current-epoch own-number evidence matches the canonical BU phone, with shared compare/fill-by-CAS behavior for an empty BU phone. A same-instance open event or old wuid observation cannot alone restore trust. Specify what positively ties the supported pinned provider's own-number proof to the renewed pairing; if that attribution cannot be established, retain PENDING_IDENTITY or use a generation-specific stable external instance identity and retire the old mapping. Do not present a locally assigned generation on an uncorrelated webhook as external proof. Maintain the chosen safe rejection/no-buffer policy.",
+      "required_discriminating_test": "With PostgreSQL and the real auth/domain boundary, begin from an accepted verified X channel, issue RENEW, and hold the external step behind a barrier. Assert proof is invalidated before that side effect. Deliver authenticated content for the new pairing before fresh own-number proof, a delayed old open/wuid=X event and an old verify completion; none may restore acceptance or persist content/raw, increment unread, publish or run a bot. Then prove ownPhone=Y produces quarantine and no effects. Repeat with a fresh matching X proof and replay the same message; exactly one accepted message results. A test that starts with an unverified channel does not discriminate this failure.",
+      "options": [
+        {
+          "option": "A",
+          "recommended": true,
+          "description": "Add an explicit trust epoch, invalidate it before pairing, and require positively current own-number proof; stay fail-closed when provider attribution is ambiguous.",
+          "implementation_effort": "medium; a bounded channels/webhook/adapter state and test clarification",
+          "risk": "low after the supported proof source and stale-result rules are fixed; otherwise ambiguity must remain visible",
+          "blast_radius": "pairing, identity acceptance and their projections in the existing story",
+          "maintenance_burden": "low-to-medium; one explicit identity lifecycle rather than dispersed exceptions",
+          "performance_impact": "small indexed/CAS checks; any identity read remains inside the existing bounded provider rounds",
+          "elegance_impact": "improves coherence by separating previous trust from a new pairing",
+          "structural_soundness_impact": "keeps authentication, external identity proof and local channel generation distinct"
+        },
+        {
+          "option": "B",
+          "recommended": false,
+          "description": "Use a stable channel-plus-pairing-generation instance name for renewal, retire the old external mapping and validate the new resource before accepting its input. Prefer this if the pinned provider cannot supply adequate current-pairing attribution for A.",
+          "implementation_effort": "medium-to-high; additional bounded resource replacement/cleanup states",
+          "risk": "stronger event separation, with more operational cleanup and partial-creation cases to manage",
+          "blast_radius": "same channel/runtime slice; no cross-BU transfer or generic job platform",
+          "maintenance_burden": "medium; stable per-epoch identity, retirement and explicit cleanup must remain idempotent",
+          "performance_impact": "extra bounded create/read/cleanup steps, never duplicate creation on retry",
+          "elegance_impact": "more state, but justified if it makes external attribution reliable",
+          "structural_soundness_impact": "external routing itself distinguishes retired pairing epochs"
+        },
+        {
+          "option": "C",
+          "recommended": false,
+          "description": "Keep the old verified proof during RENEW or restore it from an uncorrelated same-instance event.",
+          "implementation_effort": "low",
+          "risk": "high; allows the wrong phone's content to enter a verified BU",
+          "blast_radius": "BU conversations, raw content, unread, realtime and automation",
+          "maintenance_burden": "high; later conditional patches cannot retract a disclosure",
+          "performance_impact": "slightly fewer checks at an unacceptable correctness cost",
+          "elegance_impact": "hidden coupling between two different pairing lifecycles",
+          "structural_soundness_impact": "fails the declared identity-before-content boundary; do nothing is not reasonable"
+        }
+      ]
+    },
+    {
+      "id": "NUM-CRIT-02",
+      "severity": "medium",
+      "blocking": true,
+      "scope_classification": "in-scope correction needed to satisfy the newly explicit echo reconciliation contract; preserve public DTOs/windows/timeline",
+      "title": "The OUT sender and webhook echo must share the same acceptance key and persistence boundary",
+      "evidence": [
+        {
+          "path": "foundation_documentation/todos/active/features/TODO-leadshug-channel-connection-readiness.md",
+          "line": 126,
+          "packet_line": 136,
+          "detail": "The plan promises reconciliation of echo OUT with the persisted send by the same resource identity and external ID."
+        },
+        {
+          "path": "foundation_documentation/todos/active/features/TODO-leadshug-channel-connection-readiness.md",
+          "line": 200,
+          "packet_line": 210,
+          "detail": "The strict expected-change reason permits ConversationsService to change only credential resolution, leaving its independent OUT insertion outside the proposed acceptance key."
+        },
+        {
+          "path": "api-app/src/domain/inbox/conversations.service.ts",
+          "line": 201,
+          "packet_line": 2070,
+          "detail": "Provider send precedes an unconditional message.create at source line 203; it currently stores externalId without a provider resource identity."
+        },
+        {
+          "path": "api-app/src/surfaces/webhooks/evolution.controller.ts",
+          "line": 84,
+          "packet_line": 2675,
+          "detail": "Provider fromMe events enter IncomingService as OUT, which independently creates Message."
+        },
+        {
+          "path": "foundation_documentation/artifacts/validation-plans/leadshug-channel-readiness-20261015.md",
+          "line": 95,
+          "packet_line": 4376,
+          "detail": "REG-SEC-02 asserts echo does not become IN, which does not detect two persisted OUT rows."
+        }
+      ],
+      "concrete_failure": "The existing sender calls Evolution; Evolution delivers an authenticated fromMe echo with external ID E before the send promise resumes. The revised incoming path accepts OUT under resource R/E. The existing sender then inserts another OUT after the provider response. If only credential resolution is changed as permitted, its new resource-key columns remain absent/null and the incoming unique constraint cannot conflict; two timeline entries result. A sequential lookup for a previously persisted send also misses this echo-first ordering. If sender key columns instead become mandatory without reconciliation, the sender fails after a successful provider send. This is an existing send/echo race exposed by the new reconciliation promise, not an alleged implemented regression.",
+      "why_now": "The revised plan explicitly adds an identity/message key and promises echo reconciliation while retaining the send path. An internally coherent cutover needs all new writers of that same message identity to participate.",
+      "recommended_correction": "Permit the bounded internal OUT-persistence change in ConversationsService and any other actual sender. Resolve the authenticated channel resource identity for a send, populate it on new outbound records, and use one transactional create-or-reconcile path keyed by resource/external message ID for sender results and echoes. Define echo-first, sender-first and duplicate-echo outcomes, including retaining the human/Typebot author and returning the same persisted message to the sender. A unique collision must reconcile the existing message rather than fail a successfully completed send or insert a null-key duplicate. Keep network outside DB transactions, preserve public response/window contracts and do not add external-send retry or exactly-once claims.",
+      "required_discriminating_test": "Have the Evolution external-port stub deliver a real authenticated fromMe webhook inside enviarTexto, await its acceptance, and only then resolve the send with the identical external ID. Exercise the BFF and public sender paths that share the service. Assert one physical OUT row with the correct resource key, content and internal author, the returned message identity is that row, no IN/unread effect, and the existing response contract is preserved. Repeat sender-first and concurrently repeated echoes; a different resource using the same external ID remains independent. Add the equivalent check for another sender wherever that provider supports such echoes. Merely asserting direction=OUT is insufficient.",
+      "options": [
+        {
+          "option": "A",
+          "recommended": true,
+          "description": "Share a narrow keyed outbound acceptance/reconciliation operation between sender-result persistence and webhook ingestion, and amend the strict path reason accordingly.",
+          "implementation_effort": "medium; bounded persistence/helper and E2E changes in already touched files",
+          "risk": "controlled by echo-first/sender-first barriers and authorship assertions",
+          "blast_radius": "internal message persistence and applicable existing sender callers; no public DTO or timeline contract change",
+          "maintenance_burden": "low-to-medium; one owner for the message identity",
+          "performance_impact": "one indexed upsert/short transaction in place of independent inserts",
+          "elegance_impact": "improves coherence and removes query-before-insert and null-key exceptions",
+          "structural_soundness_impact": "all writers honor the same domain identity and database constraint"
+        },
+        {
+          "option": "B",
+          "recommended": false,
+          "description": "Search for an existing send only inside the webhook path or suppress echoes with an in-memory cache while leaving sender persistence unchanged.",
+          "implementation_effort": "low initially",
+          "risk": "high; echo-first ordering, restarts and multiple processes still produce duplicates or lost external sends",
+          "blast_radius": "same messages with additional implicit coupling between transport timing and storage",
+          "maintenance_burden": "high; increasingly special-case reconciliation",
+          "performance_impact": "extra lookups/cache work without a concurrency guarantee",
+          "elegance_impact": "brittle timing workaround",
+          "structural_soundness_impact": "does not make the uniqueness contract authoritative across writers"
+        },
+        {
+          "option": "C",
+          "recommended": false,
+          "description": "Keep only the assertion that echoes are not IN and leave independent OUT inserts.",
+          "implementation_effort": "low",
+          "risk": "known duplicate OUT or post-send insertion failure under the stated ordering",
+          "blast_radius": "conversation history and successful-send responses",
+          "maintenance_burden": "high; inaccurate history becomes a permanent ambiguity",
+          "performance_impact": "wastes storage/publication on duplicate rows",
+          "elegance_impact": "retains two competing acceptance rules",
+          "structural_soundness_impact": "contradicts the explicit echo reconciliation promise; do nothing is not reasonable"
+        }
+      ]
+    }
+  ],
+  "nonblocking_observations": [
+    {
+      "id": "NUM-OBS-01",
+      "severity": "medium",
+      "scope_classification": "in-scope execution/test concretization already required by DOD-03 and REG-SEC-08; no new approval blocker or claim of an observed leak",
+      "observation": "The current Evolution authenticator puts its secret in /webhooks/evolution/:segredo, while the planned new gateway is Nginx. Scrubbing JSON payloads and application errors does not by itself scrub access/error logs that record request URIs. The packet contains no implemented gateway/log policy to inspect.",
+      "evidence": "EvolutionWebhookController lines 12-19 (packet 2603-2610); TODO runtime notes line 556 (packet 566); REG-SEC-08 at packet 4382.",
+      "recommended_handling": "When concretizing the gateway, explicitly handle secret-bearing request paths in ingress/proxy/application logs, or use authenticated callback headers only if the pinned provider supports them. Extend the existing secret-negative harness to route a dummy secret through the real gateway and inspect access/error logs and captured artifacts, not just envelope fields. A leak would fail the already declared secret-free delivery criteria."
+    },
+    {
+      "id": "NUM-OBS-02",
+      "severity": "medium",
+      "scope_classification": "in-scope raw-event ownership/test concretization under the declared identity gate and audit module; not a request for a new raw-event platform",
+      "observation": "Meta delivers a body containing multiple entry/change/value resources. The current code stores the whole body before mapping any resource, with no BU. Moving this write after one mapping and redacting secret keys would still be insufficient if the stored payload retained another BU's or an unknown resource's content. The revised identity-before-content and BU-scoping invariants already require the implementation to avoid this.",
+      "evidence": "MetaWebhookController lines 37-43 (packet 2473-2479), registrarEventoCru in IncomingService, and audit-and-history invariant at packet 1011.",
+      "recommended_handling": "Partition accepted diagnostic payloads by verified resource/BU, or use an equivalently explicit scoped representation. Unknown/retired/unverified portions must contribute only allowed metadata. Add a signed mixed batch for two BUs plus an unknown resource; no raw record may expose a different owner's content and no unverified content may persist. This strengthens enforcement of the existing plan rather than expanding the product story."
+    },
+    {
+      "id": "NUM-OBS-03",
+      "severity": "low",
+      "scope_classification": "in-scope test-quality implementation requirement already covered by credential/tenant cutover tests",
+      "observation": "The current metaFake records only para/texto and the Typebot unit test constructs a mocked Prisma result. Either can pass while a caller uses the wrong credential or the relational tenant predicate is missing.",
+      "evidence": "test/helpers.ts line 16 (packet 3636); incoming.typebot.integration.spec.ts in packet lines 4481-4538.",
+      "recommended_handling": "Use real PostgreSQL tenant/trigger/session fixtures and observe channel/resource plus a non-secret credential identifier at the external port. Competing tenants should use distinct credentials and bot IDs with the same contact/text, so the expected correct call and the absence of the foreign call are both discriminating. Never put real tokens in assertion output or fixture artifacts."
+    }
+  ],
+  "assumption_vs_current_code": [
+    {
+      "assumption_id": "A-01",
+      "position": "supported",
+      "confidence": "high",
+      "evidence": [
+        "meta.client.ts:31, packet 1237: process.env.WHATSAPP_TOKEN is a client-wide field",
+        "meta.client.ts:20-24: callers provide resource/destination/text, without a credential parameter",
+        "conversations.service.ts:292, packet 2161; incoming.service.ts:125, packet 2306: both use that port"
+      ],
+      "qualification": "This establishes the existing global-token defect. The scoped resolver, credential storage and consumer cutover remain proposed."
+    },
+    {
+      "assumption_id": "A-02",
+      "position": "supported",
+      "confidence": "high",
+      "evidence": [
+        "channels.service.ts:31-74 in packet 1072-1115: consults numerosDaWaba, takes numeros[0], creates CONECTADO and updates the BU phone"
+      ],
+      "qualification": "The existing code does not implement Embedded Signup, explicit multiple-number selection, registration/subscription proof or per-channel credential activation. The new plan correctly treats those as new work."
+    },
+    {
+      "assumption_id": "A-03",
+      "position": "supported-with-method-and-binding-qualifications",
+      "confidence": "high for included middleware behavior",
+      "evidence": [
+        "session.middleware.ts:70, packet 1559: GET/HEAD/OPTIONS are excluded from mutation checks",
+        "session.middleware.ts:80-96, packet 1569-1585: session claims and current user/password state are checked",
+        "session.middleware.ts:123 and 136, packet 1612 and 1625: unsafe methods require X-Requested-With"
+      ],
+      "qualification": "The assumption means unsafe-method CSRF enforcement on routes actually mounted behind this middleware, not CSRF protection for a mutating GET. The POST pairing correction is coherent. New controller binding and revoked-session/grant checks across asynchronous steps still require the planned real-app E2E proof; bff.module wiring is a future changed surface, not implemented evidence in this packet."
+    },
+    {
+      "assumption_id": "A-04",
+      "position": "supported-with-bounded-corpus-limit",
+      "confidence": "high for UI behavior; medium for the repository-wide negative claim",
+      "evidence": [
+        "Numeros.tsx:12-19, packet 3322-3329: polls the BFF business-units projection every five seconds without a provider request in the UI",
+        "channels.controller.ts:29-35, packet 1414-1420: included channel listing reads Prisma only",
+        "evolution.client.ts:66-68, packet 1353-1355: estadoDaInstancia is present; no production caller appears elsewhere in the supplied corpus"
+      ],
+      "qualification": "The packet does not contain every production source file or the business-units listing implementation. A complete-repository absence of callers is not conclusively proven by this bounded review. The dedicated A-04 coherence pass should record a source-wide read-only caller search on the frozen code; do not mark this critique as that deterministic guard. The proposed DB-only listing contract remains sound even if an additional existing caller is later discovered."
+    }
+  ],
+  "module_coherence": {
+    "position": "coherent-target-with-two-local-contract-gaps",
+    "constitution_change_required_by_recommended_fixes": false,
+    "assessment": "The primary integration owner and secondary identity, inbox and audit owners match the touched boundaries. Tenant isolation, incoming idempotency, channel-window enforcement and the BU/contact conversation key are preserved rather than intentionally superseded. Current short integration/identity modules do not yet define the proposed endpoints; their consolidation before new routes is correctly planned. A stale identity gate or dual OUT writer would fail those existing invariants, so the blockers should be resolved in the same TODO and owner modules. Do not mark any module Verified from this planning report.",
+    "decision_mapping": [
+      { "decision": "D-01", "modules": ["identity-and-tenancy", "inbox-and-conversations"], "handling": "Preserve", "reason": "BU owns the canonical number; a transport does not create a new tenant or conversation namespace." },
+      { "decision": "D-02", "modules": ["integrations-and-channels", "identity-and-tenancy"], "handling": "Preserve and define new explicit contract", "reason": "SDK/provider data remains untrusted until server-side identity and permission proof." },
+      { "decision": "D-03", "modules": ["integrations-and-channels", "identity-and-tenancy"], "handling": "Preserve and define lifecycle", "reason": "Persisted attempts and separate activation retain one current context without holding DB transactions over HTTP." },
+      { "decision": "D-04", "modules": ["integrations-and-channels", "audit-and-history"], "handling": "Preserve", "reason": "Secrets belong to backend credential storage and never enter domain DTOs, bundles or activity history." },
+      { "decision": "D-05", "modules": ["integrations-and-channels"], "handling": "Preserve and define lifecycle", "reason": "Provider steps and partial failure are explicit; foreign callbacks are not taken over." },
+      { "decision": "D-06", "modules": ["integrations-and-channels", "identity-and-tenancy"], "handling": "Preserve; clarify renewal per NUM-CRIT-01", "reason": "Authenticated POST pairing and verified own-number ingress need the same safety after every pairing epoch." },
+      { "decision": "D-07", "modules": ["integrations-and-channels", "identity-and-tenancy"], "handling": "Preserve", "reason": "Durable immutable resource ownership and honest observation semantics defend tenant attribution." },
+      { "decision": "D-08", "modules": ["inbox-and-conversations", "integrations-and-channels", "identity-and-tenancy"], "handling": "Preserve; align all OUT writers per NUM-CRIT-02", "reason": "Tenant-scoped bots/credentials and transactional acceptance implement existing invariants without changing public/timeline behavior." },
+      { "decision": "D-09", "modules": ["integrations-and-channels"], "handling": "Preserve", "reason": "Dedicated local runtime and separate real-provider proof do not imply Railway promotion or historical import." },
+      { "decision": "D-10", "modules": ["project governance"], "handling": "Preserve", "reason": "Single-writer principal-checkout execution and pipeline-owned gitlinks match the local authority rules." }
+    ]
+  },
+  "residual_risks_and_limits": [
+    {
+      "scope_classification": "in-scope accepted limitation already explicit",
+      "risk": "Safe rejection before Evolution identity verification can lose events if the provider does not retry. The UI/runbook must require confirmed number identity before the test message and permit manual resend; no buffer/import guarantee is inferred."
+    },
+    {
+      "scope_classification": "in-scope accepted postcommit limitation already explicit",
+      "risk": "A crash after message commit can omit realtime or automation. Winner-only processing prevents duplicate execution in ordinary replay but does not create a transactional outbox or external exactly-once semantics. Keep the runbook and delivery claims within that stated limit."
+    },
+    {
+      "scope_classification": "external readiness prerequisite, not evidence or a waiver",
+      "risk": "Meta app eligibility, actual Graph/version permissions, code-exchange/resource-proof/register/subscribe behavior, callback reachability, test assets and actual pinned Evolution own-number/payload behavior still require primary-provider/runtime confirmation. This packet does not prove them."
+    },
+    {
+      "scope_classification": "in-scope migration/operations condition",
+      "risk": "Existing resource collisions must abort with a redacted report. Nullable legacy message keys do not provide retroactive deduplication, and existing channels without credentials remain visibly pending until explicit validated reauthorization. Cipher keys/key IDs must remain available or decryption correctly fails closed."
+    },
+    {
+      "scope_classification": "preexisting behavior outside the bounded incoming duplicate guarantee; follow-up only if stronger bot sequencing is required",
+      "risk": "Distinct simultaneous accepted messages can still contend for Typebot session startup/continuation in the existing implementation. Deduplicating the same external message does not establish ordered or exactly-once bot conversations. No such broader guarantee should be inferred from REG-SEC-02 or introduced through an unapproved worker framework."
+    },
+    {
+      "scope_classification": "security/operational limit",
+      "risk": "Encrypted DB credentials do not protect against a compromised running application or installation key. Local correctness and small synthetic concurrency trials do not establish production availability, throughput or continuous token health."
+    },
+    {
+      "scope_classification": "explicitly excluded future product work",
+      "risk": "ST-CON-04 proactive conversation creation/templates, historical import/coexistence/migration, binary media, status lifecycle and Railway promotion remain outside this review's implementation recommendation."
+    }
+  ],
+  "required_next_review_actions": [
+    "Resolve NUM-CRIT-01 and NUM-CRIT-02 in the governing TODO, validation plan, strict expected-change reasons and relevant module-consolidation targets; classify each resolution explicitly.",
+    "Refresh the immutable pushed planning baseline if the material identity/persistence direction changes, and rerun the affected independent review/critique lanes before requesting approval.",
+    "After planning convergence, run the dedicated assumption-code coherence, post-review scope-drift and execution-readiness preflight guards; this report does not substitute for them.",
+    "Request APROVADO only after the required planning gates converge. Implementation, provider calls, architecture adherence, TQA, security/PCV/debt and final delivery review remain later authorized work."
+  ]
+}

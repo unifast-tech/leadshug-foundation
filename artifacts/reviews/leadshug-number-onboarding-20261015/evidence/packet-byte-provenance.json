@@ -1,0 +1,9 @@
+{
+  "artifact": "artifacts/reviews/leadshug-number-onboarding-20261015/evidence/architecture-packet-v1.md",
+  "reviewed_local_bytes": 198526,
+  "reviewed_local_sha256": "00bfa0389bd8c204a08c890db746923deaba79161b9bebde11d45478509de177",
+  "git_blob_bytes": 195755,
+  "git_blob_sha256": "0ad247b7fa7ccdc48832875c29ab80d142be979f3959d93f83ba06076ca91b9c",
+  "same_after_crlf_normalization": true,
+  "note": "v1 frozen working-file bytes kept immutable; Git text normalization removes source CRLF at add. v2 packet written LF for reproducible stored bytes."
+}

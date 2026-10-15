@@ -92,7 +92,7 @@ Casos planejados, nenhum executado. Fixtures de dois tenants e recursos distinto
 | Caso | Cenário / expectativa obrigatória |
 | --- | --- |
 | REG-SEC-01 | Dois tenants com triggers globais concorrentes: IN A só escolhe bot/credencial A; nenhuma sessão/texto/saída B. Sessão estrangeira falha antes do HTTP externo. |
-| REG-SEC-02 | Replay sequencial e dez duplicatas concorrentes x3 por Meta/Evolution: uma Message, um unread e uma ação downstream; controle negativo com mesmo externalMessageId em dois recursos aceita ambos. Sem ID rejeita; echo OUT não vira IN. |
+| REG-SEC-02 | Replay sequencial e dez duplicatas concorrentes x3 por Meta/Evolution: uma Message, um unread e uma ação downstream; controle negativo com mesmo externalMessageId em dois recursos aceita ambos. Sem ID rejeita; echo OUT não vira IN; echo e sender reconciliam a mesma linha conforme REG-SEC-11. |
 | REG-SEC-03 | Mensagem Evolution antes da confirmação do número retorna503 e não persiste conteúdo/raw, Message, unread, realtime ou bot; ownPhone divergente409 mantém quarentena. Número correto permite retry idempotente; sem promessa de replay. LID sem telefone comprovado rejeita. |
 | REG-SEC-04 | Evento Meta criado sob recurso de A; remover vínculo preserva owner; tentar vincular mesmo recurso a B retorna409; evento tardio não afeta B/receipt/bot. Reativar somente mesma BU. |
 | REG-SEC-05 | GET QR não chama provider; POST pair sem anti-CSRF rejeita antes da chamada; ADMIN com header válido usa lease/generation e budget. |
@@ -102,3 +102,14 @@ Casos planejados, nenhum executado. Fixtures de dois tenants e recursos distinto
 | REG-SEC-09 | Code/PIN transitórios saem do formulário apenas via BFF HTTPS; não há browser storage/URL/retorno/trace; cifra candidata e ativa rejeitam tamper, purpose/BU/attempt/version incorretos e keyId ausente. |
 
 Limitação explícita: vencedor publica realtime/aciona bot após commit; crash nessa janela pode deixar efeito ausente. Não é claim exactly-once externo nem autorização para replay automático de automação. Esse risco constará do runbook de validação.
+
+## Resoluções da crítica independente — casos discriminantes adicionais
+
+| Caso | Cenário / expectativa obrigatória |
+| --- | --- |
+| REG-SEC-10 | Começar com canal Evolution comprovado X, executar RENEW com barrier no HTTP: proof invalidada antes da chamada. Nova instância tem nome channelId+epoch; retries reutilizam essa instância. Mensagem da nova rodada antes da prova, open/wuid=X antigo e conclusão de verify antigo não restauram aceitação nem persistem conteúdo/raw/unread/realtime/bot. Identidade nova Y fica em quarentena; consulta nova da instância atual com X permite replay aceito uma vez. Não satisfazer com fixture inicialmente não verificada. |
+| REG-SEC-11 | Stub Evolution entrega webhook autenticado fromMe DENTRO de enviarTexto e só depois retorna o mesmo externalId. BFF e público retornam o mesmo Message.id e só uma OUT física scoped ao recurso, com conteúdo/autoria humana correta, zero IN/unread/bot. Repetir sender-first e ecos concorrentes; recurso distinto com mesmo ID é independente. Typebot usa o mesmo owner para gravar OUT/autoria, com sequência equivalente quando esse provider emite echo. Checar identificador não secreto da credencial/recurso na porta externa e triggers/sessões reais no PostgreSQL; mocks sem predicado não bastam. |
+| REG-SEC-12 | Segredo Evolution fictício na URL atravessa o gateway real: access/error/application logs e artefatos não contêm path/query/token. Exercitar request válido e erro. Requisito de segredo já declarado, não claim de teste executado. |
+| REG-SEC-13 | Meta batch assinado contém recursos de duas BUs e recurso desconhecido/retirado. Cada raw record só tem fragmentos do owner verificado; partes não verificadas só metadados. Nenhum conteúdo cru global ou de outro tenant; assinatura original validada antes da partição. |
+
+Não há garantia de sequenciamento para mensagens distintas simultâneas no Typebot; o contrato de replay diz respeito à mesma mensagem externa. Nenhum worker/fila/retry de envio é autorizado por estes testes.
