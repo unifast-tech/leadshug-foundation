@@ -23,7 +23,7 @@ Use a separate LeadsHug test project/network/volumes. Provide the API, Web, gate
 
 `evoapicloud/evolution-api:v2.3.7@sha256:1bd8afc4a6cf48822e6cf02469aeae7bd35a12a6b616eacd1291926307f4d339`
 
-The planned gateway port is 8082, configurable. Resolve conflicts before startup and record actual handles. UI, API, realtime and callbacks share the same origin. Forward the routes actually used by the implemented app, including WebSocket upgrade and original Meta webhook bytes. Do not add an interactive authentication wall to provider callbacks.
+The initial planned gateway port8082 was found occupied by another project's listener during read-only preflight;3000 and55433 are also occupied. Preserve those resources. Use configurable default8083 for the isolated gateway only after verifying it is free immediately before startup, and record actual handles. The two existing disposable onboarding PG containers are separate checkpoint resources, not permission to attach other systems. UI, API, realtime and callbacks share the same origin. Forward the routes actually used by the implemented app, including WebSocket upgrade and original Meta webhook bytes. Do not add an interactive authentication wall to provider callbacks.
 
 Gateway access/error logs and application errors must omit the Evolution secret path and Meta query token on success and failure. Exercise both through the actual gateway using fictitious secrets and inspect resulting logs. A safe access format alone does not prove error-log redaction.
 

@@ -1,0 +1,59 @@
+{
+  "kind": "root-diagnostic-findings",
+  "date": "2026-10-15",
+  "scope": "checkpoint3 Web; source inspection only, not formal delivery review or browser evidence",
+  "source_manifest": "checkpoint3-web-source-hashes.sha256",
+  "disposition": "Integrated into serialized Web remediation; verification pending",
+  "findings": [
+    {
+      "id": "WEB-ROOT-01",
+      "severity": "high",
+      "classification": "release-blocker",
+      "evidence": "src/componentes/CadastroNumero.tsx invalidate(), iniciar(), SDK effect dependencies",
+      "problem": "Reservation clears sdkReady after SDK loaded; unchanged effect dependencies leave the Meta authorization button disabled.",
+      "required_proof": "Real-backend browser reserves official attempt, then enabled button synchronously invokes provider SDK port from click."
+    },
+    {
+      "id": "WEB-ROOT-02",
+      "severity": "high",
+      "classification": "release-blocker",
+      "evidence": "CadastroNumero confirmar() expects direct TentativaNumero; NumberRegistrationService.confirm() returns {registration: DTO}, controller forwards it",
+      "problem": "Successful confirmation replaces attempt with a wrapper lacking id/state, breaking stage rendering and subsequent actions.",
+      "required_proof": "Real BFF confirmation renders pending receipt and advances correct persisted attempt."
+    },
+    {
+      "id": "WEB-ROOT-03",
+      "severity": "medium",
+      "classification": "release-blocker",
+      "evidence": "CadastroNumero showWizard()/close; safe channel.currentAttemptId unused",
+      "problem": "Close automatically cancels durable partial registration; reload has no resume path.",
+      "required_proof": "Close/reload resumes authorized partial attempt with server options; no secret persisted. Pending authorization without nonce exposes deliberate safe restart."
+    },
+    {
+      "id": "WEB-ROOT-04",
+      "severity": "medium",
+      "classification": "release-blocker",
+      "evidence": "Numeros polls only BU list; CadastroNumero only GETs attempt immediately after pair/actions",
+      "problem": "Webhook progression updates channel projection while wizard attempt remains stale.",
+      "required_proof": "Normal provider webhook advances displayed current attempt; old response cannot update after close/BU switch/unmount."
+    },
+    {
+      "id": "WEB-ROOT-05",
+      "severity": "medium",
+      "classification": "release-blocker",
+      "evidence": "CadastroNumero iniciar() creates crypto.randomUUID() for every submit",
+      "problem": "Response-loss retry of same atomic new-BU registration gets a new idempotency key and can duplicate the reservation intent.",
+      "required_proof": "Drop first real BFF response after commit; same intent retries same key and returns one BU/channel/attempt. Changed intent gets fresh key."
+    },
+    {
+      "id": "WEB-ROOT-06",
+      "severity": "medium",
+      "classification": "release-blocker",
+      "evidence": "MetaHttpClient.recursos(token,wabaId,after) returns selected WABA only; carregarOpcoes replaces entire options",
+      "problem": "Loading numbers removes the other authorized WABA choices.",
+      "required_proof": "Multi-WABA browser selection can load and switch WABA without accepting stale numbers/cursor."
+    }
+  ],
+  "additional_probe": "SDK callback must be generation/attempt correlated and duplicate popup blocked; bounded JSON-string/object messages must reject malformed/untrusted origin without logging payload. Meta primary SDK page retrieval returned429; no real-SDK certification claimed.",
+  "remaining_gates": "Real-backend Playwright, FRC/BCI, independent delivery/security/adherence/test quality reviews, runtime and external provider evidence."
+}

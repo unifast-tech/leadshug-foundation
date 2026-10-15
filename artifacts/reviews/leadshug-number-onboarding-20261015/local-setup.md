@@ -31,7 +31,7 @@ O token global `WHATSAPP_TOKEN` não será usado como credencial de cliente nem 
 
 ## HTTPS e callback
 
-O gateway local planejado usa porta8082 configurável e entrega UI, API, WebSocket e webhooks pela mesma origem. A exposição externa ocorrerá depois de conferir o build servido e a autenticação local. Nenhum DNS ou túnel persistente foi criado.
+O gateway local planejado usa porta8083 configurável (8082 já está ocupada por outro projeto) e entrega UI, API, WebSocket e webhooks pela mesma origem. Sua disponibilidade será checada antes do startup. A exposição externa ocorrerá depois de conferir o build servido e a autenticação local. Nenhum DNS ou túnel persistente foi criado.
 
 Uma opção para teste é um Quick Tunnel temporário: ele fornece uma URL HTTPS gerada e termina quando o processo é encerrado. Não exige domínio/conta Cloudflare e muda de hostname a cada execução. Não tem garantia de disponibilidade; não representa publicação em produção. [Documentação oficial](https://developers.cloudflare.com/tunnel/get-started/quick-tunnels/).
 

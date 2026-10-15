@@ -1,0 +1,129 @@
+{
+  "frozen_at_utc": "2026-10-15T17:49:32.151843+00:00",
+  "packet_path": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/web-checkpoint-packet-v1.md",
+  "packet_sha256": "df4bb1403d1b5e64d30685d33ca48eb3f9204d8d8bb26feae9e41f29274a8b50",
+  "packet_bytes": 221007,
+  "packet_lines": 2898,
+  "file_count": 17,
+  "files": [
+    {
+      "path": "foundation_documentation/project_constitution.md",
+      "original_sha256": "f9b8d3397a4f78c74f4c29739eb509d12bfc9ccda84a50fed718bfe7a668566a",
+      "bytes": 4345,
+      "packet_start_line": 10,
+      "packet_end_line": 84
+    },
+    {
+      "path": "foundation_documentation/todos/active/features/TODO-leadshug-channel-connection-readiness.md",
+      "original_sha256": "444772a8eeca903e4fd9e6ceffd4435d99c8531633ca6cb4fa51ec7d0d48db1e",
+      "bytes": 106846,
+      "packet_start_line": 85,
+      "packet_end_line": 1021
+    },
+    {
+      "path": "foundation_documentation/modules/integrations-and-channels.md",
+      "original_sha256": "66d6a57429ae78e6dcc1ed8af70de2723e256c9deff70e1a073e83b9db2018bc",
+      "bytes": 18573,
+      "packet_start_line": 1022,
+      "packet_end_line": 1103
+    },
+    {
+      "path": "foundation_documentation/modules/identity-and-tenancy.md",
+      "original_sha256": "604371cc509981d4561ce3cf404857990e5d30126ea04bda2a766aa0eeee1c91",
+      "bytes": 2014,
+      "packet_start_line": 1104,
+      "packet_end_line": 1137
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/root-web-checkpoint3-findings.json",
+      "original_sha256": "56a3850b19034074529cea3acd95abf8f2dbc4e0392005bbe7abc3c8606d6684",
+      "bytes": 3730,
+      "packet_start_line": 1138,
+      "packet_end_line": 1203
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/checkpoint4-web-handoff.md",
+      "original_sha256": "c46db97317b9a937e1ae93de93d5259ed91b9d0c0a721470e6b2ca4f7cd4b81f",
+      "bytes": 3338,
+      "packet_start_line": 1204,
+      "packet_end_line": 1243
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/checkpoint4-web-source-hashes.sha256",
+      "original_sha256": "1365c2ccbd9196e168215fe2d192e5bf9ecfab107346cbafb4e194d2ab36752d",
+      "bytes": 529,
+      "packet_start_line": 1244,
+      "packet_end_line": 1256
+    },
+    {
+      "path": "web-app/src/telas/Numeros.tsx",
+      "original_sha256": "1ed2b572f1d30f2e9e169111a4254cf9691fd36b89ff5861dbf7c43c66c59bd7",
+      "bytes": 2861,
+      "packet_start_line": 1257,
+      "packet_end_line": 1324
+    },
+    {
+      "path": "web-app/src/componentes/CadastroNumero.tsx",
+      "original_sha256": "b10b0c138b3c9e736e6eb191c05428956f4c3c619f2ae4001839c17edba97417",
+      "bytes": 31661,
+      "packet_start_line": 1325,
+      "packet_end_line": 1819
+    },
+    {
+      "path": "web-app/src/cadastroNumero.ts",
+      "original_sha256": "cb54451f13ab38b862dfded64d402dedd6dec073b91befc6c1a875c2f82e1c4c",
+      "bytes": 4204,
+      "packet_start_line": 1820,
+      "packet_end_line": 1927
+    },
+    {
+      "path": "web-app/src/cadastroNumero.spec.ts",
+      "original_sha256": "d1d9a67cfc176861f57c1277fe0e38029f75bde3ec4d7a1190ddd793228de57a",
+      "bytes": 3033,
+      "packet_start_line": 1928,
+      "packet_end_line": 1984
+    },
+    {
+      "path": "web-app/src/api.ts",
+      "original_sha256": "99259de1c09b61d5ded00f7bbd8f2254db10ac3e58ff1b693fb4659d60b3a1f8",
+      "bytes": 10093,
+      "packet_start_line": 1985,
+      "packet_end_line": 2252
+    },
+    {
+      "path": "web-app/src/api.spec.ts",
+      "original_sha256": "578f78142ff110322ddb4b5f0e86a4f7b66c5bbdf70311a28f91f57cb2f41a4a",
+      "bytes": 5721,
+      "packet_start_line": 2253,
+      "packet_end_line": 2383
+    },
+    {
+      "path": "web-app/src/config.ts",
+      "original_sha256": "ca30d02d04774b79d6e62715c83c49dd23f1db02f0b49ec6781634acbf09befb",
+      "bytes": 1952,
+      "packet_start_line": 2384,
+      "packet_end_line": 2436
+    },
+    {
+      "path": "web-app/src/App.tsx",
+      "original_sha256": "2562715676e2c06d1eab190b1739becae8bc5a9f24eacc47036566c11945236a",
+      "bytes": 12123,
+      "packet_start_line": 2437,
+      "packet_end_line": 2754
+    },
+    {
+      "path": "web-app/package.json",
+      "original_sha256": "fc9083821e246d50c080f409b3590902b033041231d1688c04c4140f097818de",
+      "bytes": 701,
+      "packet_start_line": 2755,
+      "packet_end_line": 2789
+    },
+    {
+      "path": "web-app/playwright.config.ts",
+      "original_sha256": "d69c084d15cfef29ad23851036cb90309c60aa7a7b16c6810e3ae9b0adbbdd98",
+      "bytes": 4610,
+      "packet_start_line": 2790,
+      "packet_end_line": 2898
+    }
+  ]
+}

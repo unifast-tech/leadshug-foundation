@@ -1,0 +1,35 @@
+
+> @leadshug/web@0.1.0 build
+> tsc -b && vite build
+
+vite v5.4.21 building for production...
+transforming...
+✓ 57 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                   0.69 kB │ gzip:  0.44 kB
+dist/assets/index-wuzy3kMN.css    8.32 kB │ gzip:  2.39 kB
+dist/assets/index-dL7ykH7I.js   244.93 kB │ gzip: 75.82 kB
+✓ built in 1.46s
+npm notice
+npm notice New major version of npm available! 10.9.9 -> 12.2.0
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.0
+npm notice To update run: npm install -g npm@12.2.0
+npm notice
+
+> @leadshug/web@0.1.0 test
+> vitest run
+
+
+ RUN  v2.1.9 /app
+
+ ✓ src/timeline.test.ts (2 tests) 3ms
+ ✓ src/cadastroNumero.spec.ts (4 tests) 4ms
+ ✓ src/tempoReal.spec.ts (6 tests) 7ms
+ ✓ src/api.spec.ts (13 tests) 51ms
+
+ Test Files  4 passed (4)
+      Tests  25 passed (25)
+   Start at  17:46:33
+   Duration  556ms (transform 492ms, setup 0ms, collect 593ms, tests 65ms, environment 1ms, prepare 396ms)
+

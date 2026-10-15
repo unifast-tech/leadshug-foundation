@@ -18,6 +18,8 @@ Execução autorizada: [aprovação registrada](evidence/approval-20261015.json)
 
 Atualização de execução: [checkpoint2 API](evidence/checkpoint2-api-handoff.md) encerrado para revisão com build/lint,130 testes unitários e234 E2E PostgreSQL passando,20 migrations aplicadas e42 hashes conferidos. O [pacote imutável de revisão API](evidence/api-checkpoint-packet-v1.md) não substitui os gates finais. [Checkpoint3 Web](evidence/checkpoint3-web-handoff.md) concluiu build e23 testes unitários; revisão de fonte encontrou bloqueios de SDK, retomada/refresh e formato da confirmação. Remediação Web serializada em curso nos mesmos paths; browser real-backend, REG-SEC/PCV, runtime e prova externa continuam pendentes. Nenhum checkpoint concede aceite geral.
 
+Estado posterior: a [revisão API v1](api-checkpoint-review-v1.json) pediu revisão com18 achados (5high/12medium/1low); root aceitou todos no contrato vigente, ainda abertos no ledger do TODO. [Checkpoint4 Web](evidence/checkpoint4-web-handoff.md) encerrou correções com build/25 testes e hashes conferidos, aguardando prova de browser e [revisão diagnóstica Web](evidence/web-checkpoint-packet-v1.md) independente. API reassume como único writer de produto para remediação, testes adversariais e fixtures. DevOps fez somente preflight; gateway planejado ajustado de8082 ocupada para8083 configurável, sem alterar recursos existentes. Nenhum claim de canal operante, aceite geral ou produção pronta.
+
 A validação estrutural v3 inicial encontrou um cabeçalho com prefixo de formatação incorreto na seção de coerência; corrigido sem mudar escopo. O recibo v3-corrected é o resultado PASS vigente; o primeiro resultado permanece como histórico.
 
 Fontes primárias consultadas em2026-10-15:

@@ -1,0 +1,294 @@
+{
+  "schema_version": "subagent-review-result-v1",
+  "artifact_kind": "subagent_review_result",
+  "dispatch_path": "/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/api-checkpoint-dispatch-v1.json",
+  "review_kind": "architecture_adherence",
+  "reviewer_label": "fresh-independent-api-checkpoint-v1",
+  "overall_assessment": "Bounded API checkpoint review before Web/runtime integration: request changes. The scoped credential resolver, encrypted candidate/active separation, immutable resource owner and PostgreSQL keyed acceptance follow the approved direction, but concrete identity-promotion, operation-fence, cleanup and readiness defects remain. The API protection harness is also incomplete. Resolve the material findings and refreeze the API before treating it as integration-ready. This is not final TODO approval, a delivery review, a security/PCV gate pass, or a claim about external provider readiness. Complete-input attestation: I read the COMPLETE frozen packet, lines 1 through 9929, all 68 frozen file snapshots, the governing decisions/contracts, validation limitations and untouched auth/caller/bootstrap context. Any initially truncated tool read was reread completely; no input prefix was substituted for the full packet. Packet SHA-256 a5113ac1fd729cfc1ba902bc3b667b7b6c32818e4dbab9534028c00f5d50992a, 572226 bytes, was verified before and after reading. Findings are based on static analysis of that snapshot; I ran no product tests, network/provider calls, source edits, worktrees, persistent goals or child agents. The reported build/lint/130-unit/234-E2E/20-migration results are acknowledged as supplied evidence, not as proof of the missing adversarial cases. Historical fixed-in-plan dispositions were treated as contractual resolutions only.",
+  "recommended_path": "revise",
+  "performance_position": "mixed",
+  "elegance_position": "mixed",
+  "structural_soundness_position": "mixed",
+  "operational_fit_position": "mixed",
+  "findings": [
+    {
+      "finding_id": "NUM-API-01",
+      "severity": "high",
+      "category": "security",
+      "formalizable_hint": "partial",
+      "candidate_rule_level": "project",
+      "title": "Require the BU phone CAS to succeed before promoting channel identity",
+      "rationale": "api-app/src/domain/channels/number-registration.service.ts:304-307 and api-app/src/domain/channels/channels.service.ts:217-221,269-274 promote ownNumberVerified while ignoring the result of UPDATE business_units WHERE phone IS NULL. The phone comparison uses a snapshot read before the transaction. With an initially unnumbered BU, official confirmation observes X and Evolution pairing/verification observes Y; both read phone=null, and their independent per-channel leases allow both to proceed. Whichever phone CAS loses still commits verified trust, mapping and, for Meta, the active credential. After receipts the same BU can have two verified transports for different own numbers, violating D-01/D-06 and potentially mixing their conversations and permanently reserving the wrong resource owner.",
+      "suggested_action": "Validate the current canonical phone atomically inside every identity-promotion transaction. Require a successful null-to-number CAS or a fresh equality check; abort/quarantine on a competing different number before committing trust or credential promotion. Add a PostgreSQL barrier case where both transports read an empty BU then return different own numbers, and require only one number to become verified. Include the equal-number positive control.",
+      "affected_paths": [
+        "api-app/src/domain/channels/number-registration.service.ts",
+        "api-app/src/domain/channels/channels.service.ts",
+        "api-app/test/number-onboarding-flow.e2e-spec.ts"
+      ]
+    },
+    {
+      "finding_id": "NUM-API-02",
+      "severity": "high",
+      "category": "security",
+      "formalizable_hint": "partial",
+      "candidate_rule_level": "project",
+      "title": "Make current-attempt, credential-version and operation fencing atomic at promotion",
+      "rationale": "api-app/src/domain/channels/number-registration.service.ts:287-305 reads the current channel and active credential version, then updates the channel by id and upserts the credential without an atomic currentAttemptId/generation/lease-token predicate. Once the 45-second lease expires, attempt B can claim currentAttemptId after A reads it but before A writes. A then promotes its stale candidate and changes generation while B remains the current attempt. The earlier reads and the final get() can detect staleness only after these writes have committed. Likewise channels.service.ts:217-221 ignores the result of its identity lock query and promotes pairing proof without checking reservation.leaseToken or reservation.attemptId. This defeats the explicit D-03/D-04/D-06 CAS guarantee and can overwrite the current credential/trust decision.",
+      "suggested_action": "Use checked CAS writes or appropriately ordered row locks so the current attempt, generation/epoch, active credential version and operation token are validated through the promotion commit. Preserve the no-HTTP-in-transaction rule and reject stale completions without partial writes. Add a barrier after A reads the channel, expire its lease, let B claim the channel, then release A; assert no stale credential/generation/trust promotion. Repeat for a pairing proof after another operation replaces its token.",
+      "affected_paths": [
+        "api-app/src/domain/channels/number-registration.service.ts",
+        "api-app/src/domain/channels/channels.service.ts",
+        "api-app/test/number-onboarding-flow.e2e-spec.ts"
+      ]
+    },
+    {
+      "finding_id": "NUM-API-03",
+      "severity": "high",
+      "category": "structural_soundness",
+      "formalizable_hint": "partial",
+      "candidate_rule_level": "project",
+      "title": "Removal can bypass a newly acquired channel operation lease",
+      "rationale": "api-app/src/domain/channels/channels.service.ts:290-298 checks operationLeaseUntil with an unlocked read and later deletes the channel without a lease condition. Pause DELETE after that read, let pairing or verification acquire and commit a live lease, then resume DELETE: it can detach the new mapping and delete the channel while the other operation is in provider I/O. Pairing revalidates only session/grant after I/O, so it can continue creating an instance and return a QR for the deleted channel. The advertised single operation fence therefore does not serialize deletion with provider work, even without waiting for lease expiry.",
+      "suggested_action": "Atomically claim/check the removal fence before detaching identity or deleting, using the same consistent lock order as pairing, verification and ingress. Recheck the operation token/current mapping before subsequent provider effects and result projection. Add a deterministic DELETE-versus-pair/verify barrier at the lease-read boundary; one operation must receive the safe busy/stale outcome, and no provider instance or QR may be produced for a deleted channel.",
+      "affected_paths": [
+        "api-app/src/domain/channels/channels.service.ts",
+        "api-app/test/number-onboarding-flow.e2e-spec.ts"
+      ]
+    },
+    {
+      "finding_id": "NUM-API-04",
+      "severity": "high",
+      "category": "operational_fit",
+      "formalizable_hint": "partial",
+      "candidate_rule_level": "project",
+      "title": "Successful renewal cleanup leaves the replacement instance permanently uncreated",
+      "rationale": "In api-app/src/domain/channels/channels.service.ts:125-143, RENEW reserves the next epoch/name and mapping before cleanup. completePairing():160-176 deletes the previous instance, clears pendingCleanupInstanceName and returns CLEANUP_COMPLETED_RETRY_PAIR without creating the replacement. On the next pair request, canResume is true; lines179-183 query the new name, receive an ordinary not-found result because it has never been created, label it CREATE_AMBIGUOUS and return. criarInstancia is only called when resume=false, so repeated retries cannot complete normal renewal. test/helpers.ts:51 masks this by fabricating an open instance for every queried name.",
+      "suggested_action": "Persist enough stage information to distinguish a reserved-but-never-created replacement from an ambiguous create. After successful cleanup, allow the bounded next round to create exactly the already reserved name, with read-before-retry where creation is ambiguous. Add a stateful provider-port fixture with an actual inventory: pair and verify epoch N, renew, confirm old cleanup, retry, and require exactly one creation of epoch N+1 with stable attempt/name across retries.",
+      "affected_paths": [
+        "api-app/src/domain/channels/channels.service.ts",
+        "api-app/test/helpers.ts",
+        "api-app/test/number-onboarding-flow.e2e-spec.ts"
+      ]
+    },
+    {
+      "finding_id": "NUM-API-05",
+      "severity": "high",
+      "category": "operational_fit",
+      "formalizable_hint": "partial",
+      "candidate_rule_level": "project",
+      "title": "A backfilled mapping is incorrectly sufficient to adopt or delete an existing instance",
+      "rationale": "api-app/prisma/migrations/20261015120000_number_onboarding_foundation/migration.sql:117-124 backfills every existing Evolution name as a BU resource identity, without proof that this installation created/manages that provider instance. channels.service.ts:121-165 treats that identity as cleanup ownership and deletes it on RENEW if a name lookup matches; desconectar():302-303 deletes a mapped name unconditionally. verificar():250-277 can also establish trust for a migrated epoch-0 instance without a LeadsHug pairing/create lifecycle. A local BU ownership tombstone establishes routing ownership, not authority to adopt or destroy an external runtime. This permits precisely the legacy adoption/removal excluded by the approved owner contract at integrations-and-channels.md:63.",
+      "suggested_action": "Require durable evidence from the installation-owned reservation/create/epoch lifecycle before adopting trust or performing destructive cleanup. Preserve backfilled BU ownership, but fail closed with explicit manual/pending recovery for unmanaged legacy mappings. Add a migrated-channel fixture pointing to an existing provider inventory entry: verify/renew/delete must not silently adopt it or call destructive cleanup; a newly created managed epoch must still support the approved cleanup flow.",
+      "affected_paths": [
+        "api-app/prisma/migrations/20261015120000_number_onboarding_foundation/migration.sql",
+        "api-app/prisma/schema.prisma",
+        "api-app/src/domain/channels/channels.service.ts",
+        "api-app/test/number-onboarding-flow.e2e-spec.ts"
+      ]
+    },
+    {
+      "finding_id": "NUM-API-06",
+      "severity": "medium",
+      "category": "adherence",
+      "formalizable_hint": "partial",
+      "candidate_rule_level": "project",
+      "title": "Connection events prevent retrying the same pending QR round",
+      "rationale": "channels.service.ts:110-112 permits canResume only while providerConnectionState equals PENDING. evolution.controller.ts:115-117 changes that dimension to CONNECTING or CONNECTED on ordinary connection.update events even before own-number proof. After such an event, INITIAL refresh/retry returns CHANNEL_SLOT_OCCUPIED, while RENEW falls into a new epoch/cleanup path although the original QR round is still unverified. This violates the D-06 requirement that pending QR retries reuse the same attempt/epoch/instance and can make a normal QR expiration impossible to recover without unnecessary replacement.",
+      "suggested_action": "Determine resumability from the durable pairing stage/current attempt and verified trust, keeping provider connection observations separate. Support retries of the current unverified round across valid connecting/open observations while preserving quarantine and epoch fencing. Test an initial unverified pairing, deliver connecting and open events, then refresh/retry: attempt, epoch and external name must remain identical and create must occur once.",
+      "affected_paths": [
+        "api-app/src/domain/channels/channels.service.ts",
+        "api-app/src/surfaces/webhooks/evolution.controller.ts",
+        "api-app/test/number-onboarding-flow.e2e-spec.ts"
+      ]
+    },
+    {
+      "finding_id": "NUM-API-07",
+      "severity": "medium",
+      "category": "operational_fit",
+      "formalizable_hint": "partial",
+      "candidate_rule_level": "project",
+      "title": "Unlinking forgets ambiguous provider cleanup before the next create",
+      "rationale": "channels.service.ts:290-303 deletes the BuChannel, including its pendingCleanupInstanceName, then suppresses every apagarInstancia failure and returns success. A timeout can leave the old managed instance alive, but the retained identity/attempt receives no cleanup outcome and subsequent INITIAL pairing for a recreated channel never reconciles it before creating another instance. Any already pending predecessor cleanup is also lost with the channel. The approved contract requires reconciliation of previous owned creation/retirement/cleanup before another external instance is created; local ingress tombstones alone do not satisfy that recovery rule.",
+      "suggested_action": "Retain a durable, safely projected cleanup reference/outcome on an approved retained identity/attempt lifecycle instead of losing it with the channel, and reconcile it before creating a replacement. Do not treat timeout as confirmed deletion or introduce a generic worker. Test DELETE timing out while the provider inventory retains the instance, followed by remove/recreate/pair; the next create must be fenced until safe cleanup reconciliation, while BU/conversation history remains intact.",
+      "affected_paths": [
+        "api-app/src/domain/channels/channels.service.ts",
+        "api-app/prisma/schema.prisma",
+        "api-app/test/number-onboarding-flow.e2e-spec.ts"
+      ]
+    },
+    {
+      "finding_id": "NUM-API-08",
+      "severity": "medium",
+      "category": "operational_fit",
+      "formalizable_hint": "yes",
+      "candidate_rule_level": "project",
+      "title": "An observed disconnect leaves the channel publicly connected and send-ready",
+      "rationale": "evolution.controller.ts:115-123 records close as providerConnectionState=DISCONNECTED but never changes ChannelStatus away from CONECTADO. channel-credential-resolver.ts:31 gates sends only on status and historical receipt, so the same disconnected channel remains send-ready. The public accounts projection at surfaces/public/conversations.controller.ts:53 also reports conectado=true. This is a concrete false-readiness path after a valid close event, not the acknowledged uncertainty of a timeout or absence of external proof.",
+      "suggested_action": "Project explicit close/connecting observations into honest current readiness/status, and ensure the sender resolver requires the applicable current provider connection state. Preserve separate historical receipt and identity dimensions rather than erasing unrelated evidence. Test a verified/receipt-ready channel receiving close: BFF/public projections must cease claiming connected and sending must not call the provider; an admissible later open observation should restore readiness consistently.",
+      "affected_paths": [
+        "api-app/src/surfaces/webhooks/evolution.controller.ts",
+        "api-app/src/domain/channels/channel-credential-resolver.ts",
+        "api-app/src/surfaces/public/conversations.controller.ts",
+        "api-app/test/webhooks.e2e-spec.ts"
+      ]
+    },
+    {
+      "finding_id": "NUM-API-09",
+      "severity": "medium",
+      "category": "security",
+      "formalizable_hint": "yes",
+      "candidate_rule_level": "project",
+      "title": "Official verification promotes trust without a returned own phone",
+      "rationale": "channels.service.ts:245-249 accepts any non-null MetaNumber object and assigns number.telefone, which is nullable in the port contract. The mismatch check at262 requires verifiedPhone to be truthy, and line272 then sets ownNumberVerified=true unconditionally. A provider page containing the selected id but omitting display_phone_number therefore bypasses the canonical-phone comparison and can restore trust from an incomplete observation. Confirmation correctly rejects a missing telefone; verification does not. D-01/D-07 require actual number identity, not merely an object with the requested id.",
+      "suggested_action": "Require a valid canonical own phone before promoting official identity, and leave incomplete observations pending without restoring quarantined trust or inventing provider readiness. Add provider-port cases returning the correct id with null/empty/malformed phone; assert no verified flag, BU phone write or connected promotion, and preserve any active credential.",
+      "affected_paths": [
+        "api-app/src/domain/channels/channels.service.ts",
+        "api-app/src/integrations/meta/meta.client.ts",
+        "api-app/test/number-onboarding-flow.e2e-spec.ts"
+      ]
+    },
+    {
+      "finding_id": "NUM-API-10",
+      "severity": "medium",
+      "category": "security",
+      "formalizable_hint": "partial",
+      "candidate_rule_level": "project",
+      "title": "Expired and superseded attempts retain their candidate secrets indefinitely",
+      "rationale": "number-registration.service.ts:390 only throws ATTEMPT_EXPIRED; get() does not expire or erase the candidate, and create():127-130 switches currentAttemptId without clearing the previous candidate/nonce. Once superseded, the previous attempt is rejected as stale and cannot be cancelled through the API. channels.service.ts:296 also detaches attempts on removal without erasing candidate fields. Thus an authorized-but-unpromoted token can remain encrypted in a permanently inaccessible expired/stale attempt, contrary to integrations-and-channels.md:55, which requires cancellation/expiry to eliminate the candidate and retain only safe metadata. Encryption does not implement that lifecycle deletion requirement.",
+      "suggested_action": "Atomically retire and wipe candidate envelope/nonce fields when attempts expire, are superseded, or are detached by removal, using the existing bounded lifecycle paths and preserving the active credential. Add expiry and A-to-B supersession cases with an already valid active credential: inspect all old attempt secret columns, require them empty, and prove the active credential/version is unchanged until a valid promotion.",
+      "affected_paths": [
+        "api-app/src/domain/channels/number-registration.service.ts",
+        "api-app/src/domain/channels/channels.service.ts",
+        "api-app/test/number-onboarding-flow.e2e-spec.ts"
+      ]
+    },
+    {
+      "finding_id": "NUM-API-11",
+      "severity": "medium",
+      "category": "adherence",
+      "formalizable_hint": "yes",
+      "candidate_rule_level": "project",
+      "title": "Concurrent same-key create can return slot conflict instead of the original attempt",
+      "rationale": "number-registration.service.ts:87-89 performs the idempotency lookup outside the reservation transaction. For an existing BU, pause request B after that lookup returns null, let A commit the same key/payload, then resume B. Its transaction sees the occupied slot at111-112 and throws CHANNEL_SLOT_OCCUPIED before reaching the idempotency unique constraint. The recovery catch at136 handles only Prisma P2002, so this valid concurrent replay returns409 rather than the original attempt/nonce. The sequential replay test does not distinguish this interleaving.",
+      "suggested_action": "Recheck/reconcile the tenant idempotency key at the transactional slot arbitration boundary or on the relevant conflict path, with the same payload/session/grant checks as replayCreate. Add a barrier-controlled same-key/same-payload existing-BU race requiring the same attempt and one physical reservation for both callers. Keep different-key slot conflict and same-key/different-payload409 as negative controls, and prove a new-BU race leaves no extra BU/grants.",
+      "affected_paths": [
+        "api-app/src/domain/channels/number-registration.service.ts",
+        "api-app/test/number-onboarding-flow.e2e-spec.ts"
+      ]
+    },
+    {
+      "finding_id": "NUM-API-12",
+      "severity": "medium",
+      "category": "adherence",
+      "formalizable_hint": "yes",
+      "candidate_rule_level": "project",
+      "title": "Technical-route exemptions remove the approved administrative audit trail",
+      "rationale": "domain/historico/cobertura.ts:61-83 declares create/authorize/confirm/advance/retry/cancel/pair/verify exempt, and the new registration service/controllers do not record their promised activities. The approved audit owner contract at modules/audit-and-history.md:17 explicitly requires actor, Mantenedora/BU, stage, correlation and safe catalogue error for cadastro/autorizar/confirmar/parear/verificar/cancelar. A mutable attempt row is not that trail: later stages overwrite earlier outcomes, and recovery/cancel/verify by a different current ADMIN does not replace the original attempt.userId. Credential-affecting actions can therefore lose the actual actor and history. No approved exception allows these exemptions.",
+      "suggested_action": "Implement the scoped, allowlisted administrative activity records required by the frozen contract and map the routes to actual catalogue coverage. Keep code/PIN/token/QR/provider bodies out of audit. Test stage progression, partial failure, cancellation and recovery by a second ADMIN; ActivityLog must preserve the correct actor/BU/attempt-stage correlation and safe error without secret markers.",
+      "affected_paths": [
+        "api-app/src/domain/historico/cobertura.ts",
+        "api-app/src/domain/channels/number-registration.service.ts",
+        "api-app/src/surfaces/bff/number-registrations.controller.ts",
+        "api-app/src/surfaces/bff/channels.controller.ts",
+        "foundation_documentation/modules/audit-and-history.md"
+      ]
+    },
+    {
+      "finding_id": "NUM-API-13",
+      "severity": "medium",
+      "category": "security",
+      "formalizable_hint": "yes",
+      "candidate_rule_level": "project",
+      "title": "URL redaction leaves protected secret parameter values in persisted raw data",
+      "rationale": "safe-redaction.ts:1 protects fields such as refresh_token, pin, password and secret, but URL_SECRET at2 covers a narrower vocabulary and the string path at14 performs only literal regex substitutions. A verified Evolution diagnostic containing data.callback=\"https://example.invalid/callback?refresh_token=FIXTURE_REFRESH&pin=123456\" persists both protected values through persistVerifiedDiagnostic. Percent-encoded names for otherwise protected parameters also bypass the regex. This breaches the approved recursive secret/URL-component redaction requirement; the current tests cover only an unencoded token query and the specific Evolution path.",
+      "suggested_action": "Apply the approved secret vocabulary consistently to decoded URL parameter names and other secret URL components without following any URL. Keep useful non-secret diagnostic components. Add both unit and real webhook-to-PostgreSQL cases with refresh-token/PIN and encoded protected query names, asserting fictitious markers are absent from stored raw data and safe error/DTO/audit projections.",
+      "affected_paths": [
+        "api-app/src/domain/channels/safe-redaction.ts",
+        "api-app/src/domain/channels/safe-redaction.spec.ts",
+        "api-app/src/surfaces/webhooks/evolution.controller.ts",
+        "api-app/test/webhooks.e2e-spec.ts"
+      ]
+    },
+    {
+      "finding_id": "NUM-API-14",
+      "severity": "medium",
+      "category": "performance",
+      "formalizable_hint": "partial",
+      "candidate_rule_level": "project",
+      "title": "Pairing and incoming acceptance acquire the channel and identity locks in reverse order",
+      "rationale": "parearNaoOficial() holds a BuChannel write lock after channels.service.ts:105-107 and then waits for provider_resource_identities FOR UPDATE at121. MessageAcceptanceService holds that identity FOR SHARE at179-185 and later writes the same BuChannel receipt at127-129. An incoming transaction paused after its identity check and a RENEW paused after its channel lease update form a direct wait cycle: renewal waits for the incoming identity lock while incoming waits for renewal's channel lock. PostgreSQL must abort one transaction; there is no bounded deadlock retry/translation here. This can turn a valid inbound or renewal into an unhandled failure under the exact overlap the approved BCI harness is meant to protect, and Evolution replay is not guaranteed.",
+      "suggested_action": "Use one consistent row-lock order across lease reservation, identity retirement and message acceptance, preserving the final identity-to-content commit fence and short transactions. Add a deterministic two-connection PostgreSQL overlap test at those lock boundaries. It must linearize an accepted pre-renewal message or reject a retired one without a deadlock/500, duplicate unread, or provider side effects from an aborted reservation.",
+      "affected_paths": [
+        "api-app/src/domain/channels/channels.service.ts",
+        "api-app/src/domain/inbox/message-acceptance.service.ts",
+        "api-app/test/number-onboarding-message-acceptance.e2e-spec.ts",
+        "api-app/test/number-onboarding-flow.e2e-spec.ts"
+      ]
+    },
+    {
+      "finding_id": "NUM-API-15",
+      "severity": "medium",
+      "category": "adherence",
+      "formalizable_hint": "partial",
+      "candidate_rule_level": "project",
+      "title": "An OUT with no provider message ID has no durable pending/error outcome",
+      "rationale": "conversations.service.ts:208-209 sends first and throws EXTERNAL_MESSAGE_ID_MISSING before recording an OUT when the provider returns no id. incoming.service.ts:91-92 silently continues for the equivalent Typebot result; the enclosing registrar() still succeeds and no OUT/error record survives. The external send may already have happened. The approved acceptance contract at integrations-and-channels.md:65 explicitly retains a pending/error local outcome when no externalId is confirmed, while forbidding invented IDs, automatic resend and a deduplication guarantee for such a result. The current behavior loses the attempted output, especially silently for automation.",
+      "suggested_action": "Retain the explicit local pending/error outcome required for an ambiguous ID-less OUT, with the captured scoped resource/caller and no invented external ID, automatic resend, outbox or new worker. Preserve safe BFF/public error contracts and make Typebot failure observable. Test successful provider responses with null/blank IDs through BFF, public and Typebot callers; require a durable safe outcome and zero automatic extra send calls.",
+      "affected_paths": [
+        "api-app/src/domain/inbox/conversations.service.ts",
+        "api-app/src/domain/inbox/incoming.service.ts",
+        "api-app/src/domain/inbox/message-acceptance.service.ts",
+        "api-app/test/atendimento.e2e-spec.ts",
+        "api-app/test/api-publica.e2e-spec.ts"
+      ]
+    },
+    {
+      "finding_id": "NUM-API-16",
+      "severity": "medium",
+      "category": "tests",
+      "formalizable_hint": "yes",
+      "candidate_rule_level": "project",
+      "title": "The API checkpoint lacks discriminating tenant, caller, ingress and reauthorization protection tests",
+      "rationale": "The supplied acceptance E2E at number-onboarding-message-acceptance.e2e-spec.ts:43-51 uses two direct service calls, and its echo-first case at65-90 calls acceptance directly rather than delivering an authenticated echo from inside a real sender port. incoming.typebot.integration.spec.ts returns preselected bot/session rows from mocks, so its assertions do not exercise PostgreSQL tenant predicates. helpers.ts:19,21-23,38-40 uses a shared token and discards the resource/token arguments, while consultarInstancia():51 fabricates every queried instance. The supplied API evidence therefore does not discriminate foreign Typebot trigger/session selection, wrong scoped credential/resource, actual sender/echo overlap, pre-identity or in-flight retirement rejection, mixed-owner Meta raw partitioning, or preservation of an already active credential during a failed candidate. These omissions are acknowledged in the handoff; this finding records an API protection gap before consumer integration, not a false claim that the final PCV gate passed.",
+      "suggested_action": "Add the frozen REG-SEC API cases using real Nest/session/grants/PostgreSQL and only external ports substituted: two tenants with competing global triggers plus a foreign session and distinct non-secret credential/resource markers; Evolution fromMe delivered INSIDE enviarTexto before its same externalId returns through BFF and public routes, then sender-first/concurrent echoes with one physical OUT, stable id/createdAt, correct authorship and zero IN/unread/bot; per-provider replay with the same-ID/different-resource control and missing-ID rejection; old webhook paused after lookup across RENEW/remove-recreate plus signed mixed-owner/retired Meta raw; valid-active reauthorization mismatch/cancel/expiry and post-provider session/grant revocation barriers. Keep gateway/browser/real-device proof in their separately acknowledged phases.",
+      "affected_paths": [
+        "api-app/test/helpers.ts",
+        "api-app/test/number-onboarding-flow.e2e-spec.ts",
+        "api-app/test/number-onboarding-message-acceptance.e2e-spec.ts",
+        "api-app/src/domain/inbox/incoming.typebot.integration.spec.ts",
+        "api-app/test/atendimento.e2e-spec.ts",
+        "api-app/test/api-publica.e2e-spec.ts",
+        "api-app/test/webhooks.e2e-spec.ts"
+      ]
+    },
+    {
+      "finding_id": "NUM-API-17",
+      "severity": "medium",
+      "category": "tests",
+      "formalizable_hint": "yes",
+      "candidate_rule_level": "project",
+      "title": "Legacy409 assertions no longer prove the positive module and channel contracts",
+      "rationale": "test/modulos.e2e-spec.ts:23-29 still calls the retired /channels route. The cases at107-110 and125-130 titled as successful unofficial connection and official product floor assert only409 USE_NUMBER_REGISTRATIONS. They would pass if the new registration/pairing path rejected every legitimate user. Likewise canais.e2e-spec.ts:95-100 claims one channel of each type and duplicate-slot rejection while issuing only legacy409 calls and asserting zero channels. The frozen TODO explicitly admits these files for corresponding positive tests, preserves module404 negatives, and records that this gap is not waived. The new happy workflow always enables the unofficial installation ceiling, so it does not replace the official-floor matrix.",
+      "suggested_action": "Keep retirement compatibility assertions as their own cases, then exercise the new registration/pairing contracts for positive official operation with the unofficial module disabled, positive unofficial operation with ceiling plus contract, and one-per-type/duplicate-slot behavior. Preserve the required ceiling/contract404 negatives and assert database state plus provider-port counters, rather than titles or only legacy status codes.",
+      "affected_paths": [
+        "api-app/test/modulos.e2e-spec.ts",
+        "api-app/test/canais.e2e-spec.ts",
+        "api-app/test/number-onboarding-flow.e2e-spec.ts"
+      ]
+    },
+    {
+      "finding_id": "NUM-API-18",
+      "severity": "low",
+      "category": "security",
+      "formalizable_hint": "yes",
+      "candidate_rule_level": "project",
+      "title": "Pre-identity diagnostics persist arbitrary connection-state content",
+      "rationale": "evolution.controller.ts:41-42 copies any string from unverified body.data.state into the supposedly safe metadata payload before tratarConexao() checks its known vocabulary at108-109. For an unverified current instance, connection.update with state=\"SENSITIVE_FIXTURE_MARKER\" is stored verbatim even though it is not a recognized state and no own-number identity has been proved. The generic redactor has no basis to remove that value. This is a narrow raw-data violation of the allowlisted pre-identity metadata contract; message/unread/bot gating itself still remains closed.",
+      "suggested_action": "Normalize pre-identity state metadata to the explicit supported state vocabulary or a fixed safe pending/unknown catalogue value before persistence. Add a malformed-state marker case for an unverified current instance and assert the marker is absent from webhook_events while no Message, unread, realtime or bot effect occurs.",
+      "affected_paths": [
+        "api-app/src/surfaces/webhooks/evolution.controller.ts",
+        "api-app/test/webhooks.e2e-spec.ts"
+      ]
+    }
+  ]
+}

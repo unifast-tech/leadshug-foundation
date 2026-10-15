@@ -41,7 +41,7 @@ Proposta ST-CON-01: jornada de cadastro de número, com infraestrutura local est
 
 - **Current delivery stage:** Pending
 - **Qualifiers:** none
-- **Next exact step:** revisão independente da API congelada e preparação Web isolada, sem alterar API/fixtures/runtime; depois adjudicar achados e serializar integração browser/DevOps.
+- **Next exact step:** concluir remediação Web e parar esse writer; então executor API corrige NUM-API-01..18 e fortalece harness/fixtures, antes da integração browser e runtime DevOps serializados.
 
 ## Active Work State (Required While TODO Remains In `active/`)
 
@@ -373,9 +373,10 @@ Register: `foundation_documentation/artifacts/dependency-readiness.md`.
 
 | From Profile | To Profile | Why the Handoff Exists | Touched Surfaces | Status / Evidence |
 | --- | --- | --- | --- | --- |
-| strategic-cto | operational-coder | Implementar somente contrato aprovado. | API/Web/canon owner | active; aprovação/authority go registrados, checkpoint1 concluído e checkpoint2 API em execução. |
-| operational-coder | assurance-security-adversarial | Revisar correção/segurança/aderência da API antes da integração do consumidor. | Pacote API congelado e relatório, somente leitura de produto | active; routing-api-checkpoint-review-v1 go; writer API parado, revisão não equivale ao gate final. |
-| operational-coder | operational-devops | Configurar e provar callback/target de teste se necessário. | Compose local/variáveis/callback e instância própria | planned; target local confirmado, nenhuma infraestrutura alterada. |
+| strategic-cto | operational-coder | Implementar somente contrato aprovado. | API/Web/canon owner | active; API remedia NUM-API-01..18 após checkpoint4 Web parado; routing-api-remediation go. |
+| operational-coder | assurance-security-adversarial | Revisar correção/segurança/aderência da API antes da integração do consumidor. | Pacote API congelado e relatório, somente leitura de produto | completed-diagnostic; api-checkpoint-review-v1.json terminal,18 achados aceitos abertos; não equivale ao gate final. |
+| operational-coder | assurance-tester-quality | Diagnosticar UI corrigida antes de integração browser. | Pacote Web imutável, relatório somente | active-diagnostic; routing-web-review-v1 go; Web parado, pacote17snapshots SHA256df4bb1403d1b5e64d30685d33ca48eb3f9204d8d8bb26feae9e41f29274a8b50; não substitui TQA/gates finais. |
+| operational-coder | operational-devops | Configurar e provar callback/target de teste se necessário. | Compose local/variáveis/callback e instância própria | preflight read-only delegado após checkpoints2/3; runtime-handoff.md governa paths e isolamento. Nenhuma edição/startup antes do stop do writer Web e handoff explícito do root. |
 
 ## Complexity
 
@@ -770,9 +771,35 @@ Achados exatos preservados em planning-architecture.json. `fixed-in-plan` signif
 | NUM-DELTA-OBS-01 | low | by-design/no-action | enforce-existing-requirement | Fence até commit já exigido; barrier do webhook em voo concretiza BCI | covered-in-plan | Delta v3; REG-SEC-10, nota de execução |
 | NUM-DELTA-OBS-02 | low | by-design/no-action | enforce-existing-requirement | Segredo em logs já proibido, inclusive hub.verify_token | covered-in-plan | Delta v3; REG-SEC-12, nota de execução |
 | NUM-DELTA-OBS-03 | low | by-design/no-action | enforce-existing-requirement | Refresh já prometido projeta autoria/conteúdo do mesmo ID | covered-in-plan | Delta v3; REG-SEC-11, nota browser; Inbox excluído preservado |
+| NUM-API-01 | high | release-blocker | fix-current-contract | Telefone canônico precisa CAS/equality atômico entre transportes | accepted-open | api-checkpoint-review-v1.json; D-01/06 |
+| NUM-API-02 | high | release-blocker | fix-current-contract | Promoção deve manter attempt/generation/credential-version/lease até commit | accepted-open | api-checkpoint-review-v1.json; D-03/04/06 |
+| NUM-API-03 | high | release-blocker | fix-current-contract | DELETE precisa adquirir o mesmo fence das operações externas | accepted-open | api-checkpoint-review-v1.json; D-06/07 |
+| NUM-API-04 | high | release-blocker | fix-current-contract | Renovação limpa antecessor mas não cria substituta reservada | accepted-open | api-checkpoint-review-v1.json; D-06 |
+| NUM-API-05 | high | release-blocker | fix-current-contract | Mapping migrado não autoriza adotar/apagar instância externa | accepted-open | api-checkpoint-review-v1.json; D-06/09 |
+| NUM-API-06 | medium | release-blocker | fix-current-contract | Retry QR pendente deve preservar rodada apesar de evento connecting/open | accepted-open | api-checkpoint-review-v1.json; D-06/07 |
+| NUM-API-07 | medium | release-blocker | fix-current-contract | Limpeza ambígua precisa sobreviver ao unlink e impedir nova criação | accepted-open | api-checkpoint-review-v1.json; D-06/07 |
+| NUM-API-08 | medium | release-blocker | fix-current-contract | Close observado deve remover prontidão atual de DTO/envio | accepted-open | api-checkpoint-review-v1.json; D-07 |
+| NUM-API-09 | medium | release-blocker | fix-current-contract | Verificação oficial sem telefone próprio não comprova identidade | accepted-open | api-checkpoint-review-v1.json; D-01/07 |
+| NUM-API-10 | medium | release-blocker | fix-current-contract | Expiração/supersessão/remoção devem limpar candidata e nonce | accepted-open | api-checkpoint-review-v1.json; D-03/04 |
+| NUM-API-11 | medium | release-blocker | fix-current-contract | Replay concorrente same-key deve retornar a mesma tentativa | accepted-open | api-checkpoint-review-v1.json; D-03 |
+| NUM-API-12 | medium | release-blocker | fix-current-contract | Audit administrativo já prometido não pode virar isenção técnica | accepted-open | api-checkpoint-review-v1.json; audit-and-history#cadastro |
+| NUM-API-13 | medium | release-blocker | fix-current-contract | Redação URL deve cobrir vocabulário de segredos e nomes codificados | accepted-open | api-checkpoint-review-v1.json; REG-SEC-09/12 |
+| NUM-API-14 | medium | release-blocker | fix-current-contract | Ordem de locks identity/channel deve eliminar ciclo de deadlock | accepted-open | api-checkpoint-review-v1.json; D-06/08; BCI |
+| NUM-API-15 | medium | release-blocker | fix-current-contract | OUT sem ID confirmado conserva resultado local pendente/erro explícito | accepted-open | api-checkpoint-review-v1.json; integrations-and-channels#reconciliação |
+| NUM-API-16 | medium | release-blocker | complete-required-harness | Probes discriminantes REG-SEC e callers fazem parte do escopo aprovado | accepted-open | api-checkpoint-review-v1.json; VAL-02/08 |
+| NUM-API-17 | medium | release-blocker | complete-required-harness | Positivas novas não são provadas pelos409 de rota aposentada | accepted-open | api-checkpoint-review-v1.json; test/modulos e canais |
+| NUM-API-18 | low | release-blocker | fix-current-contract | Metadata pré-identidade deve usar state allowlisted, sem conteúdo arbitrário | accepted-open | api-checkpoint-review-v1.json; REG-SEC-03/13 |
+| WEB-ROOT-01 | high | release-blocker | fix-current-contract | SDK readiness perdido após reservar tentativa | accepted-open | evidence/root-web-checkpoint3-findings.json |
+| WEB-ROOT-02 | high | release-blocker | fix-current-contract | Consumo incorreto do wrapper registration da confirmação | accepted-open | evidence/root-web-checkpoint3-findings.json |
+| WEB-ROOT-03 | medium | release-blocker | fix-current-contract | Retomada persistida e cancelamento explícito necessários | accepted-open | evidence/root-web-checkpoint3-findings.json |
+| WEB-ROOT-04 | medium | release-blocker | fix-current-contract | Etapa no wizard precisa refletir webhook/receipt atual | accepted-open | evidence/root-web-checkpoint3-findings.json |
+| WEB-ROOT-05 | medium | release-blocker | fix-current-contract | Retry de reserva perdida precisa conservar chave idempotente | accepted-open | evidence/root-web-checkpoint3-findings.json |
+| WEB-ROOT-06 | medium | release-blocker | fix-current-contract | Troca explícita de WABA não pode perder opções autorizadas | accepted-open | evidence/root-web-checkpoint3-findings.json |
 
 
 Adicional de coerência do autor: envelope raw redigido e code/PIN transitórios explicitados, sem alterar modelo de autorização; REG-SEC-08/09.
+
+Adjudicação do checkpoint API: parecer bruto imutável api-checkpoint-review-v1.json (SHA256 e44b11aed763a452afcf1786e04e30a2a1d91ae012e3d0bd743c0281322028ee), schema nativo validado,18 achados (5high/12medium/1low), leitura completa de68 snapshots atestada. Root aceita os18 para correção no contrato atual: todos correspondem a D-01..08, limites contra legado, audit/segredos ou harness já exigidos. Não há dispensa, nova capacidade, worker, outbox ou autorização de runtime legado. Severidade baixa de NUM-API-18 não reduz o requisito explícito de metadata allowlisted. Solução deve ser simples e coerente; executor reportará qualquer necessidade de path ou decisão material ANTES da edição. Etapa pré-consumer, não gate final: correção e testes discriminantes ainda pendentes. Web termina/paralisa primeiro; API é o próximo writer único. Root permanece em orquestração documental; produto fica com Operational/Coder e runtime com DevOps.
 
 ## TODO Closeout Disposition
 
@@ -900,3 +927,5 @@ A releitura de performance-concurrency-validation-method.md identificou que EPS 
 Após stop explícito do writer API com130unitários/234E2E, executor novo assume SOMENTE Web como único writer de produto. Review independente lê o pacote imutável API de68fontes, SHA256a5113ac1fd729cfc1ba902bc3b667b7b6c32818e4dbab9534028c00f5d50992a. API/fixtures/artefatos gerados/runtime não podem mudar nessa preparação; browser real-backend será integrado em etapa posterior serializada. Routing Web go e capability audit React/Vite ready, conforme manifests reais. Handoff detalhado: artifacts/reviews/leadshug-number-onboarding-20261015/web-handoff.md. Nenhuma entrega de UI ou gate geral reivindicados.
 
 Checkpoint3 Web parado com build e23 testes/4arquivos passando; seis hashes conferidos. Revisão de fonte pelo root encontrou perda determinística de SDK readiness após reserva, ausência de retomada de tentativa persistida e falta de atualização da etapa por webhook. Achados aceitos como correções do contrato UI já aprovado, nos mesmos paths; executor Web recebe lote serializado de remediação, ainda sem editar API/runtime. Deve também conservar a chave idempotente em retry da mesma reserva quando a resposta é perdida. Provas de browser com backend real seguem pendentes, sem aceitar os testes unitários como substitutos.
+
+Checkpoint4 Web encerrado com stop explícito, build e25 testes/4arquivos passando, seis hashes conferidos; correções de WEB-ROOT-01..06 implementadas aguardam prova de browser. Root aceita a remediação estrutural proposta para NUM-API-01..18 como execução do contrato atual, incluindo evidência de lifecycle managed separada de backfill e cleanup retido após unlink, conforme módulo owner consolidado. Handoff de volta a Operational/Coder: executor API reassume como único writer para schema/source/harness/fixtures nos paths já autorizados, routing-api-remediation.json go; Web e DevOps parados, sem escrita concorrente ou runtime externo. DoD/gates seguem abertos, nenhum achado marcado verificado por declaração do executor.

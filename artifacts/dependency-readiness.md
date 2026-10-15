@@ -5,17 +5,17 @@ Registro baseado em `delphi-ai/templates/dependency_readiness_template.md`; mem�
 ## Snapshot
 
 - **Last updated:** 2026-10-15, America/Sao_Paulo.
-- **Current session/profile:** Strategic / CTO-Tech-Lead; planejamento de canais NestJS/React/PostgreSQL/Prisma/Docker.
+- **Current session/profile:** Operational / Coder com handoffs Assurance e DevOps explícitos; execução aprovada de canais NestJS/React/PostgreSQL/Prisma/Docker.
 - **Why this register matters now:** usuário disponibilizará oficial e não oficial; confirmou local primeiro e Railway depois. Fechar wiring e evidência antes de executar testes externos.
 
 ## Dependency Register
 
 | Dependency | Type | Why It Matters | Status | Last Verified | Verification Method | Known Failure Mode | Adjustment / Workaround |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| Evolution de teste | provider | QR, sessão, conexão e histórico. | unknown | n/a | Confirmar versão/runtime/configuração e depois consultar instância de teste. | Versão não fixada nas superfícies lidas; adapter pode divergir. | Não adivinhar versão nem usar serviço legado. |
+| Evolution de teste | provider | QR, sessão e conexão. | unknown | 2026-10-15 | Versão2.3.7 por digest aprovada; instância própria ainda não iniciada/provada. | Contrato source não prova payload/identidade de instância real. | Criar runtime próprio, verificar versão e identidade sem adotar legado; importação fora deste recorte. |
 | Conta/número oficial Meta | provider | Identidade, credencial, callback e IN/OUT. | unknown | n/a | Confirmar WABA/número/modalidade e permissões no target. | Listar números não prova operação do canal. | Registrar readiness por dimensão; não publicar credencial. |
 | Números/interlocutores de teste | device | Troca real e recuperação. | unknown | n/a | Usuário confirmou que pode disponibilizar ambos; acesso não testado. | Disponibilidade potencial não prova pairing/permissão. | Confirmar interlocutor e vínculos descartáveis antes de mutações. |
-| Callback do backend local | host/ingress | Provider precisa alcançar webhooks autenticados. | unknown | n/a | Ambiente local confirmado pelo usuário; endereço/mecanismo ainda não definido. | URL incorreta, inacessível ou origem não verificável. | Definir exposição local no contrato; não abrir túnel ou alterar DNS agora. |
+| Callback do backend local | host/ingress | Provider precisa alcançar webhooks autenticados. | unknown | 2026-10-15 | Usuário confirmou não possuir HTTPS/app Meta e autorizou preparar; gateway/túnel ainda não iniciados. | URL incorreta, inacessível ou origem não verificável. | Preparar gateway e conferir build antes de Quick Tunnel temporário autorizado; sem DNS/túnel persistente. |
 | Docker Windows | service | Engine local para runtime/testes. | healthy | 2026-10-15 | docker.exe version e inventário read-only responderam; Engine27.1.1. | Socket Linux indisponível; esta prova não certifica containers/app. | Usar cliente Windows no preparo local, com paths e wrappers confirmados. |
 | Stack local LeadsHug | service | API/Web/PG e wiring dos providers. | degraded | 2026-10-15 | Leitura do Compose/inventário: containers LeadsHug parados; sem serviço Evolution ou repasse de envs dos providers/webhooks. | Variáveis privadas presentes no host não chegam automaticamente ao container. | Completar contrato de runtime local antes de subir/alterar serviços. |
 | Documentação oficial Meta de onboarding | documentation | Cadastro/registro/assinatura e limites atuais. | degraded | 2026-10-15 | Developers direto limitado; coleção oficial Meta em Postman acessível para Embedded Signup, register e subscribed_apps. | Elegibilidade/app efetivo e histórico/coexistência ainda não verificados. | Usar fonte primária Postman para cadastro; histórico continua fora do recorte. |
@@ -40,3 +40,7 @@ Registry consultado em leitura confirmou `evoapicloud/evolution-api:v2.3.7@sha25
 Em2026-10-15 o usuário aprovou ST-CON-01. Informou depois que ainda não possui app Meta Embedded Signup configurado nem HTTPS de teste, e concordou em prepará-los. Essa confirmação é sobre disponibilidade, não um health check. App/autorizações requerem a conta Meta do operador; o ambiente e guia local serão preparados nesta execução. Nenhuma credencial deve ser enviada no chat.
 
 Checkpoint1 usou Node22.23.3/Prisma6.19.3/PG16 descartável separados dos serviços existentes; schema/migration,119unidades e3E2E de aceitação passaram na fonte final desse checkpoint. Isso não prova conexões Meta/Evolution nem substitui a suíte final após o cutover. Detalhes no artefato checkpoint1-execution-evidence.md da revisão de onboarding.
+
+Checkpoint2 API passou build/lint,130unitários e234E2E PostgreSQL,20migrações, fonte registrada em checkpoint2-api-source-hashes.sha256. A revisão independente subsequente encontrou18 achados aceitos para remediação; essa fonte ainda não é considerada integration-ready. Checkpoint4 Web passou build e25unitários; browser/backend real e provider continuam sem prova. Resultados de suites não alteram o estado unknown dos canais externos.
+
+Preflight DevOps read-only encontrou8082,3000 e55433 ocupadas por outro projeto e confirmou ausência dos novos runners/overlay. Gateway próprio terá default configurável8083, sujeito a checagem de disponibilidade imediatamente antes do startup. Preservar recursos existentes e os PG descartáveis dos checkpoints; nenhum serviço legado foi adotado/alterado. `.env.testing` estava ausente por checagem somente de existência; é destino ignorado permitido para futura configuração de teste, recusando substituição se passar a existir.
