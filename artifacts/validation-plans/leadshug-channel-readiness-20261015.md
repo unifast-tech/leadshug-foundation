@@ -113,3 +113,13 @@ Limitação explícita: vencedor publica realtime/aciona bot após commit; crash
 | REG-SEC-13 | Meta batch assinado contém recursos de duas BUs e recurso desconhecido/retirado. Cada raw record só tem fragmentos do owner verificado; partes não verificadas só metadados. Nenhum conteúdo cru global ou de outro tenant; assinatura original validada antes da partição. |
 
 Não há garantia de sequenciamento para mensagens distintas simultâneas no Typebot; o contrato de replay diz respeito à mesma mensagem externa. Nenhum worker/fila/retry de envio é autorizado por estes testes.
+
+## Notas de execução aceitas na revisão delta v3
+
+Concretização de requisitos congelados, sem novo produto/arquitetura ou dispensa:
+
+- REG-SEC-10/BCI: pausar webhook antigo DEPOIS do lookup preliminar e antes de raw/conteúdo; RENEW aposenta mapping e invalida prova. Liberar webhook e comprovar que o guard final sincronizado com aceitação impede conteúdo/receipt/unread/realtime/bot. Repetir remove/recreate. Não rotular sender antigo como recurso novo.
+- REG-SEC-12: atravessar gateway também com hub.verify_token Meta fictício, aceito e rejeitado; segredo ausente em access/error/application logs e artefatos, preservando challenge/autenticação.
+- REG-SEC-11/browser: mostrar OUT echo-first antes da resposta do sender, fazer refresh/pós-ação existente e conferir uma linha com mesmo Message.id/createdAt e autoria/conteúdo confiáveis, sem cursor/unread alterados. Se o cliente atual não satisfizer a projeção, registrar falha e admitir diff/escopo pelo processo normal antes de tocar Inbox.tsx excluído; a nota não autoriza tal edição.
+
+Todos os casos continuam planned, com fonte/DB/backend reais na execução autorizada. Nenhuma prova executada nesta revisão documental.

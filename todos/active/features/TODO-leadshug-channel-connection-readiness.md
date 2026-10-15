@@ -2,7 +2,7 @@
 
 ## Quick Start
 
-Contrato proposto ST-CON-01, baseado no template canônico. Usuário autorizou avançar no planejamento do cadastro de números e conversas; Nova conversa informando contato é o próximo ST-CON-04. Esta revisão não é APROVADO. Fonte de produto não alterada. Pacote preparado para freeze e revisões independentes; nenhuma prova externa ou entrega reivindicada.
+Contrato proposto ST-CON-01, baseado no template canônico. Usuário autorizou avançar no planejamento do cadastro de números e conversas; Nova conversa informando contato é o próximo ST-CON-04. Esta revisão não é APROVADO. Fonte de produto não alterada. Proposta publicada e revisada: arquitetura e crítica convergidas, sem prova externa ou entrega reivindicada.
 
 ## Title
 
@@ -63,7 +63,7 @@ Proposta ST-CON-01: jornada de cadastro de número, com infraestrutura local est
 
 ## Proposed Registration Contracts
 
-Proposta técnica revisada, subordinada ao Scope/DoD; parecer de arquitetura e crítica brutos preservados, duas resoluções da crítica aguardam revisão delta independente.
+Proposta técnica revisada, subordinada ao Scope/DoD; parecer de arquitetura e críticas brutos preservados; resoluções aceitas na crítica delta independente.
 
 ### BFF e autorização
 
@@ -342,7 +342,7 @@ Todas as linhas abaixo estão planned. Tipo e runtime não são prova antecipada
 | VAL-06 | Validation Steps | PCV/reviews | review+runtime | artefatos EPS/FRC/BCI/RLS + reviewers | local/no-context | planned | Nenhuma execução reivindicada. |
 | VAL-07 | Validation Steps | Consolidação/diff/closeout | doc+guard | guardas específicos | Foundation | planned | Nenhuma execução reivindicada. |
 | SCOPE-09 | Scope | Reautorização, identidade, dedupe e tenant | integration+race | REG-SEC-01..13; VAL-08 | PG16 isolado | planned | Resolução contratual dos achados; produto não implementado. |
-| DOD-08 | Definition of Done | Harness dos seis achados e segredo raw | test+audit | VAL-08 + security/TQA | local | planned | Nenhuma execução reivindicada. |
+| DOD-08 | Definition of Done | Harness de arquitetura/crítica e segredo raw | test+audit | VAL-08 + security/TQA | local | planned | Nenhuma execução reivindicada. |
 | VAL-08 | Validation Steps | Regressões de identidade/tenant/credential | integration+race | REG-SEC-01..13 | Node22/PG16 | planned | Sem provas antecipadas. |
 
 ## External Dependency Readiness (Required When External Systems Matter)
@@ -386,7 +386,7 @@ Register: `foundation_documentation/artifacts/dependency-readiness.md`.
 
 ## Decision Pending (Resolve Before Freeze)
 
-Nenhuma decisão de produto pendente para a proposta. Credenciais, App/config ID, elegibilidade Meta, número de teste e origem HTTPS são precondições operacionais antes da prova externa; não se presume saúde. O desenho abaixo será desafiado no architecture_opinion antes de seu congelamento final.
+Nenhuma decisão de produto pendente para a proposta revisada e aceita nas críticas. Credenciais, App/config ID, elegibilidade Meta, número de teste e origem HTTPS são precondições operacionais antes da prova externa; não se presume saúde. O desenho abaixo foi desafiado no architecture_opinion e nas críticas; revisões e resoluções estão registradas.
 
 ## Decisions (Resolved Before Freeze)
 
@@ -456,7 +456,7 @@ Proposta revisada D-01..D-10: NUM-ARCH-01..06, NUM-CRIT-01/02 e requisitos de ex
 - **Decision review kind:** architecture_opinion
 - **Decision review package:** bounded-file-set
 - **Decision review status:** findings_integrated
-- **Decision review evidence / resolution:** artifacts/reviews/leadshug-number-onboarding-20261015/planning-architecture.json, pacote v1 imutável; seis bloqueadores integrados no contrato e ledger, crítica independente verificará resolução. Nenhuma correção de produto reivindicada.
+- **Decision review evidence / resolution:** artifacts/reviews/leadshug-number-onboarding-20261015/planning-architecture.json, pacote v1 imutável; seis bloqueadores integrados no contrato e ledger, crítica independente delta v3 confirmou a resolução contratual, sem produto implementado. Nenhuma correção de produto reivindicada.
 - **Architecture adherence review:** required
 - **Adherence review lifecycle:** after implementation and before Completed
 - **Adherence review kind:** architecture_adherence
@@ -471,10 +471,10 @@ Proposta revisada D-01..D-10: NUM-ARCH-01..06, NUM-CRIT-01/02 e requisitos de ex
 - **Why this decision:** revisar contrato exato publicado, sem aparência de evidência antes do freeze.
 - **Trigger stage:** before the first planning-side review or guard run
 - **Baseline branch:** main
-- **Baseline commit:** 850feeb63869de7410b4c279c8e0956804aec68b
+- **Baseline commit:** 87c28c6b0f767edde5edf30d4143844f0acd5c2a
 - **Baseline push reference:** origin/main
 - **Gate status:** no_material_findings
-- **Findings summary:** proposta revisada publicada em main e origin/main após integrar seis achados; baseline 850feeb6 para crítica, ae503c7b preservada como revisão v1. Este recibo só atualiza metadados.
+- **Findings summary:** proposta revisada publicada em main e origin/main após integrar arquitetura e crítica; baseline 87c28c6b para revisão delta, ae503c7b preservada como revisão v1. Este recibo só atualiza metadados.
 - **Evidence / reference:** artifacts/reviews/leadshug-number-onboarding-20261015/README.md
 - **Waiver authority / reference:** n/a
 
@@ -485,8 +485,8 @@ Proposta revisada D-01..D-10: NUM-ARCH-01..06, NUM-CRIT-01/02 e requisitos de ex
 - **Trigger stage:** after planning convergence and before APROVADO
 - **Baseline source:** Review Baseline Freeze -> Baseline commit
 - **Guard command:** python3 delphi-ai/tools/review_scope_drift_guard.py --todo foundation_documentation/todos/active/features/TODO-leadshug-channel-connection-readiness.md
-- **Gate status:** not_run
-- **Findings summary:** pending-freeze
+- **Gate status:** no_material_findings
+- **Findings summary:** Baseline publicada 87c28c6b sem mudança material; cláusulas técnicas adicionais comparadas separadamente. Notas baixas concretizam harness existente.
 - **Evidence / reference:** artifacts/reviews/leadshug-number-onboarding-20261015/evidence/scope-drift.json
 - **Waiver authority / reference:** n/a
 - **No-go handling rule:** reconvergir/refazer freeze e reviews afetados; não implementar direção materialmente alterada sem aprovação.
@@ -576,17 +576,17 @@ Migration cria constraints de cadastro e envelope; preflight detecta providerID 
 
 ## Plan Review Gate (Review of the Execution Plan; required for `medium|big`; abbreviated for low-risk `small`)
 
-Parecer architecture_opinion concluído e crítica completa v2 revise; resolução dos dois achados integrada, revisão delta independente pendente. Produto não alterado.
+Parecer architecture_opinion concluído e crítica completa v2 revise; resolução dos dois achados integrada e aceita na crítica delta independente, sem bloqueadores. Produto não alterado.
 
 ### Review Sections
 
-- [ ] Architecture
-- [ ] Code Quality
-- [ ] Tests
-- [ ] Performance
-- [ ] Security
-- [ ] Elegance
-- [ ] Structural Soundness
+- [x] Architecture
+- [x] Code Quality
+- [x] Tests
+- [x] Performance
+- [x] Security
+- [x] Elegance
+- [x] Structural Soundness
 
 ### Issue Cards
 
@@ -617,13 +617,13 @@ Meta app/Graph version e número real ainda não verificados; arquitetura pode s
 
 ## Additional Architectural Opinions (Required When Path Remains Materially Unclear)
 
-Parecer independente architecture_opinion gpt-6.1-sol/max, fresh no-context, concluído em planning-architecture.json sobre pacote v1 SHA25600bfa0389bd8c204a08c890db746923deaba79161b9bebde11d45478509de177. Veredito revise; preserva arquitetura de tentativas/cifra scoped e identifica seis bloqueadores. Todos foram integrados na proposta, com correções e testes explícitos; crítica fresh seguinte verifica a resolução e o plano inteiro. Não significa correção de produto ou conclusão de delivery audit.
+Parecer independente architecture_opinion gpt-6.1-sol/max, fresh no-context, concluído em planning-architecture.json sobre pacote v1 SHA25600bfa0389bd8c204a08c890db746923deaba79161b9bebde11d45478509de177. Veredito revise; preserva arquitetura de tentativas/cifra scoped e identifica seis bloqueadores. Todos foram integrados na proposta, com correções e testes explícitos; crítica v2 e delta v3 verificaram a resolução e o plano, com aceite contratual final. Não significa correção de produto ou conclusão de delivery audit.
 
 ## Audit Trigger Matrix (Required Before Audit Decisions Are Trusted)
 
 - **Canonical method:** wf-docker-audit-escalation-method
 - **Guard command:** python3 delphi-ai/tools/audit_escalation_guard.py --todo foundation_documentation/todos/active/features/TODO-leadshug-channel-connection-readiness.md
-- **Latest TEACH evidence / artifact:** pending-freeze
+- **Latest TEACH evidence / artifact:** artifacts/reviews/leadshug-number-onboarding-20261015/evidence/audit-floor-v2.json (go; fingerprint fa884bf1d2e7).
 
 | Trigger | Value | Notes |
 | --- | --- | --- |
@@ -650,27 +650,36 @@ Parecer independente architecture_opinion gpt-6.1-sol/max, fresh no-context, con
 - **Internal reviewer mandate:** required; não é executor, sem contexto da conversa; aguardar até terminal sem deadline arbitrário.
 - **Canonical multi-lane audit protocol:** audit-protocol-triple-review; entrega recomendada pelo floor, será executada antes de fechar.
 - **Critique lenses:** correctness, performance, elegance, structural-soundness, risk
-- **Critique status:** running
-- **Findings summary:** crítica v2 revise, dois bloqueadores integrados; revisão delta pendente antes de APROVADO.
-- **Evidence / reference:** artifacts/reviews/leadshug-number-onboarding-20261015/planning-critique.json
+- **Critique status:** findings_integrated
+- **Findings summary:** crítica v2 revise com dois bloqueadores integrados; delta v3 approve, zero bloqueadores e três notas do harness já exigido, registradas.
+- **Evidence / reference:** artifacts/reviews/leadshug-number-onboarding-20261015/planning-critique.json; planning-critique-delta.json e evidence/critique-v3-merged.json
 - **Waiver authority / reference:** n/a
-+
-+| Finding ID | Resolution (`Integrated|Challenged|Deferred`) | Usefulness (`useful|noise|mixed|unknown`) | Formalizable (`yes|partial|no|unknown`) | Candidate Rule Level (`paced|project|none|unknown`) | Candidate Rule ID | Rationale / Evidence |
-+| --- | --- | --- | --- | --- | --- | --- |
-+| NUM-CRIT-01 | Integrated | useful | partial | project | none | Contrato de epoch/instância, D-06, REG-SEC-10; nova crítica delta antes da aprovação. |
-+| NUM-CRIT-02 | Integrated | useful | partial | project | none | Aceitação keyed de todos os writers OUT, D-08, diff helper, REG-SEC-11. |
-+
-+## Gate: Assumption Code Coherence
+
+| Finding ID | Resolution (`Integrated|Challenged|Deferred`) | Usefulness (`useful|noise|mixed|unknown`) | Formalizable (`yes|partial|no|unknown`) | Candidate Rule Level (`paced|project|none|unknown`) | Candidate Rule ID | Rationale / Evidence |
+| --- | --- | --- | --- | --- | --- | --- |
+| NUM-CRIT-01 | Integrated | useful | partial | project | none | Contrato de epoch/instância, D-06, REG-SEC-10; delta v3 confirma resolução contratual, produto ainda não verificado. |
+| NUM-CRIT-02 | Integrated | useful | partial | project | none | Aceitação keyed de todos os writers OUT, D-08, diff helper, REG-SEC-11. |
+
+## Gate: Assumption Code Coherence
 
 - **Gate decision:** required
 - **Why this decision:** as alterações dependem de consumers e superfícies reais.
 - **Trigger stage:** after critique convergence and before APROVADO
 - **Guard scope:** A-01,A-02,A-03,A-04
 - **Guard command:** python3 delphi-ai/tools/assumption_code_coherence_guard.py --todo foundation_documentation/todos/active/features/TODO-leadshug-channel-connection-readiness.md
-- **Gate status:** not_run
-- **Findings summary:** pending-freeze
+- **Gate status:** no_material_findings
+- **Findings summary:** A-01..04 verificadas na fonte corrente; críticas e source-wide caller search registrados. Guard verifica anchors e não substitui leitura semântica.
 - **Evidence / reference:** artifacts/reviews/leadshug-number-onboarding-20261015/evidence/code-coherence.json
 - **Waiver authority / reference:** n/a
+
+## Planning Readiness Summary
+
+- architecture_opinion v1: seis achados integrados no contrato, confirmados pela crítica e delta; nenhuma correção de produto reivindicada.
+- critique v2 + delta v3: approve no planejamento, zero bloqueadores restantes; oito resoluções e seis notas de execução concretizadas no ledger/plano de validação.
+- Assumption code coherence: go, quatro premissas; evidence/code-coherence.json e connection-state-caller-search.json.
+- Review scope drift: go,23seções e zero mudanças materiais contra baseline publicada87c28c6b; cláusulas técnicas adicionais também conferidas.
+- Authority preflight: preflight-go, execution_authority_granted=false; artifacts/reviews/leadshug-number-onboarding-20261015/evidence/authority-preapproval.json.
+- Próximo gate: solicitar APROVADO deste contrato. Aprovação da timeline anterior não autoriza este recorte. Execução, providers, testes de produto e gates de entrega continuam pendentes.
 
 ## Approval
 
@@ -745,6 +754,10 @@ Achados exatos preservados em planning-architecture.json. `fixed-in-plan` signif
 | NUM-OBS-01 | medium | by-design/no-action | enforce-existing-requirement | Requisito secret-free já vinculante, sem defeito de gateway implementado alegado; harness concretizado | covered-in-plan | REG-SEC-12; runtime/logs; DOD-03 |
 | NUM-OBS-02 | medium | by-design/no-action | enforce-existing-requirement | Raw scoped já vinculante; batch por owner agora explícito, sem plataforma nova | covered-in-plan | REG-SEC-13; contrato raw; audit owner |
 | NUM-OBS-03 | low | by-design/no-action | enforce-existing-requirement | Harness de tenant/credencial já requerido; observar identificador não secreto e DB real | covered-in-plan | REG-SEC-01/11; VAL-02/08 |
+| NUM-DELTA-OBS-01 | low | by-design/no-action | enforce-existing-requirement | Fence até commit já exigido; barrier do webhook em voo concretiza BCI | covered-in-plan | Delta v3; REG-SEC-10, nota de execução |
+| NUM-DELTA-OBS-02 | low | by-design/no-action | enforce-existing-requirement | Segredo em logs já proibido, inclusive hub.verify_token | covered-in-plan | Delta v3; REG-SEC-12, nota de execução |
+| NUM-DELTA-OBS-03 | low | by-design/no-action | enforce-existing-requirement | Refresh já prometido projeta autoria/conteúdo do mesmo ID | covered-in-plan | Delta v3; REG-SEC-11, nota browser; Inbox excluído preservado |
+
 
 Adicional de coerência do autor: envelope raw redigido e code/PIN transitórios explicitados, sem alterar modelo de autorização; REG-SEC-08/09.
 
@@ -753,7 +766,7 @@ Adicional de coerência do autor: envelope raw redigido e code/PIN transitórios
 - **Disposition:** keep-active
 - **Disposition reason:** planejamento/revisão, sem implementação aprovada.
 - **Post-commit/push status:** n/a
-- **Next path/status action:** resolver reviews/guardas e solicitar aprovação do contrato; mesmo TODO mantém evidência.
+- **Next path/status action:** planejamento convergido e guardas go/preflight-go; solicitar APROVADO do contrato, mantendo este TODO para execução/evidência.
 
 ## Security Risk Assessment (Mandatory Before Delivery)
 

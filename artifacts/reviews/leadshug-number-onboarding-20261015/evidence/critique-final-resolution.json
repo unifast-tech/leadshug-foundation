@@ -1,0 +1,29 @@
+{
+  "schema_version": "gate-finding-resolution-v1",
+  "artifact_kind": "gate_finding_resolution",
+  "authoritative": false,
+  "edit_policy": "derived_from_todo",
+  "todo_path": "foundation_documentation/todos/active/features/TODO-leadshug-channel-connection-readiness.md",
+  "review_kind": "critique",
+  "gate_status": "findings_integrated",
+  "findings": [
+    {
+      "finding_id": "NUM-CRIT-01",
+      "resolution": "Integrated",
+      "usefulness": "useful",
+      "formalizable": "partial",
+      "candidate_rule_level": "project",
+      "candidate_rule_id": "none",
+      "rationale": "Contrato de epoch/inst\u00e2ncia, D-06, REG-SEC-10; delta v3 confirma resolu\u00e7\u00e3o contratual, produto ainda n\u00e3o verificado."
+    },
+    {
+      "finding_id": "NUM-CRIT-02",
+      "resolution": "Integrated",
+      "usefulness": "useful",
+      "formalizable": "partial",
+      "candidate_rule_level": "project",
+      "candidate_rule_id": "none",
+      "rationale": "Aceita\u00e7\u00e3o keyed de todos os writers OUT, D-08, diff helper, REG-SEC-11."
+    }
+  ]
+}

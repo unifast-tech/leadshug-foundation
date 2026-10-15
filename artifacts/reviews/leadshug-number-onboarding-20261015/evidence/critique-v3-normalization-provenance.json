@@ -1,0 +1,6 @@
+{
+  "source": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/planning-critique-delta.json",
+  "source_sha256": "1a56c23719a6dac42348e33398dbc40e9b69c74b048ef0c385f41794de02a73c",
+  "purpose": "lossless native field mapping for deterministic merge; full report preserved",
+  "finding_mapping": "All three nonblocking observations mapped verbatim. No blocking finding. Classification/covered execution checks remain in TODO ledger. Axes copied from reviewer native_schema_axis_categories, not inferred."
+}

@@ -1,0 +1,12 @@
+{
+  "command": [
+    "rg",
+    "-n",
+    "estadoDaInstancia|connectionState",
+    "api-app/src",
+    "web-app/src"
+  ],
+  "exit_code": 0,
+  "stdout": "api-app/src/integrations/evolution/evolution.client.ts:17:  estadoDaInstancia(nome: string): Promise<string>;\napi-app/src/integrations/evolution/evolution.client.ts:66:  async estadoDaInstancia(nome: string): Promise<string> {\napi-app/src/integrations/evolution/evolution.client.ts:67:    const data = await this.chamar('GET', `/instance/connectionState/${nome}`);\n",
+  "assessment": "Only implementation in Evolution adapter is present; no production consumer in source-wide search. Supports bounded-corpus A-04 with actual current repository search. No provider call."
+}

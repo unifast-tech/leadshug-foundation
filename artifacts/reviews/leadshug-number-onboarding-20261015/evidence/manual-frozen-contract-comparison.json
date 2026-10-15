@@ -1,0 +1,6 @@
+{
+  "baseline": "87c28c6b0f767edde5edf30d4143844f0acd5c2a",
+  "guard_material_sections_changed": [],
+  "extra_technical_contract_clauses_equal": true,
+  "metadata_exclusion": "Only introductory review-status prose above ### BFF; every actual technical clause compared exactly. Three low notes concretize already frozen tests, no new product behavior."
+}

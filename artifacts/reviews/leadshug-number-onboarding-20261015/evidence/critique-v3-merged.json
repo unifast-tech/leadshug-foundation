@@ -1,0 +1,76 @@
+{
+  "schema_version": "subagent-review-merge-v2",
+  "artifact_kind": "subagent_review_merge",
+  "authoritative": false,
+  "edit_policy": "derived_merge_packet",
+  "dispatch_path": "/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/critique-v3-dispatch-derived.json",
+  "review_kind": "critique",
+  "review_count": 1,
+  "reviewer_labels": [
+    "number_onboarding_critique_delta-v3-normalized"
+  ],
+  "highest_finding_severity": "low",
+  "axis_summary": {
+    "performance": "acceptable",
+    "elegance": "acceptable",
+    "structural_soundness": "acceptable",
+    "operational_fit": "acceptable"
+  },
+  "recommended_paths": [
+    "Accept the revised plan as critique-converged, retain D-01 through D-10 and all explicit limitations, and continue the remaining assumption-code coherence, review-scope drift and authority preflight gates. Incorporate the nonblocking checks in the existing security/concurrency/browser harness during authorized execution. Obtain the required human approval before implementation. Provider capability investigation, real registration and IN/OUT proof, implementation-side audits and delivery review remain later work."
+  ],
+  "exact_next_step": "Record reviewer resolutions in the governing TODO using the machine-checkable resolution table or equivalent gate ledger, then extract the derived resolution packet and decide whether another bounded review pass is still required.",
+  "findings": [
+    {
+      "finding_id": "F-04314257",
+      "severity": "low",
+      "title": "Verify that the existing refresh projects trusted enrichment for the same message ID",
+      "rationale": "Correct database enrichment and the returned sender DTO do not alone show that a client which already rendered the echo's unowned OUT refreshes that same ID's content/author. The current client source is not included in this delta, so this is an unproven projection condition, not evidence of a broken merge.",
+      "suggested_action": "In the existing real-backend browser lane, expose the echo-first OUT before resolving the sender, then perform the existing post-action or thread refresh. Assert that the same visible row acquires the trusted content/author without duplication, createdAt/cursor movement or unread changes. No new push, latency guarantee or timeline mechanism is requested. If existing behavior cannot satisfy the declared enrichment projection, route the concrete failure through normal diff/scope admission before any excluded Inbox edit.",
+      "reviewer_labels": [
+        "number_onboarding_critique_delta-v3-normalized"
+      ],
+      "source_finding_ids": [
+        "NUM-DELTA-OBS-03"
+      ],
+      "category": "tests",
+      "formalizable_hint": "unknown",
+      "candidate_rule_level": "unknown",
+      "candidate_rule_id": "n/a"
+    },
+    {
+      "finding_id": "F-7300D1E3",
+      "severity": "low",
+      "title": "Include Meta verification-token queries in the gateway secret-negative check",
+      "rationale": "The included source exposes another concrete secret-bearing URL surface: Meta's verification query. A gateway rule specialized only to the Evolution path could meet that one test while still violating the broader existing secret-free logging requirement. There is no implemented new gateway in this planning packet to inspect.",
+      "suggested_action": "Add a dummy hub.verify_token to the same real-gateway log inspection, covering accepted and rejected verification requests and access/error/application logs and captured artifacts. Redact secret-bearing queries under the declared logging policy. Keep the challenge response and verification contract intact and never use a real token in test output.",
+      "reviewer_labels": [
+        "number_onboarding_critique_delta-v3-normalized"
+      ],
+      "source_finding_ids": [
+        "NUM-DELTA-OBS-02"
+      ],
+      "category": "tests",
+      "formalizable_hint": "unknown",
+      "candidate_rule_level": "unknown",
+      "candidate_rule_id": "n/a"
+    },
+    {
+      "finding_id": "F-C24CFEFB",
+      "severity": "low",
+      "title": "Exercise a previously trusted webhook paused across pairing invalidation",
+      "rationale": "The absolute frozen invariant also covers an authenticated old-epoch webhook already in flight when RENEW commits. A check only at request entry would not be sufficient to implement that invariant. The packet does not show the future implementation and no such bug is alleged; this is a discriminating barrier placement for the existing BCI harness.",
+      "suggested_action": "Pause an old-instance webhook after its initial identity lookup and before raw/domain content writes. Commit the planned RENEW trust reset and old-mapping retirement, then release it. Synchronize the final current-mapping/epoch guard with content acceptance so the retired request cannot commit content, receipt, unread, realtime or bot effects. Use the same case for remove/recreate where applicable. Keep provider HTTP outside the transaction; do not apply this check by relabeling an old sender result as the new resource.",
+      "reviewer_labels": [
+        "number_onboarding_critique_delta-v3-normalized"
+      ],
+      "source_finding_ids": [
+        "NUM-DELTA-OBS-01"
+      ],
+      "category": "tests",
+      "formalizable_hint": "unknown",
+      "candidate_rule_level": "unknown",
+      "candidate_rule_id": "n/a"
+    }
+  ]
+}

@@ -1,0 +1,95 @@
+{
+  "artifact_kind": "assumption_code_coherence_guard",
+  "todo_path": "/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/todos/active/features/TODO-leadshug-channel-connection-readiness.md",
+  "repo_root": "/mnt/c/unifast/leadshug/leadshug_now_docker",
+  "overall_outcome": "go",
+  "live_assumption_ids": [
+    "A-01",
+    "A-02",
+    "A-03",
+    "A-04"
+  ],
+  "gate": {
+    "section_present": true,
+    "decision": "required",
+    "status": "no_material_findings",
+    "evidence_reference": "artifacts/reviews/leadshug-number-onboarding-20261015/evidence/code-coherence.json",
+    "waiver_reference": "missing"
+  },
+  "assumptions": [
+    {
+      "assumption_id": "A-01",
+      "handling": "Keep as Assumption",
+      "evidence": "api-app/src/integrations/meta/meta.client.ts:31; api-app/src/domain/inbox/conversations.service.ts:292; api-app/src/domain/inbox/incoming.service.ts:125",
+      "path_tokens": [
+        "api-app/src/integrations/meta/meta.client.ts",
+        "api-app/src/domain/inbox/conversations.service.ts",
+        "api-app/src/domain/inbox/incoming.service.ts"
+      ],
+      "resolved_paths": [
+        "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app/src/integrations/meta/meta.client.ts",
+        "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app/src/domain/inbox/conversations.service.ts",
+        "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app/src/domain/inbox/incoming.service.ts"
+      ],
+      "resolved_code_paths": [
+        "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app/src/integrations/meta/meta.client.ts",
+        "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app/src/domain/inbox/conversations.service.ts",
+        "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app/src/domain/inbox/incoming.service.ts"
+      ]
+    },
+    {
+      "assumption_id": "A-02",
+      "handling": "Keep as Assumption",
+      "evidence": "api-app/src/domain/channels/channels.service.ts:31-74",
+      "path_tokens": [
+        "api-app/src/domain/channels/channels.service.ts"
+      ],
+      "resolved_paths": [
+        "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app/src/domain/channels/channels.service.ts"
+      ],
+      "resolved_code_paths": [
+        "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app/src/domain/channels/channels.service.ts"
+      ]
+    },
+    {
+      "assumption_id": "A-03",
+      "handling": "Keep as Assumption",
+      "evidence": "api-app/src/surfaces/bff/session.middleware.ts:80-171",
+      "path_tokens": [
+        "api-app/src/surfaces/bff/session.middleware.ts"
+      ],
+      "resolved_paths": [
+        "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app/src/surfaces/bff/session.middleware.ts"
+      ],
+      "resolved_code_paths": [
+        "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app/src/surfaces/bff/session.middleware.ts"
+      ]
+    },
+    {
+      "assumption_id": "A-04",
+      "handling": "Keep as Assumption",
+      "evidence": "web-app/src/telas/Numeros.tsx:12-19; api-app/src/integrations/evolution/evolution.client.ts:66-68",
+      "path_tokens": [
+        "web-app/src/telas/Numeros.tsx",
+        "api-app/src/integrations/evolution/evolution.client.ts"
+      ],
+      "resolved_paths": [
+        "/mnt/c/unifast/leadshug/leadshug_now_docker/web-app/src/telas/Numeros.tsx",
+        "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app/src/integrations/evolution/evolution.client.ts"
+      ],
+      "resolved_code_paths": [
+        "/mnt/c/unifast/leadshug/leadshug_now_docker/web-app/src/telas/Numeros.tsx",
+        "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app/src/integrations/evolution/evolution.client.ts"
+      ]
+    },
+    {
+      "assumption_id": "A-05",
+      "handling": "Promote to Decision",
+      "evidence": "Resposta expl\u00edcita nesta sess\u00e3o em2026-10-15",
+      "path_tokens": [],
+      "resolved_paths": [],
+      "resolved_code_paths": []
+    }
+  ],
+  "issues": []
+}

@@ -1,0 +1,442 @@
+{
+  "review_kind": "critique",
+  "review_date": "2026-10-15",
+  "reviewer_label": "fresh internal no-context planning critique delta",
+  "verdict": "approve",
+  "planning_only": true,
+  "implementation_authority": "None. Approve is this reviewer's advisory planning verdict; it is neither human APROVADO, a waiver, implementation authority, nor delivery/provider proof.",
+  "blocking_findings": [],
+  "overall_assessment": "Retain the revised architecture. NUM-CRIT-01 and NUM-CRIT-02 are addressed in the frozen plan, including their interactions with all six previous architecture resolutions. The new pairing epoch changes the external routing identity rather than assigning an unverifiable local generation to an old event. One domain message-acceptance owner now covers every new keyed writer, including echo-first sender reconciliation and trusted author enrichment. Scope, allowed persistence changes, execution steps, DoD and discriminating tests agree with those choices. I found no objective counterevidence in the complete bounded packet that requires reopening an earlier resolution, and no remaining planning blocker. The observations below concretize tests for requirements already present; they do not request a new architectural direction or additional product scope.",
+  "recommended_path": "Accept the revised plan as critique-converged, retain D-01 through D-10 and all explicit limitations, and continue the remaining assumption-code coherence, review-scope drift and authority preflight gates. Incorporate the nonblocking checks in the existing security/concurrency/browser harness during authorized execution. Obtain the required human approval before implementation. Provider capability investigation, real registration and IN/OUT proof, implementation-side audits and delivery review remain later work.",
+  "native_schema_axis_categories": {
+    "performance_position": "acceptable",
+    "elegance_position": "acceptable",
+    "structural_soundness_position": "acceptable",
+    "operational_fit_position": "acceptable"
+  },
+  "correctness_position": "Acceptable as a planning contract. A new logical pairing invalidates proof before network, retries reuse its epoch, old mappings are retired, and only positively attributed current-instance evidence may enable ingress. Sender-result persistence and echoes reconcile the same resource/message key in PostgreSQL, preserving Message.id, createdAt and trusted authorship. The contract explicitly rejects missing or incompatible identities and does not transform a successful send into a second null-key row. These are target properties; the unchanged source snapshots do not implement them yet.",
+  "security_position": "Acceptable as a planning contract. Immutable resource ownership, verified own-number ingress, tenant-derived Typebot selection/session ownership, administrative POST and anti-CSRF, server-side Meta identity/resource proof, candidate-versus-active credential separation, authenticated encryption/AAD and safe diagnostics fit the declared boundaries. The epoch-specific external name removes reliance on uncorrelated old open/wuid events. Secret-bearing URL logging and mixed-owner Meta raw payloads are now explicitly addressed. Runtime compromise, installation-key compromise and provider readiness remain outside what encryption or this review can prove.",
+  "performance_position": "Acceptable, subject to the planned measurements. DB-only listing, indexed identity/message lookups, short transactions/CAS and a single per-link lease avoid unbounded provider fan-out or database locks over HTTP. Per-epoch replacement adds legitimate create/read/retirement/cleanup work; it must remain persisted across bounded rounds of at most three 10-second calls rather than become an unlimited loop inside one action. Shared message acceptance replaces competing inserts with an indexed reconciliation. The small local EPS/BCI/FRC/RLS trials do not establish production capacity or continuous health.",
+  "elegance_position": "Acceptable. An explicit pairing lifecycle and a narrow inbox-owned acceptance operation make the two missing authorities visible: current trusted provider identity and the unique persisted message. Separate candidate and active credential envelopes are similarly domain-specific. The extra epoch and cleanup state is justified by external attribution and is preferable to scattered timing exceptions. Do not substitute a same-instance trust shortcut, an in-memory echo cache, query-before-insert, null-key escape rows or a generic worker/vault/outbox framework for these contracts.",
+  "structural_soundness_position": "Acceptable. The BU remains the number owner, channels remain transports, conversations remain unique by BU/contact and provider-resource ownership survives channel removal. All new keyed message writers now share one authority. The strict change contract admits the required ConversationsService persistence changes and message-acceptance owner while preserving public DTO/window/timeline behavior. Controller/adapter mapping can remain thin and the domain need not consume provider payloads. Old-epoch ingress must remain fenced through the content-write boundary; this follows the chosen contract and is highlighted below as a concurrency test detail.",
+  "operational_fit_position": "Acceptable for the declared local-first scope. A pinned dedicated Evolution runtime, its own storage/cache, Node 22/PostgreSQL 16, serial destructive suites, principal-checkout single-writer execution and served-build attestation fit the plan. Safe rejection before identity proof, ambiguous-operation reconciliation, ownership-restricted cleanup and explicit pending states make partial progress operationally honest. Meta eligibility, actual provider identity-response support, HTTPS callback reachability and test assets remain prerequisites for real proof. A missing capability must leave the flow visibly pending and return any material replacement design to review; this verdict does not establish that those prerequisites already work.",
+  "test_quality_position": "Acceptable at the planning level. REG-SEC-10 starts from an already verified channel and observes invalidation before provider side effects, delayed old evidence, a divergent phone and a valid current-instance proof. REG-SEC-11 exercises authenticated echo-first inside the sender's external port, sender-first, repeated echoes, physical row cardinality, stable IDs, trusted author enrichment and distinct-resource independence. PostgreSQL tenant/trigger/session fixtures and non-secret credential/resource identifiers prevent mocks from hiding tenant or credential mistakes. REG-SEC-12/13 cover gateway logs and mixed-owner signed raw batches. None has been executed here. The nonblocking checks below make final-write fencing, Meta verification-query logging and the existing client's enrichment projection more discriminating without expanding behavior.",
+  "code_quality_position": "Acceptable direction. Keep the acceptance service narrow and inbox-owned, credential resolution explicit at adapter boundaries, and identity/pairing state owned by channels. Preserve the approved source/runtime separation and avoid redistributing orchestration across controllers or introducing alternative persistence writers. Implementation quality and test effectiveness still require the later adherence, TQA, security, debt and final-review gates.",
+  "reviewed_packet": {
+    "path": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/critique-delta-v3.md",
+    "sha256": "80941452b79c5c8cf0276bd631b6f35971d01e4fe504b3f694121af16b4a10dc",
+    "bytes": 156139,
+    "lines_read": 1891,
+    "complete_packet_read": true,
+    "complete_read_ranges": [
+      "1-180",
+      "181-410",
+      "411-610",
+      "611-786",
+      "787-1046",
+      "1047-1271",
+      "1272-1510",
+      "1511-1737",
+      "1738-1891"
+    ],
+    "foundation_baseline_declared_in_packet": "87c28c6b0f767edde5edf30d4143844f0acd5c2a",
+    "api_baseline_declared_in_packet": "ae6a9662c29b77276351aa9de653a47276372246",
+    "web_baseline_declared_in_packet": "4e56f6c1f4515b918d05b8c87e890d42e8542c56",
+    "workspace_baseline_declared_in_packet": "cab23188ec796f79131467dcce0a16acedab8d4f",
+    "baseline_proof_limit": "The complete immutable packet and its local SHA-256 were checked. Its pushed-baseline and unchanged-product-source declarations are review inputs; no remote ref, external provider or live runtime was independently attested.",
+    "isolation": "Fresh internal reviewer supplied only the bounded task and review packet, without implementing-thread history or memory. No implementation work or inherited executor state was used.",
+    "evidence_locator_convention": "Packet line references identify the immutable delta packet above. Source file/line references identify the source snapshot in its FILE block, not new implementation.",
+    "additional_instruction_context": [
+      "AGENTS.md",
+      "delphi-ai/main_instructions.md",
+      "delphi-ai/system_architecture_principles.md",
+      "delphi-ai/ecosystem_template_configuration.md",
+      "delphi-ai/workflows/docker/profile-selection-method.md",
+      "delphi-ai/workflows/docker/todo-approval-gates-method.md",
+      "delphi-ai/workflows/docker/independent-critique-method.md",
+      "delphi-ai/workflows/docker/effort-selection-method.md",
+      "delphi-ai/schemas/subagent_review_result.schema.json"
+    ],
+    "profile": {
+      "genesis_eligibility": "ruled out: established tactical plan under independent assurance review",
+      "active_profile": "Assurance / Tester-Quality",
+      "technical_scope": [
+        "nestjs",
+        "react",
+        "vite",
+        "postgresql",
+        "prisma",
+        "docker",
+        "cross-stack"
+      ]
+    },
+    "readiness_check": "bash delphi-ai/verify_context.sh exited 0 with Environment Verified: PACED-Ready. This verifies instruction-context readiness, not product/provider behavior.",
+    "routing_evidence": {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/routing-critique-delta.json",
+      "sha256": "f4a88d6fe7036d4512fb077d5e93305b21df16d793519da9fd9549898bee3c92",
+      "outcome": "go",
+      "role": "formal-reviewer",
+      "review_kind": "critique",
+      "model": "gpt-6.1-sol",
+      "effort": "max",
+      "proof_mode": "declared",
+      "qualification": "Supplied successful routing evidence was read; the routing guard was not rerun and no independent client-model attestation is claimed."
+    },
+    "actions_not_performed": [
+      "No TODO, canonical module, source, test, packet, runtime or private-configuration edits",
+      "No private credential/configuration reads",
+      "No network, remote-ref or external-system calls",
+      "No product tests, migrations, startup, provider proof or delivery validation",
+      "No approval, waiver, Git write, worktree or auxiliary checkout",
+      "Only this assigned final JSON report was written"
+    ]
+  },
+  "critique_resolution_assessment": [
+    {
+      "finding_id": "NUM-CRIT-01",
+      "position": "addressed-in-plan",
+      "planning_closure": true,
+      "implementation_verified": false,
+      "evidence": [
+        {
+          "packet_line": 97,
+          "detail": "Before INITIAL/RENEW external effects: monotonic pairing epoch, trust reset, CAS invalidation and retirement of the old mapping; pending retries reuse the same epoch/instance."
+        },
+        {
+          "packet_line": 99,
+          "detail": "Exact current-instance own-number proof and currentAttemptId/pairingEpoch/generation CAS; old open/wuid is insufficient, an empty BU phone uses CAS, and ambiguous provider attribution stays pending."
+        },
+        {
+          "packet_line": 101,
+          "detail": "Creation and cleanup are reconciled with read-before-retry, ownership restrictions, network outside transactions and existing bounded rounds."
+        },
+        {
+          "packet_line": 270,
+          "detail": "D-06 freezes the same trust lifecycle rather than merely a route change."
+        },
+        {
+          "packet_line": 898,
+          "detail": "REG-SEC-10 begins with verified X, barriers before network and distinguishes old evidence, Y quarantine and current-instance X acceptance."
+        }
+      ],
+      "assessment": "The selected external instance per epoch supplies a real routing distinction between old and new pairings. The contract no longer treats the old verified flag or an uncorrelated local generation as proof for a newly scanned QR. It is fail-closed when the pinned provider cannot positively identify the current instance. New-epoch content before proof cannot enter the old BU on the strength of old X evidence. This closes the stated planning omission without a worker, buffer, provider takeover or history import.",
+      "remaining_execution_conditions": "Prove the exact provider response belongs to the reserved current instance, keep HTTP outside the transaction, and exercise the already required trust fence through the final raw/domain write. Real provider capability and all test results remain unproven; no implementation closure is claimed."
+    },
+    {
+      "finding_id": "NUM-CRIT-02",
+      "position": "addressed-in-plan",
+      "planning_closure": true,
+      "implementation_verified": false,
+      "evidence": [
+        {
+          "packet_line": 103,
+          "detail": "One inbox acceptance owner for all new keyed IN/OUT, echoes, BFF/public sender results and Typebot; shared database key, compatibility validation and explicit missing-ID state."
+        },
+        {
+          "packet_line": 105,
+          "detail": "Echo-first creates OUT without invented human authorship; trusted sender enrichment preserves row ID/createdAt and later echoes cannot erase authorship. Only creation publishes a new-message event."
+        },
+        {
+          "packet_line": 149,
+          "detail": "The strict ConversationsService change reason now explicitly permits shared keyed OUT persistence while preserving DTO/window/timeline."
+        },
+        {
+          "packet_line": 150,
+          "detail": "The strict change contract admits the narrow message-acceptance owner and unit tests."
+        },
+        {
+          "packet_line": 304,
+          "detail": "Execution order includes shared IN/OUT/echo persistence and echo-first proof for the applicable existing callers."
+        },
+        {
+          "packet_line": 899,
+          "detail": "REG-SEC-11 forces the webhook to finish inside enviarTexto before the sender resolves; verifies one physical row, returned ID, author, zero IN/unread/bot and resource independence."
+        }
+      ],
+      "assessment": "All writers now participate in the same PostgreSQL identity/message acceptance rule. Both the nullable-key bypass and the post-success insertion-conflict failure described in the previous critique are explicitly prohibited. The chosen contract covers echo-first and sender-first with compatible ownership checks and trusted enrichment, and preserves the public response and timeline identity. It requires neither external-send retry nor a timing cache.",
+      "remaining_execution_conditions": "Route actual BFF/public/Typebot persistence through the owner, reconcile unique conflicts rather than bypass them, and validate the existing refresh projection of enriched fields. A successful send with no external ID remains explicitly pending/error, with no deduplication or external retry guarantee invented."
+    }
+  ],
+  "architecture_resolution_assessment": [
+    {
+      "finding_id": "NUM-ARCH-01",
+      "position": "addressed-in-plan; retained",
+      "reopened": false,
+      "evidence_packet_lines": [
+        93,
+        882,
+        899
+      ],
+      "assessment": "The verified BU determines Mantenedora. Exact-BU or tenant-global trigger selection and resumed-session owner checks remain required, with real PostgreSQL fixtures and distinct non-secret credential/resource identities at the external port. Shared OUT acceptance does not weaken that tenant boundary. No counterevidence justifies reopening the resolution."
+    },
+    {
+      "finding_id": "NUM-ARCH-02",
+      "position": "addressed-in-plan; retained and completed by NUM-CRIT-02",
+      "reopened": false,
+      "evidence_packet_lines": [
+        91,
+        103,
+        105,
+        883,
+        899
+      ],
+      "assessment": "The unique resource/message key and one transactional winner cover message creation plus conversation/unread changes; the shared sender/echo owner now covers the additional OUT interaction. Distinct resources remain independent, missing IDs reject before incoming domain effects, and legacy null keys do not pretend to provide retroactive deduplication. The accepted postcommit effects gap remains explicit."
+    },
+    {
+      "finding_id": "NUM-ARCH-03",
+      "position": "addressed-in-plan; retained and completed by NUM-CRIT-01",
+      "reopened": false,
+      "evidence_packet_lines": [
+        89,
+        97,
+        99,
+        884,
+        898
+      ],
+      "assessment": "Identity-before-content now applies both initially and after a previously verified pairing is renewed. Epoch-specific routing and current-instance proof defend that lifecycle. LID ambiguity, wrong-number quarantine and no-buffer/no-guaranteed-replay behavior remain fail-closed. Provider proof is still a prerequisite for execution evidence, not a silent assumption of this verdict."
+    },
+    {
+      "finding_id": "NUM-ARCH-04",
+      "position": "addressed-in-plan; retained",
+      "reopened": false,
+      "evidence_packet_lines": [
+        87,
+        97,
+        885
+      ],
+      "assessment": "Immutable provider-resource ownership survives channel removal, cross-BU reassignment is rejected, and same-BU reactivation is the only admitted path. New Evolution epochs retire old mappings without transferring their owner. The plan continues to distinguish local CAS from proof of an external Meta event's origin generation; no tenant-crossing exception is added."
+    },
+    {
+      "finding_id": "NUM-ARCH-05",
+      "position": "addressed-in-plan; retained",
+      "reopened": false,
+      "evidence_packet_lines": [
+        45,
+        270,
+        886
+      ],
+      "assessment": "Pairing remains an administrative authenticated POST with anti-CSRF, lease and generation. The old GET must return 405 without a provider call. A new epoch changes the pairing lifecycle rather than reintroducing a mutating GET or middleware exception."
+    },
+    {
+      "finding_id": "NUM-ARCH-06",
+      "position": "addressed-in-plan; retained",
+      "reopened": false,
+      "evidence_packet_lines": [
+        81,
+        83,
+        887,
+        888,
+        890
+      ],
+      "assessment": "NOVO/REAUTORIZAR, occupied-slot reuse, fresh attempt/nonce after code ambiguity, isolated candidate encryption and activation CAS preserve the active credential until the same resource is proved. Pairing trust epoch and official credential version remain distinct concepts. Current session/grant checks at promotion, candidate disposal and stale-attempt rejection remain execution obligations already present in the plan."
+    }
+  ],
+  "architecture_interaction_assessment": {
+    "position": "coherent",
+    "new_constitution_change_required": false,
+    "assessment": "D-06 and D-08 refine existing number identity and message idempotency boundaries. They do not change the one-BU/number or BU/contact conversation model, expand Typebot to an unrelated provider, authorize cross-BU transfer or add proactive conversations. Persisted staged recovery allows extra per-epoch provider work to span bounded rounds. Candidate credential promotion remains separate from Evolution pairing trust, durable identity remains the ownership authority, and the inbox acceptance owner is the message identity authority. The supplied canonical module snapshots are short; the planned endpoint/lifecycle/acceptance consolidation must still occur before new routes, and no module becomes Verified from this report.",
+    "decision_fit": [
+      {
+        "decisions": [
+          "D-01",
+          "D-07"
+        ],
+        "handling": "Preserve",
+        "reason": "Immutable BU/number ownership and transport-independent conversation identity remain intact."
+      },
+      {
+        "decisions": [
+          "D-02",
+          "D-03",
+          "D-04",
+          "D-05"
+        ],
+        "handling": "Preserve and define planned contracts",
+        "reason": "Server-side official proof, scoped encrypted credentials, atomic activation and staged recovery remain independent from the pairing fix."
+      },
+      {
+        "decisions": [
+          "D-06"
+        ],
+        "handling": "Preserve and concretize",
+        "reason": "Epoch-specific external identity implements the already required identity-before-content lifecycle."
+      },
+      {
+        "decisions": [
+          "D-08"
+        ],
+        "handling": "Preserve and concretize",
+        "reason": "Shared acceptance makes all writers honor the same resource/message uniqueness without public/timeline contract drift."
+      },
+      {
+        "decisions": [
+          "D-09",
+          "D-10"
+        ],
+        "handling": "Preserve",
+        "reason": "Local-first proof, excluded Railway/history/proactive work, principal checkout and single-writer topology are unchanged."
+      }
+    ]
+  },
+  "nonblocking_observations": [
+    {
+      "id": "NUM-DELTA-OBS-01",
+      "severity": "low",
+      "blocking": false,
+      "scope_classification": "in-scope concurrency-test concretization of the frozen old-epoch rejection contract; no new architecture or product behavior",
+      "title": "Exercise a previously trusted webhook paused across pairing invalidation",
+      "evidence": [
+        {
+          "packet_line": 97,
+          "detail": "Old-instance callbacks may produce only safe metadata, never content/receipt/current state."
+        },
+        {
+          "packet_line": 91,
+          "detail": "Identity validation precedes transactional message/conversation acceptance."
+        },
+        {
+          "packet_line": 898,
+          "detail": "REG-SEC-10 injects new-round content and stale observations after invalidation but does not explicitly pause an old, previously trusted content request between its preliminary lookup and persistence."
+        }
+      ],
+      "observation": "The absolute frozen invariant also covers an authenticated old-epoch webhook already in flight when RENEW commits. A check only at request entry would not be sufficient to implement that invariant. The packet does not show the future implementation and no such bug is alleged; this is a discriminating barrier placement for the existing BCI harness.",
+      "suggested_action": "Pause an old-instance webhook after its initial identity lookup and before raw/domain content writes. Commit the planned RENEW trust reset and old-mapping retirement, then release it. Synchronize the final current-mapping/epoch guard with content acceptance so the retired request cannot commit content, receipt, unread, realtime or bot effects. Use the same case for remove/recreate where applicable. Keep provider HTTP outside the transaction; do not apply this check by relabeling an old sender result as the new resource.",
+      "required_assertion": "After retirement commits, releasing the paused old webhook produces only permitted safe metadata and no content/domain effects; a current proved epoch still accepts one replay. This is a test of an existing requirement, not an additional approval blocker."
+    },
+    {
+      "id": "NUM-DELTA-OBS-02",
+      "severity": "low",
+      "blocking": false,
+      "scope_classification": "in-scope secret-negative harness concretization under DOD-03 and existing secret-free logging; no observed implemented gateway leak",
+      "title": "Include Meta verification-token queries in the gateway secret-negative check",
+      "evidence": [
+        {
+          "source_path": "api-app/src/surfaces/webhooks/meta.controller.ts",
+          "source_line": 24,
+          "packet_line": 1763,
+          "detail": "The Meta verification GET consumes hub.verify_token from the request query."
+        },
+        {
+          "packet_line": 235,
+          "detail": "DOD-03 requires logs/DTOs/artifacts without secrets."
+        },
+        {
+          "packet_line": 109,
+          "detail": "The new log policy explicitly covers the Evolution secret path/query."
+        },
+        {
+          "packet_line": 900,
+          "detail": "REG-SEC-12 tests a fictitious Evolution URL secret through the real gateway."
+        }
+      ],
+      "observation": "The included source exposes another concrete secret-bearing URL surface: Meta's verification query. A gateway rule specialized only to the Evolution path could meet that one test while still violating the broader existing secret-free logging requirement. There is no implemented new gateway in this planning packet to inspect.",
+      "suggested_action": "Add a dummy hub.verify_token to the same real-gateway log inspection, covering accepted and rejected verification requests and access/error/application logs and captured artifacts. Redact secret-bearing queries under the declared logging policy. Keep the challenge response and verification contract intact and never use a real token in test output.",
+      "required_assertion": "The dummy verification secret is absent from logs and artifacts for both success and error paths. This enforces the existing requirement and does not change the authentication protocol."
+    },
+    {
+      "id": "NUM-DELTA-OBS-03",
+      "severity": "low",
+      "blocking": false,
+      "scope_classification": "in-scope browser/readback assertion of already promised trusted enrichment and timeline preservation; no unsolicited Inbox implementation authorization",
+      "title": "Verify that the existing refresh projects trusted enrichment for the same message ID",
+      "evidence": [
+        {
+          "packet_line": 105,
+          "detail": "Echo-first author enrichment uses the existing refresh/projection, preserves ID/createdAt and emits no second new-message event."
+        },
+        {
+          "packet_line": 899,
+          "detail": "REG-SEC-11 verifies row authorship and the sender response but does not explicitly assert the active browser projection after an echo-first row has already been displayed."
+        },
+        {
+          "packet_line": 954,
+          "detail": "The approved timeline contract defines existing refresh/recovery behavior."
+        },
+        {
+          "packet_line": 213,
+          "detail": "Inbox.tsx remains outside expected changed paths."
+        }
+      ],
+      "observation": "Correct database enrichment and the returned sender DTO do not alone show that a client which already rendered the echo's unowned OUT refreshes that same ID's content/author. The current client source is not included in this delta, so this is an unproven projection condition, not evidence of a broken merge.",
+      "suggested_action": "In the existing real-backend browser lane, expose the echo-first OUT before resolving the sender, then perform the existing post-action or thread refresh. Assert that the same visible row acquires the trusted content/author without duplication, createdAt/cursor movement or unread changes. No new push, latency guarantee or timeline mechanism is requested. If existing behavior cannot satisfy the declared enrichment projection, route the concrete failure through normal diff/scope admission before any excluded Inbox edit.",
+      "required_assertion": "The refreshed timeline shows exactly one row with the original Message.id/createdAt and trusted author/content, while the established window and response contracts remain intact."
+    }
+  ],
+  "carried_observation_assessment": [
+    {
+      "finding_id": "NUM-OBS-01",
+      "position": "covered-in-plan",
+      "evidence_packet_lines": [
+        109,
+        900
+      ],
+      "assessment": "The real gateway, access/error/application logs and success/error paths are now explicit in the dummy-secret harness. The additional Meta query case above uses the same obligation."
+    },
+    {
+      "finding_id": "NUM-OBS-02",
+      "position": "covered-in-plan",
+      "evidence_packet_lines": [
+        111,
+        901
+      ],
+      "assessment": "Meta verifies the original signed bytes, then partitions accepted raw fragments by verified resource/BU; unknown or retired fragments persist only safe metadata. This preserves tenant ownership without a raw-event platform."
+    },
+    {
+      "finding_id": "NUM-OBS-03",
+      "position": "covered-in-plan",
+      "evidence_packet_lines": [
+        899
+      ],
+      "assessment": "Actual PostgreSQL trigger/session fixtures and non-secret credential/resource identity observations make tenant and credential selection discriminating at the real external port."
+    }
+  ],
+  "failure_modes_and_execution_assertions": [
+    "RENEW failure or timeout after trust reset must remain pending; old callbacks and expired leases cannot restore the old proof. Cleanup ambiguity must not cause adoption/deletion of an unowned instance or duplicate creation.",
+    "Current provider identity responses must be matched to the exact reserved instance; state=open, an operator-supplied name or a response for another resource is not sufficient. A divergent phone remains quarantined.",
+    "Duplicate IN or OUT/echo conflicts must reconcile by the database key and validate BU/conversation/contact/direction. A conflict must not fall back to an unkeyed new row or overwrite a different owner.",
+    "Trusted sender enrichment must preserve ID/createdAt and cannot later be erased by an untrusted echo. New-message publication, unread and bot effects belong only to the creation winner.",
+    "Candidate activation must reject a revoked/currently unauthorized session, stale attempt, changed generation or credential version, or another number; the previous valid active credential must survive failed reauthorization.",
+    "Authenticated mixed-owner Meta batches and pre-identity/retired Evolution events must not persist another owner's content in raw diagnostics. Secret-bearing fields and callback URLs require the same negative logging assertions.",
+    "Each recovery round must enforce the existing lease/time/call budget even when resource retirement, cleanup and new identity proof require several persisted stages. Listing still makes zero provider calls."
+  ],
+  "residual_risks_and_limits": [
+    {
+      "scope_classification": "external readiness prerequisite",
+      "risk": "No primary-provider/runtime confirmation was performed. Meta eligibility, Graph permissions/resource/register/subscribe behavior, actual pinned Evolution identity proof/payload shape, HTTPS reachability and usable test devices/numbers remain unknown. A failed prerequisite blocks its real-proof criterion; it is not replaced by a fake or this review."
+    },
+    {
+      "scope_classification": "explicitly accepted in-scope delivery limitation",
+      "risk": "Identity-pending Evolution input can be rejected without provider replay. The UI/runbook must require confirmed identity before test input and allow manual resend. No buffer, import or guaranteed replay is inferred."
+    },
+    {
+      "scope_classification": "explicitly accepted postcommit limitation",
+      "risk": "A crash after message commit and before realtime/automation can omit those effects. Winner-only replay handling does not provide an outbox, exactly-once external effects or automatic bot replay."
+    },
+    {
+      "scope_classification": "previously adjudicated unchanged behavior",
+      "risk": "Distinct simultaneous Typebot messages still have no added ordered-session/exactly-once conversation guarantee. The packet explicitly retains that limit. No objective counterevidence requires reopening it in this delta."
+    },
+    {
+      "scope_classification": "ownership/temporal limitation",
+      "risk": "Meta events carry no local generation. Durable ownership prevents cross-BU reassignment; a delayed event after same-BU reactivation is not thereby proved to belong to the latest local lifecycle. This remains distinct from tenant crossover."
+    },
+    {
+      "scope_classification": "in-scope migration and operations obligation",
+      "risk": "Existing resource collisions must abort with redacted diagnostics. Legacy null message keys do not retroactively deduplicate history. Existing channels without scoped credentials remain visibly pending. Encryption-key availability and nonce/AAD correctness still require implementation tests."
+    },
+    {
+      "scope_classification": "security and performance evidence limit",
+      "risk": "A compromised running application or installation key is outside DB-envelope protection. Local bounded trials establish neither production capacity nor continuous provider/token health."
+    },
+    {
+      "scope_classification": "explicitly excluded future work",
+      "risk": "Proactive conversations/ST-CON-04, templates/campaigns, historical import/coexistence/migration, binary media, delivery/read states, legacy takeover and Railway/production promotion remain outside this planning recommendation."
+    }
+  ],
+  "required_next_review_actions": [
+    "Record NUM-CRIT-01/02 as addressed in the plan while retaining their required execution harness and unverified status; do not mark them implementation-verified from this report.",
+    "Preserve the full raw observations and explicit axis categories when producing any canonical merge adapter; classify the new observations as nonblocking enforcement/test details of existing requirements.",
+    "Complete the separate assumption-code coherence, post-review scope-drift and execution-readiness preflight gates. This bounded critique neither substitutes for those guards nor independently proves source-wide negative claims from the prior assumptions.",
+    "Any material provider-version, identity-proof, persistence, recovery, scope or validation change discovered during concretization returns to the governed review/approval loop. Human APROVADO and subsequent binding rule ingestion remain necessary before product implementation."
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "schema_version": "todo-validation-report-v1",
+  "artifact_kind": "todo_validation_report",
+  "todo_path": "foundation_documentation/todos/active/features/TODO-leadshug-channel-connection-readiness.md",
+  "result": "FAIL",
+  "issues": [
+    {
+      "severity": "error",
+      "code": "GATE-ASSUMPTION_CODE_COHERENCE-SECTION-MISSING",
+      "field": "gates.assumption_code_coherence",
+      "message": "assumption_code_coherence section is missing.",
+      "rule_id": "paced.todo.gate.assumption_code_coherence.section-present",
+      "rule_level": "paced",
+      "source_kind": "validator",
+      "source_ref": "delphi-ai/tools/todo_deterministic_validator.py",
+      "episode_id": "ep-3a884b0777cdc6ca",
+      "fingerprint": "461191178e1875d7",
+      "resolution_instruction": "Add the full gate section to the TODO before using or validating that gate."
+    }
+  ]
+}

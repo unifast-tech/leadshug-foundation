@@ -1,0 +1,33 @@
+{
+  "planning_only": true,
+  "review_reports_verified_immutable": [
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/planning-architecture.json",
+      "sha256": "81add7104ded674f6cefb4030f06b27025e039ac18520444c30bcce20d85778a"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/planning-critique.json",
+      "sha256": "8a83a15b28c3416f69fb3a0253854cecd0c47f0500b9364e4bbf2d3e3b1a0e98"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/planning-critique-delta.json",
+      "sha256": "1a56c23719a6dac42348e33398dbc40e9b69c74b048ef0c385f41794de02a73c"
+    }
+  ],
+  "source_repositories": {
+    "api-app": {
+      "head": "ae6a9662c29b77276351aa9de653a47276372246",
+      "clean": true,
+      "product_tests_run_in_planning": false
+    },
+    "web-app": {
+      "head": "4e56f6c1f4515b918d05b8c87e890d42e8542c56",
+      "clean": true,
+      "product_tests_run_in_planning": false
+    }
+  },
+  "human_implementation_approval": "not yet provided for ST-CON-01",
+  "preflight_execution_authority_granted": false,
+  "legacy_runtime_touched": false,
+  "manual_gitlink_changes": false
+}

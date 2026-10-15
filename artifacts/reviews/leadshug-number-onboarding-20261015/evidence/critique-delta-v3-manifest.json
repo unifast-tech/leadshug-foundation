@@ -1,0 +1,17 @@
+{
+  "baseline": "87c28c6b0f767edde5edf30d4143844f0acd5c2a",
+  "todo_full_file_sha256": "257956057e49120348f61d2be10a5c8ccbff2f1443296cd6e3b550a75e0b1ecd",
+  "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/planning-critique.json": "8a83a15b28c3416f69fb3a0253854cecd0c47f0500b9364e4bbf2d3e3b1a0e98",
+  "foundation_documentation/artifacts/validation-plans/leadshug-channel-readiness-20261015.md": "857b09580b30f2bbd83887e151067996520676fbf0344c0c6e5d22335eead9ea",
+  "foundation_documentation/modules/integrations-and-channels.md": "f1089379b55c2ebcbd97b72e608786c8a8931c211ec7bee6bf18198418edbec7",
+  "foundation_documentation/modules/inbox-and-conversations.md": "31f80272b7f948786817dfee2452ff1cb0fabf3221149685fc3e9e4fd47f5997",
+  "foundation_documentation/modules/identity-and-tenancy.md": "a1a72e9674c271000b9393ea44caac732f920983ca63528d09560583f1bf54ab",
+  "foundation_documentation/modules/audit-and-history.md": "008ae14723fe6bf2946b592fd2db968299a06d82ae75a900ca0e695f41552862",
+  "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/manual-code-assumptions.json": "975179a311c0a934ac76345ec52054f0c384f9d39494174b58cf90fa7a21643a",
+  "api-app/src/integrations/evolution/evolution.client.ts": "acafe35a510dc7b8a2e335aae8c29a1da8300b4a1adca0416a2f1517f842cf4f",
+  "api-app/src/surfaces/webhooks/evolution.controller.ts": "45b0f1ac897714d211756bb916b35cf205067db87d2be5bf464a6dc552461488",
+  "api-app/src/domain/inbox/incoming.service.ts": "edc4fd36032f53e9cc850374f4afb1fd11536c394b6ba8ec22b4b094eaee8eca",
+  "api-app/src/domain/inbox/conversations.service.ts": "93e69b0a1811533d0d718fe3fd3b105b1376d2a481ab2b22d8f1bfcf5dbe452e",
+  "api-app/src/surfaces/webhooks/meta.controller.ts": "98dc91db73a0a955d039b10320661acaf401a7466df10ccdfd88ce2b8eb883ef",
+  "packet_sha256": "80941452b79c5c8cf0276bd631b6f35971d01e4fe504b3f694121af16b4a10dc"
+}
