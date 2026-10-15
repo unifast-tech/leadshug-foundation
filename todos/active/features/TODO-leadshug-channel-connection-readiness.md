@@ -28,7 +28,7 @@ A tela de números mostra estado salvo, mas o oficial é marcado CONECTADO após
 
 ## Contract Boundary
 
-Este draft define a proposta da primeira entrega. Nenhum checkpoint do histórico anterior autoriza esta execução. O contrato deve ser refinado após confirmar ambiente, versão Evolution e modalidade da WABA, congelado, revisado e aprovado antes de tocar produto. Mudança material exige reconvergência; refinamento local só cabe no mesmo objetivo e aprovação.
+Este draft define a proposta da primeira entrega. Nenhum checkpoint do histórico anterior autoriza esta execução. Ambiente inicial local confirmado pelo usuário em2026-10-15, com Railway em fase posterior. O contrato deve ser refinado após fixar versão Evolution, wiring local e modalidade da WABA, congelado, revisado e aprovado antes de tocar produto. Mudança material exige reconvergência; refinamento local só cabe no mesmo objetivo e aprovação.
 
 ## Implementation Intent
 
@@ -41,7 +41,7 @@ Este draft define a proposta da primeira entrega. Nenhum checkpoint do históric
 
 - **Current delivery stage:** Pending
 - **Qualifiers:** none
-- **Next exact step:** confirmar ambiente/versão Evolution/modalidade oficial; fechar semântica e superfícies do contrato antes do freeze e das revisões.
+- **Next exact step:** fechar o preparo local (Evolution própria com versão fixada, variáveis e callback), confirmar modalidade oficial e completar o contrato antes do freeze/revisões.
 
 ## Active Work State (Required While TODO Remains In `active/`)
 
@@ -58,6 +58,7 @@ Este draft define a proposta da primeira entrega. Nenhum checkpoint do históric
 - [ ] SCOPE-05: validar QR inicial/renovação/repareamento, persistência da instância e recuperação após interrupção na versão Evolution admitida, com erros compreensíveis.
 - [ ] SCOPE-06: acrescentar testes internos e fluxo browser de número/canal, preservando inbox e isolamento multi-tenant.
 - [ ] SCOPE-07: fornecer procedimento reproduzível de teste real IN/OUT para cada canal, registrando resultado por canal e build; manter pendência explícita se o provedor não puder ser testado.
+- [ ] SCOPE-08: preparar runtime local próprio do LeadsHug para os dois canais, com configuração privada, variáveis necessárias repassadas à API e callback alcançável. Completar os paths de runtime no diff antes do freeze; não reutilizar instância/dados do legado.
 
 ## Delivery Status Semantics
 
@@ -78,7 +79,7 @@ n/a no estágio de drafting. Dependências técnicas desconhecidas são explicit
 ## Execution Lane Tracking (Required)
 
 - **Local implementation branches:** propostas futuras `feature/channel-connection-readiness` em API/Web; ainda não criadas. Foundation em main.
-- **Promotion lane path:** implementação local após aprovação, validação local e prova externa no ambiente de testes confirmado; promoção remota de produto exige autorização separada.
+- **Promotion lane path:** implementação local após aprovação, validação inicial local e prova externa dos providers com backend local; Railway de testes em fase posterior, com readiness e escopo próprios; promoção remota de produto exige autorização separada.
 - **Lane-promoted threshold for this TODO:** n/a
 - **Production-ready threshold for this TODO:** não reivindicado.
 - **Execution topology:** primary-checkout-single-writer
@@ -175,7 +176,7 @@ Register: `foundation_documentation/artifacts/dependency-readiness.md`.
 
 | Dependency | Why It Matters | Status | Last Verified | Verification Method | Adjustment / Workaround |
 | --- | --- | --- | --- | --- | --- |
-| Evolution de teste e versão | Endpoint/payload/sessão reais. | unknown | n/a | Versão, acesso e teste no target a confirmar. | Não adivinhar versão. |
+| Evolution de teste e versão | Endpoint/payload/sessão reais. | unknown | n/a | Target inicial local confirmado; instância própria e versão ainda a definir. | Não usar instância legada observada no inventário Docker. |
 | Meta/WABA de teste | Identidade e operação oficial. | unknown | n/a | Permissões, modalidade, número e callback. | Disponibilidade oferecida não é health check. |
 | Números/interlocutores de teste | Prova IN/OUT. | unknown | n/a | Usuário confirmou disponibilidade dos dois em2026-10-15. | Confirmar target/destinatário sem publicar números pessoais. |
 | Documentação oficial Meta | Semântica atual/eligibilidade. | rate-limited | 2026-10-15 | HTTP429 nas páginas de onboarding. | Reconsultar antes de congelar decisões dependentes. |
@@ -193,7 +194,7 @@ Register: `foundation_documentation/artifacts/dependency-readiness.md`.
 | From Profile | To Profile | Why the Handoff Exists | Touched Surfaces | Status / Evidence |
 | --- | --- | --- | --- | --- |
 | strategic-cto | operational-coder | Implementar somente contrato aprovado. | API/Web/canon owner | planned; nenhuma execução. |
-| operational-coder | operational-devops | Configurar e provar callback/target de teste se necessário. | Runtime de teste explicitamente confirmado | planned; nenhuma infraestrutura alterada. |
+| operational-coder | operational-devops | Configurar e provar callback/target de teste se necessário. | Compose local/variáveis/callback e instância própria | planned; target local confirmado, nenhuma infraestrutura alterada. |
 
 ## Complexity
 
@@ -214,11 +215,12 @@ Register: `foundation_documentation/artifacts/dependency-readiness.md`.
 - [ ] D-02: confirmar modalidade/WABA e política de seleção explícita do número; separar vínculo configurado, estado observado e prova IN/OUT.
 - [ ] D-03: fechar persistência, frescor, prioridade de evento/consulta, geração de vínculo e resposta de erro sem mentir conexão.
 - [ ] D-04: fixar budgets/timeouts/concurrency e contrato BFF administrativo; completar todos os paths previstos e testes.
-- [ ] D-05: confirmar ambiente não produtivo, callbacks e interlocutores; decidir procedimento de interrupção sem remover canal real em uso.
+- [ ] D-05: no ambiente local confirmado, fechar wiring/infra própria, callback e interlocutores; decidir procedimento de interrupção sem remover canal real em uso. Railway permanece fora do primeiro ciclo.
 
 ## Decisions (Resolved Before Freeze)
 
-Prioridade de planejamento confirmada. Decisões de implementação D-01..05 ainda abertas, nenhuma freeze claim.
+- D-00 confirmado pelo usuário em2026-10-15: começar localmente; Railway poderá ser validado depois. Isso não comprova saúde do ambiente nem autoriza deploy.
+- Prioridade de planejamento confirmada. Decisões de implementação D-01..05 ainda abertas, nenhuma freeze claim.
 
 ## Module Decision Baseline Snapshot (Required Before APROVADO)
 
@@ -250,7 +252,8 @@ Prioridade de planejamento confirmada. Decisões de implementação D-01..05 ain
 
 ## Questions To Close
 
-- [ ] Ambiente local ou Railway de testes, versão Evolution e acesso às suas rotas sem depender do legado.
+- [x] Ambiente inicial: local; usuário admite Railway posteriormente.
+- [ ] Versão Evolution própria, acesso às suas rotas e persistência isolada, sem depender do legado.
 - [ ] Número oficial já pertence à WABA? Modalidade de onboarding e número selecionado.
 - [ ] Callback público de teste e interlocutor permitido para troca real.
 - [ ] Resolver D-01..05 e completar review baseline + revisão/guardas antes de pedir APROVADO.
@@ -313,7 +316,7 @@ ChannelsService, clients Meta/Evolution, controller BFF, estado do webhook e pro
 
 ### Runtime / Rollout Notes
 
-Não alterar ambiente real agora. Mudança de schema, se necessária, deve entrar no contrato com migração antes da aprovação. Sem gitlinks, mudança de configuração secreta ou deploy de produção.
+Ambiente inicial local confirmado em2026-10-15; Railway em fase posterior. Leitura do Compose detectou ausência de serviço Evolution e do repasse de variáveis de webhook/instância. Os arquivos de runtime (Compose, exemplos sem segredos, README e comandos de startup/teste) devem ter paths/baseline explicitados antes do freeze. Docker Windows acessível; socket Linux indisponível. Inventário do Compose LeadsHug estava parado; nenhum serviço foi iniciado. Não alterar ambiente real agora. Mudança de schema, se necessária, deve entrar no contrato com migração antes da aprovação. Sem gitlinks, mudança de configuração secreta ou deploy de produção.
 
 ## Plan Review Gate (Review of the Execution Plan; required for `medium|big`; abbreviated for low-risk `small`)
 
