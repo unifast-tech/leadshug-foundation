@@ -1,6 +1,6 @@
-# Cadastro de números — planejamento ST-CON-01
+# Cadastro de números — ST-CON-01
 
-Contrato governante: [TODO](../../../todos/active/features/TODO-leadshug-channel-connection-readiness.md). Proposta em revisão; nenhuma execução de produto ou aprovação reivindicada.
+Contrato governante: [TODO](../../../todos/active/features/TODO-leadshug-channel-connection-readiness.md). APROVADO pelo usuário em2026-10-15 após a publicação3302964c. Implementação em andamento; entrega geral Pending e prova externa pendente.
 
 Escopo: cadastro guiado oficial Meta e não oficial Evolution/QR, integração com BU, recebimento e primeira conversa recebida para validar o vínculo. Nova conversa proativa é ST-CON-04, próximo recorte solicitado pelo usuário; importação segue depois.
 
@@ -14,7 +14,7 @@ A [crítica delta v3](planning-critique-delta.json) aprovou o planejamento, com 
 
 Guarda de coerência: [go](evidence/code-coherence.json), quatro premissas com fonte real e caller search adicional. Escopo: [go](evidence/scope-drift-final.json), 23 seções comparadas com a baseline publicada `87c28c6b0f767edde5edf30d4143844f0acd5c2a`, zero mudanças materiais; cláusulas técnicas extras comparadas em [recibo manual](evidence/manual-frozen-contract-comparison.json). Autoridade prévia: [preflight-go](evidence/authority-preapproval-final.json), `execution_authority_granted=false`. As normalizações/merges são derivados com proveniência; pareceres brutos permanecem íntegros.
 
-Próximo gate: APROVADO explícito para ST-CON-01, exigido pelo workflow local de aprovação. A aprovação anterior de ST-ATT-01 não é reutilizada para este novo contrato. Após aprovação, recarregar regras, registrar escopo autorizado e obter authority guard de execução go antes de produto/runtime. Nova conversa por contato segue como ST-CON-04 antes da importação.
+Execução autorizada: [aprovação registrada](evidence/approval-20261015.json), [routing go](evidence/routing-execution.json) e [authority go](evidence/authority-execution.json). Contratos owner consolidados antes do código. [Checkpoint1](evidence/checkpoint1-execution-evidence.md) concluiu persistência/cifra/aceitação keyed com119unitários e3testes PostgreSQL na fonte final desse checkpoint; não equivale à validação final. Checkpoint2 da API em andamento, seguido de UI/runtime, testes finais, reviews e prova real. [Preparação da conta Meta/HTTPS](local-setup.md) e [handoff de runtime planejado](runtime-handoff.md) registram as dependências ainda ausentes. Nova conversa por contato segue como ST-CON-04 antes da importação.
 
 A validação estrutural v3 inicial encontrou um cabeçalho com prefixo de formatação incorreto na seção de coerência; corrigido sem mudar escopo. O recibo v3-corrected é o resultado PASS vigente; o primeiro resultado permanece como histórico.
 
