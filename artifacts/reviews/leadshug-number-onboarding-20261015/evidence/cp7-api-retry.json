@@ -1,0 +1,32 @@
+{
+  "checkpoint": "cp7-api-retry",
+  "date": "2026-10-15",
+  "command": "bash scripts/test-channels-local.sh api",
+  "target": "leadshug_channels_validation / leadshug_timeline_channels_ci",
+  "preflight": {
+    "node": "v22.23.3",
+    "openssl": "OpenSSL 3.0.22 25 Aug 2026",
+    "prisma_binary_target": "debian-openssl-3.0.x",
+    "principal_api_and_web_package_bind_hashes_verified_before_npm": true,
+    "api_env_mask_matches_api_env_example": true,
+    "git_repositories_observed_from_principal_checkout": true,
+    "api_env_contents_read_or_emitted": false
+  },
+  "completed": [
+    "npm ci for API and Web",
+    "Prisma client generation",
+    "21 migrations applied and Prisma reported schema up to date",
+    "API lint",
+    "canonical Nest build completed without EBUSY"
+  ],
+  "unit_tests": {
+    "passed": 129,
+    "failed": 1,
+    "test_files_passed": 18,
+    "test_files_failed": 1,
+    "failure": "MetaHttpClient scoped credentials > verifies the selected phone on the provider-returned page cursor and rejects a foreign phone",
+    "assertion": "api-app/src/integrations/meta/meta.client.spec.ts:82 expected the edge URL to contain /v21.0/123456/phone_numbers; received /v-test/123456/phone_numbers"
+  },
+  "result": "Stopped before API E2E, Web unit/build, and Playwright because an API unit test failed. The failure concerns product behavior/test expectation; API/Web source was not edited.",
+  "cleanup": "The runner trap removed the disposable validation containers, network, and volumes. No operator runtime was started or changed."
+}

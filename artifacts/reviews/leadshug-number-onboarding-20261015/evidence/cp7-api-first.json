@@ -1,0 +1,24 @@
+{
+  "checkpoint": "cp7-api-first",
+  "date": "2026-10-15",
+  "command": "bash scripts/test-channels-local.sh api",
+  "target": "leadshug_channels_validation / leadshug_timeline_channels_ci",
+  "preflight": {
+    "node": "v22.23.3",
+    "openssl": "OpenSSL 3.0.22 25 Aug 2026",
+    "prisma_binary_target": "debian-openssl-3.0.x",
+    "source_bind_sha256_verified_before_npm": true,
+    "api_env_mask_matches_api_env_example": true,
+    "api_env_contents_read_or_emitted": false
+  },
+  "completed": [
+    "npm ci for API and Web",
+    "Prisma client generation",
+    "21 PostgreSQL migrations applied to the disposable validation database",
+    "Prisma migration status reported the database schema up to date"
+  ],
+  "stopped_at": "API build",
+  "failure": "Nest CLI failed with EBUSY: resource busy or locked, rmdir '/workspace/api-app/dist'. The runner mounted a named volume directly at dist while nest-cli.json sets deleteOutDir=true.",
+  "cleanup": "The runner trap completed docker compose down --volumes --remove-orphans for its validation project. No operator runtime was started or changed.",
+  "next_change": "Move API and Web writable workspaces to owned parent volumes and mount the actual principal-checkout source/config files read-only beneath them, leaving dist as a normal directory inside the parent volume. Keep the API .env config mask and verify source hash before npm."
+}
