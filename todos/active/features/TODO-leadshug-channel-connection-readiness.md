@@ -2,7 +2,7 @@
 
 ## Quick Start
 
-Contrato proposto ST-CON-01, baseado no template canônico. Usuário autorizou avançar no planejamento do cadastro de números e conversas; Nova conversa informando contato é o próximo ST-CON-04. APROVADO pelo usuário em2026-10-15 para o contrato publicado em3302964c; implementação e prova ainda pendentes. Proposta publicada e revisada: arquitetura e crítica convergidas, sem prova externa ou entrega reivindicada.
+Contrato proposto ST-CON-01, baseado no template canônico. Usuário autorizou avançar no planejamento do cadastro de números e conversas; Nova conversa informando contato é o próximo ST-CON-04. APROVADO pelo usuário em2026-10-15 para o contrato publicado em3302964c; implementação em andamento e prova externa pendente. Proposta publicada e revisada: arquitetura e crítica convergidas, sem prova externa ou entrega reivindicada.
 
 ## Title
 
@@ -234,6 +234,7 @@ n/a; esta proposta não autoriza promoção ou deploy.
 | api | test/browser-server.cjs | M | Backend real e fixtures de cadastro. |
 | api | test/timeline-fixtures.cjs | M | Somente credencial de fixture exigida pelo novo resolver. |
 | api | test/webhooks.e2e-spec.ts | M | Receipt, auth e races. |
+| api | test/realtime.e2e-spec.ts | M | Apenas fixture de canal verificado scoped pelo helper comum; preservar asserts de socket/grant/tenant. Admissão de execução documentada abaixo. |
 | api | test/api-publica.e2e-spec.ts | M | Credencial e echo-first/sender-first no envio público; contrato preservado. |
 | api | test/atendimento.e2e-spec.ts | M | Credencial, echo-first/sender-first e autoria/ID reconciliados; demais invariantes preservados. |
 | api | test/typebot.e2e-spec.ts | A,?? | Credenciais e negativos de isolamento; comportamento dentro do tenant preservado. |
@@ -285,7 +286,9 @@ n/a; esta proposta não autoriza promoção ou deploy.
 
 ### Diff Deviation Analysis
 
-Nenhum desvio autorizado. Classificação de gitlinks preexistentes no workspace não concede permissão de alterá-los manualmente. Fixtures adicionais encontradas necessárias devem ser admitidas antes de editadas; não modificar expectativas de negócio só para passar tests.
+Uma admissão de fixture em execução está detalhada abaixo. Classificação de gitlinks preexistentes no workspace não concede permissão de alterá-los manualmente. Outras fixtures encontradas necessárias devem ser admitidas antes de editadas; não modificar expectativas de negócio só para passar tests.
+
+- `test/realtime.e2e-spec.ts`: guard de execução encontrou path não classificado. Diff inspecionado pelo orquestrador: somente import do helper `criarCanalVerificado` e substituição da criação direta de BuChannel pela fixture completa de identidade/credencial; nenhum assert, cenário ou comportamento de socket alterado. Necessário para preservar a prova de push scoped após o ingresso passar a exigir identidade durável. Classificação: concretização de fixture da validação SCOPE-07/09 já autorizada, sem nova capacidade, objetivo ou risco material. Admitido esse path exato, sem abrir `test/**`; nenhuma dispensa do guard. A edição precedeu a admissão, falha de sequência registrada e corrigida antes de qualquer entrega; executor instruído a consultar antes de novos paths.
 
 ## Bounded But Elastic Guardrails
 
@@ -368,7 +371,7 @@ Register: `foundation_documentation/artifacts/dependency-readiness.md`.
 
 | From Profile | To Profile | Why the Handoff Exists | Touched Surfaces | Status / Evidence |
 | --- | --- | --- | --- | --- |
-| strategic-cto | operational-coder | Implementar somente contrato aprovado. | API/Web/canon owner | planned; nenhuma execução. |
+| strategic-cto | operational-coder | Implementar somente contrato aprovado. | API/Web/canon owner | active; aprovação/authority go registrados, checkpoint1 concluído e checkpoint2 API em execução. |
 | operational-coder | operational-devops | Configurar e provar callback/target de teste se necessário. | Compose local/variáveis/callback e instância própria | planned; target local confirmado, nenhuma infraestrutura alterada. |
 
 ## Complexity
@@ -875,7 +878,7 @@ Nenhum comentário de aprovação pendente foi tratado como APROVADO.
 ## Execution Checkpoints
 
 - Checkpoint1 concluído em2026-10-15: schema/2migrations, cifra/redaction e owner de aceitação de mensagens. Evidência: artifacts/reviews/leadshug-number-onboarding-20261015/evidence/checkpoint1-execution-evidence.md. Fonte final:119unidades+3PGtargeted+lint/build/migrate.226E2E amplas anteriores ao último hardening não serão reaproveitadas como prova da fonte final do produto.
-- Checkpoint2 seguinte: adapters, tentativas/controladores, credenciais scoped em todos os consumers, fencing/tenant/dedupe e integração DI. Depois UI, runtime/ingress com handoff DevOps, validação final/reviews e prova real.
+- Checkpoint2 API em andamento: adapters, tentativas/controladores, credenciais scoped em todos os consumers, fencing/tenant/dedupe e integração DI. Uma rodada intermediária passou124unitários+8PGfocados e migrações; suíte ampla intermediária223/232, com falhas/fixtures em correção. Lease/cleanup/estado de recebimento recebem hardening adicional, portanto esses resultados não certificam a fonte final. Depois UI, runtime/ingress com handoff DevOps, validação final/reviews e prova real.
 - Usuário confirmou nesta execução não ter ainda app Meta/Embedded Signup nem HTTPS e autorizou preparo. A prova oficial permanece pendente dessa configuração na conta do operador; não bloqueia trabalho interno independente.
 - Preparação documental: artifacts/reviews/leadshug-number-onboarding-20261015/local-setup.md; handoff de runtime planejado em runtime-handoff.md no mesmo diretório. Nenhuma criação de app, túnel ou runtime foi reivindicada por esses roteiros.
 - O classificador genérico profile_scope_check não reconhece prefixos api-app Nest; paths unknown foram conferidos contra constituição, owners e Diff Expectation do TODO aprovado. Nenhuma negação de escopo foi ignorada; Delphi/regras não foram modificados.

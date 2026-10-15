@@ -1,0 +1,31 @@
+{
+  "recorded_on": "2026-10-15",
+  "artifact_role": "Review preparation and primary-source refresh; not a security gate pass or a vulnerability report",
+  "security_risk_level": "high",
+  "attack_simulation_decision": "required",
+  "simulation_status": "pending final REG-SEC-01..13 evidence and independent review",
+  "sources": [
+    {
+      "url": "https://api-security.owasp.org/editions/2023/en/0xa1-broken-object-level-authorization/",
+      "review_relevance": "Object identifiers require authorization for the particular action and object; unpredictable IDs alone do not establish permission.",
+      "mapped_surfaces": ["attempt and channel IDs", "BU and tenant grants", "provider resource ownership", "Typebot session ownership"],
+      "required_project_evidence": ["cross-tenant and role negatives", "immutable owner conflict before external mutation", "foreign Typebot trigger/session rejection"]
+    },
+    {
+      "url": "https://cheatsheetseries.owasp.org/cheatsheets/OAuth2_Cheat_Sheet.html",
+      "review_relevance": "Authorization transactions need correlation and replay protection; token audience, resource and action restrictions must be enforced.",
+      "mapped_surfaces": ["Meta SDK callback lifecycle", "session-bound attempt and one-use nonce/code", "app/scopes/WABA verification", "encrypted candidate promotion"],
+      "required_project_evidence": ["stale callback and consumed-code rejection", "app and per-resource scope negatives", "candidate cannot replace another number or the active credential"],
+      "limit": "General OAuth guidance does not prove Meta SDK or Graph-version capabilities. Do not invent PKCE/DPoP parameters, expand permissions or replace the approved provider flow without provider evidence. Meta app eligibility and real authorization remain unverified."
+    },
+    {
+      "url": "https://cheatsheetseries.owasp.org/cheatsheets/REST_Security_Cheat_Sheet.html",
+      "review_relevance": "The server must validate workflow transitions and reject out-of-order execution. Sensitive request values require protection from URLs/logs; errors and audit metadata must avoid disclosure.",
+      "mapped_surfaces": ["authorize/confirm/advance/retry/cancel", "channel operation lease and generation CAS", "POST-only pairing", "gateway access/error logs", "partitioned provider raw data"],
+      "required_project_evidence": ["overlap and stale completion barriers", "invalid-stage and missing-CSRF rejection", "fictitious callback secrets absent from actual gateway/application logs", "signed mixed-owner batch partitioning"],
+      "limit": "Provider-mandated query/path secret exceptions require explicit redaction proof; this guidance does not itself waive or certify the approved callback contract."
+    }
+  ],
+  "safety_boundary": "Only public documentation was retrieved for this artifact. No real provider account, number, app, credentials or production target was scanned or mutated. Runtime attack probes remain confined to the approved isolated local harness.",
+  "interpretation": "Sources inform independent review hypotheses. They do not add product scope, authorize new platform security features, replace the governing TODO or establish that the current implementation is secure."
+}

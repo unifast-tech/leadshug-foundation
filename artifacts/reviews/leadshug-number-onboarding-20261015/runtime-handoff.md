@@ -15,6 +15,7 @@ Runtime scope is the approved root Compose file/overlay, gateway template, two l
 - Docker is available through Windows `docker.exe`. A WSL `/mnt/c/...` source bind resolved to an empty directory in the Windows daemon during checkpoint 1; using `wslpath -w` fixed the bind. Verify the mounted source before trusting commands or hashes.
 - Checkpoint 1 used an isolated disposable PostgreSQL 16 database and a Linux named dependency volume. Do not reuse an operational database for destructive fixture cleanup. The second migration directory was renamed to match the approved `*number_onboarding*` glob; prove the final migration set on a fresh disposable database.
 - Existing ignored `.env` files are private operational authority. Do not print, replace, remove, or normalize them. Do not infer that a preexisting token belongs to this test.
+- Root `.gitignore` explicitly ignores `.env.local` and `.env.testing`; it does not broadly ignore `.env.*`. If the runner creates private test configuration, use an already ignored destination, first verify it is absent, refuse replacement of an existing file, and never include its contents in logs or evidence. Do not invent an unignored secret-file name.
 
 ## Required local topology
 
@@ -25,6 +26,8 @@ Use a separate LeadsHug test project/network/volumes. Provide the API, Web, gate
 The planned gateway port is 8082, configurable. Resolve conflicts before startup and record actual handles. UI, API, realtime and callbacks share the same origin. Forward the routes actually used by the implemented app, including WebSocket upgrade and original Meta webhook bytes. Do not add an interactive authentication wall to provider callbacks.
 
 Gateway access/error logs and application errors must omit the Evolution secret path and Meta query token on success and failure. Exercise both through the actual gateway using fictitious secrets and inspect resulting logs. A safe access format alone does not prove error-log redaction.
+
+Check the pinned provider's own QR/logging behavior before real pairing. Do not collect a real QR or credential-bearing provider response into Docker-log evidence, browser traces or screenshots. Any logging adjustment must be supported by that exact image and verified; this note does not assert that a particular provider switch exists.
 
 Wire the final API configuration, not an independently invented env contract. Current confirmed names are `META_APP_ID`, `META_APP_SECRET`, `META_SIGNUP_CONFIG_ID`, `GRAPH_VERSION`, `WEBHOOK_VERIFY_TOKEN`, `PUBLIC_ORIGIN`, `CHANNEL_CREDENTIAL_KEY_ID` and `CHANNEL_CREDENTIAL_KEY`, plus the existing Evolution/session/module settings. Verify final names with the API handoff. Missing all Meta onboarding configuration leaves that modality unavailable; partial configuration must surface an actionable error. Never pass secrets into the browser bundle or `config.js`.
 
