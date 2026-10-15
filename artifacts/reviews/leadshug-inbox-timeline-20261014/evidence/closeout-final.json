@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-10-15T05:15:43.691331Z",
+  "generated_at_utc": "2026-10-15T05:21:14.598894Z",
   "git": {
     "ahead": 0,
     "available": true,
@@ -19,12 +19,12 @@
         "current_delivery_stage": "Local-Implemented",
         "delivery_claim": true,
         "disposition": "move-completed",
-        "next_exact_step": "validar e publicar as evid\u00eancias/documenta\u00e7\u00e3o na Foundation main; depois mover o mesmo TODO para completed e publicar a reloca\u00e7\u00e3o.",
-        "path_state": "active",
-        "post_commit_push_status": "pending",
+        "next_exact_step": "none; recorte local conclu\u00eddo. Transfer\u00eancia, estados e m\u00eddia seguem em contratos pr\u00f3prios.",
+        "path_state": "completed",
+        "post_commit_push_status": "complete",
         "qualifiers": "none",
-        "todo_path": "/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/todos/active/features/TODO-leadshug-inbox-message-timeline-pagination.md",
-        "work_state": "review"
+        "todo_path": "/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/todos/completed/features/TODO-leadshug-inbox-message-timeline-pagination.md",
+        "work_state": "n/a-once-moved-out-of-active"
       },
       "violations": []
     }

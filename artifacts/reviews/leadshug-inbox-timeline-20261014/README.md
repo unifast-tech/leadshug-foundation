@@ -1,6 +1,6 @@
 # Histórico paginado da inbox — ST-ATT-01
 
-Implementação aprovada em2026-10-14 e validada localmente em2026-10-15. [TODO governante](../../../todos/active/features/TODO-leadshug-inbox-message-timeline-pagination.md). Estado atual: **Local-Implemented**; aderência, TQA e revisão final aceitas, guardas de entrega go. Commits locais registrados; publicação documental/relocação do TODO em fechamento.
+Implementação aprovada em2026-10-14 e validada localmente em2026-10-15. [TODO governante](../../../todos/completed/features/TODO-leadshug-inbox-message-timeline-pagination.md). Estado atual: **Local-Implemented**; aderência, TQA e revisão final aceitas, guardas de entrega go. Commits locais registrados; evidências publicadas na Foundation em `1c7f2a94` e mesmo TODO encerrado em completed em 2026-10-15.
 
 A inbox abre as mensagens recentes e oferece todo o histórico por cursor. Atualizações preservam mensagens, leitura, posição, rascunho, contexto e metadados; recuperação pendente tem limite de consultas e continuação explícita. Contrato owner: [inbox-and-conversations](../../../modules/inbox-and-conversations.md).
 

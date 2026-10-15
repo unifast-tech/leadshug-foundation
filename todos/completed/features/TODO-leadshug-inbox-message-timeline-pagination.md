@@ -2,7 +2,7 @@
 
 ## Quick Start
 
-Contrato criado a partir de delphi-ai/templates/todo_template.md, revisado, congelado e aprovado pelo usuário em 2026-10-14. Execução autorizada pelo authority guard normal; validação e reviews de entrega estão em andamento.
+Contrato criado a partir de delphi-ai/templates/todo_template.md, revisado, congelado e aprovado pelo usuário em 2026-10-14. Execução autorizada pelo authority guard normal; implementação, validação e reviews concluídos. Evidências publicadas na Foundation em 2026-10-15.
 
 ## Title
 
@@ -11,8 +11,9 @@ Histórico completo e paginado na inbox do LeadsHug.
 ## Artifact Identity
 
 - **Artifact type:** `tactical_execution_contract`
-- **Tactical state:** `In-Progress`
+- **Tactical state:** `Completed`
 - **Prepared on:** 2026-10-14
+- **Closed on:** 2026-10-15
 - **Scope selection source:** atendimento selecionado pelo usuário; revisão e preparação de aprovação autorizadas por “Pode seguir para revisão e aprovação”, em 2026-10-14
 - **Implementation approval:** APROVADO explícito do usuário em 2026-10-14; ver Approval e authority guard normal go
 
@@ -42,13 +43,13 @@ Este contrato aprovado define somente ST-ATT-01. Mudanças materiais de contrato
 
 - **Current delivery stage:** Local-Implemented
 - **Qualifiers:** none
-- **Next exact step:** validar e publicar as evidências/documentação na Foundation main; depois mover o mesmo TODO para completed e publicar a relocação.
+- **Next exact step:** none; recorte local concluído. Transferência, estados e mídia seguem em contratos próprios.
 
 ## Active Work State (Required While TODO Remains In `active/`)
 
-- **Work state:** review
-- **Why this state now:** entrega Local-Implemented validada/revisada e fonte commitada; documentação/evidências de closeout prontas para publicação e relocação.
-- **Exit condition:** pareceres independentes resolvidos, guardas e consolidação canônica completos para closeout local.
+- **Work state:** n/a once moved out of active
+- **Why this state now:** entrega Local-Implemented validada, revisada e commitada; evidências publicadas e mesmo TODO encerrado em completed.
+- **Exit condition:** cumprida; pareceres independentes, guardas e consolidação canônica completos para o limiar local.
 
 ## Scope
 
@@ -223,7 +224,7 @@ Esta entrega é local-only: não há autorização/promoção de ambiente ou cla
 
 ### Diff Deviation Analysis
 
-Análise preliminar: o guard identificou incompatibilidade de representação (heading com sufixo, vários globs numa célula e labels workspace/all não declarados), sem desvio de produto. Corrigida a representação para título exato, um glob por linha e regras por repositório; os mesmos paths e baselines aprovados foram preservados. O tipo `??` explicita o estado ainda não staged dos arquivos novos já autorizados como A; não autoriza novos caminhos. A relocação do próprio TODO active → completed é o closeout já autorizado, sem alterar outros registros históricos. Guard final e diff real serão registrados antes da entrega.
+Análise preliminar: o guard identificou incompatibilidade de representação (heading com sufixo, vários globs numa célula e labels workspace/all não declarados), sem desvio de produto. Corrigida a representação para título exato, um glob por linha e regras por repositório; os mesmos paths e baselines aprovados foram preservados. O tipo `??` explicita o estado ainda não staged dos arquivos novos já autorizados como A; não autoriza novos caminhos. A relocação do próprio TODO active → completed é o closeout já autorizado, sem alterar outros registros históricos. Guard final e diff real registrados nas evidências de encerramento.
 
 Concretização de suporte de prova em 2026-10-15: `web-app/e2e/timeline-freshness.ts` implementa globalSetup de frescor já exigido pelo contrato aprovado (build fresco, backend real e evidência runtime), pois capturar do host falha quando preview é isolado no container e uma captura posterior à suite não satisfaz a regra temporal. A alternativa de arquivo temporário obrigatório faria clones dependerem de arquivo ausente; o helper versionado é a escolha local reproduzível. Acrescentado somente este path ao contrato. Não há nova story, comportamento de produto, provider, ambiente operacional ou obrigação de validação; é o HOW do suporte de teste já autorizado em Approval, VAL-04/05 e no pedido de continuidade. Sem exceção de modelo/topologia e sem nova aprovação de produto necessária.
 
@@ -648,9 +649,9 @@ Aderência independente convergida em delivery-adherence-resolution.json (gpt-6.
 ## TODO Closeout Disposition
 
 - **Disposition:** move-completed
-- **Disposition reason:** limiar local concluído e guardas go; publicar evidências na Foundation main e mover o mesmo TODO após o push, sem promoção remota de produto.
-- **Post-commit/push status:** pending
-- **Next path/status action:** após push documental, mover para todos/completed/features e atualizar links/estado do mesmo TODO.
+- **Disposition reason:** limiar local concluído, reviews aceitos e guardas go; evidências publicadas na Foundation main e mesmo TODO movido para completed.
+- **Post-commit/push status:** complete
+- **Next path/status action:** none; mesmo TODO encerrado em todos/completed/features. Evidências publicadas no commit Foundation 1c7f2a942f53a662dcc753f7b9c1faf21e264c13; código local API ae6a9662c29b77276351aa9de653a47276372246 e Web 4e56f6c1f4515b918d05b8c87e890d42e8542c56. Esta relocação é publicada no commit documental de encerramento.
 
 ## Security Risk Assessment (Mandatory Before Delivery)
 
@@ -752,7 +753,7 @@ Aderência independente convergida em delivery-adherence-resolution.json (gpt-6.
 
 ## Verification Debt Assessment (Required Before `Completed`; mandatory audit for `medium|big` or when debt signals exist)
 
-Auditoria executada: artifacts/reviews/leadshug-inbox-timeline-20261014/verification-debt.md e evidence/verification-debt-pre-final.log. Helper lexical high/exit2 por termos do template/histórico; classificação manual: inline none, nenhum waiver/dívida material escondida de produto/testes. Gates independentes/guardas e consolidação ainda abertos, sem claim de closeout; reavaliar após convergência.
+Auditoria executada: artifacts/reviews/leadshug-inbox-timeline-20261014/verification-debt.md e evidence/verification-debt-pre-final.log. Helper lexical high/exit2 por termos do template/histórico; classificação manual: inline none, nenhum waiver/dívida material escondida de produto/testes. Gates independentes, guardas e consolidação concluídos; nenhuma dívida material de verificação permanece neste recorte local.
 
 ## Independent Test Quality Audit Gate (Deterministic Floor From Audit Escalation)
 
