@@ -233,6 +233,7 @@ n/a; esta proposta não autoriza promoção ou deploy.
 | api | test/helpers.ts | M | DI dos adapters e credenciais de teste. |
 | api | test/setup-env.ts | M | Configuração determinística de testes. |
 | api | test/browser-server.cjs | M | Backend real e fixtures de cadastro. |
+| api | .dockerignore | M | Excluir .local-files/ e .git do contexto Docker antes do build operacional; nenhuma leitura/cópia dos payloads rastreados. |
 | api | test/timeline-fixtures.cjs | M | Preservar fixtures de timeline e fornecer controles out-of-band do provider para browser com BFF/sessão/PG reais; nunca expor no gateway do operador. |
 | api | test/webhooks.e2e-spec.ts | M | Receipt, auth e races. |
 | api | test/realtime.e2e-spec.ts | M | Apenas fixture de canal verificado scoped pelo helper comum; preservar asserts de socket/grant/tenant. Admissão de execução documentada abaixo. |
@@ -1011,3 +1012,8 @@ Checkpoint13: fixture Meta passou a projetar name:null quando o nome é ausente 
 As rodadas preservadas `cp14-browser-validation-rerun2.log` (40/44) e `cp14-browser-validation-rerun3.log` (41/44) não fecham a suíte. O controle FRC passou a alcançar a resposta real retida e expôs 21 reservas para 20 eventos adicionais: `iniciar()` invalida o owner antes de verificar operação ativa. Corrigir o produto para coalescer a operação atual, preservando a barreira e a contagem. Recuperação de resposta perdida deve observar metadados seguros da resposta real e preservar replay válido com mesma sessão/key/payload; não substituir por cancelamento só para passar. Refresh da conversa precisa selecionar BU e aba do estado realmente persistido, mantendo o mesmo Message.id/conteúdo/autoria.
 
 Admissão adicional estrita em `web-app/e2e/telas.spec.ts`, somente no caso “identidade visual carrega e salva os campos pós-onboarding”: a rodada rerun2 falhou no tema, e rerun3 passou sem mudança nesse caso. O teste atual clica Salvar e aguarda um heading que já estava visível antes de recarregar. A implementação envia PUT /api/bff/onboarding e atualiza /me de forma assíncrona. Admitido aguardar a resposta real desse PUT e comprovar sucesso/tema persistido antes do reload; manter todas as assertions de cores e tema e o afterEach. Sem sleep arbitrário, retry-only, mock BFF, mudança do produto de identidade visual ou edição de outros casos. Esta sincronização fortalece um gate existente da matriz aprovada, sem nova feature ou aprovação material. Web permanece único writer; runtime operador e revisões finais continuam pendentes.
+
+
+### Fronteira do contexto Docker antes do operador
+
+Inspeção read-only de `api-app/.dockerignore` mostrou exclusão de dotenv, porém sem `.local-files/` nem `.git`. O Dockerfile copia paths explícitos, mas isso sozinho não estabelece exclusão dos dados operacionais do contexto enviado ao builder. Admitido M exato nesse ignore, antes do build operacional, para excluir diretório de payloads e metadados Git que contêm seus blobs históricos. Não inspecionar dados nem alterar seu tracking. DevOps recebe essa superfície de build no próximo handoff serializado; produto API permanece congelado. Freshness final registra o novo hash público sem ler os paths excluídos. Não é ampliação funcional nem permissão para copiar payloads.
