@@ -1,0 +1,33 @@
+{
+  "checkpoint": "cp9-runtime-config",
+  "date": "2026-10-15",
+  "compose_validation": "CHANNELS_CONFIG_ONLY=1 bash scripts/test-channels-local.sh api",
+  "result": "Validation Compose config is valid; no resources were created.",
+  "guards": {
+    "bash_syntax": "passed for scripts/test-channels-local.sh and scripts/start-channels-local.sh",
+    "git_diff_check": "passed",
+    "validation_namespace_preflight": "no matching containers, volumes, or networks found",
+    "container_collision_matching": ["leadshug_channels_validation_*", "leadshug_channels_validation-*"],
+    "operator_runtime_started": false,
+    "browser_suite_run": false
+  },
+  "validation_runner_changes": {
+    "read_only_principal_binds_added": [
+      "api-app/docker/entrypoint.sh",
+      "web-app/Dockerfile",
+      "web-app/docker/40-config-js.sh",
+      "web-app/nginx/default.conf.template"
+    ],
+    "fixture_graph_version": "v26.0",
+    "api_local_files": "Not mounted, read, hashed, copied, deleted, or reconciled. Root excludes this operational-data path from source diff and code inventory."
+  },
+  "sha256": {
+    "docker-compose.channels.yml": "1059d2ff74689d5392c001ce0617927221d08d0f69ff743f31aae7acfda930a9",
+    "scripts/test-channels-local.sh": "e6b1e009a2fa1423831b3c92a1a4cb925a9d4492916426665f00bc48d0ba9bcf",
+    "api-app/docker/entrypoint.sh": "3f6168bba444074ff220d09ef4127593cf5af6744462ef344695cd749aeac095",
+    "web-app/Dockerfile": "b3fb2e04dc033ec8977926c93eb8cec36bf44f6351652bdb2f739325e4be19d4",
+    "web-app/docker/40-config-js.sh": "77b929c9a8705015ea9fb4a53fef39a03aff72f6d54d95c382fc4540e9d035c6",
+    "web-app/nginx/default.conf.template": "880b1d3f683c3877daa69f4e8cad3b37384e7041676f864487d712965a5e58f6"
+  },
+  "handoff_limit": "Do not run browser validation until Web owner completes the freshness/diff correction. Operator initialization/start remains outside this activation."
+}

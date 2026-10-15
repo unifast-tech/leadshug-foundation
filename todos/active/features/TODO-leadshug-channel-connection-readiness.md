@@ -41,7 +41,7 @@ Proposta ST-CON-01: jornada de cadastro de número, com infraestrutura local est
 
 - **Current delivery stage:** Pending
 - **Qualifiers:** none
-- **Next exact step:** API cp8 parou com137unitários/277E2E e21migrações no runner isolado; manifests antes/depois iguais e conferidos. DevOps cp9 recebe writer único para completar4binds públicos, corrigir detecção de colisão por hífen/underscore e alinhar versão fictícia Graph; depois Web corrige freshness/fluxos e executa browser real-backend antes do runtime do operador.
+- **Next exact step:** API cp8 parou com137unitários/277E2E e21migrações no runner isolado; manifests antes/depois iguais e conferidos. DevOps cp9 parou com4binds públicos/prefixos de colisão/Graph fixture válidos; root conferiu6hashes declarados. Web cp10 é agora writer único para corrigir freshness/fluxos e executar browser real-backend antes do runtime do operador.
 
 ## Active Work State (Required While TODO Remains In `active/`)
 
@@ -980,3 +980,8 @@ Conferência read-only posterior ao cp7: os volumes-pai omitem quatro inputs pú
 API parou após `bash scripts/test-channels-local.sh api` concluir Node22.23.3/OpenSSL3.0.22, Prisma debian-openssl-3.0.x,21migrações,lint/build,137unitários/19arquivos e277E2E PostgreSQL/26arquivos. Log bruto `cp8-api-final-validation-final.log` SHA256 `7dabc94f190d2fb93cb0f0f8e4bb7936791615fa558f8312ccbdd9889f3920e9`; manifests públicos153paths antes/depois idênticos SHA256 `273442f47a1fc76ce723a20f17611349f649241c6084be0bc6aa22dfecf3a63d`, conferidos pelo root contra a fonte atual. Sem leitura dos payloads .local-files. `git diff --check` com convenção cr-at-eol passou; não normalizar CRLF por diagnóstico genérico. Relatório `evidence/cp8-api-handoff.md` e falhas intermediárias preservados. NUM-ROOT-META-01 tem testes unset/blank/malformed e request-level sem fetch; public/Typebot passam eco Evolution autenticado dentro do envio. EPS registra25tentativas,EXPLAIN e20timings; RLS5clientes concorrentes×6leituras teve calibração positiva do contador e delta zero em ambas as portas; BCI registra20pair/delete×5barreiras. São observações locais a revisar, sem SLO/provedor real ou gate final reivindicado.
 
 Handoff após STOP: DevOps cp9 único writer root para4binds públicos, prefixos de colisão e Graph fixture válido; config-only/rawmanifest e STOP. Web permanece parado até essa entrega, depois assume freshness público/controles popup/WABA/casos faltantes e browser pelo runner. Root mantém documentação compartilhada. Sem init/start do operador nesta ativação curta. A correção de modelo Graph e esses probes concretizam o contrato existente, não ampliam a aprovação.
+
+
+### Checkpoint9 — montagem pública completa antes do browser
+
+DevOps parou após4binds públicos read-only, filtro de colisão aceitando hífen/underscore e Graph fixture v26.0. Sintaxe e config-only passaram sem criar recursos, conforme `evidence/cp9-runtime-config.json`; seis hashes declarados conferidos pelo root. Guard diff cp9 retornou GO256/256paths, zero proibidos ou não classificados (interim, não final). Sem browser/operador executado nesta etapa. Web cp10 ativado como único writer após esse STOP, mantendo API/runtime congelados; corrige diff público antes de Playwright, popup/WABA e casos de cancelamento/retry/contexto faltantes.
