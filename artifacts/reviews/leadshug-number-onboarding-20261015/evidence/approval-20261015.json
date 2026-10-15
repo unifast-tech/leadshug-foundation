@@ -1,0 +1,13 @@
+{
+  "date_local": "2026-10-15",
+  "timezone": "America/Sao_Paulo",
+  "approver": "user in current chat",
+  "message_verbatim": "APROVADO",
+  "governing_todo": "foundation_documentation/todos/active/features/TODO-leadshug-channel-connection-readiness.md",
+  "approved_documentation_commit": "3302964c822f41d0c3372e16796672bd119c1c90",
+  "scope": "ST-CON-01 as published; SCOPE-01..09 D-01..10",
+  "topology": "primary-checkout-single-writer",
+  "worktree_authorization": false,
+  "runtime": "local first; proof only when exact test assets and HTTPS ready",
+  "source_promotion_or_deploy_authorized": false
+}

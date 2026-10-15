@@ -2,7 +2,7 @@
 
 ## Quick Start
 
-Contrato proposto ST-CON-01, baseado no template canônico. Usuário autorizou avançar no planejamento do cadastro de números e conversas; Nova conversa informando contato é o próximo ST-CON-04. Esta revisão não é APROVADO. Fonte de produto não alterada. Proposta publicada e revisada: arquitetura e crítica convergidas, sem prova externa ou entrega reivindicada.
+Contrato proposto ST-CON-01, baseado no template canônico. Usuário autorizou avançar no planejamento do cadastro de números e conversas; Nova conversa informando contato é o próximo ST-CON-04. APROVADO pelo usuário em2026-10-15 para o contrato publicado em3302964c; implementação e prova ainda pendentes. Proposta publicada e revisada: arquitetura e crítica convergidas, sem prova externa ou entrega reivindicada.
 
 ## Title
 
@@ -11,7 +11,7 @@ Cadastro e conexão dos números oficiais e não oficiais do LeadsHug, inspirado
 ## Artifact Identity
 
 - **Artifact type:** `tactical_execution_contract`
-- **Tactical state:** `Review`
+- **Tactical state:** `In-Progress`
 - **Prepared on:** 2026-10-15
 - **Planning authorization:** concordância do usuário com a prioridade de conexões e preparo de testes; confirmação de disponibilidade dos dois canais. Não equivale a APROVADO do contrato.
 
@@ -41,13 +41,13 @@ Proposta ST-CON-01: jornada de cadastro de número, com infraestrutura local est
 
 - **Current delivery stage:** Pending
 - **Qualifiers:** none
-- **Next exact step:** publicar baseline desta proposta, obter architecture_opinion e critique independentes, integrar achados e executar preflight antes de solicitar APROVADO.
+- **Next exact step:** consolidar contratos owner e executar checkpoint de persistência/credenciais/ingresso com um executor no checkout principal.
 
 ## Active Work State (Required While TODO Remains In `active/`)
 
-- **Work state:** review
-- **Why this state now:** contrato proposto sendo revisado; nenhuma implementação iniciada.
-- **Exit condition:** pareceres resolvidos, coerência/drift e preflight-go; após APROVADO, authority guard normal go.
+- **Work state:** implementation
+- **Why this state now:** APROVADO explícito nesta sessão; regras recarregadas e preparação da execução autorizada.
+- **Exit condition:** implementação no escopo, matriz local/provas reais e gates de entrega aceitos.
 
 ## Scope
 
@@ -358,8 +358,8 @@ Register: `foundation_documentation/artifacts/dependency-readiness.md`.
 
 ## Profile Scope & Handoffs (Required Before `APROVADO`)
 
-- **Current profile:** strategic-cto, elaboração e sequência; Genesis descartado por existência de canon/produto.
-- **Primary execution profile:** operational-coder após aprovação.
+- **Current profile:** operational-coder, execução aprovada; Genesis descartado pelo canon/produto existentes.
+- **Primary execution profile:** operational-coder; handoff operational-devops antes de runtime/ingress.
 - **Active technical scope:** nestjs, react, postgresql, prisma, docker
 - **Expected supporting profiles:** operational-devops para target/callback; assurance-tester-quality e assurance-security-adversarial para gates aplicáveis.
 - **Scope-check command:** `python3 delphi-ai/tools/profile_scope_check.py --profile operational-coder`
@@ -411,7 +411,7 @@ Nenhuma decisão de produto pendente para a proposta revisada e aceita nas crít
 
 ## Decision Baseline (Frozen Before Implementation)
 
-Proposta revisada D-01..D-10: NUM-ARCH-01..06, NUM-CRIT-01/02 e requisitos de execução NUM-OBS-01..03 integrados nos contratos acima, escopo, paths e critérios. Congelamento renovado antes da crítica independente; mesma jornada de cadastro. Ainda não há APROVADO de implementação; esta baseline congela a proposta revisável, não afirma produto implementado.
+Baseline aprovada D-01..D-10 pelo APROVADO de2026-10-15 (contrato3302964c): NUM-ARCH-01..06, NUM-CRIT-01/02 e requisitos de execução NUM-OBS-01..03 integrados nos contratos acima, escopo, paths e critérios. Congelamento renovado antes da crítica independente; mesma jornada de cadastro. Aprovação registrada na seção Approval; esta baseline não afirma produto implementado.
 
 ## Architecture Change Governance (Required When This TODO Establishes, Corrects, or Supersedes Architecture)
 
@@ -679,18 +679,20 @@ Parecer independente architecture_opinion gpt-6.1-sol/max, fresh no-context, con
 - Assumption code coherence: go, quatro premissas; evidence/code-coherence.json e connection-state-caller-search.json.
 - Review scope drift: go,23seções e zero mudanças materiais contra baseline publicada87c28c6b; cláusulas técnicas adicionais também conferidas.
 - Authority preflight: preflight-go, execution_authority_granted=false; artifacts/reviews/leadshug-number-onboarding-20261015/evidence/authority-preapproval.json.
-- Próximo gate: solicitar APROVADO deste contrato. Aprovação da timeline anterior não autoriza este recorte. Execução, providers, testes de produto e gates de entrega continuam pendentes.
+- APROVADO explícito recebido em2026-10-15 para este contrato. A implementação está autorizada após authority guard de execução go; provas e gates de entrega continuam pendentes.
 
 ## Approval
 
-- **Approved by:** none
-- **Approval scope:** nenhum contrato de implementação aprovado.
-- **Execution not authorized by approval:** toda implementação/runtime e envio real neste draft.
-- **Renewed approval required when:** escopo, decisões, validação ou risco material mudarem após futura aprovação.
+- **Approved by:** usuário nesta conversa, mensagem literal APROVADO em2026-10-15, após publicação do contrato3302964c822f41d0c3372e16796672bd119c1c90.
+- **Approval reference:** resposta APROVADO à solicitação explícita de implementar ST-CON-01; artefato evidence/approval-20261015.json.
+- **Approval scope:** APROVADO para SCOPE-01..09, D-01..10, DoD/Validation e paths esperados do contrato publicado; API/Web/runtime local próprios, provas de teste quando readiness disponível, revisões e commits locais de feature; Foundation main autônoma.
+- **Execution not authorized by approval:** ST-CON-04 Nova conversa manual/proativa, importação/coexistência/migração externa, mídia/status/transferência, Railway/deploy/push de produto, legado, edição manual de gitlinks/.gitmodules, worktrees/cópias auxiliares.
+- **Renewed approval required when:** mudar objetivo, comportamento/risco material, desenho de identidade/credencial/recuperação ou desvios de diff não admitidos no contrato; concretização que preserve os requisitos segue neste TODO.
+
 
 ## Rules Acknowledgement / Ingestion (Required After `APROVADO` and Before Execution)
 
-Planejadas antes de execução; reload binding após APROVADO.
+Ingestão binding realizada em2026-10-15 após APROVADO: fontes das linhas abaixo relidas; executor deve recarregar antes de tocar suas superfícies.
 
 | Source | Why It Applies Now | Must Preserve | Must Avoid | Execution Impact |
 | --- | --- | --- | --- | --- |
@@ -700,6 +702,11 @@ Planejadas antes de execução; reload binding após APROVADO.
 | delphi-ai/workflows/docker/effort-selection-method.md | Model/role. | execução medium/review max | autodelegação implícita | routing guard |
 | foundation_documentation/policies/scope_subscope_governance.md | Ownership das rotas. | contratos do owner | controller sem owner | doc antes do código |
 | foundation_documentation/policies/central_whatsapp_independent_legacy_policy.md | Inspiração. | comportamento redesenhado | copiar source/runtime/dados | só referência |
+| delphi-ai/workflows/docker/todo-execution-boundary-method.md | Execução após APROVADO. | escopo/authority go | expansão silenciosa | um writer, checkpoint técnico |
+| delphi-ai/workflows/nestjs/change-application-boundary-method.md | API/contratos. | adapter fino e DI explícita | regra de domínio no controller | validar contrato/auth |
+| delphi-ai/workflows/react/change-ui-boundary-method.md | Wizard React. | estado/efeitos e contexto | resposta velha/dobro clique | browser real |
+| delphi-ai/rules/stacks/prisma/prisma-schema-migration-always-on.md | Schema versionado. | migration deploy em DB exclusivo | reset operacional/editar migration antiga | gerar client e provar schema |
+| delphi-ai/rules/stacks/postgresql/postgresql-data-integrity-always-on.md | Dedupe e CAS. | índices/locks/transações curtas | HTTP dentro de transação | barriers reais |
 | delphi-ai/workflows/docker/todo-closeout-promotion-method.md | Entrega e fechamento. | mesmo TODO/evidência | claim prematuro | guardas antes de fechar |
 
 ## Agent Routing Preflight (Required Before Execution When Effort/Model Routing Applies)
@@ -764,9 +771,9 @@ Adicional de coerência do autor: envelope raw redigido e code/PIN transitórios
 ## TODO Closeout Disposition
 
 - **Disposition:** keep-active
-- **Disposition reason:** planejamento/revisão, sem implementação aprovada.
+- **Disposition reason:** execução aprovada iniciando; critérios de entrega/provas ainda pendentes.
 - **Post-commit/push status:** n/a
-- **Next path/status action:** planejamento convergido e guardas go/preflight-go; solicitar APROVADO do contrato, mantendo este TODO para execução/evidência.
+- **Next path/status action:** executar checkpoints e evidências neste mesmo TODO, sem claim antecipado de entrega.
 
 ## Security Risk Assessment (Mandatory Before Delivery)
 
