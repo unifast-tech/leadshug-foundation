@@ -1,0 +1,97 @@
+debconf: delaying package configuration, since apt-utils is not installed
+
+> @leadshug/api@0.1.0 build
+> nest build
+
+npm notice
+npm notice New major version of npm available! 10.9.9 -> 12.2.0
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.0
+npm notice To update run: npm install -g npm@12.2.0
+npm notice
+
+> @leadshug/api@0.1.0 lint
+> eslint "{src,test}/**/*.ts"
+
+
+> @leadshug/api@0.1.0 test:e2e
+> vitest run --config vitest.config.e2e.ts --no-file-parallelism --maxWorkers=1 test/number-onboarding-flow.e2e-spec.ts
+
+[33mThe CJS build of Vite's Node API is deprecated. See https://vite.dev/guide/troubleshooting.html#vite-cjs-node-api-deprecated for more details.[39m
+
+ RUN  v2.1.9 /workspace
+
+ ❯ test/number-onboarding-flow.e2e-spec.ts (15 tests | 4 failed) 35529ms
+   ✓ BFF number registration workflow (PostgreSQL) > recovers the same one-use nonce for idempotent create and connects only after provider subscribe plus receipt 666ms
+   ✓ BFF number registration workflow (PostgreSQL) > does not disclose registration state to a different tenant and rejects invalid provider resources 486ms
+   ✓ BFF number registration workflow (PostgreSQL) > recovers a promoted pending registration after expiry with a fresh authorized session 483ms
+   ✓ BFF number registration workflow (PostgreSQL) > reserves immutable provider ownership before register and projects BU-scoped channel authority safely 537ms
+   ✓ BFF number registration workflow (PostgreSQL) > allows only one BU to reserve a concurrently selected provider resource 538ms
+   × BFF number registration workflow (PostgreSQL) > rejects a stale confirmation after its lease expires and a replacement attempt wins 276ms
+     → expected 'ATTEMPT_STALE' to be 'CHANNEL_OPERATION_STALE' // Object.is equality
+   ✓ BFF number registration workflow (PostgreSQL) > renews a managed Evolution identity through cleanup then creates the reserved replacement once 343ms
+   × BFF number registration workflow (PostgreSQL) > keeps an unverified QR attempt and epoch across connecting/open observations 281ms
+     → expected 200 "OK", got 409 "Conflict"
+   × BFF number registration workflow (PostgreSQL) > serializes unlink against an in-flight managed create lease 30180ms
+     → Test timed out in 30000ms.
+If this is a long-running test, pass a timeout value as the last argument or configure it globally with "testTimeout".
+   × BFF number registration workflow (PostgreSQL) > retains ambiguous managed cleanup and reconciles it before creating after unlink 265ms
+     → expected 'CLEANUP_RECOVERY_BUSY' to be 'CLEANUP_AMBIGUOUS' // Object.is equality
+   ✓ BFF number registration workflow (PostgreSQL) > wipes expired and superseded candidate envelopes while preserving an active credential 319ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 4 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  test/number-onboarding-flow.e2e-spec.ts > BFF number registration workflow (PostgreSQL) > rejects a stale confirmation after its lease expires and a replacement attempt wins
+AssertionError: expected 'ATTEMPT_STALE' to be 'CHANNEL_OPERATION_STALE' // Object.is equality
+
+Expected: "CHANNEL_OPERATION_STALE"
+Received: "ATTEMPT_STALE"
+
+ ❯ test/number-onboarding-flow.e2e-spec.ts:229:43
+
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/4]⎯
+
+ FAIL  test/number-onboarding-flow.e2e-spec.ts > BFF number registration workflow (PostgreSQL) > keeps an unverified QR attempt and epoch across connecting/open observations
+Error: expected 200 "OK", got 409 "Conflict"
+ ❯ test/number-onboarding-flow.e2e-spec.ts:308:75
+    306|       .send({ event: 'connection.update', instance: name, data: { stat…
+    307|     const resumed = await bff('post', `/api/bff/business-units/${tenan…
+    308|       .send({ intent: 'INITIAL', expectedGeneration: before.generation…
+       |                                                                           ^
+    309|     expect(resumed.body).toMatchObject({ attemptId, pairingEpoch: befo…
+    310|     expect(evolutionFake.createCalls).toBe(1);
+ ❯ Test._assertStatus node_modules/supertest/lib/test.js:309:14
+ ❯ node_modules/supertest/lib/test.js:365:13
+ ❯ Test._assertFunction node_modules/supertest/lib/test.js:342:13
+ ❯ Test.assert node_modules/supertest/lib/test.js:195:23
+ ❯ localAssert node_modules/supertest/lib/test.js:138:14
+ ❯ Server.<anonymous> node_modules/supertest/lib/test.js:152:11
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/4]⎯
+
+ FAIL  test/number-onboarding-flow.e2e-spec.ts > BFF number registration workflow (PostgreSQL) > serializes unlink against an in-flight managed create lease
+Error: Test timed out in 30000ms.
+If this is a long-running test, pass a timeout value as the last argument or configure it globally with "testTimeout".
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[3/4]⎯
+
+ FAIL  test/number-onboarding-flow.e2e-spec.ts > BFF number registration workflow (PostgreSQL) > retains ambiguous managed cleanup and reconciles it before creating after unlink
+AssertionError: expected 'CLEANUP_RECOVERY_BUSY' to be 'CLEANUP_AMBIGUOUS' // Object.is equality
+
+Expected: "CLEANUP_AMBIGUOUS"
+Received: "CLEANUP_RECOVERY_BUSY"
+
+ ❯ test/number-onboarding-flow.e2e-spec.ts:346:31
+    344|     expect(await prisma.providerResourceIdentity.findUniqueOrThrow({ w…
+    345|     const blocked = await bff('post', `/api/bff/business-units/${tenan…
+    346|     expect(blocked.body.code).toBe('CLEANUP_AMBIGUOUS');
+       |                               ^
+    347|     expect(evolutionFake.createCalls).toBe(1);
+    348|     evolutionFake.deleteFails = false;
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[4/4]⎯
+
+ Test Files  1 failed (1)
+      Tests  4 failed | 11 passed (15)
+   Start at  18:32:57
+   Duration  44.44s (transform 7.01s, setup 36ms, collect 8.67s, tests 35.53s, environment 0ms, prepare 57ms)
+

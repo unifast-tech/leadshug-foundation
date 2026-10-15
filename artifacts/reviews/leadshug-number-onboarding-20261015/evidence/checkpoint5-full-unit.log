@@ -1,0 +1,42 @@
+debconf: delaying package configuration, since apt-utils is not installed
+
+> @leadshug/api@0.1.0 test
+> vitest run --config vitest.config.ts
+
+[33mThe CJS build of Vite's Node API is deprecated. See https://vite.dev/guide/troubleshooting.html#vite-cjs-node-api-deprecated for more details.[39m
+
+ RUN  v2.1.9 /workspace
+
+ ✓ src/domain/access/role.spec.ts (9 tests) 5ms
+ ✓ src/main.spec.ts (6 tests) 5ms
+ ✓ src/infra/config/modulos.spec.ts (11 tests) 10ms
+ ✓ src/domain/access/scope.spec.ts (22 tests) 18ms
+ ✓ src/domain/channels/channel-credential-crypto.spec.ts (4 tests) 29ms
+ ✓ src/domain/integration/rate-limit.service.spec.ts (3 tests) 32ms
+ ✓ src/integrations/evolution/evolution.client.spec.ts (5 tests) 44ms
+ ✓ src/integrations/typebot/typebot.client.spec.ts (5 tests) 21ms
+ ✓ src/integrations/meta/meta.client.spec.ts (11 tests) 36ms
+ ✓ src/domain/inbox/timeline-pagination.spec.ts (11 tests) 12ms
+ ✓ src/integrations/email/email.client.spec.ts (6 tests) 18ms
+[33m[Nest] 209  - [39m10/15/2026, 6:35:24 PM [33m   WARN[39m [38;5;3m[Email] [39m[33mRESEND_API_KEY ausente — "x" não foi enviado para a@b.test.[39m
+[31m[Nest] 209  - [39m10/15/2026, 6:35:24 PM [31m  ERROR[39m [38;5;3m[Email] [39m[31mResend recusou (403): {"message":"domain is not verified"}[39m
+[31m[Nest] 209  - [39m10/15/2026, 6:35:24 PM [31m  ERROR[39m [38;5;3m[Email] [39m[31mFalha de rede ao enviar para a@b.test: Error: getaddrinfo ENOTFOUND[39m
+ ✓ src/infra/session/session.service.spec.ts (17 tests) 13ms
+ ✓ src/domain/channels/safe-redaction.spec.ts (1 test) 4ms
+ ✓ src/surfaces/bff/integracao.typebot.spec.ts (2 tests) 6ms
+ ✓ src/domain/identity/password.service.spec.ts (5 tests) 462ms
+ ✓ src/domain/inbox/historico.service.spec.ts (6 tests) 5ms
+ ✓ src/domain/integration/api-key.service.spec.ts (2 tests) 10ms
+ ✓ src/domain/inbox/incoming.typebot.integration.spec.ts (2 tests) 11ms
+ ✓ src/domain/inbox/incoming.typebot.spec.ts (2 tests) 3ms
+
+ Test Files  19 passed (19)
+      Tests  130 passed (130)
+   Start at  18:35:21
+   Duration  3.38s (transform 15.48s, setup 0ms, collect 27.47s, tests 743ms, environment 5ms, prepare 3.36s)
+
+npm notice
+npm notice New major version of npm available! 10.9.9 -> 12.2.0
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.0
+npm notice To update run: npm install -g npm@12.2.0
+npm notice

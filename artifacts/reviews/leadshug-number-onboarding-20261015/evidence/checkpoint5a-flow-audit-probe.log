@@ -1,0 +1,34 @@
+
+> @leadshug/api@0.1.0 test:e2e
+> vitest run --config vitest.config.e2e.ts --no-file-parallelism --maxWorkers=1 test/number-onboarding-flow.e2e-spec.ts
+
+[33mThe CJS build of Vite's Node API is deprecated. See https://vite.dev/guide/troubleshooting.html#vite-cjs-node-api-deprecated for more details.[39m
+
+ RUN  v2.1.9 /workspace
+
+stderr | test/number-onboarding-flow.e2e-spec.ts > BFF number registration workflow (PostgreSQL)
+prisma:warn Prisma failed to detect the libssl/openssl version to use, and may not work as expected. Defaulting to "openssl-1.1.x".
+Please manually install OpenSSL via `apt-get update -y && apt-get install -y openssl` and try installing Prisma again. If you're running Prisma on Docker, add this command to your Dockerfile, or switch to an image that already has OpenSSL installed.
+
+ ✓ test/number-onboarding-flow.e2e-spec.ts (17 tests) 6009ms
+   ✓ BFF number registration workflow (PostgreSQL) > recovers the same one-use nonce for idempotent create and connects only after provider subscribe plus receipt 596ms
+   ✓ BFF number registration workflow (PostgreSQL) > does not disclose registration state to a different tenant and rejects invalid provider resources 456ms
+   ✓ BFF number registration workflow (PostgreSQL) > recovers a promoted pending registration after expiry with a fresh authorized session 408ms
+   ✓ BFF number registration workflow (PostgreSQL) > audits a later same-BU ADMIN action as that admin, not the OWNER who reserved the attempt 378ms
+   ✓ BFF number registration workflow (PostgreSQL) > reserves immutable provider ownership before register and projects BU-scoped channel authority safely 493ms
+   ✓ BFF number registration workflow (PostgreSQL) > allows only one BU to reserve a concurrently selected provider resource 510ms
+   ✓ BFF number registration workflow (PostgreSQL) > atomically prevents official enrollment from taking a different phone after Evolution proves the BU phone 302ms
+   ✓ BFF number registration workflow (PostgreSQL) > rejects a stale confirmation after its lease expires and a replacement attempt wins 326ms
+   ✓ BFF number registration workflow (PostgreSQL) > retains ambiguous managed cleanup and reconciles it before creating after unlink 343ms
+   ✓ BFF number registration workflow (PostgreSQL) > wipes expired and superseded candidate envelopes while preserving an active credential 318ms
+
+ Test Files  1 passed (1)
+      Tests  17 passed (17)
+   Start at  19:12:34
+   Duration  14.47s (transform 6.66s, setup 44ms, collect 8.20s, tests 6.01s, environment 0ms, prepare 69ms)
+
+npm notice
+npm notice New major version of npm available! 10.9.9 -> 12.2.0
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.0
+npm notice To update run: npm install -g npm@12.2.0
+npm notice

@@ -1,0 +1,75 @@
+debconf: delaying package configuration, since apt-utils is not installed
+
+> @leadshug/api@0.1.0 build
+> nest build
+
+npm notice
+npm notice New major version of npm available! 10.9.9 -> 12.2.0
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.0
+npm notice To update run: npm install -g npm@12.2.0
+npm notice
+
+> @leadshug/api@0.1.0 lint
+> eslint "{src,test}/**/*.ts"
+
+
+> @leadshug/api@0.1.0 test
+> vitest run --config vitest.config.ts
+
+[33mThe CJS build of Vite's Node API is deprecated. See https://vite.dev/guide/troubleshooting.html#vite-cjs-node-api-deprecated for more details.[39m
+
+ RUN  v2.1.9 /workspace
+
+ ✓ src/domain/access/role.spec.ts (9 tests) 9ms
+ ✓ src/main.spec.ts (6 tests) 6ms
+ ❯ src/infra/config/modulos.spec.ts (11 tests | 1 failed) 25ms
+   × verificação de boot > ligar o canal não oficial SEM credencial é erro de boot, não 503 depois 14ms
+     → expected [Function] to not throw an error but 'Error: A instalação está incoerente e…' was thrown
+ ✓ src/domain/access/scope.spec.ts (22 tests) 22ms
+ ✓ src/integrations/evolution/evolution.client.spec.ts (4 tests) 8ms
+ ✓ src/integrations/typebot/typebot.client.spec.ts (5 tests) 10ms
+[33m[Nest] 252  - [39m10/15/2026, 6:02:30 PM [33m   WARN[39m [38;5;3m[Email] [39m[33mRESEND_API_KEY ausente — "x" não foi enviado para a@b.test.[39m
+ ✓ src/domain/integration/rate-limit.service.spec.ts (3 tests) 5ms
+ ✓ src/domain/inbox/timeline-pagination.spec.ts (11 tests) 8ms
+[31m[Nest] 252  - [39m10/15/2026, 6:02:30 PM [31m  ERROR[39m [38;5;3m[Email] [39m[31mResend recusou (403): {"message":"domain is not verified"}[39m
+[31m[Nest] 252  - [39m10/15/2026, 6:02:30 PM [31m  ERROR[39m [38;5;3m[Email] [39m[31mFalha de rede ao enviar para a@b.test: Error: getaddrinfo ENOTFOUND[39m
+ ✓ src/integrations/email/email.client.spec.ts (6 tests) 13ms
+ ✓ src/infra/session/session.service.spec.ts (17 tests) 10ms
+ ✓ src/domain/channels/channel-credential-crypto.spec.ts (4 tests) 9ms
+ ✓ src/domain/channels/safe-redaction.spec.ts (1 test) 4ms
+ ✓ src/integrations/meta/meta.client.spec.ts (9 tests) 15ms
+ ✓ src/domain/identity/password.service.spec.ts (5 tests) 414ms
+ ✓ src/domain/integration/api-key.service.spec.ts (2 tests) 5ms
+ ✓ src/domain/inbox/historico.service.spec.ts (6 tests) 5ms
+ ✓ src/surfaces/bff/integracao.typebot.spec.ts (2 tests) 5ms
+ ✓ src/domain/inbox/incoming.typebot.integration.spec.ts (2 tests) 9ms
+ ✓ src/domain/inbox/incoming.typebot.spec.ts (2 tests) 3ms
+ ✓ src/domain/channels/channels.service.spec.ts (3 tests) 5ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/infra/config/modulos.spec.ts > verificação de boot > ligar o canal não oficial SEM credencial é erro de boot, não 503 depois
+AssertionError: expected [Function] to not throw an error but 'Error: A instalação está incoerente e…' was thrown
+
+- Expected: 
+undefined
+
++ Received: 
+"Error: A instalação está incoerente e o processo não sobe:
+  - EVOLUTION_WEBHOOK_URL e EVOLUTION_WEBHOOK_SECRET — exigidas por LH_CHANNEL_UNOFFICIAL=true"
+
+ ❯ src/infra/config/modulos.spec.ts:54:55
+     52| 
+     53|     const completo = { ...meio, EVOLUTION_API_KEY: 'chave' } as NodeJS…
+     54|     expect(() => verificarConfiguracao(completo)).not.toThrow();
+       |                                                       ^
+     55|   });
+     56| 
+
+ Test Files  1 failed | 19 passed (20)
+      Tests  1 failed | 129 passed (130)
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+   Start at  18:02:28
+   Duration  3.08s (transform 15.05s, setup 0ms, collect 24.81s, tests 591ms, environment 6ms, prepare 2.29s)
+

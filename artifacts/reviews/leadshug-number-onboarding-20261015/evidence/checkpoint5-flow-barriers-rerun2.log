@@ -1,0 +1,28 @@
+debconf: delaying package configuration, since apt-utils is not installed
+
+> @leadshug/api@0.1.0 test:e2e
+> vitest run --config vitest.config.e2e.ts --no-file-parallelism --maxWorkers=1 test/number-onboarding-flow.e2e-spec.ts
+
+[33mThe CJS build of Vite's Node API is deprecated. See https://vite.dev/guide/troubleshooting.html#vite-cjs-node-api-deprecated for more details.[39m
+
+ RUN  v2.1.9 /workspace
+
+ ✓ test/number-onboarding-flow.e2e-spec.ts (15 tests) 5212ms
+   ✓ BFF number registration workflow (PostgreSQL) > recovers the same one-use nonce for idempotent create and connects only after provider subscribe plus receipt 563ms
+   ✓ BFF number registration workflow (PostgreSQL) > does not disclose registration state to a different tenant and rejects invalid provider resources 418ms
+   ✓ BFF number registration workflow (PostgreSQL) > recovers a promoted pending registration after expiry with a fresh authorized session 424ms
+   ✓ BFF number registration workflow (PostgreSQL) > reserves immutable provider ownership before register and projects BU-scoped channel authority safely 501ms
+   ✓ BFF number registration workflow (PostgreSQL) > allows only one BU to reserve a concurrently selected provider resource 510ms
+   ✓ BFF number registration workflow (PostgreSQL) > renews a managed Evolution identity through cleanup then creates the reserved replacement once 334ms
+   ✓ BFF number registration workflow (PostgreSQL) > retains ambiguous managed cleanup and reconciles it before creating after unlink 305ms
+
+ Test Files  1 passed (1)
+      Tests  15 passed (15)
+   Start at  18:34:57
+   Duration  13.94s (transform 6.89s, setup 38ms, collect 8.48s, tests 5.21s, environment 0ms, prepare 68ms)
+
+npm notice
+npm notice New major version of npm available! 10.9.9 -> 12.2.0
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.0
+npm notice To update run: npm install -g npm@12.2.0
+npm notice

@@ -1,0 +1,71 @@
+
+> @leadshug/api@0.1.0 build
+> nest build
+
+npm notice
+npm notice New major version of npm available! 10.9.9 -> 12.2.0
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.0
+npm notice To update run: npm install -g npm@12.2.0
+npm notice
+
+> @leadshug/api@0.1.0 lint
+> eslint "{src,test}/**/*.ts"
+
+
+> @leadshug/api@0.1.0 test:e2e
+> vitest run --config vitest.config.e2e.ts --no-file-parallelism --maxWorkers=1 test/number-onboarding-flow.e2e-spec.ts test/webhooks.e2e-spec.ts test/atendimento.e2e-spec.ts
+
+[33mThe CJS build of Vite's Node API is deprecated. See https://vite.dev/guide/troubleshooting.html#vite-cjs-node-api-deprecated for more details.[39m
+
+ RUN  v2.1.9 /workspace
+
+ ✓ test/number-onboarding-flow.e2e-spec.ts (16 tests) 5669ms
+   ✓ BFF number registration workflow (PostgreSQL) > recovers the same one-use nonce for idempotent create and connects only after provider subscribe plus receipt 588ms
+   ✓ BFF number registration workflow (PostgreSQL) > does not disclose registration state to a different tenant and rejects invalid provider resources 419ms
+   ✓ BFF number registration workflow (PostgreSQL) > recovers a promoted pending registration after expiry with a fresh authorized session 410ms
+   ✓ BFF number registration workflow (PostgreSQL) > reserves immutable provider ownership before register and projects BU-scoped channel authority safely 524ms
+   ✓ BFF number registration workflow (PostgreSQL) > allows only one BU to reserve a concurrently selected provider resource 531ms
+   ✓ BFF number registration workflow (PostgreSQL) > atomically prevents official enrollment from taking a different phone after Evolution proves the BU phone 344ms
+   ✓ BFF number registration workflow (PostgreSQL) > renews a managed Evolution identity through cleanup then creates the reserved replacement once 306ms
+   ✓ BFF number registration workflow (PostgreSQL) > retains ambiguous managed cleanup and reconciles it before creating after unlink 321ms
+   ✓ BFF number registration workflow (PostgreSQL) > wipes expired and superseded candidate envelopes while preserving an active credential 310ms
+stdout | test/atendimento.e2e-spec.ts > atendimento > timeline paginada do atendimento > preserva dez incrementos feitos após o ack e enquanto a página fica bloqueada, em três lotes
+{"prova":"BCI_ACK_COM_SELECT_BLOQUEADO","lote":1,"bloqueioDetectado":true,"sondagens":2,"ackAteSelectBloqueadoMs":54,"dezIncrementosMs":26,"unreadEnquantoSelectBloqueado":10,"unreadDepoisDaResposta":10}
+
+stdout | test/atendimento.e2e-spec.ts > atendimento > timeline paginada do atendimento > preserva dez incrementos feitos após o ack e enquanto a página fica bloqueada, em três lotes
+{"prova":"BCI_ACK_COM_SELECT_BLOQUEADO","lote":2,"bloqueioDetectado":true,"sondagens":2,"ackAteSelectBloqueadoMs":52,"dezIncrementosMs":21,"unreadEnquantoSelectBloqueado":10,"unreadDepoisDaResposta":10}
+
+stdout | test/atendimento.e2e-spec.ts > atendimento > timeline paginada do atendimento > preserva dez incrementos feitos após o ack e enquanto a página fica bloqueada, em três lotes
+{"prova":"BCI_ACK_COM_SELECT_BLOQUEADO","lote":3,"bloqueioDetectado":true,"sondagens":2,"ackAteSelectBloqueadoMs":59,"dezIncrementosMs":26,"unreadEnquantoSelectBloqueado":10,"unreadDepoisDaResposta":10}
+
+ ✓ test/atendimento.e2e-spec.ts (23 tests) 9326ms
+   ✓ atendimento > registra resultado de envio ambíguo sem chave externa e nunca inventa uma chave 422ms
+   ✓ atendimento > reconcilia o eco Evolution autenticado entregue dentro do send sem unread duplicada 390ms
+   ✓ atendimento > does not accept an outbound result after channel retirement wins during the provider response 352ms
+   ✓ atendimento > POST conversations/:id/messages — o trio (ADR-0012 §2) > autorizado: responde, envia pelo canal e assume a conversa 326ms
+   ✓ atendimento > POST conversations/:id/messages — o trio (ADR-0012 §2) > ATENDENTE no escopo responde — estar na BU BASTA (ADR-0018 §3) 515ms
+   ✓ atendimento > POST conversations/:id/messages — o trio (ADR-0012 §2) > CROSS-TENANT: o dono de Beta recebe 404 na conversa da BU de Alfa 387ms
+   ✓ atendimento > janela de 24h — atributo do CANAL (ADR-0009 §3) > recusa com JANELA_FECHADA quando a última mensagem do contato passou de 24h 328ms
+   ✓ atendimento > janela de 24h — atributo do CANAL (ADR-0009 §3) > a thread informa o estado da janela, para a tela saber que responder está indisponível 302ms
+   ✓ atendimento > janela de 24h — atributo do CANAL (ADR-0009 §3) > no canal NÃO oficial não existe janela: responde mesmo com a conversa velha 315ms
+   ✓ atendimento > janela de 24h — atributo do CANAL (ADR-0009 §3) > reconcilia o eco Evolution autenticado entregue dentro do send sem unread duplicada 364ms
+   ✓ atendimento > fila > assumir trava para outro agente (409), e finalizar libera 492ms
+   ✓ atendimento > fila > responder NÃO rouba conversa de quem já está atendendo 491ms
+   ✓ atendimento > fila > abrir a thread zera as não lidas — abrir É atender 319ms
+   ✓ atendimento > fila > a lista filtra por aba e só enxerga a BU pedida 331ms
+   ✓ atendimento > a inbox pagina — teto silencioso é o que vira "sumiram conversas" > devolve total e temMais, e a segunda página traz o resto 335ms
+   ✓ atendimento > a inbox pagina — teto silencioso é o que vira "sumiram conversas" > limite acima do teto é aparado, não obedecido 302ms
+   ✓ atendimento > timeline paginada do atendimento > caminha por 251 mensagens na ordem do banco e mantém a página limitada 430ms
+   ✓ atendimento > timeline paginada do atendimento > valida parâmetros depois da autorização e rejeita cursor de outra conversa autorizada 363ms
+   ✓ atendimento > timeline paginada do atendimento > rejeita cursor/limite repetidos e mantém refresh e backfill sem efeito de leitura 361ms
+   ✓ atendimento > timeline paginada do atendimento > serializa dez chegadas concorrentes com a fronteira de abertura em três lotes 745ms
+   ✓ atendimento > timeline paginada do atendimento > preserva dez incrementos feitos após o ack e enquanto a página fica bloqueada, em três lotes 555ms
+   ✓ atendimento > timeline paginada do atendimento > permite leituras de cursor concorrentes com close sem reescrever status 477ms
+ ✓ test/webhooks.e2e-spec.ts (21 tests) 4811ms
+   ✓ webhooks de entrada > o dado recebido respeita o escopo > CROSS-TENANT: o dono de Beta não enxerga a conversa que entrou na BU de Alfa 302ms
+
+ Test Files  3 passed (3)
+      Tests  60 passed (60)
+   Start at  18:49:29
+   Duration  32.10s (transform 6.96s, setup 53ms, collect 11.59s, tests 19.81s, environment 1ms, prepare 216ms)
+

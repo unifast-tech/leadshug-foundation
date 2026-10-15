@@ -1,0 +1,32 @@
+
+> @leadshug/api@0.1.0 test:e2e
+> vitest run --config vitest.config.e2e.ts --no-file-parallelism --maxWorkers=1 test/atendimento.e2e-spec.ts -t serializes old-instance ingress
+
+[33mThe CJS build of Vite's Node API is deprecated. See https://vite.dev/guide/troubleshooting.html#vite-cjs-node-api-deprecated for more details.[39m
+
+ RUN  v2.1.9 /workspace
+
+ ❯ test/atendimento.e2e-spec.ts (25 tests | 1 failed | 24 skipped) 3571ms
+   × atendimento > serializes old-instance ingress against a real managed RENEW and rejects stale content 3442ms
+     → timed out waiting for 1 identity-row waiters; saw 0; activity=[{"query":"SELECT id FROM provider_resource_identities WHERE id = $1 FOR UPDATE","wait_event_type":"Client","wait_event":"ClientRead"},{"query":"SELECT count(*)::int AS count FROM pg_stat_activity WHERE wait_event_type = 'Lock' AND query ILIKE '%provider_resource_identities%' AND pid <> pg_backend_pid()","wait_event_type":"Client","wait_event":"ClientRead"}]
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  test/atendimento.e2e-spec.ts > atendimento > serializes old-instance ingress against a real managed RENEW and rejects stale content
+Error: timed out waiting for 1 identity-row waiters; saw 0; activity=[{"query":"SELECT id FROM provider_resource_identities WHERE id = $1 FOR UPDATE","wait_event_type":"Client","wait_event":"ClientRead"},{"query":"SELECT count(*)::int AS count FROM pg_stat_activity WHERE wait_event_type = 'Lock' AND query ILIKE '%provider_resource_identities%' AND pid <> pg_backend_pid()","wait_event_type":"Client","wait_event":"ClientRead"}]
+ ❯ waitForWaiters test/atendimento.e2e-spec.ts:217:13
+
+ ❯ test/atendimento.e2e-spec.ts:223:7
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 24 skipped (25)
+   Start at  18:57:14
+   Duration  12.44s (transform 6.99s, setup 27ms, collect 8.68s, tests 3.57s, environment 0ms, prepare 42ms)
+
+npm notice
+npm notice New major version of npm available! 10.9.9 -> 12.2.0
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.0
+npm notice To update run: npm install -g npm@12.2.0
+npm notice

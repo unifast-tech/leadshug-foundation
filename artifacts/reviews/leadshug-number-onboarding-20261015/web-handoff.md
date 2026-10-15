@@ -2,7 +2,9 @@
 
 Planned handoff prepared on 2026-10-15, within the approved TODO. Start only after the API writer has delivered a stable validated checkpoint and relinquished product write ownership. Read its final DTO/env/endpoint handoff; this note is not an independent API contract or implementation claim.
 
-Current sequence: API checkpoint5 is remediating the18accepted API findings and preparing out-of-band provider controls for browser tests. Web checkpoint4 is stopped; its independent review produced12adjudicated findings. Root must inspect the terminal API handoff and explicitly transfer the sole writer role before Web remediation. Historical checkpoint2 evidence remains in its own immutable artifacts and is not current integration clearance. No UI delivery or final gate is claimed.
+Current admission: API checkpoint5a has stopped. Root verified48present source hashes plus one admitted deletion, equal pre/post manifests, build/lint,130unit/19files,265E2E/25files and21migrations. Read `evidence/checkpoint5a-api-handoff.md` with the root's provenance correction in the TODO: its claim that no private env was used is unsupported because the full API bind exposed `.env` to test setup/Prisma. OpenSSL detection also warned. This is functional evidence for continued consumer work, not final isolated CI-equivalent clearance. Web checkpoint4 is stopped; its independent review produced12adjudicated findings. Start edits only on root's explicit sole-writer activation. Historical checkpoint2 evidence remains immutable. No UI delivery or final gate is claimed.
+
+Execution sequencing: Web first implements the coherent remediation, browser test sources and freshness helper, runs its build/unit checks, and stops. The subsequent serialized DevOps owner establishes the source-owned Node22/OpenSSL/PG16/browser runner and its isolated topology. Actual Playwright/PCV runs then use that runner; any Web fix returns writer ownership explicitly from DevOps before editing. Current API interim evidence contains Prisma OpenSSL detection warnings, so do not start a second ad hoc browser stack and call it authoritative. Root continues integration after these checkpoints; a stopped Web checkpoint is not permission to leave the requested browser work unfinished.
 
 ## Authority
 
@@ -23,6 +25,7 @@ NUM-WEB-11 requires honest safe action/guidance for ambiguous stages. The approv
 - Keep code and PIN transient. No URL, storage, trace, screenshot or console containing them. Clear sensitive fields when their lifecycle ends. Automated browser fixtures use fictitious values and must not capture real authorization or QR material.
 - Pairing is administrative POST with the existing CSRF header. Display QR only to the authorized operator. Explain RENEW interrupts acceptance until the new own-number identity is confirmed. Pending QR refresh/retry must preserve the server's current attempt/epoch rather than create a second instance.
 - Display registration, provider connection and receipt separately. A QR, list response, `open` event or WABA subscription alone cannot produce a success claim. Expose safe retry/verify/reauthorize/cancel actions according to the actual state and error catalog.
+- Use plain Portuguese labels for stages and safe errors, with the operator's next action. Raw implementation stage/error identifiers are not the primary product copy; preserve the meaningful registration, identity, provider and receipt dimensions without exposing leases/nonces/generations in the ordinary flow.
 - Preserve existing classes/layout, grants and timeline refresh behavior. Do not introduce another UI library, route family or manual contact creation.
 
 ## Browser proof

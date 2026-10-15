@@ -1,0 +1,78 @@
+
+> @leadshug/api@0.1.0 build
+> nest build
+
+npm notice
+npm notice New major version of npm available! 10.9.9 -> 12.2.0
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.0
+npm notice To update run: npm install -g npm@12.2.0
+npm notice
+
+> @leadshug/api@0.1.0 lint
+> eslint "{src,test}/**/*.ts"
+
+
+> @leadshug/api@0.1.0 test:e2e
+> vitest run --config vitest.config.e2e.ts --no-file-parallelism --maxWorkers=1 test/atendimento.e2e-spec.ts
+
+[33mThe CJS build of Vite's Node API is deprecated. See https://vite.dev/guide/troubleshooting.html#vite-cjs-node-api-deprecated for more details.[39m
+
+ RUN  v2.1.9 /workspace
+
+stdout | test/atendimento.e2e-spec.ts > atendimento > timeline paginada do atendimento > preserva dez incrementos feitos após o ack e enquanto a página fica bloqueada, em três lotes
+{"prova":"BCI_ACK_COM_SELECT_BLOQUEADO","lote":1,"bloqueioDetectado":true,"sondagens":2,"ackAteSelectBloqueadoMs":51,"dezIncrementosMs":25,"unreadEnquantoSelectBloqueado":10,"unreadDepoisDaResposta":10}
+
+stdout | test/atendimento.e2e-spec.ts > atendimento > timeline paginada do atendimento > preserva dez incrementos feitos após o ack e enquanto a página fica bloqueada, em três lotes
+{"prova":"BCI_ACK_COM_SELECT_BLOQUEADO","lote":2,"bloqueioDetectado":true,"sondagens":2,"ackAteSelectBloqueadoMs":48,"dezIncrementosMs":23,"unreadEnquantoSelectBloqueado":10,"unreadDepoisDaResposta":10}
+
+stdout | test/atendimento.e2e-spec.ts > atendimento > timeline paginada do atendimento > preserva dez incrementos feitos após o ack e enquanto a página fica bloqueada, em três lotes
+{"prova":"BCI_ACK_COM_SELECT_BLOQUEADO","lote":3,"bloqueioDetectado":true,"sondagens":2,"ackAteSelectBloqueadoMs":51,"dezIncrementosMs":20,"unreadEnquantoSelectBloqueado":10,"unreadDepoisDaResposta":10}
+
+ ❯ test/atendimento.e2e-spec.ts (25 tests | 1 failed) 15199ms
+   ✓ atendimento > registra resultado de envio ambíguo sem chave externa e nunca inventa uma chave 415ms
+   ✓ atendimento > reconcilia o eco Evolution autenticado entregue dentro do send sem unread duplicada 362ms
+   ✓ atendimento > does not accept an outbound result after channel retirement wins during the provider response 339ms
+   ✓ atendimento > serializes verified inbound acceptance behind retirement on the same identity row 414ms
+   × atendimento > serializes old-instance ingress against a real managed RENEW and rejects stale content 5378ms
+     → Transaction API error: Transaction already closed: A commit cannot be executed on an expired transaction. The timeout for this transaction was 5000 ms, however 5020 ms passed since the start of the transaction. Consider increasing the interactive transaction timeout or doing less work in the transaction.
+   ✓ atendimento > POST conversations/:id/messages — o trio (ADR-0012 §2) > autorizado: responde, envia pelo canal e assume a conversa 324ms
+   ✓ atendimento > POST conversations/:id/messages — o trio (ADR-0012 §2) > ATENDENTE no escopo responde — estar na BU BASTA (ADR-0018 §3) 495ms
+   ✓ atendimento > POST conversations/:id/messages — o trio (ADR-0012 §2) > CROSS-TENANT: o dono de Beta recebe 404 na conversa da BU de Alfa 389ms
+   ✓ atendimento > janela de 24h — atributo do CANAL (ADR-0009 §3) > recusa com JANELA_FECHADA quando a última mensagem do contato passou de 24h 300ms
+   ✓ atendimento > janela de 24h — atributo do CANAL (ADR-0009 §3) > a thread informa o estado da janela, para a tela saber que responder está indisponível 324ms
+   ✓ atendimento > janela de 24h — atributo do CANAL (ADR-0009 §3) > no canal NÃO oficial não existe janela: responde mesmo com a conversa velha 319ms
+   ✓ atendimento > janela de 24h — atributo do CANAL (ADR-0009 §3) > reconcilia o eco Evolution autenticado entregue dentro do send sem unread duplicada 357ms
+   ✓ atendimento > fila > assumir trava para outro agente (409), e finalizar libera 480ms
+   ✓ atendimento > fila > responder NÃO rouba conversa de quem já está atendendo 493ms
+   ✓ atendimento > fila > abrir a thread zera as não lidas — abrir É atender 329ms
+   ✓ atendimento > fila > a lista filtra por aba e só enxerga a BU pedida 346ms
+   ✓ atendimento > a inbox pagina — teto silencioso é o que vira "sumiram conversas" > devolve total e temMais, e a segunda página traz o resto 342ms
+   ✓ atendimento > timeline paginada do atendimento > caminha por 251 mensagens na ordem do banco e mantém a página limitada 458ms
+   ✓ atendimento > timeline paginada do atendimento > valida parâmetros depois da autorização e rejeita cursor de outra conversa autorizada 462ms
+   ✓ atendimento > timeline paginada do atendimento > exige sessão antes de validar query e não altera unread 306ms
+   ✓ atendimento > timeline paginada do atendimento > rejeita cursor/limite repetidos e mantém refresh e backfill sem efeito de leitura 387ms
+   ✓ atendimento > timeline paginada do atendimento > serializa dez chegadas concorrentes com a fronteira de abertura em três lotes 761ms
+   ✓ atendimento > timeline paginada do atendimento > preserva dez incrementos feitos após o ack e enquanto a página fica bloqueada, em três lotes 542ms
+   ✓ atendimento > timeline paginada do atendimento > permite leituras de cursor concorrentes com close sem reescrever status 455ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  test/atendimento.e2e-spec.ts > atendimento > serializes old-instance ingress against a real managed RENEW and rejects stale content
+PrismaClientKnownRequestError: Transaction API error: Transaction already closed: A commit cannot be executed on an expired transaction. The timeout for this transaction was 5000 ms, however 5020 ms passed since the start of the transaction. Consider increasing the interactive transaction timeout or doing less work in the transaction.
+ ❯ Qr.transaction node_modules/@prisma/client/src/runtime/core/engines/library/LibraryEngine.ts:217:13
+ ❯ Proxy._transactionWithCallback node_modules/@prisma/client/src/runtime/getPrismaClient.ts:725:9
+ ❯ test/atendimento.e2e-spec.ts:240:18
+    238|       expect(await prisma.providerResourceIdentity.findUniqueOrThrow({…
+    239|     } finally {
+    240|       release(); await blocker;
+       |                  ^
+    241|     }
+    242|   });
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 24 passed (25)
+   Start at  18:56:04
+   Duration  24.51s (transform 7.46s, setup 39ms, collect 9.07s, tests 15.20s, environment 0ms, prepare 55ms)
+

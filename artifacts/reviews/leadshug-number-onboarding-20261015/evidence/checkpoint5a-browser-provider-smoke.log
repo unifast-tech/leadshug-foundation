@@ -1,0 +1,3 @@
+{"unknownCodeStatus":409,"unknownCodeResourceCalls":0,"configuredGrantStatus":200,"visibleWabaIds":["222222222"],"visiblePhoneIds":["222222222"],"fixtureControlUnauth":403,"fixtureControlAuth":200,"realBff":true}
+bash: line 1: openssl: command not found
+{"node":"v22.23.3","nodeOpenSSL":"3.5.8"}

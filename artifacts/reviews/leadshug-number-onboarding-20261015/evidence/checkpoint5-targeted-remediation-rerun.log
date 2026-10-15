@@ -1,0 +1,22 @@
+debconf: delaying package configuration, since apt-utils is not installed
+
+> @leadshug/api@0.1.0 build
+> nest build
+
+npm notice
+npm notice New major version of npm available! 10.9.9 -> 12.2.0
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.0
+npm notice To update run: npm install -g npm@12.2.0
+npm notice
+
+> @leadshug/api@0.1.0 lint
+> eslint "{src,test}/**/*.ts"
+
+
+/workspace/test/number-onboarding-flow.e2e-spec.ts
+  78:91   error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  78:107  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  85:40   error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+✖ 3 problems (3 errors, 0 warnings)
+

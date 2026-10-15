@@ -1,0 +1,56 @@
+
+> @leadshug/api@0.1.0 lint
+> eslint "{src,test}/**/*.ts"
+
+npm notice
+npm notice New major version of npm available! 10.9.9 -> 12.2.0
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.0
+npm notice To update run: npm install -g npm@12.2.0
+npm notice
+
+> @leadshug/api@0.1.0 test:e2e
+> vitest run --config vitest.config.e2e.ts --no-file-parallelism --maxWorkers=1 test/atendimento.e2e-spec.ts
+
+[33mThe CJS build of Vite's Node API is deprecated. See https://vite.dev/guide/troubleshooting.html#vite-cjs-node-api-deprecated for more details.[39m
+
+ RUN  v2.1.9 /workspace
+
+stderr | test/atendimento.e2e-spec.ts > atendimento
+prisma:warn Prisma failed to detect the libssl/openssl version to use, and may not work as expected. Defaulting to "openssl-1.1.x".
+Please manually install OpenSSL via `apt-get update -y && apt-get install -y openssl` and try installing Prisma again. If you're running Prisma on Docker, add this command to your Dockerfile, or switch to an image that already has OpenSSL installed.
+
+stdout | test/atendimento.e2e-spec.ts > atendimento > timeline paginada do atendimento > preserva dez incrementos feitos após o ack e enquanto a página fica bloqueada, em três lotes
+{"prova":"BCI_ACK_COM_SELECT_BLOQUEADO","lote":1,"bloqueioDetectado":true,"sondagens":2,"ackAteSelectBloqueadoMs":45,"dezIncrementosMs":19,"unreadEnquantoSelectBloqueado":10,"unreadDepoisDaResposta":10}
+
+stdout | test/atendimento.e2e-spec.ts > atendimento > timeline paginada do atendimento > preserva dez incrementos feitos após o ack e enquanto a página fica bloqueada, em três lotes
+{"prova":"BCI_ACK_COM_SELECT_BLOQUEADO","lote":2,"bloqueioDetectado":true,"sondagens":2,"ackAteSelectBloqueadoMs":45,"dezIncrementosMs":19,"unreadEnquantoSelectBloqueado":10,"unreadDepoisDaResposta":10}
+
+stdout | test/atendimento.e2e-spec.ts > atendimento > timeline paginada do atendimento > preserva dez incrementos feitos após o ack e enquanto a página fica bloqueada, em três lotes
+{"prova":"BCI_ACK_COM_SELECT_BLOQUEADO","lote":3,"bloqueioDetectado":true,"sondagens":2,"ackAteSelectBloqueadoMs":44,"dezIncrementosMs":20,"unreadEnquantoSelectBloqueado":10,"unreadDepoisDaResposta":10}
+
+ ✓ test/atendimento.e2e-spec.ts (25 tests) 9642ms
+   ✓ atendimento > registra resultado de envio ambíguo sem chave externa e nunca inventa uma chave 402ms
+   ✓ atendimento > reconcilia o eco Evolution autenticado entregue dentro do send sem unread duplicada 339ms
+   ✓ atendimento > does not accept an outbound result after channel retirement wins during the provider response 339ms
+   ✓ atendimento > serializes verified inbound acceptance behind retirement on the same identity row 387ms
+   ✓ atendimento > serializes old-instance ingress against a real managed RENEW and rejects stale content 481ms
+   ✓ atendimento > POST conversations/:id/messages — o trio (ADR-0012 §2) > autorizado: responde, envia pelo canal e assume a conversa 335ms
+   ✓ atendimento > POST conversations/:id/messages — o trio (ADR-0012 §2) > ATENDENTE no escopo responde — estar na BU BASTA (ADR-0018 §3) 467ms
+   ✓ atendimento > POST conversations/:id/messages — o trio (ADR-0012 §2) > CROSS-TENANT: o dono de Beta recebe 404 na conversa da BU de Alfa 363ms
+   ✓ atendimento > janela de 24h — atributo do CANAL (ADR-0009 §3) > no canal NÃO oficial não existe janela: responde mesmo com a conversa velha 306ms
+   ✓ atendimento > janela de 24h — atributo do CANAL (ADR-0009 §3) > reconcilia o eco Evolution autenticado entregue dentro do send sem unread duplicada 328ms
+   ✓ atendimento > fila > assumir trava para outro agente (409), e finalizar libera 471ms
+   ✓ atendimento > fila > responder NÃO rouba conversa de quem já está atendendo 474ms
+   ✓ atendimento > fila > abrir a thread zera as não lidas — abrir É atender 329ms
+   ✓ atendimento > timeline paginada do atendimento > caminha por 251 mensagens na ordem do banco e mantém a página limitada 381ms
+   ✓ atendimento > timeline paginada do atendimento > valida parâmetros depois da autorização e rejeita cursor de outra conversa autorizada 350ms
+   ✓ atendimento > timeline paginada do atendimento > rejeita cursor/limite repetidos e mantém refresh e backfill sem efeito de leitura 356ms
+   ✓ atendimento > timeline paginada do atendimento > serializa dez chegadas concorrentes com a fronteira de abertura em três lotes 684ms
+   ✓ atendimento > timeline paginada do atendimento > preserva dez incrementos feitos após o ack e enquanto a página fica bloqueada, em três lotes 479ms
+   ✓ atendimento > timeline paginada do atendimento > permite leituras de cursor concorrentes com close sem reescrever status 494ms
+
+ Test Files  1 passed (1)
+      Tests  25 passed (25)
+   Start at  19:01:25
+   Duration  18.36s (transform 6.92s, setup 35ms, collect 8.48s, tests 9.64s, environment 0ms, prepare 58ms)
+

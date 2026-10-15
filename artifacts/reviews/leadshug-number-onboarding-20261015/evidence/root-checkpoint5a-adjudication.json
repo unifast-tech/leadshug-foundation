@@ -1,0 +1,32 @@
+{
+  "stage": "functional-checkpoint-consumer-admission",
+  "source_manifest_sha256": "b3d845d4f1e5597f45073fc3379a208a6dbb193309a410fdd26ca20212f610e0",
+  "present_source_files_verified": 48,
+  "deleted_paths_verified": [
+    "src/domain/channels/channels.service.spec.ts"
+  ],
+  "inventory_matches_git": true,
+  "pre_post_source_equal": true,
+  "build": "pass",
+  "lint": "pass",
+  "unit": {
+    "files": 19,
+    "tests": 130,
+    "result": "pass"
+  },
+  "postgresql_e2e": {
+    "files": 25,
+    "tests": 265,
+    "result": "pass"
+  },
+  "migrations": 21,
+  "provider_grant_smoke": "pass",
+  "private_env_exclusion_proven": false,
+  "openssl_detection_clean": false,
+  "correction": "Full API source bind exposed private .env to process.loadEnvFile and Prisma; explicit fake variables do not exclude all private input. Original no-private-env assertion unsupported. No private content inspected or leak asserted.",
+  "final_ci_equivalent_accepted": false,
+  "real_browser_proof": false,
+  "real_provider_proof": false,
+  "next_writer": "web-only-after-root-activation",
+  "required_next_runtime": "source-owned runner with private-env masks, explicit OpenSSL, regenerated Prisma"
+}

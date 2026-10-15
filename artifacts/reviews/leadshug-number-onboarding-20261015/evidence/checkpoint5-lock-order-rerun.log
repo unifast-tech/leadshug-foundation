@@ -1,0 +1,43 @@
+debconf: delaying package configuration, since apt-utils is not installed
+
+> @leadshug/api@0.1.0 build
+> nest build
+
+npm notice
+npm notice New major version of npm available! 10.9.9 -> 12.2.0
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.0
+npm notice To update run: npm install -g npm@12.2.0
+npm notice
+
+> @leadshug/api@0.1.0 lint
+> eslint "{src,test}/**/*.ts"
+
+
+> @leadshug/api@0.1.0 test:e2e
+> vitest run --config vitest.config.e2e.ts --no-file-parallelism --maxWorkers=1 test/number-onboarding-flow.e2e-spec.ts test/number-onboarding-bci.e2e-spec.ts test/webhooks.e2e-spec.ts
+
+[33mThe CJS build of Vite's Node API is deprecated. See https://vite.dev/guide/troubleshooting.html#vite-cjs-node-api-deprecated for more details.[39m
+
+ RUN  v2.1.9 /workspace
+
+ ✓ test/number-onboarding-flow.e2e-spec.ts (9 tests) 3705ms
+   ✓ BFF number registration workflow (PostgreSQL) > recovers the same one-use nonce for idempotent create and connects only after provider subscribe plus receipt 559ms
+   ✓ BFF number registration workflow (PostgreSQL) > does not disclose registration state to a different tenant and rejects invalid provider resources 422ms
+   ✓ BFF number registration workflow (PostgreSQL) > recovers a promoted pending registration after expiry with a fresh authorized session 408ms
+   ✓ BFF number registration workflow (PostgreSQL) > reserves immutable provider ownership before register and projects BU-scoped channel authority safely 506ms
+   ✓ BFF number registration workflow (PostgreSQL) > allows only one BU to reserve a concurrently selected provider resource 536ms
+   ✓ BFF number registration workflow (PostgreSQL) > renews a managed Evolution identity through cleanup then creates the reserved replacement once 353ms
+   ✓ BFF number registration workflow (PostgreSQL) > wipes expired and superseded candidate envelopes while preserving an active credential 301ms
+ ✓ test/webhooks.e2e-spec.ts (16 tests) 3620ms
+   ✓ webhooks de entrada > o dado recebido respeita o escopo > CROSS-TENANT: o dono de Beta não enxerga a conversa que entrou na BU de Alfa 308ms
+stdout | test/number-onboarding-bci.e2e-spec.ts > BCI-DUPLICATE-SUBMIT-OR-REPLAY (PostgreSQL) > repeats 20 overlapping create/finalize operations five times, with mismatched-key negative controls
+[BCI-EVIDENCE]{"gate":"BCI-DUPLICATE-SUBMIT-OR-REPLAY","severity":"high","repetitions":5,"operationsPerRepetition":40,"operationCounts":[40,40,40,40,40],"createReplayWinnerCount":5,"providerIdentityQueries":15,"mismatchedPayloadNegativeControls":5,"postPromotionStateChecked":true}
+
+ ✓ test/number-onboarding-bci.e2e-spec.ts (1 test) 2876ms
+   ✓ BCI-DUPLICATE-SUBMIT-OR-REPLAY (PostgreSQL) > repeats 20 overlapping create/finalize operations five times, with mismatched-key negative controls 2507ms
+
+ Test Files  3 passed (3)
+      Tests  26 passed (26)
+   Start at  18:19:16
+   Duration  21.95s (transform 6.89s, setup 47ms, collect 11.15s, tests 10.20s, environment 0ms, prepare 170ms)
+

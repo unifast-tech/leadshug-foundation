@@ -1,0 +1,65 @@
+debconf: delaying package configuration, since apt-utils is not installed
+
+> @leadshug/api@0.1.0 test:e2e
+> vitest run --config vitest.config.e2e.ts --no-file-parallelism --maxWorkers=1 test/number-onboarding-flow.e2e-spec.ts test/number-onboarding-message-acceptance.e2e-spec.ts test/webhooks.e2e-spec.ts test/modulos.e2e-spec.ts
+
+[33mThe CJS build of Vite's Node API is deprecated. See https://vite.dev/guide/troubleshooting.html#vite-cjs-node-api-deprecated for more details.[39m
+
+ RUN  v2.1.9 /workspace
+
+ ❯ test/number-onboarding-flow.e2e-spec.ts (6 tests | 1 failed) 2760ms
+   ✓ BFF number registration workflow (PostgreSQL) > recovers the same one-use nonce for idempotent create and connects only after provider subscribe plus receipt 534ms
+   ✓ BFF number registration workflow (PostgreSQL) > does not disclose registration state to a different tenant and rejects invalid provider resources 433ms
+   × BFF number registration workflow (PostgreSQL) > recovers a promoted pending registration after expiry with a fresh authorized session 381ms
+     → expected { …(11) } to match object { state: 'PENDING_RECEIPT', …(1) }
+(9 matching properties omitted from actual)
+   ✓ BFF number registration workflow (PostgreSQL) > reserves immutable provider ownership before register and projects BU-scoped channel authority safely 513ms
+   ✓ BFF number registration workflow (PostgreSQL) > allows only one BU to reserve a concurrently selected provider resource 506ms
+ ✓ test/webhooks.e2e-spec.ts (16 tests) 3629ms
+ ✓ test/modulos.e2e-spec.ts (10 tests) 2843ms
+   ✓ módulos: env é o teto, a Mantenedora escolhe dentro dele (ADR-0016) > o /me devolve o produto já interseccionado > teto ligado + contratado = ligado, e a marca vem junto 349ms
+   ✓ módulos: env é o teto, a Mantenedora escolhe dentro dele (ADR-0016) > piso OFICIAL completa o fluxo novo mesmo sem módulo não oficial 437ms
+ ✓ test/number-onboarding-message-acceptance.e2e-spec.ts (4 tests) 398ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  test/number-onboarding-flow.e2e-spec.ts > BFF number registration workflow (PostgreSQL) > recovers a promoted pending registration after expiry with a fresh authorized session
+AssertionError: expected { …(11) } to match object { state: 'PENDING_RECEIPT', …(1) }
+(9 matching properties omitted from actual)
+
+- Expected
++ Received
+
+  Object {
+-   "stage": "MAPPED_PENDING_RECEIPT",
+-   "state": "PENDING_RECEIPT",
++   "stage": "EXPIRED",
++   "state": "ERROR",
+  }
+
+ ❯ test/number-onboarding-flow.e2e-spec.ts:101:33
+     99|     const refreshedCookie = await login(app, 'number-registration@exam…
+    100|     const recovered = request(app.getHttpServer()).get(`/api/bff/numbe…
+    101|     await recovered.expect(200).expect(({ body }) => expect(body).toMa…
+       |                                 ^
+    102|     await request(app.getHttpServer()).post(`/api/bff/number-registrat…
+    103|       .set('x-requested-with', 'teste').send({}).expect(200).expect(({…
+ ❯ test/number-onboarding-flow.e2e-spec.ts:101:67
+ ❯ node_modules/supertest/lib/test.js:365:13
+ ❯ Test._assertFunction node_modules/supertest/lib/test.js:342:13
+ ❯ Test.assert node_modules/supertest/lib/test.js:195:23
+ ❯ localAssert node_modules/supertest/lib/test.js:138:14
+ ❯ Server.<anonymous> node_modules/supertest/lib/test.js:152:11
+
+ Test Files  1 failed | 3 passed (4)
+      Tests  1 failed | 35 passed (36)
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+   Start at  18:04:10
+   Duration  22.92s (transform 6.87s, setup 60ms, collect 12.47s, tests 9.63s, environment 1ms, prepare 246ms)
+
+npm notice
+npm notice New major version of npm available! 10.9.9 -> 12.2.0
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.0
+npm notice To update run: npm install -g npm@12.2.0
+npm notice

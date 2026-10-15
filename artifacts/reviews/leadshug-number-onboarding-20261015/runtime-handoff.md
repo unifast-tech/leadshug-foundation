@@ -1,6 +1,6 @@
 # ST-CON-01 — local runtime handoff
 
-Prepared by the orchestrator on 2026-10-15. This is a planned handoff within the approved TODO, not evidence that the runtime exists or is healthy. The API executor remains the sole product writer until its checkpoint is complete. Start runtime edits only after an explicit serialized handoff to `operational-devops`.
+Prepared by the orchestrator on 2026-10-15. This is a planned handoff within the approved TODO, not evidence that the runtime exists or is healthy. Start runtime edits only after the API and Web owners have stopped and root explicitly transfers the sole product writer role to `operational-devops`. Web prepares its remediation/browser test sources first; authoritative Playwright execution follows this source-owned runner and returns writer ownership to Web if fixes are needed.
 
 ## Authority and owned files
 
@@ -15,6 +15,7 @@ Runtime scope is the approved root Compose file/overlay, gateway template, two l
 - Docker is available through Windows `docker.exe`. A WSL `/mnt/c/...` source bind resolved to an empty directory in the Windows daemon during checkpoint 1; using `wslpath -w` fixed the bind. Verify the mounted source before trusting commands or hashes.
 - Checkpoint 1 used an isolated disposable PostgreSQL 16 database and a Linux named dependency volume. Do not reuse an operational database for destructive fixture cleanup. The second migration directory was renamed to match the approved `*number_onboarding*` glob; prove the final migration set on a fresh disposable database.
 - Existing ignored `.env` files are private operational authority. Do not print, replace, remove, or normalize them. Do not infer that a preexisting token belongs to this test.
+- API cp5a functional checks passed on a frozen source tree, but its provisional full-source bind left private `api-app/.env` visible to `process.loadEnvFile` and Prisma. The executor confirmed there was no mask/omission; explicitly supplied fake variables do not prove other private inputs were excluded. Its original report's no-private-env assertion is superseded by root's TODO adjudication. The same runner lacked the OpenSSL CLI/libssl detection and emitted Prisma warnings. Final isolated runner evidence must resolve both conditions; do not reuse these checks as final CI-equivalent proof.
 - Root `.gitignore` explicitly ignores `.env.local` and `.env.testing`; it does not broadly ignore `.env.*`. If the runner creates private test configuration, use an already ignored destination, first verify it is absent, refuse replacement of an existing file, and never include its contents in logs or evidence. Do not invent an unignored secret-file name.
 
 ## Required local topology

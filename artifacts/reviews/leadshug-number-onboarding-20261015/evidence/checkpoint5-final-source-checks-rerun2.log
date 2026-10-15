@@ -1,0 +1,32 @@
+debconf: delaying package configuration, since apt-utils is not installed
+
+> @leadshug/api@0.1.0 build
+> nest build
+
+npm notice
+npm notice New major version of npm available! 10.9.9 -> 12.2.0
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.0
+npm notice To update run: npm install -g npm@12.2.0
+npm notice
+
+> @leadshug/api@0.1.0 lint
+> eslint "{src,test}/**/*.ts"
+
+
+> @leadshug/api@0.1.0 test
+> vitest run --config vitest.config.ts --run src/domain/channels/channel-credential-crypto.spec.ts src/domain/channels/safe-redaction.spec.ts src/integrations/meta/meta.client.spec.ts src/integrations/evolution/evolution.client.spec.ts
+
+[33mThe CJS build of Vite's Node API is deprecated. See https://vite.dev/guide/troubleshooting.html#vite-cjs-node-api-deprecated for more details.[39m
+
+ RUN  v2.1.9 /workspace
+
+ ✓ src/domain/channels/safe-redaction.spec.ts (1 test) 4ms
+ ✓ src/domain/channels/channel-credential-crypto.spec.ts (4 tests) 8ms
+ ✓ src/integrations/evolution/evolution.client.spec.ts (5 tests) 15ms
+ ✓ src/integrations/meta/meta.client.spec.ts (11 tests) 18ms
+
+ Test Files  4 passed (4)
+      Tests  21 passed (21)
+   Start at  18:28:15
+   Duration  1.03s (transform 1.04s, setup 0ms, collect 1.67s, tests 45ms, environment 1ms, prepare 501ms)
+
