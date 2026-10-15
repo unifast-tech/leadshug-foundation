@@ -41,7 +41,7 @@ Proposta ST-CON-01: jornada de cadastro de número, com infraestrutura local est
 
 - **Current delivery stage:** Pending
 - **Qualifiers:** none
-- **Next exact step:** API cp8 parou com137unitários/277E2E e21migrações no runner isolado; manifests antes/depois iguais e conferidos. DevOps cp9 parou com4binds públicos/prefixos de colisão/Graph fixture válidos; root conferiu6hashes declarados. Web cp10 corrigiu freshness/fluxos e parou no erro pré-worker de dist API ausente; DevOps cp11 acrescentou build prévio e parou após config-only. Web cp12 é agora writer único para concluir browser real-backend e alinhar Graph fixture antes do runtime do operador.
+- **Next exact step:** API cp8 parou com137unitários/277E2E e21migrações no runner isolado; manifests antes/depois iguais e conferidos. DevOps cp9 parou com4binds públicos/prefixos de colisão/Graph fixture válidos; root conferiu6hashes declarados. Web cp10 corrigiu freshness/fluxos e parou no erro pré-worker de dist API ausente; DevOps cp11 acrescentou build prévio e parou após config-only. Web cp12 parou com35browserpass,2falhas e7não executados; correções Web pós-run ainda não verificadas. API cp13 parou após preservar null de WABA na fixture; root verificou que esse é o único delta dos153paths cp8. Web cp14 é writer único para repetir browser e seguir ao runtime do operador após STOP.
 
 ## Active Work State (Required While TODO Remains In `active/`)
 
@@ -248,6 +248,7 @@ n/a; esta proposta não autoriza promoção ou deploy.
 | web | src/componentes/CadastroNumero* | A,?? | UI do fluxo e testes. |
 | web | e2e/*canais* | A,?? | Browser de cadastro. |
 | web | e2e/number-onboarding* | A,?? | Fixtures/freshness do fluxo. |
+| web | e2e/telas.spec.ts | M | Somente caso de Números: substituir expectativa de botão Conectar WABA aposentado por jornada aprovada de cadastro; preservar BU/ausência de canal e gates de console/auth das demais telas. Admissão após falha real cp12. |
 | web | e2e/timeline-freshness.ts | M | Concretização necessária: manifesto compartilhado deve representar deleções e cobrir fixtures/schema/config pertinentes; preservar health, banco descartável e comparação bundle servido/buildado. |
 | web | playwright.config.ts | M | Projeto adicional com mesmo backend real. |
 | web | .dockerignore | M | Excluir env privados do contexto de build e da carga automática Vite; manter somente exemplo público. |
@@ -990,3 +991,16 @@ DevOps parou após4binds públicos read-only, filtro de colisão aceitando hífe
 ### Checkpoint10/11 — pré-requisito compilado do browser
 
 Web cp10 parou após build e27unitários, com13hashes verificados pelo root. Freshness restringe o diff binário a paths públicos antes de ler blobs; popup abandon, WABA sem nome e cenários adicionais foram preparados. O browser aplicou21migrações/buildWeb e falhou antes de workers/globalSetup: timeline-fixtures.cjs exige crypto compilado em dist da API, ausente no volume limpo. Nenhum teste/attestation foi reivindicado. Raw e handoff cp10 preservados. DevOps cp11 único writer corrigiu o seletor browser para buildAPI prévio, sem duplicar no seletor all, e parou após syntax/config-only. Web cp12 foi ativado depois do STOP para alinhar os2Graph fixtures do Playwright e concluir a suíte; eventual alteração da ordem de bootstrap deve preservar buildfresh/DB/health/servedhash. Operador permanece não inicializado. Índice REG-SEC cp8 e contexto OWASP são inputs de revisão, não gates aceitos.
+
+
+### Admissão de execução — teste legado da tela Números
+
+O browser cp12 rerun1 mostrou falha real em `web-app/e2e/telas.spec.ts:391`: esperava botão Conectar WABA que o contrato aprovado manda retirar. Admitido M exclusivamente desse caso para provar BU visível, ausência de canal cadastrado e entrada no novo fluxo com modalidades explícitas; preservar todas as outras assertions e afterEach de erro/console. É concretização de teste consumidor do mesmo corte aprovado, sem novo comportamento/schema/risco ou aprovação material. Antes da edição, root comunicou o limite ao owner Web; só após terminal/freeze da rodada atual. Fixture API `browser-server.cjs:65` também força nome falso para WABA explicitamente null; correção pertence ao próximo writer API, nunca a um enfraquecimento da seleção explícita do teste.
+
+
+### Checkpoint12 — execução parcial real do navegador
+
+Após corrigir a chamada inválida test.describe.use, Playwright executou44testes:35passaram,2falharam e7do bloco serial de cadastro não executaram. Uma falha confirmou que o fake API trocava nome null por Fixture WABA; a outra era o botão aposentado no caso Números. A fonte Web atual14paths foi conferida por hash pelo root, mas inclui ajustes pós-run de FRC com espera da resposta retida/drain e JSON, SDKretry, autor/ID em refresh e teste Números admitido: não chamar esses ajustes de verificados. API cp13 recebeu writer único para corrigir só semântica null em browser-server.cjs; não mudar produto/asserts para contornar. Depois STOP e Web retoma. Pre-worker da fonte anterior preservado imutável em evidence/cp12-preworker-prior-source.json SHA2567531f261589ef8cf9236fd6d8c8d7ba60efa9f7f2bec98d1222d80f754ccc3f0; não prova fonte final. Log rerun1 SHA2565a79a960e53d715db0e1f2f1d4b786cb011fbaed28404dec6f60c088bf7f4e3c. Build/serviços reais subiram; nenhuma corrida do segundo build foi observada. Prova externa/gateway/operador permanecem pendentes.
+
+
+Checkpoint13: fixture Meta passou a projetar name:null quando o nome é ausente ou explicitamente null, coerente com adapter real. Root verificou SHA2564379e94511e4d8c06e4dc6a232b85f29305c49863e17f2af639c39f4184c60e3 e os demais152paths cp8 idênticos; produto não mudou, mas a fonte total da API agora inclui esse delta de harness, a ser provado pelo browser/finalmatrix. Syntax-onlyNode22/diffcheck são relato do executor, não nova suíte. API parou; Web cp14 ativado após STOP.

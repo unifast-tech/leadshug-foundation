@@ -1,0 +1,13 @@
+{
+  "status": "bounded-fixture-correction; browser pending",
+  "root_verified_delta_from_cp8_manifest": [
+    {
+      "path": "test/browser-server.cjs",
+      "cp8_sha256": "b5a4bc7ffff1261bb186bc878ceab5c2f334548a62f110bcfb4f57bafa036dcc",
+      "current_sha256": "4379e94511e4d8c06e4dc6a232b85f29305c49863e17f2af639c39f4184c60e3"
+    }
+  ],
+  "remaining_cp8_public_paths_unchanged": 152,
+  "executor_report": "Node22.23.3 syntax-only and diff-check passed; no full API/browser rerun in cp13. No raw syntax stdout attached; not final validation evidence.",
+  "next_owner": "Web cp14 sole writer; full browser via source-owned runner"
+}
