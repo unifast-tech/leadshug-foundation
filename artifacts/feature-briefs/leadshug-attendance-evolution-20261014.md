@@ -78,3 +78,7 @@ Os recortes tiverem disposição no backlog/TODOs, contratos consolidados nos m�
 ## Execução ST-ATT-01 em2026-10-15
 
 Histórico da inbox entregue Local-Implemented, com contrato e decisões Verified local no módulo owner, fontes commitadas e provas/reviews no [pacote de entrega](../reviews/leadshug-inbox-timeline-20261014/README.md). As evidências de teto200/path../api acima descrevem a baseline do estudo em2026-10-14. ST-ATT-02/03/04 preservam as decisões/contratos e aprovações próprias.
+
+## Sequência após concordância de2026-10-15
+
+O usuário concordou em preparar conexões confiáveis e testes reais antes de transferência. O [brief de canais](leadshug-channel-readiness-and-history-20261015.md) enquadra conexão/diagnóstico e importação de histórico em recortes próprios; a disposição e o próximo gate estão no backlog sob `BLG-leadshug-channel-readiness-and-history`. A importação continua fora deste pacote de atendimento e não é confundida com a paginação ST-ATT-01 entregue.
