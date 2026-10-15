@@ -67,3 +67,38 @@ Para cada execução, registrar cenário, target redigido, canal, versão do pro
 ## Critério de encerramento
 
 O TODO governante define o limiar final. Para a proposta ST-CON-01, exigir matriz local aceita e troca real por cada canal disponibilizado. Se não houver acesso, registrar pendência explícita; não substituir por falso sucesso, dispensa implícita ou alegação de produção pronta.
+
+## Próximo recorte confirmado — Nova conversa pelo contato (ST-CON-04)
+
+O usuário confirmou que também quer iniciar conversas informando o contato. Estes sinais são candidatos do contrato seguinte, após o cadastro de números; não entram por antecipação no ST-CON-01.
+
+| ID | Jornada | Sinal de aceitação candidato |
+| --- | --- | --- |
+| CONV-01 | Selecionar BU e informar telefone | Validar país/telefone e normalizar identidade sem criar variante do mesmo contato por formatação. |
+| CONV-02 | Abrir conversa já existente | Reutilizar conversa BU/contato e histórico, sem duplicar thread ou apagar responsável/estado. |
+| CONV-03 | Contato novo | Criar a conversa scoped e mostrar o destino antes do primeiro envio; não criar entidade CRM implicitamente. |
+| CONV-04 | Duplo clique e mensagem chegando por webhook ao mesmo tempo | Um único par BU/contato e resultado consistente; nenhum envio duplicado por replay da UI. |
+| CONV-05 | Primeiro envio não oficial | Canal conectado e credencial corretos; erro/aceite e recebimento real observáveis. |
+| CONV-06 | Oficial dentro da janela | Texto livre somente quando janela e permissão de envio permitem. |
+| CONV-07 | Oficial fora da janela | Usar template já aprovado pela Meta, com idioma/parâmetros validados; texto livre não é enviado. Gestão/submissão de templates e campanhas não são presumidas. |
+| CONV-08 | Sem canal, sem grant, outro tenant ou contato inválido | Erro explícito; não criar thread ou chamar provider sem autorização. |
+| CONV-09 | Trocar BU/destino com criação/envio pendente | Resposta antiga não abre conversa ou limpa texto do destino novo. |
+| CONV-10 | Nova conversa por contato vs histórico importado | São ações distintas; abrir contato não importa conversas do aparelho. |
+
+## Cadastro: regressões da revisão de arquitetura (VAL-08)
+
+Casos planejados, nenhum executado. Fixtures de dois tenants e recursos distintos; PostgreSQL real e barreiras para disputas. Provider stub só na porta externa; prova de aparelho separada.
+
+| Caso | Cenário / expectativa obrigatória |
+| --- | --- |
+| REG-SEC-01 | Dois tenants com triggers globais concorrentes: IN A só escolhe bot/credencial A; nenhuma sessão/texto/saída B. Sessão estrangeira falha antes do HTTP externo. |
+| REG-SEC-02 | Replay sequencial e dez duplicatas concorrentes x3 por Meta/Evolution: uma Message, um unread e uma ação downstream; controle negativo com mesmo externalMessageId em dois recursos aceita ambos. Sem ID rejeita; echo OUT não vira IN. |
+| REG-SEC-03 | Mensagem Evolution antes da confirmação do número retorna503 e não persiste conteúdo/raw, Message, unread, realtime ou bot; ownPhone divergente409 mantém quarentena. Número correto permite retry idempotente; sem promessa de replay. LID sem telefone comprovado rejeita. |
+| REG-SEC-04 | Evento Meta criado sob recurso de A; remover vínculo preserva owner; tentar vincular mesmo recurso a B retorna409; evento tardio não afeta B/receipt/bot. Reativar somente mesma BU. |
+| REG-SEC-05 | GET QR não chama provider; POST pair sem anti-CSRF rejeita antes da chamada; ADMIN com header válido usa lease/generation e budget. |
+| REG-SEC-06 | Canal migrado sem credencial reautoriza no slot ocupado, sem WHATSAPP_TOKEN; troca ambígua/consumida exige tentativa e nonce novos; reserva sem efeito expirada pode ser retomada sem nova BU. |
+| REG-SEC-07 | Candidata para outro número/cancelada/expirada ou geração anterior nunca substitui ativa válida; duas candidatas concorrentes só currentAttemptId pode promover por CAS; owner/readiness confirmados antes da ativação. |
+| REG-SEC-08 | Envelope Evolution com apikey/token/URL secreta fictícios e QR/code/PIN: segredo ausente em raw DB, audit, erro, DTO, log, trace e artefatos. Pré-identidade persiste apenas metadados seguros. |
+| REG-SEC-09 | Code/PIN transitórios saem do formulário apenas via BFF HTTPS; não há browser storage/URL/retorno/trace; cifra candidata e ativa rejeitam tamper, purpose/BU/attempt/version incorretos e keyId ausente. |
+
+Limitação explícita: vencedor publica realtime/aciona bot após commit; crash nessa janela pode deixar efeito ausente. Não é claim exactly-once externo nem autorização para replay automático de automação. Esse risco constará do runbook de validação.

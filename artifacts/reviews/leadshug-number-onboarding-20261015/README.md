@@ -1,10 +1,12 @@
 # Cadastro de números — planejamento ST-CON-01
 
-Contrato governante: [TODO](../../../todos/active/features/TODO-leadshug-channel-connection-readiness.md). Proposta em preparação para revisão; nenhuma execução de produto ou aprovação reivindicada.
+Contrato governante: [TODO](../../../todos/active/features/TODO-leadshug-channel-connection-readiness.md). Proposta em revisão; nenhuma execução de produto ou aprovação reivindicada.
 
 Escopo: cadastro guiado oficial Meta e não oficial Evolution/QR, integração com BU, recebimento e primeira conversa recebida para validar o vínculo. Nova conversa proativa é ST-CON-04, próximo recorte solicitado pelo usuário; importação segue depois.
 
-Baseline de fonte: API `ae6a9662c29b77276351aa9de653a47276372246`; Web `4e56f6c1f4515b918d05b8c87e890d42e8542c56`; workspace `cab23188ec796f79131467dcce0a16acedab8d4f`. Foundation baseline/freeze será registrado após commit/push do pacote completo.
+Baseline de fonte: API `ae6a9662c29b77276351aa9de653a47276372246`; Web `4e56f6c1f4515b918d05b8c87e890d42e8542c56`; workspace `cab23188ec796f79131467dcce0a16acedab8d4f`. Primeiro freeze Foundation publicado: `ae503c7b14c3fe51d9cb3488f2fc5df2c5d17301`. O recibo de freeze no TODO aponta a revisão vigente.
+
+O parecer [architecture_opinion](planning-architecture.json) preserva o desenho e pede seis ajustes: isolamento Typebot, deduplicação da entrada, identidade antes do conteúdo Evolution, proprietário durável do recurso Meta, pairing via POST e reautorização com credencial candidata. A proposta integra todos no mesmo TODO, com REG-SEC-01..09 no plano de validação. `fixed-in-plan` no ledger é resolução documental, sem implementação. Pacote v1 e parecer bruto são imutáveis; a crítica independente recebe nova versão com o contrato revisado e esses achados completos.
 
 Fontes primárias consultadas em2026-10-15:
 

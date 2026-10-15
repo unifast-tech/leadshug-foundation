@@ -59,6 +59,7 @@ Proposta ST-CON-01: jornada de cadastro de número, com infraestrutura local est
 - [ ] SCOPE-06: receber primeira mensagem real em cada canal de teste e visualizá-la na conversa correta, preservando grants, histórico paginado e regras de janela.
 - [ ] SCOPE-07: testes de contrato/segurança/races/PostgreSQL e Playwright com runtime real; prova externa separada por canal.
 - [ ] SCOPE-08: runtime local próprio do LeadsHug com Evolution fixada, persistência isolada, wiring de variáveis e runbook de callback HTTPS; sem tocar runtime/dados do legado.
+- [ ] SCOPE-09: reautorização no slot ocupado preserva credencial válida até confirmação; identidade externa mantém proprietário após exclusão; entrada deduplicada e Typebot isolado por Mantenedora.
 
 ## Proposed Registration Contracts
 
@@ -67,16 +68,16 @@ Proposta técnica da jornada, subordinada ao mesmo Scope/DoD e aberta a architec
 ### BFF e autorização
 
 - `GET /api/bff/number-registrations/capabilities`: sessão válida; expõe apenas appId/configId/Graph version e disponibilidade/explicação por modalidade, nunca app secret/token/chave. Não chama provider.
-- `POST /api/bff/number-registrations`: `Idempotency-Key` UUID obrigatório, body exatamente uma origem (`buId` existente ou `novaBu:{nome,setorId?}`) e `tipo:OFICIAL|NAO_OFICIAL`. BU existente exige ADMIN nela; BU nova exige ADMIN na Mantenedora e herda grants/setor pela mesma regra transacional de TenancyService. Oficial sem app/config/crypto configurados e não oficial sem módulo contratado+teto configurado falham antes de criar BU/provider. Nova BU, reserva do canal e tentativa são atômicas no DB; refatorar reuso transacional da criação existente, preservando audit e expansão dos grants. Mesmo key/payload retorna tentativa original; mesmo key e payload diferente409. Nenhum HTTP de provider dentro da transação.
+- `POST /api/bff/number-registrations`: `Idempotency-Key` UUID obrigatório, body exatamente uma origem (`buId` existente ou `novaBu:{nome,setorId?}`) e `tipo:OFICIAL|NAO_OFICIAL`, `operation:NOVO|REAUTORIZAR`; REAUTORIZAR exige BU existente, channelId e expectedGeneration. BU existente exige ADMIN nela; BU nova exige ADMIN na Mantenedora e herda grants/setor pela mesma regra transacional de TenancyService. Oficial sem app/config/crypto configurados e não oficial sem módulo contratado+teto configurado falham antes de criar BU/provider. Para NOVO, nova BU (quando pedida), reserva do canal e tentativa são atômicas no DB; REAUTORIZAR reutiliza canal conforme contrato de ativação abaixo; refatorar reuso transacional da criação existente, preservando audit e expansão dos grants. Mesmo key/payload retorna tentativa original; mesmo key e payload diferente409. Nenhum HTTP de provider dentro da transação.
 - `GET /api/bff/number-registrations/:id`: apenas ADMIN da BU e tenant da tentativa; devolve etapas, número redigido conforme DTO da BU, erro safe e progresso. Nunca devolve código/PIN/token. Sem sessão401, recurso fora do escopo404, papel insuficiente403; autorizar antes de revelar erro de payload/estado.
-- `POST /:id/authorize` (prefixo anterior): oficial, nonce+code recebido no callback SDK. Pertence à sessão exata/usuário da tentativa, hash da sessão/expiração/nonce checados; CAS PENDING→PROCESSING antes de trocar code. Código não persiste nem entra em URL/log/audit. Envelope do token persistido antes dos passos seguintes. Timeout de troca fica AMBIGUO e exige nova autorização; nunca reenvia code consumido automaticamente.
+- `POST /:id/authorize` (prefixo anterior): oficial, nonce+code recebido no callback SDK. Pertence à sessão exata/usuário da tentativa, hash da sessão/expiração/nonce checados; CAS PENDING→PROCESSING antes de trocar code. Código não persiste nem entra em URL/log/audit. Envelope candidato do token persistido na tentativa antes dos passos seguintes; nunca substitui a credencial ativa nesta etapa. Timeout de troca fica AMBIGUO e exige nova autorização; nunca reenvia code consumido automaticamente.
 - `GET /:id/options`: somente depois de autorizar; retorna WABAs/números permitidos pela credencial dessa tentativa. Backend prova app/audience, escopos e pertencimento do recurso; IDs postMessage não são autoridade. Página máxima100 e continuação explícita, sem scan infinito. Número escolhido sempre confirmado pelo operador; nunca escolher primeiro por conveniência.
-- `POST /:id/confirm`: `wabaId,phoneNumberId,modoRegistro` validados contra provider e grant atual. Telefone obtido do provider deve coincidir com BU já numerada; se BU sem telefone, preencher por CAS na mesma transação do vínculo. ProviderID fica único globalmente no canal para não encaminhar webhook a duas BUs; colisão409 sem revelar tenant alheio.
+- `POST /:id/confirm`: `wabaId,phoneNumberId,modoRegistro` validados contra provider e grant atual. Telefone obtido do provider deve coincidir com BU já numerada; se BU sem telefone, preencher por CAS na mesma transação do vínculo. A identidade externa tem proprietário durável e único por provider/recurso, inclusive após exclusão do canal; colisão ou tentativa de transferir entre BUs retorna409 sem revelar tenant alheio. Só a confirmação da mesma identidade permite promover a credencial candidata por CAS.
 - `modoRegistro:NOVO` admite PIN6dígitos e passo de register explícito conforme modalidade convencional Cloud API. `modoRegistro:JA_REGISTRADO` não redefine PIN nem chama registro destrutivo; vínculo fica pendente de prova operacional quando a leitura Meta não comprovar readiness. PIN não retorna em DTO/log, só persistência cifrada se necessário à recuperação. Não realizar migração/coexistência/unregister.
 - `POST /:id/advance` e `POST /:id/retry`: uma rodada tem no máximo3requests externos, cada um timeout10s e um único lease de45s por vínculo; persistir estágio/resultado após cada passo. Não há retry automático de mutação ambígua. Read-before-retry reconcilia estágio; se não houver operação segura, declarar pendente/reautorizar em vez de fingir exactly-once externo. Assinar WABA só depois de mapping channel↔providerID local durável; webhook pode chegar antes do fim sem perder o tenant correto. Configurar callback apenas da própria instalação/conta de teste, sem override alheio.
 - `POST /:id/cancel`: antes de side effect externo pode encerrar reserva; depois conserva vínculo/etapas parciais e informa limpeza necessária. Não apagar BU nem conversas, não fazer unsubscribe de WABA compartilhada automaticamente. Consumidores atuais exigem credencial e readiness do vínculo antes do OUT.
 - `POST /api/bff/business-units/:buId/channels/:tipo/verify`: ADMIN, um lease por vínculo, mesmo budget3×10s; listagem nunca faz fan-out. Resultado muda só a dimensão efetivamente observada. Erros externos mapeados para códigos de catálogo, sem texto/token/URL brutos.
-- QR usa rota administrativa existente; pode iniciar/renovar pairing explicitamente, geração da tentativa captura efeito. Resposta contém QR efêmero só ao admin; o QR nunca é persistido em eventos/audit. Nova UI não usa o POST antigo que conecta WABA pelo token global. Rota antiga deve recusar fluxo incompleto com instrução do contrato novo, sem fallback de token; atualizar seus testes de expectativa dentro do escopo.
+- `POST /api/bff/business-units/:buId/channels/nao-oficial/pair` inicia/renova pairing com intent INITIAL ou RENEW, sessão ADMIN, anti-CSRF, lease e geração atual. O antigo GET de QR retorna405 sem chamar Evolution nem iniciar/renovar conexão; nenhuma mutação de provider em GET. Resposta contém QR efêmero só ao admin; o QR nunca é persistido em eventos/audit. Nova UI não usa o POST antigo que conecta WABA pelo token global. Rota antiga deve recusar fluxo incompleto com instrução do contrato novo, sem fallback de token; atualizar seus testes de expectativa dentro do escopo.
 
 ### Persistência e recuperação
 
@@ -88,7 +89,7 @@ Cadastro pode ficar `PENDING_AUTH`, `PENDING_NUMBER`, `REGISTERING`, `PENDING_RE
 
 Reserva idempotente da instância Evolution usa ID estável do canal e nunca nome do operador+timestamp. Se create retorna timeout, consultar a mesma identidade antes de retry; nenhuma segunda instância. Webhook deve ser configurado e verificado antes de concluir. Leitura de estado e evento usam geração e versionamento; retry de geração anterior não escreve após remove/recreate. Desconectar não apaga histórico. Callback tardio de instância sem vínculo não cria BU/tenant.
 
-A tentativa expira em10min enquanto espera autorização. Após token persistido, operações de recuperação do canal são administrativas e reautorizam grant/sessão corrente; não reaproveitam code/nonce antigos. Lease expirado não é sucesso e requer reconciliação; nenhuma transação DB é mantida durante rede. Não criar worker global ou sistema genérico de jobs neste slice.
+A tentativa expira em10min enquanto espera autorização. Após credencial ativa promovida, operações de recuperação do canal são administrativas e reautorizam grant/sessão corrente; não reaproveitam code/nonce antigos. Lease expirado não é sucesso e requer reconciliação; nenhuma transação DB é mantida durante rede. Não criar worker global ou sistema genérico de jobs neste slice.
 
 ### UI e integrações
 
@@ -96,7 +97,7 @@ Wizard: nome/BU → modalidade → janela Meta ou QR → confirmar número → m
 
 Permissões existentes preservadas: ADMIN da BU para conectar existente; ADMIN da Mantenedora para criar BU; ATENDENTE não ganha gestão; módulo não oficial depende do teto e contratação. Dados sensíveis nunca vão a config.js/bundle. UI mostra ausência de configuração e falhas por etapa, sem exigir WABA/token manual do operador comum no fluxo Meta. Administrador pode reautorizar conta já cadastrada; credencial manual de número já registrado, se usada, é caminho técnico explícito com conferência Meta e cifra, jamais env global implícita.
 
-BFF responder, API pública responder e Typebot continuam com suas regras/DTOs/janelas; somente lookup de credencial é refeito. DI deve convergir nos módulos BFF/público/webhook. Primeira IN cria/reusa conversa pelo contrato existente, não manual. Nova conversa por contato aguardará ST-CON-04.
+BFF responder e API pública responder preservam DTOs/janelas. Typebot preserva o comportamento dentro da mesma Mantenedora, com seleção e sessão obrigatoriamente isoladas pelo tenant da BU verificada. A entrada acrescenta identidade verificada e deduplicação transacional; credenciais são resolvidas por vínculo em todos os consumers. DI deve convergir nos módulos BFF/público/webhook. Primeira IN cria/reusa conversa pelo contrato existente, não manual. Nova conversa por contato aguardará ST-CON-04.
 
 ### Frontend / Consumer Matrix
 
@@ -110,13 +111,33 @@ BFF responder, API pública responder e Typebot continuam com suas regras/DTOs/j
 | webhook | DB/realtime/inbox | primeira IN na conversa BU/contato correta | contrato/webhook real e readback |
 | eventos audit | Histórico de atividades | ator/BU/etapa sem segredo | cobertura catálogo e E2E |
 
+### Reautorização e ativação da credencial (NUM-ARCH-06)
+
+Criar tentativa distingue `operation:NOVO|REAUTORIZAR`. NOVO reserva slot vazio; REAUTORIZAR recebe channelId e expectedGeneration e reutiliza o slot existente, inclusive canal migrado sem credencial. Valida ADMIN/tenant antes do estado; conflito de geração409. A nova tentativa torna-se currentAttemptId por CAS, sem mudar a credencial ativa. Reserva anterior expirada/cancelada sem efeito externo pode ser substituída, preservando BU; com efeito parcial, recuperar a mesma identidade externa, sem criar segunda instância.
+
+Cada nova autorização depois de code consumido, expirado ou troca ambígua exige tentativa e nonce novos; não há reapresentação automática do code. `ChannelRegistrationAttempt` mantém envelope candidato separado de `ChannelCredential` ativa. AAD candidato inclui propósito, attemptId, provider, BU, channelId e geração; AAD ativo inclui propósito e versão ativa. Após validação server-side de identidade/escopos e confirmação do mesmo número, uma transação curta verifica currentAttemptId+generation+activeCredentialVersion e promove o envelope, recifrando para AAD ativo. Candidata de outro número, sessão revogada ou tentativa velha não pode substituir a ativa. Credencial utilizável anterior segue em uso até promoção; se já inválida, mostrar PENDENTE_CREDENCIAL, sem fallback global. Cancelar/expirar elimina o segredo candidato, conserva somente metadados seguros e mantém a ativa.
+
+### Identidade durável, entrada e automação (NUM-ARCH-01..04)
+
+`ProviderResourceIdentity` tem unique(provider,externalResourceId), buId proprietário imutável e vínculo atual opcional. Exclusão do BuChannel mantém tombstone/proprietário; reativação somente na mesma BU. Transferência de providerID entre BUs não é permitida neste recorte. Migration detecta colisões e aborta sem fundir/apagar dados. Meta ingress resolve phoneNumberId por essa identidade durável antes de aceitar conteúdo; webhook de recurso retirado fica sem efeitos de domínio até reativação na mesma BU. Um evento externo não carrega nossa geração: não se apresenta CAS local como prova da geração de origem. Reatribuição a outra BU retorna409 e impede que evento antigo seja encaminhado ao novo tenant.
+
+Evolution ingress exige autenticação, instância da geração corrente e comprovação do número próprio correspondente ao telefone da BU ANTES de registrar conteúdo, Message, unread, realtime ou Typebot. Estado open sozinho não comprova número. Enquanto a identidade não foi confirmada, rejeitar com503 PENDING_IDENTITY e registrar apenas metadados seguros; divergência gera409 IDENTITY_QUARANTINED, sem conteúdo em raw/audit. Depois da comprovação correta, um retry pode ser aceito uma vez. Não há buffer/importação neste recorte e não se garante replay pelo provider: UI/runbook orientam aguardar número confirmado antes da mensagem de teste e reenviá-la se necessário. Eventos de instância removida/desconhecida não criam vínculo nem conteúdo. Adaptador distingue telefone do contato de identificadores LID: usar telefone alternativo comprovado pelo payload/contrato suportado, ou rejeitar identidade ambígua; nunca interpretar dígitos de @lid como telefone.
+
+Entrada aceita exige externalMessageId não vazio e chave única PostgreSQL (providerResourceIdentityId,externalMessageId); identidade já incorpora provider. Mesmo ID em recursos diferentes não colide. `Message` legado pode manter FK/chave nulas; não inventar IDs nem apagar duplicatas históricas. Só backfill inequivocamente comprovado é admitido. Novas entradas sem ID ficam rejeitadas com erro seguro antes de efeito de domínio. Após identidade validada, transação curta aceita Message e cria/reusa conversa BU/contato com incremento unread; conflito de unique desfaz os efeitos daquela tentativa. Somente a transação vencedora publica realtime e aciona automação. Echo OUT é reconciliado com o envio persistido pela mesma identidade/ID quando aplicável; não cria nova IN/unread. Replay sequencial/concorrente retorna sucesso idempotente para evento já aceito. Não se promete exactly-once externo: crash depois do commit pode deixar publicação/automação ausente; não repetir bot automaticamente nem introduzir plataforma de jobs/outbox neste recorte. Essa limitação precisa constar do runbook.
+
+IncomingService deriva Mantenedora da BU verificada. Busca de trigger exige bot.mantenedoraId desse tenant e buId exata OU trigger global dentro do MESMO tenant. Sessão retomada deve pertencer à mesma Mantenedora/BU/contato; sessão estrangeira falha fechado antes de texto externo. Criação deriva owner do contexto verificado, não de um bot arbitrário. Dois tenants com triggers globais concorrentes não compartilham bot, texto, sessão, saída ou credencial. São defeitos preexistentes na superfície tocada, cuja correção fica expressamente incluída para sustentar o recebimento deste cadastro.
+
+### Segredos transitórios e webhook raw
+
+Code SDK e PIN podem existir transitoriamente no formulário/memória do browser e seguir via BFF HTTPS; nunca em URL, storage, trace, screenshot, log ou DTO de retorno. Token, chave e envelope ficam somente no backend. Antes de persistir evento raw de provider autenticado, redigir recursivamente apikey, token, authorization, code, PIN, QR e componentes secretos de URLs; erros/audit usam catálogo e metadados allowlisted. Evento sem identidade verificada não persiste conteúdo. Harness envia envelope Evolution com apikey fictícia e comprova sua ausência em raw/audit/DTO/erro. QR só é devolvido efemeramente ao administrador no POST autorizado.
+
 ## Delivery Status Semantics
 
 `Pending` até implementação e evidência; `Local-Implemented` exige matriz local aceita. Prova externa é registrada separadamente. `Production-Ready` e deploy não são limiares desta proposta.
 
 ## Active Work State Semantics
 
-`review` neste draft significa preparação do contrato; não é afirmação de implementação concluída. `implementation` somente após aprovação e authority guard go.
+`review` neste contrato significa revisão do planejamento; não é afirmação de implementação concluída. `implementation` somente após aprovação e authority guard go.
 
 ## Provisional Notes (Required if `Qualifiers` includes `Provisional`)
 
@@ -150,7 +171,7 @@ n/a; esta proposta não autoriza promoção ou deploy.
 - Alterar callback de app/número de outro sistema, revogar credencial ou apagar instância real em uso. Usar número de teste sem integração concorrente.
 - Deploy/promover código para Railway/produção. Segredos reais em commits; modificação manual de gitlinks/.gitmodules; worktrees/cópias auxiliares.
 
-## Diff Expectation Contract (Required Before Delivery)
+## Diff Expectation Contract
 
 - **Contract status:** required
 - **Policy:** strict; unclassified or forbidden paths block delivery
@@ -177,8 +198,8 @@ n/a; esta proposta não autoriza promoção ou deploy.
 | api | src/infra/config/modulos.spec.ts | M | Teste do contrato de bootstrap. |
 | api | src/domain/tenancy/tenancy.service.ts | M | Reuso transacional da criação BU/grants. |
 | api | src/domain/inbox/conversations.service.ts | M | Apenas resolver credencial do envio existente, sem mudar timeline/público. |
-| api | src/domain/inbox/incoming.service.ts | M | Apenas credencial Typebot e prova de entrada/receipt. |
-| api | src/domain/inbox/incoming.typebot.integration.spec.ts | M | Contrato scoped do caller Meta. |
+| api | src/domain/inbox/incoming.service.ts | M | Credencial Typebot, isolamento tenant e aceitação idempotente da entrada. |
+| api | src/domain/inbox/incoming.typebot.integration.spec.ts | M | Caller Meta e triggers/sessões de tenants concorrentes. |
 | api | src/domain/historico/catalogo.ts | M | Cadastro/etapas sem segredo. |
 | api | src/domain/historico/cobertura.ts | M | Cobertura dos endpoints administrativos novos. |
 | api | src/surfaces/bff/channels.controller.ts | M | Manter QR/remoção/listagem e contratos coerentes. |
@@ -189,7 +210,7 @@ n/a; esta proposta não autoriza promoção ou deploy.
 | api | src/surfaces/webhooks/webhooks.module.ts | M | Wiring do consumer Meta. |
 | api | src/surfaces/webhooks/meta.controller.ts | M | Receipt/verificação de vínculo e geração, sem mudar auth de origem. |
 | api | src/surfaces/webhooks/evolution.controller.ts | M | Eventos e geração da instância. |
-| api | prisma/schema.prisma | M | Attempt/credential/status/constraints. |
+| api | prisma/schema.prisma | M | Attempt/candidate/credential/status, identidade externa durável e chave de deduplicação. |
 | api | prisma/migrations/*number_onboarding*/migration.sql | A,?? | Migração da persistência de cadastro. |
 | api | test/*canais* | A,M,?? | E2E de cadastro e idempotência. |
 | api | test/*number-onboarding* | A,?? | E2E/fixtures próprios. |
@@ -199,7 +220,7 @@ n/a; esta proposta não autoriza promoção ou deploy.
 | api | test/timeline-fixtures.cjs | M | Somente credencial de fixture exigida pelo novo resolver. |
 | api | test/webhooks.e2e-spec.ts | M | Receipt, auth e races. |
 | api | test/atendimento.e2e-spec.ts | M | Só setup credential; invariantes existentes preservados. |
-| api | test/typebot.e2e-spec.ts | M | Só setup credential; comportamento preservado. |
+| api | test/typebot.e2e-spec.ts | M | Credenciais e negativos de isolamento; comportamento dentro do tenant preservado. |
 | api | .env.example | M | Novas variáveis sem valores reais. |
 | web | src/telas/Numeros.tsx | M | Wizard de cadastro. |
 | web | src/api.ts | M | Contratos/projeções e idempotency header. |
@@ -227,6 +248,7 @@ n/a; esta proposta não autoriza promoção ou deploy.
 | foundation | artifacts/dependency-readiness.md | M | Configuração/prontidão local. |
 | foundation | backlog/README.md | M | Disposição/next gate. |
 | foundation | modules/integrations-and-channels.md | M | Contratos owner. |
+| foundation | modules/inbox-and-conversations.md | M | Invariantes de aceitação idempotente e automação isolada por tenant; timeline preservada. |
 | foundation | modules/identity-and-tenancy.md | M | Auth das novas rotas. |
 | foundation | modules/audit-and-history.md | M | Eventos sem segredos. |
 
@@ -261,6 +283,7 @@ Cadastro/QR/autorização/recebimento pertencem a este objetivo. Nova conversa p
 - [ ] DOD-04: runtime local isolado e migrations aplicáveis, orçamento externo bounded, erro/retry/frescor explícitos e webhook autenticado.
 - [ ] DOD-05: primeira IN real de cada canal cria/reutiliza conversa BU/contato e aparece na inbox; resposta OUT dentro do contrato existente chega ao interlocutor.
 - [ ] DOD-06: CI-equivalent API/Web/workspace, fluxo Playwright com build atual, segurança/PCV e revisões independentes aceitas.
+- [ ] DOD-08: NUM-ARCH-01..06 cobertos por harness de tenant, replay, identidade, reautorização e POST de pairing; nenhum segredo de envelope webhook persiste.
 - [ ] DOD-07: decisões consolidadas no módulo owner, evidence matrix completa, source commits e guardas go antes do closeout local.
 
 ## Validation Steps
@@ -271,6 +294,7 @@ Cadastro/QR/autorização/recebimento pertencem a este objetivo. Nova conversa p
 - [ ] VAL-04: migrate deploy e CI-equivalent API/Web/workspace da fonte final; fingerprints do bundle antes dos workers, banco exclusivo e execução sem sobreposição de suites destrutivas.
 - [ ] VAL-05: prova externa local por canal, com autorização Meta/QR real, IN na BU certa, OUT recebida pelo interlocutor e recuperação permitida da conexão.
 - [ ] VAL-06: EPS/FRC/BCI/RLS conforme plano; security, debt, architecture_adherence, TQA, audit especializado e final review antes de completar.
+- [ ] VAL-08: executar REG-SEC-01..09 do plano de validação, incluindo duplicatas concorrentes por provider, webhook antes da identidade, tombstone, credencial candidata e CSRF no pairing.
 - [ ] VAL-07: consolidar módulo, validar contrato/diff/coerência e closeout; nenhum claim de produção pronta.
 
 ## Completion Evidence Matrix (Required Before Delivery Claim)
@@ -301,6 +325,9 @@ Todas as linhas abaixo estão planned. Tipo e runtime não são prova antecipada
 | VAL-05 | Validation Steps | Prova externa local | provider | checklist por canal e readback | Meta/Evolution teste | planned | Nenhuma execução reivindicada. |
 | VAL-06 | Validation Steps | PCV/reviews | review+runtime | artefatos EPS/FRC/BCI/RLS + reviewers | local/no-context | planned | Nenhuma execução reivindicada. |
 | VAL-07 | Validation Steps | Consolidação/diff/closeout | doc+guard | guardas específicos | Foundation | planned | Nenhuma execução reivindicada. |
+| SCOPE-09 | Scope | Reautorização, identidade, dedupe e tenant | integration+race | REG-SEC-01..09; VAL-08 | PG16 isolado | planned | Resolução contratual dos achados; produto não implementado. |
+| DOD-08 | Definition of Done | Harness dos seis achados e segredo raw | test+audit | VAL-08 + security/TQA | local | planned | Nenhuma execução reivindicada. |
+| VAL-08 | Validation Steps | Regressões de identidade/tenant/credential | integration+race | REG-SEC-01..09 | Node22/PG16 | planned | Sem provas antecipadas. |
 
 ## External Dependency Readiness (Required When External Systems Matter)
 
@@ -308,7 +335,7 @@ Register: `foundation_documentation/artifacts/dependency-readiness.md`.
 
 | Dependency | Why It Matters | Status | Last Verified | Verification Method | Adjustment / Workaround |
 | --- | --- | --- | --- | --- | --- |
-| Evolution de teste e versão | Endpoint/payload/sessão reais. | unknown | n/a | Target inicial local confirmado; instância própria e versão ainda a definir. | Não usar instância legada observada no inventário Docker. |
+| Evolution de teste e versão | Endpoint/payload/sessão reais. | unknown | n/a | Target inicial local confirmado; instância própria ainda não operante; v2.3.7 por digest definida, payload/saúde ainda não comprovados. | Não usar instância legada observada no inventário Docker. |
 | Meta/WABA de teste | Identidade e operação oficial. | unknown | n/a | Permissões, modalidade, número e callback. | Disponibilidade oferecida não é health check. |
 | Números/interlocutores de teste | Prova IN/OUT. | unknown | n/a | Usuário confirmou disponibilidade dos dois em2026-10-15. | Confirmar target/destinatário sem publicar números pessoais. |
 | Documentação oficial Meta | Cadastro/registro/assinatura. | degraded | 2026-10-15 | Coleção primária Meta Postman acessível; developers direto limitado. | Elegibilidade/app/Graph version ainda dependem de readiness; histórico fora do recorte. |
@@ -338,7 +365,7 @@ Register: `foundation_documentation/artifacts/dependency-readiness.md`.
 
 - **Primary module doc:** `foundation_documentation/modules/integrations-and-channels.md`
 - **Secondary module docs:** `foundation_documentation/modules/identity-and-tenancy.md`, `foundation_documentation/modules/inbox-and-conversations.md`, `foundation_documentation/modules/audit-and-history.md`.
-- **Planned decision promotion targets:** integrations-and-channels: Cadastro de números, Credenciais por canal, Estados e contratos BFF, Callback e operação local; identity-and-tenancy: autorização das rotas de cadastro; audit-and-history: eventos sem segredos.
+- **Planned decision promotion targets:** integrations-and-channels: Cadastro de números, Credenciais por canal, Estados e contratos BFF, Callback e operação local; identity-and-tenancy: autorização das rotas de cadastro; inbox-and-conversations: deduplicação/identidade e isolamento da automação; audit-and-history: eventos sem segredos.
 - **Module decision consolidation targets:** as mesmas seções antes do código das novas rotas; estado Verified apenas após validação. Constituição preservada; não reescrever decisões históricas/estudos concluídos.
 
 ## Decision Pending (Resolve Before Freeze)
@@ -349,12 +376,12 @@ Nenhuma decisão de produto pendente para a proposta. Credenciais, App/config ID
 
 - D-01: uma BU continua representando o número; selecionar BU administrável ou criar pelo endpoint existente; modalidade não cria tenant novo. Telefone canônico não é sobrescrito por número divergente.
 - D-02: Embedded Signup Tech Provider é a jornada oficial; IDs do SDK são apenas candidatos e são verificados com a credencial obtida e o provider. Sem app configurado, botão indisponível com explicação, sem conexão simulada.
-- D-03: tentativas persistidas vinculadas a usuário, Mantenedora, BU, hash da sessão e nonce aleatório; expiram em10min, consumo CAS e retry explicitamente persistido. Nada de transação DB aberta durante HTTP externo.
-- D-04: credencial oficial por BuChannel, envelope AES-256-GCM com chave32bytes e keyId de instalação, nonce único, AAD provider/BU/channelId. Tokens/PIN/code só no backend; código não persiste, PIN cifrado quando necessário. Nenhuma queda para token global de cliente.
+- D-03: tentativas persistidas scoped expiram em10min antes da autorização, nonce/code uso único e CAS; NOVO reserva slot vazio, REAUTORIZAR reutiliza canal ocupado com expectedGeneration. Candidata separada da ativa, promoção atômica após identidade confirmada. Nada de transação DB aberta durante HTTP externo.
+- D-04: credencial oficial por BuChannel, envelope AES-256-GCM com chave32bytes e keyId de instalação, nonce único, AAD com propósito/provider/BU/channelId/geração e attemptId ou versão ativa. Code/PIN transitórios no formulário e BFF HTTPS, sem persistência do code ou exposição em logs; token/envelope somente backend e PIN cifrado quando necessário. Nenhuma queda para token global de cliente.
 - D-05: oficial tem passos separados autorizar→validar identidade→registrar quando aplicável e explicitamente confirmado→assinar WABA→verificar recebimento; falha parcial recuperável e visível. Não sobrescrever callback de outro sistema.
-- D-06: Evolution v2.3.7 fixada por digest, instância própria reservada com nome derivado do ID estável do vínculo; webhook autenticado configurado antes de afirmar cadastro completo. QR é readout efêmero, não histórico/audit.
-- D-07: providerConnection/registration/receipt/lastVerification são observações distintas; timeout não inventa offline/online. Query/evento têm versão de geração e CAS; listagem apenas DB, verificação explícita bounded.
-- D-08: atualizar todo consumo Meta existente (BFF/público/Typebot) para resolver credencial pelo vínculo; manter contratos públicos de resposta e janela. Bootstrap pode abrir administração/onboarding sem token de cliente já obtido; piso oficial é capacidade configurada, não número previamente conectado.
+- D-06: Evolution v2.3.7 fixada por digest, instância própria reservada com nome derivado do ID estável do vínculo; webhook autenticado configurado antes de afirmar cadastro completo. Pairing/renovação apenas POST ADMIN com anti-CSRF; GET não muta provider. QR é efêmero, não histórico/audit. Entrada exige comprovar número próprio; antes disso rejeição segura, sem promessa de replay.
+- D-07: providerConnection/registration/receipt/lastVerification são observações distintas; timeout não inventa offline/online. Query/observação local tem geração e CAS; eventos externos não provam nossa geração. Identidade externa retém owner após exclusão e não muda de BU; listagem apenas DB, verificação explícita bounded.
+- D-08: atualizar todo consumo Meta existente (BFF/público/Typebot) para resolver credencial pelo vínculo; manter contratos públicos de resposta e janela; Typebot seleciona triggers/sessões da Mantenedora da BU e entrada tem unique por recurso/ID externo com aceitação transacional, vencedor único para unread/realtime/automação. Bootstrap pode abrir administração/onboarding sem token de cliente já obtido; piso oficial é capacidade configurada, não número previamente conectado.
 - D-09: local primeiro com Evolution/DB/cache próprios e runbook HTTPS sem domínio presumido; Railway, coexistência, histórico e Nova conversa proativa ficam fora desta entrega.
 - D-10: API/Web source e runtime validados serialmente no checkout principal, um executor, sem worktrees ou mudança manual dos gitlinks.
 
@@ -364,18 +391,18 @@ Nenhuma decisão de produto pendente para a proposta. Credenciais, App/config ID
 | --- | --- | --- | --- |
 | integrations-and-channels#invariants | Providers são adapters; segredos protegidos; erros determinísticos. | Preserve | módulo owner |
 | project_constitution#system-invariants | BU/número e grants isolam operação; conversa unificada BU/contato. | Preserve | constituição |
-| inbox-and-conversations#contrato-aprovado-da-timeline-da-inbox | Histórico paginado usa dado persistido, contexto e leitura protegidos. | Out of Scope | ST-ATT-01 concluído |
+| inbox-and-conversations#contrato-aprovado-da-timeline-da-inbox | Histórico paginado usa dado persistido, contexto e leitura protegidos. | Preserve; complementar aceitação idempotente/tenant sem alterar timeline | ST-ATT-01 concluído; NUM-ARCH-01/02 |
 
 ## Decision Baseline (Frozen Before Implementation)
 
-Proposta de decisões D-01..D-10 versionada para a revisão. Ainda não há aprovação de implementação. Após architecture_opinion/critique, registrar resolução e congelar os mesmos IDs; divergências materiais retornam ao ciclo. Nenhum reviewer pode considerar a proposta como produto já aprovado.
+Proposta revisada D-01..D-10: NUM-ARCH-01..06 integrados nos contratos acima, escopo, paths e critérios. Congelamento renovado antes da crítica independente; mesma jornada de cadastro. Ainda não há APROVADO de implementação; esta baseline congela a proposta revisável, não afirma produto implementado.
 
 ## Architecture Change Governance (Required When This TODO Establishes, Corrects, or Supersedes Architecture)
 
 - **Applicability:** required
 - **Why this applies:** estabelece onboarding e credencial por canal, retirando acoplamento de cliente em token global e estado conectado por simples consulta.
 - **Deviation / debt being retired:** MetaHttpClient lê WHATSAPP_TOKEN global para todas as BUs; bootstrap exige token antes de cadastrar; cadastro oficial escolhe primeiro número e marca conectado; webhook não oficial só atualiza estado sem reconciliação.
-- **Target steady-state after closeout:** uma jornada de cadastro por BU com credencial própria, etapas verificáveis, erro parcial durável e consumidores coerentes.
+- **Target steady-state after closeout:** uma jornada de cadastro por BU com credencial própria, etapas verificáveis, erro parcial durável, candidatos isolados, identidade externa durável e consumidores/entrada isolados e idempotentes.
 - **Temporary exceptions allowed:** none; não introduzir dual token/fallback global. Configuração privada manual de credencial existente só por migração explícita e validação de identidade, não fallback de runtime.
 - **Cutover / removal condition:** source scan prova ausência de consumo global do token de cliente; boot/fixtures atualizados, todos os callers scoped, migration e negativos cross-tenant aceitos.
 
@@ -403,6 +430,7 @@ Proposta de decisões D-01..D-10 versionada para a revisão. Ainda não há apro
 | test | scopes/credentials | API unit e canais E2E | Tenant trocado, replay, token incorreto e cifra/AAD. | implement-in-this-todo | DOD-02/03; VAL-01/02 |
 | test | races | PostgreSQL barrier + Playwright | Reserva duplicada e resposta antiga após troca/remoção. | implement-in-this-todo | DOD-02/06; VAL-02/03 |
 | audit | global token/callers | scan dos consumers Meta e review cutover | Atualização parcial de BFF/público/Typebot. | implement-in-this-todo | DOD-03/06; VAL-06 |
+| test | ingresso/reauth/CSRF | REG-SEC-01..09 | Duplicação, Typebot estrangeiro, identidade prematura, reatribuição e promoção candidata indevida. | implement-in-this-todo | DOD-08; VAL-08 |
 | runtime | local deployment | compose config, migrate deploy e prova providers | Configuração válida apenas em fake. | implement-in-this-todo | DOD-04/05; VAL-04/05 |
 
 ## Architecture Review Gates (Deterministically Derived From Architecture Change Governance)
@@ -411,8 +439,8 @@ Proposta de decisões D-01..D-10 versionada para a revisão. Ainda não há apro
 - **Decision review lifecycle:** after diagnosis is closed and before APROVADO
 - **Decision review kind:** architecture_opinion
 - **Decision review package:** bounded-file-set
-- **Decision review status:** not_run
-- **Decision review evidence / resolution:** artifacts/reviews/leadshug-number-onboarding-20261015; pending-freeze
+- **Decision review status:** findings_integrated
+- **Decision review evidence / resolution:** artifacts/reviews/leadshug-number-onboarding-20261015/planning-architecture.json, pacote v1 imutável; seis bloqueadores integrados no contrato e ledger, crítica independente verificará resolução. Nenhuma correção de produto reivindicada.
 - **Architecture adherence review:** required
 - **Adherence review lifecycle:** after implementation and before Completed
 - **Adherence review kind:** architecture_adherence
@@ -427,10 +455,10 @@ Proposta de decisões D-01..D-10 versionada para a revisão. Ainda não há apro
 - **Why this decision:** revisar contrato exato publicado, sem aparência de evidência antes do freeze.
 - **Trigger stage:** before the first planning-side review or guard run
 - **Baseline branch:** main
-- **Baseline commit:** pending-freeze
+- **Baseline commit:** ae503c7b14c3fe51d9cb3488f2fc5df2c5d17301
 - **Baseline push reference:** origin/main
-- **Gate status:** not_run
-- **Findings summary:** proposta preparada; registrar commit/push antes de reviewers e guardas de planejamento.
+- **Gate status:** no_material_findings
+- **Findings summary:** proposta publicada em main e origin/main antes de qualquer review/guard de planejamento; atualização deste recibo não altera seções materiais.
 - **Evidence / reference:** artifacts/reviews/leadshug-number-onboarding-20261015/README.md
 - **Waiver authority / reference:** n/a
 
@@ -463,11 +491,11 @@ Proposta de decisões D-01..D-10 versionada para a revisão. Ainda não há apro
 
 | Assumption ID | Assumption | Evidence | If False | Confidence | Handling |
 | --- | --- | --- | --- | --- | --- |
-| A-01 | Há uma credencial global Meta hoje. | api-app/src/integrations/meta/meta.client.ts:31; conversations.service.ts:292; incoming.service.ts:125 | Corrigir diagnóstico e consumers antes do freeze. | High | Keep as Assumption |
+| A-01 | Há uma credencial global Meta hoje. | api-app/src/integrations/meta/meta.client.ts:31; api-app/src/domain/inbox/conversations.service.ts:292; api-app/src/domain/inbox/incoming.service.ts:125 | Corrigir diagnóstico e consumers antes do freeze. | High | Keep as Assumption |
 | A-02 | Cadastro oficial atual só consulta WABA e escolhe primeiro. | api-app/src/domain/channels/channels.service.ts:31-74 | Reavaliar implementação antes de substituir. | High | Keep as Assumption |
 | A-03 | Middleware BFF já exige sessão e anti-CSRF. | api-app/src/surfaces/bff/session.middleware.ts:80-171 | Reforçar superfície; nunca abrir callback BFF público. | High | Keep as Assumption |
 | A-04 | Listagem UI lê DB; não há consumidor do connectionState. | web-app/src/telas/Numeros.tsx:12-19; api-app/src/integrations/evolution/evolution.client.ts:66-68 | Consolidar owner existente. | High | Keep as Assumption |
-| A-05 | Usuário pode disponibilizar ambos os números de teste. | Resposta explícita nesta sessão em2026-10-15 | VAL-05 fica bloqueado, não substituir por fake. | High | Keep as Assumption |
+| A-05 | Usuário pode disponibilizar ambos os números de teste. | Resposta explícita nesta sessão em2026-10-15 | VAL-05 fica bloqueado, não substituir por fake. | High | Promote to Decision |
 
 ## Execution Plan (Required Before `APROVADO`)
 
@@ -480,7 +508,7 @@ A lista do Diff Expectation Contract é a autoridade de paths. Alterar callers M
 1. Publicar freeze e obter architecture_opinion/critique; resolver achados e guardas antes de pedir APROVADO.
 2. Após aprovação, executor único cria branches locais e consolida contratos dos módulos antes de novas rotas.
 3. Test-first: migration/reserva/idempotência/cifra e isolamento; refatorar consumers Meta e bootstrap para credenciais por canal, sem fallback global.
-4. Cadastro oficial por tentativa/SDK/BFF/Graph e recuperação; não oficial por reserva/QR/webhook, protegendo generation e observações.
+4. Cadastro oficial com candidata e promoção CAS/reauth no slot; não oficial por reserva/POST QR/webhook. Implementar identidade durável, rejeição pré-identidade, dedupe transacional, redaction raw e Typebot tenant-scoped; harness REG-SEC antes da prova externa.
 5. Wizard Numeros: escolher/criar BU conforme grants, modalidade, Meta/QR, confirmar número, pendência/erro/retry. Geração de UI protege popup e respostas antigas.
 6. Overlay/runtime local, runner Node22/PG16/freshness; migrations e suites serializadas no banco exclusivo.
 7. Prova real com app/números de teste, IN/OUT e callback. Registrar impedimento de readiness, nunca substituir por fake.
@@ -573,7 +601,7 @@ Meta app/Graph version e número real ainda não verificados; arquitetura pode s
 
 ## Additional Architectural Opinions (Required When Path Remains Materially Unclear)
 
-Architecture decision review requerida após freeze do pacote e antes do congelamento final de decisões; reviewers fresh no-context, evidence/resolution serão registrados. Nenhum parecer foi antecipado.
+Parecer independente architecture_opinion gpt-6.1-sol/max, fresh no-context, concluído em planning-architecture.json sobre pacote v1 SHA25600bfa0389bd8c204a08c890db746923deaba79161b9bebde11d45478509de177. Veredito revise; preserva arquitetura de tentativas/cifra scoped e identifica seis bloqueadores. Todos foram integrados na proposta, com correções e testes explícitos; crítica fresh seguinte verifica a resolução e o plano inteiro. Não significa correção de produto ou conclusão de delivery audit.
 
 ## Audit Trigger Matrix (Required Before Audit Decisions Are Trusted)
 
@@ -658,7 +686,7 @@ Planejadas antes de execução; reload binding após APROVADO.
 - **Worktree / auxiliary-checkout authorization:** not-authorized
 - **Worktree authorization evidence:** n/a
 - **Writer scheduling policy:** single-writer-serialized
-- **Guard outcome:** pending; rodar guard antes de aprovação e novamente antes de executar
+- **Guard outcome:** go
 - **Waiver / exception reference:** n/a
 
 Reviews serão fresh no-context gpt-6.1-sol/max para architecture_opinion e critique, com routing guard distinto; nenhuma configuração da sessão primária é fingida.
@@ -681,7 +709,18 @@ Reviews serão fresh no-context gpt-6.1-sol/max para architecture_opinion e crit
 
 ## Promotion Finding Routing Ledger (Required When Promotion/Review Finds Any Finding)
 
-`pending-freeze`: seção reservada para a fase aplicável. Nenhum review, guard, aprovação, medição, dispensa ou evidência de entrega foi executado/concedido neste draft; preencher antes do gate correspondente.
+Achados exatos preservados em planning-architecture.json. `fixed-in-plan` significa correção contratual, ainda sem código/prova; cada resolução será examinada na crítica independente e no harness após APROVADO.
+
+| Finding ID | Severity | Classification | Routing Decision | Same TODO / Split Rationale | Status | Approval / Follow-up Reference |
+| --- | --- | --- | --- | --- | --- | --- |
+| NUM-ARCH-01 | high | release-blocker | fix-current-contract | Typebot tocado exige isolamento tenant já canônico | fixed-in-plan | D-08; contratos de entrada; REG-SEC-01; VAL-08 |
+| NUM-ARCH-02 | high | release-blocker | fix-current-contract | Recebimento do cadastro não pode duplicar efeitos | fixed-in-plan | D-08; unique/transação; REG-SEC-02; VAL-08 |
+| NUM-ARCH-03 | high | release-blocker | fix-current-contract | Pareamento exige comprovar número antes do conteúdo | fixed-in-plan | D-06; rejeição pré-identidade; REG-SEC-03; VAL-08 |
+| NUM-ARCH-04 | high | release-blocker | fix-current-contract | Evento atrasado não pode trocar owner BU | fixed-in-plan | D-07; tombstone sem transferência; REG-SEC-04; VAL-08 |
+| NUM-ARCH-05 | medium | release-blocker | fix-current-contract | Pairing mutante exige POST/anti-CSRF | fixed-in-plan | D-06; contrato BFF; REG-SEC-05; VAL-08 |
+| NUM-ARCH-06 | medium | release-blocker | fix-current-contract | Reautorizar canal existente sem substituir ativa prematuramente | fixed-in-plan | D-03/04; candidata+CAS; REG-SEC-06/07; VAL-08 |
+
+Adicional de coerência do autor: envelope raw redigido e code/PIN transitórios explicitados, sem alterar modelo de autorização; REG-SEC-08/09.
 
 ## TODO Closeout Disposition
 
@@ -759,9 +798,9 @@ Uma etapa bounded com cinco clientes e seis leituras por cliente,30verificaçõe
 
 ## Independent Cutover Integrity Audit Gate
 
-- **Audit decision:** required
+- **Cutover audit decision:** required
 - **Why this decision:** credencial global é retirada; todos os consumers precisam convergir, sem shim/fallback.
-- **Audit status:** not_run
+- **Cutover audit status:** not_run
 - **Evidence / reference:** audit-protocol-triple-review após implementação; sem dispensa.
 
 ## Delivery Confidence Gate (Required for `✅ Production-Ready`)
@@ -780,7 +819,7 @@ Após APROVADO: runner source-owned API/Web e compose local; executar folhas doc
 
 ## Files Expected (Compatibility Note)
 
-O Diff Expectation Contract é a referência candidata; completar lacunas antes do freeze. Nenhum Files Expected paralelo concede novos paths.
+O Diff Expectation Contract é a referência candidata; paths atualizados após architecture_opinion; desvios novos exigem classificação antes da edição. Nenhum Files Expected paralelo concede novos paths.
 
 ## COMENTÁRIO:
 

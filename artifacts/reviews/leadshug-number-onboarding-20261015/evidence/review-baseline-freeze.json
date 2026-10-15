@@ -1,0 +1,8 @@
+{
+  "foundation_baseline": "ae503c7b14c3fe51d9cb3488f2fc5df2c5d17301",
+  "origin_main": "ae503c7b14c3fe51d9cb3488f2fc5df2c5d17301",
+  "scope": "ST-CON-01 cadastro números; ST-CON-04 Nova conversa próximo, importação depois",
+  "method": "commit/push followed by local origin/main equality; no product mutation",
+  "routing_architecture": "evidence/routing-architecture.json",
+  "routing_executor_planned": "evidence/routing-executor-planned.json"
+}

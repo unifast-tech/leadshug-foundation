@@ -1,0 +1,317 @@
+{
+  "review_kind": "architecture_opinion",
+  "verdict": "revise",
+  "reviewed_packet": {
+    "path": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/architecture-packet-v1.md",
+    "sha256": "00bfa0389bd8c204a08c890db746923deaba79161b9bebde11d45478509de177",
+    "bytes": 198526,
+    "lines_read": 3910,
+    "foundation_baseline": "ae503c7b14c3fe51d9cb3488f2fc5df2c5d17301",
+    "method": "Independent, read-only review of the complete packet. No edits, credential reads, external-provider calls, or product tests."
+  },
+  "overall_assessment": "Retain the proposed architecture: persisted attempts, encrypted channel-scoped credentials, provider adapters, bounded external operations, and separate readiness observations are appropriate for this story. A generic vault, worker platform, or larger orchestration framework is unnecessary. Before freezing decisions, resolve the six bounded gaps below. Two findings identify existing incoming-path defects that the proposed credential-only cutover would preserve despite the canonical tenant-isolation and idempotency requirements; they are not alleged implementation regressions.",
+  "correctness_position": "The registration workflow handles partial failure and ambiguous external mutations thoughtfully. Incoming-message processing and the lifecycle of existing links need more explicit contracts to make the claimed isolation, replay safety, and recovery behavior achievable.",
+  "security_tenant_oauth_position": "Session-bound attempts, one-use nonce/code handling, server-side resource validation, authenticated webhooks, scoped credentials, and authenticated encryption are sound choices. Remaining material risks concern Typebot tenant selection, input accepted before Evolution identity confirmation, delayed webhook ownership, and pairing mutations exposed through GET.",
+  "performance_position": "The proposed DB-only listing and indexed credential lookup avoid provider fan-out. Three external requests with individual timeouts and a per-link lease provide a reasonable bounded interaction model. Measurements remain planned; the packet establishes neither throughput nor a production SLO. The recommended corrections require narrow indexed checks and transactional writes, not additional infrastructure.",
+  "elegance_position": "The chosen domain boundaries and small persisted state machine are coherent. Keep them. Correct the specific lifecycle and incoming-path gaps instead of adding a generic saga engine, job system, or credential abstraction platform.",
+  "structural_soundness_position": "BU-owned channels and conversations remain compatible with the constitution. The unresolved boundaries are between candidate and active credentials, external resource identity and local link generation, and authenticated provider input and tenant-scoped domain processing.",
+  "operational_fit_position": "Local-first execution, isolated Evolution storage, digest pinning, PostgreSQL validation, principal-checkout serialization, and served-build attestation fit the declared delivery boundary. Meta eligibility, usable app configuration, HTTPS callback availability, provider compatibility, and real IN/OUT readiness remain unknown and must remain external-proof prerequisites.",
+  "protection_harness_position": "The proposed harness has useful crypto, authorization, concurrency, browser, cutover, and runtime coverage. Add the discriminating cases specified below to the governing Scope/DoD/Validation and evidence matrix. Successful nominal onboarding and a token-source scan alone would miss these failures.",
+  "findings": [
+    {
+      "id": "NUM-ARCH-01",
+      "severity": "high",
+      "blocking": true,
+      "title": "Typebot trigger selection can cross Mantenedora boundaries",
+      "evidence": [
+        {
+          "path": "api-app/src/domain/inbox/incoming.service.ts",
+          "line": 108,
+          "packet_line": 2242,
+          "section": "executarTypebot: active triggers are filtered by BU or null, without the bot's Mantenedora"
+        },
+        {
+          "path": "api-app/src/domain/inbox/incoming.service.ts",
+          "line": 119,
+          "packet_line": 2253,
+          "section": "Inbound text is sent to the selected published Typebot"
+        },
+        {
+          "path": "foundation_documentation/todos/active/features/TODO-leadshug-channel-connection-readiness.md",
+          "line": 99,
+          "packet_line": 104,
+          "section": "UI e integrações: only credential lookup is planned to change"
+        }
+      ],
+      "concrete_failure": "With active account-wide triggers in two Mantenedoras, an IN for A can select B's earlier matching trigger because buId:null matches globally. The text is then sent to B's published bot, and a session can combine B's mantenedoraId with A's buId. Resolving the correct Meta credential does not prevent this disclosure.",
+      "recommended_correction": "Explicitly include a bounded tenant-isolation correction in the touched Typebot path: resolve the incoming BU's Mantenedora, restrict every candidate bot/trigger and existing session to that tenant, and derive session ownership from the verified context. Keep existing trigger behavior within the tenant.",
+      "required_validation": "Create two Mantenedoras with competing account-wide triggers and separate bot identities. An IN for A must invoke only A's bot and credential; B must receive no text, session, or output. Include a foreign-tenant session negative.",
+      "option_tradeoffs": [
+        {
+          "option": "A",
+          "recommended": true,
+          "description": "Add the tenant predicate and ownership checks in the existing path.",
+          "tradeoff": "Low-to-medium effort, narrow blast radius and maintenance cost; an indexed tenant join preserves performance and improves structural coherence."
+        },
+        {
+          "option": "B",
+          "recommended": false,
+          "description": "Defer the correction and prevent Typebot execution for these channels until it is delivered.",
+          "tradeoff": "Contains disclosure but changes the promised consumer behavior and requires explicit scope/acceptance reconciliation. Leaving the current lookup enabled is unacceptable."
+        }
+      ]
+    },
+    {
+      "id": "NUM-ARCH-02",
+      "severity": "high",
+      "blocking": true,
+      "title": "Registration idempotency does not protect replayed incoming messages",
+      "evidence": [
+        {
+          "path": "foundation_documentation/modules/inbox-and-conversations.md",
+          "line": 10,
+          "packet_line": 911,
+          "section": "Invariant: incoming webhook processing is idempotent"
+        },
+        {
+          "path": "api-app/src/domain/inbox/incoming.service.ts",
+          "line": 51,
+          "packet_line": 2185,
+          "section": "Conversation upsert increments unreadCount before an unconditional message insert"
+        },
+        {
+          "path": "api-app/src/domain/inbox/incoming.service.ts",
+          "line": 100,
+          "packet_line": 2234,
+          "section": "Every processed official IN can execute Typebot"
+        },
+        {
+          "path": "api-app/prisma/schema.prisma",
+          "line": 331,
+          "packet_line": 3002,
+          "section": "Message has indexes but no provider-message deduplication constraint"
+        }
+      ],
+      "concrete_failure": "Delivering the same authenticated webhook twice inserts two messages, increments unreadCount twice, publishes twice, and can invoke Typebot twice. Concurrent duplicates have the same problem. Attempt nonce/CAS and registration Idempotency-Key do not cover this path.",
+      "recommended_correction": "Add a narrowly scoped incoming deduplication contract using the authenticated provider resource identity plus external message identity. Enforce uniqueness in PostgreSQL and make acceptance of a new message and its conversation/unread mutation transactional. Only newly accepted input should publish or invoke Typebot. Define handling for missing external IDs without claiming external exactly-once delivery.",
+      "required_validation": "Replay identical signed Meta and authenticated Evolution messages sequentially and behind a concurrency barrier. Assert one persisted message, one unread increment, and no duplicate downstream bot action. Also prove equal external IDs from legitimately distinct provider resources do not collide.",
+      "option_tradeoffs": [
+        {
+          "option": "A",
+          "recommended": true,
+          "description": "Use a DB constraint and a short transactional acceptance boundary in the current incoming path.",
+          "tradeoff": "Medium effort and a bounded schema/path addition; one indexed uniqueness check per message. It directly implements the canonical invariant without a queue platform."
+        },
+        {
+          "option": "B",
+          "recommended": false,
+          "description": "Use an in-memory replay cache or rely on provider delivery behavior.",
+          "tradeoff": "Lower initial effort but fails across restarts, processes, and concurrent requests; adds brittle operational dependence and does not satisfy the invariant."
+        }
+      ]
+    },
+    {
+      "id": "NUM-ARCH-03",
+      "severity": "high",
+      "blocking": true,
+      "title": "Evolution input needs an identity gate before entering BU conversations",
+      "evidence": [
+        {
+          "path": "foundation_documentation/todos/active/features/TODO-leadshug-channel-connection-readiness.md",
+          "line": 87,
+          "packet_line": 92,
+          "section": "Identity confirmation is specified for CONNECTED, but not explicitly for input acceptance"
+        },
+        {
+          "path": "api-app/src/surfaces/webhooks/evolution.controller.ts",
+          "line": 28,
+          "packet_line": 2572,
+          "section": "The instance name immediately resolves a BU"
+        },
+        {
+          "path": "api-app/src/surfaces/webhooks/evolution.controller.ts",
+          "line": 42,
+          "packet_line": 2586,
+          "section": "messages.upsert enters IncomingService independently of own-number confirmation"
+        },
+        {
+          "path": "api-app/src/surfaces/webhooks/evolution.controller.ts",
+          "line": 94,
+          "packet_line": 2638,
+          "section": "Own-number identity is learned separately from connection.update"
+        }
+      ],
+      "concrete_failure": "An existing BU has canonical phone X, but the operator scans the QR with phone Y. If messages.upsert is processed before the connection observation establishes the mismatch, Y's content reaches X's conversations and BU subscribers. Refusing CONNECTED or preventing a later phone overwrite does not retract that disclosure.",
+      "recommended_correction": "Freeze an incoming acceptance rule: authentication and instance ownership are necessary but insufficient; the current generation's own-number identity must be verified and must match the canonical BU phone before content, unread counts, realtime, or automation enters that BU. Define a bounded hold/replay or safe rejection policy for authenticated events arriving before confirmation, and quarantine mismatches.",
+      "required_validation": "Deliver a message before connection.update, then report a mismatching own phone. No message, realtime event, unread change, or bot action may enter the BU. Repeat with a matching identity and the declared pending-event policy.",
+      "option_tradeoffs": [
+        {
+          "option": "A",
+          "recommended": true,
+          "description": "Gate domain ingestion on the persisted verified identity and generation.",
+          "tradeoff": "Medium effort in existing channel/webhook surfaces; small DB checks and explicit pending-state handling. Preserves coherent ownership without a generic event-processing platform."
+        },
+        {
+          "option": "B",
+          "recommended": false,
+          "description": "Accept input immediately and validate the number only when updating connection status.",
+          "tradeoff": "Simpler nominal flow, but content can already have been disclosed to the wrong BU before mismatch detection."
+        }
+      ]
+    },
+    {
+      "id": "NUM-ARCH-04",
+      "severity": "high",
+      "blocking": true,
+      "title": "Local generation/CAS cannot identify a delayed Meta webhook from a retired ownership",
+      "evidence": [
+        {
+          "path": "foundation_documentation/todos/active/features/TODO-leadshug-channel-connection-readiness.md",
+          "line": 74,
+          "packet_line": 79,
+          "section": "Global providerID uniqueness is defined on the channel"
+        },
+        {
+          "path": "foundation_documentation/todos/active/features/TODO-leadshug-channel-connection-readiness.md",
+          "section": "D-07 and SCOPE-05: stale events must not replace newer state or cross removed/recreated links"
+        },
+        {
+          "path": "api-app/src/surfaces/webhooks/meta.controller.ts",
+          "line": 84,
+          "packet_line": 2473,
+          "section": "Meta routing uses phone_number_id against the current mapping"
+        },
+        {
+          "path": "api-app/src/domain/channels/channels.service.ts",
+          "line": 137,
+          "packet_line": 1131,
+          "section": "Removal deletes the channel mapping"
+        }
+      ],
+      "concrete_failure": "A signed event for phoneNumberId P is delayed while P belongs to BU A. A's link is removed and P is subsequently linked to BU B. On arrival, the event resolves B's current mapping and captures B's current generation; CAS can succeed because the old event carries no local generation. Active-row uniqueness prevents simultaneous mappings, not this temporal tenant crossover.",
+      "recommended_correction": "Define external identity ownership across retirement explicitly. Since number migration is out of scope, the simplest current contract is to retain ownership/retirement information and reject reassignment of a previously owned Meta identity to another BU until a separately governed transfer exists. If reassignment is permitted, specify a provider-supported temporal attribution/quarantine policy; do not claim local generation alone solves it.",
+      "required_validation": "Construct an authenticated event under A, retire A's link, attempt rebind to B, then deliver that event. Prove either that rebind is refused by the declared ownership rule or that the event is quarantined and cannot create B's message, receipt, or automation.",
+      "option_tradeoffs": [
+        {
+          "option": "A",
+          "recommended": true,
+          "description": "Retain historical ownership and prohibit cross-BU reassignment in this slice.",
+          "tradeoff": "Low-to-medium effort and a small persistent ownership rule; indexed lookup cost. Aligns with the existing exclusion of migration and avoids inventing unsupported provider correlation."
+        },
+        {
+          "option": "B",
+          "recommended": false,
+          "description": "Support reassignment now with explicit temporal attribution and quarantine.",
+          "tradeoff": "Higher effort, operational complexity, and test burden. Requires verified provider capabilities and materially expands this story."
+        }
+      ]
+    },
+    {
+      "id": "NUM-ARCH-05",
+      "severity": "medium",
+      "blocking": true,
+      "title": "Pairing initiation or renewal remains a GET mutation outside the CSRF guard",
+      "evidence": [
+        {
+          "path": "foundation_documentation/todos/active/features/TODO-leadshug-channel-connection-readiness.md",
+          "line": 79,
+          "packet_line": 84,
+          "section": "The existing QR route may initiate or renew pairing"
+        },
+        {
+          "path": "api-app/src/surfaces/bff/channels.controller.ts",
+          "line": 68,
+          "packet_line": 1406,
+          "section": "QR route uses GET"
+        },
+        {
+          "path": "api-app/src/surfaces/bff/session.middleware.ts",
+          "line": 70,
+          "packet_line": 1512,
+          "section": "GET is excluded from mutation/CSRF enforcement"
+        },
+        {
+          "path": "api-app/src/integrations/evolution/evolution.client.ts",
+          "line": 61,
+          "packet_line": 1301,
+          "section": "QR retrieval calls instance/connect"
+        }
+      ],
+      "concrete_failure": "The contract authorizes a pairing side effect through an authenticated GET. A cross-site top-level navigation can carry the documented SameSite=Lax session cookie while avoiding the mutation header check. Browser prefetch/retry also acquires an unintended mutation surface. Backend generation checks do not establish operator intent.",
+      "recommended_correction": "Use POST for explicit pairing initiation/renewal, with existing anti-CSRF enforcement, current ADMIN authorization, lease, and generation checks. A retained GET must be genuinely read-only and must not invoke connect/renew; otherwise retire it with a deterministic response.",
+      "required_validation": "Prove GET cannot cause a provider pairing call. Prove POST without the anti-CSRF header is rejected before any provider call, and a valid administrative POST performs the bounded operation.",
+      "option_tradeoffs": [
+        {
+          "option": "A",
+          "recommended": true,
+          "description": "Move the side effect to POST and update the wizard and endpoint contract.",
+          "tradeoff": "Low effort, narrow API/UI changes, negligible performance or maintenance cost; restores standard semantics and reuses the existing security boundary."
+        },
+        {
+          "option": "B",
+          "recommended": false,
+          "description": "Keep mutating GET and add route-specific CSRF/header exceptions.",
+          "tradeoff": "Small initial change but preserves surprising HTTP behavior and creates special middleware coupling and maintenance debt."
+        }
+      ]
+    },
+    {
+      "id": "NUM-ARCH-06",
+      "severity": "medium",
+      "blocking": true,
+      "title": "Reauthorization needs an explicit occupied-slot and credential-activation contract",
+      "evidence": [
+        {
+          "path": "foundation_documentation/todos/active/features/TODO-leadshug-channel-connection-readiness.md",
+          "line": 70,
+          "packet_line": 75,
+          "section": "Create atomically reserves the channel slot and attempt"
+        },
+        {
+          "path": "foundation_documentation/todos/active/features/TODO-leadshug-channel-connection-readiness.md",
+          "line": 72,
+          "packet_line": 77,
+          "section": "Exchanged token is persisted before number confirmation"
+        },
+        {
+          "path": "foundation_documentation/todos/active/features/TODO-leadshug-channel-connection-readiness.md",
+          "line": 97,
+          "packet_line": 102,
+          "section": "Administrator may reauthorize an existing account"
+        },
+        {
+          "path": "foundation_documentation/todos/active/features/TODO-leadshug-channel-connection-readiness.md",
+          "line": 531,
+          "packet_line": 536,
+          "section": "Existing channels remain PENDENTE_CREDENCIAL after cutover"
+        }
+      ],
+      "concrete_failure": "The promised recovery path includes existing channels without credentials and fresh authorization after consumed/ambiguous codes. The endpoint contract does not define how a new attempt attaches to an occupied slot, nor when a persisted candidate token becomes the active sending credential. An implementation can reject recovery as CANAL_JA_EXISTE or replace an existing usable credential before confirming that the new token addresses the same number.",
+      "recommended_correction": "Specify a fresh reauthorization attempt against an existing channel and expected generation, using the same endpoint with an explicit operation or a dedicated action. Distinguish candidate credentials from the active credential until identity validation and atomic activation. Define fresh nonce creation after expired/consumed authorization and reservation handling for expired preauthorization attempts. Preserve an existing usable credential until activation, or explicitly suspend it with a visible reason.",
+      "required_validation": "Recover a migrated occupied channel without a global token; start fresh authorization after exchange ambiguity; reject a candidate for another number without silently replacing the current credential; and reject activation from an older concurrent reauthorization attempt.",
+      "option_tradeoffs": [
+        {
+          "option": "A",
+          "recommended": true,
+          "description": "Define reauthorization and candidate-to-active promotion within the existing attempt/channel model.",
+          "tradeoff": "Medium effort with a narrow state/API clarification and atomic DB promotion. Reuses the proposed model and keeps credential ownership explicit."
+        },
+        {
+          "option": "B",
+          "recommended": false,
+          "description": "Require deletion and recreation for every recovery.",
+          "tradeoff": "Lower initial state-model effort but disrupts provider mapping and partial-operation evidence, aggravates delayed-webhook handling, and contradicts the promised guided reauthorization behavior."
+        }
+      ]
+    }
+  ],
+  "residual_risks": [
+    "Meta app eligibility, actual supported Graph configuration, permissions, HTTPS origin, test assets, and callback readiness remain unverified. None is established by the architectural proposal.",
+    "The pinned Evolution digest identifies the intended artifact; runtime version, payload compatibility, pairing, and authenticated callback delivery still require real validation.",
+    "Encrypted storage does not protect credentials from a compromised application process or compromised installation key.",
+    "Provider mutation timeouts remain intrinsically ambiguous. Persisted stages and reconciliation must preserve that uncertainty rather than claim external exactly-once behavior.",
+    "Local validation and the proposed small synthetic concurrency workload cannot establish production capacity, availability, or continuous credential health.",
+    "The incoming-path corrections should remain bounded and be explicitly incorporated into the tactical scope before approval; this review authorizes no implementation."
+  ],
+  "nonblocking_improvements": []
+}
