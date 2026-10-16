@@ -249,7 +249,7 @@ n/a; esta proposta não autoriza promoção ou deploy.
 | web | src/componentes/CadastroNumero* | A,?? | UI do fluxo e testes. |
 | web | e2e/*canais* | A,?? | Browser de cadastro. |
 | web | e2e/number-onboarding* | A,?? | Fixtures/freshness do fluxo. |
-| web | e2e/telas.spec.ts | M | Somente caso de Números: substituir expectativa de botão Conectar WABA aposentado por jornada aprovada de cadastro; preservar BU/ausência de canal e gates de console/auth das demais telas. Admissão após falha real cp12. |
+| web | e2e/telas.spec.ts | M | Caso Números: substituir botão Conectar WABA aposentado pela jornada aprovada. Caso identidade visual: somente barreira de PUT real antes do reload, admitida após falha cp14; preservar todas as assertions de cores/tema, BU/ausência de canal e gates console/auth. Nenhuma outra edição de caso. |
 | web | e2e/timeline-freshness.ts | M | Concretização necessária: manifesto compartilhado deve representar deleções e cobrir fixtures/schema/config pertinentes; preservar health, banco descartável e comparação bundle servido/buildado. |
 | web | playwright.config.ts | M | Projeto adicional com mesmo backend real. |
 | web | .dockerignore | M | Excluir env privados do contexto de build e da carga automática Vite; manter somente exemplo público. |
@@ -823,6 +823,9 @@ Achados exatos preservados em planning-architecture.json. `fixed-in-plan` signif
 | WEB-ROOT-04 | medium | release-blocker | fix-current-contract | Etapa no wizard precisa refletir webhook/receipt atual | accepted-open | evidence/root-web-checkpoint3-findings.json |
 | WEB-ROOT-05 | medium | release-blocker | fix-current-contract | Retry de reserva perdida precisa conservar chave idempotente | accepted-open | evidence/root-web-checkpoint3-findings.json |
 | WEB-ROOT-06 | medium | release-blocker | fix-current-contract | Troca explícita de WABA não pode perder opções autorizadas | accepted-open | evidence/root-web-checkpoint3-findings.json |
+| NUM-BROWSER-01 | medium | release-blocker | fix-current-contract | Submit repetido deve preservar owner ativo e coalescer reserva | accepted-open | cp14 rerun3:21requests; FRC ativo; iniciar invalidava antes do guard |
+| NUM-BROWSER-02 | medium | release-blocker | fix-current-contract | Cancelamento autoritativo antes de efeitos pode devolver channelId:null sem ser descartado como resposta obsoleta | accepted-open | cp14 rerun5; API cancel370-373; DonoCicloCadastro.aplicar rejeita detach legítimo |
+| NUM-BROWSER-03 | medium | release-blocker | complete-required-harness | Founder da fixture precisa proveniência MANTENEDORA para provar novaBU/replay conforme produto real | accepted-open | cp14 rerun5:403TENANT_ADMIN_REQUIRED; seedNumberOnboarding119 vs TenancyService.criar |
 
 
 Adicional de coerência do autor: envelope raw redigido e code/PIN transitórios explicitados, sem alterar modelo de autorização; REG-SEC-08/09.
@@ -1017,3 +1020,6 @@ Admissão adicional estrita em `web-app/e2e/telas.spec.ts`, somente no caso “i
 ### Fronteira do contexto Docker antes do operador
 
 Inspeção read-only de `api-app/.dockerignore` mostrou exclusão de dotenv, porém sem `.local-files/` nem `.git`. O Dockerfile copia paths explícitos, mas isso sozinho não estabelece exclusão dos dados operacionais do contexto enviado ao builder. Admitido M exato nesse ignore, antes do build operacional, para excluir diretório de payloads e metadados Git que contêm seus blobs históricos. Não inspecionar dados nem alterar seu tracking. DevOps recebe essa superfície de build no próximo handoff serializado; produto API permanece congelado. Freshness final registra o novo hash público sem ler os paths excluídos. Não é ampliação funcional nem permissão para copiar payloads.
+
+
+Diagnóstico cp14 rerun5: a resposta real do replay foi403/TENANT_ADMIN_REQUIRED, não nonce ausente. A fixture `seedNumberOnboarding` cria o OWNER com grant DIRETO; após nova BU, a regra canônica de herança só replica MANTENEDORA/SETOR, e esse ator perde administração derivada da Mantenedora. O fundador real de `TenancyService.criar` nasce com proveniência MANTENEDORA. Corrigir somente a proveniência do OWNER dessa fixture, preservando ADMIN/ATENDENTE diretos e seeds históricos; não relaxar autorização nem codificar reinício como substituto do replay válido. Handoff API serializado após STOP Web, nos paths já admitidos timeline-fixtures e number-onboarding-flow. Provar novaBU atômica+grant herdado, mesma tentativa/autorização no replay e contagem de BU sem duplicação. O403 continua evidência de que a autorização atual fechou corretamente para o ator parcialmente concedido.
