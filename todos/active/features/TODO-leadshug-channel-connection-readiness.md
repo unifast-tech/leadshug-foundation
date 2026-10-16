@@ -41,7 +41,7 @@ Proposta ST-CON-01: jornada de cadastro de número, com infraestrutura local est
 
 - **Current delivery stage:** Pending
 - **Qualifiers:** none
-- **Next exact step:** corrigir as duas novas falhas de harness API cp22 e repetir suíte API; depois Web deve provar RED/GREEN da recuperação NOVO. HTTPS atual e sessão segura conferidos em cp22-https-handoff; usuário atualiza domínio/OAuth/SDK/callback e usa token somente localmente. Onboarding do produto ainda exige conclusão; capacidade BFF409ONBOARDING_PENDENTE. VAL-05 continua pendente.
+- **Next exact step:** Web cp23 captura RED real e corrige recuperação de NOVO expirado/ambíguo, validando46browser com BFF/PG reais e fonte fresca. API cp22 passou22migrações/138unit/286PG, sem fonte alterada durante run. Meta confirmou callback; assinatura messages e onboarding do produto aguardam confirmação. Depois runtime integrado22migrações/all e reviews delta; VAL-05 permanece pendente.
 
 ## Active Work State (Required While TODO Remains In `active/`)
 
@@ -372,7 +372,7 @@ Register: `foundation_documentation/artifacts/dependency-readiness.md`.
 
 ## Profile Scope & Handoffs (Required Before `APROVADO`)
 
-- **Current profile:** operational-coder, API cp22 retomada como único writer após DevOps HTTPS STOP e health independente200. Web/DevOps parados; root governa evidência; depois Web, runtime integrado e Assurance.
+- **Current profile:** operational-coder, Web cp23 é único writer após API cp22 terminal verde e root conferir230referências públicas. API/DevOps parados; root governa evidência; próximo handoff runtime integrado e Assurance.
 - **Primary execution profile:** operational-coder; handoff operational-devops antes de runtime/ingress.
 - **Active technical scope:** nestjs, react, postgresql, prisma, docker
 - **Expected supporting profiles:** operational-devops para target/callback; assurance-tester-quality e assurance-security-adversarial para gates aplicáveis.
@@ -1111,3 +1111,11 @@ DevOps STOP e root verificou health200 após o encerramento do agente, PIDs WSL2
 Normalização da execução: API aplicou indevidamente skill opcional orchestrated-single-todo-implementation sem invocação nominal e abriu trackerGOAL contra a instrução explícita. A skill foi considerada inaplicável; nenhum falso --goal-completed/waiver ou alteração de método. O tracker acidental disparou turnos repetidos aguardando o mesmo handoff externo e foi marcado blocked somente após ultrapassar três turnos, para cessar esse monitoramento. Isso não é estado do TODO. API retomada pela tarefa normal aprovada/routing/diff, sem criar novo tracker.
 
 Usuário confirmou atualização dasURLs e validação do webhook pela Meta no novo host; cp22-meta-panel-setup.json registra confirmação humana do painel, sem OAuth, vínculo de número ou entrega de mensagem inferidos. Assinatura messages é próxima checagem manual. Reteste API encontrou uma expectativa incorreta de providerConnectionState: evento open pode observar conexão sem restaurar ownNumberVerified/verifiedEpoch/receipt ou status pronto; manter negativos de confiança/efeitos na dimensão correta. Nenhuma mudança de produto adicional estabelecida.
+
+### API cp22 terminal verde; Web cp23 assume
+
+Final cp22-rerun3 passou22migrações,lint/build,138unitários/19arquivos e286PG/26arquivos. Raw9aa7683bd56eccbe1407dd3ea2a1953ec78412cc6061d9c4ae543a298f562e39. Manifestos primários215 +15referências públicas suplementares pré/pós têm zero hash alterado; root conferiu230entradas atuais, incluindo apenas ausência aprovada do spec antigo. Índice currentChannelId escolhido em Index Scan real com2.000tombstones, uma linha retornada, sem planner forçado; resultado não é SLO/capacidade. REG-SEC-01/10/11 adicionais passaram com trigger global estrangeiro anterior, old-verify através da renovação/quarentenaY/provaX e ecosOUT concorrentes. Relatórios cp22-rerun3-result/handoff e root-cp22-api-receipt preservam fontes/limites. Falhas anteriores são de harness e ficam nos quatro rawlogs distintos; não representam novos bypasses de produto.
+
+Web cp23 recebeu writer único para os dois cenários de recuperação do botão anunciado, com RED antes da edição do componente. Controle de expiração é test-only, scope attemptId+BU exatos, em fixture privada de DB descartável; troca Meta ambígua usa failures.meta.exchange, não ambiguousAfter. Nenhum envio real ou OAuth remoto inferido. Runtime próprio permanece imagemcp21/21migrações até ambos coders terminarem e novo build/prova.
+
+Dois runs browser cp23 preservados comprovaram a falha real de recuperação após troca ambígua: reserva retorna409 em vez de201/REAUTORIZAR. Expiração ainda não chegou à asserção de produto: a fixture exigia UUID36 para attemptId, mas cryptoRandomId() de number-registration.service.ts gera32hex e substitui o default Prisma. Web, ainda writer único, recebeu ajuste test-only estritamente nesse guard de api-app/test/timeline-fixtures.cjs, já admitido no contrato; manter BU UUID, autenticação, DB descartável e todos os predicados de escopo/estado. Não alterar IDs do produto nem aceitar os dois runs como RED de expiração. Após corrigir o harness, capturar essa falha antes de editar o componente.

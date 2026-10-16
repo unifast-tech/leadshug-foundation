@@ -1,0 +1,88 @@
+{
+  "checkpoint": "cp22-rerun3",
+  "objective": "Implement and validate authorized cp22 API fixes for NUM-PERF-01 and NUM-SEC-CP21-02 in the principal checkout",
+  "result": "canonical API validation passed; this is not overall local-gate or TODO acceptance",
+  "canonical_command": "bash scripts/test-channels-local.sh api",
+  "environment": {
+    "node": "v22.23.3",
+    "openssl": "3.0.22",
+    "prisma": "6.19.3",
+    "database": "source-owned disposable PostgreSQL validation namespace"
+  },
+  "migration": {
+    "new_migration": "20261016160000_number_onboarding_current_channel_identity_index",
+    "applied": true,
+    "total_applied": 22,
+    "schema_up_to_date": true
+  },
+  "checks": {
+    "lint": "pass",
+    "nest_build": "pass",
+    "unit": { "status": "pass", "files": 19, "tests": 138 },
+    "postgres_e2e": { "status": "pass", "files": 26, "tests": 286 }
+  },
+  "review_controls": {
+    "REG-SEC-01_foreign_global_trigger_first": "pass",
+    "REG-SEC-10_renewal_epoch_and_identity_quarantine": "pass",
+    "REG-SEC-11_concurrent_authenticated_same_key_out_echo": "pass"
+  },
+  "num_perf_01_probe": {
+    "evidence_log_line": 345,
+    "relation": "provider_resource_identities",
+    "resolver_invoked": "ChannelCredentialResolver.resolve(channel.id, registration)",
+    "predicate": "current_channel_id = channel.id",
+    "unrelated_retired_identities": 2000,
+    "total_identity_rows": 2001,
+    "planner_settings_forced": false,
+    "plan_node": "Index Scan",
+    "index": "provider_resource_identities_current_channel_id_idx",
+    "actual_rows": 1,
+    "execution_time_ms": 0.012,
+    "limits": "test-after disposable PostgreSQL observation; not capacity/SLO evidence"
+  },
+  "test_fixtures": {
+    "attempt_expiry": {
+      "method": "POST",
+      "path": "/provider/attempt/expire",
+      "scope": "exact attemptId and buId UUID; operation NOVO; state PENDING_AUTH; channelId non-null",
+      "public_api": false,
+      "browser_flow_executed_by_this_API_run": false
+    },
+    "ambiguous_meta_exchange": {
+      "effective_control": "failures: { \"meta.exchange\": { \"remaining\": 1 } }",
+      "path": "/provider/call",
+      "claim": "simulated ambiguous API result only; remote OAuth code consumption not proven",
+      "ambiguousAfter_effective_for_exchangeCode": false
+    }
+  },
+  "source_manifests": {
+    "before": "cp22-rerun3-source-manifest-before.json",
+    "before_sha256": "d4c3dbc592ab652b309d338097902859f059f4cdfd9a49f37f9ee2a48391c041",
+    "after": "cp22-rerun3-source-manifest-after.json",
+    "after_sha256": "55957f561fa87fa5fef24d488b9ee01a6f45d07a721962c54a7d902feac34b4f",
+    "primary_public_entries": 215,
+    "supplementary_public_build_config_references": 15,
+    "changed_hashes_during_run": 0,
+    "preexisting_missing_primary_path": "api-app/src/domain/channels/channels.service.spec.ts",
+    "private_or_operational_paths_read_or_hashed": 0
+  },
+  "raw_log": {
+    "path": "cp22-api-validation-rerun3.log",
+    "sha256": "9aa7683bd56eccbe1407dd3ea2a1953ec78412cc6061d9c4ae543a298f562e39"
+  },
+  "source_sha256": {
+    "api-app/prisma/schema.prisma": "3dd87c61af51167ae8aaa07a1b35e8616f108d9e5a05b2c0911ea84a8bfa5636",
+    "api-app/prisma/migrations/20261016160000_number_onboarding_current_channel_identity_index/migration.sql": "aadefab2ce66f3484661e66fdf918f5e295926bf9b89b0af4c3e2c8c5c78b740",
+    "api-app/test/number-onboarding-pcv.e2e-spec.ts": "5a608fa9ed3df38b91b2f90b18f34a0d3a88bf0cce75cdf629aa612c04747956",
+    "api-app/test/helpers.ts": "6f58ee65d1d514a1549de8f8ade0adae5718cf624fbe809eb0b56a7af6534dda",
+    "api-app/test/number-onboarding-typebot.e2e-spec.ts": "d814bfb2193a9aa8a69c841042b1429d8bd2c8670b49499ef994b0171fec382f",
+    "api-app/test/atendimento.e2e-spec.ts": "d7047c83ba6338dc3452d8d182a9586df79bcb5a90032a2282d8f1422b1b43dd",
+    "api-app/test/number-onboarding-flow.e2e-spec.ts": "40128cbe31499fa490430632367967d3b4a8851a7f53321ebf160dc69c533ff5",
+    "api-app/test/timeline-fixtures.cjs": "0764582d7b97d231a0e614ccbe83079ba15582f5e0c868d5da3e75aef9391fd5"
+  },
+  "prior_run_logs_preserved": [
+    { "path": "cp22-api-validation.log", "sha256": "7bb87d0ab076bc70912907c2f83ad6b444fb067ede9fecca85f49695bbb12542" },
+    { "path": "cp22-api-validation-rerun.log", "sha256": "58c8d79d61d3855ad3a74a3bfabb424bc735bfd2b036391a7de46fb1c6038474" },
+    { "path": "cp22-api-validation-rerun2.log", "sha256": "88a3ff4ff6470eca46430b833c95a16dc340c8d87246c77158a163ddef35cd20" }
+  ]
+}

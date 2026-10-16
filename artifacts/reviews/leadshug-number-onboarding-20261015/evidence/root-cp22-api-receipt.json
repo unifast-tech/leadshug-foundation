@@ -1,0 +1,10 @@
+{
+  "captured_utc": "2026-10-16T14:25:12.485354+00:00",
+  "kind": "root read-only public-source receipt before Web activation",
+  "checked_entries": 230,
+  "mismatches": [],
+  "approved_missing_paths": [
+    "api-app/src/domain/channels/channels.service.spec.ts"
+  ],
+  "private_or_operational_payloads_read": 0
+}
