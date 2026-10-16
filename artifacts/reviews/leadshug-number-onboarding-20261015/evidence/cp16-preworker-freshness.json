@@ -1,0 +1,352 @@
+{
+  "capturedAtUtc": "2026-10-16T00:27:25.955Z",
+  "node": "v22.23.3",
+  "branches": {
+    "web": {
+      "name": "feature/number-onboarding",
+      "head": "4e56f6c1f4515b918d05b8c87e890d42e8542c56",
+      "declaredBaseline": "4e56f6c1f4515b918d05b8c87e890d42e8542c56"
+    },
+    "api": {
+      "name": "feature/number-onboarding",
+      "head": "ae6a9662c29b77276351aa9de653a47276372246",
+      "declaredBaseline": "ae6a9662c29b77276351aa9de653a47276372246"
+    }
+  },
+  "webChangedSources": [
+    {
+      "path": ".dockerignore",
+      "status": "unstaged:M",
+      "sha256": "7557619a4028c059ba0370ddc527e3032b395e656119ecdf0765c97e726f6f23"
+    },
+    {
+      "path": "e2e/number-onboarding-freshness.ts",
+      "status": "??",
+      "sha256": "097b56dc07f1a024c915bd6564bfac4485aed34e6fe9e0d861acd0998edeb2b0"
+    },
+    {
+      "path": "e2e/number-onboarding.spec.ts",
+      "status": "??",
+      "sha256": "2c6b00d0553ade56daed438a17f72bb10acd61ba34ff40e9330c263438b84e8c"
+    },
+    {
+      "path": "e2e/telas.spec.ts",
+      "status": "unstaged:M",
+      "sha256": "b0cdbb5dc9f76c94a50683950d097e9b2ba180423ca96e2b844da69ed437e285"
+    },
+    {
+      "path": "e2e/timeline-freshness.ts",
+      "status": "unstaged:M",
+      "sha256": "425015b83e633ae47a546b5b3f2e1356c8cb7db2cc0dab97de9053bee98b8e4a"
+    },
+    {
+      "path": "playwright.config.ts",
+      "status": "unstaged:M",
+      "sha256": "53e9a54e97c9b785135d94846d99eb77c6f05789a58f27128544f9b2c903a63d"
+    },
+    {
+      "path": "src/api.spec.ts",
+      "status": "unstaged:M",
+      "sha256": "c4dc7bab1ec80fc0d75aca0948de232bd25408d618f841babc9febdb43f62bea"
+    },
+    {
+      "path": "src/api.ts",
+      "status": "unstaged:M",
+      "sha256": "8b0e4d5994e8bf450630903fa7b7fef26506053627b0e8e352c58235b536c168"
+    },
+    {
+      "path": "src/cadastroNumero.lifecycle.spec.ts",
+      "status": "??",
+      "sha256": "a340c48e30c712cafecb1d35fe20bd3841c46e2dfbda21645fc8ef3ed6977834"
+    },
+    {
+      "path": "src/cadastroNumero.lifecycle.ts",
+      "status": "??",
+      "sha256": "5c60a8fc7456c82a7d782b3484ba447bda826e65bf93a9175a991dc50be254a3"
+    },
+    {
+      "path": "src/cadastroNumero.spec.ts",
+      "status": "??",
+      "sha256": "9c2581c1886d108c4c153d485fd77f017805c2e3b813a9536d21d0296f2a1ecb"
+    },
+    {
+      "path": "src/cadastroNumero.ts",
+      "status": "??",
+      "sha256": "584401ed8ab1ce1d53950998e85765a35d55d7ac4961286924f98e4132edcb6b"
+    },
+    {
+      "path": "src/componentes/CadastroNumero.tsx",
+      "status": "??",
+      "sha256": "c776998365f14699e270444b84b9d3aeff3cf820cc411a97be8982e1d8f4cb1a"
+    },
+    {
+      "path": "src/telas/Numeros.tsx",
+      "status": "unstaged:M",
+      "sha256": "22cf5877d6336e4c22b8650402c5913b064278b9ba639e20e10f9a80c00fc791"
+    }
+  ],
+  "apiChangedSources": [
+    {
+      "path": ".env.example",
+      "status": "unstaged:M",
+      "sha256": "b3fefff2a25832ee67a5926948029d0345090eb74c0458c4ef59dbf7a1636abb"
+    },
+    {
+      "path": "prisma/migrations/20261015120000_number_onboarding_foundation/migration.sql",
+      "status": "??",
+      "sha256": "55d84f5eef1b9b9e9a22891695812e522fe4e405041341218984507426ef0946"
+    },
+    {
+      "path": "prisma/migrations/20261015130000_number_onboarding_provider_resource_ownership_immutable/migration.sql",
+      "status": "??",
+      "sha256": "a6fa9ad9e99a0b55ed5d9e86b99d42b603b404c13f41f97ac718e6443f29a3fe"
+    },
+    {
+      "path": "prisma/migrations/20261015140000_number_onboarding_channel_operation_fence/migration.sql",
+      "status": "??",
+      "sha256": "e484edd01e78133bcaf23f12fb47e44e92cba44a89b29803eff1530b103bc496"
+    },
+    {
+      "path": "prisma/migrations/20261015150000_number_onboarding_managed_cleanup/migration.sql",
+      "status": "??",
+      "sha256": "27a07435e3327f004ad8d46cd4c18eec57b89ce3cdbf51c39631b248555214ad"
+    },
+    {
+      "path": "prisma/schema.prisma",
+      "status": "unstaged:M",
+      "sha256": "0dfcd1dac82c846d04d4cbcd2b96e1426ae6b30d740f0e8426bd0d99f37c0388"
+    },
+    {
+      "path": "src/domain/channels/channel-credential-crypto.spec.ts",
+      "status": "??",
+      "sha256": "bdc829c987de4d8944ce417aea03c76e5484091f7ad4612246807bd22e524efb"
+    },
+    {
+      "path": "src/domain/channels/channel-credential-crypto.ts",
+      "status": "??",
+      "sha256": "4a438a1e73903c011d212962f41b38dfb2a999c539112b6831156664de6d9ef4"
+    },
+    {
+      "path": "src/domain/channels/channel-credential-resolver.ts",
+      "status": "??",
+      "sha256": "7ce86ab9fa764364761d51c5344b3786d66e66e55d3102f2181e0afdf41e7d7f"
+    },
+    {
+      "path": "src/domain/channels/channels.service.spec.ts",
+      "status": "unstaged:D",
+      "sha256": null
+    },
+    {
+      "path": "src/domain/channels/channels.service.ts",
+      "status": "unstaged:M",
+      "sha256": "b050f44477545969c7e3a44b75891c1f5b5fb083aa52846cf4e34c3d2d4ef2d4"
+    },
+    {
+      "path": "src/domain/channels/number-registration.service.ts",
+      "status": "??",
+      "sha256": "7618f4fac741e96df6343262f32cec447ffa2c3184450f6b8e7a0edbccb6c3a5"
+    },
+    {
+      "path": "src/domain/channels/safe-redaction.spec.ts",
+      "status": "??",
+      "sha256": "b35f2c689ee22cf0f8ebe50b4979ca7e25a708e0bd6930c93c376fbf57a3ff6a"
+    },
+    {
+      "path": "src/domain/channels/safe-redaction.ts",
+      "status": "??",
+      "sha256": "704539c0a9aabd17dd5fc19826f5079da816c2bc5e22d438b8672662b9998606"
+    },
+    {
+      "path": "src/domain/historico/catalogo.ts",
+      "status": "unstaged:M",
+      "sha256": "6fc8cbe0b04cd96889d96e665ac30da223a1b4addcc1f8685ffef3c33dd5403f"
+    },
+    {
+      "path": "src/domain/historico/cobertura.ts",
+      "status": "unstaged:M",
+      "sha256": "324e111156ee0d2d2c85859640175f2b0032e608452e69e451c1c3cc28d238fa"
+    },
+    {
+      "path": "src/domain/inbox/conversations.service.ts",
+      "status": "unstaged:M",
+      "sha256": "e459ca836ca863c7884bdf51a0acd6b31585583c1455251586a758f4c1e7175c"
+    },
+    {
+      "path": "src/domain/inbox/incoming.service.ts",
+      "status": "unstaged:M",
+      "sha256": "5ed885e93bbaaaeaa318649b68bb224f95a7fb91fd5d6e4c7fb8dc912b06bb83"
+    },
+    {
+      "path": "src/domain/inbox/incoming.typebot.integration.spec.ts",
+      "status": "unstaged:M",
+      "sha256": "2b5238069912edd66591102503b871aeacf6aab71293f7d31486256b9f716358"
+    },
+    {
+      "path": "src/domain/inbox/message-acceptance.service.ts",
+      "status": "??",
+      "sha256": "b053744ee44b7e91fd45b5c146f759f55c70b8e517b8fbb1cab39806407335e1"
+    },
+    {
+      "path": "src/domain/tenancy/tenancy.service.ts",
+      "status": "unstaged:M",
+      "sha256": "c9348f86f1f2bcfd4af3f9bd3e91cb5218d81cf13098989b5f6ea64acbb41398"
+    },
+    {
+      "path": "src/infra/config/modulos.spec.ts",
+      "status": "unstaged:M",
+      "sha256": "57d60337ce3564e071b019e127ab6d409759eea8ae77e2d45095e4fea877928e"
+    },
+    {
+      "path": "src/infra/config/modulos.ts",
+      "status": "unstaged:M",
+      "sha256": "fd1ccabf7bee088f230a12d773c56a5d41fc07642d04262b55a6497a7b9c2a03"
+    },
+    {
+      "path": "src/integrations/evolution/evolution.client.spec.ts",
+      "status": "??",
+      "sha256": "fa71e3218a3dc5e635fd1b71575ea0e24ba51d2fa649418c8617318e9e427b85"
+    },
+    {
+      "path": "src/integrations/evolution/evolution.client.ts",
+      "status": "unstaged:M",
+      "sha256": "49c7bc8aec7e13333678b0e3e63171dc20e545a76aeca8126ebdf92533684127"
+    },
+    {
+      "path": "src/integrations/meta/meta.client.spec.ts",
+      "status": "unstaged:M",
+      "sha256": "7a801cd2c90040ba72a3f98709a2ca51c445346fdf553cdb316c4e94f5e76606"
+    },
+    {
+      "path": "src/integrations/meta/meta.client.ts",
+      "status": "unstaged:M",
+      "sha256": "9c1e489582f6226ed6c0075a7d3b6f01e7087755b315359f97dca775db316ccf"
+    },
+    {
+      "path": "src/surfaces/bff/bff.module.ts",
+      "status": "unstaged:M",
+      "sha256": "1addd7e3cb12d6607d488b17734d4ae85eeb2ec0ae951c7ecaebd65d35c09203"
+    },
+    {
+      "path": "src/surfaces/bff/channels.controller.ts",
+      "status": "unstaged:M",
+      "sha256": "c7a3917c84ac1921b757fd7bca5a9b0b29ab2078312fcf2fd421104ef41a6182"
+    },
+    {
+      "path": "src/surfaces/bff/me.controller.ts",
+      "status": "unstaged:M",
+      "sha256": "0edd826d4e9a3c0b8cde4334bf2e88f360f5f5e9d5db99e5dfc4382b5bf71bb0"
+    },
+    {
+      "path": "src/surfaces/bff/number-registrations.controller.ts",
+      "status": "??",
+      "sha256": "c57797667ff26a4ea74aa939e4972a8cd8f442c9beafa166b1bdf808e19c236e"
+    },
+    {
+      "path": "src/surfaces/public/public.module.ts",
+      "status": "unstaged:M",
+      "sha256": "b4fc1da7caadb9e8edb0d719b11783227aa35ee55853f4d0e9f1e06065603936"
+    },
+    {
+      "path": "src/surfaces/webhooks/evolution.controller.ts",
+      "status": "unstaged:M",
+      "sha256": "0d8fafa42d4b8297ee9105938051e8616dd943b207f0d01fc89fa3eceaec1b96"
+    },
+    {
+      "path": "src/surfaces/webhooks/meta.controller.ts",
+      "status": "unstaged:M",
+      "sha256": "64fd78568c1dc99e74df8a3f5b3157c43c6467ef03544b7741f0b9c7dc11200b"
+    },
+    {
+      "path": "src/surfaces/webhooks/webhooks.module.ts",
+      "status": "unstaged:M",
+      "sha256": "63e7006237857074eb9e9da1f58b8de170d40ad0cdce765c6bb134b243cfbf2e"
+    },
+    {
+      "path": "test/api-publica.e2e-spec.ts",
+      "status": "unstaged:M",
+      "sha256": "7c877f0665f1f7e075eb36675063fda4b576bf217a40f8e1862c3a17921a0882"
+    },
+    {
+      "path": "test/atendimento.e2e-spec.ts",
+      "status": "unstaged:M",
+      "sha256": "c8a4612bde40e3c162499bffd8d4351bc912f70d0774ec43618ef4a5ddf23859"
+    },
+    {
+      "path": "test/browser-server.cjs",
+      "status": "unstaged:M",
+      "sha256": "4379e94511e4d8c06e4dc6a232b85f29305c49863e17f2af639c39f4184c60e3"
+    },
+    {
+      "path": "test/canais.e2e-spec.ts",
+      "status": "unstaged:M",
+      "sha256": "a0a09f0cf84ce5883bbc51a0e448e85f644354dc6a44a519b780a877ac9e7551"
+    },
+    {
+      "path": "test/helpers.ts",
+      "status": "unstaged:M",
+      "sha256": "c5dbe39b8ef6aeec0fccbe141c75d9efefeba00fcf46bcbeda2ca8a06cd59588"
+    },
+    {
+      "path": "test/modulos.e2e-spec.ts",
+      "status": "unstaged:M",
+      "sha256": "2a6b2540dcbb2e1de61d3d03e444ec201c2ed740646255c00166d4af7ed17ee4"
+    },
+    {
+      "path": "test/number-onboarding-bci.e2e-spec.ts",
+      "status": "??",
+      "sha256": "d21fef15e4bc3efbce43d86367f76031c22885cecbbfd8c39f6c0aded61b6974"
+    },
+    {
+      "path": "test/number-onboarding-caller-scoping.e2e-spec.ts",
+      "status": "??",
+      "sha256": "1adb1663295c551da9134729c09d6101c690d717da99a84cd543304bb47738fc"
+    },
+    {
+      "path": "test/number-onboarding-flow.e2e-spec.ts",
+      "status": "??",
+      "sha256": "f22a48ec138978f6d09cb0eeb92ba9fc4ea5da416cfbd86d9c43ec4a5d8db12e"
+    },
+    {
+      "path": "test/number-onboarding-message-acceptance.e2e-spec.ts",
+      "status": "??",
+      "sha256": "c8b29c16412938b64fb8e2555729f0777d9e3eb69a57d29df3d65b56443c4bac"
+    },
+    {
+      "path": "test/number-onboarding-pcv.e2e-spec.ts",
+      "status": "??",
+      "sha256": "1a622f34fe94b90dee4a7f305959f7a654632185320b60dee321393683a04e8e"
+    },
+    {
+      "path": "test/number-onboarding-typebot.e2e-spec.ts",
+      "status": "??",
+      "sha256": "c3c5ed2b17f72790302f6f341d67c428d876ea2d53d77e6e29ab9e9b7df3de30"
+    },
+    {
+      "path": "test/realtime.e2e-spec.ts",
+      "status": "unstaged:M",
+      "sha256": "cf9335f7bfefecf708d69ab966533bf3b65ed7cc5615533691f7f2a841275422"
+    },
+    {
+      "path": "test/timeline-fixtures.cjs",
+      "status": "unstaged:M",
+      "sha256": "ffbbb697205edbe9e076adf33f418d883339f40675f078479eccf704899ca62a"
+    },
+    {
+      "path": "test/webhooks.e2e-spec.ts",
+      "status": "unstaged:M",
+      "sha256": "479ec2408ca163f44db2e142eeacd8e24d9f46021d0f10386af1e459d2252c51"
+    }
+  ],
+  "webBundle": [
+    {
+      "path": "assets/index-BnsAHEmT.js",
+      "sha256": "6247a78ee2a2a319eee82e3d65ad5cf2946f0066b75eb24befb5643ff5b69bc6"
+    },
+    {
+      "path": "assets/index-wuzy3kMN.css",
+      "sha256": "38f979314555cda8b834189ed5c64826bbc309e294091c9f5c54ee5f8bd2aadd"
+    }
+  ],
+  "operationalDataBoundary": "API .local-files payloads and private dotenv files are excluded from public-source inventories; an omitted file is not reported as a source deletion.",
+  "proof": "timeline-freshness completed before Playwright workers; it verifies disposable DB family, API/fixture/preview health, and served JavaScript hash against dist."
+}

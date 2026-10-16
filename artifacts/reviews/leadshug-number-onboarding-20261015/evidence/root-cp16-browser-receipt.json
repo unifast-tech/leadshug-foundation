@@ -1,0 +1,17 @@
+{
+  "recorded_at_utc": "2026-10-16T00:29:58.993668+00:00",
+  "preworker_sha256": "102ff86a05f74e8a11924cb6949e1fbdb414d9d96d19d21792cbdf31f7cbfb40",
+  "root_current_comparison": {
+    "web-app": {
+      "captured_paths": 14,
+      "mismatches": []
+    },
+    "api-app": {
+      "captured_paths": 50,
+      "mismatches": []
+    }
+  },
+  "manifest_limit": "cp14/cp16 standalone .sha256 inventories have13paths, omit src/telas/Numeros.tsx. The actual preworker has all14 Web changed paths including Numeros. Root independently matched all14current hashes to preworker; no test invalidation or source change required. Prior root prose calling standalone manifest14paths is corrected here.",
+  "browser": "44 passed; real BFF/session/PG; provider and SDK doubles only",
+  "writer_transfer": "Web STOP; DevOps next sole writer; no real Meta/device proof"
+}
