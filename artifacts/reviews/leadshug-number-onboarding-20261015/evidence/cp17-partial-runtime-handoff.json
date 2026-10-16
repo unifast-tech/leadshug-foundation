@@ -1,0 +1,69 @@
+{
+  "checkpoint": "cp17-partial-runtime-handoff",
+  "date": "2026-10-15",
+  "completion": "partial; runtime work stopped at root instruction after API REG-SEC-06 contract defect was confirmed",
+  "source_deltas_since_cp9_cp11": {
+    "docker-compose.channels.yml": {
+      "prior_sha256": "1059d2ff74689d5392c001ce0617927221d08d0f69ff743f31aae7acfda930a9",
+      "current_sha256": "0ccf14aa6937712813e576e0f0f81c8c2515f8ca0d94130cf9390862413c0659",
+      "delta": "Adds profile-only evolution-header-probe on the private default Compose network. It creates uniquely named Evolution instances with qrcode:false and INSTANCE_CREATE webhook only, tests expected and deliberately wrong header values at a body-discarding receiver, logs metadata/booleans/status only, deletes each exact generated instance, and publishes no port. This is configuration/source only; probe was not run."
+    },
+    "scripts/start-channels-local.sh": {
+      "prior_sha256": "08ee7aedb02f8695e129134d1be045de6a9ad6a5d9959c9ac59faa0897efb230",
+      "current_sha256": "0200ce02f19694ab31429254864707a9eb9c84bc6c02d5fd04c8228fc0b1cfe6",
+      "delta": "Adds private OWNER credential initialization, one-shot locked bootstrap through /api/internal/mantenedoras with in-flight no-retry behavior, and provider-probe invocation. Also retains isolated project collision/port preflight. Bootstrap and provider probe were not run."
+    },
+    "Makefile": {
+      "prior_sha256": "27c5d4a1ff36a116334270ae6a4dbea1ec15c88fa6317ad022e88e88aaa9b8bf",
+      "current_sha256": "673ca017a0a114f8127229c4cf3d31cc28d5a0dcf53daed60e3b99ee660433ef",
+      "delta": "Preserves existing generic targets and adds channels-* runtime, bootstrap/provider probe, and isolated test selectors."
+    },
+    "README.md": {
+      "prior_sha256": "a5ffaab4321212a5c75409b61d360fe8958aea5535b4b894bfec7d18c9339f15",
+      "current_sha256": "c8bf36451151c615173c5a2d6a5249e171389d13e6470ac831a75c67778cd328",
+      "delta": "Restores submodule and CI read-token setup, generic local startup, and describes isolated operator/validation environments, command-level origin/port/NODE_ENV overrides, private Evolution callback versus Meta HTTPS, and no fixture exposure through gateway/tunnel."
+    },
+    "api-app/.dockerignore": {
+      "prior_state": "cp17 admission to append only",
+      "current_sha256": "79c2485e6c515f7751aa34319cd46ab842dc53d08422270696dba74f55313d10",
+      "delta": "Appends .local-files/ and .git exclusions before any API Docker build. Operational payload directory contents were not read, hashed, copied, or reconciled."
+    },
+    "unchanged_since_cp11": {
+      "scripts/test-channels-local.sh": "e71b9a4974211af7649ca9b324921841781fee422305e8e6395737e6185f57c7",
+      "docker/local-gateway.conf.template": "22fcdc9dffa6116507330cde7a2fc3090766a61d74680ebc1200aca0be6a2b7b",
+      "docker-compose.yml": "d6b94091d5f604bd17a8e4049834d5aedbef63d10043198d36579c96a117aa99"
+    }
+  },
+  "preflight_and_partial_execution": {
+    "bash_syntax": "passed for scripts/start-channels-local.sh and scripts/test-channels-local.sh",
+    "git_diff_check": "passed before runtime start",
+    "compose_config_only": "passed; gateway is sole loopback-published service",
+    "host_port_8083": "free immediately before startup",
+    "private_env": "created exclusively after absent-path check; content was never displayed/read back. icacls DACL was restricted to current Windows identity only; POSIX stat on /mnt/c reports mode 777 because this mount does not reflect POSIX chmod, so the Windows DACL is the applicable restriction.",
+    "startup": "Interrupted during API image build at npm ci, before image completion, migration, operator API/Web/gateway startup, bootstrap, or provider probe. No final/all validation or tunnel was run."
+  },
+  "owned_resources_created_and_preserved": {
+    "containers": [
+      "leadshug_channels_local-postgres-1",
+      "leadshug_channels_local-evolution-postgres-1",
+      "leadshug_channels_local-evolution-redis-1"
+    ],
+    "container_state_at_handoff": "all three healthy; API build was interrupted; no app/gateway service started",
+    "volumes": [
+      "leadshug_channels_local_leadshug_pg_data",
+      "leadshug_channels_local_evolution_pg_data",
+      "leadshug_channels_local_evolution_redis_data"
+    ],
+    "network": "leadshug_channels_local_default",
+    "cleanup": "none; preserve resources and data"
+  },
+  "contract_blocker": "Root directed a stop after confirming REG-SEC-06 defect: successful reauthorization of a migrated credentialless official channel is promised but shared unmanaged-resource guard rejects its backfilled official identity; explicit REG-SEC-06/07/09 tests are missing. DevOps did not edit API/Web product code.",
+  "remaining": [
+    "After API correction and browser revalidation/handoff, resume runtime build/migrations/health/served freshness.",
+    "Run gateway fake-marker log probes and pinned Evolution outbound-header probe before unofficial-channel enablement.",
+    "Run the integrated all matrix only after root confirms frozen inputs.",
+    "Bootstrap the private OWNER once through the internal product endpoint after API health.",
+    "Audit production API dependencies inside the actual API image; no upgrades.",
+    "Any temporary HTTPS/tunnel work remains gated on the authorized later sequence."
+  ]
+}
