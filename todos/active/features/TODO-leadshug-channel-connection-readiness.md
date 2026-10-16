@@ -41,7 +41,7 @@ Proposta ST-CON-01: jornada de cadastro de número, com infraestrutura local est
 
 - **Current delivery stage:** Pending
 - **Qualifiers:** none
-- **Next exact step:** Web cp23 captura RED real e corrige recuperação de NOVO expirado/ambíguo, validando46browser com BFF/PG reais e fonte fresca. API cp22 passou22migrações/138unit/286PG, sem fonte alterada durante run. Meta confirmou callback; assinatura messages e onboarding do produto aguardam confirmação. Depois runtime integrado22migrações/all e reviews delta; VAL-05 permanece pendente.
+- **Next exact step:** DevOps cp24 atualiza runtime próprio para a fonte API/Web validada e22migrações, depois executa all com manifesto público completo antes/depois e raw completo. Web cp23 passou46browser e28unit/build; root conferiu230referências. Depois reviews delta; assinatura messages, wizard normal e VAL-05 continuam pendentes.
 
 ## Active Work State (Required While TODO Remains In `active/`)
 
@@ -372,7 +372,7 @@ Register: `foundation_documentation/artifacts/dependency-readiness.md`.
 
 ## Profile Scope & Handoffs (Required Before `APROVADO`)
 
-- **Current profile:** operational-coder, Web cp23 é único writer após API cp22 terminal verde e root conferir230referências públicas. API/DevOps parados; root governa evidência; próximo handoff runtime integrado e Assurance.
+- **Current profile:** operational-devops, cp24 é único writer após API cp22 e Web cp23 terminais verdes e root conferir230referências públicas. API/Web parados; root governa evidência; próximo handoff Assurance.
 - **Primary execution profile:** operational-coder; handoff operational-devops antes de runtime/ingress.
 - **Active technical scope:** nestjs, react, postgresql, prisma, docker
 - **Expected supporting profiles:** operational-devops para target/callback; assurance-tester-quality e assurance-security-adversarial para gates aplicáveis.
@@ -855,9 +855,9 @@ Concretização de freshness cp6: root observou que `timeline-freshness.ts`, com
 - **Risk level:** high
 - **Gate decision:** required
 - **Why this risk level:** OAuth, credential por cliente, popup/origem, webhook e grants mutáveis.
-- **Attack surface in scope:** sessão+anti-CSRF BFF; origem exata Meta no postMessage; código/nonce de uso único; IDs não confiáveis; token cipher/AAD; scopes de caller.
+- **Attack surface in scope:** sessão+anti-CSRF BFF; callback SDK preso à operação atual, sem autoridade de postMessage; código/nonce de uso único; IDs não confiáveis; token cipher/AAD; scopes de caller.
 - **Attack simulation decision:** required
-- **Review evidence:** planned; negativos de replay, cross-tenant, sessão/grant revogado, origem/popup forjado, ciphertext adulterado, redirect de provider e erro redigido.
+- **Review evidence:** cp21-architecture-security.result.raw.json revisou decisões, REG-SEC e dívida de dependências. NUM-SEC-CP21-02 apontou simulações obrigatórias incompletas; API cp22 as completou com286PG verdes, ainda sujeito a revisão delta. Runtime/header/log/HTTPS têm provas cp21/cp22; aparelho/OAuth/IN/OUT não executados.
 - **Residual security risk:** crypto não protege aplicação comprometida; credenciais não entram em raw webhook/audit, DTO, URL registrada, Playwright trace/screenshot ou artefato. URL Evolution só de configuração allowlisted; não aceitar URL livre do operador.
 
 ## Performance & Concurrency Risk Assessment (Mandatory Before Delivery)
@@ -886,10 +886,10 @@ Uma etapa bounded com cinco clientes e seis leituras por cliente,30verificaçõe
 ## Verification Debt Assessment (Required Before `Completed`; mandatory audit for `medium|big` or when debt signals exist)
 
 - **Audit outcome:** high
-- **Why this outcome:** avaliação provisória do estágio atual: produto já alterado e correções de browser, runtime/all, reviews e prova externa ainda pendentes; auditoria independente de encerramento não executada. Nenhum aceite de dívida ou closure inferido.
+- **Why this outcome:** auditorias cp21 executadas e adjudicadas; correções locais/API e browser, runtime/all da fonte final, reviews delta e prova externa ainda pendentes. A dívida obrigatória de VAL-05 impede fechamento, sem dispensa implícita.
 - **Inline code TODO debt:** none
-- **Evidence / audit artifact:** planned, sem claim de audit realizado.
-- **Accepted residual debt:** none; VAL-05 externa não pode ser dispensada implicitamente.
+- **Evidence / audit artifact:** delivery-audit-cp21-v2/round-01/resolution.md; cp21-architecture-security.result.raw.json; cp22-rerun3-result.json. Gate final ainda não satisfeito.
+- **Accepted residual debt:** TQA-CP21-02, proveniência mixed/test-after preservada sem RED histórico fabricado, owner executor/revisor deste TODO; BLG-leadshug-runtime-dependency-security, restrita ao operador privado e devida antes de usuários autenticados não confiáveis. VAL-05 externa continua requisito obrigatório, não dívida aceita para dispensá-la.
 
 ## Independent Test Quality Audit Gate (Deterministic Floor From Audit Escalation)
 
@@ -898,8 +898,8 @@ Uma etapa bounded com cinco clientes e seis leituras por cliente,30verificaçõe
 - **Package mode:** bounded-file-set
 - **Audit isolation mode:** fresh internal no-context reviewer
 - **Internal reviewer mandate:** required; distinto do executor, aguardar terminal sem deadline arbitrário.
-- **Audit status:** not_run
-- **Findings summary:** planejado para após implementação/prova primária; não foi dispensado.
+- **Audit status:** blocked
+- **Findings summary:** TQA cp21 terminal aceitou cobertura local com dívida de processo, mas VAL-05 permanece obrigatória e security apontou simulações específicas adicionais. Correções e revisão delta aguardadas; nada dispensado.
 - **Evidence / reference:** artifacts/reviews/leadshug-number-onboarding-20261015
 - **Canonical multi-lane audit protocol:** audit-protocol-triple-review
 - **Waiver authority / reference:** n/a
@@ -921,8 +921,8 @@ Uma etapa bounded com cinco clientes e seis leituras por cliente,30verificaçõe
 
 - **Cutover audit decision:** required
 - **Why this decision:** credencial global é retirada; todos os consumers precisam convergir, sem shim/fallback.
-- **Cutover audit status:** not_run
-- **Evidence / reference:** audit-protocol-triple-review após implementação; sem dispensa.
+- **Cutover audit status:** blocked
+- **Evidence / reference:** delivery-audit-cp21-v2/round-01/cutover-integrity.result.raw.json aceitou convergência local sem fallback; CUTOVER-EXT-01 mantém VAL-05 pendente. Resolução da rodada01 preserva esse limite e requer delta após correções locais.
 
 ## Delivery Confidence Gate (Required for `✅ Production-Ready`)
 
@@ -1119,3 +1119,11 @@ Final cp22-rerun3 passou22migrações,lint/build,138unitários/19arquivos e286PG
 Web cp23 recebeu writer único para os dois cenários de recuperação do botão anunciado, com RED antes da edição do componente. Controle de expiração é test-only, scope attemptId+BU exatos, em fixture privada de DB descartável; troca Meta ambígua usa failures.meta.exchange, não ambiguousAfter. Nenhum envio real ou OAuth remoto inferido. Runtime próprio permanece imagemcp21/21migrações até ambos coders terminarem e novo build/prova.
 
 Dois runs browser cp23 preservados comprovaram a falha real de recuperação após troca ambígua: reserva retorna409 em vez de201/REAUTORIZAR. Expiração ainda não chegou à asserção de produto: a fixture exigia UUID36 para attemptId, mas cryptoRandomId() de number-registration.service.ts gera32hex e substitui o default Prisma. Web, ainda writer único, recebeu ajuste test-only estritamente nesse guard de api-app/test/timeline-fixtures.cjs, já admitido no contrato; manter BU UUID, autenticação, DB descartável e todos os predicados de escopo/estado. Não alterar IDs do produto nem aceitar os dois runs como RED de expiração. Após corrigir o harness, capturar essa falha antes de editar o componente.
+
+RED cp23 confirmado em cp23-web-red-confirmed.log, antes de editar o componente:44/46 passaram, somente os dois casos novos falharam com409/CHANNEL_SLOT_OCCUPIED e requestNOVO sem channelId na mesma BU. Expiração chegou a ERROR/EXPIRED com canal retido; controles sem header403 e BU estrangeira404 passaram. Quatro logs anteriores preservam problemas de harness/sincronização e uma falha intermitente no cenário existente Ana/grant, não reproduzida na quinta rodada; nenhum desses controles antigos foi relaxado. Web agora aplica recuperação por projeção fresca e canal exato; GREEN ainda não reivindicado.
+
+### Web cp23 terminal verde; DevOps cp24 assume
+
+Web parou após46/46browser no runner canônico, inclusive as duas recuperações201/REAUTORIZAR na mesma BU/canal/geração, e28/28unitários/build Web. Dois manifestos pré/pós independentes de230referências permaneceram iguais; root os conferiu contra a fonte atual e verificou os SHA dos logs RED e Web. Handoff cp23-web-handoff.md e root-cp23-web-receipt.json preservam a prova. O browser final foi observado na sessão48343, sem raw completo capturado; isso não será apresentado como log integral. O all integrado já requerido capturará raw completo e substituirá esse limite. A primeira rodada pós-fix falhou somente nos seletores dos dois novos testes, pois o botão correto se chama Reservar reautorização; a busca foi ajustada sem relaxar contrato/DB/nonce nem mudar o texto do produto.
+
+DevOps cp24 recebe writer único para build/migration/runtime próprio e all integrado da fonte consolidada, com inventário público completo capturado ANTES do comando, comparação posterior e prova de bundle servido/attestation antes dos workers. Preservar túnel atual, Meta/OWNER/chaves/token/ACL, DB e volumes; não repetir bootstrap nem iniciar OAuth/QR por inferência. API/Web parados. Usuário também recebeu pergunta de estado sobre o wizard normal; nenhum onboarding ou módulo será contornado.
