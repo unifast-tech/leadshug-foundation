@@ -1,0 +1,13 @@
+{
+  "checkpoint": "cp36g-tqa-resume-protocol",
+  "priorAcceptedResult": false,
+  "priorRawExists": false,
+  "priorNativeProcessPresent": false,
+  "priorExitCode": null,
+  "observation": "after client/session resumption no native reviewer process/result remains; original incomplete log retained; no prior terminal assessment available",
+  "priorLogSha256": "4ec75fb1380c002907c69c0882dd476139280d7311f2f81bdc07bcf86a75d61a",
+  "completeOriginalPackageSha256": "309c4592d1c36518fe206d2e3e1e29b6ce2be85acfb7fe8274a4a6e97e1c1ee4",
+  "dispatchSha256": "0adc8fa618dda49ee54fe3b6042bb0479e014ae720e67b552e0d39dbf5821b75",
+  "retry": "one fresh full-package native retry, unchanged scope/rubric/model/binding; not a timeout replacement",
+  "readiness": "PACED-Ready after read-only verification"
+}

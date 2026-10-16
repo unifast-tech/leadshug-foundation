@@ -1,0 +1,18 @@
+{
+  "checkpoint": "root-cp36f-red",
+  "rawLogSha256": "c5d2e74bb10f336c98be5200c65a230fb75592e5afd429b1e8a7b87bad0b4a5a",
+  "beforeBaselineMatchesCp36e": true,
+  "onlyPreFixEdits": [
+    "api-app/test/number-onboarding-flow.e2e-spec.ts",
+    "api-app/src/integrations/meta/meta.client.spec.ts"
+  ],
+  "productionMetaHashUnchangedBeforeRed": true,
+  "command": "bash scripts/test-channels-local.sh api",
+  "exitCode": 1,
+  "actualUnitCounts": {
+    "passed": 142,
+    "failed": 8
+  },
+  "realPgE2eExecuted": false,
+  "limits": "RED unit assertions demonstrated malformed successful provider data fails absence/class contract. Suite stopped before PG; no fail-first claim for BFF added assertions."
+}

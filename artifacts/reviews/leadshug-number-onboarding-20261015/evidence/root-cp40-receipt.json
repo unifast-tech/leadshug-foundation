@@ -1,0 +1,33 @@
+{
+  "checkpoint": "root-cp40-receipt",
+  "artifactHashesVerified": true,
+  "candidateImageId": "sha256:8f78e4813da53f29e48dd61e20077f616b4c915d30fe8d7676c102df8b9bd805",
+  "sourceManifestSha256": "88d419218e080050e2d95724b1ecee19a095c4541e74b6b0f658536336f6859e",
+  "acceptedScope": "inert current-source build/offline platform probe and reported operator preservation only",
+  "candidateServed": false,
+  "operatorContainersAndVolumesPreserved": {
+    "sevenOwnedContainersMatchCp38AndCp39IdentitiesAndImages": true,
+    "allSevenOwnedContainersRunning": true,
+    "fiveOwnedVolumesMatchCp38AndCp39Identities": true,
+    "allFiveVolumesLocal": true,
+    "operatorApiImageAndContainerUnchanged": true,
+    "cp39HistoricalCandidateImageUnchanged": true,
+    "composeActionOrRuntimeMutationPerformed": false,
+    "migrationDatabaseOrProviderActionPerformed": false
+  },
+  "httpsReadinessOnly": {
+    "origin": "https://operating-brussels-internship-interviews.trycloudflare.com",
+    "wslDnsResolved": false,
+    "wslDnsErrorClass": "gaierror",
+    "wslDnsErrorNumber": -2,
+    "wslRootReachable": false,
+    "wslHealthReachable": false,
+    "windowsRootHttpStatus": "000",
+    "windowsRootCurlExit": 6,
+    "windowsHealthHttpStatus": "000",
+    "windowsHealthCurlExit": 6,
+    "newHostnameOrTunnelAttempted": false,
+    "note": "Public hostname did not resolve in WSL or Windows during this bounded optional check; no tunnel action taken."
+  },
+  "remaining": "TQA/final/sourcecheckpoint before API activation; diagnose temporary hostname resolution failure, not provider recovery proof"
+}

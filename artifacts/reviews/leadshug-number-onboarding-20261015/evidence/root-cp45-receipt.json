@@ -1,0 +1,10 @@
+{
+  "checkpoint": "root-cp45-receipt",
+  "jsonAndMarkdownHashesVerified": true,
+  "confirmed": "no native cloudflared.exe on WindowsPATH; gateway healthy; cp43 recorded Windows/WSL processes now absent and DNS unavailable",
+  "notProven": "why processes exited or record disappeared; WSL/QUIC cause remains hypothesis",
+  "next": "after Coder STOP/freeze only, pinned portable nativeWindowsclient2026.10.0 and controlled public-callback test; source/TQA/final gates on API unchanged",
+  "officialRelease": "https://github.com/cloudflare/cloudflared/releases/tag/2026.10.0",
+  "nativeWindowsAmd64Sha256": "86aee4017b26625cee8484c113558f48effa4cd47f7aa05fcf425604e5d2b23c",
+  "privateConfigOrSourceChanged": false
+}

@@ -1,0 +1,48 @@
+{
+  "checkpoint": "cp45-native-tunnel-preflight",
+  "capturedAtUtc": "2026-10-16T22:34:57Z",
+  "scope": "read-only native Windows client, current cp43 lifecycle, and loopback gateway preflight",
+  "nativeClient": {
+    "cloudflaredExeOnWindowsPath": false,
+    "trustedExecutablePath": null,
+    "version": null,
+    "sha256": null,
+    "officialPinnedReleaseVersion": "2026.10.0",
+    "officialPinnedWindowsAmd64Sha256": "86aee4017b26625cee8484c113558f48effa4cd47f7aa05fcf425604e5d2b23c",
+    "binaryAvailableForHelpCheck": false
+  },
+  "cp43Lifecycle": {
+    "hostname": "minority-influenced-veterans-ready.trycloudflare.com",
+    "target": "http://127.0.0.1:8083",
+    "windowsOwnerPid": 16108,
+    "windowsOwnerPresentAtCheck": false,
+    "wslDistribution": "Ubuntu",
+    "wslBootId": "3dcf3c7b-a7fb-47f5-98b4-94c3df3f4e3c",
+    "wslSupervisorPid": 125292,
+    "wslSupervisorPresentAtCheck": false,
+    "wslCloudflaredPid": 125296,
+    "wslCloudflaredPresentAtCheck": false,
+    "interpretation": "the cp43 owners were absent at these exact PIDs; cause of hostname DNS failure is not inferred"
+  },
+  "currentTransport": {
+    "windowsLocalGatewayHealthStatus": 200,
+    "wslLocalGatewayTcp8083": "open",
+    "windowsDns": "ENOTFOUND",
+    "wslDns": "EAI_NONAME"
+  },
+  "futurePlanProposal": {
+    "portableNativeWindowsClientPinnedVersion": "2026.10.0",
+    "target": "http://127.0.0.1:8083",
+    "supervision": "detached Windows-owned process with stdout/stderr drained in memory and only allowlisted hostname/event classes persisted",
+    "configuration": "empty explicit config; do not inspect or use homedir credentials/config",
+    "transportOption": "inspect --help for --protocol http2 only if a trusted pinned executable becomes available",
+    "causeOfPriorFailure": "unknown; no QUIC/WSL causality inferred"
+  },
+  "mutations": {
+    "downloadOrInstall": false,
+    "processStartStopOrCleanup": false,
+    "sourceOrGit": false,
+    "applicationRuntimeOrPrivateConfig": false,
+    "providerMetaOrDatabase": false
+  }
+}

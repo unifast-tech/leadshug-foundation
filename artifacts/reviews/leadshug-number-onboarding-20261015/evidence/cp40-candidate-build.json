@@ -1,0 +1,81 @@
+{
+  "checkpoint": "cp40-candidate-build",
+  "capturedAtUtc": "2026-10-16T21:15:18Z",
+  "scope": "One isolated API candidate build and offline artifact probe from frozen cp36f source; no serving/runtime update.",
+  "source": {
+    "manifestFile": "cp36f-source-after.sha256",
+    "manifestSha256": "88d419218e080050e2d95724b1ecee19a095c4541e74b6b0f658536336f6859e",
+    "manifestEntries": 9,
+    "allNineHashesVerifiedBeforeBuild": true,
+    "allNineHashesVerifiedAfterBuildAndProbe": true,
+    "privatePayloadsReadHashedCopiedOrMounted": false
+  },
+  "build": {
+    "cli": "Windows Docker CLI docker.exe",
+    "dockerfile": "api-app/Dockerfile",
+    "context": "api-app",
+    "contextTransferredDisplay": "43.99 kB",
+    "dockerignoreExcludesPrivateDotenvAndLocalFiles": true,
+    "buildArgumentsOrPrivateEnvironmentPassed": false,
+    "tagWasAbsentBeforeBuild": true,
+    "tag": "leadshug-channels-api-candidate:cp36f-88d419218e08",
+    "labels": {
+      "owner": "number-onboarding",
+      "checkpoint": "cp40",
+      "source-manifest": "88d419218e080050e2d95724b1ecee19a095c4541e74b6b0f658536336f6859e"
+    },
+    "buildExitCode": 0,
+    "imageId": "sha256:8f78e4813da53f29e48dd61e20077f616b4c915d30fe8d7676c102df8b9bd805",
+    "platform": "linux/amd64",
+    "buildLog": "cp40-candidate-build.log",
+    "buildLogSha256": "71483b6d92e4f4a60be78992956fa32fffac1f77a4ff32727781a54b5db61608"
+  },
+  "ephemeralProbe": {
+    "completed": true,
+    "networkNone": true,
+    "readOnlyRootFilesystem": true,
+    "environmentArguments": false,
+    "portsOrVolumes": false,
+    "entrypointOverriddenSoApiAndMigrationsDidNotStart": true,
+    "probeContainerRemoved": true,
+    "node": "v22.23.3",
+    "platform": "linux",
+    "alpineRelease": "3.24.2",
+    "openssl": "3.5.8",
+    "prismaClientResolved": true,
+    "generatedPrismaClientPresent": true,
+    "metaClientExports": ["META_CLIENT", "MetaIndisponivelError", "MetaHttpClient"],
+    "convergenceHelperExports": ["convergeReceiptVerifiedAttempt"],
+    "probeErrors": []
+  },
+  "operatorPreservation": {
+    "sevenOwnedContainersMatchCp38AndCp39IdentitiesAndImages": true,
+    "allSevenOwnedContainersRunning": true,
+    "fiveOwnedVolumesMatchCp38AndCp39Identities": true,
+    "allFiveVolumesLocal": true,
+    "operatorApiImageAndContainerUnchanged": true,
+    "cp39HistoricalCandidateImageUnchanged": true,
+    "composeActionOrRuntimeMutationPerformed": false,
+    "migrationDatabaseOrProviderActionPerformed": false
+  },
+  "httpsReadinessOnly": {
+    "origin": "https://operating-brussels-internship-interviews.trycloudflare.com",
+    "wslDnsResolved": false,
+    "wslDnsErrorClass": "gaierror",
+    "wslDnsErrorNumber": -2,
+    "wslRootReachable": false,
+    "wslHealthReachable": false,
+    "windowsRootHttpStatus": "000",
+    "windowsRootCurlExit": 6,
+    "windowsHealthHttpStatus": "000",
+    "windowsHealthCurlExit": 6,
+    "newHostnameOrTunnelAttempted": false,
+    "note": "Public hostname did not resolve in WSL or Windows during this bounded optional check; no tunnel action taken."
+  },
+  "activation": {
+    "candidateIsServed": false,
+    "cp39CandidateRetaggedOrReplaced": false,
+    "retagOrRecreateAuthorizedOrPerformed": false,
+    "pending": "Fresh TQA terminal, separate final review, and source checkpoint acceptance."
+  }
+}

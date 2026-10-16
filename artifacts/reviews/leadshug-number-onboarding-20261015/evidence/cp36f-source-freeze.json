@@ -1,0 +1,96 @@
+{
+  "checkpoint": "cp36f",
+  "scope": [
+    "api-app/src/integrations/meta/meta.client.ts",
+    "api-app/src/integrations/meta/meta.client.spec.ts",
+    "api-app/test/number-onboarding-flow.e2e-spec.ts",
+    "api-app/src/domain/channels/channels.service.ts",
+    "api-app/src/domain/channels/receipt-attempt-convergence.ts",
+    "api-app/src/surfaces/webhooks/evolution.controller.ts",
+    "api-app/test/helpers.ts",
+    "api-app/test/browser-server.cjs",
+    "web-app/e2e/telas.spec.ts"
+  ],
+  "red_test_source_manifest": "cp36f-red-source.sha256",
+  "pre_fix_hashes_at_red": {
+    "api-app/src/integrations/meta/meta.client.ts": "7938f5c09e23af3dad61442712fa18a1fea93b22a59bdd40384be44b990c22f5",
+    "api-app/src/integrations/meta/meta.client.spec.ts": "11775f188b20ee1d4f3c18e45404822370c3642ddba2b8224d4af7a5902ce343",
+    "api-app/test/number-onboarding-flow.e2e-spec.ts": "ddb1bc965af5373ad05256c9ad191046b6863067cf84da66afba53f2280f3556",
+    "api-app/src/domain/channels/channels.service.ts": "e910b2b395abc0ebca74deea917cf107dd36eca58491f1b0893efb702e1dfcf5",
+    "api-app/src/domain/channels/receipt-attempt-convergence.ts": "ca8cb841fab2574866c3508ab41aa0a269608a20658db18840b2b89f0c281512",
+    "api-app/src/surfaces/webhooks/evolution.controller.ts": "12139a5b50b4dacf43492e038c91f006c9db999d0f6a76fd5d73e45ee987a041",
+    "api-app/test/helpers.ts": "4d4b1c8c4e17c8fa7f338fdeeb2d63d093753038cece0d3aea566ae95c13619a",
+    "api-app/test/browser-server.cjs": "bf260c3124a867bda495509983055557988bc958141f3a8399e3e69de3aff451",
+    "web-app/e2e/telas.spec.ts": "ee4911de7148eebee35d5ddcc7d9bbbcc6faf051f0ea3f415e338d6809bb9d59"
+  },
+  "all_source_manifest_after_validation": "cp36f-source-after.sha256",
+  "post_validation_hashes": {
+    "api-app/src/integrations/meta/meta.client.ts": "39066541ae26cd1a7b2b516c0d76f36b2ac55e5a90dbd0f0408cf0058c4657da",
+    "api-app/src/integrations/meta/meta.client.spec.ts": "11775f188b20ee1d4f3c18e45404822370c3642ddba2b8224d4af7a5902ce343",
+    "api-app/test/number-onboarding-flow.e2e-spec.ts": "ddb1bc965af5373ad05256c9ad191046b6863067cf84da66afba53f2280f3556",
+    "api-app/src/domain/channels/channels.service.ts": "e910b2b395abc0ebca74deea917cf107dd36eca58491f1b0893efb702e1dfcf5",
+    "api-app/src/domain/channels/receipt-attempt-convergence.ts": "ca8cb841fab2574866c3508ab41aa0a269608a20658db18840b2b89f0c281512",
+    "api-app/src/surfaces/webhooks/evolution.controller.ts": "12139a5b50b4dacf43492e038c91f006c9db999d0f6a76fd5d73e45ee987a041",
+    "api-app/test/helpers.ts": "4d4b1c8c4e17c8fa7f338fdeeb2d63d093753038cece0d3aea566ae95c13619a",
+    "api-app/test/browser-server.cjs": "bf260c3124a867bda495509983055557988bc958141f3a8399e3e69de3aff451",
+    "web-app/e2e/telas.spec.ts": "ee4911de7148eebee35d5ddcc7d9bbbcc6faf051f0ea3f415e338d6809bb9d59"
+  },
+  "changed_since_red": [
+    "api-app/src/integrations/meta/meta.client.ts"
+  ],
+  "canonical_validation": {
+    "command": "bash scripts/test-channels-local.sh all",
+    "command_file": "cp36f-api-all-command.txt",
+    "raw_log": "cp36f-api-all.log",
+    "exit_code_file": "cp36f-api-all.exit-code",
+    "exit_code": 0,
+    "runtime": "Windows Docker runner; Node v22.23.3; OpenSSL 3.0.22; Prisma debian-openssl-3.0.x; isolated PostgreSQL validation namespace",
+    "counts": {
+      "api_unit": 150,
+      "postgres_e2e": 288,
+      "web_unit": 28,
+      "browser": 47,
+      "migrations": 22
+    },
+    "freshness_basis": "Genuine pre-worker freshness is retained in cp36f-pre-worker-freshness.json and cp36f-browser-attestation.json, copied byte-for-byte from the runner outputs. Both nine-path source manifests exactly match cp36f-source-after.sha256; both API/Web HEADs match current submodule HEADs. The pre-worker capture ran before Playwright workers, verified disposable DB family and API/fixture/preview health, and confirmed served JS hash equals dist. The browser attestation records 22 completed migrations.",
+    "pre_worker_freshness": {
+      "artifact": "cp36f-pre-worker-freshness.json",
+      "capturedAtUtc": "2026-10-16T21:00:33.250Z",
+      "source_manifest_matches_all_nine": true,
+      "current_api_head": "f134bd11449a553e6f57e66cdc8fc71032151060",
+      "current_web_head": "d33c82c26760c671d98cab6f3e7bfe5676122c69",
+      "node": "v22.23.3"
+    },
+    "browser_authority_attestation": {
+      "artifact": "cp36f-browser-attestation.json",
+      "capturedAtUtc": "2026-10-16T21:00:31.531Z",
+      "source_manifest_matches_all_nine": true,
+      "current_api_head": "f134bd11449a553e6f57e66cdc8fc71032151060",
+      "current_web_head": "d33c82c26760c671d98cab6f3e7bfe5676122c69",
+      "database": {
+        "name": "leadshug_timeline_channels_ci",
+        "endpoint": "postgresql://validation-postgres:5432/leadshug_timeline_channels_ci",
+        "completedMigrations": 22
+      },
+      "endpoints": {
+        "apiHealth": 200,
+        "fixtureHealth": 200,
+        "preview": 200,
+        "servedBundle": "/assets/index-txvhtd65.js"
+      },
+      "servedBundleSha256": "d14343604557296f2ed62c1df47d9c80d81c323abafd89ccbb64a6a0746ff4bd",
+      "distBundleSha256": "d14343604557296f2ed62c1df47d9c80d81c323abafd89ccbb64a6a0746ff4bd",
+      "served_equals_dist": true
+    }
+  },
+  "raw_log_sha256": {
+    "cp36f-api-red.log": "c5d2e74bb10f336c98be5200c65a230fb75592e5afd429b1e8a7b87bad0b4a5a",
+    "cp36f-api-all.log": "3a4406ed8160039691a289d7bb10dd16af0fa6ae221f4732aa118176f2133b22"
+  },
+  "runtime_operator": "not changed or exercised",
+  "provider_external_calls": "none; the BFF test uses the real adapter with stubbed fetch responses and a declared META_CLIENT port fixture",
+  "copied_attestation_sha256": {
+    "cp36f-pre-worker-freshness.json": "0ae330b59e0082c45222a44bb6e1cd4acc94b4aa0601ebc2a9d9b2124087e50e",
+    "cp36f-browser-attestation.json": "91dfd855e698503fbfb263fcf4adbdf403bcb683b39880e3954b281d1c186bfc"
+  }
+}

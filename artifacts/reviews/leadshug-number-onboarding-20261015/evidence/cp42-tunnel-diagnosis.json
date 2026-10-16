@@ -1,0 +1,110 @@
+{
+  "checkpoint": "cp42-tunnel-diagnosis",
+  "capturedAtUtc": "2026-10-16T21:18:52Z",
+  "scope": "Read-only diagnosis of the cp29 temporary tunnel and local gateway; no process, config, source, runtime, provider, database, or authentication action.",
+  "origin": "https://operating-brussels-internship-interviews.trycloudflare.com",
+  "target": "http://127.0.0.1:8083",
+  "localGateway": {
+    "rootStatus": 200,
+    "rootBytes": 694,
+    "healthStatus": 200,
+    "healthBytes": 15,
+    "ownedGatewayContainerId": "0c48d94e9fe5b4ad75efd304db2752dfa4cab3befc59b9f736574d6cd551eea3",
+    "containerOrGatewayChanged": false
+  },
+  "publicTransport": {
+    "wslDnsResolved": false,
+    "wslDnsErrorClass": "gaierror",
+    "wslDnsErrorNumber": -2,
+    "wslRootReachable": false,
+    "wslHealthReachable": false,
+    "windowsDnsResolved": false,
+    "windowsResolverErrorId": "DNS_ERROR_RCODE_NAME_ERROR",
+    "directPublicResolver": "1.1.1.1",
+    "directPublicResolverErrorId": "DNS_ERROR_RCODE_NAME_ERROR",
+    "windowsRootHttpStatus": "000",
+    "windowsRootCurlExit": 6,
+    "windowsHealthHttpStatus": "000",
+    "windowsHealthCurlExit": 6,
+    "causeOfHostnameDnsLoss": "unknown; not inferred"
+  },
+  "savedFilteredTunnelOutput": {
+    "generatedHostname": "operating-brussels-internship-interviews.trycloudflare.com",
+    "capturedAtUtc": "2026-10-16T18:01:45.648349Z",
+    "rawTunnelOutputPersisted": false,
+    "exitStatusFilePresent": false
+  },
+  "pinnedTunnelBinary": {
+    "path": "foundation_documentation/artifacts/tmp/number-onboarding-execution/cloudflared-tmp/cloudflared",
+    "version": "2026.10.0",
+    "expectedSha256": "d33ff2d14475178d2012c2c56beba87389ac5ded27649519f198a7d3134a99db",
+    "currentExecutablePathMatches": true,
+    "currentExecutableSha256": "d33ff2d14475178d2012c2c56beba87389ac5ded27649519f198a7d3134a99db"
+  },
+  "windowsOwner": {
+    "pid": 29132,
+    "name": "wsl.exe",
+    "executablePath": "C:\\WINDOWS\\System32\\wsl.exe",
+    "createdAtUtc": "2026-10-16T18:01:37.168677Z",
+    "expectedDistro": "Ubuntu",
+    "parentPid": 31784,
+    "parentStillPresent": false,
+    "commandMatchesExpectedDistroAndCp29Script": true,
+    "commandContainsLocalTarget": false,
+    "identityMatchesCp29OwnerRecord": true
+  },
+  "wslProcesses": {
+    "pidsFileMatchesObservedPids": true,
+    "pidsFileMtimeUtc": "2026-10-16T18:01:37Z",
+    "supervisor": {
+      "pid": 77581,
+      "parentPid": 77580,
+      "commandMatchesCp29RunScript": true,
+      "runScriptSha256MatchesCp29": true,
+      "startTimeUtc": "2026-10-16T18:32:36Z"
+    },
+    "cloudflared": {
+      "pid": 77593,
+      "parentPid": 77581,
+      "binaryPathMatchesPinned": true,
+      "binaryHashMatchesPinned": true,
+      "binaryVersion": "2026.10.0",
+      "commandTargetsExactLoopbackGateway": true,
+      "startTimeUtc": "2026-10-16T18:32:37Z"
+    },
+    "processContinuityFromCp29": "unproven: current WSL process start times are after the cp29 capture and after the unchanged pids-file mtime; matching PID/path/command/hash alone does not prove continuity",
+    "networkSockets": {
+      "tcpListen": 1,
+      "tcpEstablished": 0,
+      "udp": 0,
+      "interpretation": "No active outbound tunnel transport socket was observed; one TCP listener remains."
+    }
+  },
+  "diagnosis": {
+    "confirmed": [
+      "The local gateway still answers root and health successfully.",
+      "The saved temporary hostname returns DNS name errors from WSL, Windows default DNS, and the direct public resolver check.",
+      "HTTPS root and health therefore cannot currently be reached through the saved hostname.",
+      "The Windows WSL owner still matches the cp29 command and creation-time record.",
+      "The current WSL child processes match the expected binary/script/target, but their process continuity from cp29 is not established and they expose no established outbound transport socket."
+    ],
+    "notInferred": [
+      "Why the generated hostname stopped resolving.",
+      "Whether the current WSL child processes are the same process instances observed during cp29."
+    ]
+  },
+  "boundedRestorationPlanForSeparateRootActivation": [
+    "Keep the current gateway target and all application/runtime configuration unchanged; local gateway health is already 200.",
+    "If root authorizes restoration, launch one new Windows-owned detached wsl.exe handle using the observed Ubuntu distribution and the pinned cloudflared 2026.10.0 binary with the verified SHA-256, targeting only http://127.0.0.1:8083.",
+    "Use a new process record and capture only allowlisted generated-host/handle metadata; continuously drain and filter stdout/stderr before any persistence.",
+    "Require the generated hostname to resolve from WSL and Windows and require HTTPS root plus /health to return 200 in both contexts before any later origin/config action.",
+    "Do not terminate existing PIDs based on PID alone; continuity of the WSL child processes is currently unproven. Any retirement must use fresh executable, start-time, parent, command, and ownership guards after a replacement transport is live."
+  ],
+  "mutations": {
+    "startStopKillOrRestart": false,
+    "applicationOrTunnelConfigChanged": false,
+    "containerVolumeOrSourceChanged": false,
+    "providerDatabaseOrAuthenticationProbed": false,
+    "rawLogsOrPrivateValuesPersisted": false
+  }
+}

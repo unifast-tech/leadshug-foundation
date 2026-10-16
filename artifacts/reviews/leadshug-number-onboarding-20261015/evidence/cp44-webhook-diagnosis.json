@@ -1,0 +1,75 @@
+{
+  "checkpoint": "cp44-webhook-diagnosis",
+  "capturedAtUtc": "2026-10-16T22:32:17Z",
+  "scope": "read-only synthetic Meta webhook verification GET diagnosis",
+  "apiContainer": {
+    "id": "c2c74bc267af724a0b8a33a415b04084e74e0867669228cf906f7c306541bec0",
+    "composeProject": "leadshug_channels_local",
+    "composeService": "api",
+    "imageId": "sha256:c2e8d62bde2c85305deb9d72569f773072e77292465e09ed7283051b40ed4f4f",
+    "state": "running"
+  },
+  "verificationContract": {
+    "route": "GET /webhooks/meta",
+    "validConditions": [
+      "hub.mode=subscribe",
+      "hub.verify_token equals runtime WEBHOOK_VERIFY_TOKEN"
+    ],
+    "success": "returns hub.challenge",
+    "otherwise": "403"
+  },
+  "secretCheck": {
+    "dotenvFieldPresent": true,
+    "runtimeFieldPresent": true,
+    "valuesEqual": true,
+    "method": "dotenv parsed in memory; comparison performed inside exact owned API container via stdin; no value/hash/config dump persisted"
+  },
+  "gatewayLocal": {
+    "validChallenge": {
+      "status": 200,
+      "bodyMatchesSyntheticChallenge": true
+    },
+    "invalidToken": {
+      "status": 403
+    },
+    "missingToken": {
+      "status": 403
+    }
+  },
+  "publicHost": {
+    "hostname": "minority-influenced-veterans-ready.trycloudflare.com",
+    "targetPath": "/webhooks/meta",
+    "wslDns": "EAI_NONAME",
+    "windowsDns": "ENOTFOUND",
+    "validChallenge": {
+      "status": null,
+      "bodyMatchesSyntheticChallenge": false,
+      "result": "not reached: DNS resolution failed"
+    },
+    "invalidToken": {
+      "status": null,
+      "result": "not reached: DNS resolution failed"
+    },
+    "missingToken": {
+      "status": null,
+      "result": "not reached: DNS resolution failed"
+    }
+  },
+  "logHygiene": {
+    "gatewayFormatOmitsRequestTargetQueryHeadersAndBody": true,
+    "noRawResponseOrRequestUrlsPersisted": true,
+    "noApplicationOrTunnelLogsRead": true
+  },
+  "limitations": [
+    "Public callback validation could not be assessed because the hostname did not resolve in either WSL or Windows at capture time.",
+    "Local gateway confirms the API token and GET contract only; it does not prove public Meta configuration or Meta acceptance."
+  ],
+  "mutations": {
+    "source": false,
+    "privateConfig": false,
+    "container": false,
+    "tunnel": false,
+    "providerMeta": false,
+    "database": false
+  }
+}

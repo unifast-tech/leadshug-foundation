@@ -1,0 +1,42 @@
+{
+  "schema_version": "subagent-review-merge-v2",
+  "artifact_kind": "subagent_review_merge",
+  "authoritative": false,
+  "edit_policy": "derived_merge_packet",
+  "dispatch_path": "/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp36f-tqa.dispatch.json",
+  "review_kind": "test_quality_audit",
+  "review_count": 1,
+  "reviewer_labels": [
+    "Codex"
+  ],
+  "highest_finding_severity": "medium",
+  "axis_summary": {
+    "performance": "acceptable",
+    "elegance": "mixed",
+    "structural_soundness": "mixed",
+    "operational_fit": "mixed"
+  },
+  "recommended_paths": [
+    "Hold cp36f source-checkpoint acceptance; make malformed debug-grant structures fail as MetaIndisponivelError, add targeted RED/GREEN unit and BFF coverage, rerun the declared all suite with fresh manifests, then obtain a fresh TQA followed by the separate final review."
+  ],
+  "exact_next_step": "Record reviewer resolutions in the governing TODO using the machine-checkable resolution table or equivalent gate ledger, then extract the derived resolution packet and decide whether another bounded review pass is still required.",
+  "findings": [
+    {
+      "finding_id": "F-6644F30F",
+      "severity": "medium",
+      "title": "Malformed debug-grant structures can escape the typed Meta failure contract",
+      "rationale": "Issue card.\n\nEvidence: `api-app/src/integrations/meta/meta.client.ts:93-104` spreads `data.scopes` and calls `.map` on `data.granular_scopes` after unchecked casts. A provider response whose parsed root is valid JSON object but whose `data.scopes` is an object, whose `granular_scopes` is non-array/null-containing, or whose target list is malformed can throw raw `TypeError`. `api-app/src/domain/channels/channels.service.ts:288-295` maps only `MetaIndisponivelError` to the fixed 503, so this provider-shape failure becomes generic 500 instead. Current tests cover a structurally valid grant with wrong values at `meta.client.spec.ts:164-172` and malformed phone pages at `:175-203`; neither exercises the grant-shape branch. The new root non-record guard at `meta.client.ts:209-216` also lacks a direct array/null/primitive response case.\n\nWhy now: cp36f expressly claims fail-closed handling for malformed successful provider data and selective safe BFF mapping. This is the remaining untyped external-data path in that verification flow.\n\nOptions:\nA. Do nothing \u2014 effort none; risk medium; blast radius is official administrative verification; maintenance burden remains hidden schema assumptions; performance unchanged; elegance/structural soundness regress because equivalent provider data is classified inconsistently.\nB. Add only tests \u2014 effort low; risk low; exposes the defect but intentionally leaves the safe-error contract broken; performance unchanged; not sufficient for checkpoint acceptance.\nC. Recommended: validate grant fields before iteration, convert malformed grant structures to `MetaIndisponivelError`, and add table-driven unit cases plus one BFF representative proving fixed 503/no state mutation/lease release \u2014 small-to-medium effort; bounded adapter/BFF blast radius; negligible performance impact; restores a single coherent external-schema boundary and durable regression protection.",
+      "suggested_action": "Do not mutate this frozen source in this audit. In the corrective lane, normalize and validate debug-grant `data`, `scopes`, `granular_scopes`, granular entries, and target IDs before use; reject malformed structures with the typed safe error. Add fail-first adapter cases for non-record JSON roots and malformed grant shapes, then a representative real-adapter-through-BFF case asserting META_INDISPONIVEL, fixed public text, unchanged channel/attempt/credential/identity/receipt/audit state, and released lease.",
+      "reviewer_labels": [
+        "Codex"
+      ],
+      "source_finding_ids": [
+        "TQA-CP36F-01"
+      ],
+      "category": "tests",
+      "formalizable_hint": "yes",
+      "candidate_rule_level": "project",
+      "candidate_rule_id": "META-GRANT-SHAPE-FAIL-CLOSED"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "checkpoint": "root-cp43-receipt",
+  "jsonAndMarkdownHashesVerified": true,
+  "transportAccepted": true,
+  "publicOrigin": "https://minority-influenced-veterans-ready.trycloudflare.com",
+  "scope": "DNS/HTTPS/root/health/accepted WebJS only; no auth or application-origin migration/device session proof",
+  "ownership": "fresh Windows native creation identity plus Linux boot_id/start_ticks/cmd/executable/target; guarded rollback retained",
+  "sevenContainersFiveVolumesPreserved": true,
+  "oldCp29ProcessesUntouched": true,
+  "apiServedStillOld": true,
+  "metaConfiguration": "user update now requested; not yet confirmed",
+  "operatorApiActivation": "after TQA/final/sourcecheckpoint only"
+}

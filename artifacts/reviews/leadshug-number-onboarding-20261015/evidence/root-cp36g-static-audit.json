@@ -1,0 +1,19 @@
+{
+  "checkpoint": "root-cp36g-static-audit",
+  "sourceManifestSha256": "b8cb7ac56f304ca0383d58a1a00f1d9211f6e1f1108b0322481b2e52dbe55d61",
+  "scope": "current nine public paths and necessary adjacent public boundaries",
+  "knownFindings": "grant-shape and WABA101 repaired/tested but independent acceptance pending",
+  "pipelineP1P2Preflight": "no further source issue identified by root; fresh TQA/final required",
+  "ruleSpirit": "typed schema boundary before iterations, no coercive fallback, UIlimit retained outside authorization membership, same caller fences, no focused/skipped/retry-only test acceptance",
+  "performance": "network/debug1+pages2 under same lease; new linear validation, full membership intersection already computed before old slice; no new fanout/SLOclaim",
+  "security": "only expected Meta failures mapped, malformed fields fixed safe typed error; no rawpublicdetails/globaltokens/cross-owner broadening",
+  "structure": "private normalized grant parser with explicit string-array guard and existing target intersection; no new dependency/schema/public DTO",
+  "evidence": "current all2=530/22/genuine9; firstallfailed assertion preserved, no PG RED fabricated",
+  "limits": [
+    "current corrected operator runtime/recovery/humanINOUT02 unproved",
+    "officialVAL05 required unwaived",
+    "unexpected generic log redaction not proved",
+    "securitydependencydebt/cohort restriction unchanged"
+  ],
+  "acceptance": "preliminary source preflight only, not a gate substitute"
+}

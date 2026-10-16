@@ -1,0 +1,17 @@
+{
+  "checkpoint": "root-cp36f-static-preflight",
+  "scope": "nine public paths in cp36f-source-after.sha256 plus necessary public DI/filter/lease callers; no operational payloads",
+  "pipelineCopilotP1P2": "no additional issue identified by root source inspection; independent TQA/final pending",
+  "ruleSpirit": "no skip/focus/retry-only/silent JSON parse fallback/test-only production route/global credential fallback introduced in reviewed delta",
+  "performance": "unchanged verifier maximum debug1+pages2/10s requests under45s lease; linear page shape checks, no new external calls or query fan-out; not a fresh latency/SLO measurement",
+  "security": "failed provider parse/shape throws fixed typed error, public mapper preserves fixed safe envelope; fixed host/redirect rejection/scoped token and owner/current attempt/epoch/CAS/lease gates retained",
+  "structure": "one bounded adapter schema check; shared exact convergence helper, one typed mapper, existing production error constructor/token in browser; no outbox/ordering guarantee added",
+  "tests": "real adapter HTTP stubs plus BFF/Nest/CSRF/realPG seam and genuine current browser freshness; external Meta/device still absent",
+  "limitations": [
+    "Earlier mixed/test-after history preserved, new malformed-page RED genuine; no BFF RED execution claimed in cp36f",
+    "Existing dependency security backlog and private-cohort restriction unchanged",
+    "cp39 is old inert candidate, never corrected-runtime proof",
+    "D06 and VAL05 mandatory external/runtime proof pending"
+  ],
+  "disposition": "preflight challenge input only; no source delivery or operator activation accepted"
+}

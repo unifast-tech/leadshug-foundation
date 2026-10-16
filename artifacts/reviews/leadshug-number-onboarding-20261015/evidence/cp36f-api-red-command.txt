@@ -1,0 +1,1 @@
+bash scripts/test-channels-local.sh api

@@ -1,0 +1,30 @@
+{
+  "checkpoint": "root-cp36f-validation",
+  "actualCurrentNinePathHashesMatchBothGenuinePreWorkerManifests": true,
+  "sourceCount": 9,
+  "allCommand": "bash scripts/test-channels-local.sh all",
+  "exitCode": 0,
+  "primaryEvidence": "current complete all; no cp36d browser reuse needed",
+  "counts": {
+    "apiUnit": 150,
+    "postgresE2e": 288,
+    "webUnit": 28,
+    "browser": 47,
+    "migrations": 22
+  },
+  "rawLogSha256": "3a4406ed8160039691a289d7bb10dd16af0fa6ae221f4732aa118176f2133b22",
+  "sourceManifestSha256": "88d419218e080050e2d95724b1ecee19a095c4541e74b6b0f658536336f6859e",
+  "genuinePreWorkerSha256": "0ae330b59e0082c45222a44bb6e1cd4acc94b4aa0601ebc2a9d9b2124087e50e",
+  "genuineBrowserAttestationSha256": "91dfd855e698503fbfb263fcf4adbdf403bcb683b39880e3954b281d1c186bfc",
+  "preWorkerCapturedAtUtc": "2026-10-16T21:00:33.250Z",
+  "browserAttestationCapturedAtUtc": "2026-10-16T21:00:31.531Z",
+  "builtEqualsServedJsSha256": "d14343604557296f2ed62c1df47d9c80d81c323abafd89ccbb64a6a0746ff4bd",
+  "database": {
+    "name": "leadshug_timeline_channels_ci",
+    "endpoint": "postgresql://validation-postgres:5432/leadshug_timeline_channels_ci",
+    "completedMigrations": 22
+  },
+  "runtime": "v22.23.3",
+  "externalOrOperatorRecoveryProven": false,
+  "reviews": "fresh TQA and separate final still required"
+}
