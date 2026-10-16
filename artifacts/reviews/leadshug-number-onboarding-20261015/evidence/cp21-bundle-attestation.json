@@ -1,0 +1,12 @@
+{
+  "captured_utc": "2026-10-16T12:58:52.814383+00:00",
+  "pre_worker_attestation": "cp21-pre-worker-freshness.json",
+  "timeline_attestation": "cp21-timeline-attestation.json",
+  "operator_served_bundle": "cp21-served-bundle-proof.json",
+  "all_browser_workers_started_after_freshness": true,
+  "served_bundle": "/assets/index-BnsAHEmT.js",
+  "served_sha256": "6247a78ee2a2a319eee82e3d65ad5cf2946f0066b75eb24befb5643ff5b69bc6",
+  "container_sha256": "6247a78ee2a2a319eee82e3d65ad5cf2946f0066b75eb24befb5643ff5b69bc6",
+  "matches": true,
+  "raw_bundle_emitted": false
+}

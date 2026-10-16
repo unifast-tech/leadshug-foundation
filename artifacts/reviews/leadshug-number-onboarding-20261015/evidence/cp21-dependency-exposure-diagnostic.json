@@ -1,0 +1,210 @@
+{
+  "findings": [
+    {
+      "id": "DEP-01",
+      "title": "Authenticated upload retains process-crash and CPU-exhaustion paths",
+      "installed": "multer 2.2.0 via @nestjs/platform-express 11.2.1",
+      "audit_severity": "high",
+      "actual_conditions": "Crafted multipart text-field names reach vulnerable Multer parsing only after a valid active session, completed password change/onboarding, and X-Requested-With. File-size and gateway body limits do not prevent the small-field attacks.",
+      "reachability": "Authenticated reachable; unauthenticated reachability not established.",
+      "impact": "Availability loss of the shared API process; no RCE claim.",
+      "anchors": [
+        "api-app/package-lock.json:1563",
+        "api-app/package-lock.json:1570",
+        "api-app/package-lock.json:6140",
+        "api-app/src/surfaces/bff/arquivos.controller.ts:22",
+        "api-app/src/surfaces/bff/arquivos.controller.ts:30",
+        "api-app/src/surfaces/bff/bff.module.ts:107",
+        "api-app/src/surfaces/bff/session.middleware.ts:75",
+        "api-app/src/surfaces/bff/session.middleware.ts:80",
+        "api-app/src/surfaces/bff/session.middleware.ts:96",
+        "api-app/src/surfaces/bff/session.middleware.ts:106",
+        "api-app/src/surfaces/bff/session.middleware.ts:123",
+        "docker/local-gateway.conf.template:18"
+      ],
+      "sources": [
+        "[Crafted-field crash advisory](https://github.com/advisories/GHSA-wc9g-mqfw-jrwm)",
+        "[Oversized-index CPU exhaustion advisory](https://github.com/advisories/GHSA-535w-7cp7-47q4)",
+        "[Nest request lifecycle](https://docs.nestjs.com/faq/request-lifecycle)"
+      ],
+      "confidence": "high for static reachability; not reproduced",
+      "temporary_exposure_blocker": false,
+      "reason": "The stated test cohort contains only the private operator OWNER, with no public signup or untrusted authenticated users.",
+      "followup": "Priority debt before opening authenticated access to untrusted users. If that condition changes, the smallest non-upgrade containment is to block POST /api/bff/arquivos at the public gateway. Future narrowly scoped dependency maintenance should resolve Multer to >=2.4.0 with Nest compatibility validation."
+    },
+    {
+      "id": "DEP-02",
+      "title": "Critical proxy-addr advisory prerequisite is absent",
+      "installed": "proxy-addr 2.0.7",
+      "audit_severity": "critical",
+      "actual_conditions": "The advisory requires an incorrectly configured IPv6 trust subnet that also matches IPv4 clients. This application configures numeric trust proxy=1. Express compiles numeric trust into a hop-count predicate, bypassing subnet compilation.",
+      "reachability": "Installed vulnerable version; advisory-specific exploit condition absent in reviewed configuration.",
+      "anchors": [
+        "api-app/package-lock.json:6680",
+        "api-app/src/main.ts:27",
+        "docker/local-gateway.conf.template:23",
+        "docker-compose.channels.yml:3",
+        "docker-compose.channels.yml:8",
+        "docker-compose.channels.yml:32"
+      ],
+      "sources": [
+        "[Maintainer proxy-addr advisory](https://github.com/jshttp/proxy-addr/security/advisories/GHSA-jqcg-44mw-7w3h)",
+        "[Express 5.2.1 compileTrust implementation](https://github.com/expressjs/express/blob/v5.2.1/lib/utils.js#L185-L205)"
+      ],
+      "confidence": "high",
+      "temporary_exposure_blocker": false,
+      "followup": "Keep the patched-version debt recorded. Do not label this configuration as a demonstrated critical spoofing or RCE path."
+    },
+    {
+      "id": "DEP-03",
+      "title": "Remaining Multer advisories do not match the upload configuration",
+      "installed": "multer 2.2.0",
+      "audit_severity": "high aggregate; individual advisories high, moderate and low",
+      "actual_conditions": "The descriptor-leak and orphaned-file advisories require Multer diskStorage. This route uses default memoryStorage and receives arquivo.buffer; application disk writes occur after parsing. The size-limit race requires an asynchronous fileFilter, which is absent. Application storage also rechecks buffer length.",
+      "anchors": [
+        "api-app/src/surfaces/bff/arquivos.controller.ts:30",
+        "api-app/src/surfaces/bff/arquivos.controller.ts:31",
+        "api-app/src/infra/arquivos/armazenamento.ts:7",
+        "api-app/src/infra/arquivos/armazenamento.ts:75",
+        "api-app/src/infra/arquivos/armazenamento.ts:94"
+      ],
+      "sources": [
+        "[Multer 2.2.0 default storage/filter implementation](https://github.com/expressjs/multer/blob/v2.2.0/index.js#L6-L21)",
+        "[Disk-storage descriptor leak](https://github.com/advisories/GHSA-qfvm-cv95-jqjf)",
+        "[Disk-storage orphaned files](https://github.com/advisories/GHSA-3pph-fpjx-jg34)",
+        "[Async fileFilter race](https://github.com/advisories/GHSA-qvfw-j98x-7q72)"
+      ],
+      "confidence": "high; no application MulterModule, custom storage or fileFilter configuration found in public source",
+      "temporary_exposure_blocker": false
+    },
+    {
+      "id": "DEP-04",
+      "title": "qs parser is public, but neither audited exploit chain is established",
+      "installed": "qs 6.15.3; body-parser 2.3.0; express 5.2.1",
+      "audit_severity": "moderate",
+      "actual_conditions": {
+        "parser_boundary": "Global extended URL-encoded parsing runs before surface authentication. JSON has an explicit 1 MiB limit; URL-encoded parsing independently inherits body-parser's 100 KiB default, 1000-parameter limit and depth 32.",
+        "comma_advisory": "Requires comma=true. Neither application configuration nor body-parser enables it; qs defaults to false.",
+        "isBuffer_advisory": "Requires hostile parsed objects to reach qs.stringify. body-parser permits prototype-named own properties, so the hostile shape is possible, but no qs.stringify call or parse-to-stringify round trip was found in application source. Parsing alone does not establish this advisory's throw."
+      },
+      "anchors": [
+        "api-app/package-lock.json:3569",
+        "api-app/package-lock.json:3580",
+        "api-app/package-lock.json:4820",
+        "api-app/package-lock.json:6719",
+        "api-app/src/main.ts:21",
+        "api-app/src/main.ts:22",
+        "api-app/src/infra/http/body-parsers.ts:19",
+        "api-app/src/infra/http/body-parsers.ts:26"
+      ],
+      "sources": [
+        "[qs comma-parsing advisory](https://github.com/advisories/GHSA-x5fp-wj9c-mxmx)",
+        "[qs stringify/isBuffer advisory](https://github.com/advisories/GHSA-4mjr-xmp4-gh2g)",
+        "[Installed body-parser parser implementation](https://github.com/expressjs/body-parser/blob/v2.3.0/lib/types/urlencoded.js#L58-L101)",
+        "[Body-parser default body limit](https://github.com/expressjs/body-parser/blob/v2.3.0/lib/utils.js#L55-L58)",
+        "[qs 6.15.3 parser defaults](https://github.com/ljharb/qs/blob/v6.15.3/lib/parse.js#L6-L28)"
+      ],
+      "confidence": "high for configured options; medium-high for absence of a complete transitive stringify path",
+      "temporary_exposure_blocker": false,
+      "followup": "Retain qs >=6.16.0 as scoped dependency debt; extended=true alone is not evidence of either reported exploit."
+    },
+    {
+      "id": "DEP-05",
+      "title": "Prisma configuration merge vulnerability lacks a request path",
+      "installed": "prisma 6.19.3 -> @prisma/config 6.19.3 -> deepmerge-ts 7.1.5",
+      "audit_severity": "high, propagated across three package entries",
+      "actual_conditions": "The advisory requires matching cyclic object graphs supplied to merge operations; plain JSON cannot create those cycles. Public application source imports PrismaClient from @prisma/client, not Prisma CLI configuration or deepmerge-ts. Reviewed migration code queries migration state; CLI migration invocation is operator startup work.",
+      "anchors": [
+        "api-app/package-lock.json:1761",
+        "api-app/package-lock.json:1767",
+        "api-app/package-lock.json:4218",
+        "api-app/package-lock.json:6655",
+        "api-app/package-lock.json:6661",
+        "api-app/src/infra/prisma/prisma.service.ts:2",
+        "api-app/src/infra/prisma/migracoes.ts:13",
+        "scripts/start-channels-local.sh:127"
+      ],
+      "source": "[DeepmergeTS recursive-object advisory](https://github.com/advisories/GHSA-ggr8-5vv4-36mx)",
+      "confidence": "high for advisory prerequisite; medium-high for absence of an HTTP-to-config path",
+      "temporary_exposure_blocker": false,
+      "followup": "Configuration/tooling dependency debt. No broad Prisma upgrade or unvalidated major-version override is required by this diagnostic."
+    },
+    {
+      "id": "DEP-06",
+      "title": "source-map-js has no identified untrusted map consumer",
+      "installed": "source-map-js 1.2.1",
+      "audit_severity": "high",
+      "actual_conditions": "Exploitation requires consuming attacker-controlled indexed source maps with excessive section offsets. No SourceMapConsumer, SourceNode, source-map-js import, map-processing endpoint or equivalent request path was found in application source.",
+      "inventory_caveat": "The lockfile marks this package devOptional and links it through tooling/optional magicast paths. The supplied production-image audit nevertheless reports it present; it must not be dismissed as absent.",
+      "anchors": [
+        "api-app/package-lock.json:3721",
+        "api-app/package-lock.json:5969",
+        "api-app/package-lock.json:6638",
+        "api-app/package-lock.json:7186",
+        "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp21-api-production-npm-audit.json:253"
+      ],
+      "source": "[source-map-js indexed-map advisory](https://github.com/advisories/GHSA-68fv-2mgg-jv7q)",
+      "confidence": "medium-high; transitive runtime consumers were not dynamically traced",
+      "temporary_exposure_blocker": false,
+      "followup": "Scoped package/tooling debt toward >=1.2.2; reassess if untrusted map processing is introduced."
+    },
+    {
+      "id": "DEP-07",
+      "title": "Tunnel proxy hop may reduce client-IP accuracy",
+      "audit_severity": null,
+      "actual_conditions": "With trust proxy=1 and Nginx appending its immediate peer to X-Forwarded-For, req.ip selects that appended peer. An additional tunnel hop may therefore group clients under the tunnel/Docker peer. Attacker-controlled earlier header entries alone do not establish spoofing through this gateway configuration.",
+      "impact": "Possible shared recovery throttling and reduced audit IP accuracy; this is separate from the proxy-addr subnet CVE. Login throttling in current source is keyed by email.",
+      "anchors": [
+        "api-app/src/main.ts:27",
+        "docker/local-gateway.conf.template:23",
+        "api-app/src/surfaces/bff/auth.controller.ts:52",
+        "api-app/src/surfaces/bff/auth.controller.ts:127"
+      ],
+      "source": "[Express numeric proxy trust semantics](https://expressjs.com/en/guide/behind-proxies/)",
+      "confidence": "medium; actual tunnel headers were not inspected",
+      "temporary_exposure_blocker": false,
+      "followup": "Verify real client-IP attribution before relying on per-IP controls beyond this private operator test."
+    }
+  ],
+  "decision": {
+    "scope": "ST-CON-01 targeted dependency diagnostic for a short-lived public HTTPS operator test",
+    "concrete_dependency_blocker_identified": false,
+    "minimum_remediation_required_by_this_diagnostic": [],
+    "security_risk_level": "medium",
+    "rationale": "No unauthenticated exploit chain for the audited dependency advisories was established. A concrete authenticated Multer availability risk remains, bounded here by the stated operator-only account cohort.",
+    "conditions": [
+      "Tunnel targets the same gateway; API, databases, cache and Evolution remain unpublished.",
+      "Only private operator credentials and synthetic tenant data are used.",
+      "The stated production NODE_ENV, Secure cookies and exact HTTPS origin are applied. channels Compose defaults to development, so the override matters.",
+      "Exposure is temporary and stopped after the authorized test."
+    ],
+    "not_a_final_security_tqa_or_adherence_gate": true,
+    "production_readiness_claim": false
+  },
+  "evidence_and_limits": {
+    "audit_counts": {
+      "critical": 1,
+      "high": 6,
+      "moderate": 1,
+      "total_package_entries": 8
+    },
+    "count_interpretation": "Eight affected package entries, not eight independent remotely exploitable flaws; Nest and Prisma entries include propagated dependency effects.",
+    "version_basis": "Exact lockfile versions plus supplied audit from the actual production image. Image-to-lockfile concordance was not independently rechecked.",
+    "validation": "Read-only source/configuration analysis and current primary advisory/maintainer sources; no runtime commands, payloads or exploit probes.",
+    "attack_simulation_decision": "recommended",
+    "attack_simulation_status": "Not run under this diagnostic's explicit read-only restriction; future isolated validation can confirm the authenticated Multer failure and tunnel header behavior.",
+    "parent_supplied_not_reverified": [
+      "Actual secret state, synthetic-only database state and private account cohort",
+      "Webhook-token rotation and live logging/redaction proof",
+      "Current running environment values and final proof matrix"
+    ],
+    "independent_external_proof": "Real Meta authorization, device pairing and IN/OUT remain independent integration evidence, not dependency findings."
+  },
+  "governance": {
+    "skill": "delphi-ai/skills/security-adversarial-review/SKILL.md",
+    "routing_evidence": "foundation_documentation/artifacts/tmp/number-onboarding-execution/routing-dependency-diagnostic.json",
+    "routing_result": "go; blocked=false; formal-review critique; declared gpt-6.1-sol/max",
+    "changes_made": false,
+    "promotion_candidate": "Record advisory prerequisites and authenticated reachability alongside npm severity in future dependency reviews."
+  }
+}

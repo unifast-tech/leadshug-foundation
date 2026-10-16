@@ -1,0 +1,15 @@
+{
+  "command": "docker exec leadshug_channels_local-api-1 npm audit --omit=dev --json",
+  "exit_code": 1,
+  "json_valid": true,
+  "production_vulnerabilities": {
+    "info": 0,
+    "low": 0,
+    "moderate": 1,
+    "high": 6,
+    "critical": 1,
+    "total": 8
+  },
+  "advisory_inventory_entries": 8,
+  "dependencies_total": 611
+}

@@ -1,0 +1,42 @@
+{
+  "schema_version": "subagent-review-merge-v2",
+  "artifact_kind": "subagent_review_merge",
+  "authoritative": false,
+  "edit_policy": "derived_merge_packet",
+  "dispatch_path": "/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/delivery-audit-cp21-v2/round-01/dispatch/performance.dispatch.json",
+  "review_kind": "critique",
+  "review_count": 1,
+  "reviewer_labels": [
+    "/root/performance_final_cp21"
+  ],
+  "highest_finding_severity": "high",
+  "axis_summary": {
+    "performance": "regresses",
+    "elegance": "acceptable",
+    "structural_soundness": "mixed",
+    "operational_fit": "mixed"
+  },
+  "recommended_paths": [
+    "Keep local delivery and EPS acceptance conditional on NUM-PERF-01, rather than recording all four PCV lanes passed now. Resolve the exact reverse-identity query with an indexed exact-resource lookup or a versioned FK-side index, preserve durable owners/tenant checks, and obtain query evidence for that actual path. Root should then adjudicate this independent result and derive four machine-checkable pcv-1 evidence artifacts from the verified raw run with explicit EPS-E2/A2, FRC-E3/A1, BCI-E3/A1 and RLS-E1/A1 profile assignments, actual distinct executor/reviewer identities, run/environment/source linkage and canonical SHA256; reflect honest lane states in the governing TODO. I accept the existing FRC-SP-H, BCI-SP-H and bounded RLS-SP-L samples at their stated limits; a repeat of unchanged successful profiles is not needed solely to eliminate debt or relabel old evidence. The EPS measurement exists but needs the material access-path correction above. Preserve the plan's ten-second requests,45-second per-channel leases, bounded manual pages, absence of list-provider fan-out and no remote-mutation replay. Continue the private temporary operator-only integration exercise only under the separately established runtime/security conditions; retain authenticated upload dependency debt before admitting untrusted authenticated users. Actual Meta/device/IN/OUT proof for both modalities, remaining independent lanes and final root dispositions still govern overall close; this review cannot turn local readiness into Production-Ready or authorize push/deployment/callback takeover. STOP after writing only this advisory result; no product, runtime, canonical-document or other artifact edits were made."
+  ],
+  "exact_next_step": "Record reviewer resolutions in the governing TODO using the machine-checkable resolution table or equivalent gate ledger, then extract the derived resolution packet and decide whether another bounded review pass is still required.",
+  "findings": [
+    {
+      "finding_id": "F-B75ED2ED",
+      "severity": "high",
+      "title": "Blocking: every outbound credential resolution scans the retained identity table",
+      "rationale": "The newly introduced ChannelCredentialResolver.resolve loads providerIdentities through the reverse current_channel_id relation (api-app/src/domain/channels/channel-credential-resolver.ts:24-27) and selects the identity in memory at line36. That relation is not indexed: schema.prisma:252-270 and the foundation migration at lines100-115 define only the identity primary key, the provider/external_resource_id unique key and a bu_id index; the later admitted migrations add a cleanup_state/provider index, never current_channel_id. The parent channel primary-key lookup and the foreign-key declaration do not index this reverse lookup. Consequently the resolver's identity query must inspect the global provider_resource_identities table to find the attached row, including indefinitely retained tombstones from other BUs. This is on each BFF/public response send (conversations.service.ts:207) and each eligible Typebot execution (incoming.service.ts:81), also registration/verification, rather than only an administrative cleanup path. Returned cardinality near one does not bound scanned work. This is a concrete newly introduced O(all retained identities) database access on the message path and meets the dispatch's unbounded-scan blocker criterion; no production latency or saturation reproduction is claimed. D-07's durable ownership must remain intact and D-08 requires this shared resolver, but neither approves an unindexed reverse scan. The current EPS EXPLAIN tests only the attempt idempotency key (number-onboarding-pcv.e2e-spec.ts:30-34); its 25-row plan and GET timings cannot validate or exclude this different access path.",
+      "suggested_action": "Fix within the current contract before accepting the performance/EPS gate. Prefer resolving the channel's exact provider/externalResourceId through the existing composite unique key and checking currentChannelId, buId and managedLifecycle, avoiding the inverse collection entirely. Alternatively add a schema-backed, versioned migration index on current_channel_id and keep the same ownership/trust checks. Do not remove tombstones, add a cache or relax tenant/generation predicates. Preserve the caller and acceptance tests, and add discriminating query-plan/query-log evidence for the actual resolver path with a material population of unrelated retired identities so an attempt-only EXPLAIN cannot mask a regression. Repeat only the checks affected by the chosen correction; unchanged FRC/BCI/RLS observations remain usable subject to source freshness.",
+      "reviewer_labels": [
+        "/root/performance_final_cp21"
+      ],
+      "source_finding_ids": [
+        "NUM-PERF-01"
+      ],
+      "category": "performance",
+      "formalizable_hint": "yes",
+      "candidate_rule_level": "project",
+      "candidate_rule_id": "n/a"
+    }
+  ]
+}

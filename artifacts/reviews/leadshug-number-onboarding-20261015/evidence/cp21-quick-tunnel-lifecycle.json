@@ -1,0 +1,19 @@
+{
+  "captured_utc": "2026-10-16T13:03:00.314119+00:00",
+  "public_url": "https://seafood-sku-papers-contractor.trycloudflare.com",
+  "process_pid": 12615,
+  "process_alive": true,
+  "elapsed_seconds_at_capture": 172,
+  "process_target_loopback_gateway_8083": true,
+  "binary_version": "cloudflared version 2026.10.0 (built 2026-10-05-17:37 UTC)",
+  "binary_sha256": "d33ff2d14475178d2012c2c56beba87389ac5ded27649519f198a7d3134a99db",
+  "tunnel_log_path_ignored": "artifacts/tmp/number-onboarding-execution/cloudflared-tmp/quick-tunnel.log",
+  "public_https_statuses": {
+    "/": 200,
+    "/health": 200
+  },
+  "dns_record_created": false,
+  "persistent_tunnel_created": false,
+  "lifetime": "process-bound; URL expires when process stops",
+  "target": "only owned gateway bound to 127.0.0.1:8083; validation fixtures remain isolated"
+}

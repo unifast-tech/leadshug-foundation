@@ -1,0 +1,24 @@
+{
+  "captured_utc": "2026-10-16T12:54:33.937215+00:00",
+  "operation": "WEBHOOK_VERIFY_TOKEN rotated once after human dotenv save, in-place without inode change; API force-recreated, healthy",
+  "values_emitted": false,
+  "old_runtime_value_differs_from_effective_new_value": true,
+  "old_token": {
+    "status": 403,
+    "challengeMatched": false
+  },
+  "new_token": {
+    "status": 200,
+    "challengeMatched": true
+  },
+  "meta_effective_nonempty": {
+    "META_APP_ID": true,
+    "META_APP_SECRET": true,
+    "META_SIGNUP_CONFIG_ID": true,
+    "GRAPH_VERSION": true
+  },
+  "acl_restricted": true,
+  "api_healthy": true,
+  "gateway_route": "/webhooks/meta",
+  "challenge": "synthetic cp21 fake marker only"
+}

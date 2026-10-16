@@ -1,0 +1,41 @@
+{
+  "captured_utc": "2026-10-16T12:54:48.853330+00:00",
+  "provider_image": "evoapicloud/evolution-api:v2.3.7 pinned digest 1bd8...",
+  "qrcode": false,
+  "pairing_started": false,
+  "receiver_header": "synthetic distinct marker; installation secret not reused",
+  "receiver_records": [
+    {
+      "method": "POST",
+      "path": "/probe-callback",
+      "event": "instance.create",
+      "headerMatches": true,
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "path": "/probe-callback",
+      "event": "instance.create",
+      "headerMatches": false,
+      "status": 403
+    }
+  ],
+  "correct": {
+    "createStatus": 201,
+    "callbackReceived": true,
+    "callbackStatusExpected": true,
+    "instanceObservedBeforeDelete": true,
+    "deleteStatus": 200,
+    "removed": true
+  },
+  "wrong": {
+    "createStatus": 201,
+    "callbackReceived": true,
+    "callbackStatusExpected": true,
+    "instanceObservedBeforeDelete": true,
+    "deleteStatus": 200,
+    "removed": true
+  },
+  "raw_provider_response_emitted": false,
+  "raw_logs_emitted": false
+}

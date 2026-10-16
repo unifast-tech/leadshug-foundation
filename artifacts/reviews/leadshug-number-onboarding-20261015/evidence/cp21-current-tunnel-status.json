@@ -1,0 +1,15 @@
+{
+  "checkpoint": "cp21-current-tunnel-status",
+  "captured_utc": "2026-10-16T13:06:20.993945+00:00",
+  "public_url": "https://seafood-sku-papers-contractor.trycloudflare.com",
+  "process_pid": 12615,
+  "tunnel_process_alive": true,
+  "public_https_statuses": {
+    "/": 200,
+    "/health": 200
+  },
+  "target": "127.0.0.1:8083",
+  "quick_tunnel_ephemeral": true,
+  "persistent_tunnel_or_dns_created": false,
+  "runtime_recreated_for_wslenv_proof": false
+}

@@ -1,0 +1,10 @@
+{
+  "captured_utc": "2026-10-16T12:55:40.364355+00:00",
+  "path": "POST /webhooks/evolution",
+  "client_route": "loopback client -> actual gateway 127.0.0.1:8083 -> actual API",
+  "body": "synthetic unknown event and fake unowned instance; no content persisted by handler",
+  "correct_header_status": 200,
+  "correct_received_true": true,
+  "incorrect_header_status": 403,
+  "secret_values_or_bodies_emitted": false
+}

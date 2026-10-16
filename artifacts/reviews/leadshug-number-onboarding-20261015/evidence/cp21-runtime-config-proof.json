@@ -1,0 +1,23 @@
+{
+  "captured_utc": "2026-10-16T12:56:54.091602+00:00",
+  "dotenv_path": "/mnt/c/unifast/leadshug/leadshug_now_docker/.env.testing",
+  "dotenv_bytes": 1483,
+  "dotenv_mtime_ns": 1792155234614836400,
+  "effective_compose_meta_nonempty": {
+    "META_APP_ID": true,
+    "META_APP_SECRET": true,
+    "META_SIGNUP_CONFIG_ID": true,
+    "GRAPH_VERSION": true
+  },
+  "meta_http_client": {
+    "available": true,
+    "reason": "AVAILABLE",
+    "crypto_key_available": true
+  },
+  "unofficial_ceiling_enabled": true,
+  "public_origin_blank": true,
+  "api_health": "healthy",
+  "owner_bootstrap_complete": true,
+  "dotenv_acl_restricted": true,
+  "private_values_or_identifiers_emitted": false
+}

@@ -1,0 +1,165 @@
+{
+  "kind": "frozen derived review inputs; no operational payload/private dotenv",
+  "captured_utc": "2026-10-16T13:08:35.966196+00:00",
+  "public_source_manifest": "cp21-final-public-source-manifest.json",
+  "public_source_manifest_sha256": "f013656474fad113e093767f566ffa4d97f6197a78789b63747ccff92be7bf16",
+  "public_entries_verified": 214,
+  "mismatches": [],
+  "canonical_references": [
+    {
+      "path": "foundation_documentation/modules/integrations-and-channels.md",
+      "sha256": "f3d007fb7b84d960d460dd5f22bcd2082bc276f062769c796fdb0f2234306fe1"
+    },
+    {
+      "path": "foundation_documentation/modules/inbox-and-conversations.md",
+      "sha256": "592313ddd91cf00b76208b63c4fcdce3ec150109c23bd083301744431529fa5f"
+    },
+    {
+      "path": "foundation_documentation/modules/identity-and-tenancy.md",
+      "sha256": "604371cc509981d4561ce3cf404857990e5d30126ea04bda2a766aa0eeee1c91"
+    },
+    {
+      "path": "foundation_documentation/modules/audit-and-history.md",
+      "sha256": "e17c81ff017a21865e052f903b4ae4712c7c9313cae4505ff54a4cab6004a886"
+    },
+    {
+      "path": "foundation_documentation/project_constitution.md",
+      "sha256": "f9b8d3397a4f78c74f4c29739eb509d12bfc9ccda84a50fed718bfe7a668566a"
+    },
+    {
+      "path": "foundation_documentation/artifacts/validation-plans/leadshug-channel-readiness-20261015.md",
+      "sha256": "35e8bfce16aec38908957f58135715aa5df3265456568316f955d1c51839de84"
+    },
+    {
+      "path": "foundation_documentation/backlog/README.md",
+      "sha256": "f49c7b5e9410c69210e06ddf95d8772ff4f36aede75d2f53d97b66f0272fd4cd"
+    }
+  ],
+  "evidence": [
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp21-api-production-npm-audit-summary.json",
+      "sha256": "3bb08ac0195959c682d25a9558efd9194afefd75c0a8ceeb09ee7c64b880ac45"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp21-api-production-npm-audit.json",
+      "sha256": "9a97eb9c9f5355caf0ce91314aa3a05a2eb637cbbdc74176feb1ac7da0b6bb72"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp21-api-webhook-ingress-proof.json",
+      "sha256": "5c8de2d0ddef297cc8abcc162c583cac0f1f18a51bdf73cf4b3f63fc6ee71400"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp21-bundle-attestation.json",
+      "sha256": "d6ab59c03bd5a47a59328aa43747a17f5349ef17b105e361cf79603521737fa0"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp21-current-tunnel-status.json",
+      "sha256": "984f4ceafb7eece86ae7482eeca7d054ab8eff6a4eed9b485a191cbc5b954efa"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp21-dependency-exposure-diagnostic.json",
+      "sha256": "61afd41adb2cf1335be5fd2345449961db19029da9e98c96d2488c38045f7763"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp21-expanded-public-inputs-during-all.json",
+      "sha256": "2f7acf28ca14591a8df7970009f2f6d55c91f877bc495e76b8c0f0f61d95fdb8"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp21-final-all.json",
+      "sha256": "e40c56c9c15cb72dc7ead5682a1c1fcee535de0e1f0b05d82055b42a1e02e792"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp21-final-all.log",
+      "sha256": "b5466cf71c12cd882e189f8aa1ad333233edea969dfebb46b809f6eff4149725"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp21-final-log-redaction-scan.json",
+      "sha256": "c3e233e33d1351149f0cf600b6b38fc86a954442bc7d3d43a0bbc2a3b180327a"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp21-final-public-source-manifest.json",
+      "sha256": "f013656474fad113e093767f566ffa4d97f6197a78789b63747ccff92be7bf16"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp21-gateway-log-proof.json",
+      "sha256": "6972eb3bb8b00a92f285e16aee1fe6336e596d9ba9513f8f5ae83025b4fa1995"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp21-handoff.json",
+      "sha256": "54fe2574a398bc5eb6a3b99def6b4153877272d957cb8939054d97bb02bc7427"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp21-handoff.md",
+      "sha256": "adaea625e9f41d93c4618eb4cac95169fd20a7faacd998f816123f58368ede77"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp21-https-secure-cookie-proof.json",
+      "sha256": "023a6bda6b746b2993657a34ebf8d5b3637f1357472ddd60ed9badc255946d52"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp21-log-redaction-scan.json",
+      "sha256": "bad73091e9ef3c73ab2dac5f0d5eaa97bea0e890c78a7f5ca684e123301f8291"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp21-pre-worker-freshness.json",
+      "sha256": "7491c5c935ae4dc1a6b99b8814421e258d4b1265db3dfb9de8dbe10d656e35da"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp21-production-origin-config-proof.json",
+      "sha256": "b4f58d7472b46e19ac102337f3831b3afdb5a9189475cff8c416fe470e763e34"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp21-provider-header-probe.json",
+      "sha256": "92b59a21dba0c5d8fd419ad6aa5d8a8dd43c71e55b8be86546c86f554bcf02cb"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp21-quick-tunnel-lifecycle.json",
+      "sha256": "edfce8d3d0e3fb5097ead6d4ded689fe8e859339aff2364320325dd69bdcd7d1"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp21-runtime-config-proof.json",
+      "sha256": "f78a619e526cbe88dd2893a836a8adf42935371638db87f58d5b0fb4d7ceb3c1"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp21-served-bundle-proof.json",
+      "sha256": "ea99934fdd45709c64ff191f0b46c55c382adbb9951c7985c4d13958e2cfda03"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp21-source-manifest-post-all.json",
+      "sha256": "cb995183a5f7677e797ad9071bf6e1c4a2551d12130f8b8232a73f7fbf059cf8"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp21-source-manifest-pre-all.json",
+      "sha256": "d57ebdbfa017cb49d41d576bdc2a4b42b6376d082b1d1d9c992ab225edc686e9"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp21-timeline-attestation.json",
+      "sha256": "784900dca7916a71f202fe0102b69620ba2651deed8b38c66c9af56d25ba12a3"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp21-token-rotation-proof.json",
+      "sha256": "844264d39ed51e2d67c6ecb86226898b2c102c97645401c360b40c828ed52552"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp21-wslenv-override-proof.json",
+      "sha256": "98028f4badeff624e7d22fb09725cc536cc2694e658f93e1e4fec1bbdc5569c5"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/root-cp21-source-receipt.json",
+      "sha256": "d62a10989436edac9b345f060a1bb36da8a7e624830033c7f0a276ed053d6ed3"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/reg-sec-evidence-index-cp20.json",
+      "sha256": "5aa2c376dbcb15f6e256aa2d4b59942597f0469112423a4a2e3ab808961898f6"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/delivery-todo-snapshot-cp21.md",
+      "sha256": "513996a00a6c4d4de6f2314f1145f37585203e9561c068aea943ae573fb87dcf"
+    }
+  ],
+  "supplementary_api_build_references": {
+    "path": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/delivery-api-build-references-cp21.json",
+    "sha256": "c36eaa1dc81747ec21d79025c8f49c9b4b5120a94e6f81ebc4f49a71644601fc",
+    "captured_after_all": true
+  }
+}

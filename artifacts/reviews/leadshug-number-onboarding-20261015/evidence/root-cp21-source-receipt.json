@@ -1,0 +1,19 @@
+{
+  "kind": "root read-only source/evidence receipt; not an overall gate",
+  "recorded_at_utc": "2026-10-16T12:59:29.441609+00:00",
+  "public_source_entries_verified": 214,
+  "mismatches": [],
+  "pre_all_scope": "73 changed inputs plus baseline heads",
+  "full_inventory_capture_stage": "after canonical all invocation began and API e2e completed; before Web build/browser stage",
+  "full_inventory_stable_from_capture_to_post": 214,
+  "operational_payloads_inspected_or_hashed": false,
+  "raw_all_log_sha256": "b5466cf71c12cd882e189f8aa1ad333233edea969dfebb46b809f6eff4149725",
+  "preworker_sha256": "7491c5c935ae4dc1a6b99b8814421e258d4b1265db3dfb9de8dbe10d656e35da",
+  "timeline_attestation_sha256": "784900dca7916a71f202fe0102b69620ba2651deed8b38c66c9af56d25ba12a3",
+  "limits": [
+    "Complete214 snapshot was captured after API E2E, before Web build/browser; do not call it complete pre-all.",
+    "Real Meta/phone authorization, pairing and IN/OUT not established by automated proofs.",
+    "Runtime/tunnel handoff remains active until its owner STOP."
+  ],
+  "known_absent_entry": "api-app/src/domain/channels/channels.service.spec.ts; approved deletion; manifest uses status missing"
+}

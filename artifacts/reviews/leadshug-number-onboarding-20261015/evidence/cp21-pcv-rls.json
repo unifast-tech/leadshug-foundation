@@ -1,0 +1,97 @@
+{
+  "policy_schema_version": "pcv-1",
+  "schema_version": "pcv-1",
+  "lane_id": "RLS",
+  "todo_id": "TODO-leadshug-channel-connection-readiness",
+  "run_id": "cp21-canonical-all-20261016",
+  "environment_id": "leadshug_channels_validation/leadshug_timeline_channels_ci/Node22.23.3/OpenSSL3.0.22/PG16",
+  "executor_id": "/root/number_onboarding_devops_resume",
+  "reviewer_id": "/root/performance_final_cp21",
+  "recorded_at_utc": "2026-10-16T13:20:37Z",
+  "evidence_type": "deterministic-runner-observation-with-independent-review",
+  "sample_profile_id": "RLS-SP-L",
+  "acceptance_rule_id": "RLS-A1",
+  "result_summary": "Passed bounded RLS-E1/A1: five concurrent authenticated clients each perform six scoped reads, all200/404 thresholds met and both calibrated provider-port deltas zero.",
+  "artifact_payload": {
+    "source_log": "cp21-final-all.log",
+    "source_log_sha256": "b5466cf71c12cd882e189f8aa1ad333233edea969dfebb46b809f6eff4149725",
+    "source_manifest": "cp21-source-manifest-post-all.json",
+    "source_manifest_sha256": "cb995183a5f7677e797ad9071bf6e1c4a2551d12130f8b8232a73f7fbf059cf8",
+    "independent_review_path": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/delivery-audit-cp21-v2/round-01/performance.result.raw.json",
+    "independent_review_sha256": "26175cfae2c07e8aece2ba674c7c4de016161b0905155526c53d810db0ffb916",
+    "limits": "Observed local PostgreSQL/BFF/browser and doubled provider ports only; no real device/provider IN/OUT, sustained capacity, SLO or exactly-once external guarantee. Later operator-only WSLENV entrypoint delta is separately proven and does not alter this validation runner or product source.",
+    "stage_profile_observed": "RLS-SP-L",
+    "thresholds": {
+      "ownBuReadStatus": 200,
+      "foreignTenantReadStatus": 404,
+      "providerCallsDuringListing": 0
+    },
+    "metrics_summary": "Five authenticated clients ran concurrently; each completed three sequential own-BU and three sequential foreign-tenant reads; all instrumented Meta/Evolution operations remained unchanged during channel listing.",
+    "runner_or_manual_path": "api-app/test/number-onboarding-pcv.e2e-spec.ts:64",
+    "observations": {
+      "policy_schema_version": "pcv-1",
+      "lane_id": "RLS",
+      "trigger_result": "recommended",
+      "trigger_severity": "medium",
+      "trigger_reason_code": "RLS-QUEUE-WORKER-REALTIME-CHANGED",
+      "gate_deadline": "before_local_implemented",
+      "min_evidence_rule_id": "RLS-E1",
+      "acceptance_rule_id": "RLS-A1",
+      "stage_profile_observed": "RLS-SP-L",
+      "clients": 5,
+      "readsPerClient": 6,
+      "totalScopeChecks": 30,
+      "observed": [
+        {
+          "client": 0,
+          "ownReads": 3,
+          "foreignReads": 3
+        },
+        {
+          "client": 1,
+          "ownReads": 3,
+          "foreignReads": 3
+        },
+        {
+          "client": 2,
+          "ownReads": 3,
+          "foreignReads": 3
+        },
+        {
+          "client": 3,
+          "ownReads": 3,
+          "foreignReads": 3
+        },
+        {
+          "client": 4,
+          "ownReads": 3,
+          "foreignReads": 3
+        }
+      ],
+      "thresholds": {
+        "ownBuReadStatus": 200,
+        "foreignTenantReadStatus": 404,
+        "providerCallsDuringListing": 0
+      },
+      "providerCalls": {
+        "calibration": "one fixture Meta number-list operation was detected before the read stage",
+        "before": {
+          "meta": 1,
+          "evolution": 0
+        },
+        "after": {
+          "meta": 1,
+          "evolution": 0
+        },
+        "duringReadDelta": {
+          "meta": 0,
+          "evolution": 0
+        }
+      },
+      "elapsedMs": 82.06502799999998,
+      "metrics_summary": "Five authenticated clients ran concurrently; each completed three sequential own-BU and three sequential foreign-tenant reads; all instrumented Meta/Evolution operations remained unchanged during channel listing.",
+      "limits": "One bounded local PostgreSQL stage; not a capacity, latency SLO, or provider load claim."
+    }
+  },
+  "artifact_sha256": "748725c602ba9608670712169329842ec89827400b7945567d161fffa61d6812"
+}

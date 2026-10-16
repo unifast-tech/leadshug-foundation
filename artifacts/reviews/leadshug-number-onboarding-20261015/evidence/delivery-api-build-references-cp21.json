@@ -1,0 +1,82 @@
+{
+  "kind": "supplementary read-only API build/config references; captured AFTER all, not pre-run proof",
+  "captured_utc": "2026-10-16T13:09:53.430009+00:00",
+  "why": "cp21 214-entry inventory omitted unchanged API package/build config references; keep limitation explicit",
+  "files": [
+    {
+      "path": "api-app/package.json",
+      "sha256": "df8551d3e506e7c68516cbd482362c4282671b7ec7eebbf121386390ac080a9d",
+      "git_unchanged_from_recorded_api_head": true
+    },
+    {
+      "path": "api-app/package-lock.json",
+      "sha256": "d1e45274c4b10d134469d7ec63e88777ec26b917d48197a03a4b97cefda047c7",
+      "git_unchanged_from_recorded_api_head": true
+    },
+    {
+      "path": "api-app/Dockerfile",
+      "sha256": "188a83953c950d65f3fd5b3d428382cafc88e42efa0776c95fb4ba49b54d0a15",
+      "git_unchanged_from_recorded_api_head": true
+    },
+    {
+      "path": "api-app/docker/entrypoint.sh",
+      "sha256": "3f6168bba444074ff220d09ef4127593cf5af6744462ef344695cd749aeac095",
+      "git_unchanged_from_recorded_api_head": true
+    },
+    {
+      "path": "api-app/eslint.config.mjs",
+      "sha256": "7019e4dbc557cfb5425f6d9e11e75846c55268f442592b9bce4f7c1e3e21d1b1",
+      "git_unchanged_from_recorded_api_head": true
+    },
+    {
+      "path": "api-app/nest-cli.json",
+      "sha256": "4f3595ef15ab569316b8bc91f8bfa33adccb3f3b1a082a39851c4bfc8ad60651",
+      "git_unchanged_from_recorded_api_head": true
+    },
+    {
+      "path": "api-app/railway.json",
+      "sha256": "0a35d5009d9b5b17c88fc45056fe3abba1e9a26192f190a908d52ea56a5ab9b2",
+      "git_unchanged_from_recorded_api_head": true
+    },
+    {
+      "path": "api-app/tsconfig.json",
+      "sha256": "5a8a8b3e2e00213a8cdd3877ecb7347944b689875a989cd3bbe2effef64816cc",
+      "git_unchanged_from_recorded_api_head": true
+    },
+    {
+      "path": "api-app/tsconfig.build.json",
+      "sha256": "44e82cf32b2bd7cfdb7c4d9ca48ab13101f6ff66349578545d2c229ef55cbca6",
+      "git_unchanged_from_recorded_api_head": true
+    },
+    {
+      "path": "api-app/vitest.config.ts",
+      "sha256": "a5f2d4d79de1112776f0586e3b647487fe6961e89b2790c19f6a2ed9165924d5",
+      "git_unchanged_from_recorded_api_head": true
+    },
+    {
+      "path": "api-app/vitest.config.e2e.ts",
+      "sha256": "ff76a3b94de4649d18f0f824a24bb45428afcbb751a872a6841a2e388f45f8ff",
+      "git_unchanged_from_recorded_api_head": true
+    },
+    {
+      "path": "api-app/vitest.config.cov.ts",
+      "sha256": "d204d2a30bbec1ff347f5e9896abbb93ec270f0006f6914de30253841c3d6e90",
+      "git_unchanged_from_recorded_api_head": true
+    },
+    {
+      "path": "api-app/.gitignore",
+      "sha256": "05fe7a628802f976b8ae34365446aecda0a7bc06c61dbd4bbc9b7b4f02a08b75",
+      "git_unchanged_from_recorded_api_head": true
+    },
+    {
+      "path": "api-app/.dockerignore",
+      "sha256": "79c2485e6c515f7751aa34319cd46ab842dc53d08422270696dba74f55313d10",
+      "git_unchanged_from_recorded_api_head": false
+    },
+    {
+      "path": "api-app/.env.example",
+      "sha256": "b3fefff2a25832ee67a5926948029d0345090eb74c0458c4ef59dbf7a1636abb",
+      "git_unchanged_from_recorded_api_head": false
+    }
+  ]
+}

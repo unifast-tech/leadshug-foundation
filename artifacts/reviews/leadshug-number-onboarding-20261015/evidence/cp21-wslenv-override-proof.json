@@ -1,0 +1,45 @@
+{
+  "checkpoint": "cp21-wslenv-override-proof",
+  "captured_utc": "2026-10-16T13:06:40.287509+00:00",
+  "change": "scripts/start-channels-local.sh passes only four non-secret CHANNELS_* values through WSLENV to Windows docker.exe while preserving caller entries and /u,/p modifiers.",
+  "checks": {
+    "bash_n": true,
+    "git_diff_check": true,
+    "config_only_action": true,
+    "docker_resources_created_or_changed": false
+  },
+  "discriminating_overrides": {
+    "gateway_host_port": "18083",
+    "port_was_free": true,
+    "local_origin": "https://wsl-bridge-proof.invalid",
+    "node_env": "development",
+    "dotenv_changed": false,
+    "windows_host_port_was_free": true
+  },
+  "effective_compose_booleans": {
+    "compose_config_ok": true,
+    "node_env_override_effective": true,
+    "origin_override_effective": true,
+    "loopback_port_override_effective": true,
+    "existing_wslenv_sentinel_preserved": true,
+    "four_nonsecret_names_present": true,
+    "windows_source_path_exported_and_used": true
+  },
+  "runtime_impact": "config-only; current API/Web/gateway containers and Quick Tunnel were not recreated or modified.",
+  "source_manifest_check": {
+    "public_input_count": 214,
+    "changed_since_post_all": [
+      {
+        "path": "scripts/start-channels-local.sh",
+        "status_at_post_all": "present",
+        "hash_at_post_all": "0200ce02f19694ab31429254864707a9eb9c84bc6c02d5fd04c8228fc0b1cfe6",
+        "hash_final": "af8b59b851f8fc135451b8ba9d112b142743497ca98007644069ffbe335bdc80"
+      }
+    ],
+    "expected_absent_entries": [
+      "api-app/src/domain/channels/channels.service.spec.ts"
+    ],
+    "unexpected_missing": [],
+    "api_local_files_read_or_hashed": 0
+  }
+}

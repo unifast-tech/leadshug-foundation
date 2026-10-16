@@ -1,0 +1,53 @@
+{
+  "policy_schema_version": "pcv-1",
+  "schema_version": "pcv-1",
+  "lane_id": "FRC",
+  "todo_id": "TODO-leadshug-channel-connection-readiness",
+  "run_id": "cp21-canonical-all-20261016",
+  "environment_id": "leadshug_channels_validation/leadshug_timeline_channels_ci/Node22.23.3/OpenSSL3.0.22/PG16",
+  "executor_id": "/root/number_onboarding_devops_resume",
+  "reviewer_id": "/root/performance_final_cp21",
+  "recorded_at_utc": "2026-10-16T13:20:37Z",
+  "evidence_type": "deterministic-runner-observation-with-independent-review",
+  "sample_profile_id": "FRC-SP-H",
+  "acceptance_rule_id": "FRC-A1",
+  "result_summary": "Passed FRC-E3/A1: five waves of20 extra submits with one real BFF reservation each; max held reservation1; completed stale read cannot regress cancelled UI.",
+  "artifact_payload": {
+    "source_log": "cp21-final-all.log",
+    "source_log_sha256": "b5466cf71c12cd882e189f8aa1ad333233edea969dfebb46b809f6eff4149725",
+    "source_manifest": "cp21-source-manifest-post-all.json",
+    "source_manifest_sha256": "cb995183a5f7677e797ad9071bf6e1c4a2551d12130f8b8232a73f7fbf059cf8",
+    "independent_review_path": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/delivery-audit-cp21-v2/round-01/performance.result.raw.json",
+    "independent_review_sha256": "26175cfae2c07e8aece2ba674c7c4de016161b0905155526c53d810db0ffb916",
+    "limits": "Observed local PostgreSQL/BFF/browser and doubled provider ports only; no real device/provider IN/OUT, sustained capacity, SLO or exactly-once external guarantee. Later operator-only WSLENV entrypoint delta is separately proven and does not alter this validation runner or product source.",
+    "concurrency_policy": "drop duplicate",
+    "burst_profile_observed": "FRC-SP-H",
+    "runner_or_manual_path": "web-app/e2e/number-onboarding.spec.ts:343",
+    "observations": {
+      "waves": 5,
+      "triggersPerWave": 20,
+      "totalSubmitTriggers": 100,
+      "reservationRequestsPerWave": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "inFlightAtBarrier": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "maximumInFlight": 1,
+      "staleControl": {
+        "fetchedStage": "RESERVED",
+        "realResponseFinished": true,
+        "finalUiIsCancelled": true
+      }
+    }
+  },
+  "artifact_sha256": "9fb3aaf918b6271d7fe20ffa92bd29a031d41f9348e964bbd4a42c75ce644120"
+}

@@ -41,7 +41,7 @@ Proposta ST-CON-01: jornada de cadastro de número, com infraestrutura local est
 
 - **Current delivery stage:** Pending
 - **Qualifiers:** none
-- **Next exact step:** API cp20 parou com21migrações/lint/build/138unitários/282E2E PostgreSQL aprovados no runner; Web mantém44browser/28unitários de cp16/cp14. DevOps cp21 recebeu writer único para finalizar operador real, logs/header, máscara dos dotenv root na validação, all integrado e HTTPS temporário; depois reviews independentes finais. Prova real de canais permanece pendente.
+- **Next exact step:** cp21-v2 reviews terminais: corrigir NUM-PERF-01 (índice da relação de identidade), NUM-ADH-CP21-01 (recuperação NOVO) e completar simulações NUM-SEC-CP21-02 dentro do contrato. API cp22 será único writer, depois Web e DevOps serializados; repetir validação afetada e revisão delta. Usuário confirmou domínio e URLs OAuth/SDK salvos; webhook Meta é a próxima dependência manual. Prova real dos dois canais e VAL-05 continuam pendentes.
 
 ## Active Work State (Required While TODO Remains In `active/`)
 
@@ -372,7 +372,7 @@ Register: `foundation_documentation/artifacts/dependency-readiness.md`.
 
 ## Profile Scope & Handoffs (Required Before `APROVADO`)
 
-- **Current profile:** operational-coder, execução aprovada; Genesis descartado pelo canon/produto existentes.
+- **Current profile:** operational-coder, handoff API cp22 após STOP de todos os reviewers cp21; Web/DevOps parados. Root orquestra evidência documental; próximo handoff Web e DevOps, depois Assurance. Genesis descartado pelo canon/produto existentes.
 - **Primary execution profile:** operational-coder; handoff operational-devops antes de runtime/ingress.
 - **Active technical scope:** nestjs, react, postgresql, prisma, docker
 - **Expected supporting profiles:** operational-devops para target/callback; assurance-tester-quality e assurance-security-adversarial para gates aplicáveis.
@@ -828,6 +828,12 @@ Achados exatos preservados em planning-architecture.json. `fixed-in-plan` signif
 | NUM-BROWSER-03 | medium | release-blocker | complete-required-harness | Founder da fixture precisa proveniência MANTENEDORA para provar novaBU/replay conforme produto real | accepted-open | cp14 rerun5:403TENANT_ADMIN_REQUIRED; seedNumberOnboarding119 vs TenancyService.criar |
 | NUM-ROOT-REG06 | high | release-blocker | fix-current-contract | REAUTORIZAR oficial no slot migrado sem credencial é prometido, mas guard managedLifecycle bloqueia o owner backfilled da mesma BU | accepted-open | REG-SEC-06; number-registration.service.ts248,274,319; distinção da restrição de instância Evolution não gerenciada |
 
+| NUM-ROOT-GW-01 | high | release-blocker | fix-current-contract | Nginx mantém segundo access log da imagem com URI/query e expõe verify token local; formato seguro isolado não elimina sink herdado | accepted-open | cp21 scan real; REG-SEC-12; corrigir template, renovar token privado e repetir controles antes de HTTPS/pareamento |
+| NUM-ROOT-ENV-01 | medium | release-blocker | fix-current-contract | Overrides de origem/produção documentados não atravessam WSL para docker.exe sem bridge explícita | accepted-open | cp21 HTTPS precheck detectou desenvolvimento/origem local; start script e README68; bridge WSLENV de variáveis não secretas e config-only discriminante |
+
+| NUM-PERF-01 | high | release-blocker | fix-current-contract | Resolver de credencial carrega relação current_channel_id sem índice em cada envio; tombstones globais ampliam o scan | accepted-open | Performance cp21-v2; novo índice schema/migration e EXPLAIN da consulta real; EPS permanece aberto |
+| NUM-ADH-CP21-01 | medium | release-blocker | fix-current-contract | Nova autorização após NOVO expirado/ambíguo mantém canal no backend, mas UI tenta NOVO em slot ocupado | accepted-open | Architecture/security cp21; reutilizar canal exato por REAUTORIZAR e provar as duas falhas em browser real |
+| NUM-SEC-CP21-02 | medium | release-blocker | fix-current-contract | Simulações exigidas REG-SEC-01/10/11 não discriminam todos os cenários nomeados | accepted-open | Trigger global estrangeiro anterior; verify antigo através de RENEW verificado; sequência epoch/quarentena/retry e ecos OUT concorrentes |
 
 Adicional de coerência do autor: envelope raw redigido e code/PIN transitórios explicitados, sem alterar modelo de autorização; REG-SEC-08/09.
 
@@ -1064,3 +1070,30 @@ Checkpoint20: controle reconstruído do guard antigo alcançou o caso migrado e 
 
 
 Checkpoint20 terminal:21migrações/lint/build/138unitários19arquivos e282E2E PostgreSQL26arquivos passaram no runner canônico. Root conferiu cinco hashes finais declarados e três logs contra cp20-handoff.json SHA25682f554e866161460188e2479d316b1222fc084532c2699d7ac74202bba491e82. Recibo root-cp20-api-receipt.json distingue as provas e limites; manifesto cp20 é parcial em cinco paths, por isso o all integrado deverá capturar todos os inputs públicos pré/pós. API STOP; DevOps cp21 ativado após esse handoff como único writer nos oito paths root já autorizados. Antes do all, mascarar também os dotenv privados root com exemplo público sem tocar host; probe de transporte usa segredo fictício distinto e confirma remoção assíncrona de suas próprias instâncias. Preservar Meta privada e recursos operacionais. Nenhuma aceitação geral/produção ou conexão real reivindicada.
+
+
+### Checkpoint21 em execução — runtime e bloqueio de logs
+
+Retomada em2026-10-16 com writer serializado number_onboarding_devops_resume; agentes anteriores não estavam ativos. Executor reportou build operacional,21migrações, API healthy, Web/gateway e Evolution fixada iniciados, bootstrap único201 pelo endpoint interno. Gateway somente loopback8083. Provider probe sem QR comprovou header correto200/incorreto403 no receptor privado e remoção exata após DELETE. Esses sinais não provam pareamento nem IN/OUT. Artefatos e all final ainda pendentes.
+
+A configuração efetiva Compose retornou booleanos false para os quatro campos Meta no arquivo privado root, apesar da confirmação anterior do operador. Pergunta assíncrona solicitou conferir o arquivo salvo exato, somente resposta de estado. Não ler/adotar outro arquivo privado por inferência e não modificar os campos Meta.
+
+Scan real revelou NUM-ROOT-GW-01: um segundo access log herdado da imagem Nginx registrou request-target/query com o token local de verificação Meta. Nenhuma linha ou valor foi exposto no chat/artefato. Corrigir ambos os sinks no template já admitido, recriar gateway próprio, renovar somente WEBHOOK_VERIFY_TOKEN privado preservando ACL/demais campos e repetir controles positivos/negativos, parser e falha upstream com inspeção dos logs reais. Sem claim de ausência de segredo só pelo formato da configuração. Teto não oficial ativado prematuramente pelo executor foi revertido; nenhuma instância real/aparelho foi pareado. Habilitar novamente somente após a prova; all e HTTPS continuam seguintes, antes dos reviews independentes.
+
+
+Atualização cp21: all canônico terminou exit0 com138unitários API,282E2E PostgreSQL,28unitários Web e44Playwright. Fonte/bundle, manifests e handoff terminal ainda serão conferidos antes dos reviews finais. Usuário localizou o arquivo, preencheu e salvou os quatro campos Meta; Compose efetivo confirmou quatro booleanos true, sem exibir valores. Após save atômico do editor, executor restaurou DACL restrita e renovou novamente o token local não cadastrado, preservando Meta e demais chaves; API healthy, novo challenge200 e anterior403. Provider-origin header200/403 e ingresso pelo gateway real→API200/403 são provas distintas, ambas realizadas com cenário descartável/sem pareamento.
+
+Diagnóstico independente de dependências antes de HTTPS: evidence/cp21-dependency-exposure-diagnostic.json SHA25661afd41adb2cf1335be5fd2345449961db19029da9e98c96d2488c38045f7763, reviewer /root/dependency_exposure_diagnostic, routing gpt-6.1-sol/max go. Audit da imagem contém8pacotes afetados incluindo efeitos transitivos (1critical/6high/1moderate). O parecer não estabeleceu cadeia anônima dos advisories nesta configuração e não bloqueou o teste HTTPS temporário restrito ao OWNER privado/dados sintéticos. Multer2.2 mantém DoS autenticado concreto; registrar manutenção prioritária antes de usuários autenticados não confiáveis, sem upgrades neste TODO. Backlog BLG-leadshug-runtime-dependency-security captura owner/próximo gate. Numeric trust proxy=1 não executa a compilação de sub-redes afetada pelo alerta crítico; outros pré-requisitos e limites estão no diagnóstico. Não é aceite final de segurança/TQA/aderência nem claim de produção.
+
+
+Concretização cp21 pós-all no mesmo script operacional admitido: o precheck HTTPS detectou que os overrides do processo WSL não alcançavam docker.exe. O operador foi configurado com valores privados e provou cookie Secure/origem exata, porém o comando público documentado também deve cumprir esse contrato. Admitido corrigir a passagem das quatro variáveis não secretas de runtime por WSLENV, preservando as entradas existentes e sem exportar segredos. Provar precedência por config-only com valores diferentes do arquivo privado e manter runtime real intacto. O all anterior continua prova da API/Web/runner inalterados; esse delta isolado de start script exige sua prova dirigida e manifesto final, sem alegar que precedeu a matriz. Nenhuma capacidade/risco/arquivo novo ou aprovação adicional introduzidos.
+
+### Revisões independentes cp21-v2 e handoff cp22
+
+Todos os leitores cp21 terminaram antes de nova escrita de produto. Performance gpt-6.1-sol/max, TQA e cutover gpt-5.6-terra/max nativos e architecture/security gpt-6.1-sol/max usaram pacote sem contexto herdado. Root conferiu32hashes do handoff runtime; resultados schema-valid preservados. Performance encontrou NUM-PERF-01; security confirmou NUM-ADH-CP21-01 e NUM-SEC-CP21-02. São correção de HOW/cobertura já aprovada, sem alteração D-01..10 ou nova funcionalidade. TQA aceitou cobertura local mas sua conclusão genérica REG-SEC fica limitada pela evidência específica de simulações ausentes do review security; completar os casos explícitos, sem alegar exploit reproduzido.
+
+TQA-CP21-02 é accepted-debt de processo: cobertura final substantiva com proveniência mixed/test-after; não fabricar RED histórico. Owner executor/revisor deste TODO; revisitar em cada correção futura, começando pelo RED real da recuperação NOVO. TQA-CP21-01 e CUTOVER-EXT-01 reiteram VAL-05 conhecido: fora do gate estrito de correção local, mas continuam bloqueadores obrigatórios do fechamento geral; nenhuma dispensa ou aceite de risco substitui provider/aparelho real. Sessão delivery-audit-cp21-v2 está em resolução; próxima rodada será delta após correções, nunca repetição para redescobrir o gap externo.
+
+FRC/BCI/RLS têm envelopes pcv-1 cp21-pcv-frc/bci/rls.json com reviewer independente real e hashes canônicos, baseados na amostra cp21 explicitamente aceita pelo performance; EPS não foi marcado passed. Tabelas/gates finais ainda serão reconciliados após nova fonte/validação;492testes não incluem as correções futuras. Meta4 presentes na API confirmados por booleanos; usuário confirmou domínio e URLs OAuth/SDK salvos. Webhook/cadastro real pendentes, sem publicação do app.
+
+API cp22: schema acrescenta índice currentChannelId em migration nova e evidência de acesso real com população material; completar apenas simulações exigidas nos testes admitidos. Preservar21migrations já aplicadas, dados operacionais, credenciais, tombstones e contratos. Web tratará recuperação com REAUTORIZAR no slot retido e NOVO só se realmente liberado; DevOps atualizará runtime próprio/validação depois dos coders pararem. Nenhum commit/push de source ou deploy autorizado por esses reviews.

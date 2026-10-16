@@ -1,0 +1,31 @@
+{
+  "gateway": {
+    "lines": 46,
+    "private_value_matches": 0,
+    "marker_matches": {},
+    "qr_payload_marker": false,
+    "error_lines": 0,
+    "warning_lines": 0,
+    "403_mentions": 6,
+    "safe_access_records": 13,
+    "raw_request_lines": 0
+  },
+  "api": {
+    "lines": 111,
+    "private_value_matches": 0,
+    "marker_matches": {},
+    "qr_payload_marker": false,
+    "error_lines": 0,
+    "warning_lines": 0,
+    "403_mentions": 0
+  },
+  "evolution": {
+    "lines": 1100,
+    "private_value_matches": 0,
+    "marker_matches": {},
+    "qr_payload_marker": false,
+    "error_lines": 285,
+    "warning_lines": 6,
+    "403_mentions": 4
+  }
+}

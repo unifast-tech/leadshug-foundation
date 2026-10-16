@@ -1,0 +1,49 @@
+{
+  "responses": {
+    "health": 200,
+    "gateway_auth_failure": 403,
+    "query_marker_auth_failure": 403,
+    "upstream_failure": 504,
+    "parser_before_location": 400
+  },
+  "api_restored_healthy": true,
+  "log_scans": {
+    "gateway": {
+      "lines": 43,
+      "secret_value_matches": 0,
+      "fake_marker_matches": {},
+      "qr_payload_marker": false,
+      "error_lines": 0,
+      "warning_lines": 0,
+      "403_mentions": 4,
+      "safe_records": 10,
+      "raw_request_lines": 0,
+      "logged_statuses": [
+        200,
+        400,
+        403,
+        404,
+        504
+      ]
+    },
+    "api": {
+      "lines": 331,
+      "secret_value_matches": 0,
+      "fake_marker_matches": {},
+      "qr_payload_marker": false,
+      "error_lines": 0,
+      "warning_lines": 0,
+      "403_mentions": 0
+    },
+    "evolution": {
+      "lines": 1100,
+      "secret_value_matches": 0,
+      "fake_marker_matches": {},
+      "qr_payload_marker": false,
+      "error_lines": 285,
+      "warning_lines": 6,
+      "403_mentions": 4
+    }
+  },
+  "all_response_statuses_logged": true
+}

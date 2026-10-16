@@ -1,0 +1,62 @@
+{
+  "captured_utc": "2026-10-16T13:03:32.666408+00:00",
+  "after": "final HTTPS login and same-origin session round trip",
+  "services": {
+    "gateway": {
+      "lines": 37,
+      "private_value_match_count_by_env_key": {},
+      "fake_marker_match_count": {},
+      "qr_payload_marker_present": false,
+      "raw_http_request_line_count": 0,
+      "error_candidate_lines": 0,
+      "allowlisted_error_categories": {},
+      "403_mentions": 0,
+      "safe_access_status_counts": {
+        "200": 4
+      }
+    },
+    "api": {
+      "lines": 111,
+      "private_value_match_count_by_env_key": {},
+      "fake_marker_match_count": {},
+      "qr_payload_marker_present": false,
+      "raw_http_request_line_count": 0,
+      "error_candidate_lines": 0,
+      "allowlisted_error_categories": {},
+      "403_mentions": 0,
+      "safe_access_status_counts": {}
+    },
+    "evolution": {
+      "lines": 1604,
+      "private_value_match_count_by_env_key": {},
+      "fake_marker_match_count": {
+        "probe-callback": 48
+      },
+      "qr_payload_marker_present": false,
+      "raw_http_request_line_count": 0,
+      "error_candidate_lines": 190,
+      "allowlisted_error_categories": {
+        "webhook_or_callback": 48,
+        "other": 134,
+        "http_403": 8
+      },
+      "403_mentions": 8,
+      "safe_access_status_counts": {}
+    }
+  },
+  "private_values_emitted": false,
+  "raw_logs_emitted": false,
+  "evolution_last_5m": {
+    "candidate_error_lines_by_utc_minute": {},
+    "candidate_error_line_count": 0,
+    "interpretation": "The newest bounded five-minute window has no error candidates, including no transport or persistence errors. An earlier rolling sample after the controlled negative header probe showed four 403 mentions at 12:54 UTC and intermittent webhook-category lines through 12:57 UTC; these correlated with synthetic probe callback retries, and they have stopped in the newest window. The durable lifetime scan retains the fake probe-callback marker count rather than suppressing it."
+  },
+  "effective_nginx": {
+    "http_access_log_disabled": true,
+    "server_safe_access_log": true,
+    "safe_format_declared": true,
+    "safe_format_omits_uri_headers_body": true,
+    "error_log_sink_emerg": true,
+    "effective_config_dump_emitted": false
+  }
+}

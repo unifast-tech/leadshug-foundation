@@ -1,0 +1,42 @@
+{
+  "schema_version": "subagent-review-merge-v2",
+  "artifact_kind": "subagent_review_merge",
+  "authoritative": false,
+  "edit_policy": "derived_merge_packet",
+  "dispatch_path": "/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/delivery-audit-cp21-v2/round-01/dispatch/cutover-integrity.dispatch.json",
+  "review_kind": "cutover_integrity_audit",
+  "review_count": 1,
+  "reviewer_labels": [
+    "cp21-native-cutover-integrity"
+  ],
+  "highest_finding_severity": "high",
+  "axis_summary": {
+    "performance": "acceptable",
+    "elegance": "acceptable",
+    "structural_soundness": "strong_positive",
+    "operational_fit": "mixed"
+  },
+  "recommended_paths": [
+    "Accept the local cutover architecture as ready for controlled external validation, while keeping the TODO active and making no completion or production claim. Perform the redacted real-provider protocol for Meta authorization/selected-number/receipt and device QR/own-number proof, then demonstrate real IN and OUT for both modalities and complete the remaining required consolidation gates. Do not add a legacy token, fallback credential source, or parallel route to bridge those proofs."
+  ],
+  "exact_next_step": "Record reviewer resolutions in the governing TODO using the machine-checkable resolution table or equivalent gate ledger, then extract the derived resolution packet and decide whether another bounded review pass is still required.",
+  "findings": [
+    {
+      "finding_id": "F-EDF9C18F",
+      "severity": "high",
+      "title": "Required real-provider and device evidence is still absent for overall TODO closure",
+      "rationale": "The bounded evidence proves local configuration, synthetic callback/header behavior, isolated runtime wiring, and local test behavior, but not an actual Meta Embedded Signup authorization and selected-number lifecycle, actual device QR pairing with own-number confirmation, or real inbound and outbound delivery for both modalities. The governing TODO explicitly remains Pending and requires real proofs; provider doubles and synthetic probes cannot substitute for them. This blocks overall closeout, not the local canonical-cutover conclusion.",
+      "suggested_action": "Keep the TODO active; use authorized test resources and the temporary HTTPS origin to capture redacted, per-channel evidence for authorization/pairing, identity confirmation, first IN, and OUT receipt. Then submit those results to the remaining required closeout and consolidation gates.",
+      "reviewer_labels": [
+        "cp21-native-cutover-integrity"
+      ],
+      "source_finding_ids": [
+        "CUTOVER-EXT-01"
+      ],
+      "category": "operational_fit",
+      "formalizable_hint": "partial",
+      "candidate_rule_level": "project",
+      "candidate_rule_id": "ST-CON-01 DOD-01/DOD-05/VAL-05"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "captured_utc": "2026-10-16T13:02:12.136229+00:00",
+  "compose_and_container_node_env_production": true,
+  "compose_and_container_web_origin_exact": true,
+  "public_origin_blank": true,
+  "cookie_same_site_lax": true,
+  "cookie_domain_empty": true,
+  "api_healthy": true,
+  "gateway_loopback_only": true,
+  "unofficial_enabled": true,
+  "values_emitted": false
+}

@@ -1,0 +1,22 @@
+{
+  "checkpoint": "cp21-canonical-all",
+  "captured_utc": "2026-10-16T12:56:39.408167+00:00",
+  "command": "bash scripts/test-channels-local.sh all",
+  "exit": 0,
+  "results": {
+    "api_unit_tests": 138,
+    "api_e2e_tests": 282,
+    "web_unit_tests": 28,
+    "browser_tests": 44,
+    "migrations_found_21": 4,
+    "migrations_success": true,
+    "exit": 0
+  },
+  "runner_env_mask_checks": "API .env matched public .env.example; root .env and .env.testing each matched public .env.example inside validation container",
+  "served_freshness": "Playwright global freshness setup ran before workers; pre-worker-freshness.json retained in ignored execution folder",
+  "pre_all_manifest": "cp21-source-manifest-pre-all.json",
+  "expanded_public_inputs_during_all": "cp21-expanded-public-inputs-during-all.json",
+  "post_all_manifest": "cp21-source-manifest-post-all.json",
+  "log_sha256": "b5466cf71c12cd882e189f8aa1ad333233edea969dfebb46b809f6eff4149725",
+  "log_path_ignored": "artifacts/tmp/number-onboarding-execution/cp21-final-all.log"
+}

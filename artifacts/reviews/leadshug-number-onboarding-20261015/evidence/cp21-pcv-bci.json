@@ -1,0 +1,110 @@
+{
+  "policy_schema_version": "pcv-1",
+  "schema_version": "pcv-1",
+  "lane_id": "BCI",
+  "todo_id": "TODO-leadshug-channel-connection-readiness",
+  "run_id": "cp21-canonical-all-20261016",
+  "environment_id": "leadshug_channels_validation/leadshug_timeline_channels_ci/Node22.23.3/OpenSSL3.0.22/PG16",
+  "executor_id": "/root/number_onboarding_devops_resume",
+  "reviewer_id": "/root/performance_final_cp21",
+  "recorded_at_utc": "2026-10-16T13:20:37Z",
+  "evidence_type": "deterministic-runner-observation-with-independent-review",
+  "sample_profile_id": "BCI-SP-H",
+  "acceptance_rule_id": "BCI-A1",
+  "result_summary": "Passed BCI-E3/A1: five rounds20 create plus20 finalize operations in separate phases, and five20-operation pair/delete barriers; one winner, no duplicate provider-port effects, ownership/tombstones preserved.",
+  "artifact_payload": {
+    "source_log": "cp21-final-all.log",
+    "source_log_sha256": "b5466cf71c12cd882e189f8aa1ad333233edea969dfebb46b809f6eff4149725",
+    "source_manifest": "cp21-source-manifest-post-all.json",
+    "source_manifest_sha256": "cb995183a5f7677e797ad9071bf6e1c4a2551d12130f8b8232a73f7fbf059cf8",
+    "independent_review_path": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/delivery-audit-cp21-v2/round-01/performance.result.raw.json",
+    "independent_review_sha256": "26175cfae2c07e8aece2ba674c7c4de016161b0905155526c53d810db0ffb916",
+    "limits": "Observed local PostgreSQL/BFF/browser and doubled provider ports only; no real device/provider IN/OUT, sustained capacity, SLO or exactly-once external guarantee. Later operator-only WSLENV entrypoint delta is separately proven and does not alter this validation runner or product source.",
+    "invariant_id": "PAIR-LEASE-GENERATION-IDENTITY",
+    "concurrency_policy": "optimistic concurrency",
+    "probe_profile_observed": "BCI-SP-H",
+    "runner_or_manual_path": "api-app/test/number-onboarding-bci.e2e-spec.ts",
+    "observations": {
+      "sameKeyCreateAndFinalize": {
+        "gate": "BCI-DUPLICATE-SUBMIT-OR-REPLAY",
+        "severity": "high",
+        "repetitions": 5,
+        "operationsPerRepetition": 40,
+        "operationCounts": [
+          40,
+          40,
+          40,
+          40,
+          40
+        ],
+        "createReplayWinnerCount": 5,
+        "providerIdentityQueries": 15,
+        "mismatchedPayloadNegativeControls": 5,
+        "postPromotionStateChecked": true
+      },
+      "pairDeleteRecreate": {
+        "policy_schema_version": "pcv-1",
+        "lane_id": "BCI",
+        "trigger_result": "required",
+        "trigger_severity": "high",
+        "trigger_reason_code": "BCI-DUPLICATE-SUBMIT-OR-REPLAY",
+        "gate_deadline": "before_local_implemented",
+        "min_evidence_rule_id": "BCI-E3",
+        "acceptance_rule_id": "BCI-A1",
+        "probe_profile_observed": "BCI-SP-H",
+        "gate": "BCI-DELETE-RECREATE-BARRIER",
+        "invariant_id": "PAIR-LEASE-GENERATION-IDENTITY",
+        "concurrency_policy": "single-valid-lease-winner; busy retries do not call provider; tombstone cleanup precedes new managed identity",
+        "repetitions": 5,
+        "operationsPerRepetition": 20,
+        "operationCounts": [
+          20,
+          20,
+          20,
+          20,
+          20
+        ],
+        "observations": [
+          {
+            "firstName": "lh-07d80f2e0a15497c8c8d5066633609d8-1",
+            "secondName": "lh-a20a83d325ad49448b520c1a3fe681f7-1",
+            "busyPair": 9,
+            "busyDelete": 10,
+            "providerCallsDuringBarrier": 1
+          },
+          {
+            "firstName": "lh-5b0abd3e33b04859a88a243148fdc0fd-1",
+            "secondName": "lh-893737e2ceac4b4a8b9c008615f6be59-1",
+            "busyPair": 9,
+            "busyDelete": 10,
+            "providerCallsDuringBarrier": 1
+          },
+          {
+            "firstName": "lh-c53faa73a766431e9e4cc903d323ff72-1",
+            "secondName": "lh-54291023d001479281f010f05e8a0052-1",
+            "busyPair": 9,
+            "busyDelete": 10,
+            "providerCallsDuringBarrier": 1
+          },
+          {
+            "firstName": "lh-6dc5023cacbd40c8bb3626dbc5b8733e-1",
+            "secondName": "lh-9258dca5b85e4a78be9339c7a7b01026-1",
+            "busyPair": 9,
+            "busyDelete": 10,
+            "providerCallsDuringBarrier": 1
+          },
+          {
+            "firstName": "lh-eb26a769b0724f179dff51899d25c781-1",
+            "secondName": "lh-21305345866e449e83354e36114fc610-1",
+            "busyPair": 9,
+            "busyDelete": 10,
+            "providerCallsDuringBarrier": 1
+          }
+        ],
+        "negativeControl": "ATENDENTE pair denied before provider operation",
+        "limits": "Real PostgreSQL and provider-port fake; no provider call exactly-once or capacity claim."
+      }
+    }
+  },
+  "artifact_sha256": "45b966b3ef1d77f183aca7c86a6680953a75d488c936337c58ed52e2e1df1cf0"
+}

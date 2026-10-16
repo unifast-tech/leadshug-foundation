@@ -1,0 +1,59 @@
+{
+  "schema_version": "subagent-review-merge-v2",
+  "artifact_kind": "subagent_review_merge",
+  "authoritative": false,
+  "edit_policy": "derived_merge_packet",
+  "dispatch_path": "/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/delivery-audit-cp21-v2/round-01/dispatch/test-quality.dispatch.json",
+  "review_kind": "test_quality_audit",
+  "review_count": 1,
+  "reviewer_labels": [
+    "cp21-native-test-quality"
+  ],
+  "highest_finding_severity": "high",
+  "axis_summary": {
+    "performance": "acceptable",
+    "elegance": "acceptable",
+    "structural_soundness": "acceptable",
+    "operational_fit": "mixed"
+  },
+  "recommended_paths": [
+    "Accept the local test suite as evidence of implementation readiness, including the final manifest and targeted WSLENV config-only validation; do not attribute that post-all script delta to the earlier all run. Keep the governing TODO active and do not claim completion or production readiness until VAL-05 executes with real Meta authorization, actual device pairing, and real IN/OUT evidence for both modalities. Preserve the delivery's mixed/test-after provenance rather than reconstructing historical RED evidence."
+  ],
+  "exact_next_step": "Record reviewer resolutions in the governing TODO using the machine-checkable resolution table or equivalent gate ledger, then extract the derived resolution packet and decide whether another bounded review pass is still required.",
+  "findings": [
+    {
+      "finding_id": "F-5BF94B94",
+      "severity": "high",
+      "title": "VAL-05 real-provider and device proof remains an overall-close blocker",
+      "rationale": "DOD-05 and VAL-05 require actual Meta authorization, real QR/device pairing, and real IN/OUT plus recovery per modality. The packet and handoff explicitly record that no real Meta authorization, pairing, or real IN/OUT occurred; current runtime evidence is limited to configuration booleans and synthetic provider/header/ingress probes. The passing local suite establishes local behavior and harness fidelity, not this external boundary. This does not invalidate local implementation readiness, but it blocks overall TODO closure.",
+      "suggested_action": "Keep the TODO active and execute the approved external VAL-05 matrix when authorized test targets are available: Embedded Signup and selected official resource, QR/device pairing and identity verification, authenticated IN to the correct BU/inbox, actual OUT received by the interlocutor, and permitted recovery for each modality. Record redacted build/target/time outcomes; do not substitute provider doubles or repeat audits merely to restate this known gap.",
+      "reviewer_labels": [
+        "cp21-native-test-quality"
+      ],
+      "source_finding_ids": [
+        "TQA-CP21-01"
+      ],
+      "category": "residual_risk",
+      "formalizable_hint": "yes",
+      "candidate_rule_level": "project",
+      "candidate_rule_id": "VAL-05"
+    },
+    {
+      "finding_id": "F-8CD8BF35",
+      "severity": "medium",
+      "title": "Fail-first provenance is incomplete despite effective final regression coverage",
+      "rationale": "The delivery history correctly identifies the cp18 fail-first log as a Compose preflight failure and the cp20 former-guard exercise as reconstructed test-after evidence. Browser FRC did expose a genuine defect, and the final tests are substantive rather than pass-the-test assertions, but no authentic pre-fix RED covers every behavior-defining contract. This is verification-process debt, not evidence that the current local behavior lacks regression protection.",
+      "suggested_action": "Classify the slice as mixed/test-after in closeout and do not fabricate historical RED evidence. For a future behavior-defining change or defect correction, capture a failing product-level test before the fix or record an explicit not-applicable rationale; retain the present barriers and negative controls as final regression protection.",
+      "reviewer_labels": [
+        "cp21-native-test-quality"
+      ],
+      "source_finding_ids": [
+        "TQA-CP21-02"
+      ],
+      "category": "tests",
+      "formalizable_hint": "partial",
+      "candidate_rule_level": "project",
+      "candidate_rule_id": "n/a"
+    }
+  ]
+}
