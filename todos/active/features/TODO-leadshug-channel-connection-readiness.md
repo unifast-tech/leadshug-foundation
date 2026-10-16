@@ -93,7 +93,7 @@ A tentativa expira em10min enquanto espera autorização. Após credencial ativa
 
 ### UI e integrações
 
-Wizard: nome/BU → modalidade → janela Meta ou QR → confirmar número → mostrar cadastro/recebimento e ação de retry quando parcial. Cancelar popup, trocar BU, desmontar tela ou nova tentativa invalida callbacks/efeitos antigos no cliente; backend ainda revalida scope. SDK em postMessage aceita apenas origens Meta exatas e formato esperado; evento é dica para seleção e não prova tenant/ID. Callback de login fica preso à geração/attempt/nonce corrente; prova server-side da credencial/ID é obrigatória.
+Wizard: nome/BU → modalidade → janela Meta ou QR → confirmar número → mostrar cadastro/recebimento e ação de retry quando parcial. Cancelar popup, trocar BU, desmontar tela ou nova tentativa invalida callbacks/efeitos antigos no cliente; backend ainda revalida scope. A UI não consome mensagens postMessage para autorização ou seleção; somente o callback do SDK correlacionado à operação atual inicia a troca do code. IDs externos são obtidos e confirmados pelas leituras autorizadas no backend. Callback de login fica preso à geração/attempt/nonce corrente; prova server-side da credencial/ID é obrigatória.
 
 Permissões existentes preservadas: ADMIN da BU para conectar existente; ADMIN da Mantenedora para criar BU; ATENDENTE não ganha gestão; módulo não oficial depende do teto e contratação. Dados sensíveis nunca vão a config.js/bundle. UI mostra ausência de configuração e falhas por etapa, sem exigir WABA/token manual do operador comum no fluxo Meta. Administrador pode reautorizar conta já cadastrada; credencial manual de número já registrado, se usada, é caminho técnico explícito com conferência Meta e cifra, jamais env global implícita.
 
@@ -878,8 +878,8 @@ Uma etapa bounded com cinco clientes e seis leituras por cliente,30verificaçõe
 
 ## Verification Debt Assessment (Required Before `Completed`; mandatory audit for `medium|big` or when debt signals exist)
 
-- **Audit outcome:** none
-- **Why this outcome:** nenhum produto alterado ainda; audit obrigatório após implementação.
+- **Audit outcome:** high
+- **Why this outcome:** avaliação provisória do estágio atual: produto já alterado e correções de browser, runtime/all, reviews e prova externa ainda pendentes; auditoria independente de encerramento não executada. Nenhum aceite de dívida ou closure inferido.
 - **Inline code TODO debt:** none
 - **Evidence / audit artifact:** planned, sem claim de audit realizado.
 - **Accepted residual debt:** none; VAL-05 externa não pode ser dispensada implicitamente.
@@ -1026,3 +1026,9 @@ Diagnóstico cp14 rerun5: a resposta real do replay foi403/TENANT_ADMIN_REQUIRED
 
 
 Checkpoint14 Web STOP conferido pelo root:14hashes públicos correspondem ao manifesto `cp14-web-source-hashes.sha256` SHA2565ac633782a230fffa377be07a64aa73518a67b8dad66d299af03a67980e0d1be; build+28unitários passaram após correção de coalescing e detach de cancelamento. Handoff SHA2560fc9e5bb82af9966e5e5dc475791e075573449db161ce291482e48b20de817aa e log unit final a7dc078145418e252aabdae3486673d8cb26034d66d011d62833f62d1ab732a2. Último browser42/44 é ANTERIOR ao fix final de detach e continua falho, não gate aceito. Preworker rerun5 preservado como fonte anterior. Root transfere writer único à API cp15, somente fixture OWNER e regressão novaBU/replay nos paths já admitidos, syntax/diff/hash e STOP. A nova regressão será explicitamente não executada até o all integrado; não repetir a matriz API antiga sem mudança de produto. Depois Web recebe reteste do browser e DevOps prepara operador/all. Nenhuma prova de provider real foi inferida.
+
+
+Coerência de source consumidor: o listener/parser postMessage sem correlação foi removido por subtração; a UI usa somente callback SDK ligado ao owner/attempt e seleção obtida no backend. A descrição owner foi alinhada, sem criar transportes/permissões. NUM-WEB-09/12 passam a ser examinados por ausência dessa superfície, não por alegação de parser ativo testado. Os gates finais ainda precisam avaliar a fonte e a prova atual.
+
+
+Checkpoint15 API STOP: somente fixture OWNER e um caso PG novaBU/replay nos2paths admitidos; hashes ffbbb697205edbe9e076adf33f418d883339f40675f078479eccf704899ca62a e f22a48ec138978f6d09cb0eeb92ba9fc4ea5da416cfbd86d9c43ec4a5d8db12e conferidos pelo root. Comparação com o manifesto cp8 FINAL273442f... mostra somente3deltas públicos conhecidos: browser-server cp13 e esses2paths cp15;150paths iguais. Aquele manifesto inicial cp8-source-manifest-before é anterior às remediações e não baseline do gate final. Recibo root-cp15-fixture-delta.json registra a comparação sem dados operacionais. Syntax/diff passaram segundo executor; novo caso PG ainda não executado. Web cp16 é único writer para full44browser/FRC no runner próprio, com API/runtime congelados. Depois STOP e handoff DevOps; operador/all/reviews continuam obrigatórios.

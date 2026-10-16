@@ -1,0 +1,24 @@
+{
+  "status": "bounded-fixture-and-regression-change; browser-and-new-PG-test-pending",
+  "recorded_at_utc": "2026-10-16T00:25:23.078692+00:00",
+  "root_verified_delta_from_cp8_final_manifest": [
+    {
+      "path": "test/browser-server.cjs",
+      "cp8_sha256": "b5a4bc7ffff1261bb186bc878ceab5c2f334548a62f110bcfb4f57bafa036dcc",
+      "current_sha256": "4379e94511e4d8c06e4dc6a232b85f29305c49863e17f2af639c39f4184c60e3"
+    },
+    {
+      "path": "test/number-onboarding-flow.e2e-spec.ts",
+      "cp8_sha256": "bbe120780fdc7e514cfe3d8c183fe36a0e06bb52d5b0b0e89ab5f3e14f831c2a",
+      "current_sha256": "f22a48ec138978f6d09cb0eeb92ba9fc4ea5da416cfbd86d9c43ec4a5d8db12e"
+    },
+    {
+      "path": "test/timeline-fixtures.cjs",
+      "cp8_sha256": "25c1b231b735eed4ad143681bb25dd552b6ddd042ba04c8eb40c7f782f83ae77",
+      "current_sha256": "ffbbb697205edbe9e076adf33f418d883339f40675f078479eccf704899ca62a"
+    }
+  ],
+  "baseline_manifest_sha256": "273442f47a1fc76ce723a20f17611349f649241c6084be0bc6aa22dfecf3a63d",
+  "remaining_cp8_public_paths_unchanged": 150,
+  "note": "cp8-source-manifest-before.sha256 is an earlier initial snapshot, not the final gate input. Compare cp8-final-source-after.sha256. No operational payload read."
+}
