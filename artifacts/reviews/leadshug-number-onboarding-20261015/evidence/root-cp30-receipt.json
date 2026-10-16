@@ -1,0 +1,42 @@
+{
+  "kind": "root-cp28-cp30 operator readiness receipt",
+  "capturedUtc": "2026-10-16T18:13:34.065199+00:00",
+  "verifiedArtifacts": [
+    {
+      "path": "cp28-operator-readiness.json",
+      "sha256": "71f3a7f06b968b942572c0731ad4333684c83d6c073b049bd83712209f0d2680"
+    },
+    {
+      "path": "cp29-diagnosis.json",
+      "sha256": "ff49129fc7c5875c12d2a27290e158efcefe42c6ff0740a578ae7fa709c3a7db"
+    },
+    {
+      "path": "cp29-lifecycle.json",
+      "sha256": "e0a8e035356fa2f443948eec217496cc201bd6d90f76346abe6b9c82405b173c"
+    },
+    {
+      "path": "cp29-lifecycle-pre-retirement.json",
+      "sha256": "047400cf0c30b7c7f18a64e185257d838afa88fd7373ab12ce159404e9bc6924"
+    },
+    {
+      "path": "cp29-handoff.md",
+      "sha256": "f8e575cf64a8e49034ffae9f4d9e62f70615ce583f8fa95c54ee55d9007af113"
+    },
+    {
+      "path": "cp30-runtime-readiness.json",
+      "sha256": "dfc68c3cc8b1839db9918945ef6473f2fb799965a213ac920458faa0d0cd1b00"
+    },
+    {
+      "path": "cp30-runtime-readiness.md",
+      "sha256": "9399a5c029880525efbf9afa9e0789d2a911d8ecbb2e1c720e8113a9b24f27d5"
+    },
+    {
+      "path": "cp30-operator-setup-clarification.json",
+      "sha256": "e0d0fe30fbc885e853c69fd9b6ad657daa5d8f56f00e927e4ea468447015bdaa"
+    }
+  ],
+  "disposition": "HTTPS/origin/session recovered; human wizard pending and real channel proof absent",
+  "privateValuesOrSecretHashesReadOrPersistedByRoot": false,
+  "productSourceChanged": false,
+  "requiredExternalProofWaived": false
+}

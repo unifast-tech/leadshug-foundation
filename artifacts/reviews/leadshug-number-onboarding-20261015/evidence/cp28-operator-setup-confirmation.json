@@ -1,0 +1,13 @@
+{
+  "recordedUtc": "2026-10-16T17:57:53.746176+00:00",
+  "evidenceType": "human operator confirmation",
+  "source": "user message in current conversation",
+  "appWebhookMessagesSubscribed": true,
+  "normalInitialConfigurationCompleted": true,
+  "authenticatedRuntimeVerification": "pending cp28",
+  "wabaSubscribedAppsVerified": false,
+  "realMetaAuthorizationVerified": false,
+  "realDevicePairingVerified": false,
+  "realInboundOutboundVerified": false,
+  "limits": "No credential/phone/QR/code/token/session value requested or retained; human setup report is not channel operation proof."
+}

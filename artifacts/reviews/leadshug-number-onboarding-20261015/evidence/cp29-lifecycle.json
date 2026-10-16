@@ -1,0 +1,93 @@
+{
+  "capturedAtUtc": "2026-10-16T18:03:34Z",
+  "changes": {
+    "MetaConfiguration": false,
+    "OAuthOrProviderOperation": false,
+    "applicationContainers": false,
+    "devicePairingOrQr": false,
+    "operatorDb": false,
+    "privateOriginOrApplicationConfig": false,
+    "sourceOrRuntimeCode": false
+  },
+  "checkpoint": "cp29",
+  "newTunnel": {
+    "hostname": "operating-brussels-internship-interviews.trycloudflare.com",
+    "hostnameCapturedAtUtc": "2026-10-16T18:01:45.648349+00:00",
+    "lifecycle": {
+      "filterScriptSha256": "8b6366ccf6f16d16bdf88659d670b4c7da94a9a37b031b3bb8aeb935bb9dbcbb",
+      "helperScriptSha256": "3ff7d02be15b58b706341811fbbc53ee748e5cf715c2bb7aa0eec4d60bde19f0",
+      "hostMetadataSha256": "1ad53b42683a6c07eabbbd0f708087256743c52abe2993c21fada7b44b16219e",
+      "oldCloudflaredPid": 28236,
+      "oldCloudflaredStoppedOnlyAfterNewHttps200": true,
+      "oldStopSignal": "SIGTERM sent only to PID after exact exe path, pinned hash, parent PID, target arguments, and saved supervisor script matched",
+      "oldStopVerification": {
+        "oldCloudflaredAlive": false,
+        "oldSupervisorAlive": false,
+        "onlyNewCloudflaredPidAlive": 77593
+      },
+      "oldSupervisorExitedNaturally": true,
+      "oldSupervisorPid": 28234,
+      "oldSupervisorSignaled": false,
+      "oldWindowsOwnerExitedNaturally": true,
+      "oldWindowsOwnerPid": 24396,
+      "persistentDnsOrNamedTunnelCreated": false,
+      "pidsMetadataSha256": "77377a81baa2b73873b69e4c152b544287100d311c6869a90f512e751b4b65b6",
+      "processBound": true,
+      "startMechanism": "Windows-owned detached wsl.exe launching the installed WSL binary via the already validated cloudflared 2026.10.0 executable"
+    },
+    "privateOriginOrApiContainerChanged": false,
+    "publicUrl": "https://operating-brussels-internship-interviews.trycloudflare.com",
+    "reachability": {
+      "httpsHealthWindows": 200,
+      "httpsHealthWsl": 200,
+      "httpsRootWindows": 200,
+      "httpsRootWsl": 200,
+      "loopbackGatewayHealth": 200,
+      "windowsDnsResolved": true,
+      "wslDnsResolved": true
+    },
+    "status": "active temporary process-bound Quick Tunnel",
+    "streamPolicy": {
+      "onlyGeneratedHostnamePersisted": true,
+      "rawTunnelOutputPersisted": false,
+      "stdoutAndStderrContinuouslyDrained": true
+    },
+    "windowsOwner": {
+      "commandMatchesExpectedScript": true,
+      "distribution": "Ubuntu",
+      "image": "wsl.exe",
+      "launcherParentExited": true,
+      "launcherParentPid": 31784,
+      "ownerPersistedAfterLauncherExited": true,
+      "pid": 29132
+    },
+    "wsl": {
+      "binaryPath": "foundation_documentation/artifacts/tmp/number-onboarding-execution/cloudflared-tmp/cloudflared",
+      "binarySha256": "d33ff2d14475178d2012c2c56beba87389ac5ded27649519f198a7d3134a99db",
+      "binaryVersion": "2026.10.0",
+      "cloudflaredAlive": true,
+      "cloudflaredPid": 77593,
+      "cloudflaredPpid": 77581,
+      "distro": "Ubuntu",
+      "executableHashMatchesPinnedBinary": true,
+      "executablePathMatchesPinnedBinary": true,
+      "supervisorAlive": true,
+      "supervisorPid": 77581,
+      "target": "http://127.0.0.1:8083",
+      "targetMatchesProcessArguments": true
+    }
+  },
+  "oldTunnel": {
+    "causeOfDnsRecordLoss": "unknown; not inferred",
+    "cloudflaredPid": 28236,
+    "defaultDnsResolvedWindows": false,
+    "defaultDnsResolvedWsl": false,
+    "directPublicDnsAnswerCount": 0,
+    "directPublicDnsRcode": 3,
+    "directPublicDnsResolver": "1.1.1.1",
+    "httpsHealthStatus": null,
+    "httpsRootStatus": null,
+    "oldProcessWasLiveButHadNoActiveTransportSockets": true,
+    "publicUrl": "https://mistress-spencer-mozilla-sciences.trycloudflare.com"
+  }
+}

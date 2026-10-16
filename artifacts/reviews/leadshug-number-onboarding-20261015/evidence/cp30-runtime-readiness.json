@@ -1,0 +1,88 @@
+{
+  "checkpoint": "cp30-runtime-readiness",
+  "capturedAtLocal": "2026-10-16",
+  "scope": "Authorized runtime origin correction and read-only owner readiness check; no source, build, migration, onboarding, module, billing, provider, OAuth, QR, or number-pairing writes.",
+  "origin": "https://operating-brussels-internship-interviews.trycloudflare.com",
+  "privateConfigMutation": {
+    "onlyAuthorizedKeyChanged": "CHANNELS_LOCAL_ORIGIN",
+    "effectiveWebOriginMatches": true,
+    "productionNodeEnvPreserved": true,
+    "publicOriginBlankPreserved": true,
+    "fourMetaFieldsNonemptyPreserved": true,
+    "ownerAndOtherProtectedValuesPreserved": true,
+    "allOtherFileBytesUnchanged": true,
+    "aclPreserved": true,
+    "webOriginKeyAddedToFile": false
+  },
+  "runtime": {
+    "apiContainerBefore": "f38abfe9121ee4368adcec88bde0060c995946774be1c2829ef9c8dfe7dadd11",
+    "apiContainerAfter": "c2c74bc267af724a0b8a33a415b04084e74e0867669228cf906f7c306541bec0",
+    "apiImageIdBeforeAndAfter": "sha256:c2e8d62bde2c85305deb9d72569f773072e77292465e09ed7283051b40ed4f4f",
+    "apiRecreatedWithoutBuild": true,
+    "otherContainersUnchanged": true,
+    "volumesUnchanged": true,
+    "volumes": [
+      "leadshug_channels_local_evolution_instances",
+      "leadshug_channels_local_evolution_pg_data",
+      "leadshug_channels_local_evolution_redis_data",
+      "leadshug_channels_local_leadshug_arquivos",
+      "leadshug_channels_local_leadshug_pg_data"
+    ],
+    "apiHealth": "healthy",
+    "gatewayContainer": "0c48d94e9fe5b4ad75efd304db2752dfa4cab3befc59b9f736574d6cd551eea3",
+    "webContainer": "1e8d3a40dd9665481748b1278fd60de71ced6c682986d367a90665e76a61358a"
+  },
+  "httpsAndSession": {
+    "wslRootStatus": 200,
+    "wslHealthStatus": 200,
+    "windowsRootStatus": 200,
+    "windowsHealthStatus": 200,
+    "loginStatus": 200,
+    "meStatus": 200,
+    "corsPreflightStatus": 204,
+    "corsOriginMatchesExactOrigin": true,
+    "corsCredentialsAllowed": true,
+    "ownerRole": true,
+    "sessionCookieSecure": true,
+    "sessionCookieHttpOnly": true,
+    "sessionCookieSameSiteLax": true,
+    "sessionCookieHostOnly": true,
+    "cookiePersisted": false
+  },
+  "readiness": {
+    "meOnboardingPending": true,
+    "onboardingEndpointStatus": 200,
+    "onboardingComplete": false,
+    "offeredModuleCount": 1,
+    "registrationCapabilitiesStatus": 409,
+    "registrationCapabilitiesReason": "ONBOARDING_PENDENTE",
+    "businessUnitsStatus": 409,
+    "businessUnitsReason": "ONBOARDING_PENDENTE",
+    "businessUnitCount": null,
+    "businessUnitModalities": "not observed; endpoint gated by onboarding pending",
+    "installationUnofficialCeilingEnabled": true,
+    "tenantUnofficialModuleEnabled": false,
+    "officialRegistrationAvailability": "not established; capabilities endpoint gated by ONBOARDING_PENDENTE",
+    "unofficialRegistrationAvailability": "not established; tenant module selection false and capabilities endpoint gated by ONBOARDING_PENDENTE",
+    "providerOrNumberActionsPerformed": false
+  },
+  "sourceProvenance": {
+    "rootHead": "4bccdc4aa470d1166bc14a681d0008f242db2562",
+    "apiHead": "f134bd11449a553e6f57e66cdc8fc71032151060",
+    "webHead": "d33c82c26760c671d98cab6f3e7bfe5676122c69",
+    "productSourceChanged": false,
+    "runtimeSourceBuilt": false
+  },
+  "operatorReported": {
+    "messagesSubscriptionConfirmedByUser": true,
+    "initialWizardCompletionConfirmedByUser": true,
+    "runtimeWizardStateMatchesThatReport": false
+  },
+  "safeNextAction": "Reconcile the existing OWNER Configuração inicial wizard in the application UI. Do not start number registration until the normal readiness endpoints clear the onboarding gate.",
+  "secretHandling": {
+    "credentialsOrSecretValuesPersisted": false,
+    "secretHashesPersisted": false,
+    "rawResponsesOrLogsPersisted": false,
+    "ephemeralCookiePersisted": false
+  }
+}

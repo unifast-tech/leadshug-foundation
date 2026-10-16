@@ -1,8 +1,8 @@
 # Plano de validação — conexões e histórico dos canais
 
 **Data:** 2026-10-15
-**Estado:** planejamento; nenhum cenário abaixo foi executado nesta frente.
-**Contrato candidato:** [ST-CON-01 draft](../../todos/active/features/TODO-leadshug-channel-connection-readiness.md).
+**Estado:** contrato aprovado; harness local aceito em cp27/all499 e revisões independentes. Prova com números reais ainda pendente; disposição atual por cenário no TODO.
+**Contrato governante:** [ST-CON-01 aprovado](../../todos/active/features/TODO-leadshug-channel-connection-readiness.md).
 **Enquadramento:** [conexões e histórico](../feature-briefs/leadshug-channel-readiness-and-history-20261015.md).
 
 ## Sequência de ambientes
@@ -87,7 +87,7 @@ O usuário confirmou que também quer iniciar conversas informando o contato. Es
 
 ## Cadastro: regressões da revisão de arquitetura (VAL-08)
 
-Casos planejados, nenhum executado. Fixtures de dois tenants e recursos distintos; PostgreSQL real e barreiras para disputas. Provider stub só na porta externa; prova de aparelho separada.
+Casos de regressão exercitados localmente e aceitos nas revisões cp21/cp25/cp27, conforme tabela REG-SEC do TODO e raw completo cp27. Não equivalem a prova externa. Fixtures de dois tenants e recursos distintos; PostgreSQL real e barreiras para disputas. Provider stub só na porta externa; prova de aparelho separada.
 
 | Caso | Cenário / expectativa obrigatória |
 | --- | --- |

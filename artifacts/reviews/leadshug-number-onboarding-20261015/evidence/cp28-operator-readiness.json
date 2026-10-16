@@ -1,0 +1,46 @@
+{
+  "authentication": {
+    "cookiePersisted": false,
+    "credentialSource": "leadshug_now_docker/.env.testing",
+    "loginAttempted": false,
+    "reason": "HTTPS DNS resolution failed before any request was sent",
+    "requiredFieldsPresent": true,
+    "sessionCreated": false
+  },
+  "capturedAtUtc": "2026-10-16T17:58:08Z",
+  "checkpoint": "cp28-operator-readiness",
+  "limits": [
+    "No tunnel/process repair or configuration change was attempted.",
+    "No OAuth, provider operation, device pairing, QR, or real-number action was performed."
+  ],
+  "nextSupportedAction": "restore the existing temporary HTTPS tunnel/host, then repeat normal owner login and read-only readiness checks",
+  "origin": "https://mistress-spencer-mozilla-sciences.trycloudflare.com",
+  "probes": {
+    "gatewayLoopbackRoot": {
+      "status": 200
+    },
+    "httpsHealth": {
+      "curlExit": 6,
+      "status": null,
+      "transport": "DNS resolution failed"
+    },
+    "httpsRoot": {
+      "curlExit": 6,
+      "status": null,
+      "transport": "DNS resolution failed"
+    }
+  },
+  "productReadiness": {
+    "businessUnitsChecked": false,
+    "capabilitiesChecked": false,
+    "meChecked": false,
+    "onboardingChecked": false,
+    "reason": "authenticated requests were not possible while current HTTPS hostname did not resolve"
+  },
+  "scope": "read-only owner readiness; no source/runtime/private-config/product mutations",
+  "sourceHeads": {
+    "api": "f134bd11449a553e6f57e66cdc8fc71032151060",
+    "root": "4bccdc4aa470d1166bc14a681d0008f242db2562",
+    "web": "d33c82c26760c671d98cab6f3e7bfe5676122c69"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "recordedUtc": "2026-10-16T18:13:34.049173+00:00",
+  "evidenceType": "human operator clarification after cp30 authenticated readiness",
+  "supersedesCurrentInterpretationOf": "cp28-operator-setup-confirmation.json; initial wizard report only",
+  "appWebhookMessagesSubscribedUserConfirmed": true,
+  "newAppDomainOauthAndJavascriptSdkUrlsSavedUserConfirmed": true,
+  "newMetaWebhookVerifiedAndSavedUserConfirmed": true,
+  "publicOrigin": "https://operating-brussels-internship-interviews.trycloudflare.com",
+  "wizardActuallyCompleted": false,
+  "userClarification": "Operator had not performed the wizard in any account and had forgotten it.",
+  "runtimeConsistentWithClarification": true,
+  "nextRequiredHumanAction": "Complete normal Configuração inicial using private OWNER; select WhatsApp não oficial and final Revisão→Concluir; no automated bypass.",
+  "realMetaAuthorizationOrDevicePairingOrInOutVerified": false
+}
