@@ -1,0 +1,59 @@
+{
+  "schema_version": "subagent-review-merge-v2",
+  "artifact_kind": "subagent_review_merge",
+  "authoritative": false,
+  "edit_policy": "derived_merge_packet",
+  "dispatch_path": "/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp36e-tqa.dispatch.json",
+  "review_kind": "test_quality_audit",
+  "review_count": 1,
+  "reviewer_labels": [
+    "cp36e-independent-test-quality-audit"
+  ],
+  "highest_finding_severity": "medium",
+  "axis_summary": {
+    "performance": "acceptable",
+    "elegance": "mixed",
+    "structural_soundness": "mixed",
+    "operational_fit": "mixed"
+  },
+  "recommended_paths": [
+    "Resolve TQA-CP36E-01 before acceptance: make malformed JSON and missing/non-array page data fail closed as the typed temporary-unavailability path rather than conclusive absence; add focused real-MetaHttpClient tests for malformed JSON, missing data, and non-array data, then prove the BFF result is the safe 503 boundary. Resolve TQA-CP36E-02 with BFF contract assertions for the exact safe public message/no provider leakage and a generic non-Meta error that is not remapped to META_INDISPONIVEL. After any source or test change, create a new freeze/receipt and rerun the canonical API leaf; rerun Web/browser only if their frozen bytes or affected build/runtime inputs change. Obtain a fresh independent TQA and separate final review after the repaired receipt. Keep D-06/VAL-05 external provider/device/runtime evidence explicitly pending; this audit must not promote whole-runtime or external delivery."
+  ],
+  "exact_next_step": "Record reviewer resolutions in the governing TODO using the machine-checkable resolution table or equivalent gate ledger, then extract the derived resolution packet and decide whether another bounded review pass is still required.",
+  "findings": [
+    {
+      "finding_id": "F-800DAA78",
+      "severity": "medium",
+      "title": "Malformed successful Meta page can be classified as conclusive absence",
+      "rationale": "Issue card. Evidence: api-app/src/integrations/meta/meta.client.ts parses a successful response with response.json().catch(() => ({})); numerosDaWaba then treats absent data as an empty terminal page, and verificarNumeroVinculado returns null. The service consequently follows its ordinary resource-not-found path rather than the required typed safe 503 path. This violates the frozen rule that null means only exhaustively observed absence; parse/shape/contract failures must fail loudly. Current meta.client.spec.ts covers bounded pages, invalid grant, budget, cycle, and oversized cursor, but not malformed JSON, missing data, or non-array data. Option A, leave it unchanged, retains false absence and is not acceptable. Option B, add only a test, demonstrates but does not repair the defect. Option C, recommended, fail closed in the adapter and cover adapter plus BFF boundary behavior.",
+      "suggested_action": "Validate successful provider payload shape before interpreting it: malformed JSON, missing data, and non-array data must raise MetaIndisponivelError. Add real MetaHttpClient unit cases and a BFF/real-PG assertion that the resulting public response is 503 META_INDISPONIVEL while durable state and the owned lease remain safe. Regenerate the frozen receipt and rerun the API CI-equivalent leaf.",
+      "reviewer_labels": [
+        "cp36e-independent-test-quality-audit"
+      ],
+      "source_finding_ids": [
+        "TQA-CP36E-01"
+      ],
+      "category": "structural_soundness",
+      "formalizable_hint": "yes",
+      "candidate_rule_level": "project",
+      "candidate_rule_id": "D-07"
+    },
+    {
+      "finding_id": "F-6C11BA11",
+      "severity": "medium",
+      "title": "BFF error-boundary tests do not fully lock the safe envelope or selective mapping",
+      "rationale": "Issue card. The current BFF E2E asserts 503 and catalogCode for MetaIndisponivelError, and source currently maps only that class. It does not assert the mandated fixed safe public text/no raw provider detail, nor prove that an arbitrary non-Meta exception remains unremapped. A broad catch or changed message could therefore pass the current test while breaking the frozen error-boundary contract. Option A, rely on source inspection, leaves a regression hole. Option B, change production behavior without a test, is unnecessary because the present source is correct. Option C, recommended, add BFF assertions only.",
+      "suggested_action": "Extend the existing BFF/real-PostgreSQL error case to assert the exact fixed public message and absence of provider detail. Add a generic port-error case proving it is not translated into META_INDISPONIVEL, while preserving the existing state/credential/identity/audit/lease assertions.",
+      "reviewer_labels": [
+        "cp36e-independent-test-quality-audit"
+      ],
+      "source_finding_ids": [
+        "TQA-CP36E-02"
+      ],
+      "category": "tests",
+      "formalizable_hint": "yes",
+      "candidate_rule_level": "project",
+      "candidate_rule_id": "D-05"
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+Command: bash scripts/test-channels-local.sh api
+Runtime observed by safe runner: Node v22.23.3; OpenSSL 3.0.22; Prisma 6.19.3 debian-openssl-3.0.x; PostgreSQL disposable validation database; all 22 migrations applied successfully.
+The 138 API unit tests passed. Focused PG test result before production edits:
+
+❯ test/number-onboarding-flow.e2e-spec.ts (28 tests | 1 failed)
+× BFF number registration workflow (PostgreSQL) > recovers the same completed Evolution attempt after connecting/open and repeated administrative verification
+AssertionError: expected { verification: [ 409, …(1) ], …(3) } to deeply equal { …(4) }
+Received:
+  "connecting": [200, undefined]
+  "opening": [409, "ATTEMPT_STALE"]
+  "duplicateOpen": [409, "ATTEMPT_STALE"]
+  "verification": [409, "ATTEMPT_STALE"]
+
+Final API E2E result: 1 failed | 25 passed (26 files); 1 failed | 286 passed (287 tests). Runner exit status: 1, expected for this RED capture.

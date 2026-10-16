@@ -1,0 +1,13 @@
+# cp36d final validation result
+
+The source-owned command `bash scripts/test-channels-local.sh all` completed on the frozen nine-file source manifest. The complete stdout/stderr is `cp36d-api-recovery-final-all.log`; the source hashes before and after are byte-identical in `cp36d-source-before.sha256` and `cp36d-source-after.sha256`.
+
+Validation passed API lint/build, 141 API unit tests, 288 PostgreSQL E2E tests, Web build, 28 Web unit tests, and 47 Playwright tests: 504 total tests. The 22 existing migrations applied and the disposable database was current. The two admitted People invite tests now explicitly select “Número de QA” and wait for the real `/api/bff/usuarios` POST response, asserting 201 before their existing Ana/sector and Bia/link assertions.
+
+The PostgreSQL flow sends the persisted-number verifier through two scoped page responses with the exact WABA, token and cursor calls. It receives 503/META_INDISPONIVEL, then checks unchanged channel/attempt/credential/identity/receipt/BU/audit state and the cleared operation lease. The production service maps only `MetaIndisponivelError` to a fixed safe 503 catalog response; all other errors are rethrown. The browser provider fixture throws the same exported Meta error class loaded from the built API module on inconclusive branches.
+
+The pre-mapper RED is preserved separately in `cp36d-api-recovery-red-full.log`: that earlier BFF/PostgreSQL request observed 500 with no catalog code against the 503/META_INDISPONIVEL expectation (141 unit pass; 287/288 PostgreSQL tests pass). Its first harness used direct typed-error injection; the two-page bounded-loop seam was strengthened after that RED and validated by the final all. No external Meta request or provider response body is claimed.
+
+Actual pre-worker freshness and browser authority attestation are preserved as `cp36d-pre-worker-freshness.json` and `cp36d-browser-attestation.json`. They record Node v22.23.3, the disposable `leadshug_timeline_channels_ci` database, 22 completed migrations, health 200 for API/fixtures/preview, served bundle equal to `dist`, and all nine current public source paths including the untracked helper and Web spec. Validation used only `leadshug_channels_validation`; its containers, volumes and network were cleaned up.
+
+A post-run test-quality review note requests each Meta adapter inconclusive unit assertion to prove both `instanceof MetaIndisponivelError` and the exact catalog code on the same rejection. That bounded test-only follow-up is pending adjudication after live reviewers terminate; no source was changed after this all run. No `.local-files`, private dotenv, operator database, or live provider payload was read or included.

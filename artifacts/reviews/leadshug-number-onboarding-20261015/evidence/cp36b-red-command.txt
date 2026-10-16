@@ -1,0 +1,2 @@
+bash scripts/test-channels-local.sh api
+Executed with bash -o pipefail; complete stdout/stderr tee'd to cp36b-api-recovery-red-full.log; RUNNER_EXIT appended from pipeline status.

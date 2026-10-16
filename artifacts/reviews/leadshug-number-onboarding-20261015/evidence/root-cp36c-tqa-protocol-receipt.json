@@ -1,0 +1,9 @@
+{
+  "raw_sha256": "0e3eb487f933c947181da29ff85f48f6a27a72890b7d8f38e48c9b634cac48e7",
+  "terminal_exit_code": 0,
+  "schema_shape": "valid",
+  "merge": "rejected",
+  "reason": "Prompt used dispatch basename; raw dispatch_path resolves at root rather than actual evidence folder. Raw unchanged, no normalized substitute or acceptance claim.",
+  "findings_adjudicated": "TQA-CP36C-01 and02 useful Integrated-for-fix; source/test proof reviewed independently. New current-byte TQA after correction must use absolute dispatch path.",
+  "gate": "not accepted"
+}

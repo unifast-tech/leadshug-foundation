@@ -1,0 +1,85 @@
+#0 building with "desktop-linux" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 2.54kB 0.0s done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/node:22-alpine
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 127B done
+#3 DONE 0.0s
+
+#4 [builder  1/10] FROM docker.io/library/node:22-alpine
+#4 DONE 0.0s
+
+#5 [internal] load build context
+#5 transferring context: 86.53kB 0.0s done
+#5 DONE 0.0s
+
+#6 [builder  6/10] COPY prisma ./prisma
+#6 CACHED
+
+#7 [builder  2/10] RUN apk add --no-cache openssl
+#7 CACHED
+
+#8 [builder  3/10] WORKDIR /app
+#8 CACHED
+
+#9 [builder  5/10] RUN npm ci
+#9 CACHED
+
+#10 [builder  7/10] RUN npx prisma generate
+#10 CACHED
+
+#11 [builder  4/10] COPY package.json package-lock.json ./
+#11 CACHED
+
+#12 [builder  8/10] COPY tsconfig.json tsconfig.build.json nest-cli.json ./
+#12 CACHED
+
+#13 [builder  9/10] COPY src ./src
+#13 DONE 0.1s
+
+#14 [builder 10/10] RUN npm run build
+#14 0.365 
+#14 0.365 > @leadshug/api@0.1.0 build
+#14 0.365 > nest build
+#14 0.365 
+#14 DONE 7.0s
+
+#15 [runner  3/10] WORKDIR /app
+#15 CACHED
+
+#16 [runner  5/10] RUN npm ci --omit=dev && npm cache clean --force
+#16 CACHED
+
+#17 [runner  2/10] RUN apk add --no-cache openssl su-exec
+#17 CACHED
+
+#18 [runner  4/10] COPY package.json package-lock.json ./
+#18 CACHED
+
+#19 [runner  6/10] COPY --from=builder /app/node_modules/.prisma ./node_modules/.prisma
+#19 CACHED
+
+#20 [runner  7/10] COPY --from=builder /app/dist ./dist
+#20 DONE 0.1s
+
+#21 [runner  8/10] COPY --from=builder /app/prisma ./prisma
+#21 DONE 0.0s
+
+#22 [runner  9/10] COPY docker/entrypoint.sh /entrypoint.sh
+#22 DONE 0.0s
+
+#23 [runner 10/10] RUN sed -i 's/\r$//' /entrypoint.sh && chmod +x /entrypoint.sh
+#23 DONE 0.2s
+
+#24 exporting to image
+#24 exporting layers 0.1s done
+#24 writing image sha256:c1b5769ff0a7e58772eb6a1b0c0a120c94ad3aa943119408cc8d1d0df115d136 done
+#24 naming to docker.io/library/leadshug-channels-api-candidate:cp36e-ea3080d36a43 done
+#24 DONE 0.1s
+
+View build details: docker-desktop://dashboard/build/desktop-linux/desktop-linux/rjunlrhxguad3kkc4zv7b3hb8

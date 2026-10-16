@@ -1,0 +1,14 @@
+{
+  "checkpoint": "root-cp39-receipt",
+  "hashesVerified": {
+    "cp39-candidate-build.json": true,
+    "cp39-candidate-build.md": true,
+    "cp39-candidate-build.log": true
+  },
+  "candidateImageId": "sha256:c1b5769ff0a7e58772eb6a1b0c0a120c94ad3aa943119408cc8d1d0df115d136",
+  "candidateManifestSha256": "ea3080d36a4389466a2f59afeab5dc8c1d0a239b8f000d9e16a65ff292e6d3df",
+  "candidateNotServed": true,
+  "scopeAccepted": "inert build/platform probe and reported operator preservation only",
+  "candidateDisposition": "historical cp36e source; blocked from activation after terminal TQA-CP36E-01/02; corrected cp36f source requires new candidate",
+  "runtimeRecoveryProven": false
+}

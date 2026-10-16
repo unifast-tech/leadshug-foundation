@@ -1,0 +1,71 @@
+{
+  "checkpoint": "root-cp36-validation-receipt",
+  "capturedAtUtc": "2026-10-16T19:02:47.558469+00:00",
+  "verifiedSourceFiles": [
+    {
+      "path": "api-app/src/domain/channels/receipt-attempt-convergence.ts",
+      "sha256": "ab837f4c0b8bca372b598a0e6226acd68db63b1458319c56f5756a292e7dc144"
+    },
+    {
+      "path": "api-app/src/domain/channels/channels.service.ts",
+      "sha256": "78f18caa6f6b0b8363f248f862f47e6c3feeb0c8628af408576dfb7314158939"
+    },
+    {
+      "path": "api-app/src/surfaces/webhooks/evolution.controller.ts",
+      "sha256": "12139a5b50b4dacf43492e038c91f006c9db999d0f6a76fd5d73e45ee987a041"
+    },
+    {
+      "path": "api-app/test/number-onboarding-flow.e2e-spec.ts",
+      "sha256": "28e8140437cc0c9502f731e3c6bee1bb0d17266e3616dd25cd4b924236f22a67"
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "cp36-api-recovery-summary.md",
+      "sha256": "4f4cf08097b1f8134a84c431e4582551b2f165dff64c1922b8e79349e1234b8b"
+    },
+    {
+      "path": "cp36-api-recovery-before.sha256",
+      "sha256": "fdbaafa06d8129afdfe5e4bb4bf7b64c34e12d3fcec41ffc372195ef8f63d49f"
+    },
+    {
+      "path": "cp36-api-recovery-after.sha256",
+      "sha256": "cf5db9fbff75c5e30b207cd7770eaf6eb49e4aa9e28a2b067769404f63994197"
+    },
+    {
+      "path": "cp36-api-recovery-red.log",
+      "sha256": "cf1b42594cb866a07efc0beacb7632b20c4d091a9d5342a067b1f0e8d02909f8"
+    },
+    {
+      "path": "cp36-api-recovery-green-api.log",
+      "sha256": "66368291c1ea5b0a10028b86569db6626e8409f5fcd7be538147ad85453ad49a"
+    },
+    {
+      "path": "cp36-api-recovery-final-all.log",
+      "sha256": "24b0536b051b680dfafed25bad303ff632346b40768320e51a0acd8ebee303c2"
+    },
+    {
+      "path": "cp36-review-source-freeze.json",
+      "sha256": "5d211c57833e24ea25cdda0468bdabfa2aa81c73c5f6272175d46eceac1f4132"
+    },
+    {
+      "path": "cp36-pre-worker-freshness.json",
+      "sha256": "9237b7d81ba3ba9baf05a30ad613bd8dca9fa22b61f07b786870d14362d97e8a"
+    },
+    {
+      "path": "cp36-browser-attestation.json",
+      "sha256": "64428dd7bef216770c486a4f20228ade8eec29aeb122c790a003c28c9422f77e"
+    }
+  ],
+  "suite": {
+    "apiUnit": 138,
+    "postgres": 288,
+    "webUnit": 28,
+    "browser": 47,
+    "total": 501,
+    "migrations": 22
+  },
+  "redFullStdoutAvailable": false,
+  "redExcerptAndBeforeSourceRetained": true,
+  "disposition": "Primary local validation accepted for frozen four-file recovery delta; independent review/runtime recovery proof pending."
+}

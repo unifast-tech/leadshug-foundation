@@ -1,0 +1,19 @@
+{
+  "checkpoint": "root-cp33-receipt",
+  "recordedAtUtc": "2026-10-16T18:39:22.802375+00:00",
+  "verifiedArtifacts": [
+    {
+      "path": "cp33-unofficial-message-readback.json",
+      "sha256": "e9f34518871f79df460d2ddc53baf8ad0e5b6a6ba48194cf5643d88322ef20cf"
+    },
+    {
+      "path": "cp33-unofficial-message-readback.md",
+      "sha256": "45a189390d1cde81eb7c30cc74838c248ee3fbcd572b1f22634ae2c267133e47"
+    }
+  ],
+  "humanInboundVisibleAndOutboundReceived": true,
+  "databaseReadback": "One IN and one OUT on the same current identity/conversation, compared to cp32 zero baseline; receipt verified and channel connected.",
+  "disposition": "First observed unofficial exchange accepted; recovery and all official-channel proof remain pending.",
+  "sourceRuntimeChangedByCp33": false,
+  "externalProofWaived": false
+}

@@ -1,0 +1,116 @@
+{
+  "checkpoint": "cp34-evolution-restart-recovery",
+  "scope": "Human-authorized bounded restart of only the owned local Evolution container, followed by read-only state observation.",
+  "authorization": {
+    "humanApprovedTemporaryInterruption": true,
+    "authorizationEvidence": "cp34-operator-recovery-authorization.json",
+    "serviceScope": "existing owned Evolution service only"
+  },
+  "containerRestart": {
+    "containerId": "cf749491f7149dc46ec4db597b2d9c12faf918dd4f05b5512ba75adaf8e29ea4",
+    "composeProject": "leadshug_channels_local",
+    "composeService": "evolution",
+    "configuredImage": "evoapicloud/evolution-api:v2.3.7@sha256:1bd8afc4a6cf48822e6cf02469aeae7bd35a12a6b616eacd1291926307f4d339",
+    "actualImageId": "sha256:385a3c4bedf42c66b46b43d06aae8712620144a84aa3b2c831b30c68435ab27c",
+    "mountPreserved": "leadshug_channels_local_evolution_instances",
+    "beforeState": "running",
+    "stoppedStateConfirmed": "exited",
+    "stopCommandExitCode": 0,
+    "startedSameContainerId": true,
+    "startCommandExitCode": 0,
+    "afterState": "running",
+    "stopStartElapsedSeconds": 5.59,
+    "otherSixContainerIdentitiesAndStatesUnchanged": true,
+    "allFiveProjectVolumesUnchanged": true,
+    "volumes": [
+      "leadshug_channels_local_evolution_instances",
+      "leadshug_channels_local_evolution_pg_data",
+      "leadshug_channels_local_evolution_redis_data",
+      "leadshug_channels_local_leadshug_arquivos",
+      "leadshug_channels_local_leadshug_pg_data"
+    ]
+  },
+  "duringInterruption": {
+    "gatewayRootStatus": 200,
+    "apiHealthStatus": 200,
+    "authenticatedBusinessUnitsStatus": 200,
+    "observedChannelStatus": "CONECTADO",
+    "observedProviderConnectionState": "CONNECTED",
+    "observedReceiptVerified": true,
+    "observedConnected": true,
+    "observationSemantics": "persisted last-known application state; not live Evolution health"
+  },
+  "postRestartDatabaseSnapshot": {
+    "statementTimestampSource": "CURRENT_TIMESTAMP from the read-only PostgreSQL statement",
+    "readAtUtc": "2026-10-16T18:40:18.033Z",
+    "channelCount": 1,
+    "channelType": "NAO_OFICIAL",
+    "channelStatus": "CONECTANDO",
+    "providerConnectionState": "CONNECTING",
+    "ownNumberVerified": true,
+    "pairingEpoch": 1,
+    "verifiedEpoch": 1,
+    "verifiedEpochMatchesPairingEpoch": true,
+    "generation": 1,
+    "currentAttemptPresent": true,
+    "attemptState": "CONNECTED",
+    "attemptStage": "RECEIPT_VERIFIED",
+    "attemptGenerationMatches": true,
+    "activeOwnedIdentityMappingCount": 1,
+    "exactCurrentIdentityMappingCount": 1,
+    "currentIdentityMappingConsistent": true,
+    "receiptVerified": true,
+    "receiptVerifiedAtUtc": "2026-10-16T18:34:04.872Z",
+    "connected": false,
+    "connectedAtUtc": null,
+    "businessUnitConversationCount": 1,
+    "currentResourceConversationCount": 1,
+    "inboundCount": 1,
+    "outboundCount": 1,
+    "inboundAndOutboundShareConversation": true,
+    "inboundExternalIdPresent": true,
+    "outboundExternalIdPresent": true,
+    "inboundAuthorPresent": false,
+    "outboundAuthorPresent": true,
+    "contentsNamesPhonesMessageIdsOrResourceIdsPersisted": false
+  },
+  "postRestartAuthenticatedChannelPolls": [
+    {
+      "atUtc": "2026-10-16T18:40:53.040285Z",
+      "status": 200,
+      "channelStatus": "CONECTANDO",
+      "providerConnectionState": "CONNECTING",
+      "ownNumberVerified": true,
+      "receiptVerified": true,
+      "connected": false
+    },
+    {
+      "atUtc": "2026-10-16T18:40:58.576920Z",
+      "status": 200,
+      "channelStatus": "CONECTANDO",
+      "providerConnectionState": "CONNECTING",
+      "ownNumberVerified": true,
+      "receiptVerified": true,
+      "connected": false
+    },
+    {
+      "atUtc": "2026-10-16T18:41:06.982257Z",
+      "status": 200,
+      "channelStatus": "CONECTANDO",
+      "providerConnectionState": "CONNECTING",
+      "ownNumberVerified": true,
+      "receiptVerified": true,
+      "connected": false
+    }
+  ],
+  "recoveryConclusion": "The exact Evolution container and transport are restored, while the application has not yet confirmed the channel's live provider connection. Persisted receipt, identity, epochs, and prior synthetic IN/OUT remain intact. No new recovery IN/OUT was performed or requested by the agent.",
+  "actions": {
+    "otherServicesRestarted": false,
+    "recreateBuildConfigOrVolumeMutation": false,
+    "providerCallsOrVerifyAction": false,
+    "qrRenewalRePairingOrRegistrationMutation": false,
+    "agentMessageSend": false,
+    "sourceOrPrivateConfigMutation": false,
+    "rawLogsPayloadsCredentialsOrCookiesPersisted": false
+  }
+}

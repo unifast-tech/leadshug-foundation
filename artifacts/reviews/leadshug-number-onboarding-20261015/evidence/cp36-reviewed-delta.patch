@@ -1,0 +1,145 @@
+diff --git a/src/domain/channels/channels.service.ts b/src/domain/channels/channels.service.ts
+index 7fb0295..1cb7f66 100644
+--- a/src/domain/channels/channels.service.ts
++++ b/src/domain/channels/channels.service.ts
+@@ -14,6 +14,7 @@ import {
+ import { META_CLIENT, MetaClient } from '../../integrations/meta/meta.client';
+ import { ChannelCredentialResolver } from './channel-credential-resolver';
+ import { RegistroDeAtividade } from '../historico/registro.service';
++import { convergeReceiptVerifiedAttempt } from './receipt-attempt-convergence';
+ 
+ export type TipoDeCanal = 'OFICIAL' | 'NAO_OFICIAL';
+ const OPERATION_LEASE_MS = 45_000;
+@@ -332,8 +333,8 @@ export class ChannelsService {
+         const connected = await tx.buChannel.updateMany({ where: { id: channel.id, generation: channel.generation, pairingEpoch: channel.pairingEpoch, operationLeaseToken: leaseToken, operationLeaseUntil: { gt: new Date() } }, data: { status: 'CONECTADO', connectedAt: new Date() } });
+         if (!connected.count) throw new ConflictException({ code: 'CHANNEL_OPERATION_STALE' });
+         if (channel.currentAttemptId) {
+-          const attemptUpdated = await tx.channelRegistrationAttempt.updateMany({ where: { id: channel.currentAttemptId, generation: channel.generation, pairingEpoch: channel.pairingEpoch, state: { in: ['PENDING_NUMBER', 'PENDING_RECEIPT'] } }, data: { state: 'CONNECTED', stage: 'RECEIPT_VERIFIED', version: { increment: 1 } } });
+-          if (!attemptUpdated.count) throw new ConflictException({ code: 'ATTEMPT_STALE' });
++          const attemptConverged = await convergeReceiptVerifiedAttempt(tx, channel.currentAttemptId, channel.generation, channel.pairingEpoch);
++          if (!attemptConverged) throw new ConflictException({ code: 'ATTEMPT_STALE' });
+         }
+       }
+       if (actor) await this.audit(tx, actor, 'canal.identidade.verificada', buId, channel.currentAttemptId ?? channel.id, 'IDENTITY_VERIFIED');
+diff --git a/src/surfaces/webhooks/evolution.controller.ts b/src/surfaces/webhooks/evolution.controller.ts
+index 3b84834..246edc1 100644
+--- a/src/surfaces/webhooks/evolution.controller.ts
++++ b/src/surfaces/webhooks/evolution.controller.ts
+@@ -3,6 +3,7 @@ import { timingSafeEqual } from 'node:crypto';
+ import { IncomingService } from '../../domain/inbox/incoming.service';
+ import { PrismaService } from '../../infra/prisma/prisma.service';
+ import { MessageAcceptanceService } from '../../domain/inbox/message-acceptance.service';
++import { convergeReceiptVerifiedAttempt } from '../../domain/channels/receipt-attempt-convergence';
+ import { ServiceUnavailableException, ConflictException } from '@nestjs/common';
+ 
+ /**
+@@ -126,8 +127,8 @@ export class EvolutionWebhookController {
+       });
+       if (!changed.count) throw new ConflictException({ code: 'CHANNEL_GENERATION_STALE' });
+       if (ready && channel.currentAttemptId) {
+-        const converged = await tx.channelRegistrationAttempt.updateMany({ where: { id: channel.currentAttemptId, generation: context.generation, pairingEpoch: context.pairingEpoch, state: { in: ['PENDING_NUMBER', 'PENDING_RECEIPT'] } }, data: { state: 'CONNECTED', stage: 'RECEIPT_VERIFIED', version: { increment: 1 } } });
+-        if (!converged.count) throw new ConflictException({ code: 'ATTEMPT_STALE' });
++        const converged = await convergeReceiptVerifiedAttempt(tx, channel.currentAttemptId, context.generation, context.pairingEpoch);
++        if (!converged) throw new ConflictException({ code: 'ATTEMPT_STALE' });
+       }
+     });
+   }
+diff --git a/test/number-onboarding-flow.e2e-spec.ts b/test/number-onboarding-flow.e2e-spec.ts
+index c942921..ee6cae2 100644
+--- a/test/number-onboarding-flow.e2e-spec.ts
++++ b/test/number-onboarding-flow.e2e-spec.ts
+@@ -634,6 +634,62 @@ describe('BFF number registration workflow (PostgreSQL)', () => {
+     expect(await prisma.message.count({ where: { externalId: 'evo-first-trusted-in' } })).toBe(1);
+   });
+ 
++  it('recovers the same completed Evolution attempt after connecting/open and repeated administrative verification', async () => {
++    await contratarCanalNaoOficial(prisma, tenant.mantenedora.id);
++    const paired = await bff('post', `/api/bff/business-units/${tenant.businessUnit.id}/channels/nao-oficial/pair`)
++      .send({ intent: 'INITIAL' }).expect(200);
++    const channel = await prisma.buChannel.findUniqueOrThrow({ where: { id: paired.body.channelId } });
++    const attemptId = channel.currentAttemptId!;
++    await request(app.getHttpServer()).post('/webhooks/evolution').set('x-leadshug-webhook-secret', EVOLUTION_WEBHOOK_SECRET)
++      .send({ event: 'messages.upsert', instance: channel.evolutionInstanceName, data: { key: { remoteJid: '5584999777666@s.whatsapp.net', fromMe: false, id: 'evo-recovery-receipt' }, pushName: 'Cliente', message: { conversation: 'prova de recebimento' } } }).expect(200);
++    const connectedBefore = await prisma.buChannel.findUniqueOrThrow({ where: { id: channel.id } });
++    const receiptBefore = connectedBefore.receiptVerifiedAt;
++    const identityBefore = await prisma.providerResourceIdentity.findFirstOrThrow({ where: { currentChannelId: channel.id } });
++    const attemptBefore = await prisma.channelRegistrationAttempt.findUniqueOrThrow({ where: { id: attemptId } });
++    expect(connectedBefore.status).toBe('CONECTADO');
++    expect(attemptBefore).toMatchObject({ state: 'CONNECTED', stage: 'RECEIPT_VERIFIED' });
++
++    const verification = await bff('post', `/api/bff/business-units/${tenant.businessUnit.id}/channels/NAO_OFICIAL/verify`).send({});
++    const connectionEvent = (state: string) => request(app.getHttpServer()).post('/webhooks/evolution').set('x-leadshug-webhook-secret', EVOLUTION_WEBHOOK_SECRET)
++      .send({ event: 'connection.update', instance: channel.evolutionInstanceName, data: { state } });
++    const connecting = await connectionEvent('connecting');
++    const opening = await connectionEvent('open');
++    const duplicateOpen = await connectionEvent('open');
++    expect({ verification: [verification.status, verification.body.code], connecting: [connecting.status, connecting.body.code], opening: [opening.status, opening.body.code], duplicateOpen: [duplicateOpen.status, duplicateOpen.body.code] }).toEqual({ verification: [200, undefined], connecting: [200, undefined], opening: [200, undefined], duplicateOpen: [200, undefined] });
++
++    const recovered = await prisma.buChannel.findUniqueOrThrow({ where: { id: channel.id } });
++    const recoveredAttempt = await prisma.channelRegistrationAttempt.findUniqueOrThrow({ where: { id: attemptId } });
++    expect(recovered).toMatchObject({ status: 'CONECTADO', providerConnectionState: 'CONNECTED', ownNumberVerified: true, verifiedEpoch: channel.pairingEpoch, pairingEpoch: channel.pairingEpoch, receiptVerifiedAt: receiptBefore });
++    expect(recoveredAttempt).toMatchObject({ id: attemptId, state: 'CONNECTED', stage: 'RECEIPT_VERIFIED', generation: channel.generation, pairingEpoch: channel.pairingEpoch, version: attemptBefore.version });
++    expect(await prisma.providerResourceIdentity.findUniqueOrThrow({ where: { id: identityBefore.id } })).toMatchObject({ currentChannelId: channel.id, buId: tenant.businessUnit.id });
++    expect(await prisma.message.count({ where: { externalId: 'evo-recovery-receipt' } })).toBe(1);
++  });
++
++  it('does not revive a cancelled or wrong-generation/epoch attempt during connection recovery', async () => {
++    await contratarCanalNaoOficial(prisma, tenant.mantenedora.id);
++    const paired = await bff('post', `/api/bff/business-units/${tenant.businessUnit.id}/channels/nao-oficial/pair`)
++      .send({ intent: 'INITIAL' }).expect(200);
++    const channel = await prisma.buChannel.findUniqueOrThrow({ where: { id: paired.body.channelId } });
++    const attemptId = channel.currentAttemptId!;
++    await request(app.getHttpServer()).post('/webhooks/evolution').set('x-leadshug-webhook-secret', EVOLUTION_WEBHOOK_SECRET)
++      .send({ event: 'messages.upsert', instance: channel.evolutionInstanceName, data: { key: { remoteJid: '5584999777666@s.whatsapp.net', fromMe: false, id: 'evo-stale-recovery-receipt' }, pushName: 'Cliente', message: { conversation: 'prova de recebimento' } } }).expect(200);
++    await request(app.getHttpServer()).post('/webhooks/evolution').set('x-leadshug-webhook-secret', EVOLUTION_WEBHOOK_SECRET)
++      .send({ event: 'connection.update', instance: channel.evolutionInstanceName, data: { state: 'connecting' } }).expect(200);
++
++    const postOpen = () => request(app.getHttpServer()).post('/webhooks/evolution').set('x-leadshug-webhook-secret', EVOLUTION_WEBHOOK_SECRET)
++      .send({ event: 'connection.update', instance: channel.evolutionInstanceName, data: { state: 'open' } });
++    await prisma.channelRegistrationAttempt.update({ where: { id: attemptId }, data: { state: 'CANCELLED', stage: 'CANCELLED' } });
++    await postOpen().expect(409).expect(({ body }) => expect(body.code).toBe('ATTEMPT_STALE'));
++    expect(await prisma.buChannel.findUniqueOrThrow({ where: { id: channel.id } })).toMatchObject({ status: 'CONECTANDO', providerConnectionState: 'CONNECTING', pairingEpoch: channel.pairingEpoch, generation: channel.generation });
++
++    await prisma.channelRegistrationAttempt.update({ where: { id: attemptId }, data: { state: 'PENDING_RECEIPT', stage: 'MAPPED_PENDING_RECEIPT', generation: channel.generation + 1 } });
++    await postOpen().expect(409).expect(({ body }) => expect(body.code).toBe('ATTEMPT_STALE'));
++    await prisma.channelRegistrationAttempt.update({ where: { id: attemptId }, data: { generation: channel.generation, pairingEpoch: channel.pairingEpoch + 1 } });
++    await postOpen().expect(409).expect(({ body }) => expect(body.code).toBe('ATTEMPT_STALE'));
++    expect(await prisma.channelRegistrationAttempt.findUniqueOrThrow({ where: { id: attemptId } })).toMatchObject({ state: 'PENDING_RECEIPT', generation: channel.generation, pairingEpoch: channel.pairingEpoch + 1 });
++    expect(await prisma.buChannel.findUniqueOrThrow({ where: { id: channel.id } })).toMatchObject({ status: 'CONECTANDO', providerConnectionState: 'CONNECTING', pairingEpoch: channel.pairingEpoch, generation: channel.generation });
++  });
++
+   it('fences a held old verification across verified RENEW and accepts the same inbound key only after current X verification', async () => {
+     await contratarCanalNaoOficial(prisma, tenant.mantenedora.id);
+     const phoneX = '5584999990000';
+diff --git a/api-app/src/domain/channels/receipt-attempt-convergence.ts b/api-app/src/domain/channels/receipt-attempt-convergence.ts
+new file mode 100755
+index 0000000..a35b604
+--- /dev/null
++++ b/api-app/src/domain/channels/receipt-attempt-convergence.ts
+@@ -0,0 +1,26 @@
++import type { Prisma } from '@prisma/client';
++
++/** Promote the exact current attempt after receipt, or accept its already-completed state idempotently. */
++export async function convergeReceiptVerifiedAttempt(
++  tx: Prisma.TransactionClient,
++  attemptId: string,
++  generation: number,
++  pairingEpoch: number,
++): Promise<boolean> {
++  const promoted = await tx.channelRegistrationAttempt.updateMany({
++    where: {
++      id: attemptId,
++      generation,
++      pairingEpoch,
++      state: { in: ['PENDING_NUMBER', 'PENDING_RECEIPT'] },
++    },
++    data: { state: 'CONNECTED', stage: 'RECEIPT_VERIFIED', version: { increment: 1 } },
++  });
++  if (promoted.count) return true;
++
++  const alreadyComplete = await tx.channelRegistrationAttempt.findFirst({
++    where: { id: attemptId, generation, pairingEpoch, state: 'CONNECTED', stage: 'RECEIPT_VERIFIED' },
++    select: { id: true },
++  });
++  return Boolean(alreadyComplete);
++}

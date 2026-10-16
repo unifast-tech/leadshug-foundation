@@ -1,0 +1,82 @@
+{
+  "capturedAtUtc": "2026-10-16T20:08:58.194Z",
+  "runId": "2026-10-16T20-08-58-194Z",
+  "branch": {
+    "api": {
+      "name": "feature/number-onboarding",
+      "head": "f134bd11449a553e6f57e66cdc8fc71032151060",
+      "declaredBaseline": "ae6a9662c29b77276351aa9de653a47276372246",
+      "diffSha256": "e5d8c4e50d7ef68329b65c5ea56a637b78c2715553b16a7aeec9724e7eabd8e0",
+      "sourceManifest": [
+        {
+          "path": "src/domain/channels/channels.service.ts",
+          "status": "unstaged:M",
+          "sha256": "e910b2b395abc0ebca74deea917cf107dd36eca58491f1b0893efb702e1dfcf5"
+        },
+        {
+          "path": "src/domain/channels/receipt-attempt-convergence.ts",
+          "status": "??",
+          "sha256": "ca8cb841fab2574866c3508ab41aa0a269608a20658db18840b2b89f0c281512"
+        },
+        {
+          "path": "src/integrations/meta/meta.client.spec.ts",
+          "status": "unstaged:M",
+          "sha256": "d7ab2a4b5d6cd7f2c83f3b7939f5b86436baf82e69d085df5d35236e66caf8d9"
+        },
+        {
+          "path": "src/integrations/meta/meta.client.ts",
+          "status": "unstaged:M",
+          "sha256": "7938f5c09e23af3dad61442712fa18a1fea93b22a59bdd40384be44b990c22f5"
+        },
+        {
+          "path": "src/surfaces/webhooks/evolution.controller.ts",
+          "status": "unstaged:M",
+          "sha256": "12139a5b50b4dacf43492e038c91f006c9db999d0f6a76fd5d73e45ee987a041"
+        },
+        {
+          "path": "test/browser-server.cjs",
+          "status": "unstaged:M",
+          "sha256": "bf260c3124a867bda495509983055557988bc958141f3a8399e3e69de3aff451"
+        },
+        {
+          "path": "test/helpers.ts",
+          "status": "unstaged:M",
+          "sha256": "4d4b1c8c4e17c8fa7f338fdeeb2d63d093753038cece0d3aea566ae95c13619a"
+        },
+        {
+          "path": "test/number-onboarding-flow.e2e-spec.ts",
+          "status": "unstaged:M",
+          "sha256": "932e4e4c4dd3b6dda9ec46b4074205f1073ad46e66b0eab7ad70cbd09bcc3577"
+        }
+      ]
+    },
+    "web": {
+      "name": "feature/number-onboarding",
+      "head": "d33c82c26760c671d98cab6f3e7bfe5676122c69",
+      "declaredBaseline": "4e56f6c1f4515b918d05b8c87e890d42e8542c56",
+      "diffSha256": "4bd6da36465f948d0b172d0ceff3ca654941a04f577ed6cb169d42c8c816575f",
+      "sourceManifest": [
+        {
+          "path": "e2e/telas.spec.ts",
+          "status": "unstaged:M",
+          "sha256": "ee4911de7148eebee35d5ddcc7d9bbbcc6faf051f0ea3f415e338d6809bb9d59"
+        }
+      ]
+    }
+  },
+  "runtime": "v22.23.3",
+  "database": {
+    "name": "leadshug_timeline_channels_ci",
+    "endpoint": "postgresql://validation-postgres:5432/leadshug_timeline_channels_ci",
+    "completedMigrations": 22
+  },
+  "endpoints": {
+    "apiHealth": 200,
+    "fixtureHealth": 200,
+    "preview": 200,
+    "servedBundle": "/assets/index-txvhtd65.js"
+  },
+  "servedBundleSha256": "d14343604557296f2ed62c1df47d9c80d81c323abafd89ccbb64a6a0746ff4bd",
+  "distBundleSha256": "d14343604557296f2ed62c1df47d9c80d81c323abafd89ccbb64a6a0746ff4bd",
+  "operationalDataBoundary": "API .local-files payloads and private dotenv files are excluded from public-source inventories and binary diff pathspecs; an omitted file is not reported as a source deletion."
+}

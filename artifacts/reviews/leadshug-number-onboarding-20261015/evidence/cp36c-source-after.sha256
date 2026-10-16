@@ -1,0 +1,8 @@
+78f5f752a5bcb4240c762a55cb1bf7965f19b696d5918808bf5e6a5a739482b4  api-app/src/domain/channels/channels.service.ts
+ca8cb841fab2574866c3508ab41aa0a269608a20658db18840b2b89f0c281512  api-app/src/domain/channels/receipt-attempt-convergence.ts
+12139a5b50b4dacf43492e038c91f006c9db999d0f6a76fd5d73e45ee987a041  api-app/src/surfaces/webhooks/evolution.controller.ts
+dd4e2537b783bd4f62575387871441d9ab5e346700002e6519033e4ba387b9e6  api-app/test/number-onboarding-flow.e2e-spec.ts
+7938f5c09e23af3dad61442712fa18a1fea93b22a59bdd40384be44b990c22f5  api-app/src/integrations/meta/meta.client.ts
+9da346d92920a2ef05a7b2616f95c890add6715d3912e3747f4e54f0039a851f  api-app/src/integrations/meta/meta.client.spec.ts
+4d4b1c8c4e17c8fa7f338fdeeb2d63d093753038cece0d3aea566ae95c13619a  api-app/test/helpers.ts
+807ee3bdce9a8456fdf6cec9d762f460b6a159400093f983c5e916af0bfbab41  api-app/test/browser-server.cjs

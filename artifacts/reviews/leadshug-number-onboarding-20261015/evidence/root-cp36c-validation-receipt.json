@@ -1,0 +1,30 @@
+{
+  "checkpoint": "cp36c",
+  "source_hashes_current_and_before_after_identical": true,
+  "api_lint_build": "passed",
+  "api_unit": 141,
+  "api_postgresql": 288,
+  "web_build_unit": "passed28",
+  "browser": {
+    "passed": 46,
+    "failed": 1,
+    "failed_test": "e2e/telas.spec.ts338",
+    "observed": "Ana cell absent after invite; consoleHTTP400",
+    "catalog_code": "not captured",
+    "error_context": "unavailable after runner cleanup"
+  },
+  "all": "failed",
+  "runtime_unchanged": true,
+  "accepted_whole_gate": false,
+  "evidence_sha256": {
+    "cp36c-api-recovery-final-all.log": "6faac14f95dd94c94053bc00457dac200629c96f8b1c14535b3ba2948e180fd3",
+    "cp36c-source-before.sha256": "4560b5438b1e24eb6d73eac0b3aba2a6bb78d1c9c6e44ace3d6002a737756f04",
+    "cp36c-source-after.sha256": "4560b5438b1e24eb6d73eac0b3aba2a6bb78d1c9c6e44ace3d6002a737756f04",
+    "cp36c-browser-attestation.json": "915ff3bf7952b13a1c4b862a6354b7b7537afcda3f632b8f64c0d02ec5c8fcec",
+    "cp36c-pre-worker-freshness.json": "db589e85df46acea103994b5525990378aeffeee83f79e083efcd1efc73729fb",
+    "cp36c-final-result.md": "ec37eff256f9124cbfa99812550e7aa78c033aeb9fc2cc387e3ec82f724030be"
+  },
+  "actual_preworker_attestation_verified_against_all8_current_hashes": true,
+  "served_js_equal_dist": true,
+  "database_migrations": 22
+}

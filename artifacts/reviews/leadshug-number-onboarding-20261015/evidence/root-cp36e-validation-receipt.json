@@ -1,0 +1,28 @@
+{
+  "checkpoint": "cp36e",
+  "api_command": "bash scripts/test-channels-local.sh api",
+  "api_exit_code": 0,
+  "api_lint_build": "passed",
+  "api_unit": 141,
+  "api_pg": 288,
+  "migrations": 22,
+  "source9_current_verified": true,
+  "only_changed_since_cp36d": [
+    "api-app/src/integrations/meta/meta.client.spec.ts"
+  ],
+  "eight_other_paths_identical": true,
+  "reused_web_unit": 28,
+  "reused_browser": 47,
+  "reuse_basis": "All production, provider fixtures and Web test bytes identical to cp36d; changed unit spec excluded by tsconfig.build.json. API lint/build/unit/PG refreshed after edit.",
+  "actual_preworker_provenance": "cp36d immutable manifests retain old unit-spec hash. No new all/browser/preworker execution claimed.",
+  "runtime_updated": false,
+  "pending": "fresh full applicable TQA and separate final, then operator update/recovery/human/official proof",
+  "sha256": {
+    "cp36e-api-validation.log": "b185949c63d75bef19bc8261ded60b2436d51c070e2de497d2d458d88d7b271d",
+    "cp36e-source-before.sha256": "d16e4b918a68609b6101d6483acc9472561ac33a29e6512552ab7413193babd3",
+    "cp36e-source-after.sha256": "ea3080d36a4389466a2f59afeab5dc8c1d0a239b8f000d9e16a65ff292e6d3df",
+    "cp36e-source-freeze.json": "0c032372a7a97a9c424aba989d1fd4bd9d61eaf575c68f01fb536c443d07a581",
+    "cp36e-api-validation-result.md": "81260139f856c482974ce3afa8639b3e4908c04f63ec8cf0bd240c3ea007db68",
+    "root-cp36d-validation-receipt.json": "b60435a7cb2c0b3003513da818f60ee6482a18f4fb83cf7d12b9e11849d92b56"
+  }
+}

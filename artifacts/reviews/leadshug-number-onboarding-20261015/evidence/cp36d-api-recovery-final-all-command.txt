@@ -1,0 +1,2 @@
+Command: bash scripts/test-channels-local.sh all
+Purpose: one canonical final full validation in source-owned leadshug_channels_validation namespace

@@ -1,0 +1,392 @@
+diff --git a/src/domain/channels/channels.service.ts b/src/domain/channels/channels.service.ts
+index 7fb0295..25041dd 100644
+--- a/src/domain/channels/channels.service.ts
++++ b/src/domain/channels/channels.service.ts
+@@ -14,6 +14,7 @@ import {
+ import { META_CLIENT, MetaClient } from '../../integrations/meta/meta.client';
+ import { ChannelCredentialResolver } from './channel-credential-resolver';
+ import { RegistroDeAtividade } from '../historico/registro.service';
++import { convergeReceiptVerifiedAttempt } from './receipt-attempt-convergence';
+ 
+ export type TipoDeCanal = 'OFICIAL' | 'NAO_OFICIAL';
+ const OPERATION_LEASE_MS = 45_000;
+@@ -283,7 +284,7 @@ export class ChannelsService {
+       if (!credential.accessToken) throw new ConflictException({ code: 'PENDING_CREDENTIAL' });
+       await revalidate?.();
+       await this.assertOperationLease(channel, leaseToken);
+-      const number = await this.meta.confirmarNumero(channel.wabaId, channel.phoneNumberId, credential.accessToken);
++      const number = await this.meta.verificarNumeroVinculado(channel.wabaId, channel.phoneNumberId, credential.accessToken);
+       await revalidate?.();
+       await this.assertOperationLease(channel, leaseToken);
+       if (!number) throw new ConflictException({ code: 'PROVIDER_RESOURCE_NOT_FOUND' });
+@@ -332,8 +333,9 @@ export class ChannelsService {
+         const connected = await tx.buChannel.updateMany({ where: { id: channel.id, generation: channel.generation, pairingEpoch: channel.pairingEpoch, operationLeaseToken: leaseToken, operationLeaseUntil: { gt: new Date() } }, data: { status: 'CONECTADO', connectedAt: new Date() } });
+         if (!connected.count) throw new ConflictException({ code: 'CHANNEL_OPERATION_STALE' });
+         if (channel.currentAttemptId) {
+-          const attemptUpdated = await tx.channelRegistrationAttempt.updateMany({ where: { id: channel.currentAttemptId, generation: channel.generation, pairingEpoch: channel.pairingEpoch, state: { in: ['PENDING_NUMBER', 'PENDING_RECEIPT'] } }, data: { state: 'CONNECTED', stage: 'RECEIPT_VERIFIED', version: { increment: 1 } } });
+-          if (!attemptUpdated.count) throw new ConflictException({ code: 'ATTEMPT_STALE' });
++          const attemptEpoch = tipo === 'OFICIAL' ? null : channel.pairingEpoch;
++          const attemptConverged = await convergeReceiptVerifiedAttempt(tx, channel.currentAttemptId, channel.generation, attemptEpoch);
++          if (!attemptConverged) throw new ConflictException({ code: 'ATTEMPT_STALE' });
+         }
+       }
+       if (actor) await this.audit(tx, actor, 'canal.identidade.verificada', buId, channel.currentAttemptId ?? channel.id, 'IDENTITY_VERIFIED');
+diff --git a/src/integrations/meta/meta.client.spec.ts b/src/integrations/meta/meta.client.spec.ts
+index 8c5783b..d99831e 100644
+--- a/src/integrations/meta/meta.client.spec.ts
++++ b/src/integrations/meta/meta.client.spec.ts
+@@ -122,6 +122,76 @@ describe('MetaHttpClient scoped credentials', () => {
+     await expect(client.confirmarNumero('123456', '111111111', 'candidate', 'provider-cursor-page-2')).resolves.toBeNull();
+   });
+ 
++  it('verifies a persisted phone on the second scoped page without following provider URLs', async () => {
++    process.env.META_APP_ID = 'fake-id'; process.env.META_APP_SECRET = 'fake-secret'; process.env.META_SIGNUP_CONFIG_ID = 'fake-config'; process.env.GRAPH_VERSION = 'v26.0';
++    const grant = { data: { app_id: 'fake-id', is_valid: true, scopes: ['whatsapp_business_management', 'whatsapp_business_messaging'], granular_scopes: [
++      { scope: 'whatsapp_business_management', target_ids: ['123456'] }, { scope: 'whatsapp_business_messaging', target_ids: ['123456'] },
++    ] } };
++    const fetchFake = vi.fn()
++      .mockResolvedValueOnce({ ok: true, json: async () => grant })
++      .mockResolvedValueOnce({ ok: true, json: async () => ({ data: [{ id: '111111111' }], paging: { next: 'https://foreign.invalid/secret', cursors: { after: 'cursor-page-2' } } }) })
++      .mockResolvedValueOnce({ ok: true, json: async () => ({ data: [{ id: '987654321', display_phone_number: '+55 84 99999-0000' }] }) });
++    vi.stubGlobal('fetch', fetchFake);
++    const number = await new MetaHttpClient().verificarNumeroVinculado('123456', '987654321', 'scoped-candidate');
++    expect(number).toMatchObject({ id: '987654321', telefone: '5584999990000' });
++    expect(fetchFake).toHaveBeenCalledTimes(3);
++    expect(fetchFake.mock.calls[0][1].headers.authorization).toBe('Bearer fake-id|fake-secret');
++    for (const [url, options] of fetchFake.mock.calls) {
++      expect(String(url)).toMatch(/^https:\/\/graph\.facebook\.com\/v26\.0\//);
++      expect(options.redirect).toBe('error');
++    }
++    expect(fetchFake.mock.calls[1][1].headers.authorization).toBe('Bearer scoped-candidate');
++    expect(new URL(String(fetchFake.mock.calls[2][0])).searchParams.get('after')).toBe('cursor-page-2');
++  });
++
++  it('returns absence only after an exhausted page and rejects a WABA outside the grant', async () => {
++    process.env.META_APP_ID = 'fake-id'; process.env.META_APP_SECRET = 'fake-secret'; process.env.META_SIGNUP_CONFIG_ID = 'fake-config'; process.env.GRAPH_VERSION = 'v26.0';
++    const grant = { data: { app_id: 'fake-id', is_valid: true, scopes: ['whatsapp_business_management', 'whatsapp_business_messaging'], granular_scopes: [
++      { scope: 'whatsapp_business_management', target_ids: ['123456'] }, { scope: 'whatsapp_business_messaging', target_ids: ['123456'] },
++    ] } };
++    const exhausted = vi.fn()
++      .mockResolvedValueOnce({ ok: true, json: async () => grant })
++      .mockResolvedValueOnce({ ok: true, json: async () => ({ data: [{ id: '111111111' }] }) });
++    vi.stubGlobal('fetch', exhausted);
++    await expect(new MetaHttpClient().verificarNumeroVinculado('123456', '987654321', 'scoped-candidate')).resolves.toBeNull();
++    expect(exhausted).toHaveBeenCalledTimes(2);
++
++    const foreign = vi.fn().mockResolvedValue({ ok: true, json: async () => grant });
++    vi.stubGlobal('fetch', foreign);
++    await expect(new MetaHttpClient().verificarNumeroVinculado('654321', '987654321', 'scoped-candidate')).resolves.toBeNull();
++    expect(foreign).toHaveBeenCalledTimes(1);
++
++    const invalidGrant = vi.fn().mockResolvedValue({ ok: true, json: async () => ({ data: {
++      app_id: 'different-app', is_valid: true, scopes: ['whatsapp_business_management'],
++      granular_scopes: [{ scope: 'whatsapp_business_management', target_ids: ['123456'] }],
++    } }) });
++    vi.stubGlobal('fetch', invalidGrant);
++    await expect(new MetaHttpClient().verificarNumeroVinculado('123456', '987654321', 'scoped-candidate')).rejects.toBeInstanceOf(MetaIndisponivelError);
++    expect(invalidGrant).toHaveBeenCalledTimes(1);
++  });
++
++  it('fails closed at the page budget and for repeated or oversized cursors', async () => {
++    process.env.META_APP_ID = 'fake-id'; process.env.META_APP_SECRET = 'fake-secret'; process.env.META_SIGNUP_CONFIG_ID = 'fake-config'; process.env.GRAPH_VERSION = 'v26.0';
++    const grant = { data: { app_id: 'fake-id', is_valid: true, scopes: ['whatsapp_business_management', 'whatsapp_business_messaging'], granular_scopes: [
++      { scope: 'whatsapp_business_management', target_ids: ['123456'] }, { scope: 'whatsapp_business_messaging', target_ids: ['123456'] },
++    ] } };
++    const page = (after: string) => ({ ok: true, json: async () => ({ data: [], paging: { next: 'https://graph.facebook.com/next', cursors: { after } } }) });
++    const beyondBudget = vi.fn().mockResolvedValueOnce({ ok: true, json: async () => grant }).mockResolvedValueOnce(page('cursor-one')).mockResolvedValueOnce(page('cursor-two'));
++    vi.stubGlobal('fetch', beyondBudget);
++    await expect(new MetaHttpClient().verificarNumeroVinculado('123456', '987654321', 'scoped-candidate')).rejects.toBeInstanceOf(MetaIndisponivelError);
++    expect(beyondBudget).toHaveBeenCalledTimes(3);
++
++    const cyclic = vi.fn().mockResolvedValueOnce({ ok: true, json: async () => grant }).mockResolvedValueOnce(page('cursor-one')).mockResolvedValueOnce(page('cursor-one'));
++    vi.stubGlobal('fetch', cyclic);
++    await expect(new MetaHttpClient().verificarNumeroVinculado('123456', '987654321', 'scoped-candidate')).rejects.toBeInstanceOf(MetaIndisponivelError);
++    expect(cyclic).toHaveBeenCalledTimes(3);
++
++    const oversized = vi.fn().mockResolvedValueOnce({ ok: true, json: async () => grant }).mockResolvedValueOnce(page('x'.repeat(513)));
++    vi.stubGlobal('fetch', oversized);
++    await expect(new MetaHttpClient().verificarNumeroVinculado('123456', '987654321', 'scoped-candidate')).rejects.toBeInstanceOf(MetaIndisponivelError);
++    expect(oversized).toHaveBeenCalledTimes(2);
++  });
++
+   it('exposes a bounded page cursor only when the provider signals a next page', async () => {
+     process.env.META_APP_ID = 'fake-id';
+     process.env.META_APP_SECRET = 'fake-secret';
+diff --git a/src/integrations/meta/meta.client.ts b/src/integrations/meta/meta.client.ts
+index 7af776e..8b8dd61 100644
+--- a/src/integrations/meta/meta.client.ts
++++ b/src/integrations/meta/meta.client.ts
+@@ -24,6 +24,7 @@ export interface MetaClient {
+   recursos(accessToken: string, wabaId?: string, after?: string): Promise<{ wabas: Array<{ id: string; name: string | null }>; numbers: MetaNumber[]; next: string | null }>;
+   numerosDaWaba(wabaId: string, accessToken?: string, after?: string): Promise<{ data: MetaNumber[]; next: string | null }>;
+   confirmarNumero(wabaId: string, phoneNumberId: string, accessToken: string, after?: string): Promise<MetaNumber | null>;
++  verificarNumeroVinculado(wabaId: string, phoneNumberId: string, accessToken: string): Promise<MetaNumber | null>;
+   registrarNumero(phoneNumberId: string, pin: string, accessToken: string): Promise<void>;
+   inscreverWaba(wabaId: string, accessToken: string): Promise<void>;
+   enviarTexto(phoneNumberId: string, para: string, texto: string, accessToken?: string): Promise<string | null>;
+@@ -115,7 +116,12 @@ export class MetaHttpClient implements MetaClient {
+       const digits = typeof row.display_phone_number === 'string' ? row.display_phone_number.replace(/\D/g, '') : '';
+       return [{ id: row.id, telefone: digits || null, nomeVerificado: typeof row.verified_name === 'string' ? row.verified_name : null }];
+     });
+-    return { data, next: typeof payload.paging?.next === 'string' ? payload.paging.cursors?.after ?? null : null };
++    const hasNext = typeof payload.paging?.next === 'string';
++    const next = payload.paging?.cursors?.after;
++    if (hasNext && (typeof next !== 'string' || next.length === 0 || next.length > 512)) {
++      throw new MetaIndisponivelError('A verificação do número está inconclusiva.');
++    }
++    return { data, next: hasNext ? next as string : null };
+   }
+ 
+   async confirmarNumero(wabaId: string, phoneNumberId: string, accessToken: string, after?: string) {
+@@ -127,6 +133,30 @@ export class MetaHttpClient implements MetaClient {
+     return page.data.find((item) => item.id === phoneNumberId) ?? null;
+   }
+ 
++  /** Revalidates a persisted phone identity across a small, fixed number of pages. */
++  async verificarNumeroVinculado(wabaId: string, phoneNumberId: string, accessToken: string) {
++    if (!accessToken) throw new MetaIndisponivelError('Credencial scoped do canal necessária.');
++    const grant = await this.debugToken(accessToken);
++    this.assertCurrentGrant(grant);
++    if (!wabaTargets(grant).includes(wabaId)) return null;
++
++    const cursors = new Set<string>();
++    let after: string | undefined;
++    for (let pageIndex = 0; pageIndex < 2; pageIndex += 1) {
++      const page = await this.numerosDaWaba(wabaId, accessToken, after);
++      const number = page.data.find((item) => item.id === phoneNumberId);
++      if (number) return number;
++      if (!page.next) return null;
++      if (page.next.length > 512 || cursors.has(page.next)) {
++        throw new MetaIndisponivelError('A verificação do número está inconclusiva.');
++      }
++      if (pageIndex === 1) throw new MetaIndisponivelError('A verificação do número está inconclusiva.');
++      cursors.add(page.next);
++      after = page.next;
++    }
++    throw new MetaIndisponivelError('A verificação do número está inconclusiva.');
++  }
++
+   async registrarNumero(phoneNumberId: string, pin: string, accessToken: string) {
+     const result = await this.request(`/${encodeURIComponent(phoneNumberId)}/register`, accessToken, 'POST', { messaging_product: 'whatsapp', pin });
+     if (result.success !== true && result.success !== 'true') throw new MetaIndisponivelError('A Meta não confirmou o registro do número.');
+diff --git a/src/surfaces/webhooks/evolution.controller.ts b/src/surfaces/webhooks/evolution.controller.ts
+index 3b84834..246edc1 100644
+--- a/src/surfaces/webhooks/evolution.controller.ts
++++ b/src/surfaces/webhooks/evolution.controller.ts
+@@ -3,6 +3,7 @@ import { timingSafeEqual } from 'node:crypto';
+ import { IncomingService } from '../../domain/inbox/incoming.service';
+ import { PrismaService } from '../../infra/prisma/prisma.service';
+ import { MessageAcceptanceService } from '../../domain/inbox/message-acceptance.service';
++import { convergeReceiptVerifiedAttempt } from '../../domain/channels/receipt-attempt-convergence';
+ import { ServiceUnavailableException, ConflictException } from '@nestjs/common';
+ 
+ /**
+@@ -126,8 +127,8 @@ export class EvolutionWebhookController {
+       });
+       if (!changed.count) throw new ConflictException({ code: 'CHANNEL_GENERATION_STALE' });
+       if (ready && channel.currentAttemptId) {
+-        const converged = await tx.channelRegistrationAttempt.updateMany({ where: { id: channel.currentAttemptId, generation: context.generation, pairingEpoch: context.pairingEpoch, state: { in: ['PENDING_NUMBER', 'PENDING_RECEIPT'] } }, data: { state: 'CONNECTED', stage: 'RECEIPT_VERIFIED', version: { increment: 1 } } });
+-        if (!converged.count) throw new ConflictException({ code: 'ATTEMPT_STALE' });
++        const converged = await convergeReceiptVerifiedAttempt(tx, channel.currentAttemptId, context.generation, context.pairingEpoch);
++        if (!converged) throw new ConflictException({ code: 'ATTEMPT_STALE' });
+       }
+     });
+   }
+diff --git a/test/browser-server.cjs b/test/browser-server.cjs
+index 7cfa59f..e614c8b 100644
+--- a/test/browser-server.cjs
++++ b/test/browser-server.cjs
+@@ -80,6 +80,22 @@ const db = process.env.DATABASE_URL;
+       const resource = (await providerResources(accessToken)).find((r) => r.id === phoneNumberId && page.data.some((p) => p.id === phoneNumberId));
+       return resource && resource.wabaId === wabaId ? { id: phoneNumberId, telefone: resource.telefone, nomeVerificado: 'Timeline' } : null;
+     },
++    async verificarNumeroVinculado(wabaId, phoneNumberId, accessToken) {
++      if (!(await tokenPermitido(accessToken))) throw new Error('scoped credential required');
++      const authorized = (await providerResources(accessToken)).some((r) => r.wabaId === wabaId);
++      if (!authorized) return null;
++      await call('meta.confirm', { wabaId, phoneNumberId, after: null });
++      const seen = new Set(); let after = null;
++      for (let index = 0; index < 2; index += 1) {
++        const page = await this.numerosDaWaba(wabaId, accessToken, after);
++        const number = page.data.find((item) => item.id === phoneNumberId);
++        if (number) return number;
++        if (!page.next) return null;
++        if (page.next.length > 512 || seen.has(page.next) || index === 1) throw new Error('number verification inconclusive');
++        seen.add(page.next); after = page.next;
++      }
++      throw new Error('number verification inconclusive');
++    },
+     async registrarNumero(id, _pin, accessToken) { if (!(await tokenPermitido(accessToken))) throw new Error('scoped credential required'); await call('meta.register', { phoneNumberId: id }); await fixture('/provider/effect', 'POST', { operation: 'meta.register', args: { phoneNumberId: id } }); },
+     async inscreverWaba(id, accessToken) { if (!(await tokenPermitido(accessToken))) throw new Error('scoped credential required'); await call('meta.subscribe', { wabaId: id }); await fixture('/provider/effect', 'POST', { operation: 'meta.subscribe', args: { wabaId: id } }); },
+     async enviarTexto(phoneNumberId, _contato, texto, accessToken) {
+diff --git a/test/helpers.ts b/test/helpers.ts
+index 148ceb4..95048e3 100644
+--- a/test/helpers.ts
++++ b/test/helpers.ts
+@@ -6,7 +6,7 @@ import { AppModule } from '../src/app.module';
+ import { configurarBodyParsers } from '../src/infra/http/body-parsers';
+ import { PrismaService } from '../src/infra/prisma/prisma.service';
+ import { EVOLUTION_CLIENT, EvolutionClient } from '../src/integrations/evolution/evolution.client';
+-import { META_CLIENT, MetaClient } from '../src/integrations/meta/meta.client';
++import { META_CLIENT, MetaClient, MetaIndisponivelError } from '../src/integrations/meta/meta.client';
+ import { TYPEBOT_CLIENT, TypebotClient } from '../src/integrations/typebot/typebot.client';
+ import { sealChannelCredential } from '../src/domain/channels/channel-credential-crypto';
+ 
+@@ -69,6 +69,20 @@ export const metaFake: MetaClient & { wabaRecusada: string | null; wabaRecursos:
+     const page = await metaFake.numerosDaWaba(wabaId, accessToken, after);
+     return page.data.find((item) => item.id === phoneNumberId) ?? null;
+   },
++  async verificarNumeroVinculado(wabaId, phoneNumberId, accessToken) {
++    metaFake.confirmCalls += 1;
++    await metaFake.confirmHook?.();
++    const seen = new Set<string>(); let after: string | undefined;
++    for (let index = 0; index < 2; index += 1) {
++      const page = await metaFake.numerosDaWaba(wabaId, accessToken, after);
++      const number = page.data.find((item) => item.id === phoneNumberId);
++      if (number) return number;
++      if (!page.next) return null;
++      if (page.next.length > 512 || seen.has(page.next) || index === 1) throw new MetaIndisponivelError('A verificação do número está inconclusiva.');
++      seen.add(page.next); after = page.next;
++    }
++    throw new MetaIndisponivelError('A verificação do número está inconclusiva.');
++  },
+   async registrarNumero(_phoneNumberId, pin, accessToken) { metaFake.providerCalls += 1; if (accessToken !== 'fixture-scoped-token' || !/^\d{6}$/.test(pin)) throw new Error('scoped registration credential required'); metaFake.registrosNumero += 1; await metaFake.registrosHook?.(); },
+   async inscreverWaba(_wabaId, accessToken) { metaFake.providerCalls += 1; if (accessToken !== 'fixture-scoped-token') throw new Error('scoped subscription credential required'); await metaFake.subscriptionHook?.(); },
+ };
+diff --git a/test/number-onboarding-flow.e2e-spec.ts b/test/number-onboarding-flow.e2e-spec.ts
+index c942921..6e5d6b1 100644
+--- a/test/number-onboarding-flow.e2e-spec.ts
++++ b/test/number-onboarding-flow.e2e-spec.ts
+@@ -75,8 +75,35 @@ describe('BFF number registration workflow (PostgreSQL)', () => {
+     const connected = await bff('get', `/api/bff/number-registrations/${id}`).expect(200);
+     expect(connected.body).toMatchObject({ state: 'CONNECTED', stage: 'RECEIPT_VERIFIED' });
+     const channel = await prisma.buChannel.findUniqueOrThrow({ where: { id: connected.body.channelId } });
++    const attemptBeforeVerification = await prisma.channelRegistrationAttempt.findUniqueOrThrow({ where: { id } });
++    const credentialBeforeVerification = await prisma.channelCredential.findUniqueOrThrow({
++      where: { channelId: channel.id }, select: { id: true, provider: true, buId: true, generation: true, version: true },
++    });
++    const identityBeforeVerification = await prisma.providerResourceIdentity.findFirstOrThrow({ where: { currentChannelId: channel.id } });
+     expect(channel.status).toBe('CONECTADO');
+     expect(channel.receiptVerifiedAt).toBeInstanceOf(Date);
++    expect(channel.pairingEpoch).toBe(0);
++    expect(channel.currentAttemptId).toBe(id);
++    expect(attemptBeforeVerification).toMatchObject({ id, state: 'CONNECTED', stage: 'RECEIPT_VERIFIED', pairingEpoch: null, generation: channel.generation });
++
++    const firstVerification = await bff('post', `/api/bff/business-units/${tenant.businessUnit.id}/channels/OFICIAL/verify`).send({});
++    const secondVerification = await bff('post', `/api/bff/business-units/${tenant.businessUnit.id}/channels/OFICIAL/verify`).send({});
++    const verificationResults = [firstVerification, secondVerification].map(({ status, body }) => ({
++      status,
++      catalogCode: body?.code ?? body?.error?.code ?? null,
++    }));
++    expect(verificationResults).toEqual([{ status: 200, catalogCode: null }, { status: 200, catalogCode: null }]);
++
++    const channelAfterVerification = await prisma.buChannel.findUniqueOrThrow({ where: { id: channel.id } });
++    const attemptAfterVerification = await prisma.channelRegistrationAttempt.findUniqueOrThrow({ where: { id } });
++    const credentialAfterVerification = await prisma.channelCredential.findUniqueOrThrow({
++      where: { channelId: channel.id }, select: { id: true, provider: true, buId: true, generation: true, version: true },
++    });
++    const identityAfterVerification = await prisma.providerResourceIdentity.findUniqueOrThrow({ where: { id: identityBeforeVerification.id } });
++    expect(channelAfterVerification).toMatchObject({ id: channel.id, generation: channel.generation, pairingEpoch: 0, currentAttemptId: id, status: 'CONECTADO', receiptVerifiedAt: channel.receiptVerifiedAt });
++    expect(attemptAfterVerification).toMatchObject({ id, state: 'CONNECTED', stage: 'RECEIPT_VERIFIED', pairingEpoch: null, generation: channel.generation, version: attemptBeforeVerification.version });
++    expect(credentialAfterVerification).toEqual(credentialBeforeVerification);
++    expect(identityAfterVerification).toMatchObject({ id: identityBeforeVerification.id, currentChannelId: channel.id, buId: tenant.businessUnit.id, externalResourceId: channel.phoneNumberId });
+   });
+ 
+   it('consumes OAuth codes once and requires a fresh attempt and nonce after an ambiguous exchange', async () => {
+@@ -634,6 +661,64 @@ describe('BFF number registration workflow (PostgreSQL)', () => {
+     expect(await prisma.message.count({ where: { externalId: 'evo-first-trusted-in' } })).toBe(1);
+   });
+ 
++  it('recovers the same completed Evolution attempt after connecting/open and repeated administrative verification', async () => {
++    await contratarCanalNaoOficial(prisma, tenant.mantenedora.id);
++    const paired = await bff('post', `/api/bff/business-units/${tenant.businessUnit.id}/channels/nao-oficial/pair`)
++      .send({ intent: 'INITIAL' }).expect(200);
++    const channel = await prisma.buChannel.findUniqueOrThrow({ where: { id: paired.body.channelId } });
++    const attemptId = channel.currentAttemptId!;
++    await request(app.getHttpServer()).post('/webhooks/evolution').set('x-leadshug-webhook-secret', EVOLUTION_WEBHOOK_SECRET)
++      .send({ event: 'messages.upsert', instance: channel.evolutionInstanceName, data: { key: { remoteJid: '5584999777666@s.whatsapp.net', fromMe: false, id: 'evo-recovery-receipt' }, pushName: 'Cliente', message: { conversation: 'prova de recebimento' } } }).expect(200);
++    const connectedBefore = await prisma.buChannel.findUniqueOrThrow({ where: { id: channel.id } });
++    const receiptBefore = connectedBefore.receiptVerifiedAt;
++    const identityBefore = await prisma.providerResourceIdentity.findFirstOrThrow({ where: { currentChannelId: channel.id } });
++    const attemptBefore = await prisma.channelRegistrationAttempt.findUniqueOrThrow({ where: { id: attemptId } });
++    expect(connectedBefore.status).toBe('CONECTADO');
++    expect(attemptBefore).toMatchObject({ state: 'CONNECTED', stage: 'RECEIPT_VERIFIED' });
++
++    const verification = await bff('post', `/api/bff/business-units/${tenant.businessUnit.id}/channels/NAO_OFICIAL/verify`).send({});
++    const connectionEvent = (state: string) => request(app.getHttpServer()).post('/webhooks/evolution').set('x-leadshug-webhook-secret', EVOLUTION_WEBHOOK_SECRET)
++      .send({ event: 'connection.update', instance: channel.evolutionInstanceName, data: { state } });
++    const connecting = await connectionEvent('connecting');
++    const opening = await connectionEvent('open');
++    const duplicateOpen = await connectionEvent('open');
++    expect({ verification: [verification.status, verification.body.code], connecting: [connecting.status, connecting.body.code], opening: [opening.status, opening.body.code], duplicateOpen: [duplicateOpen.status, duplicateOpen.body.code] }).toEqual({ verification: [200, undefined], connecting: [200, undefined], opening: [200, undefined], duplicateOpen: [200, undefined] });
++
++    const recovered = await prisma.buChannel.findUniqueOrThrow({ where: { id: channel.id } });
++    const recoveredAttempt = await prisma.channelRegistrationAttempt.findUniqueOrThrow({ where: { id: attemptId } });
++    expect(recovered).toMatchObject({ status: 'CONECTADO', providerConnectionState: 'CONNECTED', ownNumberVerified: true, verifiedEpoch: channel.pairingEpoch, pairingEpoch: channel.pairingEpoch, receiptVerifiedAt: receiptBefore });
++    expect(recoveredAttempt).toMatchObject({ id: attemptId, state: 'CONNECTED', stage: 'RECEIPT_VERIFIED', generation: channel.generation, pairingEpoch: channel.pairingEpoch, version: attemptBefore.version });
++    expect(await prisma.providerResourceIdentity.findUniqueOrThrow({ where: { id: identityBefore.id } })).toMatchObject({ currentChannelId: channel.id, buId: tenant.businessUnit.id });
++    expect(await prisma.message.count({ where: { externalId: 'evo-recovery-receipt' } })).toBe(1);
++  });
++
++  it('does not revive a cancelled or wrong-generation/epoch attempt during connection recovery', async () => {
++    await contratarCanalNaoOficial(prisma, tenant.mantenedora.id);
++    const paired = await bff('post', `/api/bff/business-units/${tenant.businessUnit.id}/channels/nao-oficial/pair`)
++      .send({ intent: 'INITIAL' }).expect(200);
++    const channel = await prisma.buChannel.findUniqueOrThrow({ where: { id: paired.body.channelId } });
++    const attemptId = channel.currentAttemptId!;
++    await request(app.getHttpServer()).post('/webhooks/evolution').set('x-leadshug-webhook-secret', EVOLUTION_WEBHOOK_SECRET)
++      .send({ event: 'messages.upsert', instance: channel.evolutionInstanceName, data: { key: { remoteJid: '5584999777666@s.whatsapp.net', fromMe: false, id: 'evo-stale-recovery-receipt' }, pushName: 'Cliente', message: { conversation: 'prova de recebimento' } } }).expect(200);
++    await request(app.getHttpServer()).post('/webhooks/evolution').set('x-leadshug-webhook-secret', EVOLUTION_WEBHOOK_SECRET)
++      .send({ event: 'connection.update', instance: channel.evolutionInstanceName, data: { state: 'connecting' } }).expect(200);
++
++    const postOpen = () => request(app.getHttpServer()).post('/webhooks/evolution').set('x-leadshug-webhook-secret', EVOLUTION_WEBHOOK_SECRET)
++      .send({ event: 'connection.update', instance: channel.evolutionInstanceName, data: { state: 'open' } });
++    await prisma.channelRegistrationAttempt.update({ where: { id: attemptId }, data: { state: 'CANCELLED', stage: 'CANCELLED' } });
++    await postOpen().expect(409).expect(({ body }) => expect(body.code).toBe('ATTEMPT_STALE'));
++    expect(await prisma.buChannel.findUniqueOrThrow({ where: { id: channel.id } })).toMatchObject({ status: 'CONECTANDO', providerConnectionState: 'CONNECTING', pairingEpoch: channel.pairingEpoch, generation: channel.generation });
++
++    await prisma.channelRegistrationAttempt.update({ where: { id: attemptId }, data: { state: 'PENDING_RECEIPT', stage: 'MAPPED_PENDING_RECEIPT', generation: channel.generation + 1 } });
++    await postOpen().expect(409).expect(({ body }) => expect(body.code).toBe('ATTEMPT_STALE'));
++    await prisma.channelRegistrationAttempt.update({ where: { id: attemptId }, data: { generation: channel.generation, pairingEpoch: channel.pairingEpoch + 1 } });
++    await postOpen().expect(409).expect(({ body }) => expect(body.code).toBe('ATTEMPT_STALE'));
++    await prisma.channelRegistrationAttempt.update({ where: { id: attemptId }, data: { pairingEpoch: null } });
++    await postOpen().expect(409).expect(({ body }) => expect(body.code).toBe('ATTEMPT_STALE'));
++    expect(await prisma.channelRegistrationAttempt.findUniqueOrThrow({ where: { id: attemptId } })).toMatchObject({ state: 'PENDING_RECEIPT', generation: channel.generation, pairingEpoch: null });
++    expect(await prisma.buChannel.findUniqueOrThrow({ where: { id: channel.id } })).toMatchObject({ status: 'CONECTANDO', providerConnectionState: 'CONNECTING', pairingEpoch: channel.pairingEpoch, generation: channel.generation });
++  });
++
+   it('fences a held old verification across verified RENEW and accepts the same inbound key only after current X verification', async () => {
+     await contratarCanalNaoOficial(prisma, tenant.mantenedora.id);
+     const phoneX = '5584999990000';
+diff --git a/api-app/src/domain/channels/receipt-attempt-convergence.ts b/api-app/src/domain/channels/receipt-attempt-convergence.ts
+new file mode 100755
+index 0000000..38e02cd
+--- /dev/null
++++ b/api-app/src/domain/channels/receipt-attempt-convergence.ts
+@@ -0,0 +1,26 @@
++import type { Prisma } from '@prisma/client';
++
++/** Promote the exact current attempt after receipt, or accept its already-completed state idempotently. */
++export async function convergeReceiptVerifiedAttempt(
++  tx: Prisma.TransactionClient,
++  attemptId: string,
++  generation: number,
++  pairingEpoch: number | null,
++): Promise<boolean> {
++  const promoted = await tx.channelRegistrationAttempt.updateMany({
++    where: {
++      id: attemptId,
++      generation,
++      pairingEpoch,
++      state: { in: ['PENDING_NUMBER', 'PENDING_RECEIPT'] },
++    },
++    data: { state: 'CONNECTED', stage: 'RECEIPT_VERIFIED', version: { increment: 1 } },
++  });
++  if (promoted.count) return true;
++
++  const alreadyComplete = await tx.channelRegistrationAttempt.findFirst({
++    where: { id: attemptId, generation, pairingEpoch, state: 'CONNECTED', stage: 'RECEIPT_VERIFIED' },
++    select: { id: true },
++  });
++  return Boolean(alreadyComplete);
++}

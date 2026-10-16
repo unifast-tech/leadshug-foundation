@@ -1,0 +1,65 @@
+{
+  "checkpoint": "cp39-candidate-build",
+  "capturedAtUtc": "2026-10-16T20:33:54Z",
+  "scope": "Build and probe one isolated API candidate image from the frozen cp36e source manifest; no activation or runtime update.",
+  "source": {
+    "manifestFile": "cp36e-source-after.sha256",
+    "manifestSha256": "ea3080d36a4389466a2f59afeab5dc8c1d0a239b8f000d9e16a65ff292e6d3df",
+    "manifestEntries": 9,
+    "allNineHashesVerifiedBeforeBuild": true,
+    "allNineHashesVerifiedAfterBuildAndProbe": true,
+    "privatePayloadsReadOrHashed": false
+  },
+  "build": {
+    "cli": "Windows Docker CLI docker.exe",
+    "dockerfile": "api-app/Dockerfile",
+    "context": "api-app",
+    "contextTransferredDisplay": "86.53 kB",
+    "dockerignoreExcludesPrivateDotenvAndLocalFiles": true,
+    "buildArgumentsOrPrivateEnvironmentPassed": false,
+    "tagWasAbsentBeforeBuild": true,
+    "tag": "leadshug-channels-api-candidate:cp36e-ea3080d36a43",
+    "labels": {
+      "owner": "number-onboarding",
+      "checkpoint": "cp39",
+      "source-manifest": "ea3080d36a4389466a2f59afeab5dc8c1d0a239b8f000d9e16a65ff292e6d3df"
+    },
+    "buildExitCode": 0,
+    "imageId": "sha256:c1b5769ff0a7e58772eb6a1b0c0a120c94ad3aa943119408cc8d1d0df115d136",
+    "platform": "linux/amd64",
+    "buildLog": "cp39-candidate-build.log",
+    "buildLogSha256": "b665ef23efcc8b882b1c416b4be098f50535289aebe8166bad4706e66e418d7e"
+  },
+  "ephemeralProbe": {
+    "completed": true,
+    "networkNone": true,
+    "readOnlyRootFilesystem": true,
+    "environmentArguments": false,
+    "portsOrVolumes": false,
+    "entrypointOverriddenSoApiAndMigrationsDidNotStart": true,
+    "probeContainerRemoved": true,
+    "node": "v22.23.3",
+    "platform": "linux",
+    "alpineRelease": "3.24.2",
+    "openssl": "3.5.8",
+    "prismaClientResolved": true,
+    "generatedPrismaClientPresent": true,
+    "metaClientExports": ["META_CLIENT", "MetaIndisponivelError", "MetaHttpClient"],
+    "convergenceHelperExports": ["convergeReceiptVerifiedAttempt"],
+    "probeErrors": []
+  },
+  "operatorPreservation": {
+    "sevenOwnedContainersMatchCp38IdsAndImages": true,
+    "allSevenOwnedContainersRunning": true,
+    "fiveOwnedVolumesMatchCp38Identities": true,
+    "allFiveVolumesLocal": true,
+    "operatorImageTagChanged": false,
+    "composeActionOrRuntimeMutationPerformed": false,
+    "migrationDatabaseOrProviderActionPerformed": false
+  },
+  "activation": {
+    "candidateIsServed": false,
+    "retagOrRecreateAuthorizedOrPerformed": false,
+    "pending": "Fresh TQA, separate final review and source checkpoint acceptance."
+  }
+}

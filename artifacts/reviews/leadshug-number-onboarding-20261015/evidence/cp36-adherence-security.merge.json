@@ -1,0 +1,42 @@
+{
+  "schema_version": "subagent-review-merge-v2",
+  "artifact_kind": "subagent_review_merge",
+  "authoritative": false,
+  "edit_policy": "derived_merge_packet",
+  "dispatch_path": "/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp36-adherence-security.dispatch.json",
+  "review_kind": "architecture_adherence",
+  "review_count": 1,
+  "reviewer_labels": [
+    "Fresh internal Codex architecture/adherence/security reviewer; gpt-6.1-sol/max; bounded cp36 frozen four-file delta"
+  ],
+  "highest_finding_severity": "medium",
+  "axis_summary": {
+    "performance": "acceptable",
+    "elegance": "acceptable",
+    "structural_soundness": "mixed",
+    "operational_fit": "mixed"
+  },
+  "recommended_paths": [
+    "Fix NUM-ADH-CP36-01 within the already approved repeated-verification contract, under root-owned admission and one serialized API writer after this terminal review. Preserve these frozen bytes and this finding as historical evidence; obtain an authentic official BFF/PostgreSQL RED on the normal null-epoch lifecycle, then make provider applicability explicit without relaxing Evolution epoch/owner/currentAttempt/state/stage/receipt fences. Refresh the narrow source package, canonical validation and affected TQA/adherence review on the corrected bytes; the existing 501-test receipt belongs to this frozen source only. No broader architectural redesign, new feature, schema migration or operational-data repair is recommended. Only after affected local gates are accepted should the already authorized DevOps lane prepare the API-only operator update and new human unofficial IN/OUT recovery proof. Official VAL-05 and overall final adjudication remain separate mandatory work. Do not infer production readiness, continuous health, historical import, proactive conversation or external recovery acceptance."
+  ],
+  "exact_next_step": "Record reviewer resolutions in the governing TODO using the machine-checkable resolution table or equivalent gate ledger, then extract the derived resolution packet and decide whether another bounded review pass is still required.",
+  "findings": [
+    {
+      "finding_id": "F-B728C169",
+      "severity": "medium",
+      "title": "[P2] Repeated official verification still rejects its legitimately completed attempt",
+      "rationale": "Source-confirmed counterexample, not a runtime reproduction by this reviewer: perform the normal official NOVO -> authorize -> confirm -> subscribe plus authenticated receipt flow already exercised in number-onboarding-flow.e2e-spec.ts:37-80. NumberRegistrationService.create creates the official attempt without pairingEpoch (number-registration.service.ts:122-128); the nullable field has no default (schema.prisma:210 and migrations/20261015120000_number_onboarding_foundation/migration.sql:53). The channel epoch defaults to integer 0 (schema.prisma:143; that migration:32). Official credential promotion changes generation/state/stage but never assigns an attempt epoch (number-registration.service.ts:357-363), and completed receipt promotion only changes state/stage/version (message-acceptance.service.ts:141-145 or number-registration.service.ts:430-434). Thus a valid current OFICIAL attempt can be CONNECTED/RECEIPT_VERIFIED, with attempt.pairingEpoch=null, channel.pairingEpoch=0, verified owner, SUBSCRIBED channel, active scoped credential and durable receipt. ChannelsService.verificar reaches its receipt/subscription branch (channels.service.ts:281-292,317-337) and passes 0 to the new helper at line 336. Both helper predicates require pairingEpoch=0 (receipt-attempt-convergence.ts:14,22); null matches neither, so ATTEMPT_STALE at channels.service.ts:337 rolls back the otherwise valid verification. This fails even with the correct tenant, channel, attempt ID, generation and credential; it is a correctness/availability failure, not a demonstrated privilege escalation.\n\nWhy now: the changed shared convergence locus and dispatch explicitly cover official as well as unofficial repeated verification. The old inline predicate also contained this null-versus-0 defect; this is an incomplete same-current-contract correction at the changed locus, not a claim that cp36 introduced the original defect or a reopening of unrelated accepted architecture. The two cp36 tests use NAO_OFICIAL (number-onboarding-flow.e2e-spec.ts:637-690); 501 green tests therefore do not refute this official counterexample. The official baseline positive ends after CONNECTED and does not repeat channel verify. D-03/D-05/D-07 and the current integrations-and-channels recovery paragraph are not fully satisfied by the delivered common helper.",
+      "suggested_action": "Recommend A: represent the existing provider-specific epoch contract explicitly in the helper/caller. Official attempt provenance uses the persisted null epoch; Evolution uses the exact numeric current epoch. A nullable expected-epoch argument selected by the already trusted channel type is one small faithful implementation; keep exact attempt ID, generation, CONNECTED/RECEIPT_VERIFIED stage, owner/current-channel fences and transactions. Do not use a broad null-or-any-epoch fallback for Evolution, omit generation/epoch predicates globally, or rewrite operational data. Add a real BFF/PostgreSQL fail-first regression that follows the normal official creation/credential/subscription/authenticated-receipt lifecycle, proves the actual persisted null epoch, then verifies twice with HTTP 200 and unchanged completed attempt version/identity/receipt/currentAttemptId/credential; retain the existing Evolution stale/cancelled/generation/epoch negatives. Refresh frozen hashes and appropriate canonical validation/review after the serial authorized correction. Effort small; risk low if provider applicability is explicit; blast radius the shared helper, administrative caller and flow test; maintenance low; performance still at most one extra PK-scoped lookup; elegance/structural soundness improve by removing a false cross-provider assumption.\n\nB: normalize official attempt epochs to the channel epoch throughout creation/promotion and define handling for existing null rows. Effort/risk/blast radius larger, additional source/data-contract consideration and validation; maintenance higher than A; no intrinsic performance gain; potentially coherent but unnecessary for this bounded correction. C: leave this behavior unchanged. Zero implementation effort and query impact, but legitimate official repeated verification remains broken; maintenance and structural correctness worsen through an undocumented provider exception. C is not recommended and does not satisfy the dispatched contract. Root owns scope admission, implementation authority and final adjudication.",
+      "reviewer_labels": [
+        "Fresh internal Codex architecture/adherence/security reviewer; gpt-6.1-sol/max; bounded cp36 frozen four-file delta"
+      ],
+      "source_finding_ids": [
+        "NUM-ADH-CP36-01"
+      ],
+      "category": "adherence",
+      "formalizable_hint": "yes",
+      "candidate_rule_level": "project",
+      "candidate_rule_id": "D-03/D-05/D-07: provider-specific attempt provenance and idempotent administrative verification"
+    }
+  ]
+}

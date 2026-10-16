@@ -1,0 +1,49 @@
+{
+  "checkpoint": "cp35-recovery-diagnosis",
+  "capturedAtUtc": "2026-10-16T18:42:57Z",
+  "scope": "One read-only adapter-proven Evolution connection-state GET and one scoped fetchInstances GET for the current owned instance, plus a normal authenticated BFF read. No provider mutation, logs, pairing, verification, or message action.",
+  "providerRequests": {
+    "connectionStateEndpointStatus": 200,
+    "connectionState": "OPEN",
+    "fetchInstancesEndpointStatus": 200,
+    "exactCurrentInstanceFound": true,
+    "instanceNameMatchesCurrentOwnedMapping": true,
+    "ownerJidPresent": true,
+    "ownerPhoneMatchesCanonicalBusinessUnitPhone": true,
+    "disconnectReasonCode": null,
+    "providerCredentialsConfigured": true,
+    "requestCountPerEndpoint": 1,
+    "perRequestTimestampSeparatelyRecorded": false,
+    "valuesUrlsTokensPhonesJidsAndRawResponsesPersisted": false
+  },
+  "applicationPersistence": {
+    "bffStatus": 200,
+    "channelCount": 1,
+    "channelType": "NAO_OFICIAL",
+    "channelStatus": "CONECTANDO",
+    "providerConnectionState": "CONNECTING",
+    "connected": false,
+    "receiptVerified": true,
+    "ownNumberVerified": true,
+    "pairingEpoch": 1,
+    "verifiedEpoch": 1,
+    "epochConsistent": true,
+    "activeIdentityMappingCount": 1,
+    "exactCurrentIdentityMappingCount": 1,
+    "identityMappingConsistent": true,
+    "currentAttemptState": "CONNECTED",
+    "currentAttemptStage": "RECEIPT_VERIFIED",
+    "attemptGenerationMatches": true,
+    "attemptEpochMatches": true
+  },
+  "observedDifference": "The provider reports OPEN for the exact instance and its owner phone matches the canonical BU phone, while the application still reports CONNECTING and connected=false.",
+  "conclusion": "The provider session is open and identity-consistent. Application connection state has not caught up; the channel is not yet confirmed recovered in the product.",
+  "safeNextStep": "Human may perform one new synthetic inbound/outbound check after reviewing this diagnosis; agent must not re-pair, renew, verify, send, or alter application state.",
+  "secretHandling": {
+    "credentialsPersisted": false,
+    "cookiesPersisted": false,
+    "rawResponsesPersisted": false,
+    "rawLogsInspectedOrPersisted": false,
+    "namesPhonesExternalIdsInstanceIdsOrMessageContentPersisted": false
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "checkpoint": "cp34-recovery-authorization",
+  "recordedAtUtc": "2026-10-16T18:38:56.352774+00:00",
+  "humanConfirmedTestLinkMayBeInterrupted": true,
+  "authorizedAction": "Restart only the existing LeadsHug local Evolution container for a bounded outage, preserving registration, conversation and volumes; repeat synthetic IN/OUT afterward.",
+  "unauthorized": "No instance removal, QR renewal, re-pairing, other service restart, configuration change, source change, production action or send by agent."
+}

@@ -1,0 +1,42 @@
+{
+  "schema_version": "subagent-review-merge-v2",
+  "artifact_kind": "subagent_review_merge",
+  "authoritative": false,
+  "edit_policy": "derived_merge_packet",
+  "dispatch_path": "/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp36d-adherence.dispatch.json",
+  "review_kind": "architecture_adherence",
+  "review_count": 1,
+  "reviewer_labels": [
+    "/root/adherence_cp36d \u2014 fresh no-context architecture/adherence/security supplement"
+  ],
+  "highest_finding_severity": "medium",
+  "axis_summary": {
+    "performance": "acceptable",
+    "elegance": "acceptable",
+    "structural_soundness": "acceptable",
+    "operational_fit": "mixed"
+  },
+  "recommended_paths": [
+    "Recommend a small serialized test completion for NUM-ADH-CP36D-01 before accepting the affected typed-error regression harness: retain both constructor and catalog-code assertions for each same real-adapter rejection, without issuing duplicate operations or weakening request counts. Current product mapper, DB/lease fences, actual browser constructor and the two existing invite preconditions can stand. Preserve this frozen run and its raw result; wait for live readers and the current all to terminate before any source edit, then refresh the impacted canonical evidence/freeze and obtain the required fresh TQA/final adjudication through root. Do not reopen unchanged architecture, expand into Persons product behavior, add a global filter, or relax identity/epoch/CAS predicates. D-05/D-07 source correction is present, while integrated validation and the D-06 runtime Exception remain open. Root must keep final all, TQA, runtime, official external proof and whole-delivery acceptance separate; none is granted here."
+  ],
+  "exact_next_step": "Record reviewer resolutions in the governing TODO using the machine-checkable resolution table or equivalent gate ledger, then extract the derived resolution packet and decide whether another bounded review pass is still required.",
+  "findings": [
+    {
+      "finding_id": "F-AECC788F",
+      "severity": "medium",
+      "title": "Real-adapter pagination negatives no longer prove the error constructor required by the mapper",
+      "rationale": "api-app/src/integrations/meta/meta.client.spec.ts:169,181,186,191 now assert only rejects.toMatchObject({ code: 'META_INDISPONIVEL' }); the previous constructor checks in these affected negative cases have been replaced. The new application boundary deliberately recognizes instanceof MetaIndisponivelError only (channels.service.ts:291). Its BFF/PG negative executes the separately implemented typed fake loop (flow:110-121; helpers.ts:72-84), while the browser uses another separately implemented typed fake (browser-server.cjs:3,94,97). Counterexample by source inspection, not an executed mutation: replacing a real pagination throw with Object.assign(new Error('safe inconclusive'), { code: 'META_INDISPONIVEL' }) preserves the newly asserted unit code and fetch counts. The independent typed-fake BFF/browser cases also remain satisfied, yet a real verify request bypasses instanceof and again returns generic 500. Class assertions elsewhere in this spec cover different operations and do not close that branch-specific hole. Why now: cp36d introduces constructor identity as the production transport-mapping predicate while replacing the exact adapter class assertions that could protect it. Current production throws are the correct class; this is a concrete regression-harness efficacy gap at the same error boundary just repaired, not a claim that current production already emits the wrong type. Blast radius is the persisted official-number unavailable/inconclusive response contract; no owner/DB security regression was found.",
+      "suggested_action": "A (recommended): for each affected invalid-grant/budget/cycle/oversized-cursor operation, retain its single rejected promise or captured rejection and assert both toBeInstanceOf(MetaIndisponivelError) and code META_INDISPONIVEL on that same result. Keep current scoped arguments and exact fetch-count assertions; do not call the operation a second time merely to inspect another property. This is a small test-only change with low implementation/runtime risk, one-spec blast radius, no added network/query cost and low maintenance. It restores the simple composition contract without altering the sound narrow production catch. Root should serialize it after the live review/run and refresh the affected evidence rather than attributing later bytes to this freeze. B: add a faithful real MetaHttpClient HTTP-stub -> service/BFF contract test for the same budget failure. That can prove the composition directly, but needs more wiring and maintenance than restoring the lost assertion. C: keep code-only units and rely on static inspection plus typed provider fakes. No immediate production edit is needed, but this leaves the concrete generic-500 regression undetected by the new harness; not recommended for closure of this repaired boundary. Broadening production mapping to any object with a matching code would change the approved error boundary and is not an appropriate test repair. Root owns the authoritative finding disposition, current validation and acceptance.",
+      "reviewer_labels": [
+        "/root/adherence_cp36d \u2014 fresh no-context architecture/adherence/security supplement"
+      ],
+      "source_finding_ids": [
+        "NUM-ADH-CP36D-01"
+      ],
+      "category": "tests",
+      "formalizable_hint": "yes",
+      "candidate_rule_level": "project",
+      "candidate_rule_id": "typed-provider-error.constructor-and-catalog-contract"
+    }
+  ]
+}

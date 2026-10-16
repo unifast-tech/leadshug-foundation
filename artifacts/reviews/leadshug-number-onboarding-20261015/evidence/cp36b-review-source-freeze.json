@@ -1,0 +1,22 @@
+{
+  "capturedAtUtc": "2026-10-16T19:22:34.271159+00:00",
+  "baselineApiHead": "f134bd11449a553e6f57e66cdc8fc71032151060",
+  "files": [
+    {
+      "path": "api-app/src/domain/channels/receipt-attempt-convergence.ts",
+      "sha256": "ca8cb841fab2574866c3508ab41aa0a269608a20658db18840b2b89f0c281512"
+    },
+    {
+      "path": "api-app/src/domain/channels/channels.service.ts",
+      "sha256": "0cf8f1936e4d4d8b912fae5cf6aaddd74d503eee5edcb8aaf61c11ca782f64cf"
+    },
+    {
+      "path": "api-app/src/surfaces/webhooks/evolution.controller.ts",
+      "sha256": "12139a5b50b4dacf43492e038c91f006c9db999d0f6a76fd5d73e45ee987a041"
+    },
+    {
+      "path": "api-app/test/number-onboarding-flow.e2e-spec.ts",
+      "sha256": "2e06f82d138d4ce391a21eff17b32ddfc4ea7be45459cde80c994c05760ed0cb"
+    }
+  ]
+}

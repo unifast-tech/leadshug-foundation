@@ -1,0 +1,27 @@
+{
+  "checkpoint": "cp36c",
+  "commands": [
+    {
+      "command": "python3 delphi-ai/tools/node_capability_surface_audit.py --repo api-app --expect nestjs --require-script lint --require-script build --require-script test:e2e",
+      "outcome": "ready",
+      "diagnostics": []
+    },
+    {
+      "command": "bash delphi-ai/tools/test_quality_audit.sh --path api-app/test/number-onboarding-flow.e2e-spec.ts --path api-app/src/integrations/meta/meta.client.spec.ts",
+      "exit_code": 2,
+      "heuristic": "medium",
+      "hard_bypass": 0,
+      "test_support": 0,
+      "auth_shortcut": 0,
+      "ambient_subject_fallback": 0,
+      "status_hints": [
+        259,
+        569,
+        777
+      ],
+      "mock_hint": "RealtimeService.publicarNaBu spy797",
+      "interpretation": "Contextual hints, not pass/fail product proof; fresh reviewer must adjudicate neighboring state assertions."
+    }
+  ],
+  "stdout_retention": "Tool output observed; this JSON is a root summary, not full raw capture."
+}

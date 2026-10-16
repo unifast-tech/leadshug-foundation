@@ -1,0 +1,3 @@
+Command: bash scripts/test-channels-local.sh api
+Purpose: canonical source-owned isolated API validation namespace leadshug_channels_validation
+Expected regression assertion: official verify maps inconclusive Meta adapter error to HTTP 503 / META_INDISPONIVEL before mapper implementation

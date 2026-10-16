@@ -1,0 +1,14 @@
+{
+  "checkpoint": "cp38",
+  "accepted": "read-only readiness/preservation only",
+  "captured_at": "2026-10-16T20:19:56.770108Z",
+  "https_root_health": 200,
+  "containers_running": 7,
+  "volumes_present": 5,
+  "served_js_sha256": "d14343604557296f2ed62c1df47d9c80d81c323abafd89ccbb64a6a0746ff4bd",
+  "runtime_still_old_api": true,
+  "new_runtime_or_recovery_accepted": false,
+  "raw_json_sha256": "3bee98efc328cca8e76d68c21007493be5f94f48f9731b9f8955535f623d233a",
+  "raw_md_sha256": "341757b8331111cca53d9ea4fa361539b814db2125b6ac6191fc11073b94552a",
+  "root_compared_all7_container_and_all5_volume_identity_records_to_cp37": true
+}

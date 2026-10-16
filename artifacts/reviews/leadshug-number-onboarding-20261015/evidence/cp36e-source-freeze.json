@@ -1,0 +1,21 @@
+{
+  "checkpoint": "cp36e",
+  "scope": "unit-test assertion repair only",
+  "source_before_manifest": "cp36e-source-before.sha256",
+  "source_after_manifest": "cp36e-source-after.sha256",
+  "prior_accepted_freeze": "cp36d-source-freeze.json",
+  "changed_path": "api-app/src/integrations/meta/meta.client.spec.ts",
+  "change": "The invalid-grant, page-budget, repeated-cursor, and oversized-cursor cases assert MetaIndisponivelError instance and META_INDISPONIVEL code on one captured operation promise each; existing fetch call counts are retained.",
+  "unchanged_paths": [
+    "api-app/src/domain/channels/channels.service.ts",
+    "api-app/src/domain/channels/receipt-attempt-convergence.ts",
+    "api-app/src/surfaces/webhooks/evolution.controller.ts",
+    "api-app/test/number-onboarding-flow.e2e-spec.ts",
+    "api-app/src/integrations/meta/meta.client.ts",
+    "api-app/test/helpers.ts",
+    "api-app/test/browser-server.cjs",
+    "web-app/e2e/telas.spec.ts"
+  ],
+  "no_new_red_or_web_browser_run": true,
+  "private_data_boundary": "No api-app/.local-files, private dotenv, operator database, or live provider payloads read or included."
+}

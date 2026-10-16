@@ -1,0 +1,19 @@
+{
+  "checkpoint": "cp36c",
+  "scope": "Eight approved public API source/test files only",
+  "source_frozen_before_validation": true,
+  "historical_red": "cp36b-api-recovery-final-all.log; functional RED for persisted official phone verification; historical HTTP catalog code was not captured",
+  "historical_red_reused": true,
+  "source_manifest": "cp36c-source-before.sha256",
+  "files": [
+    "api-app/src/domain/channels/channels.service.ts",
+    "api-app/src/domain/channels/receipt-attempt-convergence.ts",
+    "api-app/src/surfaces/webhooks/evolution.controller.ts",
+    "api-app/test/number-onboarding-flow.e2e-spec.ts",
+    "api-app/src/integrations/meta/meta.client.ts",
+    "api-app/src/integrations/meta/meta.client.spec.ts",
+    "api-app/test/helpers.ts",
+    "api-app/test/browser-server.cjs"
+  ],
+  "validation": "One canonical scripts/test-channels-local.sh all run; no separate API-green run"
+}

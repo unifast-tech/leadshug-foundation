@@ -1,0 +1,28 @@
+{
+  "checkpoint": "root-cp34-cp35-receipt",
+  "recordedAtUtc": "2026-10-16T18:45:36.914820+00:00",
+  "verifiedArtifacts": [
+    {
+      "path": "cp34-evolution-restart-recovery.json",
+      "sha256": "7efb205786cdf5722d398526e0bc9bca7a3485486afd2bf1baf948ca63df9fd7"
+    },
+    {
+      "path": "cp34-evolution-restart-recovery.md",
+      "sha256": "65da6a546be948a933236388872ed2385ca38d0b6f3e2c6e8f75803e206acd03"
+    },
+    {
+      "path": "cp35-recovery-diagnosis.json",
+      "sha256": "50388ba399c0ef68bac14bac501072ddeac8041924e4c3d501fed16d888253ba"
+    },
+    {
+      "path": "cp35-recovery-diagnosis.md",
+      "sha256": "62743bef442c3eacaae4cc614fc711fdafbb1e271a98f8109417b871884008ca"
+    }
+  ],
+  "restartBoundedAndPreserved": true,
+  "providerOpenAndCanonicalIdentityMatched": true,
+  "applicationRecovered": false,
+  "disposition": "Runtime restored and provider session OPEN; application connection projection stale. Existing-approved recovery blocker cp36 requires fail-first regression/fix/review before new human IN/OUT.",
+  "manualDatabaseRepairOrQrRenewalAuthorized": false,
+  "externalProofWaived": false
+}

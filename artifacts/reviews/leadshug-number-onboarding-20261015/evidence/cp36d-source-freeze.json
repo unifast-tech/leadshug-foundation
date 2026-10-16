@@ -1,0 +1,25 @@
+{
+  "checkpoint": "cp36d",
+  "source_frozen_before_final_all": true,
+  "approved_public_paths": [
+    "api-app/src/domain/channels/channels.service.ts",
+    "api-app/src/domain/channels/receipt-attempt-convergence.ts",
+    "api-app/src/surfaces/webhooks/evolution.controller.ts",
+    "api-app/test/number-onboarding-flow.e2e-spec.ts",
+    "api-app/src/integrations/meta/meta.client.ts",
+    "api-app/src/integrations/meta/meta.client.spec.ts",
+    "api-app/test/helpers.ts",
+    "api-app/test/browser-server.cjs",
+    "web-app/e2e/telas.spec.ts"
+  ],
+  "pre_mapper_red": {
+    "command": "bash scripts/test-channels-local.sh api",
+    "result": "BFF/PG returned 500 with no catalog code against expected 503/META_INDISPONIVEL",
+    "log": "cp36d-api-recovery-red-full.log",
+    "source_manifest": "cp36d-red-before-fix.sha256",
+    "seam_note": "The BFF failure used the typed Meta adapter error through the provider test port. The exact two-page bounded-loop spy was added after RED and is not claimed as a separately executed pre-fix test."
+  },
+  "final_validation": "Exactly one canonical bash scripts/test-channels-local.sh all after freeze; no standalone API-green rerun",
+  "source_manifest": "cp36d-source-before.sha256",
+  "private_data_boundary": "No api-app/.local-files, private dotenv, operator database or live provider payloads read, hashed, copied, mounted, or tested."
+}

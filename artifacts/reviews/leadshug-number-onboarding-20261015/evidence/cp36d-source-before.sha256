@@ -1,0 +1,9 @@
+e910b2b395abc0ebca74deea917cf107dd36eca58491f1b0893efb702e1dfcf5  api-app/src/domain/channels/channels.service.ts
+ca8cb841fab2574866c3508ab41aa0a269608a20658db18840b2b89f0c281512  api-app/src/domain/channels/receipt-attempt-convergence.ts
+12139a5b50b4dacf43492e038c91f006c9db999d0f6a76fd5d73e45ee987a041  api-app/src/surfaces/webhooks/evolution.controller.ts
+932e4e4c4dd3b6dda9ec46b4074205f1073ad46e66b0eab7ad70cbd09bcc3577  api-app/test/number-onboarding-flow.e2e-spec.ts
+7938f5c09e23af3dad61442712fa18a1fea93b22a59bdd40384be44b990c22f5  api-app/src/integrations/meta/meta.client.ts
+d7ab2a4b5d6cd7f2c83f3b7939f5b86436baf82e69d085df5d35236e66caf8d9  api-app/src/integrations/meta/meta.client.spec.ts
+4d4b1c8c4e17c8fa7f338fdeeb2d63d093753038cece0d3aea566ae95c13619a  api-app/test/helpers.ts
+bf260c3124a867bda495509983055557988bc958141f3a8399e3e69de3aff451  api-app/test/browser-server.cjs
+ee4911de7148eebee35d5ddcc7d9bbbcc6faf051f0ea3f415e338d6809bb9d59  web-app/e2e/telas.spec.ts
