@@ -1,0 +1,80 @@
+{
+  "checkpoint": "cp31-operator-readiness",
+  "capturedAtUtc": "2026-10-16T18:21:59Z",
+  "scope": "Read-only owner readiness and served-bundle provenance. No application data, source, runtime, provider, OAuth, number, or onboarding writes.",
+  "origin": "https://operating-brussels-internship-interviews.trycloudflare.com",
+  "https": {
+    "rootStatus": 200,
+    "healthStatus": 200,
+    "loginStatus": 200,
+    "meStatus": 200,
+    "onboardingStatus": 200,
+    "capabilitiesStatus": 200,
+    "businessUnitsStatus": 200,
+    "ownerAuthenticated": true,
+    "ownerRole": true,
+    "sessionCookieSecure": true,
+    "sessionCookieHttpOnly": true,
+    "sessionCookieSameSiteLax": true,
+    "sessionCookieHostOnly": true,
+    "sessionCookiePersisted": false
+  },
+  "readiness": {
+    "onboardingComplete": true,
+    "onboardingPending": false,
+    "offeredModuleCount": 1,
+    "unofficialModuleOffered": true,
+    "unofficialModuleEnabled": true,
+    "officialRegistration": {
+      "available": true,
+      "reason": "AVAILABLE"
+    },
+    "unofficialRegistration": {
+      "available": true,
+      "reason": "AVAILABLE"
+    },
+    "businessUnitCount": 1,
+    "channelCount": 0,
+    "channelTypes": {},
+    "channelStates": {},
+    "rawNamesPhonesIdsOrProviderDataPersisted": false
+  },
+  "source": {
+    "rootBranch": "feature/number-onboarding",
+    "rootHead": "4bccdc4aa470d1166bc14a681d0008f242db2562",
+    "apiBranch": "feature/number-onboarding",
+    "apiHead": "f134bd11449a553e6f57e66cdc8fc71032151060",
+    "webBranch": "feature/number-onboarding",
+    "webHead": "d33c82c26760c671d98cab6f3e7bfe5676122c69"
+  },
+  "runtime": {
+    "apiContainer": "c2c74bc267af724a0b8a33a415b04084e74e0867669228cf906f7c306541bec0",
+    "apiImage": "sha256:c2e8d62bde2c85305deb9d72569f773072e77292465e09ed7283051b40ed4f4f",
+    "webContainer": "1e8d3a40dd9665481748b1278fd60de71ced6c682986d367a90665e76a61358a",
+    "webImage": "sha256:d11a882849dc806e0d4728ca90a8fc8655aebc77421acefac63054b4fbb89365",
+    "gatewayContainer": "0c48d94e9fe5b4ad75efd304db2752dfa4cab3befc59b9f736574d6cd551eea3",
+    "evolutionContainer": "cf749491f7149dc46ec4db597b2d9c12faf918dd4f05b5512ba75adaf8e29ea4",
+    "evolutionRedisContainer": "3b2e8d153d794a768ea87cb4f9cda7ba15dde242e2b8027bd372a475a9c26fbb",
+    "evolutionPostgresContainer": "150de898c3d9aa189ca0719eed7a65b95d95d8b948244e66b059a55f4554135a",
+    "applicationPostgresContainer": "4fcd87b431339e3b65a40beafa27db86cdc978ca79f71b911199f7090c837495"
+  },
+  "servedBundle": {
+    "capturedAtUtc": "2026-10-16T18:21:59.985099Z",
+    "rootStatus": 200,
+    "target": "/assets/index-txvhtd65.js",
+    "status": 200,
+    "sha256": "d14343604557296f2ed62c1df47d9c80d81c323abafd89ccbb64a6a0746ff4bd",
+    "bytes": 258450,
+    "webContainerAssetSha256": "d14343604557296f2ed62c1df47d9c80d81c323abafd89ccbb64a6a0746ff4bd",
+    "matchesValidatedCp27Bundle": true
+  },
+  "actions": {
+    "providerCalls": false,
+    "devicePairingOrQr": false,
+    "oauth": false,
+    "registrationMutation": false,
+    "onboardingOrModuleMutation": false,
+    "sourceRuntimeOrPrivateConfigMutation": false
+  },
+  "safeNextAction": "The owner can proceed in the normal Numbers UI flow. Human review and confirmation are required before any real provider or device-pairing action."
+}

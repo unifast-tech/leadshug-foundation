@@ -1,0 +1,22 @@
+{
+  "kind": "root-cp31 operator readiness receipt",
+  "capturedUtc": "2026-10-16T18:26:02.685263+00:00",
+  "verifiedArtifacts": [
+    {
+      "path": "cp31-operator-readiness.json",
+      "sha256": "15c9ad234af74a1c4d4c604a9e18d4e5b040b787fc16a4b32c20771323dc1859"
+    },
+    {
+      "path": "cp31-operator-readiness.md",
+      "sha256": "127414d393beb1308dde02cf99586884a860c14e39d9d8913c3f7482d0824a4c"
+    },
+    {
+      "path": "cp31-wizard-completion-confirmation.json",
+      "sha256": "d5f212e70f2f7b3782e0a055c2808df7de0f33f3142a2178ffc456e16640a532"
+    }
+  ],
+  "disposition": "Normal human onboarding complete; both registrations available, one BU and zero channels; served bundle matches cp27. Await human QR pairing and identity verification.",
+  "productSourceOrRuntimeChanged": false,
+  "providerOAuthOrDeviceActionByAgent": false,
+  "requiredExternalProofWaived": false
+}
