@@ -1,0 +1,27 @@
+{
+  "checkpoint": "cp22-https-secure-session-proof",
+  "captured_utc": "2026-10-16T13:58:19.343854+00:00",
+  "origin": "https://mistress-spencer-mozilla-sciences.trycloudflare.com",
+  "anti_csrf_control": {
+    "missing_x_requested_with_status": 403,
+    "credential_evaluation_or_session_cookie": false,
+    "explanation": "the BFF middleware rejects the missing anti-CSRF header before authentication"
+  },
+  "login": {
+    "status": 200,
+    "x_requested_with": "leadshug-web",
+    "session_cookie_present": true,
+    "cookie_flags": {
+      "secure": true,
+      "http_only": true,
+      "same_site_lax": true,
+      "path_root": true,
+      "domain_absent": true
+    }
+  },
+  "same_origin_me_status": 200,
+  "cors_exact_origin": true,
+  "cors_credentials_true": true,
+  "owner_password_cookie_or_private_response_emitted": false,
+  "credentials_transmitted_only_over_https": true
+}

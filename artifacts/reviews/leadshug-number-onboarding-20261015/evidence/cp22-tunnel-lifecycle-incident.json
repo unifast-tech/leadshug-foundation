@@ -1,0 +1,19 @@
+{
+  "captured_utc": "2026-10-16T13:44:36.008921+00:00",
+  "previous_tunnel_host": "seafood-sku-papers-contractor.trycloudflare.com",
+  "previous_tunnel_pid": 12615,
+  "observations": {
+    "wsl_process_present": false,
+    "wsl_https_health": "DNS name not known",
+    "windows_curl_exit": 6,
+    "windows_http_status": "000"
+  },
+  "cause": "not established; process lifetime failure, no claim of permanent origin",
+  "meta_setup": {
+    "four_private_fields_recognized": true,
+    "user_confirmed_previous_host_domain_and_oauth_sdk_saved": true,
+    "user_confirmed_webhook_fields_empty": true
+  },
+  "correction_state": "API cp22 validation is already running; allow terminal STOP before serialized DevOps recovery. New HTTPS must have actual health/session proof and owned durable process handle before user update. No old callback given as currently usable.",
+  "limits": "No private values, actual provider auth/pairing or IN/OUT."
+}

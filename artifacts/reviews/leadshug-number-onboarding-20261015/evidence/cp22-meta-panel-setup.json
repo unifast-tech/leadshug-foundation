@@ -1,0 +1,21 @@
+{
+  "captured_utc": "2026-10-16T14:04:50.344343+00:00",
+  "evidence_kind": "user-confirmed Meta panel configuration; not OAuth or message-delivery proof",
+  "origin": "https://mistress-spencer-mozilla-sciences.trycloudflare.com",
+  "callback": "https://mistress-spencer-mozilla-sciences.trycloudflare.com/webhooks/meta",
+  "user_confirmed": {
+    "old_domain_replaced": true,
+    "oauth_redirect_and_javascript_sdk_urls_saved": true,
+    "verify_token_copied_privately": true,
+    "meta_verified_and_saved_webhook": true
+  },
+  "messages_field_subscription": "pending user confirmation",
+  "app_publication": "not authorized; instructed to remain unpublished",
+  "real_provider_evidence": {
+    "oauth_authorization": false,
+    "phone_registration_or_pairing": false,
+    "inbound_delivery": false,
+    "outbound_delivery": false
+  },
+  "secrets_recorded": false
+}

@@ -1,0 +1,57 @@
+{
+  "checkpoint": "cp22-https-lifecycle",
+  "captured_utc": "2026-10-16T13:58:19.343854+00:00",
+  "status": "active; process-bound temporary Quick Tunnel, held by detached Windows-owned wsl.exe process",
+  "public_url": "https://mistress-spencer-mozilla-sciences.trycloudflare.com",
+  "target": "http://127.0.0.1:8083",
+  "gateway_loopback_only": true,
+  "windows_owner": {
+    "pid": 24396,
+    "process_name": "wsl.exe",
+    "launch_parent_pid": 3468,
+    "launch_parent_alive": false,
+    "command_matches_expected_distro_and_script": true,
+    "survived_launcher_exec_completion": true
+  },
+  "wsl": {
+    "distro": "Ubuntu",
+    "distro_source": "WSL_DISTRO_NAME and wsl --list --quiet public metadata",
+    "supervisor_pid": 28234,
+    "cloudflared_pid": 28236,
+    "both_processes_alive_at_final_capture": true,
+    "cloudflared_executable_matches_validated_binary": true
+  },
+  "binary": {
+    "path": "foundation_documentation/artifacts/tmp/number-onboarding-execution/cloudflared-tmp/cloudflared",
+    "version": "2026.10.0",
+    "sha256": "d33ff2d14475178d2012c2c56beba87389ac5ded27649519f198a7d3134a99db"
+  },
+  "lifetime": {
+    "process_bound": true,
+    "windows_wsl_process_alive_after_launch_parent_exited": true,
+    "dns_record_created": false,
+    "persistent_named_tunnel_or_account_created": false
+  },
+  "validation": {
+    "wsl_dns_resolved": true,
+    "windows_dns_resolved": true,
+    "https_root_status": 200,
+    "https_health_status": 200,
+    "target_only_owned_gateway": true
+  },
+  "logging": {
+    "cloudflared_stdout_stderr_raw_persisted": false,
+    "both_streams_drained_and_discarded_except_one_whitelisted_startup_host": true,
+    "http_request_lines_queries_codes_tokens_persisted": false,
+    "filter_script_sha256": "9ea122b8e1f3dbff4081c59c6e4fae26220f3817e6ded5bba7f6b2246c5e8fc5",
+    "wsl_launcher_script_sha256": "3de507b532f0bd827c91818e9b57f6481c8e6f05b299234301da7f9969a69869"
+  },
+  "stop_command_not_executed": "wsl.exe --distribution Ubuntu --exec /bin/bash -c 'pid=28236; expected=/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/artifacts/tmp/number-onboarding-execution/cloudflared-tmp/cloudflared; actual=$(readlink \"/proc/$pid/exe\" 2>/dev/null || true); if [ \"$actual\" = \"$expected\" ]; then kill -TERM \"$pid\"; else exit 2; fi'",
+  "failed_attempt_1": {
+    "status": "abandoned before adoption; no live process at check",
+    "diagnosis": "initial filter exited after first host match, closing its pipe; early EOF/SIGPIPE is the likely cause but exit code was not captured",
+    "hostname_in_versioned_evidence": false,
+    "raw_logs_persisted": false,
+    "corrective_change": "attempt 2 filter keeps draining/discarding both streams after recording one whitelisted startup hostname"
+  }
+}

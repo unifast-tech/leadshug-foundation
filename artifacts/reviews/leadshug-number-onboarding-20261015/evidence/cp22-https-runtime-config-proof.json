@@ -1,0 +1,35 @@
+{
+  "checkpoint": "cp22-https-runtime-config-proof",
+  "captured_utc": "2026-10-16T13:58:19.343854+00:00",
+  "private_file": "/mnt/c/unifast/leadshug/leadshug_now_docker/.env.testing",
+  "private_file_hash_or_values_emitted": false,
+  "private_update": {
+    "only_key_changed": "CHANNELS_LOCAL_ORIGIN",
+    "in_place": true,
+    "inode_preserved": true,
+    "prewrite_bytes_inode_size_mtime_compared": true,
+    "four_user_supplied_meta_fields_nonempty_before_and_after": true,
+    "owner_and_existing_provider_keys_preserved": true,
+    "windows_acl_inheritance_disabled": true,
+    "broad_allow_acl_present": false,
+    "current_user_acl_present": true
+  },
+  "effective_compose_and_actual_api_booleans": {
+    "node_env_production": true,
+    "web_origin_exact_current_https_origin": true,
+    "public_origin_blank": true,
+    "meta_four_fields_nonempty": true,
+    "meta_http_client_available": true,
+    "meta_reason_available": true,
+    "credential_crypto_key_valid": true,
+    "unofficial_installation_ceiling_enabled": true,
+    "api_healthy": true
+  },
+  "api_container_id_after_origin_update": "386f7039944053f5420ef70098de6fe4bfeea24b01f6d534bdc619b145314449",
+  "api_image_id_unchanged_cp21": "sha256:96e9c74176804aa82616fd5998247f51547458bae672312c86c2a567aeaac564",
+  "recreate_command": "docker compose up -d --no-deps --no-build --force-recreate api",
+  "api_source_cp22_deployed": false,
+  "runtime_db_migrations_applied": 21,
+  "api22_validation_migrations_not_deployed": 22,
+  "no_migrations_or_build_run_during_https_recovery": true
+}

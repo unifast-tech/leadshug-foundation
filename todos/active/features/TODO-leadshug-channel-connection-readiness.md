@@ -41,7 +41,7 @@ Proposta ST-CON-01: jornada de cadastro de número, com infraestrutura local est
 
 - **Current delivery stage:** Pending
 - **Qualifiers:** none
-- **Next exact step:** cp21-v2 reviews terminais: corrigir NUM-PERF-01 (índice da relação de identidade), NUM-ADH-CP21-01 (recuperação NOVO) e completar simulações NUM-SEC-CP21-02 dentro do contrato. API cp22 será único writer, depois Web e DevOps serializados; repetir validação afetada e revisão delta. Usuário confirmou domínio e URLs OAuth/SDK salvos; webhook Meta é a próxima dependência manual. Prova real dos dois canais e VAL-05 continuam pendentes.
+- **Next exact step:** corrigir as duas novas falhas de harness API cp22 e repetir suíte API; depois Web deve provar RED/GREEN da recuperação NOVO. HTTPS atual e sessão segura conferidos em cp22-https-handoff; usuário atualiza domínio/OAuth/SDK/callback e usa token somente localmente. Onboarding do produto ainda exige conclusão; capacidade BFF409ONBOARDING_PENDENTE. VAL-05 continua pendente.
 
 ## Active Work State (Required While TODO Remains In `active/`)
 
@@ -372,7 +372,7 @@ Register: `foundation_documentation/artifacts/dependency-readiness.md`.
 
 ## Profile Scope & Handoffs (Required Before `APROVADO`)
 
-- **Current profile:** operational-coder, handoff API cp22 após STOP de todos os reviewers cp21; Web/DevOps parados. Root orquestra evidência documental; próximo handoff Web e DevOps, depois Assurance. Genesis descartado pelo canon/produto existentes.
+- **Current profile:** operational-coder, API cp22 retomada como único writer após DevOps HTTPS STOP e health independente200. Web/DevOps parados; root governa evidência; depois Web, runtime integrado e Assurance.
 - **Primary execution profile:** operational-coder; handoff operational-devops antes de runtime/ingress.
 - **Active technical scope:** nestjs, react, postgresql, prisma, docker
 - **Expected supporting profiles:** operational-devops para target/callback; assurance-tester-quality e assurance-security-adversarial para gates aplicáveis.
@@ -1097,3 +1097,17 @@ TQA-CP21-02 é accepted-debt de processo: cobertura final substantiva com proven
 FRC/BCI/RLS têm envelopes pcv-1 cp21-pcv-frc/bci/rls.json com reviewer independente real e hashes canônicos, baseados na amostra cp21 explicitamente aceita pelo performance; EPS não foi marcado passed. Tabelas/gates finais ainda serão reconciliados após nova fonte/validação;492testes não incluem as correções futuras. Meta4 presentes na API confirmados por booleanos; usuário confirmou domínio e URLs OAuth/SDK salvos. Webhook/cadastro real pendentes, sem publicação do app.
 
 API cp22: schema acrescenta índice currentChannelId em migration nova e evidência de acesso real com população material; completar apenas simulações exigidas nos testes admitidos. Preservar21migrations já aplicadas, dados operacionais, credenciais, tombstones e contratos. Web tratará recuperação com REAUTORIZAR no slot retido e NOVO só se realmente liberado; DevOps atualizará runtime próprio/validação depois dos coders pararem. Nenhum commit/push de source ou deploy autorizado por esses reviews.
+
+### cp22: validação parcial e recuperação do endereço temporário
+
+API cp22 adicionou índice currentChannelId e migration20261016160000 em schema versionado;22migrações,lint/build e138unit passaram. PG284/286: novo teste OUT usa buId indefinido, e novo RENEW espera409 antes da rodada explícita de criação. completePairing termina primeiro a limpeza com200/CLEANUP_COMPLETED_RETRY_PAIR, preservando budget; teste deve conferir essa fase e continuar até quarentenaY/verifyX, sem reduzir exigência. Raw cp22-api-validation.log SHA2567bb87d0ab076bc70912907c2f83ad6b444fb067ede9fecca85f49695bbb12542; fonte/manifests215pré/pós e handoff preservados. Nenhum gate verde geral. API parou sem editar após a falha.
+
+O usuário confirmou webhook vazio. Probe read-only encontrou PID12615 ausente e DNS do host QuickTunnel anterior indisponível em WSL/Windows; cp21 era prova histórica, não liveness atual. DevOps recebeu writer único para um processo Windows destacado com handles e filtro de saída antes de persistir, mantendo imagens cp21 atuais e configuração privada. Não reconstruir fonte cp22 não validada. Meta4/OWNER/chaves/token/ACL preservados; app sem publicar, nenhum dispositivo/número real conectado. Após HTTPS atual validado, usuário atualizará os3campos de allowlist junto do callback/token local, sem segredo em chat.
+
+### HTTPS cp22 recuperado e API retomada
+
+DevOps STOP e root verificou health200 após o encerramento do agente, PIDs WSL28234/28236 vivos e sete hashes do handoff. Processo Windows wsl.exe24396 mantém QuickTunnel com filtro que drena/descarte de saída e persiste somente hostname allowlisted; parent launcher já encerrou. Um primeiro attempt encerrou antes da prova e está registrado, sem host pronto alegado. Configuração privada de origem foi alterada em-place preservando Meta4/OWNER/chaves/token/ACL; API recriada --no-build/--no-deps na imagem cp21. SessãoHTTPS/cookie/CORS reais passaram. Operador segue21migrações;22somente no runner de validação. BFFcapabilities409ONBOARDING_PENDENTE não foi contornado nem houve alteração de módulo/cobrança. Usuário recebeu atualização agrupada do novo host e callback; resultado ainda pendente.
+
+Normalização da execução: API aplicou indevidamente skill opcional orchestrated-single-todo-implementation sem invocação nominal e abriu trackerGOAL contra a instrução explícita. A skill foi considerada inaplicável; nenhum falso --goal-completed/waiver ou alteração de método. O tracker acidental disparou turnos repetidos aguardando o mesmo handoff externo e foi marcado blocked somente após ultrapassar três turnos, para cessar esse monitoramento. Isso não é estado do TODO. API retomada pela tarefa normal aprovada/routing/diff, sem criar novo tracker.
+
+Usuário confirmou atualização dasURLs e validação do webhook pela Meta no novo host; cp22-meta-panel-setup.json registra confirmação humana do painel, sem OAuth, vínculo de número ou entrega de mensagem inferidos. Assinatura messages é próxima checagem manual. Reteste API encontrou uma expectativa incorreta de providerConnectionState: evento open pode observar conexão sem restaurar ownNumberVerified/verifiedEpoch/receipt ou status pronto; manter negativos de confiança/efeitos na dimensão correta. Nenhuma mudança de produto adicional estabelecida.

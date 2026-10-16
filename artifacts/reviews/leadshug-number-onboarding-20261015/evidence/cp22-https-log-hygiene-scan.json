@@ -1,0 +1,27 @@
+{
+  "checkpoint": "cp22-https-log-hygiene-scan",
+  "captured_utc": "2026-10-16T13:58:19.343854+00:00",
+  "scan_period": "recent process logs scanned in memory only; no raw output persisted",
+  "containers": [
+    "leadshug_channels_local-gateway-1",
+    "leadshug_channels_local-api-1",
+    "leadshug_channels_local-evolution-1"
+  ],
+  "known_secret_variable_value_matches": {
+    "gateway": false,
+    "api": false,
+    "evolution": false
+  },
+  "fake_fixture_marker_matches": {
+    "gateway": false,
+    "api": false,
+    "evolution": false
+  },
+  "effective_gateway_logging": {
+    "nginx_config_dump_command_succeeded": true,
+    "http_access_log_off": true,
+    "safe_server_log_format_active": true
+  },
+  "raw_logs_persisted": false,
+  "note": "A short-lived in-memory scan observed allowed route/origin metadata in API logs but no known secret values; tunnel client raw output is filtered before any persistence."
+}

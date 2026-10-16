@@ -1,0 +1,24 @@
+{
+  "checkpoint": "cp22-https-owner-capabilities-proof",
+  "captured_utc": "2026-10-16T13:58:19.343854+00:00",
+  "authenticated_owner_session_used": true,
+  "installation_ceiling": {
+    "lh_channel_unofficial_enabled": true,
+    "meta_http_client_available": true,
+    "credential_crypto_key_valid": true,
+    "authorization_or_partner_registration_proven": false
+  },
+  "operator_bff_capabilities": {
+    "request": "GET /api/bff/number-registrations/capabilities",
+    "http_status": 409,
+    "safe_code": "ONBOARDING_PENDENTE",
+    "official_availability": null,
+    "unofficial_availability": null,
+    "reason": "capability evaluation gated until the existing owner onboarding is completed"
+  },
+  "existing_tenant_module_or_billing_changed": false,
+  "module_contract_availability_claimed": false,
+  "meta_callback_or_verify_token_registered": false,
+  "user_confirmed_callback_and_token_fields_empty": true,
+  "no_public_ids_or_private_values_emitted": true
+}

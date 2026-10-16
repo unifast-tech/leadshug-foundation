@@ -1,0 +1,41 @@
+{
+  "checkpoint": "cp22-https-runtime-handoff",
+  "captured_utc": "2026-10-16T13:58:19.343854+00:00",
+  "status": "STOP: HTTPS recovery complete; runtime handed to root for independent health review.",
+  "current_origin": "https://mistress-spencer-mozilla-sciences.trycloudflare.com",
+  "current_tunnel_lifecycle": "cp22-https-lifecycle.json",
+  "secure_session_proof": "cp22-https-secure-session-proof.json",
+  "runtime_config_proof": "cp22-https-runtime-config-proof.json",
+  "operator_capabilities_proof": "cp22-https-owner-capabilities-proof.json",
+  "log_scan": "cp22-https-log-hygiene-scan.json",
+  "runtime_images_and_containers": {
+    "api_container_id": "386f7039944053f5420ef70098de6fe4bfeea24b01f6d534bdc619b145314449",
+    "api_image_id": "sha256:96e9c74176804aa82616fd5998247f51547458bae672312c86c2a567aeaac564",
+    "gateway_container_id": "ae14928315ad793f0ee13d635b167995cdc7fa294ecdcfb5db93522849080b91",
+    "gateway_image_id": "sha256:76090a34b858323b6ab169711adc08253b5bee7123a973dc581ed46b643bc109",
+    "web_container_id": "12f31f043a80a1e06586483b0987710b8adc66fcb0ef18518b08244493cf4e21",
+    "web_image_id": "sha256:911cc02e11849f0993dd4c89e362f47442464966353058a187e650e867e6ad9d",
+    "operator_database_container_id": "4fcd87b431339e3b65a40beafa27db86cdc978ca79f71b911199f7090c837495",
+    "evolution_container_id": "cf749491f7149dc46ec4db597b2d9c12faf918dd4f05b5512ba75adaf8e29ea4",
+    "evolution_image_id": "sha256:385a3c4bedf42c66b46b43d06aae8712620144a84aa3b2c831b30c68435ab27c"
+  },
+  "migration_distinction": {
+    "current_operator_runtime": "unchanged cp21 API image and 21 applied operator migrations",
+    "cp22_validation": "22 migrations/lint/build, 138 unit pass, PG tests 284/286 with two newly added harness errors; validation STOP; cp22 source not deployed"
+  },
+  "operator_capabilities": "The install-level official client and credential-encryption prerequisites are available; the authenticated operator BFF currently returns 409 ONBOARDING_PENDENTE. Therefore actual tenant module capability is not established. No module, contract, billing or onboarding state was changed.",
+  "meta_authorization": "Four locally saved Meta configuration fields are present, but this does not prove Meta OAuth/partner authorization. User confirmed the Meta callback and verify-token fields remain empty. No callback registration or submission, real number, QR, pairing, WABA operation or external Meta action occurred.",
+  "source_changes": {
+    "no_product_or_harness_source_changed": true,
+    "only_private_local_origin_key_updated_in_place": true,
+    "API_recreated_using_existing_cp21_image_no_build": true,
+    "no_build_or_migration_during_https_recovery": true
+  },
+  "artifact_sha256": {
+    "cp22-https-lifecycle.json": "d2069835a9fd56847a8ce416a9ca52ddb04bfd89d53fd713e2243f410609a363",
+    "cp22-https-secure-session-proof.json": "920ffd35ce4e55adb51924c846e7ce1543438ba183eaba6efcbc6599bb332332",
+    "cp22-https-runtime-config-proof.json": "a8ea0f5382ec76d85a8b195a8db8918363b80f6bd43d8f5af8ddbd1b71692178",
+    "cp22-https-owner-capabilities-proof.json": "895be476e012ea81042be2400240fe0d42467b8284faf266b3ae995982d3975a",
+    "cp22-https-log-hygiene-scan.json": "60fbe697fb17d5edf62fb13d5c049abc185bdf87cc8df27ddd572be692e133c2"
+  }
+}
