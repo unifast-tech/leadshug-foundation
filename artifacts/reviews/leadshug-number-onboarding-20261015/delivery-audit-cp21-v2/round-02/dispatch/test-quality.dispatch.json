@@ -1,0 +1,560 @@
+{
+  "schema_version": "subagent-review-dispatch-v1",
+  "artifact_kind": "subagent_review_dispatch",
+  "authoritative": false,
+  "edit_policy": "derived_dispatch_packet",
+  "review_kind": "test_quality_audit",
+  "bounded_package_path": "/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/delivery-audit-cp21-v2/round-02/round-package.md",
+  "reviewer_count": 1,
+  "no_context_required": true,
+  "required_axes": [
+    "test_effectiveness",
+    "test_efficiency",
+    "performance",
+    "structural_soundness",
+    "operational_fit"
+  ],
+  "focus_points": [
+    "Verify whether changed tests reflect real behavior/contract change or only pass-the-test repair.",
+    "Assess whether assertions are effective and efficient.",
+    "State whether the audit sees brittle test-only shortcuts or weak coverage.",
+    "For each material finding, add category and formalizable-hint when you can judge them honestly.",
+    "When assessing design, seek the simplest faithful Clean Code/SOLID design for the approved intent. Do not invent future-facing work or erase explicit TODO intent. Planning review may challenge proposed intent; delivery review must preserve approved intent or return for renewed approval."
+  ],
+  "result_contract_fields": [
+    "overall_assessment",
+    "recommended_path",
+    "performance_position",
+    "elegance_position",
+    "structural_soundness_position",
+    "operational_fit_position",
+    "findings[].finding_id (optional)",
+    "findings[].category (optional)",
+    "findings[].formalizable_hint (optional)",
+    "findings[].candidate_rule_level (optional)",
+    "findings[]"
+  ],
+  "todo_path": "/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/todos/active/features/TODO-leadshug-channel-connection-readiness.md",
+  "historical_disposition_policy": [
+    "Resolved findings are historical context only. Do not reopen them unless the current bounded package materially changes the same locus/behavior or fresh evidence shows regression.",
+    "Challenged findings stay closed unless the current bounded package materially changes the same locus/behavior or the prior rationale is objectively insufficient.",
+    "Deferred findings must cite the recorded follow-up/waiver path first. Re-raise them only when the current bounded package changes the same locus or closure now depends on that deferred risk.",
+    "Unresolved findings remain valid to re-raise until they are fixed, challenged, or formally deferred with authority."
+  ],
+  "historical_dispositions": [
+    {
+      "source_kind": "promotion_routing",
+      "finding_id": "NUM-ARCH-01",
+      "carry_forward_class": "resolved",
+      "source_disposition": "classification=release-blocker; routing=fix-current-contract; status=fixed-in-plan",
+      "summary": "Typebot tocado exige isolamento tenant j\u00e1 can\u00f4nico",
+      "reference": "D-08; contratos de entrada; REG-SEC-01; VAL-08"
+    },
+    {
+      "source_kind": "promotion_routing",
+      "finding_id": "NUM-ARCH-02",
+      "carry_forward_class": "resolved",
+      "source_disposition": "classification=release-blocker; routing=fix-current-contract; status=fixed-in-plan",
+      "summary": "Recebimento do cadastro n\u00e3o pode duplicar efeitos",
+      "reference": "D-08; unique/transa\u00e7\u00e3o; REG-SEC-02; VAL-08"
+    },
+    {
+      "source_kind": "promotion_routing",
+      "finding_id": "NUM-ARCH-03",
+      "carry_forward_class": "resolved",
+      "source_disposition": "classification=release-blocker; routing=fix-current-contract; status=fixed-in-plan",
+      "summary": "Pareamento exige comprovar n\u00famero antes do conte\u00fado",
+      "reference": "D-06; rejei\u00e7\u00e3o pr\u00e9-identidade; REG-SEC-03; VAL-08"
+    },
+    {
+      "source_kind": "promotion_routing",
+      "finding_id": "NUM-ARCH-04",
+      "carry_forward_class": "resolved",
+      "source_disposition": "classification=release-blocker; routing=fix-current-contract; status=fixed-in-plan",
+      "summary": "Evento atrasado n\u00e3o pode trocar owner BU",
+      "reference": "D-07; tombstone sem transfer\u00eancia; REG-SEC-04; VAL-08"
+    },
+    {
+      "source_kind": "promotion_routing",
+      "finding_id": "NUM-ARCH-05",
+      "carry_forward_class": "resolved",
+      "source_disposition": "classification=release-blocker; routing=fix-current-contract; status=fixed-in-plan",
+      "summary": "Pairing mutante exige POST/anti-CSRF",
+      "reference": "D-06; contrato BFF; REG-SEC-05; VAL-08"
+    },
+    {
+      "source_kind": "promotion_routing",
+      "finding_id": "NUM-ARCH-06",
+      "carry_forward_class": "resolved",
+      "source_disposition": "classification=release-blocker; routing=fix-current-contract; status=fixed-in-plan",
+      "summary": "Reautorizar canal existente sem substituir ativa prematuramente",
+      "reference": "D-03/04; candidata+CAS; REG-SEC-06/07; VAL-08"
+    },
+    {
+      "source_kind": "promotion_routing",
+      "finding_id": "NUM-CRIT-01",
+      "carry_forward_class": "resolved",
+      "source_disposition": "classification=release-blocker; routing=fix-current-contract; status=fixed-in-plan",
+      "summary": "Repareamento j\u00e1 prometido precisa invalidar prova anterior",
+      "reference": "D-06; inst\u00e2ncia por epoch e trust reset; REG-SEC-10"
+    },
+    {
+      "source_kind": "promotion_routing",
+      "finding_id": "NUM-CRIT-02",
+      "carry_forward_class": "resolved",
+      "source_disposition": "classification=release-blocker; routing=fix-current-contract; status=fixed-in-plan",
+      "summary": "Dois writers da mesma Message precisam compartilhar aceita\u00e7\u00e3o",
+      "reference": "D-08; message-acceptance e diff; REG-SEC-11"
+    },
+    {
+      "source_kind": "promotion_routing",
+      "finding_id": "NUM-OBS-01",
+      "carry_forward_class": "resolved",
+      "source_disposition": "classification=by-design/no-action; routing=enforce-existing-requirement; status=covered-in-plan",
+      "summary": "Requisito secret-free j\u00e1 vinculante, sem defeito de gateway implementado alegado; harness concretizado",
+      "reference": "REG-SEC-12; runtime/logs; DOD-03"
+    },
+    {
+      "source_kind": "promotion_routing",
+      "finding_id": "NUM-OBS-02",
+      "carry_forward_class": "resolved",
+      "source_disposition": "classification=by-design/no-action; routing=enforce-existing-requirement; status=covered-in-plan",
+      "summary": "Raw scoped j\u00e1 vinculante; batch por owner agora expl\u00edcito, sem plataforma nova",
+      "reference": "REG-SEC-13; contrato raw; audit owner"
+    },
+    {
+      "source_kind": "promotion_routing",
+      "finding_id": "NUM-OBS-03",
+      "carry_forward_class": "resolved",
+      "source_disposition": "classification=by-design/no-action; routing=enforce-existing-requirement; status=covered-in-plan",
+      "summary": "Harness de tenant/credencial j\u00e1 requerido; observar identificador n\u00e3o secreto e DB real",
+      "reference": "REG-SEC-01/11; VAL-02/08"
+    },
+    {
+      "source_kind": "promotion_routing",
+      "finding_id": "NUM-DELTA-OBS-01",
+      "carry_forward_class": "resolved",
+      "source_disposition": "classification=by-design/no-action; routing=enforce-existing-requirement; status=covered-in-plan",
+      "summary": "Fence at\u00e9 commit j\u00e1 exigido; barrier do webhook em voo concretiza BCI",
+      "reference": "Delta v3; REG-SEC-10, nota de execu\u00e7\u00e3o"
+    },
+    {
+      "source_kind": "promotion_routing",
+      "finding_id": "NUM-DELTA-OBS-02",
+      "carry_forward_class": "resolved",
+      "source_disposition": "classification=by-design/no-action; routing=enforce-existing-requirement; status=covered-in-plan",
+      "summary": "Segredo em logs j\u00e1 proibido, inclusive hub.verify_token",
+      "reference": "Delta v3; REG-SEC-12, nota de execu\u00e7\u00e3o"
+    },
+    {
+      "source_kind": "promotion_routing",
+      "finding_id": "NUM-DELTA-OBS-03",
+      "carry_forward_class": "resolved",
+      "source_disposition": "classification=by-design/no-action; routing=enforce-existing-requirement; status=covered-in-plan",
+      "summary": "Refresh j\u00e1 prometido projeta autoria/conte\u00fado do mesmo ID",
+      "reference": "Delta v3; REG-SEC-11, nota browser; Inbox exclu\u00eddo preservado"
+    },
+    {
+      "source_kind": "promotion_routing",
+      "finding_id": "NUM-API-01",
+      "carry_forward_class": "resolved",
+      "source_disposition": "classification=release-blocker; routing=fix-current-contract; status=accepted-open",
+      "summary": "Telefone can\u00f4nico precisa CAS/equality at\u00f4mico entre transportes",
+      "reference": "api-checkpoint-review-v1.json; D-01/06"
+    },
+    {
+      "source_kind": "promotion_routing",
+      "finding_id": "NUM-API-02",
+      "carry_forward_class": "resolved",
+      "source_disposition": "classification=release-blocker; routing=fix-current-contract; status=accepted-open",
+      "summary": "Promo\u00e7\u00e3o deve manter attempt/generation/credential-version/lease at\u00e9 commit",
+      "reference": "api-checkpoint-review-v1.json; D-03/04/06"
+    },
+    {
+      "source_kind": "promotion_routing",
+      "finding_id": "NUM-API-03",
+      "carry_forward_class": "resolved",
+      "source_disposition": "classification=release-blocker; routing=fix-current-contract; status=accepted-open",
+      "summary": "DELETE precisa adquirir o mesmo fence das opera\u00e7\u00f5es externas",
+      "reference": "api-checkpoint-review-v1.json; D-06/07"
+    },
+    {
+      "source_kind": "promotion_routing",
+      "finding_id": "NUM-API-04",
+      "carry_forward_class": "resolved",
+      "source_disposition": "classification=release-blocker; routing=fix-current-contract; status=accepted-open",
+      "summary": "Renova\u00e7\u00e3o limpa antecessor mas n\u00e3o cria substituta reservada",
+      "reference": "api-checkpoint-review-v1.json; D-06"
+    },
+    {
+      "source_kind": "promotion_routing",
+      "finding_id": "NUM-API-05",
+      "carry_forward_class": "resolved",
+      "source_disposition": "classification=release-blocker; routing=fix-current-contract; status=accepted-open",
+      "summary": "Mapping migrado n\u00e3o autoriza adotar/apagar inst\u00e2ncia externa",
+      "reference": "api-checkpoint-review-v1.json; D-06/09"
+    },
+    {
+      "source_kind": "promotion_routing",
+      "finding_id": "NUM-API-06",
+      "carry_forward_class": "resolved",
+      "source_disposition": "classification=release-blocker; routing=fix-current-contract; status=accepted-open",
+      "summary": "Retry QR pendente deve preservar rodada apesar de evento connecting/open",
+      "reference": "api-checkpoint-review-v1.json; D-06/07"
+    },
+    {
+      "source_kind": "promotion_routing",
+      "finding_id": "NUM-API-07",
+      "carry_forward_class": "resolved",
+      "source_disposition": "classification=release-blocker; routing=fix-current-contract; status=accepted-open",
+      "summary": "Limpeza amb\u00edgua precisa sobreviver ao unlink e impedir nova cria\u00e7\u00e3o",
+      "reference": "api-checkpoint-review-v1.json; D-06/07"
+    },
+    {
+      "source_kind": "promotion_routing",
+      "finding_id": "NUM-API-08",
+      "carry_forward_class": "resolved",
+      "source_disposition": "classification=release-blocker; routing=fix-current-contract; status=accepted-open",
+      "summary": "Close observado deve remover prontid\u00e3o atual de DTO/envio",
+      "reference": "api-checkpoint-review-v1.json; D-07"
+    },
+    {
+      "source_kind": "promotion_routing",
+      "finding_id": "NUM-API-09",
+      "carry_forward_class": "resolved",
+      "source_disposition": "classification=release-blocker; routing=fix-current-contract; status=accepted-open",
+      "summary": "Verifica\u00e7\u00e3o oficial sem telefone pr\u00f3prio n\u00e3o comprova identidade",
+      "reference": "api-checkpoint-review-v1.json; D-01/07"
+    },
+    {
+      "source_kind": "promotion_routing",
+      "finding_id": "NUM-API-10",
+      "carry_forward_class": "resolved",
+      "source_disposition": "classification=release-blocker; routing=fix-current-contract; status=accepted-open",
+      "summary": "Expira\u00e7\u00e3o/supersess\u00e3o/remo\u00e7\u00e3o devem limpar candidata e nonce",
+      "reference": "api-checkpoint-review-v1.json; D-03/04"
+    },
+    {
+      "source_kind": "promotion_routing",
+      "finding_id": "NUM-API-11",
+      "carry_forward_class": "resolved",
+      "source_disposition": "classification=release-blocker; routing=fix-current-contract; status=accepted-open",
+      "summary": "Replay concorrente same-key deve retornar a mesma tentativa",
+      "reference": "api-checkpoint-review-v1.json; D-03"
+    },
+    {
+      "source_kind": "promotion_routing",
+      "finding_id": "NUM-API-12",
+      "carry_forward_class": "resolved",
+      "source_disposition": "classification=release-blocker; routing=fix-current-contract; status=accepted-open",
+      "summary": "Audit administrativo j\u00e1 prometido n\u00e3o pode virar isen\u00e7\u00e3o t\u00e9cnica",
+      "reference": "api-checkpoint-review-v1.json; audit-and-history#cadastro"
+    },
+    {
+      "source_kind": "promotion_routing",
+      "finding_id": "NUM-API-13",
+      "carry_forward_class": "resolved",
+      "source_disposition": "classification=release-blocker; routing=fix-current-contract; status=accepted-open",
+      "summary": "Reda\u00e7\u00e3o URL deve cobrir vocabul\u00e1rio de segredos e nomes codificados",
+      "reference": "api-checkpoint-review-v1.json; REG-SEC-09/12"
+    },
+    {
+      "source_kind": "promotion_routing",
+      "finding_id": "NUM-API-14",
+      "carry_forward_class": "resolved",
+      "source_disposition": "classification=release-blocker; routing=fix-current-contract; status=accepted-open",
+      "summary": "Ordem de locks identity/channel deve eliminar ciclo de deadlock",
+      "reference": "api-checkpoint-review-v1.json; D-06/08; BCI"
+    },
+    {
+      "source_kind": "promotion_routing",
+      "finding_id": "NUM-API-15",
+      "carry_forward_class": "resolved",
+      "source_disposition": "classification=release-blocker; routing=fix-current-contract; status=accepted-open",
+      "summary": "OUT sem ID confirmado conserva resultado local pendente/erro expl\u00edcito",
+      "reference": "api-checkpoint-review-v1.json; integrations-and-channels#reconcilia\u00e7\u00e3o"
+    },
+    {
+      "source_kind": "promotion_routing",
+      "finding_id": "NUM-API-16",
+      "carry_forward_class": "resolved",
+      "source_disposition": "classification=release-blocker; routing=complete-required-harness; status=accepted-open",
+      "summary": "Probes discriminantes REG-SEC e callers fazem parte do escopo aprovado",
+      "reference": "api-checkpoint-review-v1.json; VAL-02/08"
+    },
+    {
+      "source_kind": "promotion_routing",
+      "finding_id": "NUM-API-17",
+      "carry_forward_class": "resolved",
+      "source_disposition": "classification=release-blocker; routing=complete-required-harness; status=accepted-open",
+      "summary": "Positivas novas n\u00e3o s\u00e3o provadas pelos409 de rota aposentada",
+      "reference": "api-checkpoint-review-v1.json; test/modulos e canais"
+    },
+    {
+      "source_kind": "promotion_routing",
+      "finding_id": "NUM-API-18",
+      "carry_forward_class": "resolved",
+      "source_disposition": "classification=release-blocker; routing=fix-current-contract; status=accepted-open",
+      "summary": "Metadata pr\u00e9-identidade deve usar state allowlisted, sem conte\u00fado arbitr\u00e1rio",
+      "reference": "api-checkpoint-review-v1.json; REG-SEC-03/13"
+    },
+    {
+      "source_kind": "promotion_routing",
+      "finding_id": "NUM-RUNTIME-01",
+      "carry_forward_class": "resolved",
+      "source_disposition": "classification=release-blocker; routing=enforce-existing-requirement; status=accepted-open",
+      "summary": "Provider fixado registra URL em falha de callback, expondo segredo no path apesar do gateway",
+      "reference": "Concretizar alternativa por header j\u00e1 condicionada no contrato; fonte prim\u00e1ria e prova runtime obrigat\u00f3ria; REG-SEC-12"
+    },
+    {
+      "source_kind": "promotion_routing",
+      "finding_id": "NUM-ROOT-META-01",
+      "carry_forward_class": "resolved",
+      "source_disposition": "classification=release-blocker; routing=enforce-existing-requirement; status=accepted-open",
+      "summary": "Capacidade oficial exige vers\u00e3o Graph expl\u00edcita v\u00e1lida junto do conjunto Meta; vazio n\u00e3o pode anunciar AVAILABLE nem usar vers\u00e3o presumida",
+      "reference": "Source read-only: meta.client.ts:42-51 aceita vers\u00e3o vazia se tr\u00eas campos Meta presentes; modulos.ts:61-65 s\u00f3 conta esses tr\u00eas; runbook/contrato exige GRAPH_VERSION informado pela instala\u00e7\u00e3o. Corrigir no pr\u00f3ximo handoff API, com negativos unset/blank/malformed e positivo da vers\u00e3o configurada, sem nova aprova\u00e7\u00e3o material."
+    },
+    {
+      "source_kind": "promotion_routing",
+      "finding_id": "NUM-WEB-01",
+      "carry_forward_class": "resolved",
+      "source_disposition": "classification=release-blocker; routing=fix-current-contract; status=accepted-open",
+      "summary": "DTO antigo da mesma tentativa n\u00e3o pode regredir version/gera\u00e7\u00e3o",
+      "reference": "web-checkpoint-review-v1.json; D-07"
+    },
+    {
+      "source_kind": "promotion_routing",
+      "finding_id": "NUM-WEB-02",
+      "carry_forward_class": "resolved",
+      "source_disposition": "classification=release-blocker; routing=fix-current-contract; status=accepted-open",
+      "summary": "Popup precisa ownership para callback n\u00e3o perder code em busy no-op",
+      "reference": "web-checkpoint-review-v1.json; D-02/03"
+    },
+    {
+      "source_kind": "promotion_routing",
+      "finding_id": "NUM-WEB-03",
+      "carry_forward_class": "resolved",
+      "source_disposition": "classification=release-blocker; routing=fix-current-contract; status=accepted-open",
+      "summary": "Cadastro novo deve ser independente de retomada de tentativa alheia",
+      "reference": "web-checkpoint-review-v1.json; SCOPE-01"
+    },
+    {
+      "source_kind": "promotion_routing",
+      "finding_id": "NUM-WEB-04",
+      "carry_forward_class": "resolved",
+      "source_disposition": "classification=release-blocker; routing=fix-current-contract; status=accepted-open",
+      "summary": "Rein\u00edcio de nonce usa BU j\u00e1 criada, sem duplicar novaBu",
+      "reference": "web-checkpoint-review-v1.json; D-01/03"
+    },
+    {
+      "source_kind": "promotion_routing",
+      "finding_id": "NUM-WEB-05",
+      "carry_forward_class": "resolved",
+      "source_disposition": "classification=release-blocker; routing=fix-current-contract; status=accepted-open",
+      "summary": "Cancelamento preserva explica\u00e7\u00e3o/resultado parcial dur\u00e1vel",
+      "reference": "web-checkpoint-review-v1.json; D-05"
+    },
+    {
+      "source_kind": "promotion_routing",
+      "finding_id": "NUM-WEB-06",
+      "carry_forward_class": "resolved",
+      "source_disposition": "classification=release-blocker; routing=fix-current-contract; status=accepted-open",
+      "summary": "Verify consome receiptVerified booleano, n\u00e3o timestamp inexistente",
+      "reference": "web-checkpoint-review-v1.json; SCOPE-05"
+    },
+    {
+      "source_kind": "promotion_routing",
+      "finding_id": "NUM-WEB-07",
+      "carry_forward_class": "resolved",
+      "source_disposition": "classification=release-blocker; routing=fix-current-contract; status=accepted-open",
+      "summary": "Erros/status/finally antigos n\u00e3o escrevem ap\u00f3s trocar contexto",
+      "reference": "web-checkpoint-review-v1.json; D-02/07"
+    },
+    {
+      "source_kind": "promotion_routing",
+      "finding_id": "NUM-WEB-08",
+      "carry_forward_class": "resolved",
+      "source_disposition": "classification=release-blocker; routing=fix-current-contract; status=accepted-open",
+      "summary": "QR ef\u00eamero precisa v\u00ednculo/tentativa/gera\u00e7\u00e3o corrente e limpeza ao concluir",
+      "reference": "web-checkpoint-review-v1.json; D-06/07"
+    },
+    {
+      "source_kind": "promotion_routing",
+      "finding_id": "NUM-WEB-09",
+      "carry_forward_class": "resolved",
+      "source_disposition": "classification=release-blocker; routing=fix-current-contract; status=accepted-open",
+      "summary": "postMessage sem correla\u00e7\u00e3o n\u00e3o muda feedback de outra tentativa",
+      "reference": "web-checkpoint-review-v1.json; contrato SDK"
+    },
+    {
+      "source_kind": "promotion_routing",
+      "finding_id": "NUM-WEB-10",
+      "carry_forward_class": "resolved",
+      "source_disposition": "classification=release-blocker; routing=fix-current-contract; status=accepted-open",
+      "summary": "Loader SDK falho precisa retry controlado sem listeners obsoletos",
+      "reference": "web-checkpoint-review-v1.json; SCOPE-02"
+    },
+    {
+      "source_kind": "promotion_routing",
+      "finding_id": "NUM-WEB-11",
+      "carry_forward_class": "resolved",
+      "source_disposition": "classification=release-blocker; routing=enforce-existing-requirement; status=accepted-conditional-open",
+      "summary": "Recupera\u00e7\u00e3o parcial deve expor a\u00e7\u00e3o segura; leitura conclusiva condicionada a contrato real do provider, sem replay cego",
+      "reference": "web-checkpoint-review-v1.json; fallback pending/nova autoriza\u00e7\u00e3o j\u00e1 expl\u00edcito em D-05"
+    },
+    {
+      "source_kind": "promotion_routing",
+      "finding_id": "NUM-WEB-12",
+      "carry_forward_class": "resolved",
+      "source_disposition": "classification=release-blocker; routing=fix-current-contract; status=accepted-open",
+      "summary": "Parser de evento exige string enum primitiva, total para schema malformado",
+      "reference": "web-checkpoint-review-v1.json; contrato SDK"
+    },
+    {
+      "source_kind": "promotion_routing",
+      "finding_id": "WEB-ROOT-01",
+      "carry_forward_class": "resolved",
+      "source_disposition": "classification=release-blocker; routing=fix-current-contract; status=accepted-open",
+      "summary": "SDK readiness perdido ap\u00f3s reservar tentativa",
+      "reference": "evidence/root-web-checkpoint3-findings.json"
+    },
+    {
+      "source_kind": "promotion_routing",
+      "finding_id": "WEB-ROOT-02",
+      "carry_forward_class": "resolved",
+      "source_disposition": "classification=release-blocker; routing=fix-current-contract; status=accepted-open",
+      "summary": "Consumo incorreto do wrapper registration da confirma\u00e7\u00e3o",
+      "reference": "evidence/root-web-checkpoint3-findings.json"
+    },
+    {
+      "source_kind": "promotion_routing",
+      "finding_id": "WEB-ROOT-03",
+      "carry_forward_class": "resolved",
+      "source_disposition": "classification=release-blocker; routing=fix-current-contract; status=accepted-open",
+      "summary": "Retomada persistida e cancelamento expl\u00edcito necess\u00e1rios",
+      "reference": "evidence/root-web-checkpoint3-findings.json"
+    },
+    {
+      "source_kind": "promotion_routing",
+      "finding_id": "WEB-ROOT-04",
+      "carry_forward_class": "resolved",
+      "source_disposition": "classification=release-blocker; routing=fix-current-contract; status=accepted-open",
+      "summary": "Etapa no wizard precisa refletir webhook/receipt atual",
+      "reference": "evidence/root-web-checkpoint3-findings.json"
+    },
+    {
+      "source_kind": "promotion_routing",
+      "finding_id": "WEB-ROOT-05",
+      "carry_forward_class": "resolved",
+      "source_disposition": "classification=release-blocker; routing=fix-current-contract; status=accepted-open",
+      "summary": "Retry de reserva perdida precisa conservar chave idempotente",
+      "reference": "evidence/root-web-checkpoint3-findings.json"
+    },
+    {
+      "source_kind": "promotion_routing",
+      "finding_id": "WEB-ROOT-06",
+      "carry_forward_class": "resolved",
+      "source_disposition": "classification=release-blocker; routing=fix-current-contract; status=accepted-open",
+      "summary": "Troca expl\u00edcita de WABA n\u00e3o pode perder op\u00e7\u00f5es autorizadas",
+      "reference": "evidence/root-web-checkpoint3-findings.json"
+    },
+    {
+      "source_kind": "promotion_routing",
+      "finding_id": "NUM-BROWSER-01",
+      "carry_forward_class": "resolved",
+      "source_disposition": "classification=release-blocker; routing=fix-current-contract; status=accepted-open",
+      "summary": "Submit repetido deve preservar owner ativo e coalescer reserva",
+      "reference": "cp14 rerun3:21requests; FRC ativo; iniciar invalidava antes do guard"
+    },
+    {
+      "source_kind": "promotion_routing",
+      "finding_id": "NUM-BROWSER-02",
+      "carry_forward_class": "resolved",
+      "source_disposition": "classification=release-blocker; routing=fix-current-contract; status=accepted-open",
+      "summary": "Cancelamento autoritativo antes de efeitos pode devolver channelId:null sem ser descartado como resposta obsoleta",
+      "reference": "cp14 rerun5; API cancel370-373; DonoCicloCadastro.aplicar rejeita detach leg\u00edtimo"
+    },
+    {
+      "source_kind": "promotion_routing",
+      "finding_id": "NUM-BROWSER-03",
+      "carry_forward_class": "resolved",
+      "source_disposition": "classification=release-blocker; routing=complete-required-harness; status=accepted-open",
+      "summary": "Founder da fixture precisa proveni\u00eancia MANTENEDORA para provar novaBU/replay conforme produto real",
+      "reference": "cp14 rerun5:403TENANT_ADMIN_REQUIRED; seedNumberOnboarding119 vs TenancyService.criar"
+    },
+    {
+      "source_kind": "promotion_routing",
+      "finding_id": "NUM-ROOT-REG06",
+      "carry_forward_class": "resolved",
+      "source_disposition": "classification=release-blocker; routing=fix-current-contract; status=accepted-open",
+      "summary": "REAUTORIZAR oficial no slot migrado sem credencial \u00e9 prometido, mas guard managedLifecycle bloqueia o owner backfilled da mesma BU",
+      "reference": "REG-SEC-06; number-registration.service.ts248,274,319; distin\u00e7\u00e3o da restri\u00e7\u00e3o de inst\u00e2ncia Evolution n\u00e3o gerenciada"
+    },
+    {
+      "source_kind": "promotion_routing",
+      "finding_id": "NUM-ROOT-GW-01",
+      "carry_forward_class": "resolved",
+      "source_disposition": "classification=release-blocker; routing=fix-current-contract; status=accepted-open",
+      "summary": "Nginx mant\u00e9m segundo access log da imagem com URI/query e exp\u00f5e verify token local; formato seguro isolado n\u00e3o elimina sink herdado",
+      "reference": "cp21 scan real; REG-SEC-12; corrigir template, renovar token privado e repetir controles antes de HTTPS/pareamento"
+    },
+    {
+      "source_kind": "promotion_routing",
+      "finding_id": "NUM-ROOT-ENV-01",
+      "carry_forward_class": "resolved",
+      "source_disposition": "classification=release-blocker; routing=fix-current-contract; status=accepted-open",
+      "summary": "Overrides de origem/produ\u00e7\u00e3o documentados n\u00e3o atravessam WSL para docker.exe sem bridge expl\u00edcita",
+      "reference": "cp21 HTTPS precheck detectou desenvolvimento/origem local; start script e README68; bridge WSLENV de vari\u00e1veis n\u00e3o secretas e config-only discriminante"
+    },
+    {
+      "source_kind": "promotion_routing",
+      "finding_id": "NUM-PERF-01",
+      "carry_forward_class": "resolved",
+      "source_disposition": "classification=release-blocker; routing=fix-current-contract; status=accepted-open",
+      "summary": "Resolver de credencial carrega rela\u00e7\u00e3o current_channel_id sem \u00edndice em cada envio; tombstones globais ampliam o scan",
+      "reference": "Performance cp21-v2; novo \u00edndice schema/migration e EXPLAIN da consulta real; EPS permanece aberto"
+    },
+    {
+      "source_kind": "promotion_routing",
+      "finding_id": "NUM-ADH-CP21-01",
+      "carry_forward_class": "resolved",
+      "source_disposition": "classification=release-blocker; routing=fix-current-contract; status=accepted-open",
+      "summary": "Nova autoriza\u00e7\u00e3o ap\u00f3s NOVO expirado/amb\u00edguo mant\u00e9m canal no backend, mas UI tenta NOVO em slot ocupado",
+      "reference": "Architecture/security cp21; reutilizar canal exato por REAUTORIZAR e provar as duas falhas em browser real"
+    },
+    {
+      "source_kind": "promotion_routing",
+      "finding_id": "NUM-ROOT-ORIGIN-CP24-01",
+      "carry_forward_class": "resolved",
+      "source_disposition": "classification=release-blocker; routing=fix-current-contract; status=accepted-open",
+      "summary": "Inicializador exporta origem default e sobrep\u00f5e HTTPS salvo no arquivo privado, quebrando configura\u00e7\u00e3o efetiva ap\u00f3s rebuild",
+      "reference": "scripts/start-channels-local.sh:14; corrigir preced\u00eancia sem alterar arquivo privado e provar config/runtime HTTPS exatos"
+    },
+    {
+      "source_kind": "promotion_routing",
+      "finding_id": "NUM-SEC-CP21-02",
+      "carry_forward_class": "resolved",
+      "source_disposition": "classification=release-blocker; routing=fix-current-contract; status=accepted-open",
+      "summary": "Simula\u00e7\u00f5es exigidas REG-SEC-01/10/11 n\u00e3o discriminam todos os cen\u00e1rios nomeados",
+      "reference": "Trigger global estrangeiro anterior; verify antigo atrav\u00e9s de RENEW verificado; sequ\u00eancia epoch/quarentena/retry e ecos OUT concorrentes"
+    },
+    {
+      "source_kind": "critique",
+      "finding_id": "NUM-CRIT-01",
+      "carry_forward_class": "resolved",
+      "source_disposition": "resolution=Integrated; usefulness=useful; formalizable=partial",
+      "summary": "Contrato de epoch/inst\u00e2ncia, D-06, REG-SEC-10; delta v3 confirma resolu\u00e7\u00e3o contratual, produto ainda n\u00e3o verificado.",
+      "reference": "critique:findings_integrated"
+    },
+    {
+      "source_kind": "critique",
+      "finding_id": "NUM-CRIT-02",
+      "carry_forward_class": "resolved",
+      "source_disposition": "resolution=Integrated; usefulness=useful; formalizable=partial",
+      "summary": "Aceita\u00e7\u00e3o keyed de todos os writers OUT, D-08, diff helper, REG-SEC-11.",
+      "reference": "critique:findings_integrated"
+    }
+  ],
+  "goal": "Bounded test-quality audit. Treat regression protection, assertion effectiveness, and test realism as the primary decision lenses. Escalate as blocking when final behavior, CRUD/mutation, backend contract semantics, required navigation/integration gates, real-backend coverage, CI execution, or anti-mock/fallback requirements are missing or invalid. Test organization/readability suggestions are non-blocking when required behavior coverage is valid.",
+  "review_result_dispatch_path": "/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/delivery-audit-cp21-v2/round-02/dispatch/test-quality.dispatch.json"
+}

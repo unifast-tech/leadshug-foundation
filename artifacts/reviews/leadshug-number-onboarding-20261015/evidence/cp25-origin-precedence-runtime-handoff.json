@@ -1,0 +1,122 @@
+{
+  "checkpoint": "cp25-origin-precedence-runtime-handoff",
+  "captured_utc": "2026-10-16T15:28:44.071364+00:00",
+  "status": "TARGETED_GREEN_STOP",
+  "scope": [
+    "scripts/start-channels-local.sh"
+  ],
+  "source_change": {
+    "path": "scripts/start-channels-local.sh",
+    "before_sha256": "af8b59b851f8fc135451b8ba9d112b142743497ca98007644069ffbe335bdc80",
+    "after_sha256": "a8b7790f68da1154a85eb3108ac7b1365e9b1d881af21fe089620db881377de5",
+    "source_heads_unchanged": true,
+    "manifest_entries": 230,
+    "unchanged_references": 229,
+    "changed_references": 1,
+    "changed_paths": [
+      "scripts/start-channels-local.sh"
+    ],
+    "private_or_operational_paths_read_or_hashed": 0
+  },
+  "config_precedence_tests": {
+    "saved_env_file": {
+      "origin_matches_current_https": true,
+      "port_is_saved_8083": true,
+      "loopback_only": true
+    },
+    "caller_overrides": {
+      "origin_override_wins": true,
+      "port_override_wins": true,
+      "loopback_only": true,
+      "sentinel_l_mod_preserved": true,
+      "sentinel_p_mod_preserved": true,
+      "override_vars_bridged": true
+    },
+    "compose_fallback": {
+      "origin_is_default_http_localhost": true,
+      "port_is_default_8083": true,
+      "loopback_only": true
+    },
+    "invalid_ports_rejected": {
+      "0": true,
+      "65536": true,
+      "not-a-port": true
+    },
+    "nondefault_saved_fake_file": {
+      "origin_from_fake_saved_file": true,
+      "nondefault_saved_port": true,
+      "loopback_only": true,
+      "no_other_published_services": true
+    }
+  },
+  "all_config_assertions_passed": true,
+  "runtime": {
+    "api_image_unchanged": true,
+    "only_api_container_recreated": true,
+    "other_owned_containers_preserved": true,
+    "all_services_running": true,
+    "api_healthy": true,
+    "migrations_remain_22": true,
+    "https_runtime_proof": {
+      "checkpoint": "cp25-https-runtime-proof",
+      "captured_utc": "2026-10-16T15:27:43.196627+00:00",
+      "origin": "https://mistress-spencer-mozilla-sciences.trycloudflare.com",
+      "effective_runtime_config": {
+        "production": true,
+        "effective_web_origin_matches_current_https_host": true,
+        "meta_app_id_present": true,
+        "meta_app_secret_present": true,
+        "meta_signup_config_id_present": true,
+        "graph_version_present": true,
+        "credential_crypto_key_valid": true,
+        "public_origin_blank": true
+      },
+      "https_health_status": 200,
+      "https_root_status": 200,
+      "login_status": 200,
+      "cookie_flags": {
+        "secure": true,
+        "http_only": true,
+        "same_site_lax": true,
+        "path_root": true,
+        "domain_absent": true
+      },
+      "same_origin_me_status": 200,
+      "capabilities": {
+        "http_status": 409,
+        "safe_code": "ONBOARDING_PENDENTE",
+        "official_availability": null,
+        "unofficial_availability": null
+      },
+      "cors_preflight": {
+        "status": 204,
+        "exact_origin": true,
+        "credentials_true": true,
+        "allow_headers_present": true,
+        "allow_methods_present": true
+      },
+      "private_values_or_session_cookie_emitted": false
+    },
+    "log_hygiene_artifact": "cp25-log-hygiene-scan.json",
+    "database_or_volume_reset": false,
+    "full_all_rerun": false,
+    "basis_for_no_full_rerun": "cp24 all green 498-test proof remains byte-frozen; cp25 changes only the admitted operator wrapper path, and targeted Compose/runtime checks exercised the changed behavior."
+  },
+  "freshness": "Root separately retained and verified genuine cp24 pre-worker freshness/browser attestations; no changes to those artifacts.",
+  "remaining_product_state": {
+    "capabilities_safe_code": "ONBOARDING_PENDENTE",
+    "messages_subscription_unconfirmed": true,
+    "normal_owner_wizard_unconfirmed": true,
+    "no_real_oauth_qr_pairing_inbound_outbound": true
+  },
+  "artifacts_sha256": {
+    "cp25-config-precedence-proof.json": "8f280a20cf48e3947b43382aa3f6b7a9ec29204bcf94656a7b03f79a0a003653",
+    "cp25-before-api-recreate.json": "7046fb6145ef120f94ce3da7f9e19207ff31402940e547a92d4ab93d8e148338",
+    "cp25-https-runtime-proof.json": "8b8a0041162ed4404b74bb6c90f75771e900eaad2c225dca37bdc6ace4c3c6c4",
+    "cp25-after-api-recreate-runtime-state.json": "797b3528f0f17e0dec116ea5d315642c8e7c2be7dbf265baa290665ab10b2d4d",
+    "cp25-log-hygiene-scan.json": "f6393f8a42e31a990d916051bc3a70c224d05139faaa92b10a1c42b45402733e",
+    "cp25-source-manifest-before.json": "1667735c749f873f9ffca59dab22cf5e2484f2f850efcb6fdcb8a8be6c18aa5b",
+    "cp25-source-manifest-after.json": "43cd84f4e3d14e40ecc5e7b546b732273a79744a558278c98b6feeb9dfc3fd44",
+    "cp25-source-delta-comparison.json": "e550f67a74967b2d2777b5f9e9ea047b00363fea7e8064b4085ca31e53a367b5"
+  }
+}

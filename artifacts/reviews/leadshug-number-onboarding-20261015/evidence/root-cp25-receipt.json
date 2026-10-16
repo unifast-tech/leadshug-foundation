@@ -1,0 +1,9 @@
+{
+  "captured_utc": "2026-10-16T15:30:02.804835+00:00",
+  "kind": "root public-source cp25 receipt before frozen delta review",
+  "verified_artifact_hashes": 8,
+  "public_entries_verified": 230,
+  "mismatches": [],
+  "private_or_operational_payloads_read": 0,
+  "full_all_source_limit": "Only operator start wrapper differs after cp24 all;229references unchanged and targeted config/runtime proof replaces that locus."
+}

@@ -1,0 +1,40 @@
+{
+  "checkpoint": "cp25-https-runtime-proof",
+  "captured_utc": "2026-10-16T15:27:43.196627+00:00",
+  "origin": "https://mistress-spencer-mozilla-sciences.trycloudflare.com",
+  "effective_runtime_config": {
+    "production": true,
+    "effective_web_origin_matches_current_https_host": true,
+    "meta_app_id_present": true,
+    "meta_app_secret_present": true,
+    "meta_signup_config_id_present": true,
+    "graph_version_present": true,
+    "credential_crypto_key_valid": true,
+    "public_origin_blank": true
+  },
+  "https_health_status": 200,
+  "https_root_status": 200,
+  "login_status": 200,
+  "cookie_flags": {
+    "secure": true,
+    "http_only": true,
+    "same_site_lax": true,
+    "path_root": true,
+    "domain_absent": true
+  },
+  "same_origin_me_status": 200,
+  "capabilities": {
+    "http_status": 409,
+    "safe_code": "ONBOARDING_PENDENTE",
+    "official_availability": null,
+    "unofficial_availability": null
+  },
+  "cors_preflight": {
+    "status": 204,
+    "exact_origin": true,
+    "credentials_true": true,
+    "allow_headers_present": true,
+    "allow_methods_present": true
+  },
+  "private_values_or_session_cookie_emitted": false
+}

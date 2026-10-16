@@ -1,0 +1,25 @@
+{
+  "checkpoint": "cp25-log-hygiene-scan",
+  "captured_utc": "2026-10-16T15:28:09.311301+00:00",
+  "private_values_loaded_only_in_memory": true,
+  "raw_service_logs_persisted_by_scan": false,
+  "scans": {
+    "api": {
+      "private_match": false,
+      "line_count": 110
+    },
+    "gateway": {
+      "private_match": false,
+      "line_count": 46
+    },
+    "evolution": {
+      "private_match": false,
+      "line_count": 1000
+    }
+  },
+  "gateway_effective_config": {
+    "global_access_log_off": true,
+    "safe_server_access_log_format": true
+  },
+  "private_values_emitted": false
+}

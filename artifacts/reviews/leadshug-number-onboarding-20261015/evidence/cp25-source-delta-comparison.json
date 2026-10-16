@@ -1,0 +1,34 @@
+{
+  "checkpoint": "cp25-source-delta-comparison",
+  "captured_utc": "2026-10-16T15:28:21.661781+00:00",
+  "baseline": "cp24-source-manifest-after.json",
+  "baseline_sha256": "1667735c749f873f9ffca59dab22cf5e2484f2f850efcb6fdcb8a8be6c18aa5b",
+  "pre_entries": 230,
+  "post_entries": 230,
+  "unchanged_reference_count": 229,
+  "changed_entries": [
+    {
+      "path": "scripts/start-channels-local.sh",
+      "before": [
+        "present",
+        "af8b59b851f8fc135451b8ba9d112b142743497ca98007644069ffbe335bdc80"
+      ],
+      "after": [
+        "present",
+        "a8b7790f68da1154a85eb3108ac7b1365e9b1d881af21fe089620db881377de5"
+      ]
+    }
+  ],
+  "added_entries": [],
+  "missing_entries": [
+    "api-app/src/domain/channels/channels.service.spec.ts"
+  ],
+  "only_expected_historical_absence": true,
+  "heads_unchanged": true,
+  "source_heads": {
+    ".": "cab23188ec796f79131467dcce0a16acedab8d4f",
+    "api-app": "ae6a9662c29b77276351aa9de653a47276372246",
+    "web-app": "4e56f6c1f4515b918d05b8c87e890d42e8542c56"
+  },
+  "private_or_operational_paths_read_or_hashed": 0
+}

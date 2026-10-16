@@ -1,0 +1,301 @@
+{
+  "kind": "frozen derived cp25 affected delta inputs; no private/operational payloads",
+  "captured_utc": "2026-10-16T15:32:11.869411+00:00",
+  "public_source_manifest": "cp25-source-manifest-after.json",
+  "public_source_manifest_sha256": "43cd84f4e3d14e40ecc5e7b546b732273a79744a558278c98b6feeb9dfc3fd44",
+  "public_entries_verified": 230,
+  "unique_public_paths": 228,
+  "delta_sources_from_cp21": [
+    {
+      "path": "api-app/prisma/migrations/20261016160000_number_onboarding_current_channel_identity_index/migration.sql",
+      "before_sha256": null,
+      "after_sha256": "aadefab2ce66f3484661e66fdf918f5e295926bf9b89b0af4c3e2c8c5c78b740"
+    },
+    {
+      "path": "api-app/prisma/schema.prisma",
+      "before_sha256": "0dfcd1dac82c846d04d4cbcd2b96e1426ae6b30d740f0e8426bd0d99f37c0388",
+      "after_sha256": "3dd87c61af51167ae8aaa07a1b35e8616f108d9e5a05b2c0911ea84a8bfa5636"
+    },
+    {
+      "path": "api-app/test/atendimento.e2e-spec.ts",
+      "before_sha256": "c8a4612bde40e3c162499bffd8d4351bc912f70d0774ec43618ef4a5ddf23859",
+      "after_sha256": "d7047c83ba6338dc3452d8d182a9586df79bcb5a90032a2282d8f1422b1b43dd"
+    },
+    {
+      "path": "api-app/test/helpers.ts",
+      "before_sha256": "13c76881c6b6aa9b062b7d2cc59908c184bea0a84349d87d5b355ba4a0c161d4",
+      "after_sha256": "6f58ee65d1d514a1549de8f8ade0adae5718cf624fbe809eb0b56a7af6534dda"
+    },
+    {
+      "path": "api-app/test/number-onboarding-flow.e2e-spec.ts",
+      "before_sha256": "f185b635c06510b4ff9939b331022e69616f2cfaf26452bbe026d5ca92d64801",
+      "after_sha256": "40128cbe31499fa490430632367967d3b4a8851a7f53321ebf160dc69c533ff5"
+    },
+    {
+      "path": "api-app/test/number-onboarding-pcv.e2e-spec.ts",
+      "before_sha256": "f8df9630586403473e7a522d2f5004f5de84030f4e998ddeaa1a9afb440ba641",
+      "after_sha256": "5a608fa9ed3df38b91b2f90b18f34a0d3a88bf0cce75cdf629aa612c04747956"
+    },
+    {
+      "path": "api-app/test/number-onboarding-typebot.e2e-spec.ts",
+      "before_sha256": "c3c5ed2b17f72790302f6f341d67c428d876ea2d53d77e6e29ab9e9b7df3de30",
+      "after_sha256": "d814bfb2193a9aa8a69c841042b1429d8bd2c8670b49499ef994b0171fec382f"
+    },
+    {
+      "path": "api-app/test/timeline-fixtures.cjs",
+      "before_sha256": "ffbbb697205edbe9e076adf33f418d883339f40675f078479eccf704899ca62a",
+      "after_sha256": "1372f7bfb38792bffa948411208a5cc60abb4dffbecfa118e913abdfd38a07fb"
+    },
+    {
+      "path": "scripts/start-channels-local.sh",
+      "before_sha256": "af8b59b851f8fc135451b8ba9d112b142743497ca98007644069ffbe335bdc80",
+      "after_sha256": "a8b7790f68da1154a85eb3108ac7b1365e9b1d881af21fe089620db881377de5"
+    },
+    {
+      "path": "web-app/e2e/number-onboarding.spec.ts",
+      "before_sha256": "2c6b00d0553ade56daed438a17f72bb10acd61ba34ff40e9330c263438b84e8c",
+      "after_sha256": "4076adf4405bc61818d985e1550fe49d7662862884843e5846b3e16be54acea3"
+    },
+    {
+      "path": "web-app/src/componentes/CadastroNumero.tsx",
+      "before_sha256": "c776998365f14699e270444b84b9d3aeff3cf820cc411a97be8982e1d8f4cb1a",
+      "after_sha256": "9afbe4f419dcf4b5133f8103a0082b6eaa32837aaaf307ffbc61489c50f8cb78"
+    }
+  ],
+  "canonical_references": [
+    {
+      "path": "foundation_documentation/modules/integrations-and-channels.md",
+      "sha256": "f3d007fb7b84d960d460dd5f22bcd2082bc276f062769c796fdb0f2234306fe1"
+    },
+    {
+      "path": "foundation_documentation/modules/inbox-and-conversations.md",
+      "sha256": "592313ddd91cf00b76208b63c4fcdce3ec150109c23bd083301744431529fa5f"
+    },
+    {
+      "path": "foundation_documentation/modules/identity-and-tenancy.md",
+      "sha256": "604371cc509981d4561ce3cf404857990e5d30126ea04bda2a766aa0eeee1c91"
+    },
+    {
+      "path": "foundation_documentation/modules/audit-and-history.md",
+      "sha256": "e17c81ff017a21865e052f903b4ae4712c7c9313cae4505ff54a4cab6004a886"
+    },
+    {
+      "path": "foundation_documentation/project_constitution.md",
+      "sha256": "f9b8d3397a4f78c74f4c29739eb509d12bfc9ccda84a50fed718bfe7a668566a"
+    },
+    {
+      "path": "foundation_documentation/artifacts/validation-plans/leadshug-channel-readiness-20261015.md",
+      "sha256": "35e8bfce16aec38908957f58135715aa5df3265456568316f955d1c51839de84"
+    },
+    {
+      "path": "foundation_documentation/backlog/README.md",
+      "sha256": "f49c7b5e9410c69210e06ddf95d8772ff4f36aede75d2f53d97b66f0272fd4cd"
+    },
+    {
+      "path": "foundation_documentation/artifacts/dependency-readiness.md",
+      "sha256": "2901555f29980b3f941c7c4ccac3275f3a97d71f9f9ce494253ba493d5a3a005"
+    }
+  ],
+  "evidence": [
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/delivery-audit-cp21-v2/round-01/cutover-integrity.result.raw.json",
+      "sha256": "2836148d19567807a1a899886eebcfaeb44d935f848c0c9264ba874a32ef5ede"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/delivery-audit-cp21-v2/round-01/performance.result.raw.json",
+      "sha256": "26175cfae2c07e8aece2ba674c7c4de016161b0905155526c53d810db0ffb916"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/delivery-audit-cp21-v2/round-01/resolution.md",
+      "sha256": "0f6179d0d5b8e04dc74b1358e1062906caf137333ffcbb42d5af95228f4efa6b"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/delivery-audit-cp21-v2/round-01/test-quality.result.raw.json",
+      "sha256": "9a98f0c50cb7a16d229a9b3c4aea554c6583985cceeb7fa3ebcc50f956d22328"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp21-architecture-security.result.raw.json",
+      "sha256": "3fed808b7a9359201db548e5219b498b7e54a18af13db4ffae604f662655e336"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp21-dependency-exposure-diagnostic.json",
+      "sha256": "61afd41adb2cf1335be5fd2345449961db19029da9e98c96d2488c38045f7763"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp21-pcv-bci.json",
+      "sha256": "d34f2dd338c2c145b83c6cf1fbe7d18019a77a7c968f8a6903f45965237c462e"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp21-pcv-frc.json",
+      "sha256": "20ca3039aa4c87bcf06856718d72d3f86eef4754a8efad46c3ff9ca0c991e6e9"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp21-pcv-rls.json",
+      "sha256": "f5fd08798fc4a409db48aecfafd9f02a461d239ec0a1f8a754c1288349339b62"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp22-api-validation-rerun3.log",
+      "sha256": "9aa7683bd56eccbe1407dd3ea2a1953ec78412cc6061d9c4ae543a298f562e39"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp22-https-lifecycle.json",
+      "sha256": "d2069835a9fd56847a8ce416a9ca52ddb04bfd89d53fd713e2243f410609a363"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp22-meta-panel-setup.json",
+      "sha256": "cf511a7224efce30dfdb51f04dee308310bca20db45aba65b10dcedf4ff4cfaf"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp22-rerun3-handoff.md",
+      "sha256": "9e46cdf3a35321d7cfe66bfc5b7d46bd1c1a41aa2b6830be893efa1e2d4135b1"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp22-rerun3-result.json",
+      "sha256": "8c40c14cad0d334684dbb6d0e186eb64d000a1404b4d1ac88f14358e0ee99e2b"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp23-web-final-green-web.log",
+      "sha256": "109da24ff9b687a3cd2e8d5a1ecc7f1a5b6f268dc96d4b9127082963fe2797af"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp23-web-green-browser.log",
+      "sha256": "11f9cf5abdfadadd8f4bc2789fc3fd1015d00ea6c7b72c8cd94aa524fb07bf0d"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp23-web-handoff.md",
+      "sha256": "ad77fae06e3a0a0f0bd358f92db77e367e6775eb3c9764d0da16873ebd86007a"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp23-web-red-confirmed.log",
+      "sha256": "c8ff6a514631556fe1cbfd42a4aac11cb676d8e912909b0aba73454c27f3c1cc"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp24-browser-attestation.json",
+      "sha256": "486c1b53f51b257edbc4c18c44272fa5ed9e0478a03e29e6ac536432e2099398"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp24-final-all.log",
+      "sha256": "c7f2a6c70384bea881ba5106787b4a1911e8fdc763760e80a8a8eb34faa73277"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp24-https-session-capability-proof.json",
+      "sha256": "7b6946b0bfe9530d7f7668d7ea8fee66f86da653b2ab31352e91ca288bae0116"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp24-integrated-runtime-all-handoff.json",
+      "sha256": "8ddc39f2e7ddcf0fc3df9b043e017e408b46b303dab4f42f906351169dfe5d58"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp24-integrated-runtime-all-handoff.md",
+      "sha256": "68fa234b8a260f595c8a05f653f9fba78d7e19127f70706fae4942b6cda3d544"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp24-log-hygiene-scan.json",
+      "sha256": "63601615cf9b4f17983ea024c213cce44c8bdecb5d8e331d966be3806d1c944f"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp24-operator-runtime-proof.json",
+      "sha256": "fc1cd11254e731837e27bc58fe3fbea01d2f746d3c52fb79dfe3151b08006bf3"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp24-operator-up.log",
+      "sha256": "6226220b62fb18d3ca5262a7a90b4ac2ec044e8894b494fae5fafe489bd80856"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp24-origin-precedence-diagnostic.json",
+      "sha256": "a1455295870e2710009cdc23a5c3a3e478180e8e3f4d7a9d759beb89ed23a85f"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp24-pre-worker-freshness.json",
+      "sha256": "c9f844044f93f9b9b2f44d9550561a4458546fc5bf9f378bc1f3c6f714360a86"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp24-production-image-npm-audit.json",
+      "sha256": "7f6bc7ab3cf20edfcfb2de6bd1753e56ebb0bc9153c0e5a62f02d59332511366"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp24-served-bundle-proof.json",
+      "sha256": "522e25a8047981759137b606cbd3449ebd2b7318a40f9006d05f3f6b46b77ae0"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp24-source-manifest-after.json",
+      "sha256": "1667735c749f873f9ffca59dab22cf5e2484f2f850efcb6fdcb8a8be6c18aa5b"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp24-source-manifest-before.json",
+      "sha256": "60b0af3ef1140ce3a8b3a351ffdc04b4ac3df86e4835197a3605e3ca7521abe2"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp24-source-manifest-comparison.json",
+      "sha256": "052fb37e6673fbe5aadd53d88c0844a07d312c6848fcefbfed48c77a9f274e49"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp25-after-api-recreate-runtime-state.json",
+      "sha256": "797b3528f0f17e0dec116ea5d315642c8e7c2be7dbf265baa290665ab10b2d4d"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp25-before-api-recreate.json",
+      "sha256": "7046fb6145ef120f94ce3da7f9e19207ff31402940e547a92d4ab93d8e148338"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp25-config-precedence-proof.json",
+      "sha256": "8f280a20cf48e3947b43382aa3f6b7a9ec29204bcf94656a7b03f79a0a003653"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp25-https-runtime-proof.json",
+      "sha256": "8b8a0041162ed4404b74bb6c90f75771e900eaad2c225dca37bdc6ace4c3c6c4"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp25-log-hygiene-scan.json",
+      "sha256": "f6393f8a42e31a990d916051bc3a70c224d05139faaa92b10a1c42b45402733e"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp25-origin-precedence-runtime-handoff.json",
+      "sha256": "ff35426c525ba2c24dcf53310051e11056385583aad30c387737a4195aaf9b78"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp25-origin-precedence-runtime-handoff.md",
+      "sha256": "39345561f9a7d34a2456aa236859fe2ccf282efc39b4e6e986b7e42e1da53363"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp25-source-delta-comparison.json",
+      "sha256": "e550f67a74967b2d2777b5f9e9ea047b00363fea7e8064b4085ca31e53a367b5"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp25-source-manifest-after.json",
+      "sha256": "43cd84f4e3d14e40ecc5e7b546b732273a79744a558278c98b6feeb9dfc3fd44"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp25-source-manifest-before.json",
+      "sha256": "1667735c749f873f9ffca59dab22cf5e2484f2f850efcb6fdcb8a8be6c18aa5b"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/delivery-input-index-cp21-v2.json",
+      "sha256": "0009ae2866f66c97e016b81bae5d133ff5794bea508542e20a8c9c066b0b5732"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/delivery-review-package-cp21-v2.md",
+      "sha256": "58034629ef532c33436db7ea5dc86a869782ef9c90716f03a2cf89ef5560fbe9"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/delivery-todo-snapshot-cp25.md",
+      "sha256": "17d9b9eaa224a21617b4cefa0772e4488a413aa14c6ab4a9ac93f75045eea2e1"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/root-cp24-receipt.json",
+      "sha256": "11bb08588f09ca0cf4fca9ceb80c2c1ee5cc7b32a78d0112591d1ca401caae09"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/root-cp25-receipt.json",
+      "sha256": "87a835764989737c489bab0c33ae2bcf82e4e389e315149bea1cfc7fc73f5973"
+    }
+  ],
+  "private_or_operational_payloads_read": 0,
+  "review_rubrics": [
+    "delphi-ai/skills/test-quality-audit/SKILL.md",
+    "delphi-ai/skills/verification-debt-audit/SKILL.md",
+    "delphi-ai/workflows/docker/independent-test-quality-audit-method.md",
+    "delphi-ai/workflows/docker/performance-concurrency-validation-method.md",
+    "delphi-ai/schemas/subagent_review_result.schema.json"
+  ]
+}

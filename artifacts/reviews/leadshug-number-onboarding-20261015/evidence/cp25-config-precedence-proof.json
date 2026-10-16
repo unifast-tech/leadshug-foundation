@@ -1,0 +1,40 @@
+{
+  "checkpoint": "cp25-config-precedence-proof",
+  "captured_utc": "2026-10-16T15:26:49.106227+00:00",
+  "cases": {
+    "saved_env_file": {
+      "origin_matches_current_https": true,
+      "port_is_saved_8083": true,
+      "loopback_only": true
+    },
+    "caller_overrides": {
+      "origin_override_wins": true,
+      "port_override_wins": true,
+      "loopback_only": true,
+      "sentinel_l_mod_preserved": true,
+      "sentinel_p_mod_preserved": true,
+      "override_vars_bridged": true
+    },
+    "compose_fallback": {
+      "origin_is_default_http_localhost": true,
+      "port_is_default_8083": true,
+      "loopback_only": true
+    },
+    "invalid_ports_rejected": {
+      "0": true,
+      "65536": true,
+      "not-a-port": true
+    },
+    "nondefault_saved_fake_file": {
+      "origin_from_fake_saved_file": true,
+      "nondefault_saved_port": true,
+      "loopback_only": true,
+      "no_other_published_services": true
+    }
+  },
+  "actual_windows_docker_compose_used": true,
+  "fallback_case_only_rewrote_env_file_to_public_fake_fixture": true,
+  "config_only_no_resources_created_or_mutated": true,
+  "private_env_values_printed_or_written": false,
+  "all_assertions_passed": true
+}

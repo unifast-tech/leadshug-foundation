@@ -41,7 +41,7 @@ Proposta ST-CON-01: jornada de cadastro de número, com infraestrutura local est
 
 - **Current delivery stage:** Pending
 - **Qualifiers:** none
-- **Next exact step:** DevOps cp25 corrige somente precedência de origem/porta no inicializador e prova config/runtime HTTPS. All cp24 passou498testes/22migrações com230referências pré/pós iguais e raw completo; root reteve os artefatos reais de globalSetup pré-workers. Depois reviews delta; messages, wizard normal e VAL-05 continuam pendentes.
+- **Next exact step:** Revisão delta independente das correções cp22/cp23/cp25 sobre pacote congelado; all cp24 passou498testes/22migrações, e correção posterior só do inicializador passou matriz config/runtime HTTPS exata. Após reviews afetados, final review separado; messages, wizard normal e VAL-05 continuam pendentes.
 
 ## Active Work State (Required While TODO Remains In `active/`)
 
@@ -372,7 +372,7 @@ Register: `foundation_documentation/artifacts/dependency-readiness.md`.
 
 ## Profile Scope & Handoffs (Required Before `APROVADO`)
 
-- **Current profile:** operational-devops, cp25 é único writer para precedência do inicializador após all cp24 terminal verde. API/Web parados; root governa evidência; próximo handoff Assurance.
+- **Current profile:** assurance-tester-quality e assurance-security-adversarial nas revisões afetadas; API/Web/DevOps terminais STOP. Fonte congelada e root governa evidência/adjudicação, sem writer de produto ativo.
 - **Primary execution profile:** operational-coder; handoff operational-devops antes de runtime/ingress.
 - **Active technical scope:** nestjs, react, postgresql, prisma, docker
 - **Expected supporting profiles:** operational-devops para target/callback; assurance-tester-quality e assurance-security-adversarial para gates aplicáveis.
@@ -1161,3 +1161,5 @@ Operator up terminou verde com22migrações e novas imagens. Probe HTTPS login/m
 Preservar all cp24 em voo e manifestos sem edição/interrupção. Depois, DevOps mantém writer único para corrigir somente precedência dos valores públicos do inicializador: override explícito continua prioritário; quando ausente, respeitar configuração privada salva e defaults do Compose, sem source/eval de dotenv nem segredo em stdout. Validar config-only de origem salva/override/default e porta salva/override, com WSLENV existente preservado; restaurar runtime HTTPS próprio e repetir sessão/CORS/health/log hygiene. Guardar delta posterior do script separadamente: all anterior continua prova dos229inputs inalterados e não será falsamente atribuído ao script final. Test runner/API/Web/migrations não mudam nessa correção; fullall só se novas falhas ou impacto justificarem.
 
 All cp24 terminou exit0:138APIunitários,286PG,28Webunitários,46browser =498;22migrações; raw c7f2a6c70384bea881ba5106787b4a1911e8fdc763760e80a8a8eb34faa73277. Inventário230entradas/228paths únicos pré/pós iguais, capturado antes de build/all. Root conferiu11hashes do handoff e230referências atuais. O handoff não exportou attestation e declarou lacuna; root encontrou os arquivos genuínos gerados pelo globalSetup às15:16:12/15:16:15Z, dentro desse all e antes dos workers. Retidos byte a byte em cp24-browser-attestation.json/cp24-pre-worker-freshness.json, fonte/API/DB22migrações/portas e bundle conferidos. SHA JS d14343604557296f2ed62c1df47d9c80d81c323abafd89ccbb64a6a0746ff4bd coincide com runtime HTTPS/imagem. root-cp24-receipt.json complementa a prova sem reescrever handoff ou produzir probe pré-worker retroativo. DevOps parou e foi reativado somente para cp25.
+
+Cp25 terminal STOP: somente scripts/start-channels-local.sh mudou, SHA a8b7790f68da1154a85eb3108ac7b1365e9b1d881af21fe089620db881377de5;229referências públicas iguais ao all, heads iguais. Matriz real Compose provou saved origin/porta, override explícito, arquivo público salvo com porta18084 distinta de8083, defaults, WSLENV/modifiers e portas inválidas; sem mutação de recursos na config-only. Só API recriada sem build/deps, mesma imagem; todos os demais containers/volumes preservados. HTTPS health/root/login/me200, cookie seguro/host-only e CORS exato204 com credentials; configuração privada intacta por booleanos e nenhuma ocorrência de segredo nos logs inspecionados em memória. Capabilities409ONBOARDING_PENDENTE permanece. Root conferiu8hashes do handoff e230entradas atuais; fonte congelada para delta, sem declarar gates finais passados ou VAL-05 dispensada.
