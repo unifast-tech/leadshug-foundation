@@ -1,0 +1,24 @@
+{
+  "schema_version": "subagent-review-merge-v2",
+  "artifact_kind": "subagent_review_merge",
+  "authoritative": false,
+  "edit_policy": "derived_merge_packet",
+  "dispatch_path": "/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/delivery-audit-cp21-v2/round-02/dispatch/performance.dispatch.json",
+  "review_kind": "critique",
+  "review_count": 1,
+  "reviewer_labels": [
+    "Codex /root/performance_delta_cp25; fresh independent no-context formal Performance reviewer; routing-cp25-performance-review GO (declared gpt-6.1-sol/max)"
+  ],
+  "highest_finding_severity": "none",
+  "axis_summary": {
+    "performance": "acceptable",
+    "elegance": "acceptable",
+    "structural_soundness": "acceptable",
+    "operational_fit": "acceptable"
+  },
+  "recommended_paths": [
+    "Root should accept this affected Performance correction, record NUM-PERF-01 resolved, and consolidate the four current PCV lane judgments without another product change or another whole audit solely to rediscover VAL-05 or unchanged debt. The current samples satisfy EPS-E2/A2 (EPS-SP-STRONG), FRC-E3/A1 (FRC-SP-H, drop duplicate), BCI-E3/A1 (BCI-SP-H, optimistic concurrency and PAIR-LEASE-GENERATION-IDENTITY), and RLS-E1/A1 (the approved bounded RLS-SP-L stage). No alternate-profile claim, waiver or trigger downgrade is needed. Derive new machine-checkable pcv-1 envelopes from the actual cp24 log with the current source/run/environment/executor linkage, this actual independent reviewer identity and result hash, required lane payload fields, exact acceptance/profile IDs and canonical self-hashes; reconcile the pending TODO rows only through root disposition. Preserve the prior cp21 envelopes and raw history unchanged. EPS must include the2,000-tombstone resolver plan as well as the25-attempt evidence, so it cannot regress to attempt-only scrutiny. Do not turn local sample acceptance into an SLO, production stress or external exactly-once claim.\n\nPreserve the separation between cp24 full-all evidence and cp25 targeted wrapper proof. Keep the exact retained-slot/attempt revision checks, explicit fresh reservation/nonce, no consumed-code replay, DB-only listing, bounded provider rounds and cleanup-before-replacement behavior. Carry the accepted process/dependency debt at its recorded owner/cohort/revisit limits. Overall ST-CON-01 remains Pending until the separately required VAL-05/DOD-05 real-provider/device/IN/OUT/recovery evidence and remaining independent/root consolidation gates are fulfilled. The known external blocker is outside this strict local delta gate and remains unwaived. This result authorizes no source push, deployment, provider action or exposure expansion. Terminal STOP after writing and schema-validating only this advisory result."
+  ],
+  "exact_next_step": "Record reviewer resolutions in the governing TODO using the machine-checkable resolution table or equivalent gate ledger, then extract the derived resolution packet and decide whether another bounded review pass is still required.",
+  "findings": []
+}

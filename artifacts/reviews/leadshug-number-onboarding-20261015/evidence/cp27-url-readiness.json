@@ -1,0 +1,22 @@
+{
+  "observedUtc": "2026-10-16T16:30:49Z",
+  "executor": "/root/number_onboarding_devops_resume",
+  "mode": "readonly status only",
+  "targets": [
+    {
+      "origin": "http://127.0.0.1:8083",
+      "rootStatus": 200,
+      "healthStatus": 200
+    },
+    {
+      "origin": "https://mistress-spencer-mozilla-sciences.trycloudflare.com",
+      "rootStatus": 200,
+      "healthStatus": 200
+    }
+  ],
+  "responseBodiesOrHeadersRead": false,
+  "privateConfigRead": false,
+  "runtimeChanged": false,
+  "providerProof": false,
+  "source": "terminal executor handoff message"
+}

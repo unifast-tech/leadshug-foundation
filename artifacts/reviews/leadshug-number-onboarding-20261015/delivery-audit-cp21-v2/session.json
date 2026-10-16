@@ -61,7 +61,7 @@
     },
     {
       "round": 2,
-      "status": "prepared",
+      "status": "merged",
       "prepared_at": "2026-10-16T15:32:13+00:00",
       "lanes": [
         {
@@ -98,8 +98,12 @@
       "summary_json_path": "/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/delivery-audit-cp21-v2/round-02/round-summary.json",
       "summary_markdown_path": "/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/delivery-audit-cp21-v2/round-02/round-summary.md",
       "resolution_markdown_path": "/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/delivery-audit-cp21-v2/round-02/resolution.md",
-      "round_package_path": "/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/delivery-audit-cp21-v2/round-02/round-package.md"
+      "round_package_path": "/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/delivery-audit-cp21-v2/round-02/round-package.md",
+      "merged_at": "2026-10-16T15:51:58+00:00",
+      "round_status": "needs_adjudication",
+      "resolution_status": "resolved",
+      "resolution_recorded_at": "2026-10-16T16:16:33+00:00"
     }
   ],
-  "exact_next_step": "Spawn one no-context reviewer per required lane using the new current-round dispatch markdown files, then record each JSON result with `record-result`."
+  "exact_next_step": "Update the bounded package with this resolution/adjudication record, then open the next round with `next-round`."
 }

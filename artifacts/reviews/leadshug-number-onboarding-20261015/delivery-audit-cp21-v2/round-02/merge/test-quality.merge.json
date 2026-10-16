@@ -1,0 +1,59 @@
+{
+  "schema_version": "subagent-review-merge-v2",
+  "artifact_kind": "subagent_review_merge",
+  "authoritative": false,
+  "edit_policy": "derived_merge_packet",
+  "dispatch_path": "/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/delivery-audit-cp21-v2/round-02/dispatch/test-quality.dispatch.json",
+  "review_kind": "test_quality_audit",
+  "review_count": 1,
+  "reviewer_labels": [
+    "native-gpt-5.6-terra-max-cp25-test-quality"
+  ],
+  "highest_finding_severity": "medium",
+  "axis_summary": {
+    "performance": "acceptable",
+    "elegance": "acceptable",
+    "structural_soundness": "mixed",
+    "operational_fit": "mixed"
+  },
+  "recommended_paths": [
+    "Do not accept the strict local delta gate until the two targeted negative regression proofs are added. First, make REG-SEC-10 observe the stale old-identity webhook's realtime side effect directly. Second, make NOVO recovery exercise an authoritative retained-slot mismatch and prove fail-safe behavior/no reservation. Re-run the affected PostgreSQL API and browser or focused component suites with the same freshness/source-hash discipline, then obtain a new independent delta disposition. No product redesign, new fixture escape hatch, global credential path, or broad re-audit is indicated. Preserve the accepted TQA-CP21-02 and dependency debt boundaries, and preserve VAL-05 as the separate mandatory external Meta/device/IN/OUT/recovery gate rather than treating it as local debt or rediscovering it through another whole audit."
+  ],
+  "exact_next_step": "Record reviewer resolutions in the governing TODO using the machine-checkable resolution table or equivalent gate ledger, then extract the derived resolution packet and decide whether another bounded review pass is still required.",
+  "findings": [
+    {
+      "finding_id": "F-C0A52F5E",
+      "severity": "medium",
+      "title": "Recovery tests cover only the matching retained-slot projection, not its required fail-safe mismatch path",
+      "rationale": "Source anchor: web-app/src/componentes/CadastroNumero.tsx:521-555 correctly checks captured attempt identity and exact channel/type/generation/currentAttemptId before reset, but web-app/e2e/number-onboarding.spec.ts:129-221 tests only matching expiry and ambiguous-exchange projections; the nearby lifecycle/component specs do not exercise novaTentativaMesmoBu mismatch rejection. Why now: D-03 and NUM-WEB-11 require recovery to avoid blind NOVO fallback or a stale retained-slot action. The positive browser assertions catch the old NOVO behavior but would still pass if a future change weakened the mismatch guards. Static source currently fails safe, so this is not an asserted product defect. Blocking versus debt: the changed recovery behavior lacks required negative regression evidence and is therefore a bounded local-gate blocker, not cosmetic test debt or a reassertion of VAL-05.",
+      "suggested_action": "Add a deterministic regression case where the refreshed authoritative BU projection has a missing or mismatched retained channel, generation, or currentAttemptId. Assert the safe error, no lifecycle reset that enables reservation, no POST to number-registrations, and no new channel or BU. A focused component test that controls the refresh result is sufficient; alternatively use a tightly scoped real-BFF/PostgreSQL fixture mutation. Keep the existing two real-browser happy recovery journeys unchanged.",
+      "reviewer_labels": [
+        "native-gpt-5.6-terra-max-cp25-test-quality"
+      ],
+      "source_finding_ids": [
+        "TQA-CP25-02"
+      ],
+      "category": "tests",
+      "formalizable_hint": "yes",
+      "candidate_rule_level": "project",
+      "candidate_rule_id": "NUM-WEB-11"
+    },
+    {
+      "finding_id": "F-805C9547",
+      "severity": "medium",
+      "title": "REG-SEC-10 does not directly prove that stale old-instance ingress emits no realtime event",
+      "rationale": "Source anchor: api-app/test/number-onboarding-flow.e2e-spec.ts:707-711 submits old-instance stale content before the RealtimeService.publicarNaBu spy is installed at :732; the no-call assertion at :739 therefore covers only the later current-name PENDING_IDENTITY request. Why now: the approved REG-SEC-10 contract explicitly includes no stale content/unread/realtime/bot effect. Current source appears safe because evolution.controller.ts:31-37 returns when the retired identity has no current channel, so this is a missing regression proof rather than a demonstrated live defect. Blocking versus debt: it is a strict-local test-quality blocker because a required negative security behavior in the changed simulation is unobserved; it is not accepted process debt or the external VAL-05 gap.",
+      "suggested_action": "Install the realtime spy before the old-name stale messages.upsert request and assert its 200 acknowledgement produces zero realtime calls as well as zero message, conversation, unread, Typebot, and outbound effects. Retain the existing current-name pre-identity and verified-current same-key checks. A real observable realtime sink is an acceptable alternative to the spy; static early-return reasoning alone should not substitute for this regression assertion.",
+      "reviewer_labels": [
+        "native-gpt-5.6-terra-max-cp25-test-quality"
+      ],
+      "source_finding_ids": [
+        "TQA-CP25-01"
+      ],
+      "category": "tests",
+      "formalizable_hint": "yes",
+      "candidate_rule_level": "project",
+      "candidate_rule_id": "REG-SEC-10"
+    }
+  ]
+}

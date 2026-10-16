@@ -1,0 +1,142 @@
+{
+  "policy_schema_version": "pcv-1",
+  "schema_version": "pcv-1",
+  "lane_id": "EPS",
+  "todo_id": "TODO-leadshug-channel-connection-readiness",
+  "run_id": "cp24-canonical-all-20261016-with-cp25-wrapper-proof",
+  "environment_id": "leadshug_channels_validation/leadshug_timeline_channels_ci/Node22.23.3/OpenSSL3.0.22/PG16",
+  "executor_id": "/root/number_onboarding_devops_resume",
+  "reviewer_id": "Codex /root/performance_delta_cp25; fresh independent no-context formal Performance reviewer; routing-cp25-performance-review GO (declared gpt-6.1-sol/max)",
+  "recorded_at_utc": "2026-10-16T15:42:16Z",
+  "evidence_type": "deterministic-runner-observation-with-independent-review",
+  "sample_profile_id": "EPS-SP-STRONG",
+  "acceptance_rule_id": "EPS-A2",
+  "result_summary": "Passed bounded EPS-E2/A2 with25-attempt plan/timings and actual resolver2,000-tombstone indexed lookup.",
+  "artifact_payload": {
+    "source_log": "cp24-final-all.log",
+    "source_log_sha256": "c7f2a6c70384bea881ba5106787b4a1911e8fdc763760e80a8a8eb34faa73277",
+    "source_manifest": "cp24-source-manifest-after.json",
+    "source_manifest_sha256": "1667735c749f873f9ffca59dab22cf5e2484f2f850efcb6fdcb8a8be6c18aa5b",
+    "final_source_manifest": "cp25-source-manifest-after.json",
+    "final_source_manifest_sha256": "43cd84f4e3d14e40ecc5e7b546b732273a79744a558278c98b6feeb9dfc3fd44",
+    "independent_review_path": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/delivery-audit-cp21-v2/round-02/performance.result.raw.json",
+    "independent_review_sha256": "044c9d955e7c78e6873d0f3ce3c7b54c86b9b30405bc6075c7d0c876ad238770",
+    "limits": "Bounded local PG/BFF/browser and doubled provider ports; no production capacity/SLO or external exactly-once. Only the operator start wrapper changed after all; cp25 targeted actual Compose/runtime proof covers that separate locus. Real provider/device IN/OUT remains pending.",
+    "min_evidence_rule_id": "EPS-E2",
+    "access_pattern_classification": {
+      "registrationGet": "one attempt by id and Mantenedora; no provider calls",
+      "idempotencyReplay": "unique lookup by Mantenedora and Idempotency-Key",
+      "channelList": "BU-filtered projection; no provider fan-out"
+    },
+    "touched_path_audit_summary": "NumberRegistrationService direct attempt reads and ChannelsController BU-filtered channel list; existing unique/index definitions in Prisma schema.; ChannelCredentialResolver current_channel_id reverse relation has new index/migration and representative actual-resolver probe.",
+    "strong_query_evidence_type": "EXPLAIN plus bounded timings and EXPLAIN ANALYZE BUFFERS after actual resolver invocation; no planner forced",
+    "observations": {
+      "attemptLookup": {
+        "policy_schema_version": "pcv-1",
+        "lane_id": "EPS",
+        "trigger_result": "required",
+        "trigger_severity": "medium",
+        "trigger_reason_code": "EPS-DATA-PATH-CHANGED",
+        "gate_deadline": "before_local_implemented",
+        "min_evidence_rule_id": "EPS-E2",
+        "acceptance_rule_id": "EPS-A2",
+        "sample_profile": "EPS-SP-STRONG",
+        "strong_query_evidence_type": "EXPLAIN (FORMAT JSON) plus bounded endpoint timings",
+        "access_pattern_classification": {
+          "registrationGet": "one attempt by id and Mantenedora; no provider calls",
+          "idempotencyReplay": "unique lookup by Mantenedora and Idempotency-Key",
+          "channelList": "BU-filtered projection; no provider fan-out"
+        },
+        "touched_path_audit_summary": "NumberRegistrationService direct attempt reads and ChannelsController BU-filtered channel list; existing unique/index definitions in Prisma schema.",
+        "seededAttempts": 25,
+        "explain": [
+          {
+            "Plan": {
+              "Node Type": "Seq Scan",
+              "Parallel Aware": false,
+              "Async Capable": false,
+              "Relation Name": "channel_registration_attempts",
+              "Alias": "channel_registration_attempts",
+              "Startup Cost": 0,
+              "Total Cost": 2.42,
+              "Plan Rows": 1,
+              "Plan Width": 32,
+              "Filter": "((mantenedora_id = '3c1903ef-933f-4c9f-8853-aa983e2e295f'::text) AND (idempotency_key = 'e0000000-e000-4000-8000-000000000001'::text))"
+            }
+          }
+        ],
+        "timing": {
+          "samples": 20,
+          "minMs": 6.710007000000132,
+          "medianMs": 7.458682999999837,
+          "p95Ms": 8.698797000000013,
+          "maxMs": 9.074249000000236
+        },
+        "limits": "Local disposable PostgreSQL observation only; no latency threshold or capacity/SLO claim."
+      },
+      "resolverCurrentIdentity": {
+        "finding_id": "NUM-PERF-01",
+        "policy_schema_version": "pcv-1",
+        "relation": "provider_resource_identities",
+        "resolver": "ChannelCredentialResolver.resolve(channel.id, registration)",
+        "predicate": "current_channel_id = channel.id",
+        "currentIdentity": {
+          "id": "36c21778-0047-4459-9d47-7780134228bc",
+          "externalResourceId": "eps-current-resource"
+        },
+        "unrelatedRetiredIdentityRows": 2000,
+        "totalIdentityRows": 2001,
+        "plan": [
+          {
+            "Plan": {
+              "Node Type": "Index Scan",
+              "Parallel Aware": false,
+              "Async Capable": false,
+              "Scan Direction": "Forward",
+              "Index Name": "provider_resource_identities_current_channel_id_idx",
+              "Relation Name": "provider_resource_identities",
+              "Alias": "provider_resource_identities",
+              "Startup Cost": 0.28,
+              "Total Cost": 8.29,
+              "Plan Rows": 1,
+              "Plan Width": 37,
+              "Actual Startup Time": 0.008,
+              "Actual Total Time": 0.009,
+              "Actual Rows": 1,
+              "Actual Loops": 1,
+              "Index Cond": "(current_channel_id = '9826aafd-2346-4b7a-a41e-c1644cad45b4'::text)",
+              "Rows Removed by Index Recheck": 0,
+              "Shared Hit Blocks": 3,
+              "Shared Read Blocks": 0,
+              "Shared Dirtied Blocks": 0,
+              "Shared Written Blocks": 0,
+              "Local Hit Blocks": 0,
+              "Local Read Blocks": 0,
+              "Local Dirtied Blocks": 0,
+              "Local Written Blocks": 0,
+              "Temp Read Blocks": 0,
+              "Temp Written Blocks": 0
+            },
+            "Planning": {
+              "Shared Hit Blocks": 0,
+              "Shared Read Blocks": 0,
+              "Shared Dirtied Blocks": 0,
+              "Shared Written Blocks": 0,
+              "Local Hit Blocks": 0,
+              "Local Read Blocks": 0,
+              "Local Dirtied Blocks": 0,
+              "Local Written Blocks": 0,
+              "Temp Read Blocks": 0,
+              "Temp Written Blocks": 0
+            },
+            "Planning Time": 0.034,
+            "Triggers": [],
+            "Execution Time": 0.071
+          }
+        ],
+        "limits": "Disposable PostgreSQL observation; test-after evidence for the resolver-shaped indexed relation lookup, not a capacity/SLO claim."
+      }
+    }
+  },
+  "artifact_sha256": "0ff50fc581a9794bda7578ad443b8005ad22cb03cfe538ca41ba5337523ea737"
+}

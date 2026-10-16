@@ -1,0 +1,60 @@
+{
+  "blocked": true,
+  "context": {
+    "approval_scope_present": true,
+    "approval_section_present": true,
+    "architecture_governance_required": true,
+    "architecture_governance_section_present": true,
+    "architecture_review_gates_required": true,
+    "architecture_supersede_trigger": false,
+    "current_delivery_stage": "Pending",
+    "delivery_claim": true,
+    "delivery_gate_rows": {
+      "Local CI-Equivalent Suite Matrix": 5,
+      "Pipeline/Copilot P1/P2 Preflight": 1,
+      "Rule-Spirit Anti-Pattern Hunt": 2
+    },
+    "execution_authority_granted": false,
+    "promotion_routing_rows": 64,
+    "require_delivery_gates": true,
+    "routing_preflight_outcome": "go",
+    "routing_preflight_required": true,
+    "routing_preflight_section_present": true,
+    "rules_ingestion_rows": 12,
+    "todo_path": "foundation_documentation/todos/active/features/TODO-leadshug-channel-connection-readiness.md",
+    "validation_mode": "execution-authority"
+  },
+  "pre_approval": false,
+  "violations": [
+    {
+      "code": "DELIVERY-GATE-STATUS-NOT-PASSING",
+      "message": "Local CI-Equivalent Suite Matrix row status `planned` does not satisfy delivery: API light | Dom\u00ednio/adapters/boot | Build, cifra, erros e config | Node22/container, deps lockfile | npm run prisma:generate; npm run lint; npm run build; npm test | Local-Implemented | planned | raw stdout das quatro folhas | runner source-owned resolve contexto sem host Node divergente",
+      "resolution": "Run the gate, fix the blocker, or record an approved waiver/n/a rationale before claiming delivery.",
+      "section": "Local CI-Equivalent Suite Matrix"
+    },
+    {
+      "code": "DELIVERY-GATE-STATUS-NOT-PASSING",
+      "message": "Local CI-Equivalent Suite Matrix row status `planned` does not satisfy delivery: API E2E | Schema/auth/consumer | Negativas/replay/receipt e regress\u00f5es p\u00fablico/Typebot | PG16 exclusivo e migrate deploy | npm run test:e2e | Local-Implemented | planned | raw stdout e manifest | serial, sem overlap com browser",
+      "resolution": "Run the gate, fix the blocker, or record an approved waiver/n/a rationale before claiming delivery.",
+      "section": "Local CI-Equivalent Suite Matrix"
+    },
+    {
+      "code": "DELIVERY-GATE-STATUS-NOT-PASSING",
+      "message": "Local CI-Equivalent Suite Matrix row status `planned` does not satisfy delivery: Web | Wizard/helper/DTO | Cadastro/cancelamento/QR/races | backend real, fonte e bundle servidos iguais | npm test; npm run test:tela | Local-Implemented | planned | stdout e pre-worker attestation | fixture n\u00e3o substitui BFF/sess\u00e3o/DB",
+      "resolution": "Run the gate, fix the blocker, or record an approved waiver/n/a rationale before claiming delivery.",
+      "section": "Local CI-Equivalent Suite Matrix"
+    },
+    {
+      "code": "DELIVERY-GATE-STATUS-NOT-PASSING",
+      "message": "Local CI-Equivalent Suite Matrix row status `planned` does not satisfy delivery: Workspace Compose | Runtime/wiring | Config coerente, isolamento, servi\u00e7os e startup | .env privado, dados novos do pacote | docker compose -f docker-compose.yml -f docker-compose.channels.yml config --quiet; make test-api; make test-web | Local-Implemented | planned | resultado sem valores de env | n\u00e3o imprimir config renderizado com segredos; manter superf\u00edcies broad da CI",
+      "resolution": "Run the gate, fix the blocker, or record an approved waiver/n/a rationale before claiming delivery.",
+      "section": "Local CI-Equivalent Suite Matrix"
+    },
+    {
+      "code": "DELIVERY-GATE-STATUS-NOT-PASSING",
+      "message": "Local CI-Equivalent Suite Matrix row status `planned` does not satisfy delivery: Prova externa | Cadastro real | SDK/QR+IN+OUT em cada canal | app Meta eleg\u00edvel, HTTPS e n\u00fameros de teste | runbook local e checklist VAL-05 | Local-Implemented | planned | evid\u00eancia redigida por canal/build | n\u00e3o \u00e9 CI externo ou prova de SLO",
+      "resolution": "Run the gate, fix the blocker, or record an approved waiver/n/a rationale before claiming delivery.",
+      "section": "Local CI-Equivalent Suite Matrix"
+    }
+  ]
+}

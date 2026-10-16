@@ -1,0 +1,161 @@
+You are a fresh internal no-context test_quality_audit reviewer, distinct from all implementers, native gpt-5.6-terra/max. Read ONLY the bounded public package /mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp27-tqa-supplement-package.md, generated dispatch MD/JSON cp27-tqa-supplement.dispatch.md/json in that directory, root-cp27-receipt.json and listed evidence/source/rubrics. Workspace /mnt/c/unifast/leadshug/leadshug_now_docker. Read prior round-02/test-quality.result.raw.json and resolution.md in adjacent delivery-audit-cp21-v2 and carry their already accepted work; independently assess exact two corrections TQA-CP25-01/02, not a new whole-feature audit. Full applicable test-quality/debt rubric on the two changed tests: alignment, workaround, efficacy/efficiency, fail-first/provenance, skips/focus/bypass/fallback, actual backend/DI/CI/platform/freshness and uncertainties. No blanket acceptance based on counts. Inspect actual code/negative controls. New tests are test-after correct production behavior; do not fabricate RED. All writers STOP and current source frozen. Prior Performance/cutover/architecture judgments retained on unchanged production with exact manifest comparison. Overall Pending/VAL-05 mandatory unwaived remains outside this strict local correction gate. No build/test/runtime/provider/device/network probes, container logs, private dotenv/secrets/cookies/code/PIN/QR, .local-files payloads/Git blobs, other projects, subagents, GOAL, or writes. Source/artifact hash/schema inspection only on named public files. Return ONLY exact closed JSON schema below, no Markdown or extras, review_kind test_quality_audit, dispatch_path /mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp27-tqa-supplement.dispatch.json, reviewer_label native-gpt-5.6-terra-max-cp27-tqa-supplement. Put substantive workload and separate dispositions of both IDs in assessment/recommended strings, material findings ordered severity with exact anchors/why-now/blocking-vs-debt. No deadline; finish required review.
+SCHEMA:
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://paced.internal/schemas/subagent_review_result.schema.json",
+  "title": "PACED Subagent Review Result",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "artifact_kind",
+    "dispatch_path",
+    "review_kind",
+    "reviewer_label",
+    "overall_assessment",
+    "recommended_path",
+    "performance_position",
+    "elegance_position",
+    "structural_soundness_position",
+    "operational_fit_position",
+    "findings"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "subagent-review-result-v1"
+    },
+    "artifact_kind": {
+      "const": "subagent_review_result"
+    },
+    "dispatch_path": {
+      "type": "string",
+      "minLength": 1
+    },
+    "review_kind": {
+      "enum": [
+        "architecture_opinion",
+        "architecture_adherence",
+        "critique",
+        "test_quality_audit",
+        "final_review",
+        "cutover_integrity_audit"
+      ]
+    },
+    "reviewer_label": {
+      "type": "string",
+      "minLength": 1
+    },
+    "overall_assessment": {
+      "type": "string",
+      "minLength": 1
+    },
+    "recommended_path": {
+      "type": "string",
+      "minLength": 1
+    },
+    "performance_position": {
+      "$ref": "#/$defs/position"
+    },
+    "elegance_position": {
+      "$ref": "#/$defs/position"
+    },
+    "structural_soundness_position": {
+      "$ref": "#/$defs/position"
+    },
+    "operational_fit_position": {
+      "$ref": "#/$defs/position"
+    },
+    "findings": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/finding"
+      }
+    }
+  },
+  "additionalProperties": false,
+  "$defs": {
+    "position": {
+      "enum": [
+        "strong_positive",
+        "acceptable",
+        "mixed",
+        "regresses",
+        "unknown",
+        "not_evaluated"
+      ]
+    },
+    "finding": {
+      "type": "object",
+      "required": [
+        "severity",
+        "title",
+        "rationale",
+        "suggested_action"
+      ],
+      "properties": {
+        "finding_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "severity": {
+          "enum": [
+            "low",
+            "medium",
+            "high"
+          ]
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1
+        },
+        "rationale": {
+          "type": "string",
+          "minLength": 1
+        },
+        "category": {
+          "enum": [
+            "architecture",
+            "adherence",
+            "tests",
+            "performance",
+            "security",
+            "elegance",
+            "structural_soundness",
+            "operational_fit",
+            "residual_risk",
+            "other"
+          ]
+        },
+        "formalizable_hint": {
+          "enum": [
+            "yes",
+            "partial",
+            "no",
+            "unknown"
+          ]
+        },
+        "candidate_rule_level": {
+          "enum": [
+            "paced",
+            "project",
+            "none",
+            "unknown"
+          ]
+        },
+        "candidate_rule_id": {
+          "type": "string"
+        },
+        "affected_paths": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "suggested_action": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}

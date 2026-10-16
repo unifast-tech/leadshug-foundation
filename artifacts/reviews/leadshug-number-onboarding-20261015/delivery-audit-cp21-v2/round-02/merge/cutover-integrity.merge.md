@@ -1,0 +1,34 @@
+# PACED Subagent Review Merge: cutover_integrity_audit
+
+## Merge Identity
+- **Artifact kind:** `subagent_review_merge`
+- **Authoritative:** `false`
+- **Edit policy:** `derived_merge_packet`
+- **Dispatch path:** `/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/delivery-audit-cp21-v2/round-02/dispatch/cutover-integrity.dispatch.json`
+- **Review count:** `1`
+- **Highest finding severity:** `none`
+
+## Axis Summary
+- **Performance:** `acceptable`
+- **Elegance:** `acceptable`
+- **Structural soundness:** `acceptable`
+- **Operational fit:** `acceptable`
+
+## Recommended Paths
+- `Accept this advisory for the bounded CP25 correction gate with no source correction requested. Preserve the canonical resolver/identity route, exact retained-slot recovery checks, and wrapper behavior that lets Compose resolve saved values or explicit caller overrides before deriving the sole loopback port; its documented Compose default is a local configuration default, not a credential or ownership fallback. Retain the CP24 full-run and targeted CP25 wrapper evidence as recorded evidence rather than attributing the entire 498-test result to the wrapper-only delta; no fresh execution was performed by this reviewer. Final review should keep the explicit limits: EPS proves the repaired lookup but not an SLO, the PCV samples prove bounded local regression properties but not provider exactly-once behavior, and external real Meta/device/IN/OUT/recovery validation remains required before overall TODO completion. Keep TQA-CP21-02 visible as process debt with authentic future RED required, and keep BLG-leadshug-runtime-dependency-security constrained as recorded until its prerequisite remediation. Do not convert VAL-05 into accepted debt or repeat the whole audit solely to rediscover it.`
+
+## Merged Findings
+- `none`
+
+## Reviewer Summaries
+### native-gpt-5.6-terra-max-cp25-cutover-integrity
+- **Assessment:** Acceptable for the strict CP25 local correction gate: no new material cutover-integrity blocker was found. I reviewed the hash-matched 11-source delta, named nearby public callers and tests, CP21 baseline/adjudication, TODO snapshot, package/index, and named TQA, verification-debt, and performance rubrics; no build, test, runtime, provider, device, network, or private-data probe was run. The identity index serves the resolver's actual current_channel lookup rather than a mirror or query-time stitch. The reviewed BFF/public/Typebot send paths resolve one current, managed, verified ProviderResourceIdentity and scoped channel credential; webhook ingress is fenced by the same current identity and keyed Message acceptance. No global customer-token fallback, silent dual credential read/write path, legacy credential bridge, or hidden alternate sender path was found in the reviewed callers. Meta app-secret use for app/debug-token validation is distinct from customer-message authorization and does not supply a customer credential fallback. D-01 through D-10 remain adherent in the affected scope: canonical BU number ownership; validated official signup; durable attempt/nonce/CAS lifecycle; per-channel AES-GCM credentials; explicit recovery; epoch-bound Evolution proof; durable resource/tombstone ownership; shared keyed acceptance; isolated local runtime; and serialized one-checkout behavior. The sole migration exception remains narrow: an official credentialless migrated slot may be reauthorized only for the same BU/channel/phone with fresh proof, then becomes managed; unmanaged Evolution resources remain non-adoptable, unverifiable, and not provider-deletable. Nullable legacy Message identity/external-ID fields remain preserved while current messages use the keyed identity path. Test efficacy is adequate for this delta: REG-SEC-01 discriminates a foreign older GLOBAL Typebot trigger, REG-SEC-10 holds a stale verification across RENEW and proves quarantine/fencing, and REG-SEC-11 exercises concurrent authenticated OUT echoes through the real BFF path. The expiry fixture is scoped to its disposable database, guarded, and validates exact NOVO/PENDING_AUTH/BU state; the two new browser journeys assert real BFF/session/PostgreSQL recovery to same-slot REAUTORIZAR, fresh attempt/nonce/key, and no duplicate BU/channel. The documented pre-product RED is limited to the two prior NOVO-slot failures; earlier fixture/poll failures are correctly classified as harness failures. Changed and nearby tests contain no focused/skip/TODO bypass markers, use real Nest/PG/BFF surfaces with only external provider/SDK ports doubled, and retain the package's source/bundle/freshness and CI evidence boundaries. Performance evidence is proportionate: EPS-E2/A2 exercises the actual resolver against 2,000 retired identities and an unforced indexed plan; FRC-E3/A1, BCI-E3/A1, and RLS-E1/A1 provide bounded real-DB concurrency/isolation coverage without claiming capacity, SLO, external exactly-once, or real-provider proof. TQA-CP21-02 remains accepted provenance debt, and the unchanged dependency exposure remains bounded to its recorded private/synthetic cohort; neither is reopened. VAL-05/DOD-05 remains mandatory and unwaived for overall completion, but is an external pending gate rather than a local correction finding.
+- **Recommended path:** `Accept this advisory for the bounded CP25 correction gate with no source correction requested. Preserve the canonical resolver/identity route, exact retained-slot recovery checks, and wrapper behavior that lets Compose resolve saved values or explicit caller overrides before deriving the sole loopback port; its documented Compose default is a local configuration default, not a credential or ownership fallback. Retain the CP24 full-run and targeted CP25 wrapper evidence as recorded evidence rather than attributing the entire 498-test result to the wrapper-only delta; no fresh execution was performed by this reviewer. Final review should keep the explicit limits: EPS proves the repaired lookup but not an SLO, the PCV samples prove bounded local regression properties but not provider exactly-once behavior, and external real Meta/device/IN/OUT/recovery validation remains required before overall TODO completion. Keep TQA-CP21-02 visible as process debt with authentic future RED required, and keep BLG-leadshug-runtime-dependency-security constrained as recorded until its prerequisite remediation. Do not convert VAL-05 into accepted debt or repeat the whole audit solely to rediscover it.`
+- **Performance:** `acceptable`
+- **Elegance:** `acceptable`
+- **Structural soundness:** `acceptable`
+- **Operational fit:** `acceptable`
+
+## Exact Next Step
+Record reviewer resolutions in the governing TODO using the machine-checkable resolution table or equivalent gate ledger, then extract the derived resolution packet and decide whether another bounded review pass is still required.
+

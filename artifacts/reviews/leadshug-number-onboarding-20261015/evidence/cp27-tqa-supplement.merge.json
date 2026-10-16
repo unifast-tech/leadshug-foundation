@@ -1,0 +1,24 @@
+{
+  "schema_version": "subagent-review-merge-v2",
+  "artifact_kind": "subagent_review_merge",
+  "authoritative": false,
+  "edit_policy": "derived_merge_packet",
+  "dispatch_path": "/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp27-tqa-supplement.dispatch.json",
+  "review_kind": "test_quality_audit",
+  "review_count": 1,
+  "reviewer_labels": [
+    "native-gpt-5.6-terra-max-cp27-tqa-supplement"
+  ],
+  "highest_finding_severity": "none",
+  "axis_summary": {
+    "performance": "acceptable",
+    "elegance": "acceptable",
+    "structural_soundness": "acceptable",
+    "operational_fit": "mixed"
+  },
+  "recommended_paths": [
+    "Record the recommended local dispositions separately: TQA-CP25-01 resolved because the stale old-name ingress is now observed by a preinstalled realtime spy and remains zero through the pending negative before the verified current-key positive; TQA-CP25-02 resolved because a real second OWNER session supersedes the retained-slot attempt and the stale first page demonstrably fails safe without a reservation or state mutation. No further source edit, fixture expansion, rerun, or whole-feature audit is indicated by this supplemental review. Preserve the existing accepted performance/cutover/architecture positions on the unchanged manifest. Overall TODO status remains Pending: VAL-05 is mandatory and unwaived, is not accepted debt, and remains outside this strict local correction gate; the local fake-provider/browser evidence must not be promoted into a provider/device/platform completion claim."
+  ],
+  "exact_next_step": "Record reviewer resolutions in the governing TODO using the machine-checkable resolution table or equivalent gate ledger, then extract the derived resolution packet and decide whether another bounded review pass is still required.",
+  "findings": []
+}

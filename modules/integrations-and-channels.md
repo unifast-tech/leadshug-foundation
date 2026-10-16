@@ -12,7 +12,7 @@ Owns Meta Cloud API, Evolution/Baileys, outbound webhooks, API keys and transpor
 
 ## Cadastro de números ST-CON-01
 
-Contrato aprovado pelo usuário em2026-10-15 no [TODO governante](../todos/active/features/TODO-leadshug-channel-connection-readiness.md), documentação publicada3302964c. Estado: **Approved, implementação e verificação pendentes**. Owner: integrations-and-channels, escopo Mantenedora/BU; mantém constituição e políticas de isolamento. O módulo é autoridade do contrato; o TODO registra execução/evidência. Fonte API em api-app; Web em web-app.
+Contrato aprovado pelo usuário em2026-10-15 no [TODO governante](../todos/active/features/TODO-leadshug-channel-connection-readiness.md), documentação publicada3302964c. Estado: **Approved; implementação exercitada localmente em2026-10-16 ([all499/22migrações e fonte/freshness](../artifacts/reviews/leadshug-number-onboarding-20261015/evidence/root-cp27-receipt.json)); architecture/security, Performance/cutover e TQA independentes aceitos no escopo local. Final review local aceito; source commits/bridge byteexact registrados, closeout geral e prova externa permanecem pendentes no TODO**. Owner: integrations-and-channels, escopo Mantenedora/BU; mantém constituição e políticas de isolamento. O módulo é autoridade do contrato; o TODO registra execução/evidência. Fonte API em api-app; Web em web-app.
 
 ### BFF e autorização
 

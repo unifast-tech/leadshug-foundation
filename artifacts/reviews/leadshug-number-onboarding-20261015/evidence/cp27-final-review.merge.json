@@ -1,0 +1,24 @@
+{
+  "schema_version": "subagent-review-merge-v2",
+  "artifact_kind": "subagent_review_merge",
+  "authoritative": false,
+  "edit_policy": "derived_merge_packet",
+  "dispatch_path": "/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp27-final-review.dispatch.json",
+  "review_kind": "final_review",
+  "review_count": 1,
+  "reviewer_labels": [
+    "Codex /root/final_review_cp27; fresh internal independent no-context final reviewer, distinct from implementers and prior reviewers; routing-cp27-final-review declared gpt-6.1-sol/max GO"
+  ],
+  "highest_finding_severity": "none",
+  "axis_summary": {
+    "performance": "acceptable",
+    "elegance": "acceptable",
+    "structural_soundness": "acceptable",
+    "operational_fit": "mixed"
+  },
+  "recommended_paths": [
+    "Owner may integrate this final_review as acceptance of the bounded cp27 local checkpoint and retain prior raw findings/dispositions. No product correction, fixture expansion, dependency change, repeated successful suite or repeated whole audit is requested by this result. Record this result and the actual reviewer identity through the normal TODO/merge disposition; keep all source/runtime/canonical files frozen until this reviewer and any other current reader are terminal.\n\nThen proceed with the already approved LOCAL feature commits and source/guard consolidation under the recorded Git authority, after the required per-repository authority checks. Preserve exact validated bytes and explicitly bridge the pre-commit manifest/original heads to the new commits; do not label an old validation run as having executed at a new committed head. Retain public source boundaries, the admitted deletion and pipeline-owned gitlinks; no .local-files payload or private credential enters staging. Final owner metadata/guard reconciliation must reflect this local acceptance without claiming an all-delivery GO.\n\nKeep ST-CON-01 active and overall Pending. The next external work is the ordinary authorized operator flow: confirm the normal product Wizard and messages subscription, then actual Meta Embedded Signup/selected official number and applicable registration/subscription/receipt, actual QR/device/current ownPhone, first real IN in the correct BU/inbox, OUT received by the interlocutor and permitted recovery for EACH modality. Use owned test resources and redacted build/channel/time outcomes; do not substitute health/configuration/header/double/499-test evidence or bypass onboarding, module, billing or provider ownership rules. VAL-05, TQA-CP21-01 and CUTOVER-EXT-01 remain mandatory overall blockers without waiver. Required-delivery guard must remain NO-GO while that row is blocked; neither this review nor execution-authority/completion GO permits Local-Implemented, Completed or Production-Ready now.\n\nCarry TQA-CP21-02 with its executor/reviewer owner and authentic fail-first evidence on future defects, and BLG-leadshug-runtime-dependency-security with its security/technical steward and before-untrusted-authenticated-users gate. Keep temporary exposure within the recorded private OWNER/synthetic cohort, exact production/HTTPS/session setup and one owned gateway; runtime owner must reassess readiness if the temporary address/topology/cohort changes and stop exposure after its authorized test. No source push, Railway deployment, app publication, callback takeover, provider adoption/removal of another system, billing/module bypass or future history/proactive-conversation work is authorized by this advisory. Only genuinely changed loci or new concrete failures justify renewed affected validation/review."
+  ],
+  "exact_next_step": "Record reviewer resolutions in the governing TODO using the machine-checkable resolution table or equivalent gate ledger, then extract the derived resolution packet and decide whether another bounded review pass is still required.",
+  "findings": []
+}

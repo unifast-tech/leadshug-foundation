@@ -1,0 +1,72 @@
+{
+  "attestations": {
+    "browser": {
+      "bytes": 14494,
+      "capturedAtUtc": "2026-10-16T16:06:54.840Z",
+      "database": {
+        "completedMigrations": 22,
+        "endpoint": "postgresql://validation-postgres:5432/leadshug_timeline_channels_ci",
+        "name": "leadshug_timeline_channels_ci"
+      },
+      "distBundleSha256": "d14343604557296f2ed62c1df47d9c80d81c323abafd89ccbb64a6a0746ff4bd",
+      "endpoints": {
+        "apiHealth": 200,
+        "fixtureHealth": 200,
+        "preview": 200,
+        "servedBundle": "/assets/index-txvhtd65.js"
+      },
+      "path": "cp27-browser-attestation.json",
+      "servedBundleSha256": "d14343604557296f2ed62c1df47d9c80d81c323abafd89ccbb64a6a0746ff4bd",
+      "sha256": "084b33191a3bcf83fd88a619d8c1ab0633dd31cc3b4d65eee31472a43bbf8e45"
+    },
+    "freshness": {
+      "bytes": 12890,
+      "capturedAtUtc": "2026-10-16T16:06:57.815Z",
+      "node": "v22.23.3",
+      "path": "cp27-pre-worker-freshness.json",
+      "proof": "timeline-freshness completed before Playwright workers; it verifies disposable DB family, API/fixture/preview health, and served JavaScript hash against dist.",
+      "sha256": "5703633f5e2c537b3f9753702080440e1b6d15420581a234752f34d926e0bafb"
+    }
+  },
+  "checkpoint": "cp27",
+  "command": "bash scripts/test-channels-local.sh all",
+  "exitCode": 0,
+  "limits": [
+    "Disposable validation PostgreSQL and fake provider fixtures; not a production capacity or provider-delivery guarantee.",
+    "No production operator rebuild/recreate, private dotenv access, Meta OAuth, QR pairing, or inbound/outbound real-number operation was performed."
+  ],
+  "rawLog": {
+    "bytes": 96457,
+    "path": "cp27-final-all.log",
+    "sha256": "da8b5f823300db161ecfffa8204a6fb6f98792f551f8528c5398f353950c60d5"
+  },
+  "runtime": {
+    "operatorRebuiltOrRecreated": false,
+    "productionRuntimeChanged": false
+  },
+  "source": {
+    "afterManifest": "cp27-source-manifest-after.json",
+    "afterSha256": "afdd4377af252154e6f5bbd0dea3e6c0e2b76e9b65a3ef618eb44d08c78a4ad0",
+    "beforeManifest": "cp27-source-manifest-before.json",
+    "beforeSha256": "a230556c37ff2f5a5e13ee13a0518aa1d4e56c4bf29a38fab201c6cb1c8f6351",
+    "dirtyPublicPathCount": 77,
+    "privateOrOperationalPathsReadOrHashed": 0,
+    "publicInputs": 230,
+    "sourceHeads": {
+      ".": "cab23188ec796f79131467dcce0a16acedab8d4f",
+      "api-app": "ae6a9662c29b77276351aa9de653a47276372246",
+      "web-app": "4e56f6c1f4515b918d05b8c87e890d42e8542c56"
+    },
+    "unchangedPublicInputs": true,
+    "uniquePaths": 228
+  },
+  "status": "PASS",
+  "suite": {
+    "apiPostgresE2E": 286,
+    "apiUnit": 138,
+    "browser": 47,
+    "migrations": 22,
+    "total": 499,
+    "webUnit": 28
+  }
+}

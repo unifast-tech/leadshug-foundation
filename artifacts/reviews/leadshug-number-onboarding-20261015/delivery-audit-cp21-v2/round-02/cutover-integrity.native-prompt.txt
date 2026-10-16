@@ -1,0 +1,161 @@
+You are a fresh internal no-context formal cutover_integrity_audit reviewer, gpt-5.6-terra / max, distinct from all implementers. Root workspace /mnt/c/unifast/leadshug/leadshug_now_docker. Read EXACT generated dispatch /mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/delivery-audit-cp21-v2/round-02/dispatch/cutover-integrity.dispatch.md and its JSON /mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/delivery-audit-cp21-v2/round-02/dispatch/cutover-integrity.dispatch.json, then generated round-package.md, delivery-review-package-cp25-delta.md and delivery-input-index-cp25.json in the adjacent evidence directory. The round package carries prior adjudication. Apply the full relevant rubric workload to the affected11source delta, using accepted cp21 full review as baseline, NOT a shortcut five-question answer. See requested lane workload and explicit test/source/evidence restrictions in package. TQA must examine all changed and nearby tests, REGSEC01/10/11, real pre-product RED versus harness failures, fixture isolation, real BFF journeys, parity/freshness/DI/bypass/debt and allD1..10 positions. Cutover must assess canonical credential/ownership callers, nofallback/dualpath/legacyadoption, respecting approved migrated officialslot and nullablelegacyrecords. Known real-provider VAL05 is required overall and unwaived, but OUTSIDE strict local correction audit; don't repeatwholeaudit merelytorediscoverit. Sourcefrozen/executorsSTOP. No build/test/provider/device/network probes, subagents, GOAL, source/doc edits, arbitrarycontainerlogs, privateenv/cookies/codes/PIN/QR, .local-files or theirGitblobs, or otherprojects. Readonly named public source/evidence/schema/rubrics. Static source scans allowed onlynamedpublicpaths. Return ONLY one JSON object matching exact closed schema below, review_kind cutover_integrity_audit, dispatch_path /mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/delivery-audit-cp21-v2/round-02/dispatch/cutover-integrity.dispatch.json, actual reviewer_label native-gpt-5.6-terra-max-cp25-cutover-integrity. Full substantive workload/decision/regression/testefficacy/efficiency/failfirst/debt positions in overall_assessment/recommended_path strings; actionable materialfindingcards severity/sourceanchor/why-now/options/recommendation/blockingvsdebt. No extras, no Markdown. No deadline; finish requiredreview.
+SCHEMA:
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://paced.internal/schemas/subagent_review_result.schema.json",
+  "title": "PACED Subagent Review Result",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "artifact_kind",
+    "dispatch_path",
+    "review_kind",
+    "reviewer_label",
+    "overall_assessment",
+    "recommended_path",
+    "performance_position",
+    "elegance_position",
+    "structural_soundness_position",
+    "operational_fit_position",
+    "findings"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "subagent-review-result-v1"
+    },
+    "artifact_kind": {
+      "const": "subagent_review_result"
+    },
+    "dispatch_path": {
+      "type": "string",
+      "minLength": 1
+    },
+    "review_kind": {
+      "enum": [
+        "architecture_opinion",
+        "architecture_adherence",
+        "critique",
+        "test_quality_audit",
+        "final_review",
+        "cutover_integrity_audit"
+      ]
+    },
+    "reviewer_label": {
+      "type": "string",
+      "minLength": 1
+    },
+    "overall_assessment": {
+      "type": "string",
+      "minLength": 1
+    },
+    "recommended_path": {
+      "type": "string",
+      "minLength": 1
+    },
+    "performance_position": {
+      "$ref": "#/$defs/position"
+    },
+    "elegance_position": {
+      "$ref": "#/$defs/position"
+    },
+    "structural_soundness_position": {
+      "$ref": "#/$defs/position"
+    },
+    "operational_fit_position": {
+      "$ref": "#/$defs/position"
+    },
+    "findings": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/finding"
+      }
+    }
+  },
+  "additionalProperties": false,
+  "$defs": {
+    "position": {
+      "enum": [
+        "strong_positive",
+        "acceptable",
+        "mixed",
+        "regresses",
+        "unknown",
+        "not_evaluated"
+      ]
+    },
+    "finding": {
+      "type": "object",
+      "required": [
+        "severity",
+        "title",
+        "rationale",
+        "suggested_action"
+      ],
+      "properties": {
+        "finding_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "severity": {
+          "enum": [
+            "low",
+            "medium",
+            "high"
+          ]
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1
+        },
+        "rationale": {
+          "type": "string",
+          "minLength": 1
+        },
+        "category": {
+          "enum": [
+            "architecture",
+            "adherence",
+            "tests",
+            "performance",
+            "security",
+            "elegance",
+            "structural_soundness",
+            "operational_fit",
+            "residual_risk",
+            "other"
+          ]
+        },
+        "formalizable_hint": {
+          "enum": [
+            "yes",
+            "partial",
+            "no",
+            "unknown"
+          ]
+        },
+        "candidate_rule_level": {
+          "enum": [
+            "paced",
+            "project",
+            "none",
+            "unknown"
+          ]
+        },
+        "candidate_rule_id": {
+          "type": "string"
+        },
+        "affected_paths": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "suggested_action": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}

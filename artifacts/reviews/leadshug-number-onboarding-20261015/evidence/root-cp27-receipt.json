@@ -1,0 +1,77 @@
+{
+  "checkpoint": "root-cp27-receipt",
+  "capturedUtc": "2026-10-16T16:09:48.722838+00:00",
+  "disposition": "primary-validation-accepted; independent supplemental TQA pending",
+  "sourceEntries": 230,
+  "uniquePublicPaths": 228,
+  "unchangedPrePost": true,
+  "sourceHeads": {
+    ".": "cab23188ec796f79131467dcce0a16acedab8d4f",
+    "api-app": "ae6a9662c29b77276351aa9de653a47276372246",
+    "web-app": "4e56f6c1f4515b918d05b8c87e890d42e8542c56"
+  },
+  "manifestCurrentHashChecks": 230,
+  "preworkerSourceHashChecks": 66,
+  "artifacts": [
+    {
+      "path": "cp27-final-all.log",
+      "sha256": "da8b5f823300db161ecfffa8204a6fb6f98792f551f8528c5398f353950c60d5"
+    },
+    {
+      "path": "cp27-source-manifest-before.json",
+      "sha256": "a230556c37ff2f5a5e13ee13a0518aa1d4e56c4bf29a38fab201c6cb1c8f6351"
+    },
+    {
+      "path": "cp27-source-manifest-after.json",
+      "sha256": "afdd4377af252154e6f5bbd0dea3e6c0e2b76e9b65a3ef618eb44d08c78a4ad0"
+    },
+    {
+      "path": "cp27-browser-attestation.json",
+      "sha256": "084b33191a3bcf83fd88a619d8c1ab0633dd31cc3b4d65eee31472a43bbf8e45"
+    },
+    {
+      "path": "cp27-pre-worker-freshness.json",
+      "sha256": "5703633f5e2c537b3f9753702080440e1b6d15420581a234752f34d926e0bafb"
+    },
+    {
+      "path": "cp27-handoff.json",
+      "sha256": "14031bdf6c909db695e3df116d009d647b74e600504cd72c4e1742a94460ce57"
+    },
+    {
+      "path": "cp27-handoff.md",
+      "sha256": "c8d5db5ac640a51be93dc8e8e7f17a319f226db8b82535e2d8db9fa1e4619191"
+    }
+  ],
+  "cp25Delta": [
+    {
+      "path": "api-app/test/number-onboarding-flow.e2e-spec.ts",
+      "before": "40128cbe31499fa490430632367967d3b4a8851a7f53321ebf160dc69c533ff5",
+      "after": "c1b8b03351179721a641d7139d46d7e93b45ae335ac5788cf5436fc35b69e280"
+    },
+    {
+      "path": "web-app/e2e/number-onboarding.spec.ts",
+      "before": "4076adf4405bc61818d985e1550fe49d7662862884843e5846b3e16be54acea3",
+      "after": "47fdb27c0b592dfe8df31b8ad1be219d96720abdc00660bc15f6b2c03096f31b"
+    }
+  ],
+  "suite": {
+    "apiPostgresE2E": 286,
+    "apiUnit": 138,
+    "browser": 47,
+    "migrations": 22,
+    "total": 499,
+    "webUnit": 28
+  },
+  "actualPreworkerTimestamps": {
+    "browser": "2026-10-16T16:06:54.840Z",
+    "freshness": "2026-10-16T16:06:57.815Z"
+  },
+  "servedEqualsBuiltJs": "d14343604557296f2ed62c1df47d9c80d81c323abafd89ccbb64a6a0746ff4bd",
+  "limits": [
+    "No operator rebuild/runtime change; current operator JS hash unchanged from cp24/cp25 evidence.",
+    "Actual globalSetup files retained after run; not new retroactive preworker probes.",
+    "Real provider/device/OAuth/IN/OUT recovery absent and required; overall Pending.",
+    "PCV cp24 envelopes retain actual cp25 independent acceptance on unchanged measured paths; no new judgment imputed."
+  ],
+  "privateOperationalPathsReadOrHashed": 0
+}

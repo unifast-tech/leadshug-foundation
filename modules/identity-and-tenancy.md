@@ -17,7 +17,7 @@ are introduced.
 
 ## Autorização do cadastro de números ST-CON-01
 
-APROVADO em2026-10-15; implementação/verificação pendentes no [TODO](../todos/active/features/TODO-leadshug-channel-connection-readiness.md). Jornada e endpoints pertencem ao [owner de canais](integrations-and-channels.md#cadastro-de-números-st-con-01).
+APROVADO em2026-10-15; implementação exercitada localmente em2026-10-16 ([all499/22migrações e fonte/freshness](../artifacts/reviews/leadshug-number-onboarding-20261015/evidence/root-cp27-receipt.json)); architecture/security, Performance/cutover e TQA independentes aceitos no escopo local. Final review local aceito; source commits/bridge byteexact registrados, closeout geral e prova externa permanecem pendentes no TODO no [TODO](../todos/active/features/TODO-leadshug-channel-connection-readiness.md). Jornada e endpoints pertencem ao [owner de canais](integrations-and-channels.md#cadastro-de-números-st-con-01).
 
 - Endpoints /api/bff/number-registrations e pairing/verificação de canal passam pelo middleware de sessão e anti-CSRF existente; pairing é POST, GET antigo não tem efeito externo.
 - Conectar/reautorizar BU existente exige ADMIN na BU da Mantenedora verificada; criar BU exige ADMIN na Mantenedora e reutiliza transação/expansão de grants de TenancyService. ATENDENTE não ganha gestão por UI.

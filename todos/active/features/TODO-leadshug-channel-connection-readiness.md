@@ -41,7 +41,7 @@ Proposta ST-CON-01: jornada de cadastro de número, com infraestrutura local est
 
 - **Current delivery stage:** Pending
 - **Qualifiers:** none
-- **Next exact step:** Revisão delta independente das correções cp22/cp23/cp25 sobre pacote congelado; all cp24 passou498testes/22migrações, e correção posterior só do inicializador passou matriz config/runtime HTTPS exata. Após reviews afetados, final review separado; messages, wizard normal e VAL-05 continuam pendentes.
+- **Next exact step:** All cp27 passou499/499 e22migrações; suplemento TQA aceitou TQA-CP25-01/02. Concluir wizard normal e confirmar inscrição messages; então validar Meta/QR, número próprio, IN/OUT e recuperação em cada canal. All499/reviews finais/commits locais concluídos com bridge de74paths públicos; nenhuma conexão real certificada.
 
 ## Active Work State (Required While TODO Remains In `active/`)
 
@@ -308,56 +308,57 @@ Cadastro/QR/autorização/recebimento pertencem a este objetivo. Nova conversa p
 ## Definition of Done
 
 - [ ] DOD-01: cadastro oficial e QR operáveis por administrador da BU, com número/identidade confirmados e cancelamento/falhas sem falso sucesso.
-- [ ] DOD-02: tentativas de cadastro, credenciais cifradas e número externo scoped; replay/duplo clique/troca de BU/remover-recriar não duplicam ou cruzam vínculo.
-- [ ] DOD-03: credencial por canal é usada por todos os consumidores Meta existentes; sem token de cliente global, logs/DTOs/artefatos sem segredo.
-- [ ] DOD-04: runtime local isolado e migrations aplicáveis, orçamento externo bounded, erro/retry/frescor explícitos e webhook autenticado.
+- [x] DOD-02: tentativas de cadastro, credenciais cifradas e número externo scoped; replay/duplo clique/troca de BU/remover-recriar não duplicam ou cruzam vínculo.
+- [x] DOD-03: credencial por canal é usada por todos os consumidores Meta existentes; sem token de cliente global, logs/DTOs/artefatos sem segredo.
+- [x] DOD-04: runtime local isolado e migrations aplicáveis, orçamento externo bounded, erro/retry/frescor explícitos e webhook autenticado.
 - [ ] DOD-05: primeira IN real de cada canal cria/reutiliza conversa BU/contato e aparece na inbox; resposta OUT dentro do contrato existente chega ao interlocutor.
-- [ ] DOD-06: CI-equivalent API/Web/workspace, fluxo Playwright com build atual, segurança/PCV e revisões independentes aceitas.
-- [ ] DOD-08: NUM-ARCH-01..06 e NUM-CRIT-01/02 cobertos por harness de tenant, replay, identidade, reautorização e POST de pairing; nenhum segredo de envelope webhook persiste.
+- [x] DOD-06: CI-equivalent API/Web/workspace, fluxo Playwright com build atual, segurança/PCV e revisões independentes aceitas.
+- [x] DOD-08: NUM-ARCH-01..06 e NUM-CRIT-01/02 cobertos por harness de tenant, replay, identidade, reautorização e POST de pairing; nenhum segredo de envelope webhook persiste.
 - [ ] DOD-07: decisões consolidadas no módulo owner, evidence matrix completa, source commits e guardas go antes do closeout local.
 
 ## Validation Steps
 
-- [ ] VAL-01: unidade/adapter para cifra e AAD, payload Meta/Evolution, erro/timeout, seleção entre múltiplos números e contrato de registro.
-- [ ] VAL-02: PostgreSQL E2E para sessão/grant/tenant, tentativa expirada/cancelada/replay, disputa create/delete/recreate/verificação/evento e persistência de falha parcial.
-- [ ] VAL-03: Playwright do cadastro/QR, popup cancelado/erro/timeout, mudança BU e resposta velha; backend/sessão/DB reais, servidor de provider de teste apenas como porta externa.
-- [ ] VAL-04: migrate deploy e CI-equivalent API/Web/workspace da fonte final; fingerprints do bundle antes dos workers, banco exclusivo e execução sem sobreposição de suites destrutivas.
+- [x] VAL-01: unidade/adapter para cifra e AAD, payload Meta/Evolution, erro/timeout, seleção entre múltiplos números e contrato de registro.
+- [x] VAL-02: PostgreSQL E2E para sessão/grant/tenant, tentativa expirada/cancelada/replay, disputa create/delete/recreate/verificação/evento e persistência de falha parcial.
+- [x] VAL-03: Playwright do cadastro/QR, popup cancelado/erro/timeout, mudança BU e resposta velha; backend/sessão/DB reais, servidor de provider de teste apenas como porta externa.
+- [x] VAL-04: migrate deploy e CI-equivalent API/Web/workspace da fonte final; fingerprints do bundle antes dos workers, banco exclusivo e execução sem sobreposição de suites destrutivas.
 - [ ] VAL-05: prova externa local por canal, com autorização Meta/QR real, IN na BU certa, OUT recebida pelo interlocutor e recuperação permitida da conexão.
-- [ ] VAL-06: EPS/FRC/BCI/RLS conforme plano; security, debt, architecture_adherence, TQA, audit especializado e final review antes de completar.
-- [ ] VAL-08: executar REG-SEC-01..13 do plano de validação, incluindo replay por provider, renovação de canal já verificado, echo-first/sender-first com autoria, tombstone, candidata, CSRF e logs/partição raw.
+- [x] VAL-06: EPS/FRC/BCI/RLS conforme plano; security, debt, architecture_adherence, TQA, audit especializado e final review antes de completar.
+- [x] VAL-08: executar REG-SEC-01..13 do plano de validação, incluindo replay por provider, renovação de canal já verificado, echo-first/sender-first com autoria, tombstone, candidata, CSRF e logs/partição raw.
 - [ ] VAL-07: consolidar módulo, validar contrato/diff/coerência e closeout; nenhum claim de produção pronta.
 
 ## Completion Evidence Matrix (Required Before Delivery Claim)
 
-Todas as linhas abaixo estão planned. Tipo e runtime não são prova antecipada.
+Disposição local por critério, baseada em cp27 e reviews independentes. `passed` se limita à evidência descrita; requisitos externos e closeout continuam pendentes. Raw/manifestos/freshness têm hashes no recibo root-cp27; nenhuma linha dispensa VAL-05.
 
 | Criterion ID | Source Section | Criterion | Evidence Type | Evidence Artifact / Command | Runtime Target | Status | Notes |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| SCOPE-01 | Scope | Jornada Adicionar número/BU | browser+db | canais Playwright; canais E2E | local real-backend | planned | Nenhuma execução reivindicada. |
-| SCOPE-02 | Scope | Embedded Signup e vínculo | contract+browser+provider | number-onboarding E2E/Playwright; VAL-05 | local + Meta teste | planned | Nenhuma execução reivindicada. |
-| SCOPE-03 | Scope | Credencial cifrada scoped e consumers | unit+integration | crypto tests; atendimento/public/Typebot E2E | Node22/PG16 | planned | Nenhuma execução reivindicada. |
-| SCOPE-04 | Scope | QR/instância/webhook | browser+provider | canais Playwright; VAL-05 | Evolution própria | planned | Nenhuma execução reivindicada. |
-| SCOPE-05 | Scope | Estado honesto e geração | race | FRC/BCI barriers e negative control | local | planned | Nenhuma execução reivindicada. |
-| SCOPE-06 | Scope | Primeira IN na conversa | provider+browser | VAL-05 e readback | local + dois providers | planned | Nenhuma execução reivindicada. |
-| SCOPE-07 | Scope | Matriz/segurança | test+review | CI-equivalent e security audit | local isolado | planned | Nenhuma execução reivindicada. |
-| SCOPE-08 | Scope | Runtime próprio | runtime | compose config; migrate; health; runbook | local | planned | Nenhuma execução reivindicada. |
-| DOD-01 | Definition of Done | Cadastro oficial e QR usáveis | browser+provider | VAL-03/05 | local | planned | Nenhuma execução reivindicada. |
-| DOD-02 | Definition of Done | Replay/tenant/races | integration+race | VAL-02 + BCI/FRC | PG16/browser | planned | Nenhuma execução reivindicada. |
-| DOD-03 | Definition of Done | Credencial e consumidores | test+audit | VAL-01/02/06 + cutover | local | planned | Nenhuma execução reivindicada. |
-| DOD-04 | Definition of Done | Runtime/migration/erro | runtime+test | VAL-01/04 | local | planned | Nenhuma execução reivindicada. |
-| DOD-05 | Definition of Done | IN/OUT reais por canal | provider+browser | VAL-05 | números teste | planned | Nenhuma execução reivindicada. |
-| DOD-06 | Definition of Done | CI-equivalent e review | test+review | VAL-04/06 | local/review | planned | Nenhuma execução reivindicada. |
-| DOD-07 | Definition of Done | Canon/source/guardas | doc+guard | VAL-07 | Foundation | planned | Nenhuma execução reivindicada. |
-| VAL-01 | Validation Steps | Unidade/adapter/cifra | unit | npm test | Node22 | planned | Nenhuma execução reivindicada. |
-| VAL-02 | Validation Steps | PostgreSQL/auth/races | integration | npm run test:e2e | PG16 exclusivo | planned | Nenhuma execução reivindicada. |
-| VAL-03 | Validation Steps | Browser com backend real | browser | npm run test:tela | bundle atual/local | planned | Nenhuma execução reivindicada. |
-| VAL-04 | Validation Steps | Migration/CI/freshness | runtime+suite | runner scripts/test-channels-local.sh | local principal | planned | Nenhuma execução reivindicada. |
-| VAL-05 | Validation Steps | Prova externa local | provider | checklist por canal e readback | Meta/Evolution teste | planned | Nenhuma execução reivindicada. |
-| VAL-06 | Validation Steps | PCV/reviews | review+runtime | artefatos EPS/FRC/BCI/RLS + reviewers | local/no-context | planned | Nenhuma execução reivindicada. |
-| VAL-07 | Validation Steps | Consolidação/diff/closeout | doc+guard | guardas específicos | Foundation | planned | Nenhuma execução reivindicada. |
-| SCOPE-09 | Scope | Reautorização, identidade, dedupe e tenant | integration+race | REG-SEC-01..13; VAL-08 | PG16 isolado | planned | Resolução contratual dos achados; produto não implementado. |
-| DOD-08 | Definition of Done | Harness de arquitetura/crítica e segredo raw | test+audit | VAL-08 + security/TQA | local | planned | Nenhuma execução reivindicada. |
-| VAL-08 | Validation Steps | Regressões de identidade/tenant/credential | integration+race | REG-SEC-01..13 | Node22/PG16 | planned | Sem provas antecipadas. |
+| SCOPE-01 | Scope | Jornada Adicionar número/BU | browser+db | canais E2E; number-onboarding.spec.ts; cp27-final-all.log + root-cp27-receipt.json | local real-backend | passed | NovaBU/seleção existente, grant herdado e contagem persistida em BFF/PG/browser reais. |
+| SCOPE-02 | Scope | Embedded Signup e vínculo | contract+browser+provider | number-onboarding-flow E2E; number-onboarding.spec.ts; cp27 all; VAL-05 | local + Meta teste | blocked | Contrato/local SDK-provider doubles passam; autorização/número Meta reais ausentes. |
+| SCOPE-03 | Scope | Credencial cifrada scoped e consumers | unit+integration | crypto/resolver unit; caller-scoping/public/atendimento/Typebot E2E; cp27 all; cp25 cutover/security | Node22/PG16 | passed | AAD/tamper/candidata/ativa e credencial própria por caller; sem fallback global. |
+| SCOPE-04 | Scope | QR/instância/webhook | browser+provider | flow/canais E2E e browser QR; cp21-provider-header-probe.json; cp27 all; VAL-05 | Evolution própria | blocked | Instância/header/QR local controlado; aparelho e ownPhone reais ausentes. |
+| SCOPE-05 | Scope | Estado honesto e geração | race | flow/BCI/FRC PG/browser; cp24-pcv-bci/frc.json; cp27 all | local | passed | Geração/epoch/lease/currentAttemptId e receipt separados, sem falso sucesso. |
+| SCOPE-06 | Scope | Primeira IN na conversa | provider+browser | webhooks/acceptance E2E; inbox browser; VAL-05 | local + dois providers | blocked | IN controlada cria conversa única; primeira IN real por canal não executada. |
+| SCOPE-07 | Scope | Matriz/segurança | test+review | cp27 all; cp25 architecture/security; TQA suplemento e final review; cp27-final-review.result.raw.json | local isolado | passed | Revisões independentes locais aceitas, sem bloqueador local aberto; VAL-05 obrigatório separado, dependências/processo explicitamente limitados. |
+| SCOPE-08 | Scope | Runtime próprio | runtime | cp24-integrated-runtime-all-handoff.json; cp25-config-precedence-proof.json; cp25-https-runtime-proof.json; cp27 migrations | local | passed | Operador isolado/22migrações, HTTPS/produção/CORS/cookie exatos; nenhuma conexão real inferida. |
+| DOD-01 | Definition of Done | Cadastro oficial e QR usáveis | browser+provider | VAL-03/05; cp27 browser47 | local | blocked | Jornadas locais operáveis; prova de administrador com Meta/aparelho reais obrigatória. |
+| DOD-02 | Definition of Done | Replay/tenant/races | integration+race | flow/BCI PG; browser tenant/replay/FRC; cp27 all; cp24-pcv-bci/frc.json | PG16/browser | passed | Mesma tentativa/chave, slot/owner imutável e races com controles negativos. |
+| DOD-03 | Definition of Done | Credencial e consumidores | test+audit | crypto/redaction unit; caller-scoping/public/Typebot/atendimento/raw E2E; cp25 cutover/security; cp21 log proof | local | passed | Todos callers scoped; logs/build/DTO secret-free dentro do harness/coorte declarados. |
+| DOD-04 | Definition of Done | Runtime/migration/erro | runtime+test | cp27 migrate/lint/build/all; cp25 config/HTTPS proof; REG-SEC-12/header probe | local | passed | 22migrações, budgets/leases, erros seguros e runtime próprio; readiness contínua não inferida. |
+| DOD-05 | Definition of Done | IN/OUT reais por canal | provider+browser | VAL-05 checklist do plano de validação | números teste | blocked | Sem autorização Meta, QR/ownPhone, IN/OUT/interlocutor ou recuperação reais. |
+| DOD-06 | Definition of Done | CI-equivalent e review | test+review | cp27 all + attestations; PCV4/cp25 reviews; TQA suplemento/final review; cp27-final-review.result.raw.json | local/review | passed | Revisões independentes locais aceitas, sem bloqueador local aberto; VAL-05 obrigatório separado, dependências/processo explicitamente limitados. |
+| DOD-07 | Definition of Done | Canon/source/guardas | doc+guard | quatro módulos owner; cp27-committed-source-attestation.json; guardas finais | Foundation | pending | 74paths públicos byteexact commitados localmente; execução/diff permitidos, entrega geral ainda no-go por VAL-05; closeout geral pendente. |
+| VAL-01 | Validation Steps | Unidade/adapter/cifra | unit | scripts/test-channels-local.sh all; cp27-final-all.log API138/Web28 | Node22 | passed | Cifra/adapters/config/timeout/resource selection e erro seguro; Node22/OpenSSL3. |
+| VAL-02 | Validation Steps | PostgreSQL/auth/races | integration | cp27-final-all.log PG286; flow/BCI/webhooks/atendimento/public/Typebot E2E | PG16 exclusivo | passed | PG16descartável,22migrações, sessão/grant/tenant/replay/estado parcial/concorrência. |
+| VAL-03 | Validation Steps | Browser com backend real | browser | cp27-final-all.log browser47; cp27-pre-worker-freshness.json; cp27-browser-attestation.json | bundle atual/local | passed | BFF/sessão/PG reais, API3100/fixture3101/preview4173; SDK/provider externos dobrados. |
+| VAL-04 | Validation Steps | Migration/CI/freshness | runtime+suite | cp27-source-manifest-before/after.json; cp27 all; root-cp27-receipt.json | local principal | passed | 230refs/228unique idênticos; fingerprints genuínos antes workers e JSdist=servido; namespaces separados. |
+| VAL-05 | Validation Steps | Prova externa local | provider | validation-plans/leadshug-channel-readiness-20261015.md; cp22-meta-panel-setup.json | Meta/Evolution teste | blocked | URLs/webhook confirmados pelo usuário; messages/Wizard e conexão/IN/OUT reais pendentes, sem waiver. |
+| VAL-06 | Validation Steps | PCV/reviews | review+runtime | cp24-pcv-{eps,frc,bci,rls}.json; cp25 architecture/security/performance/cutover; TQA/final; cp27-final-review.result.raw.json | local/no-context | passed | Revisões independentes locais aceitas, sem bloqueador local aberto; VAL-05 obrigatório separado, dependências/processo explicitamente limitados. |
+| VAL-07 | Validation Steps | Consolidação/diff/closeout | doc+guard | quatro módulos owner; cp27-committed-source-attestation.json; guardas finais | Foundation | pending | 74paths públicos byteexact commitados localmente; execução/diff permitidos, entrega geral ainda no-go por VAL-05; closeout geral pendente. |
+| SCOPE-09 | Scope | Reautorização, identidade, dedupe e tenant | integration+race | REG-SEC-01..13; cp27 all; flow/Typebot/acceptance/atendimento e BCI | PG16 isolado | passed | REG-SEC-01..13 local aceito; BFF/public/Typebot e acceptance compartilhada preservados, suplemento TQA sem novos achados. |
+| DOD-08 | Definition of Done | Harness de arquitetura/crítica e segredo raw | test+audit | REG-SEC table; cp25 security; cp27 all; TQA suplemento | local | passed | REG-SEC-01..13 aceitos local cp25; duas negativas cp26 passaram cp27 e TQA suplemento fresh aceitou ambas; VAL-05 permanece obrigatória. |
+| VAL-08 | Validation Steps | Regressões de identidade/tenant/credential | integration+race | REG-SEC-01..13 table; cp27 all; cp25 security e TQA suplemento | Node22/PG16 | passed | REG-SEC-01..13 aceitos local cp25; duas negativas cp26 passaram cp27 e TQA suplemento fresh aceitou ambas; VAL-05 permanece obrigatória. |
+
 
 ## External Dependency Readiness (Required When External Systems Matter)
 
@@ -372,7 +373,7 @@ Register: `foundation_documentation/artifacts/dependency-readiness.md`.
 
 ## Profile Scope & Handoffs (Required Before `APROVADO`)
 
-- **Current profile:** assurance-tester-quality e assurance-security-adversarial nas revisões afetadas; API/Web/DevOps terminais STOP. Fonte congelada e root governa evidência/adjudicação, sem writer de produto ativo.
+- **Current profile:** operational-devops em handoff para validação externa pelo operador; todos executores/revisores locais STOP. Root consolidou aceites, commits/bridge públicos e guardas. Escopo Docker/NestJS/React/Vite/PostgreSQL/Prisma; nenhuma ação Meta/aparelho/provedor inferida. Aguardar informações de messages/wizard para trabalho dependente.
 - **Primary execution profile:** operational-coder; handoff operational-devops antes de runtime/ingress.
 - **Active technical scope:** nestjs, react, postgresql, prisma, docker
 - **Expected supporting profiles:** operational-devops para target/callback; assurance-tester-quality e assurance-security-adversarial para gates aplicáveis.
@@ -479,8 +480,8 @@ Baseline aprovada D-01..D-10 pelo APROVADO de2026-10-15 (contrato3302964c): NUM-
 - **Adherence review lifecycle:** after implementation and before Completed
 - **Adherence review kind:** architecture_adherence
 - **Adherence review package:** bounded-file-set
-- **Adherence review status:** not_run
-- **Adherence review evidence / resolution:** planned; entrega futura
+- **Adherence review status:** findings_integrated
+- **Adherence review evidence / resolution:** evidence/cp25-architecture-security.result.raw.json fresh gpt-6.1-sol/max, resolução local de D-01..10/REG-SEC-01..13; dois testes cp26 únicos diferentes no cp27 foram aceitos por suplemento TQA independente. Prova externa não dispensada.
 - **No-go handling:** achado material retorna ao desenho/execução; nenhum gate é dispensado.
 
 ## Gate: Review Baseline Freeze
@@ -577,13 +578,15 @@ A lista do Diff Expectation Contract é a autoridade de paths. Alterar callers M
 
 ### Local CI-Equivalent Suite Matrix
 
+Comandos abaixo registram os wrappers efetivamente usados nesta topologia, com suas folhas de teste/build. O requisito externo continua bloqueante para entrega geral; `--require-delivery-gates` deve continuar no-go enquanto VAL-05 não passar.
+
 | Repository / CI Surface | Why In Scope | Behavior / Scenario Covered | Fixture / Seed / Runtime Preconditions | Local CI-Equivalent Command | Required Before | Status | Evidence Artifact / Command | Notes |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| API light | Domínio/adapters/boot | Build, cifra, erros e config | Node22/container, deps lockfile | npm run prisma:generate; npm run lint; npm run build; npm test | Local-Implemented | planned | raw stdout das quatro folhas | runner source-owned resolve contexto sem host Node divergente |
-| API E2E | Schema/auth/consumer | Negativas/replay/receipt e regressões público/Typebot | PG16 exclusivo e migrate deploy | npm run test:e2e | Local-Implemented | planned | raw stdout e manifest | serial, sem overlap com browser |
-| Web | Wizard/helper/DTO | Cadastro/cancelamento/QR/races | backend real, fonte e bundle servidos iguais | npm test; npm run test:tela | Local-Implemented | planned | stdout e pre-worker attestation | fixture não substitui BFF/sessão/DB |
-| Workspace Compose | Runtime/wiring | Config coerente, isolamento, serviços e startup | .env privado, dados novos do pacote | docker compose -f docker-compose.yml -f docker-compose.channels.yml config --quiet; make test-api; make test-web | Local-Implemented | planned | resultado sem valores de env | não imprimir config renderizado com segredos; manter superfícies broad da CI |
-| Prova externa | Cadastro real | SDK/QR+IN+OUT em cada canal | app Meta elegível, HTTPS e números de teste | runbook local e checklist VAL-05 | Local-Implemented | planned | evidência redigida por canal/build | não é CI externo ou prova de SLO |
+| API light | Domínio/adapters/boot | Build, cifra, erros e config | Node22/OpenSSL3/container, lockfile e máscaras públicos | bash scripts/test-channels-local.sh all: prisma generate/lint/build/vitest | Local-Implemented | passed | cp27-final-all.log; cp27-handoff.json | 138unit/19files, produção não foi recriada; source-owned runner. |
+| API E2E | Schema/auth/consumer | Negativas/replay/receipt, público/Typebot e races | PG16 exclusivo com22migrações | bash scripts/test-channels-local.sh all: test:e2e | Local-Implemented | passed | cp27-final-all.log PG286/26files; root-cp27-receipt.json | Execução serial antes do browser; fixture real de grants/tenant. |
+| Web | Wizard/helper/DTO | Cadastro/cancelar/QR/races e casos antigos | BFF/sessão/PG reais e SDK/provider doubles | bash scripts/test-channels-local.sh all: build/test/test:tela | Local-Implemented | passed | cp27-final-all.log unit28/browser47; cp27-pre-worker-freshness.json; cp27-browser-attestation.json | Build atual e JSservido=dist antes workers; API3100/fixture3101/preview4173. |
+| Workspace Compose | Runtime/wiring | Config/startup/isolation, origem/port e suíte consolidada | Projetos operador/validation próprios, dotenv privado preservado | scripts/start-channels-local.sh config/up; scripts/test-channels-local.sh all | Local-Implemented | passed | cp24-integrated-runtime-all-handoff.json; cp25-config-precedence-proof.json; cp25-https-runtime-proof.json; cp27 all | Wrapper atual incluído no manifesto cp27; config-only+APIrecreate cp25 prova precedência efetiva; sem valores privados. |
+| Prova externa | Cadastro real | SDK/QR+IN+OUT/recuperação em cada canal | App Meta elegível, HTTPS e números/interlocutor de teste | runbook local e checklist VAL-05 | Local-Implemented | blocked | validation-plans/leadshug-channel-readiness-20261015.md; cp22-meta-panel-setup.json | Usuário validou callback; messages/Wizard e OAuth/device/IN/OUT ainda ausentes, não dispensados. |
 
 ### Runtime / Rollout Notes
 
@@ -757,13 +760,13 @@ Conferência de implementação/prova local; não certifica OAuth, aparelho ou I
 | --- | --- | --- | --- |
 | D-01 | Adherent | number-registration.service.ts; number-onboarding-flow.e2e-spec.ts; cp23-web-handoff.md, duas recuperações preservam BU/canal e contagens | Sem número real cadastrado. |
 | D-02 | Adherent | meta.client.ts; CadastroNumero.tsx; capabilities/options/confirm em number-onboarding.spec.ts; cp22-meta-panel-setup.json | SDK/provider doubles nos testes; OAuth real pendente. |
-| D-03 | Adherent | tentativa/candidata/CAS em number-registration.service.ts; cp22-rerun3-result.json; RED/GREEN cp23 para NOVO expirado/ambíguo | Revisão delta da correção aguardada. |
+| D-03 | Adherent | tentativa/candidata/CAS em number-registration.service.ts; cp22-rerun3-result.json; RED/GREEN cp23 para NOVO expirado/ambíguo | Cp25 architecture/security e cp27 TQA suplemento aceitam; prova externa permanece separada. |
 | D-04 | Adherent | channel-credential-crypto.ts/spec; channel-credential-resolver.ts; cp21 cutover/security; REG-SEC-06/07/12/13 | Dívida de dependências limitada ao operador privado, sem waiver externo. |
 | D-05 | Adherent | number-registration.service.ts; testes de assinatura ambígua em number-onboarding.spec.ts; callback validado pelo usuário em cp22-meta-panel-setup.json | Register/subscription/receipt reais não certificados. |
 | D-06 | Adherent | channels.service.ts; evolution.client.ts; REG-SEC-03/05/10; cp22-rerun3-result.json; cp21-provider-header-probe.json | Probe sem QR; aparelho e ownPhone reais pendentes. |
 | D-07 | Adherent | ProviderResourceIdentity e índice novo na migration20261016160000; REG-SEC-04/08/09/13; RLS/EPS no PG | Index Scan observado em2.000tombstones, não SLO. |
 | D-08 | Adherent | message-acceptance.service.ts; caller-scoping/Typebot/atendimento/public E2E; REG-SEC-01/02/11 completados em cp22 | IN/OUT externos continuam VAL-05. |
-| D-09 | Adherent | scripts/start-channels-local.sh e test-channels-local.sh; namespaces próprios e provas HTTPS cp22; runtime cp24 | Railway/histórico/Nova conversa proativa não implementados neste recorte. |
+| D-09 | Adherent | scripts/start-channels-local.sh e test-channels-local.sh; namespaces próprios e provas HTTPS cp22; runtime cp24/cp25 e all cp27 | Railway/histórico/Nova conversa proativa não implementados neste recorte. |
 | D-10 | Adherent | baselines e manifestos cp22/cp23; root-cp23-web-receipt.json; handoffs serializados e diff-cp23-pre-runtime go | Gitlinks observados, sem escrita manual; nenhum push de source. |
 
 ## Module Decision Consistency Validation (1-1 Mandatory Before Delivery)
@@ -772,8 +775,8 @@ Conferência de implementação/prova local; não certifica OAuth, aparelho ou I
 | --- | --- | --- | --- | --- |
 | integrations-and-channels#invariants | Preserve | Preserved | adapters Meta/Evolution; safe-redaction.spec.ts; cp21 security/cutover | Limites de provider real explícitos. |
 | project_constitution#system-invariants | Preserve | Preserved | testes grants/caller-scoping/cifra/PG; máscaras/env e migrations do runner | Constituição não alterada. |
-| inbox-and-conversations#contrato-aprovado-da-timeline-da-inbox | Preserve + aceitação compartilhada | Preserved | timeline.spec.ts baseline preservada; message-acceptance e atendimento E2E; cp23 browser46verde | Inbox.tsx não alterado. |
-| integrations-and-channels#cadastro-de-números-st-con-01 | Implement approved contract | Preserved | number-registration.service.ts; CadastroNumero.tsx; API cp22 e Web cp23 | Sem fallback global ou adoção Evolution legada. |
+| inbox-and-conversations#contrato-aprovado-da-timeline-da-inbox | Preserve + aceitação compartilhada | Preserved | timeline.spec.ts baseline preservada; message-acceptance e atendimento E2E; cp27 browser47verde com freshness pré-worker | Inbox.tsx não alterado. |
+| integrations-and-channels#cadastro-de-números-st-con-01 | Implement approved contract | Preserved | number-registration.service.ts; CadastroNumero.tsx; API cp22/Web cp23; cp27 all499 e TQA suplemento | Sem fallback global ou adoção Evolution legada. |
 | identity-and-tenancy#autorização-do-cadastro-de-números-st-con-01 | Preserve | Preserved | sessão/anti-CSRF e acesso; REG-SEC-01/05/06/07; novaBU/grants E2E | Identificadores de SDK não concedem acesso. |
 | audit-and-history#cadastro-e-diagnóstico-de-canais--st-con-01 | Preserve | Preserved | catálogo/cobertura; raw scoped e redigido REG-SEC-12/13; log hygiene cp21/cp22 | Histórico não apagado em cancelamento/repareamento. |
 
@@ -781,14 +784,14 @@ Conferência de implementação/prova local; não certifica OAuth, aparelho ou I
 
 | Reviewer Surface / Package | Review Focus | Status | Evidence Artifact / Command | Findings | Resolution / Notes |
 | --- | --- | --- | --- | --- | --- |
-| cp21 reviews + cp22/cp23 corrections | Falha de recuperação, acesso sem índice e simulações ausentes | planned | cp21-architecture-security.result.raw.json; round-01/resolution.md; cp22-rerun3-result.json; cp23-web-handoff.md | NUM-PERF-01, NUM-ADH-CP21-01, NUM-SEC-CP21-02 | Correções/provas primárias concluídas; all/final preflight delta ainda pendentes. |
+| cp21 full + cp25 delta + cp27 TQA suplemento | Recuperação, índice, simulações e precedência de origem | passed | cp25-architecture-security.result.raw.json; round-02/performance.result.raw.json; cp27-tqa-supplement.result.raw.json; cp27 all | Todos bloqueadores locais registrados resolvidos | P1/P2 explícitos no cp25 independente; nenhum novo defeito de produção, final review separado pendente. |
 
 ## Rule-Spirit Anti-Pattern Hunt
 
 | Rule / Principle Surface | Bypass or Anti-Pattern Search Lens | Status | Evidence Artifact / Command | Findings | Resolution / Notes |
 | --- | --- | --- | --- | --- | --- |
-| Tenant/credential/canonical cutover | Fallback global, recurso estrangeiro, bridge/adoption e falso CONNECTED | planned | cp21 security/cutover; REG-SEC-01..13; revisão delta pendente | Nenhum bypass demonstrado; simulações específicas completadas cp22 | Aceite final aguarda nova revisão afetada. |
-| Evidência/runner/freshness | Harness rotulado como RED, mock de BFF, segredo no build e raw reconstruído como integral | planned | limites cp5a/cp20/cp23 e manifestos/máscaras source-owned | Proveniência mixed/test-after aceita como processo; raw final cp23 browser não capturado | All cp24 com captura integral e inventário prévio deve substituir limite, sem fabricar histórico. |
+| Tenant/credential/canonical cutover | Fallback global, recurso estrangeiro, bridge/adoption e falso CONNECTED | passed | cp25 security/cutover; REG-SEC-01..13; cp27 TQA suplemento | Nenhum bypass material estabelecido | Revisores independentes confirmam canonical credential/tenant/identity; VAL-05 continua obrigatória. |
+| Evidência/runner/freshness | Harness rotulado como RED, mock de BFF, segredo no build e raw reconstruído como integral | passed | cp27 all/raw/manifests/attestations/root receipt; cp25 security; cp27 TQA suplemento | Mixed/test-after permanece dívida explícita; sem RED inventado | Raw integral cp24/cp27 e inventário antes all superam limite cp23; nenhuma história reescrita. |
 
 ## Promotion Finding Routing Ledger (Required When Promotion/Review Finds Any Finding)
 
@@ -796,70 +799,72 @@ Achados exatos preservados em planning-architecture.json. `fixed-in-plan` signif
 
 | Finding ID | Severity | Classification | Routing Decision | Same TODO / Split Rationale | Status | Approval / Follow-up Reference |
 | --- | --- | --- | --- | --- | --- | --- |
-| NUM-ARCH-01 | high | release-blocker | fix-current-contract | Typebot tocado exige isolamento tenant já canônico | fixed-in-plan | D-08; contratos de entrada; REG-SEC-01; VAL-08 |
-| NUM-ARCH-02 | high | release-blocker | fix-current-contract | Recebimento do cadastro não pode duplicar efeitos | fixed-in-plan | D-08; unique/transação; REG-SEC-02; VAL-08 |
-| NUM-ARCH-03 | high | release-blocker | fix-current-contract | Pareamento exige comprovar número antes do conteúdo | fixed-in-plan | D-06; rejeição pré-identidade; REG-SEC-03; VAL-08 |
-| NUM-ARCH-04 | high | release-blocker | fix-current-contract | Evento atrasado não pode trocar owner BU | fixed-in-plan | D-07; tombstone sem transferência; REG-SEC-04; VAL-08 |
-| NUM-ARCH-05 | medium | release-blocker | fix-current-contract | Pairing mutante exige POST/anti-CSRF | fixed-in-plan | D-06; contrato BFF; REG-SEC-05; VAL-08 |
-| NUM-ARCH-06 | medium | release-blocker | fix-current-contract | Reautorizar canal existente sem substituir ativa prematuramente | fixed-in-plan | D-03/04; candidata+CAS; REG-SEC-06/07; VAL-08 |
-| NUM-CRIT-01 | high | release-blocker | fix-current-contract | Repareamento já prometido precisa invalidar prova anterior | fixed-in-plan | D-06; instância por epoch e trust reset; REG-SEC-10 |
-| NUM-CRIT-02 | medium | release-blocker | fix-current-contract | Dois writers da mesma Message precisam compartilhar aceitação | fixed-in-plan | D-08; message-acceptance e diff; REG-SEC-11 |
-| NUM-OBS-01 | medium | by-design/no-action | enforce-existing-requirement | Requisito secret-free já vinculante, sem defeito de gateway implementado alegado; harness concretizado | covered-in-plan | REG-SEC-12; runtime/logs; DOD-03 |
-| NUM-OBS-02 | medium | by-design/no-action | enforce-existing-requirement | Raw scoped já vinculante; batch por owner agora explícito, sem plataforma nova | covered-in-plan | REG-SEC-13; contrato raw; audit owner |
-| NUM-OBS-03 | low | by-design/no-action | enforce-existing-requirement | Harness de tenant/credencial já requerido; observar identificador não secreto e DB real | covered-in-plan | REG-SEC-01/11; VAL-02/08 |
-| NUM-DELTA-OBS-01 | low | by-design/no-action | enforce-existing-requirement | Fence até commit já exigido; barrier do webhook em voo concretiza BCI | covered-in-plan | Delta v3; REG-SEC-10, nota de execução |
-| NUM-DELTA-OBS-02 | low | by-design/no-action | enforce-existing-requirement | Segredo em logs já proibido, inclusive hub.verify_token | covered-in-plan | Delta v3; REG-SEC-12, nota de execução |
-| NUM-DELTA-OBS-03 | low | by-design/no-action | enforce-existing-requirement | Refresh já prometido projeta autoria/conteúdo do mesmo ID | covered-in-plan | Delta v3; REG-SEC-11, nota browser; Inbox excluído preservado |
-| NUM-API-01 | high | release-blocker | fix-current-contract | Telefone canônico precisa CAS/equality atômico entre transportes | accepted-open | api-checkpoint-review-v1.json; D-01/06 |
-| NUM-API-02 | high | release-blocker | fix-current-contract | Promoção deve manter attempt/generation/credential-version/lease até commit | accepted-open | api-checkpoint-review-v1.json; D-03/04/06 |
-| NUM-API-03 | high | release-blocker | fix-current-contract | DELETE precisa adquirir o mesmo fence das operações externas | accepted-open | api-checkpoint-review-v1.json; D-06/07 |
-| NUM-API-04 | high | release-blocker | fix-current-contract | Renovação limpa antecessor mas não cria substituta reservada | accepted-open | api-checkpoint-review-v1.json; D-06 |
-| NUM-API-05 | high | release-blocker | fix-current-contract | Mapping migrado não autoriza adotar/apagar instância externa | accepted-open | api-checkpoint-review-v1.json; D-06/09 |
-| NUM-API-06 | medium | release-blocker | fix-current-contract | Retry QR pendente deve preservar rodada apesar de evento connecting/open | accepted-open | api-checkpoint-review-v1.json; D-06/07 |
-| NUM-API-07 | medium | release-blocker | fix-current-contract | Limpeza ambígua precisa sobreviver ao unlink e impedir nova criação | accepted-open | api-checkpoint-review-v1.json; D-06/07 |
-| NUM-API-08 | medium | release-blocker | fix-current-contract | Close observado deve remover prontidão atual de DTO/envio | accepted-open | api-checkpoint-review-v1.json; D-07 |
-| NUM-API-09 | medium | release-blocker | fix-current-contract | Verificação oficial sem telefone próprio não comprova identidade | accepted-open | api-checkpoint-review-v1.json; D-01/07 |
-| NUM-API-10 | medium | release-blocker | fix-current-contract | Expiração/supersessão/remoção devem limpar candidata e nonce | accepted-open | api-checkpoint-review-v1.json; D-03/04 |
-| NUM-API-11 | medium | release-blocker | fix-current-contract | Replay concorrente same-key deve retornar a mesma tentativa | accepted-open | api-checkpoint-review-v1.json; D-03 |
-| NUM-API-12 | medium | release-blocker | fix-current-contract | Audit administrativo já prometido não pode virar isenção técnica | accepted-open | api-checkpoint-review-v1.json; audit-and-history#cadastro |
-| NUM-API-13 | medium | release-blocker | fix-current-contract | Redação URL deve cobrir vocabulário de segredos e nomes codificados | accepted-open | api-checkpoint-review-v1.json; REG-SEC-09/12 |
-| NUM-API-14 | medium | release-blocker | fix-current-contract | Ordem de locks identity/channel deve eliminar ciclo de deadlock | accepted-open | api-checkpoint-review-v1.json; D-06/08; BCI |
-| NUM-API-15 | medium | release-blocker | fix-current-contract | OUT sem ID confirmado conserva resultado local pendente/erro explícito | accepted-open | api-checkpoint-review-v1.json; integrations-and-channels#reconciliação |
-| NUM-API-16 | medium | release-blocker | complete-required-harness | Probes discriminantes REG-SEC e callers fazem parte do escopo aprovado | accepted-open | api-checkpoint-review-v1.json; VAL-02/08 |
-| NUM-API-17 | medium | release-blocker | complete-required-harness | Positivas novas não são provadas pelos409 de rota aposentada | accepted-open | api-checkpoint-review-v1.json; test/modulos e canais |
-| NUM-API-18 | low | release-blocker | fix-current-contract | Metadata pré-identidade deve usar state allowlisted, sem conteúdo arbitrário | accepted-open | api-checkpoint-review-v1.json; REG-SEC-03/13 |
-| NUM-RUNTIME-01 | high | release-blocker | enforce-existing-requirement | Provider fixado registra URL em falha de callback, expondo segredo no path apesar do gateway | accepted-open | Concretizar alternativa por header já condicionada no contrato; fonte primária e prova runtime obrigatória; REG-SEC-12 |
-| NUM-ROOT-META-01 | medium | release-blocker | enforce-existing-requirement | Capacidade oficial exige versão Graph explícita válida junto do conjunto Meta; vazio não pode anunciar AVAILABLE nem usar versão presumida | accepted-open | Source read-only: meta.client.ts:42-51 aceita versão vazia se três campos Meta presentes; modulos.ts:61-65 só conta esses três; runbook/contrato exige GRAPH_VERSION informado pela instalação. Corrigir no próximo handoff API, com negativos unset/blank/malformed e positivo da versão configurada, sem nova aprovação material. |
-| NUM-WEB-01 | medium | release-blocker | fix-current-contract | DTO antigo da mesma tentativa não pode regredir version/geração | accepted-open | web-checkpoint-review-v1.json; D-07 |
-| NUM-WEB-02 | medium | release-blocker | fix-current-contract | Popup precisa ownership para callback não perder code em busy no-op | accepted-open | web-checkpoint-review-v1.json; D-02/03 |
-| NUM-WEB-03 | medium | release-blocker | fix-current-contract | Cadastro novo deve ser independente de retomada de tentativa alheia | accepted-open | web-checkpoint-review-v1.json; SCOPE-01 |
-| NUM-WEB-04 | medium | release-blocker | fix-current-contract | Reinício de nonce usa BU já criada, sem duplicar novaBu | accepted-open | web-checkpoint-review-v1.json; D-01/03 |
-| NUM-WEB-05 | medium | release-blocker | fix-current-contract | Cancelamento preserva explicação/resultado parcial durável | accepted-open | web-checkpoint-review-v1.json; D-05 |
-| NUM-WEB-06 | medium | release-blocker | fix-current-contract | Verify consome receiptVerified booleano, não timestamp inexistente | accepted-open | web-checkpoint-review-v1.json; SCOPE-05 |
-| NUM-WEB-07 | medium | release-blocker | fix-current-contract | Erros/status/finally antigos não escrevem após trocar contexto | accepted-open | web-checkpoint-review-v1.json; D-02/07 |
-| NUM-WEB-08 | medium | release-blocker | fix-current-contract | QR efêmero precisa vínculo/tentativa/geração corrente e limpeza ao concluir | accepted-open | web-checkpoint-review-v1.json; D-06/07 |
-| NUM-WEB-09 | low | release-blocker | fix-current-contract | postMessage sem correlação não muda feedback de outra tentativa | accepted-open | web-checkpoint-review-v1.json; contrato SDK |
-| NUM-WEB-10 | medium | release-blocker | fix-current-contract | Loader SDK falho precisa retry controlado sem listeners obsoletos | accepted-open | web-checkpoint-review-v1.json; SCOPE-02 |
-| NUM-WEB-11 | medium | release-blocker | enforce-existing-requirement | Recuperação parcial deve expor ação segura; leitura conclusiva condicionada a contrato real do provider, sem replay cego | accepted-conditional-open | web-checkpoint-review-v1.json; fallback pending/nova autorização já explícito em D-05 |
-| NUM-WEB-12 | low | release-blocker | fix-current-contract | Parser de evento exige string enum primitiva, total para schema malformado | accepted-open | web-checkpoint-review-v1.json; contrato SDK |
-| WEB-ROOT-01 | high | release-blocker | fix-current-contract | SDK readiness perdido após reservar tentativa | accepted-open | evidence/root-web-checkpoint3-findings.json |
-| WEB-ROOT-02 | high | release-blocker | fix-current-contract | Consumo incorreto do wrapper registration da confirmação | accepted-open | evidence/root-web-checkpoint3-findings.json |
-| WEB-ROOT-03 | medium | release-blocker | fix-current-contract | Retomada persistida e cancelamento explícito necessários | accepted-open | evidence/root-web-checkpoint3-findings.json |
-| WEB-ROOT-04 | medium | release-blocker | fix-current-contract | Etapa no wizard precisa refletir webhook/receipt atual | accepted-open | evidence/root-web-checkpoint3-findings.json |
-| WEB-ROOT-05 | medium | release-blocker | fix-current-contract | Retry de reserva perdida precisa conservar chave idempotente | accepted-open | evidence/root-web-checkpoint3-findings.json |
-| WEB-ROOT-06 | medium | release-blocker | fix-current-contract | Troca explícita de WABA não pode perder opções autorizadas | accepted-open | evidence/root-web-checkpoint3-findings.json |
-| NUM-BROWSER-01 | medium | release-blocker | fix-current-contract | Submit repetido deve preservar owner ativo e coalescer reserva | accepted-open | cp14 rerun3:21requests; FRC ativo; iniciar invalidava antes do guard |
-| NUM-BROWSER-02 | medium | release-blocker | fix-current-contract | Cancelamento autoritativo antes de efeitos pode devolver channelId:null sem ser descartado como resposta obsoleta | accepted-open | cp14 rerun5; API cancel370-373; DonoCicloCadastro.aplicar rejeita detach legítimo |
-| NUM-BROWSER-03 | medium | release-blocker | complete-required-harness | Founder da fixture precisa proveniência MANTENEDORA para provar novaBU/replay conforme produto real | accepted-open | cp14 rerun5:403TENANT_ADMIN_REQUIRED; seedNumberOnboarding119 vs TenancyService.criar |
-| NUM-ROOT-REG06 | high | release-blocker | fix-current-contract | REAUTORIZAR oficial no slot migrado sem credencial é prometido, mas guard managedLifecycle bloqueia o owner backfilled da mesma BU | accepted-open | REG-SEC-06; number-registration.service.ts248,274,319; distinção da restrição de instância Evolution não gerenciada |
+| NUM-ARCH-01 | high | release-blocker | fix-current-contract | Typebot tocado exige isolamento tenant já canônico | verified-local | D-08; contratos de entrada; REG-SEC-01; VAL-08; aceite local cp21 full + cp25 architecture/security/cutover |
+| NUM-ARCH-02 | high | release-blocker | fix-current-contract | Recebimento do cadastro não pode duplicar efeitos | verified-local | D-08; unique/transação; REG-SEC-02; VAL-08; aceite local cp21 full + cp25 architecture/security/cutover |
+| NUM-ARCH-03 | high | release-blocker | fix-current-contract | Pareamento exige comprovar número antes do conteúdo | verified-local | D-06; rejeição pré-identidade; REG-SEC-03; VAL-08; aceite local cp21 full + cp25 architecture/security/cutover |
+| NUM-ARCH-04 | high | release-blocker | fix-current-contract | Evento atrasado não pode trocar owner BU | verified-local | D-07; tombstone sem transferência; REG-SEC-04; VAL-08; aceite local cp21 full + cp25 architecture/security/cutover |
+| NUM-ARCH-05 | medium | release-blocker | fix-current-contract | Pairing mutante exige POST/anti-CSRF | verified-local | D-06; contrato BFF; REG-SEC-05; VAL-08; aceite local cp21 full + cp25 architecture/security/cutover |
+| NUM-ARCH-06 | medium | release-blocker | fix-current-contract | Reautorizar canal existente sem substituir ativa prematuramente | verified-local | D-03/04; candidata+CAS; REG-SEC-06/07; VAL-08; aceite local cp21 full + cp25 architecture/security/cutover |
+| NUM-CRIT-01 | high | release-blocker | fix-current-contract | Repareamento já prometido precisa invalidar prova anterior | verified-local | D-06; instância por epoch e trust reset; REG-SEC-10; aceite local cp21 full + cp25 architecture/security/cutover |
+| NUM-CRIT-02 | medium | release-blocker | fix-current-contract | Dois writers da mesma Message precisam compartilhar aceitação | verified-local | D-08; message-acceptance e diff; REG-SEC-11; aceite local cp21 full + cp25 architecture/security/cutover |
+| NUM-OBS-01 | medium | by-design/no-action | enforce-existing-requirement | Requisito secret-free já vinculante, sem defeito de gateway implementado alegado; harness concretizado | preserved-local | REG-SEC-12; runtime/logs; DOD-03; aceite local cp21 full + cp25 architecture/security/cutover |
+| NUM-OBS-02 | medium | by-design/no-action | enforce-existing-requirement | Raw scoped já vinculante; batch por owner agora explícito, sem plataforma nova | preserved-local | REG-SEC-13; contrato raw; audit owner; aceite local cp21 full + cp25 architecture/security/cutover |
+| NUM-OBS-03 | low | by-design/no-action | enforce-existing-requirement | Harness de tenant/credencial já requerido; observar identificador não secreto e DB real | preserved-local | REG-SEC-01/11; VAL-02/08; aceite local cp21 full + cp25 architecture/security/cutover |
+| NUM-DELTA-OBS-01 | low | by-design/no-action | enforce-existing-requirement | Fence até commit já exigido; barrier do webhook em voo concretiza BCI | preserved-local | Delta v3; REG-SEC-10, nota de execução; aceite local cp21 full + cp25 architecture/security/cutover |
+| NUM-DELTA-OBS-02 | low | by-design/no-action | enforce-existing-requirement | Segredo em logs já proibido, inclusive hub.verify_token | preserved-local | Delta v3; REG-SEC-12, nota de execução; aceite local cp21 full + cp25 architecture/security/cutover |
+| NUM-DELTA-OBS-03 | low | by-design/no-action | enforce-existing-requirement | Refresh já prometido projeta autoria/conteúdo do mesmo ID | preserved-local | Delta v3; REG-SEC-11, nota browser; Inbox excluído preservado; aceite local cp21 full + cp25 architecture/security/cutover |
+| NUM-API-01 | high | release-blocker | fix-current-contract | Telefone canônico precisa CAS/equality atômico entre transportes | verified-local | api-checkpoint-review-v1.json; D-01/06; aceite local cp21 full + cp25 architecture/security/cutover |
+| NUM-API-02 | high | release-blocker | fix-current-contract | Promoção deve manter attempt/generation/credential-version/lease até commit | verified-local | api-checkpoint-review-v1.json; D-03/04/06; aceite local cp21 full + cp25 architecture/security/cutover |
+| NUM-API-03 | high | release-blocker | fix-current-contract | DELETE precisa adquirir o mesmo fence das operações externas | verified-local | api-checkpoint-review-v1.json; D-06/07; aceite local cp21 full + cp25 architecture/security/cutover |
+| NUM-API-04 | high | release-blocker | fix-current-contract | Renovação limpa antecessor mas não cria substituta reservada | verified-local | api-checkpoint-review-v1.json; D-06; aceite local cp21 full + cp25 architecture/security/cutover |
+| NUM-API-05 | high | release-blocker | fix-current-contract | Mapping migrado não autoriza adotar/apagar instância externa | verified-local | api-checkpoint-review-v1.json; D-06/09; aceite local cp21 full + cp25 architecture/security/cutover |
+| NUM-API-06 | medium | release-blocker | fix-current-contract | Retry QR pendente deve preservar rodada apesar de evento connecting/open | verified-local | api-checkpoint-review-v1.json; D-06/07; aceite local cp21 full + cp25 architecture/security/cutover |
+| NUM-API-07 | medium | release-blocker | fix-current-contract | Limpeza ambígua precisa sobreviver ao unlink e impedir nova criação | verified-local | api-checkpoint-review-v1.json; D-06/07; aceite local cp21 full + cp25 architecture/security/cutover |
+| NUM-API-08 | medium | release-blocker | fix-current-contract | Close observado deve remover prontidão atual de DTO/envio | verified-local | api-checkpoint-review-v1.json; D-07; aceite local cp21 full + cp25 architecture/security/cutover |
+| NUM-API-09 | medium | release-blocker | fix-current-contract | Verificação oficial sem telefone próprio não comprova identidade | verified-local | api-checkpoint-review-v1.json; D-01/07; aceite local cp21 full + cp25 architecture/security/cutover |
+| NUM-API-10 | medium | release-blocker | fix-current-contract | Expiração/supersessão/remoção devem limpar candidata e nonce | verified-local | api-checkpoint-review-v1.json; D-03/04; aceite local cp21 full + cp25 architecture/security/cutover |
+| NUM-API-11 | medium | release-blocker | fix-current-contract | Replay concorrente same-key deve retornar a mesma tentativa | verified-local | api-checkpoint-review-v1.json; D-03; aceite local cp21 full + cp25 architecture/security/cutover |
+| NUM-API-12 | medium | release-blocker | fix-current-contract | Audit administrativo já prometido não pode virar isenção técnica | verified-local | api-checkpoint-review-v1.json; audit-and-history#cadastro; aceite local cp21 full + cp25 architecture/security/cutover |
+| NUM-API-13 | medium | release-blocker | fix-current-contract | Redação URL deve cobrir vocabulário de segredos e nomes codificados | verified-local | api-checkpoint-review-v1.json; REG-SEC-09/12; aceite local cp21 full + cp25 architecture/security/cutover |
+| NUM-API-14 | medium | release-blocker | fix-current-contract | Ordem de locks identity/channel deve eliminar ciclo de deadlock | verified-local | api-checkpoint-review-v1.json; D-06/08; BCI; aceite local cp21 full + cp25 architecture/security/cutover |
+| NUM-API-15 | medium | release-blocker | fix-current-contract | OUT sem ID confirmado conserva resultado local pendente/erro explícito | verified-local | api-checkpoint-review-v1.json; integrations-and-channels#reconciliação; aceite local cp21 full + cp25 architecture/security/cutover |
+| NUM-API-16 | medium | release-blocker | complete-required-harness | Probes discriminantes REG-SEC e callers fazem parte do escopo aprovado | verified-local | api-checkpoint-review-v1.json; VAL-02/08; aceite local cp21 full + cp25 architecture/security/cutover |
+| NUM-API-17 | medium | release-blocker | complete-required-harness | Positivas novas não são provadas pelos409 de rota aposentada | verified-local | api-checkpoint-review-v1.json; test/modulos e canais; aceite local cp21 full + cp25 architecture/security/cutover |
+| NUM-API-18 | low | release-blocker | fix-current-contract | Metadata pré-identidade deve usar state allowlisted, sem conteúdo arbitrário | verified-local | api-checkpoint-review-v1.json; REG-SEC-03/13; aceite local cp21 full + cp25 architecture/security/cutover |
+| NUM-RUNTIME-01 | high | release-blocker | enforce-existing-requirement | Provider fixado registra URL em falha de callback, expondo segredo no path apesar do gateway | verified-local | Concretizar alternativa por header já condicionada no contrato; fonte primária e prova runtime obrigatória; REG-SEC-12; aceite local cp21 full + cp25 architecture/security/cutover |
+| NUM-ROOT-META-01 | medium | release-blocker | enforce-existing-requirement | Capacidade oficial exige versão Graph explícita válida junto do conjunto Meta; vazio não pode anunciar AVAILABLE nem usar versão presumida | verified-local | Source read-only: meta.client.ts:42-51 aceita versão vazia se três campos Meta presentes; modulos.ts:61-65 só conta esses três; runbook/contrato exige GRAPH_VERSION informado pela instalação. Corrigir no próximo handoff API, com negativos unset/blank/malformed e positivo da versão configurada, sem nova aprovação material.; aceite local cp21 full + cp25 architecture/security/cutover |
+| NUM-WEB-01 | medium | release-blocker | fix-current-contract | DTO antigo da mesma tentativa não pode regredir version/geração | verified-local | web-checkpoint-review-v1.json; D-07; aceite local cp21 full + cp25 architecture/security/cutover |
+| NUM-WEB-02 | medium | release-blocker | fix-current-contract | Popup precisa ownership para callback não perder code em busy no-op | verified-local | web-checkpoint-review-v1.json; D-02/03; aceite local cp21 full + cp25 architecture/security/cutover |
+| NUM-WEB-03 | medium | release-blocker | fix-current-contract | Cadastro novo deve ser independente de retomada de tentativa alheia | verified-local | web-checkpoint-review-v1.json; SCOPE-01; aceite local cp21 full + cp25 architecture/security/cutover |
+| NUM-WEB-04 | medium | release-blocker | fix-current-contract | Reinício de nonce usa BU já criada, sem duplicar novaBu | verified-local | web-checkpoint-review-v1.json; D-01/03; aceite local cp21 full + cp25 architecture/security/cutover |
+| NUM-WEB-05 | medium | release-blocker | fix-current-contract | Cancelamento preserva explicação/resultado parcial durável | verified-local | web-checkpoint-review-v1.json; D-05; aceite local cp21 full + cp25 architecture/security/cutover |
+| NUM-WEB-06 | medium | release-blocker | fix-current-contract | Verify consome receiptVerified booleano, não timestamp inexistente | verified-local | web-checkpoint-review-v1.json; SCOPE-05; aceite local cp21 full + cp25 architecture/security/cutover |
+| NUM-WEB-07 | medium | release-blocker | fix-current-contract | Erros/status/finally antigos não escrevem após trocar contexto | verified-local | web-checkpoint-review-v1.json; D-02/07; aceite local cp21 full + cp25 architecture/security/cutover |
+| NUM-WEB-08 | medium | release-blocker | fix-current-contract | QR efêmero precisa vínculo/tentativa/geração corrente e limpeza ao concluir | verified-local | web-checkpoint-review-v1.json; D-06/07; aceite local cp21 full + cp25 architecture/security/cutover |
+| NUM-WEB-09 | low | release-blocker | fix-current-contract | postMessage sem correlação não muda feedback de outra tentativa | verified-local | web-checkpoint-review-v1.json; contrato SDK; aceite local cp21 full + cp25 architecture/security/cutover |
+| NUM-WEB-10 | medium | release-blocker | fix-current-contract | Loader SDK falho precisa retry controlado sem listeners obsoletos | verified-local | web-checkpoint-review-v1.json; SCOPE-02; aceite local cp21 full + cp25 architecture/security/cutover |
+| NUM-WEB-11 | medium | release-blocker | enforce-existing-requirement | Recuperação parcial deve expor ação segura; leitura conclusiva condicionada a contrato real do provider, sem replay cego | verified-local | web-checkpoint-review-v1.json; fallback pending/nova autorização já explícito em D-05; aceite local cp21 full + cp25 architecture/security/cutover |
+| NUM-WEB-12 | low | release-blocker | fix-current-contract | Parser de evento exige string enum primitiva, total para schema malformado | verified-local | web-checkpoint-review-v1.json; contrato SDK; aceite local cp21 full + cp25 architecture/security/cutover |
+| WEB-ROOT-01 | high | release-blocker | fix-current-contract | SDK readiness perdido após reservar tentativa | verified-local | evidence/root-web-checkpoint3-findings.json; aceite local cp21 full + cp25 architecture/security/cutover |
+| WEB-ROOT-02 | high | release-blocker | fix-current-contract | Consumo incorreto do wrapper registration da confirmação | verified-local | evidence/root-web-checkpoint3-findings.json; aceite local cp21 full + cp25 architecture/security/cutover |
+| WEB-ROOT-03 | medium | release-blocker | fix-current-contract | Retomada persistida e cancelamento explícito necessários | verified-local | evidence/root-web-checkpoint3-findings.json; aceite local cp21 full + cp25 architecture/security/cutover |
+| WEB-ROOT-04 | medium | release-blocker | fix-current-contract | Etapa no wizard precisa refletir webhook/receipt atual | verified-local | evidence/root-web-checkpoint3-findings.json; aceite local cp21 full + cp25 architecture/security/cutover |
+| WEB-ROOT-05 | medium | release-blocker | fix-current-contract | Retry de reserva perdida precisa conservar chave idempotente | verified-local | evidence/root-web-checkpoint3-findings.json; aceite local cp21 full + cp25 architecture/security/cutover |
+| WEB-ROOT-06 | medium | release-blocker | fix-current-contract | Troca explícita de WABA não pode perder opções autorizadas | verified-local | evidence/root-web-checkpoint3-findings.json; aceite local cp21 full + cp25 architecture/security/cutover |
+| NUM-BROWSER-01 | medium | release-blocker | fix-current-contract | Submit repetido deve preservar owner ativo e coalescer reserva | verified-local | cp14 rerun3:21requests; FRC ativo; iniciar invalidava antes do guard; aceite local cp21 full + cp25 architecture/security/cutover |
+| NUM-BROWSER-02 | medium | release-blocker | fix-current-contract | Cancelamento autoritativo antes de efeitos pode devolver channelId:null sem ser descartado como resposta obsoleta | verified-local | cp14 rerun5; API cancel370-373; DonoCicloCadastro.aplicar rejeita detach legítimo; aceite local cp21 full + cp25 architecture/security/cutover |
+| NUM-BROWSER-03 | medium | release-blocker | complete-required-harness | Founder da fixture precisa proveniência MANTENEDORA para provar novaBU/replay conforme produto real | verified-local | cp14 rerun5:403TENANT_ADMIN_REQUIRED; seedNumberOnboarding119 vs TenancyService.criar; aceite local cp21 full + cp25 architecture/security/cutover |
+| NUM-ROOT-REG06 | high | release-blocker | fix-current-contract | REAUTORIZAR oficial no slot migrado sem credencial é prometido, mas guard managedLifecycle bloqueia o owner backfilled da mesma BU | verified-local | REG-SEC-06; number-registration.service.ts248,274,319; distinção da restrição de instância Evolution não gerenciada; aceite local cp21 full + cp25 architecture/security/cutover |
 
-| NUM-ROOT-GW-01 | high | release-blocker | fix-current-contract | Nginx mantém segundo access log da imagem com URI/query e expõe verify token local; formato seguro isolado não elimina sink herdado | accepted-open | cp21 scan real; REG-SEC-12; corrigir template, renovar token privado e repetir controles antes de HTTPS/pareamento |
-| NUM-ROOT-ENV-01 | medium | release-blocker | fix-current-contract | Overrides de origem/produção documentados não atravessam WSL para docker.exe sem bridge explícita | accepted-open | cp21 HTTPS precheck detectou desenvolvimento/origem local; start script e README68; bridge WSLENV de variáveis não secretas e config-only discriminante |
+| NUM-ROOT-GW-01 | high | release-blocker | fix-current-contract | Nginx mantém segundo access log da imagem com URI/query e expõe verify token local; formato seguro isolado não elimina sink herdado | verified-local | cp21 scan real; REG-SEC-12; corrigir template, renovar token privado e repetir controles antes de HTTPS/pareamento; aceite local cp21 full + cp25 architecture/security/cutover |
+| NUM-ROOT-ENV-01 | medium | release-blocker | fix-current-contract | Overrides de origem/produção documentados não atravessam WSL para docker.exe sem bridge explícita | verified-local | cp21 HTTPS precheck detectou desenvolvimento/origem local; start script e README68; bridge WSLENV de variáveis não secretas e config-only discriminante; aceite local cp21 full + cp25 architecture/security/cutover |
 
-| NUM-PERF-01 | high | release-blocker | fix-current-contract | Resolver de credencial carrega relação current_channel_id sem índice em cada envio; tombstones globais ampliam o scan | accepted-open | Performance cp21-v2; novo índice schema/migration e EXPLAIN da consulta real; EPS permanece aberto |
-| NUM-ADH-CP21-01 | medium | release-blocker | fix-current-contract | Nova autorização após NOVO expirado/ambíguo mantém canal no backend, mas UI tenta NOVO em slot ocupado | accepted-open | Architecture/security cp21; reutilizar canal exato por REAUTORIZAR e provar as duas falhas em browser real |
-| NUM-ROOT-ORIGIN-CP24-01 | medium | release-blocker | fix-current-contract | Inicializador exporta origem default e sobrepõe HTTPS salvo no arquivo privado, quebrando configuração efetiva após rebuild | accepted-open | scripts/start-channels-local.sh:14; corrigir precedência sem alterar arquivo privado e provar config/runtime HTTPS exatos |
-| NUM-SEC-CP21-02 | medium | release-blocker | fix-current-contract | Simulações exigidas REG-SEC-01/10/11 não discriminam todos os cenários nomeados | accepted-open | Trigger global estrangeiro anterior; verify antigo através de RENEW verificado; sequência epoch/quarentena/retry e ecos OUT concorrentes |
+| NUM-PERF-01 | high | release-blocker | fix-current-contract | Resolver de credencial carrega relação current_channel_id sem índice em cada envio; tombstones globais ampliam o scan | verified-local | Performance cp21-v2; novo índice schema/migration e EXPLAIN da consulta real; EPS foi aceito no review cp25 após correção; aceite local cp21 full + cp25 architecture/security/cutover; round-02/performance.result.raw.json, EPS aceito |
+| NUM-ADH-CP21-01 | medium | release-blocker | fix-current-contract | Nova autorização após NOVO expirado/ambíguo mantém canal no backend, mas UI tenta NOVO em slot ocupado | verified-local | Architecture/security cp21; reutilizar canal exato por REAUTORIZAR e provar as duas falhas em browser real; aceite local cp21 full + cp25 architecture/security/cutover |
+| NUM-ROOT-ORIGIN-CP24-01 | medium | release-blocker | fix-current-contract | Inicializador exporta origem default e sobrepõe HTTPS salvo no arquivo privado, quebrando configuração efetiva após rebuild | verified-local | scripts/start-channels-local.sh:14; corrigir precedência sem alterar arquivo privado e provar config/runtime HTTPS exatos; aceite local cp21 full + cp25 architecture/security/cutover |
+| TQA-CP25-01 | medium | release-blocker | fix-current-contract | Spy realtime instalado depois do webhook antigo não observa o negativo exigido em REG-SEC-10 | verified-local | Instalar spy antes do ingresso antigo e conferir zero eventos; preservar demais negativos e aceitação atual; cp26-api-handoff.md / cp26-web-handoff.md; cp27 all499 e cp27-tqa-supplement.result.raw.json aceitam a negativa exata |
+| TQA-CP25-02 | medium | release-blocker | fix-current-contract | Recuperação testa projeção coincidente, sem provar rejeição de canal/geração/currentAttemptId alterado | verified-local | Novo caso browser real com tentativa concorrente e erro seguro, sem nova reserva/BU/canal; cp26-api-handoff.md / cp26-web-handoff.md; cp27 all499 e cp27-tqa-supplement.result.raw.json aceitam a negativa exata |
+| NUM-SEC-CP21-02 | medium | release-blocker | fix-current-contract | Simulações exigidas REG-SEC-01/10/11 não discriminam todos os cenários nomeados | verified-local | Trigger global estrangeiro anterior; verify antigo através de RENEW verificado; sequência epoch/quarentena/retry e ecos OUT concorrentes; aceite local cp21 full + cp25 architecture/security/cutover |
 
 Adicional de coerência do autor: envelope raw redigido e code/PIN transitórios explicitados, sem alterar modelo de autorização; REG-SEC-08/09.
 
@@ -869,12 +874,13 @@ Adjudicação do checkpoint Web: parecer terminal web-checkpoint-review-v1.json 
 
 Concretização de freshness cp6: root observou que `timeline-freshness.ts`, composto pelo novo helper, tenta ler com `readFileSync` todo path de `git diff --name-only`, incluindo a deleção já admitida de `channels.service.spec.ts`. Isso impediria o browser antes dos workers. Admitido M exato nesse helper compartilhado para registrar deleções sem leitura e completar a proveniência pertinente, preservando todas as verificações existentes; não autoriza alterar assertions dos testes históricos nem afrouxar o guard de banco. Mesmo objetivo/contrato, sem nova aprovação material.
 
+
 ## TODO Closeout Disposition
 
 - **Disposition:** keep-active
-- **Disposition reason:** execução aprovada iniciando; critérios de entrega/provas ainda pendentes.
-- **Post-commit/push status:** n/a
-- **Next path/status action:** executar checkpoints e evidências neste mesmo TODO, sem claim antecipado de entrega.
+- **Disposition reason:** all499/reviews finais e commits locais aceitos; VAL-05 obrigatório ainda ausente, messages/wizard sem confirmação.
+- **Post-commit/push status:** source commits locais API f134bd11449a553e6f57e66cdc8fc71032151060, Web d33c82c26760c671d98cab6f3e7bfe5676122c69, workspace4bccdc4aa470d1166bc14a681d0008f242db2562; sem push de código. Foundation main será publicado pelo guard documental.
+- **Next path/status action:** manter este TODO active/Pending até wizard/messages e VAL-05; nenhuma execução dependente ou claim externo por inferência.
 
 ## Security Risk Assessment (Mandatory Before Delivery)
 
@@ -883,8 +889,28 @@ Concretização de freshness cp6: root observou que `timeline-freshness.ts`, com
 - **Why this risk level:** OAuth, credential por cliente, popup/origem, webhook e grants mutáveis.
 - **Attack surface in scope:** sessão+anti-CSRF BFF; callback SDK preso à operação atual, sem autoridade de postMessage; código/nonce de uso único; IDs não confiáveis; token cipher/AAD; scopes de caller.
 - **Attack simulation decision:** required
-- **Review evidence:** cp21-architecture-security.result.raw.json revisou decisões, REG-SEC e dívida de dependências. NUM-SEC-CP21-02 apontou simulações obrigatórias incompletas; API cp22 as completou com286PG verdes, ainda sujeito a revisão delta. Runtime/header/log/HTTPS têm provas cp21/cp22; aparelho/OAuth/IN/OUT não executados.
+- **Review evidence:** evidence/cp21-architecture-security.result.raw.json e evidence/cp25-architecture-security.result.raw.json (fresh independente gpt-6.1-sol/max) aceitam a correção de NUM-ADH-CP21-01/NUM-SEC-CP21-02/NUM-ROOT-ORIGIN-CP24-01 e avaliam individualmente D-01..10/REG-SEC-01..13, segurança, dívida, P1/P2 e Rule-Spirit. Nenhum novo defeito de produção estabelecido. TQA cp25 identificou duas provas negativas ainda pendentes, prevalecendo sobre parecer genérico favorável; cp26 implementou, cp27 passou e suplemento TQA independente aceitou ambas sem novo achado. Runtime/header/log/HTTPS têm evidência cp21..25; aparelho/OAuth/IN/OUT ausentes.
 - **Residual security risk:** crypto não protege aplicação comprometida; credenciais não entram em raw webhook/audit, DTO, URL registrada, Playwright trace/screenshot ou artefato. URL Evolution só de configuração allowlisted; não aceitar URL livre do operador.
+
+### Simulações de segurança — disposição local atual
+
+Referências relativas ao pacote `artifacts/reviews/leadshug-number-onboarding-20261015/`. Casos controlados usam portas externas dobradas; BFF, autorização, PostgreSQL e browser são reais. Fonte/execução cp24 + revisão independente cp25; cp26 alterou somente dois testes; all cp27 passou499 e suplemento TQA fresh aceitou as negativas. Nenhuma simulação equivale a OAuth/aparelho/IN/OUT reais.
+
+| Requisito | Prova discriminante | Disposição / limite |
+| --- | --- | --- |
+| REG-SEC-01 | number-onboarding-typebot.e2e-spec.ts: trigger GLOBAL estrangeiro mais antigo e próprio, bot/session/credencial/saída corretos; caller-scoping E2E | Aceito local cp25 security; sem early exit por sessão estrangeira. |
+| REG-SEC-02 | webhooks.e2e-spec.ts e number-onboarding-message-acceptance.e2e-spec.ts: replay sequencial e10concorrentes×3 por provider, chave por recurso, sem ID e echo OUT; acceptance unit/PG | Aceito local cp21/cp25; uma gravação vencedora, sem exactly-once externo. |
+| REG-SEC-03 | number-onboarding-flow.e2e-spec.ts:503pré-identidade sem conteúdo/efeitos,409ownPhone divergente e mesmo ID aceito após prova; LID adapter | Aceito local cp25; retry depende de reenvio, sem buffer/importação. |
+| REG-SEC-04 | flow E2E: tombstone após remove, rejeita rebind outraBU e evento tardio; webhooks mixed batch | Aceito local cp21/cp25; owner imutável e reativação mesma BU. |
+| REG-SEC-05 | flow E2E pair sem CSRF e contador zero; canais E2E GET405/sem provider e POST ADMIN | Aceito local cp21/cp25; nenhum side effect por GET. |
+| REG-SEC-06 | flow E2E reautoriza slot OFICIAL migrado exato, reserva mesmaBU/nonce novo; browser NOVO expirado/ambíguo | Aceito local cp25; nova negativa de projeção alterada passou cp27 e foi aceita pelo TQA suplemento. |
+| REG-SEC-07 | flow E2E ativa preservada após número errado/cancelar/expirar, concorrência de candidatas e lease stale | Aceito local cp21/cp25; CAS até commit, sem substituir ativa ao reservar. |
+| REG-SEC-08 | safe-redaction unit/PG, envelope webhook fictício, raw/audit/DTO/log secret-free e pré-identidade metadata-only | Aceito local cp21/cp25; fixture pública não contém segredos reais. |
+| REG-SEC-09 | crypto unit AAD/tamper/purpose/BU/attempt/version/key; browser code/PIN sem storage/URL/trace | Aceito local cp21/cp25; memória transitória/POSTHTTPS, backend cifra. |
+| REG-SEC-10 | flow E2E verifiedX→heldverify→RENEW/trust reset→oldverify409→Yquarantine→X/current same-key; BCI webhook-in-flight/remove-recreate | Produção aceita cp25; prova realtime do evento de instância antiga adicionada cp26, passou cp27 e foi aceita pelo TQA suplemento. |
+| REG-SEC-11 | atendimento/public/Typebot E2E echo-inside-send/sender-first/concorrentes; mesmoMessageID/createdAt/autoria, zeroIN/unread/bot; inbox refresh baseline | Aceito local cp25; sem alterar Inbox.tsx nem contrato timeline. |
+| REG-SEC-12 | cp21 gateway/header/log probes, provider2.3.7 header200/403 e cleanup semQR; Meta challenge; cp25 HTTPS/cookie/CORS | Aceito local cp21/cp25; logs fictícios testam erro/parser/upstream; webhook validado pelo usuário, sem prova de aparelho. |
+| REG-SEC-13 | webhooks PG batch Meta assinado com duasBUs+unknown/retired, raw particionado e assinatura original | Aceito local cp21/cp25; partes sem identidade não persistem conteúdo. |
 
 ## Performance & Concurrency Risk Assessment (Mandatory Before Delivery)
 
@@ -895,26 +921,26 @@ Concretização de freshness cp6: root observou que `timeline-freshness.ts`, com
 
 | Lane ID | Lane | Trigger Result | Trigger Severity | Trigger Reason Code | Gate Deadline | Minimum Evidence Rule | State | Residual Risk | Uncertainty Reason Code |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| EPS | endpoint-performance-scrutiny | required | medium | EPS-DATA-PATH-CHANGED | before_local_implemented | EPS-E2 | pending | none | none |
-| FRC | frontend-race-condition-validation | required | high | FRC-DUPLICATE-MUTATION | before_local_implemented | FRC-E3 | pending | none | none |
-| BCI | backend-concurrency-idempotency-validation | required | high | BCI-DUPLICATE-SUBMIT-OR-REPLAY | before_local_implemented | BCI-E3 | pending | none | none |
-| RLS | runtime-load-stress-validation | recommended | medium | RLS-QUEUE-WORKER-REALTIME-CHANGED | before_local_implemented | RLS-E1 | pending | none | none |
+| EPS | endpoint-performance-scrutiny | required | medium | EPS-DATA-PATH-CHANGED | before_local_implemented | EPS-E2 | passed | bounded local sample; no SLO | none |
+| FRC | frontend-race-condition-validation | required | high | FRC-DUPLICATE-MUTATION | before_local_implemented | FRC-E3 | passed | local BFF/provider doubles | none |
+| BCI | backend-concurrency-idempotency-validation | required | high | BCI-DUPLICATE-SUBMIT-OR-REPLAY | before_local_implemented | BCI-E3 | passed | no external exactly-once | none |
+| RLS | runtime-load-stress-validation | recommended | medium | RLS-QUEUE-WORKER-REALTIME-CHANGED | before_local_implemented | RLS-E1 | passed | 30 reads; no capacity claim | none |
 
 #### EPS
-Lookup único por vínculo/tentativa e índice de expiração, EXPLAIN na tabela representativa; sem fan-out em listagem. Perfil EPS-SP-STRONG, aceitação EPS-A2; medição local e limites documentados.
+Lookup único por vínculo/tentativa e índice de expiração, EXPLAIN na tabela representativa; sem fan-out em listagem. Perfil EPS-SP-STRONG, aceitação EPS-A2; medição local e limites documentados. Evidência pcv-1: evidence/cp24-pcv-eps.json, SHA canônico0ff50fc581a9794bda7578ad443b8005ad22cb03cfe538ca41ba5337523ea737; reviewer real /root/performance_delta_cp25, round-02/performance.result.raw.json. Plano25tentativas legítimo SeqScan e resolver real2.000tombstones com IndexScan; nenhuma capacidade/SLO inferida.
 #### FRC
-Coalescer duplo clique; cancela contexto anterior, descarta versão velha; repetição forte20triggers×5, requests/in-flight e estado/draft observáveis. Perfil FRC-SP-H; FRC-A1.
+Coalescer duplo clique; cancela contexto anterior, descarta versão velha; repetição forte20triggers×5, requests/in-flight e estado/draft observáveis. Perfil FRC-SP-H; FRC-A1. Evidência: evidence/cp24-pcv-frc.json, SHA canônico7e6840f35699772e6beac6beef7a08827eec05eaec023be27e75168d3497cf0f; reviewer /root/performance_delta_cp25. 5ondas×20triggers, uma reserva/onda e maxinflight1; resposta velha concluída sem regressão.
 #### BCI
-CAS na tentativa, unicidade de slot/providerID e geração;20operações sobrepostas×5 com barriers para criação, finalize/replay e delete/recreate, controle negativo. Perfil BCI-SP-H; BCI-A1. Sem exactly-once de provider afirmado; timeout externo ambíguo fica pending.
+CAS na tentativa, unicidade de slot/providerID e geração;20operações sobrepostas×5 com barriers para criação, finalize/replay e delete/recreate, controle negativo. Perfil BCI-SP-H; BCI-A1. Evidência: evidence/cp24-pcv-bci.json, SHA canônico00fa30af912e534ef44bfd6adf5689a3b11bf6c703c09dbd29d60f6e0f5932bf; reviewer /root/performance_delta_cp25. 5×20create/finalize e5×20pair/delete, barriers/readbacks/negative controls reais PG. Sem exactly-once de provider afirmado; timeout externo ambíguo fica pending.
 #### RLS
-Uma etapa bounded com cinco clientes e seis leituras por cliente,30verificações internas/conflitos, zero chamada provider em listagem. Perfil RLS-SP-L; RLS-A1. Não é benchmark de capacidade/SLO; provider real não recebe carga sintética.
+Uma etapa bounded com cinco clientes e seis leituras por cliente,30verificações internas/conflitos, zero chamada provider em listagem. Perfil RLS-SP-L; RLS-A1. Evidência: evidence/cp24-pcv-rls.json, SHA canônico13c460ca03989bd3e66dbe8027ad9bb5cd2b9e3bca4e8bbd7635316f3a16b56b; reviewer /root/performance_delta_cp25. 5clientes×6leituras,200own/404foreign e zero provider em listagem, contador calibrado. Não é benchmark de capacidade/SLO; provider real não recebe carga sintética.
 
 ## Verification Debt Assessment (Required Before `Completed`; mandatory audit for `medium|big` or when debt signals exist)
 
 - **Audit outcome:** high
-- **Why this outcome:** auditorias cp21 executadas e adjudicadas; correções locais/API e browser, runtime/all da fonte final, reviews delta e prova externa ainda pendentes. A dívida obrigatória de VAL-05 impede fechamento, sem dispensa implícita.
+- **Why this outcome:** auditorias cp21/cp25/suplemento cp27 e all499 aceitos localmente; final review e commits locais aceitos com fonte byteexact; prova externa e closeout geral permanecem pendentes. A dívida obrigatória de VAL-05 impede fechamento, sem dispensa implícita.
 - **Inline code TODO debt:** none
-- **Evidence / audit artifact:** delivery-audit-cp21-v2/round-01/resolution.md; cp21-architecture-security.result.raw.json; cp22-rerun3-result.json. Gate final ainda não satisfeito.
+- **Evidence / audit artifact:** delivery-audit-cp21-v2/round-02/resolution.md; cp25-architecture-security.result.raw.json; cp27-tqa-supplement.result.raw.json; root-cp27-receipt.json. Final review local aceito; VAL-05 e entrega geral ainda não satisfeitos.
 - **Accepted residual debt:** TQA-CP21-02, proveniência mixed/test-after preservada sem RED histórico fabricado, owner executor/revisor deste TODO; BLG-leadshug-runtime-dependency-security, restrita ao operador privado e devida antes de usuários autenticados não confiáveis. VAL-05 externa continua requisito obrigatório, não dívida aceita para dispensá-la.
 
 ## Independent Test Quality Audit Gate (Deterministic Floor From Audit Escalation)
@@ -924,11 +950,20 @@ Uma etapa bounded com cinco clientes e seis leituras por cliente,30verificaçõe
 - **Package mode:** bounded-file-set
 - **Audit isolation mode:** fresh internal no-context reviewer
 - **Internal reviewer mandate:** required; distinto do executor, aguardar terminal sem deadline arbitrário.
-- **Audit status:** blocked
-- **Findings summary:** TQA cp21 terminal aceitou cobertura local com dívida de processo, mas VAL-05 permanece obrigatória e security apontou simulações específicas adicionais. Correções e revisão delta aguardadas; nada dispensado.
+- **Audit status:** findings_integrated
+- **Findings summary:** cp21 full + cp25 delta + cp27 suplemento fresh gpt-5.6-terra/max completam o gate local. TQA-CP25-01/02 Integrated/resolved por prova discriminante e all499, sem novos achados. Round02 resolution=resolved, nenhum bloqueador local aberto. VAL-05 segue requisito obrigatório geral, não dívida aceita ou dispensada.
 - **Evidence / reference:** artifacts/reviews/leadshug-number-onboarding-20261015
 - **Canonical multi-lane audit protocol:** audit-protocol-triple-review
 - **Waiver authority / reference:** n/a
+
+### Test quality finding resolutions
+
+| Finding ID | Resolution (`Integrated|Challenged|Deferred`) | Usefulness (`useful|noise|mixed|unknown`) | Formalizable (`yes|partial|no|unknown`) | Candidate Rule Level (`paced|project|none|unknown`) | Candidate Rule ID | Rationale / Evidence |
+| --- | --- | --- | --- | --- | --- | --- |
+| TQA-CP25-01 | Integrated | useful | yes | project | REG-SEC-10 | Spy antes do ingresso antigo, zero eventos; cp27 API286 e suplemento TQA fresh aceitam, sem mockClear mascarando observação. |
+| TQA-CP25-02 | Integrated | useful | yes | project | NUM-WEB-11 | Sessão OWNER concorrente altera currentAttemptId; primeiro browser falha seguro semPOST/reset/BU/canal extra; cp27 browser47 e suplemento aceitam. |
+| TQA-CP21-02 | Deferred | useful | partial | project | none | Dívida não bloqueante de processo mixed/test-after; owner executor/reviewer deste TODO, exigir RED autêntico em próximos defeitos; não fabricar histórico. |
+| TQA-CP21-01 | Deferred | useful | no | project | VAL-05 | Fora do gate local: prova externa continua requisito obrigatório aberto para entrega geral, sem waiver ou aceite de dívida; próxima ação é teste real com operador. |
 
 ## Independent No-Context Final Review Gate (Deterministic Floor From Audit Escalation)
 
@@ -937,8 +972,8 @@ Uma etapa bounded com cinco clientes e seis leituras por cliente,30verificaçõe
 - **Package mode:** bounded-file-set
 - **Final review isolation mode:** fresh internal no-context reviewer
 - **Internal reviewer mandate:** required; distinto do executor, aguardar terminal sem deadline arbitrário.
-- **Final review status:** not_run
-- **Findings summary:** planejado para após implementação/prova primária; não foi dispensado.
+- **Final review status:** no_material_findings
+- **Findings summary:** fresh independente /root/final_review_cp27, gpt-6.1-sol/max, aceitou checkpoint local completo sem achados adicionais; schema válido, SHA256ecb944f247b1226bd1a5b88557980e34c26a331d43b7af0e0b54e7b6c1c01343, cp27-final-review.result.raw.json/merge. VAL-05 segue obrigatório e bloqueia entrega geral, sem dispensa.
 - **Evidence / reference:** artifacts/reviews/leadshug-number-onboarding-20261015
 - **Canonical multi-lane audit protocol:** audit-protocol-triple-review
 - **Waiver authority / reference:** n/a
@@ -947,8 +982,8 @@ Uma etapa bounded com cinco clientes e seis leituras por cliente,30verificaçõe
 
 - **Cutover audit decision:** required
 - **Why this decision:** credencial global é retirada; todos os consumers precisam convergir, sem shim/fallback.
-- **Cutover audit status:** blocked
-- **Evidence / reference:** delivery-audit-cp21-v2/round-01/cutover-integrity.result.raw.json aceitou convergência local sem fallback; CUTOVER-EXT-01 mantém VAL-05 pendente. Resolução da rodada01 preserva esse limite e requer delta após correções locais.
+- **Cutover audit status:** no_material_findings
+- **Evidence / reference:** delivery-audit-cp21-v2/round-02/cutover-integrity.result.raw.json aceita delta/convergência local com zero achados, mantido na fonte cp27 com somente2testes diferentes; resolução round02 e suplemento TQA documentam. CUTOVER-EXT-01/VAL-05 mantém entrega geral Pending, sem waiver.
 
 ## Delivery Confidence Gate (Required for `✅ Production-Ready`)
 
@@ -957,8 +992,8 @@ n/a; sem claim Production-Ready ou promoção remota.
 ## Module Consolidation Gate (Required Before `Completed`)
 
 - **Gate decision:** required
-- **Gate status:** not_run
-- **Evidence / reference:** módulos owner e contratos antes do código; Verified somente depois de evidência aceita. Nenhuma alteração de constituição planejada.
+- **Gate status:** passed
+- **Evidence / reference:** quatro módulos owner reconciliam implementação local exercitada e evidência cp27/reviews, com final review/closeout/VAL-05 pendentes explícitos. Contratos aprovados preservados, sem alteração constitucional ou claim de entrega completa.
 
 ## Commands (Run Locally)
 
@@ -1163,3 +1198,28 @@ Preservar all cp24 em voo e manifestos sem edição/interrupção. Depois, DevOp
 All cp24 terminou exit0:138APIunitários,286PG,28Webunitários,46browser =498;22migrações; raw c7f2a6c70384bea881ba5106787b4a1911e8fdc763760e80a8a8eb34faa73277. Inventário230entradas/228paths únicos pré/pós iguais, capturado antes de build/all. Root conferiu11hashes do handoff e230referências atuais. O handoff não exportou attestation e declarou lacuna; root encontrou os arquivos genuínos gerados pelo globalSetup às15:16:12/15:16:15Z, dentro desse all e antes dos workers. Retidos byte a byte em cp24-browser-attestation.json/cp24-pre-worker-freshness.json, fonte/API/DB22migrações/portas e bundle conferidos. SHA JS d14343604557296f2ed62c1df47d9c80d81c323abafd89ccbb64a6a0746ff4bd coincide com runtime HTTPS/imagem. root-cp24-receipt.json complementa a prova sem reescrever handoff ou produzir probe pré-worker retroativo. DevOps parou e foi reativado somente para cp25.
 
 Cp25 terminal STOP: somente scripts/start-channels-local.sh mudou, SHA a8b7790f68da1154a85eb3108ac7b1365e9b1d881af21fe089620db881377de5;229referências públicas iguais ao all, heads iguais. Matriz real Compose provou saved origin/porta, override explícito, arquivo público salvo com porta18084 distinta de8083, defaults, WSLENV/modifiers e portas inválidas; sem mutação de recursos na config-only. Só API recriada sem build/deps, mesma imagem; todos os demais containers/volumes preservados. HTTPS health/root/login/me200, cookie seguro/host-only e CORS exato204 com credentials; configuração privada intacta por booleanos e nenhuma ocorrência de segredo nos logs inspecionados em memória. Capabilities409ONBOARDING_PENDENTE permanece. Root conferiu8hashes do handoff e230entradas atuais; fonte congelada para delta, sem declarar gates finais passados ou VAL-05 dispensada.
+
+### Revisão cp25 terminal e duas provas negativas cp26
+
+Performance6.1/max zero achados aceitou NUM-PERF-01 e quatro amostras PCV; root derivou cp24-pcv-eps/frc/bci/rls.json com hashes canônicos e identidade real do revisor. Cutover nativo5.6-terra/max zero achados; architecture/security6.1/max zero achados, com posições explícitas P1/P2 e Rule-Spirit. TQA nativo5.6-terra/max concluiu duas lacunas específicas de prova, aceitas como TQA-CP25-01/02: spy realtime precisa observar o webhook antigo e recuperação precisa provar projeção divergente. São testes de comportamento já correto, não exploits reproduzidos nem nova funcionalidade. Conclusão genérica favorável de outro lane não substitui esses negativos explícitos.
+
+Todos leitores terminaram antes de retomar escrita. Remediação limitada aos dois paths de teste já admitidos: number-onboarding-flow.e2e-spec.ts e e2e/number-onboarding.spec.ts. API move/adiciona observação e para; Web acrescenta um caso com alteração legítima pela sessão concorrente no BFF real e para. Preservar produção, endpoints/fixtures, dois positivos e44baselines. Uma execução canônica all499 após ambas edições valida API/Web/novo negativo e inclui o inicializador atual, com raw completo, manifesto completo pré/pós e attestation. Não repetir suites parciais antes desse all sem falha concreta. Depois TQA fresh específico sobre os dois achados, preservando pareceres Performance/cutover/architecture sobre produção inalterada; sem novo round amplo só para zerar achados.
+
+
+### Handoff cp27 — validação integrada após cp26
+
+API e Web cp26 parados. Root conferiu hashes atuais dos dois testes e handoff Web; somente duas alterações de testes desde cp25. Perfil Operational/DevOps, Gate0 Genesis rejeitado pois contrato e runtime já existem, routing-cp27.json go. DevOps assume rodada única canônica all; expected499 é previsão, não resultado. Reter manifestos completos antes/depois e arquivos genuínos gerados antes dos workers, sem recriar operador ou modificar credenciais. Revisão TQA específica e final review ficam pendentes dos resultados.
+
+### cp27 — prova primária integrada aceita
+
+Uma rodada canônica `bash scripts/test-channels-local.sh all` saiu0:138unitAPI+286PG+28unitWeb+47browser=499,22migrações. Raw completo cp27-final-all.log SHA256da8b5f823300db161ecfffa8204a6fb6f98792f551f8528c5398f353950c60d5. Root-cp27-receipt.json confere230refs/228unique, delta exato de2testes desde cp25, manifestos pré/pós idênticos,7hashes de artefato,66entries do freshness incluindo deleção admitida e JS servido=build d1434360… antes dos workers. Preworker genuíno16:06:54/57Z, não probe retroativo; produção/operador intactos. API/Web/DevOps STOP. TQA suplemento fresh específico e final review continuam obrigatórios.
+
+### cp27 — TQA suplemento aceito e consolidação local
+
+Native fresh gpt-5.6-terra/max terminou exit0/turn.completed, schema válido; raw SHA2568bf9f15e70410cfb48a9504914f4f69c15d160b7c7cf1fab4885f7b921e43ccc. Aceita TQA-CP25-01/02, sem novo achado. Merge e round02 resolution=resolved preservam relatórios originais. Matriz25critérios,64findingrows,13REGSEC,PCV4/segurança/dívida/P1P2/RuleSpirit e módulos owner reconciliados com evidência local e limites. Final_review fresh distinto e commits/guardas locais continuam pendentes. Não abrir novo audit amplo para zerar histórico. VAL-05 obrigatória; TODO Pending.
+
+### cp27 — final review local, fonte commitada e handoff externo
+
+Final_review fresh /root/final_review_cp27 gpt-6.1-sol/max terminou sem achados adicionais e aceitou o checkpoint local, sem exigir nova suite ou auditoria. Raw ecb944f247b1226bd1a5b88557980e34c26a331d43b7af0e0b54e7b6c1c01343, schema/merge válidos; root integra o aceite. Após STOP de todos leitores atuais, commits locais de trabalho API f134bd11449a553e6f57e66cdc8fc71032151060, Web d33c82c26760c671d98cab6f3e7bfe5676122c69 e workspace4bccdc4aa470d1166bc14a681d0008f242db2562. Cada commit teve guard go, index explícito52/14/8paths públicos, whitespace check e bytes staged/committed iguais ao manifesto cp27. Bridge preserva heads antigos da execução; não afirma que499 rodaram nos novos commits. Sem payload operacional/.local-files, gitlinks, push de source, deploy ou mudança runtime.
+
+Checagem read-only do executor às16:30:49UTC confirmou gateway8083 e HTTPS configurado / e /health200, sem ler corpos/headers/private config ou mudar runtime. Isso prova alcance naquele instante, não pareamento. Messages e wizard continuam sem resposta; API não foi contornada. TODO active/Pending, requisito VAL-05 sem waiver e guard de entrega deve continuar no-go pelo único requisito externo.

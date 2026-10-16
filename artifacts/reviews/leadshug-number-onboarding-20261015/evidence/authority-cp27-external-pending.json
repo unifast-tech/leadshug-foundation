@@ -1,0 +1,36 @@
+{
+  "blocked": true,
+  "context": {
+    "approval_scope_present": true,
+    "approval_section_present": true,
+    "architecture_governance_required": true,
+    "architecture_governance_section_present": true,
+    "architecture_review_gates_required": true,
+    "architecture_supersede_trigger": false,
+    "current_delivery_stage": "Pending",
+    "delivery_claim": true,
+    "delivery_gate_rows": {
+      "Local CI-Equivalent Suite Matrix": 5,
+      "Pipeline/Copilot P1/P2 Preflight": 1,
+      "Rule-Spirit Anti-Pattern Hunt": 2
+    },
+    "execution_authority_granted": false,
+    "promotion_routing_rows": 64,
+    "require_delivery_gates": true,
+    "routing_preflight_outcome": "go",
+    "routing_preflight_required": true,
+    "routing_preflight_section_present": true,
+    "rules_ingestion_rows": 12,
+    "todo_path": "foundation_documentation/todos/active/features/TODO-leadshug-channel-connection-readiness.md",
+    "validation_mode": "execution-authority"
+  },
+  "pre_approval": false,
+  "violations": [
+    {
+      "code": "DELIVERY-GATE-STATUS-NOT-PASSING",
+      "message": "Local CI-Equivalent Suite Matrix row status `blocked` does not satisfy delivery: Prova externa | Cadastro real | SDK/QR+IN+OUT/recupera\u00e7\u00e3o em cada canal | App Meta eleg\u00edvel, HTTPS e n\u00fameros/interlocutor de teste | runbook local e checklist VAL-05 | Local-Implemented | blocked | validation-plans/leadshug-channel-readiness-20261015.md; cp22-meta-panel-setup.json | Usu\u00e1rio validou callback; messages/Wizard e OAuth/device/IN/OUT ainda ausentes, n\u00e3o dispensados.",
+      "resolution": "Run the gate, fix the blocker, or record an approved waiver/n/a rationale before claiming delivery.",
+      "section": "Local CI-Equivalent Suite Matrix"
+    }
+  ]
+}

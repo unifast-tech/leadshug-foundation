@@ -1,0 +1,54 @@
+{
+  "kind": "Post-final-review owner reconciliation; preserves frozen review snapshot/index without rewriting reviewed history",
+  "capturedUtc": "2026-10-16T16:35:50.279505+00:00",
+  "finalReviewSha256": "ecb944f247b1226bd1a5b88557980e34c26a331d43b7af0e0b54e7b6c1c01343",
+  "reviewer": "/root/final_review_cp27",
+  "disposition": "local checkpoint accepted; overall Pending, external VAL05 mandatory/unwaived",
+  "postReviewMetadataChanges": [
+    {
+      "path": "foundation_documentation/artifacts/dependency-readiness.md",
+      "reviewedSha256": "2901555f29980b3f941c7c4ccac3275f3a97d71f9f9ce494253ba493d5a3a005",
+      "postAdjudicationSha256": "8106246c8d1bc87ebcbd5eb07c36acbf200f41f78059740d81cad42ee6b3d3b1",
+      "reason": "post-review acceptance/status/source-commit metadata only; approved behavior unchanged"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/README.md",
+      "reviewedSha256": "853b2ddbcd5e456a77fb9f1fa4cc549cabf12c98c3c2ac97243763bd76bb4989",
+      "postAdjudicationSha256": "9b676c8c7660f1a33befe05fbdd7bd6a0ceeef2cfc7c11fedc365b600c826b27",
+      "reason": "post-review acceptance/status/source-commit metadata only; approved behavior unchanged"
+    },
+    {
+      "path": "foundation_documentation/modules/audit-and-history.md",
+      "reviewedSha256": "3f3e62920b4e2479ce0d50d2782984d0f5104371e5cc1685de67c440e22cec77",
+      "postAdjudicationSha256": "d384073967efa5fee12dcebbb70961b3a85e60bbcb6c3528705f656f1971db07",
+      "reason": "post-review acceptance/status/source-commit metadata only; approved behavior unchanged"
+    },
+    {
+      "path": "foundation_documentation/modules/identity-and-tenancy.md",
+      "reviewedSha256": "1e2bfc2530757b58e59405bbe30468c8cd7f6aa6cd387466b7d5d64059fc5937",
+      "postAdjudicationSha256": "678b090e7ef540a1388048e8cd03a41eadf01b1100420d73c45beb4ea11aad4d",
+      "reason": "post-review acceptance/status/source-commit metadata only; approved behavior unchanged"
+    },
+    {
+      "path": "foundation_documentation/modules/inbox-and-conversations.md",
+      "reviewedSha256": "e6b00110bf6c50bca2fa7f985620cdac98a2bf39dbf0a6ad55ea12420190aec7",
+      "postAdjudicationSha256": "383112b6b596c05b37ff3d945b1ee8b06bd8c5bcfd002a10456692f1b3bc708e",
+      "reason": "post-review acceptance/status/source-commit metadata only; approved behavior unchanged"
+    },
+    {
+      "path": "foundation_documentation/modules/integrations-and-channels.md",
+      "reviewedSha256": "aaf28fc3d8bf825a4a18dc1dbb5d60215daea5fa2b8f428a37f49dd02d1cd784",
+      "postAdjudicationSha256": "f3df654b293f2c318d7c80dce933450b3a8d7e7bf51f04c242d58692985920cb",
+      "reason": "post-review acceptance/status/source-commit metadata only; approved behavior unchanged"
+    }
+  ],
+  "sourceBridge": "cp27-committed-source-attestation.json",
+  "sourceBytesChangedSinceValidatedManifest": false,
+  "currentSourceCommits": {
+    "api-app": "f134bd11449a553e6f57e66cdc8fc71032151060",
+    "web-app": "d33c82c26760c671d98cab6f3e7bfe5676122c69",
+    ".": "4bccdc4aa470d1166bc14a681d0008f242db2562"
+  },
+  "runtimeRebuiltOrChanged": false,
+  "requiredDeliveryGuardExpected": "no-go while external proof row blocked"
+}

@@ -1,0 +1,24 @@
+{
+  "schema_version": "subagent-review-merge-v2",
+  "artifact_kind": "subagent_review_merge",
+  "authoritative": false,
+  "edit_policy": "derived_merge_packet",
+  "dispatch_path": "/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/delivery-audit-cp21-v2/round-02/dispatch/cutover-integrity.dispatch.json",
+  "review_kind": "cutover_integrity_audit",
+  "review_count": 1,
+  "reviewer_labels": [
+    "native-gpt-5.6-terra-max-cp25-cutover-integrity"
+  ],
+  "highest_finding_severity": "none",
+  "axis_summary": {
+    "performance": "acceptable",
+    "elegance": "acceptable",
+    "structural_soundness": "acceptable",
+    "operational_fit": "acceptable"
+  },
+  "recommended_paths": [
+    "Accept this advisory for the bounded CP25 correction gate with no source correction requested. Preserve the canonical resolver/identity route, exact retained-slot recovery checks, and wrapper behavior that lets Compose resolve saved values or explicit caller overrides before deriving the sole loopback port; its documented Compose default is a local configuration default, not a credential or ownership fallback. Retain the CP24 full-run and targeted CP25 wrapper evidence as recorded evidence rather than attributing the entire 498-test result to the wrapper-only delta; no fresh execution was performed by this reviewer. Final review should keep the explicit limits: EPS proves the repaired lookup but not an SLO, the PCV samples prove bounded local regression properties but not provider exactly-once behavior, and external real Meta/device/IN/OUT/recovery validation remains required before overall TODO completion. Keep TQA-CP21-02 visible as process debt with authentic future RED required, and keep BLG-leadshug-runtime-dependency-security constrained as recorded until its prerequisite remediation. Do not convert VAL-05 into accepted debt or repeat the whole audit solely to rediscover it."
+  ],
+  "exact_next_step": "Record reviewer resolutions in the governing TODO using the machine-checkable resolution table or equivalent gate ledger, then extract the derived resolution packet and decide whether another bounded review pass is still required.",
+  "findings": []
+}

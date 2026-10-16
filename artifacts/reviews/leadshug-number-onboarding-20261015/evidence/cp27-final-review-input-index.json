@@ -1,0 +1,368 @@
+{
+  "kind": "Frozen consolidated bounded local final-review index; derived evidence only",
+  "capturedUtc": "2026-10-16T16:20:07.638518+00:00",
+  "publicSourceManifest": "cp27-source-manifest-after.json",
+  "publicSourceManifestSha256": "afdd4377af252154e6f5bbd0dea3e6c0e2b76e9b65a3ef618eb44d08c78a4ad0",
+  "publicEntries": 230,
+  "uniquePublicPaths": 228,
+  "cp25SourceDelta": [
+    {
+      "path": "api-app/test/number-onboarding-flow.e2e-spec.ts",
+      "before": "40128cbe31499fa490430632367967d3b4a8851a7f53321ebf160dc69c533ff5",
+      "after": "c1b8b03351179721a641d7139d46d7e93b45ae335ac5788cf5436fc35b69e280"
+    },
+    {
+      "path": "web-app/e2e/number-onboarding.spec.ts",
+      "before": "4076adf4405bc61818d985e1550fe49d7662862884843e5846b3e16be54acea3",
+      "after": "47fdb27c0b592dfe8df31b8ad1be219d96720abdc00660bc15f6b2c03096f31b"
+    }
+  ],
+  "references": [
+    {
+      "path": "foundation_documentation/artifacts/dependency-readiness.md",
+      "sha256": "2901555f29980b3f941c7c4ccac3275f3a97d71f9f9ce494253ba493d5a3a005"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/README.md",
+      "sha256": "853b2ddbcd5e456a77fb9f1fa4cc549cabf12c98c3c2ac97243763bd76bb4989"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/delivery-audit-cp21-v2/round-01/cutover-integrity.result.raw.json",
+      "sha256": "2836148d19567807a1a899886eebcfaeb44d935f848c0c9264ba874a32ef5ede"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/delivery-audit-cp21-v2/round-01/performance.result.raw.json",
+      "sha256": "26175cfae2c07e8aece2ba674c7c4de016161b0905155526c53d810db0ffb916"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/delivery-audit-cp21-v2/round-01/resolution.md",
+      "sha256": "0f6179d0d5b8e04dc74b1358e1062906caf137333ffcbb42d5af95228f4efa6b"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/delivery-audit-cp21-v2/round-01/test-quality.result.raw.json",
+      "sha256": "9a98f0c50cb7a16d229a9b3c4aea554c6583985cceeb7fa3ebcc50f956d22328"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/delivery-audit-cp21-v2/round-02/cutover-integrity.result.raw.json",
+      "sha256": "03ee6018f4e54e8304b926ca9a5097bf72a1b3ea61bea1253960402c185270e3"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/delivery-audit-cp21-v2/round-02/performance.result.raw.json",
+      "sha256": "044c9d955e7c78e6873d0f3ce3c7b54c86b9b30405bc6075c7d0c876ad238770"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/delivery-audit-cp21-v2/round-02/resolution.md",
+      "sha256": "fdd2fe7e46eb8412f1b379f206c85ec0a5feefe172d8e2634b7e133bbdfc080d"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/delivery-audit-cp21-v2/round-02/test-quality.result.raw.json",
+      "sha256": "5d79b1cc4c9bdaae2bfa0642e80af0aac9ef1e85cac1cc37ddbfe60528af7499"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/authority-cp27-execution.json",
+      "sha256": "e7a70b3772983a24dcf74952e0c654a6dc6e2be457a81770de69abffeb54d145"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/authority-cp27-external-pending.json",
+      "sha256": "252c01c71dec8a374a3fc7e89fa4619accebdfa14a68562f508dcb67b1794abd"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/completion-cp27-pre-final.json",
+      "sha256": "0e3baba6fa2d7390c9e8c10aa63f10fd6d6ed7f5942d2440f5cafb05332d6af6"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp21-architecture-security.result.raw.json",
+      "sha256": "3fed808b7a9359201db548e5219b498b7e54a18af13db4ffae604f662655e336"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp21-dependency-exposure-diagnostic.json",
+      "sha256": "61afd41adb2cf1335be5fd2345449961db19029da9e98c96d2488c38045f7763"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp21-pcv-bci.json",
+      "sha256": "d34f2dd338c2c145b83c6cf1fbe7d18019a77a7c968f8a6903f45965237c462e"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp21-pcv-frc.json",
+      "sha256": "20ca3039aa4c87bcf06856718d72d3f86eef4754a8efad46c3ff9ca0c991e6e9"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp21-pcv-rls.json",
+      "sha256": "f5fd08798fc4a409db48aecfafd9f02a461d239ec0a1f8a754c1288349339b62"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp22-api-validation-rerun3.log",
+      "sha256": "9aa7683bd56eccbe1407dd3ea2a1953ec78412cc6061d9c4ae543a298f562e39"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp22-https-lifecycle.json",
+      "sha256": "d2069835a9fd56847a8ce416a9ca52ddb04bfd89d53fd713e2243f410609a363"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp22-meta-panel-setup.json",
+      "sha256": "cf511a7224efce30dfdb51f04dee308310bca20db45aba65b10dcedf4ff4cfaf"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp22-rerun3-handoff.md",
+      "sha256": "9e46cdf3a35321d7cfe66bfc5b7d46bd1c1a41aa2b6830be893efa1e2d4135b1"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp22-rerun3-result.json",
+      "sha256": "8c40c14cad0d334684dbb6d0e186eb64d000a1404b4d1ac88f14358e0ee99e2b"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp23-web-final-green-web.log",
+      "sha256": "109da24ff9b687a3cd2e8d5a1ecc7f1a5b6f268dc96d4b9127082963fe2797af"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp23-web-green-browser.log",
+      "sha256": "11f9cf5abdfadadd8f4bc2789fc3fd1015d00ea6c7b72c8cd94aa524fb07bf0d"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp23-web-handoff.md",
+      "sha256": "ad77fae06e3a0a0f0bd358f92db77e367e6775eb3c9764d0da16873ebd86007a"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp23-web-red-confirmed.log",
+      "sha256": "c8ff6a514631556fe1cbfd42a4aac11cb676d8e912909b0aba73454c27f3c1cc"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp24-browser-attestation.json",
+      "sha256": "486c1b53f51b257edbc4c18c44272fa5ed9e0478a03e29e6ac536432e2099398"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp24-final-all.log",
+      "sha256": "c7f2a6c70384bea881ba5106787b4a1911e8fdc763760e80a8a8eb34faa73277"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp24-https-session-capability-proof.json",
+      "sha256": "7b6946b0bfe9530d7f7668d7ea8fee66f86da653b2ab31352e91ca288bae0116"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp24-integrated-runtime-all-handoff.json",
+      "sha256": "8ddc39f2e7ddcf0fc3df9b043e017e408b46b303dab4f42f906351169dfe5d58"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp24-integrated-runtime-all-handoff.md",
+      "sha256": "68fa234b8a260f595c8a05f653f9fba78d7e19127f70706fae4942b6cda3d544"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp24-log-hygiene-scan.json",
+      "sha256": "63601615cf9b4f17983ea024c213cce44c8bdecb5d8e331d966be3806d1c944f"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp24-operator-runtime-proof.json",
+      "sha256": "fc1cd11254e731837e27bc58fe3fbea01d2f746d3c52fb79dfe3151b08006bf3"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp24-operator-up.log",
+      "sha256": "6226220b62fb18d3ca5262a7a90b4ac2ec044e8894b494fae5fafe489bd80856"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp24-origin-precedence-diagnostic.json",
+      "sha256": "a1455295870e2710009cdc23a5c3a3e478180e8e3f4d7a9d759beb89ed23a85f"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp24-pcv-bci.json",
+      "sha256": "acb8e1ca8e29e367f1f3c5cc9ca8c5e1bc9c245d40d5510ad57ecd9d38a832b3"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp24-pcv-eps.json",
+      "sha256": "d4779dcab84ec44707c55883a199ff01bdfbf580a9411285521e37eb00481f65"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp24-pcv-frc.json",
+      "sha256": "3e78385044d7e404a1785813d8f9569ff4302d1864acc543bc8ec5ca7aff6dc8"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp24-pcv-rls.json",
+      "sha256": "4cb60f7ca07d14ccc133eba8a5d9d9758b969c3710a48c796b11f76470244ec7"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp24-pre-worker-freshness.json",
+      "sha256": "c9f844044f93f9b9b2f44d9550561a4458546fc5bf9f378bc1f3c6f714360a86"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp24-production-image-npm-audit.json",
+      "sha256": "7f6bc7ab3cf20edfcfb2de6bd1753e56ebb0bc9153c0e5a62f02d59332511366"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp24-served-bundle-proof.json",
+      "sha256": "522e25a8047981759137b606cbd3449ebd2b7318a40f9006d05f3f6b46b77ae0"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp24-source-manifest-after.json",
+      "sha256": "1667735c749f873f9ffca59dab22cf5e2484f2f850efcb6fdcb8a8be6c18aa5b"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp24-source-manifest-before.json",
+      "sha256": "60b0af3ef1140ce3a8b3a351ffdc04b4ac3df86e4835197a3605e3ca7521abe2"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp24-source-manifest-comparison.json",
+      "sha256": "052fb37e6673fbe5aadd53d88c0844a07d312c6848fcefbfed48c77a9f274e49"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp25-after-api-recreate-runtime-state.json",
+      "sha256": "797b3528f0f17e0dec116ea5d315642c8e7c2be7dbf265baa290665ab10b2d4d"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp25-architecture-security.result.raw.json",
+      "sha256": "95dd1de10baa6e2af632a5140335c71c87709ed984fc7126624e793ac5f98386"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp25-before-api-recreate.json",
+      "sha256": "7046fb6145ef120f94ce3da7f9e19207ff31402940e547a92d4ab93d8e148338"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp25-config-precedence-proof.json",
+      "sha256": "8f280a20cf48e3947b43382aa3f6b7a9ec29204bcf94656a7b03f79a0a003653"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp25-https-runtime-proof.json",
+      "sha256": "8b8a0041162ed4404b74bb6c90f75771e900eaad2c225dca37bdc6ace4c3c6c4"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp25-log-hygiene-scan.json",
+      "sha256": "f6393f8a42e31a990d916051bc3a70c224d05139faaa92b10a1c42b45402733e"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp25-origin-precedence-runtime-handoff.json",
+      "sha256": "ff35426c525ba2c24dcf53310051e11056385583aad30c387737a4195aaf9b78"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp25-origin-precedence-runtime-handoff.md",
+      "sha256": "39345561f9a7d34a2456aa236859fe2ccf282efc39b4e6e986b7e42e1da53363"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp25-source-delta-comparison.json",
+      "sha256": "e550f67a74967b2d2777b5f9e9ea047b00363fea7e8064b4085ca31e53a367b5"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp25-source-manifest-after.json",
+      "sha256": "43cd84f4e3d14e40ecc5e7b546b732273a79744a558278c98b6feeb9dfc3fd44"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp25-source-manifest-before.json",
+      "sha256": "1667735c749f873f9ffca59dab22cf5e2484f2f850efcb6fdcb8a8be6c18aa5b"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp27-browser-attestation.json",
+      "sha256": "084b33191a3bcf83fd88a619d8c1ab0633dd31cc3b4d65eee31472a43bbf8e45"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp27-final-all.log",
+      "sha256": "da8b5f823300db161ecfffa8204a6fb6f98792f551f8528c5398f353950c60d5"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp27-final-review-package.md",
+      "sha256": "c2abef1ccf76bf502fe4ac2f6795aec3dc00dae03ad219869854a72e16ade037"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp27-final-todo-snapshot.md",
+      "sha256": "356c836f1279796872ad0b67e06600f4a919981fa92105ff1766e875987af6ca"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp27-handoff.json",
+      "sha256": "14031bdf6c909db695e3df116d009d647b74e600504cd72c4e1742a94460ce57"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp27-handoff.md",
+      "sha256": "c8d5db5ac640a51be93dc8e8e7f17a319f226db8b82535e2d8db9fa1e4619191"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp27-pre-worker-freshness.json",
+      "sha256": "5703633f5e2c537b3f9753702080440e1b6d15420581a234752f34d926e0bafb"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp27-source-manifest-after.json",
+      "sha256": "afdd4377af252154e6f5bbd0dea3e6c0e2b76e9b65a3ef618eb44d08c78a4ad0"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp27-source-manifest-before.json",
+      "sha256": "a230556c37ff2f5a5e13ee13a0518aa1d4e56c4bf29a38fab201c6cb1c8f6351"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp27-tqa-supplement-package.md",
+      "sha256": "866c7f608176345528a3abb527a5ce5be3cc3e592fb6870e3bd61c79744f5556"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp27-tqa-supplement.dispatch.json",
+      "sha256": "4efb248da65e7281f42510849d50d406a53b9aa85545dc7f044445a653f9915a"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp27-tqa-supplement.merge.json",
+      "sha256": "a66c30e0d44e173c75d55fa71d81f5cd470f97dc42b7cecadc55c6b2e1a99e9d"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp27-tqa-supplement.result.raw.json",
+      "sha256": "8bf9f15e70410cfb48a9504914f4f69c15d160b7c7cf1fab4885f7b921e43ccc"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/delivery-input-index-cp21-v2.json",
+      "sha256": "0009ae2866f66c97e016b81bae5d133ff5794bea508542e20a8c9c066b0b5732"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/delivery-review-package-cp21-v2.md",
+      "sha256": "58034629ef532c33436db7ea5dc86a869782ef9c90716f03a2cf89ef5560fbe9"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/delivery-todo-snapshot-cp25.md",
+      "sha256": "17d9b9eaa224a21617b4cefa0772e4488a413aa14c6ab4a9ac93f75045eea2e1"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/diff-cp27-pre-final.json",
+      "sha256": "52fd5be194d953189981e194cf68d16f2a3bd7b82facad572a42bb59bd2e79c9"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/root-cp24-receipt.json",
+      "sha256": "11bb08588f09ca0cf4fca9ceb80c2c1ee5cc7b32a78d0112591d1ca401caae09"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/root-cp25-receipt.json",
+      "sha256": "87a835764989737c489bab0c33ae2bcf82e4e389e315149bea1cfc7fc73f5973"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/root-cp27-receipt.json",
+      "sha256": "d3db4effd95e95f4b2649658f869e13a0356d1d0f462c60537f513c5afdc96d0"
+    },
+    {
+      "path": "foundation_documentation/artifacts/validation-plans/leadshug-channel-readiness-20261015.md",
+      "sha256": "35e8bfce16aec38908957f58135715aa5df3265456568316f955d1c51839de84"
+    },
+    {
+      "path": "foundation_documentation/backlog/README.md",
+      "sha256": "f49c7b5e9410c69210e06ddf95d8772ff4f36aede75d2f53d97b66f0272fd4cd"
+    },
+    {
+      "path": "foundation_documentation/modules/audit-and-history.md",
+      "sha256": "3f3e62920b4e2479ce0d50d2782984d0f5104371e5cc1685de67c440e22cec77"
+    },
+    {
+      "path": "foundation_documentation/modules/identity-and-tenancy.md",
+      "sha256": "1e2bfc2530757b58e59405bbe30468c8cd7f6aa6cd387466b7d5d64059fc5937"
+    },
+    {
+      "path": "foundation_documentation/modules/inbox-and-conversations.md",
+      "sha256": "e6b00110bf6c50bca2fa7f985620cdac98a2bf39dbf0a6ad55ea12420190aec7"
+    },
+    {
+      "path": "foundation_documentation/modules/integrations-and-channels.md",
+      "sha256": "aaf28fc3d8bf825a4a18dc1dbb5d60215daea5fa2b8f428a37f49dd02d1cd784"
+    },
+    {
+      "path": "foundation_documentation/project_constitution.md",
+      "sha256": "f9b8d3397a4f78c74f4c29739eb509d12bfc9ccda84a50fed718bfe7a668566a"
+    }
+  ],
+  "reviewRubrics": [
+    "delphi-ai/skills/test-quality-audit/SKILL.md",
+    "delphi-ai/skills/verification-debt-audit/SKILL.md",
+    "delphi-ai/workflows/docker/independent-test-quality-audit-method.md",
+    "delphi-ai/workflows/docker/performance-concurrency-validation-method.md",
+    "delphi-ai/schemas/subagent_review_result.schema.json",
+    "delphi-ai/workflows/docker/independent-final-review-method.md"
+  ],
+  "privateOrOperationalPayloadsReadOrHashed": 0,
+  "limits": "Overall Pending, mandatory external VAL05 absent, required-delivery guard correctly no-go; final review can accept only local checkpoint."
+}
