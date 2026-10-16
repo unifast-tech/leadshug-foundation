@@ -1,0 +1,20 @@
+{
+  "captured_utc": "2026-10-16T15:22:39.563384+00:00",
+  "kind": "root read-only cp24 receipt before wrapper delta",
+  "verified_handoff_artifacts": 11,
+  "public_manifest_entries_current": 230,
+  "private_or_operational_payloads_read": 0,
+  "retained_generated_preworker_artifacts": [
+    {
+      "path": "cp24-pre-worker-freshness.json",
+      "sha256": "c9f844044f93f9b9b2f44d9550561a4458546fc5bf9f378bc1f3c6f714360a86",
+      "original_captured_at": "2026-10-16T15:16:15.051Z"
+    },
+    {
+      "path": "cp24-browser-attestation.json",
+      "sha256": "486c1b53f51b257edbc4c18c44272fa5ed9e0478a03e29e6ac536432e2099398",
+      "original_captured_at": "2026-10-16T15:16:12.016Z"
+    }
+  ],
+  "correction_to_handoff": "The handoff did not export dedicated preworker proof, but canonical globalSetup generated these files at15:16:12Z and15:16:15Z during this run. Exact bytes retained after run; not a newly performed preworker probe. Source hashes and served/operator bundle match. Original handoff unchanged."
+}

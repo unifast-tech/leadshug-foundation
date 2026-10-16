@@ -1,0 +1,22 @@
+{
+  "checkpoint": "cp24-source-manifest-comparison",
+  "captured_utc": "2026-10-16T15:20:53.379929+00:00",
+  "pre_entries": 230,
+  "post_entries": 230,
+  "pre_unique_paths": 228,
+  "post_unique_paths": 228,
+  "entries_identical_in_order": true,
+  "changed_entries": [],
+  "added_entries": [],
+  "missing_entries": [
+    "api-app/src/domain/channels/channels.service.spec.ts"
+  ],
+  "only_expected_historical_absence": true,
+  "heads_unchanged": true,
+  "source_heads": {
+    ".": "cab23188ec796f79131467dcce0a16acedab8d4f",
+    "api-app": "ae6a9662c29b77276351aa9de653a47276372246",
+    "web-app": "4e56f6c1f4515b918d05b8c87e890d42e8542c56"
+  },
+  "private_or_operational_paths_read_or_hashed": 0
+}

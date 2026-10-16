@@ -1,0 +1,12 @@
+{
+  "checkpoint": "cp24-origin-precedence-diagnostic",
+  "captured_utc": "2026-10-16T15:20:32.586183+00:00",
+  "private_values_emitted": false,
+  "saved_channel_origin_present": true,
+  "saved_channel_origin_matches_current_https_host": true,
+  "effective_api_web_origin_matches_current_https_host": false,
+  "effective_api_web_origin_is_loopback_http": true,
+  "saved_node_env_production": true,
+  "effective_node_env_production": true,
+  "saved_origin_or_effective_runtime_mutated": false
+}

@@ -1,0 +1,310 @@
+Compose topology valid: gateway is the only loopback-published service.
+ Container leadshug_channels_local-evolution-postgres-1  Running
+ Container leadshug_channels_local-evolution-redis-1  Running
+ Container leadshug_channels_local-postgres-1  Running
+#0 building with "desktop-linux" instance using docker driver
+
+#1 [api internal] load build definition from Dockerfile
+#1 transferring dockerfile: 2.54kB 0.0s done
+#1 DONE 0.0s
+
+#2 [api internal] load metadata for docker.io/library/node:22-alpine
+#2 DONE 0.0s
+
+#3 [api internal] load .dockerignore
+#3 transferring context: 127B done
+#3 DONE 0.0s
+
+#4 [api builder  1/10] FROM docker.io/library/node:22-alpine
+#4 DONE 0.0s
+
+#5 [api internal] load build context
+#5 transferring context: 38.15kB 0.0s done
+#5 DONE 0.0s
+
+#6 [api builder  2/10] RUN apk add --no-cache openssl
+#6 CACHED
+
+#7 [api builder  3/10] WORKDIR /app
+#7 CACHED
+
+#8 [api builder  4/10] COPY package.json package-lock.json ./
+#8 CACHED
+
+#9 [api builder  5/10] RUN npm ci
+#9 CACHED
+
+#10 [api builder  6/10] COPY prisma ./prisma
+#10 DONE 0.1s
+
+#11 [api builder  7/10] RUN npx prisma generate
+#11 2.667 Prisma schema loaded from prisma/schema.prisma
+#11 3.386 
+#11 3.386 ✔ Generated Prisma Client (v6.19.3) to ./node_modules/@prisma/client in 355ms
+#11 3.386 
+#11 3.386 Start by importing your Prisma Client (See: https://pris.ly/d/importing-client)
+#11 3.386 
+#11 3.386 Tip: Interested in query caching in just a few lines of code? Try Accelerate today! https://pris.ly/tip-3-accelerate
+#11 3.386 
+#11 DONE 3.5s
+
+#12 [api builder  8/10] COPY tsconfig.json tsconfig.build.json nest-cli.json ./
+#12 DONE 0.1s
+
+#13 [api builder  9/10] COPY src ./src
+#13 DONE 0.1s
+
+#14 [api builder 10/10] RUN npm run build
+#14 0.467 
+#14 0.467 > @leadshug/api@0.1.0 build
+#14 0.467 > nest build
+#14 0.467 
+#14 DONE 9.0s
+
+#15 [api runner  2/10] RUN apk add --no-cache openssl su-exec
+#15 CACHED
+
+#16 [api runner  3/10] WORKDIR /app
+#16 CACHED
+
+#17 [api runner  4/10] COPY package.json package-lock.json ./
+#17 CACHED
+
+#18 [api runner  5/10] RUN npm ci --omit=dev && npm cache clean --force
+#18 CACHED
+
+#19 [api runner  6/10] COPY --from=builder /app/node_modules/.prisma ./node_modules/.prisma
+#19 DONE 0.1s
+
+#20 [api runner  7/10] COPY --from=builder /app/dist ./dist
+#20 DONE 0.1s
+
+#21 [api runner  8/10] COPY --from=builder /app/prisma ./prisma
+#21 DONE 0.0s
+
+#22 [api runner  9/10] COPY docker/entrypoint.sh /entrypoint.sh
+#22 DONE 0.0s
+
+#23 [api runner 10/10] RUN sed -i 's/\r$//' /entrypoint.sh && chmod +x /entrypoint.sh
+#23 DONE 0.2s
+
+#24 [api] exporting to image
+#24 exporting layers 0.1s done
+#24 writing image sha256:c2e8d62bde2c85305deb9d72569f773072e77292465e09ed7283051b40ed4f4f done
+#24 naming to docker.io/library/leadshug_channels_local-api done
+#24 DONE 0.2s
+
+#25 [api] resolving provenance for metadata file
+#25 DONE 0.0s
+ Container leadshug_channels_local-postgres-1  Running
+Prisma schema loaded from prisma/schema.prisma
+Datasource "db": PostgreSQL database "leadshug_channels_local", schema "public" at "postgres:5432"
+
+22 migrations found in prisma/migrations
+
+Applying migration `20261016160000_number_onboarding_current_channel_identity_index`
+
+The following migration(s) have been applied:
+
+migrations/
+  └─ 20261016160000_number_onboarding_current_channel_identity_index/
+    └─ migration.sql
+      
+All migrations have been successfully applied.
+npm notice
+npm notice New major version of npm available! 10.9.9 -> 12.2.0
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.0
+npm notice To update run: npm install -g npm@12.2.0
+npm notice
+#0 building with "desktop-linux" instance using docker driver
+
+#1 [api internal] load build definition from Dockerfile
+#1 transferring dockerfile: 2.54kB done
+#1 DONE 0.0s
+
+#2 [api internal] load metadata for docker.io/library/node:22-alpine
+#2 DONE 0.0s
+
+#3 [api internal] load .dockerignore
+#3 transferring context: 127B done
+#3 DONE 0.0s
+
+#4 [api builder  1/10] FROM docker.io/library/node:22-alpine
+#4 DONE 0.0s
+
+#5 [api internal] load build context
+#5 transferring context: 11.26kB 0.0s done
+#5 DONE 0.0s
+
+#6 [api builder  3/10] WORKDIR /app
+#6 CACHED
+
+#7 [api builder  7/10] RUN npx prisma generate
+#7 CACHED
+
+#8 [api builder  8/10] COPY tsconfig.json tsconfig.build.json nest-cli.json ./
+#8 CACHED
+
+#9 [api builder  6/10] COPY prisma ./prisma
+#9 CACHED
+
+#10 [api runner  9/10] COPY docker/entrypoint.sh /entrypoint.sh
+#10 CACHED
+
+#11 [api runner  5/10] RUN npm ci --omit=dev && npm cache clean --force
+#11 CACHED
+
+#12 [api runner  4/10] COPY package.json package-lock.json ./
+#12 CACHED
+
+#13 [api runner  7/10] COPY --from=builder /app/dist ./dist
+#13 CACHED
+
+#14 [api builder  5/10] RUN npm ci
+#14 CACHED
+
+#15 [api runner  3/10] WORKDIR /app
+#15 CACHED
+
+#16 [api builder 10/10] RUN npm run build
+#16 CACHED
+
+#17 [api runner  2/10] RUN apk add --no-cache openssl su-exec
+#17 CACHED
+
+#18 [api builder  4/10] COPY package.json package-lock.json ./
+#18 CACHED
+
+#19 [api builder  2/10] RUN apk add --no-cache openssl
+#19 CACHED
+
+#20 [api runner  8/10] COPY --from=builder /app/prisma ./prisma
+#20 CACHED
+
+#21 [api runner  6/10] COPY --from=builder /app/node_modules/.prisma ./node_modules/.prisma
+#21 CACHED
+
+#22 [api builder  9/10] COPY src ./src
+#22 CACHED
+
+#23 [api runner 10/10] RUN sed -i 's/\r$//' /entrypoint.sh && chmod +x /entrypoint.sh
+#23 CACHED
+
+#24 [api] exporting to image
+#24 exporting layers done
+#24 writing image sha256:c2e8d62bde2c85305deb9d72569f773072e77292465e09ed7283051b40ed4f4f done
+#24 naming to docker.io/library/leadshug_channels_local-api done
+#24 DONE 0.0s
+
+#25 [api] resolving provenance for metadata file
+#25 DONE 0.0s
+
+#26 [web internal] load build definition from Dockerfile
+#26 transferring dockerfile: 1.30kB done
+#26 DONE 0.0s
+
+#2 [web internal] load metadata for docker.io/library/node:22-alpine
+#2 DONE 0.0s
+
+#27 [web internal] load metadata for docker.io/library/nginx:alpine
+#27 DONE 0.0s
+
+#28 [web internal] load .dockerignore
+#28 transferring context: 146B done
+#28 DONE 0.0s
+
+#4 [web builder 1/6] FROM docker.io/library/node:22-alpine
+#4 DONE 0.0s
+
+#29 [web runner 1/5] FROM docker.io/library/nginx:alpine
+#29 DONE 0.0s
+
+#30 [web internal] load build context
+#30 transferring context: 45.47kB 0.0s done
+#30 DONE 0.0s
+
+#31 [web builder 3/6] COPY package.json package-lock.json ./
+#31 CACHED
+
+#32 [web builder 2/6] WORKDIR /web
+#32 CACHED
+
+#33 [web builder 4/6] RUN npm ci
+#33 CACHED
+
+#34 [web builder 5/6] COPY . .
+#34 DONE 0.1s
+
+#35 [web builder 6/6] RUN npm run build
+#35 0.439 
+#35 0.439 > @leadshug/web@0.1.0 build
+#35 0.439 > tsc -b && vite build
+#35 0.439 
+#35 8.387 vite v5.4.21 building for production...
+#35 8.481 transforming...
+#35 10.02 ✓ 58 modules transformed.
+#35 10.23 rendering chunks...
+#35 10.25 computing gzip size...
+#35 10.26 dist/index.html                   0.69 kB │ gzip:  0.44 kB
+#35 10.26 dist/assets/index-wuzy3kMN.css    8.32 kB │ gzip:  2.39 kB
+#35 10.26 dist/assets/index-txvhtd65.js   257.88 kB │ gzip: 79.07 kB
+#35 10.26 ✓ built in 1.83s
+#35 DONE 10.3s
+
+#29 [web runner 1/5] FROM docker.io/library/nginx:alpine
+#29 CACHED
+
+#36 [web runner 2/5] COPY --from=builder /web/dist /usr/share/nginx/html
+#36 DONE 0.1s
+
+#37 [web runner 3/5] COPY nginx/default.conf.template /etc/nginx/templates/default.conf.template
+#37 DONE 0.0s
+
+#38 [web runner 4/5] COPY docker/40-config-js.sh /docker-entrypoint.d/40-config-js.sh
+#38 DONE 0.0s
+
+#39 [web runner 5/5] RUN sed -i 's/\r$//' /docker-entrypoint.d/40-config-js.sh && chmod +x /docker-entrypoint.d/40-config-js.sh
+#39 DONE 0.3s
+
+#40 [web] exporting to image
+#40 exporting layers 0.1s done
+#40 writing image sha256:d11a882849dc806e0d4728ca90a8fc8655aebc77421acefac63054b4fbb89365 done
+#40 naming to docker.io/library/leadshug_channels_local-web done
+#40 DONE 0.1s
+
+#41 [web] resolving provenance for metadata file
+#41 DONE 0.0s
+ Container leadshug_channels_local-evolution-postgres-1  Running
+ Container leadshug_channels_local-evolution-redis-1  Running
+ Container leadshug_channels_local-postgres-1  Running
+ Container leadshug_channels_local-evolution-1  Running
+ Container leadshug_channels_local-api-1  Recreate
+ Container leadshug_channels_local-api-1  Recreated
+ Container leadshug_channels_local-web-1  Recreate
+ Container leadshug_channels_local-web-1  Recreated
+ Container leadshug_channels_local-gateway-1  Recreate
+ Container leadshug_channels_local-gateway-1  Recreated
+ Container leadshug_channels_local-postgres-1  Waiting
+ Container leadshug_channels_local-evolution-redis-1  Waiting
+ Container leadshug_channels_local-evolution-postgres-1  Waiting
+ Container leadshug_channels_local-postgres-1  Healthy
+ Container leadshug_channels_local-api-1  Starting
+ Container leadshug_channels_local-evolution-postgres-1  Healthy
+ Container leadshug_channels_local-evolution-redis-1  Healthy
+ Container leadshug_channels_local-api-1  Started
+ Container leadshug_channels_local-api-1  Waiting
+ Container leadshug_channels_local-api-1  Healthy
+ Container leadshug_channels_local-web-1  Starting
+ Container leadshug_channels_local-web-1  Started
+ Container leadshug_channels_local-api-1  Waiting
+ Container leadshug_channels_local-api-1  Healthy
+ Container leadshug_channels_local-gateway-1  Starting
+ Container leadshug_channels_local-gateway-1  Started
+NAME                                           IMAGE                                                                                                      COMMAND                  SERVICE              CREATED          STATUS                   PORTS
+leadshug_channels_local-api-1                  leadshug_channels_local-api                                                                                "/entrypoint.sh node…"   api                  19 seconds ago   Up 6 seconds (healthy)   3000/tcp
+leadshug_channels_local-evolution-1            evoapicloud/evolution-api:v2.3.7@sha256:1bd8afc4a6cf48822e6cf02469aeae7bd35a12a6b616eacd1291926307f4d339   "/bin/bash -c '. ./D…"   evolution            3 hours ago      Up 3 hours               8080/tcp
+leadshug_channels_local-evolution-postgres-1   postgres:16                                                                                                "docker-entrypoint.s…"   evolution-postgres   14 hours ago     Up 3 hours (healthy)     5432/tcp
+leadshug_channels_local-evolution-redis-1      redis:7.4-alpine                                                                                           "docker-entrypoint.s…"   evolution-redis      14 hours ago     Up 3 hours (healthy)     6379/tcp
+leadshug_channels_local-gateway-1              nginx:alpine                                                                                               "/docker-entrypoint.…"   gateway              8 seconds ago    Up Less than a second    127.0.0.1:8083->80/tcp
+leadshug_channels_local-postgres-1             postgres:16                                                                                                "docker-entrypoint.s…"   postgres             14 hours ago     Up 3 hours (healthy)     5432/tcp
+leadshug_channels_local-web-1                  leadshug_channels_local-web                                                                                "/docker-entrypoint.…"   web                  9 seconds ago    Up 1 second              80/tcp

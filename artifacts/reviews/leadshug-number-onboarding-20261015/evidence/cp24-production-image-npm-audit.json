@@ -1,0 +1,17 @@
+{
+  "checkpoint": "cp24-production-image-npm-audit",
+  "captured_utc": "2026-10-16T15:20:13.520656+00:00",
+  "target": "running operator API image",
+  "command": "npm audit --omit=dev --json",
+  "exit_code": 1,
+  "counts": {
+    "total": 8,
+    "critical": 1,
+    "high": 6,
+    "moderate": 1,
+    "low": 0,
+    "info": 0
+  },
+  "upgrade_or_lockfile_change": false,
+  "raw_audit_output_persisted": false
+}

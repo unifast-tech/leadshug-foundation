@@ -1,0 +1,14 @@
+{
+  "checkpoint": "cp24-served-bundle-proof",
+  "captured_utc": "2026-10-16T15:18:27.771260+00:00",
+  "operator_origin": "https://mistress-spencer-mozilla-sciences.trycloudflare.com",
+  "gateway_loopback_root_status": 200,
+  "external_https_root_status": 200,
+  "external_https_js_status": 200,
+  "asset_path": "/assets/index-txvhtd65.js",
+  "served_js_sha256": "d14343604557296f2ed62c1df47d9c80d81c323abafd89ccbb64a6a0746ff4bd",
+  "container_js_sha256": "d14343604557296f2ed62c1df47d9c80d81c323abafd89ccbb64a6a0746ff4bd",
+  "served_matches_container": true,
+  "index_html_sha256": "f21b2cb8528bab142bdba0babc64b7cb4cff821152ef4416698fd062642d5acd",
+  "served_http_content_type_safe": true
+}

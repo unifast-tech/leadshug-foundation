@@ -1,0 +1,71 @@
+{
+  "checkpoint": "cp24-operator-runtime-proof",
+  "captured_utc": "2026-10-16T15:19:39.832161+00:00",
+  "operator_source_heads": {
+    ".": "cab23188ec796f79131467dcce0a16acedab8d4f",
+    "api-app": "ae6a9662c29b77276351aa9de653a47276372246",
+    "web-app": "4e56f6c1f4515b918d05b8c87e890d42e8542c56"
+  },
+  "containers": {
+    "leadshug_channels_local-api-1": {
+      "image_id": "sha256:c2e8d62bde2c85305deb9d72569f773072e77292465e09ed7283051b40ed4f4f",
+      "configured_image": "leadshug_channels_local-api",
+      "state": "running",
+      "health": "healthy"
+    },
+    "leadshug_channels_local-web-1": {
+      "image_id": "sha256:d11a882849dc806e0d4728ca90a8fc8655aebc77421acefac63054b4fbb89365",
+      "configured_image": "leadshug_channels_local-web",
+      "state": "running",
+      "health": null
+    },
+    "leadshug_channels_local-gateway-1": {
+      "image_id": "sha256:76090a34b858323b6ab169711adc08253b5bee7123a973dc581ed46b643bc109",
+      "configured_image": "nginx:alpine",
+      "state": "running",
+      "health": null
+    },
+    "leadshug_channels_local-postgres-1": {
+      "image_id": "sha256:80f4c7a5e91618546dce5b4fe60cf03b14c0f9efa7e40157278d122772ced8d2",
+      "configured_image": "postgres:16",
+      "state": "running",
+      "health": "healthy"
+    },
+    "leadshug_channels_local-evolution-1": {
+      "image_id": "sha256:385a3c4bedf42c66b46b43d06aae8712620144a84aa3b2c831b30c68435ab27c",
+      "configured_image": "evoapicloud/evolution-api:v2.3.7@sha256:1bd8afc4a6cf48822e6cf02469aeae7bd35a12a6b616eacd1291926307f4d339",
+      "state": "running",
+      "health": null
+    },
+    "leadshug_channels_local-evolution-postgres-1": {
+      "image_id": "sha256:80f4c7a5e91618546dce5b4fe60cf03b14c0f9efa7e40157278d122772ced8d2",
+      "configured_image": "postgres:16",
+      "state": "running",
+      "health": "healthy"
+    },
+    "leadshug_channels_local-evolution-redis-1": {
+      "image_id": "sha256:f84b0c4678011602b9b98c227a4dcd5468bf8b088b02fdd4165cb7758bad8058",
+      "configured_image": "redis:7.4-alpine",
+      "state": "running",
+      "health": "healthy"
+    }
+  },
+  "operator_migrations": {
+    "applied": 22,
+    "latest": "20261016160000_number_onboarding_current_channel_identity_index"
+  },
+  "effective_private_configuration": {
+    "production": true,
+    "meta_app_id_present": true,
+    "meta_app_secret_present": true,
+    "meta_signup_config_id_present": true,
+    "graph_version_present": true,
+    "credential_crypto_key_valid": true,
+    "session_secret_configured": true,
+    "unofficial_ceiling": true,
+    "public_origin_blank": true
+  },
+  "tunnel_origin": "https://mistress-spencer-mozilla-sciences.trycloudflare.com",
+  "root_health_status": 200,
+  "web_origen_cors_note": "Effective API WEB_ORIGIN remains loopback HTTP; cross-origin HTTPS preflight returned no Access-Control-Allow-Origin. Same-origin HTTPS UI/login/me were verified; no private config was changed."
+}

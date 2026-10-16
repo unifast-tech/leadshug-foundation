@@ -1,0 +1,33 @@
+{
+  "checkpoint": "cp24-runtime-log-hygiene-scan",
+  "captured_utc": "2026-10-16T15:19:53.156614+00:00",
+  "private_values_loaded_only_in_memory": true,
+  "raw_logs_persisted_by_scan": false,
+  "scans": {
+    "operator-up": {
+      "private_value_match": false,
+      "matched_variable_names": [],
+      "line_count": 310
+    },
+    "all": {
+      "private_value_match": false,
+      "matched_variable_names": [],
+      "line_count": 1245
+    },
+    "api": {
+      "private_value_match": false,
+      "matched_variable_names": [],
+      "line_count": 110
+    },
+    "gateway": {
+      "private_value_match": false,
+      "matched_variable_names": [],
+      "line_count": 40
+    },
+    "evolution": {
+      "private_value_match": false,
+      "matched_variable_names": [],
+      "line_count": 1000
+    }
+  }
+}

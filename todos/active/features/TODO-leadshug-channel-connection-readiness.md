@@ -41,7 +41,7 @@ Proposta ST-CON-01: jornada de cadastro de número, com infraestrutura local est
 
 - **Current delivery stage:** Pending
 - **Qualifiers:** none
-- **Next exact step:** DevOps cp24 atualiza runtime próprio para a fonte API/Web validada e22migrações, depois executa all com manifesto público completo antes/depois e raw completo. Web cp23 passou46browser e28unit/build; root conferiu230referências. Depois reviews delta; assinatura messages, wizard normal e VAL-05 continuam pendentes.
+- **Next exact step:** DevOps cp25 corrige somente precedência de origem/porta no inicializador e prova config/runtime HTTPS. All cp24 passou498testes/22migrações com230referências pré/pós iguais e raw completo; root reteve os artefatos reais de globalSetup pré-workers. Depois reviews delta; messages, wizard normal e VAL-05 continuam pendentes.
 
 ## Active Work State (Required While TODO Remains In `active/`)
 
@@ -372,7 +372,7 @@ Register: `foundation_documentation/artifacts/dependency-readiness.md`.
 
 ## Profile Scope & Handoffs (Required Before `APROVADO`)
 
-- **Current profile:** operational-devops, cp24 é único writer após API cp22 e Web cp23 terminais verdes e root conferir230referências públicas. API/Web parados; root governa evidência; próximo handoff Assurance.
+- **Current profile:** operational-devops, cp25 é único writer para precedência do inicializador após all cp24 terminal verde. API/Web parados; root governa evidência; próximo handoff Assurance.
 - **Primary execution profile:** operational-coder; handoff operational-devops antes de runtime/ingress.
 - **Active technical scope:** nestjs, react, postgresql, prisma, docker
 - **Expected supporting profiles:** operational-devops para target/callback; assurance-tester-quality e assurance-security-adversarial para gates aplicáveis.
@@ -751,19 +751,44 @@ Reviews serão fresh no-context gpt-6.1-sol/max para architecture_opinion e crit
 
 ## Decision Adherence Validation (Mandatory Before Delivery)
 
-`pending-freeze`: seção reservada para a fase aplicável. Nenhum review, guard, aprovação, medição, dispensa ou evidência de entrega foi executado/concedido neste draft; preencher antes do gate correspondente.
+Conferência de implementação/prova local; não certifica OAuth, aparelho ou IN/OUT reais. Architecture/security cp21 examinou D-01..10; correções cp22/cp23 e revisão delta permanecem rastreáveis separadamente. Delivery continua Pending.
+
+| Decision | Status | Evidence | Limit |
+| --- | --- | --- | --- |
+| D-01 | Adherent | number-registration.service.ts; number-onboarding-flow.e2e-spec.ts; cp23-web-handoff.md, duas recuperações preservam BU/canal e contagens | Sem número real cadastrado. |
+| D-02 | Adherent | meta.client.ts; CadastroNumero.tsx; capabilities/options/confirm em number-onboarding.spec.ts; cp22-meta-panel-setup.json | SDK/provider doubles nos testes; OAuth real pendente. |
+| D-03 | Adherent | tentativa/candidata/CAS em number-registration.service.ts; cp22-rerun3-result.json; RED/GREEN cp23 para NOVO expirado/ambíguo | Revisão delta da correção aguardada. |
+| D-04 | Adherent | channel-credential-crypto.ts/spec; channel-credential-resolver.ts; cp21 cutover/security; REG-SEC-06/07/12/13 | Dívida de dependências limitada ao operador privado, sem waiver externo. |
+| D-05 | Adherent | number-registration.service.ts; testes de assinatura ambígua em number-onboarding.spec.ts; callback validado pelo usuário em cp22-meta-panel-setup.json | Register/subscription/receipt reais não certificados. |
+| D-06 | Adherent | channels.service.ts; evolution.client.ts; REG-SEC-03/05/10; cp22-rerun3-result.json; cp21-provider-header-probe.json | Probe sem QR; aparelho e ownPhone reais pendentes. |
+| D-07 | Adherent | ProviderResourceIdentity e índice novo na migration20261016160000; REG-SEC-04/08/09/13; RLS/EPS no PG | Index Scan observado em2.000tombstones, não SLO. |
+| D-08 | Adherent | message-acceptance.service.ts; caller-scoping/Typebot/atendimento/public E2E; REG-SEC-01/02/11 completados em cp22 | IN/OUT externos continuam VAL-05. |
+| D-09 | Adherent | scripts/start-channels-local.sh e test-channels-local.sh; namespaces próprios e provas HTTPS cp22; runtime cp24 | Railway/histórico/Nova conversa proativa não implementados neste recorte. |
+| D-10 | Adherent | baselines e manifestos cp22/cp23; root-cp23-web-receipt.json; handoffs serializados e diff-cp23-pre-runtime go | Gitlinks observados, sem escrita manual; nenhum push de source. |
 
 ## Module Decision Consistency Validation (1-1 Mandatory Before Delivery)
 
-`pending-freeze`: seção reservada para a fase aplicável. Nenhum review, guard, aprovação, medição, dispensa ou evidência de entrega foi executado/concedido neste draft; preencher antes do gate correspondente.
+| Module Decision Ref | Handling | Status | Evidence | Notes |
+| --- | --- | --- | --- | --- |
+| integrations-and-channels#invariants | Preserve | Preserved | adapters Meta/Evolution; safe-redaction.spec.ts; cp21 security/cutover | Limites de provider real explícitos. |
+| project_constitution#system-invariants | Preserve | Preserved | testes grants/caller-scoping/cifra/PG; máscaras/env e migrations do runner | Constituição não alterada. |
+| inbox-and-conversations#contrato-aprovado-da-timeline-da-inbox | Preserve + aceitação compartilhada | Preserved | timeline.spec.ts baseline preservada; message-acceptance e atendimento E2E; cp23 browser46verde | Inbox.tsx não alterado. |
+| integrations-and-channels#cadastro-de-números-st-con-01 | Implement approved contract | Preserved | number-registration.service.ts; CadastroNumero.tsx; API cp22 e Web cp23 | Sem fallback global ou adoção Evolution legada. |
+| identity-and-tenancy#autorização-do-cadastro-de-números-st-con-01 | Preserve | Preserved | sessão/anti-CSRF e acesso; REG-SEC-01/05/06/07; novaBU/grants E2E | Identificadores de SDK não concedem acesso. |
+| audit-and-history#cadastro-e-diagnóstico-de-canais--st-con-01 | Preserve | Preserved | catálogo/cobertura; raw scoped e redigido REG-SEC-12/13; log hygiene cp21/cp22 | Histórico não apagado em cancelamento/repareamento. |
 
 ## Pipeline/Copilot P1/P2 Preflight
 
-`pending-freeze`: seção reservada para a fase aplicável. Nenhum review, guard, aprovação, medição, dispensa ou evidência de entrega foi executado/concedido neste draft; preencher antes do gate correspondente.
+| Reviewer Surface / Package | Review Focus | Status | Evidence Artifact / Command | Findings | Resolution / Notes |
+| --- | --- | --- | --- | --- | --- |
+| cp21 reviews + cp22/cp23 corrections | Falha de recuperação, acesso sem índice e simulações ausentes | planned | cp21-architecture-security.result.raw.json; round-01/resolution.md; cp22-rerun3-result.json; cp23-web-handoff.md | NUM-PERF-01, NUM-ADH-CP21-01, NUM-SEC-CP21-02 | Correções/provas primárias concluídas; all/final preflight delta ainda pendentes. |
 
 ## Rule-Spirit Anti-Pattern Hunt
 
-`pending-freeze`: seção reservada para a fase aplicável. Nenhum review, guard, aprovação, medição, dispensa ou evidência de entrega foi executado/concedido neste draft; preencher antes do gate correspondente.
+| Rule / Principle Surface | Bypass or Anti-Pattern Search Lens | Status | Evidence Artifact / Command | Findings | Resolution / Notes |
+| --- | --- | --- | --- | --- | --- |
+| Tenant/credential/canonical cutover | Fallback global, recurso estrangeiro, bridge/adoption e falso CONNECTED | planned | cp21 security/cutover; REG-SEC-01..13; revisão delta pendente | Nenhum bypass demonstrado; simulações específicas completadas cp22 | Aceite final aguarda nova revisão afetada. |
+| Evidência/runner/freshness | Harness rotulado como RED, mock de BFF, segredo no build e raw reconstruído como integral | planned | limites cp5a/cp20/cp23 e manifestos/máscaras source-owned | Proveniência mixed/test-after aceita como processo; raw final cp23 browser não capturado | All cp24 com captura integral e inventário prévio deve substituir limite, sem fabricar histórico. |
 
 ## Promotion Finding Routing Ledger (Required When Promotion/Review Finds Any Finding)
 
@@ -833,6 +858,7 @@ Achados exatos preservados em planning-architecture.json. `fixed-in-plan` signif
 
 | NUM-PERF-01 | high | release-blocker | fix-current-contract | Resolver de credencial carrega relação current_channel_id sem índice em cada envio; tombstones globais ampliam o scan | accepted-open | Performance cp21-v2; novo índice schema/migration e EXPLAIN da consulta real; EPS permanece aberto |
 | NUM-ADH-CP21-01 | medium | release-blocker | fix-current-contract | Nova autorização após NOVO expirado/ambíguo mantém canal no backend, mas UI tenta NOVO em slot ocupado | accepted-open | Architecture/security cp21; reutilizar canal exato por REAUTORIZAR e provar as duas falhas em browser real |
+| NUM-ROOT-ORIGIN-CP24-01 | medium | release-blocker | fix-current-contract | Inicializador exporta origem default e sobrepõe HTTPS salvo no arquivo privado, quebrando configuração efetiva após rebuild | accepted-open | scripts/start-channels-local.sh:14; corrigir precedência sem alterar arquivo privado e provar config/runtime HTTPS exatos |
 | NUM-SEC-CP21-02 | medium | release-blocker | fix-current-contract | Simulações exigidas REG-SEC-01/10/11 não discriminam todos os cenários nomeados | accepted-open | Trigger global estrangeiro anterior; verify antigo através de RENEW verificado; sequência epoch/quarentena/retry e ecos OUT concorrentes |
 
 Adicional de coerência do autor: envelope raw redigido e code/PIN transitórios explicitados, sem alterar modelo de autorização; REG-SEC-08/09.
@@ -1127,3 +1153,11 @@ RED cp23 confirmado em cp23-web-red-confirmed.log, antes de editar o componente:
 Web parou após46/46browser no runner canônico, inclusive as duas recuperações201/REAUTORIZAR na mesma BU/canal/geração, e28/28unitários/build Web. Dois manifestos pré/pós independentes de230referências permaneceram iguais; root os conferiu contra a fonte atual e verificou os SHA dos logs RED e Web. Handoff cp23-web-handoff.md e root-cp23-web-receipt.json preservam a prova. O browser final foi observado na sessão48343, sem raw completo capturado; isso não será apresentado como log integral. O all integrado já requerido capturará raw completo e substituirá esse limite. A primeira rodada pós-fix falhou somente nos seletores dos dois novos testes, pois o botão correto se chama Reservar reautorização; a busca foi ajustada sem relaxar contrato/DB/nonce nem mudar o texto do produto.
 
 DevOps cp24 recebe writer único para build/migration/runtime próprio e all integrado da fonte consolidada, com inventário público completo capturado ANTES do comando, comparação posterior e prova de bundle servido/attestation antes dos workers. Preservar túnel atual, Meta/OWNER/chaves/token/ACL, DB e volumes; não repetir bootstrap nem iniciar OAuth/QR por inferência. API/Web parados. Usuário também recebeu pergunta de estado sobre o wizard normal; nenhum onboarding ou módulo será contornado.
+
+### Precedência da origem no inicializador cp24
+
+Operator up terminou verde com22migrações e novas imagens. Probe HTTPS login/me passou com cookie seguro, mas WEB_ORIGIN efetivo ficou http://localhost:8083 e preflight da origem HTTPS não retornou allow-origin exato. Diagnóstico source: export default de CHANNELS_LOCAL_ORIGIN no inicializador prevalece sobre a origem salva no --env-file. Não alegar CORS exato nem tratar sucesso same-origin como prova dessa dimensão. NUM-ROOT-ORIGIN-CP24-01 é correção HOW do D-09 existente no path já admitido, sem mudar contrato, provider, dependência ou domínio.
+
+Preservar all cp24 em voo e manifestos sem edição/interrupção. Depois, DevOps mantém writer único para corrigir somente precedência dos valores públicos do inicializador: override explícito continua prioritário; quando ausente, respeitar configuração privada salva e defaults do Compose, sem source/eval de dotenv nem segredo em stdout. Validar config-only de origem salva/override/default e porta salva/override, com WSLENV existente preservado; restaurar runtime HTTPS próprio e repetir sessão/CORS/health/log hygiene. Guardar delta posterior do script separadamente: all anterior continua prova dos229inputs inalterados e não será falsamente atribuído ao script final. Test runner/API/Web/migrations não mudam nessa correção; fullall só se novas falhas ou impacto justificarem.
+
+All cp24 terminou exit0:138APIunitários,286PG,28Webunitários,46browser =498;22migrações; raw c7f2a6c70384bea881ba5106787b4a1911e8fdc763760e80a8a8eb34faa73277. Inventário230entradas/228paths únicos pré/pós iguais, capturado antes de build/all. Root conferiu11hashes do handoff e230referências atuais. O handoff não exportou attestation e declarou lacuna; root encontrou os arquivos genuínos gerados pelo globalSetup às15:16:12/15:16:15Z, dentro desse all e antes dos workers. Retidos byte a byte em cp24-browser-attestation.json/cp24-pre-worker-freshness.json, fonte/API/DB22migrações/portas e bundle conferidos. SHA JS d14343604557296f2ed62c1df47d9c80d81c323abafd89ccbb64a6a0746ff4bd coincide com runtime HTTPS/imagem. root-cp24-receipt.json complementa a prova sem reescrever handoff ou produzir probe pré-worker retroativo. DevOps parou e foi reativado somente para cp25.
