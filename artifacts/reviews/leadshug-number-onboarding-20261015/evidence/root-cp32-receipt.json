@@ -1,0 +1,23 @@
+{
+  "checkpoint": "root-cp32-receipt",
+  "recordedAtUtc": "2026-10-16T18:34:23.019976+00:00",
+  "verifiedArtifacts": [
+    {
+      "path": "cp32-unofficial-pairing-readiness.json",
+      "sha256": "4f983ddec865c48ba13f43f81212c84aa20c6c926e3ef26d84795cfe1d4cda88"
+    },
+    {
+      "path": "cp32-unofficial-pairing-readiness.md",
+      "sha256": "97c6b300e1ab08a2c9b024f01e24eca0d2c6d4e9ef9fb1acb19ba7e135fa8201"
+    },
+    {
+      "path": "cp32-operator-pairing-confirmation.json",
+      "sha256": "f8cf3a1ddf4b7bf36b2f0f1c785476fea9f619816b339cbe3f40b97e1a06d26f"
+    }
+  ],
+  "accepted": "Current unofficial pairing identity/epoch/mapping verified; receipt pending. Zero conversations/IN/OUT baseline was returned before root requested human synthetic IN/OUT.",
+  "timingLimit": "Read sequence start recorded; exact SQL statement timestamp absent. Bundle/source/images captured after human request; cp31 earlier bundle proof retained.",
+  "humanTestResult": "pending",
+  "requiredExternalProofWaived": false,
+  "sourceRuntimeOrPrivateConfigChanged": false
+}

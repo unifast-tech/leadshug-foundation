@@ -1,0 +1,96 @@
+{
+  "checkpoint": "cp32-unofficial-pairing-readiness",
+  "scope": "Read-only snapshot of the owner's current unofficial channel before the requested synthetic inbound test. No provider calls, QR access, OAuth, registration mutation, message send, or application data mutation.",
+  "origin": "https://operating-brussels-internship-interviews.trycloudflare.com",
+  "authenticatedReadiness": {
+    "capturedAtUtc": "2026-10-16T18:32:30.924785Z",
+    "healthStatus": 200,
+    "loginStatus": 200,
+    "meStatus": 200,
+    "onboardingStatus": 200,
+    "capabilitiesStatus": 200,
+    "businessUnitsStatus": 200,
+    "ownerRole": true,
+    "onboardingComplete": true,
+    "unofficialModuleEnabled": true,
+    "officialCapability": {
+      "available": true,
+      "reason": "AVAILABLE"
+    },
+    "unofficialCapability": {
+      "available": true,
+      "reason": "AVAILABLE"
+    },
+    "businessUnitCount": 1,
+    "channelCount": 1,
+    "channelTypeCounts": {
+      "NAO_OFICIAL": 1
+    },
+    "cookieSecure": true,
+    "cookieHttpOnly": true,
+    "cookieSameSiteLax": true,
+    "cookieHostOnly": true,
+    "cookiePersisted": false
+  },
+  "channelSnapshot": {
+    "type": "NAO_OFICIAL",
+    "status": "CONECTANDO",
+    "providerConnectionState": "CONNECTED",
+    "ownNumberVerified": true,
+    "pairingEpoch": 1,
+    "verifiedEpoch": 1,
+    "verifiedEpochMatchesPairingEpoch": true,
+    "generation": 1,
+    "currentAttemptPresent": true,
+    "attemptState": "PENDING_NUMBER",
+    "attemptStage": "PAIRING",
+    "attemptGenerationMatches": true,
+    "attemptPairingEpochMatches": true,
+    "receiptVerified": false,
+    "connected": false,
+    "activeOwnedIdentityMappingCount": 1,
+    "exactCurrentIdentityMappingCount": 1,
+    "currentIdentityMappingConsistent": true,
+    "identityValuesOrResourceIdsPersisted": false
+  },
+  "preTestBaseline": {
+    "readSequenceStartedAtUtc": "2026-10-16T18:32:30.924785Z",
+    "statementLevelDatabaseTimestampRecorded": false,
+    "capturedBeforeHumanSyntheticInRequest": true,
+    "businessUnitConversationCount": 0,
+    "unofficialInboundMessageCount": 0,
+    "unofficialOutboundMessageCount": 0,
+    "conversationAndMessageContentPersisted": false
+  },
+  "runtimeAndBundle": {
+    "capturedAtUtc": "2026-10-16T18:32:43.248856Z",
+    "freshnessCaptureRelationToHumanTestRequest": "after request sent; user outcome not yet reported at capture",
+    "rootStatus": 200,
+    "healthStatus": 200,
+    "apiImage": "sha256:c2e8d62bde2c85305deb9d72569f773072e77292465e09ed7283051b40ed4f4f",
+    "webImage": "sha256:d11a882849dc806e0d4728ca90a8fc8655aebc77421acefac63054b4fbb89365",
+    "servedBundleTarget": "/assets/index-txvhtd65.js",
+    "servedBundleStatus": 200,
+    "servedBundleSha256": "d14343604557296f2ed62c1df47d9c80d81c323abafd89ccbb64a6a0746ff4bd",
+    "servedBundleBytes": 258450,
+    "webContainerBundleSha256": "d14343604557296f2ed62c1df47d9c80d81c323abafd89ccbb64a6a0746ff4bd",
+    "matchesCp27AcceptedBundle": true
+  },
+  "source": {
+    "rootBranch": "feature/number-onboarding",
+    "rootHead": "4bccdc4aa470d1166bc14a681d0008f242db2562",
+    "apiBranch": "feature/number-onboarding",
+    "apiHead": "f134bd11449a553e6f57e66cdc8fc71032151060",
+    "webBranch": "feature/number-onboarding",
+    "webHead": "d33c82c26760c671d98cab6f3e7bfe5676122c69"
+  },
+  "actions": {
+    "providerCalls": false,
+    "qrOrOAuth": false,
+    "inboundOrOutboundTestPerformedByAgent": false,
+    "applicationMutation": false,
+    "sourceRuntimeOrPrivateConfigMutation": false,
+    "credentialsCookiesRawResponsesOrLogsPersisted": false
+  },
+  "safeNextStep": "A human may send one synthetic inbound message from the other test WhatsApp account, then verify it appears in the expected owner UI and send one synthetic outbound reply only after that human validation."
+}

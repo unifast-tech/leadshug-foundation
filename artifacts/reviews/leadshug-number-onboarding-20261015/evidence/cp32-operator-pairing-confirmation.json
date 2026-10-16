@@ -1,0 +1,16 @@
+{
+  "checkpoint": "cp32-operator-pairing-confirmation",
+  "recordedAtUtc": "2026-10-16T18:30:41.895103+00:00",
+  "source": "human UI report after QR and verification",
+  "reported": {
+    "type": "NAO_OFICIAL",
+    "role": "OWNER",
+    "uiConnectionInProgress": true,
+    "ownIdentityConfirmed": true,
+    "providerConnected": true,
+    "receiptPending": true
+  },
+  "namesPhonesQrCodesOrCredentialsRetained": false,
+  "independentRuntimeVerification": "pending",
+  "realInboundOutboundAndRecoveryProven": false
+}
