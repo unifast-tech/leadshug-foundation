@@ -365,8 +365,8 @@ Register: `foundation_documentation/artifacts/dependency-readiness.md`.
 
 | Dependency | Why It Matters | Status | Last Verified | Verification Method | Adjustment / Workaround |
 | --- | --- | --- | --- | --- | --- |
-| Evolution de teste e versão | Endpoint/payload/sessão reais. | unknown | n/a | Target inicial local confirmado; instância própria ainda não operante; v2.3.7 por digest definida, payload/saúde ainda não comprovados. | Não usar instância legada observada no inventário Docker. |
-| Meta/WABA de teste | Identidade e operação oficial. | unknown | n/a | Permissões, modalidade, número e callback. | Disponibilidade oferecida não é health check. |
+| Evolution de teste e versão | Endpoint/payload/sessão reais. | degraded | 2026-10-16, cp21/cp22 | Runtime próprio fixado2.3.7; probe sem QR confirmou headers e limpeza. Aparelho/ownPhone/IN/OUT não testados. | Preservar runtime legado; provar cadastro real após atualização integrada. |
+| Meta/WABA de teste | Identidade e operação oficial. | degraded | 2026-10-16, cp22 | Configuração privada reconhecida; usuário confirmou allowlists atualizadas e Meta validou/salvou callback HTTPS. OAuth/número/IN/OUT ausentes. | Confirmar inscrição messages e wizard normal do produto; app permanece sem publicar. |
 | Números/interlocutores de teste | Prova IN/OUT. | unknown | n/a | Usuário confirmou disponibilidade dos dois em2026-10-15. | Confirmar target/destinatário sem publicar números pessoais. |
 | Documentação oficial Meta | Cadastro/registro/assinatura. | degraded | 2026-10-15 | Coleção primária Meta Postman acessível; developers direto limitado. | Elegibilidade/app/Graph version ainda dependem de readiness; histórico fora do recorte. |
 

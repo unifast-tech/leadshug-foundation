@@ -4,7 +4,7 @@ Registro baseado em `delphi-ai/templates/dependency_readiness_template.md`; mem�
 
 ## Snapshot
 
-- **Last updated:** 2026-10-15, America/Sao_Paulo.
+- **Last updated:** 2026-10-16, America/Sao_Paulo; provas cp22 e confirmação humana do painel Meta.
 - **Current session/profile:** Operational / Coder com handoffs Assurance e DevOps explícitos; execução aprovada de canais NestJS/React/PostgreSQL/Prisma/Docker.
 - **Why this register matters now:** usuário disponibilizará oficial e não oficial; confirmou local primeiro e Railway depois. Fechar wiring e evidência antes de executar testes externos.
 
@@ -12,17 +12,19 @@ Registro baseado em `delphi-ai/templates/dependency_readiness_template.md`; mem�
 
 | Dependency | Type | Why It Matters | Status | Last Verified | Verification Method | Known Failure Mode | Adjustment / Workaround |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| Evolution de teste | provider | QR, sessão e conexão. | unknown | 2026-10-15 | Versão2.3.7 por digest aprovada; instância própria ainda não iniciada/provada. | Contrato source não prova payload/identidade de instância real. | Criar runtime próprio, verificar versão e identidade sem adotar legado; importação fora deste recorte. |
-| Conta/número oficial Meta | provider | Identidade, credencial, callback e IN/OUT. | unknown | 2026-10-15 | Operador criou app/configuração Embedded Signup, informou identificadores públicos e Graphv26.0; sandbox disponível, mas SDK/HTTPS/WABA/número/IN/OUT sem prova. | Configuração criada não comprova verificações aprovadas ou operação do canal. | Preparar backend privado e HTTPS; validar SDK/recebimento por dimensão sem publicar credencial nem identificadores em exemplos. |
+| Evolution de teste | provider | QR, sessão e conexão. | degraded | 2026-10-16 | Runtime próprio fixado2.3.7 em execução; probe sem QR provou header correto/errado200/403, presença antes de DELETE e ausência posterior. | Probe não comprova pareamento/ownPhone de aparelho nem IN/OUT. | Validar aparelho pelo cadastro normal depois da fonte integrada, sem adotar legado; histórico fora deste recorte. |
+| Conta/número oficial Meta | provider | Identidade, credencial, callback e IN/OUT. | degraded | 2026-10-16 | Quatro campos privados reconhecidos por booleanos; usuário confirmou allowlists no host cp22 e webhook verificado/salvo pela Meta. | App/config/callback não provam OAuth, WABA/número, inscrição messages ou IN/OUT; app continua sem publicar. | Aguardar confirmação de messages; concluir wizard normal do produto e depois validar cadastro externo. Nenhum segredo em chat. |
 | Números/interlocutores de teste | device | Troca real e recuperação. | unknown | n/a | Usuário confirmou que pode disponibilizar ambos; acesso não testado. | Disponibilidade potencial não prova pairing/permissão. | Confirmar interlocutor e vínculos descartáveis antes de mutações. |
-| Callback do backend local | host/ingress | Provider precisa alcançar webhooks autenticados. | unknown | 2026-10-15 | App Meta criado, mas HTTPS/gateway/túnel ainda não iniciados; preparo autorizado. | URL incorreta, inacessível ou origem não verificável. | Preparar gateway e conferir build antes de Quick Tunnel temporário autorizado; sem DNS/túnel persistente. |
+| Callback do backend local | host/ingress | Provider precisa alcançar webhooks autenticados. | healthy | 2026-10-16, cp22 | HTTPS health/login/sessão segura passaram; processo Windows destacou cloudflared e root confirmou vida após STOP; Meta confirmou verificação do callback. | Quick Tunnel é efêmero; prova anterior não garante disponibilidade futura. | Usar somente https://mistress-spencer-mozilla-sciences.trycloudflare.com; callback /webhooks/meta. Revalidar antes do teste; host seafood anterior está retirado. |
 | Docker Windows | service | Engine local para runtime/testes. | healthy | 2026-10-15 | docker.exe version e inventário read-only responderam; Engine27.1.1. | Socket Linux indisponível; esta prova não certifica containers/app. | Usar cliente Windows no preparo local, com paths e wrappers confirmados. |
-| Stack local LeadsHug | service | API/Web/PG e wiring dos providers. | degraded | 2026-10-15 | Runner isolado cp8 passou21migrações/lint/build,137unitários/277E2E com máscara de env e OpenSSL3, manifests estáveis; cp9 corrigiu binds/prefixos. Operador/Evolution/gateway ainda não iniciados. | Build/config não demonstram login, callback ou conexão real. | Concluir browser real-backend cp10 e provar runtime/header/logs antes do aparelho. |
+| Stack local LeadsHug | service | API/Web/PG e wiring dos providers. | degraded | 2026-10-16 | Operador próprio executa imagens cp21/21migrações; HTTPS cp22 validado. API cp22 no runner passou22migrações/138unit/286PG; Web cp23 corrige recuperação. | Imagem do operador ainda não contém a correção atual; BFF owner retornou ONBOARDING_PENDENTE. | Finalizar Web, atualizar somente runtime próprio e executar all com manifesto público completo pré/pós; usuário conclui wizard normal, sem bypass/seed. |
 | Documentação oficial Meta de onboarding | documentation | Cadastro/registro/assinatura e limites atuais. | degraded | 2026-10-15 | Developers direto limitado; coleção oficial Meta em Postman acessível para Embedded Signup, register e subscribed_apps. | Elegibilidade/app efetivo e histórico/coexistência ainda não verificados. | Usar fonte primária Postman para cadastro; histórico continua fora do recorte. |
 
 ## Operational Notes
 
-Não há provedor classificado como healthy nesta sessão. Nenhuma credencial foi solicitada em texto, instância real foi criada, sessão foi removida ou mensagem externa foi enviada. PostgreSQL16/Node22 usados no histórico anterior são evidência daquela execução; não demonstram saúde atual dos providers.
+Não há canal externo classificado como conectado/validado. Nenhuma credencial foi solicitada em texto, aparelho pareado ou mensagem externa enviada. A instância de probe foi criada e removida no runtime próprio sem QR. O alcance HTTPS e a verificação Meta são evidência de transporte/configuração, não de cadastro ou entrega de mensagens.
+
+Evidência atual: [handoff HTTPS cp22](reviews/leadshug-number-onboarding-20261015/evidence/cp22-https-handoff.md), [painel Meta](reviews/leadshug-number-onboarding-20261015/evidence/cp22-meta-panel-setup.json) e [validação API cp22](reviews/leadshug-number-onboarding-20261015/evidence/cp22-rerun3-result.json). Os registros abaixo preservam o histórico dos checkpoints; as ausências ali descritas não representam o snapshot atual.
 
 ## Inspeção local de2026-10-15
 
