@@ -1,0 +1,22 @@
+{
+  "status": "API writer explicitly STOPPED; source and tests authored, validation did not reach execution",
+  "recorded_at_utc": "2026-10-16T01:03:50.970277+00:00",
+  "source_hashes": [
+    {
+      "path": "src/domain/channels/number-registration.service.ts",
+      "sha256": "be53f7f1feb00c0bacb36ce0cf5d60915bb398ed011f69d28d3d4987f83417dc"
+    },
+    {
+      "path": "src/domain/channels/channel-credential-crypto.spec.ts",
+      "sha256": "eda02a1bf69f40eb07309184adad8d2f1862f563c33afa03fb1657991d29faf1"
+    },
+    {
+      "path": "test/number-onboarding-flow.e2e-spec.ts",
+      "sha256": "49e620b68372bd97fa3a6c2738b58378419ef47dab379f9a4b16cc41af575523"
+    }
+  ],
+  "runner_log": "cp18-fail-first.log",
+  "runner_log_sha256": "c2e3736c6d5a8cb60035f8f51a5c519cd0574f951bc2a5c6b85199bc9eb15ae8",
+  "provenance_limit": "Despite filename, this is Compose preflight failure, not fail-first/product RED. Operator .env.testing is deliberately not read by validation. New inactive probe service globally interpolates EVOLUTION_WEBHOOK_SECRET; validation temp env must supply only a fictitious value.",
+  "next_owner": "DevOps minimal validation-wrapper correction then API validation; actual operator runtime remains stopped with own infrastructure preserved."
+}

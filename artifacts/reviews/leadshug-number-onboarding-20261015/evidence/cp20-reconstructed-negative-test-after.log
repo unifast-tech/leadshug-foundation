@@ -1,0 +1,514 @@
+ Network leadshug_channels_validation_validation  Creating
+ Network leadshug_channels_validation_validation  Created
+ Volume "leadshug_channels_validation_channels_npm_cache"  Creating
+ Volume "leadshug_channels_validation_channels_npm_cache"  Created
+ Volume "leadshug_channels_validation_channels_playwright_cache"  Creating
+ Volume "leadshug_channels_validation_channels_playwright_cache"  Created
+ Volume "leadshug_channels_validation_validation_pg_data"  Creating
+ Volume "leadshug_channels_validation_validation_pg_data"  Created
+ Volume "leadshug_channels_validation_channels_api_workspace"  Creating
+ Volume "leadshug_channels_validation_channels_api_workspace"  Created
+ Volume "leadshug_channels_validation_channels_api_node_modules"  Creating
+ Volume "leadshug_channels_validation_channels_api_node_modules"  Created
+ Volume "leadshug_channels_validation_channels_web_workspace"  Creating
+ Volume "leadshug_channels_validation_channels_web_workspace"  Created
+ Volume "leadshug_channels_validation_channels_web_node_modules"  Creating
+ Volume "leadshug_channels_validation_channels_web_node_modules"  Created
+ Container leadshug_channels_validation-validation-postgres-1  Creating
+ Container leadshug_channels_validation-validation-postgres-1  Created
+ Container leadshug_channels_validation-validation-postgres-1  Starting
+ Container leadshug_channels_validation-validation-postgres-1  Started
+Runner Node: v22.23.3
+debconf: delaying package configuration, since apt-utils is not installed
+OpenSSL: OpenSSL 3.0.22 25 Aug 2026 (Library: OpenSSL 3.0.22 25 Aug 2026)
+Principal API/Web source binds and API dotenv mask verified before npm.
+npm warn deprecated glob@10.5.0: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
+
+added 555 packages, and audited 556 packages in 31s
+
+138 packages are looking for funding
+  run `npm fund` for details
+
+18 vulnerabilities (4 moderate, 10 high, 4 critical)
+
+To address issues that do not require attention, run:
+  npm audit fix
+
+To address all issues (including breaking changes), run:
+  npm audit fix --force
+
+Run `npm audit` for details.
+npm notice
+npm notice New major version of npm available! 10.9.9 -> 12.2.0
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.0
+npm notice To update run: npm install -g npm@12.2.0
+npm notice
+Environment variables loaded from .env
+Prisma schema loaded from prisma/schema.prisma
+prisma                  : 6.19.3
+@prisma/client          : 6.19.3
+Computed binaryTarget   : debian-openssl-3.0.x
+Operating System        : linux
+Architecture            : x64
+Node.js                 : v22.23.3
+TypeScript              : 5.9.3
+Query Engine (Node-API) : libquery-engine c2990dca591cba766e3b7ef5d9e8a84796e47ab7 (at node_modules/@prisma/engines/libquery_engine-debian-openssl-3.0.x.so.node)
+PSL                     : @prisma/prisma-schema-wasm 7.1.1-3.c2990dca591cba766e3b7ef5d9e8a84796e47ab7
+Schema Engine           : schema-engine-cli c2990dca591cba766e3b7ef5d9e8a84796e47ab7 (at node_modules/@prisma/engines/schema-engine-debian-openssl-3.0.x)
+Default Engines Hash    : c2990dca591cba766e3b7ef5d9e8a84796e47ab7
+Studio                  : 0.511.0
+
+> @leadshug/api@0.1.0 prisma:generate
+> prisma generate
+
+Environment variables loaded from .env
+Prisma schema loaded from prisma/schema.prisma
+
+✔ Generated Prisma Client (v6.19.3) to ./node_modules/@prisma/client in 211ms
+
+Start by importing your Prisma Client (See: https://pris.ly/d/importing-client)
+
+Tip: Want to turn off tips and other hints? https://pris.ly/tip-4-nohints
+
+┌─────────────────────────────────────────────────────────┐
+│  Update available 6.19.3 -> 8.0.0-rc.23                 │
+│                                                         │
+│  This is a major update - please follow the guide at    │
+│  https://pris.ly/d/major-version-upgrade                │
+│                                                         │
+│  Run the following to update                            │
+│    npm i --save-dev prisma@latest                       │
+│    npm i @prisma/client@latest                          │
+└─────────────────────────────────────────────────────────┘
+
+added 105 packages, and audited 106 packages in 6s
+
+16 packages are looking for funding
+  run `npm fund` for details
+
+9 vulnerabilities (5 moderate, 2 high, 2 critical)
+
+To address issues that do not require attention, run:
+  npm audit fix
+
+To address all issues (including breaking changes), run:
+  npm audit fix --force
+
+Run `npm audit` for details.
+
+> @leadshug/api@0.1.0 prisma:migrate
+> prisma migrate deploy
+
+Environment variables loaded from .env
+Prisma schema loaded from prisma/schema.prisma
+Datasource "db": PostgreSQL database "leadshug_timeline_channels_ci", schema "public" at "validation-postgres:5432"
+
+21 migrations found in prisma/migrations
+
+Applying migration `20260818125556_nucleo_v1_tenancy_identidade_atendimento`
+Applying migration `20260821175101_modulos_e_marca_por_mantenedora`
+Applying migration `20260821180000_tres_papeis_owner_admin_atendente`
+Applying migration `20260821190000_setor_e_proveniencia_do_grant`
+Applying migration `20260821190500_concessao_de_setor_e_fato_proprio`
+Applying migration `20260821200000_historico_de_atividades`
+Applying migration `20260821210000_wizard_de_onboarding`
+Applying migration `20260821220000_preserva_modulo_ja_em_uso`
+Applying migration `20260824122559_perfil_do_proprio_usuario`
+Applying migration `20260824125224_arquivos_logo_e_avatar`
+Applying migration `20260824125227_arquivos_dono`
+Applying migration `20260824125334_avatar_e_do_usuario_nao_da_bu`
+Applying migration `20260824161138_convite_e_recuperacao_de_senha`
+Applying migration `20260827170000_cor_secundaria`
+Applying migration `20260831130000_cores_primarias_por_tema`
+Applying migration `20260901120000_typebot_bots_and_triggers`
+Applying migration `20260901130000_typebot_sessions`
+Applying migration `20261015120000_number_onboarding_foundation`
+Applying migration `20261015130000_number_onboarding_provider_resource_ownership_immutable`
+Applying migration `20261015140000_number_onboarding_channel_operation_fence`
+Applying migration `20261015150000_number_onboarding_managed_cleanup`
+
+The following migration(s) have been applied:
+
+migrations/
+  └─ 20260818125556_nucleo_v1_tenancy_identidade_atendimento/
+    └─ migration.sql
+  └─ 20260821175101_modulos_e_marca_por_mantenedora/
+    └─ migration.sql
+  └─ 20260821180000_tres_papeis_owner_admin_atendente/
+    └─ migration.sql
+  └─ 20260821190000_setor_e_proveniencia_do_grant/
+    └─ migration.sql
+  └─ 20260821190500_concessao_de_setor_e_fato_proprio/
+    └─ migration.sql
+  └─ 20260821200000_historico_de_atividades/
+    └─ migration.sql
+  └─ 20260821210000_wizard_de_onboarding/
+    └─ migration.sql
+  └─ 20260821220000_preserva_modulo_ja_em_uso/
+    └─ migration.sql
+  └─ 20260824122559_perfil_do_proprio_usuario/
+    └─ migration.sql
+  └─ 20260824125224_arquivos_logo_e_avatar/
+    └─ migration.sql
+  └─ 20260824125227_arquivos_dono/
+    └─ migration.sql
+  └─ 20260824125334_avatar_e_do_usuario_nao_da_bu/
+    └─ migration.sql
+  └─ 20260824161138_convite_e_recuperacao_de_senha/
+    └─ migration.sql
+  └─ 20260827170000_cor_secundaria/
+    └─ migration.sql
+  └─ 20260831130000_cores_primarias_por_tema/
+    └─ migration.sql
+  └─ 20260901120000_typebot_bots_and_triggers/
+    └─ migration.sql
+  └─ 20260901130000_typebot_sessions/
+    └─ migration.sql
+  └─ 20261015120000_number_onboarding_foundation/
+    └─ migration.sql
+  └─ 20261015130000_number_onboarding_provider_resource_ownership_immutable/
+    └─ migration.sql
+  └─ 20261015140000_number_onboarding_channel_operation_fence/
+    └─ migration.sql
+  └─ 20261015150000_number_onboarding_managed_cleanup/
+    └─ migration.sql
+      
+All migrations have been successfully applied.
+Environment variables loaded from .env
+Prisma schema loaded from prisma/schema.prisma
+Datasource "db": PostgreSQL database "leadshug_timeline_channels_ci", schema "public" at "validation-postgres:5432"
+
+21 migrations found in prisma/migrations
+
+Database schema is up to date!
+
+> @leadshug/api@0.1.0 lint
+> eslint "{src,test}/**/*.ts"
+
+
+> @leadshug/api@0.1.0 build
+> nest build
+
+
+> @leadshug/api@0.1.0 test
+> vitest run --config vitest.config.ts
+
+[33mThe CJS build of Vite's Node API is deprecated. See https://vite.dev/guide/troubleshooting.html#vite-cjs-node-api-deprecated for more details.[39m
+
+ RUN  v2.1.9 /workspace/api-app
+
+ ✓ src/domain/access/role.spec.ts (9 tests) 6ms
+ ✓ src/main.spec.ts (6 tests) 11ms
+ ✓ src/infra/config/modulos.spec.ts (11 tests) 18ms
+ ✓ src/domain/access/scope.spec.ts (22 tests) 20ms
+ ✓ src/domain/channels/channel-credential-crypto.spec.ts (5 tests) 60ms
+[33m[Nest] 3624  - [39m10/16/2026, 1:08:45 AM [33m   WARN[39m [38;5;3m[Email] [39m[33mRESEND_API_KEY ausente — "x" não foi enviado para a@b.test.[39m
+[31m[Nest] 3624  - [39m10/16/2026, 1:08:45 AM [31m  ERROR[39m [38;5;3m[Email] [39m[31mResend recusou (403): {"message":"domain is not verified"}[39m
+[31m[Nest] 3624  - [39m10/16/2026, 1:08:45 AM [31m  ERROR[39m [38;5;3m[Email] [39m[31mFalha de rede ao enviar para a@b.test: Error: getaddrinfo ENOTFOUND[39m
+ ✓ src/integrations/evolution/evolution.client.spec.ts (5 tests) 15ms
+ ✓ src/integrations/email/email.client.spec.ts (6 tests) 23ms
+ ✓ src/integrations/typebot/typebot.client.spec.ts (5 tests) 28ms
+ ✓ src/infra/session/session.service.spec.ts (17 tests) 14ms
+ ✓ src/domain/inbox/timeline-pagination.spec.ts (11 tests) 16ms
+ ✓ src/domain/integration/rate-limit.service.spec.ts (3 tests) 6ms
+ ✓ src/integrations/meta/meta.client.spec.ts (18 tests) 32ms
+ ✓ src/domain/channels/safe-redaction.spec.ts (1 test) 5ms
+ ✓ src/surfaces/bff/integracao.typebot.spec.ts (2 tests) 7ms
+ ✓ src/domain/inbox/historico.service.spec.ts (6 tests) 5ms
+ ✓ src/domain/integration/api-key.service.spec.ts (2 tests) 5ms
+ ✓ src/domain/inbox/incoming.typebot.integration.spec.ts (2 tests) 9ms
+ ✓ src/domain/identity/password.service.spec.ts (5 tests) 460ms
+ ✓ src/domain/inbox/incoming.typebot.spec.ts (2 tests) 3ms
+
+ Test Files  19 passed (19)
+      Tests  138 passed (138)
+   Start at  01:08:42
+   Duration  3.17s (transform 14.58s, setup 0ms, collect 26.25s, tests 743ms, environment 6ms, prepare 3.23s)
+
+
+> @leadshug/api@0.1.0 test:e2e
+> vitest run --config vitest.config.e2e.ts --no-file-parallelism --maxWorkers=1
+
+[33mThe CJS build of Vite's Node API is deprecated. See https://vite.dev/guide/troubleshooting.html#vite-cjs-node-api-deprecated for more details.[39m
+
+ RUN  v2.1.9 /workspace/api-app
+
+ ❯ test/number-onboarding-flow.e2e-spec.ts (26 tests | 2 failed) 9389ms
+   ✓ BFF number registration workflow (PostgreSQL) > recovers the same one-use nonce for idempotent create and connects only after provider subscribe plus receipt 625ms
+   ✓ BFF number registration workflow (PostgreSQL) > consumes OAuth codes once and requires a fresh attempt and nonce after an ambiguous exchange 388ms
+   × BFF number registration workflow (PostgreSQL) > reauthorizes only the exact migrated credentialless Official slot after fresh provider proof 284ms
+     → expected 200 "OK", got 409 "Conflict"
+   × BFF number registration workflow (PostgreSQL) > rejects migrated Official identities owned by another BU or slot before any register effect 405ms
+     → expected 'PROVIDER_RESOURCE_NOT_FOUND' to be 'RESOURCE_OWNED' // Object.is equality
+   ✓ BFF number registration workflow (PostgreSQL) > keeps an active credential unchanged after wrong-phone confirmation and post-auth cancellation 331ms
+   ✓ BFF number registration workflow (PostgreSQL) > does not disclose registration state to a different tenant and rejects invalid provider resources 483ms
+   ✓ BFF number registration workflow (PostgreSQL) > recovers a promoted pending registration after expiry with a fresh authorized session 449ms
+   ✓ BFF number registration workflow (PostgreSQL) > audits a later same-BU ADMIN action as that admin, not the OWNER who reserved the attempt 416ms
+   ✓ BFF number registration workflow (PostgreSQL) > reserves immutable provider ownership before register and projects BU-scoped channel authority safely 558ms
+   ✓ BFF number registration workflow (PostgreSQL) > retains Meta resource ownership after removal and rejects reassignment and late old-owner content 521ms
+   ✓ BFF number registration workflow (PostgreSQL) > allows only one BU to reserve a concurrently selected provider resource 604ms
+   ✓ BFF number registration workflow (PostgreSQL) > atomically prevents official enrollment from taking a different phone after Evolution proves the BU phone 347ms
+   ✓ BFF number registration workflow (PostgreSQL) > rejects a stale confirmation after its lease expires and a replacement attempt wins 316ms
+   ✓ BFF number registration workflow (PostgreSQL) > renews a managed Evolution identity through cleanup then creates the reserved replacement once 317ms
+   ✓ BFF number registration workflow (PostgreSQL) > retains ambiguous managed cleanup and reconciles it before creating after unlink 325ms
+   ✓ BFF number registration workflow (PostgreSQL) > wipes expired and superseded candidate envelopes while preserving an active credential 310ms
+stdout | test/atendimento.e2e-spec.ts > atendimento > timeline paginada do atendimento > preserva dez incrementos feitos após o ack e enquanto a página fica bloqueada, em três lotes
+{"prova":"BCI_ACK_COM_SELECT_BLOQUEADO","lote":1,"bloqueioDetectado":true,"sondagens":2,"ackAteSelectBloqueadoMs":47,"dezIncrementosMs":23,"unreadEnquantoSelectBloqueado":10,"unreadDepoisDaResposta":10}
+
+stdout | test/atendimento.e2e-spec.ts > atendimento > timeline paginada do atendimento > preserva dez incrementos feitos após o ack e enquanto a página fica bloqueada, em três lotes
+{"prova":"BCI_ACK_COM_SELECT_BLOQUEADO","lote":2,"bloqueioDetectado":true,"sondagens":2,"ackAteSelectBloqueadoMs":47,"dezIncrementosMs":22,"unreadEnquantoSelectBloqueado":10,"unreadDepoisDaResposta":10}
+
+stdout | test/atendimento.e2e-spec.ts > atendimento > timeline paginada do atendimento > preserva dez incrementos feitos após o ack e enquanto a página fica bloqueada, em três lotes
+{"prova":"BCI_ACK_COM_SELECT_BLOQUEADO","lote":3,"bloqueioDetectado":true,"sondagens":2,"ackAteSelectBloqueadoMs":45,"dezIncrementosMs":21,"unreadEnquantoSelectBloqueado":10,"unreadDepoisDaResposta":10}
+
+ ✓ test/atendimento.e2e-spec.ts (24 tests) 10567ms
+   ✓ atendimento > registra resultado de envio ambíguo sem chave externa e nunca inventa uma chave 512ms
+   ✓ atendimento > reconcilia o eco Evolution autenticado entregue dentro do send sem unread duplicada 385ms
+   ✓ atendimento > does not accept an outbound result after channel retirement wins during the provider response 388ms
+   ✓ atendimento > serializes verified inbound acceptance behind retirement on the same identity row 429ms
+   ✓ atendimento > serializes old-instance ingress against a real managed RENEW and rejects stale content 485ms
+   ✓ atendimento > POST conversations/:id/messages — o trio (ADR-0012 §2) > autorizado: responde, envia pelo canal e assume a conversa 335ms
+   ✓ atendimento > POST conversations/:id/messages — o trio (ADR-0012 §2) > ATENDENTE no escopo responde — estar na BU BASTA (ADR-0018 §3) 494ms
+   ✓ atendimento > POST conversations/:id/messages — o trio (ADR-0012 §2) > CROSS-TENANT: o dono de Beta recebe 404 na conversa da BU de Alfa 429ms
+   ✓ atendimento > janela de 24h — atributo do CANAL (ADR-0009 §3) > recusa com JANELA_FECHADA quando a última mensagem do contato passou de 24h 338ms
+   ✓ atendimento > janela de 24h — atributo do CANAL (ADR-0009 §3) > a thread informa o estado da janela, para a tela saber que responder está indisponível 341ms
+   ✓ atendimento > janela de 24h — atributo do CANAL (ADR-0009 §3) > no canal NÃO oficial não existe janela: responde mesmo com a conversa velha 389ms
+   ✓ atendimento > fila > assumir trava para outro agente (409), e finalizar libera 508ms
+   ✓ atendimento > fila > responder NÃO rouba conversa de quem já está atendendo 488ms
+   ✓ atendimento > fila > abrir a thread zera as não lidas — abrir É atender 334ms
+   ✓ atendimento > fila > a lista filtra por aba e só enxerga a BU pedida 379ms
+   ✓ atendimento > a inbox pagina — teto silencioso é o que vira "sumiram conversas" > devolve total e temMais, e a segunda página traz o resto 406ms
+   ✓ atendimento > a inbox pagina — teto silencioso é o que vira "sumiram conversas" > limite acima do teto é aparado, não obedecido 307ms
+   ✓ atendimento > timeline paginada do atendimento > caminha por 251 mensagens na ordem do banco e mantém a página limitada 423ms
+   ✓ atendimento > timeline paginada do atendimento > valida parâmetros depois da autorização e rejeita cursor de outra conversa autorizada 376ms
+   ✓ atendimento > timeline paginada do atendimento > exige sessão antes de validar query e não altera unread 309ms
+   ✓ atendimento > timeline paginada do atendimento > rejeita cursor/limite repetidos e mantém refresh e backfill sem efeito de leitura 393ms
+   ✓ atendimento > timeline paginada do atendimento > serializa dez chegadas concorrentes com a fronteira de abertura em três lotes 801ms
+   ✓ atendimento > timeline paginada do atendimento > preserva dez incrementos feitos após o ack e enquanto a página fica bloqueada, em três lotes 573ms
+   ✓ atendimento > timeline paginada do atendimento > permite leituras de cursor concorrentes com close sem reescrever status 484ms
+ ✓ test/webhooks.e2e-spec.ts (25 tests) 7041ms
+   ✓ webhooks de entrada > Meta — alocação da BU > partitions a signed mixed-owner batch by each verified phone resource 312ms
+   ✓ webhooks de entrada > deduplicates ten concurrent Meta deliveries per key across three new contacts 617ms
+   ✓ webhooks de entrada > deduplicates ten concurrent Evolution deliveries per key across three message IDs 525ms
+   ✓ webhooks de entrada > o dado recebido respeita o escopo > CROSS-TENANT: o dono de Beta não enxerga a conversa que entrou na BU de Alfa 348ms
+ ✓ test/setores.e2e-spec.ts (26 tests) 10640ms
+   ✓ setores (ADR-0017) > o Geral nasce com a Mantenedora > a primeira BU já vem num setor — nenhum número fica sem 339ms
+   ✓ setores (ADR-0017) > CRUD — o trio (ADR-0012 §2) > autorizado: OWNER cria, renomeia e inativa 309ms
+   ✓ setores (ADR-0017) > CRUD — o trio (ADR-0012 §2) > papel insuficiente: ATENDENTE recebe 403 ao criar 464ms
+   ✓ setores (ADR-0017) > CRUD — o trio (ADR-0012 §2) > cross-tenant: setor da Mantenedora B responde 404 para o OWNER de A 370ms
+   ✓ setores (ADR-0017) > CRUD — o trio (ADR-0012 §2) > o nome é único DENTRO da Mantenedora — duas contas podem ter "Comercial" 428ms
+   ✓ setores (ADR-0017) > CRUD — o trio (ADR-0012 §2) > setor COM número não é excluído — só inativado 317ms
+   ✓ setores (ADR-0017) > concessão por setor é EXPANSÃO (ADR-0017 §2) > materializa uma linha POR NÚMERO do setor, com proveniência SETOR 421ms
+   ✓ setores (ADR-0017) > concessão por setor é EXPANSÃO (ADR-0017 §2) > BU criada DEPOIS, no setor concedido, já nasce com o grant (regra 3) 444ms
+   ✓ setores (ADR-0017) > concessão por setor é EXPANSÃO (ADR-0017 §2) > revogar o setor NÃO remove grant direto nem o da Mantenedora 454ms
+   ✓ setores (ADR-0017) > ver quem tem o setor — a leitura que faltava > autorizado: lista quem recebeu o setor, com papel e desde quando 416ms
+   ✓ setores (ADR-0017) > ver quem tem o setor — a leitura que faltava > papel insuficiente: ATENDENTE recebe 403 481ms
+   ✓ setores (ADR-0017) > ver quem tem o setor — a leitura que faltava > cross-tenant: setor da Mantenedora B responde 404 379ms
+   ✓ setores (ADR-0017) > ver quem tem o setor — a leitura que faltava > a lista de pessoas diz DE QUAL ORIGEM veio cada acesso 394ms
+   ✓ setores (ADR-0017) > renomear e inativar o número > papel insuficiente: ATENDENTE recebe 403 429ms
+   ✓ setores (ADR-0017) > mover número entre setores — a escrita mais delicada do modelo > quem tinha pelo setor antigo perde; quem tem o novo ganha 500ms
+   ✓ setores (ADR-0017) > mover número entre setores — a escrita mais delicada do modelo > o grant DIRETO sobrevive à mudança de setor 624ms
+   ✓ setores (ADR-0017) > mover número entre setores — a escrita mais delicada do modelo > recusa quando mover deixaria o número sem OWNER 546ms
+   ✓ setores (ADR-0017) > mover número entre setores — a escrita mais delicada do modelo > cross-setor: o atendente do Comercial recebe 404 na conversa do Suporte 653ms
+   ✓ setores (ADR-0017) > conceder um setor VAZIO é lembrado — o número criado depois já nasce com o acesso 374ms
+   ✓ setores (ADR-0017) > revogar apaga a CONCESSÃO — o próximo número não ressuscita o acesso 391ms
+ ✓ test/api-publica.e2e-spec.ts (15 tests) 6012ms
+   ✓ API pública v1 > autenticação pela chave > a chave sai em claro UMA vez, e o prefixo é lh_ 375ms
+   ✓ API pública v1 > autenticação pela chave > sem chave: 401 NAO_AUTENTICADO 336ms
+   ✓ API pública v1 > autenticação pela chave > cookie de sessão NÃO substitui a chave 394ms
+   ✓ API pública v1 > autenticação pela chave > chave revogada responde igual a inexistente 444ms
+   ✓ API pública v1 > escopo — a Mantenedora sai da CHAVE, nunca do request > escopo nulo devolve só as BUs DESTA Mantenedora 345ms
+   ✓ API pública v1 > escopo — a Mantenedora sai da CHAVE, nunca do request > CROSS-TENANT: pedir a BU de Beta com a chave de Alfa dá 403 SEM_ACESSO_A_CONTA 335ms
+   ✓ API pública v1 > escopo — a Mantenedora sai da CHAVE, nunca do request > escopo restrito não alcança outra BU da MESMA Mantenedora 424ms
+   ✓ API pública v1 > escopo — a Mantenedora sai da CHAVE, nunca do request > criar chave com escopo apontando para BU de outra Mantenedora é recusado 390ms
+   ✓ API pública v1 > contrato > conversations traz janela_aberta e datas em ISO-8601 UTC 316ms
+   ✓ API pública v1 > contrato > messages aceita since para sincronização incremental 346ms
+   ✓ API pública v1 > contrato > POST messages envia e marca a conversa como atendida por EXTERNO 329ms
+   ✓ API pública v1 > contrato > reconcilia eco Evolution público entregue durante send e expõe a mesma OUT no refresh 423ms
+   ✓ API pública v1 > contrato > retém outcome ambíguo quando o envio público não confirma o ID 316ms
+   ✓ API pública v1 > contrato > fora da janela, POST messages recusa com JANELA_FECHADA 311ms
+   ✓ API pública v1 > limite de taxa (ADR-0010 §7) — fecha o buraco de ritmo do S3 > estoura em 429 LIMITE_DE_TAXA com Retry-After 760ms
+stdout | test/number-onboarding-bci.e2e-spec.ts > BCI-DUPLICATE-SUBMIT-OR-REPLAY (PostgreSQL) > repeats 20 overlapping create/finalize operations five times, with mismatched-key negative controls
+[BCI-EVIDENCE]{"gate":"BCI-DUPLICATE-SUBMIT-OR-REPLAY","severity":"high","repetitions":5,"operationsPerRepetition":40,"operationCounts":[40,40,40,40,40],"createReplayWinnerCount":5,"providerIdentityQueries":15,"mismatchedPayloadNegativeControls":5,"postPromotionStateChecked":true}
+
+stdout | test/number-onboarding-bci.e2e-spec.ts > BCI-DUPLICATE-SUBMIT-OR-REPLAY (PostgreSQL) > barriers 20 overlapping pair/delete attempts then proves delete and recreate fencing in five rounds
+[BCI-DELETE-RECREATE]{"policy_schema_version":"pcv-1","lane_id":"BCI","trigger_result":"required","trigger_severity":"high","trigger_reason_code":"BCI-DUPLICATE-SUBMIT-OR-REPLAY","gate_deadline":"before_local_implemented","min_evidence_rule_id":"BCI-E3","acceptance_rule_id":"BCI-A1","probe_profile_observed":"BCI-SP-H","gate":"BCI-DELETE-RECREATE-BARRIER","invariant_id":"PAIR-LEASE-GENERATION-IDENTITY","concurrency_policy":"single-valid-lease-winner; busy retries do not call provider; tombstone cleanup precedes new managed identity","repetitions":5,"operationsPerRepetition":20,"operationCounts":[20,20,20,20,20],"observations":[{"firstName":"lh-23ee32a71c164f808ba5d3e9870b3dc8-1","secondName":"lh-ab0ab5ae36954d9bb96bbbfbfa5fcd7f-1","busyPair":9,"busyDelete":10,"providerCallsDuringBarrier":1},{"firstName":"lh-8bf79886e1a74f539e0ffdafe8e9e659-1","secondName":"lh-6c5c109d09764533bb95ae11122161de-1","busyPair":9,"busyDelete":10,"providerCallsDuringBarrier":1},{"firstName":"lh-130900261ea34c95a9debb82974a4a75-1","secondName":"lh-5a882f77da3b4808a8e35c27d8acecc8-1","busyPair":9,"busyDelete":10,"providerCallsDuringBarrier":1},{"firstName":"lh-53b48015992d42fbaf2fac8cb65a61d4-1","secondName":"lh-528412a7fcd743c5bb0c1d69c5f393e6-1","busyPair":9,"busyDelete":10,"providerCallsDuringBarrier":1},{"firstName":"lh-f27b05a09752496ba3f70537377eb84b-1","secondName":"lh-bdf6c160dca243cabcee4fa563752402-1","busyPair":9,"busyDelete":10,"providerCallsDuringBarrier":1}],"negativeControl":"ATENDENTE pair denied before provider operation","limits":"Real PostgreSQL and provider-port fake; no provider call exactly-once or capacity claim."}
+
+ ✓ test/number-onboarding-bci.e2e-spec.ts (2 tests) 4970ms
+   ✓ BCI-DUPLICATE-SUBMIT-OR-REPLAY (PostgreSQL) > repeats 20 overlapping create/finalize operations five times, with mismatched-key negative controls 2442ms
+   ✓ BCI-DUPLICATE-SUBMIT-OR-REPLAY (PostgreSQL) > barriers 20 overlapping pair/delete attempts then proves delete and recreate fencing in five rounds 2062ms
+[31m[Nest] 4572  - [39m10/16/2026, 1:09:58 AM [31m  ERROR[39m [38;5;3m[Recuperacao] [39m[31mToken de recuperação emitido para dono@alfa.test, mas o e-mail NÃO saiu.[39m
+[31m[Nest] 4572  - [39m10/16/2026, 1:10:01 AM [31m  ERROR[39m [38;5;3m[Recuperacao] [39m[31mToken de recuperação emitido para dono@alfa.test, mas o e-mail NÃO saiu.[39m
+ ✓ test/convites.e2e-spec.ts (18 tests) 5022ms
+   ✓ convite e recuperação de senha (ADR-0025) > convite substitui a senha provisória > usar o link define a senha e já entra logado 386ms
+   ✓ convite e recuperação de senha (ADR-0025) > o token é de uso único > o mesmo link não funciona duas vezes 381ms
+   ✓ convite e recuperação de senha (ADR-0025) > o token é de uso único > pedir recuperação DUAS vezes deixa só o último link vivo 474ms
+   ✓ convite e recuperação de senha (ADR-0025) > o token é de uso único > definir a senha mata TODOS os pendentes — inclusive o convite antigo 425ms
+   ✓ convite e recuperação de senha (ADR-0025) > recuperação não enumera e não entrega o link > definir a senha derruba a sessão que estava aberta 313ms
+ ✓ test/number-onboarding-typebot.e2e-spec.ts (4 tests) 1391ms
+   ✓ Typebot tenant, trigger and resumed session isolation (PostgreSQL) > does not resume a session stored under another tenant and ignores a foreign global trigger 333ms
+   ✓ Typebot tenant, trigger and resumed session isolation (PostgreSQL) > reconciles a Typebot Evolution echo delivered inside send and ignores a later duplicate echo 340ms
+ ✓ test/identidade.e2e-spec.ts (17 tests) 3670ms
+   ✓ identidade > login > bloqueia o e-mail na quinta tentativa errada 519ms
+   ✓ identidade > troca obrigatória de senha > trava tudo menos /me e a troca, e destrava depois de trocar 454ms
+ ✓ test/usuarios.e2e-spec.ts (13 tests) 4764ms
+   ✓ gestão de usuários > criar — o trio (ADR-0012 §2) > autorizado: cria com papel e escopo, e SEM credencial — quem entra define a senha 358ms
+   ✓ gestão de usuários > criar — o trio (ADR-0012 §2) > papel insuficiente: MEMBRO não gerencia pessoas 434ms
+   ✓ gestão de usuários > invariantes do modelo > ninguém concede papel maior que o próprio (ADR-0008 §4) 513ms
+   ✓ gestão de usuários > invariantes do modelo > não deixa a BU sem OWNER ao rebaixar o último 314ms
+   ✓ gestão de usuários > invariantes do modelo > ADMIN não mexe em quem é OWNER — papel ≥ o do alvo (ADR-0008 §4) 463ms
+   ✓ gestão de usuários > reenvio de acesso > reenviar o acesso derruba a sessão e emite um LINK, não uma senha 418ms
+   ✓ gestão de usuários > listar > mostra só as pessoas da própria Mantenedora, com grants e origem 308ms
+   ✓ gestão de usuários > a lista pagina e filtra > busca por nome ou e-mail 341ms
+ ✓ test/modulos.e2e-spec.ts (10 tests) 3924ms
+   ✓ módulos: env é o teto, a Mantenedora escolhe dentro dele (ADR-0016) > o /me devolve o produto já interseccionado > teto ligado + contratado = ligado, e a marca vem junto 489ms
+   ✓ módulos: env é o teto, a Mantenedora escolhe dentro dele (ADR-0016) > o /me devolve o produto já interseccionado > a Mantenedora NÃO amplia o teto: contratado sem teto continua desligado 338ms
+   ✓ módulos: env é o teto, a Mantenedora escolhe dentro dele (ADR-0016) > o /me devolve o produto já interseccionado > sem nada contratado, o produto nasce sem módulo e com tema padrão 342ms
+   ✓ módulos: env é o teto, a Mantenedora escolhe dentro dele (ADR-0016) > a migração PRESERVA o módulo de quem já usa o canal — repetível, e é o que sobe em stage 318ms
+   ✓ módulos: env é o teto, a Mantenedora escolhe dentro dele (ADR-0016) > novo percurso de pareamento respeita teto+contrato e cria apenas a identidade gerenciada 430ms
+   ✓ módulos: env é o teto, a Mantenedora escolhe dentro dele (ADR-0016) > piso OFICIAL completa o fluxo novo mesmo sem módulo não oficial 642ms
+   ✓ módulos: env é o teto, a Mantenedora escolhe dentro dele (ADR-0016) > a rota recusa o que o front não deveria nem ter oferecido > autorizado: com teto e contrato, conecta o canal não oficial 356ms
+   ✓ módulos: env é o teto, a Mantenedora escolhe dentro dele (ADR-0016) > a rota recusa o que o front não deveria nem ter oferecido > módulo fora do teto da instalação: 404 MODULO_DESLIGADO, nunca 403 353ms
+   ✓ módulos: env é o teto, a Mantenedora escolhe dentro dele (ADR-0016) > a rota recusa o que o front não deveria nem ter oferecido > teto ligado mas a Mantenedora não contratou: 404 igual 344ms
+   ✓ módulos: env é o teto, a Mantenedora escolhe dentro dele (ADR-0016) > a rota recusa o que o front não deveria nem ter oferecido > o canal OFICIAL nunca é barrado por módulo — ele é o PISO do produto 311ms
+ ✓ test/historico.e2e-spec.ts (11 tests) 4073ms
+   ✓ histórico (Consultar) > o par número → número > a resposta traz os DOIS números do par, não só o contato 372ms
+   ✓ histórico (Consultar) > o par número → número > filtra pelo número do contato 359ms
+   ✓ histórico (Consultar) > paginação — 20 é o corpo da página, não o tamanho do que existe > devolve as ÚLTIMAS 20 e avisa que há mais 354ms
+   ✓ histórico (Consultar) > paginação — 20 é o corpo da página, não o tamanho do que existe > a segunda página traz o resto e fecha 338ms
+   ✓ histórico (Consultar) > paginação — 20 é o corpo da página, não o tamanho do que existe > a lista de pares também pagina 302ms
+   ✓ histórico (Consultar) > consultar não é atender > ler o histórico NÃO zera as não lidas 329ms
+   ✓ histórico (Consultar) > CSV > usa os mesmos filtros e sai uma linha por mensagem 309ms
+   ✓ histórico (Consultar) > CSV > escapa texto com ponto e vírgula, aspas e quebra de linha 303ms
+   ✓ histórico (Consultar) > permissão — o trio (ADR-0012 §2) > autorizado: ATENDENTE no escopo consulta — o grant é a permissão (ADR-0018) 478ms
+   ✓ histórico (Consultar) > permissão — o trio (ADR-0012 §2) > CROSS-TENANT: o dono de Beta recebe 404 no histórico da BU de Alfa 370ms
+   ✓ histórico (Consultar) > permissão — o trio (ADR-0012 §2) > CROSS-TENANT: o CSV também é barrado, e não vaza no corpo 370ms
+ ✓ test/historico-atividades.e2e-spec.ts (13 tests) 4702ms
+   ✓ histórico de atividades (ADR-0020 e 0022) > o CHECK torna o vazamento IRREPRESENTÁVEL (ADR-0020 §1.1) > escopo BU sem bu_id falha NO BANCO, não no serviço 411ms
+   ✓ histórico de atividades (ADR-0020 e 0022) > o CHECK torna o vazamento IRREPRESENTÁVEL (ADR-0020 §1.1) > escopo CONTA COM bu_id falha pelo mesmo CHECK 332ms
+   ✓ histórico de atividades (ADR-0020 e 0022) > a escrita acontece dentro da transação > criar setor grava EXATAMENTE uma linha, com a frase pronta 306ms
+   ✓ histórico de atividades (ADR-0020 e 0022) > a escrita acontece dentro da transação > falhar a transação NÃO deixa linha 356ms
+   ✓ histórico de atividades (ADR-0020 e 0022) > a escrita acontece dentro da transação > mover número grava MOVER com de/para preenchidos 345ms
+   ✓ histórico de atividades (ADR-0020 e 0022) > a frase é CONGELADA — cita o nome que era verdade naquele dia > renomear o setor NÃO altera nenhuma frase já gravada 309ms
+   ✓ histórico de atividades (ADR-0020 e 0022) > leitura — o trio (ADR-0012 §2) > autorizado: ADMIN lê, mais recente primeiro 321ms
+   ✓ histórico de atividades (ADR-0020 e 0022) > leitura — o trio (ADR-0012 §2) > papel insuficiente: ATENDENTE recebe 403 — gravar é do produto, ler é de quem administra 475ms
+   ✓ histórico de atividades (ADR-0020 e 0022) > leitura — o trio (ADR-0012 §2) > cross-tenant: o ADMIN de A não vê NENHUMA linha de B 380ms
+   ✓ histórico de atividades (ADR-0020 e 0022) > o que NÃO entra > trocar a própria senha não gera linha 429ms
+stdout | test/number-onboarding-pcv.e2e-spec.ts > number onboarding bounded performance and read-scope probes (PostgreSQL) > captures the attempt exact-lookup plan and bounded response timings (EPS-E2)
+[EPS-EVIDENCE]{"policy_schema_version":"pcv-1","lane_id":"EPS","trigger_result":"required","trigger_severity":"medium","trigger_reason_code":"EPS-DATA-PATH-CHANGED","gate_deadline":"before_local_implemented","min_evidence_rule_id":"EPS-E2","acceptance_rule_id":"EPS-A2","sample_profile":"EPS-SP-STRONG","strong_query_evidence_type":"EXPLAIN (FORMAT JSON) plus bounded endpoint timings","access_pattern_classification":{"registrationGet":"one attempt by id and Mantenedora; no provider calls","idempotencyReplay":"unique lookup by Mantenedora and Idempotency-Key","channelList":"BU-filtered projection; no provider fan-out"},"touched_path_audit_summary":"NumberRegistrationService direct attempt reads and ChannelsController BU-filtered channel list; existing unique/index definitions in Prisma schema.","seededAttempts":25,"explain":[{"Plan":{"Node Type":"Seq Scan","Parallel Aware":false,"Async Capable":false,"Relation Name":"channel_registration_attempts","Alias":"channel_registration_attempts","Startup Cost":0,"Total Cost":2.42,"Plan Rows":1,"Plan Width":32,"Filter":"((mantenedora_id = '303c2739-a772-41c1-8cde-cb055071afa2'::text) AND (idempotency_key = 'e0000000-e000-4000-8000-000000000001'::text))"}}],"timing":{"samples":20,"minMs":6.908466999999746,"medianMs":7.86220400000002,"p95Ms":9.436780999999883,"maxMs":11.534031000000141},"limits":"Local disposable PostgreSQL observation only; no latency threshold or capacity/SLO claim."}
+
+stdout | test/number-onboarding-pcv.e2e-spec.ts > number onboarding bounded performance and read-scope probes (PostgreSQL) > runs five clients through six scoped channel reads each with zero provider fan-out (RLS-SP-L)
+[RLS-EVIDENCE]{"policy_schema_version":"pcv-1","lane_id":"RLS","trigger_result":"recommended","trigger_severity":"medium","trigger_reason_code":"RLS-QUEUE-WORKER-REALTIME-CHANGED","gate_deadline":"before_local_implemented","min_evidence_rule_id":"RLS-E1","acceptance_rule_id":"RLS-A1","stage_profile_observed":"RLS-SP-L","clients":5,"readsPerClient":6,"totalScopeChecks":30,"observed":[{"client":3,"ownReads":3,"foreignReads":3},{"client":2,"ownReads":3,"foreignReads":3},{"client":1,"ownReads":3,"foreignReads":3},{"client":4,"ownReads":3,"foreignReads":3},{"client":0,"ownReads":3,"foreignReads":3}],"thresholds":{"ownBuReadStatus":200,"foreignTenantReadStatus":404,"providerCallsDuringListing":0},"providerCalls":{"calibration":"one fixture Meta number-list operation was detected before the read stage","before":{"meta":1,"evolution":0},"after":{"meta":1,"evolution":0},"duringReadDelta":{"meta":0,"evolution":0}},"elapsedMs":119.21628099999998,"metrics_summary":"Five authenticated clients ran concurrently; each completed three sequential own-BU and three sequential foreign-tenant reads; all instrumented Meta/Evolution operations remained unchanged during channel listing.","limits":"One bounded local PostgreSQL stage; not a capacity, latency SLO, or provider load claim."}
+
+ ✓ test/number-onboarding-pcv.e2e-spec.ts (2 tests) 2289ms
+   ✓ number onboarding bounded performance and read-scope probes (PostgreSQL) > captures the attempt exact-lookup plan and bounded response timings (EPS-E2) 989ms
+   ✓ number onboarding bounded performance and read-scope probes (PostgreSQL) > runs five clients through six scoped channel reads each with zero provider fan-out (RLS-SP-L) 1079ms
+ ✓ test/onboarding.e2e-spec.ts (13 tests) 4745ms
+   ✓ wizard de onboarding e módulos da conta (ADR-0016) > o portão: senha → wizard → produto > antes de concluir, o resto do BFF responde 409 ONBOARDING_PENDENTE 454ms
+   ✓ wizard de onboarding e módulos da conta (ADR-0016) > o portão: senha → wizard → produto > o /me, a troca de senha e o próprio wizard continuam respondendo 371ms
+   ✓ wizard de onboarding e módulos da conta (ADR-0016) > o portão: senha → wizard → produto > a troca de senha vem ANTES do wizard — nunca preso entre os dois portões 700ms
+   ✓ wizard de onboarding e módulos da conta (ADR-0016) > o portão: senha → wizard → produto > ninguém pode ser convidado antes do wizard — o caso deixa de existir 331ms
+   ✓ wizard de onboarding e módulos da conta (ADR-0016) > o wizard oferece SÓ o que a instalação tem > o canal oficial NÃO aparece — ele é o piso, não uma escolha 330ms
+   ✓ wizard de onboarding e módulos da conta (ADR-0016) > o wizard oferece SÓ o que a instalação tem > sem o teto, o módulo nem é oferecido 328ms
+   ✓ wizard de onboarding e módulos da conta (ADR-0016) > concluir > só o OWNER conclui, e o produto passa a responder 339ms
+   ✓ wizard de onboarding e módulos da conta (ADR-0016) > concluir > recusa papel de convite OWNER — seria transferência disfarçada de cadastro 313ms
+   ✓ wizard de onboarding e módulos da conta (ADR-0016) > concluir > recusa módulo fora do teto — pedido inválido é ERRO, não preferência ignorada 309ms
+   ✓ wizard de onboarding e módulos da conta (ADR-0016) > concluir > recusa módulo que não existe nesta instalação 309ms
+   ✓ wizard de onboarding e módulos da conta (ADR-0016) > concluir > grava a conclusão no histórico 302ms
+   ✓ wizard de onboarding e módulos da conta (ADR-0016) > adicionar e remover módulo depois — mesmo serviço, outra porta > ADMIN edita, e a mudança aparece no /me 321ms
+   ✓ wizard de onboarding e módulos da conta (ADR-0016) > adicionar e remover módulo depois — mesmo serviço, outra porta > RECUSA desligar canal que ainda tem número conectado 335ms
+ ✓ test/number-onboarding-message-acceptance.e2e-spec.ts (4 tests) 508ms
+ ✓ test/cross-tenant.e2e-spec.ts (9 tests) 3478ms
+   ✓ escopo entre Mantenedoras > GET /api/bff/business-units/:buId > autorizado: o dono enxerga a BU da própria Mantenedora 336ms
+   ✓ escopo entre Mantenedoras > GET /api/bff/business-units/:buId > CROSS-TENANT: 404 de BU alheia é indistinguível de 404 de BU inexistente 333ms
+   ✓ escopo entre Mantenedoras > GET /api/bff/business-units > lista só o escopo do usuário 336ms
+   ✓ escopo entre Mantenedoras > GET /api/bff/business-units > CROSS-TENANT: usuário sem grant nenhum recebe lista VAZIA, nunca "todas" 443ms
+   ✓ escopo entre Mantenedoras > o grant do fundador nasce como expansão (ADR-0008 §4, importado já corrigido) > a proveniência é MANTENEDORA, não DIRETO 388ms
+   ✓ escopo entre Mantenedoras > o grant do fundador nasce como expansão (ADR-0008 §4, importado já corrigido) > BU nova herda a expansão — o fundador NÃO fica de fora do número que criou 392ms
+   ✓ escopo entre Mantenedoras > o grant do fundador nasce como expansão (ADR-0008 §4, importado já corrigido) > quem tem grant DIRETO não é alcançado pela expansão — e cai para VIEWER na Mantenedora 483ms
+ ✓ test/canais.e2e-spec.ts (10 tests) 3914ms
+   ✓ canais da BU > POST channels — o trio (ADR-0012 §2) > a rota legada dá instrução determinística e não chama provider nem grava canal 366ms
+   ✓ canais da BU > POST channels — o trio (ADR-0012 §2) > papel insuficiente: MEMBRO recebe 403 — a BU é dele, o poder é que não alcança 451ms
+   ✓ canais da BU > POST channels — o trio (ADR-0012 §2) > CROSS-TENANT: OWNER de Alfa recebe 404 ao conectar canal na BU de Beta 324ms
+   ✓ canais da BU > canal não oficial > a rota legada não inicia pareamento 311ms
+   ✓ canais da BU > canal não oficial > o GET de QR foi aposentado sem consulta ao provider 327ms
+   ✓ canais da BU > regras do vínculo > a BU aceita um canal de cada tipo, e recusa o segundo do mesmo tipo 321ms
+   ✓ canais da BU > regras do vínculo > recusa WABA ID que não é numérico, antes de falar com a Meta 308ms
+   ✓ canais da BU > regras do vínculo > repassa a recusa da Meta como META_RECUSOU 308ms
+   ✓ canais da BU > regras do vínculo > remover exige ADMIN e libera o tipo para ser conectado de novo 501ms
+   ✓ canais da BU > regras do vínculo > listar canais é leitura: VIEWER enxerga 515ms
+ ✓ test/realtime.e2e-spec.ts (7 tests) 5847ms
+   ✓ push em tempo real — com escopo (fecha o risco S8) > recusa quem teve a conta inativada, mesmo com cookie válido 321ms
+   ✓ push em tempo real — com escopo (fecha o risco S8) > quem tem grant na BU recebe a mensagem que chegou 328ms
+   ✓ push em tempo real — com escopo (fecha o risco S8) > CROSS-TENANT: o dono de Beta NÃO recebe evento da BU de Alfa 1873ms
+   ✓ push em tempo real — com escopo (fecha o risco S8) > usuário da MESMA Mantenedora sem grant naquela BU também não recebe 2034ms
+   ✓ push em tempo real — com escopo (fecha o risco S8) > o socket some da lista quando o cliente desconecta 598ms
+ ✓ test/number-onboarding-caller-scoping.e2e-spec.ts (1 test) 848ms
+   ✓ provider credential is scoped to each official resource across callers (PostgreSQL) > uses distinct channel credentials for BFF, public API and Typebot; rejects cross-resource token reuse 552ms
+ ✓ test/arquivos.e2e-spec.ts (8 tests) 2876ms
+   ✓ arquivos (ADR-0024) > SEM volume, recusa explicitamente — e o resto do produto funciona 446ms
+   ✓ arquivos (ADR-0024) > com volume > guarda com nome de uuid — o nome do cliente NÃO chega ao disco 334ms
+   ✓ arquivos (ADR-0024) > com volume > recusa SVG — documento executável servido da própria origem é XSS 374ms
+   ✓ arquivos (ADR-0024) > com volume > recusa .png que não é PNG por dentro — o tipo vem dos BYTES 348ms
+   ✓ arquivos (ADR-0024) > com volume > devolve o arquivo para quem é da mesma Mantenedora 315ms
+   ✓ arquivos (ADR-0024) > com volume > cross-tenant: arquivo de A responde 404 para B 514ms
+[31m[Nest] 5202  - [39m10/16/2026, 1:11:14 AM [31m  ERROR[39m [38;5;3m[Rotina] [39m[31m{"nome":"rotina-quebrada","linhas":0,"lotes":0,"pulouPorLock":false,"erro":"estourei de propósito","duracaoMs":2}[39m
+ ✓ test/rotinas.e2e-spec.ts (5 tests) 753ms
+ ✓ test/surfaces.e2e-spec.ts (9 tests) 197ms
+ ✓ test/cobertura-do-catalogo.e2e-spec.ts (4 tests) 325ms
+ ✓ test/painel.e2e-spec.ts (4 tests) 1648ms
+   ✓ painel > conta o atendimento e avisa do número sem canal 376ms
+   ✓ painel > cross-tenant: NENHUM número da Mantenedora B entra na conta de A 312ms
+   ✓ painel > o ATENDENTE vê os números, e NÃO vê o extrato de atividades 474ms
+   ✓ painel > o ADMIN vê o extrato 305ms
+[31m[Nest] 5373  - [39m10/16/2026, 1:11:23 AM [31m  ERROR[39m [38;5;3m[Banco] [39m[31mBANCO ATRÁS DA IMAGEM: "public.tokens_de_acesso" não existe (P2021). Rode `npx prisma migrate deploy` de dentro do serviço.[39m
+ ✓ test/banco-atrasado.e2e-spec.ts (2 tests) 560ms
+   ✓ banco atrás da imagem > tabela ausente vira 503 DIZENDO a causa, não 500 opaco 309ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 2 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  test/number-onboarding-flow.e2e-spec.ts > BFF number registration workflow (PostgreSQL) > reauthorizes only the exact migrated credentialless Official slot after fresh provider proof
+Error: expected 200 "OK", got 409 "Conflict"
+ ❯ test/number-onboarding-flow.e2e-spec.ts:129:122
+    127|       .send({ nonce: created.body.nonce, code: 'fixture-migrated-slot-…
+    128|     await bff('post', `/api/bff/number-registrations/${created.body.at…
+    129|       .send({ wabaId: '123456789', phoneNumberId: '987654321', modoReg…
+       |                                                                                                                          ^
+    130| 
+    131|     expect(await prisma.providerResourceIdentity.findUniqueOrThrow({ w…
+ ❯ Test._assertStatus node_modules/supertest/lib/test.js:309:14
+ ❯ node_modules/supertest/lib/test.js:365:13
+ ❯ Test._assertFunction node_modules/supertest/lib/test.js:342:13
+ ❯ Test.assert node_modules/supertest/lib/test.js:195:23
+ ❯ localAssert node_modules/supertest/lib/test.js:138:14
+ ❯ Server.<anonymous> node_modules/supertest/lib/test.js:152:11
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/2]⎯
+
+ FAIL  test/number-onboarding-flow.e2e-spec.ts > BFF number registration workflow (PostgreSQL) > rejects migrated Official identities owned by another BU or slot before any register effect
+AssertionError: expected 'PROVIDER_RESOURCE_NOT_FOUND' to be 'RESOURCE_OWNED' // Object.is equality
+
+Expected: "RESOURCE_OWNED"
+Received: "PROVIDER_RESOURCE_NOT_FOUND"
+
+ ❯ test/number-onboarding-flow.e2e-spec.ts:167:10
+    165|       await bff('post', `/api/bff/number-registrations/${attempt.body.…
+    166|         .send({ wabaId: '123456789', phoneNumberId, modoRegistro: 'NOV…
+    167|         .expect(({ body }) => expect(body.code).toBe('RESOURCE_OWNED')…
+       |          ^
+    168|     }
+    169|     expect(metaFake.registrosNumero).toBe(0);
+ ❯ test/number-onboarding-flow.e2e-spec.ts:167:49
+ ❯ node_modules/supertest/lib/test.js:365:13
+ ❯ Test._assertFunction node_modules/supertest/lib/test.js:342:13
+ ❯ Test.assert node_modules/supertest/lib/test.js:195:23
+ ❯ localAssert node_modules/supertest/lib/test.js:138:14
+ ❯ Server.<anonymous> node_modules/supertest/lib/test.js:152:11
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/2]⎯
+
+ Test Files  1 failed | 25 passed (26)
+      Tests  2 failed | 280 passed (282)
+   Start at  01:08:46
+   Duration  149.75s (transform 6.23s, setup 167ms, collect 39.93s, tests 104.15s, environment 6ms, prepare 1.72s)
+

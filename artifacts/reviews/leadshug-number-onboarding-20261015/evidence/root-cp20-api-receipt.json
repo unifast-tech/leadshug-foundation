@@ -1,0 +1,100 @@
+{
+  "kind": "root receipt; API checkpoint only, not final integrated or provider certification",
+  "recorded_at_utc": "2026-10-16T01:21:42.186229+00:00",
+  "api_writer": "STOPPED cp20",
+  "current_source_hash_checks": [
+    {
+      "path": "api-app/src/domain/channels/number-registration.service.ts",
+      "matches": true,
+      "sha256": "be53f7f1feb00c0bacb36ce0cf5d60915bb398ed011f69d28d3d4987f83417dc"
+    },
+    {
+      "path": "api-app/src/domain/channels/channel-credential-crypto.spec.ts",
+      "matches": true,
+      "sha256": "eda02a1bf69f40eb07309184adad8d2f1862f563c33afa03fb1657991d29faf1"
+    },
+    {
+      "path": "api-app/test/number-onboarding-flow.e2e-spec.ts",
+      "matches": true,
+      "sha256": "f185b635c06510b4ff9939b331022e69616f2cfaf26452bbe026d5ca92d64801"
+    },
+    {
+      "path": "api-app/test/number-onboarding-pcv.e2e-spec.ts",
+      "matches": true,
+      "sha256": "f8df9630586403473e7a522d2f5004f5de84030f4e998ddeaa1a9afb440ba641"
+    },
+    {
+      "path": "api-app/.dockerignore",
+      "matches": true,
+      "sha256": "79c2485e6c515f7751aa34319cd46ab842dc53d08422270696dba74f55313d10"
+    }
+  ],
+  "cp8_final_public_inventory_comparison": {
+    "same": 146,
+    "deltas": [
+      {
+        "path": "api-app/src/domain/channels/channel-credential-crypto.spec.ts",
+        "cp8_final_sha256": "bdc829c987de4d8944ce417aea03c76e5484091f7ad4612246807bd22e524efb",
+        "current_sha256": "eda02a1bf69f40eb07309184adad8d2f1862f563c33afa03fb1657991d29faf1"
+      },
+      {
+        "path": "api-app/src/domain/channels/number-registration.service.ts",
+        "cp8_final_sha256": "7618f4fac741e96df6343262f32cec447ffa2c3184450f6b8e7a0edbccb6c3a5",
+        "current_sha256": "be53f7f1feb00c0bacb36ce0cf5d60915bb398ed011f69d28d3d4987f83417dc"
+      },
+      {
+        "path": "api-app/test/browser-server.cjs",
+        "cp8_final_sha256": "b5a4bc7ffff1261bb186bc878ceab5c2f334548a62f110bcfb4f57bafa036dcc",
+        "current_sha256": "4379e94511e4d8c06e4dc6a232b85f29305c49863e17f2af639c39f4184c60e3"
+      },
+      {
+        "path": "api-app/test/helpers.ts",
+        "cp8_final_sha256": "c5dbe39b8ef6aeec0fccbe141c75d9efefeba00fcf46bcbeda2ca8a06cd59588",
+        "current_sha256": "13c76881c6b6aa9b062b7d2cc59908c184bea0a84349d87d5b355ba4a0c161d4"
+      },
+      {
+        "path": "api-app/test/number-onboarding-flow.e2e-spec.ts",
+        "cp8_final_sha256": "bbe120780fdc7e514cfe3d8c183fe36a0e06bb52d5b0b0e89ab5f3e14f831c2a",
+        "current_sha256": "f185b635c06510b4ff9939b331022e69616f2cfaf26452bbe026d5ca92d64801"
+      },
+      {
+        "path": "api-app/test/number-onboarding-pcv.e2e-spec.ts",
+        "cp8_final_sha256": "1a622f34fe94b90dee4a7f305959f7a654632185320b60dee321393683a04e8e",
+        "current_sha256": "f8df9630586403473e7a522d2f5004f5de84030f4e998ddeaa1a9afb440ba641"
+      },
+      {
+        "path": "api-app/test/timeline-fixtures.cjs",
+        "cp8_final_sha256": "25c1b231b735eed4ad143681bb25dd552b6ddd042ba04c8eb40c7f782f83ae77",
+        "current_sha256": "ffbbb697205edbe9e076adf33f418d883339f40675f078479eccf704899ca62a"
+      }
+    ]
+  },
+  "added_public_input": {
+    "path": "api-app/.dockerignore",
+    "sha256": "79c2485e6c515f7751aa34319cd46ab842dc53d08422270696dba74f55313d10"
+  },
+  "validation": {
+    "migration_deploy_and_status": "PASS",
+    "lint": "PASS",
+    "build": "PASS",
+    "unit": {
+      "files": 19,
+      "tests": 138,
+      "result": "PASS"
+    },
+    "e2e_serial": {
+      "files": 26,
+      "tests": 282,
+      "result": "PASS"
+    },
+    "diff_check": "PASS"
+  },
+  "handoff_sha256": "82f554e866161460188e2479d316b1222fc084532c2699d7ac74202bba491e82",
+  "log_sha256": "ed652ea89da9d92d5085e86175403f063f92884d3513a28afbbaa62285f37385",
+  "limitations": [
+    "cp20 executor captured pre/post hashes for five paths, not every public input; final all must capture complete public manifests.",
+    "cp20 validation masked API dotenv; root private dotenv masks are queued in cp21 before final all.",
+    "No operational payload contents were inspected or hashed.",
+    "No Meta/device connection proof."
+  ]
+}

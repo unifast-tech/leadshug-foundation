@@ -41,7 +41,7 @@ Proposta ST-CON-01: jornada de cadastro de número, com infraestrutura local est
 
 - **Current delivery stage:** Pending
 - **Qualifiers:** none
-- **Next exact step:** Web cp16 parou com44/44browser e fonte28unitários conferida. DevOps cp17 interrompeu o build após iniciar somente infra própria, preservada. Após handoff terminal, API corrige NUM-ROOT-REG06 e completa REG-SEC-06/07/09 nos paths admitidos; depois runner API e retorno DevOps para operador/logs/header/all/HTTPS e reviews finais. Prova real de canais permanece pendente.
+- **Next exact step:** API cp20 parou com21migrações/lint/build/138unitários/282E2E PostgreSQL aprovados no runner; Web mantém44browser/28unitários de cp16/cp14. DevOps cp21 recebeu writer único para finalizar operador real, logs/header, máscara dos dotenv root na validação, all integrado e HTTPS temporário; depois reviews independentes finais. Prova real de canais permanece pendente.
 
 ## Active Work State (Required While TODO Remains In `active/`)
 
@@ -1050,3 +1050,17 @@ Completar também as provas já prometidas: código consumido/resultado de troca
 Checkpoint17 parcial STOP: root conferiu todos os hashes declarados em cp17-partial-runtime-handoff.json SHA25697a7ca17e9c0c1fb66eadb47b270733a3540e18d9f46fb88fc6e3667543b93f8. API ignore exclui payloads/Git antes do build; README restaura submodules/CI e orientação de origens. Overlay prepara probe privado sem porta; script prepara bootstrap one-shot com lock/estado ambíguo. Esses novos caminhos ainda não foram executados. `.env.testing` foi criada exclusivamente com segredos/OWNER locais e DACL Windows restrita segundo executor, sem valores exibidos. Somente postgres/evolution-postgres/evolution-redis próprios e seus3volumes/rede foram iniciados, reportados healthy; conservar handles no handoff. Build API interrompido em npm ci, sem imagem concluída/migração/API/Web/gateway/bootstrap/probe/all/túnel. Não chamar runtime pronto.
 
 Writer transferido à API cp18 após STOP, escopo produto/teste já admitido para NUM-ROOT-REG06 e REG-SEC-06/07/09. Validar pelo runner API e parar; Web e DevOps congelados. Docs são ownership exclusivo do root. Novo README/overlay/script e API ignore entram nos manifests e validação final, sem reutilizar fonte cp8 como se idêntica.
+
+
+Checkpoint18 API parcial STOP:3fontes escritas (service, crypto.spec, flowE2E) e congeladas pelo root em root-cp18-partial-source.json; nenhum teste executado. O arquivo cp18-fail-first.log é falha de preflight Compose, não RED de produto: o probe de perfil inativo introduz interpolação obrigatória de EVOLUTION_WEBHOOK_SECRET, mas o env temporário fictício da validação não a fornece. A mensagem citar .env.testing não autoriza ler/adotar configuração operacional. DevOps cp19 assume somente correção desse env fictício no runner, syntax/diff/config-only e STOP, preservando infra/arquivo privado; API reassume testes depois. Não ocultar o bloqueio nem relaxar isolamento.
+
+
+Checkpoint19 DevOps STOP: adicionou somente EVOLUTION_WEBHOOK_SECRET fictício ao env temporário da validação; config-only/syntax/diff passaram sem criar recursos ou tocar .env.testing. Runner4b051cb0f190c0d6e93ffda21c2635ba02b67a6fbf8ac6a2edc5636ba9918bd5 e artefato6b798e80a6e9505f826d413a0a1229fb765598b0045bd8f5b0bc5c9b22702859 conferidos pelo root. API cp20 recebeu writer único para prova de regressão reconstruída (guard antigo controlado, restauração exata) e full API final. Essa execução ainda não terminou; não interpretar arquivo de log em andamento como gate. DevOps/Web permanecem parados.
+
+
+Usuário confirmou nesta retomada que preencheu os quatro campos Meta somente no arquivo privado local. Registrar apenas a confirmação de completude pelo operador; nenhum segredo foi solicitado no chat ou reproduzido em evidência. HTTPS, autorização SDK, assinatura de webhook real e conexão IN/OUT continuam sem comprovação. Preservar o arquivo e seus valores na retomada DevOps.
+
+Checkpoint20: controle reconstruído do guard antigo alcançou o caso migrado e reproduziu a recusa; não é evidência test-first original. A primeira matriz final teve falha ECONNRESET no probe RLS. Executor identificou o listener temporário compartilhado do Supertest e fixou somente o harness PCV para app.listen uma vez em loopback/porta efêmera e app.close no encerramento, conservando cinco clientes concorrentes × seis leituras, autorização/escopo e contadores externos. Reteste completo em andamento; nenhum PASS geral até o handoff terminal.
+
+
+Checkpoint20 terminal:21migrações/lint/build/138unitários19arquivos e282E2E PostgreSQL26arquivos passaram no runner canônico. Root conferiu cinco hashes finais declarados e três logs contra cp20-handoff.json SHA25682f554e866161460188e2479d316b1222fc084532c2699d7ac74202bba491e82. Recibo root-cp20-api-receipt.json distingue as provas e limites; manifesto cp20 é parcial em cinco paths, por isso o all integrado deverá capturar todos os inputs públicos pré/pós. API STOP; DevOps cp21 ativado após esse handoff como único writer nos oito paths root já autorizados. Antes do all, mascarar também os dotenv privados root com exemplo público sem tocar host; probe de transporte usa segredo fictício distinto e confirma remoção assíncrona de suas próprias instâncias. Preservar Meta privada e recursos operacionais. Nenhuma aceitação geral/produção ou conexão real reivindicada.

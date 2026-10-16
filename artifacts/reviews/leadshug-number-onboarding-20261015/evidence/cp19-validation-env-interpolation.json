@@ -1,0 +1,17 @@
+{
+  "checkpoint": "cp19-validation-env-interpolation",
+  "date": "2026-10-16",
+  "change": "Added EVOLUTION_WEBHOOK_SECRET=validation-evolution-header-secret to the temporary validation env-file created by scripts/test-channels-local.sh. This is a fictitious validation-only literal matching the existing validation overlay value; it satisfies Compose interpolation for the inactive operator-only provider probe service. The operator .env.testing is neither sourced nor read.",
+  "verification": {
+    "bash_n": "passed",
+    "git_diff_check": "passed",
+    "command": "CHANNELS_CONFIG_ONLY=1 bash scripts/test-channels-local.sh api",
+    "result": "Validation Compose config is valid; no resources were created.",
+    "exit_code": 0,
+    "tests_or_runtime": "not run; no validation resources created and no operator services restarted"
+  },
+  "sha256": {
+    "scripts/test-channels-local.sh": "4b051cb0f190c0d6e93ffda21c2635ba02b67a6fbf8ac6a2edc5636ba9918bd5"
+  },
+  "handoff": "Stop for API writer to run regression/final validation. Preserve existing owned operator infra, volumes, network, and private .env.testing."
+}

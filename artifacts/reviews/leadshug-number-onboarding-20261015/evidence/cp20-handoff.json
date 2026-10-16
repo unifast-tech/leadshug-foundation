@@ -1,0 +1,51 @@
+{
+  "checkpoint": "cp20",
+  "status": "API validation complete; sole API writer STOPPED",
+  "validation_command": "bash scripts/test-channels-local.sh api",
+  "validation_environment": {
+    "node": "v22.23.3",
+    "openssl": "OpenSSL 3.0.22",
+    "prisma": "6.19.3; debian-openssl-3.0.x",
+    "database": "runner-owned disposable leadshug_timeline_channels_ci",
+    "migrations": 21,
+    "dotenv": "runner verified API dotenv mask against .env.example; no operator private environment inspected"
+  },
+  "results": {
+    "migration_deploy_and_status": "PASS",
+    "lint": "PASS",
+    "build": "PASS",
+    "unit": { "files": 19, "tests": 138, "result": "PASS" },
+    "e2e_serial": { "files": 26, "tests": 282, "result": "PASS" },
+    "diff_check": "PASS"
+  },
+  "source_hashes_before_and_after_final_run": [
+    { "path": "api-app/src/domain/channels/number-registration.service.ts", "sha256": "be53f7f1feb00c0bacb36ce0cf5d60915bb398ed011f69d28d3d4987f83417dc" },
+    { "path": "api-app/src/domain/channels/channel-credential-crypto.spec.ts", "sha256": "eda02a1bf69f40eb07309184adad8d2f1862f563c33afa03fb1657991d29faf1" },
+    { "path": "api-app/test/number-onboarding-flow.e2e-spec.ts", "sha256": "f185b635c06510b4ff9939b331022e69616f2cfaf26452bbe026d5ca92d64801" },
+    { "path": "api-app/test/number-onboarding-pcv.e2e-spec.ts", "sha256": "f8df9630586403473e7a522d2f5004f5de84030f4e998ddeaa1a9afb440ba641" },
+    { "path": "api-app/.dockerignore", "sha256": "79c2485e6c515f7751aa34319cd46ab842dc53d08422270696dba74f55313d10" }
+  ],
+  "reconstructed_negative": {
+    "kind": "test-after control; not original test-first RED",
+    "change": "temporarily restored the former blanket rejection of unmanaged Official identities; exact final service bytes were restored before final validation",
+    "discriminating_result": "migrated credentialless same-slot positive failed with HTTP 409 at confirm, as expected under the former guard",
+    "other_failure": "the initial owner-negative test selected a resource outside the provider fake's returned page and got PROVIDER_RESOURCE_NOT_FOUND; its cursor fixture was corrected and the final test passes",
+    "log": "cp20-reconstructed-negative-test-after.log",
+    "log_sha256": "9b0fc19b8fda84c16c5514b18b68058771b4c6523c99d3bc7bcfbd9b92dd1056"
+  },
+  "other_logs": {
+    "final_validation": { "path": "cp20-final-api-validation-rerun.log", "sha256": "ed652ea89da9d92d5085e86175403f063f92884d3513a28afbbaa62285f37385" },
+    "first_reconstructed_control_lint_stop": { "path": "cp20-reconstructed-negative.log", "sha256": "0545ec9cc75856993852a4478caf0ec521fd994eeadbe020ddf80c8ed9712245" },
+    "cp18_compose_preflight_only": "cp18-fail-first.log; not a product failure"
+  },
+  "source_changes": [
+    "Narrowly permits reauthorization of an unmanaged migrated Official identity only for the exact existing BU/channel/phone slot, with a current lease, fresh provider proof, matching BU phone, and no active credential; managed lifecycle activation occurs only in the final promotion transaction.",
+    "Adds PG coverage for migrated-slot success; same-tenant other-slot and foreign-BU ownership denials before register; consumed and ambiguous OAuth code replay plus fresh attempt/nonce; wrong-phone and post-auth cancellation preserving the active envelope/version/generation; and candidate/active AAD context mismatch dimensions.",
+    "Starts the PCV test Nest server once on loopback so concurrent RLS reads do not race Supertest listener binding; retains all five clients, 30 scope checks, and provider-call assertions."
+  ],
+  "limits": [
+    "No actual Meta or Evolution calls, operator DB access, real-browser proof, or provider certification.",
+    "This is API local validation only, not an overall TODO gate or runtime approval.",
+    "npm audit reported package advisories during npm ci; dependencies were not changed."
+  ]
+}

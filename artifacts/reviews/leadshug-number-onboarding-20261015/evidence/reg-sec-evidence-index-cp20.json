@@ -1,0 +1,389 @@
+{
+  "kind": "review-input-only; not a completed REG-SEC certification",
+  "recorded_at_utc": "2026-10-16T01:22:28.706059+00:00",
+  "evidence_basis": {
+    "api": "cp20 final21migrations/lint/build/138unit282PG-E2E; root-cp20-api-receipt.json",
+    "web": "cp16 full44browser and cp14final28unit; source unchanged at API handoff",
+    "runtime": "cp21 active; no actual runtime proof accepted yet"
+  },
+  "limits": [
+    "Mapping test declarations does not prove every clause of each REG-SEC case. Reviewer must read assertions and negative controls.",
+    "REG-SEC-06/07/09 now include explicit migrated-slot, ambiguous-exchange, preserved-active and AAD-dimension tests; reviewer must inspect all assertions, not infer acceptance from declarations.",
+    "REG-SEC-08/09/12 require separate runtime/provider logging and HTTPS/storage/trace evidence.",
+    "Real Meta or WhatsApp IN/OUT and device pairing remain pending external evidence."
+  ],
+  "rows": [
+    {
+      "case_id": "REG-SEC-01",
+      "status": "pending-independent-review",
+      "mapped_test_declarations": [
+        {
+          "path": "api-app/test/number-onboarding-typebot.e2e-spec.ts",
+          "line": 33,
+          "test_declaration": "it('does not resume a session stored under another tenant and ignores a foreign global trigger', async () => {",
+          "source_sha256": "c3c5ed2b17f72790302f6f341d67c428d876ea2d53d77e6e29ab9e9b7df3de30"
+        },
+        {
+          "path": "api-app/test/number-onboarding-typebot.e2e-spec.ts",
+          "line": 47,
+          "test_declaration": "it('uses only the same tenant trigger, derives its session owner from the BU, and accepts the bot reply through the keyed writer', async () => {",
+          "source_sha256": "c3c5ed2b17f72790302f6f341d67c428d876ea2d53d77e6e29ab9e9b7df3de30"
+        },
+        {
+          "path": "api-app/test/number-onboarding-caller-scoping.e2e-spec.ts",
+          "line": 28,
+          "test_declaration": "it('uses distinct channel credentials for BFF, public API and Typebot; rejects cross-resource token reuse', async () => {",
+          "source_sha256": "1adb1663295c551da9134729c09d6101c690d717da99a84cd543304bb47738fc"
+        }
+      ]
+    },
+    {
+      "case_id": "REG-SEC-02",
+      "status": "pending-independent-review",
+      "mapped_test_declarations": [
+        {
+          "path": "api-app/test/webhooks.e2e-spec.ts",
+          "line": 178,
+          "test_declaration": "it('keys identical provider message IDs independently per resource and skips ID-less Meta records', async () => {",
+          "source_sha256": "479ec2408ca163f44db2e142eeacd8e24d9f46021d0f10386af1e459d2252c51"
+        },
+        {
+          "path": "api-app/test/webhooks.e2e-spec.ts",
+          "line": 196,
+          "test_declaration": "it('deduplicates ten concurrent Meta deliveries per key across three new contacts', async () => {",
+          "source_sha256": "479ec2408ca163f44db2e142eeacd8e24d9f46021d0f10386af1e459d2252c51"
+        },
+        {
+          "path": "api-app/test/webhooks.e2e-spec.ts",
+          "line": 218,
+          "test_declaration": "it('deduplicates ten concurrent Evolution deliveries per key across three message IDs', async () => {",
+          "source_sha256": "479ec2408ca163f44db2e142eeacd8e24d9f46021d0f10386af1e459d2252c51"
+        },
+        {
+          "path": "api-app/test/webhooks.e2e-spec.ts",
+          "line": 256,
+          "test_declaration": "it('rejects Evolution message keys without a provider ID before conversation or unread effects', async () => {",
+          "source_sha256": "479ec2408ca163f44db2e142eeacd8e24d9f46021d0f10386af1e459d2252c51"
+        },
+        {
+          "path": "api-app/test/number-onboarding-message-acceptance.e2e-spec.ts",
+          "line": 43,
+          "test_declaration": "it('accepts one incoming key once, creating one conversation and unread increment', async () => {",
+          "source_sha256": "c8b29c16412938b64fb8e2555729f0777d9e3eb69a57d29df3d65b56443c4bac"
+        },
+        {
+          "path": "api-app/test/number-onboarding-message-acceptance.e2e-spec.ts",
+          "line": 54,
+          "test_declaration": "it('reports the first conversation once and keeps a second immediate message in the same conversation', async () => {",
+          "source_sha256": "c8b29c16412938b64fb8e2555729f0777d9e3eb69a57d29df3d65b56443c4bac"
+        }
+      ]
+    },
+    {
+      "case_id": "REG-SEC-03",
+      "status": "pending-independent-review",
+      "mapped_test_declarations": [
+        {
+          "path": "api-app/test/number-onboarding-flow.e2e-spec.ts",
+          "line": 636,
+          "test_declaration": "it('rejects a pre-identity IN without content, then accepts its same key after owner verification', async () => {",
+          "source_sha256": "f185b635c06510b4ff9939b331022e69616f2cfaf26452bbe026d5ca92d64801"
+        },
+        {
+          "path": "api-app/test/number-onboarding-flow.e2e-spec.ts",
+          "line": 669,
+          "test_declaration": "it('rejects a divergent Evolution owner phone before accepting content', async () => {",
+          "source_sha256": "f185b635c06510b4ff9939b331022e69616f2cfaf26452bbe026d5ca92d64801"
+        },
+        {
+          "path": "api-app/test/webhooks.e2e-spec.ts",
+          "line": 303,
+          "test_declaration": "it('não persiste estado arbitrário antes da prova de identidade', async () => {",
+          "source_sha256": "479ec2408ca163f44db2e142eeacd8e24d9f46021d0f10386af1e459d2252c51"
+        }
+      ]
+    },
+    {
+      "case_id": "REG-SEC-04",
+      "status": "pending-independent-review",
+      "mapped_test_declarations": [
+        {
+          "path": "api-app/test/number-onboarding-flow.e2e-spec.ts",
+          "line": 347,
+          "test_declaration": "it('retains Meta resource ownership after removal and rejects reassignment and late old-owner content', async () => {",
+          "source_sha256": "f185b635c06510b4ff9939b331022e69616f2cfaf26452bbe026d5ca92d64801"
+        }
+      ]
+    },
+    {
+      "case_id": "REG-SEC-05",
+      "status": "pending-independent-review",
+      "mapped_test_declarations": [
+        {
+          "path": "api-app/test/number-onboarding-flow.e2e-spec.ts",
+          "line": 686,
+          "test_declaration": "it('rejects a pair POST without CSRF before calling Evolution', async () => {",
+          "source_sha256": "f185b635c06510b4ff9939b331022e69616f2cfaf26452bbe026d5ca92d64801"
+        },
+        {
+          "path": "api-app/test/canais.e2e-spec.ts",
+          "line": 86,
+          "test_declaration": "it('o GET de QR foi aposentado sem consulta ao provider', async () => {",
+          "source_sha256": "a0a09f0cf84ce5883bbc51a0e448e85f644354dc6a44a519b780a877ac9e7551"
+        }
+      ]
+    },
+    {
+      "case_id": "REG-SEC-06",
+      "status": "pending-independent-review",
+      "mapped_test_declarations": [
+        {
+          "path": "api-app/test/number-onboarding-flow.e2e-spec.ts",
+          "line": 36,
+          "test_declaration": "it('recovers the same one-use nonce for idempotent create and connects only after provider subscribe plus receipt', async () => {",
+          "source_sha256": "f185b635c06510b4ff9939b331022e69616f2cfaf26452bbe026d5ca92d64801"
+        },
+        {
+          "path": "api-app/test/number-onboarding-flow.e2e-spec.ts",
+          "line": 241,
+          "test_declaration": "it('creates a new BU and inherited founder grant once, then replays the same attempt and nonce', async () => {",
+          "source_sha256": "f185b635c06510b4ff9939b331022e69616f2cfaf26452bbe026d5ca92d64801"
+        },
+        {
+          "path": "api-app/test/number-onboarding-flow.e2e-spec.ts",
+          "line": 279,
+          "test_declaration": "it('recovers a promoted pending registration after expiry with a fresh authorized session', async () => {",
+          "source_sha256": "f185b635c06510b4ff9939b331022e69616f2cfaf26452bbe026d5ca92d64801"
+        },
+        {
+          "path": "api-app/test/number-onboarding-flow.e2e-spec.ts",
+          "line": 440,
+          "test_declaration": "it('rejects a stale confirmation after its lease expires and a replacement attempt wins', async () => {",
+          "source_sha256": "f185b635c06510b4ff9939b331022e69616f2cfaf26452bbe026d5ca92d64801"
+        },
+        {
+          "path": "api-app/test/number-onboarding-flow.e2e-spec.ts",
+          "line": 81,
+          "test_declaration": "it('consumes OAuth codes once and requires a fresh attempt and nonce after an ambiguous exchange', async () => {",
+          "source_sha256": "f185b635c06510b4ff9939b331022e69616f2cfaf26452bbe026d5ca92d64801"
+        },
+        {
+          "path": "api-app/test/number-onboarding-flow.e2e-spec.ts",
+          "line": 115,
+          "test_declaration": "it('reauthorizes only the exact migrated credentialless Official slot after fresh provider proof', async () => {",
+          "source_sha256": "f185b635c06510b4ff9939b331022e69616f2cfaf26452bbe026d5ca92d64801"
+        },
+        {
+          "path": "api-app/test/number-onboarding-flow.e2e-spec.ts",
+          "line": 139,
+          "test_declaration": "it('rejects migrated Official identities owned by another BU or slot before any register effect', async () => {",
+          "source_sha256": "f185b635c06510b4ff9939b331022e69616f2cfaf26452bbe026d5ca92d64801"
+        }
+      ]
+    },
+    {
+      "case_id": "REG-SEC-07",
+      "status": "pending-independent-review",
+      "mapped_test_declarations": [
+        {
+          "path": "api-app/test/number-onboarding-flow.e2e-spec.ts",
+          "line": 380,
+          "test_declaration": "it('allows only one BU to reserve a concurrently selected provider resource', async () => {",
+          "source_sha256": "f185b635c06510b4ff9939b331022e69616f2cfaf26452bbe026d5ca92d64801"
+        },
+        {
+          "path": "api-app/test/number-onboarding-flow.e2e-spec.ts",
+          "line": 440,
+          "test_declaration": "it('rejects a stale confirmation after its lease expires and a replacement attempt wins', async () => {",
+          "source_sha256": "f185b635c06510b4ff9939b331022e69616f2cfaf26452bbe026d5ca92d64801"
+        },
+        {
+          "path": "api-app/test/number-onboarding-flow.e2e-spec.ts",
+          "line": 466,
+          "test_declaration": "it('rechecks actor/session after provider lookup before a register side effect', async () => {",
+          "source_sha256": "f185b635c06510b4ff9939b331022e69616f2cfaf26452bbe026d5ca92d64801"
+        },
+        {
+          "path": "api-app/test/number-onboarding-flow.e2e-spec.ts",
+          "line": 592,
+          "test_declaration": "it('wipes expired and superseded candidate envelopes while preserving an active credential', async () => {",
+          "source_sha256": "f185b635c06510b4ff9939b331022e69616f2cfaf26452bbe026d5ca92d64801"
+        },
+        {
+          "path": "api-app/test/number-onboarding-flow.e2e-spec.ts",
+          "line": 175,
+          "test_declaration": "it('keeps an active credential unchanged after wrong-phone confirmation and post-auth cancellation', async () => {",
+          "source_sha256": "f185b635c06510b4ff9939b331022e69616f2cfaf26452bbe026d5ca92d64801"
+        }
+      ]
+    },
+    {
+      "case_id": "REG-SEC-08",
+      "status": "pending-independent-review",
+      "mapped_test_declarations": [
+        {
+          "path": "api-app/test/number-onboarding-message-acceptance.e2e-spec.ts",
+          "line": 92,
+          "test_declaration": "it('persists redacted diagnostics only while the verified identity remains current', async () => {",
+          "source_sha256": "c8b29c16412938b64fb8e2555729f0777d9e3eb69a57d29df3d65b56443c4bac"
+        },
+        {
+          "path": "api-app/src/domain/channels/channel-credential-crypto.spec.ts",
+          "line": 67,
+          "test_declaration": "it('redacts nested provider credentials and secret URL components', () => {",
+          "source_sha256": "eda02a1bf69f40eb07309184adad8d2f1862f563c33afa03fb1657991d29faf1"
+        },
+        {
+          "path": "api-app/src/domain/channels/safe-redaction.spec.ts",
+          "line": 5,
+          "test_declaration": "it('removes QR and webhook secrets while preserving safe stage metadata', () => {",
+          "source_sha256": "b35f2c689ee22cf0f8ebe50b4979ca7e25a708e0bd6930c93c376fbf57a3ff6a"
+        }
+      ]
+    },
+    {
+      "case_id": "REG-SEC-09",
+      "status": "pending-independent-review",
+      "mapped_test_declarations": [
+        {
+          "path": "api-app/src/domain/channels/channel-credential-crypto.spec.ts",
+          "line": 13,
+          "test_declaration": "it('round trips with candidate-bound AAD and a fresh nonce', () => {",
+          "source_sha256": "eda02a1bf69f40eb07309184adad8d2f1862f563c33afa03fb1657991d29faf1"
+        },
+        {
+          "path": "api-app/src/domain/channels/channel-credential-crypto.spec.ts",
+          "line": 20,
+          "test_declaration": "it('fails closed when any candidate AAD dimension changes', () => {",
+          "source_sha256": "eda02a1bf69f40eb07309184adad8d2f1862f563c33afa03fb1657991d29faf1"
+        },
+        {
+          "path": "api-app/src/domain/channels/channel-credential-crypto.spec.ts",
+          "line": 60,
+          "test_declaration": "it('loads only an exact 32-byte canonical base64 key under the private config names', () => {",
+          "source_sha256": "eda02a1bf69f40eb07309184adad8d2f1862f563c33afa03fb1657991d29faf1"
+        },
+        {
+          "path": "api-app/src/integrations/meta/meta.client.spec.ts",
+          "line": 55,
+          "test_declaration": "it('exchanges code in a POST body and never places it in the URL', async () => {",
+          "source_sha256": "7a801cd2c90040ba72a3f98709a2ca51c445346fdf553cdb316c4e94f5e76606"
+        },
+        {
+          "path": "api-app/src/integrations/meta/meta.client.spec.ts",
+          "line": 71,
+          "test_declaration": "it('does not use legacy token and emits a safe error for provider details', async () => {",
+          "source_sha256": "7a801cd2c90040ba72a3f98709a2ca51c445346fdf553cdb316c4e94f5e76606"
+        },
+        {
+          "path": "api-app/src/integrations/meta/meta.client.spec.ts",
+          "line": 144,
+          "test_declaration": "it('rejects redirects and never follows provider locations with registration credentials', async () => {",
+          "source_sha256": "7a801cd2c90040ba72a3f98709a2ca51c445346fdf553cdb316c4e94f5e76606"
+        },
+        {
+          "path": "api-app/src/domain/channels/channel-credential-crypto.spec.ts",
+          "line": 39,
+          "test_declaration": "it('binds active credentials to provider, owner, channel, generation, purpose, and version', () => {",
+          "source_sha256": "eda02a1bf69f40eb07309184adad8d2f1862f563c33afa03fb1657991d29faf1"
+        }
+      ]
+    },
+    {
+      "case_id": "REG-SEC-10",
+      "status": "pending-independent-review",
+      "mapped_test_declarations": [
+        {
+          "path": "api-app/test/atendimento.e2e-spec.ts",
+          "line": 151,
+          "test_declaration": "it('serializes verified inbound acceptance behind retirement on the same identity row', async () => {",
+          "source_sha256": "c8a4612bde40e3c162499bffd8d4351bc912f70d0774ec43618ef4a5ddf23859"
+        },
+        {
+          "path": "api-app/test/atendimento.e2e-spec.ts",
+          "line": 198,
+          "test_declaration": "it('serializes old-instance ingress against a real managed RENEW and rejects stale content', async () => {",
+          "source_sha256": "c8a4612bde40e3c162499bffd8d4351bc912f70d0774ec43618ef4a5ddf23859"
+        },
+        {
+          "path": "api-app/test/number-onboarding-flow.e2e-spec.ts",
+          "line": 489,
+          "test_declaration": "it('renews a managed Evolution identity through cleanup then creates the reserved replacement once', async () => {",
+          "source_sha256": "f185b635c06510b4ff9939b331022e69616f2cfaf26452bbe026d5ca92d64801"
+        },
+        {
+          "path": "api-app/test/number-onboarding-flow.e2e-spec.ts",
+          "line": 524,
+          "test_declaration": "it('keeps an unverified QR attempt and epoch across connecting/open observations', async () => {",
+          "source_sha256": "f185b635c06510b4ff9939b331022e69616f2cfaf26452bbe026d5ca92d64801"
+        }
+      ]
+    },
+    {
+      "case_id": "REG-SEC-11",
+      "status": "pending-independent-review",
+      "mapped_test_declarations": [
+        {
+          "path": "api-app/test/atendimento.e2e-spec.ts",
+          "line": 100,
+          "test_declaration": "it('reconcilia o eco Evolution autenticado entregue dentro do send sem unread duplicada', async () => {",
+          "source_sha256": "c8a4612bde40e3c162499bffd8d4351bc912f70d0774ec43618ef4a5ddf23859"
+        },
+        {
+          "path": "api-app/test/api-publica.e2e-spec.ts",
+          "line": 172,
+          "test_declaration": "it('reconcilia eco Evolution público entregue durante send e expõe a mesma OUT no refresh', async () => {",
+          "source_sha256": "7c877f0665f1f7e075eb36675063fda4b576bf217a40f8e1862c3a17921a0882"
+        },
+        {
+          "path": "api-app/test/number-onboarding-typebot.e2e-spec.ts",
+          "line": 70,
+          "test_declaration": "it('reconciles a Typebot Evolution echo delivered inside send and ignores a later duplicate echo', async () => {",
+          "source_sha256": "c3c5ed2b17f72790302f6f341d67c428d876ea2d53d77e6e29ab9e9b7df3de30"
+        },
+        {
+          "path": "api-app/test/number-onboarding-message-acceptance.e2e-spec.ts",
+          "line": 65,
+          "test_declaration": "it('echo-first and sender result reconcile to the same OUT row without changing its identity or createdAt', async () => {",
+          "source_sha256": "c8b29c16412938b64fb8e2555729f0777d9e3eb69a57d29df3d65b56443c4bac"
+        },
+        {
+          "path": "web-app/e2e/number-onboarding.spec.ts",
+          "line": 437,
+          "test_declaration": "test('QR só aparece para o pareamento atual; IN antecipado é recusado e eco de envio reconcilia uma única mensagem', async ({ page, request, context }) => {",
+          "source_sha256": "2c6b00d0553ade56daed438a17f72bb10acd61ba34ff40e9330c263438b84e8c"
+        }
+      ]
+    },
+    {
+      "case_id": "REG-SEC-12",
+      "status": "pending-independent-review",
+      "mapped_test_declarations": [
+        {
+          "path": "api-app/test/webhooks.e2e-spec.ts",
+          "line": 121,
+          "test_declaration": "it('a verificação de endpoint devolve o challenge só com o verify token certo', async () => {",
+          "source_sha256": "479ec2408ca163f44db2e142eeacd8e24d9f46021d0f10386af1e459d2252c51"
+        },
+        {
+          "path": "api-app/test/webhooks.e2e-spec.ts",
+          "line": 242,
+          "test_declaration": "it('recusa segredo errado', async () => {",
+          "source_sha256": "479ec2408ca163f44db2e142eeacd8e24d9f46021d0f10386af1e459d2252c51"
+        }
+      ]
+    },
+    {
+      "case_id": "REG-SEC-13",
+      "status": "pending-independent-review",
+      "mapped_test_declarations": [
+        {
+          "path": "api-app/test/webhooks.e2e-spec.ts",
+          "line": 152,
+          "test_declaration": "it('partitions a signed mixed-owner batch by each verified phone resource', async () => {",
+          "source_sha256": "479ec2408ca163f44db2e142eeacd8e24d9f46021d0f10386af1e459d2252c51"
+        }
+      ]
+    }
+  ]
+}
