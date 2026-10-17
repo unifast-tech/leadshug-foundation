@@ -1,0 +1,34 @@
+{
+  "checkpoint": "cp66-meta-publication-authorization",
+  "recordedUtc": "2026-10-17T16:49:37.309748+00:00",
+  "userReply": "Autorizar publicação do app Meta para o teste",
+  "authorization": "GRANTED for existing LeadsHug Meta app publication and existing own reserved official-number test",
+  "appId": "874966345550148",
+  "supersedes": "Prior no-publication boundary only for this expressly authorized same-app test; prior receipts remain historical and unchanged.",
+  "operationOwner": "human administrator in Meta dashboard",
+  "publicationExecution": "PENDING operator confirmation",
+  "publishedStateConfirmed": false,
+  "localAvailabilityObservedUtc": "2026-10-17T16:48:48.256261+00:00",
+  "localAvailability": {
+    "host": "addressing-mar-perform-hormone.trycloudflare.com",
+    "normalTls": true,
+    "healthStatus": 200,
+    "policyStatus": 200,
+    "policyBytes": 12865,
+    "policySha256": "d0f72c588f0f014de46a327e34d6b26125ca115bc973b56bbb926cd8519e701d",
+    "redirected": false,
+    "setCookiePresent": false,
+    "authenticationSent": false
+  },
+  "nextStep": "Operator clicks Publish and confirms state Published/Publicado/Ao vivo or reports error/new requirement; only then fresh real IN/reply test in Local Test Ofc BU.",
+  "unchangedBoundaries": [
+    "Existing private OWNER/test cohort and same reserved official resource",
+    "No production/Railway rollout or onboarding external customers",
+    "No App Review submission or permission/credential expansion",
+    "No automatic provider/Graph/outbound calls, account/domain creation, source push or gitlink mutation",
+    "No new registration or reauthorization without a demonstrated need"
+  ],
+  "parentStatus": "Pending",
+  "officialVAL05": "open_unwaived",
+  "noCodeRuntimeProviderMetaOrPrivateFileMutationByAgent": true
+}

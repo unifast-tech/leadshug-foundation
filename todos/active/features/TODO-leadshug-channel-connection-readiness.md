@@ -41,12 +41,12 @@ Proposta ST-CON-01: jornada de cadastro de número, com infraestrutura local est
 
 - **Current delivery stage:** Pending
 - **Qualifiers:** none
-- **Next exact step:** cp65: operador informa configurações necessárias concluídas e botão Publicar disponível. Obter autorização específica para publicar o mesmo app Meta; após estado Published confirmado, repetir IN/resposta no número oficial próprio de teste e BU correta. App ainda sem publicação confirmada; VAL05 permanece aberto.
+- **Next exact step:** cp66: usuário AUTORIZOU publicar o mesmo app Meta para o teste; operador solicitado a clicar Publicar e informar estado Publicado/Published/Ao vivo ou erro. Após confirmação, repetir IN/resposta reais no número oficial próprio já vinculado à BU Local Test Ofc. Execução da publicação ainda não confirmada; VAL05 aberto.
 
 ## Active Work State (Required While TODO Remains In `active/`)
 
 - **Work state:** implementing
-- **Why this state now:** Cadastro oficial em BU correta chegou a SUBSCRIBED/identidade verificada, mas primeira IN física falhou em aparecer e não foi persistida no escopo cp61. Canal continua PENDING_RECEIPT/SUBSCRIBEDv7, sem receipt/connectedAt. Diagnóstico Meta→callback pendente; app não publicado é hipótese não confirmada. Sem defeito de fonte estabelecido ou mudança runtime; entrega Pending.
+- **Why this state now:** Cadastro oficial na BU correta tem último readback SUBSCRIBED/PENDING_RECEIPT sem IN real cp61/62; política/HTTPS entregues cp64, painel liberou publicação cp65 e usuário autorizou o mesmo app para o teste cp66. Operador ainda deve confirmar estado Published antes do novo teste real. Sem novo defeito de fonte estabelecido; entrega Pending, VAL05 aberto.
 - **Exit condition:** implementação no escopo, matriz local/provas reais e gates de entrega aceitos.
 
 ## Scope
@@ -60,7 +60,7 @@ Proposta ST-CON-01: jornada de cadastro de número, com infraestrutura local est
 - [ ] SCOPE-07: testes de contrato/segurança/races/PostgreSQL e Playwright com runtime real; prova externa separada por canal.
 - [ ] SCOPE-08: runtime local próprio do LeadsHug com Evolution fixada, persistência isolada, wiring de variáveis e runbook de callback HTTPS; sem tocar runtime/dados do legado.
 - [ ] SCOPE-09: reautorização preserva credencial válida; novo pareamento invalida confiança anterior antes da rede e usa instância por epoch; identidade mantém proprietário após exclusão; aceitação única IN/OUT+echo e Typebot isolado por Mantenedora.
-- [x] SCOPE-10: complemento autorizado cp63: política UNIFAST/LeadsHug e instruções de solicitações em documento estático público /privacidade.html para preparo Meta, sem coleta/formulários/SDK ou alteração de login, sem publicar app Meta.
+- [x] SCOPE-10: complemento autorizado cp63: política UNIFAST/LeadsHug e instruções de solicitações em documento estático público /privacidade.html para preparo Meta, sem coleta/formulários/SDK ou alteração de login. Publicação do app Meta foi autorizada separadamente cp66 somente para o teste no mesmo app/recurso.
 
 ## Proposed Registration Contracts
 
@@ -784,7 +784,7 @@ Conferência de implementação/prova local; não certifica OAuth, aparelho ou I
 | D-08 | Adherent | message-acceptance.service.ts; caller-scoping/Typebot/atendimento/public E2E; REG-SEC-01/02/11; cp33/49/52 não oficial real | INOUT oficial continua VAL05; testes sintéticos não o substituem. |
 | D-09 | Adherent | scripts/start-channels-local.sh e test-channels-local.sh; namespaces próprios e provas HTTPS cp22; runtime cp24/cp25 e all cp27 | Railway/histórico/Nova conversa proativa não implementados neste recorte. |
 | D-10 | Adherent | baselines e manifestos cp22/cp23; root-cp23-web-receipt.json; handoffs serializados e diff-cp23-pre-runtime go | Gitlinks observados, sem escrita manual; nenhum push de source. |
-| D-11 | Adherent | HTML12865/d0; crítica/final/layout cp63, Web28, Nginx/candidata cfd5 e final v9 aceitos; prova HTTPS real root40f8df7d...200d0/zero scripts/forms/CFmarkers/cookies/redirect e JSd143 | Entrega do documento local somente; parent Pending/VAL05 oficial aberto, Meta sem publicar e domínio efêmero. |
+| D-11 | Adherent | HTML12865/d0; crítica/final/layout cp63, Web28, Nginx/candidata cfd5 e final v9 aceitos; prova HTTPS real root40f8df7d...200d0/zero scripts/forms/CFmarkers/cookies/redirect e JSd143 | Entrega do documento local somente; parent Pending/VAL05 oficial aberto, publicação Meta autorizada cp66 mas ainda sem confirmação de execução, domínio efêmero. |
 
 ## Module Decision Consistency Validation (1-1 Mandatory Before Delivery)
 
@@ -1766,3 +1766,6 @@ cp64 fechamento Git: attestation antes do commit detectou normalização CRLF→
 
 
 cp65 (2026-10-17), Operational/DevOps escopos Docker/NestJS/React/Vite, Genesis inaplicável: usuário retornou tela Publicar com configurações necessárias concluídas e botão disponível. É relato de prontidão de configuração, não autorização/execução da publicação nem aprovação de App Review ou recebimento real. Nova checagem read-only HTTPS normal de health200 e política20012865/d0 semcookie/redirect; sem credenciais/mutação/testes de produto adicionais. cp65-meta-publication-decision.json contém ação concreta proposta: publicar SOMENTE o mesmo app Meta por operador, após autorização específica, e validar entrada/resposta do número próprio de teste na BU correta. Mantém limites de coorte e R02, parent Pending e VAL05 aberto/sem waiver. Não reabrir cadastro ou registrar número novamente por antecipação. O complemento cp63 já registra publicação como decisão separada; pedido de autorização não é dispensa de requisitos Meta. Campos salvos/assinatura/webhook atual não são comprovados pelo simples botão disponível. O guia primário fbsamples lista publicação, análise/verificação e configuração como etapas distintas; developers.facebook.com não pôde ser lido nesta consulta (429), sem afirmar regra atual não verificada.
+
+
+cp66 (2026-10-17): usuário respondeu explicitamente “Autorizar publicação do app Meta para o teste”. Esta autorização persiste e SUPERA somente a limitação anterior de manter o mesmo app Meta sem publicar para o teste do número próprio reservado. Não pedir novamente essa aprovação. cp66-meta-publication-authorization.json retém o grant, a checagem HTTPS atual e a distinção autorização/execução/validação. Operador instruído a clicar Publicar e confirmar estado Publicado/Published/Ao vivo ou erro/nova exigência; resposta pendente. Nenhuma publicação presumida nem ação Meta executada pelo agente. Próximo após confirmação é IN/resposta real na BU Local Test Ofc, sem novo cadastro/reauthorização por antecipação. Parent Pending/VAL05 aberto, dependências/coorte privada e outros limites permanecem. Histórico cp63/cp64/cp65 e seus no-publication/pending originais preservados como estados anteriores; scope10/D11 correntes reconciliados com esta decisão. Somente docs/metadados atualizados; sem testes de produto ou mutação runtime/provedor/contas/segredos.
