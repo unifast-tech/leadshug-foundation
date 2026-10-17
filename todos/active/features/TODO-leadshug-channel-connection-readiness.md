@@ -41,12 +41,12 @@ Proposta ST-CON-01: jornada de cadastro de número, com infraestrutura local est
 
 - **Current delivery stage:** Pending
 - **Qualifiers:** none
-- **Next exact step:** Commit local do único teste cp36j concluído (db5a867); registrar checkpoint de evidências e conduzir autorização Meta na UI com número próprio reservado para testes, já cadastrado na API oficial (modo Já registrado). TQA j e final independente j completos/aceitos, FINAL-CP36I-01 verified-local. URLs atuais validadas pelo operador cp54. Não oficial comprovado cp49/52; oficial real VAL05 obrigatório/aberto. Nenhum novo QR/restart necessário.
+- **Next exact step:** Operador refaz autorização na mesma BU/canal oficial por Reservar reautorização e escolhe a empresa/conta do número próprio de teste. cp57: autorização/opções apareceram, mas usuário escolheu Sandbox Business; Test Number da Meta não é o recurso-alvo. Não confirmar sandbox. Se a conta própria não aparecer ou houver erro, registrar a tela antes de avançar. TQA/final j aceitos e checkpoint Foundation dd06a150 já publicado; VAL05 oficial continua aberto, sem nova alteração de código/runtime.
 
 ## Active Work State (Required While TODO Remains In `active/`)
 
 - **Work state:** implementing
-- **Why this state now:** Fonte/testes cp36j aceitos pelo TQA completo e final distinto; não oficial tem pareamento, INOUT e reconexão real comprovados. Meta URLs confirmadas cp54; operador escolheu número próprio de teste já em API oficial cp55/56. Próximo passo é autorização/vínculo real na UI; VAL05 oficial continua aberto e entrega Pending/D05D06D07 Exception.
+- **Why this state now:** Fonte/testes e não oficial já aceitos nos limites registrados. cp57 comprovou pela UI autorização/opções do Sandbox selecionado pelo usuário, mas o número próprio de teste ainda não foi autorizado/vinculado. Fluxo normal de reautorização mesma BU/canal em execução pelo operador; entrega Pending/D05D06D07 Exception.
 - **Exit condition:** implementação no escopo, matriz local/provas reais e gates de entrega aceitos.
 
 ## Scope
@@ -1593,3 +1593,10 @@ Final j raw0124bc22.../schema/binding/merge válidos, completo9/frozenmanifest/A
 
 
 Commit local unit-only cp36j db5a86758a165fac8a1ab587599c37b17890530c terminal, um path público/spec9faf845a byteexact index/HEAD, outros8manifest9 atuais iguais. cp36j-committed-source-attestation.json preserva executionHEAD anterior e reuso h/imagei; sem sourcepush/gitlink/runtime.
+
+
+### cp57 — seleção Sandbox identificada antes de confirmar
+
+Usuário reportou “Autorização confirmada” e lista com Test Number. Confirmou que era número fornecido pela Meta e que escolheu Sandbox Business na janela. Identificadores recebidos não foram copiados ao artefato. Isso demonstra autorização/opções do recurso selecionado, sem comprovar vínculo do número próprio escolhido cp55/56 e sem estabelecer defeito do produto. Não foi orientada confirmação de recurso errado.
+
+Leitura pública confirmou o percurso normal da UI: Começar outro cadastro sem cancelar esta etapa → mesma BU → Canal existente/Oficial → Reservar reautorização. POST REAUTORIZAR usa canal/geração atuais, substitui tentativa não concluída e elimina nonce/candidata anteriores antes de CAS; credencial ativa não é modificada pela reserva. Sem cancelamento parcial/SQL/BU extra/novo código. Operador deve escolher a empresa/conta do recurso próprio de teste, parar se ausente e reportar estado/erro. Nenhuma publicação, migração, registro NOVO, provider mutation pelo agente ou prova oficial INOUT. cp57-official-sandbox-selection-readback.json; pergunta humana de reautorização pendente.

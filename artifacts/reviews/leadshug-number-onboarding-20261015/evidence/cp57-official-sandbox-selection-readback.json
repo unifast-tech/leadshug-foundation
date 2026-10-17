@@ -1,0 +1,42 @@
+{
+  "checkpoint": "cp57",
+  "capturedAtUtc": "2026-10-17T05:05:43.164156+00:00",
+  "profile": "Operational / DevOps orchestration; nestjs/react/vite/postgresql/prisma/docker; Genesis ineligible: existing approved ST-CON-01",
+  "evidenceType": "human_observed_official_authorization_and_resource_mismatch",
+  "reportedUi": {
+    "authorizationConfirmed": true,
+    "accountAndNumberChoicesDisplayed": true,
+    "numberLabel": "Test Number",
+    "confirmNumberControlDisplayed": true
+  },
+  "identifiers": "User-supplied account/phone identifiers intentionally omitted from artifact.",
+  "humanClarifications": [
+    "É outro número, fornecido pela Meta",
+    "Escolhi Sandbox Business ou uma conta de teste da Meta"
+  ],
+  "interpretation": "Observed authorization/options journey for selected Meta sandbox; not authorization or connection of the previously chosen own test number. No source defect established.",
+  "normalUiRecovery": {
+    "action": "New scoped REAUTORIZAR on same BU/existing official channel, then choose actual own test business/account in Meta.",
+    "sourceBasis": [
+      "web-app/src/componentes/CadastroNumero.tsx:273 maps selected existing channel to REAUTORIZAR/channelId/expectedGeneration",
+      "api-app/src/domain/channels/number-registration.service.ts:106 validates same BU/channel/current generation and no live lease",
+      "api-app/src/domain/channels/number-registration.service.ts:118 supersedes uncompleted previous attempt and clears its nonce/candidate before CAS-claiming new current attempt",
+      "api-app/src/domain/channels/number-registration.service.ts:228 confirms provider resource only on explicit confirmation"
+    ],
+    "boundary": "Operator instructed not to confirm sandbox number. No cancellation/SQL repair/new BU/active credential mutation by agent. This is normal same-channel reauthorization, not asserting external cleanup or changing the test target."
+  },
+  "currentQuestion": "Operator to choose same BU/existing official channel/Reservar reautorização and select own test business; report own number appears, business absent, or error.",
+  "proofLimits": [
+    "No independent provider/DB inspection in this checkpoint",
+    "Own TEST official number still unverified",
+    "No official subscription/receipt/INOUT/recovery proved",
+    "No Meta publication or external resource migration"
+  ],
+  "primaryReferenceCheck": {
+    "metaOverview": "429 Too Many Requests; no current platform eligibility conclusion",
+    "metaSample": "https://github.com/fbsamples/business-messaging-sample-tech-provider-app/blob/main/README.md",
+    "use": "Reference only; does not establish that own business will be eligible or visible."
+  },
+  "agentSourceOrRuntimeMutation": false,
+  "secretsRecorded": false
+}
