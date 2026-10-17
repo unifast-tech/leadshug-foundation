@@ -1,0 +1,23 @@
+{
+  "checkpoint": "root-cp68-current-WABA-subscription-readonly-GO",
+  "issuedUtc": "2026-10-17T17:25:10.568898+00:00",
+  "operationAuthority": "GO_ONCE",
+  "rootAccepted": true,
+  "sourceSha256": "b9b0525a3aa09ccb06b88de09377563290304db74ef7671e613933714bd12940",
+  "runtimeApiId": "005529386c8a7ab499cd779942ce541bb90cd3a770b8436b41509d2655e54857",
+  "runtimeApiImage": "sha256:fe5fb7eaf6a68123f9da6b92a0a69483180d213f556b4bedf313f04a383b4821",
+  "review": "Root inspected complete v1 and exact v2 diff; all six identified contract/attribution/guard defects corrected; executor syntax/13 offline cases and invalid-invocation check passed. No formal product review/production change claimed.",
+  "operation": "Recheck exact owned API image/labels, then stdin node - --execute once with exact frozen v2 source. Existing compiled ChannelCredentialResolver and Prisma only, no Nest bootstrap.",
+  "credentialUse": "Only existing current official channel active scoped token, decrypted in API memory by existing resolver; dedicated cipher key used only internally by that module. No private file, Config.Env, general env dump, token/secret/response/header/raw Graph error output or persistence. META_APP_ID/GRAPH_VERSION public-field guard only outside resolver.",
+  "network": "Exactly one GET over verified TLS to graph.facebook.com/v26.0/currentWABA/subscribed_apps, token solely Authorization header, 10s/128KiB, no redirect/retry/paging, no POST/DELETE/send/subscribe/verify.",
+  "binding": "Exact correct BU/channel/current attempt/gen/epochs/credentialv1/current identity ID and resource correspondence guarded before and after. Drift=>inconclusive; no automatic retry.",
+  "output": "Strict allowlist booleans/count/status, numeric Graph codes/subcodes/transient only; unknown remains null. Save safe receipt and helper exit, no raw payloads or personal/provider identifiers.",
+  "limits": [
+    "No provider/DB/runtime/source mutation",
+    "No publication/reauthorization/new number or account",
+    "No API/provider logs, auth sessions or .local-files access",
+    "No claim of incoming receipt based on this GET"
+  ],
+  "parentStatus": "Pending",
+  "officialVAL05": "open_unwaived"
+}

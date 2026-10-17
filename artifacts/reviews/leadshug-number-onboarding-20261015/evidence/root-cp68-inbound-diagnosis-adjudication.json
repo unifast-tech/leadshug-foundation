@@ -1,0 +1,34 @@
+{
+  "checkpoint": "root-cp68-inbound-diagnosis-adjudication",
+  "acceptedUtc": "2026-10-17T17:28:52.148703+00:00",
+  "rootAccepted": true,
+  "humanState": {
+    "publishedConfirmed": true,
+    "inbound02NotVisible": true,
+    "callbackExactAndMessagesSubscribedConfirmed": true,
+    "currentDestinationEqualityAndTicks": "question pending; no number or content requested"
+  },
+  "dbReadbackSha256": "afa7868feecc3b77af25c2cae0fcc6dd360e37754681d60038bb2300e978de1a",
+  "acceptedFacts": [
+    "IN0/OUT0/conversations0, local attempt unchanged PENDING_RECEIPTv7/SUBSCRIBED, current identity/credential remain verified/active; no receipt/connectedAt",
+    "BU/OFICIAL/meta.webhook aggregate0 after baseline; schema has no identity attribution",
+    "Public health200 and no-query callback403 observed; denial-only GET is not verification challenge or signature proof",
+    "Corrected gateway parser parsed138 safe lines, 3POST total; no route data, cannot attribute status403 or any POST toMeta",
+    "Single scoped verified-TLS Graph GET returned200/dataCount1/currentAppPresenttrue/no paging/contextstable; callback override not returned, so override matching remainsunknown"
+  ],
+  "graphReadbackSha256": "63874ea5d74b2497103686ad95ce7c0efde53e759149c4654808d5f89f10e81d",
+  "gatewayV2Sha256": "597e1df22598551f0a5f5f9e397c78eb8f2add920a65727afd7c290afea74278",
+  "historicalFailuresPreserved": [
+    "First gateway parser expects slash-format contrary to actual ISO template; first capture inconclusive preserved, corrected v2 provides new observation",
+    "First readonly Graph helper not executed; root fixed invocation, safe error propagation, callback attribution, current identity/credential/public runtime config guards before v2oneGET"
+  ],
+  "cause": "Not yet isolated; no specific product-code defect established",
+  "nextStep": "Await sender confirmation of same Local Test Ofc number and current message ticks; no new physical retest or provider mutation requested. Additional route-specific ingress or account override investigation may be needed if same recipient and delivered message are confirmed.",
+  "notAuthorizedByThisReceipt": [
+    "Graph POST/DELETE/subscribe/reauthorization/register/message sends",
+    "Runtime/source/credential/data changes or API/provider/rawlog capture",
+    "Relaxing webhook signatures or manual state promotion"
+  ],
+  "parentStatus": "Pending",
+  "officialVAL05": "open_unwaived"
+}

@@ -1,0 +1,74 @@
+{
+  "checkpoint": "cp68-meta-subscription-live-readback",
+  "capturedAtUtc": "2026-10-17T17:25:38.722053614Z",
+  "authorization": {
+    "artifact": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/root-cp68-subscription-readonly-go.json",
+    "sha256": "d08b3ba2b009f7316363330f64f1f7684cbe05748ac069530a1cd75ea040b662"
+  },
+  "runtimePin": {
+    "apiContainerId": "005529386c8a7ab499cd779942ce541bb90cd3a770b8436b41509d2655e54857",
+    "imageId": "sha256:fe5fb7eaf6a68123f9da6b92a0a69483180d213f556b4bedf313f04a383b4821",
+    "status": "running",
+    "health": "healthy",
+    "owner": "number-onboarding",
+    "service": "api"
+  },
+  "scope": "One GET-only readback of the currently subscribed Meta apps for the already-authorized official resource in Local Test Ofc. The frozen helper pinned the exact current BU/channel/attempt/identity and rechecked those fences after the request.",
+  "executor": {
+    "helper": "foundation_documentation/artifacts/tmp/number-onboarding-execution/cp68-meta-subscription-readonly-v2.cjs",
+    "sha256": "b9b0525a3aa09ccb06b88de09377563290304db74ef7671e613933714bd12940",
+    "resolverSourceSha256": "7ce86ab9fa764364761d51c5344b3786d66e66e55d3102f2181e0afdf41e7d7f",
+    "cryptoSourceSha256": "4a438a1e73903c011d212962f41b38dfb2a999c539112b6831156664de6d9ef4",
+    "publicMetaClientSourceSha256": "ad6d9c56a0c854df35baf3320a70c2b1f4b9d577c4cd6f35def701ecac65f9c4"
+  },
+  "request": {
+    "count": 1,
+    "method": "GET",
+    "purpose": "read current subscribed apps",
+    "normalTlsVerification": true,
+    "redirectsFollowed": false,
+    "retries": 0,
+    "pagingFollowed": false,
+    "responseByteCap": 131072,
+    "authorizationHeaderOnly": true
+  },
+  "execution": {
+    "exitCode": 0,
+    "stdoutParsedAsJson": true,
+    "stdoutKeysExactlyAllowlisted": true,
+    "rawStderrPersistedOrPrinted": false
+  },
+  "result": {
+    "outcome": "http_200",
+    "httpStatus": 200,
+    "dataCount": 1,
+    "currentAppPresent": true,
+    "pagingUnknown": false,
+    "overrideReturned": null,
+    "matchesExpectedComputed": null,
+    "graphErrorCode": null,
+    "graphErrorSubcode": null,
+    "graphIsTransient": null,
+    "responseTooLarge": false,
+    "contextStable": true
+  },
+  "interpretation": {
+    "http200": true,
+    "recognizedCurrentAppPresent": true,
+    "dataCount": 1,
+    "pagingUnknown": false,
+    "overrideFieldReturned": null,
+    "callbackMatchComputed": null,
+    "nullMeansNotReturnedOrNotRecognized": true
+  },
+  "boundary": {
+    "GraphReadOnlyRequestCount": 1,
+    "GraphWriteOrSubscriptionChange": false,
+    "providerVerificationOrRegistration": false,
+    "newCredentialOrSecretRead": false,
+    "credentialResolutionUsedExistingResolverInMemory": true,
+    "rawGraphBodyOrHeadersPersistedOrPrinted": false,
+    "databaseMutation": false,
+    "runtimeOrSourceMutation": false
+  }
+}

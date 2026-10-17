@@ -1,0 +1,66 @@
+{
+  "checkpoint": "cp68-gateway-safe-ingress-counts-v2",
+  "capturedAtUtc": "2026-10-17T17:19:09.595Z",
+  "supersedesForParserCoverageOnly": "cp68-gateway-safe-ingress-counts.json",
+  "preservedPriorReceiptSha256": "bbf6427da5adb2b7ba54646d7eed41f4ddc770c53c0c72b284f88b783d6781b9",
+  "scope": "One new bounded read-only capture of only the exact owned gateway safe access log from the same CP67 baseline. Raw lines stayed in process memory and were discarded; no raw line was printed or persisted.",
+  "gatewayPin": {
+    "containerId": "0c48d94e9fe5b4ad75efd304db2752dfa4cab3befc59b9f736574d6cd551eea3",
+    "imageId": "sha256:76090a34b858323b6ab169711adc08253b5bee7123a973dc581ed46b643bc109",
+    "owner": "number-onboarding",
+    "service": "gateway",
+    "status": "running",
+    "runtimeConfigSha256": "9329131376e0aaa8020e7440954af5125a65eb2bba69fd016292fe63843fe707",
+    "publicTemplateSha256": "9329131376e0aaa8020e7440954af5125a65eb2bba69fd016292fe63843fe707",
+    "runtimeConfigMatchesTemplate": true
+  },
+  "window": {
+    "sinceUtc": "2026-10-17T16:55:26.633826946Z",
+    "dockerTailLimit": 1001,
+    "byteLimit": 1048576,
+    "bytesRead": 20454,
+    "lineCount": 138
+  },
+  "parserValidation": {
+    "sourceFormatFix": "nginx $time_iso8601 emits the second timestamp in ISO-8601 form; prior helper expected slash-separated form.",
+    "syntheticValidAccepted": true,
+    "syntheticInvalidRejected": 3,
+    "networkOrDockerCalledBySyntheticCheck": false,
+    "parsedLineCount": 138,
+    "unparsedLineCount": 0,
+    "overflow": false,
+    "timeout": false,
+    "dockerExitCode": 0,
+    "coverageComplete": true,
+    "coverageInconclusive": false
+  },
+  "counts": {
+    "byMethod": {
+      "GET": 135,
+      "POST": 3
+    },
+    "byStatus": {
+      "101": 4,
+      "200": 54,
+      "201": 1,
+      "304": 77,
+      "401": 1,
+      "403": 1
+    }
+  },
+  "routeIdentification": {
+    "available": false,
+    "reason": "The safe log format omits route, query, IP, headers, and body; method/status counts cannot establish what any request targeted."
+  },
+  "helper": {
+    "path": "foundation_documentation/artifacts/tmp/number-onboarding-execution/cp68-safe-gateway-metadata-v2.py",
+    "sha256": "62f73181541f15ccc8ed75eb3a12c3d2067976f00b66a14db7f4a79635510fad"
+  },
+  "boundary": {
+    "onlyGatewayLogRead": true,
+    "apiOrProviderLogsRead": false,
+    "environmentOrCredentialsRead": false,
+    "rawLinesPersistedOrPrinted": false,
+    "runtimeMutation": false
+  }
+}

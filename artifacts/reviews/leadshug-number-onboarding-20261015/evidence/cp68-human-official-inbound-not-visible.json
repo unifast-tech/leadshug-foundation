@@ -1,0 +1,24 @@
+{
+  "checkpoint": "cp68-human-official-inbound-not-visible",
+  "recordedUtc": "2026-10-17T17:23:54.006000+00:00",
+  "humanReport": "Entrada não apareceu no LeadsHug",
+  "testRequested": "Teste LeadsHug oficial entrada 02; response only if inbound visible",
+  "metaPublication": "human-confirmed Published under cp66 authorization",
+  "callbackHumanConfirmation": {
+    "reply": "URL exata e messages inscrito",
+    "expectedCallback": "https://addressing-mar-perform-hormone.trycloudflare.com/webhooks/meta",
+    "appIsSameExistingPublishedApp": true,
+    "independentGraphReadOfCallback": false
+  },
+  "noRequestedRetestYet": true,
+  "senderDestinationAndTicksQuestion": "pending; no phone/contact/body requested",
+  "postTestDbReceiptSha256": "afa7868feecc3b77af25c2cae0fcc6dd360e37754681d60038bb2300e978de1a",
+  "dbResult": "same official identity has IN0/OUT0/conversations0, no receipt; BU/channel/time scoped WebhookEvent0",
+  "interpretation": "Publishing and the operator-confirmed callback subscription did not suffice for observed real inbound delivery; cause remains open.",
+  "nextActions": [
+    "Inspect prepared readonly current-WABA subscription GET, exact scoped credential only in memory, separate root GO before network",
+    "Await sender destination equality/ticks status without collecting personal values"
+  ],
+  "parentStatus": "Pending",
+  "officialVAL05": "open_unwaived"
+}

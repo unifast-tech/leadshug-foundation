@@ -1,0 +1,52 @@
+{
+  "checkpoint": "cp68-gateway-safe-ingress-counts",
+  "capturedAtUtc": "2026-10-17T17:15:07.369Z",
+  "scope": "One bounded read-only capture of the exact owned gateway container access log since CP67 baseline. Raw lines remained in process memory only and were discarded; no raw line was printed or persisted.",
+  "gatewayPin": {
+    "containerId": "0c48d94e9fe5b4ad75efd304db2752dfa4cab3befc59b9f736574d6cd551eea3",
+    "imageId": "sha256:76090a34b858323b6ab169711adc08253b5bee7123a973dc581ed46b643bc109",
+    "owner": "number-onboarding",
+    "service": "gateway",
+    "status": "running",
+    "runtimeConfigSha256": "9329131376e0aaa8020e7440954af5125a65eb2bba69fd016292fe63843fe707",
+    "publicTemplateSha256": "9329131376e0aaa8020e7440954af5125a65eb2bba69fd016292fe63843fe707",
+    "runtimeConfigMatchesTemplate": true
+  },
+  "window": {
+    "sinceUtc": "2026-10-17T16:55:26.633826946Z",
+    "dockerTailLimit": 1001,
+    "byteLimit": 1048576,
+    "bytesRead": 19858,
+    "lineCount": 134
+  },
+  "validation": {
+    "strictExpectedSchema": "Docker timestamp followed by nginx timestamp, method, status, bytes, request_time, upstream_status, upstream_time",
+    "parsedLineCount": 0,
+    "unparsedLineCount": 134,
+    "overflow": false,
+    "timeout": false,
+    "dockerExitCode": 0,
+    "coverageComplete": false,
+    "coverageInconclusive": true,
+    "reason": "All returned lines failed the strict expected-schema parser; raw lines were discarded without inspection or persistence."
+  },
+  "counts": {
+    "byMethod": {},
+    "byStatus": {},
+    "available": false
+  },
+  "routeIdentification": {
+    "available": false,
+    "reason": "The safe log format has no route, query, IP, header, or body field."
+  },
+  "helper": {
+    "path": "foundation_documentation/artifacts/tmp/number-onboarding-execution/cp68-safe-gateway-metadata.py",
+    "sha256": "8cf768c526bf37c9733bc7a76481d8de6efe49bd6c22862afa0c24f96255e1ba"
+  },
+  "boundary": {
+    "apiOrProviderLogsRead": false,
+    "environmentOrCredentialsRead": false,
+    "rawLogLinesPersistedOrPrinted": false,
+    "runtimeMutation": false
+  }
+}
