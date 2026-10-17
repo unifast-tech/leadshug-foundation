@@ -1,0 +1,30 @@
+{
+  "checkpoint": "cp61-root-receipt",
+  "capturedAtUtc": "2026-10-17T05:36:15.617716+00:00",
+  "profile": "Operational / DevOps; nestjs/react/vite/prisma/postgresql/docker; Genesis ineligible: approved existing contract",
+  "artifactHashesVerified": {
+    "cp61-official-inbound-diagnosis.json": "3ed305cd458fe098ed7be8d9bce85c0f0f603755e3a48a5bdbd1fb0aca1db900",
+    "cp61-official-inbound-diagnosis.md": "7639ad30b1946a017ab1a4425f6b20ed0794ecaf644002e1fe515aa7818c6e0c"
+  },
+  "acceptedFacts": [
+    "User reports no visible IN and two sender ticks",
+    "Current correct official BU/channel remains identity-verified/SUBSCRIBED, attempt PENDING_RECEIPT/SUBSCRIBEDv7, active credential/current mapping, no receipt/connectedAt/lease",
+    "Exact BU/currentidentity post-baseline message count0; no persisted message in this window for inbox to display",
+    "BU/OFICIAL/meta.webhook/time scoped diagnostics count0, with no payload inspection or identity-column claim",
+    "Current own public health normalTLS200; API image unchanged"
+  ],
+  "limitations": [
+    "No route-specific ingress log or provider-delivery inspection; bad signature/unmatched metadata/upstream withholding not distinguished",
+    "Webhook diagnostic table has no identity column; aggregate is BU/modality/time only",
+    "Two ticks are human-reported WhatsApp state, not proof of callback acceptance",
+    "App unpublished restriction from earlier human panel remains plausible, not established as current root cause",
+    "No external docs result independently confirmed current platform eligibility"
+  ],
+  "nextHumanDiagnostic": "Meta app WhatsApp/Configuration/Webhook/messages Test standard event, unchanged payload; report success/HTTP/error only; keep app unpublished.",
+  "syntheticBoundary": "This panel event is synthetic diagnostic only, never substitute for physical official INOUT/receipt/VAL05; any changed receipt after it must not be credited to real device test.",
+  "noNewSourceDefectEstablished": true,
+  "agentProviderOrRuntimeMutation": false,
+  "officialDeviceProofAccepted": false,
+  "overallStage": "Pending",
+  "waivers": []
+}

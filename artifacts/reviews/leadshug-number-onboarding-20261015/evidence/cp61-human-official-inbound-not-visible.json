@@ -1,0 +1,11 @@
+{
+  "checkpoint": "cp61",
+  "capturedAtUtc": "2026-10-17T05:33:28.758269+00:00",
+  "evidenceType": "human_official_inbound_failure",
+  "target": "Local Test Ofc official own dedicated test number",
+  "exactUserReply": "Entrada não apareceu no LeadsHug",
+  "deliveryClarification": "Dois tiques (cinza ou azul)",
+  "interpretation": "Sender reports WhatsApp delivery; LeadsHug inbox visibility not observed. Does not establish callback delivery or handler acceptance.",
+  "outboundNotTested": true,
+  "privateIdentifiersRecorded": false
+}

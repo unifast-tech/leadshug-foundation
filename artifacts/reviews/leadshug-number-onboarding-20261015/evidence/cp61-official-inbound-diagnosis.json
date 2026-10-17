@@ -1,0 +1,109 @@
+{
+  "checkpoint": "cp61-official-inbound-diagnosis",
+  "capturedAtUtc": "2026-10-17T05:34:08.355Z",
+  "scope": "One bounded read-only snapshot of the admitted BU/current official channel/current identity. No monitoring, provider call, auth/session, message content, payload, or mutation.",
+  "authorization": {
+    "routing": "foundation_documentation/artifacts/tmp/number-onboarding-execution/routing-cp61-official-inbound-diagnosis.json",
+    "outcome": "go",
+    "admission": "foundation_documentation/todos/active/features/TODO-leadshug-channel-connection-readiness.md cp61"
+  },
+  "apiRuntime": {
+    "containerId": "c138a8456bc834d53c2ab4c3bc3c0307024dbc5a9cbb9a11c337218adcde7324",
+    "imageId": "sha256:fe5fb7eaf6a68123f9da6b92a0a69483180d213f556b4bedf313f04a383b4821",
+    "status": "running healthy",
+    "ownerLabel": "number-onboarding",
+    "sourceManifestLabel": "af21e98e41ec1ba86f4dac877ba2bd69b3ff0857fba930ca1c3973428723b581"
+  },
+  "publicHealth": {
+    "hostname": "comments-heart-gale-muscles.trycloudflare.com",
+    "path": "/health",
+    "status": 200,
+    "normalTls": true,
+    "redirectsFollowed": false
+  },
+  "channel": {
+    "businessUnitId": "a1492634-8685-46d8-a7cb-685a99f5c930",
+    "channelId": "eeb74451-edaf-4a44-a6cb-059dd184e152",
+    "type": "OFICIAL",
+    "status": "CONECTANDO",
+    "generation": 1,
+    "currentAttemptId": "e3165ba6e498307fd31c0213f544bdf1",
+    "pairingEpoch": 0,
+    "verifiedEpoch": 0,
+    "ownNumberVerified": true,
+    "providerConnectionState": "SUBSCRIBED",
+    "receiptPresent": false,
+    "receiptVerifiedAtUtc": null,
+    "connectedAtUtc": null,
+    "channelLeaseActive": false,
+    "activeCredentialPresent": true,
+    "credentialMetadata": {
+      "provider": "OFICIAL",
+      "generation": 1,
+      "version": 1
+    },
+    "currentAttempt": {
+      "id": "e3165ba6e498307fd31c0213f544bdf1",
+      "state": "PENDING_RECEIPT",
+      "stage": "SUBSCRIBED",
+      "safeErrorCode": null,
+      "version": 7,
+      "generation": 1,
+      "pairingEpoch": null,
+      "leaseActive": false
+    },
+    "currentIdentity": {
+      "id": "33980208-a547-4ab8-bab1-42a82bcd2197",
+      "currentChannelMatches": true,
+      "managedLifecycle": true,
+      "retired": false,
+      "cleanupState": "ACTIVE",
+      "cleanupLeaseActive": false
+    }
+  },
+  "messageReadback": {
+    "whereBusinessUnitId": "a1492634-8685-46d8-a7cb-685a99f5c930",
+    "whereProviderResourceIdentityId": "33980208-a547-4ab8-bab1-42a82bcd2197",
+    "createdAtGteUtc": "2026-10-17T05:29:04Z",
+    "count": 0,
+    "groupByDirectionStatus": [],
+    "metadataSelectCap": 21,
+    "overflow": false,
+    "metadataRows": [],
+    "contentContactOrExternalIdSelected": false
+  },
+  "webhookEventAggregate": {
+    "whereBusinessUnitId": "a1492634-8685-46d8-a7cb-685a99f5c930",
+    "channel": "OFICIAL",
+    "eventType": "meta.webhook",
+    "receivedAtGteUtc": "2026-10-17T05:29:04Z",
+    "count": 0,
+    "minReceivedAtUtc": null,
+    "maxReceivedAtUtc": null,
+    "payloadReadOrFiltered": false,
+    "schemaHasProviderIdentityColumn": false,
+    "identityAttributionLimit": "WebhookEvent schema has no provider identity/resource/channelId column; these counts are BU/channel-type/time scoped only and cannot be attributed to this exact resource."
+  },
+  "humanReport": {
+    "inboundNotVisibleInInbox": true,
+    "senderReportedTwoChecks": true,
+    "deliveryInferredFromChecks": false
+  },
+  "interpretation": {
+    "databaseMessageObservedInWindow": false,
+    "webhookEventObservedInScopedAggregate": false,
+    "upstreamMetaAppUnpublished": "unverified hypothesis only; not established by this readback",
+    "noRouteSpecificGatewayRequestCountClaimed": true
+  },
+  "boundary": {
+    "providerHttpOrMetaToken": false,
+    "loginOrSession": false,
+    "configEnvOrPrivateEnvRead": false,
+    "rawLogsOrGatewayLogsRead": false,
+    "databaseMutation": false,
+    "verifyConfirmSubscribeCancelOrOutboundAction": false,
+    "sourceRuntimeEnvGitOrRestartMutation": false,
+    "localFilesAccessed": false,
+    "pollingPerformed": false
+  }
+}
