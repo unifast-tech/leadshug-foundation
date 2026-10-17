@@ -1,0 +1,9 @@
+{
+  "checkpoint": "root-cp46b-receipt",
+  "artifactHashesVerified": true,
+  "sevenActualDockerIdsImagesServicesOwnerProjectAndRunningMatchCp46b": true,
+  "fiveActualVolumesOwnerAndDriverMatch": true,
+  "cp46OriginalMetadataCorrection": "cp46 row evolution-postgres id omitted final character a; immutable original retained. cp46b and direct Docker readback bind full64-character ID ending5135a. No runtime replacement observed.",
+  "apiStillOld": true,
+  "privateEnvConfigOrPayloadRead": false
+}

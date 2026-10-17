@@ -1,0 +1,11 @@
+# cp46c lifecycle guard
+
+The owned `stop-cp46.ps1` now pins the exact cp46 owner 22836 and child 21180, their parentage, full command lines, executable paths and SHA256s, the target `http://127.0.0.1:8083`, the empty config hash, and the immutable cp46 creation timestamps. It acquires and retains .NET process handles, verifies `Get-Process.StartTime` UTC ticks against the recorded times, checks CIM metadata and file/state identity, then rechecks the same handles before any action. Callers cannot pass alternate PIDs or expected identities. `-ValidateOnly` is read-only; the destructive branch requires a separate explicit `-ExecuteRollback` flag and uses only the pinned child handle.
+
+PowerShell parser validation reported zero syntax errors. Exact live validation passed. A deliberate negative control with expected child ticks set to `1` returned `negative_control_rejected`. No stop/kill was executed. Owner and child remained alive with their exact identities after validation. `Get-Process.StartTime` matched the immutable cp46 dates at 100 ns ticks; `Win32_Process.CreationDate` was observed at microsecond precision and matched the same timestamps truncated to that precision. No broad timestamp tolerance was added.
+
+The initial parser call had not passed its Windows path through the WSL environment bridge; a later parser call with a literal path passed. The first guard validation failed closed because floating-point truncation made the CIM timestamp comparison inaccurate; integer tick arithmetic corrected this, after which exact validation passed. Both events are retained in the JSON receipt.
+
+The stop script hash changed from `e9b5395daa93aa46cc512a032d92044fbc814d20ac9a96a0c2c4729f900e060f` to `8c084a668b1f6a15096e430d196af1cbf6e4fbe181ffe52df54b7503a0dfa35c`. The client and active supervisor hashes remain pinned at `86aee4017b26625cee8484c113558f48effa4cd47f7aa05fcf425604e5d2b23c` and `bdf68028ea2da0699b1e04d191453b5d7090861b17f518d236ce6b084d45c69b`. The overwritten C# build input was not recovered or attributed to the active executable.
+
+No tunnel/process restart, API/container operation, source9 change, private configuration read, or Git/canonical-documentation change occurred. Runtime and process state remain in place for root review.

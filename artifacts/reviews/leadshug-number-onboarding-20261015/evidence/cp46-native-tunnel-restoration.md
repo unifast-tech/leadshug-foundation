@@ -1,0 +1,13 @@
+# cp46 native Windows tunnel restoration
+
+The portable Cloudflare client `2026.10.0` was downloaded to the cp46-owned temporary directory and matched the pinned SHA256 `86aee4017b26625cee8484c113558f48effa4cd47f7aa05fcf425604e5d2b23c` before execution. The accepted supervised tunnel is `https://comments-heart-gale-muscles.trycloudflare.com`, targeting only `http://127.0.0.1:8083`.
+
+The Windows owner is supervisor PID `22836` (`cp46-supervisor.exe`, SHA256 `bdf68028ea2da0699b1e04d191453b5d7090861b17f518d236ce6b084d45c69b`), created `2026-10-16T23:41:32.5488683Z` by `WmiPrvSE.exe` PID `11848`. Its child is cloudflared PID `21180`, created `2026-10-16T23:41:33.2385742Z`, with the exact target/config/no-autoupdate arguments recorded in the JSON evidence. Both processes remained alive after independent tool returns and at the terminal check. The child had one established TCP connection on port `7844`; HTTP/2 was requested through `TUNNEL_TRANSPORT_PROTOCOL=http2`. No negotiated-protocol log string was retained.
+
+Thirteen monotonic samples over `142009 ms` resolved DNS and returned root, health, and the served JavaScript with HTTP 200 from both WSL and Windows. Each sample returned `258450` JavaScript bytes with SHA256 `d14343604557296f2ed62c1df47d9c80d81c323abafd89ccbb64a6a0746ff4bd`, matching cp38. The supervisor's allowlisted counters show one registered connection event, one sanitized error event, zero stream callback faults, and zero state-write failures.
+
+A synthetic `/webhooks/meta` GET used only `WEBHOOK_VERIFY_TOKEN` read in memory from `.env.testing`. Runtime presence and equality were true; the valid challenge returned 200 and matched its synthetic body, while invalid and missing tokens returned 403. No token, token hash, callback query, raw response, or raw tunnel output was persisted.
+
+The seven `leadshug_channels_local` containers and five local volumes matched cp38. No API/Evolution restart, application-origin change, provider/OAuth/Meta action, source/Git change, or database mutation occurred. This proves a bounded transport and callback verification only; it does not prove ongoing DNS, Meta app acceptance, WhatsApp recovery, or permanent tunnel availability.
+
+The accidental help invocation and two failed supervisor attempts are recorded in the JSON artifact. Each newly created child was stopped only after an identity-guarded rollback; no old cp29/cp43 process was touched. The rollback script has zero syntax errors and was not executed for the accepted healthy tunnel. The active supervisor executable hash is preserved, but the exact C# input snapshot used to compile it was overwritten during hardening; the current C# source hash is not claimed as the compiled source.

@@ -1,0 +1,77 @@
+{
+  "capturedAtUtc": "2026-10-16T23:56:42.251Z",
+  "node": "v22.23.3",
+  "branches": {
+    "web": {
+      "name": "feature/number-onboarding",
+      "head": "d33c82c26760c671d98cab6f3e7bfe5676122c69",
+      "declaredBaseline": "4e56f6c1f4515b918d05b8c87e890d42e8542c56"
+    },
+    "api": {
+      "name": "feature/number-onboarding",
+      "head": "f134bd11449a553e6f57e66cdc8fc71032151060",
+      "declaredBaseline": "ae6a9662c29b77276351aa9de653a47276372246"
+    }
+  },
+  "webChangedSources": [
+    {
+      "path": "e2e/telas.spec.ts",
+      "status": "unstaged:M",
+      "sha256": "ee4911de7148eebee35d5ddcc7d9bbbcc6faf051f0ea3f415e338d6809bb9d59"
+    }
+  ],
+  "apiChangedSources": [
+    {
+      "path": "src/domain/channels/channels.service.ts",
+      "status": "unstaged:M",
+      "sha256": "e910b2b395abc0ebca74deea917cf107dd36eca58491f1b0893efb702e1dfcf5"
+    },
+    {
+      "path": "src/domain/channels/receipt-attempt-convergence.ts",
+      "status": "??",
+      "sha256": "ca8cb841fab2574866c3508ab41aa0a269608a20658db18840b2b89f0c281512"
+    },
+    {
+      "path": "src/integrations/meta/meta.client.spec.ts",
+      "status": "unstaged:M",
+      "sha256": "2d6a7be4ab294f0e6468143b5d4ac09740e45d09144fe855a75468ffc07fd370"
+    },
+    {
+      "path": "src/integrations/meta/meta.client.ts",
+      "status": "unstaged:M",
+      "sha256": "ad6d9c56a0c854df35baf3320a70c2b1f4b9d577c4cd6f35def701ecac65f9c4"
+    },
+    {
+      "path": "src/surfaces/webhooks/evolution.controller.ts",
+      "status": "unstaged:M",
+      "sha256": "12139a5b50b4dacf43492e038c91f006c9db999d0f6a76fd5d73e45ee987a041"
+    },
+    {
+      "path": "test/browser-server.cjs",
+      "status": "unstaged:M",
+      "sha256": "bf260c3124a867bda495509983055557988bc958141f3a8399e3e69de3aff451"
+    },
+    {
+      "path": "test/helpers.ts",
+      "status": "unstaged:M",
+      "sha256": "4d4b1c8c4e17c8fa7f338fdeeb2d63d093753038cece0d3aea566ae95c13619a"
+    },
+    {
+      "path": "test/number-onboarding-flow.e2e-spec.ts",
+      "status": "unstaged:M",
+      "sha256": "650b233c9dafd9730f14170ce6bd6961d6277b9a131a6eb816cb8edd39341fae"
+    }
+  ],
+  "webBundle": [
+    {
+      "path": "assets/index-txvhtd65.js",
+      "sha256": "d14343604557296f2ed62c1df47d9c80d81c323abafd89ccbb64a6a0746ff4bd"
+    },
+    {
+      "path": "assets/index-wuzy3kMN.css",
+      "sha256": "38f979314555cda8b834189ed5c64826bbc309e294091c9f5c54ee5f8bd2aadd"
+    }
+  ],
+  "operationalDataBoundary": "API .local-files payloads and private dotenv files are excluded from public-source inventories; an omitted file is not reported as a source deletion.",
+  "proof": "timeline-freshness completed before Playwright workers; it verifies disposable DB family, API/fixture/preview health, and served JavaScript hash against dist."
+}

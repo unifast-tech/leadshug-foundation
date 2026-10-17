@@ -1,0 +1,159 @@
+{
+  "checkpoint": "cp46-native-tunnel-restoration",
+  "capturedAtUtc": "2026-10-16T23:47:26Z",
+  "scope": "Restore one portable native Windows Quick Tunnel to the existing LeadsHug gateway for a bounded transport and callback verification.",
+  "routing": {
+    "path": "foundation_documentation/artifacts/tmp/number-onboarding-execution/routing-cp46-native-tunnel.json",
+    "outcome": "go",
+    "authority": "cp46 TODO tail adjudication authorityGO75"
+  },
+  "client": {
+    "release": "2026.10.0",
+    "assetUrl": "https://github.com/cloudflare/cloudflared/releases/download/2026.10.0/cloudflared-windows-amd64.exe",
+    "path": "foundation_documentation/artifacts/tmp/number-onboarding-execution/cloudflared-cp46/cloudflared-windows-amd64.exe",
+    "sha256": "86aee4017b26625cee8484c113558f48effa4cd47f7aa05fcf425604e5d2b23c",
+    "versionOutput": "cloudflared version 2026.10.0 (built 2026-10-05T08:39 UTC)",
+    "portableOnly": true
+  },
+  "quickTunnel": {
+    "hostname": "comments-heart-gale-muscles.trycloudflare.com",
+    "publicUrl": "https://comments-heart-gale-muscles.trycloudflare.com",
+    "target": "http://127.0.0.1:8083",
+    "persistentDnsOrNamedTunnel": false,
+    "providerAccountOrCredentialChanged": false,
+    "configPath": "foundation_documentation/artifacts/tmp/number-onboarding-execution/cloudflared-cp46/empty-config.yml",
+    "configBytes": 0,
+    "configSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "noAutoupdate": true,
+    "protocolSelection": {
+      "requested": "http2",
+      "mechanism": "TUNNEL_TRANSPORT_PROTOCOL=http2 in a newly constructed minimal child environment",
+      "establishedChildTcpPort7844Connections": 1,
+      "protocolStringFromRawOutputPersisted": false,
+      "interpretation": "TCP/7844 was observed on the owned child; the sanitized state does not claim a negotiated protocol string."
+    }
+  },
+  "lifecycle": {
+    "detachedCreation": "Win32_Process.Create",
+    "supervisor": {
+      "pid": 22836,
+      "executable": "C:\\unifast\\leadshug\\leadshug_now_docker\\foundation_documentation\\artifacts\\tmp\\number-onboarding-execution\\cloudflared-cp46\\cp46-supervisor.exe",
+      "sha256": "bdf68028ea2da0699b1e04d191453b5d7090861b17f518d236ce6b084d45c69b",
+      "creationUtc": "2026-10-16T23:41:32.5488683Z",
+      "parentPid": 11848,
+      "parentName": "WmiPrvSE.exe",
+      "commandLineContainsOnlyExecutablePath": true,
+      "presentAtFinalCheck": true
+    },
+    "child": {
+      "pid": 21180,
+      "executable": "C:\\unifast\\leadshug\\leadshug_now_docker\\foundation_documentation\\artifacts\\tmp\\number-onboarding-execution\\cloudflared-cp46\\cloudflared-windows-amd64.exe",
+      "sha256": "86aee4017b26625cee8484c113558f48effa4cd47f7aa05fcf425604e5d2b23c",
+      "creationUtc": "2026-10-16T23:41:33.2385742Z",
+      "parentPid": 22836,
+      "arguments": "tunnel --config \"C:\\unifast\\leadshug\\leadshug_now_docker\\foundation_documentation\\artifacts\\tmp\\number-onboarding-execution\\cloudflared-cp46\\empty-config.yml\" --no-autoupdate --url http://127.0.0.1:8083",
+      "target": "http://127.0.0.1:8083",
+      "presentAtFinalCheck": true
+    },
+    "remainedAliveAfterIndependentToolReturns": true,
+    "oldCp43OrCp29ProcessesTouched": false,
+    "rollback": {
+      "script": "foundation_documentation/artifacts/tmp/number-onboarding-execution/cloudflared-cp46/stop-cp46.ps1",
+      "syntaxErrors": 0,
+      "executed": false,
+      "reason": "the accepted owner and child remained healthy at the terminal check"
+    }
+  },
+  "supervisorEvidence": {
+    "runtimeStatePath": "foundation_documentation/artifacts/tmp/number-onboarding-execution/cloudflared-cp46/runtime-state.json",
+    "stdoutAndStderrDrained": true,
+    "rawOutputPersisted": false,
+    "onlyHostnameAndAllowlistedEventCountsPersisted": true,
+    "registeredConnectionEvents": 1,
+    "sanitizedErrorEvents": 1,
+    "streamCallbackFaults": 0,
+    "stateWriteFailures": 0,
+    "supervisorExitCode": null,
+    "currentSourceSha256": "3117f32f9f580c00c2d5274c9e12b42c6c8643db62294c789d1fae1774a5dcb1",
+    "currentSourceMatchesCompiledSnapshot": false,
+    "compiledSourceSnapshotPreserved": false,
+    "reproducibilityLimit": "The active executable hash is recorded, but the exact C# input snapshot used to compile it was overwritten during collector hardening. The current source hash must not be represented as the compiled input."
+  },
+  "httpsProof": {
+    "sampling": {
+      "sampleCount": 13,
+      "monotonicDurationMs": 142009,
+      "allDnsResolvedInWsl": true,
+      "allDnsResolvedInWindows": true,
+      "wslDnsAddressCountEachSample": 4,
+      "windowsDnsAddressCountEachSample": 2,
+      "allRootStatuses": 200,
+      "allHealthStatuses": 200,
+      "allServedJsStatuses": 200,
+      "servedJsBytesEachSample": 258450,
+      "servedJsSha256EachSample": "d14343604557296f2ed62c1df47d9c80d81c323abafd89ccbb64a6a0746ff4bd",
+      "matchesCp38AcceptedBundle": true,
+      "monotonicElapsedMs": [1601, 13118, 24682, 36207, 48009, 59768, 71506, 83042, 95030, 106701, 118245, 130141, 142009],
+      "survivalChecksAfterSamplerToolReturns": 3
+    },
+    "finalLocalGatewayHealthStatus": 200,
+    "tlsVerificationDisabled": false
+  },
+  "callbackChallenge": {
+    "method": "GET /webhooks/meta",
+    "challengeWasSynthetic": true,
+    "dotenvFieldReadInMemory": "WEBHOOK_VERIFY_TOKEN only",
+    "runtimePresenceAndEquality": {
+      "runtimeTokenPresent": true,
+      "matchesSelectedDotenvField": true
+    },
+    "validTokenStatus": 200,
+    "validBodyMatchesChallenge": true,
+    "invalidDummyTokenStatus": 403,
+    "missingTokenStatus": 403,
+    "tokenValueOrHashPersisted": false,
+    "callbackUrlQueryOrBodyPersisted": false,
+    "rawResponseOrErrorPersisted": false,
+    "gatewayQueryLogging": "cp44 already established the gateway's query-safe logging behavior; this run did not inspect raw gateway logs."
+  },
+  "operatorPreservation": {
+    "dockerContext": "default",
+    "composeProject": "leadshug_channels_local",
+    "containers": [
+      {"id":"c2c74bc267af724a0b8a33a415b04084e74e0867669228cf906f7c306541bec0","service":"api","image":"sha256:c2e8d62bde2c85305deb9d72569f773072e77292465e09ed7283051b40ed4f4f","status":"running","matchesCp38":true},
+      {"id":"0c48d94e9fe5b4ad75efd304db2752dfa4cab3befc59b9f736574d6cd551eea3","service":"gateway","image":"sha256:76090a34b858323b6ab169711adc08253b5bee7123a973dc581ed46b643bc109","status":"running","matchesCp38":true},
+      {"id":"1e8d3a40dd9665481748b1278fd60de71ced6c682986d367a90665e76a61358a","service":"web","image":"sha256:d11a882849dc806e0d4728ca90a8fc8655aebc77421acefac63054b4fbb89365","status":"running","matchesCp38":true},
+      {"id":"cf749491f7149dc46ec4db597b2d9c12faf918dd4f05b5512ba75adaf8e29ea4","service":"evolution","image":"sha256:385a3c4bedf42c66b46b43d06aae8712620144a84aa3b2c831b30c68435ab27c","status":"running","matchesCp38":true},
+      {"id":"3b2e8d153d794a768ea87cb4f9cda7ba15dde242e2b8027bd372a475a9c26fbb","service":"evolution-redis","image":"sha256:f84b0c4678011602b9b98c227a4dcd5468bf8b088b02fdd4165cb7758bad8058","status":"running","matchesCp38":true},
+      {"id":"150de898c3d9aa189ca0719eed7a65b95d95d8b948244e66b059a55f4554135","service":"evolution-postgres","image":"sha256:80f4c7a5e91618546dce5b4fe60cf03b14c0f9efa7e40157278d122772ced8d2","status":"running","matchesCp38":true},
+      {"id":"4fcd87b431339e3b65a40beafa27db86cdc978ca79f71b911199f7090c837495","service":"postgres","image":"sha256:80f4c7a5e91618546dce5b4fe60cf03b14c0f9efa7e40157278d122772ced8d2","status":"running","matchesCp38":true}
+    ],
+    "volumes": [
+      {"name":"leadshug_channels_local_evolution_instances","driver":"local"},
+      {"name":"leadshug_channels_local_evolution_pg_data","driver":"local"},
+      {"name":"leadshug_channels_local_evolution_redis_data","driver":"local"},
+      {"name":"leadshug_channels_local_leadshug_arquivos","driver":"local"},
+      {"name":"leadshug_channels_local_leadshug_pg_data","driver":"local"}
+    ],
+    "allSevenContainersAndFiveVolumesMatchCp38": true
+  },
+  "priorAttempts": [
+    {"attempt":1,"incident":"misordered help invocation briefly created an unsupervised temporary QUIC Quick Tunnel; exact process was guarded-stopped, abandoned hostname not retained or reused, no proof accepted."},
+    {"attempt":2,"supervisorPid":3592,"childPid":21544,"failureCategory":"supervisor_exit_before_stream_capture","guardedRollback":true},
+    {"attempt":3,"supervisorPid":20104,"childPid":6628,"failureCategory":"supervisor_exit_after_one_sanitized_error_event","guardedRollback":true}
+  ],
+  "changesAndBoundaries": {
+    "onlyCp46OwnedPortableClientAndTmpEvidenceCreated": true,
+    "apiSourceOrImageChanged": false,
+    "apiServedOrRestarted": false,
+    "evolutionRestarted": false,
+    "composeOrDatabaseMutation": false,
+    "providerAuthOAuthOrMetaCall": false,
+    "applicationOriginOrMetaConfigurationChanged": false,
+    "gitOrCanonicalDocumentationChangedByExecutor": false,
+    "source9Unchanged": true,
+    "source9Manifest": "b8cb7ac56f304ca0383d58a1a00f1d9211f6e1f1108b0322481b2e52dbe55d61",
+    "realMetaAppOrWhatsAppRecoveryValidated": false,
+    "continuousHealthOrDnsPermanenceClaimed": false
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "checkpoint": "cp46c-lifecycle-guard",
+  "capturedAtUtc": "2026-10-17T00:01:21Z",
+  "scope": "Script-only hardening and read-only validation of the owned cp46 rollback guard. No rollback execution, tunnel restart, binary rebuild, or product/runtime mutation.",
+  "admission": {
+    "authority": "cp46c conditional admission after cp36h STOP, TODO authorityGO77",
+    "routing": "foundation_documentation/artifacts/tmp/number-onboarding-execution/routing-cp46-native-tunnel.json outcome go",
+    "baseline": "cp46b and root-cp46b receipt; root confirmed all seven owned container identities/images/services/project/owner/running and five volumes. The cp46 original evidence contains one shortened volume ID; cp46b/root readback is authoritative for that identity."
+  },
+  "script": {
+    "path": "foundation_documentation/artifacts/tmp/number-onboarding-execution/cloudflared-cp46/stop-cp46.ps1",
+    "sha256Before": "e9b5395daa93aa46cc512a032d92044fbc814d20ac9a96a0c2c4729f900e060f",
+    "sha256After": "8c084a668b1f6a15096e430d196af1cbf6e4fbe181ffe52df54b7503a0dfa35c",
+    "changes": [
+      "Hard-codes the exact cp46 owner/child PIDs, UTC creation timestamps, parent, executable paths, executable SHA256s, complete child argv, target, and empty-config hash; callers cannot supply alternate identities.",
+      "Acquires and retains .NET Process handles for both exact processes, checks full StartTime UTC ticks, CIM metadata, hashes, state metadata, and rechecks the same handles before any permitted action.",
+      "Provides explicit -ValidateOnly mode; a separate -ExecuteRollback switch is required to reach the pinned-child Kill branch.",
+      "Fails closed on missing/mismatching process, timestamps, ancestry, command line, target, binary/config hashes, or state. Rollback branch targets only the pinned child handle."
+    ],
+    "rollbackInvoked": false
+  },
+  "liveNativeIdentity": {
+    "owner": {
+      "pid": 22836,
+      "path": "C:\\unifast\\leadshug\\leadshug_now_docker\\foundation_documentation\\artifacts\\tmp\\number-onboarding-execution\\cloudflared-cp46\\cp46-supervisor.exe",
+      "sha256": "bdf68028ea2da0699b1e04d191453b5d7090861b17f518d236ce6b084d45c69b",
+      "parentPid": 11848,
+      "parentName": "WmiPrvSE.exe",
+      "completeCommandLine": "\"C:\\unifast\\leadshug\\leadshug_now_docker\\foundation_documentation\\artifacts\\tmp\\number-onboarding-execution\\cloudflared-cp46\\cp46-supervisor.exe\"",
+      "cp46CreationUtc": "2026-10-16T23:41:32.5488683Z",
+      "liveStartTimeUtcTicks100ns": 639277908925488683,
+      "liveCimCreationUtc": "2026-10-16T23:41:32.5488680Z"
+    },
+    "child": {
+      "pid": 21180,
+      "path": "C:\\unifast\\leadshug\\leadshug_now_docker\\foundation_documentation\\artifacts\\tmp\\number-onboarding-execution\\cloudflared-cp46\\cloudflared-windows-amd64.exe",
+      "sha256": "86aee4017b26625cee8484c113558f48effa4cd47f7aa05fcf425604e5d2b23c",
+      "parentPid": 22836,
+      "completeCommandLine": "\"C:\\unifast\\leadshug\\leadshug_now_docker\\foundation_documentation\\artifacts\\tmp\\number-onboarding-execution\\cloudflared-cp46\\cloudflared-windows-amd64.exe\" tunnel --config \"C:\\unifast\\leadshug\\leadshug_now_docker\\foundation_documentation\\artifacts\\tmp\\number-onboarding-execution\\cloudflared-cp46\\empty-config.yml\" --no-autoupdate --url http://127.0.0.1:8083",
+      "target": "http://127.0.0.1:8083",
+      "configPath": "C:\\unifast\\leadshug\\leadshug_now_docker\\foundation_documentation\\artifacts\\tmp\\number-onboarding-execution\\cloudflared-cp46\\empty-config.yml",
+      "configBytes": 0,
+      "configSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "cp46CreationUtc": "2026-10-16T23:41:33.2385742Z",
+      "liveStartTimeUtcTicks100ns": 639277908932385742,
+      "liveCimCreationUtc": "2026-10-16T23:41:33.2385740Z"
+    },
+    "timePrecision": "Get-Process.StartTime UTC ticks matched the immutable cp46 timestamps at 100 ns precision. Win32_Process.CreationDate on this host is truncated to microseconds; the script independently compares that value to the exact timestamp truncated to 1 microsecond. No broad time tolerance is used."
+  },
+  "guardValidation": {
+    "powershellParserSyntaxErrors": 0,
+    "validateOnlyExactIdentity": "pass_validate_only",
+    "negativeControl": {
+      "mode": "-ValidateOnly -NegativeControlChildStartTicks 1",
+      "result": "negative_control_rejected",
+      "interpretation": "Deliberately wrong expected child creation ticks fail closed."
+    },
+    "processHandleRecheck": "both original handles remained alive and retained exact StartTime ticks after metadata/hash/state checks",
+    "stopOrKillExecuted": false,
+    "tunnelOrSupervisorRestarted": false
+  },
+  "initialCheckCorrections": [
+    "The first parser invocation did not receive its Windows path through the WSL-to-Windows environment bridge; this was an invocation-path issue, not a PowerShell syntax result. The parser was rerun with an explicit literal path and returned zero syntax errors.",
+    "The first live check exposed floating-point truncation in the CIM microsecond comparison. It failed closed without acting. The comparison was corrected to integer tick truncation; exact validation then passed."
+  ],
+  "preservation": {
+    "clientBinarySha256": "86aee4017b26625cee8484c113558f48effa4cd47f7aa05fcf425604e5d2b23c",
+    "activeSupervisorBinarySha256": "bdf68028ea2da0699b1e04d191453b5d7090861b17f518d236ce6b084d45c69b",
+    "compiledCSharpSnapshotRecoveredOrClaimed": false,
+    "source9OrProductChanged": false,
+    "apiOrGatewayOrOtherContainerChanged": false,
+    "sevenContainersAndFiveVolumesMutated": false,
+    "cp46TunnelProcessChanged": false,
+    "privateEnvOrProviderOrDatabaseOrAuthOrMetaRead": false,
+    "sourceGitOrCanonicalDocumentationChanged": false
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "checkpoint": "root-cp46c-receipt",
+  "hashesVerified": true,
+  "namedScriptReadback": "exactnativecreation100ns, independentCIM1us, handles, fullargv, exe/hash/parent/config pins and explicitValidateOnly vsExecuteRollback observed",
+  "finding": "CP46-LIFECYCLE-01",
+  "disposition": "verified-local",
+  "actualRollbackExercised": false,
+  "tunnelSourceRebuildLimitUnchanged": true,
+  "note": "cp46c baseline wording shortened volume ID refers to the evolution-postgres CONTAINER ID; cp46b/root actual Docker readback is authoritative."
+}

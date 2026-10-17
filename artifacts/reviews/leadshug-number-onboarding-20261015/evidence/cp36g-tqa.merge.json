@@ -1,0 +1,42 @@
+{
+  "schema_version": "subagent-review-merge-v2",
+  "artifact_kind": "subagent_review_merge",
+  "authoritative": false,
+  "edit_policy": "derived_merge_packet",
+  "dispatch_path": "/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp36g-tqa.dispatch.json",
+  "review_kind": "test_quality_audit",
+  "review_count": 1,
+  "reviewer_labels": [
+    "Codex \u2014 Assurance / Tester-Quality"
+  ],
+  "highest_finding_severity": "medium",
+  "axis_summary": {
+    "performance": "acceptable",
+    "elegance": "acceptable",
+    "structural_soundness": "acceptable",
+    "operational_fit": "mixed"
+  },
+  "recommended_paths": [
+    "Keep the checkpoint pending. Add direct MetaHttpClient tests for: a missing debug data object; non-string app_id; non-boolean is_valid; a valid grant with scopes omitted but required granular scopes present; and a valid irrelevant granular entry with target_ids omitted. Each malformed case should assert the typed failure and exactly one fetch; each valid-omission case should assert successful bounded verification. Then create a fresh source freeze, run the canonical full all suite, repeat this fresh test-quality audit, and send the resulting package to the separate final-review gate. No production behavior change is indicated by this finding."
+  ],
+  "exact_next_step": "Record reviewer resolutions in the governing TODO using the machine-checkable resolution table or equivalent gate ledger, then extract the derived resolution packet and decide whether another bounded review pass is still required.",
+  "findings": [
+    {
+      "finding_id": "F-52F3ADB1",
+      "severity": "medium",
+      "title": "Grant-shape tests omit required scalar and legitimate-omission cases",
+      "rationale": "The parser in api-app/src/integrations/meta/meta.client.ts rejects a missing or malformed debug-grant root, app_id, and is_valid, while intentionally allowing omitted optional scopes, granular_scopes, and target_ids. The frozen tests cover malformed scopes, granular_scopes, and target_ids, but do not directly cover missing data, malformed app_id, malformed is_valid, or valid omission of scopes with required granular scope authorization. A regression could therefore reject a legitimate provider grant or weaken scalar validation without failing the current focused matrix. This is a boundary-contract coverage gap, not an observed production behavior defect.",
+      "suggested_action": "Extend the Meta client table tests with the missing negative scalar cases and positive optional-field omission cases. Assert typed error identity and one fetch for malformed debug responses, and successful bounded verification for valid omission variants; then rerun the canonical full suite and fresh audit.",
+      "reviewer_labels": [
+        "Codex \u2014 Assurance / Tester-Quality"
+      ],
+      "source_finding_ids": [
+        "TQA-CP36G-01"
+      ],
+      "category": "tests",
+      "formalizable_hint": "yes",
+      "candidate_rule_level": "project",
+      "candidate_rule_id": "D-05/D-07"
+    }
+  ]
+}

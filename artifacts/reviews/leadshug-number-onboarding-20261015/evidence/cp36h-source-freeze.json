@@ -1,0 +1,37 @@
+{
+  "checkpoint": "cp36h",
+  "status": "pre-all source freeze",
+  "scope": "one allowed test-only source path; eight other source paths byte-identical to cp36g source-after",
+  "baseline": "cp36g-source-after.sha256",
+  "source_before": "cp36h-source-before.sha256",
+  "source_preall": "cp36h-source-preall.sha256",
+  "source_count": 9,
+  "changed_paths": [
+    "api-app/src/integrations/meta/meta.client.spec.ts"
+  ],
+  "hashes_before": {
+    "api-app/src/integrations/meta/meta.client.ts": "ad6d9c56a0c854df35baf3320a70c2b1f4b9d577c4cd6f35def701ecac65f9c4",
+    "api-app/src/integrations/meta/meta.client.spec.ts": "fd97f4fa938bae41031115b32ff62c5e14de3617093088cccae077ab1fdfc282",
+    "api-app/test/number-onboarding-flow.e2e-spec.ts": "650b233c9dafd9730f14170ce6bd6961d6277b9a131a6eb816cb8edd39341fae",
+    "api-app/src/domain/channels/channels.service.ts": "e910b2b395abc0ebca74deea917cf107dd36eca58491f1b0893efb702e1dfcf5",
+    "api-app/src/domain/channels/receipt-attempt-convergence.ts": "ca8cb841fab2574866c3508ab41aa0a269608a20658db18840b2b89f0c281512",
+    "api-app/src/surfaces/webhooks/evolution.controller.ts": "12139a5b50b4dacf43492e038c91f006c9db999d0f6a76fd5d73e45ee987a041",
+    "api-app/test/helpers.ts": "4d4b1c8c4e17c8fa7f338fdeeb2d63d093753038cece0d3aea566ae95c13619a",
+    "api-app/test/browser-server.cjs": "bf260c3124a867bda495509983055557988bc958141f3a8399e3e69de3aff451",
+    "web-app/e2e/telas.spec.ts": "ee4911de7148eebee35d5ddcc7d9bbbcc6faf051f0ea3f415e338d6809bb9d59"
+  },
+  "hashes_preall": {
+    "api-app/src/integrations/meta/meta.client.ts": "ad6d9c56a0c854df35baf3320a70c2b1f4b9d577c4cd6f35def701ecac65f9c4",
+    "api-app/src/integrations/meta/meta.client.spec.ts": "2d6a7be4ab294f0e6468143b5d4ac09740e45d09144fe855a75468ffc07fd370",
+    "api-app/test/number-onboarding-flow.e2e-spec.ts": "650b233c9dafd9730f14170ce6bd6961d6277b9a131a6eb816cb8edd39341fae",
+    "api-app/src/domain/channels/channels.service.ts": "e910b2b395abc0ebca74deea917cf107dd36eca58491f1b0893efb702e1dfcf5",
+    "api-app/src/domain/channels/receipt-attempt-convergence.ts": "ca8cb841fab2574866c3508ab41aa0a269608a20658db18840b2b89f0c281512",
+    "api-app/src/surfaces/webhooks/evolution.controller.ts": "12139a5b50b4dacf43492e038c91f006c9db999d0f6a76fd5d73e45ee987a041",
+    "api-app/test/helpers.ts": "4d4b1c8c4e17c8fa7f338fdeeb2d63d093753038cece0d3aea566ae95c13619a",
+    "api-app/test/browser-server.cjs": "bf260c3124a867bda495509983055557988bc958141f3a8399e3e69de3aff451",
+    "web-app/e2e/telas.spec.ts": "ee4911de7148eebee35d5ddcc7d9bbbcc6faf051f0ea3f415e338d6809bb9d59"
+  },
+  "implementation_changed": false,
+  "canonical_command": "bash scripts/test-channels-local.sh all",
+  "run_count_authorized": 1
+}

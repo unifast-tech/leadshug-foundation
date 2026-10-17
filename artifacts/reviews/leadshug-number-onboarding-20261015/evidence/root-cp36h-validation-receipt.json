@@ -1,0 +1,27 @@
+{
+  "checkpoint": "root-cp36h-validation-receipt",
+  "capturedAtUtc": "2026-10-16T23:59:38.960516+00:00",
+  "primaryRun": {
+    "command": "bash scripts/test-channels-local.sh all",
+    "exit_code": 0,
+    "log": "cp36h-api-all.log",
+    "migrations": 22,
+    "api_unit_tests": 172,
+    "api_postgresql_e2e_tests": 288,
+    "web_unit_tests": 28,
+    "browser_tests": 47
+  },
+  "totalTests": 535,
+  "source9CurrentMatchesPreallAndBothGenuineAttestations": true,
+  "beforeEqualsCp36g": true,
+  "onlyChangedUnitSpec": true,
+  "otherEightByteIdentical": true,
+  "sourceManifestSha256": "4130344d3093891069681e0c78f6c364df68b0d92f10cdae6625269fa44507be",
+  "rawLogSha256": "588d37e0cd8ad19d2e8c3e0c15668f6f594560bab7e7f8a241de3d3c68b58925",
+  "servedBundleEqualsDist": true,
+  "disposableDatabase22MigrationsConfirmed": true,
+  "testFirstPosition": "cp36h test-after for already-correct behavior, no new production defect or fabricated RED; cp36g genuine159/8RED unchanged",
+  "runtimeOperatorOrExternalProofClaimed": false,
+  "independentTqa": "not_yet_started",
+  "independentFinal": "not_run"
+}

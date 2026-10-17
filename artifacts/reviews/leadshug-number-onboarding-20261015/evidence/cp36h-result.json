@@ -1,0 +1,79 @@
+{
+  "checkpoint": "cp36h",
+  "status": "terminal",
+  "scope": "test-only; sole source change is Meta client spec",
+  "source_count": 9,
+  "changed_source_paths": [
+    "api-app/src/integrations/meta/meta.client.spec.ts"
+  ],
+  "source_hashes_before": {
+    "api-app/src/integrations/meta/meta.client.ts": "ad6d9c56a0c854df35baf3320a70c2b1f4b9d577c4cd6f35def701ecac65f9c4",
+    "api-app/src/integrations/meta/meta.client.spec.ts": "fd97f4fa938bae41031115b32ff62c5e14de3617093088cccae077ab1fdfc282",
+    "api-app/test/number-onboarding-flow.e2e-spec.ts": "650b233c9dafd9730f14170ce6bd6961d6277b9a131a6eb816cb8edd39341fae",
+    "api-app/src/domain/channels/channels.service.ts": "e910b2b395abc0ebca74deea917cf107dd36eca58491f1b0893efb702e1dfcf5",
+    "api-app/src/domain/channels/receipt-attempt-convergence.ts": "ca8cb841fab2574866c3508ab41aa0a269608a20658db18840b2b89f0c281512",
+    "api-app/src/surfaces/webhooks/evolution.controller.ts": "12139a5b50b4dacf43492e038c91f006c9db999d0f6a76fd5d73e45ee987a041",
+    "api-app/test/helpers.ts": "4d4b1c8c4e17c8fa7f338fdeeb2d63d093753038cece0d3aea566ae95c13619a",
+    "api-app/test/browser-server.cjs": "bf260c3124a867bda495509983055557988bc958141f3a8399e3e69de3aff451",
+    "web-app/e2e/telas.spec.ts": "ee4911de7148eebee35d5ddcc7d9bbbcc6faf051f0ea3f415e338d6809bb9d59"
+  },
+  "source_hashes_preall": {
+    "api-app/src/integrations/meta/meta.client.ts": "ad6d9c56a0c854df35baf3320a70c2b1f4b9d577c4cd6f35def701ecac65f9c4",
+    "api-app/src/integrations/meta/meta.client.spec.ts": "2d6a7be4ab294f0e6468143b5d4ac09740e45d09144fe855a75468ffc07fd370",
+    "api-app/test/number-onboarding-flow.e2e-spec.ts": "650b233c9dafd9730f14170ce6bd6961d6277b9a131a6eb816cb8edd39341fae",
+    "api-app/src/domain/channels/channels.service.ts": "e910b2b395abc0ebca74deea917cf107dd36eca58491f1b0893efb702e1dfcf5",
+    "api-app/src/domain/channels/receipt-attempt-convergence.ts": "ca8cb841fab2574866c3508ab41aa0a269608a20658db18840b2b89f0c281512",
+    "api-app/src/surfaces/webhooks/evolution.controller.ts": "12139a5b50b4dacf43492e038c91f006c9db999d0f6a76fd5d73e45ee987a041",
+    "api-app/test/helpers.ts": "4d4b1c8c4e17c8fa7f338fdeeb2d63d093753038cece0d3aea566ae95c13619a",
+    "api-app/test/browser-server.cjs": "bf260c3124a867bda495509983055557988bc958141f3a8399e3e69de3aff451",
+    "web-app/e2e/telas.spec.ts": "ee4911de7148eebee35d5ddcc7d9bbbcc6faf051f0ea3f415e338d6809bb9d59"
+  },
+  "source_hashes_after": {
+    "api-app/src/integrations/meta/meta.client.ts": "ad6d9c56a0c854df35baf3320a70c2b1f4b9d577c4cd6f35def701ecac65f9c4",
+    "api-app/src/integrations/meta/meta.client.spec.ts": "2d6a7be4ab294f0e6468143b5d4ac09740e45d09144fe855a75468ffc07fd370",
+    "api-app/test/number-onboarding-flow.e2e-spec.ts": "650b233c9dafd9730f14170ce6bd6961d6277b9a131a6eb816cb8edd39341fae",
+    "api-app/src/domain/channels/channels.service.ts": "e910b2b395abc0ebca74deea917cf107dd36eca58491f1b0893efb702e1dfcf5",
+    "api-app/src/domain/channels/receipt-attempt-convergence.ts": "ca8cb841fab2574866c3508ab41aa0a269608a20658db18840b2b89f0c281512",
+    "api-app/src/surfaces/webhooks/evolution.controller.ts": "12139a5b50b4dacf43492e038c91f006c9db999d0f6a76fd5d73e45ee987a041",
+    "api-app/test/helpers.ts": "4d4b1c8c4e17c8fa7f338fdeeb2d63d093753038cece0d3aea566ae95c13619a",
+    "api-app/test/browser-server.cjs": "bf260c3124a867bda495509983055557988bc958141f3a8399e3e69de3aff451",
+    "web-app/e2e/telas.spec.ts": "ee4911de7148eebee35d5ddcc7d9bbbcc6faf051f0ea3f415e338d6809bb9d59"
+  },
+  "canonical_run": {
+    "command": "bash scripts/test-channels-local.sh all",
+    "exit_code": 0,
+    "log": "cp36h-api-all.log",
+    "migrations": 22,
+    "api_unit_tests": 172,
+    "api_postgresql_e2e_tests": 288,
+    "web_unit_tests": 28,
+    "browser_tests": 47
+  },
+  "freshness": {
+    "artifact": "cp36h-pre-worker-freshness.json",
+    "capturedAtUtc": "2026-10-16T23:56:42.251Z",
+    "source_manifest_entries": 9,
+    "matches_source_after": true
+  },
+  "browser": {
+    "artifact": "cp36h-browser-attestation.json",
+    "capturedAtUtc": "2026-10-16T23:56:39.550Z",
+    "database_migrations": 22,
+    "served_bundle_sha256": "d14343604557296f2ed62c1df47d9c80d81c323abafd89ccbb64a6a0746ff4bd",
+    "dist_bundle_sha256": "d14343604557296f2ed62c1df47d9c80d81c323abafd89ccbb64a6a0746ff4bd",
+    "matches_expected_dist_d14343604557296f2ed62c1df47d9c80d81c323abafd89ccbb64a6a0746ff4bd": true
+  },
+  "artifact_sha256": {
+    "cp36h-api-all.log": "588d37e0cd8ad19d2e8c3e0c15668f6f594560bab7e7f8a241de3d3c68b58925",
+    "cp36h-api-all-command.txt": "3d09219e333b2e8acae6bae1dc56ee87075cf6a962d6d7621fe07f7088c0f96a",
+    "cp36h-api-all.exit-code": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+    "cp36h-source-before.sha256": "b8cb7ac56f304ca0383d58a1a00f1d9211f6e1f1108b0322481b2e52dbe55d61",
+    "cp36h-source-preall.sha256": "4130344d3093891069681e0c78f6c364df68b0d92f10cdae6625269fa44507be",
+    "cp36h-source-after.sha256": "4130344d3093891069681e0c78f6c364df68b0d92f10cdae6625269fa44507be",
+    "cp36h-pre-worker-freshness.json": "58b5bd0d3f40134ab4d394c16f6cb55ee83645b5546f0957bdb7a742d4ebc27f",
+    "cp36h-browser-attestation.json": "d4e06fcbafab9ef93a401e895c11aabe63bd74202a4d34b8112565ded30450b1",
+    "cp36h-changed-only-unit-proof.json": "67c639f2bba489f71b2a493d5688ed9370385f3d263b07d48e14d9717e08eb41"
+  },
+  "product_implementation_changed": false,
+  "next_gate": "independent fresh TQA and distinct final review remain with root"
+}
