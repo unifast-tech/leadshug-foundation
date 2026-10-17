@@ -1,0 +1,39 @@
+{
+  "checkpoint": "cp72-meta-app-subscriptions-projection-preparation-v3",
+  "status": "prepared_waiting_distinct_root_go",
+  "helperPath": "foundation_documentation/artifacts/tmp/number-onboarding-execution/T/cp72-meta-app-subscriptions-projection-readonly-v3.cjs",
+  "evidenceCopyPath": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp72-meta-app-subscriptions-projection-readonly-v3.cjs",
+  "helperSha256": "637c832793e4805dce9b5d24202a866e13593a9f6bafc5089aef56f5c047de84",
+  "derivedFromHelperSha256": "daed32f80a2750285911ea0e15facd9c07547d54d1adabb2b68890b226c1b097",
+  "changeSummary": [
+    "Adds the explicit read projection object,callback_url,active,fields to the one app-subscriptions GET.",
+    "Adds fieldsPresent and finite fieldsType descriptors; missing or non-array fields leave message conclusions unknown, while a well-formed array is parsed by the existing v2 rules."
+  ],
+  "validation": {
+    "syntaxCheck": "passed",
+    "syntheticSelfTest": "passed",
+    "matchingMessagesArray": "recognized",
+    "arrayWithoutMessages": "messagesPresent false",
+    "missingObjectStringAndArrayFieldShapes": "distinguished",
+    "explicitActiveTrueFalseAndUnknown": "preserved",
+    "duplicatePagingMalformedAndRedactionControls": "passed",
+    "networkCalled": false,
+    "appSecretRead": false
+  },
+  "requestPlan": {
+    "method": "GET",
+    "host": "graph.facebook.com",
+    "path": "/v26.0/874966345550148/subscriptions?fields=object,callback_url,active,fields",
+    "redirectsRetriesPaging": false,
+    "timeoutMs": 10000,
+    "maxResponseBytes": 131072,
+    "executionPerformed": false
+  },
+  "boundary": {
+    "GraphCalled": false,
+    "META_APP_SECRETRead": false,
+    "providerMutation": false,
+    "sourceRuntimeOrDatabaseMutation": false,
+    "privateDataOrConfigDump": false
+  }
+}

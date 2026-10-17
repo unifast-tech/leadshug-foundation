@@ -1,0 +1,31 @@
+{
+  "checkpoint": "root-cp72-official-delivery-diagnosis",
+  "capturedAtUtc": "2026-10-17T19:19:14.241942+00:00",
+  "evidenceSha256": {
+    "cp72-meta-app-fields-projection-live-readback.stdout.json": "46ffb0df71542d83bda92846f761659ea4e4e1e2cf9a38953a7a622362f7ebf3",
+    "cp72-meta-app-fields-projection-live-readback.json": "ddae4720e2a47831510488ba0a62a9e4124dbf64af8c10a0c0fa3cddfdf1784f"
+  },
+  "rootOfflineHelperSelfTest": "passed",
+  "helperExecutionEvidenceBytesMatched": true,
+  "singleRootGo": "consumed",
+  "observed": {
+    "appSubscriptionActive": true,
+    "callbackMatchesExpected": true,
+    "projectedFieldsPropertyReturned": false,
+    "messagesSubscriptionApiObservation": "unknown",
+    "operatorPreviouslyConfirmedMessagesSubscribed": true,
+    "otherSystemConnectedOperatorReport": true,
+    "otherSystemNameAndDelivery": "unknown"
+  },
+  "conclusion": "Projected read did not resolve field enrollment; cause of absent physical ingress remains open. Do not infer another provider, code verification status or permission level as cause.",
+  "nextExactStep": "Await UI states for whatsapp_business_messaging and whatsapp_business_management (standard/advanced), plus business verification (complete/pending); do not repeat unknown-provider question or physical test without a meaningful change.",
+  "boundaries": {
+    "providerWrites": false,
+    "runtimeOrProductChanges": false,
+    "additionalCallsOrFallback": false,
+    "rawGraphOrSecretOutput": false,
+    "sourcePushOrGitlinkWrite": false
+  },
+  "parentDeliveryStage": "Pending",
+  "VAL05": "open_unwaived"
+}

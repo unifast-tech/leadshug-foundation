@@ -1,0 +1,12 @@
+{
+  "checkpoint": "cp72-human-other-integration-unknown",
+  "recordedUtc": "2026-10-17T19:14:42.145200+00:00",
+  "reply": "n\u00e3o sei",
+  "otherSystemAlreadyConnected": true,
+  "otherSystemName": "unknown",
+  "physical03ReceivedThere": "unknown",
+  "interpretation": "No withdrawal of prior connected-other-system fact, no takeover or migration authority, no repeated demand for unknown name",
+  "nextIndependentChecks": "Read actual app subscription fields using explicit projection because preceding GET had no usable fields array; operator asked only Meta permissions and business-verification states",
+  "parentStage": "Pending",
+  "officialVAL05": "open_unwaived"
+}

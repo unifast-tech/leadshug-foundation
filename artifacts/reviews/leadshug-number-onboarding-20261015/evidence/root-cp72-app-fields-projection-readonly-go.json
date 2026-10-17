@@ -1,0 +1,50 @@
+{
+  "checkpoint": "root-cp72-app-fields-projection-readonly-go",
+  "issuedAtUtc": "2026-10-17T19:18:18.842969+00:00",
+  "profile": "Operational / DevOps",
+  "scope": [
+    "docker",
+    "nestjs",
+    "react",
+    "vite",
+    "postgresql",
+    "prisma"
+  ],
+  "decision": "GO",
+  "maxInvocations": 1,
+  "helperPath": "foundation_documentation/artifacts/tmp/number-onboarding-execution/T/cp72-meta-app-subscriptions-projection-readonly-v4.cjs",
+  "helperSha256": "5236a7fbf47fa333559e16a8be5b021b19e88596af7537825e116d26386af0c5",
+  "apiContainerId": "005529386c8a7ab499cd779942ce541bb90cd3a770b8436b41509d2655e54857",
+  "apiImageId": "sha256:fe5fb7eaf6a68123f9da6b92a0a69483180d213f556b4bedf313f04a383b4821",
+  "project": "leadshug_channels_local",
+  "ownerLabel": "number-onboarding",
+  "requiredState": "running_healthy",
+  "operation": {
+    "method": "GET",
+    "host": "graph.facebook.com",
+    "path": "/v26.0/874966345550148/subscriptions?fields=object,callback_url,active,fields",
+    "requestTimeoutMs": 10000,
+    "maxResponseBytes": 131072,
+    "normalTls": true,
+    "redirects": false,
+    "retries": 0,
+    "paging": false
+  },
+  "secretBoundary": "Read process.env.META_APP_SECRET only inside pinned API process memory, solely for appID|secret Bearer header; no private env files, Config.Env, customer tokens, cipher keys, URLs, argv or persisted secrets.",
+  "forbidden": [
+    "provider writes",
+    "additional GET or fallback",
+    "DB reads or writes",
+    "runtime mutations",
+    "raw Graph output",
+    "api-app/.local-files access"
+  ],
+  "output": "Persist bounded sanitized helper stdout directly before displaying only safe summary; wrapper records pins, UTC, exit, helper/GO/stdout hashes.",
+  "validation": {
+    "rootOfflineSelfTest": "passed",
+    "rootExecutionAndEvidenceBytesEqual": true,
+    "review": "exact delta from cp71-v2 inspected; execution and secret handling unchanged; projection experimental; unsupported shape remains unknown"
+  },
+  "parentDeliveryStage": "Pending",
+  "VAL05": "open_unwaived"
+}

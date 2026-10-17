@@ -1,0 +1,24 @@
+{
+  "checkpoint": "cp72-meta-app-subscriptions-projection-preparation-v4",
+  "status": "prepared_waiting_distinct_root_go",
+  "helperPath": "foundation_documentation/artifacts/tmp/number-onboarding-execution/T/cp72-meta-app-subscriptions-projection-readonly-v4.cjs",
+  "evidenceCopyPath": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp72-meta-app-subscriptions-projection-readonly-v4.cjs",
+  "helperSha256": "5236a7fbf47fa333559e16a8be5b021b19e88596af7537825e116d26386af0c5",
+  "derivedFromHelperSha256": "637c832793e4805dce9b5d24202a866e13593a9f6bafc5089aef56f5c047de84",
+  "changeSummary": [
+    "For non-array fields values only, adds safe structure facts: whether a plain object has its exact known messages key and that value's type, or whether a string equals the known messages marker.",
+    "These structure facts do not infer messages subscription or version; messages conclusions remain unknown for object/string shapes."
+  ],
+  "validation": {
+    "syntaxCheck": "passed",
+    "syntheticSelfTest": "passed",
+    "objectMessagesKeyPresentAndType": "verified without exposing value",
+    "objectMessagesKeyAbsent": "verified without exposing other keys or values",
+    "stringEqualsKnownMessagesMarker": "verified as boolean only",
+    "unsupportedShapeMessagesSemantics": "unknown",
+    "redactionCanaries": "passed",
+    "networkCalled": false,
+    "appSecretRead": false
+  },
+  "executionPerformed": false
+}

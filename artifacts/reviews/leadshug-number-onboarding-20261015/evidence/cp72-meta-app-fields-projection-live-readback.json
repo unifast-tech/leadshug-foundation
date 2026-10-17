@@ -1,0 +1,63 @@
+{
+  "checkpoint": "cp72-meta-app-fields-projection-live-readback",
+  "capturedAtUtc": "2026-10-17T19:18:34.787Z",
+  "rootGo": {
+    "path": "root-cp72-app-fields-projection-readonly-go.json",
+    "sha256": "4f3a825bf756ccb2837b21e74ed141fe94ba97f10d4ca4d32a9ffc29490abce5",
+    "consumed": true
+  },
+  "runtimePins": {
+    "apiContainerId": "005529386c8a7ab499cd779942ce541bb90cd3a770b8436b41509d2655e54857",
+    "apiImageId": "sha256:fe5fb7eaf6a68123f9da6b92a0a69483180d213f556b4bedf313f04a383b4821",
+    "owner": "number-onboarding",
+    "project": "leadshug_channels_local",
+    "service": "api",
+    "running": true,
+    "healthy": true
+  },
+  "helper": {
+    "sha256": "5236a7fbf47fa333559e16a8be5b021b19e88596af7537825e116d26386af0c5",
+    "exitCode": 0,
+    "invokedOnce": true
+  },
+  "stdout": {
+    "path": "cp72-meta-app-fields-projection-live-readback.stdout.json",
+    "sha256": "46ffb0df71542d83bda92846f761659ea4e4e1e2cf9a38953a7a622362f7ebf3",
+    "result": {
+      "outcome": "http_200",
+      "httpStatus": 200,
+      "validResponseShape": true,
+      "dataState": "array",
+      "pagingPresent": false,
+      "rowCount": 1,
+      "recognizedRowCount": 1,
+      "subscription": {
+        "active": true,
+        "callbackUrlPresent": true,
+        "callbackMatchesExpected": true,
+        "fieldsPresent": false,
+        "fieldsType": "missing",
+        "messagesPresent": null,
+        "messagesVersionMatchesConfigured": null,
+        "fieldsObjectMessagesKeyPresent": null,
+        "fieldsObjectMessagesKeyType": null,
+        "fieldsStringEqualsMessages": null,
+        "fieldEntryCount": null,
+        "unknownFieldEntryCount": null
+      },
+      "graphErrorCode": null,
+      "graphErrorSubcode": null,
+      "graphIsTransient": null
+    }
+  },
+  "boundary": {
+    "singleProjectedAppSubscriptionsReadOnlyGet": true,
+    "providerMutation": false,
+    "credentialOrHeaderOutput": false,
+    "rawBodyOrResponseHeaderPersisted": false,
+    "privateFileOrEnvironmentDump": false,
+    "databaseOrRuntimeMutation": false,
+    "fallbackOrRetry": false
+  },
+  "interpretation": "The single projection GET returned one recognized active subscription entry with a matching callback, but the fields property was still absent. Messages subscription presence and version remain unknown. No fallback request was made."
+}
