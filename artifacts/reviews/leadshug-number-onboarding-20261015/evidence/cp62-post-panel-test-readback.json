@@ -1,0 +1,97 @@
+{
+  "checkpoint": "cp62-post-panel-test-readback",
+  "capturedAtUtc": "2026-10-17T05:39:54.407Z",
+  "scope": "One read-only snapshot after user-reported successful Meta panel test. No network request, polling, provider, auth/session, message row, payload, or mutation.",
+  "authorization": {
+    "routing": "foundation_documentation/artifacts/tmp/number-onboarding-execution/routing-cp62-post-panel-test-readback.json",
+    "outcome": "go",
+    "admission": "foundation_documentation/todos/active/features/TODO-leadshug-channel-connection-readiness.md cp62"
+  },
+  "apiRuntime": {
+    "containerId": "c138a8456bc834d53c2ab4c3bc3c0307024dbc5a9cbb9a11c337218adcde7324",
+    "imageId": "sha256:fe5fb7eaf6a68123f9da6b92a0a69483180d213f556b4bedf313f04a383b4821",
+    "status": "running healthy",
+    "ownerLabel": "number-onboarding",
+    "sourceManifestLabel": "af21e98e41ec1ba86f4dac877ba2bd69b3ff0857fba930ca1c3973428723b581"
+  },
+  "humanReport": {
+    "MetaPanelStandardMessagesTest": "reported success HTTP 200",
+    "newPhysicalDeviceInboundTestSinceEarlierFailure": false,
+    "physicalInboundRemainsUnproven": true
+  },
+  "channel": {
+    "businessUnitId": "a1492634-8685-46d8-a7cb-685a99f5c930",
+    "channelId": "eeb74451-edaf-4a44-a6cb-059dd184e152",
+    "type": "OFICIAL",
+    "status": "CONECTANDO",
+    "generation": 1,
+    "currentAttemptId": "e3165ba6e498307fd31c0213f544bdf1",
+    "pairingEpoch": 0,
+    "verifiedEpoch": 0,
+    "ownNumberVerified": true,
+    "providerConnectionState": "SUBSCRIBED",
+    "receiptPresent": false,
+    "receiptVerifiedAtUtc": null,
+    "connectedAtUtc": null,
+    "channelLeaseActive": false,
+    "activeCredentialPresent": true,
+    "credentialMetadata": {
+      "provider": "OFICIAL",
+      "generation": 1,
+      "version": 1
+    },
+    "currentAttempt": {
+      "id": "e3165ba6e498307fd31c0213f544bdf1",
+      "state": "PENDING_RECEIPT",
+      "stage": "SUBSCRIBED",
+      "safeErrorCode": null,
+      "version": 7,
+      "generation": 1,
+      "pairingEpoch": null,
+      "leaseActive": false
+    },
+    "currentIdentity": {
+      "id": "33980208-a547-4ab8-bab1-42a82bcd2197",
+      "currentChannelMatches": true,
+      "managedLifecycle": true,
+      "retired": false,
+      "cleanupState": "ACTIVE",
+      "cleanupLeaseActive": false
+    }
+  },
+  "messageAggregate": {
+    "whereBusinessUnitId": "a1492634-8685-46d8-a7cb-685a99f5c930",
+    "whereProviderResourceIdentityId": "33980208-a547-4ab8-bab1-42a82bcd2197",
+    "createdAtGteUtc": "2026-10-17T05:29:04Z",
+    "count": 0,
+    "groupByDirectionStatus": [],
+    "messageRowsRead": false
+  },
+  "webhookEventAggregate": {
+    "whereBusinessUnitId": "a1492634-8685-46d8-a7cb-685a99f5c930",
+    "channel": "OFICIAL",
+    "eventType": "meta.webhook",
+    "receivedAtGteUtc": "2026-10-17T05:29:04Z",
+    "count": 0,
+    "minReceivedAtUtc": null,
+    "maxReceivedAtUtc": null,
+    "payloadReadOrFiltered": false,
+    "schemaHasProviderIdentityColumn": false,
+    "identityAttributionLimit": "Counts are restricted to BU/channel-type/time; WebhookEvent lacks provider identity attribution."
+  },
+  "interpretation": {
+    "databaseStateChangedFromCp61": false,
+    "panelTestSuccessIsRealPhysicalInboundEvidence": false,
+    "provenanceOfHypotheticalFutureState": "If a later snapshot changes after synthetic panel testing, provenance will be indeterminate; this snapshot observed no change."
+  },
+  "boundary": {
+    "providerHttpOrMetaToken": false,
+    "authSessionOrPrivateEnv": false,
+    "logsRead": false,
+    "databaseMutation": false,
+    "postOrVerifyOrSubscriptionAction": false,
+    "restartBuildEnvironmentSourceOrGitMutation": false,
+    "localFilesAccessed": false,
+    "pollingPerformed": false
+  }
+}

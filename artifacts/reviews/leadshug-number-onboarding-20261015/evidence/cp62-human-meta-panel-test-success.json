@@ -1,0 +1,11 @@
+{
+  "checkpoint": "cp62",
+  "capturedAtUtc": "2026-10-17T05:39:31.061636+00:00",
+  "evidenceType": "human_meta_panel_test_result",
+  "exactUserReply": "Teste enviado com sucesso / HTTP 200",
+  "interpretation": "Operator reports standard messages test event accepted by callback. This is synthetic transport/handler acceptance evidence, not a physical-message or official INOUT result.",
+  "sourceBasis": "Deployed MetaWebhookController POST returns200 after signature validation; unknown resource may be ignored without receipt. No new Meta event was sent by agent.",
+  "nextQuestion": "Read only Meta publication requirements/titles/states, without publishing.",
+  "officialDeviceProofAccepted": false,
+  "secretsOrPayloadRecorded": false
+}

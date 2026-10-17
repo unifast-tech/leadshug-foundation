@@ -41,7 +41,7 @@ Proposta ST-CON-01: jornada de cadastro de número, com infraestrutura local est
 
 - **Current delivery stage:** Pending
 - **Qualifiers:** none
-- **Next exact step:** Operador executa teste padrão do campo messages no painel Meta e informa sucesso/HTTP/erro, sem alterar payload/identificadores ou publicar app. cp61: IN físico não apareceu, emissor viu dois tiques; SELECT exato encontrou zero mensagens e zero diagnóstico BU/OFICIAL/meta.webhook na janela, receipt ausente; health público200. Distinguir callback/assinatura/roteamento/upstream antes de pedir novo IN físico. Teste do painel é sintético e nunca fecha VAL05.
+- **Next exact step:** Concluir crítica factual independente cp63 da política e hospedagem local solicitadas pelo usuário; depois único asset Web, validação canônica e publicação somente do Web local. App Meta permanece sem publicar; URL é preparo, não INOUT. Teste padrão200 cp62 sem receipt/mensagens; VAL05 oficial aberto.
 
 ## Active Work State (Required While TODO Remains In `active/`)
 
@@ -60,6 +60,7 @@ Proposta ST-CON-01: jornada de cadastro de número, com infraestrutura local est
 - [ ] SCOPE-07: testes de contrato/segurança/races/PostgreSQL e Playwright com runtime real; prova externa separada por canal.
 - [ ] SCOPE-08: runtime local próprio do LeadsHug com Evolution fixada, persistência isolada, wiring de variáveis e runbook de callback HTTPS; sem tocar runtime/dados do legado.
 - [ ] SCOPE-09: reautorização preserva credencial válida; novo pareamento invalida confiança anterior antes da rede e usa instância por epoch; identidade mantém proprietário após exclusão; aceitação única IN/OUT+echo e Typebot isolado por Mantenedora.
+- [ ] SCOPE-10: complemento autorizado cp63: política UNIFAST/LeadsHug e instruções de solicitações em documento estático público /privacidade.html para preparo Meta, sem coleta/formulários/SDK ou alteração de login, sem publicar app Meta.
 
 ## Proposed Registration Contracts
 
@@ -252,6 +253,7 @@ n/a; esta proposta não autoriza promoção ou deploy.
 | web | e2e/telas.spec.ts | M | Caso Números: substituir botão Conectar WABA aposentado pela jornada aprovada. Caso identidade visual: somente barreira de PUT real antes do reload, admitida após falha cp14. Casos Pessoas “adicionar uma pessoa e conceder um setor a ela” e “convidar mostra o LINK quando o e-mail não sai”: somente seleção explícita do Número de QA próprio antes do convite e barreira/assert201 do POST real, admitidas cp36d após falha cp36c e classificação independente; preservar Ana/setor e Bia/link, console/auth. Preservar assertions de cores/tema, BU/ausência de canal. Nenhuma outra edição de caso. |
 | web | e2e/timeline-freshness.ts | M | Concretização necessária: manifesto compartilhado deve representar deleções e cobrir fixtures/schema/config pertinentes; preservar health, banco descartável e comparação bundle servido/buildado. |
 | web | playwright.config.ts | M | Projeto adicional com mesmo backend real. |
+| web | public/privacidade.html | A,?? | Documento estático solicitado cp63; único asset sem JS/API/dependências/dados de negócio. Produto aguarda crítica factual limitada. |
 | web | .dockerignore | M | Excluir env privados do contexto de build e da carga automática Vite; manter somente exemplo público. |
 | workspace | docker-compose.yml | M | Repasse coerente de config não secreta; default local permanece. |
 | workspace | docker-compose.channels.yml | A,?? | Overlay local provider/gateway/volumes próprios. |
@@ -269,6 +271,8 @@ n/a; esta proposta não autoriza promoção ou deploy.
 | foundation | artifacts/reviews/leadshug-number-onboarding-20261015/** | A,M,?? | Pacote/reviews/guardas específicos. |
 | foundation | artifacts/feature-briefs/leadshug-channel-readiness-and-history-20261015.md | M | Enquadramento e sequência. |
 | foundation | artifacts/validation-plans/leadshug-channel-readiness-20261015.md | M | Prova por canal. |
+| foundation | project_constitution.md | M | cp63: declarar documento público estático sem dados, preservar auth APIs. |
+| foundation | policies/scope_subscope_governance.md | M | cp63: URL pública estática, sem resolução tenant/BU, sem forms/SDK/dados. |
 | foundation | artifacts/dependency-readiness.md | M | Configuração/prontidão local. |
 | foundation | backlog/README.md | M | Disposição/next gate. |
 | foundation | modules/integrations-and-channels.md | M | Contratos owner. |
@@ -287,7 +291,6 @@ n/a; esta proposta não autoriza promoção ou deploy.
 | workspace | .env | any | Arquivo privado não versionado. |
 | workspace | .gitmodules | any | Ownership de pipeline. |
 | workspace | .github/** | any | Sem expansão CI neste recorte. |
-| foundation | project_constitution.md | any | Constituição preservada. |
 | foundation | system_roadmap.md | any | Sem avanço de tema/exit gate. |
 | foundation | todos/completed/features/TODO-leadshug-inbox-message-timeline-pagination.md | any | Não reescrever histórico. |
 
@@ -314,6 +317,7 @@ Cadastro/QR/autorização/recebimento pertencem a este objetivo. Nova conversa p
 - [ ] DOD-05: primeira IN real de cada canal cria/reutiliza conversa BU/contato e aparece na inbox; resposta OUT dentro do contrato existente chega ao interlocutor.
 - [ ] DOD-06: CI-equivalent API/Web/workspace, fluxo Playwright com build atual, segurança/PCV e revisões independentes aceitas.
 - [x] DOD-08: NUM-ARCH-01..06 e NUM-CRIT-01/02 cobertos por harness de tenant, replay, identidade, reautorização e POST de pairing; nenhum segredo de envelope webhook persiste.
+- [ ] DOD-09: política pública sem sessão, conteúdo fiel ao sistema/contato fornecido, sem recursos externos automáticos, API/providers/bundle preservados.
 - [ ] DOD-07: decisões consolidadas no módulo owner, evidence matrix completa, source commits e guardas go antes do closeout local.
 
 ## Validation Steps
@@ -325,6 +329,7 @@ Cadastro/QR/autorização/recebimento pertencem a este objetivo. Nova conversa p
 - [ ] VAL-05: prova externa local por canal, com autorização Meta/QR real, IN na BU certa, OUT recebida pelo interlocutor e recuperação permitida da conexão.
 - [ ] VAL-06: EPS/FRC/BCI/RLS conforme plano; security, debt, architecture_adherence, TQA, audit especializado e final review antes de completar. Evidência cp27 histórica; TQA FULL j e final distinto j aceitos; FINAL-CP36I-01 verified-local. Oficial VAL05 continua obrigatório/aberto, sem entrega geral.
 - [x] VAL-08: executar REG-SEC-01..13 do plano de validação, incluindo replay por provider, renovação de canal já verificado, echo-first/sender-first com autoria, tombstone, candidata, CSRF e logs/partição raw.
+- [ ] VAL-09: cp63 crítica factual do texto/plano, asset byteexact, build/Webunit canônicos, HTML/headers/URL pública sem sessão e bundle comparados; nenhuma promessa de aprovação Meta ou substituição de INOUT real.
 - [ ] VAL-07: consolidar módulo, validar contrato/diff/coerência e closeout; nenhum claim de produção pronta.
 
 ## Completion Evidence Matrix (Required Before Delivery Claim)
@@ -401,7 +406,7 @@ Concretização de isolamento D-09 antes da ativação DevOps: runtime do operad
 - **Primary module doc:** `foundation_documentation/modules/integrations-and-channels.md`
 - **Secondary module docs:** `foundation_documentation/modules/identity-and-tenancy.md`, `foundation_documentation/modules/inbox-and-conversations.md`, `foundation_documentation/modules/audit-and-history.md`.
 - **Planned decision promotion targets:** integrations-and-channels: Cadastro de números, Credenciais por canal, Estados e contratos BFF, Callback e operação local; identity-and-tenancy: autorização das rotas de cadastro; inbox-and-conversations: deduplicação/identidade e isolamento da automação; audit-and-history: eventos sem segredos.
-- **Module decision consolidation targets:** as mesmas seções antes do código das novas rotas; estado Verified apenas após validação. Constituição preservada; não reescrever decisões históricas/estudos concluídos.
+- **Module decision consolidation targets:** as mesmas seções antes do código das novas rotas; estado Verified apenas após validação. Constituição preservada fora da declaração restrita cp63 autorizada; não reescrever decisões históricas/estudos concluídos.
 
 ## Decision Pending (Resolve Before Freeze)
 
@@ -419,6 +424,7 @@ Nenhuma decisão de produto pendente para a proposta revisada e aceita nas crít
 - D-08: atualizar todo consumo Meta existente (BFF/público/Typebot) para resolver credencial pelo vínculo; manter contratos públicos de resposta e janela; Typebot seleciona triggers/sessões da Mantenedora da BU e entrada tem unique por recurso/ID externo com aceitação transacional compartilhada por sender e echo OUT; criação vencedora para unread/realtime/automação, reconciliação preserva ID/autoria e contratos públicos. Bootstrap pode abrir administração/onboarding sem token de cliente já obtido; piso oficial é capacidade configurada, não número previamente conectado.
 - D-09: local primeiro com Evolution/DB/cache próprios e runbook HTTPS sem domínio presumido; Railway, coexistência, histórico e Nova conversa proativa ficam fora desta entrega.
 - D-10: API/Web source e runtime validados serialmente no checkout principal, um executor, sem worktrees ou mudança manual dos gitlinks.
+- D-11 (cp63 autorizado): documento institucional estático público /privacidade.html com responsável/contato fornecidos, sem script/form/analytics/API. Asset do Web existente, sem liberação do app Meta, usuários não confiáveis ou produção; D01..10 preservadas.
 
 ## Module Decision Baseline Snapshot (Required Before APROVADO)
 
@@ -1634,3 +1640,28 @@ Refinamento cp61 ANTES ativação: WebhookEvent não possui coluna de identity/c
 Resultado cp61 terminal/STOP e rootverifiedhashes: mensagens exactBU/currentidentity desde baseline=0; diagnóstico BU/OFICIAL/meta.webhook desdebaseline=0 (schema sem identitycolumn, nenhum payload lido), receipt/connectedAt ausentes. AtualSUBSCRIBED/attemptv7/currentmapping/credencial preservados, sem lease/error. Current normalTLS publichealth200. Isso confirma ausência de registro local da IN nessa janela, não prova que nenhum HTTP chegou ou que a Meta necessariamente reteve o evento. Assinatura/metadata não correspondente/upstream ainda possíveis. Formato seguro gateway omite URI e não foi consultado para inventar atribuição de POST.
 
 Próximo diagnóstico humano enviado: mesmo app Meta → WhatsApp/Configuração/Webhook → messages/Testar → evento PADRÃO sem editar IDs → relatar sucesso/HTTP/erro, manter app sem publicar. Esse evento sintético não é entrada física, entrega ou prova VAL05 e não pode ser usado para fechar receipt/INOUT, mesmo se modificar algum estado local. Agente não disparou POST nem provider. Aviso anterior do painel sobre apps não publicados permanece hipótese de bloqueio externo; busca primária não confirmou política atual, sem publicação automática. root-cp61-inbound-diagnosis-receipt.json; pergunta humana pendente.
+
+
+### cp62 — callback de teste aceito e levantamento de requisitos Meta
+
+Humano informou teste padrão messages enviado com sucesso/HTTP200. Isso comprova aceitação reportada do evento SINTÉTICO; não entrada física/INOUT/receipt real. Source handler exige assinatura antes de200, mas evento de recurso desconhecido pode ser ignorado corretamente sem receipt. Nenhuma mensagem/evento enviada pelo agente. Pergunta humana atual é APENAS consultar Publicar/requisitos antes de publicar, títulos/estados sem dados ou documentos; app continua sem publicar até avaliação concreta. Aviso anterior do painel explica hipótese de elegibilidade, não atribuir causa exclusiva sem observação atual.
+
+Admissão cp62 antes da execução: Operational/DevOps mesmo escopo NestJS/React/Vite/Prisma/PostgreSQL/Docker e principal serial; Genesis não aplicável. Routingcp62 GOgpt6luna/medium. UM snapshot PrismaSELECT SOMENTE BU a1492634-8685-46d8-a7cb-685a99f5c930/canal eeb74451-edaf-4a44-a6cb-059dd184e152/identity33980208-a547-4ab8-bab1-42a82bcd2197/attempte3165ba6e498307fd31c0213f544bdf1 metadata currentfences/state/stage/code/version/leases/receipt/connectedAt e booleanscredencial/mapping; counts/grupo direção/status de mensagens mesmasBUidentity desde2026-10-17T05:29:04Z, sem corpo/contato/phone/IDexterno. WebhookEventCOUNT/minmaxreceivedAt SOMENTE BUexata+OFICIAL+meta.webhook+sincebaseline, sem payload/identitycolumn fictícia. Se surgir receipt/mensagem após teste sintético, marcar PROVENIÊNCIA INDETERMINADA/sintética possível; não aceitar como prova física. Sem novos HTTP(provider ou transporte)/login/env/ConfigEnv/logs/POST/mutação/polling/restart/build/Git/.local-files. Apenas cp62-post-panel-test-readback.json/md, depoisSTOP; rootcanon/Git.
+
+
+### cp63 — política e hospedagem local solicitadas
+
+Autorização incremental humana expressa: “precisamos preparar”; responsável/contato “UNIFAST, unitech@unifast.com.br”; hospedagem “Precisamos hospedar no LeadsHug local”. Não atribuir APROVADO textual não escrito neste complemento. A instrução superior de preservar autorização recebida permite este suporte coeso de ST-CON-01; não repetir permissão já dada para preparar/hospedar. Publicação do APP META está fora dessa autorização.
+
+Handoff: Operational/DevOps → Strategic/CTO para declaração estática na constituição/scope policy, sem alterar tenant/grants/APIs → Coder asset único → DevOps Web-only → Assurance factual/integridade. D11/SCOPE10/DOD09/VAL09 e três paths declarados antes de produto/runtime. Root criou minuta apenas em evidence; source produto intacto.
+
+Plano: copiar byteexact HTML revisado para web-app/public/privacidade.html; Vite public asset/nginx existentes. Sem React/auth/SDK/cookies/forms/JS ou dependências/API/migration. Web-only rebuild/recreate depois de revisão, preservando APIfe5fb7/Evolution/PG/cache/gateway/túnel/volumes; rollback para imagem Web anterior se falhar. Outro path necessário exige nova admissão. Sem Meta publication/sourcepush/gitlink.
+
+Validação: HTML/texto/links sem recursos externos automáticos, identidade e contato humanos, sourcefact/retencão/rights; build/Web28 no runner canônico, GET público sem cookie/redirect 200 text/html UTF8/bytesexatos. Comparar mainJS antes de reusar evidência browser histórica; não presumir igualdade. Nenhum teste/assertion/fixture alterado: TQA j FULL aceita comportamento source9 inalterado; este leaf documental não comportamental passa revisão factual/segurança e HTTP direto, sem waiver do gate TQA geral. Final distinto deve verificar delta/evidência antes entrega desse complemento; VAL05 continua obrigatório.
+
+Minuta cp63-privacy-policy.draft.html/facts.json: sem CNPJ/endereço/DPO inventados, sem prazo fixo de conversas ou exclusão automática prometida, sem todosdadoscifrados/país/backups/SCC/Metaapproval. Rotina90dias existente não é prova de execução individual. Email humano não foi testado por envio. Primárias LGPD/WhatsApp/Cloudflare; texto próprio deste produto/versão. Fonte/runtime não mudaram na preparação.
+
+
+### cp63 — reconciliação do diff antes da crítica
+
+O guard cp63-privacy-diff-expectation.json terminou NO-GO por uma linha antiga em Not Expected que proibia project_constitution.md, embora Expected Paths já admitisse a declaração cp63. Classificação: alteração necessária e justificada pelo pedido explícito do usuário “Precisamos hospedar no LeadsHug local” e pela scope policy que exige constituição para nova superfície. Retirada somente essa proibição conflitante; Expected limita a alteração ao documento institucional público sem dados. Demais proibições preservadas. Não é waiver do guard, nem autorização para alterar auth/tenant/produção. O resultado NO-GO original permanece imutável; novo guard deve ser GO antes de congelar a revisão. Perfil retomado: Strategic/CTO-Tech-Lead para esta reconciliação documental; handoffs Coder/React,Vite e DevOps/Docker já definidos. Genesis rejeitado: projeto e contrato existentes. Readiness PACED-Ready confirmado na retomada.

@@ -1,0 +1,17 @@
+{
+  "checkpoint": "cp62-root-receipt",
+  "capturedAtUtc": "2026-10-17T05:51:51.470192+00:00",
+  "artifactHashesVerified": {
+    "cp62-post-panel-test-readback.json": "78eec10671212fd43e27a929323b0d1055b08ae9823b1c8c78a24d4bea42f7ba",
+    "cp62-post-panel-test-readback.md": "17d37dadb26e25f20564c01819b83115ce8655582db99ce5c6b3e91de3b449dc"
+  },
+  "acceptedFacts": [
+    "Human Meta standard test successful HTTP200",
+    "Post-test target remains PENDING_RECEIPT/SUBSCRIBEDv7 without receipt/connectedAt; messagecount0 and scopedBUdiagnosticcount0",
+    "No physical device test since synthetic test; no delivery acceptance",
+    "Human Publication panel displays privacy-policy URL requirement, not proof it is the only requirement"
+  ],
+  "next": "Prepare and locally host privacy document explicitly requested; inspect remaining Meta requirements after URL verification; no Meta publication yet",
+  "overallStage": "Pending",
+  "waivers": []
+}

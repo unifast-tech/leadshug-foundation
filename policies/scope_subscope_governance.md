@@ -16,6 +16,7 @@ more BUs; no controller, service, repository or frontend adapter may infer acces
 | `/api/v1` | partner API key | public integrations |
 | `/api/internal` | service credential | trusted internal calls |
 | `/webhooks` | provider verification | inbound channel events |
+| /privacidade.html | public static document | Institutional privacy information only; no tenant/account/BU resolution, forms, SDK or business-data access. |
 
 Outbound provider adapters are integration boundaries, not public runtime surfaces.
 

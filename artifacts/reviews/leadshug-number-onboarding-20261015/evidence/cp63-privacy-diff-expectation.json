@@ -1,0 +1,42 @@
+{
+  "blocked": true,
+  "context": {
+    "actual_change_count": 855,
+    "contract_repository_count": 4,
+    "expected_change_count": 854,
+    "forbidden_change_count": 1,
+    "repo_root": "/mnt/c/unifast/leadshug/leadshug_now_docker",
+    "repositories": {
+      "api": {
+        "actual_change_count": 53,
+        "baseline_commit": "ae6a9662c29b77276351aa9de653a47276372246",
+        "path": "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app"
+      },
+      "foundation": {
+        "actual_change_count": 777,
+        "baseline_commit": "41572cebbeb2ec87d0448dfa230fad4364af7ff6",
+        "path": "/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation"
+      },
+      "web": {
+        "actual_change_count": 14,
+        "baseline_commit": "4e56f6c1f4515b918d05b8c87e890d42e8542c56",
+        "path": "/mnt/c/unifast/leadshug/leadshug_now_docker/web-app"
+      },
+      "workspace": {
+        "actual_change_count": 11,
+        "baseline_commit": "cab23188ec796f79131467dcce0a16acedab8d4f",
+        "path": "/mnt/c/unifast/leadshug/leadshug_now_docker"
+      }
+    },
+    "todo_path": "/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/todos/active/features/TODO-leadshug-channel-connection-readiness.md",
+    "unclassified_change_count": 0
+  },
+  "violations": [
+    {
+      "code": "DIFF-FORBIDDEN-PATH",
+      "message": "Actual M change is explicitly not expected: foundation:project_constitution.md (path). Reason: Constitui\u00e7\u00e3o preservada.",
+      "resolution": "TEACH: analyze each reported item before changing files. Classify it as (a) an actual scope deviation, (b) a necessary/justifiable need, or (c) noise. This no-go is not an automatic rollback: the agent may defend retaining a necessary change with concrete evidence. Clean/remove noise; revert an unnecessary deviation; for a necessary scope expansion, obtain user validation, update the TODO contract, renew approval, and rerun the guard.",
+      "section": "Diff Expectation Contract / Not Expected Changed Paths"
+    }
+  ]
+}

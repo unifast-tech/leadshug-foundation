@@ -1,0 +1,19 @@
+{
+  "capturedAtUtc": "2026-10-17T05:56:05.212292+00:00",
+  "sha256": "43556cf3b502b569d8ac79a116da3cb7f3910ff7a444f52035ae1fcbdfe259f8",
+  "bytes": 11894,
+  "htmlParser": "stdlib HTMLParser",
+  "utf8": true,
+  "duplicateIds": false,
+  "ariaReferencesResolve": true,
+  "scriptsFormsEmbeddedRemoteResources": 0,
+  "externalLinksClickOnly": [
+    "mailto:unitech@unifast.com.br",
+    "https://www.whatsapp.com/legal/privacy-policy",
+    "https://www.cloudflare.com/privacypolicy/",
+    "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm",
+    "mailto:unitech@unifast.com.br",
+    "mailto:unitech@unifast.com.br"
+  ],
+  "scope": "draft static source inspection; not browser/render/public-HTTP proof"
+}

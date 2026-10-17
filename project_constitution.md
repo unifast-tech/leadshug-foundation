@@ -27,6 +27,7 @@ Quando houver conflito, a regra mais específica do produto prevalece sobre a re
 - Grants e leituras são sempre filtrados pela BU e pela conta correta; vazamento entre tenants é falha crítica.
 - Canal oficial e não oficial são transportes da BU; a conversa é unificada pelo par BU/Contato.
 - BFF, API pública, API interna e webhooks são superfícies distintas, com autenticação própria.
+- Documentos institucionais estáticos explicitamente autorizados, como /privacidade.html, são públicos e não resolvem tenant/BU nem consultam dados de negócio. Não alteram a autenticação das superfícies acima. Sua publicação local não autoriza publicação do app Meta ou produção.
 - Domínio e regras de negócio pertencem ao backend NestJS; React consome contratos explícitos.
 - Persistência usa PostgreSQL via Prisma; acesso ao banco não deve contornar a fronteira de domínio.
 - Serviços executam em Docker e são promovidos pela topologia Railway declarada no projeto.

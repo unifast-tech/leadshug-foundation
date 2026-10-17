@@ -1,0 +1,40 @@
+{
+  "checkpoint": "cp63-privacy-draft",
+  "preparedAtUtc": "2026-10-17T05:48:19.826155+00:00",
+  "status": "draft; factual critique and local publication implementation pending",
+  "humanAuthorization": {
+    "prepare": "precisamos preparar",
+    "responsibleAndContact": "UNIFAST, unitech@unifast.com.br",
+    "hosting": "Precisamos hospedar no LeadsHug local",
+    "scope": "Prepare truthful policy and locally host public static document; not permission to publish Meta app or broaden user cohort. No literal APROVADO reply is fabricated for this supplement."
+  },
+  "artifactSha256": "43556cf3b502b569d8ac79a116da3cb7f3910ff7a444f52035ae1fcbdfe259f8",
+  "proposedPublicPath": "/privacidade.html",
+  "implementationProposal": "One static web-app/public/privacidade.html copied through existing Vite public assets and served by existing Web Nginx/gateway. No JS/form/network-resource/auth/BFF/DB/provider/dependency changes. Web-only rebuild/recreate after accepted scoped review; preserve accepted API image/provider/DB/tunnel.",
+  "factualSources": {
+    "accountsAndMessages": "api-app/prisma/schema.prisma AppUser/Conversation/Message/ActivityLog/WebhookEvent",
+    "scopedChannelCredentials": "api-app/src/domain/channels/channel-credential-crypto.ts; channel-credential-resolver.ts; number-registration.service.ts",
+    "session": "api-app/src/infra/session/session.service.ts DURACAO_MS=24h",
+    "preferencesAndMetaSdk": "web-app/src/App.tsx; src/componentes/CadastroNumero.tsx",
+    "upload": "api-app/src/infra/arquivos/armazenamento.ts supports optional images only; no .local-files accessed",
+    "email": "api-app/src/integrations/email/email.client.ts optional Resend",
+    "automation": "api-app/src/domain/inbox/incoming.service.ts; integrations/typebot/typebot.client.ts",
+    "retention": "api-app/src/rotinas/expurgo-de-webhook.rotina.ts 90-day cutoff; agendador.service.ts periodic execution; rotinas.module.ts; app.module.ts includes routines; ActivityLog has no age purge",
+    "localTransport": "cp49/runtime and cp61/publichealth receipts; Cloudflare own local tunnel; no production hosting/country guarantee"
+  },
+  "primaryReferences": [
+    "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm",
+    "https://www.whatsapp.com/legal/privacy-policy",
+    "https://www.cloudflare.com/privacypolicy/"
+  ],
+  "unknownsAndLimits": [
+    "No legal certification or promise of Meta approval",
+    "Human identified public responsible only as UNIFAST; do not invent corporate registration/address/DPO formal appointment",
+    "Email channel provided by user, not delivery-tested; do not send mail",
+    "90-day implemented routine is not proof of actual execution/capacity/SLA",
+    "No automatic full erasure or fixed conversation retention period exists; no such promise",
+    "No country/backups/contracts/SCC/third-party activation invented",
+    "Existing private-cohort dependency exposure remains; publication of Meta app is separate future decision",
+    "Temporary tunnel URL will remain temporary; no stable domain or production launch claim"
+  ]
+}
