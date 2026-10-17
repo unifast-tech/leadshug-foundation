@@ -41,12 +41,12 @@ Proposta ST-CON-01: jornada de cadastro de número, com infraestrutura local est
 
 - **Current delivery stage:** Pending
 - **Qualifiers:** none
-- **Next exact step:** Operador cadastra o número oficial próprio em BU correspondente a ESSE número (existente correta ou nova Teste Oficial), seleciona Unifast/conta/número corretos e Já registrado. Não reutilizar Local Test BU do QR: humano confirmou que os números são diferentes. cp59: tentativa oficial nessa BU expirou sem identidade/credencial/receipt; não oficial continua conectado. Pergunta humana de novo cadastro correto pendente; VAL05 oficial permanece aberto, sem mudança de código/runtime.
+- **Next exact step:** Operador testa IN real no número oficial da BU Local Test Ofc, confere Atendimento e responde pelo LeadsHug; reportar visibilidade/entrega/erro sem dados pessoais. UI cp60: identidade confirmada, eventos ativados, receipt pendente. Diagnóstico SELECT baseline limitado à nova BU admitido abaixo; não usar a BU do QR para o oficial. VAL05 permanece aberto até prova real e recuperação permitida.
 
 ## Active Work State (Required While TODO Remains In `active/`)
 
 - **Work state:** implementing
-- **Why this state now:** cp59 readback exato prova tentativa oficial ERROR/EXPIRED, sem promoção/recurso/credencial/receipt; QR corrente permanece conectado. Número oficial alvo é outro (confirmação humana), exige BU própria por D01. Fonte/testes j aceitos; validar fluxo oficial normal na BU correta antes INOUT/recovery. Entrega Pending/D05D06D07 Exception.
+- **Why this state now:** Usuário criou/selecionou Local Test Ofc para o número oficial distinto e reportou identidade confirmada/eventos ativados/recebimento pendente. TQA/final j e não oficial aceitos; próximo é prova oficial humana INOUT. A tentativa oficial expirada da antiga Local Test BU não representa esse novo vínculo. Entrega Pending/D05D06D07 Exception.
 - **Exit condition:** implementação no escopo, matriz local/provas reais e gates de entrega aceitos.
 
 ## Scope
@@ -1612,3 +1612,13 @@ Admissão antes da execução: Operational/DevOps, overlays NestJS/React/Vite/Pr
 Resultado cp59: worker STOP, hashes conferidos pelo root. API atual c138/imagefe5fb7; exactBUknown tem oficial ERROR/EXPIRED/ATTEMPT_EXPIREDv4 e ZERO recurso/identity/activecredential/receipt/lease. Não oficial mantém conectado/currentattemptv2/epoch1/receipt. Nenhum login/secret/provider/DB mutation executado. Não houve erro PHONE_MISMATCH observado; guarda source não substitui resposta real.
 
 Root corrige suposição anterior: reutilizar BU pressupunha o mesmo telefone; humano confirmou números diferentes. D01 exige BU correspondente ao número oficial. A sugestão final do executor de usar a BU exata é Challenged SOMENTE nessa parte; fatos SELECT aceitos, raw imutável. Próxima orientação enviada: Começar outro cadastro → BU correta existente ou nova Teste Oficial → Oficial/reserva/autorização Unifast/conta/número próprio → Já registrado/confirm/verify. Preservar Local Test BU e QR. Não mover registros, deletar canal, forçar receipt, publicar Meta ou aceitar Test Number como alvo. root-cp59-official-readback-receipt.json; resultado humano pendente.
+
+
+### cp60 — BU oficial correta e baseline antes de INOUT
+
+Humano reporta Local Test Ofc distinta, identidade confirmada/eventos ativados/receipt pendente. Números e IDs recebidos não são copiados. Pergunta humana enviada: outro WhatsApp de teste envia frase sintética ao oficial, operador vê na BU correta e responde pelo LeadsHug, confirma outroaparelho; verifyreceipt se pendente. Não inferir entrega real de subscribed/configuração.
+
+Admissão prévia baseline cp60, Operational/DevOps mesmo escopo/serialprincipal, routing gpt6luna/medium GO: executor pode ler SOMENTE mantenedoraId da BU previamente conhecida c231d8f7-d8a5-448e-a740-2ab8aebf9bc2 para delimitar busca pelo nome exato humano Local Test Ofc dentro dessa mantenedora, take2 apenasIDs; se não houver exatamenteUMA, parar sem ampliar. Depois ler SOMENTE novaBU/OFICIAL/currentattempt: IDs internos scoped, states/stage/code/generation/version/leases/receipt/connected timestamps e booleans de identidade/recurso/credencial/ownership. Não selecionar números/IDs externos/ciphertext/candidata/token/contatos/conteúdo/PII; sem consulta de mensagens nesta fase. SELECT via Prisma na API owned/imagefe5fb7 previamente conferida; nenhuma consulta de Config.Env/logs/privateenv/login/providerHTTP. Sem verify/confirm/subscription/cancel/SQLwrites/restart/build/túnel/env/source/Git/.local-files. Resultado somente cp60-official-registration-baseline.json/md; STOP após baseline, sem monitoramento ou probes extras enquanto humano testa. Rootcanon/Git, todos os gates gerais continuam Pending.
+
+
+cp60 baseline terminal/STOP, hashes root conferidos: Local Test Ofc resolveu unicamente na mesma mantenedora, novaBU a1492634-8685-46d8-a7cb-685a99f5c930; canal oficial eeb74451-edaf-4a44-a6cb-059dd184e152/identidade33980208-a547-4ab8-bab1-42a82bcd2197, currentattempt e3165ba6e498307fd31c0213f544bdf1 PENDING_RECEIPT/SUBSCRIBEDv7/gen1/null attemptepoch, canal verifiedepoch0. Credencial ativa v1/gen1 e mapping gerenciado atuais presentes, receipt/connectedAt ausentes, sem lease/error. Uma leitura metadata, sem mensagens/provider/auth/PII/mutação. Root aceita baseline somente, não INOUT/recebimento/recovery; prova humana pendente. root-cp60-official-baseline-receipt.json.

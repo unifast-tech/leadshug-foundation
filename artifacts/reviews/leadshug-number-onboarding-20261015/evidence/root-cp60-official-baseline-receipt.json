@@ -1,0 +1,26 @@
+{
+  "checkpoint": "cp60-root-receipt",
+  "capturedAtUtc": "2026-10-17T05:30:09.949129+00:00",
+  "artifactHashesVerified": {
+    "cp60-official-registration-baseline.json": "84a3e0bc62819554a202c9f43da99240599674cf6cf44e79b5c564186a996897",
+    "cp60-official-registration-baseline.md": "a59088092bcae26269c719c19f467d70e2fe1c28d8a18979443d7fddbaa052f5"
+  },
+  "acceptedFacts": [
+    "Exact human Local Test Ofc label resolved uniquely within known maintainer, distinct from QR BU",
+    "Actual official current channel own identity verified, SUBSCRIBED, current managed mapping and active credential v1/gen1",
+    "Current attempt PENDING_RECEIPT/SUBSCRIBED v7/gen1/null pairing epoch, no active lease or safe error",
+    "No receipt or connected timestamp at captured snapshot",
+    "Actual API/image remains prior accepted production i; j change remains build-excluded unit-only"
+  ],
+  "limits": [
+    "Single persisted-state snapshot; agent did not contact provider or inspect auth credentials",
+    "No messages queried, no real official INOUT/receipt/recovery proven yet",
+    "Subscription/identity are not delivery evidence",
+    "Old Local Test BU official expired attempt is separate and not the current target"
+  ],
+  "next": "Human exact dedicated official test-number IN from other WhatsApp, visible in correct BU, reply from LeadsHug, confirm other device; then scoped metadata readback if useful.",
+  "officialDeviceProofAccepted": false,
+  "overallStage": "Pending",
+  "D05_D06_D07": "Exception",
+  "waivers": []
+}

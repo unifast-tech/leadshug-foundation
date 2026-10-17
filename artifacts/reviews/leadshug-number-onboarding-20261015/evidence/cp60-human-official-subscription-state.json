@@ -1,0 +1,19 @@
+{
+  "checkpoint": "cp60",
+  "capturedAtUtc": "2026-10-17T05:28:28.728794+00:00",
+  "evidenceType": "human_report_of_official_registration",
+  "targetBusinessUnitLabel": "Local Test Ofc",
+  "reportedWizardStage": "Eventos ativados; aguardando recebimento",
+  "reportedStates": {
+    "channel": "Conexão em andamento",
+    "ownIdentity": "confirmada",
+    "provider": "eventos ativados",
+    "receipt": "pendente"
+  },
+  "oldBusinessUnit": "Local Test BU remains distinct; nonofficial connected, unused official attempt previously expired cp59.",
+  "identifiers": "Phone values in human message intentionally omitted.",
+  "interpretation": "Correct distinct BU selected. Human UI reports official identity verification and subscription; actual inbound/outbound delivery not yet proved.",
+  "activeQuestion": "Human other-device official IN/OUT test, then channel receipt verification; report outcome only.",
+  "noOfficialInoutProofYet": true,
+  "noAgentProviderOrRuntimeMutation": true
+}
