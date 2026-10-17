@@ -33,3 +33,6 @@ cp54: usuário respondeu “Deu tudo certo” ao pedido de atualizar domínio/OA
 
 
 Estado atual após final j: TQA completo e final distinto terminais aceitam fonte/testes locais; FINAL-CP36I-01 verified-local e J01low resumos corrigidos. Referência root-cp36j-final-adjudication.json. Oficial real/VAL05 segue aberto; usuário escolheu número próprio exclusivamente teste, já em API oficial, e confirmou URLs/messages/app sem publicar (cp54/55/56). Próximo é fluxo normal Já registrado após checkpoint local; sem novo build/relabel/restart. Não oficial cp49/52 comprovado somente na execução observada; não há claim de entrega completa.
+
+
+cp59 (2026-10-17): após navegação Meta, cartão oficial ainda pendente. Readback SELECT restrito à BU conhecida comprovou tentativa ERROR/EXPIRED/ATTEMPT_EXPIREDv4, sem recurso oficial/identidade/credencial ativa/receipt/lease. QR permanece conectado/currentattemptv2/epoch1/receipt; sem login/provider/mutação. Usuário confirmou número oficial diferente do QR, por isso o próximo cadastro deve usar a BU correspondente ao outro número (ou nova Teste Oficial), preservando Local Test BU. Não foi observado PHONE_MISMATCH em runtime; apenas guarda source. Referência root-cp59-official-readback-receipt.json. Validação oficial real/VAL05 continua aberta, aguardando operador na BU correta; nenhuma mudança de código ou novo teste/deploy.

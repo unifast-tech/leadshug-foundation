@@ -1,0 +1,26 @@
+{
+  "checkpoint": "cp59-root-receipt",
+  "capturedAtUtc": "2026-10-17T05:24:07.343224+00:00",
+  "artifactHashesVerified": {
+    "cp59-official-state-readback.json": "b25d0220663272cf022f1193959fca92a474b859babed8d8eff4aa6b9ffc5447",
+    "cp59-official-state-readback.md": "51941da715eb35ee850a8e932280ba412356005d5908f11ec2ba89fcdb08d284"
+  },
+  "acceptedFacts": [
+    "Exact known BU/API ownership/image and selective Prisma metadata inspected with no auth/provider/mutation",
+    "Official attempt ERROR/EXPIRED/ATTEMPT_EXPIRED v4, no provider identity/resource/active credential/receipt/lease; not promoted",
+    "Nonofficial exact channel/currentattempt remains connected/receipt-verified v2/epoch1",
+    "User explicitly says official target is a different number"
+  ],
+  "noPhoneMismatchObserved": true,
+  "advisoryDisposition": {
+    "nextCanonicalStepFromExecutor": "Challenged at BU selection only; raw is immutable.",
+    "reason": "The executor suggests this exact BU, but D01 canonical number and the human different-number clarification require a BU corresponding to the own official target, rather than the known paired nonofficial number.",
+    "rootNext": "Normal UI existing own-number BU or create Teste Oficial if absent; fresh authorization/explicit intended test number/JA_REGISTRADO/confirm/verify. Preserve existing nonofficial BU/channel. No SQL move or untrusted number substitution."
+  },
+  "rootRecalibration": "Prior instruction to reuse earlier BU assumed a common number. That assumption is invalid; human confirmed different numbers. Use distinct canonical BU.",
+  "pendingHumanQuestion": "Fresh official registration in correct number BU; report state/error only.",
+  "officialProofAccepted": false,
+  "overallStage": "Pending",
+  "D05_D06_D07": "Exception",
+  "waivers": []
+}

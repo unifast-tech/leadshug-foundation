@@ -1,0 +1,24 @@
+{
+  "checkpoint": "cp59",
+  "capturedAtUtc": "2026-10-17T05:22:25.464494+00:00",
+  "evidenceType": "human_report",
+  "reportedChannel": "OFICIAL",
+  "reportedBusinessUnit": "Local Test BU",
+  "reportedStates": {
+    "channel": "Conexão em andamento",
+    "ownIdentity": "pendente",
+    "providerConnection": "aguardando confirmação",
+    "receipt": "pendente"
+  },
+  "separateHumanAnswer": "É outro número",
+  "interpretation": "User confirms official target differs from paired nonofficial number; shared existing BU cannot be assumed to be the canonical BU for both. Account authorization report is not connected/receipt proof.",
+  "privateIdentifiers": "Actual phone intentionally omitted.",
+  "sourceObservation": {
+    "path": "api-app/src/domain/channels/number-registration.service.ts:257",
+    "guard": "PHONE_MISMATCH before identity reserve/register/promotion when existing canonical BU phone differs",
+    "limit": "Static source finding only; exact runtime rejection not observed yet."
+  },
+  "action": "cp59 scoped readback admitted, then use own-number BU through normal product UI; preserve tested nonofficial linkage",
+  "agentBusinessMutation": false,
+  "officialProofAccepted": false
+}

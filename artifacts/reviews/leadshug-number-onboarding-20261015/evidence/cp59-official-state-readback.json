@@ -1,0 +1,102 @@
+{
+  "checkpoint": "cp59-official-state-readback",
+  "capturedAtUtc": "2026-10-17T05:22:34Z",
+  "scope": "Read-only Prisma SELECT scoped to the exact known BU and its official/nonofficial channels plus their current attempts. No owner login was needed. No provider, auth/session, secret, PII, or application mutation access.",
+  "authorization": {
+    "routing": "foundation_documentation/artifacts/tmp/number-onboarding-execution/routing-cp59-official-readback.json",
+    "outcome": "go",
+    "admission": "foundation_documentation/todos/active/features/TODO-leadshug-channel-connection-readiness.md cp59"
+  },
+  "apiRuntime": {
+    "containerId": "c138a8456bc834d53c2ab4c3bc3c0307024dbc5a9cbb9a11c337218adcde7324",
+    "imageId": "sha256:fe5fb7eaf6a68123f9da6b92a0a69483180d213f556b4bedf313f04a383b4821",
+    "status": "running healthy",
+    "ownerLabel": "number-onboarding",
+    "sourceManifestLabel": "af21e98e41ec1ba86f4dac877ba2bd69b3ff0857fba930ca1c3973428723b581"
+  },
+  "businessUnitGuard": {
+    "businessUnitId": "c231d8f7-d8a5-448e-a740-2ab8aebf9bc2",
+    "buMatchesExpected": true,
+    "channelCount": 2,
+    "onlyExpectedTypes": [
+      "OFICIAL",
+      "NAO_OFICIAL"
+    ]
+  },
+  "officialChannel": {
+    "channelId": "e0b13f94-8e60-4362-a3a5-1d0b6d94d7af",
+    "type": "OFICIAL",
+    "status": "CONECTANDO",
+    "generation": 1,
+    "currentAttemptId": "9dc7969fa419ce824f8c2a52bb7fc450",
+    "attemptState": "ERROR",
+    "attemptStage": "EXPIRED",
+    "safeErrorCode": "ATTEMPT_EXPIRED",
+    "attemptVersion": 4,
+    "attemptGeneration": 1,
+    "attemptPairingEpoch": null,
+    "channelPairingEpoch": 0,
+    "verifiedEpoch": null,
+    "ownNumberVerified": false,
+    "providerConnectionState": "PENDING",
+    "channelLeaseActive": false,
+    "attemptLeaseActive": false,
+    "ownOfficialResourcePresent": false,
+    "activeCredentialPresent": false,
+    "receiptPresent": false,
+    "connectedAtPresent": false,
+    "currentProviderIdentityMappings": [],
+    "promotedToOfficialProviderResource": false
+  },
+  "nonOfficialChannel": {
+    "channelId": "b6c3e3f0-fe77-4e92-82e4-1975dffcbef1",
+    "type": "NAO_OFICIAL",
+    "status": "CONECTADO",
+    "generation": 1,
+    "currentAttemptId": "91a050d2-b6b7-4d3a-ac48-97392688584d",
+    "attemptState": "CONNECTED",
+    "attemptStage": "RECEIPT_VERIFIED",
+    "attemptVersion": 2,
+    "attemptGeneration": 1,
+    "attemptPairingEpoch": 1,
+    "channelPairingEpoch": 1,
+    "verifiedEpoch": 1,
+    "ownNumberVerified": true,
+    "providerConnectionState": "CONNECTED",
+    "channelLeaseActive": false,
+    "attemptLeaseActive": false,
+    "ownResourcePresent": true,
+    "activeCredentialPresent": false,
+    "receiptPresent": true,
+    "connectedAtPresent": true,
+    "currentProviderIdentityMappings": [
+      {
+        "identityId": "a48c93ac-3a69-4607-bc0c-856f88646a6f",
+        "currentChannelMatches": true,
+        "retired": false,
+        "managedLifecycle": true,
+        "cleanupState": "ACTIVE",
+        "cleanupLeaseActive": false
+      }
+    ]
+  },
+  "interpretation": {
+    "officialAttemptMerelyReservedOrAuthorized": false,
+    "officialAttemptExpiredInErrorState": true,
+    "officialChannelPromoted": false,
+    "phoneMismatchErrorObserved": false,
+    "differentOfficialNumberThanNonOfficialNumberReportedByUser": true,
+    "sourceGuardBehaviorIsNotRuntimeEvidence": true,
+    "nextCanonicalStep": "Use the normal official-channel UI for this exact BU to begin a fresh supported registration/re-authorization only after selecting the intended official business account and its own test number. Do not treat the expired attempt as a phone-mismatch observation."
+  },
+  "checks": {
+    "configEnvDumped": false,
+    "providerHttpCalled": false,
+    "metaTokensConsulted": false,
+    "loginSessionCreated": false,
+    "dbMutation": false,
+    "sourceRuntimeOrConfigChanged": false,
+    "logsRead": false,
+    "apiAppLocalFilesAccessed": false
+  }
+}
