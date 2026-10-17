@@ -1,0 +1,55 @@
+{
+  "checkpoint": "cp64",
+  "disposition": "prepared_only_waiting_for_fresh_critique_and_root_GO",
+  "execution_performed": false,
+  "runtime_processes_mutated": false,
+  "private_configuration_read": false,
+  "source_or_git_mutated": false,
+  "prepared_script": {
+    "path": "foundation_documentation/artifacts/tmp/number-onboarding-execution/T/cloudflared-cp64/cp64-recover-https.ps1",
+    "sha256": "6581736aba4623cfb8bf619e04eddaf7aa47ec2a06e9e24d5c64ffc4ce5f96b3",
+    "syntax_check": "Windows PowerShell parser only; passed (731 tokens, 0 parse errors); script was not invoked"
+  },
+  "fresh_operational_directory": "foundation_documentation/artifacts/tmp/number-onboarding-execution/T/cloudflared-cp64",
+  "staged_files": [
+    {
+      "file": "cp64-supervisor.exe",
+      "sha256": "bdf68028ea2da0699b1e04d191453b5d7090861b17f518d236ce6b084d45c69b",
+      "provenance": "byte copy of previously verified cp46 supervisor; no source/build reproducibility claim"
+    },
+    {
+      "file": "cloudflared-windows-amd64.exe",
+      "sha256": "86aee4017b26625cee8484c113558f48effa4cd47f7aa05fcf425604e5d2b23c",
+      "provenance": "byte copy of previously verified cp46 executable"
+    },
+    {
+      "file": "empty-config.yml",
+      "length_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "provenance": "byte copy of previously verified empty cp46 config"
+    }
+  ],
+  "pinned_old_child": {
+    "pid": 21180,
+    "native_start_time_utc_ticks_100ns": 639277908932385742,
+    "parent_pid": 22836,
+    "executable_sha256": "86aee4017b26625cee8484c113558f48effa4cd47f7aa05fcf425604e5d2b23c",
+    "target": "http://127.0.0.1:8083",
+    "supervisor_status": "previously absent; no PID-only inference or adoption",
+    "retirement": "not implemented or performed by this preparation script; later retirement must follow successful independent Windows+WSL normal-TLS proof and use a held exact native process handle with tick/path/hash/argv/parent/config revalidation"
+  },
+  "script_safety": {
+    "default_mode": "validate-only",
+    "fake_start_ticks": "any supplied mismatch is rejected before launch",
+    "launch_mode": "creates only a new WMI-owned supervisor, refuses existing exact cp64 paths or state, leaves old child untouched",
+    "stops_or_signals_processes": false,
+    "private_origin_edit": false,
+    "docker_or_service_mutation": false
+  },
+  "preservation_and_next_gates": {
+    "cp64_dns_diagnosis_sha256": "e65d662f18ca547e3861d6a6bec5971ea24f799946e6f16dd212e8ce6b7b9b1d",
+    "dns_observation": "Cloudflare and Google DoH previously returned NXDOMAIN for exact hostname A/AAAA/CNAME; cause remains unknown",
+    "later_required_before_origin_edit": "fresh exact new-instance identity plus independent Windows and WSL normal-TLS/no-redirect root, health, and expected JS checks",
+    "later_mutations": "origin edit, API recreation, optional gateway reload, and Web activation remain deferred to separate adjudication/root GO; none is encoded as an automatic step here"
+  }
+}

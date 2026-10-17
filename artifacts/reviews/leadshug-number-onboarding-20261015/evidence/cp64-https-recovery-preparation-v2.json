@@ -1,0 +1,25 @@
+{
+  "checkpoint": "cp64",
+  "disposition": "prepared_only_waiting_for_fresh_critique_and_root_GO",
+  "supersedes": "cp64-https-recovery-preparation.json only as the proposed executable script binding; original script and report remain immutable history",
+  "execution_performed": false,
+  "runtime_processes_mutated": false,
+  "private_configuration_read": false,
+  "source_or_git_mutated": false,
+  "script": {
+    "path": "foundation_documentation/artifacts/tmp/number-onboarding-execution/T/cloudflared-cp64/cp64-recover-https-v2.ps1",
+    "sha256": "f8cad6104455250572f058fe8173aeb364349f801a921001be161832e1eaa0db",
+    "syntax_check": "Windows PowerShell parser only; passed (802 tokens, 0 parse errors); script was not invoked",
+    "default": "validate-only",
+    "process_presence_guard": "server-side WQL exact equality query separately for each of the two known cp64 executable paths; projection limited to ProcessId, ExecutablePath, CreationDate; path escapes backslashes and apostrophes; refuses matches without reading process argv",
+    "old_child_guard": "only known PID 21180 exact-handle lookup; native UTC ticks, exact image path/hash, expected parent, exact argv, empty config and target; mismatch ticks reject before launch",
+    "launch_mode": "WMI creates only the new supervisor after exact guards; no stop/signal/retirement path"
+  },
+  "staged_files_unchanged": [
+    { "file": "cp64-supervisor.exe", "sha256": "bdf68028ea2da0699b1e04d191453b5d7090861b17f518d236ce6b084d45c69b" },
+    { "file": "cloudflared-windows-amd64.exe", "sha256": "86aee4017b26625cee8484c113558f48effa4cd47f7aa05fcf425604e5d2b23c" },
+    { "file": "empty-config.yml", "length_bytes": 0, "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855" }
+  ],
+  "scope_correction": "The v1 launch check enumerated Win32_Process properties client-side before filtering. V2 removes that broad metadata/argv enumeration. Only the exact two new executable paths are queried server-side, with a three-field projection, and only the already-pinned old PID is queried for its necessary exact argv guard.",
+  "later_gates_unchanged": "No origin edit, old-child retirement, Docker/API/Web/gateway action is included or authorized by this preparation. Fresh exact new-process identity and independent Windows+WSL normal-TLS root/health/JS proof remain required before any origin change; all later mutations wait for critique and root GO."
+}

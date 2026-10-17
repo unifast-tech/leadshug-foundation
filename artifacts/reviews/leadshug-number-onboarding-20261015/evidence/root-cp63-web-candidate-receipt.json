@@ -1,0 +1,20 @@
+{
+  "checkpoint": "root-cp63-candidate-adjudication",
+  "capturedAtUtc": "2026-10-17T12:40:31.255570+00:00",
+  "candidateImage": "sha256:6f4b2500e02d1523f99b423a08b6a166e319d5f3246ad516ef8f4a56d30001ed",
+  "candidateEvidenceSha256": "25b2743c9cf6d4c2de8c250295e16619857adcb9d7c5f966796fb2befe362334",
+  "accepted": [
+    "canonical Web candidate build exit0",
+    "policy source/image HTTP byte equality12865bytes d0f72c58",
+    "unchanged root/JSd143, actual old runtime layer prefix and Nginx/template/entrypoint equality",
+    "owned probe removed; seven live containers/five volumes unchanged"
+  ],
+  "notYetAccepted": [
+    "public delivery/HTTPS serving of new page",
+    "layout screenshot/render observation; admitted ephemeral tooling executing now",
+    "live activation before final acceptance"
+  ],
+  "provenanceCorrection": "Initial preparation builder localImageId has only63hex characters; not a valid literal image digest and cannot support literal equality. Candidate ID has64chars. Both record same valid node repoDigest0a7108bf...; executor must corroborate actual build FROM digest/current ID. Preserve initial artifact as historical transcription defect; no Dockerfile/base upgrade authorized.",
+  "source9Unchanged": true,
+  "parentOfficialVAL05": "open/unwaived"
+}

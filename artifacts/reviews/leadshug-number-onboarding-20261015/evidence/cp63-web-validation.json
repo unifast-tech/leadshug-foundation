@@ -1,0 +1,28 @@
+{
+  "command": "bash scripts/test-channels-local.sh web",
+  "terminalExitCode": 0,
+  "source": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp63-privacy-policy.accepted.html",
+  "target": "web-app/public/privacidade.html",
+  "expectedSha256": "d0f72c588f0f014de46a327e34d6b26125ca115bc973b56bbb926cd8519e701d",
+  "sourceSha256": "d0f72c588f0f014de46a327e34d6b26125ca115bc973b56bbb926cd8519e701d",
+  "targetSha256": "d0f72c588f0f014de46a327e34d6b26125ca115bc973b56bbb926cd8519e701d",
+  "sourceTargetByteEqual": true,
+  "build": {
+    "command": "npm run build",
+    "result": "passed",
+    "viteModulesTransformed": 58,
+    "distFilesReported": ["dist/index.html", "dist/assets/index-wuzy3kMN.css", "dist/assets/index-txvhtd65.js"],
+    "distPolicyAssetHash": null,
+    "distPolicyAssetEquality": null,
+    "distPolicyAssetEvidence": "Runner namespace was ephemeral and cleaned after completion; web-app/dist/privacidade.html was not accessible in the principal checkout."
+  },
+  "unit": {
+    "command": "npm test",
+    "result": "passed",
+    "testFilesPassed": 5,
+    "testsPassed": 28
+  },
+  "productPathStatus": "Only web-app/public/privacidade.html is present in web-app git status (untracked); no other Web product path changed in this execution.",
+  "rawLog": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp63-web-validation.raw.log",
+  "rawLogSha256": "54f9d103ad909f13cb39b9977431fa00429bdcabb1e5e17eac920d6cd4d31736"
+}

@@ -1,0 +1,39 @@
+{
+  "checkpoint": "cp63-web-build-base-provenance-correction",
+  "status": "diagnostic correction; original cp63-runtime-preparation.json preserved",
+  "immutablePreparationArtifact": {
+    "path": "cp63-runtime-preparation.json",
+    "sha256": "878e70d3bac9e7043ceaeba6fb80f85ff78d008d73def3bdf21dc79087984b6f",
+    "recordedNodeImageId": "sha256:7c3b093add7c43400ee83b815ab2cda98794a10045bcf76ce9bb2f89b97cbc5",
+    "recordedNodeImageIdHexCharacters": 63,
+    "recordedRepoDigest": "node@sha256:0a7108bf6c7bf5de370ffb1a3ed6be93d405b43ff159f681a8d18e0c2bc2e402"
+  },
+  "postBuildNodeTagObservation": {
+    "tag": "node:22-alpine",
+    "currentLocalImageId": "sha256:7c3b093add7c43400ee83b815ab2cda98794a10045bcf76ce9bb2f89b97cbc5c",
+    "currentLocalImageIdHexCharacters": 64,
+    "currentRepoDigest": "node@sha256:0a7108bf6c7bf5de370ffb1a3ed6be93d405b43ff159f681a8d18e0c2bc2e402",
+    "repoDigestMatchesRecordedBaseline": true
+  },
+  "actualBuildLog": {
+    "path": "cp63-web-candidate-build.raw.log",
+    "sha256": "a7706a16bed2fda6ce8fe9637dd7679291c05e690f8fcbbc63300e48b05e449f",
+    "fromReferenceLines": [
+      "FROM docker.io/library/node:22-alpine",
+      "FROM docker.io/library/nginx:alpine"
+    ],
+    "resolvedImmutableNodeDigestPrintedInRawLog": false,
+    "webBuilderStepsCached": [
+      "WORKDIR /web",
+      "COPY package.json package-lock.json ./",
+      "RUN npm ci"
+    ],
+    "pullFlagUsed": false
+  },
+  "interpretation": "The initial node localImageId is malformed: its digest suffix has 63 hex characters, while a valid SHA-256 image ID has 64. The current local node tag has the full 64-character ID and the same repo digest recorded in the baseline. The candidate build log names the mutable node:22-alpine tag and shows cached builder steps; it does not print a resolved immutable digest. Therefore the recorded repoDigest corroborates the same repository digest, but exact pre/post local-image-ID equality or a build-log-verified resolved digest is not claimed.",
+  "candidate": {
+    "imageId": "sha256:6f4b2500e02d1523f99b423a08b6a166e319d5f3246ad516ef8f4a56d30001ed",
+    "runtimeBaseLayersMatchActualOldWeb": true
+  },
+  "candidateArtifactQualification": "The immutable cp63-web-candidate.json recorded node base sameBeforeAfter=true. Because its baseline local ID is truncated, that boolean overstates what can be established and is superseded for interpretation by this diagnostic: repoDigest equality and local cached-tag use are supported; exact before/after local-ID equality is not."
+}

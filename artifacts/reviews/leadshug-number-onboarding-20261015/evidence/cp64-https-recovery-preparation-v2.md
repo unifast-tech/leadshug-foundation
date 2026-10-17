@@ -1,0 +1,7 @@
+# cp64 HTTPS recovery preparation v2
+
+Root review identified that the v1 launch guard retrieved Win32_Process rows broadly and filtered paths client-side. The original v1 script and report are retained unchanged. V2 replaces that check with a server-side WQL exact executable-path query for each of only the two known cp64 paths. It requests only `ProcessId`, `ExecutablePath`, and `CreationDate`, escapes Windows backslashes and apostrophes in the WQL string, refuses any match, and does not read process argv for those paths. The only argv read remains the exact previously pinned old child PID 21180 for its required identity guard.
+
+V2 script: `foundation_documentation/artifacts/tmp/number-onboarding-execution/T/cloudflared-cp64/cp64-recover-https-v2.ps1`, SHA-256 `f8cad6104455250572f058fe8173aeb364349f801a921001be161832e1eaa0db`. Windows PowerShell parser-only validation passed (802 tokens, zero parse errors). It was not invoked. Default mode remains validate-only; explicit launch mode can create only the new supervisor after guards. There is no process stop/signal path, private-origin edit, Docker action, or old-child retirement step.
+
+The three staged binaries/config remain exactly hash-pinned as recorded in the v1 report; no new files were copied. This v2 package is preparation only and waits for fresh critique and root GO. No runtime process, private configuration, source, or Git state changed.

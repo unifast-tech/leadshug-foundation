@@ -1,0 +1,76 @@
+#0 building with "desktop-linux" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 1.30kB 0.0s done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/node:22-alpine
+#2 DONE 0.0s
+
+#3 [internal] load metadata for docker.io/library/nginx:alpine
+#3 DONE 0.0s
+
+#4 [internal] load .dockerignore
+#4 transferring context: 146B done
+#4 DONE 0.0s
+
+#5 [builder 1/6] FROM docker.io/library/node:22-alpine
+#5 DONE 0.0s
+
+#6 [runner 1/5] FROM docker.io/library/nginx:alpine
+#6 DONE 0.0s
+
+#7 [internal] load build context
+#7 transferring context: 14.90kB done
+#7 DONE 0.0s
+
+#8 [builder 2/6] WORKDIR /web
+#8 CACHED
+
+#9 [builder 3/6] COPY package.json package-lock.json ./
+#9 CACHED
+
+#10 [builder 4/6] RUN npm ci
+#10 CACHED
+
+#11 [builder 5/6] COPY . .
+#11 DONE 0.1s
+
+#12 [builder 6/6] RUN npm run build
+#12 0.479 
+#12 0.479 > @leadshug/web@0.1.0 build
+#12 0.479 > tsc -b && vite build
+#12 0.479 
+#12 4.515 vite v5.4.21 building for production...
+#12 4.576 transforming...
+#12 5.696 ✓ 58 modules transformed.
+#12 5.854 rendering chunks...
+#12 5.863 computing gzip size...
+#12 5.876 dist/index.html                   0.69 kB │ gzip:  0.44 kB
+#12 5.876 dist/assets/index-wuzy3kMN.css    8.32 kB │ gzip:  2.39 kB
+#12 5.876 dist/assets/index-txvhtd65.js   257.88 kB │ gzip: 79.07 kB
+#12 5.877 ✓ built in 1.33s
+#12 DONE 5.9s
+
+#6 [runner 1/5] FROM docker.io/library/nginx:alpine
+#6 CACHED
+
+#13 [runner 2/5] COPY --from=builder /web/dist /usr/share/nginx/html
+#13 DONE 0.0s
+
+#14 [runner 3/5] COPY nginx/default.conf.template /etc/nginx/templates/default.conf.template
+#14 DONE 0.0s
+
+#15 [runner 4/5] COPY docker/40-config-js.sh /docker-entrypoint.d/40-config-js.sh
+#15 DONE 0.0s
+
+#16 [runner 5/5] RUN sed -i 's/\r$//' /docker-entrypoint.d/40-config-js.sh && chmod +x /docker-entrypoint.d/40-config-js.sh
+#16 DONE 0.2s
+
+#17 exporting to image
+#17 exporting layers 0.1s done
+#17 writing image sha256:6f4b2500e02d1523f99b423a08b6a166e319d5f3246ad516ef8f4a56d30001ed done
+#17 naming to docker.io/library/leadshug-channels-web-candidate:cp63-d0f72c588f0f 0.0s done
+#17 DONE 0.2s
+
+View build details: docker-desktop://dashboard/build/desktop-linux/desktop-linux/r1ikgrzi8d2uavkhack9is0bw

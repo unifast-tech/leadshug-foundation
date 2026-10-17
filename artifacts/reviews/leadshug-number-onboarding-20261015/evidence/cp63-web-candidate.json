@@ -1,0 +1,133 @@
+{
+  "checkpoint": "cp63-web-candidate-only-build",
+  "status": "candidate build and direct HTTP probe complete; STOP before live activation",
+  "scope": {
+    "buildOnly": true,
+    "liveActivation": false,
+    "oldWebRetagged": false,
+    "operatorServicesRestarted": false,
+    "providerOrDBOrAuthRequests": false,
+    "sourceCanonOrGitChangedByExecutor": false,
+    "apiAppLocalFilesAccessed": false
+  },
+  "source": {
+    "path": "web-app/public/privacidade.html",
+    "sha256": "d0f72c588f0f014de46a327e34d6b26125ca115bc973b56bbb926cd8519e701d",
+    "matchesAcceptedSha256": true
+  },
+  "build": {
+    "argv": [
+      "docker.exe",
+      "build",
+      "--progress=plain",
+      "--file",
+      "C:\\unifast\\leadshug\\leadshug_now_docker\\web-app\\Dockerfile",
+      "--label",
+      "com.leadshug.channels.owner=number-onboarding",
+      "--label",
+      "com.leadshug.channels.checkpoint=cp63-privacy",
+      "--label",
+      "com.leadshug.channels.policy-sha256=d0f72c588f0f014de46a327e34d6b26125ca115bc973b56bbb926cd8519e701d",
+      "--tag",
+      "leadshug-channels-web-candidate:cp63-d0f72c588f0f",
+      "C:\\unifast\\leadshug\\leadshug_now_docker\\web-app"
+    ],
+    "pullFlagUsed": false,
+    "buildContext": "C:\\unifast\\leadshug\\leadshug_now_docker\\web-app",
+    "dockerfile": "web-app/Dockerfile",
+    "dockerignore": "web-app/.dockerignore",
+    "privateEnvironmentRead": false,
+    "secretBuildArgs": false,
+    "contextEvidence": "Docker build reports .dockerignore loaded and 14.90 kB context transferred; ignore excludes .env and .env.* with only .env.example exception. Root .env.testing is outside Web build context.",
+    "exitCode": 0,
+    "rawLog": "cp63-web-candidate-build.raw.log",
+    "rawLogSha256": "a7706a16bed2fda6ce8fe9637dd7679291c05e690f8fcbbc63300e48b05e449f",
+    "tag": "leadshug-channels-web-candidate:cp63-d0f72c588f0f",
+    "imageId": "sha256:6f4b2500e02d1523f99b423a08b6a166e319d5f3246ad516ef8f4a56d30001ed",
+    "labels": {
+      "com.leadshug.channels.owner": "number-onboarding",
+      "com.leadshug.channels.checkpoint": "cp63-privacy",
+      "com.leadshug.channels.policy-sha256": "d0f72c588f0f014de46a327e34d6b26125ca115bc973b56bbb926cd8519e701d"
+    },
+    "bases": {
+      "node:22-alpine": {
+        "localId": "sha256:7c3b093add7c43400ee83b815ab2cda98794a10045bcf76ce9bb2f89b97cbc5c",
+        "repoDigest": "node@sha256:0a7108bf6c7bf5de370ffb1a3ed6be93d405b43ff159f681a8d18e0c2bc2e402",
+        "sameBeforeAfter": true
+      },
+      "nginx:alpine": {
+        "localId": "sha256:76090a34b858323b6ab169711adc08253b5bee7123a973dc581ed46b643bc109",
+        "repoDigest": "nginx@sha256:892bb2152464f0c5d8972593a5f5afaf8054552580b699d95f8ff4af08c2d33d",
+        "sameBeforeAfter": true
+      }
+    },
+    "oldWeb": {
+      "containerId": "1e8d3a40dd9665481748b1278fd60de71ced6c682986d367a90665e76a61358a",
+      "imageId": "sha256:d11a882849dc806e0d4728ca90a8fc8655aebc77421acefac63054b4fbb89365",
+      "runtimeBaseLayerCount": 8,
+      "candidateSharesExactRuntimeBaseLayerSequence": [
+        "sha256:74d97c428c51a828f9051a7a40a53ff1fc99e54fc30323ce36760701b0b7f711",
+        "sha256:1d5f8e4b80b9f3266d052972fd6bca72a1bcf57a849f1fca99e621a9aaa26f37",
+        "sha256:11c068032a923cdd9eded6001b3f98f2bc9c1ab4f898473642f5f2435d6e2c2f",
+        "sha256:f4b56df1052e76cd6baf6e1d8510f78af5b8754a97800750c141e52a381cc608",
+        "sha256:c01de5b74a8831bddd18ae59f36e88262c13c1d43bd3a05dec470b22ad7106cd",
+        "sha256:1cbec789df916efa6e277af74ae96e9ec0f5523f0e4bcc6692c81fd1a94297a0",
+        "sha256:a5237c8bfc4397a9b457bfbf4db5b93b1ab6aa64d287d1e8210b6a1662aa4eee",
+        "sha256:6aef7713033e574d61ccfb63c76c936acf96b3ad813bb4b8d18d416512e34d33"
+      ]
+    },
+    "candidateRootFsLayerCount": 12,
+    "oldWebRootFsLayerCount": 12,
+    "runtimeFileHashesComparedBetweenActualOldWebAndCandidate": {
+      "nginxTemplate": "880b1d3f683c3877daa69f4e8cad3b37384e7041676f864487d712965a5e58f6",
+      "entrypointConfigJs": "b986b30db352e1db55f5a2bf24bc9ac30be88e77a362a78e3c2ea19853b0fa6b",
+      "nginxBinary": "2132ab4ac2096976a884a5bfab0c3803c787561ed479b720230590be14da4842",
+      "allEqual": true
+    }
+  },
+  "candidateHttp": {
+    "evidence": "cp63-web-candidate-http.json",
+    "evidenceSha256": "5681e01ed15214d9c90ebe5d734d6aece7dabd4ef005db3da4801a75af2d9449",
+    "ephemeralContainerId": "1191d31733ccd241c98d2350c9fc15130aaeea52be1bab187f4f5ae6418474a6",
+    "loopbackPort": 62321,
+    "noMounts": true,
+    "noCredentials": true,
+    "cleanedOwnedEphemeralContainer": true,
+    "privacyPageStatus": 200,
+    "contentType": "text/html",
+    "documentCharset": "utf-8",
+    "responseUtf8Valid": true,
+    "responseBytes": 12865,
+    "responseEqualsSourceByteForByte": true,
+    "sourceAndResponseSha256": "d0f72c588f0f014de46a327e34d6b26125ca115bc973b56bbb926cd8519e701d",
+    "setCookie": false,
+    "redirect": false,
+    "authChallenge": false,
+    "cspReferrerNoindexVerified": true,
+    "automaticExternalResourceElements": 0,
+    "rootStatus": 200,
+    "knownJsStatus": 200,
+    "knownJsBytes": 258450,
+    "knownJsSha256": "d14343604557296f2ed62c1df47d9c80d81c323abafd89ccbb64a6a0746ff4bd"
+  },
+  "layoutReview": {
+    "browserAvailable": false,
+    "evidence": "No installed Chromium/Chrome/Edge executable was found; no dependency installation or broad browser suite was attempted. Mobile/desktop screenshot/layout proof unavailable."
+  },
+  "validationEvidence": {
+    "canonicalLeaf": "scripts/test-channels-local.sh web",
+    "exitCode": 0,
+    "summary": "build plus 28 tests across 5 files (already run once by coder)",
+    "resultSha256": "67c224500e3c7eaeaae9646addf2a1e6af498a4eb6a07dcf0e062493ee8306f4",
+    "rawSha256": "54f9d103ad909f13cb39b9977431fa00429bdcabb1e5e17eac920d6cd4d31736"
+  },
+  "livePreservation": {
+    "ownerContainersRunning": 7,
+    "ownerVolumesPresent": 5,
+    "oldWebContainerId": "1e8d3a40dd9665481748b1278fd60de71ced6c682986d367a90665e76a61358a",
+    "candidateProbeRemoved": true,
+    "tunnelMutated": false,
+    "apiEvolutionGatewayDatabaseCacheVolumesMutated": false
+  },
+  "nextStep": "Root review and a fresh separately admitted final are required before any Web service activation; corrected activation/rollback argv are retained in cp63-web-commands.corrected.json. No activation/rollback command was executed."
+}

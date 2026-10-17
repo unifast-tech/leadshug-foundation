@@ -1,0 +1,54 @@
+{
+  "probe": "owned ephemeral candidate Nginx over loopback; no session/cookie/auth; no redirects followed; no provider endpoints requested",
+  "port": 62321,
+  "privacy": {
+    "status": 200,
+    "contentType": "text/html",
+    "bytes": 12865,
+    "sha256": "d0f72c588f0f014de46a327e34d6b26125ca115bc973b56bbb926cd8519e701d",
+    "sourceBytesEqual": true,
+    "setCookie": false,
+    "redirect": false,
+    "authChallenge": false,
+    "contentTypeIsHtml": true
+  },
+  "privacyMeta": {
+    "charset": "utf-8",
+    "referrer": "no-referrer",
+    "robots": "noindex, nofollow",
+    "cspPresent": true,
+    "automaticExternalResourceElementCount": 0,
+    "documentCharset": "utf-8",
+    "documentCharsetFrom": "HTML meta charset declared in source and response bytes decode strictly as UTF-8"
+  },
+  "root": {
+    "status": 200,
+    "bytes": 694,
+    "setCookie": false
+  },
+  "knownAsset": {
+    "path": "/assets/index-txvhtd65.js",
+    "status": 200,
+    "bytes": 258450,
+    "sha256": "d14343604557296f2ed62c1df47d9c80d81c323abafd89ccbb64a6a0746ff4bd"
+  },
+  "checks": {
+    "privacy_status_200": true,
+    "privacy_utf8_valid": true,
+    "privacy_bytes_equal_source": true,
+    "privacy_sha256_matches_source": true,
+    "privacy_no_set_cookie": true,
+    "privacy_no_redirect_or_auth": true,
+    "privacy_csp_no_scripts_or_external": true,
+    "privacy_referrer_no_referrer": true,
+    "privacy_robots_noindex": true,
+    "privacy_no_automatic_external_resource_elements": true,
+    "root_status_200": true,
+    "root_no_set_cookie": true,
+    "known_js_status_200": true,
+    "known_js_sha256_expected": true,
+    "privacy_content_type_is_html": true,
+    "privacy_meta_charset_utf8": true
+  },
+  "allChecksPassed": true
+}

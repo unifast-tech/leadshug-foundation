@@ -1,0 +1,79 @@
+{
+  "checkpoint": "cp63-web-only-activation-preflight-stop",
+  "observedAtUtc": "2026-10-17T12:51:54+00:00",
+  "status": "STOP before any image retag, rollback tag, or Web recreation; public origin hostname is NXDOMAIN from WSL and Windows",
+  "authority": {
+    "activationAuthority": "cp63-activation-authority.json",
+    "authoritySha256": "62af81826e3f830198ef109b596cb57d406e5240b322e11084d192cfe75b9bf7",
+    "result": "GO",
+    "diff": "cp63-activation-diff.json",
+    "diffSha256": "97c40ad5c98c4659fb5b8319b8351667478750d0ba6bd26a617dd4e73b94be59",
+    "resultCounts": "899/899; zero forbidden"
+  },
+  "source": {
+    "commit": "2a1968bb2a57de1971a01174399c7510d2a23be4",
+    "attestation": "root-cp63-web-source-commit.json",
+    "attestationSha256": "699cdd7b6b479857ac410c26b07ea0ca69a3b30c5a12104972a1b9354e48cfa3",
+    "policyPath": "web-app/public/privacidade.html",
+    "policySha256": "d0f72c588f0f014de46a327e34d6b26125ca115bc973b56bbb926cd8519e701d",
+    "workingBytesMatch": true
+  },
+  "images": {
+    "acceptedCandidateImageId": "sha256:6f4b2500e02d1523f99b423a08b6a166e319d5f3246ad516ef8f4a56d30001ed",
+    "acceptedCandidateTag": "leadshug-channels-web-candidate:cp63-d0f72c588f0f",
+    "currentWebServiceImageId": "sha256:d11a882849dc806e0d4728ca90a8fc8655aebc77421acefac63054b4fbb89365",
+    "currentWebImageTag": "leadshug_channels_local-web:latest",
+    "serviceTagStillResolvesOldImage": true,
+    "rollbackTag": "leadshug_channels_local-web-rollback:cp63-preprivacy",
+    "rollbackTagCreated": false,
+    "candidateRetaggedToServiceTag": false
+  },
+  "transportPreflight": {
+    "hostname": "comments-heart-gale-muscles.trycloudflare.com",
+    "wslDnsErrorCategory": "socket.gaierror / name or service not known",
+    "windowsNslookup": "Non-existent domain (NXDOMAIN)",
+    "windowsHttps": "HttpRequestException for root, health, and JS requests; no response headers/body received",
+    "normalTlsEstablished": false,
+    "httpStatusAvailable": false,
+    "redirectsFollowed": false,
+    "knownCause": "The public DNS record is currently unavailable. The specific cause is unverified; an expired/removed ephemeral tunnel hostname is only a hypothesis. The pinned local Cloudflared child is still present, so this does not establish that the child process is down."
+  },
+  "pinnedTunnelProcess": {
+    "pid": 21180,
+    "parentPid": 22836,
+    "parentCurrentlyPresent": false,
+    "executablePath": "C:\\unifast\\leadshug\\leadshug_now_docker\\foundation_documentation\\artifacts\\tmp\\number-onboarding-execution\\cloudflared-cp46\\cloudflared-windows-amd64.exe",
+    "executableSha256": "86aee4017b26625cee8484c113558f48effa4cd47f7aa05fcf425604e5d2b23c",
+    "target8083": true,
+    "observedCreationUtc": "2026-10-16T23:41:33.2385740Z",
+    "previousPreparationCreationUtc": "2026-10-16T23:41:33.2385742Z",
+    "identityInterpretation": "PID, parent PID, executable path/hash and target agree with the pinned child. The two CIM timestamp renderings differ by 0.2 microseconds; record both rather than claiming exact timestamp string equality. Supervisor absence was already known."
+  },
+  "preservation": {
+    "ownerContainers": 7,
+    "ownerVolumes": 5,
+    "webContainerId": "1e8d3a40dd9665481748b1278fd60de71ced6c682986d367a90665e76a61358a",
+    "apiContainerId": "c138a8456bc834d53c2ab4c3bc3c0307024dbc5a9cbb9a11c337218adcde7324",
+    "gatewayContainerId": "0c48d94e9fe5b4ad75efd304db2752dfa4cab3befc59b9f736574d6cd551eea3",
+    "evolutionContainerId": "cf749491f7149dc46ec4db597b2d9c12faf918dd4f05b5512ba75adaf8e29ea4",
+    "volumes": [
+      "leadshug_channels_local_evolution_instances",
+      "leadshug_channels_local_evolution_pg_data",
+      "leadshug_channels_local_evolution_redis_data",
+      "leadshug_channels_local_leadshug_arquivos",
+      "leadshug_channels_local_leadshug_pg_data"
+    ],
+    "noOwnedResourceMutationsPerformed": true,
+    "noPrivateEnvOrConfigEnvRead": true,
+    "noProviderDbOrAuthRequests": true
+  },
+  "commands": {
+    "correctedManifest": "cp63-web-commands.corrected.json",
+    "activationArgvNotExecuted": true,
+    "executedComposeOperations": [],
+    "executedImageTagOperations": [],
+    "executedWebRecreation": false
+  },
+  "boundedRestorationPlan": "Root/operator should first adjudicate restoration of DNS for the same already-authorized public hostname without rotating the URL or replacing the pinned tunnel child. Then repeat normal-TLS root/health/known-JS preflight and confirm the seven/five resources and current Web image are unchanged. Only if transport returns should a fresh activation decision use the corrected Web-only command. If a later activation is attempted and must be rolled back, verify the retained old image ID d11a8828... exactly, tag it as the rollback target, then use the corrected Web-only --no-deps --no-build recreate. No such rollback is needed now because no runtime/image tag changed.",
+  "terminalStatus": "Blocked before mutation; stop and await root adjudication. No new host, tunnel restart, DNS fix, image retag, Web restart, or speculative rollback performed."
+}

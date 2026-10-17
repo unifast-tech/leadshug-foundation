@@ -1,0 +1,13 @@
+# cp63 Web candidate-only build and probe
+
+The accepted privacy page was built into an isolated Web candidate. The live Web image tag and service were not changed. Candidate image ID: `sha256:6f4b2500e02d1523f99b423a08b6a166e319d5f3246ad516ef8f4a56d30001ed`. Source HTML SHA-256: `d0f72c588f0f014de46a327e34d6b26125ca115bc973b56bbb926cd8519e701d`.
+
+The canonical Web build completed with exit 0, without `--pull`; cached `npm ci` and local base images were used. The pre/post `node:22-alpine` and `nginx:alpine` IDs and repo digests match the captured identities. Candidate labels bind owner, checkpoint and exact policy hash. The candidate shares the exact first eight runtime base layers with the actual old Web image. The running old Web container and candidate have identical hashes for the Nginx binary, Nginx template and config entrypoint. The build context was the Web directory, `.dockerignore` excluded `.env`/`.env.*` except the public example, and the build transferred 14.90 kB.
+
+A single owned, credential-free candidate container served `/privacidade.html` on loopback port 62321. The response was 200 `text/html`, declared UTF-8 in the document, decoded as valid UTF-8, and matched source bytes exactly (12,865 bytes). It had no Set-Cookie, redirect or auth challenge; the CSP, referrer and noindex metadata were present, and static HTML contained no automatically loaded external resources. `/` remained 200; `/assets/index-txvhtd65.js` remained 200 with the expected 258,450-byte SHA-256 `d14343604557296f2ed62c1df47d9c80d81c323abafd89ccbb64a6a0746ff4bd`. The temporary candidate container was removed.
+
+No browser executable was available, so this evidence does not include mobile/desktop layout screenshots. No browser dependency or suite was installed. Seven owner containers and five owner volumes remained present; no live activation, old-image retag, service restart, provider call, DB access or tunnel change occurred.
+
+Build raw log: `cp63-web-candidate-build.raw.log` (SHA-256 `a7706a16bed2fda6ce8fe9637dd7679291c05e690f8fcbbc63300e48b05e449f`). Direct HTTP metadata: `cp63-web-candidate-http.json` (SHA-256 `5681e01ed15214d9c90ebe5d734d6aece7dabd4ef005db3da4801a75af2d9449`). Prior canonical Web validation: `cp63-web-validation.json` SHA-256 `67c224500e3c7eaeaae9646addf2a1e6af498a4eb6a07dcf0e062493ee8306f4` and raw log SHA-256 `54f9d103ad909f13cb39b9977431fa00429bdcabb1e5e17eac920d6cd4d31736`. Corrected future activation/rollback arguments: `cp63-web-commands.corrected.json`.
+
+STOP at candidate-only completion pending root review and a fresh distinct final before activation.

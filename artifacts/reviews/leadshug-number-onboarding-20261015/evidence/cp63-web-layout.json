@@ -1,0 +1,87 @@
+{
+  "checkpoint": "cp63-web-layout-candidate-validation",
+  "status": "passed for isolated candidate only; no live Web activation",
+  "tooling": {
+    "image": "mcr.microsoft.com/playwright:v1.62.1-noble",
+    "imageId": "sha256:fee853fafa59550d162cef52bca02d907694b44ebf6ef9fb075bcc0c65d8dedb",
+    "repoDigest": "mcr.microsoft.com/playwright@sha256:dcc5531e97840b9b5e794f2814476b21571c5124a3fca2267d73041f56e7580e",
+    "installedPackage": "playwright@1.62.1",
+    "browser": "Chromium 151.0.7922.34",
+    "packageInstalledOnlyInsideOwnedTemporaryBrowserContainer": true,
+    "imageWasAlreadyPresentNoPullPerformed": true,
+    "persistentProfileOrHostBrowserDataAccessed": false
+  },
+  "network": {
+    "name": "cp63-layout-probe-net",
+    "internalOnly": true,
+    "candidateAlias": "privacy-candidate",
+    "candidatePortPublishedToHost": false,
+    "browserDetachedFromDefaultBridgeBeforeNavigation": true,
+    "pageInitiatedExternalRequests": 0,
+    "candidateContainerId": "80ca38ed4cbfc2aee627ccd925760e31a6240068d937174f4a688c34d1d5ac70",
+    "browserContainerId": "34724c2a030f5553c7ea82bead65a610cbf30c57c1c2485d28db891f8458e187",
+    "ownedContainersRemoved": true,
+    "ownedNetworkRemoved": true
+  },
+  "source": {
+    "path": "web-app/public/privacidade.html",
+    "expectedAndMeasuredSha256": "d0f72c588f0f014de46a327e34d6b26125ca115bc973b56bbb926cd8519e701d",
+    "responseBytes": 12865
+  },
+  "results": [
+    {
+      "viewport": "mobile",
+      "requestedWidth": 375,
+      "measuredInnerWidth": 375,
+      "measuredDocumentScrollWidth": 375,
+      "measuredBodyScrollWidth": 375,
+      "mainWidth": 375,
+      "httpStatus": 200,
+      "responseSha256": "d0f72c588f0f014de46a327e34d6b26125ca115bc973b56bbb926cd8519e701d",
+      "overflow": false,
+      "sectionCount": 10,
+      "mailtoLinkCount": 3,
+      "externalAnchorCount": 3,
+      "externalAnchorsHaveNoreferrer": true,
+      "externalResourcesAutomaticallyLoaded": false,
+      "requests": 1,
+      "consoleErrorCount": 0,
+      "pageErrorCount": 0,
+      "screenshot": "cp63-web-layout-mobile.png",
+      "screenshotSha256": "004e0d748b801a7b9c50f240f9892ee12ff307c18344c51fd2fc38ea6fa2240c",
+      "screenshotDimensions": {
+        "width": 375,
+        "height": 7183
+      },
+      "allChecksPassed": true
+    },
+    {
+      "viewport": "desktop",
+      "requestedWidth": 1280,
+      "measuredInnerWidth": 1280,
+      "measuredDocumentScrollWidth": 1280,
+      "measuredBodyScrollWidth": 1280,
+      "mainWidth": 820,
+      "httpStatus": 200,
+      "responseSha256": "d0f72c588f0f014de46a327e34d6b26125ca115bc973b56bbb926cd8519e701d",
+      "overflow": false,
+      "sectionCount": 10,
+      "mailtoLinkCount": 3,
+      "externalAnchorCount": 3,
+      "externalAnchorsHaveNoreferrer": true,
+      "externalResourcesAutomaticallyLoaded": false,
+      "requests": 1,
+      "consoleErrorCount": 0,
+      "pageErrorCount": 0,
+      "screenshot": "cp63-web-layout-desktop.png",
+      "screenshotSha256": "20820eb2f1cf98d2d467f6138ab5fd4146e838cff0336f526f6a5739ed84913b",
+      "screenshotDimensions": {
+        "width": 1280,
+        "height": 4258
+      },
+      "allChecksPassed": true
+    }
+  ],
+  "limitations": "Candidate-only isolated browser evidence. It does not prove public host activation, Meta configuration, or official channel readiness.",
+  "allChecksPassed": true
+}

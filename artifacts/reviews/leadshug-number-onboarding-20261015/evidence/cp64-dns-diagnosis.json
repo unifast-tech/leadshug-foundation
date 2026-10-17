@@ -1,0 +1,137 @@
+{
+  "checkpoint": "cp64-public-dns-diagnosis",
+  "observedAtUtc": "2026-10-17T12:56:00+00:00",
+  "scope": "Read-only independent public DNS diagnosis and exact known tunnel-process identity check. No tunnel, container, image, volume, env, source, or service mutation.",
+  "hostname": "comments-heart-gale-muscles.trycloudflare.com",
+  "publicDnsOverHttps": {
+    "credentialsUsed": false,
+    "cookiesUsed": false,
+    "redirectsFollowed": false,
+    "resolverEndpoints": [
+      "https://cloudflare-dns.com/dns-query",
+      "https://dns.google/resolve"
+    ],
+    "queryTypes": [
+      "A",
+      "AAAA",
+      "CNAME"
+    ],
+    "results": [
+      {
+        "resolver": "cloudflare",
+        "queryType": "A",
+        "httpsStatus": 200,
+        "tlsVerified": true,
+        "redirectFollowed": false,
+        "dnsRcode": 3,
+        "dnsStatus": "NXDOMAIN",
+        "answerCount": 0,
+        "authorityCount": 1,
+        "soaPresent": true
+      },
+      {
+        "resolver": "cloudflare",
+        "queryType": "AAAA",
+        "httpsStatus": 200,
+        "tlsVerified": true,
+        "redirectFollowed": false,
+        "dnsRcode": 3,
+        "dnsStatus": "NXDOMAIN",
+        "answerCount": 0,
+        "authorityCount": 1,
+        "soaPresent": true
+      },
+      {
+        "resolver": "cloudflare",
+        "queryType": "CNAME",
+        "httpsStatus": 200,
+        "tlsVerified": true,
+        "redirectFollowed": false,
+        "dnsRcode": 3,
+        "dnsStatus": "NXDOMAIN",
+        "answerCount": 0,
+        "authorityCount": 1,
+        "soaPresent": true
+      },
+      {
+        "resolver": "google",
+        "queryType": "A",
+        "httpsStatus": 200,
+        "tlsVerified": true,
+        "redirectFollowed": false,
+        "dnsRcode": 3,
+        "dnsStatus": "NXDOMAIN",
+        "answerCount": 0,
+        "authorityCount": 1,
+        "soaPresent": true
+      },
+      {
+        "resolver": "google",
+        "queryType": "AAAA",
+        "httpsStatus": 200,
+        "tlsVerified": true,
+        "redirectFollowed": false,
+        "dnsRcode": 3,
+        "dnsStatus": "NXDOMAIN",
+        "answerCount": 0,
+        "authorityCount": 1,
+        "soaPresent": true
+      },
+      {
+        "resolver": "google",
+        "queryType": "CNAME",
+        "httpsStatus": 200,
+        "tlsVerified": true,
+        "redirectFollowed": false,
+        "dnsRcode": 3,
+        "dnsStatus": "NXDOMAIN",
+        "answerCount": 0,
+        "authorityCount": 1,
+        "soaPresent": true
+      }
+    ],
+    "conclusion": "Both independent public resolvers return DNS RCODE 3 (NXDOMAIN) for every queried record type. This confirms public DNS absence; the failure is not limited to the local WSL resolver."
+  },
+  "localPreflightContext": {
+    "wslResolver": "name or service not known",
+    "windowsNslookup": "Non-existent domain",
+    "previousWindowsHttps": "No response because DNS lookup failed; no TLS/HTTP status"
+  },
+  "pinnedProcess": {
+    "identityMethod": "Native Windows process handle plus exact known PID, native StartTime ticks, executable path/hash, WMI parent and an in-memory target boolean; not PID-only inference. Raw argv was not persisted or printed.",
+    "pid": 21180,
+    "processName": "cloudflared-windows-amd64",
+    "nativeStartTimeUtc": "2026-10-16T23:41:33.2385742Z",
+    "nativeStartTimeTicks": 639277908932385742,
+    "expectedCp46StartTimeUtc": "2026-10-16T23:41:33.2385742Z",
+    "expectedCp46StartTimeTicks": 639277908932385742,
+    "startTimeDeltaTicks": 0,
+    "parentPid": 22836,
+    "parentPresent": false,
+    "parentAbsence": "Known; stop-cp46.ps1 guard requires the owner to be present and must not be bypassed or run.",
+    "executablePath": "C:\\unifast\\leadshug\\leadshug_now_docker\\foundation_documentation\\artifacts\\tmp\\number-onboarding-execution\\cloudflared-cp46\\cloudflared-windows-amd64.exe",
+    "executableSha256": "86aee4017b26625cee8484c113558f48effa4cd47f7aa05fcf425604e5d2b23c",
+    "target8083": true,
+    "samePinnedProcessVerified": true
+  },
+  "preservation": {
+    "ownerContainers": 7,
+    "ownerVolumes": 5,
+    "webContainerId": "1e8d3a40dd9665481748b1278fd60de71ced6c682986d367a90665e76a61358a",
+    "webImageId": "sha256:d11a882849dc806e0d4728ca90a8fc8655aebc77421acefac63054b4fbb89365",
+    "serviceTagStillOldImage": true,
+    "candidateImageId": "sha256:6f4b2500e02d1523f99b423a08b6a166e319d5f3246ad516ef8f4a56d30001ed",
+    "candidateStillSeparatelyTagged": true,
+    "volumes": [
+      "leadshug_channels_local_evolution_instances",
+      "leadshug_channels_local_evolution_pg_data",
+      "leadshug_channels_local_evolution_redis_data",
+      "leadshug_channels_local_leadshug_arquivos",
+      "leadshug_channels_local_leadshug_pg_data"
+    ],
+    "runtimeMutations": false
+  },
+  "causeAndLimit": "The public DNS record is absent at both independent resolvers. The underlying reason (for example, expiry or removal of the ephemeral hostname) is not established. The local Cloudflared child process remains the same pinned process and still targets localhost:8083; DNS evidence does not prove a tunnel-process failure.",
+  "recommendation": "Root may proceed with the separately planned recovery using the already-authorized owned local test setup, preserving the accepted host/tunnel identity if recoverable. Recheck both public DoH resolvers and normal-TLS public root/health/JS before any Web activation. Do not use local DNS overrides, bypass the guarded stop script, replace the process, or rotate to a new host in this diagnosis.",
+  "terminalStatus": "Read-only diagnosis complete; STOP. No activation or tunnel recovery performed."
+}

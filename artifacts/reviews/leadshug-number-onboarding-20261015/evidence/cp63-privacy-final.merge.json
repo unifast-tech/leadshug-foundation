@@ -1,0 +1,42 @@
+{
+  "schema_version": "subagent-review-merge-v2",
+  "artifact_kind": "subagent_review_merge",
+  "authoritative": false,
+  "edit_policy": "derived_merge_packet",
+  "dispatch_path": "/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp63-privacy-final.dispatch.json",
+  "review_kind": "final_review",
+  "review_count": 1,
+  "reviewer_labels": [
+    "fresh-independent-cp63-privacy-final-assurance"
+  ],
+  "highest_finding_severity": "low",
+  "axis_summary": {
+    "performance": "acceptable",
+    "elegance": "strong_positive",
+    "structural_soundness": "acceptable",
+    "operational_fit": "mixed"
+  },
+  "recommended_paths": [
+    "Integrate CP63-FINAL-01 by correcting or appending a precise hash-bound reference to the terminal provenance JSON, preserving original preparation/candidate raw artifacts. A checksum-reference-only correction needs no product change or repeated build/unit/browser run. Subject to that evidence reconciliation and the orchestrator's normal authority/adherence checks, accept the exact candidate for the already authorized local Web-only step. Before recreation, attest the locally committed asset bytes, preserve the actual old Web image, bind the Compose tag to candidate image 6f4b2500e02d1523f99b423a08b6a166e319d5f3246ad516ef8f4a56d30001ed and verify those tags. Use the corrected Windows --env-file/manifests and --no-build --no-deps --force-recreate web command. Then require actual public normal-TLS no-session/no-redirect 200, text/html, valid UTF-8/meta, exact policy bytes, no Set-Cookie, root/health/JS comparisons and preservation of other resources before delivering the URL. Keep D11's delivery exception and DOD-09/VAL-09 open until that proof exists. Stop on gateway/tunnel/probe failure before separately adjudicated remediation; no implicit gateway reload, broad service restart or tunnel rotation is authorized. Retain the provenance limitation, private cohort/dependency debt and parent Pending/official VAL-05 unwaived status. A proved URL permits the operator's Meta preparation only; app publication, source push and production remain outside this slice."
+  ],
+  "exact_next_step": "Record reviewer resolutions in the governing TODO using the machine-checkable resolution table or equivalent gate ledger, then extract the derived resolution packet and decide whether another bounded review pass is still required.",
+  "findings": [
+    {
+      "finding_id": "F-49CC606E",
+      "severity": "low",
+      "title": "The provenance correction note cites an obsolete diagnostic checksum",
+      "rationale": "Evidence: cp63-web-build-provenance.md:7 identifies the JSON with SHA-256 79f77613a4f804a0ca25181e614159b771b1a2b3aa0ca98a8d719f03f52f0e1f. The actual terminal cp63-web-build-provenance.json hashes to 73d7ac9d0d1e8eb1f4456a8003d6205ed27066b3248da990e9fe4a0ccfa561a9, matching the root's terminal supplement; its line 38 carries the important qualification of the original candidate boolean. The Markdown file's own supplied hash matches, so this is a stale embedded reference rather than a read mismatch. Why now: the note is being admitted as the correction that prevents an unsupported exact-base provenance claim; following its checksum cannot validate the actual corrected evidence. The JSON qualification itself is sound, and no product, layout, security or build defect follows from this reference error.",
+      "suggested_action": "Correct the note's JSON reference to the actual terminal checksum, or append an explicit hash-bound erratum if preserving the already-dispatched note as immutable evidence. Keep the malformed preparation record and original candidate artifact intact, and retain the limitation that exact pre/post Node local-ID equality and a resolved build-log digest were not proven. Refresh the note/receipt hash in the final evidence index. No source edit, image rebuild, test rerun, new base pin or expanded scope is required for this correction.",
+      "reviewer_labels": [
+        "fresh-independent-cp63-privacy-final-assurance"
+      ],
+      "source_finding_ids": [
+        "CP63-FINAL-01"
+      ],
+      "category": "other",
+      "formalizable_hint": "yes",
+      "candidate_rule_level": "project",
+      "candidate_rule_id": "evidence-artifact-hash-integrity"
+    }
+  ]
+}

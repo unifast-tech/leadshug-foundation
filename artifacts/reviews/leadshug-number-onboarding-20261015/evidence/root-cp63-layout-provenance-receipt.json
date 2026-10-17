@@ -1,0 +1,16 @@
+{
+  "checkpoint": "root-cp63-layout-provenance-adjudication",
+  "capturedAtUtc": "2026-10-17T12:44:55.257930+00:00",
+  "artifactHashes": {
+    "cp63-web-layout.json": "51e1761fe9d026b823a0f65f7e5fde4956fbc776549a4435bcc824f6fcf8699b",
+    "cp63-web-layout.md": "e0db36fac0c09e25b606ffa7519d7b9cb8b75a4664140012e0e91bf2ad609e82",
+    "cp63-web-layout-mobile.png": "004e0d748b801a7b9c50f240f9892ee12ff307c18344c51fd2fc38ea6fa2240c",
+    "cp63-web-layout-desktop.png": "20820eb2f1cf98d2d467f6138ab5fd4146e838cff0336f526f6a5739ed84913b",
+    "cp63-web-build-provenance.json": "73d7ac9d0d1e8eb1f4456a8003d6205ed27066b3248da990e9fe4a0ccfa561a9",
+    "cp63-web-build-provenance.md": "f2aa070b44c46a8f84b0be817fc06d696a7c4b1e762f1082d69d97913d258c03"
+  },
+  "accepted": "Candidate-only browser observations at actual375/1280 widths, source response equality and nooverflow/noexternal/noerrors; root viewed mobile full-page screenshot for structural layout. All new proof is specific to this document, not a rerun of historical browser47.",
+  "provenance": "Accept explicit qualification of malformed initial nodeID/overbroad sameBeforeAfter. Preserve all original evidence; rely on actual old/candidate runtime8layers+binary/config and JS output equality. No build-log resolved node digest or literal oldlocalID equality claimed.",
+  "invalidInitialViewport": "Preserved as tooling history T/T/cp63-layout-first-pass.json; no success credit",
+  "remainingGates": "Fresh final live, local sourcecommit and Web-only public activation/proof pending; officialVAL05unwaived"
+}

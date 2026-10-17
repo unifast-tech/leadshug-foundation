@@ -1,0 +1,33 @@
+{
+  "checkpoint": "root-cp63-final-adjudication",
+  "capturedAtUtc": "2026-10-17T12:49:25.988064+00:00",
+  "rawSha256": "195e78a1a9e25678138c150a98d13bc24d4e20fefe05729b6b2106c4c2061854",
+  "schemaBindingMerge": "validated terminal0",
+  "findings": [
+    {
+      "id": "CP63-FINAL-01",
+      "severity": "low",
+      "disposition": "Integrated",
+      "resolution": "Hash-bound erratum preserves original dispatched Markdown and supplies actual terminal JSON checksum. No code/rebuild/retest needed per reviewer.",
+      "evidence": "cp63-web-build-provenance.erratum.md",
+      "erratumSha256": "430169c64a13b5abc1601e55aeea029614dd0990b8b87f85a5e1dc3eec48d73a"
+    }
+  ],
+  "candidateAcceptedForAuthorizedLocalActivation": true,
+  "acceptedImage": "sha256:6f4b2500e02d1523f99b423a08b6a166e319d5f3246ad516ef8f4a56d30001ed",
+  "policySha256": "d0f72c588f0f014de46a327e34d6b26125ca115bc973b56bbb926cd8519e701d",
+  "conditions": [
+    "Guarded local source commit/byte attestation",
+    "Preserve exact old Web rollback image and bind new tag to acceptedimage",
+    "Correct Windows Compose prefix; Web-only no-build/no-deps recreate",
+    "Actual normalTLS no-session no-redirect publicHTML200/source equality/UTF8/meta/noSetCookie; roothealthJS match; other6containers5volumes preserved",
+    "STOP on failure before separately justified remediation, no implicit gateway reload/tunnel rotation"
+  ],
+  "notGranted": [
+    "Meta publication",
+    "Source push or gitlink write",
+    "Production or broader authenticated cohort",
+    "Parent closeout or officialVAL05 waiver"
+  ],
+  "state": "D11 public-proof exception still open until actual activation/probe; parent Pending"
+}
