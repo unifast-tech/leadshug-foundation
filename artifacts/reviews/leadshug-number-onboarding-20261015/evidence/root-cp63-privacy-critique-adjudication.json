@@ -1,0 +1,33 @@
+{
+  "checkpoint": "cp63-privacy-critique-adjudication",
+  "rawSha256": "a5b0674db7f0928b23e8acbfaf835af6f442b7641b1ca419d6ea491c88c265e1",
+  "merge": "cp63-privacy-critique.merge.json",
+  "allFindings": [
+    {
+      "id": "CP63-PRIV-01",
+      "disposition": "Integrated",
+      "option": "A"
+    },
+    {
+      "id": "CP63-PRIV-02",
+      "disposition": "Integrated",
+      "option": "A"
+    },
+    {
+      "id": "CP63-PRIV-03",
+      "disposition": "Integrated",
+      "option": "A"
+    },
+    {
+      "id": "CP63-PRIV-04",
+      "disposition": "Integrated",
+      "option": "A"
+    }
+  ],
+  "manuscriptSha256": "d0f72c588f0f014de46a327e34d6b26125ca115bc973b56bbb926cd8519e701d",
+  "manuscript": "cp63-privacy-policy.accepted.html",
+  "originalDraftPreserved": true,
+  "scope": "Precision of public policy and Windows command concretization only; same one static asset, no behavior/security/provider/config expansion",
+  "commands": "Derive Windows paths with wslpath -w for both env file and compose manifests, same canonical start-channels-local prefix. No broad up invocation. Candidate/activation/rollback exact argv will be recorded by DevOps before use.",
+  "tqa": "Parent full TQA j preserved for unchanged behavior; no fresh audit of non-behavioral static text; critique expressly accepts proportional new document proof plus distinct final. Parent remains Pending/VAL05 unwaived."
+}

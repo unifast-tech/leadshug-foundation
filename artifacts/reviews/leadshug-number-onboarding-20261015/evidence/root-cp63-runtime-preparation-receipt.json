@@ -1,0 +1,13 @@
+{
+  "capturedAtUtc": "2026-10-17T05:59:50.496453+00:00",
+  "checkpoint": "cp63-runtime-preparation-root-adjudication",
+  "evidenceSha256": "878e70d3bac9e7043ceaeba6fb80f85ff78d008d73def3bdf21dc79087984b6f",
+  "disposition": "Accept only continued use of same independently pinned live tunnel child and working public host. Supervisor is absent; do not assert owner supervisor live or monitored restart. No tunnel process mutation, rotation or invented stability guarantee. Static hosting can proceed on same transport after critique and activation gates.",
+  "remainingRisks": [
+    "Temporary URL availability; no production/stable domain claim",
+    "Web candidate must compare bases/runtime and JS; captured current local tags do not alone prove current Web base equality",
+    "Gateway resolution requires post-Web-recreate probe; STOP on failure before separate justified remediation",
+    "UTF8 decoding may be proved by valid bytes and meta charset; no Nginx code change solely to add response charset parameter"
+  ],
+  "productOrRuntimeAuthority": "No build/activation yet; this adjudication resolves only read-only tunnel continuity evidence."
+}

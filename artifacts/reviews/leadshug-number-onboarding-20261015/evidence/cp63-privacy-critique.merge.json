@@ -1,0 +1,93 @@
+{
+  "schema_version": "subagent-review-merge-v2",
+  "artifact_kind": "subagent_review_merge",
+  "authoritative": false,
+  "edit_policy": "derived_merge_packet",
+  "dispatch_path": "/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp63-privacy-critique.dispatch.json",
+  "review_kind": "critique",
+  "review_count": 1,
+  "reviewer_labels": [
+    "fresh-no-context-cp63-privacy-formal-critique"
+  ],
+  "highest_finding_severity": "medium",
+  "axis_summary": {
+    "performance": "acceptable",
+    "elegance": "strong_positive",
+    "structural_soundness": "acceptable",
+    "operational_fit": "mixed"
+  },
+  "recommended_paths": [
+    "Integrar CP63-PRIV-01/02/03 e adjudicar explicitamente CP63-PRIV-04 no TODO; atualizar a minuta/facts e os comandos propostos sem modificar API, providers, depend\u00eancias ou configura\u00e7\u00e3o. A revis\u00e3o \u00e9 consultiva e n\u00e3o concede execu\u00e7\u00e3o. Depois de reconverg\u00eancia, copiar os bytes finais para o \u00fanico asset autorizado e executar uma vez o leaf Web can\u00f4nico, preservando raw/exit/hashes reais. DevOps deve usar prefixo Compose compat\u00edvel com WSL/Windows, preservar a imagem Web anterior, comparar bases/runtime/artefatos, ativar somente Web com no-deps e conferir root/health/JS e a p\u00e1gina p\u00fablica sem sess\u00e3o. Tratar gateway/IP e t\u00fanel apenas nos limites adjudicados: STOP em falha, sem reload/restart ou rota\u00e7\u00e3o impl\u00edcitos. N\u00e3o exigir testes que apenas dupliquem o texto; a prova direta deve cobrir o documento novo e o final independente deve verificar a composi\u00e7\u00e3o atual. Preservar o floor parental e as evid\u00eancias hist\u00f3ricas honestas; VAL05 oficial/INOUT permanece obrigat\u00f3rio, aberto e sem dispensa. Uma URL comprovada permite preparar o painel Meta, sem publicar o app, abrir usu\u00e1rios n\u00e3o confi\u00e1veis ou declarar conformidade jur\u00eddica."
+  ],
+  "exact_next_step": "Record reviewer resolutions in the governing TODO using the machine-checkable resolution table or equivalent gate ledger, then extract the derived resolution packet and decide whether another bounded review pass is still required.",
+  "findings": [
+    {
+      "finding_id": "F-CB52B2A5",
+      "severity": "medium",
+      "title": "Os comandos concretos de ativa\u00e7\u00e3o e rollback omitem a convers\u00e3o do caminho para docker.exe",
+      "rationale": "Evid\u00eancia: a concretiza\u00e7\u00e3o read-only posterior cp63-runtime-preparation.json:144 e :146 passa a docker.exe um --env-file absoluto no formato /mnt/c/... em ambos os comandos. O owner can\u00f4nico scripts/start-channels-local.sh:9-11 resolve Windows Docker/WSL e :32-34 aplica wslpath -w tanto ao arquivo de ambiente quanto aos manifests. O caminho absoluto Linux literal n\u00e3o \u00e9 equivalente ao caminho de arquivo que o execut\u00e1vel Windows espera; o pacote n\u00e3o apresenta adapta\u00e7\u00e3o ou prova de que esse literal seria convertido. Isto \u00e9 um defeito do comando proposto, n\u00e3o de um comando j\u00e1 executado, e n\u00e3o altera o freeze da arquitetura de um asset. Why now: o mesmo erro atinge a ativa\u00e7\u00e3o e a recupera\u00e7\u00e3o; esperar para descobrir a diverg\u00eancia durante o recreate torna a execu\u00e7\u00e3o desnecessariamente amb\u00edgua. N\u00e3o executei Compose nem li o arquivo de ambiente.",
+      "suggested_action": "A (recomendada): derivar o prefixo Compose da mesma convers\u00e3o de caminhos do owner can\u00f4nico, com cwd principal expl\u00edcito, e acrescentar apenas a opera\u00e7\u00e3o Web com --no-build --no-deps --force-recreate; registrar as duas variantes concretas antes de ativar. N\u00e3o usar a a\u00e7\u00e3o up ampla do script. Esfor\u00e7o baixo, risco baixo, blast radius comandos/evid\u00eancia, manuten\u00e7\u00e3o baixa por alinhamento ao owner, performance neutra, eleg\u00e2ncia consistente e estrutura preservada. B: invocar a a\u00e7\u00e3o up existente sem adapta\u00e7\u00e3o; esfor\u00e7o baixo, risco alto, blast radius API/bancos/providers, manuten\u00e7\u00e3o de exce\u00e7\u00f5es e build/migra\u00e7\u00f5es desnecess\u00e1rios, performance pior por trabalho extra, eleg\u00e2ncia superficial e estrutura contr\u00e1ria ao limite Web-only. C: manter o literal e depender de normaliza\u00e7\u00e3o impl\u00edcita; esfor\u00e7o zero, risco m\u00e9dio de falha e rollback indispon\u00edvel, blast radius da ativa\u00e7\u00e3o local, manuten\u00e7\u00e3o por troubleshooting, performance neutra, eleg\u00e2ncia fr\u00e1gil e estrutura incompat\u00edvel com o contrato de execu\u00e7\u00e3o Windows declarado. Corrigir a prepara\u00e7\u00e3o documental, sem editar o runner ou ampliar recursos.",
+      "reviewer_labels": [
+        "fresh-no-context-cp63-privacy-formal-critique"
+      ],
+      "source_finding_ids": [
+        "CP63-PRIV-03"
+      ],
+      "category": "operational_fit",
+      "formalizable_hint": "yes",
+      "candidate_rule_level": "project",
+      "candidate_rule_id": "n/a"
+    },
+    {
+      "finding_id": "F-58E166CA",
+      "severity": "medium",
+      "title": "A garantia de cifra abrange mais credenciais do que as fontes demonstram",
+      "rationale": "Evid\u00eancia: a minuta:92 afirma genericamente que o produto protege as credenciais dos canais com cifra no servidor, ap\u00f3s apresentar tanto a modalidade oficial quanto a n\u00e3o oficial (:66-67). A prova concreta \u00e9 mais estreita: number-registration.service.ts:193-194 e :349 cifram o accessToken oficial, e channel-credential-resolver.ts:46-59 s\u00f3 abre o envelope no ramo OFICIAL. EvolutionHttpClient usa chave e segredo de instala\u00e7\u00e3o vindos da configura\u00e7\u00e3o (evolution.client.ts:29-32,106); a prote\u00e7\u00e3o do estado de autentica\u00e7\u00e3o dentro do provider/volume n\u00e3o foi demonstrada por essas fontes. Isto n\u00e3o prova texto puro ou vulnerabilidade no provider; prova que a garantia p\u00fablica est\u00e1 mais ampla que a evid\u00eancia. Why now: a c\u00f3pia byteexact converter\u00e1 a frase em uma afirma\u00e7\u00e3o institucional acess\u00edvel publicamente, e corrigir o alcance agora n\u00e3o requer mudar o produto.",
+      "suggested_action": "A (recomendada): limitar a frase aos tokens de acesso do canal oficial que o LeadsHug persiste no servidor e manter separadamente a afirma\u00e7\u00e3o de hash de senha; ajustar a linha factual correspondente. Esfor\u00e7o baixo, risco baixo, blast radius texto/facts, manuten\u00e7\u00e3o baixa, performance neutra, eleg\u00e2ncia maior por precis\u00e3o e estrutura fiel \u00e0 fronteira realmente implementada. B: sustentar uma garantia universal mediante invent\u00e1rio e valida\u00e7\u00e3o de todas as credenciais, configura\u00e7\u00f5es e estados do provider, implementando prote\u00e7\u00e3o adicional onde necess\u00e1rio; esfor\u00e7o alto, risco e blast radius altos em API/provider/runtime, manuten\u00e7\u00e3o alta, performance desconhecida, complexidade superior e novo contrato estrutural fora deste complemento. C: manter a reda\u00e7\u00e3o; esfor\u00e7o zero, risco m\u00e9dio de assurance indevida, blast radius da informa\u00e7\u00e3o p\u00fablica, manuten\u00e7\u00e3o por corre\u00e7\u00f5es posteriores, performance neutra, concis\u00e3o aparente mas eleg\u00e2ncia e precis\u00e3o estrutural inferiores. N\u00e3o ampliar a implementa\u00e7\u00e3o para justificar uma frase que pode ser delimitada.",
+      "reviewer_labels": [
+        "fresh-no-context-cp63-privacy-formal-critique"
+      ],
+      "source_finding_ids": [
+        "CP63-PRIV-01"
+      ],
+      "category": "security",
+      "formalizable_hint": "partial",
+      "candidate_rule_level": "project",
+      "candidate_rule_id": "n/a"
+    },
+    {
+      "finding_id": "F-0B47E870",
+      "severity": "medium",
+      "title": "A descri\u00e7\u00e3o de diagn\u00f3stico/reten\u00e7\u00e3o n\u00e3o explicita as c\u00f3pias de conte\u00fado nos registros e integra\u00e7\u00f5es",
+      "rationale": "Evid\u00eancia: minuta:53 e :86 chama os registros de diagn\u00f3sticos t\u00e9cnicos, e o mapa facts:22 cobre a rotina da API, mas n\u00e3o diz que o diagn\u00f3stico autenticado tamb\u00e9m pode conter dados de contatos e c\u00f3pias de mensagens. meta.controller.ts:93-94 envia value ao registro, evolution.controller.ts:39-40 envia body.data, message-acceptance.service.ts:54-57 grava o payload redigido; safe-redaction.ts:29-44 remove campos/trechos secretos, n\u00e3o elimina em geral o texto da conversa ou o contato. Al\u00e9m disso, docker-compose.channels.yml:90-101 habilita armazenamento de mensagens, contatos, chats e hist\u00f3rico no provider e estado de inst\u00e2ncias no cache; sua reten\u00e7\u00e3o efetiva n\u00e3o \u00e9 determinada pelo DELETE de webhook_events em expurgo-de-webhook.rotina.ts:43-48. A minuta corretamente separa o prazo de conversas e n\u00e3o promete exclus\u00e3o integral autom\u00e1tica; n\u00e3o alego viola\u00e7\u00e3o dessa promessa. A lacuna \u00e9 a inteligibilidade do que comp\u00f5e os diagn\u00f3sticos e o alcance do \u00fanico prazo concreto fornecido, somada \u00e0 falta de cobertura factual para os outros stores configurados. Why now: a pol\u00edtica e as instru\u00e7\u00f5es manuais de exclus\u00e3o est\u00e3o sendo estabelecidas como texto vigente; n\u00e3o se deve deixar impl\u00edcito que diagn\u00f3stico \u00e9 somente metadado ou que o prazo da API cobre o provider.",
+      "suggested_action": "A (recomendada): esclarecer em linguagem comum que registros t\u00e9cnicos de webhook podem conter dados do contato e conte\u00fado de mensagens, com remo\u00e7\u00e3o de segredos t\u00e9cnicos; delimitar os 90 dias aos registros de webhook da API. Acrescentar ao mapa factual o armazenamento configurado da integra\u00e7\u00e3o e classificar seus prazos/elimina\u00e7\u00e3o efetivos como desconhecidos at\u00e9 confirma\u00e7\u00e3o, sem inventar TTL nem prometer que apagar uma conversa limpa todas as c\u00f3pias. A descri\u00e7\u00e3o p\u00fablica pode registrar que integra\u00e7\u00f5es tamb\u00e9m mant\u00eam dados para operar o canal. Esfor\u00e7o baixo, risco baixo, blast radius minuta/facts/processo documental, manuten\u00e7\u00e3o baixa, performance neutra, eleg\u00e2ncia por clareza e estrutura por separar stores e responsabilidades. B: implementar agora reten\u00e7\u00e3o e elimina\u00e7\u00e3o uniformes em API/provider/cache/auditoria; esfor\u00e7o alto, risco alto, blast radius intermodular/runtime, manuten\u00e7\u00e3o alta, poss\u00edvel custo de expurgo, eleg\u00e2ncia dependente de um desenho pr\u00f3prio e altera\u00e7\u00e3o estrutural que exige outro contrato/escopo. C: manter os termos gen\u00e9ricos; esfor\u00e7o zero, risco m\u00e9dio de interpreta\u00e7\u00e3o incorreta e triagem incompleta de pedidos, blast radius da informa\u00e7\u00e3o/processo de privacidade, manuten\u00e7\u00e3o maior por investiga\u00e7\u00e3o posterior, performance neutra, eleg\u00e2ncia sem\u00e2ntica e cobertura estrutural inferiores. Esta recomenda\u00e7\u00e3o \u00e9 factual e de transpar\u00eancia, sem declarar obriga\u00e7\u00e3o jur\u00eddica espec\u00edfica nem exigir mudan\u00e7a de provider neste slice.",
+      "reviewer_labels": [
+        "fresh-no-context-cp63-privacy-formal-critique"
+      ],
+      "source_finding_ids": [
+        "CP63-PRIV-02"
+      ],
+      "category": "residual_risk",
+      "formalizable_hint": "partial",
+      "candidate_rule_level": "project",
+      "candidate_rule_id": "n/a"
+    },
+    {
+      "finding_id": "F-B8FE7369",
+      "severity": "low",
+      "title": "O escopo privado de testes e a valida\u00e7\u00e3o oficial pendente ficam impl\u00edcitos no documento p\u00fablico",
+      "rationale": "Evid\u00eancia: o pacote:7 preserva o oficial sem receipt/INOUT, :13 exige n\u00e3o ocultar coorte privada e aus\u00eancia da prova oficial, e :5 impede abrir usu\u00e1rios n\u00e3o confi\u00e1veis. A minuta:37 apresenta a plataforma e organiza\u00e7\u00f5es clientes em termos gerais; :66 descreve o canal oficial no presente. O ambiente atual de testes aparece somente dentro do item de infraestrutura (:76), sem tornar expl\u00edcito o acesso privado nem a valida\u00e7\u00e3o operacional oficial pendente. N\u00e3o afirmo que a descri\u00e7\u00e3o da capacidade implementada seja falsa ou que uma pol\u00edtica deva expor CVEs/logs; o problema \u00e9 a leitura poss\u00edvel de uma pol\u00edtica em vigor para servi\u00e7o amplamente operante. Why now: esta \u00e9 a primeira vers\u00e3o a ser disponibilizada em URL p\u00fablica e apresentada ao painel Meta.",
+      "suggested_action": "A (recomendada): incluir uma frase curta perto da abertura delimitando a instala\u00e7\u00e3o local de testes a operadores autorizados e informar, junto \u00e0 modalidade oficial, que a valida\u00e7\u00e3o operacional dessa instala\u00e7\u00e3o est\u00e1 em andamento. Esfor\u00e7o baixo, risco baixo, blast radius texto/facts, manuten\u00e7\u00e3o baixa enquanto a vers\u00e3o se refere a este ambiente, performance neutra, eleg\u00e2ncia por contexto direto e estrutura alinhada ao escopo aprovado. Sem n\u00fameros, IDs, depend\u00eancias ou jarg\u00e3o interno. B: criar p\u00e1gina separada de status/maturidade e uma nova liga\u00e7\u00e3o p\u00fablica; esfor\u00e7o m\u00e9dio, risco de duplica\u00e7\u00e3o/desatualiza\u00e7\u00e3o, blast radius adicional de arquivos/superf\u00edcie, manuten\u00e7\u00e3o maior, performance quase neutra, eleg\u00e2ncia menor por fragmenta\u00e7\u00e3o e estrutura adicional sem necessidade atual. C: manter s\u00f3 a men\u00e7\u00e3o de testes no compartilhamento; esfor\u00e7o zero, risco baixo por\u00e9m persistente de leitura ampla, blast radius informacional, manuten\u00e7\u00e3o por explica\u00e7\u00e3o posterior, performance neutra, eleg\u00e2ncia mais curta e estrutura do escopo menos expl\u00edcita. Pode ser adjudicado como clarifica\u00e7\u00e3o proporcional, sem reabrir arquitetura nem exigir publica\u00e7\u00e3o Meta.",
+      "reviewer_labels": [
+        "fresh-no-context-cp63-privacy-formal-critique"
+      ],
+      "source_finding_ids": [
+        "CP63-PRIV-04"
+      ],
+      "category": "adherence",
+      "formalizable_hint": "partial",
+      "candidate_rule_level": "project",
+      "candidate_rule_id": "n/a"
+    }
+  ]
+}
