@@ -41,7 +41,7 @@ Proposta ST-CON-01: jornada de cadastro de número, com infraestrutura local est
 
 - **Current delivery stage:** Pending
 - **Qualifiers:** none
-- **Next exact step:** Política local entregue e verificada via HTTPS cp64; aguardar operador salvar novos domínio/OAuth/SDK/callback e URL de privacidade no mesmo app Meta, mantendo messages e app sem publicar. Consultar pendências de Publicar antes de nova decisão; VAL05 oficial real segue aberto.
+- **Next exact step:** cp65: operador informa configurações necessárias concluídas e botão Publicar disponível. Obter autorização específica para publicar o mesmo app Meta; após estado Published confirmado, repetir IN/resposta no número oficial próprio de teste e BU correta. App ainda sem publicação confirmada; VAL05 permanece aberto.
 
 ## Active Work State (Required While TODO Remains In `active/`)
 
@@ -1763,3 +1763,6 @@ Pergunta humana enviada após prova pública: salvar no mesmo app Meta de teste 
 cp64 terminal consolidado: cp64-policy-activation-v9.json SHA96276636e081ce2b83a7f5d86770d649afe2e1f08295f3703d3999ea2ca366ac retém exit0/stage/IDs/publicWindowsWSL/preservação7/5 e boolean production=true|webOriginMatches=true sem dump; gateway sem reload/recreate. Rootprova40f8... aceita condição pública do final, sem alterar raws com rootpending histórico. URL pronta e camposMeta já solicitados ao operador; resposta/configuração externa permanecem pendentes.
 
 cp64 fechamento Git: attestation antes do commit detectou normalização CRLF→LF somente nos três receipts stageJSON originais, nenhum commit executado. Não reescrever raws/hashes. Admite antes da edição três exceções -text exatas em Foundation .gitattributes para cp64-activation-stage.json/-v8.json/-v9.json; demais JSON continuam text/eolLF. Re-stage/attestation bytes e guard antes de commit/push. Necessário para preservar evidência observada, sem produto/runtime/Meta action.
+
+
+cp65 (2026-10-17), Operational/DevOps escopos Docker/NestJS/React/Vite, Genesis inaplicável: usuário retornou tela Publicar com configurações necessárias concluídas e botão disponível. É relato de prontidão de configuração, não autorização/execução da publicação nem aprovação de App Review ou recebimento real. Nova checagem read-only HTTPS normal de health200 e política20012865/d0 semcookie/redirect; sem credenciais/mutação/testes de produto adicionais. cp65-meta-publication-decision.json contém ação concreta proposta: publicar SOMENTE o mesmo app Meta por operador, após autorização específica, e validar entrada/resposta do número próprio de teste na BU correta. Mantém limites de coorte e R02, parent Pending e VAL05 aberto/sem waiver. Não reabrir cadastro ou registrar número novamente por antecipação. O complemento cp63 já registra publicação como decisão separada; pedido de autorização não é dispensa de requisitos Meta. Campos salvos/assinatura/webhook atual não são comprovados pelo simples botão disponível. O guia primário fbsamples lista publicação, análise/verificação e configuração como etapas distintas; developers.facebook.com não pôde ser lido nesta consulta (429), sem afirmar regra atual não verificada.

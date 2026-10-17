@@ -1,0 +1,52 @@
+{
+  "checkpoint": "cp65-meta-publication-decision",
+  "recordedUtc": "2026-10-17T16:43:28.880289+00:00",
+  "userObservation": {
+    "screen": "Publicar",
+    "configurationRequirements": "Todas as configurações necessárias do app foram concluídas. Analise os casos de uso abaixo antes de publicar o app.",
+    "publishButtonAvailable": true,
+    "appPublishedConfirmed": false,
+    "savedExactCallbackAndMessagesIndependentlyVerified": false
+  },
+  "localReadOnlyProof": {
+    "host": "addressing-mar-perform-hormone.trycloudflare.com",
+    "normalTls": true,
+    "healthStatus": 200,
+    "policyStatus": 200,
+    "policyBytes": 12865,
+    "policySha256": "d0f72c588f0f014de46a327e34d6b26125ca115bc973b56bbb926cd8519e701d",
+    "redirect": false,
+    "setCookie": false,
+    "authenticationSent": false
+  },
+  "assessment": "Configuration readiness reported by the operator; does not establish App Review approval, Published status, real message delivery, or the unique cause of the earlier missing inbound event.",
+  "primaryReference": {
+    "url": "https://github.com/fbsamples/business-messaging-sample-tech-provider-app#going-to-production",
+    "checkedOn": "2026-10-17",
+    "support": "Meta sample lists Business Verification, App Review, publishing, webhook and OAuth configuration as separate checks. Meta developer pages returned429/not accessible, so their current wording was not independently verified."
+  },
+  "preparedAction": {
+    "target": "existing LeadsHug Meta app",
+    "appId": "874966345550148",
+    "change": "Unpublished to Published through operator Meta dashboard only after explicit authorization",
+    "testScope": "existing own official number reserved for tests, correct Local Test Ofc BU, existing private OWNER/test cohort",
+    "sequence": [
+      "Obtain specific publication authorization; no Meta state change before it",
+      "Operator publishes existing app and reports actual Published state or error",
+      "Check current callback and messages subscription as needed; preserve existing number/registration/credential",
+      "Operator sends fresh inbound test from another test WhatsApp; checks correct BU inbox and replies through LeadsHug; report only status/errors",
+      "Confirm real inbound/outbound evidence; keep VAL05 open until real criteria and recovery proof are satisfied"
+    ],
+    "notIncluded": [
+      "Production/Railway rollout",
+      "Onboarding external customers or new numbers",
+      "Permission/credential expansion or App Review submission",
+      "Provider Graph calls, automatic outbound messages, source/runtime/database changes"
+    ]
+  },
+  "authorization": "PENDING; reporting an available Publish button is not recorded as publication authorization",
+  "previousBoundary": "cp63-privacy-plan-package.md: Publicar Meta é decisão separada, ainda não autorizada por esse complemento.",
+  "parentStatus": "Pending",
+  "officialVAL05": "open_unwaived",
+  "noCodeRuntimeProviderMetaOrPrivateFileMutation": true
+}
