@@ -1,0 +1,118 @@
+{
+  "checkpoint": "cp69-gateway-route-live-readback-v2",
+  "capturedAtUtc": "2026-10-17T18:05:07.948Z",
+  "host": "addressing-mar-perform-hormone.trycloudflare.com",
+  "resourcePins": {
+    "passed": true,
+    "gatewayId": "0c48d94e9fe5b4ad75efd304db2752dfa4cab3befc59b9f736574d6cd551eea3",
+    "gatewayImageId": "sha256:76090a34b858323b6ab169711adc08253b5bee7123a973dc581ed46b643bc109",
+    "activeConfigSha256": "6d4563cc5f5823bdb1177f350c942dc2472fc70133aef5b177fa4b57c5c9f1a0",
+    "sourceSha256": "6d4563cc5f5823bdb1177f350c942dc2472fc70133aef5b177fa4b57c5c9f1a0",
+    "ownedContainerCount": 7,
+    "ownedVolumeCount": 5
+  },
+  "publicHttps": {
+    "/": {
+      "status": 200,
+      "redirected": false,
+      "noSetCookie": true,
+      "bytes": 694,
+      "bodyWithinLimit": true,
+      "sha256": "f21b2cb8528bab142bdba0babc64b7cb4cff821152ef4416698fd062642d5acd",
+      "contentType": "text/html"
+    },
+    "/health": {
+      "status": 200,
+      "redirected": false,
+      "noSetCookie": true,
+      "bytes": 15,
+      "bodyWithinLimit": true,
+      "sha256": "a29ee2b15c494311c52521766e44af56a3ad2248e7a8ab465e5206463c13d288",
+      "contentType": "application/json; charset=utf-8"
+    },
+    "/privacidade.html": {
+      "status": 200,
+      "redirected": false,
+      "noSetCookie": true,
+      "bytes": 12865,
+      "bodyWithinLimit": true,
+      "sha256": "d0f72c588f0f014de46a327e34d6b26125ca115bc973b56bbb926cd8519e701d",
+      "contentType": "text/html"
+    },
+    "/assets/index-txvhtd65.js": {
+      "status": 200,
+      "redirected": false,
+      "noSetCookie": true,
+      "bytes": 258450,
+      "bodyWithinLimit": true,
+      "sha256": "d14343604557296f2ed62c1df47d9c80d81c323abafd89ccbb64a6a0746ff4bd",
+      "contentType": "application/javascript"
+    }
+  },
+  "benignCallbackGet": {
+    "status": 403,
+    "redirected": false,
+    "noSetCookie": true,
+    "requestHadQuery": false,
+    "responseBodyPersisted": false
+  },
+  "routeCounterSinceUtc": "2026-10-17T18:05:11.392603Z",
+  "routeCounter": {
+    "status": "complete",
+    "capturedAtUtc": "2026-10-17T18:05:12.315Z",
+    "pins": {
+      "gatewayId": "0c48d94e9fe5b4ad75efd304db2752dfa4cab3befc59b9f736574d6cd551eea3",
+      "imageId": "sha256:76090a34b858323b6ab169711adc08253b5bee7123a973dc581ed46b643bc109",
+      "owner": "number-onboarding",
+      "project": "leadshug_channels_local",
+      "service": "gateway",
+      "sourceSha256": "6d4563cc5f5823bdb1177f350c942dc2472fc70133aef5b177fa4b57c5c9f1a0",
+      "routeTemplateSha256": "6d4563cc5f5823bdb1177f350c942dc2472fc70133aef5b177fa4b57c5c9f1a0",
+      "activeConfigSha256": "6d4563cc5f5823bdb1177f350c942dc2472fc70133aef5b177fa4b57c5c9f1a0",
+      "sourceMatchesRouteTemplatePin": true
+    },
+    "window": {
+      "sinceUtc": "2026-10-17T18:05:11.392603Z",
+      "tailLimit": 1001,
+      "byteLimit": 1048576,
+      "bytesRead": 159
+    },
+    "coverage": {
+      "complete": true,
+      "overflow": false,
+      "timeout": false,
+      "dockerExitCode": 0,
+      "lineCount": 1,
+      "parsedLineCount": 1,
+      "unparsedLineCount": 0,
+      "tailLimitReachedOrExceeded": false,
+      "strictUtf8": true
+    },
+    "counts": {
+      "byRoute": {
+        "meta": 1
+      },
+      "byMethod": {
+        "GET": 1
+      },
+      "byStatus": {
+        "403": 1
+      },
+      "byRouteMethodStatus": [
+        {
+          "route": "meta",
+          "method": "GET",
+          "status": "403",
+          "count": 1
+        }
+      ]
+    },
+    "routeAttribution": "aggregate route enum only; no request-level attribution or payload fields",
+    "rawLogsPersistedOrPrinted": false,
+    "helperSha256": "d0df3ac082ca182b4e2a7a6a7b52390733e3c80b8b8e09737341320651736581"
+  },
+  "noRedirectOrCookieRequiredForPolicyProbe": true,
+  "rawLogsPersistedOrPrinted": false,
+  "policyHashMatches": true,
+  "jsHashMatches": true
+}

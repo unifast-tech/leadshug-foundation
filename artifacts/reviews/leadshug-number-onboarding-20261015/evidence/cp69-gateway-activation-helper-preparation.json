@@ -1,0 +1,74 @@
+{
+  "checkpoint": "cp69-gateway-activation-helper-preparation",
+  "status": "FROZEN_FOR_INDEPENDENT_REVIEW_NOT_ACTIVATED",
+  "capturedAtUtc": "2026-10-17T17:42:31.669Z",
+  "sourceCandidate": {
+    "path": "docker/local-gateway.conf.template",
+    "sha256": "8c5524a215717370c01a45f333854f24a2a413e84e3bd93184d80ab1a4efc00c",
+    "priorActiveConfigSha256": "9329131376e0aaa8020e7440954af5125a65eb2bba69fd016292fe63843fe707"
+  },
+  "activationHelper": {
+    "path": "foundation_documentation/artifacts/tmp/number-onboarding-execution/T/cp69-activate-gateway-route.py",
+    "sha256": "8692655ec4273bdee0abfc9a51608ab309ee5a6038dcc3fd76b3c3abaca2db62",
+    "reviewCopy": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp69-activate-gateway-route-review-copy.py",
+    "reviewCopySha256": "8692655ec4273bdee0abfc9a51608ab309ee5a6038dcc3fd76b3c3abaca2db62",
+    "astParse": "pass",
+    "liveCallsMade": false,
+    "privateRead": false,
+    "configWriteOrReload": false
+  },
+  "routeCounterHelper": {
+    "path": "foundation_documentation/artifacts/tmp/number-onboarding-execution/T/cp69-gateway-route-counter.py",
+    "sha256": "f4041fb23b03113d47cd4a7395fd9d8b0df0202c409af43ed12440b675630e82",
+    "reviewCopy": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp69-gateway-route-counter-review-copy.py",
+    "reviewCopySha256": "f4041fb23b03113d47cd4a7395fd9d8b0df0202c409af43ed12440b675630e82",
+    "astParse": "pass",
+    "syntheticParserProbe": {
+      "validAccepted": 1,
+      "invalidRejected": 3,
+      "dockerOrNetworkCalled": false,
+      "rawLogsPersistedOrPrinted": false
+    },
+    "liveLogsRead": false
+  },
+  "activationContract": {
+    "rootGoRequired": true,
+    "proofBoundToHelperCandidateOldConfigHostAndAllResourcePins": true,
+    "ownedContainersPinned": 7,
+    "ownedVolumesPinned": 5,
+    "networkPinned": true,
+    "activeConfigWrite": "same-directory unique temporary file, verify bytes/mode/uid/gid, atomic rename",
+    "forwardNginxTest": "required",
+    "forwardGracefulReloadMaximum": 1,
+    "rollback": "only if active bytes still equal exact candidate; restore in memory-retained old bytes; verify metadata/hash; nginx -t; at most one rollback graceful reload only after forward reload was attempted",
+    "publicChecks": "local and normal-TLS public GET /, /health, /privacidade.html, and served JS; verify policy and JS hashes; no cookies/auth/redirects",
+    "activationInvoked": false,
+    "containerOrServiceMutation": false,
+    "providerDatabaseOrTunnelAction": false
+  },
+  "routeCounterContract": {
+    "sourceShaGuard": true,
+    "activeConfigShaGuard": true,
+    "gatewayIdentityGuard": true,
+    "explicitUtcSinceRequired": true,
+    "tailLimit": 1001,
+    "byteLimit": 1048576,
+    "timeoutSeconds": 20,
+    "strictRouteEnum": [
+      "meta",
+      "other"
+    ],
+    "output": "aggregate route/method/status counts only",
+    "rawLogLinesPersistedOrPrinted": false
+  },
+  "runtimeReadOnlyBaseline": {
+    "gatewayId": "0c48d94e9fe5b4ad75efd304db2752dfa4cab3befc59b9f736574d6cd551eea3",
+    "gatewayImage": "sha256:76090a34b858323b6ab169711adc08253b5bee7123a973dc581ed46b643bc109",
+    "networkId": "d48c8a9ac92f00d8e2f1c1c6a1744ab14463aeba4abeab491f82719336925c20",
+    "activeConfigSha256": "9329131376e0aaa8020e7440954af5125a65eb2bba69fd016292fe63843fe707",
+    "activeConfigBytes": 1722,
+    "activeMode": "0644",
+    "activeUid": 0,
+    "activeGid": 0
+  }
+}

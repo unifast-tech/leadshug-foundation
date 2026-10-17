@@ -1,0 +1,136 @@
+{
+  "checkpoint": "cp69-gateway-route-candidate",
+  "startedAtUtc": "2026-10-17T17:34:00.174Z",
+  "source": {
+    "path": "docker/local-gateway.conf.template",
+    "oldSha256": "9329131376e0aaa8020e7440954af5125a65eb2bba69fd016292fe63843fe707",
+    "candidateSha256": "8c5524a215717370c01a45f333854f24a2a413e84e3bd93184d80ab1a4efc00c",
+    "diff": [
+      "add exact-URI map /webhooks/meta and /webhooks/meta/ -> meta; default -> other",
+      "add route=$leadshug_route to existing redacted leadshug_safe log_format"
+    ]
+  },
+  "images": {
+    "nginx": "sha256:76090a34b858323b6ab169711adc08253b5bee7123a973dc581ed46b643bc109",
+    "apiFixture": "sha256:fe5fb7eaf6a68123f9da6b92a0a69483180d213f556b4bedf313f04a383b4821",
+    "pullAttempted": false
+  },
+  "network": {
+    "internal": true,
+    "name": "cp69-route-probe-20261017173400-a0708187",
+    "id": "f20b42bca5fd6b59aec01d8bc850e8b34748be3de7a73dbbf7219dc41b6a7fde"
+  },
+  "operations": {
+    "nginxTestExitCode": 0
+  },
+  "cleanup": {
+    "attempted": true,
+    "containersRemoved": 2,
+    "networkRemoved": true,
+    "complete": true
+  },
+  "stub": {
+    "id": "5b4a7c37bde79008225e090fd048d7f6f339472ba90ae06bbb8e050589d7ec12",
+    "imageId": "sha256:fe5fb7eaf6a68123f9da6b92a0a69483180d213f556b4bedf313f04a383b4821",
+    "status": "running",
+    "owner": "number-onboarding",
+    "checkpoint": "cp69-route-candidate",
+    "networkMode": "f20b42bca5fd6b59aec01d8bc850e8b34748be3de7a73dbbf7219dc41b6a7fde",
+    "portBindings": {}
+  },
+  "candidateGateway": {
+    "id": "ac21fcac1348d159b91ccc7ae307d4aaa8391d0522700be3f683d0f2b11eab6d",
+    "imageId": "sha256:76090a34b858323b6ab169711adc08253b5bee7123a973dc581ed46b643bc109",
+    "status": "created",
+    "owner": "number-onboarding",
+    "checkpoint": "cp69-route-candidate",
+    "networkMode": "f20b42bca5fd6b59aec01d8bc850e8b34748be3de7a73dbbf7219dc41b6a7fde",
+    "portBindings": {}
+  },
+  "syntheticHttp": {
+    "caseCount": 9,
+    "allStatus200": true,
+    "cases": [
+      {
+        "case": "exact_get",
+        "status": 200,
+        "expectedRoute": "meta"
+      },
+      {
+        "case": "slash_get",
+        "status": 200,
+        "expectedRoute": "meta"
+      },
+      {
+        "case": "query_get",
+        "status": 200,
+        "expectedRoute": "meta"
+      },
+      {
+        "case": "exact_post",
+        "status": 200,
+        "expectedRoute": "meta"
+      },
+      {
+        "case": "slash_post",
+        "status": 200,
+        "expectedRoute": "meta"
+      },
+      {
+        "case": "nested_webhook",
+        "status": 200,
+        "expectedRoute": "other"
+      },
+      {
+        "case": "health",
+        "status": 200,
+        "expectedRoute": "other"
+      },
+      {
+        "case": "privacy",
+        "status": 200,
+        "expectedRoute": "other"
+      },
+      {
+        "case": "root_query",
+        "status": 200,
+        "expectedRoute": "other"
+      }
+    ],
+    "requestsSentOnlyToIsolatedNetwork": true,
+    "noLiveApiOrWebOrDatabaseVolumeUsed": true
+  },
+  "accessLog": {
+    "sinceUtc": "2026-10-17T17:34:02.558891Z",
+    "tailLimit": 100,
+    "byteLimit": 65536,
+    "bytesRead": 1437,
+    "lineCount": 9,
+    "parsedLineCount": 9,
+    "unparsedLineCount": 0,
+    "overflow": false,
+    "dockerExitCode": 0,
+    "routeCounts": {
+      "meta": 5,
+      "other": 4
+    },
+    "methodCounts": {
+      "GET": 7,
+      "POST": 2
+    },
+    "statusCounts": {
+      "200": 9
+    },
+    "expectedRouteCounts": {
+      "meta": 5,
+      "other": 4
+    },
+    "routeCountsMatchSyntheticCases": true,
+    "allExpectedStatuses200": true,
+    "syntheticPathQueryHeaderCookieBodyMarkersAbsent": true,
+    "rawLinesPersistedOrPrinted": false,
+    "routeClassificationOnly": true
+  },
+  "candidateStatus": "validated_isolated_candidate_only_not_activated",
+  "completedAtUtc": "2026-10-17T17:34:04.378Z"
+}

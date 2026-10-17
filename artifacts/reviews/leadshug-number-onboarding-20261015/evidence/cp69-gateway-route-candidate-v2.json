@@ -1,0 +1,48 @@
+{
+  "checkpoint": "cp69-gateway-route-candidate-v2",
+  "startedAtUtc": "2026-10-17T17:54:25.281Z",
+  "source": {
+    "path": "docker/local-gateway.conf.template",
+    "oldSha256": "9329131376e0aaa8020e7440954af5125a65eb2bba69fd016292fe63843fe707",
+    "candidateSha256": "6d4563cc5f5823bdb1177f350c942dc2472fc70133aef5b177fa4b57c5c9f1a0",
+    "expectedCaseSensitiveAnchoredRule": "~^/webhooks/meta/?$ meta;",
+    "fixtureCaseCount": 11
+  },
+  "images": {
+    "nginx": "sha256:76090a34b858323b6ab169711adc08253b5bee7123a973dc581ed46b643bc109",
+    "nodeFixtureRuntime": "sha256:fe5fb7eaf6a68123f9da6b92a0a69483180d213f556b4bedf313f04a383b4821",
+    "pullAttempted": false
+  },
+  "network": {
+    "internal": true,
+    "name": "cp69-route-probe-v2-20261017175425-e442a4d6",
+    "id": "d8c0eb5be25bc0b9ec723991d8ff53db5b8becfb90483242d98b672a1f957d97"
+  },
+  "operations": {},
+  "cleanup": {
+    "attempted": true,
+    "containerIds": [
+      "896e1e00937a294ad3464d5c248975df59e775630364c45d9ae44993143ead8d",
+      "0f90b8d72e6eeee719caa728f455df6278ba76fb78783e90594a41e1ab48b234"
+    ],
+    "networkId": "d8c0eb5be25bc0b9ec723991d8ff53db5b8becfb90483242d98b672a1f957d97",
+    "containersRemoved": 2,
+    "networkRemoved": true,
+    "complete": true
+  },
+  "stub": {
+    "id": "896e1e00937a294ad3464d5c248975df59e775630364c45d9ae44993143ead8d",
+    "imageId": "sha256:fe5fb7eaf6a68123f9da6b92a0a69483180d213f556b4bedf313f04a383b4821",
+    "status": "running",
+    "owner": "number-onboarding",
+    "checkpoint": "cp69-route-candidate-v2",
+    "portBindings": "{}",
+    "networkId": "d8c0eb5be25bc0b9ec723991d8ff53db5b8becfb90483242d98b672a1f957d97"
+  },
+  "failure": {
+    "phase": "fixture_gateway_scope_guard_failed",
+    "exitCode": null
+  },
+  "candidateStatus": "inconclusive_or_failed",
+  "completedAtUtc": "2026-10-17T17:54:27.569Z"
+}

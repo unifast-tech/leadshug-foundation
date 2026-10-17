@@ -1,0 +1,86 @@
+{
+  "checkpoint": "cp69-official-pretest03-baseline",
+  "capturedAtUtc": "2026-10-17T18:05:12.685Z",
+  "runtimePins": {
+    "apiContainerId": "005529386c8a7ab499cd779942ce541bb90cd3a770b8436b41509d2655e54857",
+    "apiImageId": "sha256:fe5fb7eaf6a68123f9da6b92a0a69483180d213f556b4bedf313f04a383b4821",
+    "apiOwner": "number-onboarding",
+    "apiStatus": "running",
+    "apiHealth": "healthy",
+    "helperSha256": "64e4f08964fb846282608939825dd7063b2b567756047df81cce85c29aac6571"
+  },
+  "snapshot": {
+    "checkpoint": "cp69-official-inout-aggregate-readonly",
+    "status": "snapshot",
+    "scope": {
+      "buId": "a1492634-8685-46d8-a7cb-685a99f5c930",
+      "channelId": "eeb74451-edaf-4a44-a6cb-059dd184e152",
+      "identityId": "33980208-a547-4ab8-bab1-42a82bcd2197",
+      "attemptId": "e3165ba6e498307fd31c0213f544bdf1",
+      "generation": 1,
+      "epoch": 0
+    },
+    "channel": {
+      "type": "OFICIAL",
+      "status": "CONECTANDO",
+      "generation": 1,
+      "pairingEpoch": 0,
+      "verifiedEpoch": 0,
+      "ownNumberVerified": true,
+      "providerConnectionState": "SUBSCRIBED",
+      "currentAttemptMatchesPinned": true,
+      "receiptPresent": false,
+      "connectedAtPresent": false,
+      "channelLeaseActive": false
+    },
+    "currentAttempt": {
+      "state": "PENDING_RECEIPT",
+      "stage": "SUBSCRIBED",
+      "version": 7,
+      "generation": 1,
+      "pairingEpoch": null,
+      "leaseActive": false
+    },
+    "identity": {
+      "identityVerified": true,
+      "currentMappingCount": 1,
+      "managedLifecycle": true,
+      "cleanupState": "ACTIVE",
+      "cleanupLeaseActive": false
+    },
+    "credential": {
+      "activeForPinnedGeneration": true
+    },
+    "messages": {
+      "inbound": 0,
+      "outbound": 0,
+      "messageStatusBuckets": [],
+      "conversationCount": 0
+    },
+    "webhookAggregate": {
+      "cutoffUtc": "2026-10-17T16:55:26.634Z",
+      "count": 0,
+      "minReceivedAtUtc": null,
+      "maxReceivedAtUtc": null,
+      "payloadSelectedOrFiltered": false,
+      "identityAttributionAvailable": false
+    },
+    "boundary": {
+      "readOnlyTransaction": true,
+      "providerOrGraphHttp": false,
+      "authOrSession": false,
+      "credentialOrEnvironmentDump": false,
+      "messageRowsOrContentSelected": false,
+      "webhookPayloadSelectedOrFiltered": false
+    }
+  },
+  "boundary": {
+    "readOnlyHelper": true,
+    "helperExecutedOnce": true,
+    "providerOrGraphHttp": false,
+    "authOrSession": false,
+    "messageRowsOrContentSelected": false,
+    "rawLogsRead": false,
+    "configEnvDump": false
+  }
+}

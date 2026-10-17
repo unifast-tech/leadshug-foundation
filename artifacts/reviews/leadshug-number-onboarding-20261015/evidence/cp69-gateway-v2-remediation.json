@@ -1,0 +1,126 @@
+{
+  "checkpoint": "cp69-gateway-v2-remediation",
+  "createdAtUtc": "2026-10-17T17:57:06.797102Z",
+  "reviewedFindings": [
+    "CP69-RV-01",
+    "CP69-RV-02",
+    "CP69-RV-03",
+    "CP69-RV-04",
+    "CP69-RV-05",
+    "CP69-RV-06"
+  ],
+  "source": {
+    "path": "docker/local-gateway.conf.template",
+    "sha256": "6d4563cc5f5823bdb1177f350c942dc2472fc70133aef5b177fa4b57c5c9f1a0",
+    "routeRule": "~^/webhooks/meta/?$ meta;"
+  },
+  "v1Preserved": true,
+  "v2Artifacts": {
+    "activation": {
+      "path": "foundation_documentation/artifacts/tmp/number-onboarding-execution/T/cp69-activate-gateway-route-v2.py",
+      "sha256": "90d088354fc77a628835dcf2d4a1ee18e6d4f022d6a88fe6d0f3281efaadceaa",
+      "reviewCopy": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp69-gateway-activation-review-copy-v2.py",
+      "reviewCopySha256": "90d088354fc77a628835dcf2d4a1ee18e6d4f022d6a88fe6d0f3281efaadceaa"
+    },
+    "counter": {
+      "path": "foundation_documentation/artifacts/tmp/number-onboarding-execution/T/cp69-gateway-route-counter-v2.py",
+      "sha256": "d0df3ac082ca182b4e2a7a6a7b52390733e3c80b8b8e09737341320651736581",
+      "reviewCopy": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp69-gateway-route-counter-review-copy-v2.py",
+      "reviewCopySha256": "d0df3ac082ca182b4e2a7a6a7b52390733e3c80b8b8e09737341320651736581"
+    },
+    "runner": {
+      "path": "foundation_documentation/artifacts/tmp/number-onboarding-execution/cp69-run-isolated-route-candidate-v2.py",
+      "sha256": "6e090aa4d6715f7951dd3b0fa90e91608bf54049b227f159ca6b7b6d7e287144",
+      "reviewCopy": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp69-gateway-route-candidate-runner-review-copy-v2.py",
+      "reviewCopySha256": "6e090aa4d6715f7951dd3b0fa90e91608bf54049b227f159ca6b7b6d7e287144"
+    },
+    "source": {
+      "path": "docker/local-gateway.conf.template",
+      "sha256": "6d4563cc5f5823bdb1177f350c942dc2472fc70133aef5b177fa4b57c5c9f1a0",
+      "reviewCopy": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp69-gateway-config-candidate-v2.conf",
+      "reviewCopySha256": "6d4563cc5f5823bdb1177f350c942dc2472fc70133aef5b177fa4b57c5c9f1a0"
+    }
+  },
+  "fixtureReceipt": {
+    "path": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp69-gateway-route-candidate-v2e.json",
+    "sha256": "55ec858d2a61ff3fdbeac1a14a11e9cbbd125c2f0273a25f24c7188de7f1f276",
+    "sourceSha256": "6d4563cc5f5823bdb1177f350c942dc2472fc70133aef5b177fa4b57c5c9f1a0",
+    "caseCount": 11,
+    "allExpectedStatusesObserved": true,
+    "perCaseRouteAndStatusAssertionsPassed": true,
+    "coverageComplete": true,
+    "jointRouteMethodStatusCounts": [
+      {
+        "route": "meta",
+        "method": "GET",
+        "status": "201",
+        "count": 3
+      },
+      {
+        "route": "meta",
+        "method": "POST",
+        "status": "201",
+        "count": 2
+      },
+      {
+        "route": "other",
+        "method": "GET",
+        "status": "201",
+        "count": 3
+      },
+      {
+        "route": "other",
+        "method": "GET",
+        "status": "202",
+        "count": 3
+      }
+    ],
+    "cleanup": {
+      "attempted": true,
+      "containerIds": [
+        "9fa0ee45e41f175bed618051f4780ac4f021c6e5f2b7c5aec9837768814e1869",
+        "1739e115bcb1cf63f9888b334e90862059ec8a7f5cf7f9ade0fc54492b20264f"
+      ],
+      "networkId": "76838180fe52977b05f5f75ebded179c73da2500ca381c32d1b75e435f75cf1b",
+      "containersRemoved": 2,
+      "networkRemoved": true,
+      "complete": true
+    },
+    "rawLinesPersistedOrPrinted": false
+  },
+  "checks": {
+    "activationSelfTest": {
+      "fullIdInventoryAndDriftControls": true,
+      "stageExclusiveReservationPreservesPriorBytes": true,
+      "renameAppliedThenTimeoutRestored": true,
+      "preRenameFailureRecognizesOldWithoutMutation": true,
+      "unknownAndUnreadableBytesRefuseRestore": true,
+      "forwardReloadBoundaryAllowsAtMostOneRollbackReload": true,
+      "rollbackRenameAppliedThenTimeoutReconciled": true,
+      "dockerOrNetworkCalled": false,
+      "privateRead": false
+    },
+    "counterSelfTest": {
+      "syntheticValidAccepted": true,
+      "syntheticInvalidRejected": 3,
+      "oppositeMarginalsProduceDistinctJointBuckets": true,
+      "overflowTimeoutNonzeroUtf8TailParseAndSourceFailureControls": true,
+      "dockerOrNetworkCalled": false,
+      "rawLogsPersistedOrPrinted": false
+    },
+    "candidateRunnerSelfTest": {
+      "strictSyntheticLineAccepted": true,
+      "invalidRouteRejected": true,
+      "perCaseSequenceAssertion": "11 expected/11 matched",
+      "hungPipeTimedOutAndReaped": true,
+      "byteOverflowTerminatedAndReaped": true,
+      "dockerOrNetworkCalled": false,
+      "rawLogsPersistedOrPrinted": false
+    },
+    "pythonAstParsed": 3,
+    "activationAttempted": false,
+    "liveGatewayChanged": false
+  },
+  "candidateOnlyStatus": "isolated_candidate_validated_not_activated",
+  "activationReadiness": "requires_fresh_independent_review_and_separate_root_GO"
+}

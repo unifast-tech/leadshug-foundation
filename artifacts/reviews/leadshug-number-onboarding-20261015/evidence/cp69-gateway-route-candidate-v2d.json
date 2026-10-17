@@ -1,0 +1,199 @@
+{
+  "checkpoint": "cp69-gateway-route-candidate-v2",
+  "startedAtUtc": "2026-10-17T17:55:07.332Z",
+  "source": {
+    "path": "docker/local-gateway.conf.template",
+    "oldSha256": "9329131376e0aaa8020e7440954af5125a65eb2bba69fd016292fe63843fe707",
+    "candidateSha256": "6d4563cc5f5823bdb1177f350c942dc2472fc70133aef5b177fa4b57c5c9f1a0",
+    "expectedCaseSensitiveAnchoredRule": "~^/webhooks/meta/?$ meta;",
+    "fixtureCaseCount": 11
+  },
+  "images": {
+    "nginx": "sha256:76090a34b858323b6ab169711adc08253b5bee7123a973dc581ed46b643bc109",
+    "nodeFixtureRuntime": "sha256:fe5fb7eaf6a68123f9da6b92a0a69483180d213f556b4bedf313f04a383b4821",
+    "pullAttempted": false
+  },
+  "network": {
+    "internal": true,
+    "name": "cp69-route-probe-v2-20261017175507-d5687348",
+    "id": "5ce9aca71c6032f5bc2cd4362a222975a4e3c54c86177907bd553a878548f63b"
+  },
+  "operations": {
+    "nginxTestExitCode": 0
+  },
+  "cleanup": {
+    "attempted": true,
+    "containerIds": [
+      "fa448bfe8b7c3d3097a327a2a49d4bc8e53ca9b4dc731390fc23f129ee1eee42",
+      "6baeaf410b4d764c4d8dd6c0fb862a87991586aa5f56e1e3eb660c56766fc60b"
+    ],
+    "networkId": "5ce9aca71c6032f5bc2cd4362a222975a4e3c54c86177907bd553a878548f63b",
+    "containersRemoved": 2,
+    "networkRemoved": true,
+    "complete": true
+  },
+  "stub": {
+    "id": "fa448bfe8b7c3d3097a327a2a49d4bc8e53ca9b4dc731390fc23f129ee1eee42",
+    "imageId": "sha256:fe5fb7eaf6a68123f9da6b92a0a69483180d213f556b4bedf313f04a383b4821",
+    "status": "running",
+    "owner": "number-onboarding",
+    "checkpoint": "cp69-route-candidate-v2",
+    "portBindings": "{}",
+    "networkId": "5ce9aca71c6032f5bc2cd4362a222975a4e3c54c86177907bd553a878548f63b"
+  },
+  "candidateGatewayCreated": {
+    "id": "6baeaf410b4d764c4d8dd6c0fb862a87991586aa5f56e1e3eb660c56766fc60b",
+    "imageId": "sha256:76090a34b858323b6ab169711adc08253b5bee7123a973dc581ed46b643bc109",
+    "status": "created",
+    "owner": "number-onboarding",
+    "checkpoint": "cp69-route-candidate-v2",
+    "portBindings": "{}"
+  },
+  "candidateGateway": {
+    "id": "6baeaf410b4d764c4d8dd6c0fb862a87991586aa5f56e1e3eb660c56766fc60b",
+    "imageId": "sha256:76090a34b858323b6ab169711adc08253b5bee7123a973dc581ed46b643bc109",
+    "status": "running",
+    "owner": "number-onboarding",
+    "checkpoint": "cp69-route-candidate-v2",
+    "portBindings": "{}",
+    "networkId": "5ce9aca71c6032f5bc2cd4362a222975a4e3c54c86177907bd553a878548f63b"
+  },
+  "syntheticHttp": {
+    "caseCount": 11,
+    "responseCount": 11,
+    "allExpectedStatusesObserved": true,
+    "requestsSentOnlyToIsolatedInternalNetwork": true,
+    "cases": [
+      {
+        "case": "exact_get",
+        "expectedRoute": "meta",
+        "observedStatus": 201,
+        "expectedStatus": 201
+      },
+      {
+        "case": "slash_get",
+        "expectedRoute": "meta",
+        "observedStatus": 201,
+        "expectedStatus": 201
+      },
+      {
+        "case": "query_get",
+        "expectedRoute": "meta",
+        "observedStatus": 201,
+        "expectedStatus": 201
+      },
+      {
+        "case": "exact_post",
+        "expectedRoute": "meta",
+        "observedStatus": 201,
+        "expectedStatus": 201
+      },
+      {
+        "case": "slash_post",
+        "expectedRoute": "meta",
+        "observedStatus": 201,
+        "expectedStatus": 201
+      },
+      {
+        "case": "uppercase_negative",
+        "expectedRoute": "other",
+        "observedStatus": 202,
+        "expectedStatus": 202
+      },
+      {
+        "case": "mixedcase_negative",
+        "expectedRoute": "other",
+        "observedStatus": 201,
+        "expectedStatus": 201
+      },
+      {
+        "case": "nested_negative",
+        "expectedRoute": "other",
+        "observedStatus": 201,
+        "expectedStatus": 201
+      },
+      {
+        "case": "health",
+        "expectedRoute": "other",
+        "observedStatus": 201,
+        "expectedStatus": 201
+      },
+      {
+        "case": "privacy",
+        "expectedRoute": "other",
+        "observedStatus": 202,
+        "expectedStatus": 202
+      },
+      {
+        "case": "root_query",
+        "expectedRoute": "other",
+        "observedStatus": 202,
+        "expectedStatus": 202
+      }
+    ],
+    "noLiveApiWebDatabaseVolumeOrCredentialsUsed": true
+  },
+  "accessLog": {
+    "sinceUtc": "2026-10-17T17:55:09.377579Z",
+    "tailLimit": 100,
+    "byteLimit": 65536,
+    "timeoutSeconds": 15,
+    "bytesRead": 1757,
+    "lineCount": 11,
+    "parsedLineCount": 11,
+    "unparsedLineCount": 0,
+    "utf8Valid": true,
+    "overflow": false,
+    "timeout": false,
+    "dockerExitCode": 0,
+    "coverageComplete": true,
+    "observedRouteSequence": [
+      "meta",
+      "meta",
+      "meta",
+      "meta",
+      "meta",
+      "other",
+      "other",
+      "other",
+      "other",
+      "other",
+      "other"
+    ],
+    "perCaseRouteAndStatusAssertionsPassed": true,
+    "routeCounts": {
+      "meta": 5,
+      "other": 6
+    },
+    "jointRouteMethodStatusCounts": [
+      {
+        "route": "meta",
+        "method": "GET",
+        "status": "201",
+        "count": 3
+      },
+      {
+        "route": "meta",
+        "method": "POST",
+        "status": "201",
+        "count": 2
+      },
+      {
+        "route": "other",
+        "method": "GET",
+        "status": "201",
+        "count": 3
+      },
+      {
+        "route": "other",
+        "method": "GET",
+        "status": "202",
+        "count": 3
+      }
+    ],
+    "syntheticCanaryMarkersAbsent": true,
+    "rawLinesPersistedOrPrinted": false
+  },
+  "candidateStatus": "validated_isolated_candidate_only_not_activated",
+  "completedAtUtc": "2026-10-17T17:55:11.105Z"
+}

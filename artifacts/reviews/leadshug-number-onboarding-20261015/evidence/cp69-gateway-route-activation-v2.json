@@ -1,0 +1,111 @@
+{
+  "checkpoint": "cp69-gateway-route-activation-v2",
+  "executionExitCode": 0,
+  "status": "success",
+  "resultSource": "owned durable stage receipt plus bounded read-only post-activation readbacks",
+  "terminalStdoutRetained": false,
+  "terminalStdoutToolOutputTruncated": true,
+  "noActivationRetry": true,
+  "helperSha256": "90d088354fc77a628835dcf2d4a1ee18e6d4f022d6a88fe6d0f3281efaadceaa",
+  "acceptedProofSha256": "c2e18a5960a6e90d2a61f1e7f930647a025cdd466620b9887c440459f4ddcb7a",
+  "stageReceiptSha256": "228c2d7e9dbe651d053d65045feab0b87200c23f74ac203ed74413ea557dd6d6",
+  "stageReceipt": {
+    "checkpoint": "cp69-gateway-activation-stage-v2",
+    "events": [
+      {
+        "atUtc": "2026-10-17T18:03:50.701Z",
+        "stage": "preflight",
+        "status": "started",
+        "failureCategory": null,
+        "details": {}
+      },
+      {
+        "atUtc": "2026-10-17T18:03:52.824Z",
+        "stage": "preflight",
+        "status": "passed",
+        "failureCategory": null,
+        "details": {
+          "containerCount": 7,
+          "volumeCount": 5,
+          "oldConfigSha256": "9329131376e0aaa8020e7440954af5125a65eb2bba69fd016292fe63843fe707",
+          "candidateSha256": "6d4563cc5f5823bdb1177f350c942dc2472fc70133aef5b177fa4b57c5c9f1a0"
+        }
+      },
+      {
+        "atUtc": "2026-10-17T18:03:52.836Z",
+        "stage": "candidate_atomic_write",
+        "status": "started",
+        "failureCategory": null,
+        "details": {}
+      },
+      {
+        "atUtc": "2026-10-17T18:03:54.668Z",
+        "stage": "candidate_atomic_write",
+        "status": "passed",
+        "failureCategory": null,
+        "details": {
+          "candidateSha256": "6d4563cc5f5823bdb1177f350c942dc2472fc70133aef5b177fa4b57c5c9f1a0",
+          "metadataPreserved": true
+        }
+      },
+      {
+        "atUtc": "2026-10-17T18:03:54.680Z",
+        "stage": "nginx_test",
+        "status": "started",
+        "failureCategory": null,
+        "details": {}
+      },
+      {
+        "atUtc": "2026-10-17T18:03:54.855Z",
+        "stage": "nginx_test",
+        "status": "passed",
+        "failureCategory": null,
+        "details": {
+          "exitCode": 0
+        }
+      },
+      {
+        "atUtc": "2026-10-17T18:03:54.866Z",
+        "stage": "forward_graceful_reload",
+        "status": "started",
+        "failureCategory": null,
+        "details": {}
+      },
+      {
+        "atUtc": "2026-10-17T18:03:55.049Z",
+        "stage": "forward_graceful_reload",
+        "status": "passed",
+        "failureCategory": null,
+        "details": {
+          "exitCode": 0
+        }
+      },
+      {
+        "atUtc": "2026-10-17T18:03:58.488Z",
+        "stage": "terminal",
+        "status": "success",
+        "failureCategory": null,
+        "details": {
+          "configSha256": "6d4563cc5f5823bdb1177f350c942dc2472fc70133aef5b177fa4b57c5c9f1a0",
+          "publicProbePassed": true,
+          "localProbePassed": true
+        }
+      }
+    ],
+    "rawConfigOrLogsPersisted": false
+  },
+  "operation": {
+    "candidateActiveConfigSha256": "6d4563cc5f5823bdb1177f350c942dc2472fc70133aef5b177fa4b57c5c9f1a0",
+    "nginxTestExitCode": 0,
+    "forwardGracefulReloadExitCode": 0,
+    "activeMetadataPreserved": true,
+    "rootHost": "addressing-mar-perform-hormone.trycloudflare.com"
+  },
+  "readOnlyPostconditions": {
+    "resourceReadbackEvidence": "cp69-gateway-route-live-readback-v2.json",
+    "resourceReadbackSha256": "2c87853c890aa06aa1d0bb3bba78c920ffe352554e95b290bd4d7670f771d02b",
+    "officialBaselineEvidence": "cp69-official-pretest03-baseline.json",
+    "officialBaselineSha256": "20f67e6cbeb4ddd23e2eb3c82201b6081c5de215ee5d5e53d90e32f804d5dec5"
+  },
+  "noRawConfigOrLogsPersisted": true
+}

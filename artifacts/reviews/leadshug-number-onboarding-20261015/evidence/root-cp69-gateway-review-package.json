@@ -1,0 +1,52 @@
+{
+  "checkpoint": "cp69-bounded-gateway-review-package",
+  "shape": "bounded-summary",
+  "scope": "Operational delta before activation only; not parent closure",
+  "approvedContract": {
+    "todo": "todos/active/features/TODO-leadshug-channel-connection-readiness.md",
+    "story": "ST-CON-01",
+    "approved": "2026-10-15 user APROVADO",
+    "relevantFrozenDecisions": [
+      "D-09 local owned runtime isolation and safe diagnostics",
+      "D-10 source-owned validation, no manual gitlink writes",
+      "D-11 static privacy document delivered; preserve existing public hash"
+    ],
+    "parentStage": "Pending",
+    "officialVAL05": "open_unwaived"
+  },
+  "baseline": {
+    "sourceBeforeSha256": "9329131376e0aaa8020e7440954af5125a65eb2bba69fd016292fe63843fe707",
+    "sourceAfterSha256": "8c5524a215717370c01a45f333854f24a2a413e84e3bd93184d80ab1a4efc00c",
+    "productPath": "docker/local-gateway.conf.template",
+    "sourceDiff": "Only map exact normalized /webhooks/meta and /webhooks/meta/ to meta, default other; add enum to safe access log. No routing/proxy/auth changes."
+  },
+  "implementationAuthority": "cp69 TODO admission + root-cp69-preparation-authority.json authorize preparation only. Activation requires independent review and new one-shot root GO.",
+  "diagnosticContext": [
+    "Human confirmed same existing official number, two ticks; official inbound02 not visible",
+    "Current managed identity and scoped credential active; no receipt or IN/OUT in cp68 snapshot",
+    "One scoped Graph GET confirmed existing app subscription; override unknown",
+    "No route recorded in old safe log. This delta enables route/method/status correlation without body or exact URL."
+  ],
+  "adherence": {
+    "D09": "preserved: same owned local gateway, no create/recreate/provider/DB operation in activation",
+    "D10": "preserved: local-only exact source path; no source push/gitlink mutation",
+    "D11": "preserved by postactivation public document d0f72c hash check",
+    "moduleConsistency": "No application/API/registration semantics change"
+  },
+  "validation": [
+    "cp69-gateway-route-candidate.json: isolated nginx-t passed;9fixture requests200;5meta4other; synthetic path/query/header/cookie/body markers absent; cleanup2containers1internalnetwork complete",
+    "candidateGateway.status=created is inspection at creation time, not final lifecycle state",
+    "Root current verified-TLS public health200, policy12865/d0f72c and JS258450/d143 without redirects"
+  ],
+  "testAudit": "Scope bounded Nginx map/logging fixture; request independent reviewer to assess assertions, missing failure coverage, leakage, false-positive success. Unchanged API/Web accepted tests are reused; synthetic fixtures do not prove real delivery.",
+  "P1P2Preflight": "Root inspected exact6insertions1deletion, URI is map input only, log output fixed enum, existing routing unchanged; review activation safety before runtime",
+  "ruleSpirit": "No fake receipt, no signing bypass, no repeated provider mutations, no logging private data to diagnose delivery",
+  "residualRisks": [
+    "Parent official real IN/OUT/recovery unproven",
+    "Route classification cannot attribute one request or provider identity among same-route traffic",
+    "Temporary Cloudflare hostname has no lifetime guarantee",
+    "R02 dependency debt/private OWNER test cohort preserved, untrusted authenticated rollout not authorized"
+  ],
+  "waivers": "None for official real tests; no new waiver requested",
+  "reviewInstructions": "Findings first by severity. Review delivered source, isolated runner/proof, proposed one-shot activation helper and rollback for adherence/regression/evidence/privacy/performance/elegance/structure. Do not reopen unrelated parent architecture. Read-only public named files; no runtime or network. Never access api-app/.local-files or env files."
+}

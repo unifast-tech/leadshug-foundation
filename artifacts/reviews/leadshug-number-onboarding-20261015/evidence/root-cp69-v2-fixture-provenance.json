@@ -1,0 +1,27 @@
+{
+  "checkpoint": "root-cp69-v2-fixture-provenance",
+  "priorAttemptsPreserved": [
+    "cp69-gateway-route-candidate-v2.json",
+    "cp69-gateway-route-candidate-v2b.json",
+    "cp69-gateway-route-candidate-v2c.json",
+    "cp69-gateway-route-candidate-v2d.json"
+  ],
+  "priorCleanupComplete": true,
+  "firstFailure": {
+    "phase": "fixture_gateway_scope_guard_failed",
+    "narrowerCause": "unknown; receipt does not identify the failing inspected field"
+  },
+  "statusFailures": {
+    "phase": "synthetic_http_observed_status_mismatch",
+    "modelCorrection": "/webhooks/Meta remains under unchanged /webhooks/ API proxy prefix; expected fixture HTTP status corrected202 to201, while exact diagnostic route remains other",
+    "unchangedOtherOracles": [
+      "uppercase /WEBHOOKS/META => web fixture202 and other",
+      "nested lowercase => API fixture201 and other",
+      "all11 expected diagnostic routes preserved"
+    ]
+  },
+  "finalProof": "cp69-gateway-route-candidate-v2e.json",
+  "strongerAssertions": "per-case observed route and status rather than only aggregate counts",
+  "rootExecutionCopyChecks": "All four execution files byte-equal frozen review copies and hashes; three helpers AST-valid and --self-test exit0 with no Docker/network call",
+  "activationState": "not_activated"
+}

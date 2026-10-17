@@ -1,0 +1,38 @@
+{
+  "checkpoint": "root-cp69-gateway-runtime-accepted",
+  "acceptedUtc": "2026-10-17T18:06:48.599546+00:00",
+  "rootAccepted": true,
+  "operationGoConsumed": true,
+  "activationInvocations": 1,
+  "forwardGracefulReloads": 1,
+  "rollbackRequired": false,
+  "sourceCommit": "80e3940126f22a941f90dba4f5e801b6c0eb2f58",
+  "sourceAndActiveConfigSha256": "6d4563cc5f5823bdb1177f350c942dc2472fc70133aef5b177fa4b57c5c9f1a0",
+  "evidence": {
+    "cp69-gateway-independent-review-v2.json": "411e15b5e4a6fe2a66ce2fff5c11e56d313785e9da7400dab7782c5514c005da",
+    "cp69-gateway-activation-stage-v2.json": "228c2d7e9dbe651d053d65045feab0b87200c23f74ac203ed74413ea557dd6d6",
+    "cp69-gateway-route-activation-v2.json": "f327965c1797ec519cf5d79b4af3122ba463ea8546805a143899cc4237ce97d8",
+    "cp69-gateway-route-live-readback-v2.json": "2c87853c890aa06aa1d0bb3bba78c920ffe352554e95b290bd4d7670f771d02b",
+    "cp69-official-pretest03-baseline.json": "20f67e6cbeb4ddd23e2eb3c82201b6081c5de215ee5d5e53d90e32f804d5dec5",
+    "root-cp69-public-afteractivation.json": "22a207eaa6889a7c99f0d2be93e0de0e1a5a052dde6cd054be8da90cbf64cdcb",
+    "cp69-official-physical-test03-window.json": "aa7962f0de4ba71f1c8ade0c114bf3acaab48f7c55b2fd71c3f8942ab4cdbcde"
+  },
+  "acceptedFacts": [
+    "Nginx test and one graceful reload passed; all7containers/5volumes preserved by bounded readback",
+    "Root independently verified normal-TLS public root/health/policy/JS200, exactpolicy12865/d0 and JSd143, no redirects or cookies",
+    "Live safe log adoption confirmed meta/GET/403 for ownquery-free diagnostic GET only; no actual Meta POST proved",
+    "Pretest03 currentidentity snapshot: CONECTANDO/SUBSCRIBED/PENDING_RECEIPTv7, IN0/OUT0/conversations0, no receipt/connectedAt",
+    "Physicaltest03 requested, response pending; no new registration/credential/providerwrite requested"
+  ],
+  "executionEvidenceLimit": "Full activation stdout was tool-truncated and not retained; receipt is explicitly reconstructed from immutable stage success, exit0, bounded selected-facts readbacks and independent root probes. No retry or fabricated stdout.",
+  "test03SinceUtc": "2026-10-17T18:05:51.932693Z",
+  "remaining": "Await human result, capture joint meta/POST/status counters for test03 window and compare scoped readonlyaggregate; no cause assumed.",
+  "parentStage": "Pending",
+  "officialVAL05": "open_unwaived",
+  "waiver": false,
+  "residuals": [
+    "R02/private OWNER cohort unchanged",
+    "Temporary hostname lifetime not guaranteed",
+    "Joint route counters cannot identify provider request or payload"
+  ]
+}

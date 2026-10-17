@@ -1,0 +1,224 @@
+{
+  "findings": [],
+  "checkpoint": "cp69-gateway-independent-review-v2",
+  "reviewedAtUtc": "2026-10-17T18:00:59Z",
+  "reviewKind": "focused_remediation_verification",
+  "result": "accept",
+  "readiness": "ready_for_separate_root_one_shot_GO",
+  "readyForSeparateRootOneShotGo": true,
+  "advisoryOnly": true,
+  "activationAuthorizedByThisReview": false,
+  "activationPerformedByReviewer": false,
+  "summary": "All six v1 findings are resolved in the frozen v2 source/helpers, with focused evidence and independent synthetic checks. No newly introduced material defect was identified in this bounded remediation review. Root may decide a separate hash-bound one-shot GO; the helper must still pass its live preflight and postconditions.",
+  "findingDispositions": [
+    {
+      "id": "CP69-RV-01",
+      "priorSeverity": "P1",
+      "disposition": "resolved",
+      "path": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp69-gateway-activation-review-copy-v2.py",
+      "lines": [186, 192, 194, 258, 281, 433, 472, 479],
+      "sourceEvidence": "main arms active_write_may_have_started before install_bytes. The rename transaction is marked before mv, and install_bytes rechecks the exact expected current hash/metadata immediately before rename. On failure, guarded_recovery distinguishes exact old, exact candidate, unknown, and unreadable active bytes. Only the exact candidate is restored, including when a rename committed before a timeout. An uncertain restore is reconciled against the exact old bytes and metadata.",
+      "validation": "The delivered self-test passed with a virtual filesystem. Independent probes executed the actual main/install_bytes/recovery control flow with mocked remote effects: a completed forward rename followed by timeout restored old bytes with zero reloads; a pre-rename failure preserved old bytes without restore/reload; unknown/unreadable bytes refused restore; a postcheck failure after forward reload restored old bytes with one rollback reload; a completed rollback rename followed by timeout reconciled successfully. The success case made exactly one forward reload."
+    },
+    {
+      "id": "CP69-RV-02",
+      "priorSeverity": "P2",
+      "disposition": "resolved",
+      "path": "docker/local-gateway.conf.template",
+      "lines": [3, 4, 5, 6],
+      "sourceEvidence": "The map now uses the case-sensitive anchored rule ~^/webhooks/meta/?$ meta with default other. Independent byte comparison against the original baseline confirms that only this map and the safe route enum field are added; all proxy behavior is preserved.",
+      "validation": "The hash-bound v2e isolated fixture records eleven observed per-case route/status matches: five exact/slash/query/POST positives, uppercase and mixed-case negatives, nested-path negative, health, privacy, and root-query cases. nginx -t passed, complete safe log coverage was asserted, and all isolated resources were removed. The reviewer inspected this receipt and the runner assertions without rerunning Docker."
+    },
+    {
+      "id": "CP69-RV-03",
+      "priorSeverity": "P2",
+      "disposition": "resolved",
+      "path": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp69-gateway-activation-review-copy-v2.py",
+      "lines": [101, 103, 107, 110, 112, 114],
+      "sourceEvidence": "The inventory command explicitly requests --no-trunc, validates every returned ID as 64 lowercase hexadecimal characters, and retains exact equality with the seven expected IDs before checking resource facts. Five expected volume names/labels remain guarded.",
+      "validation": "The delivered pure inventory self-test passed for matching full IDs, extra/missing IDs, and rejection of truncated IDs. Static review confirms the corrected flag is present in the actual verify_inventory command, not only in a test fixture."
+    },
+    {
+      "id": "CP69-RV-04",
+      "priorSeverity": "P2",
+      "disposition": "resolved",
+      "path": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp69-gateway-activation-review-copy-v2.py",
+      "lines": [267, 269, 271, 321, 324, 327, 409, 416, 418, 493],
+      "sourceEvidence": "An authorized invocation exclusively reserves STAGE using O_CREAT|O_EXCL and records stage_owned only after reservation. write_stage refuses persistence unless ownership is held, uses unique nonce-bearing temporary files, and terminal failure writes are conditioned on ownership. Prior receipts are no longer replaced by rejection reporting.",
+      "validation": "The delivered reservation self-test passed on a virtual filesystem. Independent actual-main probes verified byte-for-byte preservation of both a preexisting stage receipt and a prior temporary receipt, and no receipt creation or remote mutation when authority was rejected. Normal success/failure receipt updates remained functional after reservation."
+    },
+    {
+      "id": "CP69-RV-05",
+      "priorSeverity": "P2",
+      "disposition": "resolved",
+      "path": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp69-gateway-route-counter-review-copy-v2.py",
+      "lines": [78, 85, 88, 165, 170, 171, 178],
+      "sourceEvidence": "aggregate_rows retains joint (route, method, status) buckets and the result emits only safe aggregate objects. Existing marginals remain available. The counter also implements the previously declared local source SHA guard, in addition to gateway identity and active-config guards.",
+      "validation": "The delivered parser/joint-count self-test passed and distinguishes the two previously ambiguous windows. Independent actual-main probes verified a complete capture includes the expected joint bucket, while overflow, timeout, nonzero command status, invalid UTF-8, tail saturation, invalid lines, source mismatch, and capture errors each return exit 2/inconclusive. The source-guard receipt claim now matches implementation."
+    },
+    {
+      "id": "CP69-RV-06",
+      "priorSeverity": "P2",
+      "disposition": "resolved",
+      "path": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp69-gateway-route-candidate-runner-review-copy-v2.py",
+      "lines": [83, 92, 96, 101, 110, 112, 116, 118, 120, 127, 291],
+      "sourceEvidence": "The runner now reads only after selector readiness, enforces a monotonic deadline and byte bound, and terminates/kills and reaps the child within bounded waits. Exceptions return a failed bounded result so main can reach its owned-resource cleanup. Cleanup also resolves uniquely named, ownership/image/checkpoint-guarded resources after uncertain create responses.",
+      "validation": "The delivered parser and anonymous-pipe self-test was independently executed. An open no-output pipe reached the timeout and terminated/reaped the synthetic child; byte overflow likewise terminated/reaped it. No real subprocess, Docker, or network was used. The v2e receipt separately records complete cleanup of two isolated containers and one internal network."
+    }
+  ],
+  "reviewContext": {
+    "firstReadThisPass": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp69-gateway-v2-remediation.json",
+    "originalPackage": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/root-cp69-gateway-review-package.json",
+    "originalReview": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp69-gateway-independent-review.json",
+    "originalReviewUnmodified": true,
+    "frozenContextRetained": ["D-09", "D-10", "D-11"],
+    "routing": {
+      "role": "formal-reviewer",
+      "selectedModel": "gpt-6.1-sol",
+      "selectedEffort": "max",
+      "proofMode": "declared",
+      "priorBoundedRoutingGuard": "foundation_documentation/artifacts/tmp/number-onboarding-execution/routing-cp69-gateway-review.json",
+      "priorGuardOutcome": "go"
+    },
+    "scope": "Focused verification of CP69-RV-01 through CP69-RV-06 and material regressions introduced by their v2 fixes, before activation only",
+    "rootProvenanceNote": "Root disclosed earlier isolated fixture failures and corrected the mixed-case path's expected upstream status from 202 to 201. The unchanged /webhooks/ prefix sends /webhooks/Meta to API, while the exact diagnostic rule correctly classifies it as other. Static source review and the final fixture agree. The uppercase /WEBHOOKS/META still expects web status 202. Earlier archived receipts were not needed or read for this focused disposition."
+  },
+  "fileIntegrity": [
+    {
+      "artifact": "source",
+      "executionPath": "docker/local-gateway.conf.template",
+      "reviewCopy": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp69-gateway-config-candidate-v2.conf",
+      "sha256": "6d4563cc5f5823bdb1177f350c942dc2472fc70133aef5b177fa4b57c5c9f1a0",
+      "bytes": 1822,
+      "bothPathsMatchReceiptAndEachOther": true
+    },
+    {
+      "artifact": "activation",
+      "executionPath": "foundation_documentation/artifacts/tmp/number-onboarding-execution/T/cp69-activate-gateway-route-v2.py",
+      "reviewCopy": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp69-gateway-activation-review-copy-v2.py",
+      "sha256": "90d088354fc77a628835dcf2d4a1ee18e6d4f022d6a88fe6d0f3281efaadceaa",
+      "bytes": 29797,
+      "bothPathsMatchReceiptAndEachOther": true,
+      "astParse": "pass"
+    },
+    {
+      "artifact": "counter",
+      "executionPath": "foundation_documentation/artifacts/tmp/number-onboarding-execution/T/cp69-gateway-route-counter-v2.py",
+      "reviewCopy": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp69-gateway-route-counter-review-copy-v2.py",
+      "sha256": "d0df3ac082ca182b4e2a7a6a7b52390733e3c80b8b8e09737341320651736581",
+      "bytes": 10152,
+      "bothPathsMatchReceiptAndEachOther": true,
+      "astParse": "pass"
+    },
+    {
+      "artifact": "runner",
+      "executionPath": "foundation_documentation/artifacts/tmp/number-onboarding-execution/cp69-run-isolated-route-candidate-v2.py",
+      "reviewCopy": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp69-gateway-route-candidate-runner-review-copy-v2.py",
+      "sha256": "6e090aa4d6715f7951dd3b0fa90e91608bf54049b227f159ca6b7b6d7e287144",
+      "bytes": 22303,
+      "bothPathsMatchReceiptAndEachOther": true,
+      "astParse": "pass"
+    },
+    {
+      "artifact": "fixtureReceipt",
+      "path": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp69-gateway-route-candidate-v2e.json",
+      "sha256": "55ec858d2a61ff3fdbeac1a14a11e9cbbd125c2f0273a25f24c7188de7f1f276",
+      "matchesRemediationReceipt": true,
+      "matchesV2SourceHash": true
+    }
+  ],
+  "independentVerification": {
+    "method": "Bounded public-file review, exact SHA-256 checks, AST parsing, selected frozen-function execution against in-memory mocks, and synthetic anonymous-pipe tests",
+    "probeExitCode": 0,
+    "sourceComparison": "Exact equality to the old public baseline plus only the new case-sensitive map and route enum log field",
+    "activationSelfTest": "pass; actual reserve_stage filesystem operations redirected to a virtual filesystem",
+    "activationMainIntegrationCases": [
+      {"case": "success", "assertions": "pass", "exitCode": 0, "totalReloadCount": 1},
+      {"case": "existing_stage", "assertions": "pass", "exitCode": 2, "totalReloadCount": 0},
+      {"case": "authority_rejected", "assertions": "pass", "exitCode": 2, "totalReloadCount": 0},
+      {"case": "forward_rename_timeout_after_commit", "assertions": "pass", "exitCode": 2, "totalReloadCount": 0},
+      {"case": "pre_rename_failure", "assertions": "pass", "exitCode": 2, "totalReloadCount": 0},
+      {"case": "unknown_active_bytes", "assertions": "pass", "exitCode": 2, "totalReloadCount": 0},
+      {"case": "unreadable_active_bytes", "assertions": "pass", "exitCode": 2, "totalReloadCount": 0},
+      {"case": "postcheck_failure_after_forward_reload", "assertions": "pass", "exitCode": 2, "totalReloadCount": 2},
+      {"case": "rollback_rename_timeout_after_commit", "assertions": "pass", "exitCode": 2, "totalReloadCount": 2}
+    ],
+    "counterSelfTest": "pass; strict parser, three invalid controls, distinct joint buckets, and coverage predicates",
+    "counterMainIntegrationCases": {
+      "completeCaptureWithExpectedJointBucket": "pass; exit 0",
+      "overflow": "pass; exit 2/inconclusive",
+      "timeout": "pass; exit 2/inconclusive",
+      "nonzeroDockerStatus": "pass; exit 2/inconclusive",
+      "invalidUtf8": "pass; exit 2/inconclusive",
+      "tailSaturation": "pass; exit 2/inconclusive",
+      "invalidLine": "pass; exit 2/inconclusive",
+      "sourceMismatch": "pass; exit 2/inconclusive",
+      "captureError": "pass; exit 2/inconclusive"
+    },
+    "runnerSelfTest": "pass; parser controls plus stalled/overflowing anonymous pipes with synthetic process objects",
+    "v1HelperSnapshotHashesStillMatchOriginalReview": true,
+    "dockerInvoked": false,
+    "networkInvoked": false,
+    "realSubprocessStartedBySyntheticTests": false,
+    "existingRuntimeInspected": false,
+    "privateEnvOrApiLocalFilesRead": false,
+    "runtimeLogsRead": false,
+    "rawRuntimeLinesPersistedOrPrinted": false,
+    "gitInvoked": false,
+    "productChangedByReviewer": false,
+    "onlyFilesystemWrite": "This v2 review JSON"
+  },
+  "testQuality": {
+    "position": "Sufficient focused validation for the six remediations and the bounded activation proposal",
+    "fixtureStrength": "The final fixture uses distinct API/web status codes 201/202, eleven sequential synthetic requests, full safe-line parsing, observed per-case route/status assertions, canary leakage checks, complete coverage guards, and owned cleanup. It now tests the changed diagnostic rule without confusing that rule with the unchanged upstream prefix routing.",
+    "fixtureResult": {
+      "caseCount": 11,
+      "nginxTestExitCode": 0,
+      "allExpectedStatusesObserved": true,
+      "perCaseRouteAndStatusAssertionsPassed": true,
+      "coverageComplete": true,
+      "metaCount": 5,
+      "otherCount": 6,
+      "cleanupContainersRemoved": 2,
+      "cleanupNetworkRemoved": true,
+      "rawLinesPersistedOrPrinted": false
+    },
+    "failureCoverage": "Independent actual-main mocks supplement the delivered helper self-tests, exercising receipt ownership, mutation uncertainty, fail-closed recovery, terminal statuses, and reload counts rather than merely checking decision helpers.",
+    "limits": "The runner's pure self-test constructs its expected and observed route lists from the same CASES list, so that particular assertion does not independently establish real observed classifications. The separately hashed v2e fixture and its actual runner assertions provide the substantive per-case observation. No blocker remains on this basis.",
+    "unchangedApplicationValidation": "Prior accepted API/Web tests are reused. No unrelated application suite or full parent architecture review is needed for this remediation disposition.",
+    "realDelivery": "Synthetic fixture success does not prove an official provider request, receipt, real IN/OUT, or recovery."
+  },
+  "operationalAssessment": {
+    "authority": "The helper still requires separate root GO fields bound to its exact bytes, candidate/old config hashes, hostname, seven full container IDs, the network ID, and five volume names. This review is advisory and supplies no GO proof.",
+    "sameGatewayAndResources": "The operation remains limited to the pinned existing gateway config. Pre/post inventory checks cover the exact seven containers with image/owner/project/service/network/health guards and five volume names/owner/project labels. No create/recreate, environment change, Graph/provider/DB/tunnel operation, or volume mutation is introduced.",
+    "atomicFileUpdate": "A unique same-directory temporary config is written, metadata/hash-verified, checked against the expected active bytes/metadata immediately before rename, and atomically renamed. Old bytes stay in memory for guarded restore. Root must serialize this one-shot action; the helper does not claim an atomic compare-and-swap against external concurrent writers.",
+    "reloads": "One forward nginx -t and at most one forward graceful reload are present. Guarded restore runs nginx -t and allows at most one rollback graceful reload only after forward reload was attempted. Independent fault probes verified the intended counts and safe terminal failures.",
+    "postconditions": "Local and verified-TLS public GET checks retain root/health/privacy/JS coverage, reject redirects and cookies, enforce body bounds, and pin privacy bytes/hash/content type and JS hash. Final inventory and active-config hash/metadata checks remain present.",
+    "privacy": "The route output remains a fixed meta/other enum. Counter output adds aggregate joint buckets without exact URLs, payloads, credentials, raw lines, or request identifiers. Error diagnostics remain suppressed and safe failure categories are used.",
+    "liveState": "The remediation receipt says candidate-only/not activated. This reviewer did not access or alter live state. Runtime identity, mounted candidate/current-old bytes, public hashes, and resource preservation must pass the helper's checks when root actually executes."
+  },
+  "performance": {
+    "position": "No material regression identified",
+    "reason": "The single short anchored regex and short enum field add negligible fixed per-request work for this local gateway. No upstream round trips or buffering changes were added. Joint counters are bounded by the captured log window, and the runner's deadline-aware reader removes its prior unbounded wait.",
+    "limits": "Generic subprocess stdout caps remain checks after capture, not streaming memory caps; this inherited limitation is unchanged and does not require a benchmark or redesign for the known small public config/inspection outputs."
+  },
+  "elegance": {
+    "position": "Acceptable and proportionate",
+    "reason": "The source stays compact, and explicit receipt ownership plus a small recovery decision function address the demonstrated failure boundaries. Joint aggregate counting and a reusable bounded reader solve the specific evidence gaps without adding an application framework or broad abstraction."
+  },
+  "structuralRegression": {
+    "position": "No unrelated structural regression identified",
+    "reason": "Exact baseline comparison preserves every existing location, upstream, proxy header, websocket rule, upload limit, and timeout. The changes remain diagnostic source/helper work, with no API/Web/registration semantics change."
+  },
+  "scopeLimitsAndResiduals": [
+    "Only the named public remediation receipt, source, v2 execution/review copies, final v2e fixture proof, and already bounded baseline/v1 snapshot files were read. No Docker, network, runtime, Git, private, environment, secret, or api-app/.local-files access occurred.",
+    "Acceptance applies only to the exact hashes recorded here. Root owns integration, current-state checks, and the separate one-shot activation GO.",
+    "Original review and v1 helper snapshots remain preserved; this v2 result does not rewrite their findings or authorize v1 activation.",
+    "ST-CON-01 remains Pending and official VAL05 remains open and unwaived. Official real IN/OUT/recovery remain unproven.",
+    "Existing R02 dependency debt and private OWNER test cohort debt remain unchanged; no untrusted authenticated rollout is authorized.",
+    "Joint route/method/status totals support aggregate correlation only and cannot attribute a request to a provider or prove payload receipt/identity.",
+    "Temporary tunnel-hostname lifetime and real external delivery remain outside this focused code/helper review.",
+    "No waiver is requested or granted, and no parent closure follows from this acceptance."
+  ],
+  "recommendedRootDisposition": "Accept the bounded v2 remediation. Root may issue a separate one-shot GO bound to activation helper 90d088354fc77a628835dcf2d4a1ee18e6d4f022d6a88fe6d0f3281efaadceaa, candidate 6d4563cc5f5823bdb1177f350c942dc2472fc70133aef5b177fa4b57c5c9f1a0, old active config 9329131376e0aaa8020e7440954af5125a65eb2bba69fd016292fe63843fe707, hostname, and exact seven-container/network/five-volume pins. Preserve all built-in preflight, one-shot, reload, restore, and postcondition guards."
+}

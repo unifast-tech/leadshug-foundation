@@ -1,0 +1,13 @@
+{
+  "checkpoint": "cp69-human-destination-delivered",
+  "recordedUtc": "2026-10-17T17:31:32.547324+00:00",
+  "humanReply": "É o mesmo número e a mensagem tem dois tiques",
+  "destinationMatchesExistingLocalTestOfcCard": true,
+  "senderChecks": "two",
+  "callbackAcceptanceProvenByTicks": false,
+  "noPhoneContactBodyRequested": true,
+  "cp68State": "No persisted IN/receipt; current app subscription confirmed by scoped GET, default callback/messages human-confirmed; per-WABA override unknown",
+  "nextStep": "Prepare privacy-preserving local gateway meta/other route enum to distinguish route-specific POST delivery/status, with isolated fixture validation and separate root activation GO; no further live provider calls or new device retest yet",
+  "parentStatus": "Pending",
+  "officialVAL05": "open_unwaived"
+}

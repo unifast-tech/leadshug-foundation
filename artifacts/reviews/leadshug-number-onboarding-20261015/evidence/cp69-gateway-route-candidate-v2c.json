@@ -1,0 +1,142 @@
+{
+  "checkpoint": "cp69-gateway-route-candidate-v2",
+  "startedAtUtc": "2026-10-17T17:54:58.253Z",
+  "source": {
+    "path": "docker/local-gateway.conf.template",
+    "oldSha256": "9329131376e0aaa8020e7440954af5125a65eb2bba69fd016292fe63843fe707",
+    "candidateSha256": "6d4563cc5f5823bdb1177f350c942dc2472fc70133aef5b177fa4b57c5c9f1a0",
+    "expectedCaseSensitiveAnchoredRule": "~^/webhooks/meta/?$ meta;",
+    "fixtureCaseCount": 11
+  },
+  "images": {
+    "nginx": "sha256:76090a34b858323b6ab169711adc08253b5bee7123a973dc581ed46b643bc109",
+    "nodeFixtureRuntime": "sha256:fe5fb7eaf6a68123f9da6b92a0a69483180d213f556b4bedf313f04a383b4821",
+    "pullAttempted": false
+  },
+  "network": {
+    "internal": true,
+    "name": "cp69-route-probe-v2-20261017175458-7b8b2db6",
+    "id": "23bad6a7e0c01e18b06c523c566d6bcdda78a8c618589ba34f12e29e372f95ec"
+  },
+  "operations": {
+    "nginxTestExitCode": 0
+  },
+  "cleanup": {
+    "attempted": true,
+    "containerIds": [
+      "bdec542079a013dda51a4b58f55fb79a110e20155caf8541a65539bc3426edf0",
+      "45d0ec13c98c6e103567d4c7df3cb4437ba6113f6ac0e9b170be998859b916a1"
+    ],
+    "networkId": "23bad6a7e0c01e18b06c523c566d6bcdda78a8c618589ba34f12e29e372f95ec",
+    "containersRemoved": 2,
+    "networkRemoved": true,
+    "complete": true
+  },
+  "stub": {
+    "id": "bdec542079a013dda51a4b58f55fb79a110e20155caf8541a65539bc3426edf0",
+    "imageId": "sha256:fe5fb7eaf6a68123f9da6b92a0a69483180d213f556b4bedf313f04a383b4821",
+    "status": "running",
+    "owner": "number-onboarding",
+    "checkpoint": "cp69-route-candidate-v2",
+    "portBindings": "{}",
+    "networkId": "23bad6a7e0c01e18b06c523c566d6bcdda78a8c618589ba34f12e29e372f95ec"
+  },
+  "candidateGatewayCreated": {
+    "id": "45d0ec13c98c6e103567d4c7df3cb4437ba6113f6ac0e9b170be998859b916a1",
+    "imageId": "sha256:76090a34b858323b6ab169711adc08253b5bee7123a973dc581ed46b643bc109",
+    "status": "created",
+    "owner": "number-onboarding",
+    "checkpoint": "cp69-route-candidate-v2",
+    "portBindings": "{}"
+  },
+  "candidateGateway": {
+    "id": "45d0ec13c98c6e103567d4c7df3cb4437ba6113f6ac0e9b170be998859b916a1",
+    "imageId": "sha256:76090a34b858323b6ab169711adc08253b5bee7123a973dc581ed46b643bc109",
+    "status": "running",
+    "owner": "number-onboarding",
+    "checkpoint": "cp69-route-candidate-v2",
+    "portBindings": "{}",
+    "networkId": "23bad6a7e0c01e18b06c523c566d6bcdda78a8c618589ba34f12e29e372f95ec"
+  },
+  "syntheticHttp": {
+    "caseCount": 11,
+    "responseCount": 11,
+    "allExpectedStatusesObserved": false,
+    "requestsSentOnlyToIsolatedInternalNetwork": true,
+    "cases": [
+      {
+        "case": "exact_get",
+        "expectedRoute": "meta",
+        "observedStatus": 201,
+        "expectedStatus": 201
+      },
+      {
+        "case": "slash_get",
+        "expectedRoute": "meta",
+        "observedStatus": 201,
+        "expectedStatus": 201
+      },
+      {
+        "case": "query_get",
+        "expectedRoute": "meta",
+        "observedStatus": 201,
+        "expectedStatus": 201
+      },
+      {
+        "case": "exact_post",
+        "expectedRoute": "meta",
+        "observedStatus": 201,
+        "expectedStatus": 201
+      },
+      {
+        "case": "slash_post",
+        "expectedRoute": "meta",
+        "observedStatus": 201,
+        "expectedStatus": 201
+      },
+      {
+        "case": "uppercase_negative",
+        "expectedRoute": "other",
+        "observedStatus": 202,
+        "expectedStatus": 202
+      },
+      {
+        "case": "mixedcase_negative",
+        "expectedRoute": "other",
+        "observedStatus": 201,
+        "expectedStatus": 202
+      },
+      {
+        "case": "nested_negative",
+        "expectedRoute": "other",
+        "observedStatus": 201,
+        "expectedStatus": 201
+      },
+      {
+        "case": "health",
+        "expectedRoute": "other",
+        "observedStatus": 201,
+        "expectedStatus": 201
+      },
+      {
+        "case": "privacy",
+        "expectedRoute": "other",
+        "observedStatus": 202,
+        "expectedStatus": 202
+      },
+      {
+        "case": "root_query",
+        "expectedRoute": "other",
+        "observedStatus": 202,
+        "expectedStatus": 202
+      }
+    ],
+    "noLiveApiWebDatabaseVolumeOrCredentialsUsed": true
+  },
+  "failure": {
+    "phase": "synthetic_http_observed_status_mismatch",
+    "exitCode": null
+  },
+  "candidateStatus": "inconclusive_or_failed",
+  "completedAtUtc": "2026-10-17T17:55:01.974Z"
+}

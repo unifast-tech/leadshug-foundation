@@ -1,0 +1,55 @@
+{
+  "checkpoint": "root-cp69-review-v1-adjudication",
+  "acceptedUtc": "2026-10-17T17:51:10.911673+00:00",
+  "reviewSha256": "48d25636a336232c7d9ab8872889a41ba49871f2082fb5af4543b9581aae6af2",
+  "rootOutcome": "CHANGES_REQUIRED_NO_ACTIVATION",
+  "findings": [
+    {
+      "id": "CP69-RV-01",
+      "severity": "P1",
+      "resolution": "Integrated",
+      "state": "remediation_pending",
+      "rationale": "Concrete bounded operational defect; repair same diagnostic scope before root GO"
+    },
+    {
+      "id": "CP69-RV-02",
+      "severity": "P2",
+      "resolution": "Integrated",
+      "state": "remediation_pending",
+      "rationale": "Concrete bounded operational defect; repair same diagnostic scope before root GO"
+    },
+    {
+      "id": "CP69-RV-03",
+      "severity": "P2",
+      "resolution": "Integrated",
+      "state": "remediation_pending",
+      "rationale": "Concrete bounded operational defect; repair same diagnostic scope before root GO"
+    },
+    {
+      "id": "CP69-RV-04",
+      "severity": "P2",
+      "resolution": "Integrated",
+      "state": "remediation_pending",
+      "rationale": "Concrete bounded operational defect; repair same diagnostic scope before root GO"
+    },
+    {
+      "id": "CP69-RV-05",
+      "severity": "P2",
+      "resolution": "Integrated",
+      "state": "remediation_pending",
+      "rationale": "Concrete bounded operational defect; repair same diagnostic scope before root GO"
+    },
+    {
+      "id": "CP69-RV-06",
+      "severity": "P2",
+      "resolution": "Integrated",
+      "state": "remediation_pending",
+      "rationale": "Concrete bounded operational defect; repair same diagnostic scope before root GO"
+    }
+  ],
+  "v1Authorization": "not granted; helpers and source candidate retained as historical unexecuted activation preparation",
+  "v2Scope": "Case-sensitive route enum, isolated fixture with per-case assertions, bounded runner, full inventory IDs, stage ownership and uncertain-write reconciliation, joint route-method-status counts. Same gateway only after new review/GO.",
+  "parentStage": "Pending",
+  "officialVAL05": "open_unwaived",
+  "newWaiver": false
+}

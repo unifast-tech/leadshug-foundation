@@ -1,0 +1,221 @@
+{
+  "checkpoint": "cp69-gateway-route-candidate-v2",
+  "startedAtUtc": "2026-10-17T17:55:49.549Z",
+  "source": {
+    "path": "docker/local-gateway.conf.template",
+    "oldSha256": "9329131376e0aaa8020e7440954af5125a65eb2bba69fd016292fe63843fe707",
+    "candidateSha256": "6d4563cc5f5823bdb1177f350c942dc2472fc70133aef5b177fa4b57c5c9f1a0",
+    "expectedCaseSensitiveAnchoredRule": "~^/webhooks/meta/?$ meta;",
+    "fixtureCaseCount": 11
+  },
+  "images": {
+    "nginx": "sha256:76090a34b858323b6ab169711adc08253b5bee7123a973dc581ed46b643bc109",
+    "nodeFixtureRuntime": "sha256:fe5fb7eaf6a68123f9da6b92a0a69483180d213f556b4bedf313f04a383b4821",
+    "pullAttempted": false
+  },
+  "network": {
+    "internal": true,
+    "name": "cp69-route-probe-v2-20261017175549-5e98c3f6",
+    "id": "76838180fe52977b05f5f75ebded179c73da2500ca381c32d1b75e435f75cf1b"
+  },
+  "operations": {
+    "nginxTestExitCode": 0
+  },
+  "cleanup": {
+    "attempted": true,
+    "containerIds": [
+      "9fa0ee45e41f175bed618051f4780ac4f021c6e5f2b7c5aec9837768814e1869",
+      "1739e115bcb1cf63f9888b334e90862059ec8a7f5cf7f9ade0fc54492b20264f"
+    ],
+    "networkId": "76838180fe52977b05f5f75ebded179c73da2500ca381c32d1b75e435f75cf1b",
+    "containersRemoved": 2,
+    "networkRemoved": true,
+    "complete": true
+  },
+  "stub": {
+    "id": "9fa0ee45e41f175bed618051f4780ac4f021c6e5f2b7c5aec9837768814e1869",
+    "imageId": "sha256:fe5fb7eaf6a68123f9da6b92a0a69483180d213f556b4bedf313f04a383b4821",
+    "status": "running",
+    "owner": "number-onboarding",
+    "checkpoint": "cp69-route-candidate-v2",
+    "portBindings": "{}",
+    "networkId": "76838180fe52977b05f5f75ebded179c73da2500ca381c32d1b75e435f75cf1b"
+  },
+  "candidateGatewayCreated": {
+    "id": "1739e115bcb1cf63f9888b334e90862059ec8a7f5cf7f9ade0fc54492b20264f",
+    "imageId": "sha256:76090a34b858323b6ab169711adc08253b5bee7123a973dc581ed46b643bc109",
+    "status": "created",
+    "owner": "number-onboarding",
+    "checkpoint": "cp69-route-candidate-v2",
+    "portBindings": "{}"
+  },
+  "candidateGateway": {
+    "id": "1739e115bcb1cf63f9888b334e90862059ec8a7f5cf7f9ade0fc54492b20264f",
+    "imageId": "sha256:76090a34b858323b6ab169711adc08253b5bee7123a973dc581ed46b643bc109",
+    "status": "running",
+    "owner": "number-onboarding",
+    "checkpoint": "cp69-route-candidate-v2",
+    "portBindings": "{}",
+    "networkId": "76838180fe52977b05f5f75ebded179c73da2500ca381c32d1b75e435f75cf1b"
+  },
+  "syntheticHttp": {
+    "caseCount": 11,
+    "responseCount": 11,
+    "allExpectedStatusesObserved": true,
+    "requestsSentOnlyToIsolatedInternalNetwork": true,
+    "cases": [
+      {
+        "case": "exact_get",
+        "expectedRoute": "meta",
+        "observedRoute": "meta",
+        "routeMatch": true,
+        "observedStatus": 201,
+        "expectedStatus": 201
+      },
+      {
+        "case": "slash_get",
+        "expectedRoute": "meta",
+        "observedRoute": "meta",
+        "routeMatch": true,
+        "observedStatus": 201,
+        "expectedStatus": 201
+      },
+      {
+        "case": "query_get",
+        "expectedRoute": "meta",
+        "observedRoute": "meta",
+        "routeMatch": true,
+        "observedStatus": 201,
+        "expectedStatus": 201
+      },
+      {
+        "case": "exact_post",
+        "expectedRoute": "meta",
+        "observedRoute": "meta",
+        "routeMatch": true,
+        "observedStatus": 201,
+        "expectedStatus": 201
+      },
+      {
+        "case": "slash_post",
+        "expectedRoute": "meta",
+        "observedRoute": "meta",
+        "routeMatch": true,
+        "observedStatus": 201,
+        "expectedStatus": 201
+      },
+      {
+        "case": "uppercase_negative",
+        "expectedRoute": "other",
+        "observedRoute": "other",
+        "routeMatch": true,
+        "observedStatus": 202,
+        "expectedStatus": 202
+      },
+      {
+        "case": "mixedcase_negative",
+        "expectedRoute": "other",
+        "observedRoute": "other",
+        "routeMatch": true,
+        "observedStatus": 201,
+        "expectedStatus": 201
+      },
+      {
+        "case": "nested_negative",
+        "expectedRoute": "other",
+        "observedRoute": "other",
+        "routeMatch": true,
+        "observedStatus": 201,
+        "expectedStatus": 201
+      },
+      {
+        "case": "health",
+        "expectedRoute": "other",
+        "observedRoute": "other",
+        "routeMatch": true,
+        "observedStatus": 201,
+        "expectedStatus": 201
+      },
+      {
+        "case": "privacy",
+        "expectedRoute": "other",
+        "observedRoute": "other",
+        "routeMatch": true,
+        "observedStatus": 202,
+        "expectedStatus": 202
+      },
+      {
+        "case": "root_query",
+        "expectedRoute": "other",
+        "observedRoute": "other",
+        "routeMatch": true,
+        "observedStatus": 202,
+        "expectedStatus": 202
+      }
+    ],
+    "noLiveApiWebDatabaseVolumeOrCredentialsUsed": true
+  },
+  "accessLog": {
+    "sinceUtc": "2026-10-17T17:55:51.586465Z",
+    "tailLimit": 100,
+    "byteLimit": 65536,
+    "timeoutSeconds": 15,
+    "bytesRead": 1757,
+    "lineCount": 11,
+    "parsedLineCount": 11,
+    "unparsedLineCount": 0,
+    "utf8Valid": true,
+    "overflow": false,
+    "timeout": false,
+    "dockerExitCode": 0,
+    "coverageComplete": true,
+    "observedRouteSequence": [
+      "meta",
+      "meta",
+      "meta",
+      "meta",
+      "meta",
+      "other",
+      "other",
+      "other",
+      "other",
+      "other",
+      "other"
+    ],
+    "perCaseRouteAndStatusAssertionsPassed": true,
+    "routeCounts": {
+      "meta": 5,
+      "other": 6
+    },
+    "jointRouteMethodStatusCounts": [
+      {
+        "route": "meta",
+        "method": "GET",
+        "status": "201",
+        "count": 3
+      },
+      {
+        "route": "meta",
+        "method": "POST",
+        "status": "201",
+        "count": 2
+      },
+      {
+        "route": "other",
+        "method": "GET",
+        "status": "201",
+        "count": 3
+      },
+      {
+        "route": "other",
+        "method": "GET",
+        "status": "202",
+        "count": 3
+      }
+    ],
+    "syntheticCanaryMarkersAbsent": true,
+    "rawLinesPersistedOrPrinted": false
+  },
+  "candidateStatus": "validated_isolated_candidate_only_not_activated",
+  "completedAtUtc": "2026-10-17T17:55:53.337Z"
+}

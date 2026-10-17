@@ -1,0 +1,67 @@
+{
+  "checkpoint": "cp69-gateway-route-candidate-v2",
+  "startedAtUtc": "2026-10-17T17:54:40.950Z",
+  "source": {
+    "path": "docker/local-gateway.conf.template",
+    "oldSha256": "9329131376e0aaa8020e7440954af5125a65eb2bba69fd016292fe63843fe707",
+    "candidateSha256": "6d4563cc5f5823bdb1177f350c942dc2472fc70133aef5b177fa4b57c5c9f1a0",
+    "expectedCaseSensitiveAnchoredRule": "~^/webhooks/meta/?$ meta;",
+    "fixtureCaseCount": 11
+  },
+  "images": {
+    "nginx": "sha256:76090a34b858323b6ab169711adc08253b5bee7123a973dc581ed46b643bc109",
+    "nodeFixtureRuntime": "sha256:fe5fb7eaf6a68123f9da6b92a0a69483180d213f556b4bedf313f04a383b4821",
+    "pullAttempted": false
+  },
+  "network": {
+    "internal": true,
+    "name": "cp69-route-probe-v2-20261017175440-70dae6a3",
+    "id": "87a429b4963bd27f2d3cb9091ab7bf1271e1fb42f94624ee9483e9fafb85c845"
+  },
+  "operations": {
+    "nginxTestExitCode": 0
+  },
+  "cleanup": {
+    "attempted": true,
+    "containerIds": [
+      "8169c79f2f40c6ba6670df20dc3c0077c21c04ed0c2f56960712f1e6ade9ce96",
+      "41bc6a4d0b0dca11ed0375db7227687c57bfd15cffeb3a89c005a6bf1681fe96"
+    ],
+    "networkId": "87a429b4963bd27f2d3cb9091ab7bf1271e1fb42f94624ee9483e9fafb85c845",
+    "containersRemoved": 2,
+    "networkRemoved": true,
+    "complete": true
+  },
+  "stub": {
+    "id": "8169c79f2f40c6ba6670df20dc3c0077c21c04ed0c2f56960712f1e6ade9ce96",
+    "imageId": "sha256:fe5fb7eaf6a68123f9da6b92a0a69483180d213f556b4bedf313f04a383b4821",
+    "status": "running",
+    "owner": "number-onboarding",
+    "checkpoint": "cp69-route-candidate-v2",
+    "portBindings": "{}",
+    "networkId": "87a429b4963bd27f2d3cb9091ab7bf1271e1fb42f94624ee9483e9fafb85c845"
+  },
+  "candidateGatewayCreated": {
+    "id": "41bc6a4d0b0dca11ed0375db7227687c57bfd15cffeb3a89c005a6bf1681fe96",
+    "imageId": "sha256:76090a34b858323b6ab169711adc08253b5bee7123a973dc581ed46b643bc109",
+    "status": "created",
+    "owner": "number-onboarding",
+    "checkpoint": "cp69-route-candidate-v2",
+    "portBindings": "{}"
+  },
+  "candidateGateway": {
+    "id": "41bc6a4d0b0dca11ed0375db7227687c57bfd15cffeb3a89c005a6bf1681fe96",
+    "imageId": "sha256:76090a34b858323b6ab169711adc08253b5bee7123a973dc581ed46b643bc109",
+    "status": "running",
+    "owner": "number-onboarding",
+    "checkpoint": "cp69-route-candidate-v2",
+    "portBindings": "{}",
+    "networkId": "87a429b4963bd27f2d3cb9091ab7bf1271e1fb42f94624ee9483e9fafb85c845"
+  },
+  "failure": {
+    "phase": "synthetic_http_observed_status_mismatch",
+    "exitCode": null
+  },
+  "candidateStatus": "inconclusive_or_failed",
+  "completedAtUtc": "2026-10-17T17:54:44.669Z"
+}

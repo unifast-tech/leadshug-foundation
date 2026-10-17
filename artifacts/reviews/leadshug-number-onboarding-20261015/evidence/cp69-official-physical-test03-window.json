@@ -1,0 +1,13 @@
+{
+  "checkpoint": "cp69-official-physical-test03-window",
+  "sinceUtc": "2026-10-17T18:05:51.932693Z",
+  "businessUnit": "Local Test Ofc",
+  "routeConfigSha256": "6d4563cc5f5823bdb1177f350c942dc2472fc70133aef5b177fa4b57c5c9f1a0",
+  "counterSha256": "d0df3ac082ca182b4e2a7a6a7b52390733e3c80b8b8e09737341320651736581",
+  "databaseBaseline": "cp69-official-pretest03-baseline.json",
+  "databaseBaselineSha256": "20f67e6cbeb4ddd23e2eb3c82201b6081c5de215ee5d5e53d90e32f804d5dec5",
+  "status": "awaiting_operator_test03",
+  "test": "One real inbound from same other testWhatsApp, reply via LeadsHug if visible",
+  "noProviderWriteOrFurtherRegistrationByAgent": true,
+  "officialVAL05": "open_unwaived"
+}

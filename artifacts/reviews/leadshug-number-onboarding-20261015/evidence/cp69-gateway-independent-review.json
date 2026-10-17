@@ -1,0 +1,211 @@
+{
+  "findings": [
+    {
+      "id": "CP69-RV-01",
+      "severity": "P1",
+      "title": "A completed rename with an uncertain response skips guarded rollback",
+      "path": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp69-activate-gateway-route-review-copy.py",
+      "lines": [182, 184, 296, 297, 333],
+      "evidence": "install_bytes raises when the docker exec mv response times out or reports an invocation error. main sets changed=True only after install_bytes returns, and its rollback branch requires changed. A remote mv can complete before its response is lost.",
+      "reproduction": "An in-memory probe executed the frozen main and install_bytes AST with all Docker/filesystem effects mocked. The mv mock installed the exact candidate and then returned (None, None, timeout). main returned 2 with gateway_atomic_rename_failed, active bytes remained the candidate, and rollbackAttempted was absent/false. No nginx call occurred.",
+      "impact": "The required restore contract is not upheld at the mutation uncertainty boundary. A failed activation can leave the active config file changed without attempting the permitted hash-guarded restore.",
+      "requiredChange": "Track possible active-file mutation before invoking the rename. After an uncertain write, inspect active bytes: restore only the exact candidate, recognize the exact old config as unchanged, and explicitly refuse/report unknown bytes or an unavailable read. Preserve the maximum of one forward reload and one guarded rollback reload.",
+      "targetedValidation": "Mock a rename that succeeds remotely then times out, a failure before rename, exact-old/current-candidate/unknown/unreadable active bytes, and the forward-reload-attempt boundary. Assert active state, terminal status, restore decision, and reload counts. No live activation is needed for these tests."
+    },
+    {
+      "id": "CP69-RV-02",
+      "severity": "P2",
+      "title": "Literal map keys classify case variants outside the exact URI contract as meta",
+      "path": "docker/local-gateway.conf.template",
+      "lines": [3, 5, 6],
+      "evidence": "Nginx map literal string keys match without regard to case. The keys /webhooks/meta and /webhooks/meta/ therefore also classify /WEBHOOKS/META and mixed-case variants as meta. The unchanged location ^~ /webhooks/ is case-sensitive. The frozen contract permits only the two exact normalized URI spellings.",
+      "reproduction": "Static Nginx map semantics review. No Nginx or network was invoked by this reviewer. The delivered nine-case fixture does not contain uppercase or mixed-case negatives.",
+      "impact": "Unrelated case-variant traffic can increment meta counts even when it follows the web location, weakening the intended delivery diagnostic.",
+      "requiredChange": "Use a case-sensitive anchored match for the exact normalized path, for example ~^/webhooks/meta/?$, with default other. Preserve all existing locations and proxy behavior.",
+      "targetedValidation": "Add uppercase, mixed-case, and nested-path negatives to the isolated fixture, retain exact/slash/query/POST positives, and bind fresh evidence to the resulting source hash."
+    },
+    {
+      "id": "CP69-RV-03",
+      "severity": "P2",
+      "title": "Inventory comparison uses truncated Docker IDs against full pins",
+      "path": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp69-activate-gateway-route-review-copy.py",
+      "lines": [100, 101, 102, 103, 104, 105],
+      "evidence": "verify_inventory invokes docker ps -aq without --no-trunc and compares its lines directly to the seven 64-character EXPECTED_CONTAINERS IDs. Default docker ps output uses shortened IDs even with quiet output.",
+      "reproduction": "An in-memory probe supplied the expected seven default 12-character ps IDs to the frozen verify_inventory function. It raised owned_container_inventory_drift before inspecting individual resources. The actual command AST has no --no-trunc flag.",
+      "impact": "The proposed helper cannot pass ordinary preflight for the intended unchanged inventory. This is a safe failure, but it prevents the requested one-shot operation from being ready.",
+      "requiredChange": "Request untruncated IDs explicitly and keep the exact seven-resource equality guard.",
+      "targetedValidation": "Mock a matching full-ID inventory and extra, missing, or replaced IDs. Verify the matching case reaches the individual image/owner/project/service/network checks and that drift remains a failure."
+    },
+    {
+      "id": "CP69-RV-04",
+      "severity": "P2",
+      "title": "Refusing an existing stage receipt overwrites that receipt",
+      "path": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp69-activate-gateway-route-review-copy.py",
+      "lines": [248, 250, 254, 280, 281, 362],
+      "evidence": "When STAGE already exists and STAGE.tmp does not, main raises activation_stage_receipt_exists_refuse_overwrite, then its exception handler unconditionally calls write_stage(terminal). write_stage creates STAGE.tmp and os.replace overwrites the existing STAGE. The same exception path can create the shared stage receipt even when authority validation failed before this invocation owned it.",
+      "reproduction": "An in-memory virtual filesystem probe executed the frozen main and write_stage with an existing prior receipt and absent temporary file. main returned 2 for the refusal category, but the prior receipt was replaced by this invocation's terminal event.",
+      "impact": "A repeated or unauthorized invocation can erase the prior one-shot audit record or claim its sentinel, undermining reviewable operation history.",
+      "requiredChange": "Distinguish receipt ownership from failure reporting. Only update the stage receipt after this authorized invocation has exclusively acquired it; on a preexisting receipt or failed authority, report through the safe result without changing that receipt. Retain atomic writes for receipts owned by the current invocation.",
+      "targetedValidation": "Assert byte-for-byte preservation of preexisting stage and temporary receipts, absence of stage writes for rejected authority, and correct receipt updates after exclusive acquisition."
+    },
+    {
+      "id": "CP69-RV-05",
+      "severity": "P2",
+      "title": "Separate marginal counts lose the intended route/method/status correlation",
+      "path": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp69-gateway-route-counter-review-copy.py",
+      "lines": [126, 135, 136, 137, 145],
+      "evidence": "The counter emits independent byRoute, byMethod, and byStatus totals. It discards their relationship on each parsed line before producing the safe aggregate result.",
+      "reproduction": "A parser-only in-memory probe accepted both synthetic windows: meta POST 500 plus other GET 200; and meta GET 200 plus other POST 500. Both produce exactly the same current output counts, despite opposite conclusions about whether a meta POST occurred and its status.",
+      "impact": "With concurrent other traffic, the result cannot establish the route-specific method/status correlation that motivated this diagnostic. The existing request/provider-attribution limitation does not account for this avoidable loss of aggregate correlation.",
+      "requiredChange": "Add bounded joint aggregate buckets keyed only by the allowed route enum, method, and status, while retaining safe marginals if useful. Do not add raw lines, exact URLs, payloads, credentials, or request identifiers.",
+      "targetedValidation": "Use the two ambiguous windows above and assert distinct joint counts. Preserve strict rejection/inconclusive behavior for invalid lines, truncation, overflow, timeout, nonzero Docker status, and invalid UTF-8."
+    },
+    {
+      "id": "CP69-RV-06",
+      "severity": "P2",
+      "title": "The isolated runner's log deadline cannot interrupt its blocking read",
+      "path": "foundation_documentation/artifacts/tmp/number-onboarding-execution/cp69-run-isolated-route-candidate.py",
+      "lines": [85, 91, 92, 93, 96, 104],
+      "evidence": "bounded_logs checks time.monotonic before calling p.stdout.read(4096). That blocking buffered read has no timeout and can wait indefinitely when docker logs stalls without closing stdout. The p.wait timeout is reached only after read returns.",
+      "reproduction": "Static subprocess/pipe control-flow review; no stalled process or runtime was created. The completed candidate receipt is not evidence that this failure path is bounded.",
+      "impact": "A future isolated candidate rerun can hang before main's finally cleanup, leaving its two isolated containers/network until external recovery. Fresh fixture validation will be needed for the case-sensitive map fix.",
+      "requiredChange": "Use a deadline-aware pipe read, such as the selector-based pattern already present in the route counter, and ensure the child is terminated/killed and reaped on timeout before returning a failed result and executing owned-resource cleanup.",
+      "targetedValidation": "Mock a log process that produces no output and remains open, and one that exceeds the byte bound. Assert a terminal failure, bounded child cleanup, and entry to the runner's existing owned-resource cleanup without real Docker access."
+    }
+  ],
+  "checkpoint": "cp69-gateway-independent-review",
+  "reviewedAtUtc": "2026-10-17T17:48:41Z",
+  "result": "changes_required",
+  "advisoryOnly": true,
+  "readyForSeparateRootActivationGo": false,
+  "activationAuthorizedByThisReview": false,
+  "summary": "The source delta is small and preserves the existing proxy/auth behavior, but exact route classification and the proposed helper failure/evidence guards need bounded corrections before a separate one-shot root GO. Parent closure is outside this review.",
+  "reviewer": {
+    "role": "formal-reviewer",
+    "lane": "final_review",
+    "selectedModel": "gpt-6.1-sol",
+    "selectedEffort": "max",
+    "routingGuard": "foundation_documentation/artifacts/tmp/number-onboarding-execution/routing-cp69-gateway-review.json",
+    "routingGuardOutcome": "go",
+    "routingProofMode": "declared",
+    "freshBoundedReview": true,
+    "initialContext": "Frozen root review package and bounded public files; no parent conversation inherited.",
+    "independenceDisclosure": "Root subsequently supplied candidate observations about inventory IDs, aggregate correlation, uncertain rename, receipt preservation, and current-byte guards. This reviewer checked the frozen source independently and reproduced the first four applicable helper issues with in-memory mocks. The map case issue and candidate log-read timeout were also assessed within the bounded files. Root owns integration and the final GO."
+  },
+  "reviewedPackage": {
+    "path": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/root-cp69-gateway-review-package.json",
+    "readFirst": true,
+    "scope": "Operational CP69 delta before activation only",
+    "frozenDecisions": ["D-09", "D-10", "D-11"],
+    "implementationAuthority": "Preparation only; independent review and new one-shot root GO required for activation",
+    "parentStory": "ST-CON-01",
+    "parentStage": "Pending",
+    "officialVAL05": "open_unwaived",
+    "newWaiverRequestedOrGranted": false
+  },
+  "fileIntegrity": [
+    {
+      "path": "docker/local-gateway.conf.template",
+      "sha256": "8c5524a215717370c01a45f333854f24a2a413e84e3bd93184d80ab1a4efc00c",
+      "bytes": 1843,
+      "matchesFrozenPin": true
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp69-gateway-config-before.conf",
+      "sha256": "9329131376e0aaa8020e7440954af5125a65eb2bba69fd016292fe63843fe707",
+      "bytes": 1722,
+      "matchesFrozenPin": true
+    },
+    {
+      "path": "foundation_documentation/artifacts/tmp/number-onboarding-execution/cp69-run-isolated-route-candidate.py",
+      "sha256": "314e091aa075bcd1f2814bab40db71a127636f02a4b8099662c30bdbe3efb2ca",
+      "bytes": 14668,
+      "astParse": "pass"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp69-activate-gateway-route-review-copy.py",
+      "sha256": "8692655ec4273bdee0abfc9a51608ab309ee5a6038dcc3fd76b3c3abaca2db62",
+      "bytes": 21898,
+      "matchesPreparationReceiptAndRequestedPin": true,
+      "astParse": "pass"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp69-gateway-route-counter-review-copy.py",
+      "sha256": "f4041fb23b03113d47cd4a7395fd9d8b0df0202c409af43ed12440b675630e82",
+      "bytes": 7995,
+      "matchesPreparationReceiptAndRequestedPin": true,
+      "astParse": "pass"
+    }
+  ],
+  "evidenceRead": [
+    "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/root-cp69-gateway-review-package.json",
+    "foundation_documentation/artifacts/tmp/number-onboarding-execution/routing-cp69-gateway-review.json",
+    "docker/local-gateway.conf.template",
+    "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp69-gateway-config-before.conf",
+    "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp69-gateway-route-candidate.json",
+    "foundation_documentation/artifacts/tmp/number-onboarding-execution/cp69-run-isolated-route-candidate.py",
+    "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp69-gateway-activation-helper-preparation.json",
+    "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp69-activate-gateway-route-review-copy.py",
+    "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp69-gateway-route-counter-review-copy.py"
+  ],
+  "independentChecks": {
+    "method": "Read-only source/receipt inspection, SHA-256 checks, AST parsing, and execution of selected frozen functions against in-memory mocks only",
+    "probeProcessExitCode": 0,
+    "probes": [
+      {"name": "truncated_inventory_vs_full_ID_pins", "outcome": "defect_reproduced"},
+      {"name": "preexisting_stage_receipt_preservation", "outcome": "defect_reproduced"},
+      {"name": "completed_remote_rename_then_transport_timeout", "outcome": "defect_reproduced"},
+      {"name": "opposite_meta_POST_attribution_same_marginals", "outcome": "limitation_reproduced"}
+    ],
+    "sourceAndHelpersExecutedAgainstRuntime": false,
+    "dockerInvoked": false,
+    "networkInvoked": false,
+    "privateOrEnvFilesRead": false,
+    "rawRuntimeLogsRead": false,
+    "existingRuntimeInspected": false,
+    "productChanges": false,
+    "gitInvoked": false,
+    "onlyFilesystemWrite": "This independent review JSON"
+  },
+  "testQuality": {
+    "deliveredIsolatedEvidence": "The receipt records nginx -t exit 0, nine HTTP 200 responses, nine parsed lines, meta=5/other=4, GET=7/POST=2, absent synthetic path/query/auth/cookie/body markers, and complete removal of two isolated containers and one internal network. The runner checks these assertions and returns failure if cleanup is incomplete. This reviewer did not rerun it.",
+    "candidateCreatedStatus": "The candidateGateway status=created is captured immediately after create and before start; it does not contradict later requests or the cleanup receipt.",
+    "privacyAssertions": "The map emits only meta/other, and the new log field never emits $uri or $request. Existing inherited access logging remains disabled and the redacted server format remains selected. Synthetic marker checks and a strict full-line parser provide meaningful leakage checks for this fixture. No raw lines are persisted or printed by the reviewed paths.",
+    "falseSuccessExposure": "The fixture verifies aggregate route counts rather than each case's observed route, so compensating classification errors can pass. Both isolated upstream ports return the same response, so this fixture does not independently establish route destinations. Static before/after comparison shows proxy locations are unchanged, making the latter an accepted scope limit. Add focused per-case route assertions when extending the fixture for the case-sensitive fix.",
+    "activationCoverage": "Preparation proves AST parse only for the activation helper. The demonstrated uncertain-rename and receipt-refusal defects require targeted synthetic failure coverage before activation; a generic unchanged API/Web suite would not exercise them.",
+    "counterCoverage": "The delivered parser self-test accepts one valid line and rejects three invalid lines. The counter's streaming log capture, tail-limit detection, strict UTF-8/full-line parsing, and nonzero exit for incomplete coverage are useful. Joint buckets and focused failure-path probes are still required for the diagnostic contract.",
+    "receiptCaveat": "The preparation receipt declares routeCounterContract.sourceShaGuard=true, but the counter has an active-config SHA guard and no local source-file SHA check. Align the receipt with the actual runtime-config guard or implement the claimed guard; this mismatch was not treated as an additional activation blocker.",
+    "unchangedTests": "Accepted unchanged API/Web validation is reused as directed. No full parent review or unrelated suite is requested. Synthetic fixtures do not prove provider delivery or a real receipt."
+  },
+  "operationalContractAssessment": {
+    "sameGatewayAndResourceScope": "The code targets the pinned existing gateway and enumerates seven container IDs/images plus owner/project/service/network and five owned volume names/labels. It performs no container create/recreate, volume mutation, environment read, Graph call, database operation, provider mutation, or tunnel action. Inventory implementation currently fails as reported.",
+    "authorityAndPins": "The helper requires explicit root GO fields bound to its own file hash, candidate/old config hashes, hostname, seven full container IDs, the network ID, and five volume names. This is appropriate for the bounded one-shot action. This reviewer read hash-matching public snapshots, not the execution copies; root must verify the actual execution bytes when issuing GO.",
+    "atomicWriteAndCurrentBytes": "Preflight retains exact old bytes and metadata in memory, verifies the mounted candidate and active old hash/metadata, writes a unique same-directory temp file, verifies its candidate hash/metadata, and renames it atomically. Candidate and final hashes are checked again. There is no atomic compare-and-swap protecting a concurrent external active-config writer; no concurrency guarantee is claimed, and root must serialize this operation. The uncertain-rename defect remains blocking.",
+    "nginxTestAndReloadCount": "There is one forward nginx -t call and at most one forward nginx -s reload call. Restore verifies old bytes and metadata, runs nginx -t, and invokes at most one rollback reload only if forward reload was attempted. Those static call bounds are satisfactory; they do not cure the skipped rollback path.",
+    "postchecks": "Local and verified-TLS public GET checks cover root, health, privacy, and the pinned JS path. They reject redirects, Set-Cookie, excessive bodies, wrong privacy byte/hash/content type, and wrong JS hash. Inventory and active bytes are checked afterward. These checks cannot by themselves prove new worker log format adoption or provider delivery.",
+    "activationState": "No activation was performed by this reviewer; the supplied preparation receipt explicitly remains frozen/not activated. This review grants no runtime authority."
+  },
+  "performance": {
+    "position": "No material production performance regression identified in the bounded source delta",
+    "reason": "A small route classification and one short enum field add constant work and approximately 11 to 12 log bytes per request. No extra upstream requests, locations, buffers, or authentication work are introduced. A focused case-sensitive regex of this size does not warrant a benchmark for this local diagnostic scope.",
+    "helperLimits": "The counter enforces its 1 MiB log bound while streaming and detects tail saturation. Generic subprocess caps in the helpers are checked after subprocess.run has captured output; they are not hard streaming memory limits. The isolated runner's unenforceable log-read deadline is separately reported."
+  },
+  "elegance": {
+    "position": "The source change is compact; repair the specific matching and helper state-ownership defects locally",
+    "reason": "A fixed enum and the existing safe log format fit the stated diagnostic goal. The helpers already separate resource checks, file transfer, probes, and receipts. No framework or broad refactor is needed to address these findings."
+  },
+  "structuralRegression": {
+    "position": "No unrelated product structural regression identified",
+    "reason": "The before/after gateway configuration preserves all proxy locations, headers, limits, upstreams, websocket handling, and timeouts. No API/Web/registration semantics change is present in the supplied delta. Current helper defects affect operational readiness and evidence integrity, not a reviewed application redesign."
+  },
+  "scopeLimitsAndResiduals": [
+    "Only the named public package, receipts, source, runner, routing guard, and exact review snapshots were read; no runtime, Docker, network, secrets, Env/private files, api-app/.local-files, Git, or unrelated repository files were accessed.",
+    "A later fixed helper/source must receive new hashes, focused proof, fresh frozen snapshots, and a bounded independent disposition before root GO; this result applies only to the hashes above.",
+    "Parent ST-CON-01 remains Pending, official VAL05 remains open and unwaived, and real official IN/OUT/recovery remain unproven.",
+    "Existing R02 dependency debt and private OWNER test cohort debt remain; no untrusted authenticated rollout is authorized.",
+    "Route aggregates, including corrected joint counts, cannot identify a particular provider request or establish payload receipt/identity.",
+    "Temporary public tunnel hostname lifetime and real external delivery are outside this source/helper review.",
+    "No new waiver is granted and no parent architecture or unchanged API/Web re-review is required by this disposition."
+  ],
+  "recommendedRootDisposition": "Do not activate the frozen v1. Integrate the bounded corrections, regenerate the exact isolated candidate evidence and helper snapshots, obtain a fresh bounded review result, then decide a separate hash-bound one-shot root GO."
+}

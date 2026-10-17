@@ -1,0 +1,47 @@
+{
+  "checkpoint": "root-cp69-public-afteractivation",
+  "startedUtc": "2026-10-17T18:04:35.546010+00:00",
+  "endedUtc": "2026-10-17T18:04:35.999118+00:00",
+  "hostname": "addressing-mar-perform-hormone.trycloudflare.com",
+  "normalVerifiedTLS": true,
+  "passed": true,
+  "checks": [
+    {
+      "path": "/",
+      "status": 200,
+      "bytes": 694,
+      "sha256": "f21b2cb8528bab142bdba0babc64b7cb4cff821152ef4416698fd062642d5acd",
+      "redirect": false,
+      "setCookie": false,
+      "withinLimit": true
+    },
+    {
+      "path": "/health",
+      "status": 200,
+      "bytes": 15,
+      "sha256": "a29ee2b15c494311c52521766e44af56a3ad2248e7a8ab465e5206463c13d288",
+      "redirect": false,
+      "setCookie": false,
+      "withinLimit": true
+    },
+    {
+      "path": "/privacidade.html",
+      "status": 200,
+      "bytes": 12865,
+      "sha256": "d0f72c588f0f014de46a327e34d6b26125ca115bc973b56bbb926cd8519e701d",
+      "redirect": false,
+      "setCookie": false,
+      "withinLimit": true
+    },
+    {
+      "path": "/assets/index-txvhtd65.js",
+      "status": 200,
+      "bytes": 258450,
+      "sha256": "d14343604557296f2ed62c1df47d9c80d81c323abafd89ccbb64a6a0746ff4bd",
+      "redirect": false,
+      "setCookie": false,
+      "withinLimit": true
+    }
+  ],
+  "proofLimit": "Public health/assets only; no webhook receipt or official delivery inferred"
+}

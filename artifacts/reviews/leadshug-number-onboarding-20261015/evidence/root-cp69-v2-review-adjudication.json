@@ -1,0 +1,52 @@
+{
+  "checkpoint": "root-cp69-v2-review-adjudication",
+  "acceptedUtc": "2026-10-17T18:03:54.907398+00:00",
+  "rootAccepted": true,
+  "reviewSha256": "411e15b5e4a6fe2a66ce2fff5c11e56d313785e9da7400dab7782c5514c005da",
+  "findings": [
+    {
+      "id": "CP69-RV-01",
+      "resolution": "Integrated",
+      "state": "verified_in_frozen_v2",
+      "evidence": "cp69-gateway-independent-review-v2.json"
+    },
+    {
+      "id": "CP69-RV-02",
+      "resolution": "Integrated",
+      "state": "verified_in_frozen_v2",
+      "evidence": "cp69-gateway-independent-review-v2.json"
+    },
+    {
+      "id": "CP69-RV-03",
+      "resolution": "Integrated",
+      "state": "verified_in_frozen_v2",
+      "evidence": "cp69-gateway-independent-review-v2.json"
+    },
+    {
+      "id": "CP69-RV-04",
+      "resolution": "Integrated",
+      "state": "verified_in_frozen_v2",
+      "evidence": "cp69-gateway-independent-review-v2.json"
+    },
+    {
+      "id": "CP69-RV-05",
+      "resolution": "Integrated",
+      "state": "verified_in_frozen_v2",
+      "evidence": "cp69-gateway-independent-review-v2.json"
+    },
+    {
+      "id": "CP69-RV-06",
+      "resolution": "Integrated",
+      "state": "verified_in_frozen_v2",
+      "evidence": "cp69-gateway-independent-review-v2.json"
+    }
+  ],
+  "rootSourceCommit": "80e3940126f22a941f90dba4f5e801b6c0eb2f58",
+  "sourceSha256": "6d4563cc5f5823bdb1177f350c942dc2472fc70133aef5b177fa4b57c5c9f1a0",
+  "sourcePushOrGitlinkWrite": false,
+  "oneShotGo": "root-cp69-gateway-route-activation-go.json",
+  "activationOutcome": "await actual execution receipt; review alone proves no runtime state",
+  "parentStage": "Pending",
+  "officialVAL05": "open_unwaived",
+  "waiver": false
+}
