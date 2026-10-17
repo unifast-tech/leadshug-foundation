@@ -1,0 +1,75 @@
+{
+  "checkpoint": "cp47",
+  "captured_at": "2026-10-17T03:49:59.381464+00:00",
+  "artifacts_sha256_verified": {
+    "cp47-candidate-build.log": "e353c4b8ca676ad29e4a5375ef923576f571ae9448d7feed7e07243cd64661ed",
+    "cp47-candidate-build.json": "10e002812b6ecb101ea13d499542a6acbb3fb963ce82c666f9c81164247c349c",
+    "cp47-candidate-build.md": "63d660c4ecb0a8ea6e112960f111d6f1c0dd4718d506464c56decfc0d4a4a686"
+  },
+  "source9_actualbytes_verified": true,
+  "source_manifest": "af21e98e41ec1ba86f4dac877ba2bd69b3ff0857fba930ca1c3973428723b581",
+  "actual_candidate_tag_image_and_labels_verified": [
+    "sha256:fe5fb7eaf6a68123f9da6b92a0a69483180d213f556b4bedf313f04a383b4821",
+    "number-onboarding",
+    "cp47",
+    "af21e98e41ec1ba86f4dac877ba2bd69b3ff0857fba930ca1c3973428723b581"
+  ],
+  "actual_seven_container_ids_images_owners_running_verified": true,
+  "actual_five_volume_names_drivers_owners_verified": true,
+  "reported_probe": {
+    "mode": "one effective probe: docker run --rm --network none --read-only --entrypoint node; no ports, volumes, or env args; API entrypoint and migration command were not run",
+    "attemptRecord": [
+      {
+        "attempt": 1,
+        "command": "node - with stdin script",
+        "exitCode": 0,
+        "stdout": "empty",
+        "interpretation": "Docker Desktop did not pass the here-document script over stdin; no checks ran. The ephemeral container exited and --rm removed it."
+      },
+      {
+        "attempt": 2,
+        "command": "node -e public metadata script",
+        "exitCode": 0,
+        "interpretation": "Effective diagnostic probe; no further container runs were made."
+      }
+    ],
+    "runtime": {
+      "node": "v22.23.3",
+      "os": "Alpine Linux",
+      "platform": "linux",
+      "architecture": "x64",
+      "openssl": "3.5.8"
+    },
+    "prisma": {
+      "clientVersion": "6.19.3",
+      "engineVersion": "c2990dca591cba766e3b7ef5d9e8a84796e47ab7",
+      "datamodelModelCount": 22,
+      "queryEngineArtifact": "libquery_engine-linux-musl-openssl-3.0.x.so.node",
+      "clientConstructorReturnedWithoutError": true,
+      "instanceofPrismaClient": false,
+      "databaseConnectionAttempted": false
+    },
+    "compiledExports": {
+      "ChannelsService": "function",
+      "convergeReceiptVerifiedAttempt": "function",
+      "EvolutionWebhookController": "function",
+      "META_CLIENT": "symbol",
+      "MetaHttpClient": "function",
+      "MetaIndisponivelError": "function",
+      "MetaErrorPrototypeIsError": true
+    },
+    "compiledModuleSha256": {
+      "dist/domain/channels/channels.service.js": "aa2d4e51ee906b3cc7dd79d4835cd331b00eaa772655506630e6f944d13bda73",
+      "dist/domain/channels/receipt-attempt-convergence.js": "93495861c2b300b66c5d5292803e3fbb71819c662896ae81ef457e8a4abbd1c4",
+      "dist/surfaces/webhooks/evolution.controller.js": "09b1ba14d22f90d345cce9f1e87cfcee8de4560a755c6f59528e22b7955d47ac",
+      "dist/integrations/meta/meta.client.js": "a756c9693c574f6fb4987d878af8d4fbeaf9f07c86a5c5e6acadeca4f7a771cb"
+    },
+    "probeContainerRemains": false
+  },
+  "root_disposition": "accept isolated current candidate prerequisite for distinct final only; no served API/database/provider/recovery claim",
+  "limitations": [
+    "First stdin probe was a no-op; effective node -e probe then ran, both removed. No checks inferred from first.",
+    "Prisma metadata/artifact/constructor only; proxy instanceof false recorded; no DB query/compatibility inferred.",
+    "Root initial read checked generic owner label, which is not operator ownership authority; corrected to compose-declared com.leadshug.channels.owner and all7/5 match. No runtime mutation."
+  ]
+}

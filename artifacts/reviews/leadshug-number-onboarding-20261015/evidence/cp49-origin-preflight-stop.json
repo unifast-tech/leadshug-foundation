@@ -1,0 +1,13 @@
+{
+  "checkpoint": "cp49-origin-preflight",
+  "captured_at": "2026-10-17T04:06:19.182020+00:00",
+  "reported_by": "/root/resume_runtime_cp48 terminal STOP",
+  "transport_tunnel_candidate_commits_operator7_5_guards": "passed as reported, before any mutation",
+  "stop_reason": "unique public CHANNELS_LOCAL_ORIGIN value matched neither guessed previous runtime origin nor current verified origin",
+  "old_value_recorded": false,
+  "private_field_hash_or_dump": false,
+  "observed_file_mode": "0777 preserved; no permission change",
+  "mutations_or_credentials_provider_db_access": false,
+  "root_adjudication": "The expected old privatefile origin was inferred from old API runtime, not a verified privatefile fact. It is not an authority condition for updating the already-authorized unique PUBLIC origin field. Supersede only that value-equality precondition, preserve actual previous bytes IN MEMORY for rollback and all other bytes/permissions; no secret/oldvalue exposure or extra edits. Same current host verified as own viaTLS/JS/processidentity remains required. No user permission needed for same already-authorized public origin update.",
+  "next": "resume same bounded cp49 task with corrected precondition; no source or candidate change"
+}

@@ -1,0 +1,35 @@
+{
+  "checkpoint": "cp36i-final",
+  "captured_at": "2026-10-17T04:02:16.070625+00:00",
+  "raw_sha256": "72612d92e48fb22d70214e6d869bc8c025f929947d31debe1a804db69831a474",
+  "schema_absolute_binding_merge_valid": true,
+  "full_independent_final_completed": true,
+  "source_candidate_disposition": "CONDITIONAL private local checkpoint ONLY for already-authorized nonofficial recovery, not an unqualified final local assurance or delivery acceptance",
+  "findings": {
+    "FINAL-CP36I-01": {
+      "resolution": "Deferred",
+      "classification": "release-blocker",
+      "routing": "fix-current-contract",
+      "owner": "Operational/Coder executor and independent assurance reviewer of this SAME approved TODO",
+      "deadline": "BEFORE real official onboarding/authorization and BEFORE Local-Implemented, DOD-06/VAL-06 or overall delivery closure",
+      "rationale": "Production app-equality guard is present/correct by independent final inspection; no production defect or exploit observed. Current unit wrong-app fixture does not isolate semantic audience, so no independent audience-regression claim is made. The private OWNER-only nonofficial Evolution recovery does not execute the Meta grant path. Preserve exact reviewed source/candidate and exercise already-authorized test without changing code. Add recommended one valid-shaped wrong-app unit case and refresh affected API/reviews before crossing stated deadline. This is not gate waiver or release-clean status."
+    },
+    "FINAL-CP36I-R01": {
+      "resolution": "Integrated",
+      "rationale": "Existing D06/VAL05 mandatory external requirement remains open/unwaived; proceed only bounded private recovery, then human proof."
+    },
+    "FINAL-CP36I-R02": {
+      "resolution": "Integrated",
+      "rationale": "Existing unchanged dependency exception retained private OWNER/synthetic cohort only; named backlog before untrusted users. No new upgrade scope."
+    },
+    "FINAL-CP36I-02": {
+      "resolution": "Integrated",
+      "rationale": "Root reconciles live summary/matrix/adherence/preflight rows to actual accepted terminal TQA and conditional final. Historical raw/preflight immutable."
+    }
+  },
+  "overall_stage": "Pending",
+  "D05_D06_D07": "Exception",
+  "DOD06_VAL06": "blocked by remaining local assurance and external sequence; not marked passed",
+  "waivers": [],
+  "allowed_next": "exact-byte local source checkpoints, accepted same image API-only activation/public origin + SAME already-authorized Evolution-only interruption. No official onboarding before audience test closure, no source push/gitlink/production/history/proactive scope."
+}

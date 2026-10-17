@@ -1,0 +1,91 @@
+{
+  "checkpoint": "cp49-api-activation",
+  "capturedAtUtc": "2026-10-17T04:14:00Z",
+  "scope": "Bounded activation of the accepted private API candidate for same-container unofficial Evolution recovery. No official Meta flow or outbound agent message action.",
+  "authority": {
+    "routing": "cp49-api-recovery GO / authority GO85",
+    "admission": "foundation_documentation/artifacts/tmp/number-onboarding-execution/cp49-api-activation-recovery-task.txt",
+    "finalRestriction": "Conditional private nonofficial checkpoint only; FINAL-CP36I-01 remains release-blocker before official onboarding and overall delivery."
+  },
+  "sourceAndImage": {
+    "apiCommit": "7e948c3045da736f7db1f8e97825cf6384777e4f",
+    "webCommit": "34408c47b4f2f935291d5fc9934f5118b5516bd4",
+    "sourceManifestSha256": "af21e98e41ec1ba86f4dac877ba2bd69b3ff0857fba930ca1c3973428723b581",
+    "candidateTag": "leadshug-channels-api-candidate:cp36i-af21e98e41ec",
+    "candidateImageId": "sha256:fe5fb7eaf6a68123f9da6b92a0a69483180d213f556b4bedf313f04a383b4821",
+    "activatedApiContainerId": "c138a8456bc834d53c2ab4c3bc3c0307024dbc5a9cbb9a11c337218adcde7324"
+  },
+  "origin": {
+    "hostname": "comments-heart-gale-muscles.trycloudflare.com",
+    "originLineUnique": true,
+    "originOnlyBytePreservingUpdate": true,
+    "originalBytesHeldInMemoryForGuardedRollback": true,
+    "otherBytesAndLineEndingsPreserved": true,
+    "fileMode0777Preserved": true,
+    "oldValuePersistedOrEmitted": false,
+    "tlsVerificationDisabled": false
+  },
+  "runtime": {
+    "apiStatus": "running healthy",
+    "effectiveNodeEnvProduction": true,
+    "webOriginMatchesVerifiedPublicOrigin": true,
+    "localhostRootStatus": 200,
+    "localhostHealthStatus": 200,
+    "publicRootStatus": 200,
+    "publicHealthStatus": 200,
+    "servedAsset": "assets/index-txvhtd65.js",
+    "servedAssetStatus": 200,
+    "servedAssetBytes": 258450,
+    "servedAssetSha256": "d14343604557296f2ed62c1df47d9c80d81c323abafd89ccbb64a6a0746ff4bd",
+    "compiledModuleSha256": {
+      "dist/domain/channels/channels.service.js": "aa2d4e51ee906b3cc7dd79d4835cd331b00eaa772655506630e6f944d13bda73",
+      "dist/domain/channels/receipt-attempt-convergence.js": "93495861c2b300b66c5d5292803e3fbb71819c662896ae81ef457e8a4abbd1c4",
+      "dist/surfaces/webhooks/evolution.controller.js": "09b1ba14d22f90d345cce9f1e87cfcee8de4560a755c6f59528e22b7955d47ac",
+      "dist/integrations/meta/meta.client.js": "a756c9693c574f6fb4987d878af8d4fbeaf9f07c86a5c5e6acadeca4f7a771cb"
+    },
+    "compiledHashesMatchAcceptedCandidate": true
+  },
+  "ownerReadiness": {
+    "normalOwnerLoginStatus": 200,
+    "meOnboardingCapabilitiesBusinessUnitsStatus": 200,
+    "ownerRole": true,
+    "onboardingComplete": true,
+    "unofficialCapabilityAvailable": true,
+    "businessUnitCount": 1
+  },
+  "preRestartBaseline": {
+    "adminVerifyInvokedOnceBeforeRestart": true,
+    "verifyResponseStatus": 200,
+    "verifyResponseState": "PENDING_RECEIPT",
+    "canonicalDbReconciled": true,
+    "channelStatus": "CONECTADO",
+    "providerConnectionState": "CONNECTED",
+    "providerOpenAndCurrentOwnerIdentityVerified": true,
+    "ownNumberVerified": true,
+    "pairingEpoch": 1,
+    "verifiedEpoch": 1,
+    "generation": 1,
+    "receiptVerified": true,
+    "connectedAtUtc": "2026-10-17T04:12:16.346Z",
+    "currentAttemptId": "91a050d2-b6b7-4d3a-ac48-97392688584d",
+    "attemptState": "CONNECTED",
+    "attemptStage": "RECEIPT_VERIFIED",
+    "attemptVersion": 2,
+    "activeLease": false
+  },
+  "preservation": {
+    "otherSixContainersSameIdsImagesAndRunningState": true,
+    "fiveProjectVolumesPreserved": true,
+    "apiOnlyComposeRecreation": true,
+    "databaseMigrationOrRepair": false,
+    "privateFileOtherFieldsReadOrChanged": false,
+    "apiAppLocalFilesAccessed": false,
+    "sourceGitOrComposeFilesChanged": false
+  },
+  "checks": {
+    "configEnvDumped": false,
+    "credentialsOrProviderSecretsEmitted": false,
+    "MetaOrOfficialActions": false,
+    "postRestartAdminVerify": false
+  }
+}

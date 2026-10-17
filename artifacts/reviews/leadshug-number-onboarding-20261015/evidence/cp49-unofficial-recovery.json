@@ -1,0 +1,70 @@
+{
+  "checkpoint": "cp49-unofficial-recovery",
+  "capturedAtUtc": "2026-10-17T04:14:00Z",
+  "scope": "One already-authorized interruption of the same owned Evolution container, followed by automatic recovery proof. No pairing, QR, SQL repair, fake webhook, message send, or official flow.",
+  "evolution": {
+    "containerId": "cf749491f7149dc46ec4db597b2d9c12faf918dd4f05b5512ba75adaf8e29ea4",
+    "imageId": "sha256:385a3c4bedf42c66b46b43d06aae8712620144a84aa3b2c831b30c68435ab27c",
+    "ownerLabel": "number-onboarding",
+    "stopRequestedAtUtc": "2026-10-17T04:13:00.392Z",
+    "stopSucceeded": true,
+    "startRequestedAtUtc": "2026-10-17T04:13:01.479Z",
+    "startSucceeded": true,
+    "startCompletedAtUtc": "2026-10-17T04:13:01.849Z",
+    "sameContainerRunningAfterRestart": true
+  },
+  "automaticRecovery": {
+    "proofCapturedAtUtc": "2026-10-17T04:13:16.521Z",
+    "freshConnectedAtUtc": "2026-10-17T04:13:15.384Z",
+    "connectedAtAfterRestart": true,
+    "channelStatus": "CONECTADO",
+    "providerConnectionState": "CONNECTED",
+    "attemptId": "91a050d2-b6b7-4d3a-ac48-97392688584d",
+    "attemptState": "CONNECTED",
+    "attemptStage": "RECEIPT_VERIFIED",
+    "attemptVersion": 2,
+    "generation": 1,
+    "pairingEpoch": 1,
+    "verifiedEpoch": 1,
+    "receiptPresent": true,
+    "ownNumberVerified": true,
+    "currentIdentityMapping": true,
+    "activeLease": false,
+    "postRestartAdminVerifyOrPairing": false
+  },
+  "boundedProviderRead": {
+    "performedOnlyAfterFreshAutomaticProof": true,
+    "providerInstanceFound": true,
+    "providerNameMatchesCurrentIdentity": true,
+    "connectionOpen": true,
+    "ownerIdentityMatchesBusinessUnit": true,
+    "rawProviderDataOrIdentityEmitted": false
+  },
+  "conversationPreservation": {
+    "knownPriorConversationId": "16500b6e-a6eb-42b6-bc78-e7f413b2f47e",
+    "sameConversationPresent": true,
+    "sameMessageIdsPresent": true,
+    "messageCount": 2,
+    "directions": [
+      "IN",
+      "OUT"
+    ],
+    "statuses": [
+      "RECEBIDA",
+      "ENVIADA"
+    ]
+  },
+  "scopeDeviation": {
+    "broaderKnownBusinessUnitMetadataReadOccurred": true,
+    "rowsWereLimitedToMetadataNoContactContentOrPII": true,
+    "noMutationFromThatRead": true,
+    "unrelatedRowIdentifiersPersisted": false,
+    "note": "A readback queried all conversation rows for the known BU before the exact-only scope was noticed. The selection contained opaque conversation/message IDs, direction, status, timestamps, and channel origin only; no contact, content, owner data, phone, or payload fields. No unrelated row data is included in this artifact."
+  },
+  "releaseBoundary": {
+    "privateUnofficialRecovery": "completed",
+    "officialOnboarding": "not attempted",
+    "overallDelivery": "not claimed",
+    "FINAL_CP36I_01": "remains release blocker before official onboarding and overall delivery"
+  }
+}

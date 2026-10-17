@@ -1,0 +1,59 @@
+{
+  "schema_version": "subagent-review-merge-v2",
+  "artifact_kind": "subagent_review_merge",
+  "authoritative": false,
+  "edit_policy": "derived_merge_packet",
+  "dispatch_path": "/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp36i-tqa.dispatch.json",
+  "review_kind": "test_quality_audit",
+  "review_count": 1,
+  "reviewer_labels": [
+    "fresh independent internal no-context formal test-quality reviewer"
+  ],
+  "highest_finding_severity": "high",
+  "axis_summary": {
+    "performance": "acceptable",
+    "elegance": "acceptable",
+    "structural_soundness": "acceptable",
+    "operational_fit": "mixed"
+  },
+  "recommended_paths": [
+    "Treat this audit as favorable only for the current private nine-path source/test gate. Keep D-05 through D-07 exceptions and D-06/VAL-05 blocked and unwaived; retain the explicit freshness composition wording; send the frozen current package to the distinct final reviewer; then obtain the authorized real-provider/recovery evidence before any delivery-closeout claim. No source change is recommended by this audit."
+  ],
+  "exact_next_step": "Record reviewer resolutions in the governing TODO using the machine-checkable resolution table or equivalent gate ledger, then extract the derived resolution packet and decide whether another bounded review pass is still required.",
+  "findings": [
+    {
+      "finding_id": "F-86AC0A87",
+      "severity": "high",
+      "title": "External D-06/VAL-05 evidence remains a delivery blocker",
+      "rationale": "Why now: the local source and current API leaf cannot prove real Meta authorization, selected official resource behavior, subscription/callback behavior, device IN/OUT, or the already-authorized Evolution recovery. The active TODO records D-06 as Exception and VAL-05 as blocked without a waiver. The package also states that the public origin still serves an older API; this reviewer did not probe it.\n\nEvidence: TODO Decision Adherence Validation and Completion Evidence Matrix; cp36i-result.json; root-cp36i-validation-receipt.json; cp48 readiness evidence. Local doubles, PostgreSQL, and browser fixtures substantiate local behavior only.\n\nOptions:\nA. Treat the local suite and provider doubles as proof of the external journey and close the delivery. Effort: low; risk/blast radius/maintenance/security impact: unacceptable because it converts simulated compatibility into a release assertion.\nB. Record cp36i as a local-source gate only, keep D-06/VAL-05 blocked, and proceed to the distinct final review with the current bounded evidence. Effort: low; risk: controlled; maintenance/elegance/structural impact: preserves the existing truthful gate structure.\nC. Complete the authorized real-provider and recovery sequence before any final local gate. Effort: higher and externally dependent; risk reduction: highest, but it need not prevent the bounded final review first.\n\nRecommendation: B now, followed by C for delivery. This is not a request to rerun or waive the same external gate.",
+      "suggested_action": "Keep the TODO Pending and VAL-05 blocked; obtain real official-provider and authorized recovery evidence only after the distinct final-review gate and current-source checkpoint.",
+      "reviewer_labels": [
+        "fresh independent internal no-context formal test-quality reviewer"
+      ],
+      "source_finding_ids": [
+        "TQA-CP36I-R01"
+      ],
+      "category": "residual_risk",
+      "formalizable_hint": "partial",
+      "candidate_rule_level": "project",
+      "candidate_rule_id": "VAL05-external-provider-proof"
+    },
+    {
+      "finding_id": "F-DB81BA99",
+      "severity": "low",
+      "title": "Freshness composition must not be relabeled as a fresh cross-stack or browser run",
+      "rationale": "Why now: cp36i has fresh API evidence only. The source freeze shows exactly one changed file, api-app/src/integrations/meta/meta.client.spec.ts, while the other eight named public paths match cp36h. The historical browser manifests intentionally retain the old unit-spec hash. tsconfig.build.json excludes **/*.spec.ts, so unchanged Web/browser consumer evidence is reusable, but it cannot become a fresh browser or all-suite claim merely by arithmetic.\n\nOptions:\nA. Report a fresh all-suite/browser result from combined counts. Effort: low; risk: high evidence overstatement; structural/elegance impact: poor.\nB. Keep the current wording: fresh API 173-unit plus 288-PG leaf, with historical h Web-28/browser-47 reuse for byte-identical consumer sources. Effort: low; risk: controlled; recommendation: this option.\nC. Run a new full browser/cross-stack suite after a future candidate checkpoint. Effort: higher; it provides stronger fresh platform evidence but is unnecessary to validate the spec-only compiled-output-neutral delta itself.\n\nRecommendation: B unless a later gate needs a newly served browser/runtime assertion.",
+      "suggested_action": "Preserve the original h manifest hashes and explicitly label browser/Web evidence as unchanged-source historical reuse; do not claim a fresh all-suite, fresh browser, or served-cp36i validation.",
+      "reviewer_labels": [
+        "fresh independent internal no-context formal test-quality reviewer"
+      ],
+      "source_finding_ids": [
+        "TQA-CP36I-R02"
+      ],
+      "category": "tests",
+      "formalizable_hint": "yes",
+      "candidate_rule_level": "project",
+      "candidate_rule_id": "evidence-freshness-composition"
+    }
+  ]
+}

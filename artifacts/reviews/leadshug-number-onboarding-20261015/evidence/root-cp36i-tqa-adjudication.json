@@ -1,0 +1,19 @@
+{
+  "checkpoint": "cp36i",
+  "review_terminal_exit": 0,
+  "review_model": "gpt-5.6-terra",
+  "effort": "max",
+  "full_applicable_workload_checked": true,
+  "all9_and_5_questions_and_matrices_present": true,
+  "raw_sha256": "26779259e39792e8848556b6927ca545e5e09d397e2541b694e67bf50c07b872",
+  "absolute_binding_and_merge_valid": true,
+  "root_disposition": "accept current private source/test prerequisite only; no source change recommended; not entire delivery acceptance",
+  "H01": "verified-local at actual revoked-grant unit locus; source gate covered",
+  "findings": {
+    "TQA-CP36I-R01": "Integrated mandatory external requirement already open; Pending/VAL05 blocked, no waiver",
+    "TQA-CP36I-R02": "Integrated honest fresh API173+288 plus historical unchanged-source h Web28/browser47 composition retained; no rerun required by this audit"
+  },
+  "D05_D06_D07": "remain Exception through final/operator/external gates",
+  "next": "current-source isolated API candidate and distinct fresh independent final",
+  "captured_at": "2026-10-17T03:46:46.144603+00:00"
+}

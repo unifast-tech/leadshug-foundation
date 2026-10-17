@@ -1,0 +1,42 @@
+{
+  "checkpoint": "cp49",
+  "captured_at": "2026-10-17T04:15:31.061427+00:00",
+  "artifact_hashes_verified": {
+    "cp49-api-activation.json": "4f8df0f79e1fc1a0672b5f29232a9920a2edb524f893ccc0ee99491a75636490",
+    "cp49-api-activation.md": "85ddf089e3d4840a5ed22edae5a4ea4f6b8c6fb67c366ad64352f81f1aab7e39",
+    "cp49-unofficial-recovery.json": "103dabe4daca3ea59714cd957c217d4d75105ca62a4c014ab746ddd21ef61c1a",
+    "cp49-unofficial-recovery.md": "2de0fd43f6abbd2d8325099fd3f03056d83500bcd1083c518079d5b62b3b5b37"
+  },
+  "actual_new_api_image_and_seven_containers_verified": true,
+  "actual_served_four_compiled_hashes_verified": {
+    "dist/domain/channels/channels.service.js": "aa2d4e51ee906b3cc7dd79d4835cd331b00eaa772655506630e6f944d13bda73",
+    "dist/domain/channels/receipt-attempt-convergence.js": "93495861c2b300b66c5d5292803e3fbb71819c662896ae81ef457e8a4abbd1c4",
+    "dist/surfaces/webhooks/evolution.controller.js": "09b1ba14d22f90d345cce9f1e87cfcee8de4560a755c6f59528e22b7955d47ac",
+    "dist/integrations/meta/meta.client.js": "a756c9693c574f6fb4987d878af8d4fbeaf9f07c86a5c5e6acadeca4f7a771cb"
+  },
+  "public_tls_http_checks": {
+    "/": {
+      "status": 200
+    },
+    "/health": {
+      "status": 200
+    },
+    "/assets/index-txvhtd65.js": {
+      "status": 200,
+      "sha256": "d14343604557296f2ed62c1df47d9c80d81c323abafd89ccbb64a6a0746ff4bd"
+    }
+  },
+  "automatic_new_connection_proof": "executor scoped channel readback newconnectedAt after same-containerstart and sameattemptv2/genepoch1/receipt/currentidentity, before any adminverify; bounded providerOPEN read afterwards",
+  "history": "executor exact known conversation/2 prior messages preserved; human INOUT02 still mandatory",
+  "scope_deviation": "one broader known-BU metadata read occurred, no content/contact/phone/PII selected, unrelated ids not persisted; later readback exact cp33 UUID only",
+  "clarifications": [
+    "activation field privateFileOtherFieldsReadOrChanged=false cannot mean no allowed OWNER fields read; normal OWNERlogin explicitly consumed its two private credential keys IN MEMORY as admitted. No other-secret dump or rewrite claim is made.",
+    "API entrypoint routine migration check is distinct from new schema migration/DB repair; no changed Prisma migration source in this delta."
+  ],
+  "root_acceptance": "owned private automatic unofficial recovery observed only; no continuous health, human delivery02, official proof, or overall completion claim",
+  "pending": [
+    "human INOUT02",
+    "FINAL-CP36I-01 isolated app mismatch unit/gates before official",
+    "official real journey and overall VAL05"
+  ]
+}

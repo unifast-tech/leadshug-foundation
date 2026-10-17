@@ -1,0 +1,134 @@
+{
+  "checkpoint": "cp47-candidate-build",
+  "capturedAtUtc": "2026-10-17T03:48:32Z",
+  "scope": "One isolated API candidate image build and an offline, read-only probe. No operator activation or product mutation.",
+  "authority": {
+    "routing": "foundation_documentation/artifacts/tmp/number-onboarding-execution/routing-cp47-current-candidate.json",
+    "routingOutcome": "go",
+    "admission": "cp47-i-candidate-task.txt",
+    "sourceManifest": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp36i-source-after.sha256",
+    "sourceManifestSha256": "af21e98e41ec1ba86f4dac877ba2bd69b3ff0857fba930ca1c3973428723b581"
+  },
+  "sourceFreeze": {
+    "beforeManifestSha256": "af21e98e41ec1ba86f4dac877ba2bd69b3ff0857fba930ca1c3973428723b581",
+    "afterManifestSha256": "af21e98e41ec1ba86f4dac877ba2bd69b3ff0857fba930ca1c3973428723b581",
+    "beforeMatchesCp36i": true,
+    "afterMatchesCp36i": true,
+    "beforeAfterEqual": true,
+    "files": {
+      "api-app/src/integrations/meta/meta.client.ts": "ad6d9c56a0c854df35baf3320a70c2b1f4b9d577c4cd6f35def701ecac65f9c4",
+      "api-app/src/integrations/meta/meta.client.spec.ts": "9612cd1c7a5d8c68bca7c515625db0601acb479585625f9b8fc93fbc04c464b1",
+      "api-app/test/number-onboarding-flow.e2e-spec.ts": "650b233c9dafd9730f14170ce6bd6961d6277b9a131a6eb816cb8edd39341fae",
+      "api-app/src/domain/channels/channels.service.ts": "e910b2b395abc0ebca74deea917cf107dd36eca58491f1b0893efb702e1dfcf5",
+      "api-app/src/domain/channels/receipt-attempt-convergence.ts": "ca8cb841fab2574866c3508ab41aa0a269608a20658db18840b2b89f0c281512",
+      "api-app/src/surfaces/webhooks/evolution.controller.ts": "12139a5b50b4dacf43492e038c91f006c9db999d0f6a76fd5d73e45ee987a041",
+      "api-app/test/helpers.ts": "4d4b1c8c4e17c8fa7f338fdeeb2d63d093753038cece0d3aea566ae95c13619a",
+      "api-app/test/browser-server.cjs": "bf260c3124a867bda495509983055557988bc958141f3a8399e3e69de3aff451",
+      "web-app/e2e/telas.spec.ts": "ee4911de7148eebee35d5ddcc7d9bbbcc6faf051f0ea3f415e338d6809bb9d59"
+    }
+  },
+  "build": {
+    "command": "docker.exe build --label owner=number-onboarding --label checkpoint=cp47 --label source-manifest=af21e98e41ec1ba86f4dac877ba2bd69b3ff0857fba930ca1c3973428723b581 --file api-app/Dockerfile --tag leadshug-channels-api-candidate:cp36i-af21e98e41ec api-app",
+    "exitCode": 0,
+    "rawLog": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp47-candidate-build.log",
+    "rawLogSha256": "e353c4b8ca676ad29e4a5375ef923576f571ae9448d7feed7e07243cd64661ed",
+    "dockerfileSha256": "188a83953c950d65f3fd5b3d428382cafc88e42efa0776c95fb4ba49b54d0a15",
+    "dockerignoreSha256": "79c2485e6c515f7751aa34319cd46ab842dc53d08422270696dba74f55313d10",
+    "ignoreRulesConfirmed": [".env", ".env.*", ".local-files/", ".git"],
+    "privateContextInspected": false,
+    "reportedContextTransfer": "56.54 kB",
+    "candidateTagWasAbsentBeforeBuild": true,
+    "candidateTag": "leadshug-channels-api-candidate:cp36i-af21e98e41ec",
+    "imageId": "sha256:fe5fb7eaf6a68123f9da6b92a0a69483180d213f556b4bedf313f04a383b4821",
+    "imageCreatedUtc": "2026-10-17T03:47:47.820272481Z",
+    "labels": {
+      "owner": "number-onboarding",
+      "checkpoint": "cp47",
+      "source-manifest": "af21e98e41ec1ba86f4dac877ba2bd69b3ff0857fba930ca1c3973428723b581"
+    },
+    "base": {
+      "reference": "node:22-alpine",
+      "imageId": "sha256:7c3b093add7c43400ee83b815ab2cda98794a10045bcf76ce9bb2f89b97cbc5c",
+      "repoDigest": "node@sha256:0a7108bf6c7bf5de370ffb1a3ed6be93d405b43ff159f681a8d18c0e2bc2e402",
+      "os": "linux",
+      "architecture": "amd64"
+    }
+  },
+  "probe": {
+    "mode": "one effective probe: docker run --rm --network none --read-only --entrypoint node; no ports, volumes, or env args; API entrypoint and migration command were not run",
+    "attemptRecord": [
+      {"attempt": 1, "command": "node - with stdin script", "exitCode": 0, "stdout": "empty", "interpretation": "Docker Desktop did not pass the here-document script over stdin; no checks ran. The ephemeral container exited and --rm removed it."},
+      {"attempt": 2, "command": "node -e public metadata script", "exitCode": 0, "interpretation": "Effective diagnostic probe; no further container runs were made."}
+    ],
+    "runtime": {
+      "node": "v22.23.3",
+      "os": "Alpine Linux",
+      "platform": "linux",
+      "architecture": "x64",
+      "openssl": "3.5.8"
+    },
+    "prisma": {
+      "clientVersion": "6.19.3",
+      "engineVersion": "c2990dca591cba766e3b7ef5d9e8a84796e47ab7",
+      "datamodelModelCount": 22,
+      "queryEngineArtifact": "libquery_engine-linux-musl-openssl-3.0.x.so.node",
+      "clientConstructorReturnedWithoutError": true,
+      "instanceofPrismaClient": false,
+      "databaseConnectionAttempted": false
+    },
+    "compiledExports": {
+      "ChannelsService": "function",
+      "convergeReceiptVerifiedAttempt": "function",
+      "EvolutionWebhookController": "function",
+      "META_CLIENT": "symbol",
+      "MetaHttpClient": "function",
+      "MetaIndisponivelError": "function",
+      "MetaErrorPrototypeIsError": true
+    },
+    "compiledModuleSha256": {
+      "dist/domain/channels/channels.service.js": "aa2d4e51ee906b3cc7dd79d4835cd331b00eaa772655506630e6f944d13bda73",
+      "dist/domain/channels/receipt-attempt-convergence.js": "93495861c2b300b66c5d5292803e3fbb71819c662896ae81ef457e8a4abbd1c4",
+      "dist/surfaces/webhooks/evolution.controller.js": "09b1ba14d22f90d345cce9f1e87cfcee8de4560a755c6f59528e22b7955d47ac",
+      "dist/integrations/meta/meta.client.js": "a756c9693c574f6fb4987d878af8d4fbeaf9f07c86a5c5e6acadeca4f7a771cb"
+    },
+    "probeContainerRemains": false
+  },
+  "operatorPreservation": {
+    "project": "leadshug_channels_local",
+    "baseline": "cp48-resume-readiness.json and root-cp48-receipt.json, checked against cp46b full IDs",
+    "containersBeforeAndAfterEqual": true,
+    "volumesBeforeAndAfterEqual": true,
+    "apiImageRemainsPrevious": true,
+    "containers": [
+      {"id":"c2c74bc267af724a0b8a33a415b04084e74e0867669228cf906f7c306541bec0","service":"api","imageDigest":"sha256:c2e8d62bde2c85305deb9d72569f773072e77292465e09ed7283051b40ed4f4f","status":"running","owner":"number-onboarding"},
+      {"id":"0c48d94e9fe5b4ad75efd304db2752dfa4cab3befc59b9f736574d6cd551eea3","service":"gateway","imageDigest":"sha256:76090a34b858323b6ab169711adc08253b5bee7123a973dc581ed46b643bc109","status":"running","owner":"number-onboarding"},
+      {"id":"1e8d3a40dd9665481748b1278fd60de71ced6c682986d367a90665e76a61358a","service":"web","imageDigest":"sha256:d11a882849dc806e0d4728ca90a8fc8655aebc77421acefac63054b4fbb89365","status":"running","owner":"number-onboarding"},
+      {"id":"cf749491f7149dc46ec4db597b2d9c12faf918dd4f05b5512ba75adaf8e29ea4","service":"evolution","imageDigest":"sha256:385a3c4bedf42c66b46b43d06aae8712620144a84aa3b2c831b30c68435ab27c","status":"running","owner":"number-onboarding"},
+      {"id":"3b2e8d153d794a768ea87cb4f9cda7ba15dde242e2b8027bd372a475a9c26fbb","service":"evolution-redis","imageDigest":"sha256:f84b0c4678011602b9b98c227a4dcd5468bf8b088b02fdd4165cb7758bad8058","status":"running","owner":"number-onboarding"},
+      {"id":"150de898c3d9aa189ca0719eed7a65b95d95d8b948244e66b059a55f4554135a","service":"evolution-postgres","imageDigest":"sha256:80f4c7a5e91618546dce5b4fe60cf03b14c0f9efa7e40157278d122772ced8d2","status":"running","owner":"number-onboarding"},
+      {"id":"4fcd87b431339e3b65a40beafa27db86cdc978ca79f71b911199f7090c837495","service":"postgres","imageDigest":"sha256:80f4c7a5e91618546dce5b4fe60cf03b14c0f9efa7e40157278d122772ced8d2","status":"running","owner":"number-onboarding"}
+    ],
+    "volumes": [
+      {"name":"leadshug_channels_local_evolution_instances","driver":"local","owner":"number-onboarding"},
+      {"name":"leadshug_channels_local_evolution_pg_data","driver":"local","owner":"number-onboarding"},
+      {"name":"leadshug_channels_local_evolution_redis_data","driver":"local","owner":"number-onboarding"},
+      {"name":"leadshug_channels_local_leadshug_arquivos","driver":"local","owner":"number-onboarding"},
+      {"name":"leadshug_channels_local_leadshug_pg_data","driver":"local","owner":"number-onboarding"}
+    ]
+  },
+  "dependencyWarningsOrLimitations": [
+    "The candidate uses the linux-musl-openssl-3.0.x Prisma engine artifact under Alpine with OpenSSL 3.5.8; probe confirms artifact presence and client metadata, but no database connection was attempted.",
+    "The PrismaClient constructor returned a proxy object that did not satisfy instanceof PrismaClient; this was recorded without treating it as a failure or issuing a query.",
+    "The exact compiled C# supervisor source snapshot remains unavailable per cp46; this candidate task does not address tunnel reproducibility."
+  ],
+  "prohibitedActions": {
+    "operatorRetagOrActivation": false,
+    "operatorContainerMutation": false,
+    "providerDatabaseAuthMetaRequest": false,
+    "privateEnvOrConfigEnvRead": false,
+    "apiAppLocalFilesReadHashedCopiedOrMounted": false,
+    "sourceCanonOrGitChange": false,
+    "tunnelMutation": false
+  },
+  "terminalStatus": "STOP after candidate artifact; no service activation, source checkpoint, final review, Meta acceptance, device recovery, or served runtime claim."
+}
