@@ -1,0 +1,22 @@
+{
+  "checkpoint": "cp36i",
+  "verified_at": "2026-10-17T03:33:27.809745+00:00",
+  "public_changed_sets_match_h_attestation": true,
+  "public_sets": {
+    "api-app": [
+      "src/domain/channels/channels.service.ts",
+      "src/domain/channels/receipt-attempt-convergence.ts",
+      "src/integrations/meta/meta.client.spec.ts",
+      "src/integrations/meta/meta.client.ts",
+      "src/surfaces/webhooks/evolution.controller.ts",
+      "test/browser-server.cjs",
+      "test/helpers.ts",
+      "test/number-onboarding-flow.e2e-spec.ts"
+    ],
+    "web-app": [
+      "e2e/telas.spec.ts"
+    ]
+  },
+  "metadata_only_scope": "src/test and src/e2e; no private directory or blob traversal",
+  "no_current_browser_attestation_claim": true
+}

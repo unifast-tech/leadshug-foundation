@@ -1,0 +1,30 @@
+{
+  "checkpoint": "cp36h-tqa-resume-protocol",
+  "capturedAtUtc": "2026-10-17T03:01:59.221257+00:00",
+  "priorAttempt": {
+    "attempt": 1,
+    "status": "running",
+    "pid": 11955,
+    "bootId": "2fdf6005-47a7-4eff-b95c-b444d9cfffc0",
+    "startTicks": "185272",
+    "model": "gpt-5.6-terra",
+    "effort": "max",
+    "package": "/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp36h-tqa-package.md",
+    "dispatch": "/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp36h-tqa.dispatch.json",
+    "packageSha256": "2f8b031599d6ef6f07d0581f4a03372851c82cd3eb6b705357ef8c333a92f76d",
+    "log": "/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/artifacts/tmp/number-onboarding-execution/cp36h-tqa-native.log",
+    "raw": "/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp36h-tqa.result.raw.json",
+    "startedAtUtc": "2026-10-17T00:01:20.798567+00:00",
+    "execSessionId": 51854
+  },
+  "oldNativePidAbsent": true,
+  "oldExecSession": "51854 unknown process on resume",
+  "rawResultAbsent": true,
+  "sameBootId": false,
+  "oldExitCode": "unavailable; no terminal result fabricated",
+  "incompleteLogSha256": "50b999d046e819411c3d9a9e04a78a88614ad74b3daefd5c0a396ac32315cf20",
+  "packageSha256Unchanged": "2f8b031599d6ef6f07d0581f4a03372851c82cd3eb6b705357ef8c333a92f76d",
+  "dispatchSha256": "14f332ac963297de46e9754e401f2ad44f4d6f3c79c50be692b833fdc3cbd0b9",
+  "retryDecision": "one permitted full-package fresh retry, same model/effort/absolute binding/workload; no live reviewer replaced",
+  "source9Unchanged": true
+}

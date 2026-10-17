@@ -1,0 +1,59 @@
+{
+  "schema_version": "subagent-review-merge-v2",
+  "artifact_kind": "subagent_review_merge",
+  "authoritative": false,
+  "edit_policy": "derived_merge_packet",
+  "dispatch_path": "/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp36h-tqa.dispatch.json",
+  "review_kind": "test_quality_audit",
+  "review_count": 1,
+  "reviewer_labels": [
+    "fresh independent internal no-context Assurance / Tester-Quality reviewer"
+  ],
+  "highest_finding_severity": "high",
+  "axis_summary": {
+    "performance": "acceptable",
+    "elegance": "acceptable",
+    "structural_soundness": "acceptable",
+    "operational_fit": "mixed"
+  },
+  "recommended_paths": [
+    "1. Add a test-only, valid-shaped grant case with `is_valid: false`, otherwise valid scopes and intersected WABA targets; assert `MetaIndisponivelError`, `META_INDISPONIVEL`, exactly one debug-token request, and zero phone-page requests. 2. Because this changes the frozen spec, produce a new authorized source freeze and canonical validation evidence before a fresh TQA adjudication; do not relabel historical g RED as evidence for this new test. 3. If that audit is clean, proceed to the distinct final review. 4. Keep overall delivery Pending until mandatory external/runtime VAL-05 and recovery evidence are separately completed; no local TQA result waives them."
+  ],
+  "exact_next_step": "Record reviewer resolutions in the governing TODO using the machine-checkable resolution table or equivalent gate ledger, then extract the derived resolution packet and decide whether another bounded review pass is still required.",
+  "findings": [
+    {
+      "finding_id": "F-DEB30295",
+      "severity": "high",
+      "title": "Mandatory external/runtime validation remains an explicit delivery blocker",
+      "rationale": "**Evidence:** the governing TODO keeps D-06/VAL-05 blocked; the cp36h receipt expressly claims no runtime/operator/external proof. Local Docker, PG, browser, and fixture-provider evidence cannot prove real Meta authorization/subscription, real device IN/OUT, or automatic Evolution recovery.\n\n**Why now:** a clean local test-quality review must not be interpreted as delivery completion or a waiver.\n\n| Option | Effect |\n| --- | --- |\n| A. Run the separately authorized real-provider/runtime validation plan | Produces the required discriminating evidence. |\n| B. Keep the TODO Pending with the blocker explicit | Correct interim state; recommended until A is authorized and completed. |\n| C. Treat local evidence or tunnel readiness as equivalent | Invalid; it contradicts the frozen contract and does not satisfy VAL-05. |",
+      "suggested_action": "Retain the unwaived VAL-05 blocker and do not promote or close delivery from local evidence alone.",
+      "reviewer_labels": [
+        "fresh independent internal no-context Assurance / Tester-Quality reviewer"
+      ],
+      "source_finding_ids": [
+        "TQA-CP36H-R01"
+      ],
+      "category": "residual_risk",
+      "formalizable_hint": "no",
+      "candidate_rule_level": "none",
+      "candidate_rule_id": "none"
+    },
+    {
+      "finding_id": "F-915A5503",
+      "severity": "medium",
+      "title": "No direct test proves rejection of a syntactically valid but semantically invalid Meta grant (`is_valid: false`)",
+      "rationale": "**Evidence:** `api-app/src/integrations/meta/meta.client.ts:94-100` rejects `!grant.valid`, but the complete scoped spec\u2019s malformed-grant matrix at `meta.client.spec.ts:215-259` covers non-boolean `is_valid`, not boolean `false`; its other invalid-grant case also fails on app/scopes. Therefore a regression that weakens or removes the semantic validity check can evade the new h cases while all type-shape cases still pass.\n\n**Why now:** cp36h specifically adjudicates scalar grant coverage for a security-sensitive authorization boundary. The missing case is cheap, discriminating, and directly tied to D-05/D-07.\n\n| Option | Effort / risk / blast radius | Quality impact |\n| --- | --- | --- |\n| A. Add one unit row for `is_valid:false` with otherwise valid grant, class/code, one debug call, and no phone lookup | XS / low / test-only | Directly proves the semantic authorization branch; recommended. |\n| B. Add A plus a second BFF/PG bridge case | S / low / test-only | Stronger end-to-end redundancy, but existing representative malformed-grant BFF coverage already proves the mapper/envelope seam. |\n| C. Do nothing | None now / medium verification risk | Leaves a central authorization branch unprotected and the TQA coverage closure incomplete. |\n\n**Recommendation:** A. This is test-after coverage for existing correct behavior; no fabricated RED or product edit is appropriate.",
+      "suggested_action": "Add the direct false-validity unit case, regenerate the authorized validation evidence, and rerun the independent TQA gate.",
+      "reviewer_labels": [
+        "fresh independent internal no-context Assurance / Tester-Quality reviewer"
+      ],
+      "source_finding_ids": [
+        "TQA-CP36H-01"
+      ],
+      "category": "tests",
+      "formalizable_hint": "yes",
+      "candidate_rule_level": "project",
+      "candidate_rule_id": "TQA-META-GRANT-SEMANTIC-VALIDITY"
+    }
+  ]
+}

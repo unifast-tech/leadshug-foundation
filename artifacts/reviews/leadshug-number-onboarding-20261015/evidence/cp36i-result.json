@@ -1,0 +1,64 @@
+{
+  "checkpoint": "cp36i",
+  "status": "terminal-stop",
+  "scope": "test-only; sole source change is Meta client spec",
+  "finding_addressed": "TQA-CP36H-01: directly cover a valid-shaped revoked Meta grant (is_valid false)",
+  "changed_source_paths": ["api-app/src/integrations/meta/meta.client.spec.ts"],
+  "source_hash_before": "2d6a7be4ab294f0e6468143b5d4ac09740e45d09144fe855a75468ffc07fd370",
+  "source_hash_after": "9612cd1c7a5d8c68bca7c515625db0601acb479585625f9b8fc93fbc04c464b1",
+  "other_eight_paths_byteidentical": true,
+  "product_implementation_changed": false,
+  "added_test_contract": {
+    "grant_app_id_matches": true,
+    "is_valid": false,
+    "both_required_scopes_present": true,
+    "both_granular_targets_intersect_at_waba_123456": true,
+    "scoped_candidate_token_supplied": true,
+    "valid_phone_page_fallback_defined": true,
+    "same_operation_rejects_with": ["MetaIndisponivelError", "META_INDISPONIVEL"],
+    "debug_fetch_calls": 1,
+    "debug_host": "https://graph.facebook.com",
+    "debug_path": "/v26.0/debug_token",
+    "input_token": "scoped-candidate",
+    "debug_authorization": "Bearer fake-id|fake-secret",
+    "phone_numbers_fetches": 0
+  },
+  "canonical_api_leaf": {
+    "command": "bash scripts/test-channels-local.sh api",
+    "command_artifact": "cp36i-api-command.txt",
+    "exit_code": 0,
+    "exit_artifact": "cp36i-api.exit-code",
+    "raw_log": "cp36i-api.log",
+    "raw_log_sha256": "f943d9049c06ce39a25be958228100051389fc190452c1b3d10ccb403f1778c1",
+    "lint": "passed",
+    "build": "passed",
+    "migrations_found": 22,
+    "migrations_applied": 22,
+    "api_unit_tests": 173,
+    "api_postgresql_e2e_tests": 288,
+    "validation_database": "leadshug_channels_validation / leadshug_timeline_channels_ci"
+  },
+  "evidence_composition": {
+    "cp36h_all_run_sha256": "588d37e0cd8ad19d2e8c3e0c15668f6f594560bab7e7f8a241de3d3c68b58925",
+    "cp36h_all_counts_reused_only_for_unchanged_surfaces": {
+      "web_unit_tests": 28,
+      "browser_tests": 47,
+      "api_unit_tests": 172,
+      "api_postgresql_e2e_tests": 288
+    },
+    "cp36h_pre_worker_freshness": {
+      "artifact": "cp36h-pre-worker-freshness.json",
+      "sha256": "58b5bd0d3f40134ab4d394c16f6cb55ee83645b5546f0957bdb7a742d4ebc27f"
+    },
+    "cp36h_browser_attestation": {
+      "artifact": "cp36h-browser-attestation.json",
+      "sha256": "d4e06fcbafab9ef93a401e895c11aabe63bd74202a4d34b8112565ded30450b1"
+    },
+    "cp36h_result_json_sha256": "6cca5285b6789337d0bf7a8dc8d91a763d5ed2d05dc965d0fc73a2dd23329cea",
+    "cp36h_result_md_sha256": "8c564f65efd643ca211c63f51065272e0d9d870c9a954287e6d153a47df6e97f",
+    "reuse_basis": "The eight unchanged public source paths include all Web/browser consumers; api-app/tsconfig.build.json excludes **/*.spec.ts and is unchanged. cp36h attestations remain historical evidence and are not relabeled as cp36i attestations.",
+    "current_all_536_or_fresh_browser_claim": false
+  },
+  "next_gates": ["fresh full TQA of current nine-path source plus honest composition", "distinct final review", "root-owned current source/candidate gates"],
+  "root_owns_canonical_git_and_final_composition": true
+}

@@ -1,0 +1,41 @@
+{
+  "checkpoint": "cp36i",
+  "root_verified_at": "2026-10-17T03:31:46.100651+00:00",
+  "source_paths": 9,
+  "current_source_manifest_sha256": "af21e98e41ec1ba86f4dac877ba2bd69b3ff0857fba930ca1c3973428723b581",
+  "changed_only": [
+    "api-app/src/integrations/meta/meta.client.spec.ts"
+  ],
+  "other_eight_byteidentical_to_h": true,
+  "public_source_hashes": {
+    "api-app/src/integrations/meta/meta.client.ts": "ad6d9c56a0c854df35baf3320a70c2b1f4b9d577c4cd6f35def701ecac65f9c4",
+    "api-app/src/integrations/meta/meta.client.spec.ts": "9612cd1c7a5d8c68bca7c515625db0601acb479585625f9b8fc93fbc04c464b1",
+    "api-app/test/number-onboarding-flow.e2e-spec.ts": "650b233c9dafd9730f14170ce6bd6961d6277b9a131a6eb816cb8edd39341fae",
+    "api-app/src/domain/channels/channels.service.ts": "e910b2b395abc0ebca74deea917cf107dd36eca58491f1b0893efb702e1dfcf5",
+    "api-app/src/domain/channels/receipt-attempt-convergence.ts": "ca8cb841fab2574866c3508ab41aa0a269608a20658db18840b2b89f0c281512",
+    "api-app/src/surfaces/webhooks/evolution.controller.ts": "12139a5b50b4dacf43492e038c91f006c9db999d0f6a76fd5d73e45ee987a041",
+    "api-app/test/helpers.ts": "4d4b1c8c4e17c8fa7f338fdeeb2d63d093753038cece0d3aea566ae95c13619a",
+    "api-app/test/browser-server.cjs": "bf260c3124a867bda495509983055557988bc958141f3a8399e3e69de3aff451",
+    "web-app/e2e/telas.spec.ts": "ee4911de7148eebee35d5ddcc7d9bbbcc6faf051f0ea3f415e338d6809bb9d59"
+  },
+  "heads": {
+    "api-app": "f134bd11449a553e6f57e66cdc8fc71032151060",
+    "web-app": "d33c82c26760c671d98cab6f3e7bfe5676122c69"
+  },
+  "api_exit": 0,
+  "api_unit": 173,
+  "api_postgresql_e2e": 288,
+  "raw_and_historical_attestation_hashes_verified": {
+    "cp36i-api.log": "f943d9049c06ce39a25be958228100051389fc190452c1b3d10ccb403f1778c1",
+    "cp36h-pre-worker-freshness.json": "58b5bd0d3f40134ab4d394c16f6cb55ee83645b5546f0957bdb7a742d4ebc27f",
+    "cp36h-browser-attestation.json": "d4e06fcbafab9ef93a401e895c11aabe63bd74202a4d34b8112565ded30450b1"
+  },
+  "build_exclusion_verified": "**/*.spec.ts",
+  "composition": "fresh i API leaf plus unchanged-source historical h Web28/browser47; neither new all536 nor new browser attestation",
+  "api_log_count_lines": [
+    "22 migrations found in prisma/migrations",
+    "All migrations have been successfully applied.",
+    "22 migrations found in prisma/migrations"
+  ],
+  "current_source_only_gate": "TQA/final/candidate/served API/recovery/external VAL05 still pending"
+}

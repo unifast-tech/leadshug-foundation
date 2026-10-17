@@ -1,0 +1,19 @@
+{
+  "checkpoint": "cp36i",
+  "classification": "changed-only unit-test coverage; test-after",
+  "allowed_changed_path": "api-app/src/integrations/meta/meta.client.spec.ts",
+  "baseline_manifest": "cp36h-source-after.sha256",
+  "current_manifest": "cp36i-source-after.sha256",
+  "source_paths": 9,
+  "all_other_eight_paths_byteidentical": true,
+  "implementation_changed": false,
+  "build_exclusion": {
+    "file": "api-app/tsconfig.build.json",
+    "sha256": "44e82cf32b2bd7cfdb7c4d9ca48ab13101f6ff66349578545d2c229ef55cbca6",
+    "exclude_pattern": "**/*.spec.ts",
+    "spec_in_build": false
+  },
+  "api_leaf_runner_and_build_configuration_unchanged": true,
+  "unit_test_count_before": 172,
+  "unit_test_count_after": 173
+}

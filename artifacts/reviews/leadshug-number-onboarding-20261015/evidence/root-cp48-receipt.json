@@ -1,0 +1,14 @@
+{
+  "checkpoint": "root-cp48-receipt",
+  "capturedAtUtc": "2026-10-17T03:04:34.478909+00:00",
+  "artifactHashesVerified": true,
+  "acceptance": "today bounded HTTPS/asset/native-lifecycle/Docker preservation readiness only; no corrected API/WhatsApp recovery or Meta acceptance",
+  "sourceHeadsAndChangedPublicSetMatchHAttestation": {
+    "api": 8,
+    "web": 1
+  },
+  "source9CurrentMatches535": true,
+  "privateDataRead": false,
+  "publicUrl": "https://comments-heart-gale-muscles.trycloudflare.com",
+  "operatorApiStillOld": true
+}
