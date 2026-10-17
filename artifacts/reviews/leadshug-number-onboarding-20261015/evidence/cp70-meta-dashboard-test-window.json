@@ -1,0 +1,19 @@
+{
+  "checkpoint": "cp70-meta-dashboard-test-window",
+  "sinceUtc": "2026-10-17T18:26:05.690349Z",
+  "expectedPublicHostname": "addressing-mar-perform-hormone.trycloudflare.com",
+  "expectedRoute": "/webhooks/meta",
+  "currentSourceConfigSha256": "6d4563cc5f5823bdb1177f350c942dc2472fc70133aef5b177fa4b57c5c9f1a0",
+  "purpose": "Synthetic standard messages test from same Meta app dashboard to current hostname, separate from physical03 and historical cp62 test under older hostname",
+  "status": "awaiting_operator",
+  "receiptProof": false,
+  "providerNumberOrPayloadEditsRequested": false,
+  "precedingReadonlyPhoneGet": {
+    "sha256": "bcd33cca0080b96455eb0b4fcf2c7619a6268ba3b5990aacfc51ae78d0141100",
+    "applicationCallbackMatchesCurrent": true,
+    "wabaAndPhoneOverrideMissingMeans": "not_returned_unknown"
+  },
+  "rootPhoneGoConsumed": true,
+  "parentStage": "Pending",
+  "officialVAL05": "open_unwaived"
+}

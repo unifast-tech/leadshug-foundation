@@ -1,0 +1,55 @@
+{
+  "checkpoint": "cp70-meta-phone-platform-live-readback",
+  "status": "completed_safe_output",
+  "capturedAtUtc": "2026-10-17T18:28:47.704Z",
+  "goSha256": "0c0726884a7787367c0ae95f7988ec5ffc53ed75e07427fd76b4aac15feb6219",
+  "helperSha256": "32ba230616e4e0e972038fe07344218f6be6f3a8f92b2c5fe70f48065e5615e7",
+  "apiPins": {
+    "containerId": "005529386c8a7ab499cd779942ce541bb90cd3a770b8436b41509d2655e54857",
+    "imageId": "sha256:fe5fb7eaf6a68123f9da6b92a0a69483180d213f556b4bedf313f04a383b4821",
+    "owner": "number-onboarding",
+    "service": "api",
+    "running": true,
+    "healthy": true
+  },
+  "helperInvoked": true,
+  "helperExitCode": 0,
+  "helperStdoutSha256": "61c291c6360d018fd6bc5008755ebb6314a7866210705deefa513becd3d19466",
+  "helperStdoutExactFile": "cp70-meta-phone-platform-live-readback.stdout.json",
+  "actualJson": {
+    "outcome": "http_200",
+    "httpStatus": 200,
+    "responseTooLarge": false,
+    "validResponseShape": true,
+    "unknownFieldCount": 1,
+    "fields": {
+      "platform_type": {
+        "present": true,
+        "type": "string",
+        "value": "CLOUD_API"
+      },
+      "status": {
+        "present": true,
+        "type": "string",
+        "value": "CONNECTED"
+      },
+      "code_verification_status": {
+        "present": true,
+        "type": "string",
+        "value": "EXPIRED"
+      },
+      "is_on_biz_app": {
+        "present": true,
+        "type": "boolean",
+        "value": false
+      }
+    },
+    "graphErrorCode": null,
+    "graphErrorSubcode": null,
+    "graphIsTransient": null,
+    "contextStable": true
+  },
+  "rawStdoutPersisted": true,
+  "stderrPersisted": false,
+  "singleRequestNoRetryOrRedirectFollowed": true
+}

@@ -1,0 +1,74 @@
+{
+  "checkpoint": "cp70-meta-phone-webhook-readonly-preparation",
+  "createdAtUtc": "2026-10-17T18:21:56.681390Z",
+  "helperPath": "foundation_documentation/artifacts/tmp/number-onboarding-execution/cp70-meta-phone-webhook-readonly.cjs",
+  "helperSha256": "a375963842317f5083827da330c02e65a41673db82c57e3f89e818849f5c6ff4",
+  "reviewCopyPath": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp70-meta-phone-webhook-readonly-review-copy.cjs",
+  "reviewCopySha256": "a375963842317f5083827da330c02e65a41673db82c57e3f89e818849f5c6ff4",
+  "derivedFrom": {
+    "path": "foundation_documentation/artifacts/tmp/number-onboarding-execution/cp68-meta-subscription-readonly-v2.cjs",
+    "sha256": "b9b0525a3aa09ccb06b88de09377563290304db74ef7671e613933714bd12940"
+  },
+  "admission": "root-cp70-test03-diagnosis.json; distinct root GO required before execute",
+  "operation": {
+    "method": "GET",
+    "host": "graph.facebook.com",
+    "version": "v26.0",
+    "resource": "current resolved phoneNumberId in memory",
+    "field": "webhook_configuration",
+    "redirectsFollowed": false,
+    "retries": 0,
+    "paging": false,
+    "timeoutMs": 10000,
+    "maxResponseBytes": 131072,
+    "authorizationHeaderOnly": true
+  },
+  "guard": {
+    "businessUnitId": "a1492634-8685-46d8-a7cb-685a99f5c930",
+    "channelId": "eeb74451-edaf-4a44-a6cb-059dd184e152",
+    "attemptId": "e3165ba6e498307fd31c0213f544bdf1",
+    "identityId": "33980208-a547-4ab8-bab1-42a82bcd2197",
+    "generation": 1,
+    "epoch": 0,
+    "attemptVersion": 7,
+    "credentialVersion": 1,
+    "apiPublicAppId": "874966345550148",
+    "graphVersion": "v26.0",
+    "preAndPostContextGuard": true
+  },
+  "parserContract": {
+    "configurationKeys": [
+      "application",
+      "whatsapp_business_account",
+      "phone_number"
+    ],
+    "callbackComparisonFields": [
+      "callback_uri",
+      "override_callback_uri"
+    ],
+    "unknownKeys": "count only; names and values never emitted",
+    "callbackValues": "exact expected callback comparison boolean only; absent/malformed/conflicting is unknown",
+    "errorFields": [
+      "numeric graphErrorCode",
+      "numeric graphErrorSubcode",
+      "boolean graphIsTransient"
+    ],
+    "rawBodyOrHeadersPersistedOrEmitted": false,
+    "providerIdsPhoneNumbersAccountNamesOrCallbackURLPersistedOrEmitted": false
+  },
+  "offlineChecks": {
+    "nodeSyntaxCheck": true,
+    "syntheticCasesPassed": 11,
+    "networkCalled": false,
+    "resolverCalled": false,
+    "databaseCalled": false,
+    "rawValuesOrUnknownKeysEmitted": false
+  },
+  "execution": {
+    "providerRequestMade": false,
+    "credentialResolved": false,
+    "runtimeChanged": false,
+    "databaseQueried": false,
+    "sourceOrGitChanged": false
+  }
+}

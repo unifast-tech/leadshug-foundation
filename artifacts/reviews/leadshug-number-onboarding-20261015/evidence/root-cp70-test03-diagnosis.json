@@ -1,0 +1,20 @@
+{
+  "checkpoint": "root-cp70-test03-diagnosis",
+  "recordedUtc": "2026-10-17T18:20:08.593459+00:00",
+  "humanResult": "Entrada n\u00e3o apareceu",
+  "gatewayProof": "cp70-gateway-test03-ingress.json",
+  "gatewayProofSha256": "837111d37b7675e62cf6e8482136f22b82352c11ba96e717db4056cf02a25d4d",
+  "coverageComplete": true,
+  "parsedLines": 97,
+  "metaRouteRequestsObserved": 0,
+  "otherPost409NotAttributedToMeta": true,
+  "databaseProof": "cp70-official-test03-readback.json",
+  "databaseProofSha256": "da1d867b075dbfa394d8eb5b7845d75c81e2811207ac8af248c4260ae1bb7896",
+  "databaseDelta": "All0; PENDING_RECEIPTv7/SUBSCRIBED unchanged, no receipt/INOUT/conversations",
+  "conclusion": "No request to classified Meta route observed at local gateway in this complete test window. No local webhook HTTP rejection established. Cause upstream of observed route remains open; default app, account or phone destination/transport may need checking.",
+  "nextPreparation": "One narrow read-only Graph phone resource GET with fields=webhook_configuration using existing current channel scoped credential inside API memory. Field availability is a hypothesis; unknown field/error100 remains inconclusive, not a claimed configuration. No provider write or new test requested.",
+  "privacyBoundary": "Exact existing BU/channel/currentattempt/gen/epoch/credentialversion/identity pre-post guards; resolver/cipherkey/token in API memory only; no fileenv/Config.Env/privatevolume/APIlogs/rawGraphbody/headers/fullURLs/phone/providerIDs output; callback values compared only to current public callback; verifiedTLS/timeout/sizebounds/oneGET/no retry/paging.",
+  "executionAuthority": "Preparation only until root inspects frozen helper/offline checks and issues distinct hash-bound one-shot GO; cp68GET and cp69activation GOs consumed.",
+  "parentStage": "Pending",
+  "officialVAL05": "open_unwaived"
+}

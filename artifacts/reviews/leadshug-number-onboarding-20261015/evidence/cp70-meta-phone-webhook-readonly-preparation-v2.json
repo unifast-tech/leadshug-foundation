@@ -1,0 +1,77 @@
+{
+  "checkpoint": "cp70-meta-phone-webhook-readonly-preparation-v2",
+  "createdAtUtc": "2026-10-17T18:23:23.907193Z",
+  "helperPath": "foundation_documentation/artifacts/tmp/number-onboarding-execution/cp70-meta-phone-webhook-readonly-v2.cjs",
+  "helperSha256": "87c46c4f4f981779a29d19344ebb9aad17e586a240f427b189fe3242f86cf5c3",
+  "reviewCopyPath": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp70-meta-phone-webhook-readonly-review-copy-v2.cjs",
+  "reviewCopySha256": "87c46c4f4f981779a29d19344ebb9aad17e586a240f427b189fe3242f86cf5c3",
+  "preservedV1": {
+    "helperPath": "foundation_documentation/artifacts/tmp/number-onboarding-execution/cp70-meta-phone-webhook-readonly.cjs",
+    "helperSha256": "a375963842317f5083827da330c02e65a41673db82c57e3f89e818849f5c6ff4",
+    "unchanged": true
+  },
+  "operation": {
+    "preparationOnly": true,
+    "oneBoundedNormalTlsGraphGetWhenSeparatelyAuthorized": true,
+    "method": "GET",
+    "host": "graph.facebook.com",
+    "graphVersion": "v26.0",
+    "resource": "current resolved phoneNumberId only, kept in memory",
+    "field": "webhook_configuration",
+    "redirectsFollowed": false,
+    "retries": 0,
+    "paging": false,
+    "timeoutMs": 10000,
+    "maxResponseBytes": 131072,
+    "authorizationHeaderOnly": true
+  },
+  "parserChangeFromV1": "Each known layer now independently reports callbackPresent/type/state/matchesExpectedCallback. A direct string layer is compared as its callback URL; nested callback_uri or override_callback_uri values are compared only when unambiguous. Empty, malformed, absent, or conflicting values remain unknown. No cross-layer collapsing.",
+  "allowlist": {
+    "layers": [
+      "application",
+      "whatsapp_business_account",
+      "phone_number"
+    ],
+    "nestedCallbackKeys": [
+      "callback_uri",
+      "override_callback_uri"
+    ],
+    "unknownKeys": "count only; never emit names or values",
+    "responseOutput": "types/states/presence and per-layer expected-callback match booleans/null only",
+    "graphErrors": [
+      "numeric graphErrorCode",
+      "numeric graphErrorSubcode",
+      "boolean graphIsTransient"
+    ]
+  },
+  "guards": {
+    "exactBusinessUnitChannelAttemptIdentityGenerationEpochCredentialVersion": true,
+    "publicRuntimeMetaAppIdAndGraphVersion": true,
+    "resolvedPhoneResourceIdentityCorrespondence": true,
+    "preAndPostContextCheckIncludingHttpFailures": true,
+    "existingChannelCredentialResolverInMemoryOnly": true
+  },
+  "offlineChecks": {
+    "nodeSyntaxCheck": true,
+    "allThreeLayersDirectEqualDifferentEmptyMalformed": true,
+    "allThreeLayersNestedMatches": true,
+    "conflictingNestedValuesUnknown": true,
+    "mixedLayerMatchesRemainDistinct": true,
+    "absentOrMalformedUnknown": true,
+    "unknownKeysCountedAndRedacted": true,
+    "URLsAndCanaryValuesAbsentFromSerializedOutput": true,
+    "malformedResponseAndNumericErrorAllowlist": true,
+    "invocationModeGuard": true,
+    "networkCalled": false,
+    "resolverCalled": false,
+    "dbCalled": false
+  },
+  "execution": {
+    "graphRequestMade": false,
+    "credentialResolved": false,
+    "databaseQueried": false,
+    "runtimeChanged": false,
+    "sourceOrGitChanged": false
+  },
+  "authorization": "Requires distinct root GO bound to v2 helper hash before any credential resolution or Graph request."
+}

@@ -1,0 +1,23 @@
+{
+  "checkpoint": "root-cp71-app-subscriptions-readonly-go",
+  "issuedUtc": "2026-10-17T18:35:04.888519+00:00",
+  "rootAccepted": true,
+  "rootOutcome": "GO",
+  "operationAuthority": "GO",
+  "helperSha256": "daed32f80a2750285911ea0e15facd9c07547d54d1adabb2b68890b226c1b097",
+  "apiContainerId": "005529386c8a7ab499cd779942ce541bb90cd3a770b8436b41509d2655e54857",
+  "apiImageId": "sha256:fe5fb7eaf6a68123f9da6b92a0a69483180d213f556b4bedf313f04a383b4821",
+  "apiOwner": "number-onboarding",
+  "method": "GET",
+  "host": "graph.facebook.com",
+  "path": "/v26.0/874966345550148/subscriptions",
+  "maximumRequests": 1,
+  "query": null,
+  "narrowPrivateUseAdmitted": "Only META_APP_SECRET process.env in API memory to form appID|secret bearer app access token; no exchange request, customer credential/key resolver, private/envfile/Config.Env/log/argv/querytoken exposure",
+  "output": "Only sanitized WhatsApp subscription descriptor: actual active boolean/null, expected callback match, messages presence/versionmatch, counts/paging unknown; no rawURLs/objectnames/fieldnames/headers/errorstrings/body/secret/token",
+  "bounds": "Normal verifiedTLS 10s/128KiB, no redirects/retry/paging. Unsupported/permissionfailure remains inconclusive; no furthercall or providerwrite.",
+  "inspection": "Root inspected fullv1wire/parser/main, caught active inferredfromrowpresence beforeexecute, reviewed focusedv2diff and actualselftest. Both execution/evidence copies byte-equal.",
+  "notAuthorized": "Any POST/DELETE/permissionexpand/AppReviewsubmission/providerregistration/migration/callbacktakeover/DB/runtime/source/environmentmutation or additionalGET",
+  "parentStage": "Pending",
+  "officialVAL05": "open_unwaived"
+}

@@ -1,0 +1,22 @@
+{
+  "checkpoint": "cp71-meta-app-subscriptions-readonly-preparation-v2",
+  "status": "prepared_waiting_distinct_root_go",
+  "helperPath": "foundation_documentation/artifacts/tmp/number-onboarding-execution/T/cp71-meta-app-subscriptions-readonly-v2.cjs",
+  "evidenceCopyPath": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp71-meta-app-subscriptions-readonly-v2.cjs",
+  "helperSha256": "daed32f80a2750285911ea0e15facd9c07547d54d1adabb2b68890b226c1b097",
+  "preservedV1Sha256": "dbee56615e98f4d4efd8081c141574462fbae3b6c6161a637ab769ab4e441f7f",
+  "change": "For a unique recognized subscription row, active is now the actual boolean row.active; absent or non-boolean values return null. No other wire or privacy behavior changed.",
+  "validation": {
+    "syntaxCheck": "passed",
+    "syntheticSelfTest": "passed",
+    "explicitActiveTrue": "true",
+    "explicitActiveFalse": "false",
+    "emptyCompleteDataArray": "false",
+    "missingActive": "unknown",
+    "stringActive": "unknown",
+    "numericActive": "unknown",
+    "networkCalled": false,
+    "appSecretRead": false
+  },
+  "executionPerformed": false
+}

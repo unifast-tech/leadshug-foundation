@@ -1,0 +1,57 @@
+{
+  "checkpoint": "cp71-meta-app-subscriptions-live-readback",
+  "capturedAtUtc": "2026-10-17T18:35:31.153Z",
+  "rootGo": {
+    "path": "root-cp71-app-subscriptions-readonly-go.json",
+    "sha256": "69bddcc3f3572c4e44d32c3af3d509c5fffec8422e5e234ca1b937c978797ddd",
+    "consumed": true
+  },
+  "runtimePins": {
+    "apiContainerId": "005529386c8a7ab499cd779942ce541bb90cd3a770b8436b41509d2655e54857",
+    "apiImageId": "sha256:fe5fb7eaf6a68123f9da6b92a0a69483180d213f556b4bedf313f04a383b4821",
+    "owner": "number-onboarding",
+    "service": "api",
+    "running": true,
+    "healthy": true
+  },
+  "helper": {
+    "sha256": "daed32f80a2750285911ea0e15facd9c07547d54d1adabb2b68890b226c1b097",
+    "exitCode": 0,
+    "invokedOnce": true
+  },
+  "stdout": {
+    "path": "cp71-meta-app-subscriptions-live-readback.stdout.json",
+    "sha256": "4d9d206f5be98d07cf961fc9b23dbe799d643e03f29266e2c5208def01a595ce",
+    "result": {
+      "outcome": "http_200",
+      "httpStatus": 200,
+      "validResponseShape": true,
+      "dataState": "array",
+      "pagingPresent": false,
+      "rowCount": 1,
+      "recognizedRowCount": 1,
+      "subscription": {
+        "active": true,
+        "callbackUrlPresent": true,
+        "callbackMatchesExpected": true,
+        "messagesPresent": null,
+        "messagesVersionMatchesConfigured": null,
+        "fieldEntryCount": null,
+        "unknownFieldEntryCount": null
+      },
+      "graphErrorCode": null,
+      "graphErrorSubcode": null,
+      "graphIsTransient": null
+    }
+  },
+  "boundary": {
+    "singleGraphReadOnlyGet": true,
+    "providerMutation": false,
+    "credentialOrHeaderOutput": false,
+    "rawBodyOrResponseHeaderPersisted": false,
+    "privateFileOrEnvironmentDump": false,
+    "databaseOrRuntimeMutation": false,
+    "fallbackOrRetry": false
+  },
+  "interpretation": "One recognized subscription row is explicitly active and its callback equality check matched. No usable fields array was returned, so messages subscription presence and version remain unknown; no messages-subscription claim is made."
+}

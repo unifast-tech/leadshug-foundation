@@ -1,0 +1,83 @@
+{
+  "checkpoint": "cp70-meta-phone-platform-readonly-preparation",
+  "createdAtUtc": "2026-10-17T18:27:47.082611Z",
+  "helperPath": "foundation_documentation/artifacts/tmp/number-onboarding-execution/cp70-meta-phone-platform-readonly.cjs",
+  "helperSha256": "32ba230616e4e0e972038fe07344218f6be6f3a8f92b2c5fe70f48065e5615e7",
+  "reviewCopyPath": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp70-meta-phone-platform-readonly-review-copy.cjs",
+  "reviewCopySha256": "32ba230616e4e0e972038fe07344218f6be6f3a8f92b2c5fe70f48065e5615e7",
+  "derivedFrom": {
+    "helperPath": "foundation_documentation/artifacts/tmp/number-onboarding-execution/cp70-meta-phone-webhook-readonly-v2.cjs",
+    "helperSha256": "87c46c4f4f981779a29d19344ebb9aad17e586a240f427b189fe3242f86cf5c3",
+    "preservedUnchanged": true
+  },
+  "operation": {
+    "preparationOnly": true,
+    "oneBoundedGetWhenSeparatelyAuthorized": true,
+    "host": "graph.facebook.com",
+    "version": "v26.0",
+    "resource": "current resolved phoneNumberId in memory",
+    "fields": [
+      "platform_type",
+      "status",
+      "code_verification_status",
+      "is_on_biz_app"
+    ],
+    "redirectsFollowed": false,
+    "retries": 0,
+    "paging": false,
+    "timeoutMs": 10000,
+    "maxResponseBytes": 131072,
+    "authorizationHeaderOnly": true
+  },
+  "guard": "Same exact BU/channel/current attempt v7/generation 1/epoch 0/identity/credential v1/public APP_ID and GRAPH_VERSION pre/post context guard as preceding CP70 helper.",
+  "outputAllowlist": {
+    "platform_type": [
+      "CLOUD_API",
+      "ON_PREMISE",
+      "NOT_APPLICABLE",
+      "UNKNOWN",
+      null
+    ],
+    "status": [
+      "CONNECTED",
+      "DISCONNECTED",
+      "PENDING",
+      "MIGRATED",
+      "DELETED",
+      "UNKNOWN",
+      null
+    ],
+    "code_verification_status": [
+      "VERIFIED",
+      "NOT_VERIFIED",
+      "EXPIRED",
+      "UNKNOWN",
+      null
+    ],
+    "is_on_biz_app": [
+      "boolean",
+      null
+    ],
+    "otherFields": "unknown names/values omitted; count only"
+  },
+  "offlineChecks": {
+    "nodeSyntaxCheck": true,
+    "allowedFiniteEnumsAndBooleans": true,
+    "missingAndMalformedValuesUnknown": true,
+    "unknownEnumsNormalizedAndRawValuesRedacted": true,
+    "unknownFieldsCountedAndRedacted": true,
+    "invalidResponseAndNumericErrorsBounded": true,
+    "invocationModeGuard": true,
+    "networkCalled": false,
+    "resolverCalled": false,
+    "dbCalled": false
+  },
+  "execution": {
+    "providerRequestMade": false,
+    "credentialResolved": false,
+    "databaseQueried": false,
+    "runtimeChanged": false,
+    "sourceOrGitChanged": false
+  },
+  "authorization": "Distinct hash-bound root GO required before credential resolution or Graph request; unsupported field/error is inconclusive and does not trigger fallback or registration."
+}

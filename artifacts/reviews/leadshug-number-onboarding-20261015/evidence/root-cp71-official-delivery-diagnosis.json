@@ -1,0 +1,51 @@
+{
+  "checkpoint": "root-cp71-official-delivery-diagnosis",
+  "acceptedUtc": "2026-10-17T18:37:31.652352+00:00",
+  "rootAccepted": true,
+  "evidence": {
+    "cp70-gateway-test03-ingress.json": "837111d37b7675e62cf6e8482136f22b82352c11ba96e717db4056cf02a25d4d",
+    "cp70-official-test03-readback.json": "da1d867b075dbfa394d8eb5b7845d75c81e2811207ac8af248c4260ae1bb7896",
+    "cp70-meta-phone-webhook-live-readback.json": "bcd33cca0080b96455eb0b4fcf2c7619a6268ba3b5990aacfc51ae78d0141100",
+    "cp70-meta-phone-platform-live-readback.json": "e5fe02108341964198b8c40f4878fa64a663c6c82dcf81658a7243b30b7bbed0",
+    "cp71-meta-dashboard-ingress.json": "6a4714e68e5057dda363dffdff5c394dd0e900da3db4d7c079a365420daf1a90",
+    "cp71-post-dashboard-official-readback.json": "537c3259e2c85837085ec12959844cbff3eb12722d5b1e86b17beb05b5479c1d",
+    "cp71-meta-app-subscriptions-live-readback.json": "c35901f5cad8a99ee176af7fe8e564627747c5a4884ca8c7e4b77ecdeb0d0644"
+  },
+  "humanFacts": {
+    "physical03": "Entrada n\u00e3o apareceu",
+    "officialNumberAlreadyConnectedToAnotherSystem": true,
+    "otherSystemName": "awaiting operator",
+    "physical03ReceivedByOtherSystem": "awaiting operator",
+    "currentMetaDashboardStandardMessagesTest": "Sucesso / HTTP200"
+  },
+  "observedFacts": [
+    "Physical03 exactwindow fullyparsed97lines with0meta route requests; otherPOST409 notattributedtoMeta",
+    "SameBU/currentidentity/attempt remainsPENDING_RECEIPTv7/SUBSCRIBED, IN0/OUT0/conversations0/eventBU0/no receipt/connectedAt; readonly pre/postdashboard snapshots unchanged",
+    "One phonewebhook GET200/contextstable: applicationcallback matches expectedcurrentURL; WABA/phone layers notreturned=>unknown, not proven absent",
+    "One phonemetadata GET200/contextstable: CLOUD_API/CONNECTED/code_verification_statusEXPIRED/is_on_biz_appfalse; one unexposedextra field; no automaticregistration or diagnosisfromEXPIRED",
+    "Current dashboardcontrol window fullyparsed5lines included1metaPOST200 and4otherGET304; temporalcorrelation tohumanHTTP200, no per-request/identity proof",
+    "One appsubscriptions GET200 returned1recognizedWhatsApp row with explicitactivetrue andcallbackmatchtrue; messagespresence/version notestablished since no usablefieldsarray; retain earlierhuman messagesinscribed confirmation separately"
+  ],
+  "consumedGos": [
+    "root-cp70-phone-webhook-readonly-go.json",
+    "root-cp70-phone-platform-readonly-go.json",
+    "root-cp71-app-subscriptions-readonly-go.json"
+  ],
+  "preExecutionCorrections": [
+    "cp70helperv1 lacked directstring/perlayer callbacks; root fixed before livev2 call, bothsources preserved",
+    "cp71helperv1 inferredactive fromrowpresence; root fixed to actualboolean withfalse/malformed controls before solelivev2call; bothsources preserved"
+  ],
+  "admittedSecretUse": "Current channel key/token inside resolver/API memory for two narrowphoneGETs, then appsecret only inside sameAPI memory for one app-token-headerGET; no secrets/files/Config.Env/rawresponses/headers/URLs/errorstrings/APIlogs exposed or persisted",
+  "providerWritesOrRuntimeChangesThisCheckpoint": false,
+  "cause": "Delivery of real events to expectedroute still unexplained; callback/CloudAPIstatus/applicationactive facts are necessary observations, not realINOUT proof. Other integration involvement and verificationEXPIRED are not established causes.",
+  "nextStep": "Await other system/provider name and whether physical03 arrived there; inspect that integration/Meta delivery eligibility before a concrete corrective proposal. No new physical retry, registration, migration, unsubscribe/resubscribe, callbacktakeover, permissions expansion or further private/provider query authorized by consumed GOs.",
+  "parentStage": "Pending",
+  "officialVAL05": "open_unwaived",
+  "waiver": false,
+  "residuals": [
+    "R02/privateOWNERcohort unchanged",
+    "Temporaryhostname lifetime notguaranteed",
+    "AppReview/BusinessVerification notinferred from publishedstate or HTTP200",
+    "Dashboardcontrol is synthetic, neverVAL05 acceptance"
+  ]
+}

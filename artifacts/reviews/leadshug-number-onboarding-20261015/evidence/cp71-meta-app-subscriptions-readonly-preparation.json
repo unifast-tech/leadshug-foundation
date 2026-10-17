@@ -1,0 +1,42 @@
+{
+  "checkpoint": "cp71-meta-app-subscriptions-readonly-preparation",
+  "status": "prepared_waiting_distinct_root_go",
+  "helperPath": "foundation_documentation/artifacts/tmp/number-onboarding-execution/T/cp71-meta-app-subscriptions-readonly.cjs",
+  "evidenceCopyPath": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp71-meta-app-subscriptions-readonly.cjs",
+  "helperSha256": "dbee56615e98f4d4efd8081c141574462fbae3b6c6161a637ab769ab4e441f7f",
+  "invocation": "node helper.cjs --self-test",
+  "syntaxCheck": "passed",
+  "syntheticSelfTest": "passed",
+  "syntheticCases": [
+    "single recognized subscription and expected callback/messages version",
+    "valid empty data array distinguishes absent subscription",
+    "different callback is reported only as a mismatch boolean",
+    "missing messages field",
+    "malformed callback/fields remain qualified unknown",
+    "missing or malformed data array",
+    "duplicate recognized subscriptions remain unknown",
+    "paging presence makes completeness-dependent fields unknown",
+    "unknown object/field names and values are not serialized",
+    "URL, token-like, and error-string canaries are not serialized",
+    "numeric Graph error allowlist",
+    "explicit invocation mode guard"
+  ],
+  "requestPlan": {
+    "method": "GET",
+    "host": "graph.facebook.com",
+    "path": "/v26.0/874966345550148/subscriptions",
+    "query": false,
+    "redirectsRetriesPaging": false,
+    "timeoutMs": 10000,
+    "maxResponseBytes": 131072,
+    "appTokenConstruction": "APP_ID|META_APP_SECRET in memory only",
+    "executionPerformed": false
+  },
+  "boundary": {
+    "GraphCalled": false,
+    "META_APP_SECRETRead": false,
+    "providerMutation": false,
+    "sourceRuntimeOrDatabaseMutation": false,
+    "privateDataOrConfigDump": false
+  }
+}

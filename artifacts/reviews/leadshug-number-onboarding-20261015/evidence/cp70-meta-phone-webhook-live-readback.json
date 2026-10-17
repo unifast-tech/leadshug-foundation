@@ -1,0 +1,58 @@
+{
+  "checkpoint": "cp70-meta-phone-webhook-live-readback",
+  "status": "completed_safe_output",
+  "capturedAtUtc": "2026-10-17T18:24:38.954Z",
+  "goSha256": "6e006d1f7a465cdbd81bbdf8592a18658d9476ed523680d6671f573fe2959eb6",
+  "helperSha256": "87c46c4f4f981779a29d19344ebb9aad17e586a240f427b189fe3242f86cf5c3",
+  "apiPins": {
+    "containerId": "005529386c8a7ab499cd779942ce541bb90cd3a770b8436b41509d2655e54857",
+    "imageId": "sha256:fe5fb7eaf6a68123f9da6b92a0a69483180d213f556b4bedf313f04a383b4821",
+    "owner": "number-onboarding",
+    "service": "api",
+    "running": true,
+    "healthy": true
+  },
+  "helperInvoked": true,
+  "helperExitCode": 0,
+  "helperStdoutSha256": "70fb8505a22ab004229208a89d21cce607630a7770d9303049cdb091d9aea56a",
+  "helperStdoutExactFile": "cp70-meta-phone-webhook-live-readback.stdout.json",
+  "actualJson": {
+    "outcome": "http_200",
+    "httpStatus": 200,
+    "responseTooLarge": false,
+    "validResponseShape": true,
+    "fieldReturned": true,
+    "configurationType": "object",
+    "unknownKeyCount": 0,
+    "fields": {
+      "application": {
+        "present": true,
+        "type": "string",
+        "state": "configured",
+        "callbackPresent": true,
+        "matchesExpectedCallback": true
+      },
+      "whatsapp_business_account": {
+        "present": false,
+        "type": "missing",
+        "state": "unknown",
+        "callbackPresent": null,
+        "matchesExpectedCallback": null
+      },
+      "phone_number": {
+        "present": false,
+        "type": "missing",
+        "state": "unknown",
+        "callbackPresent": null,
+        "matchesExpectedCallback": null
+      }
+    },
+    "graphErrorCode": null,
+    "graphErrorSubcode": null,
+    "graphIsTransient": null,
+    "contextStable": true
+  },
+  "rawStdoutPersisted": true,
+  "stderrPersisted": false,
+  "noRetriesOrRedirectFollowed": true
+}
