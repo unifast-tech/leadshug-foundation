@@ -1,0 +1,42 @@
+{
+  "checkpoint": "cp64-native-output-compatibility",
+  "capturedAtUtc": "2026-10-17T13:33:12Z",
+  "powershellVersion": "5.1.26100.9711",
+  "result": "wrapper_not_compatible_with_stderr_under_erroraction_stop",
+  "method": {
+    "native": "cmd.exe only",
+    "wrapperShape": "$null=& $Native @Arguments *> $null; $script:lastDockerExitCode=[int]$LASTEXITCODE",
+    "errorActionPreference": "Stop for wrapper calls",
+    "stdoutAndStderrEmission": "separately observed with harmless dummy markers; raw text not persisted",
+    "dockerInvoked": false,
+    "networkUsed": false
+  },
+  "exit0Case": {
+    "dummyStdoutObserved": true,
+    "dummyStderrObserved": true,
+    "wrapperThrewBeforeAssignment": true,
+    "category": "native_stderr_exception",
+    "wrapperCapturedExitCode": null,
+    "automaticLastExitCodeAfterException": -1
+  },
+  "exit7Case": {
+    "dummyStdoutObserved": true,
+    "dummyStderrObserved": true,
+    "wrapperThrewBeforeAssignment": true,
+    "category": "native_stderr_exception",
+    "wrapperCapturedExitCode": null,
+    "automaticLastExitCodeAfterException": -1
+  },
+  "probeScript": {
+    "path": "foundation_documentation/artifacts/tmp/number-onboarding-execution/T/cp64-native-output-compatibility.ps1",
+    "sha256": "1031819185ee002fb7195899db2c0fde27681d578f9f5afed1e07984b4629c22"
+  },
+  "conclusion": "With Windows PowerShell 5.1 ErrorActionPreference Stop, emitted native stderr throws before the wrapper records LASTEXITCODE, including dummy exit 0. The v4 mutation wrapper may not preserve actual Docker/Compose status if stderr is emitted.",
+  "scope": {
+    "v4Edited": false,
+    "privateFileAccess": false,
+    "runtimeOrDockerAction": false,
+    "providerOrDatabaseAction": false,
+    "sourceOrGitAction": false
+  }
+}

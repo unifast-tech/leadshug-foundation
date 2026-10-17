@@ -1,0 +1,73 @@
+﻿#0 building with "desktop-linux" instance using docker driver
+System.Management.Automation.RemoteException
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 1.30kB 0.0s done
+#1 DONE 0.0s
+System.Management.Automation.RemoteException
+#2 [internal] load metadata for docker.io/library/node:22-alpine
+#2 DONE 0.0s
+System.Management.Automation.RemoteException
+#3 [internal] load metadata for docker.io/library/nginx:alpine
+#3 DONE 0.0s
+System.Management.Automation.RemoteException
+#4 [internal] load .dockerignore
+#4 transferring context: 146B done
+#4 DONE 0.0s
+System.Management.Automation.RemoteException
+#5 [builder 1/6] FROM docker.io/library/node:22-alpine
+#5 DONE 0.0s
+System.Management.Automation.RemoteException
+#6 [runner 1/5] FROM docker.io/library/nginx:alpine
+#6 DONE 0.0s
+System.Management.Automation.RemoteException
+#7 [internal] load build context
+#7 transferring context: 3.48kB done
+#7 DONE 0.0s
+System.Management.Automation.RemoteException
+#8 [builder 2/6] WORKDIR /web
+#8 CACHED
+System.Management.Automation.RemoteException
+#9 [builder 3/6] COPY package.json package-lock.json ./
+#9 CACHED
+System.Management.Automation.RemoteException
+#10 [builder 4/6] RUN npm ci
+#10 CACHED
+System.Management.Automation.RemoteException
+#11 [builder 5/6] COPY . .
+#11 DONE 0.1s
+System.Management.Automation.RemoteException
+#12 [builder 6/6] RUN npm run build
+#12 0.398 
+#12 0.398 > @leadshug/web@0.1.0 build
+#12 0.398 > tsc -b && vite build
+#12 0.398 
+#12 4.289 vite v5.4.21 building for production...
+#12 4.355 transforming...
+#12 5.500 Ô£ô 58 modules transformed.
+#12 5.664 rendering chunks...
+#12 5.672 computing gzip size...
+#12 5.682 dist/index.html                   0.69 kB Ôöé gzip:  0.44 kB
+#12 5.682 dist/assets/index-wuzy3kMN.css    8.32 kB Ôöé gzip:  2.39 kB
+#12 5.683 dist/assets/index-txvhtd65.js   257.88 kB Ôöé gzip: 79.07 kB
+#12 5.683 Ô£ô built in 1.36s
+#12 DONE 5.7s
+System.Management.Automation.RemoteException
+#13 [runner 2/5] COPY --from=builder /web/dist /usr/share/nginx/html
+#13 CACHED
+System.Management.Automation.RemoteException
+#14 [runner 3/5] COPY nginx/default.conf.template /etc/nginx/templates/default.conf.template
+#14 DONE 0.0s
+System.Management.Automation.RemoteException
+#15 [runner 4/5] COPY docker/40-config-js.sh /docker-entrypoint.d/40-config-js.sh
+#15 DONE 0.0s
+System.Management.Automation.RemoteException
+#16 [runner 5/5] RUN sed -i 's/\r$//' /docker-entrypoint.d/40-config-js.sh && chmod +x /docker-entrypoint.d/40-config-js.sh
+#16 DONE 0.2s
+System.Management.Automation.RemoteException
+#17 exporting to image
+#17 exporting layers 0.0s done
+#17 writing image sha256:cfd5e58b91a67d2fae4f37759274a34209cd2501082650a49545a60a12642361 done
+#17 naming to docker.io/library/leadshug-channels-web-candidate:cp64-notransform-0cdafce3f985 done
+#17 DONE 0.1s
+System.Management.Automation.RemoteException
+View build details: docker-desktop://dashboard/build/desktop-linux/desktop-linux/k1pfusxwihem7050j8g0sa1d6

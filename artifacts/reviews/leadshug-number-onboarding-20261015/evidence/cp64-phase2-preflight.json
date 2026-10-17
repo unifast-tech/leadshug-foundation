@@ -1,0 +1,111 @@
+{
+  "checkpoint": "cp64-phase2-preflight-v1",
+  "status": "fresh_read_only_preflight_passed",
+  "rootAccepted": false,
+  "operationAuthority": "PENDING",
+  "native_transport": {
+    "hostname": "addressing-mar-perform-hormone.trycloudflare.com",
+    "target": "http://127.0.0.1:8083",
+    "transport": "http2",
+    "registeredConnectionEvents": 1,
+    "errorEvents": 1,
+    "streamCallbackFaults": 0,
+    "stateWriteFailures": 0,
+    "childExitCode": null,
+    "supervisor": {
+      "pid": 14708,
+      "nativeStartTicks": 639278403605890201,
+      "path": "C:\\unifast\\leadshug\\leadshug_now_docker\\foundation_documentation\\artifacts\\tmp\\number-onboarding-execution\\T\\cloudflared-cp64\\cp64-supervisor.exe",
+      "sha256": "bdf68028ea2da0699b1e04d191453b5d7090861b17f518d236ce6b084d45c69b",
+      "parentPid": 11848,
+      "argv": "\"C:\\unifast\\leadshug\\leadshug_now_docker\\foundation_documentation\\artifacts\\tmp\\number-onboarding-execution\\T\\cloudflared-cp64\\cp64-supervisor.exe\"",
+      "startTicksPathHashParentArgvMatch": true,
+      "alive": true
+    },
+    "child": {
+      "pid": 2148,
+      "nativeStartTicks": 639278403607622938,
+      "path": "C:\\unifast\\leadshug\\leadshug_now_docker\\foundation_documentation\\artifacts\\tmp\\number-onboarding-execution\\T\\cloudflared-cp64\\cloudflared-windows-amd64.exe",
+      "sha256": "86aee4017b26625cee8484c113558f48effa4cd47f7aa05fcf425604e5d2b23c",
+      "parentPid": 14708,
+      "argv": "\"C:\\unifast\\leadshug\\leadshug_now_docker\\foundation_documentation\\artifacts\\tmp\\number-onboarding-execution\\T\\cloudflared-cp64\\cloudflared-windows-amd64.exe\" tunnel --config \"C:\\unifast\\leadshug\\leadshug_now_docker\\foundation_documentation\\artifacts\\tmp\\number-onboarding-execution\\T\\cloudflared-cp64\\empty-config.yml\" --no-autoupdate --url http://127.0.0.1:8083",
+      "startTicksPathHashParentArgvMatch": true,
+      "alive": true
+    },
+    "emptyConfigBytes": 0
+  },
+  "public_https": {
+    "windows": {
+      "normalTls": true,
+      "noSession": true,
+      "rootStatus": 200,
+      "healthStatus": 200,
+      "jsStatus": 200,
+      "redirected": false,
+      "noSetCookie": true,
+      "jsSha256": "d14343604557296f2ed62c1df47d9c80d81c323abafd89ccbb64a6a0746ff4bd"
+    },
+    "wsl": {
+      "normalTls": true,
+      "noSession": true,
+      "rootStatus": 200,
+      "healthStatus": 200,
+      "jsStatus": 200,
+      "redirected": false,
+      "noSetCookie": true,
+      "jsSha256": "d14343604557296f2ed62c1df47d9c80d81c323abafd89ccbb64a6a0746ff4bd"
+    }
+  },
+  "owned_containers": {
+    "count": 7,
+    "all_running": true,
+    "api_id": "c138a8456bc834d53c2ab4c3bc3c0307024dbc5a9cbb9a11c337218adcde7324",
+    "api_image": "sha256:fe5fb7eaf6a68123f9da6b92a0a69483180d213f556b4bedf313f04a383b4821",
+    "web_id": "1e8d3a40dd9665481748b1278fd60de71ced6c682986d367a90665e76a61358a",
+    "web_image": "sha256:d11a882849dc806e0d4728ca90a8fc8655aebc77421acefac63054b4fbb89365",
+    "gateway_id": "0c48d94e9fe5b4ad75efd304db2752dfa4cab3befc59b9f736574d6cd551eea3",
+    "gateway_image": "sha256:76090a34b858323b6ab169711adc08253b5bee7123a973dc581ed46b643bc109",
+    "preservedIdsImagesStateChecked": true
+  },
+  "images_and_tags": {
+    "api_service_tag": "sha256:fe5fb7eaf6a68123f9da6b92a0a69483180d213f556b4bedf313f04a383b4821",
+    "web_service_tag": "sha256:d11a882849dc806e0d4728ca90a8fc8655aebc77421acefac63054b4fbb89365",
+    "accepted_candidate_tag": "sha256:6f4b2500e02d1523f99b423a08b6a166e319d5f3246ad516ef8f4a56d30001ed",
+    "rollback_tag_present": false
+  },
+  "owned_volumes": {
+    "count": 5,
+    "names": [
+      "leadshug_channels_local_evolution_instances",
+      "leadshug_channels_local_evolution_pg_data",
+      "leadshug_channels_local_evolution_redis_data",
+      "leadshug_channels_local_leadshug_arquivos",
+      "leadshug_channels_local_leadshug_pg_data"
+    ]
+  },
+  "owned_network": {
+    "id": "d48c8a9ac92f00d8e2f1c1c6a1744ab14463aeba4abeab491f82719336925c20",
+    "owner": "number-onboarding",
+    "project": "leadshug_channels_local",
+    "apiIp": "172.27.0.5",
+    "webIp": "172.27.0.4",
+    "gatewayIp": "172.27.0.2",
+    "sameNetworkMembership": true
+  },
+  "gateway_config": {
+    "runtimeActiveSha256": "9329131376e0aaa8020e7440954af5125a65eb2bba69fd016292fe63843fe707",
+    "publicTemplateSha256": "9329131376e0aaa8020e7440954af5125a65eb2bba69fd016292fe63843fe707",
+    "unchangedAndEqual": true
+  },
+  "privateOriginRead": false,
+  "apiOrWebMutation": false,
+  "gatewayTestOrReload": false,
+  "databaseProviderOrUserSessionActivity": false,
+  "observed_utc": "2026-10-17T13:56:07.112728+00:00",
+  "bindings": {
+    "v7_script": "T/cp64-activate-origin-api-web-v7.ps1",
+    "v7_sha256": "5e31094320fd2b45392a8436223517ac124d837062530190cab14adec8accb47",
+    "fresh_final_review": "cp64-https-final.result.raw.json",
+    "fresh_final_review_sha256": "81aee5d1342852a4bda7f18afbbd63f3ff0fadadcf58c40d4eaf809a657ffe4d"
+  }
+}

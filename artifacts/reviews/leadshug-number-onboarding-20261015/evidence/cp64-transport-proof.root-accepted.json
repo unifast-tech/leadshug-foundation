@@ -1,0 +1,51 @@
+{
+  "checkpoint": "cp64-transport-root-accepted",
+  "accepted_utc": "2026-10-17T13:28:19.917743+00:00",
+  "rootAccepted": true,
+  "rootOutcome": "GO",
+  "operationAuthority": "PENDING",
+  "hostname": "addressing-mar-perform-hormone.trycloudflare.com",
+  "target": "http://127.0.0.1:8083",
+  "scope": "Transport acceptance only; exact old-child retirement may be separately activated. Private origin/API/Web remains NO-GO pending v4 review.",
+  "proof_bindings": {
+    "cp64-transport-proof.json": "d779cb12762f7d2b2a7d6690d1b91b045a4f31ac8bd65aad2b9c4f2f580acce0",
+    "root-cp64-transport-native.json": "06ddb830c6c87e148dd50d586edb7a01061582cb91e5ce2178595588eaf2114b",
+    "root-cp64-transport-public-probe.json": "b43d92176704f907026023c321c963a71e50740fed5e0900e490b1234a3df72d",
+    "root-cp64-phase1-preservation.json": "db55921245c61e25385c3549c2805262426bcab869690f26b74bf373575aa80e"
+  },
+  "native": [
+    {
+      "kind": "supervisor",
+      "pid": 14708,
+      "nativeStartTicks": 639278403605890201,
+      "path": "C:\\unifast\\leadshug\\leadshug_now_docker\\foundation_documentation\\artifacts\\tmp\\number-onboarding-execution\\T\\cloudflared-cp64\\cp64-supervisor.exe",
+      "sha256": "bdf68028ea2da0699b1e04d191453b5d7090861b17f518d236ce6b084d45c69b",
+      "parentPid": 11848,
+      "argvMatch": true
+    },
+    {
+      "kind": "child",
+      "pid": 2148,
+      "nativeStartTicks": 639278403607622938,
+      "path": "C:\\unifast\\leadshug\\leadshug_now_docker\\foundation_documentation\\artifacts\\tmp\\number-onboarding-execution\\T\\cloudflared-cp64\\cloudflared-windows-amd64.exe",
+      "sha256": "86aee4017b26625cee8484c113558f48effa4cd47f7aa05fcf425604e5d2b23c",
+      "parentPid": 14708,
+      "argvMatch": true
+    }
+  ],
+  "stability_limit": "No lifetime promise; state reports one registered connection and one error event, current actual normal TLS probes pass; no cause/stability inferred.",
+  "windows": {
+    "normalTls": true,
+    "redirected": false,
+    "rootStatus": 200,
+    "healthStatus": 200,
+    "jsSha256": "d14343604557296f2ed62c1df47d9c80d81c323abafd89ccbb64a6a0746ff4bd"
+  },
+  "wsl": {
+    "normalTls": true,
+    "redirected": false,
+    "rootStatus": 200,
+    "healthStatus": 200,
+    "jsSha256": "d14343604557296f2ed62c1df47d9c80d81c323abafd89ccbb64a6a0746ff4bd"
+  }
+}

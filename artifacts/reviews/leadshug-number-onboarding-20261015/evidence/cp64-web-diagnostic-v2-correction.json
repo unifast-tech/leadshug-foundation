@@ -1,0 +1,9 @@
+{
+  "checkpoint": "cp64-web-diagnostic-v2-correction",
+  "status": "correction_preserves_immutable_v2_artifacts",
+  "priorV2SupplementSha256": "681c4d28c38ad8ab09b5d5e260c49a5f3d9b1683c7ba2ba45fad99b266fa1d4d",
+  "originalWslProbeSha256": "51db711ac796298bb6b274838bbfccb1b54ec72bc19d3899c2217a66faed19b5",
+  "originalRegexFinding": "The original source already contained the correct single-backslash raw-regex word boundary; the earlier note describing it as a fix is not supported. Its synthetic sample is only a positive-control result, not evidence of a defect or repair.",
+  "v1AndV2Preserved": true,
+  "noRuntimeAction": true
+}

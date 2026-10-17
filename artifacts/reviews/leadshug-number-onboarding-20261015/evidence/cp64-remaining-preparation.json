@@ -1,0 +1,58 @@
+{
+  "checkpoint": "cp64-remaining-preparation",
+  "disposition": "helpers_prepared_only_waiting_for_ops_critique_and_root_GO",
+  "execution_performed": false,
+  "private_env_read": false,
+  "docker_or_process_mutation": false,
+  "source_canon_or_git_mutation": false,
+  "scripts": [
+    {
+      "purpose": "retire only the exact old tunnel child after accepted new transport proof",
+      "path": "foundation_documentation/artifacts/tmp/number-onboarding-execution/T/cloudflared-cp64/cp64-retire-old-child.ps1",
+      "sha256": "0227a8a5d05279b68bfb4d963fa7a6b0013ddd1ce695ca65c0c40479347064ae",
+      "parser_only": "Windows PowerShell parser passed; 933 tokens; zero errors; not invoked",
+      "default": "validate-only",
+      "guards": [
+        "requires a proof record explicitly marked rootOutcome=GO and rootAccepted=true, with new host TLS/no-redirect root/health/JS evidence from both Windows and WSL",
+        "checks new cp64 runtime-state against proof host, exact expected target/transport/argv/config/hash, own child/supervisor paths, parent IDs and native StartTime values",
+        "pins old child PID 21180 to native UTC ticks 639277908932385742, exact path/hash/argv/parent/config; fake ticks reject before mutation",
+        "holds one .NET Process object/native handle across validation and, only with explicit -RetireOldChild, invokes Kill on that same held object; no later PID/name lookup, discovery, or fallback"
+      ]
+    },
+    {
+      "purpose": "guarded in-memory origin CAS, same-image API recreation, then accepted Web activation and scoped probes",
+      "path": "foundation_documentation/artifacts/tmp/number-onboarding-execution/T/cp64-activate-origin-api-web.ps1",
+      "sha256": "5e0a5e3af9d75675c86e67b97702570c504bd6c41c4756225162d896b5d1a343",
+      "parser_only": "Windows PowerShell parser passed; 2627 tokens; zero errors; not invoked",
+      "default": "plan-only; no private read",
+      "mutation_gate": "explicit -ApplyAll plus proof with operationAuthority=GO, rootOutcome=GO, rootAccepted=true and accepted Windows/WSL TLS/root/health/JS checks",
+      "private_edit": "only CHANNELS_LOCAL_ORIGIN bytes are replaced in-memory; single exact target line required; compare-and-swap rechecks whole file bytes while holding the same file exclusively; write uses the existing file handle, preserving file security metadata; no backup/hash/output; original bytes retained only in memory for guarded rollback",
+      "service_scope": "API image fe5fb7... only first with corrected Windows Compose prefix and --no-build --no-deps --force-recreate api; API health and only NODE_ENV=production/WEB_ORIGIN=new-origin booleans; then rollback-tag exact old Web d11a... and activate exact candidate 6f4b... with --no-build --no-deps --force-recreate web",
+      "other_services": "five exact non-API/Web container IDs/images and all five volume names guarded; no Evolution/provider/DB/cache/gateway or Compose dependency actions",
+      "rollback": "on failure, separately attempts only old Web retag/recreate and exact in-memory origin CAS restore plus same-image API recreate; refuses overwrite of concurrent origin edit; never reloads/recreates gateway and outputs no prior origin value",
+      "probes": "normal TLS/no redirect/no cookies or auth; in-memory privacy byte comparison, HTML content type/strict UTF-8 and CSP/referrer/noindex meta checks, no declared automatic-resource elements, root/health and expected JS hash; response bodies are not persisted",
+      "known_limit": "scripts were parser-checked only; no behavioral execution, environment read, Docker inspect, origin write, container/tag operation, or network probe occurred"
+    }
+  ],
+  "exact_future_compose_argv": {
+    "prefix": [
+      "docker.exe", "compose", "--project-name", "leadshug_channels_local",
+      "--env-file", "C:\\unifast\\leadshug\\leadshug_now_docker\\.env.testing",
+      "-f", "C:\\unifast\\leadshug\\leadshug_now_docker\\docker-compose.yml",
+      "-f", "C:\\unifast\\leadshug\\leadshug_now_docker\\docker-compose.channels.yml",
+      "--profile", "channels-local"
+    ],
+    "api": ["up", "-d", "--no-build", "--no-deps", "--force-recreate", "api"],
+    "web": ["up", "-d", "--no-build", "--no-deps", "--force-recreate", "web"],
+    "apiRollback": ["up", "-d", "--no-build", "--no-deps", "--force-recreate", "api"],
+    "webRollback": ["up", "-d", "--no-build", "--no-deps", "--force-recreate", "web"],
+    "oldWebRollbackTag": ["docker.exe", "tag", "sha256:d11a882849dc806e0d4728ca90a8fc8655aebc77421acefac63054b4fbb89365", "leadshug_channels_local-web-rollback:cp63-preprivacy"],
+    "candidateWebServiceTag": ["docker.exe", "tag", "sha256:6f4b2500e02d1523f99b423a08b6a166e319d5f3246ad516ef8f4a56d30001ed", "leadshug_channels_local-web"],
+    "restoreOldWebServiceTag": ["docker.exe", "tag", "leadshug_channels_local-web-rollback:cp63-preprivacy", "leadshug_channels_local-web"]
+  },
+  "conditional_gateway": "No automatic gateway action. Any 502/stale-upstream indication is reported for root read-only diagnosis and separate adjudication; no nginx test/reload is embedded in these helpers.",
+  "frozen_prior_bindings": {
+    "cp64_v2_transport_script_sha256": "f8cad6104455250572f058fe8173aeb364349f801a921001be161832e1eaa0db",
+    "cp64_recovery_plan_unchanged": true
+  }
+}

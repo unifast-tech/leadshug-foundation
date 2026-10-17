@@ -1,3 +1,6 @@
 *.md text eol=lf
 *.yaml text eol=lf
 *.json text eol=lf
+artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp64-activation-stage.json -text
+artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp64-activation-stage-v8.json -text
+artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp64-activation-stage-v9.json -text

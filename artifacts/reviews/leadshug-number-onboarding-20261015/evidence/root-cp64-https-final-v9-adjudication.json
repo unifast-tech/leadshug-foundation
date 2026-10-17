@@ -1,0 +1,16 @@
+{
+  "checkpoint": "root-cp64-v9-final-adjudication",
+  "observedUtc": "2026-10-17T14:43:47.377970+00:00",
+  "rawSha256": "a45e4874df012488e04a87334779480668ad06b40451664baace315483a77d24",
+  "mergeExit": 0,
+  "rootAccepted": true,
+  "findings": {
+    "CP64-FINAL-V9-01": "Integrated source/candidate remediation; actual delivery gate remains open until measured",
+    "CP64-FINAL-V9-02": "Integrated honest qualification/current scoped absence; exact first-probe historical cleanup unprovable"
+  },
+  "sourceCommitLocalOnly": "74b9d4b714044829796f875d00553f077c1c329d",
+  "sourceAndStagedAndCommittedNginxSha256": "0cdafce3f985f351a0610e46b76df5babbaefa6c40d428a1bf90e093ce586313",
+  "parentStatus": "Pending",
+  "officialVAL05": "open_unwaived",
+  "publicPolicyAccepted": false
+}

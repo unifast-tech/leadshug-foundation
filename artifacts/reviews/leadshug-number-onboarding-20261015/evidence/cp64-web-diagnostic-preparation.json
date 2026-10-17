@@ -1,0 +1,199 @@
+{
+  "checkpoint": "cp64-web-only-diagnostic-preparation",
+  "observedUtc": "2026-10-17T14:17:08Z",
+  "status": "prepared_not_executed_no_operation_GO_yet",
+  "rootAccepted": false,
+  "operationAuthority": "PENDING",
+  "reason": "v8 activated the candidate briefly but policy verification failed before actual direct/public body metadata was retained; v8 helper completed verified rollback. This package prepares a diagnostic-only Web activation and captures bounded metadata before any byte-match decision.",
+  "priorFailure": {
+    "record": "cp64-policy-activation-v8.json",
+    "sha256": "611b06c645db03d999f7170cf337997d1676a738e8368bae22666a2a769473cb",
+    "stageReceipt": "cp64-activation-stage-v8.json",
+    "stageReceiptSha256": "1bfc417fa45a70383206a0b60110cc0a79452db6c766a45698fb8555f78638ce",
+    "result": "failed_then_rollback_verified",
+    "failedStage": "web_recreate",
+    "failureCategory": "privacy_response_bytes_mismatch",
+    "httpStatus": 200,
+    "rollback": {
+      "api": "verified_same_image_health_and_old_origin",
+      "web": "verified",
+      "origin": "verified_bytes_security_and_old_origin",
+      "resources": "verified",
+      "gatewayReloadAttempted": false
+    }
+  },
+  "currentOwnedRuntime": {
+    "project": "leadshug_channels_local",
+    "owner": "number-onboarding",
+    "api": {
+      "id": "f86d76c633f4f06a98a67dc4b6432700ac8e1e6f81b555697b5feabf6a1f08ab",
+      "image": "sha256:fe5fb7eaf6a68123f9da6b92a0a69483180d213f556b4bedf313f04a383b4821",
+      "state": "running",
+      "health": "healthy",
+      "networkId": "d48c8a9ac92f00d8e2f1c1c6a1744ab14463aeba4abeab491f82719336925c20",
+      "ip": "172.27.0.5",
+      "owner": "number-onboarding",
+      "project": "leadshug_channels_local",
+      "service": "api"
+    },
+    "web": {
+      "id": "be3b43373e115c7e094445481164a2c5f1077c56b8cf9a550751287e686ad393",
+      "image": "sha256:d11a882849dc806e0d4728ca90a8fc8655aebc77421acefac63054b4fbb89365",
+      "state": "running",
+      "networkId": "d48c8a9ac92f00d8e2f1c1c6a1744ab14463aeba4abeab491f82719336925c20",
+      "ip": "172.27.0.4",
+      "owner": "number-onboarding",
+      "project": "leadshug_channels_local",
+      "service": "web"
+    },
+    "gateway": {
+      "id": "0c48d94e9fe5b4ad75efd304db2752dfa4cab3befc59b9f736574d6cd551eea3",
+      "image": "sha256:76090a34b858323b6ab169711adc08253b5bee7123a973dc581ed46b643bc109",
+      "state": "running",
+      "networkId": "d48c8a9ac92f00d8e2f1c1c6a1744ab14463aeba4abeab491f82719336925c20",
+      "ip": "172.27.0.2",
+      "owner": "number-onboarding",
+      "project": "leadshug_channels_local",
+      "service": "gateway"
+    },
+    "evolution": {
+      "id": "cf749491f7149dc46ec4db597b2d9c12faf918dd4f05b5512ba75adaf8e29ea4",
+      "image": "sha256:385a3c4bedf42c66b46b43d06aae8712620144a84aa3b2c831b30c68435ab27c",
+      "state": "running",
+      "owner": "number-onboarding",
+      "project": "leadshug_channels_local",
+      "service": "evolution",
+      "networkId": "d48c8a9ac92f00d8e2f1c1c6a1744ab14463aeba4abeab491f82719336925c20",
+      "ip": "172.27.0.6"
+    },
+    "evolutionRedis": {
+      "id": "3b2e8d153d794a768ea87cb4f9cda7ba15dde242e2b8027bd372a475a9c26fbb",
+      "image": "sha256:f84b0c4678011602b9b98c227a4dcd5468bf8b088b02fdd4165cb7758bad8058",
+      "state": "running",
+      "health": "healthy",
+      "owner": "number-onboarding",
+      "project": "leadshug_channels_local",
+      "service": "evolution-redis",
+      "networkId": "d48c8a9ac92f00d8e2f1c1c6a1744ab14463aeba4abeab491f82719336925c20",
+      "ip": "172.27.0.3"
+    },
+    "evolutionPostgres": {
+      "id": "150de898c3d9aa189ca0719eed7a65b95d95d8b948244e66b059a55f4554135a",
+      "image": "sha256:80f4c7a5e91618546dce5b4fe60cf03b14c0f9efa7e40157278d122772ced8d2",
+      "state": "running",
+      "health": "healthy",
+      "owner": "number-onboarding",
+      "project": "leadshug_channels_local",
+      "service": "evolution-postgres",
+      "networkId": "d48c8a9ac92f00d8e2f1c1c6a1744ab14463aeba4abeab491f82719336925c20",
+      "ip": "172.27.0.8"
+    },
+    "postgres": {
+      "id": "4fcd87b431339e3b65a40beafa27db86cdc978ca79f71b911199f7090c837495",
+      "image": "sha256:80f4c7a5e91618546dce5b4fe60cf03b14c0f9efa7e40157278d122772ced8d2",
+      "state": "running",
+      "health": "healthy",
+      "owner": "number-onboarding",
+      "project": "leadshug_channels_local",
+      "service": "postgres",
+      "networkId": "d48c8a9ac92f00d8e2f1c1c6a1744ab14463aeba4abeab491f82719336925c20",
+      "ip": "172.27.0.7"
+    },
+    "volumes": [
+      "leadshug_channels_local_evolution_instances",
+      "leadshug_channels_local_evolution_pg_data",
+      "leadshug_channels_local_evolution_redis_data",
+      "leadshug_channels_local_leadshug_arquivos",
+      "leadshug_channels_local_leadshug_pg_data"
+    ],
+    "networkOwner": "number-onboarding",
+    "networkProject": "leadshug_channels_local",
+    "gatewayRuntimeConfigSha256": "9329131376e0aaa8020e7440954af5125a65eb2bba69fd016292fe63843fe707",
+    "gatewayTemplateSha256": "9329131376e0aaa8020e7440954af5125a65eb2bba69fd016292fe63843fe707",
+    "allSevenOwnerProjectServiceLabelsValidated": true,
+    "allSevenSharedSameNetwork": true
+  },
+  "imageRefs": {
+    "apiServiceTag": "leadshug_channels_local-api",
+    "apiImage": "sha256:fe5fb7eaf6a68123f9da6b92a0a69483180d213f556b4bedf313f04a383b4821",
+    "webServiceTag": "leadshug_channels_local-web",
+    "webServiceTagImage": "sha256:d11a882849dc806e0d4728ca90a8fc8655aebc77421acefac63054b4fbb89365",
+    "candidateTag": "leadshug-channels-web-candidate:cp63-d0f72c588f0f",
+    "candidateImage": "sha256:6f4b2500e02d1523f99b423a08b6a166e319d5f3246ad516ef8f4a56d30001ed",
+    "rollbackTag": "leadshug_channels_local-web-rollback:cp63-preprivacy",
+    "rollbackImage": "sha256:d11a882849dc806e0d4728ca90a8fc8655aebc77421acefac63054b4fbb89365",
+    "acceptedPolicySourceSha256": "d0f72c588f0f014de46a327e34d6b26125ca115bc973b56bbb926cd8519e701d",
+    "acceptedPolicySourceBytes": 12865
+  },
+  "transport": {
+    "hostname": "addressing-mar-perform-hormone.trycloudflare.com",
+    "target": "http://127.0.0.1:8083",
+    "transport": "http2",
+    "supervisor": {
+      "pid": 14708,
+      "startTicks100ns": 639278403605890201,
+      "parentPid": 11848,
+      "path": "foundation_documentation/artifacts/tmp/number-onboarding-execution/T/cloudflared-cp64/cp64-supervisor.exe",
+      "sha256": "bdf68028ea2da0699b1e04d191453b5d7090861b17f518d236ce6b084d45c69b"
+    },
+    "child": {
+      "pid": 2148,
+      "startTicks100ns": 639278403607622938,
+      "parentPid": 14708,
+      "path": "foundation_documentation/artifacts/tmp/number-onboarding-execution/T/cloudflared-cp64/cloudflared-windows-amd64.exe",
+      "sha256": "86aee4017b26625cee8484c113558f48effa4cd47f7aa05fcf425604e5d2b23c",
+      "argv": "cloudflared.exe tunnel --config empty-config.yml --no-autoupdate --url http://127.0.0.1:8083"
+    },
+    "emptyConfigBytes": 0,
+    "sameKnownProcessPinsObservedNow": true,
+    "lastNormalTlsProofObservedUtc": "2026-10-17T14:02:30.939605Z",
+    "lastWindowsAndWslRootHealthStatus": 200,
+    "lastWindowsAndWslJsSha256": "d14343604557296f2ed62c1df47d9c80d81c323abafd89ccbb64a6a0746ff4bd",
+    "freshPublicProbeRequiredAtNewGo": true
+  },
+  "plannedWebOnlyActivation": {
+    "requiresFreshRootGoBoundToAllCurrentPins": true,
+    "step1": "Recheck all seven owner/project/service IDs and image IDs, five volumes, accepted image references, same owned network/IP/config pins, exact tunnel process pins and fresh normal-TLS public health/JS before mutation.",
+    "step2": "Retag only the accepted candidate image onto leadshug_channels_local-web after confirming current service tag is the old d11 image and existing rollback tag still points to that old image.",
+    "step3": "Run only canonical Compose service up with --no-build --no-deps --force-recreate web, using already-corrected Windows paths. Do not set or alter CHANNELS_LOCAL_ORIGIN; do not recreate API or any dependency.",
+    "composeArgv": [
+      "docker.exe",
+      "compose",
+      "--project-name",
+      "leadshug_channels_local",
+      "--env-file",
+      "C:\\unifast\\leadshug\\leadshug_now_docker\\.env.testing",
+      "-f",
+      "C:\\unifast\\leadshug\\leadshug_now_docker\\docker-compose.yml",
+      "-f",
+      "C:\\unifast\\leadshug\\leadshug_now_docker\\docker-compose.channels.yml",
+      "--profile",
+      "channels-local",
+      "up",
+      "-d",
+      "--no-build",
+      "--no-deps",
+      "--force-recreate",
+      "web"
+    ],
+    "step4": "Verify the selected Web service is now the exact candidate, API ID/image/health are unchanged, other five owned services and five volumes are unchanged, same gateway/network/config and exact native transport pins remain.",
+    "mismatchBehavior": "Complete the direct, Windows, and WSL metadata probes before any rollback decision. Do not rollback automatically on a policy-byte mismatch or 502; leave candidate provisionally active for root diagnosis. On any precondition/transport drift, stop before retag/recreate. This packet authorizes no gateway reload."
+  },
+  "diagnosticProbes": {
+    "windows": "T/cp64-web-diagnostic-probes.ps1 requests only HTTPS /privacidade.html using normal TLS, no cookies, no redirects, Accept-Encoding identity; also uses the exact API container to fetch only direct http://web/privacidade.html and http://gateway/privacidade.html. Returns status, byte length/SHA, UTF-8 validity, MIME/content encoding/cache metadata, Set-Cookie presence boolean, email-obfuscation marker booleans and script/form counts. Never writes response bodies.",
+    "wsl": "T/cp64-web-diagnostic-probe-wsl.py uses system TLS verification and no redirect-following for only the same public HTTPS path; returns same bounded metadata and no response body.",
+    "gateway502": "If public route is 502, capture route-specific gateway/direct status plus same-network endpoint membership/IP and unchanged gateway image/config, then stop for root diagnosis. This diagnostic packet authorizes no gateway test, reload, or recreate.",
+    "hypothesis": "Cloudflare email-address obfuscation is an unverified hypothesis only; no HTML/config modification is proposed."
+  },
+  "probeScriptSha256": {
+    "windows": "13e0446d188902cde1050707b06ffbf57922476ab60a02128d12432841c84962",
+    "wsl": "51db711ac796298bb6b274838bbfccb1b54ec72bc19d3899c2217a66faed19b5"
+  },
+  "notPerformed": [
+    "No Web tag change or recreate",
+    "No API/origin/env/DB/provider/Meta change",
+    "No tunnel/process change",
+    "No public policy response fetched during this preparation",
+    "No response body persisted"
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "checkpoint": "root-cp64-v9-operation-GO",
+  "issuedUtc": "2026-10-17T14:43:47.377970+00:00",
+  "rootAccepted": true,
+  "rootOutcome": "GO",
+  "operationAuthority": "GO",
+  "hostname": "addressing-mar-perform-hormone.trycloudflare.com",
+  "candidate_sha256": "c783032964e9ec9e8c83ac450df592c7859a3b71eec5eeb3f9ef8eb0d154a95b",
+  "accepted_preflight_sha256": "5b75e50041f3ede06100ba05340c67cd3e55354598e7a3592399fe236bfaa3f2",
+  "fresh_final_review_sha256": "a45e4874df012488e04a87334779480668ad06b40451664baace315483a77d24",
+  "rootIndependentWslObservations": [
+    {
+      "path": "/",
+      "status": 200,
+      "bytes": 694,
+      "sha256": "f21b2cb8528bab142bdba0babc64b7cb4cff821152ef4416698fd062642d5acd",
+      "redirected": false,
+      "noSetCookie": true
+    },
+    {
+      "path": "/health",
+      "status": 200,
+      "bytes": 15,
+      "sha256": "a29ee2b15c494311c52521766e44af56a3ad2248e7a8ab465e5206463c13d288",
+      "redirected": false,
+      "noSetCookie": true
+    },
+    {
+      "path": "/assets/index-txvhtd65.js",
+      "status": 200,
+      "bytes": 258450,
+      "sha256": "d14343604557296f2ed62c1df47d9c80d81c323abafd89ccbb64a6a0746ff4bd",
+      "redirected": false,
+      "noSetCookie": true
+    }
+  ],
+  "windows": {
+    "normalTls": true,
+    "redirected": false,
+    "rootStatus": 200,
+    "healthStatus": 200,
+    "jsStatus": 200,
+    "noSetCookie": true,
+    "jsSha256": "d14343604557296f2ed62c1df47d9c80d81c323abafd89ccbb64a6a0746ff4bd"
+  },
+  "wsl": {
+    "normalTls": true,
+    "redirected": false,
+    "rootStatus": 200,
+    "healthStatus": 200,
+    "jsStatus": 200,
+    "noSetCookie": true,
+    "jsSha256": "d14343604557296f2ed62c1df47d9c80d81c323abafd89ccbb64a6a0746ff4bd"
+  },
+  "scope": [
+    "Exactly one frozen v9 invocation after immediate native/resource/tag freshness guard",
+    "Opaque INMEM unique public origin key CAS only, preserve all other private bytes/ACL without output/backup/hash",
+    "Same actual APIfe5 and corrected Webcfd5 via canonical service-only Compose",
+    "At most one same-gateway test/graceful reload ONLY existing causal502 predicate and persisted evidence",
+    "Guarded rollback own objects only, refuse unknown/concurrent changes"
+  ],
+  "stageReceipt": "cp64-activation-stage-v9.json",
+  "resultReceipt": "cp64-policy-activation-v9.json",
+  "forbidden": [
+    "Meta publication",
+    "source push/gitlink mutation",
+    "production/Railway/newcohort/account/domain",
+    "provider/credential/data repair",
+    "private output/read outside opaque origin transaction"
+  ],
+  "parentStatus": "Pending",
+  "officialVAL05": "open_unwaived",
+  "policyDelivery": "pending actual public proof"
+}

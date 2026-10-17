@@ -1,0 +1,29 @@
+{
+  "checkpoint": "cp64-remaining-preparation-v6",
+  "observed_utc": "2026-10-17T13:43:38.349843+00:00",
+  "status": "prepared_not_executed",
+  "script": "T/cp64-activate-origin-api-web-v6.ps1",
+  "script_sha256": "2ba4a442faf06b8ae34dbf2e5c81cb9fec42d7ce0f7f6655b4a33401046cbc66",
+  "preserved_source_helper": "T/cp64-activate-origin-api-web-v5.ps1",
+  "v5_unchanged": true,
+  "changes": [
+    "Binds owned network ID and API/Web/gateway endpoint memberships and IPs before operation.",
+    "Checks exact gateway ID/image/owner/project/service and active runtime config SHA equal to the public template.",
+    "Captures fixed local API/Web/gateway route status and expected public Web policy/JS hash booleans only after a public 502 and before any nginx command.",
+    "Allows one same-container nginx -t and graceful reload only for supported failed routes when backend status/content, changed relevant backend IP, same network, same gateway and unchanged config prove the narrow stale-upstream condition.",
+    "Repeats the complete public probe set only after the one guarded reload; any failed condition returns to the existing guarded rollback.",
+    "Suppresses Set-OriginBytesCAS return values to keep stdout terminal JSON only; preserves original 502 route/status/exit in recovery receipt."
+  ],
+  "validation": {
+    "windows_powershell_parser_errors": 0,
+    "predicate_tests": "pass",
+    "positive_cases": 2,
+    "negative_cases": 9,
+    "plan_only": "pass",
+    "apply_mode": "not invoked",
+    "docker_or_network_calls_from_predicate_tests": 0
+  },
+  "runtime_state": "No operation mutation or private read; see cp64-step7-readonly-preflight.json.",
+  "review_required": true,
+  "operation_authority": "PENDING"
+}

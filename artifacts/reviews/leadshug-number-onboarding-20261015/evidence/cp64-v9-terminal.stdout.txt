@@ -1,0 +1,28 @@
+{
+    "result":  "success_exact_policy_and_regression_probes_passed",
+    "origin":  "https://addressing-mar-perform-hormone.trycloudflare.com",
+    "apiContainerId":  "005529386c8a7ab499cd779942ce541bb90cd3a770b8436b41509d2655e54857",
+    "apiImage":  "sha256:fe5fb7eaf6a68123f9da6b92a0a69483180d213f556b4bedf313f04a383b4821",
+    "webContainerId":  "9aa55b6681a8480dbfd7cbf2a51ab8571035603b288b52e6798d93741af01093",
+    "webImage":  "sha256:cfd5e58b91a67d2fae4f37759274a34209cd2501082650a49545a60a12642361",
+    "public":  {
+                   "policyStatus":  200,
+                   "contentTypeHtml":  true,
+                   "strictUtf8AndCharsetMeta":  true,
+                   "policyBytes":  12865,
+                   "policySha256":  "d0f72c588f0f014de46a327e34d6b26125ca115bc973b56bbb926cd8519e701d",
+                   "noSetCookie":  true,
+                   "noRedirect":  true,
+                   "cspMetaPresent":  true,
+                   "referrerMetaPresent":  true,
+                   "noindexMetaPresent":  true,
+                   "noDeclaredAutomaticResourceElements":  true,
+                   "rootStatus":  200,
+                   "healthStatus":  200,
+                   "jsSha256":  "d14343604557296f2ed62c1df47d9c80d81c323abafd89ccbb64a6a0746ff4bd",
+                   "authOrCookieSent":  false
+               },
+    "preservedContainersAndVolumes":  true,
+    "rollbackTag":  "leadshug_channels_local-web-rollback:cp64-prenotransform",
+    "rollbackTagPreserved":  true
+}

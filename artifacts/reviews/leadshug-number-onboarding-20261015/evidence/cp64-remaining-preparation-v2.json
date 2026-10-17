@@ -1,0 +1,61 @@
+{
+  "checkpoint": "cp64-remaining-preparation-v2",
+  "disposition": "prepared_only_waiting_for_live_ops_critique_and_root_GO",
+  "execution_performed": false,
+  "private_env_read": false,
+  "runtime_process_or_docker_mutation": false,
+  "network_requested": false,
+  "source_canon_or_git_mutation": false,
+  "immutable_original_bindings": {
+    "activation_script_sha256": "5e0a5e3af9d75675c86e67b97702570c504bd6c41c4756225162d896b5d1a343",
+    "retirement_script_sha256": "0227a8a5d05279b68bfb4d963fa7a6b0013ddd1ce695ca65c0c40479347064ae",
+    "original_remaining_preparation_report_unchanged": true
+  },
+  "new_scripts": [
+    {
+      "purpose": "compatibility-corrected origin/API/Web helper; only prep delta is Docker argument binding and System.Net.Http assembly loading",
+      "path": "foundation_documentation/artifacts/tmp/number-onboarding-execution/T/cp64-activate-origin-api-web-v2.ps1",
+      "sha256": "b55f6bdda3b2304a625b19ac85de2c742e0c256df0a33788889c7f47c3268cf9",
+      "parser_only": "Windows PowerShell parser passed; 2631 tokens; zero parse errors; not invoked",
+      "changes": [
+        "Invoke-DockerText and Invoke-DockerMutation parameter renamed from automatic-variable-conflicting $Args to $Arguments; function bodies splat @Arguments",
+        "Get-NoSessionResponse explicitly executes Add-Type -AssemblyName System.Net.Http before constructing the handler/client"
+      ],
+      "all_other_operation_and_rollback_logic": "copied unchanged from frozen original activation helper 5e0a5e3... pending critique; no gateway automation added"
+    },
+    {
+      "purpose": "retirement helper with confirmed wait and post-retirement new-instance revalidation",
+      "path": "foundation_documentation/artifacts/tmp/number-onboarding-execution/T/cloudflared-cp64/cp64-retire-old-child-v2.ps1",
+      "sha256": "2d0e6520b485902d47a01c0d5910520b6ae0b2aca1991bde04a80f00df70463d",
+      "parser_only": "Windows PowerShell parser passed; 1007 tokens; zero parse errors; not invoked",
+      "changes": [
+        "checks WaitForExit(10000) returned true and held process object HasExited before reporting retirement",
+        "reruns exact accepted-proof/new cp64 state/native child and supervisor pin validation after retirement, then compares host, PIDs and native ticks to the pre-retirement snapshot",
+        "the fake ticks negative control remains validate-only and rejects before any process mutation"
+      ]
+    }
+  ],
+  "compatibility_probe": {
+    "dummyOnly": true,
+    "noDockerInvocation": true,
+    "noNetworkRequest": true,
+    "arrayArgumentsCall": {
+      "pattern": "Invoke-DockerText @('image','inspect','--format','{{.Id}}','dummy-public-ref')",
+      "newDefinitionParameter": "$Arguments",
+      "receivedCount": 5,
+      "valuesPreservedInOrder": ["image", "inspect", "--format", "{{.Id}}", "dummy-public-ref"]
+    },
+    "composePrefixPlusTail": {
+      "receivedCount": 12,
+      "allDummyPrefixAndTailValuesPreservedInOrder": true
+    },
+    "httpClient": {
+      "separateFreshWindowsPowerShellProcess": true,
+      "explicitAddTypeAssemblyNameSystemNetHttp": true,
+      "HttpClientHandlerConstructed": true,
+      "HttpClientConstructed": true,
+      "httpRequestMade": false
+    }
+  },
+  "scope": "Only new v2 T scripts and this evidence pair were created. No prior script/report, frozen transport plan, runtime/process/container/image/tag/origin, private file, source, or Git state was changed. Parser and dummy compatibility checks are not behavioral or operational validation."
+}

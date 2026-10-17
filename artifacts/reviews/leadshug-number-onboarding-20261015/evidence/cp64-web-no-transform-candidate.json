@@ -1,0 +1,93 @@
+{
+  "checkpoint": "cp64-web-no-transform-candidate-only",
+  "authority": "root-admitted candidate-only build/validation; no live activation authority",
+  "source": {
+    "changedPath": "web-app/nginx/default.conf.template",
+    "sha256": "0cdafce3f985f351a0610e46b76df5babbaefa6c40d428a1bf90e093ce586313",
+    "bytes": 1444,
+    "lineEndings": "CRLF retained",
+    "privacyHtmlSha256": "d0f72c588f0f014de46a327e34d6b26125ca115bc973b56bbb926cd8519e701d",
+    "privacyHtmlUnchanged": true,
+    "change": "Exact location /privacidade.html adds Cache-Control: no-store, no-transform and try_files $uri =404."
+  },
+  "build": {
+    "dockerfile": "web-app/Dockerfile",
+    "context": "web-app",
+    "pullFlagUsed": false,
+    "cachedBaseImagesBeforeAfterEqual": true,
+    "tag": "leadshug-channels-web-candidate:cp64-notransform-0cdafce3f985",
+    "imageId": "sha256:cfd5e58b91a67d2fae4f37759274a34209cd2501082650a49545a60a12642361",
+    "labels": {
+      "com.leadshug.channels.owner": "number-onboarding",
+      "com.leadshug.channels.checkpoint": "cp64-privacy-no-transform",
+      "com.leadshug.channels.policy-sha256": "d0f72c588f0f014de46a327e34d6b26125ca115bc973b56bbb926cd8519e701d",
+      "com.leadshug.channels.nginx-template-sha256": "0cdafce3f985f351a0610e46b76df5babbaefa6c40d428a1bf90e093ce586313"
+    },
+    "exitCode": 0,
+    "rawLog": "cp64-web-notransform-build.raw.log",
+    "rawLogSha256": "83618566cf40253f8949d2963fafa46cdbafc2fdf6317f936bc3c6f1c037d39a"
+  },
+  "candidateProbe": {
+    "containerId": "97a87b708ceaa6698447b3522b25f2aad53e8ff2a28c114de02396a1ef8d35a9",
+    "probeName": "cp64-privacy-notransform-probe-v2-021390b865",
+    "port": 61068,
+    "noMounts": true,
+    "noCredentials": true,
+    "nginxTestExitCode": 0,
+    "dockerPort": "127.0.0.1:61068",
+    "tcpConnected": true,
+    "responses": [
+      {
+        "path": "/privacidade.html",
+        "status": 200,
+        "bytes": 12865,
+        "sha256": "d0f72c588f0f014de46a327e34d6b26125ca115bc973b56bbb926cd8519e701d",
+        "sameLengthAndShaAsAcceptedSource": true,
+        "contentType": "text/html",
+        "cacheControl": "no-store, no-transform",
+        "setCookie": false,
+        "redirected": false
+      },
+      {
+        "path": "/",
+        "status": 200,
+        "bytes": 694,
+        "sha256": "f21b2cb8528bab142bdba0babc64b7cb4cff821152ef4416698fd062642d5acd",
+        "setCookie": false
+      },
+      {
+        "path": "/assets/index-txvhtd65.js",
+        "status": 200,
+        "bytes": 258450,
+        "sha256": "d14343604557296f2ed62c1df47d9c80d81c323abafd89ccbb64a6a0746ff4bd",
+        "expectedShaMatch": true
+      },
+      {
+        "path": "/api/cp64-public-probe",
+        "status": 404,
+        "bytes": 153,
+        "sha256": "9f6d0b634cab6787cdebb2a02e08a2e2ff6d8863344e46aa7bf387e607b827c3"
+      }
+    ],
+    "allExpectedAssertionsPassed": true,
+    "removedExactOwnedTemporaryContainer": true
+  },
+  "firstProbeAttempt": {
+    "result": "did not produce HTTP result; HttpClient probe timed out after nginx -t succeeded",
+    "imageBuildStillSucceeded": true,
+    "temporaryOwnedContainerCleanupAttempted": true,
+    "retryWasProbeOnlyAgainstSameCandidate": true
+  },
+  "liveState": {
+    "candidateOnly": true,
+    "liveWebActivated": false,
+    "apiOriginGatewayTunnelChanged": false,
+    "providerOrDatabaseAccessed": false,
+    "volumesOrLiveContainersChanged": false
+  },
+  "limitations": [
+    "Candidate-only validation does not establish edge transformation behavior or live readiness.",
+    "The first probe helper failed its local HttpClient path; a separate bounded probe with HttpWebRequest succeeded and cleaned its exact owned temporary container.",
+    "No source commit or live activation was performed."
+  ]
+}

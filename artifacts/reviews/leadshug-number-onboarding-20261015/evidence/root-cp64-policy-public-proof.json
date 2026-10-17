@@ -1,0 +1,77 @@
+{
+  "checkpoint": "root-cp64-policy-public-post-activation-proof",
+  "observedUtc": "2026-10-17T14:45:49.630442+00:00",
+  "host": "addressing-mar-perform-hormone.trycloudflare.com",
+  "transport": "WSL system-verified TLS",
+  "noAuthenticationOrCookiesSent": true,
+  "redirectFollowing": false,
+  "responseBodiesPersisted": false,
+  "results": [
+    {
+      "path": "/privacidade.html",
+      "status": 200,
+      "bytes": 12865,
+      "sha256": "d0f72c588f0f014de46a327e34d6b26125ca115bc973b56bbb926cd8519e701d",
+      "redirected": false,
+      "setCookiePresent": false,
+      "contentType": "text/html",
+      "cacheControl": "no-store, no-transform",
+      "sourceByteEqual": true,
+      "strictUtf8": true,
+      "scripts": 0,
+      "forms": 0,
+      "automaticResourceTags": 0,
+      "cloudflareRewritingMarkers": false,
+      "cspMeta": "default-src 'none'; style-src 'unsafe-inline'; base-uri 'none'; form-action 'none'",
+      "referrerMeta": "no-referrer",
+      "robotsMeta": "noindex, nofollow"
+    },
+    {
+      "path": "/",
+      "status": 200,
+      "bytes": 694,
+      "sha256": "f21b2cb8528bab142bdba0babc64b7cb4cff821152ef4416698fd062642d5acd",
+      "redirected": false,
+      "setCookiePresent": false,
+      "contentType": "text/html",
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "/health",
+      "status": 200,
+      "bytes": 15,
+      "sha256": "a29ee2b15c494311c52521766e44af56a3ad2248e7a8ab465e5206463c13d288",
+      "redirected": false,
+      "setCookiePresent": false,
+      "contentType": "application/json; charset=utf-8",
+      "cacheControl": null
+    },
+    {
+      "path": "/assets/index-txvhtd65.js",
+      "status": 200,
+      "bytes": 258450,
+      "sha256": "d14343604557296f2ed62c1df47d9c80d81c323abafd89ccbb64a6a0746ff4bd",
+      "redirected": false,
+      "setCookiePresent": false,
+      "contentType": "application/javascript",
+      "cacheControl": "max-age=31536000, public, immutable"
+    },
+    {
+      "path": "/webhooks/meta",
+      "status": 403,
+      "bytes": 40,
+      "sha256": "78fef13654a80508761fe8ecb45e952b2190e7c96de6b46d0fd5596cfe5096dd",
+      "redirected": false,
+      "setCookiePresent": false,
+      "contentType": "application/json; charset=utf-8",
+      "cacheControl": null,
+      "scope": "No-query verification request denied; not a token challenge, webhook receipt or Meta configuration proof"
+    }
+  ],
+  "rootAcceptedPolicyDelivery": true,
+  "limitations": [
+    "Not an authenticated application flow or Meta configuration check",
+    "Not real WhatsApp IN/OUT/recovery",
+    "Temporary local tunnel, no availability/lifetime promise"
+  ]
+}

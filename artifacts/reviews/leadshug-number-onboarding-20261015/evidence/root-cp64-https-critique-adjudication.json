@@ -1,0 +1,48 @@
+{
+  "schema_version": "root-operational-adjudication-v1",
+  "created_utc": "2026-10-17T13:20:49.740799+00:00",
+  "review_raw_sha256": "7d3165d7cb0aa7945cdbcf695f67324538286ceda311fed113b56a6fbd3bed7e",
+  "review_raw_path": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp64-https-critique.result.raw.json",
+  "selected_path": "Recommended A for all five findings; corrections pending measured verification",
+  "findings": [
+    {
+      "finding_id": "CP64-OPS-CRIT-01",
+      "status": "integration_pending",
+      "selected_option": "A"
+    },
+    {
+      "finding_id": "CP64-OPS-CRIT-02",
+      "status": "integration_pending",
+      "selected_option": "A"
+    },
+    {
+      "finding_id": "CP64-OPS-CRIT-03",
+      "status": "integration_pending",
+      "selected_option": "A"
+    },
+    {
+      "finding_id": "CP64-OPS-CRIT-04",
+      "status": "integration_pending",
+      "selected_option": "A"
+    },
+    {
+      "finding_id": "CP64-OPS-CRIT-05",
+      "status": "integration_pending",
+      "selected_option": "A"
+    }
+  ],
+  "phase1_launch_only": {
+    "authority": "GO subject to fresh validate-only/negative-control/native/container preservation preconditions",
+    "helper_sha256": "f8cad6104455250572f058fe8173aeb364349f801a921001be161832e1eaa0db",
+    "forbidden": [
+      "old-child retirement",
+      "private origin access",
+      "API/Web recreation",
+      "gateway reload"
+    ]
+  },
+  "origin_api_web_activation": "NO-GO until five findings resolved and independently reviewed",
+  "parent_status": "Pending",
+  "official_VAL05": "open_unwaived",
+  "source_push_meta_publish_production": "not_authorized"
+}

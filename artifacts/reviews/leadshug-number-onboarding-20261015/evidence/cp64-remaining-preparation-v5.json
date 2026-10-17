@@ -1,0 +1,29 @@
+{
+  "checkpoint": "cp64-remaining-preparation-v5",
+  "capturedAtUtc": "2026-10-17T13:36:18Z",
+  "result": "prepared_and_compatibility_checked_no_activation",
+  "v5Helper": "foundation_documentation/artifacts/tmp/number-onboarding-execution/T/cp64-activate-origin-api-web-v5.ps1",
+  "v5HelperSha256": "29eed5fbdd3868d6a382d542ae840be36088eb956aa83b49c4e2ec5843781459",
+  "compatibilityEvidence": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp64-v5-compatibility.json",
+  "changesFromV4": [
+    "native text/mutation wrappers suppress native stderr while caller preference is Continue, capture native exit before restoration, restore preference in finally, and throw sanitized nonzero status afterward",
+    "known docker.exe application preflight before future apply path",
+    "quote-free single-quoted constant JavaScript snippets for production/origin booleans, avoiding embedded double-quote native argv marshalling",
+    "best-effort receipt writes only in failure handling; ordinary stage receipt failure still aborts; terminal response carries receiptWriteFailure"
+  ],
+  "tests": {
+    "powershellParser": "passed",
+    "nativeTextWrapperExit0And7WithStdoutStderr": "passed",
+    "nativeMutationWrapperExit0And7WithStdoutStderr": "passed",
+    "actualReadonlyKnownApiConstantArgv": "quote-free_single-quoted_form_passed; double-quoted form returned safe exit 1",
+    "ordinaryAndFailureReceiptSinkBehavior": "passed_with_unavailable_dummy_sink"
+  },
+  "scope": {
+    "v5ApplyOrHelperExecution": false,
+    "runtimeMutation": false,
+    "privateOriginAccess": false,
+    "providerDatabaseGatewayAction": false,
+    "sourceGitOrLocalFilesAccess": false
+  },
+  "next": "stop_for_fresh_v5_review_and_root_GO_before_origin_API_or_Web_operation"
+}

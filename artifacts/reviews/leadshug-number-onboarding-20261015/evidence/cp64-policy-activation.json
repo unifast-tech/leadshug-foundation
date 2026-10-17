@@ -1,0 +1,79 @@
+{
+  "checkpoint": "cp64-policy-activation-v1",
+  "observed_utc": "2026-10-17T13:57:43.951668+00:00",
+  "attempt": {
+    "helper": "T/cp64-activate-origin-api-web-v7.ps1",
+    "helper_sha256": "5e31094320fd2b45392a8436223517ac124d837062530190cab14adec8accb47",
+    "operation_go": "cp64-phase2-operation-go.json",
+    "operation_go_sha256": "b0db632c7591722f18b620ee306974fb9e3dae7febff2a81ff27d6e9f243dd0c",
+    "invocations": 1,
+    "actual_exit_code": 2,
+    "terminal_json": {
+      "result": "failed_rollback_incomplete_stop_for_root",
+      "originalFailureCategory": "docker_read_guard_failed",
+      "originalNativeExitCode": 1,
+      "failureHttpStatus": null,
+      "failedStage": "preflight_resources",
+      "preRollbackSnapshot": {
+        "apiSelectedId": "c138a8456bc834d53c2ab4c3bc3c0307024dbc5a9cbb9a11c337218adcde7324",
+        "apiImage": "sha256:fe5fb7eaf6a68123f9da6b92a0a69483180d213f556b4bedf313f04a383b4821",
+        "webSelectedId": null,
+        "webImage": null,
+        "capture": "partial_or_unavailable",
+        "gatewayCause": "not_applicable"
+      },
+      "gatewayRecovery": null,
+      "rollbackWeb": "not_needed",
+      "rollbackApi": "not_needed",
+      "rollbackOrigin": "not_needed",
+      "apiPostconditionVerified": true,
+      "webPostconditionVerified": false,
+      "preservedResourcesVerified": false,
+      "originTransactionIncomplete": false,
+      "receiptWriteFailure": false,
+      "gatewayReloadAttempted": false,
+      "noGatewayReload": true,
+      "noGatewayRecreate": true,
+      "privateOldOriginExposed": false,
+      "noProviderDatabaseOrVolumeActions": true
+    },
+    "terminal_json_valid": true,
+    "stderr_persisted": false
+  },
+  "stage_receipt": {
+    "path": "cp64-activation-stage.json",
+    "sha256": "9d7f04353d7d50c13bccc1bef75fe5dc872f28a944e6268084a48c836e23df26",
+    "last_stage": "rollback_postconditions",
+    "failure_stage": "preflight_resources",
+    "origin_write_outcome": "not_started",
+    "api_mutation_started": false,
+    "web_mutation_started": false,
+    "web_tag_changed": false,
+    "gateway_reload_attempted": false,
+    "private_value_or_body_persisted": false
+  },
+  "activation_result": {
+    "origin_changed": false,
+    "api_recreated": false,
+    "web_recreated": false,
+    "candidate_public_policy_verified": false,
+    "policy_bytes_sha_expected": {
+      "bytes": 12865,
+      "sha256": "d0f72c588f0f014de46a327e34d6b26125ca115bc973b56bbb926cd8519e701d"
+    },
+    "post_attempt_policy_probe": "not_run_after_preflight_failure",
+    "preattempt_reference": "cp64-phase2-preflight.json",
+    "preattempt_reference_sha256": "2f636f4eebc47d13471fd42f74d6821ace7b4b549e57b052e772a1812aafeda1",
+    "preattempt_public_root_health_js_passed": true,
+    "current_policy_activation_claim": "none"
+  },
+  "mutation_bounds": {
+    "private_origin_read": false,
+    "private_origin_write": false,
+    "api_web_tag_mutation": false,
+    "container_recreate": false,
+    "gateway_nginx_test_or_reload": false,
+    "database_provider_user_session": false
+  },
+  "next_step": "Root/operator review of bounded Compose read failure; no automatic retry or helper change was made."
+}

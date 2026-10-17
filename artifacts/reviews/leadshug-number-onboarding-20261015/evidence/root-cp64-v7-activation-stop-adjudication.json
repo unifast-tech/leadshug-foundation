@@ -1,0 +1,12 @@
+{
+  "checkpoint": "root-cp64-v7-activation-stop-adjudication",
+  "observed_utc": "2026-10-17T14:00:20.517351+00:00",
+  "failed_raw_sha256": "0422a7f7af4c54a26ab556368102e929ce2760e6671d5b4a0723dff3b7c66951",
+  "original_result_preserved": true,
+  "v7_go": "Consumed by exactly one failed invocation; not valid for another helper/version",
+  "cause": "Root actual bounded readonly Windows Docker reproduction: strict missing Health map entry fails Web/Gateway formatter; API with health passes. No actual unhealthy Web or changed container established.",
+  "candidate_fix": "Go raw-string key `Health` via with index, verified root code0 for API/Web/Gateway without state/log dumps",
+  "private_origin_or_resource_mutation": "None in failed attempt per raw stage and independent exact baseline ID probes",
+  "next": "New v8 only nil-safe formatter/distinct stage path; actual all7 readonly probe, formal remediation, new rootGO before apply",
+  "parent": "Pending; official real VAL05 open/unwaived"
+}

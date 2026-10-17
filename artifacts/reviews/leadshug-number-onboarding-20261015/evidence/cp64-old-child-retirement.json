@@ -1,0 +1,42 @@
+{
+  "checkpoint": "cp64-old-child-retirement",
+  "capturedAtUtc": "2026-10-17T13:29:37Z",
+  "authority": "separate root authorization after accepted cp64-transport-proof.root-accepted.json and completed v4 preparation",
+  "retirementHelper": {
+    "path": "foundation_documentation/artifacts/tmp/number-onboarding-execution/T/cloudflared-cp64/cp64-retire-old-child-v2.ps1",
+    "sha256": "2d0e6520b485902d47a01c0d5910520b6ae0b2aca1991bde04a80f00df70463d",
+    "transportProofPath": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp64-transport-proof.root-accepted.json",
+    "transportProofSha256": "b58b57d7198a7c4e163203b4dc237fe5abf58c412f5412655bcc4b15324dbfa6",
+    "validateOnly": "passed",
+    "fakeTicksNegativeControl": "rejected_before_process_handle_acquisition_with_old_child_native_start_ticks_mismatch",
+    "retirement": "exact_held_process_handle_kill_wait_10s_confirmed_hasExited_true"
+  },
+  "retiredChild": {
+    "pid": 21180,
+    "nativeStartTimeUtcTicks": 639277908932385742,
+    "path": "C:\\unifast\\leadshug\\leadshug_now_docker\\foundation_documentation\\artifacts\\tmp\\number-onboarding-execution\\cloudflared-cp46\\cloudflared-windows-amd64.exe",
+    "sha256": "86aee4017b26625cee8484c113558f48effa4cd47f7aa05fcf425604e5d2b23c",
+    "parentPid": 22836,
+    "target": "http://127.0.0.1:8083",
+    "method": "retired_using_same_held_System.Diagnostics.Process_object_after_native_ticks_path_hash_parent_argv_and_config_guards"
+  },
+  "preservedNewInstance": {
+    "hostname": "addressing-mar-perform-hormone.trycloudflare.com",
+    "supervisorPid": 14708,
+    "supervisorTicks": 639278403605890201,
+    "supervisorSha256": "bdf68028ea2da0699b1e04d191453b5d7090861b17f518d236ce6b084d45c69b",
+    "childPid": 2148,
+    "childTicks": 639278403607622938,
+    "childSha256": "86aee4017b26625cee8484c113558f48effa4cd47f7aa05fcf425604e5d2b23c",
+    "target": "http://127.0.0.1:8083",
+    "postRetirementNativePinsRevalidated": true
+  },
+  "scope": {
+    "privateOriginReadOrEdit": false,
+    "apiOrWebRecreation": false,
+    "gatewayMutation": false,
+    "providerDatabaseSourceOrGitAction": false,
+    "localFilesAccess": false
+  },
+  "next": "stop for v4 fresh review/root GO; no phase2 private origin/API/Web yet"
+}

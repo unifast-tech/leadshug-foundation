@@ -1,0 +1,9 @@
+# CP64 Web no-transform candidate-only validation
+
+A single source file changed: `web-app/nginx/default.conf.template` (SHA-256 `0cdafce3f985f351a0610e46b76df5babbaefa6c40d428a1bf90e093ce586313`). It adds an exact `/privacidade.html` location that sends `Cache-Control: no-store, no-transform` and serves only the requested file. The accepted policy HTML remains unchanged at `d0f72c588f0f014de46a327e34d6b26125ca115bc973b56bbb926cd8519e701d`.
+
+The canonical Web Dockerfile and `web-app` context produced candidate image `sha256:cfd5e58b91a67d2fae4f37759274a34209cd2501082650a49545a60a12642361`, tag `leadshug-channels-web-candidate:cp64-notransform-0cdafce3f985`, with no `--pull`; the cached base-image identities matched before and after. Build exit was 0. Raw build log SHA-256: `83618566cf40253f8949d2963fafa46cdbafc2fdf6317f936bc3c6f1c037d39a`.
+
+An owned credential-free temporary container with no mounts passed `nginx -t` and was removed by exact container ID. Direct candidate checks returned: policy HTTP 200, 12,865 bytes, SHA matching the accepted source, `text/html`, `no-store, no-transform`, no redirect or cookie; `/` HTTP 200; the known JS asset HTTP 200 with expected 258,450-byte SHA `d14343604557296f2ed62c1df47d9c80d81c323abafd89ccbb64a6a0746ff4bd`; and a public `/api/` probe HTTP 404. Full safe metadata is in the JSON artifact.
+
+The first probe helper timed out through its HttpClient path after candidate `nginx -t` succeeded. I did not rebuild or activate anything; I ran a second probe-only helper against the same image using HttpWebRequest, which returned all expected results and cleaned its own container. No live Web/API/origin/gateway/tunnel, provider, database, or volume changes occurred. The previous live Web candidate remains as it was. This is candidate evidence only and awaits review and a separate activation GO.

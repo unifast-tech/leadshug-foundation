@@ -1,0 +1,36 @@
+{
+  "checkpoint": "cp64-remaining-preparation-v7",
+  "observed_utc": "2026-10-17T13:46:39.503097+00:00",
+  "status": "prepared_not_executed",
+  "source_v6": {
+    "path": "T/cp64-activate-origin-api-web-v6.ps1",
+    "sha256": "2ba4a442faf06b8ae34dbf2e5c81cb9fec42d7ce0f7f6655b4a33401046cbc66",
+    "unchanged": true
+  },
+  "candidate_v7": {
+    "path": "T/cp64-activate-origin-api-web-v7.ps1",
+    "sha256": "5e31094320fd2b45392a8436223517ac124d837062530190cab14adec8accb47"
+  },
+  "byte_comparison": {
+    "v7_equals_v6_with_only_one_terminal_property_replacement": true,
+    "old_property": "noGatewayReloadOrRecreate=true",
+    "new_properties": [
+      "gatewayReloadAttempted",
+      "noGatewayReload",
+      "noGatewayRecreate"
+    ],
+    "other_bytes_changed": false
+  },
+  "validation": {
+    "parser_errors": 0,
+    "plan_only": "passed",
+    "predicate_tests": "passed",
+    "positive_cases": 2,
+    "negative_cases": 9,
+    "docker_calls_from_predicate_tests": 0,
+    "network_calls_from_predicate_tests": 0,
+    "private_reads": 0,
+    "runtime_mutation": false
+  },
+  "scope": "Terminal receipt semantics correction only; no lifecycle/recovery logic changed. No ApplyAll execution."
+}

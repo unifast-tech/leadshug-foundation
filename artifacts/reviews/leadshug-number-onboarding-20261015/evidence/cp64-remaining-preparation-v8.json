@@ -1,0 +1,38 @@
+{
+  "checkpoint": "cp64-remaining-preparation-v8",
+  "observed_utc": "2026-10-17T14:01:08.622353+00:00",
+  "status": "prepared_not_executed",
+  "source_v7": {
+    "path": "T/cp64-activate-origin-api-web-v7.ps1",
+    "sha256": "5e31094320fd2b45392a8436223517ac124d837062530190cab14adec8accb47",
+    "immutable": true,
+    "failed_attempt_preserved": "cp64-policy-activation.json",
+    "failed_attempt_sha256": "0422a7f7af4c54a26ab556368102e929ce2760e6671d5b4a0723dff3b7c66951",
+    "v7_stage_receipt": "cp64-activation-stage.json",
+    "v7_stage_receipt_sha256": "9d7f04353d7d50c13bccc1bef75fe5dc872f28a944e6268084a48c836e23df26"
+  },
+  "candidate_v8": {
+    "path": "T/cp64-activate-origin-api-web-v8.ps1",
+    "sha256": "01e198a7818b51fe447f46923f38b95d159e05aaeda4f3cdf27ae438f80b05b1"
+  },
+  "byte_diff": {
+    "exactly_two_literal_replacements": true,
+    "health_format_replacement": true,
+    "stage_receipt_path_replacement": true,
+    "all_other_bytes_equal": true
+  },
+  "fix": "Docker Go template uses nil-safe `with index .State `Health`` for health status; services without a health map return an empty health string instead of native exit 1. v8 writes to a distinct stage receipt filename, preserving v7 evidence.",
+  "validation": {
+    "parser_errors": 0,
+    "plan_only": "passed",
+    "predicate_tests": "passed",
+    "positive_cases": 2,
+    "negative_cases": 9,
+    "predicate_docker_or_network_calls": 0,
+    "read_only_all_seven_facts": "passed",
+    "read_only_volumes": 5,
+    "mutations": 0
+  },
+  "operation_authority": "PENDING",
+  "apply_all_invocations": 0
+}

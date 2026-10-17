@@ -1,0 +1,27 @@
+{
+  "result": "root_native_instance_verified",
+  "hostname": "addressing-mar-perform-hormone.trycloudflare.com",
+  "target": "http://127.0.0.1:8083",
+  "stateReportedTransport": "http2",
+  "emptyConfigLength": 0,
+  "processes": [
+    {
+      "kind": "supervisor",
+      "pid": 14708,
+      "nativeStartTicks": 639278403605890201,
+      "path": "C:\\unifast\\leadshug\\leadshug_now_docker\\foundation_documentation\\artifacts\\tmp\\number-onboarding-execution\\T\\cloudflared-cp64\\cp64-supervisor.exe",
+      "sha256": "bdf68028ea2da0699b1e04d191453b5d7090861b17f518d236ce6b084d45c69b",
+      "parentPid": 11848,
+      "argvMatch": true
+    },
+    {
+      "kind": "child",
+      "pid": 2148,
+      "nativeStartTicks": 639278403607622938,
+      "path": "C:\\unifast\\leadshug\\leadshug_now_docker\\foundation_documentation\\artifacts\\tmp\\number-onboarding-execution\\T\\cloudflared-cp64\\cloudflared-windows-amd64.exe",
+      "sha256": "86aee4017b26625cee8484c113558f48effa4cd47f7aa05fcf425604e5d2b23c",
+      "parentPid": 14708,
+      "argvMatch": true
+    }
+  ]
+}

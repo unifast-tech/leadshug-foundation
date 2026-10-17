@@ -1,0 +1,32 @@
+{
+  "checkpoint": "cp64-web-diagnostic-probe-v2-supplement",
+  "status": "source_only_no_probe_or_runtime_execution",
+  "parentPreparationSha256": "9811ed037176e94e8f49a6e63cbc37735bf720c0d0f0e254d593b1462940c3eb",
+  "wslV1Preserved": true,
+  "wslV2": {
+    "path": "foundation_documentation/artifacts/tmp/number-onboarding-execution/T/cp64-web-diagnostic-probe-wsl-v2.py",
+    "sha256": "d1b2ff3cb2ebec09a00946128e476f2f53a0bb5551dfc4a7be7340e0cad06bea",
+    "singleBackslashWordBoundaryVerified": true,
+    "syntheticSample": {
+      "scriptTagCount": 1,
+      "formTagCount": 1
+    },
+    "astParse": "passed"
+  },
+  "windowsDefaultEncodingCopy": {
+    "path": "foundation_documentation/artifacts/tmp/number-onboarding-execution/T/cp64-web-diagnostic-probes-default-encoding.ps1",
+    "sha256": "73bc8a71ad829de25840cd48be78afde033762fb9a5e42d878aac86174194cc4",
+    "diffFromIdentityMode": "exactly one AcceptEncoding.ParseAdd identity line removed",
+    "psParser": "passed"
+  },
+  "identityModeOriginal": {
+    "path": "foundation_documentation/artifacts/tmp/number-onboarding-execution/T/cp64-web-diagnostic-probes.ps1",
+    "sha256": "13e0446d188902cde1050707b06ffbf57922476ab60a02128d12432841c84962"
+  },
+  "checks": {
+    "noNetwork": true,
+    "noDocker": true,
+    "noServiceMutation": true,
+    "noResponseBodyPersisted": true
+  }
+}

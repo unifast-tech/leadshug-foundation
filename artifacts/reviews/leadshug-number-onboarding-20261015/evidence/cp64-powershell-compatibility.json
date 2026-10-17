@@ -1,0 +1,42 @@
+{
+  "checkpoint": "cp64-powershell-compatibility",
+  "classification": "read-only_local_compatibility_probe",
+  "docker_command_executed": false,
+  "network_requested": false,
+  "private_file_read": false,
+  "runtime_or_process_inspection": false,
+  "helper_scripts_modified_or_invoked": false,
+  "dummy_argument_binding": {
+    "freshWindowsPowerShellNoProfile": true,
+    "functionSignature": "Invoke-DockerText([string[]]$Args)",
+    "exactArrayExpressionCall": "Invoke-DockerText @('image','inspect','--format','{{.Id}}','dummy-public-ref')",
+    "receivedArgumentCount": 0,
+    "allFiveSurvived": false,
+    "composePrefixPlusTailExpressionReceivedArgumentCount": 0,
+    "alternativeParameterNameArguments": {
+      "signature": "Test-ArgsName([string[]]$Arguments)",
+      "sameFiveDummyValuesReceived": true,
+      "receivedArgumentCount": 5
+    },
+    "explicitArgsParameterBinding": {
+      "signature": "Test-ArgsExplicit([string[]]$Args)",
+      "call": "Test-ArgsExplicit -Args @('image','inspect','--format','{{.Id}}','dummy-public-ref')",
+      "receivedArgumentCount": 0
+    },
+    "interpretation": "PowerShell's automatic $Args variable conflicts with the function parameter name; the prepared activation helper's Invoke-DockerText currently uses that parameter name and its array-expression call pattern did not bind the values in the dummy probe. This is an objective compatibility issue requiring a reviewed helper correction before use."
+  },
+  "httpClientTypeProbe": {
+    "freshWindowsPowerShellNoProfileProcesses": true,
+    "withoutAddType": {
+      "available": false,
+      "constructionResult": "failed",
+      "exceptionCategory": "PSArgumentException"
+    },
+    "withAddTypeAssemblyNameSystemNetHttp": {
+      "available": true,
+      "constructionResult": "succeeded"
+    },
+    "httpRequestsMade": false
+  },
+  "executionBoundary": "Only dummy functions and local framework type construction ran. No real docker.exe invocation, network call, project helper execution, service/process query, private configuration access, source edit, or Git operation occurred."
+}

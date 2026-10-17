@@ -1,0 +1,110 @@
+{
+  "schema_version": "subagent-review-merge-v2",
+  "artifact_kind": "subagent_review_merge",
+  "authoritative": false,
+  "edit_policy": "derived_merge_packet",
+  "dispatch_path": "/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp64-https-critique.dispatch.json",
+  "review_kind": "critique",
+  "review_count": 1,
+  "reviewer_labels": [
+    "Fresh no-context cp64 operational critique"
+  ],
+  "highest_finding_severity": "high",
+  "axis_summary": {
+    "performance": "acceptable",
+    "elegance": "mixed",
+    "structural_soundness": "mixed",
+    "operational_fit": "mixed"
+  },
+  "recommended_paths": [
+    "Root should adjudicate the five findings before activating the origin/API/Web helper and bind any correction to a new immutable public helper/evidence hash, retaining originals. Continue the already-authorized bounded recovery through separately activated stages: validate/launch only the frozen f8cad610 v2, establish fresh state and exact native 100 ns supervisor/child pins, bind the allocated hostname to that instance, and obtain actual normal-TLS/no-redirect Windows plus WSL root/health/JS proof. Retirement v2 may then be separately activated with its validate-only fake-ticks negative control and measured post-retirement pins. Resolve selected-resource/tag guards, complete in-memory write recovery, public-input/uniqueness preflight and safe failure evidence before any private origin edit or API/Web recreation. Use the unchanged actual API fe5fb7 image and accepted Web 6f4b2500 candidate with the corrected Windows Compose prefix, --no-build --no-deps, and only the intended service; do not rebuild or relabel API as j. A gateway reload remains conditional on fresh causal stale-upstream evidence and root's explicit bounded activation of that step. Require actual policy200, text/html, strict UTF-8/meta, exact 12865 bytes/source SHA, no cookie/session/redirect, CSP/referrer/noindex and root/health/JS equality plus resource preservation before delivering a working URL. No stable temporary-host lifetime is promised. Parent ST-CON-01 remains Pending and official VAL05 open/unwaived; cp49/52 establish only their observed nonofficial checkpoints. Preserve R02/BLG-leadshug-runtime-dependency-security and the existing private OWNER cohort restriction before untrusted authenticated users; this critique grants no dependency upgrade, new cohort, legal certification, Meta publication, source push, production/Railway action, domain purchase, new credential/provider action or data migration."
+  ],
+  "exact_next_step": "Record reviewer resolutions in the governing TODO using the machine-checkable resolution table or equivalent gate ledger, then extract the derived resolution packet and decide whether another bounded review pass is still required.",
+  "findings": [
+    {
+      "finding_id": "F-80FCD1C5",
+      "severity": "high",
+      "title": "Guard the current Compose targets and verify rollback before reporting completion",
+      "rationale": "Evidence: activation v2:193-197 inspects the historical API/Web IDs and service tags, but never proves that Compose currently selects those IDs before recreation. The rollback at :226-236 checks the rollback image and private-file bytes, then retags/recreates services without guarding the current selected container, current service-tag image, project/service/owner labels, or the exact objects created by this operation. It labels both rollbacks completed after a successful CLI return without checking actual restored image, state, API health, effective public configuration, or preserved resources. Why now: a failed operation is precisely when resource state can be partial or concurrent. An unchanged historical container or rollback tag does not authorize replacing a different current service or using a changed API tag. This violates the bounded ownership and same-image rollback contract and could overwrite operator work or recreate the API with an unintended image. This is a static failure-path finding; no concurrent mutation or runtime failure was induced.",
+      "suggested_action": "A (recommended): before every forward/rollback mutation, compare the selected service ID, immutable image, owned tag and project/service/owner labels against the baseline or the exact IDs this operation created. Track partial command outcomes explicitly. Refuse an unknown object or changed tag. After rollback, verify the actual restored image, state/health and appropriate public-origin boolean, plus preserved resources, before saying completed. Effort moderate; risk reduced; blast limited to API/Web and their tags; small stage-record maintenance; no steady-state performance impact; coherent ownership and stronger structure. B: stop on ambiguous failure and require root diagnosis before any rollback recreation, retaining original bytes only in the owning process's memory. Effort low; avoids unauthorized replacement; recovery delay and manual maintenance increase; no steady-state performance impact; structurally safe but less automatic. C: retain current rollback. Effort zero; concurrency/partial-state risk and API/Web blast remain; apparently simple code carries brittle recovery semantics; no steady-state performance benefit.",
+      "reviewer_labels": [
+        "Fresh no-context cp64 operational critique"
+      ],
+      "source_finding_ids": [
+        "CP64-OPS-CRIT-01"
+      ],
+      "category": "operational_fit",
+      "formalizable_hint": "yes",
+      "candidate_rule_level": "project",
+      "candidate_rule_id": "n/a"
+    },
+    {
+      "finding_id": "F-E2F75857",
+      "severity": "medium",
+      "title": "Recover interrupted origin writes while the exclusive file handle still owns the intermediate state",
+      "rationale": "Evidence: Set-OriginBytesCAS correctly opens the existing file with FileShare.None, compares the entire original byte sequence, and writes through that same handle. However, :124 can partially modify the private file and then throw during Write, SetLength or Flush. The caller sets originChanged only after the function returns (:200). Such a failure reaches the outer catch with originChanged=false, so the recovery branch is skipped and originAndApiRollback can be reported not_needed. Merely moving the flag earlier is insufficient because the outer Test-OriginIs requires the complete replacement bytes and therefore rejects a partially written file. Why now: this operation rewrites the installation's private configuration in place, and the allowed no-backup policy makes the retained original memory and exclusive handle the available recovery authority. The helper also lacks the planned explicit post-write byte/permission preservation receipt.",
+      "suggested_action": "A (recommended): handle write/length/flush exceptions inside the exclusive-handle transaction; while that handle still excludes other writers, restore the expected original bytes from memory, flush, and verify exact bytes and unchanged security metadata. Verify the complete successful replacement before release. Return distinct unchanged/restored/incomplete outcomes and propagate an incomplete recovery honestly while retaining original bytes only in memory. Use public dummy bytes for interrupted-write/flush negative controls. Effort moderate; protects one private file; modest local recovery code; no steady-state performance effect; explicit transaction structure. B: leave the origin/API phase pending until this recovery behavior is established. Effort low; zero new private-file mutation risk; delayed delivery and manual follow-up; no performance change; safe operational fit. C: keep the current finally-only disposal and outer flag. Effort zero; a partial private-file write may survive with a misleading not_needed receipt; low code volume but weak failure structure; no performance advantage.",
+      "reviewer_labels": [
+        "Fresh no-context cp64 operational critique"
+      ],
+      "source_finding_ids": [
+        "CP64-OPS-CRIT-02"
+      ],
+      "category": "security",
+      "formalizable_hint": "partial",
+      "candidate_rule_level": "project",
+      "candidate_rule_id": "n/a"
+    },
+    {
+      "finding_id": "F-7B426AAE",
+      "severity": "medium",
+      "title": "Pin the public Compose interpolation inputs before recreating the live API",
+      "rationale": "Evidence: the channels overlay derives NODE_ENV from CHANNELS_NODE_ENV with a development default and WEB_ORIGIN from CHANNELS_LOCAL_ORIGIN. Activation v2 changes the private origin line, inherits its caller's environment for docker.exe, and only tests production/origin after API recreation and health (:139-141). There is no command-scoped pin or precondition on those two public interpolation variables. Why now: caller environment values can override the env-file inputs, and the existing container's production mode does not establish the next Compose process's resolution. The same immutable API image could briefly run with development mode or the wrong origin on the live gateway before the postcondition rejects it. Actual private values and caller environment were not inspected, so this finding identifies an admitted configuration path rather than claiming a present misconfiguration.",
+      "suggested_action": "A (recommended): explicitly supply only the two public command-scoped values CHANNELS_NODE_ENV=production and CHANNELS_LOCAL_ORIGIN=the verified own origin to each relevant Compose invocation, restoring the caller's public-variable state afterward, and retain the effective runtime boolean checks. Keep every other private byte unchanged. Effort low; removes interpolation ambiguity; blast limited to the already-authorized API recreation; minimal maintenance; no steady-state performance impact; simple explicit boundary contract. B: add a narrowly scoped public-input preflight that establishes the same effective values and rejects ambiguity before mutation, without Config.Env/config dumps or inspection of other private fields. Effort moderate; safe blast; some interpolation-maintenance coupling; no performance effect; structurally sound when faithful to Compose. C: rely solely on post-recreate rejection. Effort zero; transient wrong configuration and avoidable rollback remain; low maintenance but weaker operational structure; no performance benefit.",
+      "reviewer_labels": [
+        "Fresh no-context cp64 operational critique"
+      ],
+      "source_finding_ids": [
+        "CP64-OPS-CRIT-03"
+      ],
+      "category": "security",
+      "formalizable_hint": "yes",
+      "candidate_rule_level": "project",
+      "candidate_rule_id": "n/a"
+    },
+    {
+      "finding_id": "F-D3232CDF",
+      "severity": "medium",
+      "title": "Establish logical uniqueness of the origin key before editing its canonical byte line",
+      "rationale": "Evidence: the byte scan counts only lines whose first bytes are exactly CHANNELS_LOCAL_ORIGIN=. It ignores alternate declarations of that same dotenv key, including leading whitespace, export syntax, spacing around the assignment, or a first-line byte-order mark. One canonical line plus another effective declaration can therefore satisfy hits.Count==1, even though the required unique field has not been established. Why now: the plan explicitly requires failure on duplicate or unknown target-field ambiguity before private mutation. A post-recreate origin mismatch would detect some consequences only after the file/API have already changed. The defect concerns parsing of the one authorized public key; no private file was read and no duplicate was claimed to exist in the installation.",
+      "suggested_action": "A (recommended): conservatively scan only candidate declarations of this target key, accounting for supported whitespace/export/BOM forms; require exactly one unambiguous supported assignment and reject unknown target-key syntax before any write. Continue replacing only the canonical public line and preserving all other bytes. Verify with public dummy inputs containing canonical-plus-alternate duplicates. Effort low/moderate; safe refusal risk; blast remains one public field; small target-specific lexer maintenance; no steady-state performance impact; faithful fail-closed structure. B: use the actual consumer's narrowly scoped target-key parsing semantics through an approved method that emits only uniqueness booleans and never dumps private configuration. Effort higher; stronger semantic alignment but greater tooling coupling; no performance effect; acceptable structure. C: retain exact-prefix counting. Effort zero; false uniqueness remains possible; minimal code has weaker adherence and recovery fit; no performance advantage.",
+      "reviewer_labels": [
+        "Fresh no-context cp64 operational critique"
+      ],
+      "source_finding_ids": [
+        "CP64-OPS-CRIT-04"
+      ],
+      "category": "adherence",
+      "formalizable_hint": "yes",
+      "candidate_rule_level": "project",
+      "candidate_rule_id": "n/a"
+    },
+    {
+      "finding_id": "F-121553C8",
+      "severity": "medium",
+      "title": "Capture safe stage and failure evidence before rollback changes the diagnosis surface",
+      "rationale": "Evidence: both Docker wrappers discard diagnostics and replace every nonzero exit with a generic code; the outer catch then discards even the helper's allowlisted guard/probe category. The terminal failure object records neither failed stage, actual native exit code, HTTP status, nor the current owned API/Web identity and restoration evidence. A stale-gateway 502 at the public probe immediately triggers further Web/API recreations before any cause metadata is captured. Why now: the frozen plan requires actual commands/codes, concrete diagnosis, and a causal gate for the optional single graceful gateway reload. The current receipt cannot distinguish a private-file guard, image mismatch, unhealthy API, HTTP assembly/request failure, policy mismatch or stale upstream. Recreating again can change the topology that root needs to diagnose. Re-running also requires freshly adjudicated container pins because the original IDs may have been removed.",
+      "suggested_action": "A (recommended): maintain a small allowlisted stage record with public argv/operation label, actual exit code, sanitized guard category, HTTP status, and the relevant owned IDs/images/upstream metadata before rollback; emit verified post-rollback state separately. Preserve the original failure even if rollback also fails. Give root enough evidence for the separately activated stale-upstream diagnosis/reload gate; keep raw exceptions, private bytes, provider logs and secret-bearing URLs suppressed. Effort moderate; no wider mutation blast; modest receipt maintenance; negligible bounded tool overhead; clearer structure and operational fit. B: split the operation into explicit root-controlled diagnosis checkpoints while keeping the original bytes in the same owning process until resolution. Effort higher; reduces diagnosis ambiguity; more orchestration maintenance; no steady-state performance effect; sound when memory ownership stays explicit. C: retain generic receipts and diagnose only after blanket rollback. Effort zero; weaker provenance and repeated recreation/downtime remain; superficially compact but brittle operational structure; no steady-state performance benefit.",
+      "reviewer_labels": [
+        "Fresh no-context cp64 operational critique"
+      ],
+      "source_finding_ids": [
+        "CP64-OPS-CRIT-05"
+      ],
+      "category": "operational_fit",
+      "formalizable_hint": "yes",
+      "candidate_rule_level": "project",
+      "candidate_rule_id": "n/a"
+    }
+  ]
+}

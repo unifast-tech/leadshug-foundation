@@ -1,0 +1,198 @@
+{
+  "checkpoint": "cp64-policy-activation-v9",
+  "status": "completed_successfully; independent public probes recorded; root independent verification pending",
+  "operation": {
+    "authorityFile": "cp64-v9-operation-go.json",
+    "authoritySha256": "e27bc41473204075a2814576715273ffa8a3ff470724215ddeb5fb17948379cd",
+    "acceptedPreflightSha256": "5b75e50041f3ede06100ba05340c67cd3e55354598e7a3592399fe236bfaa3f2",
+    "helper": "T/cp64-activate-origin-api-web-v9.ps1",
+    "helperSha256": "c783032964e9ec9e8c83ac450df592c7859a3b71eec5eeb3f9ef8eb0d154a95b",
+    "invocations": 1,
+    "argv": [
+      "-ApplyAll",
+      "-AcceptedProofPath",
+      "C:\\unifast\\leadshug\\leadshug_now_docker\\foundation_documentation\\artifacts\\reviews\\leadshug-number-onboarding-20261015\\evidence\\cp64-v9-operation-go.json"
+    ],
+    "powershellExitCode": 0,
+    "stdoutPath": "cp64-v9-terminal.stdout.txt",
+    "stdoutSha256": "44cce878127b586b1936c37f775edfbf5b52d435ae8d05978f1cc1dfa33db294",
+    "exitCodePath": "cp64-v9-terminal.exitcode",
+    "exitCodeFileSha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+    "stageReceipt": "cp64-activation-stage-v9.json",
+    "stageReceiptSha256": "8f6b60098e88ebc0ce48fad904f5fb2eafcb455d902dd91b0d9d5dd495e6a614",
+    "noRetry": true
+  },
+  "helperReceipt": {
+    "result": "success_exact_policy_and_regression_probes_passed",
+    "origin": "https://addressing-mar-perform-hormone.trycloudflare.com",
+    "apiContainerId": "005529386c8a7ab499cd779942ce541bb90cd3a770b8436b41509d2655e54857",
+    "apiImage": "sha256:fe5fb7eaf6a68123f9da6b92a0a69483180d213f556b4bedf313f04a383b4821",
+    "webContainerId": "9aa55b6681a8480dbfd7cbf2a51ab8571035603b288b52e6798d93741af01093",
+    "webImage": "sha256:cfd5e58b91a67d2fae4f37759274a34209cd2501082650a49545a60a12642361",
+    "public": {
+      "policyStatus": 200,
+      "contentTypeHtml": true,
+      "strictUtf8AndCharsetMeta": true,
+      "policyBytes": 12865,
+      "policySha256": "d0f72c588f0f014de46a327e34d6b26125ca115bc973b56bbb926cd8519e701d",
+      "noSetCookie": true,
+      "noRedirect": true,
+      "cspMetaPresent": true,
+      "referrerMetaPresent": true,
+      "noindexMetaPresent": true,
+      "noDeclaredAutomaticResourceElements": true,
+      "rootStatus": 200,
+      "healthStatus": 200,
+      "jsSha256": "d14343604557296f2ed62c1df47d9c80d81c323abafd89ccbb64a6a0746ff4bd",
+      "authOrCookieSent": false
+    },
+    "preservedContainersAndVolumes": true,
+    "rollbackTag": "leadshug_channels_local-web-rollback:cp64-prenotransform",
+    "rollbackTagPreserved": true
+  },
+  "stageSummary": {
+    "eventCount": 12,
+    "terminalStage": "complete",
+    "terminalStatus": "success",
+    "successfulStages": {
+      "origin_write": true,
+      "api_recreate": true,
+      "web_rollback_tag": true,
+      "web_service_tag": true,
+      "complete": true,
+      "finalVolumeSetGuardSucceeded": true
+    },
+    "originWriteOutcome": "written_bytes_and_security_metadata_verified",
+    "rollbackTagPreserved": true,
+    "gateway502DiagnosticStageEntered": false,
+    "receiptWriteFailure": false
+  },
+  "activeRuntime": {
+    "publicOrigin": "https://addressing-mar-perform-hormone.trycloudflare.com",
+    "apiContainerId": "005529386c8a7ab499cd779942ce541bb90cd3a770b8436b41509d2655e54857",
+    "apiImage": "sha256:fe5fb7eaf6a68123f9da6b92a0a69483180d213f556b4bedf313f04a383b4821",
+    "webContainerId": "9aa55b6681a8480dbfd7cbf2a51ab8571035603b288b52e6798d93741af01093",
+    "webImage": "sha256:cfd5e58b91a67d2fae4f37759274a34209cd2501082650a49545a60a12642361",
+    "webRollbackTag": "leadshug_channels_local-web-rollback:cp64-prenotransform",
+    "webRollbackImage": "sha256:6f4b2500e02d1523f99b423a08b6a166e319d5f3246ad516ef8f4a56d30001ed"
+  },
+  "apiRuntimeBooleans": {
+    "safeProbeOutput": "production=true|webOriginMatches=true",
+    "apiContainerId": "005529386c8a7ab499cd779942ce541bb90cd3a770b8436b41509d2655e54857",
+    "onlyBooleansEmitted": true,
+    "ConfigEnvDump": false
+  },
+  "preservation": {
+    "helperPostconditionPreservedContainersAndVolumes": true,
+    "sevenOwnedContainersGuarded": true,
+    "fiveOwnedVolumesGuarded": true,
+    "gatewayReloadOrRecreate": false
+  },
+  "publicProbes": {
+    "windows": {
+      "host": "addressing-mar-perform-hormone.trycloudflare.com",
+      "normalTls": true,
+      "noSession": true,
+      "paths": {
+        "/privacidade.html": {
+          "status": 200,
+          "bytes": 12865,
+          "sha256": "d0f72c588f0f014de46a327e34d6b26125ca115bc973b56bbb926cd8519e701d",
+          "redirected": false,
+          "noSetCookie": true,
+          "utf8Valid": true,
+          "contentType": "text/html",
+          "contentEncoding": "",
+          "cacheControl": "no-store, no-transform",
+          "emailDecodeScript": false,
+          "emailProtectionPath": false,
+          "dataCfemail": false,
+          "scriptTagCount": 0,
+          "formTagCount": 0
+        },
+        "/": {
+          "status": 200,
+          "bytes": 694,
+          "sha256": "f21b2cb8528bab142bdba0babc64b7cb4cff821152ef4416698fd062642d5acd",
+          "redirected": false,
+          "noSetCookie": true,
+          "cacheControl": "no-store"
+        },
+        "/health": {
+          "status": 200,
+          "bytes": 15,
+          "sha256": "a29ee2b15c494311c52521766e44af56a3ad2248e7a8ab465e5206463c13d288",
+          "redirected": false,
+          "noSetCookie": true
+        },
+        "/assets/index-txvhtd65.js": {
+          "status": 200,
+          "bytes": 258450,
+          "sha256": "d14343604557296f2ed62c1df47d9c80d81c323abafd89ccbb64a6a0746ff4bd",
+          "redirected": false,
+          "noSetCookie": true,
+          "contentType": "application/javascript",
+          "cacheControl": "public, max-age=31536000, immutable"
+        }
+      }
+    },
+    "wsl": {
+      "host": "addressing-mar-perform-hormone.trycloudflare.com",
+      "normalTls": true,
+      "noSession": true,
+      "paths": {
+        "/privacidade.html": {
+          "status": 200,
+          "bytes": 12865,
+          "sha256": "d0f72c588f0f014de46a327e34d6b26125ca115bc973b56bbb926cd8519e701d",
+          "redirected": false,
+          "noSetCookie": true,
+          "utf8Valid": true,
+          "contentType": "text/html",
+          "contentEncoding": "",
+          "cacheControl": "no-store, no-transform",
+          "emailDecodeScript": false,
+          "emailProtectionPath": false,
+          "dataCfemail": false,
+          "scriptTagCount": 0,
+          "formTagCount": 0
+        },
+        "/": {
+          "status": 200,
+          "bytes": 694,
+          "sha256": "f21b2cb8528bab142bdba0babc64b7cb4cff821152ef4416698fd062642d5acd",
+          "redirected": false,
+          "noSetCookie": true,
+          "contentType": "text/html",
+          "cacheControl": "no-store"
+        },
+        "/health": {
+          "status": 200,
+          "bytes": 15,
+          "sha256": "a29ee2b15c494311c52521766e44af56a3ad2248e7a8ab465e5206463c13d288",
+          "redirected": false,
+          "noSetCookie": true,
+          "contentType": "application/json; charset=utf-8",
+          "cacheControl": ""
+        },
+        "/assets/index-txvhtd65.js": {
+          "status": 200,
+          "bytes": 258450,
+          "sha256": "d14343604557296f2ed62c1df47d9c80d81c323abafd89ccbb64a6a0746ff4bd",
+          "redirected": false,
+          "noSetCookie": true,
+          "contentType": "application/javascript",
+          "cacheControl": "max-age=31536000, public, immutable"
+        }
+      }
+    }
+  },
+  "scope": {
+    "privateOriginValueOrOtherEnvValuesPersisted": false,
+    "providerOrMetaRequests": false,
+    "databaseOrVolumeMutations": false,
+    "sourceOrGitMutationByExecutor": false,
+    "additionalActivationInvocations": 0
+  },
+  "rootIndependentHttpsVerification": "pending at time of this receipt"
+}

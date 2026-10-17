@@ -1,0 +1,49 @@
+{
+  "checkpoint": "cp64-v5-compatibility",
+  "capturedAtUtc": "2026-10-17T13:36:18Z",
+  "helper": {
+    "path": "foundation_documentation/artifacts/tmp/number-onboarding-execution/T/cp64-activate-origin-api-web-v5.ps1",
+    "sha256": "29eed5fbdd3868d6a382d542ae840be36088eb956aa83b49c4e2ec5843781459",
+    "immutableV4Preserved": "fe057917b9a8fe0dbf378c2714d378b83973c9a80919a18684e9af9c6604a6be"
+  },
+  "nativeWrapperProbe": {
+    "path": "foundation_documentation/artifacts/tmp/number-onboarding-execution/T/cp64-v5-native-wrapper-probes.ps1",
+    "sha256": "a4487b3a07e8ac9f379e98d0e3023b7d6f5e0e226a312c3bbfbcd82a7e733215",
+    "powershellVersion": "5.1.26100.9711",
+    "bothStdoutAndStderrEmitted": true,
+    "textMode": {
+      "exit0": {"stdoutRetained": true,"stderrSuppressed": true,"actualExitCaptured": 0,"callerPreferenceRestored": true},
+      "exit7": {"sanitizedFailureRaisedAfterCapture": true,"actualExitCaptured": 7,"callerPreferenceRestored": true}
+    },
+    "mutationMode": {
+      "exit0": {"stdoutAndStderrSuppressed": true,"actualExitCaptured": 0,"callerPreferenceRestored": true},
+      "exit7": {"sanitizedFailureRaisedAfterCapture": true,"actualExitCaptured": 7,"callerPreferenceRestored": true}
+    },
+    "dockerInvoked": false
+  },
+  "nativeArgumentProbe": {
+    "path": "foundation_documentation/artifacts/tmp/number-onboarding-execution/T/cp64-v5-owner-argv-readonly-probe.ps1",
+    "sha256": "4cad9a1925d301d555ad7d46e6aa86b69d8a22ff87116ddbf1b84b4e5c071701",
+    "knownApiSelectiveIdentityMatched": true,
+    "knownOwnerKey": "com.leadshug.channels.owner",
+    "configEnvRequested": false,
+    "doubleQuotedConstantJs": {"safeFailure": true,"exitCode": 1},
+    "singleQuotedQuoteFreeConstantJs": {"expectedJsonStringReturned": true},
+    "privateRuntimeValuesRead": false
+  },
+  "failureReceiptProbe": {
+    "path": "foundation_documentation/artifacts/tmp/number-onboarding-execution/T/cp64-v5-receipt-sink-probe.ps1",
+    "sha256": "792d5fbd38efc7fff93981ee202d7393c7724d63196e0dd23f3e2150b6705dfb",
+    "ordinarySinkFailure": "sanitized_abort_before_mutation",
+    "failurePathNoThrow": "returned_with_receiptWriteFailure_true_and_dummy_recovery_control_flow_reached"
+  },
+  "sourceAndRuntime": {
+    "helperParser": "passed",
+    "helperExecuted": false,
+    "dockerMutation": false,
+    "privateOriginReadOrEdit": false,
+    "providerDatabaseOrGatewayOperation": false,
+    "sourceGitOrLocalFilesAccess": false
+  },
+  "next": "fresh_v5_review_then_root_go_required_before_any_origin_API_or_Web mutation"
+}

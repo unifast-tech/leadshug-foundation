@@ -1,0 +1,61 @@
+{
+  "checkpoint": "cp64-remaining-preparation-v4",
+  "capturedAtUtc": "2026-10-17T13:28:59Z",
+  "result": "prepared_and_public_dummy_checked_no_phase2_execution",
+  "helper": {
+    "path": "foundation_documentation/artifacts/tmp/number-onboarding-execution/T/cp64-activate-origin-api-web-v4.ps1",
+    "sha256": "fe057917b9a8fe0dbf378c2714d378b83973c9a80919a18684e9af9c6604a6be",
+    "execution": "not_run",
+    "v3PreservedSha256": "1f1064f117d0d0b4b30d697c0ac374e04eb0324d057ce7dec50c93e436298753"
+  },
+  "changesFromV3": {
+    "ownerLabel": "reads exact com.leadshug.channels.owner key confirmed by live selective inspect",
+    "targetFieldParser": "byte-only occurrence/assignment scan; decodes only ASCII bytes of the selected public origin value; refuses ambiguous or non-ASCII value",
+    "incompleteOriginTransaction": "explicit terminal incomplete flag prevents false rollback_verified status",
+    "originChanged": "set immediately after a byte-verified replacement before ACL postcondition",
+    "preservation": "volume/container guard has success state; final rollback acceptance requires actual preservation checks",
+    "failureReceipt": "captures original native exit/HTTP status before rollback diagnostics"
+  },
+  "validation": {
+    "dummyScript": {
+      "path": "foundation_documentation/artifacts/tmp/number-onboarding-execution/T/cp64-v4-dummy-probes.ps1",
+      "sha256": "939935002fc0d72772bc9089f1f9aa241feb0c4b1324f26cd9803d458fe12720",
+      "powershellParser": "passed",
+      "uniqueByteReplacementPreservesOtherBytes": "passed",
+      "canonicalPlusExportDuplicate": "rejected",
+      "canonicalPlusWhitespaceExportDuplicate": "rejected",
+      "nonAsciiTargetValue": "rejected",
+      "exclusiveTemporaryFileWriteFailure": "exact_original_restored_and_verified",
+      "exclusiveTemporaryFileFlushFailure": "exact_original_restored_and_verified",
+      "exclusiveTemporaryFileSuccess": "exact_replacement_verified",
+      "aclSddlDuringAndAfterEachSyntheticTransaction": "unchanged",
+      "temporaryFileRemoved": true,
+      "privateFileRead": false
+    },
+    "readonlyOwnerProbe": {
+      "path": "foundation_documentation/artifacts/tmp/number-onboarding-execution/T/cp64-v4-owner-readonly-probe.ps1",
+      "sha256": "f1ee7fde42f3d6104bf80fe41c7f105b19b8a52fe5cfaacbbc4b8abc8da4431d",
+      "exactKnownApiContainerInspect": "passed",
+      "selectedIdImageStateHealth": "matched",
+      "ownerKey": "com.leadshug.channels.owner",
+      "ownerProjectService": "matched",
+      "configEnvRequested": false,
+      "mutation": false
+    }
+  },
+  "transportProof": {
+    "executorReceipt": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp64-transport-proof.json",
+    "executorSha256": "d779cb12762f7d2b2a7d6690d1b91b045a4f31ac8bd65aad2b9c4f2f580acce0",
+    "rootAcceptedReceipt": "foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp64-transport-proof.root-accepted.json",
+    "rootAcceptedSha256": "b58b57d7198a7c4e163203b4dc237fe5abf58c412f5412655bcc4b15324dbfa6"
+  },
+  "scope": {
+    "oldChildRetirement": false,
+    "privateOriginReadOrEdit": false,
+    "apiOrWebRecreation": false,
+    "gatewayMutation": false,
+    "providerDatabaseSourceOrGitAction": false,
+    "localFilesAccess": false
+  },
+  "next": "stop_for_fresh_v4_review_and_separate_root_operation_GO_before_any_private_origin_API_or_Web action"
+}

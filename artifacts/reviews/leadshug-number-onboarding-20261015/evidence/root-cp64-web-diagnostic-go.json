@@ -1,0 +1,27 @@
+{
+  "checkpoint": "root-cp64-web-only-diagnostic-GO",
+  "issuedUtc": "2026-10-17T14:28:34.638551+00:00",
+  "operationAuthority": "GO_ONCE",
+  "rootAccepted": true,
+  "preparationSha256": "9811ed037176e94e8f49a6e63cbc37735bf720c0d0f0e254d593b1462940c3eb",
+  "preflightSha256": "c1b17674cf5e59611596930d3e34cee191f83a0019d26bb6d678daab3f6acd74",
+  "identityProbeSha256": "440c43d08f73bf6c6f5d7aa82472f5128cbf1278034e104015ba6160632a1282",
+  "defaultProbeSha256": "58ddf7b1a6d3c4fcf3104bd7224b0c1b31abb4884804d122c6d831a40808d6fe",
+  "wslProbeSha256": "d1b2ff3cb2ebec09a00946128e476f2f53a0bb5551dfc4a7be7340e0cad06bea",
+  "review": "independent https_cp64_final terminal assessment, DIAG01/02 Integrated; no material blocker",
+  "scope": [
+    "Recheck Compose selected exact Web be3b4337 and all pinned resources immediately",
+    "Retag exact accepted6f image and canonical Compose web only no-build no-deps force-recreate",
+    "Capture direct + Windows identity/default + WSL bounded public metadata before root decision",
+    "Leave candidate provisional pending diagnosis; no policy acceptance inferred"
+  ],
+  "forbidden": [
+    "explicit dotenv read/write",
+    "API/provider/data/tunnel/gateway action",
+    "source edit",
+    "Meta publication",
+    "source push or gitlink mutation"
+  ],
+  "parentStatus": "Pending",
+  "officialVAL05": "open_unwaived"
+}

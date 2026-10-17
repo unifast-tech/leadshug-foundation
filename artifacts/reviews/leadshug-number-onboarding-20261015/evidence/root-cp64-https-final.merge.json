@@ -1,0 +1,93 @@
+{
+  "schema_version": "subagent-review-merge-v2",
+  "artifact_kind": "subagent_review_merge",
+  "authoritative": false,
+  "edit_policy": "derived_merge_packet",
+  "dispatch_path": "/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp64-https-final.dispatch.json",
+  "review_kind": "final_review",
+  "review_count": 1,
+  "reviewer_labels": [
+    "fresh-independent-cp64-operational-final-assurance"
+  ],
+  "highest_finding_severity": "medium",
+  "axis_summary": {
+    "performance": "acceptable",
+    "elegance": "acceptable",
+    "structural_soundness": "acceptable",
+    "operational_fit": "acceptable"
+  },
+  "recommended_paths": [
+    "Record the four corrected findings as Integrated against final v7 and retain the original raw artifacts plus the explicit v6 lost-binding qualification. Root may then adjudicate the exact v7 candidate for the already authorized bounded operation and its explicitly admitted conditional plan step7; this review itself grants no runtime authority. Use a separately bound root operation-GO proof only after fresh native transport and owned-resource/image/tag/config checks. Apply only the one-key in-memory origin transaction, same actual API image fe5fb7 and accepted Web image 6f4b2500 through the declared Compose prefix. Permit at most one same-owned-gateway test/graceful reload only when the preserved route/topology/config/backend evidence satisfies the admitted gate; otherwise retain original diagnosis, refuse unknown objects and report guarded rollback as verified or incomplete honestly. Before delivering a working URL, require actual normal-TLS/no-session/no-redirect policy 200 text/html, strict UTF-8/meta, exactly 12,865 bytes/source SHA d0f72c588f0f014de46a327e34d6b26125ca115bc973b56bbb926cd8519e701d, no Set-Cookie, CSP/referrer/noindex, root/health/JS d143 proof and exact owned-resource/preservation receipts. Do not infer this proof from candidate checks, process continuity or the review. Keep D11/VAL09/DOD09 pending until measured, preserve parent Pending/official VAL05 open and unwaived, and keep the existing dependency-debt/private-cohort boundary."
+  ],
+  "exact_next_step": "Record reviewer resolutions in the governing TODO using the machine-checkable resolution table or equivalent gate ledger, then extract the derived resolution packet and decide whether another bounded review pass is still required.",
+  "findings": [
+    {
+      "finding_id": "F-58C1E756",
+      "severity": "medium",
+      "title": "V5 still lacked upstream evidence before rollback; the admitted v6/v7 checkpoint addresses it",
+      "rationale": "Resolved at candidate level, with actual execution still unperformed. The selected A for CP64-OPS-CRIT-05 required relevant upstream metadata before topology-changing rollback; v5 stored only selected IDs/images. V7 now binds the owned network, baseline endpoint IPs and managed gateway configuration, captures fixed direct backend and gateway route metadata before recovery, persists that evidence before any nginx command, and requires a supported-route public/local 502, appropriate direct 200/content proof and changed relevant backend IP. It rechecks the same gateway/network/configuration around nginx -t and one graceful reload, then requires the complete public probe set. Unmatched conditions proceed to guarded rollback. The retained local template has literal api/web upstreams. This is a bounded evidence-based diagnosis, not proof today that a future failure is caused by stale resolution. Root explicitly admitted this conditional plan step in the supplement; it was not active in v4/v5.",
+      "suggested_action": "A, selected and inspected: record Integrated, retain pre-recovery topology/route evidence and the narrowly admitted one-reload gate, and require actual resulting receipts. Effort moderate, blast limited to the same owned gateway/API/Web operation, modest metadata maintenance, bounded diagnostic overhead, coherent staged recovery. B: disable automatic reload and hold a same-process root diagnosis checkpoint with the original bytes still owned in memory; effort/orchestration burden higher, lower automated mutation blast, longer interruption, no steady-state performance change. C: keep ID/image-only evidence followed by blanket rollback; zero effort but destroys useful diagnosis state, weakens adherence to the selected critique resolution and can cause repeated recreation.",
+      "reviewer_labels": [
+        "fresh-independent-cp64-operational-final-assurance"
+      ],
+      "source_finding_ids": [
+        "CP64-FINAL-03"
+      ],
+      "category": "operational_fit",
+      "formalizable_hint": "partial",
+      "candidate_rule_level": "project",
+      "candidate_rule_id": "capture-owned-topology-before-recovery"
+    },
+    {
+      "finding_id": "F-3B18A2FC",
+      "severity": "medium",
+      "title": "V4 receipt-file failures could skip recovery; corrected by failure-path best-effort logging",
+      "rationale": "Resolved for v7. In v4, a WriteAllText failure after an origin/service mutation reaches the outer catch, whose next unguarded receipt write can throw again before either rollback block executes. This was a static failure-path finding, not an induced private-file failure. V5 introduced NoThrow only for failure-path receipt writes, preserved ordinary stage-write rejection, and exposed receiptWriteFailure. The unavailable public dummy-sink source verifies sanitized ordinary rejection and return to dummy recovery control flow under NoThrow. Full v7 retains both protected failure-path call sites and preserves the original failure separately.",
+      "suggested_action": "A, selected and inspected: record Integrated and retain best-effort failure logging plus the terminal logging-failure flag. Effort low, protects the existing operation, little maintenance, negligible bounded overhead, explicit recovery structure. B: keep failure receipts in memory and require a root-controlled continuation in the same owning process; effort and orchestration burden higher, same privacy boundary, no steady-state benefit. C: retain the original throwing failure logger; no effort, but loss of recovery authority on a failed sink, with brittle coupling between diagnosis and restoration.",
+      "reviewer_labels": [
+        "fresh-independent-cp64-operational-final-assurance"
+      ],
+      "source_finding_ids": [
+        "CP64-FINAL-02"
+      ],
+      "category": "structural_soundness",
+      "formalizable_hint": "yes",
+      "candidate_rule_level": "project",
+      "candidate_rule_id": "recovery-must-survive-receipt-sink-failure"
+    },
+    {
+      "finding_id": "F-B6971184",
+      "severity": "medium",
+      "title": "V4 native stderr and JavaScript argument handling were unsafe; corrected in the final candidate",
+      "rationale": "Resolved for v7, not an outstanding blocker. With Windows PowerShell 5.1 and ErrorActionPreference=Stop, the v4 native wrapper can throw on stderr before recording LASTEXITCODE, including a successful native exit. The public compatibility receipt 3200376cd7113b188690705598845bfd06359c107a84c60a352e1d7f1fbdafa2 demonstrates this with harmless exit-0/7 commands. The separately retained constant-only API probe also reports exit 1 for the embedded-double-quote JavaScript form. These boundaries occur after private-origin/API mutation and can wrongly enter recovery or prevent verification. I read both probe sources and their correction evidence. V5's command-scoped Continue, immediate status capture, finally restoration and quote-safe predicates remain unchanged in v7; the positive/negative native wrapper checks and the constant-only single-quoted JavaScript check support those corrections. No actual private runtime values were read by those argument probes.",
+      "suggested_action": "A, selected and inspected: record Integrated against final v7 SHA 5e31094320fd2b45392a8436223517ac124d837062530190cab14adec8accb47; retain the local preference boundary, real exit capture and quote-safe JavaScript. Effort low, mutation blast unchanged, maintenance small, no steady-state performance cost, coherent structure. B: use an explicit native-process/encoded-predicate boundary with equivalent status and argument checks; effort and maintenance higher, same bounded blast, no product performance advantage. C: execute v4 unchanged; zero effort but demonstrated false-failure and recovery risk, weak structure and no performance benefit. V4 remains historical and must not become the execution candidate.",
+      "reviewer_labels": [
+        "fresh-independent-cp64-operational-final-assurance"
+      ],
+      "source_finding_ids": [
+        "CP64-FINAL-01"
+      ],
+      "category": "operational_fit",
+      "formalizable_hint": "yes",
+      "candidate_rule_level": "project",
+      "candidate_rule_id": "windows-native-command-boundary"
+    },
+    {
+      "finding_id": "F-6CCD9A0F",
+      "severity": "low",
+      "title": "V6's failure receipt denied possible gateway reloads; v7 corrects the assertion",
+      "rationale": "Resolved for v7. V6 always emitted noGatewayReloadOrRecreate=true on failure, even after its guarded reload had been attempted and subsequent verification failed. This contradicted its own gateway recovery history. I independently compared the immutable v6/v7 review files: the sole byte transformation replaces that assertion with gatewayReloadAttempted, noGatewayReload as the negated attempt flag, and separate noGatewayRecreate=true. Both v7 source and review copy hash to 5e31094320fd2b45392a8436223517ac124d837062530190cab14adec8accb47. No actual gateway mutation occurred during preparation.",
+      "suggested_action": "A, selected and inspected: record Integrated using the exact v7 binding and retain separate attempt/no-recreate claims. Effort trivial, no mutation blast or runtime performance change, little maintenance, clearer evidence structure. B: omit the negative reload assertion and report only attempts/codes; similar effort and blast, simpler but less explicit. C: retain the unconditional v6 assertion; no effort but a false preservation claim and weaker operational evidence.",
+      "reviewer_labels": [
+        "fresh-independent-cp64-operational-final-assurance"
+      ],
+      "source_finding_ids": [
+        "CP64-FINAL-04"
+      ],
+      "category": "adherence",
+      "formalizable_hint": "yes",
+      "candidate_rule_level": "project",
+      "candidate_rule_id": "receipt-claims-follow-operation-state"
+    }
+  ]
+}

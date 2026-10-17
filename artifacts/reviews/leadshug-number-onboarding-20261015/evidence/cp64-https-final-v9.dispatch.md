@@ -1,0 +1,546 @@
+# PACED Subagent Dispatch: final_review
+
+## Dispatch Identity
+- **Artifact kind:** `subagent_review_dispatch`
+- **Authoritative:** `false`
+- **Edit policy:** `derived_dispatch_packet`
+- **Review kind:** `final_review`
+- **Bounded package:** `/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp64-https-final-v9-package.md`
+- **Reviewer count:** `1`
+- **No-context required:** `true`
+
+## Required Axes
+- `adherence`
+- `residual_risk`
+- `performance`
+- `elegance`
+- `structural_soundness`
+
+## Focus Points
+- Review the delivered bounded package for regressions, adherence gaps, residual risk, and waiver quality.
+- Explicitly call out any performance regressions, elegance regressions, or brittle structural shortcuts.
+- Stay inside the bounded package and treat the review as closure-focused.
+- For each material finding, add category and formalizable-hint when you can judge them honestly.
+- When assessing design, seek the simplest faithful Clean Code/SOLID design for the approved intent. Do not invent future-facing work or erase explicit TODO intent. Planning review may challenge proposed intent; delivery review must preserve approved intent or return for renewed approval.
+
+## Required Result Fields
+- `overall_assessment`
+- `recommended_path`
+- `performance_position`
+- `elegance_position`
+- `structural_soundness_position`
+- `operational_fit_position`
+- `findings[].finding_id (optional)`
+- `findings[].category (optional)`
+- `findings[].formalizable_hint (optional)`
+- `findings[].candidate_rule_level (optional)`
+- `findings[]`
+
+## Required Result Binding
+The reviewer result's `dispatch_path` must equal this exact dispatch JSON path:
+`/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp64-https-final-v9.dispatch.json`
+Do not substitute the bounded package path, governing TODO path, or reviewer output path.
+
+## Goal
+Review no-transform source/candidate and constants-only v9 operational remediation, preserving original full rubric/residual gates and conditional actual public proof
+
+## Related TODO
+`foundation_documentation/todos/active/features/TODO-leadshug-channel-connection-readiness.md`
+
+Reviewers must cross-check findings against the governing TODO's explicit decisions, approved exceptions, compatibility mandates, and non-goals before classifying something as blocking drift.
+
+## Historical Finding Carry-Forward
+Previously adjudicated findings are historical context, not automatic reopening triggers.
+- Resolved findings are historical context only. Do not reopen them unless the current bounded package materially changes the same locus/behavior or fresh evidence shows regression.
+- Challenged findings stay closed unless the current bounded package materially changes the same locus/behavior or the prior rationale is objectively insufficient.
+- Deferred findings must cite the recorded follow-up/waiver path first. Re-raise them only when the current bounded package changes the same locus or closure now depends on that deferred risk.
+- Unresolved findings remain valid to re-raise until they are fixed, challenged, or formally deferred with authority.
+
+### Recorded Dispositions
+- `promotion_routing / NUM-ARCH-01` -> `resolved`
+  - Disposition: classification=release-blocker; routing=fix-current-contract; status=verified-local
+  - Summary: Typebot tocado exige isolamento tenant já canônico
+  - Reference: D-08; contratos de entrada; REG-SEC-01; VAL-08; aceite local cp21 full + cp25 architecture/security/cutover
+- `promotion_routing / NUM-ARCH-02` -> `resolved`
+  - Disposition: classification=release-blocker; routing=fix-current-contract; status=verified-local
+  - Summary: Recebimento do cadastro não pode duplicar efeitos
+  - Reference: D-08; unique/transação; REG-SEC-02; VAL-08; aceite local cp21 full + cp25 architecture/security/cutover
+- `promotion_routing / NUM-ARCH-03` -> `resolved`
+  - Disposition: classification=release-blocker; routing=fix-current-contract; status=verified-local
+  - Summary: Pareamento exige comprovar número antes do conteúdo
+  - Reference: D-06; rejeição pré-identidade; REG-SEC-03; VAL-08; aceite local cp21 full + cp25 architecture/security/cutover
+- `promotion_routing / NUM-ARCH-04` -> `resolved`
+  - Disposition: classification=release-blocker; routing=fix-current-contract; status=verified-local
+  - Summary: Evento atrasado não pode trocar owner BU
+  - Reference: D-07; tombstone sem transferência; REG-SEC-04; VAL-08; aceite local cp21 full + cp25 architecture/security/cutover
+- `promotion_routing / NUM-ARCH-05` -> `resolved`
+  - Disposition: classification=release-blocker; routing=fix-current-contract; status=verified-local
+  - Summary: Pairing mutante exige POST/anti-CSRF
+  - Reference: D-06; contrato BFF; REG-SEC-05; VAL-08; aceite local cp21 full + cp25 architecture/security/cutover
+- `promotion_routing / NUM-ARCH-06` -> `resolved`
+  - Disposition: classification=release-blocker; routing=fix-current-contract; status=verified-local
+  - Summary: Reautorizar canal existente sem substituir ativa prematuramente
+  - Reference: D-03/04; candidata+CAS; REG-SEC-06/07; VAL-08; aceite local cp21 full + cp25 architecture/security/cutover
+- `promotion_routing / NUM-CRIT-01` -> `resolved`
+  - Disposition: classification=release-blocker; routing=fix-current-contract; status=verified-local
+  - Summary: Repareamento já prometido precisa invalidar prova anterior
+  - Reference: D-06; instância por epoch e trust reset; REG-SEC-10; aceite local cp21 full + cp25 architecture/security/cutover
+- `promotion_routing / NUM-CRIT-02` -> `resolved`
+  - Disposition: classification=release-blocker; routing=fix-current-contract; status=verified-local
+  - Summary: Dois writers da mesma Message precisam compartilhar aceitação
+  - Reference: D-08; message-acceptance e diff; REG-SEC-11; aceite local cp21 full + cp25 architecture/security/cutover
+- `promotion_routing / NUM-OBS-01` -> `resolved`
+  - Disposition: classification=by-design/no-action; routing=enforce-existing-requirement; status=preserved-local
+  - Summary: Requisito secret-free já vinculante, sem defeito de gateway implementado alegado; harness concretizado
+  - Reference: REG-SEC-12; runtime/logs; DOD-03; aceite local cp21 full + cp25 architecture/security/cutover
+- `promotion_routing / NUM-OBS-02` -> `resolved`
+  - Disposition: classification=by-design/no-action; routing=enforce-existing-requirement; status=preserved-local
+  - Summary: Raw scoped já vinculante; batch por owner agora explícito, sem plataforma nova
+  - Reference: REG-SEC-13; contrato raw; audit owner; aceite local cp21 full + cp25 architecture/security/cutover
+- `promotion_routing / NUM-OBS-03` -> `resolved`
+  - Disposition: classification=by-design/no-action; routing=enforce-existing-requirement; status=preserved-local
+  - Summary: Harness de tenant/credencial já requerido; observar identificador não secreto e DB real
+  - Reference: REG-SEC-01/11; VAL-02/08; aceite local cp21 full + cp25 architecture/security/cutover
+- `promotion_routing / NUM-DELTA-OBS-01` -> `resolved`
+  - Disposition: classification=by-design/no-action; routing=enforce-existing-requirement; status=preserved-local
+  - Summary: Fence até commit já exigido; barrier do webhook em voo concretiza BCI
+  - Reference: Delta v3; REG-SEC-10, nota de execução; aceite local cp21 full + cp25 architecture/security/cutover
+- `promotion_routing / NUM-DELTA-OBS-02` -> `resolved`
+  - Disposition: classification=by-design/no-action; routing=enforce-existing-requirement; status=preserved-local
+  - Summary: Segredo em logs já proibido, inclusive hub.verify_token
+  - Reference: Delta v3; REG-SEC-12, nota de execução; aceite local cp21 full + cp25 architecture/security/cutover
+- `promotion_routing / NUM-DELTA-OBS-03` -> `resolved`
+  - Disposition: classification=by-design/no-action; routing=enforce-existing-requirement; status=preserved-local
+  - Summary: Refresh já prometido projeta autoria/conteúdo do mesmo ID
+  - Reference: Delta v3; REG-SEC-11, nota browser; Inbox excluído preservado; aceite local cp21 full + cp25 architecture/security/cutover
+- `promotion_routing / NUM-API-01` -> `resolved`
+  - Disposition: classification=release-blocker; routing=fix-current-contract; status=verified-local
+  - Summary: Telefone canônico precisa CAS/equality atômico entre transportes
+  - Reference: api-checkpoint-review-v1.json; D-01/06; aceite local cp21 full + cp25 architecture/security/cutover
+- `promotion_routing / NUM-API-02` -> `resolved`
+  - Disposition: classification=release-blocker; routing=fix-current-contract; status=verified-local
+  - Summary: Promoção deve manter attempt/generation/credential-version/lease até commit
+  - Reference: api-checkpoint-review-v1.json; D-03/04/06; aceite local cp21 full + cp25 architecture/security/cutover
+- `promotion_routing / NUM-API-03` -> `resolved`
+  - Disposition: classification=release-blocker; routing=fix-current-contract; status=verified-local
+  - Summary: DELETE precisa adquirir o mesmo fence das operações externas
+  - Reference: api-checkpoint-review-v1.json; D-06/07; aceite local cp21 full + cp25 architecture/security/cutover
+- `promotion_routing / NUM-API-04` -> `resolved`
+  - Disposition: classification=release-blocker; routing=fix-current-contract; status=verified-local
+  - Summary: Renovação limpa antecessor mas não cria substituta reservada
+  - Reference: api-checkpoint-review-v1.json; D-06; aceite local cp21 full + cp25 architecture/security/cutover
+- `promotion_routing / NUM-API-05` -> `resolved`
+  - Disposition: classification=release-blocker; routing=fix-current-contract; status=verified-local
+  - Summary: Mapping migrado não autoriza adotar/apagar instância externa
+  - Reference: api-checkpoint-review-v1.json; D-06/09; aceite local cp21 full + cp25 architecture/security/cutover
+- `promotion_routing / NUM-API-06` -> `resolved`
+  - Disposition: classification=release-blocker; routing=fix-current-contract; status=verified-local
+  - Summary: Retry QR pendente deve preservar rodada apesar de evento connecting/open
+  - Reference: api-checkpoint-review-v1.json; D-06/07; aceite local cp21 full + cp25 architecture/security/cutover
+- `promotion_routing / NUM-API-07` -> `resolved`
+  - Disposition: classification=release-blocker; routing=fix-current-contract; status=verified-local
+  - Summary: Limpeza ambígua precisa sobreviver ao unlink e impedir nova criação
+  - Reference: api-checkpoint-review-v1.json; D-06/07; aceite local cp21 full + cp25 architecture/security/cutover
+- `promotion_routing / NUM-API-08` -> `resolved`
+  - Disposition: classification=release-blocker; routing=fix-current-contract; status=verified-local
+  - Summary: Close observado deve remover prontidão atual de DTO/envio
+  - Reference: api-checkpoint-review-v1.json; D-07; aceite local cp21 full + cp25 architecture/security/cutover
+- `promotion_routing / NUM-API-09` -> `resolved`
+  - Disposition: classification=release-blocker; routing=fix-current-contract; status=verified-local
+  - Summary: Verificação oficial sem telefone próprio não comprova identidade
+  - Reference: api-checkpoint-review-v1.json; D-01/07; aceite local cp21 full + cp25 architecture/security/cutover
+- `promotion_routing / NUM-API-10` -> `resolved`
+  - Disposition: classification=release-blocker; routing=fix-current-contract; status=verified-local
+  - Summary: Expiração/supersessão/remoção devem limpar candidata e nonce
+  - Reference: api-checkpoint-review-v1.json; D-03/04; aceite local cp21 full + cp25 architecture/security/cutover
+- `promotion_routing / NUM-API-11` -> `resolved`
+  - Disposition: classification=release-blocker; routing=fix-current-contract; status=verified-local
+  - Summary: Replay concorrente same-key deve retornar a mesma tentativa
+  - Reference: api-checkpoint-review-v1.json; D-03; aceite local cp21 full + cp25 architecture/security/cutover
+- `promotion_routing / NUM-API-12` -> `resolved`
+  - Disposition: classification=release-blocker; routing=fix-current-contract; status=verified-local
+  - Summary: Audit administrativo já prometido não pode virar isenção técnica
+  - Reference: api-checkpoint-review-v1.json; audit-and-history#cadastro; aceite local cp21 full + cp25 architecture/security/cutover
+- `promotion_routing / NUM-API-13` -> `resolved`
+  - Disposition: classification=release-blocker; routing=fix-current-contract; status=verified-local
+  - Summary: Redação URL deve cobrir vocabulário de segredos e nomes codificados
+  - Reference: api-checkpoint-review-v1.json; REG-SEC-09/12; aceite local cp21 full + cp25 architecture/security/cutover
+- `promotion_routing / NUM-API-14` -> `resolved`
+  - Disposition: classification=release-blocker; routing=fix-current-contract; status=verified-local
+  - Summary: Ordem de locks identity/channel deve eliminar ciclo de deadlock
+  - Reference: api-checkpoint-review-v1.json; D-06/08; BCI; aceite local cp21 full + cp25 architecture/security/cutover
+- `promotion_routing / NUM-API-15` -> `resolved`
+  - Disposition: classification=release-blocker; routing=fix-current-contract; status=verified-local
+  - Summary: OUT sem ID confirmado conserva resultado local pendente/erro explícito
+  - Reference: api-checkpoint-review-v1.json; integrations-and-channels#reconciliação; aceite local cp21 full + cp25 architecture/security/cutover
+- `promotion_routing / NUM-API-16` -> `resolved`
+  - Disposition: classification=release-blocker; routing=complete-required-harness; status=verified-local
+  - Summary: Probes discriminantes REG-SEC e callers fazem parte do escopo aprovado
+  - Reference: api-checkpoint-review-v1.json; VAL-02/08; aceite local cp21 full + cp25 architecture/security/cutover
+- `promotion_routing / NUM-API-17` -> `resolved`
+  - Disposition: classification=release-blocker; routing=complete-required-harness; status=verified-local
+  - Summary: Positivas novas não são provadas pelos409 de rota aposentada
+  - Reference: api-checkpoint-review-v1.json; test/modulos e canais; aceite local cp21 full + cp25 architecture/security/cutover
+- `promotion_routing / NUM-API-18` -> `resolved`
+  - Disposition: classification=release-blocker; routing=fix-current-contract; status=verified-local
+  - Summary: Metadata pré-identidade deve usar state allowlisted, sem conteúdo arbitrário
+  - Reference: api-checkpoint-review-v1.json; REG-SEC-03/13; aceite local cp21 full + cp25 architecture/security/cutover
+- `promotion_routing / NUM-RUNTIME-01` -> `resolved`
+  - Disposition: classification=release-blocker; routing=enforce-existing-requirement; status=verified-local
+  - Summary: Provider fixado registra URL em falha de callback, expondo segredo no path apesar do gateway
+  - Reference: Concretizar alternativa por header já condicionada no contrato; fonte primária e prova runtime obrigatória; REG-SEC-12; aceite local cp21 full + cp25 architecture/security/cutover
+- `promotion_routing / NUM-ROOT-META-01` -> `resolved`
+  - Disposition: classification=release-blocker; routing=enforce-existing-requirement; status=verified-local
+  - Summary: Capacidade oficial exige versão Graph explícita válida junto do conjunto Meta; vazio não pode anunciar AVAILABLE nem usar versão presumida
+  - Reference: Source read-only: meta.client.ts:42-51 aceita versão vazia se três campos Meta presentes; modulos.ts:61-65 só conta esses três; runbook/contrato exige GRAPH_VERSION informado pela instalação. Corrigir no próximo handoff API, com negativos unset/blank/malformed e positivo da versão configurada, sem nova aprovação material.; aceite local cp21 full + cp25 architecture/security/cutover
+- `promotion_routing / NUM-WEB-01` -> `resolved`
+  - Disposition: classification=release-blocker; routing=fix-current-contract; status=verified-local
+  - Summary: DTO antigo da mesma tentativa não pode regredir version/geração
+  - Reference: web-checkpoint-review-v1.json; D-07; aceite local cp21 full + cp25 architecture/security/cutover
+- `promotion_routing / NUM-WEB-02` -> `resolved`
+  - Disposition: classification=release-blocker; routing=fix-current-contract; status=verified-local
+  - Summary: Popup precisa ownership para callback não perder code em busy no-op
+  - Reference: web-checkpoint-review-v1.json; D-02/03; aceite local cp21 full + cp25 architecture/security/cutover
+- `promotion_routing / NUM-WEB-03` -> `resolved`
+  - Disposition: classification=release-blocker; routing=fix-current-contract; status=verified-local
+  - Summary: Cadastro novo deve ser independente de retomada de tentativa alheia
+  - Reference: web-checkpoint-review-v1.json; SCOPE-01; aceite local cp21 full + cp25 architecture/security/cutover
+- `promotion_routing / NUM-WEB-04` -> `resolved`
+  - Disposition: classification=release-blocker; routing=fix-current-contract; status=verified-local
+  - Summary: Reinício de nonce usa BU já criada, sem duplicar novaBu
+  - Reference: web-checkpoint-review-v1.json; D-01/03; aceite local cp21 full + cp25 architecture/security/cutover
+- `promotion_routing / NUM-WEB-05` -> `resolved`
+  - Disposition: classification=release-blocker; routing=fix-current-contract; status=verified-local
+  - Summary: Cancelamento preserva explicação/resultado parcial durável
+  - Reference: web-checkpoint-review-v1.json; D-05; aceite local cp21 full + cp25 architecture/security/cutover
+- `promotion_routing / NUM-WEB-06` -> `resolved`
+  - Disposition: classification=release-blocker; routing=fix-current-contract; status=verified-local
+  - Summary: Verify consome receiptVerified booleano, não timestamp inexistente
+  - Reference: web-checkpoint-review-v1.json; SCOPE-05; aceite local cp21 full + cp25 architecture/security/cutover
+- `promotion_routing / NUM-WEB-07` -> `resolved`
+  - Disposition: classification=release-blocker; routing=fix-current-contract; status=verified-local
+  - Summary: Erros/status/finally antigos não escrevem após trocar contexto
+  - Reference: web-checkpoint-review-v1.json; D-02/07; aceite local cp21 full + cp25 architecture/security/cutover
+- `promotion_routing / NUM-WEB-08` -> `resolved`
+  - Disposition: classification=release-blocker; routing=fix-current-contract; status=verified-local
+  - Summary: QR efêmero precisa vínculo/tentativa/geração corrente e limpeza ao concluir
+  - Reference: web-checkpoint-review-v1.json; D-06/07; aceite local cp21 full + cp25 architecture/security/cutover
+- `promotion_routing / NUM-WEB-09` -> `resolved`
+  - Disposition: classification=release-blocker; routing=fix-current-contract; status=verified-local
+  - Summary: postMessage sem correlação não muda feedback de outra tentativa
+  - Reference: web-checkpoint-review-v1.json; contrato SDK; aceite local cp21 full + cp25 architecture/security/cutover
+- `promotion_routing / NUM-WEB-10` -> `resolved`
+  - Disposition: classification=release-blocker; routing=fix-current-contract; status=verified-local
+  - Summary: Loader SDK falho precisa retry controlado sem listeners obsoletos
+  - Reference: web-checkpoint-review-v1.json; SCOPE-02; aceite local cp21 full + cp25 architecture/security/cutover
+- `promotion_routing / NUM-WEB-11` -> `resolved`
+  - Disposition: classification=release-blocker; routing=enforce-existing-requirement; status=verified-local
+  - Summary: Recuperação parcial deve expor ação segura; leitura conclusiva condicionada a contrato real do provider, sem replay cego
+  - Reference: web-checkpoint-review-v1.json; fallback pending/nova autorização já explícito em D-05; aceite local cp21 full + cp25 architecture/security/cutover
+- `promotion_routing / NUM-WEB-12` -> `resolved`
+  - Disposition: classification=release-blocker; routing=fix-current-contract; status=verified-local
+  - Summary: Parser de evento exige string enum primitiva, total para schema malformado
+  - Reference: web-checkpoint-review-v1.json; contrato SDK; aceite local cp21 full + cp25 architecture/security/cutover
+- `promotion_routing / WEB-ROOT-01` -> `resolved`
+  - Disposition: classification=release-blocker; routing=fix-current-contract; status=verified-local
+  - Summary: SDK readiness perdido após reservar tentativa
+  - Reference: evidence/root-web-checkpoint3-findings.json; aceite local cp21 full + cp25 architecture/security/cutover
+- `promotion_routing / WEB-ROOT-02` -> `resolved`
+  - Disposition: classification=release-blocker; routing=fix-current-contract; status=verified-local
+  - Summary: Consumo incorreto do wrapper registration da confirmação
+  - Reference: evidence/root-web-checkpoint3-findings.json; aceite local cp21 full + cp25 architecture/security/cutover
+- `promotion_routing / WEB-ROOT-03` -> `resolved`
+  - Disposition: classification=release-blocker; routing=fix-current-contract; status=verified-local
+  - Summary: Retomada persistida e cancelamento explícito necessários
+  - Reference: evidence/root-web-checkpoint3-findings.json; aceite local cp21 full + cp25 architecture/security/cutover
+- `promotion_routing / WEB-ROOT-04` -> `resolved`
+  - Disposition: classification=release-blocker; routing=fix-current-contract; status=verified-local
+  - Summary: Etapa no wizard precisa refletir webhook/receipt atual
+  - Reference: evidence/root-web-checkpoint3-findings.json; aceite local cp21 full + cp25 architecture/security/cutover
+- `promotion_routing / WEB-ROOT-05` -> `resolved`
+  - Disposition: classification=release-blocker; routing=fix-current-contract; status=verified-local
+  - Summary: Retry de reserva perdida precisa conservar chave idempotente
+  - Reference: evidence/root-web-checkpoint3-findings.json; aceite local cp21 full + cp25 architecture/security/cutover
+- `promotion_routing / WEB-ROOT-06` -> `resolved`
+  - Disposition: classification=release-blocker; routing=fix-current-contract; status=verified-local
+  - Summary: Troca explícita de WABA não pode perder opções autorizadas
+  - Reference: evidence/root-web-checkpoint3-findings.json; aceite local cp21 full + cp25 architecture/security/cutover
+- `promotion_routing / NUM-BROWSER-01` -> `resolved`
+  - Disposition: classification=release-blocker; routing=fix-current-contract; status=verified-local
+  - Summary: Submit repetido deve preservar owner ativo e coalescer reserva
+  - Reference: cp14 rerun3:21requests; FRC ativo; iniciar invalidava antes do guard; aceite local cp21 full + cp25 architecture/security/cutover
+- `promotion_routing / NUM-BROWSER-02` -> `resolved`
+  - Disposition: classification=release-blocker; routing=fix-current-contract; status=verified-local
+  - Summary: Cancelamento autoritativo antes de efeitos pode devolver channelId:null sem ser descartado como resposta obsoleta
+  - Reference: cp14 rerun5; API cancel370-373; DonoCicloCadastro.aplicar rejeita detach legítimo; aceite local cp21 full + cp25 architecture/security/cutover
+- `promotion_routing / NUM-BROWSER-03` -> `resolved`
+  - Disposition: classification=release-blocker; routing=complete-required-harness; status=verified-local
+  - Summary: Founder da fixture precisa proveniência MANTENEDORA para provar novaBU/replay conforme produto real
+  - Reference: cp14 rerun5:403TENANT_ADMIN_REQUIRED; seedNumberOnboarding119 vs TenancyService.criar; aceite local cp21 full + cp25 architecture/security/cutover
+- `promotion_routing / NUM-ROOT-REG06` -> `resolved`
+  - Disposition: classification=release-blocker; routing=fix-current-contract; status=verified-local
+  - Summary: REAUTORIZAR oficial no slot migrado sem credencial é prometido, mas guard managedLifecycle bloqueia o owner backfilled da mesma BU
+  - Reference: REG-SEC-06; number-registration.service.ts248,274,319; distinção da restrição de instância Evolution não gerenciada; aceite local cp21 full + cp25 architecture/security/cutover
+- `promotion_routing / NUM-ROOT-GW-01` -> `resolved`
+  - Disposition: classification=release-blocker; routing=fix-current-contract; status=verified-local
+  - Summary: Nginx mantém segundo access log da imagem com URI/query e expõe verify token local; formato seguro isolado não elimina sink herdado
+  - Reference: cp21 scan real; REG-SEC-12; corrigir template, renovar token privado e repetir controles antes de HTTPS/pareamento; aceite local cp21 full + cp25 architecture/security/cutover
+- `promotion_routing / NUM-ROOT-ENV-01` -> `resolved`
+  - Disposition: classification=release-blocker; routing=fix-current-contract; status=verified-local
+  - Summary: Overrides de origem/produção documentados não atravessam WSL para docker.exe sem bridge explícita
+  - Reference: cp21 HTTPS precheck detectou desenvolvimento/origem local; start script e README68; bridge WSLENV de variáveis não secretas e config-only discriminante; aceite local cp21 full + cp25 architecture/security/cutover
+- `promotion_routing / TQA-CP36C-01` -> `resolved`
+  - Disposition: classification=release-blocker; routing=fix-current-contract; status=verified-local
+  - Summary: Erro público META_INDISPONIVEL não traduzido/provado no BFF
+  - Reference: cp36c-tqa.result.raw.json; mesmo locus NUM-ADH-CP36C-01, negativo BFF/PG e code unitário requeridos; merge recusou basename de dispatch, gate não aceito.  Aceite do locus fonte/teste pelos pareceres cp36d/f e evidência513; novo gap grant e recuperação reais permanecem separados.
+- `promotion_routing / TQA-CP36C-02` -> `resolved`
+  - Disposition: classification=release-blocker; routing=fix-current-contract; status=verified-local
+  - Summary: Fixture browser lança Error genérico em vez da classe Meta e plataforma corrente não aceita
+  - Reference: cp36c-tqa.result.raw.json; alinhar classe do mesmo módulo dist nos ramos inconclusivos e preservar all falho; browser atual deve passar com freshness.  Aceite do locus fonte/teste pelos pareceres cp36d/f e evidência513; novo gap grant e recuperação reais permanecem separados.
+- `promotion_routing / NUM-ROOT-GRANT-CP36G-01` -> `resolved`
+  - Disposition: classification=release-blocker; routing=fix-current-contract; status=verified-local
+  - Summary: Limite visual100 em wabaTargets truncava prova de pertencimento
+  - Reference: RED genuíno cp36g confirmou alvo101 ausente; reparo/interseção completa e options100 passaram all530, TQA cp36g não observou defeito de implementação. Casos G01h/H01i aceitos nos loci pelos TQAs completos; final/VAL05 permanecem obrigatórios.
+- `promotion_routing / CP46-LIFECYCLE-01` -> `resolved`
+  - Disposition: classification=release-blocker; routing=fix-current-contract; status=verified-local
+  - Summary: Rollback do novo túnel precisa conferir criação nativa atual/hash do supervisor/argv exato
+  - Reference: cp46c/rootreceipt: guardas native100ns/CIM1us/handles/exeSHA/argv/config/parent exatas, ValidateOnly passou e controle negativo rejeitou. Kill não executado; túnel preservado.
+- `promotion_routing / TQA-CP36H-01` -> `resolved`
+  - Disposition: classification=release-blocker; routing=fix-current-contract; status=verified-local
+  - Summary: Falta prova direta de grant estruturalmente válido com is_valid:false
+  - Reference: OpçãoA test-only cp36i/API173/288 aceita no locus pelo TQA i terminal completo/merge válido; nenhum produto novo recomendado. Não dispensa final/VAL05.
+- `promotion_routing / FINAL-CP36I-01` -> `resolved`
+  - Disposition: classification=release-blocker; routing=fix-current-contract; status=verified-local
+  - Summary: Falta negativa isolada de app_id estrangeiro com demais campos válidos
+  - Reference: OpçãoA cp36j/um teste isolado, API174/288; TQA FULL j e final distinto j aceitam eficácia/eficiência/guard. Histórico i condicional preservado; root-cp36j-final-adjudication.json. Não dispensa oficial VAL05.
+- `promotion_routing / FINAL-CP36J-R01` -> `unresolved`
+  - Disposition: classification=release-blocker; routing=enforce-existing-requirement; status=open
+  - Summary: Oficial VAL05 real permanece obrigatório
+  - Reference: Integrated: seguir teste real no recurso próprio reservado/already registered, backend verifica conta/número; sem dispensa/produção/publicação.
+- `promotion_routing / FINAL-CP36J-R02` -> `resolved`
+  - Disposition: classification=by-design/no-action; routing=enforce-existing-requirement; status=preserved-local
+  - Summary: Restrição privada de dependências no locus inalterado
+  - Reference: Integrated limite OWNER/sintético e BLG-leadshug-runtime-dependency-security antes usuários não confiáveis; nenhum upgrade neste slice.
+- `promotion_routing / FINAL-CP36J-01` -> `resolved`
+  - Disposition: classification=release-blocker; routing=fix-current-contract; status=verified-local
+  - Summary: Next exact step ainda aguardava TQA terminal
+  - Reference: Integrated root atualiza instrução viva para TQA/final aceitos e próximo teste oficial; histórico imutável, sem retestes.
+- `promotion_routing / FINAL-CP36I-R01` -> `unresolved`
+  - Disposition: classification=release-blocker; routing=fix-current-contract; status=open
+  - Summary: D06/VAL05 reais permanecem obrigatórios
+  - Reference: Integrated requisito externo vigente; fonte/candidata condicionais não certificam provider, API servida ou recuperação.
+- `promotion_routing / FINAL-CP36I-R02` -> `resolved`
+  - Disposition: classification=by-design/no-action; routing=enforce-existing-requirement; status=preserved-local
+  - Summary: Reitera limite privado OWNER da dívida existente, locus inalterado
+  - Reference: Integrated restrição existente e BLG-leadshug-runtime-dependency-security antes de usuários não confiáveis; nenhum upgrade novo ou dispensa.
+- `promotion_routing / FINAL-CP36I-02` -> `resolved`
+  - Disposition: classification=release-blocker; routing=fix-current-contract; status=verified-local
+  - Summary: Resumos vivos ainda aguardavam TQA já aceito
+  - Reference: Integrated reconciliação atual das linhas de matriz/aderência/preflight/gates; raw/preflights históricos imutáveis.
+- `promotion_routing / TQA-CP36J-R01` -> `unresolved`
+  - Disposition: classification=release-blocker; routing=enforce-existing-requirement; status=open
+  - Summary: Oficial VAL05 ainda não exercitado, não oficial cp49/cp52 não o substitui
+  - Reference: Integrated requisito vigente; executar TEST-resource explícito após final distinto; Pending/sem waiver. root-cp36j-tqa-adjudication.json.
+- `promotion_routing / TQA-CP36J-R02` -> `resolved`
+  - Disposition: classification=by-design/no-action; routing=enforce-existing-requirement; status=preserved-local
+  - Summary: Reitera dívida de dependências no locus inalterado e limite privado existente
+  - Reference: Integrated limite OWNER/sintético, BLG-leadshug-runtime-dependency-security devido antes de usuários não confiáveis; nenhum aceite para uso amplo/waiver/novo upgrade. root-cp36j-tqa-adjudication.json.
+- `promotion_routing / TQA-CP36I-R01` -> `unresolved`
+  - Disposition: classification=release-blocker; routing=fix-current-contract; status=open
+  - Summary: Prova externa D06/VAL05 permanece obrigatória
+  - Reference: Integrated requisito já vigente; aceite favorável TQA e final condicional privados; API/recovery em execução, oficial real e teste D02 pendentes. Sem waiver.
+- `promotion_routing / TQA-CP36I-R02` -> `resolved`
+  - Disposition: classification=by-design/no-action; routing=enforce-existing-requirement; status=verified-local
+  - Summary: Preservar composição honesta de freshness
+  - Reference: Integrated redação existente APIi173/288 fresca + Web28/browser47 h históricos de fonte consumidora idêntica; attestações originais intactas, nenhum all536/browser novo.
+- `promotion_routing / TQA-CP36H-R01` -> `unresolved`
+  - Disposition: classification=release-blocker; routing=fix-current-contract; status=open
+  - Summary: VAL-05 real continua obrigatório para entrega geral
+  - Reference: Integrated requisito já vigente D06/VAL05; readinesscp48 não substitui canal real. Mesma interrupção Evolution já autorizada pelo usuário, executar após gates locais, depois ação humana e prova oficial.
+- `promotion_routing / TQA-CP36G-01` -> `resolved`
+  - Disposition: classification=release-blocker; routing=fix-current-contract; status=verified-local
+  - Summary: Cobertura direta de scalars do grant e omissões legítimas
+  - Reference: Cinco casos h/all535/freshness9 aceitos nos loci por TQA h; H01 semântica is_valid:false separado e aceito no locus i.
+- `promotion_routing / TQA-CP36F-01` -> `resolved`
+  - Disposition: classification=release-blocker; routing=fix-current-contract; status=verified-local
+  - Summary: Formato inválido de grant Meta escapava como TypeError/500
+  - Reference: Parser cp36g, RED159/8, all530 e TQA cp36g aceitam implementação tipada nos loci; cobertura G01h/H01i posteriormente aceita nos loci; final e VAL05 permanecem obrigatórios.
+- `promotion_routing / TQA-CP36E-01` -> `resolved`
+  - Disposition: classification=release-blocker; routing=fix-current-contract; status=verified-local
+  - Summary: Resposta Meta inválida pode virar ausência conclusiva
+  - Reference: cp36e-tqa.result.raw.json e merge válidos; reparar adapter e contrato BFF em cp36f.  Aceite do locus fonte/teste pelos pareceres cp36d/f e evidência513; novo gap grant e recuperação reais permanecem separados.
+- `promotion_routing / TQA-CP36E-02` -> `resolved`
+  - Disposition: classification=release-blocker; routing=fix-current-contract; status=verified-local
+  - Summary: Falta assert da mensagem segura e mapeamento seletivo no BFF
+  - Reference: cp36e-tqa.result.raw.json; preservar erro não-Meta e invariantes em cp36f.  Aceite do locus fonte/teste pelos pareceres cp36d/f e evidência513; novo gap grant e recuperação reais permanecem separados.
+- `promotion_routing / NUM-ADH-CP36D-01` -> `resolved`
+  - Disposition: classification=release-blocker; routing=fix-current-contract; status=verified-local
+  - Summary: Unitários do adapter precisam provar classe real e code na mesma rejeição
+  - Reference: cp36d-adherence.result.raw.json/merge; produção tipada correta, lacuna entre seams separados; reparo unit-only cp36e admitido antes da edição.  Aceite do locus fonte/teste pelos pareceres cp36d/f e evidência513; novo gap grant e recuperação reais permanecem separados.
+- `promotion_routing / NUM-ADH-CP36C-01` -> `resolved`
+  - Disposition: classification=release-blocker; routing=fix-current-contract; status=verified-local
+  - Summary: Verificação oficial inconclusiva lança Error comum e vira500 genérico sem código de catálogo
+  - Reference: Parecer source-path adherence_cp36c: MetaIndisponivelError não HttpException, verify sem mapper, filtro Nest genérico; resposta não observada em runtime pelo reviewer. BFF503/catalog safe e invariantes requeridos antes do aceite.  Aceite do locus fonte/teste pelos pareceres cp36d/f e evidência513; novo gap grant e recuperação reais permanecem separados.
+- `promotion_routing / NUM-ADH-CP36B-01` -> `resolved`
+  - Disposition: classification=release-blocker; routing=fix-current-contract; status=verified-local
+  - Summary: Verify oficial só consulta primeira página da WABA e rejeita número válido selecionado na segunda
+  - Reference: cp36b-adherence.result.raw.json/merge; cliente real e fake reproduzem caminho; all falhou287PG/1failed, sourcepathconfirma bloqueio anterior ao helper  Aceite do locus fonte/teste pelos pareceres cp36d/f e evidência513; novo gap grant e recuperação reais permanecem separados.
+- `promotion_routing / NUM-ADH-CP36-01` -> `resolved`
+  - Disposition: classification=release-blocker; routing=fix-current-contract; status=verified-local
+  - Summary: Verify oficial repetido compara epoch legítimo null com epoch0 do canal
+  - Reference: cp36-adherence-security.result.raw.json/merge; helper/caller exige aplicabilidade explícita por provider e regressão PG real  Aceite do locus fonte/teste pelos pareceres cp36d/f e evidência513; novo gap grant e recuperação reais permanecem separados.
+- `promotion_routing / NUM-RECOVERY-CP36-01` -> `resolved`
+  - Disposition: classification=release-blocker; routing=fix-current-contract; status=verified-local
+  - Summary: Tentativa corrente já CONNECTED pode causar ATTEMPT_STALE e rollback na reconexão/verify repetido
+  - Reference: Fonte/testes/PG/final loci e cp49 real SAMEEvolutionstop/start: novo automaticconnectedAt apósstart, CONECTADO/providerOPEN/currentidentity/genepoch1/receipt/SAMEattemptv2 e conversa2msgs preservados, sem postrestartadminverify. Root-cp49-runtime-recovery-receipt.json. HumanoINOUT02 cp52 confirmado em novaConvo/outrocontato e velhohistóricopreservado; oficial/VAL05geral continua obrigatório.
+- `promotion_routing / NUM-PERF-01` -> `resolved`
+  - Disposition: classification=release-blocker; routing=fix-current-contract; status=verified-local
+  - Summary: Resolver de credencial carrega relação current_channel_id sem índice em cada envio; tombstones globais ampliam o scan
+  - Reference: Performance cp21-v2; novo índice schema/migration e EXPLAIN da consulta real; EPS foi aceito no review cp25 após correção; aceite local cp21 full + cp25 architecture/security/cutover; round-02/performance.result.raw.json, EPS aceito
+- `promotion_routing / NUM-ADH-CP21-01` -> `resolved`
+  - Disposition: classification=release-blocker; routing=fix-current-contract; status=verified-local
+  - Summary: Nova autorização após NOVO expirado/ambíguo mantém canal no backend, mas UI tenta NOVO em slot ocupado
+  - Reference: Architecture/security cp21; reutilizar canal exato por REAUTORIZAR e provar as duas falhas em browser real; aceite local cp21 full + cp25 architecture/security/cutover
+- `promotion_routing / NUM-ROOT-ORIGIN-CP24-01` -> `resolved`
+  - Disposition: classification=release-blocker; routing=fix-current-contract; status=verified-local
+  - Summary: Inicializador exporta origem default e sobrepõe HTTPS salvo no arquivo privado, quebrando configuração efetiva após rebuild
+  - Reference: scripts/start-channels-local.sh:14; corrigir precedência sem alterar arquivo privado e provar config/runtime HTTPS exatos; aceite local cp21 full + cp25 architecture/security/cutover
+- `promotion_routing / TQA-CP25-01` -> `resolved`
+  - Disposition: classification=release-blocker; routing=fix-current-contract; status=verified-local
+  - Summary: Spy realtime instalado depois do webhook antigo não observa o negativo exigido em REG-SEC-10
+  - Reference: Instalar spy antes do ingresso antigo e conferir zero eventos; preservar demais negativos e aceitação atual; cp26-api-handoff.md / cp26-web-handoff.md; cp27 all499 e cp27-tqa-supplement.result.raw.json aceitam a negativa exata
+- `promotion_routing / TQA-CP25-02` -> `resolved`
+  - Disposition: classification=release-blocker; routing=fix-current-contract; status=verified-local
+  - Summary: Recuperação testa projeção coincidente, sem provar rejeição de canal/geração/currentAttemptId alterado
+  - Reference: Novo caso browser real com tentativa concorrente e erro seguro, sem nova reserva/BU/canal; cp26-api-handoff.md / cp26-web-handoff.md; cp27 all499 e cp27-tqa-supplement.result.raw.json aceitam a negativa exata
+- `promotion_routing / NUM-SEC-CP21-02` -> `resolved`
+  - Disposition: classification=release-blocker; routing=fix-current-contract; status=verified-local
+  - Summary: Simulações exigidas REG-SEC-01/10/11 não discriminam todos os cenários nomeados
+  - Reference: Trigger global estrangeiro anterior; verify antigo através de RENEW verificado; sequência epoch/quarentena/retry e ecos OUT concorrentes; aceite local cp21 full + cp25 architecture/security/cutover
+- `critique / NUM-CRIT-01` -> `resolved`
+  - Disposition: resolution=Integrated; usefulness=useful; formalizable=partial
+  - Summary: Contrato de epoch/instância, D-06, REG-SEC-10; delta v3 confirma resolução contratual, produto ainda não verificado.
+  - Reference: critique:findings_integrated
+- `critique / NUM-CRIT-02` -> `resolved`
+  - Disposition: resolution=Integrated; usefulness=useful; formalizable=partial
+  - Summary: Aceitação keyed de todos os writers OUT, D-08, diff helper, REG-SEC-11.
+  - Reference: critique:findings_integrated
+- `test_quality_audit / TQA-CP36J-R01` -> `resolved`
+  - Disposition: resolution=Integrated; usefulness=useful; formalizable=partial
+  - Summary: Oficial real permanece obrigatório/aberto; prova não oficial cp49/cp52 separada. Executar recurso TEST explícito após final distinto, sem waiver.
+  - Reference: test_quality_audit:findings_integrated
+- `test_quality_audit / TQA-CP36J-R02` -> `resolved`
+  - Disposition: resolution=Integrated; usefulness=useful; formalizable=yes
+  - Summary: Locus de dependências inalterado; preservar coorte privada OWNER/sintética e backlog devido antes de usuários não confiáveis, sem autorização ampla.
+  - Reference: test_quality_audit:findings_integrated
+- `test_quality_audit / TQA-CP36I-R01` -> `resolved`
+  - Disposition: resolution=Integrated; usefulness=useful; formalizable=partial
+  - Summary: Requisito externo mantido aberto/sem waiver; aceitar somente fonte/testes privados agora e continuar final/API/recovery oficial real.
+  - Reference: test_quality_audit:findings_integrated
+- `test_quality_audit / TQA-CP36I-R02` -> `resolved`
+  - Disposition: resolution=Integrated; usefulness=useful; formalizable=yes
+  - Summary: Preservar ambas attestações h originais e reuso explícito; não há all536/browser novo ou APIi servida.
+  - Reference: test_quality_audit:findings_integrated
+- `test_quality_audit / TQA-CP36H-01` -> `resolved`
+  - Disposition: resolution=Integrated; usefulness=useful; formalizable=yes
+  - Summary: Acrescentar caso dedicado is_valid:false com todo grant restante válido, classe+code mesma promise,1debug/authhost e zero lookup; produto correto sem RED artificial.
+  - Reference: test_quality_audit:findings_integrated
+- `test_quality_audit / TQA-CP36H-R01` -> `resolved`
+  - Disposition: resolution=Integrated; usefulness=useful; formalizable=no
+  - Summary: VAL05 já obrigatório e não dispensado; mesma interrupção local explicitamente autorizada antes, nenhum novo pedido de permissão para repeti-la após gates. Oficial/humana ainda pendentes.
+  - Reference: test_quality_audit:findings_integrated
+- `test_quality_audit / TQA-CP36G-01` -> `resolved`
+  - Disposition: resolution=Integrated; usefulness=useful; formalizable=yes
+  - Summary: Acrescentar missing data/app_id não string/is_valid não boolean e sucessos de omissão legítima de scopes/target_ids; adapter real, classe+code mesma promise e contagemHTTP. Sem mudança de produto ou RED artificial.
+  - Reference: test_quality_audit:findings_integrated
+- `test_quality_audit / TQA-CP36F-01` -> `resolved`
+  - Disposition: resolution=Integrated; usefulness=useful; formalizable=yes
+  - Summary: Validar debug grant antes de iterar campos, rejeitar estrutura inválida com classe tipada; RED unit e representante adapter real/BFF/PG503 com invariantes em cp36g.
+  - Reference: test_quality_audit:findings_integrated
+- `test_quality_audit / TQA-CP36E-01` -> `resolved`
+  - Disposition: resolution=Integrated; usefulness=useful; formalizable=yes
+  - Summary: JSON inválido/data ausente ou não-array não provam ausência: corrigir adapter e provar classe/code mais BFF/PG503 e preservação. cp36f admitido antes da edição.
+  - Reference: test_quality_audit:findings_integrated
+- `test_quality_audit / TQA-CP36E-02` -> `resolved`
+  - Disposition: resolution=Integrated; usefulness=useful; formalizable=yes
+  - Summary: Fixar mensagem pública segura e comprovar que erro genérico não vira META_INDISPONIVEL; teste BFF com invariantes.
+  - Reference: test_quality_audit:findings_integrated
+- `test_quality_audit / TQA-CP36C-01` -> `resolved`
+  - Disposition: resolution=Integrated; usefulness=useful; formalizable=yes
+  - Summary: Mapper Meta tipado e BFF/PG negativo com invariantes; cp36d em execução, gate atual não aceito.
+  - Reference: test_quality_audit:findings_integrated
+- `test_quality_audit / TQA-CP36C-02` -> `resolved`
+  - Disposition: resolution=Integrated; usefulness=useful; formalizable=partial
+  - Summary: Classe real no double browser e nova prova browser/freshness; cp36c46/1 falho preservado, sem aceitar plataforma por inferência.
+  - Reference: test_quality_audit:findings_integrated
+- `test_quality_audit / TQA-CP25-01` -> `resolved`
+  - Disposition: resolution=Integrated; usefulness=useful; formalizable=yes
+  - Summary: Spy antes do ingresso antigo, zero eventos; cp27 API286 e suplemento TQA fresh aceitam, sem mockClear mascarando observação.
+  - Reference: test_quality_audit:findings_integrated
+- `test_quality_audit / TQA-CP25-02` -> `resolved`
+  - Disposition: resolution=Integrated; usefulness=useful; formalizable=yes
+  - Summary: Sessão OWNER concorrente altera currentAttemptId; primeiro browser falha seguro semPOST/reset/BU/canal extra; cp27 browser47 e suplemento aceitam.
+  - Reference: test_quality_audit:findings_integrated
+- `test_quality_audit / TQA-CP21-02` -> `deferred`
+  - Disposition: resolution=Deferred; usefulness=useful; formalizable=partial
+  - Summary: Dívida não bloqueante de processo mixed/test-after; owner executor/reviewer deste TODO, exigir RED autêntico em próximos defeitos; não fabricar histórico.
+  - Reference: test_quality_audit:findings_integrated
+- `test_quality_audit / TQA-CP21-01` -> `deferred`
+  - Disposition: resolution=Deferred; usefulness=useful; formalizable=no
+  - Summary: Fora do gate local: prova externa continua requisito obrigatório aberto para entrega geral, sem waiver ou aceite de dívida; próxima ação é teste real com operador.
+  - Reference: test_quality_audit:findings_integrated
+- `final_review / FINAL-CP36I-01` -> `resolved`
+  - Disposition: resolution=Integrated; usefulness=useful; formalizable=yes
+  - Summary: Um teste cp36j isola app_id incorreto com grant/fallback válidos, classe+code mesma rejeição/1debug/zero lookup. API174/288 e TQA FULL/final distinto j aceitam o locus. Histórico i condicional preservado; sem waiver de VAL05.
+  - Reference: final_review:findings_integrated
+- `final_review / FINAL-CP36J-R01` -> `resolved`
+  - Disposition: resolution=Integrated; usefulness=useful; formalizable=partial
+  - Summary: Requisito oficial real aberto, usar recurso próprio exclusivamente teste e Já registrado após checkpoint; sem waiver/closeout.
+  - Reference: final_review:findings_integrated
+- `final_review / FINAL-CP36J-R02` -> `resolved`
+  - Disposition: resolution=Integrated; usefulness=useful; formalizable=partial
+  - Summary: Preservar limite privado existente/backlog antes usuários não confiáveis, dependências inalteradas.
+  - Reference: final_review:findings_integrated
+- `final_review / FINAL-CP36J-01` -> `resolved`
+  - Disposition: resolution=Integrated; usefulness=useful; formalizable=partial
+  - Summary: Corrigidos Next exact step/resumos vivos para TQA/final j terminais, sem reabrir arquitetura ou executar testes.
+  - Reference: final_review:findings_integrated
+- `final_review / FINAL-CP36I-R01` -> `resolved`
+  - Disposition: resolution=Integrated; usefulness=useful; formalizable=partial
+  - Summary: Requisito real aberto/sem dispensa, mesmo teste de recuperação já autorizado e prova oficial ainda obrigatórios.
+  - Reference: final_review:findings_integrated
+- `final_review / FINAL-CP36I-R02` -> `resolved`
+  - Disposition: resolution=Integrated; usefulness=useful; formalizable=partial
+  - Summary: Restrição privada OWNER existente, backlog devido antes de usuários não confiáveis, locus/dependências não alterados.
+  - Reference: final_review:findings_integrated
+- `final_review / FINAL-CP36I-02` -> `resolved`
+  - Disposition: resolution=Integrated; usefulness=useful; formalizable=partial
+  - Summary: Root reconcilia resumos vivos ao TQA terminal aceito e final condicional, preserva exceções/VAL05/raw históricos.
+  - Reference: final_review:findings_integrated
+
+## Result Contract
+Return exactly one JSON object and no Markdown fence or prose.
+Do not emit `null`; omit optional fields that do not apply.
+No top-level fields other than the following are allowed:
+- `schema_version`: `subagent-review-result-v1`
+- `artifact_kind`: `subagent_review_result`
+- `dispatch_path`: the exact binding shown above
+- `review_kind`: `final_review`
+- `reviewer_label`
+- `overall_assessment`
+- `recommended_path`
+- `performance_position`
+- `elegance_position`
+- `structural_soundness_position`
+- `operational_fit_position`
+- `findings`
+
+Every `*_position` value must be one of: `strong_positive`, `acceptable`, `mixed`, `regresses`, `unknown`, `not_evaluated`.
+Each finding may contain only these fields:
+- required: `severity`, `title`, `rationale`, `suggested_action`
+- optional: `finding_id`, `category`, `formalizable_hint`, `candidate_rule_level`, `candidate_rule_id`, `affected_paths`
+- `severity` values: `low`, `medium`, `high`
+- `category` values: `architecture`, `adherence`, `tests`, `performance`, `security`, `elegance`, `structural_soundness`, `operational_fit`, `residual_risk`, `other`
+- `formalizable_hint` values: `yes`, `partial`, `no`, `unknown`
+- `candidate_rule_level` values: `paced`, `project`, `none`, `unknown`
+

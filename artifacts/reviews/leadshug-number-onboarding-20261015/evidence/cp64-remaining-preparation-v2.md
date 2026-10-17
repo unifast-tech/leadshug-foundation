@@ -1,0 +1,7 @@
+# cp64 remaining helper preparation v2
+
+Created new v2 helper copies while preserving the original scripts and reports. The activation helper changes only the two compatibility defects: its Docker wrapper parameters now use `$Arguments` instead of PowerShell's automatic-variable name `$Args`, and it explicitly loads `System.Net.Http` before constructing `HttpClientHandler`/`HttpClient`. The retirement helper now requires a successful bounded `WaitForExit` and `HasExited` check before reporting termination, then repeats the accepted-proof and exact new supervisor/child native pin validation and compares those pins to the pre-retirement values. Its fake-start-ticks negative control remains nonmutating.
+
+The same dummy argument patterns passed against the corrected dummy definition: the image-inspect expression delivered all five dummy values in order, and the compose prefix-plus-tail expression delivered all twelve in order. The explicit assembly load allowed both HTTP types to construct in a fresh Windows PowerShell process. No real Docker function, network request, helper, process query, or private file was used.
+
+Parser-only checks passed: activation v2, 2631 tokens/zero errors; retirement v2, 1007 tokens/zero errors. Neither helper was invoked. The original operation/rollback design remains copied as-is pending live critique; no gateway automation was added. No runtime, private environment, source, Git, or frozen transport package changed.

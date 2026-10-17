@@ -1,0 +1,42 @@
+{
+  "schema_version": "subagent-review-merge-v2",
+  "artifact_kind": "subagent_review_merge",
+  "authoritative": false,
+  "edit_policy": "derived_merge_packet",
+  "dispatch_path": "/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp64-https-final-v8.dispatch.json",
+  "review_kind": "final_review",
+  "review_count": 1,
+  "reviewer_labels": [
+    "independent-cp64-v8-operational-remediation-review"
+  ],
+  "highest_finding_severity": "medium",
+  "axis_summary": {
+    "performance": "acceptable",
+    "elegance": "acceptable",
+    "structural_soundness": "acceptable",
+    "operational_fit": "acceptable"
+  },
+  "recommended_paths": [
+    "Record CP64-FINAL-V8-01 as Integrated against exact v8 01e198a7818b51fe447f46923f38b95d159e05aaeda4f3cdf27ae438f80b05b1 and the source-bound readonly replay. Preserve v7, its consumed GO, failed raw/stage and original review, along with the earlier source-provenance qualifications. Root may adjudicate a fresh version-bound v8 GO for the already authorized operation after current transport/resource/image/tag/config/selection checks; do not reuse the v7 authorization. Use only v8's distinct stage receipt and the unchanged bounded origin/API/Web/recovery contract. Require actual complete public policy and regression/preservation proof before delivering a working URL or accepting D11/VAL09/DOD09. Stop honestly on new failure or incomplete restoration; the replay is not permission to bypass a guard or broaden recovery. Parent Pending/official VAL05 open and unwaived, private-cohort dependency debt and all publication/production/source boundaries remain unchanged."
+  ],
+  "exact_next_step": "Record reviewer resolutions in the governing TODO using the machine-checkable resolution table or equivalent gate ledger, then extract the derived resolution packet and decide whether another bounded review pass is still required.",
+  "findings": [
+    {
+      "finding_id": "F-D6D4A85A",
+      "severity": "medium",
+      "title": "V7 rejected valid containers without a Health map; the exact v8 correction is now measured",
+      "rationale": "Resolved for the exact v8 candidate, not an outstanding v8 blocker. Actual v7 invocation receipt 0422a7f7af4c54a26ab556368102e929ce2760e6671d5b4a0723dff3b7c66951 records native exit 1 in preflight_resources, before origin access or resource/tag mutation. Root's bounded reproduction attributes that failure to strict Docker template access of missing .State.Health on valid Web/gateway resources. The earlier API-only compatibility probe did not cover this heterogeneous boundary, and the prior review missed it. V8 uses a Go raw-string Health key through with index inside a PowerShell single-quoted literal; a missing optional map produces an empty health field while ID/image/state fields and the four-field shape remain required. The API's explicit healthy requirement and every identity/ownership guard remain unchanged. I verified the complete v7-to-v8 diff and read the retained source-bound AST replay: actual API/Web checks plus Assert-PreservedResources exercise all seven known containers and the five volumes. Its exit-0 stdout reports healthy API, empty Web/gateway health, preserved resources, exact API/Web/candidate tags and absent rollback tag. The new replay has its own source/receipt hashes and does not retrospectively attribute source provenance to the earlier ephemeral probe.",
+      "suggested_action": "A, selected and inspected: record Integrated against v8 SHA 01e198a7818b51fe447f46923f38b95d159e05aaeda4f3cdf27ae438f80b05b1, retaining the nil-safe formatter and the measured all-resource replay. Effort low; mutation blast unchanged; one accessor and a small targeted probe to maintain; no steady-state performance cost; simple structure without per-service exceptions. B: obtain a narrowly projected State JSON object and parse optional health explicitly; effort/maintenance higher, same read-only scope and mutation blast, modest serialization overhead, sound but unnecessary complexity here. C: retain the v7 formatter or validate only API; zero effort but a demonstrated preflight blocker on valid resources, incomplete operational confidence and no performance advantage. Preserve the failed v7 receipt and consumed authorization; do not reuse it for v8.",
+      "reviewer_labels": [
+        "independent-cp64-v8-operational-remediation-review"
+      ],
+      "source_finding_ids": [
+        "CP64-FINAL-V8-01"
+      ],
+      "category": "operational_fit",
+      "formalizable_hint": "yes",
+      "candidate_rule_level": "project",
+      "candidate_rule_id": "optional-container-metadata-must-not-break-identity-guards"
+    }
+  ]
+}

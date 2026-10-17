@@ -1,0 +1,11 @@
+{
+  "checkpoint": "root-cp64-v8-final-adjudication",
+  "review_sha256": "9cc3702af9d5f7a3069938a64dc5d42e3ec9a913e2d501b33569426aaabcc66b",
+  "candidate_sha256": "01e198a7818b51fe447f46923f38b95d159e05aaeda4f3cdf27ae438f80b05b1",
+  "finding_id": "CP64-FINAL-V8-01",
+  "resolution": "Integrated",
+  "outcome": "GO for one measured bounded activation attempt, public proof still pending",
+  "conditions": "All full previous rubric/residual/authority/privacy limits retained; actual all7 proof and TLS/native preflight accepted; no reusing v7 authority",
+  "public_policy_delivery": "pending actual GET12865/d0",
+  "parent": "Pending; realofficialVAL05open_unwaived"
+}

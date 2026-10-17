@@ -1,0 +1,53 @@
+{
+  "checkpoint": "root-cp64-v8-operation-GO",
+  "issued_utc": "2026-10-17T14:07:50.647968+00:00",
+  "rootAccepted": true,
+  "rootOutcome": "GO",
+  "operationAuthority": "GO",
+  "hostname": "addressing-mar-perform-hormone.trycloudflare.com",
+  "windows": {
+    "normalTls": true,
+    "noSession": true,
+    "rootStatus": 200,
+    "healthStatus": 200,
+    "jsStatus": 200,
+    "redirected": false,
+    "noSetCookie": true,
+    "jsSha256": "d14343604557296f2ed62c1df47d9c80d81c323abafd89ccbb64a6a0746ff4bd"
+  },
+  "wsl": {
+    "observed_utc": "2026-10-17T14:02:07.686097+00:00",
+    "normalTls": true,
+    "noSession": true,
+    "rootStatus": 200,
+    "healthStatus": 200,
+    "jsStatus": 200,
+    "redirected": false,
+    "noSetCookie": true,
+    "jsSha256": "d14343604557296f2ed62c1df47d9c80d81c323abafd89ccbb64a6a0746ff4bd"
+  },
+  "candidate_sha256": "01e198a7818b51fe447f46923f38b95d159e05aaeda4f3cdf27ae438f80b05b1",
+  "accepted_preflight_sha256": "f037211ada0bdc888dc62cf8d8dfef4fa9d6e8aa87b141b90d5e830c9ab220d0",
+  "fresh_final_review_sha256": "9cc3702af9d5f7a3069938a64dc5d42e3ec9a913e2d501b33569426aaabcc66b",
+  "root_independent_public_preflight_sha256": "751aa716a01d3fa63ad2b5b4b374eb6f9bfbfe4d04c97982053b1f0a35a04db1",
+  "authority_scope": [
+    "Apply frozen v7 once to exact owned local operator",
+    "in-memory unique public CHANNELS_LOCAL_ORIGIN transaction only, preserve all other opaque private bytes/permissions, no backup/hash/output",
+    "same actual API fe5 + accepted Web6f only via declared Windows Compose",
+    "at most one same-gateway nginx test/graceful reload only under the explicit admitted causal predicate, preserve evidence first",
+    "guarded rollback of this invocation only, refuse concurrency/unknown resources"
+  ],
+  "forbidden": [
+    "Meta publication",
+    "source push/gitlink mutation",
+    "production/Railway/new cohort/domain/account",
+    "provider/credential/schema/data repair",
+    "private value or cookie/session read/output beyond admitted opaque origin transaction"
+  ],
+  "parent_status": "Pending",
+  "official_VAL05": "open_unwaived",
+  "public_policy_delivery": "still pending actual post-activation proof",
+  "all7_source_bound_replay_sha256": "5617fa5c644fd85073a8c285c889a712f33501c60ec7d30b070b9e4a636d527d",
+  "supersedes": "Consumed v7 single failed invocation; this permits exactly one frozen v8 invocation with a distinct stage receipt",
+  "stage_receipt": "cp64-activation-stage-v8.json"
+}

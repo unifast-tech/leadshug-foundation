@@ -1,0 +1,44 @@
+{
+  "checkpoint": "cp64-remaining-preparation-v3",
+  "result": "prepared_and_dummy_validated_no_activation",
+  "createdAtUtc": "2026-10-17T13:25:39Z",
+  "activationHelper": {
+    "path": "foundation_documentation/artifacts/tmp/number-onboarding-execution/T/cp64-activate-origin-api-web-v3.ps1",
+    "sha256": "1f1064f117d0d0b4b30d697c0ac374e04eb0324d057ce7dec50c93e436298753",
+    "execution": "not_run"
+  },
+  "dummyProbe": {
+    "path": "foundation_documentation/artifacts/tmp/number-onboarding-execution/T/cp64-v3-dummy-probes.ps1",
+    "sha256": "6cf4a4663f633887f7cf60bed07dd94c25ff03354843b207367c2b59da7640fc",
+    "powershellParser": "passed",
+    "logicalUniqueReplacement": "passed",
+    "duplicateCanonicalPlusExport": "rejected",
+    "duplicateCanonicalPlusWhitespaceExport": "rejected",
+    "interruptedWriteRecovery": "passed_exact_original_bytes",
+    "interruptedFlushRecovery": "passed_exact_original_bytes",
+    "successfulReplacementVerification": "passed_exact_replacement_bytes",
+    "inputs": "synthetic_public_dummy_bytes_only"
+  },
+  "critiqueIntegration": {
+    "currentComposeSelectedIdsAndOwnedLabels": "checked_before_forward_mutations_and_guarded_in_rollback",
+    "privateOriginCAS": "exclusive_handle_compare_write_flush_verify_and_in_handle_original_restore_on_exception",
+    "publicComposeInputs": "CHANNELS_NODE_ENV_and_CHANNELS_LOCAL_ORIGIN_scoped_per_compose_call_and_caller_environment_restored",
+    "targetKeyUniqueness": "target-only_conservative_lexer_recognizes_bom_whitespace_export_and_rejects_ambiguity",
+    "failureEvidence": "allowlisted_stage_exit_http_and_pre-rollback_selected-service-snapshot_captured_before_rollback",
+    "rollback": "unknown_selected_ids_or_tag_drift_refuse_mutation; actual_postconditions_are_checked; no_gateway_action"
+  },
+  "scope": {
+    "privateEnvRead": false,
+    "runtimeOrDockerMutation": false,
+    "processOrTunnelMutation": false,
+    "sourceOrGitMutation": false,
+    "localFilesAccess": false,
+    "providerOrDatabaseAction": false
+  },
+  "frozenLaunchHelper": {
+    "path": "foundation_documentation/artifacts/tmp/number-onboarding-execution/T/cloudflared-cp64/cp64-recover-https-v2.ps1",
+    "sha256": "f8cad6104455250572f058fe8173aeb364349f801a921001be161832e1eaa0db",
+    "unchanged": true
+  },
+  "next": "separately_authorized_phase1_only_new_supervisor_launch_and_normal_TLS_proof; no_old_child_retirement_or_private_origin_or_API_or_Web_action"
+}

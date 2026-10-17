@@ -1,0 +1,35 @@
+{
+  "checkpoint": "root-cp64-phase2-public-preflight",
+  "observed_utc": "2026-10-17T13:56:00.154828+00:00",
+  "hostname": "addressing-mar-perform-hormone.trycloudflare.com",
+  "normal_tls": true,
+  "auth_cookie_or_query_sent": false,
+  "checks": [
+    {
+      "path": "/",
+      "status": 200,
+      "no_set_cookie": true,
+      "redirected": false
+    },
+    {
+      "path": "/health",
+      "status": 200,
+      "no_set_cookie": true,
+      "redirected": false
+    },
+    {
+      "path": "/assets/index-txvhtd65.js",
+      "status": 200,
+      "no_set_cookie": true,
+      "redirected": false,
+      "sha256": "d14343604557296f2ed62c1df47d9c80d81c323abafd89ccbb64a6a0746ff4bd"
+    },
+    {
+      "path": "/webhooks/meta",
+      "status": 403,
+      "no_set_cookie": true,
+      "redirected": false
+    }
+  ],
+  "webhook_limit": "Uncredentialed GET403 confirms denial/route reachability only, no challenge/provider receipt/messaging claim."
+}

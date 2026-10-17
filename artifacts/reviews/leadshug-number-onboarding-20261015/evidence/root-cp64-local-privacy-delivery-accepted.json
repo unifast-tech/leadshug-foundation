@@ -1,0 +1,40 @@
+{
+  "checkpoint": "root-cp64-local-privacy-delivery-accepted",
+  "acceptedUtc": "2026-10-17T14:47:49.833591+00:00",
+  "rootAccepted": true,
+  "policyUrl": "https://addressing-mar-perform-hormone.trycloudflare.com/privacidade.html",
+  "policyBytes": 12865,
+  "policySha256": "d0f72c588f0f014de46a327e34d6b26125ca115bc973b56bbb926cd8519e701d",
+  "activationReceiptSha256": "96276636e081ce2b83a7f5d86770d649afe2e1f08295f3703d3999ea2ca366ac",
+  "independentRootPublicProofSha256": "40f8df7d8e8e4aa917017a6356e9f27d995973444138365e35b260f786965e14",
+  "finalRawSha256": "a45e4874df012488e04a87334779480668ad06b40451664baace315483a77d24",
+  "findings": {
+    "CP64-FINAL-V9-01": "Integrated and verified actual public delivery",
+    "CP64-FINAL-V9-02": "Integrated provenance qualification; first cleanup historical identity remains unproven; current scoped absence observed"
+  },
+  "apiProductionAndCurrentOriginBoolean": true,
+  "sameApiImage": true,
+  "ownedServicesAndVolumesPreserved": true,
+  "gatewayReloadOrRecreate": false,
+  "sourceCommitsLocalOnly": [
+    "2a1968bb2a57de1971a01174399c7510d2a23be4",
+    "74b9d4b714044829796f875d00553f077c1c329d"
+  ],
+  "acceptedScope": [
+    "D11 static public local document",
+    "SCOPE10",
+    "DOD09",
+    "VAL09"
+  ],
+  "parentStatus": "Pending",
+  "officialVAL05": "open_unwaived",
+  "metaConfiguration": "human question pending",
+  "metaPublicationAuthorized": false,
+  "limitations": [
+    "Temporary local tunnel only; no availability promise",
+    "Authenticated login/signup not rerun",
+    "No real official WhatsApp IN/OUT/recovery observed",
+    "Historical first temporary probe cleanup identity unretained",
+    "Private OWNER/test cohort; R02 remains due before untrusted authenticated users"
+  ]
+}

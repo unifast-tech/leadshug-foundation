@@ -1,0 +1,67 @@
+{
+  "checkpoint": "root-cp64-final-candidate-adjudication",
+  "adjudicated_utc": "2026-10-17T13:54:13.824240+00:00",
+  "raw_sha256": "81aee5d1342852a4bda7f18afbbd63f3ff0fadadcf58c40d4eaf809a657ffe4d",
+  "candidate_sha256": "5e31094320fd2b45392a8436223517ac124d837062530190cab14adec8accb47",
+  "outcome": "GO candidate only, conditional actual activation verification",
+  "critique_findings": [
+    {
+      "finding_id": "CP64-OPS-CRIT-01",
+      "resolution": "Integrated",
+      "binding": "final v7 + full fresh final assessment"
+    },
+    {
+      "finding_id": "CP64-OPS-CRIT-02",
+      "resolution": "Integrated",
+      "binding": "final v7 + full fresh final assessment"
+    },
+    {
+      "finding_id": "CP64-OPS-CRIT-03",
+      "resolution": "Integrated",
+      "binding": "final v7 + full fresh final assessment"
+    },
+    {
+      "finding_id": "CP64-OPS-CRIT-04",
+      "resolution": "Integrated",
+      "binding": "final v7 + full fresh final assessment"
+    },
+    {
+      "finding_id": "CP64-OPS-CRIT-05",
+      "resolution": "Integrated",
+      "binding": "final v7 + full fresh final assessment"
+    }
+  ],
+  "final_findings": [
+    {
+      "finding_id": "CP64-FINAL-01",
+      "resolution": "Integrated",
+      "rationale": "Historical defect inspected corrected in final v7; no unresolved material candidate defect"
+    },
+    {
+      "finding_id": "CP64-FINAL-02",
+      "resolution": "Integrated",
+      "rationale": "Historical defect inspected corrected in final v7; no unresolved material candidate defect"
+    },
+    {
+      "finding_id": "CP64-FINAL-03",
+      "resolution": "Integrated",
+      "rationale": "Historical defect inspected corrected in final v7; no unresolved material candidate defect"
+    },
+    {
+      "finding_id": "CP64-FINAL-04",
+      "resolution": "Integrated",
+      "rationale": "Historical defect inspected corrected in final v7; no unresolved material candidate defect"
+    }
+  ],
+  "v6_late_edit_provenance": "Initial hashes only retained in conversation/tool output, original overwritten bytes not certified or reconstructed; explicit erratum retained. Final v7 exact snapshot bound independently.",
+  "runtime_authority": "PENDING fresh phase2 preflight and separately bound root GO proof",
+  "public_policy_delivery": "PENDING actual HTTPS200/12865/d0 + root/health/JS/preservation",
+  "parent_status": "Pending",
+  "official_VAL05": "open_unwaived",
+  "limits": [
+    "existing private OWNER cohort/dependency debt preserved",
+    "no Meta publication or production/Railway",
+    "no source push or gitlink mutation",
+    "no new provider/credential/schema/data repair"
+  ]
+}

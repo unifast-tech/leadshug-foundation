@@ -1,0 +1,71 @@
+{
+  "checkpoint": "cp64-v8-resource-readonly-v1",
+  "observed_utc": "2026-10-17T14:01:08.622353+00:00",
+  "status": "passed",
+  "template": "{{.Id}}|{{.Image}}|{{.State.Status}}|{{with index .State `Health`}}{{.Status}}{{end}}",
+  "template_exit_code_all_seven": 0,
+  "containers": [
+    {
+      "service": "api",
+      "id": "c138a8456bc834d53c2ab4c3bc3c0307024dbc5a9cbb9a11c337218adcde7324",
+      "image": "sha256:fe5fb7eaf6a68123f9da6b92a0a69483180d213f556b4bedf313f04a383b4821",
+      "state": "running",
+      "health": "healthy"
+    },
+    {
+      "service": "gateway",
+      "id": "0c48d94e9fe5b4ad75efd304db2752dfa4cab3befc59b9f736574d6cd551eea3",
+      "image": "sha256:76090a34b858323b6ab169711adc08253b5bee7123a973dc581ed46b643bc109",
+      "state": "running",
+      "health": null
+    },
+    {
+      "service": "web",
+      "id": "1e8d3a40dd9665481748b1278fd60de71ced6c682986d367a90665e76a61358a",
+      "image": "sha256:d11a882849dc806e0d4728ca90a8fc8655aebc77421acefac63054b4fbb89365",
+      "state": "running",
+      "health": null
+    },
+    {
+      "service": "evolution",
+      "id": "cf749491f7149dc46ec4db597b2d9c12faf918dd4f05b5512ba75adaf8e29ea4",
+      "image": "sha256:385a3c4bedf42c66b46b43d06aae8712620144a84aa3b2c831b30c68435ab27c",
+      "state": "running",
+      "health": null
+    },
+    {
+      "service": "evolution-redis",
+      "id": "3b2e8d153d794a768ea87cb4f9cda7ba15dde242e2b8027bd372a475a9c26fbb",
+      "image": "sha256:f84b0c4678011602b9b98c227a4dcd5468bf8b088b02fdd4165cb7758bad8058",
+      "state": "running",
+      "health": "healthy"
+    },
+    {
+      "service": "evolution-postgres",
+      "id": "150de898c3d9aa189ca0719eed7a65b95d95d8b948244e66b059a55f4554135a",
+      "image": "sha256:80f4c7a5e91618546dce5b4fe60cf03b14c0f9efa7e40157278d122772ced8d2",
+      "state": "running",
+      "health": "healthy"
+    },
+    {
+      "service": "postgres",
+      "id": "4fcd87b431339e3b65a40beafa27db86cdc978ca79f71b911199f7090c837495",
+      "image": "sha256:80f4c7a5e91618546dce5b4fe60cf03b14c0f9efa7e40157278d122772ced8d2",
+      "state": "running",
+      "health": "healthy"
+    }
+  ],
+  "container_count": 7,
+  "owner_project_guards_passed": true,
+  "volume_count": 5,
+  "volumes": [
+    "leadshug_channels_local_evolution_instances",
+    "leadshug_channels_local_evolution_pg_data",
+    "leadshug_channels_local_evolution_redis_data",
+    "leadshug_channels_local_leadshug_arquivos",
+    "leadshug_channels_local_leadshug_pg_data"
+  ],
+  "mutations": 0,
+  "private_reads": 0,
+  "Config.Env_read": false
+}

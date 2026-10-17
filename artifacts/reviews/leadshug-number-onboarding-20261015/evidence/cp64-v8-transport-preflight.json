@@ -1,0 +1,84 @@
+{
+  "checkpoint": "cp64-v8-transport-preflight-v1",
+  "observed_utc": "2026-10-17T14:02:30.939605+00:00",
+  "status": "fresh_transport_preflight_passed",
+  "rootAccepted": false,
+  "operationAuthority": "PENDING",
+  "v8_helper": {
+    "path": "T/cp64-activate-origin-api-web-v8.ps1",
+    "sha256": "01e198a7818b51fe447f46923f38b95d159e05aaeda4f3cdf27ae438f80b05b1"
+  },
+  "prior_v7_failure": {
+    "report": "cp64-policy-activation.json",
+    "sha256": "0422a7f7af4c54a26ab556368102e929ce2760e6671d5b4a0723dff3b7c66951",
+    "stage_receipt": "cp64-activation-stage.json",
+    "stage_receipt_sha256": "9d7f04353d7d50c13bccc1bef75fe5dc872f28a944e6268084a48c836e23df26",
+    "preserved_unchanged": true
+  },
+  "v8_resource_probe_reference": {
+    "report": "cp64-v8-resource-readonly.json",
+    "sha256": "1e51128465a04448281f5f2d486c1b1261faa17d7a93366ffb56bacecde8ce92",
+    "all_seven_containers_and_five_volumes_passed": true
+  },
+  "native_transport": {
+    "hostname": "addressing-mar-perform-hormone.trycloudflare.com",
+    "target": "http://127.0.0.1:8083",
+    "transport": "http2",
+    "registeredConnectionEvents": 1,
+    "errorEvents": 1,
+    "streamCallbackFaults": 0,
+    "stateWriteFailures": 0,
+    "childExitCode": null,
+    "emptyConfigBytes": 0,
+    "supervisor": {
+      "pid": 14708,
+      "nativeStartTicks": 639278403605890201,
+      "path": "C:\\unifast\\leadshug\\leadshug_now_docker\\foundation_documentation\\artifacts\\tmp\\number-onboarding-execution\\T\\cloudflared-cp64\\cp64-supervisor.exe",
+      "sha256": "bdf68028ea2da0699b1e04d191453b5d7090861b17f518d236ce6b084d45c69b",
+      "parentPid": 11848,
+      "argv": "\"C:\\unifast\\leadshug\\leadshug_now_docker\\foundation_documentation\\artifacts\\tmp\\number-onboarding-execution\\T\\cloudflared-cp64\\cp64-supervisor.exe\"",
+      "exactIdentityAndAlive": true
+    },
+    "child": {
+      "pid": 2148,
+      "nativeStartTicks": 639278403607622938,
+      "path": "C:\\unifast\\leadshug\\leadshug_now_docker\\foundation_documentation\\artifacts\\tmp\\number-onboarding-execution\\T\\cloudflared-cp64\\cloudflared-windows-amd64.exe",
+      "sha256": "86aee4017b26625cee8484c113558f48effa4cd47f7aa05fcf425604e5d2b23c",
+      "parentPid": 14708,
+      "argv": "\"C:\\unifast\\leadshug\\leadshug_now_docker\\foundation_documentation\\artifacts\\tmp\\number-onboarding-execution\\T\\cloudflared-cp64\\cloudflared-windows-amd64.exe\" tunnel --config \"C:\\unifast\\leadshug\\leadshug_now_docker\\foundation_documentation\\artifacts\\tmp\\number-onboarding-execution\\T\\cloudflared-cp64\\empty-config.yml\" --no-autoupdate --url http://127.0.0.1:8083",
+      "exactIdentityAndAlive": true
+    }
+  },
+  "public_https": {
+    "windows": {
+      "normalTls": true,
+      "noSession": true,
+      "rootStatus": 200,
+      "healthStatus": 200,
+      "jsStatus": 200,
+      "redirected": false,
+      "noSetCookie": true,
+      "jsSha256": "d14343604557296f2ed62c1df47d9c80d81c323abafd89ccbb64a6a0746ff4bd"
+    },
+    "wsl": {
+      "observed_utc": "2026-10-17T14:02:07.686097+00:00",
+      "normalTls": true,
+      "noSession": true,
+      "rootStatus": 200,
+      "healthStatus": 200,
+      "jsStatus": 200,
+      "redirected": false,
+      "noSetCookie": true,
+      "jsSha256": "d14343604557296f2ed62c1df47d9c80d81c323abafd89ccbb64a6a0746ff4bd"
+    }
+  },
+  "gateway_config": {
+    "runtimeActiveSha256": "9329131376e0aaa8020e7440954af5125a65eb2bba69fd016292fe63843fe707",
+    "publicTemplateSha256": "9329131376e0aaa8020e7440954af5125a65eb2bba69fd016292fe63843fe707",
+    "unchangedAndEqual": true
+  },
+  "no_private_origin_read": true,
+  "no_runtime_mutation": true,
+  "no_gateway_test_or_reload": true,
+  "apply_all_invocations": 0
+}

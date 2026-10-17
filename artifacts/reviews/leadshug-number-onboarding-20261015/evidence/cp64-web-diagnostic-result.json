@@ -1,0 +1,119 @@
+{
+  "checkpoint": "cp64-web-only-diagnostic-result",
+  "capturedDate": "2026-10-17",
+  "authority": {
+    "goFile": "root-cp64-web-diagnostic-go.json",
+    "sha256": "907f09ee34cf2fdf50f06f61dd43b54d31de60ac2fb53444e18a9e16c2458741",
+    "scope": "one Web-only candidate activation; no API/origin/gateway/tunnel mutation"
+  },
+  "operation": {
+    "webContainerId": "fe783b00b3160e45483cf0bd1d4e17d688f2001c03d47fff40ab605707bc49a3",
+    "webImage": "sha256:6f4b2500e02d1523f99b423a08b6a166e319d5f3246ad516ef8f4a56d30001ed",
+    "apiContainerId": "f86d76c633f4f06a98a67dc4b6432700ac8e1e6f81b555697b5feabf6a1f08ab",
+    "apiImage": "fe5fb7 (unchanged; healthy)",
+    "composeWrapperReceipt": "final PowerShell JSON formatting failed after admitted operation; native Compose exit code not captured; no retry; later read-only selection and inspect confirmed candidate Web active"
+  },
+  "direct": {
+    "web": {
+      "status": 200,
+      "bytes": 12865,
+      "sha256": "d0f72c588f0f014de46a327e34d6b26125ca115bc973b56bbb926cd8519e701d",
+      "utf8": true,
+      "cacheControl": "no-store",
+      "setCookie": false,
+      "redirect": false,
+      "emailObfuscationMarkers": false,
+      "scriptCount": 0,
+      "formCount": 0
+    },
+    "gateway": {
+      "status": 200,
+      "bytes": 12865,
+      "sha256": "d0f72c588f0f014de46a327e34d6b26125ca115bc973b56bbb926cd8519e701d",
+      "utf8": true,
+      "setCookie": false,
+      "redirect": false
+    }
+  },
+  "public": {
+    "windowsIdentityEncoding": {
+      "status": 200,
+      "bytes": 13396,
+      "sha256": "15f6d673f05803a9fe6bd3cfb18736b4fe686ad41ea3ff8c323cddafcbd0976d",
+      "utf8": true,
+      "contentType": "text/html",
+      "contentEncoding": null,
+      "cacheControl": "no-store",
+      "cfCacheStatus": "DYNAMIC",
+      "age": null,
+      "vary": null,
+      "setCookie": false,
+      "redirect": false,
+      "emailDecodeScript": true,
+      "emailProtectionPath": true,
+      "dataCfemail": true,
+      "scriptCount": 1,
+      "formCount": 0
+    },
+    "windowsDefaultEncoding": {
+      "status": 200,
+      "bytes": 13396,
+      "sha256": "b4a155b8fcb06ffb53f2ca18e6680d0e6fd1348b48818d9c3e9676f577e16bb6",
+      "utf8": true,
+      "contentType": "text/html",
+      "contentEncoding": null,
+      "cacheControl": "no-store",
+      "cfCacheStatus": "DYNAMIC",
+      "age": null,
+      "vary": null,
+      "setCookie": false,
+      "redirect": false,
+      "emailDecodeScript": true,
+      "emailProtectionPath": true,
+      "dataCfemail": true,
+      "scriptCount": 1,
+      "formCount": 0
+    },
+    "wsl": {
+      "status": 200,
+      "bytes": 13396,
+      "sha256": "b5c21cc2c6912a74731750ad897b08818b2d1b3b2b3bc08edf24ab13d2709839",
+      "utf8": true,
+      "contentType": "text/html",
+      "contentEncoding": null,
+      "cacheControl": "no-store",
+      "cfCacheStatus": "DYNAMIC",
+      "age": null,
+      "vary": null,
+      "setCookie": false,
+      "redirect": false,
+      "emailDecodeScript": true,
+      "emailProtectionPath": true,
+      "dataCfemail": true,
+      "scriptCount": 1,
+      "formCount": 0
+    }
+  },
+  "preservation": {
+    "sevenOwnedContainers": true,
+    "fiveOwnedVolumes": true,
+    "gatewayConfigAndContainerUnchanged": true,
+    "tunnelUnchanged": true,
+    "apiUnchangedHealthy": true,
+    "rollbackTagRetained": true
+  },
+  "result": {
+    "edgeEmailObfuscationTransformationObserved": true,
+    "exactTransformedBodyDiffNotPersisted": true,
+    "causalityConsistentWithEmailObfuscation": true,
+    "gatewayReloadAttempted": false,
+    "rollbackAttempted": false,
+    "activationReady": false,
+    "candidateIsProvisional": true
+  },
+  "limitations": [
+    "No response body was persisted; marker/header/length evidence only.",
+    "Operation wrapper failed formatting terminal JSON after the admitted action, so native Compose exit code is unknown; success is based on subsequent exact service/image readback and probes.",
+    "Public hashes differed across requests/modes; no exact transformed-body diff is claimed."
+  ]
+}

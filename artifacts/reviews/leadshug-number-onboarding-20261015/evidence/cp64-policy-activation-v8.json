@@ -1,0 +1,34 @@
+{
+  "checkpoint": "cp64-v8-policy-activation",
+  "capturedAtUtc": "2026-10-17T14:09:34.076225+00:00",
+  "helperSha256": "01e198a7818b51fe447f46923f38b95d159e05aaeda4f3cdf27ae438f80b05b1",
+  "operationGoSha256": "a3804997d6711d8422d8049afc167de39bccb824b197450f5581d70d66422328",
+  "executionCount": 1,
+  "nativeExitCode": 2,
+  "result": "failed_then_rollback_verified",
+  "originalFailureCategory": "privacy_response_bytes_mismatch",
+  "failedStage": "web_recreate",
+  "failureHttpStatus": 200,
+  "rollback": {
+    "web": "verified",
+    "api": "verified_same_image_health_and_old_origin",
+    "origin": "verified_bytes_security_and_old_origin",
+    "apiPostconditionVerified": true,
+    "webPostconditionVerified": true,
+    "preservedResourcesVerified": true,
+    "originTransactionIncomplete": false,
+    "receiptWriteFailure": false,
+    "gatewayReloadAttempted": false,
+    "noGatewayReload": true,
+    "noGatewayRecreate": true,
+    "noProviderDatabaseOrVolumeActions": true
+  },
+  "attemptedResources": {
+    "apiImage": "sha256:fe5fb7eaf6a68123f9da6b92a0a69483180d213f556b4bedf313f04a383b4821",
+    "webImage": "sha256:6f4b2500e02d1523f99b423a08b6a166e319d5f3246ad516ef8f4a56d30001ed",
+    "capture": "complete"
+  },
+  "stageReceiptPath": "cp64-activation-stage-v8.json",
+  "stageReceiptSha256": "1bfc417fa45a70383206a0b60110cc0a79452db6c766a45698fb8555f78638ce",
+  "policyPublicSuccess": "not_established"
+}

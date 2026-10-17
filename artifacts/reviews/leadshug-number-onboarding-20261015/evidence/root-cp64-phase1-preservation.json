@@ -1,0 +1,57 @@
+{
+  "observed_utc": "2026-10-17T13:22:41.257877+00:00",
+  "containers": [
+    {
+      "id": "c138a8456bc834d53c2ab4c3bc3c0307024dbc5a9cbb9a11c337218adcde7324",
+      "image": "sha256:fe5fb7eaf6a68123f9da6b92a0a69483180d213f556b4bedf313f04a383b4821",
+      "state": "running"
+    },
+    {
+      "id": "0c48d94e9fe5b4ad75efd304db2752dfa4cab3befc59b9f736574d6cd551eea3",
+      "image": "sha256:76090a34b858323b6ab169711adc08253b5bee7123a973dc581ed46b643bc109",
+      "state": "running"
+    },
+    {
+      "id": "1e8d3a40dd9665481748b1278fd60de71ced6c682986d367a90665e76a61358a",
+      "image": "sha256:d11a882849dc806e0d4728ca90a8fc8655aebc77421acefac63054b4fbb89365",
+      "state": "running"
+    },
+    {
+      "id": "cf749491f7149dc46ec4db597b2d9c12faf918dd4f05b5512ba75adaf8e29ea4",
+      "image": "sha256:385a3c4bedf42c66b46b43d06aae8712620144a84aa3b2c831b30c68435ab27c",
+      "state": "running"
+    },
+    {
+      "id": "3b2e8d153d794a768ea87cb4f9cda7ba15dde242e2b8027bd372a475a9c26fbb",
+      "image": "sha256:f84b0c4678011602b9b98c227a4dcd5468bf8b088b02fdd4165cb7758bad8058",
+      "state": "running"
+    },
+    {
+      "id": "150de898c3d9aa189ca0719eed7a65b95d95d8b948244e66b059a55f4554135a",
+      "image": "sha256:80f4c7a5e91618546dce5b4fe60cf03b14c0f9efa7e40157278d122772ced8d2",
+      "state": "running"
+    },
+    {
+      "id": "4fcd87b431339e3b65a40beafa27db86cdc978ca79f71b911199f7090c837495",
+      "image": "sha256:80f4c7a5e91618546dce5b4fe60cf03b14c0f9efa7e40157278d122772ced8d2",
+      "state": "running"
+    }
+  ],
+  "container_count": 7,
+  "all_project_resources_match_owner_filter": true,
+  "volumes": [
+    "leadshug_channels_local_evolution_instances",
+    "leadshug_channels_local_evolution_pg_data",
+    "leadshug_channels_local_evolution_redis_data",
+    "leadshug_channels_local_leadshug_arquivos",
+    "leadshug_channels_local_leadshug_pg_data"
+  ],
+  "volume_count": 5,
+  "policy_source": {
+    "bytes": 12865,
+    "sha256": "d0f72c588f0f014de46a327e34d6b26125ca115bc973b56bbb926cd8519e701d"
+  },
+  "candidate_image": "sha256:6f4b2500e02d1523f99b423a08b6a166e319d5f3246ad516ef8f4a56d30001ed",
+  "private_fields_read": false,
+  "prior_probes": "Two inspect format/native-argv attempts rejected before facts; successful bounded fields omit whitespace in template"
+}

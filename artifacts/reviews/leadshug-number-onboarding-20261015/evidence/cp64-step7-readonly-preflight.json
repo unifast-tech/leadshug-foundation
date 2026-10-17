@@ -1,0 +1,105 @@
+{
+  "checkpoint": "cp64-step7-readonly-preflight-v1",
+  "observed_utc": "2026-10-17T13:43:38.349843+00:00",
+  "status": "read_only_snapshot_pre_activation",
+  "scope": {
+    "private_origin_read": false,
+    "provider_http": false,
+    "database_query_or_mutation": false,
+    "runtime_mutation": false,
+    "gateway_reload": false,
+    "source_or_git_change": false
+  },
+  "accepted_transport": {
+    "evidence": "cp64-transport-proof.root-accepted.json",
+    "sha256": "b58b57d7198a7c4e163203b4dc237fe5abf58c412f5412655bcc4b15324dbfa6",
+    "hostname": "addressing-mar-perform-hormone.trycloudflare.com",
+    "windows_normal_tls_root_health_js": true,
+    "wsl_normal_tls_root_health_js": true
+  },
+  "owned_resources": {
+    "source": "root-cp64-phase1-preservation.json",
+    "sha256": "db55921245c61e25385c3549c2805262426bcab869690f26b74bf373575aa80e",
+    "containers": 7,
+    "all_running": true,
+    "volumes": 5,
+    "same_expected_ids_images_and_names": true
+  },
+  "network": {
+    "id": "d48c8a9ac92f00d8e2f1c1c6a1744ab14463aeba4abeab491f82719336925c20",
+    "labels": {
+      "com.docker.compose.network": "default",
+      "com.docker.compose.project": "leadshug_channels_local",
+      "com.leadshug.channels.owner": "number-onboarding"
+    },
+    "memberships": {
+      "api": {
+        "id": "c138a8456bc834d53c2ab4c3bc3c0307024dbc5a9cbb9a11c337218adcde7324",
+        "image": "sha256:fe5fb7eaf6a68123f9da6b92a0a69483180d213f556b4bedf313f04a383b4821",
+        "network_id": "d48c8a9ac92f00d8e2f1c1c6a1744ab14463aeba4abeab491f82719336925c20",
+        "ip": "172.27.0.5"
+      },
+      "web": {
+        "id": "1e8d3a40dd9665481748b1278fd60de71ced6c682986d367a90665e76a61358a",
+        "image": "sha256:d11a882849dc806e0d4728ca90a8fc8655aebc77421acefac63054b4fbb89365",
+        "network_id": "d48c8a9ac92f00d8e2f1c1c6a1744ab14463aeba4abeab491f82719336925c20",
+        "ip": "172.27.0.4"
+      },
+      "gateway": {
+        "id": "0c48d94e9fe5b4ad75efd304db2752dfa4cab3befc59b9f736574d6cd551eea3",
+        "image": "sha256:76090a34b858323b6ab169711adc08253b5bee7123a973dc581ed46b643bc109",
+        "network_id": "d48c8a9ac92f00d8e2f1c1c6a1744ab14463aeba4abeab491f82719336925c20",
+        "ip": "172.27.0.2"
+      }
+    },
+    "all_same_owned_network": true
+  },
+  "gateway_config": {
+    "runtime_active_sha256": "9329131376e0aaa8020e7440954af5125a65eb2bba69fd016292fe63843fe707",
+    "public_template_sha256": "9329131376e0aaa8020e7440954af5125a65eb2bba69fd016292fe63843fe707",
+    "matches": true
+  },
+  "direct_from_owned_api": {
+    "api_health": {
+      "status": 200,
+      "body_bytes": 15
+    },
+    "web_privacidade": {
+      "status": 200,
+      "body_bytes": 694,
+      "expected_policy_bytes": 12865,
+      "expected_policy_sha256": "d0f72c588f0f014de46a327e34d6b26125ca115bc973b56bbb926cd8519e701d",
+      "expected_bytes_match": false,
+      "expected_sha_match": false
+    },
+    "gateway_health": {
+      "status": 200,
+      "body_bytes": 15
+    },
+    "gateway_privacidade": {
+      "status": 200,
+      "body_bytes": 694
+    },
+    "interpretation": "Pre-activation old Web returns a 694-byte fallback at the policy path; candidate is not activated. This is baseline state, not an activation regression."
+  },
+  "public_transport_recheck": {
+    "observed_utc": "2026-10-17T13:42:05.996179+00:00",
+    "normal_tls": true,
+    "redirects_followed": false,
+    "root_status": 200,
+    "health_status": 200,
+    "js_status": 200,
+    "js_sha256": "d14343604557296f2ed62c1df47d9c80d81c323abafd89ccbb64a6a0746ff4bd"
+  },
+  "v6_helper": {
+    "path": "T/cp64-activate-origin-api-web-v6.ps1",
+    "sha256": "2ba4a442faf06b8ae34dbf2e5c81cb9fec42d7ce0f7f6655b4a33401046cbc66",
+    "parser_errors": 0,
+    "predicate_test_result": "passed",
+    "positive_api_and_web_routes": 2,
+    "negative_cases": 9,
+    "test_mode_docker_calls": 0,
+    "test_mode_network_requests": 0
+  },
+  "result": "Prepared for fresh review only. No private-origin read/write, API/Web recreate, image retag, gateway test/reload, container/network/volume mutation occurred."
+}

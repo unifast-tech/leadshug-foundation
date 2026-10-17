@@ -1,0 +1,104 @@
+{
+  "checkpoint": "cp64-transport-proof",
+  "capturedAtUtc": "2026-10-17T13:27:07Z",
+  "rootAccepted": false,
+  "rootOutcome": "PENDING",
+  "operationAuthority": "PENDING",
+  "phase": "phase1_new_owned_transport_only",
+  "launch": {
+    "helper": "foundation_documentation/artifacts/tmp/number-onboarding-execution/T/cloudflared-cp64/cp64-recover-https-v2.ps1",
+    "helperSha256": "f8cad6104455250572f058fe8173aeb364349f801a921001be161832e1eaa0db",
+    "validateOnly": "passed",
+    "fakeStartTicksNegativeControl": "rejected_before_mutation_with_old_child_native_start_ticks_mismatch",
+    "launchResult": "new_owned_supervisor_created_old_child_not_touched"
+  },
+  "newOwnedTransport": {
+    "hostname": "addressing-mar-perform-hormone.trycloudflare.com",
+    "target": "http://127.0.0.1:8083",
+    "transport": "http2",
+    "statePath": "foundation_documentation/artifacts/tmp/number-onboarding-execution/T/cloudflared-cp64/runtime-state.json",
+    "stateSha256": "4dd5183948e65aa615a2e635d68368c43ec09de34429311d2c168f1e6f6cc8bd",
+    "supervisor": {
+      "pid": 14708,
+      "nativeStartTimeUtcTicks": 639278403605890201,
+      "executablePath": "C:\\unifast\\leadshug\\leadshug_now_docker\\foundation_documentation\\artifacts\\tmp\\number-onboarding-execution\\T\\cloudflared-cp64\\cp64-supervisor.exe",
+      "sha256": "bdf68028ea2da0699b1e04d191453b5d7090861b17f518d236ce6b084d45c69b",
+      "parentPid": 11848
+    },
+    "child": {
+      "pid": 2148,
+      "nativeStartTimeUtcTicks": 639278403607622938,
+      "executablePath": "C:\\unifast\\leadshug\\leadshug_now_docker\\foundation_documentation\\artifacts\\tmp\\number-onboarding-execution\\T\\cloudflared-cp64\\cloudflared-windows-amd64.exe",
+      "sha256": "86aee4017b26625cee8484c113558f48effa4cd47f7aa05fcf425604e5d2b23c",
+      "parentPid": 14708,
+      "arguments": "tunnel --config \"C:\\unifast\\leadshug\\leadshug_now_docker\\foundation_documentation\\artifacts\\tmp\\number-onboarding-execution\\T\\cloudflared-cp64\\empty-config.yml\" --no-autoupdate --url http://127.0.0.1:8083"
+    },
+    "stateEvents": {
+      "registeredConnectionEvents": 1,
+      "errorEvents": 1,
+      "streamCallbackFaults": 0,
+      "stateWriteFailures": 0,
+      "failureCategory": null
+    }
+  },
+  "priorChild": {
+    "pid": 21180,
+    "nativeStartTimeUtcTicks": 639277908932385742,
+    "executablePath": "C:\\unifast\\leadshug\\leadshug_now_docker\\foundation_documentation\\artifacts\\tmp\\number-onboarding-execution\\cloudflared-cp46\\cloudflared-windows-amd64.exe",
+    "sha256": "86aee4017b26625cee8484c113558f48effa4cd47f7aa05fcf425604e5d2b23c",
+    "parentPid": 22836,
+    "target": "http://127.0.0.1:8083",
+    "retired": false
+  },
+  "publicProbes": {
+    "windows": {
+      "normalTls": true,
+      "redirectsFollowed": false,
+      "cookiesUsed": false,
+      "probeScriptSha256": "c3e128320840c0810de3cf9a0b5221574c666a5044d7d6df8067907265e089aa",
+      "rootStatus": 200,
+      "healthStatus": 200,
+      "knownJsStatus": 200,
+      "knownJsSha256": "d14343604557296f2ed62c1df47d9c80d81c323abafd89ccbb64a6a0746ff4bd",
+      "noSetCookie": true
+    },
+    "wsl": {
+      "normalTls": true,
+      "redirectsFollowed": false,
+      "rootStatus": 200,
+      "healthStatus": 200,
+      "knownJsStatus": 200,
+      "knownJsSha256": "d14343604557296f2ed62c1df47d9c80d81c323abafd89ccbb64a6a0746ff4bd"
+    }
+  },
+  "preservation": {
+    "containers": [
+      {"id":"c138a8456bc834d53c2ab4c3bc3c0307024dbc5a9cbb9a11c337218adcde7324","image":"sha256:fe5fb7eaf6a68123f9da6b92a0a69483180d213f556b4bedf313f04a383b4821","state":"running","ownerLabel":"number-onboarding","service":"api"},
+      {"id":"0c48d94e9fe5b4ad75efd304db2752dfa4cab3befc59b9f736574d6cd551eea3","image":"sha256:76090a34b858323b6ab169711adc08253b5bee7123a973dc581ed46b643bc109","state":"running","ownerLabel":"number-onboarding","service":"gateway"},
+      {"id":"1e8d3a40dd9665481748b1278fd60de71ced6c682986d367a90665e76a61358a","image":"sha256:d11a882849dc806e0d4728ca90a8fc8655aebc77421acefac63054b4fbb89365","state":"running","ownerLabel":"number-onboarding","service":"web"},
+      {"id":"cf749491f7149dc46ec4db597b2d9c12faf918dd4f05b5512ba75adaf8e29ea4","image":"sha256:385a3c4bedf42c66b46b43d06aae8712620144a84aa3b2c831b30c68435ab27c","state":"running","ownerLabel":"number-onboarding","service":"evolution"},
+      {"id":"3b2e8d153d794a768ea87cb4f9cda7ba15dde242e2b8027bd372a475a9c26fbb","image":"sha256:f84b0c4678011602b9b98c227a4dcd5468bf8b088b02fdd4165cb7758bad8058","state":"running","ownerLabel":"number-onboarding","service":"evolution-redis"},
+      {"id":"150de898c3d9aa189ca0719eed7a65b95d95d8b948244e66b059a55f4554135a","image":"sha256:80f4c7a5e91618546dce5b4fe60cf03b14c0f9efa7e40157278d122772ced8d2","state":"running","ownerLabel":"number-onboarding","service":"evolution-postgres"},
+      {"id":"4fcd87b431339e3b65a40beafa27db86cdc978ca79f71b911199f7090c837495","image":"sha256:80f4c7a5e91618546dce5b4fe60cf03b14c0f9efa7e40157278d122772ced8d2","state":"running","ownerLabel":"number-onboarding","service":"postgres"}
+    ],
+    "volumeNames": [
+      "leadshug_channels_local_evolution_instances",
+      "leadshug_channels_local_evolution_pg_data",
+      "leadshug_channels_local_evolution_redis_data",
+      "leadshug_channels_local_leadshug_arquivos",
+      "leadshug_channels_local_leadshug_pg_data"
+    ],
+    "allSevenSameIdImageOwnerState": true,
+    "allFiveVolumesPresent": true,
+    "apiAndWebContainersUnchanged": true
+  },
+  "scope": {
+    "oldChildRetirement": false,
+    "privateOriginReadOrEdit": false,
+    "apiOrWebRecreation": false,
+    "gatewayMutation": false,
+    "providerOrDatabaseAction": false,
+    "sourceGitOrLocalFilesAccess": false
+  },
+  "next": "stop_for_root_review; phase1 proves transport only and does not prove the policy URL or authorize phase2"
+}

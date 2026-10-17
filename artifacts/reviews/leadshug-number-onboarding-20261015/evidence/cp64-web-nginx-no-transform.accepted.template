@@ -1,0 +1,38 @@
+# Processado pelo entrypoint da imagem oficial do nginx, que roda envsubst nos
+# arquivos de /etc/nginx/templates. É assim que a porta deixa de ser fixa: a
+# Railway injeta PORT, e um servidor que escuta noutra porta responde 502 —
+# domínio existe, serviço não atende.
+server {
+    listen ${PORT};
+    server_name _;
+    root /usr/share/nginx/html;
+
+    # Assets com hash no nome podem ser cacheados para sempre.
+    location /assets/ {
+        expires 1y;
+        add_header Cache-Control "public, immutable";
+    }
+
+    # A página de privacidade não deve ser transformada pelo edge.
+    location = /privacidade.html {
+        add_header Cache-Control "no-store, no-transform";
+        try_files $uri =404;
+    }
+
+    # Caminho de API NÃO cai no index.html.
+    #
+    # Sem isto, um front mal configurado (base vazia) recebe 200 com HTML em toda
+    # chamada — e o sintoma vira "a tela quebrou" num campo qualquer, longe da
+    # causa. 404 aqui é ruidoso e honesto: este serviço não é a API.
+    location /api/ { return 404; }
+    location /health { return 404; }
+    location /ws { return 404; }
+
+    # O index.html NUNCA é cacheado: é ele que aponta para os assets novos a
+    # cada deploy. Errar isso significa gente vendo a versão velha sem suspeitar
+    # do cache.
+    location / {
+        add_header Cache-Control "no-store";
+        try_files $uri $uri/ /index.html;
+    }
+}
