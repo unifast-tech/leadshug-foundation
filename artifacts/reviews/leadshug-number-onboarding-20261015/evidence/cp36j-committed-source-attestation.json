@@ -1,0 +1,16 @@
+{
+  "checkpoint": "cp36j-local-source-commit",
+  "capturedAtUtc": "2026-10-17T04:49:36.373366+00:00",
+  "apiCommit": "db5a86758a165fac8a1ab587599c37b17890530c",
+  "webHead": "34408c47b4f2f935291d5fc9934f5118b5516bd4",
+  "onlyCommittedPath": "src/integrations/meta/meta.client.spec.ts",
+  "committedPublicBlobSha256": "9faf845a3395b646013b82ced46eeb42b79888b16b0f82b542697fd2223c2247",
+  "indexedAndWorkingBytesEqualReviewed": true,
+  "currentManifestSha256": "39c7b8d31e963ae4e5a5667d960ef84d5277a070e044a95b45890802e24d29a7",
+  "actualJApiExecutionHead": "7e948c3045da736f7db1f8e97825cf6384777e4f",
+  "provenance": "Tests ran before this commit on byte-identical reviewed source; this receipt does not relabel execution HEAD or historical h browser attestations.",
+  "runtimeBridge": "Served image remains i/fe5fb7 with original i label, compiled production identical; j changes only build-excluded unit. No rebuild/relabel/redeploy.",
+  "sourcePush": false,
+  "workspaceGitlinkMutation": false,
+  "privatePayloadAccess": false
+}

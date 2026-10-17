@@ -1,0 +1,155 @@
+{
+  "schema_version": "gate-finding-resolution-v1",
+  "artifact_kind": "gate_finding_resolution",
+  "authoritative": false,
+  "edit_policy": "derived_from_todo",
+  "todo_path": "foundation_documentation/todos/active/features/TODO-leadshug-channel-connection-readiness.md",
+  "review_kind": "test_quality_audit",
+  "gate_status": "findings_integrated",
+  "findings": [
+    {
+      "finding_id": "TQA-CP36J-R01",
+      "resolution": "Integrated",
+      "usefulness": "useful",
+      "formalizable": "partial",
+      "candidate_rule_level": "project",
+      "candidate_rule_id": "VAL-05",
+      "rationale": "Oficial real permanece obrigat\u00f3rio/aberto; prova n\u00e3o oficial cp49/cp52 separada. Executar recurso TEST expl\u00edcito ap\u00f3s final distinto, sem waiver."
+    },
+    {
+      "finding_id": "TQA-CP36J-R02",
+      "resolution": "Integrated",
+      "usefulness": "useful",
+      "formalizable": "yes",
+      "candidate_rule_level": "project",
+      "candidate_rule_id": "BLG-leadshug-runtime-dependency-security",
+      "rationale": "Locus de depend\u00eancias inalterado; preservar coorte privada OWNER/sint\u00e9tica e backlog devido antes de usu\u00e1rios n\u00e3o confi\u00e1veis, sem autoriza\u00e7\u00e3o ampla."
+    },
+    {
+      "finding_id": "TQA-CP36I-R01",
+      "resolution": "Integrated",
+      "usefulness": "useful",
+      "formalizable": "partial",
+      "candidate_rule_level": "project",
+      "candidate_rule_id": "VAL-05",
+      "rationale": "Requisito externo mantido aberto/sem waiver; aceitar somente fonte/testes privados agora e continuar final/API/recovery oficial real."
+    },
+    {
+      "finding_id": "TQA-CP36I-R02",
+      "resolution": "Integrated",
+      "usefulness": "useful",
+      "formalizable": "yes",
+      "candidate_rule_level": "project",
+      "candidate_rule_id": "evidence-freshness-composition",
+      "rationale": "Preservar ambas attesta\u00e7\u00f5es h originais e reuso expl\u00edcito; n\u00e3o h\u00e1 all536/browser novo ou APIi servida."
+    },
+    {
+      "finding_id": "TQA-CP36H-01",
+      "resolution": "Integrated",
+      "usefulness": "useful",
+      "formalizable": "yes",
+      "candidate_rule_level": "project",
+      "candidate_rule_id": "D-05/D-07",
+      "rationale": "Acrescentar caso dedicado is_valid:false com todo grant restante v\u00e1lido, classe+code mesma promise,1debug/authhost e zero lookup; produto correto sem RED artificial."
+    },
+    {
+      "finding_id": "TQA-CP36H-R01",
+      "resolution": "Integrated",
+      "usefulness": "useful",
+      "formalizable": "no",
+      "candidate_rule_level": "none",
+      "candidate_rule_id": "none",
+      "rationale": "VAL05 j\u00e1 obrigat\u00f3rio e n\u00e3o dispensado; mesma interrup\u00e7\u00e3o local explicitamente autorizada antes, nenhum novo pedido de permiss\u00e3o para repeti-la ap\u00f3s gates. Oficial/humana ainda pendentes."
+    },
+    {
+      "finding_id": "TQA-CP36G-01",
+      "resolution": "Integrated",
+      "usefulness": "useful",
+      "formalizable": "yes",
+      "candidate_rule_level": "project",
+      "candidate_rule_id": "D-05/D-07",
+      "rationale": "Acrescentar missing data/app_id n\u00e3o string/is_valid n\u00e3o boolean e sucessos de omiss\u00e3o leg\u00edtima de scopes/target_ids; adapter real, classe+code mesma promise e contagemHTTP. Sem mudan\u00e7a de produto ou RED artificial."
+    },
+    {
+      "finding_id": "TQA-CP36F-01",
+      "resolution": "Integrated",
+      "usefulness": "useful",
+      "formalizable": "yes",
+      "candidate_rule_level": "project",
+      "candidate_rule_id": "D-05/D-07",
+      "rationale": "Validar debug grant antes de iterar campos, rejeitar estrutura inv\u00e1lida com classe tipada; RED unit e representante adapter real/BFF/PG503 com invariantes em cp36g."
+    },
+    {
+      "finding_id": "TQA-CP36E-01",
+      "resolution": "Integrated",
+      "usefulness": "useful",
+      "formalizable": "yes",
+      "candidate_rule_level": "project",
+      "candidate_rule_id": "D-07",
+      "rationale": "JSON inv\u00e1lido/data ausente ou n\u00e3o-array n\u00e3o provam aus\u00eancia: corrigir adapter e provar classe/code mais BFF/PG503 e preserva\u00e7\u00e3o. cp36f admitido antes da edi\u00e7\u00e3o."
+    },
+    {
+      "finding_id": "TQA-CP36E-02",
+      "resolution": "Integrated",
+      "usefulness": "useful",
+      "formalizable": "yes",
+      "candidate_rule_level": "project",
+      "candidate_rule_id": "D-05",
+      "rationale": "Fixar mensagem p\u00fablica segura e comprovar que erro gen\u00e9rico n\u00e3o vira META_INDISPONIVEL; teste BFF com invariantes."
+    },
+    {
+      "finding_id": "TQA-CP36C-01",
+      "resolution": "Integrated",
+      "usefulness": "useful",
+      "formalizable": "yes",
+      "candidate_rule_level": "project",
+      "candidate_rule_id": "D-05/D-07",
+      "rationale": "Mapper Meta tipado e BFF/PG negativo com invariantes; cp36d em execu\u00e7\u00e3o, gate atual n\u00e3o aceito."
+    },
+    {
+      "finding_id": "TQA-CP36C-02",
+      "resolution": "Integrated",
+      "usefulness": "useful",
+      "formalizable": "partial",
+      "candidate_rule_level": "project",
+      "candidate_rule_id": "D-05/D-07/D-09",
+      "rationale": "Classe real no double browser e nova prova browser/freshness; cp36c46/1 falho preservado, sem aceitar plataforma por infer\u00eancia."
+    },
+    {
+      "finding_id": "TQA-CP25-01",
+      "resolution": "Integrated",
+      "usefulness": "useful",
+      "formalizable": "yes",
+      "candidate_rule_level": "project",
+      "candidate_rule_id": "REG-SEC-10",
+      "rationale": "Spy antes do ingresso antigo, zero eventos; cp27 API286 e suplemento TQA fresh aceitam, sem mockClear mascarando observa\u00e7\u00e3o."
+    },
+    {
+      "finding_id": "TQA-CP25-02",
+      "resolution": "Integrated",
+      "usefulness": "useful",
+      "formalizable": "yes",
+      "candidate_rule_level": "project",
+      "candidate_rule_id": "NUM-WEB-11",
+      "rationale": "Sess\u00e3o OWNER concorrente altera currentAttemptId; primeiro browser falha seguro semPOST/reset/BU/canal extra; cp27 browser47 e suplemento aceitam."
+    },
+    {
+      "finding_id": "TQA-CP21-02",
+      "resolution": "Deferred",
+      "usefulness": "useful",
+      "formalizable": "partial",
+      "candidate_rule_level": "project",
+      "candidate_rule_id": "none",
+      "rationale": "D\u00edvida n\u00e3o bloqueante de processo mixed/test-after; owner executor/reviewer deste TODO, exigir RED aut\u00eantico em pr\u00f3ximos defeitos; n\u00e3o fabricar hist\u00f3rico."
+    },
+    {
+      "finding_id": "TQA-CP21-01",
+      "resolution": "Deferred",
+      "usefulness": "useful",
+      "formalizable": "no",
+      "candidate_rule_level": "project",
+      "candidate_rule_id": "VAL-05",
+      "rationale": "Fora do gate local: prova externa continua requisito obrigat\u00f3rio aberto para entrega geral, sem waiver ou aceite de d\u00edvida; pr\u00f3xima a\u00e7\u00e3o \u00e9 teste real com operador."
+    }
+  ]
+}

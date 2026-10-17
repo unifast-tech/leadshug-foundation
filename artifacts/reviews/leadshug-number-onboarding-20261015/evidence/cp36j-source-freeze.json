@@ -1,0 +1,20 @@
+{
+  "checkpoint": "cp36j",
+  "status": "terminal-source-freeze",
+  "scope": "test-only",
+  "allowed_changed_path": "api-app/src/integrations/meta/meta.client.spec.ts",
+  "source_count": 9,
+  "before_manifest": "cp36j-source-before.sha256",
+  "after_manifest": "cp36j-source-after.sha256",
+  "pre_api_manifest": "cp36j-source-preapi.sha256",
+  "post_api_manifest": "cp36j-source-postapi.sha256",
+  "before_manifest_sha256": "af21e98e41ec1ba86f4dac877ba2bd69b3ff0857fba930ca1c3973428723b581",
+  "after_manifest_sha256": "39c7b8d31e963ae4e5a5667d960ef84d5277a070e044a95b45890802e24d29a7",
+  "pre_api_manifest_sha256": "39c7b8d31e963ae4e5a5667d960ef84d5277a070e044a95b45890802e24d29a7",
+  "post_api_manifest_sha256": "39c7b8d31e963ae4e5a5667d960ef84d5277a070e044a95b45890802e24d29a7",
+  "cp36i_spec_sha256": "9612cd1c7a5d8c68bca7c515625db0601acb479585625f9b8fc93fbc04c464b1",
+  "cp36j_spec_sha256": "9faf845a3395b646013b82ced46eeb42b79888b16b0f82b542697fd2223c2247",
+  "other_eight_paths_byteidentical_to_cp36i": true,
+  "implementation_changed": false,
+  "api_run_source_manifest_unchanged": true
+}

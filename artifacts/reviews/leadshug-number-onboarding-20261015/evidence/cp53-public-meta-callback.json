@@ -1,0 +1,89 @@
+{
+  "checkpoint": "cp53-public-meta-callback",
+  "capturedAtUtc": "2026-10-17T04:33:24Z",
+  "scope": "Read-only public Meta callback challenge verification against the current own public HTTPS origin. This proves deployed callback challenge behavior only; it does not prove saved Meta app configuration or a real official event.",
+  "authorization": {
+    "routing": "foundation_documentation/artifacts/tmp/number-onboarding-execution/routing-cp53-public-callback.json",
+    "outcome": "go",
+    "authority": "cp53 public callback proof admitted before execution"
+  },
+  "transport": {
+    "hostname": "comments-heart-gale-muscles.trycloudflare.com",
+    "wslDns": [
+      "104.16.230.132",
+      "104.16.231.132",
+      "2606:4700::6810:e684",
+      "2606:4700::6810:e784"
+    ],
+    "wslLocalRootStatus": 200,
+    "wslLocalHealthStatus": 200,
+    "wslLocalAssetStatus": 200,
+    "wslLocalAssetSha256": "d14343604557296f2ed62c1df47d9c80d81c323abafd89ccbb64a6a0746ff4bd",
+    "wslPublicRootStatus": 200,
+    "wslPublicHealthStatus": 200,
+    "wslPublicAssetStatus": 200,
+    "wslPublicAssetSha256": "d14343604557296f2ed62c1df47d9c80d81c323abafd89ccbb64a6a0746ff4bd",
+    "windowsPublicRootStatus": 200,
+    "windowsPublicHealthStatus": 200,
+    "windowsPublicAssetStatus": 200,
+    "windowsPublicAssetSha256": "d14343604557296f2ed62c1df47d9c80d81c323abafd89ccbb64a6a0746ff4bd",
+    "assetBytes": 258450,
+    "tlsVerificationDisabled": false,
+    "redirectsFollowed": false
+  },
+  "nativeTunnelIdentity": {
+    "ownerPid": 22836,
+    "ownerPresent": true,
+    "ownerStartTimeUtc": "2026-10-16T23:41:32.5488683Z",
+    "ownerStartTime100ns": 639277908925488683,
+    "ownerExecutable": "C:\\unifast\\leadshug\\leadshug_now_docker\\foundation_documentation\\artifacts\\tmp\\number-onboarding-execution\\cloudflared-cp46\\cp46-supervisor.exe",
+    "ownerSha256": "bdf68028ea2da0699b1e04d191453b5d7090861b17f518d236ce6b084d45c69b",
+    "ownerParentPid": 11848,
+    "childPid": 21180,
+    "childPresent": true,
+    "childStartTimeUtc": "2026-10-16T23:41:33.2385742Z",
+    "childStartTime100ns": 639277908932385742,
+    "childExecutable": "C:\\unifast\\leadshug\\leadshug_now_docker\\foundation_documentation\\artifacts\\tmp\\number-onboarding-execution\\cloudflared-cp46\\cloudflared-windows-amd64.exe",
+    "childSha256": "86aee4017b26625cee8484c113558f48effa4cd47f7aa05fcf425604e5d2b23c",
+    "childParentPid": 22836,
+    "target": "http://127.0.0.1:8083",
+    "matchesPinnedCp46Cp48IdentityAndCreationTimes": true,
+    "processMutation": false
+  },
+  "publicCallbackChallenge": {
+    "endpointPath": "/webhooks/meta",
+    "verifyTokenFieldPresentUniqueNonempty": true,
+    "verifyTokenValuePersistedOrEmitted": false,
+    "syntheticChallengeUsed": true,
+    "challengeValuePersistedOrEmitted": false,
+    "actualToken": {
+      "status": 200,
+      "bodyMatchesSyntheticChallenge": true,
+      "errorCategory": null
+    },
+    "wrongSyntheticToken": {
+      "status": 403,
+      "bodyMatchesSyntheticChallenge": false,
+      "errorCategory": "HTTPError"
+    },
+    "missingToken": {
+      "status": 403,
+      "bodyMatchesSyntheticChallenge": false,
+      "errorCategory": "HTTPError"
+    },
+    "normalTls": true,
+    "redirectsFollowed": false,
+    "rawQueryResponseBodyOrExceptionPersisted": false
+  },
+  "boundary": {
+    "savedMetaAppConfigurationProven": false,
+    "realMetaWebhookEventProven": false,
+    "MetaAccountUiApiOAuthOrProviderAccess": false,
+    "configurationMutationOrTokenRotation": false,
+    "authSessionOrDatabaseAccess": false,
+    "sourceGitOrRuntimeMutation": false,
+    "privateFilesOtherThanAuthorizedSingleInMemoryVerifyTokenRead": false,
+    "localFilesAccessed": false
+  },
+  "terminalStatus": "STOP; public callback challenge verification only."
+}

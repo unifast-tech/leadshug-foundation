@@ -1,0 +1,74 @@
+{
+  "schema_version": "gate-finding-resolution-v1",
+  "artifact_kind": "gate_finding_resolution",
+  "authoritative": false,
+  "edit_policy": "derived_from_todo",
+  "todo_path": "foundation_documentation/todos/active/features/TODO-leadshug-channel-connection-readiness.md",
+  "review_kind": "final_review",
+  "gate_status": "findings_integrated",
+  "findings": [
+    {
+      "finding_id": "FINAL-CP36I-01",
+      "resolution": "Integrated",
+      "usefulness": "useful",
+      "formalizable": "yes",
+      "candidate_rule_level": "project",
+      "candidate_rule_id": "D-02/app-audience-negative",
+      "rationale": "Um teste cp36j isola app_id incorreto com grant/fallback v\u00e1lidos, classe+code mesma rejei\u00e7\u00e3o/1debug/zero lookup. API174/288 e TQA FULL/final distinto j aceitam o locus. Hist\u00f3rico i condicional preservado; sem waiver de VAL05."
+    },
+    {
+      "finding_id": "FINAL-CP36J-R01",
+      "resolution": "Integrated",
+      "usefulness": "useful",
+      "formalizable": "partial",
+      "candidate_rule_level": "project",
+      "candidate_rule_id": "VAL-05",
+      "rationale": "Requisito oficial real aberto, usar recurso pr\u00f3prio exclusivamente teste e J\u00e1 registrado ap\u00f3s checkpoint; sem waiver/closeout."
+    },
+    {
+      "finding_id": "FINAL-CP36J-R02",
+      "resolution": "Integrated",
+      "usefulness": "useful",
+      "formalizable": "partial",
+      "candidate_rule_level": "project",
+      "candidate_rule_id": "BLG-leadshug-runtime-dependency-security",
+      "rationale": "Preservar limite privado existente/backlog antes usu\u00e1rios n\u00e3o confi\u00e1veis, depend\u00eancias inalteradas."
+    },
+    {
+      "finding_id": "FINAL-CP36J-01",
+      "resolution": "Integrated",
+      "usefulness": "useful",
+      "formalizable": "partial",
+      "candidate_rule_level": "project",
+      "candidate_rule_id": "current-gate-evidence-consistency",
+      "rationale": "Corrigidos Next exact step/resumos vivos para TQA/final j terminais, sem reabrir arquitetura ou executar testes."
+    },
+    {
+      "finding_id": "FINAL-CP36I-R01",
+      "resolution": "Integrated",
+      "usefulness": "useful",
+      "formalizable": "partial",
+      "candidate_rule_level": "project",
+      "candidate_rule_id": "VAL-05",
+      "rationale": "Requisito real aberto/sem dispensa, mesmo teste de recupera\u00e7\u00e3o j\u00e1 autorizado e prova oficial ainda obrigat\u00f3rios."
+    },
+    {
+      "finding_id": "FINAL-CP36I-R02",
+      "resolution": "Integrated",
+      "usefulness": "useful",
+      "formalizable": "partial",
+      "candidate_rule_level": "project",
+      "candidate_rule_id": "BLG-leadshug-runtime-dependency-security",
+      "rationale": "Restri\u00e7\u00e3o privada OWNER existente, backlog devido antes de usu\u00e1rios n\u00e3o confi\u00e1veis, locus/depend\u00eancias n\u00e3o alterados."
+    },
+    {
+      "finding_id": "FINAL-CP36I-02",
+      "resolution": "Integrated",
+      "usefulness": "useful",
+      "formalizable": "partial",
+      "candidate_rule_level": "project",
+      "candidate_rule_id": "current-gate-evidence-consistency",
+      "rationale": "Root reconcilia resumos vivos ao TQA terminal aceito e final condicional, preserva exce\u00e7\u00f5es/VAL05/raw hist\u00f3ricos."
+    }
+  ]
+}

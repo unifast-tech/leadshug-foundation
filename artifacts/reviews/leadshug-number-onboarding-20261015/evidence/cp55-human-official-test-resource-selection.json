@@ -1,0 +1,16 @@
+{
+  "checkpoint": "cp55",
+  "capturedAtUtc": "2026-10-17T04:44:56.075262+00:00",
+  "evidenceType": "human_test_resource_selection",
+  "exactUserReply": "Número próprio reservado exclusivamente para testes",
+  "acceptedBoundary": "Own number reserved exclusively for tests; never select unrelated production resources.",
+  "notProven": [
+    "Existing WhatsApp app/API registration state",
+    "Official authorization",
+    "Resource identity",
+    "Real official INOUT"
+  ],
+  "nextQuestion": "Is the dedicated test number unused, already official API, or in WhatsApp app? No identifying values requested.",
+  "sourceOrRuntimeMutation": false,
+  "secretsRecorded": false
+}

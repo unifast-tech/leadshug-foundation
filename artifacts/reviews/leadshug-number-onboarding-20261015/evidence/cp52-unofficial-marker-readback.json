@@ -1,0 +1,102 @@
+{
+  "checkpoint": "cp52-unofficial-marker-readback",
+  "capturedAtUtc": "2026-10-17T04:23:30Z",
+  "scope": {
+    "otherConversationsQueried": false,
+    "bodyContentContactPhoneEmailOwnerPiiRawExternalIdsReturned": false,
+    "providerAuthSessionPrivateFileAccess": false,
+    "databaseMutation": false,
+    "messageSend": false
+  },
+  "authorization": {
+    "routing": "foundation_documentation/artifacts/tmp/number-onboarding-execution/routing-cp50-readback.json",
+    "outcome": "go",
+    "userMarkerClarification": "Enviei Teste resposta",
+    "markerUsed": "Teste resposta",
+    "subjectClarification": "new contact; cp51 searched different suggested markers and zero matches were expected."
+  },
+  "runtimeGuards": {
+    "apiContainerId": "c138a8456bc834d53c2ab4c3bc3c0307024dbc5a9cbb9a11c337218adcde7324",
+    "apiImageId": "sha256:fe5fb7eaf6a68123f9da6b92a0a69483180d213f556b4bedf313f04a383b4821",
+    "apiHealthy": true,
+    "sourceManifestSha256": "af21e98e41ec1ba86f4dac877ba2bd69b3ff0857fba930ca1c3973428723b581",
+    "compiled4MatchAcceptedCandidate": true,
+    "compiled4Sha256": [
+      "aa2d4e51ee906b3cc7dd79d4835cd331b00eaa772655506630e6f944d13bda73",
+      "93495861c2b300b66c5d5292803e3fbb71819c662896ae81ef457e8a4abbd1c4",
+      "09b1ba14d22f90d345cce9f1e87cfcee8de4560a755c6f59528e22b7955d47ac",
+      "a756c9693c574f6fb4987d878af8d4fbeaf9f07c86a5c5e6acadeca4f7a771cb"
+    ],
+    "evolutionContainerId": "cf749491f7149dc46ec4db597b2d9c12faf918dd4f05b5512ba75adaf8e29ea4",
+    "evolutionImageId": "sha256:385a3c4bedf42c66b46b43d06aae8712620144a84aa3b2c831b30c68435ab27c",
+    "evolutionRunning": true
+  },
+  "channelGuards": {
+    "businessUnitId": "c231d8f7-d8a5-448e-a740-2ab8aebf9bc2",
+    "channelId": "b6c3e3f0-fe77-4e92-82e4-1975dffcbef1",
+    "status": "CONECTADO",
+    "providerConnectionState": "CONNECTED",
+    "generation": 1,
+    "pairingEpoch": 1,
+    "verifiedEpoch": 1,
+    "receiptPresent": true,
+    "activeLease": false,
+    "currentAttemptId": "91a050d2-b6b7-4d3a-ac48-97392688584d",
+    "attemptState": "CONNECTED",
+    "attemptStage": "RECEIPT_VERIFIED",
+    "attemptVersion": 2,
+    "identityId": "a48c93ac-3a69-4607-bc0c-856f88646a6f",
+    "identityCurrentManagedAndNotRetired": true
+  },
+  "lookup": {
+    "textFieldBasis": "Public Prisma Message.content is nullable String; Evolution mapper stores selected text into conteudo, then IncomingService maps conteudo to Message.content.",
+    "filtering": "Server-side exact equality on content only; body/content was not selected or returned.",
+    "buId": "c231d8f7-d8a5-448e-a740-2ab8aebf9bc2",
+    "providerResourceIdentityId": "a48c93ac-3a69-4607-bc0c-856f88646a6f",
+    "createdAfterUtc": "2026-10-17T04:13:01.849Z",
+    "resultCap": 21,
+    "markerMatchCount": 1,
+    "markerMatchDirection": "OUT",
+    "markerMatchStatus": "ENVIADA",
+    "markerMatchMessageId": "bfcd2c04-7347-45e3-bd46-9203ad3c15ad",
+    "markerMatchConversationId": "efcd1776-3282-4cb0-a073-942a636719ae",
+    "markerMatchCreatedAtUtc": "2026-10-17T04:18:52.799Z",
+    "subjectUnique": true
+  },
+  "exactNewConversation": {
+    "conversationId": "efcd1776-3282-4cb0-a073-942a636719ae",
+    "differentFromOldCp33Conversation": "16500b6e-a6eb-42b6-bc78-e7f413b2f47e",
+    "buMatchesExpected": true,
+    "providerIdentityId": "a48c93ac-3a69-4607-bc0c-856f88646a6f",
+    "createdAfterUtc": "2026-10-17T04:13:01.849Z",
+    "messageCount": 2,
+    "inboundCount": 1,
+    "outboundCount": 1,
+    "sameConversation": true,
+    "messages": [
+      {
+        "id": "80edafd0-f274-43c1-98de-36108b9f485c",
+        "direction": "IN",
+        "status": "RECEBIDA",
+        "createdAtUtc": "2026-10-17T04:18:39.817Z",
+        "channelOrigin": "NAO_OFICIAL",
+        "authorExpected": true,
+        "externalIdPresent": true
+      },
+      {
+        "id": "bfcd2c04-7347-45e3-bd46-9203ad3c15ad",
+        "direction": "OUT",
+        "status": "ENVIADA",
+        "createdAtUtc": "2026-10-17T04:18:52.799Z",
+        "channelOrigin": "NAO_OFICIAL",
+        "authorExpected": true,
+        "externalIdPresent": true
+      }
+    ],
+    "oldHistoryAlreadyRetainedPerCp50": true
+  },
+  "humanEvidence": {
+    "userReportedInboundVisibleAndResponseDeliveredToOtherDevice": true,
+    "inferredFromMessageCounts": false
+  }
+}

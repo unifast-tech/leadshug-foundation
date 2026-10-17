@@ -1,0 +1,44 @@
+{
+  "checkpoint": "cp36j",
+  "captured_at": "2026-10-17T04:49:04.786151+00:00",
+  "raw_sha256": "0124bc22bb66fe54e13aef6c48d6d462f4536a7a65aaf3c9e8c5114a6d2d3b7e",
+  "schema_absolute_binding_merge_valid": true,
+  "full_independent_final_completed": true,
+  "source_candidate_disposition": "Accepted local source/test prerequisite for governed official test-only existing-number authorization; no overall delivery approval",
+  "FINAL-CP36I-01": "verified-local: isolated otherwise-valid wrong-app regression accepted by FULL TQA and distinct final",
+  "findings": [
+    {
+      "id": "FINAL-CP36J-R01",
+      "resolution": "Integrated",
+      "classification": "release-blocker",
+      "routing": "enforce-existing-requirement",
+      "status": "open",
+      "decision": "A conduct explicit own TEST official sequence; preserve Pending/unwaived until real proof"
+    },
+    {
+      "id": "FINAL-CP36J-R02",
+      "resolution": "Integrated",
+      "classification": "by-design/no-action",
+      "routing": "enforce-existing-requirement",
+      "status": "preserved-local",
+      "decision": "A existing private OWNER/synthetic cohort; named dependency backlog mandatory before untrusted authenticated users"
+    },
+    {
+      "id": "FINAL-CP36J-01",
+      "resolution": "Integrated",
+      "classification": "release-blocker",
+      "routing": "fix-current-contract",
+      "status": "verified-local",
+      "decision": "A updated live Next exact step/current summaries; immutable historical evidence retained; no source/test rerun required"
+    }
+  ],
+  "overall_stage": "Pending",
+  "D05_D06_D07": "Exception",
+  "waivers": [],
+  "allowed_next": [
+    "guarded local spec-only commit/byte attestation",
+    "guarded Foundation evidence checkpoint",
+    "normal UI official authorization; own TEST number already official API; explicit selection and JA_REGISTRADO",
+    "no source push/gitlink/production/Meta publication/runtime rebuild for unit-only j"
+  ]
+}

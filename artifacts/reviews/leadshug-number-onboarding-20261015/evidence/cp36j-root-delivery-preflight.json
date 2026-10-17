@@ -1,0 +1,66 @@
+{
+  "checkpoint": "cp36j",
+  "assessor": "root orchestrator, not substitute for independent review",
+  "capturedAtUtc": "2026-10-17T04:37:35.937769+00:00",
+  "scope": "current9 fresh API174+288; historical unchanged consumer h Web28/browser47; served i image build-neutral bridge; observed nonofficial cp49/cp52; official still Pending",
+  "sourceManifestSha256": "39c7b8d31e963ae4e5a5667d960ef84d5277a070e044a95b45890802e24d29a7",
+  "diffExpectation": {
+    "outcome": "go",
+    "artifact": "cp36j-diff-expectation.json",
+    "snapshot_note": "811/811 snapshot before later evidence additions; forbidden/unclassified0, not whole delivery approval",
+    "sha256": "3b140b2c862a803479a8aaa7a51b7be31d74026a9a5aac7b95054aa870336c44"
+  },
+  "p1p2": {
+    "newUnresolvedObserved": [],
+    "basis": [
+      "Root independently inspected entire j spec diff: one otherwise-valid wrong-app fixture, viable matching phone fallback, class+code same caught operation, exact authenticated fixed-host debug count and zero phone lookups.",
+      "All current9 hashes independently reverified against current manifest; production8 unchanged.",
+      "Canonical API174+288/22 migrations exit0 already root-verified. Historical h browser remains historical; unit excluded by unchanged build config.",
+      "Current full TQA all9 accepted; typed mapper/parser/convergence/DI and bounded calls retain prior independently reviewed architecture.",
+      "Served API image/compiled4 and real automatic recovery/user INOUT association independently accepted in root-cp49/runtime and root-cp52 receipts."
+    ],
+    "independentTqa": "cp36j terminal full audit accepted; root-cp36j-tqa-adjudication.json",
+    "independentFinal": "not_run"
+  },
+  "ruleSpirit": {
+    "newBypassObserved": false,
+    "evidenceLimits": [
+      "genuine RED159/8, no PG RED; first-all166/1 was test index error and remains failed",
+      "browser provider/SDK doubles never real device proof; no mock fallback to public provider",
+      "old candidate images and tunnel200 are historical; no refreshed runtime claim",
+      "no token-global fallback, new test-only product endpoint, source push, Gitlink write, SQL repair, forced QR, or outbound provider message",
+      "cp36h is test-after already-correct behavior; no new production fix/RED fabricated",
+      "cp46 native EXE source snapshot unavailable; activeEXE hash bound and latest C#patch not claimed running; transport does not prove Meta/WhatsApp recovery",
+      "cp36i is test-after already-correct grant revocation behavior; no productchange, fakeRED or redundant PG rerun beyond canonical API leaf. Historical browser results explicitly composed on unchanged consumed bytes.",
+      "H-R01 external VAL05 remains mandatory; no repeat permission request for already-authorized same Evolution interruption.",
+      "cp36j audience-case is TEST-AFTER already-correct guard; no artificial RED.",
+      "Actual i image remains i-labelled. j spec-only change cannot manufacture a j build/browser attestation.",
+      "Human test used new contact and actual marker; negative old-subject/suggested-marker reads preserved honestly."
+    ]
+  },
+  "security": {
+    "changedBoundary": "provider input parsing/typed public failure and completed-attempt convergence",
+    "position": "No new weakening observed; current full TQA agrees; existing private-cohort dependency boundary retained.",
+    "residuals": [
+      "existing dependency audit8affected/1critical6high1moderate; BLG-leadshug-runtime-dependency-security before untrusted users",
+      "default Nest fixture generic-error server log contains sentinel; public envelope safety is not global log redaction",
+      "cipher cannot secure compromised app"
+    ]
+  },
+  "performance": {
+    "position": "bounded external calls unchanged; helper adds one indexed read only on zero promotion; full authorization intersection already linear; no capacity/SLO measurement claimed"
+  },
+  "eleganceStructure": {
+    "position": "shared convergence helper and private normalized Meta input boundary avoid duplicated policy/catches; no new schema/job/dependency/UI objective"
+  },
+  "externalMandatory": [
+    "current distinct final before official onboarding",
+    "explicit operator-selected official TEST resource/OAuth/subscribed_apps/real INOUT/permitted recovery"
+  ],
+  "waivers": [],
+  "observedNonofficialProof": [
+    "root-cp49-runtime-recovery-receipt.json",
+    "root-cp52-unofficial-inout02-receipt.json"
+  ],
+  "callbackPrerequisite": "root-cp53-callback-receipt.json: public challenge only; not Meta app saved configuration/OAuth/real webhook proof"
+}

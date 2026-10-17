@@ -1,0 +1,12 @@
+{
+  "checkpoint": "cp50-human-inout02",
+  "recorded_at": "2026-10-17T04:19:10.563097+00:00",
+  "source": "user asynchronous question reply",
+  "question_context": "After cp49 automatic recovery, other test device sends synthetic entrada02, operator replies via same BU/conversation, checks other device; no PII requested",
+  "user_reply_exact": "Entrada apareceu e resposta chegou ao outro aparelho",
+  "human_incoming_visible": true,
+  "human_outgoing_delivered_to_other_device": true,
+  "agent_sent_whatsapp_messages": false,
+  "server_persistence_readback": "pending exact known conversation after source writer STOP",
+  "official_provider_proof": "not claimed"
+}

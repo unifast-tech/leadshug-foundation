@@ -1,0 +1,33 @@
+{
+  "checkpoint": "cp36j",
+  "captured_at": "2026-10-17T04:37:35.937769+00:00",
+  "profile": "Assurance / Tester-Quality; nestjs,react,vite,postgresql,prisma,docker; Genesis ineligible: governed active delivery",
+  "raw_sha256": "a101c59dad936f20a6a8058341e2b2ab8cdce5def93789086ef2c6a88c1dbef5",
+  "schema_absolute_binding_merge_valid": true,
+  "merge_sha256": "03119603c5d984382d289b9b39e7a38828d4bb6bdd00592cba9451118d61d571",
+  "full_applicable_audit_completed": true,
+  "source_manifest_verified_current": "39c7b8d31e963ae4e5a5667d960ef84d5277a070e044a95b45890802e24d29a7",
+  "source_disposition": "accept current full test-quality audit as private source prerequisite; independent final still mandatory",
+  "findings": [
+    {
+      "id": "TQA-CP36J-R01",
+      "resolution": "Integrated",
+      "classification": "release-blocker",
+      "routing": "enforce-existing-contract",
+      "status": "open",
+      "rationale": "Existing official VAL-05 mandatory and unwaived; nonofficial cp49/cp52 proof accepted separately; conduct official TEST-resource sequence after distinct final."
+    },
+    {
+      "id": "TQA-CP36J-R02",
+      "resolution": "Integrated",
+      "classification": "by-design/no-action",
+      "routing": "enforce-existing-private-cohort-boundary",
+      "status": "accepted",
+      "rationale": "Repeated unchanged dependency locus, explicit BLG-leadshug-runtime-dependency-security due before untrusted authenticated users; retain private OWNER/synthetic cohort; no general deployment approval or waiver."
+    }
+  ],
+  "FINAL-CP36I-01": "implemented and accepted by current full TQA; distinct final pending before closing release blocker",
+  "overall_stage": "Pending",
+  "D05_D06_D07": "Exception",
+  "waivers": []
+}

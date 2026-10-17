@@ -1,0 +1,9 @@
+{
+  "checkpoint": "cp51-subject-clarification",
+  "recorded_at": "2026-10-17T04:21:53.391376+00:00",
+  "user_reply_exact": "Abriu conversa com outro contato",
+  "meaning": "INOUT02 used another test contact. Zero new messages in exact cp33 old conversation is expected; cp50 is preserved unchanged as a correct negative readback on that subject. Old conversation/history preservation remains valid. New INOUT02 persistence must be checked in its new BU/contact conversation.",
+  "human_visibility_and_delivery": "confirmed separately in cp50-human-inout02-confirmation.json",
+  "new_subject_identity": "not guessed or selected by first row; bounded owned BU/current provider identity/timewindow/synthetic test markers for metadata-only lookup required",
+  "no_personal_data_requested_or_recorded": true
+}

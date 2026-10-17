@@ -1,0 +1,76 @@
+{
+  "schema_version": "subagent-review-merge-v2",
+  "artifact_kind": "subagent_review_merge",
+  "authoritative": false,
+  "edit_policy": "derived_merge_packet",
+  "dispatch_path": "/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp36j-final.dispatch.json",
+  "review_kind": "final_review",
+  "review_count": 1,
+  "reviewer_labels": [
+    "internal-fresh-no-context-final-/root/final_cp36j_current_candidate"
+  ],
+  "highest_finding_severity": "high",
+  "axis_summary": {
+    "performance": "acceptable",
+    "elegance": "acceptable",
+    "structural_soundness": "acceptable",
+    "operational_fit": "mixed"
+  },
+  "recommended_paths": [
+    "Root should merge/adjudicate this distinct final result, record FINAL-CP36I-01 verified-local at meta.client.spec.ts:209, and reconcile the low live-TODO next-step inconsistency. No further product or test change is recommended by this review. Preserve the carry-forward official VAL-05 and private-cohort dependency dispositions, D-05/D-06/D-07 Exceptions and overall Pending. Preserve honest fresh j API174+288 plus historical unchanged-consumer h Web28/browser47, and the i-labelled served image through the explicit build-neutral bridge; do not rebuild/relabel/redeploy merely for this excluded unit case. After root acceptance and the existing governed source/evidence checks, the real official test-only sequence remains required. This review neither performs that sequence nor grants publication, production-resource, general deployment or overall closeout authority."
+  ],
+  "exact_next_step": "Record reviewer resolutions in the governing TODO using the machine-checkable resolution table or equivalent gate ledger, then extract the derived resolution packet and decide whether another bounded review pass is still required.",
+  "findings": [
+    {
+      "finding_id": "F-8C60665A",
+      "severity": "high",
+      "title": "Official VAL-05 remains an unwaived delivery requirement",
+      "rationale": "Locus: cp36j-final-package.md:51 and the governing TODO VAL-05/DOD-05 requirements. Why now: fresh j local tests, historical unchanged-browser evidence, the served-i build-neutral bridge, cp49/cp52 private nonofficial proof and cp53/cp54 callback/configuration prerequisites do not demonstrate actual official Embedded Signup/OAuth, current backend-verified operator-selected test resource, applicable subscription/receipt, device IN/OUT and permitted recovery. This is the already-open contract gate, not a new source defect, and does not negate the accepted local source/test prerequisite. Later human reports that the number is reserved for tests and already registered do not substitute for provider verification.",
+      "suggested_action": "A: after root adjudicates the local review, conduct the already-governed real official test-only sequence on the explicitly selected own test WABA/number; respect intended JA_REGISTRADO and do not invent register/migration/coexistence/publication authority. Effort: operational; risk/blast: bounded test resource; maintenance: durable evidence; performance: ordinary finite provider operations; elegance/structure: canonical flow. B: if readiness/eligibility blocks it, record the exact blocked prerequisite and keep Pending. Effort: small; risk/blast: contained delay; maintenance: owned follow-up; performance/elegance/structure: unchanged. C: do nothing beyond the qualified private nonofficial checkpoint and retain the unmet gate, with no delivery claim. Effort: minimal; risk: official journey remains unknown; blast: scope stays private; maintenance: open requirement; performance/structure: unchanged. Recommend A when prerequisites permit, otherwise B. No option waives VAL-05 or permits Local-Implemented/overall closeout from the current evidence.",
+      "reviewer_labels": [
+        "internal-fresh-no-context-final-/root/final_cp36j_current_candidate"
+      ],
+      "source_finding_ids": [
+        "FINAL-CP36J-R01"
+      ],
+      "category": "residual_risk",
+      "formalizable_hint": "partial",
+      "candidate_rule_level": "project",
+      "candidate_rule_id": "VAL-05"
+    },
+    {
+      "finding_id": "F-306501F2",
+      "severity": "medium",
+      "title": "The inherited dependency disposition remains limited to the private cohort",
+      "rationale": "Locus: cp36j-final-package.md:53 and TODO Accepted residual debt. Why now: recorded eight affected dependencies, including the authenticated Multer DoS and critical/high advisories, remain relevant to the Security and operational-fit axes. The reviewed nine paths introduce no dependency mutation or demonstrated new exploit; this is the same accepted private OWNER/synthetic-cohort constraint already Integrated by root, not a new release-blocking demand for an upgrade inside this TODO. Its deadline before untrusted authenticated users must survive final adjudication.",
+      "suggested_action": "A: preserve the existing private OWNER/synthetic-cohort restriction and the backlog owner/deadline before admitting untrusted authenticated users. Effort: low; risk/blast: bounded current cohort; maintenance: tracked dependency work; performance/elegance/structure: unchanged. B: remediate and independently validate dependencies now through a separately governed package. Effort: higher; risk/blast: dependency/runtime compatibility; maintenance: reduces known debt; performance/elegance/structure: must be revalidated. C: suspend even private use until that separate work finishes. Effort: low operationally; risk/blast: lowest exposure but interrupts authorized testing; maintenance: open backlog; performance/elegance/structure: unchanged. Recommend A for this bounded checkpoint, with B mandatory before broader admission. Do not convert it into general deployment acceptance or a waiver.",
+      "reviewer_labels": [
+        "internal-fresh-no-context-final-/root/final_cp36j_current_candidate"
+      ],
+      "source_finding_ids": [
+        "FINAL-CP36J-R02"
+      ],
+      "category": "security",
+      "formalizable_hint": "partial",
+      "candidate_rule_level": "project",
+      "candidate_rule_id": "BLG-leadshug-runtime-dependency-security"
+    },
+    {
+      "finding_id": "F-CD3E6553",
+      "severity": "low",
+      "title": "The live next step still waits on the terminal TQA",
+      "rationale": "Locus: TODO-leadshug-channel-connection-readiness.md:44 says to wait for active jFULL 69835, while :49 and :996 correctly state j TQA is terminal/accepted and the distinct final is current. Why now: the top resume instruction is live operational guidance and can cause a later executor to wait for or repeat a completed gate. The full native TQA and current package are valid; this is a small continuation inconsistency, not weak/missing product evidence or a reason to rerun tests.",
+      "suggested_action": "A: during root adjudication, refresh the top Next exact step and affected live summaries to the actual final result and next governed action; retain historical receipts and Pending/official exceptions. Effort: tiny; risk/blast: documentation only; maintenance: removes contradictory resume state; performance: none; elegance/structure: one coherent current status. B: explicitly label the old instruction historical and add one current pointer. Effort: small; risk: competing prose; blast: documentation; maintenance: more text; performance: none; elegance/structure: acceptable but less direct. C: leave it. Effort: none; risk: stale routing/redundant work; blast: orchestration only; maintenance: continuing drift; performance: possible wasted tests; elegance/structure: inconsistent. Recommend A. No source change, new TQA, or product rerun is needed.",
+      "reviewer_labels": [
+        "internal-fresh-no-context-final-/root/final_cp36j_current_candidate"
+      ],
+      "source_finding_ids": [
+        "FINAL-CP36J-01"
+      ],
+      "category": "other",
+      "formalizable_hint": "partial",
+      "candidate_rule_level": "project",
+      "candidate_rule_id": "current-gate-evidence-consistency"
+    }
+  ]
+}

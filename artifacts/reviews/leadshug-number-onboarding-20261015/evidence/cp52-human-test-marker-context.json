@@ -1,0 +1,10 @@
+{
+  "checkpoint": "cp52-marker-clarification",
+  "recorded_at": "2026-10-17T04:24:10.276146+00:00",
+  "user_reply_exact": "Enviei Teste resposta",
+  "meaning": "User used another synthetic phrase. No-match cp51 for suggested entrada02/resposta02 markers is expected and remains immutable negative evidence; it does not establish a product failure.",
+  "outgoing_synthetic_marker_user_supplied": "Teste resposta",
+  "incoming_marker": "not requested/unknown; no need to inspect content",
+  "lookup_next": "server-side equality for this ONE user-supplied nonpersonal marker in ownedBU/currentidentity/postrestart window, metadataonly; then exactnewconvo metadata INOUT if uniquely identified",
+  "no_personal_data_in_answer": true
+}

@@ -1,0 +1,18 @@
+{
+  "checkpoint": "cp53",
+  "captured_at": "2026-10-17T04:34:09.367351+00:00",
+  "artifact_hashes_verified": {
+    "cp53-public-meta-callback.json": "8b4e38ae102ef57774e982bb7d9d3752a3ef6a15d8de835e53bb8ef0f5900335",
+    "cp53-public-meta-callback.md": "5da8c5c87d8845c3be1014ca77cb75c02ba0a0565e8a7770ea39c368400638ae"
+  },
+  "executor_report": "normalTLS/currentWSLWindowsroothealthJS and exactnativeprocessidentity passed; exactly3publicno-redirectchallenges realverifytoken200/match, wrong+missing403",
+  "private_boundary": "targeted WEBHOOK_VERIFY_TOKEN memory-only use admitted; no value/query/rawbody/challenge/rawerror/ConfigEnv emitted or persisted",
+  "acceptance": "deployed public callback challenge behavior observed, prerequisite for human updating own test app URLs",
+  "not_proven": [
+    "savedMetaappconfig",
+    "appModeeligibility",
+    "signed real Meta event",
+    "officialOAuth/INOUT/recovery"
+  ],
+  "next": "after current TQA terminal coordinate existing testapp publicURL update while distinct final runs; real official onboarding after current final accepted"
+}

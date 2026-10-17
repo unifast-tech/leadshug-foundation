@@ -1,0 +1,69 @@
+{
+  "checkpoint": "cp51-unofficial-new-contact-readback",
+  "capturedAtUtc": "2026-10-17T04:22:26Z",
+  "scope": "Read-only exact-marker lookup for the clarified new-contact subject, restricted to the known owned BU/current channel identity and messages created after the recorded Evolution restart. No mutation, provider call, auth/session, config/source/Git access.",
+  "authorization": {
+    "routing": "foundation_documentation/artifacts/tmp/number-onboarding-execution/routing-cp50-readback.json",
+    "outcome": "go",
+    "userClarification": "Abriu conversa com outro contato.",
+    "priorHumanReport": "Entrada apareceu e resposta chegou ao outro aparelho.",
+    "subjectInterpretation": "new contact; cp50 exact old-conversation zero result is expected."
+  },
+  "runtimeGuards": {
+    "apiContainerId": "c138a8456bc834d53c2ab4c3bc3c0307024dbc5a9cbb9a11c337218adcde7324",
+    "apiImageId": "sha256:fe5fb7eaf6a68123f9da6b92a0a69483180d213f556b4bedf313f04a383b4821",
+    "apiHealthy": true,
+    "sourceManifestSha256": "af21e98e41ec1ba86f4dac877ba2bd69b3ff0857fba930ca1c3973428723b581",
+    "compiled4MatchAcceptedCandidate": true,
+    "compiled4Sha256": [
+      "aa2d4e51ee906b3cc7dd79d4835cd331b00eaa772655506630e6f944d13bda73",
+      "93495861c2b300b66c5d5292803e3fbb71819c662896ae81ef457e8a4abbd1c4",
+      "09b1ba14d22f90d345cce9f1e87cfcee8de4560a755c6f59528e22b7955d47ac",
+      "a756c9693c574f6fb4987d878af8d4fbeaf9f07c86a5c5e6acadeca4f7a771cb"
+    ],
+    "evolutionContainerId": "cf749491f7149dc46ec4db597b2d9c12faf918dd4f05b5512ba75adaf8e29ea4",
+    "evolutionImageId": "sha256:385a3c4bedf42c66b46b43d06aae8712620144a84aa3b2c831b30c68435ab27c",
+    "evolutionRunning": true
+  },
+  "guards": {
+    "businessUnitId": "c231d8f7-d8a5-448e-a740-2ab8aebf9bc2",
+    "channelId": "b6c3e3f0-fe77-4e92-82e4-1975dffcbef1",
+    "channelStatus": "CONECTADO",
+    "providerConnectionState": "CONNECTED",
+    "generation": 1,
+    "pairingEpoch": 1,
+    "verifiedEpoch": 1,
+    "receiptPresent": true,
+    "activeLease": false,
+    "currentAttemptId": "91a050d2-b6b7-4d3a-ac48-97392688584d",
+    "attemptState": "CONNECTED",
+    "attemptStage": "RECEIPT_VERIFIED",
+    "attemptVersion": 2,
+    "identityId": "a48c93ac-3a69-4607-bc0c-856f88646a6f",
+    "identityCurrentManagedAndNotRetired": true
+  },
+  "boundedLookup": {
+    "providerResourceIdentityId": "a48c93ac-3a69-4607-bc0c-856f88646a6f",
+    "createdAfterUtc": "2026-10-17T04:13:01.849Z",
+    "serverSideExactSyntheticMarkerEqualityFilterUsed": true,
+    "messageSelectContainedContent": false,
+    "queryLimit": 21,
+    "matchCount": 0,
+    "overflow": false,
+    "matchedMessageMetadata": [],
+    "newContactConversationIdentified": false,
+    "sameNewConversationInboundAndOutboundPairProven": false,
+    "blocker": "No exact marker match under the authorized BU/current identity/time bounds; task requires stop rather than broader search or guessing."
+  },
+  "scopeHandling": {
+    "cp50Readback": "preserved unchanged; old exact-conversation result is expected under clarified new-contact subject",
+    "cp49ScopeDeviationReference": "cp49-unofficial-recovery.json",
+    "priorBroaderReadRepeated": false,
+    "otherConversationsQueried": false,
+    "messageContentReturnedOrInspected": false,
+    "contactPhoneEmailOwnerPiiOrRawExternalIdReturned": false,
+    "providerAuthSessionOrPrivateFileAccess": false,
+    "databaseMutation": false,
+    "messageSend": false
+  }
+}

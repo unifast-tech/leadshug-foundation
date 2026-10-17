@@ -1,0 +1,23 @@
+{
+  "checkpoint": "cp52",
+  "captured_at": "2026-10-17T04:26:05.146716+00:00",
+  "verified_artifact_hashes": {
+    "cp50-unofficial-inout02-readback.json": "5ea3753545fcede6748dddf3754180b7e9af98139892b6c530e834e7e03af239",
+    "cp51-unofficial-new-contact-readback.json": "230e44ee5875d5aee4512b48946f649b7a226e81521bcb092ef0f76d00506604",
+    "cp52-unofficial-marker-readback.json": "7fcf82e9ecc9c90cd9afbb458d583bef4e7ea48326009f7d9334420193e42af0",
+    "cp52-unofficial-marker-readback.md": "64ad08ce296b0d5521be6c6d6fcf05557a42d2ae56e582b7e871282a66253d08"
+  },
+  "human_delivery_confirmation": "cp50-human-inout02-confirmation.json, user explicitly saw incoming and response on otherdevice",
+  "subject_clarifications": [
+    "User used another contact, so a new BU/contact conversation is expected; cp50 correctly found only old messages in old conversation.",
+    "User sent Teste resposta, different from suggested02 markers; cp51 no-match is preserved negative evidence, not a product failure."
+  ],
+  "corrected_actual_marker_readback": "one unique OUT in exact ownedBU/currentidentity/postrestart interval identifies newconversationefcd1776-3282-4cb0-a073-942a636719ae; exact newconversation metadata contains one IN/RECEBIDA and one OUT/ENVIADA",
+  "old_history_preserved": "exactcp33 conversation16500b6e-a6eb-42b6-bc78-e7f413b2f47e retains old2messageIDs; newtest contact does not replace it",
+  "acceptance": "Observed private unofficial reconnection and postrestart device INOUT accepted, with human delivery plus scoped metadata persistence; not official proof or continuous health",
+  "privacy": "only metadata/synthetic marker predicate; no contact/phone/email/body returned or agentoutboundmessage",
+  "remaining": [
+    "j fullTQA and distinct final for isolated app audience test",
+    "real official Meta journey/VAL05 overall"
+  ]
+}

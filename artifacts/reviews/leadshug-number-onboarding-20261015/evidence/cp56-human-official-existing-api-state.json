@@ -1,0 +1,11 @@
+{
+  "checkpoint": "cp56",
+  "capturedAtUtc": "2026-10-17T04:45:04.084130+00:00",
+  "evidenceType": "human_test_number_registration_state",
+  "exactUserReply": "Já está cadastrado na API oficial da Meta",
+  "resourceType": "own number reserved exclusively for tests",
+  "scope": "Existing official API test-number linking/authorization path; no new registration, migration, coexistence or unrelated production selection.",
+  "boundary": "Human report only; actual app/grant/WABA/number and current provider state must still be verified by normal product flow.",
+  "sourceOrRuntimeMutation": false,
+  "secretsRecorded": false
+}

@@ -1,0 +1,59 @@
+{
+  "schema_version": "subagent-review-merge-v2",
+  "artifact_kind": "subagent_review_merge",
+  "authoritative": false,
+  "edit_policy": "derived_merge_packet",
+  "dispatch_path": "/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp36j-tqa.dispatch.json",
+  "review_kind": "test_quality_audit",
+  "review_count": 1,
+  "reviewer_labels": [
+    "internal-no-context-tqa"
+  ],
+  "highest_finding_severity": "high",
+  "axis_summary": {
+    "performance": "acceptable",
+    "elegance": "acceptable",
+    "structural_soundness": "acceptable",
+    "operational_fit": "mixed"
+  },
+  "recommended_paths": [
+    "Allow root adjudication to consume this private TQA result, then require the separately mandated final reviewer. Keep ST-CON-01 Pending; do not claim official onboarding or overall delivery until the carry-forward external-proof and dependency-security gates are resolved."
+  ],
+  "exact_next_step": "Record reviewer resolutions in the governing TODO using the machine-checkable resolution table or equivalent gate ledger, then extract the derived resolution packet and decide whether another bounded review pass is still required.",
+  "findings": [
+    {
+      "finding_id": "F-7E5C039B",
+      "severity": "high",
+      "title": "Official-channel VAL-05 proof remains unfulfilled",
+      "rationale": "Why now: the current API evidence, historical unchanged-browser evidence, build-neutral served-i bridge, and observed private nonofficial recovery/INOUT do not demonstrate real official OAuth, operator-selected test resource, subscription, official IN/OUT, and permitted official recovery. The package and supplement expressly retain this as Pending; it is a delivery gate, not a newly found source defect.",
+      "suggested_action": "Options: A, retain Pending with no delivery claim; B, conduct the governed real official VAL-05 sequence on the explicitly selected test resource after the required final review, preserving proof boundaries and recording results; C, treat nonofficial or historical evidence as official proof. Recommend B; C is not permitted.",
+      "reviewer_labels": [
+        "internal-no-context-tqa"
+      ],
+      "source_finding_ids": [
+        "TQA-CP36J-R01"
+      ],
+      "category": "residual_risk",
+      "formalizable_hint": "partial",
+      "candidate_rule_level": "project",
+      "candidate_rule_id": "VAL-05-official-channel-external-proof"
+    },
+    {
+      "finding_id": "F-2F5691AC",
+      "severity": "high",
+      "title": "Known dependency-security exposure remains a pre-untrusted-user gate",
+      "rationale": "Why now: the bounded package records an existing dependency set with one critical and multiple high findings, constrained to a private OWNER/synthetic cohort. This audit found no new dependency mutation or masking test in the nine paths, but the unresolved risk remains relevant to the Security axis and cannot be converted into a general deployment claim.",
+      "suggested_action": "Options: A, retain the documented private controlled-cohort restriction; B, remediate and independently validate the dependency backlog in a separately governed package before admitting untrusted authenticated users; C, waive the exposure for broader use. Recommend B; C is not acceptable.",
+      "reviewer_labels": [
+        "internal-no-context-tqa"
+      ],
+      "source_finding_ids": [
+        "TQA-CP36J-R02"
+      ],
+      "category": "security",
+      "formalizable_hint": "yes",
+      "candidate_rule_level": "project",
+      "candidate_rule_id": "BLG-leadshug-runtime-dependency-security"
+    }
+  ]
+}

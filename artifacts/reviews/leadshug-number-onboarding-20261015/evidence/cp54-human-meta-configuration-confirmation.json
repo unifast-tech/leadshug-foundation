@@ -1,0 +1,23 @@
+{
+  "checkpoint": "cp54",
+  "capturedAtUtc": "2026-10-17T04:43:09.826141+00:00",
+  "evidenceType": "human_confirmation",
+  "questionScope": {
+    "sameMetaTestApp": true,
+    "appDomains": "comments-heart-gale-muscles.trycloudflare.com",
+    "oauthAndJavaScriptSdkUrl": "https://comments-heart-gale-muscles.trycloudflare.com/",
+    "callbackUrl": "https://comments-heart-gale-muscles.trycloudflare.com/webhooks/meta",
+    "samePrivateVerifyToken": true,
+    "messagesSubscribed": true,
+    "keepUnpublished": true
+  },
+  "exactUserReply": "Deu tudo certo",
+  "interpretation": "Operator confirms requested test app configuration saved/validated; not an independent Meta account inspection or OAuth/official messaging proof.",
+  "boundary": {
+    "secretsRecorded": false,
+    "officialSignupPerformed": false,
+    "productionResourceSelected": false,
+    "publicationAuthorized": false,
+    "pendingHumanQuestion": false
+  }
+}
