@@ -1,0 +1,24 @@
+{
+  "checkpoint": "cp67-human-meta-published",
+  "recordedUtc": "2026-10-17T16:55:26.666013+00:00",
+  "humanReport": "Publicado / Published / Ao vivo",
+  "metaPublished": "confirmed by human administrator; not independently read through Graph",
+  "authorizationReference": "cp66-meta-publication-authorization.json",
+  "existingAppOnly": true,
+  "availability": {
+    "observedUtc": "2026-10-17T16:53:54.840089+00:00",
+    "host": "addressing-mar-perform-hormone.trycloudflare.com",
+    "normalTls": true,
+    "healthStatus": 200,
+    "policyStatus": 200,
+    "policyBytes": 12865,
+    "policySha256": "d0f72c588f0f014de46a327e34d6b26125ca115bc973b56bbb926cd8519e701d",
+    "noRedirectOrCookie": true
+  },
+  "readOnlyBaselineAdmission": "Same owned API005529/fe5 + own DB, existing correct official BU/current identity only: channel state/receipt/version/identity+credential booleans and aggregate IN/OUT/conversation counts, no payload/body/contact/phone/providerID/privateenv/token read/output; no Graph/provider/writes/actions.",
+  "nextTest": "After baseline, human fresh physical inbound and inbox reply on Local Test Ofc existing reserved official number; no new registration/reauthorization.",
+  "publishedIsNotMessageDeliveryEvidence": true,
+  "parentStatus": "Pending",
+  "officialVAL05": "open_unwaived",
+  "noSourceRuntimeProviderOrMetaMutationByAgent": true
+}

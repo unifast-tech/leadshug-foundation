@@ -1,0 +1,82 @@
+{
+  "checkpoint": "cp67-official-post-publication-baseline",
+  "capturedAtUtc": "2026-10-17T16:55:26.633826946Z",
+  "scope": "Single bounded read-only baseline after operator-reported Meta app publication and before the requested real official-number IN/reply test. No provider request, authentication, message-row read, polling, or mutation.",
+  "runtimePins": {
+    "api": {
+      "containerId": "005529386c8a7ab499cd779942ce541bb90cd3a770b8436b41509d2655e54857",
+      "imageId": "sha256:fe5fb7eaf6a68123f9da6b92a0a69483180d213f556b4bedf313f04a383b4821",
+      "status": "running",
+      "health": "healthy",
+      "owner": "number-onboarding",
+      "service": "api",
+      "sourceManifest": "af21e98e41ec1ba86f4dac877ba2bd69b3ff0857fba930ca1c3973428723b581"
+    },
+    "postgres": {
+      "containerId": "4fcd87b431339e3b65a40beafa27db86cdc978ca79f71b911199f7090c837495",
+      "imageId": "sha256:80f4c7a5e91618546dce5b4fe60cf03b14c0f9efa7e40157278d122772ced8d2",
+      "status": "running",
+      "health": "healthy",
+      "owner": "number-onboarding",
+      "service": "postgres"
+    }
+  },
+  "sourcePin": {
+    "path": "api-app/prisma/schema.prisma",
+    "sha256": "3dd87c61af51167ae8aaa07a1b35e8616f108d9e5a05b2c0911ea84a8bfa5636",
+    "use": "Named public Prisma model schema only; no .local-files access."
+  },
+  "officialChannel": {
+    "businessUnit": "Local Test Ofc",
+    "type": "OFICIAL",
+    "status": "CONECTANDO",
+    "generation": 1,
+    "pairingEpoch": 0,
+    "verifiedEpoch": 0,
+    "ownNumberVerified": true,
+    "currentAttempt": {
+      "state": "PENDING_RECEIPT",
+      "stage": "SUBSCRIBED",
+      "version": 7,
+      "generation": 1,
+      "leaseActive": false
+    },
+    "providerConnectionState": "SUBSCRIBED",
+    "receiptPresent": false,
+    "connectedAtPresent": false,
+    "channelLeaseActive": false,
+    "identityVerified": true,
+    "activeCredentialPresent": true,
+    "credentialMetadata": {
+      "provider": "OFICIAL",
+      "generation": 1,
+      "version": 1
+    },
+    "identityMappingCount": 1,
+    "identityManaged": true,
+    "identityCleanupState": "ACTIVE",
+    "identityCleanupLeaseActive": false
+  },
+  "messageAggregates": {
+    "scope": "Exact official BU and its single current, non-retired OFICIAL provider identity; aggregate only, no rows or body fields selected.",
+    "inboundCount": 0,
+    "outboundCount": 0,
+    "conversationCountWithMessagesForCurrentIdentity": 0
+  },
+  "interpretation": {
+    "baselineShowsNoExistingCurrentIdentityMessagesOrConversations": true,
+    "receiptOrConnectedStateObserved": false,
+    "physicalHumanTestResult": "not yet observed in this baseline"
+  },
+  "boundary": {
+    "providerOrGraphHttp": false,
+    "authOrSession": false,
+    "credentialsTokensOrConfigEnvRead": false,
+    "logsRead": false,
+    "messageRowsOrContentRead": false,
+    "databaseWrite": false,
+    "restartBuildEnvSourceOrGitMutation": false,
+    "apiAppLocalFilesAccessed": false,
+    "polling": false
+  }
+}
