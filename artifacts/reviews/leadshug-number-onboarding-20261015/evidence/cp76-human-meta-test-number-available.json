@@ -1,0 +1,12 @@
+{
+  "checkpoint": "cp76-human-meta-test-number-available",
+  "recordedAtUtc": "2026-10-18T03:46:35.200951+00:00",
+  "operatorReport": "Sim aparece e consigo até enviar uma mensagem teste para meu número",
+  "resource": "Meta-provided API Setup test number, exact resource not yet independently matched to Embedded Signup selection",
+  "testSendAvailable": true,
+  "recipientReceiptExplicitlyConfirmed": false,
+  "inboundLeadsHugVerified": false,
+  "intent": "Validate with a distinct Meta-provided test-number BU through existing approved onboarding flow; preserve own-number investigation",
+  "supportTicketSent": "not reported",
+  "sensitiveIDESelection": "not read, copied, used or persisted"
+}

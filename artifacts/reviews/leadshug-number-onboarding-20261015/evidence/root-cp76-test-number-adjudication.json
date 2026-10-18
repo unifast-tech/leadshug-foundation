@@ -1,0 +1,45 @@
+{
+  "checkpoint": "root-cp76-test-number-adjudication",
+  "adjudicatedAtUtc": "2026-10-18T03:48:06.645795+00:00",
+  "profile": "Operational / DevOps",
+  "scope": "Approved ST-CON-01, existing normal onboarding and real delivery validation; Meta-provided test resource in separate BU",
+  "parentDeliveryStage": "Pending",
+  "VAL05": "open_unwaived",
+  "operatorEvidence": "API Setup test number appears and operator says they can send a test to own WhatsApp; actual recipient receipt not explicitly confirmed and LeadsHug IN/OUT still unproven",
+  "readiness": {
+    "context": "PACED-Ready",
+    "runtime": "Exact API9eccbea/fe5 healthy, Web9aa5/cfd5 and gateway0c48/7609 owner/project/state match",
+    "compiled": "Four named public modules + managed gateway config6d match",
+    "publicOrigin": "estimation-editions-knee-inclusion.trycloudflare.com",
+    "publicPaths": "/health, /, namedJS all200 with expected hashes, normalTLS, no redirects/cookies",
+    "availabilityLimit": "Point-in-time only; temporary tunnel availability not guaranteed",
+    "go": "Consumed once; metadata/public GET only; no provider/DB/auth/privatefile/IDEselection access"
+  },
+  "guidance": {
+    "newBusinessUnit": "Teste Meta",
+    "journey": "Existing Cadastros > Números > Iniciar cadastro > Criar nova BU > Oficial > Reservar tentativa > Continuar com a Meta",
+    "resourceCheck": "Operator must compare selected phone visually with API Setup test number, without sending phone/IDs. Sandbox Business resource equality is not assumed.",
+    "pausePoint": "Before Confirmar número, or if matching resource absent / new SMS registration offered",
+    "questionState": "Pending human comparison",
+    "subsequentProof": "Only after explicit test resource confirmed and normal onboarding, prepare scoped baseline/window, actual inbound in correct inbox and outbound received; panel-only send or synthetic event insufficient"
+  },
+  "originalOwnNumber": "Investigation remains open; support draft retained, no ticket submission reported; controlled test does not close own-number IN/OUT/recovery",
+  "implementationChanges": "No product/runtime/config changes or new tests; no automated provider writes, login, DB query or secret read. User guided to normal approved UI registration, no manual tokens/global credential bypass.",
+  "evidence": [
+    {
+      "path": "cp76-human-meta-test-number-available.json",
+      "bytes": 700,
+      "sha256": "7ef37a36852eac64c11c474e43e3d2d9f310ebf6d0656f2cc30d5bb0ffb7b2f7"
+    },
+    {
+      "path": "root-cp76-test-number-preflight-go.json",
+      "bytes": 1478,
+      "sha256": "b52447e9cc85949dfde3c6b7fd625899cd44acd467c33896a06538fb5b9450f2"
+    },
+    {
+      "path": "cp76-test-number-preflight.json",
+      "bytes": 3074,
+      "sha256": "aa05be138ce72530012185e439fd91cbc5328da02b0f53b43238b17eaee38888"
+    }
+  ]
+}

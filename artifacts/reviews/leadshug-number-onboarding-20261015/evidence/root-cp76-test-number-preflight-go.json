@@ -1,0 +1,22 @@
+{
+  "checkpoint": "root-cp76-test-number-preflight-go",
+  "issuedAtUtc": "2026-10-18T03:46:35.200951+00:00",
+  "decision": "GO_bounded_readonly",
+  "executor": "resume_runtime_cp48",
+  "purpose": "Before guiding an isolated Meta test-number onboarding, verify current known local runtime and public frontend only",
+  "pinsFrom": "cp74-pretest-readiness.json and cp75-official-test04-readback.json",
+  "allowed": "Whitelisted container metadata id/image/state/health/project/owner/service for exact API9eccbea/Web9aa5/gateway0c48; SHA256 of four named public compiled modules and managed gateway config matching accepted baseline; named repo source heads. NormalTLS GET /health, /, /assets/index-txvhtd65.js on estimation-editions-knee-inclusion.trycloudflare.com, max12s/512KiB each; no retry/redirect/auth/cookies, body only bounded memory for expected length/hash then discard. Output metadata/hashes/booleans/errors enum only.",
+  "forbidden": [
+    ".env.testing or any privatefile read/dump",
+    "Config.Env",
+    "API raw logs or gateway logs",
+    "credentials/cookies/login/Graph/provider calls",
+    "DB queries or writes",
+    "runtime changes/restart/build/tunnel launches",
+    "api-app/.local-files",
+    "whole repo API status/diff/blob scans"
+  ],
+  "output": "Own CP76 preflight receipt only, do not overwrite any prior evidence; if DNS/pins/health fail stop at recorded failure, no recovery under this GO.",
+  "parent": "Pending",
+  "VAL05": "open_unwaived"
+}
