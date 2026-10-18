@@ -41,7 +41,7 @@ Proposta ST-CON-01: jornada de cadastro de número, com infraestrutura local est
 
 - **Current delivery stage:** Pending
 - **Qualifiers:** none
-- **Next exact step:** CP86: teste físico05 não apareceu, dois tiques; janela gateway recuperada completa95/100 sem rota Meta e agregado oficial IN0/OUT0/sem receipt. Aguardar esclarecimento humano se ativou campo webhook messages (Inscrito) ou permissão whatsapp_business_messaging do caso de uso; são configurações distintas. Não repetir envio físico nem atribuir causa a código/permissão/roteamento antes dessa checagem. Provider stored SUBSCRIBED é histórico; VAL05 aberto.
+- **Next exact step:** CP87: humano confirmou messages já Inscrito na linha real do webhook. Executar somente evento padrão pelo botão Testar dessa linha, no callback HTTPS atual, em janela separada do teste físico05. Aguardar resultado de painel e então capturar agregado seguro tail100 sob GO novo; controle não comprova mensagem física nem fecha VAL05. Não ressubscrever nem repetir WhatsApp por inferência.
 
 ## Active Work State (Required While TODO Remains In `active/`)
 
@@ -1926,3 +1926,9 @@ CP86 resultado físico05: operador informou entrada ausente e dois tiques; OUT n
 Readback Prisma separado e readonly/repeatableread no API9ecc/fe5healthy com helper64e4 unchanged e pinos oficiais: identidade confirmada, mappingúnico, canal CONECTANDO/SUBSCRIBED, tentativa PENDING_RECEIPTv7, sem receipt/connectedAt/leases. IN0/OUT0/conversas0/webhookBU0 desde cutoff históricoCP69 (não atribuído somente ao teste05). Estado armazenado SUBSCRIBED não confirma inscrição atual do campo no app Meta. [Adjudicação e limites](../../../artifacts/reviews/leadshug-number-onboarding-20261015/evidence/root-cp86-official-inout05-readback.json).
 
 Próximo esclarecimento humano: alteração foi campo messages em WhatsApp→Configuração→Webhook com estado Inscrito, ou permissão whatsapp_business_messaging no caso de uso? Não presumir equivalência. Sem novo envio, controle sintético ou provider call após essa janela, nem bypass/recadastro/implementação de standby/localtoken. Parent Pending/VAL05 aberto e modo técnico Cancelled.
+
+### CP87 — Campo messages confirmado e controle padrão separado
+
+Após esclarecer a tela/linha exata, o humano confirmou “messages já estava inscrito”. É readback humano da inscrição do campo, separado de whatsapp_business_messaging; não comprova autorização/entrega de evento real. Root reconferiu HTTPS /health200 e PACED-Ready. Janela de controle aberta em 2026-10-18T20:28:41.022Z para um evento padrão não editado pelo botão Testar da linha messages no mesmo app/callback printing-adaptive-snapshot-partition.trycloudflare.com. Nenhum envio físico novo na janela. [Contrato de controle](../../../artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp87-standard-control-window.json).
+
+Aguardar resultado do painel; depois um readback seguro tail100 com completeness, pinos e GO próprios. Controle só testa transporte/recepção do callback, não cadastro/IN/OUT: identidade sintética não deve virar conversa real nem aceite VAL05. Não recriar modo técnico local, não editar payload/IDs/token, não ressubscrever WABA, não mudar roteamento/acesso/app por inferência.

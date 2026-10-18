@@ -1,0 +1,16 @@
+{
+  "checkpoint": "cp87-messages-standard-control",
+  "windowStartedAtUtc": "2026-10-18T20:28:41.022Z",
+  "humanState": "messages already subscribed in actual WhatsApp webhook field row; distinct from permission",
+  "callback": "https://printing-adaptive-snapshot-partition.trycloudflare.com/webhooks/meta",
+  "rootPublicHealthHttp": 200,
+  "action": "One unmodified standard messages test using Meta dashboard button; no WhatsApp physical message in same window",
+  "purpose": "Verify current signed POST transport separately from physical05 which had no meta route; standard event is not IN/OUT acceptance",
+  "expectedHumanReport": "Dashboard success/HTTP code only; no payload/IDs/tokens copied",
+  "readback": "After human result, one bounded frozen tail100 gateway aggregate under new rootGO; source/current config pins and n<100 completeness required",
+  "counterHelperSha256": "c3a74788fdda85d1c03af08e26e3b3dfaa821a8e64958cc17ff9053331160fcf",
+  "noProviderDbRuntimeProductMutationByAgent": true,
+  "physicalAcceptance": "not_claimed",
+  "VAL05": "open_unwaived",
+  "technicalLocalTestNumberMode": "Cancelled"
+}
