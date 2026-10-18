@@ -1,0 +1,60 @@
+{
+  "checkpoint": "cp73-public-proof-v2",
+  "capturedAtUtc": "2026-10-18T02:55:55.209224+00:00",
+  "goSha256": "ab831e3bb8c118f78ed93930a9353d4d8efaa47fa62d46169b934c7db49de138",
+  "helperSha256": "d4917f311c105af7a20f12e0232552aeef2b7656090cd5a89c0f8ec22494e0c2",
+  "hostname": "estimation-editions-knee-inclusion.trycloudflare.com",
+  "windows": {
+    "stdoutFile": "cp73-windows-public-v2.stdout.json",
+    "stdoutSha256": "d66c66d3309a58502145781839ad1335690fcdfec10fac6b61b5aa1e7e53c712",
+    "exitCode": 0,
+    "results": [
+      {
+        "path": "/",
+        "status": 530,
+        "byteCount": 6033,
+        "sha256": "b124626176c54f52ae4416ab5c8b262b07e996171fb6986653b5a8a193ac5af9",
+        "redirected": false,
+        "noSetCookie": true
+      },
+      {
+        "path": "/health",
+        "status": 530,
+        "byteCount": 6033,
+        "sha256": "edd4e4f8d536df672232574680279307d684de6580b77d663666d861523d55dc",
+        "redirected": false,
+        "noSetCookie": true
+      },
+      {
+        "path": "/privacidade.html",
+        "status": 530,
+        "byteCount": 6033,
+        "sha256": "72816156ee39e0ff6dd8dac7107a232a86a739360efc648ddffb5dd41064a98d",
+        "redirected": false,
+        "noSetCookie": true
+      },
+      {
+        "path": "/assets/index-txvhtd65.js",
+        "status": 530,
+        "byteCount": 6033,
+        "sha256": "6b6d258f87f331722dece68791895be5d79a8e4352c53628f6c71f8f969a8bf4",
+        "redirected": false,
+        "noSetCookie": true
+      }
+    ]
+  },
+  "wsl": {
+    "file": "cp73-wsl-policy-v2.json",
+    "sha256": "7f1cc765943589a684b04e861406436ac5040c01468f5e2caf096ce1678e5242",
+    "path": "/privacidade.html",
+    "status": 530,
+    "byteCount": 6009,
+    "sha256Body": "9078b3b2e5475650dfa8d315a33312121185f578765139e56a474046dca4525f",
+    "redirectsFollowed": false,
+    "setCookie": false
+  },
+  "interpretation": "all current HTTPS probes returned HTTP 530; actual edge/origin cause not diagnosed; no origin/API change authorized or performed",
+  "processMutationAfterLaunch": false,
+  "originOrApiMutation": false,
+  "nextAuthority": "PENDING_ROOT_ADJUDICATION"
+}

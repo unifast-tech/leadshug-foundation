@@ -1,0 +1,51 @@
+{
+  "checkpoint": "cp73-tunnel-diagnostic-summary",
+  "capturedAtUtc": "2026-10-18T02:57:47.6421502Z",
+  "goSha256": "9eb2771975a4d12d80934bf1cd4a79926b10819a0d46d94aaf518e85aa12ad7e",
+  "files": {
+    "cp73-tunnel-diagnostic-process.json": {
+      "sha256": "e9e4a4af1b9fe5ede09199c80a361a9e54e03ac42ecbe23601b960e0c0c6d799"
+    },
+    "cp73-single-health-diagnostic.json": {
+      "sha256": "947417ac7d50e58390a5c08c1b2a59a185e225bdfffa7d9a0669bc83aeb0aca5"
+    },
+    "cp73-child-metrics-readonly.json": {
+      "sha256": "9d9f0efc291b50aa54370cd3aa0734327d05e1a5f16ba7ac00f431442d7e5962"
+    }
+  },
+  "processes": {
+    "supervisorPid": 29908,
+    "supervisorStartTimeUtcTicks": 639278887911614588,
+    "supervisorPathHashMatch": true,
+    "childPid": 26848,
+    "childStartTimeUtcTicks": 639278887914254217,
+    "childPathHashParentMatches": true,
+    "childListener": {
+      "address": "127.0.0.1",
+      "port": 20241,
+      "state": "Listen"
+    }
+  },
+  "runtimeState": {
+    "hostname": "estimation-editions-knee-inclusion.trycloudflare.com",
+    "target": "http://127.0.0.1:8083",
+    "transport": "http2",
+    "registeredConnectionEvents": 2,
+    "errorEvents": 4,
+    "childExitCode": null
+  },
+  "publicHealth": {
+    "httpStatus": 200,
+    "cloudflareErrorCode": null,
+    "oneRequestOnly": true
+  },
+  "metrics": {
+    "httpStatus": 200,
+    "allowlistedNumericValues": {
+      "cloudflared_tunnel_ha_connections": 1
+    },
+    "otherMetricValuesOmitted": true
+  },
+  "interpretation": "Current bounded health probe succeeded and owned child metrics endpoint is loopback-reachable. Prior 530 response cause remains undetermined; no claim of sustained stability.",
+  "runtimeMutation": false
+}

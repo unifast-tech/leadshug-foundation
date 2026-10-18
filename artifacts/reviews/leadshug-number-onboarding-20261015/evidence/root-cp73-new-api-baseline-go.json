@@ -1,0 +1,29 @@
+{
+  "checkpoint": "root-cp73-new-api-baseline-go",
+  "issuedAtUtc": "2026-10-18T03:05:25.184719+00:00",
+  "decision": "GO",
+  "maxInvocations": 1,
+  "operation": "scoped_readonly_official_aggregate",
+  "helperPath": "foundation_documentation/artifacts/tmp/number-onboarding-execution/cp69-official-inout-aggregate-readonly.cjs",
+  "helperSha256": "64e4f08964fb846282608939825dd7063b2b567756047df81cce85c29aac6571",
+  "apiId": "9eccbea4825108cec2b8a6fcd48c43c17845e216415fe95e3972265c6ad34cf1",
+  "apiImage": "sha256:fe5fb7eaf6a68123f9da6b92a0a69483180d213f556b4bedf313f04a383b4821",
+  "owner": "number-onboarding",
+  "project": "leadshug_channels_local",
+  "preconditions": [
+    "Origin activation success stdout and new API exact identity/healthy/owner",
+    "Final public root health privacy JS hashes and TLS from bothWindows+WSL pass; unsignedMetaGET403",
+    "Frozen helper bytes unchanged; no provider/credential call"
+  ],
+  "scope": "Known official BU/current attempt/identity/gen/epoch only; aggregate counts and whitelisted channel states, no contacts/messages/providerIDs/rawpayload",
+  "forbidden": [
+    "secret/envfile/Config.Env/privatefile reads",
+    "provider calls",
+    "manual DB writes",
+    "runtime changes",
+    "extra invocation/retry"
+  ],
+  "output": "Direct bounded sanitizedstdout file plus wrapper pins/UTC/helper/GO/stdout hashes",
+  "parent": "Pending",
+  "VAL05": "open_unwaived"
+}

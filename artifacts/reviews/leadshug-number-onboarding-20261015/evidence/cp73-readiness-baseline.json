@@ -1,0 +1,74 @@
+{
+  "checkpoint": "cp73-readiness-baseline",
+  "capturedAtUtc": "2026-10-18T02:47:12.248Z",
+  "rootGo": {
+    "path": "root-cp73-readiness-baseline-go.json",
+    "sha256": "ffa014ae072e13cdfb1c03a8b5acdfe497c099848b16a0f6358e913afce865dc",
+    "consumedForReadOnlyPreflight": true
+  },
+  "runtimeTopology": {
+    "ownedContainerCount": 7,
+    "ownedProjectVolumeCount": 5,
+    "containers": [
+      { "id": "9aa55b6681a8480dbfd7cbf2a51ab8571035603b288b52e6798d93741af01093", "service": "web", "imageId": "sha256:cfd5e58b91a67d2fae4f37759274a34209cd2501082650a49545a60a12642361", "running": true },
+      { "id": "005529386c8a7ab499cd779942ce541bb90cd3a770b8436b41509d2655e54857", "service": "api", "imageId": "sha256:fe5fb7eaf6a68123f9da6b92a0a69483180d213f556b4bedf313f04a383b4821", "running": true, "healthy": true },
+      { "id": "0c48d94e9fe5b4ad75efd304db2752dfa4cab3befc59b9f736574d6cd551eea3", "service": "gateway", "imageId": "sha256:76090a34b858323b6ab169711adc08253b5bee7123a973dc581ed46b643bc109", "running": true },
+      { "id": "cf749491f7149dc46ec4db597b2d9c12faf918dd4f05b5512ba75adaf8e29ea4", "service": "evolution", "running": true },
+      { "id": "3b2e8d153d794a768ea87cb4f9cda7ba15dde242e2b8027bd372a475a9c26fbb", "service": "evolution-redis", "running": true, "healthy": true },
+      { "id": "150de898c3d9aa189ca0719eed7a65b95d95d8b948244e66b059a55f4554135a", "service": "evolution-postgres", "running": true, "healthy": true },
+      { "id": "4fcd87b431339e3b65a40beafa27db86cdc978ca79f71b911199f7090c837495", "service": "postgres", "running": true, "healthy": true }
+    ],
+    "projectVolumes": [
+      "leadshug_channels_local_evolution_instances",
+      "leadshug_channels_local_evolution_pg_data",
+      "leadshug_channels_local_evolution_redis_data",
+      "leadshug_channels_local_leadshug_arquivos",
+      "leadshug_channels_local_leadshug_pg_data"
+    ]
+  },
+  "gateway": {
+    "containerId": "0c48d94e9fe5b4ad75efd304db2752dfa4cab3befc59b9f736574d6cd551eea3",
+    "imageId": "sha256:76090a34b858323b6ab169711adc08253b5bee7123a973dc581ed46b643bc109",
+    "sourcePath": "docker/local-gateway.conf.template",
+    "sourceSha256": "6d4563cc5f5823bdb1177f350c942dc2472fc70133aef5b177fa4b57c5c9f1a0",
+    "activeManagedConfigSha256": "6d4563cc5f5823bdb1177f350c942dc2472fc70133aef5b177fa4b57c5c9f1a0",
+    "sourceAndActiveConfigMatch": true
+  },
+  "apiCompiledFreshness": {
+    "attestationPath": "cp49-api-activation.json",
+    "attestationSha256": "4f8df0f79e1fc1a0672b5f29232a9920a2edb524f893ccc0ee99491a75636490",
+    "matchesAcceptedCp49Hashes": true,
+    "moduleSha256": {
+      "dist/domain/channels/channels.service.js": "aa2d4e51ee906b3cc7dd79d4835cd331b00eaa772655506630e6f944d13bda73",
+      "dist/domain/channels/receipt-attempt-convergence.js": "93495861c2b300b66c5d5292803e3fbb71819c662896ae81ef457e8a4abbd1c4",
+      "dist/surfaces/webhooks/evolution.controller.js": "09b1ba14d22f90d345cce9f1e87cfcee8de4560a755c6f59528e22b7955d47ac",
+      "dist/integrations/meta/meta.client.js": "a756c9693c574f6fb4987d878af8d4fbeaf9f07c86a5c5e6acadeca4f7a771cb"
+    }
+  },
+  "publicHttps": {
+    "evidencePath": "cp73-public-readiness.json",
+    "evidenceSha256": "5b590a3665838f11993456fc1ac92c76e154e347e66c7198da95ab30bb0b7a02",
+    "host": "addressing-mar-perform-hormone.trycloudflare.com",
+    "normalTlsVerified": false,
+    "probeResults": {
+      "/": "transport_or_tls_error",
+      "/health": "transport_or_tls_error",
+      "/privacidade.html": "transport_or_tls_error",
+      "/assets/index-txvhtd65.js": "transport_or_tls_error"
+    },
+    "status": "blocked_transport_or_tls_precondition"
+  },
+  "aggregateSnapshot": {
+    "helperPath": "foundation_documentation/artifacts/tmp/number-onboarding-execution/cp69-official-inout-aggregate-readonly.cjs",
+    "helperSha256": "64e4f08964fb846282608939825dd7063b2b567756047df81cce85c29aac6571",
+    "status": "not_invoked",
+    "reason": "Root GO requires successful current public normal-TLS probes; public transport/TLS precondition failed."
+  },
+  "boundary": {
+    "containerOrVolumeMutation": false,
+    "providerRequest": false,
+    "credentialOrEnvironmentDump": false,
+    "privateFilesOrRawLogsRead": false,
+    "databaseQuery": false
+  }
+}

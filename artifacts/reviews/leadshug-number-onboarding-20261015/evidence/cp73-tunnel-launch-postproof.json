@@ -1,0 +1,51 @@
+{
+  "checkpoint": "cp73-owned-quick-tunnel-postlaunch-readiness",
+  "capturedAtUtc": "2026-10-18T02:54:24.585743+00:00",
+  "launchGoSha256": "257ab164084ac86315f9ae2a3e3246d7ce75eb4f64c1773ff2770c052f030441",
+  "helperSha256": "ab4afa2cb9f59a47d1ab703e6550fc64225d90bdaeac17827b1dada1c4e2b2c4",
+  "launchResult": "new_owned_supervisor_created",
+  "launchExitCode": 0,
+  "launchStdoutSha256": "2591a132768aec2378251875d1919a62f3287ac731485a58423e3d2b1c26e332",
+  "processProofFile": "cp73-new-process-proof.json",
+  "processProofSha256": "87d8e0cb6b7afc316b4d4fb71d40d700cb1149debecb3f69510552f51edc0c86",
+  "newRuntime": {
+    "supervisorPid": 29908,
+    "supervisorStartTimeUtcTicks": 639278887911614588,
+    "supervisorSha256": "bdf68028ea2da0699b1e04d191453b5d7090861b17f518d236ce6b084d45c69b",
+    "childPid": 26848,
+    "childStartTimeUtcTicks": 639278887914254217,
+    "childSha256": "86aee4017b26625cee8484c113558f48effa4cd47f7aa05fcf425604e5d2b23c",
+    "childParentPid": 29908,
+    "hostname": "estimation-editions-knee-inclusion.trycloudflare.com",
+    "target": "http://127.0.0.1:8083",
+    "transport": "http2",
+    "stateRegisteredConnectionEvents": 1,
+    "stateErrorEvents": 1,
+    "stateStreamCallbackFaults": 0,
+    "stateWriteFailures": 0
+  },
+  "windowsDns": {
+    "resolved": true,
+    "answerCount": 2,
+    "category": "resolved",
+    "addressesEmitted": false
+  },
+  "wslHttps": {
+    "file": "cp73-wsl-normal-tls.json",
+    "sha256": "97bba5ac1aa4391110cdfc78490f2017368016f21a0493853c0b6ae739dd6919",
+    "rootHealthJsAll200ExactHashes": true,
+    "noRedirects": true,
+    "noSetCookie": true
+  },
+  "windowsHttps": {
+    "probeFile": "cp73-windows-https.json",
+    "exitCode": 1,
+    "stdoutEmpty": true,
+    "classification": "probe_failed_before_json_receipt; whether any GET was issued is indeterminate; do not infer transport failure or retry under consumed GO"
+  },
+  "processLaunches": 1,
+  "extraLaunches": 0,
+  "oldProcessesStoppedOrAdopted": false,
+  "originEditAllowedNow": false,
+  "operationAuthority": "PENDING_ROOT_ADJUDICATION"
+}

@@ -1,0 +1,23 @@
+{
+  "checkpoint": "root-cp73-public-proof-v2-go",
+  "issuedAtUtc": "2026-10-18T02:55:28.745759+00:00",
+  "decision": "GO",
+  "helperPath": "foundation_documentation/artifacts/tmp/number-onboarding-execution/T/cp73-windows-public-v2.ps1",
+  "helperSha256": "d4917f311c105af7a20f12e0232552aeef2b7656090cd5a89c0f8ec22494e0c2",
+  "maxInvocations": 1,
+  "basis": "First Windows wrapper exit1/no JSON outcome indeterminate, not reclassified or overwritten. Separate bounded new read-only proof admitted, same proven new host.",
+  "allowed": [
+    "Execute exact frozen Windows probe once; one GET per listed public path, normalTLS12s400KiB no redirects/cookies",
+    "One WSL normalTLS privacy GET bounded12s400KiB for missing privacy hash proof",
+    "Prepare ONLY new origin/API helper from accepted cp64v9 functions with current pins/receipt paths and no Web/tag/rollbacktag operation; no env reads or activation yet"
+  ],
+  "forbidden": [
+    "new tunnel launch/rotation",
+    "env/config.env/secret reads",
+    "provider APIs",
+    "container or DB writes",
+    "private paths/rawlogs"
+  ],
+  "expectedPolicySha256": "d0f72c588f0f014de46a327e34d6b26125ca115bc973b56bbb926cd8519e701d",
+  "rootReview": "Derived from accepted cp64v9 probe using correct ::new constructors and buffered GetAsync, bounded body/time; new error output type only; all path body hashes retained."
+}

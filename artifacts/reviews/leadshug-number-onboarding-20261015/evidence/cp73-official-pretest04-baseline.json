@@ -1,0 +1,23 @@
+{
+  "checkpoint": "cp73-official-pretest04-baseline",
+  "capturedAtUtc": "2026-10-18T03:06:09.087781+00:00",
+  "operation": "single scoped read-only aggregate; no provider request or DB mutation",
+  "goSha256": "3186cd6f20a17f60ab90d5d31ee7cac292f4532a1f6c4b1af17827bdce1ecf1a",
+  "helperPath": "foundation_documentation/artifacts/tmp/number-onboarding-execution/cp69-official-inout-aggregate-readonly.cjs",
+  "helperSha256": "64e4f08964fb846282608939825dd7063b2b567756047df81cce85c29aac6571",
+  "helperExitCode": 0,
+  "stdoutPath": "cp73-official-pretest04-baseline.stdout.json",
+  "stdoutBytes": 1380,
+  "stdoutSha256": "537c3259e2c85837085ec12959844cbff3eb12722d5b1e86b17beb05b5479c1d",
+  "api": {
+    "id": "9eccbea4825108cec2b8a6fcd48c43c17845e216415fe95e3972265c6ad34cf1",
+    "image": "sha256:fe5fb7eaf6a68123f9da6b92a0a69483180d213f556b4bedf313f04a383b4821",
+    "state": "running",
+    "health": "healthy",
+    "owner": "number-onboarding",
+    "project": "leadshug_channels_local",
+    "service": "api"
+  },
+  "result": "snapshot captured; stop after one invocation",
+  "scope": "Known official BU/channel/current attempt/current identity and aggregate counts only; webhook aggregate has no identity attribution."
+}

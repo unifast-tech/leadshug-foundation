@@ -1,0 +1,1 @@
+{"checkpoint":"cp73-unsigned-webhook-route","capturedAtUtc":"2026-10-18T03:05:28.557128+00:00","method":"GET","path":"/webhooks/meta","queryPresent":false,"authorizationHeaderSent":false,"cookiesSent":false,"status":403,"requestCompleted":true,"expectedUnsignedDenial":true}

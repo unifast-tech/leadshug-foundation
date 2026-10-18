@@ -1,0 +1,30 @@
+{
+  "checkpoint": "root-cp73-tunnel-launch-go",
+  "issuedAtUtc": "2026-10-18T02:52:34.808670+00:00",
+  "decision": "GO",
+  "operation": "launch_new_quick_tunnel",
+  "maxInvocations": 1,
+  "helperPath": "foundation_documentation/artifacts/tmp/number-onboarding-execution/T/cp73-launch-owned-quick-tunnel.ps1",
+  "helperSha256": "ab4afa2cb9f59a47d1ab703e6550fc64225d90bdaeac17827b1dada1c4e2b2c4",
+  "supervisorSha256": "bdf68028ea2da0699b1e04d191453b5d7090861b17f518d236ce6b084d45c69b",
+  "cloudflaredSha256": "86aee4017b26625cee8484c113558f48effa4cd47f7aa05fcf425604e5d2b23c",
+  "target": "http://127.0.0.1:8083",
+  "runtimeDirectory": "T/cloudflared-cp73-runtime",
+  "rootReview": "Entire frozen helper inspected; accepted byte-identical binaries only; existing/new exact-path absence; runtime directory absent; no-switch preparation independently passed; no new source compilation.",
+  "postlaunchAllowed": [
+    "Read only new own supervisor state and exact process identity/start/hash/parent/argv match booleans",
+    "At most five DNS readiness lookups over at most45seconds; no host rotation or relaunch",
+    "One normal verifiedTLS GET each root health privacy JS from Windows and WSL, each bounded12seconds400KiB, no redirects/cookies/body/header/exception dumps",
+    "Prepare separate origin-only API activation helper; no activation yet"
+  ],
+  "forbidden": [
+    "old process kill or adoption",
+    "provider calls or writes",
+    "envfiles/Config.Env/secret reads",
+    "container or DB mutations",
+    "extra launches or generated hostname rotation",
+    "private files/rawlogs"
+  ],
+  "parent": "Pending",
+  "VAL05": "open_unwaived"
+}

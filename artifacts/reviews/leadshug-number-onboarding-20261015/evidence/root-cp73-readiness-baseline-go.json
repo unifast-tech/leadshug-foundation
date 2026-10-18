@@ -1,0 +1,40 @@
+{
+  "checkpoint": "root-cp73-readiness-baseline-go",
+  "issuedAtUtc": "2026-10-18T02:46:31.034680+00:00",
+  "decision": "GO",
+  "profile": "Operational / DevOps",
+  "technicalScope": [
+    "docker",
+    "nestjs",
+    "react",
+    "vite",
+    "postgresql",
+    "prisma"
+  ],
+  "genesis": "ineligible_existing_approved_contract",
+  "allowed": [
+    "selected-format Docker runtime pins/health/owner/service",
+    "current gateway source and managed config SHA only",
+    "scoped public root health privacy JS GETs with verified TLS no cookies/redirects and bounded bytes/time",
+    "one invocation frozen read-only aggregate helper via pinned API stdin after pins pass",
+    "named public compiled artifact freshness hashes from accepted cp49 attestation, no private paths"
+  ],
+  "apiContainerId": "005529386c8a7ab499cd779942ce541bb90cd3a770b8436b41509d2655e54857",
+  "apiImageId": "sha256:fe5fb7eaf6a68123f9da6b92a0a69483180d213f556b4bedf313f04a383b4821",
+  "aggregateHelperPath": "foundation_documentation/artifacts/tmp/number-onboarding-execution/cp69-official-inout-aggregate-readonly.cjs",
+  "aggregateHelperSha256": "64e4f08964fb846282608939825dd7063b2b567756047df81cce85c29aac6571",
+  "publicHostname": "addressing-mar-perform-hormone.trycloudflare.com",
+  "forbidden": [
+    "secrets/env/config.env reads",
+    "api-app/.local-files access",
+    "raw logs",
+    "provider API calls or writes",
+    "runtime or DB mutations",
+    "restart or tunnel changes",
+    "new source changes"
+  ],
+  "stopCondition": "Any pin/freshness/TLS mismatch means readiness blocked; no physical test yet",
+  "output": "allowlisted metadata hashes and counts only; preserve actual failures without raw errors/URLs/headers/body",
+  "parent": "Pending",
+  "VAL05": "open_unwaived"
+}

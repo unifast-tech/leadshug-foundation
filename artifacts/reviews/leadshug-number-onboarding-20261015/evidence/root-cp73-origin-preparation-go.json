@@ -1,0 +1,15 @@
+{
+  "checkpoint": "root-cp73-origin-preparation-go",
+  "issuedAtUtc": "2026-10-18T02:58:40.380405+00:00",
+  "decision": "GO_preparation_only",
+  "allowed": "Prepare and offline validate API-only origin helper derived from accepted cp64v9 byteCAS/ACL/redactedDocker functions; current API0055/fe5, Web9aa5/cfd5, gateway0c48/7609 config6d; new origin estimation-editions-knee-inclusion.trycloudflare.com; only CHANNELS_LOCAL_ORIGIN.",
+  "privateAccess": "none during preparation; no real env reads, no process or Docker mutations",
+  "constraints": [
+    "Only api recreate same image no build/pull/dependencies, preserve other6containers and5volumes",
+    "Exact own topology/image/tag/owner/network/config guards before/after",
+    "Exclusive CAS/ACL-preserving public-origin edit, raw otherbytes remain opaque in host memory only after separateexecutionGO",
+    "Safe durable stage receipt before mutation, bounded rollback to priorpublicorigin with sameimageapi if operation uncertain/fails, no override of later unexpected drift",
+    "One guarded gateway nginx-t/reload if upstream needs refresh, same6d config",
+    "Actual finalTLS hashes/pins/compiledfreshness mustpass before userrequest"
+  ]
+}

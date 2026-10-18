@@ -1,0 +1,65 @@
+{
+  "checkpoint": "root-cp73-api-origin-execution-go",
+  "issuedAtUtc": "2026-10-18T03:04:04.715473+00:00",
+  "decision": "GO",
+  "operationAuthority": "GO",
+  "rootOutcome": "GO",
+  "operation": "api_origin_only",
+  "rootAccepted": true,
+  "maxInvocations": 1,
+  "helperPath": "foundation_documentation/artifacts/tmp/number-onboarding-execution/T/cp73-api-origin-only-v1.ps1",
+  "helperSha256": "a7fa1aef46b98f7496042217615a1e1403c9510e86a4c4f7be776f607188c20c",
+  "hostname": "estimation-editions-knee-inclusion.trycloudflare.com",
+  "apiId": "005529386c8a7ab499cd779942ce541bb90cd3a770b8436b41509d2655e54857",
+  "apiImage": "sha256:fe5fb7eaf6a68123f9da6b92a0a69483180d213f556b4bedf313f04a383b4821",
+  "webId": "9aa55b6681a8480dbfd7cbf2a51ab8571035603b288b52e6798d93741af01093",
+  "webImage": "sha256:cfd5e58b91a67d2fae4f37759274a34209cd2501082650a49545a60a12642361",
+  "gatewayId": "0c48d94e9fe5b4ad75efd304db2752dfa4cab3befc59b9f736574d6cd551eea3",
+  "gatewayImage": "sha256:76090a34b858323b6ab169711adc08253b5bee7123a973dc581ed46b643bc109",
+  "gatewayConfigSha256": "6d4563cc5f5823bdb1177f350c942dc2472fc70133aef5b177fa4b57c5c9f1a0",
+  "rootValidation": {
+    "fullOperationAndFailurePathsInspected": true,
+    "correctionsIntegrated": [
+      "exact DB pin",
+      "no pull",
+      "existing-stage refusal",
+      "publichealth and prior API origin preconditions before private access",
+      "exact previous origin",
+      "accurate reloadflag",
+      "local rollback proof with oldpublicunavailable qualifier",
+      "rollback image/resource guards"
+    ],
+    "rootPlanAndByteCasFixtures": "passed",
+    "rootEightByteFunctionsMatchAcceptedV9": true,
+    "borrowedFunctionsProvenance": "22/23 byte-identical; Invoke-ComposeUp adds explicit --pull never; preparation receipt corrects agent message claiming23"
+  },
+  "privateBoundary": {
+    "path": ".env.testing",
+    "authorizedKey": "CHANNELS_LOCAL_ORIGIN",
+    "expectedPriorPublicOrigin": "https://addressing-mar-perform-hormone.trycloudflare.com",
+    "otherBytes": "Opaque host memory solely to preserve all bytes during exclusive CAS and bounded guarded rollback. No decode, hash, export, logging, copying to artifacts or secrets in argv. ACL unchanged.",
+    "composeRuntime": "Normal compose reads its existing configured env file internally; no compose config/env dump allowed. Node production +publicorigin process overrides only."
+  },
+  "allowedMutations": [
+    "One API-only same-image no-build no-pull no-deps force-recreate",
+    "At most one guarded graceful gateway reload on proven stale-upstream causal conditions after nginx-t",
+    "Bounded sameimage API/opaqueorigin rollback only as frozen helper permits"
+  ],
+  "postSuccessReadOnly": [
+    "Selected new API id/image/owner/health and same six othercontainers/fivevolumes/network/config",
+    "Named four compiled hash proof",
+    "One normalTLS bounded root health privacy JS check each Windows and WSL, no redirects/cookies or raw bodies/headers",
+    "One unsigned GET /webhooks/meta expected403, no verifytoken or query"
+  ],
+  "forbidden": [
+    "Web/container/image tag mutations",
+    "provider APIs or callback takeover",
+    "DB repair or manual writes",
+    "api-app/.local-files access",
+    "private env dumps/Config.Env",
+    "new tunnel launch/rotation",
+    "Railway login/deployment or source push/gitlinkwrites"
+  ],
+  "parent": "Pending",
+  "VAL05": "open_unwaived"
+}

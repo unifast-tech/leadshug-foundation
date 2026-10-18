@@ -1,0 +1,19 @@
+{
+  "checkpoint": "cp73-human-routing-updated",
+  "recordedAtUtc": "2026-10-18T02:46:31.023841+00:00",
+  "operatorReports": {
+    "messagingAccess": "standard",
+    "managementAccess": "standard",
+    "businessVerification": "completed",
+    "partner": "Whatsflow",
+    "partnerRemoval": "unavailable_abandoned",
+    "previousResponderAllFiveCategories": "Whatsflow",
+    "appManagingBusinessAndSelectedResponder": "unifast.br2",
+    "authorization": "all_five_routing_categories_for_current_account",
+    "savedConfirmation": "Alterado e salvo"
+  },
+  "independentlyVerifiedRouting": false,
+  "physicalReceiptProven": false,
+  "parent": "Pending",
+  "VAL05": "open_unwaived"
+}

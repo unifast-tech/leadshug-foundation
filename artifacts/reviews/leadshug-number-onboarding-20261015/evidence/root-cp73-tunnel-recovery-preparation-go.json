@@ -1,0 +1,23 @@
+{
+  "checkpoint": "root-cp73-tunnel-recovery-preparation-go",
+  "issuedAtUtc": "2026-10-18T02:48:47.911160+00:00",
+  "decision": "GO_readonly_preparation_only",
+  "basis": "User-approved local HTTPS test topology; CP73 DNS-only observation NXDOMAIN. No new physical test permitted.",
+  "allowed": [
+    "Inspect exact cp64 supervisor14708 and child2148 native identities, start times, exe path/hash/parent and argv equality booleans only against runtime-state.json",
+    "Query only exact two owned executable paths for identity if PID stale; no machinewide argv projection",
+    "Local loopback8083 public root/health/JS hash checks, no cookies/redirects or secrets",
+    "Read named cp64 supervisor/recovery sources and prepare minimal independently owned new Quick Tunnel supervisor using accepted cloudflared binary only if oldhost unavailable; root review and distinct execution GO required before launch/stop/recreate/env edit"
+  ],
+  "forbidden": [
+    "process launch/kill/restart",
+    "runtime mutations",
+    "envfiles/Config.Env/secrets reads",
+    "providercalls",
+    "privatefiles",
+    "rawlogs"
+  ],
+  "output": "safe receipt plus exact proposed recovery helper/source hashes and steps, failure and old process ownership explicit",
+  "parent": "Pending",
+  "VAL05": "open_unwaived"
+}

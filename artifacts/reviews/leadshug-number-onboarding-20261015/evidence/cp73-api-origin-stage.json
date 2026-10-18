@@ -1,0 +1,103 @@
+{
+    "checkpoint":  "cp73-api-origin-stage",
+    "events":  [
+                   {
+                       "capturedAtUtc":  "2026-10-18T03:04:21.4966058Z",
+                       "stage":  "preflight",
+                       "status":  "started",
+                       "failureCategory":  "none",
+                       "nativeExitCode":  null,
+                       "httpStatus":  null,
+                       "apiSelectedId":  null,
+                       "apiImage":  "sha256:fe5fb7eaf6a68123f9da6b92a0a69483180d213f556b4bedf313f04a383b4821",
+                       "originWriteOutcome":  "not_started",
+                       "preservationVerified":  false,
+                       "gatewayReloadAttempted":  false,
+                       "privateValuesOrBodiesPersisted":  false
+                   },
+                   {
+                       "capturedAtUtc":  "2026-10-18T03:04:23.8189908Z",
+                       "stage":  "origin_preflight",
+                       "status":  "started",
+                       "failureCategory":  "none",
+                       "nativeExitCode":  0,
+                       "httpStatus":  null,
+                       "apiSelectedId":  null,
+                       "apiImage":  "sha256:fe5fb7eaf6a68123f9da6b92a0a69483180d213f556b4bedf313f04a383b4821",
+                       "originWriteOutcome":  "not_started",
+                       "preservationVerified":  true,
+                       "gatewayReloadAttempted":  false,
+                       "privateValuesOrBodiesPersisted":  false
+                   },
+                   {
+                       "capturedAtUtc":  "2026-10-18T03:04:24.8826376Z",
+                       "stage":  "origin_write",
+                       "status":  "started",
+                       "failureCategory":  "none",
+                       "nativeExitCode":  0,
+                       "httpStatus":  200,
+                       "apiSelectedId":  null,
+                       "apiImage":  "sha256:fe5fb7eaf6a68123f9da6b92a0a69483180d213f556b4bedf313f04a383b4821",
+                       "originWriteOutcome":  "not_started",
+                       "preservationVerified":  true,
+                       "gatewayReloadAttempted":  false,
+                       "privateValuesOrBodiesPersisted":  false
+                   },
+                   {
+                       "capturedAtUtc":  "2026-10-18T03:04:24.9367824Z",
+                       "stage":  "origin_write",
+                       "status":  "success",
+                       "failureCategory":  "none",
+                       "nativeExitCode":  0,
+                       "httpStatus":  200,
+                       "apiSelectedId":  null,
+                       "apiImage":  "sha256:fe5fb7eaf6a68123f9da6b92a0a69483180d213f556b4bedf313f04a383b4821",
+                       "originWriteOutcome":  "written_bytes_and_security_metadata_verified",
+                       "preservationVerified":  true,
+                       "gatewayReloadAttempted":  false,
+                       "privateValuesOrBodiesPersisted":  false
+                   },
+                   {
+                       "capturedAtUtc":  "2026-10-18T03:04:24.9377811Z",
+                       "stage":  "api_recreate",
+                       "status":  "started",
+                       "failureCategory":  "none",
+                       "nativeExitCode":  0,
+                       "httpStatus":  200,
+                       "apiSelectedId":  null,
+                       "apiImage":  "sha256:fe5fb7eaf6a68123f9da6b92a0a69483180d213f556b4bedf313f04a383b4821",
+                       "originWriteOutcome":  "written_bytes_and_security_metadata_verified",
+                       "preservationVerified":  true,
+                       "gatewayReloadAttempted":  false,
+                       "privateValuesOrBodiesPersisted":  false
+                   },
+                   {
+                       "capturedAtUtc":  "2026-10-18T03:04:46.5817919Z",
+                       "stage":  "public_health",
+                       "status":  "started",
+                       "failureCategory":  "none",
+                       "nativeExitCode":  0,
+                       "httpStatus":  200,
+                       "apiSelectedId":  "9eccbea4825108cec2b8a6fcd48c43c17845e216415fe95e3972265c6ad34cf1",
+                       "apiImage":  "sha256:fe5fb7eaf6a68123f9da6b92a0a69483180d213f556b4bedf313f04a383b4821",
+                       "originWriteOutcome":  "written_bytes_and_security_metadata_verified",
+                       "preservationVerified":  true,
+                       "gatewayReloadAttempted":  false,
+                       "privateValuesOrBodiesPersisted":  false
+                   },
+                   {
+                       "capturedAtUtc":  "2026-10-18T03:04:46.6576858Z",
+                       "stage":  "complete",
+                       "status":  "success",
+                       "failureCategory":  "none",
+                       "nativeExitCode":  0,
+                       "httpStatus":  200,
+                       "apiSelectedId":  "9eccbea4825108cec2b8a6fcd48c43c17845e216415fe95e3972265c6ad34cf1",
+                       "apiImage":  "sha256:fe5fb7eaf6a68123f9da6b92a0a69483180d213f556b4bedf313f04a383b4821",
+                       "originWriteOutcome":  "written_bytes_and_security_metadata_verified",
+                       "preservationVerified":  true,
+                       "gatewayReloadAttempted":  false,
+                       "privateValuesOrBodiesPersisted":  false
+                   }
+               ]
+}

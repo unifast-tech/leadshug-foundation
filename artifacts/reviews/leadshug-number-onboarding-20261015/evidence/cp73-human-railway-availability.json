@@ -1,0 +1,17 @@
+{
+  "checkpoint": "cp73-human-railway-availability",
+  "recordedAtUtc": "2026-10-18T03:02:39.448119+00:00",
+  "operatorReport": "Has Railway account hosting Unifast services",
+  "leadshugProjectExists": "unknown_question_pending",
+  "dnsProviderControl": "not_established",
+  "deploymentAuthorization": false,
+  "currentTask": "local_first_remains_active",
+  "readOnlyFindings": {
+    "existingConfigs": [
+      "api-app/railway.json",
+      "web-app/railway.json"
+    ],
+    "railwayCliAvailableInWslPath": false
+  },
+  "boundary": "No Railway login, project changes, code push or deployment performed. Existing config files are not proof of a running or ready Railway environment."
+}

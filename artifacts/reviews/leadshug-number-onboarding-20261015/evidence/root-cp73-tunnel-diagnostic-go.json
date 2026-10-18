@@ -1,0 +1,22 @@
+{
+  "checkpoint": "root-cp73-tunnel-diagnostic-go",
+  "issuedAtUtc": "2026-10-18T02:57:04.116085+00:00",
+  "decision": "GO_readonly",
+  "basis": "New owned host initially matched app hashes but latestWindows4paths/WSLprivacyHTTP530; cause not established.",
+  "allowed": [
+    "Read fresh own runtime state; exact supervisor29908 and child26848 native processidentity matching frozenreceipt",
+    "One normalTLS public /health GET max12s32KiB on estimation-editions-knee-inclusion.trycloudflare.com, emit ONLY status plus exact finite Cloudflare numeric errorcode parsed in memory, no body/headers/exception strings",
+    "Query listener ports by exact child26848 only; emit only localhost-bound bool and port, no machinewide scans/argv",
+    "If and only if listener proven owned by child26848 and loopback, one bounded loopback /metrics GET12s256KiB, parse only numeric values from exact names cloudflared_tunnel_ha_connections, cloudflared_tunnel_total_requests, cloudflared_tunnel_request_errors, cloudflared_tunnel_active_streams; discard all labels and raw data"
+  ],
+  "forbidden": [
+    "launch/kill/restart",
+    "origin/env/Config.Env/secret reads or writes",
+    "provider APIs",
+    "container or DB mutations",
+    "raw logs/HTTP bodies/headers/IDs or private files"
+  ],
+  "output": "sanitized observation receipt, mark absent data unknown, no inferred cause or retry",
+  "parent": "Pending",
+  "VAL05": "open_unwaived"
+}

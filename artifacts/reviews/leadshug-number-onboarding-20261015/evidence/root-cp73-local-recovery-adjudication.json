@@ -1,0 +1,58 @@
+{
+  "checkpoint": "root-cp73-local-recovery-adjudication",
+  "capturedAtUtc": "2026-10-18T03:07:21.615741+00:00",
+  "evidenceSha256": {
+    "cp73-api-origin-execution.stdout.json": "95fa78617674a5cfa24861558bb9ffdbaf8ef2217e4751f558ca452c95694e7f",
+    "cp73-api-origin-stage.json": "97725574dbfe4601f737fa87ca4983fa49d27805d6fd7d8d31ee8973046b1069",
+    "cp73-api-origin-public-wsl.json": "991b807dd333b39bca4a945a3506cf4ab02b46bc40151e5fd5278e44af47fc7e",
+    "cp73-api-origin-public-windows.json": "5a7ca217b839908d91630b9c59ad06213caf1a454ee6719746de63900a3939b9",
+    "cp73-api-origin-pin-readback.json": "50c82fa3c336826f62a4129071ac8514f07fb56e94d07e1eaa7c969a4a179e72",
+    "cp73-unsigned-webhook-route.json": "28b70942c750f7d3300c620c408d45c53a9b43ec42e3472c8453cb5bc3287bff",
+    "cp73-official-pretest04-baseline.json": "79ddcac6b80374a947eb89c99b8b4546b707863331d3611f53e02cea0751fcca",
+    "cp73-official-pretest04-baseline.stdout.json": "537c3259e2c85837085ec12959844cbff3eb12722d5b1e86b17beb05b5479c1d",
+    "cp73-public-proof-v2.json": "8c7636edfbf2295f75a2acc4f7b4f4b21ced9c64407ed284428ca1137ffbe236",
+    "cp73-tunnel-diagnostic-summary.json": "e7deb70d977d1338380a2b4329f2432e0391f560c1daeade4ff36881e7651c49"
+  },
+  "accepted": "Local test transport and existing-source runtime recovered; no official message delivery claimed.",
+  "runtime": {
+    "rootHead": "80e3940126f22a941f90dba4f5e801b6c0eb2f58",
+    "apiSourceHead": "db5a86758a165fac8a1ab587599c37b17890530c",
+    "webSourceHead": "74b9d4b714044829796f875d00553f077c1c329d",
+    "apiId": "9eccbea4825108cec2b8a6fcd48c43c17845e216415fe95e3972265c6ad34cf1",
+    "apiImage": "sha256:fe5fb7eaf6a68123f9da6b92a0a69483180d213f556b4bedf313f04a383b4821",
+    "webId": "9aa55b6681a8480dbfd7cbf2a51ab8571035603b288b52e6798d93741af01093",
+    "gatewayId": "0c48d94e9fe5b4ad75efd304db2752dfa4cab3befc59b9f736574d6cd551eea3",
+    "publicHost": "estimation-editions-knee-inclusion.trycloudflare.com",
+    "sixOtherContainersAndFiveVolumesPreserved": true,
+    "sourceQualification": "API image remains source i; current source j differed only excluded test. No new all537/browserj claim.",
+    "newSupervisorPid": 29908,
+    "newChildPid": 26848,
+    "sourceAndActiveGatewayConfigSha256": "6d4563cc5f5823bdb1177f350c942dc2472fc70133aef5b177fa4b57c5c9f1a0"
+  },
+  "mutationsObserved": {
+    "newOwnedTemporaryTunnelLaunches": 1,
+    "apiRecreates": 1,
+    "imageRebuildsOrPulls": 0,
+    "webRecreates": 0,
+    "gatewayReloads": 0,
+    "privateFieldChanged": "CHANNELS_LOCAL_ORIGIN only; other bytes opaque host memory and preserved by frozen CAS/ACL path"
+  },
+  "validation": {
+    "rootFrozenHelperInspectionAndByteFixtures": "passed",
+    "publicFourPathsWindowsAndWsl": "200 exact expected hashes; no redirects/cookies; normal TLS",
+    "unsignedMetaGet": 403,
+    "currentOfficialState": "PENDING_RECEIPT v7 / SUBSCRIBED; receipt absent; IN0/OUT0/conversations0"
+  },
+  "limitations": [
+    "Old hostname NXDOMAIN and processes absent; no adoption or kill.",
+    "Earlier newhost 530 and first Windows uncertain failure remain preserved; final probes passed but sustained availability not promised.",
+    "Windows public output lacks its own timestamp; companion WSL/pin/stage receipts carry capture timestamps.",
+    "Routing to unifast.br2 is operator-confirmed, no independent Meta routing read or causal/receipt proof.",
+    "Provider named Whatsflow; user abandoned removal and authorized/saved five routing changes.",
+    "Railway account exists but no LeadsHug project; no deployment/source push/gitlink write.",
+    "R02 private OWNER cohort restrictions retained."
+  ],
+  "nextExactStep": "Await operator update of current hostname in Meta domain/OAuthSDK/callback/privacy and successful webhook validation, keeping messages subscribed and app published. Only then start a bounded physical04 window with human IN/OUT confirmation.",
+  "parentDeliveryStage": "Pending",
+  "VAL05": "open_unwaived"
+}

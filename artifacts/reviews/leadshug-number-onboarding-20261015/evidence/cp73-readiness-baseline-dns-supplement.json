@@ -1,0 +1,20 @@
+{
+  "checkpoint": "cp73-readiness-baseline-dns-supplement",
+  "parentEvidence": "cp73-readiness-baseline.json",
+  "parentEvidenceSha256": "f81b4c159d8df0e4aef1471370300f842f1a9bdd3371ea0265e9e2b2a90b1113",
+  "dnsEvidence": "cp73-public-transport-classification.json",
+  "dnsEvidenceSha256": "6555f12f9019a82b5ba1530392adb64ec966ad8aade2f06659973aa223d13bce",
+  "hostDiagnostic": {
+    "class": "dns_nxdomain",
+    "dnsResolved": false,
+    "httpRequestMade": false
+  },
+  "perPath": {
+    "/": { "originalObservedClass": "transport_or_tls_error", "httpStatus": null, "hostDnsDiagnostic": "dns_nxdomain" },
+    "/health": { "originalObservedClass": "transport_or_tls_error", "httpStatus": null, "hostDnsDiagnostic": "dns_nxdomain" },
+    "/privacidade.html": { "originalObservedClass": "transport_or_tls_error", "httpStatus": null, "hostDnsDiagnostic": "dns_nxdomain" },
+    "/assets/index-txvhtd65.js": { "originalObservedClass": "transport_or_tls_error", "httpStatus": null, "hostDnsDiagnostic": "dns_nxdomain" }
+  },
+  "interpretation": "The initial bounded HTTPS attempts retained only a generic transport/TLS category; no raw exceptions were saved. A subsequent no-HTTP DNS/TLS classification probe returned host-wide DNS NXDOMAIN. This is consistent with all four path failures but does not reconstruct their original exception objects. No HTTPS retry was made.",
+  "aggregateHelperInvoked": false
+}
