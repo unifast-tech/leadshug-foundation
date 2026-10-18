@@ -1,0 +1,12 @@
+{
+  "checkpoint": "cp74-test04-existing-contact-control",
+  "recordedAtUtc": "2026-10-18T03:12:57.465182+00:00",
+  "operatorReport": "No other contact available",
+  "windowReference": "cp74-official-physical-test04-window.json",
+  "testControl": "Use the same previous test WhatsApp; record as reused conversation. No claim about routing of a never-used contact.",
+  "markersUnchanged": true,
+  "physicalMessageReportedSentYet": false,
+  "status": "awaiting_existing_contact_test04",
+  "parent": "Pending",
+  "VAL05": "open_unwaived"
+}

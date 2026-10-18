@@ -1,0 +1,18 @@
+{
+  "checkpoint": "cp74-human-meta-newhost-validated",
+  "recordedAtUtc": "2026-10-18T03:10:32.668329+00:00",
+  "operatorReport": "Salvei e a Meta validou o webhook",
+  "promptScope": [
+    "newhost domains",
+    "OAuthSDK",
+    "callback",
+    "privacy",
+    "messages subscribed",
+    "app published"
+  ],
+  "host": "estimation-editions-knee-inclusion.trycloudflare.com",
+  "evidenceType": "human_confirmation_not_independent_meta_config_read",
+  "messageDeliveryProven": false,
+  "parent": "Pending",
+  "VAL05": "open_unwaived"
+}

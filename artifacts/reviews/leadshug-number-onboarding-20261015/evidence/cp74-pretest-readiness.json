@@ -1,0 +1,70 @@
+{
+  "checkpoint": "cp74-pretest-readiness",
+  "capturedAtUtc": "2026-10-18T03:11:33.561781+00:00",
+  "goSha256": "91531cc238e274d9f81576326b8b89e22c15bf3071abfa3f80d4a059ca62e39e",
+  "api": {
+    "id": "9eccbea4825108cec2b8a6fcd48c43c17845e216415fe95e3972265c6ad34cf1",
+    "image": "sha256:fe5fb7eaf6a68123f9da6b92a0a69483180d213f556b4bedf313f04a383b4821",
+    "state": "running",
+    "health": "healthy",
+    "owner": "number-onboarding",
+    "project": "leadshug_channels_local",
+    "service": "api"
+  },
+  "web": {
+    "id": "9aa55b6681a8480dbfd7cbf2a51ab8571035603b288b52e6798d93741af01093",
+    "image": "sha256:cfd5e58b91a67d2fae4f37759274a34209cd2501082650a49545a60a12642361",
+    "state": "running",
+    "owner": "number-onboarding",
+    "project": "leadshug_channels_local",
+    "service": "web"
+  },
+  "gateway": {
+    "id": "0c48d94e9fe5b4ad75efd304db2752dfa4cab3befc59b9f736574d6cd551eea3",
+    "image": "sha256:76090a34b858323b6ab169711adc08253b5bee7123a973dc581ed46b643bc109",
+    "state": "running",
+    "owner": "number-onboarding",
+    "project": "leadshug_channels_local",
+    "service": "gateway",
+    "activeConfigSha256": "6d4563cc5f5823bdb1177f350c942dc2472fc70133aef5b177fa4b57c5c9f1a0"
+  },
+  "sourceHeads": {
+    "api": "db5a86758a165fac8a1ab587599c37b17890530c",
+    "web": "74b9d4b714044829796f875d00553f077c1c329d",
+    "root": "80e3940126f22a941f90dba4f5e801b6c0eb2f58"
+  },
+  "compiledModuleSha256": {
+    "dist/domain/channels/channels.service.js": "aa2d4e51ee906b3cc7dd79d4835cd331b00eaa772655506630e6f944d13bda73",
+    "dist/domain/channels/receipt-attempt-convergence.js": "93495861c2b300b66c5d5292803e3fbb71819c662896ae81ef457e8a4abbd1c4",
+    "dist/surfaces/webhooks/evolution.controller.js": "09b1ba14d22f90d345cce9f1e87cfcee8de4560a755c6f59528e22b7955d47ac",
+    "dist/integrations/meta/meta.client.js": "a756c9693c574f6fb4987d878af8d4fbeaf9f07c86a5c5e6acadeca4f7a771cb"
+  },
+  "compiledHashesMatchCp49": true,
+  "publicTls": {
+    "host": "estimation-editions-knee-inclusion.trycloudflare.com",
+    "client": "Python http.client, default certificate validation",
+    "checks": [
+      {
+        "path": "/health",
+        "status": 200,
+        "bytes": 15,
+        "sha256": "a29ee2b15c494311c52521766e44af56a3ad2248e7a8ab465e5206463c13d288",
+        "redirect": false,
+        "setCookie": false
+      },
+      {
+        "path": "/assets/index-txvhtd65.js",
+        "status": 200,
+        "bytes": 258450,
+        "sha256": "d14343604557296f2ed62c1df47d9c80d81c323abafd89ccbb64a6a0746ff4bd",
+        "redirect": false,
+        "setCookie": false
+      }
+    ],
+    "allExpected": true
+  },
+  "aggregateHelperSha256": "64e4f08964fb846282608939825dd7063b2b567756047df81cce85c29aac6571",
+  "aggregateStdoutSha256": "537c3259e2c85837085ec12959844cbff3eb12722d5b1e86b17beb05b5479c1d",
+  "aggregateExitCode": 0,
+  "decision": "pretest readiness passed; baseline snapshot captured; stop for root adjudication"
+}

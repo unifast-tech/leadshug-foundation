@@ -1,0 +1,22 @@
+{
+  "checkpoint": "cp74-official-pretest04-baseline",
+  "capturedAtUtc": "2026-10-18T03:11:33.561781+00:00",
+  "goSha256": "91531cc238e274d9f81576326b8b89e22c15bf3071abfa3f80d4a059ca62e39e",
+  "helperPath": "foundation_documentation/artifacts/tmp/number-onboarding-execution/cp69-official-inout-aggregate-readonly.cjs",
+  "helperSha256": "64e4f08964fb846282608939825dd7063b2b567756047df81cce85c29aac6571",
+  "helperExitCode": 0,
+  "stdoutPath": "cp74-official-pretest04-baseline.stdout.json",
+  "stdoutBytes": 1380,
+  "stdoutSha256": "537c3259e2c85837085ec12959844cbff3eb12722d5b1e86b17beb05b5479c1d",
+  "api": {
+    "id": "9eccbea4825108cec2b8a6fcd48c43c17845e216415fe95e3972265c6ad34cf1",
+    "image": "sha256:fe5fb7eaf6a68123f9da6b92a0a69483180d213f556b4bedf313f04a383b4821",
+    "state": "running",
+    "health": "healthy",
+    "owner": "number-onboarding",
+    "project": "leadshug_channels_local",
+    "service": "api"
+  },
+  "aggregate": "single bounded read-only known official BU/channel/attempt/identity snapshot; no provider call or mutation",
+  "status": "captured"
+}

@@ -1,0 +1,34 @@
+{
+  "checkpoint": "root-cp74-pretest04-go",
+  "issuedAtUtc": "2026-10-18T03:10:32.693263+00:00",
+  "decision": "GO_readonly",
+  "profile": "Operational / DevOps",
+  "technicalScope": [
+    "docker",
+    "nestjs",
+    "react",
+    "vite",
+    "postgresql",
+    "prisma"
+  ],
+  "apiId": "9eccbea4825108cec2b8a6fcd48c43c17845e216415fe95e3972265c6ad34cf1",
+  "apiImage": "sha256:fe5fb7eaf6a68123f9da6b92a0a69483180d213f556b4bedf313f04a383b4821",
+  "allowed": [
+    "Selected exact API/Web/gateway IDs/images/owner/state+APIhealth and four named compiled hashes already accepted cp49; sourceheads and activegateway6d match",
+    "One normal verifiedTLS GET /health max12s32KiB and one JS GET max12s300KiB on current newhost, no redirects/cookies/raw bodies/headers/errors",
+    "One frozen scoped aggregate helper invocation only after guards pass; direct sanitizedstdout and metadatawrapper"
+  ],
+  "aggregateHelperPath": "foundation_documentation/artifacts/tmp/number-onboarding-execution/cp69-official-inout-aggregate-readonly.cjs",
+  "aggregateHelperSha256": "64e4f08964fb846282608939825dd7063b2b567756047df81cce85c29aac6571",
+  "host": "estimation-editions-knee-inclusion.trycloudflare.com",
+  "forbidden": [
+    "runtime or DB writes",
+    "provider/Graph calls",
+    "privatefiles/env/Config.Env/credentials/rawlogs",
+    "new code tests/restarts/tunnelchanges/re-registration",
+    "api-app/.local-files access"
+  ],
+  "output": "fresh safe pretest metadata and snapshot, final UTC for opening physical window; no invitation until rootaccepts",
+  "parent": "Pending",
+  "VAL05": "open_unwaived"
+}

@@ -1,0 +1,22 @@
+{
+  "checkpoint": "cp74-official-physical-test04-window",
+  "startedUtc": "2026-10-18T03:11:56.914652Z",
+  "host": "estimation-editions-knee-inclusion.trycloudflare.com",
+  "baselineCapturedUtc": "2026-10-18T03:11:33.561781+00:00",
+  "baselineSha256": "537c3259e2c85837085ec12959844cbff3eb12722d5b1e86b17beb05b5479c1d",
+  "readinessSha256": "2cc5693c1c0c989d106a4a85310c82487dd937b8b1c24940bb046e05881ae334",
+  "apiId": "9eccbea4825108cec2b8a6fcd48c43c17845e216415fe95e3972265c6ad34cf1",
+  "apiImage": "sha256:fe5fb7eaf6a68123f9da6b92a0a69483180d213f556b4bedf313f04a383b4821",
+  "gatewayId": "0c48d94e9fe5b4ad75efd304db2752dfa4cab3befc59b9f736574d6cd551eea3",
+  "gatewayConfigSha256": "6d4563cc5f5823bdb1177f350c942dc2472fc70133aef5b177fa4b57c5c9f1a0",
+  "buDisplayName": "Local Test Ofc",
+  "routingOperatorReport": "all five categories saved to unifast.br2",
+  "testMarkers": {
+    "inbound": "Teste LeadsHug oficial entrada 04",
+    "outbound": "Teste LeadsHug oficial resposta 04"
+  },
+  "testControl": "Prefer a test WhatsApp that has not previously conversed with this official number, to observe routing of a new conversation.",
+  "status": "awaiting_human_test",
+  "parent": "Pending",
+  "VAL05": "open_unwaived"
+}
