@@ -1,0 +1,58 @@
+{
+  "checkpoint": "root-cp75-meta-current-callback-go",
+  "issuedAtUtc": "2026-10-18T03:20:22.762823+00:00",
+  "decision": "GO_readonly",
+  "apiId": "9eccbea4825108cec2b8a6fcd48c43c17845e216415fe95e3972265c6ad34cf1",
+  "apiImage": "sha256:fe5fb7eaf6a68123f9da6b92a0a69483180d213f556b4bedf313f04a383b4821",
+  "helpers": [
+    {
+      "operation": "phone_webhook_configuration",
+      "helperPath": "foundation_documentation/artifacts/tmp/number-onboarding-execution/cp75-meta-phone-webhook-readonly.cjs",
+      "helperSha256": "8766feb70339444e1ced848333b60f728e5f6abc70ccdc223d722555c99e8681",
+      "derivedFromSha256": "87c46c4f4f981779a29d19344ebb9aad17e586a240f427b189fe3242f86cf5c3",
+      "delta": "Only expected public callback literal changed; all resolver/request/parser code unchanged.",
+      "offlineSelfTest": {
+        "allThreeLayersDirectEqualDifferentEmptyMalformed": true,
+        "allThreeLayersNestedMatches": true,
+        "conflictingNestedValuesUnknown": true,
+        "mixedLayerMatchesRemainDistinct": true,
+        "absentOrMalformedUnknown": true,
+        "unknownKeysCountedAndRedacted": true,
+        "URLsAndCanaryValuesAbsentFromSerializedOutput": true,
+        "malformedResponseAndNumericErrorAllowlist": true,
+        "invocationModeGuard": true,
+        "networkCalled": false,
+        "resolverCalled": false,
+        "dbCalled": false
+      }
+    },
+    {
+      "operation": "waba_subscribed_apps",
+      "helperPath": "foundation_documentation/artifacts/tmp/number-onboarding-execution/cp75-meta-subscription-readonly.cjs",
+      "helperSha256": "633cce33ab7c6c8d7cd20fa50f1b55725c3fe77d7f1027408807a8ab0363b560",
+      "derivedFromSha256": "b9b0525a3aa09ccb06b88de09377563290304db74ef7671e613933714bd12940",
+      "delta": "Only expected public callback literal changed; all resolver/request/parser code unchanged.",
+      "offlineSelfTest": {
+        "syntheticCasesPassed": 13,
+        "networkCalled": false,
+        "resolverCalled": false,
+        "bodyTextOrTraceEmitted": false
+      }
+    }
+  ],
+  "maxInvocationsPerHelper": 1,
+  "purpose": "Verify effective current phone webhook and WABA membership after app hostname/routing change; prior probes targeted prior publichost before change.",
+  "preconditions": "Fresh exact APIhealthy owner/project/service; current helperbytes match; each helper guards exact BU/channel/identity/currentattempt/gen/epoch/credentialversion before and after",
+  "privateBoundary": "Use existing compiled ChannelCredentialResolver.resolve(channel,verify) inside API memory only: scoped encrypted customer token, resolver cipher key and resource IDs only for exact guarded current phone/WABA. No file/env/Config.Env dumps; no appsecret or unrelated credentials; no secrets in URL/argv/artifacts.",
+  "operationLimits": "Each exact helper performs ONE GET, normalTLS10s128KiB; no retry, redirects, paging or fallback. Bearer token header only.",
+  "forbidden": [
+    "provider writes or subscription changes",
+    "DB writes/manual repair",
+    "runtime changes/restarts/tunnels",
+    "raw Graph body/headers/errors/provider IDs/URLs or secrets persisted/output",
+    "api-app/.local-files access"
+  ],
+  "output": "Only frozen sanitizedstdout direct to ownCP75files plus wrapperUTC/pins/helper/GO/output hashes. Missing overrides remain unknown.",
+  "parent": "Pending",
+  "VAL05": "open_unwaived"
+}

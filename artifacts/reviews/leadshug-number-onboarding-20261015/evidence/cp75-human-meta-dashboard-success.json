@@ -1,0 +1,10 @@
+{
+  "checkpoint": "cp75-human-meta-dashboard-success",
+  "recordedAtUtc": "2026-10-18T03:23:26.830172+00:00",
+  "operatorReport": "Sucesso / HTTP 200",
+  "controlWindow": "cp75-meta-dashboard-control-window.json",
+  "event": "standard messages test, payload editing not requested",
+  "notPhysicalMessageProof": true,
+  "parent": "Pending",
+  "VAL05": "open_unwaived"
+}

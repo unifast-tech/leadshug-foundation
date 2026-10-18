@@ -1,0 +1,18 @@
+{
+  "checkpoint": "root-cp75-dashboard-counter-go",
+  "issuedAtUtc": "2026-10-18T03:23:26.842832+00:00",
+  "decision": "GO_readonly",
+  "sinceUtc": "2026-10-18T03:21:03.249333Z",
+  "counterHelper": "foundation_documentation/artifacts/tmp/number-onboarding-execution/T/cp69-gateway-route-counter-v2.py",
+  "counterSha256": "d0df3ac082ca182b4e2a7a6a7b52390733e3c80b8b8e09737341320651736581",
+  "apiId": "9eccbea4825108cec2b8a6fcd48c43c17845e216415fe95e3972265c6ad34cf1",
+  "apiImage": "sha256:fe5fb7eaf6a68123f9da6b92a0a69483180d213f556b4bedf313f04a383b4821",
+  "maxCounterInvocations": 1,
+  "aggregateHelper": "foundation_documentation/artifacts/tmp/number-onboarding-execution/cp69-official-inout-aggregate-readonly.cjs",
+  "aggregateSha256": "64e4f08964fb846282608939825dd7063b2b567756047df81cce85c29aac6571",
+  "maxAggregateInvocations": 1,
+  "preconditions": "Exact current API/gateway owner/project/image/healthy+config6d as accepted cp75; frozen helpers unchanged",
+  "boundary": "Same counters-only redacted gateway schema and scoped readonly aggregate, no rawlogs/IDs/messagecontent/secrets/env/Config.Env/privatefiles/providerrequests/writes/runtimechanges. Separate control window; no attribution to exact panelrequest or VAL05 closure.",
+  "parent": "Pending",
+  "VAL05": "open_unwaived"
+}

@@ -1,0 +1,41 @@
+{
+  "checkpoint": "cp75-meta-current-callback-preparation",
+  "recordedAtUtc": "2026-10-18T03:20:22.757320+00:00",
+  "helpers": [
+    {
+      "operation": "phone_webhook_configuration",
+      "helperPath": "foundation_documentation/artifacts/tmp/number-onboarding-execution/cp75-meta-phone-webhook-readonly.cjs",
+      "helperSha256": "8766feb70339444e1ced848333b60f728e5f6abc70ccdc223d722555c99e8681",
+      "derivedFromSha256": "87c46c4f4f981779a29d19344ebb9aad17e586a240f427b189fe3242f86cf5c3",
+      "delta": "Only expected public callback literal changed; all resolver/request/parser code unchanged.",
+      "offlineSelfTest": {
+        "allThreeLayersDirectEqualDifferentEmptyMalformed": true,
+        "allThreeLayersNestedMatches": true,
+        "conflictingNestedValuesUnknown": true,
+        "mixedLayerMatchesRemainDistinct": true,
+        "absentOrMalformedUnknown": true,
+        "unknownKeysCountedAndRedacted": true,
+        "URLsAndCanaryValuesAbsentFromSerializedOutput": true,
+        "malformedResponseAndNumericErrorAllowlist": true,
+        "invocationModeGuard": true,
+        "networkCalled": false,
+        "resolverCalled": false,
+        "dbCalled": false
+      }
+    },
+    {
+      "operation": "waba_subscribed_apps",
+      "helperPath": "foundation_documentation/artifacts/tmp/number-onboarding-execution/cp75-meta-subscription-readonly.cjs",
+      "helperSha256": "633cce33ab7c6c8d7cd20fa50f1b55725c3fe77d7f1027408807a8ab0363b560",
+      "derivedFromSha256": "b9b0525a3aa09ccb06b88de09377563290304db74ef7671e613933714bd12940",
+      "delta": "Only expected public callback literal changed; all resolver/request/parser code unchanged.",
+      "offlineSelfTest": {
+        "syntheticCasesPassed": 13,
+        "networkCalled": false,
+        "resolverCalled": false,
+        "bodyTextOrTraceEmitted": false
+      }
+    }
+  ],
+  "executionPerformed": false
+}

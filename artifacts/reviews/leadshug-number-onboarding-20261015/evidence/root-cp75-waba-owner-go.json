@@ -1,0 +1,19 @@
+{
+  "checkpoint": "root-cp75-waba-owner-go",
+  "issuedAtUtc": "2026-10-18T03:28:40.168250+00:00",
+  "decision": "GO_readonly",
+  "apiId": "9eccbea4825108cec2b8a6fcd48c43c17845e216415fe95e3972265c6ad34cf1",
+  "apiImage": "sha256:fe5fb7eaf6a68123f9da6b92a0a69483180d213f556b4bedf313f04a383b4821",
+  "helperPath": "foundation_documentation/artifacts/tmp/number-onboarding-execution/cp75-waba-owner-readonly-v2.cjs",
+  "helperSha256": "2c8452795e40f0a14413db4c9f826dd086b3520d40821d8e1fd3baecc7e7c84a",
+  "operation": "ONE scoped GET current WABA fields=owner_business_info",
+  "maxInvocations": 1,
+  "rootReview": "Full v1 diff vs accepted subscription reader and v2 delta inspected; exact E copy and root offline selftest14 pass. v1 nondecimal inference corrected before live use. Guards/network/resolver unchanged.",
+  "preconditions": "Fresh exact healthy API/image/project/owner/service, helper bytes exact; existing scoped current BU/channel/identity/gen/epoch/credentialversion before/after guards required.",
+  "privateBoundary": "Existing compiled scoped ChannelCredentialResolver.resolve(channel,verify), customer token/cipherkey/resolvedIDs only API memory as necessary. Bearer header only; no appsecret, files/envfiles/Config.Env, token URLs/argv or rawGraph/body/headers/error strings/names/IDs in artifacts.",
+  "limits": "NormalTLS10s128KiB, max1 GET, no retry/fallback/paging/redirect. No DB/provider writes, runtime changes, private files access or physical retry.",
+  "output": "Only frozen boolean/type/shape/error numeric whitelist direct stdout plus wrapper UTC/currentpins/helper/GO/stdout hashes; unsupported shape unknown.",
+  "interpretation": "Compare to human-confirmed public app managing portfolio; different owner does not establish cause, Standard access eligibility or need for AppReview.",
+  "parent": "Pending",
+  "VAL05": "open_unwaived"
+}

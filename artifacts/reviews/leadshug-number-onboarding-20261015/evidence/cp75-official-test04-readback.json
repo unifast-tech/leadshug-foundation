@@ -1,0 +1,66 @@
+{
+  "checkpoint": "cp75-official-test04-readback",
+  "capturedAtUtc": "2026-10-18T03:18:59.281568+00:00",
+  "goSha256": "55a136d446b5bc4cfa210ee3a3b982aa0b5354d5a51676cb70d1042c5afbfeb8",
+  "aggregate": {
+    "helperPath": "foundation_documentation/artifacts/tmp/number-onboarding-execution/cp69-official-inout-aggregate-readonly.cjs",
+    "helperSha256": "64e4f08964fb846282608939825dd7063b2b567756047df81cce85c29aac6571",
+    "exitCode": 0,
+    "stdoutPath": "cp75-official-test04-readback.stdout.json",
+    "stdoutBytes": 1380,
+    "stdoutSha256": "537c3259e2c85837085ec12959844cbff3eb12722d5b1e86b17beb05b5479c1d"
+  },
+  "gatewayCounter": {
+    "helperPath": "foundation_documentation/artifacts/tmp/number-onboarding-execution/T/cp69-gateway-route-counter-v2.py",
+    "helperSha256": "d0df3ac082ca182b4e2a7a6a7b52390733e3c80b8b8e09737341320651736581",
+    "exitCode": 0,
+    "outputPath": "cp75-test04-gateway-ingress.json",
+    "outputBytes": 1540,
+    "outputSha256": "9b9530db43ae680f01993b284bcf32eaafd0bc7607948fc0adbe9dd72ebd2338",
+    "sinceUtc": "2026-10-18T03:11:56.914652Z",
+    "completeCoverage": true
+  },
+  "runtime": {
+    "apiId": "9eccbea4825108cec2b8a6fcd48c43c17845e216415fe95e3972265c6ad34cf1",
+    "apiImage": "sha256:fe5fb7eaf6a68123f9da6b92a0a69483180d213f556b4bedf313f04a383b4821",
+    "webId": "9aa55b6681a8480dbfd7cbf2a51ab8571035603b288b52e6798d93741af01093",
+    "webImage": "sha256:cfd5e58b91a67d2fae4f37759274a34209cd2501082650a49545a60a12642361",
+    "gatewayId": "0c48d94e9fe5b4ad75efd304db2752dfa4cab3befc59b9f736574d6cd551eea3",
+    "gatewayImage": "sha256:76090a34b858323b6ab169711adc08253b5bee7123a973dc581ed46b643bc109",
+    "activeConfigSha256": "6d4563cc5f5823bdb1177f350c942dc2472fc70133aef5b177fa4b57c5c9f1a0",
+    "apiHealthy": true
+  },
+  "sourceHeads": {
+    "api": "db5a86758a165fac8a1ab587599c37b17890530c",
+    "web": "74b9d4b714044829796f875d00553f077c1c329d",
+    "root": "80e3940126f22a941f90dba4f5e801b6c0eb2f58"
+  },
+  "compiledModuleSha256": {
+    "dist/domain/channels/channels.service.js": "aa2d4e51ee906b3cc7dd79d4835cd331b00eaa772655506630e6f944d13bda73",
+    "dist/domain/channels/receipt-attempt-convergence.js": "93495861c2b300b66c5d5292803e3fbb71819c662896ae81ef457e8a4abbd1c4",
+    "dist/surfaces/webhooks/evolution.controller.js": "09b1ba14d22f90d345cce9f1e87cfcee8de4560a755c6f59528e22b7955d47ac",
+    "dist/integrations/meta/meta.client.js": "a756c9693c574f6fb4987d878af8d4fbeaf9f07c86a5c5e6acadeca4f7a771cb"
+  },
+  "postCounterHealth": {
+    "host": "estimation-editions-knee-inclusion.trycloudflare.com",
+    "path": "/health",
+    "client": "Python http.client, default certificate validation",
+    "status": 200,
+    "bytes": 15,
+    "sha256": "a29ee2b15c494311c52521766e44af56a3ad2248e7a8ab465e5206463c13d288",
+    "redirect": false,
+    "setCookie": false
+  },
+  "comparisonToCp74Baseline": {
+    "channelStatus": "unchanged CONECTANDO",
+    "attempt": "unchanged v7 PENDING_RECEIPT",
+    "receipt": "still absent",
+    "messagesAndConversations": "still zero"
+  },
+  "scopeLimitations": [
+    "Gateway counters are aggregated by route/method/status, not attributable to an individual request or identity.",
+    "Webhook aggregate has no identity-attribution field.",
+    "No message content, contacts, provider IDs, or payloads were queried."
+  ],
+  "status": "one bounded readback complete; stopped"
+}

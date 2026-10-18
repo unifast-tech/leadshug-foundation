@@ -1,0 +1,24 @@
+{
+  "checkpoint": "cp75-waba-owner-readonly-v2-preparation",
+  "preparedAtUtc": "2026-10-18T03:28:14.458740+00:00",
+  "status": "preparation_only_no_live_execution",
+  "helperPath": "foundation_documentation/artifacts/tmp/number-onboarding-execution/cp75-waba-owner-readonly-v2.cjs",
+  "helperSha256": "2c8452795e40f0a14413db4c9f826dd086b3520d40821d8e1fd3baecc7e7c84a",
+  "evidenceCopyPath": "cp75-waba-owner-readonly-v2.cjs",
+  "evidenceCopySha256": "2c8452795e40f0a14413db4c9f826dd086b3520d40821d8e1fd3baecc7e7c84a",
+  "supersedesForReviewOnly": "cp75-waba-owner-readonly-preparation.json; v1 helper/evidence preserved unchanged",
+  "sourceV1Sha256": "ad9775d7362e3f657d344bdda88b0b8fd9266f78b0c1e1c01da60e51c71b40f6",
+  "correction": "Only a nonempty decimal-string owner_business_info.id is compared. Whitespace/nondecimal/empty/missing/null/malformed IDs return null.",
+  "offlineValidation": {
+    "nodeSyntaxCheck": "passed",
+    "syntheticCasesPassed": 14,
+    "includesEqualDecimalAndDifferentDecimal": true,
+    "includesMissingNullAndMalformed": true,
+    "whitespaceAndNondecimalReturnUnknown": true,
+    "redactsAllIdentifierCanariesFromSerializedOutput": true,
+    "networkCalled": false,
+    "resolverCalled": false
+  },
+  "liveGraphOrCredentialRead": false,
+  "executionAuthorization": "No GO; wait for distinct root GO."
+}

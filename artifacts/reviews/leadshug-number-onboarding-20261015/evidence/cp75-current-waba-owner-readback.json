@@ -1,0 +1,24 @@
+{
+  "checkpoint": "cp75-current-waba-owner-readback",
+  "capturedAtUtc": "2026-10-18T03:29:03.336092+00:00",
+  "goSha256": "72e2fbb58e39a4bd54f09a6fa8c8a3aef7e575d716436ab85a5219541d882522",
+  "helperPath": "foundation_documentation/artifacts/tmp/number-onboarding-execution/cp75-waba-owner-readonly-v2.cjs",
+  "helperSha256": "2c8452795e40f0a14413db4c9f826dd086b3520d40821d8e1fd3baecc7e7c84a",
+  "invocationExitCode": 0,
+  "requestCount": 1,
+  "stdoutPath": "cp75-current-waba-owner-readback.stdout.json",
+  "stdoutBytes": 333,
+  "stdoutSha256": "08687d96055b9c5ec058e89b93968c0b0c1c2740dd376846ff503f8774e96ad6",
+  "api": {
+    "id": "9eccbea4825108cec2b8a6fcd48c43c17845e216415fe95e3972265c6ad34cf1",
+    "image": "sha256:fe5fb7eaf6a68123f9da6b92a0a69483180d213f556b4bedf313f04a383b4821",
+    "state": "running",
+    "health": "healthy",
+    "owner": "number-onboarding",
+    "project": "leadshug_channels_local",
+    "service": "api"
+  },
+  "scope": "One guarded current WABA owner_business_info GET; output contains only match boolean/shape and numeric error allowlist.",
+  "interpretation": "The returned current WABA owner ID matched the human-confirmed public managing-business ID; this does not establish root cause, access tier, or App Review requirements.",
+  "status": "complete; GO consumed; stop"
+}

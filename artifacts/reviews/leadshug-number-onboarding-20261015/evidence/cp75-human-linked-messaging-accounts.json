@@ -1,0 +1,20 @@
+{
+  "checkpoint": "cp75-human-linked-messaging-accounts",
+  "recordedAtUtc": "2026-10-18T03:30:59.475266+00:00",
+  "source": "Operator read-only report of visible Messaging accounts tab",
+  "linkedAccountCount": 2,
+  "appManagingBusinessAccount": {
+    "fullControlCount": 1,
+    "partialControlCount": 0,
+    "partnerCount": 0
+  },
+  "secondAccount": {
+    "fullControlCount": 2,
+    "partialControlCount": 0,
+    "partnerCount": 1
+  },
+  "testPhoneAccountMapping": "unknown",
+  "partnerIdentity": "unknown in this tab",
+  "causalConclusion": null,
+  "nextQuestion": "Read-only comparison of which account details show the already selected official test phone; no number/ID requested, no permission or routing changes."
+}

@@ -1,0 +1,35 @@
+{
+  "checkpoint": "cp75-waba-owner-readonly-preparation",
+  "preparedAtUtc": "2026-10-18T03:27:46.120408+00:00",
+  "status": "preparation_only_no_live_execution",
+  "helperPath": "foundation_documentation/artifacts/tmp/number-onboarding-execution/cp75-waba-owner-readonly.cjs",
+  "helperSha256": "ad9775d7362e3f657d344bdda88b0b8fd9266f78b0c1e1c01da60e51c71b40f6",
+  "evidenceCopyPath": "cp75-waba-owner-readonly.cjs",
+  "evidenceCopySha256": "ad9775d7362e3f657d344bdda88b0b8fd9266f78b0c1e1c01da60e51c71b40f6",
+  "derivedFromPath": "foundation_documentation/artifacts/tmp/number-onboarding-execution/cp75-meta-subscription-readonly.cjs",
+  "derivedFromSha256": "633cce33ab7c6c8d7cd20fa50f1b55725c3fe77d7f1027408807a8ab0363b560",
+  "scope": "One future guarded WABA owner_business_info GET, compares only the known public managing-business identifier and emits a boolean/null plus structural field metadata.",
+  "changedAreas": [
+    "owner_business_info parser and safe-output allowlist",
+    "offline synthetic parser/redaction controls",
+    "single GET target changed to WABA owner_business_info field projection",
+    "exported parser name/comment"
+  ],
+  "preservedAreas": [
+    "Scoped BU/channel/current attempt/identity/generation/epoch/credential pre/post guards",
+    "Existing credential resolver and in-memory scoped token handling",
+    "Normal TLS, exact host, 10 second timeout, 128 KiB response bound, no retry/redirect/paging",
+    "Numeric/boolean Graph error allowlist"
+  ],
+  "validation": {
+    "nodeCheck": "passed with node.exe --check",
+    "selfTest": "passed, 12 synthetic cases",
+    "selfTestNetworkCalled": false,
+    "selfTestResolverCalled": false,
+    "liveGraphOrRuntimeExecuted": false,
+    "secretsRead": false,
+    "providerWrites": false
+  },
+  "goReferenceSha256": "15563577a4f49356ed4ea2e4fcd648a0bf2363a0bea12b90865b52e63996df40",
+  "authorization": "No execution GO; wait for root review and distinct GO."
+}

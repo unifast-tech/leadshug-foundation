@@ -1,0 +1,27 @@
+{
+  "checkpoint": "cp75-meta-current-callback-waba-subscription",
+  "capturedAtUtc": "2026-10-18T03:21:18.863025+00:00",
+  "goPath": "root-cp75-meta-current-callback-go.json",
+  "goSha256": "15563577a4f49356ed4ea2e4fcd648a0bf2363a0bea12b90865b52e63996df40",
+  "operation": "waba-subscription",
+  "api": {
+    "id": "9eccbea4825108cec2b8a6fcd48c43c17845e216415fe95e3972265c6ad34cf1",
+    "image": "sha256:fe5fb7eaf6a68123f9da6b92a0a69483180d213f556b4bedf313f04a383b4821",
+    "state": "running",
+    "health": "healthy",
+    "owner": "number-onboarding",
+    "project": "leadshug_channels_local",
+    "service": "api"
+  },
+  "helperPath": "foundation_documentation/artifacts/tmp/number-onboarding-execution/cp75-meta-subscription-readonly.cjs",
+  "helperSha256": "633cce33ab7c6c8d7cd20fa50f1b55725c3fe77d7f1027408807a8ab0363b560",
+  "invocationExitCode": 0,
+  "stdoutPath": "cp75-current-waba-subscription-readback.stdout.json",
+  "stdoutBytes": 273,
+  "stdoutSha256": "059042113a35438e010e1a2ad443f937eeaa34d881b12d0789cb207d3607f27e",
+  "requestCount": 1,
+  "normalTls": true,
+  "redirectsOrRetries": false,
+  "secretsOrRawProviderOutputPersisted": false,
+  "result": "See direct sanitized stdout; no cause inference."
+}

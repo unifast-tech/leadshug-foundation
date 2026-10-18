@@ -1,0 +1,11 @@
+{
+  "checkpoint": "cp75-human-official04-not-visible",
+  "recordedAtUtc": "2026-10-18T03:18:09.430105+00:00",
+  "operatorReport": "Entrada não apareceu",
+  "window": "cp74-official-physical-test04-window.json",
+  "contactControl": "same previous test contact; no new contact available",
+  "outboundReportedTested": false,
+  "evidenceLimit": "Human UI observation only; no routing/root-cause conclusion",
+  "parent": "Pending",
+  "VAL05": "open_unwaived"
+}

@@ -1,0 +1,9 @@
+{
+  "checkpoint": "cp75-meta-dashboard-control-window",
+  "startedUtc": "2026-10-18T03:21:03.249333Z",
+  "host": "estimation-editions-knee-inclusion.trycloudflare.com",
+  "purpose": "Separate control: standard messages POST from same Meta app panel to current callback; not physical04 or VAL05",
+  "physical04WindowEndedByCaptureUtc": "2026-10-18T03:18:33.655Z",
+  "status": "awaiting_human_panel_test",
+  "noPayloadEditingRequested": true
+}

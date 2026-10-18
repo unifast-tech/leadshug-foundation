@@ -1,0 +1,39 @@
+{
+  "checkpoint": "cp75-post-control-official-readback",
+  "capturedAtUtc": "2026-10-18T03:23:56.324465+00:00",
+  "goSha256": "549b7d423e3e7dbbd32cb46e8d026e004ca2a573d5f6b4209adc08b266ca915b",
+  "gatewayCounter": {
+    "helperPath": "foundation_documentation/artifacts/tmp/number-onboarding-execution/T/cp69-gateway-route-counter-v2.py",
+    "helperSha256": "d0df3ac082ca182b4e2a7a6a7b52390733e3c80b8b8e09737341320651736581",
+    "exitCode": 0,
+    "path": "cp75-dashboard-control-ingress.json",
+    "bytes": 1348,
+    "sha256": "59aeedf0f0311fe45d9ec6b0f2bdb115a969cee7844112b51b5995337a1d2ec2",
+    "sinceUtc": "2026-10-18T03:21:03.249333Z",
+    "coverageComplete": true
+  },
+  "aggregate": {
+    "helperPath": "foundation_documentation/artifacts/tmp/number-onboarding-execution/cp69-official-inout-aggregate-readonly.cjs",
+    "helperSha256": "64e4f08964fb846282608939825dd7063b2b567756047df81cce85c29aac6571",
+    "exitCode": 0,
+    "stdoutPath": "cp75-post-control-official-readback.stdout.json",
+    "stdoutBytes": 1380,
+    "stdoutSha256": "537c3259e2c85837085ec12959844cbff3eb12722d5b1e86b17beb05b5479c1d"
+  },
+  "api": {
+    "id": "9eccbea4825108cec2b8a6fcd48c43c17845e216415fe95e3972265c6ad34cf1",
+    "image": "sha256:fe5fb7eaf6a68123f9da6b92a0a69483180d213f556b4bedf313f04a383b4821",
+    "state": "running",
+    "health": "healthy",
+    "owner": "number-onboarding",
+    "project": "leadshug_channels_local",
+    "service": "api"
+  },
+  "gateway": {
+    "id": "0c48d94e9fe5b4ad75efd304db2752dfa4cab3befc59b9f736574d6cd551eea3",
+    "image": "sha256:76090a34b858323b6ab169711adc08253b5bee7123a973dc581ed46b643bc109",
+    "activeConfigSha256": "6d4563cc5f5823bdb1177f350c942dc2472fc70133aef5b177fa4b57c5c9f1a0"
+  },
+  "interpretation": "Temporal aggregate correlation only; cannot attribute the gateway POST to the dashboard action or identity. No messages or receipts changed in the scoped snapshot.",
+  "status": "complete; stop"
+}

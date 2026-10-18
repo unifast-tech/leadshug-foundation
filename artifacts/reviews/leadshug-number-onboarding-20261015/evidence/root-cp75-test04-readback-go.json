@@ -1,0 +1,42 @@
+{
+  "checkpoint": "root-cp75-test04-readback-go",
+  "issuedAtUtc": "2026-10-18T03:18:09.464085+00:00",
+  "decision": "GO_readonly",
+  "profile": "Operational / DevOps",
+  "technicalScope": [
+    "docker",
+    "nestjs",
+    "react",
+    "vite",
+    "postgresql",
+    "prisma"
+  ],
+  "apiId": "9eccbea4825108cec2b8a6fcd48c43c17845e216415fe95e3972265c6ad34cf1",
+  "apiImage": "sha256:fe5fb7eaf6a68123f9da6b92a0a69483180d213f556b4bedf313f04a383b4821",
+  "gatewayId": "0c48d94e9fe5b4ad75efd304db2752dfa4cab3befc59b9f736574d6cd551eea3",
+  "gatewayImage": "sha256:76090a34b858323b6ab169711adc08253b5bee7123a973dc581ed46b643bc109",
+  "gatewaySourceAndActiveConfigSha256": "6d4563cc5f5823bdb1177f350c942dc2472fc70133aef5b177fa4b57c5c9f1a0",
+  "counterHelperPath": "foundation_documentation/artifacts/tmp/number-onboarding-execution/T/cp69-gateway-route-counter-v2.py",
+  "counterHelperSha256": "d0df3ac082ca182b4e2a7a6a7b52390733e3c80b8b8e09737341320651736581",
+  "counterSinceUtc": "2026-10-18T03:11:56.914652Z",
+  "counterMaxInvocations": 1,
+  "aggregateHelperPath": "foundation_documentation/artifacts/tmp/number-onboarding-execution/cp69-official-inout-aggregate-readonly.cjs",
+  "aggregateHelperSha256": "64e4f08964fb846282608939825dd7063b2b567756047df81cce85c29aac6571",
+  "aggregateMaxInvocations": 1,
+  "preconditions": "Exact API/gateway/Web pins owner/project/healthy as appropriate, sourceheads and four accepted compiled hashes, gateway6d source/active; no actual private files inspected",
+  "allowed": [
+    "One frozen counter invocation, only already-redacted gateway records in memory; persist coverage and joint route/method/status counts only",
+    "One frozen aggregate invocation via pinnedAPIstdin, direct sanitizedstdout plus wrapper",
+    "One normalTLS /health GET12s32KiB after counter on estimation-editions-knee-inclusion.trycloudflare.com, emitstatus/hash/cookie/redirectflags only"
+  ],
+  "forbidden": [
+    "raw API/provider/gateway log outputs",
+    "secrets/env/Config.Env/privatefiles/credential reads",
+    "provider requests",
+    "runtime or manual DB writes/restarts",
+    "extra physical tests/registration/migration",
+    "api-app/.local-files access"
+  ],
+  "parent": "Pending",
+  "VAL05": "open_unwaived"
+}

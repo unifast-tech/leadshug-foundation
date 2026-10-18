@@ -1,0 +1,265 @@
+{
+  "checkpoint": "root-cp75-official-delivery-diagnosis",
+  "adjudicatedAtUtc": "2026-10-18T03:30:59.475266+00:00",
+  "profile": "Operational / DevOps",
+  "scopes": [
+    "docker",
+    "nestjs",
+    "react",
+    "vite",
+    "postgresql",
+    "prisma"
+  ],
+  "readiness": "PACED-Ready rerun passed",
+  "parentDeliveryStage": "Pending",
+  "VAL05": "open_unwaived",
+  "physical04": {
+    "operatorReport": "Entrada não apareceu",
+    "contact": "reused prior contact; no fresh contact available",
+    "gatewayWindowStartUtc": "2026-10-18T03:11:56.914652Z",
+    "coverage": "complete 61/61 lines, no overflow/timeout/unparsed/tail limit",
+    "metaRouteRequests": 0,
+    "otherPost409": "not attributed to Meta",
+    "health": "Separate post-window /health normalTLS200 with expected hash, only point availability"
+  },
+  "panelControl": {
+    "operatorReport": "Sucesso / HTTP 200",
+    "separateWindowStartUtc": "2026-10-18T03:21:03.249333Z",
+    "coverage": "complete 5/5 lines",
+    "metaPost200Count": 1,
+    "attribution": "Temporal aggregate correlation only; no request identity/payload; cannot independently attribute exact POST to panel action or current phone"
+  },
+  "currentScopedGraphReads": {
+    "phoneWebhook": {
+      "httpStatus": 200,
+      "contextStable": true,
+      "applicationCallbackMatchesCurrentHost": true,
+      "wabaAndPhoneOverrideLayers": "not returned, unknown"
+    },
+    "wabaSubscription": {
+      "httpStatus": 200,
+      "contextStable": true,
+      "dataCount": 1,
+      "currentAppPresent": true,
+      "override": "unknown"
+    },
+    "wabaOwner": {
+      "httpStatus": 200,
+      "contextStable": true,
+      "matchesHumanConfirmedAppManagingPortfolio": true,
+      "comparisonOutput": "boolean only",
+      "unsupportedShape": "unknown, not different"
+    }
+  },
+  "unchangedScopedAggregate": {
+    "attemptVersion": 7,
+    "attemptState": "PENDING_RECEIPT",
+    "providerState": "SUBSCRIBED",
+    "receiptPresent": false,
+    "inbound": 0,
+    "outbound": 0,
+    "conversationCount": 0,
+    "webhookBUCount": 0,
+    "identityAttributionAvailable": false
+  },
+  "rootChecks": {
+    "exactReceiptHashesAndStdoutInspected": true,
+    "helperOfflineSelftests": "Phone/subscription pass, owner v2 14 cases pass root rerun",
+    "ownerV1Correction": "Root caught arbitrary nondecimal strings treated as different; v1 preserved and never executed; v2 decimal-string guard/test correction before GO",
+    "gates": "Each distinct GO consumed; scoped customer token/cipherkey/resource IDs API-memory-only; no appsecret or host environment-file reads"
+  },
+  "humanMessagingAccounts": {
+    "linkedCount": 2,
+    "testPhoneAccountMapping": "unknown; read-only question pending",
+    "ownershipOrPartnerPresenceIsCause": false
+  },
+  "claimsNotMade": [
+    "Official channel ready or real delivery proven",
+    "Standard access or Whatsflow is established cause",
+    "Global routing change applies to this existing thread",
+    "Missing override fields prove overrides absent",
+    "Whole-window transport continuously healthy",
+    "Panel synthetic event satisfies VAL05",
+    "New product test suite/browser validation or runtime/code change"
+  ],
+  "nextExactStep": "Read-only UI mapping of official test phone to the two linked Messaging accounts; await human comparison, no physical resend/removal/permission expansion pending concrete evidence.",
+  "evidence": [
+    {
+      "path": "cp75-current-phone-webhook-readback.exit-code.txt",
+      "bytes": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+    },
+    {
+      "path": "cp75-current-phone-webhook-readback.json",
+      "bytes": 1211,
+      "sha256": "f00370bb002265715b9d2e160062b22a9b4ff255de422cfac6b6575d898655bb"
+    },
+    {
+      "path": "cp75-current-phone-webhook-readback.stdout.json",
+      "bytes": 643,
+      "sha256": "70fb8505a22ab004229208a89d21cce607630a7770d9303049cdb091d9aea56a"
+    },
+    {
+      "path": "cp75-current-waba-owner-readback.exit-code.txt",
+      "bytes": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+    },
+    {
+      "path": "cp75-current-waba-owner-readback.json",
+      "bytes": 1313,
+      "sha256": "7d98f0df9565acfe42d7f08b526799bb039364e9e1a06bfc6295e185e6f19062"
+    },
+    {
+      "path": "cp75-current-waba-owner-readback.stdout.json",
+      "bytes": 333,
+      "sha256": "08687d96055b9c5ec058e89b93968c0b0c1c2740dd376846ff503f8774e96ad6"
+    },
+    {
+      "path": "cp75-current-waba-subscription-readback.exit-code.txt",
+      "bytes": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+    },
+    {
+      "path": "cp75-current-waba-subscription-readback.json",
+      "bytes": 1222,
+      "sha256": "1b4ab6b23117bbf232f9861d70ee8aa42f73b0fec7a27be3fc553820adc911b3"
+    },
+    {
+      "path": "cp75-current-waba-subscription-readback.stdout.json",
+      "bytes": 273,
+      "sha256": "059042113a35438e010e1a2ad443f937eeaa34d881b12d0789cb207d3607f27e"
+    },
+    {
+      "path": "cp75-dashboard-control-ingress.exit-code.txt",
+      "bytes": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+    },
+    {
+      "path": "cp75-dashboard-control-ingress.json",
+      "bytes": 1348,
+      "sha256": "59aeedf0f0311fe45d9ec6b0f2bdb115a969cee7844112b51b5995337a1d2ec2"
+    },
+    {
+      "path": "cp75-human-linked-messaging-accounts.json",
+      "bytes": 723,
+      "sha256": "02fae8731115d1f62bc28e81ff871c4831e47af21d3d60ee4d8ed70aaba97e57"
+    },
+    {
+      "path": "cp75-human-meta-dashboard-success.json",
+      "bytes": 369,
+      "sha256": "93000dd0557d201558980d3bbbc2025fd569de69e1a7ee79c83707593731cd60"
+    },
+    {
+      "path": "cp75-human-official04-not-visible.json",
+      "bytes": 457,
+      "sha256": "40c073fb2823045db52ab4af9be039311b21a1fc97d9342ce75e1b03d8c86493"
+    },
+    {
+      "path": "cp75-meta-current-callback-preparation.json",
+      "bytes": 1884,
+      "sha256": "82388165514b90c9d1df4207f9feeac0a1478e2da0b6de2322501ee092860362"
+    },
+    {
+      "path": "cp75-meta-dashboard-control-window.json",
+      "bytes": 442,
+      "sha256": "b137b7815186c2e8d7cea40db7cbd3cb3f7af799fd482bfd9ac617c2461c4d27"
+    },
+    {
+      "path": "cp75-meta-phone-webhook-readonly.cjs",
+      "bytes": 19539,
+      "sha256": "8766feb70339444e1ced848333b60f728e5f6abc70ccdc223d722555c99e8681"
+    },
+    {
+      "path": "cp75-meta-subscription-readonly.cjs",
+      "bytes": 16889,
+      "sha256": "633cce33ab7c6c8d7cd20fa50f1b55725c3fe77d7f1027408807a8ab0363b560"
+    },
+    {
+      "path": "cp75-official-test04-readback.exit-code.txt",
+      "bytes": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+    },
+    {
+      "path": "cp75-official-test04-readback.json",
+      "bytes": 3379,
+      "sha256": "4eb96bced70a7532ffcb899787cd64cbf31c62977c818ef9f044f21ab3f568a3"
+    },
+    {
+      "path": "cp75-official-test04-readback.stdout.json",
+      "bytes": 1380,
+      "sha256": "537c3259e2c85837085ec12959844cbff3eb12722d5b1e86b17beb05b5479c1d"
+    },
+    {
+      "path": "cp75-post-control-official-readback.exit-code.txt",
+      "bytes": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+    },
+    {
+      "path": "cp75-post-control-official-readback.json",
+      "bytes": 1945,
+      "sha256": "2e472e781b87d250823b5386207c2958a77490355e93c448e46c5c367f770ef8"
+    },
+    {
+      "path": "cp75-post-control-official-readback.stdout.json",
+      "bytes": 1380,
+      "sha256": "537c3259e2c85837085ec12959844cbff3eb12722d5b1e86b17beb05b5479c1d"
+    },
+    {
+      "path": "cp75-test04-gateway-ingress.exit-code.txt",
+      "bytes": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+    },
+    {
+      "path": "cp75-test04-gateway-ingress.json",
+      "bytes": 1540,
+      "sha256": "9b9530db43ae680f01993b284bcf32eaafd0bc7607948fc0adbe9dd72ebd2338"
+    },
+    {
+      "path": "cp75-waba-owner-readonly-preparation.json",
+      "bytes": 1948,
+      "sha256": "83e67c73b6b0307e572bcc01addda095f8b26e10712df954bd2f3c3455d9829f"
+    },
+    {
+      "path": "cp75-waba-owner-readonly-v2-preparation.json",
+      "bytes": 1340,
+      "sha256": "bec332165eb28caf239fd5da8987fd59c932d15efc7a43d16187a6620455fd0c"
+    },
+    {
+      "path": "cp75-waba-owner-readonly-v2.cjs",
+      "bytes": 17384,
+      "sha256": "2c8452795e40f0a14413db4c9f826dd086b3520d40821d8e1fd3baecc7e7c84a"
+    },
+    {
+      "path": "cp75-waba-owner-readonly.cjs",
+      "bytes": 16903,
+      "sha256": "ad9775d7362e3f657d344bdda88b0b8fd9266f78b0c1e1c01da60e51c71b40f6"
+    },
+    {
+      "path": "root-cp75-dashboard-counter-go.json",
+      "bytes": 1300,
+      "sha256": "549b7d423e3e7dbbd32cb46e8d026e004ca2a573d5f6b4209adc08b266ca915b"
+    },
+    {
+      "path": "root-cp75-meta-current-callback-go.json",
+      "bytes": 3377,
+      "sha256": "15563577a4f49356ed4ea2e4fcd648a0bf2363a0bea12b90865b52e63996df40"
+    },
+    {
+      "path": "root-cp75-test04-readback-go.json",
+      "bytes": 2239,
+      "sha256": "55a136d446b5bc4cfa210ee3a3b982aa0b5354d5a51676cb70d1042c5afbfeb8"
+    },
+    {
+      "path": "root-cp75-waba-owner-go.json",
+      "bytes": 1871,
+      "sha256": "72e2fbb58e39a4bd54f09a6fa8c8a3aef7e575d716436ab85a5219541d882522"
+    }
+  ],
+  "writes": "Foundation diagnostic helpers/receipts/docs only; no provider/DB/product/runtime writes, no Railway deployment/source pushes/gitlinks",
+  "residuals": [
+    "Official actual IN/OUT/recovery remains required",
+    "Temporary tunnel instability from CP73 remains qualified",
+    "Private OWNER cohort/R02 preserved",
+    "API image still source i; current source j differs only excluded test, no new all537/browserj claim"
+  ]
+}
