@@ -1,0 +1,122 @@
+{
+  "schema_version": "todo-validation-bundle-v3",
+  "todo_path": "/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/todos/active/features/TODO-leadshug-meta-api-test-number-binding.md",
+  "namespace": "core",
+  "artifact_type": "tactical_execution_contract",
+  "artifact_state": "active",
+  "delivery_status": {
+    "stage": "Pending",
+    "raw_qualifiers": "none",
+    "qualifiers": [],
+    "invalid_qualifiers": [],
+    "next_exact_step": "freeze the published baseline, complete architecture/critique and planning guards, then request implementation approval. Do not start implementation before that approval and a fresh execution GO."
+  },
+  "active_work_state": {
+    "section_present": true,
+    "work_state": "review",
+    "why_this_state_now": "the local-mode direction is accepted, but the technical contract, grant compatibility, architecture review, and implementation approval remain pending.",
+    "exit_condition": "a frozen review package with no unresolved approval-breaking findings and explicit implementation approval; otherwise retain Pending or return for decision."
+  },
+  "blocker_record": {
+    "required": false,
+    "present": false,
+    "blocker": "missing",
+    "why_blocked_now": "missing",
+    "what_unblocks_it": "missing",
+    "owner_source": "missing",
+    "last_confirmed_truth": "missing"
+  },
+  "provisional_record": {
+    "required": false,
+    "present": false,
+    "missing_for_production_ready": "missing",
+    "revisit_criteria": "missing",
+    "dependencies_unblocked": "missing"
+  },
+  "gates": {
+    "critique": {
+      "gate_id": "critique",
+      "section_present": true,
+      "decision": "required",
+      "status": "findings_integrated",
+      "evidence_reference": "artifacts/reviews/leadshug-meta-test-binding-20261018/planning-critique-v1.raw.json; root-critique-v1-resolution.json; raw SHA b39207f874cb7b3d58522756c5f5fd572af3bd1deb2d5c5bf89191379eb4543e.",
+      "waiver_reference": "missing",
+      "decision_present": true,
+      "status_present": true,
+      "evidence_present": true,
+      "waiver_present": false
+    },
+    "test_quality_audit": {
+      "gate_id": "test_quality_audit",
+      "section_present": true,
+      "decision": "required",
+      "status": "not_run",
+      "evidence_reference": "pending implementation.",
+      "waiver_reference": "missing",
+      "decision_present": true,
+      "status_present": true,
+      "evidence_present": true,
+      "waiver_present": false
+    },
+    "final_review": {
+      "gate_id": "final_review",
+      "section_present": true,
+      "decision": "required",
+      "status": "not_run",
+      "evidence_reference": "pending implementation and reviews.",
+      "waiver_reference": "missing",
+      "decision_present": true,
+      "status_present": true,
+      "evidence_present": true,
+      "waiver_present": false
+    },
+    "cutover_integrity_audit": {
+      "gate_id": "cutover_integrity_audit",
+      "section_present": true,
+      "decision": "recommended",
+      "status": "not_run",
+      "evidence_reference": "pending implementation review.",
+      "waiver_reference": "missing",
+      "decision_present": true,
+      "status_present": true,
+      "evidence_present": true,
+      "waiver_present": false
+    },
+    "review_baseline_freeze": {
+      "gate_id": "review_baseline_freeze",
+      "section_present": true,
+      "decision": "required",
+      "status": "no_material_findings",
+      "evidence_reference": "artifacts/reviews/leadshug-meta-test-binding-20261018/baseline-freeze-f35d1a0d.json; root-final-format-equivalence.json",
+      "waiver_reference": "missing",
+      "decision_present": true,
+      "status_present": true,
+      "evidence_present": true,
+      "waiver_present": false
+    },
+    "review_scope_drift": {
+      "gate_id": "review_scope_drift",
+      "section_present": true,
+      "decision": "required",
+      "status": "not_run",
+      "evidence_reference": "pending frozen-baseline guard.",
+      "waiver_reference": "missing",
+      "decision_present": true,
+      "status_present": true,
+      "evidence_present": true,
+      "waiver_present": false
+    },
+    "assumption_code_coherence": {
+      "gate_id": "assumption_code_coherence",
+      "section_present": true,
+      "decision": "required",
+      "status": "no_material_findings",
+      "evidence_reference": "artifacts/reviews/leadshug-meta-test-binding-20261018/root-assumption-coherence-v1.json; deterministic code-coherence-v1.json will record anchor guard result.",
+      "waiver_reference": "missing",
+      "decision_present": true,
+      "status_present": true,
+      "evidence_present": true,
+      "waiver_present": false
+    }
+  }
+}

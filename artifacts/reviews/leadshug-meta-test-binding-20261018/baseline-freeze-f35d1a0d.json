@@ -1,0 +1,42 @@
+{
+  "checkpoint": "cp81-final-approval-baseline-freeze",
+  "recordedAtUtc": "2026-10-18T05:16:45.361309+00:00",
+  "repo": "foundation_documentation",
+  "branch": "main",
+  "commit": "f35d1a0d4815629342cc0ac8df3c2e14a97e8a97",
+  "pushReference": "origin/main",
+  "pushExitCode": 0,
+  "ownedBlobsByteExact": 7,
+  "files": [
+    {
+      "path": "artifacts/reviews/leadshug-meta-test-binding-20261018/authority-preapproval-v2.json",
+      "sha256": "871ede10c51a25fb94f9561a2ac0314b25d75042991028e52efa56fe1ad33389"
+    },
+    {
+      "path": "artifacts/reviews/leadshug-meta-test-binding-20261018/baseline-freeze-409d92be.json",
+      "sha256": "c338bfb2e1db6ae9023c080b67d5458a8152def248b498522be01f6c0730368b"
+    },
+    {
+      "path": "artifacts/reviews/leadshug-meta-test-binding-20261018/code-coherence-v2.json",
+      "sha256": "c355562886ff016a9be92bed9a2473a97959242ad7b02c79cc012bc1368fb0ac"
+    },
+    {
+      "path": "artifacts/reviews/leadshug-meta-test-binding-20261018/root-final-format-equivalence.json",
+      "sha256": "4fd4d114848efb2662add340d6bd73c3dff5be0dc089346b09a5dc376d0c8409"
+    },
+    {
+      "path": "artifacts/reviews/leadshug-meta-test-binding-20261018/root-review-format-delta-adjudication.json",
+      "sha256": "e2a11ad575708b225c31fc09cc1419011937667dbb0ee062349b6f31e42be8d3"
+    },
+    {
+      "path": "artifacts/reviews/leadshug-meta-test-binding-20261018/scope-drift-v2.json",
+      "sha256": "f98d31b9e8fdddfe957c6bdcaea9fd97a750934b8be2f9170c9023bb091fa133"
+    },
+    {
+      "path": "todos/active/features/TODO-leadshug-meta-api-test-number-binding.md",
+      "sha256": "873b8bb99a250b811657af752eeb36cbd4d01b8e39fd05f15d516e4fa0c6cf5a"
+    }
+  ],
+  "reviewComposition": "e83d5bdc architecture + approve critique 92429fed + exact row-aware format/source-citation equivalence across all23materialsections; no new behavior or waiver",
+  "implementationAuthority": false
+}

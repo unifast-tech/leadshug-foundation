@@ -34,7 +34,7 @@ This TODO records WHAT must be delivered if implementation is separately approve
 ## Delivery Status Canon (Required)
 - **Current delivery stage:** `Pending`
 - **Qualifiers:** `none`
-- **Next exact step:** freeze the published baseline, complete architecture/critique and planning guards, then request implementation approval. Do not start implementation before that approval and a fresh execution GO.
+- **Next exact step:** request explicit APROVADO for the reviewed bounded staged plan: qualify the real local credential first; implement only if qualification passes. Architecture/critique and final planning guards passed. No private input or product execution before human approval and distinct required GOs.
 
 ## Active Work State (Required While TODO Remains In `active/`)
 - **Work state:** `review`
@@ -306,14 +306,14 @@ D-01..D-06 above form the single decision set, proposed for renewed published fr
 
 ## Gate: Review Baseline Freeze
 - **Gate decision:** required
-- **Why this decision:** finalize reviewed packet with two schema/Markdown spelling corrections, no behavior change.
+- **Why this decision:** exact reviewed contract plus schema/Markdown/source-citation corrections published before final guards.
 - **Trigger stage:** before final post-review guards and approval request
 - **Baseline branch:** main
-- **Baseline commit:** pending final documentation freeze
+- **Baseline commit:** f35d1a0d4815629342cc0ac8df3c2e14a97e8a97
 - **Baseline push reference:** origin/main
-- **Gate status:** not_run
-- **Findings summary:** independent critique approved 92429fed with zero material blockers. Enum timing uses the canonical already-enforced value; A-02 uses 'or' instead of a literal table pipe. These are formatting/schema repairs, not new scope or a changed review package risk. Final freeze pending.
-- **Evidence / reference:** artifacts/reviews/leadshug-meta-test-binding-20261018/root-review-format-delta-adjudication.json
+- **Gate status:** no_material_findings
+- **Findings summary:** final7ownedblobs byte-exact and pushed. Architecture e83d5bdc + approve critique 92429fed remain valid; root-final-format-equivalence proves all23materialsections match after only row-aware format and existing-source-citation transforms. No waiver or execution approval.
+- **Evidence / reference:** artifacts/reviews/leadshug-meta-test-binding-20261018/baseline-freeze-f35d1a0d.json; root-final-format-equivalence.json
 - **Waiver authority / reference:** n/a
 
 ## Gate: Review Scope Drift
@@ -324,9 +324,9 @@ D-01..D-06 above form the single decision set, proposed for renewed published fr
 - **Material sections compared:** `Context|Scope|Out of Scope|Definition of Done|Validation Steps|Execution Lane Tracking|Decisions|Decision Baseline|Architecture Change Governance|Execution Plan|Flow Evidence Planning Matrix|Security Risk Assessment|Performance & Concurrency Risk Assessment`.
 - **Guard command:** `python3 delphi-ai/tools/review_scope_drift_guard.py --todo foundation_documentation/todos/active/features/TODO-leadshug-meta-api-test-number-binding.md`
 - **No-go handling rule:** return to review, revalidate any material evolution with the user, refresh the baseline, and rerun affected lanes.
-- **Gate status:** `not_run`
-- **Findings summary:** no scope-drift result exists.
-- **Evidence / reference:** pending frozen-baseline guard.
+- **Gate status:** `no_material_findings`
+- **Findings summary:** final guard v3 go against pushed f35d1a0d; all23materialsections compared, zero changed. No waiver.
+- **Evidence / reference:** artifacts/reviews/leadshug-meta-test-binding-20261018/scope-drift-v3.json
 - **Waiver authority / reference:** `n/a`
 
 ## Questions To Close
@@ -527,7 +527,7 @@ Full planning review completed through independent architecture v1 and fresh cri
 - **Guard command:** `python3 delphi-ai/tools/assumption_code_coherence_guard.py --todo foundation_documentation/todos/active/features/TODO-leadshug-meta-api-test-number-binding.md`
 - **Gate status:** `no_material_findings`
 - **Findings summary:** A-01..04 statically checked against current named source and both independent reviews; actual token remains unknown and mandatory pre-code qualification is unwaived.
-- **Evidence / reference:** artifacts/reviews/leadshug-meta-test-binding-20261018/root-assumption-coherence-v1.json; deterministic code-coherence-v1.json will record anchor guard result.
+- **Evidence / reference:** artifacts/reviews/leadshug-meta-test-binding-20261018/root-assumption-coherence-v1.json; code-coherence-v3.json go validates all4live assumptions. v1/v2 qualified historical results retained; actual grant remains unknown.
 - **Waiver authority / reference:** `n/a`
 
 ## Approval
@@ -603,9 +603,9 @@ No promotion or delivery findings exist; delivery review is not_run. Planning fi
 
 ## TODO Closeout Disposition
 - **Disposition:** `keep-active`
-- **Disposition reason:** planning and implementation approval gates remain open.
+- **Disposition reason:** planning reviews and guards passed; implementation approval remains absent.
 - **Post-commit/push status:** `pending`
-- **Next path/status action:** root freezes and reviews this child TODO; do not move it or mark approved until explicit implementation approval and gates.
+- **Next path/status action:** await explicit human implementation APROVADO for the published bounded plan; keep active/Pending, then ingest rules and execute staged qualification only under its own GO.
 
 ## Security Risk Assessment
 - **Risk level:** `high`
@@ -758,3 +758,13 @@ A separate explicit implementation approval and root-issued execution routing ar
 | ARCH-TEST-03 | Integrated | useful | partial | project | none | V-06 and evidence matrix name post-promotion disable with unchanged active envelope/identity and normal stored-credential operations. |
 
 CRIT-MIG-01 Integrated (optional): within existing V-01/V-03, use a pre-change official attempt/requestHash, apply provenance migration, and replay equivalent Embedded Signup input. Assert same attempt and expected same-session nonce semantics; a LOCAL_TEST method change on that key must still fail. NAO_OFICIAL remains null. This is a concrete migration/idempotency regression oracle, not authorization for a compatibility framework or unrelated hash rewrite. Fresh critique considered it non-blocking under the existing frozen behavior.
+
+## Planning Readiness Summary — CP81
+
+- Architecture raw v1 revise retained unchanged; ARCH-QUAL-01 Integrated and explicitly confirmed resolved by fresh critique. Two optional architecture notes integrated.
+- Fresh critique v1 approve, zero material blockers; optional CRIT-MIG-01 concretizes V-01/V-03 without a new behavior or compatibility framework.
+- Final baseline f35d1a0d pushed; exact reviewed scope equivalence across all23materialsections is recorded. Format-only enum/table/source-citation corrections did not require a new reviewer round and are not a waiver.
+- Code coherence v3 go checks A-01..04; scope drift v3 go checks23sections/zerochanged; structural v3 PASS; authority preflight v3 preflight-go with execution_authority_granted=false. Earlier negative/partial guard evidence is preserved and superseded explicitly, never overwritten.
+- Evidence: artifacts/reviews/leadshug-meta-test-binding-20261018/root-planning-ready-for-approval.json.
+- No implementation approval, credential qualification, product build/test, runtime/provider/DB action, physical send, source push or Railway deployment occurred in CP81. Parent Pending/VAL05 open and unwaived.
+- On later APROVADO, scope is the exact local-only staged plan above; failed/inconclusive real grant qualification stops before product edits. Rules/workflows named in Rules Acknowledgement must be reloaded; the preflight never substitutes for normal authority GO.
