@@ -1,0 +1,15 @@
+{
+  "checkpoint": "cp82",
+  "recordedAtUtc": "2026-10-18T05:34:23.658772+00:00",
+  "source": "human async response to the exact three-key API Setup Test Number request",
+  "response": "Salvei os tr\u00eas campos localmente",
+  "keys": [
+    "META_LOCAL_TEST_ACCESS_TOKEN",
+    "META_LOCAL_TEST_WABA_ID",
+    "META_LOCAL_TEST_PHONE_NUMBER_ID"
+  ],
+  "valuesCollectedInChat": false,
+  "privateInputRead": false,
+  "liveGoIssued": false,
+  "note": "Readiness confirmation only; helper review and distinct bounded root GO still required."
+}

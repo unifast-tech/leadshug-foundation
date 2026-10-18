@@ -1,0 +1,14 @@
+ok 1 - allowlists exactly seven nonempty strings
+ok 2 - rejects wrong fixed app/config/version before adapter call
+ok 3 - qualified result requires exact phone identity and canonical digits shape
+ok 4 - null grant/target result is rejected without detail attribution
+ok 5 - adapter exception is safely combined and does not serialize provider details
+ok 6 - outer deadline fails closed without exposing timeout details
+ok 7 - wrong returned ID and unusable phone fail closed
+ok 8 - stdin parser accepts payload and enforces size bound
+ok 9 - output schema excludes raw detail and records evidence limits
+ok 10 - pinned compiled adapter uses only two fixed GETs for direct phone hit
+ok 11 - pinned compiled adapter caps fixed-WABA pages at two phone pages
+ok 12 - pinned compiled adapter rejects invalid app/scope/target and malformed/absent phone safely
+ok 13 - pinned compiled adapter converts mocked transport failures to safe rejection without retry
+# 13 offline checks passed; all inputs and provider responses were synthetic.

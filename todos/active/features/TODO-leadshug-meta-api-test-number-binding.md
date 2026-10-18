@@ -5,7 +5,7 @@
 - **Parent contract:** `ST-CON-01` in [TODO-leadshug-channel-connection-readiness.md](TODO-leadshug-channel-connection-readiness.md)
 - **Child story:** `ST-CON-01-TESTAUTH`
 - **Proposal:** [leadshug-meta-api-test-number-binding-proposal-20261018.md](../../../artifacts/analysis/leadshug-meta-api-test-number-binding-proposal-20261018.md)
-- **Status of this document:** planning handoff; implementation is not approved.
+- **Status of this document:** approved staged execution; qualification rejected/inconclusive, product edits stopped.
 
 ## Context
 
@@ -23,23 +23,23 @@ This child proposes a default-off local technical authorization method for that 
 
 ## Contract Boundary
 
-This TODO records WHAT must be delivered if implementation is separately approved. The human approved the direction “incluir o modo técnico local”; that is not approval to implement, deploy, change runtime configuration, or use a provider credential. Planning gates are still open. A grant that fails existing authorization requirements blocks this plan; it does not authorize weakening the Embedded Signup validators.
+The user explicitly replied APROVADO on 2026-10-18 to the published staged plan at Foundation 7f478ee38d31827786c6eafc0b1168f9fc5d2d83. This authorizes the exact bounded qualification-first implementation contract. The earlier direction-only approval is superseded; separate root qualification and code-execution GOs remain mandatory. A grant that fails existing authorization requirements blocks this plan; it does not authorize weakening the Embedded Signup validators.
 
 ## Implementation Intent
-- **Current delivery:** one default-off local authorization method binding a pre-provisioned Meta API Setup Test Number through the existing channel workflow; currently in planning, with no implementation approval.
-- **Planned next steps:** freeze and review this plan; request explicit implementation approval; then qualify a real grant before changing code. These steps are not authorized by this document alone.
+- **Current delivery:** one default-off local authorization method binding a pre-provisioned Meta API Setup Test Number through the existing channel workflow; approved staged contract; qualification returned rejected_or_inconclusive; no product implementation started.
+- **Planned next steps:** return to design after the one bounded qualification failed to establish eligibility. No product code GO or retry issued; any new authorization approach needs scoped review before execution.
 - **Anticipatory implementation authorized now:** none.
 - **Rationale:** isolate the new trust entry point while reusing the existing confirmation, identity, credential promotion, subscription, webhook, and send paths.
 
 ## Delivery Status Canon (Required)
 - **Current delivery stage:** `Pending`
-- **Qualifiers:** `none`
-- **Next exact step:** request explicit APROVADO for the reviewed bounded staged plan: qualify the real local credential first; implement only if qualification passes. Architecture/critique and final planning guards passed. No private input or product execution before human approval and distinct required GOs.
+- **Qualifiers:** `Blocked`
+- **Next exact step:** return to the authorization design with qualification-live-result-cp82.json: the current credential/resource was not qualified. Preserve validators, no product edits or retry. Define a compatible authorization path before a new execution decision.
 
 ## Active Work State (Required While TODO Remains In `active/`)
-- **Work state:** `review`
-- **Why this state now:** the local-mode direction is accepted, but the technical contract, grant compatibility, architecture review, and implementation approval remain pending.
-- **Exit condition:** a frozen review package with no unresolved approval-breaking findings and explicit implementation approval; otherwise retain Pending or return for decision.
+- **Work state:** `blocked`
+- **Why this state now:** the reviewed helper ran once under the approved staged contract, but returned rejected_or_inconclusive. The prerequisite for product implementation was not met.
+- **Exit condition:** a reviewed authorization design and eligible grant establish the unchanged prerequisite under an explicit execution decision; material contract changes require renewed approval. No automatic requalification or relaxed validator.
 
 ## Scope
 - [ ] Add a server-only, explicitly enabled local test-number authorization method to the existing number-registration workflow.
@@ -58,13 +58,17 @@ This TODO records WHAT must be delivered if implementation is separately approve
 - `Local-Implemented`: only after the scoped changes are implemented and required local validation passes.
 - `Lane-Promoted`: only after the declared lane threshold is met.
 - `Production-Ready`: not an intended claim for this local-only method; require a new explicit scope decision if production support is proposed.
-- `Provisional` and `Blocked` are not currently set.
+- `Blocked` is set because the qualification prerequisite was not established; `Provisional` is not set.
 
 ## Provisional Notes
 - Not applicable: this plan does not claim partial implementation.
 
 ## Blocker Notes
-- Not applicable: work is in planning review, not blocked.
+- **Blocker:** the one real qualification returned rejected_or_inconclusive; required app/grant/target acceptance and usable canonical phone were not established.
+- **Why blocked now:** the approved staged contract forbids product edits after rejected/inconclusive qualification. No code GO was issued.
+- **What unblocks it:** return to design and establish an eligible authorization path without weakening shared validators; review any material change before a new execution decision.
+- **Owner / source:** root design owner; current Meta credential/resource evidence remains limited to the safe adapter result.
+- **Last confirmed truth:** user APROVADO recorded; compiled artifact fresh; helper v4 independently approved; 13 adapter plus 15 launcher synthetic checks passed; one consumed GO, zero retries/provider writes/DB/product changes. No specific provider-cause, token-class, expiry or delivery conclusion.
 
 ## Execution Lane Tracking (Required)
 - **Local implementation branches:** `feature/number-onboarding` in the principal checkout; local commits only after explicit implementation approval.
@@ -75,7 +79,7 @@ This TODO records WHAT must be delivered if implementation is separately approve
 ## Promotion Evidence (Required Before Lane Promotion / Production Ready)
 | Scope Item | Local Branch/Commit | PR to lane threshold | PR to `stage` | PR to `main` | Current Status |
 | --- | --- | --- | --- | --- | --- |
-| Local Meta test-number authorization | `feature/number-onboarding`; future local commit only | n/a | n/a | n/a | implementation approval absent; no promotion or source push authorized |
+| Local Meta test-number authorization | `feature/number-onboarding`; future local commit only | n/a | n/a | n/a | staged implementation approved; qualification rejected/inconclusive; product edits stopped; no promotion or source push |
 
 ## Out of Scope
 - [ ] Changing, weakening, or bypassing the normal Embedded Signup OAuth flow or its grant validators.
@@ -183,7 +187,7 @@ This TODO records WHAT must be delivered if implementation is separately approve
 | --- | --- | --- |
 | DOD-01, DOD-10 local capability/UI visibility | Browser navigation spec against final local app plus capability integration evidence | pending; no implementation |
 | DOD-02, DOD-04 attempt/session/provenance | PostgreSQL-backed BFF integration spec; migration proves OFICIAL backfill and NAO_OFICIAL remains null | pending; no implementation |
-| DOD-03 grant qualification | Meta adapter tests plus one bounded authorized real grant qualification after approval; safe metadata only | pending; no provider check authorized |
+| DOD-03 grant qualification | Meta adapter tests plus one bounded authorized real grant qualification after approval; safe metadata only | blocked: one real qualification rejected_or_inconclusive; no product edits permitted |
 | DOD-05 registration/subscription boundary | Integration assertions: zero `/register`; only explicit normal `advance` may subscribe the mapped WABA through the current app | pending |
 | DOD-06 candidate fencing | PostgreSQL tests: disable/rotate local source while candidate is in flight; active credential preserved | pending |
 | DOD-09 after-promotion disable | PostgreSQL scenario: disable/remove bootstrap after promotion, normal advance/receipt/resolver still use unchanged persisted credential and identity | pending |
@@ -204,7 +208,7 @@ This TODO records WHAT must be delivered if implementation is separately approve
 
 ## Profile Scope & Handoffs (Required Before APROVADO)
 - **Primary execution profile:** operational-coder
-- **Current profile:** operational-devops, planning/source inventory only
+- **Current profile:** operational-devops, bounded qualification preparation; Genesis rejected because canonical project and reviewed contract already exist
 - **Active technical scope:** nestjs, react, vite, prisma, postgresql, docker
 - **Expected supporting profiles:** `assurance-tester-quality, assurance-security-adversarial, strategic-cto`
 - **Scope-check command:** `python3 delphi-ai/tools/profile_scope_check.py --profile operational-coder`
@@ -531,20 +535,21 @@ Full planning review completed through independent architecture v1 and fresh cri
 - **Waiver authority / reference:** `n/a`
 
 ## Approval
-- **Approved by:** user approved the direction to include a local technical mode; implementation approval is not present.
-- **Approval scope:** planning this local-only authorization method; no code, runtime, provider, DB, credential, or deployment action.
-- **Approval reference:** user statement: “Sim, incluir o modo técnico local”.
-- **Implementation approval:** `not granted`
-- **Execution not authorized by approval:** product/runtime/credential/provider/DB mutations, source push, Railway, worktrees, physical sends; planning direction is not implementation authority.
+- **Approved by:** user, explicit APROVADO on 2026-10-18.
+- **Approval scope:** exact reviewed local-only staged contract published at 7f478ee38d31827786c6eafc0b1168f9fc5d2d83 (scope baseline f35d1a0d4815629342cc0ac8df3c2e14a97e8a97): bounded read-only qualification first; product implementation only if qualified and under a separate root code GO; named local validation and later activation gates preserved.
+- **Approval reference:** current user statement “APROVADO”, after root presented the reviewed staged plan; earlier direction-only statement retained in CP81 history.
+- **Implementation approval:** `APROVADO; staged`
+- **Execution not authorized by approval:** product edits before qualification/code GO; provider writes during qualification; register/migrate/unregister; arbitrary credential or DB inspection; source push, Railway, worktrees, production activation or physical sends without their distinct gates.
 - **Renewed approval required when:** auth method, target cohort, secret handling, grant/ownership validation, schema, validation semantics or deployment boundary materially change.
 
 ## Rules Acknowledgement / Ingestion
 
-Expected sources are declared for approval; binding reload and actual ingestion remain required after APROVADO and before touching each surface.
+The listed sources were actually reloaded after APROVADO on 2026-10-18 for qualification preparation. Future product/runtime surface handoffs must reload their relevant methods again before edits.
 
 | Source | Why It Applies Now | Must Preserve | Must Avoid | Execution Impact |
 | --- | --- | --- | --- | --- |
 | delphi-ai/main_instructions.md | Tactical and delegation boundaries | One writer and review gates | Worktrees or unsolicited scope | Separate root/reviewer/executor |
+| delphi-ai/workflows/docker/effort-selection-method.md and delphi-ai/tools/agent_role_routing_guard.py | Executor and independent reviewer routing | Declared model/effort and positive guard | Root implementation or topology inference | Qualification executor gpt-6-luna/medium; formal critique gpt-6.1-sol/max; both routing receipts go |
 | delphi-ai/workflows/docker/todo-approval-gates-method.md | New authorization method | Frozen review and explicit approval | Direction mistaken for implementation approval | No source before gates |
 | delphi-ai/workflows/docker/todo-execution-boundary-method.md | Scope and execution authority | Normal authority GO and source fences | Hidden scope expansion | Stop on material change |
 | delphi-ai/workflows/docker/environment-readiness-method.md | Existing local runtime | Owned runtime and private env preservation | Reset or broad stack restart | Distinct live GO |
@@ -554,7 +559,7 @@ Expected sources are declared for approval; binding reload and actual ingestion 
 | delphi-ai/rules/stacks/postgresql/postgresql-data-integrity-always-on.md | Identity/promotion races | Locks and short transactions | HTTP inside transaction | Barrier tests |
 | foundation_documentation/policies/scope_subscope_governance.md | Route ownership | BFF session/tenant/BU | Confused deputy | Module consistency |
 
-Status: planned sources, not binding execution ingestion; root must record actual post-approval reload.
+Status: ingested 2026-10-18 by root. Also reloaded profile-selection-method.md, effort-selection-method.md, operational_devops.md, project_constitution.md and integrations-and-channels.md. verify_context.sh passed read-only (PACED-Ready). Preserve one product/runtime writer; no private file access before operator confirmation, no provider execution before separate GO.
 
 ## Agent Routing Preflight
 - **Client surface:** codex
@@ -572,7 +577,7 @@ Status: planned sources, not binding execution ingestion; root must record actua
 - **Guard outcome:** go
 - **Waiver / exception reference:** n/a
 
-This is the planned executable tuple, not execution authority. Structural routing guard returned go after freeze, recorded in artifacts/reviews/leadshug-meta-test-binding-20261018/routing-planned-implementation.json; normal execution still requires APROVADO and post-approval authority GO. Fresh architecture and critique reviewers use separate formal-review/gpt-6.1-sol/max routing receipts.
+Execution tuple reconfirmed after APROVADO: artifacts/reviews/leadshug-meta-test-binding-20261018/routing-qualification-cp82.json returned go; normal authority guard is required before helper execution. Qualification and product execution remain distinct stages. Fresh architecture and critique reviewers use separate formal-review/gpt-6.1-sol/max routing receipts.
 
 ## Decision Adherence Validation
 - **Status:** `not_run`
@@ -603,9 +608,9 @@ No promotion or delivery findings exist; delivery review is not_run. Planning fi
 
 ## TODO Closeout Disposition
 - **Disposition:** `keep-active`
-- **Disposition reason:** planning reviews and guards passed; implementation approval remains absent.
+- **Disposition reason:** staged implementation approved; qualification did not establish eligibility, so product implementation is blocked and design must be revisited.
 - **Post-commit/push status:** `pending`
-- **Next path/status action:** await explicit human implementation APROVADO for the published bounded plan; keep active/Pending, then ingest rules and execute staged qualification only under its own GO.
+- **Next path/status action:** keep active/Pending+Blocked; return to authorization design with the safe qualification receipt. No source edits, retry or new provider diagnostics authorized by this result.
 
 ## Security Risk Assessment
 - **Risk level:** `high`
@@ -747,7 +752,7 @@ No promotion or delivery findings exist; delivery review is not_run. Planning fi
 Use the Diff Expectation Contract as the authoritative inventory. The expected source/schema/UI/test/config paths above are candidates for a later approved implementation; no implementation files are changed by this planning handoff.
 
 ## Approval Boundary
-A separate explicit implementation approval and root-issued execution routing are required after all planning reviews, grant qualification design, baseline freeze, and guards. Until then, keep status Pending and do not touch code, runtime, provider, database, private configuration, or credentials.
+Explicit staged implementation APROVADO has been recorded for the exact published plan. Keep Pending until implementation evidence passes. First prepare/review the helper and obtain normal authority GO; then one bounded read-only qualification under its consumed-once live GO. Product-source edits are forbidden until qualified and a separate root code GO is issued. Other excluded surfaces remain excluded.
 
 ## Planning Finding Resolutions — CP81
 
@@ -768,3 +773,20 @@ CRIT-MIG-01 Integrated (optional): within existing V-01/V-03, use a pre-change o
 - Evidence: artifacts/reviews/leadshug-meta-test-binding-20261018/root-planning-ready-for-approval.json.
 - No implementation approval, credential qualification, product build/test, runtime/provider/DB action, physical send, source push or Railway deployment occurred in CP81. Parent Pending/VAL05 open and unwaived.
 - On later APROVADO, scope is the exact local-only staged plan above; failed/inconclusive real grant qualification stops before product edits. Rules/workflows named in Rules Acknowledgement must be reloaded; the preflight never substitutes for normal authority GO.
+
+## Execution Checkpoint CP82 — Approval and Qualification Preparation
+
+- User APROVADO recorded on 2026-10-18 for published plan 7f478ee3; no material behavior, decision or validation relaxation.
+- Operational/DevOps qualification preparation; scopes nestjs, react, vite, prisma, postgresql, docker. Coder handoff remains conditional on qualified grant.
+- Helper preparation only under ignored artifacts/tmp/number-onboarding-execution/. No product edits, private input reads, provider calls, DB or runtime changes performed at this checkpoint. Structural validation v2 PASS supersedes v1: metadata work-state enum corrected from execution to implementation; no scope change.
+- Operator confirmed the three requested META_LOCAL_TEST_ACCESS_TOKEN, META_LOCAL_TEST_WABA_ID and META_LOCAL_TEST_PHONE_NUMBER_ID fields saved locally. No values collected in chat; no private read before the distinct live GO. Incidental IDE selection is not an input.
+- Parent Pending and VAL05 open/unwaived.
+
+## CP82 — Qualification Outcome / Stop Before Product
+
+- Human confirmed the three named local fields saved; values stayed local. Frozen v4 helper and invocation reviewed independently: approve, zero blockers. Root verified all seven public hashes.
+- Offline evidence: 13 checks exercise the actual pinned compiled adapter with fake fetch; 15 launcher checks passed and were independently rerun. All preparation findings integrated, including CP82-TIME-01 absolute remote deadline.
+- Distinct root GO issued and atomically consumed once. Real result: rejected_or_inconclusive, adapterFresh=true, currentGrantAndTargetAccepted=false, canonicalPhoneUsable=false; fixed combined error GRANT_OR_TARGET_REJECTED_OR_INCONCLUSIVE.
+- This does not identify a provider cause, prove the telephone invalid, or establish token class/explicit expiry. Delivery not tested. The result is a hard stop under D-01 and ARCH-QUAL-01.
+- No retry, provider write, database access, Nest bootstrap, product source change, source build/push, tunnel change or Railway action. No product code GO issued. Parent Pending/VAL05 remains open and unwaived.
+- Evidence: artifacts/reviews/leadshug-meta-test-binding-20261018/helper-review-v4.raw.json; qualification-preparation-cp82.json; qualification-live-go-cp82.json; qualification-live-result-cp82.json; root-qualification-outcome-cp82.json.

@@ -1,0 +1,48 @@
+{
+  "checkpoint": "cp82-helper-review-iterations",
+  "recordedAtUtc": "2026-10-18T05:33:56.193998+00:00",
+  "status": "all_integrated_independent_v4_approve",
+  "liveGoIssued": false,
+  "privateInputRead": false,
+  "providerCalls": 0,
+  "productChanges": false,
+  "findings": [
+    {
+      "id": "QUAL-PHONE-01",
+      "finding": "Canonical phone shape must match existing domain nonzero first digit rule",
+      "status": "integrated_and_accepted_v4"
+    },
+    {
+      "id": "QUAL-TRANSPORT-02",
+      "finding": "Complete named-input stdin launcher and real compiled-adapter fake-fetch coverage required",
+      "status": "integrated_and_accepted_v4"
+    },
+    {
+      "id": "QUAL-OUTPUT-03",
+      "finding": "Strict fixed output schema, safe enums and coherent booleans required",
+      "status": "integrated_and_accepted_v4"
+    },
+    {
+      "id": "QUAL-ONCE-04",
+      "finding": "Receipt field alone does not consume a GO; atomic one-time claim required",
+      "status": "integrated_and_accepted_v4"
+    },
+    {
+      "id": "QUAL-BUDGET-05",
+      "finding": "One shared outer deadline must cover preflight, input handling and runtime launch",
+      "status": "integrated_and_accepted_v4"
+    },
+    {
+      "id": "QUAL-BYTES-06",
+      "finding": "Read, hash and transport the same frozen public helper bytes",
+      "status": "integrated_and_accepted_v4"
+    },
+    {
+      "id": "CP82-TIME-01",
+      "finding": "Absolute remote deadline prevents Docker startup delay extending lifetime",
+      "status": "integrated_and_accepted_v4"
+    }
+  ],
+  "note": "Root preparation notes from bounded independent rereads; not a final approve verdict or live qualification result.",
+  "finalReview": "helper-review-v4.raw.json"
+}

@@ -1,0 +1,158 @@
+{
+  "checkpoint": "cp82",
+  "purpose": "Preparation-only bounded read-only Meta grant qualification; no provider run authorized by this artifact.",
+  "runtimeArtifact": {
+    "containerId": "9eccbea4825108cec2b8a6fcd48c43c17845e216415fe95e3972265c6ad34cf1",
+    "imageId": "sha256:fe5fb7eaf6a68123f9da6b92a0a69483180d213f556b4bedf313f04a383b4821",
+    "state": "running",
+    "composeProject": "leadshug_channels_local",
+    "composeService": "api",
+    "ownerLabel": "number-onboarding",
+    "modulePath": "/app/dist/integrations/meta/meta.client.js",
+    "moduleSha256": "a756c9693c574f6fb4987d878af8d4fbeaf9f07c86a5c5e6acadeca4f7a771cb",
+    "inspection": "targeted docker.exe inspect format allowlist plus node crypto hash of the one named runtime file; no Config.Env, mounts, logs, or other runtime files inspected"
+  },
+  "publicSource": {
+    "path": "api-app/src/integrations/meta/meta.client.ts",
+    "sha256": "ad6d9c56a0c854df35baf3320a70c2b1f4b9d577c4cd6f35def701ecac65f9c4",
+    "historicalApiCommit": "db5a86758a165fac8a1ab587599c37b17890530c"
+  },
+  "rejectedHostArtifact": {
+    "path": "api-app/dist/integrations/meta/meta.client.js",
+    "observedSha256": "d4bf930b72f3c714045e4e149ad4ef9d31d35d4f93a4480c6fc6013e2f614dba",
+    "expectedSha256": "a756c9693c574f6fb4987d878af8d4fbeaf9f07c86a5c5e6acadeca4f7a771cb",
+    "disposition": "rejected; not used or modified"
+  },
+  "inputProtocol": {
+    "transport": "Host launcher streams the helper source and only the three named local values over docker exec stdin; inside the exact runtime container it reads the four named inherited base keys individually and never enumerates process.env. No private argument, persisted payload, .env.testing copy/hash/dump, or Config.Env inspection.",
+    "keys": [
+      "META_APP_ID",
+      "META_APP_SECRET",
+      "META_SIGNUP_CONFIG_ID",
+      "GRAPH_VERSION",
+      "META_LOCAL_TEST_ACCESS_TOKEN",
+      "META_LOCAL_TEST_WABA_ID",
+      "META_LOCAL_TEST_PHONE_NUMBER_ID"
+    ],
+    "fixedExpected": {
+      "META_APP_ID": "874966345550148",
+      "META_SIGNUP_CONFIG_ID": "1136483809037779",
+      "GRAPH_VERSION": "v26.0"
+    },
+    "privateLocalKeys": "Launcher first validates a non-secret consumed-once CP82 live GO receipt, then requires exact operator confirmation, then streams .env.testing line by line and retains only these three names; never read_text/bulk dotenv load or print the file.",
+    "baseValues": "Use only the four named inherited process values; never enumerate or dump environment/configuration."
+  },
+  "launcher": {
+    "file": "cp82-qualification-launcher.py",
+    "confirmation": "CONFIRM CP82 LIVE READ-ONLY QUALIFICATION",
+    "liveGoReceiptExactFields": [
+      "checkpoint",
+      "scope",
+      "decision",
+      "consumed_once",
+      "receipt_id"
+    ],
+    "liveGoReceiptValues": {
+      "checkpoint": "cp82",
+      "scope": "read_only_meta_grant_qualification",
+      "decision": "GO",
+      "consumed_once": true
+    },
+    "preflightBeforePrivateRead": "rehash helper, targeted docker inspect of id/image/state/project/service/owner only, and hash exactly the pinned runtime adapter file",
+    "timeout": "One monotonic 40-second budget starts at execute entry and is shared by GO/confirmation, runtime attestation, bounded named-key scan, and invoke. Before docker.exe spawn, the launcher converts the remaining budget to one absolute UTC epoch deadline capped at 35 seconds from spawn request; the remote runner rejects an already-expired deadline and arms its self-exit timer only for the deadline remainder. Host kills docker.exe at the original monotonic deadline. Raw stderr is discarded and arbitrary stdout is never forwarded.",
+    "replayProtection": "Exact GO receipt is claimed with atomic O_CREAT|O_EXCL receipt-id marker before private input read; replay and concurrent duplicate claims reject.",
+    "helperTransport": "Helper bytes are read once, SHA-256 checked, and the same bytes are placed in stdin payload; no private argv or persisted payload.",
+    "helperSha256": "3ca0ae7ca6ddd00a2fadf0d442c16a8a87dbc42821c7f33f184d5da30f847b42"
+  },
+  "callContract": {
+    "adapter": "existing compiled MetaHttpClient only",
+    "method": "verificarNumeroVinculado(wabaId, phoneNumberId, token)",
+    "publicMethodCalls": 1,
+    "providerBudget": "at most 3 fixed graph.facebook.com v26.0 GETs, 10 seconds each; debug grant plus at most 2 fixed-WABA phone pages, page size 100; no retry, redirect, writes, other method, or other WABA",
+    "outerDeadlineSeconds": 40
+  },
+  "resultContract": {
+    "outcomes": [
+      "qualified",
+      "rejected_or_inconclusive",
+      "preflight_failed"
+    ],
+    "fields": [
+      "schema",
+      "checkpoint",
+      "outcome",
+      "adapterFresh",
+      "currentGrantAndTargetAccepted",
+      "canonicalPhoneUsable",
+      "tokenClassEvidence",
+      "explicitExpiryEvidence",
+      "deliveryEvidence",
+      "providerWrites",
+      "error"
+    ],
+    "tokenClassEvidence": "unknown",
+    "explicitExpiryEvidence": "unknown",
+    "deliveryEvidence": "not_tested",
+    "providerWrites": 0,
+    "rawProviderErrorsAndIdentifiers": "never emitted"
+  },
+  "offlineVerification": {
+    "testFile": "cp82-qualification-offline.test.cjs",
+    "testCount": 13,
+    "providerCalls": 0,
+    "runtimeCredentialInputs": 0,
+    "adapter": "actual pinned compiled MetaHttpClient with fake global.fetch responses; no live network",
+    "coverage": "success, app/scope/granular-target rejection, malformed and absent phone, two-page cap, 10-second AbortSignal, transport timeout, error privacy, input/output allowlists",
+    "status": "passed",
+    "stdoutArtifact": "cp82-qualification-node-offline.stdout.txt",
+    "stdoutSha256": "8c1183c4560efe020a4bd28599437b7b687639e719d540968c4eade30eb7cc3c"
+  },
+  "launcherOfflineVerification": {
+    "testFile": "cp82-qualification-launcher-offline.test.py",
+    "testCount": 15,
+    "status": "passed",
+    "providerCalls": 0,
+    "privateFileReads": 0,
+    "stdoutArtifact": "cp82-qualification-launcher-offline.stdout.txt",
+    "stdoutSha256": "b9ba6e43deba438f91a0bd855a3d81c9138e31a68b68c471589f82847b4ed390"
+  },
+  "frozenPreparationFiles": [
+    {
+      "path": "cp82-qualification-helper.cjs",
+      "sha256": "3ca0ae7ca6ddd00a2fadf0d442c16a8a87dbc42821c7f33f184d5da30f847b42"
+    },
+    {
+      "path": "cp82-qualification-offline.test.cjs",
+      "sha256": "536d61a0e169d45b994b70dcbc2951b465834626b7038f05fd17cedc73d1f16f"
+    },
+    {
+      "path": "cp82-qualification-launcher.py",
+      "sha256": "e2a2e097b41e6bf9bb25b4d141c4a9d0aa8bba840f4d30c14b1649f377583194"
+    },
+    {
+      "path": "cp82-qualification-launcher-offline.test.py",
+      "sha256": "0a7ace6a52a82f0822d5cf45eb0f4304c673c638ca3ef78b955679f9317d7848"
+    },
+    {
+      "path": "cp82-qualification-node-offline.stdout.txt",
+      "sha256": "8c1183c4560efe020a4bd28599437b7b687639e719d540968c4eade30eb7cc3c"
+    },
+    {
+      "path": "cp82-qualification-launcher-offline.stdout.txt",
+      "sha256": "b9ba6e43deba438f91a0bd855a3d81c9138e31a68b68c471589f82847b4ed390"
+    }
+  ],
+  "liveQualification": {
+    "status": "not_run",
+    "requiredBeforeUse": [
+      "independent helper review",
+      "operator confirmation of three local values",
+      "separate consumed-once root live GO"
+    ],
+    "executionAuthorityDoesNotImplyLiveGo": true
+  },
+  "offlineSyntaxVerification": {
+    "nodeRunner": "passed via node Function parse in pinned runtime container; no execution/network",
+    "python": "passed before v4-only test changes; launcher offline suite imports/parses updated launcher successfully"
+  }
+}

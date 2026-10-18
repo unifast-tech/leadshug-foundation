@@ -1,0 +1,1 @@
+{"schema":"leadshug.meta-test-number-qualification.v1","checkpoint":"cp82","outcome":"rejected_or_inconclusive","adapterFresh":true,"currentGrantAndTargetAccepted":false,"canonicalPhoneUsable":false,"tokenClassEvidence":"unknown","explicitExpiryEvidence":"unknown","deliveryEvidence":"not_tested","providerWrites":0,"error":"GRANT_OR_TARGET_REJECTED_OR_INCONCLUSIVE"}

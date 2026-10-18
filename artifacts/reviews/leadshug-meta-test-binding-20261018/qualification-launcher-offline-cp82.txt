@@ -1,0 +1,16 @@
+ok 1 - launcher reads only three named local keys
+ok 2 - duplicate named keys fail closed
+ok 3 - private-key reader checks the same deadline while scanning
+ok 4 - only exact consumed-once live GO schema is accepted
+ok 5 - one-time GO claim rejects replay and concurrent double claim
+ok 6 - missing GO stops before private env path access
+ok 7 - launcher output schema rejects extra/raw fields
+ok 8 - launcher attests only exact runtime metadata and one adapter hash
+ok 9 - preflight subprocesses receive the remaining shared deadline
+ok 10 - launcher sends payload only through stdin and never forwards raw process output
+ok 11 - launcher kills the subprocess at the 40-second bound
+ok 12 - remote watchdog uses only remaining execution budget
+ok 13 - delayed or expired remote startup cannot extend deadline or call adapter
+ok 14 - frozen helper hash and delivered bytes come from one read
+ok 15 - execute carries one deadline across runtime attestation and before private input
+# 15 launcher offline checks passed; all fixture values were synthetic.

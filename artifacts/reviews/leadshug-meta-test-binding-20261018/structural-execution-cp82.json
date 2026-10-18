@@ -1,0 +1,21 @@
+{
+  "schema_version": "todo-validation-report-v1",
+  "artifact_kind": "todo_validation_report",
+  "todo_path": "foundation_documentation/todos/active/features/TODO-leadshug-meta-api-test-number-binding.md",
+  "result": "FAIL",
+  "issues": [
+    {
+      "severity": "error",
+      "code": "TODO-ACTIVE-WORK-STATE-INVALID",
+      "field": "## Active Work State -> Work state",
+      "message": "Active TODO work state is missing or invalid.",
+      "rule_id": "paced.todo.active-work-state.canonical",
+      "rule_level": "paced",
+      "source_kind": "validator",
+      "source_ref": "delphi-ai/tools/todo_deterministic_validator.py",
+      "episode_id": "ep-6787b7fc5bfcc12d",
+      "fingerprint": "ed2a8734829de4de",
+      "resolution_instruction": "Set `Work state` to `implementation`, `review`, or `blocked` while the TODO remains active."
+    }
+  ]
+}

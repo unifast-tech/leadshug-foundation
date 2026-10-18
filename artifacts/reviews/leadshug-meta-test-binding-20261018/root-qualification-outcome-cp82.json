@@ -1,0 +1,31 @@
+{
+  "checkpoint": "cp82",
+  "recordedAtUtc": "2026-10-18T05:47:00.281051+00:00",
+  "review": "helper-review-v4.raw.json",
+  "offlineChecks": {
+    "actualCompiledAdapterSynthetic": 13,
+    "launcherSynthetic": 15
+  },
+  "operatorInputState": "human_confirmed_saved",
+  "liveInvocationCount": 1,
+  "goClaimConsumed": true,
+  "resultFile": "qualification-live-result-cp82.json",
+  "resultSha256": "952f6e92dbdc08944628951e85b8372971cf943c434d5be892d36ab454e4aa01",
+  "outcome": "rejected_or_inconclusive",
+  "adapterFresh": true,
+  "currentGrantAndTargetAccepted": false,
+  "canonicalPhoneUsable": false,
+  "interpretation": "Existing exact-target adapter did not establish required authorization/resource eligibility; combined safe result does not identify a specific provider cause or prove canonical phone invalidity.",
+  "tokenClassEvidence": "unknown",
+  "explicitExpiryEvidence": "unknown",
+  "deliveryEvidence": "not_tested",
+  "providerWrites": 0,
+  "databaseAccess": false,
+  "productChanges": false,
+  "productCodeGoIssued": false,
+  "retries": 0,
+  "postFailurePrivateInspection": false,
+  "nextStage": "return_to_design; no product edits under this failed prerequisite",
+  "parentVAL05": "open_unwaived",
+  "all21PublicSourceFilesUnchangedAfterQualification": true
+}

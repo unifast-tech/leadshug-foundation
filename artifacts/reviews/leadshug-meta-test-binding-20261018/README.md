@@ -1,6 +1,6 @@
 # Revisão do vínculo técnico local do Test Number
 
-Pacote derivado do [TODO complementar](../../../todos/active/features/TODO-leadshug-meta-api-test-number-binding.md), autoridade de execução exclusiva deste complemento. Parent: ST-CON-01, Pending/VAL05 aberto. Direção humana aceita: modo técnico local para um recurso já provisionado; não é aprovação de implementação. Nenhum código ou runtime alterado neste pacote de planejamento.
+Pacote derivado do [TODO complementar](../../../todos/active/features/TODO-leadshug-meta-api-test-number-binding.md), autoridade de execução exclusiva deste complemento. Parent: ST-CON-01, Pending/VAL05 aberto. O usuário respondeu APROVADO ao plano publicado em 7f478ee3 em 2026-10-18. A execução é obrigatoriamente em etapas: qualificação somente leitura, depois implementação somente se o grant for qualificado e sob GO próprio. A preparação atual não altera código do produto nem runtime. Os registros CP81 abaixo preservam a história do planejamento anterior à aprovação.
 
 ## Entradas delimitadas
 
@@ -38,3 +38,17 @@ Arquitetura v1 terminal: revise, direção estrutural endossada. ARCH-QUAL-01 In
 Crítica v1 terminal: approve, zero bloqueadores materiais, três resoluções de arquitetura confirmadas; raw b39207f874cb7b3d58522756c5f5fd572af3bd1deb2d5c5bf89191379eb4543e preservado. CRIT-MIG-01 low integra caso de replay após migração nos critérios já existentes. Comparação módulos D01..06 e coerência estática registradas. Estrutural v1 PASS; scope-drift v1 GO/23seções/zeroalterações. Preflight v1 NO-GO por grafia de enum do harness; code-coherence v1 GOmas3rows por pipe na linhaA02. Ambos preservados/qualificados, duas correções de formato preparadas e final freeze/guardas pendentes. Não há dispensa ou aprovação de implementação.
 
 cp81 planejamento pronto para aprovação humana: arquitetura/crítica convergiram, crítica approve/zero bloqueadores materiais. Baseline f35d1a0d publicada; code-coherencev3 GO4premissas, scope-driftv3 GO23seções/zerodesvio, estruturalv3 PASS e authorityv3 preflight-go/semexecauthority. Guardas v1/v2 negativos/parciais preservados e qualificados; correções apenas de formato/referência. Pacote artifacts/reviews/leadshug-meta-test-binding-20261018/root-planning-ready-for-approval.json. Próximo: APROVADO explícito do complemento antes de qualificação secreta/implementação; se grant não passar, parar antes de produto. Sem novas operações vivas/código; parent Pending/VAL05 aberto, mapping não garante entrega.
+
+## CP82 — Aprovação e preparação da qualificação
+
+- [Aprovação humana](approval-cp82.json) do escopo publicado; nenhum novo comportamento ou relaxamento.
+- [Authority guard normal](authority-execution-cp82-v2.json): go, com aprovação e 10 fontes de regras/workflows ingeridas; não é o preflight de planejamento.
+- [Estrutural v3](structural-execution-cp82-v3.json): PASS. A v1 negativa registra apenas enum de metadata corrigido; v2/v3 positivas a substituem.
+- [Fontes públicas](source-attestation-cp82.json): 21 arquivos continuam idênticos ao plano revisado.
+- [Roteamento do executor](routing-qualification-cp82.json) e [revisor independente](routing-helper-review-cp82.json): go, sem worktrees.
+- Helper v4 e invocação aprovados por revisão independente, zero bloqueadores. Passaram 13 checagens do adaptador compilado com fetch fictício e 15 do executor; o revisor repetiu estas 15. Operador confirmou os três campos locais salvos; a leitura restrita ocorreu somente sob o GO real posterior.
+- Produto ainda sem alterações; parent Pending/VAL05 aberto e sem dispensa.
+
+## Resultado real CP82
+
+Uma única execução consumiu o [GO](qualification-live-go-cp82.json). O [resultado exato](qualification-live-result-cp82.json) foi rejected_or_inconclusive, com adaptador atual e sem comprovar autorização/recurso ou telefone canônico utilizável. O erro combinado seguro não distingue a causa. Não houve retry nem escrita de provider, DB ou produto. [Adjudicação root](root-qualification-outcome-cp82.json): parar antes de produto e retornar ao desenho; TODO Pending+Blocked. Isso não conclui o cadastro ou a prova de mensagens e não dispensa VAL05.

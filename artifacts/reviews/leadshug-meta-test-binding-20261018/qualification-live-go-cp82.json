@@ -1,0 +1,16 @@
+{
+  "checkpoint": "cp82",
+  "issuedAtUtc": "2026-10-18T05:44:14.104855+00:00",
+  "go": {
+    "checkpoint": "cp82",
+    "scope": "read_only_meta_grant_qualification",
+    "decision": "GO",
+    "consumed_once": true,
+    "receipt_id": "cp82_487a9e0abf674d618c40b0188316c04e"
+  },
+  "review": "helper-review-v4.raw.json",
+  "authority": "authority-qualification-live-cp82.json",
+  "operatorReadiness": "operator-input-readiness-cp82.json",
+  "scope": "One invocation of frozen v4 launcher; only existing exact-target public adapter method; up to3GETs/no provider writes/no DB/Nest/product edits. Rejected, inconclusive or preflight failure stops before product changes.",
+  "sourceProductGoIssued": false
+}

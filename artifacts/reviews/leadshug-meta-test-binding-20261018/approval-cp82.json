@@ -1,0 +1,18 @@
+{
+  "checkpoint": "cp82-approval",
+  "recordedAtUtc": "2026-10-18T05:25:47.474216+00:00",
+  "approval": "APROVADO",
+  "publishedPlan": "7f478ee38d31827786c6eafc0b1168f9fc5d2d83",
+  "scopeBaseline": "f35d1a0d4815629342cc0ac8df3c2e14a97e8a97",
+  "sequence": [
+    "helper preparation/review/offline checks",
+    "distinct consumed-once live GO",
+    "one bounded read-only qualification",
+    "only if qualified: separate product code GO"
+  ],
+  "materialScopeChange": false,
+  "qualification": "not_run",
+  "productChanges": false,
+  "privateInputRead": false,
+  "parentVAL05": "open_unwaived"
+}

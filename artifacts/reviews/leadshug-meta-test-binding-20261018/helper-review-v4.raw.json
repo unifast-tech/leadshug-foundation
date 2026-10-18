@@ -1,0 +1,41 @@
+{
+  "checkpoint": "cp82",
+  "reviewedRevision": "v4",
+  "verdict": "approve",
+  "blockers": [],
+  "scope": "ARCH-QUAL-01 bounded qualification helper and complete invocation path.",
+  "hashes": {
+    "cp82-qualification-helper.cjs": "3ca0ae7ca6ddd00a2fadf0d442c16a8a87dbc42821c7f33f184d5da30f847b42",
+    "cp82-qualification-launcher.py": "e2a2e097b41e6bf9bb25b4d141c4a9d0aa8bba840f4d30c14b1649f377583194",
+    "cp82-qualification-offline.test.cjs": "536d61a0e169d45b994b70dcbc2951b465834626b7038f05fd17cedc73d1f16f",
+    "cp82-qualification-launcher-offline.test.py": "0a7ace6a52a82f0822d5cf45eb0f4304c673c638ca3ef78b955679f9317d7848",
+    "cp82-qualification-attestation-plan.json": "0bcfde5d93d8e32569a7faec132d9d9239a8d0e5fedb75af7755be78713a8ebc",
+    "cp82-qualification-node-offline.stdout.txt": "8c1183c4560efe020a4bd28599437b7b687639e719d540968c4eade30eb7cc3c",
+    "cp82-qualification-launcher-offline.stdout.txt": "b9ba6e43deba438f91a0bd855a3d81c9138e31a68b68c471589f82847b4ed390"
+  },
+  "resolutions": [
+    "Named-key reader retains only three permitted local values; stdin carries private inputs, and the container reads four named inherited base values without environment enumeration.",
+    "Atomic receipt claim rejects replay and concurrent reuse before private input access.",
+    "Runtime identity, ownership and compiled adapter hash are checked before private reads; frozen helper bytes are read once, hashed and delivered unchanged.",
+    "CP82-TIME-01 resolved: shared host monotonic budget plus absolute remote deadline prevents delayed Docker startup from extending qualification time.",
+    "Strict total result validation admits only fixed fields, coherent booleans and safe enums; canonical phone shape rejects leading zero."
+  ],
+  "evidence": {
+    "allListedHashesMatched": true,
+    "reviewedActualPinnedAdapterSyntheticChecks": 13,
+    "independentlyPassedLauncherSyntheticChecks": 15,
+    "reviewerPrivateInputAccess": false,
+    "reviewerProviderCalls": 0,
+    "reviewerContainerAccess": false
+  },
+  "positions": {
+    "performance": "One public adapter call; at most three fixed HTTPS Graph GETs, two phone pages and existing 10-second request timeouts within the outer budget.",
+    "elegance": "The standalone launcher preserves the existing adapter and keeps transport, gating and receipt validation explicit.",
+    "structuralSoundness": "No Nest bootstrap, private-method bypass, validator weakening, fallback credential or product edit."
+  },
+  "limits": [
+    "Approval permits one bounded invocation only after a distinct consumed-once root live GO; this review does not issue that GO.",
+    "No live qualification result or product acceptance is claimed.",
+    "Token class and explicit expiry remain unknown; BU ownership and delivery remain untested."
+  ]
+}
