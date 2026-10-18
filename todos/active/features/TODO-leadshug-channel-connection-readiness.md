@@ -40,14 +40,14 @@ Proposta ST-CON-01: jornada de cadastro de número, com infraestrutura local est
 ## Delivery Status Canon (Required)
 
 - **Current delivery stage:** Pending
-- **Qualifiers:** none
-- **Next exact step:** CP88: priorizar isolamento da conta/número oficial conforme direção humana. Aguardar status do número na própria Meta (Conectado/Pendente/restrito) e disponibilidade de outro recurso oficial seguro, preferencialmente WABA distinta, para comparação no mesmo app/callback via fluxo normal. Evidência CP86/87 permanece: controle200, real semrotaMeta, appWABA/callbackapplication corretos. Estado real de registro ainda não confirmado; não recadastrar/migrar/desconectar por hipótese. VAL05 aberto.
+- **Qualifiers:** Blocked
+- **Next exact step:** CP89: aguardar equipe do operador definir/liberar o segundo número e WABA seguros para teste comparativo. O cadastro B ainda não foi realizado; nenhuma consulta viva/B ou mensagem foi iniciada. Na retomada, reconferir HTTPS/OAuth e usar fluxo oficial em BU Teste Oficial B, mantendo recurso A. Hipótese de conta específica continua não comprovada; VAL05 aberto.
 
 ## Active Work State (Required While TODO Remains In `active/`)
 
-- **Work state:** implementation
-- **Why this state now:** provas reais do canal oficial permanecem pendentes. O humano cancelou o complemento de token técnico após descobrir inscrição ausente do webhook; teste retorna ao Embedded Signup existente, sem novo método de autorização. Provas do QR permanecem históricas e válidas nos limites registrados.
-- **Exit condition:** implementação no escopo, matriz local/provas reais e gates de entrega aceitos.
+- **Work state:** blocked
+- **Why this state now:** o teste comparativo atual depende da seleção/liberação do segundo recurso pela equipe do operador. Receptor de controle está comprovado, mas evento real do recurso A segue ausente; não há segundo recurso definido para continuar a prova.
+- **Exit condition:** operador define recurso seguro; reconferir ambiente e retomar cadastro/teste padrão já aprovado. Não presumir que a disponibilidade antes relatada liberou um número específico.
 
 ## Scope
 
@@ -160,7 +160,11 @@ n/a; nenhuma entrega parcial reivindicada.
 
 ## Blocker Notes (Required if `Qualifiers` includes `Blocked`)
 
-n/a no estágio de drafting. Dependências técnicas desconhecidas são explicitadas abaixo; se impedirem a execução de um gate real, registrar o bloqueio naquele gate.
+- **Blocker:** segundo número/WABA para comparação ainda precisa ser definido e liberado pela equipe do operador.
+- **Why blocked now:** o humano informou que ainda não consegue realizar a etapa B; nenhuma autorização/cadastro B concluída foi relatada.
+- **What unblocks it:** identificação/liberação humana do recurso seguro, seguida de nova checagem HTTPS/OAuth e execução pelo fluxo oficial existente.
+- **Owner / source:** operador/equipe; resposta humana CP89.
+- **Last confirmed truth:** recurso A aparece Connected na Meta segundo humano; controle local200 e real05 semrotaMeta; appWABA/callbackapplication correspondem. Hipótese de falha específica da conta continua aberta; VAL05 sem waiver.
 
 ## Execution Lane Tracking (Required)
 
@@ -931,10 +935,10 @@ Concretização de freshness cp6: root observou que `timeline-freshness.ts`, com
 
 ## TODO Closeout Disposition
 
-- **Disposition:** keep-active
-- **Disposition reason:** provas/revisões restantes do cadastro oficial e VAL-05 ainda abertas. Complemento técnico local Cancelled CP84, sem entrega; testes oficiais retomam pelo Embedded Signup após checagem da configuração atual.
-- **Post-commit/push status:** commits/evidências de produto anteriores permanecem históricos; CP84 altera somente documentação e limpeza local do experimento, sem push de código. Publicação documental na Foundation main sob guard.
-- **Next path/status action:** manter active/Pending até aceite das provas restantes do contrato. Conferir HTTPS, campo messages/app na WABA, elegibilidade e roteamento atuais antes de nova IN/OUT oficial; não presumir inscrição pela confirmação histórica. Sem implementação de standby/handover neste cancelamento.
+- **Disposition:** blocked
+- **Disposition reason:** prova comparativa aguarda seleção/liberação do recurso B pelo operador/equipe; sem entrega do canal oficial ou fechamento VAL05.
+- **Post-commit/push status:** checkpoint documental CP89 em Foundation main sob guard; nenhuma alteração/push de produto ou ambiente.
+- **Next path/status action:** manter active/Pending+Blocked até recurso definido; depois verificar HTTPS/OAuth e cadastrar B no fluxo aprovado. Canal A/dados preservados; modo técnico permanece Cancelled.
 
 ## Security Risk Assessment (Mandatory Before Delivery)
 
@@ -1944,3 +1948,9 @@ Ainda sem causa demonstrada para evento real ausente: nível Padrão último rel
 O usuário apontou a conta oficial cadastrada como provável origem da ausência dos dados. Recalibração de sessão/projeto: receptor de controle foi comprovado, mas o canal real ainda não; não declarar defeito confirmado da conta nem funcionamento total do sistema. Prioridade passa de chamado técnico para verificar o estado de registro/operação do número e, se houver recurso disponível, comparar outro número/WABA no mesmo app/callback usando Embedded Signup existente e BU própria. [Contrato de isolamento](../../../artifacts/reviews/leadshug-number-onboarding-20261015/evidence/root-cp88-official-account-isolation.json).
 
 Consultas humanas pendentes: status do número na Meta→GerenciadorWhatsApp→NúmerosdeTelefone, somente leitura; e disponibilidade de outro número seguro com WABA distinta ou mesma WABA, sem novo cadastro ainda. Referência primária MetaPostman diferencia vínculo/provisão do recurso e registro paraCloudAPI; não presumir que opção Járegistrado escolhida anteriormente prova estadoatual. Nenhum GET com fields especulativos, mutação de provider/DB/runtime/arquivoprivado/código ou envio novo neste enquadramento. ChamadoCP87 continua disponível como diagnóstico histórico, sem bloquear isolamento local. Parent Pending/VAL05aberto; modo técnico Cancelled.
+
+### CP89 — Comparação aguardando definição do recurso
+
+Humano confirmou recurso A Connected na Meta, outro número/conta existentes, campos de domínio/OAuth/SDK atualizados e segundo candidato já Connected. Depois esclareceu que ainda precisa consultar a equipe para definir qual número poderá usar e não consegue executar a etapa de cadastro B. Disponibilidade genérica anterior não é liberação de um recurso específico. Fluxo orientado: nova BU Teste Oficial B, ES pela outra WABA/número, Járegistrado; **nenhuma execução/conclusão B foi relatada** e não se pede novo envio agora.
+
+Somente preparação offline do leitor de metadados B foi realizada: template CP80 com alvo/checkpoint literais, inversão byteexact informada pelo executor e9fakesoffline; sem GO de leitura viva, sem DB/provider/runtime/privatefile/productchanges. Executor encerrou tarefas e foi instruído a não executar. [Disposição e dependência](../../../artifacts/reviews/leadshug-number-onboarding-20261015/evidence/root-cp89-comparison-awaits-resource.json). Parent Pending+Blocked por recurso externo, VAL05 aberto; isso não é entrega/fechamento nem reabre complemento técnico cancelado. Na retomada, conferir endereço HTTPS e domínios autorizados antes de autorizar cadastro/teste B. Comparação poderá reduzir hipóteses de configuração compartilhada versus conta/número/conversa, sem prometer diagnóstico antecipado.

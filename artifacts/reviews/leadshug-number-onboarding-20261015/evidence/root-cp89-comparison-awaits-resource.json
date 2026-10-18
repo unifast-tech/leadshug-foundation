@@ -1,0 +1,31 @@
+{
+  "checkpoint": "cp89-comparison-awaits-resource-selection",
+  "recordedAtUtc": "2026-10-18T20:52:24.053439+00:00",
+  "humanFacts": {
+    "currentOfficialNumberMetaState": "Connected, human-reported",
+    "alternateNumberAndWabaExist": true,
+    "alternateResourceSelectedAndCleared": "not_yet; operator must check with team",
+    "newHostAppDomainOauthSdkFields": "saved, human-reported",
+    "secondNumberPreviouslyReportedConnected": "candidate context only; exact resource remains to be selected"
+  },
+  "performed": "Instructions for standard ES/new BU given; one literal-only metadata helper prepared and9offline cases passed",
+  "notPerformed": [
+    "B registration/authorization/confirmation not completed or reported",
+    "no new BU/channel/database/resource mutation by agent",
+    "no baseline or provider query for B",
+    "no new physical message test",
+    "no new product implementation"
+  ],
+  "helperPreparation": {
+    "path": "artifacts/tmp/number-onboarding-execution/T/cp89-official-b-binding-baseline-readonly.cjs",
+    "sha256": "f50d750922052282c6f0e6f4f1a47e9bf25a34ce119e3e5cce02f562831e9849",
+    "executionAuthority": "none; no liveGO",
+    "sourceDelta": "Target name and checkpoint literals only; inverse byte equality verified by executor; root has not admitted live execution"
+  },
+  "currentBlocker": "Team must select and clear a safe second test number/WABA before comparative validation can proceed",
+  "next": "After operator identifies resource, recheck HTTPS/OAuth readiness, then normal ES in dedicated BU Teste Oficial B and isolated IN/OUT comparison; no renewed implementation approval needed for already-authorized flow",
+  "hypothesis": "A resource/account-specific issue remains plausible, not proven. Successful B comparison would narrow to resource/account/thread-specific conditions, not establish universal account defect",
+  "preserve": "Existing A/QR/Sandbox registrations/data and cancelled local TestNumber mode; no cleanup or rollback of standard runtime/app settings",
+  "supportBrief": "CP87 diagnostic packet remains available; not submitted by agent",
+  "VAL05": "open_unwaived"
+}
