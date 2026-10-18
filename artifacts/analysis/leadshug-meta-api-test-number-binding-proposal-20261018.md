@@ -1,6 +1,6 @@
 # Vínculo local do Test Number da Configuração da API
 
-Estado: **direção aceita pelo usuário em CP81; contrato complementar revisado, finalizando pré-aprovação; implementação não autorizada**. Owner: integrações/canais. Complemento candidato do [ST-CON-01](../../todos/active/features/TODO-leadshug-channel-connection-readiness.md); não é outro contrato de execução nem substitui o TODO. Perfil: Operational/DevOps, análise sem mudanças de produto; eventual implementação exige handoff para Operational/Coder e revisão de segurança.
+Estado atual: **Cancelled por decisão humana em CP84 (2026-10-18); proposta retirada, sem implementação de produto**. Retomada pelo [contrato ST-CON-01](../../todos/active/features/TODO-leadshug-channel-connection-readiness.md), mantendo Embedded Signup. O plano/opções abaixo são históricos; a recomendação da opção B e a aprovação posterior não concedem mais execução. [Cancelamento e limpeza](../reviews/leadshug-meta-test-binding-20261018/rollback-contract-cp84.json).
 
 ## Problema confirmado
 

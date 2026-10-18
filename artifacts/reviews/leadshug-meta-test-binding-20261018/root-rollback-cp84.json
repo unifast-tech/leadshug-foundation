@@ -1,0 +1,51 @@
+{
+  "checkpoint": "cp84",
+  "recordedAtUtc": "2026-10-18T18:54:34.674833+00:00",
+  "outcome": "cancelled_without_product_implementation; bounded cleanup complete",
+  "userAuthority": "Explicit current instruction to revert the direct TestNumber experiment; prior implementation approval revoked",
+  "sourceVerification": "all21 named public source hashes match before and after cleanup; optional local-test files absent",
+  "cleanup": {
+    "result": "complete",
+    "removedKeyCount": 3,
+    "targetKeyCountAbsent": 5,
+    "unrelatedConfigBytesPreserved": true,
+    "inodeAndModePreserved": true,
+    "exactIgnoredHelpersRemoved": 8,
+    "privateValuesPersisted": false
+  },
+  "expectedAuthorityDenial": "Feature guard no-go only because current approval evidence and scope are absent; this is an asserted cancellation fence, not an unhandled validation failure",
+  "validation": [
+    "in-memory cleanup parser cases passed",
+    "safe cleanup receipt checked by root",
+    "child and parent structural validators PASS",
+    "child closeout guard GO",
+    "public named-source fingerprints unchanged",
+    "Foundation diff whitespace check"
+  ],
+  "notRequired": "Product build/tests/restart: no product implementation or runtime configuration wiring existed for this experiment",
+  "historicalEvidence": "CP81-CP83 preserved; current human report corrects subscription assumption without proving cause of all historical windows",
+  "parentStatus": "Pending; VAL05 open and unwaived; normal Embedded Signup and QR preserved",
+  "remainingParentPrerequisites": [
+    "current working HTTPS/callback",
+    "messages field subscription plus app/WABA subscription checked independently",
+    "app/resource-context access eligibility and App Review needs",
+    "expected conversation routing",
+    "physical official IN in correct BU and OUT received"
+  ],
+  "notAuthorized": [
+    "automatic standby/handover implementation",
+    "partner disconnection",
+    "channel/BU deletion",
+    "provider or DB mutation",
+    "runtime/tunnel restart",
+    "cancelled-mode token refresh or retries"
+  ],
+  "references": [
+    "rollback-contract-cp84.json",
+    "rollback-cleanup-cp84.json",
+    "rollback-source-verification-cp84.json",
+    "authority-revoked-cp84.json",
+    "structure-cancelled-cp84.json",
+    "structure-parent-cp84.json"
+  ]
+}

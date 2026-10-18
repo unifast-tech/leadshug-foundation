@@ -1,0 +1,39 @@
+{
+  "config_inode_preserved": true,
+  "config_mode_preserved": true,
+  "contract": "cp84-local-test-cleanup",
+  "experiment_files_absent": {
+    "cp82-qualification-helper.cjs": true,
+    "cp82-qualification-launcher-offline.test.py": true,
+    "cp82-qualification-launcher.py": true,
+    "cp82-qualification-offline.test.cjs": true,
+    "cp83-diagnostic-container-fakes.py": true,
+    "cp83-diagnostic-helper.cjs": true,
+    "cp83-diagnostic-launcher-offline.test.py": true,
+    "cp83-diagnostic-launcher.py": true
+  },
+  "experiment_files_unlinked": [
+    "cp82-qualification-helper.cjs",
+    "cp82-qualification-launcher-offline.test.py",
+    "cp82-qualification-launcher.py",
+    "cp82-qualification-offline.test.cjs",
+    "cp83-diagnostic-container-fakes.py",
+    "cp83-diagnostic-helper.cjs",
+    "cp83-diagnostic-launcher-offline.test.py",
+    "cp83-diagnostic-launcher.py"
+  ],
+  "removed_assignment_keys": [
+    "META_LOCAL_TEST_ACCESS_TOKEN",
+    "META_LOCAL_TEST_WABA_ID",
+    "META_LOCAL_TEST_PHONE_NUMBER_ID"
+  ],
+  "result": "complete",
+  "target_assignment_keys_absent": [
+    "META_LOCAL_TEST_ACCESS_TOKEN",
+    "META_LOCAL_TEST_WABA_ID",
+    "META_LOCAL_TEST_PHONE_NUMBER_ID",
+    "META_LOCAL_TEST_ENABLED",
+    "META_LOCAL_TEST_BU_ID"
+  ],
+  "unrelated_bytes_preserved": true
+}

@@ -1,0 +1,100 @@
+{
+  "checkpoint": "cp84",
+  "scope": "Named public source inventory only; no private storage or config read",
+  "files": [
+    {
+      "path": "scripts/test-channels-local.sh",
+      "matchesBaseline": true
+    },
+    {
+      "path": "docker-compose.channels.yml",
+      "matchesBaseline": true
+    },
+    {
+      "path": "api-app/src/infra/config/modulos.ts",
+      "matchesBaseline": true
+    },
+    {
+      "path": "api-app/src/surfaces/bff/session.middleware.ts",
+      "matchesBaseline": true
+    },
+    {
+      "path": "api-app/src/domain/channels/channel-credential-resolver.ts",
+      "matchesBaseline": true
+    },
+    {
+      "path": "web-app/src/cadastroNumero.ts",
+      "matchesBaseline": true
+    },
+    {
+      "path": "web-app/src/cadastroNumero.lifecycle.ts",
+      "matchesBaseline": true
+    },
+    {
+      "path": "web-app/src/cadastroNumero.spec.ts",
+      "matchesBaseline": true
+    },
+    {
+      "path": "web-app/e2e/number-onboarding.spec.ts",
+      "matchesBaseline": true
+    },
+    {
+      "path": "web-app/e2e/number-onboarding-freshness.ts",
+      "matchesBaseline": true
+    },
+    {
+      "path": "web-app/playwright.config.ts",
+      "matchesBaseline": true
+    },
+    {
+      "path": "api-app/test/timeline-fixtures.cjs",
+      "matchesBaseline": true
+    },
+    {
+      "path": "api-app/test/browser-server.cjs",
+      "matchesBaseline": true
+    },
+    {
+      "path": "api-app/src/surfaces/bff/number-registrations.controller.ts",
+      "matchesBaseline": true
+    },
+    {
+      "path": "api-app/src/domain/channels/number-registration.service.ts",
+      "matchesBaseline": true
+    },
+    {
+      "path": "api-app/src/integrations/meta/meta.client.ts",
+      "matchesBaseline": true
+    },
+    {
+      "path": "api-app/src/surfaces/bff/channels.controller.ts",
+      "matchesBaseline": true
+    },
+    {
+      "path": "api-app/src/surfaces/webhooks/meta.controller.ts",
+      "matchesBaseline": true
+    },
+    {
+      "path": "api-app/prisma/schema.prisma",
+      "matchesBaseline": true
+    },
+    {
+      "path": "api-app/test/number-onboarding-flow.e2e-spec.ts",
+      "matchesBaseline": true
+    },
+    {
+      "path": "web-app/src/componentes/CadastroNumero.tsx",
+      "matchesBaseline": true
+    }
+  ],
+  "optionalFiles": [
+    {
+      "path": "api-app/src/domain/channels/local-meta-test-config.ts",
+      "absent": true
+    },
+    {
+      "path": "api-app/src/domain/channels/local-meta-test-config.spec.ts",
+      "absent": true
+    }
+  ]
+}

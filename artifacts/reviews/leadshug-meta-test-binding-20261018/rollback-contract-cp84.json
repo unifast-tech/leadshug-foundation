@@ -1,0 +1,56 @@
+{
+  "checkpoint": "cp84",
+  "date": "2026-10-18",
+  "action": "cancel_local_test_authorization_experiment",
+  "authority": "Current explicit human request to revert the direct API Setup Test Number path; supersedes earlier implementation approval for ST-CON-01-TESTAUTH only",
+  "profile": "operational-devops",
+  "scopes": [
+    "docker",
+    "nestjs",
+    "react",
+    "prisma",
+    "postgresql"
+  ],
+  "topology": "primary-checkout-single-writer; root owns docs/Git; routine executor owns exact cleanup",
+  "productImplementationExisted": false,
+  "evidence": "rollback-source-verification-cp84.json: all21 named public source files match pre-experiment baselines; named optional local-test config files absent",
+  "privateConfigAuthority": "Human rollback instruction authorizes removal only of experiment assignments from operator-owned .env.testing; all unrelated bytes stay opaque and unchanged",
+  "removableKeys": [
+    "META_LOCAL_TEST_ACCESS_TOKEN",
+    "META_LOCAL_TEST_WABA_ID",
+    "META_LOCAL_TEST_PHONE_NUMBER_ID",
+    "META_LOCAL_TEST_ENABLED",
+    "META_LOCAL_TEST_BU_ID"
+  ],
+  "retireIgnoredExecutables": [
+    "cp82-qualification-helper.cjs",
+    "cp82-qualification-launcher-offline.test.py",
+    "cp82-qualification-launcher.py",
+    "cp82-qualification-offline.test.cjs",
+    "cp83-diagnostic-container-fakes.py",
+    "cp83-diagnostic-helper.cjs",
+    "cp83-diagnostic-launcher-offline.test.py",
+    "cp83-diagnostic-launcher.py"
+  ],
+  "preserve": [
+    "all other private config bytes",
+    "all historical versioned evidence",
+    "consumed GO tombstones",
+    "normal Embedded Signup/QR helpers and channel registrations",
+    "all API/Web/schema/runtime sources and stored credentials"
+  ],
+  "forbidden": [
+    "private values/hashes/lengths or config copies in output/artifacts",
+    "api-app/.local-files access",
+    "provider/Graph/Docker/DB calls",
+    "runtime/tunnel restart",
+    "channel/BU deletion",
+    "Meta/partner/routing/App Review changes",
+    "standby/handover implementation",
+    "product feature execution under revoked approval"
+  ],
+  "currentHumanReport": "Webhook subscription was missing; user wants conventional tests rather than local direct-token method",
+  "evidenceLimits": "Human report corrects prior subscription assumption but is not an independently measured explanation for every historical window. CP82/CP83 token/DNS observations remain historical facts. Current callback/Advanced Access/routing remain to be verified in their actual context before physical acceptance.",
+  "completion": "Named config assignments absent, unrelated bytes preserved, exact8 ignored scripts absent, child Cancelled and parent next action restored; no product delivery or VAL05 closure claim",
+  "reopening": "Fresh human scope and approval required; no retry or token refresh for cancelled mode"
+}

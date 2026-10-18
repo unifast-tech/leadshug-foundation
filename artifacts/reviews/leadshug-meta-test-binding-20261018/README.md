@@ -1,6 +1,10 @@
 # Revisão do vínculo técnico local do Test Number
 
-Pacote derivado do [TODO complementar](../../../todos/active/features/TODO-leadshug-meta-api-test-number-binding.md), autoridade de execução exclusiva deste complemento. Parent: ST-CON-01, Pending/VAL05 aberto. O usuário respondeu APROVADO ao plano publicado em 7f478ee3 em 2026-10-18. A execução é obrigatoriamente em etapas: qualificação somente leitura, depois implementação somente se o grant for qualificado e sob GO próprio. A preparação atual não altera código do produto nem runtime. Os registros CP81 abaixo preservam a história do planejamento anterior à aprovação.
+**Estado atual: Cancelled — CP84, 2026-10-18.** O usuário solicitou reverter o modo técnico local e retomar o cadastro oficial. A aprovação CP82 está revogada; este pacote preserva apenas histórico, sem autorização para executar seus helpers ou implementar o modo. Nenhum código do produto havia sido alterado. [Contrato de reversão](rollback-contract-cp84.json) e [verificação das fontes](rollback-source-verification-cp84.json).
+
+O conteúdo CP81–CP83 abaixo é histórico e deve ser lido sob essa revogação.
+
+Pacote derivado do [TODO complementar](../../../todos/active/features/TODO-leadshug-meta-api-test-number-binding.md), identidade histórica do complemento cancelado. Parent: ST-CON-01, Pending/VAL05 aberto. O usuário respondeu APROVADO ao plano publicado em 7f478ee3 em 2026-10-18. O plano anterior previa etapas: qualificação somente leitura, depois implementação somente se o grant for qualificado e sob GO próprio. A preparação atual não altera código do produto nem runtime. Os registros CP81 abaixo preservam a história do planejamento anterior à aprovação.
 
 ## Entradas delimitadas
 
@@ -60,3 +64,15 @@ Uma única execução consumiu o [GO](qualification-live-go-cp82.json). O [resul
 O operador confirmou também que o callback salvo ainda usa o domínio que agora não resolve no DNS, com Graph resolvendo como controle. São dois impedimentos atuais distintos: entrada pública e credencial local. Não atribuímos retrospectivamente todas as falhas anteriores a eles.
 
 Primeiro renovar o token privado e testar sua elegibilidade sob novo GO; recuperar HTTPS sob ativação operacional própria antes do próximo teste físico. Nenhuma mudança de validação, arquitetura ou produto se justifica somente pelo token expirado. A implementação continua Pending+Blocked, com VAL05 independente.
+
+## CP84 — Retirada solicitada pelo humano
+
+- Estado do complemento: **Cancelled**, sem implementação de API/Web/schema. [21 fontes conferidas](rollback-source-verification-cp84.json), todas iguais aos inventários anteriores.
+- [Contrato da reversão](rollback-contract-cp84.json), [roteamento do executor](routing-rollback-cp84.json) e [checagem de autoridade revogada](authority-revoked-cp84.json). O `no-go` de autoridade é **esperado**: impede nova implementação sob a aprovação retirada; não é uma solicitação de nova aprovação para a limpeza já autorizada pelo usuário.
+- [Validação estrutural do filho](structure-cancelled-cp84.json), [validação do parent](structure-parent-cp84.json) e [recibo da limpeza](rollback-cleanup-cp84.json). O path do filho permanece estável como identidade histórica, com lifecycle Cancelled e execução bloqueada; não se declara Completed.
+- A observação humana de inscrição ausente substitui a premissa anterior de inscrição correta. Não reatribui retrospectivamente todas as falhas nem apaga os resultados medidos CP82/CP83.
+- Referência primária consultada em 2026-10-18: a [coleção oficial Meta — Embedded Signup](https://www.postman.com/meta/whatsapp-business-platform/documentation/du6gzjv/embedded-signup) separa a configuração de webhooks da inscrição do app na WABA por `subscribed_apps`. Uma dessas verificações não comprova a outra.
+- Consulta direta das páginas Meta de webhooks, Tech Providers e roteamento esteve indisponível/limitada (429). Não se declara confirmação documental atual da regra universal de Advanced Access ou do payload WhatsApp de standby/handover. Conferir requisitos no contexto do app/ativos e revisar contrato próprio se esse suporte for necessário; não copiar sem validação um parser de outra plataforma.
+- Fluxo vigente: cadastro oficial via Embedded Signup e prova física na BU correta, após HTTPS/inscrições/elegibilidade/roteamento atuais. Nenhum provider write, migração, mudança de callback, desconexão de parceiro ou pedido de revisão do app faz parte deste cancelamento. Parent Pending/VAL05 aberto.
+
+Limpeza CP84 concluída: três campos exclusivos removidos (outros dois já ausentes), demais bytes preservados e oito executáveis temporários retirados. [Adjudicação root](root-rollback-cp84.json). Não houve implementação nem ativação do modo técnico.

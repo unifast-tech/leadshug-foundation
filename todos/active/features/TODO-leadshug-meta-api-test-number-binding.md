@@ -5,7 +5,10 @@
 - **Parent contract:** `ST-CON-01` in [TODO-leadshug-channel-connection-readiness.md](TODO-leadshug-channel-connection-readiness.md)
 - **Child story:** `ST-CON-01-TESTAUTH`
 - **Proposal:** [leadshug-meta-api-test-number-binding-proposal-20261018.md](../../../artifacts/analysis/leadshug-meta-api-test-number-binding-proposal-20261018.md)
-- **Status of this document:** approved staged execution; qualification rejected/inconclusive, product edits stopped.
+- **Lifecycle state:** `Cancelled` (human decision, 2026-10-18, CP84).
+- **Status of this document:** cancelled without product implementation; previous approval revoked. The stable path preserves historical identity only and grants no execution authority.
+
+The user requested reversal of the direct API Setup Test Number experiment after reporting a missing webhook subscription. CP84 supersedes all forward execution/qualification instructions below. Historical planning, approval and diagnostics remain evidence; they must not be resumed. Return to the parent official Embedded Signup flow. The cancellation contract is [rollback-contract-cp84.json](../../../artifacts/reviews/leadshug-meta-test-binding-20261018/rollback-contract-cp84.json).
 
 ## Context
 
@@ -23,23 +26,23 @@ This child proposes a default-off local technical authorization method for that 
 
 ## Contract Boundary
 
-The user explicitly replied APROVADO on 2026-10-18 to the published staged plan at Foundation 7f478ee38d31827786c6eafc0b1168f9fc5d2d83. This authorizes the exact bounded qualification-first implementation contract. The earlier direction-only approval is superseded; separate root qualification and code-execution GOs remain mandatory. A grant that fails existing authorization requirements blocks this plan; it does not authorize weakening the Embedded Signup validators.
+The earlier staged approval at Foundation 7f478ee38d31827786c6eafc0b1168f9fc5d2d83 is historical and withdrawn by the user's CP84 cancellation. No product implementation began. Only the bounded removal of experiment configuration and ignored diagnostic executables is authorized by the current rollback request; it does not authorize another qualification, token refresh, provider operation or product edit.
 
 ## Implementation Intent
-- **Current delivery:** one default-off local authorization method binding a pre-provisioned Meta API Setup Test Number through the existing channel workflow; approved staged contract; qualification returned rejected_or_inconclusive; no product implementation started.
-- **Planned next steps:** CP83 reeval confirmed an expired/invalid USER credential and a stale public callback. Obtain refreshed local credential, establish eligibility under a fresh bounded decision, and recover dependable HTTPS before physical tests. Preserve product gate and review any material authorization change; current evidence alone does not require a new architecture.
+- **Current delivery:** none; cancelled without implementation.
+- **Planned next steps:** no execution in this child. Resume supported Embedded Signup and official receipt validation in ST-CON-01 after its operational prerequisites are checked.
 - **Anticipatory implementation authorized now:** none.
-- **Rationale:** isolate the new trust entry point while reusing the existing confirmation, identity, credential promotion, subscription, webhook, and send paths.
+- **Rationale:** user withdrew the technical authorization complement and requested conventional official-channel testing.
 
 ## Delivery Status Canon (Required)
 - **Current delivery stage:** `Pending`
 - **Qualifiers:** `Blocked`
-- **Next exact step:** CP83 identified current USER-token expiry/is_valid=false before phone lookup, plus the saved callback hostname no longer resolves. Await operator refresh of only META_LOCAL_TEST_ACCESS_TOKEN, then admit a fresh one-time read-only check under its own GO; restore dependable HTTPS under a separate operational activation. Preserve validators and the blocked product gate; do not infer design incompatibility from the expired credential.
+- **Next exact step:** none in this cancelled contract; CP84 cleanup is complete, retain historical evidence. Continue official onboarding/receipt work only under the parent contract. Reopening this child requires renewed human scope and approval.
 
 ## Active Work State (Required While TODO Remains In `active/`)
 - **Work state:** `blocked`
-- **Why this state now:** the reviewed helper ran once under the approved staged contract, but returned rejected_or_inconclusive. The prerequisite for product implementation was not met.
-- **Exit condition:** a reviewed authorization design and eligible grant establish the unchanged prerequisite under an explicit execution decision; material contract changes require renewed approval. No automatic requalification or relaxed validator.
+- **Why this state now:** lifecycle is Cancelled, with execution approval revoked; not awaiting a refreshed token. The immutable path is retained per evolution_lifecycle.md and does not indicate active development.
+- **Exit condition:** no automatic resumption. A new human scope/approval decision may reopen Cancelled → Draft as a new execution cycle.
 
 ## Scope
 - [ ] Add a server-only, explicitly enabled local test-number authorization method to the existing number-registration workflow.
@@ -58,20 +61,20 @@ The user explicitly replied APROVADO on 2026-10-18 to the published staged plan 
 - `Local-Implemented`: only after the scoped changes are implemented and required local validation passes.
 - `Lane-Promoted`: only after the declared lane threshold is met.
 - `Production-Ready`: not an intended claim for this local-only method; require a new explicit scope decision if production support is proposed.
-- `Blocked` is set because the qualification prerequisite was not established; `Provisional` is not set.
+- `Blocked` here prevents execution of a Cancelled contract retained at its immutable path; it is not an ongoing technical qualification wait. `Provisional` is not set.
 
 ## Provisional Notes
 - Not applicable: this plan does not claim partial implementation.
 
 ## Blocker Notes
-- **Blocker:** the one real qualification returned rejected_or_inconclusive; required app/grant/target acceptance and usable canonical phone were not established.
-- **Why blocked now:** the approved staged contract forbids product edits after rejected/inconclusive qualification. No code GO was issued.
-- **What unblocks it:** refresh the expired local test credential and establish current app/grant/target eligibility under a fresh bounded execution decision without weakening shared validators. Reevaluate design only if a valid grant still fails the target contract; material changes require review/approval. Restore public HTTPS before physical delivery tests.
-- **Owner / source:** root design owner; current Meta credential/resource evidence remains limited to the safe adapter result.
-- **Last confirmed truth:** CP82 qualification remains historically rejected/inconclusive. CP83 separately observed USER token, same app and both scopes, but provider invalidity/Graph190/expiry past before phone lookup. Saved callback still uses a currently non-resolving hostname. Both reviewed one-time invocations made no provider writes/DB/product changes; delivery and phone eligibility remain unproved.
+- **Blocker:** the human cancelled this authorization method and revoked its implementation approval.
+- **Why blocked now:** this retained historical contract has no current product execution authority.
+- **What unblocks it:** only renewed human scope and approval, restarting at Draft; credential refresh alone does not reopen it.
+- **Owner / source:** current explicit user rollback request; root records cancellation under evolution_lifecycle.md.
+- **Last confirmed truth:** no product implementation existed; CP84 checked all21 named public source baseline fingerprints. CP82 qualification and CP83 current-token/DNS findings remain historical and do not prove the cause of every earlier delivery failure. The user now reports the webhook subscription was missing.
 
 ## Execution Lane Tracking (Required)
-- **Local implementation branches:** `feature/number-onboarding` in the principal checkout; local commits only after explicit implementation approval.
+- **Local implementation branches:** no implementation/commit authorized for this cancelled child; existing product branch unchanged.
 - **Promotion lane path:** `none authorized; local-only validation`
 - **Lane-promoted threshold for this TODO:** `n/a`
 - **Production-ready threshold for this TODO:** `n/a; local-only method`
@@ -79,7 +82,7 @@ The user explicitly replied APROVADO on 2026-10-18 to the published staged plan 
 ## Promotion Evidence (Required Before Lane Promotion / Production Ready)
 | Scope Item | Local Branch/Commit | PR to lane threshold | PR to `stage` | PR to `main` | Current Status |
 | --- | --- | --- | --- | --- | --- |
-| Local Meta test-number authorization | `feature/number-onboarding`; future local commit only | n/a | n/a | n/a | staged implementation approved; qualification rejected/inconclusive; product edits stopped; no promotion or source push |
+| Local Meta test-number authorization | no implementation commit | n/a | n/a | n/a | Cancelled CP84; no product delivery or promotion |
 
 ## Out of Scope
 - [ ] Changing, weakening, or bypassing the normal Embedded Signup OAuth flow or its grant validators.
@@ -208,7 +211,7 @@ The user explicitly replied APROVADO on 2026-10-18 to the published staged plan 
 
 ## Profile Scope & Handoffs (Required Before APROVADO)
 - **Primary execution profile:** operational-coder
-- **Current profile:** operational-devops, bounded qualification preparation; Genesis rejected because canonical project and reviewed contract already exist
+- **Current profile:** operational-devops, bounded cancellation cleanup only; Genesis rejected because canonical project and existing channel contracts already exist
 - **Active technical scope:** nestjs, react, vite, prisma, postgresql, docker
 - **Expected supporting profiles:** `assurance-tester-quality, assurance-security-adversarial, strategic-cto`
 - **Scope-check command:** `python3 delphi-ai/tools/profile_scope_check.py --profile operational-coder`
@@ -535,16 +538,19 @@ Full planning review completed through independent architecture v1 and fresh cri
 - **Waiver authority / reference:** `n/a`
 
 ## Approval
-- **Approved by:** user, explicit APROVADO on 2026-10-18.
-- **Approval scope:** exact reviewed local-only staged contract published at 7f478ee38d31827786c6eafc0b1168f9fc5d2d83 (scope baseline f35d1a0d4815629342cc0ac8df3c2e14a97e8a97): bounded read-only qualification first; product implementation only if qualified and under a separate root code GO; named local validation and later activation gates preserved.
-- **Approval reference:** current user statement “APROVADO”, after root presented the reviewed staged plan; earlier direction-only statement retained in CP81 history.
-- **Implementation approval:** `APROVADO; staged`
-- **Execution not authorized by approval:** product edits before qualification/code GO; provider writes during qualification; register/migrate/unregister; arbitrary credential or DB inspection; source push, Railway, worktrees, production activation or physical sends without their distinct gates.
-- **Renewed approval required when:** auth method, target cohort, secret handling, grant/ownership validation, schema, validation semantics or deployment boundary materially change.
+- **Approved by:** none
+- **Approval scope:** none
+- **Approval reference:** CP84 human cancellation supersedes the former staged approval.
+- **Implementation approval:** `REVOKED; Cancelled`
+- **Execution not authorized by approval:** all product implementation, qualification retries, token refresh, provider changes and activation for this method.
+- **Renewed approval required when:** reopening this cancelled contract; return to Draft and establish a new scope/approval cycle.
+
+### Historical approval (superseded)
+The user stated “APROVADO” on 2026-10-18 for the staged plan published at 7f478ee38d31827786c6eafc0b1168f9fc5d2d83, qualification first and product only after a separate code GO. Qualification never established that prerequisite. That historical approval is not valid after CP84; approval-cp82.json remains unchanged evidence.
 
 ## Rules Acknowledgement / Ingestion
 
-The listed sources were actually reloaded after APROVADO on 2026-10-18 for qualification preparation. Future product/runtime surface handoffs must reload their relevant methods again before edits.
+The listed sources were reloaded during historical qualification preparation. CP84 cancellation/cleanup sources are recorded in the final checkpoint below; no future product/runtime handoff is authorized by this cancelled contract.
 
 | Source | Why It Applies Now | Must Preserve | Must Avoid | Execution Impact |
 | --- | --- | --- | --- | --- |
@@ -564,6 +570,7 @@ Status: ingested 2026-10-18 by root. Also reloaded profile-selection-method.md, 
 ## Agent Routing Preflight
 - **Client surface:** codex
 - **Current governed action:** implementation
+- **Execution scope:** routing declaration applies only to the CP84 cancellation executor; product implementation is revoked and the separate cleanup contract is not permission to resume this feature.
 - **Selected role:** routine-executor
 - **Selected model:** gpt-6-luna
 - **Selected effort:** medium
@@ -577,7 +584,7 @@ Status: ingested 2026-10-18 by root. Also reloaded profile-selection-method.md, 
 - **Guard outcome:** go
 - **Waiver / exception reference:** n/a
 
-Execution tuple reconfirmed after APROVADO: artifacts/reviews/leadshug-meta-test-binding-20261018/routing-qualification-cp82.json returned go; normal authority guard is required before helper execution. Qualification and product execution remain distinct stages. Fresh architecture and critique reviewers use separate formal-review/gpt-6.1-sol/max routing receipts.
+Historical qualification routing is preserved in routing-qualification-cp82.json; all old qualification/code GOs are retired or consumed and cannot be reused. CP84 routing-rollback-cp84.json returned go for the exact cleanup executor only. The normal authority guard for this feature must deny execution after cancellation; the separate current human rollback instruction authorizes cleanup, not implementation.
 
 ## Decision Adherence Validation
 - **Status:** `not_run`
@@ -607,10 +614,10 @@ Planning one-to-one comparison D-01..06 completed in artifacts/reviews/leadshug-
 No promotion or delivery findings exist; delivery review is not_run. Planning findings are recorded in the dedicated resolution ledger.
 
 ## TODO Closeout Disposition
-- **Disposition:** `keep-active`
-- **Disposition reason:** staged implementation approved; no qualified grant yet. CP83 identified credential expiry plus stale public callback; product implementation remains blocked pending refreshed credential evidence.
-- **Post-commit/push status:** `pending`
-- **Next path/status action:** keep active/Pending+Blocked; await operator token refresh and a distinct bounded execution decision. Preserve unchanged validators; no automatic retry, product edit, or tunnel/provider change follows from the diagnostic result.
+- **Disposition:** `blocked`
+- **Disposition reason:** Cancelled by human decision CP84 without product delivery. Keep the immutable TODO identity as historical evidence; no pending token-refresh task or implementation authority remains.
+- **Post-commit/push status:** CP84 documentation-only checkpoint on Foundation main; guarded publication receipt retained in artifacts/tmp/number-onboarding-execution/cp84-publication-receipt.json.
+- **Next path/status action:** retain this path with lifecycle Cancelled; do not move to completed or claim delivery. Parent ST-CON-01 owns normal official-channel testing. Reopening requires renewed human scope/approval.
 
 ## Security Risk Assessment
 - **Risk level:** `high`
@@ -811,3 +818,16 @@ CP83 confirmação humana: callback salvo ainda é o domínio estimation-edition
 - Conclusão operacional: renovar a entrada privada do token e verificar o grant válido antes de propor alteração de arquitetura. CP82 continua histórico/inconclusivo, sem atribuição retroativa de causa. Nenhuma requalificação ou implementação por inferência da consulta diagnóstica.
 - Operador orientado a atualizar somente META_LOCAL_TEST_ACCESS_TOKEN no arquivo privado; estado aguardado, valores nunca solicitados no chat. Nenhum retry do token atual, providerwrite, DB, alteração de produto/runtime/túnel ou push de código. Parent Pending/VAL05 aberto.
 - Evidência: artifacts/reviews/leadshug-meta-test-binding-20261018/root-reevaluation-cp83.json e diagnosis-live-result-cp83.json.
+
+## CP84 — Cancelamento do complemento técnico local
+
+- Decisão humana: reverter o caminho de vínculo direto do Test Number e voltar ao teste pelo cadastro oficial. A aprovação CP82 fica revogada somente para ST-CON-01-TESTAUTH.
+- Perfil Operational/DevOps; escopos Docker/NestJS/React/Prisma/PostgreSQL apenas para delimitar a limpeza. Execução serial no checkout principal, root possui documentação/Git e executor possui a limpeza exata; sem worktrees. Recarregados AGENTS/main instructions, profile-selection, effort-selection, environment-readiness, todo-execution-boundary, deterministic-todo-validation, closeout e lifecycle local. Readiness PACED-Ready.
+- Verificação [de fontes](../../../artifacts/reviews/leadshug-meta-test-binding-20261018/rollback-source-verification-cp84.json): 21 arquivos públicos iguais aos inventários anteriores; arquivos opcionais do modo local ausentes. Não há implementação de API/Web/schema para reverter.
+- [Contrato de limpeza](../../../artifacts/reviews/leadshug-meta-test-binding-20261018/rollback-contract-cp84.json): somente os cinco nomes de configuração exclusivos, se presentes, e oito executáveis temporários CP82/CP83. A instrução atual de reversão autoriza essa remoção delimitada no arquivo privado; todos os outros bytes e credenciais são preservados. Sem cópia/dump/hash do arquivo privado, API/DB/provider/runtime write ou exclusão de BU/canal.
+- [Limpeza concluída](../../../artifacts/reviews/leadshug-meta-test-binding-20261018/rollback-cleanup-cp84.json): três campos exclusivos removidos, outros dois já ausentes, demais bytes/inode/permissões preservados; oito executáveis temporários removidos e ausência conferida. Recibos históricos, GOs consumidos e evidência segura versionada permanecem. Não repetir qualificação nem pedir renovação do token deste modo.
+- Recalibração: inscrição ausente é descoberta relatada pelo humano; invalida a suposição de inscrição já correta. Não prova isoladamente a causa de todas as janelas antigas. Token expirado e DNS não resolvido em CP83 continuam observações históricas.
+- Acesso padrão, verificação empresarial, publicação e aprovação de acesso avançado são estados diferentes; conferir elegibilidade no contexto do app/ativos e do teste, sem declarar bloqueio universal de mensagens reais. `standby`/handover não é adicionado nesta reversão. Se necessário, terá contrato próprio de eventos, ownership e envio antes de código.
+- Resultado do complemento: Cancelled, sem entrega. Parent Pending/VAL05 aberto e sem waiver; Embedded Signup, QR e seus vínculos permanecem.
+
+CP84 validação final: estrutura do filho e parent PASS; closeout do filho GO. Authority do filho retorna no-go esperado por ausência de aprovação/escopo vigentes, garantindo que o cancelamento não pode ser usado para implementar. Self-test em memória do helper passou, limpeza executada uma vez e conferida pelo root através do recibo seguro; 21 hashes públicos continuam iguais após a limpeza. Sem build/restart/suíte de produto: nenhum fonte/comportamento executável do produto mudou.

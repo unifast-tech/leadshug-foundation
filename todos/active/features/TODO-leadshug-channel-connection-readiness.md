@@ -41,12 +41,12 @@ Proposta ST-CON-01: jornada de cadastro de número, com infraestrutura local est
 
 - **Current delivery stage:** Pending
 - **Qualifiers:** none
-- **Next exact step:** cp81: solicitar APROVADO de implementação do [modo técnico local](TODO-leadshug-meta-api-test-number-binding.md); arquitetura/crítica e guardas finais concluídos, preflight-go não concede execução. Depois da aprovação: helper revisado/GO próprio para qualificar a credencial real antes de código. Grant incompatível para antes do produto. Parent VAL05 aberto; vínculo não garante entrega do webhook.
+- **Next exact step:** CP84: complemento técnico local Cancelled a pedido humano e limpeza concluída; retomar somente o cadastro oficial via Embedded Signup. Antes de novo teste físico, conferir HTTPS/callback atualmente alcançável, inscrição do campo messages e do app na WABA, elegibilidade/permissões no contexto exato e roteamento ao receptor esperado. A inscrição ausente é nova descoberta humana; não presumir confirmação antiga como prova atual. VAL05 permanece aberto; standby/handover requer escopo próprio se necessário.
 
 ## Active Work State (Required While TODO Remains In `active/`)
 
-- **Work state:** implementing
-- **Why this state now:** vínculo Sandbox foi confirmado no banco, mas o número desse cartão não está disponível no WhatsApp do remetente. SMS não executa teste da API WhatsApp e não prova falha de entrega. Usuário confirmou que o recurso de APISetup, distinto, recebeu mensagem dentro do WhatsApp. Falta integrar esse recurso viável ao LeadsHug por caminho suportado; escopo atual continua Embedded Signup, sem bypass.
+- **Work state:** implementation
+- **Why this state now:** provas reais do canal oficial permanecem pendentes. O humano cancelou o complemento de token técnico após descobrir inscrição ausente do webhook; teste retorna ao Embedded Signup existente, sem novo método de autorização. Provas do QR permanecem históricas e válidas nos limites registrados.
 - **Exit condition:** implementação no escopo, matriz local/provas reais e gates de entrega aceitos.
 
 ## Scope
@@ -932,9 +932,9 @@ Concretização de freshness cp6: root observou que `timeline-freshness.ts`, com
 ## TODO Closeout Disposition
 
 - **Disposition:** keep-active
-- **Disposition reason:** cp27 histórico aceito; cp33 primeira IN/OUT não oficial confirmada. cp36d corrige o erro de verificação inconclusiva e a precondição do harness; validação/revisões atuais e retomada ainda pendentes. VAL-05 ainda exige recuperação e oficial, sem waiver.
-- **Post-commit/push status:** source commits locais API f134bd11449a553e6f57e66cdc8fc71032151060, Web d33c82c26760c671d98cab6f3e7bfe5676122c69, workspace4bccdc4aa470d1166bc14a681d0008f242db2562; sem push de código. Foundation main será publicado pelo guard documental.
-- **Next path/status action:** manter este TODO active/Pending até correção/reviews/recuperação e prova oficial VAL-05; wizard/messages configurados e primeira IN/OUT não oficial já comprovados, sem inferir demais marcos.
+- **Disposition reason:** provas/revisões restantes do cadastro oficial e VAL-05 ainda abertas. Complemento técnico local Cancelled CP84, sem entrega; testes oficiais retomam pelo Embedded Signup após checagem da configuração atual.
+- **Post-commit/push status:** commits/evidências de produto anteriores permanecem históricos; CP84 altera somente documentação e limpeza local do experimento, sem push de código. Publicação documental na Foundation main sob guard.
+- **Next path/status action:** manter active/Pending até aceite das provas restantes do contrato. Conferir HTTPS, campo messages/app na WABA, elegibilidade e roteamento atuais antes de nova IN/OUT oficial; não presumir inscrição pela confirmação histórica. Sem implementação de standby/handover neste cancelamento.
 
 ## Security Risk Assessment (Mandatory Before Delivery)
 
@@ -1894,3 +1894,13 @@ Inventário de código [cp80](../../../artifacts/reviews/leadshug-number-onboard
 cp81 planejamento revisado: arquitetura v1 endossou convergência e exigiu contrato executável da qualificação; corrigido allowlist/método/budget/prova atual. Crítica independente fresca approve/zero bloqueadores materiais confirmou todas três resoluções; lowCRIT-MIG-01 apenas nomeia replay de cadastro pré-migração na cobertura existente. Final freeze/guardas ainda pendentes antes de pedir APROVADO. Nenhum código/credencial/runtime/provider/DB ou envio alterado; validação real e VAL05 continuam abertas. Pacote: artifacts/reviews/leadshug-meta-test-binding-20261018.
 
 cp81 planejamento pronto para aprovação humana: arquitetura/crítica convergiram, crítica approve/zero bloqueadores materiais. Baseline f35d1a0d publicada; code-coherencev3 GO4premissas, scope-driftv3 GO23seções/zerodesvio, estruturalv3 PASS e authorityv3 preflight-go/semexecauthority. Guardas v1/v2 negativos/parciais preservados e qualificados; correções apenas de formato/referência. Pacote artifacts/reviews/leadshug-meta-test-binding-20261018/root-planning-ready-for-approval.json. Próximo: APROVADO explícito do complemento antes de qualificação secreta/implementação; se grant não passar, parar antes de produto. Sem novas operações vivas/código; parent Pending/VAL05 aberto, mapping não garante entrega.
+
+### CP84 — Retorno ao cadastro oficial após cancelamento do experimento
+
+O usuário pediu reverter o caminho técnico do Test Number após relatar que o webhook não estava inscrito, e trouxe acesso avançado/revisão e roteamento como pontos a conferir. O [filho ST-CON-01-TESTAUTH](TODO-leadshug-meta-api-test-number-binding.md) está **Cancelled**, com aprovação anterior revogada; não aguarda token novo nem qualificação. Checagem de 21 fontes públicas contra os inventários confirmou ausência de implementação do modo: nenhuma reversão de API/Web/schema ou banco é necessária. Limpeza autorizada só dos campos exclusivos e oito scripts temporários de qualificação/diagnóstico, preservando demais configurações, fontes, vínculos e histórico seguro. [Contrato CP84](../../../artifacts/reviews/leadshug-meta-test-binding-20261018/rollback-contract-cp84.json).
+
+Fato novo é o relato humano de inscrição ausente; invalida a suposição de inscrição já correta, sem fechar retrospectivamente toda causa. Verificação empresarial/publicação não provam aprovação de acesso avançado. Conferir as exigências do app/ativos próprios versus onboarding de terceiros no contexto real antes de afirmar elegibilidade. Confirmar separadamente callback HTTPS atual, campo messages, assinatura app↔WABA e roteamento do número/conversa. O domínio temporário de CP83 estava sem DNS; não reutilizá-lo sem nova checagem.
+
+O fluxo suportado continua Embedded Signup → escolha explícita de conta/número → confirmar Já registrado quando aplicável → verificar identidade/eventos → primeira IN na BU correta → resposta recebida no outro aparelho. Não registrar novamente o API Setup Test Number por SMS, não usar token global/seed SQL, não excluir Sandbox/BU/canal nem desconectar parceiro por inferência. Não há suporte de standby/handover entregue; se necessário, abrir recorte próprio com contratos de eventos/ownership/envio, antes de ativar esse comportamento. Nenhuma nova mensagem física solicitada nesta reversão. Parent Pending, VAL05 aberto/sem waiver.
+
+CP84 limpeza concluída: três campos privados exclusivos removidos; demais bytes preservados e cinco nomes alvo ausentes; oito scripts temporários retirados, histórico seguro preservado. Root conferiu recibo sanitizado e os21fingerprints públicos novamente; nenhuma fonte/runtime/banco/provider alterado. [Resultado](../../../artifacts/reviews/leadshug-meta-test-binding-20261018/root-rollback-cp84.json).
