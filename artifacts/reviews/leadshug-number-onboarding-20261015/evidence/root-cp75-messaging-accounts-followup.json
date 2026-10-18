@@ -1,0 +1,20 @@
+{
+  "checkpoint": "root-cp75-messaging-accounts-followup",
+  "adjudicatedAtUtc": "2026-10-18T03:33:34.225438+00:00",
+  "previousRecord": "root-cp75-official-delivery-diagnosis.json",
+  "operatorReport": "Official test phone appears in both linked Messaging accounts",
+  "inference": "This UI does not resolve real-event delivery attribution; cause remains open",
+  "evidence": [
+    {
+      "path": "evidence/cp75-human-test-phone-in-both-messaging-accounts.json",
+      "sha256": "1947e4ced1f5c5f82d94acf93af57981927995273fca43b09a9218b486e1d946"
+    },
+    {
+      "path": "meta-official-webhook-delivery-diagnostic-cp75.md",
+      "sha256": "4773f380be6d2a7395ca7237914e8a294d55122e4fd8ba3e66f9faf839d2f790"
+    }
+  ],
+  "nextExactStep": "Human check of Meta dashboard delivery diagnostics or technical support availability. Support draft prepared locally; no external message, no provider change or physical retry.",
+  "deliveryStage": "Pending",
+  "VAL05": "open_unwaived"
+}

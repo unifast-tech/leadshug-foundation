@@ -1,0 +1,12 @@
+{
+  "checkpoint": "cp75-human-test-phone-in-both-messaging-accounts",
+  "recordedAtUtc": "2026-10-18T03:33:14.262950+00:00",
+  "operatorReport": "Aparece nas duas",
+  "meaning": "Operator sees the official test phone in both linked Messaging accounts",
+  "doesNotEstablish": [
+    "which account/app receives events",
+    "routing of existing thread",
+    "cause of missing real callback"
+  ],
+  "providerOrPermissionChanges": false
+}
