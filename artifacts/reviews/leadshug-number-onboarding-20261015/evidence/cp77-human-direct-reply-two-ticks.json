@@ -1,0 +1,11 @@
+{
+  "checkpoint": "cp77-human-direct-reply-two-ticks",
+  "recordedAtUtc": "2026-10-18T03:55:37.244987+00:00",
+  "operatorReport": "Enviada, com dois tiques",
+  "context": "One own-WhatsApp reply to chat that received Meta APISetup TestNumber message, not panel synthetic messages test",
+  "window": "cp77-meta-test-number-direct-reply-window.json",
+  "serverArrivalVerified": false,
+  "inboxProof": false,
+  "parent": "Pending",
+  "VAL05": "open_unwaived"
+}

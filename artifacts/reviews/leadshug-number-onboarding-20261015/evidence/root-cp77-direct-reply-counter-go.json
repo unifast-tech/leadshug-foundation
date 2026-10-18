@@ -1,0 +1,15 @@
+{
+  "checkpoint": "root-cp77-direct-reply-counter-go",
+  "issuedAtUtc": "2026-10-18T03:55:37.244987+00:00",
+  "decision": "GO_readonly_counter_once",
+  "helperPath": "foundation_documentation/artifacts/tmp/number-onboarding-execution/T/cp69-gateway-route-counter-v2.py",
+  "helperSha256": "d0df3ac082ca182b4e2a7a6a7b52390733e3c80b8b8e09737341320651736581",
+  "sinceUtc": "2026-10-18T03:53:32.196176Z",
+  "maxInvocations": 1,
+  "purpose": "Observe gateway aggregate ingress after human physical reply to Meta TestNumber, two ticks reported; no current mapped-identity assumption",
+  "preconditions": "Frozen helper byte exact; its pinned gateway0c48/image7609/owner/project/config6d checks pass; no retries or replacementcounter",
+  "limits": "Already-redacted gateway log lines in helper memory only, <=1001lines/1MiB/20s, strictUTF8 full-line parse and full coverage flags. Persist aggregate route/method/status joint counts+UTC/pins only. No rawlogs/URLs/body/headers/query/IDs/phone/token.",
+  "output": "Own cp77-meta-test-number-direct-reply-ingress.json plus exitcode. If helper fails retain safe enum/exit only; do not rerun or rawdump.",
+  "forbidden": "No provider/Graph/DB/login/auth/secret/envfiles/Config.Env/privatefiles/.local-files/runtimewrite/physicalsend; do not fetch supplied OAuthURL.",
+  "interpretation": "Only temporal route-level correlation, no exact request or phone attribution, no inbox/VAL05 claim. Unknown testWABA subscription remains unknown."
+}
