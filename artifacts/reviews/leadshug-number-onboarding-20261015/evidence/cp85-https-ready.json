@@ -1,0 +1,65 @@
+{
+  "checkpoint": "cp85-https-ready",
+  "capturedAtUtc": "2026-10-18T20:06:54+00:00",
+  "result": "ready",
+  "publicUrl": "https://printing-adaptive-snapshot-partition.trycloudflare.com",
+  "target": "http://127.0.0.1:8083",
+  "transport": "http2",
+  "registeredConnectionEvents": 1,
+  "errorEvents": 1,
+  "streamCallbackFaults": 0,
+  "stateWriteFailures": 0,
+  "failureCategoryPresent": false,
+  "supervisor": {
+    "pid": 15060,
+    "pathMatchesRuntimeState": true,
+    "hashMatchesAcceptedPin": true,
+    "startTimeMatchesRuntimeState": true
+  },
+  "child": {
+    "pid": 23120,
+    "pathMatchesRuntimeState": true,
+    "hashMatchesAcceptedPin": true,
+    "startTimeMatchesRuntimeState": true,
+    "parentPid": 15060,
+    "parentMatchesSupervisor": true
+  },
+  "rawArgvEmitted": false,
+  "environmentRead": false,
+  "publicProbes": {
+    "normalTls": true,
+    "cookiesEnabled": false,
+    "redirectsFollowed": false,
+    "bodyLimitBytes": 524288,
+    "results": [
+      {
+        "path": "/health",
+        "status": 200,
+        "bytes": 15,
+        "sha256": "a29ee2b15c494311c52521766e44af56a3ad2248e7a8ab465e5206463c13d288",
+        "contentType": "application/json"
+      },
+      {
+        "path": "/",
+        "status": 200,
+        "bytes": 694,
+        "sha256": "f21b2cb8528bab142bdba0babc64b7cb4cff821152ef4416698fd062642d5acd",
+        "contentType": "text/html"
+      },
+      {
+        "path": "/privacidade.html",
+        "status": 200,
+        "bytes": 12865,
+        "sha256": "d0f72c588f0f014de46a327e34d6b26125ca115bc973b56bbb926cd8519e701d",
+        "contentType": "text/html"
+      }
+    ]
+  },
+  "sourcePins": {
+    "helperSha256": "9134f6d00156b179ab46e8ccfaa78e17b30a40c649f33e9d4fdddba657586e61",
+    "supervisorSha256": "bdf68028ea2da0699b1e04d191453b5d7090861b17f518d236ce6b084d45c69b",
+    "cloudflaredSha256": "86aee4017b26625cee8484c113558f48effa4cd47f7aa05fcf425604e5d2b23c"
+  },
+  "appApiGatewayChanged": false,
+  "privateEnvironmentReadOrChanged": false
+}

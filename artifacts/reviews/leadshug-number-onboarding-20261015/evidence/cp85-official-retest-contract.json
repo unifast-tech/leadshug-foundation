@@ -1,0 +1,41 @@
+{
+  "checkpoint": "cp85-official-retest-preparation",
+  "recordedAtUtc": "2026-10-18T20:04:27.343865+00:00",
+  "userRequest": "Retest official message send/receipt after user activated messages; user confirms saved callback still old hostname",
+  "profile": "operational-devops",
+  "scope": "Existing ST-CON-01 local official channel proof; no new product behavior",
+  "observed": {
+    "localHealthHttp": 200,
+    "apiHealthy": true,
+    "apiShortId": "9eccbea48251",
+    "webShortId": "9aa55b6681a8",
+    "gatewayShortId": "0c48d94e9fe5",
+    "savedHost": "estimation-editions-knee-inclusion.trycloudflare.com",
+    "savedHostLinuxProbe": "dns_failure"
+  },
+  "humanReported": {
+    "messagesActivated": true,
+    "savedCallbackUnchanged": true
+  },
+  "boundedPlan": [
+    "Verify existing exact-owned native tunnel state and normal Windows TLS before replacement",
+    "Restore owned HTTPS only if needed under root execution GO",
+    "Preserve local runtime/data/config; API origin recreation only if justified separately",
+    "Validate new public health/root/privacy before requesting Meta address updates",
+    "Human verifies/saves callback with existing local token and keeps messages subscribed",
+    "Open unique physical IN/OUT window for existing Local Test Ofc; gateway aggregate only plus human inbox/apparatus confirmation"
+  ],
+  "exclusions": [
+    "cancelled local TestNumber authorization",
+    "new product code/schema",
+    "DB or provider writes by agent",
+    "partner disconnect or takeover",
+    "new token/bootstrap setup",
+    "global process/env/log dumps",
+    "api-app/.local-files access",
+    "unrelated restarts",
+    "new registration or SMS"
+  ],
+  "authority": "Parent existing approval/normal guard GO and current user request; no new implementation permission sought",
+  "physicalProof": "not_yet_requested; wait working callback; VAL05 remains open"
+}

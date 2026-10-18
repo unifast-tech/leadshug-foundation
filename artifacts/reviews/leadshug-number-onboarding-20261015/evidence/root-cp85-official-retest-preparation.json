@@ -1,0 +1,23 @@
+{
+  "checkpoint": "cp85-preparation",
+  "recordedAtUtc": "2026-10-18T20:07:54.496756+00:00",
+  "outcome": "owned_https_restored; awaiting_human_meta_callback_validation",
+  "userMessagesActivated": "human_reported",
+  "oldCallback": "human_confirmed_unchanged; Linux DNS failure and Windows unsuccessful HTTPS; exact old owned tunnel processes absent",
+  "newPublicUrl": "https://printing-adaptive-snapshot-partition.trycloudflare.com",
+  "rootIndependentPublicHealthHttp": 200,
+  "rootReview": "launcher inverse literal substitutions restore old helper byte-exact; pinned binaries; fresh exact-owned process identity; public health/root/privacy 200",
+  "runtimeChanges": "one new owned native quick tunnel; existing API/web/gateway/DB/Evolution unchanged",
+  "privateEnvironmentReadOrChanged": false,
+  "productCodeChanged": false,
+  "noNewRegistration": true,
+  "next": "human verify/save new callback using existing private verify token; then separate isolated official IN/OUT05 window",
+  "physicalProof": "not_started; no human test requested yet",
+  "VAL05": "open_unwaived",
+  "localTestNumberMode": "Cancelled CP84; remains cancelled",
+  "references": [
+    "cp85-official-retest-contract.json",
+    "cp85-tunnel-launch-go.json",
+    "cp85-https-ready.json"
+  ]
+}

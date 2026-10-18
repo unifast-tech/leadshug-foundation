@@ -1,0 +1,13 @@
+{
+  "decision": "GO",
+  "operation": "launch_new_quick_tunnel",
+  "checkpoint": "cp85",
+  "recordedAtUtc": "2026-10-18T20:05:26.091420+00:00",
+  "helperSha256": "9134f6d00156b179ab46e8ccfaa78e17b30a40c649f33e9d4fdddba657586e61",
+  "supervisorSha256": "bdf68028ea2da0699b1e04d191453b5d7090861b17f518d236ce6b084d45c69b",
+  "cloudflaredSha256": "86aee4017b26625cee8484c113558f48effa4cd47f7aa05fcf425604e5d2b23c",
+  "target": "http://127.0.0.1:8083",
+  "scope": "Launch one exact-owned fresh native supervisor/child; no existing process stop, Docker/source/private-config/DB/provider changes",
+  "authority": "Parent ST-CON-01 local testing and current user retest request",
+  "sourceReview": "Root inverse replacements byte-equal original helper; source-only literal directory/checkpoint adaptation"
+}
