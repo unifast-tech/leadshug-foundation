@@ -1,0 +1,23 @@
+{
+  "checkpoint": "root-cp80-sandbox-physical-test-disposition",
+  "recordedAtUtc": "2026-10-18T04:30:51.677776+00:00",
+  "binding": "Normal Sandbox onboarding is verified in CP80 snapshot; this is not invalidated by unavailable phone on sender device",
+  "physicalTestDisposition": "not_executed_as_WhatsApp; operator sent SMS instead after seeing number unavailable on WhatsApp",
+  "readbacksAfterSms": "No counter or DB post-action read executed, no new GO issued; SMS is not WhatsApp delivery evidence",
+  "resourceDistinction": "APISetup TestNumber received inside actual WhatsApp per explicit human confirmation; linked Sandbox resource not available on device. Do not conflate these or claim all Sandbox resources never support messaging.",
+  "nextExactStep": "Source inventory of a supported binding path for already provisioned APISetup resource; if absent, prepare concrete reviewed scope proposal preserving per-BU encryption, ownership, audience/scopes and normal state machine. No manual credential import/SQL seed/fake OAuth under existing authority.",
+  "implementationAuthority": "Unchanged approved SCOPE02 Embedded Signup; any additional authorization path is proposal only until required review/approval, not silently enabled",
+  "evidence": [
+    {
+      "path": "cp80-human-sandbox-not-on-whatsapp-sms.json",
+      "sha256": "291b55e08e751c5329779406316322c6f69d24fb910ab3f37e74091f6e8b5c90"
+    },
+    {
+      "path": "cp80-human-api-setup-received-in-whatsapp.json",
+      "sha256": "6b59b19e5c971b32a263e3ce681eda9bf75808a1367135e24e2563eb9c84c6bc"
+    }
+  ],
+  "parentDeliveryStage": "Pending",
+  "VAL05": "open_unwaived",
+  "writes": "Foundation metadata only, no automatic provider/runtime/product/DB mutation, physical send or credential reads"
+}

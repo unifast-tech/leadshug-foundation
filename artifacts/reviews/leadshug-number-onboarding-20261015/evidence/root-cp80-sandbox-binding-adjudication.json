@@ -1,0 +1,129 @@
+{
+  "checkpoint": "root-cp80-sandbox-binding-adjudication",
+  "adjudicatedAtUtc": "2026-10-18T04:23:20.319294+00:00",
+  "parentDeliveryStage": "Pending",
+  "VAL05": "open_unwaived",
+  "profile": "Operational / DevOps",
+  "readiness": "PACED-Ready",
+  "confirmedBinding": {
+    "source": "One read-only RepeatableRead snapshot plus human UI result",
+    "targetBusinessUnitId": "fe046ba1-289e-4d00-85f1-56a885c33b4b",
+    "channelId": "182dab05-a864-4935-b2b5-2c091da4d06f",
+    "attemptId": "fcba4a8ed1a9c87e740fea3e07e7e8d1",
+    "identityId": "40aa8180-9371-45df-8759-3d36602db001",
+    "generation": 2,
+    "pairingEpoch": 0,
+    "ownNumberVerified": true,
+    "verifiedEpoch": 0,
+    "providerConnectionState": "SUBSCRIBED",
+    "attemptState": "PENDING_RECEIPT",
+    "attemptStage": "SUBSCRIBED",
+    "attemptVersion": 7,
+    "managedIdentityMappingCount": 1,
+    "currentGenerationCredentialCount": 1,
+    "receiptPresent": false,
+    "connectedAtPresent": false,
+    "leasesActive": false
+  },
+  "baseline": {
+    "capturedAtUtc": "2026-10-18T04:21:09.340235+00:00",
+    "inbound": 0,
+    "outbound": 0,
+    "conversations": 0,
+    "webhookBUCount": 0,
+    "webhookIdentityAttributionAvailable": false
+  },
+  "rootVerification": "Direct sanitized baseline stdout/wrapper hashes inspected; exact API/image/owner/project/fourcompiled/currentheads/config6d and public normalTLShealth200/15/a29e preflight passed; only point availability.",
+  "diagnosticHelperCorrection": "Root caught v1 file-only invocation producing no stdin output before live GO; v1 preserved and never executed live. v2 explicitly accepts stdin; root reran9 offline guard/redaction controls in file/stdin with equal nonempty127bytes/SHA661eaf4d. No product code changed.",
+  "separatePinnedReader": {
+    "helperPath": "foundation_documentation/artifacts/tmp/number-onboarding-execution/cp80-sandbox-inout-aggregate-readonly.cjs",
+    "sha256": "d9d60971910d2e1df1d762b0256e3f6d03d5faf37a4466b6d5f179215715b0d9",
+    "review": "PIN/checkpoint-label-only derivation from accepted64e4 helper, reverse transform byte exact; Node syntax check passed without importing DB; E/T exact.",
+    "liveAuthorization": "None yet; separate GO after human result required"
+  },
+  "testWindow": {
+    "startedAtUtc": "2026-10-18T04:21:56.702858Z",
+    "resource": "Phone visible in newly linked Teste Meta card; not assumed equal to APISetup TestNumber",
+    "nextAction": "Human one IN then inbox OUT if IN appears, or report unavailable/error/ticks. Counter + exact-pinned aggregate only after separate GO."
+  },
+  "uncertainties": [
+    "Sandbox physical WhatsApp reachability not proven by successful binding",
+    "No current test-result human report yet",
+    "Credential presence is not continuous provider health",
+    "Real IN/OUT/recovery not complete",
+    "Original own-number investigation remains separate"
+  ],
+  "privacy": "No provider externalIDs/phone/WABA/token/key/envelope/tenantID/contact/content/payload selected/output. DB driver config inside API only. No provider calls, DB/runtime/product writes, auth/login, raw logs, privatefiles or .local-files access by agent. User onboarding UI writes remain normal approved flow.",
+  "evidence": [
+    {
+      "path": "cp80-human-sandbox-linked-pending-receipt.json",
+      "bytes": 626,
+      "sha256": "bb4b90e5d1bf8f61ad55a323c69e473bc8636438e3ba5e41cd05e26fca10b0f3"
+    },
+    {
+      "path": "cp80-sandbox-binding-baseline-preparation.json",
+      "bytes": 2530,
+      "sha256": "913981d2c6752a23fba2b368435c5d805e76cd9580285fecb5079f44a2fae61f"
+    },
+    {
+      "path": "cp80-sandbox-binding-baseline-readonly-v2.cjs",
+      "bytes": 18908,
+      "sha256": "810c47e26fa281b828edaa6f85e52953a086909722482ff2678566e5d3abd995"
+    },
+    {
+      "path": "cp80-sandbox-binding-baseline-readonly.cjs",
+      "bytes": 17849,
+      "sha256": "8c2755bd24e191c3f4329c0e65de75c0a82b7ae2e111a97ad7343e8f714b0234"
+    },
+    {
+      "path": "cp80-sandbox-binding-baseline-v2-preparation.json",
+      "bytes": 1903,
+      "sha256": "1fcd324296b1add7fcafd6fe324e2f47ed6ebd0ad398d25fd1c7c848817922a4"
+    },
+    {
+      "path": "cp80-sandbox-binding-baseline.exit-code.txt",
+      "bytes": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+    },
+    {
+      "path": "cp80-sandbox-binding-baseline.json",
+      "bytes": 1963,
+      "sha256": "d50c60cdfbf3d31a077c5ddec19b4aa0f036a51a6bd11c634be448983dd766f6"
+    },
+    {
+      "path": "cp80-sandbox-binding-baseline.stdout.json",
+      "bytes": 1353,
+      "sha256": "8761ac34b948f283bddaa1082593933ca8dd4fd8b9881c8ce8bb1dc6c7633fb3"
+    },
+    {
+      "path": "cp80-sandbox-inout-aggregate-readonly.cjs",
+      "bytes": 8018,
+      "sha256": "d9d60971910d2e1df1d762b0256e3f6d03d5faf37a4466b6d5f179215715b0d9"
+    },
+    {
+      "path": "cp80-sandbox-physical-inout01-window.json",
+      "bytes": 1310,
+      "sha256": "650204b44091e4f4807d7127dd0b72a9bd6071d6568d3f11f485a41b792ea511"
+    },
+    {
+      "path": "cp80-sandbox-pinned-reader-preparation.json",
+      "bytes": 1121,
+      "sha256": "2262dc927b32b56debbfe94e8a8fe5dc3a63e5be3ba6f0a1a35c8136be60c03a"
+    },
+    {
+      "path": "cp80-v2-selftest-file.stdout.json",
+      "bytes": 127,
+      "sha256": "661eaf4de7b12a1e51b3206013399e7762554b6134284ff28cd2d62cba4d47ef"
+    },
+    {
+      "path": "cp80-v2-selftest-stdin.stdout.json",
+      "bytes": 127,
+      "sha256": "661eaf4de7b12a1e51b3206013399e7762554b6134284ff28cd2d62cba4d47ef"
+    },
+    {
+      "path": "root-cp80-sandbox-binding-baseline-go.json",
+      "bytes": 2305,
+      "sha256": "ef9102f45c96bb26364ad6715b030461e9a6d5044375c59a9642b7ef63fa8629"
+    }
+  ]
+}

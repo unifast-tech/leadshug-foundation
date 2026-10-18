@@ -1,0 +1,57 @@
+{
+  "checkpoint": "cp80-source-binding-inventory",
+  "recordedAtUtc": "2026-10-18T04:38:42.997254+00:00",
+  "executor": "/root/resume_runtime_cp48",
+  "rootReview": "Named authorize/options/confirm, Meta validation and ingress source rechecked; inventory not execution evidence",
+  "sourceHeads": {
+    "api-app": "db5a86758a165fac8a1ab587599c37b17890530c",
+    "web-app": "74b9d4b714044829796f875d00553f077c1c329d"
+  },
+  "files": [
+    {
+      "path": "api-app/src/surfaces/bff/number-registrations.controller.ts",
+      "sha256": "c57797667ff26a4ea74aa939e4972a8cd8f442c9beafa166b1bdf808e19c236e",
+      "evidence": "21-65: OAuth code entry only; no direct token authorization"
+    },
+    {
+      "path": "api-app/src/domain/channels/number-registration.service.ts",
+      "sha256": "be53f7f1feb00c0bacb36ce0cf5d60915bb398ed011f69d28d3d4987f83417dc",
+      "evidence": "179-225: OAuth candidate; 228-365: shared confirmation, JA_REGISTRADO still requires candidate; 397-435: subscription"
+    },
+    {
+      "path": "api-app/src/integrations/meta/meta.client.ts",
+      "sha256": "ad6d9c56a0c854df35baf3320a70c2b1f4b9d577c4cd6f35def701ecac65f9c4",
+      "evidence": "67-104: exchange, current app/scopes/granular WABA validation; 145-184: resource validation/register/subscribe"
+    },
+    {
+      "path": "api-app/src/surfaces/bff/channels.controller.ts",
+      "sha256": "c7a3917c84ac1921b757fd7bca5a9b0b29ab2078312fcf2fd421104ef41a6182",
+      "evidence": "42-53: legacy direct path rejects USE_NUMBER_REGISTRATIONS"
+    },
+    {
+      "path": "api-app/src/surfaces/webhooks/meta.controller.ts",
+      "sha256": "64fd78568c1dc99e74df8a3f5b3157c43c6467ef03544b7741f0b9c7dc11200b",
+      "evidence": "76-94: ingress requires pre-existing current identity and verified channel"
+    },
+    {
+      "path": "api-app/prisma/schema.prisma",
+      "sha256": "3dd87c61af51167ae8aaa07a1b35e8616f108d9e5a05b2c0911ea84a8bfa5636",
+      "evidence": "133-170,228-269: channel, encrypted credential, durable provider identity"
+    },
+    {
+      "path": "api-app/test/number-onboarding-flow.e2e-spec.ts",
+      "sha256": "650b233c9dafd9730f14170ce6bd6961d6277b9a131a6eb816cb8edd39341fae",
+      "evidence": "39-78,286-319,555-584: scoped flow and ownership/phone rejection"
+    },
+    {
+      "path": "web-app/src/componentes/CadastroNumero.tsx",
+      "sha256": "9afbe4f419dcf4b5133f8103a0082b6eaa32837aaaf307ffbc61489c50f8cb78",
+      "evidence": "Embedded Signup SDK and explicit already-registered confirmation"
+    }
+  ],
+  "conclusion": "No existing non-OAuth entry binds the API Setup TestNumber with an app-scoped credential. JA_REGISTRADO only skips register; it does not bypass OAuth authorization.",
+  "grantUnknown": "No claim that the concrete panel token has granular WABA targets required by current validator. No secret or live grant inspected.",
+  "transportCaveat": "Adding identity mapping cannot explain or repair absent gateway POST in CP77. Ingress transport and inbox association remain separate.",
+  "writes": "Foundation planning/evidence only; no product/runtime/provider/DB/private reads or writes",
+  "VAL05": "open_unwaived"
+}

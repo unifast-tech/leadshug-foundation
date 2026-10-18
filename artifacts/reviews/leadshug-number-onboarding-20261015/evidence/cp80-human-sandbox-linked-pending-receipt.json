@@ -1,0 +1,12 @@
+{
+  "checkpoint": "cp80-human-sandbox-linked-pending-receipt",
+  "recordedAtUtc": "2026-10-18T04:18:00.590130+00:00",
+  "operatorReport": "Vinculou e aguarda recebimento",
+  "context": "Normal Sandbox Business/Sandbox WhatsApp Account authorization, selecting returned number and Ja registrado in requested Teste Meta BU",
+  "evidence": "Human onboarding result; internal current scope/credential mapping and counts not yet read back",
+  "realInboundOutboundVerified": false,
+  "sandboxPhysicalMessagingCapability": "unknown until observed",
+  "agentProviderWrites": false,
+  "parent": "Pending",
+  "VAL05": "open_unwaived"
+}

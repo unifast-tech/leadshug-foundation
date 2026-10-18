@@ -1,0 +1,11 @@
+{
+  "recordedAtUtc": "2026-10-18T04:30:51.677776+00:00",
+  "checkpoint": "cp80-human-api-setup-received-in-whatsapp",
+  "operatorReport": "Recebi dentro do aplicativo WhatsApp",
+  "questionContext": "Specifically prior test sent from Meta API Setup TestNumber, distinguishing WhatsApp from SMS/RCS/panel-only success",
+  "evidence": "Human confirmation of actual WhatsApp receipt for APISetup resource; no new test requested",
+  "resourceEqualsLinkedSandbox": "not assumed; observations distinguish availability",
+  "apiSetupResourceBoundInLeadsHug": "not confirmed by current onboarding",
+  "parent": "Pending",
+  "VAL05": "open_unwaived"
+}

@@ -1,0 +1,41 @@
+{
+  "checkpoint": "cp80-sandbox-binding-baseline-v2-preparation",
+  "preparedAtUtc": "2026-10-18T04:19:46.503144+00:00",
+  "status": "preparation_only_no_live_execution",
+  "helperPath": "foundation_documentation/artifacts/tmp/number-onboarding-execution/T/cp80-sandbox-binding-baseline-readonly-v2.cjs",
+  "helperSha256": "810c47e26fa281b828edaa6f85e52953a086909722482ff2678566e5d3abd995",
+  "evidenceCopyPath": "cp80-sandbox-binding-baseline-readonly-v2.cjs",
+  "evidenceCopySha256": "810c47e26fa281b828edaa6f85e52953a086909722482ff2678566e5d3abd995",
+  "preservedV1Sha256": "8c2755bd24e191c3f4329c0e65de75c0a82b7ae2e111a97ad7343e8f714b0234",
+  "corrections": [
+    "Entry point now recognizes node stdin argv[1] == '-' and honors explicit --self-test/--execute flags.",
+    "Target BU must differ from anchor BU; synthetic same-as-anchor case fails closed.",
+    "Known attempt stages MAPPED_PENDING_RECEIPT, REGISTERED_PENDING_RECEIPT, CODE_CONSUMED, EXPIRED map through their allowlist; unknown values remain UNKNOWN."
+  ],
+  "offlineValidation": {
+    "nodeSyntaxCheck": "passed",
+    "fileModeSelfTest": {
+      "path": "cp80-v2-selftest-file.stdout.json",
+      "bytes": 127,
+      "sha256": "661eaf4de7b12a1e51b3206013399e7762554b6134284ff28cd2d62cba4d47ef"
+    },
+    "stdinModeSelfTest": {
+      "path": "cp80-v2-selftest-stdin.stdout.json",
+      "bytes": 127,
+      "sha256": "661eaf4de7b12a1e51b3206013399e7762554b6134284ff28cd2d62cba4d47ef"
+    },
+    "stdoutNonemptyAndByteEqual": true,
+    "result": {
+      "syntheticCasesPassed": 9,
+      "databaseCalled": false,
+      "providerCalled": false,
+      "resolverImported": false,
+      "privateFieldsEmitted": false
+    },
+    "databaseCalled": false,
+    "providerCalled": false,
+    "resolverImported": false,
+    "privateFieldsEmitted": false
+  },
+  "executionAuthorization": "No live DB GO; wait for root review and distinct GO."
+}

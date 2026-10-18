@@ -1,0 +1,57 @@
+{
+  "scope": "Exact named public source support files; no live/config secrets or private storage",
+  "files": [
+    {
+      "path": "scripts/test-channels-local.sh",
+      "sha256": "7af34d340a679c325f8cb06151db9723bf4641529102dcc392d08988ae82de13"
+    },
+    {
+      "path": "docker-compose.channels.yml",
+      "sha256": "9978e713ce190ad20b6bddb0ecf0b469d068c0e43bb4eaf50aa630ec03aea235"
+    },
+    {
+      "path": "api-app/src/infra/config/modulos.ts",
+      "sha256": "fd1ccabf7bee088f230a12d773c56a5d41fc07642d04262b55a6497a7b9c2a03"
+    },
+    {
+      "path": "api-app/src/surfaces/bff/session.middleware.ts",
+      "sha256": "80d8be0072b817ec34b3eb7d29218835bd218a40670c1f917d0b1787b0b57211"
+    },
+    {
+      "path": "api-app/src/domain/channels/channel-credential-resolver.ts",
+      "sha256": "7ce86ab9fa764364761d51c5344b3786d66e66e55d3102f2181e0afdf41e7d7f"
+    },
+    {
+      "path": "web-app/src/cadastroNumero.ts",
+      "sha256": "584401ed8ab1ce1d53950998e85765a35d55d7ac4961286924f98e4132edcb6b"
+    },
+    {
+      "path": "web-app/src/cadastroNumero.lifecycle.ts",
+      "sha256": "5c60a8fc7456c82a7d782b3484ba447bda826e65bf93a9175a991dc50be254a3"
+    },
+    {
+      "path": "web-app/src/cadastroNumero.spec.ts",
+      "sha256": "9c2581c1886d108c4c153d485fd77f017805c2e3b813a9536d21d0296f2a1ecb"
+    },
+    {
+      "path": "web-app/e2e/number-onboarding.spec.ts",
+      "sha256": "47fdb27c0b592dfe8df31b8ad1be219d96720abdc00660bc15f6b2c03096f31b"
+    },
+    {
+      "path": "web-app/e2e/number-onboarding-freshness.ts",
+      "sha256": "097b56dc07f1a024c915bd6564bfac4485aed34e6fe9e0d861acd0998edeb2b0"
+    },
+    {
+      "path": "web-app/playwright.config.ts",
+      "sha256": "53e9a54e97c9b785135d94846d99eb77c6f05789a58f27128544f9b2c903a63d"
+    },
+    {
+      "path": "api-app/test/timeline-fixtures.cjs",
+      "sha256": "1372f7bfb38792bffa948411208a5cc60abb4dffbecfa118e913abdfd38a07fb"
+    },
+    {
+      "path": "api-app/test/browser-server.cjs",
+      "sha256": "bf260c3124a867bda495509983055557988bc958141f3a8399e3e69de3aff451"
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "checkpoint": "cp80-sandbox-binding-baseline-preparation",
+  "preparedAtUtc": "2026-10-18T04:18:23.608755+00:00",
+  "status": "preparation_only_no_live_execution",
+  "helperPath": "foundation_documentation/artifacts/tmp/number-onboarding-execution/T/cp80-sandbox-binding-baseline-readonly.cjs",
+  "helperSha256": "8c2755bd24e191c3f4329c0e65de75c0a82b7ae2e111a97ad7343e8f714b0234",
+  "evidenceCopyPath": "cp80-sandbox-binding-baseline-readonly.cjs",
+  "evidenceCopySha256": "8c2755bd24e191c3f4329c0e65de75c0a82b7ae2e111a97ad7343e8f714b0234",
+  "schemaSource": "api-app/prisma/schema.prisma (named public Prisma schema only)",
+  "design": [
+    "Anchor by known own-test BU id and read only mantenedoraId in transaction memory; resolve exact target name with same maintainer using take 2 and id-only projection.",
+    "Require unique target BU, one OFICIAL channel, exact current attempt BU/channel/type/generation mapping, one active current providerResourceIdentity, and generation-scoped credential count.",
+    "Use RepeatableRead and SET TRANSACTION READ ONLY; no Nest bootstrap, resolver, provider request, or writes.",
+    "Aggregate lifetime IN/OUT/status groups and conversations for the selected identity; aggregate BU OFICIAL meta.webhook count/min/max without selecting/filtering payload and mark identity attribution unavailable.",
+    "Output only internal UUIDs, safe states, generation/epoch/verification/lease/receipt flags, counts, and fixed failure enums; never project maintainer id, BU name, phone, provider external ID, credentials, session or payload.",
+    "Unknown free-form state/stage values map to fixed UNKNOWN; ids/date/integer/boolean structures validate before projection."
+  ],
+  "validation": {
+    "nodeSyntaxCheck": "passed with node.exe --check",
+    "selfTest": "passed, 8 synthetic cases",
+    "cases": [
+      "multiple target BU matches fail closed",
+      "multiple OFICIAL channels fail closed",
+      "current attempt scope drift fails closed",
+      "identity mapping drift fails closed",
+      "malformed credential count fails closed",
+      "zero current-generation credential count remains explicit false",
+      "unknown DB strings sanitize to UNKNOWN and private canaries are absent",
+      "aggregate direction/status projection and invalid-status rejection"
+    ],
+    "databaseCalled": false,
+    "providerCalled": false,
+    "resolverImported": false,
+    "privateFieldsEmitted": false
+  },
+  "executionAuthorization": "No live GO; wait for root review and distinct GO."
+}

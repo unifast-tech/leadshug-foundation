@@ -1,0 +1,12 @@
+{
+  "recordedAtUtc": "2026-10-18T04:30:51.677776+00:00",
+  "checkpoint": "cp80-human-sandbox-not-on-whatsapp-sms",
+  "operatorReport": "Esse número não está no whatsapp apenas enviei um sms",
+  "resource": "Phone visible in newly linked Sandbox Teste Meta BU",
+  "interpretation": "No WhatsApp physical message executed. SMS is outside WhatsApp API ingress/inbox; do not treat this as a failed WhatsApp delivery attempt.",
+  "agentDidNotRequestSms": true,
+  "physicalWhatsAppExchange": "not_executed_resource_unavailable",
+  "noPhoneOrSmsContentCollected": true,
+  "parent": "Pending",
+  "VAL05": "open_unwaived"
+}

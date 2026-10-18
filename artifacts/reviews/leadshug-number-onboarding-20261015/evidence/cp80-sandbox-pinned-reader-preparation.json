@@ -1,0 +1,20 @@
+{
+  "checkpoint": "cp80-sandbox-pinned-reader-preparation",
+  "preparedAtUtc": "2026-10-18T04:21:56.684288+00:00",
+  "sourceSha256": "64e4f08964fb846282608939825dd7063b2b567756047df81cce85c29aac6571",
+  "helperPath": "foundation_documentation/artifacts/tmp/number-onboarding-execution/cp80-sandbox-inout-aggregate-readonly.cjs",
+  "helperSha256": "d9d60971910d2e1df1d762b0256e3f6d03d5faf37a4466b6d5f179215715b0d9",
+  "delta": "Only PIN block and checkpoint label; reverse transform byte-exact to accepted helper. No new query/guard/projection code.",
+  "pinnedScope": {
+    "buId": "fe046ba1-289e-4d00-85f1-56a885c33b4b",
+    "channelId": "182dab05-a864-4935-b2b5-2c091da4d06f",
+    "identityId": "40aa8180-9371-45df-8759-3d36602db001",
+    "attemptId": "fcba4a8ed1a9c87e740fea3e07e7e8d1",
+    "generation": 2,
+    "epoch": 0,
+    "cutoffUtc": "2026-10-18T04:21:09.340235Z"
+  },
+  "nodeSyntaxCheck": "pass, no DB imported/executed",
+  "execution": "No live read until separate rootGO after human test",
+  "privacy": "Same accepted metadata/count-only boundaries; no providerIDs/token/envelope/payload/content/contacts"
+}

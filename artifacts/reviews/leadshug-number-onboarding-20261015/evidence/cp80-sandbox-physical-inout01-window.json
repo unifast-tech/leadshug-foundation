@@ -1,0 +1,28 @@
+{
+  "checkpoint": "cp80-sandbox-physical-inout01-window",
+  "startedAtUtc": "2026-10-18T04:21:56.702858Z",
+  "publicHost": "estimation-editions-knee-inclusion.trycloudflare.com",
+  "businessUnitLabel": "Teste Meta",
+  "scope": {
+    "buId": "fe046ba1-289e-4d00-85f1-56a885c33b4b",
+    "channelId": "182dab05-a864-4935-b2b5-2c091da4d06f",
+    "identityId": "40aa8180-9371-45df-8759-3d36602db001",
+    "attemptId": "fcba4a8ed1a9c87e740fea3e07e7e8d1",
+    "generation": 2,
+    "epoch": 0
+  },
+  "baselineReceipt": "cp80-sandbox-binding-baseline.json",
+  "baselineCounts": {
+    "inbound": 0,
+    "outbound": 0,
+    "conversations": 0,
+    "receiptPresent": false
+  },
+  "inboundMarker": "Teste LeadsHug Sandbox entrada 01",
+  "outboundMarker": "Teste LeadsHug Sandbox resposta 01",
+  "targetSelection": "Phone visible in newly linked Teste Meta card, not assumed equal to prior APISetup TestNumber",
+  "limits": "Sandbox physical reachability still unknown; unavailable-number report is a valid result, no migration or OTP retry. Counts postbaseline not exact message-content attribution.",
+  "next": "Human one real IN and inbox OUT if IN appears, or report send error/unavailable. Then distinct frozen counter+scoped aggregate GO; no user secret requested.",
+  "parent": "Pending",
+  "VAL05": "open_unwaived"
+}

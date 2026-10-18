@@ -1,0 +1,37 @@
+{
+  "checkpoint": "cp80-sandbox-binding-baseline",
+  "capturedAtUtc": "2026-10-18T04:21:09.340235+00:00",
+  "goSha256": "ef9102f45c96bb26364ad6715b030461e9a6d5044375c59a9642b7ef63fa8629",
+  "helperPath": "foundation_documentation/artifacts/tmp/number-onboarding-execution/T/cp80-sandbox-binding-baseline-readonly-v2.cjs",
+  "helperSha256": "810c47e26fa281b828edaa6f85e52953a086909722482ff2678566e5d3abd995",
+  "invocationExitCode": 0,
+  "stdoutPath": "cp80-sandbox-binding-baseline.stdout.json",
+  "stdoutBytes": 1353,
+  "stdoutSha256": "8761ac34b948f283bddaa1082593933ca8dd4fd8b9881c8ce8bb1dc6c7633fb3",
+  "preflight": {
+    "apiId": "9eccbea4825108cec2b8a6fcd48c43c17845e216415fe95e3972265c6ad34cf1",
+    "apiImage": "sha256:fe5fb7eaf6a68123f9da6b92a0a69483180d213f556b4bedf313f04a383b4821",
+    "apiState": "running",
+    "apiHealth": "healthy",
+    "apiOwner": "number-onboarding",
+    "gatewayId": "0c48d94e9fe5b4ad75efd304db2752dfa4cab3befc59b9f736574d6cd551eea3",
+    "gatewayImage": "sha256:76090a34b858323b6ab169711adc08253b5bee7123a973dc581ed46b643bc109",
+    "gatewayState": "running",
+    "gatewayOwner": "number-onboarding",
+    "gatewayActiveConfigSha256": "6d4563cc5f5823bdb1177f350c942dc2472fc70133aef5b177fa4b57c5c9f1a0",
+    "apiSourceHead": "db5a86758a165fac8a1ab587599c37b17890530c",
+    "webSourceHead": "74b9d4b714044829796f875d00553f077c1c329d",
+    "rootSourceHead": "80e3940126f22a941f90dba4f5e801b6c0eb2f58",
+    "compiledHashesMatchAccepted": true,
+    "publicHealth": {
+      "host": "estimation-editions-knee-inclusion.trycloudflare.com",
+      "status": 200,
+      "bytes": 15,
+      "sha256": "a29ee2b15c494311c52521766e44af56a3ad2248e7a8ab465e5206463c13d288",
+      "redirect": false,
+      "setCookie": false
+    }
+  },
+  "result": "Unique same-maintainer exact-name BU/channel/attempt/identity snapshot captured; this is onboarding metadata only, not real-message proof.",
+  "status": "complete; one-shot GO consumed; stopped"
+}

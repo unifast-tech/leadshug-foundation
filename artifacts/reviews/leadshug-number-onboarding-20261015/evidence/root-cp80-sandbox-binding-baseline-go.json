@@ -1,0 +1,16 @@
+{
+  "checkpoint": "root-cp80-sandbox-binding-baseline-go",
+  "issuedAtUtc": "2026-10-18T04:20:34.208710+00:00",
+  "decision": "GO_readonly_snapshot_once",
+  "helperPath": "foundation_documentation/artifacts/tmp/number-onboarding-execution/T/cp80-sandbox-binding-baseline-readonly-v2.cjs",
+  "helperSha256": "810c47e26fa281b828edaa6f85e52953a086909722482ff2678566e5d3abd995",
+  "rootReview": "Full v1 source and v2 diff inspected; E/T exact and root reran file+stdin offline9 controls, same127bytes/SHA661eaf4d. v1 never executed live: root caught stdin empty-output defect, v2 fixed before GO. Safe fields/queries/mapping/unique/same-tenant guards and unknown-string redaction reviewed.",
+  "maxExecutions": 1,
+  "preflight": "Exact API9eccbea/fe5 healthy/owner/project/service and gateway0c48/7609/config6d; named current source heads/four named compiled hashes vs CP76/77; normalTLS one GET /health current estimation-editions-knee-inclusion hostname cap12s32KiB no redirects/cookie/retry expected15bytes/a29e. Failure=>stop no recovery.",
+  "databaseScope": "Read-only RepeatableRead single snapshot through Prisma inside API memory only. Anchor known own-test BU for tenantId internal only; target unique same-tenant exact BusinessUnit.name Teste Meta, separate BU, exact current official channel/attempt/identity mapping. Only internalUUID/state flags + current-generation credential COUNT + lifetime identity-scoped message/conversation counts and BU webhook aggregate without identity attribution. No phone/providerIDs/tenantID/names/contact/content/payload/cipherfields selected or exported.",
+  "forbidden": "No raw errors/logs/providerHTTP/Graph/auth/login/secretfiles/envfiles/Config.Env/.local-files/credential-resolver/token/key/envelope, DB/provider/runtime writes/restarts/code change or physical message. DB driver config only in API for existing connection.",
+  "output": "cp80-sandbox-binding-baseline.stdout.json direct sanitized frozen helper stdout + wrapper UTC/pins/helper/GO/stdout hashes and exitcode; no repeats if guard/notfound/failure.",
+  "interpretation": "Discovery only, not proof real WhatsApp messaging; validate flags and bind scope before next test. CredentialCount0/UNKNOWN/ambiguity must not be described ready.",
+  "parent": "Pending",
+  "VAL05": "open_unwaived"
+}
