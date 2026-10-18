@@ -26,7 +26,7 @@ This child proposes a default-off local technical authorization method for that 
 This TODO records WHAT must be delivered if implementation is separately approved. The human approved the direction “incluir o modo técnico local”; that is not approval to implement, deploy, change runtime configuration, or use a provider credential. Planning gates are still open. A grant that fails existing authorization requirements blocks this plan; it does not authorize weakening the Embedded Signup validators.
 
 ## Implementation Intent
-- **Current delivery:** planning-only child contract for local binding of one pre-provisioned Meta API Setup Test Number.
+- **Current delivery:** one default-off local authorization method binding a pre-provisioned Meta API Setup Test Number through the existing channel workflow; currently in planning, with no implementation approval.
 - **Planned next steps:** freeze and review this plan; request explicit implementation approval; then qualify a real grant before changing code. These steps are not authorized by this document alone.
 - **Anticipatory implementation authorized now:** none.
 - **Rationale:** isolate the new trust entry point while reusing the existing confirmation, identity, credential promotion, subscription, webhook, and send paths.
@@ -43,13 +43,13 @@ This TODO records WHAT must be delivered if implementation is separately approve
 
 ## Scope
 - [ ] Add a server-only, explicitly enabled local test-number authorization method to the existing number-registration workflow.
-- [ ] Bind only the one WABA, phone-number resource, and canonical E.164 configured for the local API Setup test resource; do not accept user-supplied token or resource IDs from the browser.
+- [ ] Bind only the configured BU/WABA/phone resource, with canonical E.164 verified from Meta. Browser never supplies a token or overrides the configured target; existing confirm resource-ID fields may echo the authorized displayed choice only and must equal the server-pinned target.
 - [ ] Create/use a dedicated BU through the normal tenant/admin flow, such as `Teste API Meta`; do not reuse or transfer the separate Sandbox resource in `Teste Meta` or the own-number resource in `Local Test Ofc`.
 - [ ] Persist the authorization method on the registration attempt so the new path never fabricates an OAuth code, callback, or `CODE_CONSUMED` event.
 - [ ] Reuse nonce/session/actor checks, `currentAttemptId`, attempt version, generation, lease, BU phone claim, durable global provider-resource ownership, candidate encryption, active credential promotion, audit, subscription, webhook receipt, and safe DTO behavior.
 - [ ] Permit this local authorization method to confirm only `JA_REGISTRADO`, enforced in backend validation even when a client forges `NOVO`; never request a PIN or call provider number registration, migration, coexistence, unregister, or destructive cleanup.
-- [ ] Validate the configured credential against the current Meta app and required WhatsApp scopes and exact WABA/phone target before storing the candidate. If Meta does not return the required grant evidence, fail closed without a weaker fallback.
-- [ ] Keep the bootstrap credential in private server configuration only. Never put it in UI payloads, bundles, URLs, logs, audit, fixtures, support artifacts, or responses. Use the existing encrypted per-channel credential after promotion; do not use the bootstrap credential as a global outbound fallback.
+- [ ] Validate the configured credential against the current Meta app, provider-reported current validity, required WhatsApp scopes and exact WABA/phone target before storing the candidate. If Meta does not return the required grant evidence, fail closed without a weaker fallback.
+- [ ] Keep the bootstrap credential in private server configuration only. Never put it in UI payloads, bundles, browser/CLI/artifact URLs, logs, audit, fixtures, support artifacts, or responses. The existing internal provider-bound debug_token request is narrowly preserved under the qualification contract, without exposing its URL. Use the existing encrypted per-channel credential after promotion; do not use the bootstrap credential as a global outbound fallback.
 - [ ] Add focused backend and browser-flow evidence for the new local method and regression coverage proving Embedded Signup behavior is unchanged.
 - [ ] Document setup using placeholders only, default-off behavior, and safe cleanup/rotation of the private local bootstrap credential.
 
@@ -103,6 +103,8 @@ This TODO records WHAT must be delivered if implementation is separately approve
 | Repository | Path glob | Change types | Reason |
 | --- | --- | --- | --- |
 | api-app | `src/domain/channels/number-registration.service.ts` | `M` | Add a distinct local authorization transition converging on candidate promotion. |
+| api-app | `src/domain/channels/local-meta-test-config.ts` | A | Optional narrow private configuration/policy helper shared by capabilities and candidate operations; no generic framework. |
+| api-app | `src/domain/channels/local-meta-test-config.spec.ts` | A | Focused tests of default-off, partial configuration and exact-target policy if that helper is introduced. |
 | api-app | `.env.example` | `M` | Document blank server-side local-mode settings when the API example is the canonical template. |
 | api-app | `src/surfaces/bff/number-registrations.controller.ts` | `M` | Add an admin/session-protected route to the existing registration resource. |
 | api-app | `src/integrations/meta/meta.client.ts` | `M` | Reuse `MetaHttpClient` grant and exact-resource validation. |
@@ -133,7 +135,7 @@ This TODO records WHAT must be delivered if implementation is separately approve
 | api-app | `src/integrations/evolution/**` | A,M,D,R | Evolution behavior is outside this slice. |
 | api-app | `src/surfaces/webhooks/meta.controller.ts` | A,M,D,R | Webhook identity and message behavior remain unchanged. |
 | root | `.env` | A,M,D,R | Private root environment file must never be changed or committed. |
-| root | `.env.testing` | A,M,D,R | Private test/runtime environment file must never be changed or committed. |
+| root | `.env.testing` | A,M,D,R | Private test/runtime environment file is excluded from versioned diffs and agent rewrites; named human-filled bootstrap settings are allowed only after later approval and explicit setup instructions. |
 | web-app | `.env*` | A,M,D,R | Browser/client env must not carry the bootstrap credential. |
 | root | `Dockerfile` | A,M,D,R | No image or deployment changes. |
 | root | `docker-compose.yml` | A,M,D,R | Base topology is unchanged; only the named local channels overlay may be considered. |
@@ -153,12 +155,12 @@ This TODO records WHAT must be delivered if implementation is separately approve
 ## Definition of Done
 - [ ] DOD-01: Local mode is disabled by default and capability appears only when private server settings pass local shape checks and the caller is allowed to administer the configured BU. Capabilities never calls Meta; real grant/resource validation occurs in authorization and confirmation.
 - [ ] DOD-02: An authorized BU admin creates a normal official-channel attempt in the dedicated test BU and chooses the authorization method before nonce reservation; method is included in the idempotency payload and cannot change during the attempt.
-- [ ] DOD-03: A separately approved, read-only qualification before product edits proves the configured Meta user/system-user token is valid for the configured app, unexpired, has both required WhatsApp scopes and granular authorization for the exact WABA/phone, and can read the selected phone under that WABA. Any missing, expired, wrong-app, wrong-scope, wrong-target, malformed, or ambiguous response stops before product edits.
+- [ ] DOD-03: A separately approved, read-only qualification before product edits proves that the existing adapter accepted Meta is_valid=true, the configured app, both required WhatsApp scopes, intersecting granular WABA targets and exact selected-phone membership. It does not separately establish token type, an expiry timestamp or future lifetime; those remain unknown. Any missing, expired, wrong-app, wrong-scope, wrong-target, malformed, or ambiguous response stops before product edits.
 - [ ] DOD-04: Persist nullable official authorization provenance only for `OFICIAL` attempts: `EMBEDDED_SIGNUP|LOCAL_TEST`; existing official rows are backfilled as `EMBEDDED_SIGNUP`, nonofficial rows remain null. Local flow never fabricates OAuth code/callback or `CODE_CONSUMED`.
 - [ ] DOD-05: Local authorization and confirmation are read-only provider operations and backend-restricted to `JA_REGISTRADO`; forged `NOVO`/PIN never calls `/register`. After explicit admin confirmation and successful mapping, the existing normal `advance` may perform only the existing current-app WABA subscription step; no callback override or other provider write is added.
 - [ ] DOD-06: Options, confirmation, promotion and advance honor the immutable attempt source and fixed configured BU/WABA/phone. Any disabled/changed local configuration during a candidate operation invalidates that candidate before promotion; active credentials are never replaced by a stale candidate.
 - [ ] DOD-07: Confirmation reuses exact BU phone, global provider-resource ownership, tenant/admin, current attempt/version/generation/epoch/lease, and active-credential version guards. Existing active credential remains valid until successful promotion; identity never transfers across BUs.
-- [ ] DOD-08: Candidate and active credentials use existing authenticated encryption/AAD and per-channel storage. Bootstrap token is never returned, logged, audited, placed in fixtures/artifacts, or used by send/verify/subscribe as global fallback.
+- [ ] DOD-08: Candidate and active credentials use existing authenticated encryption/AAD and per-channel storage. Bootstrap token is never returned, logged, audited, placed in fixtures/artifacts, or used by send/verify/subscribe as global fallback. Secrets never enter browser, callback, CLI argument or artifact URLs. The existing Meta debug_token provider-bound HTTPS request necessarily carries input_token; reuse that adapter call without exposing/recording its URL, headers or errors. This does not authorize any other secret-bearing URL.
 - [ ] DOD-09: After promotion, existing subscription, signed webhook identity resolution, receipt gate, `ChannelCredentialResolver`, inbox and outbound path use the same current BU/channel identity and credential contract.
 - [ ] DOD-10: React/Vite UI presents local option only when server capability is enabled, never collects/displays secrets, and preserves Embedded Signup and nonofficial flows.
 - [ ] DOD-11: Focused PostgreSQL-backed integration/race tests, Meta adapter tests, and Playwright browser navigation prove the new path and rejection cases; canonical API, Web and browser runners pass.
@@ -168,9 +170,9 @@ This TODO records WHAT must be delivered if implementation is separately approve
 - [ ] V-01: Run schema/migration validation and PostgreSQL tests for official-method provenance/backfill, nonofficial null provenance, ownership uniqueness, locking and promotion rollback.
 - [ ] V-02: Test `MetaHttpClient` with valid app/grant and wrong app, expired token, missing scopes, missing granular WABA target, wrong WABA/phone, malformed response and timeout/ambiguous provider result.
 - [ ] V-03: Test BFF admin/session/nonce/expiry/replay, method selection before attempt reservation, idempotency binding, disabled/default mode, exact configured BU/resource, candidate staging, cancellation, stale attempt, lease contention and active credential preservation.
-- [ ] V-04: Assert forged `NOVO`/PIN is rejected before any `/register`; assert no token, OAuth code, PIN or private config value appears in DTO, audit, logs, artifacts or browser requests.
+- [ ] V-04: Assert forged `NOVO`/PIN is rejected before any `/register`; assert no token, OAuth code, PIN, app secret or credential envelope appears in DTO, audit, logs, artifacts or browser requests. Public installation app/config IDs already exposed by capabilities keep their existing classification.
 - [ ] V-05: Test same-resource replay and concurrent BU claims; only one owner wins, foreign identity and canonical phone mismatch do not mutate candidate or active credential.
-- [ ] V-06: Test local candidate fence: disable or change configured BU/WABA/phone/token source between authorization and options/confirm/promotion; candidate is rejected and cannot be promoted. Revalidate source and fixed target at every candidate use.
+- [ ] V-06: Test local candidate fence: disable or change configured BU/WABA/phone/token source between authorization and options/confirm/promotion; candidate is rejected and cannot be promoted. Revalidate source and fixed target at every candidate use. Also promote successfully, then disable/remove bootstrap settings: normal advance/identity/receipt/resolver operations use the same persisted envelope and owned identity; no deletion, retargeting or bootstrap fallback.
 - [ ] V-07: Run project-owned browser navigation in final Web app: enabled method appears only for scoped admin/target, disabled mode is absent, errors are safe, Embedded Signup stays functional, and no secret appears in requests.
 - [ ] V-08: After implementation approval and a distinct grant-qualification GO, run the read-only grant qualification. If it passes, a separate code-execution GO is still required. Following implementation, prove signed inbound WhatsApp mapping to exact BU/channel and separately observe outbound reply. SMS, synthetic dashboard HTTP 200, sender ticks, and aggregate counts alone are not delivery proof.
 - [ ] V-09: Run `bash scripts/test-channels-local.sh api`, `bash scripts/test-channels-local.sh web`, and `bash scripts/test-channels-local.sh browser` from the approved local branch and preserve actual result artifacts.
@@ -184,6 +186,7 @@ This TODO records WHAT must be delivered if implementation is separately approve
 | DOD-03 grant qualification | Meta adapter tests plus one bounded authorized real grant qualification after approval; safe metadata only | pending; no provider check authorized |
 | DOD-05 registration/subscription boundary | Integration assertions: zero `/register`; only explicit normal `advance` may subscribe the mapped WABA through the current app | pending |
 | DOD-06 candidate fencing | PostgreSQL tests: disable/rotate local source while candidate is in flight; active credential preserved | pending |
+| DOD-09 after-promotion disable | PostgreSQL scenario: disable/remove bootstrap after promotion, normal advance/receipt/resolver still use unchanged persisted credential and identity | pending |
 | DOD-07 ownership/phone/races | PostgreSQL concurrency tests on same-resource claims and BU canonical phone guards | pending |
 | DOD-08 encryption/privacy | crypto/AAD unit tests, response/audit/log redaction assertions, security review | pending |
 | DOD-09 subscription/webhook/resolver/inbox | focused signed-webhook and outbound integration flow with exact current identity; no synthetic receipt accepted | pending |
@@ -194,7 +197,7 @@ This TODO records WHAT must be delivered if implementation is separately approve
 ## External Dependency Readiness (Required When External Systems Matter)
 | Dependency | Required capability | Current evidence | Readiness |
 | --- | --- | --- | --- |
-| Meta Graph API | Same-app Meta user/system-user credential, current expiry, both WhatsApp scopes, granular authorization for exact configured WABA/phone, and successful exact-phone read. | API Setup Test Number message was observed in WhatsApp; no credential/grant was read or tested. Existing `MetaHttpClient` rejects grants that do not meet current app/scope/target rules. | unknown; after implementation approval, do bounded read-only qualification under distinct GO before product edits; fail closed on mismatch |
+| Meta Graph API | Credential for the same app, is_valid=true reported by Meta, both WhatsApp scopes, intersecting granular WABA targets, and exact-phone read. Token type and explicit expiry metadata are not inspected by the current adapter. | API Setup Test Number message was observed in WhatsApp; no credential/grant was read or tested. Existing `MetaHttpClient` rejects grants that do not meet current app/scope/target rules. | unknown; after implementation approval, do bounded read-only qualification under distinct GO before product edits; fail closed on mismatch |
 | Meta webhook delivery | Signed message for exact mapped phone must arrive at configured callback. | Direct message arrival in handset is not webhook evidence; official ingress remains separate. | separate real proof required |
 | Local private config | Bootstrap token and exact BU/WABA/phone settings available only to local API process; opt-in defaults false and is independent of `NODE_ENV`. | No private configuration inspected. | pending; setup requires separate authorization and must not appear in artifacts |
 | PostgreSQL | Migration and race behavior for official method provenance and identity/credential promotion. | Existing registration model has attempt/lease/credential/identity fences; no schema change made. | pending local integration proof |
@@ -232,11 +235,12 @@ This TODO records WHAT must be delivered if implementation is separately approve
 No unresolved architecture choice remains in the proposed design. The concrete grant remains unqualified and is a staged prerequisite: after implementation approval, a bounded read-only grant qualification must pass before any product edit. Failure returns the work to design without weakening current validators.
 
 ## Decisions (Resolved Before Freeze)
-- `D-01` Credential class is a Meta user or system-user access token issued for the same configured Meta app. Require current app, unexpired token, both WhatsApp scopes, granular WABA authorization, and exact phone membership through current `MetaHttpClient` checks; this does not assert the concrete token passes.
-- `D-02` Private settings are `META_LOCAL_TEST_ENABLED=false`, `META_LOCAL_TEST_BU_ID`, `META_LOCAL_TEST_WABA_ID`, `META_LOCAL_TEST_PHONE_NUMBER_ID`, and `META_LOCAL_TEST_ACCESS_TOKEN`. They are server-only; canonical E.164 comes from provider data and must match the BU. The opt-in is independent of `NODE_ENV` and defaults false.
-- `D-03` Preserve Embedded Signup unchanged. Add nullable official-only `officialAuthorizationMethod` values `EMBEDDED_SIGNUP|LOCAL_TEST`; backfill existing OFICIAL attempts to `EMBEDDED_SIGNUP` and leave NAO_OFICIAL attempts null. Choose the method before attempt/nonce reservation, bind it into idempotency, and keep it immutable for the attempt.
-- `D-04` Local method is `JA_REGISTRADO` only; no PIN, `/register`, migration, coexistence, unregister, or global send fallback.
-- `D-05` Reuse BU ownership, canonical phone, current attempt/version/generation/epoch/lease, encrypted candidate, promotion, audit, normal subscription, signed webhook, receipt, and resolver rules. `options`, `confirm`, promotion, and `advance` honor immutable source and exact current resource; changed/disabled config makes an unpromoted candidate stale. Once promoted, normal operations use the persisted identity and per-channel credential; bootstrap disable/rotation neither deletes nor silently retargets that active channel.
+- D-01: The supplied Meta API Setup access credential must pass the existing same-app, is_valid, required scopes, intersecting granular WABA targets and exact-phone checks. No independent token-class or explicit-expiry/lifetime proof is claimed. Failed/inconclusive qualification is a hard stop before product edits, never a reason to weaken Embedded Signup.
+- D-02: Server-only settings are META_LOCAL_TEST_ENABLED=false, META_LOCAL_TEST_BU_ID, META_LOCAL_TEST_WABA_ID, META_LOCAL_TEST_PHONE_NUMBER_ID and META_LOCAL_TEST_ACCESS_TOKEN. The opt-in is separate from NODE_ENV. Create a dedicated BU through the normal admin flow before configuring its fixed ID; the canonical phone comes from Meta and must match the BU. Bootstrap is not a send fallback.
+- D-03: Preserve existing OAuth semantics and add nullable officialAuthorizationMethod values EMBEDDED_SIGNUP|LOCAL_TEST only for OFICIAL. Backfill existing official rows to EMBEDDED_SIGNUP; NAO_OFICIAL remains null. Choose method before attempt/nonce reservation, include it in the idempotency request hash, and keep it immutable.
+- D-04: Local method is JA_REGISTRADO-only, enforced server-side. No PIN, register, migration, coexistence, unregister or callback override. Confirm reuses shared ownership/canonical-phone/candidate/active-credential promotion; normal advance may perform the existing current-app subscription after mapping.
+- D-05: Reuse current actor/tenant/admin/session, nonce, attempt/version/generation/epoch/lease and active-credential fences through commit. Fixed local source and target are rechecked through candidate operations; disabled/rotated source invalidates unpromoted candidates. After promotion, bootstrap disable/rotation does not delete or retarget the active channel; normal consumers use its stored credential.
+- D-06: Scope remains a single explicitly configured local test resource; no source push, Railway, production activation, new global credential service or parallel channel/message lifecycle. Binding is not webhook delivery proof. Child and parent real-message evidence remain separate; parent VAL05 cannot be waived by this child.
 
 ## Module Decision Baseline Snapshot (Required Before APROVADO)
 | Module Decision Ref | Current Module Decision | Planned Handling | Evidence |
@@ -248,12 +252,8 @@ No unresolved architecture choice remains in the proposed design. The concrete g
 | `inbox-and-conversations#Aceitação de mensagens ST-CON-01` | Inbound acceptance uses a verified current identity; exact message receipt is not inferred from unrelated activity. | Preserve | `foundation_documentation/modules/inbox-and-conversations.md:55` |
 
 ## Decision Baseline (Frozen Before Implementation)
-- [ ] `D-01` Only same-app Meta user/system-user token classes are considered; current app, expiry, required scopes, granular WABA and exact phone checks must pass.
-- [ ] `D-02` Exact local settings are server-only, target one existing local BU/resource, default disabled, and do not rely on `NODE_ENV` as the opt-in.
-- [ ] `D-03` Existing OAuth semantics remain unchanged; nullable `officialAuthorizationMethod` only applies to OFICIAL attempts, selected before nonce and immutable within idempotency/current attempt; NAO_OFICIAL remains null.
-- [ ] `D-04` Local candidate binds only configured API Setup resource to dedicated BU whose canonical phone matches provider data.
-- [ ] `D-05` No generic token acceptance, client credential input, global fallback, cross-BU transfer, or bypass of current attempt/lease/credential/receipt checks.
-- [ ] `D-06` Qualification failure is a hard stop; no weakening of the current Meta validator.
+
+D-01..D-06 above form the single decision set, proposed for renewed published freeze after ARCH-QUAL-01 integration. No parallel numbering or implementation approval is implied. Decision adherence must cover every row, including app/grant qualification and private configuration.
 
 ## Architecture Change Governance
 - **Applicability:** `required`
@@ -294,8 +294,8 @@ No unresolved architecture choice remains in the proposed design. The concrete g
 - **Decision review lifecycle:** after diagnosis and before implementation approval.
 - **Decision review kind:** `architecture_opinion`
 - **Decision review package:** `bounded-file-set`
-- **Decision review status:** `not_run`
-- **Decision review evidence / resolution:** pending freeze; no review claimed.
+- **Decision review status:** `findings_integrated`
+- **Decision review evidence / resolution:** fresh internal architecture_opinion raw planning-architecture-v1.raw.json, verdict revise; ARCH-QUAL-01 integrated as bounded qualification contract, ARCH-DOC-02 numbering aligned and ARCH-TEST-03 post-promotion-disable scenario named. Separate fresh critique will verify these corrections; no implementation pass claimed.
 - **Architecture adherence review:** `required`
 - **Adherence review lifecycle:** after implementation and before Completed.
 - **Adherence review kind:** `architecture_adherence`
@@ -305,17 +305,16 @@ No unresolved architecture choice remains in the proposed design. The concrete g
 - **No-go handling:** unresolved architecture divergence returns to diagnosis/decision; no APROVADO or completion claim.
 
 ## Gate: Review Baseline Freeze
-- **Gate decision:** `required`
-- **Why this decision:** planning reviews need one immutable TODO and source baseline.
-- **Trigger stage:** before planning review or guard run.
-- **Baseline branch:** pending root freeze.
-- **Baseline commit:** pending root freeze.
-- **Baseline push reference:** pending root freeze.
-- **Gate status:** `not_run`
-- **Findings summary:** not run; this draft is not a frozen review baseline.
-- **Evidence / reference:** pending root-owned commit and push receipt.
-- **Waiver authority / reference:** `n/a`
-- **Pre-freeze packet-prep rule:** any packet prepared before the gate is labeled `pending-freeze` and is not a passed review.
+- **Gate decision:** required
+- **Why this decision:** refresh after integrating the material qualification-contract finding.
+- **Trigger stage:** before the next planning-side review or guard
+- **Baseline branch:** main
+- **Baseline commit:** pending refreshed freeze
+- **Baseline push reference:** origin/main
+- **Gate status:** not_run
+- **Findings summary:** e83d5bdc remains the valid baseline of architecture v1. ARCH-QUAL-01 corrections are prepared-pre-freeze until the updated package is pushed.
+- **Evidence / reference:** artifacts/reviews/leadshug-meta-test-binding-20261018/planning-architecture-v1.raw.json and baseline-freeze-e83d5bdc.json
+- **Waiver authority / reference:** n/a
 
 ## Gate: Review Scope Drift
 - **Gate decision:** `required`
@@ -346,7 +345,7 @@ No PACED pattern ID is asserted in this draft. The module decisions above are pr
 ## Assumptions Preview (Required Before Plan Review)
 | Assumption ID | Assumption | Evidence | If False | Confidence | Handling |
 | --- | --- | --- | --- | --- | --- |
-| A-01 | The configured Meta user or system-user token may satisfy current same-app, expiry, scope and granular target checks for this API Setup resource. | No credential was inspected; `MetaHttpClient.assertCurrentGrant`, `recursos` and `confirmarNumero` define the checks but do not prove this token (`api-app/src/integrations/meta/meta.client.ts:80-107,155-173`). | Run only the separately approved bounded pre-code grant qualification; if any check fails, stop before product edits and return to design. | Low | Keep as Assumption |
+| A-01 | The configured Meta API Setup token may satisfy current same-app, provider-reported validity, scope and granular target checks for this API Setup resource. | No credential was inspected; `MetaHttpClient.assertCurrentGrant`, `recursos` and `confirmarNumero` define the checks but do not prove this token (`api-app/src/integrations/meta/meta.client.ts:80-107,155-173`). | Run only the separately approved bounded pre-code grant qualification specified below; success proves the checks actually performed, not token type/explicit lifetime. If any check fails, stop before product edits and return to design. | Low | Keep as Assumption |
 | A-02 | Nullable `officialAuthorizationMethod` can be persisted only for `OFICIAL` attempts with `EMBEDDED_SIGNUP|LOCAL_TEST`; existing official attempts backfill to `EMBEDDED_SIGNUP`, while `NAO_OFICIAL` remains null. | `ChannelRegistrationAttempt` is shared by official and nonofficial flows and stores state/stage/version/candidate envelope (`api-app/prisma/schema.prisma:191-225`). | Migration and PostgreSQL regression must prove the official backfill, nonofficial-null invariant, and immutable method binding before nonce reservation. | Medium | Keep as Assumption |
 | A-03 | A local explicit opt-in can be passed to the API process separately from `NODE_ENV`. | `docker-compose.channels.yml` and `api-app/src/infra/config/modulos.ts` provide process configuration seams; no private configuration was inspected. | If deployment cannot enforce this as local-only, do not implement or enable the mode. | Medium | Keep as Assumption |
 | A-04 | Existing resource confirmation can be reused without a credential fallback. | `NumberRegistrationService.confirm` and `MetaHttpClient.confirmarNumero` validate selected WABA/phone (`api-app/src/domain/channels/number-registration.service.ts:228-241`; `api-app/src/integrations/meta/meta.client.ts:145-174`). | Add a narrow adapter only if necessary; keep current behavior for OAuth. | High | Keep as Assumption |
@@ -362,7 +361,7 @@ No PACED pattern ID is asserted in this draft. The module decisions above are pr
 
 ### Ordered Steps
 1. After explicit implementation approval, prepare and review a bounded read-only grant qualification helper under `foundation_documentation/artifacts/tmp/number-onboarding-execution/`; product-source edits remain prohibited until it passes.
-2. After a distinct root GO, the helper may read only `META_LOCAL_TEST_ACCESS_TOKEN` in memory; use the existing compiled `MetaHttpClient` validation and exact WABA/phone reads; emit only redacted booleans/enums. No Nest bootstrap, DB access, mutation, raw IDs/URLs/provider errors, or secret artifact/output. If the grant or the privacy boundary fails, stop before source edits and return to design.
+2. After a distinct root GO, execute only the bounded qualification contract below. Read the explicitly allowlisted base app configuration and one local token/target in memory, call the named public exact-target method, and emit its fixed booleans/enums. No Nest bootstrap, DB, mutation, raw provider details or secret output. Failure/inconclusive result stops before product edits.
 3. Select authorization method before attempt creation/idempotency and nonce reservation; include it in the idempotency request hash (the client key remains the existing UUID). Persist nullable official-only `officialAuthorizationMethod`; backfill existing OFICIAL rows to `EMBEDDED_SIGNUP`, keep NAO_OFICIAL null, and enforce the invariant in schema/migration validation. The method is immutable for the attempt and cannot switch after candidate lease or during confirmation.
 4. Add an ADMIN/session/nonce/current-attempt guarded local authorization route that reads only server configuration, validates exact app/grant/target, and stages an encrypted candidate with `LOCAL_TEST` provenance. Never exchange OAuth code or write `CODE_CONSUMED`.
 5. Make `options`, `confirm`, and promotion recheck immutable method and exact BU/WABA/phone. If local mode is disabled or its token/target changes while a candidate is staged, reject it before promotion and require a new attempt; never promote a stale candidate. `advance` acts only on the current mapped resource and promoted per-channel credential, using the existing current-app subscription step.
@@ -402,10 +401,22 @@ No PACED pattern ID is asserted in this draft. The module decisions above are pr
 
 ### Runtime / Rollout Notes
 - Private settings are `META_LOCAL_TEST_ENABLED=false`, `META_LOCAL_TEST_BU_ID`, `META_LOCAL_TEST_WABA_ID`, `META_LOCAL_TEST_PHONE_NUMBER_ID`, and `META_LOCAL_TEST_ACCESS_TOKEN`. Document blank placeholders in root `.env.example`; pass through `docker-compose.channels.yml` only if required. The opt-in is independent of `NODE_ENV`, defaults false, and is permitted only in explicitly configured local setup.
-- Pre-code qualification is read-only and requires later implementation approval plus its own root GO. It reads only the named token value in memory, reuses compiled `MetaHttpClient` checks, reads the exact configured WABA/phone, and emits safe booleans/enums only. No Nest bootstrap, DB, provider writes, raw IDs/URLs/errors, or token artifact/output. Failed/inconclusive qualification means stop before product source changes.
+- Pre-code qualification is read-only, requires later implementation approval plus a distinct root GO, and follows the complete allowlist/method/budget/output contract below. Failed/inconclusive qualification stops before product source changes. Private .env.testing is operator-owned: the human may fill the new named values after approval; no tracked diff, bulk rewrite, mount, copy, hash or dump of that file is authorized.
 - Apply one additive migration through the project migration process; no SQL seeds or direct identity/credential writes.
 - Local authorization and confirmation make no provider writes. After explicit admin confirmation and successful mapping, the existing normal `advance` action may subscribe the exact WABA to the current app as the established channel flow does; no callback override or other provider write is added.
 - Disable new local authorization by setting the opt-in false and removing private bootstrap settings; do not silently delete active per-channel credentials. No production rollout, product source push, Railway action, Meta publication, re-registration, DNS/tunnel change, or lane promotion is authorized.
+
+### Bounded Qualification Contract — ARCH-QUAL-01
+
+Applies only after later explicit implementation approval, helper review/offline checks and a distinct consumed-once root live GO. It is a provider-read prerequisite before any product-source edit, not a general runtime diagnostic authorization.
+
+- Inputs: existing API-process META_APP_ID, META_APP_SECRET, META_SIGNUP_CONFIG_ID and GRAPH_VERSION, plus only META_LOCAL_TEST_ACCESS_TOKEN, META_LOCAL_TEST_WABA_ID and META_LOCAL_TEST_PHONE_NUMBER_ID from the operator-owned private configuration. The four base values may already be inherited by the API process; do not inspect Config.Env. Validate expected app/version from the accepted installation. The target BU is enforced later by the normal application flow; qualification performs no BU lookup or ownership claim.
+- Delivery: read only the named local keys from .env.testing into memory after the operator fills them. Send any needed private inputs via subprocess stdin, never command arguments, shell interpolation, a URL, a persisted temporary payload or environment/config dump. Do not serialize/print/hash the file, token, app secret, WABA, phone ID or canonical phone. No other private configuration keys are admitted by inference.
+- Artifact: import only the already-built dist/integrations/meta/meta.client.js and instantiate MetaHttpClient, without AppModule/Nest bootstrap, DI overrides or private method access. Attest its file hash and container/image/source ownership against the accepted source inventory before credential use; historical image/compiled pins are context, not a new live observation. If no matching artifact is available, stop. An isolated no-private-input compile may be separately planned/reviewed if needed; do not modify source or quietly use stale code.
+- Method and budget: exactly one call to public verificarNumeroVinculado(expectedWabaId, expectedPhoneNumberId, token). It performs one debug grant read and at most two phone pages for that fixed WABA: at most three provider GETs, each existing timeout10s, no retries, no redirects, no exchangeCode/register/subscribe/send. Fixed HTTPS graph.facebook.com and configured v26.0 only. Maximum page size100; absent/beyond-limit/malformed/inconclusive target stops. Outer helper deadline40s; abort safely if exceeded.
+- Success means only the inherited app/is_valid/scopes/intersecting granular WABA guards passed, the selected phone was found, and its canonical-phone shape is usable. No token-class, expiry timestamp, remaining lifetime, app subscription, BU ownership, inbox or real delivery assertion follows. Revalidate grant/resource through normal candidate confirmation after implementation; an earlier qualification never grants permanent trust.
+- Result allowlist: schema/checkpoint, outcome qualified|rejected_or_inconclusive|preflight_failed, adapterFresh boolean, currentGrantAndTargetAccepted boolean, canonicalPhoneUsable boolean, tokenClassEvidence=unknown, explicitExpiryEvidence=unknown, deliveryEvidence=not_tested, providerWrites=0, optional fixed safe error enum. A true grant/target boolean is inferred only from successful return through the named adapter; no raw debug response is exported. Unknown failure details remain a safe combined outcome rather than invented attribution.
+- Privacy/operation checks: helper source frozen and inspected with fake inputs before real use; fixed schema validated on success and failure. No raw errors, HTTP URLs/headers/bodies, arbitrary stdout/stderr, provider-ID logs, other-WABA scans, DB access or mutation. The existing provider-bound debug request internally carries input_token as required by the adapter; its URL is neither printed nor retained. Root records one safe receipt and stops before any product edit unless qualified. No weakening of any common validator or token fallback is authorized.
 
 ## Plan Review Gate
 Review required before approval because this is a medium-sized authorization and persistence change with high impact.
@@ -471,7 +482,7 @@ Review required before approval because this is a medium-sized authorization and
 ## Audit Trigger Matrix
 - **Canonical method:** `wf-docker-audit-escalation-method`
 - **Guard command:** `python3 delphi-ai/tools/audit_escalation_guard.py --todo foundation_documentation/todos/active/features/TODO-leadshug-meta-api-test-number-binding.md`
-- **Latest TEACH evidence / artifact:** pending baseline freeze; no guard has run.
+- **Latest TEACH evidence / artifact:** artifacts/reviews/leadshug-meta-test-binding-20261018/audit-floor-v1.json; actual outcome go after published freeze, fingerprint de083b11b58d. All derived gates remain pending until performed at their lifecycle stage.
 
 | Trigger | Value | Notes |
 | --- | --- | --- |
@@ -558,14 +569,14 @@ Status: planned sources, not binding execution ingestion; root must record actua
 - **Worktree / auxiliary-checkout authorization:** not-authorized
 - **Worktree authorization evidence:** n/a
 - **Writer scheduling policy:** single-writer-serialized
-- **Guard outcome:** blocked
+- **Guard outcome:** go
 - **Waiver / exception reference:** n/a
 
-This is the planned executable tuple, not execution authority. Root will run routing guard for structural preflight after freeze; normal execution still requires APROVADO and post-approval authority GO. Fresh architecture and critique reviewers use separate formal-review/gpt-6.1-sol/max routing receipts.
+This is the planned executable tuple, not execution authority. Structural routing guard returned go after freeze, recorded in artifacts/reviews/leadshug-meta-test-binding-20261018/routing-planned-implementation.json; normal execution still requires APROVADO and post-approval authority GO. Fresh architecture and critique reviewers use separate formal-review/gpt-6.1-sol/max routing receipts.
 
 ## Decision Adherence Validation
 - **Status:** `not_run`
-- **When required:** before delivery, against D-03 through D-06 after freeze.
+- **When required:** before delivery, against every frozen decision D-01 through D-06 after freeze.
 - **Evidence:** no implementation exists.
 
 ## Module Decision Consistency Validation (1-1 Mandatory Before Delivery)
@@ -596,6 +607,7 @@ This is the planned executable tuple, not execution authority. Root will run rou
 
 ## Security Risk Assessment
 - **Risk level:** `high`
+- **Security review decision:** required
 - **Why this risk level:** adds a new credential source and persisted trust transition in a multi-tenant messaging channel.
 - **Attack surface in scope:** authenticated BFF, local configuration, Meta grant validation, database ownership/credential storage, browser response and webhook mapping.
 - **Attack simulation decision:** `required`
@@ -638,6 +650,7 @@ This is the planned executable tuple, not execution authority. Root will run rou
 - **Evidence object:** not applicable.
 
 ## Verification Debt Assessment
+- **Audit decision:** required
 - **Audit outcome:** `pending`
 - **Why this outcome:** no implementation exists to audit.
 - **Inline code TODO debt:** `none known`
@@ -733,3 +746,11 @@ Use the Diff Expectation Contract as the authoritative inventory. The expected s
 
 ## Approval Boundary
 A separate explicit implementation approval and root-issued execution routing are required after all planning reviews, grant qualification design, baseline freeze, and guards. Until then, keep status Pending and do not touch code, runtime, provider, database, private configuration, or credentials.
+
+## Planning Finding Resolutions — CP81
+
+| Finding ID | Resolution | Usefulness | Formalizable | Candidate Rule Level | Candidate Rule ID | Rationale / Evidence |
+| --- | --- | --- | --- | --- | --- | --- |
+| ARCH-QUAL-01 | Integrated | useful | partial | project | none | Complete helper input/delivery/freshness/method/budget/result contract; validity is Meta is_valid through current adapter, token class/explicit lifetime unknown. Reuses current validator; failed qualification stops. Fresh critique still required. |
+| ARCH-DOC-02 | Integrated | useful | no | none | none | One D-01..06 set, all decisions included in later adherence. |
+| ARCH-TEST-03 | Integrated | useful | partial | project | none | V-06 and evidence matrix name post-promotion disable with unchanged active envelope/identity and normal stored-credential operations. |

@@ -1,0 +1,26 @@
+{
+  "reviewReportSha256": "9fa28a273d3fa0be1978954a4e313e71d397ba1fed938e216f58db7052260a5f",
+  "reportVerdict": "revise",
+  "rootDisposition": "architecture direction retained; all three findings integrated in plan, fresh critique required after new freeze",
+  "findings": [
+    {
+      "id": "ARCH-QUAL-01",
+      "resolution": "Integrated",
+      "approvalBlockingInOriginal": true
+    },
+    {
+      "id": "ARCH-DOC-02",
+      "resolution": "Integrated",
+      "approvalBlockingInOriginal": false
+    },
+    {
+      "id": "ARCH-TEST-03",
+      "resolution": "Integrated",
+      "approvalBlockingInOriginal": false
+    }
+  ],
+  "scopeDirection": "Accepted local mode unchanged; precise helper evidence narrows claims to current adapter observations. No common grant check weakened.",
+  "liveOperations": 0,
+  "productChanges": 0,
+  "parent": "Pending/VAL05 open_unwaived"
+}

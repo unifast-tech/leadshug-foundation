@@ -1,0 +1,127 @@
+{
+  "checkpoint": "cp81-planning-review-baseline-freeze",
+  "recordedAtUtc": "2026-10-18T04:50:11.096955+00:00",
+  "repo": "foundation_documentation",
+  "branch": "main",
+  "commit": "e83d5bdca50513f2e1e44bb6bf15a3aa8f179cc9",
+  "pushReference": "origin/main",
+  "pushExitCode": 0,
+  "ownedFilesByteExact": 28,
+  "files": [
+    {
+      "path": "artifacts/analysis/leadshug-meta-api-test-number-binding-proposal-20261018.md",
+      "sha256": "384e054da9524b111fb1547a3a175f6a8984d98049980aa76ae34a885a8a5e6a"
+    },
+    {
+      "path": "artifacts/dependency-readiness.md",
+      "sha256": "e847998ea8e9b62d9e2370d4c16161b9ba61d95473444f908382ded2a8758545"
+    },
+    {
+      "path": "artifacts/reviews/leadshug-meta-test-binding-20261018/README.md",
+      "sha256": "6599b21dff938e4a5627be01010249c81a9066569c03496b968430231a2865f8"
+    },
+    {
+      "path": "artifacts/reviews/leadshug-meta-test-binding-20261018/source-support-manifest.json",
+      "sha256": "54ac08ff0a18d6e1a2b12c75b6fd7f4e607b9a31fb9cea0f42fa5dedbd846e9c"
+    },
+    {
+      "path": "artifacts/reviews/leadshug-number-onboarding-20261015/README.md",
+      "sha256": "893946b8b1a0b6f6f6ab14aa9b4d95fe0a3a8a710abed87c7dac5916fdcf3a7a"
+    },
+    {
+      "path": "artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp80-human-api-setup-received-in-whatsapp.json",
+      "sha256": "6b59b19e5c971b32a263e3ce681eda9bf75808a1367135e24e2563eb9c84c6bc"
+    },
+    {
+      "path": "artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp80-human-sandbox-linked-pending-receipt.json",
+      "sha256": "bb4b90e5d1bf8f61ad55a323c69e473bc8636438e3ba5e41cd05e26fca10b0f3"
+    },
+    {
+      "path": "artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp80-human-sandbox-not-on-whatsapp-sms.json",
+      "sha256": "291b55e08e751c5329779406316322c6f69d24fb910ab3f37e74091f6e8b5c90"
+    },
+    {
+      "path": "artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp80-sandbox-binding-baseline-preparation.json",
+      "sha256": "913981d2c6752a23fba2b368435c5d805e76cd9580285fecb5079f44a2fae61f"
+    },
+    {
+      "path": "artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp80-sandbox-binding-baseline-readonly-v2.cjs",
+      "sha256": "810c47e26fa281b828edaa6f85e52953a086909722482ff2678566e5d3abd995"
+    },
+    {
+      "path": "artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp80-sandbox-binding-baseline-readonly.cjs",
+      "sha256": "8c2755bd24e191c3f4329c0e65de75c0a82b7ae2e111a97ad7343e8f714b0234"
+    },
+    {
+      "path": "artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp80-sandbox-binding-baseline-v2-preparation.json",
+      "sha256": "1fcd324296b1add7fcafd6fe324e2f47ed6ebd0ad398d25fd1c7c848817922a4"
+    },
+    {
+      "path": "artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp80-sandbox-binding-baseline.exit-code.txt",
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+    },
+    {
+      "path": "artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp80-sandbox-binding-baseline.json",
+      "sha256": "d50c60cdfbf3d31a077c5ddec19b4aa0f036a51a6bd11c634be448983dd766f6"
+    },
+    {
+      "path": "artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp80-sandbox-binding-baseline.stdout.json",
+      "sha256": "8761ac34b948f283bddaa1082593933ca8dd4fd8b9881c8ce8bb1dc6c7633fb3"
+    },
+    {
+      "path": "artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp80-sandbox-inout-aggregate-readonly.cjs",
+      "sha256": "d9d60971910d2e1df1d762b0256e3f6d03d5faf37a4466b6d5f179215715b0d9"
+    },
+    {
+      "path": "artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp80-sandbox-physical-inout01-window.json",
+      "sha256": "650204b44091e4f4807d7127dd0b72a9bd6071d6568d3f11f485a41b792ea511"
+    },
+    {
+      "path": "artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp80-sandbox-pinned-reader-preparation.json",
+      "sha256": "2262dc927b32b56debbfe94e8a8fe5dc3a63e5be3ba6f0a1a35c8136be60c03a"
+    },
+    {
+      "path": "artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp80-source-binding-inventory.json",
+      "sha256": "0a742530a7fab3627ca98ea0368efda7fa172ed9cd90abe9a728ee0c2593936d"
+    },
+    {
+      "path": "artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp80-v2-selftest-file.stdout.json",
+      "sha256": "661eaf4de7b12a1e51b3206013399e7762554b6134284ff28cd2d62cba4d47ef"
+    },
+    {
+      "path": "artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp80-v2-selftest-stdin.stdout.json",
+      "sha256": "661eaf4de7b12a1e51b3206013399e7762554b6134284ff28cd2d62cba4d47ef"
+    },
+    {
+      "path": "artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp81-human-local-test-binding-scope-direction.json",
+      "sha256": "b3dda527874190a6853b57d67025ceea960ea5eed092b4d4294cce96ca4e192b"
+    },
+    {
+      "path": "artifacts/reviews/leadshug-number-onboarding-20261015/evidence/root-cp80-sandbox-binding-adjudication.json",
+      "sha256": "c91625f454bb40bce2361f049f554d3825979416e7e59c71a412be1f25a0364b"
+    },
+    {
+      "path": "artifacts/reviews/leadshug-number-onboarding-20261015/evidence/root-cp80-sandbox-binding-baseline-go.json",
+      "sha256": "ef9102f45c96bb26364ad6715b030461e9a6d5044375c59a9642b7ef63fa8629"
+    },
+    {
+      "path": "artifacts/reviews/leadshug-number-onboarding-20261015/evidence/root-cp80-sandbox-physical-test-disposition.json",
+      "sha256": "75b0fc73dd4c28f8bf82998c12dab6593f848791a4e6bfbddcc163c4a019c25e"
+    },
+    {
+      "path": "artifacts/validation-plans/leadshug-channel-readiness-20261015.md",
+      "sha256": "14d646da0cdba405db997fa0fa77447d760ee5af4360cdfa6fa5b77e13c8a164"
+    },
+    {
+      "path": "todos/active/features/TODO-leadshug-channel-connection-readiness.md",
+      "sha256": "37c1b85a0c0e9f2f2c90e607aec846c474a7b436c77cfc38e04a2e9fc016dedb"
+    },
+    {
+      "path": "todos/active/features/TODO-leadshug-meta-api-test-number-binding.md",
+      "sha256": "6f7f3bae938eb6d13e70ecd6539aabc81ffd3358e5367e69be77e9e11b854a5b"
+    }
+  ],
+  "authority": "Autonomous Foundation documentation lane; commit/push guards GO. No product source push/runtime action.",
+  "scopeDirection": "Accepted by human CP81; implementation approval absent",
+  "parent": "Pending/VAL05 open_unwaived"
+}

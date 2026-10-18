@@ -1,0 +1,688 @@
+{
+  "schemaVersion": "leadshug.planning-architecture-review.v1",
+  "reviewKind": "architecture_opinion",
+  "reviewStage": "planning; no implementation approval",
+  "reviewer": "/root/meta_test_binding_architecture_cp81",
+  "contextIsolation": "Independent no-context reviewer; only the explicitly bounded handoff and named evidence/source set were used.",
+  "recordedAtUtc": "2026-10-18T04:55:48Z",
+  "verdict": "revise",
+  "summary": "Endorse the default-off, fixed-target local authorization entry converging on the existing encrypted candidate, confirmation, ownership and active-credential path. Revise the mandatory pre-code qualification contract so its allowed inputs and claimed proof are executable with the existing compiled adapter. No product, runtime, grant-eligibility or delivery pass is claimed.",
+  "approvalBoundary": {
+    "humanDirection": "Local technical mode accepted; implementation not approved.",
+    "thisReviewGrantsExecution": false,
+    "parentStatus": "Pending; VAL05 open and unwaived.",
+    "qualificationFailure": "Stop before product edits and return to design; never weaken the Embedded Signup app/scope/granular-WABA validator.",
+    "transportCaveat": "The API Setup resource reached the handset, but a new mapping cannot guarantee or explain provider delivery of a webhook. The separate Sandbox resource and SMS observation do not close the WhatsApp proof."
+  },
+  "profile": {
+    "genesisGate": "rejected: existing governed architecture and a tactical child TODO are under assurance review",
+    "active": "Assurance / Tester-Quality with architecture and security lenses",
+    "technicalScopes": [
+      "nestjs",
+      "react",
+      "vite",
+      "prisma",
+      "postgresql",
+      "docker"
+    ],
+    "routingReceipt": "foundation_documentation/artifacts/reviews/leadshug-meta-test-binding-20261018/routing-architecture-v1.json",
+    "routingOutcome": "go",
+    "declaredModel": "gpt-6.1-sol",
+    "declaredEffort": "max",
+    "goalState": "not created; stateless bounded review"
+  },
+  "reviewedBaseline": {
+    "foundationRepository": "foundation_documentation",
+    "branch": "main",
+    "commit": "e83d5bdca50513f2e1e44bb6bf15a3aa8f179cc9",
+    "pushReference": "origin/main",
+    "pushEvidence": "foundation_documentation/artifacts/reviews/leadshug-meta-test-binding-20261018/baseline-freeze-e83d5bdc.json",
+    "pushEvidenceScope": "Receipt and handoff attest the successful push before this review; no network Git action was performed by the reviewer.",
+    "foundationInputs": [
+      {
+        "path": "todos/active/features/TODO-leadshug-meta-api-test-number-binding.md",
+        "sha256": "6f7f3bae938eb6d13e70ecd6539aabc81ffd3358e5367e69be77e9e11b854a5b"
+      },
+      {
+        "path": "artifacts/analysis/leadshug-meta-api-test-number-binding-proposal-20261018.md",
+        "sha256": "384e054da9524b111fb1547a3a175f6a8984d98049980aa76ae34a885a8a5e6a"
+      },
+      {
+        "path": "artifacts/reviews/leadshug-meta-test-binding-20261018/README.md",
+        "sha256": "6599b21dff938e4a5627be01010249c81a9066569c03496b968430231a2865f8"
+      },
+      {
+        "path": "artifacts/reviews/leadshug-meta-test-binding-20261018/source-support-manifest.json",
+        "sha256": "54ac08ff0a18d6e1a2b12c75b6fd7f4e607b9a31fb9cea0f42fa5dedbd846e9c"
+      },
+      {
+        "path": "artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp80-source-binding-inventory.json",
+        "sha256": "0a742530a7fab3627ca98ea0368efda7fa172ed9cd90abe9a728ee0c2593936d"
+      },
+      {
+        "path": "project_constitution.md",
+        "sha256": "abfafa5576d051da58583e2be57499320c8ad155c4ae741f259c730bcca98390"
+      },
+      {
+        "path": "policies/scope_subscope_governance.md",
+        "sha256": "aa18357e37417617b63ec5e58aba87c0f8c1e7518d6834d5cadfeda0a561dd84"
+      },
+      {
+        "path": "modules/integrations-and-channels.md",
+        "sha256": "8f10f3134f99fc29c76d6f7ba30aae2d1737eebb0813b4de34c5a41bc62a1ca0"
+      },
+      {
+        "path": "modules/identity-and-tenancy.md",
+        "sha256": "678b090e7ef540a1388048e8cd03a41eadf01b1100420d73c45beb4ea11aad4d"
+      },
+      {
+        "path": "modules/audit-and-history.md",
+        "sha256": "d384073967efa5fee12dcebbb70961b3a85e60bbcb6c3528705f656f1971db07"
+      },
+      {
+        "path": "modules/inbox-and-conversations.md",
+        "sha256": "383112b6b596c05b37ff3d945b1ee8b06bd8c5bcfd002a10456692f1b3bc708e"
+      }
+    ],
+    "sourceHeads": {
+      "api-app": "db5a86758a165fac8a1ab587599c37b17890530c",
+      "web-app": "74b9d4b714044829796f875d00553f077c1c329d"
+    },
+    "publicSourceFingerprints": [
+      {
+        "path": "api-app/src/surfaces/bff/number-registrations.controller.ts",
+        "expectedSha256": "c57797667ff26a4ea74aa939e4972a8cd8f442c9beafa166b1bdf808e19c236e",
+        "actualSha256": "c57797667ff26a4ea74aa939e4972a8cd8f442c9beafa166b1bdf808e19c236e",
+        "matches": true
+      },
+      {
+        "path": "api-app/src/domain/channels/number-registration.service.ts",
+        "expectedSha256": "be53f7f1feb00c0bacb36ce0cf5d60915bb398ed011f69d28d3d4987f83417dc",
+        "actualSha256": "be53f7f1feb00c0bacb36ce0cf5d60915bb398ed011f69d28d3d4987f83417dc",
+        "matches": true
+      },
+      {
+        "path": "api-app/src/integrations/meta/meta.client.ts",
+        "expectedSha256": "ad6d9c56a0c854df35baf3320a70c2b1f4b9d577c4cd6f35def701ecac65f9c4",
+        "actualSha256": "ad6d9c56a0c854df35baf3320a70c2b1f4b9d577c4cd6f35def701ecac65f9c4",
+        "matches": true
+      },
+      {
+        "path": "api-app/src/surfaces/bff/channels.controller.ts",
+        "expectedSha256": "c7a3917c84ac1921b757fd7bca5a9b0b29ab2078312fcf2fd421104ef41a6182",
+        "actualSha256": "c7a3917c84ac1921b757fd7bca5a9b0b29ab2078312fcf2fd421104ef41a6182",
+        "matches": true
+      },
+      {
+        "path": "api-app/src/surfaces/webhooks/meta.controller.ts",
+        "expectedSha256": "64fd78568c1dc99e74df8a3f5b3157c43c6467ef03544b7741f0b9c7dc11200b",
+        "actualSha256": "64fd78568c1dc99e74df8a3f5b3157c43c6467ef03544b7741f0b9c7dc11200b",
+        "matches": true
+      },
+      {
+        "path": "api-app/prisma/schema.prisma",
+        "expectedSha256": "3dd87c61af51167ae8aaa07a1b35e8616f108d9e5a05b2c0911ea84a8bfa5636",
+        "actualSha256": "3dd87c61af51167ae8aaa07a1b35e8616f108d9e5a05b2c0911ea84a8bfa5636",
+        "matches": true
+      },
+      {
+        "path": "api-app/test/number-onboarding-flow.e2e-spec.ts",
+        "expectedSha256": "650b233c9dafd9730f14170ce6bd6961d6277b9a131a6eb816cb8edd39341fae",
+        "actualSha256": "650b233c9dafd9730f14170ce6bd6961d6277b9a131a6eb816cb8edd39341fae",
+        "matches": true
+      },
+      {
+        "path": "web-app/src/componentes/CadastroNumero.tsx",
+        "expectedSha256": "9afbe4f419dcf4b5133f8103a0082b6eaa32837aaaf307ffbc61489c50f8cb78",
+        "actualSha256": "9afbe4f419dcf4b5133f8103a0082b6eaa32837aaaf307ffbc61489c50f8cb78",
+        "matches": true
+      },
+      {
+        "path": "scripts/test-channels-local.sh",
+        "expectedSha256": "7af34d340a679c325f8cb06151db9723bf4641529102dcc392d08988ae82de13",
+        "actualSha256": "7af34d340a679c325f8cb06151db9723bf4641529102dcc392d08988ae82de13",
+        "matches": true
+      },
+      {
+        "path": "docker-compose.channels.yml",
+        "expectedSha256": "9978e713ce190ad20b6bddb0ecf0b469d068c0e43bb4eaf50aa630ec03aea235",
+        "actualSha256": "9978e713ce190ad20b6bddb0ecf0b469d068c0e43bb4eaf50aa630ec03aea235",
+        "matches": true
+      },
+      {
+        "path": "api-app/src/infra/config/modulos.ts",
+        "expectedSha256": "fd1ccabf7bee088f230a12d773c56a5d41fc07642d04262b55a6497a7b9c2a03",
+        "actualSha256": "fd1ccabf7bee088f230a12d773c56a5d41fc07642d04262b55a6497a7b9c2a03",
+        "matches": true
+      },
+      {
+        "path": "api-app/src/surfaces/bff/session.middleware.ts",
+        "expectedSha256": "80d8be0072b817ec34b3eb7d29218835bd218a40670c1f917d0b1787b0b57211",
+        "actualSha256": "80d8be0072b817ec34b3eb7d29218835bd218a40670c1f917d0b1787b0b57211",
+        "matches": true
+      },
+      {
+        "path": "api-app/src/domain/channels/channel-credential-resolver.ts",
+        "expectedSha256": "7ce86ab9fa764364761d51c5344b3786d66e66e55d3102f2181e0afdf41e7d7f",
+        "actualSha256": "7ce86ab9fa764364761d51c5344b3786d66e66e55d3102f2181e0afdf41e7d7f",
+        "matches": true
+      },
+      {
+        "path": "web-app/src/cadastroNumero.ts",
+        "expectedSha256": "584401ed8ab1ce1d53950998e85765a35d55d7ac4961286924f98e4132edcb6b",
+        "actualSha256": "584401ed8ab1ce1d53950998e85765a35d55d7ac4961286924f98e4132edcb6b",
+        "matches": true
+      },
+      {
+        "path": "web-app/src/cadastroNumero.lifecycle.ts",
+        "expectedSha256": "5c60a8fc7456c82a7d782b3484ba447bda826e65bf93a9175a991dc50be254a3",
+        "actualSha256": "5c60a8fc7456c82a7d782b3484ba447bda826e65bf93a9175a991dc50be254a3",
+        "matches": true
+      },
+      {
+        "path": "web-app/src/cadastroNumero.spec.ts",
+        "expectedSha256": "9c2581c1886d108c4c153d485fd77f017805c2e3b813a9536d21d0296f2a1ecb",
+        "actualSha256": "9c2581c1886d108c4c153d485fd77f017805c2e3b813a9536d21d0296f2a1ecb",
+        "matches": true
+      },
+      {
+        "path": "web-app/e2e/number-onboarding.spec.ts",
+        "expectedSha256": "47fdb27c0b592dfe8df31b8ad1be219d96720abdc00660bc15f6b2c03096f31b",
+        "actualSha256": "47fdb27c0b592dfe8df31b8ad1be219d96720abdc00660bc15f6b2c03096f31b",
+        "matches": true
+      },
+      {
+        "path": "web-app/e2e/number-onboarding-freshness.ts",
+        "expectedSha256": "097b56dc07f1a024c915bd6564bfac4485aed34e6fe9e0d861acd0998edeb2b0",
+        "actualSha256": "097b56dc07f1a024c915bd6564bfac4485aed34e6fe9e0d861acd0998edeb2b0",
+        "matches": true
+      },
+      {
+        "path": "web-app/playwright.config.ts",
+        "expectedSha256": "53e9a54e97c9b785135d94846d99eb77c6f05789a58f27128544f9b2c903a63d",
+        "actualSha256": "53e9a54e97c9b785135d94846d99eb77c6f05789a58f27128544f9b2c903a63d",
+        "matches": true
+      },
+      {
+        "path": "api-app/test/timeline-fixtures.cjs",
+        "expectedSha256": "1372f7bfb38792bffa948411208a5cc60abb4dffbecfa118e913abdfd38a07fb",
+        "actualSha256": "1372f7bfb38792bffa948411208a5cc60abb4dffbecfa118e913abdfd38a07fb",
+        "matches": true
+      },
+      {
+        "path": "api-app/test/browser-server.cjs",
+        "expectedSha256": "bf260c3124a867bda495509983055557988bc958141f3a8399e3e69de3aff451",
+        "actualSha256": "bf260c3124a867bda495509983055557988bc958141f3a8399e3e69de3aff451",
+        "matches": true
+      }
+    ],
+    "allNamedPublicFingerprintsMatch": true,
+    "immutableTodoSource": "git show e83d5bdca50513f2e1e44bb6bf15a3aa8f179cc9:todos/active/features/TODO-leadshug-meta-api-test-number-binding.md",
+    "lineReferenceRule": "TODO/proposal/module lines refer to the frozen Foundation commit. Source lines refer to the byte-matching public source files at the declared API/Web heads."
+  },
+  "methodsAndLimits": {
+    "performed": [
+      "Read root AGENTS and applicable main/profile-selection/approval-gates/effort-selection instructions.",
+      "Read the frozen child TODO, proposal, package README, manifest, freeze receipt and named source inventory.",
+      "Read the constitution, scope policy and referenced onboarding/consumer module sections only.",
+      "Inspect the named public service/controller/Meta adapter/schema/credential resolver/UI/lifecycle/test/runner/fixture support surfaces.",
+      "Hash only the 21 explicitly named public source/support files and the named Foundation review inputs."
+    ],
+    "notPerformed": [
+      "No test, build, runtime, database, provider or physical-send execution.",
+      "No credential or private dotenv contents inspected.",
+      "No listing, reading, hashing or Git-blob access for .local-files.",
+      "No broad API scan, parent-history read, Git mutation or product edit.",
+      "No inspection or execution of a compiled adapter artifact; availability/freshness is an execution prerequisite."
+    ],
+    "readiness": {
+      "method": "Bounded manual readiness checks under the initialization checklist; no repair or full runtime readiness claim.",
+      "checks": {
+        "foundationExists": true,
+        "delphiExists": true,
+        "scopePolicyExists": true,
+        "apiFoundationLink": false,
+        "webFoundationLink": false
+      },
+      "note": "Foundation and Delphi authority paths are directly available. API/Web foundation symlinks were not found aligned by the manual check; this review reads the supplied root Foundation authority directly and does not repair links."
+    },
+    "instructionsBoundary": "The parent explicitly restricted this reviewer to the bounded source package. Unrelated project histories, runtime truth and broader source were not loaded.",
+    "confidence": "High on the static architecture/control-flow observations; medium on implementation feasibility until the qualification contract is clarified; no confidence claim about the actual grant or live delivery."
+  },
+  "findings": [
+    {
+      "id": "ARCH-QUAL-01",
+      "severity": "medium",
+      "category": "material planning gap",
+      "approvalBlocking": true,
+      "title": "Make the mandatory pre-code qualification contract match the adapter inputs and observable proof.",
+      "evidence": [
+        {
+          "path": "foundation_documentation/todos/active/features/TODO-leadshug-meta-api-test-number-binding.md",
+          "line": 156,
+          "endLine": 156,
+          "observation": "DOD-03 requires pre-code proof of the configured user/system-user token, current validity, app/scopes/granular target and exact phone membership."
+        },
+        {
+          "path": "foundation_documentation/todos/active/features/TODO-leadshug-meta-api-test-number-binding.md",
+          "line": 364,
+          "endLine": 365,
+          "observation": "The mandatory first steps require the existing compiled MetaHttpClient, allow reading only META_LOCAL_TEST_ACCESS_TOKEN in memory, and prohibit product edits/Nest bootstrap/DB before the qualification passes."
+        },
+        {
+          "path": "foundation_documentation/todos/active/features/TODO-leadshug-meta-api-test-number-binding.md",
+          "line": 405,
+          "endLine": 405,
+          "observation": "The runtime note repeats the token-only input restriction and compiled-adapter requirement."
+        },
+        {
+          "path": "api-app/src/integrations/meta/meta.client.ts",
+          "line": 43,
+          "endLine": 46,
+          "observation": "Constructing MetaHttpClient also reads META_APP_ID, META_APP_SECRET, META_SIGNUP_CONFIG_ID and GRAPH_VERSION."
+        },
+        {
+          "path": "api-app/src/integrations/meta/meta.client.ts",
+          "line": 103,
+          "endLine": 106,
+          "observation": "The current grant debug request needs appId|appSecret; the bootstrap token alone cannot run the existing validator."
+        },
+        {
+          "path": "api-app/src/integrations/meta/meta.client.ts",
+          "line": 145,
+          "endLine": 173,
+          "observation": "Public exact-number methods can establish current same-app/scope/WABA authorization and phone membership. verificarNumeroVinculado uses one grant read plus at most two phone pages."
+        },
+        {
+          "path": "api-app/src/integrations/meta/meta.client.ts",
+          "line": 225,
+          "endLine": 239,
+          "observation": "The parsed grant retains appId, is_valid, scopes and granular scopes; it neither retains/checks token type nor retains/checks explicit expiry fields. Its public exact-number result returns the number, not those metadata."
+        }
+      ],
+      "analysis": "The architecture can reuse this adapter without bootstrapping Nest or touching a DB, but the literal token-only read boundary is incomplete. Exact WABA/phone parameters and inherited base Meta configuration, including the existing app secret, are also inputs. Separately, a successful current adapter call proves the checks the adapter actually performs; it cannot itself substantiate a claim that token-class or explicit-expiry metadata were parsed and qualified. This is a static proof-boundary mismatch, not a claim that Meta returns an inconsistent is_valid/expiry combination and not a finding that the real token is eligible or ineligible.",
+      "whyNow": "Qualification is the mandatory gate before any product edit. Leaving its authorized inputs or success meaning to be improvised during the credential-bearing stage makes the frozen execution sequence non-reviewable at its first step.",
+      "recommendation": {
+        "option": "A",
+        "action": "Before approval, name the helper's complete minimal input allowlist and delivery mechanism: the one local token, fixed expected WABA/phone, required base Meta app settings and existing app secret. Do not load or print an arbitrary dotenv/environment. Name the compiled module and source/freshness attestation, the public method sequence, bounded provider budget, safe result schema and hard-stop conditions. Define precisely whether current validity is the provider's is_valid signal. Do not claim dynamic token-class or explicit-expiry proof from the current parsed return; if those are strict additional requirements, specify a separately reviewed bounded read-only metadata check or explicit issuance-provenance evidence without relaxing any shared grant check.",
+        "minimumAcceptance": [
+          "The helper can be run under the written allowlist without implicitly accessing an unapproved extra secret.",
+          "One named public exact-target method or an explicitly budgeted sequence is selected; no private-method access, OAuth exchange, Nest bootstrap or DB is needed.",
+          "The report's true booleans/enums correspond exactly to observed checks; unsupported class/expiry claims are absent or have an explicit additional evidence path.",
+          "Compiled-artifact freshness and safe failure output are reviewed before any real qualification; failure still stops before product edits."
+        ]
+      },
+      "options": [
+        {
+          "id": "A",
+          "description": "Clarify the bounded helper input, method, freshness and evidence contract while retaining the current shared validator and exact-target read.",
+          "implementationEffort": "small planning change; bounded helper review later",
+          "risk": "low; removes an implicit secret/proof boundary",
+          "blastRadius": "child TODO and private execution helper contract",
+          "maintenanceBurden": "low",
+          "performanceImpact": "Can use verificarNumeroVinculado within at most 3 reads at 10 seconds each, or a smaller selected-page path; avoid duplicate grant reads.",
+          "eleganceImpact": "Improves coherence by making the first step explicit.",
+          "structuralSoundnessImpact": "Preserves the single shared grant-validation and promotion architecture."
+        },
+        {
+          "id": "B",
+          "description": "If token-class/explicit-expiry metadata are mandatory, additionally define a narrow read-only qualification metadata check, safe outputs and its total request budget before implementation approval.",
+          "implementationEffort": "medium",
+          "risk": "medium; extra parsing and provider interaction must be reviewed",
+          "blastRadius": "bounded qualification helper and its evidence contract; no Embedded Signup relaxation",
+          "maintenanceBurden": "medium; avoid duplicating app/scope/WABA validation",
+          "performanceImpact": "Additional reads must be included explicitly rather than hidden inside an assumed 3-request budget.",
+          "eleganceImpact": "Acceptable if the added check is narrowly justified and not a second authorization framework.",
+          "structuralSoundnessImpact": "Sound when supplemental metadata cannot bypass or replace the common validator."
+        },
+        {
+          "id": "C",
+          "description": "Defer the local method and retain Embedded Signup-only behavior until a feasible qualification contract is agreed.",
+          "implementationEffort": "low",
+          "risk": "low security risk; requested local binding remains unavailable",
+          "blastRadius": "no new product surface",
+          "maintenanceBurden": "low",
+          "performanceImpact": "unchanged",
+          "eleganceImpact": "coherent but does not provide the requested path",
+          "structuralSoundnessImpact": "preserves existing architecture"
+        }
+      ],
+      "sourceScope": "No helper was executed, no compiled artifact inspected, and no private configuration read for this finding."
+    },
+    {
+      "id": "ARCH-DOC-02",
+      "severity": "low",
+      "category": "optional reviewability improvement",
+      "approvalBlocking": false,
+      "title": "Keep decision identifiers and the delivery adherence range consistent.",
+      "evidence": [
+        {
+          "path": "foundation_documentation/todos/active/features/TODO-leadshug-meta-api-test-number-binding.md",
+          "line": 235,
+          "endLine": 239,
+          "observation": "Resolved D-04 denotes JA_REGISTRADO-only and resolved D-05 denotes shared guards/disable behavior."
+        },
+        {
+          "path": "foundation_documentation/todos/active/features/TODO-leadshug-meta-api-test-number-binding.md",
+          "line": 251,
+          "endLine": 256,
+          "observation": "The frozen D-04 instead denotes fixed resource binding, frozen D-05 lists forbidden shortcuts, and D-06 denotes qualification failure."
+        },
+        {
+          "path": "foundation_documentation/todos/active/features/TODO-leadshug-meta-api-test-number-binding.md",
+          "line": 568,
+          "endLine": 568,
+          "observation": "Delivery adherence is described as D-03 through D-06, omitting frozen D-01 and D-02 from the named range."
+        }
+      ],
+      "analysis": "The requirements are present elsewhere in Scope/DoD, so this is not evidence that app validation, server-only configuration or JA_REGISTRADO was omitted. Stable IDs and complete adherence coverage would make future review evidence less ambiguous.",
+      "whyNow": "These IDs will be used by later execution and delivery reviewers.",
+      "recommendation": {
+        "option": "A",
+        "action": "Use one decision numbering/mapping and make the later adherence table cover every frozen decision, including D-01 and D-02."
+      },
+      "options": [
+        {
+          "id": "A",
+          "description": "Align the resolved/frozen IDs and require adherence evidence for all frozen rows.",
+          "implementationEffort": "low",
+          "risk": "low",
+          "blastRadius": "TODO metadata only",
+          "maintenanceBurden": "low",
+          "performanceImpact": "neutral",
+          "eleganceImpact": "improves clarity",
+          "structuralSoundnessImpact": "improves traceability"
+        },
+        {
+          "id": "B",
+          "description": "Keep separate decision lists but add an explicit one-to-one mapping and a complete adherence range.",
+          "implementationEffort": "low to medium",
+          "risk": "low",
+          "blastRadius": "TODO metadata only",
+          "maintenanceBurden": "medium; two lists remain",
+          "performanceImpact": "neutral",
+          "eleganceImpact": "less concise",
+          "structuralSoundnessImpact": "sound if the mapping remains maintained"
+        },
+        {
+          "id": "C",
+          "description": "Leave the overlapping IDs and rely on Scope/DoD plus reviewer judgment.",
+          "implementationEffort": "none now",
+          "risk": "low to medium evidence ambiguity",
+          "blastRadius": "later review documentation",
+          "maintenanceBurden": "medium",
+          "performanceImpact": "neutral",
+          "eleganceImpact": "weaker clarity",
+          "structuralSoundnessImpact": "requirements remain, traceability is weaker"
+        }
+      ]
+    },
+    {
+      "id": "ARCH-TEST-03",
+      "severity": "low",
+      "category": "optional test-plan precision",
+      "approvalBlocking": false,
+      "title": "Name the post-promotion bootstrap-disable scenario explicitly.",
+      "evidence": [
+        {
+          "path": "foundation_documentation/todos/active/features/TODO-leadshug-meta-api-test-number-binding.md",
+          "line": 239,
+          "endLine": 239,
+          "observation": "D-05 explicitly states that disabling or rotating bootstrap config must not delete or silently retarget a promoted active channel."
+        },
+        {
+          "path": "foundation_documentation/todos/active/features/TODO-leadshug-meta-api-test-number-binding.md",
+          "line": 173,
+          "endLine": 173,
+          "observation": "V-06 explicitly tests config changes while a candidate is staged; it does not specifically name the after-promotion case."
+        },
+        {
+          "path": "api-app/src/domain/channels/number-registration.service.ts",
+          "line": 418,
+          "endLine": 423,
+          "observation": "Advance obtains the promoted credential through ChannelCredentialResolver and then subscribes; this is the right seam to assert no dependency on bootstrap config."
+        },
+        {
+          "path": "api-app/src/domain/channels/channel-credential-resolver.ts",
+          "line": 24,
+          "endLine": 59,
+          "observation": "The resolver uses current identity and the stored per-channel encrypted credential, with receipt/readiness gates for sends."
+        }
+      ],
+      "analysis": "The intended behavior is already unambiguous in the plan, and DOD-09 requires consumers to keep the existing contract. A named post-promotion scenario would directly prevent a tempting implementation mistake: applying the local bootstrap gate to normal operations indefinitely.",
+      "whyNow": "The new authorization source should not become a persistent runtime dependency after promotion.",
+      "recommendation": {
+        "option": "A",
+        "action": "Add one focused integration scenario: promote a local candidate, disable/remove bootstrap settings, then use normal advance/identity/receipt/resolver behavior with the persisted credential. Assert the active envelope, identity and ownership remain unchanged and no bootstrap fallback is used."
+      },
+      "options": [
+        {
+          "id": "A",
+          "description": "Name the scenario in the existing PostgreSQL integration plan and assert stored-credential behavior across disable.",
+          "implementationEffort": "low to medium",
+          "risk": "low",
+          "blastRadius": "existing integration test file only",
+          "maintenanceBurden": "low",
+          "performanceImpact": "no product performance impact",
+          "eleganceImpact": "direct and easy to understand",
+          "structuralSoundnessImpact": "protects the shared active-credential boundary"
+        },
+        {
+          "id": "B",
+          "description": "Use only a resolver/service spy test after disable.",
+          "implementationEffort": "low",
+          "risk": "low; weaker transaction/flow evidence",
+          "blastRadius": "unit test surface",
+          "maintenanceBurden": "low",
+          "performanceImpact": "neutral",
+          "eleganceImpact": "simple",
+          "structuralSoundnessImpact": "less complete than the existing real-DB seam"
+        },
+        {
+          "id": "C",
+          "description": "Keep the general DOD-09 consumer requirement without a named timing case.",
+          "implementationEffort": "none",
+          "risk": "low; existing acceptance text still governs",
+          "blastRadius": "none",
+          "maintenanceBurden": "low",
+          "performanceImpact": "neutral",
+          "eleganceImpact": "neutral",
+          "structuralSoundnessImpact": "acceptable planning text, less direct regression oracle"
+        }
+      ]
+    }
+  ],
+  "lensPositions": {
+    "architecture": {
+      "position": "Selected architecture is appropriate; qualify the pre-code contract before approval.",
+      "rationale": "A separate local authorization action with immutable official-method provenance stages the existing candidate. It does not need a second channel lifecycle, generic credentials API, seed path, or global token fallback.",
+      "evidence": [
+        "foundation_documentation/todos/active/features/TODO-leadshug-meta-api-test-number-binding.md:45-54",
+        "foundation_documentation/todos/active/features/TODO-leadshug-meta-api-test-number-binding.md:235-239",
+        "api-app/src/domain/channels/number-registration.service.ts:179-225",
+        "api-app/src/domain/channels/number-registration.service.ts:228-365"
+      ],
+      "residual": "Grant compatibility is unknown and must remain a hard pre-code stop."
+    },
+    "correctness": {
+      "position": "Core behavior is specified correctly; ARCH-QUAL-01 is the material planning correction.",
+      "rationale": "Method selection before reservation/idempotency, official-only nullable provenance, local JA_REGISTRADO enforcement, fixed BU/WABA/phone and existing ownership/phone/active-version checks are explicit. Local authorization must have a distinct nonce-consumption transition and safe error state, never CODE_CONSUMED or fake OAuth.",
+      "evidence": [
+        "foundation_documentation/todos/active/features/TODO-leadshug-meta-api-test-number-binding.md:155-161",
+        "foundation_documentation/todos/active/features/TODO-leadshug-meta-api-test-number-binding.md:366-369",
+        "api-app/src/domain/channels/number-registration.service.ts:83-95",
+        "api-app/src/domain/channels/number-registration.service.ts:325-365"
+      ],
+      "residual": "No implementation exists to prove DTO propagation, local transition CAS or a migration CHECK/application invariant."
+    },
+    "codeQuality": {
+      "position": "Reuse existing boundaries and factor only the repeated local policy checks.",
+      "rationale": "The existing controller is thin and NumberRegistrationService owns the state machine. A small private configuration/policy representation can serve capabilities, authorize, options and confirm; avoid scattered process.env conditionals or duplicating the promotion transaction. No general authorization strategy framework is justified for two sources.",
+      "evidence": [
+        "api-app/src/surfaces/bff/number-registrations.controller.ts:15-67",
+        "api-app/src/domain/channels/number-registration.service.ts:31-55",
+        "foundation_documentation/todos/active/features/TODO-leadshug-meta-api-test-number-binding.md:354-371"
+      ],
+      "residual": "Structure and error safety require review of the actual implementation."
+    },
+    "tests": {
+      "position": "The proposed test-first API/PostgreSQL/adapter/browser coverage is proportionate and meaningful.",
+      "rationale": "The plan names wrong app/scope/granular target, replay/method changes, stale attempts, config rotation, no register, ownership/phone races, nonofficial null provenance and secret redaction. Existing PostgreSQL tests already have deterministic provider barriers for stale leases and revoked actors. Browser fixtures currently model OAuth-coded fake tokens and must represent a distinct harmless local credential without calling exchangeCode; green browser tests alone cannot prove Meta grant parsing.",
+      "evidence": [
+        "foundation_documentation/todos/active/features/TODO-leadshug-meta-api-test-number-binding.md:168-177",
+        "foundation_documentation/todos/active/features/TODO-leadshug-meta-api-test-number-binding.md:373-401",
+        "api-app/test/number-onboarding-flow.e2e-spec.ts:586-631",
+        "api-app/test/browser-server.cjs:43-81",
+        "web-app/playwright.config.ts:19-24",
+        "web-app/e2e/number-onboarding.spec.ts:7"
+      ],
+      "residual": "No tests were executed; current adapter-spec contents were outside the exact supplied source set and were not assumed to pass."
+    },
+    "performance": {
+      "position": "No material performance regression is inherent in the recommended path.",
+      "rationale": "Capabilities remain local shape/permission checks with zero provider calls. The resource is fixed, so no account-wide fan-out is needed. Existing public exact-number validation offers at most one grant read plus two phone pages; individual requests time out at 10 seconds and channel leases are 45 seconds. Retain short DB transactions and no network under locks. Pin the exact local/helper call sequence so composing existing methods does not silently duplicate grant reads beyond the inherited round budget.",
+      "evidence": [
+        "api-app/src/integrations/meta/meta.client.ts:153-173",
+        "api-app/src/integrations/meta/meta.client.ts:194-217",
+        "api-app/src/domain/channels/number-registration.service.ts:18-19",
+        "foundation_documentation/modules/integrations-and-channels.md:23-31",
+        "foundation_documentation/todos/active/features/TODO-leadshug-meta-api-test-number-binding.md:613-616"
+      ],
+      "residual": "Actual call counts, latency and query behavior are unmeasured. EPS/FRC/BCI remain pending; RLS not_needed is proportionate to the local, single-resource scope."
+    },
+    "concurrency": {
+      "position": "Existing shared fences are a suitable basis; preserve them through the new entry point and config changes.",
+      "rationale": "Confirmation already acquires a channel lease, revalidates current attempt/session after provider calls, locks durable identity/BU/channel/credential and compares the active credential version before promotion. The plan explicitly extends source/target checks through candidate use and commit. Comparing the decrypted candidate token and pinned resource against the current private local configuration can be sufficient; a new global configuration service or production rotation platform is not required.",
+      "evidence": [
+        "api-app/src/domain/channels/number-registration.service.ts:235-243",
+        "api-app/src/domain/channels/number-registration.service.ts:263-300",
+        "api-app/src/domain/channels/number-registration.service.ts:327-365",
+        "api-app/src/domain/channels/number-registration.service.ts:474-500",
+        "foundation_documentation/todos/active/features/TODO-leadshug-meta-api-test-number-binding.md:159-160",
+        "foundation_documentation/todos/active/features/TODO-leadshug-meta-api-test-number-binding.md:173"
+      ],
+      "residual": "The actual before/after-network and in-transaction local config checks, stale-candidate clearing and rollback need deterministic barrier evidence. Do not consider a pre-request UI capability result an authorization fence."
+    },
+    "security": {
+      "position": "Trust entry is high impact but the selected controls are sound, subject to the qualification input/proof correction.",
+      "rationale": "The endpoint remains in the session/anti-CSRF BFF and must enforce current BU ADMIN, exact actor/session, nonce and attempt lease. Configuration grants no application permission. A target-admin capability check must receive actor context rather than reusing the current tenant-only signature without an authorization check. Tokens stay backend-only and encrypted after staging; normal send/subscribe/verify must use the channel credential. The provider debug request itself carries input_token in the provider URL, so the secret-free-URL rule must be understood and enforced for browser/log/artifact URLs rather than falsely claiming the existing adapter never puts a token in a provider-bound request.",
+      "evidence": [
+        "api-app/src/surfaces/bff/session.middleware.ts:68-138",
+        "api-app/src/surfaces/bff/number-registrations.controller.ts:19",
+        "api-app/src/domain/channels/number-registration.service.ts:45-55",
+        "api-app/src/integrations/meta/meta.client.ts:103-106",
+        "foundation_documentation/todos/active/features/TODO-leadshug-meta-api-test-number-binding.md:154-161"
+      ],
+      "residual": "No private config, actual grants, runtime logs or response redaction behavior were inspected. No security implementation pass is claimed."
+    },
+    "elegance": {
+      "position": "The selected path is coherent and proportionate for one explicitly enabled local resource.",
+      "rationale": "One source discriminator and one guarded candidate-entry action preserve a single confirmation/promotion/consumer flow. It avoids fake OAuth, manual DB state, implicit global credentials, a separate active-token store or a parallel wizard. Shared local checks should express one policy rather than many nearly identical conditionals.",
+      "residual": "A generalized authorization framework, vault, jobs/outbox or production feature-control platform would add incidental complexity outside this scope."
+    },
+    "structuralSoundness": {
+      "position": "Sound target structure; no architectural bypass is required.",
+      "rationale": "Attempt provenance belongs on the shared attempt model and remains null for NAO_OFICIAL. Identity ownership and active credential storage already have appropriate persistent owners. Keeping active credentials independent of the bootstrap source after promotion aligns all consumers and the receipt gate.",
+      "evidence": [
+        "api-app/prisma/schema.prisma:191-225",
+        "api-app/prisma/schema.prisma:228-271",
+        "api-app/src/domain/channels/channel-credential-resolver.ts:24-59",
+        "foundation_documentation/modules/integrations-and-channels.md:55-59"
+      ],
+      "residual": "The additive migration/backfill and method/type invariants must be tested on existing official and nonofficial rows. No schema or source was changed in this review."
+    },
+    "operationalFit": {
+      "position": "Fits the stated local installation and accepted user direction; no production-support expansion is needed.",
+      "rationale": "An independent explicit opt-in is correct even when the local process uses NODE_ENV=production. The dedicated BU should first be created through normal admin/tenant behavior, then its ID pinned in private config. Removing bootstrap settings disables new authorization; it does not revoke an already promoted credential or certify continued provider validity. Real inbound and observed outbound delivery remain independent post-implementation proofs.",
+      "evidence": [
+        "foundation_documentation/todos/active/features/TODO-leadshug-meta-api-test-number-binding.md:47-52",
+        "foundation_documentation/todos/active/features/TODO-leadshug-meta-api-test-number-binding.md:197-199",
+        "foundation_documentation/todos/active/features/TODO-leadshug-meta-api-test-number-binding.md:239",
+        "foundation_documentation/todos/active/features/TODO-leadshug-meta-api-test-number-binding.md:403-408",
+        "api-app/src/surfaces/webhooks/meta.controller.ts:76-94"
+      ],
+      "residual": "The named compiled helper module must later be available and match the source baseline without loading AppModule. Local process configuration and actual provider subscription/inbound/outbound eligibility remain unverified."
+    }
+  },
+  "failureModesAndEdgeCases": [
+    {
+      "case": "Token invalid/revoked, wrong app, missing scope or nonintersecting WABA targets",
+      "requiredOutcome": "Safe failure; no candidate promotion or weakening of Embedded Signup.",
+      "planningCoverage": "Explicit DOD-03/V-02; real grant unknown."
+    },
+    {
+      "case": "Local caller forges NOVO/PIN or uses the opposite authorize route",
+      "requiredOutcome": "Reject before register/provider mutation; method remains immutable and idempotency-bound.",
+      "planningCoverage": "Explicit DOD-02/04/05 and V-03/04; implementation tests must assert both endpoint directions."
+    },
+    {
+      "case": "Local target or token changes while provider validation is held",
+      "requiredOutcome": "After-network and final promotion checks reject stale candidate; active credential and existing identity remain intact.",
+      "planningCoverage": "Explicit DOD-06/07 and V-06; actual CAS/barrier proof pending."
+    },
+    {
+      "case": "Same resource selected concurrently or after another BU owned it",
+      "requiredOutcome": "Unique durable owner wins; no cross-BU transfer or foreign details.",
+      "planningCoverage": "Explicit V-05 and existing source ownership transaction."
+    },
+    {
+      "case": "Session/admin permission lost, attempt superseded or lease expires during network",
+      "requiredOutcome": "No late stage or credential promotion; only the held lease can be released.",
+      "planningCoverage": "Existing requireLeaseCurrent and test-barrier pattern; local method must reuse it."
+    },
+    {
+      "case": "Bootstrap disabled after successful promotion",
+      "requiredOutcome": "Normal persisted-credential subscription/verification/send and signed inbound identity behavior continue under their existing gates.",
+      "planningCoverage": "Explicit D-05; named test suggested in ARCH-TEST-03."
+    },
+    {
+      "case": "Phone exists only beyond bounded pagination",
+      "requiredOutcome": "Inconclusive/safe failure rather than unbounded scan or false proof; operator must not be offered another resource.",
+      "planningCoverage": "Existing bounded exact-number method can support qualification; pin its use and budget."
+    },
+    {
+      "case": "Webhook reaches gateway before trust promotion, or no provider webhook reaches gateway",
+      "requiredOutcome": "No unverified content accepted; mapping alone cannot create provider delivery or a receipt.",
+      "planningCoverage": "Explicit proposal transport caveat and DOD-09/V-08."
+    },
+    {
+      "case": "Helper fails to load a current compiled module or needs extra configuration",
+      "requiredOutcome": "Stop qualification safely before any product edit or credential-bearing improvisation.",
+      "planningCoverage": "Requires ARCH-QUAL-01 clarification."
+    }
+  ],
+  "residualUnknowns": [
+    {
+      "id": "U-01",
+      "unknown": "Actual API Setup token class, validity, current app/scopes/granular target eligibility and phone membership.",
+      "status": "Not inspected; cannot infer from handset delivery.",
+      "handling": "Separate approved read-only qualification; hard stop on failed/inconclusive evidence."
+    },
+    {
+      "id": "U-02",
+      "unknown": "Actual app subscription support and live signed inbound/outbound behavior for this resource.",
+      "status": "Not proved by this review or the mapping proposal.",
+      "handling": "Separate explicit post-implementation operational evidence; parent VAL05 remains open."
+    },
+    {
+      "id": "U-03",
+      "unknown": "Availability and freshness of a compiled MetaHttpClient artifact usable without Nest/DB bootstrap.",
+      "status": "No compiled artifact was inspected or executed.",
+      "handling": "Attest the named compiled module against the unchanged source baseline before the qualification helper runs."
+    },
+    {
+      "id": "U-04",
+      "unknown": "Actual migration/backfill, config-fence implementation, request budget, safe errors and UI recovery behavior.",
+      "status": "No implementation exists in the review package.",
+      "handling": "Keep required API/Web/browser, architecture adherence, security, EPS/FRC/BCI and independent TQA/final gates pending."
+    },
+    {
+      "id": "U-05",
+      "unknown": "Whether partial/disabled local config is parsed consistently across capability and candidate operations.",
+      "status": "Intended behavior is explicit; parser not implemented.",
+      "handling": "One coherent private local policy; malformed configuration never advertises or authorizes a target."
+    }
+  ],
+  "requiredNextStep": "Integrate or explicitly adjudicate ARCH-QUAL-01 in the child TODO, refresh the frozen review package if scope-governing text changes, then obtain the separate fresh critique. Optional ARCH-DOC-02 and ARCH-TEST-03 can be integrated without changing the selected architecture. Implementation remains unauthorized.",
+  "artifactOwnership": "This reviewer owns only planning-architecture-v1.raw.json; report is the unaltered full review for root adjudication."
+}
