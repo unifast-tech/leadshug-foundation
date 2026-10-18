@@ -1,0 +1,29 @@
+{
+  "checkpoint": "root-cp87-official-delivery-diagnosis",
+  "recordedAtUtc": "2026-10-18T20:38:29.483225+00:00",
+  "outcome": "standard signed-control accepted200; current WABA subscription and application callback match; real delivery unresolved",
+  "controlWindow": {
+    "lineCount": 6,
+    "metaPost200": 1,
+    "physicalAcceptance": false
+  },
+  "physical05Window": {
+    "completeLineCount": 95,
+    "metaRoute": 0,
+    "inbox": "absent human",
+    "ticks": 2
+  },
+  "currentProviderReads": {
+    "wabaAppPresent": true,
+    "phoneApplicationCallbackMatches": true,
+    "bothHTTP200": true,
+    "bothContextStable": true,
+    "overrides": "unknown when not returned"
+  },
+  "rootReview": "Root read wrapper/providerRead schemas, identities/results and old-helper/new-host-only deltas byte-exact; existing self-tests passed; fresh one-GET/helper GO",
+  "safety": "Existing guarded per-channel credential/key/resource IDs only within API memory; no appsecret, private-file/env/Config.Env access, raw Graph output or provider/DB/runtime/product write",
+  "next": "Operator can submit prepared scoped Meta delivery/elegibility/routing diagnostic request; no further physical resends or product changes justified by current evidence alone",
+  "supportBrief": "cp87-meta-delivery-support-brief.json",
+  "VAL05": "open_unwaived",
+  "localTechnicalAuthorization": "Cancelled CP84; untouched"
+}

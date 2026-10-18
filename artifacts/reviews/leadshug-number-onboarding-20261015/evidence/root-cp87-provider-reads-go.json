@@ -1,0 +1,37 @@
+{
+  "checkpoint": "cp87-current-official-provider-reads",
+  "decision": "GO_readonly",
+  "recordedAtUtc": "2026-10-18T20:34:20.065062+00:00",
+  "authority": "Approved ST-CON-01 operational diagnosis; fresh normal authority/routing GO; user physical05 missing/two ticks and dashboard control200 confirmed",
+  "apiId": "9eccbea4825108cec2b8a6fcd48c43c17845e216415fe95e3972265c6ad34cf1",
+  "apiImage": "sha256:fe5fb7eaf6a68123f9da6b92a0a69483180d213f556b4bedf313f04a383b4821",
+  "helpers": [
+    {
+      "name": "subscription",
+      "helper": "cp87-meta-subscription-readonly.cjs",
+      "sha256": "1e120c83c55e9d9f370255b19e4947c865566e796ef709322b56569483c324bd",
+      "rootInverseByteReview": "pass",
+      "maxInvocations": 1
+    },
+    {
+      "name": "phone-webhook",
+      "helper": "cp87-meta-phone-webhook-readonly.cjs",
+      "sha256": "3027410e41ce2c12961054e6a72c9b8c1ba81653841cec3c3a851c97e99b9bbb",
+      "rootInverseByteReview": "pass",
+      "maxInvocations": 1
+    }
+  ],
+  "preconditions": "Fresh exact API healthy owner/project/service; helperbytes exact; accepted before/after own official channel/attempt/gen/epoch/credential/identity guards",
+  "privateBoundary": "Existing compiled ChannelCredentialResolver within API only; own channel encrypted credential/key/IDs in memory; header Bearer only; no .env/config/env dumps/appsecret/globaltoken; no cancelled test mode",
+  "limits": "ONE normal TLS GET/helper,10s128KiB/no retry/paging/redirect/fallback; bounded subprocess40s32KiB safe stdout only; stop on drift or invalid output",
+  "forbidden": [
+    "provider/DB writes",
+    "new subscription/override/routing changes",
+    "raw Graph errors/body/headers/IDs/URLs/tokens output or storage",
+    "private file/api-app/.local-files access",
+    "product/runtime changes or test message sends"
+  ],
+  "interpretation": "Missing override layers remain unknown; do not infer app review/routing cause solely from response; no physical acceptance",
+  "primaryReference": "https://www.postman.com/meta/whatsapp-business-platform/request/tl2wk2j/get-all-subscriptions-for-a-waba",
+  "VAL05": "open_unwaived"
+}

@@ -1,0 +1,33 @@
+{
+  "checkpoint": "cp87-current-standard-control",
+  "recordedAtUtc": "2026-10-18T20:33:23.298296+00:00",
+  "humanDashboardResult": "success_HTTP200",
+  "humanFieldState": "messages already subscribed",
+  "gatewayControl": {
+    "sinceUtc": "2026-10-18T20:28:41.022Z",
+    "capturedAtUtc": "2026-10-18T20:31:44.029Z",
+    "coverage": {
+      "complete": true,
+      "overflow": false,
+      "timeout": false,
+      "dockerExitCode": 0,
+      "lineCount": 6,
+      "parsedLineCount": 6,
+      "unparsedLineCount": 0,
+      "tailLimitReachedOrExceeded": false,
+      "strictUtf8": true
+    },
+    "metaPost200Count": 1
+  },
+  "comparisonPhysical05": "CP86 full95line window had no meta route; missing inbox and two ticks human-confirmed",
+  "meaning": "Current callback signed-test delivery path accepted200; controlled temporal aggregate correlation only, no payload/identity attribution",
+  "notProved": [
+    "real message eligibility/routing",
+    "IN/OUT acceptance",
+    "continuous tunnel availability",
+    "all overrides absent",
+    "Standard/Advanced access established cause"
+  ],
+  "next": "Bounded current own-channel WABA subscription and effective phone callback readonly checks; no mutations",
+  "VAL05": "open_unwaived"
+}

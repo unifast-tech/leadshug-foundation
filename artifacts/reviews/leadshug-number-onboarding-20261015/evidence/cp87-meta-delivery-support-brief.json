@@ -1,0 +1,63 @@
+{
+  "title": "LeadsHug: standard messages test reaches webhook200 but real official message has no observed gateway request",
+  "preparedAtUtc": "2026-10-18T20:38:29.476750+00:00",
+  "submission": "prepared_only; operator may submit through Meta support; agent has not sent external message",
+  "context": {
+    "platform": "existing published LeadsHug app; own official test number linked through Embedded Signup; local environment via HTTPS",
+    "callback": "https://printing-adaptive-snapshot-partition.trycloudflare.com/webhooks/meta",
+    "field": "messages already subscribed, human checked exact field row",
+    "lastReportedAccessLevel": "Standard; business verification complete, human-reported; no claim that this determines eligibility for current own-assets context",
+    "priorRouting": "operator previously reported changing entry-point routing from obsolete Whatsflow to app-managing portfolio; existing conversation ownership not independently established"
+  },
+  "realMessageWindow": {
+    "fromLocal": "2026-10-18T17:11:05.634000-03:00",
+    "untilLocal": "2026-10-18T17:23:57.098000-03:00",
+    "timezone": "America/Sao_Paulo",
+    "sender": "two ticks human-confirmed; inbox absent; OUT not attempted",
+    "gateway": "complete95/100 redacted lines; zero meta route",
+    "database": "verified own identity, stored subscription stage, pending receipt; no official IN/OUT persisted since historical baseline"
+  },
+  "standardControlWindow": {
+    "fromLocal": "2026-10-18T17:28:41.022000-03:00",
+    "untilLocal": "2026-10-18T17:31:44.029000-03:00",
+    "timezone": "America/Sao_Paulo",
+    "humanPanel": "success/HTTP200",
+    "gateway": "complete6/6 lines; one metaPOST200; separate window with no physical test"
+  },
+  "currentReadOnlyGraphChecks": {
+    "wabaApps": {
+      "httpStatus": 200,
+      "currentAppPresent": true,
+      "contextStable": true,
+      "overrideCallback": "unknown; not returned unambiguously"
+    },
+    "phoneWebhook": {
+      "httpStatus": 200,
+      "applicationCallbackMatchesCurrent": true,
+      "wabaAndPhoneOverrideLayers": "not_returned_unknown",
+      "contextStable": true
+    }
+  },
+  "requestToMeta": [
+    "Determine whether the real incoming event was generated for this WABA/phone and which app/responder owns the existing conversation",
+    "Provide delivery attempts/destination/HTTP or DNS/TLS/connection failure for the real-message window",
+    "Confirm current Standard-versus-Advanced access eligibility for this exact app and own/shared business asset context; identify any missing App Review approval",
+    "Confirm effective entry-point routing versus existing thread ownership and any callback override or suppression affecting this app"
+  ],
+  "operatorFields": "Select existing app and official WABA/phone in private Meta support form; do not paste tokens, App Secret, payloads, contacts or personal conversations into this packet",
+  "limits": [
+    "Temporal aggregate route correlation only, not payload/request attribution",
+    "HTTPS200 is point availability, not continuous window availability",
+    "Missing override fields do not prove overrides absent",
+    "No established cause assigned to Meta, Whatsflow, access level or application code",
+    "Standard event is not physical IN/OUT acceptance"
+  ],
+  "primaryReferenceForRead": "https://www.postman.com/meta/whatsapp-business-platform/request/tl2wk2j/get-all-subscriptions-for-a-waba",
+  "localChanges": "No product/DB/provider/config/runtime changes; cancelled local TestNumber mode remains cancelled",
+  "references": [
+    "root-cp86-official-inout05-readback.json",
+    "root-cp87-standard-control-result.json",
+    "cp87-current-waba-subscription-readback.json",
+    "cp87-current-phone-webhook-readback.json"
+  ]
+}
