@@ -1,0 +1,24 @@
+{
+  "checkpoint": "cp88-isolate-official-account",
+  "recordedAtUtc": "2026-10-18T20:46:55.275385+00:00",
+  "userSteering": "Prioritize the specific official account/number as origin of missing real events rather than treating successful panel delivery as full-channel proof",
+  "confirmed": [
+    "standard control reached signed callback200 in complete6line window",
+    "real05 had no meta route in complete95line window and no local IN; two ticks human",
+    "current app listed on WABA; phone application callback matches current host"
+  ],
+  "hypothesis": "Specific WABA/number provisioning, eligibility, ownership or routing may explain missing real-event delivery; not proven account defect",
+  "currentPriority": "Check current number status in WhatsApp Manager and isolate resources with another official test number/WABA in same app if operator has one",
+  "humanQuestionsPending": [
+    "Actual Meta number status: Connected versus Pending/unregistered/restricted",
+    "Availability of another safe official test number and whether separate WABA; optional comparative resource"
+  ],
+  "comparisonLogic": "Same app/callback with distinct test resource helps separate account-specific configuration from shared app/environment behavior; no outcome assumed",
+  "authority": "Existing normal Embedded Signup and number registration contract; no new authorization method or approval request",
+  "safety": "No provider/runtime/DB/product/private-env mutation; no new physical message or registration initiated; do not migrate, deregister or disconnect current number on hypothesis",
+  "technicalMode": "Cancelled CP84; remains cancelled",
+  "priorSupportBrief": "Available historical diagnostic packet, not a prerequisite that prevents further local isolation",
+  "primaryRegistrationReference": "https://www.postman.com/meta/whatsapp-business-platform/documentation/wlk6lh4/whatsapp-cloud-api?entity=request-13382743-950a75b1-6ad7-4950-8b00-c64153c6176f",
+  "resourceStateNotYetEstablished": "No live GET for speculative status/platform fields; operator Manager state pending",
+  "VAL05": "open_unwaived"
+}
