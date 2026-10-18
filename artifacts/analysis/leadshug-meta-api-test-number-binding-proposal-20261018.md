@@ -1,6 +1,6 @@
 # Vínculo local do Test Number da Configuração da API
 
-Estado: **direção aceita pelo usuário em CP81; contrato complementar em preparação de revisão; implementação não autorizada**. Owner: integrações/canais. Complemento candidato do [ST-CON-01](../../todos/active/features/TODO-leadshug-channel-connection-readiness.md); não é outro contrato de execução nem substitui o TODO. Perfil: Operational/DevOps, análise sem mudanças de produto; eventual implementação exige handoff para Operational/Coder e revisão de segurança.
+Estado: **direção aceita pelo usuário em CP81; contrato complementar revisado, finalizando pré-aprovação; implementação não autorizada**. Owner: integrações/canais. Complemento candidato do [ST-CON-01](../../todos/active/features/TODO-leadshug-channel-connection-readiness.md); não é outro contrato de execução nem substitui o TODO. Perfil: Operational/DevOps, análise sem mudanças de produto; eventual implementação exige handoff para Operational/Coder e revisão de segurança.
 
 ## Problema confirmado
 
@@ -66,3 +66,5 @@ Usuário confirmou “Sim, incluir o modo técnico local”. Próximo passo: ref
 Sem nova leitura de credenciais, Graph, banco, logs ou runtime; sem novo envio físico solicitado. Parent Pending; VAL05 aberto e sem waiver. O problema histórico de ausência de POST real permanece em diagnóstico separado.
 
 CP81 arquitetura v1: direção estrutural aceita, parecer revise por uma lacuna material no contrato da qualificação. O TODO complementar agora explicita os quatro campos base Meta, token e alvo em memória, stdin privado, módulo compilado com freshness, método verificarNumeroVinculado (até3GET/10s cada, sem retry) e resultado booleano fixo. Nenhum token/URL/provider response é exportado. Sucesso prova app/is_valid/scopes/alvos/telefone no instante observado; classe e expiração explícita continuam desconhecidas. Numeração de decisões e teste pós-promoção/desativação alinhados. Nova baseline/critique pendentes; sem implementação autorizada.
+
+Estado posterior CP81: crítica independente v1 approve com zero bloqueadores materiais confirmou a correção da arquitetura. LowCRIT-MIG-01 nomeia replay após migração em critérios já previstos. Guardas finais e publicação do pacote de aprovação em fechamento; nenhum grant real qualificado, nenhum código alterado e nenhum teste WhatsApp novo realizado.

@@ -1,0 +1,71 @@
+{
+  "recordedAtUtc": "2026-10-18T05:10:07.962734+00:00",
+  "gate": "Module Decision Consistency planning comparison",
+  "outcome": "coherent proposed extension, pending human implementation approval and later canonical consolidation",
+  "moduleFiles": [
+    {
+      "path": "modules/integrations-and-channels.md",
+      "sha256": "8f10f3134f99fc29c76d6f7ba30aae2d1737eebb0813b4de34c5a41bc62a1ca0"
+    },
+    {
+      "path": "modules/identity-and-tenancy.md",
+      "sha256": "678b090e7ef540a1388048e8cd03a41eadf01b1100420d73c45beb4ea11aad4d"
+    },
+    {
+      "path": "modules/audit-and-history.md",
+      "sha256": "d384073967efa5fee12dcebbb70961b3a85e60bbcb6c3528705f656f1971db07"
+    },
+    {
+      "path": "modules/inbox-and-conversations.md",
+      "sha256": "383112b6b596c05b37ff3d945b1ee8b06bd8c5bcfd002a10456692f1b3bc708e"
+    },
+    {
+      "path": "project_constitution.md",
+      "sha256": "abfafa5576d051da58583e2be57499320c8ad155c4ae741f259c730bcca98390"
+    },
+    {
+      "path": "policies/scope_subscope_governance.md",
+      "sha256": "aa18357e37417617b63ec5e58aba87c0f8c1e7518d6834d5cadfeda0a561dd84"
+    }
+  ],
+  "decisions": [
+    {
+      "id": "D-01",
+      "handling": "Preserve",
+      "module": "integrations-and-channels#BFF e autoriza\u00e7\u00e3o",
+      "comparison": "Current same-app/scopes/WABA/number validation retained; helper proof narrowed to what adapter observes."
+    },
+    {
+      "id": "D-02",
+      "handling": "Supersede (Intentional)",
+      "module": "integrations-and-channels#BFF e autoriza\u00e7\u00e3o",
+      "comparison": "Add explicit default-off backend bootstrap entry for one local target; preserve secret-only backend and per-channel active store."
+    },
+    {
+      "id": "D-03",
+      "handling": "Supersede (Intentional)",
+      "module": "integrations-and-channels#Persist\u00eancia e recupera\u00e7\u00e3o",
+      "comparison": "Add official-only nullable source provenance; existing source remains ES and nonofficial remains null, same ownership/state lifecycle."
+    },
+    {
+      "id": "D-04",
+      "handling": "Preserve",
+      "module": "integrations-and-channels#BFF e autoriza\u00e7\u00e3o",
+      "comparison": "JA_REGISTRADO skips register; same confirmation and mapped current-app subscription; no callback takeover."
+    },
+    {
+      "id": "D-05",
+      "handling": "Preserve",
+      "module": "integrations-and-channels#Reautoriza\u00e7\u00e3o e ativa\u00e7\u00e3o da credencial (NUM-ARCH-06); identity-and-tenancy; audit-and-history",
+      "comparison": "Keep ADMIN/session/tenant/leases/current identity/phone/candidate/active-version/AAD and secret-free audit; bootstrap does not own active consumers."
+    },
+    {
+      "id": "D-06",
+      "handling": "Out of Scope",
+      "module": "project_constitution; inbox-and-conversations",
+      "comparison": "No production/promotion/new message lifecycle/history; preserve independent receipt/INOUT evidence and parent VAL05."
+    }
+  ],
+  "remainingConsolidation": "After approval and before affected product edits, root consolidates local authorization subsection and route/secret contracts; current modules are not silently changed by this planning artifact",
+  "executionAuthority": false
+}

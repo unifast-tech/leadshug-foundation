@@ -41,7 +41,7 @@ Proposta ST-CON-01: jornada de cadastro de número, com infraestrutura local est
 
 - **Current delivery stage:** Pending
 - **Qualifiers:** none
-- **Next exact step:** cp81: direção do modo técnico local aceita pelo usuário; refinar e revisar o complemento [vínculo do Test Number da API](TODO-leadshug-meta-api-test-number-binding.md), ainda sem aprovação de implementação. Inventário cp80 confirma ausência de entrada não OAuth existente. Test Number da API recebeu no WhatsApp; troca Sandbox foi SMS, não teste WhatsApp. Sem novo envio/registro/SQL; VAL05 aberto. Nenhum vínculo garante entrega do webhook.
+- **Next exact step:** cp81: arquitetura/crítica do [modo técnico local](TODO-leadshug-meta-api-test-number-binding.md) convergiram no plano. Publicar o pacote final e executar os guardas de pré-aprovação antes de solicitar APROVADO de implementação. Direção aceita não autoriza credenciais/código/runtime. Test Number da API chegou no WhatsApp; Sandbox foi SMS. Qualificação real obrigatória antes de produto, vínculo não garante webhook; VAL05 aberto.
 
 ## Active Work State (Required While TODO Remains In `active/`)
 
@@ -1890,3 +1890,5 @@ Usuário confirmou “Sim, incluir o modo técnico local” após proposta concr
 Inventário de código [cp80](../../../artifacts/reviews/leadshug-number-onboarding-20261015/evidence/cp80-source-binding-inventory.json): JA_REGISTRADO depende de candidata OAuth e só dispensa register; cadastro direto antigo desativado; webhook requer mapping prévio. Usuário confirmou recebimento da mensagem da Configuração da API dentro do WhatsApp. O recurso Sandbox vinculado é distinto e não estava disponível no WhatsApp do remetente; SMS não conta como prova. Não houve readback pós-SMS.
 
 [Proposta](../../../artifacts/analysis/leadshug-meta-api-test-number-binding-proposal-20261018.md) mantém configuração secreta só no backend, validação app/grant/WABA/telefone, owner/BU, cifra por canal, fences e receipt. Grant concreto ainda desconhecido: ausência de alvos granulares bloqueia, sem enfraquecer Embedded Signup. Ausência histórica de POST no gateway permanece outro diagnóstico; mapping novo não prova nem corrige transporte. Nenhuma fonte/runtime/credencial/DB/provider alterados. VAL05 aberto/sem waiver; entrega geral Pending.
+
+cp81 planejamento revisado: arquitetura v1 endossou convergência e exigiu contrato executável da qualificação; corrigido allowlist/método/budget/prova atual. Crítica independente fresca approve/zero bloqueadores materiais confirmou todas três resoluções; lowCRIT-MIG-01 apenas nomeia replay de cadastro pré-migração na cobertura existente. Final freeze/guardas ainda pendentes antes de pedir APROVADO. Nenhum código/credencial/runtime/provider/DB ou envio alterado; validação real e VAL05 continuam abertas. Pacote: artifacts/reviews/leadshug-meta-test-binding-20261018.

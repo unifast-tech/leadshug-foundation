@@ -1,0 +1,51 @@
+{
+  "checkpoint": "cp81-qualification-contract-review-freeze",
+  "recordedAtUtc": "2026-10-18T05:01:20.028250+00:00",
+  "repo": "foundation_documentation",
+  "branch": "main",
+  "commit": "92429fed96d55f2c8ad1269c095321c1fe44edb0",
+  "pushReference": "origin/main",
+  "pushExitCode": 0,
+  "ownedFilesByteExact": 9,
+  "files": [
+    {
+      "path": "artifacts/analysis/leadshug-meta-api-test-number-binding-proposal-20261018.md",
+      "sha256": "10cdb54393bc6780a76a4beb30884c140bdb81fc69ca674eb6fc5d03975c8703"
+    },
+    {
+      "path": "artifacts/reviews/leadshug-meta-test-binding-20261018/README.md",
+      "sha256": "8ff4fbac143531dc4b5e7f1a511ada643c1f08e77de801e6aea95fe5caff0068"
+    },
+    {
+      "path": "artifacts/reviews/leadshug-meta-test-binding-20261018/audit-floor-v1.json",
+      "sha256": "f475ae34bc20de76c09fad8a1f5b9d18a3ea1ea3a9c8decd963c076252d2523e"
+    },
+    {
+      "path": "artifacts/reviews/leadshug-meta-test-binding-20261018/baseline-freeze-e83d5bdc.json",
+      "sha256": "de0886750ab86dae43471ff2bdff849d2d1358d7037e1796510839ee5caf01d2"
+    },
+    {
+      "path": "artifacts/reviews/leadshug-meta-test-binding-20261018/planning-architecture-v1.raw.json",
+      "sha256": "9fa28a273d3fa0be1978954a4e313e71d397ba1fed938e216f58db7052260a5f"
+    },
+    {
+      "path": "artifacts/reviews/leadshug-meta-test-binding-20261018/root-architecture-v1-resolution.json",
+      "sha256": "c848f2a0475fd3ae0a68227ad65b6e7822aa626b77e9bf5a055170a56f209bcc"
+    },
+    {
+      "path": "artifacts/reviews/leadshug-meta-test-binding-20261018/routing-architecture-v1.json",
+      "sha256": "70fe412c3dc70123475e953cdb2da02bd64f9c1953bb103bdec4cd26bcd43773"
+    },
+    {
+      "path": "artifacts/reviews/leadshug-meta-test-binding-20261018/routing-planned-implementation.json",
+      "sha256": "9b01c282075dd3432b9f1bb886150c4de1c5525b4aec5571ad8a3695dd6fbca0"
+    },
+    {
+      "path": "todos/active/features/TODO-leadshug-meta-api-test-number-binding.md",
+      "sha256": "881da63014a212c9d98b7d107b8855923fb7ab421689c606a07e2f3ec4cc5fd6"
+    }
+  ],
+  "scope": "ARCH-QUAL-01 helper input/proof correction, aligned D01..06, named after-promotion disable case; current architecture retained. Raw report unchanged.",
+  "implementationAuthority": false,
+  "parent": "Pending; VAL05 open_unwaived"
+}

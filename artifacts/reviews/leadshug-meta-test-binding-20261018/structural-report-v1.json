@@ -1,0 +1,7 @@
+{
+  "schema_version": "todo-validation-report-v1",
+  "artifact_kind": "todo_validation_report",
+  "todo_path": "foundation_documentation/todos/active/features/TODO-leadshug-meta-api-test-number-binding.md",
+  "result": "PASS",
+  "issues": []
+}

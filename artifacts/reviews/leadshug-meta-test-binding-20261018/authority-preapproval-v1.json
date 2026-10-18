@@ -1,0 +1,30 @@
+{
+  "blocked": true,
+  "context": {
+    "architecture_governance_required": true,
+    "architecture_governance_section_present": true,
+    "architecture_review_gates_required": true,
+    "architecture_supersede_trigger": true,
+    "current_delivery_stage": "Pending",
+    "delivery_claim": false,
+    "delivery_gate_rows": {},
+    "execution_authority_granted": false,
+    "promotion_routing_rows": 0,
+    "require_delivery_gates": false,
+    "routing_preflight_outcome": "go",
+    "routing_preflight_required": false,
+    "routing_preflight_section_present": true,
+    "rules_ingestion_rows": 9,
+    "todo_path": "foundation_documentation/todos/active/features/TODO-leadshug-meta-api-test-number-binding.md",
+    "validation_mode": "pre-approval"
+  },
+  "pre_approval": true,
+  "violations": [
+    {
+      "code": "ARCHITECTURE-HARNESS-TIMING-INVALID",
+      "message": "Architecture Protection Harness row uses invalid adoption timing `already-enforced / verify before execution`: static review/guard | repository diff | scope, secret, architecture, audit escalation guards | unscoped files, `.local-files`, global fallback, unrelated runtime edits | already-enforced / verify before execution | freeze package records actual guard outputs",
+      "resolution": "Use one of: already-enforced, implement-in-this-todo, follow-up-approved, manual-only-with-rationale.",
+      "section": "Architecture Protection Harness"
+    }
+  ]
+}

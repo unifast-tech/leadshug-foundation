@@ -1,0 +1,25 @@
+{
+  "kind": "post-review documentation format delta; no new product requirement",
+  "reviewedContract": "92429fed96d55f2c8ad1269c095321c1fe44edb0",
+  "independentCritique": "planning-critique-v1.raw.json",
+  "changes": [
+    {
+      "section": "Architecture Protection Harness",
+      "before": "already-enforced / verify before execution",
+      "after": "already-enforced",
+      "meaning": "Canonical adoption enum only; existing guard remains enforced and must run before execution; no timing or scope change."
+    },
+    {
+      "section": "Assumptions Preview A-02",
+      "before": "literal pipe between two enum options inside Markdown table",
+      "after": "EMBEDDED_SIGNUP or LOCAL_TEST",
+      "meaning": "Same two nullable official-method enum choices; fixes parser columns so all four live assumptions can be checked."
+    }
+  ],
+  "failedEvidencePreserved": [
+    "authority-preapproval-v1.json: preflight-no-go invalid harness timing enum",
+    "code-coherence-v1.json: go but only three live rows because A-02 table pipe was split; not final four-row evidence"
+  ],
+  "rootDisposition": "Integrate format corrections, publish exact final freeze and rerun affected guards. No new reviewer round: no behavior/architecture/validation-risk change, no unresolved blocking finding. This is not a waiver.",
+  "implementationAuthority": false
+}

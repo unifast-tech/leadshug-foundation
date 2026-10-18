@@ -287,7 +287,7 @@ D-01..D-06 above form the single decision set, proposed for renewed published fr
 | test | provider boundary | focused `meta.client` specs | Local method accepts wrong app, scope, WABA or phone | implement-in-this-todo | DOD-03 evidence |
 | migration test | Prisma schema | migration deploy/status plus old-attempt backfill assertion | Existing attempts acquire wrong/missing method provenance | implement-in-this-todo | DOD-04 evidence |
 | browser navigation | registration wizard | project-owned Web runner and new focused spec | Secret exposure, hidden/visible capability errors, OAuth regression | implement-in-this-todo | DOD-09 evidence |
-| static review/guard | repository diff | scope, secret, architecture, audit escalation guards | unscoped files, `.local-files`, global fallback, unrelated runtime edits | already-enforced / verify before execution | freeze package records actual guard outputs |
+| static review/guard | repository diff | scope, secret, architecture, audit escalation guards | unscoped files, `.local-files`, global fallback, unrelated runtime edits | already-enforced | freeze package records actual guard outputs |
 
 ## Architecture Review Gates
 - **Architecture decision review:** `required`
@@ -306,14 +306,14 @@ D-01..D-06 above form the single decision set, proposed for renewed published fr
 
 ## Gate: Review Baseline Freeze
 - **Gate decision:** required
-- **Why this decision:** refresh after integrating the material qualification-contract finding.
-- **Trigger stage:** before the next planning-side review or guard
+- **Why this decision:** finalize reviewed packet with two schema/Markdown spelling corrections, no behavior change.
+- **Trigger stage:** before final post-review guards and approval request
 - **Baseline branch:** main
-- **Baseline commit:** pending refreshed freeze
+- **Baseline commit:** pending final documentation freeze
 - **Baseline push reference:** origin/main
 - **Gate status:** not_run
-- **Findings summary:** e83d5bdc remains the valid baseline of architecture v1. ARCH-QUAL-01 corrections are prepared-pre-freeze until the updated package is pushed.
-- **Evidence / reference:** artifacts/reviews/leadshug-meta-test-binding-20261018/planning-architecture-v1.raw.json and baseline-freeze-e83d5bdc.json
+- **Findings summary:** independent critique approved 92429fed with zero material blockers. Enum timing uses the canonical already-enforced value; A-02 uses 'or' instead of a literal table pipe. These are formatting/schema repairs, not new scope or a changed review package risk. Final freeze pending.
+- **Evidence / reference:** artifacts/reviews/leadshug-meta-test-binding-20261018/root-review-format-delta-adjudication.json
 - **Waiver authority / reference:** n/a
 
 ## Gate: Review Scope Drift
@@ -346,7 +346,7 @@ No PACED pattern ID is asserted in this draft. The module decisions above are pr
 | Assumption ID | Assumption | Evidence | If False | Confidence | Handling |
 | --- | --- | --- | --- | --- | --- |
 | A-01 | The configured Meta API Setup token may satisfy current same-app, provider-reported validity, scope and granular target checks for this API Setup resource. | No credential was inspected; `MetaHttpClient.assertCurrentGrant`, `recursos` and `confirmarNumero` define the checks but do not prove this token (`api-app/src/integrations/meta/meta.client.ts:80-107,155-173`). | Run only the separately approved bounded pre-code grant qualification specified below; success proves the checks actually performed, not token type/explicit lifetime. If any check fails, stop before product edits and return to design. | Low | Keep as Assumption |
-| A-02 | Nullable `officialAuthorizationMethod` can be persisted only for `OFICIAL` attempts with `EMBEDDED_SIGNUP|LOCAL_TEST`; existing official attempts backfill to `EMBEDDED_SIGNUP`, while `NAO_OFICIAL` remains null. | `ChannelRegistrationAttempt` is shared by official and nonofficial flows and stores state/stage/version/candidate envelope (`api-app/prisma/schema.prisma:191-225`). | Migration and PostgreSQL regression must prove the official backfill, nonofficial-null invariant, and immutable method binding before nonce reservation. | Medium | Keep as Assumption |
+| A-02 | Nullable `officialAuthorizationMethod` can be persisted only for `OFICIAL` attempts with EMBEDDED_SIGNUP or LOCAL_TEST; existing official attempts backfill to `EMBEDDED_SIGNUP`, while `NAO_OFICIAL` remains null. | `ChannelRegistrationAttempt` is shared by official and nonofficial flows and stores state/stage/version/candidate envelope (`api-app/prisma/schema.prisma:191-225`). | Migration and PostgreSQL regression must prove the official backfill, nonofficial-null invariant, and immutable method binding before nonce reservation. | Medium | Keep as Assumption |
 | A-03 | A local explicit opt-in can be passed to the API process separately from `NODE_ENV`. | `docker-compose.channels.yml` and `api-app/src/infra/config/modulos.ts` provide process configuration seams; no private configuration was inspected. | If deployment cannot enforce this as local-only, do not implement or enable the mode. | Medium | Keep as Assumption |
 | A-04 | Existing resource confirmation can be reused without a credential fallback. | `NumberRegistrationService.confirm` and `MetaHttpClient.confirmarNumero` validate selected WABA/phone (`api-app/src/domain/channels/number-registration.service.ts:228-241`; `api-app/src/integrations/meta/meta.client.ts:145-174`). | Add a narrow adapter only if necessary; keep current behavior for OAuth. | High | Keep as Assumption |
 
@@ -419,16 +419,16 @@ Applies only after later explicit implementation approval, helper review/offline
 - Privacy/operation checks: helper source frozen and inspected with fake inputs before real use; fixed schema validated on success and failure. No raw errors, HTTP URLs/headers/bodies, arbitrary stdout/stderr, provider-ID logs, other-WABA scans, DB access or mutation. The existing provider-bound debug request internally carries input_token as required by the adapter; its URL is neither printed nor retained. Root records one safe receipt and stops before any product edit unless qualified. No weakening of any common validator or token fallback is authorized.
 
 ## Plan Review Gate
-Review required before approval because this is a medium-sized authorization and persistence change with high impact.
+Full planning review completed through independent architecture v1 and fresh critique v1 on the corrected pushed baseline. Critique verdict approve, zero material blockers; all seven lenses explicitly assessed. Product, tests, grant and delivery remain unproved.
 
 ### Review Sections
-- [ ] Architecture
-- [ ] Code Quality
-- [ ] Tests
-- [ ] Performance
-- [ ] Security
-- [ ] Elegance
-- [ ] Structural Soundness
+- [x] Architecture
+- [x] Code Quality
+- [x] Tests
+- [x] Performance
+- [x] Security
+- [x] Elegance
+- [x] Structural Soundness
 
 ### Issue Cards
 - **Issue ID:** `PLAN-01`
@@ -509,15 +509,15 @@ Review required before approval because this is a medium-sized authorization and
 - **Canonical multi-lane audit protocol:** `audit-protocol-triple-review`
 - **Audit session / round evidence:** pending freeze and dispatch.
 - **Critique lenses:** `correctness|performance|elegance|structural-soundness|risk`
-- **Critique status:** `not_run`
-- **Findings summary:** no critique has run.
+- **Critique status:** `findings_integrated`
+- **Findings summary:** fresh critique approve; zero material blockers; ARCH-QUAL-01, ARCH-DOC-02 and ARCH-TEST-03 confirmed resolved. CRIT-MIG-01 optional test timing clarification integrated under V-01/V-03.
 - **Resolution ledger:** no findings yet.
-- **Evidence / reference:** pending review baseline freeze.
+- **Evidence / reference:** artifacts/reviews/leadshug-meta-test-binding-20261018/planning-critique-v1.raw.json; root-critique-v1-resolution.json; raw SHA b39207f874cb7b3d58522756c5f5fd572af3bd1deb2d5c5bf89191379eb4543e.
 - **Waiver authority / reference:** `n/a`
 
 | Finding ID | Resolution | Usefulness | Formalizable | Candidate Rule Level | Candidate Rule ID | Rationale / Evidence |
 | --- | --- | --- | --- | --- | --- | --- |
-| none | n/a | n/a | n/a | none | n/a | no findings exist |
+| CRIT-MIG-01 | Integrated | useful | partial | project | none | Name existing V-01/V-03 historical same-method replay case after provenance migration; no new behavior/framework. |
 
 ## Gate: Assumption Code Coherence
 - **Gate decision:** `required`
@@ -525,9 +525,9 @@ Review required before approval because this is a medium-sized authorization and
 - **Trigger stage:** after critique convergence and before implementation approval.
 - **Guard scope:** `A-01,A-02,A-03,A-04`
 - **Guard command:** `python3 delphi-ai/tools/assumption_code_coherence_guard.py --todo foundation_documentation/todos/active/features/TODO-leadshug-meta-api-test-number-binding.md`
-- **Gate status:** `not_run`
-- **Findings summary:** no source-coherence review has run.
-- **Evidence / reference:** pending frozen review package.
+- **Gate status:** `no_material_findings`
+- **Findings summary:** A-01..04 statically checked against current named source and both independent reviews; actual token remains unknown and mandatory pre-code qualification is unwaived.
+- **Evidence / reference:** artifacts/reviews/leadshug-meta-test-binding-20261018/root-assumption-coherence-v1.json; deterministic code-coherence-v1.json will record anchor guard result.
 - **Waiver authority / reference:** `n/a`
 
 ## Approval
@@ -584,6 +584,9 @@ This is the planned executable tuple, not execution authority. Structural routin
 - **When required:** before delivery, one-to-one against the module baseline snapshot.
 - **Exception handling:** any conflict returns to decision review; parent ST-CON-01 is not silently superseded.
 
+
+Planning one-to-one comparison D-01..06 completed in artifacts/reviews/leadshug-meta-test-binding-20261018/module-consistency-planning-v1.json. Explicitly extend only authorization entry/provenance after later approval; shared contracts preserved. Delivery comparison and module consolidation remain not_run.
+
 ## Pipeline/Copilot P1/P2 Preflight
 - **Status:** `not_run`
 - **Required before delivery:** inspect actual pipeline and review findings for this bounded diff; do not claim P1/P2 clearance in planning.
@@ -595,9 +598,8 @@ This is the planned executable tuple, not execution authority. Structural routin
 - **Evidence:** pending implementation.
 
 ## Promotion Finding Routing Ledger
-| Finding ID | Finding Source | Severity | Classification | Required Action | Status | Rationale / Follow-up Reference |
-| --- | --- | --- | --- | --- | --- | --- |
-| none | no delivery review run | n/a | by-design/no-action | no action | accepted | planning-only; no findings exist |
+
+No promotion or delivery findings exist; delivery review is not_run. Planning findings are recorded in the dedicated resolution ledger.
 
 ## TODO Closeout Disposition
 - **Disposition:** `keep-active`
@@ -754,3 +756,5 @@ A separate explicit implementation approval and root-issued execution routing ar
 | ARCH-QUAL-01 | Integrated | useful | partial | project | none | Complete helper input/delivery/freshness/method/budget/result contract; validity is Meta is_valid through current adapter, token class/explicit lifetime unknown. Reuses current validator; failed qualification stops. Fresh critique still required. |
 | ARCH-DOC-02 | Integrated | useful | no | none | none | One D-01..06 set, all decisions included in later adherence. |
 | ARCH-TEST-03 | Integrated | useful | partial | project | none | V-06 and evidence matrix name post-promotion disable with unchanged active envelope/identity and normal stored-credential operations. |
+
+CRIT-MIG-01 Integrated (optional): within existing V-01/V-03, use a pre-change official attempt/requestHash, apply provenance migration, and replay equivalent Embedded Signup input. Assert same attempt and expected same-session nonce semantics; a LOCAL_TEST method change on that key must still fail. NAO_OFICIAL remains null. This is a concrete migration/idempotency regression oracle, not authorization for a compatibility framework or unrelated hash rewrite. Fresh critique considered it non-blocking under the existing frozen behavior.

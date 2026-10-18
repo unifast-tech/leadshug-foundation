@@ -1,0 +1,39 @@
+{
+  "recordedAtUtc": "2026-10-18T05:10:07.962734+00:00",
+  "kind": "root static assumption/code coherence after fresh review convergence",
+  "baseline": "92429fed96d55f2c8ad1269c095321c1fe44edb0",
+  "outcome": "no_material_findings",
+  "assumptions": [
+    {
+      "id": "A-01",
+      "source": "api-app/src/integrations/meta/meta.client.ts:80-107,145-173,225-239",
+      "assessment": "Existing guard proves app/is_valid/scopes/intersecting targets and exact-phone membership. Actual token unknown, required bounded qualification before product edits. No class/lifetime assertion."
+    },
+    {
+      "id": "A-02",
+      "source": "api-app/prisma/schema.prisma:191-225",
+      "assessment": "Current shared attempt model supports proposed nullable official-only source through additive migration; field does not yet exist. Migration/NAO regression and request replay are required, not proved."
+    },
+    {
+      "id": "A-03",
+      "source": "docker-compose.channels.yml; api-app/src/infra/config/modulos.ts",
+      "assessment": "Current process configuration seams can carry explicit opt-in independent of NODE_ENV. No private/runtime value inspected; deployment qualification remains required."
+    },
+    {
+      "id": "A-04",
+      "source": "api-app/src/domain/channels/number-registration.service.ts:228-365; api-app/src/integrations/meta/meta.client.ts:145-173",
+      "assessment": "Current exact-target confirmation, owner/phone locks, encrypted promotion and consumer boundaries are reusable. Local entry must preserve fences; no current local path claimed."
+    }
+  ],
+  "independentSupport": [
+    "planning-architecture-v1.raw.json",
+    "planning-critique-v1.raw.json"
+  ],
+  "notProved": [
+    "actual grant eligibility",
+    "compiled helper freshness",
+    "implementation correctness",
+    "real provider delivery"
+  ],
+  "executionAuthority": false
+}
