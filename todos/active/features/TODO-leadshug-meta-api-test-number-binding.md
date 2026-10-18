@@ -27,14 +27,14 @@ The user explicitly replied APROVADO on 2026-10-18 to the published staged plan 
 
 ## Implementation Intent
 - **Current delivery:** one default-off local authorization method binding a pre-provisioned Meta API Setup Test Number through the existing channel workflow; approved staged contract; qualification returned rejected_or_inconclusive; no product implementation started.
-- **Planned next steps:** return to design after the one bounded qualification failed to establish eligibility. No product code GO or retry issued; any new authorization approach needs scoped review before execution.
+- **Planned next steps:** CP83 reeval confirmed an expired/invalid USER credential and a stale public callback. Obtain refreshed local credential, establish eligibility under a fresh bounded decision, and recover dependable HTTPS before physical tests. Preserve product gate and review any material authorization change; current evidence alone does not require a new architecture.
 - **Anticipatory implementation authorized now:** none.
 - **Rationale:** isolate the new trust entry point while reusing the existing confirmation, identity, credential promotion, subscription, webhook, and send paths.
 
 ## Delivery Status Canon (Required)
 - **Current delivery stage:** `Pending`
 - **Qualifiers:** `Blocked`
-- **Next exact step:** return to the authorization design with qualification-live-result-cp82.json: the current credential/resource was not qualified. Preserve validators, no product edits or retry. Define a compatible authorization path before a new execution decision.
+- **Next exact step:** CP83 identified current USER-token expiry/is_valid=false before phone lookup, plus the saved callback hostname no longer resolves. Await operator refresh of only META_LOCAL_TEST_ACCESS_TOKEN, then admit a fresh one-time read-only check under its own GO; restore dependable HTTPS under a separate operational activation. Preserve validators and the blocked product gate; do not infer design incompatibility from the expired credential.
 
 ## Active Work State (Required While TODO Remains In `active/`)
 - **Work state:** `blocked`
@@ -66,9 +66,9 @@ The user explicitly replied APROVADO on 2026-10-18 to the published staged plan 
 ## Blocker Notes
 - **Blocker:** the one real qualification returned rejected_or_inconclusive; required app/grant/target acceptance and usable canonical phone were not established.
 - **Why blocked now:** the approved staged contract forbids product edits after rejected/inconclusive qualification. No code GO was issued.
-- **What unblocks it:** return to design and establish an eligible authorization path without weakening shared validators; review any material change before a new execution decision.
+- **What unblocks it:** refresh the expired local test credential and establish current app/grant/target eligibility under a fresh bounded execution decision without weakening shared validators. Reevaluate design only if a valid grant still fails the target contract; material changes require review/approval. Restore public HTTPS before physical delivery tests.
 - **Owner / source:** root design owner; current Meta credential/resource evidence remains limited to the safe adapter result.
-- **Last confirmed truth:** user APROVADO recorded; compiled artifact fresh; helper v4 independently approved; 13 adapter plus 15 launcher synthetic checks passed; one consumed GO, zero retries/provider writes/DB/product changes. No specific provider-cause, token-class, expiry or delivery conclusion.
+- **Last confirmed truth:** CP82 qualification remains historically rejected/inconclusive. CP83 separately observed USER token, same app and both scopes, but provider invalidity/Graph190/expiry past before phone lookup. Saved callback still uses a currently non-resolving hostname. Both reviewed one-time invocations made no provider writes/DB/product changes; delivery and phone eligibility remain unproved.
 
 ## Execution Lane Tracking (Required)
 - **Local implementation branches:** `feature/number-onboarding` in the principal checkout; local commits only after explicit implementation approval.
@@ -608,9 +608,9 @@ No promotion or delivery findings exist; delivery review is not_run. Planning fi
 
 ## TODO Closeout Disposition
 - **Disposition:** `keep-active`
-- **Disposition reason:** staged implementation approved; qualification did not establish eligibility, so product implementation is blocked and design must be revisited.
+- **Disposition reason:** staged implementation approved; no qualified grant yet. CP83 identified credential expiry plus stale public callback; product implementation remains blocked pending refreshed credential evidence.
 - **Post-commit/push status:** `pending`
-- **Next path/status action:** keep active/Pending+Blocked; return to authorization design with the safe qualification receipt. No source edits, retry or new provider diagnostics authorized by this result.
+- **Next path/status action:** keep active/Pending+Blocked; await operator token refresh and a distinct bounded execution decision. Preserve unchanged validators; no automatic retry, product edit, or tunnel/provider change follows from the diagnostic result.
 
 ## Security Risk Assessment
 - **Risk level:** `high`
@@ -790,3 +790,24 @@ CRIT-MIG-01 Integrated (optional): within existing V-01/V-03, use a pre-change o
 - This does not identify a provider cause, prove the telephone invalid, or establish token class/explicit expiry. Delivery not tested. The result is a hard stop under D-01 and ARCH-QUAL-01.
 - No retry, provider write, database access, Nest bootstrap, product source change, source build/push, tunnel change or Railway action. No product code GO issued. Parent Pending/VAL05 remains open and unwaived.
 - Evidence: artifacts/reviews/leadshug-meta-test-binding-20261018/helper-review-v4.raw.json; qualification-preparation-cp82.json; qualification-live-go-cp82.json; qualification-live-result-cp82.json; root-qualification-outcome-cp82.json.
+
+## CP83 — Reavaliação somente leitura solicitada pelo humano
+
+- Nova solicitação: “Vamos reavaliar o processo com exatidão para termos ctz do que pode estár acontecendo”. Autoriza diagnóstico somente leitura; não é aprovação de novo comportamento do produto. A implementação continua Pending+Blocked sob D-01.
+- Contrato delimitado: artifacts/reviews/leadshug-meta-test-binding-20261018/reevaluation-contract-cp83.json. CP82 permanece imutável e seu GO não é reutilizado.
+- O resultado anterior perdeu a fase e a causa: fetch/HTTP/JSON/validação de grant/paginação são convertidos no mesmo erro. A reavaliação separa essas hipóteses com fatos allowlisted e observação da chamada pública existente, sem relaxar validadores.
+- Perfil operacional-devops; Genesis inaplicável, projeto estabelecido. Escopos nestjs/docker/react/prisma/postgresql. Um executor no checkout principal, sem worktree. Root mantém TODO/evidência/Git; nenhum writer de produto.
+- Mesmas entradas privadas já fornecidas pelo operador; somente chaves nomeadas, em memória/stdin. Preparação/testes fictícios e revisão independente antecedem novo GO diagnóstico, de consumo único. Até esse GO, nenhuma nova leitura privada ou chamada real.
+- O teste diagnóstico não qualifica implantação nem prova mensagens. Falta de mapping na API e ausência de POST no gateway são questões diferentes; observações antigas não são disponibilidade atual.
+
+CP83 confirmação humana: callback salvo ainda é o domínio estimation-editions-knee-inclusion.trycloudflare.com, que nesta observação retorna name_not_found enquanto graph.facebook.com resolve. Impedimento atual de entrega confirmado; causa das janelas antigas e da falha de credencial continuam separadas. Evidência human-current-callback-cp83.json/public-host-dns-control-cp83.json. Sem atualização de endereço/túnel/provedor nesta reavaliação.
+
+## CP83 — Resultado diferencial real
+
+- Nova consulta diagnóstica, uma única invocação sob GO CP83 distinto consumido, após crítica independente approve/zero bloqueadores. 18 checagens do executor e 15 casos de adaptador compilado com fetch fictício; revisor repetiu as 18 e acrescentou 17 asserções sintéticas de limites.
+- Única chamada Graph: debug_token HTTP200; tokenType USER; sameApp=true; scopes management/messaging reportados; providerValid=false; Graph error190; expiryState=past. Adaptador atual e inalterado.
+- A primeira condição de falha atual é validade da credencial, antes de qualquer consulta de telefone. PhoneTarget/canonicalPhone ficam unknown. Os alvos esperados também não foram comprovados no grant inválido; isso não demonstra por si uma incompatibilidade do desenho ou falta de permissão de um futuro token válido.
+- Callback salvo confirmado pelo operador ainda usa domínio que não resolve no DNS, com controle Graph resolvendo. Impedimento atual de entrada separado da credencial expirada.
+- Conclusão operacional: renovar a entrada privada do token e verificar o grant válido antes de propor alteração de arquitetura. CP82 continua histórico/inconclusivo, sem atribuição retroativa de causa. Nenhuma requalificação ou implementação por inferência da consulta diagnóstica.
+- Operador orientado a atualizar somente META_LOCAL_TEST_ACCESS_TOKEN no arquivo privado; estado aguardado, valores nunca solicitados no chat. Nenhum retry do token atual, providerwrite, DB, alteração de produto/runtime/túnel ou push de código. Parent Pending/VAL05 aberto.
+- Evidência: artifacts/reviews/leadshug-meta-test-binding-20261018/root-reevaluation-cp83.json e diagnosis-live-result-cp83.json.

@@ -1,0 +1,10 @@
+{
+  "checkpoint": "cp83",
+  "recordedAtUtc": "2026-10-18T14:26:49.625573+00:00",
+  "humanQuestion": "Current saved Meta callback still uses the last recorded estimation-editions-knee-inclusion.trycloudflare.com/webhooks/meta public address?",
+  "humanResponse": "Ainda é esse endereço",
+  "dnsEvidence": "public-host-dns-control-cp83.json",
+  "finding": "Current saved Meta callback and currently non-resolving public hostname coincide. This is a confirmed current delivery blocker from human configuration confirmation plus workspace DNS evidence.",
+  "limits": "Not provider delivery-log evidence; does not identify root cause of earlier windows or credential validation failure.",
+  "settingsChanged": false
+}

@@ -1,0 +1,64 @@
+{
+  "checkpoint": "cp83",
+  "recordedAtUtc": "2026-10-18T14:17:53.417850+00:00",
+  "authority": {
+    "humanRequest": "Vamos reavaliar o processo com exatidão para termos ctz do que pode estár acontecendo",
+    "scope": "New read-only differential diagnosis, explicitly requested after CP82. No repeat CP82 GO, product acceptance or authorization-design change.",
+    "productImplementationStillBlocked": true
+  },
+  "profile": {
+    "gate0": "Genesis rejected: established canon and implementation",
+    "current": "operational-devops",
+    "scopes": [
+      "nestjs",
+      "docker",
+      "react",
+      "prisma",
+      "postgresql"
+    ],
+    "topology": "primary-checkout-single-writer"
+  },
+  "purpose": "Differentiate transport/HTTP/provider grant facts from local authorization-policy rejection; current observations do not retroactively identify CP82 cause.",
+  "preparationWrites": "Only new cp83-* files under ignored artifacts/tmp/number-onboarding-execution; root owns canonical TODO/evidence/Git. Never modify CP82 files.",
+  "inputs": {
+    "localKeys": [
+      "META_LOCAL_TEST_ACCESS_TOKEN",
+      "META_LOCAL_TEST_WABA_ID",
+      "META_LOCAL_TEST_PHONE_NUMBER_ID"
+    ],
+    "inheritedBaseKeys": [
+      "META_APP_ID",
+      "META_APP_SECRET",
+      "META_SIGNUP_CONFIG_ID",
+      "GRAPH_VERSION"
+    ],
+    "transport": "Same reviewed in-memory named-key/stdin mechanism; no private args, payload files, Config.Env, dotenv dump, copy/hash of private file or secret hashes."
+  },
+  "allowedExecution": {
+    "artifact": "Freshly attested current compiled MetaHttpClient only; no Nest/DB; one public verificarNumeroVinculado call",
+    "network": "At most3 GETs to fixed graph.facebook.com v26.0: debug_token and up to2 pages of configured WABA/phone; existing10s timeouts, no retries/redirects/writes",
+    "observer": "Wrap only global.fetch, forward unchanged allowed request to original fetch, inspect cloned response in memory to project explicit safe facts; never private adapter method access or validator modification. Restore observer on completion.",
+    "outerDeadlineSeconds": 40,
+    "responseObservation": "Inspect cloned responses in memory with128KiB observer cap. Observation errors or cap cannot replace/alter the original adapter response; preserve unknown facts."
+  },
+  "outputAllowlist": {
+    "metadata": "Fixed schema/checkpoint/outcome/diagnosticOnly=true/providerWrites=0/deliveryEvidence=not_tested/adapterFresh/adapterCompletedNormally/adapterReturnedNumber/canonicalPhoneUsable; no acceptance or delivery proof",
+    "requests": "Array max3 of fixed phase debug_token|phone_page_1|phone_page_2; HTTP status integer/null; Graph error code/subcode integer/null; fixed safe network enum only",
+    "debugFacts": "Nullable booleans for provider validity, same app, management scope, messaging scope, granular scope/target evidence and expected WABA intersection; known token-type enum or unknown; expiry state enum only, no timestamp",
+    "phoneFacts": "Target present=true only when observed. Absent=false only after a normal exhaustive adapter read; page errors/limits preserve unknown. Canonical phone shape follows existing normalization/domain.",
+    "forbidden": "Raw errors/messages, URL/query/headers/bodies, private values/IDs/phone/token hashes, arbitrary stdout/stderr",
+    "failure": "Nullable fixed safe execution enum only: distinguish input/config/artifact/adapter/observer/runtime/timeout failures without arbitrary exception text. Codes/subcodes bounded0..2^31-1; HTTP100..599/null."
+  },
+  "gates": [
+    "Prepare frozen helper/launcher and meaningful fake-only tests",
+    "Independent read-only review and root adjudication",
+    "Fresh distinct consumed-once root CP83 live GO after passing review",
+    "Exactly one bounded invocation; safe output only; no automatic retry or product edit"
+  ],
+  "invariants": [
+    "No weakening common validator or claiming missing granular targets are definitively the cause before observed",
+    "No provider subscribe/register/send/migrate/unregister or Meta settings changes",
+    "No DB/runtime/tunnel/product-source changes; no api-app/.local-files access",
+    "Parent VAL05 remains open; actual inbound diagnosis independent of credential test"
+  ]
+}

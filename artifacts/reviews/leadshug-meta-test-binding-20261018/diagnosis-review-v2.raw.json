@@ -1,0 +1,48 @@
+{
+  "checkpoint": "cp83",
+  "reviewedRevision": "v2",
+  "verdict": "approve",
+  "blockers": [],
+  "scope": "Frozen bounded read-only differential diagnostic and invocation path.",
+  "hashes": {
+    "cp83-diagnostic-helper.cjs": "802f7e25eae17c35628e8a8820967ba9d126d8065dcc52d240f028afaee3fb94",
+    "cp83-diagnostic-launcher.py": "cc091efcb33202bef59d4a58dead8382cdb64922c144e8daa9ccdf3d3fbda5d2",
+    "cp83-diagnostic-container-fakes.py": "4a81ed34e6178391a2dfd2ea78d76a4961a5507399c21c65fd5afc8b656dd005",
+    "cp83-diagnostic-launcher-offline.test.py": "56ab0ce04f91cd2e0f62aa5545fae57ce632ecd2dc6ce412168a3c61bec3bf0a",
+    "cp83-diagnostic-v2-offline.stdout.txt": "4fdd9555c4ec787759620c780b7ab1e618fedf6a0a6633c85057253a76701cb9",
+    "meta.client.ts": "ad6d9c56a0c854df35baf3320a70c2b1f4b9d577c4cd6f35def701ecac65f9c4"
+  },
+  "evidenceChecks": [
+    "All five manifest-listed hashes match.",
+    "Distinct CP83 receipt schema and atomic consumed-once claim precede private input access; CP82 receipts are rejected.",
+    "Runtime identity, ownership, image and compiled-adapter hash attestation precede private reads; child rechecks the compiled hash.",
+    "Only three named local inputs and four named inherited base inputs enter the isolated child; private payload travels through stdin.",
+    "One public verificarNumeroVinculado call preserves the existing validator and request arguments. Source confirms one debug GET and at most two phone pages with limit=100, fixed Graph v26.0, redirect rejection and existing 10-second timeouts.",
+    "Shared host monotonic budget and absolute child deadline preserve the reviewed 40-second execution boundary.",
+    "Observation uses a clone with a 128-KiB cap and nonblocking cancellation; the original response remains available to the adapter.",
+    "Pagination failure or page cap preserves unknown phone absence; false requires normal exhaustive completion.",
+    "Nested debug data.error codes, bounded numeric codes/statuses, DOMException timeout classification and fixed safe failure enums are implemented.",
+    "Total output validation rejects extra fields and arbitrary values; raw errors, URLs, headers, bodies, identifiers, phone values and timestamps are excluded."
+  ],
+  "validation": {
+    "suppliedLauncherSyntheticSuiteRerun": "passed; footer reports 18 checks",
+    "additionalIndependentSyntheticBoundaryAssertionsPassed": 17,
+    "recordedPinnedAdapterFakeCasesReviewed": 15,
+    "pinnedAdapterCasesRerunByReviewer": false,
+    "privateInputReads": 0,
+    "providerCalls": 0,
+    "containerAccess": false,
+    "productOrDocumentationEdits": false
+  },
+  "positions": {
+    "performance": "Bounded request count, existing request timeouts and capped observation retain the intended diagnostic budget.",
+    "elegance": "The isolated observer projects explicit facts while preserving the existing adapter.",
+    "structuralSoundness": "No Nest bootstrap, private adapter method access, validator relaxation or product authorization change."
+  },
+  "limits": [
+    "Approval permits only one eventual CP83 invocation after a fresh distinct root live GO; this review does not issue that GO.",
+    "Fresh runtime attestation remains required at invocation.",
+    "Diagnostic facts establish neither product eligibility nor delivery; CP82's failed qualification and the product implementation gate remain unchanged.",
+    "Current observations cannot retroactively establish CP82's cause."
+  ]
+}

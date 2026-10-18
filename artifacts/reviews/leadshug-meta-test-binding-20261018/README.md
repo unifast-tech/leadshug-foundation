@@ -52,3 +52,11 @@ cp81 planejamento pronto para aprovação humana: arquitetura/crítica convergir
 ## Resultado real CP82
 
 Uma única execução consumiu o [GO](qualification-live-go-cp82.json). O [resultado exato](qualification-live-result-cp82.json) foi rejected_or_inconclusive, com adaptador atual e sem comprovar autorização/recurso ou telefone canônico utilizável. O erro combinado seguro não distingue a causa. Não houve retry nem escrita de provider, DB ou produto. [Adjudicação root](root-qualification-outcome-cp82.json): parar antes de produto e retornar ao desenho; TODO Pending+Blocked. Isso não conclui o cadastro ou a prova de mensagens e não dispensa VAL05.
+
+## CP83 — Reavaliação solicitada pelo humano
+
+[Diagnóstico consolidado](root-reevaluation-cp83.json) e [resposta segura exata](diagnosis-live-result-cp83.json). Uma consulta somente leitura à Meta, após revisão independente do observador, separou as fases: debug_token HTTP200, token USER do mesmo app e com as duas permissões reportadas, mas is_valid=false, erro190 e expiração no passado. Nenhuma consulta de telefone foi alcançada; telefone continua unknown.
+
+O operador confirmou também que o callback salvo ainda usa o domínio que agora não resolve no DNS, com Graph resolvendo como controle. São dois impedimentos atuais distintos: entrada pública e credencial local. Não atribuímos retrospectivamente todas as falhas anteriores a eles.
+
+Primeiro renovar o token privado e testar sua elegibilidade sob novo GO; recuperar HTTPS sob ativação operacional própria antes do próximo teste físico. Nenhuma mudança de validação, arquitetura ou produto se justifica somente pelo token expirado. A implementação continua Pending+Blocked, com VAL05 independente.

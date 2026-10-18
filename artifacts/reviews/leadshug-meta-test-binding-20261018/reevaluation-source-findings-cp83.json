@@ -1,0 +1,48 @@
+{
+  "checkpoint": "cp83",
+  "basis": "Named public source and safe archived evidence plus current public DNS checks. No new private/provider read yet.",
+  "confirmed": [
+    {
+      "finding": "CP82 lost phase/cause",
+      "anchors": [
+        "api-app/src/integrations/meta/meta.client.ts:194",
+        "foundation_documentation/artifacts/tmp/number-onboarding-execution/cp82-qualification-helper.cjs:134"
+      ],
+      "implication": "Cannot infer token invalidity, expiry, Meta-specific rejection or missing phone from the combined error."
+    },
+    {
+      "finding": "Specific WABA targets are an additional local authorization requirement",
+      "anchor": "api-app/src/integrations/meta/meta.client.ts:94",
+      "implication": "Current adapter may reject before the phone query; real grant evidence required before assigning this cause."
+    },
+    {
+      "finding": "Unknown phone identity is ignored by inbox processing",
+      "anchor": "api-app/src/surfaces/webhooks/meta.controller.ts:76",
+      "implication": "Missing mapping can explain no inbox record after arrival; it cannot explain zero observed Meta gateway requests."
+    },
+    {
+      "finding": "Current workspace resolver reports last callback hostname name_not_found while graph.facebook.com resolves",
+      "evidence": "public-host-dns-control-cp83.json",
+      "implication": "If current Meta callback still matches last host, it cannot reliably deliver there now. Does not establish past-window cause or current Meta config."
+    },
+    {
+      "finding": "Archived CP75 synthetic control had1metaPOST200; archived CP77 physical reply window had0Meta routes with complete8line coverage",
+      "evidence": [
+        "../leadshug-number-onboarding-20261015/evidence/cp75-dashboard-control-ingress.json",
+        "../leadshug-number-onboarding-20261015/evidence/cp77-meta-test-number-direct-reply-ingress.json"
+      ],
+      "implication": "Positive synthetic control and failed real delivery are separate observations, not inbox acceptance."
+    }
+  ],
+  "primaryReferences": [
+    {
+      "url": "https://www.postman.com/meta/whatsapp-business-platform/overview",
+      "supported": "Meta official collection identifies Cloud API and Embedded Signup as separate purposes."
+    },
+    {
+      "url": "https://www.postman.com/meta/whatsapp-business-platform/documentation/wlk6lh4/whatsapp-cloud-api?entity=request-13382743-9dbec0ce-30d4-4df2-b188-674b7d8da2d9",
+      "supported": "Retrieved primary search excerpt explicitly supports user/system-user tokens and dashboard user tokens for Cloud API; this does not qualify this credential."
+    }
+  ],
+  "documentationLimit": "Direct developers.facebook.com pages returned429 and Business Help fetch throttled. No universal claim about sandbox messaging, granular scope guarantees or existing conversation handover is made."
+}

@@ -1,0 +1,20 @@
+{
+  "checkpoint": "cp83-v2",
+  "classification": "preparation_only_synthetic_evidence",
+  "providerRequests": 0,
+  "privateInputReads": 0,
+  "runtime": "pinned-container-fake-fetch-only",
+  "runtimeId": "9eccbea4825108cec2b8a6fcd48c43c17845e216415fe95e3972265c6ad34cf1",
+  "runtimeImage": "sha256:fe5fb7eaf6a68123f9da6b92a0a69483180d213f556b4bedf313f04a383b4821",
+  "runtimeModuleSha256": "a756c9693c574f6fb4987d878af8d4fbeaf9f07c86a5c5e6acadeca4f7a771cb",
+  "syntheticLauncherChecks": 18,
+  "syntheticPinnedAdapterCases": 15,
+  "files": {
+    "cp83-diagnostic-helper.cjs": "802f7e25eae17c35628e8a8820967ba9d126d8065dcc52d240f028afaee3fb94",
+    "cp83-diagnostic-launcher.py": "cc091efcb33202bef59d4a58dead8382cdb64922c144e8daa9ccdf3d3fbda5d2",
+    "cp83-diagnostic-container-fakes.py": "4a81ed34e6178391a2dfd2ea78d76a4961a5507399c21c65fd5afc8b656dd005",
+    "cp83-diagnostic-launcher-offline.test.py": "56ab0ce04f91cd2e0f62aa5545fae57ce632ecd2dc6ce412168a3c61bec3bf0a",
+    "cp83-diagnostic-v2-offline.stdout.txt": "4fdd9555c4ec787759620c780b7ab1e618fedf6a0a6633c85057253a76701cb9"
+  },
+  "stdoutFile": "cp83-diagnostic-v2-offline.stdout.txt"
+}

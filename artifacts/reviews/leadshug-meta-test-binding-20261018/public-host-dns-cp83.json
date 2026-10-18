@@ -1,0 +1,11 @@
+{
+  "checkpoint": "cp83",
+  "capturedAtUtc": "2026-10-18T14:19:58.469913+00:00",
+  "purpose": "Read-only DNS check of the last public callback hostname recorded in this session; not a current Meta callback readback",
+  "lastRecordedPublicHostname": "estimation-editions-knee-inclusion.trycloudflare.com",
+  "observer": "workspace DNS resolver",
+  "dns": "not_resolved",
+  "httpRequestMade": false,
+  "providerOrRuntimeMutation": false,
+  "limitation": "Point-in-time observation; cannot explain earlier windows or prove current Meta callback settings."
+}

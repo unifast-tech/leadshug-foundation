@@ -1,0 +1,17 @@
+{
+  "checkpoint": "cp83",
+  "issuedAtUtc": "2026-10-18T14:32:56.866913+00:00",
+  "go": {
+    "checkpoint": "cp83",
+    "scope": "read_only_meta_differential_diagnosis",
+    "decision": "GO",
+    "consumed_once": true,
+    "receipt_id": "cp83_7af5bfd5e7c049039d9ed592e1cde93c"
+  },
+  "humanRequest": "Vamos reavaliar o processo com exatidão para termos ctz do que pode estár acontecendo",
+  "review": "diagnosis-review-v2.raw.json",
+  "contract": "reevaluation-contract-cp83.json",
+  "scope": "One invocation only of frozen CP83 v2 launcher; fresh runtime attestation, named local/inherited keys and stdin; one existing public method/at most3GETs; safe differential facts only. No retry/product qualification/provider write/DB/runtime/tunnel change.",
+  "cp82GoReused": false,
+  "productGoIssued": false
+}

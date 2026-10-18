@@ -1,0 +1,94 @@
+{
+  "checkpoint": "cp83",
+  "recordedAtUtc": "2026-10-18T14:36:52.208206+00:00",
+  "humanObjective": "Reavaliar o processo com exatidão",
+  "diagnosticOnly": true,
+  "productImplementationStillBlocked": true,
+  "currentConfirmedBlockers": [
+    {
+      "id": "CP83-DNS",
+      "layer": "Inbound Meta -> public callback",
+      "finding": "The callback saved in Meta still uses the last trycloudflare hostname; workspace resolver returns name_not_found while graph.facebook.com resolves.",
+      "evidence": [
+        "public-host-dns-control-cp83.json",
+        "human-current-callback-cp83.json"
+      ],
+      "consequence": "Current public delivery cannot reliably reach this callback. Not a retrospective explanation for all prior windows."
+    },
+    {
+      "id": "CP83-TOKEN",
+      "layer": "Local server -> Graph authorization",
+      "finding": "One debug_token GET reached Meta (HTTP200). Target token is USER, same app, both required scopes reported, but is_valid=false, nestedGraph190 and explicit expiry state past.",
+      "evidence": "diagnosis-live-result-cp83.json",
+      "consequence": "The existing adapter rejects at its current-validity requirement, before any phone-page query. New credential is required before testing target eligibility."
+    }
+  ],
+  "notEstablished": [
+    "Exact reason for every historical failure or the CP82 combined exception",
+    "Whether the configured phone is present in the WABA: no phone request occurred",
+    "Whether granular target evidence will be sufficient on a refreshed valid credential",
+    "Current official physical IN/OUT, sandbox WhatsApp capability, receipt or inbox readiness",
+    "Any new production or product eligibility"
+  ],
+  "codeConclusions": [
+    {
+      "source": "api-app/src/integrations/meta/meta.client.ts:94",
+      "conclusion": "sameApp check then !grant.valid is the first failing OR condition in the current observation; no need to relax authorization or change schema to explain it."
+    },
+    {
+      "source": "api-app/src/integrations/meta/meta.client.ts:154",
+      "conclusion": "Phone requests follow grant checks; no phone lookup occurred and phone unknown is not a wrong-number finding."
+    },
+    {
+      "source": "api-app/src/surfaces/webhooks/meta.controller.ts:76",
+      "conclusion": "Unknown phone identity produces no inbox record after authenticated arrival. This is independent of DNS and zero observed gateway POSTs."
+    }
+  ],
+  "resourceSeparation": [
+    {
+      "resource": "Nonofficial QR / Local Test BU",
+      "evidence": "Historical real IN/OUT and reconnection passed; no current availability claim."
+    },
+    {
+      "resource": "Own official / Local Test Ofc",
+      "evidence": "Historical verified identity/subscription, but no proved real IN/OUT; prior callback/routing observations belong to this resource."
+    },
+    {
+      "resource": "Embedded Signup Sandbox / Teste Meta",
+      "evidence": "Linked resource; physical WhatsApp test not executed because operator sent SMS; no universal Sandbox delivery assertion."
+    },
+    {
+      "resource": "API Setup Test Number",
+      "evidence": "Human saw Meta outbound in WhatsApp; local mapping absent; current local USER token expired. Distinct from the Sandbox number."
+    }
+  ],
+  "orderedNextSteps": [
+    "Operator refreshes only META_LOCAL_TEST_ACCESS_TOKEN locally for the same API Setup resource; state requested, no value in chat",
+    "With the new input, admit a fresh one-time read-only check under its own GO; do not retry current expired credential or infer resource eligibility",
+    "Restore and validate a dependable HTTPS callback under a distinct operational activation step; keep origin/OAuth/webhook settings coherent",
+    "Only after unchanged grant/target checks pass, resume the approved local method; prove real inbound at gateway, identity mapping, inbox and reply separately"
+  ],
+  "boundaries": {
+    "realDiagnosticInvocations": 1,
+    "GraphGetCount": 1,
+    "phonePageRequests": 0,
+    "goConsumedOnce": true,
+    "providerWrites": 0,
+    "databaseAccess": false,
+    "productSourceChanges": false,
+    "runtimeOrTunnelChanges": false,
+    "automaticRetries": 0,
+    "rawPrivateValuesExported": false,
+    "parentVAL05": "open_unwaived"
+  },
+  "evidence": {
+    "helperReview": "diagnosis-review-v2.raw.json",
+    "frozenPreparation": "diagnosis-preparation-cp83.json",
+    "liveGo": "diagnosis-live-go-cp83.json",
+    "liveResult": "diagnosis-live-result-cp83.json",
+    "liveResultSha256": "80a8b45a26d4adb8fedaa0cb205cb6725b70b5bf534153c3a73309f79abcfee7"
+  },
+  "primaryReference": "https://www.postman.com/meta/whatsapp-business-platform/documentation/wlk6lh4/whatsapp-cloud-api?entity=request-13382743-9dbec0ce-30d4-4df2-b188-674b7d8da2d9",
+  "operatorRefreshState": "awaiting_response",
+  "all21PublicProductSourcesUnchanged": true
+}

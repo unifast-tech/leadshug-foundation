@@ -1,0 +1,18 @@
+{
+  "checkpoint": "cp83",
+  "capturedAtUtc": "2026-10-18T14:20:19.692718+00:00",
+  "observer": "workspace DNS resolver",
+  "observations": [
+    {
+      "target": "last_recorded_callback",
+      "dns": "name_not_found"
+    },
+    {
+      "target": "public_graph_control",
+      "dns": "resolved"
+    }
+  ],
+  "httpRequests": 0,
+  "credentialsRead": false,
+  "limitation": "Current observer only; not current Meta configuration readback or a diagnosis of past delivery windows."
+}
