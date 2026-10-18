@@ -1,0 +1,13 @@
+{
+  "checkpoint": "cp78-human-test-waba-current-app-listed",
+  "recordedAtUtc": "2026-10-18T04:03:08.768142+00:00",
+  "operatorReport": "O app LeadsHug está listado",
+  "questionContext": "Read-only GET test-WABA/subscribed_apps in official Graph Explorer, app LeadsHug/v26, test context from APISetup",
+  "evidenceType": "human report; raw Graph output and test resource IDs not collected",
+  "currentAppPresentHumanConfirmed": true,
+  "independentRuntimeRead": false,
+  "overrideFields": "not inspected in this human report",
+  "actualDeliveryProof": false,
+  "parent": "Pending",
+  "VAL05": "open_unwaived"
+}

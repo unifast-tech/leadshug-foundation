@@ -1,0 +1,14 @@
+{
+  "checkpoint": "cp78-human-test-phone-callback-expected",
+  "recordedAtUtc": "2026-10-18T04:04:58.726544+00:00",
+  "operatorReport": "Vejo o endereço esperado e nenhum diferente",
+  "questionContext": "GET test PhoneNumberID?fields=webhook_configuration in official Graph Explorer, LeadsHug/v26/same test token; compare current expected callback",
+  "evidenceType": "Human read-only report, no raw Graph output, IDs or tokens collected",
+  "expectedCallbackSeen": true,
+  "differentCallbackSeen": false,
+  "expectedPublicCallback": "https://estimation-editions-knee-inclusion.trycloudflare.com/webhooks/meta",
+  "missingOverrideLayers": "Presence/absence not separately reported; remain unknown, no absence inference",
+  "serverArrivalOrInboxProof": false,
+  "parent": "Pending",
+  "VAL05": "open_unwaived"
+}

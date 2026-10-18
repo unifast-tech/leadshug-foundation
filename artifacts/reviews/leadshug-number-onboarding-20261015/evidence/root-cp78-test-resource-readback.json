@@ -1,0 +1,36 @@
+{
+  "checkpoint": "root-cp78-test-resource-readback",
+  "adjudicatedAtUtc": "2026-10-18T04:04:58.726544+00:00",
+  "confirmedHuman": [
+    "LeadsHug listed in TestNumber WABA subscriptions",
+    "Expected callback visible on test-phone webhook_configuration, no different callback seen"
+  ],
+  "independentRawRead": false,
+  "unknown": [
+    "Unreturned override layers",
+    "Whether Meta generated/attempted real deliveries",
+    "Continuous HTTPS tunnel reachability",
+    "Root cause",
+    "TestNumber inbox binding not completed"
+  ],
+  "lastRuntimeObservation": "CP77 full8/8 gateway rows, zeroMeta route during physical reply window; no new runtime/DB/provider calls in CP78",
+  "nextExactStep": "Administrator use updated Meta support draft cp78 requesting event emission/delivery attempts, resolved callback and HTTP/DNS/TLS errors for UTC windows. No automated support message or ticket sent.",
+  "supportDraft": {
+    "path": "../meta-official-webhook-delivery-diagnostic-cp78.md",
+    "sha256": "a547c7b8d7c7504d5d60aa0c0d2e04f5f38a880f3f77fc5b0cd8bb6d9485170e"
+  },
+  "evidence": [
+    {
+      "path": "cp78-human-test-waba-current-app-listed.json",
+      "sha256": "f26ec3b39fab43a50437ad4520bce59b95afa56523832da06958fb7fb9081fc5"
+    },
+    {
+      "path": "cp78-human-test-phone-callback-expected.json",
+      "sha256": "caa8bf246e35ff7863548c4819466c248b7f85ee20824eedeaabc0d14fd2077f"
+    }
+  ],
+  "noCauseInference": "No established Meta/partner/permission/code fault; upstream HTTPS transport remains possible",
+  "actionBoundary": "Foundation evidence/docs only, no runtime/code/tests/credentials/DB/provider writes, subscription change, migration/disconnect or extra physical retry",
+  "parentDeliveryStage": "Pending",
+  "VAL05": "open_unwaived"
+}

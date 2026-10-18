@@ -1,0 +1,35 @@
+{
+  "checkpoint": "root-cp78-test-phone-callback-check",
+  "recordedAtUtc": "2026-10-18T04:03:08.768142+00:00",
+  "profile": "Operational / DevOps",
+  "scopes": [
+    "docker",
+    "nestjs",
+    "react",
+    "vite",
+    "postgresql",
+    "prisma"
+  ],
+  "readiness": "PACED-Ready rerun",
+  "confirmed": "Operator reports LeadsHug listed in subscriptions of APISetup TestNumber WABA. No resubscribe justified by this result.",
+  "notEstablished": [
+    "Test-phone callback effective destination",
+    "Missing layers mean no overrides",
+    "Any real event emitted or delivered",
+    "Inbox integration or VAL05 complete"
+  ],
+  "nextExactStep": "Operator one GET test PhoneNumberID?fields=webhook_configuration in same official Graph Explorer app/v26/test token context; compare returned callbacks to current expected hostname/path; report same/different/missing/error only. No provider writes, tokens/IDs/raw response in chat.",
+  "whyNewRead": "Prior phone webhook read was current own-number resource, not this APISetup test phone; do not reuse result for different resource.",
+  "expectedPublicCallback": "https://estimation-editions-knee-inclusion.trycloudflare.com/webhooks/meta",
+  "fieldSupport": "Projection worked for own-number v26 in CP75; support/shape for test phone remains to be observed, absent or unsupported means unknown without fallback loops.",
+  "evidence": [
+    {
+      "path": "cp78-human-test-waba-current-app-listed.json",
+      "sha256": "f26ec3b39fab43a50437ad4520bce59b95afa56523832da06958fb7fb9081fc5"
+    }
+  ],
+  "source": "https://www.postman.com/meta/whatsapp-business-platform/request/li0unxe/get-phone-number-by-id",
+  "actionBoundaries": "No new automated Graph/provider/runtime/DB/auth/credential/file reads, no restart, code/tests changes, migration/disconnect, subscription writes or physical message retry. Guided read-only Meta UI query only.",
+  "parentDeliveryStage": "Pending",
+  "VAL05": "open_unwaived"
+}

@@ -4,7 +4,7 @@ Registro baseado em `delphi-ai/templates/dependency_readiness_template.md`; mem�
 
 ## Snapshot
 
-- **Last updated:** 2026-10-18, cp77. Diagnóstico oficial sem primeira IN; registros históricos abaixo preservados. Fonte/testes j e não oficial historicamente validados, sem nova validação de produto nesta rodada.
+- **Last updated:** 2026-10-18, cp78. Diagnóstico oficial sem primeira IN; registros históricos abaixo preservados. Fonte/testes j e não oficial historicamente validados, sem nova validação de produto nesta rodada.
 - **Current session/profile:** Operational / DevOps; Docker/NestJS/React/Vite/PostgreSQL/Prisma. Readiness PACED-Ready; runtime local privado OWNER/R02, oficial VAL05 aberto.
 - **Why this register matters now:** usuário disponibilizará oficial e não oficial; confirmou local primeiro e Railway depois. Fechar wiring e evidência antes de executar testes externos.
 
@@ -126,3 +126,7 @@ cp76: readiness pontual do runtime/origem atual passou; Meta test number dispon�
 cp77: seleção do Test Number não concluída; Meta2655122 ao tentar registrá-lo como novo, confirmado recurso de teste pelo operador. Nenhuma migração/desconexão autorizada por essa falha. Preflight atual API/gateway/config/health passou; diagnóstico agora aguarda uma resposta física ao chat já recebido da Meta na janela03:53:32.196176Z, só ingresso agregado. Inbox do número de teste e oficial próprio continuam não comprovadas. [Preparação](reviews/leadshug-number-onboarding-20261015/evidence/root-cp77-direct-reply-preparation.json).
 
 cp77 readback atual: dois tiques humanos não correlacionaram rotaMeta (captura completa8/8 somenteotherGET). Inscrição da conta de teste permaneceunknown, distinguida da WABA própria já lida emcp75. Próximo GETreadonly do testWABA/subscribed_apps no ExploradorGraph pelo operador, sem token no chat ou writes. Sem nova capturaDB ou inbox; estado próprio cp75 é histórico. [Recibo](reviews/leadshug-number-onboarding-20261015/evidence/root-cp77-direct-reply-readback.json).
+
+cp78: inscrição do LeadsHug também na WABA de teste confirmada humana, sem JSON/IDs/credenciais coletados. Callback efetivo desse telefone aindaunknown; GET readonly específico solicitado no painel oficial, sem extrapolar metadata do número próprio nem novo envio/ressubscribe. [Registro](reviews/leadshug-number-onboarding-20261015/evidence/root-cp78-test-phone-callback-check.json). VAL05aberto.
+
+cp78 estado corrente: callback esperado no telefone de teste também confirmado humano, sem destino diferente visto. Inscrição+callback não fecharam recebimento; zeroMeta no último teste cp77 permanece sem causa estabelecida. Solicitar diagnóstico Meta de emissão/tentativas/destino/status/erroDNS-TLS-conexão pelo [relatório atualizado](reviews/leadshug-number-onboarding-20261015/meta-official-webhook-delivery-diagnostic-cp78.md), sem envio pelo agente ou mudança de runtime. Túnel contínuo não comprovado. VAL05aberto.
