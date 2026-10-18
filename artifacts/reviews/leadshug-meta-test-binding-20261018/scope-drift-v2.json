@@ -1,0 +1,57 @@
+{
+  "artifact_kind": "review_scope_drift_guard",
+  "todo_path": "/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/todos/active/features/TODO-leadshug-meta-api-test-number-binding.md",
+  "repo_root": "missing",
+  "todo_relative_path": "missing",
+  "overall_outcome": "no-go",
+  "baseline_gate": {
+    "section_present": true,
+    "decision": "required",
+    "status": "not_run",
+    "branch": "main",
+    "commit": "pending final documentation freeze",
+    "push_reference": "origin/main",
+    "evidence_reference": "artifacts/reviews/leadshug-meta-test-binding-20261018/root-review-format-delta-adjudication.json",
+    "waiver_reference": "missing"
+  },
+  "scope_drift_gate": {
+    "section_present": true,
+    "decision": "required",
+    "status": "not_run",
+    "evidence_reference": "pending frozen-baseline guard.",
+    "waiver_reference": "missing"
+  },
+  "changed_sections": [],
+  "material_headings": [
+    "## Context",
+    "## Framing Source & Story Slice",
+    "## Contract Boundary",
+    "## Scope",
+    "## Out of Scope",
+    "## Bounded But Elastic Guardrails",
+    "## Definition of Done",
+    "## Validation Steps",
+    "## Execution Lane Tracking",
+    "## Diff Expectation Contract",
+    "## Complexity",
+    "## Canonical Module Anchors",
+    "## Decisions (Resolved Before Freeze)",
+    "## Module Decision Baseline Snapshot",
+    "## Decision Baseline (Frozen Before Implementation)",
+    "## Architecture Change Governance",
+    "## Questions To Close",
+    "## Assumptions Preview",
+    "## Execution Plan",
+    "## Flow Evidence Planning Matrix",
+    "## Runtime / Rollout Notes",
+    "## Security Risk Assessment",
+    "## Performance & Concurrency Risk Assessment"
+  ],
+  "issues": [
+    {
+      "severity": "error",
+      "code": "REVIEW-BASELINE-UNRESOLVED",
+      "message": "Required review baseline freeze gate is not yet in a satisfying state."
+    }
+  ]
+}

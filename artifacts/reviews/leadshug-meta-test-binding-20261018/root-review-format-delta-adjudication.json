@@ -18,8 +18,11 @@
   ],
   "failedEvidencePreserved": [
     "authority-preapproval-v1.json: preflight-no-go invalid harness timing enum",
-    "code-coherence-v1.json: go but only three live rows because A-02 table pipe was split; not final four-row evidence"
+    "code-coherence-v1.json: go but only three live rows because A-02 table pipe was split; not final four-row evidence",
+    "code-coherence-v2.json: no-go; .prisma extension not recognized",
+    "scope-drift-v2.json: no-go, stale pending freeze metadata after failed preparation; not final"
   ],
   "rootDisposition": "Integrate format corrections, publish exact final freeze and rerun affected guards. No new reviewer round: no behavior/architecture/validation-risk change, no unresolved blocking finding. This is not a waiver.",
-  "implementationAuthority": false
+  "implementationAuthority": false,
+  "additionalSourceAnchor": "A-02 now cites existing shared attempt creation at number-registration.service.ts:122-128 alongside .prisma; no new assumption or behavior. Evidence/path formatting only."
 }

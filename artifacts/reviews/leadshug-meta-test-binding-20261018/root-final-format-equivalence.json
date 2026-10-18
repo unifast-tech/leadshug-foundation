@@ -1,0 +1,19 @@
+{
+  "reviewedBaseline": "92429fed96d55f2c8ad1269c095321c1fe44edb0",
+  "intermediateFreeze": "409d92be",
+  "materialSectionsCompared": 23,
+  "changedSections": [
+    "## Architecture Change Governance",
+    "## Assumptions Preview"
+  ],
+  "rowAwareFormattingAndAdditionalExistingSourceCitationOnly": true,
+  "scopeOrBehaviorChanged": false,
+  "noWaiver": true,
+  "changes": [
+    "canonical already-enforced enum spelling",
+    "A-02 or instead of literal Markdown pipe",
+    "A-02 adds existing shared TypeScript creation path because guard does not recognize .prisma as a source extension"
+  ],
+  "priorPreparationFailure": "First equivalence script used a global enum substitution and rejected unchanged Definition of Done; no equivalence claim was written. Corrected to transform only A-02.",
+  "guardV2Qualification": "Code coherence v2 correctly found A-02 schema-only evidence unsupported by path matcher. Scope v2 ran before receipt-gate update because preceding preparation failed; not final scope proof. Authority v2 preflight-go grants no execution authority."
+}

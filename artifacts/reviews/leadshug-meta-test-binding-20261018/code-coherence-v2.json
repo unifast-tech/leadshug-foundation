@@ -1,0 +1,86 @@
+{
+  "artifact_kind": "assumption_code_coherence_guard",
+  "todo_path": "/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/todos/active/features/TODO-leadshug-meta-api-test-number-binding.md",
+  "repo_root": "/mnt/c/unifast/leadshug/leadshug_now_docker",
+  "overall_outcome": "no-go",
+  "live_assumption_ids": [
+    "A-01",
+    "A-02",
+    "A-03",
+    "A-04"
+  ],
+  "gate": {
+    "section_present": true,
+    "decision": "required",
+    "status": "no_material_findings",
+    "evidence_reference": "artifacts/reviews/leadshug-meta-test-binding-20261018/root-assumption-coherence-v1.json; deterministic code-coherence-v1.json will record anchor guard result.",
+    "waiver_reference": "missing"
+  },
+  "assumptions": [
+    {
+      "assumption_id": "A-01",
+      "handling": "Keep as Assumption",
+      "evidence": "No credential was inspected; `MetaHttpClient.assertCurrentGrant`, `recursos` and `confirmarNumero` define the checks but do not prove this token (`api-app/src/integrations/meta/meta.client.ts:80-107,155-173`).",
+      "path_tokens": [
+        "api-app/src/integrations/meta/meta.client.ts"
+      ],
+      "resolved_paths": [
+        "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app/src/integrations/meta/meta.client.ts"
+      ],
+      "resolved_code_paths": [
+        "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app/src/integrations/meta/meta.client.ts"
+      ]
+    },
+    {
+      "assumption_id": "A-02",
+      "handling": "Keep as Assumption",
+      "evidence": "`ChannelRegistrationAttempt` is shared by official and nonofficial flows and stores state/stage/version/candidate envelope (`api-app/prisma/schema.prisma:191-225`).",
+      "path_tokens": [],
+      "resolved_paths": [],
+      "resolved_code_paths": []
+    },
+    {
+      "assumption_id": "A-03",
+      "handling": "Keep as Assumption",
+      "evidence": "`docker-compose.channels.yml` and `api-app/src/infra/config/modulos.ts` provide process configuration seams; no private configuration was inspected.",
+      "path_tokens": [
+        "docker-compose.channels.yml",
+        "api-app/src/infra/config/modulos.ts"
+      ],
+      "resolved_paths": [
+        "/mnt/c/unifast/leadshug/leadshug_now_docker/docker-compose.channels.yml",
+        "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app/src/infra/config/modulos.ts"
+      ],
+      "resolved_code_paths": [
+        "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app/src/infra/config/modulos.ts"
+      ]
+    },
+    {
+      "assumption_id": "A-04",
+      "handling": "Keep as Assumption",
+      "evidence": "`NumberRegistrationService.confirm` and `MetaHttpClient.confirmarNumero` validate selected WABA/phone (`api-app/src/domain/channels/number-registration.service.ts:228-241`; `api-app/src/integrations/meta/meta.client.ts:145-174`).",
+      "path_tokens": [
+        "NumberRegistrationService.c",
+        "MetaHttpClient.c",
+        "api-app/src/domain/channels/number-registration.service.ts",
+        "api-app/src/integrations/meta/meta.client.ts"
+      ],
+      "resolved_paths": [
+        "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app/src/domain/channels/number-registration.service.ts",
+        "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app/src/integrations/meta/meta.client.ts"
+      ],
+      "resolved_code_paths": [
+        "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app/src/domain/channels/number-registration.service.ts",
+        "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app/src/integrations/meta/meta.client.ts"
+      ]
+    }
+  ],
+  "issues": [
+    {
+      "severity": "error",
+      "code": "ASSUMPTION-CODE-NO-PATH-EVIDENCE",
+      "message": "Live assumption evidence must cite concrete file paths, not only prose.",
+      "assumption_id": "A-02"
+    }
+  ]
+}
