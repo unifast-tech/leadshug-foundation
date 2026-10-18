@@ -1,0 +1,34 @@
+{
+  "checkpoint": "cp77-direct-reply-preflight",
+  "capturedAtUtc": "2026-10-18T03:53:17.298921+00:00",
+  "goSha256": "d883b3893b5acdfee7f5e2e8cbd28d9d59be5f92d110ed88b2f2f46ab43c1c8a",
+  "api": {
+    "id": "9eccbea4825108cec2b8a6fcd48c43c17845e216415fe95e3972265c6ad34cf1",
+    "image": "sha256:fe5fb7eaf6a68123f9da6b92a0a69483180d213f556b4bedf313f04a383b4821",
+    "state": "running",
+    "health": "healthy",
+    "owner": "number-onboarding",
+    "project": "leadshug_channels_local",
+    "service": "api"
+  },
+  "gateway": {
+    "id": "0c48d94e9fe5b4ad75efd304db2752dfa4cab3befc59b9f736574d6cd551eea3",
+    "image": "sha256:76090a34b858323b6ab169711adc08253b5bee7123a973dc581ed46b643bc109",
+    "state": "running",
+    "owner": "number-onboarding",
+    "project": "leadshug_channels_local",
+    "service": "gateway",
+    "activeConfigSha256": "6d4563cc5f5823bdb1177f350c942dc2472fc70133aef5b177fa4b57c5c9f1a0"
+  },
+  "health": {
+    "host": "estimation-editions-knee-inclusion.trycloudflare.com",
+    "path": "/health",
+    "status": 200,
+    "bytes": 15,
+    "sha256": "a29ee2b15c494311c52521766e44af56a3ad2248e7a8ab465e5206463c13d288",
+    "redirect": false,
+    "setCookie": false,
+    "client": "Python http.client default certificate validation"
+  },
+  "result": "preflight passed; no provider or runtime action performed"
+}

@@ -4,7 +4,7 @@ Registro baseado em `delphi-ai/templates/dependency_readiness_template.md`; mem�
 
 ## Snapshot
 
-- **Last updated:** 2026-10-18, cp76. Diagnóstico oficial sem primeira IN; registros históricos abaixo preservados. Fonte/testes j e não oficial historicamente validados, sem nova validação de produto nesta rodada.
+- **Last updated:** 2026-10-18, cp77. Diagnóstico oficial sem primeira IN; registros históricos abaixo preservados. Fonte/testes j e não oficial historicamente validados, sem nova validação de produto nesta rodada.
 - **Current session/profile:** Operational / DevOps; Docker/NestJS/React/Vite/PostgreSQL/Prisma. Readiness PACED-Ready; runtime local privado OWNER/R02, oficial VAL05 aberto.
 - **Why this register matters now:** usuário disponibilizará oficial e não oficial; confirmou local primeiro e Railway depois. Fechar wiring e evidência antes de executar testes externos.
 
@@ -122,3 +122,5 @@ cp75: callback/app/proprietário correntes conferidos por leituras scoped; físi
 cp75 complemento: operador confirmou o número nas duas Messaging accounts; atribuição de entrega continua desconhecida. Relatório de diagnóstico para consulta Meta preparado em `artifacts/reviews/leadshug-number-onboarding-20261015/meta-official-webhook-delivery-diagnostic-cp75.md`, sem envio ou nova alteração/teste físico. Próximo: consultar diagnóstico/suporte Meta. VAL05 aberto.
 
 cp76: readiness pontual do runtime/origem atual passou; Meta test number disponível/envio pelo painel informado humano, ainda sem confirmação independente do recurso selecionado e sem IN/OUT no LeadsHug. Cadastro normal orientado em nova BU Teste Meta, aguardando comparação visual com APISetup antes de confirmar. Sem tokenmanual, segredos lidos, alterações automatizadas ou novo teste de produto. [Adjudicação](reviews/leadshug-number-onboarding-20261015/evidence/root-cp76-test-number-adjudication.json). VAL05/número próprio continuam abertos.
+
+cp77: seleção do Test Number não concluída; Meta2655122 ao tentar registrá-lo como novo, confirmado recurso de teste pelo operador. Nenhuma migração/desconexão autorizada por essa falha. Preflight atual API/gateway/config/health passou; diagnóstico agora aguarda uma resposta física ao chat já recebido da Meta na janela03:53:32.196176Z, só ingresso agregado. Inbox do número de teste e oficial próprio continuam não comprovadas. [Preparação](reviews/leadshug-number-onboarding-20261015/evidence/root-cp77-direct-reply-preparation.json).

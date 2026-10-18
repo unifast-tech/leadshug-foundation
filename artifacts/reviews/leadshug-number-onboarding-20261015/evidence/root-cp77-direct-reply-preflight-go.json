@@ -1,0 +1,11 @@
+{
+  "checkpoint": "root-cp77-direct-reply-preflight-go",
+  "issuedAtUtc": "2026-10-18T03:52:57.114486+00:00",
+  "decision": "GO_bounded_readonly",
+  "maxExecutions": 1,
+  "pinBaseline": "cp76-test-number-preflight.json",
+  "allowed": "Whitelist metadata exact API9eccbea/fe5 healthy and gateway0c48/7609 owner/project/state; active gateway config SHA6d4563cc5f5823bdb1177f350c942dc2472fc70133aef5b177fa4b57c5c9f1a0; one public GET /health current estimation-editions-knee-inclusion.trycloudflare.com normalTLS12s32KiB, no redirects/cookies/retry, expected length/hash. Safe metadata receipt only.",
+  "forbidden": "No provider/Graph/DB/auth/login/credentials/envfiles/Config.Env/rawlogs/privatefiles/.local-files/runtime changes; no supplied OAuthURL or IDEselection used.",
+  "output": "evidence/cp77-direct-reply-preflight.json UTC/pins/hash/healthsafeonly; stop if failure, no recovery.",
+  "purpose": "Prepare controlled physical reply from own WhatsApp to Meta APISetup Test Number; ingress-only, no inbox/VAL05 claim"
+}

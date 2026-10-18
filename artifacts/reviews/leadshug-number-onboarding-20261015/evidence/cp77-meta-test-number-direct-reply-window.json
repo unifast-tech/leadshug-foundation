@@ -1,0 +1,20 @@
+{
+  "checkpoint": "cp77-meta-test-number-direct-reply-window",
+  "startedAtUtc": "2026-10-18T03:53:32.196176Z",
+  "publicHost": "estimation-editions-knee-inclusion.trycloudflare.com",
+  "preflightReceipt": "cp77-direct-reply-preflight.json",
+  "preflightSha256": "8ad0ba14bbf27897c20a72d87df3c876c61ac1aa61a85eb822351d13755d6a9c",
+  "actorAction": "One reply from operator own WhatsApp to existing chat that received API Setup Meta Test Number test; if no received test chat, report that instead, no new send requested in this window.",
+  "marker": "Teste LeadsHug Meta entrada 01",
+  "observation": "Gateway aggregated route/method/status coverage only, no per-request/identity/payload attribution",
+  "resourceAssociation": "Test number not successfully linked through existing onboarding; identity unverified for this diagnostic",
+  "doesNotProve": [
+    "Inbox persistence",
+    "Per-BU identity match",
+    "Exact attribution of any incoming POST to physical marker",
+    "WABA test-number subscription configured",
+    "VAL05 official channel complete"
+  ],
+  "noPanelWebhookTestDuringWindow": true,
+  "next": "Wait human sent/received ticks or absent chat report; then distinct counter GO, frozen helper once only"
+}

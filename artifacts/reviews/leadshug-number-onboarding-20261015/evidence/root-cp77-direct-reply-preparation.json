@@ -1,0 +1,50 @@
+{
+  "checkpoint": "root-cp77-direct-reply-preparation",
+  "adjudicatedAtUtc": "2026-10-18T03:54:15.842319+00:00",
+  "profile": "Operational / DevOps",
+  "readiness": "PACED-Ready",
+  "parentDeliveryStage": "Pending",
+  "VAL05": "open_unwaived",
+  "confirmedFacts": [
+    "Operator typed the APISetup Meta Test Number into a phone-registration screen",
+    "Meta rejected as already registered with displayed code2655122",
+    "No successful existing-resource selection/binding confirmed",
+    "Fresh exact API/gateway/config and public health preflight passed"
+  ],
+  "invalidatedAssumption": "The guided path did not reach selection of the existing APISetup test resource; re-registering that resource is not the intended test. No conclusion that every Embedded Signup variant is unsupported.",
+  "remainingUnknowns": [
+    "Whether that APISetup test WABA/app subscription delivers real messages",
+    "Whether any current channel maps that test-number identity; no new DB read performed",
+    "Whether operator received the panel test on their device and can reply",
+    "Cause of missing real events for own-number test remains unresolved"
+  ],
+  "courseCorrection": "Stop registration step; no migration/disconnect/OTP retry or manual token/database bypass. One reply to already received test chat; if none received, report absence instead of new sends during this window.",
+  "publicSourceCheck": "api-app/src/surfaces/webhooks/meta.controller.ts:77-84 skips missing/unknown/current-mismatch identity after signature verification, so transport arrival need not create inbox message. Code inspection only; no live body read.",
+  "testWindow": "2026-10-18T03:53:32.196176Z",
+  "observationContract": "Only aggregate route/method/status+coverage through frozen d0df3 counter after human reply and separate rootGO. No payload/requestidentity; temporal correlation only; no inbox/receipt/VAL05 proof.",
+  "questionState": "Pending human reply ticks or absent received chat",
+  "secretsAndUserOAuthUrl": "Neither used, copied nor persisted; only safe error number recorded",
+  "changes": "Foundation diagnostic docs/receipts only; no product/runtime/config/provider/DB mutation by agent",
+  "evidence": [
+    {
+      "path": "cp77-human-test-number-registration-conflict.json",
+      "sha256": "a2b423b2f0a396d34b25b875523721795fa282d92b78c46199d53639dba6bd39",
+      "bytes": 1105
+    },
+    {
+      "path": "root-cp77-direct-reply-preflight-go.json",
+      "sha256": "d883b3893b5acdfee7f5e2e8cbd28d9d59be5f92d110ed88b2f2f46ab43c1c8a",
+      "bytes": 1026
+    },
+    {
+      "path": "cp77-direct-reply-preflight.json",
+      "sha256": "8ad0ba14bbf27897c20a72d87df3c876c61ac1aa61a85eb822351d13755d6a9c",
+      "bytes": 1334
+    },
+    {
+      "path": "cp77-meta-test-number-direct-reply-window.json",
+      "sha256": "c8374c1671c0d36a11bcb92a103a8d5b43df76d205f555ffe223f5bfcc83a1e2",
+      "bytes": 1224
+    }
+  ]
+}

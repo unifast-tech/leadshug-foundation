@@ -1,0 +1,14 @@
+{
+  "checkpoint": "cp77-human-test-number-registration-conflict",
+  "recordedAtUtc": "2026-10-18T03:52:57.114486+00:00",
+  "operatorReport": "After entering phone and selecting verification method, Meta says number already registered; migrate/disconnect required to continue.",
+  "graphDisplayedErrorCode": 2655122,
+  "enteredResourceType": "Meta-provided Test Number (explicitly confirmed)",
+  "correlationIdsAndOAuthUrl": "not stored or followed",
+  "whatThisProves": "This executed path attempted new number registration, not successful existing test-resource selection.",
+  "unsupportedInference": "No global claim that all Meta test resources cannot be onboarded with Embedded Signup. APISetup-to-signup mapping remains unverified.",
+  "correction": "Stop registration path; no migration, disconnect, OTP retry, provider cleanup, tokenmanual or DB bypass.",
+  "nextDiagnostic": "Controlled physical reply to Meta APISetup test number, gateway aggregate only; unbound phone may be acknowledged/ignored and is not expected to prove inbox or VAL05.",
+  "parent": "Pending",
+  "VAL05": "open_unwaived"
+}
