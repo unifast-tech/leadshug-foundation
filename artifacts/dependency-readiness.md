@@ -4,7 +4,7 @@ Registro baseado em `delphi-ai/templates/dependency_readiness_template.md`; mem�
 
 ## Snapshot
 
-- **Last updated:** 2026-10-18, cp78. Diagnóstico oficial sem primeira IN; registros históricos abaixo preservados. Fonte/testes j e não oficial historicamente validados, sem nova validação de produto nesta rodada.
+- **Last updated:** 2026-10-18, cp79. Diagnóstico oficial sem primeira IN; registros históricos abaixo preservados. Fonte/testes j e não oficial historicamente validados, sem nova validação de produto nesta rodada.
 - **Current session/profile:** Operational / DevOps; Docker/NestJS/React/Vite/PostgreSQL/Prisma. Readiness PACED-Ready; runtime local privado OWNER/R02, oficial VAL05 aberto.
 - **Why this register matters now:** usuário disponibilizará oficial e não oficial; confirmou local primeiro e Railway depois. Fechar wiring e evidência antes de executar testes externos.
 
@@ -130,3 +130,5 @@ cp77 readback atual: dois tiques humanos não correlacionaram rotaMeta (captura 
 cp78: inscrição do LeadsHug também na WABA de teste confirmada humana, sem JSON/IDs/credenciais coletados. Callback efetivo desse telefone aindaunknown; GET readonly específico solicitado no painel oficial, sem extrapolar metadata do número próprio nem novo envio/ressubscribe. [Registro](reviews/leadshug-number-onboarding-20261015/evidence/root-cp78-test-phone-callback-check.json). VAL05aberto.
 
 cp78 estado corrente: callback esperado no telefone de teste também confirmado humano, sem destino diferente visto. Inscrição+callback não fecharam recebimento; zeroMeta no último teste cp77 permanece sem causa estabelecida. Solicitar diagnóstico Meta de emissão/tentativas/destino/status/erroDNS-TLS-conexão pelo [relatório atualizado](reviews/leadshug-number-onboarding-20261015/meta-official-webhook-delivery-diagnostic-cp78.md), sem envio pelo agente ou mudança de runtime. Túnel contínuo não comprovado. VAL05aberto.
+
+cp79: prioridade é vincular o recurso de teste antes da inbox. Autorização Sandbox historicamente retornou seleção; tentar fluxo normal na BU Teste Meta e Já registrado, sem novo registro deAPISetup ou tokenmanual. Disponibilidade atual/capacidade de troca física Sandboxunknown. Suporte fica como diagnóstico de ingresso histórico. Nenhuma alteração código/runtime/provedor/DB. [Recalibração](reviews/leadshug-number-onboarding-20261015/evidence/root-cp79-test-binding-recalibration.json). VAL05aberto.

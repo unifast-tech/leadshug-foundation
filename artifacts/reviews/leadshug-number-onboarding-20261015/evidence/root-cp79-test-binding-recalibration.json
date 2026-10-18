@@ -1,0 +1,33 @@
+{
+  "checkpoint": "root-cp79-test-binding-recalibration",
+  "recordedAtUtc": "2026-10-18T04:11:22.840531+00:00",
+  "operatorCorrection": "Mas a msg não vai chegar se eu não consegui cadastrar o número teste",
+  "correctionScope": "Session priority/communication correction; no new project policy or Delphi change",
+  "confirmedFacts": [
+    "TestNumber APISetup onboarding did not complete",
+    "Inbox handling requires matching provider identity/current channel before conversation creation",
+    "Previous direct reply checked route-level HTTP ingress only; it could not validate inbox",
+    "Historical first Sandbox authorization returned account/number selection in LeadsHug, unlike later add-number SMS path"
+  ],
+  "invalidatedExpectation": "Do not present unbound test-number reply as a valid inbox test or prioritize Meta escalation as a substitute for completing binding. Zero route observations remain valid transport evidence, not a diagnosis of the inbox.",
+  "codeEvidence": [
+    "api-app/src/surfaces/webhooks/meta.controller.ts:77-84 ignores unknown/unmapped identities",
+    "api-app/src/domain/channels/number-registration.service.ts:228 confirm requires authorized candidate and validates selected account/number",
+    "api-app/src/domain/channels/number-registration.service.ts:309 registration Graph call only for NOVO; JA_REGISTRADO proceeds to scoped binding",
+    "web-app/src/componentes/CadastroNumero.tsx:612-616 exposes Ja registrado after successful authorization/selection",
+    "api-app/src/surfaces/bff/channels.controller.ts:42-54 old direct-create route rejects USE_NUMBER_REGISTRATIONS"
+  ],
+  "remainingUnknowns": [
+    "Availability of historical Sandbox Business/WhatsApp Account in current authorization",
+    "Whether returned Sandbox number supports actual physical WhatsApp exchange",
+    "Whether APISetup number is selectable by a different supported grant; not established",
+    "Original own-number missing ingress cause still unresolved"
+  ],
+  "nextExactStep": "Operator resume normal authorized flow in existing Teste Meta BU; select Sandbox Business/Sandbox WhatsApp Account, returned account/number, Ja registrado then Confirmar numero. Do not type APISetup TestNumber into add-phone verification. If no Sandbox or SMS only, stop and report. No physical resend until binding confirmed.",
+  "scopePreserved": "Existing SCOPE01/02 registration, per-BU encrypted OAuth credentials, validated resource ownership; no manual token import, direct DB seed, bypass or migration. No new implementation approval requested.",
+  "supportDraftDisposition": "Retain as historical ingress diagnostic; not prerequisite or proof of inbox failure; defer as primary next action while binding is uncompleted.",
+  "sourceResearch": "Current primary sandbox capabilities not confirmed; inaccessible Meta docs and unrelated third-party results do not justify compatibility claims. Only historical observed authorization supports this binding attempt.",
+  "mutations": "Foundation docs/evidence only; no source/runtime/provider/DB/secret reads or writes by agent",
+  "parentDeliveryStage": "Pending",
+  "VAL05": "open_unwaived"
+}
