@@ -1,0 +1,24 @@
+{
+  "checkpoint": "cp86-official-inout05-window",
+  "windowStartedAtUtc": "2026-10-18T20:11:05.634Z",
+  "source": "human confirms Meta validated callback; messages activation previously reported",
+  "callback": "https://printing-adaptive-snapshot-partition.trycloudflare.com/webhooks/meta",
+  "rootPublicHealthHttp": 200,
+  "apiShortId": "9eccbea48251",
+  "apiHealthy": true,
+  "gatewayShortId": "0c48d94e9fe5",
+  "webShortId": "9aa55b6681a8",
+  "businessUnitLabel": "Local Test Ofc",
+  "target": "existing own official test number, not QR or Sandbox/APISetup TestNumber",
+  "physicalTest": "human sends one unique test message and replies via LeadsHug if visible",
+  "messageLabels": [
+    "Teste LeadsHug oficial entrada 05",
+    "Teste LeadsHug oficial resposta 05"
+  ],
+  "result": "awaiting_human_action",
+  "observer": "existing frozen gateway counter d0df3, bounded aggregate only; run only after human result under separate root read GO",
+  "notProof": "callback verification/health200 are not physical message acceptance",
+  "VAL05": "open_unwaived",
+  "noProviderDbRuntimeProductMutation": true,
+  "localTestNumberMode": "Cancelled"
+}
