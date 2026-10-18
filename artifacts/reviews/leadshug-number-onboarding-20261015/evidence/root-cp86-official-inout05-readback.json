@@ -1,0 +1,127 @@
+{
+  "checkpoint": "cp86-official-inout05-readback",
+  "recordedAtUtc": "2026-10-18T20:25:14.483427+00:00",
+  "humanResult": {
+    "inboxInbound": "not_visible",
+    "senderTicks": 2,
+    "outbound": "not_attempted_no_conversation"
+  },
+  "rootPublicHealthHttp": 200,
+  "sourceGatewayWindow": {
+    "sinceUtc": "2026-10-18T20:11:05.634Z",
+    "tailLimit": 100,
+    "byteLimit": 1048576,
+    "bytesRead": 15223
+  },
+  "capturedAtUtc": "2026-10-18T20:23:57.098Z",
+  "logRecovery": {
+    "firstFullReads": "inconclusive Docker1; empty output never interpreted as zero events",
+    "exactDiagnostic": "log_json_corruption",
+    "recovery": "unchanged parser/guards; one TAIL=1001 to100 literal adaptation; inverse byte equality and offline controls passed",
+    "acceptedCoverage": {
+      "complete": true,
+      "overflow": false,
+      "timeout": false,
+      "dockerExitCode": 0,
+      "lineCount": 95,
+      "parsedLineCount": 95,
+      "unparsedLineCount": 0,
+      "tailLimitReachedOrExceeded": false,
+      "strictUtf8": true
+    },
+    "runtimeLogRepairOrTruncation": false
+  },
+  "observedCounts": {
+    "byRoute": {
+      "other": 95
+    },
+    "byMethod": {
+      "GET": 93,
+      "POST": 2
+    },
+    "byStatus": {
+      "101": 4,
+      "200": 31,
+      "304": 58,
+      "401": 1,
+      "409": 1
+    },
+    "byRouteMethodStatus": [
+      {
+        "route": "other",
+        "method": "GET",
+        "status": "101",
+        "count": 4
+      },
+      {
+        "route": "other",
+        "method": "GET",
+        "status": "200",
+        "count": 30
+      },
+      {
+        "route": "other",
+        "method": "GET",
+        "status": "304",
+        "count": 58
+      },
+      {
+        "route": "other",
+        "method": "GET",
+        "status": "401",
+        "count": 1
+      },
+      {
+        "route": "other",
+        "method": "POST",
+        "status": "200",
+        "count": 1
+      },
+      {
+        "route": "other",
+        "method": "POST",
+        "status": "409",
+        "count": 1
+      }
+    ]
+  },
+  "interpretation": "No meta route reached pinned gateway during complete captured physical05 window; does not identify upstream cause or prove continuous public availability",
+  "databaseSnapshot": {
+    "channelStatus": "CONECTANDO",
+    "ownIdentityVerified": true,
+    "storedProviderState": "SUBSCRIBED",
+    "attemptState": "PENDING_RECEIPT",
+    "receiptPresent": false,
+    "messages": {
+      "inbound": 0,
+      "outbound": 0,
+      "messageStatusBuckets": [],
+      "conversationCount": 0
+    },
+    "webhookAggregate": {
+      "cutoffUtc": "2026-10-17T16:55:26.634Z",
+      "count": 0,
+      "minReceivedAtUtc": null,
+      "maxReceivedAtUtc": null,
+      "payloadSelectedOrFiltered": false,
+      "identityAttributionAvailable": false
+    }
+  },
+  "dbLimits": "Counts since historical CP69 cutoff, not individually attributable to physical05; stored SUBSCRIBED does not prove current app field subscription at Meta",
+  "currentHumanQuestion": "Clarify whether activation was webhook field messages (Subscribed) or case-use permission whatsapp_business_messaging; no new message requested",
+  "next": "Wait exact field-state clarification; then inspect app delivery/subscriptions/routing context or isolated standard control as justified; do not infer cause, bypass auth, re-register or revive cancelled local mode",
+  "executionNote": "One executor supplemental preflight assertion used an overly literal prose operation match and failed; shell continued. Actual read matched explicit rootGO, pins/hash and scope; no additional operation. Subsequent wrappers must fail fast, and failed assertion is not counted as positive gate evidence.",
+  "writes": "Foundation evidence only; operational reader clone in ignored tmp; no product/private-env/provider/DB/runtime changes",
+  "VAL05": "open_unwaived",
+  "references": [
+    "cp86-official-inout05-window.json",
+    "cp86-gateway-readback.json",
+    "cp86-log-cli-diagnostic.json",
+    "cp86-counter-recovery-go.json",
+    "cp86-gateway-readback-recovered.json",
+    "cp86-log-cli-exact-diagnostic.json",
+    "cp86-safe-recovery-reads-go.json",
+    "cp86-gateway-tail100-readback.json",
+    "cp86-official-aggregate-readback.json"
+  ]
+}

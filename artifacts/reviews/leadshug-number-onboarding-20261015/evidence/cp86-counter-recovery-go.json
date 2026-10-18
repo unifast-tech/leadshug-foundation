@@ -1,0 +1,13 @@
+{
+  "checkpoint": "cp86-counter-read-recovery",
+  "decision": "GO",
+  "recordedAtUtc": "2026-10-18T20:19:34.702421+00:00",
+  "authority": "Parent existing local-test validation and root diagnosis after failed read",
+  "operation": "Exactly one fresh invocation of unchanged frozen d0df3 counter on original physical05 window",
+  "sinceUtc": "2026-10-18T20:11:05.634Z",
+  "rationale": "Prior full capture returned Docker1/inconclusive; distinct tail-one CLI diagnostic now exits0, current gateway pinned json-file. New evidence justifies one fresh full bounded read; not interpreted as delivery success.",
+  "preservePriorFailure": true,
+  "limits": "1001lines/1MiB/20s safe redacted gateway; no private values/content/DB/provider/runtime/source changes",
+  "stop": "If inconclusive again, retain unknown; no auto retry",
+  "newPhysicalOrSyntheticAction": false
+}

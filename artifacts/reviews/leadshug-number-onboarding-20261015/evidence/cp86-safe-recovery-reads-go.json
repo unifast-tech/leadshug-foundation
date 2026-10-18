@@ -1,0 +1,30 @@
+{
+  "checkpoint": "cp86-safe-recovery-reads",
+  "decision": "GO",
+  "recordedAtUtc": "2026-10-18T20:22:41.613110+00:00",
+  "authority": "Existing approved parent and diagnosis of physical05 missing; user confirms two ticks",
+  "reads": [
+    {
+      "operation": "one_tail100_counter",
+      "helperSha256": "c3a74788fdda85d1c03af08e26e3b3dfaa821a8e64958cc17ff9053331160fcf",
+      "sinceUtc": "2026-10-18T20:11:05.634Z",
+      "rootReview": "Exactly one TAIL literal changed, inverse byte-equal; offline controls passed; keep full-coverage threshold n<100"
+    },
+    {
+      "operation": "one_existing_official_metadata_aggregate",
+      "helperSha256": "64e4f08964fb846282608939825dd7063b2b567756047df81cce85c29aac6571",
+      "scope": "Pinned own official BU/channel/attempt/identity/generation; RepeatableRead READ ONLY; counts/flags only; no payload/credential values/messages/contacts selected",
+      "cutoff": "Existing historical cp69 baseline; current counts do not individually attribute physical05"
+    }
+  ],
+  "forbidden": [
+    "provider/Graph calls",
+    "private files/env dumps",
+    "raw logs/error dumps",
+    "DB writes",
+    "runtime/source mutation",
+    "log truncation or container recreation",
+    "new physical messages",
+    "additional retries on inconclusive"
+  ]
+}
