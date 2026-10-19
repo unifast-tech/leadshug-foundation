@@ -1,0 +1,70 @@
+{
+  "checkpoint": "cp91-official-test-cleanup",
+  "result": "complete",
+  "completedOperations": [
+    {
+      "action": "disconnect_official",
+      "buId": "c231d8f7-d8a5-448e-a740-2ab8aebf9bc2",
+      "channelId": "e0b13f94-8e60-4362-a3a5-1d0b6d94d7af",
+      "httpStatus": 204
+    },
+    {
+      "action": "disconnect_official",
+      "buId": "a1492634-8685-46d8-a7cb-685a99f5c930",
+      "channelId": "eeb74451-edaf-4a44-a6cb-059dd184e152",
+      "httpStatus": 204
+    },
+    {
+      "action": "inactivate_business_unit",
+      "buId": "a1492634-8685-46d8-a7cb-685a99f5c930",
+      "httpStatus": 200,
+      "returnedStatus": "INATIVO"
+    },
+    {
+      "action": "disconnect_official",
+      "buId": "fe046ba1-289e-4d00-85f1-56a885c33b4b",
+      "channelId": "182dab05-a864-4935-b2b5-2c091da4d06f",
+      "httpStatus": 204
+    },
+    {
+      "action": "inactivate_business_unit",
+      "buId": "fe046ba1-289e-4d00-85f1-56a885c33b4b",
+      "httpStatus": 200,
+      "returnedStatus": "INATIVO"
+    }
+  ],
+  "failureCode": null,
+  "manifestSha256": "92c59bbc2a1289624cb9ad7b718596e4107c08165555c643a019b81f745f6eff",
+  "helperSha256": "9c3104a1460efb7a54c134a448b2664038ce4c3371f8f419eefdf587f5b90752",
+  "recordedAtUtc": "2026-10-19T14:57:24.698596+00:00",
+  "userAuthorization": "Explicit request to remove all official test BUs for a fresh test; canonical removal/inactivation explained before execution.",
+  "method": "Normal authenticated OWNER BFF calls with exact root-reviewed manifest/helper and fresh single-use GO; no SQL or bypass.",
+  "receiptSha256": "95f6b9fa518e1e8282879cbda17d2cf2fd3b0d7227e1a476a61876f104ef9271",
+  "readback": {
+    "postDeleteOfficialChannelsAbsent": true,
+    "exclusiveTestBuChannelsEmptyBeforeInactivation": true,
+    "inactivatedBusinessUnitNames": [
+      "Local Test Ofc",
+      "Teste Meta"
+    ],
+    "activeTestBusinessUnitNames": [
+      "Local Test BU"
+    ],
+    "preservedQrProjectionUnchanged": true,
+    "source": "executor final readback, root reviewed frozen helper and success receipt"
+  },
+  "preserved": [
+    "conversation history",
+    "Business Unit records and durable ownership identities",
+    "Local Test BU active status and connected unofficial channel",
+    "Meta app configuration and phone registration",
+    "product source and private environment files"
+  ],
+  "notPerformed": [
+    "BU physical deletion",
+    "provider account/unsubscription changes",
+    "new signup",
+    "new message test"
+  ],
+  "next": "Confirm Meta URLs for recovered hostname and operational WABA/phone association. For reuse of the same provider resource reactivate its existing BU through canonical PATCH before a fresh official channel signup; do not create another BU for an identity with retained ownership. VAL05 remains open and local TestNumber mode remains Cancelled."
+}
