@@ -41,12 +41,12 @@ Proposta ST-CON-01: jornada de cadastro de número, com infraestrutura local est
 
 - **Current delivery stage:** Pending
 - **Qualifiers:** Blocked
-- **Next exact step:** CP96: operador atualiza domínio/OAuth/SDK/callback/política para https://tooth-mode-bean-bulletin.trycloudflare.com (HTTPS recuperado e validado). Depois reservar autorização fresca no canal OFICIAL existente da Local Test Ofc; tentativa tem TTL10min. No fluxo v4 phone-first identificar o número próprio já oficial e observar elegibilidade, sem selecionar Sandbox ou concluir migração. Novo modelo Meta cria Messaging account por parceiro: ausência de templates antigos não prova conta errada. Validar WABA/Messaging retornada, número e inscrição, depois IN/OUT observado. Não procurar proprietário em Number Summary nem presumir APIs WAAC futuras. VAL05 aberto.
+- **Next exact step:** CP97: humano salvou URLs CP96 e Meta validou callback; preflight HTTPS200/TLS e pinos runtime reconferidos. Reservar autorização fresca REAUTORIZAR no canal OFICIAL existente da Local Test Ofc (TTL10min), abrir Meta e informar o telefone próprio já oficial no fluxo phone-first. Avançar somente para observar próxima tela/eligibilidade e relatar título/estado/erro, sem compartilhar OTP nem concluir migração/unregister. Não selecionar Sandbox ou enviar mensagem ainda. Conta por parceiro pode ser nova/sem templates antigos; associação/inscrição/INOUT continuam por provar. VAL05 aberto.
 
 ## Active Work State (Required While TODO Remains In `active/`)
 
 - **Work state:** blocked
-- **Why this state now:** configuração v4 confirmada, mas autorização do número real ainda não concluída. Túnel anterior encerrou; HTTPS CP96 recuperado exige atualização das URLs Meta antes de autorização fresca e avaliação de elegibilidade do telefone próprio no fluxo atual.
+- **Why this state now:** HTTPS e URLs Meta confirmados; falta concluir identificação/autorização do número real e conferir associação/inscrição antes da prova física. A próxima leitura é a resposta do fluxo Meta ao telefone próprio.
 - **Exit condition:** acesso HTTPS validado, URLs Meta atualizadas pelo operador e WABA/número corretos selecionados pelo fluxo oficial. A indisponibilidade de um segundo número não bloqueia essa nova estratégia.
 
 ## Scope
@@ -160,7 +160,7 @@ n/a; nenhuma entrega parcial reivindicada.
 
 ## Blocker Notes (Required if `Qualifiers` includes `Blocked`)
 
-- **Blocker:** atualização humana das URLs Meta para CP96 e autorização efetiva do número próprio. Modelo de contas foi esclarecido; recurso/mapping/subscrição e recebimento reais ainda não validados.
+- **Blocker:** autorização efetiva do número próprio ainda não concluída. Infraestrutura/URLs CP96 confirmadas; recurso/mapping/subscrição e recebimento reais ainda não validados.
 - **Why blocked now:** screenshots mostram introdução e telefone primeiro, sem o recurso próprio na lista. A ordem é compatível com v4 documentado; causa da ausência e associação WABA operacional ainda não comprovadas.
 - **What unblocks it:** recuperação do túnel, atualização das URLs Meta e cadastro pelo fluxo oficial com WABA_ID e PHONE_NUMBER_ID conferidos para o mesmo número/BU.
 - **Owner / source:** executor DevOps para túnel; operador para Meta e seleção da conta; direcionamento humano CP90 em2026-10-19.
@@ -2015,3 +2015,9 @@ Na fase atual, Embedded Signup padrão cria Messaging account por parceiro, reto
 BFF readonly OWNER confirmou Local Test Ofc ativa com canal OFICIAL d45bcd3a/geração1/currentAttempt9705cebf e QR preservado. GET de tentativa evitado por marcar expiração por escrita; TTL10min confirmado em source. Pinos dos três containers/imagens/owner/project preservados. CP90 processos próprios ausentes; DNS nativo/HTTPS antigo falharam. Sob pedido anterior vigente de recuperar acesso, clone literal CP90→CP96 db3511ca aceito pelo root e GO novo liberou um supervisor próprio. Novo HTTPS https://tooth-mode-bean-bulletin.trycloudflare.com teve /health, / e /privacidade.html200 com TLS normal, assets iguais ao container Web/pinos históricos; root repetiu health/política e hashes. Recibo executor e969f6c3 conferido; nenhuma alteração API/Web/gateway/env/Meta/cadastro/provedor/dados.
 
 Pergunta humana enviada para salvar URLs Meta do novo host e verificar com token local existente, messages inscrito. Só depois reservar autorização fresca no slot oficial existente e avaliar telefone real pelo fluxo phone-first; parar em migração/unregister/recurso inesperado/erro e não concluir sucesso por hipótese. Sem nova mensagem até inscrição/mapping e janela observável. App Review permanece rascunho; complemento TestNumber Cancelled e VAL05 aberto.
+
+### CP97 — URLs Meta validadas; identificação do telefone próprio (2026-10-19)
+
+Humano confirmou todas URLs CP96 salvas e callback validado na Meta. Executor de rotina fez somente preflight readonly: health200/TLSnormal em tooth-mode-bean-bulletin.trycloudflare.com, pinos IDs/imagens API/Web/gateway/owner/project/services iguais CP96. Sem login, GET de tentativa, chamadas provider ou mutação. [Confirmação, readiness e limites](../../../artifacts/reviews/leadshug-number-onboarding-20261015/evidence/root-cp97-fresh-phone-identification.json).
+
+Orientação de próximo passo: usar canal OFICIAL existente da Local Test Ofc, reservar reautorização fresca antes da janela Meta (TTL10min), informar seu telefone oficial próprio na etapa phone-first e avançar para observar elegibilidade. Campo BR+55 recebe DDD+número, não o recurso Sandbox/QR. Parar na próxima tela e informar só título/estado/erro, sem compartilhar OTP, migrar/desregistrar/excluir ou finalizar recurso inesperado. Ainda sem mensagem física ou declaração de conexão pronta. Parent Pending/VAL05 aberto e complemento Cancelled.

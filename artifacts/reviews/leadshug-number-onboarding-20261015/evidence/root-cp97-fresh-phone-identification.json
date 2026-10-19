@@ -1,0 +1,24 @@
+{
+  "checkpoint": "cp97-fresh-phone-identification",
+  "recordedAtUtc": "2026-10-19T17:40:27.981953+00:00",
+  "humanConfirmation": "Saved all CP96 Meta domain/OAuth/JavaScript SDK/callback/privacy URLs; Meta verified webhook. messages kept subscribed in requested setup.",
+  "preflight": {
+    "source": "routine executor read-only report",
+    "baseUrl": "https://tooth-mode-bean-bulletin.trycloudflare.com",
+    "healthHttpStatus": 200,
+    "tlsVerifyResult": 0,
+    "boundedSeconds": 12,
+    "apiWebGatewayIdsAndImages": "match accepted CP96 pins",
+    "project": "leadshug_channels_local",
+    "services": [
+      "api",
+      "web",
+      "gateway"
+    ],
+    "apiOwner": "number-onboarding",
+    "noAuthenticationOrAttemptRead": true
+  },
+  "nextHumanAction": "Use existing Local Test Ofc official slot and reserve fresh REAUTORIZAR attempt; continue Meta; enter own already registered official test number into phone-first screen (BR+55 then DDD+number), choose an accessible verification method, advance and stop on next screen; report title/state/error only, never OTP.",
+  "guard": "No migration/unregister/deletion/new purchased or Sandbox phone; this is an eligibility/identification step, not proof of completed registration or receipt. Do not send test message yet.",
+  "unchanged": "No new login, channel/attempt/BU/credential/provider/Meta/runtime/source/config/database mutation; prior testNumber mode remains Cancelled; VAL05 open."
+}
