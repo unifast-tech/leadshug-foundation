@@ -9,16 +9,16 @@
     "decision": "required",
     "status": "no_material_findings",
     "branch": "main",
-    "commit": "f71a7d99177517b04ebeabc2f2f36c3bca40e6e3",
+    "commit": "507ec7ebc394144b0f072e92459fa91e06921c50",
     "push_reference": "origin/main",
-    "evidence_reference": "origin/main f71a7d99 push terminal0; baselines6188793a/opini\u00e3o e edc1efac/cr\u00edtica inicial preservadas.",
+    "evidence_reference": "origin/main 507ec7ebc394144b0f072e92459fa91e06921c50 push terminal0; s\u00f3 metadata factual acrescentada ap\u00f3s freeze. Baselines anteriores preservadas.",
     "waiver_reference": "n/a"
   },
   "scope_drift_gate": {
     "section_present": true,
     "decision": "required",
-    "status": "not_run",
-    "evidence_reference": "pending-freeze",
+    "status": "no_material_findings",
+    "evidence_reference": "artifacts/reviews/leadshug-start-conversation-20261019/evidence/scope-drift.json",
     "waiver_reference": "n/a"
   },
   "changed_sections": [],

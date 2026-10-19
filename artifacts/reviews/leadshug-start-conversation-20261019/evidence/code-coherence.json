@@ -2,7 +2,7 @@
   "artifact_kind": "assumption_code_coherence_guard",
   "todo_path": "/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/todos/active/features/TODO-leadshug-start-conversation-by-contact.md",
   "repo_root": "/mnt/c/unifast/leadshug/leadshug_now_docker",
-  "overall_outcome": "no-go",
+  "overall_outcome": "go",
   "live_assumption_ids": [
     "A-01",
     "A-02",
@@ -14,17 +14,23 @@
     "section_present": true,
     "decision": "required",
     "status": "no_material_findings",
-    "evidence_reference": "artifacts/reviews/leadshug-start-conversation-20261019/source-assumptions.json; architecture-opinion.md; critique.md; guard result pending",
+    "evidence_reference": "artifacts/reviews/leadshug-start-conversation-20261019/source-assumptions.json; evidence/code-coherence-initial-no-go.json preservado; evidence/code-coherence.json final go para5premissas",
     "waiver_reference": "n/a"
   },
   "assumptions": [
     {
       "assumption_id": "A-01",
       "handling": "Keep as Assumption",
-      "evidence": "api-app/prisma/schema.prisma:379",
-      "path_tokens": [],
-      "resolved_paths": [],
-      "resolved_code_paths": []
+      "evidence": "api-app/prisma/schema.prisma:379; api-app/prisma/migrations/20260818125556_nucleo_v1_tenancy_identidade_atendimento/migration.sql:230",
+      "path_tokens": [
+        "api-app/prisma/migrations/20260818125556_nucleo_v1_tenancy_identidade_atendimento/migration.sql"
+      ],
+      "resolved_paths": [
+        "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app/prisma/migrations/20260818125556_nucleo_v1_tenancy_identidade_atendimento/migration.sql"
+      ],
+      "resolved_code_paths": [
+        "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app/prisma/migrations/20260818125556_nucleo_v1_tenancy_identidade_atendimento/migration.sql"
+      ]
     },
     {
       "assumption_id": "A-02",
@@ -89,12 +95,5 @@
       ]
     }
   ],
-  "issues": [
-    {
-      "severity": "error",
-      "code": "ASSUMPTION-CODE-NO-PATH-EVIDENCE",
-      "message": "Live assumption evidence must cite concrete file paths, not only prose.",
-      "assumption_id": "A-01"
-    }
-  ]
+  "issues": []
 }
