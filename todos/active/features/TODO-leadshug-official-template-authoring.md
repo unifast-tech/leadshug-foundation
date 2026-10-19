@@ -1,0 +1,732 @@
+# Tactical TODO — ST-CON-05
+
+## Title
+
+LeadsHug — ST-CON-05: vendedor prepara e submete modelos oficiais
+
+## Artifact Identity
+
+- **Artifact type:** tactical_execution_contract
+- **Status:** NotStarted
+- **Version:** 1.0
+- **Created:** 2026-10-19
+- **Template provenance:** copied delphi-ai/templates/todo_template.md before refinement.
+
+## Context
+
+O usuário quer que o vendedor prepare sua mensagem no LeadsHug e a deixe disponível para iniciar atendimentos. Confirmou explicitamente: vendedor cria E envia para aprovação da Meta, sem aprovação administrativa intermediária. É ampliação do programa, não aprovação do ST-CON-04 anterior. Esta história entrega criar/guardar/pré-visualizar/submeter/consultar modelos textuais; iniciar conversas continua no ST-CON-04 dependente, rebaseado depois desta entrega. Nunca confundir template submetido com aprovado ou mensagem enviada.
+
+## Framing Source & Story Slice
+
+- **Feature brief:** foundation_documentation/artifacts/feature-briefs/leadshug-channel-readiness-and-history-20261015.md
+- **Primary story ID:** ST-CON-05
+- **Why this is the right current slice:** resolve a preparação do recurso oficial antes de Nova conversa ST-CON-04, mantendo um objetivo e owner primário de integrações.
+- **Direct-to-TODO rationale (required when `Feature brief = direct-to-todo`):** n/a; programa já enquadrado, ampliação registrada no brief.
+
+## Contract Boundary
+
+- This TODO defines **WHAT** must be delivered and what counts as done.
+- `Assumptions Preview` and `Execution Plan` below define **HOW** Delphi currently intends to deliver this contract.
+- This TODO is **bounded but elastic**: Delphi may absorb local discoveries only while they remain inside the same primary objective and the same main approval/review/promotion conversation. Secondary modules may still be touched when they are subordinate to that same slice.
+- If any assumption or plan step changes `Scope`, `Out of Scope`, `Definition of Done`, required validation semantics, public contract, or frozen decisions, update the TODO contract first and request renewed approval before execution continues.
+- If the intended path explicitly authorizes a compatibility shim, fallback bridge, dual-read/dual-write period, or another non-canonical temporary construct, record that authorization in the TODO with exact scope, rationale, and removal/closeout condition. Reviewers must be able to distinguish an approved temporary exception from accidental workaround drift.
+
+## Implementation Intent
+
+- **Current delivery:** Modelos de mensagem no LeadsHug: vendedor rascunha e submete texto oficial com variáveis/exemplos, acompanha aprovação e consulta catálogo scoped da conta.
+- **Planned next steps:** reconvergir ST-CON-04 para consumir o mesmo catálogo/projetor e iniciar conversa; histórico e Railway depois.
+- **Anticipatory implementation authorized now:** none
+- **Rationale:** template é ativo da Messaging account; rascunho local tem autor, submissão é durável e estado de aprovação pertence à Meta. Não implementar sender/conversa agora.
+
+## Delivery Status Canon (Required)
+
+- **Current delivery stage:** Pending
+- **Qualifiers:** none
+- **Next exact step:** freeze publicado, revisão de arquitetura e crítica independentes, guardas pré-aprovação; apresentar contrato concreto para APROVADO antes de código.
+
+## Active Work State (Required While TODO Remains In `active/`)
+
+- **Work state:** review
+- **Why this state now:** contrato em preparação/revisão prévia, sem implementação.
+- **Exit condition:** APROVADO específico + reload binding + authority go habilitam executor operacional.
+
+## Scope
+
+- [ ] SCOPE-01 — Página autenticada Modelos de mensagem, com BU/canal oficial explícitos, listagem dos próprios rascunhos, editor textual com variáveis/exemplos e prévia.
+- [ ] SCOPE-02 — Vendedor ATENDENTE+ cria/edita seus rascunhos e envia para análise da Meta, sem aprovação de ADMIN intermediária; ADMIN/OWNER da BU pode administrar rascunhos locais da mesma BU.
+- [ ] SCOPE-03 — Submissão oficial scoped, revisionada/idempotente, reserva de nome por conta/idioma e recuperação de resultado incerto sem repetir POST automaticamente; criptografia/segredos atuais preservados.
+- [ ] SCOPE-04 — Atualização explícita de status/catálogo da Messaging account correta; aprovado/pendente/recusado/pausado/desativado/indisponível com evidência de consulta; somente APPROVED suportado pode ser indicado como apto para uso futuro.
+- [ ] SCOPE-05 — Testes de domínio/contrato/concorrência PostgreSQL, Playwright contra BFF real e prova de criação/consulta em recurso oficial próprio, sem envio a destinatário; consolidação do contrato e revisões derivadas.
+
+## Provisional Notes (Required if `Qualifiers` includes `Provisional`)
+
+n/a; sem entrega reivindicada.
+
+## Blocker Notes (Required if `Qualifiers` includes `Blocked`)
+
+Planejamento não bloqueado. O operador ainda não possui template aprovado; a própria capacidade de criar/submeter é esta história. Aprovação externa pode ser recusada/demorada e não pode ser simulada. Primeiro envio físico pertence ao ST-CON-04 e depende de recurso elegível.
+
+## Execution Lane Tracking (Required)
+
+- **Local implementation branches:** `api-app:feature/number-onboarding`, `web-app:feature/number-onboarding`, `root:feature/number-onboarding`; confirmar nomes no handoff antes de editar; Foundation:main.
+- **Promotion lane path:** local feature → dev → stage → main; apenas documentação Foundation main possui publicação autônoma nesta etapa.
+- **Lane-promoted threshold for this TODO:** dev, fora da autorização local atual.
+- **Production-ready threshold for this TODO:** main e gates operacionais próprios; nenhum deploy/push de produto autorizado agora.
+
+## Promotion Evidence (Required Before `🟣 Lane-Promoted` / `✅ Production-Ready`)
+
+n/a nesta preparação; apenas Foundation main pode receber commits/push documentais autônomos, nenhum produto/deploy promovido.
+
+## Out of Scope
+
+- [ ] Primeiro envio de mensagem/conversa, campanha, disparo em lote, CRM, importação de histórico, handover/standby e modificação de roteamento.
+- [ ] Modelos de mídia/botões/OTP/Flows/carrossel, editor multilíngue, recurso de IA para redigir/aprovar ou alteração/exclusão/apelação de templates já submetidos na Meta.
+- [ ] Webhook novo de status, cron/polling em background, filas/outbox e plataforma genérica de operações; atualização será explícita e limitada.
+- [ ] Mudança do gate de envio de mensagens ST-CON-01, nova credencial manual, token no browser/log, leitura de .env.testing ou modificação Meta durante planejamento.
+- [ ] Railway/deploy/push de produto, worktrees/cópias, gitlinks/.gitmodules manuais, alteração Delphi e qualquer leitura/listagem/stat/hash/mount de api-app/.local-files.
+
+## Diff Expectation Contract (Required Before Delivery)
+
+- **Contract status:** required
+- **Policy:** strict; unclassified or forbidden paths block delivery
+- **User validation:** required on deviation
+- **Comparison mode:** working_tree
+
+### Repository Baselines
+| Repository | Path | Baseline ref | Comparison mode |
+| --- | --- | --- | --- |
+| root | . | 80e3940126f22a941f90dba4f5e801b6c0eb2f58 | working_tree |
+| api | api-app | db5a86758a165fac8a1ab587599c37b17890530c | working_tree |
+| web | web-app | 74b9d4b714044829796f875d00553f077c1c329d | working_tree |
+| foundation | foundation_documentation | f6ff65f3b9e9e1769debb531c6159cd7805f25d7 | working_tree |
+
+### Expected Changed Paths
+| Repository | Path glob | Change types | Reason |
+| --- | --- | --- | --- |
+| api | src/domain/message-templates/** | any | rascunho, submissão/estado e catálogo únicos |
+| api | src/surfaces/bff/message-templates.controller.ts | A | BFF adapter autenticado |
+| api | src/surfaces/bff/bff.module.ts | M | registro DI/rotas |
+| api | src/domain/channels/channel-credential-resolver.ts | M | propósito management explícito, sem afrouxar send |
+| api | src/integrations/meta/meta.client.ts | M | criação/consulta/catalogue e erro tipado |
+| api | src/integrations/meta/*template*.ts | A | parser/projeção/model definition compartilhados |
+| api | src/integrations/meta/*.spec.ts | any | contrato/erro HTTP da integração |
+| api | prisma/schema.prisma | M | draft/revision/operation/asset snapshot |
+| api | prisma/migrations/*_message_template*/migration.sql | A | migration versionada |
+| api | test/message-template* | A | contratos/concorrência/negativas |
+| api | test/helpers.ts | M | provider fake e isolamento |
+| api | test/timeline-fixtures.cjs | M | provider fixture para browser |
+| api | test/browser-server.cjs | M | bootstrap/identidade do cenário |
+| api | test/number-onboarding-*.e2e-spec.ts | M | mocks de interface afetada e regressão de send |
+| api | test/canais.e2e-spec.ts | M | propósitos de credencial/canal |
+| web | src/telas/Modelos* | A | editor/list/status e testes |
+| web | src/componentes/Modelo* | A | componentes locais necessários |
+| web | src/messageTemplates* | A | estado/projetor e testes |
+| web | src/api.ts | M | DTO seguro e erro estruturado |
+| web | src/App.tsx | M | menu/rota Modelos disponível ao vendedor |
+| web | e2e/message-templates* | A | browser real mutation |
+| web | e2e/number-onboarding-freshness.ts | M | manifesto source/served se necessário |
+| root | scripts/test-channels-local.sh | M | eliminar varredura de diretório privado; só paths positivos |
+| foundation | todos/active/features/TODO-leadshug-official-template-authoring.md | M | contrato/execução |
+| foundation | todos/active/features/TODO-leadshug-start-conversation-by-contact.md | M | dependência/handoff, sem execução antecipada |
+| foundation | todos/completed/features/TODO-leadshug-official-template-authoring.md | A | closeout após gates |
+| foundation | artifacts/reviews/leadshug-template-authoring-20261019/** | any | pacote/evidência específicos |
+| foundation | artifacts/feature-briefs/leadshug-channel-readiness-and-history-20261015.md | M | nova sequência e story |
+| foundation | backlog/README.md | M | próximo gate do candidato |
+| foundation | artifacts/dependency-readiness.md | M | readiness observada |
+| foundation | modules/integrations-and-channels.md | M | contrato estável de templates após aprovação/entrega |
+| foundation | modules/inbox-and-conversations.md | M | referência do futuro consumer, sem claim ST-CON-04 entregue |
+
+### Not Expected Changed Paths
+| Repository | Path glob | Change types | Reason |
+| --- | --- | --- | --- |
+| api | .local-files/** | any | privado: nem inspecionar/percorrer/montar |
+| api | .env* | any | segredos fora do diff |
+| root | .env* | any | configuração privada intocada no planejamento |
+| root | .gitmodules | any | pipeline-owned |
+| root | api-app | any | gitlink pipeline-owned |
+| root | web-app | any | gitlink pipeline-owned |
+| root | delphi-ai | any | sem self-improvement |
+| web | dist/** | any | gerado não é fonte |
+
+### Diff Deviation Analysis (Required Only When the Guard Returns `no-go`)
+Nenhum guard de diff executado nesta preparação. API exige inventário positivo de paths públicos; guard sem esse limite não pode percorrer .local-files. Necessidade real fora dos paths exige reconvergência e aprovação, sem limpeza silenciosa.
+
+## Bounded But Elastic Guardrails
+
+- **May stay inside this TODO:** concretização de schema, DI, componentes e fixtures do mesmo preparar/submeter/consultar modelo; reutilizar componentes existentes quando comprovados.
+- **Must update or split the TODO:** envio a contato, atualização/exclusão de ativo na Meta, novo tipo de template, novo papel/canal, background jobs ou consumo ST-CON-04 requerem contrato próprio/reconvergência.
+
+## Definition of Done
+
+- [ ] DOD-01 — Vendedor ATENDENTE+ abre Modelos de mensagem, cria/salva/reabre seu rascunho por BU/canal, edita com revision CAS, preenche exemplos e vê prévia coerente; leitor e escopos alheios falham antes de efeitos.
+- [ ] DOD-02 — Submissão no LeadsHug não exige ADMIN; usa a conta/credencial verificadas do canal, valida texto/variáveis/categoria/idioma e confirma snapshot/revisão; nenhuma mensagem ou conversa é criada.
+- [ ] DOD-03 — Replays/duplo clique/crash não repetem POST por operação; conta/nome/idioma concorrentes são protegidos; resultado incerto permanece explícito e reconcile não faz POST externo nem vincula definição diferente.
+- [ ] DOD-04 — Consulta/status e catálogo paginados refletem Meta com frescor/categoria efetiva, sem promover PENDING/UNKNOWN/recusado/pausado a pronto; erro seguro conserva estado anterior e não finge catálogo vazio.
+- [ ] DOD-05 — Troca de BU/canal/revisão, saves concorrentes e status atrasado não sobrescrevem draft/estado atual; refresh da página recupera operação sem chave do browser e sem divulgar token/segredo.
+- [ ] DOD-06 — Schema/migration deploy/status, harness durável, CI-equivalent completo e Playwright mutation passam com API/PG reais e bundle servido fresco; gate send de ST-CON-01 permanece inalterado.
+- [ ] DOD-07 — Operador valida criar/submeter um modelo textual de teste na conta correta e consultar seu resultado real; decisão Meta pode ser PENDING/REJECTED sem falsear APPROVED. Consumo físico aprovado no ST-CON-04 continua dependência separada.
+- [ ] DOD-08 — Decisões e contrato promovidos ao módulo responsável, revisões derivadas/segurança/pcv/TQA/final e guardas de entrega satisfeitos; sem P1/P2 aberto e sem claim de produção.
+
+## Validation Steps
+
+- [ ] VAL-01 — Executar bash scripts/test-channels-local.sh all, após boundary público corrigido, incluindo deploy/status de migrations, lint/build/unit/E2E/Web/Playwright e fonte/served fingerprints.
+- [ ] VAL-02 — Executar barreiras PostgreSQL + contador HTTP para save CAS, key replay, reserva do mesmo nome entre vendedores, lease vencido, timeout pós-dispatch e alteração de conta/geração em voo; sem HTTP em transação.
+- [ ] VAL-03 — Executar web-app/e2e/message-templates.spec.ts via runner canônico com BFF real: editor/preview/save/reopen/submit/refresh/recusa/incerteza/roles/BU-stale e proteção de operação, sem mock BFF.
+- [ ] VAL-04 — Confirmada readiness da conta própria, operador submete modelo de teste e atualiza status pelo LeadsHug; registrar resultado redigido, sem enviar mensagem a destinatário nem declarar aprovação por fixture.
+- [ ] VAL-05 — Rodar architecture adherence/security/pcv/TQA/final/debt/diff público e authority/completion/closeout antes de entrega; reconvergir ST-CON-04 apenas no handoff seguinte.
+
+## Completion Evidence Matrix (Required Before Delivery Claim)
+
+| Criterion ID | Source Section | Criterion | Evidence Type | Evidence Artifact / Command | Runtime Target | Status | Notes |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| DOD-01 | Definition of Done | DOD-01 — Vendedor ATENDENTE+ abre Modelos de mensagem, cria/salva/reabre seu rascunho por BU/canal, edita com revision CAS, preenche exemplos e vê prévia coerente; leitor e escopos alheios falham antes de efeitos. | test/runtime/review | web-app/e2e/message-templates.spec.ts; api-app/test/message-templates.e2e-spec.ts; bash scripts/test-channels-local.sh all; gates VAL-05. | local descartável; recurso próprio só quando explícito | planned | Nenhuma implementação/teste de produto nesta preparação. |
+| DOD-02 | Definition of Done | DOD-02 — Submissão no LeadsHug não exige ADMIN; usa a conta/credencial verificadas do canal, valida texto/variáveis/categoria/idioma e confirma snapshot/revisão; nenhuma mensagem ou conversa é criada. | test/runtime/review | web-app/e2e/message-templates.spec.ts; api-app/test/message-templates.e2e-spec.ts; bash scripts/test-channels-local.sh all; gates VAL-05. | local descartável; recurso próprio só quando explícito | planned | Nenhuma implementação/teste de produto nesta preparação. |
+| DOD-03 | Definition of Done | DOD-03 — Replays/duplo clique/crash não repetem POST por operação; conta/nome/idioma concorrentes são protegidos; resultado incerto permanece explícito e reconcile não faz POST externo nem vincula definição diferente. | test/runtime/review | web-app/e2e/message-templates.spec.ts; api-app/test/message-templates.e2e-spec.ts; bash scripts/test-channels-local.sh all; gates VAL-05. | local descartável; recurso próprio só quando explícito | planned | Nenhuma implementação/teste de produto nesta preparação. |
+| DOD-04 | Definition of Done | DOD-04 — Consulta/status e catálogo paginados refletem Meta com frescor/categoria efetiva, sem promover PENDING/UNKNOWN/recusado/pausado a pronto; erro seguro conserva estado anterior e não finge catálogo vazio. | test/runtime/review | web-app/e2e/message-templates.spec.ts; api-app/test/message-templates.e2e-spec.ts; bash scripts/test-channels-local.sh all; gates VAL-05. | local descartável; recurso próprio só quando explícito | planned | Nenhuma implementação/teste de produto nesta preparação. |
+| DOD-05 | Definition of Done | DOD-05 — Troca de BU/canal/revisão, saves concorrentes e status atrasado não sobrescrevem draft/estado atual; refresh da página recupera operação sem chave do browser e sem divulgar token/segredo. | test/runtime/review | web-app/e2e/message-templates.spec.ts; api-app/test/message-templates.e2e-spec.ts; bash scripts/test-channels-local.sh all; gates VAL-05. | local descartável; recurso próprio só quando explícito | planned | Nenhuma implementação/teste de produto nesta preparação. |
+| DOD-06 | Definition of Done | DOD-06 — Schema/migration deploy/status, harness durável, CI-equivalent completo e Playwright mutation passam com API/PG reais e bundle servido fresco; gate send de ST-CON-01 permanece inalterado. | test/runtime/review | web-app/e2e/message-templates.spec.ts; api-app/test/message-templates.e2e-spec.ts; bash scripts/test-channels-local.sh all; gates VAL-05. | local descartável; recurso próprio só quando explícito | planned | Nenhuma implementação/teste de produto nesta preparação. |
+| DOD-07 | Definition of Done | DOD-07 — Operador valida criar/submeter um modelo textual de teste na conta correta e consultar seu resultado real; decisão Meta pode ser PENDING/REJECTED sem falsear APPROVED. Consumo físico aprovado no ST-CON-04 continua dependência separada. | test/runtime/review | Prova real assistida, response/status scoped e receipt redigido; não fixture. | local descartável; recurso próprio só quando explícito | planned | Nenhuma implementação/teste de produto nesta preparação. |
+| DOD-08 | Definition of Done | DOD-08 — Decisões e contrato promovidos ao módulo responsável, revisões derivadas/segurança/pcv/TQA/final e guardas de entrega satisfeitos; sem P1/P2 aberto e sem claim de produção. | test/runtime/review | web-app/e2e/message-templates.spec.ts; api-app/test/message-templates.e2e-spec.ts; bash scripts/test-channels-local.sh all; gates VAL-05. | local descartável; recurso próprio só quando explícito | planned | Nenhuma implementação/teste de produto nesta preparação. |
+| VAL-01 | Validation Steps | VAL-01 — Executar bash scripts/test-channels-local.sh all, após boundary público corrigido, incluindo deploy/status de migrations, lint/build/unit/E2E/Web/Playwright e fonte/served fingerprints. | test/runtime/review | web-app/e2e/message-templates.spec.ts; api-app/test/message-templates.e2e-spec.ts; bash scripts/test-channels-local.sh all; gates VAL-05. | local descartável; recurso próprio só quando explícito | planned | Nenhuma implementação/teste de produto nesta preparação. |
+| VAL-02 | Validation Steps | VAL-02 — Executar barreiras PostgreSQL + contador HTTP para save CAS, key replay, reserva do mesmo nome entre vendedores, lease vencido, timeout pós-dispatch e alteração de conta/geração em voo; sem HTTP em transação. | test/runtime/review | web-app/e2e/message-templates.spec.ts; api-app/test/message-templates.e2e-spec.ts; bash scripts/test-channels-local.sh all; gates VAL-05. | local descartável; recurso próprio só quando explícito | planned | Nenhuma implementação/teste de produto nesta preparação. |
+| VAL-03 | Validation Steps | VAL-03 — Executar web-app/e2e/message-templates.spec.ts via runner canônico com BFF real: editor/preview/save/reopen/submit/refresh/recusa/incerteza/roles/BU-stale e proteção de operação, sem mock BFF. | test/runtime/review | web-app/e2e/message-templates.spec.ts; api-app/test/message-templates.e2e-spec.ts; bash scripts/test-channels-local.sh all; gates VAL-05. | local descartável; recurso próprio só quando explícito | planned | Nenhuma implementação/teste de produto nesta preparação. |
+| VAL-04 | Validation Steps | VAL-04 — Confirmada readiness da conta própria, operador submete modelo de teste e atualiza status pelo LeadsHug; registrar resultado redigido, sem enviar mensagem a destinatário nem declarar aprovação por fixture. | test/runtime/review | Prova real assistida, response/status scoped e receipt redigido; não fixture. | local descartável; recurso próprio só quando explícito | planned | Nenhuma implementação/teste de produto nesta preparação. |
+| VAL-05 | Validation Steps | VAL-05 — Rodar architecture adherence/security/pcv/TQA/final/debt/diff público e authority/completion/closeout antes de entrega; reconvergir ST-CON-04 apenas no handoff seguinte. | test/runtime/review | web-app/e2e/message-templates.spec.ts; api-app/test/message-templates.e2e-spec.ts; bash scripts/test-channels-local.sh all; gates VAL-05. | local descartável; recurso próprio só quando explícito | planned | Nenhuma implementação/teste de produto nesta preparação. |
+
+## External Dependency Readiness (Required When External Systems Matter)
+
+| Dependency | Why It Matters | Status | Last Verified | Verification Method | Adjustment / Workaround |
+| --- | --- | --- | --- | --- | --- |
+| Conta Meta e grant whatsapp_business_management | criar/listar/status na conta do canal | unknown | 2026-10-19 | fonte atual e informação do operador; nenhum token lido | revalidar readiness no handoff; falta de escopo pede reautorizar pelo fluxo normal |
+| Aprovação Meta do novo modelo | uso posterior fora de janela | unknown | 2026-10-19 | usuário ainda sem template aprovado | criar/submeter é a história atual; aprovação não é garantida nem requisito falso para validar recusa/pending |
+| Docker/runner local | suíte determinística | unknown | fonte scripts/test-channels-local.sh | sem execução nesta preparação | corrigir travessia privada antes de runner, usar Node22/PG16 próprios |
+| HTTPS temporário | prova assistida | unknown | ST-CON-01 teve prova CP108 | nenhuma nova consulta | revalidar antes do operador, sem prometer disponibilidade contínua |
+
+## Profile Scope & Handoffs (Required Before `APROVADO`)
+
+- **Primary execution profile:** operational-coder
+- **Active technical scope:** nestjs,react,vite,postgresql,prisma,docker
+- **Expected supporting profiles:** strategic-cto,operational-devops,assurance-tester-quality,assurance-security-adversarial
+- **Scope-check command:** python3 delphi-ai/tools/profile_scope_check.py --profile strategic-cto
+- **Gate 0:** Genesis rejeitado; projeto e módulos canônicos existentes. Planejamento de ST-CON-05 atual strategic-cto, sem código.
+
+### Handoff Log (Update when execution crosses profile boundaries)
+| From Profile | To Profile | Why the Handoff Exists | Touched Surfaces | Status / Evidence |
+| --- | --- | --- | --- | --- |
+| strategic-cto | operational-coder | implementar após APROVADO | API/Web e testes | planned |
+| operational-coder | operational-devops | publicação local e readiness | runner/containers próprios | planned |
+| operational-coder | assurance-tester-quality | TQA e aderência | pacote limitado | planned |
+| operational-coder | assurance-security-adversarial | auth/idempotência/segredos | BFF e adapter | planned |
+
+## Complexity
+
+- **Level (`small|medium|big`):** big
+- **Checkpoint policy:** section-by-section
+- **Why this level:** novo domínio/modelo persistente com submissão externa, status assíncrono e vendedor autorizado; um objetivo com contratos/DB/UX concorrentes.
+
+## Canonical Module Anchors (Required Before APROVADO)
+
+- **Primary module doc:** foundation_documentation/modules/integrations-and-channels.md
+- **Secondary module docs (if any):** foundation_documentation/modules/inbox-and-conversations.md
+- **Planned decision promotion targets (module sections):** integrations-and-channels: Modelos textuais ST-CON-05 e API Endpoint Definitions; inbox: referência ao catálogo que ST-CON-04 consumirá.
+- **Module decision consolidation targets (required):** mesmos alvos, D-01..08 com provenance do TODO; não promover minuta como implementada. Constituição já admite templates em TODO próprio; não há novo runtime surface ou tenant boundary, apenas rotas BFF existentes.
+
+## Decision Pending (Resolve Before Freeze)
+
+Nenhuma decisão de produto aberta: vendedor pode criar/submeter, confirmado nesta conversa em2026-10-19. Aprovação externa não é decisão delegável ao LeadsHug.
+
+## Decisions (Resolved Before Freeze)
+
+- [x] D-01 — Rota Web /modelos em Cadastros acessível a ATENDENTE+ com seleção de BU/canal oficial. Tela mostra Meus rascunhos e Modelos da conta, com conteúdo/variáveis/prévia/categoria/status em português. ATENDENTE cria/edita/submete seus rascunhos; ADMIN/OWNER da BU pode administrar rascunhos da BU. LEITOR não cria/submete; outra BU/tenant/rascunho de colega sem papel administrativo retorna404/403 conforme existência autorizada. Templates submetidos são ativos compartilhados da Messaging account e seu catálogo é acessível pelos canais autorizados dessa conta; não prometer privacidade individual após submissão. Nenhuma aprovação administrativa intermediária. Fonte: decisão explícita do usuário; No Prior Decision para autoria.
+- [x] D-02 — Editor desta versão cria pt_BR, categoria MARKETING (padrão de abertura comercial) ou UTILITY com descrição correta do uso, sem trocar categoria para contornar Meta. Nome interno normalizado exibido antes de submit, regex [a-z][a-z0-9_]{0,127}; BODY obrigatório1..1024 caracteres; HEADER TEXT e FOOTER estáticos opcionais até60 cada, sem variáveis neles. BODY usa até20variáveis NAMED únicas [a-z][a-z_]{0,31}, todas com exemplo textual fictício1..128caracteres e sem chaves extras/faltantes. Rejeitar braces inválidas, variável solta no início/fim e componentes não suportados; total JSON até16KiB. Prévia usa os MESMOS parser/renderizador do backend, como texto escapado (sem HTML), sem CRM/avaliação de código. Não garantir aprovação. Catálogo pode ler NAMED/POSITIONAL suportados pelo ST-CON-04; criação em NAMED/pt_BR é fronteira explícita. Fonte: Meta fundamentals/components/review; No Prior Decision local.
+- [x] D-03 — Domínio message-templates é owner de draft/revisão/submissão/observação/catalog projector; MetaClient só adapter HTTP. Draft tem mantenedoraId/buId/creatorUserId/channelId/accountId imutáveis, revision monotônica e snapshot de definição; nunca token. Mesmo clientRequestId UUID por BU/ator cria um único draft (auth antes de lookup). PATCH exige expectedRevision e só draft editável; save CAS conflita409. Submit congela revisão; após ativo externo ou resultado incerto, não editar remoto nem mudar conta no mesmo draft: Criar variação faz NOVO rascunho com nome novo confirmado, sem POST Meta até nova ação. Atualizar conteúdo local após recusa pré-dispatch/provada exige revisão/key novas. Fonte: invariantes de BU/backend/persistência Preserve; No Prior Decision para rascunho.
+- [x] D-04 — Gerenciamento de template usa propósito explícito template-management em ChannelCredentialResolver: somente OFICIAL, identidade própria/epoch correntes, managed identity e credencial ativa da geração; tenant/grant ATENDENTE+ e WABA da BU/canal revalidados. Não exigir receiptVerifiedAt/CONECTADO para GERENCIAR template, porque não é mensagem; não usar verify/registration como bypass e NÃO alterar purpose send nem liberar primeiro OUT sem readiness ST-CON-01. App/audience, whatsapp_business_management e alvo da conta são comprovados no backend; nenhuma WABA/token arbitrários do cliente nem fallback global. Reauth no mesmo account exige refresh/expectedGeneration atual; se conta mudar, bloquear draft antigo com CONTA_ALTERADA e permitir nova cópia explícita, não rebinding silencioso. Fonte: integrations scoped credential Preserve; novo propósito é extensão intencional, sem supersede do gate send.
+- [x] D-05 — BFF endpoints do contrato abaixo são de sessão/CSRF. Submit recebe draftId/expectedRevision/expectedGeneration/expectedDefinitionFingerprint + Idempotency-Key UUID; o hash confirmado cobre conta/canal/revisão/nome/idioma/categoria/componentes/exemplos. Reserve operação PREPARED e nome por mantenedora/conta/nome/idioma em transação; revisões imutáveis e chave por BU/ator/payload garantem um dispatch. Guardar reserva entre drafts locais concorrentes da mesma conta (sem divulgar autor alheio); preflight confere ausência de recurso remoto de mesmo nome/idioma em leitura account-scoped, conflito seguro sem substituir ativo. Auth/replay antes de provider reads. Budget por submit até3GETs (grant1 + até2páginas de preflight,50 por página) e1POST, timeout10s cada/budget45s/lease60s. Se lista não se esgota ou é inválida, falhar inconclusivo sem POST. Rate limit durável10tentativas/min por ator e60dispatches/h por conta, incluindo incertos; respeitar429 sem retry automático, não prometer controlar alterações de outros aplicativos. Fonte: No Prior Decision para submit; padrão HTTP fora da tx Preserve.
+- [x] D-06 — PREPARED falha/lease expirada antes de dispatch termina REJECTED(dispatched=false), libera reserva sem ativo externo, sem chamada tardia por CAS vencido. PREPARED→SENDING é CAS com revisão/lease/contexto atuais; uma invocação POST por operação, sem retry de mutação. Resposta válida com id durável vira ACCEPTED, conserva conta/ID originais e snapshot mesmo se depois trocar geração; nunca rebind para conta nova. Status de aprovação é dimensão separada: ACCEPTED não significa APPROVED. Recusa Graph tipada e comprovada vira REJECTED; timeout/malformed/semID/crash após SENDING vira AMBIGUOUS, bloqueia repetir criação dessa revisão/nome, não inventa ID. POST reconcile faz só GETs Meta bounded por grant+até2páginas da conta/nome; aceita vínculo apenas se um único recurso com nome/idioma/definição canônica exata (sem inferir autoria remota). Conta inacessível/diferente, múltiplos matches, nome/conteúdo divergentes, paginação inconclusiva ou ausência mantêm AMBIGUOUS; nenhum POST automático. Recursos já existentes antes de dispatch dão conflito, não adoção. Se não houver correlação segura, conservar recibo e oferecer nova variação com outro nome por ação explícita, preservando a reserva incerta; nenhuma exclusão/limpeza Meta. Um resultado tardio conhecido melhora a MESMA operação de forma monotônica e não duplica associação, nome ou estado de outra revisão. Limite honesto: não exactly-once externo nem garantia de aprovação. Fonte: No Prior Decision para operação.
+- [x] D-07 — GET local não altera status e não chama provider; Atualizar status/catálogo é POST explícito. ProviderApprovalStatus mantém enum próprio PENDING/APPROVED/REJECTED/PAUSED/DISABLED/ARCHIVED/DELETED/IN_APPEAL/PENDING_DELETION/LIMIT_EXCEEDED/UNKNOWN, categoria efetiva, definição atual e observedAt separados do pedido imutável. Somente APPROVED textual suportado e verificado na conta corrente é indicado pronto; APPROVED pode depois mudar. Erro/malformed/permissão perdida conserva observação anterior com unavailable/stale, não aprova nem mascara como vazio. Refresh lease por recurso/contexto com fence e debounce10s evita N+1/requisições sobrepostas; resultado atrasado de outra geração/conta não sobrescreve estado. Reclassificação/corpo alterado externamente aparecem como observação atual, nunca reescrevem snapshot pedido. Erros expõem catálogo fixo/enum traduzido, não payload bruto; exemplos/texto não vão a logs/audit bruto. Listas locais paginação20máx50, catálogo50 com after até512/continuação explícita, zero fan-out ao listar; nunca seguir URL de cursor do cliente/provedor. Catálogo validado/projetor tem um owner reutilizável por ST-CON-04, sem duplicar catálogo no futuro sender. Fonte: autoridade de Meta sobre status e integrations invariants Preserve.
+- [x] D-08 — Formulário e respostas guardados por BU/canal/draftId/revision/geração do contexto e revisão monotônica de UI; A→B→A não aceita resposta velha por igualdade textual. Replay/key ficam na operação, GET seguro por ID recupera submit após refresh, sem guardar token/browser key obrigatória; lista inclui operação atual + até10recentes e estado safe. Erro preserva draft e explica nome conflitado, amostras faltantes, limitação/provider unavailable, rejeição e resultado incerto. UI não declara mensagem enviada nem envia a destinatário; não há botão de uso inoperante antes de ST-CON-04. Prova real desta história verifica submissão e consulta em conta de teste própria, inclusive decisão pending/recusa autêntica; aprovação é dependency para consumir/enviar no ST-CON-04 seguinte. Fonte: ST-ATT-01 freshness Preserve; nova jornada solicitada pelo usuário.
+
+## Module Decision Baseline Snapshot (Required Before APROVADO)
+
+| Module Decision Ref | Current Module Decision | Planned Handling | Evidence |
+| --- | --- | --- | --- |
+| constitution#system-invariants | templates só em TODO próprio, domínio backend, BU scope | Preserve | este contrato próprio e D01..08 |
+| integrations-and-channels#invariants | provider adapter, erro seguro, segredo privado | Preserve | MetaClient/credencial contextual |
+| integrations-and-channels#bff-e-autorização | account template/billing e credenciais por canal | Preserve | D04/05, conta do servidor |
+| integrations-and-channels#cadastro-de-números-st-con-01 | gate send e criptografia atuais | Preserve | propósito management separado, sem receipt para gerenciar; send intocado |
+| ST-CON-04/out-of-scope | criação/submissão de templates fora do primeiro envio | Preserve | ST-CON-05 novo owner; ST-CON-04 depende dele, sem ampliar aquele contrato |
+| inbox-and-conversations#timeline | history/draft freshness | Preserve | não altera Message/conversa/timeline |
+
+## Decision Baseline (Frozen Before Implementation)
+
+- [ ] D-01 — Rota Web /modelos em Cadastros acessível a ATENDENTE+ com seleção de BU/canal oficial. Tela mostra Meus rascunhos e Modelos da conta, com conteúdo/variáveis/prévia/categoria/status em português. ATENDENTE cria/edita/submete seus rascunhos; ADMIN/OWNER da BU pode administrar rascunhos da BU. LEITOR não cria/submete; outra BU/tenant/rascunho de colega sem papel administrativo retorna404/403 conforme existência autorizada. Templates submetidos são ativos compartilhados da Messaging account e seu catálogo é acessível pelos canais autorizados dessa conta; não prometer privacidade individual após submissão. Nenhuma aprovação administrativa intermediária. Fonte: decisão explícita do usuário; No Prior Decision para autoria.
+- [ ] D-02 — Editor desta versão cria pt_BR, categoria MARKETING (padrão de abertura comercial) ou UTILITY com descrição correta do uso, sem trocar categoria para contornar Meta. Nome interno normalizado exibido antes de submit, regex [a-z][a-z0-9_]{0,127}; BODY obrigatório1..1024 caracteres; HEADER TEXT e FOOTER estáticos opcionais até60 cada, sem variáveis neles. BODY usa até20variáveis NAMED únicas [a-z][a-z_]{0,31}, todas com exemplo textual fictício1..128caracteres e sem chaves extras/faltantes. Rejeitar braces inválidas, variável solta no início/fim e componentes não suportados; total JSON até16KiB. Prévia usa os MESMOS parser/renderizador do backend, como texto escapado (sem HTML), sem CRM/avaliação de código. Não garantir aprovação. Catálogo pode ler NAMED/POSITIONAL suportados pelo ST-CON-04; criação em NAMED/pt_BR é fronteira explícita. Fonte: Meta fundamentals/components/review; No Prior Decision local.
+- [ ] D-03 — Domínio message-templates é owner de draft/revisão/submissão/observação/catalog projector; MetaClient só adapter HTTP. Draft tem mantenedoraId/buId/creatorUserId/channelId/accountId imutáveis, revision monotônica e snapshot de definição; nunca token. Mesmo clientRequestId UUID por BU/ator cria um único draft (auth antes de lookup). PATCH exige expectedRevision e só draft editável; save CAS conflita409. Submit congela revisão; após ativo externo ou resultado incerto, não editar remoto nem mudar conta no mesmo draft: Criar variação faz NOVO rascunho com nome novo confirmado, sem POST Meta até nova ação. Atualizar conteúdo local após recusa pré-dispatch/provada exige revisão/key novas. Fonte: invariantes de BU/backend/persistência Preserve; No Prior Decision para rascunho.
+- [ ] D-04 — Gerenciamento de template usa propósito explícito template-management em ChannelCredentialResolver: somente OFICIAL, identidade própria/epoch correntes, managed identity e credencial ativa da geração; tenant/grant ATENDENTE+ e WABA da BU/canal revalidados. Não exigir receiptVerifiedAt/CONECTADO para GERENCIAR template, porque não é mensagem; não usar verify/registration como bypass e NÃO alterar purpose send nem liberar primeiro OUT sem readiness ST-CON-01. App/audience, whatsapp_business_management e alvo da conta são comprovados no backend; nenhuma WABA/token arbitrários do cliente nem fallback global. Reauth no mesmo account exige refresh/expectedGeneration atual; se conta mudar, bloquear draft antigo com CONTA_ALTERADA e permitir nova cópia explícita, não rebinding silencioso. Fonte: integrations scoped credential Preserve; novo propósito é extensão intencional, sem supersede do gate send.
+- [ ] D-05 — BFF endpoints do contrato abaixo são de sessão/CSRF. Submit recebe draftId/expectedRevision/expectedGeneration/expectedDefinitionFingerprint + Idempotency-Key UUID; o hash confirmado cobre conta/canal/revisão/nome/idioma/categoria/componentes/exemplos. Reserve operação PREPARED e nome por mantenedora/conta/nome/idioma em transação; revisões imutáveis e chave por BU/ator/payload garantem um dispatch. Guardar reserva entre drafts locais concorrentes da mesma conta (sem divulgar autor alheio); preflight confere ausência de recurso remoto de mesmo nome/idioma em leitura account-scoped, conflito seguro sem substituir ativo. Auth/replay antes de provider reads. Budget por submit até3GETs (grant1 + até2páginas de preflight,50 por página) e1POST, timeout10s cada/budget45s/lease60s. Se lista não se esgota ou é inválida, falhar inconclusivo sem POST. Rate limit durável10tentativas/min por ator e60dispatches/h por conta, incluindo incertos; respeitar429 sem retry automático, não prometer controlar alterações de outros aplicativos. Fonte: No Prior Decision para submit; padrão HTTP fora da tx Preserve.
+- [ ] D-06 — PREPARED falha/lease expirada antes de dispatch termina REJECTED(dispatched=false), libera reserva sem ativo externo, sem chamada tardia por CAS vencido. PREPARED→SENDING é CAS com revisão/lease/contexto atuais; uma invocação POST por operação, sem retry de mutação. Resposta válida com id durável vira ACCEPTED, conserva conta/ID originais e snapshot mesmo se depois trocar geração; nunca rebind para conta nova. Status de aprovação é dimensão separada: ACCEPTED não significa APPROVED. Recusa Graph tipada e comprovada vira REJECTED; timeout/malformed/semID/crash após SENDING vira AMBIGUOUS, bloqueia repetir criação dessa revisão/nome, não inventa ID. POST reconcile faz só GETs Meta bounded por grant+até2páginas da conta/nome; aceita vínculo apenas se um único recurso com nome/idioma/definição canônica exata (sem inferir autoria remota). Conta inacessível/diferente, múltiplos matches, nome/conteúdo divergentes, paginação inconclusiva ou ausência mantêm AMBIGUOUS; nenhum POST automático. Recursos já existentes antes de dispatch dão conflito, não adoção. Se não houver correlação segura, conservar recibo e oferecer nova variação com outro nome por ação explícita, preservando a reserva incerta; nenhuma exclusão/limpeza Meta. Um resultado tardio conhecido melhora a MESMA operação de forma monotônica e não duplica associação, nome ou estado de outra revisão. Limite honesto: não exactly-once externo nem garantia de aprovação. Fonte: No Prior Decision para operação.
+- [ ] D-07 — GET local não altera status e não chama provider; Atualizar status/catálogo é POST explícito. ProviderApprovalStatus mantém enum próprio PENDING/APPROVED/REJECTED/PAUSED/DISABLED/ARCHIVED/DELETED/IN_APPEAL/PENDING_DELETION/LIMIT_EXCEEDED/UNKNOWN, categoria efetiva, definição atual e observedAt separados do pedido imutável. Somente APPROVED textual suportado e verificado na conta corrente é indicado pronto; APPROVED pode depois mudar. Erro/malformed/permissão perdida conserva observação anterior com unavailable/stale, não aprova nem mascara como vazio. Refresh lease por recurso/contexto com fence e debounce10s evita N+1/requisições sobrepostas; resultado atrasado de outra geração/conta não sobrescreve estado. Reclassificação/corpo alterado externamente aparecem como observação atual, nunca reescrevem snapshot pedido. Erros expõem catálogo fixo/enum traduzido, não payload bruto; exemplos/texto não vão a logs/audit bruto. Listas locais paginação20máx50, catálogo50 com after até512/continuação explícita, zero fan-out ao listar; nunca seguir URL de cursor do cliente/provedor. Catálogo validado/projetor tem um owner reutilizável por ST-CON-04, sem duplicar catálogo no futuro sender. Fonte: autoridade de Meta sobre status e integrations invariants Preserve.
+- [ ] D-08 — Formulário e respostas guardados por BU/canal/draftId/revision/geração do contexto e revisão monotônica de UI; A→B→A não aceita resposta velha por igualdade textual. Replay/key ficam na operação, GET seguro por ID recupera submit após refresh, sem guardar token/browser key obrigatória; lista inclui operação atual + até10recentes e estado safe. Erro preserva draft e explica nome conflitado, amostras faltantes, limitação/provider unavailable, rejeição e resultado incerto. UI não declara mensagem enviada nem envia a destinatário; não há botão de uso inoperante antes de ST-CON-04. Prova real desta história verifica submissão e consulta em conta de teste própria, inclusive decisão pending/recusa autêntica; aprovação é dependency para consumir/enviar no ST-CON-04 seguinte. Fonte: ST-ATT-01 freshness Preserve; nova jornada solicitada pelo usuário.
+
+## Architecture Change Governance (Required When This TODO Establishes, Corrects, or Supersedes Architecture)
+
+- **Applicability (`required|not_needed`):** required
+- **Why this applies:** estabelece owner compartilhado de modelos/submissão e novo propósito seguro de credencial.
+- **Deviation / debt being retired:** falta capacidade de preparar modelo no produto; não introduzir fluxo por token avulso ou criação de catálogo duplicado em Inbox.
+- **Target steady-state after closeout:** domínio message-templates para draft/submission/status/catalogue; MetaClient para HTTP e resolver scoped para segredos; futura inbox apenas consumer.
+- **Temporary exceptions allowed:** none
+- **Cutover / removal condition:** toda criação desta jornada passa pelo owner/revisão/dispatch fence, sem rota técnica paralela ou estado de aprovação local inventado.
+
+### Patterns To Enforce (Required when applicability = `required`)
+| Pattern / Decision | Source / ID | Scope | Why It Must Hold After Cutover |
+| --- | --- | --- | --- |
+| um owner do modelo/revisão | D03 | API/Web/Meta | payload/preview/submissão coerentes |
+| credencial por propósito, BU/conta | ST-CON-01; D04 | resolver/provider | management não libera send |
+| CAS/recibo durável/HTTP fora da tx | D05/06 | submit | doubleclick/restart não duplicam POST |
+
+### Prohibited Anti-Patterns (Required when applicability = `required`)
+| Anti-Pattern / Wrong Path | Detection Signal | Why It Is Forbidden After Cutover | Exception Policy |
+| --- | --- | --- | --- |
+| autorizar só no menu ou exigir ADMIN ao vendedor | BFF role tests/browser seller | contradiz decisão humana | none |
+| cache/process memory ou botão como dedupe | PG barrier/restart | repete create na Meta | none |
+| ACCEPTED/pending como APPROVED | provider fixture states | libera modelo sem análise | none |
+| token global/conta cliente/HTML preview | scoped/XSS tests | quebra fronteira de confiança | none |
+
+### Architecture Protection Harness (Required when applicability = `required`)
+| Harness Type | Surface | Command / Rule / Artifact | Regression It Must Catch | Adoption Timing | Evidence Plan / Follow-up |
+| --- | --- | --- | --- | --- | --- |
+| test | API/PG/provider | api-app/test/message-templates.e2e-spec.ts via bash scripts/test-channels-local.sh all | role, CAS, duplicate submit/name, unknown recovery/status | implement-in-this-todo | DOD02/03/04/06; VAL01/02 |
+| test | Web/BFF real | web-app/e2e/message-templates.spec.ts mesmo runner | editor, preview/save/submit/status, stale BU e perda de key | implement-in-this-todo | DOD01/05/06; VAL03 |
+
+## Architecture Review Gates (Deterministically Derived From Architecture Change Governance)
+
+- **Architecture decision review:** required
+- **Decision review lifecycle:** after diagnosis is closed and before APROVADO
+- **Decision review kind:** architecture_opinion
+- **Decision review package:** bounded-file-set
+- **Decision review status:** not_run
+- **Decision review evidence / resolution:** pending-freeze
+- **Architecture adherence review:** required
+- **Adherence review lifecycle:** after implementation and before Completed
+- **Adherence review kind:** architecture_adherence
+- **Adherence review package:** bounded-file-set
+- **Adherence review status:** not_run
+- **Adherence review evidence / resolution:** planned after implementation
+- **No-go handling:** resolver ausência/divergência antes do gate, sem auto-waiver.
+
+## Gate: Review Baseline Freeze
+
+- **Gate decision:** required
+- **Why this decision:** contrato multi-superfície deve entrar em revisão a partir da autoridade publicada.
+- **Trigger stage:** before the first planning-side review or guard run
+- **Baseline branch:** main
+- **Baseline commit:** pending-freeze
+- **Baseline push reference:** origin/main
+- **Gate status:** not_run
+- **Findings summary:** prepared-pre-freeze; nenhuma revisão de ST-CON-05 executada.
+- **Evidence / reference:** prepared-pre-freeze; nenhuma revisão de ST-CON-05 executada.
+- **Waiver authority / reference (required if waived):** n/a
+
+## Gate: Review Scope Drift
+
+- **Gate decision:** required
+- **Why this decision:** conferir que aprovação usará pacote revisado.
+- **Trigger stage:** after the planning-side review/guard cycle converges and before APROVADO
+- **Baseline source:** Review Baseline Freeze -> Baseline commit
+- **Material sections compared:** Context|Contract Boundary|Scope|Out of Scope|Definition of Done|Validation Steps|Execution Lane Tracking|Canonical Module Anchors|Decisions|Decision Baseline|Architecture Change Governance|Questions To Close|Assumptions Preview|Execution Plan|Flow Evidence Planning Matrix|Local CI-Equivalent Suite Matrix|Runtime / Rollout Notes|Security Risk Assessment|Performance & Concurrency Risk Assessment
+- **Guard command:** python3 delphi-ai/tools/review_scope_drift_guard.py --todo foundation_documentation/todos/active/features/TODO-leadshug-official-template-authoring.md
+- **No-go handling rule:** reconvergir pacote/review e renovar freeze, sem implementação.
+- **Gate status:** not_run
+- **Findings summary:** prepared-pre-freeze; nenhuma revisão de ST-CON-05 executada.
+- **Evidence / reference:** prepared-pre-freeze; nenhuma revisão de ST-CON-05 executada.
+- **Waiver authority / reference (required if waived):** n/a
+
+## Questions To Close
+
+Nenhuma questão material de produto aberta. Usuário confirmou vendedor cria/submete. Permissões reais e decisão Meta são readiness externa, não justificam token manual ou aprovação local falsa.
+
+## Pattern References (Optional; Enforced When Cited)
+
+n/a; contratos/decisões locais citados diretamente, sem ID de catálogo presumido.
+
+## Assumptions Preview (Required Before Plan Review)
+
+| Assumption ID | Assumption | Evidence | If False | Confidence | Handling |
+| --- | --- | --- | --- | --- | --- |
+| A-01 | MetaClient atual não cria/consulta templates. | api-app/src/integrations/meta/meta.client.ts | reutilizar implementação se existir, não duplicar | High | Keep as Assumption |
+| A-02 | Resolver separa send de registration/verify, mas não possui purpose management. | api-app/src/domain/channels/channel-credential-resolver.ts | ajustar design antes de código | High | Keep as Assumption |
+| A-03 | BFFModule usa middleware de sessão no prefixo e DI dos adapters. | api-app/src/surfaces/bff/bff.module.ts | restabelecer auth antes de qualquer endpoint | High | Keep as Assumption |
+| A-04 | App não tem rota /modelos; cliente suporta postWithHeaders para key. | web-app/src/App.tsx; web-app/src/api.ts | reutilizar owner existente | High | Keep as Assumption |
+| A-05 | Harness browser usa API/PG próprios e bundle buildado. | web-app/playwright.config.ts; scripts/test-channels-local.sh | corrigir readiness sem atingir runtime humano | High | Keep as Assumption |
+
+## Execution Plan (Required Before `APROVADO`)
+
+### Touched Surfaces
+Somente inventário positivo do Diff Expectation Contract. Nenhum código/runtime/segredo no planejamento.
+
+### Ordered Steps
+1. APROVADO do ST-CON-05, reload binding, routing/authority go e executor único principal. Conferir baselines públicos sem .local-files.
+2. Test-first de roles, parser/examples/preview, revision CAS, operação/correlação/conta e status sem falso APPROVED; fixtures HTTP com budgets/erros.
+3. Schema/migration aditiva e domínio único de draft/submission/observação; conta/grant/proposito seguros e MetaClient tipado.
+4. Editor/listas/status em Modelos no menu do vendedor, API wrappers seguros e estado/contexto monotônico. Nunca usar secret no browser.
+5. Fonte+runner público corrigido sem travessia privada, all completo em Node22/PG16 descartáveis e Playwright mutation com servido/fonte comprovados.
+6. Readiness da conta própria, operador cria/submete um único modelo de teste, consulta status real e registra resultado sem prometer aprovação.
+7. Arquitetura aderência/segurança/pcv/TQA/final/debt e guardas; consolidação ao módulo; handoff ST-CON-04 reconverge para consumir o owner estabelecido, em outro contrato aprovado.
+
+### Test Strategy
+- **Strategy:** test-first
+- **Why:** novo estado persistido + side effect externo + autorização de vendedor.
+- **Fail-first target(s) (when required):** API E2E/PG e Playwright da criação/submit/status, duplicate POST e conta alheia.
+
+### Pre-APROVADO RED Evidence Capture (Optional for bugfix/regression)
+- **Decision (`required|recommended|not_needed|waived`):** not_needed
+- **Why now:** feature nova; diagnóstico por fonte, sem bug ambíguo a reproduzir antes da aprovação.
+- **Target symptom:** n/a
+- **Allowed surfaces:** none
+- **Forbidden surfaces reaffirmed:** production code|runtime/config/deploy|canonical project docs outside TODO authoring
+- **Planned command / target:** n/a
+- **Status (`not_run|running|red_reproduced|red_not_reproduced|blocked|waived`):** not_run
+- **Findings summary:** nenhum teste/produto executado nesta preparação.
+
+### Flow Evidence Planning Matrix (Required Before `APROVADO`)
+| Criterion / Flow | Why Flow-Impacting | Platform Parity | Required Runtime Lane | Mutation Lane Required? | Backend Real-Data Required? | Planned Evidence | Non-Applicability Rationale |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| DOD01/02 editor/vendedor | create/save/readback/preview/submit | web-only | Playwright mutation | yes | yes | e2e/message-templates.spec.ts via canonical runner | n/a |
+| DOD03/04 outcome/catalog/status | payload/state/provider lifecycle | web-only | Playwright mutation + PG concurrency | yes | yes | mesma spec + test/message-templates.e2e-spec.ts | n/a |
+| DOD05 stale/refresh | race/draft/perda key | web-only | Playwright mutation | yes | yes | A→B→A/save+submit/refresh e readback real | n/a |
+| DOD06/08 + VAL01/02/03/05 | harness/gates transversais | web-only | browser acima + audits | yes | yes | fonte/servido, DB/porta mesmos de CI-equivalent e guards por critério | n/a |
+| DOD07/VAL04 físico | criação na Meta verdadeira | web-only | operador no ambiente local próprio | yes | yes | receipt redigido do submit/status, sem destinatário | fixture não substitui |
+
+### Local CI-Equivalent Suite Matrix (Required Before `APROVADO` and Before Delivery Claim)
+Colunas duplicadas de Status projetam o MESMO fato para leitores de guardas com índices distintos; Evidence conserva todas as ressalvas. Não são execuções diferentes.
+
+| Repository / CI Surface | Why In Scope | Local CI-Equivalent Command | Required Before | Status (completion projection) | Evidence Artifact / Command | Status (authority projection) | Notes | Behavior / Scenario Covered | Fixture / Seed / Runtime Preconditions |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| api / API + PostgreSQL E2E | schema/domínio/Meta/role | bash scripts/test-channels-local.sh all | Local-Implemented | planned | Nenhuma execução atual; npm ci/lint/build/unit/E2E completos, deploy/status | planned | sem subset como aceite | CAS/replay/mesmo nome/tenant/purpose/status/parser | Node22/PG16 próprios, provider fake determinístico; dois vendedores+leitor+admin e duas BUs/tenants |
+| web / build+unit+browser | menu/editor/fluxo | bash scripts/test-channels-local.sh all | Local-Implemented | planned | e2e/message-templates.spec.ts e regressões completas; BFF não simulado | planned | mesmo run all | draft/save/submit/status/erro/stale/refresh | DB/API mesmos de CI-equivalent;4173/3100/3101; fonte e bundle servido fresco comprovados |
+| root / compose/runner | boundary operacional | bash scripts/test-channels-local.sh all | Local-Implemented | planned | só inventário público positivo/masks falsas; nenhum .env real/.local-files | planned | não tocar namespace humano | montagem/ownership/build de validação | namespace validation exclusivo, sem recurso preexistente |
+
+### Runtime / Rollout Notes
+Migration aditiva; deploy/status primeiro em PG descartável, sem reset humano. API/Web servidas a partir da principal com comparação de artefatos, não dist antigo. Coorte privada de teste mantém limites do ST-CON-01. Sem novos subscriptions Meta, background job, envio a cliente, política de aprovação local ou deploy/push de produto.
+
+## Plan Review Gate (Review of the Execution Plan; required for `medium|big`; abbreviated for low-risk `small`)
+
+### Review Sections
+- [ ] Architecture
+- [ ] Code Quality
+- [ ] Tests
+- [ ] Performance
+- [ ] Security
+- [ ] Elegance
+- [ ] Structural Soundness
+
+### Issue Cards
+- **Issue ID:** PLAN-01
+  - **Severity:** medium
+  - **Evidence:** user explicitly permits seller submit, current credential resolver gates sending on receipt.
+  - **Why it matters now:** reuse send/verify naively either blocks management needlessly or weakens message readiness.
+  - **Option A (Recommended):** propósito template-management explícito, mesmo owner/grant/crypto, gate send preservado.
+    - **Effort:** medium; **Risk:** medium; **Blast radius:** module; **Maintenance burden:** low; **Performance impact:** neutral; **Elegance impact:** improves; **Structural soundness impact:** improves.
+  - **Option B (Alternative):** usar verify/registration como atalho ou desabilitar gate send.
+    - **Effort:** low; **Risk:** high; **Blast radius:** cross-module; **Maintenance burden:** high; **Performance impact:** neutral; **Elegance impact:** regresses; **Structural soundness impact:** regresses.
+  - **Option C (Do Nothing):** só criar pelo painel Meta; **Effort:** low; **Risk:** medium; **Blast radius:** local; **Maintenance burden:** low; **Performance impact:** neutral; **Elegance impact:** neutral; **Structural soundness impact:** neutral.
+  - **Recommendation:** A; pedido deve ser cumprido dentro do produto com boundary explícito.
+- **Issue ID:** PLAN-02
+  - **Severity:** medium
+  - **Evidence:** POST Meta pode resultar em recurso criado mesmo quando resposta falha.
+  - **Why it matters now:** repetir mutação gera erro/duplicação e mistura autoria/status.
+  - **Option A (Recommended):** operação/revisão duráveis e reconcile GET-only por conta/nome/idioma/definição exatos, sem inferir autoria.
+    - **Effort:** medium; **Risk:** medium; **Blast radius:** module; **Maintenance burden:** medium; **Performance impact:** neutral; **Elegance impact:** improves; **Structural soundness impact:** improves.
+  - **Option B (Alternative):** retry automático por erro/timeout.
+    - **Effort:** low; **Risk:** high; **Blast radius:** module; **Maintenance burden:** high; **Performance impact:** regresses; **Elegance impact:** regresses; **Structural soundness impact:** regresses.
+  - **Option C (Do Nothing):** sem submeter no produto; **Effort:** low; **Risk:** medium; **Blast radius:** local; **Maintenance burden:** low; **Performance impact:** neutral; **Elegance impact:** neutral; **Structural soundness impact:** neutral.
+  - **Recommendation:** A; registrar limite externo sem exactly-once prometido.
+
+### Failure Modes & Edge Cases
+- [ ] Editor e submit de abas diferentes: expectedRevision/fingerprint; active operation imutável.
+- [ ] Dois vendedores mesmo nome/idioma; conflito sem divulgação de rascunho privado e sem segundo POST concorrente.
+- [ ] Reauth/troca de conta em voo, escopo management ausente ou decrypted key inválida: falha seguro, preserva recibo/account original.
+- [ ] Graph recusa/limite, pendente, pausado, categoria alterada, JSON inválido ou ausência de status: não inventar aprovado/vazio.
+- [ ] Timeout/crash; match remoto diferente/incerto; late result não altera revisão/contexto novos.
+- [ ] Refresh conta/grant diferente ou atrasado: fence de lease/contexto e UI monotônica.
+
+### Residual Unknowns / Risks
+- [ ] Aprovação Meta e acesso efetivo da conta ainda precisam prova real; não há garantia de prazo/status aprovado.
+- [ ] Outro aplicativo pode criar/alterar modelo na mesma conta; preflight não torna criação externa exatamente-uma-vez.
+- [ ] Rascunho privado local e ativo compartilhado da conta são conceitos distintos, explicitados na UI.
+- [ ] Revisões ainda prepared-pre-freeze; nenhuma autorização de implementação.
+
+## Additional Architectural Opinions (Required When Path Remains Materially Unclear)
+
+- **Needed:** no
+- **Why ambiguity remains:** n/a; a gate architecture_opinion obrigatória desafiará a direção, sem opinião duplicada.
+- **Opinion count:** 0
+- **Package mode:** bounded-file-set
+- **Internal reviewer mandate:** required na gate arquitetural
+- **Required lenses:** correctness,performance,elegance,structural-soundness,operational-fit
+
+## Audit Trigger Matrix (Required Before Audit Decisions Are Trusted)
+
+- **Canonical method:** wf-docker-audit-escalation-method
+- **Guard command:** python3 delphi-ai/tools/audit_escalation_guard.py --todo foundation_documentation/todos/active/features/TODO-leadshug-official-template-authoring.md
+- **Latest TEACH evidence / artifact:** pending-freeze
+
+| Trigger | Value | Notes |
+| --- | --- | --- |
+| complexity | big | escopo ST-CON-05; derivar após freeze |
+| blast_radius | cross-stack | escopo ST-CON-05; derivar após freeze |
+| behavioral_change_or_bugfix | yes | escopo ST-CON-05; derivar após freeze |
+| changes_public_contract | yes | escopo ST-CON-05; derivar após freeze |
+| touches_auth_or_tenant | yes | escopo ST-CON-05; derivar após freeze |
+| touches_runtime_or_infra | yes | escopo ST-CON-05; derivar após freeze |
+| touches_tests | yes | escopo ST-CON-05; derivar após freeze |
+| critical_user_journey | yes | escopo ST-CON-05; derivar após freeze |
+| release_or_promotion_critical | no | escopo ST-CON-05; derivar após freeze |
+| high_severity_plan_review_issue | no | escopo ST-CON-05; derivar após freeze |
+| explicit_three_lane_request | no | escopo ST-CON-05; derivar após freeze |
+
+## Independent No-Context Critique Gate (Deterministic Floor From Audit Escalation)
+
+- **Critique decision:** required
+- **Why this decision:** big, nova criação externa por vendedor, schema/UX/tenant.
+- **Impact signals in scope:** public contract/schema/api|auth|runtime
+- **Package mode:** bounded-file-set
+- **Package minimum contents:** TODO congelado, código público limitado, parecer arquitetural/disposições, riscos/DoD/matrizes.
+- **Critique isolation mode:** fresh internal no-context reviewer
+- **Internal reviewer mandate:** required; reviewer não executor, aguardar terminal sem prazo arbitrário
+- **Critique lenses:** correctness,performance,elegance,structural-soundness,risk
+- **Critique status:** not_run
+- **Findings summary:** pending-freeze
+- **Resolution ledger:** nenhuma revisão de ST-CON-05 executada
+- **Evidence / reference:** pending-freeze
+- **Waiver authority / reference (required if waived):** n/a
+
+## Gate: Assumption Code Coherence
+
+- **Gate decision:** required
+- **Why this decision:** pressupostos concretos de API/credencial/UI/harness.
+- **Trigger stage:** after critique convergence and before APROVADO
+- **Guard scope:** A-01..05
+- **Guard command:** python3 delphi-ai/tools/assumption_code_coherence_guard.py --todo foundation_documentation/todos/active/features/TODO-leadshug-official-template-authoring.md
+- **Gate status:** not_run
+- **Findings summary:** pending-freeze
+- **Evidence / reference:** pending-freeze
+- **Waiver authority / reference (required if waived):** n/a
+
+## Approval
+
+- **Approved by:** pending
+- **Approval reference:** pending
+- **Approval scope:** proposta ST-CON-05/SCOPE01..05/D01..08; confirmação vendedor cria/submete define direção e não substitui APROVADO de implementação.
+- **Execution not authorized by approval:** todo Out of Scope, consumo ST-CON-04 e ações externas durante planejamento.
+- **Renewed approval required when:** decisão/critério/risco/paths ou objetivo mudam materialmente.
+
+## Rules Acknowledgement / Ingestion (Required After `APROVADO` and Before Execution)
+
+Ingestão de planejamento; reload binding obrigatório após APROVADO antes de produto.
+
+| Source | Why It Applies Now | Must Preserve | Must Avoid | Execution Impact |
+| --- | --- | --- | --- | --- |
+| delphi-ai/main_instructions.md | autoridade e roteamento | executor único | código no planejamento | handoff após aprovação |
+| delphi-ai/workflows/docker/todo-approval-gates-method.md | aprovação | freeze/reviews/APROVADO | concordância genérica como execução | authority pré/post |
+| delphi-ai/workflows/docker/effort-selection-method.md | routing | agent_role_routing_guard.py | fingir modelo primário | guard antes da lane |
+| delphi-ai/workflows/nestjs/change-application-boundary-method.md | BFF/domínio | adapters finos | regra no controller | contratos E2E |
+| delphi-ai/workflows/react/change-ui-boundary-method.md | formulário/estado | freshness/draft | resposta atrasada | Playwright mutation |
+| delphi-ai/rules/stacks/prisma/prisma-schema-migration-always-on.md | schema | migration versionada | reset operacional | deploy/status descartável |
+| delphi-ai/rules/stacks/postgresql/postgresql-data-integrity-always-on.md | intenção/locks | unique/CAS | HTTP em tx | barriers reais |
+| foundation_documentation/project_constitution.md | multi-tenant | BU/Contato | credencial global | testes scoped |
+| foundation_documentation/policies/scope_subscope_governance.md | rotas existentes | BFF sessão | endpoint fora do owner | contrato explícito |
+| delphi-ai/workflows/docker/performance-concurrency-validation-method.md | pcv-1 | quatro lanes | prose sem artefato | JSON/hash antes entrega |
+
+## Agent Routing Preflight (Required Before Execution When Effort/Model Routing Applies)
+
+- **Client surface:** codex
+- **Current governed action:** implementation
+- **Selected role:** routine-executor
+- **Selected model:** gpt-6-luna
+- **Selected effort:** medium
+- **Proof mode:** declared
+- **Exception reason:** n/a
+- **Subagent / delegation authorization:** main_instructions.md e todo-approval-gates-method exigem executor e reviewers independentes; produto só após APROVADO.
+- **Execution topology:** primary-checkout-single-writer
+- **Worktree / auxiliary-checkout authorization:** not-authorized
+- **Worktree authorization evidence:** n/a
+- **Writer scheduling policy:** single-writer-serialized
+- **Guard outcome:** pending
+- **Waiver / exception reference:** n/a
+
+Formal-review architecture_opinion e critique: gpt-6.1-sol/max, fresh fork_turns none, guard distinto. Modelo da sessão primária não reconfigurado nem declarado como outro.
+
+## Decision Adherence Validation (Mandatory Before Delivery)
+
+Planejado para o gate de entrega após APROVADO; nenhum resultado de implementação reivindicado.
+
+## Module Decision Consistency Validation (1-1 Mandatory Before Delivery)
+
+Planejado para o gate de entrega após APROVADO; nenhum resultado de implementação reivindicado.
+
+## Pipeline/Copilot P1/P2 Preflight
+
+Planejado para o gate de entrega após APROVADO; nenhum resultado de implementação reivindicado.
+
+## Rule-Spirit Anti-Pattern Hunt
+
+Planejado para o gate de entrega após APROVADO; nenhum resultado de implementação reivindicado.
+
+## Promotion Finding Routing Ledger (Required When Promotion/Review Finds Any Finding)
+
+Planejado para o gate de entrega após APROVADO; nenhum resultado de implementação reivindicado.
+
+## TODO Closeout Disposition
+
+- **Disposition:** keep-active
+- **Disposition reason:** preparação/revisão do novo contrato.
+- **Post-commit/push status:** pending
+- **Next path/status action:** terminar reviews/guardas e pedir APROVADO, sem produto entregue.
+
+## Security Risk Assessment (Mandatory Before Delivery)
+
+- **Risk level:** high
+- **Why this risk level:** vendedor pode criar ativo externo de conta compartilhada; autorização/credencial/contexto são críticos.
+- **Attack surface in scope:** BFF sessão/CSRF, owner local/BU/tenant/account, name/key/cursor, XSS/preview, safe error/secret, provider quota.
+- **Attack simulation decision:** required
+- **Review evidence:** planned após implementação, inclusive vendor versus leitor/foreign draft/channel e cursores/erro/secret.
+- **Residual security risk:** conta externa compartilhada é autoridade dos ativos; drafts locais não são expostos entre autores sem direito administrativo; coorte privada atual preservada.
+
+## Performance & Concurrency Risk Assessment (Mandatory Before Delivery)
+
+- **Policy schema version:** pcv-1
+- **Global sensitivity level:** high
+- **Why this level:** escrita externa e concorrência com webhook e UI.
+- **Current delivery stage at review time:** Pending
+
+| Lane ID | Lane | Trigger Result | Trigger Severity | Trigger Reason Code | Gate Deadline | Minimum Evidence Rule | State | Residual Risk | Uncertainty Reason Code |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| EPS | endpoint-performance-scrutiny | required | medium | EPS-QUERY-SHAPE-CHANGED | before_local_implemented | EPS-E2 | pending | none | none |
+| FRC | frontend-race-condition-validation | required | high | FRC-DUPLICATE-MUTATION | before_local_implemented | FRC-E3 | pending | none | none |
+| BCI | backend-concurrency-idempotency-validation | required | high | BCI-IRREVERSIBLE-SIDE-EFFECT | before_local_implemented | BCI-E3 | pending | external ambiguity explicit | none |
+| RLS | runtime-load-stress-validation | rstatusmmended | medium | RLS-CACHE-INDEX-SENSITIVE-PATH-CHANGED | before_local_implemented | RLS-E1 | pending | none | none |
+
+### Lane Detail Packet Template
+#### EPS
+- **Trigger rationale:** listagem/lookup scoped de drafts/observações e reserva de nome; EXPLAIN ANALYZE com amostra cardinalidade, limite de página e budget externo. Sem N+1/catalog fan-out.
+- **Rstatusrded at (UTC):** 2026-10-19T20:34:09Z
+- **Executor ID:** planned-executor-st-con-05
+- **Evidence object:** pending; JSON pcv-1 com sha256 antes da entrega, não existe execução ainda.
+#### FRC
+- **Trigger rationale:** save+submit e atraso em troca BU/canal/draft; Playwright real, rastrear requests e estado no backend.
+- **Rstatusrded at (UTC):** 2026-10-19T20:34:09Z
+- **Executor ID:** planned-executor-st-con-05
+- **Evidence object:** pending; JSON pcv-1 com sha256.
+#### BCI
+- **Trigger rationale:** barreiras PG/contador HTTP, submit e reserva de nome, crash antes/depois POST e rstatusncile seguro; provar invariantes D-06/07.
+- **Rstatusrded at (UTC):** 2026-10-19T20:34:09Z
+- **Executor ID:** planned-executor-st-con-05
+- **Evidence object:** pending; JSON pcv-1 com sha256.
+#### RLS
+- **Trigger rationale:** pequeno ensaio de concorrência/load bounded do novo fluxo/listagem no PG descartável; não claim SLO ou produção.
+- **Rstatusrded at (UTC):** 2026-10-19T20:34:09Z
+- **Executor ID:** planned-executor-st-con-05
+- **Evidence object:** pending; resolver rstatusmendação com evidência ou waiver válido até o deadline, sem deixar pendente na entrega.
+
+## Verification Debt Assessment (Required Before `Completed`; mandatory audit for `medium|big` or when debt signals exist)
+
+- **Audit outcome:** high
+- **Why this outcome:** não implementado; toda evidência de produto pendente, sem claim de entrega.
+- **Inline code TODO debt:** none
+- **Evidence / audit artifact:** planned após implementação
+- **Accepted residual debt:** none; dependência externa não é waiver.
+
+## Independent Test Quality Audit Gate (Deterministic Floor From Audit Escalation)
+
+- **Audit decision:** required
+- **Why this decision:** big, contrato/API/schema/auth e fluxo crítico.
+- **Trigger signals in scope:** architectural change|shared contract/api/schema|critical-user-journey
+- **Impact signals in scope:** cross-module blast radius|public contract/schema/api|auth/payment
+- **Required evidence matrix (when architectural):** unit|integration|web real-backend
+- **Package mode:** bounded-file-set
+- **Package minimum contents:** baseline aprovado, diff público limitado, evidência por critério, aderência e riscos.
+- **Internal reviewer mandate:** required, fresh internal no-context reviewer, não executor; aguardar terminal.
+- **Canonical method:** wf-docker-independent-test-quality-audit-method
+- **Canonical multi-lane audit protocol (when required):** audit-protocol-triple-review
+- **Audit session / round evidence (when protocol used):** planned após implementação
+- **Audit status:** not_run
+- **Findings summary:** none; nenhuma auditoria de entrega executada
+- **Evidence / reference:** planned após implementação
+- **Waiver authority / reference (required if waived):** n/a
+
+## Independent No-Context Final Review Gate (Deterministic Floor From Audit Escalation)
+
+- **Final review decision:** required
+- **Why this decision:** big, contrato/API/schema/auth e fluxo crítico.
+- **Trigger signals in scope:** architectural change|shared contract/api/schema|critical-user-journey
+- **Impact signals in scope:** cross-module blast radius|public contract/schema/api|auth/payment
+- **Required evidence matrix (when architectural):** unit|integration|web real-backend
+- **Package mode:** bounded-file-set
+- **Package minimum contents:** baseline aprovado, diff público limitado, evidência por critério, aderência e riscos.
+- **Internal reviewer mandate:** required, fresh internal no-context reviewer, não executor; aguardar terminal.
+- **Canonical method:** wf-docker-independent-test-quality-audit-method
+- **Canonical multi-lane audit protocol (when required):** audit-protocol-triple-review
+- **Audit session / round evidence (when protocol used):** planned após implementação
+- **Final review status:** not_run
+- **Findings summary:** none; nenhuma auditoria de entrega executada
+- **Evidence / reference:** planned após implementação
+- **Waiver authority / reference (required if waived):** n/a
+
+## Independent Cutover Integrity Audit Gate
+
+- **Cutover audit decision:** not_needed
+- **Why this decision:** rota aditiva sem dual-write/compatibilidade temporária ou remoção de legado; owner único preservado. Reclassificar se implementação introduzir bridge.
+- **Cutover signals in scope:** none
+- **Package mode:** bounded-file-set
+- **Canonical multi-lane audit protocol (when used):** n/a
+- **Cutover audit status:** not_run
+- **Findings summary:** none
+- **Evidence / reference:** D-03/06/07 e arquitetura requerida
+- **Waiver authority / reference (required if waived):** n/a
+
+## Delivery Confidence Gate (Required for `✅ Production-Ready`)
+
+Planejado para o gate de entrega após APROVADO; nenhum resultado de implementação reivindicado.
+
+## Module Consolidation Gate (Required Before `Completed`)
+
+Planejado para o gate de entrega após APROVADO; nenhum resultado de implementação reivindicado.
+
+## Commands (Run Locally)
+
+Guardas de planejamento após freeze; produto somente depois de APROVADO: bash scripts/test-channels-local.sh all. Nenhum teste/build/account call atual.
+
+## Files Expected (Compatibility Note)
+
+Diff Expectation Contract governa os paths, sem autorização de mudanças além dele.
+
+## COMENTÁRIO:
+
+Nenhuma pergunta de produto material pendente.
+
+## Frontend / Consumer Matrix and BFF Contract
+
+| Producer / endpoint | Consumer | Auth/owner/body | Effect / evidence |
+| --- | --- | --- | --- |
+| GET /api/bff/business-units/:buId/channels/:channelId/message-template-capabilities | BU/canal selector/editor | sessão/grant ATENDENTE+; somente DB/contexto público safe | disponível/explicação/gen corrente, sem provider/token |
+| GET /api/bff/business-units/:buId/message-templates?view=mine&page=1 | meus rascunhos/list | scoped creator; view=bu só ADMIN+;20/50limite | local somente, ordem createdAt/id e page/temMais |
+| POST /api/bff/business-units/:buId/message-templates | editor | ATENDENTE+ e CSRF; {clientRequestId,channelId,expectedGeneration,name,language,category,body,header?,footer?,examples} | draft revision1, conta derivada no server, nenhum POST Meta |
+| GET/PATCH /api/bff/message-templates/:id | editor/save/reopen | own draft ou ADMIN BU; PATCH {expectedRevision,definition} | GET observacional, PATCH CAS; DTO safe |
+| POST /api/bff/message-templates/:id/submit | confirmação vendedor | owner/admin, sessão/CSRF, key UUID; {expectedRevision,expectedGeneration,expectedDefinitionFingerprint} | operação persistente; até1POST Meta, nunca /messages |
+| GET /api/bff/message-templates/:id/operations/:operationId | recovery/readback | mesma BU+owner/admin; ID scoped, sem key browser | resultado seguro e última observação; GET sem mutação/provider |
+| POST /api/bff/message-templates/:id/operations/:operationId/reconcile | resultado incerto | owner/admin, sessão/CSRF | GETs Meta bounded; nenhum POST Meta, mantém incerto se sem correlação exata |
+| POST /api/bff/message-templates/:id/refresh | Atualizar status | owner/admin, sessão/CSRF; identidade conta original revalidada | leitura remota bounded, salva observação com fence |
+| GET/POST /api/bff/business-units/:buId/channels/:channelId/message-template-catalog | modelos da conta | ATENDENTE+; GET cache local pagina, POST refresh com {after?} e CSRF | uma página externa por ação/sem fan-out; id/nome/idioma/components/status/fingerprint/support; reutilizável por consumer futuro |
+
+**Field Definitions:** draft local: DRAFT (editável sem submissão/ativo externo), LOCKED (revisão congelada em submit/resultado externo ou incerto). SubmissionOutcome: PREPARED (nenhum dispatch), SENDING (dispatch reservado), ACCEPTED (ID conhecido), REJECTED (recusa comprovada), AMBIGUOUS (resultado desconhecido). ProviderApprovalStatus: PENDING/APPROVED/REJECTED/PAUSED/DISABLED/ARCHIVED/DELETED/IN_APPEAL/PENDING_DELETION/LIMIT_EXCEEDED/UNKNOWN conforme observação externa; UNKNOWN não é aprovação. Category: MARKETING (abertura/oferta comercial) ou UTILITY (atualização transacional legítima); categoria efetiva Meta separada da solicitada. Purpose template-management gerencia ativo sem enviar mensagem; send mantém gate anterior.
+
+Statuses de HTTP:401 sem sessão,403 papel insuficiente em BU conhecida,404 recurso/autor alheio sem direito,409 revisão/conta/nome/key conflitante,202 operação em andamento,201 novo draft/submissão aceita,200 leitura/replay,429 limite com retry-after safe,503 provider inconclusivo com outcome safe. Nunca retornar mensagem/bruto/URL/token do provider. Rejeição Meta de análise é providerStatus REJECTED, não erro de transporte e não falha fictícia de criar.
+
+## Planning External References — consulted 2026-10-19
+
+Primary Meta documentation read as public official Markdown, no account calls: [Fundamentals](https://developers.facebook.com/documentation/business-messaging/whatsapp/templates/overview/), [Components](https://developers.facebook.com/documentation/business-messaging/whatsapp/templates/components/), [Review](https://developers.facebook.com/documentation/business-messaging/whatsapp/templates/template-review/), [Template API](https://developers.facebook.com/documentation/business-messaging/whatsapp/reference/whatsapp-business-account/message-template-api/). Defines account asset/creation/examples/limits/approval states. Product subset and privilege are explicit local decisions, not asserted provider restrictions.
+
+## Module coherence — one-to-one
+
+D01: user vendor create+submit, internal role/grant preserved. D02: Meta component subset, own TODO fulfills constitution. D03: backend owner/persistence preserved, No Prior Decision for draft. D04: scoped credential preserved, new management purpose does not alter send. D05/D06: HTTP outside tx and no secrets preserved, new mutation governed by own operation. D07: Meta authority/status and provider adapter preserved. D08: freshness patterns preserved, firstsend stays separate ST-CON-04. No constitutional invariant or runtime auth surface is changed.

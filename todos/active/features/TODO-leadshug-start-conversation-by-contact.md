@@ -41,7 +41,7 @@ ST-CON-01 encerrou a prova local de cadastro e troca real dos dois transportes, 
 
 - **Current delivery stage:** Pending
 - **Qualifiers:** none
-- **Next exact step:** solicitar APROVADO específico para implementar localmente este contrato revisado; produto ainda não alterado, prova oficial proativa depende de template elegível.
+- **Next exact step:** usuário pediu autoria/submissão no produto em2026-10-19; primeiro revisar/aprovar/entregar ST-CON-05, depois rebase/reconvergência deste consumer e APROVADO próprio.
 
 ## Active Work State (Required While TODO Remains In `active/`)
 
@@ -795,3 +795,7 @@ Assumption-code guard inicialmente retornou NO-GO apenas em A01: seu parser PATH
 - Authority pre-approval: preflight-go, execution_authority_granted=false. Validação estrutural PASS. Nenhum teste de produto/build/browser executado neste planejamento e nenhum código/runtime/conta Meta alterado.
 - Template aprovado: operador ainda não possui; essa prova real permanece pendente, não é satisfeita por fixture. Dados antigos sem observação oficial confiável não recebem janela inferida nem backfill de createdAt.
 - Única próxima autorização: APROVADO humano específico deste contrato final; não reusar aprovação de ST-CON-01. Mudança material posterior exige reconvergência/aprovação, sem source push/deploy ou outras exclusões implícitas.
+
+## Sequencing handoff — request2026-10-19
+
+Usuário quer vendedor criar e enviar modelo para análise da Meta dentro do LeadsHug. Autoridade desse novo objetivo é o [TODO ST-CON-05](TODO-leadshug-official-template-authoring.md), não uma ampliação silenciosa deste sender. ST-CON-04 permanece sem aprovação/implementação e preserva suas exclusões de criação/gestão. Após entrega do ST-CON-05, rebasear premissas/source/diff/DI para consumir o mesmo domínio/catálogo, sem duplicá-lo; rerodar reviews afetados/guardas e pedir APROVADO do consumer então. Revisões/guardas anteriores continuam evidência histórica de seu próprio baseline, não autorização do programa ampliado.
