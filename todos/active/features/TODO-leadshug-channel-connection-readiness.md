@@ -41,12 +41,12 @@ Proposta ST-CON-01: jornada de cadastro de número, com infraestrutura local est
 
 - **Current delivery stage:** Pending
 - **Qualifiers:** Blocked
-- **Next exact step:** CP93: pausar repetição do popup/SMS. Tela humana mostra introdução → telefone com somente Sandbox elegível; Voltar não abre seleção de ativos. Documentação Meta atual confirma v4 com telefone primeiro e interpretação de extras sem version como v4. Conferir configuração efetiva no Embedded Signup Builder / Check a launch config com extras públicos {setup:{}} e produtos/ativos/permissões da configuração antes de orientar outro cadastro. Local Test Ofc ativa e sem canal; QR preservado. Causa da ausência do número operacional ainda não comprovada; VAL05 aberto.
+- **Next exact step:** CP94: configuração selecionada confirmada v4/cloud_api/coexistênciaOff/WABA-onlyOff/session3. App Review está em rascunho Não enviado, mas isso não prova bloqueio de teste com ativos próprios. Operador compara portfólio proprietário da Messaging account operacional com unifast.br2 (proprietário do app), sem enviar IDs. Conferir acesso às duas classes de ativos WhatsApp account e Messaging account. Mesmo proprietário → verificar grants de teste próprio; proprietário distinto → avaliar Advanced Access para ativos de outra empresa. Sem novo cadastro/SMS, seleção Sandbox ou submissão automática da análise. VAL05 aberto.
 
 ## Active Work State (Required While TODO Remains In `active/`)
 
 - **Work state:** blocked
-- **Why this state now:** fluxo Meta atual abre telefone primeiro e não oferece o número operacional; falta conferir configuração efetiva, ativos/elegibilidade e permissões antes da seleção WABA e prova real. URLs Meta do hostname CP90 também aguardam confirmação humana.
+- **Why this state now:** configuração real v4 já conferida; número operacional segue ausente. Falta determinar proprietário e grants das duas classes de ativos para distinguir teste próprio Standard de acesso externo Advanced, antes da nova prova real.
 - **Exit condition:** acesso HTTPS validado, URLs Meta atualizadas pelo operador e WABA/número corretos selecionados pelo fluxo oficial. A indisponibilidade de um segundo número não bloqueia essa nova estratégia.
 
 ## Scope
@@ -160,7 +160,7 @@ n/a; nenhuma entrega parcial reivindicada.
 
 ## Blocker Notes (Required if `Qualifiers` includes `Blocked`)
 
-- **Blocker:** seleção atual do Embedded Signup só oferece Sandbox; número operacional ausente e configuração efetiva/elegibilidade ainda não esclarecidas.
+- **Blocker:** número operacional ausente do picker; propriedade e grants de WhatsApp account/Messaging account ainda não conferidos. Configuração selecionada v4 já validada; review pendente não é causa universal comprovada.
 - **Why blocked now:** screenshots mostram introdução e telefone primeiro, sem o recurso próprio na lista. A ordem é compatível com v4 documentado; causa da ausência e associação WABA operacional ainda não comprovadas.
 - **What unblocks it:** recuperação do túnel, atualização das URLs Meta e cadastro pelo fluxo oficial com WABA_ID e PHONE_NUMBER_ID conferidos para o mesmo número/BU.
 - **Owner / source:** executor DevOps para túnel; operador para Meta e seleção da conta; direcionamento humano CP90 em2026-10-19.
@@ -1989,3 +1989,11 @@ Humano confirmou que seleção de telefone oferece somente Test Number Sandbox, 
 Pesquisa primária atual via curl Windows normalTLS, após429 na ferramenta web, confirmou v4 telefone primeiro e migração de versões ausentes/antigas após15/10/2026. Fonte pública do SDK contém extras somente setup vazio, sem seleção explícita de versão/customização. Isso explica a ordem compatível observada, sem estabelecer por que somente Sandbox aparece. Configuração v4, ativos WAAC/Messaging, elegibilidade da conta e permissões exigem inspeção; nem Acesso Padrão relatado antes nem origem developer-app da conta foram rechecados para concluir bloqueio. [Fatos/fontes e limites](../../../artifacts/reviews/leadshug-number-onboarding-20261015/evidence/root-cp93-meta-flow-recalibration.json).
 
 Próximo passo usa ferramenta oficial Embedded Signup Builder Check a launch config com extras públicos reais {setup:{}} e configuração corrente. Não instruir OTP, migrar, excluir número/WABA, selecionar Sandbox, adicionar only_waba_sharing de versão antiga ou ativar app_only_install por hipótese. Nenhum produto/runtime/credencial/BU/provedor alterado neste diagnóstico; sem nova execução de cadastro ou mensagem. Parent Pending/Blocked pelo fluxo efetivo/elegibilidade e prova real VAL05; modo técnico Cancelled.
+
+### CP94 — Configuração real conferida; acesso depende do proprietário dos ativos (2026-10-19)
+
+Humano executou o checker com a configuração selecionada: v4, cloud_api, Business app onboarding Off, only-WABA sharing Off, session3, sem diferença entre Today e pós15/10. Tela de permissões mostra Ready for testing e count1 para ambas, sem coluna inequívoca de nível atual. Nova imagem mostra App Review Não enviado, com solicitações de messaging/public_profile/management. Isso confirma um rascunho pendente, não uma aprovação, nem causa universal da ausência do número. Não repetir conferência do fluxo padrão como se faltasse.
+
+Documento primário WhatsApp app review consultado com curl Windows normalTLS estabelece que Direct Developer com ativos próprios pode testar em Standard Access com papel de admin/developer; acesso a ativos de outra empresa exige Advanced. Também explicita independência de grants entre WhatsApp account e Messaging account. Portanto, orientação anterior sobre permissões no app publicado deve ser lida no contexto de onboarding de clientes, sem bloquear por inferência todo teste próprio. Propriedade do ativo é diferente de acesso administrativo humano às duas empresas. [Fatos, fonte e limites](../../../artifacts/reviews/leadshug-number-onboarding-20261015/evidence/root-cp94-access-scope-and-ownership.json).
+
+Pergunta humana pendente: proprietário da Messaging account operacional é o mesmo portfólio unifast.br2 que gerencia o app, ou outro? Comparar IDs somente nas telas privadas, sem enviar. Esse resultado define a investigação de grants/ativos próprios versus revisão Advanced para acesso externo. Requisitos de vídeo/explanação da análise foram consultados, sem submissão ou alegação de prova oficial ainda não realizada. Nada de produto/runtime/Meta/cadastro/segredo alterado neste checkpoint; VAL05 aberto e modo técnico Cancelled.

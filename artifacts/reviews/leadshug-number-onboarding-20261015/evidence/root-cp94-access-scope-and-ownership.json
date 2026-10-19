@@ -1,0 +1,28 @@
+{
+  "checkpoint": "cp94-access-scope-and-asset-ownership",
+  "recordedAtUtc": "2026-10-19T15:57:04.931168+00:00",
+  "humanFacts": {
+    "selectedLoginConfigurationChecker": "v4; cloud_api; Business app onboarding Off; only-WABA sharing Off; session info3; Today and afterOct15 identical",
+    "permissionScreen": "management and messaging each show count1 and Ready for testing; current access level not displayed explicitly",
+    "appReviewDraft": "Not submitted; new requests include whatsapp_business_messaging, public_profile and whatsapp_business_management"
+  },
+  "primarySource": {
+    "url": "https://developers.facebook.com/documentation/business-messaging/whatsapp/solution-providers/app-review/",
+    "retrieval": "Bounded unauthenticated native Windows curl, normal TLS; web tool429.",
+    "facts": [
+      "Business apps can test with Standard Access with appropriate app admin/developer roles. Direct Developers using their own business assets do not require Advanced Access/App Review.",
+      "Accessing other businesses assets requires Advanced Access. This must be scoped to actual asset ownership, not whether a human administers both portfolios.",
+      "WhatsApp account and Messaging account are distinct access targets; a grant for one does not imply a grant for the other.",
+      "App Review requires truthful written explanations and demonstrations; messaging video shows app sending and actual WhatsApp client receiving, management video can use WhatsApp Manager to create a template. This is future submission preparation, not evidence that LeadsHug already demonstrated official IN/OUT."
+    ]
+  },
+  "recalibration": "The selected login config has now been checked; stop repeating version/default-flow checks. An unsubmitted review request is confirmed, but is not by itself proof that review blocks the own-asset test. The published-app onboarding overview must not be generalized into a universal Advanced requirement for all direct-development operations.",
+  "remainingUnknowns": [
+    "Operational Messaging account owner portfolio versus app owner unifast.br2",
+    "App access to BOTH operational WhatsApp account and corresponding Messaging account",
+    "Reason actual phone is absent from current picker",
+    "Exact effective access-level approval beyond human earlier Standard report and current unsubmitted draft"
+  ],
+  "next": "Human compares owner portfolio of operational Messaging account with app owner, without sending IDs. If same owner, inspect own-asset access/grants and normal authorization; if different owner, establish Advanced review requirements before customer onboarding. Do not claim causal proof or submit app review automatically.",
+  "unchanged": "No product/runtime/Meta/BU/credential mutations, no app-review submission, no physical test; QR preserved, target Local Test Ofc active/zero channel as last verified CP92; VAL05 open and local TestNumber mode Cancelled."
+}
