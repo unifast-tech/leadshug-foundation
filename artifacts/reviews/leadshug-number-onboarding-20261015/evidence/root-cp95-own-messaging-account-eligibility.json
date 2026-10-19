@@ -1,0 +1,31 @@
+{
+  "checkpoint": "cp95-own-messaging-account-eligibility",
+  "recordedAtUtc": "2026-10-19T16:07:44.282288+00:00",
+  "humanConfirmation": {
+    "operationalMessagingAccountOwner": "same portfolio as app: unifast.br2",
+    "verification": "human compared privately; no resource IDs requested or received"
+  },
+  "scopeQualification": "This confirms the reported owner of the Messaging account only. The owner/grants of the linked WhatsApp account remain separate and unverified; do not declare that every required asset is owned by the same business.",
+  "primaryReferences": [
+    {
+      "url": "https://developers.facebook.com/documentation/business-messaging/whatsapp/solution-providers/app-review/",
+      "finding": "Direct own-asset testing is distinguished from access to other businesses; WhatsApp account and Messaging account grants are independent."
+    },
+    {
+      "url": "https://developers.facebook.com/documentation/business-messaging/whatsapp/embedded-signup/overview/",
+      "finding": "Accounts originally created via a developer app cannot be selected/onboarded directly through Embedded Signup. Whether this operational account has that origin is not established."
+    }
+  ],
+  "nextHumanReads": [
+    "Original account creation route, if known: developer app API Setup or provider onboarding",
+    "Whether Facebook profile used in popup has full control on operational asset",
+    "Owner of linked/shared WhatsApp account, compared separately with app portfolio"
+  ],
+  "rejectedInferences": [
+    "Same human administrator implies same owner",
+    "One owned Messaging account implies linked WhatsApp account is owned too",
+    "Unsubmitted App Review alone proves cause of phone-picker absence",
+    "Developer-app-origin restriction automatically applies to this account without checking origin"
+  ],
+  "changes": "No API/provider/Meta/config/DB/source or account-state mutation; no registration/OTP, no submission. Own test BU remains active/zero channels per CP92, QR preserved; cancelled TestNumber mode not revived; VAL05 open."
+}
