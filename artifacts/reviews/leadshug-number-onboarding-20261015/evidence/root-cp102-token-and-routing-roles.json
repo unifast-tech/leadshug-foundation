@@ -1,0 +1,49 @@
+{
+  "checkpoint": "cp102-token-and-routing-roles",
+  "date": "2026-10-19",
+  "evidenceOrigin": "Operator-supplied Meta token debugger and Graph Explorer results, not independently queried by agent. Personal debugger fields and credentials are deliberately not retained.",
+  "tokenDebugger": {
+    "appId": "874966345550148",
+    "appName": "LeadsHug",
+    "type": "USER",
+    "valid": true,
+    "managementScopePresent": true,
+    "messagingScopePresent": true,
+    "managementGranularDisplay": "Applies to all objects",
+    "messagingGranularDisplay": "Applies to all objects",
+    "limit": "Confirms reported app identity, validity and scope presence for the Explorer credential, with no displayed granular target restriction. Does not promote that short-lived user token to a channel credential or prove identical scope on the Embedded Signup candidate."
+  },
+  "routingRoles": {
+    "query": "GET 1203171609551853/routing_roles",
+    "roles": ["calls", "ctwa", "customer_service", "marketing", "utility"],
+    "is_standby": false,
+    "businessOwnsApp": "unifast.br2",
+    "limit": "Per official documentation these roles belong to the business owning the app and describe the phone's routing configuration, not the owner of an individual conversation. Absence of standby is not by itself an error when the business holds primary roles. No escalation role is reported."
+  },
+  "officialDocumentationFindings": {
+    "primaryRouting": "Conversation Routing reads the configured primary for idle threads. An already owned thread keeps delivering ordinary/quoted messages to its current owner; changing the configured primary is not evidence that an existing thread changed owner.",
+    "idleReset": "After 24 hours of WhatsApp user inactivity a thread becomes idle; the next inbound is routed again by entry point. Each further regular test message keeps the user active and does not reset ownership.",
+    "otherTransitions": "Current owner can release/pass; designated escalation partner can take; CTWA clicks or marketing/utility template postbacks also re-route. These are documented alternatives, not authorized provider mutations in this checkpoint.",
+    "rolesRead": "The Routing Roles API is documented for this phone-number path and reads own-business configuration. There is no public current-thread-owner query. An unsupported/disabled response would not mean empty roles, but the operator obtained a valid roles response here.",
+    "termsAndScope": "Standby, escalation and thread control require end-business acceptance of Meta Business Agents/Platform Terms. No term acceptance, standby activation, takeover, paid template/ad or product handler change was requested or executed."
+  },
+  "synthesis": {
+    "confirmed": "Desired account subscription (CP98), current callback with no alternate returned (CP100), control Meta POST200 (CP101), reported valid app token with both scopes and expected routing roles (CP102). CP99 separately observed no Meta POST after the reported physical message.",
+    "remainingHypothesis": "The existing test conversation may still be owned by the previous responder. This is coherent with repeated testing from the same sender and the documented lifecycle but is not proven by roles or by the absence of POSTs.",
+    "nextTest": "Use an unrelated WhatsApp sender with no prior conversation on this number, or let the existing test sender remain inactive for at least 24 hours before one new real message. No additional sender was available when previously asked, so inactivity is the available bounded isolation path unless availability changes.",
+    "conservativeSameSenderTime": "2026-10-20T18:25:00Z (15:25 America/Sao_Paulo), conditional on no further inbound from that sender after the reference 2026-10-19T18:22:17Z. Any additional inbound requires recalculating at least 24 hours from that message.",
+    "runtimeCondition": "Before a later physical test revalidate the then-current tunnel/callback, pins and a fresh bounded observation window. No continuous availability or background monitor is promised.",
+    "acceptanceLimit": "The next observation first tests delivery to the server. Desired account local channel authorization, verified mapping, inbox acceptance, outbound and recovery remain separate unproven VAL05 gates."
+  },
+  "sources": [
+    "https://developers.facebook.com/documentation/business-messaging/whatsapp/permissions/",
+    "https://developers.facebook.com/documentation/business-messaging/whatsapp/conversation-routing/overview/",
+    "https://developers.facebook.com/documentation/business-messaging/whatsapp/conversation-routing/routing-roles/",
+    "https://developers.facebook.com/documentation/business-messaging/whatsapp/conversation-routing/thread-lifecycle/",
+    "https://developers.facebook.com/documentation/business-messaging/whatsapp/conversation-routing/entry-points-and-routing/",
+    "https://developers.facebook.com/documentation/business-messaging/whatsapp/conversation-routing/get-started/",
+    "https://developers.facebook.com/documentation/business-messaging/whatsapp/conversation-routing/troubleshooting/"
+  ],
+  "retrieval": "Bounded native Windows curl normalTLS read current official Markdown sources. Third-party search results were used only to discover official URLs; substantive findings above were checked against primary Meta documentation.",
+  "unchanged": "No token copying/persistence, agent provider/Meta API calls, login retry, SQL, channel/credential/BU changes, thread takeover/release, terms acceptance, source/runtime/env changes, scheduled automation or revival of cancelled technical TestNumber mode. Parent Pending/Blocked, VAL05 open."
+}

@@ -1,0 +1,47 @@
+{
+  "checkpoint": "cp101-control-post-received",
+  "date": "2026-10-19",
+  "operatorReport": "One unchanged messages dashboard test from the same LeadsHug app reported success/HTTP 200. No physical message was requested in this separate control window.",
+  "gatewayObservation": {
+    "sinceUtc": "2026-10-19T18:15:35Z",
+    "capturedAtUtc": "2026-10-19T18:17:26.411Z",
+    "helperSha256": "c3a74788fdda85d1c03af08e26e3b3dfaa821a8e64958cc17ff9053331160fcf",
+    "gatewayId": "0c48d94e9fe5b4ad75efd304db2752dfa4cab3befc59b9f736574d6cd551eea3",
+    "gatewayImage": "sha256:76090a34b858323b6ab169711adc08253b5bee7123a973dc581ed46b643bc109",
+    "owner": "number-onboarding",
+    "project": "leadshug_channels_local",
+    "service": "gateway",
+    "sourceTemplateActiveConfigSha256": "6d4563cc5f5823bdb1177f350c942dc2472fc70133aef5b177fa4b57c5c9f1a0",
+    "pinsMatch": true,
+    "coverageComplete": true,
+    "parsedLines": 20,
+    "unparsedLines": 0,
+    "tailLimit": 100,
+    "byteLimit": 1048576,
+    "overflow": false,
+    "timeout": false,
+    "dockerExitCode": 0,
+    "tailLimitReached": false,
+    "strictUtf8": true,
+    "routeMethodStatusCounts": [
+      { "route": "meta", "method": "POST", "status": "200", "count": 1 },
+      { "route": "other", "method": "GET", "status": "200", "count": 2 },
+      { "route": "other", "method": "GET", "status": "304", "count": 17 }
+    ],
+    "rawLogsPersistedOrPrinted": false
+  },
+  "httpsHealth": {
+    "baseUrl": "https://tooth-mode-bean-bulletin.trycloudflare.com",
+    "status": 200,
+    "tlsVerifyResult": 0
+  },
+  "conclusion": "The control interval contains one Meta route POST200; the separate CP99 interval after the reported physical message contained no Meta route request. Together they demonstrate current control delivery and a missing real-event observation, not a completed registration, account-attributed inbound message or inbox acceptance. Route aggregates alone cannot identify payload, event type or Messaging account.",
+  "permissionsRecheck": {
+    "source": "https://developers.facebook.com/documentation/business-messaging/whatsapp/permissions/",
+    "finding": "Management permission covers phone/account metadata; messaging permission is required for incoming-message/status webhooks. Successful management queries and subscription alone do not establish the required messaging grant on the intended resource.",
+    "ownAssets": "The source explicitly exempts direct developers accessing their own business data from App Review/Advanced access. Do not infer an Advanced access blocker solely from the missing real POST; operator reported the desired account and app share unifast.br2 ownership.",
+    "nextStep": "Operator was asked to inspect the same Explorer/subscription credential in the Meta access token debugger and report only LeadsHug app identity, token validity, management/messaging scope presence and desired account target membership when exposed. No token or unrelated private debugger output requested.",
+    "limits": "Explorer credential is not the channel candidate credential. Missing granular target output is inconclusive and must not be treated as absent resource permission. Routing and provider-side emission remain unproven hypotheses."
+  },
+  "unchanged": "No agent login retry, provider/Meta request, registration status GET, SQL or mutation to source/env/runtime/channel/credential. No cancelled manual TestNumber path reopened. Desired account local authorization/mapping and real IN/OUT/recovery VAL05 remain unproven."
+}
