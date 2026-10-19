@@ -1,0 +1,248 @@
+{
+  "blocked": true,
+  "context": {
+    "acceptance_criteria_count": 0,
+    "allow_waivers": false,
+    "ci_equivalent_row_count": 5,
+    "current_delivery_stage": "Local-Implemented",
+    "definition_of_done_count": 9,
+    "delivery_claim": true,
+    "dod_count": 9,
+    "evidence_row_count": 28,
+    "mode": "single",
+    "pipeline_preflight_row_count": 4,
+    "rule_spirit_hunt_row_count": 4,
+    "scope_count": 10,
+    "todo_path": "/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/todos/active/features/TODO-leadshug-channel-connection-readiness.md",
+    "validation_count": 9,
+    "validation_steps_count": 9
+  },
+  "overall_outcome": "no-go",
+  "rule_id": "paced.todo.completion-evidence",
+  "schema_version": "todo-completion-guard-v1",
+  "status": "blocked",
+  "violations": [
+    {
+      "code": "CI-EQUIVALENT-STATUS-NOT-PASSED",
+      "message": "CI-equivalent suite row status `bash scripts/test-channels-local.sh all: prisma generate/lint/build/vitest` does not satisfy delivery: API light",
+      "resolution": "Run and pass the same local suite/job that CI will execute, or record an explicit approved waiver/`n/a` rationale when no CI surface truly applies.",
+      "section": "Local CI-Equivalent Suite Matrix"
+    },
+    {
+      "code": "CI-EQUIVALENT-STATUS-NOT-PASSED",
+      "message": "CI-equivalent suite row status `bash scripts/test-channels-local.sh all: test:e2e` does not satisfy delivery: API E2E",
+      "resolution": "Run and pass the same local suite/job that CI will execute, or record an explicit approved waiver/`n/a` rationale when no CI surface truly applies.",
+      "section": "Local CI-Equivalent Suite Matrix"
+    },
+    {
+      "code": "CI-EQUIVALENT-STATUS-NOT-PASSED",
+      "message": "CI-equivalent suite row status `bash scripts/test-channels-local.sh all: build/test/test:tela` does not satisfy delivery: Web",
+      "resolution": "Run and pass the same local suite/job that CI will execute, or record an explicit approved waiver/`n/a` rationale when no CI surface truly applies.",
+      "section": "Local CI-Equivalent Suite Matrix"
+    },
+    {
+      "code": "CI-EQUIVALENT-STATUS-NOT-PASSED",
+      "message": "CI-equivalent suite row status `scripts/start-channels-local.sh config/up; scripts/test-channels-local.sh all` does not satisfy delivery: Workspace Compose",
+      "resolution": "Run and pass the same local suite/job that CI will execute, or record an explicit approved waiver/`n/a` rationale when no CI surface truly applies.",
+      "section": "Local CI-Equivalent Suite Matrix"
+    },
+    {
+      "code": "CI-EQUIVALENT-STATUS-NOT-PASSED",
+      "message": "CI-equivalent suite row status `runbook local e checklist VAL-05` does not satisfy delivery: Prova externa",
+      "resolution": "Run and pass the same local suite/job that CI will execute, or record an explicit approved waiver/`n/a` rationale when no CI surface truly applies.",
+      "section": "Local CI-Equivalent Suite Matrix"
+    },
+    {
+      "code": "PIPELINE-PREFLIGHT-UNRESOLVED-P1-P2",
+      "message": "Pipeline/Copilot P1/P2 Preflight row records an unresolved P1/P2 finding: cp36i source9/API461+Web/browserh | Test-only grant revogado v\u00e1lido-shaped, oito fontes id\u00eanticas e reuso hist\u00f3rico expl\u00edcito | passed | cp36i-root-delivery-preflight.json; root-cp36i-validation/public-set-receipt.json; diff762/762go | Nenhum novo P1/P2 observado pelo root | TQA i aceito/final condicional terminal; API corrigida cp49 posteriormente servida; VAL-05 sem waiver.",
+      "resolution": "Fix the P1/P2 issue, refresh the evidence, and rerun the gate before claiming delivery.",
+      "section": "Pipeline/Copilot P1/P2 Preflight"
+    },
+    {
+      "code": "PIPELINE-PREFLIGHT-UNRESOLVED-P1-P2",
+      "message": "Pipeline/Copilot P1/P2 Preflight row records an unresolved P1/P2 finding: cp36h source9/current535 | Test-only scalar/omission coverage, source8 unchanged, native transport guard | passed | cp36h-root-delivery-preflight.json; root-cp36h-validation-receipt.json; root-cp46c-receipt.json | Nenhum novo P1/P2 observado pelo root | Hist\u00f3rico h antes TQA i/final condicional; VAL-05 sem waiver.",
+      "resolution": "Fix the P1/P2 issue, refresh the evidence, and rerun the gate before claiming delivery.",
+      "section": "Pipeline/Copilot P1/P2 Preflight"
+    },
+    {
+      "code": "PIPELINE-PREFLIGHT-UNRESOLVED-P1-P2",
+      "message": "Pipeline/Copilot P1/P2 Preflight row records an unresolved P1/P2 finding: cp36g source9/current all2 | Fences, grant shape/intersection, bounded network, typed mapper, fixture parity e honest evidence | passed | cp36g-root-delivery-preflight.json; diff expectation710/710 go | Nenhum novo P1/P2 observado pelo root | Hist\u00f3rico cp36g anterior ao TQA i terminal/final condicional; n\u00e3o equivale a runtime ou conclus\u00e3o geral.",
+      "resolution": "Fix the P1/P2 issue, refresh the evidence, and rerun the gate before claiming delivery.",
+      "section": "Pipeline/Copilot P1/P2 Preflight"
+    },
+    {
+      "code": "PIPELINE-PREFLIGHT-UNRESOLVED-P1-P2",
+      "message": "Pipeline/Copilot P1/P2 Preflight row records an unresolved P1/P2 finding: cp21 full + cp25 delta + cp27 TQA suplemento | Recupera\u00e7\u00e3o, \u00edndice, simula\u00e7\u00f5es e preced\u00eancia de origem | passed | cp25-architecture-security.result.raw.json; round-02/performance.result.raw.json; cp27-tqa-supplement.result.raw.json; cp27 all | Todos bloqueadores locais registrados resolvidos | P1/P2 expl\u00edcitos no cp25 independente; nenhum novo defeito de produ\u00e7\u00e3o \u00e0 \u00e9poca; delta atual tem final condicional separado.",
+      "resolution": "Fix the P1/P2 issue, refresh the evidence, and rerun the gate before claiming delivery.",
+      "section": "Pipeline/Copilot P1/P2 Preflight"
+    },
+    {
+      "code": "CRITERION-EVIDENCE-MISSING",
+      "message": "Scope item lacks criterion-specific evidence: SCOPE-01: jornada Adicionar n\u00famero na gest\u00e3o de BUs: apelido e modalidade; criar BU conforme regra existente ou selecionar BU administr\u00e1vel, com retry sem duplicar cadastro.",
+      "resolution": "Add a Completion Evidence Matrix row quoting this criterion exactly and record concrete evidence.",
+      "section": "Completion Evidence Matrix"
+    },
+    {
+      "code": "CRITERION-EVIDENCE-MISSING",
+      "message": "Scope item lacks criterion-specific evidence: SCOPE-02: oficial por Embedded Signup configurado pela instala\u00e7\u00e3o, sess\u00e3o/BU correlacionadas, n\u00famero escolhido validado na Meta, cancelamento/falha expl\u00edcitos e recebimento configurado sem tomar callback alheio.",
+      "resolution": "Add a Completion Evidence Matrix row quoting this criterion exactly and record concrete evidence.",
+      "section": "Completion Evidence Matrix"
+    },
+    {
+      "code": "CRITERION-EVIDENCE-MISSING",
+      "message": "Scope item lacks criterion-specific evidence: SCOPE-03: credencial Meta exclusiva do v\u00ednculo, cifrada no backend; envio BFF, p\u00fablico e Typebot usam a credencial da BU/canal, sem token de cliente global compartilhado.",
+      "resolution": "Add a Completion Evidence Matrix row quoting this criterion exactly and record concrete evidence.",
+      "section": "Completion Evidence Matrix"
+    },
+    {
+      "code": "CRITERION-EVIDENCE-MISSING",
+      "message": "Scope item lacks criterion-specific evidence: SCOPE-04: n\u00e3o oficial por apelido/QR em Evolution pr\u00f3pria, com cria\u00e7\u00e3o idempotente da inst\u00e2ncia, autentica\u00e7\u00e3o do webhook, confirma\u00e7\u00e3o do telefone e renova\u00e7\u00e3o de QR.",
+      "resolution": "Add a Completion Evidence Matrix row quoting this criterion exactly and record concrete evidence.",
+      "section": "Completion Evidence Matrix"
+    },
+    {
+      "code": "CRITERION-EVIDENCE-MISSING",
+      "message": "Scope item lacks criterion-specific evidence: SCOPE-05: estado do cadastro, recebimento e verifica\u00e7\u00e3o separados; observa\u00e7\u00e3o atrasada n\u00e3o reativa v\u00ednculo removido ou substitui estado mais novo. Listar BUs n\u00e3o consulta provider.",
+      "resolution": "Add a Completion Evidence Matrix row quoting this criterion exactly and record concrete evidence.",
+      "section": "Completion Evidence Matrix"
+    },
+    {
+      "code": "CRITERION-EVIDENCE-MISSING",
+      "message": "Scope item lacks criterion-specific evidence: SCOPE-06: receber primeira mensagem real em cada canal de teste e visualiz\u00e1-la na conversa correta, preservando grants, hist\u00f3rico paginado e regras de janela.",
+      "resolution": "Add a Completion Evidence Matrix row quoting this criterion exactly and record concrete evidence.",
+      "section": "Completion Evidence Matrix"
+    },
+    {
+      "code": "CRITERION-EVIDENCE-MISSING",
+      "message": "Scope item lacks criterion-specific evidence: SCOPE-07: testes de contrato/seguran\u00e7a/races/PostgreSQL e Playwright com runtime real; prova externa separada por canal.",
+      "resolution": "Add a Completion Evidence Matrix row quoting this criterion exactly and record concrete evidence.",
+      "section": "Completion Evidence Matrix"
+    },
+    {
+      "code": "CRITERION-EVIDENCE-MISSING",
+      "message": "Scope item lacks criterion-specific evidence: SCOPE-08: runtime local pr\u00f3prio do LeadsHug com Evolution fixada, persist\u00eancia isolada, wiring de vari\u00e1veis e runbook de callback HTTPS; sem tocar runtime/dados do legado.",
+      "resolution": "Add a Completion Evidence Matrix row quoting this criterion exactly and record concrete evidence.",
+      "section": "Completion Evidence Matrix"
+    },
+    {
+      "code": "CRITERION-EVIDENCE-MISSING",
+      "message": "Scope item lacks criterion-specific evidence: SCOPE-09: reautoriza\u00e7\u00e3o preserva credencial v\u00e1lida; novo pareamento invalida confian\u00e7a anterior antes da rede e usa inst\u00e2ncia por epoch; identidade mant\u00e9m propriet\u00e1rio ap\u00f3s exclus\u00e3o; aceita\u00e7\u00e3o \u00fanica IN/OUT+echo e Typebot isolado por Mantenedora.",
+      "resolution": "Add a Completion Evidence Matrix row quoting this criterion exactly and record concrete evidence.",
+      "section": "Completion Evidence Matrix"
+    },
+    {
+      "code": "CRITERION-EVIDENCE-MISSING",
+      "message": "Scope item lacks criterion-specific evidence: SCOPE-10: complemento autorizado cp63: pol\u00edtica UNIFAST/LeadsHug e instru\u00e7\u00f5es de solicita\u00e7\u00f5es em documento est\u00e1tico p\u00fablico /privacidade.html para preparo Meta, sem coleta/formul\u00e1rios/SDK ou altera\u00e7\u00e3o de login. Publica\u00e7\u00e3o do app Meta foi autorizada separadamente cp66 somente para o teste no mesmo app/recurso.",
+      "resolution": "Add a Completion Evidence Matrix row quoting this criterion exactly and record concrete evidence.",
+      "section": "Completion Evidence Matrix"
+    },
+    {
+      "code": "CRITERION-EVIDENCE-MISSING",
+      "message": "Definition of Done item lacks criterion-specific evidence: DOD-01: cadastro oficial e QR oper\u00e1veis por administrador da BU, com n\u00famero/identidade confirmados e cancelamento/falhas sem falso sucesso.",
+      "resolution": "Add a Completion Evidence Matrix row quoting this criterion exactly and record concrete evidence.",
+      "section": "Completion Evidence Matrix"
+    },
+    {
+      "code": "CRITERION-EVIDENCE-MISSING",
+      "message": "Definition of Done item lacks criterion-specific evidence: DOD-02: tentativas de cadastro, credenciais cifradas e n\u00famero externo scoped; replay/duplo clique/troca de BU/remover-recriar n\u00e3o duplicam ou cruzam v\u00ednculo.",
+      "resolution": "Add a Completion Evidence Matrix row quoting this criterion exactly and record concrete evidence.",
+      "section": "Completion Evidence Matrix"
+    },
+    {
+      "code": "CRITERION-EVIDENCE-MISSING",
+      "message": "Definition of Done item lacks criterion-specific evidence: DOD-03: credencial por canal \u00e9 usada por todos os consumidores Meta existentes; sem token de cliente global, logs/DTOs/artefatos sem segredo.",
+      "resolution": "Add a Completion Evidence Matrix row quoting this criterion exactly and record concrete evidence.",
+      "section": "Completion Evidence Matrix"
+    },
+    {
+      "code": "CRITERION-EVIDENCE-MISSING",
+      "message": "Definition of Done item lacks criterion-specific evidence: DOD-04: runtime local isolado e migrations aplic\u00e1veis, or\u00e7amento externo bounded, erro/retry/frescor expl\u00edcitos e webhook autenticado.",
+      "resolution": "Add a Completion Evidence Matrix row quoting this criterion exactly and record concrete evidence.",
+      "section": "Completion Evidence Matrix"
+    },
+    {
+      "code": "CRITERION-EVIDENCE-MISSING",
+      "message": "Definition of Done item lacks criterion-specific evidence: DOD-05: primeira IN real de cada canal cria/reutiliza conversa BU/contato e aparece na inbox; resposta OUT dentro do contrato existente chega ao interlocutor.",
+      "resolution": "Add a Completion Evidence Matrix row quoting this criterion exactly and record concrete evidence.",
+      "section": "Completion Evidence Matrix"
+    },
+    {
+      "code": "CRITERION-EVIDENCE-MISSING",
+      "message": "Definition of Done item lacks criterion-specific evidence: DOD-06: CI-equivalent API/Web/workspace, fluxo Playwright com build atual, seguran\u00e7a/PCV e revis\u00f5es independentes aceitas.",
+      "resolution": "Add a Completion Evidence Matrix row quoting this criterion exactly and record concrete evidence.",
+      "section": "Completion Evidence Matrix"
+    },
+    {
+      "code": "CRITERION-EVIDENCE-MISSING",
+      "message": "Definition of Done item lacks criterion-specific evidence: DOD-08: NUM-ARCH-01..06 e NUM-CRIT-01/02 cobertos por harness de tenant, replay, identidade, reautoriza\u00e7\u00e3o e POST de pairing; nenhum segredo de envelope webhook persiste.",
+      "resolution": "Add a Completion Evidence Matrix row quoting this criterion exactly and record concrete evidence.",
+      "section": "Completion Evidence Matrix"
+    },
+    {
+      "code": "CRITERION-EVIDENCE-MISSING",
+      "message": "Definition of Done item lacks criterion-specific evidence: DOD-09: pol\u00edtica p\u00fablica sem sess\u00e3o, conte\u00fado fiel ao sistema/contato fornecido, sem recursos externos autom\u00e1ticos, API/providers/bundle preservados.",
+      "resolution": "Add a Completion Evidence Matrix row quoting this criterion exactly and record concrete evidence.",
+      "section": "Completion Evidence Matrix"
+    },
+    {
+      "code": "CRITERION-EVIDENCE-MISSING",
+      "message": "Definition of Done item lacks criterion-specific evidence: DOD-07: decis\u00f5es consolidadas no m\u00f3dulo owner, evidence matrix completa, source commits e guardas go antes do closeout local.",
+      "resolution": "Add a Completion Evidence Matrix row quoting this criterion exactly and record concrete evidence.",
+      "section": "Completion Evidence Matrix"
+    },
+    {
+      "code": "CRITERION-EVIDENCE-MISSING",
+      "message": "Validation Steps item lacks criterion-specific evidence: VAL-01: unidade/adapter para cifra e AAD, payload Meta/Evolution, erro/timeout, sele\u00e7\u00e3o entre m\u00faltiplos n\u00fameros e contrato de registro.",
+      "resolution": "Add a Completion Evidence Matrix row quoting this criterion exactly and record concrete evidence.",
+      "section": "Completion Evidence Matrix"
+    },
+    {
+      "code": "CRITERION-EVIDENCE-MISSING",
+      "message": "Validation Steps item lacks criterion-specific evidence: VAL-02: PostgreSQL E2E para sess\u00e3o/grant/tenant, tentativa expirada/cancelada/replay, disputa create/delete/recreate/verifica\u00e7\u00e3o/evento e persist\u00eancia de falha parcial.",
+      "resolution": "Add a Completion Evidence Matrix row quoting this criterion exactly and record concrete evidence.",
+      "section": "Completion Evidence Matrix"
+    },
+    {
+      "code": "CRITERION-EVIDENCE-MISSING",
+      "message": "Validation Steps item lacks criterion-specific evidence: VAL-03: Playwright do cadastro/QR, popup cancelado/erro/timeout, mudan\u00e7a BU e resposta velha; backend/sess\u00e3o/DB reais, servidor de provider de teste apenas como porta externa.",
+      "resolution": "Add a Completion Evidence Matrix row quoting this criterion exactly and record concrete evidence.",
+      "section": "Completion Evidence Matrix"
+    },
+    {
+      "code": "CRITERION-EVIDENCE-MISSING",
+      "message": "Validation Steps item lacks criterion-specific evidence: VAL-04: migrate deploy e CI-equivalent API/Web/workspace da fonte final; fingerprints do bundle antes dos workers, banco exclusivo e execu\u00e7\u00e3o sem sobreposi\u00e7\u00e3o de suites destrutivas.",
+      "resolution": "Add a Completion Evidence Matrix row quoting this criterion exactly and record concrete evidence.",
+      "section": "Completion Evidence Matrix"
+    },
+    {
+      "code": "CRITERION-EVIDENCE-MISSING",
+      "message": "Validation Steps item lacks criterion-specific evidence: VAL-05: prova externa local por canal, com autoriza\u00e7\u00e3o Meta/QR real, IN na BU certa, OUT recebida pelo interlocutor e recupera\u00e7\u00e3o permitida da conex\u00e3o.",
+      "resolution": "Add a Completion Evidence Matrix row quoting this criterion exactly and record concrete evidence.",
+      "section": "Completion Evidence Matrix"
+    },
+    {
+      "code": "CRITERION-EVIDENCE-MISSING",
+      "message": "Validation Steps item lacks criterion-specific evidence: VAL-06: EPS/FRC/BCI/RLS conforme plano; security, debt, architecture_adherence, TQA, audit especializado e final review antes de completar. Evid\u00eancia cp27 hist\u00f3rica; TQA FULL j e final distinto j aceitos; FINAL-CP36I-01 verified-local. Oficial VAL05 satisfez prova real CP106-108; closeout documental ainda em revis\u00e3o.",
+      "resolution": "Add a Completion Evidence Matrix row quoting this criterion exactly and record concrete evidence.",
+      "section": "Completion Evidence Matrix"
+    },
+    {
+      "code": "CRITERION-EVIDENCE-MISSING",
+      "message": "Validation Steps item lacks criterion-specific evidence: VAL-08: executar REG-SEC-01..13 do plano de valida\u00e7\u00e3o, incluindo replay por provider, renova\u00e7\u00e3o de canal j\u00e1 verificado, echo-first/sender-first com autoria, tombstone, candidata, CSRF e logs/parti\u00e7\u00e3o raw.",
+      "resolution": "Add a Completion Evidence Matrix row quoting this criterion exactly and record concrete evidence.",
+      "section": "Completion Evidence Matrix"
+    },
+    {
+      "code": "CRITERION-EVIDENCE-MISSING",
+      "message": "Validation Steps item lacks criterion-specific evidence: VAL-09: cp63 cr\u00edtica factual do texto/plano, asset byteexact, build/Webunit can\u00f4nicos, HTML/headers/URL p\u00fablica sem sess\u00e3o e bundle comparados; nenhuma promessa de aprova\u00e7\u00e3o Meta ou substitui\u00e7\u00e3o de INOUT real.",
+      "resolution": "Add a Completion Evidence Matrix row quoting this criterion exactly and record concrete evidence.",
+      "section": "Completion Evidence Matrix"
+    },
+    {
+      "code": "CRITERION-EVIDENCE-MISSING",
+      "message": "Validation Steps item lacks criterion-specific evidence: VAL-07: consolidar m\u00f3dulo, validar contrato/diff/coer\u00eancia e closeout; nenhum claim de produ\u00e7\u00e3o pronta.",
+      "resolution": "Add a Completion Evidence Matrix row quoting this criterion exactly and record concrete evidence.",
+      "section": "Completion Evidence Matrix"
+    }
+  ]
+}

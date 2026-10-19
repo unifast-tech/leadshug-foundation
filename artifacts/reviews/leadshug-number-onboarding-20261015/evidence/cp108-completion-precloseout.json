@@ -1,0 +1,74 @@
+{
+  "blocked": true,
+  "context": {
+    "acceptance_criteria_count": 0,
+    "allow_waivers": false,
+    "ci_equivalent_row_count": 5,
+    "current_delivery_stage": "Pending",
+    "definition_of_done_count": 9,
+    "delivery_claim": true,
+    "dod_count": 9,
+    "evidence_row_count": 28,
+    "mode": "single",
+    "pipeline_preflight_row_count": 4,
+    "rule_spirit_hunt_row_count": 4,
+    "scope_count": 10,
+    "todo_path": "/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/todos/active/features/TODO-leadshug-channel-connection-readiness.md",
+    "validation_count": 9,
+    "validation_steps_count": 9
+  },
+  "overall_outcome": "no-go",
+  "rule_id": "paced.todo.completion-evidence",
+  "schema_version": "todo-completion-guard-v1",
+  "status": "blocked",
+  "violations": [
+    {
+      "code": "LITERAL-MARKER-EVIDENCE-MISMATCH",
+      "message": "Criterion names `Playwright` but evidence does not prove the same marker: SCOPE-07: testes de contrato/seguran\u00e7a/races/PostgreSQL e Playwright com runtime real; prova externa separada por canal.",
+      "resolution": "Update the evidence to name the exact required artifact, or record an explicit approved waiver/deviation.",
+      "section": "Completion Evidence Matrix"
+    },
+    {
+      "code": "FLOW-CRITERION-NAVIGATION-COVERAGE-MISSING",
+      "message": "User-visible/interactive/flow-impacting criterion lacks item-specific integration/device or navigation/browser evidence: DOD-04: runtime local isolado e migrations aplic\u00e1veis, or\u00e7amento externo bounded, erro/retry/frescor expl\u00edcitos e webhook autenticado.",
+      "resolution": "Add the integration/device test or navigation/browser test that exercises this exact item, or record an explicit approved structure-only waiver/deviation proving no user-observable flow can change. In Flutter scope, integration is ADB/device execution; browser navigation is Playwright against the final domain after the project-defined web build/publish step.",
+      "section": "Completion Evidence Matrix"
+    },
+    {
+      "code": "LITERAL-MARKER-EVIDENCE-MISMATCH",
+      "message": "Criterion names `web` but evidence does not prove the same marker: DOD-06: CI-equivalent API/Web/workspace, fluxo Playwright com build atual, seguran\u00e7a/PCV e revis\u00f5es independentes aceitas.",
+      "resolution": "Update the evidence to name the exact required artifact, or record an explicit approved waiver/deviation.",
+      "section": "Completion Evidence Matrix"
+    },
+    {
+      "code": "LITERAL-MARKER-EVIDENCE-MISMATCH",
+      "message": "Criterion names `Playwright` but evidence does not prove the same marker: DOD-06: CI-equivalent API/Web/workspace, fluxo Playwright com build atual, seguran\u00e7a/PCV e revis\u00f5es independentes aceitas.",
+      "resolution": "Update the evidence to name the exact required artifact, or record an explicit approved waiver/deviation.",
+      "section": "Completion Evidence Matrix"
+    },
+    {
+      "code": "FLOW-CRITERION-NAVIGATION-COVERAGE-MISSING",
+      "message": "User-visible/interactive/flow-impacting criterion lacks item-specific integration/device or navigation/browser evidence: VAL-01: unidade/adapter para cifra e AAD, payload Meta/Evolution, erro/timeout, sele\u00e7\u00e3o entre m\u00faltiplos n\u00fameros e contrato de registro.",
+      "resolution": "Add the integration/device test or navigation/browser test that exercises this exact item, or record an explicit approved structure-only waiver/deviation proving no user-observable flow can change. In Flutter scope, integration is ADB/device execution; browser navigation is Playwright against the final domain after the project-defined web build/publish step.",
+      "section": "Completion Evidence Matrix"
+    },
+    {
+      "code": "FLOW-CRUD-MUTATION-EVIDENCE-MISSING",
+      "message": "User-flow CRUD/mutation criterion lacks local mutation evidence: VAL-02: PostgreSQL E2E para sess\u00e3o/grant/tenant, tentativa expirada/cancelada/replay, disputa create/delete/recreate/verifica\u00e7\u00e3o/evento e persist\u00eancia de falha parcial.",
+      "resolution": "Record integration/device or navigation/browser evidence that performs the local mutation path on the approved non-main validation target. For browser/web mutation, record Playwright mutation-lane evidence; readonly web smoke is insufficient.",
+      "section": "Completion Evidence Matrix"
+    },
+    {
+      "code": "LITERAL-MARKER-EVIDENCE-MISMATCH",
+      "message": "Criterion names `Playwright` but evidence does not prove the same marker: VAL-03: Playwright do cadastro/QR, popup cancelado/erro/timeout, mudan\u00e7a BU e resposta velha; backend/sess\u00e3o/DB reais, servidor de provider de teste apenas como porta externa.",
+      "resolution": "Update the evidence to name the exact required artifact, or record an explicit approved waiver/deviation.",
+      "section": "Completion Evidence Matrix"
+    },
+    {
+      "code": "FLOW-CRITERION-NAVIGATION-COVERAGE-MISSING",
+      "message": "User-visible/interactive/flow-impacting criterion lacks item-specific integration/device or navigation/browser evidence: VAL-08: executar REG-SEC-01..13 do plano de valida\u00e7\u00e3o, incluindo replay por provider, renova\u00e7\u00e3o de canal j\u00e1 verificado, echo-first/sender-first com autoria, tombstone, candidata, CSRF e logs/parti\u00e7\u00e3o raw.",
+      "resolution": "Add the integration/device test or navigation/browser test that exercises this exact item, or record an explicit approved structure-only waiver/deviation proving no user-observable flow can change. In Flutter scope, integration is ADB/device execution; browser navigation is Playwright against the final domain after the project-defined web build/publish step.",
+      "section": "Completion Evidence Matrix"
+    }
+  ]
+}

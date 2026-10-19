@@ -1,0 +1,7 @@
+{
+  "checkpoint": "cp108-provenance-review",
+  "reviewer": "/root/closeout_cp108",
+  "result": "accepted_without_renewed_functional_approval",
+  "reviewerDecision": "Provenance-only reconciliation is acceptable without renewed functional APROVADO if exact frozen79 existed at7a2ea571 and remain byte-identical. Rows preserve that exact set, including glob; grant no edit authority, implementation scope or revival of Cancelled complement. Preserve initial NO-GO and historical artifacts; require fresh diff-go and normal closure guards. Any changed/additional file falls outside acceptance.",
+  "rootDisposition": "Integrated as nonmaterial preservation of separately governed preexisting documents; first negative retained. Equality and no-new-file predicates must pass before interpreting reconciled diff."
+}

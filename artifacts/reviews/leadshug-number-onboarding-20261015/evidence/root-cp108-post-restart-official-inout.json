@@ -1,0 +1,124 @@
+{
+  "checkpoint": "cp108-post-restart-official-inout",
+  "date": "2026-10-19",
+  "physicalEvidence": {
+    "source": "Operator reply to the exact postrestart real-WhatsApp test request",
+    "result": "Entrada apareceu e resposta chegou ao WhatsApp",
+    "scenario": "Same alternate contact sends a new WhatsApp message after the API restart; it appears in Atendimento / Local Test Ofc; reply sent through LeadsHug arrives on the interlocutor WhatsApp.",
+    "syntheticDashboardTestRequested": false,
+    "privateContentCollected": false,
+    "limit": "Confirms the reported physical UI and receiving-device exchange; not a claim of continuous service, Meta deregistration/reconnection, or messages from every sender."
+  },
+  "readback": {
+    "routingGuard": "go",
+    "readerSha256": "961cd19dcc1cc0bba7fc3b668e65f5ff0d630190b2c84d4721013216c704b597",
+    "executions": 1,
+    "normalLoginExecutions": 1,
+    "automaticRetry": false,
+    "apiStartedAtUtc": "2026-10-19T19:10:08.49143366Z",
+    "pins": "Accepted API/Web/gateway IDs/images/project/service/owner unchanged; confirms same restarted API target.",
+    "official": {
+      "buId": "a1492634-8685-46d8-a7cb-685a99f5c930",
+      "channelId": "d45bcd3a-1efa-4240-a8aa-b6906524e48c",
+      "type": "OFICIAL",
+      "status": "CONECTADO",
+      "generation": 2,
+      "currentAttemptId": "b67af2c5c30ee84d9774dff14b5d4d39",
+      "ownNumberVerified": true,
+      "providerConnectionState": "SUBSCRIBED",
+      "receiptVerified": true,
+      "connected": true
+    },
+    "qr": {
+      "buId": "c231d8f7-d8a5-448e-a740-2ab8aebf9bc2",
+      "channelId": "b6c3e3f0-fe77-4e92-82e4-1975dffcbef1",
+      "type": "NAO_OFICIAL",
+      "status": "CONECTADO",
+      "generation": 1,
+      "currentAttemptId": "91a050d2-b6b7-4d3a-ac48-97392688584d",
+      "ownNumberVerified": true,
+      "providerConnectionState": "CONNECTED",
+      "receiptVerified": true,
+      "connected": true
+    },
+    "businessUnits": "Both exact BUs remain active OWNER.",
+    "externalIds": "Not exposed in canonical DTO; no independent storage assertion.",
+    "httpsHealth": {
+      "status": 200,
+      "tlsVerifyResult": 0
+    }
+  },
+  "transportObservation": {
+    "helperSha256": "c3a74788fdda85d1c03af08e26e3b3dfaa821a8e64958cc17ff9053331160fcf",
+    "sinceUtc": "2026-10-19T19:10:39Z",
+    "capturedAtUtc": "2026-10-19T19:14:23.242Z",
+    "coverageComplete": true,
+    "parsedLines": 29,
+    "unparsedLines": 0,
+    "bytes": 4649,
+    "tailReached": false,
+    "overflow": false,
+    "timeout": false,
+    "strictUtf8": true,
+    "exitCode": 0,
+    "gatewayPinsAndConfigMatch": true,
+    "counts": [
+      {
+        "route": "meta",
+        "method": "POST",
+        "status": 200,
+        "count": 5
+      },
+      {
+        "route": "other",
+        "method": "GET",
+        "status": 101,
+        "count": 1
+      },
+      {
+        "route": "other",
+        "method": "GET",
+        "status": 200,
+        "count": 8
+      },
+      {
+        "route": "other",
+        "method": "GET",
+        "status": 304,
+        "count": 13
+      },
+      {
+        "route": "other",
+        "method": "POST",
+        "status": 200,
+        "count": 1
+      },
+      {
+        "route": "other",
+        "method": "POST",
+        "status": 201,
+        "count": 1
+      }
+    ],
+    "limit": "Aggregate counts do not identify payload, sender, account, message or acceptance. Physical operator report is separate proof; no raw logs/payload persisted."
+  },
+  "runtimeFreshness": {
+    "rootCommit": "80e3940126f22a941f90dba4f5e801b6c0eb2f58",
+    "apiCommit": "db5a86758a165fac8a1ab587599c37b17890530c",
+    "webCommit": "74b9d4b714044829796f875d00553f077c1c329d",
+    "apiImage": "sha256:fe5fb7eaf6a68123f9da6b92a0a69483180d213f556b4bedf313f04a383b4821",
+    "servedOrigin": "https://tooth-mode-bean-bulletin.trycloudflare.com",
+    "changes": "No product/configuration bytes changed; no new build or application test-suite run claimed."
+  },
+  "validationDisposition": {
+    "officialInitialRegistrationAndExchange": "Passed CP106: normal Embedded Signup, already-registered test phone, identity/subscription/receipt and physical IN/OUT.",
+    "officialBackendRecovery": "Passed CP107-108: one authorized API restart, canonical states preserved, new real IN/OUT confirmed afterwards.",
+    "nonOfficial": "Prior QR registration, IN/OUT and Evolution recovery evidence CP33/49/52 retained; canonical state preserved CP106-108.",
+    "VAL05": "Physical proof requirements satisfied for both local test channels; remaining delivery work is canonical closeout and applicable final guards, not another physical test.",
+    "historyAndProactiveConversation": "Not implemented or certified by this proof; remain future ST-CON-02/03/04.",
+    "production": "No production-ready or deployment claim. Existing private OWNER/test cohort limit and dependency follow-up retained.",
+    "technicalTestNumberMode": "Cancelled remains unchanged."
+  },
+  "mutations": "No restart, provider/Meta request, channel/credential/database/configuration/source write in CP108. One normal login creates only its ordinary session. No protected-file access or new application suite/build.",
+  "overall": "Local physical test passed; parent closeout not yet claimed by this evidence alone."
+}

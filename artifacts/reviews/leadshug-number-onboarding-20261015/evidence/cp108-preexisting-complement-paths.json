@@ -1,0 +1,415 @@
+{
+  "capturedUtc": "2026-10-19T19:25:07.196567+00:00",
+  "comparisonHead": "7a2ea571",
+  "counts": {
+    "changedAgainstFrozenHead": 0,
+    "paths": 79,
+    "presentAtFrozenHead": 79,
+    "statusAAgainstOlderBaseline": 79
+  },
+  "foundationHead": "7a2ea571b88eea32ed248ca8406cc1f8c282a8b2",
+  "frozenHeadDiffScopes": [
+    "artifacts/analysis/leadshug-meta-api-test-number-binding-proposal-20261018.md",
+    "artifacts/reviews/leadshug-meta-test-binding-20261018/",
+    "todos/active/features/TODO-leadshug-meta-api-test-number-binding.md"
+  ],
+  "method": "Foundation-only Git name/status and tracked-path metadata; no file contents read. Final unchanged check is git diff --name-only <frozen> -- <three exact scopes>.",
+  "olderContractBaseline": "41572cebbeb2ec87d0448dfa230fad4364af7ff6",
+  "paths": [
+    {
+      "path": "artifacts/analysis/leadshug-meta-api-test-number-binding-proposal-20261018.md",
+      "presentAtFrozenHead7a2ea571": true,
+      "statusAgainstOlderContractBaseline": "A"
+    },
+    {
+      "path": "artifacts/reviews/leadshug-meta-test-binding-20261018/README.md",
+      "presentAtFrozenHead7a2ea571": true,
+      "statusAgainstOlderContractBaseline": "A"
+    },
+    {
+      "path": "artifacts/reviews/leadshug-meta-test-binding-20261018/approval-cp82.json",
+      "presentAtFrozenHead7a2ea571": true,
+      "statusAgainstOlderContractBaseline": "A"
+    },
+    {
+      "path": "artifacts/reviews/leadshug-meta-test-binding-20261018/audit-floor-v1.json",
+      "presentAtFrozenHead7a2ea571": true,
+      "statusAgainstOlderContractBaseline": "A"
+    },
+    {
+      "path": "artifacts/reviews/leadshug-meta-test-binding-20261018/authority-diagnosis-cp83.json",
+      "presentAtFrozenHead7a2ea571": true,
+      "statusAgainstOlderContractBaseline": "A"
+    },
+    {
+      "path": "artifacts/reviews/leadshug-meta-test-binding-20261018/authority-diagnosis-live-cp83.json",
+      "presentAtFrozenHead7a2ea571": true,
+      "statusAgainstOlderContractBaseline": "A"
+    },
+    {
+      "path": "artifacts/reviews/leadshug-meta-test-binding-20261018/authority-execution-cp82-v2.json",
+      "presentAtFrozenHead7a2ea571": true,
+      "statusAgainstOlderContractBaseline": "A"
+    },
+    {
+      "path": "artifacts/reviews/leadshug-meta-test-binding-20261018/authority-execution-cp82.json",
+      "presentAtFrozenHead7a2ea571": true,
+      "statusAgainstOlderContractBaseline": "A"
+    },
+    {
+      "path": "artifacts/reviews/leadshug-meta-test-binding-20261018/authority-preapproval-v1.json",
+      "presentAtFrozenHead7a2ea571": true,
+      "statusAgainstOlderContractBaseline": "A"
+    },
+    {
+      "path": "artifacts/reviews/leadshug-meta-test-binding-20261018/authority-preapproval-v2.json",
+      "presentAtFrozenHead7a2ea571": true,
+      "statusAgainstOlderContractBaseline": "A"
+    },
+    {
+      "path": "artifacts/reviews/leadshug-meta-test-binding-20261018/authority-preapproval-v3.json",
+      "presentAtFrozenHead7a2ea571": true,
+      "statusAgainstOlderContractBaseline": "A"
+    },
+    {
+      "path": "artifacts/reviews/leadshug-meta-test-binding-20261018/authority-qualification-live-cp82.json",
+      "presentAtFrozenHead7a2ea571": true,
+      "statusAgainstOlderContractBaseline": "A"
+    },
+    {
+      "path": "artifacts/reviews/leadshug-meta-test-binding-20261018/authority-revoked-cp84.json",
+      "presentAtFrozenHead7a2ea571": true,
+      "statusAgainstOlderContractBaseline": "A"
+    },
+    {
+      "path": "artifacts/reviews/leadshug-meta-test-binding-20261018/baseline-freeze-409d92be.json",
+      "presentAtFrozenHead7a2ea571": true,
+      "statusAgainstOlderContractBaseline": "A"
+    },
+    {
+      "path": "artifacts/reviews/leadshug-meta-test-binding-20261018/baseline-freeze-92429fed.json",
+      "presentAtFrozenHead7a2ea571": true,
+      "statusAgainstOlderContractBaseline": "A"
+    },
+    {
+      "path": "artifacts/reviews/leadshug-meta-test-binding-20261018/baseline-freeze-e83d5bdc.json",
+      "presentAtFrozenHead7a2ea571": true,
+      "statusAgainstOlderContractBaseline": "A"
+    },
+    {
+      "path": "artifacts/reviews/leadshug-meta-test-binding-20261018/baseline-freeze-f35d1a0d.json",
+      "presentAtFrozenHead7a2ea571": true,
+      "statusAgainstOlderContractBaseline": "A"
+    },
+    {
+      "path": "artifacts/reviews/leadshug-meta-test-binding-20261018/code-coherence-v1.json",
+      "presentAtFrozenHead7a2ea571": true,
+      "statusAgainstOlderContractBaseline": "A"
+    },
+    {
+      "path": "artifacts/reviews/leadshug-meta-test-binding-20261018/code-coherence-v2.json",
+      "presentAtFrozenHead7a2ea571": true,
+      "statusAgainstOlderContractBaseline": "A"
+    },
+    {
+      "path": "artifacts/reviews/leadshug-meta-test-binding-20261018/code-coherence-v3.json",
+      "presentAtFrozenHead7a2ea571": true,
+      "statusAgainstOlderContractBaseline": "A"
+    },
+    {
+      "path": "artifacts/reviews/leadshug-meta-test-binding-20261018/diagnosis-live-go-cp83.json",
+      "presentAtFrozenHead7a2ea571": true,
+      "statusAgainstOlderContractBaseline": "A"
+    },
+    {
+      "path": "artifacts/reviews/leadshug-meta-test-binding-20261018/diagnosis-live-result-cp83.json",
+      "presentAtFrozenHead7a2ea571": true,
+      "statusAgainstOlderContractBaseline": "A"
+    },
+    {
+      "path": "artifacts/reviews/leadshug-meta-test-binding-20261018/diagnosis-offline-cp83.txt",
+      "presentAtFrozenHead7a2ea571": true,
+      "statusAgainstOlderContractBaseline": "A"
+    },
+    {
+      "path": "artifacts/reviews/leadshug-meta-test-binding-20261018/diagnosis-preparation-cp83.json",
+      "presentAtFrozenHead7a2ea571": true,
+      "statusAgainstOlderContractBaseline": "A"
+    },
+    {
+      "path": "artifacts/reviews/leadshug-meta-test-binding-20261018/diagnosis-review-v2.raw.json",
+      "presentAtFrozenHead7a2ea571": true,
+      "statusAgainstOlderContractBaseline": "A"
+    },
+    {
+      "path": "artifacts/reviews/leadshug-meta-test-binding-20261018/helper-review-iterations-cp82.json",
+      "presentAtFrozenHead7a2ea571": true,
+      "statusAgainstOlderContractBaseline": "A"
+    },
+    {
+      "path": "artifacts/reviews/leadshug-meta-test-binding-20261018/helper-review-v4.raw.json",
+      "presentAtFrozenHead7a2ea571": true,
+      "statusAgainstOlderContractBaseline": "A"
+    },
+    {
+      "path": "artifacts/reviews/leadshug-meta-test-binding-20261018/human-current-callback-cp83.json",
+      "presentAtFrozenHead7a2ea571": true,
+      "statusAgainstOlderContractBaseline": "A"
+    },
+    {
+      "path": "artifacts/reviews/leadshug-meta-test-binding-20261018/module-consistency-planning-v1.json",
+      "presentAtFrozenHead7a2ea571": true,
+      "statusAgainstOlderContractBaseline": "A"
+    },
+    {
+      "path": "artifacts/reviews/leadshug-meta-test-binding-20261018/operator-input-readiness-cp82.json",
+      "presentAtFrozenHead7a2ea571": true,
+      "statusAgainstOlderContractBaseline": "A"
+    },
+    {
+      "path": "artifacts/reviews/leadshug-meta-test-binding-20261018/planning-architecture-v1.raw.json",
+      "presentAtFrozenHead7a2ea571": true,
+      "statusAgainstOlderContractBaseline": "A"
+    },
+    {
+      "path": "artifacts/reviews/leadshug-meta-test-binding-20261018/planning-critique-v1.raw.json",
+      "presentAtFrozenHead7a2ea571": true,
+      "statusAgainstOlderContractBaseline": "A"
+    },
+    {
+      "path": "artifacts/reviews/leadshug-meta-test-binding-20261018/public-host-dns-control-cp83.json",
+      "presentAtFrozenHead7a2ea571": true,
+      "statusAgainstOlderContractBaseline": "A"
+    },
+    {
+      "path": "artifacts/reviews/leadshug-meta-test-binding-20261018/public-host-dns-cp83.json",
+      "presentAtFrozenHead7a2ea571": true,
+      "statusAgainstOlderContractBaseline": "A"
+    },
+    {
+      "path": "artifacts/reviews/leadshug-meta-test-binding-20261018/qualification-adapter-offline-cp82.txt",
+      "presentAtFrozenHead7a2ea571": true,
+      "statusAgainstOlderContractBaseline": "A"
+    },
+    {
+      "path": "artifacts/reviews/leadshug-meta-test-binding-20261018/qualification-launcher-offline-cp82.txt",
+      "presentAtFrozenHead7a2ea571": true,
+      "statusAgainstOlderContractBaseline": "A"
+    },
+    {
+      "path": "artifacts/reviews/leadshug-meta-test-binding-20261018/qualification-live-go-cp82.json",
+      "presentAtFrozenHead7a2ea571": true,
+      "statusAgainstOlderContractBaseline": "A"
+    },
+    {
+      "path": "artifacts/reviews/leadshug-meta-test-binding-20261018/qualification-live-result-cp82.json",
+      "presentAtFrozenHead7a2ea571": true,
+      "statusAgainstOlderContractBaseline": "A"
+    },
+    {
+      "path": "artifacts/reviews/leadshug-meta-test-binding-20261018/qualification-preparation-cp82.json",
+      "presentAtFrozenHead7a2ea571": true,
+      "statusAgainstOlderContractBaseline": "A"
+    },
+    {
+      "path": "artifacts/reviews/leadshug-meta-test-binding-20261018/reevaluation-contract-cp83.json",
+      "presentAtFrozenHead7a2ea571": true,
+      "statusAgainstOlderContractBaseline": "A"
+    },
+    {
+      "path": "artifacts/reviews/leadshug-meta-test-binding-20261018/reevaluation-source-findings-cp83.json",
+      "presentAtFrozenHead7a2ea571": true,
+      "statusAgainstOlderContractBaseline": "A"
+    },
+    {
+      "path": "artifacts/reviews/leadshug-meta-test-binding-20261018/rollback-cleanup-cp84.json",
+      "presentAtFrozenHead7a2ea571": true,
+      "statusAgainstOlderContractBaseline": "A"
+    },
+    {
+      "path": "artifacts/reviews/leadshug-meta-test-binding-20261018/rollback-contract-cp84.json",
+      "presentAtFrozenHead7a2ea571": true,
+      "statusAgainstOlderContractBaseline": "A"
+    },
+    {
+      "path": "artifacts/reviews/leadshug-meta-test-binding-20261018/rollback-source-verification-cp84.json",
+      "presentAtFrozenHead7a2ea571": true,
+      "statusAgainstOlderContractBaseline": "A"
+    },
+    {
+      "path": "artifacts/reviews/leadshug-meta-test-binding-20261018/root-architecture-v1-resolution.json",
+      "presentAtFrozenHead7a2ea571": true,
+      "statusAgainstOlderContractBaseline": "A"
+    },
+    {
+      "path": "artifacts/reviews/leadshug-meta-test-binding-20261018/root-assumption-coherence-v1.json",
+      "presentAtFrozenHead7a2ea571": true,
+      "statusAgainstOlderContractBaseline": "A"
+    },
+    {
+      "path": "artifacts/reviews/leadshug-meta-test-binding-20261018/root-critique-v1-resolution.json",
+      "presentAtFrozenHead7a2ea571": true,
+      "statusAgainstOlderContractBaseline": "A"
+    },
+    {
+      "path": "artifacts/reviews/leadshug-meta-test-binding-20261018/root-final-format-equivalence.json",
+      "presentAtFrozenHead7a2ea571": true,
+      "statusAgainstOlderContractBaseline": "A"
+    },
+    {
+      "path": "artifacts/reviews/leadshug-meta-test-binding-20261018/root-planning-ready-for-approval.json",
+      "presentAtFrozenHead7a2ea571": true,
+      "statusAgainstOlderContractBaseline": "A"
+    },
+    {
+      "path": "artifacts/reviews/leadshug-meta-test-binding-20261018/root-qualification-outcome-cp82.json",
+      "presentAtFrozenHead7a2ea571": true,
+      "statusAgainstOlderContractBaseline": "A"
+    },
+    {
+      "path": "artifacts/reviews/leadshug-meta-test-binding-20261018/root-reevaluation-cp83.json",
+      "presentAtFrozenHead7a2ea571": true,
+      "statusAgainstOlderContractBaseline": "A"
+    },
+    {
+      "path": "artifacts/reviews/leadshug-meta-test-binding-20261018/root-review-format-delta-adjudication.json",
+      "presentAtFrozenHead7a2ea571": true,
+      "statusAgainstOlderContractBaseline": "A"
+    },
+    {
+      "path": "artifacts/reviews/leadshug-meta-test-binding-20261018/root-rollback-cp84.json",
+      "presentAtFrozenHead7a2ea571": true,
+      "statusAgainstOlderContractBaseline": "A"
+    },
+    {
+      "path": "artifacts/reviews/leadshug-meta-test-binding-20261018/routing-architecture-v1.json",
+      "presentAtFrozenHead7a2ea571": true,
+      "statusAgainstOlderContractBaseline": "A"
+    },
+    {
+      "path": "artifacts/reviews/leadshug-meta-test-binding-20261018/routing-critique-v1.json",
+      "presentAtFrozenHead7a2ea571": true,
+      "statusAgainstOlderContractBaseline": "A"
+    },
+    {
+      "path": "artifacts/reviews/leadshug-meta-test-binding-20261018/routing-diagnosis-cp83.json",
+      "presentAtFrozenHead7a2ea571": true,
+      "statusAgainstOlderContractBaseline": "A"
+    },
+    {
+      "path": "artifacts/reviews/leadshug-meta-test-binding-20261018/routing-diagnosis-review-cp83.json",
+      "presentAtFrozenHead7a2ea571": true,
+      "statusAgainstOlderContractBaseline": "A"
+    },
+    {
+      "path": "artifacts/reviews/leadshug-meta-test-binding-20261018/routing-helper-review-cp82.json",
+      "presentAtFrozenHead7a2ea571": true,
+      "statusAgainstOlderContractBaseline": "A"
+    },
+    {
+      "path": "artifacts/reviews/leadshug-meta-test-binding-20261018/routing-planned-implementation.json",
+      "presentAtFrozenHead7a2ea571": true,
+      "statusAgainstOlderContractBaseline": "A"
+    },
+    {
+      "path": "artifacts/reviews/leadshug-meta-test-binding-20261018/routing-qualification-cp82.json",
+      "presentAtFrozenHead7a2ea571": true,
+      "statusAgainstOlderContractBaseline": "A"
+    },
+    {
+      "path": "artifacts/reviews/leadshug-meta-test-binding-20261018/routing-rollback-cp84.json",
+      "presentAtFrozenHead7a2ea571": true,
+      "statusAgainstOlderContractBaseline": "A"
+    },
+    {
+      "path": "artifacts/reviews/leadshug-meta-test-binding-20261018/scope-drift-v1.json",
+      "presentAtFrozenHead7a2ea571": true,
+      "statusAgainstOlderContractBaseline": "A"
+    },
+    {
+      "path": "artifacts/reviews/leadshug-meta-test-binding-20261018/scope-drift-v2.json",
+      "presentAtFrozenHead7a2ea571": true,
+      "statusAgainstOlderContractBaseline": "A"
+    },
+    {
+      "path": "artifacts/reviews/leadshug-meta-test-binding-20261018/scope-drift-v3.json",
+      "presentAtFrozenHead7a2ea571": true,
+      "statusAgainstOlderContractBaseline": "A"
+    },
+    {
+      "path": "artifacts/reviews/leadshug-meta-test-binding-20261018/source-attestation-cp82.json",
+      "presentAtFrozenHead7a2ea571": true,
+      "statusAgainstOlderContractBaseline": "A"
+    },
+    {
+      "path": "artifacts/reviews/leadshug-meta-test-binding-20261018/source-support-manifest.json",
+      "presentAtFrozenHead7a2ea571": true,
+      "statusAgainstOlderContractBaseline": "A"
+    },
+    {
+      "path": "artifacts/reviews/leadshug-meta-test-binding-20261018/structural-bundle-v1.json",
+      "presentAtFrozenHead7a2ea571": true,
+      "statusAgainstOlderContractBaseline": "A"
+    },
+    {
+      "path": "artifacts/reviews/leadshug-meta-test-binding-20261018/structural-bundle-v3.json",
+      "presentAtFrozenHead7a2ea571": true,
+      "statusAgainstOlderContractBaseline": "A"
+    },
+    {
+      "path": "artifacts/reviews/leadshug-meta-test-binding-20261018/structural-execution-cp82-v2.json",
+      "presentAtFrozenHead7a2ea571": true,
+      "statusAgainstOlderContractBaseline": "A"
+    },
+    {
+      "path": "artifacts/reviews/leadshug-meta-test-binding-20261018/structural-execution-cp82-v3.json",
+      "presentAtFrozenHead7a2ea571": true,
+      "statusAgainstOlderContractBaseline": "A"
+    },
+    {
+      "path": "artifacts/reviews/leadshug-meta-test-binding-20261018/structural-execution-cp82.json",
+      "presentAtFrozenHead7a2ea571": true,
+      "statusAgainstOlderContractBaseline": "A"
+    },
+    {
+      "path": "artifacts/reviews/leadshug-meta-test-binding-20261018/structural-outcome-cp82.json",
+      "presentAtFrozenHead7a2ea571": true,
+      "statusAgainstOlderContractBaseline": "A"
+    },
+    {
+      "path": "artifacts/reviews/leadshug-meta-test-binding-20261018/structural-reevaluation-cp83-v2.json",
+      "presentAtFrozenHead7a2ea571": true,
+      "statusAgainstOlderContractBaseline": "A"
+    },
+    {
+      "path": "artifacts/reviews/leadshug-meta-test-binding-20261018/structural-reevaluation-cp83.json",
+      "presentAtFrozenHead7a2ea571": true,
+      "statusAgainstOlderContractBaseline": "A"
+    },
+    {
+      "path": "artifacts/reviews/leadshug-meta-test-binding-20261018/structural-report-v1.json",
+      "presentAtFrozenHead7a2ea571": true,
+      "statusAgainstOlderContractBaseline": "A"
+    },
+    {
+      "path": "artifacts/reviews/leadshug-meta-test-binding-20261018/structural-report-v3.json",
+      "presentAtFrozenHead7a2ea571": true,
+      "statusAgainstOlderContractBaseline": "A"
+    },
+    {
+      "path": "artifacts/reviews/leadshug-meta-test-binding-20261018/structure-cancelled-cp84.json",
+      "presentAtFrozenHead7a2ea571": true,
+      "statusAgainstOlderContractBaseline": "A"
+    },
+    {
+      "path": "artifacts/reviews/leadshug-meta-test-binding-20261018/structure-parent-cp84.json",
+      "presentAtFrozenHead7a2ea571": true,
+      "statusAgainstOlderContractBaseline": "A"
+    },
+    {
+      "path": "todos/active/features/TODO-leadshug-meta-api-test-number-binding.md",
+      "presentAtFrozenHead7a2ea571": true,
+      "statusAgainstOlderContractBaseline": "A"
+    }
+  ]
+}

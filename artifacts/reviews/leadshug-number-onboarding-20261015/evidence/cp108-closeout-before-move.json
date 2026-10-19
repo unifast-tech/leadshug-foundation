@@ -1,0 +1,33 @@
+{
+  "generated_at_utc": "2026-10-19T19:29:19.598152Z",
+  "git": {
+    "ahead": 0,
+    "available": true,
+    "behind": 0,
+    "clean": false,
+    "root": "/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation",
+    "synced": false,
+    "upstream": "origin/main"
+  },
+  "overall_outcome": "go",
+  "rule_id": "paced.todo.closeout-disposition",
+  "todo_count": 1,
+  "todo_results": [
+    {
+      "context": {
+        "closeout_section_present": true,
+        "current_delivery_stage": "Local-Implemented",
+        "delivery_claim": true,
+        "disposition": "keep-active",
+        "next_exact_step": "executar guardas finais do marco local, mover este mesmo contrato para todos/completed/features/TODO-leadshug-channel-connection-readiness.md e publicar o checkpoint documental CP108 na Foundation main; prova f\u00edsica conclu\u00edda, nenhum teste de aparelho/restart adicional.",
+        "path_state": "active",
+        "post_commit_push_status": "pending; checkpoint documental CP108 preparado para publica\u00e7\u00e3o aut\u00f4noma na Foundation main ap\u00f3s guardas. Source commits locais preservados, sem push de produto/deploy.",
+        "qualifiers": "none",
+        "todo_path": "/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/todos/active/features/TODO-leadshug-channel-connection-readiness.md",
+        "work_state": "review"
+      },
+      "violations": []
+    }
+  ],
+  "violations": []
+}

@@ -1,8 +1,8 @@
 # Plano de validação — conexões e histórico dos canais
 
 **Data:** 2026-10-15
-**Estado:** contrato aprovado; harness local aceito em cp27/all499 e revisões independentes. Prova com números reais ainda pendente; disposição atual por cenário no TODO.
-**Contrato governante:** [ST-CON-01 aprovado](../../todos/active/features/TODO-leadshug-channel-connection-readiness.md).
+**Estado:** contrato aprovado; harness local aceito em cp27/all499 e revisões independentes. Provas com números reais por ambos os canais concluídas CP33/49/52/106-108; fonte atual e reuso de testes descritos no TODO, encerramento local concluído CP108.
+**Contrato governante:** [ST-CON-01 aprovado](../../todos/completed/features/TODO-leadshug-channel-connection-readiness.md).
 **Enquadramento:** [conexões e histórico](../feature-briefs/leadshug-channel-readiness-and-history-20261015.md).
 
 ## Sequência de ambientes
@@ -175,3 +175,9 @@ CON-10/11 oficiais têm evidência positiva para a execução observada. CON-12 
 ## Atualização cp107 — API retomada; nova troca física pendente (2026-10-19)
 
 Reinício único da API explicitamente autorizado e executado com exit0, ID/imagem preservados e StartedAt novo. Health local e HTTPS200/TLS normal. Projeções BFF antes/depois idênticas: oficial geração2/SUBSCRIBED e QR geração1/CONNECTED, ambos CONECTADO/identidade/receipt true; BUs ativas/OWNER. [Evidência e limites](../reviews/leadshug-number-onboarding-20261015/evidence/root-cp107-api-restart-recovery.json). CON-12 tem a retomada do backend comprovada, mas falta nova IN na inbox oficial e resposta recebida no WhatsApp após retomada; teste solicitado ao operador com o mesmo interlocutor alternativo. Receipt antigo preservado não é prova dessa nova troca. VAL05 e closeout permanecem abertos, sem alteração de Meta/provider/credenciais/DB/código e sem novo build/suite.
+
+## Atualização cp108 — recuperação e nova troca oficial comprovadas (2026-10-19)
+
+Operador confirmou entrada na inbox Local Test Ofc e resposta recebida no WhatsApp no teste real após restart da API. Readback confirma mesmo StartedAt posterior ao restart, pinos e canais preservados, health HTTPS200/TLS normal. Janela completa29linhas desde19:10:39Z até19:14:23.242Z contém5metaPOST200; agregado não atribui remetente/conta/mensagem. [Prova física separada e conferência canônica](../reviews/leadshug-number-onboarding-20261015/evidence/root-cp108-post-restart-official-inout.json).
+
+CON-10/11 oficiais passaram CP106 e CP108; CON-12 oficial passou CP107-108 no procedimento admitido de retomada do backend, sem desregistrar/reconectar conta Meta. Não oficial permanece comprovado CP33/49/52 e preservado. VAL05 físico local satisfeito; falta somente closeout documental/guardas aplicáveis, sem novo teste de aparelho exigido. ST-CON-02/03 histórico e ST-CON-04 abertura proativa não foram implementados nesta prova.

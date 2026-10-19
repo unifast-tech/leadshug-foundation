@@ -1,0 +1,32 @@
+{
+  "blocked": true,
+  "context": {
+    "acceptance_criteria_count": 0,
+    "allow_waivers": false,
+    "ci_equivalent_row_count": 5,
+    "current_delivery_stage": "Pending",
+    "definition_of_done_count": 9,
+    "delivery_claim": true,
+    "dod_count": 9,
+    "evidence_row_count": 28,
+    "mode": "single",
+    "pipeline_preflight_row_count": 4,
+    "rule_spirit_hunt_row_count": 4,
+    "scope_count": 10,
+    "todo_path": "/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/todos/active/features/TODO-leadshug-channel-connection-readiness.md",
+    "validation_count": 9,
+    "validation_steps_count": 9
+  },
+  "overall_outcome": "no-go",
+  "rule_id": "paced.todo.completion-evidence",
+  "schema_version": "todo-completion-guard-v1",
+  "status": "blocked",
+  "violations": [
+    {
+      "code": "FLOW-CRITERION-NAVIGATION-COVERAGE-MISSING",
+      "message": "User-visible/interactive/flow-impacting criterion lacks item-specific integration/device or navigation/browser evidence: DOD-04: runtime local isolado e migrations aplic\u00e1veis, or\u00e7amento externo bounded, erro/retry/frescor expl\u00edcitos e webhook autenticado.",
+      "resolution": "Add the integration/device test or navigation/browser test that exercises this exact item, or record an explicit approved structure-only waiver/deviation proving no user-observable flow can change. In Flutter scope, integration is ADB/device execution; browser navigation is Playwright against the final domain after the project-defined web build/publish step.",
+      "section": "Completion Evidence Matrix"
+    }
+  ]
+}

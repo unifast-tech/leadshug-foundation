@@ -1,0 +1,70 @@
+{
+  "apiGuardInvocation": "Only exact API repository diff and ls-files calls receive positive pathspecs; rev-parse and all non-API calls are unchanged.",
+  "apiPositivePathspecs": [
+    "src/",
+    "test/",
+    "prisma/",
+    "docker/",
+    "Dockerfile",
+    "package.json",
+    "package-lock.json",
+    "tsconfig.json",
+    "tsconfig.build.json",
+    "nest-cli.json",
+    "eslint.config.mjs",
+    "vitest.config.ts",
+    "vitest.config.e2e.ts",
+    "vitest.config.cov.ts",
+    "railway.json",
+    ".dockerignore",
+    ".gitignore",
+    ".env.example"
+  ],
+  "capturedUtc": "2026-10-19T19:30:20.703595+00:00",
+  "guardSourceUnchanged": true,
+  "limitations": [
+    "Protected/private operational payloads and API paths outside these named public surfaces were excluded and not enumerated.",
+    "Not a full-repository API diff; moves involving excluded paths are outside coverage."
+  ],
+  "outcome": "go",
+  "preexistingComplementCheck": {
+    "changedAgainstFrozenCount": 0,
+    "currentAndIndexPathsetsMatchFrozen": true,
+    "frozenHead": "7a2ea571",
+    "pathCount": 79,
+    "scopePaths": [
+      "artifacts/analysis/leadshug-meta-api-test-number-binding-proposal-20261018.md",
+      "artifacts/reviews/leadshug-meta-test-binding-20261018/",
+      "todos/active/features/TODO-leadshug-meta-api-test-number-binding.md"
+    ],
+    "untrackedCount": 0
+  },
+  "repositoryCounts": {
+    "api": {
+      "baselineCommit": "ae6a9662c29b77276351aa9de653a47276372246",
+      "visibleChangeCount": 53
+    },
+    "foundation": {
+      "baselineCommit": "41572cebbeb2ec87d0448dfa230fad4364af7ff6",
+      "visibleChangeCount": 1337
+    },
+    "web": {
+      "baselineCommit": "4e56f6c1f4515b918d05b8c87e890d42e8542c56",
+      "visibleChangeCount": 16
+    },
+    "workspace": {
+      "baselineCommit": "cab23188ec796f79131467dcce0a16acedab8d4f",
+      "visibleChangeCount": 11
+    }
+  },
+  "rule": "paced.todo.diff-expectation",
+  "scope": "public-path-only",
+  "todoPath": "todos/completed/features/TODO-leadshug-channel-connection-readiness.md",
+  "totals": {
+    "actual_change_count": 1417,
+    "expected_change_count": 1417,
+    "forbidden_change_count": 0,
+    "unclassified_change_count": 0
+  },
+  "violationCodeCounts": {}
+}
