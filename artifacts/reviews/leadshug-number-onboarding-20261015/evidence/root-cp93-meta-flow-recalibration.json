@@ -1,0 +1,44 @@
+{
+  "checkpoint": "cp93-current-meta-onboarding-flow",
+  "recordedAtUtc": "2026-10-19T15:34:51.424613+00:00",
+  "humanObserved": [
+    "Meta partner introduction shows unifast.br2",
+    "Continuar opens phone selection directly",
+    "Dropdown offers new phone, virtual display-name option and Sandbox Test Number; own official phone absent",
+    "Voltar returns to introduction, not asset selection"
+  ],
+  "confirmedLocalSource": {
+    "path": "web-app/src/componentes/CadastroNumero.tsx",
+    "sha256": "9afbe4f419dcf4b5133f8103a0082b6eaa32837aaaf307ffbc61489c50f8cb78",
+    "sdkOptions": "config_id from capabilities; response_type code; override_default_response_type true; extras {setup:{}}",
+    "noMutation": true
+  },
+  "primarySources": [
+    {
+      "url": "https://developers.facebook.com/documentation/business-messaging/whatsapp/embedded-signup/default-flow/",
+      "finding": "v4 is rolling out phone-first ordering; assets may be selected after phone verification. Previous asset-first sequence is not universal."
+    },
+    {
+      "url": "https://developers.facebook.com/documentation/business-messaging/whatsapp/embedded-signup/versions/",
+      "finding": "v2/v3 deprecated October15 2026; absent or invalid version served as v4. The dashboard Embedded Signup Builder Check a launch config can interpret actual extras. WABA-only v2 sharing has a separate temporary sunset, so do not blindly add that flag."
+    },
+    {
+      "url": "https://developers.facebook.com/documentation/business-messaging/whatsapp/embedded-signup/version-4/",
+      "finding": "v4 product selection is controlled in Facebook Login for Business configuration. Required assets include WhatsApp account WAAC and Messaging account for Cloud API. Advanced access requirements must be checked for this app and real asset context."
+    },
+    {
+      "url": "https://developers.facebook.com/documentation/business-messaging/whatsapp/embedded-signup/overview/",
+      "finding": "Developer-app-created accounts have an onboarding selection limitation; sandbox cannot exchange real messages. These limitations do not by themselves establish how this real account was created or why it is absent."
+    }
+  ],
+  "retrieval": "web tool Meta requests were throttled; bounded native Windows curl with normalTLS successfully retrieved public official documents without authentication. No application credentials used.",
+  "invalidatedAssumption": "A Voltar button before phone selection would expose portfolio/WABA selection in this instance. Earlier step-by-step used a different screen order.",
+  "remainingUnknowns": [
+    "Exact current effective Meta login configuration/products/eligibility",
+    "Reason real phone absent from picker",
+    "Operational WAAC/Messaging account/WABA mapping and original provisioning context",
+    "Current advanced access state, last reported standard; not independently rechecked"
+  ],
+  "next": "Close current Meta popup without entering or registering a phone. Inspect current app Embedded Signup Builder Check a launch config using only actual public extras {setup:{}} and corresponding Facebook Login for Business configuration. Do not repeat same popup loop or select Sandbox. No product/runtime/provider changes admitted by this diagnosis.",
+  "preserved": "Existing attempt/BU, QR channel, app and credentials unchanged; cancelled local TestNumber mode remains cancelled; VAL05 open."
+}

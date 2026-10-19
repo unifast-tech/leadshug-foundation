@@ -41,12 +41,12 @@ Proposta ST-CON-01: jornada de cadastro de número, com infraestrutura local est
 
 - **Current delivery stage:** Pending
 - **Qualifiers:** Blocked
-- **Next exact step:** CP92: Local Test Ofc reativada via PATCH canônico, OWNER e zero canais confirmados; QR preservado e Teste Meta permanece inativa. Operador confere URLs Meta do HTTPS https://yang-sufficient-employ-cassette.trycloudflare.com, identifica WABA operacional pelo ID e inicia NOVO canal OFICIAL na BU existente Local Test Ofc. Escolher conta/número já registrados pelo fluxo Meta e conferir seleção antes de confirmar; depois inscrever eventos e executar IN/OUT observado. Não criar outra BU para contornar ownership. VAL05 aberto; hipótese ainda não comprovada.
+- **Next exact step:** CP93: pausar repetição do popup/SMS. Tela humana mostra introdução → telefone com somente Sandbox elegível; Voltar não abre seleção de ativos. Documentação Meta atual confirma v4 com telefone primeiro e interpretação de extras sem version como v4. Conferir configuração efetiva no Embedded Signup Builder / Check a launch config com extras públicos {setup:{}} e produtos/ativos/permissões da configuração antes de orientar outro cadastro. Local Test Ofc ativa e sem canal; QR preservado. Causa da ausência do número operacional ainda não comprovada; VAL05 aberto.
 
 ## Active Work State (Required While TODO Remains In `active/`)
 
 - **Work state:** blocked
-- **Why this state now:** o acesso HTTPS foi recuperado; falta atualizar URLs Meta para o novo hostname e conferir a WABA operacional relatada pelo humano, seguida do teste real.
+- **Why this state now:** fluxo Meta atual abre telefone primeiro e não oferece o número operacional; falta conferir configuração efetiva, ativos/elegibilidade e permissões antes da seleção WABA e prova real. URLs Meta do hostname CP90 também aguardam confirmação humana.
 - **Exit condition:** acesso HTTPS validado, URLs Meta atualizadas pelo operador e WABA/número corretos selecionados pelo fluxo oficial. A indisponibilidade de um segundo número não bloqueia essa nova estratégia.
 
 ## Scope
@@ -160,8 +160,8 @@ n/a; nenhuma entrega parcial reivindicada.
 
 ## Blocker Notes (Required if `Qualifiers` includes `Blocked`)
 
-- **Blocker:** URLs Meta precisam ser atualizadas para o HTTPS recuperado; associação entre WABA operacional e número ainda não conferida.
-- **Why blocked now:** o domínio mudou após recuperação do túnel; o usuário relata que a WABA cadastrada não é a operacional, embora o mesmo telefone apareça em duas contas. Relato não equivale a causa comprovada.
+- **Blocker:** seleção atual do Embedded Signup só oferece Sandbox; número operacional ausente e configuração efetiva/elegibilidade ainda não esclarecidas.
+- **Why blocked now:** screenshots mostram introdução e telefone primeiro, sem o recurso próprio na lista. A ordem é compatível com v4 documentado; causa da ausência e associação WABA operacional ainda não comprovadas.
 - **What unblocks it:** recuperação do túnel, atualização das URLs Meta e cadastro pelo fluxo oficial com WABA_ID e PHONE_NUMBER_ID conferidos para o mesmo número/BU.
 - **Owner / source:** executor DevOps para túnel; operador para Meta e seleção da conta; direcionamento humano CP90 em2026-10-19.
 - **Last confirmed truth:** CP91: três DELETEs oficiais204 e duas inativações200 concluídos; readback confirmou apenas Local Test BU ativa entre candidatas de teste e QR inalterado. Histórico/identidades retidos; nenhuma exclusão física de BU nem alteração Meta. Novo HTTPS validado CP90; seleção WABA correta e IN/OUT continuam pendentes, VAL05 sem waiver.
@@ -1981,3 +1981,11 @@ Usuário pediu passo a passo para conectar o número oficial após limpeza. Prep
 Novo GO limitado liberou um PATCH status ATIVO com login normal OWNER e verificações correntes. Resposta200 com ID/nome/status exatos; listagem final confirma Local Test Ofc ativa/OWNER/zero canais, QR Local Test BU idêntico e Teste Meta ainda ausente/inativa. Root conferiu recibo48635930. [Preparação e próximo gate](../../../artifacts/reviews/leadshug-number-onboarding-20261015/evidence/root-cp92-official-registration-preparation.json). Sem canal novo, credencial oficial nova, SQL, provider/Meta writes, novo código/runtime/env ou teste de mensagens.
 
 Roteiro humano usa BU Local Test Ofc, modalidade Oficial e Reservar tentativa (não reautorização de canal removido); janela Meta deve selecionar a WABA operacional existente e o número já provisionado. No retorno, Conta ID deve coincidir com WABA_ID anotado pelo operador, distinto de ID de portfólio; backend valida número sob WABA autorizada. Parar se conta/número não aparecem ou se pedir novo SMS/ligação. Conferência antes de Confirmar número/ativação e prova física subsequente. URLs Meta para hostname CP90 ainda dependem de confirmação humana. Parent Pending/VAL05 aberto; modo técnico local permanece Cancelled.
+
+### CP93 — Roteiro corrigido para a ordem atual de telas Meta (2026-10-19)
+
+Humano confirmou que seleção de telefone oferece somente Test Number Sandbox, além de adicionar número/virtual; seu próprio número oficial não consta. Voltar leva à apresentação da integração unifast.br2, não à escolha de empresa/WABA. Logo, insistir em Voltar/Continuar não resolve o próximo gate e o roteiro anterior não corresponde a esta ordem de telas. Esse nome na apresentação não comprova qual WABA será autorizada.
+
+Pesquisa primária atual via curl Windows normalTLS, após429 na ferramenta web, confirmou v4 telefone primeiro e migração de versões ausentes/antigas após15/10/2026. Fonte pública do SDK contém extras somente setup vazio, sem seleção explícita de versão/customização. Isso explica a ordem compatível observada, sem estabelecer por que somente Sandbox aparece. Configuração v4, ativos WAAC/Messaging, elegibilidade da conta e permissões exigem inspeção; nem Acesso Padrão relatado antes nem origem developer-app da conta foram rechecados para concluir bloqueio. [Fatos/fontes e limites](../../../artifacts/reviews/leadshug-number-onboarding-20261015/evidence/root-cp93-meta-flow-recalibration.json).
+
+Próximo passo usa ferramenta oficial Embedded Signup Builder Check a launch config com extras públicos reais {setup:{}} e configuração corrente. Não instruir OTP, migrar, excluir número/WABA, selecionar Sandbox, adicionar only_waba_sharing de versão antiga ou ativar app_only_install por hipótese. Nenhum produto/runtime/credencial/BU/provedor alterado neste diagnóstico; sem nova execução de cadastro ou mensagem. Parent Pending/Blocked pelo fluxo efetivo/elegibilidade e prova real VAL05; modo técnico Cancelled.
