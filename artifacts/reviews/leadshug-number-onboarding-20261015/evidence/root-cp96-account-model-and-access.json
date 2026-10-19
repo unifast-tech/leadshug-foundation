@@ -1,0 +1,121 @@
+{
+  "checkpoint": "cp96-account-model-and-restored-access",
+  "recordedAtUtc": "2026-10-19T16:50:59.242480+00:00",
+  "userObservation": "Number Summary has Phone number information and no owner field; prior instruction to find ownership there was incorrect.",
+  "recalibration": {
+    "accountModel": "Current official Meta model separates WAAC phone identity from per-partner Messaging accounts; templates/billing/webhook subscriptions belong to Messaging account. Multiple Messaging accounts on a phone and empty templates in a new partner account can be expected.",
+    "onboarding": "Phase1 standard Embedded Signup creates separate partner Messaging account and returns it in waba_id; clients already using one partner can onboard another using the existing phone. Phone-first input should be used to evaluate actual own-number eligibility, not assumed to require an unused phone solely from its label.",
+    "limitation": "Developer-app-origin account selection restriction does not by itself prove all existing-phone reuse is impossible. User account origin remains unknown; do not guarantee eligibility or suggest migration.",
+    "compatibility": "Phase1 retains WABA IDs as Messaging IDs and phone IDs/API paths. WAAC IDs/new endpoints are later-phase capabilities; do not invent a current WAAC owner field/query or prematurely change persistence.",
+    "multiMessaging": "messaging_account_id should be considered when actual token has access to multiple Messaging accounts on the same phone, especially for attribution/billing; not proven cause of missing inbound and no current send implementation change authorized."
+  },
+  "sources": [
+    "https://developers.facebook.com/documentation/business-messaging/whatsapp/account-model-evolution/",
+    "https://developers.facebook.com/documentation/business-messaging/whatsapp/account-model-evolution/onboarding/",
+    "https://developers.facebook.com/documentation/business-messaging/whatsapp/account-model-evolution/messaging/",
+    "https://developers.facebook.com/documentation/business-messaging/whatsapp/whatsapp-business-accounts/"
+  ],
+  "retrieval": "Public official documentation index and Markdown via bounded native Windows curl normalTLS; no private credentials.",
+  "readOnlyBff": {
+    "role": "OWNER",
+    "targetBu": "Local Test Ofc",
+    "buId": "a1492634-8685-46d8-a7cb-685a99f5c930",
+    "officialChannelId": "d45bcd3a-1efa-4240-a8aa-b6906524e48c",
+    "generation": 1,
+    "status": "CONECTANDO",
+    "currentAttemptId": "9705cebf4ac969080e3a284ff3f08d6e",
+    "qrUnchanged": true,
+    "testeMetaAbsent": true,
+    "attemptGetNotCalled": "Source shows pending expired attempt GET writes ERROR/EXPIRED; avoided in read-only diagnostic. TTL10min."
+  },
+  "httpsRecovery": {
+    "oldCp90Processes": "Exact owned supervisor/child absent; old host failed native DNS/TLS despite an external cached DNS answer.",
+    "launch": "One new owned CP96 supervisor under fresh GO; accepted launcher literal-only cp90→cp96, SHA db3511cac3fe065678317ee088409bb170f820c49dd3bbcf08c877d0060c69e0; accepted binaries preserved.",
+    "baseUrl": "https://tooth-mode-bean-bulletin.trycloudflare.com",
+    "receiptSha256": "e969f6c3cfd7e85405aac21a10d71628922e1b720e5ea456c5a491371754b626",
+    "receipt": {
+      "capturedAtUtc": "2026-10-19T16:49:12Z",
+      "scope": "CP96 tunnel restoration/readiness; no product, provider, database, container, or Meta settings mutations",
+      "publicHostname": "tooth-mode-bean-bulletin.trycloudflare.com",
+      "tunnel": {
+        "supervisorPid": 276,
+        "childPid": 18460,
+        "target": "http://127.0.0.1:8083",
+        "registeredConnectionEvents": 1,
+        "errorEvents": 1,
+        "streamCallbackFaults": 0,
+        "stateWriteFailures": 0,
+        "supervisorSha256": "bdf68028ea2da0699b1e04d191453b5d7090861b17f518d236ce6b084d45c69b",
+        "cloudflaredSha256": "86aee4017b26625cee8484c113558f48effa4cd47f7aa05fcf425604e5d2b23c"
+      },
+      "https": {
+        "health": {
+          "status": 200,
+          "tlsVerifyResult": 0
+        },
+        "root": {
+          "status": 200,
+          "sha256": "f21b2cb8528bab142bdba0babc64b7cb4cff821152ef4416698fd062642d5acd"
+        },
+        "assets/index-txvhtd65.js": {
+          "sha256": "d14343604557296f2ed62c1df47d9c80d81c323abafd89ccbb64a6a0746ff4bd"
+        },
+        "config.js": {
+          "sha256": "5a05dfc0a74f08500636cc64e319da5fc9227a48026e778bd640ac0400e6588f"
+        },
+        "privacidade.html": {
+          "status": 200,
+          "sha256": "d0f72c588f0f014de46a327e34d6b26125ca115bc973b56bbb926cd8519e701d"
+        }
+      },
+      "containers": [
+        {
+          "id": "9eccbea4825108cec2b8a6fcd48c43c17845e216415fe95e3972265c6ad34cf1",
+          "image": "sha256:fe5fb7eaf6a68123f9da6b92a0a69483180d213f556b4bedf313f04a383b4821",
+          "project": "leadshug_channels_local",
+          "service": "api",
+          "owner": "number-onboarding"
+        },
+        {
+          "id": "9aa55b6681a8480dbfd7cbf2a51ab8571035603b288b52e6798d93741af01093",
+          "image": "sha256:cfd5e58b91a67d2fae4f37759274a34209cd2501082650a49545a60a12642361",
+          "project": "leadshug_channels_local",
+          "service": "web"
+        },
+        {
+          "id": "0c48d94e9fe5b4ad75efd304db2752dfa4cab3befc59b9f736574d6cd551eea3",
+          "image": "sha256:76090a34b858323b6ab169711adc08253b5bee7123a973dc581ed46b643bc109",
+          "project": "leadshug_channels_local",
+          "service": "gateway"
+        }
+      ],
+      "servedWebContainerAssets": {
+        "index.html": "f21b2cb8528bab142bdba0babc64b7cb4cff821152ef4416698fd062642d5acd",
+        "assets/index-txvhtd65.js": "d14343604557296f2ed62c1df47d9c80d81c323abafd89ccbb64a6a0746ff4bd",
+        "config.js": "5a05dfc0a74f08500636cc64e319da5fc9227a48026e778bd640ac0400e6588f",
+        "privacidade.html": "d0f72c588f0f014de46a327e34d6b26125ca115bc973b56bbb926cd8519e701d"
+      },
+      "limitations": "Public DNS resolves; normal TLS succeeds. Existing accepted served artifact hashes match public responses and web container. Local web-app/dist was not used as authoritative evidence. No operator Meta URL settings were changed."
+    },
+    "rootIndependent": {
+      "healthHttp": 200,
+      "healthBytes": 15,
+      "healthSha256": "a29ee2b15c494311c52521766e44af56a3ad2248e7a8ab465e5206463c13d288",
+      "policyHttp": 200,
+      "policyBytes": 12865,
+      "policySha256": "d0f72c588f0f014de46a327e34d6b26125ca115bc973b56bbb926cd8519e701d",
+      "normalTls": true,
+      "redirects": false
+    }
+  },
+  "next": "Operator saves all Meta domain/OAuth/JS SDK/callback/privacy URLs to new base and verifies callback using unchanged local verify token, keeping messages subscribed. Then reserve fresh reauthorization on the existing official slot/BU because10min expiry may have elapsed. In Meta phone-first screen use own official test phone to observe eligibility, not Sandbox; stop on migration/unregister or unexpected resource/error, do not claim successful binding before explicit confirmation. No real message until registered/subscribed and bounded monitoring ready.",
+  "unchanged": [
+    "API/Web/gateway images/containers and product sources",
+    "Business Units/channels/attempts/identities/history",
+    "provider and Meta settings by agent",
+    "private env files",
+    "App Review unsubmitted",
+    "cancelled TestNumber authorization mode"
+  ],
+  "VAL05": "open_unwaived"
+}

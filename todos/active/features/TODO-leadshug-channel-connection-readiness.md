@@ -41,12 +41,12 @@ Proposta ST-CON-01: jornada de cadastro de número, com infraestrutura local est
 
 - **Current delivery stage:** Pending
 - **Qualifiers:** Blocked
-- **Next exact step:** CP95: humano confirmou Messaging account operacional proprietária unifast.br2, mesma do app. Conferir separadamente proprietário/grants da WhatsApp account vinculada, controle do perfil que abre o popup e origem da conta (developer-app versus cadastro em provedor). Fonte Meta documenta limitação ES para contas originalmente criadas por developer app; aplicação ao caso ainda não demonstrada. Não transformar review pendente em bloqueio universal nem inferir propriedade dos dois ativos por uma única resposta. Sem novo cadastro/SMS ou submissão automática. VAL05 aberto.
+- **Next exact step:** CP96: operador atualiza domínio/OAuth/SDK/callback/política para https://tooth-mode-bean-bulletin.trycloudflare.com (HTTPS recuperado e validado). Depois reservar autorização fresca no canal OFICIAL existente da Local Test Ofc; tentativa tem TTL10min. No fluxo v4 phone-first identificar o número próprio já oficial e observar elegibilidade, sem selecionar Sandbox ou concluir migração. Novo modelo Meta cria Messaging account por parceiro: ausência de templates antigos não prova conta errada. Validar WABA/Messaging retornada, número e inscrição, depois IN/OUT observado. Não procurar proprietário em Number Summary nem presumir APIs WAAC futuras. VAL05 aberto.
 
 ## Active Work State (Required While TODO Remains In `active/`)
 
 - **Work state:** blocked
-- **Why this state now:** configuração real v4 já conferida; número operacional segue ausente. Falta determinar proprietário e grants das duas classes de ativos para distinguir teste próprio Standard de acesso externo Advanced, antes da nova prova real.
+- **Why this state now:** configuração v4 confirmada, mas autorização do número real ainda não concluída. Túnel anterior encerrou; HTTPS CP96 recuperado exige atualização das URLs Meta antes de autorização fresca e avaliação de elegibilidade do telefone próprio no fluxo atual.
 - **Exit condition:** acesso HTTPS validado, URLs Meta atualizadas pelo operador e WABA/número corretos selecionados pelo fluxo oficial. A indisponibilidade de um segundo número não bloqueia essa nova estratégia.
 
 ## Scope
@@ -160,7 +160,7 @@ n/a; nenhuma entrega parcial reivindicada.
 
 ## Blocker Notes (Required if `Qualifiers` includes `Blocked`)
 
-- **Blocker:** número operacional ausente do picker; propriedade e grants de WhatsApp account/Messaging account ainda não conferidos. Configuração selecionada v4 já validada; review pendente não é causa universal comprovada.
+- **Blocker:** atualização humana das URLs Meta para CP96 e autorização efetiva do número próprio. Modelo de contas foi esclarecido; recurso/mapping/subscrição e recebimento reais ainda não validados.
 - **Why blocked now:** screenshots mostram introdução e telefone primeiro, sem o recurso próprio na lista. A ordem é compatível com v4 documentado; causa da ausência e associação WABA operacional ainda não comprovadas.
 - **What unblocks it:** recuperação do túnel, atualização das URLs Meta e cadastro pelo fluxo oficial com WABA_ID e PHONE_NUMBER_ID conferidos para o mesmo número/BU.
 - **Owner / source:** executor DevOps para túnel; operador para Meta e seleção da conta; direcionamento humano CP90 em2026-10-19.
@@ -2005,3 +2005,13 @@ Humano confirmou que a conta de mensagens operacional pertence ao mesmo portfól
 Fonte Meta overview atual documenta limitação de Embedded Signup para contas originalmente criadas via app de desenvolvedor. É hipótese verificável para a ausência do telefone, não diagnóstico estabelecido; a origem operacional ainda é desconhecida. Perguntas humanas em paralelo: origem da conta, controle total do perfil no ativo operacional e proprietário da WhatsApp account principal, distinguindo-a da Messaging account já conferida. [Fatos e próximos gates](../../../artifacts/reviews/leadshug-number-onboarding-20261015/evidence/root-cp95-own-messaging-account-eligibility.json).
 
 Sem mais Voltar/Continuar, OTP, migração, novo modo manual, alteração de configuração/credencial/DB/produto/runtime/Meta ou envio de App Review. Cadastro por credencial scoped permanece restrito ao contrato aprovado; nenhum modo técnico Cancelled reaberto implicitamente. Local Test Ofc preparada e sem canal na última prova CP92; QR preservado e VAL05 aberto.
+
+### CP96 — Modelo atual Meta esclarecido e acesso restaurado (2026-10-19)
+
+Summary humano mostra Phone number information sem campo de proprietário: orientação para procurar owner ali estava incorreta. Pesquisa primária atual no índice oficial e documentos account-model-evolution/onboarding/messaging esclareceu WAAC por telefone e Messaging account por parceiro, com isolamento de templates/billing/webhooks. Duas Messaging accounts com o mesmo telefone e conta nova sem templates antigos podem ser normais. Não inferir conta errada pela ausência de modelos nem exigir usar a conta do parceiro anterior.
+
+Na fase atual, Embedded Signup padrão cria Messaging account por parceiro, retorna-a no waba_id existente e permite outro parceiro sobre telefone já registrado. Rótulo de entrada novo telefone não basta para concluir que número existente é inelegível; a resposta real da Meta após identificação precisa ser observada. Isso corrige a parada prematura do roteiro anterior antes da entrada do telefone próprio. Não inferir que seleção de antiga developer-app account e reutilização de telefone no novo modelo são a mesma operação. Waac_id/endpoints novos são fase posterior; APIs/IDs atuais continuam compatíveis. messaging_account_id deve ser avaliado somente conforme ambiguidade efetiva do token, sem atribuir falta de IN ao parâmetro de envio. [Fontes, limites e recibos](../../../artifacts/reviews/leadshug-number-onboarding-20261015/evidence/root-cp96-account-model-and-access.json).
+
+BFF readonly OWNER confirmou Local Test Ofc ativa com canal OFICIAL d45bcd3a/geração1/currentAttempt9705cebf e QR preservado. GET de tentativa evitado por marcar expiração por escrita; TTL10min confirmado em source. Pinos dos três containers/imagens/owner/project preservados. CP90 processos próprios ausentes; DNS nativo/HTTPS antigo falharam. Sob pedido anterior vigente de recuperar acesso, clone literal CP90→CP96 db3511ca aceito pelo root e GO novo liberou um supervisor próprio. Novo HTTPS https://tooth-mode-bean-bulletin.trycloudflare.com teve /health, / e /privacidade.html200 com TLS normal, assets iguais ao container Web/pinos históricos; root repetiu health/política e hashes. Recibo executor e969f6c3 conferido; nenhuma alteração API/Web/gateway/env/Meta/cadastro/provedor/dados.
+
+Pergunta humana enviada para salvar URLs Meta do novo host e verificar com token local existente, messages inscrito. Só depois reservar autorização fresca no slot oficial existente e avaliar telefone real pelo fluxo phone-first; parar em migração/unregister/recurso inesperado/erro e não concluir sucesso por hipótese. Sem nova mensagem até inscrição/mapping e janela observável. App Review permanece rascunho; complemento TestNumber Cancelled e VAL05 aberto.
