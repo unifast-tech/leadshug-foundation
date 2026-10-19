@@ -1,0 +1,90 @@
+{
+  "checkpoint": "cp106-official-inout-readback",
+  "date": "2026-10-19",
+  "operatorEvidence": {
+    "registration": "After guidance to use JA_REGISTRADO with the offered6111 account and correct phone, operator reported Local Test Ofc own identity confirmed, provider events activated, receipt pending. Account selection provenance follows this guided flow; external IDs are not exposed by the final channel DTO.",
+    "physicalTest": "Operator confirmed a new inbound from the same alternate contact appeared in Atendimento Local Test Ofc and a reply sent through that conversation arrived in the interlocutor's WhatsApp.",
+    "limit": "Actual UI plus receiving-device report, not synthetic dashboard acceptance. No personal sender/name/phone/message content was collected. This confirms the observed IN/OUT exchange, not continuous provider health or official recovery."
+  },
+  "baseline": {
+    "sinceUtc": "2026-10-19T18:56:56Z",
+    "capturedAtUtc": "2026-10-19T18:57:11.164Z",
+    "coverageComplete": true,
+    "parsedLines": 4,
+    "unparsedLines": 0,
+    "routeMethodStatusCounts": [
+      { "route": "other", "method": "GET", "status": "200", "count": 1 },
+      { "route": "other", "method": "GET", "status": "304", "count": 3 }
+    ],
+    "metaPostCount": 0,
+    "apiWebGatewayPins": "match accepted CP96 IDs/images/project/services; API owner number-onboarding",
+    "httpsHealth": { "status": 200, "tlsVerifyResult": 0 }
+  },
+  "finalReadback": {
+    "method": "One normal administrative BFF login after fresh preflight, followed only by active BU list and exact official/QR channels GETs. Credentials and cookie memory-only. No registration status GET, provider request or SQL.",
+    "reader": "foundation_documentation/artifacts/tmp/number-onboarding-execution/T/cp106-channel-readback.py",
+    "readerSha256": "961cd19dcc1cc0bba7fc3b668e65f5ff0d630190b2c84d4721013216c704b597",
+    "rejectedDraft": "314f938752d1cf2970c6be3107d687f0df865551e5776e30dd16dcbdd6649fc4 was not executed: root found wrong owner-label key/expected owner values. Corrected draft matches bounded inspect/source DTO and received one-shot GO.",
+    "status": "complete",
+    "officialBu": {
+      "id": "a1492634-8685-46d8-a7cb-685a99f5c930",
+      "name": "Local Test Ofc",
+      "active": true,
+      "role": "OWNER"
+    },
+    "officialChannel": {
+      "id": "d45bcd3a-1efa-4240-a8aa-b6906524e48c",
+      "type": "OFICIAL",
+      "status": "CONECTADO",
+      "generation": 2,
+      "currentAttemptId": "b67af2c5c30ee84d9774dff14b5d4d39",
+      "ownNumberVerified": true,
+      "providerConnectionState": "SUBSCRIBED",
+      "receiptVerified": true,
+      "connected": true
+    },
+    "preservedQrBu": {
+      "id": "c231d8f7-d8a5-448e-a740-2ab8aebf9bc2",
+      "name": "Local Test BU",
+      "active": true,
+      "role": "OWNER"
+    },
+    "preservedQrChannel": {
+      "id": "b6c3e3f0-fe77-4e92-82e4-1975dffcbef1",
+      "type": "NAO_OFICIAL",
+      "status": "CONECTADO",
+      "generation": 1,
+      "currentAttemptId": "91a050d2-b6b7-4d3a-ac48-97392688584d",
+      "ownNumberVerified": true,
+      "providerConnectionState": "CONNECTED",
+      "receiptVerified": true,
+      "connected": true
+    },
+    "externalIds": "WABA and phone IDs are not exposed by this canonical DTO and were not independently read from storage."
+  },
+  "sourceUnderTest": {
+    "rootCommit": "80e3940126f22a941f90dba4f5e801b6c0eb2f58",
+    "apiCommit": "db5a86758a165fac8a1ab587599c37b17890530c",
+    "webCommit": "74b9d4b714044829796f875d00553f077c1c329d",
+    "apiImage": "sha256:fe5fb7eaf6a68123f9da6b92a0a69483180d213f556b4bedf313f04a383b4821",
+    "webImage": "sha256:cfd5e58b91a67d2fae4f37759274a34209cd2501082650a49545a60a12642361",
+    "servedTarget": "https://tooth-mode-bean-bulletin.trycloudflare.com",
+    "freshnessReference": "Accepted CP96 served-image and bundle fingerprints retained; CP106 exact container/image pins and TLS health match. No new build or tests claimed."
+  },
+  "disposition": {
+    "officialInitialRegistrationAndExchange": "passed for the observed local run",
+    "officialRecovery": "not executed; remains required by CON-12/VAL-05",
+    "nonOfficial": "prior QR IN/OUT and recovery evidence retained; canonical connected state preserved",
+    "historicalCause": "Do not conclude the prior thread's actual owner or a single cause for all historical missing messages from this successful fresh-contact run.",
+    "overall": "Parent not complete; VAL-05 remains open for official recovery and required closeout. Technical TestNumber mode stays Cancelled."
+  },
+  "nextRecoveryProposal": {
+    "status": "prepared, not executed",
+    "target": "Only local owned API container9eccbea4825108cec2b8a6fcd48c43c17845e216415fe95e3972265c6ad34cf1, project leadshug_channels_local, owner number-onboarding",
+    "operation": "docker.exe restart --time 10 9eccbea4825108cec2b8a6fcd48c43c17845e216415fe95e3972265c6ad34cf1",
+    "preconditions": "Fresh pins/health and before-state for both BUs; confirm permission for brief API unavailability because it serves both official and QR test BUs. Prior explicit interruption permission covered Evolution only.",
+    "checks": "After one bounded restart, verify same API ID/image, HTTPS readiness and same channel IDs/generations/identity/subscription/receipt. Then fresh real IN/OUT with the same alternate contact. Preserve DB, credentials, QR/Evolution, gateway, Meta configuration and existing conversations.",
+    "limits": "Proves recovery of local integration after API unavailability, not Meta account deregistration/reconnection or provider outage. No unregister/logout, token revocation, data deletion, new authorization or environment rebuild. Stop on ambiguous restart outcome rather than repeating it blindly."
+  },
+  "unchanged": "No product/runtime/env/Meta/provider/BU/channel/credential mutation by agent; only ignored readback helper preparation and one normal login. No restart performed, no transcript/payload/raw log/private credential persisted."
+}
