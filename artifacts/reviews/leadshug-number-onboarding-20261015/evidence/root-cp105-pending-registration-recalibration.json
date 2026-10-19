@@ -1,0 +1,33 @@
+{
+  "checkpoint": "cp105-pending-registration-recalibration",
+  "date": "2026-10-19",
+  "operatorClarification": "The LeadsHug registration was never completed. It was intentionally held before Confirmar numero while the desired existing Messaging account was investigated. Do not treat lack of an inbox conversation as an unexpected regression at this stage.",
+  "sourceReview": {
+    "registration": "NumberRegistrationsController.authorize accepts nonce/code only. NumberRegistrationService.options/confirm use the encrypted candidate from that code exchange, validate provider membership, then promote the credential and durable provider identity. The currently observed dropdown offered only account2968878483486111.",
+    "grantBoundary": "MetaHttpClient.recursos/assertCurrentGrant require explicit granular management/messaging target intersection. The all-objects USER token inspected in Explorer is not a drop-in channel credential and must not be substituted through env/SQL or accepted by loosening the existing OAuth boundary implicitly.",
+    "subscription": "After local confirmation, advance resolves the channel credential and subscribes its selected Messaging account. A manual Graph subscription is not local identity/credential promotion.",
+    "ingress": "MetaWebhookController looks up metadata.phone_number_id and its current channel. If no current mapping exists, it returns without registering an inbox message and the endpoint can still return200. Verified identity is also required. No pre-registration replay or import is established by this contract; a new message will be needed after completing the binding."
+  },
+  "metaModel": {
+    "offeredMessagingAccountId": "2968878483486111",
+    "requestedExistingMessagingAccountId": "918214270616606",
+    "sharedPhoneNumberId": "1203171609551853",
+    "finding": "Current standard Embedded Signup creates a Messaging account for the partner and returns that ID in waba_id. The offered account contains the correct phone. A distinct account and separate templates/billing do not by themselves make it unusable for this phone's message delivery."
+  },
+  "directionQuestion": {
+    "status": "unresolved",
+    "optionA": "Complete approved Embedded Signup with2968878483486111 and the same phone, preserving Local Test Ofc and durable ownership; if expired reserve fresh REAUTORIZAR. Then verify subscription/mapping and perform new real IN/OUT. No new implementation mode. Operator must explicitly accept this change from the earlier preference for918... before confirmation.",
+    "optionB": "Keep the explicit requirement to reuse918214270616606 and prepare/review a direct existing-account connection flow. Meta recommends System User access tokens for direct developers accessing their own assets. Product support would need reviewed scope and approval; no cancelled technical TestNumber pathway can be reopened implicitly.",
+    "operatorFollowup": "Asked whether messages can arrive using the account ending6111; this is a question, not selection/approval of optionA.",
+    "answer": "Account6111 is a supported candidate for the same official phone. Completing confirmation, identity/mapping, credential promotion and subscription makes it eligible for the normal application flow. Actual physical IN/inbox/OUT remains unproven and cannot be guaranteed before the test."
+  },
+  "sources": [
+    "api-app/src/surfaces/bff/number-registrations.controller.ts",
+    "api-app/src/domain/channels/number-registration.service.ts",
+    "api-app/src/integrations/meta/meta.client.ts",
+    "api-app/src/surfaces/webhooks/meta.controller.ts",
+    "https://developers.facebook.com/documentation/business-messaging/whatsapp/account-model-evolution/onboarding/",
+    "https://developers.facebook.com/documentation/business-messaging/whatsapp/access-tokens/"
+  ],
+  "unchanged": "No credential copying, login/provider/Meta request, source/runtime/env/DB/BU/channel mutation, confirmation of296... or renewed physical test. No new flow implementation/review approval implied. Technical TestNumber mode stays Cancelled; desired-account direction unresolved and VAL05 open."
+}
