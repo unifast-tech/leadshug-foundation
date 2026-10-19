@@ -1,0 +1,45 @@
+{
+  "checkpoint": "cp104-alternate-sender-meta-posts",
+  "date": "2026-10-19",
+  "operatorReport": {
+    "physicalMessageSent": true,
+    "senderHadNeverMessagedOfficialPhone": true,
+    "ticks": "not reported",
+    "limits": "Sender history is an operator report. No phone number, name or message contents were requested or retained. No dashboard synthetic event was requested in this physical test window."
+  },
+  "gatewayObservation": {
+    "sinceUtc": "2026-10-19T18:35:17Z",
+    "capturedAtUtc": "2026-10-19T18:38:11.880Z",
+    "helperSha256": "c3a74788fdda85d1c03af08e26e3b3dfaa821a8e64958cc17ff9053331160fcf",
+    "gatewayId": "0c48d94e9fe5b4ad75efd304db2752dfa4cab3befc59b9f736574d6cd551eea3",
+    "gatewayImage": "sha256:76090a34b858323b6ab169711adc08253b5bee7123a973dc581ed46b643bc109",
+    "sourceTemplateActiveConfigSha256": "6d4563cc5f5823bdb1177f350c942dc2472fc70133aef5b177fa4b57c5c9f1a0",
+    "pinsMatch": true,
+    "coverageComplete": true,
+    "parsedLines": 49,
+    "unparsedLines": 0,
+    "tailLimit": 100,
+    "byteLimit": 1048576,
+    "overflow": false,
+    "timeout": false,
+    "dockerExitCode": 0,
+    "tailLimitReached": false,
+    "strictUtf8": true,
+    "routeMethodStatusCounts": [
+      { "route": "meta", "method": "POST", "status": "200", "count": 2 },
+      { "route": "other", "method": "GET", "status": "200", "count": 7 },
+      { "route": "other", "method": "GET", "status": "304", "count": 38 },
+      { "route": "other", "method": "GET", "status": "409", "count": 1 },
+      { "route": "other", "method": "POST", "status": "200", "count": 1 }
+    ],
+    "rawLogsPersistedOrPrinted": false
+  },
+  "httpsHealth": {
+    "baseUrl": "https://tooth-mode-bean-bulletin.trycloudflare.com",
+    "status": 200,
+    "tlsVerifyResult": 0
+  },
+  "interpretation": "Two Meta route POST200 requests appeared after the CP103 baseline in the interval of the reported alternate sender test. This is positive transport evidence. Compared with CP99 same-sender absence and CP102 routing lifecycle research, it is consistent with a previous thread-owner issue, but route aggregates do not prove payload/event type, actual sender, Messaging account or inbox acceptance. The other POST200/GET409 are not Meta and must not be attributed to registration or expiration from these aggregates alone.",
+  "nextStep": "Operator was asked to inspect Atendimento in Local Test Ofc for the new test conversation, and report only official card own-identity/provider/receipt states. Read-only UI consultation; no reply or confirmation of the undesired Messaging account requested. Determine current local mapping/readiness before any outbound or success claim.",
+  "unchanged": "No login retry, provider/Meta call, registration status GET, database bypass or changes to source/env/runtime/channel/credential. Existing desired Messaging account 918214270616606 selection remains required; no automatic confirmation of offered account 2968878483486111. Technical TestNumber mode remains Cancelled and VAL05 open."
+}
