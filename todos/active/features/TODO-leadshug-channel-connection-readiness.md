@@ -41,12 +41,12 @@ Proposta ST-CON-01: jornada de cadastro de número, com infraestrutura local est
 
 - **Current delivery stage:** Pending
 - **Qualifiers:** Blocked
-- **Next exact step:** CP106: operador prosseguiu pelo cadastro atual Já registrado e confirmou IN visível/OUT recebida no WhatsApp; BFF canônico confirma Local Test Ofc OFICIAL CONECTADO/geração2/identidade verificada/SUBSCRIBED/receipt confirmado. QR preservado. Primeira troca oficial aprovada na execução observada. Próximo gate é CON-12: proposta concreta de reiniciar somente API local e repetir IN/OUT; antes obter permissão para indisponibilidade breve da API compartilhada pelas duas BUs de teste, pois autorização anterior de interrupção cobriu Evolution. Nenhum restart executado. Recuperação oficial/VAL05 e closeout seguem pendentes; modo técnico Cancelled preservado.
+- **Next exact step:** CP107: um único reinício autorizado da API local concluiu com health local/HTTPS200 e mesmos pinos. BFF antes/depois preservou oficial CONECTADO/geração2/identidade verificada/SUBSCRIBED/receipt true e QR CONECTADO/geração1/receipt true. Aguardar nova IN visível em Atendimento Local Test Ofc e resposta recebida no WhatsApp do mesmo interlocutor alternativo após retomada; pergunta humana enviada com janela desde19:10:39Z. CON-12/VAL05 e closeout seguem pendentes; modo técnico Cancelled preservado.
 
 ## Active Work State (Required While TODO Remains In `active/`)
 
 - **Work state:** blocked
-- **Why this state now:** cadastro atual foi concluído pelo operador e primeira troca oficial IN/OUT foi comprovada com readback CONECTADO/receipt confirmado. Falta recuperação oficial permitida e fechamento dos gates; proposta limitada à API local está pronta, aguardando confirmação de indisponibilidade nesse target compartilhado. CP98 permanece leitura histórica inconclusiva, sem reutilizar seu resultado; CP106 usa leitor novo revisado e login normal único. Propriedade da conversa antiga não foi diagnosticada.
+- **Why this state now:** reinício único da API e preservação canônica passaram CP107; resta confirmação física de nova IN/OUT após retomada e fechamento dos gates. Receipt antigo preservado não substitui essa troca. Primeira troca oficial CP106 continua comprovada; propriedade da conversa antiga não foi diagnosticada.
 - **Exit condition:** evento real observado e aceito no vínculo/BU correto, com credencial autorizada para a conta desejada, resposta real e demais gates VAL05. Confirmação de inscrição e compartilhamento do mesmo telefone entre contas não substituem essas provas.
 
 ## Scope
@@ -160,11 +160,11 @@ n/a; nenhuma entrega parcial reivindicada.
 
 ## Blocker Notes (Required if `Qualifiers` includes `Blocked`)
 
-- **Blocker:** recuperação oficial CON-12 e fechamento dos gates ainda pendentes; primeira autorização/troca/recebimento oficial foram comprovados CP106.
-- **Why blocked now:** canal oficial já está CONECTADO com receipt confirmado; é necessária prova de retomada permitida, além de preservar os requisitos de closeout. Procedimento proposto usa somente API local compartilhada pelas BUs de teste, sem alterar Meta/QR/credenciais.
-- **What unblocks it:** confirmar disponibilidade para interrupção breve da API local, executar um único restart bounded com pinos/estados preservados e comprovar nova IN/OUT; depois completar closeout aplicável.
-- **Owner / source:** executor DevOps para procedimento local, operador para disponibilidade e prova física; evidência CP106 em2026-10-19.
-- **Last confirmed truth:** CP106: operador confirmou IN na BU oficial e OUT recebida; BFF confirmou Local Test Ofc ativa/OWNER, oficial CONECTADO/geração2/identidade verificada/SUBSCRIBED/receipt true. QR Local Test BU preservado conectado/geração1/receipt true. Nenhum restart oficial executado; VAL05 permanece aberto por recuperação, sem waiver.
+- **Blocker:** confirmação física de IN/OUT após reinício da API e fechamento dos gates ainda pendentes; primeira troca CP106 e retomada do backend CP107 comprovadas.
+- **Why blocked now:** API voltou saudável com canais preservados; recebimento antigo persistido não comprova entrega nova após interrupção. Pergunta de teste físico já enviada, sem nova autorização ou cadastro exigidos.
+- **What unblocks it:** confirmar nova entrada oficial na inbox e resposta recebida no WhatsApp após CP107; depois completar closeout aplicável.
+- **Owner / source:** operador para nova prova física; root para reconciliação e closeout. Evidências CP106/CP107 em2026-10-19.
+- **Last confirmed truth:** CP107 executou exatamente um reinício da API com exit0; mesmo ID/imagem, StartedAt novo, health local/HTTPS200. BFF antes/depois idênticos: oficial geração2/SUBSCRIBED e QR geração1/CONNECTED, ambos CONECTADO/identidade e receipt true. Nova troca física após retomada ainda não confirmada; VAL05 aberto, sem waiver.
 
 ## Execution Lane Tracking (Required)
 
@@ -2103,3 +2103,13 @@ Leitor BFF limitado foi preparado para registrar estado final. Root rejeitou dra
 Resultado: primeira autorização/cadastro/troca oficial real passou na execução observada, apoiada por estado canônico de recebimento; sem atribuir causa única ao histórico ou propriedade da conversa anterior. Não declarar operação contínua ou recuperação oficial comprovada. VAL05 permanece aberto por CON-12 e closeout geral.
 
 Próxima prova proposta: um restart bounded somente da API local9eccbea4, mesma imagem/env/DB/canais, mantendo gateway/Web/Evolution/Meta/credenciais/QR. Preflight e comparação antes/depois, depois nova IN/OUT real. Este target atende as duas BUs; confirmação de indisponibilidade breve deve anteceder execução, pois permissão anterior era Evolution. Não chamar unregister/logout/revogar credencial; não confundir retomada do backend com desconexão de sessão Meta. Nenhum restart ou mutação de produto/runtime foi realizado neste checkpoint. Parent Pending/Blocked, recuperação oficial/VAL05 ainda pendentes.
+
+### CP107 — Reinício da API autorizado; admissão operacional (2026-10-19)
+
+Usuário respondeu explicitamente Autorizar reinício da API local e teste de retomada. Perfil Operational/DevOps, escopos Docker/NestJS/React/Vite/Prisma/PostgreSQL, sem Genesis, único executor de rotina no checkout principal e root exclusivo de canon/Git. Readiness PACED-Ready, routing do executor go e authority do TODO go. Permissão cobre somente API9eccbea4, projeto leadshug_channels_local/imagemfe5fb7; nenhum restart de banco, Evolution, Web, gateway ou alteração Meta/credencial/registro.
+
+Preflight inicial parou antes de login/restart porque entrypoint executa mkdir/chown no diretório de arquivos. Recalibração: Compose público fixa LH_ARQUIVOS_DIR em /dados/arquivos com volume nomeado; projeção Docker estritamente limitada confirmou exatamente uma variável com esse valor esperado, exatamente um mount do volume leadshug_channels_local_leadshug_arquivos nesse destino, zero binds e zero mounts sobre /app ou pasta protegida. Somente predicados/counts de configuração, nenhum dump de env, fonte host, conteúdo, hash, stat ou acesso a .local-files. Manutenção ordinária de ownership na inicialização do volume esperado não apaga dados; coberta pelo reinício normal autorizado. GO root para um único restart após comparação do estado canônico antes, seguido de readiness e comparação depois. Não repetir operação ambígua. Confirmação anterior de recebimento preservada não comprova nova IN/OUT; prova física posterior continua obrigatória. Resultado ainda em execução nesta admissão.
+
+CP107 resultado: exatamente um restart iniciou19:09:54.802972Z e retornou exit0; StartedAt da API mudou de15:32:04.080949439Z para19:10:08.49143366Z, mesmo ID/imagem. Primeiros probes local e HTTPS retornaram200/TLS normal; tempo de probes0.36s não é duração total de indisponibilidade medida. Um login BFF normal antes e outro depois, sem retry, confirmaram projeções idênticas dos dois canais/BU OWNER ativas. Oficial d45bcd3a geração2/tentativa b67af2c5/SUBSCRIBED e QR b6c3e3f0 geração1/tentativa91a050d2/CONNECTED, ambos CONECTADO/identidade/receipt true. Banco/Meta/Evolution/Web/gateway/credenciais preservados. [Recibo](../../../artifacts/reviews/leadshug-number-onboarding-20261015/evidence/root-cp107-api-restart-recovery.json).
+
+Baseline pós-readback19:10:39Z–19:10:46.895Z completa, zero linhas/bytes/invalidações, helper congelado/pinos/config iguais, health HTTPS200. Pergunta humana solicita nova mensagem pelo mesmo interlocutor alternativo, entrada na inbox e resposta confirmada no aparelho; nenhum controle sintético nesta rodada. Retomada do backend comprovada; troca física posterior e CON-12 completo ainda pendentes. Não confundir receipt antigo com entrega nova, nem restart da API com desconexão/reconexão na Meta. Nenhum código/configuração foi alterado, nenhuma suite/build nova reivindicada. Parent Pending/Blocked/VAL05 aberto.

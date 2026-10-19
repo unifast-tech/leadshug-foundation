@@ -1,0 +1,118 @@
+{
+  "checkpoint": "cp107-api-restart-recovery",
+  "date": "2026-10-19",
+  "authorization": "Operator explicitly authorized restarting only the local LeadsHug API and testing recovery; API serves both test BUs. No additional permission needed for this exact operation.",
+  "execution": {
+    "profile": "Operational/DevOps",
+    "scopes": [
+      "docker",
+      "nestjs",
+      "react",
+      "vite",
+      "prisma",
+      "postgresql"
+    ],
+    "topology": "primary-checkout-single-writer",
+    "executor": "/root/restore_access_cp90",
+    "routingGuard": "go",
+    "todoAuthorityGuard": "go",
+    "readiness": "PACED-Ready"
+  },
+  "preflight": {
+    "initialDisposition": "Stopped before authentication or restart while the existing startup mkdir/chown target was unverified. No mutation occurred in that attempt.",
+    "resolution": "Public Compose fixes archive storage at /dados/arquivos on the named volume. Narrow Docker metadata predicates confirmed the expected configuration; ordinary existing startup ownership maintenance is covered by the authorized normal restart. No storage content was inspected.",
+    "metadataPredicates": {
+      "expectedArchiveEnvLiteralMatches": 1,
+      "targetMounts": 1,
+      "expectedNamedVolumeMatches": 1,
+      "bindMountsAtTarget": 0,
+      "mountsOverlappingAppOrProtectedDirectory": 0,
+      "totalMounts": 1
+    },
+    "expectedNamedVolume": "leadshug_channels_local_leadshug_arquivos",
+    "containerPins": "Exact accepted API/Web/gateway IDs, images, project, service and owner labels matched before and after.",
+    "httpsHealthBefore": {
+      "status": 200,
+      "tlsVerifyResult": 0
+    }
+  },
+  "restart": {
+    "command": "docker.exe restart --time 10 9eccbea4825108cec2b8a6fcd48c43c17845e216415fe95e3972265c6ad34cf1",
+    "invocations": 1,
+    "beganAtUtc": "2026-10-19T19:09:54.802972Z",
+    "exitCode": 0,
+    "reportedCommandDurationSeconds": 10.6,
+    "commandOutput": "suppressed",
+    "apiStartedAtBefore": "2026-10-19T15:32:04.080949439Z",
+    "apiStartedAtAfter": "2026-10-19T19:10:08.49143366Z",
+    "readiness": "First local health and first normal-TLS public health probes both HTTP200; combined probe elapsed0.36s. This is probe duration, not measured total outage duration.",
+    "apiIdAndImageUnchanged": true,
+    "webGatewayPinsUnchanged": true,
+    "otherServiceRestarted": false
+  },
+  "readback": {
+    "reader": "foundation_documentation/artifacts/tmp/number-onboarding-execution/T/cp106-channel-readback.py",
+    "sha256": "961cd19dcc1cc0bba7fc3b668e65f5ff0d630190b2c84d4721013216c704b597",
+    "method": "One explicit normal BFF login before restart and a separate explicit normal BFF login after readiness; no automatic retry. Only active BU list and exact BU channels GETs. Credentials/cookies memory-only.",
+    "beforeAfterEqual": true,
+    "businessUnits": "Local Test Ofc and Local Test BU both remained active and OWNER.",
+    "official": {
+      "buId": "a1492634-8685-46d8-a7cb-685a99f5c930",
+      "channelId": "d45bcd3a-1efa-4240-a8aa-b6906524e48c",
+      "type": "OFICIAL",
+      "status": "CONECTADO",
+      "generation": 2,
+      "currentAttemptId": "b67af2c5c30ee84d9774dff14b5d4d39",
+      "ownNumberVerified": true,
+      "providerConnectionState": "SUBSCRIBED",
+      "receiptVerified": true,
+      "connected": true
+    },
+    "qr": {
+      "buId": "c231d8f7-d8a5-448e-a740-2ab8aebf9bc2",
+      "channelId": "b6c3e3f0-fe77-4e92-82e4-1975dffcbef1",
+      "type": "NAO_OFICIAL",
+      "status": "CONECTADO",
+      "generation": 1,
+      "currentAttemptId": "91a050d2-b6b7-4d3a-ac48-97392688584d",
+      "ownNumberVerified": true,
+      "providerConnectionState": "CONNECTED",
+      "receiptVerified": true,
+      "connected": true
+    },
+    "externalIds": "Canonical DTO exposes neither WABA nor phone-number IDs; no independent storage claim."
+  },
+  "physicalTestBaseline": {
+    "sinceUtc": "2026-10-19T19:10:39Z",
+    "capturedAtUtc": "2026-10-19T19:10:46.895Z",
+    "helperSha256": "c3a74788fdda85d1c03af08e26e3b3dfaa821a8e64958cc17ff9053331160fcf",
+    "coverageComplete": true,
+    "bytes": 0,
+    "parsedLines": 0,
+    "unparsedLines": 0,
+    "routeMethodStatusCounts": [],
+    "exitCode": 0,
+    "overflow": false,
+    "timeout": false,
+    "pinsAndGatewayConfigMatch": true,
+    "httpsHealth": {
+      "status": 200,
+      "tlsVerifyResult": 0
+    }
+  },
+  "disposition": {
+    "backendRecovery": "Passed for the one observed local API restart. Both channel states and identities preserved.",
+    "postRestartPhysicalInOut": "Pending operator test with same alternate contact, fresh inbound in official BU and reply confirmed on receiving WhatsApp. No synthetic dashboard event requested.",
+    "receiptLimit": "Existing receiptVerified=true persists from earlier proof and does not demonstrate new post-restart delivery.",
+    "providerLimit": "Does not prove Meta deregistration/reconnection or provider outage recovery. No provider/Meta calls, credential edits, channel writes, database repair, rebuild, tunnel change or protected file access.",
+    "overall": "Parent remains Pending/Blocked; CON-12 physical completion, VAL05 and required closeout remain pending. Technical TestNumber mode remains Cancelled."
+  },
+  "sourceReference": {
+    "rootCommit": "80e3940126f22a941f90dba4f5e801b6c0eb2f58",
+    "apiCommit": "db5a86758a165fac8a1ab587599c37b17890530c",
+    "webCommit": "74b9d4b714044829796f875d00553f077c1c329d",
+    "apiImage": "sha256:fe5fb7eaf6a68123f9da6b92a0a69483180d213f556b4bedf313f04a383b4821",
+    "servedOrigin": "https://tooth-mode-bean-bulletin.trycloudflare.com",
+    "changes": "No product/configuration bytes changed; no new build or application test-suite run claimed."
+  }
+}
