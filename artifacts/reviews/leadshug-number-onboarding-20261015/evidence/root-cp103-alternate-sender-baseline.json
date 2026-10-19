@@ -1,0 +1,39 @@
+{
+  "checkpoint": "cp103-alternate-sender-baseline",
+  "date": "2026-10-19",
+  "operatorIntent": "Operator will ask an alternate WhatsApp sender to test. Whether that sender has never conversed with the official number is still unconfirmed; do not classify the sender as new until operator confirms.",
+  "runtime": {
+    "baseUrl": "https://tooth-mode-bean-bulletin.trycloudflare.com",
+    "healthHttpStatus": 200,
+    "tlsVerifyResult": 0,
+    "apiWebGatewayPins": "Exact CP96 API/Web/gateway container IDs and images, project and services match; API owner number-onboarding. No republish or runtime change."
+  },
+  "baseline": {
+    "sinceUtc": "2026-10-19T18:35:17Z",
+    "capturedAtUtc": "2026-10-19T18:35:31.132Z",
+    "helperSha256": "c3a74788fdda85d1c03af08e26e3b3dfaa821a8e64958cc17ff9053331160fcf",
+    "gatewayId": "0c48d94e9fe5b4ad75efd304db2752dfa4cab3befc59b9f736574d6cd551eea3",
+    "gatewayImage": "sha256:76090a34b858323b6ab169711adc08253b5bee7123a973dc581ed46b643bc109",
+    "routeConfigSha256": "6d4563cc5f5823bdb1177f350c942dc2472fc70133aef5b177fa4b57c5c9f1a0",
+    "pinsMatch": true,
+    "coverageComplete": true,
+    "parsedLines": 6,
+    "unparsedLines": 0,
+    "tailLimit": 100,
+    "byteLimit": 1048576,
+    "overflow": false,
+    "timeout": false,
+    "dockerExitCode": 0,
+    "tailLimitReached": false,
+    "strictUtf8": true,
+    "routeMethodStatusCounts": [
+      { "route": "other", "method": "GET", "status": "200", "count": 1 },
+      { "route": "other", "method": "GET", "status": "304", "count": 5 }
+    ],
+    "metaPostCount": 0,
+    "rawLogsPersistedOrPrinted": false
+  },
+  "nextStep": "Operator was asked for one physical message from the alternate sender and confirmation of no prior conversation plus one/two ticks. If already sent, no duplicate requested. No dashboard synthetic test in this window. After operator confirmation, use the same bounded since timestamp and preserve route-aggregate attribution limits.",
+  "acceptanceLimit": "Prepared transport observation only. No active desired-account channel credential/identity, actual message acceptance, inbox delivery, outbound or recovery proof has been obtained by this baseline. Role/permissions findings CP102 remain distinct from thread ownership.",
+  "unchanged": "No login retry, provider/Meta/DB request, runtime/env/source/channel/credential changes or new helper. No messages sent by agent to anyone. Technical TestNumber mode remains Cancelled; parent Pending/Blocked and VAL05 open."
+}
