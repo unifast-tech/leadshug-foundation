@@ -1,0 +1,72 @@
+{
+  "kind": "planning_public_source_attestation",
+  "scope": "Only thirteen named public source/SQL files; no repository-wide/private payload claim",
+  "no_product_test_or_runtime_evidence": true,
+  "files": [
+    {
+      "path": "api-app/prisma/schema.prisma",
+      "sha256": "3dd87c61af51167ae8aaa07a1b35e8616f108d9e5a05b2c0911ea84a8bfa5636",
+      "matches_committed_source": true
+    },
+    {
+      "path": "api-app/src/surfaces/bff/conversations.controller.ts",
+      "sha256": "0b5c46a78aafd8085b609ad711bcdb7626263094f434240f37b8700f20291565",
+      "matches_committed_source": true
+    },
+    {
+      "path": "api-app/src/surfaces/webhooks/meta.controller.ts",
+      "sha256": "64fd78568c1dc99e74df8a3f5b3157c43c6467ef03544b7741f0b9c7dc11200b",
+      "matches_committed_source": true
+    },
+    {
+      "path": "api-app/src/domain/inbox/conversations.service.ts",
+      "sha256": "e459ca836ca863c7884bdf51a0acd6b31585583c1455251586a758f4c1e7175c",
+      "matches_committed_source": true
+    },
+    {
+      "path": "api-app/src/domain/inbox/message-acceptance.service.ts",
+      "sha256": "b053744ee44b7e91fd45b5c146f759f55c70b8e517b8fbb1cab39806407335e1",
+      "matches_committed_source": true
+    },
+    {
+      "path": "api-app/src/domain/inbox/incoming.service.ts",
+      "sha256": "5ed885e93bbaaaeaa318649b68bb224f95a7fb91fd5d6e4c7fb8dc912b06bb83",
+      "matches_committed_source": true
+    },
+    {
+      "path": "api-app/src/domain/channels/channel-credential-resolver.ts",
+      "sha256": "7ce86ab9fa764364761d51c5344b3786d66e66e55d3102f2181e0afdf41e7d7f",
+      "matches_committed_source": true
+    },
+    {
+      "path": "api-app/src/integrations/meta/meta.client.ts",
+      "sha256": "ad6d9c56a0c854df35baf3320a70c2b1f4b9d577c4cd6f35def701ecac65f9c4",
+      "matches_committed_source": true
+    },
+    {
+      "path": "web-app/src/telas/Inbox.tsx",
+      "sha256": "c499895fee74325e5357052186dd5de9d46c7bc867174e614a9950009ced57ae",
+      "matches_committed_source": true
+    },
+    {
+      "path": "web-app/src/api.ts",
+      "sha256": "8b0e4d5994e8bf450630903fa7b7fef26506053627b0e8e352c58235b536c168",
+      "matches_committed_source": true
+    },
+    {
+      "path": "web-app/playwright.config.ts",
+      "sha256": "53e9a54e97c9b785135d94846d99eb77c6f05789a58f27128544f9b2c903a63d",
+      "matches_committed_source": true
+    },
+    {
+      "path": "scripts/test-channels-local.sh",
+      "sha256": "7af34d340a679c325f8cb06151db9723bf4641529102dcc392d08988ae82de13",
+      "matches_committed_source": true
+    },
+    {
+      "path": "api-app/prisma/migrations/20260818125556_nucleo_v1_tenancy_identidade_atendimento/migration.sql",
+      "sha256": "680ff78cf5c8dab2bc5ec51688b83252bb86d214e8af7817356ee125ed47daa4",
+      "matches_committed_source": true
+    }
+  ]
+}

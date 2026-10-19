@@ -15,4 +15,6 @@ The candidate corrections discussed during review address these gaps, but requir
 
 Missing approved template remains external dependency; physical official proactive proof and Completed cannot be claimed without eligible asset and actual exchange. Owner kept current ST-CON-01 ChannelCredentialResolver(send) gate intact; no bootstrap-before-receipt change is authorized.
 
-Final delta verification: pending. Scope changes are recorded only in the still-unapproved TODO and its exact validation commitments; no implementation authority.
+Final delta verification: terminal `no_remaining_approval_blockers` against pushed f71a7d99177517b04ebeabc2f2f36c3bca40e6e3. Reviewer verified HEAD/origin/main match and only factual freeze metadata differs. CRIT-01..04 adequately integrated, original ARCH findings need no reopening. Full expanded rubric acceptable for human approval consideration; remaining deterministic planning guards still required. Scope changes are recorded only in the still-unapproved TODO and its exact validation commitments; no implementation authority.
+
+Delta review limits: same originally fresh independent reviewer, explicit followup verification (not a second fresh no-context pass); no file writes/tests/runtime/account calls. No implementation authority or delivery claim.

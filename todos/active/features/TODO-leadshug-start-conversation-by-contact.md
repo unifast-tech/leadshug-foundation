@@ -41,7 +41,7 @@ ST-CON-01 encerrou a prova local de cadastro e troca real dos dois transportes, 
 
 - **Current delivery stage:** Pending
 - **Qualifiers:** none
-- **Next exact step:** congelar minuta, arquitetura e crítica independentes, guardas pré-aprovação e apresentar o contrato ao usuário; não implementar antes do APROVADO específico.
+- **Next exact step:** concluir guardas pré-aprovação e apresentar o contrato revisado ao usuário; não implementar antes do APROVADO específico.
 
 ## Active Work State (Required While TODO Remains In `active/`)
 
@@ -323,11 +323,11 @@ Nenhuma decisão material aberta na proposta. Disponibilidade de template é dep
 - **Why this decision:** contrato multi-superfície deve entrar em revisão a partir da autoridade publicada.
 - **Trigger stage:** before the first planning-side review or guard run
 - **Baseline branch:** main
-- **Baseline commit:** pending-refresh
+- **Baseline commit:** pending-anchor-refresh
 - **Baseline push reference:** origin/main
 - **Gate status:** not_run
-- **Findings summary:** CRIT-01..04 integrados; contrato final prepared-pre-freeze, aguarda publicação antes da verificação delta.
-- **Evidence / reference:** baselines publicadas6188793a (opinião) e edc1efac (crítica inicial); refresh final pendente.
+- **Findings summary:** contrato final aceito no delta f71a7d99; refresh apenas para acrescentar âncora SQL concreta de A01, que o parser de premissas reconhece. Nenhuma decisão/critério/escopo alterado.
+- **Evidence / reference:** baselines6188793a,edc1efac,f71a7d99 publicadas; anchor refresh pending.
 - **Waiver authority / reference (required if waived):** n/a
 
 ## Gate: Review Scope Drift
@@ -356,7 +356,7 @@ n/a; decisões canônicas citadas diretamente, sem IDs de catálogo presumidos.
 
 | Assumption ID | Assumption | Evidence | If False | Confidence | Handling |
 | --- | --- | --- | --- | --- | --- |
-| A-01 | Schema já impõe uma conversa por BU/contato. | api-app/prisma/schema.prisma:379 | rever upsert e migrations antes da aprovação | High | Keep as Assumption |
+| A-01 | Schema já impõe uma conversa por BU/contato. | api-app/prisma/schema.prisma:379; api-app/prisma/migrations/20260818125556_nucleo_v1_tenancy_identidade_atendimento/migration.sql:230 | rever upsert e migrations antes da aprovação | High | Keep as Assumption |
 | A-02 | BFF atual só lista/timeline/responde, não abre contato manual. | api-app/src/surfaces/bff/conversations.controller.ts | reutilizar owner existente | High | Keep as Assumption |
 | A-03 | MetaClient não possui catálogo/envio template. | api-app/src/integrations/meta/meta.client.ts | integrar componente existente, sem duplicar | High | Keep as Assumption |
 | A-04 | Envio atual já converge sender/echo pelo serviço de aceitação. | api-app/src/domain/inbox/conversations.service.ts; api-app/src/domain/inbox/message-acceptance.service.ts | corrigir desenho antes de código | High | Keep as Assumption |
@@ -416,13 +416,13 @@ Migration aditiva versionada; deploy/status primeiro no PG descartável. Dados o
 ## Plan Review Gate (Review of the Execution Plan; required for `medium|big`; abbreviated for low-risk `small`)
 
 ### Review Sections
-- [ ] Architecture
-- [ ] Code Quality
-- [ ] Tests
-- [ ] Performance
-- [ ] Security
-- [ ] Elegance
-- [ ] Structural Soundness
+- [x] Architecture
+- [x] Code Quality
+- [x] Tests
+- [x] Performance
+- [x] Security
+- [x] Elegance
+- [x] Structural Soundness
 
 ### Issue Cards
 - **Issue ID:** PLAN-01
@@ -459,12 +459,12 @@ Migration aditiva versionada; deploy/status primeiro no PG descartável. Dados o
 - [ ] Prova física oficial proativa depende de template elegível; operador não o possui agora.
 - [ ] Meta pode recusar por thread ownership/billing/política mesmo com template aprovado: mostrar erro seguro, não tomar controle automaticamente.
 - [ ] Até uma invocação por intenção não elimina duplicação entre chaves distintas ou a ambiguidade de crash externo.
-- [ ] Arquitetura terminal encontrou seis blockers na minuta original, integrados na proposta; crítica encontrou três lacunas residuais de lifecycle e uma de projeção, integradas; delta final e guardas ainda pendentes. Não é aprovação de implementação.
+- [ ] Arquitetura terminal encontrou seis blockers na minuta original, integrados na proposta; crítica encontrou três lacunas residuais de lifecycle e uma de projeção, integradas; delta final aceito no_remaining_approval_blockers; guardas de planejamento em execução. Não é aprovação de implementação.
 
 ## Additional Architectural Opinions (Required When Path Remains Materially Unclear)
 
 - **Needed:** no
-- **Why ambiguity remains:** n/a; arquitetura obrigatória será examinada na gate architecture_opinion, sem opinião adicional duplicada.
+- **Why ambiguity remains:** n/a; arquitetura e crítica independentes concluídas com achados integrados e delta verificado, sem opinião adicional duplicada.
 - **Opinion count:** 0
 - **Package mode:** bounded-file-set
 - **Internal reviewer mandate:** required na gate arquitetural
@@ -500,8 +500,8 @@ Migration aditiva versionada; deploy/status primeiro no PG descartável. Dados o
 - **Critique isolation mode:** fresh internal no-context reviewer
 - **Internal reviewer mandate:** required; novo agente, não executor, aguardar terminal sem prazo artificial
 - **Critique lenses:** correctness,performance,elegance,structural-soundness,risk
-- **Critique status:** running
-- **Findings summary:** CRIT-01..03 bloqueantes e CRIT-04 low integrados; verificação delta do texto final ainda pendente.
+- **Critique status:** findings_integrated
+- **Findings summary:** CRIT-01..04 integrados; reviewer independente verificou baseline f71a7d99 e retornou no_remaining_approval_blockers. ARCH-01..06 não exigem reabertura.
 - **Resolution ledger:** Planning Finding Resolution Ledger
 - **Evidence / reference:** artifacts/reviews/leadshug-start-conversation-20261019/critique.md
 - **Waiver authority / reference (required if waived):** n/a
@@ -566,8 +566,8 @@ Planejado para o gate correspondente após APROVADO e implementação; nenhuma e
 
 - **Disposition:** keep-active
 - **Disposition reason:** revisão pré-implementação, nenhuma aprovação específica ainda.
-- **Post-commit/push status:** pending
-- **Next path/status action:** completar revisão/guardas e pedir APROVADO do contrato, não entrega.
+- **Post-commit/push status:** complete
+- **Next path/status action:** concluir guardas finais e pedir APROVADO do contrato, não entrega.
 
 ## Security Risk Assessment (Mandatory Before Delivery)
 
@@ -697,9 +697,9 @@ Nenhum comentário ou questão material pendente.
 - **Trigger stage:** after critique convergence and before APROVADO
 - **Guard scope:** A-01..05
 - **Guard command:** python3 delphi-ai/tools/assumption_code_coherence_guard.py --todo foundation_documentation/todos/active/features/TODO-leadshug-start-conversation-by-contact.md
-- **Gate status:** not_run
-- **Findings summary:** pending-freeze
-- **Evidence / reference:** pending-freeze
+- **Gate status:** no_material_findings
+- **Findings summary:** A-01..05 conferidas semanticamente nas fontes públicas correntes e pelos reviewers;13arquivos públicos nomeados byteexact com HEAD, incluindo SQL do índice único. NOGO inicial preservado: parser não reconhece extensão .prisma; adicionada migration.sql real que prova o MESMO índice, sem alterar premissa ou regra.
+- **Evidence / reference:** artifacts/reviews/leadshug-start-conversation-20261019/source-assumptions.json; evidence/code-coherence-initial-no-go.json; novo guard após freeze da âncora SQL
 - **Waiver authority / reference (required if waived):** n/a
 
 ## Approval
@@ -781,3 +781,7 @@ Primary docs additionally consulted: [Messaging account selection](https://devel
 6. Readiness anterior ST-CON-01 preservada: sem receipt/own epoch/current credential/estado pronto, nenhum primeiro OUT, orientação explícita em start-options.
 
 Delta altera a minuta ainda não aprovada para tornar sua própria recuperação executável; não autoriza implementação nem altera objetivo primário. Usuário avaliará este contrato final, não as minutas anteriores.
+
+## Planning guard compatibility note
+
+Assumption-code guard inicialmente retornou NO-GO apenas em A01: seu parser PATH_RE/CODE_EXTENSIONS não reconhece .prisma. A premissa continua sendo a unicidade BU/Contato. Acrescentou-se referência à migration.sql:230, CREATE UNIQUE INDEX conversations_bu_id_contact_key ON conversations(bu_id,contact), fonte real que o guard reconhece. Não houve alteração de Delphi, waiver, supressão do achado nem mudança de produto. NOGO inicial preservado em evidence/code-coherence-initial-no-go.json; guards finais serão reexecutados depois de publicar a âncora.

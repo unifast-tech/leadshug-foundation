@@ -1,0 +1,100 @@
+{
+  "artifact_kind": "assumption_code_coherence_guard",
+  "todo_path": "/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/todos/active/features/TODO-leadshug-start-conversation-by-contact.md",
+  "repo_root": "/mnt/c/unifast/leadshug/leadshug_now_docker",
+  "overall_outcome": "no-go",
+  "live_assumption_ids": [
+    "A-01",
+    "A-02",
+    "A-03",
+    "A-04",
+    "A-05"
+  ],
+  "gate": {
+    "section_present": true,
+    "decision": "required",
+    "status": "no_material_findings",
+    "evidence_reference": "artifacts/reviews/leadshug-start-conversation-20261019/source-assumptions.json; architecture-opinion.md; critique.md; guard result pending",
+    "waiver_reference": "n/a"
+  },
+  "assumptions": [
+    {
+      "assumption_id": "A-01",
+      "handling": "Keep as Assumption",
+      "evidence": "api-app/prisma/schema.prisma:379",
+      "path_tokens": [],
+      "resolved_paths": [],
+      "resolved_code_paths": []
+    },
+    {
+      "assumption_id": "A-02",
+      "handling": "Keep as Assumption",
+      "evidence": "api-app/src/surfaces/bff/conversations.controller.ts",
+      "path_tokens": [
+        "api-app/src/surfaces/bff/conversations.controller.ts"
+      ],
+      "resolved_paths": [
+        "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app/src/surfaces/bff/conversations.controller.ts"
+      ],
+      "resolved_code_paths": [
+        "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app/src/surfaces/bff/conversations.controller.ts"
+      ]
+    },
+    {
+      "assumption_id": "A-03",
+      "handling": "Keep as Assumption",
+      "evidence": "api-app/src/integrations/meta/meta.client.ts",
+      "path_tokens": [
+        "api-app/src/integrations/meta/meta.client.ts"
+      ],
+      "resolved_paths": [
+        "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app/src/integrations/meta/meta.client.ts"
+      ],
+      "resolved_code_paths": [
+        "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app/src/integrations/meta/meta.client.ts"
+      ]
+    },
+    {
+      "assumption_id": "A-04",
+      "handling": "Keep as Assumption",
+      "evidence": "api-app/src/domain/inbox/conversations.service.ts; api-app/src/domain/inbox/message-acceptance.service.ts",
+      "path_tokens": [
+        "api-app/src/domain/inbox/conversations.service.ts",
+        "api-app/src/domain/inbox/message-acceptance.service.ts"
+      ],
+      "resolved_paths": [
+        "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app/src/domain/inbox/conversations.service.ts",
+        "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app/src/domain/inbox/message-acceptance.service.ts"
+      ],
+      "resolved_code_paths": [
+        "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app/src/domain/inbox/conversations.service.ts",
+        "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app/src/domain/inbox/message-acceptance.service.ts"
+      ]
+    },
+    {
+      "assumption_id": "A-05",
+      "handling": "Keep as Assumption",
+      "evidence": "web-app/src/telas/Inbox.tsx; web-app/playwright.config.ts",
+      "path_tokens": [
+        "web-app/src/telas/Inbox.tsx",
+        "web-app/playwright.config.ts"
+      ],
+      "resolved_paths": [
+        "/mnt/c/unifast/leadshug/leadshug_now_docker/web-app/src/telas/Inbox.tsx",
+        "/mnt/c/unifast/leadshug/leadshug_now_docker/web-app/playwright.config.ts"
+      ],
+      "resolved_code_paths": [
+        "/mnt/c/unifast/leadshug/leadshug_now_docker/web-app/src/telas/Inbox.tsx",
+        "/mnt/c/unifast/leadshug/leadshug_now_docker/web-app/playwright.config.ts"
+      ]
+    }
+  ],
+  "issues": [
+    {
+      "severity": "error",
+      "code": "ASSUMPTION-CODE-NO-PATH-EVIDENCE",
+      "message": "Live assumption evidence must cite concrete file paths, not only prose.",
+      "assumption_id": "A-01"
+    }
+  ]
+}
