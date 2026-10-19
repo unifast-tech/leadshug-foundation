@@ -1,0 +1,52 @@
+{
+  "checkpoint": "cp99-post-subscription-delivery-window",
+  "date": "2026-10-19",
+  "operatorReport": "One requested real WhatsApp message sent to the official phone after subscription on the desired Messaging account; two ticks reported. No dashboard synthetic test was requested in this window.",
+  "context": {
+    "desiredMessagingAccountId": "918214270616606",
+    "phoneNumberId": "1203171609551853",
+    "appId": "874966345550148",
+    "subscriptionEvidence": "Operator Graph GET in CP98 lists LeadsHug on the desired account. This does not establish delivery, active candidate grant scope, local identity or inbox acceptance."
+  },
+  "gatewayObservation": {
+    "status": "complete",
+    "sinceUtc": "2026-10-19T18:09:01Z",
+    "capturedAtUtc": "2026-10-19T18:12:45.655Z",
+    "helperSha256": "c3a74788fdda85d1c03af08e26e3b3dfaa821a8e64958cc17ff9053331160fcf",
+    "gatewayId": "0c48d94e9fe5b4ad75efd304db2752dfa4cab3befc59b9f736574d6cd551eea3",
+    "gatewayImage": "sha256:76090a34b858323b6ab169711adc08253b5bee7123a973dc581ed46b643bc109",
+    "owner": "number-onboarding",
+    "project": "leadshug_channels_local",
+    "service": "gateway",
+    "sourceConfigRouteSha256": "6d4563cc5f5823bdb1177f350c942dc2472fc70133aef5b177fa4b57c5c9f1a0",
+    "pinsMatch": true,
+    "coverageComplete": true,
+    "tailLimit": 100,
+    "byteLimit": 1048576,
+    "bytesRead": 9924,
+    "lineCount": 62,
+    "parsedLineCount": 62,
+    "unparsedLineCount": 0,
+    "overflow": false,
+    "timeout": false,
+    "dockerExitCode": 0,
+    "tailLimitReached": false,
+    "strictUtf8": true,
+    "routeMethodStatusCounts": [
+      { "route": "other", "method": "GET", "status": "200", "count": 6 },
+      { "route": "other", "method": "GET", "status": "304", "count": 55 },
+      { "route": "other", "method": "POST", "status": "201", "count": 1 }
+    ],
+    "metaPostCount": 0,
+    "rawLogsPersistedOrPrinted": false
+  },
+  "httpsReadiness": {
+    "baseUrl": "https://tooth-mode-bean-bulletin.trycloudflare.com",
+    "healthHttpStatus": 200,
+    "tlsVerifyResult": 0
+  },
+  "conclusion": "No request to the pinned Meta webhook route was observed in the complete bounded interval. The one POST201 was classified other and must not be counted as Meta delivery. This establishes neither the sender's exact event timestamps nor future retry behavior; it does not prove why Meta did not deliver, which other app received, or whether standard/advanced access or routing is causal.",
+  "nextStep": "Operator was asked for GET 1203171609551853?fields=webhook_configuration with the same LeadsHug credential, comparing application/whatsapp_business_account/phone_number callbacks with the current CP96 host. Read-only query, no additional physical test or callback change requested until result is understood.",
+  "source": "https://developers.facebook.com/documentation/business-messaging/whatsapp/webhooks/override/",
+  "unchanged": "No agent login retry, registration status GET, provider/Meta call, SQL, env/source/runtime/channel/credential mutation or TestNumber mode revival. Official physical inbound acceptance, outbound and recovery VAL05 remain open."
+}
