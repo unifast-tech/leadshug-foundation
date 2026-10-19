@@ -42,12 +42,12 @@ O usuário quer que o vendedor prepare sua mensagem no LeadsHug e a deixe dispon
 
 - **Current delivery stage:** Pending
 - **Qualifiers:** none
-- **Next exact step:** freeze publicado, revisão de arquitetura e crítica independentes, guardas pré-aprovação; apresentar contrato concreto para APROVADO antes de código.
+- **Next exact step:** apresentar contrato ST-CON-05 e aguardar APROVADO específico; após aprovação, reload binding/authority go e executor serializado.
 
 ## Active Work State (Required While TODO Remains In `active/`)
 
 - **Work state:** review
-- **Why this state now:** contrato em preparação/revisão prévia, sem implementação.
+- **Why this state now:** arquitetura/crítica e guardas de planejamento satisfeitos; aguarda APROVADO específico, sem implementação.
 - **Exit condition:** APROVADO específico + reload binding + authority go habilitam executor operacional.
 
 ## Scope
@@ -320,11 +320,11 @@ Nenhuma decisão de produto aberta: vendedor pode criar/submeter, confirmado nes
 - **Why this decision:** contrato multi-superfície deve entrar em revisão a partir da autoridade publicada.
 - **Trigger stage:** before the first planning-side review or guard run
 - **Baseline branch:** main
-- **Baseline commit:** 30a032078597e00d3f47437632687fb00a81db96
+- **Baseline commit:** 0d4957b3c940841ff6d3e41c2b5ead4ccb76ad45
 - **Baseline push reference:** origin/main
 - **Gate status:** no_material_findings
-- **Findings summary:** correções AR01..05/runner publicadas antes da crítica; apenas metadata factual do freeze acrescentada depois.
-- **Evidence / reference:** origin/main30a032078597e00d3f47437632687fb00a81db96 push terminal0 em2026-10-19; primeiro freeze f42a2e72 preservado no parecer.
+- **Findings summary:** correções CR01..03 publicadas antes da verificação delta; apenas metadata factual do freeze acrescentada depois.
+- **Evidence / reference:** origin/main0d4957b3c940841ff6d3e41c2b5ead4ccb76ad45 push terminal0 em2026-10-19; freezes f42a2e72/30a03207 preservados nos pareceres.
 - **Waiver authority / reference (required if waived):** n/a
 
 ## Gate: Review Scope Drift
@@ -336,9 +336,9 @@ Nenhuma decisão de produto aberta: vendedor pode criar/submeter, confirmado nes
 - **Material sections compared:** Context|Contract Boundary|Scope|Out of Scope|Definition of Done|Validation Steps|Execution Lane Tracking|Canonical Module Anchors|Decisions|Decision Baseline|Architecture Change Governance|Questions To Close|Assumptions Preview|Execution Plan|Flow Evidence Planning Matrix|Local CI-Equivalent Suite Matrix|Runtime / Rollout Notes|Security Risk Assessment|Performance & Concurrency Risk Assessment
 - **Guard command:** python3 delphi-ai/tools/review_scope_drift_guard.py --todo foundation_documentation/todos/active/features/TODO-leadshug-official-template-authoring.md
 - **No-go handling rule:** reconvergir pacote/review e renovar freeze, sem implementação.
-- **Gate status:** not_run
-- **Findings summary:** revisão arquitetural concluída, correções incorporadas; aguarda crítica independente e guardas finais.
-- **Evidence / reference:** revisão arquitetural concluída, correções incorporadas; aguarda crítica independente e guardas finais.
+- **Gate status:** no_material_findings
+- **Findings summary:** freeze0d4957b3 contém CR01..03; delta independente aceito; alterações posteriores somente metadata/evidência de review e guardas, sem mudança material.
+- **Evidence / reference:** artifacts/reviews/leadshug-template-authoring-20261019/critique-delta.md; evidence/scope-drift.json
 - **Waiver authority / reference (required if waived):** n/a
 
 ## Questions To Close
@@ -412,13 +412,13 @@ Migration aditiva; deploy/status primeiro em PG descartável, sem reset humano. 
 ## Plan Review Gate (Review of the Execution Plan; required for `medium|big`; abbreviated for low-risk `small`)
 
 ### Review Sections
-- [ ] Architecture
-- [ ] Code Quality
-- [ ] Tests
-- [ ] Performance
-- [ ] Security
-- [ ] Elegance
-- [ ] Structural Soundness
+- [x] Architecture
+- [x] Code Quality
+- [x] Tests
+- [x] Performance
+- [x] Security
+- [x] Elegance
+- [x] Structural Soundness
 
 ### Issue Cards
 - **Issue ID:** PLAN-01
@@ -454,7 +454,7 @@ Migration aditiva; deploy/status primeiro em PG descartável, sem reset humano. 
 - [ ] Aprovação Meta e acesso efetivo da conta ainda precisam prova real; não há garantia de prazo/status aprovado.
 - [ ] Outro aplicativo pode criar/alterar modelo na mesma conta; preflight não torna criação externa exatamente-uma-vez.
 - [ ] Rascunho privado local e ativo compartilhado da conta são conceitos distintos, explicitados na UI.
-- [ ] Arquitetura revisada e integrada; crítica/guardas ainda pendentes, nenhuma autorização de implementação.
+- [ ] Arquitetura/crítica integradas e guardas de planejamento satisfeitos; execução ainda depende de APROVADO e autoridade pós-aprovação.
 
 ## Additional Architectural Opinions (Required When Path Remains Materially Unclear)
 
@@ -495,10 +495,10 @@ Migration aditiva; deploy/status primeiro em PG descartável, sem reset humano. 
 - **Critique isolation mode:** fresh internal no-context reviewer
 - **Internal reviewer mandate:** required; reviewer não executor, aguardar terminal sem prazo arbitrário
 - **Critique lenses:** correctness,performance,elegance,structural-soundness,risk
-- **Critique status:** running
-- **Findings summary:** crítica independente em andamento sobre freeze30a03207; sem implementação.
-- **Resolution ledger:** nenhuma revisão de ST-CON-05 executada
-- **Evidence / reference:** /root/stcon05_critique, fork_turns none, gpt-6.1-sol/max; evidence/routing-critique.json go antes do dispatch.
+- **Critique status:** findings_integrated
+- **Findings summary:** CR01/02 medium e CR03 low integrados; delta independente terminal sobre0d4957b3 sem achado material remanescente.
+- **Resolution ledger:** Critique Resolution Ledger CR01..03 Integrated; critique.md e critique-delta.md; nenhuma implementação aceita.
+- **Evidence / reference:** artifacts/reviews/leadshug-template-authoring-20261019/critique.md e critique-delta.md; /root/stcon05_critique fresh, gpt-6.1-sol/max; routing original/delta go antes de dispatch.
 - **Waiver authority / reference (required if waived):** n/a
 
 ## Gate: Assumption Code Coherence
@@ -508,9 +508,9 @@ Migration aditiva; deploy/status primeiro em PG descartável, sem reset humano. 
 - **Trigger stage:** after critique convergence and before APROVADO
 - **Guard scope:** A-01..05
 - **Guard command:** python3 delphi-ai/tools/assumption_code_coherence_guard.py --todo foundation_documentation/todos/active/features/TODO-leadshug-official-template-authoring.md
-- **Gate status:** not_run
-- **Findings summary:** pending-freeze
-- **Evidence / reference:** pending-freeze
+- **Gate status:** no_material_findings
+- **Findings summary:** bounded source inspection confirmou A01..05; source-assumptions.json, sem teste/runtime; guard determinístico final registrado separadamente.
+- **Evidence / reference:** artifacts/reviews/leadshug-template-authoring-20261019/source-assumptions.json; evidence/code-coherence.json
 - **Waiver authority / reference (required if waived):** n/a
 
 ## Approval
@@ -583,8 +583,8 @@ Planejado para o gate de entrega após APROVADO; nenhum resultado de implementa�
 
 - **Disposition:** keep-active
 - **Disposition reason:** preparação/revisão do novo contrato.
-- **Post-commit/push status:** pending
-- **Next path/status action:** terminar reviews/guardas e pedir APROVADO, sem produto entregue.
+- **Post-commit/push status:** pacote documental publicado em Foundation main; execução pendente de APROVADO.
+- **Next path/status action:** manter active/NotStarted; pedir APROVADO específico após guardas finais, sem produto entregue.
 
 ## Security Risk Assessment (Mandatory Before Delivery)
 
@@ -784,4 +784,18 @@ Allowlist é decisão conservadora local apoiada no catálogo primário [Meta er
 | CR-02 medium | Integrated | Submission Error Classification Contract; allowlist restrita primária, default pós-dispatch AMBIGUOUS; adapter raw tests e estado de análise separado |
 | CR-03 low | Integrated | D02/endpoint preview: leituras autorizadas permitidas, zero escrita DB/provider; sem exigir auth impossível sem DB |
 
-Integrações aguardam delta review sobre freeze publicado; nenhum produto executado.
+Delta review independente terminal contra0d4957b3: CR01..03 convergiram sem achado material remanescente. Nenhum produto executado.
+
+## Pre-approval Planning Gate Receipt — 2026-10-19
+
+| Check | Actual outcome | Evidence |
+| --- | --- | --- |
+| architecture_opinion + fresh critique/delta | findings integrated; no material delta finding | architecture-opinion.md, critique.md, critique-delta.md |
+| audit escalation | go;8501ca58ebe4 | evidence/audit-floor.json |
+| assumption/code coherence | go;5 live assumptions | source-assumptions.json; evidence/code-coherence.json |
+| reviewed scope drift | go;23 sections,0 material changes versus0d4957b3 | evidence/scope-drift.json |
+| planned executor routing | go; no executor dispatched | evidence/routing-planned-executor.json |
+| pre-approval authority | preflight-go; execution_authority_granted=false | evidence/authority-preapproval.json |
+| TODO structure / lifecycle | PASS / exit0 | evidence/structure-final.json; evidence/planning-validation.json |
+
+Todos os artifacts acima pertencem a artifacts/reviews/leadshug-template-authoring-20261019/. Nenhuma suite de produto, migration, publicação de runtime ou chamada de conta Meta foi executada nesta preparação. Próxima autorização é APROVADO específico do ST-CON-05; concordância funcional anterior não a substitui.
