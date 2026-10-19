@@ -41,13 +41,13 @@ Proposta ST-CON-01: jornada de cadastro de número, com infraestrutura local est
 
 - **Current delivery stage:** Pending
 - **Qualifiers:** Blocked
-- **Next exact step:** CP89: aguardar equipe do operador definir/liberar o segundo número e WABA seguros para teste comparativo. O cadastro B ainda não foi realizado; nenhuma consulta viva/B ou mensagem foi iniciada. Na retomada, reconferir HTTPS/OAuth e usar fluxo oficial em BU Teste Oficial B, mantendo recurso A. Hipótese de conta específica continua não comprovada; VAL05 aberto.
+- **Next exact step:** CP90: acesso HTTPS local recuperado em https://yang-sufficient-employ-cassette.trycloudflare.com; operador deve atualizar URLs Meta antes de preparar a remoção dos canais oficiais de teste, preservando canal não oficial, BUs e histórico. Repetir o cadastro oficial na BU do mesmo número, selecionando a WABA operacional relatada pelo humano e conferindo WABA_ID/PHONE_NUMBER_ID. A nova hipótese não depende de liberar outro número; causa ainda não comprovada e VAL05 aberto.
 
 ## Active Work State (Required While TODO Remains In `active/`)
 
 - **Work state:** blocked
-- **Why this state now:** o teste comparativo atual depende da seleção/liberação do segundo recurso pela equipe do operador. Receptor de controle está comprovado, mas evento real do recurso A segue ausente; não há segundo recurso definido para continuar a prova.
-- **Exit condition:** operador define recurso seguro; reconferir ambiente e retomar cadastro/teste padrão já aprovado. Não presumir que a disponibilidade antes relatada liberou um número específico.
+- **Why this state now:** o acesso HTTPS foi recuperado; falta atualizar URLs Meta para o novo hostname e conferir a WABA operacional relatada pelo humano, seguida do teste real.
+- **Exit condition:** acesso HTTPS validado, URLs Meta atualizadas pelo operador e WABA/número corretos selecionados pelo fluxo oficial. A indisponibilidade de um segundo número não bloqueia essa nova estratégia.
 
 ## Scope
 
@@ -160,11 +160,11 @@ n/a; nenhuma entrega parcial reivindicada.
 
 ## Blocker Notes (Required if `Qualifiers` includes `Blocked`)
 
-- **Blocker:** segundo número/WABA para comparação ainda precisa ser definido e liberado pela equipe do operador.
-- **Why blocked now:** o humano informou que ainda não consegue realizar a etapa B; nenhuma autorização/cadastro B concluída foi relatada.
-- **What unblocks it:** identificação/liberação humana do recurso seguro, seguida de nova checagem HTTPS/OAuth e execução pelo fluxo oficial existente.
-- **Owner / source:** operador/equipe; resposta humana CP89.
-- **Last confirmed truth:** recurso A aparece Connected na Meta segundo humano; controle local200 e real05 semrotaMeta; appWABA/callbackapplication correspondem. Hipótese de falha específica da conta continua aberta; VAL05 sem waiver.
+- **Blocker:** URLs Meta precisam ser atualizadas para o HTTPS recuperado; associação entre WABA operacional e número ainda não conferida.
+- **Why blocked now:** o domínio mudou após recuperação do túnel; o usuário relata que a WABA cadastrada não é a operacional, embora o mesmo telefone apareça em duas contas. Relato não equivale a causa comprovada.
+- **What unblocks it:** recuperação do túnel, atualização das URLs Meta e cadastro pelo fluxo oficial com WABA_ID e PHONE_NUMBER_ID conferidos para o mesmo número/BU.
+- **Owner / source:** executor DevOps para túnel; operador para Meta e seleção da conta; direcionamento humano CP90 em2026-10-19.
+- **Last confirmed truth:** novo HTTPS responde200 em /health e /privacidade.html com TLS normal; runtime existente preservado. Controle Meta200 e consultas históricas comprovavam configuração da WABA salva, sem comprovar que fosse a operacional. Limpeza autorizada somente para canais oficiais locais; nenhuma remoção executada. VAL05 sem waiver.
 
 ## Execution Lane Tracking (Required)
 
@@ -1954,3 +1954,12 @@ Consultas humanas pendentes: status do número na Meta→GerenciadorWhatsApp→N
 Humano confirmou recurso A Connected na Meta, outro número/conta existentes, campos de domínio/OAuth/SDK atualizados e segundo candidato já Connected. Depois esclareceu que ainda precisa consultar a equipe para definir qual número poderá usar e não consegue executar a etapa de cadastro B. Disponibilidade genérica anterior não é liberação de um recurso específico. Fluxo orientado: nova BU Teste Oficial B, ES pela outra WABA/número, Járegistrado; **nenhuma execução/conclusão B foi relatada** e não se pede novo envio agora.
 
 Somente preparação offline do leitor de metadados B foi realizada: template CP80 com alvo/checkpoint literais, inversão byteexact informada pelo executor e9fakesoffline; sem GO de leitura viva, sem DB/provider/runtime/privatefile/productchanges. Executor encerrou tarefas e foi instruído a não executar. [Disposição e dependência](../../../artifacts/reviews/leadshug-number-onboarding-20261015/evidence/root-cp89-comparison-awaits-resource.json). Parent Pending+Blocked por recurso externo, VAL05 aberto; isso não é entrega/fechamento nem reabre complemento técnico cancelado. Na retomada, conferir endereço HTTPS e domínios autorizados antes de autorizar cadastro/teste B. Comparação poderá reduzir hipóteses de configuração compartilhada versus conta/número/conversa, sem prometer diagnóstico antecipado.
+
+
+### CP90 — WABA operacional e recuperação do acesso local (2026-10-19)
+
+O humano relatou duas contas de mensagem exibindo o mesmo telefone e identificou como operacional uma WABA diferente da cadastrada. É hipótese verificável; modelos existentes são pista, não prova de entrega. As consultas históricas confirmavam a WABA salva, sem estabelecer que fosse a operacional. Essa estratégia com o mesmo número substitui a dependência CP89 de outro recurso. Após análise da remoção canônica, humano concordou com limpeza somente dos canais oficiais de teste, preservando não oficial/BUs/histórico, e solicitou recuperar túneis antes de prosseguir. Nenhum canal foi removido.
+
+Perfil Operational/DevOps e executor de rotina conforme contrato, checkout principal e único writer de runtime. Readiness PACED-Ready. Domínio anterior sem DNS e processos próprios antigos ausentes; clone do launcher CP85 altera somente literais CP90, com hashes conferidos pelo root e GO novo de uso único. Novo supervisor próprio iniciado; DNS inicialmente indisponível propagou depois. HTTPS https://yang-sufficient-employ-cassette.trycloudflare.com validado; root repetiu /health200 e /privacidade.html200, com hashes históricos correspondentes e TLS normal. O primeiro probe /privacy era fallback SPA e não constitui evidência da política. Serviços/configuração/credenciais/dados/produto/Meta preservados. [Recuperação e limites](../../../artifacts/reviews/leadshug-number-onboarding-20261015/evidence/root-cp90-access-recovery.json).
+
+Próximo: operador atualiza domínio/OAuth/SDK/callback/política no mesmo app Meta e verifica com token local existente, mantendo messages inscrito. Depois executar limpeza oficial local pelo domínio/autorização administrativa, refazer cadastro na BU do número selecionando WABA operacional e Já registrado, e abrir janela real IN/OUT com observação do servidor. Remoção local não apaga registro do número na Meta nem comprova retirada de inscrições externas. Sem SQL reset, nova BU para o mesmo recurso, migração/SMS, implementação de handover ou retorno do modo técnico local Cancelled. Parent Pending/VAL05 aberto e sem waiver; disponibilidade HTTPS é pontual.

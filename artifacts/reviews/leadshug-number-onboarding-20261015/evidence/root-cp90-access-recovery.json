@@ -1,0 +1,46 @@
+{
+  "checkpoint": "cp90-access-recovery",
+  "recordedAtUtc": "2026-10-19T14:33:35.783438+00:00",
+  "userDirection": {
+    "hypothesis": "Existing phone appears in two messaging accounts; user reports operational WABA differs from linked WABA. Not independently confirmed root cause.",
+    "cleanupScope": "User agreed to official test channels only; preserve unofficial channel, Business Units and history. No removal executed.",
+    "immediateRequest": "Restore local tunnels for access before cleanup."
+  },
+  "profile": "Operational/DevOps",
+  "topology": "principal-checkout-single-runtime-writer; approved parent routine executor gpt-6-luna medium",
+  "recovery": {
+    "oldHostname": "printing-adaptive-snapshot-partition.trycloudflare.com",
+    "oldHostnameState": "DNS failure; exact old owned tunnel processes absent per executor",
+    "newBaseUrl": "https://yang-sufficient-employ-cassette.trycloudflare.com",
+    "target": "http://127.0.0.1:8083",
+    "launch": "One new CP90 exact owned supervisor, accepted binaries and literal-only CP85 launcher clone, fresh root GO",
+    "dns": "Initially unresolved; subsequent Windows default and explicit public resolvers resolved, normalTLS succeeded",
+    "availability": "Point-in-time only; temporary quick tunnel"
+  },
+  "rootIndependentChecks": [
+    {
+      "path": "/health",
+      "httpStatus": 200,
+      "bytes": 15,
+      "sha256": "a29ee2b15c494311c52521766e44af56a3ad2248e7a8ab465e5206463c13d288"
+    },
+    {
+      "path": "/privacidade.html",
+      "httpStatus": 200,
+      "bytes": 12865,
+      "sha256": "d0f72c588f0f014de46a327e34d6b26125ca115bc973b56bbb926cd8519e701d"
+    }
+  ],
+  "checksBoundary": "Native Windows curl with default TLS verification, no redirects, no cookies, bounded requests. /privacy SPA fallback is not policy evidence. Correct policy /privacidade.html checked independently.",
+  "unchanged": [
+    "product source",
+    "channel registrations and credentials",
+    "Business Units and conversations",
+    "provider/Meta settings",
+    "private env files",
+    "existing API/Web/gateway containers"
+  ],
+  "next": "Operator updates Meta app domain, OAuth/JS SDK, callback and privacy URL to new base, verifies with existing private token and keeps messages subscribed. Then official-only local cleanup and normal signup to correct WABA in same BU; validate real receipt and reply. No new phone dependency.",
+  "VAL05": "open_unwaived",
+  "cancelledLocalTestNumberMode": "remains_cancelled"
+}
