@@ -1,0 +1,67 @@
+{
+  "checkpoint": "cp98-existing-messaging-account-subscription",
+  "date": "2026-10-19",
+  "evidenceOrigin": "Operator-provided Meta UI and Graph Explorer results; local bounded preflight by routine executor. Provider results were not independently requested by the agent.",
+  "requestedResource": {
+    "messagingAccountName": "Francelino Neto",
+    "messagingAccountId": "918214270616606",
+    "ownerReportedByOperator": "unifast.br2",
+    "portfolioId": "1435146480239867",
+    "phoneNumberId": "1203171609551853"
+  },
+  "observations": {
+    "embeddedSignup": "Meta reported successful connection and creation of a Messaging account named unifast.br2. LeadsHug options exposed only 2968878483486111. Operator explicitly wants the existing 918214270616606 account instead; no confirmation of the offered account was requested.",
+    "phoneMembership": "Operator GET 918214270616606/phone_numbers returned phoneNumberId 1203171609551853. Meta API Setup showed the same phone ID under Messaging account 2968878483486111. This demonstrates shared phone membership and management read access with the Explorer credential, not equivalent authorization of the channel's candidate credential.",
+    "beforeSubscription": "Operator GET 918214270616606/subscribed_apps listed Unifast, Unifast Recebe and Automacoes.pro; LeadsHug 874966345550148 was absent.",
+    "afterSubscription": "After operator was instructed to POST subscribed_apps with a credential issued by LeadsHug and no additional parameters, operator GET lists LeadsHug 874966345550148 alongside all three prior apps. This is evidence of subscription on the desired account, not proof of real message delivery or local channel promotion.",
+    "otherAppOverride": "Automacoes.pro entry retains a Whatsflow-specific override callback. No agent removal, unsubscribe or override mutation was performed. That entry alone does not prove exclusion of other apps or the complete cause of prior missing inbound."
+  },
+  "sourceCoherence": {
+    "options": "MetaHttpClient.recursos uses intersection of management and messaging granular target IDs from the candidate credential, not the Explorer credential. No change to this authorization boundary was made.",
+    "ingress": "MetaWebhookController resolves the current provider identity by metadata.phone_number_id, then requires a current channel and verified identity. It does not compare entry.id with channel.wabaId. Subscription or an HTTP 200 alone does not establish that an inbound message reached the correct BU/inbox.",
+    "localStateLimit": "No fresh active channel identity, credential promotion or desired Messaging account binding was established by this checkpoint. Cancelled technical TestNumber mode remains cancelled."
+  },
+  "runtime": {
+    "baseUrl": "https://tooth-mode-bean-bulletin.trycloudflare.com",
+    "healthHttpStatus": 200,
+    "tlsVerifyResult": 0,
+    "apiWebGatewayPins": "match accepted CP96 IDs/images/project/services and API owner number-onboarding",
+    "rootCommit": "80e3940126f22a941f90dba4f5e801b6c0eb2f58",
+    "apiCommit": "db5a86758a165fac8a1ab587599c37b17890530c",
+    "webCommit": "74b9d4b714044829796f875d00553f077c1c329d",
+    "bffInventory": "One normal login/read wrapper ended with ValueError without stage/status output. Login or subsequent GET completion cannot be determined; no retry was performed and no inventory conclusion is claimed. No registration-status GET, provider request or database bypass occurred. Cookie/credentials were memory-only and discarded."
+  },
+  "gatewayBaseline": {
+    "sinceUtc": "2026-10-19T18:09:01Z",
+    "capturedAtUtc": "2026-10-19T18:09:29.665Z",
+    "helperSha256": "c3a74788fdda85d1c03af08e26e3b3dfaa821a8e64958cc17ff9053331160fcf",
+    "gatewayId": "0c48d94e9fe5b4ad75efd304db2752dfa4cab3befc59b9f736574d6cd551eea3",
+    "gatewayImage": "sha256:76090a34b858323b6ab169711adc08253b5bee7123a973dc581ed46b643bc109",
+    "routeConfigSha256": "6d4563cc5f5823bdb1177f350c942dc2472fc70133aef5b177fa4b57c5c9f1a0",
+    "coverageComplete": true,
+    "tailLimit": 100,
+    "byteLimit": 1048576,
+    "bytesRead": 800,
+    "parsedLines": 5,
+    "unparsedLines": 0,
+    "overflow": false,
+    "timeout": false,
+    "dockerExitCode": 0,
+    "strictUtf8": true,
+    "routeMethodStatusCounts": [
+      { "route": "other", "method": "GET", "status": "304", "count": 5 }
+    ],
+    "metaPosts": 0,
+    "rawLogsPersistedOrPrinted": false,
+    "attributionLimit": "Route/method/status aggregates cannot identify message contents, account IDs or a particular event. A later test must preserve this distinction."
+  },
+  "nextStep": "Operator was asked for one real WhatsApp message to the already identified official phone, without Meta dashboard synthetic tests. Observe delivery to the server using the bounded gateway reader; inbox acceptance and outbound proof remain separate gates requiring verified local mapping and channel credential authorized for the explicitly selected account.",
+  "sources": [
+    "https://developers.facebook.com/documentation/business-messaging/whatsapp/account-model-evolution/onboarding/",
+    "https://developers.facebook.com/documentation/business-messaging/whatsapp/access-tokens/",
+    "https://developers.facebook.com/documentation/business-messaging/whatsapp/business-phone-numbers/phone-numbers/",
+    "https://developers.facebook.com/documentation/business-messaging/whatsapp/solution-providers/manage-webhooks/",
+    "https://developers.facebook.com/documentation/business-messaging/whatsapp/webhooks/override/"
+  ],
+  "unchanged": "No agent Meta/Evolution writes, BU/channel/credential changes, registration confirmation, runtime/container/env/source changes or SQL. Agent normal-login session creation outcome is unknown as recorded. Official real IN/OUT and recovery VAL05 remain open; no delivery or readiness completion claim."
+}
