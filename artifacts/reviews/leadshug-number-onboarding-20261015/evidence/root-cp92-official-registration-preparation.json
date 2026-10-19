@@ -1,0 +1,61 @@
+{
+  "checkpoint": "cp92-reactivation-patch",
+  "capturedAtUtc": "2026-10-19T15:02:25.573243+00:00",
+  "endpoint": "http://127.0.0.1:8083",
+  "helperSha256": "9c3104a1460efb7a54c134a448b2664038ce4c3371f8f419eefdf587f5b90752",
+  "priorStoppedReadReceiptSha256": "2a312b4f7c7ccfd42a34c13469313f1fa13ce9d7a04267a48255268f80f1498d",
+  "cp91CleanupReceiptSha256": "95f6b9fa518e1e8282879cbda17d2cf2fd3b0d7227e1a476a61876f104ef9271",
+  "mutation": {
+    "method": "PATCH",
+    "buId": "a1492634-8685-46d8-a7cb-685a99f5c930",
+    "bodyStatus": "ATIVO",
+    "httpStatus": 200,
+    "returnedId": "a1492634-8685-46d8-a7cb-685a99f5c930",
+    "returnedName": "Local Test Ofc",
+    "returnedStatus": "ATIVO"
+  },
+  "authenticatedRole": "OWNER",
+  "freshPrecondition": {
+    "activeTestBUs": [
+      {
+        "id": "c231d8f7-d8a5-448e-a740-2ab8aebf9bc2",
+        "name": "Local Test BU",
+        "role": "OWNER"
+      }
+    ],
+    "targetAbsentFromActiveList": true,
+    "targetChannelRead404ExpectedForInactiveBU": true,
+    "priorOfficialDisconnectVerified": true,
+    "preservedQrChannel": {
+      "id": "b6c3e3f0-fe77-4e92-82e4-1975dffcbef1",
+      "type": "NAO_OFICIAL",
+      "status": "CONECTADO",
+      "generation": 1,
+      "currentAttemptId": "91a050d2-b6b7-4d3a-ac48-97392688584d"
+    }
+  },
+  "final": {
+    "activeTarget": {
+      "id": "a1492634-8685-46d8-a7cb-685a99f5c930",
+      "name": "Local Test Ofc",
+      "role": "OWNER",
+      "status": "ATIVO",
+      "channelCount": 0
+    },
+    "preservedQrChannel": {
+      "id": "b6c3e3f0-fe77-4e92-82e4-1975dffcbef1",
+      "type": "NAO_OFICIAL",
+      "status": "CONECTADO",
+      "generation": 1,
+      "currentAttemptId": "91a050d2-b6b7-4d3a-ac48-97392688584d"
+    },
+    "testeMetaAbsentFromActiveList": true
+  },
+  "result": "complete",
+  "rootDisposition": "accepted_preparation_only_not_official_connection",
+  "receiptSha256": "48635930648d5c81e4dac0d0a0c423eae38d77b9ef56036e90d7f1ffd70f7178",
+  "userIntent": "Step-by-step official registration after cleanup; reactivate same owning BU so existing provider identity need not be transferred.",
+  "publicAccess": "Windows native verifiedTLS /health200 for https://yang-sufficient-employ-cassette.trycloudflare.com; existing container pins unchanged per executor.",
+  "next": "Operator verifies Meta URLs and operational WABA ID, reserves a new OFICIAL attempt in Local Test Ofc, authorizes existing assets and compares WABA ID and phone in selection before confirm. No SMS, Sandbox resource or new BU.",
+  "VAL05": "open_unwaived"
+}
