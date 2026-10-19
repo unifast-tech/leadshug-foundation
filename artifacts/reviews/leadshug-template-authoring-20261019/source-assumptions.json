@@ -1,0 +1,45 @@
+{
+  "date": "2026-10-19",
+  "kind": "bounded-read-only-source-inspection",
+  "runtime_tests_executed": false,
+  "product_heads": {
+    "root": "80e3940126f22a941f90dba4f5e801b6c0eb2f58",
+    "api": "db5a86758a165fac8a1ab587599c37b17890530c",
+    "web": "74b9d4b714044829796f875d00553f077c1c329d"
+  },
+  "assumptions": [
+    {
+      "id": "A-01",
+      "path": "api-app/src/integrations/meta/meta.client.ts",
+      "finding": "Current interface/HTTP adapter has resource/phone/registration/subscription/text methods, no template creation/query methods."
+    },
+    {
+      "id": "A-02",
+      "path": "api-app/src/domain/channels/channel-credential-resolver.ts",
+      "finding": "resolve purpose send|registration|verify; send additionally requires CONECTADO/receipt and provider connection. New management purpose intentional."
+    },
+    {
+      "id": "A-03",
+      "path": "api-app/src/surfaces/bff/bff.module.ts",
+      "finding": "SessionMiddleware mounted on api/bff prefix for all methods; Meta client injected by port."
+    },
+    {
+      "id": "A-04",
+      "paths": [
+        "web-app/src/App.tsx",
+        "web-app/src/api.ts"
+      ],
+      "finding": "No /modelos route; postWithHeaders exists at api.ts:139."
+    },
+    {
+      "id": "A-05",
+      "paths": [
+        "web-app/playwright.config.ts",
+        "scripts/test-channels-local.sh"
+      ],
+      "finding": "Browser API/PG fixture and built bundle, no reused server. Runner unsafe broad filename traversal must be replaced before any test; not executed."
+    }
+  ],
+  "profile_scope_note": "Explicit docs allowed except generic classifier unknown backlog README; owner reviewed as strategic program sequencing. Initial default classifier inspected preexisting Delphi changes; those are unrelated/intact, not package-owned.",
+  "private_boundary": "No read/list/stat/hash/traversal/mount/stage api-app/.local-files; no dotenv contents."
+}
