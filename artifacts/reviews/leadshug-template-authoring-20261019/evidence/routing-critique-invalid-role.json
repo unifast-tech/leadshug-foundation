@@ -1,0 +1,39 @@
+{
+  "blocked": true,
+  "context": {
+    "allowed_roles": "primary-chat, formal-reviewer",
+    "client": "codex",
+    "contract_id": "delphi.agent-role-routing.v1",
+    "contract_path": "/mnt/c/Unifast/delphi-ai/config/agent_role_routing.json",
+    "exception_in_effect": false,
+    "exception_reason": "",
+    "execution_topology": "n/a",
+    "expected_efforts": "xhigh, max, extra-high, extra high, highest-review-tier, extraright, extraright-or-closest-equivalent",
+    "expected_models": "gpt-6.1-sol",
+    "proof_mode": "declared",
+    "required_lane": "review",
+    "review_kind": "critique",
+    "selected_effort": "max",
+    "selected_model": "gpt-6.1-sol",
+    "selected_model_family": "governance_review",
+    "selected_role": "strongest-review",
+    "surface": "formal-review",
+    "waiver_in_effect": false,
+    "waiver_reference_present": false,
+    "worktree_authorization": "n/a",
+    "worktree_authorization_reference_present": false
+  },
+  "outcome": "blocked",
+  "violations": [
+    {
+      "code": "ROLE-UNKNOWN",
+      "message": "Selected role `strongest-review` is not a recognized routing role.",
+      "resolution": "Use one of the canonical roles such as primary-chat, routine-executor, formal-reviewer, process-monitor, or deterministic-only."
+    },
+    {
+      "code": "ROLE-MISMATCH",
+      "message": "Surface `formal-review` requires role(s) primary-chat, formal-reviewer, but selected role is `strongest-review`.",
+      "resolution": "Route the action to primary-chat, formal-reviewer, or use an approved explicit exception if the contract allows it."
+    }
+  ]
+}
