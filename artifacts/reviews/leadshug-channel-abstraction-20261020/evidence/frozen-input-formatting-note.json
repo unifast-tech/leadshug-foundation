@@ -1,0 +1,32 @@
+{
+  "classification": "nonblocking verbatim review-input formatting noise, not product debt or full diff-check pass",
+  "reason": "Two immutable closed review snapshots contain numbered blank source lines with trailing whitespace; four canonical generated dispatch markdowns have an extra EOF blank. They are retained byte-exact as consumed by terminal reviewers rather than silently rewriting historical input hashes. Derived merge markdown EOF blanks were normalized; no product/source assertion weakened.",
+  "frozen_input_files": [
+    {
+      "path": "artifacts/reviews/leadshug-channel-abstraction-20261020/architecture-candidate-package.md",
+      "sha256": "18295b2f853f640bedf306486ba1d729da76d51288da91d46a8f35e4777b25be"
+    },
+    {
+      "path": "artifacts/reviews/leadshug-channel-abstraction-20261020/security-candidate-package.md",
+      "sha256": "64b5468466d5672b0e9b1dfc44ee4240234876e21505b9e601a68d91e63e1e1e"
+    },
+    {
+      "path": "artifacts/reviews/leadshug-channel-abstraction-20261020/evidence/adherence.dispatch.md",
+      "sha256": "d4881160b8937cf52b0cffebdcf435ab6a8d8667bfdd0cb26d6e7e84a4328165"
+    },
+    {
+      "path": "artifacts/reviews/leadshug-channel-abstraction-20261020/evidence/security.dispatch.md",
+      "sha256": "8cc06b209ad81720493bc80c9eef163d9268e963f82e11dcd23df219dfa5761a"
+    },
+    {
+      "path": "artifacts/reviews/leadshug-channel-abstraction-20261020/evidence/adherence-round2.dispatch.md",
+      "sha256": "5831b68eb964ec801cf82580f54faf283beacd88c6a37fe0a4bcca03f5d2c67f"
+    },
+    {
+      "path": "artifacts/reviews/leadshug-channel-abstraction-20261020/evidence/security-round2.dispatch.md",
+      "sha256": "9fe91ac22fbd7049c7cbdad28d66f8a194fb68fa6edfe6925f6ec06cfd42a305"
+    }
+  ],
+  "required_scope_check": "All other staged Foundation files must pass git diff --cached --check with these six exact raw-input path exclusions. Product paths require their own positive-scope clean checks at final freeze.",
+  "limitations": "The unrestricted whitespace check reports these inputs; never report it as an unrestricted PASS. No protected/private paths were discovered/read/staged."
+}

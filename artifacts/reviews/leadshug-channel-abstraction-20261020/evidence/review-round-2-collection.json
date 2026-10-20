@@ -1,0 +1,34 @@
+{
+  "adherence-round2": {
+    "terminal_exit": 0,
+    "turn_completed": 1,
+    "tool_items": 0,
+    "raw_sha256": "3b4fcd92c4a8f5373adbd16397c585bb8bb60c2874d4e4ff50250c60fce004d1",
+    "events_sha256": "5530e54260dba0c4e2ab5f3d60db2ffb53adaf53fb89fd2e005af96ab7e119a8",
+    "usage": [
+      {
+        "input_tokens": 140155,
+        "cached_input_tokens": 12288,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 8123,
+        "reasoning_output_tokens": 6937
+      }
+    ]
+  },
+  "security-round2": {
+    "terminal_exit": 0,
+    "turn_completed": 1,
+    "tool_items": 0,
+    "raw_sha256": "05145c6681df3e5ed3130646585c5245ba550ac3cfc8d696f70050cde3353915",
+    "events_sha256": "aa3d6f6da058f63d7f82dc0e6b3cc1e8653a1d582d9c3dd3ec2e57f90934f927",
+    "usage": [
+      {
+        "input_tokens": 141187,
+        "cached_input_tokens": 12288,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 5583,
+        "reasoning_output_tokens": 4536
+      }
+    ]
+  }
+}

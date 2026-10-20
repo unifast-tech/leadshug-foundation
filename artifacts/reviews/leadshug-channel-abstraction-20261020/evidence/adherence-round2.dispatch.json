@@ -1,0 +1,80 @@
+{
+  "schema_version": "subagent-review-dispatch-v1",
+  "artifact_kind": "subagent_review_dispatch",
+  "authoritative": false,
+  "edit_policy": "derived_dispatch_packet",
+  "review_kind": "architecture_adherence",
+  "bounded_package_path": "foundation_documentation/artifacts/reviews/leadshug-channel-abstraction-20261020/reconvergence-package.md",
+  "reviewer_count": 1,
+  "no_context_required": true,
+  "required_axes": [
+    "adherence",
+    "structural_soundness",
+    "operational_fit",
+    "performance",
+    "elegance"
+  ],
+  "focus_points": [
+    "Compare the delivered bounded package against the frozen Architecture Change Governance contract and Decision Baseline.",
+    "Identify any implementation path, temporary exception, or missing protection harness that diverges from the approved target steady-state.",
+    "Do not redesign the approved architecture unless the delivered evidence exposes a material defect or an approval-breaking divergence.",
+    "For each material finding, add category and formalizable-hint when you can judge them honestly.",
+    "When assessing design, seek the simplest faithful Clean Code/SOLID design for the approved intent. Do not invent future-facing work or erase explicit TODO intent. Planning review may challenge proposed intent; delivery review must preserve approved intent or return for renewed approval."
+  ],
+  "result_contract_fields": [
+    "overall_assessment",
+    "recommended_path",
+    "performance_position",
+    "elegance_position",
+    "structural_soundness_position",
+    "operational_fit_position",
+    "findings[].finding_id (optional)",
+    "findings[].category (optional)",
+    "findings[].formalizable_hint (optional)",
+    "findings[].candidate_rule_level (optional)",
+    "findings[]"
+  ],
+  "todo_path": "foundation_documentation/todos/active/features/TODO-leadshug-channel-abstraction.md",
+  "historical_disposition_policy": [
+    "Resolved findings are historical context only. Do not reopen them unless the current bounded package materially changes the same locus/behavior or fresh evidence shows regression.",
+    "Challenged findings stay closed unless the current bounded package materially changes the same locus/behavior or the prior rationale is objectively insufficient.",
+    "Deferred findings must cite the recorded follow-up/waiver path first. Re-raise them only when the current bounded package changes the same locus or closure now depends on that deferred risk.",
+    "Unresolved findings remain valid to re-raise until they are fixed, challenged, or formally deferred with authority."
+  ],
+  "historical_dispositions": [
+    {
+      "source_kind": "promotion_routing",
+      "finding_id": "ST06-R01 (ADH-01=SEC-01)",
+      "carry_forward_class": "resolved",
+      "source_disposition": "classification=release-blocker; routing=same-todo; status=open; executor",
+      "summary": "D04 complete Meta envelope; contradictory/non-first or malformed IDs cannot prove refusal",
+      "reference": "implementation-round-1-resolution.md; existing D04 approval"
+    },
+    {
+      "source_kind": "promotion_routing",
+      "finding_id": "ST06-R02 (ADH-02)",
+      "carry_forward_class": "resolved",
+      "source_disposition": "classification=release-blocker; routing=same-todo; status=open; executor",
+      "summary": "D10 reachable B/A status navigation and late response/new draft test",
+      "reference": "implementation-round-1-resolution.md; existing D10 approval"
+    },
+    {
+      "source_kind": "promotion_routing",
+      "finding_id": "ST06-R03 (SEC-02)",
+      "carry_forward_class": "resolved",
+      "source_disposition": "classification=release-blocker; routing=same-todo; status=open; executor",
+      "summary": "D04/05 Evolution empty object is not ACK; key:{} preserved",
+      "reference": "implementation-round-1-resolution.md; existing D04/05 approval"
+    },
+    {
+      "source_kind": "promotion_routing",
+      "finding_id": "ST06-R04 (SEC-03)",
+      "carry_forward_class": "resolved",
+      "source_disposition": "classification=release-blocker; routing=same-todo; status=open; executor",
+      "summary": "D02/03 required local adversarial probes or exact existing candidate-bound proof",
+      "reference": "implementation-round-1-resolution.md; existing scope/validation approval"
+    }
+  ],
+  "goal": "Round2 delta adherence review preserving complete frozen D01..10 rubric and prior adjudication; final all and runtime proof remain pending",
+  "review_result_dispatch_path": "/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/artifacts/reviews/leadshug-channel-abstraction-20261020/evidence/adherence-round2.dispatch.json"
+}

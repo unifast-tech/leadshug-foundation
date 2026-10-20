@@ -1,0 +1,120 @@
+{
+  "blocked": true,
+  "violations": [
+    {
+      "code": "DIFF-CHANGE-TYPE-UNEXPECTED",
+      "message": "Actual change type `??` is not allowed for api:test/channel-transport.e2e-spec.ts; contract allows `A, M`.",
+      "resolution": "TEACH: analyze each reported item before changing files. Classify it as (a) an actual scope deviation, (b) a necessary/justifiable need, or (c) noise. This no-go is not an automatic rollback: the agent may defend retaining a necessary change with concrete evidence. Clean/remove noise; revert an unnecessary deviation; for a necessary scope expansion, obtain user validation, update the TODO contract, renew approval, and rerun the guard.",
+      "section": "Diff Expectation Contract / Expected Changed Paths"
+    },
+    {
+      "code": "DIFF-CHANGE-TYPE-UNEXPECTED",
+      "message": "Actual change type `??` is not allowed for web:e2e/channel-transport.spec.ts; contract allows `A`.",
+      "resolution": "TEACH: analyze each reported item before changing files. Classify it as (a) an actual scope deviation, (b) a necessary/justifiable need, or (c) noise. This no-go is not an automatic rollback: the agent may defend retaining a necessary change with concrete evidence. Clean/remove noise; revert an unnecessary deviation; for a necessary scope expansion, obtain user validation, update the TODO contract, renew approval, and rerun the guard.",
+      "section": "Diff Expectation Contract / Expected Changed Paths"
+    },
+    {
+      "code": "DIFF-CHANGE-TYPE-UNEXPECTED",
+      "message": "Actual change type `A` is not allowed for foundation:todos/active/features/TODO-leadshug-channel-abstraction.md; contract allows `M`.",
+      "resolution": "TEACH: analyze each reported item before changing files. Classify it as (a) an actual scope deviation, (b) a necessary/justifiable need, or (c) noise. This no-go is not an automatic rollback: the agent may defend retaining a necessary change with concrete evidence. Clean/remove noise; revert an unnecessary deviation; for a necessary scope expansion, obtain user validation, update the TODO contract, renew approval, and rerun the guard.",
+      "section": "Diff Expectation Contract / Expected Changed Paths"
+    }
+  ],
+  "context": {
+    "todo_path": "/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/todos/active/features/TODO-leadshug-channel-abstraction.md",
+    "repo_root": "/mnt/c/unifast/leadshug/leadshug_now_docker",
+    "contract_repository_count": 4,
+    "repositories": {
+      "root": {
+        "path": "/mnt/c/unifast/leadshug/leadshug_now_docker",
+        "baseline_commit": "80e3940126f22a941f90dba4f5e801b6c0eb2f58",
+        "actual_change_count": 1
+      },
+      "api": {
+        "path": "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app",
+        "baseline_commit": "db5a86758a165fac8a1ab587599c37b17890530c",
+        "actual_change_count": 30
+      },
+      "web": {
+        "path": "/mnt/c/unifast/leadshug/leadshug_now_docker/web-app",
+        "baseline_commit": "74b9d4b714044829796f875d00553f077c1c329d",
+        "actual_change_count": 6
+      },
+      "foundation": {
+        "path": "/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation",
+        "baseline_commit": "82fa66b33b81b31024dc8cebef9e72e9253964a7",
+        "actual_change_count": 51
+      }
+    },
+    "actual_change_count": 88,
+    "expected_change_count": 85,
+    "forbidden_change_count": 0,
+    "unclassified_change_count": 3
+  },
+  "bounded_invocation": {
+    "recorded_at_utc": "2026-10-20T15:09:52.691886+00:00",
+    "status": "preliminary implementation only",
+    "guard_source_unchanged": true,
+    "api_positive_pathspecs": [
+      "src",
+      "test",
+      "prisma",
+      "docker",
+      "Dockerfile",
+      "package.json",
+      "package-lock.json",
+      "tsconfig.json",
+      "tsconfig.build.json",
+      "nest-cli.json",
+      "eslint.config.mjs",
+      "vitest.config.ts",
+      "vitest.config.e2e.ts",
+      "vitest.config.cov.ts",
+      "railway.json",
+      ".dockerignore",
+      ".gitignore",
+      ".env.example"
+    ],
+    "web_positive_pathspecs": [
+      "src",
+      "e2e",
+      "public",
+      "docker",
+      "nginx",
+      "Dockerfile",
+      "package.json",
+      "package-lock.json",
+      "index.html",
+      "playwright.config.ts",
+      "vite.config.ts",
+      "tsconfig.json",
+      "tsconfig.app.json",
+      "tsconfig.node.json",
+      "eslint.config.js",
+      "railway.json",
+      ".dockerignore",
+      ".gitignore"
+    ],
+    "root_positive_pathspecs": [
+      "scripts",
+      "docker",
+      ".github",
+      "AGENTS.md",
+      "README.md",
+      "Makefile",
+      "docker-compose.yml",
+      "docker-compose.channels.yml",
+      ".env.example",
+      ".gitignore",
+      ".gitmodules",
+      "api-app",
+      "web-app",
+      "foundation_documentation",
+      "delphi-ai"
+    ],
+    "limitations": [
+      "Public-path only; excluded private/operational paths not enumerated or asserted clean.",
+      "Root submodule working contents ignored; no gitlink reconciliation."
+    ]
+  }
+}

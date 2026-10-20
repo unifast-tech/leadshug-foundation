@@ -1,0 +1,10 @@
+{
+  "captured_at_utc": "2026-10-20T15:52:38.393052+00:00",
+  "module": "api-app/src/integrations/channels/evolution-channel.ts",
+  "original_reviewed_sha256": "60faf1ea40fe17ad62495b0f42a2cf958defcb41e3ad72d3d2213751539b460c",
+  "current_sha256": "be111003d398e2f24cd8294c803068f97eda29a7b418ad04cce424a765f995ab",
+  "different_from_reviewed": true,
+  "observed_diff_normalized_text": "--- reviewed-restored-target\n+++ observed-current-module\n@@ -11,7 +11,7 @@\n   ) {}\n \n   async sendMessage(message: TextMessage): Promise<ChannelSendResult> {\n-    if (!await this.beforeDispatch()) return { outcome: 'BLOCKED', reason: 'CHANNEL_CONTEXT_CHANGED' };\n+    // Mutation probe: intentionally skip the binding fence.\n     if (!this.credential.evolutionInstanceName) return { outcome: 'BLOCKED', reason: 'CHANNEL_NOT_READY' };\n     try {\n       return await this.client.enviarTexto(this.credential.evolutionInstanceName, message.recipientRef, message.text);\n",
+  "scope": "One exact public module read-only; no terminal/restoration claim",
+  "executor_reported_run": 59583
+}

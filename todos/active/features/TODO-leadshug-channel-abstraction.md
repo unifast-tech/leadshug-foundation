@@ -35,12 +35,12 @@ Usuário confirmou Channel abstrato/concretos e extensibilidade para Instagram, 
 ## Delivery Status Canon (Required)
 - **Current delivery stage:** Pending
 - **Qualifiers:** none
-- **Next exact step:** CP01 runner público corrigido/checado; executor único assume testes e implementação do cutover API/Web D01..10, depois all e assurance.
+- **Next exact step:** executor único resolve R05 e proteção R02/R04 após all33610 terminal0; RED49493 confirmou classifier antes da correção; validar falha por remoção dos guards, congelar nova versão e reconvergir all/reviews antes de publicação local/INOUT.
 
 ## Active Work State (Required While TODO Remains In `active/`)
 - **Work state:** implementation
 - **Why this state now:** APROVADO específico recebido e binding recarregado; seguir Ordered Steps com executor único e autoridade normal go antes de código.
-- **Exit condition:** pacote convergido + APROVADO específico + reload binding + authority go.
+- **Exit condition:** implementação aderente com all/assurance/pcv e prova real pós-publicação local; nenhum bloqueador de review aberto antes de entrega.
 
 ## Scope
 - [ ] SCOPE-01 — Channel/ChannelResolver abstratos de domínio, registro explícito e instâncias por operação, concretos oficial/não oficial e extensão verificada com fake não WhatsApp.
@@ -71,7 +71,8 @@ n/a; só Foundation main é autoridade documental autônoma nesta preparação.
 - [ ] Worker/outbox/fila, durable intent/exactly-once externo, retry automático de POST, heurística para unir eco sem ID.
 - [ ] Delphi, worktrees/cópias, gitlinks/.gitmodules, deploy/push de produto, leitura de .env/.env.testing e qualquer read/list/stat/hash/traversal/mount/stage api-app/.local-files.
 
-## Diff Expectation Contract (Required Before Delivery)
+## Diff Expectation Contract
+Required before delivery. Heading normalized for canonical parser; contract obligation unchanged.
 - **Contract status:** required
 - **Policy:** strict; forbidden/unclassified blocks delivery
 - **User validation:** required on deviation
@@ -103,7 +104,7 @@ n/a; só Foundation main é autoridade documental autônoma nesta preparação.
 | api | src/surfaces/bff/bff.module.ts | M | DI da composição única |
 | api | src/surfaces/public/public.module.ts | M | DI preservando auth |
 | api | src/surfaces/webhooks/webhooks.module.ts | M | DI Typebot/ingress |
-| api | test/channel-transport* | A | PG/contrato/corridas |
+| api | test/channel-transport* | A, ?? | PG/contrato/corridas |
 | api | test/helpers.ts | M | fakes/DI de contrato |
 | api | test/timeline-fixtures.cjs | M | provider controlado de browser |
 | api | test/browser-server.cjs | M | bootstrap real |
@@ -113,11 +114,11 @@ n/a; só Foundation main é autoridade documental autônoma nesta preparação.
 | web | src/api.spec.ts | M | companion de metadados seguros D10; admissão humana2026-10-20 |
 | web | src/telas/Inbox.tsx | M | composer indisponível/motivo e erro |
 | web | src/telas/Inbox*.test.tsx | any | render/estado |
-| web | e2e/channel-transport* | A | mutation BFF real |
+| web | e2e/channel-transport* | A, ?? | mutation BFF real |
 | web | e2e/number-onboarding-freshness.ts | M | manifesto se afetado |
 | web | e2e/timeline-freshness.ts | M | companion chamado antes do manifesto; pathspec positivo antes de discovery; admissão humana2026-10-20 |
 | root | scripts/test-channels-local.sh | M | inventário positivo seguro antes de testes |
-| foundation | todos/active/features/TODO-leadshug-channel-abstraction.md | M | governança/evidências |
+| foundation | todos/active/features/TODO-leadshug-channel-abstraction.md | A, M | governança/evidências |
 | foundation | todos/completed/features/TODO-leadshug-channel-abstraction.md | A | closeout após gates |
 | foundation | todos/active/features/TODO-leadshug-official-template-authoring.md | M | handoff sem execução |
 | foundation | todos/active/features/TODO-leadshug-start-conversation-by-contact.md | M | handoff sem execução |
@@ -143,7 +144,15 @@ n/a; só Foundation main é autoridade documental autônoma nesta preparação.
 | web | dist/** | any | gerado, não fonte |
 
 ### Diff Deviation Analysis (Required Only When the Guard Returns `no-go`)
-Guard de entrega ainda não executado. API exige inventário positivo de paths públicos; não executar guard que percorra API inteira. Descoberta fora do inventário exige reconvergência/aprovação.
+Guard público preliminar executado com fonte canônica inalterada e invocações Git limitadas ANTES da descoberta por pathspecs positivos (API/Web/root); não é guard final de entrega ou prova dos paths excluídos. Primeiro título com sufixo não foi reconhecido pelo parser; normalizado sem alterar obrigação. A segunda execução encontrou 88 mudanças públicas,85 esperadas e3 diferenças mecânicas de tipo, zero path proibido ou novo path fora do escopo.
+
+| Finding | Classification | Resolution / authority |
+| --- | --- | --- |
+| api:test/channel-transport.e2e-spec.ts aparece ?? e já era adição A aprovada | noise; by-design/no-action in product | Comparação working_tree inclui arquivo ainda não staged; adicionar ?? ao mesmo glob já aprovado representa a mesma adição, não amplia paths nem produto; não stagear fonte por conveniência do guard |
+| web:e2e/channel-transport.spec.ts aparece ?? e já era adição A aprovada | noise; by-design/no-action in product | Mesmo ajuste mecânico A,?? no mesmo glob aprovado, sem mudar cobertura ou permissão funcional |
+| Foundation TODO aparece A contra baseline82fa66b e constava só M | noise; by-design/no-action in product | O contrato foi criado depois da baseline, portanto A,M expressa a criação/modificação documental já autorizada; nenhum novo artefato/escopo |
+
+Evidência histórica: evidence/public-diff-working-tree-type-no-go.json. Ajuste de representação Git não muda Scope/DoD/decisões/risco/paths e não exige nova aprovação material; as duas admissões de paths reais permanecem validadas separadamente pelo usuário. Descoberta de path real não aprovado continua bloqueada e exige validação humana. Rerun preliminar e final ainda necessários.
 
 ## Bounded But Elastic Guardrails
 - **May stay inside this TODO:** DI, DTO/fixture/componente subordinados ao mesmo envio comum e preservação de seus invariantes.
@@ -545,7 +554,17 @@ Planejado para o gate de entrega após APROVADO; nenhum resultado de implementa�
 Planejado para o gate de entrega após APROVADO; nenhum resultado de implementação reivindicado.
 
 ## Promotion Finding Routing Ledger (Required When Promotion/Review Finds Any Finding)
-Planejado para o gate de entrega após APROVADO; nenhum resultado de implementação reivindicado.
+
+Terminal architecture/security findings classified by review-finding-classification. All current-slice findings remain blockers until fixed and evidenced; no waiver/debt accepted. Exact text and deduplication: artifacts/reviews/leadshug-channel-abstraction-20261020/implementation-round-1-resolution.md.
+
+| Finding ID | Severity | Classification | Routing Decision | Same TODO / Split Rationale | Status | Approval / Follow-up Reference |
+| --- | --- | --- | --- | --- | --- | --- |
+| ST06-R01 (ADH-01=SEC-01) | high | release-blocker | same-todo | Original non-first/malformed-ID counterexample corrected; new flag case tracked R05 | resolved in round2 snapshot; finalvalidation pending | implementation-round-1-resolution.md; existing D04 approval |
+| ST06-R02 (ADH-02) | medium | release-blocker | same-todo | Navigation corrected; await body/handler completion and prove same-text draft fence catches removal | open; round2 remediation | implementation-round-1-resolution.md; existing D10 approval |
+| ST06-R03 (SEC-02) | medium | release-blocker | same-todo | D04/05 Evolution empty object is not ACK; key:{} preserved | resolved in round2 snapshot; finalvalidation pending | implementation-round-1-resolution.md; existing D04/05 approval |
+| ST06-R04 (SEC-03) | medium | release-blocker | same-todo | Denied mutations/twoTENANT proof added; preDispatch must exercise real Meta/Evo adapters and detect omitted callback | open; round2 remediation | implementation-round-1-resolution.md; existing scope/validation approval |
+| ST06-R05 (adherence-round2 ADH-R2-01) | medium | release-blocker | same-todo | D04 explicit false/malformed success flag contradicts positive ACK; UNKNOWN/no authoritative write | open; executor after runner terminal | implementation-round-2-resolution.md; D04 existing approval |
+
 
 ## TODO Closeout Disposition
 - **Disposition:** keep-active
@@ -688,8 +707,35 @@ Direction and extension requirements are explicit user statements2026-10-20. Ini
 | Checkpoint | State | Evidence / limit |
 | --- | --- | --- |
 | CP01 — runner antes de testes | passed precondition | artifacts/reviews/leadshug-channel-abstraction-20261020/evidence/runner-checkpoint.json; allowlist antes de stat, sem varredura ampla; bash-n/diffcheck/mock config-only. Nenhum teste de produto ou Docker real executado neste checkpoint. |
-| CP02 — Channel/outbound/consumers + Web/tests | running; RED confirmado | /root/stcon06_executor único writer; artifacts/tmp/stcon06-executor-* e evidence/executor-validation.json reservados ao executor. RED em evidence/red-checkpoint.json:175unit passam/1 guard falha por dispatch legado. API#5 GREEN parcial:188unit/291PG; API#8:194unit passam, matriz PG ampliada em execução. all/Web/browser/assurance/realINOUT pendentes. Nenhum gate de entrega satisfeito ainda. |
+| CP02 — Channel/outbound/consumers + Web/tests | implementation, not delivered | Executor único; artifacts/tmp/stcon06-executor-* e evidence/executor-validation.json reservados. Initial RED dependencyguard175pass/1fail. all33610 terminal0:194unit/308PG/29Web/50browser, snapshot anterior agora insuficiente pelas findings round2. |
+| CP03 — independent adherence/security rounds1/2 | terminal,3 blockers open | Original R01/R03 counterexamples corrected. R05 success:false contradiction; R02 browser handler completion; R04 shippingadapter callback protection. Full implementation-round-1/2-resolution.md; no waiver/debt or physicalproof. |
+| CP04 — actual R05 regression RED | reproduced before fix | Canonical API49493 terminal1: Meta200 success:false+ID expectedUNKNOWN/TRANSPORT_UNCONFIRMED, actualACCEPTED;20otherunitfiles green. Executor will preserve exact log/provenance and correct source after terminal. Not blanket RED for other cases. |
 
 ## Supplemental Expected-Path Validation — 2026-10-20
 
 User explicitly replied **“Validar os dois arquivos de apoio”** to the exact bounded proposal [test-companion-path-admission.md](../../../artifacts/reviews/leadshug-channel-abstraction-20261020/test-companion-path-admission.md). This validates only Web `src/api.spec.ts` and `e2e/timeline-freshness.ts` as M companions for D10/SCOPE05. Scope, DoD, public behavior, frozen D01..10, private-data prohibition and required checks are unchanged. The direct client test was already added before the path omission was noticed; its admission is explicit here. The nested helper correction was not applied or run before this validation. Executor remains sole product writer; browser/all may proceed only after both freshness inventories use positive pathspecs before discovery.
+
+## Implementation Assurance — Round 1
+
+Architecture adherence and separate security reviews completed through canonical subagent_review_run.py, gpt-6.1-sol/xhigh, closed embedded source packages; strict merge passed. Architecture: changes required; security: source-only classification defects and evidence gaps, no demonstrated tenant breakout or credential disclosure. Artifacts: evidence/adherence.raw.json, adherence.merge.json; security.raw.json, security.merge.json. Reviews did not certify final all or physical proof. No live review was cancelled or repackaged. All findings integrated as approved-contract remediation, with delivery still Pending.
+
+| Finding ID | Resolution (`Integrated|Challenged|Deferred`) | Usefulness (`useful|noise|mixed|unknown`) | Formalizable (`yes|partial|no|unknown`) | Candidate Rule Level (`paced|project|none|unknown`) | Candidate Rule ID | Rationale / Evidence |
+| --- | --- | --- | --- | --- | --- | --- |
+| ADH-01 | Integrated | useful | yes | project | n/a | ST06-R01; D04 complete-envelope classification, remediation open |
+| SEC-01 | Integrated | useful | yes | project | n/a | duplicate ADH-01 consolidated ST06-R01; same open blocker, not ignored |
+| ADH-02 | Integrated | useful | partial | project | n/a | ST06-R02; independently confirms browser navigation defect, remediation open |
+| SEC-02 | Integrated | useful | yes | project | n/a | ST06-R03; supported ACK structure vs malformed empty object, remediation open |
+| SEC-03 | Integrated | useful | yes | project | n/a | ST06-R04; reconcile source/proofs and add only missing local negative/isolation cases |
+
+
+## Implementation Assurance — Round 2
+
+Both canonical CLI reviews terminal0, strict merge passed: evidence/adherence-round2.raw.json and security-round2.raw.json. Full adjudication and exact overlapping ID bindings: implementation-round-2-resolution.md. Original R01/R03 counterexamples resolved at source; R02/R04 protection gaps remain and R05 is a new classifier case. No architecture expansion, waiver/debt or delivery claim. Runner33610 must terminate before further product edits.
+
+| Finding ID | Resolution (`Integrated|Challenged|Deferred`) | Usefulness (`useful|noise|mixed|unknown`) | Formalizable (`yes|partial|no|unknown`) | Candidate Rule Level (`paced|project|none|unknown`) | Candidate Rule ID | Rationale / Evidence |
+| --- | --- | --- | --- | --- | --- | --- |
+| adherence-round2:ADH-R2-01 | Integrated | useful | yes | project | n/a | ST06-R05 Meta success:false contradiction; approved D04 remediation open |
+| adherence-round2:ADH-R2-02 | Integrated | useful | partial | project | n/a | ST06-R02 headers-only wait can falsely pass before stale completion |
+| adherence-round2:ADH-R2-03 | Integrated | useful | yes | project | n/a | ST06-R04 testfake owns guard, must exercise shipping adapter callback |
+| security-round2:ADH-R2-01 | Integrated | useful | yes | project | n/a | duplicate ST06-R04, same shipping-adapter harness gap |
+| security-round2:ADH-R2-02 | Integrated | useful | partial | project | n/a | duplicate ST06-R02, same browser completion gap |

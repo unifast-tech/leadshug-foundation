@@ -9,7 +9,7 @@
     "runner allowlist repair + bashn/diffcheck + synthetic config-only probe",
     "canonical api RED:175unit pass/1 dependencyguard failure duelegacydispatch"
   ],
-  "current_work": "API#8: lint/build/194unit pass; PostgreSQL expanded matrix currently running. Finalall/Web/browser and delivery reviews remain pending.",
+  "current_work": "Meta shippingguard mutant16223 terminal1:194unitpass/308of309PGpass, intended409-vs201fail. Root closedloghash and exactsource/restoration confirmed. Evolutionguard mutant59583 currently running, Meta restored. Root independently observed Evo be111003d398… vs original60faf1ea…; solewriter will restoreat terminal beforefinalall. Browser97398 mutant alreadydetectedemptydraft/restored; nullfinishedassertion pendingfinalall. No humanruntime change.",
   "parent_integration_findings_sent": [
     "restore MessageAcceptance service baseline (outside expectedpaths), move sourceintent/finalization/readback to outbound*.ts",
     "remove commonproviderbranch and closedMeta/Evo-only errorcodes from commonChannelport; generic projection/open registration",
@@ -19,11 +19,15 @@
     "postdispatch contextstate tracks identityfence ratherthan simple connectionreadiness",
     "Public list must preserve reason=null when available; nullish fallback falsely projected unavailable code",
     "Inbox should explain fixed availability reasons with user wording rather than raw enum",
-    "Meta error+external-ID contradictory response must remain UNKNOWN; tautological contradictoryIdRefusal incorrectly classified REJECTED"
+    "Meta error+external-ID contradictory response must remain UNKNOWN; tautological contradictoryIdRefusal incorrectly classified REJECTED",
+    "Positive public pathspec must precede staged/unstaged/untracked discovery in BOTH browser freshness helpers (user admitted companion; fixed before browser)",
+    "CANAL_AMBIGUO copy cannot instruct a selector that this slice does not deliver",
+    "New DISTINCT ON latest-IN projection must be checked against realistic history depth; shallow30rows may hide changed scan cost",
+    "Serial100 acknowledged UI sends cannot alone substantiate FRC-E3 race floor; use actual pending-response retriggers and request/readback assertions"
   ],
   "executor_reports": "Core integration findings applied; independent Channel fake via registry/real resolver, real REAUTORIZAR generation race, version-only reseal, ingress pinning/crossBU/tie/claim barriers added; channel-specific PCV metrics now executing.",
   "next_parent_steps": [
-    "wait executor completeimplementation+canonicalall/evidence, no concurrent codewriter",
+    "wait solewriter R05/R02/R04 remediation and actual mutationRED/restoration plus newcanonicalall; no concurrentcodewriter",
     "inspect stable positivepublicdiff + sourcefreshness and D01..10 trace",
     "run required architecture-adherence/security, dedicated auditprotocol Performance+TestQuality+Cutover via fresh internal strongest-review agents; finalreview after TQA/PCV/finalpacket",
     "revalidate/publish local API/Web only within approved constraints then operator realINOUT official+unofficial; privateenv/.local-files forbidden",
@@ -34,13 +38,14 @@
   "user_input_needed_now": false,
   "routing_note_for_future_reviews": "Current delphi-ai/config/agent_role_routing.json maps test_quality_audit and cutover_integrity_audit to technical_review model gpt-5.6-terra; architecture_adherence/critique ->gpt-6.1-sol, final_review ->gpt-6.1-sol. Use current guard at dispatch; do not falsely declare a different model. Native tool advertised models lacks terra; actual availability not yet attempted. Do not preemptively ask permission or alter Delphi.",
   "latest_api_green": {
-    "reporter": "/root/stcon06_executor",
+    "session_id": 54152,
     "command": "bash scripts/test-channels-local.sh api",
     "exit_code": 0,
-    "unit_tests": 188,
-    "e2e_tests": 291,
-    "scope": "pre-matrix API regression only",
-    "existing_pcv_limit": "onboarding attempt/pair-delete proofs not sole newChannel EPS/BCI"
+    "unit_files": 21,
+    "unit_tests": 194,
+    "e2e_files": 27,
+    "e2e_tests": 309,
+    "scope": "round2APIfixes, not finalall; actualfault-injectionproof stillpending"
   },
   "latest_api_unit_checkpoint": {
     "reporter": "/root/stcon06_executor",
@@ -65,5 +70,155 @@
     ],
     "reason": "Strict expected-path contract omitted existing test/helper companions required by D10. Browser/all paused, independent approved API/Web work continues.",
     "authority": "Literal reply: Validar os dois arquivos de apoio; appended ExpectedPaths and supplemental validation to governing TODO."
+  },
+  "latest_web_checkpoint": {
+    "command": "bash scripts/test-channels-local.sh web",
+    "exit_code": 0,
+    "unit_tests": 29,
+    "files": 5,
+    "production_build": "passed",
+    "scope": "not finalall"
+  },
+  "latest_browser_checkpoint": {
+    "session_id": 2225,
+    "command": "bash scripts/test-channels-local.sh browser",
+    "exit": 0,
+    "passed": 50,
+    "total": 50,
+    "scope": "finishedbody +2RAF barrier before laterfinishednullassertion; notnewfinalall"
+  },
+  "frozen_candidate": {
+    "api_head": "db5a86758a165fac8a1ab587599c37b17890530c",
+    "api_executor_manifest_sha256": "a6a5af34563964dbb00e6202cd035c844e9bfc0e06c0fb13277b052a22dc9530",
+    "web_head": "74b9d4b714044829796f875d00553f077c1c329d",
+    "web_executor_manifest_sha256": "dfeccb931befa55eb63e56d12f045b7d228eca7aa0239c6af2271c7b9ea5224b",
+    "parent_snapshot": "evidence/architecture-candidate-source.json",
+    "source_edit_policy": "No product edits during all; if any fixes required after terminal, refresh impacted source/evidence and review as needed."
+  },
+  "active_review": {
+    "kind": "architecture_adherence",
+    "model": "gpt-6.1-sol",
+    "effort": "xhigh",
+    "guard": "evidence/routing-adherence.json go",
+    "package": "architecture-candidate-package.md",
+    "package_sha256": "18295b2f853f640bedf306486ba1d729da76d51288da91d46a8f35e4777b25be",
+    "runner": "canonical subagent_review_run.py via /tmp/stcon06-review-codex-xhigh effort wrapper",
+    "exec_session_id": 15689,
+    "status": "terminal changes required; no reviewer currently running; delta followup after sourcefreeze",
+    "limits": "Code-adherence gate only; finalall, PCV artifact review and operator proof remain pending. Not the dedicated triple audit or final review."
+  },
+  "active_security_review": {
+    "model": "gpt-6.1-sol",
+    "effort": "xhigh",
+    "exec_session_id": 41543,
+    "status": "terminal findings integrated; no reviewer currently running; delta followup after sourcefreeze",
+    "package": "security-candidate-package.md",
+    "package_sha256": "64b5468466d5672b0e9b1dfc44ee4240234876e21505b9e601a68d91e63e1e1e",
+    "collection_kind": "architecture_adherence schema for separate security gate; full security skill/rubric embedded",
+    "guard": "evidence/routing-security.json go"
+  },
+  "review_resolution": "implementation-round-1-resolution.md",
+  "public_diff_preliminary": {
+    "outcome": "go",
+    "artifact": "evidence/public-diff-preliminary.json",
+    "scope": "positivepublicpathspecs before Gitdiscovery, guard source unchanged; not fullrepository/private paths claim",
+    "mechanical_corrections": "Exact heading normalized for parser; A approved additions also allow untracked?? in working_tree; FoundationTODO A vsM against precreation baseline. No new path/behavior or authority expansion; historicalno-go saved.",
+    "latest_counts": {
+      "actual": 117,
+      "expected": 117,
+      "forbidden": 0,
+      "unclassified": 0,
+      "root": 1,
+      "api": 30,
+      "web": 6,
+      "foundation": 80,
+      "scope": "publicpaths only, during implementation; notfinalfrozen/privaterepo claim"
+    }
+  },
+  "assurance_preparation": "assurance-preparation.md; canonical static scan16explicitpublicpaths exit2 heuristics:0hardbypass/0supportmarker/0authshortcut,11statushints +one aggregate rows[0], review pending. No generic APIrootwalk.",
+  "latest_all_attempt": {
+    "session_id": 43594,
+    "exit": "terminal failed",
+    "reported_by": "/root/stcon06_executor",
+    "unit_passed": 194,
+    "e2e_total": 308,
+    "e2e_failures": 1,
+    "cause": "new2tenant test fixture duplicate(bu_id,type), corrected before followup",
+    "delivery_claim": false
+  },
+  "round2_adherence": {
+    "session_id": 93064,
+    "status": "terminal0, merged;3deduplicatedopenblockers, resolution implementation-round-2-resolution.md",
+    "model": "gpt-6.1-sol",
+    "effort": "xhigh",
+    "package": "reconvergence-package.md",
+    "package_sha256": "1641ec2182b6cf8e37a5d058f5a9890c1d13924f3d79a3473a6bc8cfaa6e495a",
+    "source_manifest": "evidence/reconvergence-source.json",
+    "lifecycle": "wait terminal, never cancel/repackage for elapsedtime",
+    "limit": "sourcecode gate only; finalall/dedicatedaudit/PCV/operator/finalreview pending"
+  },
+  "round2_security": {
+    "session_id": 60409,
+    "status": "terminal0, merged;3deduplicatedopenblockers, resolution implementation-round-2-resolution.md",
+    "model": "gpt-6.1-sol",
+    "effort": "xhigh",
+    "package": "security-reconvergence-package.md",
+    "package_sha256": "a73b3eb04f49cdf73db4e5f73458ee08166240f8edcd8f5b70b00a5b42583d79",
+    "source_manifest": "evidence/reconvergence-source.json",
+    "lifecycle": "wait terminal, never cancel/repackage for elapsedtime",
+    "limit": "sourcecode gate only; finalall/dedicatedaudit/PCV/operator/finalreview pending"
+  },
+  "final_all_running": {
+    "session_id": 33610,
+    "source_frozen": true,
+    "api_public_tracked_diff_sha256": "d1468e0254b244c893c53d6f8bc5b71a9199e0997f0f119559488032c1e935ef",
+    "web_public_tracked_diff_sha256": "af75aecf56a6ae9f83840f49d1493d4cc49347a7fcfeac2984cb2a6482f49247",
+    "root_runner_diff_sha256": "d5e579265d7ea6ebe5a839be2e5a2bd34f82c1f8c59cc009e55deddcbe6b622b",
+    "untracked_source_note": "Newpublicsourcebytesarein evidence/reconvergence-source.json; tracked diff alone is not fullcandidate proof",
+    "status": "terminal0 earliercandidate, deliveryinvalidatedbyround2findings"
+  },
+  "latest_all_green": {
+    "session_id": 33610,
+    "exit": 0,
+    "api_unit": 194,
+    "api_e2e": 308,
+    "web_unit": 29,
+    "browser": 50,
+    "scope": "earlier frozen candidate, not final delivery proof after round2remediation"
+  },
+  "round2_red": {
+    "session_id": 49493,
+    "command": "bash scripts/test-channels-local.sh api",
+    "exit": 1,
+    "expected_failure": "HTTP200success:false +messagesID expectedUNKNOWN/TRANSPORT_UNCONFIRMED, actualACCEPTED",
+    "scope": "R05 realRED before classifier fix; no claim RED for all later cases",
+    "reported_by": "/root/stcon06_executor"
+  },
+  "round2_browser_mutation": {
+    "session_id": 97398,
+    "command": "bash scripts/test-channels-local.sh browser",
+    "exit": 1,
+    "pass": 49,
+    "fail": 1,
+    "expected_failure": "A-B-A new same-text draft empty when stale responder generation guard omitted",
+    "restoration": "executor reports immediate guard restoration, exacthash proof pending",
+    "source": "executor tool-result report; source log provenance to be supplied honestly",
+    "test_delta_after_run": "assert response.finished() returns null; this extra assertion awaits finalall"
+  },
+  "meta_mutant": {
+    "session_id": 16223,
+    "terminal_exit": 1,
+    "e2e_passed": 308,
+    "e2e_failed": 1,
+    "root_artifact": "evidence/meta-mutant-failure-restoration.json",
+    "restoration_exact": true
+  },
+  "evolution_mutant": {
+    "session_id": 59583,
+    "status": "running",
+    "root_source_observation": "evidence/evolution-mutant-source-observation.json",
+    "mutant_sha256": "be111003d398e2f24cd8294c803068f97eda29a7b418ad04cce424a765f995ab",
+    "baseline_sha256": "60faf1ea40fe17ad62495b0f42a2cf958defcb41e3ad72d3d2213751539b460c",
+    "restoration_pending": true
   }
 }

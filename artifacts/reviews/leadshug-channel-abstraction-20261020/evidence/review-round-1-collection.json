@@ -1,0 +1,45 @@
+{
+  "recorded_at_utc": "2026-10-20T15:04:24.716557+00:00",
+  "reviews": [
+    {
+      "kind": "adherence",
+      "event_sha256": "8ce2bfeb640489ca7ad98192cb94f4f48fe46dffaafb112fa72c6bb8ff1acbbb",
+      "events": 4,
+      "turn_completed_count": 1,
+      "usage": {
+        "input_tokens": 172001,
+        "cached_input_tokens": 12288,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 14009,
+        "reasoning_output_tokens": 13159
+      },
+      "non_message_completed_items": 0,
+      "raw_sha256": "4c7dae2e2caa6945501a9d76abffecfb4e3095592dda1e7645ad4499a59015de",
+      "stderr_bytes": 1854,
+      "collection": "canonical runner terminal0; strict merge terminal0",
+      "model": "gpt-6.1-sol declared invocation",
+      "effort": "xhigh configured CLI wrapper"
+    },
+    {
+      "kind": "security",
+      "event_sha256": "0635edb1357e1474236a576b6ca92c5f3d1eeb2fd3a745393434a30453a74a8d",
+      "events": 4,
+      "turn_completed_count": 1,
+      "usage": {
+        "input_tokens": 173298,
+        "cached_input_tokens": 12288,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 9821,
+        "reasoning_output_tokens": 8210
+      },
+      "non_message_completed_items": 0,
+      "raw_sha256": "4774688527a485696fd3b0b58d55ec0723d6970202a295afb9ad680a314cf2ab",
+      "stderr_bytes": 1566,
+      "collection": "canonical runner terminal0; strict merge terminal0",
+      "model": "gpt-6.1-sol declared invocation",
+      "effort": "xhigh configured CLI wrapper"
+    }
+  ],
+  "product_edits_by_reviewers": false,
+  "scope": "closed self-contained embedded package; no tool execution"
+}

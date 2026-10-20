@@ -1,0 +1,30 @@
+{
+  "status": "read-only source observation, not a CI execution",
+  "paths": [
+    {
+      "path": ".github/workflows/ci.yml",
+      "sha256": "4448e7dbb47a85c432f4975bf55a1e786402f7e8c5ba3fe70d054eb182de1607"
+    },
+    {
+      "path": "api-app/package.json",
+      "sha256": "df8551d3e506e7c68516cbd482362c4282671b7ec7eebbf121386390ac080a9d"
+    },
+    {
+      "path": "web-app/package.json",
+      "sha256": "fc9083821e246d50c080f409b3590902b033041231d1688c04c4140f097818de"
+    },
+    {
+      "path": "api-app/vitest.config.e2e.ts",
+      "sha256": "ff76a3b94de4649d18f0f824a24bb45428afcbb751a872a6841a2e388f45f8ff"
+    },
+    {
+      "path": "web-app/playwright.config.ts",
+      "sha256": "53e9a54e97c9b785135d94846d99eb77c6f05789a58f27128544f9b2c903a63d"
+    }
+  ],
+  "existing_root_workflow": "compose config + API lint/build/unit +Webbuild/unit, Node22; no rootPG E2E or Playwright job is asserted",
+  "canonical_local_contract": "bash scripts/test-channels-local.sh all is a project-owned required local gate; runs realPG migration/status+APIlint/build/unit/E2E+Webbuild/unit+freshbuiltChromium. It is a broader local validation suite, not proof of a remote run.",
+  "boundaries": "No rootCI edit, sourcecommit/push/gitlink/deploy. Do not infer submodule remoteCI configuration from the root workflow.",
+  "dependency_parity": "Both production locks/manifests and real NestDI/Prisma/PostgreSQL/current public contracts used locally; external providers doubled, physical delivery operator-only.",
+  "review_requirement": "IndependentTQA must judge command/topology parity and any concrete confidence gap without substituting remoteCI claim."
+}

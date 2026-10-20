@@ -1,0 +1,16 @@
+# ST-CON-06 — implementation review round 1 adjudication
+
+Derived from terminal canonical CLI reviews gpt-6.1-sol/xhigh; both raw JSONs strictly validated and merged. Frozen packet architecture hash18295b2f… /security64b54684…; no live reviewer cancelled, replaced or repackaged. These are independent architecture and separate security gates, not the dedicated Performance/TQA/Cutover session or final review. Final all ended with API/Web green and browser48/50; it does not satisfy the delivery gate.
+
+| Deduplicated ID | Original findings | Severity | Classification | Decision / exact current-slice action | State |
+|---|---|---|---|---|---|
+| ST06-R01 | ADH-01, SEC-01 | high | release-blocker | Integrated D04: inspect complete single-send Meta acknowledgement envelope; non-first ID, malformed entries/IDs or other success contradiction remain UNKNOWN/TRANSPORT_UNCONFIRMED, one POST, no ambiguous diagnostic. Preserve documented stable refusal allowlist. | open, executor remediation |
+| ST06-R02 | ADH-02 | medium | release-blocker | Integrated D10: keep return-navigation target reachable in correct status tab, verify unique active B/A thread and preserve a newly entered draft after stale completion. Correct test mechanics, not product assignment semantics. | open, executor remediation |
+| ST06-R03 | SEC-02 | medium | release-blocker | Integrated D04/05: successful HTTP empty object lacks Evolution acknowledgement structure and must be TRANSPORT_UNCONFIRMED/no diagnostic; preserve key:{} as approved ACK-without-ID. Add exact raw evidence and local-effect assertions. | open, executor remediation |
+| ST06-R04 | SEC-03 | medium | release-blocker | Integrated D02/03/security simulation evidence: cite existing candidate-bound denied mutations or add admitted local tests for no grant/CSRF, foreign API-key account, after-binding pre-dispatch version/generation/epoch changes, and overlapping distinct tenant token/resource pairing. Zero provider effects on blocked paths; preserve post-dispatch version-only success. | open, source/evidence reconciliation then necessary probes |
+
+None changes Scope/DoD/frozen decisions or warrants new architecture/product approval. They are approved-contract compliance, not a mandate to expand Channel, schema, lifecycle, templates, networks or intent. Security observations remain source-only counterexamples/evidence gaps until local regression probes reproduce and verify them; no tenant breakout or credential disclosure was demonstrated.
+
+Separate implementation-check finding caught during browser remediation: do not add Message.status to production timeline DTO just to observe a test diagnostic. D10 preserves message DTO, availability/outcomes are the authorized additions. Executor instructed to restore that extra selection/type/UI and use a seeded-conversation-only fixture audit readback on private validation port3101. This is not a production test endpoint. Unknown ACK may legitimately show a FALHOU diagnostic after normal refresh; zero visible bubbles is not the required invariant.
+
+Follow-up review uses delta plus this prior adjudication after terminal remediation and actual validation; no narrowing of required rubric. No accepted-debt or waiver is recorded. Preserve unchanged MessageAcceptance and all canonical fences.

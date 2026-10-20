@@ -1,0 +1,76 @@
+{
+  "schema_version": "subagent-review-merge-v2",
+  "artifact_kind": "subagent_review_merge",
+  "authoritative": false,
+  "edit_policy": "derived_merge_packet",
+  "dispatch_path": "/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/artifacts/reviews/leadshug-channel-abstraction-20261020/evidence/adherence-round2.dispatch.json",
+  "review_kind": "architecture_adherence",
+  "review_count": 1,
+  "reviewer_labels": [
+    "fresh-no-context-architecture-reviewer-round2"
+  ],
+  "highest_finding_severity": "medium",
+  "axis_summary": {
+    "performance": "acceptable",
+    "elegance": "acceptable",
+    "structural_soundness": "mixed",
+    "operational_fit": "mixed"
+  },
+  "recommended_paths": [
+    "Correct the remaining Meta contradiction handling and strengthen the pre-dispatch and stale-response regression probes within existing approved paths. Preserve the current architecture and recorded compatibility limits. Obtain candidate-bound canonical validation and complete the separately required delivery gates before closeout."
+  ],
+  "exact_next_step": "Record reviewer resolutions in the governing TODO using the machine-checkable resolution table or equivalent gate ledger, then extract the derived resolution packet and decide whether another bounded review pass is still required.",
+  "findings": [
+    {
+      "finding_id": "F-32EA8B38",
+      "severity": "medium",
+      "title": "The stale-response assertions can finish before the Inbox consumes the response",
+      "rationale": "The corrected browser scenario establishes reachable, uniquely opened B and A threads and enters a fresh same-text draft. However, channel-transport.spec.ts:91-96 waits only for Playwright's response event before asserting a value and alert count that already hold before release. That event does not establish completion of api.ts response-body consumption or the Inbox responder continuation. Both assertions can therefore pass before a defective stale continuation clears the draft or changes the error state, leaving the required D10 protection susceptible to a false green.",
+      "suggested_action": "Synchronize with complete response consumption and browser-side handling before evaluating the retained draft and error state. Demonstrate that the scenario fails when the stale-completion generation fence is removed, then run the exact final browser/all candidate.",
+      "reviewer_labels": [
+        "fresh-no-context-architecture-reviewer-round2"
+      ],
+      "source_finding_ids": [
+        "ADH-R2-02"
+      ],
+      "category": "tests",
+      "formalizable_hint": "partial",
+      "candidate_rule_level": "project",
+      "candidate_rule_id": "n/a"
+    },
+    {
+      "finding_id": "F-F7A5ECC3",
+      "severity": "medium",
+      "title": "The new pre-dispatch probe substitutes the adapter that must enforce the fence",
+      "rationale": "channel-transport.e2e-spec.ts:115-151 exercises the real resolver predicate, but replaces the shipping adapter with FencedDispatchChannel. That test-only channel itself invokes stillCurrent and blocks its synthetic effect. The probe remains green if BoundMetaChannel or BoundEvolutionChannel stops invoking its pre-dispatch callback. It establishes the resolver predicate's behavior without protecting the required D03 connection between that predicate and the actual provider dispatch. The shipping source currently contains the guard; this is a protection-harness gap, not a demonstrated vulnerability.",
+      "suggested_action": "Exercise the shipping bound adapters in negative pre-dispatch probes. A test factory can delegate to the real factory while wrapping its callback to mutate the disposable binding after resolution. Assert CHANNEL_CONTEXT_CHANGED, zero provider calls and zero OUT writes, and ensure removing the shipping callback invocation makes the probe fail.",
+      "reviewer_labels": [
+        "fresh-no-context-architecture-reviewer-round2"
+      ],
+      "source_finding_ids": [
+        "ADH-R2-03"
+      ],
+      "category": "tests",
+      "formalizable_hint": "yes",
+      "candidate_rule_level": "project",
+      "candidate_rule_id": "n/a"
+    },
+    {
+      "finding_id": "F-B3B7CF0B",
+      "severity": "medium",
+      "title": "Meta still accepts an envelope containing an explicit contradictory success flag",
+      "rationale": "In meta.client.ts:225, HTTP 200 with {success:false,messages:[{id:'external-ack'}]} returns ACCEPTED because the positive branch checks only error absence and the message ID. Likewise, {success:false,messages:[{}]} reaches ACK_WITHOUT_ID at lines238-241. The success field is examined only when considering rejection. These contradictory envelopes therefore permit authoritative Message persistence or an acknowledgement diagnostic despite D04 requiring a valid acknowledgement and uncertainty for contradictory responses. This is a new counterexample at the changed classifier locus, distinct from the resolved non-first and malformed-ID cases.",
+      "suggested_action": "Validate explicit success indicators before either positive acknowledgement branch. Contradictory or malformed indicators should produce UNKNOWN/TRANSPORT_UNCONFIRMED. Add raw HTTP regressions for both contradictory envelopes, preserving valid responses without a success field, stable refusals, one POST and the absence of local acceptance or diagnostic writes for unconfirmed transport.",
+      "reviewer_labels": [
+        "fresh-no-context-architecture-reviewer-round2"
+      ],
+      "source_finding_ids": [
+        "ADH-R2-01"
+      ],
+      "category": "adherence",
+      "formalizable_hint": "yes",
+      "candidate_rule_level": "project",
+      "candidate_rule_id": "n/a"
+    }
+  ]
+}

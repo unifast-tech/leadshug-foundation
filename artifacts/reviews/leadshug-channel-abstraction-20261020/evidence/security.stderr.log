@@ -1,0 +1,10 @@
+2026-10-20T14:55:29.912459Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back
+2026-10-20T14:55:29.920531Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back
+2026-10-20T14:55:29.929083Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back
+2026-10-20T14:55:29.935401Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back
+2026-10-20T14:55:29.941194Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back
+2026-10-20T14:55:29.946944Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back
+2026-10-20T14:55:29.980277Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back
+2026-10-20T14:55:29.986349Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back
+2026-10-20T14:55:32.412825Z ERROR codex_core::session::session: failed to load skill /mnt/c/Unifast/delphi-ai/skills/rule-laravel-shared-settings-kernel-patch-contract-model-decision/SKILL.md: invalid name: exceeds maximum length of 64 characters
+2026-10-20T14:55:32.412867Z ERROR codex_core::session::session: failed to load skill /mnt/c/Unifast/delphi-ai/skills/rule-laravel-shared-settings-kernel-patch-contract-model-decision/SKILL.md: invalid name: exceeds maximum length of 64 characters

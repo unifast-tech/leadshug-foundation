@@ -1,0 +1,11 @@
+{
+  "captured_at_utc": "2026-10-20T15:51:00.509808+00:00",
+  "scope": "one exact public module, read-only; no generic Git/source discovery",
+  "executor_reported_run": 16223,
+  "module": "api-app/src/integrations/channels/meta-channel.ts",
+  "original_reviewed_raw_sha256": "997e739cf7d7231918dc97fc347bfeb32a1cd74d084ead8c64b01157022f8138",
+  "current_raw_sha256": "ff13fad8fd3de8a5188a5bed4473ce562dcc1e6f70f7ca6eea49033bb83d19a7",
+  "different_from_reviewed": true,
+  "observed_diff_normalized_text": "--- reviewed-restored-target\n+++ observed-current-module\n@@ -11,7 +11,7 @@\n   ) {}\n \n   async sendMessage(message: TextMessage): Promise<ChannelSendResult> {\n-    if (!await this.beforeDispatch()) return { outcome: 'BLOCKED', reason: 'CHANNEL_CONTEXT_CHANGED' };\n+    // Mutation probe: intentionally skip the binding fence.\n     if (!this.credential.phoneNumberId || !this.credential.accessToken) {\n       return { outcome: 'BLOCKED', reason: 'PENDING_CREDENTIAL' };\n     }\n",
+  "limitation": "Source observation only, not terminal result or proof of restoration. Read exact reporter result/log separately."
+}
