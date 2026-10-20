@@ -316,14 +316,14 @@ Nenhuma decisão de produto aberta. Assinaturas e semântica material congeladas
 
 ## Gate: Review Baseline Freeze
 - **Gate decision:** required
-- **Why this decision:** publicar autoridade do contrato antes de review/guard.
+- **Why this decision:** renovação material do contrato para índice específico e CI admission.
 - **Trigger stage:** before the first planning-side review or guard run
 - **Baseline branch:** main
-- **Baseline commit:** 1d3a826126ad055f50a0c54182d2855dbc639d5d
+- **Baseline commit:** f311adcc911f3cf6d89d6007c7a2b8ab15b98c1f
 - **Baseline push reference:** origin/main
-- **Gate status:** not_run
-- **Findings summary:** renovar freeze v1.3 após integrar ARCH13-01/02 e atualizar premissas vivas; review42479 anterior preservado, crítica fresh seguirá baseline renovada.
-- **Evidence / reference:** origin/main@1d3a826126ad055f50a0c54182d2855dbc639d5d, push4484 terminal0; sete paths documentais exatos, nenhum código/CI/schema alterado neste freeze.
+- **Gate status:** no_material_findings
+- **Findings summary:** freeze v1.3 renovado após ARCH13-01/02 e premissas vivas; somente metadata factual deste gate inserida depois. Original architecture42479 sobre1d3a8261 preservado.
+- **Evidence / reference:** origin/main@f311adcc911f3cf6d89d6007c7a2b8ab15b98c1f, push82266 terminal0; sete paths documentais exatos. Nenhuma fonte de produto/CI/schema alterada por este freeze.
 - **Waiver authority / reference (required if waived):** n/a
 
 ## Gate: Review Scope Drift
@@ -355,7 +355,7 @@ Premissas v1.2 de dispatch direto/runner find/ausência de active version foram 
 | A-03 | aceitação continua owner único keyed e faz fence de identidade, código original preservado. | api-app/src/domain/inbox/message-acceptance.service.ts | bloquear entrega e reconvergir boundary | High | Keep as Assumption |
 | A-04 | BFF/público/Typebot compõem o mesmo ChannelTransportModule, com autenticações próprias. | api-app/src/surfaces/bff/bff.module.ts:50; api-app/src/surfaces/public/public.module.ts; api-app/src/surfaces/webhooks/webhooks.module.ts | adaptar todos consumers legítimos | High | Keep as Assumption |
 | A-05 | browser usa backend real/build fresco e runner tem inventário positivo; só transporte Windows está implementado, CI completo/Linux guard continuam propostos. | web-app/playwright.config.ts; scripts/test-channels-local.sh | bloquear claim de paridade; corrigir antes de all final | High | Keep as Assumption |
-| A-06 | latest-IN filtra direction abaixo de índice conversation/createdAt e perde custo em OUT-heavy/no-IN; índice proposto inclui equality direction e ordenação id. | api-app/src/integrations/channels/prisma-channel-resolver.ts; api-app/test/number-onboarding-pcv.e2e-spec.ts | revisar plano PG real; nenhum índice por pressuposto | High | Keep as Assumption |
+| A-06 | latest-IN filtra direction abaixo de índice conversation/createdAt e perde custo em OUT-heavy/no-IN; índice proposto inclui equality direction e ordenação id. | api-app/src/integrations/channels/prisma-channel-resolver.ts; api-app/test/number-onboarding-pcv.e2e-spec.ts; api-app/prisma/schema.prisma; foundation_documentation/artifacts/reviews/leadshug-channel-abstraction-20261020/evidence/perf01-after-selection-root-proof.json | revisar plano PG real; nenhum índice por pressuposto | High | Keep as Assumption |
 
 ## Execution Plan (Required Before `APROVADO`)
 ### Touched Surfaces
@@ -500,11 +500,11 @@ Revisão v1.2 concluída historicamente; v1.3 architecture42479 terminal com ARC
 - **Gate decision:** required
 - **Why this decision:** premissas concretas de senders/resolver/aceitação/runtime.
 - **Trigger stage:** after critique convergence and before APROVADO
-- **Guard scope:** A01..05
+- **Guard scope:** A01..06
 - **Guard command:** python3 delphi-ai/tools/assumption_code_coherence_guard.py --todo foundation_documentation/todos/active/features/TODO-leadshug-channel-abstraction.md
 - **Gate status:** not_run
-- **Findings summary:** revisão semântica A01..05 ancorada em fonte pública e conferida por arquitetura/crítica; adequações são trabalho explícito, sem fingir garantias atuais.
-- **Evidence / reference:** foundation_documentation/artifacts/reviews/leadshug-channel-abstraction-20261020/source-assumptions.json; architecture-opinion.md; critique.md; evidence/assumption-coherence.json, guard go/5 premissas.
+- **Findings summary:** premissas vivas A01..06 atualizadas; guard fresh após crítica requerido, incluindo A06 resolver/schema/RED de PostgreSQL. Resultado histórico de cinco premissas não substitui o novo.
+- **Evidence / reference:** artifacts/reviews/leadshug-channel-abstraction-20261020/evidence/prisma-capability-bounded-v1.3.json; evidence/perf01-after-selection-root-proof.json; checkpoint88536/source congelada; guard-v1.3 ainda pendente. Histórico source-assumptions.json/assumption-coherence.json preservado.
 - **Waiver authority / reference (required if waived):** n/a
 
 ## Approval
@@ -781,3 +781,9 @@ Concrete contract: [scope-renewal-v1.3-proposal.md](../../../artifacts/reviews/l
 - Index migration is one CREATE INDEX bracketed by BEGIN/COMMIT and SET LOCAL lock_timeout5s/statement_timeout60s; no data mutation. Local executor owns planned write interruption for full build; timeout/lock/rollback proof in disposable PG first. Stop on failure/uncertain commit; no reset/drop/automatic migration repair.
 
 Checkpoint88536 (source frozen during run):194 unit +310 E2E passed, sole expected PERF01 history-scan RED; selected non-window latest-IN queries0, PERF02 per-conversation counts1 across5waves×20. Full log SHAbe1854e98b3a2e051e903f7459758ede9f7020d6195b26bf2056793cac2e8600; root exact-source/log proof evidence/perf01-after-selection-root-proof.json. Not final all or acceptance.
+
+## Critique v1.3 round1 integration — pending reconvergence
+
+- CRIT13-01 medium Integrated: proposed runner must check all three Docker inventory exit statuses before interpreting output/creating resources/arming cleanup; no unchecked process substitution. A failed listing stops without Compose config/run/up/down. Actual wrapper + isolated fake CLI controls for ps/volume/network failure, empty config-only success and collision refusal belong to admitted guard/wrapper surfaces; no real resource mutation. Invocations serialized; no claim of distributed namespace lock.
+- CRIT13-02 medium Integrated: declared Assumption Code Coherence scope now A01..06. A06 cites frozen resolver, schema, real-PG test and recorded88536 RED/rootproof; fresh guard after critique required. Post-index performance/write-cost proof remains a delivery obligation after approval.
+- Refresh/push affected planning baseline and fresh critique before renewed APROVADO. Prior raw terminal22149/strictmerge retained. No product/index/CI/runtime changes under this integration.

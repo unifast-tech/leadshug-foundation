@@ -1,0 +1,76 @@
+{
+  "repository": "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app",
+  "overall_outcome": "ready",
+  "expected": {
+    "prisma": {
+      "dependency": "@prisma/client or prisma",
+      "accepted_dependencies": [
+        "@prisma/client",
+        "prisma"
+      ],
+      "manifests": [
+        "package.json"
+      ],
+      "required_scripts": [
+        "prisma:generate",
+        "prisma:migrate",
+        "build",
+        "test:e2e"
+      ],
+      "script_failures": []
+    }
+  },
+  "selected_manifests": [
+    "package.json"
+  ],
+  "manifests": [
+    {
+      "path": "package.json",
+      "capabilities": [
+        "nestjs",
+        "prisma"
+      ],
+      "dependency_evidence": {
+        "@nestjs/core": [
+          "dependencies"
+        ],
+        "@prisma/client": [
+          "dependencies"
+        ],
+        "prisma": [
+          "dependencies"
+        ]
+      },
+      "scripts": [
+        "build",
+        "lint",
+        "prisma:dev",
+        "prisma:generate",
+        "prisma:migrate",
+        "start",
+        "start:dev",
+        "test",
+        "test:cov",
+        "test:e2e"
+      ],
+      "package_manager": null,
+      "lockfiles": [
+        "package-lock.json"
+      ]
+    }
+  ],
+  "diagnostics": [],
+  "bounded_invocation": {
+    "guard_source_unchanged": true,
+    "guard_source_sha256": "b6cf14b12851183fc32b81a67921d432134a32e7e454fc27c804860a7842c2c9",
+    "discovery": "Exact owning package.json supplied BEFORE discovery; no os.walk/root scan",
+    "full_repository_claim": false,
+    "manifest_only_limitations": "No unsupported private/other package surface claim; no package commands executed"
+  },
+  "pinned_prisma": {
+    "client_constraint": "^6.0.0",
+    "cli_constraint": "^6.0.0",
+    "client_locked": "6.19.3",
+    "cli_locked": "6.19.3"
+  }
+}
