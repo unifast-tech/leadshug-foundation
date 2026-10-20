@@ -52,7 +52,13 @@
       100,
       190
     ],
-    "account_calls": 0
+    "account_calls": 0,
+    "bounded_recheck": "2026-10-20 public curl.exe success; markdown rows10/100/190 found; text summarized, not persisted wholesale",
+    "verified_semantics": {
+      "10": "Permission not granted or removed",
+      "100": "Unsupported or misspelled parameter (and separate template parameter case)",
+      "190": "Expired access token"
+    }
   },
   "boundaries": "No .env contents or api-app/.local-files read/list/stat/hash/traversal/mount/stage. Head checks rev-parse only.",
   "architecture_followups": {
