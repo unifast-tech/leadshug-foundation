@@ -1,0 +1,88 @@
+{
+  "schema_version": "subagent-review-dispatch-v1",
+  "artifact_kind": "subagent_review_dispatch",
+  "authoritative": false,
+  "edit_policy": "derived_dispatch_packet",
+  "review_kind": "architecture_opinion",
+  "bounded_package_path": "foundation_documentation/artifacts/reviews/leadshug-channel-abstraction-20261020/ci-admission-challenge-package.md",
+  "reviewer_count": 1,
+  "no_context_required": true,
+  "required_axes": [
+    "correctness",
+    "performance",
+    "elegance",
+    "structural_soundness",
+    "operational_fit"
+  ],
+  "focus_points": [
+    "Compare only viable architectural paths inside the bounded package.",
+    "Name the recommended path and the main tradeoff behind that choice.",
+    "State whether the path improves or regresses performance, elegance, and structural soundness.",
+    "For each material finding, add category and formalizable-hint when you can judge them honestly.",
+    "When assessing design, seek the simplest faithful Clean Code/SOLID design for the approved intent. Do not invent future-facing work or erase explicit TODO intent. Planning review may challenge proposed intent; delivery review must preserve approved intent or return for renewed approval."
+  ],
+  "result_contract_fields": [
+    "overall_assessment",
+    "recommended_path",
+    "performance_position",
+    "elegance_position",
+    "structural_soundness_position",
+    "operational_fit_position",
+    "findings[].finding_id (optional)",
+    "findings[].category (optional)",
+    "findings[].formalizable_hint (optional)",
+    "findings[].candidate_rule_level (optional)",
+    "findings[]"
+  ],
+  "todo_path": "foundation_documentation/todos/active/features/TODO-leadshug-channel-abstraction.md",
+  "historical_disposition_policy": [
+    "Resolved findings are historical context only. Do not reopen them unless the current bounded package materially changes the same locus/behavior or fresh evidence shows regression.",
+    "Challenged findings stay closed unless the current bounded package materially changes the same locus/behavior or the prior rationale is objectively insufficient.",
+    "Deferred findings must cite the recorded follow-up/waiver path first. Re-raise them only when the current bounded package changes the same locus or closure now depends on that deferred risk.",
+    "Unresolved findings remain valid to re-raise until they are fixed, challenged, or formally deferred with authority."
+  ],
+  "historical_dispositions": [
+    {
+      "source_kind": "promotion_routing",
+      "finding_id": "ST06-R01 (ADH-01=SEC-01)",
+      "carry_forward_class": "resolved",
+      "source_disposition": "classification=release-blocker; routing=same-todo; status=resolved in round2 snapshot; finalvalidation pending",
+      "summary": "Original non-first/malformed-ID counterexample corrected; new flag case tracked R05",
+      "reference": "implementation-round-1-resolution.md; existing D04 approval"
+    },
+    {
+      "source_kind": "promotion_routing",
+      "finding_id": "ST06-R02 (ADH-02)",
+      "carry_forward_class": "resolved",
+      "source_disposition": "classification=release-blocker; routing=same-todo; status=fixed/evidenced; all80903 and independentTQA pending",
+      "summary": "Navigation corrected; await body/handler completion and prove same-text draft fence catches removal",
+      "reference": "implementation-round-3-resolution.md; existing D10 approval"
+    },
+    {
+      "source_kind": "promotion_routing",
+      "finding_id": "ST06-R03 (SEC-02)",
+      "carry_forward_class": "resolved",
+      "source_disposition": "classification=release-blocker; routing=same-todo; status=resolved in round2 snapshot; finalvalidation pending",
+      "summary": "D04/05 Evolution empty object is not ACK; key:{} preserved",
+      "reference": "implementation-round-1-resolution.md; existing D04/05 approval"
+    },
+    {
+      "source_kind": "promotion_routing",
+      "finding_id": "ST06-R04 (SEC-03)",
+      "carry_forward_class": "resolved",
+      "source_disposition": "classification=release-blocker; routing=same-todo; status=resolved reviewed snapshot; final assurance pending",
+      "summary": "Denied mutations/twoTENANT proof added; preDispatch must exercise real Meta/Evo adapters and detect omitted callback",
+      "reference": "implementation-round-3-resolution.md; existing scope/validation approval"
+    },
+    {
+      "source_kind": "promotion_routing",
+      "finding_id": "ST06-R05 (adherence-round2 ADH-R2-01)",
+      "carry_forward_class": "resolved",
+      "source_disposition": "classification=release-blocker; routing=same-todo; status=resolved reviewed snapshot; final assurance pending",
+      "summary": "D04 explicit false/malformed success flag contradicts positive ACK; UNKNOWN/no authoritative write",
+      "reference": "implementation-round-3-resolution.md; D04 existing approval"
+    }
+  ],
+  "goal": "Adjudicate CI-admission contradiction using complete canonical rules/local-only contract, distinct configuration/execution/promotion claims; no TQA waiver or implementation authority",
+  "review_result_dispatch_path": "/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/artifacts/reviews/leadshug-channel-abstraction-20261020/evidence/ci-admission-challenge.dispatch.json"
+}
