@@ -20,5 +20,11 @@
   "accepted_low_debt": "ST06-DEBT-PERF-R4-01 explicit ST-CON-05 inherited work item",
   "waivers": [],
   "product_commit_push_or_deploy": false,
-  "remote_CI": "not_run"
+  "remote_CI": "not_run",
+  "foundation_publication": {
+    "branch": "main",
+    "closeout_commit": "ef3078eedd8567703f231c9185a18a53cab1452c",
+    "push": "terminal exit0; origin/main advanced from5d599ab1",
+    "product_git_history_written": false
+  }
 }

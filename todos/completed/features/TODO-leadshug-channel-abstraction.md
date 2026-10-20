@@ -35,7 +35,7 @@ Usuário confirmou Channel abstrato/concretos e extensibilidade para Instagram, 
 ## Delivery Status Canon (Required)
 - **Current delivery stage:** Local-Implemented
 - **Qualifiers:** none
-- **Next exact step:** Local contract completed; publish this verified documentary closeout on Foundation main. Next product slice is ST-CON-05 template authoring, with its own reconverged contract/review and explicit approval before implementation.
+- **Next exact step:** Local contract completed and Foundation closeout published. Next product front: reconverge ST-CON-05 template-authoring planning/reviews on the delivered abstract Channel contracts; obtain its own approval before implementation.
 
 ## Active Work State (Required While TODO Remains In `active/`)
 - **Work state:** review
@@ -633,7 +633,7 @@ Terminal findings classified by review-finding-classification. Material implemen
 ## TODO Closeout Disposition
 - **Disposition:** move-completed
 - **Disposition reason:** Authorized local threshold satisfied:613tests, fourPCV, independent adherence/security/cutover/Performance/fullTQA/preflight/final reviews, current source-bound activation and actual INOUT on both bindings, module consolidation and final delivery guards GO. No remote promotion threshold is claimed.
-- **Post-commit/push status:** Final Foundation main documentary checkpoint ready for guarded commit/push; product history/push/deploy remain outside authorization.
+- **Post-commit/push status:** Foundation main closeout checkpoint ef3078eedd8567703f231c9185a18a53cab1452c committed and pushed successfully through guarded documentation flow. This factual publication receipt is recorded separately; no product commit/push/deploy.
 - **Next path/status action:** Completed: todos/completed/features/TODO-leadshug-channel-abstraction.md, tactical Completed and delivery Local-Implemented. Same governing contract preserved; only documentation publishing remains.
 
 ## Security Risk Assessment (Mandatory Before Delivery)
