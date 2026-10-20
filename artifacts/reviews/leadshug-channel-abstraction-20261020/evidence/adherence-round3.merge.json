@@ -1,0 +1,42 @@
+{
+  "schema_version": "subagent-review-merge-v2",
+  "artifact_kind": "subagent_review_merge",
+  "authoritative": false,
+  "edit_policy": "derived_merge_packet",
+  "dispatch_path": "/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/artifacts/reviews/leadshug-channel-abstraction-20261020/evidence/adherence-round3.dispatch.json",
+  "review_kind": "architecture_adherence",
+  "review_count": 1,
+  "reviewer_labels": [
+    "fresh-no-context-architecture-reviewer-round3"
+  ],
+  "highest_finding_severity": "medium",
+  "axis_summary": {
+    "performance": "acceptable",
+    "elegance": "acceptable",
+    "structural_soundness": "acceptable",
+    "operational_fit": "mixed"
+  },
+  "recommended_paths": [
+    "Preserve the approved architecture and strengthen only ST06-R02's application-completion synchronization. Retain the mutation control, freeze the revised candidate and obtain canonical browser/all validation before completing the remaining delivery gates."
+  ],
+  "exact_next_step": "Record reviewer resolutions in the governing TODO using the machine-checkable resolution table or equivalent gate ledger, then extract the derived resolution packet and decide whether another bounded review pass is still required.",
+  "findings": [
+    {
+      "finding_id": "F-D011F599",
+      "severity": "medium",
+      "title": "ST06-R02 still uses frame timing to infer application completion",
+      "rationale": "At web-app/e2e/channel-transport.spec.ts:96-100, response.finished() establishes network completion, while two requestAnimationFrame callbacks establish rendering opportunities. Neither observes completion of the application's res.text() promise at api.ts:71 or the awaiting Inbox.responder continuation. Both final assertions already hold before release, so they can pass if renderer-side body processing completes later. The executor-reported guard-removal failure demonstrates sensitivity in that execution, but does not establish the required ordering for every green run. This remains a source-level protection gap at the changed R02 synchronization locus under D10 and the round2 adjudication.",
+      "suggested_action": "Use test-side browser instrumentation to observe settlement of the matching application's response-body read and synchronize past its responder continuation before asserting draft preservation and absence of alerts. Preserve production DTOs/routes, repeat the guard-removal control, and validate the exact restored candidate through canonical browser/all.",
+      "reviewer_labels": [
+        "fresh-no-context-architecture-reviewer-round3"
+      ],
+      "source_finding_ids": [
+        "ADH-R3-01"
+      ],
+      "category": "tests",
+      "formalizable_hint": "partial",
+      "candidate_rule_level": "project",
+      "candidate_rule_id": "n/a"
+    }
+  ]
+}

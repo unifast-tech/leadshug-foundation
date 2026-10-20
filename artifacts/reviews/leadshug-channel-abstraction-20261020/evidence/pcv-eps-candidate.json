@@ -1,0 +1,242 @@
+{
+  "policy_schema_version": "pcv-1",
+  "schema_version": "stcon06-pcv-evidence-v1",
+  "todo_id": "ST-CON-06",
+  "run_id": "canonical-all65587",
+  "environment_id": "leadshug_channels_validation-Node22.23.3-PostgreSQL16",
+  "executor_id": "/root/stcon06_executor",
+  "reviewer_id": "pending-independent-dedicated-audit",
+  "recorded_at_utc": "2026-10-20T16:12:17.406947+00:00",
+  "evidence_type": "canonical-runner-structured-log",
+  "gate_status": "candidate-for-review; not passed; R02 correction/final candidate binding pending",
+  "raw_log_sha256": "97b84c7b813c364d20933a56b0f420b09e490c3885325317332ac9a2dd5d4445",
+  "lane_id": "EPS",
+  "sample_profile_id": "EPS-SP-STRONG",
+  "acceptance_rule_id": "EPS-A2",
+  "result_summary": "30conversation page; one channel/credential/latestINquery; indexed LIMIT1; no external call",
+  "artifact_payload": {
+    "access_pattern_classification": "bounded-list with scoped exact binding and per-conversation indexed latest-IN",
+    "touched_path_audit_summary": "PrismaChannelResolver inspectForConversation/inspectMany, findCandidate/identity by indexed keys, credential metadata queries constrained to selected BU slots, latestInbound LATERAL LIMIT1; existing public list pagination retained; no provider walk/decrypt GET",
+    "strong_query_evidence_type": "query-log and EXPLAIN ANALYZE",
+    "observations": {
+      "policy_schema_version": "pcv-1",
+      "lane_id": "EPS",
+      "trigger_result": "required",
+      "trigger_severity": "medium",
+      "trigger_reason_code": "EPS-DATA-PATH-CHANGED",
+      "gate_deadline": "before_local_implemented",
+      "min_evidence_rule_id": "EPS-E2",
+      "acceptance_rule_id": "EPS-A2",
+      "sample_profile": "EPS-SP-STRONG",
+      "access_pattern_classification": "Public conversation page loads selected BU channels once, official credential metadata once, and one latest-IN SQL statement using an indexed LIMIT 1 lookup per conversation; no provider credentials are decrypted or probed.",
+      "pageConversations": 30,
+      "historyRowsPerConversation": 24,
+      "availabilitySample": [
+        {
+          "available": true,
+          "reason": null,
+          "windowOpen": true
+        },
+        {
+          "available": true,
+          "reason": null,
+          "windowOpen": true
+        },
+        {
+          "available": true,
+          "reason": null,
+          "windowOpen": true
+        }
+      ],
+      "queryCounts": {
+        "buChannelFindMany": 1,
+        "channelCredentialFindMany": 1,
+        "latestInboundWindowProjection": 1
+      },
+      "elapsedMs": 18.087757999999667,
+      "explainLatestInboundProjection": [
+        {
+          "Plan": {
+            "Node Type": "Nested Loop",
+            "Parallel Aware": false,
+            "Async Capable": false,
+            "Join Type": "Inner",
+            "Startup Cost": 3.95,
+            "Total Cost": 212.9,
+            "Plan Rows": 30,
+            "Plan Width": 40,
+            "Actual Startup Time": 0.028,
+            "Actual Total Time": 0.153,
+            "Actual Rows": 30,
+            "Actual Loops": 1,
+            "Inner Unique": false,
+            "Shared Hit Blocks": 120,
+            "Shared Read Blocks": 0,
+            "Shared Dirtied Blocks": 0,
+            "Shared Written Blocks": 0,
+            "Local Hit Blocks": 0,
+            "Local Read Blocks": 0,
+            "Local Dirtied Blocks": 0,
+            "Local Written Blocks": 0,
+            "Temp Read Blocks": 0,
+            "Temp Written Blocks": 0,
+            "Plans": [
+              {
+                "Node Type": "Function Scan",
+                "Parent Relationship": "Outer",
+                "Parallel Aware": false,
+                "Async Capable": false,
+                "Function Name": "unnest",
+                "Alias": "requested",
+                "Startup Cost": 0,
+                "Total Cost": 0.3,
+                "Plan Rows": 30,
+                "Plan Width": 32,
+                "Actual Startup Time": 0.006,
+                "Actual Total Time": 0.007,
+                "Actual Rows": 30,
+                "Actual Loops": 1,
+                "Shared Hit Blocks": 0,
+                "Shared Read Blocks": 0,
+                "Shared Dirtied Blocks": 0,
+                "Shared Written Blocks": 0,
+                "Local Hit Blocks": 0,
+                "Local Read Blocks": 0,
+                "Local Dirtied Blocks": 0,
+                "Local Written Blocks": 0,
+                "Temp Read Blocks": 0,
+                "Temp Written Blocks": 0
+              },
+              {
+                "Node Type": "Limit",
+                "Parent Relationship": "Inner",
+                "Parallel Aware": false,
+                "Async Capable": false,
+                "Startup Cost": 3.95,
+                "Total Cost": 7.07,
+                "Plan Rows": 1,
+                "Plan Width": 45,
+                "Actual Startup Time": 0.005,
+                "Actual Total Time": 0.005,
+                "Actual Rows": 1,
+                "Actual Loops": 30,
+                "Shared Hit Blocks": 120,
+                "Shared Read Blocks": 0,
+                "Shared Dirtied Blocks": 0,
+                "Shared Written Blocks": 0,
+                "Local Hit Blocks": 0,
+                "Local Read Blocks": 0,
+                "Local Dirtied Blocks": 0,
+                "Local Written Blocks": 0,
+                "Temp Read Blocks": 0,
+                "Temp Written Blocks": 0,
+                "Plans": [
+                  {
+                    "Node Type": "Incremental Sort",
+                    "Parent Relationship": "Outer",
+                    "Parallel Aware": false,
+                    "Async Capable": false,
+                    "Startup Cost": 3.95,
+                    "Total Cost": 81.9,
+                    "Plan Rows": 25,
+                    "Plan Width": 45,
+                    "Actual Startup Time": 0.004,
+                    "Actual Total Time": 0.004,
+                    "Actual Rows": 1,
+                    "Actual Loops": 30,
+                    "Sort Key": [
+                      "message.created_at DESC",
+                      "message.id DESC"
+                    ],
+                    "Presorted Key": [
+                      "message.created_at"
+                    ],
+                    "Full-sort Groups": {
+                      "Group Count": 30,
+                      "Sort Methods Used": [
+                        "quicksort"
+                      ],
+                      "Sort Space Memory": {
+                        "Average Sort Space Used": 25,
+                        "Peak Sort Space Used": 25
+                      }
+                    },
+                    "Shared Hit Blocks": 120,
+                    "Shared Read Blocks": 0,
+                    "Shared Dirtied Blocks": 0,
+                    "Shared Written Blocks": 0,
+                    "Local Hit Blocks": 0,
+                    "Local Read Blocks": 0,
+                    "Local Dirtied Blocks": 0,
+                    "Local Written Blocks": 0,
+                    "Temp Read Blocks": 0,
+                    "Temp Written Blocks": 0,
+                    "Plans": [
+                      {
+                        "Node Type": "Index Scan",
+                        "Parent Relationship": "Outer",
+                        "Parallel Aware": false,
+                        "Async Capable": false,
+                        "Scan Direction": "Backward",
+                        "Index Name": "messages_conversation_id_created_at_idx",
+                        "Relation Name": "messages",
+                        "Alias": "message",
+                        "Startup Cost": 0.28,
+                        "Total Cost": 80.88,
+                        "Plan Rows": 25,
+                        "Plan Width": 45,
+                        "Actual Startup Time": 0.003,
+                        "Actual Total Time": 0.003,
+                        "Actual Rows": 2,
+                        "Actual Loops": 30,
+                        "Index Cond": "(conversation_id = requested.conversation_id)",
+                        "Rows Removed by Index Recheck": 0,
+                        "Filter": "(direction = 'IN'::\"MessageDirection\")",
+                        "Rows Removed by Filter": 0,
+                        "Shared Hit Blocks": 120,
+                        "Shared Read Blocks": 0,
+                        "Shared Dirtied Blocks": 0,
+                        "Shared Written Blocks": 0,
+                        "Local Hit Blocks": 0,
+                        "Local Read Blocks": 0,
+                        "Local Dirtied Blocks": 0,
+                        "Local Written Blocks": 0,
+                        "Temp Read Blocks": 0,
+                        "Temp Written Blocks": 0
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "Planning": {
+            "Shared Hit Blocks": 47,
+            "Shared Read Blocks": 0,
+            "Shared Dirtied Blocks": 0,
+            "Shared Written Blocks": 0,
+            "Local Hit Blocks": 0,
+            "Local Read Blocks": 0,
+            "Local Dirtied Blocks": 0,
+            "Local Written Blocks": 0,
+            "Temp Read Blocks": 0,
+            "Temp Written Blocks": 0
+          },
+          "Planning Time": 0.19,
+          "Triggers": [],
+          "Execution Time": 0.174
+        }
+      ],
+      "providerCallsBefore": {
+        "meta": 0,
+        "evolution": 0
+      },
+      "providerCallsAfter": {
+        "meta": 0,
+        "evolution": 0
+      },
+      "limits": "Disposable PostgreSQL and one bounded 30-conversation public page; local query count/plan observation, not a capacity or latency SLO claim."
+    }
+  },
+  "artifact_sha256": "ac3b93f9c6c6d8e74fa2b632b0ecbfcd17afc1f165b4ca0655f8c6aad91b558c"
+}

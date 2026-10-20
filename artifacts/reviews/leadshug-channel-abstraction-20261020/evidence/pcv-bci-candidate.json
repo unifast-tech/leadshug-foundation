@@ -1,0 +1,58 @@
+{
+  "policy_schema_version": "pcv-1",
+  "schema_version": "stcon06-pcv-evidence-v1",
+  "todo_id": "ST-CON-06",
+  "run_id": "canonical-all65587",
+  "environment_id": "leadshug_channels_validation-Node22.23.3-PostgreSQL16",
+  "executor_id": "/root/stcon06_executor",
+  "reviewer_id": "pending-independent-dedicated-audit",
+  "recorded_at_utc": "2026-10-20T16:12:17.406947+00:00",
+  "evidence_type": "canonical-runner-structured-log",
+  "gate_status": "candidate-for-review; not passed; R02 correction/final candidate binding pending",
+  "raw_log_sha256": "97b84c7b813c364d20933a56b0f420b09e490c3885325317332ac9a2dd5d4445",
+  "lane_id": "BCI",
+  "sample_profile_id": "BCI-SP-H",
+  "acceptance_rule_id": "BCI-A1",
+  "result_summary": "5x20distinctconversations accepted/recorded; separate actual same-resource barriers and echo/claim probes",
+  "artifact_payload": {
+    "invariant_id": "ST06-BOUND-DISPATCH-SOLE-ACCEPTANCE",
+    "concurrency_policy": "optimistic concurrency",
+    "probe_profile_observed": {
+      "repetitions": 5,
+      "operationsPerRepetition": 20,
+      "operationCounts": [
+        20,
+        20,
+        20,
+        20,
+        20
+      ],
+      "acceptedCounts": [
+        20,
+        20,
+        20,
+        20,
+        20
+      ],
+      "recordedCounts": [
+        20,
+        20,
+        20,
+        20,
+        20
+      ],
+      "limits": "Disposable PostgreSQL and provider fake; concurrent integrity observation, not capacity/SLO evidence."
+    },
+    "domain_invariant": "One Message keyed by captured provider identity/externalID under sole MessageAcceptance owner; no tenant credential crossover; changedcontext blocks local completion; newer claim preserved",
+    "separate_overlap_probes": [
+      "real REAUTORIZAR generation during heldsend",
+      "active credentialversion-only rotation",
+      "predispatch Meta/Evo callback fences",
+      "public/bff claim overlap",
+      "sender/echo dedup",
+      "Typebot ingress retirement/windowexpiry"
+    ],
+    "limits": "20operations use20distinctconversations sameBU/binding perbatch; not evidence of same-key external exactlyonce or durable crashrecovery; UNKNOWN nullID diagnostics lack echo dedup"
+  },
+  "artifact_sha256": "7425041dafc79b6fcad160c0f51bebaf9c8515b32297c96bfb15c6630f2e74d9"
+}

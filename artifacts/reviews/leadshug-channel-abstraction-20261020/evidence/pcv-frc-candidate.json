@@ -1,0 +1,64 @@
+{
+  "policy_schema_version": "pcv-1",
+  "schema_version": "stcon06-pcv-evidence-v1",
+  "todo_id": "ST-CON-06",
+  "run_id": "canonical-all65587",
+  "environment_id": "leadshug_channels_validation-Node22.23.3-PostgreSQL16",
+  "executor_id": "/root/stcon06_executor",
+  "reviewer_id": "pending-independent-dedicated-audit",
+  "recorded_at_utc": "2026-10-20T16:12:17.406947+00:00",
+  "evidence_type": "canonical-runner-structured-log",
+  "gate_status": "candidate-for-review; not passed; R02 correction/final candidate binding pending",
+  "raw_log_sha256": "97b84c7b813c364d20933a56b0f420b09e490c3885325317332ac9a2dd5d4445",
+  "lane_id": "FRC",
+  "sample_profile_id": "FRC-SP-H",
+  "acceptance_rule_id": "FRC-A1",
+  "result_summary": "5wavesx20pending realform retriggers,onePOSTeach;unknown retainsdraft;R02 stalehandlerproofpending",
+  "artifact_payload": {
+    "concurrency_policy": "drop duplicate",
+    "stale_response_policy": "generation-fenced last-write-wins per BU/conversation; latecompletion cannot overwrite newdraft",
+    "burst_profile_observed": {
+      "waves": [
+        {
+          "requests": 1,
+          "retriggers": 20,
+          "outcome": "accepted",
+          "draftPreserved": false,
+          "messageCount": 1
+        },
+        {
+          "requests": 1,
+          "retriggers": 20,
+          "outcome": "unknown",
+          "draftPreserved": true,
+          "messageCount": 1
+        },
+        {
+          "requests": 1,
+          "retriggers": 20,
+          "outcome": "accepted",
+          "draftPreserved": false,
+          "messageCount": 1
+        },
+        {
+          "requests": 1,
+          "retriggers": 20,
+          "outcome": "unknown",
+          "draftPreserved": true,
+          "messageCount": 1
+        },
+        {
+          "requests": 1,
+          "retriggers": 20,
+          "outcome": "accepted",
+          "draftPreserved": false,
+          "messageCount": 1
+        }
+      ],
+      "limits": "Five real BFF/PostgreSQL submits held after the actual response; twenty user-form submit events per in-flight send; one request per wave; no capacity/SLO claim."
+    },
+    "runner_or_manual_path": "bash scripts/test-channels-local.sh all; e2e/channel-transport.spec.ts; real BFF/PG, providerdouble only",
+    "stale_response_gate": "R02 body-read-handler barrier remediation pending"
+  },
+  "artifact_sha256": "517db22c801e6a201f6574118a4ff84194c13395221e576ff27975cc5756d40f"
+}

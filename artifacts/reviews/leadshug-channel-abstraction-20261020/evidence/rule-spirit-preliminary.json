@@ -1,0 +1,1173 @@
+{
+  "active_finding_count": 111,
+  "allowlist_path": null,
+  "allowlisted_finding_count": 0,
+  "expired_allowlist_count": 0,
+  "finding_count": 111,
+  "findings": [
+    {
+      "allowed": false,
+      "allowlist": null,
+      "evidence": "    api-app/.git|api-app/src|api-app/test|api-app/prisma|api-app/package.json|api-app/package-lock.json|api-app/.env.example|api-app/.dockerignore|api-app/.gitignore|api-app/docker",
+      "key": "cf0b601ff5cb6e3e",
+      "lens": "guard bypass or tactical workaround marker",
+      "location": "scripts/test-channels-local.sh:47",
+      "severity": "review",
+      "stack": "shared"
+    },
+    {
+      "allowed": false,
+      "allowlist": null,
+      "evidence": "  return rules.filter(([, expression]) => expression.test(source)).map(([name]) => name);",
+      "key": "7be7ce842e56aed3",
+      "lens": "hard-coded local/domain target in source/config",
+      "location": "api-app/src/domain/channels/transport/channel-dependencies.spec.ts:23",
+      "severity": "review",
+      "stack": "shared"
+    },
+    {
+      "allowed": false,
+      "allowlist": null,
+      "evidence": "    A = await criarMantenedora(app, 'Alfa', 'dono@alfa.test'); ",
+      "key": "e75f43927d5f4119",
+      "lens": "hard-coded local/domain target in source/config",
+      "location": "api-app/test/api-publica.e2e-spec.ts:58",
+      "severity": "review",
+      "stack": "shared"
+    },
+    {
+      "allowed": false,
+      "allowlist": null,
+      "evidence": "    B = await criarMantenedora(app, 'Beta', 'dono@beta.test'); ",
+      "key": "3e4968db7fa3b7de",
+      "lens": "hard-coded local/domain target in source/config",
+      "location": "api-app/test/api-publica.e2e-spec.ts:59",
+      "severity": "review",
+      "stack": "shared"
+    },
+    {
+      "allowed": false,
+      "allowlist": null,
+      "evidence": "    chaveA = await criarChave(await login(app, 'dono@alfa.test'), 'Campuzz'); ",
+      "key": "0d1a75f037521a07",
+      "lens": "hard-coded local/domain target in source/config",
+      "location": "api-app/test/api-publica.e2e-spec.ts:61",
+      "severity": "review",
+      "stack": "shared"
+    },
+    {
+      "allowed": false,
+      "allowlist": null,
+      "evidence": "      const cookie = await login(app, 'dono@alfa.test'); ",
+      "key": "8cf9d03b85e25238",
+      "lens": "hard-coded local/domain target in source/config",
+      "location": "api-app/test/api-publica.e2e-spec.ts:76",
+      "severity": "review",
+      "stack": "shared"
+    },
+    {
+      "allowed": false,
+      "allowlist": null,
+      "evidence": "      const cookie = await login(app, 'dono@alfa.test'); ",
+      "key": "b744fed560899eef",
+      "lens": "hard-coded local/domain target in source/config",
+      "location": "api-app/test/api-publica.e2e-spec.ts:81",
+      "severity": "review",
+      "stack": "shared"
+    },
+    {
+      "allowed": false,
+      "allowlist": null,
+      "evidence": "      const cookie = await login(app, 'dono@alfa.test'); ",
+      "key": "8106a7edce393f64",
+      "lens": "hard-coded local/domain target in source/config",
+      "location": "api-app/test/api-publica.e2e-spec.ts:109",
+      "severity": "review",
+      "stack": "shared"
+    },
+    {
+      "allowed": false,
+      "allowlist": null,
+      "evidence": "      const cookie = await login(app, 'dono@alfa.test'); ",
+      "key": "c67f30a3aaccb0ae",
+      "lens": "hard-coded local/domain target in source/config",
+      "location": "api-app/test/api-publica.e2e-spec.ts:126",
+      "severity": "review",
+      "stack": "shared"
+    },
+    {
+      "allowed": false,
+      "allowlist": null,
+      "evidence": "    a = await criarMantenedora(app, 'Typebot tenant A', 'typebot-a@example.test');",
+      "key": "a729d6ef0ec3dc4c",
+      "lens": "hard-coded local/domain target in source/config",
+      "location": "api-app/test/number-onboarding-typebot.e2e-spec.ts:20",
+      "severity": "review",
+      "stack": "shared"
+    },
+    {
+      "allowed": false,
+      "allowlist": null,
+      "evidence": "    b = await criarMantenedora(app, 'Typebot tenant B', 'typebot-b@example.test');",
+      "key": "09d6498b633fc8a2",
+      "lens": "hard-coded local/domain target in source/config",
+      "location": "api-app/test/number-onboarding-typebot.e2e-spec.ts:21",
+      "severity": "review",
+      "stack": "shared"
+    },
+    {
+      "allowed": false,
+      "allowlist": null,
+      "evidence": "    const tenant = await criarMantenedora(app, 'Channel outbound fixture', 'channel-outbound@example.test');",
+      "key": "d5caaf36a5515fec",
+      "lens": "hard-coded local/domain target in source/config",
+      "location": "api-app/test/channel-transport.e2e-spec.ts:70",
+      "severity": "review",
+      "stack": "shared"
+    },
+    {
+      "allowed": false,
+      "allowlist": null,
+      "evidence": "    cookie = await login(app, 'channel-outbound@example.test');",
+      "key": "25395a8bcc5c28c4",
+      "lens": "hard-coded local/domain target in source/config",
+      "location": "api-app/test/channel-transport.e2e-spec.ts:78",
+      "severity": "review",
+      "stack": "shared"
+    },
+    {
+      "allowed": false,
+      "allowlist": null,
+      "evidence": "      const tenant = await criarMantenedora(isolated.app, 'Opaque fake contract', 'opaque-fake@example.test');",
+      "key": "62cd779fc0fcf186",
+      "lens": "hard-coded local/domain target in source/config",
+      "location": "api-app/test/channel-transport.e2e-spec.ts:102",
+      "severity": "review",
+      "stack": "shared"
+    },
+    {
+      "allowed": false,
+      "allowlist": null,
+      "evidence": "      const localCookie = await login(isolated.app, 'opaque-fake@example.test');",
+      "key": "397d6264478c2de1",
+      "lens": "hard-coded local/domain target in source/config",
+      "location": "api-app/test/channel-transport.e2e-spec.ts:108",
+      "severity": "review",
+      "stack": "shared"
+    },
+    {
+      "allowed": false,
+      "allowlist": null,
+      "evidence": "        const tenant = await criarMantenedora(isolated.app, `Pre-dispatch ${changed}`, `pre-dispatch-${changed}@example.test`);",
+      "key": "6df67aa1171b5a5b",
+      "lens": "hard-coded local/domain target in source/config",
+      "location": "api-app/test/channel-transport.e2e-spec.ts:139",
+      "severity": "review",
+      "stack": "shared"
+    },
+    {
+      "allowed": false,
+      "allowlist": null,
+      "evidence": "        const localCookie = await login(isolated.app, `pre-dispatch-${changed}@example.test`);",
+      "key": "e97fd988676d6269",
+      "lens": "hard-coded local/domain target in source/config",
+      "location": "api-app/test/channel-transport.e2e-spec.ts:148",
+      "severity": "review",
+      "stack": "shared"
+    },
+    {
+      "allowed": false,
+      "allowlist": null,
+      "evidence": "      const tenant = await criarMantenedora(isolated.app, 'Contradictory Meta ACK', 'contradictory-meta@example.test');",
+      "key": "96bf553727462fad",
+      "lens": "hard-coded local/domain target in source/config",
+      "location": "api-app/test/channel-transport.e2e-spec.ts:187",
+      "severity": "review",
+      "stack": "shared"
+    },
+    {
+      "allowed": false,
+      "allowlist": null,
+      "evidence": "      const session = await login(isolated.app, 'contradictory-meta@example.test');",
+      "key": "f5549f7e57348fd7",
+      "lens": "hard-coded local/domain target in source/config",
+      "location": "api-app/test/channel-transport.e2e-spec.ts:192",
+      "severity": "review",
+      "stack": "shared"
+    },
+    {
+      "allowed": false,
+      "allowlist": null,
+      "evidence": "    const foreign = await criarMantenedora(app, 'Foreign public destination', 'foreign-public-destination@example.test');",
+      "key": "dcab8e38f793b6bb",
+      "lens": "hard-coded local/domain target in source/config",
+      "location": "api-app/test/channel-transport.e2e-spec.ts:219",
+      "severity": "review",
+      "stack": "shared"
+    },
+    {
+      "allowed": false,
+      "allowlist": null,
+      "evidence": "    const foreignCookie = await login(app, 'foreign-public-destination@example.test');",
+      "key": "9f8e0317e801a917",
+      "lens": "hard-coded local/domain target in source/config",
+      "location": "api-app/test/channel-transport.e2e-spec.ts:220",
+      "severity": "review",
+      "stack": "shared"
+    },
+    {
+      "allowed": false,
+      "allowlist": null,
+      "evidence": "    const tenantB = await criarMantenedora(app, 'Parallel tenant B', 'parallel-tenant-b@example.test');",
+      "key": "6ae92de5af4ad584",
+      "lens": "hard-coded local/domain target in source/config",
+      "location": "api-app/test/channel-transport.e2e-spec.ts:234",
+      "severity": "review",
+      "stack": "shared"
+    },
+    {
+      "allowed": false,
+      "allowlist": null,
+      "evidence": "    const cookieB = await login(app, 'parallel-tenant-b@example.test');",
+      "key": "81c3d099f0adf785",
+      "lens": "hard-coded local/domain target in source/config",
+      "location": "api-app/test/channel-transport.e2e-spec.ts:262",
+      "severity": "review",
+      "stack": "shared"
+    },
+    {
+      "allowed": false,
+      "allowlist": null,
+      "evidence": "  process.env.EVOLUTION_WEBHOOK_URL = 'https://api.example.test/webhooks/evolution';",
+      "key": "fc28e09689901399",
+      "lens": "hard-coded local/domain target in source/config",
+      "location": "api-app/test/helpers.ts:164",
+      "severity": "review",
+      "stack": "shared"
+    },
+    {
+      "allowed": false,
+      "allowlist": null,
+      "evidence": "  beforeAll(async () => { ({ app, prisma } = await subirApp(undefined, true)); await app.listen(0, '127.0.0.1'); await limparBanco(prisma); });",
+      "key": "d4235f93c3f77059",
+      "lens": "hard-coded local/domain target in source/config",
+      "location": "api-app/test/number-onboarding-pcv.e2e-spec.ts:14",
+      "severity": "review",
+      "stack": "shared"
+    },
+    {
+      "allowed": false,
+      "allowlist": null,
+      "evidence": "    const tenant = await criarMantenedora(app, 'EPS lookup', 'eps-lookup@example.test');",
+      "key": "86dac72a94cba7cf",
+      "lens": "hard-coded local/domain target in source/config",
+      "location": "api-app/test/number-onboarding-pcv.e2e-spec.ts:18",
+      "severity": "review",
+      "stack": "shared"
+    },
+    {
+      "allowed": false,
+      "allowlist": null,
+      "evidence": "    const cookie = await login(app, 'eps-lookup@example.test');",
+      "key": "c25b1bd55a824686",
+      "lens": "hard-coded local/domain target in source/config",
+      "location": "api-app/test/number-onboarding-pcv.e2e-spec.ts:19",
+      "severity": "review",
+      "stack": "shared"
+    },
+    {
+      "allowed": false,
+      "allowlist": null,
+      "evidence": "    const tenant = await criarMantenedora(app, 'EPS identity lookup', 'eps-identity@example.test');",
+      "key": "cf024a18815b1890",
+      "lens": "hard-coded local/domain target in source/config",
+      "location": "api-app/test/number-onboarding-pcv.e2e-spec.ts:67",
+      "severity": "review",
+      "stack": "shared"
+    },
+    {
+      "allowed": false,
+      "allowlist": null,
+      "evidence": "    const tenant = await criarMantenedora(app, 'Channel list EPS', 'channel-list-eps@example.test');",
+      "key": "ed7c071fd8ca85c9",
+      "lens": "hard-coded local/domain target in source/config",
+      "location": "api-app/test/number-onboarding-pcv.e2e-spec.ts:106",
+      "severity": "review",
+      "stack": "shared"
+    },
+    {
+      "allowed": false,
+      "allowlist": null,
+      "evidence": "    const cookie = await login(app, 'channel-list-eps@example.test');",
+      "key": "8c0e63d80ebba24a",
+      "lens": "hard-coded local/domain target in source/config",
+      "location": "api-app/test/number-onboarding-pcv.e2e-spec.ts:107",
+      "severity": "review",
+      "stack": "shared"
+    },
+    {
+      "allowed": false,
+      "allowlist": null,
+      "evidence": "      const tenant = await criarMantenedora(app, `RLS tenant ${index}`, `rls-${index}@example.test`);",
+      "key": "7b6d48413427d302",
+      "lens": "hard-coded local/domain target in source/config",
+      "location": "api-app/test/number-onboarding-pcv.e2e-spec.ts:182",
+      "severity": "review",
+      "stack": "shared"
+    },
+    {
+      "allowed": false,
+      "allowlist": null,
+      "evidence": "      actors.push({ buId: tenant.businessUnit.id, cookie: await login(app, `rls-${index}@example.test`) });",
+      "key": "fc895381addd4ecc",
+      "lens": "hard-coded local/domain target in source/config",
+      "location": "api-app/test/number-onboarding-pcv.e2e-spec.ts:184",
+      "severity": "review",
+      "stack": "shared"
+    },
+    {
+      "allowed": false,
+      "allowlist": null,
+      "evidence": "  process.env.EVOLUTION_API_URL = 'http://127.0.0.1:3101/provider/evolution';",
+      "key": "136bef79d231e8ba",
+      "lens": "hard-coded local/domain target in source/config",
+      "location": "api-app/test/browser-server.cjs:23",
+      "severity": "review",
+      "stack": "shared"
+    },
+    {
+      "allowed": false,
+      "allowlist": null,
+      "evidence": "  process.env.EVOLUTION_WEBHOOK_URL = 'http://127.0.0.1:3100/webhooks/evolution';",
+      "key": "b21b0dfd7e8d27d3",
+      "lens": "hard-coded local/domain target in source/config",
+      "location": "api-app/test/browser-server.cjs:26",
+      "severity": "review",
+      "stack": "shared"
+    },
+    {
+      "allowed": false,
+      "allowlist": null,
+      "evidence": "  process.env.WEB_ORIGIN = 'http://127.0.0.1:4173';",
+      "key": "5864f4bd86b4b682",
+      "lens": "hard-coded local/domain target in source/config",
+      "location": "api-app/test/browser-server.cjs:31",
+      "severity": "review",
+      "stack": "shared"
+    },
+    {
+      "allowed": false,
+      "allowlist": null,
+      "evidence": "    const response = await fetch(`http://127.0.0.1:${fixturePort}${path}`, {",
+      "key": "eca028336b828de4",
+      "lens": "hard-coded local/domain target in source/config",
+      "location": "api-app/test/browser-server.cjs:35",
+      "severity": "review",
+      "stack": "shared"
+    },
+    {
+      "allowed": false,
+      "allowlist": null,
+      "evidence": "        const response = await fetch(`http://127.0.0.1:${process.env.PORT ?? '3100'}/webhooks/evolution`, { method: 'POST', headers: { 'content-type': 'application/json', 'x-leadsh",
+      "key": "ccef291b43d4b9c5",
+      "lens": "hard-coded local/domain target in source/config",
+      "location": "api-app/test/browser-server.cjs:132",
+      "severity": "review",
+      "stack": "shared"
+    },
+    {
+      "allowed": false,
+      "allowlist": null,
+      "evidence": "  app.enableCors({ origin: ['http://127.0.0.1:4173'], credentials: true });",
+      "key": "526bb31d3ed0eeea",
+      "lens": "hard-coded local/domain target in source/config",
+      "location": "api-app/test/browser-server.cjs:146",
+      "severity": "review",
+      "stack": "shared"
+    },
+    {
+      "allowed": false,
+      "allowlist": null,
+      "evidence": "    for (const item of [...staged, ...unstaged, ...untracked]) if (scope.test(item.path)) {",
+      "key": "894245a06a49ed9d",
+      "lens": "hard-coded local/domain target in source/config",
+      "location": "web-app/e2e/number-onboarding-freshness.ts:39",
+      "severity": "review",
+      "stack": "shared"
+    },
+    {
+      "allowed": false,
+      "allowlist": null,
+      "evidence": "# below; only api-app/.env.example is mounted, while .env and .env.testing are",
+      "key": "d21d37f4e9adf217",
+      "lens": "hard-coded local/domain target in source/config",
+      "location": "scripts/test-channels-local.sh:20",
+      "severity": "review",
+      "stack": "shared"
+    },
+    {
+      "allowed": false,
+      "allowlist": null,
+      "evidence": "    .env|.env.testing|api-app/.env|api-app/.env.testing|api-app/.local-files|api-app/.local-files/*|web-app/.env|web-app/.env.*)",
+      "key": "6de8fecad68bec2c",
+      "lens": "hard-coded local/domain target in source/config",
+      "location": "scripts/test-channels-local.sh:41",
+      "severity": "review",
+      "stack": "shared"
+    },
+    {
+      "allowed": false,
+      "allowlist": null,
+      "evidence": "for private_path in /workspace/.env /workspace/.env.testing; do",
+      "key": "c8ece37d9bbab6b9",
+      "lens": "hard-coded local/domain target in source/config",
+      "location": "scripts/test-channels-local.sh:137",
+      "severity": "review",
+      "stack": "shared"
+    },
+    {
+      "allowed": false,
+      "allowlist": null,
+      "evidence": "const FIXTURES = 'http://127.0.0.1:3101';",
+      "key": "0436ea8e701f8438",
+      "lens": "hard-coded local/domain target in source/config",
+      "location": "web-app/e2e/channel-transport.spec.ts:3",
+      "severity": "review",
+      "stack": "shared"
+    },
+    {
+      "allowed": false,
+      "allowlist": null,
+      "evidence": "  const response = await fetch(`http://127.0.0.1:${apiPort}/webhooks/meta`, {",
+      "key": "d46011fd6e3873da",
+      "lens": "hard-coded local/domain target in source/config",
+      "location": "api-app/test/timeline-fixtures.cjs:153",
+      "severity": "review",
+      "stack": "shared"
+    },
+    {
+      "allowed": false,
+      "allowlist": null,
+      "evidence": "      if (!/^[0-9a-f]{32}$/i.test(attemptId) || !/^[0-9a-f-]{36}$/i.test(buId)) return json(res, 400, { error: 'invalid attempt scope' });",
+      "key": "68ecff82501c4db1",
+      "lens": "hard-coded local/domain target in source/config",
+      "location": "api-app/test/timeline-fixtures.cjs:223",
+      "severity": "review",
+      "stack": "shared"
+    },
+    {
+      "allowed": false,
+      "allowlist": null,
+      "evidence": "      const query = new URL(req.url, 'http://localhost').searchParams;",
+      "key": "2d9f8ab34ce0ca64",
+      "lens": "hard-coded local/domain target in source/config",
+      "location": "api-app/test/timeline-fixtures.cjs:236",
+      "severity": "review",
+      "stack": "shared"
+    },
+    {
+      "allowed": false,
+      "allowlist": null,
+      "evidence": "      const query = new URL(req.url, 'http://localhost').searchParams;",
+      "key": "734af3761be24d6e",
+      "lens": "hard-coded local/domain target in source/config",
+      "location": "api-app/test/timeline-fixtures.cjs:243",
+      "severity": "review",
+      "stack": "shared"
+    },
+    {
+      "allowed": false,
+      "allowlist": null,
+      "evidence": "server.listen(fixturePort, '127.0.0.1', () => console.log(`timeline fixtures listening on 127.0.0.1:${fixturePort}`));",
+      "key": "0e738cfc91264419",
+      "lens": "hard-coded local/domain target in source/config",
+      "location": "api-app/test/timeline-fixtures.cjs:304",
+      "severity": "review",
+      "stack": "shared"
+    },
+    {
+      "allowed": false,
+      "allowlist": null,
+      "evidence": "  for (const item of [...staged, ...unstaged, ...untracked]) if (scope.test(item.path)) {",
+      "key": "fd38e715b75a1ddb",
+      "lens": "hard-coded local/domain target in source/config",
+      "location": "web-app/e2e/timeline-freshness.ts:19",
+      "severity": "review",
+      "stack": "shared"
+    },
+    {
+      "allowed": false,
+      "allowlist": null,
+      "evidence": "  const apiEndpoint = `http://127.0.0.1:${apiPort}`;",
+      "key": "a5219b58a23b48b7",
+      "lens": "hard-coded local/domain target in source/config",
+      "location": "web-app/e2e/timeline-freshness.ts:47",
+      "severity": "review",
+      "stack": "shared"
+    },
+    {
+      "allowed": false,
+      "allowlist": null,
+      "evidence": "    fetch('http://127.0.0.1:3101/health'),",
+      "key": "b4e4f1ef92887f7f",
+      "lens": "hard-coded local/domain target in source/config",
+      "location": "web-app/e2e/timeline-freshness.ts:50",
+      "severity": "review",
+      "stack": "shared"
+    },
+    {
+      "allowed": false,
+      "allowlist": null,
+      "evidence": "    fetch('http://127.0.0.1:4173/'),",
+      "key": "36cc2a01f5b3f6d3",
+      "lens": "hard-coded local/domain target in source/config",
+      "location": "web-app/e2e/timeline-freshness.ts:51",
+      "severity": "review",
+      "stack": "shared"
+    },
+    {
+      "allowed": false,
+      "allowlist": null,
+      "evidence": "  const jsResponse = await fetch(new URL(asset[1], 'http://127.0.0.1:4173'));",
+      "key": "e0bcaf1bbbf840c7",
+      "lens": "hard-coded local/domain target in source/config",
+      "location": "web-app/e2e/timeline-freshness.ts:59",
+      "severity": "review",
+      "stack": "shared"
+    },
+    {
+      "allowed": false,
+      "allowlist": null,
+      "evidence": "  const servedPath = resolve(web, 'dist', `.${new URL(asset[1], 'http://127.0.0.1').pathname}`);",
+      "key": "ef702cbe7ce76787",
+      "lens": "hard-coded local/domain target in source/config",
+      "location": "web-app/e2e/timeline-freshness.ts:62",
+      "severity": "review",
+      "stack": "shared"
+    },
+    {
+      "allowed": false,
+      "allowlist": null,
+      "evidence": "    endpoints: { apiHealth: apiHealth.status, fixtureHealth: fixtureHealth.status, preview: htmlResponse.status, servedBundle: new URL(asset[1], 'http://127.0.0.1:4173').pathname }",
+      "key": "5c5e6a50969bcf8b",
+      "lens": "hard-coded local/domain target in source/config",
+      "location": "web-app/e2e/timeline-freshness.ts:112",
+      "severity": "review",
+      "stack": "shared"
+    },
+    {
+      "allowed": false,
+      "allowlist": null,
+      "evidence": "    const pareceEstatico = res.status === 405 || /^\\s*<(!doctype|html)/i.test(bruto);",
+      "key": "47251e9aa3f2f619",
+      "lens": "hard-coded local/domain target in source/config",
+      "location": "web-app/src/api.ts:79",
+      "severity": "review",
+      "stack": "shared"
+    },
+    {
+      "allowed": false,
+      "allowlist": null,
+      "evidence": "  return rules.filter(([, expression]) => expression.test(source)).map(([name]) => name);",
+      "key": "6be44c42b0754539",
+      "lens": "hard-coded runtime/domain target in Docker or compose surface",
+      "location": "api-app/src/domain/channels/transport/channel-dependencies.spec.ts:23",
+      "severity": "warning",
+      "stack": "docker"
+    },
+    {
+      "allowed": false,
+      "allowlist": null,
+      "evidence": "    A = await criarMantenedora(app, 'Alfa', 'dono@alfa.test'); ",
+      "key": "95a4746257da8c32",
+      "lens": "hard-coded runtime/domain target in Docker or compose surface",
+      "location": "api-app/test/api-publica.e2e-spec.ts:58",
+      "severity": "warning",
+      "stack": "docker"
+    },
+    {
+      "allowed": false,
+      "allowlist": null,
+      "evidence": "    B = await criarMantenedora(app, 'Beta', 'dono@beta.test'); ",
+      "key": "7f66e0a4ec51ce5e",
+      "lens": "hard-coded runtime/domain target in Docker or compose surface",
+      "location": "api-app/test/api-publica.e2e-spec.ts:59",
+      "severity": "warning",
+      "stack": "docker"
+    },
+    {
+      "allowed": false,
+      "allowlist": null,
+      "evidence": "    chaveA = await criarChave(await login(app, 'dono@alfa.test'), 'Campuzz'); ",
+      "key": "6bb8bea8322eaded",
+      "lens": "hard-coded runtime/domain target in Docker or compose surface",
+      "location": "api-app/test/api-publica.e2e-spec.ts:61",
+      "severity": "warning",
+      "stack": "docker"
+    },
+    {
+      "allowed": false,
+      "allowlist": null,
+      "evidence": "      const cookie = await login(app, 'dono@alfa.test'); ",
+      "key": "8d7943baea760311",
+      "lens": "hard-coded runtime/domain target in Docker or compose surface",
+      "location": "api-app/test/api-publica.e2e-spec.ts:76",
+      "severity": "warning",
+      "stack": "docker"
+    },
+    {
+      "allowed": false,
+      "allowlist": null,
+      "evidence": "      const cookie = await login(app, 'dono@alfa.test'); ",
+      "key": "ecb07641b3734aac",
+      "lens": "hard-coded runtime/domain target in Docker or compose surface",
+      "location": "api-app/test/api-publica.e2e-spec.ts:81",
+      "severity": "warning",
+      "stack": "docker"
+    },
+    {
+      "allowed": false,
+      "allowlist": null,
+      "evidence": "      const cookie = await login(app, 'dono@alfa.test'); ",
+      "key": "7f3f85b598a6f0e6",
+      "lens": "hard-coded runtime/domain target in Docker or compose surface",
+      "location": "api-app/test/api-publica.e2e-spec.ts:109",
+      "severity": "warning",
+      "stack": "docker"
+    },
+    {
+      "allowed": false,
+      "allowlist": null,
+      "evidence": "      const cookie = await login(app, 'dono@alfa.test'); ",
+      "key": "065ba68741212b75",
+      "lens": "hard-coded runtime/domain target in Docker or compose surface",
+      "location": "api-app/test/api-publica.e2e-spec.ts:126",
+      "severity": "warning",
+      "stack": "docker"
+    },
+    {
+      "allowed": false,
+      "allowlist": null,
+      "evidence": "    const tenant = await criarMantenedora(app, 'Channel outbound fixture', 'channel-outbound@example.test');",
+      "key": "7c5deed613a14448",
+      "lens": "hard-coded runtime/domain target in Docker or compose surface",
+      "location": "api-app/test/channel-transport.e2e-spec.ts:70",
+      "severity": "warning",
+      "stack": "docker"
+    },
+    {
+      "allowed": false,
+      "allowlist": null,
+      "evidence": "    cookie = await login(app, 'channel-outbound@example.test');",
+      "key": "0ec7afce84acac0a",
+      "lens": "hard-coded runtime/domain target in Docker or compose surface",
+      "location": "api-app/test/channel-transport.e2e-spec.ts:78",
+      "severity": "warning",
+      "stack": "docker"
+    },
+    {
+      "allowed": false,
+      "allowlist": null,
+      "evidence": "      const tenant = await criarMantenedora(isolated.app, 'Opaque fake contract', 'opaque-fake@example.test');",
+      "key": "a8336cdf70b129ed",
+      "lens": "hard-coded runtime/domain target in Docker or compose surface",
+      "location": "api-app/test/channel-transport.e2e-spec.ts:102",
+      "severity": "warning",
+      "stack": "docker"
+    },
+    {
+      "allowed": false,
+      "allowlist": null,
+      "evidence": "      const localCookie = await login(isolated.app, 'opaque-fake@example.test');",
+      "key": "f4e2c3edb527afba",
+      "lens": "hard-coded runtime/domain target in Docker or compose surface",
+      "location": "api-app/test/channel-transport.e2e-spec.ts:108",
+      "severity": "warning",
+      "stack": "docker"
+    },
+    {
+      "allowed": false,
+      "allowlist": null,
+      "evidence": "        const tenant = await criarMantenedora(isolated.app, `Pre-dispatch ${changed}`, `pre-dispatch-${changed}@example.test`);",
+      "key": "931ab02977c21768",
+      "lens": "hard-coded runtime/domain target in Docker or compose surface",
+      "location": "api-app/test/channel-transport.e2e-spec.ts:139",
+      "severity": "warning",
+      "stack": "docker"
+    },
+    {
+      "allowed": false,
+      "allowlist": null,
+      "evidence": "        const localCookie = await login(isolated.app, `pre-dispatch-${changed}@example.test`);",
+      "key": "a7fb5ed07294bd30",
+      "lens": "hard-coded runtime/domain target in Docker or compose surface",
+      "location": "api-app/test/channel-transport.e2e-spec.ts:148",
+      "severity": "warning",
+      "stack": "docker"
+    },
+    {
+      "allowed": false,
+      "allowlist": null,
+      "evidence": "      const tenant = await criarMantenedora(isolated.app, 'Contradictory Meta ACK', 'contradictory-meta@example.test');",
+      "key": "19335d4e01607abc",
+      "lens": "hard-coded runtime/domain target in Docker or compose surface",
+      "location": "api-app/test/channel-transport.e2e-spec.ts:187",
+      "severity": "warning",
+      "stack": "docker"
+    },
+    {
+      "allowed": false,
+      "allowlist": null,
+      "evidence": "      const session = await login(isolated.app, 'contradictory-meta@example.test');",
+      "key": "9076087bd76eba00",
+      "lens": "hard-coded runtime/domain target in Docker or compose surface",
+      "location": "api-app/test/channel-transport.e2e-spec.ts:192",
+      "severity": "warning",
+      "stack": "docker"
+    },
+    {
+      "allowed": false,
+      "allowlist": null,
+      "evidence": "    const foreign = await criarMantenedora(app, 'Foreign public destination', 'foreign-public-destination@example.test');",
+      "key": "d21ada7ba8f1b81c",
+      "lens": "hard-coded runtime/domain target in Docker or compose surface",
+      "location": "api-app/test/channel-transport.e2e-spec.ts:219",
+      "severity": "warning",
+      "stack": "docker"
+    },
+    {
+      "allowed": false,
+      "allowlist": null,
+      "evidence": "    const foreignCookie = await login(app, 'foreign-public-destination@example.test');",
+      "key": "040b74350ae1b1ad",
+      "lens": "hard-coded runtime/domain target in Docker or compose surface",
+      "location": "api-app/test/channel-transport.e2e-spec.ts:220",
+      "severity": "warning",
+      "stack": "docker"
+    },
+    {
+      "allowed": false,
+      "allowlist": null,
+      "evidence": "    const tenantB = await criarMantenedora(app, 'Parallel tenant B', 'parallel-tenant-b@example.test');",
+      "key": "3feec14bb5bd5e08",
+      "lens": "hard-coded runtime/domain target in Docker or compose surface",
+      "location": "api-app/test/channel-transport.e2e-spec.ts:234",
+      "severity": "warning",
+      "stack": "docker"
+    },
+    {
+      "allowed": false,
+      "allowlist": null,
+      "evidence": "    const cookieB = await login(app, 'parallel-tenant-b@example.test');",
+      "key": "46a6191e35634fed",
+      "lens": "hard-coded runtime/domain target in Docker or compose surface",
+      "location": "api-app/test/channel-transport.e2e-spec.ts:262",
+      "severity": "warning",
+      "stack": "docker"
+    },
+    {
+      "allowed": false,
+      "allowlist": null,
+      "evidence": "  process.env.EVOLUTION_WEBHOOK_URL = 'https://api.example.test/webhooks/evolution';",
+      "key": "2aff4fd4dc02b497",
+      "lens": "hard-coded runtime/domain target in Docker or compose surface",
+      "location": "api-app/test/helpers.ts:164",
+      "severity": "warning",
+      "stack": "docker"
+    },
+    {
+      "allowed": false,
+      "allowlist": null,
+      "evidence": "  beforeAll(async () => { ({ app, prisma } = await subirApp(undefined, true)); await app.listen(0, '127.0.0.1'); await limparBanco(prisma); });",
+      "key": "9b78739cc9db0eb5",
+      "lens": "hard-coded runtime/domain target in Docker or compose surface",
+      "location": "api-app/test/number-onboarding-pcv.e2e-spec.ts:14",
+      "severity": "warning",
+      "stack": "docker"
+    },
+    {
+      "allowed": false,
+      "allowlist": null,
+      "evidence": "    const tenant = await criarMantenedora(app, 'EPS lookup', 'eps-lookup@example.test');",
+      "key": "de069d44d07833fb",
+      "lens": "hard-coded runtime/domain target in Docker or compose surface",
+      "location": "api-app/test/number-onboarding-pcv.e2e-spec.ts:18",
+      "severity": "warning",
+      "stack": "docker"
+    },
+    {
+      "allowed": false,
+      "allowlist": null,
+      "evidence": "    const cookie = await login(app, 'eps-lookup@example.test');",
+      "key": "99019f78841020d3",
+      "lens": "hard-coded runtime/domain target in Docker or compose surface",
+      "location": "api-app/test/number-onboarding-pcv.e2e-spec.ts:19",
+      "severity": "warning",
+      "stack": "docker"
+    },
+    {
+      "allowed": false,
+      "allowlist": null,
+      "evidence": "    const tenant = await criarMantenedora(app, 'EPS identity lookup', 'eps-identity@example.test');",
+      "key": "84b91602cb0c50d7",
+      "lens": "hard-coded runtime/domain target in Docker or compose surface",
+      "location": "api-app/test/number-onboarding-pcv.e2e-spec.ts:67",
+      "severity": "warning",
+      "stack": "docker"
+    },
+    {
+      "allowed": false,
+      "allowlist": null,
+      "evidence": "    const tenant = await criarMantenedora(app, 'Channel list EPS', 'channel-list-eps@example.test');",
+      "key": "9d14e982b29f03b1",
+      "lens": "hard-coded runtime/domain target in Docker or compose surface",
+      "location": "api-app/test/number-onboarding-pcv.e2e-spec.ts:106",
+      "severity": "warning",
+      "stack": "docker"
+    },
+    {
+      "allowed": false,
+      "allowlist": null,
+      "evidence": "    const cookie = await login(app, 'channel-list-eps@example.test');",
+      "key": "0608fe3dabfbe185",
+      "lens": "hard-coded runtime/domain target in Docker or compose surface",
+      "location": "api-app/test/number-onboarding-pcv.e2e-spec.ts:107",
+      "severity": "warning",
+      "stack": "docker"
+    },
+    {
+      "allowed": false,
+      "allowlist": null,
+      "evidence": "      const tenant = await criarMantenedora(app, `RLS tenant ${index}`, `rls-${index}@example.test`);",
+      "key": "994fdfed22140b63",
+      "lens": "hard-coded runtime/domain target in Docker or compose surface",
+      "location": "api-app/test/number-onboarding-pcv.e2e-spec.ts:182",
+      "severity": "warning",
+      "stack": "docker"
+    },
+    {
+      "allowed": false,
+      "allowlist": null,
+      "evidence": "      actors.push({ buId: tenant.businessUnit.id, cookie: await login(app, `rls-${index}@example.test`) });",
+      "key": "11fdc6694fcf0c54",
+      "lens": "hard-coded runtime/domain target in Docker or compose surface",
+      "location": "api-app/test/number-onboarding-pcv.e2e-spec.ts:184",
+      "severity": "warning",
+      "stack": "docker"
+    },
+    {
+      "allowed": false,
+      "allowlist": null,
+      "evidence": "    a = await criarMantenedora(app, 'Typebot tenant A', 'typebot-a@example.test');",
+      "key": "0f0f77c82b5fc901",
+      "lens": "hard-coded runtime/domain target in Docker or compose surface",
+      "location": "api-app/test/number-onboarding-typebot.e2e-spec.ts:20",
+      "severity": "warning",
+      "stack": "docker"
+    },
+    {
+      "allowed": false,
+      "allowlist": null,
+      "evidence": "    b = await criarMantenedora(app, 'Typebot tenant B', 'typebot-b@example.test');",
+      "key": "626f3cf722853f94",
+      "lens": "hard-coded runtime/domain target in Docker or compose surface",
+      "location": "api-app/test/number-onboarding-typebot.e2e-spec.ts:21",
+      "severity": "warning",
+      "stack": "docker"
+    },
+    {
+      "allowed": false,
+      "allowlist": null,
+      "evidence": "  const response = await fetch(`http://127.0.0.1:${apiPort}/webhooks/meta`, {",
+      "key": "37fe1365acf79ea1",
+      "lens": "hard-coded runtime/domain target in Docker or compose surface",
+      "location": "api-app/test/timeline-fixtures.cjs:153",
+      "severity": "warning",
+      "stack": "docker"
+    },
+    {
+      "allowed": false,
+      "allowlist": null,
+      "evidence": "      if (!/^[0-9a-f]{32}$/i.test(attemptId) || !/^[0-9a-f-]{36}$/i.test(buId)) return json(res, 400, { error: 'invalid attempt scope' });",
+      "key": "b1f9689df7ae6307",
+      "lens": "hard-coded runtime/domain target in Docker or compose surface",
+      "location": "api-app/test/timeline-fixtures.cjs:223",
+      "severity": "warning",
+      "stack": "docker"
+    },
+    {
+      "allowed": false,
+      "allowlist": null,
+      "evidence": "      const query = new URL(req.url, 'http://localhost').searchParams;",
+      "key": "b9a811aa5c40d140",
+      "lens": "hard-coded runtime/domain target in Docker or compose surface",
+      "location": "api-app/test/timeline-fixtures.cjs:236",
+      "severity": "warning",
+      "stack": "docker"
+    },
+    {
+      "allowed": false,
+      "allowlist": null,
+      "evidence": "      const query = new URL(req.url, 'http://localhost').searchParams;",
+      "key": "a89a93444df5bfa3",
+      "lens": "hard-coded runtime/domain target in Docker or compose surface",
+      "location": "api-app/test/timeline-fixtures.cjs:243",
+      "severity": "warning",
+      "stack": "docker"
+    },
+    {
+      "allowed": false,
+      "allowlist": null,
+      "evidence": "server.listen(fixturePort, '127.0.0.1', () => console.log(`timeline fixtures listening on 127.0.0.1:${fixturePort}`));",
+      "key": "e5ac99a56a018dbd",
+      "lens": "hard-coded runtime/domain target in Docker or compose surface",
+      "location": "api-app/test/timeline-fixtures.cjs:304",
+      "severity": "warning",
+      "stack": "docker"
+    },
+    {
+      "allowed": false,
+      "allowlist": null,
+      "evidence": "  for (const item of [...staged, ...unstaged, ...untracked]) if (scope.test(item.path)) {",
+      "key": "78962492f1c9ea8b",
+      "lens": "hard-coded runtime/domain target in Docker or compose surface",
+      "location": "web-app/e2e/timeline-freshness.ts:19",
+      "severity": "warning",
+      "stack": "docker"
+    },
+    {
+      "allowed": false,
+      "allowlist": null,
+      "evidence": "  const apiEndpoint = `http://127.0.0.1:${apiPort}`;",
+      "key": "99a5ca723f2ca9c5",
+      "lens": "hard-coded runtime/domain target in Docker or compose surface",
+      "location": "web-app/e2e/timeline-freshness.ts:47",
+      "severity": "warning",
+      "stack": "docker"
+    },
+    {
+      "allowed": false,
+      "allowlist": null,
+      "evidence": "    fetch('http://127.0.0.1:3101/health'),",
+      "key": "98599f7916ffc82e",
+      "lens": "hard-coded runtime/domain target in Docker or compose surface",
+      "location": "web-app/e2e/timeline-freshness.ts:50",
+      "severity": "warning",
+      "stack": "docker"
+    },
+    {
+      "allowed": false,
+      "allowlist": null,
+      "evidence": "    fetch('http://127.0.0.1:4173/'),",
+      "key": "9e05fb4480cbf411",
+      "lens": "hard-coded runtime/domain target in Docker or compose surface",
+      "location": "web-app/e2e/timeline-freshness.ts:51",
+      "severity": "warning",
+      "stack": "docker"
+    },
+    {
+      "allowed": false,
+      "allowlist": null,
+      "evidence": "  const jsResponse = await fetch(new URL(asset[1], 'http://127.0.0.1:4173'));",
+      "key": "1d022b7b53a0e33a",
+      "lens": "hard-coded runtime/domain target in Docker or compose surface",
+      "location": "web-app/e2e/timeline-freshness.ts:59",
+      "severity": "warning",
+      "stack": "docker"
+    },
+    {
+      "allowed": false,
+      "allowlist": null,
+      "evidence": "  const servedPath = resolve(web, 'dist', `.${new URL(asset[1], 'http://127.0.0.1').pathname}`);",
+      "key": "6dd5ad8d243a1ffd",
+      "lens": "hard-coded runtime/domain target in Docker or compose surface",
+      "location": "web-app/e2e/timeline-freshness.ts:62",
+      "severity": "warning",
+      "stack": "docker"
+    },
+    {
+      "allowed": false,
+      "allowlist": null,
+      "evidence": "    endpoints: { apiHealth: apiHealth.status, fixtureHealth: fixtureHealth.status, preview: htmlResponse.status, servedBundle: new URL(asset[1], 'http://127.0.0.1:4173').pathname }",
+      "key": "352623a49cc34f9d",
+      "lens": "hard-coded runtime/domain target in Docker or compose surface",
+      "location": "web-app/e2e/timeline-freshness.ts:112",
+      "severity": "warning",
+      "stack": "docker"
+    },
+    {
+      "allowed": false,
+      "allowlist": null,
+      "evidence": "# below; only api-app/.env.example is mounted, while .env and .env.testing are",
+      "key": "9ab199e810b4e91a",
+      "lens": "hard-coded runtime/domain target in Docker or compose surface",
+      "location": "scripts/test-channels-local.sh:20",
+      "severity": "warning",
+      "stack": "docker"
+    },
+    {
+      "allowed": false,
+      "allowlist": null,
+      "evidence": "    .env|.env.testing|api-app/.env|api-app/.env.testing|api-app/.local-files|api-app/.local-files/*|web-app/.env|web-app/.env.*)",
+      "key": "490573780c4ac15b",
+      "lens": "hard-coded runtime/domain target in Docker or compose surface",
+      "location": "scripts/test-channels-local.sh:41",
+      "severity": "warning",
+      "stack": "docker"
+    },
+    {
+      "allowed": false,
+      "allowlist": null,
+      "evidence": "for private_path in /workspace/.env /workspace/.env.testing; do",
+      "key": "5a069d0f9e763048",
+      "lens": "hard-coded runtime/domain target in Docker or compose surface",
+      "location": "scripts/test-channels-local.sh:137",
+      "severity": "warning",
+      "stack": "docker"
+    },
+    {
+      "allowed": false,
+      "allowlist": null,
+      "evidence": "    for (const item of [...staged, ...unstaged, ...untracked]) if (scope.test(item.path)) {",
+      "key": "0ad7cf56c663a468",
+      "lens": "hard-coded runtime/domain target in Docker or compose surface",
+      "location": "web-app/e2e/number-onboarding-freshness.ts:39",
+      "severity": "warning",
+      "stack": "docker"
+    },
+    {
+      "allowed": false,
+      "allowlist": null,
+      "evidence": "  process.env.EVOLUTION_API_URL = 'http://127.0.0.1:3101/provider/evolution';",
+      "key": "22f73b43a40526df",
+      "lens": "hard-coded runtime/domain target in Docker or compose surface",
+      "location": "api-app/test/browser-server.cjs:23",
+      "severity": "warning",
+      "stack": "docker"
+    },
+    {
+      "allowed": false,
+      "allowlist": null,
+      "evidence": "  process.env.EVOLUTION_WEBHOOK_URL = 'http://127.0.0.1:3100/webhooks/evolution';",
+      "key": "85ea9bca5961a5f5",
+      "lens": "hard-coded runtime/domain target in Docker or compose surface",
+      "location": "api-app/test/browser-server.cjs:26",
+      "severity": "warning",
+      "stack": "docker"
+    },
+    {
+      "allowed": false,
+      "allowlist": null,
+      "evidence": "  process.env.WEB_ORIGIN = 'http://127.0.0.1:4173';",
+      "key": "caef5b2ecc4d6fc7",
+      "lens": "hard-coded runtime/domain target in Docker or compose surface",
+      "location": "api-app/test/browser-server.cjs:31",
+      "severity": "warning",
+      "stack": "docker"
+    },
+    {
+      "allowed": false,
+      "allowlist": null,
+      "evidence": "    const response = await fetch(`http://127.0.0.1:${fixturePort}${path}`, {",
+      "key": "60f1ad416463fc81",
+      "lens": "hard-coded runtime/domain target in Docker or compose surface",
+      "location": "api-app/test/browser-server.cjs:35",
+      "severity": "warning",
+      "stack": "docker"
+    },
+    {
+      "allowed": false,
+      "allowlist": null,
+      "evidence": "        const response = await fetch(`http://127.0.0.1:${process.env.PORT ?? '3100'}/webhooks/evolution`, { method: 'POST', headers: { 'content-type': 'application/json', 'x-leadsh",
+      "key": "5fd2abc7e60eab2a",
+      "lens": "hard-coded runtime/domain target in Docker or compose surface",
+      "location": "api-app/test/browser-server.cjs:132",
+      "severity": "warning",
+      "stack": "docker"
+    },
+    {
+      "allowed": false,
+      "allowlist": null,
+      "evidence": "  app.enableCors({ origin: ['http://127.0.0.1:4173'], credentials: true });",
+      "key": "50d366b80944d1b2",
+      "lens": "hard-coded runtime/domain target in Docker or compose surface",
+      "location": "api-app/test/browser-server.cjs:146",
+      "severity": "warning",
+      "stack": "docker"
+    },
+    {
+      "allowed": false,
+      "allowlist": null,
+      "evidence": "const FIXTURES = 'http://127.0.0.1:3101';",
+      "key": "ec9ae29e9ebfbe30",
+      "lens": "hard-coded runtime/domain target in Docker or compose surface",
+      "location": "web-app/e2e/channel-transport.spec.ts:3",
+      "severity": "warning",
+      "stack": "docker"
+    },
+    {
+      "allowed": false,
+      "allowlist": null,
+      "evidence": "    const pareceEstatico = res.status === 405 || /^\\s*<(!doctype|html)/i.test(bruto);",
+      "key": "45a0a750a6d95094",
+      "lens": "hard-coded runtime/domain target in Docker or compose surface",
+      "location": "web-app/src/api.ts:79",
+      "severity": "warning",
+      "stack": "docker"
+    }
+  ],
+  "generated_at_utc": "2026-10-20T16:02:41.306589Z",
+  "max_active_severity": "warning",
+  "paths": [
+    "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app/package.json",
+    "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app/src/domain/channels/channel-credential-resolver.ts",
+    "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app/src/domain/channels/transport/channel-dependencies.spec.ts",
+    "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app/src/domain/channels/transport/channel.ts",
+    "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app/src/domain/inbox/conversations.service.ts",
+    "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app/src/domain/inbox/incoming.service.ts",
+    "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app/src/domain/inbox/incoming.typebot.integration.spec.ts",
+    "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app/src/domain/inbox/message-acceptance.service.ts",
+    "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app/src/domain/inbox/outbound.service.spec.ts",
+    "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app/src/domain/inbox/outbound.service.ts",
+    "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app/src/integrations/channels/channel-adapter-factory.ts",
+    "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app/src/integrations/channels/channel-adapter-registry.ts",
+    "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app/src/integrations/channels/channel-transport.module.ts",
+    "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app/src/integrations/channels/evolution-channel.ts",
+    "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app/src/integrations/channels/meta-channel.ts",
+    "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app/src/integrations/channels/prisma-channel-resolver.ts",
+    "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app/src/integrations/evolution/evolution.client.spec.ts",
+    "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app/src/integrations/evolution/evolution.client.ts",
+    "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app/src/integrations/meta/meta.client.spec.ts",
+    "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app/src/integrations/meta/meta.client.ts",
+    "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app/src/surfaces/bff/bff.module.ts",
+    "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app/src/surfaces/bff/conversations.controller.ts",
+    "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app/src/surfaces/public/conversations.controller.ts",
+    "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app/src/surfaces/public/public.module.ts",
+    "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app/src/surfaces/webhooks/webhooks.module.ts",
+    "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app/test/api-publica.e2e-spec.ts",
+    "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app/test/browser-server.cjs",
+    "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app/test/channel-transport.e2e-spec.ts",
+    "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app/test/helpers.ts",
+    "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app/test/number-onboarding-pcv.e2e-spec.ts",
+    "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app/test/number-onboarding-typebot.e2e-spec.ts",
+    "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app/test/timeline-fixtures.cjs",
+    "/mnt/c/unifast/leadshug/leadshug_now_docker/web-app/e2e/channel-transport.spec.ts",
+    "/mnt/c/unifast/leadshug/leadshug_now_docker/web-app/e2e/number-onboarding-freshness.ts",
+    "/mnt/c/unifast/leadshug/leadshug_now_docker/web-app/e2e/timeline-freshness.ts",
+    "/mnt/c/unifast/leadshug/leadshug_now_docker/web-app/package.json",
+    "/mnt/c/unifast/leadshug/leadshug_now_docker/web-app/src/api.spec.ts",
+    "/mnt/c/unifast/leadshug/leadshug_now_docker/web-app/src/api.ts",
+    "/mnt/c/unifast/leadshug/leadshug_now_docker/web-app/src/telas/Inbox.tsx",
+    "/mnt/c/unifast/leadshug/leadshug_now_docker/scripts/test-channels-local.sh"
+  ],
+  "repository": "/mnt/c/unifast/leadshug/leadshug_now_docker",
+  "schema_version": "rule-spirit-scan-v1",
+  "severity_taxonomy": [
+    "review",
+    "warning",
+    "blocker"
+  ],
+  "stacks": [
+    "docker"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "captured_at_utc": "2026-10-20T16:17:12.435244+00:00",
+  "scope": "Root exact-source observation during declared disposable browser mutant; one guard replaced by explanatory comment, no runtime change",
+  "baseline_sha256": "d70bde9ede67759d479f644598356e46aac2916a12b2ed1770c17a169118586c",
+  "mutant_sha256": "bdc6c54a40c3a3b4d4ce8d565c8f194c9dd86b41ec75e473c38f45aa94c28804",
+  "reconstructed_baseline_sha256": "d70bde9ede67759d479f644598356e46aac2916a12b2ed1770c17a169118586c",
+  "single_guard_replacement_proven": true,
+  "patch_sha256": "f96b848a22576759e396820adc5f88e3906cb5a16b34d6f6f0496698ad0ec5e8",
+  "test_sha256": "b3604496727a85d7ce12c2cb6e7a479575356a61ef4c529d385047e066a8e0f3",
+  "instrumentation_precedes_heldsend": true,
+  "root_probe_note": "Initial readonly reconstruction inserted a guard without removing the replacementcomment and correctly failed hash assertion; corrected reconstruction removes exactcomment. No source was edited."
+}

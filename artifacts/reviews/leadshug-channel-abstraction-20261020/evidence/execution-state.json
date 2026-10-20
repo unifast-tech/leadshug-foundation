@@ -9,7 +9,7 @@
     "runner allowlist repair + bashn/diffcheck + synthetic config-only probe",
     "canonical api RED:175unit pass/1 dependencyguard failure duelegacydispatch"
   ],
-  "current_work": "Meta shippingguard mutant16223 terminal1:194unitpass/308of309PGpass, intended409-vs201fail. Root closedloghash and exactsource/restoration confirmed. Evolutionguard mutant59583 currently running, Meta restored. Root independently observed Evo be111003d398… vs original60faf1ea…; solewriter will restoreat terminal beforefinalall. Browser97398 mutant alreadydetectedemptydraft/restored; nullfinishedassertion pendingfinalall. No humanruntime change.",
+  "current_work": "R02 causal test added; first attempt64345 harness-ordering timeout, second63018 is green instrumentation diagnostic on restored Inbox (writer had not reappliedmutation), not mutantproof. Writer waits terminal before actualguardomission then capturedbrowsermutation/restoration and newfinalall. No deliveryclaim. Root saved actual65587freshness+4candidatePCV+consumer/statictriage. Dedicatedauditnotstarted.",
   "parent_integration_findings_sent": [
     "restore MessageAcceptance service baseline (outside expectedpaths), move sourceintent/finalization/readback to outbound*.ts",
     "remove commonproviderbranch and closedMeta/Evo-only errorcodes from commonChannelport; generic projection/open registration",
@@ -27,7 +27,7 @@
   ],
   "executor_reports": "Core integration findings applied; independent Channel fake via registry/real resolver, real REAUTORIZAR generation race, version-only reseal, ingress pinning/crossBU/tie/claim barriers added; channel-specific PCV metrics now executing.",
   "next_parent_steps": [
-    "wait solewriter R05/R02/R04 remediation and actual mutationRED/restoration plus newcanonicalall; no concurrentcodewriter",
+    "freshround3 architecture/security delta withcompleteprioradjudication andactualRED/mutation/restoration evidence; waitall65587 andexecutorvalidation",
     "inspect stable positivepublicdiff + sourcefreshness and D01..10 trace",
     "run required architecture-adherence/security, dedicated auditprotocol Performance+TestQuality+Cutover via fresh internal strongest-review agents; finalreview after TQA/PCV/finalpacket",
     "revalidate/publish local API/Web only within approved constraints then operator realINOUT official+unofficial; privateenv/.local-files forbidden",
@@ -215,10 +215,55 @@
   },
   "evolution_mutant": {
     "session_id": 59583,
-    "status": "running",
+    "status": "terminal1 expected409vs201; Meta casespassed before Evo",
     "root_source_observation": "evidence/evolution-mutant-source-observation.json",
     "mutant_sha256": "be111003d398e2f24cd8294c803068f97eda29a7b418ad04cce424a765f995ab",
     "baseline_sha256": "60faf1ea40fe17ad62495b0f42a2cf958defcb41e3ad72d3d2213751539b460c",
-    "restoration_pending": true
-  }
+    "restoration_pending": false,
+    "restoration_exact": true,
+    "root_artifact": "evidence/evolution-mutant-failure-restoration.json"
+  },
+  "foundation_publication": {
+    "commit": "f810cae988bb47c44870d2324036dca72812a33d",
+    "push_exit": 0,
+    "scope": "58rootownedFoundationpaths only; no productcommit/push/gitlink",
+    "formatting_note": "evidence/frozen-input-formatting-note.json;6verbatimhistoricalreviewinputs retainformatnoise, otherstageddocscheck0"
+  },
+  "new_final_all": {
+    "session_id": 65587,
+    "status": "terminal0 on candidate65587; D10 R02 reviewfinding remains",
+    "stdout_stderr_path": "artifacts/tmp/stcon06-final-all.log",
+    "source_manifest": "evidence/final-candidate-source-before-all.json",
+    "source_edit_policy": "none untilterminal; no finalpass claim",
+    "counts": {
+      "api_unit": 194,
+      "api_e2e": 309,
+      "web_unit": 29,
+      "browser": 50
+    }
+  },
+  "round3": {
+    "adherence_session": 41837,
+    "security_session": 45485,
+    "status": "bothterminal0 strictmerged",
+    "finding": "R02 only, browserhandlercompletionbarrier; sameapprovedtestpath, singlewriterresumed",
+    "R04_R05": "reviewedfixed; finalaudit stillpending"
+  },
+  "round3_r02_followup": {
+    "diagnostic_sessions": {
+      "64345": "terminal1 harness ordering timeout, not useful mutantproof",
+      "63018": "terminal0 browser50/50 corrected nativebody/task synchronization, sourceguardpresent"
+    },
+    "actual_mutant_session": 30246,
+    "status": "running, guardreplacedbycomment only; rootreconstructedexactbaselinehash",
+    "root_actual_observation": "evidence/browser-causal-actual-mutant-source-observation.json",
+    "green_diagnostic_attestation": "evidence/browser-attestation-causal-green-63018.json"
+  },
+  "freshness65587": "evidence/browser-attestation-all65587.json and browser-freshness-all65587.json; persistedglobalSetup copiedexact;36matchedsourcehashes,served/distcopyhashsame",
+  "pcv_candidates": [
+    "pcv-eps-candidate.json",
+    "pcv-frc-candidate.json",
+    "pcv-bci-candidate.json",
+    "pcv-rls-candidate.json"
+  ]
 }

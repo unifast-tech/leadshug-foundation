@@ -1,0 +1,11 @@
+{
+  "captured_at_utc": "2026-10-20T16:12:44.574123+00:00",
+  "run": 63018,
+  "scope": "root exact public source observation during declared disposable browser mutant, no production runtime change",
+  "inbox_sha256": "d70bde9ede67759d479f644598356e46aac2916a12b2ed1770c17a169118586c",
+  "baseline_sha256": "d70bde9ede67759d479f644598356e46aac2916a12b2ed1770c17a169118586c",
+  "responder_guard_present": true,
+  "mutant_is_single_guard_omission_from_declared_baseline": false,
+  "browser_test_sha256": "b3604496727a85d7ce12c2cb6e7a479575356a61ef4c529d385047e066a8e0f3",
+  "instrumentation_precedes_held_send": true
+}

@@ -1,0 +1,156 @@
+{
+  "attestation": "foundation_documentation/artifacts/reviews/leadshug-channel-abstraction-20261020/evidence/browser-attestation-all65587.json",
+  "capturedAtUtc": "2026-10-20T16:01:37.842Z",
+  "runtime": "v22.23.3",
+  "served_bundle_sha256": "27c5db465495068402b278ba7c9d3a1f23b8b03797249639190c8a755759563b",
+  "dist_bundle_sha256": "27c5db465495068402b278ba7c9d3a1f23b8b03797249639190c8a755759563b",
+  "public_served_copy_sha256": "27c5db465495068402b278ba7c9d3a1f23b8b03797249639190c8a755759563b",
+  "served_copy_matches": true,
+  "manifest_matches": [
+    {
+      "path": "api-app/src/domain/channels/channel-credential-resolver.ts",
+      "matches_source": true
+    },
+    {
+      "path": "api-app/src/domain/channels/transport/channel-dependencies.spec.ts",
+      "matches_source": true
+    },
+    {
+      "path": "api-app/src/domain/channels/transport/channel.ts",
+      "matches_source": true
+    },
+    {
+      "path": "api-app/src/domain/inbox/conversations.service.ts",
+      "matches_source": true
+    },
+    {
+      "path": "api-app/src/domain/inbox/incoming.service.ts",
+      "matches_source": true
+    },
+    {
+      "path": "api-app/src/domain/inbox/incoming.typebot.integration.spec.ts",
+      "matches_source": true
+    },
+    {
+      "path": "api-app/src/domain/inbox/outbound.service.spec.ts",
+      "matches_source": true
+    },
+    {
+      "path": "api-app/src/domain/inbox/outbound.service.ts",
+      "matches_source": true
+    },
+    {
+      "path": "api-app/src/integrations/channels/channel-adapter-factory.ts",
+      "matches_source": true
+    },
+    {
+      "path": "api-app/src/integrations/channels/channel-adapter-registry.ts",
+      "matches_source": true
+    },
+    {
+      "path": "api-app/src/integrations/channels/channel-transport.module.ts",
+      "matches_source": true
+    },
+    {
+      "path": "api-app/src/integrations/channels/evolution-channel.ts",
+      "matches_source": true
+    },
+    {
+      "path": "api-app/src/integrations/channels/meta-channel.ts",
+      "matches_source": true
+    },
+    {
+      "path": "api-app/src/integrations/channels/prisma-channel-resolver.ts",
+      "matches_source": true
+    },
+    {
+      "path": "api-app/src/integrations/evolution/evolution.client.spec.ts",
+      "matches_source": true
+    },
+    {
+      "path": "api-app/src/integrations/evolution/evolution.client.ts",
+      "matches_source": true
+    },
+    {
+      "path": "api-app/src/integrations/meta/meta.client.spec.ts",
+      "matches_source": true
+    },
+    {
+      "path": "api-app/src/integrations/meta/meta.client.ts",
+      "matches_source": true
+    },
+    {
+      "path": "api-app/src/surfaces/bff/bff.module.ts",
+      "matches_source": true
+    },
+    {
+      "path": "api-app/src/surfaces/bff/conversations.controller.ts",
+      "matches_source": true
+    },
+    {
+      "path": "api-app/src/surfaces/public/conversations.controller.ts",
+      "matches_source": true
+    },
+    {
+      "path": "api-app/src/surfaces/public/public.module.ts",
+      "matches_source": true
+    },
+    {
+      "path": "api-app/src/surfaces/webhooks/webhooks.module.ts",
+      "matches_source": true
+    },
+    {
+      "path": "api-app/test/api-publica.e2e-spec.ts",
+      "matches_source": true
+    },
+    {
+      "path": "api-app/test/browser-server.cjs",
+      "matches_source": true
+    },
+    {
+      "path": "api-app/test/channel-transport.e2e-spec.ts",
+      "matches_source": true
+    },
+    {
+      "path": "api-app/test/helpers.ts",
+      "matches_source": true
+    },
+    {
+      "path": "api-app/test/number-onboarding-pcv.e2e-spec.ts",
+      "matches_source": true
+    },
+    {
+      "path": "api-app/test/number-onboarding-typebot.e2e-spec.ts",
+      "matches_source": true
+    },
+    {
+      "path": "api-app/test/timeline-fixtures.cjs",
+      "matches_source": true
+    },
+    {
+      "path": "web-app/e2e/channel-transport.spec.ts",
+      "matches_source": true
+    },
+    {
+      "path": "web-app/e2e/number-onboarding-freshness.ts",
+      "matches_source": true
+    },
+    {
+      "path": "web-app/e2e/timeline-freshness.ts",
+      "matches_source": true
+    },
+    {
+      "path": "web-app/src/api.spec.ts",
+      "matches_source": true
+    },
+    {
+      "path": "web-app/src/api.ts",
+      "matches_source": true
+    },
+    {
+      "path": "web-app/src/telas/Inbox.tsx",
+      "matches_source": true
+    }
+  ],
+  "limits": "Existing canonical globalSetup attestation and served public asset, copied before later browser runs. This is evidence65587, not future revisedR02 candidate."
+}

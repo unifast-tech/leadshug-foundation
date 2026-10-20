@@ -28,5 +28,12 @@
     }
   ],
   "required_scope_check": "All other staged Foundation files must pass git diff --cached --check with these six exact raw-input path exclusions. Product paths require their own positive-scope clean checks at final freeze.",
-  "limitations": "The unrestricted whitespace check reports these inputs; never report it as an unrestricted PASS. No protected/private paths were discovered/read/staged."
+  "limitations": "The unrestricted whitespace check reports these inputs; never report it as an unrestricted PASS. No protected/private paths were discovered/read/staged.",
+  "round3_addendum": {
+    "immutable_dispatch_inputs": [
+      "evidence/adherence-round3.dispatch.md",
+      "evidence/security-round3.dispatch.md"
+    ],
+    "policy": "Preserve exact reviewed generated input bytes including extra EOF blankline; derived mergeMD EOF normalized. No product/style waiver."
+  }
 }

@@ -1,0 +1,121 @@
+Rule-Spirit Anti-Pattern Scan
+Repository: /mnt/c/unifast/leadshug/leadshug_now_docker
+Stacks: docker
+Findings: 111
+Max active severity: warning
+
+| Stack | Severity | Search Lens | Location | Evidence |
+| --- | --- | --- | --- | --- |
+| shared | review | guard bypass or tactical workaround marker | `scripts/test-channels-local.sh:47` |     api-app/.git\|api-app/src\|api-app/test\|api-app/prisma\|api-app/package.json\|api-app/package-lock.json\|api-app/.env.example\|api-app/.dockerignore\|api-app/.gitignore\|api-app/docker |
+| shared | review | hard-coded local/domain target in source/config | `api-app/src/domain/channels/transport/channel-dependencies.spec.ts:23` |   return rules.filter(([, expression]) => expression.test(source)).map(([name]) => name); |
+| shared | review | hard-coded local/domain target in source/config | `api-app/test/api-publica.e2e-spec.ts:58` |     A = await criarMantenedora(app, 'Alfa', 'dono@alfa.test');  |
+| shared | review | hard-coded local/domain target in source/config | `api-app/test/api-publica.e2e-spec.ts:59` |     B = await criarMantenedora(app, 'Beta', 'dono@beta.test');  |
+| shared | review | hard-coded local/domain target in source/config | `api-app/test/api-publica.e2e-spec.ts:61` |     chaveA = await criarChave(await login(app, 'dono@alfa.test'), 'Campuzz');  |
+| shared | review | hard-coded local/domain target in source/config | `api-app/test/api-publica.e2e-spec.ts:76` |       const cookie = await login(app, 'dono@alfa.test');  |
+| shared | review | hard-coded local/domain target in source/config | `api-app/test/api-publica.e2e-spec.ts:81` |       const cookie = await login(app, 'dono@alfa.test');  |
+| shared | review | hard-coded local/domain target in source/config | `api-app/test/api-publica.e2e-spec.ts:109` |       const cookie = await login(app, 'dono@alfa.test');  |
+| shared | review | hard-coded local/domain target in source/config | `api-app/test/api-publica.e2e-spec.ts:126` |       const cookie = await login(app, 'dono@alfa.test');  |
+| shared | review | hard-coded local/domain target in source/config | `api-app/test/number-onboarding-typebot.e2e-spec.ts:20` |     a = await criarMantenedora(app, 'Typebot tenant A', 'typebot-a@example.test'); |
+| shared | review | hard-coded local/domain target in source/config | `api-app/test/number-onboarding-typebot.e2e-spec.ts:21` |     b = await criarMantenedora(app, 'Typebot tenant B', 'typebot-b@example.test'); |
+| shared | review | hard-coded local/domain target in source/config | `api-app/test/channel-transport.e2e-spec.ts:70` |     const tenant = await criarMantenedora(app, 'Channel outbound fixture', 'channel-outbound@example.test'); |
+| shared | review | hard-coded local/domain target in source/config | `api-app/test/channel-transport.e2e-spec.ts:78` |     cookie = await login(app, 'channel-outbound@example.test'); |
+| shared | review | hard-coded local/domain target in source/config | `api-app/test/channel-transport.e2e-spec.ts:102` |       const tenant = await criarMantenedora(isolated.app, 'Opaque fake contract', 'opaque-fake@example.test'); |
+| shared | review | hard-coded local/domain target in source/config | `api-app/test/channel-transport.e2e-spec.ts:108` |       const localCookie = await login(isolated.app, 'opaque-fake@example.test'); |
+| shared | review | hard-coded local/domain target in source/config | `api-app/test/channel-transport.e2e-spec.ts:139` |         const tenant = await criarMantenedora(isolated.app, `Pre-dispatch ${changed}`, `pre-dispatch-${changed}@example.test`); |
+| shared | review | hard-coded local/domain target in source/config | `api-app/test/channel-transport.e2e-spec.ts:148` |         const localCookie = await login(isolated.app, `pre-dispatch-${changed}@example.test`); |
+| shared | review | hard-coded local/domain target in source/config | `api-app/test/channel-transport.e2e-spec.ts:187` |       const tenant = await criarMantenedora(isolated.app, 'Contradictory Meta ACK', 'contradictory-meta@example.test'); |
+| shared | review | hard-coded local/domain target in source/config | `api-app/test/channel-transport.e2e-spec.ts:192` |       const session = await login(isolated.app, 'contradictory-meta@example.test'); |
+| shared | review | hard-coded local/domain target in source/config | `api-app/test/channel-transport.e2e-spec.ts:219` |     const foreign = await criarMantenedora(app, 'Foreign public destination', 'foreign-public-destination@example.test'); |
+| shared | review | hard-coded local/domain target in source/config | `api-app/test/channel-transport.e2e-spec.ts:220` |     const foreignCookie = await login(app, 'foreign-public-destination@example.test'); |
+| shared | review | hard-coded local/domain target in source/config | `api-app/test/channel-transport.e2e-spec.ts:234` |     const tenantB = await criarMantenedora(app, 'Parallel tenant B', 'parallel-tenant-b@example.test'); |
+| shared | review | hard-coded local/domain target in source/config | `api-app/test/channel-transport.e2e-spec.ts:262` |     const cookieB = await login(app, 'parallel-tenant-b@example.test'); |
+| shared | review | hard-coded local/domain target in source/config | `api-app/test/helpers.ts:164` |   process.env.EVOLUTION_WEBHOOK_URL = 'https://api.example.test/webhooks/evolution'; |
+| shared | review | hard-coded local/domain target in source/config | `api-app/test/number-onboarding-pcv.e2e-spec.ts:14` |   beforeAll(async () => { ({ app, prisma } = await subirApp(undefined, true)); await app.listen(0, '127.0.0.1'); await limparBanco(prisma); }); |
+| shared | review | hard-coded local/domain target in source/config | `api-app/test/number-onboarding-pcv.e2e-spec.ts:18` |     const tenant = await criarMantenedora(app, 'EPS lookup', 'eps-lookup@example.test'); |
+| shared | review | hard-coded local/domain target in source/config | `api-app/test/number-onboarding-pcv.e2e-spec.ts:19` |     const cookie = await login(app, 'eps-lookup@example.test'); |
+| shared | review | hard-coded local/domain target in source/config | `api-app/test/number-onboarding-pcv.e2e-spec.ts:67` |     const tenant = await criarMantenedora(app, 'EPS identity lookup', 'eps-identity@example.test'); |
+| shared | review | hard-coded local/domain target in source/config | `api-app/test/number-onboarding-pcv.e2e-spec.ts:106` |     const tenant = await criarMantenedora(app, 'Channel list EPS', 'channel-list-eps@example.test'); |
+| shared | review | hard-coded local/domain target in source/config | `api-app/test/number-onboarding-pcv.e2e-spec.ts:107` |     const cookie = await login(app, 'channel-list-eps@example.test'); |
+| shared | review | hard-coded local/domain target in source/config | `api-app/test/number-onboarding-pcv.e2e-spec.ts:182` |       const tenant = await criarMantenedora(app, `RLS tenant ${index}`, `rls-${index}@example.test`); |
+| shared | review | hard-coded local/domain target in source/config | `api-app/test/number-onboarding-pcv.e2e-spec.ts:184` |       actors.push({ buId: tenant.businessUnit.id, cookie: await login(app, `rls-${index}@example.test`) }); |
+| shared | review | hard-coded local/domain target in source/config | `api-app/test/browser-server.cjs:23` |   process.env.EVOLUTION_API_URL = 'http://127.0.0.1:3101/provider/evolution'; |
+| shared | review | hard-coded local/domain target in source/config | `api-app/test/browser-server.cjs:26` |   process.env.EVOLUTION_WEBHOOK_URL = 'http://127.0.0.1:3100/webhooks/evolution'; |
+| shared | review | hard-coded local/domain target in source/config | `api-app/test/browser-server.cjs:31` |   process.env.WEB_ORIGIN = 'http://127.0.0.1:4173'; |
+| shared | review | hard-coded local/domain target in source/config | `api-app/test/browser-server.cjs:35` |     const response = await fetch(`http://127.0.0.1:${fixturePort}${path}`, { |
+| shared | review | hard-coded local/domain target in source/config | `api-app/test/browser-server.cjs:132` |         const response = await fetch(`http://127.0.0.1:${process.env.PORT ?? '3100'}/webhooks/evolution`, { method: 'POST', headers: { 'content-type': 'application/json', 'x-leadsh |
+| shared | review | hard-coded local/domain target in source/config | `api-app/test/browser-server.cjs:146` |   app.enableCors({ origin: ['http://127.0.0.1:4173'], credentials: true }); |
+| shared | review | hard-coded local/domain target in source/config | `web-app/e2e/number-onboarding-freshness.ts:39` |     for (const item of [...staged, ...unstaged, ...untracked]) if (scope.test(item.path)) { |
+| shared | review | hard-coded local/domain target in source/config | `scripts/test-channels-local.sh:20` | # below; only api-app/.env.example is mounted, while .env and .env.testing are |
+| shared | review | hard-coded local/domain target in source/config | `scripts/test-channels-local.sh:41` |     .env\|.env.testing\|api-app/.env\|api-app/.env.testing\|api-app/.local-files\|api-app/.local-files/*\|web-app/.env\|web-app/.env.*) |
+| shared | review | hard-coded local/domain target in source/config | `scripts/test-channels-local.sh:137` | for private_path in /workspace/.env /workspace/.env.testing; do |
+| shared | review | hard-coded local/domain target in source/config | `web-app/e2e/channel-transport.spec.ts:3` | const FIXTURES = 'http://127.0.0.1:3101'; |
+| shared | review | hard-coded local/domain target in source/config | `api-app/test/timeline-fixtures.cjs:153` |   const response = await fetch(`http://127.0.0.1:${apiPort}/webhooks/meta`, { |
+| shared | review | hard-coded local/domain target in source/config | `api-app/test/timeline-fixtures.cjs:223` |       if (!/^[0-9a-f]{32}$/i.test(attemptId) \|\| !/^[0-9a-f-]{36}$/i.test(buId)) return json(res, 400, { error: 'invalid attempt scope' }); |
+| shared | review | hard-coded local/domain target in source/config | `api-app/test/timeline-fixtures.cjs:236` |       const query = new URL(req.url, 'http://localhost').searchParams; |
+| shared | review | hard-coded local/domain target in source/config | `api-app/test/timeline-fixtures.cjs:243` |       const query = new URL(req.url, 'http://localhost').searchParams; |
+| shared | review | hard-coded local/domain target in source/config | `api-app/test/timeline-fixtures.cjs:304` | server.listen(fixturePort, '127.0.0.1', () => console.log(`timeline fixtures listening on 127.0.0.1:${fixturePort}`)); |
+| shared | review | hard-coded local/domain target in source/config | `web-app/e2e/timeline-freshness.ts:19` |   for (const item of [...staged, ...unstaged, ...untracked]) if (scope.test(item.path)) { |
+| shared | review | hard-coded local/domain target in source/config | `web-app/e2e/timeline-freshness.ts:47` |   const apiEndpoint = `http://127.0.0.1:${apiPort}`; |
+| shared | review | hard-coded local/domain target in source/config | `web-app/e2e/timeline-freshness.ts:50` |     fetch('http://127.0.0.1:3101/health'), |
+| shared | review | hard-coded local/domain target in source/config | `web-app/e2e/timeline-freshness.ts:51` |     fetch('http://127.0.0.1:4173/'), |
+| shared | review | hard-coded local/domain target in source/config | `web-app/e2e/timeline-freshness.ts:59` |   const jsResponse = await fetch(new URL(asset[1], 'http://127.0.0.1:4173')); |
+| shared | review | hard-coded local/domain target in source/config | `web-app/e2e/timeline-freshness.ts:62` |   const servedPath = resolve(web, 'dist', `.${new URL(asset[1], 'http://127.0.0.1').pathname}`); |
+| shared | review | hard-coded local/domain target in source/config | `web-app/e2e/timeline-freshness.ts:112` |     endpoints: { apiHealth: apiHealth.status, fixtureHealth: fixtureHealth.status, preview: htmlResponse.status, servedBundle: new URL(asset[1], 'http://127.0.0.1:4173').pathname } |
+| shared | review | hard-coded local/domain target in source/config | `web-app/src/api.ts:79` |     const pareceEstatico = res.status === 405 \|\| /^\s*<(!doctype\|html)/i.test(bruto); |
+| docker | warning | hard-coded runtime/domain target in Docker or compose surface | `api-app/src/domain/channels/transport/channel-dependencies.spec.ts:23` |   return rules.filter(([, expression]) => expression.test(source)).map(([name]) => name); |
+| docker | warning | hard-coded runtime/domain target in Docker or compose surface | `api-app/test/api-publica.e2e-spec.ts:58` |     A = await criarMantenedora(app, 'Alfa', 'dono@alfa.test');  |
+| docker | warning | hard-coded runtime/domain target in Docker or compose surface | `api-app/test/api-publica.e2e-spec.ts:59` |     B = await criarMantenedora(app, 'Beta', 'dono@beta.test');  |
+| docker | warning | hard-coded runtime/domain target in Docker or compose surface | `api-app/test/api-publica.e2e-spec.ts:61` |     chaveA = await criarChave(await login(app, 'dono@alfa.test'), 'Campuzz');  |
+| docker | warning | hard-coded runtime/domain target in Docker or compose surface | `api-app/test/api-publica.e2e-spec.ts:76` |       const cookie = await login(app, 'dono@alfa.test');  |
+| docker | warning | hard-coded runtime/domain target in Docker or compose surface | `api-app/test/api-publica.e2e-spec.ts:81` |       const cookie = await login(app, 'dono@alfa.test');  |
+| docker | warning | hard-coded runtime/domain target in Docker or compose surface | `api-app/test/api-publica.e2e-spec.ts:109` |       const cookie = await login(app, 'dono@alfa.test');  |
+| docker | warning | hard-coded runtime/domain target in Docker or compose surface | `api-app/test/api-publica.e2e-spec.ts:126` |       const cookie = await login(app, 'dono@alfa.test');  |
+| docker | warning | hard-coded runtime/domain target in Docker or compose surface | `api-app/test/channel-transport.e2e-spec.ts:70` |     const tenant = await criarMantenedora(app, 'Channel outbound fixture', 'channel-outbound@example.test'); |
+| docker | warning | hard-coded runtime/domain target in Docker or compose surface | `api-app/test/channel-transport.e2e-spec.ts:78` |     cookie = await login(app, 'channel-outbound@example.test'); |
+| docker | warning | hard-coded runtime/domain target in Docker or compose surface | `api-app/test/channel-transport.e2e-spec.ts:102` |       const tenant = await criarMantenedora(isolated.app, 'Opaque fake contract', 'opaque-fake@example.test'); |
+| docker | warning | hard-coded runtime/domain target in Docker or compose surface | `api-app/test/channel-transport.e2e-spec.ts:108` |       const localCookie = await login(isolated.app, 'opaque-fake@example.test'); |
+| docker | warning | hard-coded runtime/domain target in Docker or compose surface | `api-app/test/channel-transport.e2e-spec.ts:139` |         const tenant = await criarMantenedora(isolated.app, `Pre-dispatch ${changed}`, `pre-dispatch-${changed}@example.test`); |
+| docker | warning | hard-coded runtime/domain target in Docker or compose surface | `api-app/test/channel-transport.e2e-spec.ts:148` |         const localCookie = await login(isolated.app, `pre-dispatch-${changed}@example.test`); |
+| docker | warning | hard-coded runtime/domain target in Docker or compose surface | `api-app/test/channel-transport.e2e-spec.ts:187` |       const tenant = await criarMantenedora(isolated.app, 'Contradictory Meta ACK', 'contradictory-meta@example.test'); |
+| docker | warning | hard-coded runtime/domain target in Docker or compose surface | `api-app/test/channel-transport.e2e-spec.ts:192` |       const session = await login(isolated.app, 'contradictory-meta@example.test'); |
+| docker | warning | hard-coded runtime/domain target in Docker or compose surface | `api-app/test/channel-transport.e2e-spec.ts:219` |     const foreign = await criarMantenedora(app, 'Foreign public destination', 'foreign-public-destination@example.test'); |
+| docker | warning | hard-coded runtime/domain target in Docker or compose surface | `api-app/test/channel-transport.e2e-spec.ts:220` |     const foreignCookie = await login(app, 'foreign-public-destination@example.test'); |
+| docker | warning | hard-coded runtime/domain target in Docker or compose surface | `api-app/test/channel-transport.e2e-spec.ts:234` |     const tenantB = await criarMantenedora(app, 'Parallel tenant B', 'parallel-tenant-b@example.test'); |
+| docker | warning | hard-coded runtime/domain target in Docker or compose surface | `api-app/test/channel-transport.e2e-spec.ts:262` |     const cookieB = await login(app, 'parallel-tenant-b@example.test'); |
+| docker | warning | hard-coded runtime/domain target in Docker or compose surface | `api-app/test/helpers.ts:164` |   process.env.EVOLUTION_WEBHOOK_URL = 'https://api.example.test/webhooks/evolution'; |
+| docker | warning | hard-coded runtime/domain target in Docker or compose surface | `api-app/test/number-onboarding-pcv.e2e-spec.ts:14` |   beforeAll(async () => { ({ app, prisma } = await subirApp(undefined, true)); await app.listen(0, '127.0.0.1'); await limparBanco(prisma); }); |
+| docker | warning | hard-coded runtime/domain target in Docker or compose surface | `api-app/test/number-onboarding-pcv.e2e-spec.ts:18` |     const tenant = await criarMantenedora(app, 'EPS lookup', 'eps-lookup@example.test'); |
+| docker | warning | hard-coded runtime/domain target in Docker or compose surface | `api-app/test/number-onboarding-pcv.e2e-spec.ts:19` |     const cookie = await login(app, 'eps-lookup@example.test'); |
+| docker | warning | hard-coded runtime/domain target in Docker or compose surface | `api-app/test/number-onboarding-pcv.e2e-spec.ts:67` |     const tenant = await criarMantenedora(app, 'EPS identity lookup', 'eps-identity@example.test'); |
+| docker | warning | hard-coded runtime/domain target in Docker or compose surface | `api-app/test/number-onboarding-pcv.e2e-spec.ts:106` |     const tenant = await criarMantenedora(app, 'Channel list EPS', 'channel-list-eps@example.test'); |
+| docker | warning | hard-coded runtime/domain target in Docker or compose surface | `api-app/test/number-onboarding-pcv.e2e-spec.ts:107` |     const cookie = await login(app, 'channel-list-eps@example.test'); |
+| docker | warning | hard-coded runtime/domain target in Docker or compose surface | `api-app/test/number-onboarding-pcv.e2e-spec.ts:182` |       const tenant = await criarMantenedora(app, `RLS tenant ${index}`, `rls-${index}@example.test`); |
+| docker | warning | hard-coded runtime/domain target in Docker or compose surface | `api-app/test/number-onboarding-pcv.e2e-spec.ts:184` |       actors.push({ buId: tenant.businessUnit.id, cookie: await login(app, `rls-${index}@example.test`) }); |
+| docker | warning | hard-coded runtime/domain target in Docker or compose surface | `api-app/test/number-onboarding-typebot.e2e-spec.ts:20` |     a = await criarMantenedora(app, 'Typebot tenant A', 'typebot-a@example.test'); |
+| docker | warning | hard-coded runtime/domain target in Docker or compose surface | `api-app/test/number-onboarding-typebot.e2e-spec.ts:21` |     b = await criarMantenedora(app, 'Typebot tenant B', 'typebot-b@example.test'); |
+| docker | warning | hard-coded runtime/domain target in Docker or compose surface | `api-app/test/timeline-fixtures.cjs:153` |   const response = await fetch(`http://127.0.0.1:${apiPort}/webhooks/meta`, { |
+| docker | warning | hard-coded runtime/domain target in Docker or compose surface | `api-app/test/timeline-fixtures.cjs:223` |       if (!/^[0-9a-f]{32}$/i.test(attemptId) \|\| !/^[0-9a-f-]{36}$/i.test(buId)) return json(res, 400, { error: 'invalid attempt scope' }); |
+| docker | warning | hard-coded runtime/domain target in Docker or compose surface | `api-app/test/timeline-fixtures.cjs:236` |       const query = new URL(req.url, 'http://localhost').searchParams; |
+| docker | warning | hard-coded runtime/domain target in Docker or compose surface | `api-app/test/timeline-fixtures.cjs:243` |       const query = new URL(req.url, 'http://localhost').searchParams; |
+| docker | warning | hard-coded runtime/domain target in Docker or compose surface | `api-app/test/timeline-fixtures.cjs:304` | server.listen(fixturePort, '127.0.0.1', () => console.log(`timeline fixtures listening on 127.0.0.1:${fixturePort}`)); |
+| docker | warning | hard-coded runtime/domain target in Docker or compose surface | `web-app/e2e/timeline-freshness.ts:19` |   for (const item of [...staged, ...unstaged, ...untracked]) if (scope.test(item.path)) { |
+| docker | warning | hard-coded runtime/domain target in Docker or compose surface | `web-app/e2e/timeline-freshness.ts:47` |   const apiEndpoint = `http://127.0.0.1:${apiPort}`; |
+| docker | warning | hard-coded runtime/domain target in Docker or compose surface | `web-app/e2e/timeline-freshness.ts:50` |     fetch('http://127.0.0.1:3101/health'), |
+| docker | warning | hard-coded runtime/domain target in Docker or compose surface | `web-app/e2e/timeline-freshness.ts:51` |     fetch('http://127.0.0.1:4173/'), |
+| docker | warning | hard-coded runtime/domain target in Docker or compose surface | `web-app/e2e/timeline-freshness.ts:59` |   const jsResponse = await fetch(new URL(asset[1], 'http://127.0.0.1:4173')); |
+| docker | warning | hard-coded runtime/domain target in Docker or compose surface | `web-app/e2e/timeline-freshness.ts:62` |   const servedPath = resolve(web, 'dist', `.${new URL(asset[1], 'http://127.0.0.1').pathname}`); |
+| docker | warning | hard-coded runtime/domain target in Docker or compose surface | `web-app/e2e/timeline-freshness.ts:112` |     endpoints: { apiHealth: apiHealth.status, fixtureHealth: fixtureHealth.status, preview: htmlResponse.status, servedBundle: new URL(asset[1], 'http://127.0.0.1:4173').pathname } |
+| docker | warning | hard-coded runtime/domain target in Docker or compose surface | `scripts/test-channels-local.sh:20` | # below; only api-app/.env.example is mounted, while .env and .env.testing are |
+| docker | warning | hard-coded runtime/domain target in Docker or compose surface | `scripts/test-channels-local.sh:41` |     .env\|.env.testing\|api-app/.env\|api-app/.env.testing\|api-app/.local-files\|api-app/.local-files/*\|web-app/.env\|web-app/.env.*) |
+| docker | warning | hard-coded runtime/domain target in Docker or compose surface | `scripts/test-channels-local.sh:137` | for private_path in /workspace/.env /workspace/.env.testing; do |
+| docker | warning | hard-coded runtime/domain target in Docker or compose surface | `web-app/e2e/number-onboarding-freshness.ts:39` |     for (const item of [...staged, ...unstaged, ...untracked]) if (scope.test(item.path)) { |
+| docker | warning | hard-coded runtime/domain target in Docker or compose surface | `api-app/test/browser-server.cjs:23` |   process.env.EVOLUTION_API_URL = 'http://127.0.0.1:3101/provider/evolution'; |
+| docker | warning | hard-coded runtime/domain target in Docker or compose surface | `api-app/test/browser-server.cjs:26` |   process.env.EVOLUTION_WEBHOOK_URL = 'http://127.0.0.1:3100/webhooks/evolution'; |
+| docker | warning | hard-coded runtime/domain target in Docker or compose surface | `api-app/test/browser-server.cjs:31` |   process.env.WEB_ORIGIN = 'http://127.0.0.1:4173'; |
+| docker | warning | hard-coded runtime/domain target in Docker or compose surface | `api-app/test/browser-server.cjs:35` |     const response = await fetch(`http://127.0.0.1:${fixturePort}${path}`, { |
+| docker | warning | hard-coded runtime/domain target in Docker or compose surface | `api-app/test/browser-server.cjs:132` |         const response = await fetch(`http://127.0.0.1:${process.env.PORT ?? '3100'}/webhooks/evolution`, { method: 'POST', headers: { 'content-type': 'application/json', 'x-leadsh |
+| docker | warning | hard-coded runtime/domain target in Docker or compose surface | `api-app/test/browser-server.cjs:146` |   app.enableCors({ origin: ['http://127.0.0.1:4173'], credentials: true }); |
+| docker | warning | hard-coded runtime/domain target in Docker or compose surface | `web-app/e2e/channel-transport.spec.ts:3` | const FIXTURES = 'http://127.0.0.1:3101'; |
+| docker | warning | hard-coded runtime/domain target in Docker or compose surface | `web-app/src/api.ts:79` |     const pareceEstatico = res.status === 405 \|\| /^\s*<(!doctype\|html)/i.test(bruto); |
+
+Note: this scanner supports the Rule-Spirit Anti-Pattern Hunt gate; it does not replace rule-specific review or P1/P2 judgment.

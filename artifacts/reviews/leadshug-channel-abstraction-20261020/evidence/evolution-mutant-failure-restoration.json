@@ -1,0 +1,37 @@
+{
+  "captured_at_utc": "2026-10-20T15:57:31.006071+00:00",
+  "run_id": 59583,
+  "terminal_exit_reported_by_executor": 1,
+  "raw_log_path": "foundation_documentation/artifacts/tmp/stcon06-evolution-shipping-mutant.log",
+  "raw_log_sha256": "bf7b65e18fa3e851a31a796adf3864b74e7a16080f2823492af80dbd6c3310a2",
+  "raw_log_bytes": 49707,
+  "selected_log_lines": [
+    " Test Files  21 passed (21)",
+    "      Tests  194 passed (194)",
+    "     \u2192 expected 409 \"Conflict\", got 201 \"Created\"",
+    " FAIL  test/channel-transport.e2e-spec.ts > common Channel outbound (PostgreSQL) > blocks real binding changes inside Meta/Evolution adapter pre-dispatch callbacks",
+    "Error: expected 409 \"Conflict\", got 201 \"Created\"",
+    " Test Files  1 failed | 26 passed (27)",
+    "      Tests  1 failed | 308 passed (309)"
+  ],
+  "mutation_observation": "evidence/evolution-mutant-source-observation.json",
+  "restoration_exact": true,
+  "restored_modules": [
+    {
+      "path": "api-app/src/integrations/channels/meta-channel.ts",
+      "restored_sha256": "997e739cf7d7231918dc97fc347bfeb32a1cd74d084ead8c64b01157022f8138",
+      "reviewed_sha256": "997e739cf7d7231918dc97fc347bfeb32a1cd74d084ead8c64b01157022f8138"
+    },
+    {
+      "path": "api-app/src/integrations/channels/evolution-channel.ts",
+      "restored_sha256": "60faf1ea40fe17ad62495b0f42a2cf958defcb41e3ad72d3d2213751539b460c",
+      "reviewed_sha256": "60faf1ea40fe17ad62495b0f42a2cf958defcb41e3ad72d3d2213751539b460c"
+    },
+    {
+      "path": "web-app/src/telas/Inbox.tsx",
+      "restored_sha256": "d70bde9ede67759d479f644598356e46aac2916a12b2ed1770c17a169118586c",
+      "reviewed_sha256": "d70bde9ede67759d479f644598356e46aac2916a12b2ed1770c17a169118586c"
+    }
+  ],
+  "limitation": "Root independently hashed closed log and exact restored public modules; command exit supplied by executor. Browser mutant result is separately executor-reported; no independent Inbox mutant-source snapshot."
+}

@@ -1,0 +1,131 @@
+{
+  "policy_schema_version": "pcv-1",
+  "schema_version": "stcon06-pcv-evidence-v1",
+  "todo_id": "ST-CON-06",
+  "run_id": "canonical-all65587",
+  "environment_id": "leadshug_channels_validation-Node22.23.3-PostgreSQL16",
+  "executor_id": "/root/stcon06_executor",
+  "reviewer_id": "pending-independent-dedicated-audit",
+  "recorded_at_utc": "2026-10-20T16:12:17.406947+00:00",
+  "evidence_type": "canonical-runner-structured-log",
+  "gate_status": "candidate-for-review; not passed; R02 correction/final candidate binding pending",
+  "raw_log_sha256": "97b84c7b813c364d20933a56b0f420b09e490c3885325317332ac9a2dd5d4445",
+  "lane_id": "RLS",
+  "sample_profile_id": "RLS-SP-L",
+  "acceptance_rule_id": "RLS-A1",
+  "result_summary": "One bounded actual dispatch stage20overlapx5; allaccepted/recorded; no capacity/SLO claim",
+  "artifact_payload": {
+    "stage_profile_observed": {
+      "mode": "bounded concurrent dispatch load",
+      "stages": [
+        {
+          "overlapping_operations": 20,
+          "batches": 5,
+          "operations_total": 100,
+          "duration": "operation-count bounded, not sustained soak"
+        }
+      ]
+    },
+    "thresholds": {
+      "accepted_per_batch": 20,
+      "recorded_per_batch": 20,
+      "duplicate_rows_per_owned_subject": 0
+    },
+    "metrics_summary": {
+      "repetitions": 5,
+      "operationsPerRepetition": 20,
+      "operationCounts": [
+        20,
+        20,
+        20,
+        20,
+        20
+      ],
+      "acceptedCounts": [
+        20,
+        20,
+        20,
+        20,
+        20
+      ],
+      "recordedCounts": [
+        20,
+        20,
+        20,
+        20,
+        20
+      ],
+      "limits": "Disposable PostgreSQL and provider fake; concurrent integrity observation, not capacity/SLO evidence."
+    },
+    "comparison": {
+      "accepted_counts_equal_threshold": true,
+      "recorded_counts_equal_threshold": true
+    },
+    "supplementary_scoped_read_stage": {
+      "policy_schema_version": "pcv-1",
+      "lane_id": "RLS",
+      "trigger_result": "recommended",
+      "trigger_severity": "medium",
+      "trigger_reason_code": "RLS-QUEUE-WORKER-REALTIME-CHANGED",
+      "gate_deadline": "before_local_implemented",
+      "min_evidence_rule_id": "RLS-E1",
+      "acceptance_rule_id": "RLS-A1",
+      "stage_profile_observed": "RLS-SP-L",
+      "clients": 5,
+      "readsPerClient": 6,
+      "totalScopeChecks": 30,
+      "observed": [
+        {
+          "client": 0,
+          "ownReads": 3,
+          "foreignReads": 3
+        },
+        {
+          "client": 1,
+          "ownReads": 3,
+          "foreignReads": 3
+        },
+        {
+          "client": 3,
+          "ownReads": 3,
+          "foreignReads": 3
+        },
+        {
+          "client": 4,
+          "ownReads": 3,
+          "foreignReads": 3
+        },
+        {
+          "client": 2,
+          "ownReads": 3,
+          "foreignReads": 3
+        }
+      ],
+      "thresholds": {
+        "ownBuReadStatus": 200,
+        "foreignTenantReadStatus": 404,
+        "providerCallsDuringListing": 0
+      },
+      "providerCalls": {
+        "calibration": "one fixture Meta number-list operation was detected before the read stage",
+        "before": {
+          "meta": 1,
+          "evolution": 0
+        },
+        "after": {
+          "meta": 1,
+          "evolution": 0
+        },
+        "duringReadDelta": {
+          "meta": 0,
+          "evolution": 0
+        }
+      },
+      "elapsedMs": 82.8336260000001,
+      "metrics_summary": "Five authenticated clients ran concurrently; each completed three sequential own-BU and three sequential foreign-tenant reads; all instrumented Meta/Evolution operations remained unchanged during channel listing.",
+      "limits": "One bounded local PostgreSQL stage; not a capacity, latency SLO, or provider load claim."
+    },
+    "limits": "No latency distribution, throughput capacity, saturation or soak claim; observed elapsed time only; controlled provider not live WhatsApp"
+  },
+  "artifact_sha256": "ab0784c63665847728382553b00989db0df3cea952490877205f8826d7e61ca1"
+}

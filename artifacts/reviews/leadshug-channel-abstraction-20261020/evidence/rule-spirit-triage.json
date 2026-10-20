@@ -1,0 +1,787 @@
+{
+  "scope": "111 raw selected-public-source heuristic signals; original scanner output preserved; no allowlist/suppression",
+  "counts": {
+    "nonfinding": 109,
+    "pending": 2
+  },
+  "findings": [
+    {
+      "key": "cf0b601ff5cb6e3e",
+      "location": "scripts/test-channels-local.sh:47",
+      "lens": "guard bypass or tactical workaround marker",
+      "disposition": "nonfinding",
+      "reason": "Positive public bind inventory before path stat; explicitly excludes private files. It enforces the boundary rather than bypassing validation."
+    },
+    {
+      "key": "7be7ce842e56aed3",
+      "location": "api-app/src/domain/channels/transport/channel-dependencies.spec.ts:23",
+      "lens": "hard-coded local/domain target in source/config",
+      "disposition": "nonfinding",
+      "reason": "Regular-expression .test call is a pattern operation, not a hard-coded network domain."
+    },
+    {
+      "key": "e75f43927d5f4119",
+      "location": "api-app/test/api-publica.e2e-spec.ts:58",
+      "lens": "hard-coded local/domain target in source/config",
+      "disposition": "nonfinding",
+      "reason": "Declared disposable fixture subject/domain or loopback validation endpoint; production gateway/tunnel never exposes validation3100/3101/4173. No live external target or ambient business subject."
+    },
+    {
+      "key": "3e4968db7fa3b7de",
+      "location": "api-app/test/api-publica.e2e-spec.ts:59",
+      "lens": "hard-coded local/domain target in source/config",
+      "disposition": "nonfinding",
+      "reason": "Declared disposable fixture subject/domain or loopback validation endpoint; production gateway/tunnel never exposes validation3100/3101/4173. No live external target or ambient business subject."
+    },
+    {
+      "key": "0d1a75f037521a07",
+      "location": "api-app/test/api-publica.e2e-spec.ts:61",
+      "lens": "hard-coded local/domain target in source/config",
+      "disposition": "nonfinding",
+      "reason": "Declared disposable fixture subject/domain or loopback validation endpoint; production gateway/tunnel never exposes validation3100/3101/4173. No live external target or ambient business subject."
+    },
+    {
+      "key": "8cf9d03b85e25238",
+      "location": "api-app/test/api-publica.e2e-spec.ts:76",
+      "lens": "hard-coded local/domain target in source/config",
+      "disposition": "nonfinding",
+      "reason": "Declared disposable fixture subject/domain or loopback validation endpoint; production gateway/tunnel never exposes validation3100/3101/4173. No live external target or ambient business subject."
+    },
+    {
+      "key": "b744fed560899eef",
+      "location": "api-app/test/api-publica.e2e-spec.ts:81",
+      "lens": "hard-coded local/domain target in source/config",
+      "disposition": "nonfinding",
+      "reason": "Declared disposable fixture subject/domain or loopback validation endpoint; production gateway/tunnel never exposes validation3100/3101/4173. No live external target or ambient business subject."
+    },
+    {
+      "key": "8106a7edce393f64",
+      "location": "api-app/test/api-publica.e2e-spec.ts:109",
+      "lens": "hard-coded local/domain target in source/config",
+      "disposition": "nonfinding",
+      "reason": "Declared disposable fixture subject/domain or loopback validation endpoint; production gateway/tunnel never exposes validation3100/3101/4173. No live external target or ambient business subject."
+    },
+    {
+      "key": "c67f30a3aaccb0ae",
+      "location": "api-app/test/api-publica.e2e-spec.ts:126",
+      "lens": "hard-coded local/domain target in source/config",
+      "disposition": "nonfinding",
+      "reason": "Declared disposable fixture subject/domain or loopback validation endpoint; production gateway/tunnel never exposes validation3100/3101/4173. No live external target or ambient business subject."
+    },
+    {
+      "key": "a729d6ef0ec3dc4c",
+      "location": "api-app/test/number-onboarding-typebot.e2e-spec.ts:20",
+      "lens": "hard-coded local/domain target in source/config",
+      "disposition": "nonfinding",
+      "reason": "Declared disposable fixture subject/domain or loopback validation endpoint; production gateway/tunnel never exposes validation3100/3101/4173. No live external target or ambient business subject."
+    },
+    {
+      "key": "09d6498b633fc8a2",
+      "location": "api-app/test/number-onboarding-typebot.e2e-spec.ts:21",
+      "lens": "hard-coded local/domain target in source/config",
+      "disposition": "nonfinding",
+      "reason": "Declared disposable fixture subject/domain or loopback validation endpoint; production gateway/tunnel never exposes validation3100/3101/4173. No live external target or ambient business subject."
+    },
+    {
+      "key": "d5caaf36a5515fec",
+      "location": "api-app/test/channel-transport.e2e-spec.ts:70",
+      "lens": "hard-coded local/domain target in source/config",
+      "disposition": "nonfinding",
+      "reason": "Declared disposable fixture subject/domain or loopback validation endpoint; production gateway/tunnel never exposes validation3100/3101/4173. No live external target or ambient business subject."
+    },
+    {
+      "key": "25395a8bcc5c28c4",
+      "location": "api-app/test/channel-transport.e2e-spec.ts:78",
+      "lens": "hard-coded local/domain target in source/config",
+      "disposition": "nonfinding",
+      "reason": "Declared disposable fixture subject/domain or loopback validation endpoint; production gateway/tunnel never exposes validation3100/3101/4173. No live external target or ambient business subject."
+    },
+    {
+      "key": "62cd779fc0fcf186",
+      "location": "api-app/test/channel-transport.e2e-spec.ts:102",
+      "lens": "hard-coded local/domain target in source/config",
+      "disposition": "nonfinding",
+      "reason": "Declared disposable fixture subject/domain or loopback validation endpoint; production gateway/tunnel never exposes validation3100/3101/4173. No live external target or ambient business subject."
+    },
+    {
+      "key": "397d6264478c2de1",
+      "location": "api-app/test/channel-transport.e2e-spec.ts:108",
+      "lens": "hard-coded local/domain target in source/config",
+      "disposition": "nonfinding",
+      "reason": "Declared disposable fixture subject/domain or loopback validation endpoint; production gateway/tunnel never exposes validation3100/3101/4173. No live external target or ambient business subject."
+    },
+    {
+      "key": "6df67aa1171b5a5b",
+      "location": "api-app/test/channel-transport.e2e-spec.ts:139",
+      "lens": "hard-coded local/domain target in source/config",
+      "disposition": "nonfinding",
+      "reason": "Declared disposable fixture subject/domain or loopback validation endpoint; production gateway/tunnel never exposes validation3100/3101/4173. No live external target or ambient business subject."
+    },
+    {
+      "key": "e97fd988676d6269",
+      "location": "api-app/test/channel-transport.e2e-spec.ts:148",
+      "lens": "hard-coded local/domain target in source/config",
+      "disposition": "nonfinding",
+      "reason": "Declared disposable fixture subject/domain or loopback validation endpoint; production gateway/tunnel never exposes validation3100/3101/4173. No live external target or ambient business subject."
+    },
+    {
+      "key": "96bf553727462fad",
+      "location": "api-app/test/channel-transport.e2e-spec.ts:187",
+      "lens": "hard-coded local/domain target in source/config",
+      "disposition": "nonfinding",
+      "reason": "Declared disposable fixture subject/domain or loopback validation endpoint; production gateway/tunnel never exposes validation3100/3101/4173. No live external target or ambient business subject."
+    },
+    {
+      "key": "f5549f7e57348fd7",
+      "location": "api-app/test/channel-transport.e2e-spec.ts:192",
+      "lens": "hard-coded local/domain target in source/config",
+      "disposition": "nonfinding",
+      "reason": "Declared disposable fixture subject/domain or loopback validation endpoint; production gateway/tunnel never exposes validation3100/3101/4173. No live external target or ambient business subject."
+    },
+    {
+      "key": "dcab8e38f793b6bb",
+      "location": "api-app/test/channel-transport.e2e-spec.ts:219",
+      "lens": "hard-coded local/domain target in source/config",
+      "disposition": "nonfinding",
+      "reason": "Declared disposable fixture subject/domain or loopback validation endpoint; production gateway/tunnel never exposes validation3100/3101/4173. No live external target or ambient business subject."
+    },
+    {
+      "key": "9f8e0317e801a917",
+      "location": "api-app/test/channel-transport.e2e-spec.ts:220",
+      "lens": "hard-coded local/domain target in source/config",
+      "disposition": "nonfinding",
+      "reason": "Declared disposable fixture subject/domain or loopback validation endpoint; production gateway/tunnel never exposes validation3100/3101/4173. No live external target or ambient business subject."
+    },
+    {
+      "key": "6ae92de5af4ad584",
+      "location": "api-app/test/channel-transport.e2e-spec.ts:234",
+      "lens": "hard-coded local/domain target in source/config",
+      "disposition": "nonfinding",
+      "reason": "Declared disposable fixture subject/domain or loopback validation endpoint; production gateway/tunnel never exposes validation3100/3101/4173. No live external target or ambient business subject."
+    },
+    {
+      "key": "81c3d099f0adf785",
+      "location": "api-app/test/channel-transport.e2e-spec.ts:262",
+      "lens": "hard-coded local/domain target in source/config",
+      "disposition": "nonfinding",
+      "reason": "Declared disposable fixture subject/domain or loopback validation endpoint; production gateway/tunnel never exposes validation3100/3101/4173. No live external target or ambient business subject."
+    },
+    {
+      "key": "fc28e09689901399",
+      "location": "api-app/test/helpers.ts:164",
+      "lens": "hard-coded local/domain target in source/config",
+      "disposition": "nonfinding",
+      "reason": "Declared disposable fixture subject/domain or loopback validation endpoint; production gateway/tunnel never exposes validation3100/3101/4173. No live external target or ambient business subject."
+    },
+    {
+      "key": "d4235f93c3f77059",
+      "location": "api-app/test/number-onboarding-pcv.e2e-spec.ts:14",
+      "lens": "hard-coded local/domain target in source/config",
+      "disposition": "nonfinding",
+      "reason": "Declared disposable fixture subject/domain or loopback validation endpoint; production gateway/tunnel never exposes validation3100/3101/4173. No live external target or ambient business subject."
+    },
+    {
+      "key": "86dac72a94cba7cf",
+      "location": "api-app/test/number-onboarding-pcv.e2e-spec.ts:18",
+      "lens": "hard-coded local/domain target in source/config",
+      "disposition": "nonfinding",
+      "reason": "Declared disposable fixture subject/domain or loopback validation endpoint; production gateway/tunnel never exposes validation3100/3101/4173. No live external target or ambient business subject."
+    },
+    {
+      "key": "c25b1bd55a824686",
+      "location": "api-app/test/number-onboarding-pcv.e2e-spec.ts:19",
+      "lens": "hard-coded local/domain target in source/config",
+      "disposition": "nonfinding",
+      "reason": "Declared disposable fixture subject/domain or loopback validation endpoint; production gateway/tunnel never exposes validation3100/3101/4173. No live external target or ambient business subject."
+    },
+    {
+      "key": "cf024a18815b1890",
+      "location": "api-app/test/number-onboarding-pcv.e2e-spec.ts:67",
+      "lens": "hard-coded local/domain target in source/config",
+      "disposition": "nonfinding",
+      "reason": "Declared disposable fixture subject/domain or loopback validation endpoint; production gateway/tunnel never exposes validation3100/3101/4173. No live external target or ambient business subject."
+    },
+    {
+      "key": "ed7c071fd8ca85c9",
+      "location": "api-app/test/number-onboarding-pcv.e2e-spec.ts:106",
+      "lens": "hard-coded local/domain target in source/config",
+      "disposition": "nonfinding",
+      "reason": "Declared disposable fixture subject/domain or loopback validation endpoint; production gateway/tunnel never exposes validation3100/3101/4173. No live external target or ambient business subject."
+    },
+    {
+      "key": "8c0e63d80ebba24a",
+      "location": "api-app/test/number-onboarding-pcv.e2e-spec.ts:107",
+      "lens": "hard-coded local/domain target in source/config",
+      "disposition": "nonfinding",
+      "reason": "Declared disposable fixture subject/domain or loopback validation endpoint; production gateway/tunnel never exposes validation3100/3101/4173. No live external target or ambient business subject."
+    },
+    {
+      "key": "7b6d48413427d302",
+      "location": "api-app/test/number-onboarding-pcv.e2e-spec.ts:182",
+      "lens": "hard-coded local/domain target in source/config",
+      "disposition": "nonfinding",
+      "reason": "Declared disposable fixture subject/domain or loopback validation endpoint; production gateway/tunnel never exposes validation3100/3101/4173. No live external target or ambient business subject."
+    },
+    {
+      "key": "fc895381addd4ecc",
+      "location": "api-app/test/number-onboarding-pcv.e2e-spec.ts:184",
+      "lens": "hard-coded local/domain target in source/config",
+      "disposition": "nonfinding",
+      "reason": "Declared disposable fixture subject/domain or loopback validation endpoint; production gateway/tunnel never exposes validation3100/3101/4173. No live external target or ambient business subject."
+    },
+    {
+      "key": "136bef79d231e8ba",
+      "location": "api-app/test/browser-server.cjs:23",
+      "lens": "hard-coded local/domain target in source/config",
+      "disposition": "nonfinding",
+      "reason": "Declared disposable fixture subject/domain or loopback validation endpoint; production gateway/tunnel never exposes validation3100/3101/4173. No live external target or ambient business subject."
+    },
+    {
+      "key": "b21b0dfd7e8d27d3",
+      "location": "api-app/test/browser-server.cjs:26",
+      "lens": "hard-coded local/domain target in source/config",
+      "disposition": "nonfinding",
+      "reason": "Declared disposable fixture subject/domain or loopback validation endpoint; production gateway/tunnel never exposes validation3100/3101/4173. No live external target or ambient business subject."
+    },
+    {
+      "key": "5864f4bd86b4b682",
+      "location": "api-app/test/browser-server.cjs:31",
+      "lens": "hard-coded local/domain target in source/config",
+      "disposition": "nonfinding",
+      "reason": "Declared disposable fixture subject/domain or loopback validation endpoint; production gateway/tunnel never exposes validation3100/3101/4173. No live external target or ambient business subject."
+    },
+    {
+      "key": "eca028336b828de4",
+      "location": "api-app/test/browser-server.cjs:35",
+      "lens": "hard-coded local/domain target in source/config",
+      "disposition": "nonfinding",
+      "reason": "Declared disposable fixture subject/domain or loopback validation endpoint; production gateway/tunnel never exposes validation3100/3101/4173. No live external target or ambient business subject."
+    },
+    {
+      "key": "ccef291b43d4b9c5",
+      "location": "api-app/test/browser-server.cjs:132",
+      "lens": "hard-coded local/domain target in source/config",
+      "disposition": "nonfinding",
+      "reason": "Declared disposable fixture subject/domain or loopback validation endpoint; production gateway/tunnel never exposes validation3100/3101/4173. No live external target or ambient business subject."
+    },
+    {
+      "key": "526bb31d3ed0eeea",
+      "location": "api-app/test/browser-server.cjs:146",
+      "lens": "hard-coded local/domain target in source/config",
+      "disposition": "nonfinding",
+      "reason": "Declared disposable fixture subject/domain or loopback validation endpoint; production gateway/tunnel never exposes validation3100/3101/4173. No live external target or ambient business subject."
+    },
+    {
+      "key": "894245a06a49ed9d",
+      "location": "web-app/e2e/number-onboarding-freshness.ts:39",
+      "lens": "hard-coded local/domain target in source/config",
+      "disposition": "nonfinding",
+      "reason": "Regular-expression .test call is a pattern operation, not a hard-coded network domain."
+    },
+    {
+      "key": "d21d37f4e9adf217",
+      "location": "scripts/test-channels-local.sh:20",
+      "lens": "hard-coded local/domain target in source/config",
+      "disposition": "pending",
+      "reason": "Requires independent manual review; not waived."
+    },
+    {
+      "key": "6de8fecad68bec2c",
+      "location": "scripts/test-channels-local.sh:41",
+      "lens": "hard-coded local/domain target in source/config",
+      "disposition": "nonfinding",
+      "reason": "Literal private-path exclusion or container public-example mask check; this is a denial rule, not an accessed private host path."
+    },
+    {
+      "key": "c8ece37d9bbab6b9",
+      "location": "scripts/test-channels-local.sh:137",
+      "lens": "hard-coded local/domain target in source/config",
+      "disposition": "nonfinding",
+      "reason": "Literal private-path exclusion or container public-example mask check; this is a denial rule, not an accessed private host path."
+    },
+    {
+      "key": "0436ea8e701f8438",
+      "location": "web-app/e2e/channel-transport.spec.ts:3",
+      "lens": "hard-coded local/domain target in source/config",
+      "disposition": "nonfinding",
+      "reason": "Declared disposable fixture subject/domain or loopback validation endpoint; production gateway/tunnel never exposes validation3100/3101/4173. No live external target or ambient business subject."
+    },
+    {
+      "key": "d46011fd6e3873da",
+      "location": "api-app/test/timeline-fixtures.cjs:153",
+      "lens": "hard-coded local/domain target in source/config",
+      "disposition": "nonfinding",
+      "reason": "Declared disposable fixture subject/domain or loopback validation endpoint; production gateway/tunnel never exposes validation3100/3101/4173. No live external target or ambient business subject."
+    },
+    {
+      "key": "68ecff82501c4db1",
+      "location": "api-app/test/timeline-fixtures.cjs:223",
+      "lens": "hard-coded local/domain target in source/config",
+      "disposition": "nonfinding",
+      "reason": "Declared disposable fixture subject/domain or loopback validation endpoint; production gateway/tunnel never exposes validation3100/3101/4173. No live external target or ambient business subject."
+    },
+    {
+      "key": "2d9f8ab34ce0ca64",
+      "location": "api-app/test/timeline-fixtures.cjs:236",
+      "lens": "hard-coded local/domain target in source/config",
+      "disposition": "nonfinding",
+      "reason": "Declared disposable fixture subject/domain or loopback validation endpoint; production gateway/tunnel never exposes validation3100/3101/4173. No live external target or ambient business subject."
+    },
+    {
+      "key": "734af3761be24d6e",
+      "location": "api-app/test/timeline-fixtures.cjs:243",
+      "lens": "hard-coded local/domain target in source/config",
+      "disposition": "nonfinding",
+      "reason": "Declared disposable fixture subject/domain or loopback validation endpoint; production gateway/tunnel never exposes validation3100/3101/4173. No live external target or ambient business subject."
+    },
+    {
+      "key": "0e738cfc91264419",
+      "location": "api-app/test/timeline-fixtures.cjs:304",
+      "lens": "hard-coded local/domain target in source/config",
+      "disposition": "nonfinding",
+      "reason": "Declared disposable fixture subject/domain or loopback validation endpoint; production gateway/tunnel never exposes validation3100/3101/4173. No live external target or ambient business subject."
+    },
+    {
+      "key": "fd38e715b75a1ddb",
+      "location": "web-app/e2e/timeline-freshness.ts:19",
+      "lens": "hard-coded local/domain target in source/config",
+      "disposition": "nonfinding",
+      "reason": "Regular-expression .test call is a pattern operation, not a hard-coded network domain."
+    },
+    {
+      "key": "a5219b58a23b48b7",
+      "location": "web-app/e2e/timeline-freshness.ts:47",
+      "lens": "hard-coded local/domain target in source/config",
+      "disposition": "nonfinding",
+      "reason": "Declared disposable fixture subject/domain or loopback validation endpoint; production gateway/tunnel never exposes validation3100/3101/4173. No live external target or ambient business subject."
+    },
+    {
+      "key": "b4e4f1ef92887f7f",
+      "location": "web-app/e2e/timeline-freshness.ts:50",
+      "lens": "hard-coded local/domain target in source/config",
+      "disposition": "nonfinding",
+      "reason": "Declared disposable fixture subject/domain or loopback validation endpoint; production gateway/tunnel never exposes validation3100/3101/4173. No live external target or ambient business subject."
+    },
+    {
+      "key": "36cc2a01f5b3f6d3",
+      "location": "web-app/e2e/timeline-freshness.ts:51",
+      "lens": "hard-coded local/domain target in source/config",
+      "disposition": "nonfinding",
+      "reason": "Declared disposable fixture subject/domain or loopback validation endpoint; production gateway/tunnel never exposes validation3100/3101/4173. No live external target or ambient business subject."
+    },
+    {
+      "key": "e0bcaf1bbbf840c7",
+      "location": "web-app/e2e/timeline-freshness.ts:59",
+      "lens": "hard-coded local/domain target in source/config",
+      "disposition": "nonfinding",
+      "reason": "Declared disposable fixture subject/domain or loopback validation endpoint; production gateway/tunnel never exposes validation3100/3101/4173. No live external target or ambient business subject."
+    },
+    {
+      "key": "ef702cbe7ce76787",
+      "location": "web-app/e2e/timeline-freshness.ts:62",
+      "lens": "hard-coded local/domain target in source/config",
+      "disposition": "nonfinding",
+      "reason": "Declared disposable fixture subject/domain or loopback validation endpoint; production gateway/tunnel never exposes validation3100/3101/4173. No live external target or ambient business subject."
+    },
+    {
+      "key": "5c5e6a50969bcf8b",
+      "location": "web-app/e2e/timeline-freshness.ts:112",
+      "lens": "hard-coded local/domain target in source/config",
+      "disposition": "nonfinding",
+      "reason": "Declared disposable fixture subject/domain or loopback validation endpoint; production gateway/tunnel never exposes validation3100/3101/4173. No live external target or ambient business subject."
+    },
+    {
+      "key": "47251e9aa3f2f619",
+      "location": "web-app/src/api.ts:79",
+      "lens": "hard-coded local/domain target in source/config",
+      "disposition": "nonfinding",
+      "reason": "HTML detection regex; no runtime destination is introduced."
+    },
+    {
+      "key": "6be44c42b0754539",
+      "location": "api-app/src/domain/channels/transport/channel-dependencies.spec.ts:23",
+      "lens": "hard-coded runtime/domain target in Docker or compose surface",
+      "disposition": "nonfinding",
+      "reason": "Regular-expression .test call is a pattern operation, not a hard-coded network domain."
+    },
+    {
+      "key": "95a4746257da8c32",
+      "location": "api-app/test/api-publica.e2e-spec.ts:58",
+      "lens": "hard-coded runtime/domain target in Docker or compose surface",
+      "disposition": "nonfinding",
+      "reason": "Declared disposable fixture subject/domain or loopback validation endpoint; production gateway/tunnel never exposes validation3100/3101/4173. No live external target or ambient business subject."
+    },
+    {
+      "key": "7f66e0a4ec51ce5e",
+      "location": "api-app/test/api-publica.e2e-spec.ts:59",
+      "lens": "hard-coded runtime/domain target in Docker or compose surface",
+      "disposition": "nonfinding",
+      "reason": "Declared disposable fixture subject/domain or loopback validation endpoint; production gateway/tunnel never exposes validation3100/3101/4173. No live external target or ambient business subject."
+    },
+    {
+      "key": "6bb8bea8322eaded",
+      "location": "api-app/test/api-publica.e2e-spec.ts:61",
+      "lens": "hard-coded runtime/domain target in Docker or compose surface",
+      "disposition": "nonfinding",
+      "reason": "Declared disposable fixture subject/domain or loopback validation endpoint; production gateway/tunnel never exposes validation3100/3101/4173. No live external target or ambient business subject."
+    },
+    {
+      "key": "8d7943baea760311",
+      "location": "api-app/test/api-publica.e2e-spec.ts:76",
+      "lens": "hard-coded runtime/domain target in Docker or compose surface",
+      "disposition": "nonfinding",
+      "reason": "Declared disposable fixture subject/domain or loopback validation endpoint; production gateway/tunnel never exposes validation3100/3101/4173. No live external target or ambient business subject."
+    },
+    {
+      "key": "ecb07641b3734aac",
+      "location": "api-app/test/api-publica.e2e-spec.ts:81",
+      "lens": "hard-coded runtime/domain target in Docker or compose surface",
+      "disposition": "nonfinding",
+      "reason": "Declared disposable fixture subject/domain or loopback validation endpoint; production gateway/tunnel never exposes validation3100/3101/4173. No live external target or ambient business subject."
+    },
+    {
+      "key": "7f3f85b598a6f0e6",
+      "location": "api-app/test/api-publica.e2e-spec.ts:109",
+      "lens": "hard-coded runtime/domain target in Docker or compose surface",
+      "disposition": "nonfinding",
+      "reason": "Declared disposable fixture subject/domain or loopback validation endpoint; production gateway/tunnel never exposes validation3100/3101/4173. No live external target or ambient business subject."
+    },
+    {
+      "key": "065ba68741212b75",
+      "location": "api-app/test/api-publica.e2e-spec.ts:126",
+      "lens": "hard-coded runtime/domain target in Docker or compose surface",
+      "disposition": "nonfinding",
+      "reason": "Declared disposable fixture subject/domain or loopback validation endpoint; production gateway/tunnel never exposes validation3100/3101/4173. No live external target or ambient business subject."
+    },
+    {
+      "key": "7c5deed613a14448",
+      "location": "api-app/test/channel-transport.e2e-spec.ts:70",
+      "lens": "hard-coded runtime/domain target in Docker or compose surface",
+      "disposition": "nonfinding",
+      "reason": "Declared disposable fixture subject/domain or loopback validation endpoint; production gateway/tunnel never exposes validation3100/3101/4173. No live external target or ambient business subject."
+    },
+    {
+      "key": "0ec7afce84acac0a",
+      "location": "api-app/test/channel-transport.e2e-spec.ts:78",
+      "lens": "hard-coded runtime/domain target in Docker or compose surface",
+      "disposition": "nonfinding",
+      "reason": "Declared disposable fixture subject/domain or loopback validation endpoint; production gateway/tunnel never exposes validation3100/3101/4173. No live external target or ambient business subject."
+    },
+    {
+      "key": "a8336cdf70b129ed",
+      "location": "api-app/test/channel-transport.e2e-spec.ts:102",
+      "lens": "hard-coded runtime/domain target in Docker or compose surface",
+      "disposition": "nonfinding",
+      "reason": "Declared disposable fixture subject/domain or loopback validation endpoint; production gateway/tunnel never exposes validation3100/3101/4173. No live external target or ambient business subject."
+    },
+    {
+      "key": "f4e2c3edb527afba",
+      "location": "api-app/test/channel-transport.e2e-spec.ts:108",
+      "lens": "hard-coded runtime/domain target in Docker or compose surface",
+      "disposition": "nonfinding",
+      "reason": "Declared disposable fixture subject/domain or loopback validation endpoint; production gateway/tunnel never exposes validation3100/3101/4173. No live external target or ambient business subject."
+    },
+    {
+      "key": "931ab02977c21768",
+      "location": "api-app/test/channel-transport.e2e-spec.ts:139",
+      "lens": "hard-coded runtime/domain target in Docker or compose surface",
+      "disposition": "nonfinding",
+      "reason": "Declared disposable fixture subject/domain or loopback validation endpoint; production gateway/tunnel never exposes validation3100/3101/4173. No live external target or ambient business subject."
+    },
+    {
+      "key": "a7fb5ed07294bd30",
+      "location": "api-app/test/channel-transport.e2e-spec.ts:148",
+      "lens": "hard-coded runtime/domain target in Docker or compose surface",
+      "disposition": "nonfinding",
+      "reason": "Declared disposable fixture subject/domain or loopback validation endpoint; production gateway/tunnel never exposes validation3100/3101/4173. No live external target or ambient business subject."
+    },
+    {
+      "key": "19335d4e01607abc",
+      "location": "api-app/test/channel-transport.e2e-spec.ts:187",
+      "lens": "hard-coded runtime/domain target in Docker or compose surface",
+      "disposition": "nonfinding",
+      "reason": "Declared disposable fixture subject/domain or loopback validation endpoint; production gateway/tunnel never exposes validation3100/3101/4173. No live external target or ambient business subject."
+    },
+    {
+      "key": "9076087bd76eba00",
+      "location": "api-app/test/channel-transport.e2e-spec.ts:192",
+      "lens": "hard-coded runtime/domain target in Docker or compose surface",
+      "disposition": "nonfinding",
+      "reason": "Declared disposable fixture subject/domain or loopback validation endpoint; production gateway/tunnel never exposes validation3100/3101/4173. No live external target or ambient business subject."
+    },
+    {
+      "key": "d21ada7ba8f1b81c",
+      "location": "api-app/test/channel-transport.e2e-spec.ts:219",
+      "lens": "hard-coded runtime/domain target in Docker or compose surface",
+      "disposition": "nonfinding",
+      "reason": "Declared disposable fixture subject/domain or loopback validation endpoint; production gateway/tunnel never exposes validation3100/3101/4173. No live external target or ambient business subject."
+    },
+    {
+      "key": "040b74350ae1b1ad",
+      "location": "api-app/test/channel-transport.e2e-spec.ts:220",
+      "lens": "hard-coded runtime/domain target in Docker or compose surface",
+      "disposition": "nonfinding",
+      "reason": "Declared disposable fixture subject/domain or loopback validation endpoint; production gateway/tunnel never exposes validation3100/3101/4173. No live external target or ambient business subject."
+    },
+    {
+      "key": "3feec14bb5bd5e08",
+      "location": "api-app/test/channel-transport.e2e-spec.ts:234",
+      "lens": "hard-coded runtime/domain target in Docker or compose surface",
+      "disposition": "nonfinding",
+      "reason": "Declared disposable fixture subject/domain or loopback validation endpoint; production gateway/tunnel never exposes validation3100/3101/4173. No live external target or ambient business subject."
+    },
+    {
+      "key": "46a6191e35634fed",
+      "location": "api-app/test/channel-transport.e2e-spec.ts:262",
+      "lens": "hard-coded runtime/domain target in Docker or compose surface",
+      "disposition": "nonfinding",
+      "reason": "Declared disposable fixture subject/domain or loopback validation endpoint; production gateway/tunnel never exposes validation3100/3101/4173. No live external target or ambient business subject."
+    },
+    {
+      "key": "2aff4fd4dc02b497",
+      "location": "api-app/test/helpers.ts:164",
+      "lens": "hard-coded runtime/domain target in Docker or compose surface",
+      "disposition": "nonfinding",
+      "reason": "Declared disposable fixture subject/domain or loopback validation endpoint; production gateway/tunnel never exposes validation3100/3101/4173. No live external target or ambient business subject."
+    },
+    {
+      "key": "9b78739cc9db0eb5",
+      "location": "api-app/test/number-onboarding-pcv.e2e-spec.ts:14",
+      "lens": "hard-coded runtime/domain target in Docker or compose surface",
+      "disposition": "nonfinding",
+      "reason": "Declared disposable fixture subject/domain or loopback validation endpoint; production gateway/tunnel never exposes validation3100/3101/4173. No live external target or ambient business subject."
+    },
+    {
+      "key": "de069d44d07833fb",
+      "location": "api-app/test/number-onboarding-pcv.e2e-spec.ts:18",
+      "lens": "hard-coded runtime/domain target in Docker or compose surface",
+      "disposition": "nonfinding",
+      "reason": "Declared disposable fixture subject/domain or loopback validation endpoint; production gateway/tunnel never exposes validation3100/3101/4173. No live external target or ambient business subject."
+    },
+    {
+      "key": "99019f78841020d3",
+      "location": "api-app/test/number-onboarding-pcv.e2e-spec.ts:19",
+      "lens": "hard-coded runtime/domain target in Docker or compose surface",
+      "disposition": "nonfinding",
+      "reason": "Declared disposable fixture subject/domain or loopback validation endpoint; production gateway/tunnel never exposes validation3100/3101/4173. No live external target or ambient business subject."
+    },
+    {
+      "key": "84b91602cb0c50d7",
+      "location": "api-app/test/number-onboarding-pcv.e2e-spec.ts:67",
+      "lens": "hard-coded runtime/domain target in Docker or compose surface",
+      "disposition": "nonfinding",
+      "reason": "Declared disposable fixture subject/domain or loopback validation endpoint; production gateway/tunnel never exposes validation3100/3101/4173. No live external target or ambient business subject."
+    },
+    {
+      "key": "9d14e982b29f03b1",
+      "location": "api-app/test/number-onboarding-pcv.e2e-spec.ts:106",
+      "lens": "hard-coded runtime/domain target in Docker or compose surface",
+      "disposition": "nonfinding",
+      "reason": "Declared disposable fixture subject/domain or loopback validation endpoint; production gateway/tunnel never exposes validation3100/3101/4173. No live external target or ambient business subject."
+    },
+    {
+      "key": "0608fe3dabfbe185",
+      "location": "api-app/test/number-onboarding-pcv.e2e-spec.ts:107",
+      "lens": "hard-coded runtime/domain target in Docker or compose surface",
+      "disposition": "nonfinding",
+      "reason": "Declared disposable fixture subject/domain or loopback validation endpoint; production gateway/tunnel never exposes validation3100/3101/4173. No live external target or ambient business subject."
+    },
+    {
+      "key": "994fdfed22140b63",
+      "location": "api-app/test/number-onboarding-pcv.e2e-spec.ts:182",
+      "lens": "hard-coded runtime/domain target in Docker or compose surface",
+      "disposition": "nonfinding",
+      "reason": "Declared disposable fixture subject/domain or loopback validation endpoint; production gateway/tunnel never exposes validation3100/3101/4173. No live external target or ambient business subject."
+    },
+    {
+      "key": "11fdc6694fcf0c54",
+      "location": "api-app/test/number-onboarding-pcv.e2e-spec.ts:184",
+      "lens": "hard-coded runtime/domain target in Docker or compose surface",
+      "disposition": "nonfinding",
+      "reason": "Declared disposable fixture subject/domain or loopback validation endpoint; production gateway/tunnel never exposes validation3100/3101/4173. No live external target or ambient business subject."
+    },
+    {
+      "key": "0f0f77c82b5fc901",
+      "location": "api-app/test/number-onboarding-typebot.e2e-spec.ts:20",
+      "lens": "hard-coded runtime/domain target in Docker or compose surface",
+      "disposition": "nonfinding",
+      "reason": "Declared disposable fixture subject/domain or loopback validation endpoint; production gateway/tunnel never exposes validation3100/3101/4173. No live external target or ambient business subject."
+    },
+    {
+      "key": "626f3cf722853f94",
+      "location": "api-app/test/number-onboarding-typebot.e2e-spec.ts:21",
+      "lens": "hard-coded runtime/domain target in Docker or compose surface",
+      "disposition": "nonfinding",
+      "reason": "Declared disposable fixture subject/domain or loopback validation endpoint; production gateway/tunnel never exposes validation3100/3101/4173. No live external target or ambient business subject."
+    },
+    {
+      "key": "37fe1365acf79ea1",
+      "location": "api-app/test/timeline-fixtures.cjs:153",
+      "lens": "hard-coded runtime/domain target in Docker or compose surface",
+      "disposition": "nonfinding",
+      "reason": "Declared disposable fixture subject/domain or loopback validation endpoint; production gateway/tunnel never exposes validation3100/3101/4173. No live external target or ambient business subject."
+    },
+    {
+      "key": "b1f9689df7ae6307",
+      "location": "api-app/test/timeline-fixtures.cjs:223",
+      "lens": "hard-coded runtime/domain target in Docker or compose surface",
+      "disposition": "nonfinding",
+      "reason": "Declared disposable fixture subject/domain or loopback validation endpoint; production gateway/tunnel never exposes validation3100/3101/4173. No live external target or ambient business subject."
+    },
+    {
+      "key": "b9a811aa5c40d140",
+      "location": "api-app/test/timeline-fixtures.cjs:236",
+      "lens": "hard-coded runtime/domain target in Docker or compose surface",
+      "disposition": "nonfinding",
+      "reason": "Declared disposable fixture subject/domain or loopback validation endpoint; production gateway/tunnel never exposes validation3100/3101/4173. No live external target or ambient business subject."
+    },
+    {
+      "key": "a89a93444df5bfa3",
+      "location": "api-app/test/timeline-fixtures.cjs:243",
+      "lens": "hard-coded runtime/domain target in Docker or compose surface",
+      "disposition": "nonfinding",
+      "reason": "Declared disposable fixture subject/domain or loopback validation endpoint; production gateway/tunnel never exposes validation3100/3101/4173. No live external target or ambient business subject."
+    },
+    {
+      "key": "e5ac99a56a018dbd",
+      "location": "api-app/test/timeline-fixtures.cjs:304",
+      "lens": "hard-coded runtime/domain target in Docker or compose surface",
+      "disposition": "nonfinding",
+      "reason": "Declared disposable fixture subject/domain or loopback validation endpoint; production gateway/tunnel never exposes validation3100/3101/4173. No live external target or ambient business subject."
+    },
+    {
+      "key": "78962492f1c9ea8b",
+      "location": "web-app/e2e/timeline-freshness.ts:19",
+      "lens": "hard-coded runtime/domain target in Docker or compose surface",
+      "disposition": "nonfinding",
+      "reason": "Regular-expression .test call is a pattern operation, not a hard-coded network domain."
+    },
+    {
+      "key": "99a5ca723f2ca9c5",
+      "location": "web-app/e2e/timeline-freshness.ts:47",
+      "lens": "hard-coded runtime/domain target in Docker or compose surface",
+      "disposition": "nonfinding",
+      "reason": "Declared disposable fixture subject/domain or loopback validation endpoint; production gateway/tunnel never exposes validation3100/3101/4173. No live external target or ambient business subject."
+    },
+    {
+      "key": "98599f7916ffc82e",
+      "location": "web-app/e2e/timeline-freshness.ts:50",
+      "lens": "hard-coded runtime/domain target in Docker or compose surface",
+      "disposition": "nonfinding",
+      "reason": "Declared disposable fixture subject/domain or loopback validation endpoint; production gateway/tunnel never exposes validation3100/3101/4173. No live external target or ambient business subject."
+    },
+    {
+      "key": "9e05fb4480cbf411",
+      "location": "web-app/e2e/timeline-freshness.ts:51",
+      "lens": "hard-coded runtime/domain target in Docker or compose surface",
+      "disposition": "nonfinding",
+      "reason": "Declared disposable fixture subject/domain or loopback validation endpoint; production gateway/tunnel never exposes validation3100/3101/4173. No live external target or ambient business subject."
+    },
+    {
+      "key": "1d022b7b53a0e33a",
+      "location": "web-app/e2e/timeline-freshness.ts:59",
+      "lens": "hard-coded runtime/domain target in Docker or compose surface",
+      "disposition": "nonfinding",
+      "reason": "Declared disposable fixture subject/domain or loopback validation endpoint; production gateway/tunnel never exposes validation3100/3101/4173. No live external target or ambient business subject."
+    },
+    {
+      "key": "6dd5ad8d243a1ffd",
+      "location": "web-app/e2e/timeline-freshness.ts:62",
+      "lens": "hard-coded runtime/domain target in Docker or compose surface",
+      "disposition": "nonfinding",
+      "reason": "Declared disposable fixture subject/domain or loopback validation endpoint; production gateway/tunnel never exposes validation3100/3101/4173. No live external target or ambient business subject."
+    },
+    {
+      "key": "352623a49cc34f9d",
+      "location": "web-app/e2e/timeline-freshness.ts:112",
+      "lens": "hard-coded runtime/domain target in Docker or compose surface",
+      "disposition": "nonfinding",
+      "reason": "Declared disposable fixture subject/domain or loopback validation endpoint; production gateway/tunnel never exposes validation3100/3101/4173. No live external target or ambient business subject."
+    },
+    {
+      "key": "9ab199e810b4e91a",
+      "location": "scripts/test-channels-local.sh:20",
+      "lens": "hard-coded runtime/domain target in Docker or compose surface",
+      "disposition": "pending",
+      "reason": "Requires independent manual review; not waived."
+    },
+    {
+      "key": "490573780c4ac15b",
+      "location": "scripts/test-channels-local.sh:41",
+      "lens": "hard-coded runtime/domain target in Docker or compose surface",
+      "disposition": "nonfinding",
+      "reason": "Literal private-path exclusion or container public-example mask check; this is a denial rule, not an accessed private host path."
+    },
+    {
+      "key": "5a069d0f9e763048",
+      "location": "scripts/test-channels-local.sh:137",
+      "lens": "hard-coded runtime/domain target in Docker or compose surface",
+      "disposition": "nonfinding",
+      "reason": "Literal private-path exclusion or container public-example mask check; this is a denial rule, not an accessed private host path."
+    },
+    {
+      "key": "0ad7cf56c663a468",
+      "location": "web-app/e2e/number-onboarding-freshness.ts:39",
+      "lens": "hard-coded runtime/domain target in Docker or compose surface",
+      "disposition": "nonfinding",
+      "reason": "Regular-expression .test call is a pattern operation, not a hard-coded network domain."
+    },
+    {
+      "key": "22f73b43a40526df",
+      "location": "api-app/test/browser-server.cjs:23",
+      "lens": "hard-coded runtime/domain target in Docker or compose surface",
+      "disposition": "nonfinding",
+      "reason": "Declared disposable fixture subject/domain or loopback validation endpoint; production gateway/tunnel never exposes validation3100/3101/4173. No live external target or ambient business subject."
+    },
+    {
+      "key": "85ea9bca5961a5f5",
+      "location": "api-app/test/browser-server.cjs:26",
+      "lens": "hard-coded runtime/domain target in Docker or compose surface",
+      "disposition": "nonfinding",
+      "reason": "Declared disposable fixture subject/domain or loopback validation endpoint; production gateway/tunnel never exposes validation3100/3101/4173. No live external target or ambient business subject."
+    },
+    {
+      "key": "caef5b2ecc4d6fc7",
+      "location": "api-app/test/browser-server.cjs:31",
+      "lens": "hard-coded runtime/domain target in Docker or compose surface",
+      "disposition": "nonfinding",
+      "reason": "Declared disposable fixture subject/domain or loopback validation endpoint; production gateway/tunnel never exposes validation3100/3101/4173. No live external target or ambient business subject."
+    },
+    {
+      "key": "60f1ad416463fc81",
+      "location": "api-app/test/browser-server.cjs:35",
+      "lens": "hard-coded runtime/domain target in Docker or compose surface",
+      "disposition": "nonfinding",
+      "reason": "Declared disposable fixture subject/domain or loopback validation endpoint; production gateway/tunnel never exposes validation3100/3101/4173. No live external target or ambient business subject."
+    },
+    {
+      "key": "5fd2abc7e60eab2a",
+      "location": "api-app/test/browser-server.cjs:132",
+      "lens": "hard-coded runtime/domain target in Docker or compose surface",
+      "disposition": "nonfinding",
+      "reason": "Declared disposable fixture subject/domain or loopback validation endpoint; production gateway/tunnel never exposes validation3100/3101/4173. No live external target or ambient business subject."
+    },
+    {
+      "key": "50d366b80944d1b2",
+      "location": "api-app/test/browser-server.cjs:146",
+      "lens": "hard-coded runtime/domain target in Docker or compose surface",
+      "disposition": "nonfinding",
+      "reason": "Declared disposable fixture subject/domain or loopback validation endpoint; production gateway/tunnel never exposes validation3100/3101/4173. No live external target or ambient business subject."
+    },
+    {
+      "key": "ec9ae29e9ebfbe30",
+      "location": "web-app/e2e/channel-transport.spec.ts:3",
+      "lens": "hard-coded runtime/domain target in Docker or compose surface",
+      "disposition": "nonfinding",
+      "reason": "Declared disposable fixture subject/domain or loopback validation endpoint; production gateway/tunnel never exposes validation3100/3101/4173. No live external target or ambient business subject."
+    },
+    {
+      "key": "45a0a750a6d95094",
+      "location": "web-app/src/api.ts:79",
+      "lens": "hard-coded runtime/domain target in Docker or compose surface",
+      "disposition": "nonfinding",
+      "reason": "HTML detection regex; no runtime destination is introduced."
+    }
+  ],
+  "limits": "Manual source-context triage, independent audit challenge still required; no whole/private-tree claim"
+}

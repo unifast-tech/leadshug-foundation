@@ -35,7 +35,7 @@ Usuário confirmou Channel abstrato/concretos e extensibilidade para Instagram, 
 ## Delivery Status Canon (Required)
 - **Current delivery stage:** Pending
 - **Qualifiers:** none
-- **Next exact step:** executor único resolve R05 e proteção R02/R04 após all33610 terminal0; RED49493 confirmou classifier antes da correção; validar falha por remoção dos guards, congelar nova versão e reconvergir all/reviews antes de publicação local/INOUT.
+- **Next exact step:** Concluir ST06-R02 com barreira causal do response.text/handler e prova real por omissão/restauração do guard, obter all da fonte final; depois auditoria dedicada Performance/TQA/Cutover, PCV, ativação local/INOUT e final review. All65587 passou194/309/29/50, mas não fecha a finding de proteção do teste.
 
 ## Active Work State (Required While TODO Remains In `active/`)
 - **Work state:** implementation
@@ -305,8 +305,8 @@ Nenhuma decisão de produto aberta. Assinaturas e semântica material congeladas
 - **Adherence review lifecycle:** after implementation and before Completed
 - **Adherence review kind:** architecture_adherence
 - **Adherence review package:** bounded-file-set
-- **Adherence review status:** not_run
-- **Adherence review evidence / resolution:** planned after implementation
+- **Adherence review status:** findings_integrated
+- **Adherence review evidence / resolution:** artifacts/reviews/leadshug-channel-abstraction-20261020/implementation-round-1/2/3-resolution.md; roundsfresh terminal/strictmerged. R01/R03/R04/R05 corrigidas no snapshot revisado; ST06-R02 permanece bloqueador até correção/evidência independente do harness.
 - **No-go handling:** reconvergir contrato, sem waiver automático.
 
 ## Gate: Review Baseline Freeze
@@ -560,10 +560,10 @@ Terminal architecture/security findings classified by review-finding-classificat
 | Finding ID | Severity | Classification | Routing Decision | Same TODO / Split Rationale | Status | Approval / Follow-up Reference |
 | --- | --- | --- | --- | --- | --- | --- |
 | ST06-R01 (ADH-01=SEC-01) | high | release-blocker | same-todo | Original non-first/malformed-ID counterexample corrected; new flag case tracked R05 | resolved in round2 snapshot; finalvalidation pending | implementation-round-1-resolution.md; existing D04 approval |
-| ST06-R02 (ADH-02) | medium | release-blocker | same-todo | Navigation corrected; await body/handler completion and prove same-text draft fence catches removal | open; round2 remediation | implementation-round-1-resolution.md; existing D10 approval |
+| ST06-R02 (ADH-02) | medium | release-blocker | same-todo | Navigation corrected; await body/handler completion and prove same-text draft fence catches removal | open; round3 causal handler barrier | implementation-round-3-resolution.md; existing D10 approval |
 | ST06-R03 (SEC-02) | medium | release-blocker | same-todo | D04/05 Evolution empty object is not ACK; key:{} preserved | resolved in round2 snapshot; finalvalidation pending | implementation-round-1-resolution.md; existing D04/05 approval |
-| ST06-R04 (SEC-03) | medium | release-blocker | same-todo | Denied mutations/twoTENANT proof added; preDispatch must exercise real Meta/Evo adapters and detect omitted callback | open; round2 remediation | implementation-round-1-resolution.md; existing scope/validation approval |
-| ST06-R05 (adherence-round2 ADH-R2-01) | medium | release-blocker | same-todo | D04 explicit false/malformed success flag contradicts positive ACK; UNKNOWN/no authoritative write | open; executor after runner terminal | implementation-round-2-resolution.md; D04 existing approval |
+| ST06-R04 (SEC-03) | medium | release-blocker | same-todo | Denied mutations/twoTENANT proof added; preDispatch must exercise real Meta/Evo adapters and detect omitted callback | resolved reviewed snapshot; final assurance pending | implementation-round-3-resolution.md; existing scope/validation approval |
+| ST06-R05 (adherence-round2 ADH-R2-01) | medium | release-blocker | same-todo | D04 explicit false/malformed success flag contradicts positive ACK; UNKNOWN/no authoritative write | resolved reviewed snapshot; final assurance pending | implementation-round-3-resolution.md; D04 existing approval |
 
 
 ## TODO Closeout Disposition
@@ -708,7 +708,7 @@ Direction and extension requirements are explicit user statements2026-10-20. Ini
 | --- | --- | --- |
 | CP01 — runner antes de testes | passed precondition | artifacts/reviews/leadshug-channel-abstraction-20261020/evidence/runner-checkpoint.json; allowlist antes de stat, sem varredura ampla; bash-n/diffcheck/mock config-only. Nenhum teste de produto ou Docker real executado neste checkpoint. |
 | CP02 — Channel/outbound/consumers + Web/tests | implementation, not delivered | Executor único; artifacts/tmp/stcon06-executor-* e evidence/executor-validation.json reservados. Initial RED dependencyguard175pass/1fail. all33610 terminal0:194unit/308PG/29Web/50browser, snapshot anterior agora insuficiente pelas findings round2. |
-| CP03 — independent adherence/security rounds1/2 | terminal,3 blockers open | Original R01/R03 counterexamples corrected. R05 success:false contradiction; R02 browser handler completion; R04 shippingadapter callback protection. Full implementation-round-1/2-resolution.md; no waiver/debt or physicalproof. |
+| CP03 — independent adherence/security rounds1/2/3 | terminal; R02 protection gap open | R01/R03/R04/R05 corrected in reviewed snapshot; shippingadapter omission mutants fail409vs201 then exactrestored. R02 needs causal response.text/handler barrier. Full implementation-round-1/2/3-resolution.md; no waiver/debt or physicalproof. |
 | CP04 — actual R05 regression RED | reproduced before fix | Canonical API49493 terminal1: Meta200 success:false+ID expectedUNKNOWN/TRANSPORT_UNCONFIRMED, actualACCEPTED;20otherunitfiles green. Executor will preserve exact log/provenance and correct source after terminal. Not blanket RED for other cases. |
 
 ## Supplemental Expected-Path Validation — 2026-10-20
@@ -739,3 +739,10 @@ Both canonical CLI reviews terminal0, strict merge passed: evidence/adherence-ro
 | adherence-round2:ADH-R2-03 | Integrated | useful | yes | project | n/a | ST06-R04 testfake owns guard, must exercise shipping adapter callback |
 | security-round2:ADH-R2-01 | Integrated | useful | yes | project | n/a | duplicate ST06-R04, same shipping-adapter harness gap |
 | security-round2:ADH-R2-02 | Integrated | useful | partial | project | n/a | duplicate ST06-R02, same browser completion gap |
+
+## Review round3 findings resolution
+
+| Finding ID | Disposition | Usefulness | Formalizable | Candidate Rule Level | Rule Update | Evidence / limit |
+| --- | --- | --- | --- | --- | --- | --- |
+| adherence-round3:ADH-R3-01 | Integrated | useful | partial | project | n/a | ST06-R02; test-only native body-read task barrier, mutation proof and revised canonical validation pending |
+| security-round3:ST06-R02 | Integrated | useful | partial | project | n/a | same ST06-R02; no demonstrated production vulnerability, D10 protection gap retained blocking |

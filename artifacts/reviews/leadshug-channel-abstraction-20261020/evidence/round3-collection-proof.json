@@ -1,0 +1,31 @@
+{
+  "scope": "terminal fresh internal CLI reviews, strict merge0; no execution by reviewers",
+  "lanes": [
+    {
+      "lane": "adherence",
+      "session": 41837,
+      "model": "gpt-6.1-sol",
+      "effort": "xhigh",
+      "raw_sha256": "1ce6718ee648535b951353485cb7760c20c5868ef6133b2a00b52e3ae56d50ae",
+      "event_counts": {
+        "thread.started": 1,
+        "turn.started": 1,
+        "item.completed": 1,
+        "turn.completed": 1
+      }
+    },
+    {
+      "lane": "security",
+      "session": 45485,
+      "model": "gpt-6.1-sol",
+      "effort": "xhigh",
+      "raw_sha256": "b2cd97f19786a850b6f5eb69607e04e1f3c02e8ec8e1841259c1eba4e212b9c9",
+      "event_counts": {
+        "thread.started": 1,
+        "turn.started": 1,
+        "item.completed": 1,
+        "turn.completed": 1
+      }
+    }
+  ]
+}
