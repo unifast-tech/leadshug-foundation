@@ -34,7 +34,7 @@ index 6b29974..0f5ca57 100644
 +    });
 +  });
  });
- 
+
  describe('requisição com cabeçalho de correlação', () => {
 ```
 
@@ -44,9 +44,9 @@ index 6b29974..0f5ca57 100644
 --- a/e2e/timeline-freshness.ts
 +++ b/e2e/timeline-freshness.ts
 @@ -7,13 +7,13 @@
- 
+
  const hash = (value: Buffer | string) => createHash('sha256').update(value).digest('hex');
- 
+
 -async function changedSourceFiles(directory: string, scope: RegExp): Promise<Array<{ path: string; status: string; sha256: string | null }>> {
 +async function changedSourceFiles(directory: string, scope: RegExp, publicPaths: readonly string[]): Promise<Array<{ path: string; status: string; sha256: string | null }>> {
    const gitArgs = ['-c', `safe.directory=${directory}`, '-C', directory];
