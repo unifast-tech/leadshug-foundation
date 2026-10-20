@@ -1,0 +1,19 @@
+{
+  "schema": "stcon06-human-approval-v1",
+  "recorded_at_utc": "2026-10-20T17:20:57.388112+00:00",
+  "client_date": "2026-10-20",
+  "reply": "APROVADO — aditivo v1.3",
+  "question_call": "call_9605fd7a22ba4719bf54ee9bff1e8919",
+  "proposal": "scope-renewal-v1.3-proposal.md",
+  "reviewed_baseline": "23db059b252458c28cf9696c735447f57b023a58",
+  "readiness_publication": "5ca31ce5",
+  "scope": "exact four added paths plus bounded admitted runner and existing v1.2 slice; local test DB index after disposable evidence",
+  "limits": {
+    "lock_wait_s": 5,
+    "statement_s": 60,
+    "source_push": false,
+    "production_or_railway": false,
+    "private_file_access": false,
+    "runtime_activation_before_audits": false
+  }
+}

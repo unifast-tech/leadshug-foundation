@@ -1,0 +1,12 @@
+{
+  "schema": "stcon06-ci-source-admission-v1",
+  "status": "authority-refreshed-fresh-run-required",
+  "recorded_at_utc": "2026-10-20T17:28:22.975281+00:00",
+  "invalidation_guard": "evidence/ci-evidence-invalidation-v1.3.json",
+  "canonical_outcome_preserved": "manual-admission-required (exit11); not reusable/not go",
+  "authority_source": "User APROVADO \u2014 aditivo v1.3; governing TODO Comparison mode working_tree with exact expected public paths; normal authority-execution-v1.3.json GO/execution_authority_granted=true",
+  "admission": "Accept only the approved principal working_tree source after an exact public snapshot is frozen; HEAD alone does not identify it. No clean-source or old-all reuse claim. Final source freeze/check must precede expensive fresh broad run.",
+  "decision": "Mandatory fresh canonical all on final approved source; any new real path requires admission before use. API diagnostic can run separately; current source still in remediation.",
+  "next": "Executor completes guard/CI fixes after active API run; root final snapshot/publicdiff+normal authority checks; fresh all. Rerun guard if deciding on evidence reuse; reuse is not requested.",
+  "no_waiver": true
+}

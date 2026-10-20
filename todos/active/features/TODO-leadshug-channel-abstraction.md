@@ -35,11 +35,11 @@ Usuário confirmou Channel abstrato/concretos e extensibilidade para Instagram, 
 ## Delivery Status Canon (Required)
 - **Current delivery stage:** Pending
 - **Qualifiers:** none
-- **Next exact step:** Aguardar APROVADO explícito do aditivo v1.3 revisado e guards preflight-go. Depois, reload binding/authority normal e executor único no índice/CI/runner propostos; nenhum novo Prisma/CI/runtime antes disso.
+- **Next exact step:** Authority/routing normal go após binding v1.3; executor único aplica os paths exatos, demonstra guard/PG/index/Linux e finalall; nenhuma ativação humana antes de evidências e audits.
 
 ## Active Work State (Required While TODO Remains In `active/`)
-- **Work state:** review
-- **Why this state now:** v1.2 e os dois companions foram aprovados; PERF-01/CIADM-01 exigem renovação material v1.3. Revisão do contrato ampliado, sem autoridade implícita para índice/CI. O checkpoint selected-window/per-conversation já autorizado v1.2 pode terminar antes do freeze de código.
+- **Work state:** implementation
+- **Why this state now:** renovação v1.3 explicitamente aprovada pelo usuário após reviews/guards; binding recarregado. Executor único implementa índice/CI/runner e prova em namespace descartável antes de qualquer atualização de runtime humano.
 - **Exit condition:** implementação aderente com all/assurance/pcv e prova real pós-publicação local; nenhum bloqueador de review aberto antes de entrega.
 
 ## Scope
@@ -508,15 +508,15 @@ Revisão v1.2 concluída historicamente; v1.3 architecture42479 terminal com ARC
 - **Waiver authority / reference (required if waived):** n/a
 
 ## Approval
-- **Approved by:** usuário para v1.2; renovação v1.3 pendente
-- **Approval reference:** resposta literal APROVADO nesta conversa em2026-10-20, após apresentação do contrato v1.2 publicado em Foundation781ea16e51e0db2a654e6956ea633a03dd509dfd (freeze materiala35f676c).
-- **Approval scope:** v1.2 ST-CON-06/SCOPE01..05/D01..10 e dois companions validados. SCOPE06/índice/CI e mudanças materiais v1.3 NÃO aprovados; nenhuma autoridade nova presumida.
+- **Approved by:** usuário — v1.2 e renovação v1.3 explícita
+- **Approval reference:** resposta humana literal **APROVADO — aditivo v1.3**, em2026-10-20, à pergunta call_9605fd7a22ba4719bf54ee9bff1e8919 sobre proposta/limites de migração/CI. V1.2 APROVADO anterior e companions continuam válidos como histórico.
+- **Approval scope:** ST-CON-06 v1.3/SCOPE01..06/D01..10, os dois companions Web e aditivo exato scope-renewal-v1.3-proposal.md revisado (freeze23db059b; readiness5ca31ce5). Inclui índice transacional no DB local de testes após validação descartável, lock_timeout5s/statement_timeout60s e CI/runner/guard. Sem novos campos/enum/rede/template/push de produto.
 - **Execution not authorized by approval:** todo Out of Scope, redes futuras,05/04, push/deploy de produto ou mudanças privadas.
 - **Renewed approval required when:** decisões/DoD/paths/risco/contrato mudarem materialmente.
 - **Pre-approval readiness evidence:** v1.3 arquitetura42479 e crítica69476 convergidas; evidence/assumption-coherence-v1.3.json go/6premissas; review-scope-drift-v1.3.json go/23seções/0drift; authority-preapproval-v1.3.json preflight-go, execution_authority_granted=false. APROVADO v1.2/authority-execution.json são históricos, não autorização v1.3.
 
 ## Rules Acknowledgement / Ingestion (Required After `APROVADO` and Before Execution)
-Binding reload realizado após APROVADO em2026-10-20 pelo orquestrador: fontes da tabela relidas; constituição/política/módulos recarregados e verify_context PACED-Ready. Executor relerá as regras técnicas pertinentes antes dos edits. Ingestão não é evidência de implementação/testes. Nenhum GOAL persistente foi criado. Novas linhas v1.3 são binding preparado: releitura e authority normal somente após renovação humana; a auditoria Node foi limitada ao package.json proprietário ANTES da descoberta, fonte do helper intacta, nunca os.walk no API root.
+Binding reload realizado após APROVADO em2026-10-20 pelo orquestrador: fontes da tabela relidas; constituição/política/módulos recarregados e verify_context PACED-Ready. Executor relerá as regras técnicas pertinentes antes dos edits. Ingestão não é evidência de implementação/testes. Nenhum GOAL persistente foi criado. Binding v1.3 recarregado após resposta humana explícita nesta rodada: main/constituição/módulos, execution-boundary/profile, CI governance/admission/update-CI e Prisma/PostgreSQL relidos; authority normal em seguida; a auditoria Node foi limitada ao package.json proprietário ANTES da descoberta, fonte do helper intacta, nunca os.walk no API root.
 
 | Source | Why It Applies Now | Must Preserve | Must Avoid | Execution Impact |
 | --- | --- | --- | --- | --- |
@@ -791,3 +791,14 @@ Checkpoint88536 (source frozen during run):194 unit +310 E2E passed, sole expect
 - CRIT13-01 medium Integrated: proposed runner must check all three Docker inventory exit statuses before interpreting output/creating resources/arming cleanup; no unchecked process substitution. A failed listing stops without Compose config/run/up/down. Actual wrapper + isolated fake CLI controls for ps/volume/network failure, empty config-only success and collision refusal belong to admitted guard/wrapper surfaces; no real resource mutation. Invocations serialized; no claim of distributed namespace lock.
 - CRIT13-02 medium Integrated: declared Assumption Code Coherence scope now A01..06. A06 cites frozen resolver, schema, real-PG test and recorded88536 RED/rootproof; fresh guard after critique required. Post-index performance/write-cost proof remains a delivery obligation after approval.
 - Refresh/push affected planning baseline and fresh critique before renewed APROVADO. Prior raw terminal22149/strictmerge retained. No product/index/CI/runtime changes under this integration.
+
+## Recorded v1.3 execution authorization
+
+Human reply: **APROVADO — aditivo v1.3** (2026-10-20), exact reviewed proposal and migration interruption limits. Historical planning snapshots/phrases such as “pending approval” in frozen Scope/ExpectedPaths/proposal remain provenance; this current Approval section records the fulfilled prerequisite without altering the reviewed material contract. No new approval is needed for these already-authorized paths/actions. Actual schema/CI changes and measured results will be recorded separately; no implementation pass is inferred from approval.
+
+Profile remains Operational/Coder (NestJS, React, Vite, PostgreSQL, Prisma, Docker), with recorded Operational/DevOps handoff for root CI/runner and later local activation; Genesis ruled out by existing canon. Principal checkout and sole writer /root/stcon06_executor; Foundation canonical TODO/docs owner /root. No worktrees, code commit/push/gitlink/private file access. verify_context PACED-Ready.
+
+
+## v1.3 implementation checkpoint — disposable validation
+
+The exact approved composite Message index/schema, CI admission and runner/guard are implemented by the sole executor. Diagnostic API78310 ended1:194unit passed,310/312PG passed. The new500-reference/history/tie and accelerated transactional DDL rollback probes passed. Two test-placement/matcher defects remain: Message-index assertions landed on the provider-identity query and the intended30-reference plan assertion rejected Index Only Scan. These are test defects requiring correction and a new run, not a green acceptance claim. Strengthen rollback proof with specific SQLSTATE55P03/57014 and distinguish accelerated100ms/1ms fixture limits from the exact approved5s/60s migration configuration. The first control set rejected16 CI/lifecycle mutations and checked all three failed Docker inventories, empty config-only success and collision refusal through the actual wrapper. Final frozen all, actual Linux topology, independent audits and operator/runtime gates remain pending. No human database or serving API/Web changed.
