@@ -1,0 +1,33 @@
+{
+  "artifact_kind": "ci_contract_run",
+  "schema_version": "stcon06-ci-contract-run-derived-v1",
+  "overall_status": "passed",
+  "contract_id": "stcon06-local-all",
+  "command": "bash scripts/test-channels-local.sh all",
+  "run_id": "all28261",
+  "exit_code": 0,
+  "counts": {
+    "api_unit": 194,
+    "api_e2e": 315,
+    "web_unit": 29,
+    "browser": 50
+  },
+  "raw_log_sha256": "e904bf3203be423666c9428e262e9e51c46e263c22570d71c1f9d3cd6ee3d25e",
+  "repo_states": {
+    "root": {
+      "branch": "feature/number-onboarding",
+      "head_sha": "80e3940126f22a941f90dba4f5e801b6c0eb2f58"
+    },
+    "api": {
+      "branch": "feature/number-onboarding",
+      "head_sha": "db5a86758a165fac8a1ab587599c37b17890530c"
+    },
+    "web": {
+      "branch": "feature/number-onboarding",
+      "head_sha": "74b9d4b714044829796f875d00553f077c1c329d"
+    }
+  },
+  "working_tree_source_snapshot": "v13r3-source-before-all.json",
+  "derived_from": "v13r3-final-validation.json; browser-attestation-v13r3-all28261.json",
+  "limitations": "Historical actual passedall28261 only, invalidated by bounded round3 remediation; not new candidate acceptance or remote CI. Exact dirty source was attested; HEAD alone is not source identity."
+}

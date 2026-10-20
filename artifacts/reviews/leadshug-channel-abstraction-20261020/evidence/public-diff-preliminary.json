@@ -24,16 +24,16 @@
       "foundation": {
         "path": "/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation",
         "baseline_commit": "82fa66b33b81b31024dc8cebef9e72e9253964a7",
-        "actual_change_count": 321
+        "actual_change_count": 469
       }
     },
-    "actual_change_count": 362,
-    "expected_change_count": 362,
+    "actual_change_count": 510,
+    "expected_change_count": 510,
     "forbidden_change_count": 0,
     "unclassified_change_count": 0
   },
   "bounded_invocation": {
-    "recorded_at_utc": "2026-10-20T18:36:27.792440+00:00",
+    "recorded_at_utc": "2026-10-20T19:42:34.360618+00:00",
     "status": "preliminary implementation only",
     "guard_source_unchanged": true,
     "api_positive_pathspecs": [

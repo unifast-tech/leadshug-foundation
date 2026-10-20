@@ -1,0 +1,9 @@
+{
+  "prompt_chars": 1030399,
+  "prompt_bytes": 1034497,
+  "limit": 1048576,
+  "admitted_before_start": true,
+  "package_sha256": "c09cae1470eb7e6160d554982f42a4f11f0ecc3705a8b4a79320840f02f7bbeb",
+  "dispatch_sha256": "b7fcd03a4cf8938fe44acc479f365a7d387f90c7e0b17f13275e2837d79e0b6a",
+  "source_scope_unchanged": "Same all93791 and all59contexts/rubrics, initial terminal result preserved; report completeness only; no user approval or runtime action"
+}

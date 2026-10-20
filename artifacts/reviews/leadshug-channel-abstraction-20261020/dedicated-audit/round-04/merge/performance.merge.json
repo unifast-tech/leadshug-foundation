@@ -1,0 +1,42 @@
+{
+  "schema_version": "subagent-review-merge-v2",
+  "artifact_kind": "subagent_review_merge",
+  "authoritative": false,
+  "edit_policy": "derived_merge_packet",
+  "dispatch_path": "/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/artifacts/reviews/leadshug-channel-abstraction-20261020/dedicated-audit/round-04/dispatch/performance.dispatch.json",
+  "review_kind": "critique",
+  "review_count": 1,
+  "reviewer_labels": [
+    "performance-round04-independent-no-context"
+  ],
+  "highest_finding_severity": "low",
+  "axis_summary": {
+    "performance": "acceptable",
+    "elegance": "acceptable",
+    "structural_soundness": "acceptable",
+    "operational_fit": "acceptable"
+  },
+  "recommended_paths": [
+    "Accept the round4 automated candidate from this performance critique lane, with the low finding recorded as non-blocking hardening. Complete the other independent lane dispositions and bind PCV rows to the current all93791 artifacts before satisfying their deadlines. Then follow approved OrderedStep6 and final assurance; retain TQA-R02-02 as a delivery blocker until actual operator evidence closes it."
+  ],
+  "exact_next_step": "Record reviewer resolutions in the governing TODO using the machine-checkable resolution table or equivalent gate ledger, then extract the derived resolution packet and decide whether another bounded review pass is still required.",
+  "findings": [
+    {
+      "finding_id": "F-3697AEAA",
+      "severity": "low",
+      "title": "Latest-message work assertion counts emitted rows rather than total scan work",
+      "rationale": "The new actualMessageRowsVisited calculation sums Actual Rows multiplied by Actual Loops, excluding rows removed by filters or index rechecks. Its name and bound therefore overstate what that assertion independently proves. The supplied current plan has no residual filtering and shows bounded indexed work, so this does not invalidate the remediation or demonstrate a runtime blocker. It weakens protection against a later residual-filter regression using the same index.",
+      "suggested_action": "During ordinary test maintenance, distinguish emitted rows from scan work. Assert the intended leaf index conditions and absence of residual filtering, and report filtered/rechecked rows and buffer work separately, accounting for PostgreSQL's rounded per-loop statistics. Preserve the raw plan evidence.",
+      "reviewer_labels": [
+        "performance-round04-independent-no-context"
+      ],
+      "source_finding_ids": [
+        "PERF-R4-01"
+      ],
+      "category": "tests",
+      "formalizable_hint": "yes",
+      "candidate_rule_level": "project",
+      "candidate_rule_id": "n/a"
+    }
+  ]
+}

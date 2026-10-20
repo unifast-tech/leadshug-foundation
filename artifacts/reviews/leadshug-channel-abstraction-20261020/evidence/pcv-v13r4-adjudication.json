@@ -1,0 +1,85 @@
+{
+  "schema": "stcon06-pcv-owner-adjudication-v1",
+  "recorded_at_utc": "2026-10-20T19:41:12.665088+00:00",
+  "owner_id": "/root",
+  "run_id": "canonical-linux-all93791",
+  "review_refs": [
+    {
+      "artifact": "evidence/performance-v13r4.raw.json",
+      "sha256": "6fca8875c68fe6267356050d3ec1d46ad6d18dffe88dce009e44b5467a69f4a7"
+    },
+    {
+      "artifact": "evidence/test-quality-v13r4-complete.raw.json",
+      "sha256": "7401078252944eeb2f78e8147d8f263360be34c6dde6f798dd99f53aa9a00a8e"
+    },
+    {
+      "artifact": "evidence/adherence-security-v13r4.raw.json",
+      "sha256": "54831b07bb93c3b0d93705df91d42c2d75bf9dcb47370ec1d11e5f3dfe585615"
+    }
+  ],
+  "classification_changed": false,
+  "waivers": [],
+  "rows": [
+    {
+      "lane_id": "EPS",
+      "state": "passed",
+      "state_transition": [
+        "pending",
+        "running",
+        "passed"
+      ],
+      "transition_context": "Evidence already measured by executor/currentall, independent evaluation now terminal and owner projection processed; no backdated test execution claim",
+      "artifact": "artifacts/reviews/leadshug-channel-abstraction-20261020/evidence/pcv-eps-candidate.json",
+      "artifact_sha256": "b5a3c9c301db3caaf8661e48e7d4fdfbe820eb8c9269eb3304271136e1a52031",
+      "reviewer_id": "fresh_no_context_tqa_report_completion",
+      "executor_id": "/root/stcon06_executor",
+      "observed_profile": "EPS-SP-STRONG"
+    },
+    {
+      "lane_id": "FRC",
+      "state": "passed",
+      "state_transition": [
+        "pending",
+        "running",
+        "passed"
+      ],
+      "transition_context": "Evidence already measured by executor/currentall, independent evaluation now terminal and owner projection processed; no backdated test execution claim",
+      "artifact": "artifacts/reviews/leadshug-channel-abstraction-20261020/evidence/pcv-frc-candidate.json",
+      "artifact_sha256": "650925b62223b4e31f9b777a9950512ad35cf0dbf1e512d97caad2899274dc08",
+      "reviewer_id": "fresh_no_context_tqa_report_completion",
+      "executor_id": "/root/stcon06_executor",
+      "observed_profile": "FRC-SP-H"
+    },
+    {
+      "lane_id": "BCI",
+      "state": "passed",
+      "state_transition": [
+        "pending",
+        "running",
+        "passed"
+      ],
+      "transition_context": "Evidence already measured by executor/currentall, independent evaluation now terminal and owner projection processed; no backdated test execution claim",
+      "artifact": "artifacts/reviews/leadshug-channel-abstraction-20261020/evidence/pcv-bci-candidate.json",
+      "artifact_sha256": "afad393aff82a03fef7ed81f8ea7ce09b6720816e011179916bbf05e11763532",
+      "reviewer_id": "fresh_no_context_tqa_report_completion",
+      "executor_id": "/root/stcon06_executor",
+      "observed_profile": "BCI-SP-H"
+    },
+    {
+      "lane_id": "RLS",
+      "state": "passed",
+      "state_transition": [
+        "pending",
+        "running",
+        "passed"
+      ],
+      "transition_context": "Evidence already measured by executor/currentall, independent evaluation now terminal and owner projection processed; no backdated test execution claim",
+      "artifact": "artifacts/reviews/leadshug-channel-abstraction-20261020/evidence/pcv-rls-candidate.json",
+      "artifact_sha256": "0f43d4f8b4c06f2cb99d62b1183f9616d8329d20d6376464900be20d00054657",
+      "reviewer_id": "fresh_no_context_tqa_report_completion",
+      "executor_id": "/root/stcon06_executor",
+      "observed_profile": "RLS-SP-L"
+    }
+  ],
+  "limits": "Only declared local automated PCV floors; external crash ambiguity/metadata observation and physical/operator gates remain explicit. No remoteCI/SLO/capacity/external exactlyonce claim."
+}

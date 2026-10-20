@@ -1,0 +1,109 @@
+{
+  "schema": "stcon06-executor-v13r4-all-validation-v1",
+  "checkpoint": "Fresh canonical all for v13r4 pagination and bounded latest-message remediation",
+  "command": "wsl.exe --distribution Ubuntu --user root --exec sh -lc 'cd /mnt/c/unifast/leadshug/leadshug_now_docker && export CHANNELS_DOCKER_TRANSPORT=linux DOCKER_HOST=unix:///mnt/wsl/docker-desktop/shared-sockets/guest-services/docker.sock && bash scripts/test-channels-local.sh all'",
+  "tool_session_id": 93791,
+  "exit_code": 0,
+  "log": "foundation_documentation/artifacts/tmp/stcon06-executor-v13r4-all-linux.log",
+  "log_sha256": "4ca4a287c78c027a2d7bc547adc423befe87e39b0ba4a346ec6d076ef8e24608",
+  "results": {
+    "api_unit": { "test_files_passed": 21, "tests_passed": 196 },
+    "api_postgres_e2e": { "test_files_passed": 27, "tests_passed": 338 },
+    "web_unit": { "test_files_passed": 5, "tests_passed": 29 },
+    "browser": { "tests_passed": 50, "workers": 1 },
+    "parity_guard_mutations_rejected": 23
+  },
+  "environment": {
+    "runtime_node": "v22.23.3",
+    "database": "disposable leadshug_timeline_channels_ci",
+    "completed_migrations": 23,
+    "linux_transport": {
+      "distribution": "Ubuntu",
+      "user": "root",
+      "shared_socket": "unix:///mnt/wsl/docker-desktop/shared-sockets/guest-services/docker.sock",
+      "same_engine_as_docker_exe": true,
+      "engine_ids_exposed_in_report": false
+    }
+  },
+  "source_freshness": {
+    "before_manifest": "foundation_documentation/artifacts/reviews/leadshug-channel-abstraction-20261020/evidence/v13r4-source-before-all.json",
+    "before_manifest_sha256": "9cbead63a2a521211274e8210a0bb441760d755587835db7f814b851d16eef53",
+    "after_manifest": "foundation_documentation/artifacts/tmp/stcon06-executor-v13r4-all-source-after.json",
+    "after_manifest_sha256": "21dedd2bc737fd473e4a0770b83dfe7e23c064b21a6a9fe5b462b93d2b0cb5ed",
+    "explicit_public_paths": 57,
+    "all_57_source_hashes_match": true,
+    "after_manifest_refers_to_before_sha256": "9cbead63a2a521211274e8210a0bb441760d755587835db7f814b851d16eef53"
+  },
+  "browser_attestation": {
+    "captured_copy": "foundation_documentation/artifacts/tmp/stcon06-executor-v13r4-all-attestation.json",
+    "captured_copy_sha256": "176ec0fca65d19d941453306112747cb1a82b8d3b793acc99c3bf9072934e0ec",
+    "captured_at_utc": "2026-10-20T19:27:46.950Z",
+    "run_id": "2026-10-20T19-27-46-950Z",
+    "served_asset_path": "/assets/index-9DA0_PMk.js",
+    "served_bundle_sha256": "27c5db465495068402b278ba7c9d3a1f23b8b03797249639190c8a755759563b",
+    "dist_bundle_sha256": "27c5db465495068402b278ba7c9d3a1f23b8b03797249639190c8a755759563b",
+    "served_asset_copy": "foundation_documentation/artifacts/tmp/stcon06-executor-v13r4-all-served-app.js",
+    "served_asset_copy_sha256": "27c5db465495068402b278ba7c9d3a1f23b8b03797249639190c8a755759563b",
+    "served_and_dist_match": true
+  },
+  "latest_message_query_evidence": {
+    "source": "CHANNEL-LATEST-MESSAGE-EVIDENCE from the actual public endpoint and separate EXPLAIN ANALYZE/BUFFERS candidate measurement in this run",
+    "actual_endpoint_query": {
+      "page_ids_bound": 4,
+      "returned_parents": 4,
+      "lookahead_parent_excluded_from_message_query": true,
+      "message_rows_visited": 8,
+      "directional_leaves": [
+        { "direction": "IN", "index": "messages_conversation_direction_created_id_idx", "actual_rows": 1, "loops": 4, "shared_hit_blocks": 16, "shared_read_blocks": 0, "rows_removed": 0 },
+        { "direction": "OUT", "index": "messages_conversation_direction_created_id_idx", "actual_rows": 1, "loops": 4, "shared_hit_blocks": 16, "shared_read_blocks": 0, "rows_removed": 0 }
+      ],
+      "candidate_merge_rows": 1,
+      "candidate_merge_loops": 4,
+      "sort_nodes": 0,
+      "execution_ms": 0.132,
+      "created_at_tie_behavior": "larger id selected for equal timestamps"
+    },
+    "simple_all_direction_candidate": {
+      "index": "messages_conversation_id_created_at_idx",
+      "scan_actual_rows_per_loop": 2,
+      "scan_loops": 4,
+      "shared_hit_blocks": 16,
+      "shared_read_blocks": 0,
+      "sort": "Incremental Sort on id within created_at groups",
+      "sort_actual_rows_per_loop": 1,
+      "tie_groups_in_fixture": 2,
+      "execution_ms": 0.082,
+      "interpretation": "In this fixture the simpler candidate was not materially worse and was faster in this single observation. Its scan work depends on the size of each equal-createdAt group; the fixture only exercised a two-row timestamp tie. The two directional probes structurally cap candidates at two per parent using the full direction/createdAt/id index order. No speedup claim or proof for a very large equal-timestamp group is made; the tradeoff remains for independent Performance review."
+    },
+    "window_projection_counts": {
+      "official_page": { "latest_any_message": 1, "latest_inbound_window": 1 },
+      "selected_non_window_origin": { "latest_any_message": 1, "latest_inbound_window": 0 },
+      "provider_call_delta": { "meta": 0, "evolution": 0 }
+    },
+    "measurement_limits": "Disposable PostgreSQL plan and bounded page only; no capacity, latency, throughput, or SLO claim. The simple candidate fixture does not prove work for arbitrarily large equal-createdAt groups."
+  },
+  "pcv_evidence": {
+    "CHANNEL-OUTBOUND-OVERLAP": "5 repetitions x 20 distinct owned conversations; each owned conversation had one OUT row in that batch. No same-key exactly-once or capacity claim.",
+    "CHANNEL-FRC-COMPOSER-EVIDENCE": "5 waves x 20 retriggers; one request per wave; outcomes accepted/unknown/accepted/unknown/accepted; draft retained for unknown outcomes.",
+    "RLS-EVIDENCE": "5 clients x 6 reads; 30 bounded own/foreign scope checks; no provider call delta during read stage.",
+    "index_migration_probe": "Configured 5s lock and 60s statement settings recorded; accelerated disposable rollback probes returned SQLSTATE 55P03 and 57014 and left zero test indexes. One bounded write observation: 1,000 rows, 6.379 ms before versus 20.352 ms after index, 6,856,704 index bytes; no capacity/SLO threshold."
+  },
+  "validation_namespace_cleanup": {
+    "before_inventory": "foundation_documentation/artifacts/tmp/stcon06-executor-v13r4-all-inventory-before.json",
+    "before_inventory_sha256": "660f658496a51ff52c41f0b77ff1b24465162abdc00140e26274a48caf379339",
+    "before_counts": { "containers": 0, "volumes": 0, "networks": 0 },
+    "after_inventory": "foundation_documentation/artifacts/tmp/stcon06-executor-v13r4-all-inventory-after.json",
+    "after_counts": { "containers": 0, "volumes": 0, "networks": 0 },
+    "after_inventory_commands_exit_zero": true,
+    "filters": "exact label com.docker.compose.project=leadshug_channels_validation only"
+  },
+  "safety_boundary": {
+    "preserved_human_database_touched": false,
+    "api_or_web_serving_runtime_replaced": false,
+    "tunnel_or_provider_used": false,
+    "deployment_performed": false,
+    "private_dotenv_or_api_local_files_read": false
+  },
+  "related_api_checkpoint": "foundation_documentation/artifacts/reviews/leadshug-channel-abstraction-20261020/evidence/executor-v13r4-validation.json",
+  "next_gate": "Fresh all is green for the frozen 57 public paths. Independent round4 review/PCV adjudication remains pending; this report does not authorize human runtime activation, preserved-database migration, tunnel use, provider traffic, or delivery claims."
+}

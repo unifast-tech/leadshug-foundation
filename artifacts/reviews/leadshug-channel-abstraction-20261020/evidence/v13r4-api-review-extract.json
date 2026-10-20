@@ -1,0 +1,137 @@
+{
+  "schema": "stcon06-api-review-extract-v1",
+  "source_artifact": "foundation_documentation/artifacts/reviews/leadshug-channel-abstraction-20261020/evidence/v13r4-api-root-inspection.json",
+  "source_artifact_sha256": "a75f4c4356eb3ee908284b0bf15d47a76f9486d4740da142f7e25f863f4d67b7",
+  "scope": "Derived payload subset solely removes repeated window/green query-plan serialization; complete original immutable artifact retained. Actual baseline childSQL/params-plan result is included, final currentall metrics are supplied separately.",
+  "terminal_authority": "Executor session94906exit1,64522exit0; root independently parsed complete raw logs/counts/actual plans. No independent test execution claim.",
+  "red": {
+    "run": "red2",
+    "raw_log": "foundation_documentation/artifacts/tmp/stcon06-executor-v13r4-red2.log",
+    "sha256": "aeb730f3b1074b58ce2e9e225c47f1ea6393f6898e522f6ccbe304d81120786e",
+    "counts": {
+      "unit_passed": 196,
+      "pg_passed": 331,
+      "pg_failed": 3
+    }
+  },
+  "red_latest_message": {
+    "policy_schema_version": "pcv-1",
+    "finding_id": "PERF-R3-01",
+    "trigger_result": "required",
+    "trigger_severity": "high",
+    "trigger_reason_code": "PUBLIC-LIST-NESTED-MESSAGE-HYDRATION",
+    "gate_deadline": "before_local_implemented",
+    "pageLimit": 4,
+    "returnedParents": 4,
+    "hasLookahead": true,
+    "parentCount": 25,
+    "historyRowsPerConversation": 500,
+    "totalFixtureMessages": 12500,
+    "queryCounts": {
+      "nestedMessageHydration": 1,
+      "boundedLatestMessageBatch": 0
+    },
+    "measuredSqlShape": "SELECT \"public\".\"messages\".\"id\", \"public\".\"messages\".\"conversation_id\", \"public\".\"messages\".\"bu_id\", \"public\".\"messages\".\"direction\"::text, \"public\".\"messages\".\"message_type\"::text, \"public\".\"messages\".\"content\", \"public\".\"messages\".\"media_ref\", \"public\".\"messages\".\"channel_origin\"::text, \"public\".\"messages\".\"status\"::text, \"public\".\"messages\".\"external_id\", \"public\".\"messages\".\"provider_resource_identity_id\", \"public\".\"messages\".\"author_user_id\", \"public\".\"messages\".\"author_name\", \"public\".\"messages\".\"created_at\" FROM \"public\".\"messages\" WHERE \"public\".\"messages\".\"conversation_id\" IN ($?,$?,$?,$?,$?) ORDER BY \"public\".\"messages\".\"created_at\" DESC, \"public\".\"messages\".\"id\" DESC OFFSET $?",
+    "parameterCount": 6,
+    "plan": {
+      "Plan": {
+        "Node Type": "Sort",
+        "Parallel Aware": false,
+        "Async Capable": false,
+        "Startup Cost": 736.41,
+        "Total Cost": 742.66,
+        "Plan Rows": 2500,
+        "Plan Width": 424,
+        "Actual Startup Time": 4.715,
+        "Actual Total Time": 4.82,
+        "Actual Rows": 2500,
+        "Actual Loops": 1,
+        "Sort Key": [
+          "created_at DESC",
+          "id DESC"
+        ],
+        "Sort Method": "quicksort",
+        "Sort Space Used": 585,
+        "Sort Space Type": "Memory",
+        "Shared Hit Blocks": 330,
+        "Shared Read Blocks": 0,
+        "Shared Dirtied Blocks": 0,
+        "Shared Written Blocks": 0,
+        "Local Hit Blocks": 0,
+        "Local Read Blocks": 0,
+        "Local Dirtied Blocks": 0,
+        "Local Written Blocks": 0,
+        "Temp Read Blocks": 0,
+        "Temp Written Blocks": 0,
+        "Plans": [
+          {
+            "Node Type": "Seq Scan",
+            "Parent Relationship": "Outer",
+            "Parallel Aware": false,
+            "Async Capable": false,
+            "Relation Name": "messages",
+            "Alias": "messages",
+            "Startup Cost": 0,
+            "Total Cost": 595.31,
+            "Plan Rows": 2500,
+            "Plan Width": 424,
+            "Actual Startup Time": 0.083,
+            "Actual Total Time": 3.297,
+            "Actual Rows": 2500,
+            "Actual Loops": 1,
+            "Filter": "(conversation_id = ANY ('{95c7e4ba-f720-47b3-b4ff-6bfc8473b2d5,3ddc789c-0347-4b6c-9ae3-9d087e809c9c,710f99ea-7298-4a38-8a83-ea4f751237e8,37c1a60a-f402-4187-a063-3fe06a2c8672,06263741-63f9-42fd-999e-97fb7bd169e7}'::text[]))",
+            "Rows Removed by Filter": 10750,
+            "Shared Hit Blocks": 330,
+            "Shared Read Blocks": 0,
+            "Shared Dirtied Blocks": 0,
+            "Shared Written Blocks": 0,
+            "Local Hit Blocks": 0,
+            "Local Read Blocks": 0,
+            "Local Dirtied Blocks": 0,
+            "Local Written Blocks": 0,
+            "Temp Read Blocks": 0,
+            "Temp Written Blocks": 0
+          }
+        ]
+      },
+      "Planning": {
+        "Shared Hit Blocks": 0,
+        "Shared Read Blocks": 0,
+        "Shared Dirtied Blocks": 0,
+        "Shared Written Blocks": 0,
+        "Local Hit Blocks": 0,
+        "Local Read Blocks": 0,
+        "Local Dirtied Blocks": 0,
+        "Local Written Blocks": 0,
+        "Temp Read Blocks": 0,
+        "Temp Written Blocks": 0
+      },
+      "Planning Time": 0.059,
+      "Triggers": [],
+      "Execution Time": 4.967
+    },
+    "messageScanSummary": [
+      {
+        "nodeType": "Seq Scan",
+        "actualRows": 2500,
+        "actualLoops": 1,
+        "rowsRemovedByFilter": 10750,
+        "sharedHitBlocks": 330,
+        "sharedReadBlocks": 0
+      }
+    ],
+    "actualMessageRowsVisited": 2500,
+    "limits": "Real public endpoint SQL and EXPLAIN ANALYZE on disposable PostgreSQL; no capacity/latency SLO claim."
+  },
+  "green": {
+    "run": "api-green",
+    "raw_log": "foundation_documentation/artifacts/tmp/stcon06-executor-v13r4-api-green.log",
+    "sha256": "7f91cfa5ffc9ab28ad0f5b7f8bad5e5dffb6ee8c1418246bcc800085068705bd",
+    "counts": {
+      "unit_passed": 196,
+      "pg_passed": 338,
+      "pg_failed": 0
+    }
+  },
+  "limits": "API-only source-before-final-assertions/comparison. Not freshall/current acceptance. Preserved runtime untouched."
+}

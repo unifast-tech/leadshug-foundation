@@ -1,0 +1,1262 @@
+{
+  "schema": "stcon06-root-fresh-full-validation-v1",
+  "run_id": "canonical-linux-all93791",
+  "session": 93791,
+  "command": "CHANNELS_DOCKER_TRANSPORT=linux bash scripts/test-channels-local.sh all",
+  "execution_context": "Same WSL distro/root and principal checkout; explicit verified same Docker Desktop shared socket, narrowly translated bind/config masks. NativeLinux/Windows controls separate; no permission/config/source location changes.",
+  "exit_code": 0,
+  "terminal_provenance": "Executor reports actual tool terminal0; root independently inspected complete raw log, source hashes, parsed metrics and actual browser source/bundle attestation. No independent reviewer execution claimed.",
+  "raw_log": "foundation_documentation/artifacts/tmp/stcon06-executor-v13r4-all-linux.log",
+  "raw_log_sha256": "4ca4a287c78c027a2d7bc547adc423befe87e39b0ba4a346ec6d076ef8e24608",
+  "captured_at_utc": "2026-10-20T19:31:14.069154+00:00",
+  "counts": {
+    "api_unit": 196,
+    "api_e2e": 338,
+    "web_unit": 29,
+    "browser": 50
+  },
+  "source_unchanged": true,
+  "source_unchanged_scope": "All57 explicitly frozen public product/build/test inputs unchanged; Foundation review context is frozen separately. No excluded-path discovery or whole-tree clean claim.",
+  "source_comparison": {
+    "total": 57,
+    "unchanged": 57,
+    "document_only_changed": 0
+  },
+  "browser_attestation": "evidence/browser-attestation-v13r4-all93791.json",
+  "served_bundle": "evidence/served-app-v13r4-all93791.js",
+  "served_dist_preserved_sha256": "27c5db465495068402b278ba7c9d3a1f23b8b03797249639190c8a755759563b",
+  "guard": {
+    "guard": "channels-ci-parity-v1",
+    "mutations_rejected": [
+      "missing-pr-trigger",
+      "missing-channels-job",
+      "missing-retained-guard",
+      "weakened-job-gate",
+      "swallowed-job-errors",
+      "skipped-validate-step",
+      "swallowed-retained-job",
+      "skipped-retained-admission",
+      "missing-retained-private-checkout",
+      "missing-common-guard",
+      "swallowed-common-guard-failure",
+      "missing-e2e",
+      "swallowed-e2e-failure",
+      "missing-browser",
+      "missing-migrate",
+      "missing-generate",
+      "missing-lint",
+      "reordered-suite",
+      "missing-shell-guard",
+      "widened-wsl-socket",
+      "changed-wsl-host-prefix",
+      "wrong-wsl-mask-source",
+      "missing-wsl-overlay"
+    ],
+    "outer_wrapper": {
+      "collision_control": {
+        "compose_calls": 0,
+        "exit_code": 1
+      },
+      "empty_config_control": {
+        "compose_calls": [
+          [
+            "compose",
+            "--project-name",
+            "leadshug_channels_validation",
+            "--env-file",
+            "/workspace/.env.example",
+            "--env-file",
+            "/tmp/tmp.6GbKQnl82f",
+            "-f",
+            "/workspace/docker-compose.yml",
+            "-f",
+            "/workspace/docker-compose.channels.yml",
+            "--profile",
+            "validation",
+            "config",
+            "--quiet"
+          ]
+        ],
+        "exit_code": 0
+      },
+      "inventory_failures": {
+        "network": {
+          "compose_calls": 0,
+          "docker_calls": 3,
+          "exit_code": 1
+        },
+        "ps": {
+          "compose_calls": 0,
+          "docker_calls": 1,
+          "exit_code": 1
+        },
+        "volume": {
+          "compose_calls": 0,
+          "docker_calls": 2,
+          "exit_code": 1
+        }
+      },
+      "mandatory_failure_cleanup": {
+        "cleanup_observed": true,
+        "compose_lifecycle": [
+          "run",
+          "down"
+        ],
+        "exit_code": 42,
+        "provider_or_real_docker_invoked": false,
+        "required_leaf": "fake python3 reached through actual RUNNER_SCRIPT and returned 42"
+      },
+      "native_path_control": {
+        "exit_code": 0,
+        "overlay_added": false,
+        "posix_bind_paths_preserved": true
+      },
+      "unsupported_wsl_socket_control": {
+        "docker_calls": 0,
+        "exit_code": 1
+      },
+      "wsl_bind_path_control": {
+        "skipped": "self-test checkout is not on a WSL-mounted drive"
+      }
+    },
+    "yaml": "safe-no-alias-no-duplicates"
+  },
+  "metrics": {
+    "CHANNEL-EPS-EVIDENCE": {
+      "policy_schema_version": "pcv-1",
+      "lane_id": "EPS",
+      "trigger_result": "required",
+      "trigger_severity": "medium",
+      "trigger_reason_code": "EPS-DATA-PATH-CHANGED",
+      "gate_deadline": "before_local_implemented",
+      "min_evidence_rule_id": "EPS-E2",
+      "acceptance_rule_id": "EPS-A2",
+      "sample_profile": "EPS-SP-STRONG",
+      "access_pattern_classification": "Public conversation page loads selected BU channels once, official credential metadata once, one bounded latest-any-message projection for returned page IDs, and one separate indexed latest-IN statement when selected bindings require window metadata; no provider credentials are decrypted or probed.",
+      "pageConversations": 30,
+      "historyRowsPerConversation": 24,
+      "availabilitySample": [
+        {
+          "available": true,
+          "reason": null,
+          "windowOpen": true
+        },
+        {
+          "available": true,
+          "reason": null,
+          "windowOpen": true
+        },
+        {
+          "available": true,
+          "reason": null,
+          "windowOpen": true
+        }
+      ],
+      "queryCounts": {
+        "buChannelFindMany": 1,
+        "channelCredentialFindMany": 1,
+        "latestAnyMessageProjection": 1,
+        "latestInboundWindowProjection": 1
+      },
+      "elapsedMs": 15.028296999999839,
+      "explainLatestInboundProjection": [
+        {
+          "Plan": {
+            "Node Type": "Nested Loop",
+            "Parallel Aware": false,
+            "Async Capable": false,
+            "Join Type": "Inner",
+            "Startup Cost": 0.28,
+            "Total Cost": 90.59,
+            "Plan Rows": 30,
+            "Plan Width": 40,
+            "Actual Startup Time": 0.02,
+            "Actual Total Time": 0.111,
+            "Actual Rows": 30,
+            "Actual Loops": 1,
+            "Inner Unique": false,
+            "Shared Hit Blocks": 90,
+            "Shared Read Blocks": 0,
+            "Shared Dirtied Blocks": 0,
+            "Shared Written Blocks": 0,
+            "Local Hit Blocks": 0,
+            "Local Read Blocks": 0,
+            "Local Dirtied Blocks": 0,
+            "Local Written Blocks": 0,
+            "Temp Read Blocks": 0,
+            "Temp Written Blocks": 0,
+            "Plans": [
+              {
+                "Node Type": "Function Scan",
+                "Parent Relationship": "Outer",
+                "Parallel Aware": false,
+                "Async Capable": false,
+                "Function Name": "unnest",
+                "Alias": "requested",
+                "Startup Cost": 0,
+                "Total Cost": 0.3,
+                "Plan Rows": 30,
+                "Plan Width": 32,
+                "Actual Startup Time": 0.004,
+                "Actual Total Time": 0.005,
+                "Actual Rows": 30,
+                "Actual Loops": 1,
+                "Shared Hit Blocks": 0,
+                "Shared Read Blocks": 0,
+                "Shared Dirtied Blocks": 0,
+                "Shared Written Blocks": 0,
+                "Local Hit Blocks": 0,
+                "Local Read Blocks": 0,
+                "Local Dirtied Blocks": 0,
+                "Local Written Blocks": 0,
+                "Temp Read Blocks": 0,
+                "Temp Written Blocks": 0
+              },
+              {
+                "Node Type": "Limit",
+                "Parent Relationship": "Inner",
+                "Parallel Aware": false,
+                "Async Capable": false,
+                "Startup Cost": 0.28,
+                "Total Cost": 2.99,
+                "Plan Rows": 1,
+                "Plan Width": 45,
+                "Actual Startup Time": 0.003,
+                "Actual Total Time": 0.003,
+                "Actual Rows": 1,
+                "Actual Loops": 30,
+                "Shared Hit Blocks": 90,
+                "Shared Read Blocks": 0,
+                "Shared Dirtied Blocks": 0,
+                "Shared Written Blocks": 0,
+                "Local Hit Blocks": 0,
+                "Local Read Blocks": 0,
+                "Local Dirtied Blocks": 0,
+                "Local Written Blocks": 0,
+                "Temp Read Blocks": 0,
+                "Temp Written Blocks": 0,
+                "Plans": [
+                  {
+                    "Node Type": "Index Only Scan",
+                    "Parent Relationship": "Outer",
+                    "Parallel Aware": false,
+                    "Async Capable": false,
+                    "Scan Direction": "Backward",
+                    "Index Name": "messages_conversation_direction_created_id_idx",
+                    "Relation Name": "messages",
+                    "Alias": "message",
+                    "Startup Cost": 0.28,
+                    "Total Cost": 68.14,
+                    "Plan Rows": 25,
+                    "Plan Width": 45,
+                    "Actual Startup Time": 0.003,
+                    "Actual Total Time": 0.003,
+                    "Actual Rows": 1,
+                    "Actual Loops": 30,
+                    "Index Cond": "((conversation_id = requested.conversation_id) AND (direction = 'IN'::\"MessageDirection\"))",
+                    "Rows Removed by Index Recheck": 0,
+                    "Heap Fetches": 30,
+                    "Shared Hit Blocks": 90,
+                    "Shared Read Blocks": 0,
+                    "Shared Dirtied Blocks": 0,
+                    "Shared Written Blocks": 0,
+                    "Local Hit Blocks": 0,
+                    "Local Read Blocks": 0,
+                    "Local Dirtied Blocks": 0,
+                    "Local Written Blocks": 0,
+                    "Temp Read Blocks": 0,
+                    "Temp Written Blocks": 0
+                  }
+                ]
+              }
+            ]
+          },
+          "Planning": {
+            "Shared Hit Blocks": 54,
+            "Shared Read Blocks": 0,
+            "Shared Dirtied Blocks": 0,
+            "Shared Written Blocks": 0,
+            "Local Hit Blocks": 0,
+            "Local Read Blocks": 0,
+            "Local Dirtied Blocks": 0,
+            "Local Written Blocks": 0,
+            "Temp Read Blocks": 0,
+            "Temp Written Blocks": 0
+          },
+          "Planning Time": 0.183,
+          "Triggers": [],
+          "Execution Time": 0.123
+        }
+      ],
+      "providerCallsBefore": {
+        "meta": 0,
+        "evolution": 0
+      },
+      "providerCallsAfter": {
+        "meta": 0,
+        "evolution": 0
+      },
+      "limits": "Disposable PostgreSQL and one bounded 30-conversation public page; local query count/plan observation, not a capacity or latency SLO claim."
+    },
+    "CHANNEL-LATEST-MESSAGE-EVIDENCE": {
+      "policy_schema_version": "pcv-1",
+      "finding_id": "PERF-R3-01",
+      "trigger_result": "required",
+      "trigger_severity": "high",
+      "trigger_reason_code": "PUBLIC-LIST-NESTED-MESSAGE-HYDRATION",
+      "gate_deadline": "before_local_implemented",
+      "pageLimit": 4,
+      "returnedParents": 4,
+      "hasLookahead": true,
+      "parentCount": 25,
+      "historyRowsPerConversation": 500,
+      "totalFixtureMessages": 12500,
+      "queryCounts": {
+        "nestedMessageHydration": 0,
+        "boundedLatestMessageBatch": 1
+      },
+      "measuredSqlShape": "\n        SELECT requested.conversation_id AS \"conversationId\",\n          latest.content,\n          latest.direction::text AS \"direction\",\n          latest.channel_origin::text AS \"channelOrigin\"\n        FROM unnest(ARRAY[$?,$?,$?,$?]::text[]) AS requested(conversation_id)\n        LEFT JOIN LATERAL (\n          SELECT candidate.content, candidate.direction, candidate.channel_origin\n          FROM (\n            (\n              SELECT message.id, message.content, message.direction, message.channel_origin, message.created_at\n              FROM messages AS message\n              WHERE message.conversation_id = requested.conversation_id AND message.direction = 'IN'\n              ORDER BY message.created_at DESC, message.id DESC\n              LIMIT 1\n            )\n            UNION ALL\n            (\n              SELECT message.id, message.content, message.direction, message.channel_origin, message.created_at\n              FROM messages AS message\n              WHERE message.conversation_id = requested.conversation_id AND message.direction = 'OUT'\n              ORDER BY message.created_at DESC, message.id DESC\n              LIMIT 1\n            )\n          ) AS candidate\n          ORDER BY candidate.created_at DESC, candidate.id DESC\n          LIMIT 1\n        ) AS latest ON TRUE\n      ",
+      "parameterCount": 4,
+      "plan": {
+        "Plan": {
+          "Node Type": "Nested Loop",
+          "Parallel Aware": false,
+          "Async Capable": false,
+          "Join Type": "Left",
+          "Startup Cost": 0.83,
+          "Total Cost": 17.43,
+          "Plan Rows": 4,
+          "Plan Width": 114,
+          "Actual Startup Time": 0.039,
+          "Actual Total Time": 0.082,
+          "Actual Rows": 4,
+          "Actual Loops": 1,
+          "Inner Unique": false,
+          "Shared Hit Blocks": 32,
+          "Shared Read Blocks": 0,
+          "Shared Dirtied Blocks": 0,
+          "Shared Written Blocks": 0,
+          "Local Hit Blocks": 0,
+          "Local Read Blocks": 0,
+          "Local Dirtied Blocks": 0,
+          "Local Written Blocks": 0,
+          "Temp Read Blocks": 0,
+          "Temp Written Blocks": 0,
+          "Plans": [
+            {
+              "Node Type": "Function Scan",
+              "Parent Relationship": "Outer",
+              "Parallel Aware": false,
+              "Async Capable": false,
+              "Function Name": "unnest",
+              "Alias": "requested",
+              "Startup Cost": 0,
+              "Total Cost": 0.04,
+              "Plan Rows": 4,
+              "Plan Width": 32,
+              "Actual Startup Time": 0.007,
+              "Actual Total Time": 0.008,
+              "Actual Rows": 4,
+              "Actual Loops": 1,
+              "Shared Hit Blocks": 0,
+              "Shared Read Blocks": 0,
+              "Shared Dirtied Blocks": 0,
+              "Shared Written Blocks": 0,
+              "Local Hit Blocks": 0,
+              "Local Read Blocks": 0,
+              "Local Dirtied Blocks": 0,
+              "Local Written Blocks": 0,
+              "Temp Read Blocks": 0,
+              "Temp Written Blocks": 0
+            },
+            {
+              "Node Type": "Limit",
+              "Parent Relationship": "Inner",
+              "Parallel Aware": false,
+              "Async Capable": false,
+              "Startup Cost": 0.83,
+              "Total Cost": 4.32,
+              "Plan Rows": 1,
+              "Plan Width": 70,
+              "Actual Startup Time": 0.017,
+              "Actual Total Time": 0.018,
+              "Actual Rows": 1,
+              "Actual Loops": 4,
+              "Shared Hit Blocks": 32,
+              "Shared Read Blocks": 0,
+              "Shared Dirtied Blocks": 0,
+              "Shared Written Blocks": 0,
+              "Local Hit Blocks": 0,
+              "Local Read Blocks": 0,
+              "Local Dirtied Blocks": 0,
+              "Local Written Blocks": 0,
+              "Temp Read Blocks": 0,
+              "Temp Written Blocks": 0,
+              "Plans": [
+                {
+                  "Node Type": "Merge Append",
+                  "Parent Relationship": "Outer",
+                  "Parallel Aware": false,
+                  "Async Capable": false,
+                  "Startup Cost": 0.83,
+                  "Total Cost": 7.8,
+                  "Plan Rows": 2,
+                  "Plan Width": 70,
+                  "Actual Startup Time": 0.017,
+                  "Actual Total Time": 0.017,
+                  "Actual Rows": 1,
+                  "Actual Loops": 4,
+                  "Sort Key": [
+                    "\"*SELECT* 1\".created_at DESC",
+                    "\"*SELECT* 1\".id DESC"
+                  ],
+                  "Shared Hit Blocks": 32,
+                  "Shared Read Blocks": 0,
+                  "Shared Dirtied Blocks": 0,
+                  "Shared Written Blocks": 0,
+                  "Local Hit Blocks": 0,
+                  "Local Read Blocks": 0,
+                  "Local Dirtied Blocks": 0,
+                  "Local Written Blocks": 0,
+                  "Temp Read Blocks": 0,
+                  "Temp Written Blocks": 0,
+                  "Subplans Removed": 0,
+                  "Plans": [
+                    {
+                      "Node Type": "Subquery Scan",
+                      "Parent Relationship": "Member",
+                      "Parallel Aware": false,
+                      "Async Capable": false,
+                      "Alias": "*SELECT* 1",
+                      "Startup Cost": 0.41,
+                      "Total Cost": 3.87,
+                      "Plan Rows": 1,
+                      "Plan Width": 70,
+                      "Actual Startup Time": 0.009,
+                      "Actual Total Time": 0.01,
+                      "Actual Rows": 1,
+                      "Actual Loops": 4,
+                      "Shared Hit Blocks": 16,
+                      "Shared Read Blocks": 0,
+                      "Shared Dirtied Blocks": 0,
+                      "Shared Written Blocks": 0,
+                      "Local Hit Blocks": 0,
+                      "Local Read Blocks": 0,
+                      "Local Dirtied Blocks": 0,
+                      "Local Written Blocks": 0,
+                      "Temp Read Blocks": 0,
+                      "Temp Written Blocks": 0,
+                      "Plans": [
+                        {
+                          "Node Type": "Limit",
+                          "Parent Relationship": "Subquery",
+                          "Parallel Aware": false,
+                          "Async Capable": false,
+                          "Startup Cost": 0.41,
+                          "Total Cost": 3.86,
+                          "Plan Rows": 1,
+                          "Plan Width": 70,
+                          "Actual Startup Time": 0.009,
+                          "Actual Total Time": 0.009,
+                          "Actual Rows": 1,
+                          "Actual Loops": 4,
+                          "Shared Hit Blocks": 16,
+                          "Shared Read Blocks": 0,
+                          "Shared Dirtied Blocks": 0,
+                          "Shared Written Blocks": 0,
+                          "Local Hit Blocks": 0,
+                          "Local Read Blocks": 0,
+                          "Local Dirtied Blocks": 0,
+                          "Local Written Blocks": 0,
+                          "Temp Read Blocks": 0,
+                          "Temp Written Blocks": 0,
+                          "Plans": [
+                            {
+                              "Node Type": "Index Scan",
+                              "Parent Relationship": "Outer",
+                              "Parallel Aware": false,
+                              "Async Capable": false,
+                              "Scan Direction": "Backward",
+                              "Index Name": "messages_conversation_direction_created_id_idx",
+                              "Relation Name": "messages",
+                              "Alias": "message",
+                              "Startup Cost": 0.41,
+                              "Total Cost": 437.94,
+                              "Plan Rows": 127,
+                              "Plan Width": 70,
+                              "Actual Startup Time": 0.009,
+                              "Actual Total Time": 0.009,
+                              "Actual Rows": 1,
+                              "Actual Loops": 4,
+                              "Index Cond": "((conversation_id = requested.conversation_id) AND (direction = 'IN'::\"MessageDirection\"))",
+                              "Rows Removed by Index Recheck": 0,
+                              "Shared Hit Blocks": 16,
+                              "Shared Read Blocks": 0,
+                              "Shared Dirtied Blocks": 0,
+                              "Shared Written Blocks": 0,
+                              "Local Hit Blocks": 0,
+                              "Local Read Blocks": 0,
+                              "Local Dirtied Blocks": 0,
+                              "Local Written Blocks": 0,
+                              "Temp Read Blocks": 0,
+                              "Temp Written Blocks": 0
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "Node Type": "Subquery Scan",
+                      "Parent Relationship": "Member",
+                      "Parallel Aware": false,
+                      "Async Capable": false,
+                      "Alias": "*SELECT* 2",
+                      "Startup Cost": 0.41,
+                      "Total Cost": 3.91,
+                      "Plan Rows": 1,
+                      "Plan Width": 70,
+                      "Actual Startup Time": 0.007,
+                      "Actual Total Time": 0.007,
+                      "Actual Rows": 1,
+                      "Actual Loops": 4,
+                      "Shared Hit Blocks": 16,
+                      "Shared Read Blocks": 0,
+                      "Shared Dirtied Blocks": 0,
+                      "Shared Written Blocks": 0,
+                      "Local Hit Blocks": 0,
+                      "Local Read Blocks": 0,
+                      "Local Dirtied Blocks": 0,
+                      "Local Written Blocks": 0,
+                      "Temp Read Blocks": 0,
+                      "Temp Written Blocks": 0,
+                      "Plans": [
+                        {
+                          "Node Type": "Limit",
+                          "Parent Relationship": "Subquery",
+                          "Parallel Aware": false,
+                          "Async Capable": false,
+                          "Startup Cost": 0.41,
+                          "Total Cost": 3.9,
+                          "Plan Rows": 1,
+                          "Plan Width": 70,
+                          "Actual Startup Time": 0.007,
+                          "Actual Total Time": 0.007,
+                          "Actual Rows": 1,
+                          "Actual Loops": 4,
+                          "Shared Hit Blocks": 16,
+                          "Shared Read Blocks": 0,
+                          "Shared Dirtied Blocks": 0,
+                          "Shared Written Blocks": 0,
+                          "Local Hit Blocks": 0,
+                          "Local Read Blocks": 0,
+                          "Local Dirtied Blocks": 0,
+                          "Local Written Blocks": 0,
+                          "Temp Read Blocks": 0,
+                          "Temp Written Blocks": 0,
+                          "Plans": [
+                            {
+                              "Node Type": "Index Scan",
+                              "Parent Relationship": "Outer",
+                              "Parallel Aware": false,
+                              "Async Capable": false,
+                              "Scan Direction": "Backward",
+                              "Index Name": "messages_conversation_direction_created_id_idx",
+                              "Relation Name": "messages",
+                              "Alias": "message_1",
+                              "Startup Cost": 0.41,
+                              "Total Cost": 394.5,
+                              "Plan Rows": 113,
+                              "Plan Width": 70,
+                              "Actual Startup Time": 0.007,
+                              "Actual Total Time": 0.007,
+                              "Actual Rows": 1,
+                              "Actual Loops": 4,
+                              "Index Cond": "((conversation_id = requested.conversation_id) AND (direction = 'OUT'::\"MessageDirection\"))",
+                              "Rows Removed by Index Recheck": 0,
+                              "Shared Hit Blocks": 16,
+                              "Shared Read Blocks": 0,
+                              "Shared Dirtied Blocks": 0,
+                              "Shared Written Blocks": 0,
+                              "Local Hit Blocks": 0,
+                              "Local Read Blocks": 0,
+                              "Local Dirtied Blocks": 0,
+                              "Local Written Blocks": 0,
+                              "Temp Read Blocks": 0,
+                              "Temp Written Blocks": 0
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "Planning": {
+          "Shared Hit Blocks": 0,
+          "Shared Read Blocks": 0,
+          "Shared Dirtied Blocks": 0,
+          "Shared Written Blocks": 0,
+          "Local Hit Blocks": 0,
+          "Local Read Blocks": 0,
+          "Local Dirtied Blocks": 0,
+          "Local Written Blocks": 0,
+          "Temp Read Blocks": 0,
+          "Temp Written Blocks": 0
+        },
+        "Planning Time": 0.191,
+        "Triggers": [],
+        "Execution Time": 0.132
+      },
+      "simpleAllDirectionCandidatePlan": [
+        {
+          "Plan": {
+            "Node Type": "Nested Loop",
+            "Parallel Aware": false,
+            "Async Capable": false,
+            "Join Type": "Left",
+            "Startup Cost": 3.51,
+            "Total Cost": 26.03,
+            "Plan Rows": 4,
+            "Plan Width": 94,
+            "Actual Startup Time": 0.039,
+            "Actual Total Time": 0.071,
+            "Actual Rows": 4,
+            "Actual Loops": 1,
+            "Inner Unique": false,
+            "Shared Hit Blocks": 19,
+            "Shared Read Blocks": 0,
+            "Shared Dirtied Blocks": 0,
+            "Shared Written Blocks": 0,
+            "Local Hit Blocks": 0,
+            "Local Read Blocks": 0,
+            "Local Dirtied Blocks": 0,
+            "Local Written Blocks": 0,
+            "Temp Read Blocks": 0,
+            "Temp Written Blocks": 0,
+            "Plans": [
+              {
+                "Node Type": "Function Scan",
+                "Parent Relationship": "Outer",
+                "Parallel Aware": false,
+                "Async Capable": false,
+                "Function Name": "unnest",
+                "Alias": "requested",
+                "Startup Cost": 0,
+                "Total Cost": 0.04,
+                "Plan Rows": 4,
+                "Plan Width": 32,
+                "Actual Startup Time": 0.002,
+                "Actual Total Time": 0.003,
+                "Actual Rows": 4,
+                "Actual Loops": 1,
+                "Shared Hit Blocks": 0,
+                "Shared Read Blocks": 0,
+                "Shared Dirtied Blocks": 0,
+                "Shared Written Blocks": 0,
+                "Local Hit Blocks": 0,
+                "Local Read Blocks": 0,
+                "Local Dirtied Blocks": 0,
+                "Local Written Blocks": 0,
+                "Temp Read Blocks": 0,
+                "Temp Written Blocks": 0
+              },
+              {
+                "Node Type": "Limit",
+                "Parent Relationship": "Inner",
+                "Parallel Aware": false,
+                "Async Capable": false,
+                "Startup Cost": 3.5,
+                "Total Cost": 6.48,
+                "Plan Rows": 1,
+                "Plan Width": 70,
+                "Actual Startup Time": 0.016,
+                "Actual Total Time": 0.016,
+                "Actual Rows": 1,
+                "Actual Loops": 4,
+                "Shared Hit Blocks": 19,
+                "Shared Read Blocks": 0,
+                "Shared Dirtied Blocks": 0,
+                "Shared Written Blocks": 0,
+                "Local Hit Blocks": 0,
+                "Local Read Blocks": 0,
+                "Local Dirtied Blocks": 0,
+                "Local Written Blocks": 0,
+                "Temp Read Blocks": 0,
+                "Temp Written Blocks": 0,
+                "Plans": [
+                  {
+                    "Node Type": "Incremental Sort",
+                    "Parent Relationship": "Outer",
+                    "Parallel Aware": false,
+                    "Async Capable": false,
+                    "Startup Cost": 3.5,
+                    "Total Cost": 720.22,
+                    "Plan Rows": 241,
+                    "Plan Width": 70,
+                    "Actual Startup Time": 0.016,
+                    "Actual Total Time": 0.016,
+                    "Actual Rows": 1,
+                    "Actual Loops": 4,
+                    "Sort Key": [
+                      "message.created_at DESC",
+                      "message.id DESC"
+                    ],
+                    "Presorted Key": [
+                      "message.created_at"
+                    ],
+                    "Full-sort Groups": {
+                      "Group Count": 4,
+                      "Sort Methods Used": [
+                        "quicksort"
+                      ],
+                      "Sort Space Memory": {
+                        "Average Sort Space Used": 25,
+                        "Peak Sort Space Used": 25
+                      }
+                    },
+                    "Shared Hit Blocks": 19,
+                    "Shared Read Blocks": 0,
+                    "Shared Dirtied Blocks": 0,
+                    "Shared Written Blocks": 0,
+                    "Local Hit Blocks": 0,
+                    "Local Read Blocks": 0,
+                    "Local Dirtied Blocks": 0,
+                    "Local Written Blocks": 0,
+                    "Temp Read Blocks": 0,
+                    "Temp Written Blocks": 0,
+                    "Plans": [
+                      {
+                        "Node Type": "Index Scan",
+                        "Parent Relationship": "Outer",
+                        "Parallel Aware": false,
+                        "Async Capable": false,
+                        "Scan Direction": "Backward",
+                        "Index Name": "messages_conversation_id_created_at_idx",
+                        "Relation Name": "messages",
+                        "Alias": "message",
+                        "Startup Cost": 0.41,
+                        "Total Cost": 709.76,
+                        "Plan Rows": 241,
+                        "Plan Width": 70,
+                        "Actual Startup Time": 0.011,
+                        "Actual Total Time": 0.011,
+                        "Actual Rows": 2,
+                        "Actual Loops": 4,
+                        "Index Cond": "(conversation_id = requested.conversation_id)",
+                        "Rows Removed by Index Recheck": 0,
+                        "Shared Hit Blocks": 16,
+                        "Shared Read Blocks": 0,
+                        "Shared Dirtied Blocks": 0,
+                        "Shared Written Blocks": 0,
+                        "Local Hit Blocks": 0,
+                        "Local Read Blocks": 0,
+                        "Local Dirtied Blocks": 0,
+                        "Local Written Blocks": 0,
+                        "Temp Read Blocks": 0,
+                        "Temp Written Blocks": 0
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "Planning": {
+            "Shared Hit Blocks": 0,
+            "Shared Read Blocks": 0,
+            "Shared Dirtied Blocks": 0,
+            "Shared Written Blocks": 0,
+            "Local Hit Blocks": 0,
+            "Local Read Blocks": 0,
+            "Local Dirtied Blocks": 0,
+            "Local Written Blocks": 0,
+            "Temp Read Blocks": 0,
+            "Temp Written Blocks": 0
+          },
+          "Planning Time": 0.066,
+          "Triggers": [],
+          "Execution Time": 0.082
+        }
+      ],
+      "messageScanSummary": [
+        {
+          "nodeType": "Index Scan",
+          "index": "messages_conversation_direction_created_id_idx",
+          "actualRows": 1,
+          "actualLoops": 4,
+          "rowsRemovedByIndexRecheck": 0,
+          "sharedHitBlocks": 16,
+          "sharedReadBlocks": 0
+        },
+        {
+          "nodeType": "Index Scan",
+          "index": "messages_conversation_direction_created_id_idx",
+          "actualRows": 1,
+          "actualLoops": 4,
+          "rowsRemovedByIndexRecheck": 0,
+          "sharedHitBlocks": 16,
+          "sharedReadBlocks": 0
+        }
+      ],
+      "sortSummary": [],
+      "actualMessageRowsVisited": 8,
+      "limits": "Real public endpoint SQL and EXPLAIN ANALYZE on disposable PostgreSQL; no capacity/latency SLO claim."
+    },
+    "CHANNEL-HISTORY-SCAN-EVIDENCE": {
+      "finding_id": "PERF-01",
+      "policy_schema_version": "pcv-1",
+      "fixture": {
+        "conversations": 500,
+        "outSuffixLength": 500,
+        "hasOlderInbound": true,
+        "hasOutOnlyHistory": true,
+        "equalTimeTie": true,
+        "pageAtMaximum": true
+      },
+      "actual": {
+        "rowsRemovedByFilter": 0,
+        "sharedHitBlocks": 1502,
+        "sharedReadBlocks": 0,
+        "executionMs": 1.984,
+        "scanNodes": [
+          {
+            "type": "Index Only Scan",
+            "relation": "messages",
+            "actualRows": 0,
+            "loops": 500,
+            "index": "messages_conversation_direction_created_id_idx",
+            "indexCondition": "((conversation_id = requested.conversation_id) AND (direction = 'IN'::\"MessageDirection\"))"
+          }
+        ]
+      },
+      "plan": [
+        {
+          "Plan": {
+            "Node Type": "Nested Loop",
+            "Parallel Aware": false,
+            "Async Capable": false,
+            "Join Type": "Inner",
+            "Startup Cost": 0.41,
+            "Total Cost": 2010.2,
+            "Plan Rows": 500,
+            "Plan Width": 40,
+            "Actual Startup Time": 0.042,
+            "Actual Total Time": 1.969,
+            "Actual Rows": 2,
+            "Actual Loops": 1,
+            "Inner Unique": false,
+            "Shared Hit Blocks": 1502,
+            "Shared Read Blocks": 0,
+            "Shared Dirtied Blocks": 0,
+            "Shared Written Blocks": 0,
+            "Local Hit Blocks": 0,
+            "Local Read Blocks": 0,
+            "Local Dirtied Blocks": 0,
+            "Local Written Blocks": 0,
+            "Temp Read Blocks": 0,
+            "Temp Written Blocks": 0,
+            "Plans": [
+              {
+                "Node Type": "Function Scan",
+                "Parent Relationship": "Outer",
+                "Parallel Aware": false,
+                "Async Capable": false,
+                "Function Name": "unnest",
+                "Alias": "requested",
+                "Startup Cost": 0,
+                "Total Cost": 5,
+                "Plan Rows": 500,
+                "Plan Width": 32,
+                "Actual Startup Time": 0.024,
+                "Actual Total Time": 0.047,
+                "Actual Rows": 500,
+                "Actual Loops": 1,
+                "Shared Hit Blocks": 0,
+                "Shared Read Blocks": 0,
+                "Shared Dirtied Blocks": 0,
+                "Shared Written Blocks": 0,
+                "Local Hit Blocks": 0,
+                "Local Read Blocks": 0,
+                "Local Dirtied Blocks": 0,
+                "Local Written Blocks": 0,
+                "Temp Read Blocks": 0,
+                "Temp Written Blocks": 0
+              },
+              {
+                "Node Type": "Limit",
+                "Parent Relationship": "Inner",
+                "Parallel Aware": false,
+                "Async Capable": false,
+                "Startup Cost": 0.41,
+                "Total Cost": 3.99,
+                "Plan Rows": 1,
+                "Plan Width": 44,
+                "Actual Startup Time": 0.004,
+                "Actual Total Time": 0.004,
+                "Actual Rows": 0,
+                "Actual Loops": 500,
+                "Shared Hit Blocks": 1502,
+                "Shared Read Blocks": 0,
+                "Shared Dirtied Blocks": 0,
+                "Shared Written Blocks": 0,
+                "Local Hit Blocks": 0,
+                "Local Read Blocks": 0,
+                "Local Dirtied Blocks": 0,
+                "Local Written Blocks": 0,
+                "Temp Read Blocks": 0,
+                "Temp Written Blocks": 0,
+                "Plans": [
+                  {
+                    "Node Type": "Index Only Scan",
+                    "Parent Relationship": "Outer",
+                    "Parallel Aware": false,
+                    "Async Capable": false,
+                    "Scan Direction": "Backward",
+                    "Index Name": "messages_conversation_direction_created_id_idx",
+                    "Relation Name": "messages",
+                    "Alias": "message",
+                    "Startup Cost": 0.41,
+                    "Total Cost": 433.64,
+                    "Plan Rows": 121,
+                    "Plan Width": 44,
+                    "Actual Startup Time": 0.004,
+                    "Actual Total Time": 0.004,
+                    "Actual Rows": 0,
+                    "Actual Loops": 500,
+                    "Index Cond": "((conversation_id = requested.conversation_id) AND (direction = 'IN'::\"MessageDirection\"))",
+                    "Rows Removed by Index Recheck": 0,
+                    "Heap Fetches": 2,
+                    "Shared Hit Blocks": 1502,
+                    "Shared Read Blocks": 0,
+                    "Shared Dirtied Blocks": 0,
+                    "Shared Written Blocks": 0,
+                    "Local Hit Blocks": 0,
+                    "Local Read Blocks": 0,
+                    "Local Dirtied Blocks": 0,
+                    "Local Written Blocks": 0,
+                    "Temp Read Blocks": 0,
+                    "Temp Written Blocks": 0
+                  }
+                ]
+              }
+            ]
+          },
+          "Planning": {
+            "Shared Hit Blocks": 58,
+            "Shared Read Blocks": 0,
+            "Shared Dirtied Blocks": 0,
+            "Shared Written Blocks": 0,
+            "Local Hit Blocks": 0,
+            "Local Read Blocks": 0,
+            "Local Dirtied Blocks": 0,
+            "Local Written Blocks": 0,
+            "Temp Read Blocks": 0,
+            "Temp Written Blocks": 0
+          },
+          "Planning Time": 0.249,
+          "Triggers": [],
+          "Execution Time": 1.984
+        }
+      ],
+      "limits": "Real disposable PostgreSQL EXPLAIN ANALYZE/BUFFERS with one older-IN history behind OUT rows and one OUT-only history; bounded fixture observation, not a production outage or capacity/SLO claim."
+    },
+    "CHANNEL-MIGRATION-ROLLBACK-EVIDENCE": {
+      "finding_id": "PERF-01",
+      "lock_timeout": "5s",
+      "statement_timeout": "60s",
+      "test_acceleration": {
+        "lock_timeout": "100ms",
+        "statement_timeout": "1ms",
+        "note": "short disposable probes; exact migration values separately observed above"
+      },
+      "sqlstates": {
+        "lock": "55P03",
+        "statement": "57014"
+      },
+      "rowsAfterAbortedDDL": 100001,
+      "survivingIndexesAfterAbort": 0,
+      "writeObservation": {
+        "batchRowsEach": 1000,
+        "withoutIndexMs": 6.37900400000035,
+        "withIndexMs": 20.35224500000004,
+        "indexBytes": 6856704,
+        "note": "same disposable table; bounded single-sample observation, no capacity/SLO threshold"
+      }
+    },
+    "CHANNEL-WINDOW-SCOPE-EVIDENCE": {
+      "finding_id": "PERF-01",
+      "policy_schema_version": "pcv-1",
+      "selectedReference": {
+        "conversationFound": true,
+        "latestDirection": "recebida",
+        "requiresWindow": false,
+        "available": true
+      },
+      "officialWindowBindingsPresentInBu": true,
+      "latestInboundWindowQueries": 0,
+      "latestAnyMessageQueries": 1,
+      "expectedLatestInboundWindowQueries": 0,
+      "limits": "One real public-list request against disposable PostgreSQL; metadata batching remains operation-local."
+    },
+    "CHANNEL-OUTBOUND-OVERLAP": {
+      "repetitions": 5,
+      "operationsPerRepetition": 20,
+      "operationCounts": [
+        20,
+        20,
+        20,
+        20,
+        20
+      ],
+      "acceptedCounts": [
+        20,
+        20,
+        20,
+        20,
+        20
+      ],
+      "recordedCounts": [
+        20,
+        20,
+        20,
+        20,
+        20
+      ],
+      "perOwnedConversationRowCounts": [
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "limits": "Disposable PostgreSQL and provider fake; each distinct owned conversation has exactly one OUT row in this bounded fixture; no same-key exactly-once, capacity, or SLO claim."
+    },
+    "FRC-COMPOSER-EVIDENCE": {
+      "waves": [
+        {
+          "requests": 1,
+          "retriggers": 20,
+          "outcome": "accepted",
+          "draftPreserved": false,
+          "messageCount": 1
+        },
+        {
+          "requests": 1,
+          "retriggers": 20,
+          "outcome": "unknown",
+          "draftPreserved": true,
+          "messageCount": 1
+        },
+        {
+          "requests": 1,
+          "retriggers": 20,
+          "outcome": "accepted",
+          "draftPreserved": false,
+          "messageCount": 1
+        },
+        {
+          "requests": 1,
+          "retriggers": 20,
+          "outcome": "unknown",
+          "draftPreserved": true,
+          "messageCount": 1
+        },
+        {
+          "requests": 1,
+          "retriggers": 20,
+          "outcome": "accepted",
+          "draftPreserved": false,
+          "messageCount": 1
+        }
+      ],
+      "limits": "Five real BFF/PostgreSQL submits held after the actual response; twenty user-form submit events per in-flight send; one request per wave; no capacity/SLO claim."
+    },
+    "RLS-EVIDENCE": {
+      "policy_schema_version": "pcv-1",
+      "lane_id": "RLS",
+      "trigger_result": "recommended",
+      "trigger_severity": "medium",
+      "trigger_reason_code": "RLS-QUEUE-WORKER-REALTIME-CHANGED",
+      "gate_deadline": "before_local_implemented",
+      "min_evidence_rule_id": "RLS-E1",
+      "acceptance_rule_id": "RLS-A1",
+      "stage_profile_observed": "RLS-SP-L",
+      "clients": 5,
+      "readsPerClient": 6,
+      "totalScopeChecks": 30,
+      "observed": [
+        {
+          "client": 0,
+          "ownReads": 3,
+          "foreignReads": 3
+        },
+        {
+          "client": 1,
+          "ownReads": 3,
+          "foreignReads": 3
+        },
+        {
+          "client": 2,
+          "ownReads": 3,
+          "foreignReads": 3
+        },
+        {
+          "client": 3,
+          "ownReads": 3,
+          "foreignReads": 3
+        },
+        {
+          "client": 4,
+          "ownReads": 3,
+          "foreignReads": 3
+        }
+      ],
+      "thresholds": {
+        "ownBuReadStatus": 200,
+        "foreignTenantReadStatus": 404,
+        "providerCallsDuringListing": 0
+      },
+      "providerCalls": {
+        "calibration": "one fixture Meta number-list operation was detected before the read stage",
+        "before": {
+          "meta": 1,
+          "evolution": 0
+        },
+        "after": {
+          "meta": 1,
+          "evolution": 0
+        },
+        "duringReadDelta": {
+          "meta": 0,
+          "evolution": 0
+        }
+      },
+      "elapsedMs": 58.97343500000079,
+      "metrics_summary": "Five authenticated clients ran concurrently; each completed three sequential own-BU and three sequential foreign-tenant reads; all instrumented Meta/Evolution operations remained unchanged during channel listing.",
+      "limits": "One bounded local PostgreSQL stage; not a capacity, latency SLO, or provider load claim."
+    }
+  },
+  "limits": [
+    "Actual remote CI not_run; not a remote success claim.",
+    "Human preserved DB migration/API-Web activation/HTTPS and new real INOUT both bindings pending.",
+    "Historical80903/all2564/all28261 not reused; prior failures and exact cleanup preserved. Current mandatory leaf/cleanup control uses real script and fake prerequisite tools, not actual provider delivery.",
+    "Only approved public source paths covered; no excluded private-path discovery or whole-tree clean claim."
+  ],
+  "review_extract": {
+    "source_artifact": "foundation_documentation/artifacts/reviews/leadshug-channel-abstraction-20261020/evidence/v13r4-final-validation.json",
+    "source_artifact_sha256": "82068d228cd2a810aa70d19344240181b518b1c4148fd0518d66fe0af6b5f991",
+    "scope": "Same complete run/counts/metrics/guard/limits. Only duplicated57source_after and38browser_fresh_source row serialization removed; exact pre-run57manifest/full current source hashes and closed executor source-attestation report remain supplied. Original full artifact retained.",
+    "omitted_duplicate_payloads": {
+      "source_after": 57,
+      "browser_fresh_source": 38
+    }
+  }
+}

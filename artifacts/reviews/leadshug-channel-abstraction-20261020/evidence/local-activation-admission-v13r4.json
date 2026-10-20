@@ -1,0 +1,41 @@
+{
+  "schema": "stcon06-local-activation-admission-v1",
+  "recorded_at_utc": "2026-10-20T19:42:54.713167+00:00",
+  "decision": "GO bounded approved OrderedStep6",
+  "authority": "Explicit existing v1.3 approval + same TODO/approved local-only migration and activation; no new permission required",
+  "primary_profile": "operational-devops",
+  "supporting_profile": "operational-coder",
+  "active_scopes": [
+    "nestjs",
+    "react",
+    "vite",
+    "prisma",
+    "postgresql",
+    "docker"
+  ],
+  "executor": "/root/stcon06_executor sole product/runtime writer",
+  "preconditions": {
+    "all": "all93791terminal0/613tests",
+    "source_inputs": 57,
+    "all_product_hashes_still_exact": true,
+    "independent_reviews": "all terminal/strictmerged, fullTQAcompletion included,0blocking,1low accepteddebt",
+    "pcv": "EPS/FRC/BCI/RLSpassed, evidence/pcv-v13r4-adjudication.json",
+    "normal_authority": "authority-v13r4-before-activation.jsonGO",
+    "routing": "routing-local-activation-v13r4.jsonGO",
+    "public_diff": {
+      "artifact": "public-diff-before-activation-v13r4.json",
+      "expected": 510,
+      "forbidden": 0,
+      "unclassified": 0
+    }
+  },
+  "allowed_sequence": "Fresh bounded read-only exact runtime/project/preflight; positive input archives API/Web builds and exact image provenance; preservedlocalDB status/catalog exactsinglepending migration, transaction5slock/60sstatement and stopunknown/failure; API/Webonlyrecreate preserving effectiveConfiginmemory/no dotenv or localfiles/other5services/data; source-image-container-HTTPproof; exactownedHTTPS tunnel to8083; onlythen operatorcallback+privacy andnewrealINOUT both existingbindings.",
+  "constraints": [
+    "No product source changes; no reruns/broader benchmarks for acceptedlow.",
+    "No private dotenv/local-files read/list/stat/hash/traversal/mount; existing effectivecontainerconfig may be copied only inprocessmemory without output/file/hash orcommandlinesecrets.",
+    "No other schema/migration/reset/repair/autoretry/credential/provider lifecycle mutation.",
+    "No product commit/push/gitlinks/Railway/production/unknownprocessadoption.",
+    "Follow local-activation-plan.md; stop before any mismatch/unexpected topology or unapproved pending migration."
+  ],
+  "remaining_delivery_gates": "Actual activation/operator evidence, moduleconsolidation05/04handoff, finalassurance/debt/completion/closeout; not Local-Implemented orproduction yet."
+}

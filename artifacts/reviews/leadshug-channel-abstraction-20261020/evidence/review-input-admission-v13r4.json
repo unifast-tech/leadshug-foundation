@@ -1,0 +1,26 @@
+{
+  "limit_chars": 1048576,
+  "status": "within model prompt input ceiling before any reviewer start",
+  "lanes": [
+    {
+      "lane": "performance",
+      "prompt_chars": 1024661,
+      "package_sha256": "a58465edd9cf660ead1bb1cd62a5e1680367f1eae7d2a6bd863048cf7a207c75",
+      "dispatch_sha256": "c29179cdf44e80e8a0a55bc125dda1384e1014ebef7390beb3f4749d50f444fb"
+    },
+    {
+      "lane": "test-quality",
+      "prompt_chars": 1024597,
+      "package_sha256": "a58465edd9cf660ead1bb1cd62a5e1680367f1eae7d2a6bd863048cf7a207c75",
+      "dispatch_sha256": "335e9d84bb891a456976fe2e5418b60b2147ae08f8f03775f5a8ef9c6a7bec6b"
+    },
+    {
+      "lane": "cutover-integrity",
+      "prompt_chars": 1025140,
+      "package_sha256": "a58465edd9cf660ead1bb1cd62a5e1680367f1eae7d2a6bd863048cf7a207c75",
+      "dispatch_sha256": "28ecb43e5cd9fd87ffad7f989863077c499ec7417b070378c312c0a15b72e5db"
+    }
+  ],
+  "no_workload_truncation": true,
+  "compression": "Only duplicate JSON payload row serialization omitted through labelled extracts; fullrubrics/fullTQA/full59currentcontexts/priorresolutions/actualRED-currentall-metrics retained."
+}

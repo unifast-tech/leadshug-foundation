@@ -1,0 +1,124 @@
+{
+  "schema": "stcon06-executor-v13r4-validation-v1",
+  "checkpoint": "Public list latest-message hydration and pagination input partitions; Typebot stop-the-round coverage",
+  "scope": {
+    "implementation": [
+      "api-app/src/surfaces/public/conversations.controller.ts",
+      "api-app/test/api-publica.e2e-spec.ts",
+      "api-app/test/number-onboarding-pcv.e2e-spec.ts",
+      "api-app/test/number-onboarding-typebot.e2e-spec.ts",
+      "api-app/src/domain/inbox/incoming.typebot.integration.spec.ts"
+    ],
+    "schema_or_migration_changed": false,
+    "full_all_started": false,
+    "runtime_activation": false,
+    "preserved_database_migration": false
+  },
+  "red": [
+    {
+      "classification": "initial mixed diagnostic; instrumentation harness errors are not product RED",
+      "command": "bash scripts/test-channels-local.sh api",
+      "tool_session_id": 69016,
+      "exit_code": 1,
+      "log": "foundation_documentation/artifacts/tmp/stcon06-executor-v13r4-tests-red.log",
+      "log_sha256": "2460c572f95e037d369374a0365703aaa2988ada010540121f25e75f998c0f53",
+      "result": "315 passed, 19 failed; most pagination failures came from a PrismaService proxy delegate lacking directly-bound findMany methods, and the PCV test captured the intended deep-history rows-visited failure. Replaced the observer with actual Prisma query events and replayed endpoint SQL/parameters for EXPLAIN; did not treat the delegate-spy errors as RED evidence."
+    },
+    {
+      "classification": "valid test-first product RED",
+      "command": "bash scripts/test-channels-local.sh api",
+      "tool_session_id": 94906,
+      "exit_code": 1,
+      "log": "foundation_documentation/artifacts/tmp/stcon06-executor-v13r4-red2.log",
+      "log_sha256": "aeb730f3b1074b58ce2e9e225c47f1ea6393f6898e522f6ccbe304d81120786e",
+      "e2e": {
+        "test_files_passed": 25,
+        "test_files_failed": 2,
+        "tests_passed": 331,
+        "tests_failed": 3,
+        "tests_total": 334
+      },
+      "failures": [
+        "Repeated `limit=17&limit=18` on public list returns HTTP 500 instead of the default bounded page.",
+        "Repeated `limit=17&limit=18` on public history returns HTTP 500 instead of the default bounded page.",
+        "Actual Prisma 6.19.3 endpoint child SQL fetches/sorts the full history of 5 parents; EXPLAIN scanned 2,500 rows, removed 10,750 of the fixture's 12,500 rows, and the rows-visited assertion exceeded the 5-row bound."
+      ],
+      "typebot_tests": "The real PostgreSQL webhook UNKNOWN/two-text case and common-path BLOCKED/REJECTED stop-equivalence cases passed; the first UNKNOWN wrote one FALHOU null-ID diagnostic with AMBIGUOUS_SEND_RECORDED semantics, one provider attempt, and no second text dispatch. This case does not exercise TRANSPORT_UNCONFIRMED."
+    }
+  ],
+  "green": {
+    "command": "bash scripts/test-channels-local.sh api",
+    "tool_session_id": 64522,
+    "exit_code": 0,
+    "log": "foundation_documentation/artifacts/tmp/stcon06-executor-v13r4-api-green.log",
+    "log_sha256": "7f91cfa5ffc9ab28ad0f5b7f8bad5e5dffb6ee8c1418246bcc800085068705bd",
+    "unit": {
+      "test_files_passed": 21,
+      "tests_passed": 196
+    },
+    "e2e": {
+      "test_files_passed": 27,
+      "tests_passed": 338
+    },
+    "pagination": "Real request tests observe the executed SQL's LIMIT parameter. Omitted, blank, non-finite, zero, sub-one fraction, positive fraction, cap, over-cap, integer-17, negative-million, and repeated inputs are covered on both list and history; list look-ahead remains limit+1.",
+    "typebot": "Real PostgreSQL webhook verifies UNKNOWN stops two text outputs after one attempt and retains one FALHOU/null-ID diagnostic. Two common-path integration cases verify thrown BLOCKED and REJECTED outcomes also stop after the first text.",
+    "simple_candidate_plan_diagnostic_added_after_this_run": "The final source adds an EXPLAIN comparison for a simple all-direction LATERAL top-one using the same four page IDs. That comparison was not executed in session 64522; the next authorized canonical all must capture it. The same final test also adds an exact bound-ID assertion after session 64522, proving only returned page IDs, excluding lookahead. No production code changed after this green run; these two test-only checks remain to be verified by the next all."
+  },
+  "performance_evidence": {
+    "baseline_endpoint_child_query": {
+      "sql_source": "captured Prisma query event from the real public list request; EXPLAIN ANALYZE/BUFFERS replayed with the captured parameters",
+      "page_parents": 4,
+      "child_query_parent_ids_including_lookahead": 5,
+      "actual_rows_scanned": 2500,
+      "rows_removed_by_filter": 10750,
+      "fixture_new_messages": 12500,
+      "other_preexisting_rows_visible_to_seq_scan": 750,
+      "total_rows_visible_to_seq_scan": 13250,
+      "plan": "Seq Scan over messages followed by Sort on created_at DESC,id DESC; no SQL child LIMIT. The table also had 750 rows from earlier PCV cases; 2,500 returned + 10,750 removed = 13,250 total visible rows."
+    },
+    "bounded_latest_any_projection": {
+      "query_shape": "one unnest over returned page IDs, LEFT JOIN LATERAL with top-one IN and top-one OUT probes, then order the maximum of those two candidates by created_at DESC,id DESC",
+      "page_parents": 4,
+      "bound_parameter_count": 4,
+      "leaf_scans": [
+        { "direction": "IN", "index": "messages_conversation_direction_created_id_idx", "type": "Index Scan", "actual_rows": 1, "loops": 4, "shared_hit_blocks": 16, "shared_read_blocks": 0, "rows_removed": 0 },
+        { "direction": "OUT", "index": "messages_conversation_direction_created_id_idx", "type": "Index Scan", "actual_rows": 1, "loops": 4, "shared_hit_blocks": 16, "shared_read_blocks": 0, "rows_removed": 0 }
+      ],
+      "actual_message_rows_visited": 8,
+      "merge_append_returned_rows_per_parent": 1,
+      "sort_nodes": 0,
+      "execution_ms": 0.137,
+      "latest_tie_assertion": "When createdAt ties, the larger message id wins, matching createdAt DESC,id DESC."
+    },
+    "window_projection_separation": {
+      "official_window_page": { "latest_any_message_queries": 1, "latest_in_window_queries": 1 },
+      "selected_non_window_origin": { "latest_any_message_queries": 1, "latest_in_window_queries": 0 },
+      "provider_calls_during_reads": 0
+    },
+    "measurement_limit": "Disposable PostgreSQL observations only; no latency, throughput, capacity, or production SLO claim. The single all-direction candidate plan will be measured in the next canonical all before final review."
+  },
+  "source_state": {
+    "changed_paths": [
+      "api-app/src/surfaces/public/conversations.controller.ts",
+      "api-app/test/api-publica.e2e-spec.ts",
+      "api-app/test/number-onboarding-pcv.e2e-spec.ts",
+      "api-app/test/number-onboarding-typebot.e2e-spec.ts",
+      "api-app/src/domain/inbox/incoming.typebot.integration.spec.ts"
+    ],
+    "current_sha256": {
+      "api-app/src/surfaces/public/conversations.controller.ts": "bbb5ebf085e59840f3a9e9cbc1f07c57cdc58d1a5b6f846f934fb526cc29bfd1",
+      "api-app/test/api-publica.e2e-spec.ts": "353497daddfe6ca072ee697aa60d6e9d5762dd869f164d0d3b5b7fbee1d44060",
+      "api-app/test/number-onboarding-pcv.e2e-spec.ts": "9cf66e8950a60a0ed4e620d3f24bc8285a316edf2a72a8af3590326b478e308f",
+      "api-app/test/number-onboarding-typebot.e2e-spec.ts": "8c23956a13336c4091d62b9aee7383065f81c5e6575661729b044048626cbd8e",
+      "api-app/src/domain/inbox/incoming.typebot.integration.spec.ts": "7b0e7d75fc5809b8c950896818779402fe2bf32ef37a94d970fe081240562975"
+    },
+    "schema_and_migration": "unchanged in this checkpoint",
+    "diff_check": "passed with CRLF-aware whitespace configuration on the five exact paths"
+  },
+  "cleanup": {
+    "canonical_runner_namespace": "leadshug_channels_validation",
+    "result": "API logs show removal of the validation PostgreSQL container, namespace network, and disposable API/Web/cache/data volumes. An exact post-run inventory was not independently queried; no human runtime, preserved database, tunnel, provider, or deployment was touched.",
+    "explicit_post_run_inventory_command": false
+  },
+  "next_gate": "Source is stable for root's fresh exact-path freeze/invalidation and next all GO. That all must verify the post-green bound-ID assertion and single all-direction candidate plan diagnostic; full all has not been started in this checkpoint."
+}

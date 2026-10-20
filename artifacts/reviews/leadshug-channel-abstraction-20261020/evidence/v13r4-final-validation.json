@@ -1,0 +1,1694 @@
+{
+  "schema": "stcon06-root-fresh-full-validation-v1",
+  "run_id": "canonical-linux-all93791",
+  "session": 93791,
+  "command": "CHANNELS_DOCKER_TRANSPORT=linux bash scripts/test-channels-local.sh all",
+  "execution_context": "Same WSL distro/root and principal checkout; explicit verified same Docker Desktop shared socket, narrowly translated bind/config masks. NativeLinux/Windows controls separate; no permission/config/source location changes.",
+  "exit_code": 0,
+  "terminal_provenance": "Executor reports actual tool terminal0; root independently inspected complete raw log, source hashes, parsed metrics and actual browser source/bundle attestation. No independent reviewer execution claimed.",
+  "raw_log": "foundation_documentation/artifacts/tmp/stcon06-executor-v13r4-all-linux.log",
+  "raw_log_sha256": "4ca4a287c78c027a2d7bc547adc423befe87e39b0ba4a346ec6d076ef8e24608",
+  "captured_at_utc": "2026-10-20T19:31:14.069154+00:00",
+  "counts": {
+    "api_unit": 196,
+    "api_e2e": 338,
+    "web_unit": 29,
+    "browser": 50
+  },
+  "source_unchanged": true,
+  "source_unchanged_scope": "All57 explicitly frozen public product/build/test inputs unchanged; Foundation review context is frozen separately. No excluded-path discovery or whole-tree clean claim.",
+  "source_comparison": {
+    "total": 57,
+    "unchanged": 57,
+    "document_only_changed": 0
+  },
+  "source_after": [
+    {
+      "path": ".github/workflows/ci.yml",
+      "sha256": "16acaf6d4b807a806a50a31c75715b14e8b2e220e0e17e2bac43ec4b740318e5",
+      "unchanged": true
+    },
+    {
+      "path": "api-app/package-lock.json",
+      "sha256": "d1e45274c4b10d134469d7ec63e88777ec26b917d48197a03a4b97cefda047c7",
+      "unchanged": true
+    },
+    {
+      "path": "api-app/package.json",
+      "sha256": "df8551d3e506e7c68516cbd482362c4282671b7ec7eebbf121386390ac080a9d",
+      "unchanged": true
+    },
+    {
+      "path": "api-app/prisma/migrations/20261020170000_message_inbound_window_index/migration.sql",
+      "sha256": "586e709e07736eca0908ab5dcc668cf0e0b317189b4c963b361399848a3c9710",
+      "unchanged": true
+    },
+    {
+      "path": "api-app/prisma/schema.prisma",
+      "sha256": "26444c6a102755fa5a10f1930d4a9ff256a8f76bd515cc0e10e8b1fe6fb7cf99",
+      "unchanged": true
+    },
+    {
+      "path": "api-app/src/app.module.ts",
+      "sha256": "a59880adc1bd8250fdbf5d52637fc38fe3177a2615e1b25389716946da7ad420",
+      "unchanged": true
+    },
+    {
+      "path": "api-app/src/domain/access/access.service.ts",
+      "sha256": "2ef3761a138d7c8c386c5ddb4bf2a2000c960328789834bde5e12135a1ea66e7",
+      "unchanged": true
+    },
+    {
+      "path": "api-app/src/domain/channels/channel-credential-resolver.ts",
+      "sha256": "89cf17ac02af444092651470aee13e2d4a3bcee8d459508be818322b33b00c10",
+      "unchanged": true
+    },
+    {
+      "path": "api-app/src/domain/channels/transport/channel-dependencies.spec.ts",
+      "sha256": "f59d838baf635c0ce0d1ebe725c88fbb0b19fac42e9b382452e31fd38e0511a3",
+      "unchanged": true
+    },
+    {
+      "path": "api-app/src/domain/channels/transport/channel.ts",
+      "sha256": "432796b8685d07dcc53c3a699a7b9d1469ac4fb110aea080766ec207bec8621f",
+      "unchanged": true
+    },
+    {
+      "path": "api-app/src/domain/inbox/conversations.service.ts",
+      "sha256": "c7d84f983ed61c6022424d4648e07282e7eb53c40fa9aba249618d77b3c223de",
+      "unchanged": true
+    },
+    {
+      "path": "api-app/src/domain/inbox/incoming.service.ts",
+      "sha256": "b0ec43187b1f48720aa899e40f979dd0ae447321581d675b84ef9c71dbd0ff42",
+      "unchanged": true
+    },
+    {
+      "path": "api-app/src/domain/inbox/incoming.typebot.integration.spec.ts",
+      "sha256": "7b0e7d75fc5809b8c950896818779402fe2bf32ef37a94d970fe081240562975",
+      "unchanged": true
+    },
+    {
+      "path": "api-app/src/domain/inbox/message-acceptance.service.ts",
+      "sha256": "b053744ee44b7e91fd45b5c146f759f55c70b8e517b8fbb1cab39806407335e1",
+      "unchanged": true
+    },
+    {
+      "path": "api-app/src/domain/inbox/outbound.service.spec.ts",
+      "sha256": "ae1f9208d660c684dca9b1ac5727001d8e57c4c9504be9be1d20ecba32e01805",
+      "unchanged": true
+    },
+    {
+      "path": "api-app/src/domain/inbox/outbound.service.ts",
+      "sha256": "63bcf773e2b4c5a5ddd688a1bb13745a0a206d995fafc665925df3fecaf394aa",
+      "unchanged": true
+    },
+    {
+      "path": "api-app/src/integrations/channels/channel-adapter-factory.ts",
+      "sha256": "e0ebdd78e387f7ee3af902f038d22449e212c1301ffa642bbceb5a5f05d2abfc",
+      "unchanged": true
+    },
+    {
+      "path": "api-app/src/integrations/channels/channel-adapter-registry.ts",
+      "sha256": "655b735e239e89fbaede36689d1c22245d3804d66646f7736db991cb5099b02b",
+      "unchanged": true
+    },
+    {
+      "path": "api-app/src/integrations/channels/channel-transport.module.ts",
+      "sha256": "32203d3b8393a34a9effab4266683c389651d7ec197e8f9d704a77a6a37f40dc",
+      "unchanged": true
+    },
+    {
+      "path": "api-app/src/integrations/channels/evolution-channel.ts",
+      "sha256": "60faf1ea40fe17ad62495b0f42a2cf958defcb41e3ad72d3d2213751539b460c",
+      "unchanged": true
+    },
+    {
+      "path": "api-app/src/integrations/channels/meta-channel.ts",
+      "sha256": "997e739cf7d7231918dc97fc347bfeb32a1cd74d084ead8c64b01157022f8138",
+      "unchanged": true
+    },
+    {
+      "path": "api-app/src/integrations/channels/prisma-channel-resolver.ts",
+      "sha256": "acf779d89162d339e37af2abe2aa91fd1a1b292d7f5208bb672090c87a23bf4d",
+      "unchanged": true
+    },
+    {
+      "path": "api-app/src/integrations/evolution/evolution.client.spec.ts",
+      "sha256": "119d962fdcd9c895b75845dca74d8506147e11480d74b82e8c37f29f97c04081",
+      "unchanged": true
+    },
+    {
+      "path": "api-app/src/integrations/evolution/evolution.client.ts",
+      "sha256": "b0824e8fd4f801a239521855aaa02da5e0943a8c86c4ac8778e2f1f352821698",
+      "unchanged": true
+    },
+    {
+      "path": "api-app/src/integrations/meta/meta.client.spec.ts",
+      "sha256": "d7e76f5c392afab1638363d3c851f8ce8c5223ff27c64801a79fdc8ec00d5e7a",
+      "unchanged": true
+    },
+    {
+      "path": "api-app/src/integrations/meta/meta.client.ts",
+      "sha256": "9f954f6c1c2bd10030f5eed0cb42e493d6e480106bcfc3f44977cb97a716d34f",
+      "unchanged": true
+    },
+    {
+      "path": "api-app/src/surfaces/bff/bff.module.ts",
+      "sha256": "327f34eba67746882abc601a3817d94270cff3018d6972a8095dae530a2d6e29",
+      "unchanged": true
+    },
+    {
+      "path": "api-app/src/surfaces/bff/conversations.controller.ts",
+      "sha256": "53d3cffaa258ba1ad45c21eae4ab8712e2011255b7ca14965f73221edd0cc002",
+      "unchanged": true
+    },
+    {
+      "path": "api-app/src/surfaces/bff/session.middleware.ts",
+      "sha256": "80d8be0072b817ec34b3eb7d29218835bd218a40670c1f917d0b1787b0b57211",
+      "unchanged": true
+    },
+    {
+      "path": "api-app/src/surfaces/public/api-key.middleware.ts",
+      "sha256": "f76cd8854c8145c4b456e8c9d2d1ab000c17bc5278af76997745b5696edd9877",
+      "unchanged": true
+    },
+    {
+      "path": "api-app/src/surfaces/public/conversations.controller.ts",
+      "sha256": "bbb5ebf085e59840f3a9e9cbc1f07c57cdc58d1a5b6f846f934fb526cc29bfd1",
+      "unchanged": true
+    },
+    {
+      "path": "api-app/src/surfaces/public/public.module.ts",
+      "sha256": "00a96d54fde7061f61f4ddf2b9cef836a02ad77ca29b62ea422695b9d8f90ef8",
+      "unchanged": true
+    },
+    {
+      "path": "api-app/src/surfaces/webhooks/webhooks.module.ts",
+      "sha256": "abc8fd7960fcca1ce43d21d44a90f8d4708d47e07bde9a48c0009e02dc0503a6",
+      "unchanged": true
+    },
+    {
+      "path": "api-app/test/api-publica.e2e-spec.ts",
+      "sha256": "353497daddfe6ca072ee697aa60d6e9d5762dd869f164d0d3b5b7fbee1d44060",
+      "unchanged": true
+    },
+    {
+      "path": "api-app/test/browser-server.cjs",
+      "sha256": "40e56e2d6672800acd4a00f87b942fc88b8361c770d06ee6d7c8a883a15d3390",
+      "unchanged": true
+    },
+    {
+      "path": "api-app/test/channel-transport.e2e-spec.ts",
+      "sha256": "69ddc87cbc9328136f92ea1c1cf9293b0bc2296ad383836322c6feb4b27c6015",
+      "unchanged": true
+    },
+    {
+      "path": "api-app/test/helpers.ts",
+      "sha256": "747dcd1a6db374c1ccb0f2a248b08d49c2ec62a46beb345cc03eea3c058d36f2",
+      "unchanged": true
+    },
+    {
+      "path": "api-app/test/number-onboarding-message-acceptance.e2e-spec.ts",
+      "sha256": "c8b29c16412938b64fb8e2555729f0777d9e3eb69a57d29df3d65b56443c4bac",
+      "unchanged": true
+    },
+    {
+      "path": "api-app/test/number-onboarding-pcv.e2e-spec.ts",
+      "sha256": "9cf66e8950a60a0ed4e620d3f24bc8285a316edf2a72a8af3590326b478e308f",
+      "unchanged": true
+    },
+    {
+      "path": "api-app/test/number-onboarding-typebot.e2e-spec.ts",
+      "sha256": "8c23956a13336c4091d62b9aee7383065f81c5e6575661729b044048626cbd8e",
+      "unchanged": true
+    },
+    {
+      "path": "api-app/test/timeline-fixtures.cjs",
+      "sha256": "889707ec7857e8a17a850e56eb60d24e6953e59028f40880edff3756340fd23a",
+      "unchanged": true
+    },
+    {
+      "path": "api-app/tsconfig.build.json",
+      "sha256": "44e82cf32b2bd7cfdb7c4d9ca48ab13101f6ff66349578545d2c229ef55cbca6",
+      "unchanged": true
+    },
+    {
+      "path": "api-app/vitest.config.e2e.ts",
+      "sha256": "ff76a3b94de4649d18f0f824a24bb45428afcbb751a872a6841a2e388f45f8ff",
+      "unchanged": true
+    },
+    {
+      "path": "api-app/vitest.config.ts",
+      "sha256": "a5f2d4d79de1112776f0586e3b647487fe6961e89b2790c19f6a2ed9165924d5",
+      "unchanged": true
+    },
+    {
+      "path": "docker-compose.channels.yml",
+      "sha256": "9978e713ce190ad20b6bddb0ecf0b469d068c0e43bb4eaf50aa630ec03aea235",
+      "unchanged": true
+    },
+    {
+      "path": "scripts/check-channels-ci-parity.py",
+      "sha256": "d838d557177bf47423a063dfb0cb12b6cdf1e319986c4340286ada097742ce13",
+      "unchanged": true
+    },
+    {
+      "path": "scripts/test-channels-local.sh",
+      "sha256": "de580538f3257a85448cb3ce5030c85b90f65507da53737e4491fdf543091e42",
+      "unchanged": true
+    },
+    {
+      "path": "web-app/e2e/channel-transport.spec.ts",
+      "sha256": "b3604496727a85d7ce12c2cb6e7a479575356a61ef4c529d385047e066a8e0f3",
+      "unchanged": true
+    },
+    {
+      "path": "web-app/e2e/number-onboarding-freshness.ts",
+      "sha256": "880b49f8fa428568692b92a883dd00c5ce76214b1f2db5b35cafb9b0553ed9ad",
+      "unchanged": true
+    },
+    {
+      "path": "web-app/e2e/timeline-freshness.ts",
+      "sha256": "3a06fb36e3a9bcf20a12cd8201da2daa3b567775f15e2be5f068e97e840d7f53",
+      "unchanged": true
+    },
+    {
+      "path": "web-app/package-lock.json",
+      "sha256": "546aec97be8273cf195a16b75c0127474ea3a5042668f8d4c93aab96c1619c8f",
+      "unchanged": true
+    },
+    {
+      "path": "web-app/package.json",
+      "sha256": "fc9083821e246d50c080f409b3590902b033041231d1688c04c4140f097818de",
+      "unchanged": true
+    },
+    {
+      "path": "web-app/playwright.config.ts",
+      "sha256": "53e9a54e97c9b785135d94846d99eb77c6f05789a58f27128544f9b2c903a63d",
+      "unchanged": true
+    },
+    {
+      "path": "web-app/src/api.spec.ts",
+      "sha256": "e305671fc6d9775ef3c0365ed12470fb14ea3dd71ff3aca49f153262017147d6",
+      "unchanged": true
+    },
+    {
+      "path": "web-app/src/api.ts",
+      "sha256": "dd59a37799453d3e68fc64a6477e1578956d15d1a4920af90e22ff2b83057505",
+      "unchanged": true
+    },
+    {
+      "path": "web-app/src/telas/Inbox.tsx",
+      "sha256": "d70bde9ede67759d479f644598356e46aac2916a12b2ed1770c17a169118586c",
+      "unchanged": true
+    },
+    {
+      "path": "web-app/vite.config.ts",
+      "sha256": "8b61a846e95c7fe77c938a2ebced24b48bbba45c42efcd25c8191491655e74b2",
+      "unchanged": true
+    }
+  ],
+  "browser_fresh_source": [
+    {
+      "path": "api-app/prisma/migrations/20261020170000_message_inbound_window_index/migration.sql",
+      "sha256": "586e709e07736eca0908ab5dcc668cf0e0b317189b4c963b361399848a3c9710"
+    },
+    {
+      "path": "api-app/prisma/schema.prisma",
+      "sha256": "26444c6a102755fa5a10f1930d4a9ff256a8f76bd515cc0e10e8b1fe6fb7cf99"
+    },
+    {
+      "path": "api-app/src/domain/channels/channel-credential-resolver.ts",
+      "sha256": "89cf17ac02af444092651470aee13e2d4a3bcee8d459508be818322b33b00c10"
+    },
+    {
+      "path": "api-app/src/domain/channels/transport/channel-dependencies.spec.ts",
+      "sha256": "f59d838baf635c0ce0d1ebe725c88fbb0b19fac42e9b382452e31fd38e0511a3"
+    },
+    {
+      "path": "api-app/src/domain/channels/transport/channel.ts",
+      "sha256": "432796b8685d07dcc53c3a699a7b9d1469ac4fb110aea080766ec207bec8621f"
+    },
+    {
+      "path": "api-app/src/domain/inbox/conversations.service.ts",
+      "sha256": "c7d84f983ed61c6022424d4648e07282e7eb53c40fa9aba249618d77b3c223de"
+    },
+    {
+      "path": "api-app/src/domain/inbox/incoming.service.ts",
+      "sha256": "b0ec43187b1f48720aa899e40f979dd0ae447321581d675b84ef9c71dbd0ff42"
+    },
+    {
+      "path": "api-app/src/domain/inbox/incoming.typebot.integration.spec.ts",
+      "sha256": "7b0e7d75fc5809b8c950896818779402fe2bf32ef37a94d970fe081240562975"
+    },
+    {
+      "path": "api-app/src/domain/inbox/outbound.service.spec.ts",
+      "sha256": "ae1f9208d660c684dca9b1ac5727001d8e57c4c9504be9be1d20ecba32e01805"
+    },
+    {
+      "path": "api-app/src/domain/inbox/outbound.service.ts",
+      "sha256": "63bcf773e2b4c5a5ddd688a1bb13745a0a206d995fafc665925df3fecaf394aa"
+    },
+    {
+      "path": "api-app/src/integrations/channels/channel-adapter-factory.ts",
+      "sha256": "e0ebdd78e387f7ee3af902f038d22449e212c1301ffa642bbceb5a5f05d2abfc"
+    },
+    {
+      "path": "api-app/src/integrations/channels/channel-adapter-registry.ts",
+      "sha256": "655b735e239e89fbaede36689d1c22245d3804d66646f7736db991cb5099b02b"
+    },
+    {
+      "path": "api-app/src/integrations/channels/channel-transport.module.ts",
+      "sha256": "32203d3b8393a34a9effab4266683c389651d7ec197e8f9d704a77a6a37f40dc"
+    },
+    {
+      "path": "api-app/src/integrations/channels/evolution-channel.ts",
+      "sha256": "60faf1ea40fe17ad62495b0f42a2cf958defcb41e3ad72d3d2213751539b460c"
+    },
+    {
+      "path": "api-app/src/integrations/channels/meta-channel.ts",
+      "sha256": "997e739cf7d7231918dc97fc347bfeb32a1cd74d084ead8c64b01157022f8138"
+    },
+    {
+      "path": "api-app/src/integrations/channels/prisma-channel-resolver.ts",
+      "sha256": "acf779d89162d339e37af2abe2aa91fd1a1b292d7f5208bb672090c87a23bf4d"
+    },
+    {
+      "path": "api-app/src/integrations/evolution/evolution.client.spec.ts",
+      "sha256": "119d962fdcd9c895b75845dca74d8506147e11480d74b82e8c37f29f97c04081"
+    },
+    {
+      "path": "api-app/src/integrations/evolution/evolution.client.ts",
+      "sha256": "b0824e8fd4f801a239521855aaa02da5e0943a8c86c4ac8778e2f1f352821698"
+    },
+    {
+      "path": "api-app/src/integrations/meta/meta.client.spec.ts",
+      "sha256": "d7e76f5c392afab1638363d3c851f8ce8c5223ff27c64801a79fdc8ec00d5e7a"
+    },
+    {
+      "path": "api-app/src/integrations/meta/meta.client.ts",
+      "sha256": "9f954f6c1c2bd10030f5eed0cb42e493d6e480106bcfc3f44977cb97a716d34f"
+    },
+    {
+      "path": "api-app/src/surfaces/bff/bff.module.ts",
+      "sha256": "327f34eba67746882abc601a3817d94270cff3018d6972a8095dae530a2d6e29"
+    },
+    {
+      "path": "api-app/src/surfaces/bff/conversations.controller.ts",
+      "sha256": "53d3cffaa258ba1ad45c21eae4ab8712e2011255b7ca14965f73221edd0cc002"
+    },
+    {
+      "path": "api-app/src/surfaces/public/conversations.controller.ts",
+      "sha256": "bbb5ebf085e59840f3a9e9cbc1f07c57cdc58d1a5b6f846f934fb526cc29bfd1"
+    },
+    {
+      "path": "api-app/src/surfaces/public/public.module.ts",
+      "sha256": "00a96d54fde7061f61f4ddf2b9cef836a02ad77ca29b62ea422695b9d8f90ef8"
+    },
+    {
+      "path": "api-app/src/surfaces/webhooks/webhooks.module.ts",
+      "sha256": "abc8fd7960fcca1ce43d21d44a90f8d4708d47e07bde9a48c0009e02dc0503a6"
+    },
+    {
+      "path": "api-app/test/api-publica.e2e-spec.ts",
+      "sha256": "353497daddfe6ca072ee697aa60d6e9d5762dd869f164d0d3b5b7fbee1d44060"
+    },
+    {
+      "path": "api-app/test/browser-server.cjs",
+      "sha256": "40e56e2d6672800acd4a00f87b942fc88b8361c770d06ee6d7c8a883a15d3390"
+    },
+    {
+      "path": "api-app/test/channel-transport.e2e-spec.ts",
+      "sha256": "69ddc87cbc9328136f92ea1c1cf9293b0bc2296ad383836322c6feb4b27c6015"
+    },
+    {
+      "path": "api-app/test/helpers.ts",
+      "sha256": "747dcd1a6db374c1ccb0f2a248b08d49c2ec62a46beb345cc03eea3c058d36f2"
+    },
+    {
+      "path": "api-app/test/number-onboarding-pcv.e2e-spec.ts",
+      "sha256": "9cf66e8950a60a0ed4e620d3f24bc8285a316edf2a72a8af3590326b478e308f"
+    },
+    {
+      "path": "api-app/test/number-onboarding-typebot.e2e-spec.ts",
+      "sha256": "8c23956a13336c4091d62b9aee7383065f81c5e6575661729b044048626cbd8e"
+    },
+    {
+      "path": "api-app/test/timeline-fixtures.cjs",
+      "sha256": "889707ec7857e8a17a850e56eb60d24e6953e59028f40880edff3756340fd23a"
+    },
+    {
+      "path": "web-app/e2e/channel-transport.spec.ts",
+      "sha256": "b3604496727a85d7ce12c2cb6e7a479575356a61ef4c529d385047e066a8e0f3"
+    },
+    {
+      "path": "web-app/e2e/number-onboarding-freshness.ts",
+      "sha256": "880b49f8fa428568692b92a883dd00c5ce76214b1f2db5b35cafb9b0553ed9ad"
+    },
+    {
+      "path": "web-app/e2e/timeline-freshness.ts",
+      "sha256": "3a06fb36e3a9bcf20a12cd8201da2daa3b567775f15e2be5f068e97e840d7f53"
+    },
+    {
+      "path": "web-app/src/api.spec.ts",
+      "sha256": "e305671fc6d9775ef3c0365ed12470fb14ea3dd71ff3aca49f153262017147d6"
+    },
+    {
+      "path": "web-app/src/api.ts",
+      "sha256": "dd59a37799453d3e68fc64a6477e1578956d15d1a4920af90e22ff2b83057505"
+    },
+    {
+      "path": "web-app/src/telas/Inbox.tsx",
+      "sha256": "d70bde9ede67759d479f644598356e46aac2916a12b2ed1770c17a169118586c"
+    }
+  ],
+  "browser_attestation": "evidence/browser-attestation-v13r4-all93791.json",
+  "served_bundle": "evidence/served-app-v13r4-all93791.js",
+  "served_dist_preserved_sha256": "27c5db465495068402b278ba7c9d3a1f23b8b03797249639190c8a755759563b",
+  "guard": {
+    "guard": "channels-ci-parity-v1",
+    "mutations_rejected": [
+      "missing-pr-trigger",
+      "missing-channels-job",
+      "missing-retained-guard",
+      "weakened-job-gate",
+      "swallowed-job-errors",
+      "skipped-validate-step",
+      "swallowed-retained-job",
+      "skipped-retained-admission",
+      "missing-retained-private-checkout",
+      "missing-common-guard",
+      "swallowed-common-guard-failure",
+      "missing-e2e",
+      "swallowed-e2e-failure",
+      "missing-browser",
+      "missing-migrate",
+      "missing-generate",
+      "missing-lint",
+      "reordered-suite",
+      "missing-shell-guard",
+      "widened-wsl-socket",
+      "changed-wsl-host-prefix",
+      "wrong-wsl-mask-source",
+      "missing-wsl-overlay"
+    ],
+    "outer_wrapper": {
+      "collision_control": {
+        "compose_calls": 0,
+        "exit_code": 1
+      },
+      "empty_config_control": {
+        "compose_calls": [
+          [
+            "compose",
+            "--project-name",
+            "leadshug_channels_validation",
+            "--env-file",
+            "/workspace/.env.example",
+            "--env-file",
+            "/tmp/tmp.6GbKQnl82f",
+            "-f",
+            "/workspace/docker-compose.yml",
+            "-f",
+            "/workspace/docker-compose.channels.yml",
+            "--profile",
+            "validation",
+            "config",
+            "--quiet"
+          ]
+        ],
+        "exit_code": 0
+      },
+      "inventory_failures": {
+        "network": {
+          "compose_calls": 0,
+          "docker_calls": 3,
+          "exit_code": 1
+        },
+        "ps": {
+          "compose_calls": 0,
+          "docker_calls": 1,
+          "exit_code": 1
+        },
+        "volume": {
+          "compose_calls": 0,
+          "docker_calls": 2,
+          "exit_code": 1
+        }
+      },
+      "mandatory_failure_cleanup": {
+        "cleanup_observed": true,
+        "compose_lifecycle": [
+          "run",
+          "down"
+        ],
+        "exit_code": 42,
+        "provider_or_real_docker_invoked": false,
+        "required_leaf": "fake python3 reached through actual RUNNER_SCRIPT and returned 42"
+      },
+      "native_path_control": {
+        "exit_code": 0,
+        "overlay_added": false,
+        "posix_bind_paths_preserved": true
+      },
+      "unsupported_wsl_socket_control": {
+        "docker_calls": 0,
+        "exit_code": 1
+      },
+      "wsl_bind_path_control": {
+        "skipped": "self-test checkout is not on a WSL-mounted drive"
+      }
+    },
+    "yaml": "safe-no-alias-no-duplicates"
+  },
+  "metrics": {
+    "CHANNEL-EPS-EVIDENCE": {
+      "policy_schema_version": "pcv-1",
+      "lane_id": "EPS",
+      "trigger_result": "required",
+      "trigger_severity": "medium",
+      "trigger_reason_code": "EPS-DATA-PATH-CHANGED",
+      "gate_deadline": "before_local_implemented",
+      "min_evidence_rule_id": "EPS-E2",
+      "acceptance_rule_id": "EPS-A2",
+      "sample_profile": "EPS-SP-STRONG",
+      "access_pattern_classification": "Public conversation page loads selected BU channels once, official credential metadata once, one bounded latest-any-message projection for returned page IDs, and one separate indexed latest-IN statement when selected bindings require window metadata; no provider credentials are decrypted or probed.",
+      "pageConversations": 30,
+      "historyRowsPerConversation": 24,
+      "availabilitySample": [
+        {
+          "available": true,
+          "reason": null,
+          "windowOpen": true
+        },
+        {
+          "available": true,
+          "reason": null,
+          "windowOpen": true
+        },
+        {
+          "available": true,
+          "reason": null,
+          "windowOpen": true
+        }
+      ],
+      "queryCounts": {
+        "buChannelFindMany": 1,
+        "channelCredentialFindMany": 1,
+        "latestAnyMessageProjection": 1,
+        "latestInboundWindowProjection": 1
+      },
+      "elapsedMs": 15.028296999999839,
+      "explainLatestInboundProjection": [
+        {
+          "Plan": {
+            "Node Type": "Nested Loop",
+            "Parallel Aware": false,
+            "Async Capable": false,
+            "Join Type": "Inner",
+            "Startup Cost": 0.28,
+            "Total Cost": 90.59,
+            "Plan Rows": 30,
+            "Plan Width": 40,
+            "Actual Startup Time": 0.02,
+            "Actual Total Time": 0.111,
+            "Actual Rows": 30,
+            "Actual Loops": 1,
+            "Inner Unique": false,
+            "Shared Hit Blocks": 90,
+            "Shared Read Blocks": 0,
+            "Shared Dirtied Blocks": 0,
+            "Shared Written Blocks": 0,
+            "Local Hit Blocks": 0,
+            "Local Read Blocks": 0,
+            "Local Dirtied Blocks": 0,
+            "Local Written Blocks": 0,
+            "Temp Read Blocks": 0,
+            "Temp Written Blocks": 0,
+            "Plans": [
+              {
+                "Node Type": "Function Scan",
+                "Parent Relationship": "Outer",
+                "Parallel Aware": false,
+                "Async Capable": false,
+                "Function Name": "unnest",
+                "Alias": "requested",
+                "Startup Cost": 0,
+                "Total Cost": 0.3,
+                "Plan Rows": 30,
+                "Plan Width": 32,
+                "Actual Startup Time": 0.004,
+                "Actual Total Time": 0.005,
+                "Actual Rows": 30,
+                "Actual Loops": 1,
+                "Shared Hit Blocks": 0,
+                "Shared Read Blocks": 0,
+                "Shared Dirtied Blocks": 0,
+                "Shared Written Blocks": 0,
+                "Local Hit Blocks": 0,
+                "Local Read Blocks": 0,
+                "Local Dirtied Blocks": 0,
+                "Local Written Blocks": 0,
+                "Temp Read Blocks": 0,
+                "Temp Written Blocks": 0
+              },
+              {
+                "Node Type": "Limit",
+                "Parent Relationship": "Inner",
+                "Parallel Aware": false,
+                "Async Capable": false,
+                "Startup Cost": 0.28,
+                "Total Cost": 2.99,
+                "Plan Rows": 1,
+                "Plan Width": 45,
+                "Actual Startup Time": 0.003,
+                "Actual Total Time": 0.003,
+                "Actual Rows": 1,
+                "Actual Loops": 30,
+                "Shared Hit Blocks": 90,
+                "Shared Read Blocks": 0,
+                "Shared Dirtied Blocks": 0,
+                "Shared Written Blocks": 0,
+                "Local Hit Blocks": 0,
+                "Local Read Blocks": 0,
+                "Local Dirtied Blocks": 0,
+                "Local Written Blocks": 0,
+                "Temp Read Blocks": 0,
+                "Temp Written Blocks": 0,
+                "Plans": [
+                  {
+                    "Node Type": "Index Only Scan",
+                    "Parent Relationship": "Outer",
+                    "Parallel Aware": false,
+                    "Async Capable": false,
+                    "Scan Direction": "Backward",
+                    "Index Name": "messages_conversation_direction_created_id_idx",
+                    "Relation Name": "messages",
+                    "Alias": "message",
+                    "Startup Cost": 0.28,
+                    "Total Cost": 68.14,
+                    "Plan Rows": 25,
+                    "Plan Width": 45,
+                    "Actual Startup Time": 0.003,
+                    "Actual Total Time": 0.003,
+                    "Actual Rows": 1,
+                    "Actual Loops": 30,
+                    "Index Cond": "((conversation_id = requested.conversation_id) AND (direction = 'IN'::\"MessageDirection\"))",
+                    "Rows Removed by Index Recheck": 0,
+                    "Heap Fetches": 30,
+                    "Shared Hit Blocks": 90,
+                    "Shared Read Blocks": 0,
+                    "Shared Dirtied Blocks": 0,
+                    "Shared Written Blocks": 0,
+                    "Local Hit Blocks": 0,
+                    "Local Read Blocks": 0,
+                    "Local Dirtied Blocks": 0,
+                    "Local Written Blocks": 0,
+                    "Temp Read Blocks": 0,
+                    "Temp Written Blocks": 0
+                  }
+                ]
+              }
+            ]
+          },
+          "Planning": {
+            "Shared Hit Blocks": 54,
+            "Shared Read Blocks": 0,
+            "Shared Dirtied Blocks": 0,
+            "Shared Written Blocks": 0,
+            "Local Hit Blocks": 0,
+            "Local Read Blocks": 0,
+            "Local Dirtied Blocks": 0,
+            "Local Written Blocks": 0,
+            "Temp Read Blocks": 0,
+            "Temp Written Blocks": 0
+          },
+          "Planning Time": 0.183,
+          "Triggers": [],
+          "Execution Time": 0.123
+        }
+      ],
+      "providerCallsBefore": {
+        "meta": 0,
+        "evolution": 0
+      },
+      "providerCallsAfter": {
+        "meta": 0,
+        "evolution": 0
+      },
+      "limits": "Disposable PostgreSQL and one bounded 30-conversation public page; local query count/plan observation, not a capacity or latency SLO claim."
+    },
+    "CHANNEL-LATEST-MESSAGE-EVIDENCE": {
+      "policy_schema_version": "pcv-1",
+      "finding_id": "PERF-R3-01",
+      "trigger_result": "required",
+      "trigger_severity": "high",
+      "trigger_reason_code": "PUBLIC-LIST-NESTED-MESSAGE-HYDRATION",
+      "gate_deadline": "before_local_implemented",
+      "pageLimit": 4,
+      "returnedParents": 4,
+      "hasLookahead": true,
+      "parentCount": 25,
+      "historyRowsPerConversation": 500,
+      "totalFixtureMessages": 12500,
+      "queryCounts": {
+        "nestedMessageHydration": 0,
+        "boundedLatestMessageBatch": 1
+      },
+      "measuredSqlShape": "\n        SELECT requested.conversation_id AS \"conversationId\",\n          latest.content,\n          latest.direction::text AS \"direction\",\n          latest.channel_origin::text AS \"channelOrigin\"\n        FROM unnest(ARRAY[$?,$?,$?,$?]::text[]) AS requested(conversation_id)\n        LEFT JOIN LATERAL (\n          SELECT candidate.content, candidate.direction, candidate.channel_origin\n          FROM (\n            (\n              SELECT message.id, message.content, message.direction, message.channel_origin, message.created_at\n              FROM messages AS message\n              WHERE message.conversation_id = requested.conversation_id AND message.direction = 'IN'\n              ORDER BY message.created_at DESC, message.id DESC\n              LIMIT 1\n            )\n            UNION ALL\n            (\n              SELECT message.id, message.content, message.direction, message.channel_origin, message.created_at\n              FROM messages AS message\n              WHERE message.conversation_id = requested.conversation_id AND message.direction = 'OUT'\n              ORDER BY message.created_at DESC, message.id DESC\n              LIMIT 1\n            )\n          ) AS candidate\n          ORDER BY candidate.created_at DESC, candidate.id DESC\n          LIMIT 1\n        ) AS latest ON TRUE\n      ",
+      "parameterCount": 4,
+      "plan": {
+        "Plan": {
+          "Node Type": "Nested Loop",
+          "Parallel Aware": false,
+          "Async Capable": false,
+          "Join Type": "Left",
+          "Startup Cost": 0.83,
+          "Total Cost": 17.43,
+          "Plan Rows": 4,
+          "Plan Width": 114,
+          "Actual Startup Time": 0.039,
+          "Actual Total Time": 0.082,
+          "Actual Rows": 4,
+          "Actual Loops": 1,
+          "Inner Unique": false,
+          "Shared Hit Blocks": 32,
+          "Shared Read Blocks": 0,
+          "Shared Dirtied Blocks": 0,
+          "Shared Written Blocks": 0,
+          "Local Hit Blocks": 0,
+          "Local Read Blocks": 0,
+          "Local Dirtied Blocks": 0,
+          "Local Written Blocks": 0,
+          "Temp Read Blocks": 0,
+          "Temp Written Blocks": 0,
+          "Plans": [
+            {
+              "Node Type": "Function Scan",
+              "Parent Relationship": "Outer",
+              "Parallel Aware": false,
+              "Async Capable": false,
+              "Function Name": "unnest",
+              "Alias": "requested",
+              "Startup Cost": 0,
+              "Total Cost": 0.04,
+              "Plan Rows": 4,
+              "Plan Width": 32,
+              "Actual Startup Time": 0.007,
+              "Actual Total Time": 0.008,
+              "Actual Rows": 4,
+              "Actual Loops": 1,
+              "Shared Hit Blocks": 0,
+              "Shared Read Blocks": 0,
+              "Shared Dirtied Blocks": 0,
+              "Shared Written Blocks": 0,
+              "Local Hit Blocks": 0,
+              "Local Read Blocks": 0,
+              "Local Dirtied Blocks": 0,
+              "Local Written Blocks": 0,
+              "Temp Read Blocks": 0,
+              "Temp Written Blocks": 0
+            },
+            {
+              "Node Type": "Limit",
+              "Parent Relationship": "Inner",
+              "Parallel Aware": false,
+              "Async Capable": false,
+              "Startup Cost": 0.83,
+              "Total Cost": 4.32,
+              "Plan Rows": 1,
+              "Plan Width": 70,
+              "Actual Startup Time": 0.017,
+              "Actual Total Time": 0.018,
+              "Actual Rows": 1,
+              "Actual Loops": 4,
+              "Shared Hit Blocks": 32,
+              "Shared Read Blocks": 0,
+              "Shared Dirtied Blocks": 0,
+              "Shared Written Blocks": 0,
+              "Local Hit Blocks": 0,
+              "Local Read Blocks": 0,
+              "Local Dirtied Blocks": 0,
+              "Local Written Blocks": 0,
+              "Temp Read Blocks": 0,
+              "Temp Written Blocks": 0,
+              "Plans": [
+                {
+                  "Node Type": "Merge Append",
+                  "Parent Relationship": "Outer",
+                  "Parallel Aware": false,
+                  "Async Capable": false,
+                  "Startup Cost": 0.83,
+                  "Total Cost": 7.8,
+                  "Plan Rows": 2,
+                  "Plan Width": 70,
+                  "Actual Startup Time": 0.017,
+                  "Actual Total Time": 0.017,
+                  "Actual Rows": 1,
+                  "Actual Loops": 4,
+                  "Sort Key": [
+                    "\"*SELECT* 1\".created_at DESC",
+                    "\"*SELECT* 1\".id DESC"
+                  ],
+                  "Shared Hit Blocks": 32,
+                  "Shared Read Blocks": 0,
+                  "Shared Dirtied Blocks": 0,
+                  "Shared Written Blocks": 0,
+                  "Local Hit Blocks": 0,
+                  "Local Read Blocks": 0,
+                  "Local Dirtied Blocks": 0,
+                  "Local Written Blocks": 0,
+                  "Temp Read Blocks": 0,
+                  "Temp Written Blocks": 0,
+                  "Subplans Removed": 0,
+                  "Plans": [
+                    {
+                      "Node Type": "Subquery Scan",
+                      "Parent Relationship": "Member",
+                      "Parallel Aware": false,
+                      "Async Capable": false,
+                      "Alias": "*SELECT* 1",
+                      "Startup Cost": 0.41,
+                      "Total Cost": 3.87,
+                      "Plan Rows": 1,
+                      "Plan Width": 70,
+                      "Actual Startup Time": 0.009,
+                      "Actual Total Time": 0.01,
+                      "Actual Rows": 1,
+                      "Actual Loops": 4,
+                      "Shared Hit Blocks": 16,
+                      "Shared Read Blocks": 0,
+                      "Shared Dirtied Blocks": 0,
+                      "Shared Written Blocks": 0,
+                      "Local Hit Blocks": 0,
+                      "Local Read Blocks": 0,
+                      "Local Dirtied Blocks": 0,
+                      "Local Written Blocks": 0,
+                      "Temp Read Blocks": 0,
+                      "Temp Written Blocks": 0,
+                      "Plans": [
+                        {
+                          "Node Type": "Limit",
+                          "Parent Relationship": "Subquery",
+                          "Parallel Aware": false,
+                          "Async Capable": false,
+                          "Startup Cost": 0.41,
+                          "Total Cost": 3.86,
+                          "Plan Rows": 1,
+                          "Plan Width": 70,
+                          "Actual Startup Time": 0.009,
+                          "Actual Total Time": 0.009,
+                          "Actual Rows": 1,
+                          "Actual Loops": 4,
+                          "Shared Hit Blocks": 16,
+                          "Shared Read Blocks": 0,
+                          "Shared Dirtied Blocks": 0,
+                          "Shared Written Blocks": 0,
+                          "Local Hit Blocks": 0,
+                          "Local Read Blocks": 0,
+                          "Local Dirtied Blocks": 0,
+                          "Local Written Blocks": 0,
+                          "Temp Read Blocks": 0,
+                          "Temp Written Blocks": 0,
+                          "Plans": [
+                            {
+                              "Node Type": "Index Scan",
+                              "Parent Relationship": "Outer",
+                              "Parallel Aware": false,
+                              "Async Capable": false,
+                              "Scan Direction": "Backward",
+                              "Index Name": "messages_conversation_direction_created_id_idx",
+                              "Relation Name": "messages",
+                              "Alias": "message",
+                              "Startup Cost": 0.41,
+                              "Total Cost": 437.94,
+                              "Plan Rows": 127,
+                              "Plan Width": 70,
+                              "Actual Startup Time": 0.009,
+                              "Actual Total Time": 0.009,
+                              "Actual Rows": 1,
+                              "Actual Loops": 4,
+                              "Index Cond": "((conversation_id = requested.conversation_id) AND (direction = 'IN'::\"MessageDirection\"))",
+                              "Rows Removed by Index Recheck": 0,
+                              "Shared Hit Blocks": 16,
+                              "Shared Read Blocks": 0,
+                              "Shared Dirtied Blocks": 0,
+                              "Shared Written Blocks": 0,
+                              "Local Hit Blocks": 0,
+                              "Local Read Blocks": 0,
+                              "Local Dirtied Blocks": 0,
+                              "Local Written Blocks": 0,
+                              "Temp Read Blocks": 0,
+                              "Temp Written Blocks": 0
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "Node Type": "Subquery Scan",
+                      "Parent Relationship": "Member",
+                      "Parallel Aware": false,
+                      "Async Capable": false,
+                      "Alias": "*SELECT* 2",
+                      "Startup Cost": 0.41,
+                      "Total Cost": 3.91,
+                      "Plan Rows": 1,
+                      "Plan Width": 70,
+                      "Actual Startup Time": 0.007,
+                      "Actual Total Time": 0.007,
+                      "Actual Rows": 1,
+                      "Actual Loops": 4,
+                      "Shared Hit Blocks": 16,
+                      "Shared Read Blocks": 0,
+                      "Shared Dirtied Blocks": 0,
+                      "Shared Written Blocks": 0,
+                      "Local Hit Blocks": 0,
+                      "Local Read Blocks": 0,
+                      "Local Dirtied Blocks": 0,
+                      "Local Written Blocks": 0,
+                      "Temp Read Blocks": 0,
+                      "Temp Written Blocks": 0,
+                      "Plans": [
+                        {
+                          "Node Type": "Limit",
+                          "Parent Relationship": "Subquery",
+                          "Parallel Aware": false,
+                          "Async Capable": false,
+                          "Startup Cost": 0.41,
+                          "Total Cost": 3.9,
+                          "Plan Rows": 1,
+                          "Plan Width": 70,
+                          "Actual Startup Time": 0.007,
+                          "Actual Total Time": 0.007,
+                          "Actual Rows": 1,
+                          "Actual Loops": 4,
+                          "Shared Hit Blocks": 16,
+                          "Shared Read Blocks": 0,
+                          "Shared Dirtied Blocks": 0,
+                          "Shared Written Blocks": 0,
+                          "Local Hit Blocks": 0,
+                          "Local Read Blocks": 0,
+                          "Local Dirtied Blocks": 0,
+                          "Local Written Blocks": 0,
+                          "Temp Read Blocks": 0,
+                          "Temp Written Blocks": 0,
+                          "Plans": [
+                            {
+                              "Node Type": "Index Scan",
+                              "Parent Relationship": "Outer",
+                              "Parallel Aware": false,
+                              "Async Capable": false,
+                              "Scan Direction": "Backward",
+                              "Index Name": "messages_conversation_direction_created_id_idx",
+                              "Relation Name": "messages",
+                              "Alias": "message_1",
+                              "Startup Cost": 0.41,
+                              "Total Cost": 394.5,
+                              "Plan Rows": 113,
+                              "Plan Width": 70,
+                              "Actual Startup Time": 0.007,
+                              "Actual Total Time": 0.007,
+                              "Actual Rows": 1,
+                              "Actual Loops": 4,
+                              "Index Cond": "((conversation_id = requested.conversation_id) AND (direction = 'OUT'::\"MessageDirection\"))",
+                              "Rows Removed by Index Recheck": 0,
+                              "Shared Hit Blocks": 16,
+                              "Shared Read Blocks": 0,
+                              "Shared Dirtied Blocks": 0,
+                              "Shared Written Blocks": 0,
+                              "Local Hit Blocks": 0,
+                              "Local Read Blocks": 0,
+                              "Local Dirtied Blocks": 0,
+                              "Local Written Blocks": 0,
+                              "Temp Read Blocks": 0,
+                              "Temp Written Blocks": 0
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "Planning": {
+          "Shared Hit Blocks": 0,
+          "Shared Read Blocks": 0,
+          "Shared Dirtied Blocks": 0,
+          "Shared Written Blocks": 0,
+          "Local Hit Blocks": 0,
+          "Local Read Blocks": 0,
+          "Local Dirtied Blocks": 0,
+          "Local Written Blocks": 0,
+          "Temp Read Blocks": 0,
+          "Temp Written Blocks": 0
+        },
+        "Planning Time": 0.191,
+        "Triggers": [],
+        "Execution Time": 0.132
+      },
+      "simpleAllDirectionCandidatePlan": [
+        {
+          "Plan": {
+            "Node Type": "Nested Loop",
+            "Parallel Aware": false,
+            "Async Capable": false,
+            "Join Type": "Left",
+            "Startup Cost": 3.51,
+            "Total Cost": 26.03,
+            "Plan Rows": 4,
+            "Plan Width": 94,
+            "Actual Startup Time": 0.039,
+            "Actual Total Time": 0.071,
+            "Actual Rows": 4,
+            "Actual Loops": 1,
+            "Inner Unique": false,
+            "Shared Hit Blocks": 19,
+            "Shared Read Blocks": 0,
+            "Shared Dirtied Blocks": 0,
+            "Shared Written Blocks": 0,
+            "Local Hit Blocks": 0,
+            "Local Read Blocks": 0,
+            "Local Dirtied Blocks": 0,
+            "Local Written Blocks": 0,
+            "Temp Read Blocks": 0,
+            "Temp Written Blocks": 0,
+            "Plans": [
+              {
+                "Node Type": "Function Scan",
+                "Parent Relationship": "Outer",
+                "Parallel Aware": false,
+                "Async Capable": false,
+                "Function Name": "unnest",
+                "Alias": "requested",
+                "Startup Cost": 0,
+                "Total Cost": 0.04,
+                "Plan Rows": 4,
+                "Plan Width": 32,
+                "Actual Startup Time": 0.002,
+                "Actual Total Time": 0.003,
+                "Actual Rows": 4,
+                "Actual Loops": 1,
+                "Shared Hit Blocks": 0,
+                "Shared Read Blocks": 0,
+                "Shared Dirtied Blocks": 0,
+                "Shared Written Blocks": 0,
+                "Local Hit Blocks": 0,
+                "Local Read Blocks": 0,
+                "Local Dirtied Blocks": 0,
+                "Local Written Blocks": 0,
+                "Temp Read Blocks": 0,
+                "Temp Written Blocks": 0
+              },
+              {
+                "Node Type": "Limit",
+                "Parent Relationship": "Inner",
+                "Parallel Aware": false,
+                "Async Capable": false,
+                "Startup Cost": 3.5,
+                "Total Cost": 6.48,
+                "Plan Rows": 1,
+                "Plan Width": 70,
+                "Actual Startup Time": 0.016,
+                "Actual Total Time": 0.016,
+                "Actual Rows": 1,
+                "Actual Loops": 4,
+                "Shared Hit Blocks": 19,
+                "Shared Read Blocks": 0,
+                "Shared Dirtied Blocks": 0,
+                "Shared Written Blocks": 0,
+                "Local Hit Blocks": 0,
+                "Local Read Blocks": 0,
+                "Local Dirtied Blocks": 0,
+                "Local Written Blocks": 0,
+                "Temp Read Blocks": 0,
+                "Temp Written Blocks": 0,
+                "Plans": [
+                  {
+                    "Node Type": "Incremental Sort",
+                    "Parent Relationship": "Outer",
+                    "Parallel Aware": false,
+                    "Async Capable": false,
+                    "Startup Cost": 3.5,
+                    "Total Cost": 720.22,
+                    "Plan Rows": 241,
+                    "Plan Width": 70,
+                    "Actual Startup Time": 0.016,
+                    "Actual Total Time": 0.016,
+                    "Actual Rows": 1,
+                    "Actual Loops": 4,
+                    "Sort Key": [
+                      "message.created_at DESC",
+                      "message.id DESC"
+                    ],
+                    "Presorted Key": [
+                      "message.created_at"
+                    ],
+                    "Full-sort Groups": {
+                      "Group Count": 4,
+                      "Sort Methods Used": [
+                        "quicksort"
+                      ],
+                      "Sort Space Memory": {
+                        "Average Sort Space Used": 25,
+                        "Peak Sort Space Used": 25
+                      }
+                    },
+                    "Shared Hit Blocks": 19,
+                    "Shared Read Blocks": 0,
+                    "Shared Dirtied Blocks": 0,
+                    "Shared Written Blocks": 0,
+                    "Local Hit Blocks": 0,
+                    "Local Read Blocks": 0,
+                    "Local Dirtied Blocks": 0,
+                    "Local Written Blocks": 0,
+                    "Temp Read Blocks": 0,
+                    "Temp Written Blocks": 0,
+                    "Plans": [
+                      {
+                        "Node Type": "Index Scan",
+                        "Parent Relationship": "Outer",
+                        "Parallel Aware": false,
+                        "Async Capable": false,
+                        "Scan Direction": "Backward",
+                        "Index Name": "messages_conversation_id_created_at_idx",
+                        "Relation Name": "messages",
+                        "Alias": "message",
+                        "Startup Cost": 0.41,
+                        "Total Cost": 709.76,
+                        "Plan Rows": 241,
+                        "Plan Width": 70,
+                        "Actual Startup Time": 0.011,
+                        "Actual Total Time": 0.011,
+                        "Actual Rows": 2,
+                        "Actual Loops": 4,
+                        "Index Cond": "(conversation_id = requested.conversation_id)",
+                        "Rows Removed by Index Recheck": 0,
+                        "Shared Hit Blocks": 16,
+                        "Shared Read Blocks": 0,
+                        "Shared Dirtied Blocks": 0,
+                        "Shared Written Blocks": 0,
+                        "Local Hit Blocks": 0,
+                        "Local Read Blocks": 0,
+                        "Local Dirtied Blocks": 0,
+                        "Local Written Blocks": 0,
+                        "Temp Read Blocks": 0,
+                        "Temp Written Blocks": 0
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "Planning": {
+            "Shared Hit Blocks": 0,
+            "Shared Read Blocks": 0,
+            "Shared Dirtied Blocks": 0,
+            "Shared Written Blocks": 0,
+            "Local Hit Blocks": 0,
+            "Local Read Blocks": 0,
+            "Local Dirtied Blocks": 0,
+            "Local Written Blocks": 0,
+            "Temp Read Blocks": 0,
+            "Temp Written Blocks": 0
+          },
+          "Planning Time": 0.066,
+          "Triggers": [],
+          "Execution Time": 0.082
+        }
+      ],
+      "messageScanSummary": [
+        {
+          "nodeType": "Index Scan",
+          "index": "messages_conversation_direction_created_id_idx",
+          "actualRows": 1,
+          "actualLoops": 4,
+          "rowsRemovedByIndexRecheck": 0,
+          "sharedHitBlocks": 16,
+          "sharedReadBlocks": 0
+        },
+        {
+          "nodeType": "Index Scan",
+          "index": "messages_conversation_direction_created_id_idx",
+          "actualRows": 1,
+          "actualLoops": 4,
+          "rowsRemovedByIndexRecheck": 0,
+          "sharedHitBlocks": 16,
+          "sharedReadBlocks": 0
+        }
+      ],
+      "sortSummary": [],
+      "actualMessageRowsVisited": 8,
+      "limits": "Real public endpoint SQL and EXPLAIN ANALYZE on disposable PostgreSQL; no capacity/latency SLO claim."
+    },
+    "CHANNEL-HISTORY-SCAN-EVIDENCE": {
+      "finding_id": "PERF-01",
+      "policy_schema_version": "pcv-1",
+      "fixture": {
+        "conversations": 500,
+        "outSuffixLength": 500,
+        "hasOlderInbound": true,
+        "hasOutOnlyHistory": true,
+        "equalTimeTie": true,
+        "pageAtMaximum": true
+      },
+      "actual": {
+        "rowsRemovedByFilter": 0,
+        "sharedHitBlocks": 1502,
+        "sharedReadBlocks": 0,
+        "executionMs": 1.984,
+        "scanNodes": [
+          {
+            "type": "Index Only Scan",
+            "relation": "messages",
+            "actualRows": 0,
+            "loops": 500,
+            "index": "messages_conversation_direction_created_id_idx",
+            "indexCondition": "((conversation_id = requested.conversation_id) AND (direction = 'IN'::\"MessageDirection\"))"
+          }
+        ]
+      },
+      "plan": [
+        {
+          "Plan": {
+            "Node Type": "Nested Loop",
+            "Parallel Aware": false,
+            "Async Capable": false,
+            "Join Type": "Inner",
+            "Startup Cost": 0.41,
+            "Total Cost": 2010.2,
+            "Plan Rows": 500,
+            "Plan Width": 40,
+            "Actual Startup Time": 0.042,
+            "Actual Total Time": 1.969,
+            "Actual Rows": 2,
+            "Actual Loops": 1,
+            "Inner Unique": false,
+            "Shared Hit Blocks": 1502,
+            "Shared Read Blocks": 0,
+            "Shared Dirtied Blocks": 0,
+            "Shared Written Blocks": 0,
+            "Local Hit Blocks": 0,
+            "Local Read Blocks": 0,
+            "Local Dirtied Blocks": 0,
+            "Local Written Blocks": 0,
+            "Temp Read Blocks": 0,
+            "Temp Written Blocks": 0,
+            "Plans": [
+              {
+                "Node Type": "Function Scan",
+                "Parent Relationship": "Outer",
+                "Parallel Aware": false,
+                "Async Capable": false,
+                "Function Name": "unnest",
+                "Alias": "requested",
+                "Startup Cost": 0,
+                "Total Cost": 5,
+                "Plan Rows": 500,
+                "Plan Width": 32,
+                "Actual Startup Time": 0.024,
+                "Actual Total Time": 0.047,
+                "Actual Rows": 500,
+                "Actual Loops": 1,
+                "Shared Hit Blocks": 0,
+                "Shared Read Blocks": 0,
+                "Shared Dirtied Blocks": 0,
+                "Shared Written Blocks": 0,
+                "Local Hit Blocks": 0,
+                "Local Read Blocks": 0,
+                "Local Dirtied Blocks": 0,
+                "Local Written Blocks": 0,
+                "Temp Read Blocks": 0,
+                "Temp Written Blocks": 0
+              },
+              {
+                "Node Type": "Limit",
+                "Parent Relationship": "Inner",
+                "Parallel Aware": false,
+                "Async Capable": false,
+                "Startup Cost": 0.41,
+                "Total Cost": 3.99,
+                "Plan Rows": 1,
+                "Plan Width": 44,
+                "Actual Startup Time": 0.004,
+                "Actual Total Time": 0.004,
+                "Actual Rows": 0,
+                "Actual Loops": 500,
+                "Shared Hit Blocks": 1502,
+                "Shared Read Blocks": 0,
+                "Shared Dirtied Blocks": 0,
+                "Shared Written Blocks": 0,
+                "Local Hit Blocks": 0,
+                "Local Read Blocks": 0,
+                "Local Dirtied Blocks": 0,
+                "Local Written Blocks": 0,
+                "Temp Read Blocks": 0,
+                "Temp Written Blocks": 0,
+                "Plans": [
+                  {
+                    "Node Type": "Index Only Scan",
+                    "Parent Relationship": "Outer",
+                    "Parallel Aware": false,
+                    "Async Capable": false,
+                    "Scan Direction": "Backward",
+                    "Index Name": "messages_conversation_direction_created_id_idx",
+                    "Relation Name": "messages",
+                    "Alias": "message",
+                    "Startup Cost": 0.41,
+                    "Total Cost": 433.64,
+                    "Plan Rows": 121,
+                    "Plan Width": 44,
+                    "Actual Startup Time": 0.004,
+                    "Actual Total Time": 0.004,
+                    "Actual Rows": 0,
+                    "Actual Loops": 500,
+                    "Index Cond": "((conversation_id = requested.conversation_id) AND (direction = 'IN'::\"MessageDirection\"))",
+                    "Rows Removed by Index Recheck": 0,
+                    "Heap Fetches": 2,
+                    "Shared Hit Blocks": 1502,
+                    "Shared Read Blocks": 0,
+                    "Shared Dirtied Blocks": 0,
+                    "Shared Written Blocks": 0,
+                    "Local Hit Blocks": 0,
+                    "Local Read Blocks": 0,
+                    "Local Dirtied Blocks": 0,
+                    "Local Written Blocks": 0,
+                    "Temp Read Blocks": 0,
+                    "Temp Written Blocks": 0
+                  }
+                ]
+              }
+            ]
+          },
+          "Planning": {
+            "Shared Hit Blocks": 58,
+            "Shared Read Blocks": 0,
+            "Shared Dirtied Blocks": 0,
+            "Shared Written Blocks": 0,
+            "Local Hit Blocks": 0,
+            "Local Read Blocks": 0,
+            "Local Dirtied Blocks": 0,
+            "Local Written Blocks": 0,
+            "Temp Read Blocks": 0,
+            "Temp Written Blocks": 0
+          },
+          "Planning Time": 0.249,
+          "Triggers": [],
+          "Execution Time": 1.984
+        }
+      ],
+      "limits": "Real disposable PostgreSQL EXPLAIN ANALYZE/BUFFERS with one older-IN history behind OUT rows and one OUT-only history; bounded fixture observation, not a production outage or capacity/SLO claim."
+    },
+    "CHANNEL-MIGRATION-ROLLBACK-EVIDENCE": {
+      "finding_id": "PERF-01",
+      "lock_timeout": "5s",
+      "statement_timeout": "60s",
+      "test_acceleration": {
+        "lock_timeout": "100ms",
+        "statement_timeout": "1ms",
+        "note": "short disposable probes; exact migration values separately observed above"
+      },
+      "sqlstates": {
+        "lock": "55P03",
+        "statement": "57014"
+      },
+      "rowsAfterAbortedDDL": 100001,
+      "survivingIndexesAfterAbort": 0,
+      "writeObservation": {
+        "batchRowsEach": 1000,
+        "withoutIndexMs": 6.37900400000035,
+        "withIndexMs": 20.35224500000004,
+        "indexBytes": 6856704,
+        "note": "same disposable table; bounded single-sample observation, no capacity/SLO threshold"
+      }
+    },
+    "CHANNEL-WINDOW-SCOPE-EVIDENCE": {
+      "finding_id": "PERF-01",
+      "policy_schema_version": "pcv-1",
+      "selectedReference": {
+        "conversationFound": true,
+        "latestDirection": "recebida",
+        "requiresWindow": false,
+        "available": true
+      },
+      "officialWindowBindingsPresentInBu": true,
+      "latestInboundWindowQueries": 0,
+      "latestAnyMessageQueries": 1,
+      "expectedLatestInboundWindowQueries": 0,
+      "limits": "One real public-list request against disposable PostgreSQL; metadata batching remains operation-local."
+    },
+    "CHANNEL-OUTBOUND-OVERLAP": {
+      "repetitions": 5,
+      "operationsPerRepetition": 20,
+      "operationCounts": [
+        20,
+        20,
+        20,
+        20,
+        20
+      ],
+      "acceptedCounts": [
+        20,
+        20,
+        20,
+        20,
+        20
+      ],
+      "recordedCounts": [
+        20,
+        20,
+        20,
+        20,
+        20
+      ],
+      "perOwnedConversationRowCounts": [
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "limits": "Disposable PostgreSQL and provider fake; each distinct owned conversation has exactly one OUT row in this bounded fixture; no same-key exactly-once, capacity, or SLO claim."
+    },
+    "FRC-COMPOSER-EVIDENCE": {
+      "waves": [
+        {
+          "requests": 1,
+          "retriggers": 20,
+          "outcome": "accepted",
+          "draftPreserved": false,
+          "messageCount": 1
+        },
+        {
+          "requests": 1,
+          "retriggers": 20,
+          "outcome": "unknown",
+          "draftPreserved": true,
+          "messageCount": 1
+        },
+        {
+          "requests": 1,
+          "retriggers": 20,
+          "outcome": "accepted",
+          "draftPreserved": false,
+          "messageCount": 1
+        },
+        {
+          "requests": 1,
+          "retriggers": 20,
+          "outcome": "unknown",
+          "draftPreserved": true,
+          "messageCount": 1
+        },
+        {
+          "requests": 1,
+          "retriggers": 20,
+          "outcome": "accepted",
+          "draftPreserved": false,
+          "messageCount": 1
+        }
+      ],
+      "limits": "Five real BFF/PostgreSQL submits held after the actual response; twenty user-form submit events per in-flight send; one request per wave; no capacity/SLO claim."
+    },
+    "RLS-EVIDENCE": {
+      "policy_schema_version": "pcv-1",
+      "lane_id": "RLS",
+      "trigger_result": "recommended",
+      "trigger_severity": "medium",
+      "trigger_reason_code": "RLS-QUEUE-WORKER-REALTIME-CHANGED",
+      "gate_deadline": "before_local_implemented",
+      "min_evidence_rule_id": "RLS-E1",
+      "acceptance_rule_id": "RLS-A1",
+      "stage_profile_observed": "RLS-SP-L",
+      "clients": 5,
+      "readsPerClient": 6,
+      "totalScopeChecks": 30,
+      "observed": [
+        {
+          "client": 0,
+          "ownReads": 3,
+          "foreignReads": 3
+        },
+        {
+          "client": 1,
+          "ownReads": 3,
+          "foreignReads": 3
+        },
+        {
+          "client": 2,
+          "ownReads": 3,
+          "foreignReads": 3
+        },
+        {
+          "client": 3,
+          "ownReads": 3,
+          "foreignReads": 3
+        },
+        {
+          "client": 4,
+          "ownReads": 3,
+          "foreignReads": 3
+        }
+      ],
+      "thresholds": {
+        "ownBuReadStatus": 200,
+        "foreignTenantReadStatus": 404,
+        "providerCallsDuringListing": 0
+      },
+      "providerCalls": {
+        "calibration": "one fixture Meta number-list operation was detected before the read stage",
+        "before": {
+          "meta": 1,
+          "evolution": 0
+        },
+        "after": {
+          "meta": 1,
+          "evolution": 0
+        },
+        "duringReadDelta": {
+          "meta": 0,
+          "evolution": 0
+        }
+      },
+      "elapsedMs": 58.97343500000079,
+      "metrics_summary": "Five authenticated clients ran concurrently; each completed three sequential own-BU and three sequential foreign-tenant reads; all instrumented Meta/Evolution operations remained unchanged during channel listing.",
+      "limits": "One bounded local PostgreSQL stage; not a capacity, latency SLO, or provider load claim."
+    }
+  },
+  "limits": [
+    "Actual remote CI not_run; not a remote success claim.",
+    "Human preserved DB migration/API-Web activation/HTTPS and new real INOUT both bindings pending.",
+    "Historical80903/all2564/all28261 not reused; prior failures and exact cleanup preserved. Current mandatory leaf/cleanup control uses real script and fake prerequisite tools, not actual provider delivery.",
+    "Only approved public source paths covered; no excluded private-path discovery or whole-tree clean claim."
+  ]
+}

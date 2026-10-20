@@ -2,14 +2,14 @@
   "policy_schema_version": "pcv-1",
   "schema_version": "stcon06-pcv-evidence-v1",
   "todo_id": "ST-CON-06",
-  "run_id": "canonical-linux-all28261",
+  "run_id": "canonical-linux-all93791",
   "environment_id": "leadshug_channels_validation-Node22.23.3-PostgreSQL16",
   "executor_id": "/root/stcon06_executor",
-  "reviewer_id": "pending-independent-dedicated-audit",
-  "recorded_at_utc": "2026-10-20T18:47:18.655576+00:00",
+  "reviewer_id": "fresh_no_context_tqa_report_completion",
+  "recorded_at_utc": "2026-10-20T19:41:12.665088+00:00",
   "evidence_type": "canonical-runner-structured-log",
-  "gate_status": "measured v1.3 fresh all candidate; independent complete audit and row disposition pending",
-  "raw_log_sha256": "e904bf3203be423666c9428e262e9e51c46e263c22570d71c1f9d3cd6ee3d25e",
+  "gate_status": "passed",
+  "raw_log_sha256": "4ca4a287c78c027a2d7bc547adc423befe87e39b0ba4a346ec6d076ef8e24608",
   "lane_id": "RLS",
   "sample_profile_id": "RLS-SP-L",
   "acceptance_rule_id": "RLS-A1",
@@ -333,17 +333,17 @@
           "foreignReads": 3
         },
         {
+          "client": 2,
+          "ownReads": 3,
+          "foreignReads": 3
+        },
+        {
           "client": 3,
           "ownReads": 3,
           "foreignReads": 3
         },
         {
           "client": 4,
-          "ownReads": 3,
-          "foreignReads": 3
-        },
-        {
-          "client": 2,
           "ownReads": 3,
           "foreignReads": 3
         }
@@ -368,10 +368,34 @@
           "evolution": 0
         }
       },
-      "elapsedMs": 60.53305999999975,
+      "elapsedMs": 58.97343500000079,
       "metrics_summary": "Five authenticated clients ran concurrently; each completed three sequential own-BU and three sequential foreign-tenant reads; all instrumented Meta/Evolution operations remained unchanged during channel listing.",
       "limits": "One bounded local PostgreSQL stage; not a capacity, latency SLO, or provider load claim."
     }
   },
-  "artifact_sha256": "dce6baf69581abe87b24d1fbb453d87216b7b2ffc529f826b825e65a8dfdb954"
+  "review_disposition": {
+    "owner": "/root",
+    "reviewers": [
+      "performance-round04-independent-no-context",
+      "fresh_no_context_tqa_report_completion",
+      "fresh-internal-no-context-adherence-security-v13r4"
+    ],
+    "evidence": [
+      {
+        "artifact": "evidence/performance-v13r4.raw.json",
+        "sha256": "6fca8875c68fe6267356050d3ec1d46ad6d18dffe88dce009e44b5467a69f4a7"
+      },
+      {
+        "artifact": "evidence/test-quality-v13r4-complete.raw.json",
+        "sha256": "7401078252944eeb2f78e8147d8f263360be34c6dde6f798dd99f53aa9a00a8e"
+      },
+      {
+        "artifact": "evidence/adherence-security-v13r4.raw.json",
+        "sha256": "54831b07bb93c3b0d93705df91d42c2d75bf9dcb47370ec1d11e5f3dfe585615"
+      }
+    ],
+    "scope": "Current declared automated PCV floor accepted from actualall93791; no independent reviewer execution/capacity/physical delivery claim",
+    "low_test_debt": "PERF-R4-01 retained as nonblocking with raw plan evidence; no present runtime scan regression"
+  },
+  "artifact_sha256": "0f43d4f8b4c06f2cb99d62b1183f9616d8329d20d6376464900be20d00054657"
 }

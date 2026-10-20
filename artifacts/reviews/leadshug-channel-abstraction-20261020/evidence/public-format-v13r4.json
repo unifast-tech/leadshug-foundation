@@ -1,0 +1,22 @@
+{
+  "schema": "stcon06-public-format-inspection-v1",
+  "captured_at_utc": "2026-10-20T19:25:51.885832+00:00",
+  "commands": [
+    {
+      "repository": "root",
+      "command": "git.exe -c core.whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol -C . diff --check --ignore-submodules=all -- scripts .github/workflows/ci.yml",
+      "exit_code": 0
+    },
+    {
+      "repository": "api",
+      "command": "git.exe -c core.whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol -C api-app diff --check -- src test prisma/schema.prisma prisma/migrations/20261020170000_message_inbound_window_index/migration.sql",
+      "exit_code": 0
+    },
+    {
+      "repository": "web",
+      "command": "git.exe -c core.whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol -C web-app diff --check -- src e2e",
+      "exit_code": 0
+    }
+  ],
+  "scope": "Positive public pathspecs before discovery; root ignores submodule content. Existing LF\u2192CRLF warnings retained, no file normalization or private/fulltree clean claim."
+}

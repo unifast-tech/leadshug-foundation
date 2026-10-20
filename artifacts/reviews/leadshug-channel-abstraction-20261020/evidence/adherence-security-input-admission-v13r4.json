@@ -1,0 +1,11 @@
+{
+  "prompt_chars": 1034871,
+  "prompt_bytes": 1038979,
+  "limit": 1048576,
+  "within_limit": true,
+  "package_sha256": "6dbe56924bab9b5a70f5814250497b24caf0f4a5ec64635703d4f7514a5ece4f",
+  "dispatch_sha256": "9d6c5a6d066613e5a61dc9e4b8be80f95e4cdb786295dc75cebcf05f5a910c16",
+  "full_workload_preserved": true,
+  "compression": "Removed duplicate prior detailed verdict serialization and stale runtime observation only; closed strictmerge/fullcurrentcontexts/fullrubrics/allrisk/attacks remain. Complete historical raw still retained.",
+  "status": "admitted before any reviewer start; available slot pending"
+}

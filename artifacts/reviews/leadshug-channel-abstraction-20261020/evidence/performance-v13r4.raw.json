@@ -1,0 +1,28 @@
+{
+  "schema_version": "subagent-review-result-v1",
+  "artifact_kind": "subagent_review_result",
+  "dispatch_path": "/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/artifacts/reviews/leadshug-channel-abstraction-20261020/dedicated-audit/round-04/dispatch/performance.dispatch.json",
+  "review_kind": "critique",
+  "reviewer_label": "performance-round04-independent-no-context",
+  "overall_assessment": "No blocking performance or operational regression found in the bounded delta. The remediation follows approved D07/SCOPE-06: parent retrieval remains capped at 501 including lookahead, and message projection receives only the at-most-500 returned IDs. One parameterized SQL statement replaces full child-history hydration. Its two direction-constrained top-one probes preserve deterministic createdAt/id ordering across the complete IN/OUT enum, empty-history fields and selected-origin availability. The supplied actual endpoint SQL and PostgreSQL plan substantiate PERF-R3-01 remediation: four returned parents, four bound IDs excluding lookahead, eight emitted message rows, two indexed leaves with four loops each, 32 shared hits and no reported reads or rechecks. Separate latest-IN work remains restricted to selected bindings requiring a window; GET introduces no provider traffic or credential decryption.\n\nThe dual-probe query is more elaborate than the simple all-direction LATERAL control. The control was faster in this single fixture: 0.082 ms versus 0.132 ms, with 16 leaf hit blocks versus 32. Retaining the implementation is proportionate because the approved index supplies complete ordering within each direction, avoiding dependence on the size of an equal-timestamp group. No speedup or large-tie benchmark claim is warranted. Additional schema or benchmark expansion is unnecessary for this acceptance.\n\nThe non-string limit correction preserves approved scalar defaults, flooring and the 500 cap. Real request tests inspect executed SQL parameters, and the repeated-parameter failures were genuinely reproduced. Typebot production behavior remains unchanged; added two-output coverage is honestly classified as test-after protection. The delta preserves the common outbound and sole acceptance owners, without a compatibility bridge or future-provider expansion. Elegance and structural soundness are acceptable for the approved scope.\n\nOperational evidence supports automated-candidate acceptance: fresh all93791 reports 613 passing tests, unchanged 57 frozen product inputs, matching served/build artifacts and empty validation namespace afterward. The approved index's storage and write costs are recorded descriptively, including the slower indexed write sample; transactional migration limits and disposable rollback evidence remain explicit. EPS strong-query evidence is substantively supported. Formal PCV dispositions still require current artifact bindings and reviewer identities. Preserved-database migration, API/Web activation, HTTPS and actual official/unofficial INOUT remain subsequent gates under DOD-07/VAL-04; remote CI remains not_run. Previously resolved unchanged findings are not reopened. Confidence is high for the bounded access-path correction; assessment relies exclusively on supplied source and evidence, without independent execution.",
+  "recommended_path": "Accept the round4 automated candidate from this performance critique lane, with the low finding recorded as non-blocking hardening. Complete the other independent lane dispositions and bind PCV rows to the current all93791 artifacts before satisfying their deadlines. Then follow approved OrderedStep6 and final assurance; retain TQA-R02-02 as a delivery blocker until actual operator evidence closes it.",
+  "performance_position": "acceptable",
+  "elegance_position": "acceptable",
+  "structural_soundness_position": "acceptable",
+  "operational_fit_position": "acceptable",
+  "findings": [
+    {
+      "finding_id": "PERF-R4-01",
+      "severity": "low",
+      "category": "tests",
+      "formalizable_hint": "yes",
+      "candidate_rule_level": "project",
+      "title": "Latest-message work assertion counts emitted rows rather than total scan work",
+      "rationale": "The new actualMessageRowsVisited calculation sums Actual Rows multiplied by Actual Loops, excluding rows removed by filters or index rechecks. Its name and bound therefore overstate what that assertion independently proves. The supplied current plan has no residual filtering and shows bounded indexed work, so this does not invalidate the remediation or demonstrate a runtime blocker. It weakens protection against a later residual-filter regression using the same index.",
+      "suggested_action": "During ordinary test maintenance, distinguish emitted rows from scan work. Assert the intended leaf index conditions and absence of residual filtering, and report filtered/rechecked rows and buffer work separately, accounting for PostgreSQL's rounded per-loop statistics. Preserve the raw plan evidence.",
+      "affected_paths": [
+        "api-app/test/number-onboarding-pcv.e2e-spec.ts"
+      ]
+    }
+  ]
+}

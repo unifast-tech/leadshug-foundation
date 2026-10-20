@@ -1,0 +1,26 @@
+{
+  "schema": "stcon06-ci-source-admission-v1",
+  "recorded_at_utc": "2026-10-20T19:21:58.576420+00:00",
+  "status": "approved-principal-working-tree-admitted-for-fresh-all-only",
+  "authority_source": "Explicit existing APROVADO — aditivo v1.3; bounded round3 query/test remediation in5already-admitted paths; same cohesive bound, no scope/path/schema addition",
+  "canonical_invalidation": {
+    "artifact": "evidence/ci-evidence-invalidation-v13r4.json",
+    "exit": 11,
+    "outcome": "manual-admission-required",
+    "disposition": "Preserved, not GO/reusable. Manual source authority renewed through existing explicit approval, exact approved public diff, exact current source and normal authorityGO solely for required new fullall."
+  },
+  "historical_run": "all28261 invalidated; no current/remoteCIreuse",
+  "source_snapshot": "evidence/v13r4-source-before-all.json",
+  "source_snapshot_sha256": "9cbead63a2a521211274e8210a0bb441760d755587835db7f814b851d16eef53",
+  "source_paths": 57,
+  "source_path_scope": "Explicit public product/build/test inputs; Foundation context separately frozen for review; excluded operational/private paths never discovered, no whole-tree clean claim",
+  "public_diff": {
+    "artifact": "evidence/public-diff-v13r4.json",
+    "expected": 429,
+    "forbidden": 0,
+    "unclassified": 0
+  },
+  "normal_authority": "evidence/authority-v13r4-before-all.json GO/execution_authority_granted=true",
+  "decision": "GO fresh canonical all only, approved same-engine Linux transport. Final added page-ID/simpleplan diagnostics must execute. Freeze product sources; no preserved DB/runtime/tunnel/provider action.",
+  "waiver": false
+}
