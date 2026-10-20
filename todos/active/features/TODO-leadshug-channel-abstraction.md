@@ -35,11 +35,11 @@ Usuário confirmou Channel abstrato/concretos e extensibilidade para Instagram, 
 ## Delivery Status Canon (Required)
 - **Current delivery stage:** Pending
 - **Qualifiers:** none
-- **Next exact step:** solicitar APROVADO específico do ST-CON-06 v1.2; revisões convergidas/guardas go/preflight-go. Após aprovação, reload binding + authority go antes de produto.
+- **Next exact step:** authority normal/routing go; corrigir runner para inventário público positivo antes de qualquer teste, depois test-first e cutover completo.
 
 ## Active Work State (Required While TODO Remains In `active/`)
-- **Work state:** review
-- **Why this state now:** contrato v1.2 revisado, arquitetura integrada e crítica fresh reconvergida go; execução aguarda APROVADO específico.
+- **Work state:** implementation
+- **Why this state now:** APROVADO específico recebido e binding recarregado; seguir Ordered Steps com executor único e autoridade normal go antes de código.
 - **Exit condition:** pacote convergido + APROVADO específico + reload binding + authority go.
 
 ## Scope
@@ -194,12 +194,12 @@ Guard de entrega ainda não executado. API exige inventário positivo de paths p
 - **Active technical scope:** nestjs,react,vite,postgresql,prisma,docker
 - **Expected supporting profiles:** strategic-cto,operational-devops,assurance-tester-quality,assurance-security-adversarial
 - **Scope-check command:** python3 delphi-ai/tools/profile_scope_check.py --profile strategic-cto foundation_documentation/todos/active/features/TODO-leadshug-channel-abstraction.md
-- **Gate 0:** Genesis rejeitado; contexto canônico existente. Atual strategic-cto documental, sem produto.
+- **Gate 0:** Genesis rejeitado; contexto canônico existente. Genesis rejeitado pelo canon existente; ativo operational-coder com handoffs DevOps/assurance planejados.
 
 ### Handoff Log (Update when execution crosses profile boundaries)
 | From Profile | To Profile | Why the Handoff Exists | Touched Surfaces | Status / Evidence |
 | --- | --- | --- | --- | --- |
-| strategic-cto | operational-coder | depois de APROVADO | API/Web/runner/harness | planned |
+| strategic-cto | operational-coder | APROVADO explícito recebido2026-10-20 | API/Web/runner/harness | active; binding reload + authority-execution.json |
 | operational-coder | operational-devops | readiness/publicação local | imagem própria e recursos de teste | planned |
 | operational-coder | assurance-tester-quality | aderência/cutover/TQA/final | pacote público bounded | planned |
 | operational-coder | assurance-security-adversarial | isolamento/segredos/DI | resolução e surfaces | planned |
@@ -489,15 +489,15 @@ Revisão de planejamento concluída: architecture_opinion findings_integrated e 
 - **Waiver authority / reference (required if waived):** n/a
 
 ## Approval
-- **Approved by:** pending
-- **Approval reference:** pending
+- **Approved by:** usuário — autoridade humana deste contrato
+- **Approval reference:** resposta literal APROVADO nesta conversa em2026-10-20, após apresentação do contrato v1.2 publicado em Foundation781ea16e51e0db2a654e6956ea633a03dd509dfd (freeze materiala35f676c).
 - **Approval scope:** ST-CON-06/SCOPE01..05/D01..10, depois da convergência do pacote concreto; concordância com conceito não substitui APROVADO.
 - **Execution not authorized by approval:** todo Out of Scope, redes futuras,05/04, push/deploy de produto ou mudanças privadas.
 - **Renewed approval required when:** decisões/DoD/paths/risco/contrato mudarem materialmente.
-- **Pre-approval readiness evidence:** artifacts/reviews/leadshug-channel-abstraction-20261020/README.md; authority-preapproval.json = preflight-go, execution_authority_granted=false; estrutura PASS. APROVADO humano permanece pending.
+- **Pre-approval readiness evidence:** artifacts/reviews/leadshug-channel-abstraction-20261020/README.md; authority-preapproval.json = preflight-go, execution_authority_granted=false; estrutura PASS. APROVADO específico recebido; authority normal pós-ingestão registrado em evidence/authority-execution.json.
 
 ## Rules Acknowledgement / Ingestion (Required After `APROVADO` and Before Execution)
-Ingestão de planejamento; reload binding obrigatório após APROVADO antes de produto. Registro de regra/template não é evidência de execução.
+Binding reload realizado após APROVADO em2026-10-20 pelo orquestrador: fontes da tabela relidas; constituição/política/módulos recarregados e verify_context PACED-Ready. Executor relerá as regras técnicas pertinentes antes dos edits. Ingestão não é evidência de implementação/testes. Nenhum GOAL persistente foi criado.
 
 | Source | Why It Applies Now | Must Preserve | Must Avoid | Execution Impact |
 | --- | --- | --- | --- | --- |
@@ -547,9 +547,9 @@ Planejado para o gate de entrega após APROVADO; nenhum resultado de implementa�
 
 ## TODO Closeout Disposition
 - **Disposition:** keep-active
-- **Disposition reason:** preparação e reviews pré-aprovação.
+- **Disposition reason:** contrato aprovado, implementação e validação em execução; não encerrar antes de todos gates.
 - **Post-commit/push status:** baseline materiala35f676c publicada/revisada; pacote documental finalizado com guardas pré-aprovação; produto Pending.
-- **Next path/status action:** apresentar contrato convergido para APROVADO; não há entrega de produto.
+- **Next path/status action:** executar ST-CON-06 aprovado, manter active até evidências e gates de entrega.
 
 ## Security Risk Assessment (Mandatory Before Delivery)
 - **Risk level:** high
