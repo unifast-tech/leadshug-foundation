@@ -1,5 +1,8 @@
 # ST-CON-05 — seller template authoring ready for approval
 
+**Atualização2026-10-20:** readiness deste pacote é histórica. A direção [Channel abstrato](../../feature-briefs/leadshug-channel-abstraction-20261020.md) requer reconvergência do TODO após ST-CON-06 e novas revisões/guardas; não usar os resultados abaixo como preflight atual. Nenhuma implementação foi aprovada por este pacote.
+
+
 Governing [TODO](../../../todos/active/features/TODO-leadshug-official-template-authoring.md). User confirmed seller creates and submits directly to Meta without intermediate ADMIN approval. **Planning complete; awaiting specific APROVADO. No implementation authority granted.** Creation/status precedes ST-CON-04 firstsend, which needs its own rebase/review/approval and uses the same domain/catalog.
 
 - [Architecture](architecture-opinion.md): five medium findings integrated; baseline f42a2e72.

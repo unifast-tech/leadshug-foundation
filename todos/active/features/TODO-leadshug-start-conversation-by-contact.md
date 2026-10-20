@@ -13,6 +13,8 @@ LeadsHug — ST-CON-04: Nova conversa por contato e primeiro envio seguro
 
 ## Context
 
+**Atualização material2026-10-20:** direção humana exige Channel abstrato/concretos e resolução scoped; este consumer depende do contrato/cutover ST-CON-06 e precisa novo refinamento/reviews/guardas antes de APROVADO. Evidências de planejamento2026-10-19 são históricas para a versão anterior.
+
 ST-CON-01 encerrou a prova local de cadastro e troca real dos dois transportes, incluindo retomada. A inbox responde a conversas recebidas, mas o operador ainda não abre atendimento informando telefone. Este contrato propõe essa abertura e o primeiro envio conforme o canal. Não reabre a investigação histórica do webhook nem supõe que um primeiro OUT cria janela oficial.
 
 ## Framing Source & Story Slice
@@ -307,8 +309,8 @@ Nenhuma decisão material aberta na proposta. Disponibilidade de template é dep
 - **Decision review lifecycle:** after diagnosis is closed and before APROVADO
 - **Decision review kind:** architecture_opinion
 - **Decision review package:** bounded-file-set
-- **Decision review status:** findings_integrated
-- **Decision review evidence / resolution:** artifacts/reviews/leadshug-start-conversation-20261019/architecture-opinion.md; ARCH-01..06 Integrated, crítica do texto evoluído ainda pendente.
+- **Decision review status:** not_run
+- **Decision review evidence / resolution:** pareceres2026-10-19 preservados como histórico; nova revisão tática após contrato ST-CON-06 e reconvergência do consumer. Parecer de enquadramento2026-10-20 não satisfaz este gate.
 - **Architecture adherence review:** required
 - **Adherence review lifecycle:** after implementation and before Completed
 - **Adherence review kind:** architecture_adherence
@@ -339,14 +341,14 @@ Nenhuma decisão material aberta na proposta. Disponibilidade de template é dep
 - **Material sections compared:** Context|Contract Boundary|Scope|Out of Scope|Definition of Done|Validation Steps|Execution Lane Tracking|Canonical Module Anchors|Decisions|Decision Baseline|Architecture Change Governance|Questions To Close|Assumptions Preview|Execution Plan|Flow Evidence Planning Matrix|Local CI-Equivalent Suite Matrix|Runtime / Rollout Notes|Security Risk Assessment|Performance & Concurrency Risk Assessment
 - **Guard command:** python3 delphi-ai/tools/review_scope_drift_guard.py --todo foundation_documentation/todos/active/features/TODO-leadshug-start-conversation-by-contact.md
 - **No-go handling rule:** reconvergir pacote/review e renovar freeze, sem implementação.
-- **Gate status:** no_material_findings
-- **Findings summary:** guard go,23seções comparadas e zero mudança material contra507ec7eb; reviewer aceitou âncora SQL sem reabrir achados.
-- **Evidence / reference:** artifacts/reviews/leadshug-start-conversation-20261019/evidence/scope-drift.json
+- **Gate status:** not_run
+- **Findings summary:** Context material alterado em2026-10-20 pela direção Channel; baseline/guard anterior histórico. Requer reconvergência/review e novo freeze antes de aprovação.
+- **Evidence / reference:** artifacts/feature-briefs/leadshug-channel-abstraction-20261020.md; parecer de enquadramento artifacts/analysis/leadshug-channel-abstraction-framing-opinion-20261020.md; JSON go anterior é histórico, não resultado do ciclo atual.
 - **Waiver authority / reference (required if waived):** n/a
 
 ## Questions To Close
 
-Nenhuma pergunta material de produto aberta. Operador ainda preparará template elegível na Messaging account selecionada antes da prova física; este TODO não autoriza criar/submeter nem enviar agora.
+Fechar consumo dos ports Channel/capacidade e novo baseline após ST-CON-06; reconvergir decisões, paths, DI e validação deste consumer. Requer revisões/guardas próprios antes de pedir APROVADO novamente.
 
 ## Pattern References (Optional; Enforced When Cited)
 
@@ -500,8 +502,8 @@ Migration aditiva versionada; deploy/status primeiro no PG descartável. Dados o
 - **Critique isolation mode:** fresh internal no-context reviewer
 - **Internal reviewer mandate:** required; novo agente, não executor, aguardar terminal sem prazo artificial
 - **Critique lenses:** correctness,performance,elegance,structural-soundness,risk
-- **Critique status:** findings_integrated
-- **Findings summary:** CRIT-01..04 integrados; reviewer independente verificou baseline f71a7d99 e retornou no_remaining_approval_blockers. ARCH-01..06 não exigem reabertura.
+- **Critique status:** not_run
+- **Findings summary:** ciclo anterior2026-10-19 concluído, histórico; direção Channel2026-10-20 exige novo pacote tático/freeze e crítica antes de aprovação.
 - **Resolution ledger:** Planning Finding Resolution Ledger
 - **Evidence / reference:** artifacts/reviews/leadshug-start-conversation-20261019/critique.md
 - **Waiver authority / reference (required if waived):** n/a

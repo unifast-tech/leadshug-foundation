@@ -1,5 +1,8 @@
 # ST-CON-04 — planning review packet
 
+**Atualização2026-10-20:** readiness deste pacote é histórica. A direção [Channel abstrato](../../feature-briefs/leadshug-channel-abstraction-20261020.md) requer reconvergência do TODO após ST-CON-06 e novas revisões/guardas; não usar os resultados abaixo como preflight atual. Nenhuma implementação foi aprovada por este pacote.
+
+
 Governing authority: [tactical TODO](../../../todos/active/features/TODO-leadshug-start-conversation-by-contact.md). Status: reviewed for human approval consideration, **implementation not approved**. No product changes/tests/runtime/account actions in this package.
 
 - [Architecture opinion](architecture-opinion.md): six findings integrated.

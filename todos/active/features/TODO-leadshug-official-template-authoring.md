@@ -14,6 +14,8 @@ LeadsHug — ST-CON-05: vendedor prepara e submete modelos oficiais
 
 ## Context
 
+**Atualização material2026-10-20:** direção humana exige Channel abstrato/concretos e resolução scoped; este consumer depende do contrato/cutover ST-CON-06 e precisa novo refinamento/reviews/guardas antes de APROVADO. Evidências de planejamento2026-10-19 são históricas para a versão anterior.
+
 O usuário quer que o vendedor prepare sua mensagem no LeadsHug e a deixe disponível para iniciar atendimentos. Confirmou explicitamente: vendedor cria E envia para aprovação da Meta, sem aprovação administrativa intermediária. É ampliação do programa, não aprovação do ST-CON-04 anterior. Esta história entrega criar/guardar/pré-visualizar/submeter/consultar modelos textuais; iniciar conversas continua no ST-CON-04 dependente, rebaseado depois desta entrega. Nunca confundir template submetido com aprovado ou mensagem enviada.
 
 ## Framing Source & Story Slice
@@ -304,8 +306,8 @@ Nenhuma decisão de produto aberta: vendedor pode criar/submeter, confirmado nes
 - **Decision review lifecycle:** after diagnosis is closed and before APROVADO
 - **Decision review kind:** architecture_opinion
 - **Decision review package:** bounded-file-set
-- **Decision review status:** findings_integrated
-- **Decision review evidence / resolution:** artifacts/reviews/leadshug-template-authoring-20261019/architecture-opinion.md; AR01..05 Integrated, mais runner antes do primeiro teste.
+- **Decision review status:** not_run
+- **Decision review evidence / resolution:** pareceres2026-10-19 preservados como histórico; nova revisão tática após contrato ST-CON-06 e reconvergência do consumer. Parecer de enquadramento2026-10-20 não satisfaz este gate.
 - **Architecture adherence review:** required
 - **Adherence review lifecycle:** after implementation and before Completed
 - **Adherence review kind:** architecture_adherence
@@ -336,14 +338,14 @@ Nenhuma decisão de produto aberta: vendedor pode criar/submeter, confirmado nes
 - **Material sections compared:** Context|Contract Boundary|Scope|Out of Scope|Definition of Done|Validation Steps|Execution Lane Tracking|Canonical Module Anchors|Decisions|Decision Baseline|Architecture Change Governance|Questions To Close|Assumptions Preview|Execution Plan|Flow Evidence Planning Matrix|Local CI-Equivalent Suite Matrix|Runtime / Rollout Notes|Security Risk Assessment|Performance & Concurrency Risk Assessment
 - **Guard command:** python3 delphi-ai/tools/review_scope_drift_guard.py --todo foundation_documentation/todos/active/features/TODO-leadshug-official-template-authoring.md
 - **No-go handling rule:** reconvergir pacote/review e renovar freeze, sem implementação.
-- **Gate status:** no_material_findings
-- **Findings summary:** freeze0d4957b3 contém CR01..03; delta independente aceito; alterações posteriores somente metadata/evidência de review e guardas, sem mudança material.
-- **Evidence / reference:** artifacts/reviews/leadshug-template-authoring-20261019/critique-delta.md; evidence/scope-drift.json
+- **Gate status:** not_run
+- **Findings summary:** Context material alterado em2026-10-20 pela direção Channel; baseline/guard anterior histórico. Requer reconvergência/review e novo freeze antes de aprovação.
+- **Evidence / reference:** artifacts/feature-briefs/leadshug-channel-abstraction-20261020.md; parecer de enquadramento artifacts/analysis/leadshug-channel-abstraction-framing-opinion-20261020.md; JSON go anterior é histórico, não resultado do ciclo atual.
 - **Waiver authority / reference (required if waived):** n/a
 
 ## Questions To Close
 
-Nenhuma questão material de produto aberta. Usuário confirmou vendedor cria/submete. Permissões reais e decisão Meta são readiness externa, não justificam token manual ou aprovação local falsa.
+Fechar consumo dos ports Channel/capacidade e novo baseline após ST-CON-06; reconvergir decisões, paths, DI e validação deste consumer. Requer revisões/guardas próprios antes de pedir APROVADO novamente.
 
 ## Pattern References (Optional; Enforced When Cited)
 
@@ -495,8 +497,8 @@ Migration aditiva; deploy/status primeiro em PG descartável, sem reset humano. 
 - **Critique isolation mode:** fresh internal no-context reviewer
 - **Internal reviewer mandate:** required; reviewer não executor, aguardar terminal sem prazo arbitrário
 - **Critique lenses:** correctness,performance,elegance,structural-soundness,risk
-- **Critique status:** findings_integrated
-- **Findings summary:** CR01/02 medium e CR03 low integrados; delta independente terminal sobre0d4957b3 sem achado material remanescente.
+- **Critique status:** not_run
+- **Findings summary:** ciclo anterior2026-10-19 concluído, histórico; direção Channel2026-10-20 exige novo pacote tático/freeze e crítica antes de aprovação.
 - **Resolution ledger:** Critique Resolution Ledger CR01..03 Integrated; critique.md e critique-delta.md; nenhuma implementação aceita.
 - **Evidence / reference:** artifacts/reviews/leadshug-template-authoring-20261019/critique.md e critique-delta.md; /root/stcon05_critique fresh, gpt-6.1-sol/max; routing original/delta go antes de dispatch.
 - **Waiver authority / reference (required if waived):** n/a
@@ -786,7 +788,7 @@ Allowlist é decisão conservadora local apoiada no catálogo primário [Meta er
 
 Delta review independente terminal contra0d4957b3: CR01..03 convergiram sem achado material remanescente. Nenhum produto executado.
 
-## Pre-approval Planning Gate Receipt — 2026-10-19
+## Historical Pre-approval Planning Gate Receipt — 2026-10-19 (reframing2026-10-20)
 
 | Check | Actual outcome | Evidence |
 | --- | --- | --- |

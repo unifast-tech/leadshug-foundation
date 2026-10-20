@@ -1,0 +1,23 @@
+{
+  "date": "2026-10-20",
+  "kind": "pre-todo-framing-opinion",
+  "baseline": "bddf9d92aea4eebd5d4e767afb2feba8432aa83a",
+  "reviewer": "/root/channel_abstraction_framing",
+  "isolation": "fresh-no-context",
+  "disposition": "direction-recommended-with-integrated-framing-findings",
+  "findings": {
+    "ABS-01": "Integrated",
+    "ABS-02": "Integrated",
+    "ABS-03": "Integrated",
+    "ABS-04": "Integrated",
+    "ABS-05": "Integrated"
+  },
+  "tactical_approval_gates_satisfied": false,
+  "implementation_authority": false,
+  "runtime_or_account_calls": 0,
+  "product_test_runs": 0,
+  "product_edits": 0,
+  "private_paths_touched": false,
+  "source_heads_verified_by": "root rev-parse only",
+  "next_program_gate": "refine ST-CON-06 tactical contract; reconverge ST-CON-05/ST-CON-04 after its contract/cutover"
+}
