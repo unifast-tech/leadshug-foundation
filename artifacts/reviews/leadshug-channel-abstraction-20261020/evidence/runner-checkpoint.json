@@ -1,0 +1,32 @@
+{
+  "client_date": "2026-10-20",
+  "checkpoint": "ST-CON-06-CP01",
+  "kind": "runner-precondition",
+  "owned_paths": [
+    "scripts/test-channels-local.sh"
+  ],
+  "runner_sha256": "b03176ef1a332c431ed55028c691052958ebc08ff7711db08d05316c1f8a34a6",
+  "executor": "/root/stcon06_executor",
+  "root_inspection": "path-scoped git diff reviewed after executor patch; recursive host discovery removed; allowlist guard precedes file existence check",
+  "executor_reported_checks": [
+    {
+      "command": "bash -n scripts/test-channels-local.sh",
+      "outcome": "passed"
+    },
+    {
+      "command": "git diff --check -- scripts/test-channels-local.sh",
+      "outcome": "passed"
+    },
+    {
+      "command": "mocked CHANNELS_CONFIG_ONLY=1 invocation with docker.exe/wslpath/find/path-check shims",
+      "outcome": "exit0",
+      "negative_protections": [
+        "find fails on any invocation",
+        "private dotenv/.local-files check fails before access"
+      ]
+    }
+  ],
+  "real_docker_service_changes": 0,
+  "product_test_runs": 0,
+  "claim_limit": "First precondition only; complete SCOPE05/all/assurance/realINOUT not yet satisfied."
+}

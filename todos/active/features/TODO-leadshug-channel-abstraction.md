@@ -35,7 +35,7 @@ Usuário confirmou Channel abstrato/concretos e extensibilidade para Instagram, 
 ## Delivery Status Canon (Required)
 - **Current delivery stage:** Pending
 - **Qualifiers:** none
-- **Next exact step:** authority normal/routing go; corrigir runner para inventário público positivo antes de qualquer teste, depois test-first e cutover completo.
+- **Next exact step:** CP01 runner público corrigido/checado; executor único assume testes e implementação do cutover API/Web D01..10, depois all e assurance.
 
 ## Active Work State (Required While TODO Remains In `active/`)
 - **Work state:** implementation
@@ -680,3 +680,10 @@ Nenhuma pergunta de produto material pendente.
 ## Planning references / provenance
 
 Direction and extension requirements are explicit user statements2026-10-20. Initial framing opinion is artifacts/analysis/leadshug-channel-abstraction-framing-opinion-20261020.md (advisory only). Primary conceptual sources: NestJS custom providers https://docs.nestjs.com/fundamentals/custom-providers and Liskov/Wing1994 https://www.cs.cmu.edu/~wing/publications/LiskovWing94.pdf, previously consulted. Provider error source consulted by owner (bounded public reference; reviewer independently hit429): https://developers.facebook.com/documentation/business-messaging/whatsapp/support/error-codes/. Local code proves current behavior, not future platform integration or live readiness.
+
+## Execution Checkpoints
+
+| Checkpoint | State | Evidence / limit |
+| --- | --- | --- |
+| CP01 — runner antes de testes | passed precondition | artifacts/reviews/leadshug-channel-abstraction-20261020/evidence/runner-checkpoint.json; allowlist antes de stat, sem varredura ampla; bash-n/diffcheck/mock config-only. Nenhum teste de produto ou Docker real executado neste checkpoint. |
+| CP02 — Channel/outbound/consumers + Web/tests | running; RED confirmado | /root/stcon06_executor único writer; artifacts/tmp/stcon06-executor-* e evidence/executor-validation.json reservados ao executor. RED em evidence/red-checkpoint.json:175unit passam/1 guard falha por dispatch legado. API#5 GREEN parcial:188unit/291PG; API#8:194unit passam, matriz PG ampliada em execução. all/Web/browser/assurance/realINOUT pendentes. Nenhum gate de entrega satisfeito ainda. |

@@ -1,0 +1,50 @@
+{
+  "client_date": "2026-10-20",
+  "authority": "ST-CON-06 v1.2 explicitly APROVADO; normal authority/routing go; approval published Foundation0ef3310e",
+  "active_profile": "operational-coder",
+  "active_single_product_writer": "/root/stcon06_executor",
+  "topology": "principal checkout only; no worktree/codecommit/push/private file access",
+  "parent_owns": "all Foundation canonical docs/TODO/review artifacts except executor-validation.json and artifacts/tmp/stcon06-executor-* reserved to executor",
+  "completed_preconditions": [
+    "runner allowlist repair + bashn/diffcheck + synthetic config-only probe",
+    "canonical api RED:175unit pass/1 dependencyguard failure duelegacydispatch"
+  ],
+  "current_work": "API#8: lint/build/194unit pass; PostgreSQL expanded matrix currently running. Finalall/Web/browser and delivery reviews remain pending.",
+  "parent_integration_findings_sent": [
+    "restore MessageAcceptance service baseline (outside expectedpaths), move sourceintent/finalization/readback to outbound*.ts",
+    "remove commonproviderbranch and closedMeta/Evo-only errorcodes from commonChannelport; generic projection/open registration",
+    "context-change precedence for all UNKNOWN evidence; knownACKfinalizationfailure checkcontext",
+    "nullcandidate availability must preserve CANAL_AMBIGUO reason",
+    "reuse operation-local BU metadata in publiclist; no newqueryfanout",
+    "postdispatch contextstate tracks identityfence ratherthan simple connectionreadiness"
+  ],
+  "executor_reports": "Core integration findings applied; independent Channel fake via registry/real resolver, real REAUTORIZAR generation race, version-only reseal, ingress pinning/crossBU/tie/claim barriers added; channel-specific PCV metrics now executing.",
+  "next_parent_steps": [
+    "wait executor completeimplementation+canonicalall/evidence, no concurrent codewriter",
+    "inspect stable positivepublicdiff + sourcefreshness and D01..10 trace",
+    "run required architecture-adherence/security, dedicated auditprotocol Performance+TestQuality+Cutover via fresh internal strongest-review agents; finalreview after TQA/PCV/finalpacket",
+    "revalidate/publish local API/Web only within approved constraints then operator realINOUT official+unofficial; privateenv/.local-files forbidden",
+    "consolidate modules/05/04handuffs, deliveryguards/closeout only when allcriteriaactual"
+  ],
+  "skill_read_for_future_audit": "delphi-ai/skills/audit-protocol-triple-review/SKILL.md; user informed in commentary; no audit session started yet",
+  "product_delivery_stage": "Pending",
+  "user_input_needed_now": false,
+  "routing_note_for_future_reviews": "Current delphi-ai/config/agent_role_routing.json maps test_quality_audit and cutover_integrity_audit to technical_review model gpt-5.6-terra; architecture_adherence/critique ->gpt-6.1-sol, final_review ->gpt-6.1-sol. Use current guard at dispatch; do not falsely declare a different model. Native tool advertised models lacks terra; actual availability not yet attempted. Do not preemptively ask permission or alter Delphi.",
+  "latest_api_green": {
+    "reporter": "/root/stcon06_executor",
+    "command": "bash scripts/test-channels-local.sh api",
+    "exit_code": 0,
+    "unit_tests": 188,
+    "e2e_tests": 291,
+    "scope": "pre-matrix API regression only",
+    "existing_pcv_limit": "onboarding attempt/pair-delete proofs not sole newChannel EPS/BCI"
+  },
+  "latest_api_unit_checkpoint": {
+    "reporter": "/root/stcon06_executor",
+    "run": "API#8",
+    "unit_tests": 194,
+    "files": 21,
+    "e2e_status": "running",
+    "scope": "not final all; no delivery claim"
+  }
+}

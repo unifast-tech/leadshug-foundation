@@ -1,0 +1,46 @@
+{
+  "kind": "bounded-positive-manifest-read",
+  "client_date": "2026-10-20",
+  "manifests": [
+    {
+      "manifest": "api-app/package.json",
+      "package_manager": null,
+      "engines": {
+        "node": ">=22"
+      },
+      "versions": {
+        "@nestjs/core": "^11.0.0",
+        "@nestjs/common": "^11.0.0",
+        "prisma": "^6.0.0",
+        "@prisma/client": "^6.0.0"
+      },
+      "required_scripts": {
+        "lint": "eslint \"{src,test}/**/*.ts\"",
+        "build": "nest build",
+        "test": "vitest run --config vitest.config.ts",
+        "test:e2e": "vitest run --config vitest.config.e2e.ts --no-file-parallelism --maxWorkers=1",
+        "prisma:generate": "prisma generate",
+        "prisma:migrate": "prisma migrate deploy"
+      },
+      "missing": []
+    },
+    {
+      "manifest": "web-app/package.json",
+      "package_manager": null,
+      "engines": null,
+      "versions": {
+        "react": "^18.3.1",
+        "react-dom": "^18.3.1",
+        "vite": "^5.4.11",
+        "@playwright/test": "^1.62.1"
+      },
+      "required_scripts": {
+        "build": "tsc -b && vite build",
+        "test": "vitest run",
+        "test:tela": "npm run build && playwright test"
+      },
+      "missing": []
+    }
+  ],
+  "generic_helper_not_run_reason": "node_capability_surface_audit.py calls os.walk(root) before --manifest selection; this violates the approved private-path boundary for API root. Exact two public manifests were read instead. No private/config discovery."
+}

@@ -1,0 +1,18 @@
+{
+  "client_date": "2026-10-20",
+  "checkpoint": "CP02-RED",
+  "reporter": "/root/stcon06_executor",
+  "command": "bash scripts/test-channels-local.sh api",
+  "exit_code": 1,
+  "expected_failure": "dependency architecture guard detects direct provider imports/tokens/send calls/branches in existing ConversationsService and IncomingService",
+  "observed_counts": {
+    "unit_files_passed": 19,
+    "unit_files_failed": 1,
+    "unit_tests_passed": 175,
+    "unit_tests_failed": 1
+  },
+  "transient_log": "foundation_documentation/artifacts/tmp/stcon06-executor-red.log",
+  "log_sha256": "967824b74022916f5b64a44d70c97d58fb932205aa55e0b5ad70a382c20b5401",
+  "fixture_environment": "leadshug_channels_validation only; cleanup reported by executor",
+  "claim_limit": "Test-first RED proves legacy dependency symptom; implementation/GREEN/all/PG/browser/assurance/INOUT remain pending."
+}
