@@ -1,0 +1,559 @@
+{
+  "schema": "stcon06-executor-validation-v1",
+  "scope": "ST-CON-06 implementation and canonical local validation only; no human runtime, publication, deployment, or delivery claim",
+  "runner": "bash scripts/test-channels-local.sh",
+  "final_all": {
+    "mode": "all",
+    "session": 80903,
+    "exit_code": 0,
+    "log": "foundation_documentation/artifacts/tmp/stcon06-causal-final-all.log",
+    "log_sha256": "778f858923f4df7457d32908a98dfda31d0b4351579acabdc1fb90515bec8554",
+    "results": {
+      "api_unit": {
+        "files_passed": 21,
+        "tests_passed": 194
+      },
+      "api_e2e": {
+        "files_passed": 27,
+        "tests_passed": 309
+      },
+      "web_unit": {
+        "files_passed": 5,
+        "tests_passed": 29
+      },
+      "browser": {
+        "tests_passed": 50,
+        "tests_failed": 0
+      }
+    },
+    "freshness_and_preview": {
+      "web_build_asset": "dist/assets/index-9DA0_PMk.js",
+      "vite_preview": "http://127.0.0.1:4173/",
+      "served_in_canonical_browser_run": true,
+      "host_bundle_sha256": "27c5db465495068402b278ba7c9d3a1f23b8b03797249639190c8a755759563b",
+      "host_bundle_sha256_note": "Served application JavaScript captured from the exact canonical run host attestation; SHA matches the generated served-app artifact.",
+      "attestation": "foundation_documentation/artifacts/reviews/leadshug-channel-abstraction-20261020/evidence/browser-attestation-causal-final-all80903.json",
+      "attestation_sha256": "217863acb449c5989e3f79cfa6e899dfbdc1f4b3da40c3b5d0f9cb9e3492a648",
+      "served_bundle_artifact": "foundation_documentation/artifacts/reviews/leadshug-channel-abstraction-20261020/evidence/served-app-causal-final-all80903.js",
+      "served_bundle_sha256": "27c5db465495068402b278ba7c9d3a1f23b8b03797249639190c8a755759563b",
+      "captured_at_utc": "2026-10-20T16:26:20.745Z",
+      "api_manifest_entries": 30,
+      "web_manifest_entries": 6,
+      "source_manifest_entries": 36,
+      "api_source_manifest": [
+        {
+          "path": "src/domain/channels/channel-credential-resolver.ts",
+          "status": "unstaged:M",
+          "sha256": "89cf17ac02af444092651470aee13e2d4a3bcee8d459508be818322b33b00c10"
+        },
+        {
+          "path": "src/domain/channels/transport/channel-dependencies.spec.ts",
+          "status": "??",
+          "sha256": "f59d838baf635c0ce0d1ebe725c88fbb0b19fac42e9b382452e31fd38e0511a3"
+        },
+        {
+          "path": "src/domain/channels/transport/channel.ts",
+          "status": "??",
+          "sha256": "432796b8685d07dcc53c3a699a7b9d1469ac4fb110aea080766ec207bec8621f"
+        },
+        {
+          "path": "src/domain/inbox/conversations.service.ts",
+          "status": "unstaged:M",
+          "sha256": "c7d84f983ed61c6022424d4648e07282e7eb53c40fa9aba249618d77b3c223de"
+        },
+        {
+          "path": "src/domain/inbox/incoming.service.ts",
+          "status": "unstaged:M",
+          "sha256": "b0ec43187b1f48720aa899e40f979dd0ae447321581d675b84ef9c71dbd0ff42"
+        },
+        {
+          "path": "src/domain/inbox/incoming.typebot.integration.spec.ts",
+          "status": "unstaged:M",
+          "sha256": "0cac10e5ed05da5a6e89b39c8b32a40810b4678af77b4d3b8d20b4d1afc4704c"
+        },
+        {
+          "path": "src/domain/inbox/outbound.service.spec.ts",
+          "status": "??",
+          "sha256": "ae1f9208d660c684dca9b1ac5727001d8e57c4c9504be9be1d20ecba32e01805"
+        },
+        {
+          "path": "src/domain/inbox/outbound.service.ts",
+          "status": "??",
+          "sha256": "63bcf773e2b4c5a5ddd688a1bb13745a0a206d995fafc665925df3fecaf394aa"
+        },
+        {
+          "path": "src/integrations/channels/channel-adapter-factory.ts",
+          "status": "??",
+          "sha256": "e0ebdd78e387f7ee3af902f038d22449e212c1301ffa642bbceb5a5f05d2abfc"
+        },
+        {
+          "path": "src/integrations/channels/channel-adapter-registry.ts",
+          "status": "??",
+          "sha256": "655b735e239e89fbaede36689d1c22245d3804d66646f7736db991cb5099b02b"
+        },
+        {
+          "path": "src/integrations/channels/channel-transport.module.ts",
+          "status": "??",
+          "sha256": "32203d3b8393a34a9effab4266683c389651d7ec197e8f9d704a77a6a37f40dc"
+        },
+        {
+          "path": "src/integrations/channels/evolution-channel.ts",
+          "status": "??",
+          "sha256": "60faf1ea40fe17ad62495b0f42a2cf958defcb41e3ad72d3d2213751539b460c"
+        },
+        {
+          "path": "src/integrations/channels/meta-channel.ts",
+          "status": "??",
+          "sha256": "997e739cf7d7231918dc97fc347bfeb32a1cd74d084ead8c64b01157022f8138"
+        },
+        {
+          "path": "src/integrations/channels/prisma-channel-resolver.ts",
+          "status": "??",
+          "sha256": "5d01cca30f25ea4354651303633aa5a02f3adbe0b7cc37c44c53d821fe7c062f"
+        },
+        {
+          "path": "src/integrations/evolution/evolution.client.spec.ts",
+          "status": "unstaged:M",
+          "sha256": "119d962fdcd9c895b75845dca74d8506147e11480d74b82e8c37f29f97c04081"
+        },
+        {
+          "path": "src/integrations/evolution/evolution.client.ts",
+          "status": "unstaged:M",
+          "sha256": "b0824e8fd4f801a239521855aaa02da5e0943a8c86c4ac8778e2f1f352821698"
+        },
+        {
+          "path": "src/integrations/meta/meta.client.spec.ts",
+          "status": "unstaged:M",
+          "sha256": "d7e76f5c392afab1638363d3c851f8ce8c5223ff27c64801a79fdc8ec00d5e7a"
+        },
+        {
+          "path": "src/integrations/meta/meta.client.ts",
+          "status": "unstaged:M",
+          "sha256": "9f954f6c1c2bd10030f5eed0cb42e493d6e480106bcfc3f44977cb97a716d34f"
+        },
+        {
+          "path": "src/surfaces/bff/bff.module.ts",
+          "status": "unstaged:M",
+          "sha256": "327f34eba67746882abc601a3817d94270cff3018d6972a8095dae530a2d6e29"
+        },
+        {
+          "path": "src/surfaces/bff/conversations.controller.ts",
+          "status": "unstaged:M",
+          "sha256": "53d3cffaa258ba1ad45c21eae4ab8712e2011255b7ca14965f73221edd0cc002"
+        },
+        {
+          "path": "src/surfaces/public/conversations.controller.ts",
+          "status": "unstaged:M",
+          "sha256": "b55440061dd4574646e4fa1a3c265cdb8653bab4abf3aa0e86b4057bc7e365ff"
+        },
+        {
+          "path": "src/surfaces/public/public.module.ts",
+          "status": "unstaged:M",
+          "sha256": "00a96d54fde7061f61f4ddf2b9cef836a02ad77ca29b62ea422695b9d8f90ef8"
+        },
+        {
+          "path": "src/surfaces/webhooks/webhooks.module.ts",
+          "status": "unstaged:M",
+          "sha256": "abc8fd7960fcca1ce43d21d44a90f8d4708d47e07bde9a48c0009e02dc0503a6"
+        },
+        {
+          "path": "test/api-publica.e2e-spec.ts",
+          "status": "unstaged:M",
+          "sha256": "4ce7360eb02621f89d25d41924bfafb86b76e8bbec8216dfb509f86000308837"
+        },
+        {
+          "path": "test/browser-server.cjs",
+          "status": "unstaged:M",
+          "sha256": "40e56e2d6672800acd4a00f87b942fc88b8361c770d06ee6d7c8a883a15d3390"
+        },
+        {
+          "path": "test/channel-transport.e2e-spec.ts",
+          "status": "??",
+          "sha256": "124d397bd3a5769271466e64b0e19b1235e08d1ea9a4df9f124fc629096822fe"
+        },
+        {
+          "path": "test/helpers.ts",
+          "status": "unstaged:M",
+          "sha256": "747dcd1a6db374c1ccb0f2a248b08d49c2ec62a46beb345cc03eea3c058d36f2"
+        },
+        {
+          "path": "test/number-onboarding-pcv.e2e-spec.ts",
+          "status": "unstaged:M",
+          "sha256": "c62a11fc6302cd3bb807ff0b55b9dbcc7e46847cef638b81c382b455a8a29f20"
+        },
+        {
+          "path": "test/number-onboarding-typebot.e2e-spec.ts",
+          "status": "unstaged:M",
+          "sha256": "22e1121d8a1f03b5e566fb8e314c3966e5d9355453b31b978afcd30de038fbd2"
+        },
+        {
+          "path": "test/timeline-fixtures.cjs",
+          "status": "unstaged:M",
+          "sha256": "889707ec7857e8a17a850e56eb60d24e6953e59028f40880edff3756340fd23a"
+        }
+      ],
+      "web_source_manifest": [
+        {
+          "path": "e2e/channel-transport.spec.ts",
+          "status": "??",
+          "sha256": "b3604496727a85d7ce12c2cb6e7a479575356a61ef4c529d385047e066a8e0f3"
+        },
+        {
+          "path": "e2e/number-onboarding-freshness.ts",
+          "status": "unstaged:M",
+          "sha256": "880b49f8fa428568692b92a883dd00c5ce76214b1f2db5b35cafb9b0553ed9ad"
+        },
+        {
+          "path": "e2e/timeline-freshness.ts",
+          "status": "unstaged:M",
+          "sha256": "3a06fb36e3a9bcf20a12cd8201da2daa3b567775f15e2be5f068e97e840d7f53"
+        },
+        {
+          "path": "src/api.spec.ts",
+          "status": "unstaged:M",
+          "sha256": "e305671fc6d9775ef3c0365ed12470fb14ea3dd71ff3aca49f153262017147d6"
+        },
+        {
+          "path": "src/api.ts",
+          "status": "unstaged:M",
+          "sha256": "dd59a37799453d3e68fc64a6477e1578956d15d1a4920af90e22ff2b83057505"
+        },
+        {
+          "path": "src/telas/Inbox.tsx",
+          "status": "unstaged:M",
+          "sha256": "d70bde9ede67759d479f644598356e46aac2916a12b2ed1770c17a169118586c"
+        }
+      ]
+    }
+  },
+  "red_first": [
+    {
+      "probe": "Meta HTTP 200 success:false with ID and without ID must remain UNKNOWN / TRANSPORT_UNCONFIRMED",
+      "runner_mode": "api",
+      "session": 49493,
+      "exit_code": 1,
+      "evidence_kind": "executor-observed canonical runner output; no separate raw log file retained",
+      "failure": "MetaHttpClient classification returned ACCEPTED where UNKNOWN / TRANSPORT_UNCONFIRMED was expected",
+      "corrected_and_green_in": 54152
+    }
+  ],
+  "fault_injection": [
+    {
+      "probe": "Remove Meta shipping adapter beforeDispatch binding fence",
+      "runner_mode": "api",
+      "session": 16223,
+      "exit_code": 1,
+      "log": "foundation_documentation/artifacts/tmp/stcon06-meta-shipping-mutant.log",
+      "log_sha256": "b6b02e76ade7471f4a26dd2670d768bd7952d59a30ad7456e9a8f56aba226ab0",
+      "failing_assertion": "test/channel-transport.e2e-spec.ts:165 expected 409 Conflict, got 201 Created",
+      "suite_summary": {
+        "api_unit_passed": 194,
+        "api_e2e_passed": 308,
+        "api_e2e_failed": 1
+      },
+      "source_sha256": {
+        "before": "997e739cf7d7231918dc97fc347bfeb32a1cd74d084ead8c64b01157022f8138",
+        "mutant_observed_by_root": "ff13fad8…",
+        "restored": "997e739cf7d7231918dc97fc347bfeb32a1cd74d084ead8c64b01157022f8138"
+      }
+    },
+    {
+      "probe": "Remove Evolution shipping adapter beforeDispatch binding fence",
+      "runner_mode": "api",
+      "session": 59583,
+      "exit_code": 1,
+      "log": "foundation_documentation/artifacts/tmp/stcon06-evolution-shipping-mutant.log",
+      "log_sha256": "bf7b65e18fa3e851a31a796adf3864b74e7a16080f2823492af80dbd6c3310a2",
+      "failing_assertion": "test/channel-transport.e2e-spec.ts:165 expected 409 Conflict, got 201 Created after the official mutation cases passed",
+      "suite_summary": {
+        "api_unit_passed": 194,
+        "api_e2e_passed": 308,
+        "api_e2e_failed": 1
+      },
+      "source_sha256": {
+        "before": "60faf1ea40fe17ad62495b0f42a2cf958defcb41e3ad72d3d2213751539b460c",
+        "mutant": "be111003d398e2f24cd8294c803068f97eda29a7b418ad04cce424a765f995ab",
+        "restored": "60faf1ea40fe17ad62495b0f42a2cf958defcb41e3ad72d3d2213751539b460c"
+      }
+    },
+    {
+      "probe": "Remove Inbox outbound generation/id fence after A→B→A thread switch",
+      "runner_mode": "browser",
+      "session": 97398,
+      "exit_code": 1,
+      "evidence_kind": "tool-result output observed in executor transcript; raw stdout was not redirected to a persistent log",
+      "suite_summary": {
+        "browser_passed": 49,
+        "browser_failed": 1
+      },
+      "failing_assertion": "e2e/channel-transport.spec.ts:100 expected same-text A draft to remain, received empty value after old request completed",
+      "mutation_restored": true,
+      "restored_source_sha256": "d70bde9ede67759d479f644598356e46aac2916a12b2ed1770c17a169118586c"
+    },
+    {
+      "probe": "Remove Inbox outbound generation/id fence after A→B→A thread switch, with causally observed native response body consumption",
+      "runner_mode": "browser",
+      "session": 30246,
+      "exit_code": 1,
+      "log": "foundation_documentation/artifacts/tmp/stcon06-browser-causal-mutant-final.log",
+      "log_sha256": "ca39192b9de886217901b5005177eff796150a89d95280752e14fe552c953c5a",
+      "suite_summary": {
+        "browser_passed": 49,
+        "browser_failed": 1
+      },
+      "failing_assertion": "e2e/channel-transport.spec.ts:152 expected same-text A draft to remain, received empty value after old request completed; body marker resolved {started:1,settled:1,processed:1}",
+      "mutation": {
+        "source": "web-app/src/telas/Inbox.tsx",
+        "original_sha256": "d70bde9ede67759d479f644598356e46aac2916a12b2ed1770c17a169118586c",
+        "mutant_sha256": "bdc6c54a40c3a3b4d4ce8d565c8f194c9dd86b41ec75e473c38f45aa94c28804",
+        "restored_sha256": "d70bde9ede67759d479f644598356e46aac2916a12b2ed1770c17a169118586c",
+        "patch": "foundation_documentation/artifacts/tmp/stcon06-inbox-generation-fence-mutant.patch",
+        "patch_sha256": "f96b848a22576759e396820adc5f88e3906cb5a16b34d6f6f0496698ad0ec5e8"
+      },
+      "attestation": "foundation_documentation/artifacts/reviews/leadshug-channel-abstraction-20261020/evidence/browser-attestation-causal-mutant-30246.json",
+      "served_bundle": "foundation_documentation/artifacts/reviews/leadshug-channel-abstraction-20261020/evidence/served-app-causal-mutant-30246.js",
+      "causal_marker": {
+        "started": 1,
+        "settled": 1,
+        "processed": 1
+      }
+    }
+  ],
+  "bounded_evidence": {
+    "channel_eps": {
+      "marker": "CHANNEL-EPS-EVIDENCE",
+      "page_conversations": 30,
+      "history_rows_per_conversation": 24,
+      "query_counts": {
+        "buChannelFindMany": 1,
+        "channelCredentialFindMany": 1,
+        "latestInboundWindowProjection": 1
+      },
+      "plan": "indexed per-conversation LIMIT 1 lookup; 30 inner loops",
+      "plan_execution_ms": 0.142,
+      "endpoint_elapsed_ms": 20.335361999999805,
+      "provider_calls_before": 0,
+      "provider_calls_after": 0,
+      "limits": "Disposable PostgreSQL and one bounded 30-conversation public page; local query count/plan observation, not a capacity or latency SLO claim."
+    },
+    "channel_outbound_overlap": {
+      "marker": "CHANNEL-OUTBOUND-OVERLAP",
+      "repetitions": 5,
+      "operations_per_repetition": 20,
+      "accepted_counts": [
+        20,
+        20,
+        20,
+        20,
+        20
+      ],
+      "recorded_counts": [
+        20,
+        20,
+        20,
+        20,
+        20
+      ],
+      "limits": "Disposable PostgreSQL and provider fake; concurrent integrity observation, not capacity/SLO evidence."
+    },
+    "frc_composer": {
+      "marker": "FRC-COMPOSER-EVIDENCE",
+      "waves": 5,
+      "retriggers_per_wave": 20,
+      "requests_per_wave": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "outcomes": [
+        "accepted",
+        "unknown",
+        "accepted",
+        "unknown",
+        "accepted"
+      ],
+      "draft_preserved_for_unknown": true,
+      "unknown_diagnostic_message_count": 1,
+      "limits": "Five real BFF/PostgreSQL submits held after the actual response; twenty user-form submit events per in-flight send; one request per wave; no capacity/SLO claim."
+    },
+    "rls_read_stage": {
+      "marker": "RLS-EVIDENCE",
+      "authenticated_clients": 5,
+      "own_reads_per_client": 3,
+      "foreign_reads_per_client": 3,
+      "total_scope_checks": 30,
+      "own_status": 200,
+      "foreign_tenant_status": 404,
+      "provider_call_delta_during_reads": 0,
+      "limits": "One bounded local PostgreSQL stage; not a capacity, latency SLO, or provider load claim."
+    },
+    "perf01_selected_candidate_filter": {
+      "marker": "CHANNEL-WINDOW-SCOPE-EVIDENCE",
+      "source_sha256": "acf779d89162d339e37af2abe2aa91fd1a1b292d7f5208bb672090c87a23bf4d",
+      "selected_requires_window": false,
+      "window_queries": 0,
+      "official_bindings_also_present": true,
+      "canonical_api_run": "foundation_documentation/artifacts/tmp/stcon06-executor-perf01-after-filter-api.log",
+      "result": "verified"
+    }
+  },
+  "source_scope_review": {
+    "method": "positive-path git diff/status queries only for API src/test and Web src/e2e/package.json/vite.config.ts; no API-root discovery",
+    "api_tracked_modified": 19,
+    "api_untracked_transport_files": 11,
+    "web_tracked_modified": 5,
+    "web_untracked_e2e_files": 1,
+    "root_runner_modified": "scripts/test-channels-local.sh",
+    "foundation_changes": "This executor wrote only this authorized evidence file and transient logs under artifacts/tmp; parent owns all other Foundation documentation.",
+    "canonical_all_manifest": {
+      "api_entries": 30,
+      "web_entries": 6,
+      "api_tracked_modified": 19,
+      "api_untracked": 11,
+      "web_tracked_modified": 5,
+      "web_untracked": 1,
+      "manifest_source": "canonical all 80903 host attestation; positive public source roots only"
+    }
+  },
+  "remaining_external_gates": [
+    "independent review round 3 adjudication",
+    "TQA and final exact-source review",
+    "runtime/operator readiness and human IN/OUT evidence",
+    "no publication or deployment performed"
+  ],
+  "final_all_history": [
+    {
+      "mode": "all",
+      "session": 65587,
+      "exit_code": 0,
+      "log": "foundation_documentation/artifacts/tmp/stcon06-final-all.log",
+      "log_sha256": "97b84c7b813c364d20933a56b0f420b09e490c3885325317332ac9a2dd5d4445",
+      "results": {
+        "api_unit": {
+          "files_passed": 21,
+          "tests_passed": 194
+        },
+        "api_e2e": {
+          "files_passed": 27,
+          "tests_passed": 309
+        },
+        "web_unit": {
+          "files_passed": 5,
+          "tests_passed": 29
+        },
+        "browser": {
+          "tests_passed": 50,
+          "tests_failed": 0
+        }
+      },
+      "freshness_and_preview": {
+        "web_build_asset": "dist/assets/index-9DA0_PMk.js",
+        "vite_preview": "http://127.0.0.1:4173/",
+        "served_in_canonical_browser_run": true,
+        "host_bundle_sha256": null,
+        "host_bundle_sha256_note": "Canonical runner's validation workspace volume was torn down; asset hash was not available in the host checkout after the runner completed. The final log records successful build and preview startup."
+      }
+    }
+  ],
+  "diagnostic_runs": [
+    {
+      "probe": "Causal browser instrumentation ordered after held POST was already initiated; harness ordering failure, not product evidence",
+      "session": 64345,
+      "exit_code": 1,
+      "log": "foundation_documentation/artifacts/tmp/stcon06-browser-causal-mutant.log",
+      "log_sha256": "f17ec06ee34cb9d55abe72dcb047640054d45cc80ad21f3bf91ccacc14b46084",
+      "outcome": "body-read marker timed out; instrumentation corrected to install before submit"
+    },
+    {
+      "probe": "Causal browser marker green with generation guard intact; diagnostic only, not mutant proof",
+      "session": 63018,
+      "exit_code": 0,
+      "log": "foundation_documentation/artifacts/tmp/stcon06-browser-causal-mutant-ordered.log",
+      "log_sha256": "5f78278aa8ba478c1c5720527697f8de7489a466d820540bf105514c00ef3bf9",
+      "attestation": "foundation_documentation/artifacts/reviews/leadshug-channel-abstraction-20261020/evidence/browser-attestation-causal-green-63018.json",
+      "served_bundle": "foundation_documentation/artifacts/reviews/leadshug-channel-abstraction-20261020/evidence/served-app-causal-green-63018.js",
+      "outcome": "50/50 browser pass with guard intact; not counted as fault injection"
+    },
+    {
+      "probe": "PERF-01 resolver selected-candidate filtering; canonical API expected RED only on unresolved OUT-heavy latest-IN scan threshold",
+      "session": 88536,
+      "exit_code": 1,
+      "log": "foundation_documentation/artifacts/tmp/stcon06-executor-perf01-after-filter-api.log",
+      "log_sha256": "be1854e98b3a2e051e903f7459758ede9f7020d6195b26bf2056793cac2e8600",
+      "source_hashes": {
+        "before": "foundation_documentation/artifacts/tmp/stcon06-executor-perf01-source-before-api.log",
+        "after": "foundation_documentation/artifacts/tmp/stcon06-executor-perf01-source-after-api.log",
+        "unchanged_during_runner": true,
+        "prisma_channel_resolver_sha256": "acf779d89162d339e37af2abe2aa91fd1a1b292d7f5208bb672090c87a23bf4d",
+        "number_onboarding_pcv_spec_sha256": "4bd128d9771616e61d48b4a9c996f6f4e4dc435acff1456c973fd69a11bff16c",
+        "channel_transport_spec_sha256": "69ddc87cbc9328136f92ea1c1cf9293b0bc2296ad383836322c6feb4b27c6015"
+      },
+      "results": {
+        "api_unit_files_passed": 21,
+        "api_unit_tests_passed": 194,
+        "api_e2e_files_passed": 26,
+        "api_e2e_tests_passed": 310,
+        "api_e2e_failed_tests": 1
+      },
+      "perf01_window_filter": {
+        "selected_reference_requires_window": false,
+        "available": true,
+        "official_window_bindings_present_in_bu": true,
+        "latest_inbound_window_queries": 0,
+        "expected": 0,
+        "marker": "CHANNEL-WINDOW-SCOPE-EVIDENCE"
+      },
+      "perf01_history_scan_remaining_red": {
+        "fixture_conversations": 2,
+        "out_suffix_per_conversation": 100,
+        "has_older_inbound": true,
+        "has_out_only_history": true,
+        "actual_rows_removed_by_filter": 200,
+        "loops": 2,
+        "shared_hit_blocks": 17,
+        "shared_read_blocks": 0,
+        "execution_ms": 0.054,
+        "index": "messages_conversation_id_created_at_idx",
+        "marker": "CHANNEL-HISTORY-SCAN-EVIDENCE"
+      },
+      "perf02_per_conversation": {
+        "overlap_marker": "CHANNEL-OUTBOUND-OVERLAP",
+        "repetitions": 5,
+        "operations_per_repetition": 20,
+        "recorded_counts_per_repetition": [
+          20,
+          20,
+          20,
+          20,
+          20
+        ],
+        "per_conversation_out_messages_each_round": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "limits": "Disposable local PostgreSQL/provider fake; no capacity or exact-once claim."
+      },
+      "outcome": "No-window extra query is fixed and verified GREEN. Sole remaining failure demonstrates history scan cost under current index. No schema/index/CI/runtime mutation."
+    }
+  ]
+}

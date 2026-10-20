@@ -35,7 +35,7 @@ Usuário confirmou Channel abstrato/concretos e extensibilidade para Instagram, 
 ## Delivery Status Canon (Required)
 - **Current delivery stage:** Pending
 - **Qualifiers:** none
-- **Next exact step:** Reconvergir planejamento v1.3 com freeze publicado, arquitetura/crítica e guards; solicitar renovação humana para o índice específico e CI admission. Somente a correção já autorizada v1.2 de selected-window e leitura por conversa terminou no checkpoint88536; demais mudanças aguardam aprovação; nenhum Prisma/CI/runtime antes de nova aprovação.
+- **Next exact step:** Aguardar APROVADO explícito do aditivo v1.3 revisado e guards preflight-go. Depois, reload binding/authority normal e executor único no índice/CI/runner propostos; nenhum novo Prisma/CI/runtime antes disso.
 
 ## Active Work State (Required While TODO Remains In `active/`)
 - **Work state:** review
@@ -305,7 +305,7 @@ Nenhuma decisão de produto aberta. Assinaturas e semântica material congeladas
 - **Decision review kind:** architecture_opinion
 - **Decision review package:** bounded-file-set
 - **Decision review status:** findings_integrated
-- **Decision review evidence / resolution:** artifacts/reviews/leadshug-channel-abstraction-20261020/architecture-opinion.md; parecer tático terminal no-go inicial, AR01..04 e obrigações integrados pelo owner antes da crítica; sem claim de implementação.
+- **Decision review evidence / resolution:** artifacts/reviews/leadshug-channel-abstraction-20261020/scope-renewal-v1.3-architecture-resolution.md; architecture42479 terminal/strictmerge, ARCH13-01/02 integrados e confirmados por crítica69476. Pareceres v1.2 preservados, sem claim de implementação.
 - **Architecture adherence review:** required
 - **Adherence review lifecycle:** after implementation and before Completed
 - **Adherence review kind:** architecture_adherence
@@ -319,11 +319,11 @@ Nenhuma decisão de produto aberta. Assinaturas e semântica material congeladas
 - **Why this decision:** renovação material do contrato para índice específico e CI admission.
 - **Trigger stage:** before the first planning-side review or guard run
 - **Baseline branch:** main
-- **Baseline commit:** f311adcc911f3cf6d89d6007c7a2b8ab15b98c1f
+- **Baseline commit:** 23db059b252458c28cf9696c735447f57b023a58
 - **Baseline push reference:** origin/main
 - **Gate status:** no_material_findings
-- **Findings summary:** freeze v1.3 renovado após ARCH13-01/02 e premissas vivas; somente metadata factual deste gate inserida depois. Original architecture42479 sobre1d3a8261 preservado.
-- **Evidence / reference:** origin/main@f311adcc911f3cf6d89d6007c7a2b8ab15b98c1f, push82266 terminal0; sete paths documentais exatos. Nenhuma fonte de produto/CI/schema alterada por este freeze.
+- **Findings summary:** freeze v1.3 renovado após CRIT13-01/02; somente metadata factual inserida depois. Pareceres anteriores preservados.
+- **Evidence / reference:** origin/main@23db059b252458c28cf9696c735447f57b023a58, push29533 terminal0; sete paths documentais exatos; nenhum código/schema/CI/runtime alterado.
 - **Waiver authority / reference (required if waived):** n/a
 
 ## Gate: Review Scope Drift
@@ -334,9 +334,9 @@ Nenhuma decisão de produto aberta. Assinaturas e semântica material congeladas
 - **Material sections compared:** Context|Scope|Out of Scope|Definition of Done|Validation Steps|Decisions|Decision Baseline|Assumptions Preview|Execution Plan|Security Risk Assessment|Performance & Concurrency Risk Assessment
 - **Guard command:** python3 delphi-ai/tools/review_scope_drift_guard.py --todo foundation_documentation/todos/active/features/TODO-leadshug-channel-abstraction.md
 - **No-go handling rule:** reconvergir review/freeze, sem código.
-- **Gate status:** not_run
-- **Findings summary:** rerun requerido contra baseline v1.3 publicada/revisada; resultado v1.2 preservado como histórico.
-- **Evidence / reference:** foundation_documentation/artifacts/reviews/leadshug-channel-abstraction-20261020/evidence/review-scope-drift.json
+- **Gate status:** no_material_findings
+- **Findings summary:** guard fresh go contra23db059b:23 seções materiais comparadas,0 mudanças após reconvergência crítica69476.
+- **Evidence / reference:** foundation_documentation/artifacts/reviews/leadshug-channel-abstraction-20261020/evidence/review-scope-drift-v1.3.json
 - **Waiver authority / reference (required if waived):** n/a
 
 ## Questions To Close
@@ -416,7 +416,7 @@ Colunas Status duplicadas projetam o mesmo fato para leitores determinísticos d
 - [x] Elegance
 - [x] Structural Soundness
 
-Revisão v1.2 concluída historicamente; v1.3 architecture42479 terminal com ARCH13-01/02 integrados e crítica fresh ainda requerida. Checkboxes representam lentes já analisadas, não conclusão da renovação nem execução/testes/medição. PLAN01/02 e AR01..04/CR01..02 anteriores preservados; nova prova de índice/CI permanece pendente.
+Revisão v1.2 concluída historicamente; v1.3 architecture42479 terminal com ARCH13-01/02 integrados e crítica fresh69476 terminal0 sem novos achados, confirmando CRIT13-01/02 integrados. Checkboxes representam lentes já analisadas, não conclusão da renovação nem execução/testes/medição. PLAN01/02 e AR01..04/CR01..02 anteriores preservados; nova prova de índice/CI permanece pendente.
 
 ### Issue Cards
 - **Issue ID:** PLAN-01
@@ -490,10 +490,10 @@ Revisão v1.2 concluída historicamente; v1.3 architecture42479 terminal com ARC
 - **Critique isolation mode:** fresh internal no-context reviewer
 - **Internal reviewer mandate:** required, não executor; aguardar terminal sem prazo rígido.
 - **Critique lenses:** correctness,performance,elegance,structural-soundness,risk
-- **Critique status:** not_run
-- **Findings summary:** v1.2 convergido historicamente; renovar crítica fresh no contrato completo v1.3 após arquitetura da correção index/CI.
-- **Resolution ledger:** artifacts/reviews/leadshug-channel-abstraction-20261020/critique.md
-- **Evidence / reference:** artifacts/reviews/leadshug-channel-abstraction-20261020/critique.md; fresh /root/stcon06_critique gpt-6.1-sol/max, inicial81d56f5e + reconvergência terminala35f676c.
+- **Critique status:** no_material_findings
+- **Findings summary:** crítica22149 apontou CRIT13-01/02, integrados e reconvergidos no review fresh69476 terminal0 sem novos achados materiais; ARCH13-01/02 confirmados. Sem autorização de execução/entrega.
+- **Resolution ledger:** artifacts/reviews/leadshug-channel-abstraction-20261020/scope-renewal-v1.3-critique-resolution.md
+- **Evidence / reference:** artifacts/reviews/leadshug-channel-abstraction-20261020/evidence/scope-renewal-v1.3-critique-round2.raw.json; strictmerge; fresh internal CLI gpt-6.1-sol/xhigh, baseline23db059b. v1.2 histórico preservado.
 - **Waiver authority / reference (required if waived):** n/a
 
 ## Gate: Assumption Code Coherence
@@ -502,9 +502,9 @@ Revisão v1.2 concluída historicamente; v1.3 architecture42479 terminal com ARC
 - **Trigger stage:** after critique convergence and before APROVADO
 - **Guard scope:** A01..06
 - **Guard command:** python3 delphi-ai/tools/assumption_code_coherence_guard.py --todo foundation_documentation/todos/active/features/TODO-leadshug-channel-abstraction.md
-- **Gate status:** not_run
-- **Findings summary:** premissas vivas A01..06 atualizadas; guard fresh após crítica requerido, incluindo A06 resolver/schema/RED de PostgreSQL. Resultado histórico de cinco premissas não substitui o novo.
-- **Evidence / reference:** artifacts/reviews/leadshug-channel-abstraction-20261020/evidence/prisma-capability-bounded-v1.3.json; evidence/perf01-after-selection-root-proof.json; checkpoint88536/source congelada; guard-v1.3 ainda pendente. Histórico source-assumptions.json/assumption-coherence.json preservado.
+- **Gate status:** no_material_findings
+- **Findings summary:** revisão semântica A01..06 concluída após crítica fresh69476; fontes congeladas/schema/PGRED ancoradas em source-assumptions-v1.3.json. Guard mecânico fresh em seguida; não é prova pós-índice.
+- **Evidence / reference:** artifacts/reviews/leadshug-channel-abstraction-20261020/evidence/source-assumptions-v1.3.json; evidence/assumption-coherence-v1.3.json. Histórico de cinco premissas preservado, não reutilizado.
 - **Waiver authority / reference (required if waived):** n/a
 
 ## Approval
@@ -513,10 +513,10 @@ Revisão v1.2 concluída historicamente; v1.3 architecture42479 terminal com ARC
 - **Approval scope:** v1.2 ST-CON-06/SCOPE01..05/D01..10 e dois companions validados. SCOPE06/índice/CI e mudanças materiais v1.3 NÃO aprovados; nenhuma autoridade nova presumida.
 - **Execution not authorized by approval:** todo Out of Scope, redes futuras,05/04, push/deploy de produto ou mudanças privadas.
 - **Renewed approval required when:** decisões/DoD/paths/risco/contrato mudarem materialmente.
-- **Pre-approval readiness evidence:** artifacts/reviews/leadshug-channel-abstraction-20261020/README.md; authority-preapproval.json = preflight-go, execution_authority_granted=false; estrutura PASS. APROVADO específico recebido; authority normal pós-ingestão registrado em evidence/authority-execution.json.
+- **Pre-approval readiness evidence:** v1.3 arquitetura42479 e crítica69476 convergidas; evidence/assumption-coherence-v1.3.json go/6premissas; review-scope-drift-v1.3.json go/23seções/0drift; authority-preapproval-v1.3.json preflight-go, execution_authority_granted=false. APROVADO v1.2/authority-execution.json são históricos, não autorização v1.3.
 
 ## Rules Acknowledgement / Ingestion (Required After `APROVADO` and Before Execution)
-Binding reload realizado após APROVADO em2026-10-20 pelo orquestrador: fontes da tabela relidas; constituição/política/módulos recarregados e verify_context PACED-Ready. Executor relerá as regras técnicas pertinentes antes dos edits. Ingestão não é evidência de implementação/testes. Nenhum GOAL persistente foi criado.
+Binding reload realizado após APROVADO em2026-10-20 pelo orquestrador: fontes da tabela relidas; constituição/política/módulos recarregados e verify_context PACED-Ready. Executor relerá as regras técnicas pertinentes antes dos edits. Ingestão não é evidência de implementação/testes. Nenhum GOAL persistente foi criado. Novas linhas v1.3 são binding preparado: releitura e authority normal somente após renovação humana; a auditoria Node foi limitada ao package.json proprietário ANTES da descoberta, fonte do helper intacta, nunca os.walk no API root.
 
 | Source | Why It Applies Now | Must Preserve | Must Avoid | Execution Impact |
 | --- | --- | --- | --- | --- |
@@ -530,6 +530,10 @@ Binding reload realizado após APROVADO em2026-10-20 pelo orquestrador: fontes d
 | foundation_documentation/project_constitution.md | multi-tenant | BU/Contato | credencial global | testes scoped |
 | foundation_documentation/policies/scope_subscope_governance.md | rotas existentes | BFF sessão | endpoint fora do owner | contrato explícito |
 | delphi-ai/workflows/docker/performance-concurrency-validation-method.md | pcv-1 | quatro lanes | prose sem artefato | JSON/hash antes entrega |
+| delphi-ai/skills/ci-equivalent-governance/SKILL.md | v1.3 paridade local | evidência por branch/fonte | confundir remoto e local | reload pós-renovação; guard/finalall |
+| delphi-ai/skills/ci-equivalent-test-surface-admission/SKILL.md | v1.3 suite/lifecycle | CI/local mesmo owner | teste só local/pipeline | admissão/negative controls |
+| delphi-ai/workflows/docker/update-ci-pipeline-method.md | v1.3 DevOps | job/config/topologia explícitos | publicar produto por inferência | CI remoto not_run |
+| delphi-ai/workflows/prisma/change-schema-migration-contract-method.md | v1.3 índice | major6.19.3 e migration owner | generic API-root walk ou reset | auditoria bounded owningmanifest e PG descartável |
 
 ## Agent Routing Preflight (Required Before Execution When Effort/Model Routing Applies)
 - **Client surface:** codex
@@ -573,15 +577,15 @@ Terminal architecture/security findings classified by review-finding-classificat
 | ST06-R04 (SEC-03) | medium | release-blocker | same-todo | Denied mutations/twoTENANT proof added; preDispatch must exercise real Meta/Evo adapters and detect omitted callback | resolved reviewed snapshot; final assurance pending | implementation-round-3-resolution.md; existing scope/validation approval |
 | ST06-R05 (adherence-round2 ADH-R2-01) | medium | release-blocker | same-todo | D04 explicit false/malformed success flag contradicts positive ACK; UNKNOWN/no authoritative write | resolved reviewed snapshot; final assurance pending | implementation-round-3-resolution.md; D04 existing approval |
 | PERF-01 (dedicated round01) | high | release-blocker | same-todo | OUT-heavy/no-IN latest-IN scan unbounded; preserve expiry semantics, need actual plan and potentially narrowly approved index | open; reproduction and renewed scope proposal | dedicated-round1-adjudication-draft.md; schema not authorized by v1.2 |
-| PERF-02 (dedicated round01) | low | follow-up-hardening | same-todo | Unsupported per-subject RLS threshold requires exact perconversation readback; bounded admitted test correction | open; inline evidence correction | dedicated-round1-adjudication-draft.md; no schema change |
-| TQA-01 (dedicated round01) | high | release-blocker | same-todo | CI-admission contradiction requires canonical rule/scope adjudication; no automatic waiver | open; fresh governance opinion84759 | ci-admission-challenge-package.md; no CI edits authorized |
+| PERF-02 (dedicated round01) | low | follow-up-hardening | same-todo | Precision corrected inline in already admitted test; no remaining post-version work for this finding | resolved checkpoint88536, fresh finalaudit pending | evidence/perf01-after-selection-root-proof.json; historical classification preserved |
+| TQA-01 / CIADM-01 | high | release-blocker | same-todo | CI configuration/admission required now; remote-execution-as-local-prerequisite challenged by CIADM02 | open remediation; exact v1.3 proposal reviewed, pending APROVADO | scope-renewal-v1.3-proposal.md; no CI edit/remote execution authorized |
 
 
 ## TODO Closeout Disposition
 - **Disposition:** keep-active
-- **Disposition reason:** contrato aprovado, implementação e validação em execução; não encerrar antes de todos gates.
-- **Post-commit/push status:** baseline materiala35f676c publicada/revisada; pacote documental finalizado com guardas pré-aprovação; produto Pending.
-- **Next path/status action:** executar ST-CON-06 aprovado, manter active até evidências e gates de entrega.
+- **Disposition reason:** v1.2 checkpoint implementado; renovação v1.3 revisada aguarda aprovação, PERF01/CIADM01 e demais gates de entrega abertos.
+- **Post-commit/push status:** baseline material23db059b publicada/revisada; v1.3 pendente aprovação humana e produto Pending.
+- **Next path/status action:** solicitar APROVADO v1.3 após guards; permanecer active/Pending, sem claim LocalImplemented.
 
 ## Security Risk Assessment (Mandatory Before Delivery)
 - **Risk level:** high

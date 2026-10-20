@@ -1,0 +1,51 @@
+{
+  "artifact_kind": "review_scope_drift_guard",
+  "todo_path": "/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/todos/active/features/TODO-leadshug-channel-abstraction.md",
+  "repo_root": "/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation",
+  "todo_relative_path": "todos/active/features/TODO-leadshug-channel-abstraction.md",
+  "overall_outcome": "go",
+  "baseline_gate": {
+    "section_present": true,
+    "decision": "required",
+    "status": "no_material_findings",
+    "branch": "main",
+    "commit": "23db059b252458c28cf9696c735447f57b023a58",
+    "push_reference": "origin/main",
+    "evidence_reference": "origin/main@23db059b252458c28cf9696c735447f57b023a58, push29533 terminal0; sete paths documentais exatos; nenhum c\u00f3digo/schema/CI/runtime alterado.",
+    "waiver_reference": "n/a"
+  },
+  "scope_drift_gate": {
+    "section_present": true,
+    "decision": "required",
+    "status": "no_material_findings",
+    "evidence_reference": "foundation_documentation/artifacts/reviews/leadshug-channel-abstraction-20261020/evidence/review-scope-drift-v1.3.json",
+    "waiver_reference": "n/a"
+  },
+  "changed_sections": [],
+  "material_headings": [
+    "## Context",
+    "## Framing Source & Story Slice",
+    "## Contract Boundary",
+    "## Scope",
+    "## Out of Scope",
+    "## Bounded But Elastic Guardrails",
+    "## Definition of Done",
+    "## Validation Steps",
+    "## Execution Lane Tracking",
+    "## Diff Expectation Contract",
+    "## Complexity",
+    "## Canonical Module Anchors",
+    "## Decisions (Resolved Before Freeze)",
+    "## Module Decision Baseline Snapshot",
+    "## Decision Baseline (Frozen Before Implementation)",
+    "## Architecture Change Governance",
+    "## Questions To Close",
+    "## Assumptions Preview",
+    "## Execution Plan",
+    "## Flow Evidence Planning Matrix",
+    "## Runtime / Rollout Notes",
+    "## Security Risk Assessment",
+    "## Performance & Concurrency Risk Assessment"
+  ],
+  "issues": []
+}

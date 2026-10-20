@@ -1,0 +1,131 @@
+{
+  "artifact_kind": "assumption_code_coherence_guard",
+  "todo_path": "/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/todos/active/features/TODO-leadshug-channel-abstraction.md",
+  "repo_root": "/mnt/c/unifast/leadshug/leadshug_now_docker",
+  "overall_outcome": "go",
+  "live_assumption_ids": [
+    "A-01",
+    "A-02",
+    "A-03",
+    "A-04",
+    "A-05",
+    "A-06"
+  ],
+  "gate": {
+    "section_present": true,
+    "decision": "required",
+    "status": "no_material_findings",
+    "evidence_reference": "artifacts/reviews/leadshug-channel-abstraction-20261020/evidence/source-assumptions-v1.3.json; evidence/assumption-coherence-v1.3.json. Hist\u00f3rico de cinco premissas preservado, n\u00e3o reutilizado.",
+    "waiver_reference": "n/a"
+  },
+  "assumptions": [
+    {
+      "assumption_id": "A-01",
+      "handling": "Keep as Assumption",
+      "evidence": "api-app/src/domain/inbox/conversations.service.ts:173; api-app/src/domain/inbox/incoming.service.ts:86; api-app/src/domain/inbox/outbound.service.ts",
+      "path_tokens": [
+        "api-app/src/domain/inbox/conversations.service.ts",
+        "api-app/src/domain/inbox/incoming.service.ts",
+        "api-app/src/domain/inbox/outbound.service.ts"
+      ],
+      "resolved_paths": [
+        "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app/src/domain/inbox/conversations.service.ts",
+        "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app/src/domain/inbox/incoming.service.ts",
+        "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app/src/domain/inbox/outbound.service.ts"
+      ],
+      "resolved_code_paths": [
+        "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app/src/domain/inbox/conversations.service.ts",
+        "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app/src/domain/inbox/incoming.service.ts",
+        "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app/src/domain/inbox/outbound.service.ts"
+      ]
+    },
+    {
+      "assumption_id": "A-02",
+      "handling": "Keep as Assumption",
+      "evidence": "api-app/src/domain/channels/channel-credential-resolver.ts:13; api-app/src/domain/channels/channel-credential-resolver.ts:29",
+      "path_tokens": [
+        "api-app/src/domain/channels/channel-credential-resolver.ts",
+        "api-app/src/domain/channels/channel-credential-resolver.ts"
+      ],
+      "resolved_paths": [
+        "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app/src/domain/channels/channel-credential-resolver.ts",
+        "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app/src/domain/channels/channel-credential-resolver.ts"
+      ],
+      "resolved_code_paths": [
+        "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app/src/domain/channels/channel-credential-resolver.ts",
+        "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app/src/domain/channels/channel-credential-resolver.ts"
+      ]
+    },
+    {
+      "assumption_id": "A-03",
+      "handling": "Keep as Assumption",
+      "evidence": "api-app/src/domain/inbox/message-acceptance.service.ts",
+      "path_tokens": [
+        "api-app/src/domain/inbox/message-acceptance.service.ts"
+      ],
+      "resolved_paths": [
+        "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app/src/domain/inbox/message-acceptance.service.ts"
+      ],
+      "resolved_code_paths": [
+        "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app/src/domain/inbox/message-acceptance.service.ts"
+      ]
+    },
+    {
+      "assumption_id": "A-04",
+      "handling": "Keep as Assumption",
+      "evidence": "api-app/src/surfaces/bff/bff.module.ts:50; api-app/src/surfaces/public/public.module.ts; api-app/src/surfaces/webhooks/webhooks.module.ts",
+      "path_tokens": [
+        "api-app/src/surfaces/bff/bff.module.ts",
+        "api-app/src/surfaces/public/public.module.ts",
+        "api-app/src/surfaces/webhooks/webhooks.module.ts"
+      ],
+      "resolved_paths": [
+        "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app/src/surfaces/bff/bff.module.ts",
+        "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app/src/surfaces/public/public.module.ts",
+        "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app/src/surfaces/webhooks/webhooks.module.ts"
+      ],
+      "resolved_code_paths": [
+        "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app/src/surfaces/bff/bff.module.ts",
+        "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app/src/surfaces/public/public.module.ts",
+        "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app/src/surfaces/webhooks/webhooks.module.ts"
+      ]
+    },
+    {
+      "assumption_id": "A-05",
+      "handling": "Keep as Assumption",
+      "evidence": "web-app/playwright.config.ts; scripts/test-channels-local.sh",
+      "path_tokens": [
+        "web-app/playwright.config.ts",
+        "scripts/test-channels-local.sh"
+      ],
+      "resolved_paths": [
+        "/mnt/c/unifast/leadshug/leadshug_now_docker/web-app/playwright.config.ts",
+        "/mnt/c/unifast/leadshug/leadshug_now_docker/scripts/test-channels-local.sh"
+      ],
+      "resolved_code_paths": [
+        "/mnt/c/unifast/leadshug/leadshug_now_docker/web-app/playwright.config.ts",
+        "/mnt/c/unifast/leadshug/leadshug_now_docker/scripts/test-channels-local.sh"
+      ]
+    },
+    {
+      "assumption_id": "A-06",
+      "handling": "Keep as Assumption",
+      "evidence": "api-app/src/integrations/channels/prisma-channel-resolver.ts; api-app/test/number-onboarding-pcv.e2e-spec.ts; api-app/prisma/schema.prisma; foundation_documentation/artifacts/reviews/leadshug-channel-abstraction-20261020/evidence/perf01-after-selection-root-proof.json",
+      "path_tokens": [
+        "api-app/src/integrations/channels/prisma-channel-resolver.ts",
+        "api-app/test/number-onboarding-pcv.e2e-spec.ts",
+        "foundation_documentation/artifacts/reviews/leadshug-channel-abstraction-20261020/evidence/perf01-after-selection-root-proof.json"
+      ],
+      "resolved_paths": [
+        "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app/src/integrations/channels/prisma-channel-resolver.ts",
+        "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app/test/number-onboarding-pcv.e2e-spec.ts",
+        "/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/artifacts/reviews/leadshug-channel-abstraction-20261020/evidence/perf01-after-selection-root-proof.json"
+      ],
+      "resolved_code_paths": [
+        "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app/src/integrations/channels/prisma-channel-resolver.ts",
+        "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app/test/number-onboarding-pcv.e2e-spec.ts"
+      ]
+    }
+  ],
+  "issues": []
+}

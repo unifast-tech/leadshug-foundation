@@ -1,0 +1,66 @@
+{
+  "at_utc": "2026-10-20T17:14:48.981149+00:00",
+  "reviews": [
+    {
+      "name": "scope-renewal-v1.3-architecture",
+      "exec_session": 42479,
+      "exit": 0,
+      "model": "gpt-6.1-sol",
+      "effort": "xhigh",
+      "isolate_project_context": true,
+      "event_types": {
+        "thread.started": 1,
+        "turn.started": 1,
+        "item.completed": 1,
+        "turn.completed": 1
+      },
+      "item_types": {
+        "agent_message": 1
+      },
+      "raw_sha256": "d69630d12c68974afffc6200c0f247390e99f8bc7457665a4a7370fb3416a084",
+      "events_sha256": "87ae84d0e1baf170fe6d3f5f9047c6d6b28010a47af14cf936e3d0a413eb44e9",
+      "limits": "Planning review only, not implementation/delivery proof"
+    },
+    {
+      "name": "scope-renewal-v1.3-critique",
+      "exec_session": 22149,
+      "exit": 0,
+      "model": "gpt-6.1-sol",
+      "effort": "xhigh",
+      "isolate_project_context": true,
+      "event_types": {
+        "thread.started": 1,
+        "turn.started": 1,
+        "item.completed": 1,
+        "turn.completed": 1
+      },
+      "item_types": {
+        "agent_message": 1
+      },
+      "raw_sha256": "104c20a215c34bc5ff0e746e60d5182344dadccc8544e3473c4f100359a06c8d",
+      "events_sha256": "b4c27732a3e1586aff737b22d021391e7bac7c3c82512f524aaa74723c999394",
+      "limits": "Planning review only, not implementation/delivery proof"
+    },
+    {
+      "name": "scope-renewal-v1.3-critique-round2",
+      "exec_session": 69476,
+      "exit": 0,
+      "model": "gpt-6.1-sol",
+      "effort": "xhigh",
+      "isolate_project_context": true,
+      "event_types": {
+        "thread.started": 1,
+        "turn.started": 1,
+        "item.completed": 1,
+        "turn.completed": 1
+      },
+      "item_types": {
+        "agent_message": 1
+      },
+      "raw_sha256": "5b8bfa65a6870c2846e274966f8c4a530b1b298028189748a9e057ea50744120",
+      "events_sha256": "a7a47c0e17ed08c580ef275dc3d56e38f804b0775649d51b972d8747991b955c",
+      "limits": "Planning review only, not implementation/delivery proof"
+    }
+  ],
+  "lifecycle": "All terminal before integrations/repackaging; none cancelled or recycled while running"
+}

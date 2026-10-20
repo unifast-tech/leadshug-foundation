@@ -1,0 +1,112 @@
+{
+  "schema_version": "subagent-review-dispatch-v1",
+  "artifact_kind": "subagent_review_dispatch",
+  "authoritative": false,
+  "edit_policy": "derived_dispatch_packet",
+  "review_kind": "critique",
+  "bounded_package_path": "foundation_documentation/artifacts/reviews/leadshug-channel-abstraction-20261020/scope-renewal-v1.3-critique-round2-package.md",
+  "reviewer_count": 1,
+  "no_context_required": true,
+  "required_axes": [
+    "adherence",
+    "performance",
+    "elegance",
+    "structural_soundness",
+    "operational_fit"
+  ],
+  "focus_points": [
+    "Challenge the bounded plan or implementation for regressions, hidden scope, and weak adherence.",
+    "Explicitly assess performance, elegance, structural soundness, and operational fit.",
+    "Do not reopen unrelated architecture outside the bounded package.",
+    "For each material finding, add category and formalizable-hint when you can judge them honestly.",
+    "When assessing design, seek the simplest faithful Clean Code/SOLID design for the approved intent. Do not invent future-facing work or erase explicit TODO intent. Planning review may challenge proposed intent; delivery review must preserve approved intent or return for renewed approval."
+  ],
+  "result_contract_fields": [
+    "overall_assessment",
+    "recommended_path",
+    "performance_position",
+    "elegance_position",
+    "structural_soundness_position",
+    "operational_fit_position",
+    "findings[].finding_id (optional)",
+    "findings[].category (optional)",
+    "findings[].formalizable_hint (optional)",
+    "findings[].candidate_rule_level (optional)",
+    "findings[]"
+  ],
+  "todo_path": "foundation_documentation/todos/active/features/TODO-leadshug-channel-abstraction.md",
+  "historical_disposition_policy": [
+    "Resolved findings are historical context only. Do not reopen them unless the current bounded package materially changes the same locus/behavior or fresh evidence shows regression.",
+    "Challenged findings stay closed unless the current bounded package materially changes the same locus/behavior or the prior rationale is objectively insufficient.",
+    "Deferred findings must cite the recorded follow-up/waiver path first. Re-raise them only when the current bounded package changes the same locus or closure now depends on that deferred risk.",
+    "Unresolved findings remain valid to re-raise until they are fixed, challenged, or formally deferred with authority."
+  ],
+  "historical_dispositions": [
+    {
+      "source_kind": "promotion_routing",
+      "finding_id": "ST06-R01 (ADH-01=SEC-01)",
+      "carry_forward_class": "resolved",
+      "source_disposition": "classification=release-blocker; routing=same-todo; status=resolved in round2 snapshot; finalvalidation pending",
+      "summary": "Original non-first/malformed-ID counterexample corrected; new flag case tracked R05",
+      "reference": "implementation-round-1-resolution.md; existing D04 approval"
+    },
+    {
+      "source_kind": "promotion_routing",
+      "finding_id": "ST06-R02 (ADH-02)",
+      "carry_forward_class": "resolved",
+      "source_disposition": "classification=release-blocker; routing=same-todo; status=resolved reviewed snapshot; new PERF blocker separate",
+      "summary": "Navigation corrected; await body/handler completion and prove same-text draft fence catches removal",
+      "reference": "implementation-round-3-resolution.md; dedicated round01 Performance/TQA confirm harness"
+    },
+    {
+      "source_kind": "promotion_routing",
+      "finding_id": "ST06-R03 (SEC-02)",
+      "carry_forward_class": "resolved",
+      "source_disposition": "classification=release-blocker; routing=same-todo; status=resolved in round2 snapshot; finalvalidation pending",
+      "summary": "D04/05 Evolution empty object is not ACK; key:{} preserved",
+      "reference": "implementation-round-1-resolution.md; existing D04/05 approval"
+    },
+    {
+      "source_kind": "promotion_routing",
+      "finding_id": "ST06-R04 (SEC-03)",
+      "carry_forward_class": "resolved",
+      "source_disposition": "classification=release-blocker; routing=same-todo; status=resolved reviewed snapshot; final assurance pending",
+      "summary": "Denied mutations/twoTENANT proof added; preDispatch must exercise real Meta/Evo adapters and detect omitted callback",
+      "reference": "implementation-round-3-resolution.md; existing scope/validation approval"
+    },
+    {
+      "source_kind": "promotion_routing",
+      "finding_id": "ST06-R05 (adherence-round2 ADH-R2-01)",
+      "carry_forward_class": "resolved",
+      "source_disposition": "classification=release-blocker; routing=same-todo; status=resolved reviewed snapshot; final assurance pending",
+      "summary": "D04 explicit false/malformed success flag contradicts positive ACK; UNKNOWN/no authoritative write",
+      "reference": "implementation-round-3-resolution.md; D04 existing approval"
+    },
+    {
+      "source_kind": "promotion_routing",
+      "finding_id": "PERF-01 (dedicated round01)",
+      "carry_forward_class": "resolved",
+      "source_disposition": "classification=release-blocker; routing=same-todo; status=open; reproduction and renewed scope proposal",
+      "summary": "OUT-heavy/no-IN latest-IN scan unbounded; preserve expiry semantics, need actual plan and potentially narrowly approved index",
+      "reference": "dedicated-round1-adjudication-draft.md; schema not authorized by v1.2"
+    },
+    {
+      "source_kind": "promotion_routing",
+      "finding_id": "PERF-02 (dedicated round01)",
+      "carry_forward_class": "deferred",
+      "source_disposition": "classification=follow-up-hardening; routing=same-todo; status=open; inline evidence correction",
+      "summary": "Unsupported per-subject RLS threshold requires exact perconversation readback; bounded admitted test correction",
+      "reference": "dedicated-round1-adjudication-draft.md; no schema change"
+    },
+    {
+      "source_kind": "promotion_routing",
+      "finding_id": "TQA-01 (dedicated round01)",
+      "carry_forward_class": "resolved",
+      "source_disposition": "classification=release-blocker; routing=same-todo; status=open; fresh governance opinion84759",
+      "summary": "CI-admission contradiction requires canonical rule/scope adjudication; no automatic waiver",
+      "reference": "ci-admission-challenge-package.md; no CI edits authorized"
+    }
+  ],
+  "goal": "Full planning reconvergence after CRIT13-01/02; exact managed index, truthful locks, checked namespace inventories, shared CI/lifecycle guard, six live assumptions; no implementation authority",
+  "review_result_dispatch_path": "/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/artifacts/reviews/leadshug-channel-abstraction-20261020/evidence/scope-renewal-v1.3-critique-round2.dispatch.json"
+}

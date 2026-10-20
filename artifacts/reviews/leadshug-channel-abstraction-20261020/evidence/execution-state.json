@@ -2,14 +2,14 @@
   "client_date": "2026-10-20",
   "authority": "ST-CON-06 v1.2 explicitly APROVADO; normal authority/routing go; approval published Foundation0ef3310e",
   "active_profile": "operational-coder",
-  "active_single_product_writer": "/root/stcon06_executor",
+  "active_single_product_writer": "none; /root/stcon06_executor checkpoint terminal, awaits approved renewal",
   "topology": "principal checkout only; no worktree/codecommit/push/private file access",
   "parent_owns": "all Foundation canonical docs/TODO/review artifacts except executor-validation.json and artifacts/tmp/stcon06-executor-* reserved to executor",
   "completed_preconditions": [
     "runner allowlist repair + bashn/diffcheck + synthetic config-only probe",
     "canonical api RED:175unit pass/1 dependencyguard failure duelegacydispatch"
   ],
-  "current_work": "R02 causal test added; first attempt64345 harness-ordering timeout, second63018 is green instrumentation diagnostic on restored Inbox (writer had not reappliedmutation), not mutantproof. Writer waits terminal before actualguardomission then capturedbrowsermutation/restoration and newfinalall. No deliveryclaim. Root saved actual65587freshness+4candidatePCV+consumer/statictriage. Dedicatedauditnotstarted.",
+  "current_work": "v1.3 planning fully reconverged: architecture42479 ARCH13 integrated; critique22149 CRIT13 integrated; freshcritique69476 terminal0 no new material findings. Coherence6GO/scope23sections0driftGO/auditfloorGO/routingGO/authoritypreapprovalGO(falseexecution). Preparing final exact-owned Foundation publication and one human APROVADO renewal request. No source/CI/schema/runtime edits beyond priorv1.2checkpoint88536.",
   "parent_integration_findings_sent": [
     "restore MessageAcceptance service baseline (outside expectedpaths), move sourceintent/finalization/readback to outbound*.ts",
     "remove commonproviderbranch and closedMeta/Evo-only errorcodes from commonChannelport; generic projection/open registration",
@@ -27,15 +27,15 @@
   ],
   "executor_reports": "Core integration findings applied; independent Channel fake via registry/real resolver, real REAUTORIZAR generation race, version-only reseal, ingress pinning/crossBU/tie/claim barriers added; channel-specific PCV metrics now executing.",
   "next_parent_steps": [
-    "freshround3 architecture/security delta withcompleteprioradjudication andactualRED/mutation/restoration evidence; waitall65587 andexecutorvalidation",
-    "inspect stable positivepublicdiff + sourcefreshness and D01..10 trace",
-    "run required architecture-adherence/security, dedicated auditprotocol Performance+TestQuality+Cutover via fresh internal strongest-review agents; finalreview after TQA/PCV/finalpacket",
-    "revalidate/publish local API/Web only within approved constraints then operator realINOUT official+unofficial; privateenv/.local-files forbidden",
-    "consolidate modules/05/04handuffs, deliveryguards/closeout only when allcriteriaactual"
+    "Request one explicit APROVADO for reviewed v1.3 proposal, including named index/transaction lock limits and CI/runner admission; user earlier approved companions only",
+    "Upon renewed approval: actual binding reload/normalauthority, soleexecutor index/CI/inventory controls and actual isolated Linux rehearsal",
+    "Evidence invalidation, final fullall, refreshedPCV and fullindependentTQA/Performance/Cutover/security/adherence as affected; no incomplete TQA pass",
+    "Rebuild exact images; only then local indexmigration/API-Web activation/HTTPS and new operator INOUT both channels; other services/data/credentials preserved",
+    "Final consolidated modules/05-04 handoffs/finalreview/debt/diff/authority/completion/closeout before local delivery claim; remote run/promotion/sourcepush not authorized"
   ],
   "skill_read_for_future_audit": "delphi-ai/skills/audit-protocol-triple-review/SKILL.md; user informed in commentary; no audit session started yet",
   "product_delivery_stage": "Pending",
-  "user_input_needed_now": false,
+  "user_input_needed_now": true,
   "routing_note_for_future_reviews": "Current delphi-ai/config/agent_role_routing.json maps test_quality_audit and cutover_integrity_audit to technical_review model gpt-5.6-terra; architecture_adherence/critique ->gpt-6.1-sol, final_review ->gpt-6.1-sol. Use current guard at dispatch; do not falsely declare a different model. Native tool advertised models lacks terra; actual availability not yet attempted. Do not preemptively ask permission or alter Delphi.",
   "latest_api_green": {
     "session_id": 54152,
@@ -184,7 +184,7 @@
     "api_e2e": 308,
     "web_unit": 29,
     "browser": 50,
-    "scope": "earlier frozen candidate, not final delivery proof after round2remediation"
+    "scope": "historical80903 candidate surpassed by new PERF01 tests; no final delivery acceptance"
   },
   "round2_red": {
     "session_id": 49493,
@@ -224,10 +224,10 @@
     "root_artifact": "evidence/evolution-mutant-failure-restoration.json"
   },
   "foundation_publication": {
-    "commit": "f810cae988bb47c44870d2324036dca72812a33d",
+    "commit_prefix": "4bc154fb",
     "push_exit": 0,
-    "scope": "58rootownedFoundationpaths only; no productcommit/push/gitlink",
-    "formatting_note": "evidence/frozen-input-formatting-note.json;6verbatimhistoricalreviewinputs retainformatnoise, otherstageddocscheck0"
+    "scope": "45 exact root-owned/explicitly released closed Foundation artifacts and TODO only; executor-validation active excluded; no productcommit/push/gitlinks",
+    "formatting_note": "Two immutable round3 generated dispatch inputs preserve EOF blankline, all other stagedpaths check0; note appended to frozen-input-formatting-note.json"
   },
   "new_final_all": {
     "session_id": 65587,
@@ -255,9 +255,19 @@
       "63018": "terminal0 browser50/50 corrected nativebody/task synchronization, sourceguardpresent"
     },
     "actual_mutant_session": 30246,
-    "status": "running, guardreplacedbycomment only; rootreconstructedexactbaselinehash",
+    "status": "fixed,evidenced; finalall andindependentTQA pending",
     "root_actual_observation": "evidence/browser-causal-actual-mutant-source-observation.json",
-    "green_diagnostic_attestation": "evidence/browser-attestation-causal-green-63018.json"
+    "green_diagnostic_attestation": "evidence/browser-attestation-causal-green-63018.json",
+    "actual_root_observation": "evidence/browser-causal-actual-mutant-source-observation.json",
+    "reported_current_failure": "30246 correct causaltest failed atdraftassertion; waitterminal/restoration for proof",
+    "actual_mutant": {
+      "session": 30246,
+      "exit": 1,
+      "pass": 49,
+      "fail": 1,
+      "rootproof": "evidence/browser-causal-mutant-failure-restoration.json",
+      "restored_exact": true
+    }
   },
   "freshness65587": "evidence/browser-attestation-all65587.json and browser-freshness-all65587.json; persistedglobalSetup copiedexact;36matchedsourcehashes,served/distcopyhashsame",
   "pcv_candidates": [
@@ -265,5 +275,99 @@
     "pcv-frc-candidate.json",
     "pcv-bci-candidate.json",
     "pcv-rls-candidate.json"
-  ]
+  ],
+  "public_source_counts_observation": {
+    "API_tracked": 19,
+    "API_untracked_new": 11,
+    "Web_tracked": 5,
+    "Web_new": 1,
+    "runner": 1,
+    "limits": "positivepublicpathspecs only, duringdisposablemutation; exactcandidatefreshnesslater"
+  },
+  "causal_final_all": {
+    "session": 80903,
+    "status": "terminal0, sourcefrozen verified",
+    "log": "artifacts/tmp/stcon06-causal-final-all.log",
+    "source_manifest": "evidence/causal-final-source-before-all80903.json",
+    "counts": {
+      "api_unit": 194,
+      "api_e2e": 309,
+      "web_unit": 29,
+      "browser": 50
+    },
+    "root_proof": "evidence/causal-final-validation80903.json"
+  },
+  "dedicated_audit": {
+    "session": "dedicated-audit/session.json",
+    "round": 1,
+    "performance": {
+      "exec_session": 17556,
+      "model": "gpt-6.1-sol",
+      "effort": "xhigh",
+      "status": "terminal0 findingsPERF01/PERF02"
+    },
+    "test_quality": {
+      "exec_session": 9740,
+      "model": "gpt-5.6-terra",
+      "effort": "xhigh",
+      "status": "terminal0 findingTQA01; incompletefullreport requiresfreshfullafterremediation",
+      "actual_model_availability": "Requested gpt5.6terra accepted by canonicalCLI; availability confirmed by cutoverterminalsuccess; no routingwaiverneeded"
+    },
+    "cutover": {
+      "model": "gpt-5.6-terra",
+      "effort": "xhigh",
+      "status": "terminal0 freshreview, nofindings, deterministicrecorded",
+      "exec_session": 58882
+    },
+    "package_sha256": "46a6cef56338ec68507f835813ce1adbc4ac64d429f5174be1b65f47727d2d78",
+    "routing_guards": "all3normalGO",
+    "status": "allterminal, needs_adjudication"
+  },
+  "build_preparation": "Authorized build-only API/Web positivecontexts while2reviewsactive; no servingcontainer/tunnel/configmutation beforeauditadjudication",
+  "ci_admission_challenge": {
+    "session": 84759,
+    "model": "gpt-6.1-sol",
+    "effort": "xhigh",
+    "status": "terminal0 strictmerged: CIADM01 configuration blocker sustained; CIADM02 remote-execution/waiver implication challenged",
+    "package": "ci-admission-challenge-package.md"
+  },
+  "new_blockers": [
+    "PERF01newindex approval/implementation/proof",
+    "CIADM01pipeline admission approval/implementation/proof",
+    "fullfreshTQAandremainingoriginaldeliverygates"
+  ],
+  "latest_perf_red": {
+    "session": 15524,
+    "exit": 1,
+    "unit_pass": 194,
+    "e2e_pass": 309,
+    "e2e_fail": 2,
+    "log": "artifacts/tmp/stcon06-perf01-current-red-api-final.log",
+    "sha256": "8b2fc6510dafe4be8a10de73d150695a82a667bcb4255067e3b64da9b87ae248"
+  },
+  "latest_perf_checkpoint": {
+    "session": 88536,
+    "exit": 1,
+    "api_unit_pass": 194,
+    "e2e_pass": 310,
+    "e2e_fail": 1,
+    "no_window_queries": 0,
+    "remaining": "PERF01index currenthistoryscan",
+    "rootproof": "evidence/perf01-after-selection-root-proof.json"
+  },
+  "scope_renewal": {
+    "version": "1.3",
+    "status": "planning review; human approval pending",
+    "proposal": "scope-renewal-v1.3-proposal.md",
+    "freeze": "23db059b",
+    "architecture_session": 42479,
+    "architecture_status": "terminal0 findingsARCH13-01/02 integrated; no deliveryauthority",
+    "new_implementation_authority": false,
+    "critique_session": 69476,
+    "critique_status": "round2 terminal0 strictmerged no new material findings",
+    "prisma_bounded_audit": "evidence/prisma-capability-bounded-v1.3.json ready, exactmanifest only",
+    "readiness": "scope-renewal-v1.3-readiness.md",
+    "preapproval_authority": "preflight-go, execution_authority_granted=false",
+    "human_approval": "pending"
+  }
 }

@@ -1,0 +1,112 @@
+{
+  "schema": "stcon06-planning-coherence-v1",
+  "at_utc": "2026-10-20T17:13:00.193201+00:00",
+  "semantic_owner": "/root",
+  "status": "six live assumptions semantically reviewed, mechanical guard follows",
+  "assumptions": {
+    "A-01": {
+      "judgment": "confirmed current common outbound references, not pre-cutover direct clients",
+      "paths": [
+        "api-app/src/domain/inbox/conversations.service.ts",
+        "api-app/src/domain/inbox/incoming.service.ts",
+        "api-app/src/domain/inbox/outbound.service.ts"
+      ],
+      "source_sha256": {
+        "api-app/src/domain/inbox/conversations.service.ts": "c7d84f983ed61c6022424d4648e07282e7eb53c40fa9aba249618d77b3c223de",
+        "api-app/src/domain/inbox/incoming.service.ts": "b0ec43187b1f48720aa899e40f979dd0ae447321581d675b84ef9c71dbd0ff42",
+        "api-app/src/domain/inbox/outbound.service.ts": "63bcf773e2b4c5a5ddd688a1bb13745a0a206d995fafc665925df3fecaf394aa"
+      }
+    },
+    "A-02": {
+      "judgment": "confirmed activeCredentialVersion and metadata inspect methods; caller grant boundary remains independent",
+      "paths": [
+        "api-app/src/domain/channels/channel-credential-resolver.ts"
+      ],
+      "source_sha256": {
+        "api-app/src/domain/channels/channel-credential-resolver.ts": "89cf17ac02af444092651470aee13e2d4a3bcee8d459508be818322b33b00c10"
+      }
+    },
+    "A-03": {
+      "judgment": "unchanged keyed MessageAcceptance owner: exact scoped Git diff HEAD quiet exited0 this checkpoint; no new index implemented",
+      "paths": [
+        "api-app/src/domain/inbox/message-acceptance.service.ts"
+      ],
+      "source_sha256": {
+        "api-app/src/domain/inbox/message-acceptance.service.ts": "b053744ee44b7e91fd45b5c146f759f55c70b8e517b8fbb1cab39806407335e1"
+      }
+    },
+    "A-04": {
+      "judgment": "confirmed ChannelTransportModule imported by the three existing module compositions",
+      "paths": [
+        "api-app/src/surfaces/bff/bff.module.ts",
+        "api-app/src/surfaces/public/public.module.ts",
+        "api-app/src/surfaces/webhooks/webhooks.module.ts"
+      ],
+      "source_sha256": {
+        "api-app/src/surfaces/bff/bff.module.ts": "327f34eba67746882abc601a3817d94270cff3018d6972a8095dae530a2d6e29",
+        "api-app/src/surfaces/public/public.module.ts": "00a96d54fde7061f61f4ddf2b9cef836a02ad77ca29b62ea422695b9d8f90ef8",
+        "api-app/src/surfaces/webhooks/webhooks.module.ts": "abc8fd7960fcca1ce43d21d44a90f8d4708d47e07bde9a48c0009e02dc0503a6"
+      }
+    },
+    "A-05": {
+      "judgment": "confirmed positive binds and real production-bundle API/provider browser setup; Linux+CI changes still proposed",
+      "paths": [
+        "scripts/test-channels-local.sh",
+        "web-app/playwright.config.ts"
+      ],
+      "source_sha256": {
+        "scripts/test-channels-local.sh": "b03176ef1a332c431ed55028c691052958ebc08ff7711db08d05316c1f8a34a6",
+        "web-app/playwright.config.ts": "53e9a54e97c9b785135d94846d99eb77c6f05789a58f27128544f9b2c903a63d"
+      }
+    },
+    "A-06": {
+      "judgment": "confirmed existing index lacks direction; current latest-IN query has direction predicate/order, actual frozen PG RED88536 removes200rows. Post-index benefit remains unproven",
+      "paths": [
+        "api-app/src/integrations/channels/prisma-channel-resolver.ts",
+        "api-app/prisma/schema.prisma",
+        "api-app/test/number-onboarding-pcv.e2e-spec.ts"
+      ],
+      "execution_evidence": "evidence/perf01-after-selection-root-proof.json",
+      "source_sha256": {
+        "api-app/src/integrations/channels/prisma-channel-resolver.ts": "acf779d89162d339e37af2abe2aa91fd1a1b292d7f5208bb672090c87a23bf4d",
+        "api-app/prisma/schema.prisma": "3dd87c61af51167ae8aaa07a1b35e8616f108d9e5a05b2c0911ea84a8bfa5636",
+        "api-app/test/number-onboarding-pcv.e2e-spec.ts": "4bd128d9771616e61d48b4a9c996f6f4e4dc435acff1456c973fd69a11bff16c"
+      }
+    }
+  },
+  "critique_round2_non_todo_input_checks": {
+    "foundation_documentation/artifacts/reviews/leadshug-channel-abstraction-20261020/scope-renewal-v1.3-proposal.md": true,
+    "foundation_documentation/artifacts/reviews/leadshug-channel-abstraction-20261020/evidence/ci-admission-challenge.raw.json": true,
+    "foundation_documentation/artifacts/reviews/leadshug-channel-abstraction-20261020/dedicated-audit/round-01/results/performance.raw.json": true,
+    "foundation_documentation/artifacts/reviews/leadshug-channel-abstraction-20261020/dedicated-audit/round-01/results/test-quality.raw.json": true,
+    ".github/workflows/ci.yml": true,
+    "scripts/test-channels-local.sh": true,
+    "docker-compose.channels.yml": true,
+    "api-app/prisma/schema.prisma": true,
+    "api-app/src/integrations/channels/prisma-channel-resolver.ts": true,
+    "web-app/playwright.config.ts": true,
+    "web-app/e2e/timeline-freshness.ts": true,
+    "delphi-ai/skills/ci-equivalent-governance/SKILL.md": true,
+    "delphi-ai/skills/ci-equivalent-test-surface-admission/SKILL.md": true,
+    "delphi-ai/workflows/docker/update-ci-pipeline-method.md": true,
+    "delphi-ai/workflows/docker/todo-approval-gates-method.md": true,
+    "delphi-ai/rules/stacks/prisma/prisma-schema-migration-always-on.md": true,
+    "delphi-ai/rules/stacks/postgresql/postgresql-data-integrity-always-on.md": true,
+    "foundation_documentation/project_constitution.md": true,
+    "foundation_documentation/modules/integrations-and-channels.md": true,
+    "foundation_documentation/modules/inbox-and-conversations.md": true,
+    "foundation_documentation/artifacts/reviews/leadshug-channel-abstraction-20261020/scope-renewal-v1.3-architecture-resolution.md": true,
+    "foundation_documentation/artifacts/reviews/leadshug-channel-abstraction-20261020/evidence/scope-renewal-v1.3-architecture.raw.json": true,
+    "foundation_documentation/artifacts/reviews/leadshug-channel-abstraction-20261020/evidence/perf01-after-selection-root-proof.json": true,
+    "delphi-ai/workflows/docker/independent-critique-method.md": true,
+    "foundation_documentation/artifacts/reviews/leadshug-channel-abstraction-20261020/scope-renewal-v1.3-critique-resolution.md": true,
+    "foundation_documentation/artifacts/reviews/leadshug-channel-abstraction-20261020/evidence/scope-renewal-v1.3-critique.raw.json": true,
+    "foundation_documentation/artifacts/reviews/leadshug-channel-abstraction-20261020/evidence/prisma-capability-bounded-v1.3.json": true,
+    "delphi-ai/workflows/prisma/change-schema-migration-contract-method.md": true
+  },
+  "limits": [
+    "Planning coherence, not schema/CI implementation acceptance",
+    "No private files or recursive API discovery",
+    "Existing index-less PGRED is intentional; no finalall or delivery pass"
+  ]
+}

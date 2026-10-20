@@ -1,0 +1,123 @@
+{
+  "status": "planning only",
+  "published_baseline": "23db059b",
+  "paths": [
+    {
+      "path": "foundation_documentation/todos/active/features/TODO-leadshug-channel-abstraction.md",
+      "sha256": "0f86d02d224d7e4815b78cb882d39dea80c387d28cc15301e7e30f6b12651e0d"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-channel-abstraction-20261020/scope-renewal-v1.3-proposal.md",
+      "sha256": "8abb4b277fd439342effbec871aef0d4c6e8dd8456910f31c58935d291512eac"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-channel-abstraction-20261020/evidence/ci-admission-challenge.raw.json",
+      "sha256": "728dc2f853ac5ef5bda64b53686d2c612130061203518b71d846258ae29342fb"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-channel-abstraction-20261020/dedicated-audit/round-01/results/performance.raw.json",
+      "sha256": "dc4aa0a96abe94aabef460cecd5b30dbaa725deab1b081353e8fe5d90e05066d"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-channel-abstraction-20261020/dedicated-audit/round-01/results/test-quality.raw.json",
+      "sha256": "7ccdc1fd8aad2ae8ba97dca203c5c2dfe79bcef8d2b88248555ec0e0f496100a"
+    },
+    {
+      "path": ".github/workflows/ci.yml",
+      "sha256": "4448e7dbb47a85c432f4975bf55a1e786402f7e8c5ba3fe70d054eb182de1607"
+    },
+    {
+      "path": "scripts/test-channels-local.sh",
+      "sha256": "b03176ef1a332c431ed55028c691052958ebc08ff7711db08d05316c1f8a34a6"
+    },
+    {
+      "path": "docker-compose.channels.yml",
+      "sha256": "9978e713ce190ad20b6bddb0ecf0b469d068c0e43bb4eaf50aa630ec03aea235"
+    },
+    {
+      "path": "api-app/prisma/schema.prisma",
+      "sha256": "3dd87c61af51167ae8aaa07a1b35e8616f108d9e5a05b2c0911ea84a8bfa5636"
+    },
+    {
+      "path": "api-app/src/integrations/channels/prisma-channel-resolver.ts",
+      "sha256": "acf779d89162d339e37af2abe2aa91fd1a1b292d7f5208bb672090c87a23bf4d"
+    },
+    {
+      "path": "web-app/playwright.config.ts",
+      "sha256": "53e9a54e97c9b785135d94846d99eb77c6f05789a58f27128544f9b2c903a63d"
+    },
+    {
+      "path": "web-app/e2e/timeline-freshness.ts",
+      "sha256": "3a06fb36e3a9bcf20a12cd8201da2daa3b567775f15e2be5f068e97e840d7f53"
+    },
+    {
+      "path": "delphi-ai/skills/ci-equivalent-governance/SKILL.md",
+      "sha256": "018d241a01647a109b330e84046050057b0dc76758931e451e933b514d525d40"
+    },
+    {
+      "path": "delphi-ai/skills/ci-equivalent-test-surface-admission/SKILL.md",
+      "sha256": "f432a8979ea0112000274f1c0aab9713dfbaeb6cacddd58991459317e8a863d6"
+    },
+    {
+      "path": "delphi-ai/workflows/docker/update-ci-pipeline-method.md",
+      "sha256": "61d468f2074fbd7c69bfc43e051ec4662c6c92407f9ead7b49448699b0910aa5"
+    },
+    {
+      "path": "delphi-ai/workflows/docker/todo-approval-gates-method.md",
+      "sha256": "3e0d7ff9143e386ef1c074bd184b7f5026ea2533e0699771b5e15425d3e38ae8"
+    },
+    {
+      "path": "delphi-ai/rules/stacks/prisma/prisma-schema-migration-always-on.md",
+      "sha256": "8ceffb135332bd0cb0ead8635c69fbd08e540ae688b5df32f4627d957fa16637"
+    },
+    {
+      "path": "delphi-ai/rules/stacks/postgresql/postgresql-data-integrity-always-on.md",
+      "sha256": "f2b7440e01027eb76e245808d61e15fff97400d4ae6cb32d6980bbfbe17a779a"
+    },
+    {
+      "path": "foundation_documentation/project_constitution.md",
+      "sha256": "abfafa5576d051da58583e2be57499320c8ad155c4ae741f259c730bcca98390"
+    },
+    {
+      "path": "foundation_documentation/modules/integrations-and-channels.md",
+      "sha256": "031fab31685d00d635794aa10d0b1b8ee0a830e54b32622958b6bdc3e079853d"
+    },
+    {
+      "path": "foundation_documentation/modules/inbox-and-conversations.md",
+      "sha256": "b9d2d151cceb2758e381c6787b8c4baf4e26630d88c62057ecfbc24e0dd26a72"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-channel-abstraction-20261020/scope-renewal-v1.3-architecture-resolution.md",
+      "sha256": "74a3c54f61999bc0a232ffbb59ba405079e62206e546291364ac0283bfdc92a9"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-channel-abstraction-20261020/evidence/scope-renewal-v1.3-architecture.raw.json",
+      "sha256": "d69630d12c68974afffc6200c0f247390e99f8bc7457665a4a7370fb3416a084"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-channel-abstraction-20261020/evidence/perf01-after-selection-root-proof.json",
+      "sha256": "9afd2ab4b71291824aa5dbdbfa689c746b3722e57a516ad061a0c0dfabf37c08"
+    },
+    {
+      "path": "delphi-ai/workflows/docker/independent-critique-method.md",
+      "sha256": "7bc9086b7c018428ce1095cb6dc8eb3704f40918010c89d8890da2a0c4f0fe50"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-channel-abstraction-20261020/scope-renewal-v1.3-critique-resolution.md",
+      "sha256": "4d0ea45fcd8edd63b485ba0f04769334f49724ea418c8883feec4b33fd548a63"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-channel-abstraction-20261020/evidence/scope-renewal-v1.3-critique.raw.json",
+      "sha256": "104c20a215c34bc5ff0e746e60d5182344dadccc8544e3473c4f100359a06c8d"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-channel-abstraction-20261020/evidence/prisma-capability-bounded-v1.3.json",
+      "sha256": "d4e2901c2137314d62a138b854f1addd8c286f3fe1a846a14e2c9bb5c324c39c"
+    },
+    {
+      "path": "delphi-ai/workflows/prisma/change-schema-migration-contract-method.md",
+      "sha256": "ffdd1e7f3a4c78ee3ab04b1eb23adede909dc94f83b8c0e97fd6015de906435d"
+    }
+  ],
+  "package_sha256": "b9e6b48d27097f629413786be346d26ffa1b350711d0eaadbf3770b17639d17a"
+}
