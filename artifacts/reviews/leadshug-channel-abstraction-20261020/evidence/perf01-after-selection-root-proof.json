@@ -1,0 +1,26 @@
+{
+  "schema": "stcon06-bounded-proof-v1",
+  "at_utc": "2026-10-20T16:56:23.736509+00:00",
+  "session": 88536,
+  "checks": {
+    "raw_log_matches": true,
+    "before_after_exact": true,
+    "api-app/src/integrations/channels/prisma-channel-resolver.ts": true,
+    "api-app/test/number-onboarding-pcv.e2e-spec.ts": true,
+    "api-app/test/channel-transport.e2e-spec.ts": true,
+    "marker_window_present": true,
+    "marker_history_present": true,
+    "marker_overlap_present": true
+  },
+  "result": "expected_partial_red_not_acceptance",
+  "source_boundary": "exact public source and announced fixture logs only",
+  "log_sha256": "be1854e98b3a2e051e903f7459758ede9f7020d6195b26bf2056793cac2e8600",
+  "counts": {
+    "api_unit_files_passed": 21,
+    "api_unit_tests_passed": 194,
+    "api_e2e_files_passed": 26,
+    "api_e2e_tests_passed": 310,
+    "api_e2e_failed_tests": 1
+  },
+  "index_scope": "no schema/CI/runtime modification authorized or executed"
+}

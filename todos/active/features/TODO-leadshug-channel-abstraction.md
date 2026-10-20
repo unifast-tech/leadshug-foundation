@@ -35,7 +35,7 @@ Usuário confirmou Channel abstrato/concretos e extensibilidade para Instagram, 
 ## Delivery Status Canon (Required)
 - **Current delivery stage:** Pending
 - **Qualifiers:** none
-- **Next exact step:** Reconvergir planejamento v1.3 com freeze publicado, arquitetura/crítica e guards; solicitar renovação humana para o índice específico e CI admission. Somente a correção já autorizada v1.2 de selected-window e leitura por conversa termina em paralelo; nenhum Prisma/CI/runtime antes de nova aprovação.
+- **Next exact step:** Reconvergir planejamento v1.3 com freeze publicado, arquitetura/crítica e guards; solicitar renovação humana para o índice específico e CI admission. Somente a correção já autorizada v1.2 de selected-window e leitura por conversa terminou no checkpoint88536; demais mudanças aguardam aprovação; nenhum Prisma/CI/runtime antes de nova aprovação.
 
 ## Active Work State (Required While TODO Remains In `active/`)
 - **Work state:** review
@@ -252,7 +252,7 @@ Nenhuma decisão de produto aberta. Assinaturas e semântica material congeladas
 | constitution#system-invariants | BU/número, domínio backend, superfícies separadas | Preserve | D01/02/08/09 |
 | integrations#invariants | providers adapters, erros determinísticos, segredo privado | Preserve | D01/03/04/05 |
 | integrations#send-ST-CON-01 | consumer usa credencial scoped/current/receipt | Preserve | novo binding privado, send readiness intacta |
-| inbox#aceitação-ST-CON-01 | MessageAcceptance único, identity/gen/epoch, sender/echo | Preserve | D03/06, sem schema |
+| inbox#aceitação-ST-CON-01 | MessageAcceptance único, identity/gen/epoch, sender/echo | Preserve | D03/06, sem campos novos; único índice de consulta D07 |
 | inbox#seleção/atribuição | sem troca automática/sem roubar claim | Preserve | corrigir desvio de fallback e snapshot de owner |
 | integrations/inbox#projeção-erros | código técnico específico distingue plataformas | Preserve | mapper explícito, outcome aditivo, sem false refusal de UNKNOWN |
 | ST-CON-05/04 pending | modelos/primeiro envio em contratos próprios | Preserve | só handoff/reconvergência, sem execução |
@@ -319,11 +319,11 @@ Nenhuma decisão de produto aberta. Assinaturas e semântica material congeladas
 - **Why this decision:** publicar autoridade do contrato antes de review/guard.
 - **Trigger stage:** before the first planning-side review or guard run
 - **Baseline branch:** main
-- **Baseline commit:** pending-v1.3-freeze
+- **Baseline commit:** 1d3a826126ad055f50a0c54182d2855dbc639d5d
 - **Baseline push reference:** origin/main
-- **Gate status:** pending
-- **Findings summary:** v1.3 prepared-pre-freeze; publicar contrato antes dos novos reviews. Freeze anterior v1.2 permanece histórico.
-- **Evidence / reference:** origin/maina35f676c696e21ec8b4e8ed5cbe6eafbe8da482c push terminal0 em2026-10-20; CR01/02 integrados antes de reconvergência do reviewer.
+- **Gate status:** not_run
+- **Findings summary:** renovar freeze v1.3 após integrar ARCH13-01/02 e atualizar premissas vivas; review42479 anterior preservado, crítica fresh seguirá baseline renovada.
+- **Evidence / reference:** origin/main@1d3a826126ad055f50a0c54182d2855dbc639d5d, push4484 terminal0; sete paths documentais exatos, nenhum código/CI/schema alterado neste freeze.
 - **Waiver authority / reference (required if waived):** n/a
 
 ## Gate: Review Scope Drift
@@ -334,7 +334,7 @@ Nenhuma decisão de produto aberta. Assinaturas e semântica material congeladas
 - **Material sections compared:** Context|Scope|Out of Scope|Definition of Done|Validation Steps|Decisions|Decision Baseline|Assumptions Preview|Execution Plan|Security Risk Assessment|Performance & Concurrency Risk Assessment
 - **Guard command:** python3 delphi-ai/tools/review_scope_drift_guard.py --todo foundation_documentation/todos/active/features/TODO-leadshug-channel-abstraction.md
 - **No-go handling rule:** reconvergir review/freeze, sem código.
-- **Gate status:** pending
+- **Gate status:** not_run
 - **Findings summary:** rerun requerido contra baseline v1.3 publicada/revisada; resultado v1.2 preservado como histórico.
 - **Evidence / reference:** foundation_documentation/artifacts/reviews/leadshug-channel-abstraction-20261020/evidence/review-scope-drift.json
 - **Waiver authority / reference (required if waived):** n/a
@@ -346,13 +346,16 @@ Nenhuma decisão funcional de produto aberta; D01..10 cobrem limites para challe
 n/a; decisões/canon citados diretamente, sem ID de catálogo presumido.
 
 ## Assumptions Preview (Required Before Plan Review)
+Premissas v1.2 de dispatch direto/runner find/ausência de active version foram satisfeitas pela implementação e encerradas; não são fatos vivos. Premissas abaixo refletem o checkpoint atual, sem inferir entrega.
+
 | Assumption ID | Assumption | Evidence | If False | Confidence | Handling |
 | --- | --- | --- | --- | --- | --- |
-| A-01 | dois senders comuns escolhem diretamente Meta/Evolution. | api-app/src/domain/inbox/conversations.service.ts; api-app/src/domain/inbox/incoming.service.ts | ampliar inventário/reconvergir | High | Keep as Assumption |
-| A-02 | credential resolver não verifica actor grant e não retorna active version. | api-app/src/domain/channels/channel-credential-resolver.ts | reutilizar mecanismo real, sem duplicação | High | Keep as Assumption |
-| A-03 | aceitação é owner único keyed e faz fence de identidade. | api-app/src/domain/inbox/message-acceptance.service.ts | corrigir boundary antes de cutover | High | Keep as Assumption |
-| A-04 | BFF/API pública respondem pelo ConversationsService; compose DI repetida. | api-app/src/surfaces/bff/conversations.controller.ts; api-app/src/surfaces/public/conversations.controller.ts; api-app/src/surfaces/bff/bff.module.ts | adaptar todos consumers legítimos | High | Keep as Assumption |
-| A-05 | browser usa backend real/build e runner faz find amplo. | web-app/playwright.config.ts; scripts/test-channels-local.sh | readiness antes de teste | High | Keep as Assumption |
+| A-01 | senders humano/público/bot agora usam OutboundService e port abstrato, sem dispatch de provider no consumer. | api-app/src/domain/inbox/conversations.service.ts:173; api-app/src/domain/inbox/incoming.service.ts:86; api-app/src/domain/inbox/outbound.service.ts | reconvergir cutover antes da entrega | High | Keep as Assumption |
+| A-02 | credential resolver retorna activeCredentialVersion e oferece inspeção metadata-only; grants de ator permanecem nas superfícies autorizadas. | api-app/src/domain/channels/channel-credential-resolver.ts:13; api-app/src/domain/channels/channel-credential-resolver.ts:29 | rever fences/GET e tenant boundary | High | Keep as Assumption |
+| A-03 | aceitação continua owner único keyed e faz fence de identidade, código original preservado. | api-app/src/domain/inbox/message-acceptance.service.ts | bloquear entrega e reconvergir boundary | High | Keep as Assumption |
+| A-04 | BFF/público/Typebot compõem o mesmo ChannelTransportModule, com autenticações próprias. | api-app/src/surfaces/bff/bff.module.ts:50; api-app/src/surfaces/public/public.module.ts; api-app/src/surfaces/webhooks/webhooks.module.ts | adaptar todos consumers legítimos | High | Keep as Assumption |
+| A-05 | browser usa backend real/build fresco e runner tem inventário positivo; só transporte Windows está implementado, CI completo/Linux guard continuam propostos. | web-app/playwright.config.ts; scripts/test-channels-local.sh | bloquear claim de paridade; corrigir antes de all final | High | Keep as Assumption |
+| A-06 | latest-IN filtra direction abaixo de índice conversation/createdAt e perde custo em OUT-heavy/no-IN; índice proposto inclui equality direction e ordenação id. | api-app/src/integrations/channels/prisma-channel-resolver.ts; api-app/test/number-onboarding-pcv.e2e-spec.ts | revisar plano PG real; nenhum índice por pressuposto | High | Keep as Assumption |
 
 ## Execution Plan (Required Before `APROVADO`)
 ### Touched Surfaces
@@ -401,7 +404,7 @@ Colunas Status duplicadas projetam o mesmo fato para leitores determinísticos d
 | root / runner topology | positive inventory + host-transport/CI parity | bash scripts/test-channels-local.sh all | Local-Implemented | planned | manifests/masks fictícios; nenhuma leitura dotenv/.local-files | planned | sem namespace humano; v1.3 guard/YAML + Linux replay pendentes | safe mount/config e origem da principal | leadshug_channels_validation inexistente antes do run, dados descartáveis |
 
 ### Runtime / Rollout Notes
-Única migration nova: 20261020170000_message_inbound_window_index, um CREATE INDEX versionado e espelhado em schema.prisma; sem campo/tabela/enum/retention novo. Deploy/status em PG descartável antes de aplicar ao DB local de testes preservado. Custo de armazenamento/escrita e breve bloqueio durante CREATE INDEX devem ser registrados; falha interrompe ativação, sem reset/drop. CI compartilha all/lifecycle, PR não-main com fixtures; remoto not_run até publicação autorizada. Local Windows preservado; replay Linux isolado sem privateenv ou dados humanos faz parte da renovação proposta. Namespace validation exclusivo, bundles/builds da principal. Runtime humano somente publicação local planejada e prova assistida depois de readiness; banco/canais preservados, sem reset ou rotação. Nenhum transporte real futuro ou status externo de entrega presumido.
+Única migration nova: 20261020170000_message_inbound_window_index, um CREATE INDEX versionado e espelhado em schema.prisma, transação BEGIN/COMMIT com SET LOCAL lock_timeout5s e statement_timeout60s; sem campo/tabela/enum/retention novo. Deploy/status em PG descartável antes de aplicar ao DB local de testes preservado. Custo de armazenamento/escrita e bloqueio de escritas durante toda a construção do índice devem ser registrados; duração real não é presumida breve. Limites transacionais: lock_timeout5s e statement_timeout60s; provar espera bloqueada/timeout/rollback em PG descartável antes do DB preservado. Falha ou commit incerto interrompe ativação, sem reset/drop ou reparo automático de migration metadata. CI compartilha all/lifecycle, PR não-main com fixtures; remoto not_run até publicação autorizada. Local Windows preservado; replay Linux isolado sem privateenv ou dados humanos faz parte da renovação proposta. Namespace validation exclusivo, bundles/builds da principal. Runtime humano somente publicação local planejada e prova assistida depois de readiness; banco/canais preservados, sem reset ou rotação. Nenhum transporte real futuro ou status externo de entrega presumido.
 
 ## Plan Review Gate (Review of the Execution Plan; required for `medium|big`; abbreviated for low-risk `small`)
 ### Review Sections
@@ -413,7 +416,7 @@ Colunas Status duplicadas projetam o mesmo fato para leitores determinísticos d
 - [x] Elegance
 - [x] Structural Soundness
 
-Revisão de planejamento concluída: architecture_opinion findings_integrated e crítica fresh terminal go. Checkboxes representam análise do plano, não execução/testes/medição do produto. PLAN01/02 opçãoA adotada; AR01..04/CR01..02 resolvidos nos relatórios.
+Revisão v1.2 concluída historicamente; v1.3 architecture42479 terminal com ARCH13-01/02 integrados e crítica fresh ainda requerida. Checkboxes representam lentes já analisadas, não conclusão da renovação nem execução/testes/medição. PLAN01/02 e AR01..04/CR01..02 anteriores preservados; nova prova de índice/CI permanece pendente.
 
 ### Issue Cards
 - **Issue ID:** PLAN-01
@@ -487,7 +490,7 @@ Revisão de planejamento concluída: architecture_opinion findings_integrated e 
 - **Critique isolation mode:** fresh internal no-context reviewer
 - **Internal reviewer mandate:** required, não executor; aguardar terminal sem prazo rígido.
 - **Critique lenses:** correctness,performance,elegance,structural-soundness,risk
-- **Critique status:** pending
+- **Critique status:** not_run
 - **Findings summary:** v1.2 convergido historicamente; renovar crítica fresh no contrato completo v1.3 após arquitetura da correção index/CI.
 - **Resolution ledger:** artifacts/reviews/leadshug-channel-abstraction-20261020/critique.md
 - **Evidence / reference:** artifacts/reviews/leadshug-channel-abstraction-20261020/critique.md; fresh /root/stcon06_critique gpt-6.1-sol/max, inicial81d56f5e + reconvergência terminala35f676c.
@@ -499,7 +502,7 @@ Revisão de planejamento concluída: architecture_opinion findings_integrated e 
 - **Trigger stage:** after critique convergence and before APROVADO
 - **Guard scope:** A01..05
 - **Guard command:** python3 delphi-ai/tools/assumption_code_coherence_guard.py --todo foundation_documentation/todos/active/features/TODO-leadshug-channel-abstraction.md
-- **Gate status:** pending
+- **Gate status:** not_run
 - **Findings summary:** revisão semântica A01..05 ancorada em fonte pública e conferida por arquitetura/crítica; adequações são trabalho explícito, sem fingir garantias atuais.
 - **Evidence / reference:** foundation_documentation/artifacts/reviews/leadshug-channel-abstraction-20261020/source-assumptions.json; architecture-opinion.md; critique.md; evidence/assumption-coherence.json, guard go/5 premissas.
 - **Waiver authority / reference (required if waived):** n/a
@@ -770,7 +773,11 @@ Concrete contract: [scope-renewal-v1.3-proposal.md](../../../artifacts/reviews/l
 - Confirmed PERF01 RED15524:194 unit pass/309 E2E pass/2 exact new failures; 200 direction-filtered OUT rows, and unnecessary window query for selected non-window channel. Raw log SHA8b2fc6510dafe4be8a10de73d150695a82a667bcb4255067e3b64da9b87ae248.
 - CIADM01 integrated current configuration/admission blocker. CIADM02 challenges only the implication that remote execution or waiver is needed for local milestone; remote remains not_run, future CI/promotion owner, no source push now. Fresh opinion raw/strictmerge in evidence/ci-admission-challenge.*.
 - PERF02 precision fixed inline in admitted test:5waves×20 per-conversation counts exactly1. No external same-key exactly-once claim.
-- New risks: B-tree storage/write maintenance; brief write lock during local CREATE INDEX; Linux/Windows path transport and checkout metadata; increased CI duration and existing private token availability. Mitigate with disposable migration/plan/concurrency proof, one common lifecycle/guard, no secret files, exact branch/source/served hashes and explicit unrun remote state.
+- New risks: B-tree storage/write maintenance; write blocking for the complete local CREATE INDEX build; transactional5s lock wait/60s statement bounds and measured rollback behavior; Linux/Windows path transport and checkout metadata; increased CI duration and existing private token availability. Mitigate with disposable migration/plan/concurrency proof, one common lifecycle/guard, no secret files, exact branch/source/served hashes and explicit unrun remote state.
 - Execution order after APROVADO: ingest revised rules/routing/authority; implement only exact admitted index/CI remediation; deploy/status disposable PG; verify real and mutated drift guards and Linux isolated topology; invalidate/replay broad all; fresh full audits/PCV; rebuild/migrate one local test DB/activate API-Web; new HTTPS/operator INOUT both; consolidation/final guards. No schema/CI/runtime before renewed approval.
 - Required rules added to ingestion: delphi-ai/skills/ci-equivalent-governance/SKILL.md; delphi-ai/skills/ci-equivalent-test-surface-admission/SKILL.md; delphi-ai/workflows/docker/update-ci-pipeline-method.md; existing Prisma/PostgreSQL rules. Actual binding reload after renewed approval.
-- Planning renewal status: prepared-pre-freeze; architecture_opinion + independent critique + assumption/scope/auditfloor/preapproval guards pending. No waiver.
+- Planning renewal status: architecture42479 terminal, ARCH13-01/02 integrated into exact guard invocation/retained CI step and transactional locking limits; refreshed live assumptions. Re-freeze before fresh critique/guards. No waiver.
+- Guard command inside common RUNNER_SCRIPT: python3 /workspace/scripts/check-channels-ci-parity.py --self-test, after apt Python/YAML and before source/npm/product execution. Retained Compose job independently invokes the same guard before its config check; missing-job/skipped-invocation negative controls required. CI enforcement cannot certify a completely deleted workflow.
+- Index migration is one CREATE INDEX bracketed by BEGIN/COMMIT and SET LOCAL lock_timeout5s/statement_timeout60s; no data mutation. Local executor owns planned write interruption for full build; timeout/lock/rollback proof in disposable PG first. Stop on failure/uncertain commit; no reset/drop/automatic migration repair.
+
+Checkpoint88536 (source frozen during run):194 unit +310 E2E passed, sole expected PERF01 history-scan RED; selected non-window latest-IN queries0, PERF02 per-conversation counts1 across5waves×20. Full log SHAbe1854e98b3a2e051e903f7459758ede9f7020d6195b26bf2056793cac2e8600; root exact-source/log proof evidence/perf01-after-selection-root-proof.json. Not final all or acceptance.

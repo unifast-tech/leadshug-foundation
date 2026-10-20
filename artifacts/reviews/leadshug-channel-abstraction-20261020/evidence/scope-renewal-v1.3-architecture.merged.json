@@ -1,0 +1,59 @@
+{
+  "schema_version": "subagent-review-merge-v2",
+  "artifact_kind": "subagent_review_merge",
+  "authoritative": false,
+  "edit_policy": "derived_merge_packet",
+  "dispatch_path": "/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/artifacts/reviews/leadshug-channel-abstraction-20261020/evidence/scope-renewal-v1.3-architecture.dispatch.json",
+  "review_kind": "architecture_opinion",
+  "review_count": 1,
+  "reviewer_labels": [
+    "fresh-internal-no-context-architecture-reviewer"
+  ],
+  "highest_finding_severity": "medium",
+  "axis_summary": {
+    "performance": "mixed",
+    "elegance": "strong_positive",
+    "structural_soundness": "strong_positive",
+    "operational_fit": "mixed"
+  },
+  "recommended_paths": [
+    "Choose the single Prisma-managed composite index plus selected-window-only projection, and extend host transport selection around the existing all/RUNNER_SCRIPT lifecycle. The managed index is preferable here to the viable partial-index alternative because schema and migration ownership remain explicit; its principal tradeoff is indexing OUT rows as well as IN rows. The shared runner is preferable to a separately duplicated Linux CI lifecycle because suites, ordering, fixtures, freshness and cleanup retain one executable owner; its tradeoff is transport-specific path and Docker-engine validation. The admitted paths suffice for this design. Freeze the guard invocation and enforcement boundary, accurately describe nonconcurrent migration locking, then complete the planning gates and request renewed approval. Require successful isolated Linux execution before local delivery; YAML inspection alone establishes configuration only."
+  ],
+  "exact_next_step": "Record reviewer resolutions in the governing TODO using the machine-checkable resolution table or equivalent gate ledger, then extract the derived resolution packet and decide whether another bounded review pass is still required.",
+  "findings": [
+    {
+      "finding_id": "F-8789F18E",
+      "severity": "medium",
+      "title": "Nonconcurrent index locking is not necessarily brief",
+      "rationale": "The exact migration uses ordinary CREATE INDEX, which blocks table writes for the duration of the index build and can first wait for conflicting transactions. The proposal acknowledges write locking but repeatedly characterizes it as brief without a measured duration or execution budget. Increasing-history read-plan proof does not establish the duration or operational impact of building the index on the preserved local database. This affects the interruption risk presented for renewed approval.",
+      "suggested_action": "Describe locking as lasting for the complete build, with duration dependent on the preserved table and concurrent activity. Define the local migration owner's permitted interruption and finite lock-wait/build limits, and validate representative locking and failure behavior on disposable PostgreSQL before activation. Keep the single approved CREATE INDEX and the stated stop-on-failure, data-preserving recovery boundary.",
+      "reviewer_labels": [
+        "fresh-internal-no-context-architecture-reviewer"
+      ],
+      "source_finding_ids": [
+        "ARCH13-02"
+      ],
+      "category": "operational_fit",
+      "formalizable_hint": "partial",
+      "candidate_rule_level": "project",
+      "candidate_rule_id": "n/a"
+    },
+    {
+      "finding_id": "F-D4A7CE68",
+      "severity": "medium",
+      "title": "Freeze the parity guard invocation and enforcement boundary",
+      "rationale": "D10 and the proposal require the guard to fail before product suites, but the representative workflow invokes only all, and the proposal does not explicitly place the guard call within the wrapper or RUNNER_SCRIPT. Python/YAML installation is planned inside the container, which matters to that placement. Also, a guard reached exclusively through channels-validation cannot itself enforce remote failure when that entire job is deleted or skipped. Mandatory local admission can detect such drift, but that enforcement boundary should be explicit. This is an execution-contract ambiguity rather than a demonstrated implementation failure.",
+      "suggested_action": "Specify the guard command and call site after its container prerequisites and before product execution, with failure propagated through the wrapper and cleanup. State whether missing-job protection is enforced by mandatory local admission or independently in CI. If independent CI enforcement is intended, specify its invocation from a retained workflow job using the already admitted workflow and guard paths. Include meaningful missing-job and skipped-invocation controls for the enforcement boundary actually claimed.",
+      "reviewer_labels": [
+        "fresh-internal-no-context-architecture-reviewer"
+      ],
+      "source_finding_ids": [
+        "ARCH13-01"
+      ],
+      "category": "structural_soundness",
+      "formalizable_hint": "yes",
+      "candidate_rule_level": "project",
+      "candidate_rule_id": "n/a"
+    }
+  ]
+}
