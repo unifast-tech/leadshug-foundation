@@ -16,7 +16,10 @@
     "context-change precedence for all UNKNOWN evidence; knownACKfinalizationfailure checkcontext",
     "nullcandidate availability must preserve CANAL_AMBIGUO reason",
     "reuse operation-local BU metadata in publiclist; no newqueryfanout",
-    "postdispatch contextstate tracks identityfence ratherthan simple connectionreadiness"
+    "postdispatch contextstate tracks identityfence ratherthan simple connectionreadiness",
+    "Public list must preserve reason=null when available; nullish fallback falsely projected unavailable code",
+    "Inbox should explain fixed availability reasons with user wording rather than raw enum",
+    "Meta error+external-ID contradictory response must remain UNKNOWN; tautological contradictoryIdRefusal incorrectly classified REJECTED"
   ],
   "executor_reports": "Core integration findings applied; independent Channel fake via registry/real resolver, real REAUTORIZAR generation race, version-only reseal, ingress pinning/crossBU/tie/claim barriers added; channel-specific PCV metrics now executing.",
   "next_parent_steps": [
@@ -46,5 +49,21 @@
     "files": 21,
     "e2e_status": "running",
     "scope": "not final all; no delivery claim"
+  },
+  "operator_resource_availability": {
+    "source": "user reply2026-10-20",
+    "channels": "official and unofficial reported available",
+    "tunnel": "user suspects offline; current health unverified",
+    "next_action": "After automated validation, revalidate exact local runtime and tunnel; restore access as needed before assisted real IN/OUT. No private config read or re-pairing authorized by this fact."
+  },
+  "bounded_path_admission": {
+    "status": "explicitly validated by user2026-10-20",
+    "proposal": "test-companion-path-admission.md",
+    "paths": [
+      "web:src/api.spec.ts",
+      "web:e2e/timeline-freshness.ts"
+    ],
+    "reason": "Strict expected-path contract omitted existing test/helper companions required by D10. Browser/all paused, independent approved API/Web work continues.",
+    "authority": "Literal reply: Validar os dois arquivos de apoio; appended ExpectedPaths and supplemental validation to governing TODO."
   }
 }

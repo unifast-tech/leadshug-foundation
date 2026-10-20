@@ -1,0 +1,42 @@
+{
+  "status": "preparation_only",
+  "todo": "ST-CON-06",
+  "recorded_at_utc": "2026-10-20T14:24:18.951820+00:00",
+  "security_risk": "high",
+  "attack_simulation_decision": "required",
+  "sources": [
+    {
+      "url": "https://api-security.owasp.org/editions/2023/en/0xa1-broken-object-level-authorization/",
+      "retrieval": "success",
+      "use": "Derive tests for authorized BU/conversation ownership, forged ingress binding, session/API key scope. This reference alone is not a vulnerability finding."
+    },
+    {
+      "url": "https://api-security.owasp.org/editions/2023/en/0xaa-unsafe-consumption-of-apis/",
+      "retrieval": "success via official API1 navigation; initial guessed 0xa10 path inaccessible",
+      "use": "Review provider response validation, redirects, bounded timeouts, safe error projection. No new provider request authorized."
+    }
+  ],
+  "surface_hypotheses": [
+    {
+      "surface": "BFF/public controllers -> common Outbound -> scoped Resolver",
+      "hypothesis": "Forged IDs or mismatched BU could select another resource/credential",
+      "required_evidence": "Real scoped unauthorized BFF/key and mismatched verified-ingress rejection; zero external sends."
+    },
+    {
+      "surface": "operation-bound adapter context",
+      "hypothesis": "Concurrent BUs or version/epoch/generation change could reuse stale secret/binding",
+      "required_evidence": "Barrier-driven operations, no rebinding/retry, real generation rotation."
+    },
+    {
+      "surface": "raw provider HTTP -> result projection -> ErroDaApi/Inbox",
+      "hypothesis": "Malformed/contradictory response or raw error could leak secret or falsely claim rejection/success",
+      "required_evidence": "Timeout/redirect/HTTP/body matrix, fixed public errors and retained draft."
+    }
+  ],
+  "scope_limits": [
+    "Disposable validation namespace and fixture providers only",
+    "No .env/.env.testing content or api-app/.local-files access",
+    "No real account/provider requests or external messages",
+    "Formal security review and simulation adjudication remain pending"
+  ]
+}

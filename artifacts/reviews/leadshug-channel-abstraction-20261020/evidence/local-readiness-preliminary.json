@@ -1,0 +1,32 @@
+{
+  "recorded_at_utc": "2026-10-20T14:35:47.261577+00:00",
+  "status": "preliminary read-only; not new-code activation or provider proof",
+  "runtime_project": "leadshug_channels_local",
+  "source": "docker.exe ps project-filtered and curl.exe health only",
+  "services": {
+    "api": "running, Docker healthy",
+    "web": "running",
+    "gateway": "running, loopback8083 only",
+    "postgres": "running, healthy",
+    "evolution": "running",
+    "evolution-postgres": "running, healthy",
+    "evolution-redis": "running, healthy"
+  },
+  "local_health": {
+    "url": "http://127.0.0.1:8083/health",
+    "http": 200,
+    "exit": 0
+  },
+  "previous_public_health": {
+    "url": "https://tooth-mode-bean-bulletin.trycloudflare.com/health",
+    "http": 0,
+    "exit": 6,
+    "error": "DNS host resolution failed; no TLS handshake established"
+  },
+  "limits": [
+    "Container process health does not certify current official or QR connection",
+    "No provider requests, secrets/config reads, messages, reset, restart or source activation",
+    "Local running source/build not attested to ST-CON-06",
+    "HTTPS restoration and new-source activation remain pending after validation"
+  ]
+}

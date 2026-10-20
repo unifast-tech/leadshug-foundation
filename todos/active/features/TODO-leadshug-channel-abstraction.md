@@ -110,10 +110,12 @@ n/a; só Foundation main é autoridade documental autônoma nesta preparação.
 | api | test/*.e2e-spec.ts | M | suites consumidoras da interface alterada, sem afrouxar assertivas |
 | api | src/domain/inbox/*.spec.ts | M | consumo abstrato e regressões |
 | web | src/api.ts | M | DTO aditivo disponibilidade |
+| web | src/api.spec.ts | M | companion de metadados seguros D10; admissão humana2026-10-20 |
 | web | src/telas/Inbox.tsx | M | composer indisponível/motivo e erro |
 | web | src/telas/Inbox*.test.tsx | any | render/estado |
 | web | e2e/channel-transport* | A | mutation BFF real |
 | web | e2e/number-onboarding-freshness.ts | M | manifesto se afetado |
+| web | e2e/timeline-freshness.ts | M | companion chamado antes do manifesto; pathspec positivo antes de discovery; admissão humana2026-10-20 |
 | root | scripts/test-channels-local.sh | M | inventário positivo seguro antes de testes |
 | foundation | todos/active/features/TODO-leadshug-channel-abstraction.md | M | governança/evidências |
 | foundation | todos/completed/features/TODO-leadshug-channel-abstraction.md | A | closeout após gates |
@@ -687,3 +689,7 @@ Direction and extension requirements are explicit user statements2026-10-20. Ini
 | --- | --- | --- |
 | CP01 — runner antes de testes | passed precondition | artifacts/reviews/leadshug-channel-abstraction-20261020/evidence/runner-checkpoint.json; allowlist antes de stat, sem varredura ampla; bash-n/diffcheck/mock config-only. Nenhum teste de produto ou Docker real executado neste checkpoint. |
 | CP02 — Channel/outbound/consumers + Web/tests | running; RED confirmado | /root/stcon06_executor único writer; artifacts/tmp/stcon06-executor-* e evidence/executor-validation.json reservados ao executor. RED em evidence/red-checkpoint.json:175unit passam/1 guard falha por dispatch legado. API#5 GREEN parcial:188unit/291PG; API#8:194unit passam, matriz PG ampliada em execução. all/Web/browser/assurance/realINOUT pendentes. Nenhum gate de entrega satisfeito ainda. |
+
+## Supplemental Expected-Path Validation — 2026-10-20
+
+User explicitly replied **“Validar os dois arquivos de apoio”** to the exact bounded proposal [test-companion-path-admission.md](../../../artifacts/reviews/leadshug-channel-abstraction-20261020/test-companion-path-admission.md). This validates only Web `src/api.spec.ts` and `e2e/timeline-freshness.ts` as M companions for D10/SCOPE05. Scope, DoD, public behavior, frozen D01..10, private-data prohibition and required checks are unchanged. The direct client test was already added before the path omission was noticed; its admission is explicit here. The nested helper correction was not applied or run before this validation. Executor remains sole product writer; browser/all may proceed only after both freshness inventories use positive pathspecs before discovery.
