@@ -42,12 +42,12 @@ O usuário quer que o vendedor prepare sua mensagem no LeadsHug e a deixe dispon
 
 - **Current delivery stage:** Pending
 - **Qualifiers:** none
-- **Next exact step:** apresentar contrato ST-CON-05 e aguardar APROVADO específico; após aprovação, reload binding/authority go e executor serializado.
+- **Next exact step:** reconvergir este contrato com Channel abstrato solicitado em2026-10-20, após enquadramento/contrato ST-CON-06; revisões e preflight anteriores são históricos, sem aprovação de execução sobre a nova direção.
 
 ## Active Work State (Required While TODO Remains In `active/`)
 
 - **Work state:** review
-- **Why this state now:** arquitetura/crítica e guardas de planejamento satisfeitos; aguarda APROVADO específico, sem implementação.
+- **Why this state now:** orientação humana de2026-10-20 estabelece Channel abstrato/concretos; contrato de consumo precisa reconvergir antes de nova revisão/solicitação de APROVADO.
 - **Exit condition:** APROVADO específico + reload binding + authority go habilitam executor operacional.
 
 ## Scope
@@ -799,3 +799,9 @@ Delta review independente terminal contra0d4957b3: CR01..03 convergiram sem acha
 | TODO structure / lifecycle | PASS / exit0 | evidence/structure-final.json; evidence/planning-validation.json |
 
 Todos os artifacts acima pertencem a artifacts/reviews/leadshug-template-authoring-20261019/. Nenhuma suite de produto, migration, publicação de runtime ou chamada de conta Meta foi executada nesta preparação. Próxima autorização é APROVADO específico do ST-CON-05; concordância funcional anterior não a substitui.
+
+## Reframing — Channel abstraction request, 2026-10-20
+
+ST-CON-05 conserva o objetivo funcional e permanece sem APROVADO específico de implementação. Nova direção humana exige Channel abstrato, concretos de WhatsApp e resolução/injeção scoped; preparar ST-CON-06 antes deste consumer. [Enquadramento e evidência](../../../artifacts/feature-briefs/leadshug-channel-abstraction-20261020.md).
+
+Decisões, pareceres e guardas de2026-10-19 descrevem o pacote então revisado; não são aprovação/readiness do contrato que será rebaseado. Este registro apenas invalida a indicação anterior de pronto para aprovação e preserva o histórico; assinaturas/paths/baseline serão reconvergidos no próximo ciclo de refinamento/reviews/guardas, sem adaptar código antecipadamente.

@@ -41,12 +41,12 @@ ST-CON-01 encerrou a prova local de cadastro e troca real dos dois transportes, 
 
 - **Current delivery stage:** Pending
 - **Qualifiers:** none
-- **Next exact step:** usuário pediu autoria/submissão no produto em2026-10-19; primeiro revisar/aprovar/entregar ST-CON-05, depois rebase/reconvergência deste consumer e APROVADO próprio.
+- **Next exact step:** reconvergir este contrato com Channel abstrato solicitado em2026-10-20, após enquadramento/contrato ST-CON-06; revisões e preflight anteriores são históricos, sem aprovação de execução sobre a nova direção.
 
 ## Active Work State (Required While TODO Remains In `active/`)
 
 - **Work state:** review
-- **Why this state now:** revisão do contrato antes da primeira implementação; nenhum produto foi alterado.
+- **Why this state now:** orientação humana de2026-10-20 estabelece Channel abstrato/concretos; contrato de consumo precisa reconvergir antes de nova revisão/solicitação de APROVADO.
 - **Exit condition:** aprovação explícita do pacote revisado + ingestão binding e authority go autorizam handoff operacional.
 
 ## Scope
@@ -799,3 +799,9 @@ Assumption-code guard inicialmente retornou NO-GO apenas em A01: seu parser PATH
 ## Sequencing handoff — request2026-10-19
 
 Usuário quer vendedor criar e enviar modelo para análise da Meta dentro do LeadsHug. Autoridade desse novo objetivo é o [TODO ST-CON-05](TODO-leadshug-official-template-authoring.md), não uma ampliação silenciosa deste sender. ST-CON-04 permanece sem aprovação/implementação e preserva suas exclusões de criação/gestão. Após entrega do ST-CON-05, rebasear premissas/source/diff/DI para consumir o mesmo domínio/catálogo, sem duplicá-lo; rerodar reviews afetados/guardas e pedir APROVADO do consumer então. Revisões/guardas anteriores continuam evidência histórica de seu próprio baseline, não autorização do programa ampliado.
+
+## Reframing — Channel abstraction request, 2026-10-20
+
+ST-CON-04 conserva o objetivo funcional e permanece sem APROVADO específico de implementação. Nova direção humana exige Channel abstrato, concretos de WhatsApp e resolução/injeção scoped; preparar ST-CON-06 antes deste consumer. [Enquadramento e evidência](../../../artifacts/feature-briefs/leadshug-channel-abstraction-20261020.md).
+
+Decisões, pareceres e guardas de2026-10-19 descrevem o pacote então revisado; não são aprovação/readiness do contrato que será rebaseado. Este registro apenas invalida a indicação anterior de pronto para aprovação e preserva o histórico; assinaturas/paths/baseline serão reconvergidos no próximo ciclo de refinamento/reviews/guardas, sem adaptar código antecipadamente.
