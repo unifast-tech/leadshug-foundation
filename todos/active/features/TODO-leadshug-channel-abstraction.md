@@ -35,11 +35,11 @@ Usuário confirmou Channel abstrato/concretos e extensibilidade para Instagram, 
 ## Delivery Status Canon (Required)
 - **Current delivery stage:** Pending
 - **Qualifiers:** none
-- **Next exact step:** publicar freeze deste TODO, architecture_opinion e crítica independentes, guardas pré-aprovação; pedir APROVADO antes de produto.
+- **Next exact step:** solicitar APROVADO específico do ST-CON-06 v1.2; revisões convergidas/guardas go/preflight-go. Após aprovação, reload binding + authority go antes de produto.
 
 ## Active Work State (Required While TODO Remains In `active/`)
 - **Work state:** review
-- **Why this state now:** preparação do contrato tático; código/runtime intactos.
+- **Why this state now:** contrato v1.2 revisado, arquitetura integrada e crítica fresh reconvergida go; execução aguarda APROVADO específico.
 - **Exit condition:** pacote convergido + APROVADO específico + reload binding + authority go.
 
 ## Scope
@@ -303,11 +303,11 @@ Nenhuma decisão de produto aberta. Assinaturas e semântica material congeladas
 - **Why this decision:** publicar autoridade do contrato antes de review/guard.
 - **Trigger stage:** before the first planning-side review or guard run
 - **Baseline branch:** main
-- **Baseline commit:** 81d56f5e60a6ec99a996dfb3ba51987c4f009849
+- **Baseline commit:** a35f676c696e21ec8b4e8ed5cbe6eafbe8da482c
 - **Baseline push reference:** origin/main
 - **Gate status:** no_material_findings
 - **Findings summary:** contrato publicado antes dos reviews/guardas; somente freeze metadata factual acrescentada depois.
-- **Evidence / reference:** origin/main81d56f5e60a6ec99a996dfb3ba51987c4f009849 push terminal0 em2026-10-20; AR01..04/obrigações integrados antes de crítica.
+- **Evidence / reference:** origin/maina35f676c696e21ec8b4e8ed5cbe6eafbe8da482c push terminal0 em2026-10-20; CR01/02 integrados antes de reconvergência do reviewer.
 - **Waiver authority / reference (required if waived):** n/a
 
 ## Gate: Review Scope Drift
@@ -318,9 +318,9 @@ Nenhuma decisão de produto aberta. Assinaturas e semântica material congeladas
 - **Material sections compared:** Context|Scope|Out of Scope|Definition of Done|Validation Steps|Decisions|Decision Baseline|Assumptions Preview|Execution Plan|Security Risk Assessment|Performance & Concurrency Risk Assessment
 - **Guard command:** python3 delphi-ai/tools/review_scope_drift_guard.py --todo foundation_documentation/todos/active/features/TODO-leadshug-channel-abstraction.md
 - **No-go handling rule:** reconvergir review/freeze, sem código.
-- **Gate status:** not_run
-- **Findings summary:** pending-freeze
-- **Evidence / reference:** pending-freeze
+- **Gate status:** no_material_findings
+- **Findings summary:** guard go;23 seções materiais comparadas,0 alterações frente a baselinea35f676c publicada/revisada.
+- **Evidence / reference:** foundation_documentation/artifacts/reviews/leadshug-channel-abstraction-20261020/evidence/review-scope-drift.json
 - **Waiver authority / reference (required if waived):** n/a
 
 ## Questions To Close
@@ -389,13 +389,15 @@ Sem migration nova/schema/enum. Migrations existentes deploy/status em PG descar
 
 ## Plan Review Gate (Review of the Execution Plan; required for `medium|big`; abbreviated for low-risk `small`)
 ### Review Sections
-- [ ] Architecture
-- [ ] Code Quality
-- [ ] Tests
-- [ ] Performance
-- [ ] Security
-- [ ] Elegance
-- [ ] Structural Soundness
+- [x] Architecture
+- [x] Code Quality
+- [x] Tests
+- [x] Performance
+- [x] Security
+- [x] Elegance
+- [x] Structural Soundness
+
+Revisão de planejamento concluída: architecture_opinion findings_integrated e crítica fresh terminal go. Checkboxes representam análise do plano, não execução/testes/medição do produto. PLAN01/02 opçãoA adotada; AR01..04/CR01..02 resolvidos nos relatórios.
 
 ### Issue Cards
 - **Issue ID:** PLAN-01
@@ -431,7 +433,7 @@ Sem migration nova/schema/enum. Migrations existentes deploy/status em PG descar
 - [ ] Cutover sem intent durável conserva limite de crash antes da aceitação/publicação e diagnósticos null-ID sem dedupe; ST-CON-04 deve reconvergir esse limite, não inferir exactly-once.
 - [ ] Port extensível não significa persistência/contato/ingress de rede nova pronto; fake só prova substituição interna.
 - [ ] Readiness real e medições só depois de aprovação; coorte privada continua, sem produção/usuário não confiável liberado.
-- [ ] Arquitetura tática concluída com achados integrados; crítica independente e guardas finais ainda pendentes, nenhum produto executado.
+- [ ] Arquitetura integrada e crítica fresh reconvergida go no pacote v1.2; guardas finais de planejamento abaixo, toda prova de produto permanece planned.
 
 ## Additional Architectural Opinions (Required When Path Remains Materially Unclear)
 - **Needed:** no
@@ -469,10 +471,10 @@ Sem migration nova/schema/enum. Migrations existentes deploy/status em PG descar
 - **Critique isolation mode:** fresh internal no-context reviewer
 - **Internal reviewer mandate:** required, não executor; aguardar terminal sem prazo rígido.
 - **Critique lenses:** correctness,performance,elegance,structural-soundness,risk
-- **Critique status:** findings_integrated
-- **Findings summary:** CR01 precedência null-ID/contexto e CR02 pointer final integrados; parecer inicial no-go terminal, reconvergência do delta pendente.
+- **Critique status:** no_material_findings
+- **Findings summary:** CR01/02 integrados; reconvergência terminal go no contrato completo v1.2/baselinea35f676c, nenhum achado material aberto. Parecer no-go original preservado no ledger.
 - **Resolution ledger:** artifacts/reviews/leadshug-channel-abstraction-20261020/critique.md
-- **Evidence / reference:** artifacts/reviews/leadshug-channel-abstraction-20261020/critique.md; fresh /root/stcon06_critique gpt-6.1-sol/max, baseline81d56f5e.
+- **Evidence / reference:** artifacts/reviews/leadshug-channel-abstraction-20261020/critique.md; fresh /root/stcon06_critique gpt-6.1-sol/max, inicial81d56f5e + reconvergência terminala35f676c.
 - **Waiver authority / reference (required if waived):** n/a
 
 ## Gate: Assumption Code Coherence
@@ -481,9 +483,9 @@ Sem migration nova/schema/enum. Migrations existentes deploy/status em PG descar
 - **Trigger stage:** after critique convergence and before APROVADO
 - **Guard scope:** A01..05
 - **Guard command:** python3 delphi-ai/tools/assumption_code_coherence_guard.py --todo foundation_documentation/todos/active/features/TODO-leadshug-channel-abstraction.md
-- **Gate status:** not_run
-- **Findings summary:** pending-freeze
-- **Evidence / reference:** pending-freeze
+- **Gate status:** no_material_findings
+- **Findings summary:** revisão semântica A01..05 ancorada em fonte pública e conferida por arquitetura/crítica; adequações são trabalho explícito, sem fingir garantias atuais.
+- **Evidence / reference:** foundation_documentation/artifacts/reviews/leadshug-channel-abstraction-20261020/source-assumptions.json; architecture-opinion.md; critique.md; evidence/assumption-coherence.json, guard go/5 premissas.
 - **Waiver authority / reference (required if waived):** n/a
 
 ## Approval
@@ -492,6 +494,7 @@ Sem migration nova/schema/enum. Migrations existentes deploy/status em PG descar
 - **Approval scope:** ST-CON-06/SCOPE01..05/D01..10, depois da convergência do pacote concreto; concordância com conceito não substitui APROVADO.
 - **Execution not authorized by approval:** todo Out of Scope, redes futuras,05/04, push/deploy de produto ou mudanças privadas.
 - **Renewed approval required when:** decisões/DoD/paths/risco/contrato mudarem materialmente.
+- **Pre-approval readiness evidence:** artifacts/reviews/leadshug-channel-abstraction-20261020/README.md; authority-preapproval.json = preflight-go, execution_authority_granted=false; estrutura PASS. APROVADO humano permanece pending.
 
 ## Rules Acknowledgement / Ingestion (Required After `APROVADO` and Before Execution)
 Ingestão de planejamento; reload binding obrigatório após APROVADO antes de produto. Registro de regra/template não é evidência de execução.
@@ -522,7 +525,7 @@ Ingestão de planejamento; reload binding obrigatório após APROVADO antes de p
 - **Worktree / auxiliary-checkout authorization:** not-authorized
 - **Worktree authorization evidence:** n/a
 - **Writer scheduling policy:** single-writer-serialized
-- **Guard outcome:** pending
+- **Guard outcome:** go
 - **Waiver / exception reference:** n/a
 
 Reviewers architecture_opinion e critique: gpt-6.1-sol/max, fresh fork_turns none, routing go distinto antes de dispatch. Primário não se declara outro modelo. Nenhum GOAL persistente criado sem pedido humano.
@@ -545,7 +548,7 @@ Planejado para o gate de entrega após APROVADO; nenhum resultado de implementa�
 ## TODO Closeout Disposition
 - **Disposition:** keep-active
 - **Disposition reason:** preparação e reviews pré-aprovação.
-- **Post-commit/push status:** pending-freeze
+- **Post-commit/push status:** baseline materiala35f676c publicada/revisada; pacote documental finalizado com guardas pré-aprovação; produto Pending.
 - **Next path/status action:** apresentar contrato convergido para APROVADO; não há entrega de produto.
 
 ## Security Risk Assessment (Mandatory Before Delivery)

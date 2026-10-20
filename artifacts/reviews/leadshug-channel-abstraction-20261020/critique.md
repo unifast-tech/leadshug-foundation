@@ -13,4 +13,10 @@ Lentes do reviewer: performance condicionalmente aceitável (metadata da BU reut
 
 Residuais aceitos no planejamento: corrida leitura local→rede, crash gaps/commit incerto e ausência de intent durável, dedupe null-ID, identidade/ingress de novas redes futuros. A janela temporal atual usa latest IN da conversa sem filtro de transporte; preservar explicitamente e reconvergir trusted timestamps em04. Nenhum resultado de medição, readiness ou produto é alegado.
 
-Reconvergência após publicação do contrato v1.2: pending; mesmo reviewer receberá pacote completo atualizado e deltaCR01/02, sem substituir ou interromper revisão viva.
+## Reconvergência terminal
+
+**GO de planejamento para v1.2, baselinea35f676c696e21ec8b4e8ed5cbe6eafbe8da482c.** Mesmo reviewer releu todas679 linhas e confirmou CR01/02 resolvidos, sem achado material restante. Preservou mandatos/lentes anteriores, conferiu produto HEADs e Foundation por rev-parse. Sem edição/testes/runtime/account calls/paths privados. Routing de reconvergência go em evidence/routing-critique-reconvergence.json.
+
+Correctness/code quality favoráveis para o plano; performance condicionalmente aceitável com EPS/FRC/BCI/RLS futuros; elegance/structural soundness favoráveis; segurança e operational fit favoráveis no escopo. Nenhum classifier, saúde de runtime, teste de produto ou medição é certificado. O go permite concluir guardas de planejamento e pedir APROVADO específico; não autoriza implementação.
+
+A janela temporal current latest-IN sem filtro de transporte permanece limitação explícita a preservar no handoff ST-CON-04.

@@ -1,0 +1,105 @@
+{
+  "artifact_kind": "assumption_code_coherence_guard",
+  "todo_path": "/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/todos/active/features/TODO-leadshug-channel-abstraction.md",
+  "repo_root": "/mnt/c/unifast/leadshug/leadshug_now_docker",
+  "overall_outcome": "go",
+  "live_assumption_ids": [
+    "A-01",
+    "A-02",
+    "A-03",
+    "A-04",
+    "A-05"
+  ],
+  "gate": {
+    "section_present": true,
+    "decision": "required",
+    "status": "no_material_findings",
+    "evidence_reference": "foundation_documentation/artifacts/reviews/leadshug-channel-abstraction-20261020/source-assumptions.json; architecture-opinion.md; critique.md; guard determin\u00edstico a seguir.",
+    "waiver_reference": "n/a"
+  },
+  "assumptions": [
+    {
+      "assumption_id": "A-01",
+      "handling": "Keep as Assumption",
+      "evidence": "api-app/src/domain/inbox/conversations.service.ts; api-app/src/domain/inbox/incoming.service.ts",
+      "path_tokens": [
+        "api-app/src/domain/inbox/conversations.service.ts",
+        "api-app/src/domain/inbox/incoming.service.ts"
+      ],
+      "resolved_paths": [
+        "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app/src/domain/inbox/conversations.service.ts",
+        "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app/src/domain/inbox/incoming.service.ts"
+      ],
+      "resolved_code_paths": [
+        "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app/src/domain/inbox/conversations.service.ts",
+        "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app/src/domain/inbox/incoming.service.ts"
+      ]
+    },
+    {
+      "assumption_id": "A-02",
+      "handling": "Keep as Assumption",
+      "evidence": "api-app/src/domain/channels/channel-credential-resolver.ts",
+      "path_tokens": [
+        "api-app/src/domain/channels/channel-credential-resolver.ts"
+      ],
+      "resolved_paths": [
+        "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app/src/domain/channels/channel-credential-resolver.ts"
+      ],
+      "resolved_code_paths": [
+        "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app/src/domain/channels/channel-credential-resolver.ts"
+      ]
+    },
+    {
+      "assumption_id": "A-03",
+      "handling": "Keep as Assumption",
+      "evidence": "api-app/src/domain/inbox/message-acceptance.service.ts",
+      "path_tokens": [
+        "api-app/src/domain/inbox/message-acceptance.service.ts"
+      ],
+      "resolved_paths": [
+        "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app/src/domain/inbox/message-acceptance.service.ts"
+      ],
+      "resolved_code_paths": [
+        "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app/src/domain/inbox/message-acceptance.service.ts"
+      ]
+    },
+    {
+      "assumption_id": "A-04",
+      "handling": "Keep as Assumption",
+      "evidence": "api-app/src/surfaces/bff/conversations.controller.ts; api-app/src/surfaces/public/conversations.controller.ts; api-app/src/surfaces/bff/bff.module.ts",
+      "path_tokens": [
+        "api-app/src/surfaces/bff/conversations.controller.ts",
+        "api-app/src/surfaces/public/conversations.controller.ts",
+        "api-app/src/surfaces/bff/bff.module.ts"
+      ],
+      "resolved_paths": [
+        "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app/src/surfaces/bff/conversations.controller.ts",
+        "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app/src/surfaces/public/conversations.controller.ts",
+        "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app/src/surfaces/bff/bff.module.ts"
+      ],
+      "resolved_code_paths": [
+        "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app/src/surfaces/bff/conversations.controller.ts",
+        "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app/src/surfaces/public/conversations.controller.ts",
+        "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app/src/surfaces/bff/bff.module.ts"
+      ]
+    },
+    {
+      "assumption_id": "A-05",
+      "handling": "Keep as Assumption",
+      "evidence": "web-app/playwright.config.ts; scripts/test-channels-local.sh",
+      "path_tokens": [
+        "web-app/playwright.config.ts",
+        "scripts/test-channels-local.sh"
+      ],
+      "resolved_paths": [
+        "/mnt/c/unifast/leadshug/leadshug_now_docker/web-app/playwright.config.ts",
+        "/mnt/c/unifast/leadshug/leadshug_now_docker/scripts/test-channels-local.sh"
+      ],
+      "resolved_code_paths": [
+        "/mnt/c/unifast/leadshug/leadshug_now_docker/web-app/playwright.config.ts",
+        "/mnt/c/unifast/leadshug/leadshug_now_docker/scripts/test-channels-local.sh"
+      ]
+    }
+  ],
+  "issues": []
+}

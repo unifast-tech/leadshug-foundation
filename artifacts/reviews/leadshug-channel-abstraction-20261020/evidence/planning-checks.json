@@ -1,0 +1,44 @@
+{
+  "client_date": "2026-10-20",
+  "kind": "planning-only-final-receipt",
+  "material_review_baseline": "a35f676c696e21ec8b4e8ed5cbe6eafbe8da482c",
+  "checks": [
+    {
+      "command": "python3 delphi-ai/tools/assumption_code_coherence_guard.py --todo foundation_documentation/todos/active/features/TODO-leadshug-channel-abstraction.md",
+      "exit_code": 0,
+      "outcome": "go",
+      "live_assumptions": 5
+    },
+    {
+      "command": "python3 delphi-ai/tools/review_scope_drift_guard.py --todo foundation_documentation/todos/active/features/TODO-leadshug-channel-abstraction.md",
+      "exit_code": 0,
+      "outcome": "go",
+      "material_sections": 23,
+      "changed_sections": 0
+    },
+    {
+      "command": "python3 delphi-ai/tools/todo_authority_guard.py foundation_documentation/todos/active/features/TODO-leadshug-channel-abstraction.md --pre-approval",
+      "exit_code": 0,
+      "outcome": "preflight-go",
+      "execution_authority_granted": false
+    },
+    {
+      "command": "python3 delphi-ai/tools/todo_deterministic_validator.py --todo foundation_documentation/todos/active/features/TODO-leadshug-channel-abstraction.md",
+      "exit_code": 0,
+      "outcome": "PASS"
+    },
+    {
+      "command": "python3 foundation_documentation/deterministic/validate_foundation_lifecycle.py --root foundation_documentation",
+      "exit_code": 0
+    },
+    {
+      "command": "python3 delphi-ai/tools/profile_scope_check.py --profile strategic-cto foundation_documentation/todos/active/features/TODO-leadshug-channel-abstraction.md foundation_documentation/artifacts/feature-briefs/leadshug-channel-abstraction-20261020.md foundation_documentation/artifacts/reviews/leadshug-channel-abstraction-20261020/README.md",
+      "exit_code": 0,
+      "outcome": "in scope"
+    }
+  ],
+  "product_test_runs": 0,
+  "product_runtime_changes": 0,
+  "implementation_approval": "pending",
+  "scope": "No source-repo mutations, tests/runtime/account actions, private dotenv reads or api-app/.local-files access/traversal by this planning work."
+}
