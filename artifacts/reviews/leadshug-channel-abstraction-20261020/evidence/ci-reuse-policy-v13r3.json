@@ -1,0 +1,31 @@
+{
+  "schema_version": "ci-evidence-reuse-policy-v1",
+  "contract_id": "stcon06-local-all",
+  "repos": [
+    {
+      "repo_key": "root",
+      "repo_path": "/mnt/c/unifast/leadshug/leadshug_now_docker",
+      "safe_reuse_globs": [],
+      "invalidating_globs": [
+        "*"
+      ]
+    },
+    {
+      "repo_key": "api",
+      "repo_path": "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app",
+      "safe_reuse_globs": [],
+      "invalidating_globs": [
+        "*"
+      ]
+    },
+    {
+      "repo_key": "web",
+      "repo_path": "/mnt/c/unifast/leadshug/leadshug_now_docker/web-app",
+      "safe_reuse_globs": [],
+      "invalidating_globs": [
+        "*"
+      ]
+    }
+  ],
+  "note": "No bounded v13r3 product/test/lifecycle change is safe for historical reuse. This local working_tree contract is explicitly approved; uncommitted changed bytes require exact source admission and a fresh full all, never a clean-HEAD/reuse claim."
+}

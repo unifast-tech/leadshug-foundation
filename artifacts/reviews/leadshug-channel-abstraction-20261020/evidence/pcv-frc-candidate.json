@@ -2,18 +2,18 @@
   "policy_schema_version": "pcv-1",
   "schema_version": "stcon06-pcv-evidence-v1",
   "todo_id": "ST-CON-06",
-  "run_id": "canonical-all65587",
+  "run_id": "canonical-linux-all28261",
   "environment_id": "leadshug_channels_validation-Node22.23.3-PostgreSQL16",
   "executor_id": "/root/stcon06_executor",
   "reviewer_id": "pending-independent-dedicated-audit",
-  "recorded_at_utc": "2026-10-20T16:12:17.406947+00:00",
+  "recorded_at_utc": "2026-10-20T18:47:18.611699+00:00",
   "evidence_type": "canonical-runner-structured-log",
-  "gate_status": "candidate-for-review; not passed; R02 correction/final candidate binding pending",
-  "raw_log_sha256": "97b84c7b813c364d20933a56b0f420b09e490c3885325317332ac9a2dd5d4445",
+  "gate_status": "measured v1.3 fresh all candidate; independent complete audit and row disposition pending",
+  "raw_log_sha256": "e904bf3203be423666c9428e262e9e51c46e263c22570d71c1f9d3cd6ee3d25e",
   "lane_id": "FRC",
   "sample_profile_id": "FRC-SP-H",
   "acceptance_rule_id": "FRC-A1",
-  "result_summary": "5wavesx20pending realform retriggers,onePOSTeach;unknown retainsdraft;R02 stalehandlerproofpending",
+  "result_summary": "5waves x20 retriggers; onePOST per heldsend; uncertain draft retained; actual stale-completion omission control with exact restoration",
   "artifact_payload": {
     "concurrency_policy": "drop duplicate",
     "stale_response_policy": "generation-fenced last-write-wins per BU/conversation; latecompletion cannot overwrite newdraft",
@@ -58,7 +58,16 @@
       "limits": "Five real BFF/PostgreSQL submits held after the actual response; twenty user-form submit events per in-flight send; one request per wave; no capacity/SLO claim."
     },
     "runner_or_manual_path": "bash scripts/test-channels-local.sh all; e2e/channel-transport.spec.ts; real BFF/PG, providerdouble only",
-    "stale_response_gate": "R02 body-read-handler barrier remediation pending"
+    "stale_response_gate": {
+      "green_final_run": "canonical-linux-all28261",
+      "test_sha256": "b3604496727a85d7ce12c2cb6e7a479575356a61ef4c529d385047e066a8e0f3",
+      "native_body_read_assertion": "started1/settled1/processed1 before draft/noalert",
+      "real_negative_control": 30246,
+      "negative_control_expected_failure": "same-text newdraft empty only without generationguard;49otherspassed",
+      "root_provenance": "browser-causal-green-mutant-provenance.json",
+      "restored_inbox_sha256": "d70bde9ede67759d479f644598356e46aac2916a12b2ed1770c17a169118586c"
+    },
+    "classification_authority_note": "Raw marker labels inherited from fixture evidence do not supersede the approved TODO lane classification/reason/deadline; no classification reduction or waiver."
   },
-  "artifact_sha256": "517db22c801e6a201f6574118a4ff84194c13395221e576ff27975cc5756d40f"
+  "artifact_sha256": "ae9ad9846fbeb86665524d671c5ad825ceef0f3ed62eae683462657e65181116"
 }

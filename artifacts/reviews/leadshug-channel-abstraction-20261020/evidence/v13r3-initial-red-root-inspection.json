@@ -1,0 +1,11 @@
+{
+  "schema": "stcon06-root-red-inspection-v1",
+  "recorded_at_utc": "2026-10-20T18:29:47.789604+00:00",
+  "session": 54755,
+  "reported_terminal_exit": 1,
+  "raw_log": "foundation_documentation/artifacts/tmp/stcon06-executor-v13r3-limits-red.log",
+  "raw_log_sha256": "91afaa2e442c49a3487e411afaf3a89ce7b9cf21160b164ffa8350fa47dfad60",
+  "root_inspection": "Exact log hash checked;194unit pass and313PG pass/1expectedfailure of314. Public negative list limit reached call-through Prisma take=-999999 instead of expected201. Selected-origin availability GETs and blockedPOST case passed.",
+  "scope": "Initial causal evidence for negative list limit; both requests were made, but first failed assert prevented the second assertion from reporting. Independent thread causal evidence remains to capture. Not final acceptance or review verdict.",
+  "human_runtime_changed": false
+}

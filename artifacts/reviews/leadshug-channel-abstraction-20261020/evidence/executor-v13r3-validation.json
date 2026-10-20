@@ -1,0 +1,283 @@
+{
+  "schema": "stcon06-executor-v13r3-validation-v1",
+  "checkpoint": "API pagination regression, selected-origin availability, parity guard and executable wrapper cleanup",
+  "scope": {
+    "implementation": [
+      "api-app/src/surfaces/public/conversations.controller.ts",
+      "api-app/test/api-publica.e2e-spec.ts",
+      "scripts/check-channels-ci-parity.py"
+    ],
+    "runner": "scripts/test-channels-local.sh (unchanged in this checkpoint)",
+    "full_all_started": false,
+    "runtime_activation": false
+  },
+  "red": {
+    "command": "bash scripts/test-channels-local.sh api",
+    "exit_code": 1,
+    "log": "foundation_documentation/artifacts/tmp/stcon06-executor-v13r3-limits-red-separated.log",
+    "log_sha256": "26cd78e0a6a648de57b5b655e16bd39c17ce26057e794c81700b9daf2b0b0ec1",
+    "e2e": {
+      "test_files_passed": 26,
+      "test_files_failed": 1,
+      "tests_passed": 313,
+      "tests_failed": 2,
+      "tests_total": 315
+    },
+    "failures": [
+      {
+        "case": "public conversation list",
+        "observed_take": [
+          18,
+          -999999
+        ],
+        "expected_take": [
+          18,
+          201
+        ]
+      },
+      {
+        "case": "public conversation history",
+        "observed_take": [
+          17,
+          -1000000
+        ],
+        "expected_take": [
+          17,
+          100
+        ]
+      }
+    ],
+    "other relevant result": "selected-origin disconnected with another ready channel passed: list/thread unavailable, POST 409, no provider call delta and no new OUT row"
+  },
+  "green": {
+    "command": "bash scripts/test-channels-local.sh api",
+    "exit_code": 0,
+    "log": "foundation_documentation/artifacts/tmp/stcon06-executor-v13r3-api-green.log",
+    "log_sha256": "815163257987b6af07242d72fe3e77d429d48ad4b0eeb5c3a5c1c3778434ccdc",
+    "unit": {
+      "test_files_passed": 21,
+      "tests_passed": 194
+    },
+    "e2e": {
+      "test_files_passed": 27,
+      "tests_passed": 315
+    },
+    "pagination_assertions": {
+      "list_negative_limit_falls_back_to_200_plus_one_query_row": true,
+      "thread_negative_limit_falls_back_to_100": true
+    },
+    "availability_assertions": "list and thread distinguish available/null reason from selected-origin CHANNEL_NOT_READY; POST remains blocked without alternate-channel fallback, provider calls, or OUT writes",
+    "source_hashes_unchanged_during_run": true,
+    "source_hash_manifest_before": "foundation_documentation/artifacts/tmp/stcon06-executor-v13r3-api-green-source-before.sha256",
+    "source_hash_manifest_after": "foundation_documentation/artifacts/tmp/stcon06-executor-v13r3-api-green-source-after.sha256"
+  },
+  "guard": {
+    "command": "PYTHONDONTWRITEBYTECODE=1 python3 scripts/check-channels-ci-parity.py --self-test",
+    "exit_code": 0,
+    "result": "foundation_documentation/artifacts/tmp/stcon06-executor-v13r3-guard-selftest.json",
+    "result_sha256": "6710bf3de7e0e74a4dfec19e9eabec5d66abc454cb864ca3ec5e7e25397efd51",
+    "mutations_rejected": 23,
+    "new_negative_controls": [
+      "common parity guard suffixed with || true",
+      "npm run test:e2e suffixed with || true"
+    ],
+    "wrapper_failure_cleanup_control": {
+      "execution": "actual RUNNER_SCRIPT extracted from wrapper and run under sh -ec by fake Docker CLI; fake node/apt-get satisfy prerequisites, fake python3 returns 42 at mandatory parity guard",
+      "exit_code": 42,
+      "observed_compose_calls": [
+        "run",
+        "down --volumes --remove-orphans"
+      ],
+      "cleanup_observed": true,
+      "real_docker_or_provider_called": false
+    },
+    "other_controls": "three inventory failures stop before Compose; empty config-only succeeds without mutation; collision and unsupported WSL socket refuse before Compose/CLI; path adapter controls pass",
+    "causal_omission_control": {
+      "classification": "post-fix in-memory omission control; not test-first evidence",
+      "artifact": "foundation_documentation/artifacts/tmp/stcon06-executor-v13r3-guard-omission-control.json",
+      "artifact_sha256": "bb1cc03ac0607aeb9539355b66352389fda673bae2ff2c2bccfa43989cbe1083",
+      "source_modified": false,
+      "omission_mutant_accepted": [
+        "common guard suffixed with || true",
+        "npm run test:e2e suffixed with || true"
+      ],
+      "current_validator_rejected": [
+        "common guard suffixed with || true",
+        "npm run test:e2e suffixed with || true"
+      ],
+      "method": "loaded the validator source into memory after removing exactly the two standalone-check blocks; applied each runner mutation to in-memory runner text; confirmed acceptance by omission mutant and rejection by current validator"
+    }
+  },
+  "syntax_and_cleanup": {
+    "bash_n_scripts_test_channels_local": "pass",
+    "docker_validation_namespace_after_api": "zero containers, volumes and networks from exact-name filtered docker.exe read-only checks"
+  },
+  "historical_evidence_preserved": [
+    "all2564",
+    "prior v1.3 checkpoints"
+  ],
+  "canonical_all_v13r3": {
+    "command": "wsl.exe --distribution Ubuntu --user root --exec bash -lc <same checkout; CHANNELS_DOCKER_TRANSPORT=linux; DOCKER_HOST=verified shared socket; bash scripts/test-channels-local.sh all>",
+    "tool_session_id": 28261,
+    "exit_code": 0,
+    "log": "foundation_documentation/artifacts/tmp/stcon06-executor-v13r3-all-linux.log",
+    "log_sha256": "e904bf3203be423666c9428e262e9e51c46e263c22570d71c1f9d3cd6ee3d25e",
+    "results": {
+      "api_unit": {
+        "test_files_passed": 21,
+        "tests_passed": 194
+      },
+      "api_e2e": {
+        "test_files_passed": 27,
+        "tests_passed": 315
+      },
+      "web": {
+        "test_files_passed": 5,
+        "tests_passed": 29
+      },
+      "browser": {
+        "tests_passed": 50,
+        "workers": 1
+      },
+      "parity_guard_mutations_rejected": 23
+    },
+    "linux_transport": {
+      "wsl_distribution": "Ubuntu",
+      "wsl_user": "root",
+      "shared_socket": "unix:///mnt/wsl/docker-desktop/shared-sockets/guest-services/docker.sock",
+      "windows_linux_engine_id_equal": true
+    },
+    "runtime": {
+      "node": "v22.23.3",
+      "database": "disposable leadshug_timeline_channels_ci",
+      "migrations_completed": 23
+    },
+    "cleanup": {
+      "validation_namespace_containers": 0,
+      "validation_namespace_volumes": 0,
+      "validation_namespace_networks": 0,
+      "verified_by_exact_name_filtered_docker.exe_read_only_commands": true
+    },
+    "freshness": {
+      "before_manifest": "foundation_documentation/artifacts/reviews/leadshug-channel-abstraction-20261020/evidence/v13r3-source-before-all.json",
+      "before_manifest_sha256": "ceac6f671a96cc3413c23af1cebd225db63d210fe60f3594b69ab4b4a0931a2e",
+      "after_manifest": "foundation_documentation/artifacts/tmp/stcon06-executor-v13r3-all-linux-source-after.json",
+      "after_manifest_sha256": "02fb86729239efad5511cc434670255c8309f15f29c38d1121528366cfd96b39",
+      "explicit_paths": 61,
+      "unchanged_paths": 60,
+      "one_difference": {
+        "path": "foundation_documentation/todos/active/features/TODO-leadshug-channel-abstraction.md",
+        "before_bytes": 118031,
+        "after_bytes": 119611,
+        "before_sha256": "8ea150258c6ccc78ea3f6f27f3f5b20d262f98ce332ac5e07f0bc20354b68f6b",
+        "after_sha256": "a0c1992a4a16c9174d6a564ec876ea2ea46e532065596e713766f0fc4be800fe",
+        "owner": "root/Foundation; executor did not edit"
+      },
+      "product_source_hashes_unchanged": true,
+      "interpretation": "The frozen public inventory was not byte-identical because its root-owned TODO changed during the run. All 60 other explicit paths, including product source, matched. Do not describe this as a full 61/61 source match."
+    },
+    "browser_attestation": {
+      "captured_copy": "foundation_documentation/artifacts/tmp/stcon06-executor-v13r3-all-linux-attestation-browser-authority.json",
+      "captured_copy_sha256": "0e9a3aba8dbd35f518b47725ded99f054eff3e0b89ec6410ca41a476fe6f6d67",
+      "captured_at_utc": "2026-10-20T18:43:13.939Z",
+      "run_id": "2026-10-20T18-43-13-939Z",
+      "node": "v22.23.3",
+      "completed_migrations": 23,
+      "served_bundle_sha256": "27c5db465495068402b278ba7c9d3a1f23b8b03797249639190c8a755759563b",
+      "dist_bundle_sha256": "27c5db465495068402b278ba7c9d3a1f23b8b03797249639190c8a755759563b",
+      "served_asset_copy": "foundation_documentation/artifacts/tmp/stcon06-executor-v13r3-all-linux-served-app-authority.js",
+      "served_asset_copy_sha256": "27c5db465495068402b278ba7c9d3a1f23b8b03797249639190c8a755759563b",
+      "served_dist_copy_hashes_equal": true
+    },
+    "pcv_observations": {
+      "CHANNEL-OUTBOUND-OVERLAP": "5 repetitions x 20 operations; per-owned-conversation row counts all 1 in each repetition; disposable PostgreSQL/provider fake, no exactly-once/capacity/SLO claim",
+      "CHANNEL-EPS-EVIDENCE": {
+        "page_conversations": 30,
+        "history_rows_per_conversation": 24,
+        "query_counts": {
+          "buChannelFindMany": 1,
+          "channelCredentialFindMany": 1,
+          "latestInboundWindowProjection": 1
+        },
+        "index": "messages_conversation_direction_created_id_idx",
+        "actual_rows": 30,
+        "loops": 30,
+        "heap_fetches": 30,
+        "shared_hit_blocks": 90,
+        "shared_read_blocks": 0,
+        "planning_ms": 0.175,
+        "execution_ms": 0.147,
+        "provider_calls_before_after": {
+          "meta": [
+            0,
+            0
+          ],
+          "evolution": [
+            0,
+            0
+          ]
+        },
+        "limit": "bounded disposable fixture, not capacity/latency SLO"
+      },
+      "FRC-COMPOSER-EVIDENCE": {
+        "waves": 5,
+        "triggers_per_wave": 20,
+        "requests_per_wave": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "outcomes": [
+          "accepted",
+          "unknown",
+          "accepted",
+          "unknown",
+          "accepted"
+        ],
+        "draft_preserved": [
+          false,
+          true,
+          false,
+          true,
+          false
+        ],
+        "message_counts": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "limit": "real BFF/PostgreSQL responses held; no capacity/SLO claim"
+      },
+      "RLS-EVIDENCE": {
+        "clients": 5,
+        "scope_checks": 30,
+        "own_status": 200,
+        "foreign_status": 404,
+        "provider_call_delta": {
+          "meta": 0,
+          "evolution": 0
+        }
+      },
+      "migration_rollback": {
+        "configured_lock_timeout": "5s",
+        "configured_statement_timeout": "60s",
+        "observed_sqlstates": {
+          "lock": "55P03",
+          "statement": "57014"
+        },
+        "rows_after_aborted_ddl": 100001,
+        "surviving_indexes_after_abort": 0,
+        "write_probe_batch_rows": 1000,
+        "write_probe_without_index_ms": 6.467736999999943,
+        "write_probe_with_index_ms": 15.893627999999808,
+        "index_bytes": 6856704,
+        "limit": "bounded disposable observation, no capacity/SLO threshold"
+      }
+    },
+    "activation_or_human_runtime_change": false
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "schema": "stcon06-linux-infra-diagnostic-v1",
+  "run": 93079,
+  "reported_terminal_exit": 1,
+  "recorded_at_utc": "2026-10-20T17:49:45.253064+00:00",
+  "raw_log": "foundation_documentation/artifacts/tmp/stcon06-executor-v13-all-linux.log",
+  "raw_log_sha256": "97b4f20ea6964059fcbe2d7c9999f4aa5d537cb172b18112acd0d28835b46af7",
+  "product_tests_started": false,
+  "failure": "Docker Desktop daemon cannot see POSIX client path /mnt/c/... for public .dockerignore bind; file exists in principal checkout",
+  "source_after_exact47_match": true,
+  "cleanup": "Executor observed wrapper down, validation resources removed; labels-filtered inventory empty",
+  "disposition": "Infrastructure path transport correction within approved Linux host transport; no product failure/pass or remote CI claim",
+  "sources": [
+    {
+      "url": "https://docs.docker.com/engine/storage/bind-mounts/",
+      "supports": "Bind sources are resolved on daemon host; Desktop runs daemon in VM"
+    },
+    {
+      "url": "https://docs.docker.com/desktop/troubleshoot-and-support/troubleshoot/topics/",
+      "supports": "Official troubleshooting includes /run/desktop/mnt/host/c path in Desktop mount error example"
+    },
+    {
+      "url": "https://docs.docker.com/desktop/features/wsl/",
+      "supports": "Docker Desktop distro isolation and WSL integration model"
+    }
+  ],
+  "inference": "A tightly scoped path mapping for the exact verified shared socket may let Linux CLI bind the same public Windows checkout; this needs actual runner hash/provenance and execution proof, not documentation-only certification. No WSL integration/permission/source location change."
+}

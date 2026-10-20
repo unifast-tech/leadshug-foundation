@@ -1,0 +1,29 @@
+{
+  "scope": "Root read-only provenance: preserved canonical browserattestation/publicbundle copies; actual controlled shippingguard removal vsbaseline",
+  "records": [
+    {
+      "label": "causal-green-63018",
+      "runId": "2026-10-20T16-14-30-309Z",
+      "capturedAtUtc": "2026-10-20T16:14:30.309Z",
+      "served_sha256": "27c5db465495068402b278ba7c9d3a1f23b8b03797249639190c8a755759563b",
+      "dist_sha256": "27c5db465495068402b278ba7c9d3a1f23b8b03797249639190c8a755759563b",
+      "preserved_sha256": "27c5db465495068402b278ba7c9d3a1f23b8b03797249639190c8a755759563b",
+      "all_match": true,
+      "inbox_source": "d70bde9ede67759d479f644598356e46aac2916a12b2ed1770c17a169118586c",
+      "test_source": "b3604496727a85d7ce12c2cb6e7a479575356a61ef4c529d385047e066a8e0f3"
+    },
+    {
+      "label": "causal-mutant-30246",
+      "runId": "2026-10-20T16-18-37-921Z",
+      "capturedAtUtc": "2026-10-20T16:18:37.922Z",
+      "served_sha256": "cac7fee57717b6b9a02c0cb1a56d0cd50d7e259b85a3999b140e61f8f27c77cc",
+      "dist_sha256": "cac7fee57717b6b9a02c0cb1a56d0cd50d7e259b85a3999b140e61f8f27c77cc",
+      "preserved_sha256": "cac7fee57717b6b9a02c0cb1a56d0cd50d7e259b85a3999b140e61f8f27c77cc",
+      "all_match": true,
+      "inbox_source": "bdc6c54a40c3a3b4d4ce8d565c8f194c9dd86b41ec75e473c38f45aa94c28804",
+      "test_source": "b3604496727a85d7ce12c2cb6e7a479575356a61ef4c529d385047e066a8e0f3"
+    }
+  ],
+  "same_test_source": true,
+  "different_served_bundle": true
+}

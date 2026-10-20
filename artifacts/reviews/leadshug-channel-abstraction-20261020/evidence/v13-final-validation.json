@@ -1,0 +1,1117 @@
+{
+  "schema": "stcon06-root-fresh-full-validation-v1",
+  "run_id": "canonical-linux-all2564",
+  "session": 2564,
+  "command": "CHANNELS_DOCKER_TRANSPORT=linux bash scripts/test-channels-local.sh all",
+  "execution_context": "Same WSL distro/root and principal checkout; explicit verified same Docker Desktop shared socket, narrowly translated bind/config masks. NativeLinux/Windows controls separate; no permission/config/source location changes.",
+  "exit_code": 0,
+  "terminal_provenance": "Executor reports actual tool terminal0; root independently inspected complete raw log, source hashes, parsed metrics and actual browser source/bundle attestation. No independent reviewer execution claimed.",
+  "raw_log": "foundation_documentation/artifacts/tmp/stcon06-executor-v13-all-linux-3.log",
+  "raw_log_sha256": "d54ad1d0a96aa1f9980d25b79ca569254e71a9dd199402d831aef3bf18927d00",
+  "captured_at_utc": "2026-10-20T18:03:08.361020+00:00",
+  "counts": {
+    "api_unit": 194,
+    "api_e2e": 312,
+    "web_unit": 29,
+    "browser": 50
+  },
+  "source_unchanged": true,
+  "source_after": [
+    {
+      "path": ".github/workflows/ci.yml",
+      "sha256": "16acaf6d4b807a806a50a31c75715b14e8b2e220e0e17e2bac43ec4b740318e5",
+      "unchanged": true
+    },
+    {
+      "path": "api-app/package-lock.json",
+      "sha256": "d1e45274c4b10d134469d7ec63e88777ec26b917d48197a03a4b97cefda047c7",
+      "unchanged": true
+    },
+    {
+      "path": "api-app/package.json",
+      "sha256": "df8551d3e506e7c68516cbd482362c4282671b7ec7eebbf121386390ac080a9d",
+      "unchanged": true
+    },
+    {
+      "path": "api-app/prisma/migrations/20261020170000_message_inbound_window_index/migration.sql",
+      "sha256": "586e709e07736eca0908ab5dcc668cf0e0b317189b4c963b361399848a3c9710",
+      "unchanged": true
+    },
+    {
+      "path": "api-app/prisma/schema.prisma",
+      "sha256": "26444c6a102755fa5a10f1930d4a9ff256a8f76bd515cc0e10e8b1fe6fb7cf99",
+      "unchanged": true
+    },
+    {
+      "path": "api-app/src/domain/channels/channel-credential-resolver.ts",
+      "sha256": "89cf17ac02af444092651470aee13e2d4a3bcee8d459508be818322b33b00c10",
+      "unchanged": true
+    },
+    {
+      "path": "api-app/src/domain/channels/transport/channel-dependencies.spec.ts",
+      "sha256": "f59d838baf635c0ce0d1ebe725c88fbb0b19fac42e9b382452e31fd38e0511a3",
+      "unchanged": true
+    },
+    {
+      "path": "api-app/src/domain/channels/transport/channel.ts",
+      "sha256": "432796b8685d07dcc53c3a699a7b9d1469ac4fb110aea080766ec207bec8621f",
+      "unchanged": true
+    },
+    {
+      "path": "api-app/src/domain/inbox/conversations.service.ts",
+      "sha256": "c7d84f983ed61c6022424d4648e07282e7eb53c40fa9aba249618d77b3c223de",
+      "unchanged": true
+    },
+    {
+      "path": "api-app/src/domain/inbox/incoming.service.ts",
+      "sha256": "b0ec43187b1f48720aa899e40f979dd0ae447321581d675b84ef9c71dbd0ff42",
+      "unchanged": true
+    },
+    {
+      "path": "api-app/src/domain/inbox/incoming.typebot.integration.spec.ts",
+      "sha256": "0cac10e5ed05da5a6e89b39c8b32a40810b4678af77b4d3b8d20b4d1afc4704c",
+      "unchanged": true
+    },
+    {
+      "path": "api-app/src/domain/inbox/message-acceptance.service.ts",
+      "sha256": "b053744ee44b7e91fd45b5c146f759f55c70b8e517b8fbb1cab39806407335e1",
+      "unchanged": true
+    },
+    {
+      "path": "api-app/src/domain/inbox/outbound.service.spec.ts",
+      "sha256": "ae1f9208d660c684dca9b1ac5727001d8e57c4c9504be9be1d20ecba32e01805",
+      "unchanged": true
+    },
+    {
+      "path": "api-app/src/domain/inbox/outbound.service.ts",
+      "sha256": "63bcf773e2b4c5a5ddd688a1bb13745a0a206d995fafc665925df3fecaf394aa",
+      "unchanged": true
+    },
+    {
+      "path": "api-app/src/integrations/channels/channel-adapter-factory.ts",
+      "sha256": "e0ebdd78e387f7ee3af902f038d22449e212c1301ffa642bbceb5a5f05d2abfc",
+      "unchanged": true
+    },
+    {
+      "path": "api-app/src/integrations/channels/channel-adapter-registry.ts",
+      "sha256": "655b735e239e89fbaede36689d1c22245d3804d66646f7736db991cb5099b02b",
+      "unchanged": true
+    },
+    {
+      "path": "api-app/src/integrations/channels/channel-transport.module.ts",
+      "sha256": "32203d3b8393a34a9effab4266683c389651d7ec197e8f9d704a77a6a37f40dc",
+      "unchanged": true
+    },
+    {
+      "path": "api-app/src/integrations/channels/evolution-channel.ts",
+      "sha256": "60faf1ea40fe17ad62495b0f42a2cf958defcb41e3ad72d3d2213751539b460c",
+      "unchanged": true
+    },
+    {
+      "path": "api-app/src/integrations/channels/meta-channel.ts",
+      "sha256": "997e739cf7d7231918dc97fc347bfeb32a1cd74d084ead8c64b01157022f8138",
+      "unchanged": true
+    },
+    {
+      "path": "api-app/src/integrations/channels/prisma-channel-resolver.ts",
+      "sha256": "acf779d89162d339e37af2abe2aa91fd1a1b292d7f5208bb672090c87a23bf4d",
+      "unchanged": true
+    },
+    {
+      "path": "api-app/src/integrations/evolution/evolution.client.spec.ts",
+      "sha256": "119d962fdcd9c895b75845dca74d8506147e11480d74b82e8c37f29f97c04081",
+      "unchanged": true
+    },
+    {
+      "path": "api-app/src/integrations/evolution/evolution.client.ts",
+      "sha256": "b0824e8fd4f801a239521855aaa02da5e0943a8c86c4ac8778e2f1f352821698",
+      "unchanged": true
+    },
+    {
+      "path": "api-app/src/integrations/meta/meta.client.spec.ts",
+      "sha256": "d7e76f5c392afab1638363d3c851f8ce8c5223ff27c64801a79fdc8ec00d5e7a",
+      "unchanged": true
+    },
+    {
+      "path": "api-app/src/integrations/meta/meta.client.ts",
+      "sha256": "9f954f6c1c2bd10030f5eed0cb42e493d6e480106bcfc3f44977cb97a716d34f",
+      "unchanged": true
+    },
+    {
+      "path": "api-app/src/surfaces/bff/bff.module.ts",
+      "sha256": "327f34eba67746882abc601a3817d94270cff3018d6972a8095dae530a2d6e29",
+      "unchanged": true
+    },
+    {
+      "path": "api-app/src/surfaces/bff/conversations.controller.ts",
+      "sha256": "53d3cffaa258ba1ad45c21eae4ab8712e2011255b7ca14965f73221edd0cc002",
+      "unchanged": true
+    },
+    {
+      "path": "api-app/src/surfaces/public/conversations.controller.ts",
+      "sha256": "b55440061dd4574646e4fa1a3c265cdb8653bab4abf3aa0e86b4057bc7e365ff",
+      "unchanged": true
+    },
+    {
+      "path": "api-app/src/surfaces/public/public.module.ts",
+      "sha256": "00a96d54fde7061f61f4ddf2b9cef836a02ad77ca29b62ea422695b9d8f90ef8",
+      "unchanged": true
+    },
+    {
+      "path": "api-app/src/surfaces/webhooks/webhooks.module.ts",
+      "sha256": "abc8fd7960fcca1ce43d21d44a90f8d4708d47e07bde9a48c0009e02dc0503a6",
+      "unchanged": true
+    },
+    {
+      "path": "api-app/test/api-publica.e2e-spec.ts",
+      "sha256": "4ce7360eb02621f89d25d41924bfafb86b76e8bbec8216dfb509f86000308837",
+      "unchanged": true
+    },
+    {
+      "path": "api-app/test/browser-server.cjs",
+      "sha256": "40e56e2d6672800acd4a00f87b942fc88b8361c770d06ee6d7c8a883a15d3390",
+      "unchanged": true
+    },
+    {
+      "path": "api-app/test/channel-transport.e2e-spec.ts",
+      "sha256": "69ddc87cbc9328136f92ea1c1cf9293b0bc2296ad383836322c6feb4b27c6015",
+      "unchanged": true
+    },
+    {
+      "path": "api-app/test/helpers.ts",
+      "sha256": "747dcd1a6db374c1ccb0f2a248b08d49c2ec62a46beb345cc03eea3c058d36f2",
+      "unchanged": true
+    },
+    {
+      "path": "api-app/test/number-onboarding-pcv.e2e-spec.ts",
+      "sha256": "3ae5c8646ea3f0a1d9ec7253cac74680922db5278067ef9fece6f87cf7273a34",
+      "unchanged": true
+    },
+    {
+      "path": "api-app/test/number-onboarding-typebot.e2e-spec.ts",
+      "sha256": "22e1121d8a1f03b5e566fb8e314c3966e5d9355453b31b978afcd30de038fbd2",
+      "unchanged": true
+    },
+    {
+      "path": "api-app/test/timeline-fixtures.cjs",
+      "sha256": "889707ec7857e8a17a850e56eb60d24e6953e59028f40880edff3756340fd23a",
+      "unchanged": true
+    },
+    {
+      "path": "docker-compose.channels.yml",
+      "sha256": "9978e713ce190ad20b6bddb0ecf0b469d068c0e43bb4eaf50aa630ec03aea235",
+      "unchanged": true
+    },
+    {
+      "path": "scripts/check-channels-ci-parity.py",
+      "sha256": "c668d6f8c8e9377c011bee126863395951c2a840b6da07bbd15ed2cc398bdd30",
+      "unchanged": true
+    },
+    {
+      "path": "scripts/test-channels-local.sh",
+      "sha256": "de580538f3257a85448cb3ce5030c85b90f65507da53737e4491fdf543091e42",
+      "unchanged": true
+    },
+    {
+      "path": "web-app/e2e/channel-transport.spec.ts",
+      "sha256": "b3604496727a85d7ce12c2cb6e7a479575356a61ef4c529d385047e066a8e0f3",
+      "unchanged": true
+    },
+    {
+      "path": "web-app/e2e/number-onboarding-freshness.ts",
+      "sha256": "880b49f8fa428568692b92a883dd00c5ce76214b1f2db5b35cafb9b0553ed9ad",
+      "unchanged": true
+    },
+    {
+      "path": "web-app/e2e/timeline-freshness.ts",
+      "sha256": "3a06fb36e3a9bcf20a12cd8201da2daa3b567775f15e2be5f068e97e840d7f53",
+      "unchanged": true
+    },
+    {
+      "path": "web-app/package-lock.json",
+      "sha256": "546aec97be8273cf195a16b75c0127474ea3a5042668f8d4c93aab96c1619c8f",
+      "unchanged": true
+    },
+    {
+      "path": "web-app/package.json",
+      "sha256": "fc9083821e246d50c080f409b3590902b033041231d1688c04c4140f097818de",
+      "unchanged": true
+    },
+    {
+      "path": "web-app/src/api.spec.ts",
+      "sha256": "e305671fc6d9775ef3c0365ed12470fb14ea3dd71ff3aca49f153262017147d6",
+      "unchanged": true
+    },
+    {
+      "path": "web-app/src/api.ts",
+      "sha256": "dd59a37799453d3e68fc64a6477e1578956d15d1a4920af90e22ff2b83057505",
+      "unchanged": true
+    },
+    {
+      "path": "web-app/src/telas/Inbox.tsx",
+      "sha256": "d70bde9ede67759d479f644598356e46aac2916a12b2ed1770c17a169118586c",
+      "unchanged": true
+    }
+  ],
+  "browser_fresh_source": [
+    {
+      "path": "api-app/prisma/migrations/20261020170000_message_inbound_window_index/migration.sql",
+      "sha256": "586e709e07736eca0908ab5dcc668cf0e0b317189b4c963b361399848a3c9710"
+    },
+    {
+      "path": "api-app/prisma/schema.prisma",
+      "sha256": "26444c6a102755fa5a10f1930d4a9ff256a8f76bd515cc0e10e8b1fe6fb7cf99"
+    },
+    {
+      "path": "api-app/src/domain/channels/channel-credential-resolver.ts",
+      "sha256": "89cf17ac02af444092651470aee13e2d4a3bcee8d459508be818322b33b00c10"
+    },
+    {
+      "path": "api-app/src/domain/channels/transport/channel-dependencies.spec.ts",
+      "sha256": "f59d838baf635c0ce0d1ebe725c88fbb0b19fac42e9b382452e31fd38e0511a3"
+    },
+    {
+      "path": "api-app/src/domain/channels/transport/channel.ts",
+      "sha256": "432796b8685d07dcc53c3a699a7b9d1469ac4fb110aea080766ec207bec8621f"
+    },
+    {
+      "path": "api-app/src/domain/inbox/conversations.service.ts",
+      "sha256": "c7d84f983ed61c6022424d4648e07282e7eb53c40fa9aba249618d77b3c223de"
+    },
+    {
+      "path": "api-app/src/domain/inbox/incoming.service.ts",
+      "sha256": "b0ec43187b1f48720aa899e40f979dd0ae447321581d675b84ef9c71dbd0ff42"
+    },
+    {
+      "path": "api-app/src/domain/inbox/incoming.typebot.integration.spec.ts",
+      "sha256": "0cac10e5ed05da5a6e89b39c8b32a40810b4678af77b4d3b8d20b4d1afc4704c"
+    },
+    {
+      "path": "api-app/src/domain/inbox/outbound.service.spec.ts",
+      "sha256": "ae1f9208d660c684dca9b1ac5727001d8e57c4c9504be9be1d20ecba32e01805"
+    },
+    {
+      "path": "api-app/src/domain/inbox/outbound.service.ts",
+      "sha256": "63bcf773e2b4c5a5ddd688a1bb13745a0a206d995fafc665925df3fecaf394aa"
+    },
+    {
+      "path": "api-app/src/integrations/channels/channel-adapter-factory.ts",
+      "sha256": "e0ebdd78e387f7ee3af902f038d22449e212c1301ffa642bbceb5a5f05d2abfc"
+    },
+    {
+      "path": "api-app/src/integrations/channels/channel-adapter-registry.ts",
+      "sha256": "655b735e239e89fbaede36689d1c22245d3804d66646f7736db991cb5099b02b"
+    },
+    {
+      "path": "api-app/src/integrations/channels/channel-transport.module.ts",
+      "sha256": "32203d3b8393a34a9effab4266683c389651d7ec197e8f9d704a77a6a37f40dc"
+    },
+    {
+      "path": "api-app/src/integrations/channels/evolution-channel.ts",
+      "sha256": "60faf1ea40fe17ad62495b0f42a2cf958defcb41e3ad72d3d2213751539b460c"
+    },
+    {
+      "path": "api-app/src/integrations/channels/meta-channel.ts",
+      "sha256": "997e739cf7d7231918dc97fc347bfeb32a1cd74d084ead8c64b01157022f8138"
+    },
+    {
+      "path": "api-app/src/integrations/channels/prisma-channel-resolver.ts",
+      "sha256": "acf779d89162d339e37af2abe2aa91fd1a1b292d7f5208bb672090c87a23bf4d"
+    },
+    {
+      "path": "api-app/src/integrations/evolution/evolution.client.spec.ts",
+      "sha256": "119d962fdcd9c895b75845dca74d8506147e11480d74b82e8c37f29f97c04081"
+    },
+    {
+      "path": "api-app/src/integrations/evolution/evolution.client.ts",
+      "sha256": "b0824e8fd4f801a239521855aaa02da5e0943a8c86c4ac8778e2f1f352821698"
+    },
+    {
+      "path": "api-app/src/integrations/meta/meta.client.spec.ts",
+      "sha256": "d7e76f5c392afab1638363d3c851f8ce8c5223ff27c64801a79fdc8ec00d5e7a"
+    },
+    {
+      "path": "api-app/src/integrations/meta/meta.client.ts",
+      "sha256": "9f954f6c1c2bd10030f5eed0cb42e493d6e480106bcfc3f44977cb97a716d34f"
+    },
+    {
+      "path": "api-app/src/surfaces/bff/bff.module.ts",
+      "sha256": "327f34eba67746882abc601a3817d94270cff3018d6972a8095dae530a2d6e29"
+    },
+    {
+      "path": "api-app/src/surfaces/bff/conversations.controller.ts",
+      "sha256": "53d3cffaa258ba1ad45c21eae4ab8712e2011255b7ca14965f73221edd0cc002"
+    },
+    {
+      "path": "api-app/src/surfaces/public/conversations.controller.ts",
+      "sha256": "b55440061dd4574646e4fa1a3c265cdb8653bab4abf3aa0e86b4057bc7e365ff"
+    },
+    {
+      "path": "api-app/src/surfaces/public/public.module.ts",
+      "sha256": "00a96d54fde7061f61f4ddf2b9cef836a02ad77ca29b62ea422695b9d8f90ef8"
+    },
+    {
+      "path": "api-app/src/surfaces/webhooks/webhooks.module.ts",
+      "sha256": "abc8fd7960fcca1ce43d21d44a90f8d4708d47e07bde9a48c0009e02dc0503a6"
+    },
+    {
+      "path": "api-app/test/api-publica.e2e-spec.ts",
+      "sha256": "4ce7360eb02621f89d25d41924bfafb86b76e8bbec8216dfb509f86000308837"
+    },
+    {
+      "path": "api-app/test/browser-server.cjs",
+      "sha256": "40e56e2d6672800acd4a00f87b942fc88b8361c770d06ee6d7c8a883a15d3390"
+    },
+    {
+      "path": "api-app/test/channel-transport.e2e-spec.ts",
+      "sha256": "69ddc87cbc9328136f92ea1c1cf9293b0bc2296ad383836322c6feb4b27c6015"
+    },
+    {
+      "path": "api-app/test/helpers.ts",
+      "sha256": "747dcd1a6db374c1ccb0f2a248b08d49c2ec62a46beb345cc03eea3c058d36f2"
+    },
+    {
+      "path": "api-app/test/number-onboarding-pcv.e2e-spec.ts",
+      "sha256": "3ae5c8646ea3f0a1d9ec7253cac74680922db5278067ef9fece6f87cf7273a34"
+    },
+    {
+      "path": "api-app/test/number-onboarding-typebot.e2e-spec.ts",
+      "sha256": "22e1121d8a1f03b5e566fb8e314c3966e5d9355453b31b978afcd30de038fbd2"
+    },
+    {
+      "path": "api-app/test/timeline-fixtures.cjs",
+      "sha256": "889707ec7857e8a17a850e56eb60d24e6953e59028f40880edff3756340fd23a"
+    },
+    {
+      "path": "web-app/e2e/channel-transport.spec.ts",
+      "sha256": "b3604496727a85d7ce12c2cb6e7a479575356a61ef4c529d385047e066a8e0f3"
+    },
+    {
+      "path": "web-app/e2e/number-onboarding-freshness.ts",
+      "sha256": "880b49f8fa428568692b92a883dd00c5ce76214b1f2db5b35cafb9b0553ed9ad"
+    },
+    {
+      "path": "web-app/e2e/timeline-freshness.ts",
+      "sha256": "3a06fb36e3a9bcf20a12cd8201da2daa3b567775f15e2be5f068e97e840d7f53"
+    },
+    {
+      "path": "web-app/src/api.spec.ts",
+      "sha256": "e305671fc6d9775ef3c0365ed12470fb14ea3dd71ff3aca49f153262017147d6"
+    },
+    {
+      "path": "web-app/src/api.ts",
+      "sha256": "dd59a37799453d3e68fc64a6477e1578956d15d1a4920af90e22ff2b83057505"
+    },
+    {
+      "path": "web-app/src/telas/Inbox.tsx",
+      "sha256": "d70bde9ede67759d479f644598356e46aac2916a12b2ed1770c17a169118586c"
+    }
+  ],
+  "browser_attestation": "evidence/browser-attestation-v13-all2564.json",
+  "served_bundle": "evidence/served-app-v13-all2564.js",
+  "served_dist_preserved_sha256": "27c5db465495068402b278ba7c9d3a1f23b8b03797249639190c8a755759563b",
+  "guard": {
+    "guard": "channels-ci-parity-v1",
+    "mutations_rejected": [
+      "missing-pr-trigger",
+      "missing-channels-job",
+      "missing-retained-guard",
+      "weakened-job-gate",
+      "swallowed-job-errors",
+      "skipped-validate-step",
+      "swallowed-retained-job",
+      "skipped-retained-admission",
+      "missing-retained-private-checkout",
+      "missing-common-guard",
+      "missing-e2e",
+      "missing-browser",
+      "missing-migrate",
+      "missing-generate",
+      "missing-lint",
+      "reordered-suite",
+      "missing-shell-guard",
+      "widened-wsl-socket",
+      "changed-wsl-host-prefix",
+      "wrong-wsl-mask-source",
+      "missing-wsl-overlay"
+    ],
+    "outer_wrapper": {
+      "collision_control": {
+        "compose_calls": 0,
+        "exit_code": 1
+      },
+      "empty_config_control": {
+        "compose_calls": [
+          [
+            "compose",
+            "--project-name",
+            "leadshug_channels_validation",
+            "--env-file",
+            "/workspace/.env.example",
+            "--env-file",
+            "/tmp/tmp.NwamiH7uRT",
+            "-f",
+            "/workspace/docker-compose.yml",
+            "-f",
+            "/workspace/docker-compose.channels.yml",
+            "--profile",
+            "validation",
+            "config",
+            "--quiet"
+          ]
+        ],
+        "exit_code": 0
+      },
+      "inventory_failures": {
+        "network": {
+          "compose_calls": 0,
+          "docker_calls": 3,
+          "exit_code": 1
+        },
+        "ps": {
+          "compose_calls": 0,
+          "docker_calls": 1,
+          "exit_code": 1
+        },
+        "volume": {
+          "compose_calls": 0,
+          "docker_calls": 2,
+          "exit_code": 1
+        }
+      },
+      "native_path_control": {
+        "exit_code": 0,
+        "overlay_added": false,
+        "posix_bind_paths_preserved": true
+      },
+      "unsupported_wsl_socket_control": {
+        "docker_calls": 0,
+        "exit_code": 1
+      },
+      "wsl_bind_path_control": {
+        "skipped": "self-test checkout is not on a WSL-mounted drive"
+      }
+    },
+    "yaml": "safe-no-alias-no-duplicates"
+  },
+  "metrics": {
+    "CHANNEL-EPS-EVIDENCE": {
+      "policy_schema_version": "pcv-1",
+      "lane_id": "EPS",
+      "trigger_result": "required",
+      "trigger_severity": "medium",
+      "trigger_reason_code": "EPS-DATA-PATH-CHANGED",
+      "gate_deadline": "before_local_implemented",
+      "min_evidence_rule_id": "EPS-E2",
+      "acceptance_rule_id": "EPS-A2",
+      "sample_profile": "EPS-SP-STRONG",
+      "access_pattern_classification": "Public conversation page loads selected BU channels once, official credential metadata once, and one latest-IN SQL statement using an indexed LIMIT 1 lookup per conversation; no provider credentials are decrypted or probed.",
+      "pageConversations": 30,
+      "historyRowsPerConversation": 24,
+      "availabilitySample": [
+        {
+          "available": true,
+          "reason": null,
+          "windowOpen": true
+        },
+        {
+          "available": true,
+          "reason": null,
+          "windowOpen": true
+        },
+        {
+          "available": true,
+          "reason": null,
+          "windowOpen": true
+        }
+      ],
+      "queryCounts": {
+        "buChannelFindMany": 1,
+        "channelCredentialFindMany": 1,
+        "latestInboundWindowProjection": 1
+      },
+      "elapsedMs": 24.56914400000005,
+      "explainLatestInboundProjection": [
+        {
+          "Plan": {
+            "Node Type": "Nested Loop",
+            "Parallel Aware": false,
+            "Async Capable": false,
+            "Join Type": "Inner",
+            "Startup Cost": 0.28,
+            "Total Cost": 107.41,
+            "Plan Rows": 30,
+            "Plan Width": 40,
+            "Actual Startup Time": 0.026,
+            "Actual Total Time": 0.14,
+            "Actual Rows": 30,
+            "Actual Loops": 1,
+            "Inner Unique": false,
+            "Shared Hit Blocks": 90,
+            "Shared Read Blocks": 0,
+            "Shared Dirtied Blocks": 0,
+            "Shared Written Blocks": 0,
+            "Local Hit Blocks": 0,
+            "Local Read Blocks": 0,
+            "Local Dirtied Blocks": 0,
+            "Local Written Blocks": 0,
+            "Temp Read Blocks": 0,
+            "Temp Written Blocks": 0,
+            "Plans": [
+              {
+                "Node Type": "Function Scan",
+                "Parent Relationship": "Outer",
+                "Parallel Aware": false,
+                "Async Capable": false,
+                "Function Name": "unnest",
+                "Alias": "requested",
+                "Startup Cost": 0,
+                "Total Cost": 0.3,
+                "Plan Rows": 30,
+                "Plan Width": 32,
+                "Actual Startup Time": 0.005,
+                "Actual Total Time": 0.006,
+                "Actual Rows": 30,
+                "Actual Loops": 1,
+                "Shared Hit Blocks": 0,
+                "Shared Read Blocks": 0,
+                "Shared Dirtied Blocks": 0,
+                "Shared Written Blocks": 0,
+                "Local Hit Blocks": 0,
+                "Local Read Blocks": 0,
+                "Local Dirtied Blocks": 0,
+                "Local Written Blocks": 0,
+                "Temp Read Blocks": 0,
+                "Temp Written Blocks": 0
+              },
+              {
+                "Node Type": "Limit",
+                "Parent Relationship": "Inner",
+                "Parallel Aware": false,
+                "Async Capable": false,
+                "Startup Cost": 0.28,
+                "Total Cost": 3.55,
+                "Plan Rows": 1,
+                "Plan Width": 45,
+                "Actual Startup Time": 0.004,
+                "Actual Total Time": 0.004,
+                "Actual Rows": 1,
+                "Actual Loops": 30,
+                "Shared Hit Blocks": 90,
+                "Shared Read Blocks": 0,
+                "Shared Dirtied Blocks": 0,
+                "Shared Written Blocks": 0,
+                "Local Hit Blocks": 0,
+                "Local Read Blocks": 0,
+                "Local Dirtied Blocks": 0,
+                "Local Written Blocks": 0,
+                "Temp Read Blocks": 0,
+                "Temp Written Blocks": 0,
+                "Plans": [
+                  {
+                    "Node Type": "Index Only Scan",
+                    "Parent Relationship": "Outer",
+                    "Parallel Aware": false,
+                    "Async Capable": false,
+                    "Scan Direction": "Backward",
+                    "Index Name": "messages_conversation_direction_created_id_idx",
+                    "Relation Name": "messages",
+                    "Alias": "message",
+                    "Startup Cost": 0.28,
+                    "Total Cost": 82.16,
+                    "Plan Rows": 25,
+                    "Plan Width": 45,
+                    "Actual Startup Time": 0.004,
+                    "Actual Total Time": 0.004,
+                    "Actual Rows": 1,
+                    "Actual Loops": 30,
+                    "Index Cond": "((conversation_id = requested.conversation_id) AND (direction = 'IN'::\"MessageDirection\"))",
+                    "Rows Removed by Index Recheck": 0,
+                    "Heap Fetches": 30,
+                    "Shared Hit Blocks": 90,
+                    "Shared Read Blocks": 0,
+                    "Shared Dirtied Blocks": 0,
+                    "Shared Written Blocks": 0,
+                    "Local Hit Blocks": 0,
+                    "Local Read Blocks": 0,
+                    "Local Dirtied Blocks": 0,
+                    "Local Written Blocks": 0,
+                    "Temp Read Blocks": 0,
+                    "Temp Written Blocks": 0
+                  }
+                ]
+              }
+            ]
+          },
+          "Planning": {
+            "Shared Hit Blocks": 54,
+            "Shared Read Blocks": 0,
+            "Shared Dirtied Blocks": 0,
+            "Shared Written Blocks": 0,
+            "Local Hit Blocks": 0,
+            "Local Read Blocks": 0,
+            "Local Dirtied Blocks": 0,
+            "Local Written Blocks": 0,
+            "Temp Read Blocks": 0,
+            "Temp Written Blocks": 0
+          },
+          "Planning Time": 0.233,
+          "Triggers": [],
+          "Execution Time": 0.155
+        }
+      ],
+      "providerCallsBefore": {
+        "meta": 0,
+        "evolution": 0
+      },
+      "providerCallsAfter": {
+        "meta": 0,
+        "evolution": 0
+      },
+      "limits": "Disposable PostgreSQL and one bounded 30-conversation public page; local query count/plan observation, not a capacity or latency SLO claim."
+    },
+    "CHANNEL-HISTORY-SCAN-EVIDENCE": {
+      "finding_id": "PERF-01",
+      "policy_schema_version": "pcv-1",
+      "fixture": {
+        "conversations": 500,
+        "outSuffixLength": 500,
+        "hasOlderInbound": true,
+        "hasOutOnlyHistory": true,
+        "equalTimeTie": true,
+        "pageAtMaximum": true
+      },
+      "actual": {
+        "rowsRemovedByFilter": 0,
+        "sharedHitBlocks": 1003,
+        "sharedReadBlocks": 0,
+        "executionMs": 2.206,
+        "scanNodes": [
+          {
+            "type": "Index Only Scan",
+            "relation": "messages",
+            "actualRows": 0,
+            "loops": 500,
+            "index": "messages_conversation_direction_created_id_idx",
+            "indexCondition": "((conversation_id = requested.conversation_id) AND (direction = 'IN'::\"MessageDirection\"))"
+          }
+        ]
+      },
+      "plan": [
+        {
+          "Plan": {
+            "Node Type": "Nested Loop",
+            "Parallel Aware": false,
+            "Async Capable": false,
+            "Join Type": "Inner",
+            "Startup Cost": 0.28,
+            "Total Cost": 1715.53,
+            "Plan Rows": 500,
+            "Plan Width": 40,
+            "Actual Startup Time": 0.049,
+            "Actual Total Time": 2.189,
+            "Actual Rows": 2,
+            "Actual Loops": 1,
+            "Inner Unique": false,
+            "Shared Hit Blocks": 1003,
+            "Shared Read Blocks": 0,
+            "Shared Dirtied Blocks": 0,
+            "Shared Written Blocks": 0,
+            "Local Hit Blocks": 0,
+            "Local Read Blocks": 0,
+            "Local Dirtied Blocks": 0,
+            "Local Written Blocks": 0,
+            "Temp Read Blocks": 0,
+            "Temp Written Blocks": 0,
+            "Plans": [
+              {
+                "Node Type": "Function Scan",
+                "Parent Relationship": "Outer",
+                "Parallel Aware": false,
+                "Async Capable": false,
+                "Function Name": "unnest",
+                "Alias": "requested",
+                "Startup Cost": 0,
+                "Total Cost": 5,
+                "Plan Rows": 500,
+                "Plan Width": 32,
+                "Actual Startup Time": 0.028,
+                "Actual Total Time": 0.048,
+                "Actual Rows": 500,
+                "Actual Loops": 1,
+                "Shared Hit Blocks": 0,
+                "Shared Read Blocks": 0,
+                "Shared Dirtied Blocks": 0,
+                "Shared Written Blocks": 0,
+                "Local Hit Blocks": 0,
+                "Local Read Blocks": 0,
+                "Local Dirtied Blocks": 0,
+                "Local Written Blocks": 0,
+                "Temp Read Blocks": 0,
+                "Temp Written Blocks": 0
+              },
+              {
+                "Node Type": "Limit",
+                "Parent Relationship": "Inner",
+                "Parallel Aware": false,
+                "Async Capable": false,
+                "Startup Cost": 0.28,
+                "Total Cost": 3.4,
+                "Plan Rows": 1,
+                "Plan Width": 45,
+                "Actual Startup Time": 0.004,
+                "Actual Total Time": 0.004,
+                "Actual Rows": 0,
+                "Actual Loops": 500,
+                "Shared Hit Blocks": 1003,
+                "Shared Read Blocks": 0,
+                "Shared Dirtied Blocks": 0,
+                "Shared Written Blocks": 0,
+                "Local Hit Blocks": 0,
+                "Local Read Blocks": 0,
+                "Local Dirtied Blocks": 0,
+                "Local Written Blocks": 0,
+                "Temp Read Blocks": 0,
+                "Temp Written Blocks": 0,
+                "Plans": [
+                  {
+                    "Node Type": "Index Only Scan",
+                    "Parent Relationship": "Outer",
+                    "Parallel Aware": false,
+                    "Async Capable": false,
+                    "Scan Direction": "Backward",
+                    "Index Name": "messages_conversation_direction_created_id_idx",
+                    "Relation Name": "messages",
+                    "Alias": "message",
+                    "Startup Cost": 0.28,
+                    "Total Cost": 72.12,
+                    "Plan Rows": 23,
+                    "Plan Width": 45,
+                    "Actual Startup Time": 0.004,
+                    "Actual Total Time": 0.004,
+                    "Actual Rows": 0,
+                    "Actual Loops": 500,
+                    "Index Cond": "((conversation_id = requested.conversation_id) AND (direction = 'IN'::\"MessageDirection\"))",
+                    "Rows Removed by Index Recheck": 0,
+                    "Heap Fetches": 2,
+                    "Shared Hit Blocks": 1003,
+                    "Shared Read Blocks": 0,
+                    "Shared Dirtied Blocks": 0,
+                    "Shared Written Blocks": 0,
+                    "Local Hit Blocks": 0,
+                    "Local Read Blocks": 0,
+                    "Local Dirtied Blocks": 0,
+                    "Local Written Blocks": 0,
+                    "Temp Read Blocks": 0,
+                    "Temp Written Blocks": 0
+                  }
+                ]
+              }
+            ]
+          },
+          "Planning": {
+            "Shared Hit Blocks": 58,
+            "Shared Read Blocks": 0,
+            "Shared Dirtied Blocks": 0,
+            "Shared Written Blocks": 0,
+            "Local Hit Blocks": 0,
+            "Local Read Blocks": 0,
+            "Local Dirtied Blocks": 0,
+            "Local Written Blocks": 0,
+            "Temp Read Blocks": 0,
+            "Temp Written Blocks": 0
+          },
+          "Planning Time": 0.313,
+          "Triggers": [],
+          "Execution Time": 2.206
+        }
+      ],
+      "limits": "Real disposable PostgreSQL EXPLAIN ANALYZE/BUFFERS with one older-IN history behind OUT rows and one OUT-only history; bounded fixture observation, not a production outage or capacity/SLO claim."
+    },
+    "CHANNEL-MIGRATION-ROLLBACK-EVIDENCE": {
+      "finding_id": "PERF-01",
+      "lock_timeout": "5s",
+      "statement_timeout": "60s",
+      "test_acceleration": {
+        "lock_timeout": "100ms",
+        "statement_timeout": "1ms",
+        "note": "short disposable probes; exact migration values separately observed above"
+      },
+      "sqlstates": {
+        "lock": "55P03",
+        "statement": "57014"
+      },
+      "rowsAfterAbortedDDL": 100001,
+      "survivingIndexesAfterAbort": 0,
+      "writeObservation": {
+        "batchRowsEach": 1000,
+        "withoutIndexMs": 6.33472299999994,
+        "withIndexMs": 17.617960999999923,
+        "indexBytes": 6856704,
+        "note": "same disposable table; bounded single-sample observation, no capacity/SLO threshold"
+      }
+    },
+    "CHANNEL-WINDOW-SCOPE-EVIDENCE": {
+      "finding_id": "PERF-01",
+      "policy_schema_version": "pcv-1",
+      "selectedReference": {
+        "conversationFound": true,
+        "latestDirection": "recebida",
+        "requiresWindow": false,
+        "available": true
+      },
+      "officialWindowBindingsPresentInBu": true,
+      "latestInboundWindowQueries": 0,
+      "expectedLatestInboundWindowQueries": 0,
+      "limits": "One real public-list request against disposable PostgreSQL; metadata batching remains operation-local."
+    },
+    "CHANNEL-OUTBOUND-OVERLAP": {
+      "repetitions": 5,
+      "operationsPerRepetition": 20,
+      "operationCounts": [
+        20,
+        20,
+        20,
+        20,
+        20
+      ],
+      "acceptedCounts": [
+        20,
+        20,
+        20,
+        20,
+        20
+      ],
+      "recordedCounts": [
+        20,
+        20,
+        20,
+        20,
+        20
+      ],
+      "perOwnedConversationRowCounts": [
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "limits": "Disposable PostgreSQL and provider fake; each distinct owned conversation has exactly one OUT row in this bounded fixture; no same-key exactly-once, capacity, or SLO claim."
+    },
+    "FRC-COMPOSER-EVIDENCE": {
+      "waves": [
+        {
+          "requests": 1,
+          "retriggers": 20,
+          "outcome": "accepted",
+          "draftPreserved": false,
+          "messageCount": 1
+        },
+        {
+          "requests": 1,
+          "retriggers": 20,
+          "outcome": "unknown",
+          "draftPreserved": true,
+          "messageCount": 1
+        },
+        {
+          "requests": 1,
+          "retriggers": 20,
+          "outcome": "accepted",
+          "draftPreserved": false,
+          "messageCount": 1
+        },
+        {
+          "requests": 1,
+          "retriggers": 20,
+          "outcome": "unknown",
+          "draftPreserved": true,
+          "messageCount": 1
+        },
+        {
+          "requests": 1,
+          "retriggers": 20,
+          "outcome": "accepted",
+          "draftPreserved": false,
+          "messageCount": 1
+        }
+      ],
+      "limits": "Five real BFF/PostgreSQL submits held after the actual response; twenty user-form submit events per in-flight send; one request per wave; no capacity/SLO claim."
+    },
+    "RLS-EVIDENCE": {
+      "policy_schema_version": "pcv-1",
+      "lane_id": "RLS",
+      "trigger_result": "recommended",
+      "trigger_severity": "medium",
+      "trigger_reason_code": "RLS-QUEUE-WORKER-REALTIME-CHANGED",
+      "gate_deadline": "before_local_implemented",
+      "min_evidence_rule_id": "RLS-E1",
+      "acceptance_rule_id": "RLS-A1",
+      "stage_profile_observed": "RLS-SP-L",
+      "clients": 5,
+      "readsPerClient": 6,
+      "totalScopeChecks": 30,
+      "observed": [
+        {
+          "client": 0,
+          "ownReads": 3,
+          "foreignReads": 3
+        },
+        {
+          "client": 1,
+          "ownReads": 3,
+          "foreignReads": 3
+        },
+        {
+          "client": 2,
+          "ownReads": 3,
+          "foreignReads": 3
+        },
+        {
+          "client": 4,
+          "ownReads": 3,
+          "foreignReads": 3
+        },
+        {
+          "client": 3,
+          "ownReads": 3,
+          "foreignReads": 3
+        }
+      ],
+      "thresholds": {
+        "ownBuReadStatus": 200,
+        "foreignTenantReadStatus": 404,
+        "providerCallsDuringListing": 0
+      },
+      "providerCalls": {
+        "calibration": "one fixture Meta number-list operation was detected before the read stage",
+        "before": {
+          "meta": 1,
+          "evolution": 0
+        },
+        "after": {
+          "meta": 1,
+          "evolution": 0
+        },
+        "duringReadDelta": {
+          "meta": 0,
+          "evolution": 0
+        }
+      },
+      "elapsedMs": 64.42634100000032,
+      "metrics_summary": "Five authenticated clients ran concurrently; each completed three sequential own-BU and three sequential foreign-tenant reads; all instrumented Meta/Evolution operations remained unchanged during channel listing.",
+      "limits": "One bounded local PostgreSQL stage; not a capacity, latency SLO, or provider load claim."
+    }
+  },
+  "limits": [
+    "Actual remote CI not_run; not a remote success claim.",
+    "Human preserved DB migration/API-Web activation/HTTPS and new real INOUT both bindings pending.",
+    "Historical80903 not reused; infrared93079/linux2 failures and cleanup preserved separately.",
+    "Only approved public source paths covered; no excluded private-path discovery or whole-tree clean claim."
+  ]
+}

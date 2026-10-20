@@ -1,0 +1,276 @@
+{
+  "captured_at_utc": "2026-10-20T16:21:41.865274+00:00",
+  "run": 80903,
+  "status": "sourcefrozen; allrunning, no terminalpass claim",
+  "scope": "Exact44 reviewed public source/context paths, not a whole API tree/private-data inventory. Sourcefile hashes, not dirty HEADs, identify candidate. Root runner included; full build/freshness inventory remains runner/executor evidence.",
+  "records": [
+    {
+      "path": "api-app/package.json",
+      "bytes": 1670,
+      "sha256": "df8551d3e506e7c68516cbd482362c4282671b7ec7eebbf121386390ac080a9d",
+      "all65587_sha256": "df8551d3e506e7c68516cbd482362c4282671b7ec7eebbf121386390ac080a9d"
+    },
+    {
+      "path": "api-app/src/domain/channels/channel-credential-resolver.ts",
+      "bytes": 5053,
+      "sha256": "89cf17ac02af444092651470aee13e2d4a3bcee8d459508be818322b33b00c10",
+      "all65587_sha256": "89cf17ac02af444092651470aee13e2d4a3bcee8d459508be818322b33b00c10"
+    },
+    {
+      "path": "api-app/src/domain/channels/transport/channel-dependencies.spec.ts",
+      "bytes": 2383,
+      "sha256": "f59d838baf635c0ce0d1ebe725c88fbb0b19fac42e9b382452e31fd38e0511a3",
+      "all65587_sha256": "f59d838baf635c0ce0d1ebe725c88fbb0b19fac42e9b382452e31fd38e0511a3"
+    },
+    {
+      "path": "api-app/src/domain/channels/transport/channel.ts",
+      "bytes": 2678,
+      "sha256": "432796b8685d07dcc53c3a699a7b9d1469ac4fb110aea080766ec207bec8621f",
+      "all65587_sha256": "432796b8685d07dcc53c3a699a7b9d1469ac4fb110aea080766ec207bec8621f"
+    },
+    {
+      "path": "api-app/src/domain/inbox/conversations.service.ts",
+      "bytes": 8137,
+      "sha256": "c7d84f983ed61c6022424d4648e07282e7eb53c40fa9aba249618d77b3c223de",
+      "all65587_sha256": "c7d84f983ed61c6022424d4648e07282e7eb53c40fa9aba249618d77b3c223de"
+    },
+    {
+      "path": "api-app/src/domain/inbox/incoming.service.ts",
+      "bytes": 6076,
+      "sha256": "b0ec43187b1f48720aa899e40f979dd0ae447321581d675b84ef9c71dbd0ff42",
+      "all65587_sha256": "b0ec43187b1f48720aa899e40f979dd0ae447321581d675b84ef9c71dbd0ff42"
+    },
+    {
+      "path": "api-app/src/domain/inbox/incoming.typebot.integration.spec.ts",
+      "bytes": 4647,
+      "sha256": "0cac10e5ed05da5a6e89b39c8b32a40810b4678af77b4d3b8d20b4d1afc4704c",
+      "all65587_sha256": "0cac10e5ed05da5a6e89b39c8b32a40810b4678af77b4d3b8d20b4d1afc4704c"
+    },
+    {
+      "path": "api-app/src/domain/inbox/message-acceptance.service.ts",
+      "bytes": 15730,
+      "sha256": "b053744ee44b7e91fd45b5c146f759f55c70b8e517b8fbb1cab39806407335e1",
+      "all65587_sha256": "b053744ee44b7e91fd45b5c146f759f55c70b8e517b8fbb1cab39806407335e1"
+    },
+    {
+      "path": "api-app/src/domain/inbox/outbound.service.spec.ts",
+      "bytes": 8314,
+      "sha256": "ae1f9208d660c684dca9b1ac5727001d8e57c4c9504be9be1d20ecba32e01805",
+      "all65587_sha256": "ae1f9208d660c684dca9b1ac5727001d8e57c4c9504be9be1d20ecba32e01805"
+    },
+    {
+      "path": "api-app/src/domain/inbox/outbound.service.ts",
+      "bytes": 13056,
+      "sha256": "63bcf773e2b4c5a5ddd688a1bb13745a0a206d995fafc665925df3fecaf394aa",
+      "all65587_sha256": "63bcf773e2b4c5a5ddd688a1bb13745a0a206d995fafc665925df3fecaf394aa"
+    },
+    {
+      "path": "api-app/src/integrations/channels/channel-adapter-factory.ts",
+      "bytes": 440,
+      "sha256": "e0ebdd78e387f7ee3af902f038d22449e212c1301ffa642bbceb5a5f05d2abfc",
+      "all65587_sha256": "e0ebdd78e387f7ee3af902f038d22449e212c1301ffa642bbceb5a5f05d2abfc"
+    },
+    {
+      "path": "api-app/src/integrations/channels/channel-adapter-registry.ts",
+      "bytes": 975,
+      "sha256": "655b735e239e89fbaede36689d1c22245d3804d66646f7736db991cb5099b02b",
+      "all65587_sha256": "655b735e239e89fbaede36689d1c22245d3804d66646f7736db991cb5099b02b"
+    },
+    {
+      "path": "api-app/src/integrations/channels/channel-transport.module.ts",
+      "bytes": 1663,
+      "sha256": "32203d3b8393a34a9effab4266683c389651d7ec197e8f9d704a77a6a37f40dc",
+      "all65587_sha256": "32203d3b8393a34a9effab4266683c389651d7ec197e8f9d704a77a6a37f40dc"
+    },
+    {
+      "path": "api-app/src/integrations/channels/evolution-channel.ts",
+      "bytes": 1561,
+      "sha256": "60faf1ea40fe17ad62495b0f42a2cf958defcb41e3ad72d3d2213751539b460c",
+      "all65587_sha256": "60faf1ea40fe17ad62495b0f42a2cf958defcb41e3ad72d3d2213751539b460c"
+    },
+    {
+      "path": "api-app/src/integrations/channels/meta-channel.ts",
+      "bytes": 1613,
+      "sha256": "997e739cf7d7231918dc97fc347bfeb32a1cd74d084ead8c64b01157022f8138",
+      "all65587_sha256": "997e739cf7d7231918dc97fc347bfeb32a1cd74d084ead8c64b01157022f8138"
+    },
+    {
+      "path": "api-app/src/integrations/channels/prisma-channel-resolver.ts",
+      "bytes": 18831,
+      "sha256": "5d01cca30f25ea4354651303633aa5a02f3adbe0b7cc37c44c53d821fe7c062f",
+      "all65587_sha256": "5d01cca30f25ea4354651303633aa5a02f3adbe0b7cc37c44c53d821fe7c062f"
+    },
+    {
+      "path": "api-app/src/integrations/evolution/evolution.client.spec.ts",
+      "bytes": 6530,
+      "sha256": "119d962fdcd9c895b75845dca74d8506147e11480d74b82e8c37f29f97c04081",
+      "all65587_sha256": "119d962fdcd9c895b75845dca74d8506147e11480d74b82e8c37f29f97c04081"
+    },
+    {
+      "path": "api-app/src/integrations/evolution/evolution.client.ts",
+      "bytes": 7214,
+      "sha256": "b0824e8fd4f801a239521855aaa02da5e0943a8c86c4ac8778e2f1f352821698",
+      "all65587_sha256": "b0824e8fd4f801a239521855aaa02da5e0943a8c86c4ac8778e2f1f352821698"
+    },
+    {
+      "path": "api-app/src/integrations/meta/meta.client.spec.ts",
+      "bytes": 38572,
+      "sha256": "d7e76f5c392afab1638363d3c851f8ce8c5223ff27c64801a79fdc8ec00d5e7a",
+      "all65587_sha256": "d7e76f5c392afab1638363d3c851f8ce8c5223ff27c64801a79fdc8ec00d5e7a"
+    },
+    {
+      "path": "api-app/src/integrations/meta/meta.client.ts",
+      "bytes": 17388,
+      "sha256": "9f954f6c1c2bd10030f5eed0cb42e493d6e480106bcfc3f44977cb97a716d34f",
+      "all65587_sha256": "9f954f6c1c2bd10030f5eed0cb42e493d6e480106bcfc3f44977cb97a716d34f"
+    },
+    {
+      "path": "api-app/src/surfaces/bff/bff.module.ts",
+      "bytes": 4917,
+      "sha256": "327f34eba67746882abc601a3817d94270cff3018d6972a8095dae530a2d6e29",
+      "all65587_sha256": "327f34eba67746882abc601a3817d94270cff3018d6972a8095dae530a2d6e29"
+    },
+    {
+      "path": "api-app/src/surfaces/bff/conversations.controller.ts",
+      "bytes": 5626,
+      "sha256": "53d3cffaa258ba1ad45c21eae4ab8712e2011255b7ca14965f73221edd0cc002",
+      "all65587_sha256": "53d3cffaa258ba1ad45c21eae4ab8712e2011255b7ca14965f73221edd0cc002"
+    },
+    {
+      "path": "api-app/src/surfaces/public/conversations.controller.ts",
+      "bytes": 9783,
+      "sha256": "b55440061dd4574646e4fa1a3c265cdb8653bab4abf3aa0e86b4057bc7e365ff",
+      "all65587_sha256": "b55440061dd4574646e4fa1a3c265cdb8653bab4abf3aa0e86b4057bc7e365ff"
+    },
+    {
+      "path": "api-app/src/surfaces/public/public.module.ts",
+      "bytes": 1208,
+      "sha256": "00a96d54fde7061f61f4ddf2b9cef836a02ad77ca29b62ea422695b9d8f90ef8",
+      "all65587_sha256": "00a96d54fde7061f61f4ddf2b9cef836a02ad77ca29b62ea422695b9d8f90ef8"
+    },
+    {
+      "path": "api-app/src/surfaces/webhooks/webhooks.module.ts",
+      "bytes": 1111,
+      "sha256": "abc8fd7960fcca1ce43d21d44a90f8d4708d47e07bde9a48c0009e02dc0503a6",
+      "all65587_sha256": "abc8fd7960fcca1ce43d21d44a90f8d4708d47e07bde9a48c0009e02dc0503a6"
+    },
+    {
+      "path": "api-app/test/api-publica.e2e-spec.ts",
+      "bytes": 14387,
+      "sha256": "4ce7360eb02621f89d25d41924bfafb86b76e8bbec8216dfb509f86000308837",
+      "all65587_sha256": "4ce7360eb02621f89d25d41924bfafb86b76e8bbec8216dfb509f86000308837"
+    },
+    {
+      "path": "api-app/test/browser-server.cjs",
+      "bytes": 11647,
+      "sha256": "40e56e2d6672800acd4a00f87b942fc88b8361c770d06ee6d7c8a883a15d3390",
+      "all65587_sha256": "40e56e2d6672800acd4a00f87b942fc88b8361c770d06ee6d7c8a883a15d3390"
+    },
+    {
+      "path": "api-app/test/channel-transport.e2e-spec.ts",
+      "bytes": 34003,
+      "sha256": "124d397bd3a5769271466e64b0e19b1235e08d1ea9a4df9f124fc629096822fe",
+      "all65587_sha256": "124d397bd3a5769271466e64b0e19b1235e08d1ea9a4df9f124fc629096822fe"
+    },
+    {
+      "path": "api-app/test/helpers.ts",
+      "bytes": 18367,
+      "sha256": "747dcd1a6db374c1ccb0f2a248b08d49c2ec62a46beb345cc03eea3c058d36f2",
+      "all65587_sha256": "747dcd1a6db374c1ccb0f2a248b08d49c2ec62a46beb345cc03eea3c058d36f2"
+    },
+    {
+      "path": "api-app/test/number-onboarding-pcv.e2e-spec.ts",
+      "bytes": 16149,
+      "sha256": "c62a11fc6302cd3bb807ff0b55b9dbcc7e46847cef638b81c382b455a8a29f20",
+      "all65587_sha256": "c62a11fc6302cd3bb807ff0b55b9dbcc7e46847cef638b81c382b455a8a29f20"
+    },
+    {
+      "path": "api-app/test/number-onboarding-typebot.e2e-spec.ts",
+      "bytes": 17679,
+      "sha256": "22e1121d8a1f03b5e566fb8e314c3966e5d9355453b31b978afcd30de038fbd2",
+      "all65587_sha256": "22e1121d8a1f03b5e566fb8e314c3966e5d9355453b31b978afcd30de038fbd2"
+    },
+    {
+      "path": "api-app/test/timeline-fixtures.cjs",
+      "bytes": 24711,
+      "sha256": "889707ec7857e8a17a850e56eb60d24e6953e59028f40880edff3756340fd23a",
+      "all65587_sha256": "889707ec7857e8a17a850e56eb60d24e6953e59028f40880edff3756340fd23a"
+    },
+    {
+      "path": "web-app/e2e/channel-transport.spec.ts",
+      "bytes": 12119,
+      "sha256": "b3604496727a85d7ce12c2cb6e7a479575356a61ef4c529d385047e066a8e0f3",
+      "all65587_sha256": "956058444775e1383324012236029f5a803d4730c9fac9c881e870c3a3825293"
+    },
+    {
+      "path": "web-app/e2e/number-onboarding-freshness.ts",
+      "bytes": 5059,
+      "sha256": "880b49f8fa428568692b92a883dd00c5ce76214b1f2db5b35cafb9b0553ed9ad",
+      "all65587_sha256": "880b49f8fa428568692b92a883dd00c5ce76214b1f2db5b35cafb9b0553ed9ad"
+    },
+    {
+      "path": "web-app/e2e/timeline-freshness.ts",
+      "bytes": 8499,
+      "sha256": "3a06fb36e3a9bcf20a12cd8201da2daa3b567775f15e2be5f068e97e840d7f53",
+      "all65587_sha256": "3a06fb36e3a9bcf20a12cd8201da2daa3b567775f15e2be5f068e97e840d7f53"
+    },
+    {
+      "path": "web-app/package.json",
+      "bytes": 701,
+      "sha256": "fc9083821e246d50c080f409b3590902b033041231d1688c04c4140f097818de",
+      "all65587_sha256": "fc9083821e246d50c080f409b3590902b033041231d1688c04c4140f097818de"
+    },
+    {
+      "path": "web-app/src/api.spec.ts",
+      "bytes": 6256,
+      "sha256": "e305671fc6d9775ef3c0365ed12470fb14ea3dd71ff3aca49f153262017147d6",
+      "all65587_sha256": "e305671fc6d9775ef3c0365ed12470fb14ea3dd71ff3aca49f153262017147d6"
+    },
+    {
+      "path": "web-app/src/api.ts",
+      "bytes": 10385,
+      "sha256": "dd59a37799453d3e68fc64a6477e1578956d15d1a4920af90e22ff2b83057505",
+      "all65587_sha256": "dd59a37799453d3e68fc64a6477e1578956d15d1a4920af90e22ff2b83057505"
+    },
+    {
+      "path": "web-app/src/telas/Inbox.tsx",
+      "bytes": 21225,
+      "sha256": "d70bde9ede67759d479f644598356e46aac2916a12b2ed1770c17a169118586c",
+      "all65587_sha256": "d70bde9ede67759d479f644598356e46aac2916a12b2ed1770c17a169118586c"
+    },
+    {
+      "path": "scripts/test-channels-local.sh",
+      "bytes": 9873,
+      "sha256": "b03176ef1a332c431ed55028c691052958ebc08ff7711db08d05316c1f8a34a6",
+      "all65587_sha256": "b03176ef1a332c431ed55028c691052958ebc08ff7711db08d05316c1f8a34a6"
+    },
+    {
+      "path": "foundation_documentation/todos/active/features/TODO-leadshug-channel-abstraction.md",
+      "bytes": 93779,
+      "sha256": "33453879801037619b8b610b329c0d3e195ad68ca36d139848805bcab61f5819",
+      "all65587_sha256": "b33eff13ac6f4fe7f07c853ff366f1abf869fdef84626543215d6ca22a485f76"
+    },
+    {
+      "path": "foundation_documentation/modules/inbox-and-conversations.md",
+      "bytes": 12425,
+      "sha256": "b9d2d151cceb2758e381c6787b8c4baf4e26630d88c62057ecfbc24e0dd26a72",
+      "all65587_sha256": "b9d2d151cceb2758e381c6787b8c4baf4e26630d88c62057ecfbc24e0dd26a72"
+    },
+    {
+      "path": "foundation_documentation/modules/integrations-and-channels.md",
+      "bytes": 31617,
+      "sha256": "031fab31685d00d635794aa10d0b1b8ee0a830e54b32622958b6bdc3e079853d",
+      "all65587_sha256": "031fab31685d00d635794aa10d0b1b8ee0a830e54b32622958b6bdc3e079853d"
+    },
+    {
+      "path": "foundation_documentation/project_constitution.md",
+      "bytes": 4641,
+      "sha256": "abfafa5576d051da58583e2be57499320c8ad155c4ae741f259c730bcca98390",
+      "all65587_sha256": "abfafa5576d051da58583e2be57499320c8ad155c4ae741f259c730bcca98390"
+    }
+  ],
+  "changed_since_all65587": [
+    "web-app/e2e/channel-transport.spec.ts",
+    "foundation_documentation/todos/active/features/TODO-leadshug-channel-abstraction.md"
+  ]
+}

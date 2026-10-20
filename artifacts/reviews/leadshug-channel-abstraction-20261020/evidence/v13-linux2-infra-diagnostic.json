@@ -1,0 +1,13 @@
+{
+  "schema": "stcon06-linux-infra-diagnostic-v1",
+  "run": "linux-2",
+  "reported_terminal_exit": 1,
+  "raw_log": "foundation_documentation/artifacts/tmp/stcon06-executor-v13-all-linux-2.log",
+  "raw_log_sha256": "0bbb0e61be2b9369e6a7ad923a281d2ba525bc0908ada9290a028822ddc35726",
+  "source_snapshot": "evidence/v13-linux2-source-before.json",
+  "source_after_exact47_match": "executor reports true at terminal, before subsequent authorized wrapper edits",
+  "product_tests_started": false,
+  "failure": "Public Compose configs file paths still resolved to client /mnt/c/...; explicit API/Web bind translation passed prior mount boundary",
+  "cleanup": "Executor reports disposable prefixed resources removed; no human runtime touched",
+  "disposition": "Wrapper-only ephemeral overlay for same three public .env.example masks, socket-gated and exact path-identity controls; persistent Compose unchanged, no private dotenv input. Fresh all still required."
+}

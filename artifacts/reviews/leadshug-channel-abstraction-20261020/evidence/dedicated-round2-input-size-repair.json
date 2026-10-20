@@ -1,0 +1,371 @@
+{
+  "schema": "stcon06-review-representation-repair-v1",
+  "recorded_at_utc": "2026-10-20T18:08:10.490705+00:00",
+  "terminal_attempts": {
+    "performance": 35078,
+    "test-quality": 60868,
+    "cutover-integrity": 68668
+  },
+  "failure": "turn/start input_too_large before analysis; allterminal1, no live reviewer replaced",
+  "original_package_sha256": "181056c94f3a495d8b8df64b68fab428a3fc5d764663a0fb74a90eeb4a8a2d0a",
+  "compact_package_sha256": "f3fc7894027c219b02e1bbb7661a06d36c18de616079474f3ec0fdfd54d60089",
+  "json_blocks_compacted": [
+    {
+      "artifact": "v1.3-human-approval.json",
+      "before_chars": 727,
+      "after_chars": 646
+    },
+    {
+      "artifact": "authority-execution-v1.3.json",
+      "before_chars": 872,
+      "after_chars": 743
+    },
+    {
+      "artifact": "ci-evidence-invalidation-v1.3.json",
+      "before_chars": 7340,
+      "after_chars": 5256
+    },
+    {
+      "artifact": "ci-source-authority-refresh-v1.3.json",
+      "before_chars": 2575,
+      "after_chars": 2467
+    },
+    {
+      "artifact": "v13-final-source-before-all.json",
+      "before_chars": 8763,
+      "after_chars": 7136
+    },
+    {
+      "artifact": "v13-final-validation.json",
+      "before_chars": 37404,
+      "after_chars": 26032
+    },
+    {
+      "artifact": "executor-v1.3-validation.json",
+      "before_chars": 15700,
+      "after_chars": 13309
+    },
+    {
+      "artifact": "meta-mutant-failure-restoration.json",
+      "before_chars": 1418,
+      "after_chars": 1317
+    },
+    {
+      "artifact": "evolution-mutant-failure-restoration.json",
+      "before_chars": 1968,
+      "after_chars": 1774
+    },
+    {
+      "artifact": "browser-causal-actual-mutant-source-observation.json",
+      "before_chars": 965,
+      "after_chars": 923
+    },
+    {
+      "artifact": "browser-causal-mutant-failure-restoration.json",
+      "before_chars": 868,
+      "after_chars": 803
+    },
+    {
+      "artifact": "browser-causal-green-mutant-provenance.json",
+      "before_chars": 1480,
+      "after_chars": 1295
+    },
+    {
+      "artifact": "pcv-eps-candidate.json",
+      "before_chars": 15500,
+      "after_chars": 9982
+    },
+    {
+      "artifact": "pcv-frc-candidate.json",
+      "before_chars": 3188,
+      "after_chars": 2600
+    },
+    {
+      "artifact": "pcv-bci-candidate.json",
+      "before_chars": 4020,
+      "after_chars": 2444
+    },
+    {
+      "artifact": "pcv-rls-candidate.json",
+      "before_chars": 7744,
+      "after_chars": 3826
+    },
+    {
+      "artifact": "public-diff-preliminary.json",
+      "before_chars": 2887,
+      "after_chars": 2197
+    },
+    {
+      "artifact": "v13-api2-root-inspection.json",
+      "before_chars": 9743,
+      "after_chars": 5539
+    },
+    {
+      "artifact": "v13-linux93079-infra-diagnostic.json",
+      "before_chars": 1659,
+      "after_chars": 1524
+    },
+    {
+      "artifact": "v13-linux2-infra-diagnostic.json",
+      "before_chars": 960,
+      "after_chars": 914
+    },
+    {
+      "artifact": "authority-v13-before-final-all.json",
+      "before_chars": 872,
+      "after_chars": 743
+    },
+    {
+      "artifact": "audit-escalation-v13-delivery.json",
+      "before_chars": 3433,
+      "after_chars": 2695
+    }
+  ],
+  "json_semantics_equal": true,
+  "source_test_diff_rubric_decision_content_retained": true,
+  "source_generated_line_prefixes_removed": [
+    {
+      "path": "api-app/package.json",
+      "lines": 53
+    },
+    {
+      "path": "api-app/src/domain/channels/channel-credential-resolver.ts",
+      "lines": 93
+    },
+    {
+      "path": "api-app/src/domain/channels/transport/channel-dependencies.spec.ts",
+      "lines": 46
+    },
+    {
+      "path": "api-app/src/domain/channels/transport/channel.ts",
+      "lines": 77
+    },
+    {
+      "path": "api-app/src/domain/inbox/conversations.service.ts",
+      "lines": 221
+    },
+    {
+      "path": "api-app/src/domain/inbox/incoming.service.ts",
+      "lines": 116
+    },
+    {
+      "path": "api-app/src/domain/inbox/incoming.typebot.integration.spec.ts",
+      "lines": 58
+    },
+    {
+      "path": "api-app/src/domain/inbox/message-acceptance.service.ts",
+      "lines": 301
+    },
+    {
+      "path": "api-app/src/domain/inbox/outbound.service.spec.ts",
+      "lines": 137
+    },
+    {
+      "path": "api-app/src/domain/inbox/outbound.service.ts",
+      "lines": 269
+    },
+    {
+      "path": "api-app/src/integrations/channels/channel-adapter-factory.ts",
+      "lines": 11
+    },
+    {
+      "path": "api-app/src/integrations/channels/channel-adapter-registry.ts",
+      "lines": 25
+    },
+    {
+      "path": "api-app/src/integrations/channels/channel-transport.module.ts",
+      "lines": 42
+    },
+    {
+      "path": "api-app/src/integrations/channels/evolution-channel.ts",
+      "lines": 31
+    },
+    {
+      "path": "api-app/src/integrations/channels/meta-channel.ts",
+      "lines": 38
+    },
+    {
+      "path": "api-app/src/integrations/channels/prisma-channel-resolver.ts",
+      "lines": 362
+    },
+    {
+      "path": "api-app/src/integrations/evolution/evolution.client.spec.ts",
+      "lines": 100
+    },
+    {
+      "path": "api-app/src/integrations/evolution/evolution.client.ts",
+      "lines": 156
+    },
+    {
+      "path": "api-app/src/integrations/meta/meta.client.spec.ts",
+      "lines": 553
+    },
+    {
+      "path": "api-app/src/integrations/meta/meta.client.ts",
+      "lines": 317
+    },
+    {
+      "path": "api-app/src/surfaces/bff/bff.module.ts",
+      "lines": 104
+    },
+    {
+      "path": "api-app/src/surfaces/bff/conversations.controller.ts",
+      "lines": 134
+    },
+    {
+      "path": "api-app/src/surfaces/public/conversations.controller.ts",
+      "lines": 240
+    },
+    {
+      "path": "api-app/src/surfaces/public/public.module.ts",
+      "lines": 28
+    },
+    {
+      "path": "api-app/src/surfaces/webhooks/webhooks.module.ts",
+      "lines": 22
+    },
+    {
+      "path": "api-app/test/api-publica.e2e-spec.ts",
+      "lines": 255
+    },
+    {
+      "path": "api-app/test/browser-server.cjs",
+      "lines": 156
+    },
+    {
+      "path": "api-app/test/channel-transport.e2e-spec.ts",
+      "lines": 530
+    },
+    {
+      "path": "api-app/test/helpers.ts",
+      "lines": 331
+    },
+    {
+      "path": "api-app/test/number-onboarding-pcv.e2e-spec.ts",
+      "lines": 433
+    },
+    {
+      "path": "api-app/test/number-onboarding-typebot.e2e-spec.ts",
+      "lines": 221
+    },
+    {
+      "path": "api-app/test/timeline-fixtures.cjs",
+      "lines": 306
+    },
+    {
+      "path": "web-app/e2e/channel-transport.spec.ts",
+      "lines": 220
+    },
+    {
+      "path": "web-app/e2e/number-onboarding-freshness.ts",
+      "lines": 73
+    },
+    {
+      "path": "web-app/e2e/timeline-freshness.ts",
+      "lines": 120
+    },
+    {
+      "path": "web-app/package.json",
+      "lines": 28
+    },
+    {
+      "path": "web-app/src/api.spec.ts",
+      "lines": 136
+    },
+    {
+      "path": "web-app/src/api.ts",
+      "lines": 269
+    },
+    {
+      "path": "web-app/src/telas/Inbox.tsx",
+      "lines": 476
+    },
+    {
+      "path": "scripts/test-channels-local.sh",
+      "lines": 263
+    },
+    {
+      "path": "foundation_documentation/todos/active/features/TODO-leadshug-channel-abstraction.md",
+      "lines": 811
+    },
+    {
+      "path": "foundation_documentation/modules/inbox-and-conversations.md",
+      "lines": 67
+    },
+    {
+      "path": "foundation_documentation/modules/integrations-and-channels.md",
+      "lines": 106
+    },
+    {
+      "path": "foundation_documentation/project_constitution.md",
+      "lines": 69
+    },
+    {
+      "path": "api-app/prisma/schema.prisma",
+      "lines": 711
+    },
+    {
+      "path": "api-app/vitest.config.ts",
+      "lines": 13
+    },
+    {
+      "path": "api-app/vitest.config.e2e.ts",
+      "lines": 21
+    },
+    {
+      "path": "api-app/tsconfig.build.json",
+      "lines": 4
+    },
+    {
+      "path": "web-app/playwright.config.ts",
+      "lines": 124
+    },
+    {
+      "path": "web-app/vite.config.ts",
+      "lines": 35
+    },
+    {
+      "path": ".github/workflows/ci.yml",
+      "lines": 117
+    },
+    {
+      "path": "docker-compose.channels.yml",
+      "lines": 498
+    },
+    {
+      "path": "api-app/src/app.module.ts",
+      "lines": 42
+    },
+    {
+      "path": "api-app/src/surfaces/bff/session.middleware.ts",
+      "lines": 140
+    },
+    {
+      "path": "api-app/src/surfaces/public/api-key.middleware.ts",
+      "lines": 40
+    },
+    {
+      "path": "api-app/src/domain/access/access.service.ts",
+      "lines": 62
+    },
+    {
+      "path": "api-app/test/number-onboarding-message-acceptance.e2e-spec.ts",
+      "lines": 119
+    },
+    {
+      "path": "scripts/check-channels-ci-parity.py",
+      "lines": 407
+    },
+    {
+      "path": "api-app/prisma/migrations/20261020170000_message_inbound_window_index/migration.sql",
+      "lines": 6
+    }
+  ],
+  "prompt_characters": {
+    "performance": 1038205,
+    "test-quality": 1038141,
+    "cutover-integrity": 1038684
+  },
+  "limit": 1048576,
+  "status": "fullcomplete package repaired for one fresh retry; no audit pass or waiver"
+}

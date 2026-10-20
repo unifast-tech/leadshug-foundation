@@ -1,0 +1,11 @@
+2026-10-20T18:04:50.205374Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back
+2026-10-20T18:04:50.214690Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back
+2026-10-20T18:04:50.245412Z  WARN codex_core::shell_snapshot: Failed to delete shell snapshot at "/home/lucas_paifer/.codex/shell_snapshots/01a15a7c-ca1a-7c73-aa96-29c0f443f571.1792519490085734562.sh": Os { code: 2, kind: NotFound, message: "No such file or directory" }
+2026-10-20T18:04:50.253825Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back
+2026-10-20T18:04:50.260963Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back
+2026-10-20T18:04:50.288728Z  WARN codex_core::shell_snapshot: Failed to delete shell snapshot at "/home/lucas_paifer/.codex/shell_snapshots/01a15a7c-ca1a-7470-b5b1-fb4b3a5eb18a.1792519490085743274.sh": Os { code: 2, kind: NotFound, message: "No such file or directory" }
+2026-10-20T18:04:50.295026Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back
+2026-10-20T18:04:50.301200Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back
+2026-10-20T18:04:50.306828Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back
+2026-10-20T18:04:50.312419Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back
+Error: turn/start: turn/start failed: Input exceeds the maximum length of 1048576 characters. (code -32602), data: {"input_error_code":"input_too_large","max_chars":1048576,"actual_chars":1122603}

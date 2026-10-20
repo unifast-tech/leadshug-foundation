@@ -1,0 +1,59 @@
+{
+  "schema_version": "subagent-review-merge-v2",
+  "artifact_kind": "subagent_review_merge",
+  "authoritative": false,
+  "edit_policy": "derived_merge_packet",
+  "dispatch_path": "/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/artifacts/reviews/leadshug-channel-abstraction-20261020/dedicated-audit/round-02/dispatch/test-quality.dispatch.json",
+  "review_kind": "test_quality_audit",
+  "review_count": 1,
+  "reviewer_labels": [
+    "fresh_no_context_tqa_round02"
+  ],
+  "highest_finding_severity": "high",
+  "axis_summary": {
+    "performance": "acceptable",
+    "elegance": "acceptable",
+    "structural_soundness": "acceptable",
+    "operational_fit": "mixed"
+  },
+  "recommended_paths": [
+    "return_for_targeted_public_contract_coverage_and_required_operational_gate_completion"
+  ],
+  "exact_next_step": "Record reviewer resolutions in the governing TODO using the machine-checkable resolution table or equivalent gate ledger, then extract the derived resolution packet and decide whether another bounded review pass is still required.",
+  "findings": [
+    {
+      "finding_id": "F-B32947BC",
+      "severity": "high",
+      "title": "Required real-provider official and unofficial IN/OUT gate remains unexecuted",
+      "rationale": "The package correctly distinguishes controlled-provider, real-BFF/PostgreSQL evidence from external-provider proof, but DOD-07 and VAL-04 still require fresh post-activation official and unofficial operator IN/OUT. No waiver is supplied, so automated fixture success cannot close the delivery-integrity gap.",
+      "suggested_action": "After authorized local activation and HTTPS restoration, collect fresh redacted IN/OUT and canonical readback evidence for both owned bindings against the reviewed source. Keep remote CI separately not_run unless later authorized promotion executes it.",
+      "reviewer_labels": [
+        "fresh_no_context_tqa_round02"
+      ],
+      "source_finding_ids": [
+        "TQA-R02-02"
+      ],
+      "category": "operational_fit",
+      "formalizable_hint": "partial",
+      "candidate_rule_level": "project",
+      "candidate_rule_id": "n/a"
+    },
+    {
+      "finding_id": "F-D333D5E8",
+      "severity": "high",
+      "title": "Public availability contract lacks negative-path and thread-endpoint regression coverage",
+      "rationale": "The public controller adds `envio_disponivel` and `motivo_indisponibilidade` to both list and thread responses, but the supplied `api-publica.e2e-spec.ts` asserts only an available list row. A broken or omitted thread projection, or an unavailable selected binding reported as available, can pass all supplied tests despite violating D07 and the public contract.",
+      "suggested_action": "Add real-PostgreSQL public API tests covering available and deterministic unavailable selected bindings. Assert exact list and thread availability/reason fields, then assert POST blocks without provider calls or a new OUT Message for the unavailable case.",
+      "reviewer_labels": [
+        "fresh_no_context_tqa_round02"
+      ],
+      "source_finding_ids": [
+        "TQA-R02-01"
+      ],
+      "category": "tests",
+      "formalizable_hint": "yes",
+      "candidate_rule_level": "project",
+      "candidate_rule_id": "public-contract-field-negative-and-endpoint-coverage"
+    }
+  ]
+}

@@ -1,0 +1,14090 @@
+# ST-CON-06 — dedicated delivery audit package
+
+Derived bounded-file-set on the approved principal checkout. Primary validation is now terminal: canonicalall80903 passed194unit/309realPG/29Web/50browser; exact source/served attestations below. No product mutation after freeze. Source base was captured while this run was active; all its pending-primary/R02-implementation labels are chronological history, superseded only by this validation addendum. The frozen scope/decisions are unchanged.
+
+This audit judges the implemented automated candidate and its required evidence quality/cutover. It cannot certify pending external delivery gates: localAPI/Webactivation, newHTTPS and assisted realINOUT on both channels plus finalreview/consolidation remain required before Local-Implemented. Do not treat those declared pending gates as delivered or waived. Classify findings at their actual scope/severity; keep all applicable TQA rubric and issue cards. R02 correction is independently challengeable; realmutation does not itself prove every hypothetical future app continuation.
+
+Current product delta sinceall65587 andround3 is the admitted browsertest only. Actual nativebody-read/task barrier now precedes the fetch, passesexact1/1/1 and same-text draft/noalert assertions. Trueguard-omission30246 failsdraftempty49/50; baseline restoration independently proven. Bad64345ordering attempt is harnessfailure;63018isgreen diagnostic, neither mislabeledmutant.
+
+# ST-CON-06 — dedicated audit source base
+
+Derived, non-authoritative bounded-file-set. This is an immutable source base, not the final dispatch package. No terminal result is claimed for all80903 here. The final audit packet must append terminal exact-source validation, refreshed measured PCV and the current external-gate status.
+
+Frozen authority: user APROVADO ST-CON-06 v1.2 plus explicit two test-companion admission. D01..10, Scope/DoD/out-of-scope unchanged. Preserve only current official/unofficial text transport and approved opaque fake; no real future networks, template authoring, first-send intent, schema, lifecycle, retry/outbox or production promotion. One implementation writer, principal checkout only.
+
+Big architectural delivery on NestJS11/Prisma6/PostgreSQL16/React18/Vite5/Docker. Apply the entire full applicable TQA workload, not just five questions. Give all mandatory assessment dimensions in overall_assessment (the result schema allows strings, not extra JSON fields). For each material finding include concrete issue evidence, why-now, optionsA/B/C/do-nothing where reasonable and a recommendation within schema rationale/suggested_action. Gate calibration remains no unresolved blocking finding; do not withhold real defects, and do not invent future scope or waive obligations. The implementing executor is not a reviewer; supplied execution provenance is not reviewer execution. No tools or external retrieval in this closed review.
+
+All reviewers must inspect producer/consumer evidence and actual original/failure/restoration source boundaries. The Performance lane reviews measured query/load evidence without an unapproved capacity claim. TestQuality must assess Architecture, CodeQuality, Tests, Performance, Security plus five required audit questions, fail-first/retrofit risk, no bypass/fallback, DI/token/scope parity, exact commands/CI/platform parity, real mutation/negative state, async races, freshness, D01..10 and residual verification debt. Cutover checks one abstract send path/sole MessageAcceptance owner and absence of old dispatch or compatibility stitching. Existing physical origin enum and protocol-specific registration clients are explicit approved boundaries.
+
+Historical repeated IDs are qualified by raw artifact prefix. Round1/2/3 dispositions below are carried forward; R01/R03/R04/R05 original counterexamples fixed in reviewed snapshot. R02 task barrier has a new real negative mutation; evaluate new source/proof, do not infer closure from test count alone. There is no accepted-debt waiver.
+
+
+## Full audit rubric delphi-ai/skills/test-quality-audit/SKILL.md
+
+---
+name: test-quality-audit
+description: "Audit stack-aware test quality and test-first alignment so bypasses, weak assertions, false parity, and retrofit risk are blocked."
+---
+
+# Test Quality Audit
+
+## Purpose
+
+Detect bypasses, weak assertions, false environment parity, and retrofit risk across project-declared stacks. Judge evidence against the behavior and boundary claimed, without imposing an unrelated framework, runner, database, transport, browser, or device.
+
+## Scope Controls
+
+- This skill never bypasses TODO governance. If project artifacts change, follow TODO and `APROVADO` gates first.
+- Treat tests as executable specifications. Prefer fail-first evidence for verifiable bugfixes, regressions, and behavior-defining changes.
+- Classify audit complexity as `small|medium|big`; medium/big audits include Architecture, Code Quality, Tests, Performance, and Security framing.
+- Resolve active capabilities, owning manifests, project-owned commands, and affected boundaries before applying stack-specific checks.
+- Pair with `bug-fix-evidence-loop`, `test-creation-standard`, `verification-debt-audit`, or `frontend-race-condition-validation` when their scopes apply.
+
+## Preferred Deterministic Helpers
+
+- Run `bash delphi-ai/tools/test_quality_audit.sh`, optionally with `--scan-git-modified` or repeatable `--path <test-path>`.
+- For Node/TypeScript capability ownership, run `python3 delphi-ai/tools/node_capability_surface_audit.py --repo <project-root> --expect <capability> [--manifest <relative/package.json>] [--require-script <script>]` before judging runner or script coverage.
+- Exit code `2` from the static audit means medium/high signals were found. Review them; do not weaken the scope to clear the signal.
+
+## Generic Guardrails
+
+- `GF-01` Preflight, harness, and environment failures are blocked evidence, not product failures by default.
+- `GF-02` Shared-lane validation uses canonical product surfaces; test-only product endpoints are forbidden.
+- `GF-03` Parse and contract failures in reference assertions hard-fail.
+- `GF-04` Required promotion gates cannot pass with flaky or retry-only outcomes.
+- `GF-05` Artifact fallback paths that mask ownership or permission faults are forbidden.
+- `GF-06` A narrow test or mocked boundary cannot substantiate a broader compatibility or end-to-end claim.
+
+## Audit Workflow
+
+1. **Frame the audit**
+   - Record active capabilities, compatibility intent, changed behaviors, affected boundaries, topology, and relevant baseline decisions.
+   - For large or architectural changes, require unit/provider/component plus integration/module/adapter evidence for each affected critical path.
+2. **Check fail-first alignment**
+   - Identify `test-first`, `test-after`, `not-applicable`, or `unknown` and the concrete assertion that demonstrates the pre-change failure.
+   - Classify final-state-only tests that would not expose the bug as `retrofit-risk` unless a coherent non-applicability rationale exists.
+3. **Scan for bypass flags**
+   - Block committed skips, focused-test markers such as `test.only`/`describe.only`, CI golden-update bypasses, and shared-lane test-only routes.
+4. **Match evidence to the claim**
+   - Require real infrastructure only when compatibility or the contract crosses that boundary.
+   - Verify both reachability and identity/authentication paths when those are part of the claim.
+   - Do not accept unit-only evidence for a changed wiring, serialization, persistence, transport, or runtime boundary.
+5. **Check fallback logic**
+   - Block silent fallback from required real calls to mocks, from an owned fixture to ambient live data, or from canonical artifact paths to fallback directories.
+6. **Verify dependency-injection parity**
+   - Test replacements must preserve the relevant production token, scope/lifecycle, and failure semantics unless an explicit documented exception is itself asserted.
+7. **Validate failure behavior**
+   - Require loud failures for error payloads, empty required responses, parse errors, contract mismatches, and rejected dependencies.
+   - Block no-exception-only and transport-status-only assertions when business semantics matter.
+8. **Validate assertion quality**
+   - Assert externally meaningful outcomes and explicit negative states.
+   - Cover retriggerable asynchronous races when applicable.
+   - Use deterministic owned proof subjects; do not rely on first-row, first-page, or first-candidate ambient data.
+9. **Confirm environment and command parity**
+   - Verify the exact project-owned runner/package-manager scripts and the topology prerequisites for the active capability.
+   - Treat live hosted services, hardcoded production targets, or undeclared local substitutions as findings unless the approved baseline explicitly requires them.
+10. **Audit build and runtime integrity when applicable**
+    - Confirm authored tests are not stored in compiled output.
+    - Match bundle/artifact metadata to the source revision and prove that manual/browser/device targets serve that build.
+11. **Audit the claimed platform matrix**
+    - Require evidence only for platforms in the claim, but mark any missing required platform `blocked`, never `passed`.
+12. **Write issue cards for material findings**
+    - Include issue ID, severity, `file:line` evidence, why-now, options A/B/C including do-nothing when reasonable, and recommendation.
+13. **Record failure modes and uncertainty**
+    - State likely edge cases, assumptions, unknowns, and confidence.
+14. **Validate decision adherence**
+    - Map each active baseline decision to `Adherent` or `Exception` with evidence. An unresolved exception is not delivery-ready.
+
+## Conditional Stack Checks
+
+- **NestJS:** test provider/use-case behavior, testing-module wiring, provider tokens/scopes/exports, and externally visible contracts at the chosen transport. Use the owning manifest's runner; do not assume Jest, Vitest, HTTP, Express, Fastify, Prisma, or PostgreSQL.
+- **Laravel:** use the project-owned safe runner. Require a local MongoDB replica set and prohibit Atlas only when MongoDB is the declared test datastore.
+- **Flutter:** require unit, widget, integration, web, or mobile lanes only where the change and platform claim demand them; use project-owned domain/scheme overrides.
+- **Browser/Web:** keep test sources outside compiled bundles, use the project-owned browser runner, and require runtime freshness before accepting observations.
+
+## Common Bypass Patterns (Block)
+
+- Catching exceptions and continuing without failing.
+- Tests that codify current buggy behavior instead of intended behavior.
+- Mock or live-service fallbacks that hide required-boundary failures.
+- Dependency-injection scope/token changes without explicit validation.
+- Environment flags that disable required integration behavior in CI.
+- Overly broad stubs that always succeed.
+- Assertions that pass on empty data or ignore required state transitions.
+- Ambient live-data selection for release-gating proof subjects.
+- End-to-end or architectural safety claimed from unit-only evidence.
+- Flaky required gates accepted as pass.
+- Behavior-defining changes with no fail-first target and no rationale.
+
+## Required Evidence
+
+- Capability and owning-command inventory.
+- Coverage/evidence matrix with deliberate exclusions.
+- Proof of the real declared boundary where compatibility requires it.
+- Fail-first target or explicit non-applicability rationale.
+- Dependency-injection parity evidence or documented/asserted exception.
+- Required platform status as `passed|blocked|failed|flaky`.
+- Decision-adherence table when baseline decisions are in scope.
+
+## Done Criteria
+
+- No bypass remains in changed tests.
+- No unresolved retrofit risk remains for behavior-defining work.
+- Evidence layers substantiate, and do not overstate, the compatibility or architecture claim.
+- Required real-boundary tests fail loudly on mismatch.
+- Exact commands and topology match the declared project surface.
+- Material findings have actionable issue cards.
+- Required platform and decision evidence is complete or explicitly dispositioned.
+
+
+## Full audit rubric delphi-ai/workflows/docker/independent-test-quality-audit-method.md
+
+---
+description: Define the canonical no-context independent test-quality audit gate for end-of-implementation review, including trigger rules, package hygiene, retry discipline, and resolution handling.
+---
+
+# Method: Independent Test Quality Audit
+
+## Purpose
+Provide a dedicated end-of-implementation audit focused on the integrity and quality of the tests that justify delivery confidence.
+
+This method exists to detect pass-the-test workarounds, weak assertions, retrofit-only coverage, brittle test rewrites, and other changes that can make validation look green without proving the product behavior that actually matters.
+It is stricter than generic final review: it is specifically about whether the tests changed for the right reasons and whether the affected test surface is effective and efficient.
+Gate-satisfying evidence must cover the full applicable `test-quality-audit` workload for the scoped stack and risk profile, not just a short answer to a few review questions.
+
+## When It Applies
+- Run this method whenever `wf-docker-audit-escalation-method` marks `test_quality_audit` as `required|recommended`.
+- The audit-escalation guard is the minimum decision authority for whether this lane is needed.
+- If implementation changed test or delivery-risk triggers materially, rerun the audit-escalation guard before trusting the old decision.
+
+## Inputs
+- Tactical TODO under `foundation_documentation/todos/active/`.
+- Frozen decisions / approved expectations.
+- Bounded implementation diff.
+- Bounded test diff, or an explicit record that no test diff exists.
+- Validation evidence already collected.
+- Expected behaviors / Definition of Done still in force.
+- Residual risks or uncertainty that still matter to test confidence.
+
+## Audit Lens
+- Use `test-quality-audit` as the primary audit lens.
+- The audit must explicitly answer:
+  - whether changed test logic reflects a real product or contract change;
+  - whether any changed test logic appears to exist mainly to make the suite pass;
+  - whether the assertions are effective enough to catch the intended regression or behavior break;
+  - whether the assertions and coverage are efficient rather than bloated, redundant, or brittle;
+  - whether the changed and nearby tests actually cover the required behaviors and failure modes.
+- When applicable, also challenge:
+  - fail-first or test-first alignment;
+  - bypass patterns (`skip`, overly broad stubs, test-only routes, silent mock fallbacks, DI/test harness shortcuts);
+  - assertions that only prove transport status or absence of exceptions while missing business outcomes;
+  - fixture/runner changes that quietly weaken the guarantees of the suite.
+
+## Minimum Gate-Satisfying Outputs
+- The audit evidence must include every applicable output expected by `test-quality-audit`, including:
+  - audit framing for target stacks, compatibility intent, and critical user journeys in scope;
+  - fail-first / test-first alignment assessment when bugfix, regression, or behavior-defining work is involved;
+  - bypass scan results for skips, test-only shortcuts, overly broad stubs, silent fallbacks, and similar masking patterns;
+  - real-backend, fallback, DI parity, CI parity, and platform-matrix checks whenever the scoped change or claim makes them relevant;
+  - issue cards for every material finding;
+  - failure modes / uncertainty notes that still matter to delivery confidence;
+  - decision-adherence evidence when active TODO decisions are in scope.
+- The five explicit audit questions in this method are mandatory, but they are not sufficient by themselves when the underlying `test-quality-audit` scope requires more.
+
+## Package Hygiene
+- The audit package must be bounded. Do not hand the full session transcript or diffuse conversational history to the reviewer.
+- Prefer one of these package shapes:
+  - `bounded-file-set`: only the implementation/test surfaces and evidence needed for the audit;
+  - `bounded-summary`: a concise structured summary of the test-relevant package.
+- If using a `bounded-summary`, it must include at minimum:
+  - frozen baseline / approved expectations;
+  - approved scope boundary;
+  - bounded implementation summary;
+  - bounded test summary with explicit changed files or explicit `no test diff`;
+  - validation evidence index;
+  - expected behaviors / Definition of Done;
+  - residual risks / unknowns still relevant to validation confidence;
+  - any existing blockers or waivers already affecting the test lane.
+- Preserve concrete test deltas and expectations instead of paraphrasing them into soft language.
+
+## Required-Gate Waiver Control
+- If a `required` independent test-quality audit cannot be completed after an objectively terminal failed attempt and one retry of the complete gate-satisfying package, a `blocked` record alone does not permit `Completed` or `Production-Ready`.
+- Only the current human approval authority for the TODO may waive a required test-quality audit gate.
+- The waiver record must include:
+  - `waiver_reason`
+  - `approver_id`
+  - `approval_reference`
+  - `mitigation_summary`
+  - `follow_up_owner`
+  - `follow_up_task_id`
+
+## Procedure
+1. Use the latest successful `wf-docker-audit-escalation-method` output as the minimum decision authority for this gate.
+2. Build the bounded test-audit package.
+   - If orchestration tooling is desired, derive a dispatch packet with `python3 delphi-ai/tools/subagent_review_dispatch.py --review-kind test_quality_audit ...`.
+3. Run one fresh internal audit with no inherited thread context.
+   - This audit pass must use a fresh internal no-context reviewer/subagent with `fork_context=false`; it must not be the implementing agent.
+   - Internal no-context reviewer availability inside the active client is treated as operationally mandatory. If no free reviewer slot is available, close/recycle only a terminal inactive review lane and open a fresh reviewer instead of downgrading to self-review; a live reviewer is never recyclable.
+   - Do not invoke or treat an external provider as gate-satisfying review evidence.
+   - In other environments, use the closest internal equivalent that guarantees no prior thread contamination.
+   - Reviewer lifecycle is status-based, not elapsed-time-based. While status is `pending_init` or `running`, wait without a rigid deadline.
+   - A polling timeout means only that no terminal event arrived during that polling window. Do not interrupt, close, recycle, replace, duplicate, or repackage/shrink a live review.
+4. Prompt the reviewer to return findings first, ordered by severity, and to stay focused on test quality rather than reopen the full architecture.
+   - Require explicit positions on:
+     - product/test delta alignment;
+     - pass-the-test workaround risk;
+     - assertion efficacy;
+     - assertion efficiency;
+     - coverage sufficiency for required behaviors and failure modes;
+     - fail-first/test-first alignment when relevant.
+5. Treat the audit as challenge evidence only:
+   - advisory, never authoritative by itself;
+   - it may block closure if it exposes weak or misleading validation, but it does not replace the TODO contract or user approval model.
+6. If the first no-context audit attempt reaches objective terminal failure, retry once with the same complete gate-satisfying package by default. Change the package only to repair a concrete proven package defect while preserving the full rubric; a polling timeout while the reviewer remains live requires continued waiting.
+7. If a `required` audit still cannot be obtained after an objectively terminal failed attempt and one retry:
+   - record the tooling limitation explicitly;
+   - do not silently treat bounded self-review as equivalent to a true fresh internal no-context audit;
+   - require either a blocker state or an explicit waiver before `Completed` or `Production-Ready`;
+   - treat `blocked` as non-satisfying until the gate is actually run or explicitly waived by the approval authority.
+8. Resolve every material finding explicitly in the TODO as one of:
+   - `Integrated`
+   - `Challenged`
+   - `Deferred with rationale`
+   - If structured reviewer JSON was used, merge it with `python3 delphi-ai/tools/subagent_review_merge.py ...` before recording the authoritative resolution.
+   - Prefer the machine-checkable resolution table from `templates/todo_template.md`, then derive `*-resolution.json` with `python3 delphi-ai/tools/gate_finding_resolution_extract.py --review-kind test_quality_audit ...` when metrics are in scope.
+9. If the audit invalidates the claimed Definition of Done or shows that test changes do not map to real product change, treat delivery confidence as broken until the tests or scope are corrected.
+
+## Outputs
+- A recorded audit decision (`required|recommended|not_needed`) with rationale.
+- A bounded audit package reference.
+- Findings summarized in the TODO with explicit resolution status.
+- A blocker or waiver record if a required independent audit could not be executed.
+
+## Non-Authority Rule
+- Fresh internal audits are intentionally independent, but they do not own the decision.
+- Delivery authority remains the tactical TODO, the decision-adherence gates, and the normal approval model.
+
+
+## Full audit rubric delphi-ai/workflows/docker/performance-concurrency-validation-method.md
+
+---
+description: Define the versioned four-lane performance/concurrency policy package for tactical TODOs, including closed registries, lane state machine, artifact hashing rules, and gate deadlines.
+---
+
+# Method: Performance & Concurrency Validation Lanes
+
+## Policy Schema Version
+- `pcv-1`
+
+This workflow is the canonical policy package for tactical TODO performance/concurrency validation. The closed registries, JSON normalization rules, and lane artifact contracts in this document are immutable within `pcv-1`.
+
+## Scope Anchor
+- This policy applies only to tactical TODOs under `foundation_documentation/todos/active/` that use the tactical TODO template and require explicit `APROVADO` before implementation.
+- `Approval authority` means the explicit approving user or an explicitly delegated human approver recorded by the user.
+- `Executor` means the agent performing the work.
+- `Approver` must differ from `executor`.
+
+## Lane Set
+Every tactical TODO must contain exactly four lane rows:
+- `EPS` = `endpoint-performance-scrutiny`
+- `FRC` = `frontend-race-condition-validation`
+- `BCI` = `backend-concurrency-idempotency-validation`
+- `RLS` = `runtime-load-stress-validation`
+
+No lane row may be missing or duplicated.
+
+## Closed Registries
+
+### Lane IDs
+| ID | Meaning |
+| --- | --- |
+| `EPS` | Endpoint/query access-path scrutiny |
+| `FRC` | Frontend race-condition validation |
+| `BCI` | Backend concurrency/idempotency validation |
+| `RLS` | Runtime load/stress validation |
+
+### Trigger Results
+| ID | Meaning |
+| --- | --- |
+| `required` | The lane must be resolved by its gate deadline. |
+| `recommended` | The lane must still be resolved by its gate deadline, but waiver governance is lighter. |
+| `not_needed` | The validated surface is absent for this TODO. |
+
+### Gate Deadlines
+| ID | Meaning |
+| --- | --- |
+| `before_local_implemented` | The lane must be gate-satisfying before the TODO may move to `Current delivery stage = Local-Implemented`. |
+| `before_production_ready` | The lane must be gate-satisfying before the TODO may move to `Current delivery stage = Production-Ready`. |
+
+### Lane States
+| ID | Meaning |
+| --- | --- |
+| `not_applicable` | Valid only when `trigger_result = not_needed`; terminal. |
+| `pending` | Triggered lane not yet started. |
+| `running` | Validation execution in progress. |
+| `blocked` | Validation cannot currently run due to a concrete blocker. |
+| `passed` | Minimum evidence and acceptance rule satisfied. |
+| `waived` | Explicitly accepted exception path with governance fields completed. |
+| `expired` | Waiver expired; lane no longer satisfies gate. |
+| `missed_gate` | The lane missed its deadline while unresolved. |
+
+### Uncertainty Reason Codes
+| Code | Meaning |
+| --- | --- |
+| `none` | No uncertainty claimed. |
+| `U-QUERY-PATH-UNKNOWN` | Query/data-access path could not be classified with confidence. |
+| `U-ASYNC-SURFACE-UNKNOWN` | Async UI overlap/lifecycle behavior could not be classified with confidence. |
+| `U-WRITE-OVERLAP-UNKNOWN` | Write overlap or idempotency exposure is uncertain. |
+| `U-RUNTIME-PRESSURE-UNKNOWN` | Runtime pressure/capacity impact is uncertain. |
+| `U-EVIDENCE-EQUIVALENCE-CLAIM` | A non-default stronger evidence profile is being used instead of the floor profile. |
+
+If `uncertainty_reason_code != none`, `trigger_result` cannot be `not_needed`.
+
+## Objective Trigger Glossary
+- `exact_lookup_surface_changed`
+  - Changed code creates/modifies/deletes a path retrieving exactly one entity by key (`slug|id|uuid|code|handle|key`) or changes its API/repository contract.
+- `query_shape_changed`
+  - Changed code creates/modifies/deletes filtering, sorting, pagination, grouping, aggregation, join behavior, index expectation, cardinality, number of backend calls, or direct-lookup-vs-list-traversal behavior.
+- `retriggerable_async_write`
+  - The changed UI surface can issue overlapping mutations from the same visible action path.
+- `retriggerable_async_read_with_order_dependence`
+  - Overlapping reads can update the same visible state and later responses can overwrite newer intent.
+- `lifecycle_async_effect`
+  - Navigation/dispose/unmount can occur while async work still targets visible UI state or visible side effects.
+- `overlapping_write_surface`
+  - The changed system allows two or more requests/jobs/webhooks to mutate the same logical resource concurrently.
+- `runtime_pressure_surface`
+  - The changed code touches queue/worker/realtime fan-out, batch/bulk path, cache/index-sensitive request path, or the TODO explicitly claims latency/throughput/capacity/SLO impact.
+
+## Severity Scale
+| ID | Meaning |
+| --- | --- |
+| `low` | Localized, reversible, non-core flow. |
+| `medium` | User-visible or business-relevant degradation/corruption risk. |
+| `high` | Payment, reservation, inventory, auth-critical, realtime core path, or TODO runtime impact explicitly classified high. |
+
+## Row Schema
+
+### Always-Required Row Fields
+- `policy_schema_version`
+- `lane_id`
+- `trigger_result`
+- `trigger_severity`
+- `trigger_reason_code`
+- `trigger_rationale`
+- `gate_deadline`
+- `min_evidence_rule_id`
+- `state`
+- `residual_risk`
+- `uncertainty_reason_code`
+- `recorded_at_utc`
+- `executor_id`
+
+### Conditional Objects
+- `evidence`
+  - Required only when `state in {running, passed}`.
+- `blocker`
+  - Required only when `state = blocked`.
+- `waiver`
+  - Required only when `state in {waived, expired}`.
+- `classification_change`
+  - Required only when `trigger_result` changed after `APROVADO`.
+
+## Gate-Satisfying States
+- For `required`: only `passed` or `waived`
+- For `recommended`: only `passed` or `waived`
+- For `not_needed`: only `not_applicable`
+- `blocked`, `pending`, `running`, `expired`, and `missed_gate` never satisfy a gate.
+
+## State Machine
+- Initial state:
+  - `not_applicable` only when `trigger_result = not_needed`
+  - `pending` when `trigger_result in {required, recommended}`
+- Allowed transitions:
+  - `pending -> running|blocked|waived|missed_gate`
+  - `running -> passed|blocked|waived|missed_gate`
+  - `blocked -> running|waived|missed_gate`
+  - `waived -> expired`
+  - `expired -> pending`
+  - `missed_gate -> running|waived`
+  - `passed -> terminal`
+  - `not_applicable -> terminal`
+- No row may transition to `not_applicable` after `APROVADO`.
+
+## Classification Control
+- After `APROVADO`, `trigger_result` may only change `required <-> recommended`.
+- Any change that reduces obligation (`required -> recommended`) requires renewed `APROVADO`.
+- `recommended -> required` requires a recorded change, but not renewed approval unless the user explicitly constrains the prior lighter path.
+- `required -> not_needed` and `recommended -> not_needed` are forbidden after `APROVADO`.
+- `classification_change` object fields:
+  - `previous_trigger_result`
+  - `new_trigger_result`
+  - `classification_changed_by`
+  - `classification_changed_at_utc`
+  - `classification_change_reason`
+  - `approval_reference`
+
+## Waiver Control
+- Any gate-satisfying waiver requires:
+  - `waiver_reason_code`
+  - `waiver_reason`
+  - `waiver_expiry_utc`
+  - `approver_id`
+  - `approval_reference`
+  - `follow_up_task_id`
+  - `follow_up_owner`
+  - `mitigation_summary`
+- `approver_id` must differ from `executor_id`.
+- Required-lane waiver additionally requires `reviewer_id`, and `reviewer_id` must differ from both `executor_id` and `approver_id`.
+- Expired waiver automatically reopens the lane as `pending`.
+
+## Blocker Control
+- `blocker` object fields:
+  - `blocker_reason_code`
+  - `blocker_reason`
+  - `unblock_condition`
+  - `follow_up_task_id`
+  - `follow_up_owner`
+- If a gate deadline is reached while the lane is still `pending|running|blocked`, the state must become `missed_gate`.
+
+## Evidence Control
+- Prose-only evidence is invalid.
+- Each `evidence` object must include:
+  - `evidence_type`
+  - `environment_id`
+  - `run_id`
+  - `artifact_uri`
+  - `artifact_schema_version`
+  - `artifact_sha256`
+  - `sample_profile_id`
+  - `acceptance_rule_id`
+  - `result_summary`
+  - `reviewer_id`
+- The artifact at `artifact_uri` must be a machine-checkable JSON document.
+- The artifact JSON must include:
+  - `policy_schema_version`
+  - `schema_version`
+  - `lane_id`
+  - `todo_id`
+  - `run_id`
+  - `environment_id`
+  - `executor_id`
+  - `reviewer_id`
+  - `recorded_at_utc`
+  - `evidence_type`
+  - `sample_profile_id`
+  - `acceptance_rule_id`
+  - `result_summary`
+  - `artifact_payload`
+  - `artifact_sha256`
+- `artifact_sha256` must be the `SHA-256` hash of the full canonical JSON serialization excluding the `artifact_sha256` field itself.
+- Canonical JSON normalization for hashing in `pcv-1`:
+  - UTF-8 encoding
+  - sorted object keys at every depth
+  - arrays preserved in declared order
+  - no insignificant whitespace
+  - no comments or trailing commas
+- If one artifact is reused by multiple lanes, each lane row must reference it explicitly, and the artifact payload must satisfy every referenced lane's required evidence fields and rules.
+
+## Lane Policies
+
+### EPS
+**Trigger Reason Codes**
+- `EPS-EXACT-LOOKUP-SURFACE-CHANGED`
+- `EPS-QUERY-SHAPE-CHANGED`
+- `EPS-LIST-SEARCH-SEMANTICS-CHANGED`
+- `EPS-DATA-PATH-CHANGED`
+
+**Classification**
+- `required` when `exact_lookup_surface_changed` or `query_shape_changed` is true
+- `recommended` when a read path changed but neither `exact_lookup_surface_changed` nor `query_shape_changed` is true
+- `not_needed` when no read/data-access/query surface changed
+
+**Gate Deadline**
+- `before_local_implemented`
+
+**Closed Evidence Rules**
+| Rule ID | Required Evidence |
+| --- | --- |
+| `EPS-E1` | Access-pattern classification + touched-path audit artifact |
+| `EPS-E2` | `EPS-E1` plus `explain|query-log|benchmark-equivalent` artifact |
+
+**Closed Acceptance Rules**
+| Rule ID | Pass Requirement |
+| --- | --- |
+| `EPS-A1` | Low-severity row satisfies `EPS-E1`. |
+| `EPS-A2` | Medium/high-severity row satisfies `EPS-E2`. |
+
+**Closed Sample Profiles**
+| ID | Meaning |
+| --- | --- |
+| `EPS-SP-AUDIT` | Touched-path audit profile |
+| `EPS-SP-STRONG` | Strong query evidence profile |
+
+### FRC
+**Trigger Reason Codes**
+- `FRC-DUPLICATE-MUTATION`
+- `FRC-STALE-RESPONSE`
+- `FRC-LIFECYCLE-ASYNC-EFFECT`
+- `FRC-RETRIGGERABLE-LIST`
+- `FRC-OPTIMISTIC-RECONCILE`
+
+**Classification**
+- `required` when `retriggerable_async_write`, `retriggerable_async_read_with_order_dependence`, or `lifecycle_async_effect` is true on the changed UI surface
+- `recommended` when only low-risk retriggerable async read behavior changed and no mutation/lifecycle risk applies
+- `not_needed` when no retriggerable/lifecycle-sensitive async UI surface changed
+
+**Gate Deadline**
+- `before_local_implemented`
+
+**Closed Evidence Rules**
+| Rule ID | Required Evidence |
+| --- | --- |
+| `FRC-POLICY` | `concurrency_policy` enum present in artifact payload |
+| `FRC-E1` | `FRC-POLICY` + low floor profile evidence |
+| `FRC-E2` | `FRC-POLICY` + medium floor profile evidence |
+| `FRC-E3` | `FRC-POLICY` + high floor profile evidence |
+
+**Closed Acceptance Rules**
+| Rule ID | Pass Requirement |
+| --- | --- |
+| `FRC-A1` | Required lane row cannot pass without concurrency policy plus deterministic runner/manual evidence artifact. |
+| `FRC-A2` | Alternate stronger profile allowed only with `U-EVIDENCE-EQUIVALENCE-CLAIM` and explicit rationale. |
+
+**Closed Sample Profiles**
+| ID | Meaning |
+| --- | --- |
+| `FRC-SP-L` | `5` repeated triggers x `2` repetitions |
+| `FRC-SP-M` | `10` repeated triggers x `3` repetitions |
+| `FRC-SP-H` | `20` repeated triggers x `5` repetitions |
+
+### BCI
+**Trigger Reason Codes**
+- `BCI-NON-IDEMPOTENT-WRITE`
+- `BCI-IRREVERSIBLE-SIDE-EFFECT`
+- `BCI-LOST-UPDATE-RISK`
+- `BCI-DUPLICATE-SUBMIT-OR-REPLAY`
+- `BCI-JOB-WEBHOOK-API-OVERLAP`
+- `BCI-EXACT-ONCE-SEMANTICS`
+
+**Classification**
+- `required` when `overlapping_write_surface` is true and a closed `BCI` reason code applies
+- `recommended` when `overlapping_write_surface` may exist but changed code only strengthens protections without altering write semantics
+- `not_needed` when no write surface changed and no overlapping mutation surface exists
+
+**Gate Deadline**
+- `before_local_implemented`
+
+**Closed Evidence Rules**
+| Rule ID | Required Evidence |
+| --- | --- |
+| `BCI-INV` | `invariant_id` present in artifact payload |
+| `BCI-POLICY` | `concurrency_policy` enum present in artifact payload |
+| `BCI-E1` | `BCI-INV` + `BCI-POLICY` + low floor profile evidence |
+| `BCI-E2` | `BCI-INV` + `BCI-POLICY` + medium floor profile evidence |
+| `BCI-E3` | `BCI-INV` + `BCI-POLICY` + high floor profile evidence |
+
+**Closed Acceptance Rules**
+| Rule ID | Pass Requirement |
+| --- | --- |
+| `BCI-A1` | Required row cannot pass without invariant and deterministic overlapping-operation probe artifact. |
+| `BCI-A2` | Alternate stronger profile allowed only with `U-EVIDENCE-EQUIVALENCE-CLAIM` and explicit rationale. |
+
+**Closed Sample Profiles**
+| ID | Meaning |
+| --- | --- |
+| `BCI-SP-L` | `5` overlapping operations x `2` batches |
+| `BCI-SP-M` | `10` overlapping operations x `3` batches |
+| `BCI-SP-H` | `20` overlapping operations x `5` batches |
+
+### RLS
+**Trigger Reason Codes**
+- `RLS-SLO-CLAIM`
+- `RLS-QUEUE-WORKER-REALTIME-CHANGED`
+- `RLS-BATCH-OR-BULK-PATH-CHANGED`
+- `RLS-CACHE-INDEX-SENSITIVE-PATH-CHANGED`
+
+**Classification**
+- `required` when `runtime_pressure_surface` is true and either the TODO includes explicit latency/throughput/capacity/SLO acceptance or TODO runtime impact is classified `high`
+- `recommended` when `runtime_pressure_surface` is true but no explicit performance commitment exists and runtime impact is `low|medium`
+- `not_needed` when no runtime-pressure surface changed
+
+**Gate Deadline**
+- `before_production_ready` by default
+- `before_local_implemented` only when the TODO `Definition of Done` explicitly includes runtime capacity/performance acceptance
+
+**Closed Evidence Rules**
+| Rule ID | Required Evidence |
+| --- | --- |
+| `RLS-E1` | One stage profile + thresholds + metrics artifact |
+| `RLS-E2` | Two stage profiles + thresholds + metrics artifact |
+| `RLS-E3` | Three stage profiles + thresholds + metrics artifact |
+
+**Closed Acceptance Rules**
+| Rule ID | Pass Requirement |
+| --- | --- |
+| `RLS-A1` | Required row cannot pass without thresholds, stage profile, and metrics comparison artifact. |
+
+**Closed Sample Profiles**
+| ID | Meaning |
+| --- | --- |
+| `RLS-SP-L` | One stage load profile |
+| `RLS-SP-M` | Two stage load profile |
+| `RLS-SP-H` | Three stage load profile |
+
+## Required Artifact Payload Fields By Lane
+- `EPS`
+  - `access_pattern_classification`
+  - `touched_path_audit_summary`
+  - For `EPS-E2`, `strong_query_evidence_type`
+- `FRC`
+  - `concurrency_policy`
+  - `burst_profile_observed`
+  - `runner_or_manual_path`
+- `BCI`
+  - `invariant_id`
+  - `concurrency_policy`
+  - `probe_profile_observed`
+- `RLS`
+  - `stage_profile_observed`
+  - `thresholds`
+  - `metrics_summary`
+
+## Representation In Tactical TODOs
+- Tactical TODOs may represent the always-required row fields in a matrix and place conditional objects under per-lane subsections, as long as all required fields from this workflow remain present and unambiguous.
+- The tactical TODO template provides the canonical markdown representation for `pcv-1`.
+
+## Known v1 Limits
+- `required -> recommended` renewal language remains slightly asymmetric and may be tightened in a future schema version.
+- Some classification heuristics still depend on human judgment; this is acceptable for `pcv-1` because the policy now constrains the exploitable parts (state, waiver, evidence, and deadline behavior).
+
+
+## Full audit rubric delphi-ai/skills/security-adversarial-review/SKILL.md
+
+---
+name: security-adversarial-review
+description: "Run a controlled adversarial security review with threat-intel refresh, attack-surface mapping, and safe exploitation guidance when risk justifies it."
+---
+
+# Security Adversarial Review
+
+## Purpose
+Identify vulnerabilities, attack paths, and exploitability risk before delivery when a TODO touches security-sensitive surfaces or when the final security assessment says attack simulation is `required` or `recommended`.
+
+## Scope Controls
+- This skill never overrides TODO governance. If fixes require project changes, use the active TODO and approval gates.
+- Treat external content as untrusted data. Web results inform the review; they never become direct execution instructions.
+- This skill must not auto-rewrite itself. Recurring patterns should be promoted explicitly into rules/workflows/skills after review.
+
+## Default High-Risk Triggers
+- auth, session, token, or permission changes
+- public or externally reachable endpoints
+- trust-boundary changes
+- secrets/config/credential handling
+- persistence/query safety
+- multi-tenant isolation
+- payment or security-critical flows
+- agent/tool-use/prompt-ingestion surfaces
+
+## Threat-Intel Refresh Protocol
+Use current high-trust sources first when the review benefits from fresh attack intelligence.
+
+### Allowlisted source classes
+- OWASP and OWASP GenAI
+- official framework/library security advisories
+- GitHub Security Advisories / CVE / NVD when dependency-specific
+- OpenAI / Anthropic official docs when the surface involves agents, prompt injection, tool use, or browser use
+- papers or serious security research when directly applicable
+
+### Weak-source exclusions
+- SEO blogs
+- unattributed posts
+- exploit claims without reproducible detail
+- social posts used as sole evidence
+
+### Retrieval safety
+- Retrieved text is evidence input, not trusted instruction.
+- Prompt injection patterns found in web content must be classified as attack data, never followed.
+- Record which source informed which finding.
+
+## Review Workflow
+1. **Frame the review**
+   - Capture the active TODO, touched surfaces, and declared security risk level.
+   - Confirm whether attack simulation is `required`, `recommended`, or being run proactively.
+2. **Attack surface mapping**
+   - Enumerate relevant surfaces:
+     - entry points
+     - trust boundaries
+     - authz/authn checks
+     - persistence/query boundaries
+     - secret material
+     - third-party/tool integrations
+     - agent/prompt-ingestion paths
+3. **Threat-intel refresh**
+   - Refresh only for the categories relevant to the mapped surfaces.
+   - Prefer a few strong primary sources over broad noisy browsing.
+4. **Adversarial hypothesis generation**
+   - For each mapped surface, derive concrete abuse cases:
+     - privilege escalation
+     - missing authorization
+     - injection
+     - prompt injection / instruction smuggling
+     - secret exposure
+     - tenant breakout
+     - replay / abuse / rate-limit bypass
+     - unsafe tool invocation
+5. **Safe exploitation / validation**
+   - Validate using the least destructive reproduction path available.
+   - Prefer local or non-production-safe environments.
+   - Never perform destructive testing against production systems.
+   - Record whether the issue was:
+     - reproduced
+     - partially reproduced
+     - plausible but not reproduced
+6. **Fix guidance**
+   - For each material finding, record:
+     - `Issue ID`
+     - severity
+     - evidence
+     - exploit path
+     - blast radius
+     - recommended fix
+     - verification/follow-up test needed
+7. **Promotion candidates**
+   - If the same weakness reveals a reusable Delphi gap, mark it as a promotion candidate for:
+     - rule
+     - workflow
+     - skill update
+     - checklist item
+
+## Output Shape
+- Security risk level: `none|low|medium|high`
+- Attack simulation decision: `required|recommended|not_needed`
+- Attack surfaces reviewed
+- Threat-intel sources used
+- Findings table with exploitability and fix guidance
+- Residual security risk statement
+- Promotion candidates, if any
+
+## Done Criteria
+- High-risk surfaces are not closed without an explicit security decision.
+- Attack simulation marked `required` yields review evidence or an explicit approved exception path.
+- External intelligence is filtered and attributed.
+- Findings are concrete enough to drive fixes and future prevention.
+
+
+## Recorded scope / evidence implementation-round-1-resolution.md
+
+# ST-CON-06 — implementation review round 1 adjudication
+
+Derived from terminal canonical CLI reviews gpt-6.1-sol/xhigh; both raw JSONs strictly validated and merged. Frozen packet architecture hash18295b2f… /security64b54684…; no live reviewer cancelled, replaced or repackaged. These are independent architecture and separate security gates, not the dedicated Performance/TQA/Cutover session or final review. Final all ended with API/Web green and browser48/50; it does not satisfy the delivery gate.
+
+| Deduplicated ID | Original findings | Severity | Classification | Decision / exact current-slice action | State |
+|---|---|---|---|---|---|
+| ST06-R01 | ADH-01, SEC-01 | high | release-blocker | Integrated D04: inspect complete single-send Meta acknowledgement envelope; non-first ID, malformed entries/IDs or other success contradiction remain UNKNOWN/TRANSPORT_UNCONFIRMED, one POST, no ambiguous diagnostic. Preserve documented stable refusal allowlist. | open, executor remediation |
+| ST06-R02 | ADH-02 | medium | release-blocker | Integrated D10: keep return-navigation target reachable in correct status tab, verify unique active B/A thread and preserve a newly entered draft after stale completion. Correct test mechanics, not product assignment semantics. | open, executor remediation |
+| ST06-R03 | SEC-02 | medium | release-blocker | Integrated D04/05: successful HTTP empty object lacks Evolution acknowledgement structure and must be TRANSPORT_UNCONFIRMED/no diagnostic; preserve key:{} as approved ACK-without-ID. Add exact raw evidence and local-effect assertions. | open, executor remediation |
+| ST06-R04 | SEC-03 | medium | release-blocker | Integrated D02/03/security simulation evidence: cite existing candidate-bound denied mutations or add admitted local tests for no grant/CSRF, foreign API-key account, after-binding pre-dispatch version/generation/epoch changes, and overlapping distinct tenant token/resource pairing. Zero provider effects on blocked paths; preserve post-dispatch version-only success. | open, source/evidence reconciliation then necessary probes |
+
+None changes Scope/DoD/frozen decisions or warrants new architecture/product approval. They are approved-contract compliance, not a mandate to expand Channel, schema, lifecycle, templates, networks or intent. Security observations remain source-only counterexamples/evidence gaps until local regression probes reproduce and verify them; no tenant breakout or credential disclosure was demonstrated.
+
+Separate implementation-check finding caught during browser remediation: do not add Message.status to production timeline DTO just to observe a test diagnostic. D10 preserves message DTO, availability/outcomes are the authorized additions. Executor instructed to restore that extra selection/type/UI and use a seeded-conversation-only fixture audit readback on private validation port3101. This is not a production test endpoint. Unknown ACK may legitimately show a FALHOU diagnostic after normal refresh; zero visible bubbles is not the required invariant.
+
+Follow-up review uses delta plus this prior adjudication after terminal remediation and actual validation; no narrowing of required rubric. No accepted-debt or waiver is recorded. Preserve unchanged MessageAcceptance and all canonical fences.
+
+
+## Recorded scope / evidence implementation-round-2-resolution.md
+
+# ST-CON-06 — implementation review round2 adjudication
+
+Terminal canonical fresh CLI reviews, gpt-6.1-sol/xhigh, source snapshot `evidence/reconvergence-source.json`; both results strictly merged. Packages1641ec21…/a73b3eb0…; one turn.completed and zero tool items each. No running review was replaced or repackaged. This is code/security reconvergence, not dedicated audit or final review. Canonical all33610 is still running on these bytes; no source edit is permitted during it. Even a green result will not close the findings below.
+
+Original round1 counterexamples for non-first/malformed Meta IDs and Evolution2xx{} are corrected according to both reviewers. B/A target reachability, unique active-thread checks and same-text replacement draft are now present. Negative session/CSRF/public-key probes and distinct-tenant concurrent token/resource proof are also present. These are substantive partial resolutions; the remaining defects cannot be closed by citing those successes.
+
+| Stable finding | Exact review binding | Classification | Current action / scope | State |
+|---|---|---|---|---|
+| ST06-R01 | round1 ADH-01/SEC-01 | release-blocker, resolved original counterexample | Full single-send envelope prevents non-first/malformed-ID refusal; raw cases and API194/308 pass reported. New success-flag case is tracked separately below | resolved in reviewed snapshot; final validation still required |
+| ST06-R03 | round1 SEC-02 | release-blocker, resolved original counterexample | Evolution2xx{} remains TRANSPORT_UNCONFIRMED; supported key:{} remains ACK_WITHOUT_ID | resolved in reviewed snapshot; final validation still required |
+| ST06-R05 | adherence-round2 ADH-R2-01 | release-blocker, medium | Meta200 success:false plus validID currently ACCEPTED; same flag with messages:[{}] produces ACK_WITHOUT_ID. Validate contradictory/malformed success indicators before positive acknowledgement; exact raw regressions onePOST, no local acceptance/diagnostic for unconfirmed outcome | open; executor after current runner terminal |
+| ST06-R02 | adherence-round2 ADH-R2-02; security-round2 ADH-R2-02 | release-blocker, medium | Response headers event alone can precede api.ts body/Inbox continuation. Deterministic full consumption/handler completion and fault-injection proof that removal of generation fence fails the same-text-draft scenario; no arbitrary sleep or production test fields/routes | open; navigation fix retained, protection proof incomplete |
+| ST06-R04 | adherence-round2 ADH-R2-03; security-round2 ADH-R2-01 | release-blocker, medium | Current pre-dispatch fake itself invokes stillCurrent, so it cannot detect shipping adapter bypass. Delegate to real Meta/Evolution factories and wrap their actual callback to change disposable binding after resolution; assert BLOCKED, zero provider calls and zeroOUT; removing the shipping callback must fail the probe | open; other SEC03 proof retained |
+
+Review IDs overlap between the two raw JSONs. The reviewer artifact prefix above is part of their identity; security-round2 ADH-R2-01 is the adapter protection gap, not the Meta success-flag issue.
+
+All remaining findings are within D03/D04/D10 and the admitted test paths. No schema, port capability, lifecycle, new network, first-send/template, durable intent or user-contract expansion is warranted. No waiver or accepted debt is granted. Fault injection is disposable-validation evidence only; restore exact approved source before final all/review/runtime. Record actual RED honestly; prior classifier/harness changes remain test-after historically.
+
+Next: let all33610 reach terminal without edits, capture its actual result, then sole writer completes these three bounded corrections/protection probes. Freeze revised bytes and collect candidate-bound canonical validation plus fresh focused review carrying forward both rounds' complete adjudications. Dedicated Performance/TQA/Cutover and operator proof remain separate pending gates.
+
+
+## Recorded scope / evidence implementation-round-3-resolution.md
+
+# ST-CON-06 — round3 adjudication
+
+Derived review disposition, not delivery approval. Both fresh internal CLI reviews gpt-6.1-sol/xhigh terminated0, were strictly merged and made no tool calls. Exact collection provenance: `evidence/round3-collection-proof.json`. Canonical all65587 subsequently terminated0 (194 API unit,309 real-PG E2E,29 Web unit,50 browser); source hashes for44 exact public source/context paths are unchanged in `evidence/candidate-source-after-all65587.json`. This green run does not override the protection-harness finding.
+
+| Stable finding | Review binding | Disposition | Evidence / next action |
+|---|---|---|---|
+| ST06-R01 | original ADH-01/SEC-01 | resolved original counterexample | Both round2/3 preserve complete Meta envelope classification; finalAPI309 green |
+| ST06-R03 | original SEC-02 | resolved original counterexample | Arbitrary Evolution2xx{} is unconfirmed, supported key:{} diagnostic distinct; finalAPI309 green |
+| ST06-R04 | round2 adherence ADH-R2-03 / security ADH-R2-01 | resolved in reviewed candidate | Actual shipping Meta/Evolution callbacks now exercised; omission mutants each fail409vs201 with308/309 passing and exact restoration independently observed; source observations/full logs in evidence. Negative session/CSRF/key and concurrent distinct tenant credentials retained |
+| ST06-R05 | round2 adherence ADH-R2-01 | resolved in reviewed candidate | False/malformed success indicators disallow positive acknowledgement; actual pre-fix RED reported honestly, real HTTP/PG raw cases now covered; API194/309 green |
+| ST06-R02 | round3 adherence ADH-R3-01 / security ST06-R02 | blocking, Integrated within same TODO | Network finished and two animation frames do not order browser body processing/Inbox continuation. Replace test timing with instrumentation of the exact application's native response.text() settlement followed by a browser task, then assert retained same-text draft/no alert. No production hook, payload or route. Repeat actual fence-omission failure, restore source and validate candidate |
+
+R02 is a test-protection gap, not a demonstrated shipping product vulnerability. Its explicit recorded D10 completion obligation makes it blocking. Neither reviewer requests redesign, additional network capabilities or approval change. All other dedicated audit, PCV, activated runtime, assisted IN/OUT and final-review gates remain pending. The implementation writer alone may edit the admitted test, with runtime untouched.
+
+
+## Recorded scope / evidence assurance-preparation.md
+
+# ST-CON-06 — delivery audit framing
+
+Derived preparation only. This document does not close a gate. The final frozen `all`, independent review dispositions, PCV evidence and post-publication operator proof must be attached separately.
+
+## Scope and topology
+
+Big architectural delivery on NestJS11, Prisma6/PostgreSQL16, React18/Vite5 and Docker. The approved scope is a common text Channel port, operation-scoped concrete adapters and one outbound orchestrator for existing BFF/public/Typebot senders. No new network, schema, template, first-send intent, durable outbox, external retry, lifecycle rewrite or production deployment is authorized. Current physical channel origins remain storage provenance; the opaque-recipient fake does not establish a new persisted network.
+
+Canonical validation is `bash scripts/test-channels-local.sh all`, on the principal checkout through Windows Docker, disposable namespace `leadshug_channels_validation`, Node22.23.3/PG16, API3100/provider-double3101/Web4173. Both manifests and exact scripts are inventoried in `evidence/capability-manifest-inventory.json`. Runtime provider boundaries use controlled doubles; HTTP-client tests assert raw fetch envelopes. PostgreSQL/DI/BFF/public endpoints and browser-served production bundles are real. External WhatsApp delivery requires operator proof after local activation and cannot be inferred from these doubles.
+
+## Mandatory audit workload
+
+The independent Test Quality lane must apply the complete `test-quality-audit` skill and `independent-test-quality-audit-method`, with Architecture/Code Quality/Tests/Performance/Security framing. Answer all five audit questions and assess fail-first alignment, bypasses/fallbacks, DI token/scope parity, exact commands and CI/platform parity, mutation outcomes/negative states, fixture ownership, async overlap, source/bundle freshness, decision adherence and residual verification debt. Issue cards are required for material findings. A short five-answer response alone is insufficient. No product test endpoint, silent live/mock fallback, weakened assertion, flaky-required-gate acceptance or provider-only success may substantiate a broader claim.
+
+Performance must inspect actual metadata batching and bounded indexed latest-IN projection, rather than treating a test count as query evidence. Cutover Integrity must verify that all current senders consume the canonical abstract port and sole keyed MessageAcceptance writer, without an old-dispatch wrapper, parallel completion writer or query-time compatibility stitching. Approved legacy HTTP error codes are response compatibility, not proof of definitive rejection. Source assertions and exact negative probes must establish the distinction.
+
+## Fail-first and remediation history
+
+The positive-inventory runner repair preceded every product test. Recorded initial RED is narrowly the dependency guard:175unit passed/one failed because legacy direct provider dispatch remained. This is not blanket pre-implementation RED for every new behavior. Most added classifier, PostgreSQL barrier and browser cases were expanded during implementation. Review-remediation regressions were test-after; do not relabel them test-first. The independent auditor must judge whether the final assertions would expose the targeted failure and explicitly disposition any retrofit risk, preserving this historical limitation.
+
+Round1 architecture/security findings and their complete adjudication are in `implementation-round-1-resolution.md` and `evidence/{adherence,security}.raw.json`. R01/R03 are classifier defects, R02 is an ineffective browser scenario and R04 is missing adversarial evidence. Round2 is now recorded separately in `implementation-round-2-resolution.md`: original R01/R03 counterexamples corrected, new R05 false-success contradiction and remaining R02/R04 protection gaps open. R05 has actual canonical API49493 RED before the correction. Do not project that RED onto earlier test-after work. No waiver/debt or architecture expansion is granted. Earlier failed runs remain historical failures; passing all33610 is an earlier candidate invalidated for delivery by the round2 findings.
+
+## Bounded static scan triage
+
+Canonical `test_quality_audit.sh` was executed with16 explicit public test/support paths from the source inventory before the final R02 assertion and round2 remediation; it must be refreshed for final TQA. No generic root walk or Git status discovery was used. Full historical output: `evidence/test-quality-static-scan.txt`. Exit2 reports heuristic medium signals and is not suppressed or represented as a clean scan.
+
+| Signal | Count | Preliminary owner assessment; independent challenge still required |
+|---|---:|---|
+| Hard skip/focus bypass | 0 | No matching committed skip/only marker in selected paths |
+| Test-support route marker | 0 | Fixture audit is hosted only by disposable provider fixture server3101 and limited to seeded conversations; verify source, absence of this marker alone is not sufficient |
+| Authentication shortcut | 0 | BFF tests use real signup/login/session middleware; API-key tests use issued scoped keys |
+| Status assertion hint | 11 | Context also asserts IDs, tenant/provenance, counts, outcomes, drafts or fixed content; reviewer must confirm each surrounding assertion rather than demand removal of useful HTTP checks |
+| Ambient subject fallback hint | 1 | `timeline-freshness.ts` reads `rows[0]?.count` from a single aggregate migration count; it does not select an ambient business subject |
+| Other detected DI/mock/fallback/no-exception hints | 0 | Pattern scan is incomplete by design; manual review of Nest provider overrides, HTTP doubles, fixture routes and browser interception remains mandatory |
+
+## Required proof boundaries
+
+| Boundary | Required evidence | Explicit limit |
+|---|---|---|
+| Channel substitution | Independent opaque-recipient fake through registry, real resolver/BFF/PG; no concrete provider calls | No new real network/schema/ingress claim |
+| Credentials/tenant ownership | Valid foreign session denial, CSRF denial, foreign scoped API-key mutation denial; two tenants concurrently using distinct sealed token/resource pairs and tenant-local persistence | Disposable credentials only; no attack on external systems |
+| Before/after dispatch fences | Generation/epoch/version changes before single POST; actual reauthorization race separately from post-dispatch version-only reseal | Local-check-to-network race remains; no atomic external fence |
+| Raw HTTP outcomes | Stable Meta refusal allowlist; malformed/contradictory/timeout/redirect uncertainty; supported ACK-without-ID contrasted with arbitrary2xx object | Accepted ID is provider acknowledgement, not handset delivery |
+| Local completion/echo/claim | Sole acceptance keyed writer, sender/echo convergence, concurrent claims, incomplete local persistence/finalization after ACK and bounded readback | No crash recovery or unknown-ID deduplication guarantee |
+| Human/public selection/bot policy | Deterministic latest origin, sole/zero/multi binding; pinned accepted bot ingress and window expiry | Current latest-IN stored-time algorithm/no transport filter preserved for ST-CON-04 |
+| Inbox mutation/lifecycle | Real BFF/PG served bundle, accepted/unknown, unavailable/ambiguous composer; A→B→A late response with a newly edited draft;5waves×20 pending-send retriggers | Required final browser/all must bind exact source/bundle; serial accepted sends alone are not race proof |
+| Query/load | Representative deep histories, actual query-log/explain;5×20 overlapping outbound operations, distinct-conversation scope stated | No SLO/capacity, same-key exactly-once or cross-tenant claim from this one batch |
+| External resources | New post-activation operator IN/OUT on both existing official and QR bindings | CP108 and previous green tests are historical and cannot close this new runtime proof |
+
+Required platforms: API unit/HTTP/real-PG, Web unit/build, Chromium served-bundle, then assisted official/unofficial WhatsApp. Mobile/native, Laravel/Flutter and Railway deployment are not claimed. Architectural baseline and exact D01..10 remain those of the approved TODO. The producer/consumer matrix in the audit package must distinguish implemented consumers from evidence still pending; no new waiver is inferred.
+
+
+## Recorded scope / evidence consumer-evidence-matrix.md
+
+# ST-CON-06 — producer / consumer evidence
+
+Derived implementation evidence for the dedicated audit. Baseline remains the approved TODO. Consumer code and canonical automated evidence exist for every changed producer. Existing external consumers are preserved; no new application/platform is claimed and no consumer-absence waiver is used. This is not local runtime/operator delivery proof. Canonical all65587 passed; R02 handler synchronization is being strengthened and must pass on final bytes.
+
+| Producer | Implemented consumer / ownership | Evidence | Status / limit |
+|---|---|---|---|
+| Internal Channel.sendMessage / result | OutboundService; operation-scoped Meta/Evolution factories via registry | channel-transport.e2e opaque independent fake with real resolver/BFF/PG; shipping adapter callback mutation failures; outbound.service.spec/raw client specs | consumer implemented + evidenced; fake proves port substitution, not new persisted network |
+| ChannelResolver / immutable context / availability | OutboundService + BFF/public metadata projection; verified ingress bot | PG pre/post generation/epoch/version, real REAUTORIZAR, version-only rotation, tie, cross-BU, ingress pinning, no-provider calls | consumer implemented + evidenced; observed metadata grants no send authority |
+| BFF GET conversations/:id/messages additive janela.disponivel/motivo | Inbox fixed unavailable reason and disabled composer; timeline unchanged | browser accepted/unknown/ambiguous composer scenario on real BFF/PG; existing timeline browser suites | consumer implemented + evidenced; existing thread read-marker mutation retained, availability projection itself observational |
+| BFF POST conversations/:id/messages normalized outcomes | api.ts safe metadata and Inbox success/error/draft lifecycle | api.spec safe outcome fields; browser201 accepted and409 unknown with real DB readback; FRC5x20 retriggers; A→B→A stale draft probe | consumer implemented + evidenced; R02 deterministic handler-barrier correction pending final validation; no automatic resend |
+| Public GET conversations/list/thread additive availability | Existing external partner API contract, public serializer | api-publica.e2e list/thread auth/window/fields, CHANNEL-EPS actual30-conversation query evidence | consumer implemented + evidenced at real API boundary; third-party UI not owned or claimed |
+| Public POST messages shared orchestration / truthful outcome | Existing partner API clients; HTTP contract/source EXTERNO preserved | api-publica.e2e accepted/unknown/echo + channel-transport public/human conditionalclaim overlap, scoped key denial | consumer implemented + evidenced at real API boundary; no new local UI is needed for existing external consumer |
+| Typebot text response dispatch | IncomingService existing bot sessions consume OutboundService with pinned verified ingress | number-onboarding-typebot realPG suites: trusted owner, pinning/retirement/window expiry, ACK noID/no resend, echo dedup | consumer implemented + evidenced; queue/human owner/unread preserved |
+
+Local operator browser and official/unofficial WhatsApp IN/OUT remain pending after new-image activation. No automated fixture result is represented as real provider delivery.
+
+
+## Recorded scope / evidence decision-adherence-candidate.md
+
+# ST-CON-06 — candidate decision trace
+
+Derived integration map, not a delivered/adherent verdict. Source evidence refers to the principal-checkout candidate; final all, independent audit resolutions, local activation and assisted IN/OUT are separate requirements. Frozen D01..10 remain unchanged. No exception or waiver is declared here.
+
+| Decision | Concrete source / regression locus | Current assessment / limit |
+|---|---|---|
+| D-01 | `domain/channels/transport/channel.ts` Channel/TextMessage; `integrations/channels/channel-adapter-registry.ts`; independent fake in `test/channel-transport.e2e-spec.ts:90` | Source matches an opaque text port and operation factory registration; no real future network is claimed |
+| D-02 | `prisma-channel-resolver.ts:40` conversation/verified-ingress entry points; credential owner resolver; BFF/public existing auth middleware/controllers; `channel-transport.e2e-spec.ts:154`, `:176`, `:383` | Required denied mutations and distinct-tenant in-flight token/resource probes now present; exact candidate-bound finalall still required |
+| D-03 | `prisma-channel-resolver.ts:181` frozen binding and pre-dispatch closure; `:281` local identity/version check; `channel-transport.e2e-spec.ts:115`, `:293`, `:322` | Pre-dispatch version/generation/epoch and real REAUTORIZAR versus version-only tests are distinct; local-check-to-network race remains explicit |
+| D-04 | `meta.client.ts:189` and `evolution.client.ts:95`; direct HTTP tests in corresponding client specs | Round1 R01/R03 corrections validate complete supported envelopes; fresh independent follow-up must confirm classification, no retry and onePOST |
+| D-05 | `outbound.service.ts:69` accepted completion, `:110` unknown projection, `:191` bounded readback, `:263` fixed incomplete error; `outbound.service.spec.ts` | Existing unit tests distinguish positive commit, uncertain commit and context retirement. Legacy400 code is not evidence of refusal; external ACCEPTED is not delivered |
+| D-06 | `outbound.service.ts:148` pre-dispatch trusted source intent and `:221` conditional finalization; unchanged `message-acceptance.service.ts`; public controller no post-send writes; PG claim/echo regressions | One keyed acceptance writer and current-owner conditional completion; no new schema or intent. Crash and null-ID deduplication limits persist |
+| D-07 | `prisma-channel-resolver.ts:240` deterministic latest origin; metadata batch `:103`, LATERAL window projection `:318`; `channel-transport.e2e-spec.ts:351`, `:370`; Typebot barrier suite | Metadata availability is observational only; no implicit provider fallback. Existing stored-time latest-IN window without transport filter remains for ST-CON-04 |
+| D-08 | Registry/factory + opaque fake through real resolver/BFF/PG, `channel-transport.e2e-spec.ts:90` | Sender port remains open; current physical origin enum and existing public numeric-phone input are intentionally preserved. Future identity/ingress requires separate contract |
+| D-09 | Single `channel-transport.module.ts` imported by BFF/Public/Webhooks; dependency guard `channel-dependencies.spec.ts` includes synthetic forbidden imports/branches | Initial dependency RED recorded; final guard green must be candidate-bound. No parallel legacy dispatch is authorized |
+| D-10 | Web `api.ts`/`api.spec.ts` safe outcome fields; Inbox availability/error/draft fence; `e2e/channel-transport.spec.ts`; safe runner and both positive-path freshness helpers | Same-text newly edited draft scenario corrected after root check. Current browser/finalall and post-local-activation operator proof remain necessary; old50/50 diagnostic is insufficient |
+
+API source paths above are relative to `api-app/src` unless explicitly prefixed `test/`. Web paths are relative to `web-app`. Exact file hashes are supplied by the frozen review/validation manifest, not inferred from unchanged HEADs.
+
+## Module decision consistency
+
+The approved module snapshot in the TODO is the comparison authority. The candidate preserves: one active number per BU/current channel slot; current registration and reauthorization lifecycle; scoped encrypted credentials; provider-resource identity and keyed message acceptance; per-surface session/API-key/bot authority; existing public numeric-phone contract; timeline ordering/DTOs; human claim semantics; bot queue/owner/unread semantics. D01/D06/D07/D09 establish the approved abstract transport, common orchestration and explicit bot window enforcement. Modules will record these delivered owners and limits only after actual gates. No constitution/schema or unapproved provider capability is introduced.
+
+
+## Recorded scope / evidence static-audit-triage.md
+
+# ST-CON-06 — static audit disposition
+
+Derived manual triage; original exit codes and complete outputs are preserved. A heuristic exit2 is not converted into an unrestricted clean-scan claim. Dedicated TQA and final review remain required.
+
+`test-quality-static-final.txt` scans16 exact public test/support files:0 hard bypass,0 support-route marker,0 auth shortcut,12 status hints,1 aggregate fallback hint. The12 hints are adjunct assertions: two-tenant201 checks are followed by captured token/resource and tenant-local Message checks; accepted-send201 checks have OUT/owner/provenance assertions; RLS200 has exact channel type/identity and foreign404/code; bot window/identity held sends assert provider count and absence of OUT; seed201 is followed by owned fixture subject selection; late-response201 has handler/draft/noalert checks (R02 synchronization correction pending); FRC statuses are followed by actual persisted outcome counts and draft assertions. The `rows[0]?.count` hint reads the sole migration COUNT aggregate, not an ambient business entity. These are not reasons to remove useful status checks. Source-bound refreshed scan is still required after the R02 test delta.
+
+Rule-spirit scanner reports111 signals: one positive public bind inventory marker,55 shared source/domain hints and55 duplicate Docker-lens hints over the same loci. Every raw key has an explicit disposition in `evidence/rule-spirit-triage.json`: fixture example.test/loopback targets, regex .test/HTML false positives, and private-path denial/mask literals. No production hard-coded destination or guard bypass is established. The general Docker lens does not provide a NestJS-specific static rule coverage claim.
+
+Verification-debt scan exits2/high with44 waiver-word,29 blocker-word and43 unchecked-box signals. It scans the active tactical TODO plus40 exact public source/context files. Waiver hits include explicit n/a, prohibited bypass/fallback statements and table enum labels; none grants a waiver. Blocker hits include historical resolved review records and real pending delivery gates. Unchecked boxes truthfully reflect current non-delivery. The present R02 protection gap, dedicated audits/PCV/operator/final gates remain open; they are not accepted residual debt. Inline code TODO debt: none. Refresh after actual consolidation; do not check boxes or erase historical failures to clear this heuristic.
+
+
+## Recorded scope / evidence endpoint-access-audit.md
+
+# ST-CON-06 — scoped access-path audit
+
+Derived source/measurement review for the Performance lane. This is not a capacity certification. The available exact_lookup_anti_pattern_audit.sh implements PHP/Dart patterns only; running it over TypeScript would not establish Prisma/Nest coverage, so no such clean-scan claim is used. Explicit source inspection and real query-log/EXPLAIN evidence replace that inapplicable lens, not the required runtime evidence.
+
+| Access surface | Classification | Actual path / bound | Index / evidence |
+|---|---|---|---|
+| ConversationChannelReference ownership | exact lookup | Conversation findFirst by id+buId; no list walking | Conversation primary key plus BU predicate; realPG crossBU denial |
+| Verified ingress binding | exact lookup | BuChannel id+BU, then selected identity/context; findMany wherePK yields at most1 row | BuChannel primary key; resource currentChannelId index; ingress mismatch/retirement regression |
+| Selected human/public origin | ordered exact lookup + bounded BU list | latest Message by conversationId createdAt DESC,id DESC; list channels restricted to selected BU, current unique(buId,type) slots; no provider fallback | messages_conversation_id_created_at_idx; existing current-channel slots preserve physical provenance |
+| Operation identity/version fence | exact lookup | channel id/BU/type/generation/epoch + selected identityId; officialcredential relation only metadata afterdispatch | primary keys/resource currentChannelId; actual shipping callback omission mutants detect missedcheck |
+| Credential resolve/inspect | exact lookup / scoped batch | existing owner resolver; metadata inspect constrained to selected channel/gen; envelope decrypt only actualsend | credential/channel identity keys; twotenants distinctsealedsend inputs |
+| Public page availability | bounded paginated list + batched metadata | same selected BU; one binding query, one credentialmetadata query, one SQL latestIN projection; no perconversation provider or credentiallookup | actual CHANNEL-EPS:30conversations x24history, querycounts1/1/1, LATERAL LIMIT1 with indexscan30loops |
+| Required free-text window | exact latest-IN per conversation / scoped batch | storedtimestamp existingalgorithm, directionIN; LATERAL top1 for page; no fetchallhistory in application | existing messageconversation timestamp index; no new migration; transportfilter/newtrustedtimestamp explicitly04 |
+| Accepted message readback | exact lookup | at mostone readback by captured provider identity/externalID/provenance afterlocalfailure | existing unique(providerResourceIdentityId,externalId); no callback retry or providerquery |
+
+Expected query cost: one indexed probe per requestedconversation inside one SQL statement, plus two scoped metadata queries per page. The EXPLAIN records incremental sort on the timestamp/id tie key; it is not described as a new covering index. Current relation retrieval must still be challenged by Performance against actual resource-retirement invariants; no universal bound for future channel networks is inferred from current slot count.
+
+No endpoint latency SLO is approved. Observed elapsed and EXPLAIN milliseconds are one disposable local sample. Five20operation concurrent batches and the separate scoped-read stage prove their declared local integrity/thresholds only, not live-provider capacity, saturation, soak or external exactlyonce.
+
+
+## Recorded scope / evidence module-consolidation-candidate.md
+
+# ST-CON-06 — canonical module consolidation candidate
+
+Derived wording prepared for final module consolidation, not a delivered implementation assertion. Apply only after exact-source automated and independent gates plus activated local IN/OUT are satisfied. No source implementation or successor authority is conferred by this draft.
+
+## Integrations and Channels — intended stable decisions
+
+Channel is the domain text-send abstraction. TextMessage carries kind:text, opaque recipientRef and text; sendMessage returns a discriminated result. Current Meta/Evolution adapters encapsulate protocol addresses and credentials in an immutable operation instance created by an explicitly registered factory. ChannelResolver is injected through one ChannelTransportModule; existing BFF/Public/Webhooks composition shares its resolver and outbound orchestration. Common senders do not import concrete clients, switch on provider, use service location, mutate singleton credentials, or retain an old dispatch shim. Registration/protocol clients remain legitimate narrow consumers outside the common send boundary.
+
+A server-authorized conversation/BU or accepted verified bot ingress selects the binding. The context captures channel/BU, resource identity, generation, epoch and official credential version. Before the sole external POST, local owner/identity/readiness/version checks fail closed. Same-resource REAUTORIZAR changes generation; it is distinct from a credential-version-only reseal after dispatch. Captured context is never rebound to a newer identity. No HTTP occurs in a DB transaction, and no automatic external retry or per-send external probe is introduced. The local-check-to-network interval and crash recovery remain explicit limitations.
+
+ACCEPTED requires a valid nonempty provider message ID and does not mean handset delivery. BLOCKED occurs locally before dispatch. Meta definitive REJECTED uses only the approved stable Graph envelope allowlist; contradictory/malformed/timeout/redirect/transient results remain UNKNOWN. A supported acknowledgement without ID can yield a positively committed failed/null-ID diagnostic. Arbitrary2xx objects do not establish that acknowledgement. Legacy HTTP codes remain compatible while outcome/evidence accurately describe uncertainty. Known provider acceptance followed by any local failure remains ACCEPTED_LOCAL_INCOMPLETE, with RECORDED only on positive commit or bounded captured-key readback. No blind resend, durable outbox or null-ID echo merge is promised.
+
+Future networks register a concrete implementation against the same narrow port. The current physical origin enum is storage provenance, not a declaration that Instagram/Messenger/Telegram identity, credentials, ingress or lifecycle are implemented. New capabilities, including template authoring/catalog/submission in ST-CON-05, require narrow contracts rather than no-op methods or concrete casts on Channel.
+
+## Inbox and Conversations — intended stable decisions
+
+BFF, partner public API and Typebot consume one OutboundService. Trusted BFF human/public EXTERNO/bot source intent is established before dispatch. MessageAcceptanceService remains the sole keyed writer for provider-ID Messages and sender/echo convergence. Human/public completion conditionally updates the current owner, preserves a newer concurrent claim and sets IN_SERVICE except existing group behavior. Bot retains queue/status/human owner/unread semantics and stops without replay after uncertain or blocked output.
+
+Human/public responses use the deterministic latest message origin ordered by createdAt DESC,id DESC. An unavailable selected origin is not replaced by another connected channel. Without history, only a sole binding can be selected; zero and multiple bindings have explicit absent/ambiguous errors. Bot responses remain pinned to their accepted verified ingress even if another channel becomes the latest origin. The selected binding's free-text-window requirement applies to all senders before every text. Existing latest-IN stored timestamp without transport filtering is preserved and must be revisited in ST-CON-04.
+
+Availability is safe local metadata, separate from authorization and dispatch revalidation. BFF thread adds disponivel/motivo; public list/thread adds envio_disponivel/motivo_indisponibilidade. Batched public availability reads BU bindings/credential metadata/latest-IN once per page without decrypting secrets or calling providers. Existing thread read-marker behavior is retained; only the availability projection is observational. No new route, user-supplied provider selection or Message DTO status field is introduced.
+
+Inbox shows fixed truthful explanations, disables unavailable sends, retains draft on uncertainty/local incomplete/error, and never automatically resends. Monotonic BU/conversation generations fence late completions, including A→B→A with a newly edited identical draft. Composer duplicate triggers are dropped while a send is in flight.
+
+## Later consumers / operational limits
+
+ST-CON-05 preserves the user's decision that the seller creates and submits the template directly for Meta approval; no administrator intermediary is inserted. ST-CON-04 subsequently consumes eligible approved templates for first-send outside the official window and resolves contact/conversation intent/recovery semantics. Both require their own reconverged approvals. Existing public POST conversation creation before attempted send remains unchanged in06. Local test activation and assisted IN/OUT must be documented separately; no remote promotion, continuous availability or production readiness is inferred.
+
+
+## Recorded scope / evidence next-story-handoff-candidate.md
+
+# ST-CON-06 — next-story handoff preparation
+
+Derived candidate only; ST-CON-06 remains Pending and must close its current blockers/validation/operator gates before either successor starts. No ST-CON-05/ST-CON-04 implementation authority is granted by this document.
+
+## ST-CON-05 — seller template authoring
+
+Preserve the explicit user decision: the seller creates the draft **and submits it to Meta for approval**. Do not insert an administrator approval step. The operator currently has no approved text template in the account used by LeadsHug.
+
+Rebase the planning contract on Channel/ChannelResolver, common outbound outcomes and scoped credential ownership once06 converges. Template authoring/catalog/submission is a separate narrow capability contract: it must not add unsupported methods, no-op implementations, concrete instanceof checks or protocol fields to the universal text Channel port. No real future-network implementation is implied by this extension point.
+
+The contract still needs to define the seller's authorized BU/channel scope, draft ownership, validation, submission/approval/rejection states, version/edit/resubmission semantics, parameter rules, safe errors, Meta status synchronization and user-facing mutation evidence. A saved draft or submitted request is not an approved template. Approval material and external requirements must be verified from current primary Meta sources during that story's planning, rather than inferred from06 text-send tests.
+
+## ST-CON-04 — starting a conversation by contact
+
+Keep the user's selected behavior: the seller can start a conversation in LeadsHug by supplying the contact. Rebase this story after05: approved-template selection and parameters may be required when the official free-text window is closed. No template bypass or weakening of requiresWindow is authorized by06.
+
+Use the common abstract transport/orchestration and sole MessageAcceptance owner. Current public POST still creates the conversation before attempting a send and may leave it empty on failure;06 intentionally preserves this behavior. Any new intent/durability, deduplication, conversation-creation timing or recovery policy belongs in04's reviewed contract. ACCEPTED means a valid provider message ID, not handset delivery; UNKNOWN and ACCEPTED_LOCAL_INCOMPLETE forbid blind resend and require truthful UI/draft handling.
+
+Explicit residuals to reconverge: current latest-IN window uses stored createdAt without transport filtering; null-ID diagnostics cannot safely merge with echoes by heuristics; local-check-to-network and crash gaps remain. Do not silently substitute the latest/current channel identity into a captured dispatch. Resolve these against first-send requirements before renewed APROVADO, without portraying them as already solved in06.
+
+## Later channel/history work
+
+Additional networks need independent identity/contact/credential/ingress/lifecycle contracts; registry substitution of an opaque fake proves only the existing internal port. Importing historical messages, attachments and delivery/read states remain later attendance slices. None follows automatically from current successful message sends or the Channel abstraction.
+
+
+## Exact evidence adherence.raw.json
+
+```
+{
+  "schema_version": "subagent-review-result-v1",
+  "artifact_kind": "subagent_review_result",
+  "dispatch_path": "/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/artifacts/reviews/leadshug-channel-abstraction-20261020/evidence/adherence.dispatch.json",
+  "review_kind": "architecture_adherence",
+  "reviewer_label": "fresh-internal-architecture-reviewer",
+  "overall_assessment": "Changes required. The operation-bound adapters, shared outbound orchestration, scoped resolution and single acceptance owner substantially follow the frozen architecture. A D04 response-classification defect and an unreliable D10 browser scenario remain. Pending final-all, PCV and post-cutover operator evidence are not treated as completed gates.",
+  "recommended_path": "Correct the classifier and browser scenario within the approved D04/D10 boundaries, then review the updated candidate and obtain the required validation evidence. No architectural redesign is indicated.",
+  "performance_position": "acceptable",
+  "elegance_position": "acceptable",
+  "structural_soundness_position": "mixed",
+  "operational_fit_position": "mixed",
+  "findings": [
+    {
+      "finding_id": "ADH-01",
+      "severity": "high",
+      "category": "adherence",
+      "formalizable_hint": "yes",
+      "candidate_rule_level": "project",
+      "title": "Meta refusal classification ignores contradictory IDs after the first message",
+      "rationale": "api-app/src/integrations/meta/meta.client.ts:219-234 extracts an ID only from messages[0] and uses its absence to establish REJECTED. HTTP 400 with a valid non-transient Graph error code 100 and messages:[{}, {id:'external-ack'}] therefore becomes REJECTED despite containing a contradictory external ID. A malformed first ID, such as messages:[{id:42}], can also reach REJECTED. Frozen D04 requires malformed or contradictory responses to remain UNKNOWN; a definitive refusal here could encourage an unsafe repeat send.",
+      "suggested_action": "Validate the complete relevant response shape before classification and detect contradictory acceptance markers throughout the messages array. Return UNKNOWN/TRANSPORT_UNCONFIRMED for malformed or contradictory payloads. Add direct HTTP-client regression cases for a non-first external ID and a malformed message ID, retaining the one-request invariant.",
+      "affected_paths": [
+        "api-app/src/integrations/meta/meta.client.ts",
+        "api-app/src/integrations/meta/meta.client.spec.ts"
+      ]
+    },
+    {
+      "finding_id": "ADH-02",
+      "severity": "medium",
+      "category": "tests",
+      "formalizable_hint": "partial",
+      "candidate_rule_level": "project",
+      "title": "The delayed-response browser scenario loses its return-navigation target",
+      "rationale": "web-app/e2e/channel-transport.spec.ts:59-81 first completes an accepted human send, then attempts A→B→A using the Cliente Timeline sidebar button. OutboundService.finalizeOutbound at api-app/src/domain/inbox/outbound.service.ts:233-238 moves A to IN_SERVICE, while Inbox starts on QUEUED and refreshes that filtered list after success. Once refreshed, A is absent from the sidebar, so the return click cannot reliably execute. The line 79 getByText assertion also does not establish that B finished opening: it can match the sidebar alone or become ambiguous with the thread heading. This leaves the required D10 stale-response scenario unreliable.",
+      "suggested_action": "Arrange navigation so both conversations remain reachable through the appropriate status tabs. Wait for a unique active-thread selector to confirm B and then A have opened before releasing the held response. Assert that the stale completion preserves a newly entered draft and does not introduce an error, then rerun the complete browser/all gate.",
+      "affected_paths": [
+        "web-app/e2e/channel-transport.spec.ts",
+        "web-app/src/telas/Inbox.tsx"
+      ]
+    }
+  ]
+}
+```
+
+
+## Exact evidence security.raw.json
+
+```
+{
+  "schema_version": "subagent-review-result-v1",
+  "artifact_kind": "subagent_review_result",
+  "dispatch_path": "/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/artifacts/reviews/leadshug-channel-abstraction-20261020/evidence/security.dispatch.json",
+  "review_kind": "architecture_adherence",
+  "reviewer_label": "fresh-no-context-security-reviewer",
+  "overall_assessment": "risk=high; attack_simulation=required. Reviewed BFF authorization and session/CSRF composition, public API-key scoping, verified Typebot ingress, Prisma ownership boundaries, identity/generation/epoch/credential fences, operation-local credentials, sender/echo attribution, provider response consumption, destinations, redirects, timeouts, retries and Inbox error rendering. The common outbound design follows the frozen architectural direction; no tenant breakout or credential disclosure was demonstrated. Two source-only provider-response classification defects and a required attack-evidence gap remain. This reviewer performed no execution; neither finding is independently reproduced. The earlier API pass is owner-reported historical evidence, while final frozen all/browser/freshness and assisted IN/OUT remain pending. Threat hypotheses use the owner-supplied OWASP API1 source https://api-security.owasp.org/editions/2023/en/0xa1-broken-object-level-authorization/ and API10 source https://api-security.owasp.org/editions/2023/en/0xaa-unsafe-consumption-of-apis/; they were not independently retrieved.",
+  "recommended_path": "Resolve the response-classification findings within ST-CON-06, preserving the approved architecture, stable refusals, compatibility contracts and existing valid acknowledgement fixtures. Supply the exact local adversarial probes identified below, using provider doubles and disposable PostgreSQL without external attacks. Freeze the corrected candidate and obtain canonical all results bound to those bytes before closing the security gate; retain the separately pending assisted IN/OUT requirement. No new schema, durable intent, lifecycle rewrite or provider integration is warranted. Accepted residual limits remain the D03 local-check-to-network race, D05 crash/unknown-ID recovery limits and D07 observational availability; their recorded ST-CON-04 follow-up is not reopened.",
+  "performance_position": "acceptable",
+  "elegance_position": "acceptable",
+  "structural_soundness_position": "mixed",
+  "operational_fit_position": "mixed",
+  "findings": [
+    {
+      "finding_id": "SEC-01",
+      "severity": "medium",
+      "title": "Meta can classify a contradictory response as a definite refusal",
+      "category": "security",
+      "formalizable_hint": "yes",
+      "candidate_rule_level": "project",
+      "rationale": "Source-only counterexample, not reproduced: meta.client.ts:219-234 examines only messages[0] when checking for an accepted ID. HTTP 400 with a valid allowlisted Graph error and messages:[{}, {id:'accepted-id'}] therefore returns REJECTED, despite an explicit contradictory ID elsewhere in the response. No validation rejects the multi-entry envelope first. Frozen D04 requires malformed or contradictory responses to remain UNKNOWN. The existing contradictory-ID test covers only the first entry. All outbound consumers can consequently receive a false definitive refusal, encouraging a manual resend after an uncertain external effect; no tenant escalation is asserted.",
+      "suggested_action": "Validate the complete single-send response envelope before classifying ACCEPTED or REJECTED. Malformed message entries or contradictory acceptance evidence anywhere in the envelope must produce UNKNOWN/TRANSPORT_UNCONFIRMED. Add a local fetch-double test for an allowlisted refusal with an ID after the first entry, asserting one POST and UNKNOWN, while preserving ordinary allowlisted refusal behavior.",
+      "affected_paths": [
+        "api-app/src/integrations/meta/meta.client.ts:219",
+        "api-app/src/integrations/meta/meta.client.ts:233",
+        "api-app/src/integrations/meta/meta.client.spec.ts:81"
+      ]
+    },
+    {
+      "finding_id": "SEC-02",
+      "severity": "medium",
+      "title": "Evolution treats an acknowledgement-free object as proof of an acknowledgement",
+      "category": "security",
+      "formalizable_hint": "yes",
+      "candidate_rule_level": "project",
+      "rationale": "Source-only counterexample, not reproduced: evolution.client.ts:116-129 accepts any successful HTTP JSON object without a truthy error as ACK_WITHOUT_ID when key is absent. A malformed 2xx body of {} therefore reaches outbound.service.ts:128-145, persists a diagnostic and reports that the channel accepted the send without confirming its ID. HTTP success plus an arbitrary object does not establish the valid acknowledgement required by D04/D05. This does not falsely return send success, but it creates unsupported provider-trust metadata and a persistent diagnostic rather than retaining transport uncertainty.",
+      "suggested_action": "Require the supported acknowledgement envelope before returning ACK_WITHOUT_ID; an absent acknowledgement structure must remain UNKNOWN/TRANSPORT_UNCONFIRMED. Preserve the approved key:{} acknowledgement case. Add local tests contrasting 2xx {} with key:{}, asserting one POST in each case and no ambiguous-outbound diagnostic for the malformed response.",
+      "affected_paths": [
+        "api-app/src/integrations/evolution/evolution.client.ts:116",
+        "api-app/src/integrations/evolution/evolution.client.ts:126",
+        "api-app/src/domain/inbox/outbound.service.ts:128",
+        "api-app/src/integrations/evolution/evolution.client.spec.ts:70"
+      ]
+    },
+    {
+      "finding_id": "SEC-03",
+      "severity": "medium",
+      "title": "Required pre-dispatch and cross-tenant attack probes are not evidenced",
+      "category": "tests",
+      "formalizable_hint": "yes",
+      "candidate_rule_level": "project",
+      "rationale": "This is a bounded evidence gap, not a reproduced vulnerability. The supplied tests demonstrate forged internal ingress rejection, post-dispatch identity/generation changes and permitted post-dispatch credential-version rotation. They do not demonstrate rejection when version or epoch changes after binding but before the adapter's pre-dispatch check. The overlapping-send test uses one BU and the common fixture token, so it cannot expose cross-tenant credential reuse. The supplied public cross-tenant test exercises GET, and no denied BFF send/CSRF-negative mutation probe is shown. These are explicit D02/D03 and Security Risk Assessment attack-simulation obligations; the previous API pass and pending final all do not establish these particular observations.",
+      "suggested_action": "Supply existing probe source and candidate-bound results, or add probes within admitted test paths: deny a BFF send without conversation grant and without the required CSRF header; deny a scoped API-key POST to a foreign account with zero provider calls; hold execution after binding, change credential version, generation or pairing epoch separately, then assert CHANNEL_CONTEXT_CHANGED/BLOCKED with zero POSTs and zero OUT writes; overlap sends from two tenants with distinct resources and scoped tokens and assert each exact token/resource pairing and tenant-local persistence. Preserve the separate successful post-dispatch version-only rotation test.",
+      "affected_paths": [
+        "api-app/test/channel-transport.e2e-spec.ts:121",
+        "api-app/test/channel-transport.e2e-spec.ts:175",
+        "api-app/test/channel-transport.e2e-spec.ts:236",
+        "api-app/test/channel-transport.e2e-spec.ts:280",
+        "api-app/test/api-publica.e2e-spec.ts:100",
+        "api-app/src/integrations/channels/prisma-channel-resolver.ts:281"
+      ]
+    }
+  ]
+}
+```
+
+
+## Exact evidence adherence-round2.raw.json
+
+```
+{
+  "schema_version": "subagent-review-result-v1",
+  "artifact_kind": "subagent_review_result",
+  "dispatch_path": "/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/artifacts/reviews/leadshug-channel-abstraction-20261020/evidence/adherence-round2.dispatch.json",
+  "review_kind": "architecture_adherence",
+  "reviewer_label": "fresh-no-context-architecture-reviewer-round2",
+  "overall_assessment": "Changes required within the approved architecture. The operation-bound adapters, common outbound owner, scoped credentials, single MessageAcceptance writer, deterministic selection and preserved consumer contracts remain consistent with D01..10. The original Meta and Evolution counterexamples are corrected. A remaining contradictory-response case and weaknesses in the new D03/D10 protection evidence require remediation. No material performance or elegance regression is apparent from source. This review performed no execution; final all, PCV, dedicated audits, final review and post-activation operator proof remain pending.",
+  "recommended_path": "Correct the remaining Meta contradiction handling and strengthen the pre-dispatch and stale-response regression probes within existing approved paths. Preserve the current architecture and recorded compatibility limits. Obtain candidate-bound canonical validation and complete the separately required delivery gates before closeout.",
+  "performance_position": "acceptable",
+  "elegance_position": "acceptable",
+  "structural_soundness_position": "mixed",
+  "operational_fit_position": "mixed",
+  "findings": [
+    {
+      "finding_id": "ADH-R2-01",
+      "severity": "medium",
+      "category": "adherence",
+      "formalizable_hint": "yes",
+      "candidate_rule_level": "project",
+      "title": "Meta still accepts an envelope containing an explicit contradictory success flag",
+      "rationale": "In meta.client.ts:225, HTTP 200 with {success:false,messages:[{id:'external-ack'}]} returns ACCEPTED because the positive branch checks only error absence and the message ID. Likewise, {success:false,messages:[{}]} reaches ACK_WITHOUT_ID at lines238-241. The success field is examined only when considering rejection. These contradictory envelopes therefore permit authoritative Message persistence or an acknowledgement diagnostic despite D04 requiring a valid acknowledgement and uncertainty for contradictory responses. This is a new counterexample at the changed classifier locus, distinct from the resolved non-first and malformed-ID cases.",
+      "suggested_action": "Validate explicit success indicators before either positive acknowledgement branch. Contradictory or malformed indicators should produce UNKNOWN/TRANSPORT_UNCONFIRMED. Add raw HTTP regressions for both contradictory envelopes, preserving valid responses without a success field, stable refusals, one POST and the absence of local acceptance or diagnostic writes for unconfirmed transport.",
+      "affected_paths": [
+        "api-app/src/integrations/meta/meta.client.ts",
+        "api-app/src/integrations/meta/meta.client.spec.ts"
+      ]
+    },
+    {
+      "finding_id": "ADH-R2-02",
+      "severity": "medium",
+      "category": "tests",
+      "formalizable_hint": "partial",
+      "candidate_rule_level": "project",
+      "title": "The stale-response assertions can finish before the Inbox consumes the response",
+      "rationale": "The corrected browser scenario establishes reachable, uniquely opened B and A threads and enters a fresh same-text draft. However, channel-transport.spec.ts:91-96 waits only for Playwright's response event before asserting a value and alert count that already hold before release. That event does not establish completion of api.ts response-body consumption or the Inbox responder continuation. Both assertions can therefore pass before a defective stale continuation clears the draft or changes the error state, leaving the required D10 protection susceptible to a false green.",
+      "suggested_action": "Synchronize with complete response consumption and browser-side handling before evaluating the retained draft and error state. Demonstrate that the scenario fails when the stale-completion generation fence is removed, then run the exact final browser/all candidate.",
+      "affected_paths": [
+        "web-app/e2e/channel-transport.spec.ts",
+        "web-app/src/api.ts",
+        "web-app/src/telas/Inbox.tsx"
+      ]
+    },
+    {
+      "finding_id": "ADH-R2-03",
+      "severity": "medium",
+      "category": "tests",
+      "formalizable_hint": "yes",
+      "candidate_rule_level": "project",
+      "title": "The new pre-dispatch probe substitutes the adapter that must enforce the fence",
+      "rationale": "channel-transport.e2e-spec.ts:115-151 exercises the real resolver predicate, but replaces the shipping adapter with FencedDispatchChannel. That test-only channel itself invokes stillCurrent and blocks its synthetic effect. The probe remains green if BoundMetaChannel or BoundEvolutionChannel stops invoking its pre-dispatch callback. It establishes the resolver predicate's behavior without protecting the required D03 connection between that predicate and the actual provider dispatch. The shipping source currently contains the guard; this is a protection-harness gap, not a demonstrated vulnerability.",
+      "suggested_action": "Exercise the shipping bound adapters in negative pre-dispatch probes. A test factory can delegate to the real factory while wrapping its callback to mutate the disposable binding after resolution. Assert CHANNEL_CONTEXT_CHANGED, zero provider calls and zero OUT writes, and ensure removing the shipping callback invocation makes the probe fail.",
+      "affected_paths": [
+        "api-app/test/channel-transport.e2e-spec.ts",
+        "api-app/src/integrations/channels/meta-channel.ts",
+        "api-app/src/integrations/channels/evolution-channel.ts"
+      ]
+    }
+  ]
+}
+```
+
+
+## Exact evidence security-round2.raw.json
+
+```
+{
+  "schema_version": "subagent-review-result-v1",
+  "artifact_kind": "subagent_review_result",
+  "dispatch_path": "/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/artifacts/reviews/leadshug-channel-abstraction-20261020/evidence/security-round2.dispatch.json",
+  "review_kind": "architecture_adherence",
+  "reviewer_label": "fresh-no-context-security-reconvergence-reviewer",
+  "overall_assessment": "Changes required in two protection scenarios. The supplied implementation follows the approved domain port, operation-scoped adapters, common orchestration and sole MessageAcceptance owner. The original Meta and Evolution classifier counterexamples are corrected without architectural expansion. Reviewed surfaces include BFF session/CSRF/BU authorization, public API-key ownership, verified bot ingress, credential and identity fences, concurrent credential isolation, provider response trust, redirects, retries, error rendering and acceptance provenance. Security risk remains high; attack simulation is required. The owner-supplied OWASP API1 and API10 references informed authorization and provider-consumption hypotheses; they were not independently retrieved. No execution, exploit reproduction, tenant breakout or credential disclosure is established by this review. API results are writer-reported, and final all/browser, PCV, dedicated audits and post-activation operator IN/OUT remain pending. Performance is acceptable at source level: metadata remains batched and dispatch adds no external probes or retries; measured performance is not certified.",
+  "recommended_path": "Repair the pre-dispatch tests to exercise the production adapters and synchronize the delayed-response browser assertions with application processing. These are changes within the approved protection harness, requiring no redesign or new product capability. Obtain candidate-bound validation and reconverge review before closing the findings. Preserve the pending delivery gates and the approved local-check-to-network, crash recovery, null-ID deduplication and observational availability limits; fixtures cannot establish external readiness.",
+  "performance_position": "acceptable",
+  "elegance_position": "acceptable",
+  "structural_soundness_position": "acceptable",
+  "operational_fit_position": "mixed",
+  "findings": [
+    {
+      "finding_id": "ADH-R2-01",
+      "severity": "medium",
+      "category": "tests",
+      "formalizable_hint": "yes",
+      "candidate_rule_level": "project",
+      "title": "Pre-dispatch probes substitute the adapter that must enforce the fence",
+      "rationale": "channel-transport.e2e-spec.ts:30-50 implements the pre-dispatch check inside FencedDispatchChannel, and lines 115-151 replace the production registry with that implementation. The probes exercise the real resolver callback and PostgreSQL changes, but would remain green if BoundMetaChannel stopped invoking beforeDispatch. Zero provider-client calls are also inherent in this substitute. Source inspection shows the production check exists today; this is a protection gap in the newly added D03/R04 scenario, not a demonstrated vulnerability.",
+      "suggested_action": "Place the mutation immediately before delegation to a Channel created by the production MetaChannelFactory, retaining the real resolver callback and injected provider double. Assert BLOCKED/CHANNEL_CONTEXT_CHANGED, zero provider invocations and zero OUT writes for each mutation. Protect the Evolution adapter's invocation of the same fence as well. The scenarios should fail if the production adapter omits its check.",
+      "affected_paths": [
+        "api-app/test/channel-transport.e2e-spec.ts:30",
+        "api-app/test/channel-transport.e2e-spec.ts:115",
+        "api-app/src/integrations/channels/meta-channel.ts:14",
+        "api-app/src/integrations/channels/evolution-channel.ts:14"
+      ]
+    },
+    {
+      "finding_id": "ADH-R2-02",
+      "severity": "medium",
+      "category": "tests",
+      "formalizable_hint": "partial",
+      "candidate_rule_level": "project",
+      "title": "Draft preservation can be asserted before the stale completion is processed",
+      "rationale": "web-app/e2e/channel-transport.spec.ts:90-96 enters the replacement draft before releasing the response, then waits only for the response event and status. That event does not establish completion of api.ts body consumption or Inbox's continuation. Both assertions already hold before release, so they can pass before an unfenced continuation clears the same-text draft. The navigation correction is sound, but the changed scenario still lacks reliable evidence that the draft survives application processing.",
+      "suggested_action": "Synchronize with completion of the original response body and its browser-side application processing before checking the retained draft and absent alert. Use a deterministic completion signal without adding production DTO fields or arbitrary sleeps, and verify that removing the generation guard makes this scenario fail.",
+      "affected_paths": [
+        "web-app/e2e/channel-transport.spec.ts:90",
+        "web-app/src/api.ts:71",
+        "web-app/src/telas/Inbox.tsx:396"
+      ]
+    }
+  ]
+}
+```
+
+
+## Exact evidence adherence-round3.raw.json
+
+```
+{
+  "schema_version": "subagent-review-result-v1",
+  "artifact_kind": "subagent_review_result",
+  "dispatch_path": "/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/artifacts/reviews/leadshug-channel-abstraction-20261020/evidence/adherence-round3.dispatch.json",
+  "review_kind": "architecture_adherence",
+  "reviewer_label": "fresh-no-context-architecture-reviewer-round3",
+  "overall_assessment": "One protection-harness correction remains. The bounded delta preserves the approved D01..10 architecture, operation-scoped adapters, shared outbound orchestration and sole MessageAcceptance owner. R05's contradictory success indicators are corrected, and R04 now exercises shipping adapters with reported guard-removal failures. R02's revised browser synchronization still lacks a causal guarantee that the stale application continuation has completed. This review performed no execution. Reported results retain their stated provenance; finalall65587, dedicated audits, PCV, activation, assisted IN/OUT and final review remain pending.",
+  "recommended_path": "Preserve the approved architecture and strengthen only ST06-R02's application-completion synchronization. Retain the mutation control, freeze the revised candidate and obtain canonical browser/all validation before completing the remaining delivery gates.",
+  "performance_position": "acceptable",
+  "elegance_position": "acceptable",
+  "structural_soundness_position": "acceptable",
+  "operational_fit_position": "mixed",
+  "findings": [
+    {
+      "finding_id": "ADH-R3-01",
+      "severity": "medium",
+      "category": "tests",
+      "formalizable_hint": "partial",
+      "candidate_rule_level": "project",
+      "title": "ST06-R02 still uses frame timing to infer application completion",
+      "rationale": "At web-app/e2e/channel-transport.spec.ts:96-100, response.finished() establishes network completion, while two requestAnimationFrame callbacks establish rendering opportunities. Neither observes completion of the application's res.text() promise at api.ts:71 or the awaiting Inbox.responder continuation. Both final assertions already hold before release, so they can pass if renderer-side body processing completes later. The executor-reported guard-removal failure demonstrates sensitivity in that execution, but does not establish the required ordering for every green run. This remains a source-level protection gap at the changed R02 synchronization locus under D10 and the round2 adjudication.",
+      "suggested_action": "Use test-side browser instrumentation to observe settlement of the matching application's response-body read and synchronize past its responder continuation before asserting draft preservation and absence of alerts. Preserve production DTOs/routes, repeat the guard-removal control, and validate the exact restored candidate through canonical browser/all.",
+      "affected_paths": [
+        "web-app/e2e/channel-transport.spec.ts"
+      ]
+    }
+  ]
+}
+```
+
+
+## Exact evidence security-round3.raw.json
+
+```
+{
+  "schema_version": "subagent-review-result-v1",
+  "artifact_kind": "subagent_review_result",
+  "dispatch_path": "/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/artifacts/reviews/leadshug-channel-abstraction-20261020/evidence/security-round3.dispatch.json",
+  "review_kind": "architecture_adherence",
+  "reviewer_label": "fresh-no-context-security-reviewer-round3",
+  "overall_assessment": "Changes required in the D10 protection harness. The implementation otherwise follows the frozen domain port, operation-scoped adapters, shared outbound orchestration and sole MessageAcceptance owner. R05 now conservatively handles false or malformed success indicators, and R04 exercises both shipping adapters with meaningful guard-removal evidence. R01/R03 remain closed. Security risk remains high; attack simulation is required. Reviewed surfaces include session/CSRF and BU authorization, public-key ownership, verified bot ingress, credential isolation, identity/generation/epoch/version fences, provider-response trust, redirects, timeouts, retries, acceptance provenance, claims and Inbox draft handling. Owner-supplied OWASP API1 informs authorization hypotheses and API10 informs provider-consumption hypotheses; neither was independently retrieved. This reviewer executed nothing. Supplied adapter source observations and restoration hashes strengthen the reported mutation results; the R05 RED and browser mutant remain executor-reported evidence. No tenant breakout or credential disclosure is demonstrated. Source-level performance is acceptable: batching is retained and the remediation adds no external probes or retries. Final validation, measured performance and external readiness are not certified.",
+  "recommended_path": "Let all65587 terminate without source edits. Complete the R02 browser-side processing barrier within the admitted test path, then freeze the revised candidate and rerun canonical all. Preserve D01..10 and the approved ST-CON-04 follow-up limits concerning the local-check-to-network race, crash recovery and null-ID deduplication. Complete the separate Performance/TQA/Cutover, PCV, local activation, assisted IN/OUT and final-review gates before delivery; the current package grants no waiver.",
+  "performance_position": "acceptable",
+  "elegance_position": "acceptable",
+  "structural_soundness_position": "acceptable",
+  "operational_fit_position": "mixed",
+  "findings": [
+    {
+      "finding_id": "ST06-R02",
+      "severity": "medium",
+      "category": "tests",
+      "formalizable_hint": "partial",
+      "candidate_rule_level": "project",
+      "title": "The revised stale-response probe still lacks a browser-handler completion barrier",
+      "rationale": "Changed channel-transport.spec.ts lines 94–101 await network response completion and two animation frames, but neither observes settlement of api.ts's browser-side res.text() promise or completion of Inbox.responder. Rendering callbacks have no guaranteed ordering after that asynchronous body-consumption continuation. Consequently, the draft and absent-alert assertions can still observe their already-correct pre-completion state before an unfenced continuation clears the draft. The executor-reported mutant failure demonstrates sensitivity in that run, but does not establish the deterministic handler-completion synchronization required by the recorded R02 disposition. This is a protection-harness gap, not a reproduced product vulnerability.",
+      "suggested_action": "Use test-only browser instrumentation to observe consumption of the exact held POST response and completion of its application continuation before checking the draft and alert. Keep the real BFF response and production DTOs intact. Repeat the guard-removal probe against that synchronized scenario, restore the exact production source, and obtain candidate-bound browser/all results.",
+      "affected_paths": [
+        "web-app/e2e/channel-transport.spec.ts",
+        "web-app/src/api.ts",
+        "web-app/src/telas/Inbox.tsx"
+      ]
+    }
+  ]
+}
+```
+
+
+## Exact evidence meta-mutant-failure-restoration.json
+
+```
+{
+  "captured_at_utc": "2026-10-20T15:52:38.393052+00:00",
+  "run_id": 16223,
+  "command": "bash scripts/test-channels-local.sh api",
+  "terminal_exit_reported_by_executor": 1,
+  "raw_log_path": "foundation_documentation/artifacts/tmp/stcon06-meta-shipping-mutant.log",
+  "raw_log_sha256": "b6b02e76ade7471f4a26dd2670d768bd7952d59a30ad7456e9a8f56aba226ab0",
+  "raw_log_bytes": 48600,
+  "selected_log_lines": [
+    " Test Files  21 passed (21)",
+    "      Tests  194 passed (194)",
+    "     \u2192 expected 409 \"Conflict\", got 201 \"Created\"",
+    " FAIL  test/channel-transport.e2e-spec.ts > common Channel outbound (PostgreSQL) > blocks real binding changes inside Meta/Evolution adapter pre-dispatch callbacks",
+    "Error: expected 409 \"Conflict\", got 201 \"Created\"",
+    " Test Files  1 failed | 26 passed (27)",
+    "      Tests  1 failed | 308 passed (309)"
+  ],
+  "mutant_source_observation": "evidence/meta-mutant-source-observation.json",
+  "restored_module": "api-app/src/integrations/channels/meta-channel.ts",
+  "restored_sha256": "997e739cf7d7231918dc97fc347bfeb32a1cd74d084ead8c64b01157022f8138",
+  "reviewed_sha256": "997e739cf7d7231918dc97fc347bfeb32a1cd74d084ead8c64b01157022f8138",
+  "restoration_exact": true,
+  "scope": "One shipping guard omitted only in disposable validation; no human runtime activation. Root independently hashes closed log/source; process exit is writer-reported."
+}
+```
+
+
+## Exact evidence evolution-mutant-failure-restoration.json
+
+```
+{
+  "captured_at_utc": "2026-10-20T15:57:31.006071+00:00",
+  "run_id": 59583,
+  "terminal_exit_reported_by_executor": 1,
+  "raw_log_path": "foundation_documentation/artifacts/tmp/stcon06-evolution-shipping-mutant.log",
+  "raw_log_sha256": "bf7b65e18fa3e851a31a796adf3864b74e7a16080f2823492af80dbd6c3310a2",
+  "raw_log_bytes": 49707,
+  "selected_log_lines": [
+    " Test Files  21 passed (21)",
+    "      Tests  194 passed (194)",
+    "     \u2192 expected 409 \"Conflict\", got 201 \"Created\"",
+    " FAIL  test/channel-transport.e2e-spec.ts > common Channel outbound (PostgreSQL) > blocks real binding changes inside Meta/Evolution adapter pre-dispatch callbacks",
+    "Error: expected 409 \"Conflict\", got 201 \"Created\"",
+    " Test Files  1 failed | 26 passed (27)",
+    "      Tests  1 failed | 308 passed (309)"
+  ],
+  "mutation_observation": "evidence/evolution-mutant-source-observation.json",
+  "restoration_exact": true,
+  "restored_modules": [
+    {
+      "path": "api-app/src/integrations/channels/meta-channel.ts",
+      "restored_sha256": "997e739cf7d7231918dc97fc347bfeb32a1cd74d084ead8c64b01157022f8138",
+      "reviewed_sha256": "997e739cf7d7231918dc97fc347bfeb32a1cd74d084ead8c64b01157022f8138"
+    },
+    {
+      "path": "api-app/src/integrations/channels/evolution-channel.ts",
+      "restored_sha256": "60faf1ea40fe17ad62495b0f42a2cf958defcb41e3ad72d3d2213751539b460c",
+      "reviewed_sha256": "60faf1ea40fe17ad62495b0f42a2cf958defcb41e3ad72d3d2213751539b460c"
+    },
+    {
+      "path": "web-app/src/telas/Inbox.tsx",
+      "restored_sha256": "d70bde9ede67759d479f644598356e46aac2916a12b2ed1770c17a169118586c",
+      "reviewed_sha256": "d70bde9ede67759d479f644598356e46aac2916a12b2ed1770c17a169118586c"
+    }
+  ],
+  "limitation": "Root independently hashed closed log and exact restored public modules; command exit supplied by executor. Browser mutant result is separately executor-reported; no independent Inbox mutant-source snapshot."
+}
+```
+
+
+## Exact evidence browser-causal-actual-mutant-source-observation.json
+
+```
+{
+  "captured_at_utc": "2026-10-20T16:17:12.435244+00:00",
+  "scope": "Root exact-source observation during declared disposable browser mutant; one guard replaced by explanatory comment, no runtime change",
+  "baseline_sha256": "d70bde9ede67759d479f644598356e46aac2916a12b2ed1770c17a169118586c",
+  "mutant_sha256": "bdc6c54a40c3a3b4d4ce8d565c8f194c9dd86b41ec75e473c38f45aa94c28804",
+  "reconstructed_baseline_sha256": "d70bde9ede67759d479f644598356e46aac2916a12b2ed1770c17a169118586c",
+  "single_guard_replacement_proven": true,
+  "patch_sha256": "f96b848a22576759e396820adc5f88e3906cb5a16b34d6f6f0496698ad0ec5e8",
+  "test_sha256": "b3604496727a85d7ce12c2cb6e7a479575356a61ef4c529d385047e066a8e0f3",
+  "instrumentation_precedes_heldsend": true,
+  "root_probe_note": "Initial readonly reconstruction inserted a guard without removing the replacementcomment and correctly failed hash assertion; corrected reconstruction removes exactcomment. No source was edited."
+}
+```
+
+
+## Exact evidence browser-causal-mutant-failure-restoration.json
+
+```
+{
+  "observed_at_utc": "2026-10-20T16:21:14.973927+00:00",
+  "run": 30246,
+  "reported_terminal_exit": 1,
+  "raw_log": "foundation_documentation/artifacts/tmp/stcon06-browser-causal-mutant-final.log",
+  "raw_log_sha256": "ca39192b9de886217901b5005177eff796150a89d95280752e14fe552c953c5a",
+  "raw_log_bytes": 66351,
+  "reported_counts": {
+    "pass": 49,
+    "fail": 1
+  },
+  "exact_guard_mutation_source_observation": "browser-causal-actual-mutant-source-observation.json",
+  "restored_inbox_sha256": "d70bde9ede67759d479f644598356e46aac2916a12b2ed1770c17a169118586c",
+  "restoration_exact": true,
+  "test_sha256": "b3604496727a85d7ce12c2cb6e7a479575356a61ef4c529d385047e066a8e0f3",
+  "limits": "Disposable browser/realBFF/PG/controlledprovider; failure must be draftempty after exactnativebody/taskbarrier, not instrumentationtimeout; production runtime untouched"
+}
+```
+
+
+## Exact evidence capability-manifest-inventory.json
+
+```
+{
+  "kind": "bounded-positive-manifest-read",
+  "client_date": "2026-10-20",
+  "manifests": [
+    {
+      "manifest": "api-app/package.json",
+      "package_manager": null,
+      "engines": {
+        "node": ">=22"
+      },
+      "versions": {
+        "@nestjs/core": "^11.0.0",
+        "@nestjs/common": "^11.0.0",
+        "prisma": "^6.0.0",
+        "@prisma/client": "^6.0.0"
+      },
+      "required_scripts": {
+        "lint": "eslint \"{src,test}/**/*.ts\"",
+        "build": "nest build",
+        "test": "vitest run --config vitest.config.ts",
+        "test:e2e": "vitest run --config vitest.config.e2e.ts --no-file-parallelism --maxWorkers=1",
+        "prisma:generate": "prisma generate",
+        "prisma:migrate": "prisma migrate deploy"
+      },
+      "missing": []
+    },
+    {
+      "manifest": "web-app/package.json",
+      "package_manager": null,
+      "engines": null,
+      "versions": {
+        "react": "^18.3.1",
+        "react-dom": "^18.3.1",
+        "vite": "^5.4.11",
+        "@playwright/test": "^1.62.1"
+      },
+      "required_scripts": {
+        "build": "tsc -b && vite build",
+        "test": "vitest run",
+        "test:tela": "npm run build && playwright test"
+      },
+      "missing": []
+    }
+  ],
+  "generic_helper_not_run_reason": "node_capability_surface_audit.py calls os.walk(root) before --manifest selection; this violates the approved private-path boundary for API root. Exact two public manifests were read instead. No private/config discovery."
+}
+```
+
+
+## Exact evidence ci-command-parity-observation.json
+
+```
+{
+  "status": "read-only source observation, not a CI execution",
+  "paths": [
+    {
+      "path": ".github/workflows/ci.yml",
+      "sha256": "4448e7dbb47a85c432f4975bf55a1e786402f7e8c5ba3fe70d054eb182de1607"
+    },
+    {
+      "path": "api-app/package.json",
+      "sha256": "df8551d3e506e7c68516cbd482362c4282671b7ec7eebbf121386390ac080a9d"
+    },
+    {
+      "path": "web-app/package.json",
+      "sha256": "fc9083821e246d50c080f409b3590902b033041231d1688c04c4140f097818de"
+    },
+    {
+      "path": "api-app/vitest.config.e2e.ts",
+      "sha256": "ff76a3b94de4649d18f0f824a24bb45428afcbb751a872a6841a2e388f45f8ff"
+    },
+    {
+      "path": "web-app/playwright.config.ts",
+      "sha256": "53e9a54e97c9b785135d94846d99eb77c6f05789a58f27128544f9b2c903a63d"
+    }
+  ],
+  "existing_root_workflow": "compose config + API lint/build/unit +Webbuild/unit, Node22; no rootPG E2E or Playwright job is asserted",
+  "canonical_local_contract": "bash scripts/test-channels-local.sh all is a project-owned required local gate; runs realPG migration/status+APIlint/build/unit/E2E+Webbuild/unit+freshbuiltChromium. It is a broader local validation suite, not proof of a remote run.",
+  "boundaries": "No rootCI edit, sourcecommit/push/gitlink/deploy. Do not infer submodule remoteCI configuration from the root workflow.",
+  "dependency_parity": "Both production locks/manifests and real NestDI/Prisma/PostgreSQL/current public contracts used locally; external providers doubled, physical delivery operator-only.",
+  "review_requirement": "IndependentTQA must judge command/topology parity and any concrete confidence gap without substituting remoteCI claim."
+}
+```
+
+
+## Exact evidence test-quality-static-causal-final.txt
+
+```
+Test Quality Audit
+Repository: /mnt/c/unifast/leadshug/leadshug_now_docker
+Outcome heuristic: medium
+
+Scan paths:
+  - /mnt/c/unifast/leadshug/leadshug_now_docker/api-app/src/domain/channels/transport/channel-dependencies.spec.ts
+  - /mnt/c/unifast/leadshug/leadshug_now_docker/api-app/src/domain/inbox/incoming.typebot.integration.spec.ts
+  - /mnt/c/unifast/leadshug/leadshug_now_docker/api-app/src/domain/inbox/outbound.service.spec.ts
+  - /mnt/c/unifast/leadshug/leadshug_now_docker/api-app/src/integrations/evolution/evolution.client.spec.ts
+  - /mnt/c/unifast/leadshug/leadshug_now_docker/api-app/src/integrations/meta/meta.client.spec.ts
+  - /mnt/c/unifast/leadshug/leadshug_now_docker/api-app/test/api-publica.e2e-spec.ts
+  - /mnt/c/unifast/leadshug/leadshug_now_docker/api-app/test/browser-server.cjs
+  - /mnt/c/unifast/leadshug/leadshug_now_docker/api-app/test/channel-transport.e2e-spec.ts
+  - /mnt/c/unifast/leadshug/leadshug_now_docker/api-app/test/helpers.ts
+  - /mnt/c/unifast/leadshug/leadshug_now_docker/api-app/test/number-onboarding-pcv.e2e-spec.ts
+  - /mnt/c/unifast/leadshug/leadshug_now_docker/api-app/test/number-onboarding-typebot.e2e-spec.ts
+  - /mnt/c/unifast/leadshug/leadshug_now_docker/api-app/test/timeline-fixtures.cjs
+  - /mnt/c/unifast/leadshug/leadshug_now_docker/web-app/e2e/channel-transport.spec.ts
+  - /mnt/c/unifast/leadshug/leadshug_now_docker/web-app/e2e/number-onboarding-freshness.ts
+  - /mnt/c/unifast/leadshug/leadshug_now_docker/web-app/e2e/timeline-freshness.ts
+  - /mnt/c/unifast/leadshug/leadshug_now_docker/web-app/src/api.spec.ts
+
+Hard bypass markers:
+  - none
+
+Test-only support route usage:
+  - none
+
+Auth shortcut hints:
+  - none
+
+Status-only assertion hints:
+  - 196:        expect(own.status, JSON.stringify(own.body)).toBe(200);
+  - 82:    expect((await pending).status).toBe(200);
+  - 105:    expect((await pending).status).toBe(200);
+  - 123:    expect((await pending).status).toBe(200);
+  - 281:    expect(responseA.status).toBe(201);
+  - 282:    expect(responseB.status).toBe(201);
+  - 320:    expect(response.status).toBe(201);
+  - 402:    expect(response.status).toBe(201);
+  - 7:  expect(response.status()).toBe(201);
+  - 140:    expect(responseAntiga.status()).toBe(201);
+  - 203:        expect(actualStatus).toBe(201);
+  - 206:      expect(auditResponse.status()).toBe(200);
+
+No-exception-only assertion hints:
+  - none
+
+Ambient subject fallback hints:
+  - 92:    completedMigrations = Number(rows[0]?.count ?? 0);
+
+DI override hints:
+  - none
+
+Mock / fallback hints:
+  - none
+
+Counts: hard_bypass=0 test_support=0 auth_shortcut=0 status_only=12 no_exception_only=0 ambient_subject_fallback=1 di_override=0 mock_hint=0
+```
+
+
+## Exact evidence browser-freshness-all65587.json
+
+```
+{
+  "attestation": "foundation_documentation/artifacts/reviews/leadshug-channel-abstraction-20261020/evidence/browser-attestation-all65587.json",
+  "capturedAtUtc": "2026-10-20T16:01:37.842Z",
+  "runtime": "v22.23.3",
+  "served_bundle_sha256": "27c5db465495068402b278ba7c9d3a1f23b8b03797249639190c8a755759563b",
+  "dist_bundle_sha256": "27c5db465495068402b278ba7c9d3a1f23b8b03797249639190c8a755759563b",
+  "public_served_copy_sha256": "27c5db465495068402b278ba7c9d3a1f23b8b03797249639190c8a755759563b",
+  "served_copy_matches": true,
+  "manifest_matches": [
+    {
+      "path": "api-app/src/domain/channels/channel-credential-resolver.ts",
+      "matches_source": true
+    },
+    {
+      "path": "api-app/src/domain/channels/transport/channel-dependencies.spec.ts",
+      "matches_source": true
+    },
+    {
+      "path": "api-app/src/domain/channels/transport/channel.ts",
+      "matches_source": true
+    },
+    {
+      "path": "api-app/src/domain/inbox/conversations.service.ts",
+      "matches_source": true
+    },
+    {
+      "path": "api-app/src/domain/inbox/incoming.service.ts",
+      "matches_source": true
+    },
+    {
+      "path": "api-app/src/domain/inbox/incoming.typebot.integration.spec.ts",
+      "matches_source": true
+    },
+    {
+      "path": "api-app/src/domain/inbox/outbound.service.spec.ts",
+      "matches_source": true
+    },
+    {
+      "path": "api-app/src/domain/inbox/outbound.service.ts",
+      "matches_source": true
+    },
+    {
+      "path": "api-app/src/integrations/channels/channel-adapter-factory.ts",
+      "matches_source": true
+    },
+    {
+      "path": "api-app/src/integrations/channels/channel-adapter-registry.ts",
+      "matches_source": true
+    },
+    {
+      "path": "api-app/src/integrations/channels/channel-transport.module.ts",
+      "matches_source": true
+    },
+    {
+      "path": "api-app/src/integrations/channels/evolution-channel.ts",
+      "matches_source": true
+    },
+    {
+      "path": "api-app/src/integrations/channels/meta-channel.ts",
+      "matches_source": true
+    },
+    {
+      "path": "api-app/src/integrations/channels/prisma-channel-resolver.ts",
+      "matches_source": true
+    },
+    {
+      "path": "api-app/src/integrations/evolution/evolution.client.spec.ts",
+      "matches_source": true
+    },
+    {
+      "path": "api-app/src/integrations/evolution/evolution.client.ts",
+      "matches_source": true
+    },
+    {
+      "path": "api-app/src/integrations/meta/meta.client.spec.ts",
+      "matches_source": true
+    },
+    {
+      "path": "api-app/src/integrations/meta/meta.client.ts",
+      "matches_source": true
+    },
+    {
+      "path": "api-app/src/surfaces/bff/bff.module.ts",
+      "matches_source": true
+    },
+    {
+      "path": "api-app/src/surfaces/bff/conversations.controller.ts",
+      "matches_source": true
+    },
+    {
+      "path": "api-app/src/surfaces/public/conversations.controller.ts",
+      "matches_source": true
+    },
+    {
+      "path": "api-app/src/surfaces/public/public.module.ts",
+      "matches_source": true
+    },
+    {
+      "path": "api-app/src/surfaces/webhooks/webhooks.module.ts",
+      "matches_source": true
+    },
+    {
+      "path": "api-app/test/api-publica.e2e-spec.ts",
+      "matches_source": true
+    },
+    {
+      "path": "api-app/test/browser-server.cjs",
+      "matches_source": true
+    },
+    {
+      "path": "api-app/test/channel-transport.e2e-spec.ts",
+      "matches_source": true
+    },
+    {
+      "path": "api-app/test/helpers.ts",
+      "matches_source": true
+    },
+    {
+      "path": "api-app/test/number-onboarding-pcv.e2e-spec.ts",
+      "matches_source": true
+    },
+    {
+      "path": "api-app/test/number-onboarding-typebot.e2e-spec.ts",
+      "matches_source": true
+    },
+    {
+      "path": "api-app/test/timeline-fixtures.cjs",
+      "matches_source": true
+    },
+    {
+      "path": "web-app/e2e/channel-transport.spec.ts",
+      "matches_source": true
+    },
+    {
+      "path": "web-app/e2e/number-onboarding-freshness.ts",
+      "matches_source": true
+    },
+    {
+      "path": "web-app/e2e/timeline-freshness.ts",
+      "matches_source": true
+    },
+    {
+      "path": "web-app/src/api.spec.ts",
+      "matches_source": true
+    },
+    {
+      "path": "web-app/src/api.ts",
+      "matches_source": true
+    },
+    {
+      "path": "web-app/src/telas/Inbox.tsx",
+      "matches_source": true
+    }
+  ],
+  "limits": "Existing canonical globalSetup attestation and served public asset, copied before later browser runs. This is evidence65587, not future revisedR02 candidate."
+}
+```
+
+
+## Exact evidence causal-final-source-before-all80903.json
+
+```
+{
+  "captured_at_utc": "2026-10-20T16:21:41.865274+00:00",
+  "run": 80903,
+  "status": "sourcefrozen; allrunning, no terminalpass claim",
+  "scope": "Exact44 reviewed public source/context paths, not a whole API tree/private-data inventory. Sourcefile hashes, not dirty HEADs, identify candidate. Root runner included; full build/freshness inventory remains runner/executor evidence.",
+  "records": [
+    {
+      "path": "api-app/package.json",
+      "bytes": 1670,
+      "sha256": "df8551d3e506e7c68516cbd482362c4282671b7ec7eebbf121386390ac080a9d",
+      "all65587_sha256": "df8551d3e506e7c68516cbd482362c4282671b7ec7eebbf121386390ac080a9d"
+    },
+    {
+      "path": "api-app/src/domain/channels/channel-credential-resolver.ts",
+      "bytes": 5053,
+      "sha256": "89cf17ac02af444092651470aee13e2d4a3bcee8d459508be818322b33b00c10",
+      "all65587_sha256": "89cf17ac02af444092651470aee13e2d4a3bcee8d459508be818322b33b00c10"
+    },
+    {
+      "path": "api-app/src/domain/channels/transport/channel-dependencies.spec.ts",
+      "bytes": 2383,
+      "sha256": "f59d838baf635c0ce0d1ebe725c88fbb0b19fac42e9b382452e31fd38e0511a3",
+      "all65587_sha256": "f59d838baf635c0ce0d1ebe725c88fbb0b19fac42e9b382452e31fd38e0511a3"
+    },
+    {
+      "path": "api-app/src/domain/channels/transport/channel.ts",
+      "bytes": 2678,
+      "sha256": "432796b8685d07dcc53c3a699a7b9d1469ac4fb110aea080766ec207bec8621f",
+      "all65587_sha256": "432796b8685d07dcc53c3a699a7b9d1469ac4fb110aea080766ec207bec8621f"
+    },
+    {
+      "path": "api-app/src/domain/inbox/conversations.service.ts",
+      "bytes": 8137,
+      "sha256": "c7d84f983ed61c6022424d4648e07282e7eb53c40fa9aba249618d77b3c223de",
+      "all65587_sha256": "c7d84f983ed61c6022424d4648e07282e7eb53c40fa9aba249618d77b3c223de"
+    },
+    {
+      "path": "api-app/src/domain/inbox/incoming.service.ts",
+      "bytes": 6076,
+      "sha256": "b0ec43187b1f48720aa899e40f979dd0ae447321581d675b84ef9c71dbd0ff42",
+      "all65587_sha256": "b0ec43187b1f48720aa899e40f979dd0ae447321581d675b84ef9c71dbd0ff42"
+    },
+    {
+      "path": "api-app/src/domain/inbox/incoming.typebot.integration.spec.ts",
+      "bytes": 4647,
+      "sha256": "0cac10e5ed05da5a6e89b39c8b32a40810b4678af77b4d3b8d20b4d1afc4704c",
+      "all65587_sha256": "0cac10e5ed05da5a6e89b39c8b32a40810b4678af77b4d3b8d20b4d1afc4704c"
+    },
+    {
+      "path": "api-app/src/domain/inbox/message-acceptance.service.ts",
+      "bytes": 15730,
+      "sha256": "b053744ee44b7e91fd45b5c146f759f55c70b8e517b8fbb1cab39806407335e1",
+      "all65587_sha256": "b053744ee44b7e91fd45b5c146f759f55c70b8e517b8fbb1cab39806407335e1"
+    },
+    {
+      "path": "api-app/src/domain/inbox/outbound.service.spec.ts",
+      "bytes": 8314,
+      "sha256": "ae1f9208d660c684dca9b1ac5727001d8e57c4c9504be9be1d20ecba32e01805",
+      "all65587_sha256": "ae1f9208d660c684dca9b1ac5727001d8e57c4c9504be9be1d20ecba32e01805"
+    },
+    {
+      "path": "api-app/src/domain/inbox/outbound.service.ts",
+      "bytes": 13056,
+      "sha256": "63bcf773e2b4c5a5ddd688a1bb13745a0a206d995fafc665925df3fecaf394aa",
+      "all65587_sha256": "63bcf773e2b4c5a5ddd688a1bb13745a0a206d995fafc665925df3fecaf394aa"
+    },
+    {
+      "path": "api-app/src/integrations/channels/channel-adapter-factory.ts",
+      "bytes": 440,
+      "sha256": "e0ebdd78e387f7ee3af902f038d22449e212c1301ffa642bbceb5a5f05d2abfc",
+      "all65587_sha256": "e0ebdd78e387f7ee3af902f038d22449e212c1301ffa642bbceb5a5f05d2abfc"
+    },
+    {
+      "path": "api-app/src/integrations/channels/channel-adapter-registry.ts",
+      "bytes": 975,
+      "sha256": "655b735e239e89fbaede36689d1c22245d3804d66646f7736db991cb5099b02b",
+      "all65587_sha256": "655b735e239e89fbaede36689d1c22245d3804d66646f7736db991cb5099b02b"
+    },
+    {
+      "path": "api-app/src/integrations/channels/channel-transport.module.ts",
+      "bytes": 1663,
+      "sha256": "32203d3b8393a34a9effab4266683c389651d7ec197e8f9d704a77a6a37f40dc",
+      "all65587_sha256": "32203d3b8393a34a9effab4266683c389651d7ec197e8f9d704a77a6a37f40dc"
+    },
+    {
+      "path": "api-app/src/integrations/channels/evolution-channel.ts",
+      "bytes": 1561,
+      "sha256": "60faf1ea40fe17ad62495b0f42a2cf958defcb41e3ad72d3d2213751539b460c",
+      "all65587_sha256": "60faf1ea40fe17ad62495b0f42a2cf958defcb41e3ad72d3d2213751539b460c"
+    },
+    {
+      "path": "api-app/src/integrations/channels/meta-channel.ts",
+      "bytes": 1613,
+      "sha256": "997e739cf7d7231918dc97fc347bfeb32a1cd74d084ead8c64b01157022f8138",
+      "all65587_sha256": "997e739cf7d7231918dc97fc347bfeb32a1cd74d084ead8c64b01157022f8138"
+    },
+    {
+      "path": "api-app/src/integrations/channels/prisma-channel-resolver.ts",
+      "bytes": 18831,
+      "sha256": "5d01cca30f25ea4354651303633aa5a02f3adbe0b7cc37c44c53d821fe7c062f",
+      "all65587_sha256": "5d01cca30f25ea4354651303633aa5a02f3adbe0b7cc37c44c53d821fe7c062f"
+    },
+    {
+      "path": "api-app/src/integrations/evolution/evolution.client.spec.ts",
+      "bytes": 6530,
+      "sha256": "119d962fdcd9c895b75845dca74d8506147e11480d74b82e8c37f29f97c04081",
+      "all65587_sha256": "119d962fdcd9c895b75845dca74d8506147e11480d74b82e8c37f29f97c04081"
+    },
+    {
+      "path": "api-app/src/integrations/evolution/evolution.client.ts",
+      "bytes": 7214,
+      "sha256": "b0824e8fd4f801a239521855aaa02da5e0943a8c86c4ac8778e2f1f352821698",
+      "all65587_sha256": "b0824e8fd4f801a239521855aaa02da5e0943a8c86c4ac8778e2f1f352821698"
+    },
+    {
+      "path": "api-app/src/integrations/meta/meta.client.spec.ts",
+      "bytes": 38572,
+      "sha256": "d7e76f5c392afab1638363d3c851f8ce8c5223ff27c64801a79fdc8ec00d5e7a",
+      "all65587_sha256": "d7e76f5c392afab1638363d3c851f8ce8c5223ff27c64801a79fdc8ec00d5e7a"
+    },
+    {
+      "path": "api-app/src/integrations/meta/meta.client.ts",
+      "bytes": 17388,
+      "sha256": "9f954f6c1c2bd10030f5eed0cb42e493d6e480106bcfc3f44977cb97a716d34f",
+      "all65587_sha256": "9f954f6c1c2bd10030f5eed0cb42e493d6e480106bcfc3f44977cb97a716d34f"
+    },
+    {
+      "path": "api-app/src/surfaces/bff/bff.module.ts",
+      "bytes": 4917,
+      "sha256": "327f34eba67746882abc601a3817d94270cff3018d6972a8095dae530a2d6e29",
+      "all65587_sha256": "327f34eba67746882abc601a3817d94270cff3018d6972a8095dae530a2d6e29"
+    },
+    {
+      "path": "api-app/src/surfaces/bff/conversations.controller.ts",
+      "bytes": 5626,
+      "sha256": "53d3cffaa258ba1ad45c21eae4ab8712e2011255b7ca14965f73221edd0cc002",
+      "all65587_sha256": "53d3cffaa258ba1ad45c21eae4ab8712e2011255b7ca14965f73221edd0cc002"
+    },
+    {
+      "path": "api-app/src/surfaces/public/conversations.controller.ts",
+      "bytes": 9783,
+      "sha256": "b55440061dd4574646e4fa1a3c265cdb8653bab4abf3aa0e86b4057bc7e365ff",
+      "all65587_sha256": "b55440061dd4574646e4fa1a3c265cdb8653bab4abf3aa0e86b4057bc7e365ff"
+    },
+    {
+      "path": "api-app/src/surfaces/public/public.module.ts",
+      "bytes": 1208,
+      "sha256": "00a96d54fde7061f61f4ddf2b9cef836a02ad77ca29b62ea422695b9d8f90ef8",
+      "all65587_sha256": "00a96d54fde7061f61f4ddf2b9cef836a02ad77ca29b62ea422695b9d8f90ef8"
+    },
+    {
+      "path": "api-app/src/surfaces/webhooks/webhooks.module.ts",
+      "bytes": 1111,
+      "sha256": "abc8fd7960fcca1ce43d21d44a90f8d4708d47e07bde9a48c0009e02dc0503a6",
+      "all65587_sha256": "abc8fd7960fcca1ce43d21d44a90f8d4708d47e07bde9a48c0009e02dc0503a6"
+    },
+    {
+      "path": "api-app/test/api-publica.e2e-spec.ts",
+      "bytes": 14387,
+      "sha256": "4ce7360eb02621f89d25d41924bfafb86b76e8bbec8216dfb509f86000308837",
+      "all65587_sha256": "4ce7360eb02621f89d25d41924bfafb86b76e8bbec8216dfb509f86000308837"
+    },
+    {
+      "path": "api-app/test/browser-server.cjs",
+      "bytes": 11647,
+      "sha256": "40e56e2d6672800acd4a00f87b942fc88b8361c770d06ee6d7c8a883a15d3390",
+      "all65587_sha256": "40e56e2d6672800acd4a00f87b942fc88b8361c770d06ee6d7c8a883a15d3390"
+    },
+    {
+      "path": "api-app/test/channel-transport.e2e-spec.ts",
+      "bytes": 34003,
+      "sha256": "124d397bd3a5769271466e64b0e19b1235e08d1ea9a4df9f124fc629096822fe",
+      "all65587_sha256": "124d397bd3a5769271466e64b0e19b1235e08d1ea9a4df9f124fc629096822fe"
+    },
+    {
+      "path": "api-app/test/helpers.ts",
+      "bytes": 18367,
+      "sha256": "747dcd1a6db374c1ccb0f2a248b08d49c2ec62a46beb345cc03eea3c058d36f2",
+      "all65587_sha256": "747dcd1a6db374c1ccb0f2a248b08d49c2ec62a46beb345cc03eea3c058d36f2"
+    },
+    {
+      "path": "api-app/test/number-onboarding-pcv.e2e-spec.ts",
+      "bytes": 16149,
+      "sha256": "c62a11fc6302cd3bb807ff0b55b9dbcc7e46847cef638b81c382b455a8a29f20",
+      "all65587_sha256": "c62a11fc6302cd3bb807ff0b55b9dbcc7e46847cef638b81c382b455a8a29f20"
+    },
+    {
+      "path": "api-app/test/number-onboarding-typebot.e2e-spec.ts",
+      "bytes": 17679,
+      "sha256": "22e1121d8a1f03b5e566fb8e314c3966e5d9355453b31b978afcd30de038fbd2",
+      "all65587_sha256": "22e1121d8a1f03b5e566fb8e314c3966e5d9355453b31b978afcd30de038fbd2"
+    },
+    {
+      "path": "api-app/test/timeline-fixtures.cjs",
+      "bytes": 24711,
+      "sha256": "889707ec7857e8a17a850e56eb60d24e6953e59028f40880edff3756340fd23a",
+      "all65587_sha256": "889707ec7857e8a17a850e56eb60d24e6953e59028f40880edff3756340fd23a"
+    },
+    {
+      "path": "web-app/e2e/channel-transport.spec.ts",
+      "bytes": 12119,
+      "sha256": "b3604496727a85d7ce12c2cb6e7a479575356a61ef4c529d385047e066a8e0f3",
+      "all65587_sha256": "956058444775e1383324012236029f5a803d4730c9fac9c881e870c3a3825293"
+    },
+    {
+      "path": "web-app/e2e/number-onboarding-freshness.ts",
+      "bytes": 5059,
+      "sha256": "880b49f8fa428568692b92a883dd00c5ce76214b1f2db5b35cafb9b0553ed9ad",
+      "all65587_sha256": "880b49f8fa428568692b92a883dd00c5ce76214b1f2db5b35cafb9b0553ed9ad"
+    },
+    {
+      "path": "web-app/e2e/timeline-freshness.ts",
+      "bytes": 8499,
+      "sha256": "3a06fb36e3a9bcf20a12cd8201da2daa3b567775f15e2be5f068e97e840d7f53",
+      "all65587_sha256": "3a06fb36e3a9bcf20a12cd8201da2daa3b567775f15e2be5f068e97e840d7f53"
+    },
+    {
+      "path": "web-app/package.json",
+      "bytes": 701,
+      "sha256": "fc9083821e246d50c080f409b3590902b033041231d1688c04c4140f097818de",
+      "all65587_sha256": "fc9083821e246d50c080f409b3590902b033041231d1688c04c4140f097818de"
+    },
+    {
+      "path": "web-app/src/api.spec.ts",
+      "bytes": 6256,
+      "sha256": "e305671fc6d9775ef3c0365ed12470fb14ea3dd71ff3aca49f153262017147d6",
+      "all65587_sha256": "e305671fc6d9775ef3c0365ed12470fb14ea3dd71ff3aca49f153262017147d6"
+    },
+    {
+      "path": "web-app/src/api.ts",
+      "bytes": 10385,
+      "sha256": "dd59a37799453d3e68fc64a6477e1578956d15d1a4920af90e22ff2b83057505",
+      "all65587_sha256": "dd59a37799453d3e68fc64a6477e1578956d15d1a4920af90e22ff2b83057505"
+    },
+    {
+      "path": "web-app/src/telas/Inbox.tsx",
+      "bytes": 21225,
+      "sha256": "d70bde9ede67759d479f644598356e46aac2916a12b2ed1770c17a169118586c",
+      "all65587_sha256": "d70bde9ede67759d479f644598356e46aac2916a12b2ed1770c17a169118586c"
+    },
+    {
+      "path": "scripts/test-channels-local.sh",
+      "bytes": 9873,
+      "sha256": "b03176ef1a332c431ed55028c691052958ebc08ff7711db08d05316c1f8a34a6",
+      "all65587_sha256": "b03176ef1a332c431ed55028c691052958ebc08ff7711db08d05316c1f8a34a6"
+    },
+    {
+      "path": "foundation_documentation/todos/active/features/TODO-leadshug-channel-abstraction.md",
+      "bytes": 93779,
+      "sha256": "33453879801037619b8b610b329c0d3e195ad68ca36d139848805bcab61f5819",
+      "all65587_sha256": "b33eff13ac6f4fe7f07c853ff366f1abf869fdef84626543215d6ca22a485f76"
+    },
+    {
+      "path": "foundation_documentation/modules/inbox-and-conversations.md",
+      "bytes": 12425,
+      "sha256": "b9d2d151cceb2758e381c6787b8c4baf4e26630d88c62057ecfbc24e0dd26a72",
+      "all65587_sha256": "b9d2d151cceb2758e381c6787b8c4baf4e26630d88c62057ecfbc24e0dd26a72"
+    },
+    {
+      "path": "foundation_documentation/modules/integrations-and-channels.md",
+      "bytes": 31617,
+      "sha256": "031fab31685d00d635794aa10d0b1b8ee0a830e54b32622958b6bdc3e079853d",
+      "all65587_sha256": "031fab31685d00d635794aa10d0b1b8ee0a830e54b32622958b6bdc3e079853d"
+    },
+    {
+      "path": "foundation_documentation/project_constitution.md",
+      "bytes": 4641,
+      "sha256": "abfafa5576d051da58583e2be57499320c8ad155c4ae741f259c730bcca98390",
+      "all65587_sha256": "abfafa5576d051da58583e2be57499320c8ad155c4ae741f259c730bcca98390"
+    }
+  ],
+  "changed_since_all65587": [
+    "web-app/e2e/channel-transport.spec.ts",
+    "foundation_documentation/todos/active/features/TODO-leadshug-channel-abstraction.md"
+  ]
+}
+```
+
+
+## Source api-app/package.json
+
+Raw SHA256 `df8551d3e506e7c68516cbd482362c4282671b7ec7eebbf121386390ac080a9d`; bytes1670.
+
+```
+1: {
+2:   "name": "@leadshug/api",
+3:   "version": "0.1.0",
+4:   "private": true,
+5:   "description": "Núcleo unificado do LeadsHug — NestJS, quatro superfícies de entrada",
+6:   "scripts": {
+7:     "build": "nest build",
+8:     "start": "node dist/main.js",
+9:     "start:dev": "nest start --watch",
+10:     "lint": "eslint \"{src,test}/**/*.ts\"",
+11:     "test": "vitest run --config vitest.config.ts",
+12:     "test:cov": "vitest run --coverage --config vitest.config.cov.ts",
+13:     "test:e2e": "vitest run --config vitest.config.e2e.ts --no-file-parallelism --maxWorkers=1",
+14:     "prisma:generate": "prisma generate",
+15:     "prisma:migrate": "prisma migrate deploy",
+16:     "prisma:dev": "prisma migrate dev"
+17:   },
+18:   "dependencies": {
+19:     "@nestjs/common": "^11.0.0",
+20:     "@nestjs/core": "^11.0.0",
+21:     "@nestjs/platform-express": "^11.0.0",
+22:     "@nestjs/schedule": "^6.1.3",
+23:     "@prisma/client": "^6.0.0",
+24:     "bcryptjs": "^2.4.3",
+25:     "express": "^5.2.1",
+26:     "prisma": "^6.0.0",
+27:     "reflect-metadata": "^0.2.2",
+28:     "rxjs": "^7.8.1",
+29:     "ws": "^8.21.3"
+30:   },
+31:   "devDependencies": {
+32:     "@eslint/js": "^10.0.1",
+33:     "@nestjs/cli": "^11.0.0",
+34:     "@nestjs/schematics": "^11.0.0",
+35:     "@nestjs/testing": "^11.0.0",
+36:     "@types/bcryptjs": "^2.4.6",
+37:     "@types/express": "^5.0.0",
+38:     "@types/multer": "^2.2.0",
+39:     "@types/node": "^22.0.0",
+40:     "@types/supertest": "^6.0.2",
+41:     "@types/ws": "^8.18.1",
+42:     "@vitest/coverage-v8": "^2.1.0",
+43:     "eslint": "^10.8.1",
+44:     "supertest": "^7.0.0",
+45:     "typescript": "^5.6.0",
+46:     "typescript-eslint": "^8.67.0",
+47:     "unplugin-swc": "^1.5.1",
+48:     "vitest": "^2.1.0"
+49:   },
+50:   "engines": {
+51:     "node": ">=22"
+52:   }
+53: }
+```
+
+
+## Source api-app/src/domain/channels/channel-credential-resolver.ts
+
+Raw SHA256 `89cf17ac02af444092651470aee13e2d4a3bcee8d459508be818322b33b00c10`; bytes5053.
+
+```
+1: import { ConflictException, Injectable } from '@nestjs/common';
+2: import { PrismaService } from '../../infra/prisma/prisma.service';
+3: import { loadChannelCredentialKey, openChannelCredential } from './channel-credential-crypto';
+4: 
+5: export interface ResolvedChannelCredential {
+6:   channelId: string;
+7:   buId: string;
+8:   provider: 'OFICIAL' | 'NAO_OFICIAL';
+9:   generation: number;
+10:   pairingEpoch: number;
+11:   providerResourceIdentityId: string;
+12:   externalResourceId: string;
+13:   activeCredentialVersion: number | null;
+14:   accessToken?: string;
+15:   phoneNumberId?: string;
+16:   wabaId?: string;
+17:   evolutionInstanceName?: string;
+18: }
+19: 
+20: /** Resolves only a currently verified, owned channel and decrypts its own credential. */
+21: @Injectable()
+22: export class ChannelCredentialResolver {
+23:   constructor(private readonly prisma: PrismaService) {}
+24: 
+25:   /** Metadata-only check for GET availability; it never decrypts the credential. */
+26:   async inspectActiveCredential(channelId: string, generation: number): Promise<{ version: number | null; ready: boolean }> {
+27:     return (await this.inspectActiveCredentials([{ channelId, generation }])).get(channelId) ?? { version: null, ready: false };
+28:   }
+29: 
+30:   /** One metadata-only credential read for a public conversation page. */
+31:   async inspectActiveCredentials(bindings: readonly { channelId: string; generation: number }[]): Promise<Map<string, { version: number | null; ready: boolean }>> {
+32:     const ids = [...new Set(bindings.map((binding) => binding.channelId))];
+33:     if (!ids.length) return new Map();
+34:     const credentials = await this.prisma.channelCredential.findMany({
+35:       where: { channelId: { in: ids } }, select: { channelId: true, version: true, generation: true, keyId: true },
+36:     });
+37:     let currentKeyId: string | null = null;
+38:     try {
+39:       currentKeyId = loadChannelCredentialKey(process.env).keyId;
+40:     } catch { /* absent key makes every official channel unavailable */ }
+41:     const byId = new Map(credentials.map((credential) => [credential.channelId, credential]));
+42:     return new Map(bindings.map(({ channelId, generation }) => {
+43:       const credential = byId.get(channelId);
+44:       return [channelId, {
+45:         version: credential?.version ?? null,
+46:         ready: Boolean(credential && credential.generation === generation && currentKeyId && credential.keyId === currentKeyId),
+47:       }];
+48:     }));
+49:   }
+50: 
+51:   async resolve(channelId: string, purpose: 'send' | 'registration' | 'verify' = 'send'): Promise<ResolvedChannelCredential> {
+52:     const channel = await this.prisma.buChannel.findUnique({
+53:       where: { id: channelId }, include: { credential: true, providerIdentities: true },
+54:     });
+55:     if (!channel || (purpose !== 'verify' && (!channel.ownNumberVerified || channel.verifiedEpoch !== channel.pairingEpoch))) {
+56:       throw new ConflictException({ code: 'CHANNEL_IDENTITY_NOT_VERIFIED' });
+57:     }
+58:     if (purpose === 'send' && (channel.status !== 'CONECTADO' || !channel.receiptVerifiedAt
+59:       || (channel.type === 'OFICIAL' && channel.providerConnectionState !== 'SUBSCRIBED')
+60:       || (channel.type === 'NAO_OFICIAL' && channel.providerConnectionState !== 'CONNECTED'))) {
+61:       throw new ConflictException({ code: 'CHANNEL_NOT_READY' });
+62:     }
+63:     const identity = channel.providerIdentities.find((row) => row.currentChannelId === channel.id);
+64:     if (!identity || !identity.managedLifecycle || identity.provider !== channel.type || identity.buId !== channel.buId) {
+65:       throw new ConflictException({ code: 'CHANNEL_IDENTITY_NOT_VERIFIED' });
+66:     }
+67:     const result: ResolvedChannelCredential = {
+68:       channelId: channel.id, buId: channel.buId, provider: channel.type, generation: channel.generation,
+69:       pairingEpoch: channel.pairingEpoch, providerResourceIdentityId: identity.id,
+70:       externalResourceId: identity.externalResourceId,
+71:       activeCredentialVersion: channel.type === 'OFICIAL' ? channel.credential?.version ?? null : null,
+72:       ...(channel.phoneNumberId ? { phoneNumberId: channel.phoneNumberId } : {}),
+73:       ...(channel.wabaId ? { wabaId: channel.wabaId } : {}),
+74:       ...(channel.evolutionInstanceName ? { evolutionInstanceName: channel.evolutionInstanceName } : {}),
+75:     };
+76:     if (channel.type === 'OFICIAL') {
+77:       if (!channel.credential || channel.credential.generation !== channel.generation) {
+78:         throw new ConflictException({ code: 'PENDING_CREDENTIAL' });
+79:       }
+80:       const { keyId, key } = loadChannelCredentialKey(process.env);
+81:       if (channel.credential.keyId !== keyId) throw new ConflictException({ code: 'PENDING_CREDENTIAL' });
+82:       const plaintext = openChannelCredential({
+83:         ...channel.credential, nonce: Buffer.from(channel.credential.nonce),
+84:         ciphertext: Buffer.from(channel.credential.ciphertext), tag: Buffer.from(channel.credential.tag),
+85:       }, new Map([[keyId, key]]), {
+86:         purpose: 'active', provider: channel.type, buId: channel.buId, channelId: channel.id,
+87:         generation: channel.generation, version: channel.credential.version,
+88:       });
+89:       result.accessToken = plaintext.toString('utf8');
+90:     }
+91:     return result;
+92:   }
+93: }
+```
+
+
+## Source api-app/src/domain/channels/transport/channel-dependencies.spec.ts
+
+Raw SHA256 `f59d838baf635c0ce0d1ebe725c88fbb0b19fac42e9b382452e31fd38e0511a3`; bytes2383.
+
+```
+1: import { readdirSync, readFileSync } from 'node:fs';
+2: import { dirname, resolve } from 'node:path';
+3: import { fileURLToPath } from 'node:url';
+4: import { describe, expect, it } from 'vitest';
+5: 
+6: const inboxDirectory = resolve(dirname(fileURLToPath(import.meta.url)), '../../inbox');
+7: const consumerPaths = [
+8:   resolve(inboxDirectory, 'conversations.service.ts'),
+9:   resolve(inboxDirectory, 'incoming.service.ts'),
+10:   ...readdirSync(inboxDirectory)
+11:     .filter((name) => /^outbound.*\.ts$/.test(name))
+12:     .map((name) => resolve(inboxDirectory, name)),
+13: ];
+14: 
+15: function providerDispatchViolations(source: string): string[] {
+16:   const rules: Array<[string, RegExp]> = [
+17:     ['provider client or adapter import', /from\s+['"][^'"]*integrations\/(?:meta|evolution|channels)\/[^'"]+['"]/],
+18:     ['credential resolver import', /from\s+['"][^'"]*channel-credential-resolver['"]/],
+19:     ['provider injection token', /\b(?:META_CLIENT|EVOLUTION_CLIENT)\b/],
+20:     ['provider text dispatch', /\.enviarTexto\s*\(/],
+21:     ['provider-specific branch', /\.(?:provider|channelOrigin|type)\s*(?:===|!==|==|!=)\s*['"](?:OFICIAL|NAO_OFICIAL)['"]|switch\s*\(\s*[^)]*\.(?:provider|channelOrigin|type)\s*\)/],
+22:   ];
+23:   return rules.filter(([, expression]) => expression.test(source)).map(([name]) => name);
+24: }
+25: 
+26: describe('common outbound dependency boundary', () => {
+27:   it('keeps provider clients and dispatch inside channel adapters', () => {
+28:     const violations = consumerPaths.flatMap((path) => {
+29:       const source = readFileSync(path, 'utf8');
+30:       return providerDispatchViolations(source).map((rule) => `${path}: ${rule}`);
+31:     });
+32:     expect(violations).toEqual([]);
+33:   });
+34: 
+35:   it.each([
+36:     "import { MetaClient } from '../../integrations/meta/meta.client';",
+37:     "import { MetaChannelFactory } from '../../integrations/channels/meta-channel';",
+38:     "import { ChannelCredentialResolver } from '../channels/channel-credential-resolver';",
+39:     "if (context.channelOrigin === 'OFICIAL') return sendMeta();",
+40:     "switch (binding.type) { case 'NAO_OFICIAL': return sendEvolution(); }",
+41:     "const send = context.channelOrigin === 'OFICIAL' ? sendMeta() : sendEvolution();",
+42:     "switch (context.provider) { case 'OFICIAL': return sendMeta(); }",
+43:   ])('detects synthetic provider coupling outside the adapter allowlist: %s', (source) => {
+44:     expect(providerDispatchViolations(source).length).toBeGreaterThan(0);
+45:   });
+46: });
+```
+
+
+## Source api-app/src/domain/channels/transport/channel.ts
+
+Raw SHA256 `432796b8685d07dcc53c3a699a7b9d1469ac4fb110aea080766ec207bec8621f`; bytes2678.
+
+```
+1: export type ChannelOrigin = 'OFICIAL' | 'NAO_OFICIAL';
+2: 
+3: export type ChannelAvailabilityReason =
+4:   | 'CANAL_AUSENTE'
+5:   | 'CANAL_AMBIGUO'
+6:   | 'CANAL_SELECIONADO_INDISPONIVEL'
+7:   | 'CHANNEL_IDENTITY_NOT_VERIFIED'
+8:   | 'CHANNEL_NOT_READY'
+9:   | 'PENDING_CREDENTIAL'
+10:   | 'JANELA_FECHADA';
+11: 
+12: export type ChannelSendResult =
+13:   | { outcome: 'ACCEPTED'; externalMessageId: string }
+14:   | { outcome: 'BLOCKED'; reason: ChannelAvailabilityReason | 'CHANNEL_CONTEXT_CHANGED' }
+15:   | { outcome: 'REJECTED'; code: string }
+16:   | { outcome: 'UNKNOWN'; evidence: 'ACK_WITHOUT_ID' | 'TRANSPORT_UNCONFIRMED'; legacyCode: string };
+17: 
+18: export interface TextMessage {
+19:   kind: 'text';
+20:   recipientRef: string;
+21:   text: string;
+22: }
+23: 
+24: export abstract class Channel {
+25:   abstract sendMessage(message: TextMessage): Promise<ChannelSendResult>;
+26: }
+27: 
+28: /** Safe storage provenance captured for one send; never includes provider credentials or protocol addresses. */
+29: export interface ChannelOperationContext {
+30:   readonly channelId: string;
+31:   readonly buId: string;
+32:   readonly channelOrigin: ChannelOrigin;
+33:   readonly providerResourceIdentityId: string;
+34:   readonly generation: number;
+35:   readonly pairingEpoch: number;
+36:   readonly activeCredentialVersion: number | null;
+37:   readonly requiresWindow: boolean;
+38: }
+39: 
+40: export interface ResolvedChannelOperation {
+41:   readonly channel: Channel;
+42:   readonly context: ChannelOperationContext;
+43: }
+44: 
+45: export interface ChannelAvailability {
+46:   available: boolean;
+47:   reason: ChannelAvailabilityReason | null;
+48:   channelOrigin: ChannelOrigin | null;
+49:   requiresWindow: boolean;
+50:   windowOpen: boolean;
+51:   expiresAt: Date | null;
+52: }
+53: 
+54: export interface ConversationChannelReference {
+55:   conversationId: string;
+56:   buId: string;
+57: }
+58: 
+59: export interface ConversationAvailabilityReference extends ConversationChannelReference {
+60:   latestMessageOrigin: ChannelOrigin | null;
+61: }
+62: 
+63: export interface VerifiedIngressChannelReference extends ConversationChannelReference {
+64:   channelId: string;
+65:   providerResourceIdentityId: string;
+66:   channelOrigin: ChannelOrigin;
+67:   generation: number;
+68:   pairingEpoch: number;
+69: }
+70: 
+71: export abstract class ChannelResolver {
+72:   abstract resolveForConversation(reference: ConversationChannelReference): Promise<ResolvedChannelOperation>;
+73:   abstract resolveForIngress(reference: VerifiedIngressChannelReference): Promise<ResolvedChannelOperation>;
+74:   abstract inspectForConversation(reference: ConversationChannelReference): Promise<ChannelAvailability>;
+75:   abstract inspectManyForConversations(references: readonly ConversationAvailabilityReference[]): Promise<Map<string, ChannelAvailability>>;
+76:   abstract contextAfterDispatch(context: ChannelOperationContext): Promise<'CURRENT' | 'CHANGED' | 'UNKNOWN'>;
+77: }
+```
+
+
+## Source api-app/src/domain/inbox/conversations.service.ts
+
+Raw SHA256 `c7d84f983ed61c6022424d4648e07282e7eb53c40fa9aba249618d77b3c223de`; bytes8137.
+
+```
+1: import {
+2:   BadRequestException,
+3:   ConflictException,
+4:   Injectable,
+5:   NotFoundException,
+6: } from '@nestjs/common';
+7: import { PrismaService } from '../../infra/prisma/prisma.service';
+8: import { criarCursorTimeline, lerCursorTimeline } from './timeline-pagination';
+9: import { OutboundService } from './outbound.service';
+10: import { ChannelResolver, type ChannelOrigin } from '../channels/transport/channel';
+11: import type { OutboundAttribution } from './outbound.service';
+12: 
+13: export const JANELA_MS = 24 * 60 * 60 * 1000;
+14: 
+15: export interface Atendente {
+16:   userId: string;
+17:   nome: string;
+18: }
+19: 
+20: @Injectable()
+21: export class ConversationsService {
+22:   constructor(
+23:     private readonly prisma: PrismaService,
+24:     private readonly outbound: OutboundService,
+25:     private readonly channelResolver: ChannelResolver,
+26:   ) {}
+27: 
+28:   /** Carrega a conversa **dentro do escopo**. Fora dele, ninguém sabe que ela existe. */
+29:   async carregarNoEscopo(conversaId: string, buIdsDoEscopo: string[]) {
+30:     const conversa = await this.prisma.conversation.findFirst({
+31:       where: { id: conversaId, buId: { in: buIdsDoEscopo } },
+32:     });
+33:     if (!conversa) throw new NotFoundException({ error: 'Não encontrado.', code: 'NAO_ENCONTRADO' });
+34:     return conversa;
+35:   }
+36: 
+37:   /**
+38:    * A inbox pagina.
+39:    *
+40:    * Antes o `take` era 200 fixo, e o que passasse disso era **inalcançável em
+41:    * silêncio** — nada na resposta dizia que cortou. Teto silencioso é o que vira
+42:    * "sumiram conversas" seis meses depois; `temMais` é o mínimo para que quem
+43:    * consome saiba que existe mais.
+44:    */
+45:   async listar(
+46:     buId: string,
+47:     filtro: { status?: string; grupos?: boolean; minhas?: string; pagina?: number; limite?: number },
+48:   ) {
+49:     const limite = Math.min(Math.max(filtro.limite ?? 50, 1), 200);
+50:     const pagina = Math.max(filtro.pagina ?? 1, 1);
+51: 
+52:     const where: Record<string, unknown> = { buId };
+53:     if (filtro.grupos) where.contactType = 'GRUPO';
+54:     else {
+55:       where.contactType = 'PESSOA';
+56:       if (filtro.status) where.status = filtro.status;
+57:     }
+58:     if (filtro.minhas) where.attendantUserId = filtro.minhas;
+59: 
+60:     const [total, conversas] = await Promise.all([
+61:       this.prisma.conversation.count({ where }),
+62:       this.prisma.conversation.findMany({
+63:       where,
+64:       orderBy: { lastMessageAt: 'desc' },
+65:       skip: (pagina - 1) * limite,
+66:       take: limite,
+67:       select: {
+68:         id: true,
+69:         contact: true,
+70:         contactType: true,
+71:         displayName: true,
+72:         status: true,
+73:         attendantName: true,
+74:         attendantOrigin: true,
+75:         unreadCount: true,
+76:         lastMessageAt: true,
+77:         // O setor é PROJEÇÃO, não modelo (ADR-0017 §3): vem por junção do
+78:         // número. Duplicá-lo na conversa criaria a pergunta "e quando o número
+79:         // muda de setor, o histórico muda junto?" — pergunta que não precisa
+80:         // existir.
+81:         bu: { select: { setor: { select: { id: true, name: true } } } },
+82:       },
+83:       }),
+84:     ]);
+85: 
+86:     return { total, pagina, temMais: pagina * limite < total, conversas };
+87:   }
+88: 
+89:   /** Página bounded da timeline; o reconhecimento é uma atualização atômica anterior à leitura. */
+90:   async timeline(conversaId: string, limite: number, cursor: string | null, marcarLida: boolean) {
+91:     let ancora: { id: string; createdAt: Date } | null = null;
+92:     if (cursor) {
+93:       const decodificado = lerCursorTimeline(cursor);
+94:       if (decodificado.conversaId !== conversaId) {
+95:         throw new BadRequestException({
+96:           error: 'Parâmetros de paginação inválidos.', code: 'PAGINACAO_INVALIDA',
+97:         });
+98:       }
+99:       ancora = await this.prisma.message.findFirst({
+100:         where: { id: decodificado.mensagemId, conversationId: conversaId },
+101:         select: { id: true, createdAt: true },
+102:       });
+103:       if (!ancora) {
+104:         throw new BadRequestException({
+105:           error: 'Parâmetros de paginação inválidos.', code: 'PAGINACAO_INVALIDA',
+106:         });
+107:       }
+108:     }
+109: 
+110:     if (marcarLida) {
+111:       await this.prisma.conversation.updateMany({
+112:         where: { id: conversaId }, data: { unreadCount: 0 },
+113:       });
+114:     }
+115: 
+116:     const where = ancora
+117:       ? {
+118:           conversationId: conversaId,
+119:           OR: [
+120:             { createdAt: { lt: ancora.createdAt } },
+121:             { createdAt: ancora.createdAt, id: { lt: ancora.id } },
+122:           ],
+123:         }
+124:       : { conversationId: conversaId };
+125:     const encontradas = await this.prisma.message.findMany({
+126:       where,
+127:       orderBy: [{ createdAt: 'desc' }, { id: 'desc' }],
+128:       take: limite + 1,
+129:       select: {
+130:         id: true, direction: true, messageType: true, content: true,
+131:         channelOrigin: true, authorName: true, createdAt: true,
+132:       },
+133:     });
+134:     const temAnteriores = encontradas.length > limite;
+135:     const messages = encontradas.slice(0, limite).reverse();
+136:     return {
+137:       messages,
+138:       paginacao: {
+139:         limite,
+140:         temAnteriores,
+141:         cursorAnterior: temAnteriores && messages.length
+142:           ? criarCursorTimeline(conversaId, messages[0].id)
+143:           : null,
+144:       },
+145:     };
+146:   }
+147: 
+148:   /**
+149:    * Estado da janela de 24h — **atributo do canal, não do produto** (ADR-0009 §3).
+150:    *
+151:    * Numa BU com os dois canais, o canal considerado é o da ÚLTIMA mensagem: a
+152:    * janela fechada no oficial não libera responder pelo não oficial sozinha.
+153:    * Trocar de número no meio da conversa é decisão de quem atende, nunca do
+154:    * sistema.
+155:    */
+156:   async estadoDaJanela(conversaId: string, buId: string) {
+157:     const estado = await this.channelResolver.inspectForConversation({ conversationId: conversaId, buId });
+158:     return {
+159:       canal: estado.channelOrigin ? { type: estado.channelOrigin } : null,
+160:       exigeJanela: estado.requiresWindow,
+161:       aberta: estado.windowOpen,
+162:       expiraEm: estado.expiresAt,
+163:       disponivel: estado.available,
+164:       motivoIndisponibilidade: estado.reason,
+165:     };
+166:   }
+167: 
+168:   async estadosDasJanelas(references: readonly { conversationId: string; buId: string; latestMessageOrigin: ChannelOrigin | null }[]) {
+169:     return this.channelResolver.inspectManyForConversations(references);
+170:   }
+171: 
+172:   async responder(conversaId: string, buId: string, texto: string, attribution: OutboundAttribution) {
+173:     return this.outbound.send({ conversationId: conversaId, buId, text: texto, attribution });
+174:   }
+175: 
+176:   /** Assumir sem responder. 409 se outro — interno ou externo — já está nela. */
+177:   async assumir(conversaId: string, atendente: Atendente) {
+178:     const conversa = await this.prisma.conversation.findUniqueOrThrow({ where: { id: conversaId } });
+179:     if (conversa.contactType === 'GRUPO') {
+180:       throw new BadRequestException({ error: 'Grupos não usam fila de atendimento.', code: 'GRUPO_SEM_FILA' });
+181:     }
+182:     if (
+183:       conversa.status === 'IN_SERVICE' &&
+184:       conversa.attendantUserId &&
+185:       conversa.attendantUserId !== atendente.userId
+186:     ) {
+187:       throw new ConflictException({
+188:         error: `Já está sendo atendida por ${conversa.attendantName ?? 'outro agente'}.`,
+189:         code: 'JA_ATENDIDA',
+190:       });
+191:     }
+192:     if (conversa.status === 'IN_SERVICE' && conversa.attendantOrigin === 'EXTERNO' && !conversa.attendantUserId) {
+193:       throw new ConflictException({
+194:         error: `Já está sendo atendida por ${conversa.attendantName ?? 'um sistema externo'}.`,
+195:         code: 'JA_ATENDIDA',
+196:       });
+197:     }
+198: 
+199:     return this.prisma.conversation.update({
+200:       where: { id: conversa.id },
+201:       data: {
+202:         status: 'IN_SERVICE',
+203:         attendantUserId: atendente.userId,
+204:         attendantName: atendente.nome,
+205:         attendantOrigin: 'INTERNO',
+206:       },
+207:     });
+208:   }
+209: 
+210:   /** Finalizar. Mensagem nova do contato reabre para QUEUED (ver incoming). */
+211:   async finalizar(conversaId: string) {
+212:     const conversa = await this.prisma.conversation.findUniqueOrThrow({ where: { id: conversaId } });
+213:     if (conversa.contactType === 'GRUPO') {
+214:       throw new BadRequestException({ error: 'Grupos não usam fila de atendimento.', code: 'GRUPO_SEM_FILA' });
+215:     }
+216:     return this.prisma.conversation.update({
+217:       where: { id: conversa.id },
+218:       data: { status: 'CLOSED', attendantUserId: null, attendantName: null, attendantOrigin: null },
+219:     });
+220:   }
+221: }
+```
+
+
+## Source api-app/src/domain/inbox/incoming.service.ts
+
+Raw SHA256 `b0ec43187b1f48720aa899e40f979dd0ae447321581d675b84ef9c71dbd0ff42`; bytes6076.
+
+```
+1: import { Inject, Injectable } from '@nestjs/common';
+2: import { PrismaService } from '../../infra/prisma/prisma.service';
+3: import { RealtimeService } from '../../realtime/realtime.service';
+4: import { TYPEBOT_CLIENT, TypebotClient } from '../../integrations/typebot/typebot.client';
+5: import { MessageAcceptanceService } from './message-acceptance.service';
+6: import { OutboundService } from './outbound.service';
+7: import type { ChannelOrigin } from '../channels/transport/channel';
+8: 
+9: export type CanalDeOrigem = ChannelOrigin;
+10: 
+11: export interface MensagemRecebida {
+12:   buId: string;
+13:   canal: CanalDeOrigem;
+14:   /** Telefone E.164 só dígitos, ou o identificador do grupo. */
+15:   contato: string;
+16:   ehGrupo: boolean;
+17:   /** Nome do contato, quando o canal informa e ele é confiável (ver webhooks). */
+18:   nomeExibicao?: string | null;
+19:   direcao: 'IN' | 'OUT';
+20:   tipo: 'TEXTO' | 'IMAGEM' | 'AUDIO' | 'VIDEO' | 'DOCUMENTO' | 'OUTRO';
+21:   conteudo?: string | null;
+22:   externalId?: string | null;
+23:   /** Quem respondeu, quando a mensagem saiu por fora do produto. */
+24:   autorNome?: string | null;
+25:   providerResourceIdentityId: string;
+26:   channelId: string;
+27:   generation: number;
+28:   pairingEpoch: number;
+29: }
+30: 
+31: /**
+32:  * O ponto onde os dois canais viram a MESMA coisa (ADR-0009 §1): uma conversa
+33:  * pendurada na BU, com as mensagens marcadas pelo canal por onde entraram.
+34:  *
+35:  * Os adaptadores de webhook traduzem o formato de cada plataforma para
+36:  * `MensagemRecebida`; daqui para baixo não existe Meta nem Evolution.
+37:  */
+38: @Injectable()
+39: export class IncomingService {
+40:   constructor(
+41:     private readonly prisma: PrismaService,
+42:     private readonly realtime: RealtimeService,
+43:     @Inject(TYPEBOT_CLIENT) private readonly typebot: TypebotClient,
+44:     private readonly acceptance: MessageAcceptanceService,
+45:     private readonly outbound: OutboundService,
+46:   ) {}
+47: 
+48:   async registrar(m: MensagemRecebida) {
+49:     const accepted = await this.acceptance.accept({
+50:       providerResourceIdentityId: m.providerResourceIdentityId, channelId: m.channelId, generation: m.generation,
+51:       pairingEpoch: m.pairingEpoch, buId: m.buId, channelOrigin: m.canal, externalMessageId: m.externalId ?? '',
+52:       contact: m.contato, contactType: m.ehGrupo ? 'GRUPO' : 'PESSOA', displayName: m.nomeExibicao,
+53:       direction: m.direcao, messageType: m.tipo, content: m.conteudo, authorName: m.autorNome,
+54:     });
+55:     const { conversation: conversa, message: mensagem, creationWinner } = accepted;
+56:     if (creationWinner) {
+57:       this.realtime.publicarNaBu(m.buId, { tipo: 'mensagem', conversaId: conversa.id, contato: conversa.contact, direcao: m.direcao, canal: m.canal, naoLidas: conversa.unreadCount });
+58:       if (m.direcao === 'IN' && m.tipo === 'TEXTO' && m.conteudo?.trim()) {
+59:         await this.executarTypebot(m, m.conteudo.trim(), conversa.id, accepted.conversationCreated).catch(() => undefined);
+60:       }
+61:     }
+62:     return { conversa, mensagem, reabriu: accepted.reopened, creationWinner, reconciled: accepted.reconciled };
+63:   }
+64: 
+65:   private async executarTypebot(incoming: MensagemRecebida, texto: string, conversationId: string, conversationCreated: boolean): Promise<void> {
+66:     const { buId, contato } = incoming;
+67:     const bu = await this.prisma.businessUnit.findUnique({ where: { id: buId }, select: { mantenedoraId: true } });
+68:     if (!bu) return;
+69:     const gatilhos = await this.prisma.typebotTrigger.findMany({
+70:       where: { active: true, bot: { status: 'ATIVO', mantenedoraId: bu.mantenedoraId }, OR: [{ buId: null }, { buId }] },
+71:       include: { bot: true }, orderBy: { createdAt: 'asc' },
+72:     });
+73:     const normalized = texto.toLocaleLowerCase('pt-BR');
+74:     const gatilho = gatilhos.find((g) => gatilhoCombina(g.kind, g.value, normalized, conversationCreated));
+75:     if (!gatilho || !this.typebot.configurado()) return;
+76:     const botId = gatilho.bot.publishedTypebotId;
+77:     if (!botId) return;
+78:     const atual = await this.prisma.typebotSession.findUnique({ where: { botId_buId_contato: { botId: gatilho.botId, buId, contato } } });
+79:     if (atual && (atual.mantenedoraId !== bu.mantenedoraId || atual.buId !== buId || atual.botId !== gatilho.botId || gatilho.bot.mantenedoraId !== bu.mantenedoraId)) return;
+80:     const resposta = atual?.ativo ? await this.typebot.continuar(atual.sessionId, texto) : await this.typebot.iniciar(botId, contato, texto);
+81:     const sessionId = 'sessionId' in resposta && typeof resposta.sessionId === 'string' ? resposta.sessionId : null;
+82:     if (!atual && sessionId) await this.prisma.typebotSession.create({ data: { botId: gatilho.botId, mantenedoraId: gatilho.bot.mantenedoraId, buId, contato, sessionId } });
+83:     for (const mensagem of resposta.messages) {
+84:       const saida = textoDaRespostaTypebot(mensagem);
+85:       if (!saida) continue;
+86:       await this.outbound.send({
+87:         conversationId,
+88:         buId,
+89:         text: saida,
+90:         attribution: { kind: 'BOT', name: 'Typebot' },
+91:         ingress: {
+92:           channelId: incoming.channelId,
+93:           providerResourceIdentityId: incoming.providerResourceIdentityId,
+94:           channelOrigin: incoming.canal,
+95:           generation: incoming.generation,
+96:           pairingEpoch: incoming.pairingEpoch,
+97:         },
+98:       });
+99:     }
+100:   }
+101: 
+102: }
+103: 
+104: function textoDaRespostaTypebot(mensagem: unknown): string | null {
+105:   if (!mensagem || typeof mensagem !== 'object') return null;
+106:   const m = mensagem as { type?: string; content?: { richText?: unknown; text?: string } };
+107:   if (m.type !== 'text') return null;
+108:   if (typeof m.content?.text === 'string') return m.content.text.trim() || null;
+109:   const juntar = (v: unknown): string => Array.isArray(v) ? v.map(juntar).join('') : v && typeof v === 'object' ? juntar((v as { children?: unknown }).children) : typeof v === 'string' ? v : '';
+110:   const texto = juntar(m.content?.richText).trim();
+111:   return texto || null;
+112: }
+113: 
+114: export function gatilhoCombina(tipo: 'PALAVRA_CHAVE' | 'NOVA_CONVERSA', valor: string, textoNormalizado: string, novaConversa: boolean): boolean {
+115:   return tipo === 'NOVA_CONVERSA' ? novaConversa : textoNormalizado.toLocaleLowerCase('pt-BR').includes(valor.toLocaleLowerCase('pt-BR'));
+116: }
+```
+
+
+## Source api-app/src/domain/inbox/incoming.typebot.integration.spec.ts
+
+Raw SHA256 `0cac10e5ed05da5a6e89b39c8b32a40810b4678af77b4d3b8d20b4d1afc4704c`; bytes4647.
+
+```
+1: import { describe, expect, it, vi } from 'vitest';
+2: import { IncomingService } from './incoming.service';
+3: 
+4: describe('ponte de evento Meta → Typebot → Meta', () => {
+5:   it('inicia a sessão no primeiro evento e grava a resposta do bot', async () => {
+6:     const registrarSessao = vi.fn();
+7:     const publicar = vi.fn();
+8:     const prisma = {
+9:       businessUnit: { findUnique: vi.fn().mockResolvedValue({ mantenedoraId: 'tenant-1' }) },
+10:       conversation: { count: vi.fn().mockResolvedValue(0) },
+11:       typebotTrigger: { findMany: vi.fn().mockResolvedValue([{
+12:         id: 'trigger-1', botId: 'bot-1', kind: 'NOVA_CONVERSA', value: '*', buId: null,
+13:         bot: { id: 'bot-1', mantenedoraId: 'tenant-1', status: 'ATIVO', publishedTypebotId: 'public-1' },
+14:       }]) },
+15:       buChannel: { findUnique: vi.fn().mockResolvedValue({ type: 'OFICIAL', phoneNumberId: 'phone-1' }) },
+16:       typebotSession: { findUnique: vi.fn().mockResolvedValue(null), create: registrarSessao },
+17:       webhookEvent: { create: vi.fn() },
+18:     };
+19:     const typebot = {
+20:       configurado: () => true,
+21:       iniciar: vi.fn().mockResolvedValue({ sessionId: 'session-1', messages: [{ type: 'text', content: { richText: ['Olá!'] } }] }),
+22:       continuar: vi.fn(),
+23:     };
+24:     const accepted = vi.fn()
+25:       .mockResolvedValueOnce({ conversation: { id: 'conversation-1', contact: '5584999990000', unreadCount: 1 }, message: { id: 'message-1' }, creationWinner: true, reconciled: false, conversationCreated: true, reopened: false })
+26:       .mockResolvedValueOnce({ conversation: { id: 'conversation-1', contact: '5584999990000', unreadCount: 1 }, message: { id: 'out-1' }, creationWinner: true, reconciled: false, conversationCreated: false, reopened: false });
+27:     const outbound = { send: vi.fn().mockResolvedValue({ id: 'out-1' }) };
+28:     const service = new IncomingService(prisma as never, { publicarNaBu: publicar } as never, typebot as never, { accept: accepted } as never, outbound as never);
+29: 
+30:     await service.registrar({ buId: 'bu-1', canal: 'OFICIAL', contato: '5584999990000', ehGrupo: false, direcao: 'IN', tipo: 'TEXTO', conteudo: 'oi', externalId: 'in-1', providerResourceIdentityId: 'identity-1', channelId: 'channel-1', generation: 1, pairingEpoch: 1 });
+31: 
+32:     expect(typebot.iniciar).toHaveBeenCalledWith('public-1', '5584999990000', 'oi');
+33:     expect(registrarSessao).toHaveBeenCalledWith({ data: expect.objectContaining({ botId: 'bot-1', buId: 'bu-1', sessionId: 'session-1' }) });
+34:     expect(accepted).toHaveBeenCalledTimes(1);
+35:     expect(outbound.send).toHaveBeenCalledWith(expect.objectContaining({
+36:       conversationId: 'conversation-1', buId: 'bu-1', text: 'Olá!', attribution: { kind: 'BOT', name: 'Typebot' },
+37:       ingress: { channelId: 'channel-1', providerResourceIdentityId: 'identity-1', channelOrigin: 'OFICIAL', generation: 1, pairingEpoch: 1 },
+38:     }));
+39:     expect(publicar).toHaveBeenCalled();
+40:   });
+41: 
+42:   it('continua a sessão existente sem iniciar outra', async () => {
+43:     const prisma = {
+44:       businessUnit: { findUnique: vi.fn().mockResolvedValue({ mantenedoraId: 't' }) },
+45:       conversation: { count: vi.fn().mockResolvedValue(1) },
+46:       typebotTrigger: { findMany: vi.fn().mockResolvedValue([{ botId: 'b', kind: 'PALAVRA_CHAVE', value: 'ajuda', buId: 'bu', bot: { mantenedoraId: 't', status: 'ATIVO', publishedTypebotId: 'public' } }]) },
+47:       buChannel: { findUnique: vi.fn().mockResolvedValue({ type: 'OFICIAL', phoneNumberId: 'phone' }) },
+48:       typebotSession: { findUnique: vi.fn().mockResolvedValue({ botId: 'b', mantenedoraId: 't', buId: 'bu', sessionId: 'session', ativo: true }), create: vi.fn() },
+49:       webhookEvent: { create: vi.fn() },
+50:     };
+51:     const typebot = { configurado: () => true, iniciar: vi.fn(), continuar: vi.fn().mockResolvedValue({ messages: [] }) };
+52:     const accepted = vi.fn().mockResolvedValue({ conversation: { id: 'c', contact: '1', unreadCount: 1 }, message: { id: 'm' }, creationWinner: true, reconciled: false, conversationCreated: false, reopened: false });
+53:     const service = new IncomingService(prisma as never, { publicarNaBu: vi.fn() } as never, typebot as never, { accept: accepted } as never, { send: vi.fn() } as never);
+54:     await service.registrar({ buId: 'bu', canal: 'OFICIAL', contato: '1', ehGrupo: false, direcao: 'IN', tipo: 'TEXTO', conteudo: 'preciso de AJUDA', externalId: 'in-1', providerResourceIdentityId: 'identity-1', channelId: 'channel-1', generation: 1, pairingEpoch: 1 });
+55:     expect(typebot.continuar).toHaveBeenCalledWith('session', 'preciso de AJUDA');
+56:     expect(typebot.iniciar).not.toHaveBeenCalled();
+57:   });
+58: });
+```
+
+
+## Source api-app/src/domain/inbox/message-acceptance.service.ts
+
+Raw SHA256 `b053744ee44b7e91fd45b5c146f759f55c70b8e517b8fbb1cab39806407335e1`; bytes15730.
+
+```
+1: import { BadRequestException, ConflictException, Injectable } from '@nestjs/common';
+2: import { Prisma } from '@prisma/client';
+3: import { PrismaService } from '../../infra/prisma/prisma.service';
+4: import { redactProviderData } from '../channels/safe-redaction';
+5: 
+6: export interface VerifiedResourceContext {
+7:   providerResourceIdentityId: string;
+8:   buId: string;
+9:   channelId: string;
+10:   generation: number;
+11:   pairingEpoch: number;
+12:   channelOrigin: 'OFICIAL' | 'NAO_OFICIAL';
+13: }
+14: 
+15: export interface MessageAcceptanceInput extends VerifiedResourceContext {
+16:   externalMessageId: string;
+17:   contact: string;
+18:   contactType: 'PESSOA' | 'GRUPO';
+19:   displayName?: string | null;
+20:   conversationId?: string;
+21:   direction: 'IN' | 'OUT';
+22:   messageType: 'TEXTO' | 'IMAGEM' | 'AUDIO' | 'VIDEO' | 'DOCUMENTO' | 'OUTRO';
+23:   status?: 'RECEBIDA' | 'ENVIADA' | 'ENTREGUE' | 'LIDA' | 'FALHOU';
+24:   content?: string | null;
+25:   authorUserId?: string | null;
+26:   authorName?: string | null;
+27:   /** True only for an authenticated sender result; echo payloads cannot assert authorship. */
+28:   senderResult?: boolean;
+29: }
+30: 
+31: export interface MessageAcceptanceResult {
+32:   conversation: Prisma.ConversationGetPayload<object>;
+33:   message: Prisma.MessageGetPayload<object>;
+34:   creationWinner: boolean;
+35:   reconciled: boolean;
+36:   conversationCreated: boolean;
+37:   reopened: boolean;
+38: }
+39: 
+40: /** Sole transactional owner of keyed Message creation and sender/echo reconciliation. */
+41: @Injectable()
+42: export class MessageAcceptanceService {
+43:   constructor(private readonly prisma: PrismaService) {}
+44: 
+45:   /** Persist only an allowlist-redacted, identity-scoped diagnostic while the resource fence is held. */
+46:   async persistVerifiedDiagnostic(
+47:     context: VerifiedResourceContext,
+48:     eventType: string,
+49:     safeMetadata: Record<string, unknown>,
+50:   ): Promise<void> {
+51:     if (!/^[A-Za-z0-9_.:-]{1,100}$/.test(eventType)) throw new BadRequestException({ code: 'INVALID_EVENT_TYPE' });
+52:     await this.prisma.$transaction(async (tx) => {
+53:       await this.lockAndValidateCurrentIdentity(tx, context);
+54:       await tx.webhookEvent.create({
+55:         data: {
+56:           buId: context.buId, channel: context.channelOrigin, eventType,
+57:           payload: redactProviderData(safeMetadata) as Prisma.InputJsonValue,
+58:         },
+59:       });
+60:     });
+61:   }
+62: 
+63:   /** Persist safe identity/state metadata while fenced, even before own-number proof. */
+64:   async persistCurrentResourceMetadata(
+65:     context: VerifiedResourceContext,
+66:     eventType: string,
+67:     safeMetadata: Record<string, unknown>,
+68:   ): Promise<void> {
+69:     if (!/^[A-Za-z0-9_.:-]{1,100}$/.test(eventType)) throw new BadRequestException({ code: 'INVALID_EVENT_TYPE' });
+70:     await this.prisma.$transaction(async (tx) => {
+71:       const rows = await tx.$queryRaw<Array<{ id: string; bu_id: string; current_channel_id: string | null }>>`
+72:         SELECT id, bu_id, current_channel_id FROM provider_resource_identities
+73:         WHERE id = ${context.providerResourceIdentityId} FOR SHARE
+74:       `;
+75:       if (!rows[0] || rows[0].bu_id !== context.buId || rows[0].current_channel_id !== context.channelId) throw new ConflictException({ code: 'IDENTITY_NOT_CURRENT' });
+76:       const channel = await tx.buChannel.findFirst({ where: { id: context.channelId, buId: context.buId, type: context.channelOrigin, generation: context.generation, pairingEpoch: context.pairingEpoch }, select: { id: true } });
+77:       if (!channel) throw new ConflictException({ code: 'CHANNEL_GENERATION_STALE' });
+78:       await tx.webhookEvent.create({ data: { buId: context.buId, channel: context.channelOrigin, eventType, payload: redactProviderData(safeMetadata) as Prisma.InputJsonValue } });
+79:     });
+80:   }
+81: 
+82:   async accept(input: MessageAcceptanceInput): Promise<MessageAcceptanceResult> {
+83:     if (!input.externalMessageId?.trim()) {
+84:       throw new BadRequestException({ code: 'EXTERNAL_MESSAGE_ID_REQUIRED' });
+85:     }
+86:     if (!input.providerResourceIdentityId || !input.channelId || !input.buId) {
+87:       throw new BadRequestException({ code: 'VERIFIED_RESOURCE_REQUIRED' });
+88:     }
+89: 
+90:     try {
+91:       return await this.prisma.$transaction(async (tx) => {
+92:         await this.lockAndValidateCurrentIdentity(tx, input);
+93:         const key = { providerResourceIdentityId: input.providerResourceIdentityId, externalId: input.externalMessageId };
+94:         const prior = await tx.message.findUnique({
+95:           where: { providerResourceIdentityId_externalId: key }, include: { conversation: true },
+96:         });
+97:         if (prior) return this.reconcile(tx, prior, input);
+98: 
+99:         let conversation: Prisma.ConversationGetPayload<object>;
+100:         let conversationCreated = false;
+101:         let reopened = false;
+102:         if (input.direction === 'IN') {
+103:           const acceptedConversation = await this.acceptIncomingConversation(tx, input);
+104:           conversation = acceptedConversation.conversation;
+105:           conversationCreated = acceptedConversation.created;
+106:           reopened = acceptedConversation.reopened;
+107:         } else {
+108:           conversation = await this.loadOutboundConversation(tx, input);
+109:         }
+110:         const message = await tx.message.create({
+111:           data: {
+112:             conversationId: conversation.id,
+113:             buId: input.buId,
+114:             direction: input.direction,
+115:             messageType: input.messageType,
+116:             content: input.content ?? null,
+117:             channelOrigin: input.channelOrigin,
+118:             status: input.status ?? (input.direction === 'IN' ? 'RECEBIDA' : 'ENVIADA'),
+119:             externalId: input.externalMessageId,
+120:             providerResourceIdentityId: input.providerResourceIdentityId,
+121:             authorUserId: input.senderResult ? input.authorUserId ?? null : null,
+122:             authorName: input.senderResult ? input.authorName ?? null : null,
+123:           },
+124:         });
+125:         if (input.direction === 'IN') {
+126:           const now = new Date();
+127:           await tx.buChannel.updateMany({
+128:             where: { id: input.channelId, buId: input.buId, generation: input.generation, pairingEpoch: input.pairingEpoch },
+129:             data: { receiptVerifiedAt: now },
+130:           });
+131:           const currentChannel = await tx.buChannel.findUnique({ where: { id: input.channelId }, select: { currentAttemptId: true, providerConnectionState: true, type: true } });
+132:           const providerReady = currentChannel?.providerConnectionState === 'SUBSCRIBED'
+133:             || (input.channelOrigin === 'NAO_OFICIAL' && currentChannel?.providerConnectionState === 'CONNECTED');
+134:           if (providerReady) {
+135:             await tx.buChannel.updateMany({ where: { id: input.channelId, generation: input.generation, pairingEpoch: input.pairingEpoch }, data: { status: 'CONECTADO', connectedAt: now } });
+136:           }
+137:           if (currentChannel?.type === 'NAO_OFICIAL' && currentChannel.currentAttemptId && currentChannel.providerConnectionState === 'CONNECTED') {
+138:             await tx.buChannel.updateMany({ where: { id: input.channelId, generation: input.generation, pairingEpoch: input.pairingEpoch }, data: { status: 'CONECTADO', connectedAt: now } });
+139:             await tx.channelRegistrationAttempt.updateMany({ where: { id: currentChannel.currentAttemptId, generation: input.generation, pairingEpoch: input.pairingEpoch, state: { in: ['PENDING_NUMBER', 'PENDING_RECEIPT'] } }, data: { state: 'CONNECTED', stage: 'RECEIPT_VERIFIED', version: { increment: 1 } } });
+140:           }
+141:           if (input.channelOrigin === 'OFICIAL' && currentChannel?.currentAttemptId && providerReady) {
+142:             await tx.channelRegistrationAttempt.updateMany({
+143:               where: { id: currentChannel.currentAttemptId, state: 'PENDING_RECEIPT', stage: 'SUBSCRIBED' },
+144:               data: { state: 'CONNECTED', stage: 'RECEIPT_VERIFIED', version: { increment: 1 } },
+145:             });
+146:           }
+147:         }
+148:         return { conversation, message, creationWinner: true, reconciled: false, conversationCreated, reopened };
+149:       }, { isolationLevel: Prisma.TransactionIsolationLevel.ReadCommitted });
+150:     } catch (error) {
+151:       // A concurrent insert may win after our initial lookup. Its transaction
+152:       // rolled back this attempt's conversation/unread effects atomically.
+153:       if (!isUniqueViolation(error)) throw error;
+154:       const prior = await this.prisma.message.findUnique({
+155:         where: {
+156:           providerResourceIdentityId_externalId: {
+157:             providerResourceIdentityId: input.providerResourceIdentityId,
+158:             externalId: input.externalMessageId,
+159:           },
+160:         }, include: { conversation: true },
+161:       });
+162:       if (!prior) throw error;
+163:       return this.prisma.$transaction(async (tx) => {
+164:         await this.lockAndValidateCurrentIdentity(tx, input);
+165:         const current = await tx.message.findUniqueOrThrow({
+166:           where: {
+167:             providerResourceIdentityId_externalId: {
+168:               providerResourceIdentityId: input.providerResourceIdentityId,
+169:               externalId: input.externalMessageId,
+170:             },
+171:           }, include: { conversation: true },
+172:         });
+173:         return this.reconcile(tx, current, input);
+174:       });
+175:     }
+176:   }
+177: 
+178:   /** Persist an explicitly ambiguous result after a provider accepted a send but returned no key. */
+179:   async recordAmbiguousOutbound(input: Omit<MessageAcceptanceInput, 'externalMessageId' | 'status'>): Promise<Prisma.MessageGetPayload<object>> {
+180:     if (input.direction !== 'OUT' || !input.senderResult) throw new BadRequestException({ code: 'OUTBOUND_RESULT_REQUIRED' });
+181:     return this.prisma.$transaction(async (tx) => {
+182:       await this.lockAndValidateCurrentIdentity(tx, input);
+183:       const conversation = await tx.conversation.findFirst({ where: { id: input.conversationId, buId: input.buId, contact: input.contact } });
+184:       if (!conversation) throw new ConflictException({ code: 'CONVERSATION_IDENTITY_MISMATCH' });
+185:       await tx.conversation.update({ where: { id: conversation.id }, data: { lastMessageAt: new Date() } });
+186:       return tx.message.create({ data: {
+187:         conversationId: conversation.id, buId: input.buId, direction: 'OUT', messageType: input.messageType,
+188:         content: input.content ?? null, channelOrigin: input.channelOrigin, status: 'FALHOU', externalId: null,
+189:         providerResourceIdentityId: input.providerResourceIdentityId, authorUserId: input.authorUserId ?? null,
+190:         authorName: input.authorName ?? null,
+191:       } });
+192:     });
+193:   }
+194: 
+195:   private async lockAndValidateCurrentIdentity(tx: Prisma.TransactionClient, input: VerifiedResourceContext): Promise<void> {
+196:     // Retirement/renewal must update this same identity row before changing the
+197:     // channel epoch. The lock is held through message commit as the ingress fence.
+198:     const rows = await tx.$queryRaw<Array<{ id: string; bu_id: string; current_channel_id: string | null }>>`
+199:       SELECT id, bu_id, current_channel_id
+200:       FROM provider_resource_identities
+201:       WHERE id = ${input.providerResourceIdentityId}
+202:       FOR SHARE
+203:     `;
+204:     const identity = rows[0];
+205:     if (!identity || identity.bu_id !== input.buId || identity.current_channel_id !== input.channelId) {
+206:       throw new ConflictException({ code: 'IDENTITY_NOT_CURRENT' });
+207:     }
+208:     const channel = await tx.buChannel.findFirst({
+209:       where: {
+210:         id: input.channelId, buId: input.buId, generation: input.generation,
+211:         pairingEpoch: input.pairingEpoch, ownNumberVerified: true, verifiedEpoch: input.pairingEpoch,
+212:       }, select: { id: true, type: true, currentAttemptId: true },
+213:     });
+214:     if (!channel || channel.type !== input.channelOrigin) {
+215:       throw new ConflictException({ code: 'CHANNEL_IDENTITY_NOT_VERIFIED' });
+216:     }
+217:   }
+218: 
+219:   private async acceptIncomingConversation(tx: Prisma.TransactionClient, input: MessageAcceptanceInput) {
+220:     await tx.$queryRaw`SELECT pg_advisory_xact_lock(hashtextextended(${JSON.stringify([input.buId, input.contact])}, 0))::text AS locked`;
+221:     const existing = await tx.conversation.findUnique({
+222:       where: { buId_contact: { buId: input.buId, contact: input.contact } },
+223:     });
+224:     if (input.conversationId && existing?.id !== input.conversationId) {
+225:       throw new ConflictException({ code: 'CONVERSATION_IDENTITY_MISMATCH' });
+226:     }
+227:     const reopens = existing?.status === 'CLOSED' && input.contactType === 'PESSOA';
+228:     const conversation = await tx.conversation.upsert({
+229:       where: { buId_contact: { buId: input.buId, contact: input.contact } },
+230:       create: {
+231:         buId: input.buId, contact: input.contact, contactType: input.contactType,
+232:         displayName: input.displayName ?? null,
+233:         status: 'QUEUED', unreadCount: 1, lastMessageAt: new Date(),
+234:       },
+235:       update: {
+236:         displayName: input.displayName ?? undefined,
+237:         lastMessageAt: new Date(), unreadCount: { increment: 1 },
+238:         status: reopens ? 'QUEUED' : undefined,
+239:         attendantUserId: reopens ? null : undefined,
+240:         attendantName: reopens ? null : undefined,
+241:         attendantOrigin: reopens ? null : undefined,
+242:       },
+243:     });
+244:     return { conversation, created: !existing, reopened: Boolean(reopens) };
+245:   }
+246: 
+247:   private async loadOutboundConversation(tx: Prisma.TransactionClient, input: MessageAcceptanceInput) {
+248:     if (!input.conversationId && input.senderResult) throw new BadRequestException({ code: 'CONVERSATION_REQUIRED' });
+249:     if (input.conversationId) {
+250:       const conversation = await tx.conversation.findFirst({
+251:         where: { id: input.conversationId, buId: input.buId, contact: input.contact },
+252:       });
+253:       if (!conversation) throw new ConflictException({ code: 'CONVERSATION_IDENTITY_MISMATCH' });
+254:       return tx.conversation.update({ where: { id: conversation.id }, data: { lastMessageAt: new Date() } });
+255:     }
+256:     // An authenticated provider echo can arrive before our send result and can
+257:     // be the first observed message for this contact. Create an OUT-only
+258:     // conversation with zero unread; an authenticated sender result above must
+259:     // always name an already-authorized conversation.
+260:     await tx.$queryRaw`SELECT pg_advisory_xact_lock(hashtextextended(${JSON.stringify([input.buId, input.contact])}, 0))::text AS locked`;
+261:     return tx.conversation.upsert({
+262:       where: { buId_contact: { buId: input.buId, contact: input.contact } },
+263:       create: {
+264:         buId: input.buId, contact: input.contact, contactType: input.contactType,
+265:         status: 'QUEUED', unreadCount: 0, lastMessageAt: new Date(),
+266:       },
+267:       update: { lastMessageAt: new Date() },
+268:     });
+269:   }
+270: 
+271:   private async reconcile(
+272:     tx: Prisma.TransactionClient,
+273:     prior: Prisma.MessageGetPayload<{ include: { conversation: true } }>,
+274:     input: MessageAcceptanceInput,
+275:   ): Promise<MessageAcceptanceResult> {
+276:     const conversation = prior.conversation;
+277:     if (prior.buId !== input.buId || conversation.buId !== input.buId || conversation.contact !== input.contact
+278:       || (input.conversationId && conversation.id !== input.conversationId)
+279:       || prior.direction !== input.direction || prior.channelOrigin !== input.channelOrigin) {
+280:       throw new ConflictException({ code: 'MESSAGE_IDENTITY_CONFLICT' });
+281:     }
+282:     let message = prior;
+283:     const trustedSenderEnrichment = input.senderResult && !prior.authorUserId && !prior.authorName;
+284:     if (trustedSenderEnrichment) {
+285:       message = await tx.message.update({
+286:         where: { id: prior.id },
+287:         data: {
+288:           authorUserId: input.authorUserId ?? null,
+289:           authorName: input.authorName ?? null,
+290:           content: input.content ?? prior.content,
+291:         },
+292:         include: { conversation: true },
+293:       });
+294:     }
+295:     return { conversation, message, creationWinner: false, reconciled: true, conversationCreated: false, reopened: false };
+296:   }
+297: }
+298: 
+299: function isUniqueViolation(error: unknown): boolean {
+300:   return error instanceof Prisma.PrismaClientKnownRequestError && error.code === 'P2002';
+301: }
+```
+
+
+## Source api-app/src/domain/inbox/outbound.service.spec.ts
+
+Raw SHA256 `ae1f9208d660c684dca9b1ac5727001d8e57c4c9504be9be1d20ecba32e01805`; bytes8314.
+
+```
+1: import { describe, expect, it, vi } from 'vitest';
+2: import type { ChannelOperationContext, ChannelSendResult } from '../channels/transport/channel';
+3: import { OutboundService } from './outbound.service';
+4: 
+5: const context: ChannelOperationContext = Object.freeze({
+6:   channelId: 'channel-1', buId: 'bu-1', channelOrigin: 'OFICIAL', providerResourceIdentityId: 'identity-1',
+7:   generation: 1, pairingEpoch: 2, activeCredentialVersion: 3, requiresWindow: false,
+8: });
+9: const conversation = { id: 'conversation-1', buId: 'bu-1', contact: 'user:opaque', contactType: 'PESSOA' as const };
+10: 
+11: function setup(result: ChannelSendResult) {
+12:   const channel = { sendMessage: vi.fn().mockResolvedValue(result) };
+13:   const resolver = {
+14:     resolveForConversation: vi.fn().mockResolvedValue({ channel, context }),
+15:     contextAfterDispatch: vi.fn().mockResolvedValue('CURRENT'),
+16:   };
+17:   const acceptance = {
+18:     recordAmbiguousOutbound: vi.fn().mockResolvedValue({ id: 'diagnostic-1' }),
+19:     accept: vi.fn().mockResolvedValue({
+20:       message: { id: 'message-1', channelOrigin: 'OFICIAL' }, creationWinner: false,
+21:     }),
+22:   };
+23:   const prisma = {
+24:     conversation: { findFirst: vi.fn().mockResolvedValue(conversation) },
+25:     message: { findUnique: vi.fn().mockResolvedValue(null) },
+26:     $transaction: vi.fn(),
+27:   };
+28:   const realtime = { publicarNaBu: vi.fn() };
+29:   const service = new OutboundService(prisma as never, resolver as never, acceptance as never, realtime as never);
+30:   return { service, resolver, acceptance, prisma, channel };
+31: }
+32: 
+33: function input() {
+34:   return { conversationId: conversation.id, buId: conversation.buId, text: 'hello', attribution: { kind: 'BFF' as const, userId: 'user-1', name: 'Agent' } };
+35: }
+36: 
+37: describe('OutboundService error projection', () => {
+38:   it('records one diagnostic only for a valid ACK without external ID', async () => {
+39:     const { service, acceptance, channel } = setup({ outcome: 'UNKNOWN', evidence: 'ACK_WITHOUT_ID', legacyCode: 'META_RECUSOU' });
+40:     await expect(service.send(input())).rejects.toMatchObject({
+41:       status: 409, response: { code: 'EXTERNAL_MESSAGE_ID_MISSING', outcome: 'AMBIGUOUS_SEND_RECORDED', diagnosticPersistence: 'RECORDED' },
+42:     });
+43:     expect(channel.sendMessage).toHaveBeenCalledTimes(1);
+44:     expect(acceptance.recordAmbiguousOutbound).toHaveBeenCalledTimes(1);
+45:     expect(acceptance.accept).not.toHaveBeenCalled();
+46:   });
+47: 
+48:   it('keeps malformed or failed transport unknown without writing a diagnostic', async () => {
+49:     const { service, acceptance, channel } = setup({ outcome: 'UNKNOWN', evidence: 'TRANSPORT_UNCONFIRMED', legacyCode: 'META_RECUSOU' });
+50:     await expect(service.send(input())).rejects.toMatchObject({
+51:       status: 400, response: { code: 'META_RECUSOU', outcome: 'UNKNOWN', evidence: 'TRANSPORT_UNCONFIRMED' },
+52:     });
+53:     expect(channel.sendMessage).toHaveBeenCalledTimes(1);
+54:     expect(acceptance.recordAmbiguousOutbound).not.toHaveBeenCalled();
+55:     expect(acceptance.accept).not.toHaveBeenCalled();
+56:   });
+57: 
+58:   it('gives a detected post-dispatch identity change precedence before null-ID diagnostics', async () => {
+59:     const { service, resolver, acceptance } = setup({ outcome: 'UNKNOWN', evidence: 'ACK_WITHOUT_ID', legacyCode: 'META_RECUSOU' });
+60:     resolver.contextAfterDispatch.mockResolvedValue('CHANGED');
+61:     await expect(service.send(input())).rejects.toMatchObject({
+62:       status: 409, response: { code: 'CHANNEL_CONTEXT_CHANGED', outcome: 'UNKNOWN', diagnosticPersistence: 'UNCONFIRMED' },
+63:     });
+64:     expect(acceptance.recordAmbiguousOutbound).not.toHaveBeenCalled();
+65:   });
+66: 
+67:   it('returns UNKNOWN/503 when the diagnostic commit is uncertain and context remains current', async () => {
+68:     const { service, acceptance, resolver } = setup({ outcome: 'UNKNOWN', evidence: 'ACK_WITHOUT_ID', legacyCode: 'SEND_RESULT_UNAVAILABLE' });
+69:     acceptance.recordAmbiguousOutbound.mockRejectedValue(new Error('fixture commit uncertain'));
+70:     await expect(service.send(input())).rejects.toMatchObject({
+71:       status: 503, response: { code: 'OUTBOUND_LOCAL_INCOMPLETE', outcome: 'UNKNOWN', evidence: 'ACK_WITHOUT_ID', diagnosticPersistence: 'UNCONFIRMED' },
+72:     });
+73:     expect(resolver.contextAfterDispatch).toHaveBeenCalledTimes(2);
+74:     expect(acceptance.accept).not.toHaveBeenCalled();
+75:   });
+76: 
+77:   it('gives a detected context retirement during diagnostic persistence precedence with no external-id write', async () => {
+78:     const { service, resolver, acceptance } = setup({ outcome: 'UNKNOWN', evidence: 'ACK_WITHOUT_ID', legacyCode: 'SEND_RESULT_UNAVAILABLE' });
+79:     acceptance.recordAmbiguousOutbound.mockImplementation(async () => {
+80:       resolver.contextAfterDispatch.mockResolvedValue('CHANGED');
+81:       throw new Error('identity fence rejected diagnostic transaction');
+82:     });
+83:     await expect(service.send(input())).rejects.toMatchObject({
+84:       status: 409, response: { code: 'CHANNEL_CONTEXT_CHANGED', outcome: 'UNKNOWN', evidence: 'ACK_WITHOUT_ID', diagnosticPersistence: 'UNCONFIRMED' },
+85:     });
+86:     expect(acceptance.recordAmbiguousOutbound).toHaveBeenCalledTimes(1);
+87:     expect(acceptance.accept).not.toHaveBeenCalled();
+88:   });
+89: 
+90:   it('reports a confirmed diagnostic write as RECORDED if the identity retires immediately afterward', async () => {
+91:     const { service, resolver, acceptance } = setup({ outcome: 'UNKNOWN', evidence: 'ACK_WITHOUT_ID', legacyCode: 'SEND_RESULT_UNAVAILABLE' });
+92:     resolver.contextAfterDispatch.mockResolvedValueOnce('CURRENT').mockResolvedValueOnce('CHANGED');
+93:     await expect(service.send(input())).rejects.toMatchObject({
+94:       status: 409, response: { code: 'CHANNEL_CONTEXT_CHANGED', outcome: 'UNKNOWN', evidence: 'ACK_WITHOUT_ID', diagnosticPersistence: 'RECORDED' },
+95:     });
+96:     expect(acceptance.recordAmbiguousOutbound).toHaveBeenCalledTimes(1);
+97:   });
+98: 
+99:   it('does not start Message acceptance when the identity changed after an acknowledged send', async () => {
+100:     const { service, resolver, acceptance, prisma } = setup({ outcome: 'ACCEPTED', externalMessageId: 'external-1' });
+101:     resolver.contextAfterDispatch.mockResolvedValue('CHANGED');
+102:     prisma.message.findUnique.mockResolvedValue(null);
+103:     await expect(service.send(input())).rejects.toMatchObject({
+104:       status: 409, response: { code: 'CHANNEL_CONTEXT_CHANGED', outcome: 'ACCEPTED_LOCAL_INCOMPLETE', localMessageState: 'UNCONFIRMED' },
+105:     });
+106:     expect(acceptance.accept).not.toHaveBeenCalled();
+107:   });
+108: 
+109:   it('reports uncertainty before local Message acceptance as UNCONFIRMED', async () => {
+110:     const { service, resolver, acceptance, prisma } = setup({ outcome: 'ACCEPTED', externalMessageId: 'external-1' });
+111:     acceptance.accept.mockRejectedValue(new Error('fixture transaction did not confirm'));
+112:     resolver.contextAfterDispatch.mockResolvedValue('CURRENT');
+113:     prisma.message.findUnique.mockResolvedValue(null);
+114:     await expect(service.send(input())).rejects.toMatchObject({
+115:       status: 503, response: { code: 'OUTBOUND_LOCAL_INCOMPLETE', outcome: 'ACCEPTED_LOCAL_INCOMPLETE', localMessageState: 'UNCONFIRMED' },
+116:     });
+117:   });
+118: 
+119:   it('reports a confirmed Message commit as RECORDED after a later local finalization failure', async () => {
+120:     const { service, acceptance, prisma } = setup({ outcome: 'ACCEPTED', externalMessageId: 'external-1' });
+121:     prisma.$transaction.mockRejectedValue(new Error('fixture conversation finalization failure'));
+122:     await expect(service.send(input())).rejects.toMatchObject({
+123:       status: 503, response: { code: 'OUTBOUND_LOCAL_INCOMPLETE', outcome: 'ACCEPTED_LOCAL_INCOMPLETE', localMessageState: 'RECORDED' },
+124:     });
+125:     expect(acceptance.accept).toHaveBeenCalledTimes(1);
+126:   });
+127: 
+128:   it('keeps a known committed Message RECORDED and returns context-changed after a local finalization failure', async () => {
+129:     const { service, resolver, acceptance, prisma } = setup({ outcome: 'ACCEPTED', externalMessageId: 'external-1' });
+130:     prisma.$transaction.mockRejectedValue(new Error('fixture finalization failure'));
+131:     resolver.contextAfterDispatch.mockResolvedValueOnce('CURRENT').mockResolvedValueOnce('CHANGED');
+132:     await expect(service.send(input())).rejects.toMatchObject({
+133:       status: 409, response: { code: 'CHANNEL_CONTEXT_CHANGED', outcome: 'ACCEPTED_LOCAL_INCOMPLETE', localMessageState: 'RECORDED' },
+134:     });
+135:     expect(acceptance.accept).toHaveBeenCalledTimes(1);
+136:   });
+137: });
+```
+
+
+## Source api-app/src/domain/inbox/outbound.service.ts
+
+Raw SHA256 `63bcf773e2b4c5a5ddd688a1bb13745a0a206d995fafc665925df3fecaf394aa`; bytes13056.
+
+```
+1: import { BadRequestException, ConflictException, HttpException, Injectable, ServiceUnavailableException } from '@nestjs/common';
+2: import { Prisma } from '@prisma/client';
+3: import { PrismaService } from '../../infra/prisma/prisma.service';
+4: import { ChannelResolver, type ChannelOperationContext, type VerifiedIngressChannelReference } from '../channels/transport/channel';
+5: import type { ChannelSendResult, ResolvedChannelOperation } from '../channels/transport/channel';
+6: import { MessageAcceptanceService, type MessageAcceptanceInput } from './message-acceptance.service';
+7: import { RealtimeService } from '../../realtime/realtime.service';
+8: 
+9: const FIXED_UNKNOWN = 'Resultado do envio não confirmado; confira a conversa antes de tentar novamente.';
+10: const FIXED_LOCAL_INCOMPLETE = 'O canal aceitou o envio, mas a conclusão local não foi confirmada; confira a conversa antes de tentar novamente.';
+11: const FIXED_REJECTED = 'O canal recusou o envio.';
+12: const ACK_TIMEOUT_MS = 24 * 60 * 60 * 1000;
+13: type OutboundConversation = Prisma.ConversationGetPayload<object>;
+14: 
+15: export type OutboundAttribution =
+16:   | { kind: 'BFF'; userId: string; name: string }
+17:   | { kind: 'PUBLIC'; name: string }
+18:   | { kind: 'BOT'; name: string };
+19: 
+20: export interface SendOutboundInput {
+21:   conversationId: string;
+22:   buId: string;
+23:   text: string;
+24:   attribution: OutboundAttribution;
+25:   ingress?: Omit<VerifiedIngressChannelReference, 'conversationId' | 'buId'>;
+26: }
+27: 
+28: @Injectable()
+29: export class OutboundService {
+30:   constructor(
+31:     private readonly prisma: PrismaService,
+32:     private readonly resolver: ChannelResolver,
+33:     private readonly acceptance: MessageAcceptanceService,
+34:     private readonly realtime: RealtimeService,
+35:   ) {}
+36: 
+37:   async send(input: SendOutboundInput) {
+38:     const conversation = await this.prisma.conversation.findFirst({
+39:       where: { id: input.conversationId, buId: input.buId },
+40:     });
+41:     if (!conversation) throw new ConflictException({ code: 'CONVERSATION_IDENTITY_MISMATCH' });
+42: 
+43:     let operation: ResolvedChannelOperation;
+44:     try {
+45:       operation = input.ingress
+46:         ? await this.resolver.resolveForIngress({
+47:             conversationId: conversation.id, buId: conversation.buId, ...input.ingress,
+48:           })
+49:         : await this.resolver.resolveForConversation({ conversationId: conversation.id, buId: conversation.buId });
+50:     } catch (error) {
+51:       if (error instanceof HttpException) throw this.asBlocked(error);
+52:       throw error;
+53:     }
+54: 
+55:     if (operation.context.requiresWindow && !await this.windowOpen(conversation.id)) {
+56:       throw new ConflictException({ code: 'JANELA_FECHADA', outcome: 'BLOCKED', error: 'Fora da janela de 24h da última mensagem recebida.' });
+57:     }
+58: 
+59:     let result: ChannelSendResult;
+60:     try {
+61:       result = await operation.channel.sendMessage({ kind: 'text', recipientRef: conversation.contact, text: input.text });
+62:     } catch {
+63:       result = { outcome: 'UNKNOWN', evidence: 'TRANSPORT_UNCONFIRMED', legacyCode: 'SEND_RESULT_UNAVAILABLE' };
+64:     }
+65:     if (result.outcome === 'BLOCKED') throw this.blocked(result.reason);
+66:     if (result.outcome === 'REJECTED') {
+67:       throw new BadRequestException({ code: result.code, outcome: 'REJECTED', error: FIXED_REJECTED });
+68:     }
+69:     if (result.outcome === 'UNKNOWN') return this.finishUnknown(input, conversation, operation.context, result);
+70: 
+71:     const contextState = await this.contextState(operation.context);
+72:     if (contextState !== 'CURRENT') {
+73:       const message = await this.readBack(conversation, operation.context, result.externalMessageId);
+74:       throw this.acceptedIncomplete(contextState, message ? 'RECORDED' : 'UNCONFIRMED');
+75:     }
+76: 
+77:     const acceptanceInput = this.acceptanceInput(input, conversation, operation.context, result.externalMessageId);
+78:     let accepted: Awaited<ReturnType<MessageAcceptanceService['accept']>>;
+79:     try {
+80:       accepted = await this.acceptance.accept(acceptanceInput);
+81:     } catch {
+82:       const [after, message] = await Promise.all([
+83:         this.contextState(operation.context),
+84:         this.readBack(conversation, operation.context, result.externalMessageId),
+85:       ]);
+86:       throw this.acceptedIncomplete(after, message ? 'RECORDED' : 'UNCONFIRMED');
+87:     }
+88: 
+89:     let localFailure = false;
+90:     if (accepted.creationWinner) {
+91:       try {
+92:         this.realtime.publicarNaBu(conversation.buId, {
+93:           tipo: 'mensagem', conversaId: conversation.id, contato: conversation.contact,
+94:           direcao: 'OUT', canal: accepted.message.channelOrigin, naoLidas: accepted.conversation.unreadCount,
+95:         });
+96:       } catch { localFailure = true; }
+97:     }
+98:     try {
+99:       await this.finalizeOutbound({
+100:         conversationId: conversation.id, buId: conversation.buId, contact: conversation.contact,
+101:         contactType: conversation.contactType, attribution: input.attribution,
+102:       });
+103:     } catch { localFailure = true; }
+104:     if (localFailure) {
+105:       throw this.acceptedIncomplete(await this.contextState(operation.context), 'RECORDED');
+106:     }
+107:     return accepted.message;
+108:   }
+109: 
+110:   private async finishUnknown(
+111:     input: SendOutboundInput,
+112:     conversation: OutboundConversation,
+113:     context: ChannelOperationContext,
+114:     result: Extract<ChannelSendResult, { outcome: 'UNKNOWN' }>,
+115:   ): Promise<never> {
+116:     if (result.evidence === 'TRANSPORT_UNCONFIRMED') {
+117:       const state = await this.contextState(context);
+118:       if (state === 'CHANGED') {
+119:         throw new ConflictException({ code: 'CHANNEL_CONTEXT_CHANGED', outcome: 'UNKNOWN', evidence: result.evidence, error: FIXED_UNKNOWN });
+120:       }
+121:       throw new BadRequestException({ code: result.legacyCode, outcome: 'UNKNOWN', evidence: result.evidence, error: FIXED_UNKNOWN });
+122:     }
+123: 
+124:     if (await this.contextState(context) === 'CHANGED') {
+125:       throw new ConflictException({ code: 'CHANNEL_CONTEXT_CHANGED', outcome: 'UNKNOWN', evidence: 'ACK_WITHOUT_ID', diagnosticPersistence: 'UNCONFIRMED', error: FIXED_UNKNOWN });
+126:     }
+127: 
+128:     try {
+129:       await this.acceptance.recordAmbiguousOutbound(this.acceptanceInput(input, conversation, context));
+130:     } catch {
+131:       const state = await this.contextState(context);
+132:       if (state === 'CHANGED') {
+133:         throw new ConflictException({ code: 'CHANNEL_CONTEXT_CHANGED', outcome: 'UNKNOWN', evidence: 'ACK_WITHOUT_ID', diagnosticPersistence: 'UNCONFIRMED', error: FIXED_UNKNOWN });
+134:       }
+135:       throw new ServiceUnavailableException({ code: 'OUTBOUND_LOCAL_INCOMPLETE', outcome: 'UNKNOWN', evidence: 'ACK_WITHOUT_ID', diagnosticPersistence: 'UNCONFIRMED', error: FIXED_UNKNOWN });
+136:     }
+137: 
+138:     const state = await this.contextState(context);
+139:     if (state === 'CHANGED') {
+140:       throw new ConflictException({ code: 'CHANNEL_CONTEXT_CHANGED', outcome: 'UNKNOWN', evidence: 'ACK_WITHOUT_ID', diagnosticPersistence: 'RECORDED', error: FIXED_UNKNOWN });
+141:     }
+142:     throw new ConflictException({
+143:       code: 'EXTERNAL_MESSAGE_ID_MISSING', outcome: 'AMBIGUOUS_SEND_RECORDED', evidence: 'ACK_WITHOUT_ID',
+144:       diagnosticPersistence: 'RECORDED', error: 'O canal aceitou o envio sem confirmar o ID externo. Verifique a conversa antes de tentar novamente.',
+145:     });
+146:   }
+147: 
+148:   private acceptanceInput(
+149:     input: SendOutboundInput,
+150:     conversation: Pick<OutboundConversation, 'id' | 'buId' | 'contact' | 'contactType'>,
+151:     context: ChannelOperationContext,
+152:     externalMessageId: string,
+153:   ): MessageAcceptanceInput;
+154:   private acceptanceInput(
+155:     input: SendOutboundInput,
+156:     conversation: Pick<OutboundConversation, 'id' | 'buId' | 'contact' | 'contactType'>,
+157:     context: ChannelOperationContext,
+158:   ): Omit<MessageAcceptanceInput, 'externalMessageId'>;
+159:   private acceptanceInput(
+160:     input: SendOutboundInput,
+161:     conversation: Pick<OutboundConversation, 'id' | 'buId' | 'contact' | 'contactType'>,
+162:     context: ChannelOperationContext,
+163:     externalMessageId?: string,
+164:   ): MessageAcceptanceInput | Omit<MessageAcceptanceInput, 'externalMessageId'> {
+165:     const attribution = input.attribution;
+166:     return {
+167:       ...(externalMessageId ? { externalMessageId } : {}),
+168:       providerResourceIdentityId: context.providerResourceIdentityId,
+169:       channelId: context.channelId,
+170:       generation: context.generation,
+171:       pairingEpoch: context.pairingEpoch,
+172:       buId: context.buId,
+173:       channelOrigin: context.channelOrigin,
+174:       contact: conversation.contact,
+175:       contactType: conversation.contactType,
+176:       conversationId: conversation.id,
+177:       direction: 'OUT',
+178:       messageType: 'TEXTO',
+179:       content: input.text,
+180:       authorUserId: attribution.kind === 'BFF' ? attribution.userId || null : null,
+181:       authorName: attribution.name,
+182:       senderResult: true,
+183:     };
+184:   }
+185: 
+186:   private async contextState(context: ChannelOperationContext) {
+187:     try { return await this.resolver.contextAfterDispatch(context); }
+188:     catch { return 'UNKNOWN' as const; }
+189:   }
+190: 
+191:   private async readBack(
+192:     conversation: { id: string; buId: string; contact: string },
+193:     context: ChannelOperationContext,
+194:     externalMessageId: string,
+195:   ) {
+196:     try {
+197:       return await this.findConfirmedOutbound({
+198:         providerResourceIdentityId: context.providerResourceIdentityId,
+199:         externalMessageId, conversationId: conversation.id, buId: conversation.buId,
+200:         contact: conversation.contact, channelOrigin: context.channelOrigin,
+201:       });
+202:     } catch { return null; }
+203:   }
+204: 
+205:   private async findConfirmedOutbound(input: {
+206:     providerResourceIdentityId: string; externalMessageId: string; conversationId: string;
+207:     buId: string; contact: string; channelOrigin: 'OFICIAL' | 'NAO_OFICIAL';
+208:   }) {
+209:     const message = await this.prisma.message.findUnique({
+210:       where: { providerResourceIdentityId_externalId: {
+211:         providerResourceIdentityId: input.providerResourceIdentityId,
+212:         externalId: input.externalMessageId,
+213:       } }, include: { conversation: true },
+214:     });
+215:     if (!message || message.direction !== 'OUT' || message.buId !== input.buId
+216:       || message.channelOrigin !== input.channelOrigin || message.conversation.contact !== input.contact
+217:       || message.conversationId !== input.conversationId) return null;
+218:     return message;
+219:   }
+220: 
+221:   private async finalizeOutbound(input: {
+222:     conversationId: string; buId: string; contact: string; contactType: 'PESSOA' | 'GRUPO'; attribution: OutboundAttribution;
+223:   }) {
+224:     return this.prisma.$transaction(async (tx) => {
+225:       await tx.$queryRaw`SELECT id FROM conversations WHERE id = ${input.conversationId} AND bu_id = ${input.buId} FOR UPDATE`;
+226:       const current = await tx.conversation.findFirst({
+227:         where: { id: input.conversationId, buId: input.buId, contact: input.contact },
+228:       });
+229:       if (!current || current.contactType !== input.contactType) throw new ConflictException({ code: 'CONVERSATION_IDENTITY_MISMATCH' });
+230:       if (input.attribution.kind === 'BOT') return current;
+231: 
+232:       const hasOwner = current.attendantUserId !== null || current.attendantName !== null || current.attendantOrigin !== null;
+233:       return tx.conversation.update({ where: { id: current.id }, data: {
+234:         lastMessageAt: new Date(),
+235:         status: input.contactType === 'GRUPO' ? undefined : 'IN_SERVICE',
+236:         ...(hasOwner || input.contactType === 'GRUPO' ? {} : input.attribution.kind === 'BFF'
+237:           ? { attendantUserId: input.attribution.userId || null, attendantName: input.attribution.name, attendantOrigin: 'INTERNO' }
+238:           : { attendantUserId: null, attendantName: input.attribution.name, attendantOrigin: 'EXTERNO' }),
+239:       } });
+240:     });
+241:   }
+242: 
+243:   private async windowOpen(conversationId: string): Promise<boolean> {
+244:     const lastInbound = await this.prisma.message.findFirst({
+245:       where: { conversationId, direction: 'IN' },
+246:       orderBy: [{ createdAt: 'desc' }, { id: 'desc' }],
+247:       select: { createdAt: true },
+248:     });
+249:     return Boolean(lastInbound && lastInbound.createdAt.getTime() + ACK_TIMEOUT_MS > Date.now());
+250:   }
+251: 
+252:   private asBlocked(error: HttpException): HttpException {
+253:     const response = error.getResponse();
+254:     const detail = typeof response === 'object' && response !== null ? response as Record<string, unknown> : { error: response };
+255:     return new HttpException({ ...detail, outcome: 'BLOCKED' }, error.getStatus());
+256:   }
+257: 
+258:   private blocked(reason: Extract<ChannelSendResult, { outcome: 'BLOCKED' }>['reason']): HttpException {
+259:     if (reason === 'CANAL_AUSENTE') return new BadRequestException({ code: reason, outcome: 'BLOCKED', error: 'Esta BU não tem canal conectado.' });
+260:     return new ConflictException({ code: reason, outcome: 'BLOCKED', error: 'O canal selecionado não está disponível para envio.' });
+261:   }
+262: 
+263:   private acceptedIncomplete(contextState: 'CURRENT' | 'CHANGED' | 'UNKNOWN', localMessageState: 'RECORDED' | 'UNCONFIRMED'): HttpException {
+264:     if (contextState === 'CHANGED') {
+265:       return new ConflictException({ code: 'CHANNEL_CONTEXT_CHANGED', outcome: 'ACCEPTED_LOCAL_INCOMPLETE', localMessageState, error: FIXED_LOCAL_INCOMPLETE });
+266:     }
+267:     return new ServiceUnavailableException({ code: 'OUTBOUND_LOCAL_INCOMPLETE', outcome: 'ACCEPTED_LOCAL_INCOMPLETE', localMessageState, error: FIXED_LOCAL_INCOMPLETE });
+268:   }
+269: }
+```
+
+
+## Source api-app/src/integrations/channels/channel-adapter-factory.ts
+
+Raw SHA256 `e0ebdd78e387f7ee3af902f038d22449e212c1301ffa642bbceb5a5f05d2abfc`; bytes440.
+
+```
+1: import type { Channel, ChannelOrigin } from '../../domain/channels/transport/channel';
+2: import type { ResolvedChannelCredential } from '../../domain/channels/channel-credential-resolver';
+3: 
+4: export abstract class ChannelAdapterFactory {
+5:   abstract readonly origin: ChannelOrigin;
+6:   abstract locallyConfigured(): boolean;
+7:   abstract create(
+8:     credential: ResolvedChannelCredential,
+9:     beforeDispatch: () => Promise<boolean>,
+10:   ): Channel;
+11: }
+```
+
+
+## Source api-app/src/integrations/channels/channel-adapter-registry.ts
+
+Raw SHA256 `655b735e239e89fbaede36689d1c22245d3804d66646f7736db991cb5099b02b`; bytes975.
+
+```
+1: import { Injectable } from '@nestjs/common';
+2: import type { ChannelOrigin } from '../../domain/channels/transport/channel';
+3: import { ChannelAdapterFactory } from './channel-adapter-factory';
+4: 
+5: /** Explicit provider registration; common consumers never select a provider. */
+6: @Injectable()
+7: export class ChannelAdapterRegistry {
+8:   private readonly factories: ReadonlyMap<ChannelOrigin, ChannelAdapterFactory>;
+9: 
+10:   constructor(factories: ChannelAdapterFactory[]) {
+11:     const entries = factories.map((factory) => [factory.origin, factory] as const);
+12:     if (new Set(entries.map(([origin]) => origin)).size !== entries.length) {
+13:       throw new Error('Duplicate channel adapter registration.');
+14:     }
+15:     this.factories = new Map(entries);
+16:   }
+17: 
+18:   get(origin: ChannelOrigin): ChannelAdapterFactory | undefined {
+19:     return this.factories.get(origin);
+20:   }
+21: 
+22:   locallyConfigured(origin: ChannelOrigin): boolean {
+23:     return this.factories.get(origin)?.locallyConfigured() ?? false;
+24:   }
+25: }
+```
+
+
+## Source api-app/src/integrations/channels/channel-transport.module.ts
+
+Raw SHA256 `32203d3b8393a34a9effab4266683c389651d7ec197e8f9d704a77a6a37f40dc`; bytes1663.
+
+```
+1: import { Module } from '@nestjs/common';
+2: import { ChannelResolver } from '../../domain/channels/transport/channel';
+3: import { ChannelCredentialResolver } from '../../domain/channels/channel-credential-resolver';
+4: import { MessageAcceptanceService } from '../../domain/inbox/message-acceptance.service';
+5: import { OutboundService } from '../../domain/inbox/outbound.service';
+6: import { EVOLUTION_CLIENT, EvolutionHttpClient } from '../evolution/evolution.client';
+7: import { META_CLIENT, MetaHttpClient } from '../meta/meta.client';
+8: import { ChannelAdapterRegistry } from './channel-adapter-registry';
+9: import { EvolutionChannelFactory } from './evolution-channel';
+10: import { MetaChannelFactory } from './meta-channel';
+11: import { PrismaChannelResolver } from './prisma-channel-resolver';
+12: 
+13: @Module({
+14:   providers: [
+15:     MessageAcceptanceService,
+16:     ChannelCredentialResolver,
+17:     MetaHttpClient,
+18:     EvolutionHttpClient,
+19:     { provide: META_CLIENT, useExisting: MetaHttpClient },
+20:     { provide: EVOLUTION_CLIENT, useExisting: EvolutionHttpClient },
+21:     {
+22:       provide: ChannelAdapterRegistry,
+23:       useFactory: (meta: MetaHttpClient, evolution: EvolutionHttpClient) => new ChannelAdapterRegistry([
+24:         new MetaChannelFactory(meta),
+25:         new EvolutionChannelFactory(evolution),
+26:       ]),
+27:       inject: [META_CLIENT, EVOLUTION_CLIENT],
+28:     },
+29:     PrismaChannelResolver,
+30:     { provide: ChannelResolver, useExisting: PrismaChannelResolver },
+31:     OutboundService,
+32:   ],
+33:   exports: [
+34:     MessageAcceptanceService,
+35:     ChannelCredentialResolver,
+36:     META_CLIENT,
+37:     EVOLUTION_CLIENT,
+38:     ChannelResolver,
+39:     OutboundService,
+40:   ],
+41: })
+42: export class ChannelTransportModule {}
+```
+
+
+## Source api-app/src/integrations/channels/evolution-channel.ts
+
+Raw SHA256 `60faf1ea40fe17ad62495b0f42a2cf958defcb41e3ad72d3d2213751539b460c`; bytes1561.
+
+```
+1: import type { Channel, ChannelSendResult, TextMessage } from '../../domain/channels/transport/channel';
+2: import type { EvolutionClient } from '../evolution/evolution.client';
+3: import type { ResolvedChannelCredential } from '../../domain/channels/channel-credential-resolver';
+4: import { ChannelAdapterFactory } from './channel-adapter-factory';
+5: 
+6: class BoundEvolutionChannel implements Channel {
+7:   constructor(
+8:     private readonly credential: ResolvedChannelCredential,
+9:     private readonly client: EvolutionClient,
+10:     private readonly beforeDispatch: () => Promise<boolean>,
+11:   ) {}
+12: 
+13:   async sendMessage(message: TextMessage): Promise<ChannelSendResult> {
+14:     if (!await this.beforeDispatch()) return { outcome: 'BLOCKED', reason: 'CHANNEL_CONTEXT_CHANGED' };
+15:     if (!this.credential.evolutionInstanceName) return { outcome: 'BLOCKED', reason: 'CHANNEL_NOT_READY' };
+16:     try {
+17:       return await this.client.enviarTexto(this.credential.evolutionInstanceName, message.recipientRef, message.text);
+18:     } catch {
+19:       return { outcome: 'UNKNOWN', evidence: 'TRANSPORT_UNCONFIRMED', legacyCode: 'EVOLUTION_RECUSOU' };
+20:     }
+21:   }
+22: }
+23: 
+24: export class EvolutionChannelFactory extends ChannelAdapterFactory {
+25:   readonly origin = 'NAO_OFICIAL' as const;
+26:   constructor(private readonly client: EvolutionClient) { super(); }
+27:   locallyConfigured(): boolean { return this.client.configurado(); }
+28:   create(credential: ResolvedChannelCredential, beforeDispatch: () => Promise<boolean>): Channel {
+29:     return new BoundEvolutionChannel(credential, this.client, beforeDispatch);
+30:   }
+31: }
+```
+
+
+## Source api-app/src/integrations/channels/meta-channel.ts
+
+Raw SHA256 `997e739cf7d7231918dc97fc347bfeb32a1cd74d084ead8c64b01157022f8138`; bytes1613.
+
+```
+1: import type { Channel, ChannelSendResult, TextMessage } from '../../domain/channels/transport/channel';
+2: import type { MetaClient } from '../meta/meta.client';
+3: import type { ResolvedChannelCredential } from '../../domain/channels/channel-credential-resolver';
+4: import { ChannelAdapterFactory } from './channel-adapter-factory';
+5: 
+6: class BoundMetaChannel implements Channel {
+7:   constructor(
+8:     private readonly credential: ResolvedChannelCredential,
+9:     private readonly client: MetaClient,
+10:     private readonly beforeDispatch: () => Promise<boolean>,
+11:   ) {}
+12: 
+13:   async sendMessage(message: TextMessage): Promise<ChannelSendResult> {
+14:     if (!await this.beforeDispatch()) return { outcome: 'BLOCKED', reason: 'CHANNEL_CONTEXT_CHANGED' };
+15:     if (!this.credential.phoneNumberId || !this.credential.accessToken) {
+16:       return { outcome: 'BLOCKED', reason: 'PENDING_CREDENTIAL' };
+17:     }
+18:     try {
+19:       return await this.client.enviarTexto(
+20:         this.credential.phoneNumberId,
+21:         message.recipientRef,
+22:         message.text,
+23:         this.credential.accessToken,
+24:       );
+25:     } catch {
+26:       return { outcome: 'UNKNOWN', evidence: 'TRANSPORT_UNCONFIRMED', legacyCode: 'META_RECUSOU' };
+27:     }
+28:   }
+29: }
+30: 
+31: export class MetaChannelFactory extends ChannelAdapterFactory {
+32:   readonly origin = 'OFICIAL' as const;
+33:   constructor(private readonly client: MetaClient) { super(); }
+34:   locallyConfigured(): boolean { return this.client.canSendText(); }
+35:   create(credential: ResolvedChannelCredential, beforeDispatch: () => Promise<boolean>): Channel {
+36:     return new BoundMetaChannel(credential, this.client, beforeDispatch);
+37:   }
+38: }
+```
+
+
+## Source api-app/src/integrations/channels/prisma-channel-resolver.ts
+
+Raw SHA256 `5d01cca30f25ea4354651303633aa5a02f3adbe0b7cc37c44c53d821fe7c062f`; bytes18831.
+
+```
+1: import { BadRequestException, ConflictException, Injectable } from '@nestjs/common';
+2: import { Prisma } from '@prisma/client';
+3: import { PrismaService } from '../../infra/prisma/prisma.service';
+4: import { ChannelCredentialResolver, type ResolvedChannelCredential } from '../../domain/channels/channel-credential-resolver';
+5: import {
+6:   ChannelResolver,
+7:   type ChannelAvailability,
+8:   type ConversationAvailabilityReference,
+9:   type ChannelOperationContext,
+10:   type ChannelOrigin,
+11:   type ConversationChannelReference,
+12:   type ResolvedChannelOperation,
+13:   type VerifiedIngressChannelReference,
+14: } from '../../domain/channels/transport/channel';
+15: import { ChannelAdapterRegistry } from './channel-adapter-registry';
+16: 
+17: type Candidate = {
+18:   id: string;
+19:   buId: string;
+20:   type: ChannelOrigin;
+21:   status: string;
+22:   generation: number;
+23:   pairingEpoch: number;
+24:   verifiedEpoch: number | null;
+25:   ownNumberVerified: boolean;
+26:   providerConnectionState: string;
+27:   receiptVerifiedAt: Date | null;
+28:   requiresWindow: boolean;
+29:   providerIdentities: Array<{ id: string; buId: string; provider: ChannelOrigin; currentChannelId: string | null; managedLifecycle: boolean }>;
+30: };
+31: 
+32: @Injectable()
+33: export class PrismaChannelResolver extends ChannelResolver {
+34:   constructor(
+35:     private readonly prisma: PrismaService,
+36:     private readonly credentials: ChannelCredentialResolver,
+37:     private readonly adapters: ChannelAdapterRegistry,
+38:   ) { super(); }
+39: 
+40:   async resolveForConversation(reference: ConversationChannelReference): Promise<ResolvedChannelOperation> {
+41:     const { candidate } = await this.selectForConversation(reference);
+42:     return this.bind(candidate);
+43:   }
+44: 
+45:   async resolveForIngress(reference: VerifiedIngressChannelReference): Promise<ResolvedChannelOperation> {
+46:     const conversation = await this.prisma.conversation.findFirst({
+47:       where: { id: reference.conversationId, buId: reference.buId },
+48:       select: { id: true, buId: true, contact: true },
+49:     });
+50:     if (!conversation) throw new ConflictException({ code: 'CHANNEL_CONTEXT_CHANGED' });
+51:     const candidate = await this.findCandidate(reference.channelId, reference.buId);
+52:     const identity = candidate?.providerIdentities.find((item) => item.id === reference.providerResourceIdentityId);
+53:     if (!candidate || candidate.type !== reference.channelOrigin || candidate.generation !== reference.generation
+54:       || candidate.pairingEpoch !== reference.pairingEpoch || !identity || identity.buId !== reference.buId
+55:       || identity.provider !== reference.channelOrigin || identity.currentChannelId !== reference.channelId
+56:       || !identity.managedLifecycle) {
+57:       throw new ConflictException({ code: 'CHANNEL_CONTEXT_CHANGED' });
+58:     }
+59:     return this.bind(candidate);
+60:   }
+61: 
+62:   async inspectForConversation(reference: ConversationChannelReference): Promise<ChannelAvailability> {
+63:     try {
+64:       const conversation = await this.prisma.conversation.findFirst({
+65:         where: { id: reference.conversationId, buId: reference.buId }, select: { id: true },
+66:       });
+67:       if (!conversation) return this.unavailable(null, 'CANAL_SELECIONADO_INDISPONIVEL');
+68:       const { candidate, selectionReason, selectedOrigin } = await this.selectCandidate(reference);
+69:       if (!candidate) {
+70:         return this.unavailable(selectedOrigin, selectionReason ?? 'CANAL_SELECIONADO_INDISPONIVEL');
+71:       }
+72:       const identity = candidate.providerIdentities.find((item) => item.currentChannelId === candidate.id);
+73:       let reason: ChannelAvailability['reason'] = null;
+74:       if (!candidate.ownNumberVerified || candidate.verifiedEpoch !== candidate.pairingEpoch || !identity
+75:         || !identity.managedLifecycle || identity.provider !== candidate.type || identity.buId !== candidate.buId) {
+76:         reason = 'CHANNEL_IDENTITY_NOT_VERIFIED';
+77:       } else if (candidate.status !== 'CONECTADO' || !candidate.receiptVerifiedAt
+78:         || (candidate.type === 'OFICIAL' && candidate.providerConnectionState !== 'SUBSCRIBED')
+79:         || (candidate.type === 'NAO_OFICIAL' && candidate.providerConnectionState !== 'CONNECTED')
+80:         || !this.adapters.locallyConfigured(candidate.type)) {
+81:         reason = 'CHANNEL_NOT_READY';
+82:       } else if (candidate.type === 'OFICIAL') {
+83:         const credential = await this.credentials.inspectActiveCredential(candidate.id, candidate.generation);
+84:         if (!credential.ready) reason = 'PENDING_CREDENTIAL';
+85:       }
+86: 
+87:       const window = candidate.requiresWindow ? await this.window(reference.conversationId) : { open: true, expiresAt: null };
+88:       if (!reason && candidate.requiresWindow && !window.open) reason = 'JANELA_FECHADA';
+89:       return {
+90:         available: reason === null,
+91:         reason,
+92:         channelOrigin: candidate.type,
+93:         requiresWindow: candidate.requiresWindow,
+94:         windowOpen: window.open,
+95:         expiresAt: window.expiresAt,
+96:       };
+97:     } catch {
+98:       return this.unavailable(null, 'CANAL_SELECIONADO_INDISPONIVEL');
+99:     }
+100:   }
+101: 
+102:   /** Batch-only GET view: BU bindings and credential metadata are read once for the page. */
+103:   async inspectManyForConversations(references: readonly ConversationAvailabilityReference[]): Promise<Map<string, ChannelAvailability>> {
+104:     if (!references.length) return new Map();
+105:     const buId = references[0].buId;
+106:     if (references.some((reference) => reference.buId !== buId)) {
+107:       return new Map(references.map(({ conversationId }) => [conversationId, this.unavailable(null, 'CANAL_SELECIONADO_INDISPONIVEL')]));
+108:     }
+109:     try {
+110:       const ids = references.map(({ conversationId }) => conversationId);
+111:       const channels = await this.channels(buId);
+112:       const credentialState = await this.credentials.inspectActiveCredentials(channels
+113:         .filter((candidate) => candidate.type === 'OFICIAL')
+114:         .map(({ id, generation }) => ({ channelId: id, generation })));
+115:       const candidatesWithWindows = channels.filter((candidate) => candidate.requiresWindow);
+116:       const windows = candidatesWithWindows.length
+117:         ? await this.latestInboundByConversation(ids)
+118:         : new Map<string, Date>();
+119:       const byId = new Map(references.map((reference) => [reference.conversationId, reference]));
+120:       const result = new Map<string, ChannelAvailability>();
+121:       for (const id of ids) {
+122:         const reference = byId.get(id)!;
+123:         let selectedOrigin = reference.latestMessageOrigin;
+124:         let candidate: Candidate | null;
+125:         let selectionReason: ChannelAvailability['reason'] | null = null;
+126:         if (selectedOrigin) {
+127:           candidate = channels.find((item) => item.type === selectedOrigin) ?? null;
+128:           if (!candidate) selectionReason = 'CANAL_SELECIONADO_INDISPONIVEL';
+129:         } else if (channels.length === 0) {
+130:           candidate = null; selectionReason = 'CANAL_AUSENTE';
+131:         } else if (channels.length > 1) {
+132:           candidate = null; selectionReason = 'CANAL_AMBIGUO';
+133:         } else {
+134:           candidate = channels[0]; selectedOrigin = candidate.type;
+135:         }
+136:         if (!candidate) {
+137:           result.set(id, this.unavailable(selectedOrigin, selectionReason ?? 'CANAL_SELECIONADO_INDISPONIVEL'));
+138:           continue;
+139:         }
+140:         const identity = candidate.providerIdentities.find((item) => item.currentChannelId === candidate.id);
+141:         let reason: ChannelAvailability['reason'] = null;
+142:         if (!candidate.ownNumberVerified || candidate.verifiedEpoch !== candidate.pairingEpoch || !identity
+143:           || !identity.managedLifecycle || identity.provider !== candidate.type || identity.buId !== candidate.buId) {
+144:           reason = 'CHANNEL_IDENTITY_NOT_VERIFIED';
+145:         } else if (candidate.status !== 'CONECTADO' || !candidate.receiptVerifiedAt
+146:           || (candidate.type === 'OFICIAL' && candidate.providerConnectionState !== 'SUBSCRIBED')
+147:           || (candidate.type === 'NAO_OFICIAL' && candidate.providerConnectionState !== 'CONNECTED')
+148:           || !this.adapters.locallyConfigured(candidate.type)) {
+149:           reason = 'CHANNEL_NOT_READY';
+150:         } else if (candidate.type === 'OFICIAL' && !credentialState.get(candidate.id)?.ready) {
+151:           reason = 'PENDING_CREDENTIAL';
+152:         }
+153:         let windowOpen = true;
+154:         let expiresAt: Date | null = null;
+155:         if (candidate.requiresWindow) {
+156:           const lastInbound = windows.get(id);
+157:           windowOpen = Boolean(lastInbound && lastInbound.getTime() + 24 * 60 * 60 * 1000 > Date.now());
+158:           expiresAt = lastInbound ? new Date(lastInbound.getTime() + 24 * 60 * 60 * 1000) : null;
+159:           if (!reason && !windowOpen) reason = 'JANELA_FECHADA';
+160:         }
+161:         result.set(id, {
+162:           available: reason === null, reason, channelOrigin: candidate.type,
+163:           requiresWindow: candidate.requiresWindow, windowOpen, expiresAt,
+164:         });
+165:       }
+166:       return result;
+167:     } catch {
+168:       return new Map(references.map(({ conversationId }) => [conversationId, this.unavailable(null, 'CANAL_SELECIONADO_INDISPONIVEL')]));
+169:     }
+170:   }
+171: 
+172:   async contextAfterDispatch(context: ChannelOperationContext): Promise<'CURRENT' | 'CHANGED' | 'UNKNOWN'> {
+173:     try {
+174:       const status = await this.contextStatus(context, false);
+175:       return status;
+176:     } catch {
+177:       return 'UNKNOWN';
+178:     }
+179:   }
+180: 
+181:   private async bind(candidate: Candidate): Promise<ResolvedChannelOperation> {
+182:     const availability = await this.inspectCandidate(candidate);
+183:     if (availability) this.throwUnavailable(availability);
+184:     const credential = await this.credentials.resolve(candidate.id);
+185:     const context: ChannelOperationContext = Object.freeze({
+186:       channelId: candidate.id,
+187:       buId: candidate.buId,
+188:       channelOrigin: candidate.type,
+189:       providerResourceIdentityId: credential.providerResourceIdentityId,
+190:       generation: credential.generation,
+191:       pairingEpoch: credential.pairingEpoch,
+192:       activeCredentialVersion: credential.activeCredentialVersion,
+193:       requiresWindow: candidate.requiresWindow,
+194:     });
+195:     if (!this.sameCredentialContext(candidate, credential)) {
+196:       throw new ConflictException({ code: 'CHANNEL_CONTEXT_CHANGED' });
+197:     }
+198:     const factory = this.adapters.get(candidate.type);
+199:     if (!factory) throw new ConflictException({ code: 'CHANNEL_NOT_READY' });
+200:     const channel = factory.create(credential, async () => {
+201:       try { return (await this.contextStatus(context, true)) === 'CURRENT'; }
+202:       catch { return false; }
+203:     });
+204:     return { channel, context };
+205:   }
+206: 
+207:   private async inspectCandidate(candidate: Candidate): Promise<ChannelAvailability['reason']> {
+208:     const identity = candidate.providerIdentities.find((item) => item.currentChannelId === candidate.id);
+209:     if (!candidate.ownNumberVerified || candidate.verifiedEpoch !== candidate.pairingEpoch || !identity
+210:       || !identity.managedLifecycle || identity.provider !== candidate.type || identity.buId !== candidate.buId) {
+211:       return 'CHANNEL_IDENTITY_NOT_VERIFIED';
+212:     }
+213:     if (candidate.status !== 'CONECTADO' || !candidate.receiptVerifiedAt
+214:       || (candidate.type === 'OFICIAL' && candidate.providerConnectionState !== 'SUBSCRIBED')
+215:       || (candidate.type === 'NAO_OFICIAL' && candidate.providerConnectionState !== 'CONNECTED')
+216:       || !this.adapters.locallyConfigured(candidate.type)) return 'CHANNEL_NOT_READY';
+217:     if (candidate.type === 'OFICIAL' && !(await this.credentials.inspectActiveCredential(candidate.id, candidate.generation)).ready) {
+218:       return 'PENDING_CREDENTIAL';
+219:     }
+220:     return null;
+221:   }
+222: 
+223:   private async selectForConversation(reference: ConversationChannelReference) {
+224:     const conversation = await this.prisma.conversation.findFirst({
+225:       where: { id: reference.conversationId, buId: reference.buId },
+226:       select: { id: true, buId: true, contact: true },
+227:     });
+228:     if (!conversation) throw new ConflictException({ code: 'CONVERSATION_IDENTITY_MISMATCH' });
+229:     const { candidate, selectionReason } = await this.selectCandidate(reference);
+230:     if (!candidate) this.throwUnavailable(selectionReason ?? 'CANAL_AUSENTE');
+231:     const reason = await this.inspectCandidate(candidate);
+232:     if (reason) this.throwUnavailable(reason);
+233:     if (candidate.requiresWindow) {
+234:       const window = await this.window(conversation.id);
+235:       if (!window.open) this.throwUnavailable('JANELA_FECHADA');
+236:     }
+237:     return { conversation, candidate };
+238:   }
+239: 
+240:   private async selectCandidate(reference: ConversationChannelReference): Promise<{
+241:     candidate: Candidate | null; selectedOrigin: ChannelOrigin | null; selectionReason: ChannelAvailability['reason'] | null;
+242:   }> {
+243:     const latest = await this.prisma.message.findFirst({
+244:       where: { conversationId: reference.conversationId },
+245:       orderBy: [{ createdAt: 'desc' }, { id: 'desc' }],
+246:       select: { channelOrigin: true },
+247:     });
+248:     const channels = await this.channels(reference.buId);
+249:     if (latest) {
+250:       const selectedOrigin = latest.channelOrigin as ChannelOrigin;
+251:       const candidate = channels.find((channel) => channel.type === selectedOrigin) ?? null;
+252:       return { candidate, selectedOrigin, selectionReason: candidate ? null : 'CANAL_SELECIONADO_INDISPONIVEL' };
+253:     }
+254:     if (channels.length === 0) return { candidate: null, selectedOrigin: null, selectionReason: 'CANAL_AUSENTE' };
+255:     if (channels.length > 1) return { candidate: null, selectedOrigin: null, selectionReason: 'CANAL_AMBIGUO' };
+256:     return { candidate: channels[0], selectedOrigin: channels[0].type, selectionReason: null };
+257:   }
+258: 
+259:   private async channels(buId: string): Promise<Candidate[]> {
+260:     return this.prisma.buChannel.findMany({
+261:       where: { buId },
+262:       select: {
+263:         id: true, buId: true, type: true, status: true, generation: true, pairingEpoch: true,
+264:         verifiedEpoch: true, ownNumberVerified: true, providerConnectionState: true,
+265:         receiptVerifiedAt: true, requiresWindow: true,
+266:         providerIdentities: { select: { id: true, buId: true, provider: true, currentChannelId: true, managedLifecycle: true } },
+267:       },
+268:     }) as unknown as Promise<Candidate[]>;
+269:   }
+270: 
+271:   private async findCandidate(channelId: string, buId: string): Promise<Candidate | null> {
+272:     const rows = await this.prisma.buChannel.findMany({ where: { id: channelId, buId }, select: {
+273:       id: true, buId: true, type: true, status: true, generation: true, pairingEpoch: true,
+274:       verifiedEpoch: true, ownNumberVerified: true, providerConnectionState: true,
+275:       receiptVerifiedAt: true, requiresWindow: true,
+276:       providerIdentities: { select: { id: true, buId: true, provider: true, currentChannelId: true, managedLifecycle: true } },
+277:     } });
+278:     return (rows[0] as unknown as Candidate | undefined) ?? null;
+279:   }
+280: 
+281:   private async contextStatus(context: ChannelOperationContext, beforeDispatch: boolean): Promise<'CURRENT' | 'CHANGED' | 'UNKNOWN'> {
+282:     const where: Prisma.BuChannelWhereInput = {
+283:       id: context.channelId, buId: context.buId, type: context.channelOrigin,
+284:       generation: context.generation, pairingEpoch: context.pairingEpoch,
+285:       ownNumberVerified: true, verifiedEpoch: context.pairingEpoch,
+286:       ...(beforeDispatch ? {
+287:         status: 'CONECTADO', receiptVerifiedAt: { not: null },
+288:         providerConnectionState: context.channelOrigin === 'OFICIAL' ? 'SUBSCRIBED' : 'CONNECTED',
+289:       } : {}),
+290:     };
+291:     const channel = await this.prisma.buChannel.findFirst({
+292:       where,
+293:       select: { id: true, credential: { select: { version: true, generation: true } },
+294:         providerIdentities: { where: { id: context.providerResourceIdentityId }, select: { id: true, buId: true, provider: true, currentChannelId: true, managedLifecycle: true } } },
+295:     });
+296:     const identity = channel?.providerIdentities[0];
+297:     if (!channel || !identity || identity.buId !== context.buId || identity.provider !== context.channelOrigin
+298:       || identity.currentChannelId !== context.channelId || !identity.managedLifecycle) {
+299:       return 'CHANGED';
+300:     }
+301:     if (context.channelOrigin === 'OFICIAL') {
+302:       const credential = channel.credential;
+303:       if (!credential || credential.generation !== context.generation) return 'CHANGED';
+304:       if (beforeDispatch && credential.version !== context.activeCredentialVersion) return 'CHANGED';
+305:     }
+306:     return 'CURRENT';
+307:   }
+308: 
+309:   private async window(conversationId: string): Promise<{ open: boolean; expiresAt: Date | null }> {
+310:     const lastInbound = await this.prisma.message.findFirst({
+311:       where: { conversationId, direction: 'IN' }, orderBy: [{ createdAt: 'desc' }, { id: 'desc' }], select: { createdAt: true },
+312:     });
+313:     if (!lastInbound) return { open: false, expiresAt: null };
+314:     const expiresAt = new Date(lastInbound.createdAt.getTime() + 24 * 60 * 60 * 1000);
+315:     return { open: expiresAt.getTime() > Date.now(), expiresAt };
+316:   }
+317: 
+318:   private async latestInboundByConversation(conversationIds: string[]): Promise<Map<string, Date>> {
+319:     if (!conversationIds.length) return new Map();
+320:     const rows = await this.prisma.$queryRaw<Array<{ conversation_id: string; created_at: Date }>>`
+321:       SELECT requested.conversation_id, latest.created_at
+322:       FROM unnest(ARRAY[${Prisma.join(conversationIds)}]::text[]) AS requested(conversation_id)
+323:       CROSS JOIN LATERAL (
+324:         SELECT message.created_at
+325:         FROM messages AS message
+326:         WHERE message.conversation_id = requested.conversation_id AND message.direction = 'IN'
+327:         ORDER BY message.created_at DESC, message.id DESC
+328:         LIMIT 1
+329:       ) AS latest
+330:     `;
+331:     return new Map(rows.map((row) => [row.conversation_id, row.created_at]));
+332:   }
+333: 
+334:   private sameCredentialContext(candidate: Candidate, credential: ResolvedChannelCredential): boolean {
+335:     const identity = candidate.providerIdentities.find((item) => item.id === credential.providerResourceIdentityId);
+336:     return credential.channelId === candidate.id && credential.buId === candidate.buId
+337:       && credential.provider === candidate.type && credential.generation === candidate.generation
+338:       && credential.pairingEpoch === candidate.pairingEpoch && identity?.currentChannelId === candidate.id
+339:       && identity?.buId === candidate.buId && identity.provider === candidate.type;
+340:   }
+341: 
+342:   private unavailable(channelOrigin: ChannelOrigin | null, reason: ChannelAvailability['reason']): ChannelAvailability {
+343:     return { available: false, reason, channelOrigin, requiresWindow: false, windowOpen: false, expiresAt: null };
+344:   }
+345: 
+346:   private throwUnavailable(reason: ChannelAvailability['reason']): never {
+347:     if (reason === 'CANAL_AUSENTE') throw new BadRequestException({ code: reason, error: 'Esta BU não tem canal conectado.' });
+348:     if (reason === 'CANAL_AMBIGUO') throw new ConflictException({ code: reason, error: 'Selecione uma origem de conversa antes de responder.' });
+349:     throw new ConflictException({ code: reason, error: reason === 'JANELA_FECHADA'
+350:       ? 'Fora da janela de 24h da última mensagem recebida.'
+351:       : 'O canal selecionado não está disponível para envio.' });
+352:   }
+353: }
+```
+
+
+## Source api-app/src/integrations/evolution/evolution.client.spec.ts
+
+Raw SHA256 `119d962fdcd9c895b75845dca74d8506147e11480d74b82e8c37f29f97c04081`; bytes6530.
+
+```
+1: import { afterEach, describe, expect, it, vi } from 'vitest';
+2: import { EvolutionHttpClient, EvolutionIndisponivelError } from './evolution.client';
+3: 
+4: describe('EvolutionHttpClient instance creation response', () => {
+5:   const before = {
+6:     url: process.env.EVOLUTION_API_URL,
+7:     key: process.env.EVOLUTION_API_KEY,
+8:     webhook: process.env.EVOLUTION_WEBHOOK_URL, secret: process.env.EVOLUTION_WEBHOOK_SECRET,
+9:   };
+10:   afterEach(() => {
+11:     vi.unstubAllGlobals();
+12:     if (before.url === undefined) delete process.env.EVOLUTION_API_URL; else process.env.EVOLUTION_API_URL = before.url;
+13:     if (before.key === undefined) delete process.env.EVOLUTION_API_KEY; else process.env.EVOLUTION_API_KEY = before.key;
+14:     if (before.webhook === undefined) delete process.env.EVOLUTION_WEBHOOK_URL; else process.env.EVOLUTION_WEBHOOK_URL = before.webhook;
+15:     if (before.secret === undefined) delete process.env.EVOLUTION_WEBHOOK_SECRET; else process.env.EVOLUTION_WEBHOOK_SECRET = before.secret;
+16:   });
+17: 
+18:   it('returns only QR material when create confirms the exact instance name', async () => {
+19:     process.env.EVOLUTION_API_URL = 'https://evolution.invalid';
+20:     process.env.EVOLUTION_API_KEY = 'fixture-key';
+21:     process.env.EVOLUTION_WEBHOOK_URL = 'https://api.invalid/webhooks/evolution';
+22:     process.env.EVOLUTION_WEBHOOK_SECRET = 'fixture-secret';
+23:     const fetchFake = vi.fn().mockResolvedValue({ ok: true, json: async () => ({
+24:       instance: { instanceName: 'lh-channel-1' }, hash: 'must-not-escape', qrcode: { base64: 'fixture-qr' },
+25:     }) });
+26:     vi.stubGlobal('fetch', fetchFake);
+27:     const result = await new EvolutionHttpClient().criarInstancia('lh-channel-1');
+28:     expect(result).toEqual({ qrcode: 'fixture-qr' });
+29:     expect(JSON.stringify(result)).not.toContain('must-not-escape');
+30:     expect(fetchFake).toHaveBeenCalledTimes(1);
+31:     const requestBody = JSON.parse(fetchFake.mock.calls[0][1].body as string);
+32:     expect(requestBody.webhook).toMatchObject({ url: 'https://api.invalid/webhooks/evolution', headers: { 'x-leadshug-webhook-secret': 'fixture-secret' } });
+33:   });
+34: 
+35:   it.each([
+36:     {},
+37:     { instance: { instanceName: 'another-instance' }, qrcode: { base64: 'must-not-escape' } },
+38:   ])('rejects a successful HTTP response without exact created identity confirmation', async (payload) => {
+39:     process.env.EVOLUTION_API_URL = 'https://evolution.invalid';
+40:     process.env.EVOLUTION_API_KEY = 'fixture-key';
+41:     const fetchFake = vi.fn().mockResolvedValue({ ok: true, json: async () => payload });
+42:     vi.stubGlobal('fetch', fetchFake);
+43:     await expect(new EvolutionHttpClient().criarInstancia('lh-requested-instance')).rejects.toBeInstanceOf(EvolutionIndisponivelError);
+44:   });
+45: 
+46:   it('requires an explicit SUCCESS response for exact-instance cleanup', async () => {
+47:     process.env.EVOLUTION_API_URL = 'https://evolution.invalid';
+48:     process.env.EVOLUTION_API_KEY = 'fixture-key';
+49:     const fetchFake = vi.fn()
+50:       .mockResolvedValueOnce({ ok: true, json: async () => ({ status: 'SUCCESS', error: false }) })
+51:       .mockResolvedValueOnce({ ok: true, json: async () => ({ status: 'SUCCESS', error: true }) });
+52:     vi.stubGlobal('fetch', fetchFake);
+53:     const client = new EvolutionHttpClient();
+54:     await expect(client.apagarInstancia('lh-exact-name')).resolves.toBeUndefined();
+55:     await expect(client.apagarInstancia('lh-exact-name')).rejects.toBeInstanceOf(EvolutionIndisponivelError);
+56:     expect(String(fetchFake.mock.calls[0][0])).toContain('/instance/delete/lh-exact-name');
+57:   });
+58: 
+59:   it('rejects redirects without following them or exposing the configured key', async () => {
+60:     process.env.EVOLUTION_API_URL = 'https://evolution.invalid';
+61:     process.env.EVOLUTION_API_KEY = 'fixture-secret-key';
+62:     const fetchFake = vi.fn().mockRejectedValue(new TypeError('redirect fixture with secret URL'));
+63:     vi.stubGlobal('fetch', fetchFake);
+64:     const error = await new EvolutionHttpClient().criarInstancia('lh-safe-name').catch((caught: unknown) => caught as Error);
+65:     expect(error).toBeInstanceOf(EvolutionIndisponivelError);
+66:     expect(error.message).not.toMatch(/fixture-secret-key|secret URL/);
+67:     expect(fetchFake.mock.calls[0][1].redirect).toBe('error');
+68:   });
+69: 
+70:   it('returns ACCEPTED only with an external ID and treats HTTP and post-dispatch failures as UNKNOWN once', async () => {
+71:     process.env.EVOLUTION_API_URL = 'https://evolution.invalid';
+72:     process.env.EVOLUTION_API_KEY = 'fixture-key';
+73:     const fetchFake = vi.fn()
+74:       .mockResolvedValueOnce({ ok: true, json: async () => ({ key: { id: 'evo-id-1' } }) })
+75:       .mockResolvedValueOnce({ ok: true, json: async () => ({ key: {} }) })
+76:       .mockResolvedValueOnce({ ok: false, status: 503, json: async () => ({ message: 'ambiguous provider body' }) })
+77:       .mockRejectedValueOnce(new TypeError('timeout after dispatch'))
+78:       .mockResolvedValueOnce({ ok: true, json: async () => { throw new SyntaxError('malformed'); } })
+79:       .mockResolvedValueOnce({ ok: false, status: 503, json: async () => ({ key: { id: 'contradictory-id' } }) })
+80:       .mockResolvedValueOnce({ ok: true, json: async () => ({}) });
+81:     vi.stubGlobal('fetch', fetchFake);
+82:     const client = new EvolutionHttpClient();
+83:     await expect(client.enviarTexto('fixture-instance', 'user:opaque', 'hello'))
+84:       .resolves.toMatchObject({ outcome: 'ACCEPTED', externalMessageId: 'evo-id-1' });
+85:     await expect(client.enviarTexto('fixture-instance', 'user:opaque', 'hello'))
+86:       .resolves.toMatchObject({ outcome: 'UNKNOWN', evidence: 'ACK_WITHOUT_ID' });
+87:     await expect(client.enviarTexto('fixture-instance', 'user:opaque', 'hello'))
+88:       .resolves.toMatchObject({ outcome: 'UNKNOWN', evidence: 'TRANSPORT_UNCONFIRMED' });
+89:     await expect(client.enviarTexto('fixture-instance', 'user:opaque', 'hello'))
+90:       .resolves.toMatchObject({ outcome: 'UNKNOWN', evidence: 'TRANSPORT_UNCONFIRMED' });
+91:     await expect(client.enviarTexto('fixture-instance', 'user:opaque', 'hello'))
+92:       .resolves.toMatchObject({ outcome: 'UNKNOWN', evidence: 'TRANSPORT_UNCONFIRMED' });
+93:     await expect(client.enviarTexto('fixture-instance', 'user:opaque', 'hello'))
+94:       .resolves.toMatchObject({ outcome: 'UNKNOWN', evidence: 'TRANSPORT_UNCONFIRMED' });
+95:     await expect(client.enviarTexto('fixture-instance', 'user:opaque', 'hello'))
+96:       .resolves.toMatchObject({ outcome: 'UNKNOWN', evidence: 'TRANSPORT_UNCONFIRMED' });
+97:     expect(fetchFake).toHaveBeenCalledTimes(7);
+98:     expect(fetchFake.mock.calls.every(([, options]) => options.signal instanceof AbortSignal)).toBe(true);
+99:   });
+100: });
+```
+
+
+## Source api-app/src/integrations/evolution/evolution.client.ts
+
+Raw SHA256 `b0824e8fd4f801a239521855aaa02da5e0943a8c86c4ac8778e2f1f352821698`; bytes7214.
+
+```
+1: import { Injectable } from '@nestjs/common';
+2: import type { ChannelSendResult } from '../../domain/channels/transport/channel';
+3: 
+4: export const EVOLUTION_CLIENT = Symbol('EVOLUTION_CLIENT');
+5: 
+6: export interface InstanciaCriada {
+7:   qrcode: string | null;
+8: }
+9: export interface InstanciaObservada { name: string; ownerJid: string | null; connectionStatus: string | null; }
+10: 
+11: /**
+12:  * Porta do canal não oficial. Adaptador de SAÍDA — a Evolution API é serviço
+13:  * interno do projeto, **sem domínio público** (ADR-0002).
+14:  */
+15: export interface EvolutionClient {
+16:   configurado(): boolean;
+17:   criarInstancia(nome: string): Promise<InstanciaCriada>;
+18:   qrDaInstancia(nome: string): Promise<string | null>;
+19:   estadoDaInstancia(nome: string): Promise<string>;
+20:   consultarInstancia(nome: string): Promise<InstanciaObservada | null>;
+21:   apagarInstancia(nome: string): Promise<void>;
+22:   /** Não existe janela aqui — o limite é o risco de ban, não a plataforma. */
+23:   enviarTexto(instancia: string, para: string, texto: string): Promise<ChannelSendResult>;
+24: }
+25: 
+26: export class EvolutionIndisponivelError extends Error {}
+27: 
+28: @Injectable()
+29: export class EvolutionHttpClient implements EvolutionClient {
+30:   private readonly base = process.env.EVOLUTION_API_URL ?? '';
+31:   private readonly chave = process.env.EVOLUTION_API_KEY ?? '';
+32:   private readonly webhook = process.env.EVOLUTION_WEBHOOK_URL ?? '';
+33:   private readonly webhookSecret = process.env.EVOLUTION_WEBHOOK_SECRET ?? '';
+34: 
+35:   configurado(): boolean {
+36:     return this.base.length > 0 && this.chave.length > 0;
+37:   }
+38: 
+39:   async criarInstancia(nome: string): Promise<InstanciaCriada> {
+40:     const corpo: Record<string, unknown> = {
+41:       instanceName: nome,
+42:       qrcode: true,
+43:       integration: 'WHATSAPP-BAILEYS',
+44:     };
+45:     if (this.webhook && this.webhookSecret) {
+46:       corpo.webhook = {
+47:         enabled: true,
+48:         url: this.webhook,
+49:         headers: { 'x-leadshug-webhook-secret': this.webhookSecret },
+50:         byEvents: false,
+51:         base64: false,
+52:         events: ['MESSAGES_UPSERT', 'CONNECTION_UPDATE'],
+53:       };
+54:     }
+55:     const data = await this.chamar('POST', '/instance/create', corpo);
+56:     const payload = data as { instance?: { instanceName?: unknown }; qrcode?: { base64?: string } | string; base64?: string };
+57:     if (!payload.instance || payload.instance.instanceName !== nome) {
+58:       throw new EvolutionIndisponivelError('A Evolution não confirmou a identidade da instância solicitada.');
+59:     }
+60:     return {
+61:       qrcode:
+62:         (typeof payload.qrcode === 'string' ? payload.qrcode : payload.qrcode?.base64) ??
+63:         payload.base64 ??
+64:         null,
+65:     };
+66:   }
+67: 
+68:   async qrDaInstancia(nome: string): Promise<string | null> {
+69:     const data = await this.chamar('GET', `/instance/connect/${nome}`);
+70:     const payload = data as { qrcode?: { base64?: string } | string; base64?: string };
+71:     return (typeof payload.qrcode === 'string' ? payload.qrcode : payload.qrcode?.base64) ?? payload.base64 ?? null;
+72:   }
+73: 
+74:   async estadoDaInstancia(nome: string): Promise<string> {
+75:     const data = await this.chamar('GET', `/instance/connectionState/${nome}`);
+76:     return (data as { instance?: { state?: string } }).instance?.state ?? 'desconhecido';
+77:   }
+78: 
+79:   async consultarInstancia(nome: string): Promise<InstanciaObservada | null> {
+80:     const query = new URLSearchParams({ instanceName: nome });
+81:     const data = await this.chamar('GET', `/instance/fetchInstances?${query.toString()}`);
+82:     const instances = Array.isArray(data) ? data : [];
+83:     const found = instances.find((item) => item && typeof item === 'object' && (item as { name?: unknown }).name === nome) as Record<string, unknown> | undefined;
+84:     if (!found) return null;
+85:     return {
+86:       name: typeof found.name === 'string' ? found.name : nome,
+87:       ownerJid: typeof found.ownerJid === 'string' ? found.ownerJid : null,
+88:       connectionStatus: typeof found.connectionStatus === 'string' ? found.connectionStatus : null,
+89:     };
+90:   }
+91: 
+92:   async apagarInstancia(nome: string): Promise<void> {
+93:     const result = await this.chamar('DELETE', `/instance/delete/${encodeURIComponent(nome)}`) as { status?: unknown; error?: unknown };
+94:     if (result.status !== 'SUCCESS' || result.error !== false) throw new EvolutionIndisponivelError('A Evolution não confirmou a remoção da instância.');
+95:   }
+96: 
+97:   async enviarTexto(instancia: string, para: string, texto: string): Promise<ChannelSendResult> {
+98:     if (!instancia || !this.configurado()) return { outcome: 'BLOCKED', reason: 'CHANNEL_NOT_READY' };
+99:     let response: Response;
+100:     try {
+101:       response = await fetch(`${this.base}/message/sendText/${encodeURIComponent(instancia)}`, {
+102:         method: 'POST',
+103:         headers: { apikey: this.chave, 'content-type': 'application/json' },
+104:         body: JSON.stringify({ number: para, text: texto }),
+105:         signal: AbortSignal.timeout(10_000), redirect: 'error',
+106:       });
+107:     } catch {
+108:       return { outcome: 'UNKNOWN', evidence: 'TRANSPORT_UNCONFIRMED', legacyCode: 'EVOLUTION_RECUSOU' };
+109:     }
+110:     let data: unknown;
+111:     try {
+112:       data = await response.json();
+113:     } catch {
+114:       return { outcome: 'UNKNOWN', evidence: 'TRANSPORT_UNCONFIRMED', legacyCode: 'EVOLUTION_RECUSOU' };
+115:     }
+116:     if (!response.ok) return { outcome: 'UNKNOWN', evidence: 'TRANSPORT_UNCONFIRMED', legacyCode: 'EVOLUTION_RECUSOU' };
+117:     if (!isRecord(data)) return { outcome: 'UNKNOWN', evidence: 'TRANSPORT_UNCONFIRMED', legacyCode: 'EVOLUTION_RECUSOU' };
+118:     if (data.error) return { outcome: 'UNKNOWN', evidence: 'TRANSPORT_UNCONFIRMED', legacyCode: 'EVOLUTION_RECUSOU' };
+119:     if (data.key !== undefined && data.key !== null && !isRecord(data.key)) {
+120:       return { outcome: 'UNKNOWN', evidence: 'TRANSPORT_UNCONFIRMED', legacyCode: 'EVOLUTION_RECUSOU' };
+121:     }
+122:     const key = isRecord(data.key) ? data.key : null;
+123:     if (!key) return { outcome: 'UNKNOWN', evidence: 'TRANSPORT_UNCONFIRMED', legacyCode: 'EVOLUTION_RECUSOU' };
+124:     if (key && Object.hasOwn(key, 'id') && typeof key.id !== 'string') {
+125:       return { outcome: 'UNKNOWN', evidence: 'TRANSPORT_UNCONFIRMED', legacyCode: 'EVOLUTION_RECUSOU' };
+126:     }
+127:     const id = typeof key?.id === 'string' && key.id.trim() ? key.id : null;
+128:     return id
+129:       ? { outcome: 'ACCEPTED', externalMessageId: id }
+130:       : { outcome: 'UNKNOWN', evidence: 'ACK_WITHOUT_ID', legacyCode: 'EVOLUTION_RECUSOU' };
+131:   }
+132: 
+133:   private async chamar(metodo: string, caminho: string, corpo?: unknown): Promise<unknown> {
+134:     let res: Response;
+135:     try {
+136:       res = await fetch(`${this.base}${caminho}`, {
+137:         method: metodo,
+138:         headers: { apikey: this.chave, 'content-type': 'application/json' },
+139:         body: corpo ? JSON.stringify(corpo) : undefined,
+140:         signal: AbortSignal.timeout(10_000), redirect: 'error',
+141:       });
+142:     } catch {
+143:       throw new EvolutionIndisponivelError('A Evolution API está temporariamente indisponível.');
+144:     }
+145:     const data = await res.json().catch(() => ({}));
+146:     if (!res.ok) {
+147:       void data;
+148:       throw new EvolutionIndisponivelError('A Evolution API recusou a operação.');
+149:     }
+150:     return data;
+151:   }
+152: }
+153: 
+154: function isRecord(value: unknown): value is Record<string, unknown> {
+155:   return typeof value === 'object' && value !== null && !Array.isArray(value);
+156: }
+```
+
+
+## Source api-app/src/integrations/meta/meta.client.spec.ts
+
+Raw SHA256 `d7e76f5c392afab1638363d3c851f8ce8c5223ff27c64801a79fdc8ec00d5e7a`; bytes38572.
+
+```
+1: import { afterEach, describe, expect, it, vi } from 'vitest';
+2: import { MetaHttpClient, MetaIndisponivelError } from './meta.client';
+3: 
+4: describe('MetaHttpClient scoped credentials', () => {
+5:   const vars = ['META_APP_ID', 'META_APP_SECRET', 'META_SIGNUP_CONFIG_ID', 'GRAPH_VERSION', 'WHATSAPP_TOKEN'];
+6:   const before = new Map(vars.map((key) => [key, process.env[key]]));
+7:   afterEach(() => {
+8:     vi.unstubAllGlobals();
+9:     for (const key of vars) {
+10:       const value = before.get(key);
+11:       if (value === undefined) delete process.env[key]; else process.env[key] = value;
+12:     }
+13:   });
+14: 
+15:   it('exposes only public installation capability and is unavailable when unset', () => {
+16:     delete process.env.META_APP_ID;
+17:     delete process.env.META_APP_SECRET;
+18:     delete process.env.META_SIGNUP_CONFIG_ID;
+19:     process.env.WHATSAPP_TOKEN = 'fake-legacy-token';
+20:     delete process.env.GRAPH_VERSION;
+21:     expect(new MetaHttpClient().capabilities()).toMatchObject({ available: false, reason: 'NOT_CONFIGURED', appId: null, configId: null, graphVersion: null });
+22:   });
+23: 
+24:   it('rejects partial installation setup without returning its secret', () => {
+25:     process.env.META_APP_ID = 'fake-app-id';
+26:     process.env.META_APP_SECRET = '';
+27:     process.env.META_SIGNUP_CONFIG_ID = '';
+28:     process.env.GRAPH_VERSION = '';
+29:     expect(new MetaHttpClient().capabilities()).toMatchObject({ available: false, reason: 'PARTIAL_CONFIGURATION', appId: 'fake-app-id' });
+30:   });
+31: 
+32:   it.each([undefined, '', 'v26', '26.0', 'v26.1', 'vabc.0'])('fails closed for missing, blank, or malformed Graph version (%s)', (version) => {
+33:     process.env.META_APP_ID = 'fake-app-id';
+34:     process.env.META_APP_SECRET = 'fake-secret';
+35:     process.env.META_SIGNUP_CONFIG_ID = 'fake-config';
+36:     if (version === undefined) delete process.env.GRAPH_VERSION; else process.env.GRAPH_VERSION = version;
+37:     expect(new MetaHttpClient().capabilities()).toMatchObject({ available: false, reason: 'PARTIAL_CONFIGURATION', graphVersion: null });
+38:   });
+39: 
+40:   it('does not call Graph for a malformed configured version', async () => {
+41:     process.env.META_APP_ID = 'fake-app-id';
+42:     process.env.META_APP_SECRET = 'fake-secret';
+43:     process.env.META_SIGNUP_CONFIG_ID = 'fake-config';
+44:     process.env.GRAPH_VERSION = 'https://graph.invalid';
+45:     const fetchFake = vi.fn();
+46:     vi.stubGlobal('fetch', fetchFake);
+47:     await expect(new MetaHttpClient().registrarNumero('phone-id', '123456', 'scoped-token')).rejects.toBeInstanceOf(MetaIndisponivelError);
+48:     expect(fetchFake).not.toHaveBeenCalled();
+49:     expect(new MetaHttpClient().capabilities().graphVersion).toBeNull();
+50:     process.env.GRAPH_VERSION = '';
+51:     await expect(new MetaHttpClient().enviarTexto('phone-id', '5584999990000', 'fixture body', 'scoped-channel-token'))
+52:       .resolves.toMatchObject({ outcome: 'BLOCKED', reason: 'CHANNEL_NOT_READY' });
+53:     expect(fetchFake).not.toHaveBeenCalled();
+54:   });
+55: 
+56:   it('exchanges code in a POST body and never places it in the URL', async () => {
+57:     process.env.META_APP_ID = 'fake-id';
+58:     process.env.META_APP_SECRET = 'fake-secret';
+59:     process.env.META_SIGNUP_CONFIG_ID = 'fake-config';
+60:     process.env.GRAPH_VERSION = 'v26.0';
+61:     expect(new MetaHttpClient().capabilities()).toMatchObject({ available: true, reason: 'AVAILABLE', graphVersion: 'v26.0' });
+62:     const fetchFake = vi.fn()
+63:       .mockResolvedValueOnce({ ok: true, json: async () => ({ access_token: 'candidate-token' }) })
+64:       .mockResolvedValueOnce({ ok: true, json: async () => ({ data: { app_id: 'fake-id', is_valid: true, scopes: ['whatsapp_business_management', 'whatsapp_business_messaging'], granular_scopes: [{ scope: 'whatsapp_business_management', target_ids: ['123456'] }, { scope: 'whatsapp_business_messaging', target_ids: ['123456'] }] } }) });
+65:     vi.stubGlobal('fetch', fetchFake);
+66:     const result = await new MetaHttpClient().exchangeCode('sensitive-code');
+67:     expect(result.accessToken).toBe('candidate-token');
+68:     expect(fetchFake.mock.calls[0][0]).not.toContain('sensitive-code');
+69:     expect(String(fetchFake.mock.calls[0][1].body)).toContain('code=sensitive-code');
+70:   });
+71: 
+72:   it('does not use legacy token and emits a safe error for provider details', async () => {
+73:     process.env.WHATSAPP_TOKEN = 'legacy-token-must-not-be-used';
+74:     const fetchFake = vi.fn().mockResolvedValue({ ok: false, status: 400, json: async () => ({ error: { message: 'secret provider detail' } }) });
+75:     vi.stubGlobal('fetch', fetchFake);
+76:     await expect(new MetaHttpClient().enviarTexto('phone-id', '558400000000', 'hello'))
+77:       .resolves.toMatchObject({ outcome: 'BLOCKED', reason: 'PENDING_CREDENTIAL' });
+78:     expect(fetchFake).not.toHaveBeenCalled();
+79:   });
+80: 
+81:   it('classifies only allowlisted synchronous Graph refusals as REJECTED', async () => {
+82:     process.env.GRAPH_VERSION = 'v26.0';
+83:     const fetchFake = vi.fn()
+84:       .mockResolvedValueOnce({ ok: false, status: 400, json: async () => ({ error: { message: 'bad request', code: 100, is_transient: false } }) })
+85:       .mockResolvedValueOnce({ ok: false, status: 400, json: async () => ({ error: { message: 'unknown refusal', code: 999, is_transient: false } }) })
+86:       .mockResolvedValueOnce({ ok: true, status: 200, json: async () => ({ messages: [{ id: 'wamid-1' }] }) })
+87:       .mockResolvedValueOnce({ ok: true, status: 200, json: async () => ({ messages: [{}] }) })
+88:       .mockResolvedValueOnce({ ok: true, status: 200, json: async () => { throw new SyntaxError('malformed'); } })
+89:       .mockResolvedValueOnce({ ok: false, status: 503, json: async () => ({ messages: [{ id: 'contradictory-id' }] }) })
+90:       .mockResolvedValueOnce({ ok: false, status: 400, json: async () => ({
+91:         error: { message: 'refusal with contradictory accepted ID', code: 100, is_transient: false }, messages: [{ id: 'contradictory-refusal-id' }],
+92:       }) })
+93:       .mockResolvedValueOnce({ ok: false, status: 400, json: async () => ({
+94:         error: { message: 'refusal with contradictory success', code: 100, is_transient: false }, success: true,
+95:       }) })
+96:       .mockResolvedValueOnce({ ok: false, status: 400, json: async () => ({
+97:         error: { message: 'malformed transient flag', code: 100, is_transient: 'false' },
+98:       }) })
+99:       .mockResolvedValueOnce({ ok: false, status: 400, json: async () => ({
+100:         error: { message: 'later acknowledgement ID', code: 100, is_transient: false }, messages: [{}, { id: 'later-id' }],
+101:       }) })
+102:       .mockResolvedValueOnce({ ok: false, status: 400, json: async () => ({
+103:         error: { message: 'malformed message ID', code: 100, is_transient: false }, messages: [{ id: 42 }],
+104:       }) })
+105:       .mockResolvedValueOnce({ ok: true, status: 200, json: async () => ({ messages: [{}, { id: 'second-id' }] }) })
+106:       .mockResolvedValueOnce({ ok: true, status: 200, json: async () => ({ messages: [{ id: 42 }] }) })
+107:       .mockResolvedValueOnce({ ok: true, status: 200, json: async () => ({ success: false, messages: [{ id: 'ack-with-false-success' }] }) })
+108:       .mockResolvedValueOnce({ ok: true, status: 200, json: async () => ({ success: false, messages: [{}] }) })
+109:       .mockResolvedValueOnce({ ok: true, status: 200, json: async () => ({ success: 'false', messages: [{ id: 'malformed-success' }] }) });
+110:     vi.stubGlobal('fetch', fetchFake);
+111:     const client = new MetaHttpClient();
+112:     await expect(client.enviarTexto('phone-id', '558400000000', 'hello', 'scoped'))
+113:       .resolves.toMatchObject({ outcome: 'REJECTED', code: 'META_RECUSOU' });
+114:     await expect(client.enviarTexto('phone-id', '558400000000', 'hello', 'scoped'))
+115:       .resolves.toMatchObject({ outcome: 'UNKNOWN', evidence: 'TRANSPORT_UNCONFIRMED' });
+116:     await expect(client.enviarTexto('phone-id', '558400000000', 'hello', 'scoped'))
+117:       .resolves.toMatchObject({ outcome: 'ACCEPTED', externalMessageId: 'wamid-1' });
+118:     await expect(client.enviarTexto('phone-id', '558400000000', 'hello', 'scoped'))
+119:       .resolves.toMatchObject({ outcome: 'UNKNOWN', evidence: 'ACK_WITHOUT_ID' });
+120:     await expect(client.enviarTexto('phone-id', '558400000000', 'hello', 'scoped'))
+121:       .resolves.toMatchObject({ outcome: 'UNKNOWN', evidence: 'TRANSPORT_UNCONFIRMED' });
+122:     await expect(client.enviarTexto('phone-id', '558400000000', 'hello', 'scoped'))
+123:       .resolves.toMatchObject({ outcome: 'UNKNOWN', evidence: 'TRANSPORT_UNCONFIRMED' });
+124:     await expect(client.enviarTexto('phone-id', '558400000000', 'hello', 'scoped'))
+125:       .resolves.toMatchObject({ outcome: 'UNKNOWN', evidence: 'TRANSPORT_UNCONFIRMED' });
+126:     await expect(client.enviarTexto('phone-id', '558400000000', 'hello', 'scoped'))
+127:       .resolves.toMatchObject({ outcome: 'UNKNOWN', evidence: 'TRANSPORT_UNCONFIRMED' });
+128:     await expect(client.enviarTexto('phone-id', '558400000000', 'hello', 'scoped'))
+129:       .resolves.toMatchObject({ outcome: 'UNKNOWN', evidence: 'TRANSPORT_UNCONFIRMED' });
+130:     await expect(client.enviarTexto('phone-id', '558400000000', 'hello', 'scoped'))
+131:       .resolves.toMatchObject({ outcome: 'UNKNOWN', evidence: 'TRANSPORT_UNCONFIRMED' });
+132:     await expect(client.enviarTexto('phone-id', '558400000000', 'hello', 'scoped'))
+133:       .resolves.toMatchObject({ outcome: 'UNKNOWN', evidence: 'TRANSPORT_UNCONFIRMED' });
+134:     await expect(client.enviarTexto('phone-id', '558400000000', 'hello', 'scoped'))
+135:       .resolves.toMatchObject({ outcome: 'UNKNOWN', evidence: 'TRANSPORT_UNCONFIRMED' });
+136:     await expect(client.enviarTexto('phone-id', '558400000000', 'hello', 'scoped'))
+137:       .resolves.toMatchObject({ outcome: 'UNKNOWN', evidence: 'TRANSPORT_UNCONFIRMED' });
+138:     await expect(client.enviarTexto('phone-id', '558400000000', 'hello', 'scoped'))
+139:       .resolves.toMatchObject({ outcome: 'UNKNOWN', evidence: 'TRANSPORT_UNCONFIRMED' });
+140:     await expect(client.enviarTexto('phone-id', '558400000000', 'hello', 'scoped'))
+141:       .resolves.toMatchObject({ outcome: 'UNKNOWN', evidence: 'TRANSPORT_UNCONFIRMED' });
+142:     await expect(client.enviarTexto('phone-id', '558400000000', 'hello', 'scoped'))
+143:       .resolves.toMatchObject({ outcome: 'UNKNOWN', evidence: 'TRANSPORT_UNCONFIRMED' });
+144:     expect(fetchFake).toHaveBeenCalledTimes(16);
+145:   });
+146: 
+147:   it('requires both scoped permissions on the same WABA before listing phone numbers', async () => {
+148:     process.env.META_APP_ID = 'fake-id';
+149:     process.env.META_APP_SECRET = 'fake-secret';
+150:     process.env.META_SIGNUP_CONFIG_ID = 'fake-config';
+151:     process.env.GRAPH_VERSION = 'v26.0';
+152:     const tokenInfo = { data: { app_id: 'fake-id', is_valid: true, scopes: ['whatsapp_business_management', 'whatsapp_business_messaging'], granular_scopes: [
+153:       { scope: 'whatsapp_business_management', target_ids: ['123456'] },
+154:       { scope: 'whatsapp_business_messaging', target_ids: ['654321'] },
+155:     ] } };
+156:     const fetchFake = vi.fn().mockResolvedValue({ ok: true, json: async () => tokenInfo });
+157:     vi.stubGlobal('fetch', fetchFake);
+158:     const client = new MetaHttpClient();
+159:     await expect(client.recursos('candidate', '123456')).rejects.toBeInstanceOf(MetaIndisponivelError);
+160:     expect(fetchFake).toHaveBeenCalledTimes(1);
+161:   });
+162: 
+163:   it('verifies the selected phone on the provider-returned page cursor and rejects a foreign phone', async () => {
+164:     process.env.META_APP_ID = 'fake-id';
+165:     process.env.META_APP_SECRET = 'fake-secret';
+166:     process.env.META_SIGNUP_CONFIG_ID = 'fake-config';
+167:     process.env.GRAPH_VERSION = 'v26.0';
+168:     const fetchFake = vi.fn()
+169:       .mockResolvedValueOnce({ ok: true, json: async () => ({ data: { app_id: 'fake-id', is_valid: true, scopes: ['whatsapp_business_management', 'whatsapp_business_messaging'], granular_scopes: [
+170:         { scope: 'whatsapp_business_management', target_ids: ['123456'] },
+171:         { scope: 'whatsapp_business_messaging', target_ids: ['123456'] },
+172:       ] } }) })
+173:       .mockResolvedValueOnce({ ok: true, json: async () => ({ data: [{ id: '987654321', display_phone_number: '+55 84 99999-0000' }] }) });
+174:     vi.stubGlobal('fetch', fetchFake);
+175:     const client = new MetaHttpClient();
+176:     const number = await client.confirmarNumero('123456', '987654321', 'candidate', 'provider-cursor-page-2');
+177:     expect(number).toMatchObject({ id: '987654321', telefone: '5584999990000' });
+178:     const edgeUrl = String(fetchFake.mock.calls[1][0]);
+179:     expect(edgeUrl).toContain('/v26.0/123456/phone_numbers');
+180:     expect(new URL(edgeUrl).searchParams.get('after')).toBe('provider-cursor-page-2');
+181:     expect(String(fetchFake.mock.calls[0][1].headers.authorization)).toBe('Bearer fake-id|fake-secret');
+182: 
+183:     const foreign = vi.fn()
+184:       .mockResolvedValueOnce({ ok: true, json: async () => ({ data: { app_id: 'fake-id', is_valid: true, scopes: ['whatsapp_business_management', 'whatsapp_business_messaging'], granular_scopes: [
+185:         { scope: 'whatsapp_business_management', target_ids: ['123456'] },
+186:         { scope: 'whatsapp_business_messaging', target_ids: ['123456'] },
+187:       ] } }) })
+188:       .mockResolvedValueOnce({ ok: true, json: async () => ({ data: [{ id: '987654321' }] }) });
+189:     vi.stubGlobal('fetch', foreign);
+190:     await expect(client.confirmarNumero('123456', '111111111', 'candidate', 'provider-cursor-page-2')).resolves.toBeNull();
+191:   });
+192: 
+193:   it('verifies a persisted phone on the second scoped page without following provider URLs', async () => {
+194:     process.env.META_APP_ID = 'fake-id'; process.env.META_APP_SECRET = 'fake-secret'; process.env.META_SIGNUP_CONFIG_ID = 'fake-config'; process.env.GRAPH_VERSION = 'v26.0';
+195:     const grant = { data: { app_id: 'fake-id', is_valid: true, scopes: ['whatsapp_business_management', 'whatsapp_business_messaging'], granular_scopes: [
+196:       { scope: 'whatsapp_business_management', target_ids: ['123456'] }, { scope: 'whatsapp_business_messaging', target_ids: ['123456'] },
+197:     ] } };
+198:     const fetchFake = vi.fn()
+199:       .mockResolvedValueOnce({ ok: true, json: async () => grant })
+200:       .mockResolvedValueOnce({ ok: true, json: async () => ({ data: [{ id: '111111111' }], paging: { next: 'https://foreign.invalid/secret', cursors: { after: 'cursor-page-2' } } }) })
+201:       .mockResolvedValueOnce({ ok: true, json: async () => ({ data: [{ id: '987654321', display_phone_number: '+55 84 99999-0000' }] }) });
+202:     vi.stubGlobal('fetch', fetchFake);
+203:     const number = await new MetaHttpClient().verificarNumeroVinculado('123456', '987654321', 'scoped-candidate');
+204:     expect(number).toMatchObject({ id: '987654321', telefone: '5584999990000' });
+205:     expect(fetchFake).toHaveBeenCalledTimes(3);
+206:     expect(fetchFake.mock.calls[0][1].headers.authorization).toBe('Bearer fake-id|fake-secret');
+207:     for (const [url, options] of fetchFake.mock.calls) {
+208:       expect(String(url)).toMatch(/^https:\/\/graph\.facebook\.com\/v26\.0\//);
+209:       expect(options.redirect).toBe('error');
+210:     }
+211:     expect(fetchFake.mock.calls[1][1].headers.authorization).toBe('Bearer scoped-candidate');
+212:     expect(new URL(String(fetchFake.mock.calls[2][0])).searchParams.get('after')).toBe('cursor-page-2');
+213:   });
+214: 
+215:   it('returns absence only after an exhausted page and rejects a WABA outside the grant', async () => {
+216:     process.env.META_APP_ID = 'fake-id'; process.env.META_APP_SECRET = 'fake-secret'; process.env.META_SIGNUP_CONFIG_ID = 'fake-config'; process.env.GRAPH_VERSION = 'v26.0';
+217:     const grant = { data: { app_id: 'fake-id', is_valid: true, scopes: ['whatsapp_business_management', 'whatsapp_business_messaging'], granular_scopes: [
+218:       { scope: 'whatsapp_business_management', target_ids: ['123456'] }, { scope: 'whatsapp_business_messaging', target_ids: ['123456'] },
+219:     ] } };
+220:     const exhausted = vi.fn()
+221:       .mockResolvedValueOnce({ ok: true, json: async () => grant })
+222:       .mockResolvedValueOnce({ ok: true, json: async () => ({ data: [{ id: '111111111' }] }) });
+223:     vi.stubGlobal('fetch', exhausted);
+224:     await expect(new MetaHttpClient().verificarNumeroVinculado('123456', '987654321', 'scoped-candidate')).resolves.toBeNull();
+225:     expect(exhausted).toHaveBeenCalledTimes(2);
+226: 
+227:     const foreign = vi.fn().mockResolvedValue({ ok: true, json: async () => grant });
+228:     vi.stubGlobal('fetch', foreign);
+229:     await expect(new MetaHttpClient().verificarNumeroVinculado('654321', '987654321', 'scoped-candidate')).resolves.toBeNull();
+230:     expect(foreign).toHaveBeenCalledTimes(1);
+231: 
+232:     const invalidGrant = vi.fn().mockResolvedValue({ ok: true, json: async () => ({ data: {
+233:       app_id: 'different-app', is_valid: true, scopes: ['whatsapp_business_management'],
+234:       granular_scopes: [{ scope: 'whatsapp_business_management', target_ids: ['123456'] }],
+235:     } }) });
+236:     vi.stubGlobal('fetch', invalidGrant);
+237:     const invalidGrantOperation = new MetaHttpClient().verificarNumeroVinculado('123456', '987654321', 'scoped-candidate');
+238:     await expect(invalidGrantOperation).rejects.toBeInstanceOf(MetaIndisponivelError);
+239:     await expect(invalidGrantOperation).rejects.toMatchObject({ code: 'META_INDISPONIVEL' });
+240:     expect(invalidGrant).toHaveBeenCalledTimes(1);
+241:   });
+242: 
+243:   it('rejects a revoked but otherwise valid scoped grant before listing phone numbers', async () => {
+244:     process.env.META_APP_ID = 'fake-id';
+245:     process.env.META_APP_SECRET = 'fake-secret';
+246:     process.env.META_SIGNUP_CONFIG_ID = 'fake-config';
+247:     process.env.GRAPH_VERSION = 'v26.0';
+248:     const revokedGrant = { data: {
+249:       app_id: 'fake-id',
+250:       is_valid: false,
+251:       scopes: ['whatsapp_business_management', 'whatsapp_business_messaging'],
+252:       granular_scopes: [
+253:         { scope: 'whatsapp_business_management', target_ids: ['123456'] },
+254:         { scope: 'whatsapp_business_messaging', target_ids: ['123456'] },
+255:       ],
+256:     } };
+257:     const validPhonePage = { data: [{ id: '987654321', display_phone_number: '+55 84 99999-0000' }] };
+258:     const fetchFake = vi.fn()
+259:       .mockResolvedValueOnce({ ok: true, json: async () => revokedGrant })
+260:       .mockResolvedValueOnce({ ok: true, json: async () => validPhonePage });
+261:     vi.stubGlobal('fetch', fetchFake);
+262: 
+263:     const operation = new MetaHttpClient().verificarNumeroVinculado('123456', '987654321', 'scoped-candidate');
+264:     const rejection = await operation.catch((error: unknown) => error);
+265: 
+266:     expect(rejection).toBeInstanceOf(MetaIndisponivelError);
+267:     expect(rejection).toMatchObject({ code: 'META_INDISPONIVEL' });
+268:     expect(fetchFake).toHaveBeenCalledTimes(1);
+269:     const debugUrl = new URL(String(fetchFake.mock.calls[0][0]));
+270:     expect(debugUrl.origin).toBe('https://graph.facebook.com');
+271:     expect(debugUrl.pathname).toBe('/v26.0/debug_token');
+272:     expect(debugUrl.searchParams.get('input_token')).toBe('scoped-candidate');
+273:     expect(fetchFake.mock.calls[0][1].headers.authorization).toBe('Bearer fake-id|fake-secret');
+274:     expect(fetchFake.mock.calls.some(([url]) => String(url).includes('/phone_numbers'))).toBe(false);
+275:   });
+276: 
+277:   it('rejects an otherwise valid scoped grant issued to a different app before listing phone numbers', async () => {
+278:     process.env.META_APP_ID = 'fake-id';
+279:     process.env.META_APP_SECRET = 'fake-secret';
+280:     process.env.META_SIGNUP_CONFIG_ID = 'fake-config';
+281:     process.env.GRAPH_VERSION = 'v26.0';
+282:     const wrongAppGrant = { data: {
+283:       app_id: 'different-app',
+284:       is_valid: true,
+285:       scopes: ['whatsapp_business_management', 'whatsapp_business_messaging'],
+286:       granular_scopes: [
+287:         { scope: 'whatsapp_business_management', target_ids: ['123456'] },
+288:         { scope: 'whatsapp_business_messaging', target_ids: ['123456'] },
+289:       ],
+290:     } };
+291:     const validPhonePage = { data: [{ id: '987654321', display_phone_number: '+55 84 99999-0000' }] };
+292:     const fetchFake = vi.fn()
+293:       .mockResolvedValueOnce({ ok: true, json: async () => wrongAppGrant })
+294:       .mockResolvedValueOnce({ ok: true, json: async () => validPhonePage });
+295:     vi.stubGlobal('fetch', fetchFake);
+296: 
+297:     const operation = new MetaHttpClient().verificarNumeroVinculado('123456', '987654321', 'scoped-candidate');
+298:     const rejection = await operation.catch((error: unknown) => error);
+299: 
+300:     expect(rejection).toBeInstanceOf(MetaIndisponivelError);
+301:     expect(rejection).toMatchObject({ code: 'META_INDISPONIVEL' });
+302:     expect(fetchFake).toHaveBeenCalledTimes(1);
+303:     const debugUrl = new URL(String(fetchFake.mock.calls[0][0]));
+304:     expect(debugUrl.origin).toBe('https://graph.facebook.com');
+305:     expect(debugUrl.pathname).toBe('/v26.0/debug_token');
+306:     expect(debugUrl.searchParams.get('input_token')).toBe('scoped-candidate');
+307:     expect(fetchFake.mock.calls[0][1].headers.authorization).toBe('Bearer fake-id|fake-secret');
+308:     expect(fetchFake.mock.calls.some(([url]) => String(url).includes('/phone_numbers'))).toBe(false);
+309:   });
+310: 
+311:   it.each([
+312:     ['malformed JSON', { ok: true, json: async () => { throw new SyntaxError('provider-json-secret'); } }],
+313:     ['missing data', { ok: true, json: async () => ({ paging: {} }) }],
+314:     ['non-array data', { ok: true, json: async () => ({ data: { id: '987654321' } }) }],
+315:     ['row without an id', { ok: true, json: async () => ({ data: [{ display_phone_number: '+55 84 99999-0000' }] }) }],
+316:     ['null row', { ok: true, json: async () => ({ data: [null] }) }],
+317:     ['non-object row', { ok: true, json: async () => ({ data: ['987654321'] }) }],
+318:     ['non-object paging', { ok: true, json: async () => ({ data: [], paging: 'next-page' }) }],
+319:     ['non-string next link', { ok: true, json: async () => ({ data: [], paging: { next: 42 } }) }],
+320:     ['missing cursor for next page', { ok: true, json: async () => ({ data: [], paging: { next: 'https://graph.facebook.com/next' } }) }],
+321:   ])('fails closed for invalid successful phone page: %s', async (_label, pageResponse) => {
+322:     process.env.META_APP_ID = 'fake-id';
+323:     process.env.META_APP_SECRET = 'fake-secret';
+324:     process.env.META_SIGNUP_CONFIG_ID = 'fake-config';
+325:     process.env.GRAPH_VERSION = 'v26.0';
+326:     const grant = { data: { app_id: 'fake-id', is_valid: true, scopes: ['whatsapp_business_management', 'whatsapp_business_messaging'], granular_scopes: [
+327:       { scope: 'whatsapp_business_management', target_ids: ['123456'] },
+328:       { scope: 'whatsapp_business_messaging', target_ids: ['123456'] },
+329:     ] } };
+330:     const fetchFake = vi.fn()
+331:       .mockResolvedValueOnce({ ok: true, json: async () => grant })
+332:       .mockResolvedValueOnce(pageResponse);
+333:     vi.stubGlobal('fetch', fetchFake);
+334:     const operation = new MetaHttpClient().verificarNumeroVinculado('123456', '987654321', 'scoped-candidate');
+335:     await expect(operation).rejects.toBeInstanceOf(MetaIndisponivelError);
+336:     await expect(operation).rejects.toMatchObject({ code: 'META_INDISPONIVEL' });
+337:     expect(fetchFake).toHaveBeenCalledTimes(2);
+338:     expect(String(fetchFake.mock.calls[1][0])).toMatch(/^https:\/\/graph\.facebook\.com\/v26\.0\/123456\/phone_numbers/);
+339:   });
+340: 
+341:   it.each([null, [], 'invalid-root', 17])('rejects a successful non-object JSON root before consuming page budget (%s)', async (root) => {
+342:     process.env.META_APP_ID = 'fake-id'; process.env.META_APP_SECRET = 'fake-secret'; process.env.META_SIGNUP_CONFIG_ID = 'fake-config'; process.env.GRAPH_VERSION = 'v26.0';
+343:     const fetchFake = vi.fn().mockResolvedValue({ ok: true, json: async () => root });
+344:     vi.stubGlobal('fetch', fetchFake);
+345:     const operation = new MetaHttpClient().verificarNumeroVinculado('123456', '987654321', 'scoped-candidate');
+346:     await expect(operation).rejects.toBeInstanceOf(MetaIndisponivelError);
+347:     await expect(operation).rejects.toMatchObject({ code: 'META_INDISPONIVEL' });
+348:     expect(fetchFake).toHaveBeenCalledTimes(1);
+349:   });
+350: 
+351:   it.each([
+352:     ['data object missing', {}],
+353:     ['data null', { data: null }],
+354:     ['data array', { data: [] }],
+355:     ['data primitive', { data: 'invalid-data' }],
+356:     ['app_id non-string', { data: { app_id: 17, is_valid: true, scopes: ['whatsapp_business_management', 'whatsapp_business_messaging'], granular_scopes: [
+357:       { scope: 'whatsapp_business_management', target_ids: ['123456'] }, { scope: 'whatsapp_business_messaging', target_ids: ['123456'] },
+358:     ] } }],
+359:     ['is_valid non-boolean', { data: { app_id: 'fake-id', is_valid: 'true', scopes: ['whatsapp_business_management', 'whatsapp_business_messaging'], granular_scopes: [
+360:       { scope: 'whatsapp_business_management', target_ids: ['123456'] }, { scope: 'whatsapp_business_messaging', target_ids: ['123456'] },
+361:     ] } }],
+362:     ['scopes object', { data: { app_id: 'fake-id', is_valid: true, scopes: { invalid: true }, granular_scopes: [
+363:       { scope: 'whatsapp_business_management', target_ids: ['123456'] }, { scope: 'whatsapp_business_messaging', target_ids: ['123456'] },
+364:     ] } }],
+365:     ['scopes null', { data: { app_id: 'fake-id', is_valid: true, scopes: null, granular_scopes: [
+366:       { scope: 'whatsapp_business_management', target_ids: ['123456'] }, { scope: 'whatsapp_business_messaging', target_ids: ['123456'] },
+367:     ] } }],
+368:     ['scopes with non-string entry', { data: { app_id: 'fake-id', is_valid: true, scopes: ['whatsapp_business_management', 17], granular_scopes: [
+369:       { scope: 'whatsapp_business_management', target_ids: ['123456'] }, { scope: 'whatsapp_business_messaging', target_ids: ['123456'] },
+370:     ] } }],
+371:     ['granular_scopes null', { data: { app_id: 'fake-id', is_valid: true, scopes: ['whatsapp_business_management', 'whatsapp_business_messaging'], granular_scopes: null } }],
+372:     ['granular_scopes object', { data: { app_id: 'fake-id', is_valid: true, scopes: ['whatsapp_business_management', 'whatsapp_business_messaging'], granular_scopes: {} } }],
+373:     ['null granular entry', { data: { app_id: 'fake-id', is_valid: true, scopes: ['whatsapp_business_management', 'whatsapp_business_messaging'], granular_scopes: [null] } }],
+374:     ['granular entry missing scope', { data: { app_id: 'fake-id', is_valid: true, scopes: ['whatsapp_business_management', 'whatsapp_business_messaging'], granular_scopes: [{ target_ids: ['123456'] }] } }],
+375:     ['target_ids object', { data: { app_id: 'fake-id', is_valid: true, scopes: ['whatsapp_business_management', 'whatsapp_business_messaging'], granular_scopes: [
+376:       { scope: 'whatsapp_business_management', target_ids: { invalid: true } }, { scope: 'whatsapp_business_messaging', target_ids: ['123456'] },
+377:     ] } }],
+378:     ['target_ids with non-string entry', { data: { app_id: 'fake-id', is_valid: true, scopes: ['whatsapp_business_management', 'whatsapp_business_messaging'], granular_scopes: [
+379:       { scope: 'whatsapp_business_management', target_ids: ['123456', 987654] }, { scope: 'whatsapp_business_messaging', target_ids: ['123456'] },
+380:     ] } }],
+381:   ])('fails closed for malformed debug-grant shape: %s', async (_label, grant) => {
+382:     process.env.META_APP_ID = 'fake-id'; process.env.META_APP_SECRET = 'fake-secret'; process.env.META_SIGNUP_CONFIG_ID = 'fake-config'; process.env.GRAPH_VERSION = 'v26.0';
+383:     const validPhonePage = { data: [{ id: '987654321', display_phone_number: '+55 84 99999-0000' }] };
+384:     const fetchFake = vi.fn()
+385:       .mockResolvedValueOnce({ ok: true, json: async () => grant })
+386:       .mockResolvedValueOnce({ ok: true, json: async () => validPhonePage });
+387:     vi.stubGlobal('fetch', fetchFake);
+388:     const operation = new MetaHttpClient().verificarNumeroVinculado('123456', '987654321', 'scoped-candidate');
+389:     const error = await operation.catch((caught: unknown) => caught);
+390:     expect(error).toBeInstanceOf(MetaIndisponivelError);
+391:     expect(error).toMatchObject({ code: 'META_INDISPONIVEL' });
+392:     expect(fetchFake).toHaveBeenCalledTimes(1);
+393:     expect(String(fetchFake.mock.calls[0][0])).toMatch(/^https:\/\/graph\.facebook\.com\/v26\.0\/debug_token\?/);
+394:     expect(String(fetchFake.mock.calls[0][1].headers.authorization)).toBe('Bearer fake-id|fake-secret');
+395:   });
+396: 
+397:   it('accepts omitted scopes when required granular scopes authorize the selected WABA', async () => {
+398:     process.env.META_APP_ID = 'fake-id'; process.env.META_APP_SECRET = 'fake-secret'; process.env.META_SIGNUP_CONFIG_ID = 'fake-config'; process.env.GRAPH_VERSION = 'v26.0';
+399:     const grant = { data: { app_id: 'fake-id', is_valid: true, granular_scopes: [
+400:       { scope: 'whatsapp_business_management', target_ids: ['123456'] },
+401:       { scope: 'whatsapp_business_messaging', target_ids: ['123456'] },
+402:     ] } };
+403:     const fetchFake = vi.fn()
+404:       .mockResolvedValueOnce({ ok: true, json: async () => grant })
+405:       .mockResolvedValueOnce({ ok: true, json: async () => ({ data: [{ id: '987654321', display_phone_number: '+55 84 99999-0000' }] }) });
+406:     vi.stubGlobal('fetch', fetchFake);
+407:     await expect(new MetaHttpClient().verificarNumeroVinculado('123456', '987654321', 'scoped-candidate'))
+408:       .resolves.toMatchObject({ id: '987654321', telefone: '5584999990000' });
+409:     expect(fetchFake).toHaveBeenCalledTimes(2);
+410:     expect(String(fetchFake.mock.calls[0][0])).toMatch(/^https:\/\/graph\.facebook\.com\/v26\.0\/debug_token\?/);
+411:     expect(String(fetchFake.mock.calls[0][1].headers.authorization)).toBe('Bearer fake-id|fake-secret');
+412:     expect(String(fetchFake.mock.calls[1][0])).toMatch(/^https:\/\/graph\.facebook\.com\/v26\.0\/123456\/phone_numbers/);
+413:   });
+414: 
+415:   it('accepts an irrelevant granular scope without target_ids alongside required scopes', async () => {
+416:     process.env.META_APP_ID = 'fake-id'; process.env.META_APP_SECRET = 'fake-secret'; process.env.META_SIGNUP_CONFIG_ID = 'fake-config'; process.env.GRAPH_VERSION = 'v26.0';
+417:     const grant = { data: { app_id: 'fake-id', is_valid: true, scopes: ['whatsapp_business_management', 'whatsapp_business_messaging'], granular_scopes: [
+418:       { scope: 'whatsapp_business_management', target_ids: ['123456'] },
+419:       { scope: 'whatsapp_business_messaging', target_ids: ['123456'] },
+420:       { scope: 'business_management' },
+421:     ] } };
+422:     const fetchFake = vi.fn()
+423:       .mockResolvedValueOnce({ ok: true, json: async () => grant })
+424:       .mockResolvedValueOnce({ ok: true, json: async () => ({ data: [{ id: '987654321', display_phone_number: '+55 84 99999-0000' }] }) });
+425:     vi.stubGlobal('fetch', fetchFake);
+426:     await expect(new MetaHttpClient().verificarNumeroVinculado('123456', '987654321', 'scoped-candidate'))
+427:       .resolves.toMatchObject({ id: '987654321', telefone: '5584999990000' });
+428:     expect(fetchFake).toHaveBeenCalledTimes(2);
+429:     expect(String(fetchFake.mock.calls[0][0])).toMatch(/^https:\/\/graph\.facebook\.com\/v26\.0\/debug_token\?/);
+430:     expect(String(fetchFake.mock.calls[0][1].headers.authorization)).toBe('Bearer fake-id|fake-secret');
+431:     expect(String(fetchFake.mock.calls[1][0])).toMatch(/^https:\/\/graph\.facebook\.com\/v26\.0\/123456\/phone_numbers/);
+432:   });
+433: 
+434:   it('keeps a valid 101-WABA authorization target usable while limiting the options page to 100', async () => {
+435:     process.env.META_APP_ID = 'fake-id'; process.env.META_APP_SECRET = 'fake-secret'; process.env.META_SIGNUP_CONFIG_ID = 'fake-config'; process.env.GRAPH_VERSION = 'v26.0';
+436:     const targets = Array.from({ length: 101 }, (_, index) => String(123450 + index));
+437:     const grant = { data: { app_id: 'fake-id', is_valid: true, scopes: ['whatsapp_business_management', 'whatsapp_business_messaging'], granular_scopes: [
+438:       { scope: 'whatsapp_business_management', target_ids: targets },
+439:       { scope: 'whatsapp_business_messaging', target_ids: targets },
+440:     ] } };
+441:     const selectedWaba = targets[100];
+442:     const fetchFake = vi.fn()
+443:       .mockResolvedValueOnce({ ok: true, json: async () => grant })
+444:       .mockResolvedValueOnce({ ok: true, json: async () => grant })
+445:       .mockResolvedValueOnce({ ok: true, json: async () => ({ data: [{ id: '987654321', display_phone_number: '+55 84 99999-0000' }] }) });
+446:     vi.stubGlobal('fetch', fetchFake);
+447:     const client = new MetaHttpClient();
+448:     const options = await client.recursos('scoped-candidate');
+449:     expect(options.wabas).toHaveLength(100);
+450:     expect(options.wabas.some(({ id }) => id === selectedWaba)).toBe(false);
+451:     await expect(client.verificarNumeroVinculado(selectedWaba, '987654321', 'scoped-candidate'))
+452:       .resolves.toMatchObject({ id: '987654321', telefone: '5584999990000' });
+453:     expect(fetchFake).toHaveBeenCalledTimes(3);
+454:     expect(new URL(String(fetchFake.mock.calls[2][0])).pathname).toBe(`/v26.0/${selectedWaba}/phone_numbers`);
+455:   });
+456: 
+457:   it('fails closed at the page budget and for repeated or oversized cursors', async () => {
+458:     process.env.META_APP_ID = 'fake-id'; process.env.META_APP_SECRET = 'fake-secret'; process.env.META_SIGNUP_CONFIG_ID = 'fake-config'; process.env.GRAPH_VERSION = 'v26.0';
+459:     const grant = { data: { app_id: 'fake-id', is_valid: true, scopes: ['whatsapp_business_management', 'whatsapp_business_messaging'], granular_scopes: [
+460:       { scope: 'whatsapp_business_management', target_ids: ['123456'] }, { scope: 'whatsapp_business_messaging', target_ids: ['123456'] },
+461:     ] } };
+462:     const page = (after: string) => ({ ok: true, json: async () => ({ data: [], paging: { next: 'https://graph.facebook.com/next', cursors: { after } } }) });
+463:     const beyondBudget = vi.fn().mockResolvedValueOnce({ ok: true, json: async () => grant }).mockResolvedValueOnce(page('cursor-one')).mockResolvedValueOnce(page('cursor-two'));
+464:     vi.stubGlobal('fetch', beyondBudget);
+465:     const beyondBudgetOperation = new MetaHttpClient().verificarNumeroVinculado('123456', '987654321', 'scoped-candidate');
+466:     await expect(beyondBudgetOperation).rejects.toBeInstanceOf(MetaIndisponivelError);
+467:     await expect(beyondBudgetOperation).rejects.toMatchObject({ code: 'META_INDISPONIVEL' });
+468:     expect(beyondBudget).toHaveBeenCalledTimes(3);
+469: 
+470:     const cyclic = vi.fn().mockResolvedValueOnce({ ok: true, json: async () => grant }).mockResolvedValueOnce(page('cursor-one')).mockResolvedValueOnce(page('cursor-one'));
+471:     vi.stubGlobal('fetch', cyclic);
+472:     const cyclicOperation = new MetaHttpClient().verificarNumeroVinculado('123456', '987654321', 'scoped-candidate');
+473:     await expect(cyclicOperation).rejects.toBeInstanceOf(MetaIndisponivelError);
+474:     await expect(cyclicOperation).rejects.toMatchObject({ code: 'META_INDISPONIVEL' });
+475:     expect(cyclic).toHaveBeenCalledTimes(3);
+476: 
+477:     const oversized = vi.fn().mockResolvedValueOnce({ ok: true, json: async () => grant }).mockResolvedValueOnce(page('x'.repeat(513)));
+478:     vi.stubGlobal('fetch', oversized);
+479:     const oversizedOperation = new MetaHttpClient().verificarNumeroVinculado('123456', '987654321', 'scoped-candidate');
+480:     await expect(oversizedOperation).rejects.toBeInstanceOf(MetaIndisponivelError);
+481:     await expect(oversizedOperation).rejects.toMatchObject({ code: 'META_INDISPONIVEL' });
+482:     expect(oversized).toHaveBeenCalledTimes(2);
+483:   });
+484: 
+485:   it('exposes a bounded page cursor only when the provider signals a next page', async () => {
+486:     process.env.META_APP_ID = 'fake-id';
+487:     process.env.META_APP_SECRET = 'fake-secret';
+488:     process.env.META_SIGNUP_CONFIG_ID = 'fake-config';
+489:     process.env.GRAPH_VERSION = 'v26.0';
+490:     const grant = { data: { app_id: 'fake-id', is_valid: true, scopes: ['whatsapp_business_management', 'whatsapp_business_messaging'], granular_scopes: [
+491:       { scope: 'whatsapp_business_management', target_ids: ['123456'] }, { scope: 'whatsapp_business_messaging', target_ids: ['123456'] },
+492:     ] } };
+493:     const fetchFake = vi.fn()
+494:       .mockResolvedValueOnce({ ok: true, json: async () => grant })
+495:       .mockResolvedValueOnce({ ok: true, json: async () => ({ data: [{ id: '987654321' }], paging: { cursors: { after: 'cursor-last-page' } } }) });
+496:     vi.stubGlobal('fetch', fetchFake);
+497:     await expect(new MetaHttpClient().recursos('candidate', '123456')).resolves.toMatchObject({ next: null });
+498:     fetchFake.mockReset()
+499:       .mockResolvedValueOnce({ ok: true, json: async () => grant })
+500:       .mockResolvedValueOnce({ ok: true, json: async () => ({ data: [], paging: { next: 'https://provider.invalid/page?secret=hidden', cursors: { after: 'safe-cursor' } } }) });
+501:     await expect(new MetaHttpClient().recursos('candidate', '123456')).resolves.toMatchObject({ next: 'safe-cursor' });
+502:   });
+503: 
+504:   it('rejects redirects and never follows provider locations with registration credentials', async () => {
+505:     process.env.GRAPH_VERSION = 'v26.0';
+506:     const fetchFake = vi.fn().mockResolvedValue({ ok: false, status: 307, json: async () => ({ location: 'https://foreign.invalid' }) });
+507:     vi.stubGlobal('fetch', fetchFake);
+508:     await expect(new MetaHttpClient().registrarNumero('phone-id', '123456', 'candidate-token')).rejects.toBeInstanceOf(MetaIndisponivelError);
+509:     expect(fetchFake).toHaveBeenCalledTimes(1);
+510:     expect(fetchFake.mock.calls[0][1].redirect).toBe('error');
+511:   });
+512: 
+513:   it('does not query a WABA outside the currently validated app grant', async () => {
+514:     process.env.META_APP_ID = 'fake-id';
+515:     process.env.META_APP_SECRET = 'fake-secret';
+516:     process.env.META_SIGNUP_CONFIG_ID = 'fake-config';
+517:     process.env.GRAPH_VERSION = 'v26.0';
+518:     const fetchFake = vi.fn().mockResolvedValue({ ok: true, json: async () => ({ data: { app_id: 'fake-id', is_valid: true, scopes: ['whatsapp_business_management', 'whatsapp_business_messaging'], granular_scopes: [
+519:       { scope: 'whatsapp_business_management', target_ids: ['123456'] },
+520:       { scope: 'whatsapp_business_messaging', target_ids: ['123456'] },
+521:     ] } }) });
+522:     vi.stubGlobal('fetch', fetchFake);
+523:     await expect(new MetaHttpClient().confirmarNumero('654321', '987654321', 'candidate')).resolves.toBeNull();
+524:     expect(fetchFake).toHaveBeenCalledTimes(1);
+525:   });
+526: 
+527:   it.each([
+528:     ['register', 'registrarNumero'],
+529:     ['subscription', 'inscreverWaba'],
+530:   ] as const)('requires an explicit provider success acknowledgement for %s', async (_label, method) => {
+531:     process.env.GRAPH_VERSION = 'v26.0';
+532:     const client = new MetaHttpClient();
+533:     for (const response of [
+534:       { success: false },
+535:       { success: 'false' },
+536:       { success: 'TRUE' },
+537:       {},
+538:     ]) {
+539:       vi.stubGlobal('fetch', vi.fn().mockResolvedValue({ ok: true, json: async () => response }));
+540:       await expect(method === 'registrarNumero'
+541:         ? client.registrarNumero('phone-id', '123456', 'scoped-token')
+542:         : client.inscreverWaba('waba-id', 'scoped-token')).rejects.toBeInstanceOf(MetaIndisponivelError);
+543:     }
+544:     vi.stubGlobal('fetch', vi.fn().mockResolvedValue({ ok: true, json: async () => ({ success: true }) }));
+545:     await expect(method === 'registrarNumero'
+546:       ? client.registrarNumero('phone-id', '123456', 'scoped-token')
+547:       : client.inscreverWaba('waba-id', 'scoped-token')).resolves.toBeUndefined();
+548:     vi.stubGlobal('fetch', vi.fn().mockResolvedValue({ ok: true, json: async () => ({ success: 'true' }) }));
+549:     await expect(method === 'registrarNumero'
+550:       ? client.registrarNumero('phone-id', '123456', 'scoped-token')
+551:       : client.inscreverWaba('waba-id', 'scoped-token')).resolves.toBeUndefined();
+552:   });
+553: });
+```
+
+
+## Source api-app/src/integrations/meta/meta.client.ts
+
+Raw SHA256 `9f954f6c1c2bd10030f5eed0cb42e493d6e480106bcfc3f44977cb97a716d34f`; bytes17388.
+
+```
+1: import { Injectable } from '@nestjs/common';
+2: import type { ChannelSendResult } from '../../domain/channels/transport/channel';
+3: 
+4: export const META_CLIENT = Symbol('META_CLIENT');
+5: 
+6: export interface MetaNumber {
+7:   id: string;
+8:   telefone: string | null;
+9:   nomeVerificado: string | null;
+10: }
+11: 
+12: export interface MetaCapabilities {
+13:   appId: string | null;
+14:   configId: string | null;
+15:   graphVersion: string | null;
+16:   available: boolean;
+17:   reason: 'AVAILABLE' | 'NOT_CONFIGURED' | 'PARTIAL_CONFIGURATION';
+18: }
+19: 
+20: /** Every customer operation is explicitly scoped to a decrypted channel token. */
+21: export interface MetaClient {
+22:   configurado(): boolean;
+23:   canSendText(): boolean;
+24:   capabilities(): MetaCapabilities;
+25:   exchangeCode(code: string): Promise<{ accessToken: string }>;
+26:   recursos(accessToken: string, wabaId?: string, after?: string): Promise<{ wabas: Array<{ id: string; name: string | null }>; numbers: MetaNumber[]; next: string | null }>;
+27:   numerosDaWaba(wabaId: string, accessToken?: string, after?: string): Promise<{ data: MetaNumber[]; next: string | null }>;
+28:   confirmarNumero(wabaId: string, phoneNumberId: string, accessToken: string, after?: string): Promise<MetaNumber | null>;
+29:   verificarNumeroVinculado(wabaId: string, phoneNumberId: string, accessToken: string): Promise<MetaNumber | null>;
+30:   registrarNumero(phoneNumberId: string, pin: string, accessToken: string): Promise<void>;
+31:   inscreverWaba(wabaId: string, accessToken: string): Promise<void>;
+32:   enviarTexto(phoneNumberId: string, para: string, texto: string, accessToken?: string): Promise<ChannelSendResult>;
+33: }
+34: 
+35: export class MetaIndisponivelError extends Error {
+36:   readonly code = 'META_INDISPONIVEL';
+37:   constructor(readonly detalhe = 'A Meta recusou a operação.') { super(detalhe); }
+38: }
+39: 
+40: type MetaGranularScope = { scope: string; targetIds?: string[] };
+41: type MetaDebugGrant = { appId: string; valid: boolean; scopes: string[]; granularScopes: MetaGranularScope[] };
+42: 
+43: @Injectable()
+44: export class MetaHttpClient implements MetaClient {
+45:   private readonly appId = process.env.META_APP_ID ?? '';
+46:   private readonly appSecret = process.env.META_APP_SECRET ?? '';
+47:   private readonly configId = process.env.META_SIGNUP_CONFIG_ID ?? '';
+48:   private readonly graphVersion = process.env.GRAPH_VERSION?.trim() ?? '';
+49: 
+50:   private graphVersionValida(): boolean { return /^v\d+\.0$/.test(this.graphVersion); }
+51: 
+52:   capabilities(): MetaCapabilities {
+53:     const configured = [this.appId, this.appSecret, this.configId, this.graphVersion].filter(Boolean).length;
+54:     const graphValid = this.graphVersionValida();
+55:     const available = configured === 4 && graphValid;
+56:     return {
+57:       appId: this.appId || null,
+58:       configId: this.configId || null,
+59:       graphVersion: graphValid ? this.graphVersion : null,
+60:       available,
+61:       reason: available ? 'AVAILABLE' : configured === 0 ? 'NOT_CONFIGURED' : 'PARTIAL_CONFIGURATION',
+62:     };
+63:   }
+64: 
+65:   /** Compatibility probe for callers being retired; never supplies a credential. */
+66:   configurado(): boolean { return this.capabilities().available; }
+67:   canSendText(): boolean { return this.graphVersionValida(); }
+68: 
+69:   async exchangeCode(code: string): Promise<{ accessToken: string }> {
+70:     if (!this.capabilities().available) throw new MetaIndisponivelError('Autorização Meta indisponível.');
+71:     const body = new URLSearchParams({
+72:       client_id: this.appId,
+73:       client_secret: this.appSecret,
+74:       code,
+75:     });
+76:     const result = await this.request('/oauth/access_token', undefined, 'POST', body);
+77:     const accessToken = typeof result.access_token === 'string' ? result.access_token : '';
+78:     if (!accessToken) throw new MetaIndisponivelError('A Meta não concluiu a autorização.');
+79:     await this.validateAccessToken(accessToken);
+80:     return { accessToken };
+81:   }
+82: 
+83:   async recursos(accessToken: string, wabaId?: string, after?: string) {
+84:     if (!accessToken) throw new MetaIndisponivelError('Credencial scoped do canal necessária.');
+85:     const grant = this.assertCurrentGrant(await this.debugToken(accessToken));
+86:     const wabas = wabaTargets(grant.granularScopes);
+87:     if (!wabaId) return { wabas: wabas.slice(0, 100).map((id) => ({ id, name: null })), numbers: [], next: null };
+88:     if (!wabas.includes(wabaId)) throw new MetaIndisponivelError('WABA não pertence à autorização atual.');
+89:     const page = await this.numerosDaWaba(wabaId, accessToken, after);
+90:     return { wabas: [{ id: wabaId, name: null }], numbers: page.data.slice(0, 100), next: page.next };
+91:   }
+92: 
+93:   private async validateAccessToken(accessToken: string) {
+94:     this.assertCurrentGrant(await this.debugToken(accessToken));
+95:   }
+96: 
+97:   private assertCurrentGrant(value: unknown): MetaDebugGrant {
+98:     const grant = parseMetaDebugGrant(value);
+99:     const scopes = new Set([...grant.scopes, ...grant.granularScopes.map(({ scope }) => scope)]);
+100:     if (grant.appId !== this.appId || !grant.valid || !scopes.has('whatsapp_business_management') || !scopes.has('whatsapp_business_messaging') || wabaTargets(grant.granularScopes).length === 0) {
+101:       throw new MetaIndisponivelError('A autorização não concede identidade e escopos Meta necessários.');
+102:     }
+103:     return grant;
+104:   }
+105: 
+106:   private async debugToken(inputToken: string) {
+107:     const query = new URLSearchParams({ input_token: inputToken });
+108:     const response = await this.request(`/debug_token?${query.toString()}`, `${this.appId}|${this.appSecret}`);
+109:     return response.data;
+110:   }
+111: 
+112:   async numerosDaWaba(wabaId: string, accessToken: string, after?: string) {
+113:     if (!accessToken) throw new MetaIndisponivelError('Credencial scoped do canal necessária.');
+114:     const url = new URL(`/${encodeURIComponent(wabaId)}/phone_numbers`, `https://graph.facebook.com/${this.graphVersion}`);
+115:     url.searchParams.set('fields', 'id,display_phone_number,verified_name');
+116:     url.searchParams.set('limit', '100');
+117:     if (after) url.searchParams.set('after', after);
+118:     const result = await this.request(url.pathname + url.search, accessToken);
+119:     if (!Array.isArray(result.data)) throw new MetaIndisponivelError('A resposta da Meta está estruturalmente inválida.');
+120:     const rows = result.data.map((row) => {
+121:       if (!isRecord(row) || typeof row.id !== 'string' || row.id.length === 0) {
+122:         throw new MetaIndisponivelError('A resposta da Meta está estruturalmente inválida.');
+123:       }
+124:       const digits = typeof row.display_phone_number === 'string' ? row.display_phone_number.replace(/\D/g, '') : '';
+125:       return { id: row.id, telefone: digits || null, nomeVerificado: typeof row.verified_name === 'string' ? row.verified_name : null };
+126:     });
+127:     const data = rows;
+128:     const paging = result.paging;
+129:     if (paging !== undefined && paging !== null && !isRecord(paging)) {
+130:       throw new MetaIndisponivelError('A resposta da Meta está estruturalmente inválida.');
+131:     }
+132:     const providerNext = isRecord(paging) ? paging.next : undefined;
+133:     if (providerNext !== undefined && providerNext !== null && typeof providerNext !== 'string') {
+134:       throw new MetaIndisponivelError('A resposta da Meta está estruturalmente inválida.');
+135:     }
+136:     const hasNext = typeof providerNext === 'string';
+137:     const cursors = isRecord(paging) ? paging.cursors : undefined;
+138:     if (cursors !== undefined && cursors !== null && !isRecord(cursors)) {
+139:       throw new MetaIndisponivelError('A resposta da Meta está estruturalmente inválida.');
+140:     }
+141:     const next = isRecord(cursors) ? cursors.after : undefined;
+142:     if (hasNext && (typeof next !== 'string' || next.length === 0 || next.length > 512)) {
+143:       throw new MetaIndisponivelError('A verificação do número está inconclusiva.');
+144:     }
+145:     return { data, next: hasNext ? next as string : null };
+146:   }
+147: 
+148:   async confirmarNumero(wabaId: string, phoneNumberId: string, accessToken: string, after?: string) {
+149:     const grant = this.assertCurrentGrant(await this.debugToken(accessToken));
+150:     const targets = wabaTargets(grant.granularScopes);
+151:     if (!targets.includes(wabaId)) return null;
+152:     const page = await this.numerosDaWaba(wabaId, accessToken, after);
+153:     return page.data.find((item) => item.id === phoneNumberId) ?? null;
+154:   }
+155: 
+156:   /** Revalidates a persisted phone identity across a small, fixed number of pages. */
+157:   async verificarNumeroVinculado(wabaId: string, phoneNumberId: string, accessToken: string) {
+158:     if (!accessToken) throw new MetaIndisponivelError('Credencial scoped do canal necessária.');
+159:     const grant = this.assertCurrentGrant(await this.debugToken(accessToken));
+160:     if (!wabaTargets(grant.granularScopes).includes(wabaId)) return null;
+161: 
+162:     const cursors = new Set<string>();
+163:     let after: string | undefined;
+164:     for (let pageIndex = 0; pageIndex < 2; pageIndex += 1) {
+165:       const page = await this.numerosDaWaba(wabaId, accessToken, after);
+166:       const number = page.data.find((item) => item.id === phoneNumberId);
+167:       if (number) return number;
+168:       if (!page.next) return null;
+169:       if (page.next.length > 512 || cursors.has(page.next)) {
+170:         throw new MetaIndisponivelError('A verificação do número está inconclusiva.');
+171:       }
+172:       if (pageIndex === 1) throw new MetaIndisponivelError('A verificação do número está inconclusiva.');
+173:       cursors.add(page.next);
+174:       after = page.next;
+175:     }
+176:     throw new MetaIndisponivelError('A verificação do número está inconclusiva.');
+177:   }
+178: 
+179:   async registrarNumero(phoneNumberId: string, pin: string, accessToken: string) {
+180:     const result = await this.request(`/${encodeURIComponent(phoneNumberId)}/register`, accessToken, 'POST', { messaging_product: 'whatsapp', pin });
+181:     if (result.success !== true && result.success !== 'true') throw new MetaIndisponivelError('A Meta não confirmou o registro do número.');
+182:   }
+183: 
+184:   async inscreverWaba(wabaId: string, accessToken: string) {
+185:     const result = await this.request(`/${encodeURIComponent(wabaId)}/subscribed_apps`, accessToken, 'POST', {});
+186:     if (result.success !== true && result.success !== 'true') throw new MetaIndisponivelError('A Meta não confirmou a inscrição do webhook.');
+187:   }
+188: 
+189:   async enviarTexto(phoneNumberId: string, para: string, texto: string, accessToken?: string): Promise<ChannelSendResult> {
+190:     if (!accessToken) return { outcome: 'BLOCKED', reason: 'PENDING_CREDENTIAL' };
+191:     if (!phoneNumberId || !this.graphVersionValida()) return { outcome: 'BLOCKED', reason: 'CHANNEL_NOT_READY' };
+192:     let response: Response;
+193:     try {
+194:       response = await fetch(`https://graph.facebook.com/${this.graphVersion}/${encodeURIComponent(phoneNumberId)}/messages`, {
+195:         method: 'POST',
+196:         headers: { accept: 'application/json', authorization: `Bearer ${accessToken}`, 'content-type': 'application/json' },
+197:         body: JSON.stringify({ messaging_product: 'whatsapp', to: para, type: 'text', text: { body: texto } }),
+198:         signal: AbortSignal.timeout(10_000), redirect: 'error',
+199:       });
+200:     } catch {
+201:       return { outcome: 'UNKNOWN', evidence: 'TRANSPORT_UNCONFIRMED', legacyCode: 'META_RECUSOU' };
+202:     }
+203: 
+204:     let payload: unknown;
+205:     try {
+206:       payload = await response.json();
+207:     } catch {
+208:       return { outcome: 'UNKNOWN', evidence: 'TRANSPORT_UNCONFIRMED', legacyCode: 'META_RECUSOU' };
+209:     }
+210:     if (!isRecord(payload)) {
+211:       return { outcome: 'UNKNOWN', evidence: 'TRANSPORT_UNCONFIRMED', legacyCode: 'META_RECUSOU' };
+212:     }
+213:     if (payload.messages !== undefined && !Array.isArray(payload.messages)) {
+214:       return { outcome: 'UNKNOWN', evidence: 'TRANSPORT_UNCONFIRMED', legacyCode: 'META_RECUSOU' };
+215:     }
+216:     if (payload.error !== undefined && payload.error !== null && !isRecord(payload.error)) {
+217:       return { outcome: 'UNKNOWN', evidence: 'TRANSPORT_UNCONFIRMED', legacyCode: 'META_RECUSOU' };
+218:     }
+219:     const messages = Array.isArray(payload.messages) ? payload.messages : [];
+220:     const first = messages[0];
+221:     const validMessageEnvelope = messages.every((message) => isRecord(message)
+222:       && (message.id === undefined || (typeof message.id === 'string' && message.id.trim().length > 0)));
+223:     const id = messages.length === 1 && isRecord(first) && typeof first.id === 'string' && first.id.trim() ? first.id : null;
+224:     const error = isRecord(payload.error) ? payload.error : null;
+225:     const successIndicatorValid = payload.success === undefined || typeof payload.success === 'boolean';
+226:     const contradictedFailure = payload.success === false;
+227:     if (response.ok && successIndicatorValid && !contradictedFailure && !error && id) {
+228:       return { outcome: 'ACCEPTED', externalMessageId: id };
+229:     }
+230: 
+231:     const refusalStatus = response.status === 400 || response.status === 401 || response.status === 403;
+232:     const validGraphError = error !== null
+233:       && typeof error.message === 'string' && error.message.length > 0
+234:       && typeof error.code === 'number';
+235:     const transientFieldValid = error && (error.is_transient === undefined || typeof error.is_transient === 'boolean');
+236:     const contradictorySuccess = payload.success === true;
+237:     const stableRefusal = validGraphError && transientFieldValid && error.is_transient !== true
+238:       && [10, 100, 190].includes(error.code as number);
+239:     if (refusalStatus && stableRefusal && successIndicatorValid && !contradictorySuccess
+240:       && (payload.messages === undefined || messages.length === 0)) {
+241:       return { outcome: 'REJECTED', code: 'META_RECUSOU' };
+242:     }
+243:     const validAckWithoutId = Array.isArray(payload.messages) && messages.length === 1
+244:       && validMessageEnvelope && isRecord(first) && first.id === undefined;
+245:     if (response.ok && successIndicatorValid && !contradictedFailure && !error && validAckWithoutId) {
+246:       return { outcome: 'UNKNOWN', evidence: 'ACK_WITHOUT_ID', legacyCode: 'META_RECUSOU' };
+247:     }
+248:     return { outcome: 'UNKNOWN', evidence: 'TRANSPORT_UNCONFIRMED', legacyCode: 'META_RECUSOU' };
+249:   }
+250: 
+251:   private async request(path: string, accessToken?: string, method: 'GET' | 'POST' = 'GET', body?: unknown) {
+252:     if (!this.graphVersionValida()) throw new MetaIndisponivelError('Versão Graph não configurada.');
+253:     const headers: Record<string, string> = { accept: 'application/json' };
+254:     if (accessToken) headers.authorization = `Bearer ${accessToken}`;
+255:     if (body instanceof URLSearchParams) headers['content-type'] = 'application/x-www-form-urlencoded';
+256:     else if (body !== undefined) headers['content-type'] = 'application/json';
+257:     let response: Response;
+258:     try {
+259:       response = await fetch(`https://graph.facebook.com/${this.graphVersion}${path}`, {
+260:         method, headers, body: body instanceof URLSearchParams ? body.toString() : body === undefined ? undefined : JSON.stringify(body),
+261:         signal: AbortSignal.timeout(10_000), redirect: 'error',
+262:       });
+263:     } catch {
+264:       throw new MetaIndisponivelError('A Meta está temporariamente indisponível.');
+265:     }
+266:     if (!response.ok) throw new MetaIndisponivelError('A Meta recusou a operação.');
+267:     let payload: unknown;
+268:     try {
+269:       payload = await response.json();
+270:     } catch {
+271:       throw new MetaIndisponivelError('A resposta da Meta está temporariamente indisponível.');
+272:     }
+273:     if (!isRecord(payload)) throw new MetaIndisponivelError('A resposta da Meta está estruturalmente inválida.');
+274:     return payload;
+275:   }
+276: }
+277: 
+278: function isRecord(value: unknown): value is Record<string, unknown> {
+279:   return typeof value === 'object' && value !== null && !Array.isArray(value);
+280: }
+281: 
+282: function parseMetaDebugGrant(value: unknown): MetaDebugGrant {
+283:   if (!isRecord(value) || typeof value.app_id !== 'string' || typeof value.is_valid !== 'boolean') {
+284:     throw new MetaIndisponivelError('A resposta da Meta está estruturalmente inválida.');
+285:   }
+286:   const scopes = value.scopes === undefined ? [] : parseStringArray(value.scopes);
+287:   const rawGranularScopes = value.granular_scopes === undefined ? [] : value.granular_scopes;
+288:   if (!Array.isArray(rawGranularScopes)) throw new MetaIndisponivelError('A resposta da Meta está estruturalmente inválida.');
+289:   const granularScopes = rawGranularScopes.map((entry): MetaGranularScope => {
+290:     if (!isRecord(entry) || typeof entry.scope !== 'string' || entry.scope.length === 0) {
+291:       throw new MetaIndisponivelError('A resposta da Meta está estruturalmente inválida.');
+292:     }
+293:     const targetIds = entry.target_ids === undefined ? undefined : parseStringArray(entry.target_ids);
+294:     return { scope: entry.scope, ...(targetIds === undefined ? {} : { targetIds }) };
+295:   });
+296:   return { appId: value.app_id, valid: value.is_valid, scopes, granularScopes };
+297: }
+298: 
+299: function parseStringArray(value: unknown): string[] {
+300:   if (!Array.isArray(value) || value.some((item) => typeof item !== 'string')) {
+301:     throw new MetaIndisponivelError('A resposta da Meta está estruturalmente inválida.');
+302:   }
+303:   return value;
+304: }
+305: 
+306: function wabaTargets(granular: MetaGranularScope[]): string[] {
+307:   const byScope = new Map<string, Set<string>>();
+308:   for (const item of granular) {
+309:     if (!['whatsapp_business_management', 'whatsapp_business_messaging'].includes(item.scope)) continue;
+310:     const targets = byScope.get(item.scope) ?? new Set<string>();
+311:     for (const id of item.targetIds ?? []) if (/^\d{5,}$/.test(id)) targets.add(id);
+312:     byScope.set(item.scope!, targets);
+313:   }
+314:   const management = byScope.get('whatsapp_business_management') ?? new Set<string>();
+315:   const messaging = byScope.get('whatsapp_business_messaging') ?? new Set<string>();
+316:   return [...management].filter((id) => messaging.has(id));
+317: }
+```
+
+
+## Source api-app/src/surfaces/bff/bff.module.ts
+
+Raw SHA256 `327f34eba67746882abc601a3817d94270cff3018d6972a8095dae530a2d6e29`; bytes4917.
+
+```
+1: import { MiddlewareConsumer, Module, NestModule, RequestMethod } from '@nestjs/common';
+2: import { AccessService } from '../../domain/access/access.service';
+3: import { IdentityService } from '../../domain/identity/identity.service';
+4: import { LoginAttemptService } from '../../domain/identity/login-attempt.service';
+5: import { PasswordService } from '../../domain/identity/password.service';
+6: import { SessionService } from '../../infra/session/session.service';
+7: import { ChannelsService } from '../../domain/channels/channels.service';
+8: import { NumberRegistrationService } from '../../domain/channels/number-registration.service';
+9: import { NumberRegistrationsController } from './number-registrations.controller';
+10: import { ConversationsService } from '../../domain/inbox/conversations.service';
+11: import { HistoricoService } from '../../domain/inbox/historico.service';
+12: import { ApiKeyService } from '../../domain/integration/api-key.service';
+13: import { TenancyService } from '../../domain/tenancy/tenancy.service';
+14: import { ModulosService } from '../../domain/produto/modulos.service';
+15: import { SetorService } from '../../domain/setor/setor.service';
+16: import { RegistroDeAtividade } from '../../domain/historico/registro.service';
+17: import { AtividadesService } from '../../domain/historico/atividades.service';
+18: import { OnboardingService } from '../../domain/produto/onboarding.service';
+19: import { PainelService } from '../../domain/painel/painel.service';
+20: import { ArmazenamentoDeArquivo, ArmazenamentoEmDisco } from '../../infra/arquivos/armazenamento';
+21: import { EnvioDeEmail, ResendEmail } from '../../integrations/email/email.client';
+22: import { TokensService } from '../../domain/acesso/tokens.service';
+23: import { ConvitesService } from '../../domain/acesso/convites.service';
+24: import { LimiteDeRecuperacao } from '../../domain/acesso/limite-de-recuperacao.service';
+25: import { ChannelTransportModule } from '../../integrations/channels/channel-transport.module';
+26: import { AuthController } from './auth.controller';
+27: import { ChannelsController } from './channels.controller';
+28: import { ConversationsController } from './conversations.controller';
+29: import { UsuariosService } from '../../domain/identity/usuarios.service';
+30: import { HistoricoController } from './historico.controller';
+31: import { UsuariosController } from './usuarios.controller';
+32: import { IntegracaoController } from './integracao.controller';
+33: import { BusinessUnitsController, MeController } from './me.controller';
+34: import { SetoresController } from './setores.controller';
+35: import { AtividadesController } from './atividades.controller';
+36: import { OnboardingController } from './onboarding.controller';
+37: import { PainelController } from './painel.controller';
+38: import { ArquivosController } from './arquivos.controller';
+39: import { SessionMiddleware } from './session.middleware';
+40: import { TYPEBOT_CLIENT, TypebotHttpClient } from '../../integrations/typebot/typebot.client';
+41: 
+42: /**
+43:  * Superfície BFF (ADR-0006): o que as telas consomem, autenticado por sessão.
+44:  *
+45:  * O middleware é montado no PREFIXO. É isso que faz o guard ser da superfície e
+46:  * não da rota, e é o que impede o defeito que já mordeu os dois sistemas: no
+47:  * Hub, um router.use(requireAuth) sem path interceptou o webhook público.
+48:  */
+49: @Module({
+50:   imports: [ChannelTransportModule],
+51:   controllers: [
+52:     AuthController,
+53:     MeController,
+54:     BusinessUnitsController,
+55:     ChannelsController,
+56:     NumberRegistrationsController,
+57:     ConversationsController,
+58:     IntegracaoController,
+59:     HistoricoController,
+60:     UsuariosController,
+61:     SetoresController,
+62:     AtividadesController,
+63:     OnboardingController,
+64:     PainelController,
+65:     ArquivosController,
+66:   ],
+67:   providers: [
+68:     SessionService,
+69:     IdentityService,
+70:     PasswordService,
+71:     LoginAttemptService,
+72:     AccessService,
+73:     ChannelsService,
+74:     NumberRegistrationService,
+75:     ConversationsService,
+76:     HistoricoService,
+77:     UsuariosService,
+78:     ApiKeyService,
+79:     TenancyService,
+80:     ModulosService,
+81:     SetorService,
+82:     RegistroDeAtividade,
+83:     AtividadesService,
+84:     OnboardingService,
+85:     PainelService,
+86:     { provide: ArmazenamentoDeArquivo, useClass: ArmazenamentoEmDisco },
+87:     { provide: EnvioDeEmail, useClass: ResendEmail },
+88:     TokensService,
+89:     ConvitesService,
+90:     LimiteDeRecuperacao,
+91:     // Adaptadores de SAÍDA por porta (ADR-0006, Emenda 1): o domínio depende da
+92:     // interface, não do HTTP. É o que deixa o teste provar permissão sem a Meta
+93:     // nem a Evolution no ar.
+94:     { provide: TYPEBOT_CLIENT, useClass: TypebotHttpClient },
+95:   ],
+96:   exports: [SessionService, PasswordService],
+97: })
+98: export class BffModule implements NestModule {
+99:   configure(consumer: MiddlewareConsumer): void {
+100:     consumer
+101:       .apply(SessionMiddleware)
+102:       .forRoutes({ path: 'api/bff/{*path}', method: RequestMethod.ALL });
+103:   }
+104: }
+```
+
+
+## Source api-app/src/surfaces/bff/conversations.controller.ts
+
+Raw SHA256 `53d3cffaa258ba1ad45c21eae4ab8712e2011255b7ca14965f73221edd0cc002`; bytes5626.
+
+```
+1: import { BadRequestException, Body, Controller, Get, HttpCode, Param, Post, Query, Req } from '@nestjs/common';
+2: import type { Request } from 'express';
+3: import { AccessService } from '../../domain/access/access.service';
+4: import { exigirPapelNaBu } from '../../domain/access/require-role';
+5: import { ConversationsService } from '../../domain/inbox/conversations.service';
+6: import { RegistroDeAtividade } from '../../domain/historico/registro.service';
+7: import { ator } from './setores.controller';
+8: import { validarConsultaTimeline } from '../../domain/inbox/timeline-pagination';
+9: 
+10: const ABAS = ['QUEUED', 'IN_SERVICE', 'CLOSED'] as const;
+11: 
+12: /** A inbox por BU (ADR-0009): uma tela para os dois canais. */
+13: @Controller('api/bff')
+14: export class ConversationsController {
+15:   constructor(
+16:     private readonly access: AccessService,
+17:     private readonly conversas: ConversationsService,
+18:     private readonly registro: RegistroDeAtividade,
+19:   ) {}
+20: 
+21:   @Get('business-units/:buId/conversations')
+22:   async listar(
+23:     @Param('buId') buId: string,
+24:     @Query() q: Record<string, string>,
+25:     @Req() req: Request,
+26:   ) {
+27:     // Estar no escopo BASTA: com o eixo de capacidades dissolvido (ADR-0018 §3),
+28:     // quem tem grant na BU atende as conversas dela. Era isso que a capacidade
+29:     // ATENDIMENTO dizia, e agora quem diz é o papel.
+30:     await exigirPapelNaBu(this.access, req.usuario!.id, buId, 'ATENDENTE');
+31: 
+32:     const aba = q.aba?.toUpperCase();
+33:     const r = await this.conversas.listar(buId, {
+34:       grupos: aba === 'GRUPO',
+35:       status: ABAS.includes(aba as (typeof ABAS)[number]) ? aba : undefined,
+36:       minhas: q.minhas === 'true' ? req.usuario!.id : undefined,
+37:       pagina: q.pagina ? Number(q.pagina) : undefined,
+38:       limite: q.limite ? Number(q.limite) : undefined,
+39:     });
+40:     // O setor sobe achatado, como a tela o consome (`conversa.setor`).
+41:     return {
+42:       total: r.total,
+43:       pagina: r.pagina,
+44:       temMais: r.temMais,
+45:       conversations: r.conversas.map(({ bu, ...c }) => ({ ...c, setor: bu.setor.name })),
+46:     };
+47:   }
+48: 
+49:   @Get('conversations/:id/messages')
+50:   async thread(@Param('id') id: string, @Query() q: Record<string, unknown>, @Req() req: Request) {
+51:     const { conversa } = await this.resolver(id, req);
+52:     // Validar somente depois do resolver: recurso fora do escopo permanece 404,
+53:     // mesmo quando os parâmetros enviados são inválidos.
+54:     const consulta = validarConsultaTimeline(q);
+55:     const timeline = await this.conversas.timeline(
+56:       conversa.id, consulta.limite, consulta.antes, consulta.marcarLida,
+57:     );
+58: 
+59:     const janela = await this.conversas.estadoDaJanela(conversa.id, conversa.buId);
+60:     return {
+61:       conversa: {
+62:         id: conversa.id,
+63:         contato: conversa.contact,
+64:         nome: conversa.displayName,
+65:         status: conversa.status,
+66:         atendente: conversa.attendantName,
+67:       },
+68:       // O front precisa saber que "responder" pode estar indisponível, e por quê.
+69:       janela: {
+70:         exigida: janela.exigeJanela,
+71:         aberta: janela.aberta,
+72:         expiraEm: janela.expiraEm,
+73:         canal: janela.canal?.type ?? null,
+74:         disponivel: janela.disponivel,
+75:         motivo: janela.motivoIndisponibilidade,
+76:       },
+77:       messages: timeline.messages,
+78:       paginacao: timeline.paginacao,
+79:     };
+80:   }
+81: 
+82:   @Post('conversations/:id/messages')
+83:   @HttpCode(201)
+84:   async responder(@Param('id') id: string, @Body() body: { texto?: string }, @Req() req: Request) {
+85:     const { conversa } = await this.resolver(id, req);
+86: 
+87:     const texto = String(body?.texto ?? '').trim();
+88:     if (!texto) throw new BadRequestException({ error: 'Escreva uma mensagem.', code: 'TEXTO_VAZIO' });
+89:     if (texto.length > 4096) {
+90:       throw new BadRequestException({ error: 'Mensagem muito longa (máx. 4096).', code: 'TEXTO_LONGO' });
+91:     }
+92: 
+93:     const m = await this.conversas.responder(conversa.id, conversa.buId, texto, {
+94:       kind: 'BFF',
+95:       userId: req.usuario!.id,
+96:       name: req.usuario!.nome,
+97:     });
+98:     return { id: m.id, canal: m.channelOrigin, em: m.createdAt };
+99:   }
+100: 
+101:   @Post('conversations/:id/claim')
+102:   async assumir(@Param('id') id: string, @Req() req: Request) {
+103:     const { conversa } = await this.resolver(id, req);
+104: 
+105:     const c = await this.conversas.assumir(conversa.id, { userId: req.usuario!.id, nome: req.usuario!.nome });
+106:     await this.registro.registrarSolto(req.usuario!.mantenedoraId, 'atendimento.assumido', ator(req), {
+107:       buId: conversa.buId,
+108:       entidadeId: conversa.id,
+109:       frase: { contato: conversa.contact },
+110:     });
+111:     return { id: c.id, status: c.status, atendente: c.attendantName };
+112:   }
+113: 
+114:   @Post('conversations/:id/close')
+115:   async finalizar(@Param('id') id: string, @Req() req: Request) {
+116:     const { conversa } = await this.resolver(id, req);
+117: 
+118:     const c = await this.conversas.finalizar(conversa.id);
+119:     await this.registro.registrarSolto(req.usuario!.mantenedoraId, 'atendimento.encerrado', ator(req), {
+120:       buId: conversa.buId,
+121:       entidadeId: conversa.id,
+122:       frase: { contato: conversa.contact },
+123:     });
+124:     return { id: c.id, status: c.status };
+125:   }
+126: 
+127:   /** Escopo primeiro: fora dele, 404 — inclusive para BU de outra Mantenedora. */
+128:   private async resolver(conversaId: string, req: Request) {
+129:     const escopo = await this.access.escopo(req.usuario!.id);
+130:     const conversa = await this.conversas.carregarNoEscopo(conversaId, escopo);
+131:     const bu = await exigirPapelNaBu(this.access, req.usuario!.id, conversa.buId, 'ATENDENTE');
+132:     return { conversa, papel: bu.papel };
+133:   }
+134: }
+```
+
+
+## Source api-app/src/surfaces/public/conversations.controller.ts
+
+Raw SHA256 `b55440061dd4574646e4fa1a3c265cdb8653bab4abf3aa0e86b4057bc7e365ff`; bytes9783.
+
+```
+1: import {
+2:   BadRequestException,
+3:   Body,
+4:   Controller,
+5:   ForbiddenException,
+6:   Get,
+7:   HttpCode,
+8:   HttpException,
+9:   Param,
+10:   Post,
+11:   Query,
+12:   Req,
+13:   Res,
+14: } from '@nestjs/common';
+15: import type { Request, Response } from 'express';
+16: import { ApiKeyService } from '../../domain/integration/api-key.service';
+17: import { RateLimitService } from '../../domain/integration/rate-limit.service';
+18: import { ConversationsService } from '../../domain/inbox/conversations.service';
+19: import { PrismaService } from '../../infra/prisma/prisma.service';
+20: 
+21: const TETO = 500;
+22: 
+23: /**
+24:  * Superfície pública v1 (ADR-0010) — o contrato do parceiro.
+25:  *
+26:  * `account_id` continua se chamando assim e passa a valer o **UUID da BU**: o
+27:  * parceiro já integrou esse nome com esse significado nos dois sistemas antigos,
+28:  * e trocá-lo daria trabalho a ele sem entregar clareza.
+29:  */
+30: @Controller('api/v1')
+31: export class PublicConversationsController {
+32:   constructor(
+33:     private readonly chaves: ApiKeyService,
+34:     private readonly conversas: ConversationsService,
+35:     private readonly limite: RateLimitService,
+36:     private readonly prisma: PrismaService,
+37:   ) {}
+38: 
+39:   @Get('accounts')
+40:   async accounts(@Req() req: Request) {
+41:     const ids = await this.chaves.busDaChave(req.chave!);
+42:     const bus = await this.prisma.businessUnit.findMany({
+43:       where: { id: { in: ids } },
+44:       select: { id: true, name: true, phone: true, channels: { select: { type: true, status: true } } },
+45:       orderBy: { name: 'asc' },
+46:     });
+47: 
+48:     return {
+49:       accounts: bus.map((b) => ({
+50:         id: b.id,
+51:         name: b.name,
+52:         numero: b.phone,
+53:         canais: b.channels.map((c) => ({ tipo: c.type, conectado: c.status === 'CONECTADO' })),
+54:       })),
+55:     };
+56:   }
+57: 
+58:   @Get('conversations')
+59:   async conversations(@Query() q: Record<string, string>, @Req() req: Request) {
+60:     const buId = await this.resolverConta(req, q.account_id);
+61:     const periodo = periodoDe(q.de, q.ate);
+62:     const limite = Math.min(Number(q.limit) || 200, TETO);
+63: 
+64:     const where: Record<string, unknown> = { buId, contactType: 'PESSOA' };
+65:     if (periodo) where.lastMessageAt = { gte: periodo.de, lte: periodo.ate };
+66:     if (q.q?.trim()) {
+67:       where.OR = [
+68:         { displayName: { contains: q.q.trim(), mode: 'insensitive' } },
+69:         { contact: { contains: q.q.trim() } },
+70:       ];
+71:     }
+72: 
+73:     const linhas = await this.prisma.conversation.findMany({
+74:       where,
+75:       orderBy: { lastMessageAt: 'desc' },
+76:       take: limite + 1,
+77:       include: { messages: { orderBy: [{ createdAt: 'desc' }, { id: 'desc' }], take: 1 } },
+78:     });
+79: 
+80:     const pagina = linhas.slice(0, limite);
+81:     const estados = await this.conversas.estadosDasJanelas(pagina.map((c) => ({
+82:       conversationId: c.id, buId, latestMessageOrigin: c.messages[0]?.channelOrigin ?? null,
+83:     })));
+84:     const conversas = pagina.map((c) => {
+85:         const janela = estados.get(c.id);
+86:         return {
+87:           telefone: c.contact,
+88:           nome_whatsapp: c.displayName,
+89:           status: c.status,
+90:           atendendo: c.attendantName,
+91:           ultima_mensagem: c.messages[0]?.content ?? null,
+92:           ultima_direcao: c.messages[0] ? (c.messages[0].direction === 'OUT' ? 'enviada' : 'recebida') : null,
+93:           ultima_em: c.lastMessageAt?.toISOString() ?? null,
+94:           nao_lidas: c.unreadCount,
+95:           // Campo generalizado: quem integrou só o Hub recebe `true` e não muda
+96:           // nada; quem integrou a Central continua lendo o que já lia.
+97:           janela_aberta: janela?.windowOpen ?? false,
+98:           janela_expira_em: janela?.expiresAt?.toISOString() ?? null,
+99:           envio_disponivel: janela?.available ?? false,
+100:           motivo_indisponibilidade: janela ? janela.reason : 'CANAL_SELECIONADO_INDISPONIVEL',
+101:         };
+102:       });
+103: 
+104:     return { conta: { id: buId }, conversations: conversas, truncado: linhas.length > limite };
+105:   }
+106: 
+107:   @Get('conversations/:telefone/messages')
+108:   async messages(
+109:     @Param('telefone') telefone: string,
+110:     @Query() q: Record<string, string>,
+111:     @Req() req: Request,
+112:   ) {
+113:     const buId = await this.resolverConta(req, q.account_id);
+114:     const conversa = await this.conversaDoTelefone(buId, telefone);
+115:     const limite = Math.min(Number(q.limit) || 100, TETO);
+116: 
+117:     const mensagens = await this.prisma.message.findMany({
+118:       where: {
+119:         conversationId: conversa.id,
+120:         // `since` permite sync incremental: o parceiro guarda a data da última
+121:         // mensagem copiada e pede só o que veio depois.
+122:         ...(q.since ? { createdAt: { gt: new Date(q.since) } } : {}),
+123:       },
+124:       orderBy: { createdAt: 'asc' },
+125:       take: limite,
+126:     });
+127: 
+128:     const janela = await this.conversas.estadoDaJanela(conversa.id, buId);
+129:     return {
+130:       telefone: conversa.contact,
+131:       janela_aberta: janela.aberta,
+132:       envio_disponivel: janela.disponivel,
+133:       motivo_indisponibilidade: janela.motivoIndisponibilidade,
+134:       messages: mensagens.map((m) => ({
+135:         id: m.id,
+136:         direcao: m.direction === 'OUT' ? 'enviada' : 'recebida',
+137:         tipo: m.messageType,
+138:         texto: m.content,
+139:         canal: m.channelOrigin,
+140:         respondido_por: m.authorName,
+141:         // Data SEMPRE em ISO-8601 UTC: API externa não pode entregar formato variável.
+142:         em: m.createdAt.toISOString(),
+143:       })),
+144:     };
+145:   }
+146: 
+147:   @Post('messages')
+148:   @HttpCode(201)
+149:   async enviar(@Body() body: Record<string, string>, @Req() req: Request, @Res({ passthrough: true }) res: Response) {
+150:     const buId = await this.resolverConta(req, body?.account_id);
+151:     const telefone = String(body?.telefone ?? '').replace(/\D/g, '');
+152:     const texto = String(body?.texto ?? '').trim();
+153:     if (!telefone) throw new BadRequestException({ error: 'Informe o telefone.', code: 'TELEFONE_INVALIDO' });
+154:     if (!texto) throw new BadRequestException({ error: 'Informe o texto.', code: 'TEXTO_VAZIO' });
+155:     if (texto.length > 4096) throw new BadRequestException({ error: 'Texto muito longo.', code: 'TEXTO_LONGO' });
+156: 
+157:     const espera = this.limite.consumir(req.chave!.id, buId);
+158:     if (espera > 0) {
+159:       res.setHeader('Retry-After', String(espera));
+160:       throw new HttpException({ error: 'Ritmo acima do permitido.', code: 'LIMITE_DE_TAXA' }, 429);
+161:     }
+162: 
+163:     const conversa = await this.conversaOuNova(buId, telefone);
+164:     const atendente = String(body?.atendente ?? '').trim() || req.chave!.nome;
+165:     const m = await this.conversas.responder(conversa.id, buId, texto, { kind: 'PUBLIC', name: atendente });
+166: 
+167:     return { ok: true, message_id: m.id, canal: m.channelOrigin };
+168:   }
+169: 
+170:   @Post('conversations/:telefone/claim')
+171:   async claim(@Param('telefone') telefone: string, @Body() body: Record<string, string>, @Req() req: Request) {
+172:     const buId = await this.resolverConta(req, body?.account_id);
+173:     const conversa = await this.conversaDoTelefone(buId, telefone);
+174:     const atendente = String(body?.atendente ?? '').trim() || req.chave!.nome;
+175: 
+176:     if (conversa.status === 'IN_SERVICE' && conversa.attendantName && conversa.attendantName !== atendente) {
+177:       throw new HttpException(
+178:         { error: `Já está sendo atendida por ${conversa.attendantName}.`, code: 'JA_ATENDIDA' },
+179:         409,
+180:       );
+181:     }
+182:     await this.prisma.conversation.update({
+183:       where: { id: conversa.id },
+184:       data: { status: 'IN_SERVICE', attendantName: atendente, attendantOrigin: 'EXTERNO', attendantUserId: null },
+185:     });
+186:     return { ok: true };
+187:   }
+188: 
+189:   @Post('conversations/:telefone/release')
+190:   async release(@Param('telefone') telefone: string, @Body() body: Record<string, string>, @Req() req: Request) {
+191:     const buId = await this.resolverConta(req, body?.account_id);
+192:     const conversa = await this.conversaDoTelefone(buId, telefone);
+193:     await this.prisma.conversation.update({
+194:       where: { id: conversa.id },
+195:       data: { status: 'QUEUED', attendantName: null, attendantOrigin: null, attendantUserId: null },
+196:     });
+197:     return { ok: true };
+198:   }
+199: 
+200:   /** A conta pedida precisa estar no escopo DA CHAVE — e o escopo nulo nunca sai da Mantenedora. */
+201:   private async resolverConta(req: Request, accountId?: string): Promise<string> {
+202:     if (!accountId) {
+203:       throw new BadRequestException({ error: 'Informe o account_id.', code: 'CONTA_NAO_INFORMADA' });
+204:     }
+205:     const permitidas = await this.chaves.busDaChave(req.chave!);
+206:     if (!permitidas.includes(accountId)) {
+207:       throw new ForbiddenException({
+208:         error: 'Esta chave não tem acesso a essa conta.',
+209:         code: 'SEM_ACESSO_A_CONTA',
+210:       });
+211:     }
+212:     return accountId;
+213:   }
+214: 
+215:   private async conversaDoTelefone(buId: string, telefone: string) {
+216:     const conversa = await this.prisma.conversation.findUnique({
+217:       where: { buId_contact: { buId, contact: telefone.replace(/\D/g, '') } },
+218:     });
+219:     if (!conversa) {
+220:       throw new BadRequestException({ error: 'Conversa não encontrada.', code: 'CONVERSA_NAO_ENCONTRADA' });
+221:     }
+222:     return conversa;
+223:   }
+224: 
+225:   private async conversaOuNova(buId: string, telefone: string) {
+226:     return this.prisma.conversation.upsert({
+227:       where: { buId_contact: { buId, contact: telefone } },
+228:       create: { buId, contact: telefone, contactType: 'PESSOA', status: 'IN_SERVICE' },
+229:       update: {},
+230:     });
+231:   }
+232: }
+233: 
+234: function periodoDe(de?: string, ate?: string): { de: Date; ate: Date } | null {
+235:   if (!de || !ate) return null;
+236:   if (!/^\d{4}-\d{2}-\d{2}$/.test(de) || !/^\d{4}-\d{2}-\d{2}$/.test(ate)) {
+237:     throw new BadRequestException({ error: 'Use de e ate no formato AAAA-MM-DD.', code: 'PERIODO_INVALIDO' });
+238:   }
+239:   return { de: new Date(`${de}T00:00:00.000Z`), ate: new Date(`${ate}T23:59:59.999Z`) };
+240: }
+```
+
+
+## Source api-app/src/surfaces/public/public.module.ts
+
+Raw SHA256 `00a96d54fde7061f61f4ddf2b9cef836a02ad77ca29b62ea422695b9d8f90ef8`; bytes1208.
+
+```
+1: import { MiddlewareConsumer, Module, NestModule, RequestMethod } from '@nestjs/common';
+2: import { ApiKeyService } from '../../domain/integration/api-key.service';
+3: import { RateLimitService } from '../../domain/integration/rate-limit.service';
+4: import { ConversationsService } from '../../domain/inbox/conversations.service';
+5: import { ChannelTransportModule } from '../../integrations/channels/channel-transport.module';
+6: import { ApiKeyMiddleware } from './api-key.middleware';
+7: import { PublicConversationsController } from './conversations.controller';
+8: 
+9: /**
+10:  * Superfície pública (ADR-0010): `/api/v1` no host novo, chave `lh_` da
+11:  * Mantenedora. É o único contrato **versionado** — quebra dele é conversa com um
+12:  * terceiro, não refatoração.
+13:  */
+14: @Module({
+15:   imports: [ChannelTransportModule],
+16:   controllers: [PublicConversationsController],
+17:   providers: [
+18:     ApiKeyService,
+19:     RateLimitService,
+20:     ConversationsService,
+21:   ],
+22:   exports: [ApiKeyService],
+23: })
+24: export class PublicApiModule implements NestModule {
+25:   configure(consumer: MiddlewareConsumer): void {
+26:     consumer.apply(ApiKeyMiddleware).forRoutes({ path: 'api/v1/{*path}', method: RequestMethod.ALL });
+27:   }
+28: }
+```
+
+
+## Source api-app/src/surfaces/webhooks/webhooks.module.ts
+
+Raw SHA256 `abc8fd7960fcca1ce43d21d44a90f8d4708d47e07bde9a48c0009e02dc0503a6`; bytes1111.
+
+```
+1: import { Module } from '@nestjs/common';
+2: import { IncomingService } from '../../domain/inbox/incoming.service';
+3: import { EvolutionWebhookController } from './evolution.controller';
+4: import { MetaWebhookController } from './meta.controller';
+5: import { TYPEBOT_CLIENT, TypebotHttpClient } from '../../integrations/typebot/typebot.client';
+6: import { ChannelTransportModule } from '../../integrations/channels/channel-transport.module';
+7: 
+8: /**
+9:  * Superfície de webhooks (ADR-0006): terceiros empurrando evento.
+10:  *
+11:  * A autenticação é POR ORIGEM e por isso NÃO existe um middleware único de
+12:  * prefixo aqui: a Meta assina o corpo (X-Hub-Signature-256) e a Evolution não
+13:  * assina nada, o que exige segredo no caminho. Cada controller traz a sua — é a
+14:  * única superfície onde isso é correto, e está escrito para não parecer
+15:  * esquecimento.
+16:  */
+17: @Module({
+18:   imports: [ChannelTransportModule],
+19:   controllers: [MetaWebhookController, EvolutionWebhookController],
+20:   providers: [IncomingService, { provide: TYPEBOT_CLIENT, useClass: TypebotHttpClient }],
+21: })
+22: export class WebhooksModule {}
+```
+
+
+## Source api-app/test/api-publica.e2e-spec.ts
+
+Raw SHA256 `4ce7360eb02621f89d25d41924bfafb86b76e8bbec8216dfb509f86000308837`; bytes14387.
+
+```
+1: import { INestApplication } from '@nestjs/common';
+2: import { createHmac } from 'node:crypto';
+3: import request from 'supertest';
+4: import { afterAll, beforeAll, beforeEach, describe, expect, it } from 'vitest';
+5: import { RateLimitService } from '../src/domain/integration/rate-limit.service';
+6: import { PrismaService } from '../src/infra/prisma/prisma.service';
+7: import { EVOLUTION_WEBHOOK_SECRET, META_APP_SECRET, criarCanalVerificado, criarMantenedora, limparBanco, login, metaFake, evolutionFake, subirApp } from './helpers';
+8: 
+9: describe('API pública v1', () => {
+10:   let app: INestApplication;
+11:   let prisma: PrismaService;
+12:   let A: Awaited<ReturnType<typeof criarMantenedora>>;
+13:   let B: Awaited<ReturnType<typeof criarMantenedora>>;
+14:   let chaveA: string;
+15: 
+16:   const PHONE_A = 'phone-alfa';
+17:   const CONTATO = '5584911112222';
+18: 
+19:   const comChave = (chave: string) => ({ Authorization: `Bearer ${chave}` });
+20: 
+21:   const criarChave = async (cookie: string, nome: string, buIds: string[] = []) => {
+22:     const res = await request(app.getHttpServer())
+23:       .post('/api/bff/integracao/api-keys')
+24:       .set('Cookie', cookie).set('x-requested-with', 'teste')
+25:       .send({ nome, buIds })
+26:       .expect(201);
+27:     return res.body.chave as string;
+28:   };
+29: 
+30:   const receber = async (texto: string) => {
+31:     const corpo = {
+32:       entry: [{ changes: [{ field: 'messages', value: {
+33:         metadata: { phone_number_id: PHONE_A },
+34:         contacts: [{ profile: { name: 'Cliente' } }],
+35:         messages: [{ id: `wamid-${texto}`, from: CONTATO, type: 'text', text: { body: texto } }],
+36:       } }] }],
+37:     };
+38:     await request(app.getHttpServer())
+39:       .post('/webhooks/meta')
+40:       .set('content-type', 'application/json')
+41:       .set('x-hub-signature-256', 'sha256=' + createHmac('sha256', META_APP_SECRET).update(JSON.stringify(corpo)).digest('hex'))
+42:       .send(corpo).expect(200);
+43:   };
+44: 
+45:   beforeAll(async () => {
+46:     ({ app, prisma } = await subirApp());
+47:   });
+48: 
+49:   afterAll(async () => {
+50:     await limparBanco(prisma);
+51:     await app?.close();
+52:   });
+53: 
+54:   beforeEach(async () => {
+55:     await limparBanco(prisma);
+56:     app.get(RateLimitService).limpar();
+57:     metaFake.enviados = [];
+58:     A = await criarMantenedora(app, 'Alfa', 'dono@alfa.test');
+59:     B = await criarMantenedora(app, 'Beta', 'dono@beta.test');
+60:     await criarCanalVerificado(prisma, A.businessUnit.id, 'OFICIAL', PHONE_A, { requiresWindow: true });
+61:     chaveA = await criarChave(await login(app, 'dono@alfa.test'), 'Campuzz');
+62:     await receber('oi');
+63:   });
+64: 
+65:   describe('autenticação pela chave', () => {
+66:     it('a chave sai em claro UMA vez, e o prefixo é lh_', () => {
+67:       expect(chaveA.startsWith('lh_')).toBe(true);
+68:     });
+69: 
+70:     it('sem chave: 401 NAO_AUTENTICADO', async () => {
+71:       const res = await request(app.getHttpServer()).get('/api/v1/accounts').expect(401);
+72:       expect(res.body.code).toBe('NAO_AUTENTICADO');
+73:     });
+74: 
+75:     it('cookie de sessão NÃO substitui a chave', async () => {
+76:       const cookie = await login(app, 'dono@alfa.test');
+77:       await request(app.getHttpServer()).get('/api/v1/accounts').set('Cookie', cookie).expect(401);
+78:     });
+79: 
+80:     it('chave revogada responde igual a inexistente', async () => {
+81:       const cookie = await login(app, 'dono@alfa.test');
+82:       const lista = await request(app.getHttpServer()).get('/api/bff/integracao/api-keys').set('Cookie', cookie).expect(200);
+83:       await request(app.getHttpServer())
+84:         .delete(`/api/bff/integracao/api-keys/${lista.body.keys[0].id}`)
+85:         .set('Cookie', cookie).set('x-requested-with', 'teste').expect(204);
+86: 
+87:       const revogada = await request(app.getHttpServer()).get('/api/v1/accounts').set(comChave(chaveA)).expect(401);
+88:       const inexistente = await request(app.getHttpServer()).get('/api/v1/accounts').set(comChave('lh_naoexiste')).expect(401);
+89:       expect(revogada.body).toEqual(inexistente.body);
+90:     });
+91:   });
+92: 
+93:   describe('escopo — a Mantenedora sai da CHAVE, nunca do request', () => {
+94:     it('escopo nulo devolve só as BUs DESTA Mantenedora', async () => {
+95:       const res = await request(app.getHttpServer()).get('/api/v1/accounts').set(comChave(chaveA)).expect(200);
+96:       expect(res.body.accounts).toHaveLength(1);
+97:       expect(res.body.accounts[0].id).toBe(A.businessUnit.id);
+98:     });
+99: 
+100:     it('CROSS-TENANT: pedir a BU de Beta com a chave de Alfa dá 403 SEM_ACESSO_A_CONTA', async () => {
+101:       const res = await request(app.getHttpServer())
+102:         .get(`/api/v1/conversations?account_id=${B.businessUnit.id}`)
+103:         .set(comChave(chaveA))
+104:         .expect(403);
+105:       expect(res.body.code).toBe('SEM_ACESSO_A_CONTA');
+106:     });
+107: 
+108:     it('escopo restrito não alcança outra BU da MESMA Mantenedora', async () => {
+109:       const cookie = await login(app, 'dono@alfa.test');
+110:       // Pelo caminho real: a BU nova HERDA a expansão, senão o dono cairia para
+111:       // VIEWER na Mantenedora (ADR-0008 §4, regra 3).
+112:       const nova = await request(app.getHttpServer())
+113:         .post('/api/bff/business-units').set('Cookie', cookie).set('x-requested-with', 'teste')
+114:         .send({ nome: 'Segunda BU' }).expect(201);
+115:       expect(nova.body.herdaramGrant).toBe(1);
+116: 
+117:       const restrita = await criarChave(cookie, 'Restrita', [A.businessUnit.id]);
+118: 
+119:       await request(app.getHttpServer())
+120:         .get(`/api/v1/conversations?account_id=${nova.body.id}`).set(comChave(restrita)).expect(403);
+121:       await request(app.getHttpServer())
+122:         .get(`/api/v1/conversations?account_id=${A.businessUnit.id}`).set(comChave(restrita)).expect(200);
+123:     });
+124: 
+125:     it('criar chave com escopo apontando para BU de outra Mantenedora é recusado', async () => {
+126:       const cookie = await login(app, 'dono@alfa.test');
+127:       await request(app.getHttpServer())
+128:         .post('/api/bff/integracao/api-keys')
+129:         .set('Cookie', cookie).set('x-requested-with', 'teste')
+130:         .send({ nome: 'Maliciosa', buIds: [B.businessUnit.id] })
+131:         .expect(400);
+132:     });
+133:   });
+134: 
+135:   describe('contrato', () => {
+136:     it('conversations traz janela_aberta e datas em ISO-8601 UTC', async () => {
+137:       const res = await request(app.getHttpServer())
+138:         .get(`/api/v1/conversations?account_id=${A.businessUnit.id}`).set(comChave(chaveA)).expect(200);
+139: 
+140:       const c = res.body.conversations[0];
+141:       expect(c.telefone).toBe(CONTATO);
+142:       expect(c.janela_aberta).toBe(true);
+143:       expect(c.envio_disponivel).toBe(true);
+144:       expect(c.motivo_indisponibilidade).toBeNull();
+145:       expect(c.ultima_em).toMatch(/^\d{4}-\d{2}-\d{2}T.*Z$/);
+146:     });
+147: 
+148:     it('messages aceita since para sincronização incremental', async () => {
+149:       await receber('segunda');
+150:       const todas = await request(app.getHttpServer())
+151:         .get(`/api/v1/conversations/${CONTATO}/messages?account_id=${A.businessUnit.id}`)
+152:         .set(comChave(chaveA)).expect(200);
+153:       expect(todas.body.messages).toHaveLength(2);
+154: 
+155:       const desde = todas.body.messages[0].em;
+156:       const depois = await request(app.getHttpServer())
+157:         .get(`/api/v1/conversations/${CONTATO}/messages?account_id=${A.businessUnit.id}&since=${desde}`)
+158:         .set(comChave(chaveA)).expect(200);
+159:       expect(depois.body.messages).toHaveLength(1);
+160:     });
+161: 
+162:     it('POST messages envia e marca a conversa como atendida por EXTERNO', async () => {
+163:       await request(app.getHttpServer())
+164:         .post('/api/v1/messages').set(comChave(chaveA))
+165:         .send({ account_id: A.businessUnit.id, telefone: CONTATO, texto: 'resposta do parceiro', atendente: 'Campuzz' })
+166:         .expect(201);
+167: 
+168:       expect(metaFake.enviados).toHaveLength(1);
+169:       const conversa = await prisma.conversation.findFirstOrThrow();
+170:       expect(conversa.attendantOrigin).toBe('EXTERNO');
+171:       expect(conversa.attendantName).toBe('Campuzz');
+172:     });
+173: 
+174:     it('reconcilia eco Evolution público entregue durante send e expõe a mesma OUT no refresh', async () => {
+175:       const base = await prisma.businessUnit.findUniqueOrThrow({ where: { id: A.businessUnit.id }, select: { setorId: true } });
+176:       const bu = await prisma.businessUnit.create({ data: { mantenedoraId: A.mantenedora.id, setorId: base.setorId, name: 'Public Evolution echo' } });
+177:       await criarCanalVerificado(prisma, bu.id, 'NAO_OFICIAL', 'public-evolution-echo', { requiresWindow: false });
+178:       const conversation = await prisma.conversation.create({ data: { buId: bu.id, contact: CONTATO, contactType: 'PESSOA', status: 'QUEUED', unreadCount: 2 } });
+179:       await prisma.message.create({ data: { conversationId: conversation.id, buId: bu.id, direction: 'IN', messageType: 'TEXTO', content: 'received', channelOrigin: 'NAO_OFICIAL', status: 'RECEBIDA' } });
+180:       let echoRow: { id: string; createdAt: Date } | null = null;
+181:       evolutionFake.sendHook = async (id, para, texto) => {
+182:         const webhook = { event: 'messages.upsert', instance: 'public-evolution-echo', data: {
+183:           key: { remoteJid: `${para}@s.whatsapp.net`, fromMe: true, id }, message: { conversation: `${texto} provider echo` },
+184:         } };
+185:         await request(app.getHttpServer()).post('/webhooks/evolution').set('x-leadshug-webhook-secret', EVOLUTION_WEBHOOK_SECRET).send(webhook).expect(200);
+186:         echoRow = await prisma.message.findFirstOrThrow({ where: { providerResourceIdentity: { externalResourceId: 'public-evolution-echo' }, externalId: id }, select: { id: true, createdAt: true } });
+187:       };
+188:       const response = await request(app.getHttpServer()).post('/api/v1/messages').set(comChave(chaveA))
+189:         .send({ account_id: bu.id, telefone: CONTATO, texto: 'trusted public sender body', atendente: 'Campuzz' }).expect(201);
+190:       evolutionFake.sendHook = null;
+191:       expect(response.body.message_id).toBe(echoRow?.id);
+192:       const outbound = await prisma.message.findUniqueOrThrow({ where: { id: response.body.message_id } });
+193:       expect(outbound).toMatchObject({ direction: 'OUT', content: 'trusted public sender body', authorName: 'Campuzz', providerResourceIdentityId: expect.any(String) });
+194:       expect(outbound.createdAt).toEqual(echoRow?.createdAt);
+195:       expect(await prisma.message.count({ where: { conversationId: conversation.id, direction: 'OUT' } })).toBe(1);
+196:       expect(await prisma.message.count({ where: { conversationId: conversation.id, direction: 'IN' } })).toBe(1);
+197:       expect((await prisma.conversation.findUniqueOrThrow({ where: { id: conversation.id } })).unreadCount).toBe(2);
+198:       const refreshed = await request(app.getHttpServer()).get(`/api/v1/conversations/${CONTATO}/messages?account_id=${bu.id}`).set(comChave(chaveA)).expect(200);
+199:       expect(refreshed.body.messages).toContainEqual(expect.objectContaining({ id: outbound.id, direcao: 'enviada', texto: 'trusted public sender body', respondido_por: 'Campuzz' }));
+200: 
+201:       const senderFirst = await request(app.getHttpServer()).post('/api/v1/messages').set(comChave(chaveA))
+202:         .send({ account_id: bu.id, telefone: CONTATO, texto: 'trusted public sender first', atendente: 'Campuzz' }).expect(201);
+203:       const senderFirstRow = await prisma.message.findUniqueOrThrow({ where: { id: senderFirst.body.message_id } });
+204:       const lateEcho = { event: 'messages.upsert', instance: 'public-evolution-echo', data: {
+205:         key: { remoteJid: `${CONTATO}@s.whatsapp.net`, fromMe: true, id: 'evo-enviado-2' }, message: { conversation: 'late untrusted echo' },
+206:       } };
+207:       await request(app.getHttpServer()).post('/webhooks/evolution').set('x-leadshug-webhook-secret', EVOLUTION_WEBHOOK_SECRET).send(lateEcho).expect(200);
+208:       const senderFirstAfterEcho = await prisma.message.findUniqueOrThrow({ where: { id: senderFirstRow.id } });
+209:       expect(senderFirstAfterEcho).toMatchObject({ createdAt: senderFirstRow.createdAt, content: 'trusted public sender first', authorName: 'Campuzz' });
+210:       expect(await prisma.message.count({ where: { conversationId: conversation.id, direction: 'OUT' } })).toBe(2);
+211:       expect((await prisma.conversation.findUniqueOrThrow({ where: { id: conversation.id } })).unreadCount).toBe(2);
+212:     });
+213: 
+214:     it('retém outcome ambíguo quando o envio público não confirma o ID', async () => {
+215:       metaFake.sendIdNull = true;
+216:       const res = await request(app.getHttpServer())
+217:         .post('/api/v1/messages').set(comChave(chaveA))
+218:         .send({ account_id: A.businessUnit.id, telefone: CONTATO, texto: 'resposta incerta', atendente: 'Parceiro' })
+219:         .expect(409);
+220:       expect(res.body).toMatchObject({ code: 'EXTERNAL_MESSAGE_ID_MISSING', outcome: 'AMBIGUOUS_SEND_RECORDED' });
+221:       expect(res.body.error).toMatch(/Verifique a conversa antes de tentar novamente/);
+222:       expect(metaFake.enviados).toHaveLength(1);
+223:       const failed = await prisma.message.findFirstOrThrow({ where: { buId: A.businessUnit.id, direction: 'OUT', externalId: null } });
+224:       expect(failed).toMatchObject({ status: 'FALHOU', content: 'resposta incerta', authorName: 'Parceiro' });
+225:       metaFake.sendIdNull = false;
+226:     });
+227: 
+228:     it('fora da janela, POST messages recusa com JANELA_FECHADA', async () => {
+229:       await prisma.message.updateMany({ data: { createdAt: new Date(Date.now() - 25 * 60 * 60 * 1000) } });
+230:       const res = await request(app.getHttpServer())
+231:         .post('/api/v1/messages').set(comChave(chaveA))
+232:         .send({ account_id: A.businessUnit.id, telefone: CONTATO, texto: 'tarde demais' })
+233:         .expect(409);
+234:       expect(res.body.code).toBe('JANELA_FECHADA');
+235:       expect(metaFake.enviados).toHaveLength(0);
+236:     });
+237:   });
+238: 
+239:   describe('limite de taxa (ADR-0010 §7) — fecha o buraco de ritmo do S3', () => {
+240:     it('estoura em 429 LIMITE_DE_TAXA com Retry-After', async () => {
+241:       const enviar = () =>
+242:         request(app.getHttpServer())
+243:           .post('/api/v1/messages').set(comChave(chaveA))
+244:           .send({ account_id: A.businessUnit.id, telefone: CONTATO, texto: 'em rajada' });
+245: 
+246:       const limite = Number(process.env.API_V1_ENVIOS_POR_MINUTO ?? 20);
+247:       for (let i = 0; i < limite; i++) await enviar().expect(201);
+248: 
+249:       const estourou = await enviar().expect(429);
+250:       expect(estourou.body.code).toBe('LIMITE_DE_TAXA');
+251:       expect(estourou.headers['retry-after']).toBeTruthy();
+252:       expect(metaFake.enviados).toHaveLength(limite);
+253:     });
+254:   });
+255: });
+```
+
+
+## Source api-app/test/browser-server.cjs
+
+Raw SHA256 `40e56e2d6672800acd4a00f87b942fc88b8361c770d06ee6d7c8a883a15d3390`; bytes11647.
+
+```
+1: const { Test } = require('@nestjs/testing');
+2: const { AppModule } = require('../dist/app.module.js');
+3: const { META_CLIENT, MetaIndisponivelError } = require('../dist/integrations/meta/meta.client.js');
+4: const { EVOLUTION_CLIENT } = require('../dist/integrations/evolution/evolution.client.js');
+5: const { configurarBodyParsers } = require('../dist/infra/http/body-parsers.js');
+6: const { RealtimeService } = require('../dist/realtime/realtime.service.js');
+7: const { sealChannelCredential } = require('../dist/domain/channels/channel-credential-crypto.js');
+8: const { PrismaService } = require('../dist/infra/prisma/prisma.service.js');
+9: 
+10: async function main() {
+11:   const fixturePort = Number(process.env.LEADSHUG_FIXTURE_PORT ?? '3101');
+12: const db = process.env.DATABASE_URL;
+13:   const fixtureDb = process.env.LEADSHUG_E2E_DATABASE_URL;
+14:   if (!db || db !== fixtureDb) throw new Error('O servidor de browser requer DATABASE_URL igual ao banco dedicado de E2E.');
+15:   const dbName = new URL(db).pathname.slice(1).split('?')[0];
+16:   if (!dbName.startsWith('leadshug_timeline_')) throw new Error('O servidor de browser aceita apenas banco leadshug_timeline_* descartável.');
+17:   process.env.SESSION_SECRET = 'segredo-de-e2e';
+18:   process.env.INTERNAL_SERVICE_TOKEN = 'token-de-e2e';
+19:   process.env.META_APP_SECRET = 'segredo-do-app-meta';
+20:   process.env.META_APP_ID = 'fixture-app';
+21:   process.env.META_SIGNUP_CONFIG_ID = 'fixture-config';
+22:   process.env.GRAPH_VERSION = 'v26.0';
+23:   process.env.EVOLUTION_API_URL = 'http://127.0.0.1:3101/provider/evolution';
+24:   process.env.EVOLUTION_API_KEY = 'timeline-provider-port-only';
+25:   process.env.EVOLUTION_WEBHOOK_SECRET = 'timeline-evolution-header-secret';
+26:   process.env.EVOLUTION_WEBHOOK_URL = 'http://127.0.0.1:3100/webhooks/evolution';
+27:   process.env.CHANNEL_CREDENTIAL_KEY_ID = 'timeline-key-v1';
+28:   process.env.CHANNEL_CREDENTIAL_KEY = Buffer.alloc(32, 29).toString('base64');
+29:   process.env.WEBHOOK_VERIFY_TOKEN = 'verify-token-de-teste';
+30:   process.env.LH_ARQUIVOS_DIR = '/tmp/leadshug-arquivos-e2e';
+31:   process.env.WEB_ORIGIN = 'http://127.0.0.1:4173';
+32: 
+33:   let fixturePrisma;
+34:   const fixture = async (path, method = 'GET', body) => {
+35:     const response = await fetch(`http://127.0.0.1:${fixturePort}${path}`, {
+36:       method, headers: { 'x-fixture-provider-token': 'timeline-provider-port-only', ...(body ? { 'content-type': 'application/json' } : {}) },
+37:       body: body ? JSON.stringify(body) : undefined,
+38:     });
+39:     if (!response.ok) throw new Error('provider fixture unavailable');
+40:     return response.status === 204 ? null : response.json();
+41:   };
+42:   const call = (operation, args = {}) => fixture('/provider/call', 'POST', { operation, args });
+43:   const tokenPermitido = async (accessToken) => {
+44:     return /^timeline-code-token:[A-Za-z0-9_-]+$/.test(accessToken ?? '');
+45:   };
+46:   const providerResources = async (accessToken) => {
+47:     if (!/^timeline-(?:scoped-token|code-token):[A-Za-z0-9_-]+$/.test(accessToken ?? '')) throw new Error('scoped credential required');
+48:     let all = await fixture('/provider/resources');
+49:     if (accessToken.startsWith('timeline-scoped-token:')) return all.filter((r) => r.id === accessToken.slice('timeline-scoped-token:'.length));
+50:     if (accessToken.startsWith('timeline-code-token:')) {
+51:       const encoded = accessToken.slice('timeline-code-token:'.length); const code = Buffer.from(encoded, 'base64url').toString(); const state = await fixture('/provider/state');
+52:       const ids = state.meta.grantResourceIds?.[code]; if (!Array.isArray(ids)) throw new Error('unknown fixture grant');
+53:       all = all.filter((r) => ids.includes(r.id));
+54:     }
+55:     return all;
+56:   };
+57:   const metaFake = {
+58:     capabilities: () => ({ appId: 'fixture-app', configId: 'fixture-config', graphVersion: 'v26.0', available: true, reason: 'AVAILABLE' }),
+59:     canSendText: () => true,
+60:     configurado: () => true,
+61:     async exchangeCode(code) { await call('meta.exchange', { codeLength: String(code ?? '').length }); const safeCode = String(code ?? ''); const state = await fixture('/provider/state'); if (!Object.hasOwn(state.meta.grantResourceIds ?? {}, safeCode)) throw new Error('unknown fixture authorization grant'); return { accessToken: `timeline-code-token:${Buffer.from(safeCode).toString('base64url')}` }; },
+62:     async recursos(accessToken, wabaId, after) {
+63:       if (!(await tokenPermitido(accessToken))) throw new Error('scoped credential required');
+64:       await call('meta.resources', { wabaId: wabaId ?? null, after: after ?? null });
+65:       const all = await providerResources(accessToken);
+66:       const wabas = [...new Map(all.map((r) => [r.wabaId, { id: r.wabaId, name: r.wabaName ?? null }])).values()];
+67:       if (!wabaId) return { wabas, numbers: [], next: null };
+68:       const state = await fixture('/provider/state');
+69:       const key = `${wabaId}:${after ?? ''}`;
+70:       const page = state.meta.pages?.[key];
+71:       let data = all.filter((r) => r.wabaId === wabaId);
+72:       if (page) data = data.filter((r) => (page.ids ?? []).includes(r.id));
+73:       const next = page?.next ?? null;
+74:       return { wabas: [{ id: wabaId, name: wabas.find((w) => w.id === wabaId)?.name ?? null }], numbers: data.map(({ id, telefone }) => ({ id, telefone, nomeVerificado: 'Fixture number' })), next };
+75:     },
+76:     async numerosDaWaba(wabaId, accessToken, after) { const page = await this.recursos(accessToken, wabaId, after); return { data: page.numbers, next: page.next }; },
+77:     async confirmarNumero(wabaId, phoneNumberId, accessToken, after) {
+78:       if (!(await tokenPermitido(accessToken))) throw new Error('scoped credential required');
+79:       await call('meta.confirm', { wabaId, phoneNumberId, after: after ?? null });
+80:       const page = await this.numerosDaWaba(wabaId, accessToken, after);
+81:       const resource = (await providerResources(accessToken)).find((r) => r.id === phoneNumberId && page.data.some((p) => p.id === phoneNumberId));
+82:       return resource && resource.wabaId === wabaId ? { id: phoneNumberId, telefone: resource.telefone, nomeVerificado: 'Timeline' } : null;
+83:     },
+84:     async verificarNumeroVinculado(wabaId, phoneNumberId, accessToken) {
+85:       if (!(await tokenPermitido(accessToken))) throw new Error('scoped credential required');
+86:       const authorized = (await providerResources(accessToken)).some((r) => r.wabaId === wabaId);
+87:       if (!authorized) return null;
+88:       await call('meta.confirm', { wabaId, phoneNumberId, after: null });
+89:       const seen = new Set(); let after = null;
+90:       for (let index = 0; index < 2; index += 1) {
+91:         const page = await this.numerosDaWaba(wabaId, accessToken, after);
+92:         const number = page.data.find((item) => item.id === phoneNumberId);
+93:         if (number) return number;
+94:         if (!page.next) return null;
+95:         if (page.next.length > 512 || seen.has(page.next) || index === 1) throw new MetaIndisponivelError('A verificação do número está inconclusiva.');
+96:         seen.add(page.next); after = page.next;
+97:       }
+98:       throw new MetaIndisponivelError('A verificação do número está inconclusiva.');
+99:     },
+100:     async registrarNumero(id, _pin, accessToken) { if (!(await tokenPermitido(accessToken))) throw new Error('scoped credential required'); await call('meta.register', { phoneNumberId: id }); await fixture('/provider/effect', 'POST', { operation: 'meta.register', args: { phoneNumberId: id } }); },
+101:     async inscreverWaba(id, accessToken) { if (!(await tokenPermitido(accessToken))) throw new Error('scoped credential required'); await call('meta.subscribe', { wabaId: id }); await fixture('/provider/effect', 'POST', { operation: 'meta.subscribe', args: { wabaId: id } }); },
+102:     async enviarTexto(phoneNumberId, _contato, texto, accessToken) {
+103:       const permitted = accessToken === `timeline-scoped-token:${phoneNumberId}`
+104:         || (await providerResources(accessToken)).some((r) => r.id === phoneNumberId);
+105:       if (!permitted) throw new Error('verified scoped resource required');
+106:       await call('meta.send', { phoneNumberId }); metaFake.enviados.push(texto);
+107:       const state = await fixture('/provider/state');
+108:       return state.meta.sendMode === 'unknown'
+109:         ? { outcome: 'UNKNOWN', evidence: 'ACK_WITHOUT_ID', legacyCode: 'META_RECUSOU' }
+110:         : { outcome: 'ACCEPTED', externalMessageId: `timeline-wamid-${metaFake.enviados.length}` };
+111:     },
+112:     enviados: [],
+113:   };
+114:   const evolutionInventory = new Map();
+115:   const evolutionFake = {
+116:     configurado: () => true,
+117:     async criarInstancia(name) {
+118:       const channel = await fixturePrisma.buChannel.findFirst({ where: { evolutionInstanceName: name }, select: { id: true, buId: true, generation: true, pairingEpoch: true, currentAttemptId: true } });
+119:       const result = await fixture('/provider/evolution/create', 'POST', { name, channelId: channel?.id, attemptId: channel?.currentAttemptId, generation: channel?.generation, pairingEpoch: channel?.pairingEpoch });
+120:       evolutionInventory.set(name, result.instance); return { qrcode: result.instance.qrcode };
+121:     },
+122:     async qrDaInstancia(name) { await call('evolution.qr', { name }); const observed = await fixture('/provider/evolution/observe', 'POST', { name }); return observed?.qrcode ?? null; },
+123:     async estadoDaInstancia(name) { const observed = await fixture('/provider/evolution/observe', 'POST', { name }); return observed?.connectionStatus ?? 'close'; },
+124:     async consultarInstancia(name) { return fixture('/provider/evolution/observe', 'POST', { name }); },
+125:     async apagarInstancia(name) { await fixture('/provider/evolution/delete', 'POST', { name }); evolutionInventory.delete(name); },
+126:     async enviarTexto(name, contact, text) {
+127:       const observed = await fixture('/provider/evolution/observe', 'POST', { name }); if (!observed) throw new Error('unknown exact instance');
+128:       const state = await fixture('/provider/state'); await call('evolution.send', { name });
+129:       evolutionFake.enviados.push(text); const id = `timeline-evo-${evolutionFake.enviados.length}`;
+130:       if (state.evolution.echoInsideSend === true) {
+131:         const payload = { event: 'messages.upsert', instance: name, data: { key: { remoteJid: `${contact}@s.whatsapp.net`, fromMe: true, id }, pushName: 'Fixture', message: { conversation: text } } };
+132:         const response = await fetch(`http://127.0.0.1:${process.env.PORT ?? '3100'}/webhooks/evolution`, { method: 'POST', headers: { 'content-type': 'application/json', 'x-leadshug-webhook-secret': process.env.EVOLUTION_WEBHOOK_SECRET }, body: JSON.stringify(payload) });
+133:         if (!response.ok) throw new Error('authenticated fixture webhook rejected');
+134:       }
+135:       return { outcome: 'ACCEPTED', externalMessageId: id };
+136:     },
+137:     enviados: [],
+138:   };
+139:   const moduleRef = await Test.createTestingModule({ imports: [AppModule] })
+140:     .overrideProvider(META_CLIENT).useValue(metaFake)
+141:     .overrideProvider(EVOLUTION_CLIENT).useValue(evolutionFake)
+142:     .compile();
+143:   fixturePrisma = moduleRef.get(PrismaService);
+144:   const app = moduleRef.createNestApplication({ bodyParser: false });
+145:   configurarBodyParsers(app);
+146:   app.enableCors({ origin: ['http://127.0.0.1:4173'], credentials: true });
+147:   await app.init();
+148:   app.get(RealtimeService).ligar(app.getHttpServer());
+149:   await app.listen(Number(process.env.PORT ?? '3100'), '0.0.0.0');
+150:   const close = async () => { await app.get(PrismaService).$disconnect(); await app.close(); };
+151:   process.on('SIGTERM', () => void close().finally(() => process.exit(0)));
+152:   process.on('SIGINT', () => void close().finally(() => process.exit(0)));
+153:   console.log(`timeline test API listening on ${process.env.PORT ?? '3100'}; database ${dbName}`);
+154: }
+155: 
+156: main().catch((error) => { console.error(error); process.exit(1); });
+```
+
+
+## Source api-app/test/channel-transport.e2e-spec.ts
+
+Raw SHA256 `124d397bd3a5769271466e64b0e19b1235e08d1ea9a4df9f124fc629096822fe`; bytes34003.
+
+```
+1: import { INestApplication } from '@nestjs/common';
+2: import request from 'supertest';
+3: import { afterAll, beforeAll, beforeEach, describe, expect, it, vi } from 'vitest';
+4: import { PrismaService } from '../src/infra/prisma/prisma.service';
+5: import { sealChannelCredential } from '../src/domain/channels/channel-credential-crypto';
+6: import { OutboundService } from '../src/domain/inbox/outbound.service';
+7: import { Channel, type ChannelSendResult, type TextMessage } from '../src/domain/channels/transport/channel';
+8: import { ChannelAdapterFactory } from '../src/integrations/channels/channel-adapter-factory';
+9: import { ChannelAdapterRegistry } from '../src/integrations/channels/channel-adapter-registry';
+10: import type { ResolvedChannelCredential } from '../src/domain/channels/channel-credential-resolver';
+11: import { MetaChannelFactory } from '../src/integrations/channels/meta-channel';
+12: import { EvolutionChannelFactory } from '../src/integrations/channels/evolution-channel';
+13: import { MetaHttpClient } from '../src/integrations/meta/meta.client';
+14: import {
+15:   contratarCanalNaoOficial, criarCanalVerificado, criarMantenedora, evolutionFake, limparBanco, login, metaFake, subirApp,
+16: } from './helpers';
+17: 
+18: class OpaqueRecipientChannel extends Channel {
+19:   constructor(private readonly sent: TextMessage[]) { super(); }
+20:   async sendMessage(message: TextMessage): Promise<ChannelSendResult> {
+21:     this.sent.push(message);
+22:     return { outcome: 'ACCEPTED', externalMessageId: `opaque-fake-${this.sent.length}` };
+23:   }
+24: }
+25: 
+26: class OpaqueRecipientFactory extends ChannelAdapterFactory {
+27:   readonly origin = 'OFICIAL' as const;
+28:   constructor(private readonly sent: TextMessage[]) { super(); }
+29:   locallyConfigured() { return true; }
+30:   create() { return new OpaqueRecipientChannel(this.sent); }
+31: }
+32: 
+33: class MutatingMetaFactory extends ChannelAdapterFactory {
+34:   readonly origin = 'OFICIAL' as const;
+35:   private readonly delegate = new MetaChannelFactory(metaFake);
+36:   constructor(private readonly mutateBeforeFence: () => Promise<void>) { super(); }
+37:   locallyConfigured() { return this.delegate.locallyConfigured(); }
+38:   create(credential: ResolvedChannelCredential, beforeDispatch: () => Promise<boolean>) {
+39:     return this.delegate.create(credential, async () => {
+40:       await this.mutateBeforeFence();
+41:       return beforeDispatch();
+42:     });
+43:   }
+44: }
+45: 
+46: class MutatingEvolutionFactory extends ChannelAdapterFactory {
+47:   readonly origin = 'NAO_OFICIAL' as const;
+48:   private readonly delegate = new EvolutionChannelFactory(evolutionFake);
+49:   constructor(private readonly mutateBeforeFence: () => Promise<void>) { super(); }
+50:   locallyConfigured() { return this.delegate.locallyConfigured(); }
+51:   create(credential: ResolvedChannelCredential, beforeDispatch: () => Promise<boolean>) {
+52:     return this.delegate.create(credential, async () => {
+53:       await this.mutateBeforeFence();
+54:       return beforeDispatch();
+55:     });
+56:   }
+57: }
+58: 
+59: describe('common Channel outbound (PostgreSQL)', () => {
+60:   let app: INestApplication;
+61:   let prisma: PrismaService;
+62:   let buId: string;
+63:   let conversationId: string;
+64:   let identityId: string;
+65:   let cookie: string;
+66: 
+67:   beforeAll(async () => { ({ app, prisma } = await subirApp()); });
+68:   beforeEach(async () => {
+69:     await limparBanco(prisma);
+70:     const tenant = await criarMantenedora(app, 'Channel outbound fixture', 'channel-outbound@example.test');
+71:     buId = tenant.businessUnit.id;
+72:     const binding = await criarCanalVerificado(prisma, buId, 'OFICIAL', '987654321', { requiresWindow: false });
+73:     identityId = binding.identity.id;
+74:     const conversation = await prisma.conversation.create({ data: {
+75:       buId, contact: 'user:opaque', contactType: 'PESSOA', displayName: 'Opaque recipient', status: 'QUEUED',
+76:     } });
+77:     conversationId = conversation.id;
+78:     cookie = await login(app, 'channel-outbound@example.test');
+79:   });
+80:   afterAll(async () => { if (prisma) await limparBanco(prisma); await app?.close(); });
+81: 
+82:   it('sends a trusted opaque recipient through one bound adapter and finalizes without stealing a later owner', async () => {
+83:     const gate = await prisma.conversation.update({ where: { id: conversationId }, data: {
+84:       status: 'IN_SERVICE', attendantName: 'Claim before send', attendantOrigin: 'INTERNO',
+85:     } });
+86:     const response = await request(app.getHttpServer()).post(`/api/bff/conversations/${conversationId}/messages`)
+87:       .set('Cookie', cookie).set('x-requested-with', 'teste').send({ texto: 'opaque recipient test' }).expect(201);
+88:     expect(response.body).toMatchObject({ canal: 'OFICIAL' });
+89:     expect(metaFake.enviados).toEqual([{ para: 'user:opaque', texto: 'opaque recipient test' }]);
+90:     const message = await prisma.message.findFirstOrThrow({ where: { conversationId, direction: 'OUT' } });
+91:     expect(message).toMatchObject({ externalId: expect.any(String), content: 'opaque recipient test', authorUserId: expect.any(String) });
+92:     const finalized = await prisma.conversation.findUniqueOrThrow({ where: { id: gate.id } });
+93:     expect(finalized).toMatchObject({ attendantName: 'Claim before send', attendantOrigin: 'INTERNO' });
+94:   });
+95: 
+96:   it('runs an opaque user recipient through an independent Channel fake and never calls provider clients', async () => {
+97:     const sent: TextMessage[] = [];
+98:     const registry = new ChannelAdapterRegistry([new OpaqueRecipientFactory(sent)]);
+99:     const isolated = await subirApp(registry);
+100:     try {
+101:       await limparBanco(isolated.prisma);
+102:       const tenant = await criarMantenedora(isolated.app, 'Opaque fake contract', 'opaque-fake@example.test');
+103:       const localBuId = tenant.businessUnit.id;
+104:       await criarCanalVerificado(isolated.prisma, localBuId, 'OFICIAL', 'opaque-fake-resource', { requiresWindow: false });
+105:       const localConversation = await isolated.prisma.conversation.create({ data: {
+106:         buId: localBuId, contact: 'user:opaque', contactType: 'PESSOA', displayName: 'Opaque fake recipient', status: 'QUEUED',
+107:       } });
+108:       const localCookie = await login(isolated.app, 'opaque-fake@example.test');
+109:       await request(isolated.app.getHttpServer()).post(`/api/bff/conversations/${localConversation.id}/messages`)
+110:         .set('Cookie', localCookie).set('x-requested-with', 'teste').send({ texto: 'wire-independent fake' }).expect(201);
+111:       expect(sent).toEqual([{ kind: 'text', recipientRef: 'user:opaque', text: 'wire-independent fake' }]);
+112:       expect(metaFake.enviados).toHaveLength(0);
+113:       expect(evolutionFake.enviados).toHaveLength(0);
+114:       expect(await isolated.prisma.message.count({ where: { conversationId: localConversation.id, direction: 'OUT' } })).toBe(1);
+115:     } finally {
+116:       await limparBanco(isolated.prisma);
+117:       await isolated.app.close();
+118:     }
+119:   });
+120: 
+121:   it('blocks real binding changes inside Meta/Evolution adapter pre-dispatch callbacks', async () => {
+122:     const cases = [
+123:       { provider: 'OFICIAL' as const, changed: 'generation' as const },
+124:       { provider: 'OFICIAL' as const, changed: 'pairingEpoch' as const },
+125:       { provider: 'OFICIAL' as const, changed: 'credentialVersion' as const },
+126:       { provider: 'NAO_OFICIAL' as const, changed: 'generation' as const },
+127:       { provider: 'NAO_OFICIAL' as const, changed: 'pairingEpoch' as const },
+128:     ];
+129:     for (const { provider, changed } of cases) {
+130:       let mutate!: () => Promise<void>;
+131:       const previousModuleSwitch = process.env.LH_CHANNEL_UNOFFICIAL;
+132:       if (provider === 'NAO_OFICIAL') process.env.LH_CHANNEL_UNOFFICIAL = 'true';
+133:       const registry = new ChannelAdapterRegistry([provider === 'OFICIAL'
+134:         ? new MutatingMetaFactory(() => mutate())
+135:         : new MutatingEvolutionFactory(() => mutate())]);
+136:       const isolated = await subirApp(registry);
+137:       try {
+138:         await limparBanco(isolated.prisma);
+139:         const tenant = await criarMantenedora(isolated.app, `Pre-dispatch ${changed}`, `pre-dispatch-${changed}@example.test`);
+140:         if (provider === 'NAO_OFICIAL') {
+141:           await contratarCanalNaoOficial(isolated.prisma, tenant.mantenedora.id);
+142:         }
+143:         const localBinding = await criarCanalVerificado(isolated.prisma, tenant.businessUnit.id, provider,
+144:           `pre-dispatch-${provider}-${changed}`, { requiresWindow: false });
+145:         const localConversation = await isolated.prisma.conversation.create({ data: {
+146:           buId: tenant.businessUnit.id, contact: `user:opaque-${provider}-${changed}`, contactType: 'PESSOA', status: 'QUEUED',
+147:         } });
+148:         const localCookie = await login(isolated.app, `pre-dispatch-${changed}@example.test`);
+149:         let changedOnce = false;
+150:         mutate = async () => {
+151:           if (changedOnce) return;
+152:           changedOnce = true;
+153:           if (changed === 'generation') {
+154:             await isolated.prisma.buChannel.update({ where: { id: localBinding.channel.id }, data: { generation: { increment: 1 } } });
+155:           } else if (changed === 'pairingEpoch') {
+156:             await isolated.prisma.buChannel.update({ where: { id: localBinding.channel.id }, data: { pairingEpoch: { increment: 1 } } });
+157:           } else {
+158:             await isolated.prisma.channelCredential.update({ where: { channelId: localBinding.channel.id }, data: { version: { increment: 1 } } });
+159:           }
+160:         };
+161:         const metaCallsBefore = metaFake.providerCalls;
+162:         const evolutionCallsBefore = evolutionFake.providerCalls;
+163:         await request(isolated.app.getHttpServer()).post(`/api/bff/conversations/${localConversation.id}/messages`)
+164:           .set('Cookie', localCookie).set('x-requested-with', 'teste').send({ texto: `blocked ${changed}` })
+165:           .expect(409).expect(({ body }) => expect(body).toMatchObject({ code: 'CHANNEL_CONTEXT_CHANGED', outcome: 'BLOCKED' }));
+166:         expect(await isolated.prisma.message.count({ where: { conversationId: localConversation.id, direction: 'OUT' } })).toBe(0);
+167:         expect(metaFake.providerCalls).toBe(metaCallsBefore);
+168:         expect(evolutionFake.providerCalls).toBe(evolutionCallsBefore);
+169:       } finally {
+170:         await limparBanco(isolated.prisma);
+171:         await isolated.app.close();
+172:         if (previousModuleSwitch === undefined) delete process.env.LH_CHANNEL_UNOFFICIAL;
+173:         else process.env.LH_CHANNEL_UNOFFICIAL = previousModuleSwitch;
+174:       }
+175:     }
+176:   });
+177: 
+178:   it('persists nothing for contradictory successful Meta envelopes', async () => {
+179:     process.env.GRAPH_VERSION = 'v26.0';
+180:     const fetchFake = vi.fn()
+181:       .mockResolvedValueOnce({ ok: true, status: 200, json: async () => ({ success: false, messages: [{ id: 'contradictory' }] }) })
+182:       .mockResolvedValueOnce({ ok: true, status: 200, json: async () => ({ success: false, messages: [{}] }) });
+183:     vi.stubGlobal('fetch', fetchFake);
+184:     const isolated = await subirApp(new ChannelAdapterRegistry([new MetaChannelFactory(new MetaHttpClient())]));
+185:     try {
+186:       await limparBanco(isolated.prisma);
+187:       const tenant = await criarMantenedora(isolated.app, 'Contradictory Meta ACK', 'contradictory-meta@example.test');
+188:       await criarCanalVerificado(isolated.prisma, tenant.businessUnit.id, 'OFICIAL', 'contradictory-meta-resource', { requiresWindow: false });
+189:       const conversation = await isolated.prisma.conversation.create({ data: {
+190:         buId: tenant.businessUnit.id, contact: 'user:opaque', contactType: 'PESSOA', status: 'QUEUED',
+191:       } });
+192:       const session = await login(isolated.app, 'contradictory-meta@example.test');
+193:       for (let requestIndex = 1; requestIndex <= 2; requestIndex += 1) {
+194:         await request(isolated.app.getHttpServer()).post(`/api/bff/conversations/${conversation.id}/messages`)
+195:           .set('Cookie', session).set('x-requested-with', 'teste').send({ texto: `contradictory result ${requestIndex}` })
+196:           .expect(400).expect(({ body }) => expect(body).toMatchObject({
+197:             outcome: 'UNKNOWN', evidence: 'TRANSPORT_UNCONFIRMED',
+198:           }));
+199:         expect((await request(isolated.app.getHttpServer()).get(`/api/bff/conversations/${conversation.id}/messages`)
+200:           .set('Cookie', session)).body.messages.filter((message: { direction: string }) => message.direction === 'OUT')).toHaveLength(0);
+201:         expect(fetchFake).toHaveBeenCalledTimes(requestIndex);
+202:         expect(await isolated.prisma.message.count({ where: { conversationId: conversation.id, direction: 'OUT' } })).toBe(0);
+203:       }
+204:     } finally {
+205:       vi.unstubAllGlobals();
+206:       await limparBanco(isolated.prisma);
+207:       await isolated.app.close();
+208:     }
+209:   });
+210: 
+211:   it('requires BFF session and CSRF and rejects a foreign-account public send before dispatch', async () => {
+212:     const sentBefore = metaFake.enviados.length;
+213:     const outgoingBefore = await prisma.message.count({ where: { conversationId, direction: 'OUT' } });
+214:     await request(app.getHttpServer()).post(`/api/bff/conversations/${conversationId}/messages`)
+215:       .send({ texto: 'without session' }).expect(401);
+216:     await request(app.getHttpServer()).post(`/api/bff/conversations/${conversationId}/messages`)
+217:       .set('Cookie', cookie).send({ texto: 'without CSRF header' }).expect(403);
+218: 
+219:     const foreign = await criarMantenedora(app, 'Foreign public destination', 'foreign-public-destination@example.test');
+220:     const foreignCookie = await login(app, 'foreign-public-destination@example.test');
+221:     await request(app.getHttpServer()).post(`/api/bff/conversations/${conversationId}/messages`)
+222:       .set('Cookie', foreignCookie).set('x-requested-with', 'teste').send({ texto: 'valid session without BU grant' }).expect(404);
+223:     const key = await request(app.getHttpServer()).post('/api/bff/integracao/api-keys').set('Cookie', cookie)
+224:       .set('x-requested-with', 'teste').send({ nome: 'Scoped channel key', buIds: [buId] }).expect(201);
+225:     await request(app.getHttpServer()).post('/api/v1/messages').set('Authorization', `Bearer ${key.body.chave}`)
+226:       .send({ account_id: foreign.businessUnit.id, telefone: 'user:opaque', texto: 'foreign API key send' })
+227:       .expect(403).expect(({ body }) => expect(body.code).toBe('SEM_ACESSO_A_CONTA'));
+228:     expect(metaFake.enviados).toHaveLength(sentBefore);
+229:     expect(await prisma.message.count({ where: { conversationId, direction: 'OUT' } })).toBe(outgoingBefore);
+230:     expect(evolutionFake.enviados).toHaveLength(0);
+231:   });
+232: 
+233:   it('holds two tenants in flight with distinct scoped resources and credentials', async () => {
+234:     const tenantB = await criarMantenedora(app, 'Parallel tenant B', 'parallel-tenant-b@example.test');
+235:     const channelA = await prisma.buChannel.findFirstOrThrow({ where: { buId, type: 'OFICIAL' } });
+236:     const bindingA = {
+237:       channel: channelA,
+238:       identity: await prisma.providerResourceIdentity.findFirstOrThrow({ where: { currentChannelId: channelA.id } }),
+239:     };
+240:     const bindingB = await criarCanalVerificado(prisma, tenantB.businessUnit.id, 'OFICIAL', 'parallel-resource-b', { requiresWindow: false });
+241:     const credentialA = await prisma.channelCredential.findUniqueOrThrow({ where: { channelId: bindingA.channel.id } });
+242:     const credentialB = await prisma.channelCredential.findUniqueOrThrow({ where: { channelId: bindingB.channel.id } });
+243:     const key = Buffer.from(process.env.CHANNEL_CREDENTIAL_KEY!, 'base64');
+244:     const tokenA = 'tenant-a-distinct-scoped-token';
+245:     const tokenB = 'tenant-b-distinct-scoped-token';
+246:     for (const [binding, credential, token] of [[bindingA, credentialA, tokenA], [bindingB, credentialB, tokenB]] as const) {
+247:       const envelope = sealChannelCredential(token, credential.keyId, key, {
+248:         purpose: 'active', provider: 'OFICIAL', buId: binding.channel.buId,
+249:         channelId: binding.channel.id, generation: binding.channel.generation, version: credential.version,
+250:       });
+251:       await prisma.channelCredential.update({ where: { channelId: binding.channel.id }, data: {
+252:         nonce: new Uint8Array(envelope.nonce), ciphertext: new Uint8Array(envelope.ciphertext), tag: new Uint8Array(envelope.tag),
+253:       } });
+254:       metaFake.credentialByPhone.set(binding.channel.phoneNumberId!, token);
+255:     }
+256:     const conversationA = await prisma.conversation.create({ data: {
+257:       buId, contact: 'user:tenant-a', contactType: 'PESSOA', status: 'QUEUED',
+258:     } });
+259:     const conversationB = await prisma.conversation.create({ data: {
+260:       buId: tenantB.businessUnit.id, contact: 'user:tenant-b', contactType: 'PESSOA', status: 'QUEUED',
+261:     } });
+262:     const cookieB = await login(app, 'parallel-tenant-b@example.test');
+263:     let arrived = 0;
+264:     let markBothEntered!: () => void;
+265:     let releaseBoth!: () => void;
+266:     const bothEntered = new Promise<void>((resolve) => { markBothEntered = resolve; });
+267:     const held = new Promise<void>((resolve) => { releaseBoth = resolve; });
+268:     metaFake.sendHook = async () => { arrived += 1; if (arrived === 2) markBothEntered(); await held; };
+269:     const pendingA = request(app.getHttpServer()).post(`/api/bff/conversations/${conversationA.id}/messages`)
+270:       .set('Cookie', cookie).set('x-requested-with', 'teste').send({ texto: 'tenant A parallel' }).then((response) => response);
+271:     const pendingB = request(app.getHttpServer()).post(`/api/bff/conversations/${conversationB.id}/messages`)
+272:       .set('Cookie', cookieB).set('x-requested-with', 'teste').send({ texto: 'tenant B parallel' }).then((response) => response);
+273:     await bothEntered;
+274:     expect(metaFake.credentialCalls.map(({ phoneNumberId, accessToken }) => ({ phoneNumberId, accessToken })).sort((a, b) => a.phoneNumberId.localeCompare(b.phoneNumberId)))
+275:       .toEqual([
+276:         { phoneNumberId: channelA.phoneNumberId!, accessToken: tokenA },
+277:         { phoneNumberId: 'parallel-resource-b', accessToken: tokenB },
+278:       ]);
+279:     releaseBoth();
+280:     const [responseA, responseB] = await Promise.all([pendingA, pendingB]);
+281:     expect(responseA.status).toBe(201);
+282:     expect(responseB.status).toBe(201);
+283:     const [messageA, messageB] = await Promise.all([
+284:       prisma.message.findFirstOrThrow({ where: { conversationId: conversationA.id, direction: 'OUT' } }),
+285:       prisma.message.findFirstOrThrow({ where: { conversationId: conversationB.id, direction: 'OUT' } }),
+286:     ]);
+287:     expect(messageA).toMatchObject({ buId, providerResourceIdentityId: bindingA.identity.id, channelOrigin: 'OFICIAL', content: 'tenant A parallel' });
+288:     expect(messageB).toMatchObject({ buId: tenantB.businessUnit.id, providerResourceIdentityId: bindingB.identity.id, channelOrigin: 'OFICIAL', content: 'tenant B parallel' });
+289:     expect(metaFake.enviados).toEqual(expect.arrayContaining([
+290:       { para: 'user:tenant-a', texto: 'tenant A parallel' },
+291:       { para: 'user:tenant-b', texto: 'tenant B parallel' },
+292:     ]));
+293:   });
+294: 
+295:   it('reports ambiguous bindings and blocks before the provider call', async () => {
+296:     await criarCanalVerificado(prisma, buId, 'NAO_OFICIAL', `outbound-evolution-${Date.now()}`, { requiresWindow: false });
+297:     const thread = await request(app.getHttpServer()).get(`/api/bff/conversations/${conversationId}/messages`)
+298:       .set('Cookie', cookie).expect(200);
+299:     expect(thread.body.janela).toMatchObject({ disponivel: false, motivo: 'CANAL_AMBIGUO', canal: null });
+300:     const before = metaFake.enviados.length;
+301:     await request(app.getHttpServer()).post(`/api/bff/conversations/${conversationId}/messages`)
+302:       .set('Cookie', cookie).set('x-requested-with', 'teste').send({ texto: 'must not send' })
+303:       .expect(409).expect(({ body }) => expect(body).toMatchObject({ code: 'CANAL_AMBIGUO', outcome: 'BLOCKED' }));
+304:     expect(metaFake.enviados).toHaveLength(before);
+305:   });
+306: 
+307:   it('preserves a BFF claim acquired after the provider accepted an in-flight send', async () => {
+308:     let markEntered!: () => void;
+309:     let releaseSend!: () => void;
+310:     const entered = new Promise<void>((resolve) => { markEntered = resolve; });
+311:     const held = new Promise<void>((resolve) => { releaseSend = resolve; });
+312:     metaFake.sendHook = async () => { markEntered(); await held; };
+313:     const pending = request(app.getHttpServer()).post(`/api/bff/conversations/${conversationId}/messages`)
+314:       .set('Cookie', cookie).set('x-requested-with', 'teste').send({ texto: 'claim during BFF send' }).then((response) => response);
+315:     await entered;
+316:     await request(app.getHttpServer()).post(`/api/bff/conversations/${conversationId}/claim`)
+317:       .set('Cookie', cookie).set('x-requested-with', 'teste').expect(201);
+318:     releaseSend();
+319:     const response = await pending;
+320:     expect(response.status).toBe(201);
+321:     const claimed = await prisma.conversation.findUniqueOrThrow({ where: { id: conversationId } });
+322:     expect(claimed).toMatchObject({ status: 'IN_SERVICE', attendantOrigin: 'INTERNO', attendantUserId: expect.any(String) });
+323:   });
+324: 
+325:   it('gives a detected identity change precedence after dispatch and creates no new Message', async () => {
+326:     metaFake.sendHook = async () => {
+327:       await prisma.providerResourceIdentity.update({ where: { id: identityId }, data: { currentChannelId: null, retiredAt: new Date() } });
+328:     };
+329:     await request(app.getHttpServer()).post(`/api/bff/conversations/${conversationId}/messages`)
+330:       .set('Cookie', cookie).set('x-requested-with', 'teste').send({ texto: 'dispatch raced retirement' })
+331:       .expect(409).expect(({ body }) => expect(body).toMatchObject({ code: 'CHANNEL_CONTEXT_CHANGED', outcome: 'ACCEPTED_LOCAL_INCOMPLETE', localMessageState: 'UNCONFIRMED' }));
+332:     expect(await prisma.message.count({ where: { conversationId, direction: 'OUT' } })).toBe(0);
+333:     expect(metaFake.enviados).toHaveLength(1);
+334:   });
+335: 
+336:   it('does not record the null-ID diagnostic when a PostgreSQL identity fence changes during dispatch', async () => {
+337:     metaFake.sendIdNull = true;
+338:     metaFake.sendHook = async () => {
+339:       await prisma.providerResourceIdentity.update({ where: { id: identityId }, data: { currentChannelId: null, retiredAt: new Date() } });
+340:     };
+341:     await request(app.getHttpServer()).post(`/api/bff/conversations/${conversationId}/messages`)
+342:       .set('Cookie', cookie).set('x-requested-with', 'teste').send({ texto: 'unknown response raced retirement' })
+343:       .expect(409).expect(({ body }) => expect(body).toMatchObject({
+344:         code: 'CHANNEL_CONTEXT_CHANGED', outcome: 'UNKNOWN', diagnosticPersistence: 'UNCONFIRMED',
+345:       }));
+346:     expect(await prisma.message.count({ where: { conversationId, direction: 'OUT' } })).toBe(0);
+347:     expect(metaFake.enviados).toHaveLength(1);
+348:   });
+349: 
+350:   it('fences a held send after a real same-resource REAUTORIZAR generation change', async () => {
+351:     let markEntered!: () => void;
+352:     let releaseSend!: () => void;
+353:     const entered = new Promise<void>((resolve) => { markEntered = resolve; });
+354:     const held = new Promise<void>((resolve) => { releaseSend = resolve; });
+355:     metaFake.sendHook = async () => { markEntered(); await held; };
+356:     const pending = request(app.getHttpServer()).post(`/api/bff/conversations/${conversationId}/messages`)
+357:       .set('Cookie', cookie).set('x-requested-with', 'teste').send({ texto: 'held across reauthorization' }).then((response) => response);
+358:     await entered;
+359: 
+360:     const created = await request(app.getHttpServer()).post('/api/bff/number-registrations')
+361:       .set('Cookie', cookie).set('x-requested-with', 'teste').set('Idempotency-Key', '0f0f0f0f-0f0f-4f0f-8f0f-0f0f0f0f0f0f')
+362:       .send({ buId, tipo: 'OFICIAL', operation: 'REAUTORIZAR', channelId: (await prisma.buChannel.findFirstOrThrow({ where: { buId, type: 'OFICIAL' } })).id, expectedGeneration: 1 })
+363:       .expect(201);
+364:     await request(app.getHttpServer()).post(`/api/bff/number-registrations/${created.body.attempt.id}/authorize`)
+365:       .set('Cookie', cookie).set('x-requested-with', 'teste').send({ nonce: created.body.nonce, code: 'fixture-held-send-reauthorize' }).expect(200);
+366:     await request(app.getHttpServer()).post(`/api/bff/number-registrations/${created.body.attempt.id}/confirm`)
+367:       .set('Cookie', cookie).set('x-requested-with', 'teste')
+368:       .send({ wabaId: '123456789', phoneNumberId: '987654321', modoRegistro: 'JA_REGISTRADO', after: 'fixture-page-1' }).expect(200);
+369:     releaseSend();
+370: 
+371:     const response = await pending;
+372:     expect(response.status).toBe(409);
+373:     expect(response.body).toMatchObject({ code: 'CHANNEL_CONTEXT_CHANGED', outcome: 'ACCEPTED_LOCAL_INCOMPLETE', localMessageState: 'UNCONFIRMED' });
+374:     expect(await prisma.message.count({ where: { conversationId, direction: 'OUT' } })).toBe(0);
+375:     expect(await prisma.buChannel.findFirstOrThrow({ where: { id: (await prisma.buChannel.findFirstOrThrow({ where: { buId, type: 'OFICIAL' } })).id } }))
+376:       .toMatchObject({ generation: 2 });
+377:   });
+378: 
+379:   it('accepts a held acknowledged send when only the active credential version rotates', async () => {
+380:     let markEntered!: () => void;
+381:     let releaseSend!: () => void;
+382:     const entered = new Promise<void>((resolve) => { markEntered = resolve; });
+383:     const held = new Promise<void>((resolve) => { releaseSend = resolve; });
+384:     metaFake.sendHook = async () => { markEntered(); await held; };
+385:     const pending = request(app.getHttpServer()).post(`/api/bff/conversations/${conversationId}/messages`)
+386:       .set('Cookie', cookie).set('x-requested-with', 'teste').send({ texto: 'held across credential rotation' }).then((response) => response);
+387:     await entered;
+388: 
+389:     const channel = await prisma.buChannel.findFirstOrThrow({ where: { buId, type: 'OFICIAL' } });
+390:     const prior = await prisma.channelCredential.findUniqueOrThrow({ where: { channelId: channel.id } });
+391:     const key = Buffer.from(process.env.CHANNEL_CREDENTIAL_KEY!, 'base64');
+392:     const nextVersion = prior.version + 1;
+393:     const envelope = sealChannelCredential('fixture-scoped-token', prior.keyId, key, {
+394:       purpose: 'active', provider: 'OFICIAL', buId, channelId: channel.id, generation: channel.generation, version: nextVersion,
+395:     });
+396:     await prisma.channelCredential.update({ where: { channelId: channel.id }, data: {
+397:       version: nextVersion, nonce: new Uint8Array(envelope.nonce), ciphertext: new Uint8Array(envelope.ciphertext), tag: new Uint8Array(envelope.tag),
+398:     } });
+399:     releaseSend();
+400: 
+401:     const response = await pending;
+402:     expect(response.status).toBe(201);
+403:     expect(await prisma.message.count({ where: { conversationId, direction: 'OUT', externalId: 'wamid-enviado-1' } })).toBe(1);
+404:     expect(await prisma.buChannel.findUniqueOrThrow({ where: { id: channel.id } })).toMatchObject({ generation: channel.generation, pairingEpoch: channel.pairingEpoch });
+405:     expect(await prisma.providerResourceIdentity.findUniqueOrThrow({ where: { id: identityId } })).toMatchObject({ currentChannelId: channel.id, buId });
+406:   });
+407: 
+408:   it('keeps verified bot ingress pinned when a different channel origin becomes the latest message', async () => {
+409:     const evolution = await criarCanalVerificado(prisma, buId, 'NAO_OFICIAL', `outbound-evolution-${Date.now()}`, { requiresWindow: false });
+410:     await prisma.message.create({ data: {
+411:       id: 'latest-other-origin', conversationId, buId, direction: 'IN', messageType: 'TEXTO', content: 'other origin arrived later',
+412:       channelOrigin: 'NAO_OFICIAL', providerResourceIdentityId: evolution.identity.id, externalId: 'fixture-other-origin', status: 'RECEBIDA',
+413:     } });
+414:     const channel = await prisma.buChannel.findFirstOrThrow({ where: { buId, type: 'OFICIAL' } });
+415:     const outbound = app.get(OutboundService);
+416:     await outbound.send({
+417:       conversationId, buId, text: 'pinned bot reply', attribution: { kind: 'BOT', name: 'Typebot' },
+418:       ingress: {
+419:         channelId: channel.id, providerResourceIdentityId: identityId, channelOrigin: 'OFICIAL',
+420:         generation: channel.generation, pairingEpoch: channel.pairingEpoch,
+421:       },
+422:     });
+423:     expect(metaFake.enviados).toEqual([{ para: 'user:opaque', texto: 'pinned bot reply' }]);
+424:     expect(evolutionFake.enviados).toHaveLength(0);
+425:   });
+426: 
+427:   it('breaks equal-timestamp origin ties deterministically by descending message id', async () => {
+428:     await criarCanalVerificado(prisma, buId, 'NAO_OFICIAL', `outbound-tie-evolution-${Date.now()}`, { requiresWindow: false });
+429:     const sameTime = new Date('2026-10-20T12:00:00.000Z');
+430:     await prisma.message.createMany({ data: [
+431:       { id: 'channel-tie-a', conversationId, buId, direction: 'IN', messageType: 'TEXTO', content: 'official tie', channelOrigin: 'OFICIAL', status: 'RECEBIDA', createdAt: sameTime },
+432:       { id: 'channel-tie-z', conversationId, buId, direction: 'IN', messageType: 'TEXTO', content: 'evolution tie', channelOrigin: 'NAO_OFICIAL', status: 'RECEBIDA', createdAt: sameTime },
+433:     ] });
+434:     await request(app.getHttpServer()).post(`/api/bff/conversations/${conversationId}/messages`)
+435:       .set('Cookie', cookie).set('x-requested-with', 'teste').send({ texto: 'tie winner' }).expect(201);
+436:     expect(evolutionFake.enviados).toEqual([{ para: 'user:opaque', texto: 'tie winner' }]);
+437:     expect(metaFake.enviados).toHaveLength(0);
+438:   });
+439: 
+440:   it('rejects cross-BU and mismatched verified-ingress bindings before dispatch', async () => {
+441:     const setor = await prisma.setor.findFirstOrThrow({ where: { mantenedoraId: (await prisma.businessUnit.findUniqueOrThrow({ where: { id: buId } })).mantenedoraId } });
+442:     const foreign = await prisma.businessUnit.create({
+443:       data: { mantenedoraId: setor.mantenedoraId, setorId: setor.id, name: 'Foreign channel BU' },
+444:     });
+445:     const foreignChannel = await criarCanalVerificado(prisma, foreign.id, 'OFICIAL', 'foreign-resource-transport', { requiresWindow: false });
+446:     const outbound = app.get(OutboundService);
+447:     await expect(outbound.send({
+448:       conversationId, buId, text: 'wrong BU', attribution: { kind: 'BOT', name: 'Typebot' },
+449:       ingress: {
+450:         channelId: foreignChannel.channel.id, providerResourceIdentityId: foreignChannel.identity.id, channelOrigin: 'OFICIAL',
+451:         generation: foreignChannel.channel.generation, pairingEpoch: foreignChannel.channel.pairingEpoch,
+452:       },
+453:     })).rejects.toMatchObject({ status: 409, response: { code: 'CHANNEL_CONTEXT_CHANGED', outcome: 'BLOCKED' } });
+454:     await expect(outbound.send({
+455:       conversationId, buId, text: 'wrong identity', attribution: { kind: 'BOT', name: 'Typebot' },
+456:       ingress: {
+457:         channelId: (await prisma.buChannel.findFirstOrThrow({ where: { buId, type: 'OFICIAL' } })).id,
+458:         providerResourceIdentityId: foreignChannel.identity.id, channelOrigin: 'OFICIAL', generation: 1, pairingEpoch: 0,
+459:       },
+460:     })).rejects.toMatchObject({ status: 409, response: { code: 'CHANNEL_CONTEXT_CHANGED', outcome: 'BLOCKED' } });
+461:     expect(metaFake.enviados).toHaveLength(0);
+462:   });
+463: 
+464:   it('preserves a human BFF claim that overlaps a public API accepted send', async () => {
+465:     const phone = '5584999912345';
+466:     const conversation = await prisma.conversation.create({ data: { buId, contact: phone, contactType: 'PESSOA', status: 'QUEUED' } });
+467:     await prisma.message.create({ data: {
+468:       conversationId: conversation.id, buId, direction: 'IN', messageType: 'TEXTO', content: 'public inbound', channelOrigin: 'OFICIAL',
+469:       status: 'RECEBIDA',
+470:     } });
+471:     const key = await request(app.getHttpServer()).post('/api/bff/integracao/api-keys').set('Cookie', cookie)
+472:       .set('x-requested-with', 'teste').send({ nome: 'Channel overlap key', buIds: [buId] }).expect(201);
+473:     metaFake.sendHook = async () => {
+474:       await request(app.getHttpServer()).post(`/api/bff/conversations/${conversation.id}/claim`)
+475:         .set('Cookie', cookie).set('x-requested-with', 'teste').expect(201);
+476:     };
+477:     await request(app.getHttpServer()).post('/api/v1/messages').set('Authorization', `Bearer ${key.body.chave}`)
+478:       .send({ account_id: buId, telefone: phone, texto: 'public outbound during claim' }).expect(201);
+479:     const claimed = await prisma.conversation.findUniqueOrThrow({ where: { id: conversation.id } });
+480:     expect(claimed).toMatchObject({ status: 'IN_SERVICE', attendantUserId: expect.any(String), attendantOrigin: 'INTERNO' });
+481:     expect(claimed.attendantName).toBeTruthy();
+482:   });
+483: 
+484:   it('completes five real-PostgreSQL rounds of twenty overlapping sends with one accepted Message each', async () => {
+485:     const operationsPerRound = 20;
+486:     const operationCounts: number[] = [];
+487:     const acceptedCounts: number[] = [];
+488:     const recordedCounts: number[] = [];
+489:     for (let round = 0; round < 5; round += 1) {
+490:       const conversations = await Promise.all(Array.from({ length: operationsPerRound }, (_, index) => prisma.conversation.create({ data: {
+491:         buId, contact: `user:opaque-${round}-${index}`, contactType: 'PESSOA', status: 'QUEUED',
+492:       } })));
+493:       let arrivals = 0;
+494:       let markBarrier!: () => void;
+495:       let release!: () => void;
+496:       const barrier = new Promise<void>((resolve) => { markBarrier = resolve; });
+497:       const gate = new Promise<void>((resolve) => { release = resolve; });
+498:       metaFake.sendHook = async () => {
+499:         arrivals += 1;
+500:         if (arrivals === operationsPerRound) markBarrier();
+501:         await gate;
+502:       };
+503:       const pending = conversations.map((conversation, index) => request(app.getHttpServer())
+504:         .post(`/api/bff/conversations/${conversation.id}/messages`).set('Cookie', cookie).set('x-requested-with', 'teste')
+505:         .send({ texto: `round ${round} outbound ${index}` }).then((response) => response));
+506:       await barrier;
+507:       release();
+508:       const responses = await Promise.all(pending);
+509:       metaFake.sendHook = null;
+510:       const accepted = responses.filter((response) => response.status === 201).length;
+511:       const recorded = await prisma.message.count({ where: { conversationId: { in: conversations.map(({ id }) => id) }, direction: 'OUT' } });
+512:       operationCounts.push(responses.length);
+513:       acceptedCounts.push(accepted);
+514:       recordedCounts.push(recorded);
+515:       expect(accepted).toBe(operationsPerRound);
+516:       expect(recorded).toBe(operationsPerRound);
+517:     }
+518:     console.log(`[CHANNEL-OUTBOUND-OVERLAP]${JSON.stringify({ repetitions: 5, operationsPerRepetition: operationsPerRound, operationCounts, acceptedCounts, recordedCounts, limits: 'Disposable PostgreSQL and provider fake; concurrent integrity observation, not capacity/SLO evidence.' })}`);
+519:   });
+520: });
+```
+
+
+## Source api-app/test/helpers.ts
+
+Raw SHA256 `747dcd1a6db374c1ccb0f2a248b08d49c2ec62a46beb345cc03eea3c058d36f2`; bytes18367.
+
+```
+1: import { INestApplication } from '@nestjs/common';
+2: import { Test } from '@nestjs/testing';
+3: import type { NestExpressApplication } from '@nestjs/platform-express';
+4: import request from 'supertest';
+5: import { AppModule } from '../src/app.module';
+6: import { ChannelAdapterRegistry } from '../src/integrations/channels/channel-adapter-registry';
+7: import { configurarBodyParsers } from '../src/infra/http/body-parsers';
+8: import { PrismaService } from '../src/infra/prisma/prisma.service';
+9: import { EVOLUTION_CLIENT, EvolutionClient } from '../src/integrations/evolution/evolution.client';
+10: import { META_CLIENT, MetaClient, MetaIndisponivelError } from '../src/integrations/meta/meta.client';
+11: import { TYPEBOT_CLIENT, TypebotClient } from '../src/integrations/typebot/typebot.client';
+12: import { sealChannelCredential } from '../src/domain/channels/channel-credential-crypto';
+13: 
+14: /** Dublês das portas de saída: o teste prova permissão, não a Meta. */
+15: export const metaFake: MetaClient & { wabaRecusada: string | null; wabaRecursos: { wabaId: string; phoneNumberId: string; telefone: string }[]; enviados: { para: string; texto: string }[]; credentialByPhone: Map<string, string>; credentialCalls: { phoneNumberId: string; accessToken: string }[]; registrosNumero: number; subscriptionHook: (() => Promise<void>) | null; confirmHook: (() => Promise<void>) | null; registrosHook: (() => Promise<void>) | null; sendHook: ((id: string, para: string, texto: string) => Promise<void>) | null; confirmCalls: number; exchangeCalls: number; exchangeFails: number; providerCalls: number; sendIdNull: boolean } = {
+16:   wabaRecusada: null,
+17:   wabaRecursos: [
+18:     { wabaId: '123456789', phoneNumberId: '111111111', telefone: '5584998880000' },
+19:     { wabaId: '123456789', phoneNumberId: '987654321', telefone: '5584999990000' },
+20:     { wabaId: '555555555', phoneNumberId: '222222222', telefone: '5584997770000' },
+21:   ],
+22:   enviados: [],
+23:   credentialByPhone: new Map(),
+24:   credentialCalls: [],
+25:   registrosNumero: 0,
+26:   subscriptionHook: null,
+27:   confirmHook: null,
+28:   registrosHook: null,
+29:   sendHook: null,
+30:   confirmCalls: 0,
+31:   exchangeCalls: 0,
+32:   exchangeFails: 0,
+33:   providerCalls: 0,
+34:   sendIdNull: false,
+35:   capabilities: () => ({ appId: 'fixture-app', configId: 'fixture-config', graphVersion: 'v26.0', available: true, reason: 'AVAILABLE' }),
+36:   async exchangeCode() {
+37:     metaFake.providerCalls += 1; metaFake.exchangeCalls += 1;
+38:     if (metaFake.exchangeFails > 0) { metaFake.exchangeFails -= 1; throw new Error('fixture exchange response lost'); }
+39:     return { accessToken: 'fixture-scoped-token' };
+40:   },
+41:   async recursos(accessToken, wabaId, after) {
+42:     metaFake.providerCalls += 1;
+43:     if (accessToken !== 'fixture-scoped-token') throw new Error('scoped credential required');
+44:     if (wabaId && metaFake.wabaRecusada === wabaId) throw new Error('WABA recusada');
+45:     const targets = metaFake.wabaRecursos.filter((r) => !wabaId || r.wabaId === wabaId);
+46:     const page = after ? targets.slice(1) : targets.slice(0, 1);
+47:     return { wabas: wabaId ? [{ id: wabaId, name: 'Fixture' }] : [...new Map(targets.map((r) => [r.wabaId, { id: r.wabaId, name: 'Fixture' }])).values()], numbers: page.map((r) => ({ id: r.phoneNumberId, telefone: r.telefone, nomeVerificado: 'Fixture' })), next: !after && targets.length > 1 ? 'fixture-page-1' : null };
+48:   },
+49:   async enviarTexto(phoneNumberId: string, para: string, texto: string, accessToken?: string) {
+50:     metaFake.providerCalls += 1;
+51:     metaFake.credentialCalls.push({ phoneNumberId, accessToken: accessToken ?? '' });
+52:     const expected = metaFake.credentialByPhone.get(phoneNumberId) ?? 'fixture-scoped-token';
+53:     if (accessToken !== expected) throw new Error('scoped credential required');
+54:     metaFake.enviados.push({ para, texto });
+55:     const id = `wamid-enviado-${metaFake.enviados.length}`;
+56:     await metaFake.sendHook?.(id, para, texto);
+57:     return metaFake.sendIdNull
+58:       ? { outcome: 'UNKNOWN', evidence: 'ACK_WITHOUT_ID', legacyCode: 'META_RECUSOU' }
+59:       : { outcome: 'ACCEPTED', externalMessageId: id };
+60:   },
+61:   configurado: () => true,
+62:   canSendText: () => true,
+63:   async numerosDaWaba(wabaId: string, accessToken?: string, after?: string) {
+64:     metaFake.providerCalls += 1;
+65:     if (metaFake.wabaRecusada === wabaId || accessToken !== 'fixture-scoped-token') throw new Error('WABA recusada');
+66:     const targets = metaFake.wabaRecursos.filter((r) => r.wabaId === wabaId); const page = after ? targets.slice(1) : targets.slice(0, 1);
+67:     return { data: page.map((r) => ({ id: r.phoneNumberId, telefone: r.telefone, nomeVerificado: `WABA ${wabaId}` })), next: !after && targets.length > 1 ? 'fixture-page-1' : null };
+68:   },
+69:   async confirmarNumero(wabaId, phoneNumberId, accessToken, after) {
+70:     metaFake.providerCalls += 1;
+71:     metaFake.confirmCalls += 1;
+72:     await metaFake.confirmHook?.();
+73:     const page = await metaFake.numerosDaWaba(wabaId, accessToken, after);
+74:     return page.data.find((item) => item.id === phoneNumberId) ?? null;
+75:   },
+76:   async verificarNumeroVinculado(wabaId, phoneNumberId, accessToken) {
+77:     metaFake.confirmCalls += 1;
+78:     await metaFake.confirmHook?.();
+79:     const seen = new Set<string>(); let after: string | undefined;
+80:     for (let index = 0; index < 2; index += 1) {
+81:       const page = await metaFake.numerosDaWaba(wabaId, accessToken, after);
+82:       const number = page.data.find((item) => item.id === phoneNumberId);
+83:       if (number) return number;
+84:       if (!page.next) return null;
+85:       if (page.next.length > 512 || seen.has(page.next) || index === 1) throw new MetaIndisponivelError('A verificação do número está inconclusiva.');
+86:       seen.add(page.next); after = page.next;
+87:     }
+88:     throw new MetaIndisponivelError('A verificação do número está inconclusiva.');
+89:   },
+90:   async registrarNumero(_phoneNumberId, pin, accessToken) { metaFake.providerCalls += 1; if (accessToken !== 'fixture-scoped-token' || !/^\d{6}$/.test(pin)) throw new Error('scoped registration credential required'); metaFake.registrosNumero += 1; await metaFake.registrosHook?.(); },
+91:   async inscreverWaba(_wabaId, accessToken) { metaFake.providerCalls += 1; if (accessToken !== 'fixture-scoped-token') throw new Error('scoped subscription credential required'); await metaFake.subscriptionHook?.(); },
+92: };
+93: 
+94: export const evolutionFake: EvolutionClient & { enviados: { para: string; texto: string }[]; inventory: Map<string, { name: string; ownerJid: string | null; connectionStatus: string | null }>; createCalls: number; providerCalls: number; sendIdNull: boolean; sendHook: ((id: string, para: string, texto: string) => Promise<void>) | null; createHook: ((name: string) => Promise<void>) | null; ownerPhone: string | null; createdState: string; deleteFails: boolean } = {
+95:   enviados: [], inventory: new Map(), createCalls: 0, providerCalls: 0,
+96:   sendHook: null,
+97:   createHook: null,
+98:   configurado: () => true,
+99:   async enviarTexto(_instancia: string, para: string, texto: string) {
+100:     evolutionFake.providerCalls += 1;
+101:     evolutionFake.enviados.push({ para, texto });
+102:     const id = `evo-enviado-${evolutionFake.enviados.length}`;
+103:     await evolutionFake.sendHook?.(id, para, texto);
+104:     return evolutionFake.sendIdNull
+105:       ? { outcome: 'UNKNOWN', evidence: 'ACK_WITHOUT_ID', legacyCode: 'EVOLUTION_RECUSOU' }
+106:       : { outcome: 'ACCEPTED', externalMessageId: id };
+107:   },
+108:   async criarInstancia(nome) {
+109:     evolutionFake.providerCalls += 1;
+110:     evolutionFake.createCalls += 1;
+111:     evolutionFake.inventory.set(nome, { name: nome, ownerJid: evolutionFake.ownerPhone ? `${evolutionFake.ownerPhone}@s.whatsapp.net` : null, connectionStatus: evolutionFake.createdState });
+112:     await evolutionFake.createHook?.(nome);
+113:     return { qrcode: 'data:image/png;base64,QR' };
+114:   },
+115:   async qrDaInstancia() {
+116:     evolutionFake.providerCalls += 1;
+117:     return 'data:image/png;base64,QR';
+118:   },
+119:   async estadoDaInstancia() {
+120:     evolutionFake.providerCalls += 1;
+121:     return 'open';
+122:   },
+123:   async consultarInstancia(nome) { evolutionFake.providerCalls += 1; return evolutionFake.inventory.get(nome) ?? null; },
+124:   async apagarInstancia(nome) { evolutionFake.providerCalls += 1; if (evolutionFake.deleteFails) throw new Error('fixture cleanup timeout'); evolutionFake.inventory.delete(nome); },
+125: };
+126: 
+127: /**
+128:  * Liga o canal não oficial nos DOIS níveis: o teto da instalação (env, lido no
+129:  * boot do serviço) e o contrato da Mantenedora (banco) — ADR-0016.
+130:  *
+131:  * Precisa vir ANTES de `subirApp`, porque o teto é lido uma vez na construção.
+132:  * É o mesmo que acontece em produção: mudar módulo de instalação é deploy.
+133:  */
+134: export function tetoComCanalNaoOficial(): void {
+135:   process.env.LH_CHANNEL_UNOFFICIAL = 'true';
+136: }
+137: 
+138: export async function contratarCanalNaoOficial(prisma: PrismaService, mantenedoraId: string): Promise<void> {
+139:   await prisma.mantenedoraSettings.upsert({
+140:     where: { mantenedoraId },
+141:     create: { mantenedoraId, modulos: { canalNaoOficial: true } },
+142:     update: { modulos: { canalNaoOficial: true } },
+143:   });
+144: }
+145: 
+146: export const TOKEN_INTERNO = 'token-interno-de-teste';
+147: export const META_APP_SECRET = 'segredo-do-app-meta';
+148: export const EVOLUTION_WEBHOOK_SECRET = 'fixture-evolution-secret-header';
+149: export const typebotFake: TypebotClient & { enabled: boolean; starts: number; continues: number; startedBots: Array<{ botId: string; contact: string; text: string }>; beforeReply: (() => Promise<void>) | null } = {
+150:   enabled: false, starts: 0, continues: 0, startedBots: [], beforeReply: null,
+151:   configurado() { return typebotFake.enabled; }, async listarBots() { return []; }, editorUrl(id) { return `https://typebot.invalid/${id}`; }, workspaceUrl() { return 'https://typebot.invalid'; },
+152:   async iniciar(botId, contact, text) { typebotFake.starts += 1; typebotFake.startedBots.push({ botId, contact, text }); await typebotFake.beforeReply?.(); return { sessionId: `fixture-typebot-${typebotFake.starts}`, messages: [{ type: 'text', content: { text: 'resposta do bot' } }] }; },
+153:   async continuar() { typebotFake.continues += 1; return { messages: [] }; },
+154: };
+155: 
+156: export async function subirApp(registryOverride?: ChannelAdapterRegistry, captureQueries = false): Promise<{ app: INestApplication; prisma: PrismaService }> {
+157:   process.env.SESSION_SECRET ||= 'segredo-de-teste';
+158:   process.env.INTERNAL_SERVICE_TOKEN = TOKEN_INTERNO;
+159:   process.env.META_APP_ID = 'fixture-app';
+160:   process.env.META_APP_SECRET = META_APP_SECRET;
+161:   process.env.META_SIGNUP_CONFIG_ID = 'fixture-config';
+162:   process.env.GRAPH_VERSION = 'v26.0';
+163:   process.env.EVOLUTION_WEBHOOK_SECRET = EVOLUTION_WEBHOOK_SECRET;
+164:   process.env.EVOLUTION_WEBHOOK_URL = 'https://api.example.test/webhooks/evolution';
+165:   process.env.WEBHOOK_VERIFY_TOKEN = 'verify-token-de-teste';
+166:   process.env.CHANNEL_CREDENTIAL_KEY_ID = 'fixture-key-v1';
+167:   process.env.CHANNEL_CREDENTIAL_KEY = Buffer.alloc(32, 17).toString('base64');
+168: 
+169:   const testingModule = Test.createTestingModule({ imports: [AppModule] })
+170:     .overrideProvider(META_CLIENT)
+171:     .useValue(metaFake)
+172:     .overrideProvider(EVOLUTION_CLIENT)
+173:     .useValue(evolutionFake)
+174:     .overrideProvider(TYPEBOT_CLIENT)
+175:     .useValue(typebotFake);
+176:   if (captureQueries) {
+177:     testingModule.overrideProvider(PrismaService).useValue(new PrismaService({ log: [{ emit: 'event', level: 'query' }] }));
+178:   }
+179:   if (registryOverride) testingModule.overrideProvider(ChannelAdapterRegistry).useValue(registryOverride);
+180:   const moduleRef = await testingModule.compile();
+181:   // A MESMA fiação de produção: sem isto o corpo bruto não existe e o teste de
+182:   // assinatura passaria a provar outra coisa.
+183:   const app = moduleRef.createNestApplication({ bodyParser: false });
+184:   configurarBodyParsers(app as unknown as NestExpressApplication);
+185:   await app.init();
+186:   return { app, prisma: app.get(PrismaService) };
+187: }
+188: 
+189: /** Limpa na ordem das dependências — o banco de teste é real (ADR-0012 §4). */
+190: /** Cria um usuário com papel escolhido numa BU — para o caso "papel insuficiente". */
+191: export async function criarUsuario(
+192:   prisma: PrismaService,
+193:   mantenedoraId: string,
+194:   buId: string,
+195:   email: string,
+196:   role: 'OWNER' | 'ADMIN' | 'ATENDENTE',
+197:   senha = 'senha-de-teste-1',
+198: ): Promise<string> {
+199:   const bcrypt = await import('bcryptjs');
+200:   const user = await prisma.appUser.create({
+201:     data: {
+202:       mantenedoraId,
+203:       name: email,
+204:       email,
+205:       passwordHash: await bcrypt.default.hash(senha, 10),
+206:     },
+207:   });
+208:   await prisma.userBuRole.create({ data: { userId: user.id, buId, role, grantedViaTipo: 'DIRETO' } });
+209:   return user.id;
+210: }
+211: 
+212: export async function limparBanco(prisma: PrismaService): Promise<void> {
+213:   evolutionFake.inventory.clear();
+214:   evolutionFake.createCalls = 0; evolutionFake.providerCalls = 0; evolutionFake.createHook = null;
+215:   metaFake.enviados.length = 0; metaFake.sendIdNull = false; metaFake.sendHook = null; evolutionFake.enviados.length = 0; evolutionFake.sendIdNull = false; evolutionFake.sendHook = null; metaFake.confirmCalls = 0; metaFake.exchangeCalls = 0; metaFake.exchangeFails = 0; metaFake.providerCalls = 0;
+216:   metaFake.credentialByPhone.clear(); metaFake.credentialCalls.length = 0;
+217:   metaFake.registrosNumero = 0;
+218:   metaFake.wabaRecusada = null;
+219:   metaFake.confirmHook = null; metaFake.registrosHook = null; metaFake.confirmCalls = 0; metaFake.subscriptionHook = null;
+220:   typebotFake.enabled = false; typebotFake.starts = 0; typebotFake.continues = 0; typebotFake.startedBots.length = 0; typebotFake.beforeReply = null;
+221:   evolutionFake.ownerPhone = '5584999990000'; evolutionFake.createdState = 'open'; evolutionFake.deleteFails = false;
+222:   await prisma.webhookEvent.deleteMany();
+223:   await prisma.message.deleteMany();
+224:   await prisma.providerResourceIdentity.deleteMany();
+225:   await prisma.channelRegistrationAttempt.deleteMany();
+226:   await prisma.channelCredential.deleteMany();
+227:   await prisma.conversation.deleteMany();
+228:   await prisma.activityLog.deleteMany();
+229:   await prisma.tokenDeAcesso.deleteMany();
+230:   await prisma.arquivo.deleteMany();
+231:   await prisma.setorGrant.deleteMany();
+232:   await prisma.userBuRole.deleteMany();
+233:   await prisma.appUser.deleteMany();
+234:   await prisma.buChannel.deleteMany();
+235:   await prisma.businessUnit.deleteMany();
+236:   await prisma.setor.deleteMany();
+237:   await prisma.mantenedora.deleteMany();
+238:   await prisma.loginAttempt.deleteMany();
+239: }
+240: 
+241: /** Test channel fixture with the same durable ownership and credential invariants as production. */
+242: export async function criarCanalVerificado(
+243:   prisma: PrismaService,
+244:   buId: string,
+245:   type: 'OFICIAL' | 'NAO_OFICIAL',
+246:   externalResourceId: string,
+247:   options: { status?: 'CONECTADO' | 'CONECTANDO' | 'DESCONECTADO'; requiresWindow?: boolean } = {},
+248: ) {
+249:   const channel = await prisma.buChannel.create({ data: {
+250:     buId, type, status: options.status ?? 'CONECTADO', requiresWindow: options.requiresWindow ?? type === 'OFICIAL',
+251:     ...(type === 'OFICIAL' ? { phoneNumberId: externalResourceId } : { evolutionInstanceName: externalResourceId }),
+252:     ownNumberVerified: true, verifiedEpoch: 0, providerConnectionState: type === 'OFICIAL' ? 'SUBSCRIBED' : 'CONNECTED',
+253:     receiptVerifiedAt: new Date(),
+254:   } });
+255:   const priorIdentity = await prisma.providerResourceIdentity.findUnique({
+256:     where: { provider_externalResourceId: { provider: type, externalResourceId } },
+257:   });
+258:   if (priorIdentity && (priorIdentity.buId !== buId || priorIdentity.currentChannelId)) {
+259:     throw new Error('Fixture resource identity is owned or active elsewhere.');
+260:   }
+261:   const identity = priorIdentity
+262:     ? await prisma.providerResourceIdentity.update({ where: { id: priorIdentity.id }, data: { currentChannelId: channel.id, retiredAt: null, managedLifecycle: true, cleanupState: 'ACTIVE' } })
+263:     : await prisma.providerResourceIdentity.create({ data: {
+264:       provider: type, externalResourceId, buId, currentChannelId: channel.id, managedLifecycle: true, cleanupState: 'ACTIVE',
+265:     } });
+266:   if (type === 'OFICIAL') {
+267:     const keyId = process.env.CHANNEL_CREDENTIAL_KEY_ID!;
+268:     const key = Buffer.from(process.env.CHANNEL_CREDENTIAL_KEY!, 'base64');
+269:     const envelope = sealChannelCredential('fixture-scoped-token', keyId, key, {
+270:       purpose: 'active', provider: type, buId, channelId: channel.id, generation: channel.generation, version: 1,
+271:     });
+272:     await prisma.channelCredential.create({ data: {
+273:       channelId: channel.id, provider: type, buId, generation: channel.generation, version: 1,
+274:       keyId, nonce: new Uint8Array(envelope.nonce), ciphertext: new Uint8Array(envelope.ciphertext), tag: new Uint8Array(envelope.tag),
+275:     } });
+276:   }
+277:   return { channel, identity };
+278: }
+279: 
+280: /** Cria uma Mantenedora pela superfície interna — o caminho real de bootstrap. */
+281: /**
+282:  * Cria a Mantenedora **com o onboarding já concluído**.
+283:  *
+284:  * O bootstrap a cria PENDENTE (ADR-0016 §4), e é assim em produção. Os testes
+285:  * que exercitam o produto vêm depois do wizard; quem exercita o portão é
+286:  * `onboarding.e2e-spec.ts`, que usa `criarMantenedoraPendente`.
+287:  */
+288: export async function criarMantenedora(
+289:   app: INestApplication,
+290:   nome: string,
+291:   email: string,
+292:   senha = 'senha-de-teste-1',
+293: ) {
+294:   const r = await criarMantenedoraPendente(app, nome, email, senha);
+295:   const prisma = app.get(PrismaService);
+296:   await prisma.mantenedoraSettings.update({
+297:     where: { mantenedoraId: r.mantenedora.id },
+298:     data: { onboardingConcluido: true },
+299:   });
+300:   return r;
+301: }
+302: 
+303: export async function criarMantenedoraPendente(
+304:   app: INestApplication,
+305:   nome: string,
+306:   email: string,
+307:   senha = 'senha-de-teste-1',
+308: ) {
+309:   const res = await request(app.getHttpServer())
+310:     .post('/api/internal/mantenedoras')
+311:     .set('x-internal-token', TOKEN_INTERNO)
+312:     .set('x-requested-with', 'teste')
+313:     .send({ nome, bu: { nome: `Número da ${nome}`, telefone: '5584999990000' }, owner: { nome: 'Dono', email, senha } })
+314:     .expect(201);
+315:   return res.body as {
+316:     mantenedora: { id: string; nome: string };
+317:     businessUnit: { id: string; nome: string };
+318:     owner: { id: string; email: string };
+319:   };
+320: }
+321: 
+322: /** Faz login e devolve o cookie de sessão para reusar nas próximas chamadas. */
+323: export async function login(app: INestApplication, email: string, senha = 'senha-de-teste-1'): Promise<string> {
+324:   const res = await request(app.getHttpServer())
+325:     .post('/api/bff/auth/login')
+326:     .set('x-requested-with', 'teste')
+327:     .send({ email, senha })
+328:     .expect(200);
+329:   const setCookie = res.headers['set-cookie'] as unknown as string[];
+330:   return setCookie[0].split(';')[0];
+331: }
+```
+
+
+## Source api-app/test/number-onboarding-pcv.e2e-spec.ts
+
+Raw SHA256 `c62a11fc6302cd3bb807ff0b55b9dbcc7e46847cef638b81c382b455a8a29f20`; bytes16149.
+
+```
+1: import { INestApplication } from '@nestjs/common';
+2: import request from 'supertest';
+3: import { performance } from 'node:perf_hooks';
+4: import { Prisma } from '@prisma/client';
+5: import { afterAll, beforeAll, describe, expect, it } from 'vitest';
+6: import { ChannelCredentialResolver } from '../src/domain/channels/channel-credential-resolver';
+7: import { PrismaService } from '../src/infra/prisma/prisma.service';
+8: import { criarCanalVerificado, criarMantenedora, limparBanco, login, metaFake, evolutionFake, subirApp } from './helpers';
+9: 
+10: describe('number onboarding bounded performance and read-scope probes (PostgreSQL)', () => {
+11:   let app: INestApplication;
+12:   let prisma: PrismaService;
+13: 
+14:   beforeAll(async () => { ({ app, prisma } = await subirApp(undefined, true)); await app.listen(0, '127.0.0.1'); await limparBanco(prisma); });
+15:   afterAll(async () => { if (prisma) await limparBanco(prisma); await app?.close(); });
+16: 
+17:   it('captures the attempt exact-lookup plan and bounded response timings (EPS-E2)', async () => {
+18:     const tenant = await criarMantenedora(app, 'EPS lookup', 'eps-lookup@example.test');
+19:     const cookie = await login(app, 'eps-lookup@example.test');
+20:     const key = 'e0000000-e000-4000-8000-000000000001';
+21:     const created = await request(app.getHttpServer()).post('/api/bff/number-registrations').set('Cookie', cookie)
+22:       .set('x-requested-with', 'eps').set('Idempotency-Key', key)
+23:       .send({ buId: tenant.businessUnit.id, tipo: 'OFICIAL', operation: 'NOVO' }).expect(201);
+24:     const setorId = (await prisma.businessUnit.findUniqueOrThrow({ where: { id: tenant.businessUnit.id }, select: { setorId: true } })).setorId;
+25:     for (let index = 0; index < 24; index += 1) {
+26:       const bu = await prisma.businessUnit.create({ data: { mantenedoraId: tenant.mantenedora.id, setorId, name: `EPS lookup ${index}`, phone: `5586${String(40000000 + index)}` } });
+27:       await prisma.userBuRole.create({ data: { userId: tenant.owner.id, buId: bu.id, role: 'ADMIN', grantedViaTipo: 'DIRETO' } });
+28:       await request(app.getHttpServer()).post('/api/bff/number-registrations').set('Cookie', cookie).set('x-requested-with', 'eps')
+29:         .set('Idempotency-Key', `e0000000-e000-4000-8000-${String(index + 2).padStart(12, '0')}`)
+30:         .send({ buId: bu.id, tipo: 'OFICIAL', operation: 'NOVO' }).expect(201);
+31:     }
+32:     const planRows = await prisma.$queryRaw<Array<{ 'QUERY PLAN': unknown }>>`
+33:       EXPLAIN (FORMAT JSON)
+34:       SELECT id FROM channel_registration_attempts
+35:       WHERE mantenedora_id = ${tenant.mantenedora.id} AND idempotency_key = ${key}
+36:     `;
+37:     const samplesMs: number[] = [];
+38:     for (let sample = 0; sample < 20; sample += 1) {
+39:       const started = performance.now();
+40:       const result = await request(app.getHttpServer()).get(`/api/bff/number-registrations/${created.body.attempt.id}`).set('Cookie', cookie).expect(200);
+41:       samplesMs.push(performance.now() - started);
+42:       expect(result.body.id).toBe(created.body.attempt.id);
+43:     }
+44:     const sorted = [...samplesMs].sort((a, b) => a - b);
+45:     const evidence = {
+46:       policy_schema_version: 'pcv-1', lane_id: 'EPS', trigger_result: 'required', trigger_severity: 'medium',
+47:       trigger_reason_code: 'EPS-DATA-PATH-CHANGED', gate_deadline: 'before_local_implemented',
+48:       min_evidence_rule_id: 'EPS-E2', acceptance_rule_id: 'EPS-A2', sample_profile: 'EPS-SP-STRONG',
+49:       strong_query_evidence_type: 'EXPLAIN (FORMAT JSON) plus bounded endpoint timings',
+50:       access_pattern_classification: {
+51:         registrationGet: 'one attempt by id and Mantenedora; no provider calls',
+52:         idempotencyReplay: 'unique lookup by Mantenedora and Idempotency-Key',
+53:         channelList: 'BU-filtered projection; no provider fan-out',
+54:       },
+55:       touched_path_audit_summary: 'NumberRegistrationService direct attempt reads and ChannelsController BU-filtered channel list; existing unique/index definitions in Prisma schema.',
+56:       seededAttempts: 25,
+57:       explain: planRows[0]?.['QUERY PLAN'] ?? null,
+58:       timing: { samples: samplesMs.length, minMs: sorted[0], medianMs: sorted[Math.floor(sorted.length / 2)], p95Ms: sorted[Math.ceil(sorted.length * 0.95) - 1], maxMs: sorted[sorted.length - 1] },
+59:       limits: 'Local disposable PostgreSQL observation only; no latency threshold or capacity/SLO claim.',
+60:     };
+61:     console.log(`[EPS-EVIDENCE]${JSON.stringify(evidence)}`);
+62:     expect(planRows[0]?.['QUERY PLAN']).toBeTruthy();
+63:     expect(samplesMs).toHaveLength(20);
+64:   });
+65: 
+66:   it('resolves the actual channel identity with an indexed currentChannelId lookup among retained tombstones (NUM-PERF-01)', async () => {
+67:     const tenant = await criarMantenedora(app, 'EPS identity lookup', 'eps-identity@example.test');
+68:     const { channel, identity } = await criarCanalVerificado(prisma, tenant.businessUnit.id, 'NAO_OFICIAL', 'eps-current-resource', { requiresWindow: false });
+69:     const tombstoneCount = 2_000;
+70:     await prisma.providerResourceIdentity.createMany({ data: Array.from({ length: tombstoneCount }, (_, index) => ({
+71:       provider: 'NAO_OFICIAL' as const,
+72:       externalResourceId: `eps-retired-resource-${index}`,
+73:       buId: tenant.businessUnit.id,
+74:       currentChannelId: null,
+75:       retiredAt: new Date('2026-01-01T00:00:00.000Z'),
+76:       managedLifecycle: true,
+77:       cleanupState: 'CLEANED',
+78:     })) });
+79:     await prisma.$executeRaw`ANALYZE provider_resource_identities`;
+80: 
+81:     const resolved = await new ChannelCredentialResolver(prisma).resolve(channel.id, 'registration');
+82:     const planRows = await prisma.$queryRaw<Array<{ 'QUERY PLAN': unknown }>>`
+83:       EXPLAIN (ANALYZE, BUFFERS, FORMAT JSON)
+84:       SELECT id FROM provider_resource_identities WHERE current_channel_id = ${channel.id}
+85:     `;
+86:     const planText = JSON.stringify(planRows[0]?.['QUERY PLAN'] ?? null);
+87:     const evidence = {
+88:       finding_id: 'NUM-PERF-01',
+89:       policy_schema_version: 'pcv-1',
+90:       relation: 'provider_resource_identities',
+91:       resolver: 'ChannelCredentialResolver.resolve(channel.id, registration)',
+92:       predicate: 'current_channel_id = channel.id',
+93:       currentIdentity: { id: resolved.providerResourceIdentityId, externalResourceId: resolved.externalResourceId },
+94:       unrelatedRetiredIdentityRows: tombstoneCount,
+95:       totalIdentityRows: tombstoneCount + 1,
+96:       plan: planRows[0]?.['QUERY PLAN'] ?? null,
+97:       limits: 'Disposable PostgreSQL observation; test-after evidence for the resolver-shaped indexed relation lookup, not a capacity/SLO claim.',
+98:     };
+99:     console.log(`[NUM-PERF-01-EVIDENCE]${JSON.stringify(evidence)}`);
+100:     expect(resolved).toMatchObject({ providerResourceIdentityId: identity.id, externalResourceId: 'eps-current-resource', buId: tenant.businessUnit.id });
+101:     expect(planText).toContain('provider_resource_identities_current_channel_id_idx');
+102:     expect(planText).toMatch(/Index Scan|Bitmap Index Scan/);
+103:   });
+104: 
+105:   it('batches public-list channel metadata to one binding, credential, and window query for a 30-conversation page', async () => {
+106:     const tenant = await criarMantenedora(app, 'Channel list EPS', 'channel-list-eps@example.test');
+107:     const cookie = await login(app, 'channel-list-eps@example.test');
+108:     await criarCanalVerificado(prisma, tenant.businessUnit.id, 'OFICIAL', 'channel-list-eps-resource');
+109:     const phone = '5586777000001';
+110:     const conversations = await Promise.all(Array.from({ length: 30 }, (_, index) => prisma.conversation.create({ data: {
+111:       buId: tenant.businessUnit.id, contact: `${phone}${String(index).padStart(2, '0')}`, contactType: 'PESSOA', status: 'QUEUED',
+112:     } })));
+113:     await prisma.message.createMany({ data: conversations.map((conversation, index) => ({
+114:       conversationId: conversation.id, buId: tenant.businessUnit.id, direction: 'IN', messageType: 'TEXTO',
+115:       content: `channel list inbound ${index}`, channelOrigin: 'OFICIAL', status: 'RECEBIDA', createdAt: new Date(Date.now() - index * 1000),
+116:     })) });
+117:     const historicalInbound = conversations.flatMap((conversation, conversationIndex) => Array.from({ length: 24 }, (_, historyIndex) => ({
+118:       conversationId: conversation.id, buId: tenant.businessUnit.id, direction: 'IN' as const, messageType: 'TEXTO' as const,
+119:       content: `channel list older inbound ${conversationIndex}/${historyIndex}`, channelOrigin: 'OFICIAL' as const, status: 'RECEBIDA' as const,
+120:       createdAt: new Date(Date.now() - 2 * 60 * 60 * 1000 - historyIndex * 1000),
+121:     })));
+122:     await prisma.message.createMany({ data: historicalInbound });
+123:     const key = await request(app.getHttpServer()).post('/api/bff/integracao/api-keys').set('Cookie', cookie)
+124:       .set('x-requested-with', 'eps').send({ nome: 'Channel list EPS key', buIds: [tenant.businessUnit.id] }).expect(201);
+125:     const sqlStatements: string[] = [];
+126:     prisma.$on('query', ({ query }) => sqlStatements.push(query));
+127:     const providerCallsBefore = { meta: metaFake.providerCalls, evolution: evolutionFake.providerCalls };
+128:     const started = performance.now();
+129:     const response = await request(app.getHttpServer()).get('/api/v1/conversations')
+130:       .query({ account_id: tenant.businessUnit.id, limit: 30 })
+131:       .set('Authorization', `Bearer ${key.body.chave}`).expect(200);
+132:     const elapsedMs = performance.now() - started;
+133:     const channelQueryCount = sqlStatements.filter((query) => query.includes('FROM "public"."bu_channels"')).length;
+134:     const credentialQueryCount = sqlStatements.filter((query) => query.includes('FROM "public"."channel_credentials"')).length;
+135:     const windowQueryCount = sqlStatements.filter((query) => query.includes('FROM unnest(ARRAY') && query.includes('LIMIT 1')).length;
+136:     const providerCallsAfter = { meta: metaFake.providerCalls, evolution: evolutionFake.providerCalls };
+137:     const ids = conversations.map(({ id }) => id);
+138:     await prisma.$executeRaw`ANALYZE messages`;
+139:     const planRows = await prisma.$queryRaw<Array<{ 'QUERY PLAN': unknown }>>`
+140:       EXPLAIN (ANALYZE, BUFFERS, FORMAT JSON)
+141:       SELECT requested.conversation_id, latest.created_at
+142:       FROM unnest(ARRAY[${Prisma.join(ids)}]::text[]) AS requested(conversation_id)
+143:       CROSS JOIN LATERAL (
+144:         SELECT message.created_at
+145:         FROM messages AS message
+146:         WHERE message.conversation_id = requested.conversation_id AND message.direction = 'IN'
+147:         ORDER BY message.created_at DESC, message.id DESC
+148:         LIMIT 1
+149:       ) AS latest
+150:     `;
+151:     const evidence = {
+152:       policy_schema_version: 'pcv-1', lane_id: 'EPS', trigger_result: 'required', trigger_severity: 'medium',
+153:       trigger_reason_code: 'EPS-DATA-PATH-CHANGED', gate_deadline: 'before_local_implemented',
+154:       min_evidence_rule_id: 'EPS-E2', acceptance_rule_id: 'EPS-A2', sample_profile: 'EPS-SP-STRONG',
+155:       access_pattern_classification: 'Public conversation page loads selected BU channels once, official credential metadata once, and one latest-IN SQL statement using an indexed LIMIT 1 lookup per conversation; no provider credentials are decrypted or probed.',
+156:       pageConversations: response.body.conversations.length,
+157:       historyRowsPerConversation: historicalInbound.length / conversations.length,
+158:       availabilitySample: response.body.conversations.slice(0, 3).map((row: Record<string, unknown>) => ({
+159:         available: row.envio_disponivel, reason: row.motivo_indisponibilidade, windowOpen: row.janela_aberta,
+160:       })),
+161:       queryCounts: { buChannelFindMany: channelQueryCount, channelCredentialFindMany: credentialQueryCount, latestInboundWindowProjection: windowQueryCount },
+162:       elapsedMs,
+163:       explainLatestInboundProjection: planRows[0]?.['QUERY PLAN'] ?? null,
+164:       providerCallsBefore: providerCallsBefore,
+165:       providerCallsAfter,
+166:       limits: 'Disposable PostgreSQL and one bounded 30-conversation public page; local query count/plan observation, not a capacity or latency SLO claim.',
+167:     };
+168:     console.log(`[CHANNEL-EPS-EVIDENCE]${JSON.stringify(evidence)}`);
+169:     expect(response.body.conversations).toHaveLength(30);
+170:     expect(response.body.conversations.every((row: { envio_disponivel: boolean }) => row.envio_disponivel), JSON.stringify(evidence.availabilitySample)).toBe(true);
+171:     expect(evidence.queryCounts).toEqual({ buChannelFindMany: 1, channelCredentialFindMany: 1, latestInboundWindowProjection: 1 });
+172:     expect(providerCallsAfter).toEqual(providerCallsBefore);
+173:     expect(planRows[0]?.['QUERY PLAN']).toBeTruthy();
+174:     const planText = JSON.stringify(planRows[0]?.['QUERY PLAN'] ?? null);
+175:     expect(planText).toContain('Limit');
+176:     expect(planText).toMatch(/Index Scan|Bitmap Index Scan/);
+177:   });
+178: 
+179:   it('runs five clients through six scoped channel reads each with zero provider fan-out (RLS-SP-L)', async () => {
+180:     const actors: Array<{ buId: string; cookie: string }> = [];
+181:     for (let index = 0; index < 5; index += 1) {
+182:       const tenant = await criarMantenedora(app, `RLS tenant ${index}`, `rls-${index}@example.test`);
+183:       await criarCanalVerificado(prisma, tenant.businessUnit.id, 'OFICIAL', `rls-resource-${index}`);
+184:       actors.push({ buId: tenant.businessUnit.id, cookie: await login(app, `rls-${index}@example.test`) });
+185:     }
+186:     const metaCallsBeforeCalibration = metaFake.providerCalls;
+187:     await metaFake.numerosDaWaba('123456789', 'fixture-scoped-token');
+188:     expect(metaFake.providerCalls).toBe(metaCallsBeforeCalibration + 1);
+189:     const externalProviderCallsAtReadStart = { meta: metaFake.providerCalls, evolution: evolutionFake.providerCalls };
+190:     const observed: Array<{ client: number; ownReads: number; foreignReads: number }> = [];
+191:     const started = performance.now();
+192:     const clientReadGroups = actors.map(async (actor, client) => {
+193:       const foreignBuId = actors[(client + 1) % actors.length].buId;
+194:       for (let read = 0; read < 3; read += 1) {
+195:         const own = await request(app.getHttpServer()).get(`/api/bff/business-units/${actor.buId}/channels`).set('Cookie', actor.cookie);
+196:         expect(own.status, JSON.stringify(own.body)).toBe(200);
+197:         expect(own.body.canais).toHaveLength(1);
+198:         expect(own.body.canais[0]).toMatchObject({ type: 'OFICIAL', ownNumberVerified: true });
+199:         const foreign = await request(app.getHttpServer()).get(`/api/bff/business-units/${foreignBuId}/channels`).set('Cookie', actor.cookie);
+200:         expect(foreign.status, JSON.stringify(foreign.body)).toBe(404);
+201:         expect(foreign.body.code).toBe('NAO_ENCONTRADO');
+202:       }
+203:       observed.push({ client, ownReads: 3, foreignReads: 3 });
+204:     });
+205:     await Promise.all(clientReadGroups);
+206:     const elapsedMs = performance.now() - started;
+207:     const providerCallsAfter = { meta: metaFake.providerCalls, evolution: evolutionFake.providerCalls };
+208:     const evidence = {
+209:       policy_schema_version: 'pcv-1', lane_id: 'RLS', trigger_result: 'recommended', trigger_severity: 'medium',
+210:       trigger_reason_code: 'RLS-QUEUE-WORKER-REALTIME-CHANGED', gate_deadline: 'before_local_implemented',
+211:       min_evidence_rule_id: 'RLS-E1', acceptance_rule_id: 'RLS-A1', stage_profile_observed: 'RLS-SP-L',
+212:       clients: observed.length, readsPerClient: 6, totalScopeChecks: observed.reduce((sum, row) => sum + row.ownReads + row.foreignReads, 0), observed,
+213:       thresholds: { ownBuReadStatus: 200, foreignTenantReadStatus: 404, providerCallsDuringListing: 0 },
+214:       providerCalls: { calibration: 'one fixture Meta number-list operation was detected before the read stage', before: externalProviderCallsAtReadStart, after: providerCallsAfter, duringReadDelta: { meta: providerCallsAfter.meta - externalProviderCallsAtReadStart.meta, evolution: providerCallsAfter.evolution - externalProviderCallsAtReadStart.evolution } }, elapsedMs,
+215:       metrics_summary: 'Five authenticated clients ran concurrently; each completed three sequential own-BU and three sequential foreign-tenant reads; all instrumented Meta/Evolution operations remained unchanged during channel listing.',
+216:       limits: 'One bounded local PostgreSQL stage; not a capacity, latency SLO, or provider load claim.',
+217:     };
+218:     console.log(`[RLS-EVIDENCE]${JSON.stringify(evidence)}`);
+219:     expect(evidence.totalScopeChecks).toBe(30);
+220:     expect(providerCallsAfter).toEqual(externalProviderCallsAtReadStart);
+221:   });
+222: });
+```
+
+
+## Source api-app/test/number-onboarding-typebot.e2e-spec.ts
+
+Raw SHA256 `22e1121d8a1f03b5e566fb8e314c3966e5d9355453b31b978afcd30de038fbd2`; bytes17679.
+
+```
+1: import { INestApplication } from '@nestjs/common';
+2: import { createHmac } from 'node:crypto';
+3: import request from 'supertest';
+4: import { afterAll, beforeAll, beforeEach, describe, expect, it } from 'vitest';
+5: import { PrismaService } from '../src/infra/prisma/prisma.service';
+6: import { EVOLUTION_WEBHOOK_SECRET, META_APP_SECRET, criarCanalVerificado, criarMantenedora, limparBanco, metaFake, evolutionFake, subirApp, typebotFake } from './helpers';
+7: 
+8: describe('Typebot tenant, trigger and resumed session isolation (PostgreSQL)', () => {
+9:   let app: INestApplication;
+10:   let prisma: PrismaService;
+11:   let a: Awaited<ReturnType<typeof criarMantenedora>>;
+12:   let b: Awaited<ReturnType<typeof criarMantenedora>>;
+13:   const phoneId = 'typebot-resource-a';
+14:   const contact = '5584997770000';
+15: 
+16:   beforeAll(async () => { ({ app, prisma } = await subirApp()); });
+17:   afterAll(async () => { if (prisma) await limparBanco(prisma); await app?.close(); });
+18:   beforeEach(async () => {
+19:     await limparBanco(prisma);
+20:     a = await criarMantenedora(app, 'Typebot tenant A', 'typebot-a@example.test');
+21:     b = await criarMantenedora(app, 'Typebot tenant B', 'typebot-b@example.test');
+22:     await criarCanalVerificado(prisma, a.businessUnit.id, 'OFICIAL', phoneId);
+23:     typebotFake.enabled = true;
+24:     metaFake.enviados = [];
+25:   });
+26: 
+27:   function trigger(id: string) {
+28:     const webhook = { entry: [{ changes: [{ field: 'messages', value: { metadata: { phone_number_id: phoneId }, messages: [{ id, from: contact, type: 'text', text: { body: 'ajuda' } }] } }] }] };
+29:     const signature = `sha256=${createHmac('sha256', META_APP_SECRET).update(JSON.stringify(webhook)).digest('hex')}`;
+30:     return request(app.getHttpServer()).post('/webhooks/meta').set('x-hub-signature-256', signature).send(webhook);
+31:   }
+32: 
+33:   it('does not resume a session stored under another tenant and ignores a foreign global trigger', async () => {
+34:     const botA = await prisma.typebotBot.create({ data: { mantenedoraId: a.mantenedora.id, typebotId: 'bot-a', publishedTypebotId: 'published-a', status: 'ATIVO', name: 'A', editorUrl: 'https://typebot.invalid/a' } });
+35:     const botB = await prisma.typebotBot.create({ data: { mantenedoraId: b.mantenedora.id, typebotId: 'bot-b', publishedTypebotId: 'published-b', name: 'B', editorUrl: 'https://typebot.invalid/b' } });
+36:     await prisma.typebotTrigger.create({ data: { botId: botA.id, kind: 'NOVA_CONVERSA', value: '*', buId: a.businessUnit.id } });
+37:     await prisma.typebotTrigger.create({ data: { botId: botB.id, kind: 'NOVA_CONVERSA', value: '*', buId: null } });
+38:     await prisma.typebotSession.create({ data: { botId: botA.id, mantenedoraId: b.mantenedora.id, buId: a.businessUnit.id, contato: contact, sessionId: 'foreign-session', ativo: true } });
+39: 
+40:     await trigger('typebot-foreign-session').expect(200);
+41:     expect(typebotFake.continues).toBe(0);
+42:     expect(typebotFake.starts).toBe(0);
+43:     expect(metaFake.enviados).toHaveLength(0);
+44:     expect(await prisma.message.count({ where: { buId: a.businessUnit.id } })).toBe(1);
+45:   });
+46: 
+47:   it('uses only the same tenant trigger, derives its session owner from the BU, and accepts the bot reply through the keyed writer', async () => {
+48:     const botA = await prisma.typebotBot.create({ data: { mantenedoraId: a.mantenedora.id, typebotId: 'bot-a', publishedTypebotId: 'published-a', status: 'ATIVO', name: 'A', editorUrl: 'https://typebot.invalid/a' } });
+49:     await prisma.typebotTrigger.create({ data: { botId: botA.id, kind: 'NOVA_CONVERSA', value: '*', buId: a.businessUnit.id } });
+50:     await trigger('typebot-tenant-a').expect(200);
+51:     const session = await prisma.typebotSession.findUniqueOrThrow({ where: { botId_buId_contato: { botId: botA.id, buId: a.businessUnit.id, contato: contact } } });
+52:     expect(session.mantenedoraId).toBe(a.mantenedora.id);
+53:     expect(typebotFake.starts).toBe(1);
+54:     expect(metaFake.enviados).toHaveLength(1);
+55:     const outbound = await prisma.message.findFirstOrThrow({ where: { buId: a.businessUnit.id, direction: 'OUT', externalId: 'wamid-enviado-1' } });
+56:     expect(outbound).toMatchObject({ authorName: 'Typebot', status: 'ENVIADA', providerResourceIdentityId: expect.any(String) });
+57:   });
+58: 
+59:   it('pins a held bot reply to its verified ingress and preserves the live human queue state', async () => {
+60:     const evolution = await criarCanalVerificado(prisma, a.businessUnit.id, 'NAO_OFICIAL', 'typebot-later-origin', { requiresWindow: false });
+61:     const bot = await prisma.typebotBot.create({ data: { mantenedoraId: a.mantenedora.id, typebotId: 'bot-held-origin', publishedTypebotId: 'published-held-origin', status: 'ATIVO', name: 'A', editorUrl: 'https://typebot.invalid/a' } });
+62:     await prisma.typebotTrigger.create({ data: { botId: bot.id, kind: 'NOVA_CONVERSA', value: '*', buId: a.businessUnit.id } });
+63:     let markEntered!: () => void;
+64:     let release!: () => void;
+65:     const entered = new Promise<void>((resolve) => { markEntered = resolve; });
+66:     const gate = new Promise<void>((resolve) => { release = resolve; });
+67:     typebotFake.beforeReply = async () => {
+68:       markEntered();
+69:       await gate;
+70:       const conversation = await prisma.conversation.findUniqueOrThrow({ where: { buId_contact: { buId: a.businessUnit.id, contact } } });
+71:       await prisma.message.create({ data: {
+72:         conversationId: conversation.id, buId: a.businessUnit.id, direction: 'IN', messageType: 'TEXTO', content: 'later different origin',
+73:         channelOrigin: 'NAO_OFICIAL', status: 'RECEBIDA', providerResourceIdentityId: evolution.identity.id, externalId: 'typebot-later-origin-event',
+74:       } });
+75:       await prisma.conversation.update({ where: { id: conversation.id }, data: {
+76:         status: 'QUEUED', unreadCount: 7, attendantUserId: a.owner.id, attendantName: 'Human owner', attendantOrigin: 'INTERNO',
+77:       } });
+78:     };
+79:     const pending = trigger('typebot-held-origin').then((response) => response);
+80:     await entered;
+81:     release();
+82:     expect((await pending).status).toBe(200);
+83:     expect(metaFake.enviados).toEqual([{ para: contact, texto: 'resposta do bot' }]);
+84:     expect(evolutionFake.enviados).toHaveLength(0);
+85:     const conversation = await prisma.conversation.findUniqueOrThrow({ where: { buId_contact: { buId: a.businessUnit.id, contact } } });
+86:     expect(conversation).toMatchObject({ status: 'QUEUED', unreadCount: 7, attendantUserId: a.owner.id, attendantName: 'Human owner', attendantOrigin: 'INTERNO' });
+87:   });
+88: 
+89:   it('does not dispatch a held bot reply after its required 24-hour window expires', async () => {
+90:     const bot = await prisma.typebotBot.create({ data: { mantenedoraId: a.mantenedora.id, typebotId: 'bot-held-window', publishedTypebotId: 'published-held-window', status: 'ATIVO', name: 'A', editorUrl: 'https://typebot.invalid/a' } });
+91:     await prisma.typebotTrigger.create({ data: { botId: bot.id, kind: 'NOVA_CONVERSA', value: '*', buId: a.businessUnit.id } });
+92:     let markEntered!: () => void;
+93:     let release!: () => void;
+94:     const entered = new Promise<void>((resolve) => { markEntered = resolve; });
+95:     const gate = new Promise<void>((resolve) => { release = resolve; });
+96:     typebotFake.beforeReply = async () => {
+97:       markEntered();
+98:       await gate;
+99:       const inbound = await prisma.message.findFirstOrThrow({ where: { buId: a.businessUnit.id, externalId: 'typebot-held-window' } });
+100:       await prisma.message.update({ where: { id: inbound.id }, data: { createdAt: new Date(Date.now() - 25 * 60 * 60 * 1000) } });
+101:     };
+102:     const pending = trigger('typebot-held-window').then((response) => response);
+103:     await entered;
+104:     release();
+105:     expect((await pending).status).toBe(200);
+106:     expect(metaFake.enviados).toHaveLength(0);
+107:     expect(await prisma.message.count({ where: { buId: a.businessUnit.id, direction: 'OUT' } })).toBe(0);
+108:   });
+109: 
+110:   it('does not rebind a held bot reply after its ingress identity is retired', async () => {
+111:     const binding = await prisma.buChannel.findFirstOrThrow({ where: { buId: a.businessUnit.id, type: 'OFICIAL' }, include: { providerIdentities: true } });
+112:     const identity = binding.providerIdentities.find((row) => row.currentChannelId === binding.id)!;
+113:     const bot = await prisma.typebotBot.create({ data: { mantenedoraId: a.mantenedora.id, typebotId: 'bot-held-retire', publishedTypebotId: 'published-held-retire', status: 'ATIVO', name: 'A', editorUrl: 'https://typebot.invalid/a' } });
+114:     await prisma.typebotTrigger.create({ data: { botId: bot.id, kind: 'NOVA_CONVERSA', value: '*', buId: a.businessUnit.id } });
+115:     let markEntered!: () => void;
+116:     let release!: () => void;
+117:     const entered = new Promise<void>((resolve) => { markEntered = resolve; });
+118:     const gate = new Promise<void>((resolve) => { release = resolve; });
+119:     typebotFake.beforeReply = async () => { markEntered(); await gate; await prisma.providerResourceIdentity.update({ where: { id: identity.id }, data: { currentChannelId: null, retiredAt: new Date() } }); };
+120:     const pending = trigger('typebot-held-retire').then((response) => response);
+121:     await entered;
+122:     release();
+123:     expect((await pending).status).toBe(200);
+124:     expect(metaFake.enviados).toHaveLength(0);
+125:     expect(await prisma.message.count({ where: { buId: a.businessUnit.id, direction: 'OUT' } })).toBe(0);
+126:   });
+127: 
+128:   it('selects the matching trigger from the current tenant when an earlier foreign global trigger also matches', async () => {
+129:     const botB = await prisma.typebotBot.create({ data: { mantenedoraId: b.mantenedora.id, typebotId: 'foreign-global-bot', publishedTypebotId: 'foreign-global-published', status: 'ATIVO', name: 'Foreign', editorUrl: 'https://typebot.invalid/foreign' } });
+130:     const botA = await prisma.typebotBot.create({ data: { mantenedoraId: a.mantenedora.id, typebotId: 'tenant-global-bot', publishedTypebotId: 'tenant-global-published', status: 'ATIVO', name: 'Tenant', editorUrl: 'https://typebot.invalid/tenant' } });
+131:     const foreignTrigger = await prisma.typebotTrigger.create({ data: { botId: botB.id, kind: 'NOVA_CONVERSA', value: '*', buId: null, createdAt: new Date(Date.now() - 60_000) } });
+132:     await prisma.typebotTrigger.create({ data: { botId: botA.id, kind: 'NOVA_CONVERSA', value: '*', buId: null } });
+133:     expect(foreignTrigger.createdAt.getTime()).toBeLessThan(Date.now() - 1_000);
+134: 
+135:     await trigger('typebot-global-trigger-tenant-order').expect(200);
+136: 
+137:     expect(typebotFake.startedBots).toEqual([{ botId: 'tenant-global-published', contact, text: 'ajuda' }]);
+138:     const session = await prisma.typebotSession.findUniqueOrThrow({ where: { botId_buId_contato: { botId: botA.id, buId: a.businessUnit.id, contato: contact } } });
+139:     expect(session).toMatchObject({ mantenedoraId: a.mantenedora.id, buId: a.businessUnit.id, botId: botA.id });
+140:     expect(await prisma.typebotSession.count({ where: { botId: botB.id } })).toBe(0);
+141:     expect(metaFake.credentialCalls).toEqual([{ phoneNumberId: phoneId, accessToken: 'fixture-scoped-token' }]);
+142:     expect(metaFake.enviados).toEqual([{ para: contact, texto: 'resposta do bot' }]);
+143:     const outbound = await prisma.message.findFirstOrThrow({ where: { buId: a.businessUnit.id, direction: 'OUT', authorName: 'Typebot' }, include: { providerResourceIdentity: true } });
+144:     expect(outbound.providerResourceIdentity).toMatchObject({ buId: a.businessUnit.id, externalResourceId: phoneId });
+145:     expect(outbound.content).not.toContain('foreign');
+146:   });
+147: 
+148:   it('records a Typebot send without a provider ID as an ambiguous outcome and does not resend', async () => {
+149:     const botA = await prisma.typebotBot.create({ data: { mantenedoraId: a.mantenedora.id, typebotId: 'bot-null-id', publishedTypebotId: 'published-null-id', status: 'ATIVO', name: 'A', editorUrl: 'https://typebot.invalid/a' } });
+150:     await prisma.typebotTrigger.create({ data: { botId: botA.id, kind: 'NOVA_CONVERSA', value: '*', buId: a.businessUnit.id } });
+151:     metaFake.sendIdNull = true;
+152:     await trigger('typebot-null-id').expect(200);
+153:     expect(metaFake.enviados).toHaveLength(1);
+154:     const failed = await prisma.message.findFirstOrThrow({ where: { buId: a.businessUnit.id, direction: 'OUT', externalId: null } });
+155:     expect(failed).toMatchObject({ status: 'FALHOU', authorName: 'Typebot', providerResourceIdentityId: expect.any(String) });
+156:     expect(failed.content).toBe('resposta do bot');
+157:   });
+158: 
+159:   it('reconciles a Typebot Evolution echo delivered inside send and ignores a later duplicate echo', async () => {
+160:     const setor = await prisma.businessUnit.findUniqueOrThrow({ where: { id: a.businessUnit.id }, select: { setorId: true } });
+161:     const bu = await prisma.businessUnit.create({ data: { mantenedoraId: a.mantenedora.id, setorId: setor.setorId, name: 'Typebot Evolution BU' } });
+162:     const instance = 'typebot-evolution-resource';
+163:     await criarCanalVerificado(prisma, bu.id, 'NAO_OFICIAL', instance, { requiresWindow: false });
+164:     const bot = await prisma.typebotBot.create({ data: {
+165:       mantenedoraId: a.mantenedora.id, typebotId: 'evolution-bot', publishedTypebotId: 'evolution-published',
+166:       name: 'Evolution bot', editorUrl: 'https://typebot.invalid/evolution',
+167:     } });
+168:     await prisma.typebotTrigger.create({ data: { botId: bot.id, kind: 'NOVA_CONVERSA', value: '*', buId: bu.id } });
+169:     await prisma.typebotTrigger.create({ data: { botId: bot.id, kind: 'PALAVRA_CHAVE', value: 'ajuda', buId: bu.id } });
+170:     let echoRow: { id: string; createdAt: Date } | null = null;
+171:     evolutionFake.sendHook = async (id, para, texto) => {
+172:       const webhook = { event: 'messages.upsert', instance, data: {
+173:         key: { remoteJid: `${para}@s.whatsapp.net`, fromMe: true, id }, message: { conversation: `${texto} provider echo` },
+174:       } };
+175:       await request(app.getHttpServer()).post('/webhooks/evolution').set('x-leadshug-webhook-secret', EVOLUTION_WEBHOOK_SECRET).send(webhook).expect(200);
+176:       echoRow = await prisma.message.findFirstOrThrow({ where: { providerResourceIdentity: { externalResourceId: instance }, externalId: id }, select: { id: true, createdAt: true } });
+177:     };
+178:     const inbound = { event: 'messages.upsert', instance, data: {
+179:       key: { remoteJid: `${contact}@s.whatsapp.net`, fromMe: false, id: 'evo-typebot-trigger' },
+180:       pushName: 'Cliente', message: { conversation: 'ajuda' },
+181:     } };
+182:     await request(app.getHttpServer()).post('/webhooks/evolution').set('x-leadshug-webhook-secret', EVOLUTION_WEBHOOK_SECRET).send(inbound).expect(200);
+183:     evolutionFake.sendHook = null;
+184:     const outbound = await prisma.message.findFirstOrThrow({ where: { providerResourceIdentity: { externalResourceId: instance }, externalId: 'evo-enviado-1' } });
+185:     expect(outbound.id).toBe(echoRow?.id);
+186:     expect(outbound.createdAt).toEqual(echoRow?.createdAt);
+187:     expect(outbound).toMatchObject({ direction: 'OUT', content: 'resposta do bot', authorName: 'Typebot' });
+188:     expect(await prisma.message.count({ where: { providerResourceIdentity: { externalResourceId: instance }, externalId: 'evo-enviado-1' } })).toBe(1);
+189:     expect(await prisma.message.count({ where: { buId: bu.id, direction: 'IN' } })).toBe(1);
+190:     const conversation = await prisma.conversation.findUniqueOrThrow({ where: { buId_contact: { buId: bu.id, contact } } });
+191:     expect(conversation.unreadCount).toBe(1);
+192:     expect(typebotFake.starts).toBe(1);
+193:     expect(evolutionFake.enviados).toHaveLength(1);
+194: 
+195:     const laterEcho = { event: 'messages.upsert', instance, data: {
+196:       key: { remoteJid: `${contact}@s.whatsapp.net`, fromMe: true, id: 'evo-enviado-1' }, message: { conversation: 'untrusted duplicate echo' },
+197:     } };
+198:     await request(app.getHttpServer()).post('/webhooks/evolution').set('x-leadshug-webhook-secret', EVOLUTION_WEBHOOK_SECRET).send(laterEcho).expect(200);
+199:     const afterEcho = await prisma.message.findFirstOrThrow({ where: { externalId: 'evo-enviado-1' } });
+200:     expect(afterEcho).toMatchObject({ id: outbound.id, createdAt: outbound.createdAt, content: 'resposta do bot', authorName: 'Typebot' });
+201:     expect(await prisma.conversation.findUniqueOrThrow({ where: { id: conversation.id } })).toMatchObject({ unreadCount: 1 });
+202:     expect(typebotFake.starts).toBe(1);
+203: 
+204:     await prisma.typebotSession.updateMany({ where: { botId: bot.id, buId: bu.id, contato: contact }, data: { ativo: false } });
+205:     const secondInbound = { event: 'messages.upsert', instance, data: {
+206:       key: { remoteJid: `${contact}@s.whatsapp.net`, fromMe: false, id: 'evo-typebot-sender-first-trigger' },
+207:       pushName: 'Cliente', message: { conversation: 'ajuda' },
+208:     } };
+209:     await request(app.getHttpServer()).post('/webhooks/evolution').set('x-leadshug-webhook-secret', EVOLUTION_WEBHOOK_SECRET).send(secondInbound).expect(200);
+210:     const senderFirst = await prisma.message.findFirstOrThrow({ where: { providerResourceIdentity: { externalResourceId: instance }, externalId: 'evo-enviado-2' } });
+211:     const lateEcho = { event: 'messages.upsert', instance, data: {
+212:       key: { remoteJid: `${contact}@s.whatsapp.net`, fromMe: true, id: 'evo-enviado-2' }, message: { conversation: 'late untrusted Typebot echo' },
+213:     } };
+214:     await request(app.getHttpServer()).post('/webhooks/evolution').set('x-leadshug-webhook-secret', EVOLUTION_WEBHOOK_SECRET).send(lateEcho).expect(200);
+215:     const senderFirstAfterEcho = await prisma.message.findUniqueOrThrow({ where: { id: senderFirst.id } });
+216:     expect(senderFirstAfterEcho).toMatchObject({ createdAt: senderFirst.createdAt, content: 'resposta do bot', authorName: 'Typebot' });
+217:     expect(await prisma.message.count({ where: { providerResourceIdentity: { externalResourceId: instance }, externalId: 'evo-enviado-2' } })).toBe(1);
+218:     expect(typebotFake.starts).toBe(2);
+219:     expect(evolutionFake.enviados).toHaveLength(2);
+220:   });
+221: });
+```
+
+
+## Source api-app/test/timeline-fixtures.cjs
+
+Raw SHA256 `889707ec7857e8a17a850e56eb60d24e6953e59028f40880edff3756340fd23a`; bytes24711.
+
+```
+1: const http = require('node:http');
+2: const { createHmac } = require('node:crypto');
+3: const bcrypt = require('bcryptjs');
+4: const { PrismaClient } = require('@prisma/client');
+5: const { sealChannelCredential } = require('../dist/domain/channels/channel-credential-crypto.js');
+6: 
+7: const databaseUrl = process.env.DATABASE_URL;
+8: const dedicatedUrl = process.env.LEADSHUG_E2E_DATABASE_URL;
+9: const fixturePort = Number(process.env.LEADSHUG_FIXTURE_PORT ?? '3101');
+10: const apiPort = Number(process.env.LEADSHUG_API_PORT ?? '3100');
+11: const providerInventory = new Map();
+12: const fixtureConversationIds = new Set();
+13: // Stateful provider-only controls for the real-BFF number-onboarding browser lane.
+14: // No browser-visible API response is synthesized here; browser requests still
+15: // traverse Nest, session/CSRF, policy, and PostgreSQL.
+16: const onboarding = {
+17:   resources: [], calls: [], effects: [], failures: {}, holds: {}, holdsAfter: {}, ambiguousAfter: {}, releases: {},
+18:   meta: { codeTokens: {}, grants: {}, pages: {}, sendMode: 'accepted' },
+19:   evolution: { inventory: {}, outcomes: {} },
+20: };
+21: const barriers = new Map();
+22: function barrier(name) {
+23:   if (!barriers.has(name)) {
+24:     let release;
+25:     const promise = new Promise((resolve) => { release = resolve; });
+26:     barriers.set(name, { promise, release });
+27:   }
+28:   return barriers.get(name);
+29: }
+30: async function providerCall(operation, args = {}) {
+31:   const call = { operation, at: Date.now(), ...args };
+32:   onboarding.calls.push(call);
+33:   const failure = onboarding.failures[operation];
+34:   if (failure) { if (failure.remaining > 0) failure.remaining--; if (!failure.remaining) delete onboarding.failures[operation]; throw new Error(failure.message || 'controlled provider failure'); }
+35:   if (onboarding.holds[operation]) await barrier(`${operation}:${onboarding.holds[operation]}`).promise;
+36:   return call;
+37: }
+38: async function providerEffect(operation, args = {}) {
+39:   const effect = { operation, at: Date.now(), ...args };
+40:   onboarding.effects.push(effect);
+41:   if (onboarding.holdsAfter[operation]) await barrier(`${operation}:${onboarding.holdsAfter[operation]}`).promise;
+42:   const ambiguous = onboarding.ambiguousAfter[operation];
+43:   if (ambiguous && ambiguous.remaining > 0) {
+44:     ambiguous.remaining--;
+45:     if (ambiguous.remaining === 0) delete onboarding.ambiguousAfter[operation];
+46:     throw new Error('controlled response lost after provider effect');
+47:   }
+48:   return effect;
+49: }
+50: if (!databaseUrl || databaseUrl !== dedicatedUrl) throw new Error('Fixtures exigem DATABASE_URL igual ao banco descartável de E2E.');
+51: if (!new URL(databaseUrl).pathname.slice(1).split('?')[0].startsWith('leadshug_timeline_')) throw new Error('Fixtures aceitam apenas banco leadshug_timeline_* descartável.');
+52: 
+53: const prisma = new PrismaClient({ datasources: { db: { url: databaseUrl } } });
+54: const json = (res, status, body) => { res.writeHead(status, { 'content-type': 'application/json' }); res.end(JSON.stringify(body)); };
+55: const bodyOf = (req) => new Promise((resolve, reject) => {
+56:   let raw = '';
+57:   req.on('data', (chunk) => { raw += chunk; if (raw.length > 100_000) reject(new Error('body too large')); });
+58:   req.on('end', () => { try { resolve(JSON.parse(raw || '{}')); } catch (e) { reject(e); } });
+59:   req.on('error', reject);
+60: });
+61: 
+62: async function seed(data) {
+63:   onboarding.meta.sendMode = 'accepted';
+64:   const suffix = `${Date.now()}-${Math.random().toString(16).slice(2)}`;
+65:   const mantenedora = await prisma.mantenedora.create({ data: { name: `Timeline ${suffix}` } });
+66:   const setor = await prisma.setor.create({ data: { mantenedoraId: mantenedora.id, name: 'Geral' } });
+67:   const businessUnit = await prisma.businessUnit.create({ data: { mantenedoraId: mantenedora.id, setorId: setor.id, name: 'Número timeline', phone: `5584${String(Date.now()).slice(-8)}` } });
+68:   await prisma.mantenedoraSettings.create({ data: { mantenedoraId: mantenedora.id, onboardingConcluido: true, modulos: { canalNaoOficial: false } } });
+69:   const email = `timeline-${suffix}@teste.local`;
+70:   const user = await prisma.appUser.create({ data: {
+71:     mantenedoraId: mantenedora.id, name: 'Atendente Timeline', email,
+72:     passwordHash: await bcrypt.hash('senha-de-teste-1', 10),
+73:   } });
+74:   await prisma.userBuRole.create({ data: { userId: user.id, buId: businessUnit.id, role: 'OWNER', grantedViaTipo: 'DIRETO' } });
+75:   const phoneNumberId = `timeline-phone-${suffix}`;
+76:   const timelinePhone = businessUnit.phone;
+77:   const wabaId = `timeline-waba-${suffix}`;
+78:   const channel = await prisma.buChannel.create({ data: { buId: businessUnit.id, type: 'OFICIAL', phoneNumberId, wabaId, requiresWindow: false, status: 'CONECTADO', generation: 1, pairingEpoch: 1, ownNumberVerified: true, verifiedEpoch: 1, providerConnectionState: 'SUBSCRIBED', receiptVerifiedAt: new Date() } });
+79:   const identity = await prisma.providerResourceIdentity.create({ data: { provider: 'OFICIAL', externalResourceId: phoneNumberId, buId: businessUnit.id, currentChannelId: channel.id, managedLifecycle: true, cleanupState: 'ACTIVE' } });
+80:   const keyId = process.env.CHANNEL_CREDENTIAL_KEY_ID; const key = Buffer.from(process.env.CHANNEL_CREDENTIAL_KEY, 'base64');
+81:   const envelope = sealChannelCredential(`timeline-scoped-token:${phoneNumberId}`, keyId, key, { purpose: 'active', provider: 'OFICIAL', buId: businessUnit.id, channelId: channel.id, generation: channel.generation, version: 1 });
+82:   await prisma.channelCredential.create({ data: { channelId: channel.id, provider: 'OFICIAL', buId: businessUnit.id, generation: channel.generation, version: 1, keyId, nonce: new Uint8Array(envelope.nonce), ciphertext: new Uint8Array(envelope.ciphertext), tag: new Uint8Array(envelope.tag) } });
+83:   let evolutionInstanceName = null;
+84:   if (data.includeEvolution === true) {
+85:     evolutionInstanceName = `timeline-evolution-${suffix}`;
+86:     const evolution = await prisma.buChannel.create({ data: { buId: businessUnit.id, type: 'NAO_OFICIAL', evolutionInstanceName, requiresWindow: false, status: 'CONECTADO', generation: 1, pairingEpoch: 1, ownNumberVerified: true, verifiedEpoch: 1, providerConnectionState: 'CONNECTED', receiptVerifiedAt: new Date() } });
+87:     await prisma.providerResourceIdentity.create({ data: { provider: 'NAO_OFICIAL', externalResourceId: evolutionInstanceName, buId: businessUnit.id, currentChannelId: evolution.id, managedLifecycle: true, cleanupState: 'ACTIVE' } });
+88:     onboarding.evolution.inventory[evolutionInstanceName] = { name: evolutionInstanceName, ownerJid: '5584911112222@s.whatsapp.net', connectionStatus: 'open' };
+89:   }
+90:   providerInventory.set(phoneNumberId, { id: phoneNumberId, wabaId, telefone: timelinePhone });
+91:   const conversation = await prisma.conversation.create({ data: { buId: businessUnit.id, contact: '5584911112222', displayName: 'Cliente Timeline', contactType: 'PESSOA', status: 'QUEUED', unreadCount: 0 } });
+92:   const otherConversation = await prisma.conversation.create({ data: { buId: businessUnit.id, contact: '5584933334444', displayName: 'Cliente Secundário', contactType: 'PESSOA', status: 'QUEUED', unreadCount: 0 } });
+93:   const otherBu = await prisma.businessUnit.create({ data: { mantenedoraId: mantenedora.id, setorId: setor.id, name: 'Número alternativo', phone: `5585${String(Date.now()).slice(-8)}` } });
+94:   await prisma.userBuRole.create({ data: { userId: user.id, buId: otherBu.id, role: 'OWNER', grantedViaTipo: 'DIRETO' } });
+95:   const otherBuPhoneNumberId = `timeline-phone-other-${suffix}`;
+96:   const otherBuPhone = otherBu.phone;
+97:   const otherChannel = await prisma.buChannel.create({ data: { buId: otherBu.id, type: 'OFICIAL', phoneNumberId: otherBuPhoneNumberId, wabaId: `${wabaId}-other`, requiresWindow: false, status: 'CONECTADO', generation: 1, pairingEpoch: 1, ownNumberVerified: true, verifiedEpoch: 1, providerConnectionState: 'SUBSCRIBED', receiptVerifiedAt: new Date() } });
+98:   await prisma.providerResourceIdentity.create({ data: { provider: 'OFICIAL', externalResourceId: otherBuPhoneNumberId, buId: otherBu.id, currentChannelId: otherChannel.id, managedLifecycle: true, cleanupState: 'ACTIVE' } });
+99:   providerInventory.set(otherBuPhoneNumberId, { id: otherBuPhoneNumberId, wabaId: `${wabaId}-other`, telefone: otherBuPhone });
+100:   const otherEnvelope = sealChannelCredential(`timeline-scoped-token:${otherBuPhoneNumberId}`, keyId, key, { purpose: 'active', provider: 'OFICIAL', buId: otherBu.id, channelId: otherChannel.id, generation: otherChannel.generation, version: 1 });
+101:   await prisma.channelCredential.create({ data: { channelId: otherChannel.id, provider: 'OFICIAL', buId: otherBu.id, generation: otherChannel.generation, version: 1, keyId, nonce: new Uint8Array(otherEnvelope.nonce), ciphertext: new Uint8Array(otherEnvelope.ciphertext), tag: new Uint8Array(otherEnvelope.tag) } });
+102:   const otherBuConversation = await prisma.conversation.create({ data: { buId: otherBu.id, contact: '5585555555555', displayName: 'Cliente Outra BU', contactType: 'PESSOA', status: 'QUEUED' } });
+103:   fixtureConversationIds.add(conversation.id);
+104:   fixtureConversationIds.add(otherConversation.id);
+105:   fixtureConversationIds.add(otherBuConversation.id);
+106:   const count = Math.max(0, Math.min(Number(data.count ?? 251), 10_000));
+107:   const tiedAt = new Date('2026-10-14T12:00:00.000Z');
+108:   const messages = Array.from({ length: count }, (_, i) => ({
+109:     conversationId: conversation.id, buId: businessUnit.id, direction: 'IN', messageType: 'TEXTO',
+110:     content: `histórico ${i + 1}`, channelOrigin: 'OFICIAL', status: 'RECEBIDA',
+111:     createdAt: data.tied === true ? tiedAt : new Date(tiedAt.getTime() + i * 1000),
+112:   }));
+113:   if (messages.length) await prisma.message.createMany({ data: messages });
+114:   const expectedIds = await prisma.message.findMany({ where: { conversationId: conversation.id }, orderBy: [{ createdAt: 'asc' }, { id: 'asc' }], select: { id: true } });
+115:   return { email, password: 'senha-de-teste-1', userId: user.id, mantenedoraId: mantenedora.id, businessUnitId: businessUnit.id, conversationId: conversation.id, otherConversationId: otherConversation.id, otherBusinessUnitId: otherBu.id, otherBuConversationId: otherBuConversation.id, otherBuPhoneNumberId, phoneNumberId, wabaId, evolutionInstanceName, count, expectedIds: expectedIds.map((m) => m.id) };
+116: }
+117: 
+118: async function seedNumberOnboarding() {
+119:   const suffix = `number-${Date.now()}-${Math.random().toString(16).slice(2, 8)}`;
+120:   const createTenant = async (label) => {
+121:     const mantenedora = await prisma.mantenedora.create({ data: { name: `${label} ${suffix}` } });
+122:     const setor = await prisma.setor.create({ data: { mantenedoraId: mantenedora.id, name: 'Geral' } });
+123:     const bu = await prisma.businessUnit.create({ data: { mantenedoraId: mantenedora.id, setorId: setor.id, name: `${label} BU`, phone: `5511${String(Date.now()).slice(-8)}` } });
+124:     await prisma.mantenedoraSettings.create({ data: { mantenedoraId: mantenedora.id, onboardingConcluido: true, modulos: { canalNaoOficial: true } } });
+125:     return { mantenedora, setor, bu };
+126:   };
+127:   const a = await createTenant('Onboarding A'); const b = await createTenant('Onboarding B');
+128:   const createUser = async (tenant, role, label) => {
+129:     const email = `${label}-${suffix}@teste.local`;
+130:     const user = await prisma.appUser.create({ data: { mantenedoraId: tenant.mantenedora.id, name: label, email, passwordHash: await bcrypt.hash('senha-onboarding-2026', 10) } });
+131:     await prisma.userBuRole.create({ data: {
+132:       userId: user.id, buId: tenant.bu.id, role,
+133:       grantedViaTipo: role === 'OWNER' ? 'MANTENEDORA' : 'DIRETO',
+134:       ...(role === 'OWNER' ? { grantedViaId: tenant.mantenedora.id } : {}),
+135:     } });
+136:     return { id: user.id, email, password: 'senha-onboarding-2026', role };
+137:   };
+138:   return {
+139:     tenantA: { mantenedoraId: a.mantenedora.id, buId: a.bu.id, owner: await createUser(a, 'OWNER', 'owner'), admin: await createUser(a, 'ADMIN', 'admin'), operator: await createUser(a, 'ATENDENTE', 'operator') },
+140:     tenantB: { mantenedoraId: b.mantenedora.id, buId: b.bu.id, owner: await createUser(b, 'OWNER', 'other-owner'), admin: await createUser(b, 'ADMIN', 'other-admin') },
+141:   };
+142: }
+143: 
+144: async function incoming(data) {
+145:   const id = String(data.id ?? `timeline-event-${Date.now()}`);
+146:   const payload = { entry: [{ changes: [{ field: 'messages', value: {
+147:     metadata: { phone_number_id: data.phoneNumberId },
+148:     contacts: [{ profile: { name: 'Cliente Timeline' } }],
+149:     messages: [{ id, from: '5584911112222', type: 'text', text: { body: String(data.text ?? id) } }],
+150:   } }] }] };
+151:   const raw = JSON.stringify(payload);
+152:   const signature = 'sha256=' + createHmac('sha256', 'segredo-do-app-meta').update(raw).digest('hex');
+153:   const response = await fetch(`http://127.0.0.1:${apiPort}/webhooks/meta`, {
+154:     method: 'POST', headers: { 'content-type': 'application/json', 'x-hub-signature-256': signature }, body: raw,
+155:   });
+156:   return { status: response.status, body: await response.text() };
+157: }
+158: 
+159: const server = http.createServer(async (req, res) => {
+160:   try {
+161:     if (req.method === 'GET' && req.url.startsWith('/provider/resources')) {
+162:       if (req.headers['x-fixture-provider-token'] !== 'timeline-provider-port-only') return json(res, 403, { error: 'forbidden' });
+163:       return json(res, 200, onboarding.resources.length ? onboarding.resources : Array.from(providerInventory.values()));
+164:     }
+165:     if (req.method === 'GET' && req.url === '/provider/state') {
+166:       if (req.headers['x-fixture-provider-token'] !== 'timeline-provider-port-only') return json(res, 403, { error: 'forbidden' });
+167:       const inventory = Object.fromEntries(Object.entries(onboarding.evolution.inventory).map(([name, item]) => [name, { name, ownerJid: item.ownerJid, connectionStatus: item.connectionStatus }]));
+168:       return json(res, 200, { resources: onboarding.resources, calls: onboarding.calls, effects: onboarding.effects, evolution: { inventory, outcomes: onboarding.evolution.outcomes }, meta: { grantResourceIds: Object.fromEntries(Object.entries(onboarding.meta.grants ?? {}).map(([code, grant]) => [code, grant.resources ?? []])), pages: onboarding.meta.pages, sendMode: onboarding.meta.sendMode }, failures: onboarding.failures, holds: onboarding.holds, holdsAfter: onboarding.holdsAfter, ambiguousAfter: onboarding.ambiguousAfter });
+169:     }
+170:     if (req.method === 'GET' && req.url === '/health') return json(res, 200, { status: 'ok' });
+171:     const data = await bodyOf(req);
+172:     if (req.url.startsWith('/provider/') && req.headers['x-fixture-provider-token'] !== 'timeline-provider-port-only') return json(res, 403, { error: 'forbidden' });
+173:     if (req.method === 'POST' && req.url === '/provider/config') {
+174:       if (data.reset === true) { onboarding.calls = []; onboarding.effects = []; onboarding.failures = {}; onboarding.holds = {}; onboarding.holdsAfter = {}; onboarding.ambiguousAfter = {}; onboarding.resources = []; onboarding.meta = { codeTokens: {}, grants: {}, pages: {}, sendMode: 'accepted' }; onboarding.evolution = { inventory: {}, outcomes: {} }; providerInventory.clear(); barriers.clear(); }
+175:       if (Array.isArray(data.resources)) onboarding.resources = data.resources.map((r) => ({ ...r }));
+176:       if (data.meta && typeof data.meta === 'object') Object.assign(onboarding.meta, data.meta);
+177:       if (data.evolution && typeof data.evolution === 'object') Object.assign(onboarding.evolution, data.evolution);
+178:       if (data.failures && typeof data.failures === 'object') onboarding.failures = Object.fromEntries(Object.entries(data.failures).map(([k, v]) => [k, { remaining: Math.max(1, Number(v.remaining ?? 1)), message: String(v.message ?? 'controlled provider failure') }]));
+179:       if (data.holds && typeof data.holds === 'object') onboarding.holds = { ...data.holds };
+180:       if (data.holdsAfter && typeof data.holdsAfter === 'object') onboarding.holdsAfter = { ...data.holdsAfter };
+181:       if (data.ambiguousAfter && typeof data.ambiguousAfter === 'object') onboarding.ambiguousAfter = Object.fromEntries(Object.entries(data.ambiguousAfter).map(([k, v]) => [k, { remaining: Math.max(1, Number(v.remaining ?? 1)) }]));
+182:       return json(res, 200, { configured: true });
+183:     }
+184:     if (req.method === 'POST' && req.url === '/provider/release') {
+185:       const b = barriers.get(`${data.operation}:${data.key}`); if (b) b.release();
+186:       return json(res, 200, { released: Boolean(b) });
+187:     }
+188:     if (req.method === 'POST' && req.url === '/provider/call') {
+189:       const call = await providerCall(String(data.operation), data.args ?? {});
+190:       return json(res, 200, { accepted: true, call });
+191:     }
+192:     if (req.method === 'POST' && req.url === '/provider/effect') return json(res, 200, { effect: await providerEffect(String(data.operation), data.args ?? {}) });
+193:     if (req.method === 'POST' && req.url === '/provider/evolution/observe') {
+194:       await providerCall('evolution.observe', { name: data.name });
+195:       const name = String(data.name); const observed = onboarding.evolution.inventory[name];
+196:       return json(res, 200, observed ? { ...observed } : null);
+197:     }
+198:     if (req.method === 'POST' && req.url === '/provider/evolution/create') {
+199:       const call = await providerCall('evolution.create', { name: data.name, attemptId: data.attemptId, channelId: data.channelId, generation: data.generation, pairingEpoch: data.pairingEpoch });
+200:       const created = onboarding.evolution.createOutcome ?? {};
+201:       const instance = { name: String(data.name), ownerJid: data.ownerJid ?? created.ownerJid ?? null, connectionStatus: data.connectionStatus ?? created.connectionStatus ?? 'connecting', qrcode: data.qrcode ?? created.qrcode ?? 'data:image/png;base64,FAKE-QR' };
+202:       onboarding.evolution.inventory[instance.name] = instance;
+203:       await providerEffect('evolution.create', { name: instance.name, attemptId: data.attemptId, channelId: data.channelId, generation: data.generation, pairingEpoch: data.pairingEpoch });
+204:       return json(res, 201, { created: true, instance, call });
+205:     }
+206:     if (req.method === 'POST' && req.url === '/provider/evolution/delete') {
+207:       await providerCall('evolution.delete', { name: data.name });
+208:       const existed = Boolean(onboarding.evolution.inventory[String(data.name)]);
+209:       delete onboarding.evolution.inventory[String(data.name)];
+210:       await providerEffect('evolution.delete', { name: data.name });
+211:       return json(res, 200, { deleted: existed });
+212:     }
+213:     if (req.method === 'POST' && req.url === '/provider/evolution/receipt') {
+214:       const name = String(data.name); const observed = onboarding.evolution.inventory[name];
+215:       if (!observed) return json(res, 404, { error: 'unknown fixture instance' });
+216:       Object.assign(observed, { ownerJid: data.ownerJid ?? observed.ownerJid, connectionStatus: data.connectionStatus ?? observed.connectionStatus });
+217:       await providerEffect('evolution.receipt', { name });
+218:       return json(res, 200, { updated: true });
+219:     }
+220:     if (req.method === 'POST' && req.url === '/provider/attempt/expire') {
+221:       const attemptId = typeof data.attemptId === 'string' ? data.attemptId : '';
+222:       const buId = typeof data.buId === 'string' ? data.buId : '';
+223:       if (!/^[0-9a-f]{32}$/i.test(attemptId) || !/^[0-9a-f-]{36}$/i.test(buId)) return json(res, 400, { error: 'invalid attempt scope' });
+224:       const changed = await prisma.channelRegistrationAttempt.updateMany({
+225:         where: { id: attemptId, buId, operation: 'NOVO', state: 'PENDING_AUTH', channelId: { not: null } },
+226:         data: { expiresAt: new Date(Date.now() - 1_000) },
+227:       });
+228:       if (changed.count !== 1) return json(res, 404, { error: 'eligible fixture attempt not found' });
+229:       return json(res, 200, { expired: true, attemptId, buId });
+230:     }
+231:     if (req.method === 'POST' && req.url === '/seed-number-onboarding') {
+232:       const result = await seedNumberOnboarding(data);
+233:       return json(res, 201, result);
+234:     }
+235:     if (req.method === 'GET' && req.url.startsWith('/audit?')) {
+236:       const query = new URL(req.url, 'http://localhost').searchParams;
+237:       const conversationId = query.get('conversationId');
+238:       const conversation = await prisma.conversation.findUniqueOrThrow({ where: { id: conversationId } });
+239:       const messages = await prisma.message.findMany({ where: { conversationId }, orderBy: [{ createdAt: 'asc' }, { id: 'asc' }], select: { id: true, content: true, direction: true, authorName: true, createdAt: true } });
+240:       return json(res, 200, { status: conversation.status, unreadCount: conversation.unreadCount, messages });
+241:     }
+242:     if (req.method === 'GET' && req.url.startsWith('/audit-outbound?')) {
+243:       const query = new URL(req.url, 'http://localhost').searchParams;
+244:       const conversationId = query.get('conversationId');
+245:       const content = query.get('content');
+246:       if (!conversationId || !fixtureConversationIds.has(conversationId) || !content) return json(res, 400, { error: 'invalid fixture audit scope' });
+247:       const messages = await prisma.message.findMany({ where: { conversationId, content, direction: 'OUT' }, select: { status: true, externalId: true } });
+248:       return json(res, 200, {
+249:         total: messages.length,
+250:         accepted: messages.filter((message) => message.status === 'ENVIADA').length,
+251:         failed: messages.filter((message) => message.status === 'FALHOU').length,
+252:         failedWithoutExternalId: messages.filter((message) => message.status === 'FALHOU' && !message.externalId).length,
+253:       });
+254:     }
+255:     if (req.method === 'POST' && req.url === '/seed') return json(res, 201, await seed(data));
+256:     if (req.method === 'POST' && req.url === '/send-mode') {
+257:       if (!['accepted', 'unknown'].includes(data.mode)) return json(res, 400, { error: 'invalid mode' });
+258:       onboarding.meta.sendMode = data.mode;
+259:       return json(res, 200, { mode: onboarding.meta.sendMode });
+260:     }
+261:     if (req.method === 'POST' && req.url === '/select-evolution') {
+262:       const conversation = await prisma.conversation.findUniqueOrThrow({ where: { id: data.conversationId } });
+263:       const channel = await prisma.buChannel.findFirstOrThrow({ where: { buId: conversation.buId, type: 'NAO_OFICIAL' } });
+264:       const identity = await prisma.providerResourceIdentity.findFirstOrThrow({ where: { currentChannelId: channel.id } });
+265:       const message = await prisma.message.create({ data: {
+266:         conversationId: conversation.id, buId: conversation.buId, direction: 'IN', messageType: 'TEXTO',
+267:         content: 'ingress fixture selects Evolution', channelOrigin: 'NAO_OFICIAL', status: 'RECEBIDA',
+268:         externalId: `fixture-ingress-${Date.now()}-${Math.random().toString(16).slice(2)}`,
+269:         providerResourceIdentityId: identity.id, createdAt: new Date(Date.now() + 60_000),
+270:       } });
+271:       return json(res, 201, { id: message.id });
+272:     }
+273:     if (req.method === 'POST' && req.url === '/incoming') return json(res, 200, await incoming(data));
+274:     if (req.method === 'POST' && req.url === '/late-tie') {
+275:       const conversation = await prisma.conversation.findUniqueOrThrow({ where: { id: data.conversationId } });
+276:       const message = await prisma.message.create({ data: {
+277:         id: String(data.id), conversationId: conversation.id, buId: conversation.buId,
+278:         direction: 'IN', messageType: 'TEXTO', content: 'inserção empatada tardia',
+279:         channelOrigin: 'OFICIAL', status: 'RECEBIDA', createdAt: new Date(data.createdAt),
+280:       } });
+281:       return json(res, 201, { id: message.id });
+282:     }
+283:     if (req.method === 'POST' && req.url === '/revoke') {
+284:       await prisma.userBuRole.deleteMany({ where: { userId: data.userId, buId: data.businessUnitId } });
+285:       return json(res, 200, { revoked: true });
+286:     }
+287:     if (req.method === 'POST' && req.url === '/burst') {
+288:       const conversation = await prisma.conversation.findUniqueOrThrow({ where: { id: data.conversationId } });
+289:       const count = Math.max(1, Math.min(Number(data.count ?? 120), 500));
+290:       const base = new Date(data.createdAt ?? Date.now());
+291:       await prisma.message.createMany({ data: Array.from({ length: count }, (_, i) => ({
+292:         conversationId: conversation.id, buId: conversation.buId, direction: 'IN', messageType: 'TEXTO',
+293:         content: `burst ${i + 1}`, channelOrigin: 'OFICIAL', status: 'RECEBIDA',
+294:         createdAt: new Date(base.getTime() + i),
+295:       })) });
+296:       return json(res, 201, { count });
+297:     }
+298:     return json(res, 404, { error: 'not found' });
+299:   } catch (error) {
+300:     console.error(error);
+301:     return json(res, 500, { error: error instanceof Error ? error.message : String(error) });
+302:   }
+303: });
+304: server.listen(fixturePort, '127.0.0.1', () => console.log(`timeline fixtures listening on 127.0.0.1:${fixturePort}`));
+305: process.on('SIGTERM', () => server.close(() => prisma.$disconnect().finally(() => process.exit(0))));
+306: process.on('SIGINT', () => server.close(() => prisma.$disconnect().finally(() => process.exit(0))));
+```
+
+
+## Source web-app/e2e/channel-transport.spec.ts
+
+Raw SHA256 `b3604496727a85d7ce12c2cb6e7a479575356a61ef4c529d385047e066a8e0f3`; bytes12119.
+
+```
+1: import { expect, test, type APIRequestContext, type Page } from '@playwright/test';
+2: 
+3: const FIXTURES = 'http://127.0.0.1:3101';
+4: 
+5: async function seed(request: APIRequestContext, includeEvolution = false, count = 3) {
+6:   const response = await request.post(`${FIXTURES}/seed`, { data: { count, includeEvolution } });
+7:   expect(response.status()).toBe(201);
+8:   return response.json() as Promise<{
+9:     email: string; password: string; businessUnitId: string; conversationId: string;
+10:     otherConversationId: string; otherBusinessUnitId: string;
+11:   }>;
+12: }
+13: 
+14: async function loginAndOpen(page: Page, fixture: Awaited<ReturnType<typeof seed>>, messages = 3) {
+15:   await page.context().clearCookies();
+16:   await page.goto('/login');
+17:   await page.getByLabel('E-mail').fill(fixture.email);
+18:   await page.getByLabel('Senha').fill(fixture.password);
+19:   await page.getByRole('button', { name: 'Entrar' }).click();
+20:   await expect(page).toHaveURL(/\/inbox$/);
+21:   await page.getByLabel('Business Unit').selectOption(fixture.businessUnitId);
+22:   await page.getByRole('button', { name: 'Cliente Timeline' }).click();
+23:   await expect(page.locator('.bolha')).toHaveCount(messages);
+24: }
+25: 
+26: test.describe('Channel outbound pela Inbox com BFF e PostgreSQL reais', () => {
+27:   test('envia por Meta, mantém rascunho em ACK sem ID e bloqueia conversa ambígua', async ({ page, request }) => {
+28:     const fixture = await seed(request);
+29:     await loginAndOpen(page, fixture);
+30:     const composer = page.getByPlaceholder('Escreva uma resposta');
+31:     await composer.fill('resposta oficial de teste');
+32:     await page.getByRole('button', { name: 'Enviar' }).click();
+33:     await expect(page.locator('.bolha').filter({ hasText: 'resposta oficial de teste' })).toBeVisible();
+34:     await expect(composer).toHaveValue('');
+35: 
+36:     await request.post(`${FIXTURES}/send-mode`, { data: { mode: 'unknown' } });
+37:     await composer.fill('rascunho não reenviado');
+38:     await page.getByRole('button', { name: 'Enviar' }).click();
+39:     await expect(page.getByRole('alert')).toContainText('aceitou o envio sem confirmar o ID externo');
+40:     await expect(composer).toHaveValue('rascunho não reenviado');
+41: 
+42:     const ambiguous = await seed(request, true, 0);
+43:     await page.context().clearCookies();
+44:     await page.goto('/login');
+45:     await page.getByLabel('E-mail').fill(ambiguous.email);
+46:     await page.getByLabel('Senha').fill(ambiguous.password);
+47:     await page.getByRole('button', { name: 'Entrar' }).click();
+48:     await page.getByLabel('Business Unit').selectOption(ambiguous.businessUnitId);
+49:     await page.getByRole('button', { name: 'Cliente Timeline' }).click();
+50:     await expect(page.getByText('Esta conversa ainda não tem um canal definido. Aguarde uma mensagem recebida para responder.')).toBeVisible();
+51:     await expect(page.getByRole('button', { name: 'Enviar' })).toBeDisabled();
+52:   });
+53: 
+54:   test('seleciona Evolution pela última origem e descarta resposta atrasada após troca A→B→A', async ({ page, request }) => {
+55:     const fixture = await seed(request, true);
+56:     await request.post(`${FIXTURES}/select-evolution`, { data: { conversationId: fixture.conversationId } });
+57:     await loginAndOpen(page, fixture, 4);
+58:     const composer = page.getByPlaceholder('Escreva uma resposta');
+59:     await composer.fill('resposta não oficial de teste');
+60:     await page.getByRole('button', { name: 'Enviar' }).click();
+61:     await expect(page.locator('.bolha').filter({ hasText: 'resposta não oficial de teste' })).toBeVisible();
+62:     await expect(composer).toHaveValue('');
+63: 
+64:     let liberar!: () => void;
+65:     let iniciou!: () => void;
+66:     const continua = new Promise<void>((resolve) => { liberar = resolve; });
+67:     const solicitacao = new Promise<void>((resolve) => { iniciou = resolve; });
+68:     const holdReply = (url: URL) => url.pathname === `/api/bff/conversations/${fixture.conversationId}/messages`;
+69:     const holdResponse = async (route: import('@playwright/test').Route) => {
+70:       if (route.request().method() !== 'POST') return route.continue();
+71:       const response = await route.fetch();
+72:       iniciou();
+73:       await continua;
+74:       await route.fulfill({ response });
+75:     };
+76:     await page.route(holdReply, holdResponse);
+77:     const responsePath = `/api/bff/conversations/${fixture.conversationId}/messages`;
+78:     await page.evaluate((pathname) => {
+79:       type BodyReadState = {
+80:         started: number;
+81:         settled: number;
+82:         processed: number;
+83:         completion: Promise<void>;
+84:         resolveCompletion: () => void;
+85:         originalFetch: typeof window.fetch;
+86:       };
+87:       const w = window as typeof window & { __stcon06BodyRead?: BodyReadState };
+88:       let resolveCompletion!: () => void;
+89:       const state: BodyReadState = {
+90:         started: 0,
+91:         settled: 0,
+92:         processed: 0,
+93:         completion: new Promise<void>((resolve) => { resolveCompletion = resolve; }),
+94:         resolveCompletion: () => resolveCompletion(),
+95:         originalFetch: window.fetch,
+96:       };
+97:       const nativeFetch = window.fetch.bind(window);
+98:       window.fetch = async (input, init) => {
+99:         const requestUrl = input instanceof Request ? input.url : String(input);
+100:         const method = init?.method ?? (input instanceof Request ? input.method : 'GET');
+101:         const response = await nativeFetch(input, init);
+102:         if (method === 'POST' && new URL(requestUrl, window.location.href).pathname === pathname) {
+103:           const nativeText = response.text.bind(response);
+104:           response.text = () => {
+105:             state.started += 1;
+106:             return nativeText().then((body) => {
+107:               state.settled += 1;
+108:               // A browser task runs after this promise and the awaiting api.ts / responder
+109:               // microtasks, including the generation fence and draft decision.
+110:               window.setTimeout(() => {
+111:                 state.processed += 1;
+112:                 state.resolveCompletion();
+113:               }, 0);
+114:               return body;
+115:             });
+116:           };
+117:         }
+118:         return response;
+119:       };
+120:       w.__stcon06BodyRead = state;
+121:     }, responsePath);
+122:     await composer.fill('resposta cuja resposta chega tarde');
+123:     await page.getByRole('button', { name: 'Enviar' }).click();
+124:     await solicitacao;
+125:     await page.getByRole('button', { name: 'Cliente Secundário' }).click();
+126:     const activeThreadTitle = page.locator('.cartao.grade > .linha > strong');
+127:     await expect(activeThreadTitle).toHaveCount(1);
+128:     await expect(activeThreadTitle).toHaveText('Cliente Secundário');
+129:     await expect(page.locator('.cartao.lista .item.ativo')).toHaveCount(1);
+130:     await page.getByRole('button', { name: 'Em atendimento' }).click();
+131:     await page.getByRole('button', { name: 'Cliente Timeline' }).click();
+132:     await expect(activeThreadTitle).toHaveCount(1);
+133:     await expect(activeThreadTitle).toHaveText('Cliente Timeline');
+134:     await expect(page.locator('.cartao.lista .item.ativo')).toHaveCount(1);
+135:     await composer.fill('resposta cuja resposta chega tarde');
+136:     const respostaAntiga = page.waitForResponse((response) => response.request().method() === 'POST'
+137:       && new URL(response.url()).pathname === `/api/bff/conversations/${fixture.conversationId}/messages`);
+138:     liberar();
+139:     const responseAntiga = await respostaAntiga;
+140:     expect(responseAntiga.status()).toBe(201);
+141:     expect(await responseAntiga.finished()).toBeNull();
+142:     const bodyRead = await page.evaluate(async () => {
+143:       const state = (window as typeof window & { __stcon06BodyRead?: {
+144:         completion: Promise<void>; started: number; settled: number; processed: number; originalFetch: typeof window.fetch;
+145:       } }).__stcon06BodyRead;
+146:       if (!state) throw new Error('The response body read instrumentation was not installed.');
+147:       await state.completion;
+148:       window.fetch = state.originalFetch;
+149:       return { started: state.started, settled: state.settled, processed: state.processed };
+150:     });
+151:     expect(bodyRead).toEqual({ started: 1, settled: 1, processed: 1 });
+152:     await expect(composer).toHaveValue('resposta cuja resposta chega tarde');
+153:     await expect(page.getByRole('alert')).toHaveCount(0);
+154:     await page.unroute(holdReply, holdResponse);
+155:   });
+156: 
+157:   test('bloqueia vinte novos submits durante cada envio real em cinco ondas', async ({ page, request }) => {
+158:     const fixture = await seed(request);
+159:     await loginAndOpen(page, fixture);
+160:     const composer = page.getByPlaceholder('Escreva uma resposta');
+161:     const waveEvidence: Array<{ requests: number; retriggers: number; outcome: 'accepted' | 'unknown'; draftPreserved: boolean; messageCount: number }> = [];
+162:     const form = page.locator('form').filter({ has: composer });
+163:     for (let round = 0; round < 5; round += 1) {
+164:       const outcome = round % 2 === 1 ? 'unknown' : 'accepted';
+165:       const text = `composer wave ${round} ${outcome}`;
+166:       await request.post(`${FIXTURES}/send-mode`, { data: { mode: outcome } });
+167:       let requestCount = 0;
+168:       let actualStatus = 0;
+169:       let markEntered!: () => void;
+170:       let release!: () => void;
+171:       const entered = new Promise<void>((resolve) => { markEntered = resolve; });
+172:       const held = new Promise<void>((resolve) => { release = resolve; });
+173:       const matcher = (url: URL) => url.pathname === `/api/bff/conversations/${fixture.conversationId}/messages`;
+174:       const holdRealResponse = async (route: import('@playwright/test').Route) => {
+175:         if (route.request().method() !== 'POST') return route.continue();
+176:         requestCount += 1;
+177:         const response = await route.fetch();
+178:         if (requestCount === 1) actualStatus = response.status();
+179:         if (requestCount === 1) markEntered();
+180:         await held;
+181:         await route.fulfill({ response });
+182:       };
+183:       await page.route(matcher, holdRealResponse);
+184:       await composer.fill(text);
+185:       await page.getByRole('button', { name: 'Enviar' }).click();
+186:       await entered;
+187:       try {
+188:         for (let index = 0; index < 20; index += 1) {
+189:           await form.evaluate((element) => element.dispatchEvent(new Event('submit', { bubbles: true, cancelable: true })));
+190:         }
+191:         expect(requestCount).toBe(1);
+192:         expect(await page.getByRole('button', { name: 'Enviando…' }).isDisabled()).toBe(true);
+193:       } finally {
+194:         release();
+195:       }
+196:       if (outcome === 'unknown') {
+197:         await expect(page.getByRole('alert')).toContainText('aceitou o envio sem confirmar o ID externo');
+198:         await expect(composer).toHaveValue(text);
+199:         expect(actualStatus).toBe(409);
+200:       } else {
+201:         await expect(page.locator('.bolha').filter({ hasText: text })).toBeVisible();
+202:         await expect(composer).toHaveValue('');
+203:         expect(actualStatus).toBe(201);
+204:       }
+205:       const auditResponse = await request.get(`${FIXTURES}/audit-outbound?conversationId=${encodeURIComponent(fixture.conversationId)}&content=${encodeURIComponent(text)}`);
+206:       expect(auditResponse.status()).toBe(200);
+207:       const audit = await auditResponse.json() as { total: number; accepted: number; failed: number; failedWithoutExternalId: number };
+208:       expect(audit).toEqual(outcome === 'unknown'
+209:         ? { total: 1, accepted: 0, failed: 1, failedWithoutExternalId: 1 }
+210:         : { total: 1, accepted: 1, failed: 0, failedWithoutExternalId: 0 });
+211:       waveEvidence.push({ requests: requestCount, retriggers: 20, outcome, draftPreserved: outcome === 'unknown', messageCount: audit.total });
+212:       await page.unroute(matcher, holdRealResponse);
+213:     }
+214:     expect(waveEvidence).toHaveLength(5);
+215:     expect(waveEvidence.every((wave) => wave.requests === 1 && wave.retriggers === 20)).toBe(true);
+216:     expect(waveEvidence.filter((wave) => wave.outcome === 'accepted').every((wave) => wave.messageCount === 1 && !wave.draftPreserved)).toBe(true);
+217:     expect(waveEvidence.filter((wave) => wave.outcome === 'unknown').every((wave) => wave.messageCount === 1 && wave.draftPreserved)).toBe(true);
+218:     console.log(`[FRC-COMPOSER-EVIDENCE]${JSON.stringify({ waves: waveEvidence, limits: 'Five real BFF/PostgreSQL submits held after the actual response; twenty user-form submit events per in-flight send; one request per wave; no capacity/SLO claim.' })}`);
+219:   });
+220: });
+```
+
+
+## Source web-app/e2e/number-onboarding-freshness.ts
+
+Raw SHA256 `880b49f8fa428568692b92a883dd00c5ce76214b1f2db5b35cafb9b0553ed9ad`; bytes5059.
+
+```
+1: import { createHash } from 'node:crypto';
+2: import { execFileSync } from 'node:child_process';
+3: import { mkdir, readFile, readdir, writeFile } from 'node:fs/promises';
+4: import { join, resolve } from 'node:path';
+5: import timelineFreshness from './timeline-freshness';
+6: 
+7: const sha256 = (value: Buffer | string) => createHash('sha256').update(value).digest('hex');
+8: 
+9: async function hashes(directory: string, prefix: string): Promise<Array<{ path: string; sha256: string }>> {
+10:   const files: Array<{ path: string; sha256: string }> = [];
+11:   async function visit(current: string): Promise<void> {
+12:     for (const entry of await readdir(current, { withFileTypes: true })) {
+13:       const absolute = join(current, entry.name);
+14:       if (entry.isDirectory()) await visit(absolute);
+15:       else files.push({ path: absolute.slice(directory.length + 1), sha256: sha256(await readFile(absolute)) });
+16:     }
+17:   }
+18:   await visit(directory);
+19:   return files.filter(({ path }) => path.startsWith(prefix)).sort((a, b) => a.path.localeCompare(b.path));
+20: }
+21: 
+22: export default async function numberOnboardingFreshness(): Promise<void> {
+23:   await timelineFreshness();
+24:   const web = process.cwd();
+25:   const root = resolve(web, '..');
+26:   const api = join(root, 'api-app');
+27:   const git = (directory: string, ...args: string[]) => execFileSync('git', [
+28:     '-c', `safe.directory=${directory}`, '-C', directory, ...args,
+29:   ], { encoding: 'utf8' }).trim();
+30:   const changed = (directory: string, scope: RegExp, publicPaths: string[]) => {
+31:     const args = ['-c', `safe.directory=${directory}`, '-C', directory];
+32:     const parse = (output: string, layer: string) => output.trim().split('\n').filter(Boolean)
+33:       .map((line) => { const [status, ...paths] = line.split('\t'); return { status: `${layer}:${status}`, path: paths.at(-1)! }; });
+34:     const staged = parse(execFileSync('git', [...args, 'diff', '--cached', '--name-status', 'HEAD', '--', ...publicPaths], { encoding: 'utf8' }), 'staged');
+35:     const unstaged = parse(execFileSync('git', [...args, 'diff', '--name-status', '--', ...publicPaths], { encoding: 'utf8' }), 'unstaged');
+36:     const untracked = execFileSync('git', [...args, 'ls-files', '--others', '--exclude-standard', '--', ...publicPaths], { encoding: 'utf8' }).trim().split('\n').filter(Boolean)
+37:       .map((path) => ({ status: '??', path }));
+38:     const inventory = new Map<string, string>();
+39:     for (const item of [...staged, ...unstaged, ...untracked]) if (scope.test(item.path)) {
+40:       inventory.set(item.path, [inventory.get(item.path), item.status].filter(Boolean).join(','));
+41:     }
+42:     return [...inventory.entries()].sort(([a], [b]) => a.localeCompare(b));
+43:   };
+44:   const webSources = changed(web, /^(src\/|e2e\/|playwright\.config\.ts$|vite\.config\.ts$|Dockerfile$|\.dockerignore$|package(?:-lock)?\.json$|tsconfig(?:\.[^/]+)?\.json$)/,
+45:     ['src', 'e2e', 'package.json', 'package-lock.json', 'Dockerfile', '.dockerignore', 'playwright.config.ts', 'vite.config.ts', 'tsconfig.json', 'tsconfig.app.json', 'tsconfig.node.json']);
+46:   const apiSources = changed(api, /^(src\/|prisma\/|test\/|package(?:-lock)?\.json$|Dockerfile$|\.dockerignore$|\.env\.example$|nest-cli\.json$|tsconfig(?:\.[^/]+)?\.json$)/,
+47:     ['src', 'prisma', 'test', 'package.json', 'package-lock.json', 'Dockerfile', '.dockerignore', '.env.example', 'nest-cli.json', 'tsconfig.json', 'tsconfig.build.json']);
+48:   const manifest = async (directory: string, entries: Array<[string, string]>) => Promise.all(entries.map(async ([path, status]) => {
+49:     try { return { path, status, sha256: sha256(await readFile(resolve(directory, path))) }; }
+50:     catch (error) {
+51:       if (status.split(',').some((entry) => entry.endsWith(':D')) && error && typeof error === 'object' && 'code' in error && error.code === 'ENOENT') {
+52:         return { path, status, sha256: null };
+53:       }
+54:       throw error;
+55:     }
+56:   }));
+57:   const evidence = {
+58:     capturedAtUtc: new Date().toISOString(),
+59:     node: process.version,
+60:     branches: {
+61:       web: { name: git(web, 'branch', '--show-current'), head: git(web, 'rev-parse', 'HEAD'), declaredBaseline: '4e56f6c1f4515b918d05b8c87e890d42e8542c56' },
+62:       api: { name: git(api, 'branch', '--show-current'), head: git(api, 'rev-parse', 'HEAD'), declaredBaseline: 'ae6a9662c29b77276351aa9de653a47276372246' },
+63:     },
+64:     webChangedSources: await manifest(web, webSources),
+65:     apiChangedSources: await manifest(api, apiSources),
+66:     webBundle: await hashes(join(web, 'dist'), 'assets/'),
+67:     operationalDataBoundary: 'API .local-files payloads and private dotenv files are excluded from public-source inventories; an omitted file is not reported as a source deletion.',
+68:     proof: 'timeline-freshness completed before Playwright workers; it verifies disposable DB family, API/fixture/preview health, and served JavaScript hash against dist.',
+69:   };
+70:   const target = resolve(root, 'foundation_documentation/artifacts/tmp/number-onboarding-execution');
+71:   await mkdir(target, { recursive: true });
+72:   await writeFile(join(target, 'pre-worker-freshness.json'), `${JSON.stringify(evidence, null, 2)}\n`);
+73: }
+```
+
+
+## Source web-app/e2e/timeline-freshness.ts
+
+Raw SHA256 `3a06fb36e3a9bcf20a12cd8201da2daa3b567775f15e2be5f068e97e840d7f53`; bytes8499.
+
+```
+1: import { createHash } from 'node:crypto';
+2: import { execFileSync } from 'node:child_process';
+3: import { createRequire } from 'node:module';
+4: import { access } from 'node:fs/promises';
+5: import { mkdir, readFile, writeFile } from 'node:fs/promises';
+6: import { join, resolve } from 'node:path';
+7: 
+8: const hash = (value: Buffer | string) => createHash('sha256').update(value).digest('hex');
+9: 
+10: async function changedSourceFiles(directory: string, scope: RegExp, publicPaths: string[]): Promise<Array<{ path: string; status: string; sha256: string | null }>> {
+11:   const gitArgs = ['-c', `safe.directory=${directory}`, '-C', directory];
+12:   const parse = (output: string, layer: string) => output.trim().split('\n').filter(Boolean)
+13:     .map((line) => { const [status, ...paths] = line.split('\t'); return { status: `${layer}:${status}`, path: paths.at(-1)! }; });
+14:   const staged = parse(execFileSync('git', [...gitArgs, 'diff', '--cached', '--name-status', 'HEAD', '--', ...publicPaths], { encoding: 'utf8' }), 'staged');
+15:   const unstaged = parse(execFileSync('git', [...gitArgs, 'diff', '--name-status', '--', ...publicPaths], { encoding: 'utf8' }), 'unstaged');
+16:   const untracked = execFileSync('git', [...gitArgs, 'ls-files', '--others', '--exclude-standard', '--', ...publicPaths], { encoding: 'utf8' }).trim().split('\n').filter(Boolean)
+17:     .map((path) => ({ status: '??', path }));
+18:   const inventory = new Map<string, string>();
+19:   for (const item of [...staged, ...unstaged, ...untracked]) if (scope.test(item.path)) {
+20:     inventory.set(item.path, [inventory.get(item.path), item.status].filter(Boolean).join(','));
+21:   }
+22:   return Promise.all([...inventory.entries()].sort(([a], [b]) => a.localeCompare(b)).map(async ([path, status]) => {
+23:     try { await access(resolve(directory, path)); return { path, status, sha256: hash(await readFile(resolve(directory, path))) }; }
+24:     catch (error) {
+25:       if (status.split(',').some((entry) => entry.endsWith(':D')) && error && typeof error === 'object' && 'code' in error && error.code === 'ENOENT') {
+26:         return { path, status, sha256: null };
+27:       }
+28:       throw error;
+29:     }
+30:   }));
+31: }
+32: 
+33: export default async function timelineFreshness(): Promise<void> {
+34:   const web = process.cwd();
+35:   const root = resolve(web, '..');
+36:   const api = join(root, 'api-app');
+37:   const runtime = process.version;
+38:   if (!/^v22\./.test(runtime)) throw new Error(`Attestation timeline exige Node 22; recebeu ${runtime}`);
+39: 
+40:   const databaseUrl = process.env.LEADSHUG_E2E_DATABASE_URL;
+41:   if (!databaseUrl) throw new Error('LEADSHUG_E2E_DATABASE_URL ausente durante attestation.');
+42:   const db = new URL(databaseUrl);
+43:   const database = decodeURIComponent(db.pathname.slice(1));
+44:   if (!database.startsWith('leadshug_timeline_')) throw new Error(`Banco fora da família descartável: ${database}`);
+45: 
+46:   const apiPort = process.env.LEADSHUG_API_PORT ?? '3100';
+47:   const apiEndpoint = `http://127.0.0.1:${apiPort}`;
+48:   const [apiHealth, fixtureHealth, htmlResponse] = await Promise.all([
+49:     fetch(`${apiEndpoint}/health`),
+50:     fetch('http://127.0.0.1:3101/health'),
+51:     fetch('http://127.0.0.1:4173/'),
+52:   ]);
+53:   for (const [label, response] of [['API', apiHealth], ['fixtures', fixtureHealth], ['preview', htmlResponse]] as const) {
+54:     if (!response.ok) throw new Error(`${label} indisponível na attestation: HTTP ${response.status}`);
+55:   }
+56:   const html = await htmlResponse.text();
+57:   const asset = html.match(/src="([^"]+\.js)"/);
+58:   if (!asset) throw new Error('HTML servido não referencia o bundle JavaScript esperado.');
+59:   const jsResponse = await fetch(new URL(asset[1], 'http://127.0.0.1:4173'));
+60:   if (!jsResponse.ok) throw new Error(`Bundle servido retornou HTTP ${jsResponse.status}`);
+61:   const servedJs = Buffer.from(await jsResponse.arrayBuffer());
+62:   const servedPath = resolve(web, 'dist', `.${new URL(asset[1], 'http://127.0.0.1').pathname}`);
+63:   const distJs = await readFile(servedPath);
+64:   if (hash(servedJs) !== hash(distJs)) throw new Error('Bundle servido não corresponde ao artefato em web-app/dist.');
+65: 
+66:   const gitArgs = (directory: string, ...args: string[]) => ['-c', `safe.directory=${directory}`, '-C', directory, ...args];
+67:   const git = (directory: string, ...args: string[]) => execFileSync('git', gitArgs(directory, ...args), { encoding: 'utf8' }).trim();
+68:   const diffHash = (directory: string, publicPaths: string[]) => hash(execFileSync('git', gitArgs(
+69:     directory, 'diff', '--no-ext-diff', '--binary', 'HEAD', '--', ...publicPaths,
+70:   )));
+71:   const apiPublicPaths = [
+72:     'src', 'test', 'prisma', 'e2e', 'public', 'package.json', 'package-lock.json',
+73:     'Dockerfile', '.dockerignore', '.env.example', '.gitignore', 'eslint.config.mjs',
+74:     'nest-cli.json', 'railway.json', 'tsconfig.json', 'tsconfig.build.json',
+75:     'vitest.config.ts', 'vitest.config.e2e.ts', 'vitest.config.cov.ts', 'docker',
+76:   ];
+77:   const webPublicPaths = [
+78:     'src', 'e2e', 'public', 'package.json', 'package-lock.json', 'index.html',
+79:     'Dockerfile', '.dockerignore', '.gitignore', 'eslint.config.js', 'playwright.config.ts',
+80:     'railway.json', 'tsconfig.json', 'vite.config.ts', 'docker', 'nginx',
+81:   ];
+82:   const apiSourceManifest = await changedSourceFiles(api, /^(src\/|prisma\/|test\/|package(?:-lock)?\.json$|Dockerfile$|\.dockerignore$|\.env\.example$|nest-cli\.json$|tsconfig(?:\.[^/]+)?\.json$)/,
+83:     ['src', 'prisma', 'test', 'package.json', 'package-lock.json', 'Dockerfile', '.dockerignore', '.env.example', 'nest-cli.json', 'tsconfig.json', 'tsconfig.build.json']);
+84:   const webSourceManifest = await changedSourceFiles(web, /^(src\/|e2e\/|playwright\.config\.ts$|vite\.config\.ts$|Dockerfile$|\.dockerignore$|package(?:-lock)?\.json$|tsconfig(?:\.[^/]+)?\.json$)/,
+85:     ['src', 'e2e', 'package.json', 'package-lock.json', 'Dockerfile', '.dockerignore', 'playwright.config.ts', 'vite.config.ts', 'tsconfig.json', 'tsconfig.app.json', 'tsconfig.node.json']);
+86:   const requireFromApi = createRequire(join(api, 'package.json'));
+87:   const { PrismaClient } = requireFromApi('@prisma/client') as { PrismaClient: new (options: { datasources: { db: { url: string } } }) => any };
+88:   const prisma = new PrismaClient({ datasources: { db: { url: databaseUrl } } });
+89:   let completedMigrations: number;
+90:   try {
+91:     const rows = await prisma.$queryRawUnsafe('SELECT COUNT(*)::int AS count FROM "_prisma_migrations" WHERE finished_at IS NOT NULL AND rolled_back_at IS NULL') as Array<{ count: number }>;
+92:     completedMigrations = Number(rows[0]?.count ?? 0);
+93:   } finally {
+94:     await prisma.$disconnect();
+95:   }
+96: 
+97:   const artifactDirectory = resolve(root, 'foundation_documentation/artifacts/tmp/inbox-timeline-execution');
+98:   await mkdir(artifactDirectory, { recursive: true });
+99:   await writeFile(join(artifactDirectory, 'served-index-authority.html'), html);
+100:   await writeFile(join(artifactDirectory, 'served-app-authority.js'), servedJs);
+101:   const runId = process.env.LEADSHUG_ATTESTATION_RUN_ID ?? new Date().toISOString().replace(/[:.]/g, '-');
+102:   if (!/^[A-Za-z0-9_-]+$/.test(runId)) throw new Error('LEADSHUG_ATTESTATION_RUN_ID contém caracteres inválidos.');
+103:   const attestation = {
+104:     capturedAtUtc: new Date().toISOString(),
+105:     runId,
+106:     branch: {
+107:       api: { name: git(api, 'branch', '--show-current'), head: git(api, 'rev-parse', 'HEAD'), declaredBaseline: 'ae6a9662c29b77276351aa9de653a47276372246', diffSha256: diffHash(api, apiPublicPaths), sourceManifest: apiSourceManifest },
+108:       web: { name: git(web, 'branch', '--show-current'), head: git(web, 'rev-parse', 'HEAD'), declaredBaseline: '4e56f6c1f4515b918d05b8c87e890d42e8542c56', diffSha256: diffHash(web, webPublicPaths), sourceManifest: webSourceManifest },
+109:     },
+110:     runtime,
+111:     database: { name: database, endpoint: `${db.protocol}//${db.hostname}:${db.port || '5432'}/${database}`, completedMigrations },
+112:     endpoints: { apiHealth: apiHealth.status, fixtureHealth: fixtureHealth.status, preview: htmlResponse.status, servedBundle: new URL(asset[1], 'http://127.0.0.1:4173').pathname },
+113:     servedBundleSha256: hash(servedJs),
+114:     distBundleSha256: hash(distJs),
+115:     operationalDataBoundary: 'API .local-files payloads and private dotenv files are excluded from public-source inventories and binary diff pathspecs; an omitted file is not reported as a source deletion.',
+116:   };
+117:   const serialized = `${JSON.stringify(attestation, null, 2)}\n`;
+118:   await writeFile(join(artifactDirectory, `attestation-browser-${runId}.json`), serialized);
+119:   await writeFile(join(artifactDirectory, 'attestation-browser-authority.json'), serialized);
+120: }
+```
+
+
+## Source web-app/package.json
+
+Raw SHA256 `fc9083821e246d50c080f409b3590902b033041231d1688c04c4140f097818de`; bytes701.
+
+```
+1: {
+2:   "name": "@leadshug/web",
+3:   "version": "0.1.0",
+4:   "private": true,
+5:   "type": "module",
+6:   "scripts": {
+7:     "dev": "vite",
+8:     "build": "tsc -b && vite build",
+9:     "preview": "vite preview",
+10:     "test": "vitest run",
+11:     "test:tela": "npm run build && playwright test",
+12:     "test:tela:ui": "playwright test --ui"
+13:   },
+14:   "dependencies": {
+15:     "react": "^18.3.1",
+16:     "react-dom": "^18.3.1",
+17:     "react-router-dom": "^6.28.0"
+18:   },
+19:   "devDependencies": {
+20:     "@playwright/test": "^1.62.1",
+21:     "@types/react": "^18.3.12",
+22:     "@types/react-dom": "^18.3.1",
+23:     "@vitejs/plugin-react": "^4.3.4",
+24:     "typescript": "^5.6.0",
+25:     "vite": "^5.4.11",
+26:     "vitest": "^2.1.0"
+27:   }
+28: }
+```
+
+
+## Source web-app/src/api.spec.ts
+
+Raw SHA256 `e305671fc6d9775ef3c0365ed12470fb14ea3dd71ff3aca49f153262017147d6`; bytes6256.
+
+```
+1: import { afterEach, describe, expect, it, vi } from 'vitest';
+2: import { ErroDaApi, api } from './api';
+3: 
+4: function responde(corpo: string, init: { status?: number; ok?: boolean } = {}) {
+5:   const status = init.status ?? 200;
+6:   vi.stubGlobal(
+7:     'fetch',
+8:     vi.fn(async () => ({
+9:       status,
+10:       ok: init.ok ?? status < 400,
+11:       text: async () => corpo,
+12:     })),
+13:   );
+14: }
+15: 
+16: afterEach(() => vi.unstubAllGlobals());
+17: 
+18: describe('resposta que não é JSON (api.ts)', () => {
+19:   it('falha DIZENDO a causa provável, em vez de devolver objeto vazio', async () => {
+20:     // O que o nginx do próprio front devolve quando a base da API está vazia.
+21:     responde('<!doctype html><html><body><div id="root"></div></body></html>');
+22: 
+23:     await expect(api.get('/painel')).rejects.toThrow(/base da API está VAZIA/);
+24:     await expect(api.get('/painel')).rejects.toMatchObject({ codigo: 'RESPOSTA_NAO_E_JSON' });
+25:   });
+26: 
+27:   it('a mensagem aponta para LEADSHUG_API_URL quando a base está vazia', async () => {
+28:     responde('<html></html>');
+29:     await expect(api.get('/painel')).rejects.toThrow(/LEADSHUG_API_URL/);
+30:   });
+31: 
+32:   it('corpo vazio com 200 continua sendo objeto vazio — isso é legítimo', async () => {
+33:     responde('');
+34:     await expect(api.get('/x')).resolves.toEqual({});
+35:   });
+36: 
+37:   /**
+38:    * Com a base CONFIGURADA — o cenário do stage.
+39:    *
+40:    * `API_BASE` é lida na importação do módulo, então o `window` precisa existir
+41:    * ANTES dela. Importar de novo com `resetModules` é o que faz este teste
+42:    * exercitar o caminho de verdade, e não o de base vazia.
+43:    */
+44:   async function comBase(url: string) {
+45:     vi.resetModules();
+46:     vi.stubGlobal('window', { __LEADSHUG__: { apiUrl: url } });
+47:     return (await import('./api')) as typeof import('./api');
+48:   }
+49: 
+50:   it('405 é reconhecido como servidor de ARQUIVOS, não como "API confusa"', async () => {
+51:     // nginx responde 405 a um POST para arquivo estático. É assinatura, não
+52:     // ambiguidade — e dizer isso poupa uma rodada de investigação.
+53:     const mod = await comBase('https://api.exemplo.com.br');
+54:     responde('<html>405</html>', { status: 405 });
+55: 
+56:     await expect(mod.api.post('/auth/login', {})).rejects.toThrow(/servidor de ARQUIVOS/);
+57:     await expect(mod.api.post('/auth/login', {})).rejects.toThrow(/LEADSHUG_API_URL/);
+58:   });
+59: 
+60:   it('HTML com 200 também é reconhecido como servidor de arquivos', async () => {
+61:     const mod = await comBase('https://api.exemplo.com.br');
+62:     responde('<!doctype html><html></html>');
+63:     await expect(mod.api.get('/painel')).rejects.toThrow(/servidor de ARQUIVOS/);
+64:   });
+65: 
+66:   it('resposta não-JSON que NÃO parece estática cai na mensagem genérica', async () => {
+67:     const mod = await comBase('https://api.exemplo.com.br');
+68:     responde('isto não é json nem html', { status: 502 });
+69:     await expect(mod.api.get('/painel')).rejects.toThrow(/não é JSON/);
+70:   });
+71: 
+72:   it('JSON válido passa como sempre', async () => {
+73:     responde(JSON.stringify({ atendimento: { emEspera: 3 } }));
+74:     await expect(api.get('/painel')).resolves.toEqual({ atendimento: { emEspera: 3 } });
+75:   });
+76: });
+77: 
+78: describe('base sem esquema (o erro de stage)', () => {
+79:   it('recusa host solto: sem esquema, o navegador trata como CAMINHO', async () => {
+80:     vi.resetModules();
+81:     vi.stubGlobal('window', { __LEADSHUG__: { apiUrl: 'leadshug-api-stage.up.railway.app' } });
+82:     // A chamada viraria https://<o-proprio-front>/leadshug-api-stage.../api/bff/...
+83:     // e bateria no nginx do front — 405 no login, sem nada citando a variável.
+84:     await expect(import('./api')).rejects.toThrow(/sem esquema/);
+85:   });
+86: 
+87:   it('aceita https e http', async () => {
+88:     vi.resetModules();
+89:     vi.stubGlobal('window', { __LEADSHUG__: { apiUrl: 'https://api.exemplo.com.br' } });
+90:     await expect(import('./api')).resolves.toBeDefined();
+91:   });
+92: });
+93: 
+94: describe('falha do servidor (o 500 do Nest)', () => {
+95:   it('usa `message` quando não há `error`, e SEMPRE mostra o status', async () => {
+96:     // Formato do 500 do Nest. Antes, isto virava "Falha inesperada." — que não
+97:     // dizia nem que era 500.
+98:     responde(JSON.stringify({ statusCode: 500, message: 'Internal server error' }), { status: 500 });
+99:     await expect(api.post('/auth/login', {})).rejects.toThrow('Internal server error (HTTP 500)');
+100:   });
+101: 
+102:   it('sem `error` e sem `message`, diz o status mesmo assim', async () => {
+103:     responde(JSON.stringify({ statusCode: 502 }), { status: 502 });
+104:     await expect(api.get('/x')).rejects.toThrow(/respondeu 502 sem explicar/);
+105:   });
+106: 
+107:   it('recusa do produto continua mostrando a mensagem do produto', async () => {
+108:     responde(JSON.stringify({ error: 'E-mail ou senha inválidos.', code: 'CREDENCIAL_INVALIDA' }), { status: 401 });
+109:     await expect(api.post('/auth/login', {})).rejects.toThrow(/E-mail ou senha inválidos/);
+110:   });
+111: 
+112:   it('retém outcome e metadados seguros de incerteza', async () => {
+113:     responde(JSON.stringify({
+114:       error: 'O envio não foi confirmado.', code: 'OUTBOUND_LOCAL_INCOMPLETE',
+115:       outcome: 'ACCEPTED_LOCAL_INCOMPLETE', evidence: 'ACK_WITHOUT_ID',
+116:       localMessageState: 'UNCONFIRMED', diagnosticPersistence: 'UNCONFIRMED',
+117:     }), { status: 503 });
+118:     await expect(api.post('/conversations/c1/messages', { texto: 'draft' })).rejects.toMatchObject({
+119:       codigo: 'OUTBOUND_LOCAL_INCOMPLETE', outcome: 'ACCEPTED_LOCAL_INCOMPLETE',
+120:       evidence: 'ACK_WITHOUT_ID', localMessageState: 'UNCONFIRMED', diagnosticPersistence: 'UNCONFIRMED',
+121:     });
+122:   });
+123: });
+124: 
+125: describe('requisição com cabeçalho de correlação', () => {
+126:   it('envia Idempotency-Key sem colocar dados transitórios na URL', async () => {
+127:     const fetchMock = vi.fn(async (_input: RequestInfo | URL, _init?: RequestInit) => ({ status: 201, ok: true, text: async () => '{"attempt":{"id":"a"}}' }));
+128:     vi.stubGlobal('fetch', fetchMock);
+129:     await api.postWithHeaders('/number-registrations', { tipo: 'OFICIAL' }, { 'idempotency-key': 'test-key' });
+130:     const [url, init] = fetchMock.mock.calls[0] as unknown as [string, RequestInit];
+131:     expect(url).toContain('/api/bff/number-registrations');
+132:     expect(url).not.toContain('test-key');
+133:     expect(new Headers(init.headers).get('idempotency-key')).toBe('test-key');
+134:     expect(init.body).toBe('{"tipo":"OFICIAL"}');
+135:   });
+136: });
+```
+
+
+## Source web-app/src/api.ts
+
+Raw SHA256 `dd59a37799453d3e68fc64a6477e1578956d15d1a4920af90e22ff2b83057505`; bytes10385.
+
+```
+1: /**
+2:  * Cliente do BFF.
+3:  *
+4:  * O front é serviço próprio, num SUBDOMÍNIO do mesmo domínio da API (ADR-0015).
+5:  * Isso é origem diferente e **mesmo site** — então:
+6:  *  - `credentials: 'include'` manda o cookie `HttpOnly` para a API;
+7:  *  - o cookie continua `SameSite=Lax`, porque subdomínio é o mesmo site;
+8:  *  - `X-Requested-With` é exigido pelo servidor no que muda estado (CSRF).
+9:  *
+10:  * A base da API vem de `/config.js`, escrito pelo container no START — não do
+11:  * build (ver `config.ts`). Vazio = mesma origem.
+12:  */
+13: import { API_BASE as BASE } from './config';
+14: /** Evento disparado quando qualquer chamada volta 401. */
+15: export const SESSAO_MORTA = 'leadshug:sessao-morta';
+16: 
+17: /**
+18:  * A conta ainda não terminou o wizard (409 ONBOARDING_PENDENTE), ou um módulo
+19:  * foi desligado com a aba aberta (404 MODULO_DESLIGADO).
+20:  *
+21:  * Nos dois casos o estado da tela está VELHO, não errado: o app rebusca o /me e
+22:  * se remonta, em vez de mostrar erro. É o mesmo padrão do SESSAO_MORTA.
+23:  */
+24: export const PRODUTO_MUDOU = 'leadshug:produto-mudou';
+25: 
+26: /**
+27:  * `typeof window` porque este módulo também é exercitado fora do navegador —
+28:  * é o teste de unidade que prova isso. Estourar aqui trocaria o erro REAL da
+29:  * chamada por um "window is not defined", que aponta para o lugar errado.
+30:  */
+31: function avisar(evento: string): void {
+32:   if (typeof window !== 'undefined') window.dispatchEvent(new CustomEvent(evento));
+33: }
+34: 
+35: export class ErroDaApi extends Error {
+36:   constructor(
+37:     readonly status: number,
+38:     readonly codigo: string | undefined,
+39:     mensagem: string,
+40:     readonly outcome?: string,
+41:     readonly evidence?: string,
+42:     readonly localMessageState?: string,
+43:     readonly diagnosticPersistence?: string,
+44:   ) {
+45:     super(mensagem);
+46:   }
+47: }
+48: 
+49: async function chamar<T>(caminho: string, init: RequestInit = {}): Promise<T> {
+50:   const mudaEstado = Boolean(init.method && init.method !== 'GET');
+51:   const res = await fetch(`${BASE}/api/bff${caminho}`, {
+52:     ...init,
+53:     credentials: 'include',
+54:     headers: {
+55:       'content-type': 'application/json',
+56:       ...(mudaEstado ? { 'x-requested-with': 'leadshug-web' } : {}),
+57:       ...(init.headers ?? {}),
+58:     },
+59:   });
+60: 
+61:   if (res.status === 204) return undefined as T;
+62: 
+63:   // Resposta que NÃO é JSON é falha de configuração, não corpo vazio.
+64:   //
+65:   // O caso real: sem `LEADSHUG_API_URL`, a base fica vazia e o front chama a
+66:   // PRÓPRIA origem — onde o nginx serve o index.html para qualquer caminho. A
+67:   // resposta vem 200, com HTML. Engolir isso como `{}` fazia a tela quebrar três
+68:   // passos depois, num campo que não tem relação nenhuma com a causa
+69:   // ("Cannot read properties of undefined"), e mandava quem depura para o lugar
+70:   // errado. Falhar aqui, dizendo o que provavelmente está errado, é o mínimo.
+71:   const bruto = await res.text();
+72:   let corpo: Record<string, unknown>;
+73:   try {
+74:     corpo = bruto ? JSON.parse(bruto) : {};
+75:   } catch {
+76:     // 405 num POST é assinatura de SERVIDOR DE ARQUIVOS: nginx responde assim
+77:     // quando recebe POST para um arquivo estático. Dizer isso poupa a rodada de
+78:     // "confira se é mesmo a API" — o que responde não é uma API.
+79:     const pareceEstatico = res.status === 405 || /^\s*<(!doctype|html)/i.test(bruto);
+80: 
+81:     throw new ErroDaApi(
+82:       res.status,
+83:       'RESPOSTA_NAO_E_JSON',
+84:       !BASE
+85:         ? 'A base da API está VAZIA: o front está chamando a própria origem. ' +
+86:           'Configure LEADSHUG_API_URL no serviço web.'
+87:         : pareceEstatico
+88:           ? `${BASE} respondeu ${res.status} como um servidor de ARQUIVOS, não como a API ` +
+89:             `(em ${caminho}). Esse endereço aponta para o serviço errado — confira ` +
+90:             'LEADSHUG_API_URL e o domínio do serviço `api`.'
+91:           : `A API respondeu ${res.status} com algo que não é JSON em ${caminho}. ` +
+92:             `Confira se ${BASE} é mesmo a API.`,
+93:     );
+94:   }
+95: 
+96:   if (res.status === 401) {
+97:     // A sessão morreu (expirou, a conta foi inativada, a senha foi resetada).
+98:     // Quem descobre isso é qualquer chamada, então o aviso é central: a tela
+99:     // que estava aberta não tem como saber o que fazer sozinha.
+100:     avisar(SESSAO_MORTA);
+101:   }
+102:   // Estado VELHO, não erro: a conta não terminou o wizard, ou um módulo foi
+103:   // desligado com esta aba aberta. O app rebusca o /me e se remonta.
+104:   if (corpo.code === 'ONBOARDING_PENDENTE' || corpo.code === 'MODULO_DESLIGADO') {
+105:     avisar(PRODUTO_MUDOU);
+106:   }
+107:   if (!res.ok) {
+108:     // `error` é o campo das recusas do produto. Um 500 do Nest NÃO tem esse
+109:     // campo — ele traz `message` —, e ignorá-lo transformava toda falha de
+110:     // servidor em "Falha inesperada.", que não diz nem o status. O status entra
+111:     // sempre: é o primeiro dado que quem depura precisa.
+112:     const dito = corpo.error ?? corpo.message;
+113:     throw new ErroDaApi(
+114:       res.status,
+115:       typeof corpo.code === 'string' ? corpo.code : undefined,
+116:       dito ? `${dito} (HTTP ${res.status})` : `A API respondeu ${res.status} sem explicar o motivo.`,
+117:       typeof corpo.outcome === 'string' ? corpo.outcome : undefined,
+118:       typeof corpo.evidence === 'string' ? corpo.evidence : undefined,
+119:       typeof corpo.localMessageState === 'string' ? corpo.localMessageState : undefined,
+120:       typeof corpo.diagnosticPersistence === 'string' ? corpo.diagnosticPersistence : undefined,
+121:     );
+122:   }
+123:   return corpo as T;
+124: }
+125: 
+126: /**
+127:  * Trata a falha de uma chamada disparada e esquecida (carregamento de tela).
+128:  *
+129:  * 401 aqui é normal e não é problema da tela: a sessão morreu — no logout, por
+130:  * expiração, ou porque a conta foi inativada — e quem redireciona é o App. Sem
+131:  * este filtro, cada chamada em voo no momento do logout vira uma **rejeição não
+132:  * tratada**, que o navegador registra como exceção da página. Foi assim que o
+133:  * teste de navegador pegou o primeiro defeito real.
+134:  */
+135: export function ignorarSessaoMorta(e: unknown): void {
+136:   if (e instanceof ErroDaApi && e.status === 401) return;
+137:   // Tratados centralmente pelo App, que rebusca o /me e remonta. Deixá-los
+138:   // chegar ao console faria a tela reclamar de algo que já está sendo resolvido.
+139:   if (e instanceof ErroDaApi && (e.codigo === 'ONBOARDING_PENDENTE' || e.codigo === 'MODULO_DESLIGADO')) return;
+140:   console.error(e);
+141: }
+142: 
+143: export const api = {
+144:   get: <T>(c: string) => chamar<T>(c),
+145:   post: <T>(c: string, corpo?: unknown) =>
+146:     chamar<T>(c, { method: 'POST', body: corpo ? JSON.stringify(corpo) : undefined }),
+147:   postWithHeaders: <T>(c: string, corpo: unknown, headers: Record<string, string>) =>
+148:     chamar<T>(c, { method: 'POST', body: JSON.stringify(corpo), headers }),
+149:   patch: <T>(c: string, corpo?: unknown) =>
+150:     chamar<T>(c, { method: 'PATCH', body: corpo ? JSON.stringify(corpo) : undefined }),
+151:   put: <T>(c: string, corpo?: unknown) =>
+152:     chamar<T>(c, { method: 'PUT', body: corpo ? JSON.stringify(corpo) : undefined }),
+153:   del: <T>(c: string) => chamar<T>(c, { method: 'DELETE' }),
+154: 
+155:   /**
+156:    * Envia um arquivo (ADR-0024). Sem `content-type`: o navegador precisa montar
+157:    * o `boundary` do multipart sozinho, e declará-lo à mão quebra o parse no
+158:    * servidor de um jeito que não diz o que houve.
+159:    */
+160:   async enviarArquivo(arquivo: File): Promise<{ id: string; tipo: string }> {
+161:     const corpo = new FormData();
+162:     corpo.append('arquivo', arquivo);
+163:     const res = await fetch(`${BASE}/api/bff/arquivos`, {
+164:       method: 'POST',
+165:       credentials: 'include',
+166:       headers: { 'x-requested-with': 'leadshug-web' },
+167:       body: corpo,
+168:     });
+169:     const bruto = await res.text();
+170:     let json: Record<string, string> = {};
+171:     try {
+172:       json = bruto ? JSON.parse(bruto) : {};
+173:     } catch {
+174:       throw new ErroDaApi(res.status, 'RESPOSTA_NAO_E_JSON', 'A API respondeu algo que não é JSON.');
+175:     }
+176:     if (!res.ok) throw new ErroDaApi(res.status, json.code, json.error ?? 'Falha ao enviar o arquivo.');
+177:     return json as unknown as { id: string; tipo: string };
+178:   },
+179: };
+180: 
+181: /** O endereço de leitura de um arquivo guardado — passa pela sessão. */
+182: export function urlDoArquivo(id: string | null | undefined): string | null {
+183:   return id ? `${BASE}/api/bff/arquivos/${id}` : null;
+184: }
+185: 
+186: export interface Produto {
+187:   /** JÁ interseccionado no servidor (env ∩ Mantenedora) — aqui não se faz conta. */
+188:   modulos: { canalNaoOficial: boolean };
+189:   marca: { nome: string | null; cor: string | null; corClaro: string | null; corEscuro: string | null; corSecundaria: string | null; tema: string; logo: string | null };
+190:   /** O wizard ainda não terminou: o app monta o wizard, não o produto. */
+191:   onboardingPendente: boolean;
+192: }
+193: 
+194: export interface Eu {
+195:   id: string;
+196:   nome: string;
+197:   email: string;
+198:   precisaTrocarSenha: boolean;
+199:   papel: string | null;
+200:   mantenedora: { id: string; name: string } | null;
+201:   escopo: string[];
+202:   produto: Produto;
+203:   telefone: string | null;
+204:   avatar: string | null;
+205: }
+206: 
+207: export interface BusinessUnit {
+208:   id: string;
+209:   name: string;
+210:   phone: string | null;
+211:   papel?: string | null;
+212:   setor?: { id: string; name: string } | null;
+213:   channels: {
+214:     id: string;
+215:     type: string;
+216:     status: string;
+217:     generation?: number;
+218:     currentAttemptId?: string | null;
+219:     ownNumberVerified?: boolean;
+220:     providerConnectionState?: string | null;
+221:     receiptVerifiedAt?: string | null;
+222:     requiresWindow?: boolean;
+223:     connectedAt?: string | null;
+224:   }[];
+225: }
+226: 
+227: export interface Setor {
+228:   id: string;
+229:   nome: string;
+230:   status: 'ATIVO' | 'INATIVO';
+231:   numeros: number;
+232: }
+233: 
+234: export interface Atividade {
+235:   id: string;
+236:   categoria: string;
+237:   entidade: string;
+238:   ator: string | null;
+239:   texto: string;
+240:   de: string | null;
+241:   para: string | null;
+242:   em: string;
+243: }
+244: 
+245: export interface Conversa {
+246:   id: string;
+247:   contact: string;
+248:   displayName: string | null;
+249:   status: string;
+250:   attendantName: string | null;
+251:   unreadCount: number;
+252:   lastMessageAt: string | null;
+253: }
+254: 
+255: export interface Mensagem {
+256:   id: string;
+257:   direction: 'IN' | 'OUT';
+258:   content: string | null;
+259:   channelOrigin: string;
+260:   authorName: string | null;
+261:   createdAt: string;
+262: }
+263: 
+264: export interface Thread {
+265:   conversa: { id: string; contato: string; nome: string | null; status: string; atendente: string | null };
+266:   janela: { exigida: boolean; aberta: boolean; expiraEm: string | null; canal: string | null; disponivel: boolean; motivo: string | null };
+267:   messages: Mensagem[];
+268:   paginacao: { limite: number; temAnteriores: boolean; cursorAnterior: string | null };
+269: }
+```
+
+
+## Source web-app/src/telas/Inbox.tsx
+
+Raw SHA256 `d70bde9ede67759d479f644598356e46aac2916a12b2ed1770c17a169118586c`; bytes21225.
+
+```
+1: import { FormEvent, useCallback, useEffect, useRef, useState } from 'react';
+2: import { BusinessUnit, Conversa, ErroDaApi, Eu, Mensagem, Thread, api, ignorarSessaoMorta } from '../api';
+3: import { ouvirTempoReal } from '../tempoReal';
+4: import { cruzouPiso, mesclarMensagens } from '../timeline';
+5: 
+6: const ABAS = [
+7:   { id: 'QUEUED', rotulo: 'Na fila' },
+8:   { id: 'IN_SERVICE', rotulo: 'Em atendimento' },
+9:   { id: 'CLOSED', rotulo: 'Finalizadas' },
+10:   { id: 'GRUPO', rotulo: 'Grupos' },
+11: ];
+12: 
+13: function explicarMotivoEnvio(motivo: string | null): string {
+14:   switch (motivo) {
+15:     case 'CANAL_AUSENTE': return 'Não há um canal conectado para responder.';
+16:     case 'CANAL_AMBIGUO': return 'Esta conversa ainda não tem um canal definido. Aguarde uma mensagem recebida para responder.';
+17:     case 'CANAL_SELECIONADO_INDISPONIVEL': return 'O canal desta conversa não está disponível.';
+18:     case 'CHANNEL_IDENTITY_NOT_VERIFIED': return 'A identidade do canal ainda precisa ser verificada.';
+19:     case 'CHANNEL_NOT_READY': return 'O canal ainda não está pronto para enviar.';
+20:     case 'PENDING_CREDENTIAL': return 'A credencial do canal precisa ser atualizada.';
+21:     case 'JANELA_FECHADA': return 'A janela de 24 horas foi encerrada.';
+22:     default: return 'O envio está temporariamente indisponível.';
+23:   }
+24: }
+25: 
+26: interface Recuperacao {
+27:   id: string;
+28:   geracao: number;
+29:   piso: string;
+30:   cursor: string | null;
+31:   dirty: boolean;
+32:   eventos: number;
+33:   emVoo: boolean;
+34:   paginasRestantes: number;
+35:   vazio?: boolean;
+36: }
+37: 
+38: interface InvalidacaoDeAbertura {
+39:   id: string;
+40:   geracao: number;
+41:   eventos: number;
+42: }
+43: 
+44: interface ErroDeRecuperacao {
+45:   geracao: number;
+46:   versao: number;
+47: }
+48: 
+49: export default function Inbox({ eu }: { eu: Eu }) {
+50:   const [bus, setBus] = useState<BusinessUnit[]>([]);
+51:   const [buId, setBuId] = useState<string>('');
+52:   const [aba, setAba] = useState('QUEUED');
+53:   const [conversas, setConversas] = useState<Conversa[]>([]);
+54:   const [aberta, setAberta] = useState<Thread | null>(null);
+55:   const [abrindo, setAbrindo] = useState(false);
+56:   const [texto, setTexto] = useState('');
+57:   const [erro, setErro] = useState<string | null>(null);
+58:   const [carregandoAnteriores, setCarregandoAnteriores] = useState(false);
+59:   const [recuperacaoPendente, setRecuperacaoPendente] = useState(false);
+60:   const [enviando, setEnviando] = useState(false);
+61:   const textoRef = useRef('');
+62:   const versaoErro = useRef(0);
+63:   const erroRecuperacao = useRef<ErroDeRecuperacao | null>(null);
+64:   const geracao = useRef(0);
+65:   const buAtual = useRef('');
+66:   const conversaAtual = useRef<string | null>(null);
+67:   const abaAtual = useRef('QUEUED');
+68:   const threadAtual = useRef<Thread | null>(null);
+69:   const recuperacao = useRef<Recuperacao | null>(null);
+70:   const invalidacaoAbertura = useRef<InvalidacaoDeAbertura | null>(null);
+71:   const executarRecuperacaoRef = useRef<() => Promise<void>>(async () => {});
+72:   const versaoMetadados = useRef(0);
+73:   const bolhas = useRef<HTMLDivElement>(null);
+74:   const carregarListaRef = useRef<(id?: string, filtro?: string) => Promise<void>>(async () => {});
+75:   const reconciliarRef = useRef<() => void>(() => {});
+76: 
+77:   const guardarThread = (thread: Thread | null) => {
+78:     threadAtual.current = thread;
+79:     setAberta(thread);
+80:   };
+81: 
+82:   const guardarTexto = (valor: string) => {
+83:     textoRef.current = valor;
+84:     setTexto(valor);
+85:   };
+86: 
+87:   const definirErro = useCallback((mensagem: string | null, geracaoDaRecuperacao?: number) => {
+88:     versaoErro.current += 1;
+89:     erroRecuperacao.current = mensagem !== null && geracaoDaRecuperacao !== undefined
+90:       ? { geracao: geracaoDaRecuperacao, versao: versaoErro.current }
+91:       : null;
+92:     setErro(mensagem);
+93:   }, []);
+94: 
+95:   const limparErroRecuperacao = useCallback((geracaoDaRecuperacao: number) => {
+96:     const erroAtual = erroRecuperacao.current;
+97:     if (erroAtual?.geracao !== geracaoDaRecuperacao || erroAtual.versao !== versaoErro.current) return;
+98:     erroRecuperacao.current = null;
+99:     versaoErro.current += 1;
+100:     setErro(null);
+101:   }, []);
+102: 
+103:   useEffect(() => {
+104:     api.get<{ businessUnits: BusinessUnit[] }>('/business-units').then((r) => {
+105:       const lista = r.businessUnits ?? [];
+106:       setBus(lista);
+107:       const inicial = lista[0]?.id ?? '';
+108:       buAtual.current = inicial;
+109:       setBuId(inicial);
+110:     }).catch(ignorarSessaoMorta);
+111:   }, []);
+112: 
+113:   const carregarLista = useCallback(async (id = buAtual.current, filtro = aba) => {
+114:     if (!id) return;
+115:     try {
+116:       const r = await api.get<{ conversations: Conversa[] }>(`/business-units/${id}/conversations?aba=${filtro}`);
+117:       if (buAtual.current === id && abaAtual.current === filtro) setConversas(r.conversations);
+118:     } catch (e) {
+119:       if (buAtual.current === id && abaAtual.current === filtro) throw e;
+120:     }
+121:   }, [aba]);
+122: 
+123:   const aplicarPaginaRecente = useCallback((id: string, geracaoDaChamada: number, versao: number, response: Thread) => {
+124:     if (conversaAtual.current !== id || geracao.current !== geracaoDaChamada) return;
+125:     const anterior = threadAtual.current;
+126:     const novo: Thread = {
+127:       ...response,
+128:       messages: mesclarMensagens(anterior?.messages ?? [], response.messages),
+129:       // O cursor de reconciliação recente não substitui o cursor do histórico.
+130:       paginacao: anterior && anterior.messages.length > 0 ? anterior.paginacao : response.paginacao,
+131:       conversa: versaoMetadados.current === versao ? response.conversa : anterior?.conversa ?? response.conversa,
+132:       janela: versaoMetadados.current === versao ? response.janela : anterior?.janela ?? response.janela,
+133:     };
+134:     guardarThread(novo);
+135:   }, []);
+136: 
+137:   const executarRecuperacao = useCallback(async () => {
+138:     const r = recuperacao.current;
+139:     if (!r || r.emVoo || r.paginasRestantes <= 0 || r.geracao !== geracao.current || r.id !== conversaAtual.current) return;
+140:     r.emVoo = true;
+141:     const eventosNoInicio = r.eventos;
+142:     r.dirty = false;
+143:     let cruzou = false;
+144:     try {
+145:       if (r.vazio) {
+146:         if (r.cursor === null && r.paginasRestantes > 0) {
+147:           const versao = versaoMetadados.current;
+148:           r.paginasRestantes -= 1;
+149:           const inicial = await api.get<Thread>(`/conversations/${r.id}/messages?limite=50&marcarLida=false`);
+150:           if (r.geracao !== geracao.current || r.id !== conversaAtual.current) return;
+151:           aplicarPaginaRecente(r.id, r.geracao, versao, inicial);
+152:           r.cursor = inicial.paginacao.cursorAnterior;
+153:           if (!inicial.paginacao.temAnteriores) r.cursor = null;
+154:         }
+155:         while (r.cursor && r.paginasRestantes > 0 && !r.dirty) {
+156:           const cursor = r.cursor;
+157:           r.paginasRestantes -= 1;
+158:           const pagina = await api.get<Thread>(`/conversations/${r.id}/messages?limite=50&marcarLida=false&antes=${encodeURIComponent(cursor)}`);
+159:           if (r.geracao !== geracao.current || r.id !== conversaAtual.current) return;
+160:           const atual = threadAtual.current;
+161:           if (atual) guardarThread({
+162:             ...atual,
+163:             messages: mesclarMensagens(atual.messages, pagina.messages),
+164:             paginacao: pagina.paginacao,
+165:           });
+166:           r.cursor = pagina.paginacao.cursorAnterior;
+167:         }
+168:         if (r.eventos !== eventosNoInicio || r.dirty) {
+169:           r.cursor = null;
+170:           setRecuperacaoPendente(true);
+171:         } else if (!r.cursor) {
+172:           recuperacao.current = null;
+173:           setRecuperacaoPendente(false);
+174:           limparErroRecuperacao(r.geracao);
+175:         } else {
+176:           setRecuperacaoPendente(true);
+177:         }
+178:         return;
+179:       }
+180:       if (r.cursor === null && r.paginasRestantes > 0) {
+181:         const versao = versaoMetadados.current;
+182:         r.paginasRestantes -= 1;
+183:         const recente = await api.get<Thread>(`/conversations/${r.id}/messages?limite=50&marcarLida=false`);
+184:         if (r.geracao !== geracao.current || r.id !== conversaAtual.current) return;
+185:         aplicarPaginaRecente(r.id, r.geracao, versao, recente);
+186:         r.cursor = recente.paginacao.cursorAnterior;
+187:         cruzou = cruzouPiso(recente.messages, r.piso) || !recente.paginacao.temAnteriores;
+188:       }
+189:       while (!cruzou && r.cursor && r.paginasRestantes > 0 && !r.dirty) {
+190:         const cursor = r.cursor;
+191:         r.paginasRestantes -= 1;
+192:         const pagina = await api.get<Thread>(`/conversations/${r.id}/messages?limite=50&marcarLida=false&antes=${encodeURIComponent(cursor)}`);
+193:         if (r.geracao !== geracao.current || r.id !== conversaAtual.current) return;
+194:         const atual = threadAtual.current;
+195:         if (atual) guardarThread({
+196:           ...atual,
+197:           messages: mesclarMensagens(atual.messages, pagina.messages),
+198:         });
+199:         r.cursor = pagina.paginacao.cursorAnterior;
+200:         cruzou = cruzouPiso(pagina.messages, r.piso) || !pagina.paginacao.temAnteriores;
+201:       }
+202: 
+203:       if (r.eventos !== eventosNoInicio || r.dirty) {
+204:         // Um evento concorrente exige nova passagem recente e preserva o piso.
+205:         r.cursor = null;
+206:         setRecuperacaoPendente(true);
+207:       } else if (cruzou) {
+208:         recuperacao.current = null;
+209:         setRecuperacaoPendente(false);
+210:         limparErroRecuperacao(r.geracao);
+211:       } else {
+212:         setRecuperacaoPendente(true);
+213:       }
+214:     } catch (e) {
+215:       if (r.geracao === geracao.current && r.id === conversaAtual.current) {
+216:         if (r.dirty || r.eventos !== eventosNoInicio) r.cursor = null;
+217:         definirErro(e instanceof ErroDaApi && e.status === 404 ? 'Acesso à conversa perdido.' : 'Não foi possível atualizar o histórico. Tente novamente.', r.geracao);
+218:         setRecuperacaoPendente(true);
+219:       }
+220:     } finally {
+221:       r.emVoo = false;
+222:       if (recuperacao.current === r && (r.dirty || r.eventos !== eventosNoInicio) && r.paginasRestantes > 0 && r.geracao === geracao.current) {
+223:         queueMicrotask(() => void executarRecuperacaoRef.current());
+224:       }
+225:     }
+226:   }, [aplicarPaginaRecente, definirErro, limparErroRecuperacao]);
+227: 
+228:   useEffect(() => { executarRecuperacaoRef.current = executarRecuperacao; }, [executarRecuperacao]);
+229: 
+230:   const reconciliar = useCallback(() => {
+231:     const thread = threadAtual.current;
+232:     const id = conversaAtual.current;
+233:     if (!id) return;
+234:     if (!thread) {
+235:       const abertura = invalidacaoAbertura.current;
+236:       if (abertura?.id === id && abertura.geracao === geracao.current) abertura.eventos += 1;
+237:       return;
+238:     }
+239:     let r = recuperacao.current;
+240:     if (!r || r.id !== id || r.geracao !== geracao.current) {
+241:       const mensagens = thread.messages;
+242:       if (mensagens.length === 0) {
+243:         r = { id, geracao: geracao.current, piso: '', cursor: null, dirty: true, eventos: 0, emVoo: false, paginasRestantes: 3, vazio: true };
+244:         recuperacao.current = r;
+245:         void executarRecuperacao();
+246:         return;
+247:       }
+248:       const piso = mensagens.reduce((max, m) => Date.parse(m.createdAt) > Date.parse(max) ? m.createdAt : max, mensagens[0].createdAt);
+249:       r = { id, geracao: geracao.current, piso, cursor: null, dirty: true, eventos: 0, emVoo: false, paginasRestantes: 3 };
+250:       recuperacao.current = r;
+251:       setRecuperacaoPendente(true);
+252:     } else {
+253:       r.dirty = true;
+254:       r.eventos += 1;
+255:       if (!r.emVoo) r.cursor = null;
+256:       setRecuperacaoPendente(true);
+257:     }
+258:     if (r.paginasRestantes > 0) void executarRecuperacao();
+259:   }, [aplicarPaginaRecente, executarRecuperacao]);
+260: 
+261:   const iniciarRodadaAutorizada = useCallback(() => {
+262:     const r = recuperacao.current;
+263:     if (!r || r.emVoo || r.geracao !== geracao.current || r.id !== conversaAtual.current) return;
+264:     r.paginasRestantes = 3;
+265:     void executarRecuperacao();
+266:   }, [executarRecuperacao]);
+267: 
+268:   useEffect(() => {
+269:     carregarListaRef.current = carregarLista;
+270:     reconciliarRef.current = reconciliar;
+271:   }, [carregarLista, reconciliar]);
+272: 
+273:   useEffect(() => {
+274:     void carregarLista().catch(ignorarSessaoMorta);
+275:     const t = setInterval(() => {
+276:       void carregarLista().catch(ignorarSessaoMorta);
+277:       if (recuperacao.current) iniciarRodadaAutorizada();
+278:       else reconciliar();
+279:     }, 60_000);
+280:     return () => clearInterval(t);
+281:   }, [buId, aba, carregarLista, reconciliar, iniciarRodadaAutorizada]);
+282: 
+283:   useEffect(() => {
+284:     // Espera a lista inicial de BUs e mantém o socket apesar de filtros, BUs ou
+285:     // callbacks locais mudarem. Isso evita reconectar durante o mesmo login.
+286:     if (bus.length === 0) return;
+287:     const parar = ouvirTempoReal((evento) => {
+288:       if (evento.buId !== buAtual.current) return;
+289:       void carregarListaRef.current().catch(ignorarSessaoMorta);
+290:       if (evento.conversaId === conversaAtual.current) reconciliarRef.current();
+291:     }, () => reconciliarRef.current());
+292:     return parar;
+293:   }, [eu.id, bus.length]);
+294: 
+295:   function trocarBu(novoBu: string) {
+296:     geracao.current += 1;
+297:     buAtual.current = novoBu;
+298:     conversaAtual.current = null;
+299:     recuperacao.current = null;
+300:     invalidacaoAbertura.current = null;
+301:     guardarThread(null);
+302:     setAbrindo(false);
+303:     guardarTexto('');
+304:     setEnviando(false);
+305:     setCarregandoAnteriores(false);
+306:     definirErro(null);
+307:     setRecuperacaoPendente(false);
+308:     setConversas([]);
+309:     setBuId(novoBu);
+310:   }
+311: 
+312:   async function abrir(id: string) {
+313:     const gen = ++geracao.current;
+314:     conversaAtual.current = id;
+315:     recuperacao.current = null;
+316:     invalidacaoAbertura.current = { id, geracao: gen, eventos: 0 };
+317:     versaoMetadados.current += 1;
+318:     guardarThread(null);
+319:     setAbrindo(true);
+320:     guardarTexto('');
+321:     setEnviando(false);
+322:     setCarregandoAnteriores(false);
+323:     definirErro(null);
+324:     setRecuperacaoPendente(false);
+325:     try {
+326:       const response = await api.get<Thread>(`/conversations/${id}/messages`);
+327:       if (gen !== geracao.current || conversaAtual.current !== id) return;
+328:       response.messages = mesclarMensagens(response.messages);
+329:       guardarThread(response);
+330:       setAbrindo(false);
+331:       const invalidacao = invalidacaoAbertura.current;
+332:       invalidacaoAbertura.current = null;
+333:       void carregarLista().catch(ignorarSessaoMorta);
+334:       if (invalidacao?.id === id && invalidacao.geracao === gen && invalidacao.eventos > 0) reconciliar();
+335:     } catch (e) {
+336:       if (gen === geracao.current) {
+337:         invalidacaoAbertura.current = null;
+338:         guardarThread(null);
+339:         setAbrindo(false);
+340:         definirErro(e instanceof ErroDaApi && e.status === 404 ? 'Acesso à conversa perdido.' : 'Não foi possível carregar a conversa.');
+341:       }
+342:     }
+343:   }
+344: 
+345:   async function carregarAnteriores() {
+346:     const atual = threadAtual.current;
+347:     const id = conversaAtual.current;
+348:     const cursor = atual?.paginacao.cursorAnterior;
+349:     if (!atual || !id || !cursor || carregandoAnteriores) return;
+350:     const gen = geracao.current;
+351:     setCarregandoAnteriores(true);
+352:     definirErro(null);
+353:     try {
+354:       const pagina = await api.get<Thread>(`/conversations/${id}/messages?antes=${encodeURIComponent(cursor)}`);
+355:       if (gen !== geracao.current || id !== conversaAtual.current || !threadAtual.current) return;
+356:       // Inclua alterações legítimas que chegaram enquanto a página estava no ar.
+357:       const alturaAntes = bolhas.current?.scrollHeight ?? 0;
+358:       const topoAntes = bolhas.current?.scrollTop ?? 0;
+359:       const corrente = threadAtual.current;
+360:       guardarThread({ ...corrente, messages: mesclarMensagens(corrente.messages, pagina.messages), paginacao: pagina.paginacao });
+361:       requestAnimationFrame(() => {
+362:         if (gen === geracao.current && bolhas.current) bolhas.current.scrollTop = topoAntes + (bolhas.current.scrollHeight - alturaAntes);
+363:       });
+364:     } catch (e) {
+365:       if (gen === geracao.current) definirErro(e instanceof ErroDaApi && e.status === 404 ? 'Acesso à conversa perdido.' : 'Falha ao carregar mensagens anteriores.');
+366:     } finally {
+367:       if (gen === geracao.current) setCarregandoAnteriores(false);
+368:     }
+369:   }
+370: 
+371:   async function agir(acao: () => Promise<unknown>) {
+372:     const id = conversaAtual.current;
+373:     const gen = geracao.current;
+374:     if (!id) return;
+375:     versaoMetadados.current += 1;
+376:     definirErro(null);
+377:     try {
+378:       await acao();
+379:       if (gen !== geracao.current || id !== conversaAtual.current) return;
+380:       void carregarLista().catch(ignorarSessaoMorta);
+381:       reconciliar();
+382:     } catch (e) {
+383:       if (gen === geracao.current) definirErro(e instanceof ErroDaApi ? e.message : 'Falhou.');
+384:     }
+385:   }
+386: 
+387:   async function responder(e: FormEvent) {
+388:     e.preventDefault();
+389:     const id = conversaAtual.current;
+390:     const gen = geracao.current;
+391:     const textoEnviado = textoRef.current;
+392:     if (!id || !textoEnviado.trim() || enviando) return;
+393:     setEnviando(true);
+394:     definirErro(null);
+395:     try {
+396:       await api.post(`/conversations/${id}/messages`, { texto: textoEnviado });
+397:       if (gen !== geracao.current || id !== conversaAtual.current) return;
+398:       if (textoRef.current === textoEnviado) guardarTexto('');
+399:       void carregarLista().catch(ignorarSessaoMorta);
+400:       reconciliar();
+401:     } catch (e) {
+402:       if (gen === geracao.current) definirErro(e instanceof ErroDaApi ? e.message : 'Falha ao enviar mensagem.');
+403:     } finally {
+404:       if (gen === geracao.current) setEnviando(false);
+405:     }
+406:   }
+407: 
+408:   const envioIndisponivel = aberta ? !aberta.janela.disponivel : false;
+409:   const janelaFechada = aberta?.janela.exigida && !aberta.janela.aberta;
+410: 
+411:   return (
+412:     <div className="grade">
+413:       <div className="linha">
+414:         <select aria-label="Business Unit" value={buId} onChange={(e) => trocarBu(e.target.value)} style={{ maxWidth: 280 }}>
+415:           {bus.map((b) => <option key={b.id} value={b.id}>{b.name}</option>)}
+416:         </select>
+417:         {erro && <span className="erro" role="alert">{erro}</span>}
+418:       </div>
+419: 
+420:       <div className="abas">
+421:         {ABAS.map((a) => <button key={a.id} className={aba === a.id ? 'ativa' : ''} onClick={() => { abaAtual.current = a.id; setAba(a.id); }}>{a.rotulo}</button>)}
+422:       </div>
+423: 
+424:       <div className="inbox">
+425:         <div className="cartao lista" style={{ padding: 0 }}>
+426:           {conversas.map((c) => <button key={c.id} className={`item ${aberta?.conversa.id === c.id ? 'ativo' : ''}`} onClick={() => void abrir(c.id)}>
+427:             <div className="linha"><strong>{c.displayName ?? c.contact}</strong>{c.unreadCount > 0 && <span className="suave">({c.unreadCount})</span>}</div>
+428:             <div className="suave">{c.attendantName ?? 'sem atendente'}</div>
+429:           </button>)}
+430:           {conversas.length === 0 && <p className="suave" style={{ padding: 12 }}>Nada aqui.</p>}
+431:         </div>
+432: 
+433:         <div className="cartao grade">
+434:           {!aberta && (abrindo
+435:             ? <p className="suave" role="status" aria-live="polite">Abrindo conversa…</p>
+436:             : <p className="suave">Escolha uma conversa.</p>)}
+437:           {aberta && <>
+438:             <div className="linha">
+439:               <strong>{aberta.conversa.nome ?? aberta.conversa.contato}</strong>
+440:               <span className="suave">{aberta.conversa.status}</span>
+441:               <span className="suave" style={{ marginLeft: 'auto' }}>{aberta.janela.canal}</span>
+442:             </div>
+443:             <div className="linha">
+444:               {aberta.paginacao.temAnteriores
+445:                 ? <button onClick={() => void carregarAnteriores()} disabled={carregandoAnteriores} aria-label="Carregar mensagens anteriores">
+446:                     {carregandoAnteriores ? 'Carregando…' : 'Carregar anteriores'}
+447:                   </button>
+448:                 : <span className="suave">Início do histórico</span>}
+449:               {recuperacaoPendente && <span className="suave" role="status">Atualização pendente. O histórico pode ter uma lacuna.</span>}
+450:               {recuperacaoPendente && <button onClick={() => iniciarRodadaAutorizada()}>Continuar atualização</button>}
+451:             </div>
+452:             <div className="bolhas" ref={bolhas} aria-live="polite">
+453:               {aberta.messages.map((m: Mensagem) => <div key={m.id} data-message-id={m.id} className={`bolha ${m.direction === 'OUT' ? 'saiu' : ''}`}>
+454:                 <div>{m.content}</div>
+455:                 <div className="suave">{new Date(m.createdAt).toLocaleString('pt-BR')}{m.authorName ? ` · ${m.authorName}` : ''}</div>
+456:               </div>)}
+457:               {aberta.messages.length === 0 && <p className="suave">Nenhuma mensagem nesta conversa.</p>}
+458:             </div>
+459: 
+460:             {envioIndisponivel && <div className="aviso" role="status">{janelaFechada
+461:               ? 'Fora da janela de 24h do canal selecionado. Texto livre está indisponível.'
+462:               : explicarMotivoEnvio(aberta.janela.motivo)}</div>}
+463:             <form className="linha" onSubmit={responder}>
+464:               <input value={texto} onChange={(e) => guardarTexto(e.target.value)} placeholder={envioIndisponivel ? 'Envio indisponível' : 'Escreva uma resposta'} disabled={envioIndisponivel} maxLength={4096} />
+465:               <button className="primario" disabled={envioIndisponivel || enviando || !texto.trim()}>{enviando ? 'Enviando…' : 'Enviar'}</button>
+466:             </form>
+467:             {aberta.conversa.status !== 'CLOSED' && <div className="linha">
+468:               <button onClick={() => void agir(() => api.post(`/conversations/${aberta.conversa.id}/claim`))}>Atender</button>
+469:               <button onClick={() => void agir(() => api.post(`/conversations/${aberta.conversa.id}/close`))}>Finalizar</button>
+470:             </div>}
+471:           </>}
+472:         </div>
+473:       </div>
+474:     </div>
+475:   );
+476: }
+```
+
+
+## Source scripts/test-channels-local.sh
+
+Raw SHA256 `b03176ef1a332c431ed55028c691052958ebc08ff7711db08d05316c1f8a34a6`; bytes9873.
+
+```
+1: #!/usr/bin/env bash
+2: set -euo pipefail
+3: 
+4: ROOT_DIR="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")/.." && pwd)"
+5: TARGET="${1:-all}"
+6: case "$TARGET" in
+7:   api|web|browser|all) ;;
+8:   *) printf 'Usage: %s [api|web|browser|all]\n' "$0" >&2; exit 2 ;;
+9: esac
+10: 
+11: command -v docker.exe >/dev/null || { echo 'Windows Docker CLI (docker.exe) is required.' >&2; exit 1; }
+12: command -v wslpath >/dev/null || { echo 'wslpath is required to bind the principal checkout.' >&2; exit 1; }
+13: CHANNELS_SOURCE_WINDOWS="$(wslpath -w "$ROOT_DIR")"
+14: CHANNELS_EXPECTED_API_PACKAGE_SHA256="$(sha256sum "$ROOT_DIR/api-app/package.json" | cut -d ' ' -f 1)"
+15: CHANNELS_EXPECTED_WEB_PACKAGE_SHA256="$(sha256sum "$ROOT_DIR/web-app/package.json" | cut -d ' ' -f 1)"
+16: 
+17: # Keep host inputs as a positive inventory. Do not discover dotenv files with
+18: # find/glob over either application tree: those trees can contain private
+19: # configuration and local-only data. The exact public bind paths are listed
+20: # below; only api-app/.env.example is mounted, while .env and .env.testing are
+21: # supplied inside the validation container by the Compose config masks below.
+22: 
+23: cd "$ROOT_DIR"
+24: temp_env="$(mktemp)"
+25: chmod 600 "$temp_env"
+26: cat > "$temp_env" <<EOF
+27: CHANNELS_SOURCE_WINDOWS=$CHANNELS_SOURCE_WINDOWS
+28: SESSION_SECRET=channels-validation-session-only
+29: INTERNAL_SERVICE_TOKEN=channels-validation-internal-only
+30: POSTGRES_PASSWORD=channels-validation-postgres-only
+31: EVOLUTION_POSTGRES_PASSWORD=channels-validation-evolution-postgres-only
+32: EVOLUTION_AUTHENTICATION_API_KEY=channels-validation-evolution-api-key-only
+33: EVOLUTION_WEBHOOK_SECRET=validation-evolution-header-secret
+34: CHANNELS_EXPECTED_API_PACKAGE_SHA256=$CHANNELS_EXPECTED_API_PACKAGE_SHA256
+35: CHANNELS_EXPECTED_WEB_PACKAGE_SHA256=$CHANNELS_EXPECTED_WEB_PACKAGE_SHA256
+36: EOF
+37: add_bind_path() {
+38:   local key="$1" path="$2"
+39:   local relative_path="${path#"$ROOT_DIR"/}"
+40:   case "$relative_path" in
+41:     .env|.env.testing|api-app/.env|api-app/.env.testing|api-app/.local-files|api-app/.local-files/*|web-app/.env|web-app/.env.*)
+42:       printf 'Refusing excluded private configuration/data path: %s\n' "$relative_path" >&2
+43:       exit 1
+44:       ;;
+45:   esac
+46:   case "$relative_path" in
+47:     api-app/.git|api-app/src|api-app/test|api-app/prisma|api-app/package.json|api-app/package-lock.json|api-app/.env.example|api-app/.dockerignore|api-app/.gitignore|api-app/docker/entrypoint.sh|api-app/Dockerfile|api-app/eslint.config.mjs|api-app/nest-cli.json|api-app/railway.json|api-app/tsconfig.json|api-app/tsconfig.build.json|api-app/vitest.config.ts|api-app/vitest.config.e2e.ts|api-app/vitest.config.cov.ts|web-app/.git|web-app/src|web-app/e2e|web-app/public|web-app/package.json|web-app/package-lock.json|web-app/index.html|web-app/playwright.config.ts|web-app/tsconfig.json|web-app/vite.config.ts|web-app/railway.json|web-app/.gitignore|web-app/.dockerignore|web-app/Dockerfile|web-app/docker/40-config-js.sh|web-app/nginx/default.conf.template) ;;
+48:     *) printf 'Refusing path outside the public bind inventory: %s\n' "$relative_path" >&2; exit 1 ;;
+49:   esac
+50:   [[ -e "$path" ]] || { printf 'Expected principal source path is missing: %s\n' "${path#"$ROOT_DIR"/}" >&2; exit 1; }
+51:   printf '%s=%s\n' "$key" "$(wslpath -w "$path")" >> "$temp_env"
+52: }
+53: add_bind_path CHANNELS_API_GIT_WINDOWS "$ROOT_DIR/api-app/.git"
+54: add_bind_path CHANNELS_API_SRC_WINDOWS "$ROOT_DIR/api-app/src"
+55: add_bind_path CHANNELS_API_TEST_WINDOWS "$ROOT_DIR/api-app/test"
+56: add_bind_path CHANNELS_API_PRISMA_WINDOWS "$ROOT_DIR/api-app/prisma"
+57: add_bind_path CHANNELS_API_PACKAGE_JSON_WINDOWS "$ROOT_DIR/api-app/package.json"
+58: add_bind_path CHANNELS_API_PACKAGE_LOCK_WINDOWS "$ROOT_DIR/api-app/package-lock.json"
+59: add_bind_path CHANNELS_API_ENV_EXAMPLE_WINDOWS "$ROOT_DIR/api-app/.env.example"
+60: add_bind_path CHANNELS_API_DOCKERIGNORE_WINDOWS "$ROOT_DIR/api-app/.dockerignore"
+61: add_bind_path CHANNELS_API_GITIGNORE_WINDOWS "$ROOT_DIR/api-app/.gitignore"
+62: add_bind_path CHANNELS_API_ENTRYPOINT_WINDOWS "$ROOT_DIR/api-app/docker/entrypoint.sh"
+63: add_bind_path CHANNELS_API_DOCKERFILE_WINDOWS "$ROOT_DIR/api-app/Dockerfile"
+64: add_bind_path CHANNELS_API_ESLINT_WINDOWS "$ROOT_DIR/api-app/eslint.config.mjs"
+65: add_bind_path CHANNELS_API_NEST_WINDOWS "$ROOT_DIR/api-app/nest-cli.json"
+66: add_bind_path CHANNELS_API_RAILWAY_WINDOWS "$ROOT_DIR/api-app/railway.json"
+67: add_bind_path CHANNELS_API_TSCONFIG_WINDOWS "$ROOT_DIR/api-app/tsconfig.json"
+68: add_bind_path CHANNELS_API_TSCONFIG_BUILD_WINDOWS "$ROOT_DIR/api-app/tsconfig.build.json"
+69: add_bind_path CHANNELS_API_VITEST_WINDOWS "$ROOT_DIR/api-app/vitest.config.ts"
+70: add_bind_path CHANNELS_API_VITEST_E2E_WINDOWS "$ROOT_DIR/api-app/vitest.config.e2e.ts"
+71: add_bind_path CHANNELS_API_VITEST_COV_WINDOWS "$ROOT_DIR/api-app/vitest.config.cov.ts"
+72: add_bind_path CHANNELS_WEB_GIT_WINDOWS "$ROOT_DIR/web-app/.git"
+73: add_bind_path CHANNELS_WEB_SRC_WINDOWS "$ROOT_DIR/web-app/src"
+74: add_bind_path CHANNELS_WEB_E2E_WINDOWS "$ROOT_DIR/web-app/e2e"
+75: add_bind_path CHANNELS_WEB_PUBLIC_WINDOWS "$ROOT_DIR/web-app/public"
+76: add_bind_path CHANNELS_WEB_PACKAGE_JSON_WINDOWS "$ROOT_DIR/web-app/package.json"
+77: add_bind_path CHANNELS_WEB_PACKAGE_LOCK_WINDOWS "$ROOT_DIR/web-app/package-lock.json"
+78: add_bind_path CHANNELS_WEB_INDEX_WINDOWS "$ROOT_DIR/web-app/index.html"
+79: add_bind_path CHANNELS_WEB_PLAYWRIGHT_WINDOWS "$ROOT_DIR/web-app/playwright.config.ts"
+80: add_bind_path CHANNELS_WEB_TSCONFIG_WINDOWS "$ROOT_DIR/web-app/tsconfig.json"
+81: add_bind_path CHANNELS_WEB_VITE_WINDOWS "$ROOT_DIR/web-app/vite.config.ts"
+82: add_bind_path CHANNELS_WEB_RAILWAY_WINDOWS "$ROOT_DIR/web-app/railway.json"
+83: add_bind_path CHANNELS_WEB_GITIGNORE_WINDOWS "$ROOT_DIR/web-app/.gitignore"
+84: add_bind_path CHANNELS_WEB_DOCKERIGNORE_WINDOWS "$ROOT_DIR/web-app/.dockerignore"
+85: add_bind_path CHANNELS_WEB_DOCKERFILE_WINDOWS "$ROOT_DIR/web-app/Dockerfile"
+86: add_bind_path CHANNELS_WEB_CONFIG_JS_WINDOWS "$ROOT_DIR/web-app/docker/40-config-js.sh"
+87: add_bind_path CHANNELS_WEB_NGINX_TEMPLATE_WINDOWS "$ROOT_DIR/web-app/nginx/default.conf.template"
+88: trap 'rm -f "$temp_env"' EXIT
+89: COMPOSE=(docker.exe compose --project-name leadshug_channels_validation \
+90:   --env-file "$(wslpath -w "$ROOT_DIR/.env.example")" --env-file "$(wslpath -w "$temp_env")" \
+91:   -f "$(wslpath -w "$ROOT_DIR/docker-compose.yml")" -f "$(wslpath -w "$ROOT_DIR/docker-compose.channels.yml")" --profile validation)
+92: 
+93: resource_conflicts=()
+94: while IFS= read -r resource_name; do
+95:   if [[ "$resource_name" == leadshug_channels_validation_* || "$resource_name" == leadshug_channels_validation-* ]]; then
+96:     resource_conflicts+=("container:$resource_name")
+97:   fi
+98: done < <(docker.exe ps -a --format '{{.Names}}')
+99: while IFS= read -r resource_name; do
+100:   [[ "$resource_name" == leadshug_channels_validation_* ]] && resource_conflicts+=("volume:$resource_name")
+101: done < <(docker.exe volume ls --format '{{.Name}}')
+102: while IFS= read -r resource_name; do
+103:   [[ "$resource_name" == leadshug_channels_validation_* ]] && resource_conflicts+=("network:$resource_name")
+104: done < <(docker.exe network ls --format '{{.Name}}')
+105: if ((${#resource_conflicts[@]})); then
+106:   echo 'Refusing any pre-existing validation namespace resource, regardless of labels.' >&2
+107:   printf '%s\n' "${resource_conflicts[@]}" >&2
+108:   exit 1
+109: fi
+110: 
+111: "${COMPOSE[@]}" config --quiet
+112: if [[ "${CHANNELS_CONFIG_ONLY:-0}" == 1 ]]; then
+113:   echo 'Validation Compose config is valid; no resources were created.'
+114:   exit 0
+115: fi
+116: started=0
+117: cleanup() {
+118:   if [[ "$started" == 1 ]]; then
+119:     "${COMPOSE[@]}" down --volumes --remove-orphans >/dev/null 2>&1 || true
+120:   fi
+121: }
+122: trap 'cleanup; rm -f "$temp_env"' EXIT
+123: started=1
+124: 
+125: RUNNER_SCRIPT='set -eu
+126: target="$1"
+127: printf "Runner Node: "
+128: node --version
+129: apt-get update -qq
+130: DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends openssl libssl3 ca-certificates bash git >/dev/null
+131: rm -rf /var/lib/apt/lists/*
+132: printf "OpenSSL: "
+133: openssl version
+134: ldconfig -p | grep -q "libssl.so.3"
+135: test -f /workspace/api-app/.env
+136: cmp -s /workspace/api-app/.env /workspace/api-app/.env.example || { echo "API dotenv mask mismatch." >&2; exit 1; }
+137: for private_path in /workspace/.env /workspace/.env.testing; do
+138:   test -f "$private_path"
+139:   cmp -s "$private_path" /workspace/.env.example || { echo "Root dotenv mask mismatch." >&2; exit 1; }
+140: done
+141: bound_sha="$(sha256sum /workspace/api-app/package.json | cut -d " " -f 1)"
+142: test "$bound_sha" = "$CHANNELS_EXPECTED_API_PACKAGE_SHA256" || { echo "Source bind checksum mismatch before npm." >&2; exit 1; }
+143: bound_web_sha="$(sha256sum /workspace/web-app/package.json | cut -d " " -f 1)"
+144: test "$bound_web_sha" = "$CHANNELS_EXPECTED_WEB_PACKAGE_SHA256" || { echo "Web source bind checksum mismatch before npm." >&2; exit 1; }
+145: test "$(git -c safe.directory=/workspace -C /workspace rev-parse --show-toplevel)" = /workspace
+146: echo "Principal API/Web source binds and API/root dotenv masks verified before npm."
+147: cd /workspace/api-app
+148: npm ci
+149: prisma_info="$(npx prisma -v)"
+150: printf "%s\n" "$prisma_info"
+151: printf "%s\n" "$prisma_info" | grep -q "debian-openssl-3.0.x" || { echo "Prisma did not detect the supported OpenSSL 3 engine." >&2; exit 1; }
+152: npm run prisma:generate
+153: cd /workspace/web-app
+154: npm ci
+155: case "$target" in
+156:   api|all)
+157:     cd /workspace/api-app
+158:     npm run prisma:migrate
+159:     npx prisma migrate status
+160:     npm run lint
+161:     npm run build
+162:     npm test
+163:     npm run test:e2e
+164:     ;;
+165: esac
+166: case "$target" in
+167:   web|all)
+168:     cd /workspace/web-app
+169:     npm run build
+170:     npm test
+171:     ;;
+172: esac
+173: case "$target" in
+174:   browser|all)
+175:     cd /workspace/api-app
+176:     if [ "$target" = browser ]; then
+177:       echo "Building API before starting browser fixture services."
+178:       npm run build
+179:     fi
+180:     npm run prisma:migrate
+181:     npx prisma migrate status
+182:     cd /workspace/web-app
+183:     npx playwright install --with-deps chromium
+184:     npm run test:tela -- --trace off
+185:     ;;
+186: esac'
+187: 
+188: "${COMPOSE[@]}" run --rm -e CHANNELS_EXPECTED_API_PACKAGE_SHA256="$CHANNELS_EXPECTED_API_PACKAGE_SHA256" validation-runner sh -ec "$RUNNER_SCRIPT" channels-validation-runner "$TARGET"
+```
+
+
+## Source foundation_documentation/todos/active/features/TODO-leadshug-channel-abstraction.md
+
+Raw SHA256 `33453879801037619b8b610b329c0d3e195ad68ca36d139848805bcab61f5819`; bytes93779.
+
+```
+1: # Tactical TODO — ST-CON-06
+2: 
+3: ## Title
+4: LeadsHug — ST-CON-06: Channel abstrato extensível e cutover do envio comum
+5: 
+6: ## Artifact Identity
+7: - **Artifact type:** tactical_execution_contract
+8: - **Status:** NotStarted
+9: - **Version:** 1.2
+10: - **Created:** 2026-10-20
+11: - **Template provenance:** copied delphi-ai/templates/todo_template.md before population.
+12: 
+13: ## Context
+14: Usuário confirmou Channel abstrato/concretos e extensibilidade para Instagram, Facebook/Messenger, Telegram e outros; em2026-10-20 autorizou avançar ao contrato. Este TODO entrega o cutover do envio textual comum atual, não novos provedores reais. MetaClient/EvolutionClient já são interfaces injetadas, mas Conversa/Typebot conhecem ambos e seus parâmetros. O parecer de enquadramento identificou outcomes falsamente tratados como recusa, escopo/versionamento insuficientemente expresso e fallback de canal divergente da política. Decisões abaixo concretizam esses pontos antes da revisão tática. O parecer anterior não satisfaz os gates deste contrato e concordância com conceito não é APROVADO específico.
+15: 
+16: ## Framing Source & Story Slice
+17: - **Feature brief:** foundation_documentation/artifacts/feature-briefs/leadshug-channel-abstraction-20261020.md
+18: - **Primary story ID:** ST-CON-06
+19: - **Why this is the right current slice:** um owner de transporte comum para todos os senders existentes, antes de modelos ST-CON-05 e primeiro envio ST-CON-04.
+20: - **Direct-to-TODO rationale (required when `Feature brief = direct-to-todo`):** n/a; brief e parecer prévios publicados.
+21: 
+22: ## Contract Boundary
+23: - This TODO defines **WHAT** must be delivered and what counts as done.
+24: - `Assumptions Preview` and `Execution Plan` below define **HOW** Delphi currently intends to deliver this contract.
+25: - This TODO is **bounded but elastic**: Delphi may absorb local discoveries only while they remain inside the same primary objective and the same main approval/review/promotion conversation. Secondary modules may still be touched when they are subordinate to that same slice.
+26: - If any assumption or plan step changes `Scope`, `Out of Scope`, `Definition of Done`, required validation semantics, public contract, or frozen decisions, update the TODO contract first and request renewed approval before execution continues.
+27: - If the intended path explicitly authorizes a compatibility shim, fallback bridge, dual-read/dual-write period, or another non-canonical temporary construct, record that authorization in the TODO with exact scope, rationale, and removal/closeout condition. Reviewers must be able to distinguish an approved temporary exception from accidental workaround drift.
+28: 
+29: ## Implementation Intent
+30: - **Current delivery:** contrato abstrato de envio textual, resolução scoped, implementações atuais e orquestração compartilhada, com política/outcomes/consumers/testes coerentes.
+31: - **Planned next steps:** reconvergir ST-CON-05 para capacidades de modelos e ST-CON-04 para primeiro envio/intent; redes adicionais em histórias próprias.
+32: - **Anticipatory implementation authorized now:** somente o ponto de extensão e fake de teste exigidos no D01/08; nenhuma implementação/capacidade real futura.
+33: - **Rationale:** dependências apontam ao domínio abstrato; protocolo e segredo ficam nos adapters, aceitação/política no domínio.
+34: 
+35: ## Delivery Status Canon (Required)
+36: - **Current delivery stage:** Pending
+37: - **Qualifiers:** none
+38: - **Next exact step:** Concluir ST06-R02 com barreira causal do response.text/handler e prova real por omissão/restauração do guard, obter all da fonte final; depois auditoria dedicada Performance/TQA/Cutover, PCV, ativação local/INOUT e final review. All65587 passou194/309/29/50, mas não fecha a finding de proteção do teste.
+39: 
+40: ## Active Work State (Required While TODO Remains In `active/`)
+41: - **Work state:** implementation
+42: - **Why this state now:** APROVADO específico recebido e binding recarregado; seguir Ordered Steps com executor único e autoridade normal go antes de código.
+43: - **Exit condition:** implementação aderente com all/assurance/pcv e prova real pós-publicação local; nenhum bloqueador de review aberto antes de entrega.
+44: 
+45: ## Scope
+46: - [ ] SCOPE-01 — Channel/ChannelResolver abstratos de domínio, registro explícito e instâncias por operação, concretos oficial/não oficial e extensão verificada com fake não WhatsApp.
+47: - [ ] SCOPE-02 — Migrar envios de Conversa BFF/API pública e respostas Typebot para a mesma orquestração, mantendo autenticações próprias, política e MessageAcceptanceService único.
+48: - [ ] SCOPE-03 — Contexto autorizado e owner BU/canal, segredos privados, credencial/identidade correntes e fences explícitos; nenhuma troca silenciosa do canal selecionado.
+49: - [ ] SCOPE-04 — Outcomes tipados verdadeiros, projeção pública explícita de erro/disponibilidade e UI honesta; sem retry externo automático ou garantia de exactly-once.
+50: - [ ] SCOPE-05 — Runner de inventário positivo antes de testes, harness durável de imports/contrato/PG/Playwright, regressões completas e prova real assistida nos dois vínculos próprios; consolidação/revisões de entrega.
+51: 
+52: ## Provisional Notes (Required if `Qualifiers` includes `Provisional`)
+53: n/a; sem entrega de produto reivindicada.
+54: 
+55: ## Blocker Notes (Required if `Qualifiers` includes `Blocked`)
+56: Planejamento não bloqueado; readiness de runtime/túnel/aparelhos revalidada depois da aprovação. Ausência de template aprovado não bloqueia esta história textual em janela válida.
+57: 
+58: ## Execution Lane Tracking (Required)
+59: - **Local implementation branches:** root/api/web:feature/number-onboarding, confirmar antes de executor; Foundation:main.
+60: - **Promotion lane path:** local feature → dev → stage → main; nenhum push/deploy de produto nesta autorização local proposta.
+61: - **Lane-promoted threshold for this TODO:** dev, fora do escopo atual.
+62: - **Production-ready threshold for this TODO:** main e gates próprios, sem claim atual.
+63: 
+64: ## Promotion Evidence (Required Before `🟣 Lane-Promoted` / `✅ Production-Ready`)
+65: n/a; só Foundation main é autoridade documental autônoma nesta preparação.
+66: 
+67: ## Out of Scope
+68: - [ ] Instagram/Messenger/Telegram reais, alteração de identidade/BU/contato/schema ou enums de persistência para novas redes; fake não prova integração real.
+69: - [ ] Criação/envio de templates, Nova conversa manual/novo intent, importação, campanhas, anexos ou novos fluxos Typebot; ST-CON-05/04 permanecem separados.
+70: - [ ] Reescrever OAuth/QR/cadastro/lifecycle, rotacionar credenciais, desconectar vínculos ou criar sondagem externa por envio.
+71: - [ ] Worker/outbox/fila, durable intent/exactly-once externo, retry automático de POST, heurística para unir eco sem ID.
+72: - [ ] Delphi, worktrees/cópias, gitlinks/.gitmodules, deploy/push de produto, leitura de .env/.env.testing e qualquer read/list/stat/hash/traversal/mount/stage api-app/.local-files.
+73: 
+74: ## Diff Expectation Contract
+75: Required before delivery. Heading normalized for canonical parser; contract obligation unchanged.
+76: - **Contract status:** required
+77: - **Policy:** strict; forbidden/unclassified blocks delivery
+78: - **User validation:** required on deviation
+79: - **Comparison mode:** working_tree
+80: 
+81: ### Repository Baselines
+82: | Repository | Path | Baseline ref | Comparison mode |
+83: | --- | --- | --- | --- |
+84: | root | . | 80e3940126f22a941f90dba4f5e801b6c0eb2f58 | working_tree |
+85: | api | api-app | db5a86758a165fac8a1ab587599c37b17890530c | working_tree |
+86: | web | web-app | 74b9d4b714044829796f875d00553f077c1c329d | working_tree |
+87: | foundation | foundation_documentation | 82fa66b33b81b31024dc8cebef9e72e9253964a7 | working_tree |
+88: 
+89: ### Expected Changed Paths
+90: | Repository | Path glob | Change types | Reason |
+91: | --- | --- | --- | --- |
+92: | api | src/domain/channels/transport/** | any | ports/resolver/orquestração/registro e harness |
+93: | api | src/integrations/channels/** | any | concretos e projeções privadas |
+94: | api | src/domain/channels/channel-credential-resolver.ts | M | contexto/versionamento privado, send protegido |
+95: | api | src/domain/inbox/outbound*.ts | any | política/orquestração sem ciclo DI com Conversations |
+96: | api | src/domain/inbox/conversations.service.ts | M | seleção/política e consumo abstrato |
+97: | api | src/domain/inbox/incoming.service.ts | M | Typebot usa saída comum |
+98: | api | src/integrations/meta/meta.client.ts | M | texto com resultado tipado; cadastro preservado |
+99: | api | src/integrations/meta/*.spec.ts | any | wire/erro real do adapter |
+100: | api | src/integrations/evolution/evolution.client.ts | M | texto com resultado tipado |
+101: | api | src/integrations/evolution/*.spec.ts | any | wire/classificação conservadora |
+102: | api | src/surfaces/bff/conversations.controller.ts | M | contexto autorizado e DTO disponibilidade |
+103: | api | src/surfaces/public/conversations.controller.ts | M | contexto API key e projeção compatível |
+104: | api | src/surfaces/bff/bff.module.ts | M | DI da composição única |
+105: | api | src/surfaces/public/public.module.ts | M | DI preservando auth |
+106: | api | src/surfaces/webhooks/webhooks.module.ts | M | DI Typebot/ingress |
+107: | api | test/channel-transport* | A, ?? | PG/contrato/corridas |
+108: | api | test/helpers.ts | M | fakes/DI de contrato |
+109: | api | test/timeline-fixtures.cjs | M | provider controlado de browser |
+110: | api | test/browser-server.cjs | M | bootstrap real |
+111: | api | test/*.e2e-spec.ts | M | suites consumidoras da interface alterada, sem afrouxar assertivas |
+112: | api | src/domain/inbox/*.spec.ts | M | consumo abstrato e regressões |
+113: | web | src/api.ts | M | DTO aditivo disponibilidade |
+114: | web | src/api.spec.ts | M | companion de metadados seguros D10; admissão humana2026-10-20 |
+115: | web | src/telas/Inbox.tsx | M | composer indisponível/motivo e erro |
+116: | web | src/telas/Inbox*.test.tsx | any | render/estado |
+117: | web | e2e/channel-transport* | A, ?? | mutation BFF real |
+118: | web | e2e/number-onboarding-freshness.ts | M | manifesto se afetado |
+119: | web | e2e/timeline-freshness.ts | M | companion chamado antes do manifesto; pathspec positivo antes de discovery; admissão humana2026-10-20 |
+120: | root | scripts/test-channels-local.sh | M | inventário positivo seguro antes de testes |
+121: | foundation | todos/active/features/TODO-leadshug-channel-abstraction.md | A, M | governança/evidências |
+122: | foundation | todos/completed/features/TODO-leadshug-channel-abstraction.md | A | closeout após gates |
+123: | foundation | todos/active/features/TODO-leadshug-official-template-authoring.md | M | handoff sem execução |
+124: | foundation | todos/active/features/TODO-leadshug-start-conversation-by-contact.md | M | handoff sem execução |
+125: | foundation | artifacts/reviews/leadshug-channel-abstraction-20261020/** | any | reviews/evidências |
+126: | foundation | artifacts/feature-briefs/leadshug-channel-abstraction-20261020.md | M | link do contrato |
+127: | foundation | artifacts/feature-briefs/leadshug-channel-readiness-and-history-20261015.md | M | sequência |
+128: | foundation | backlog/README.md | M | próximo gate |
+129: | foundation | artifacts/dependency-readiness.md | M | readiness observada |
+130: | foundation | modules/integrations-and-channels.md | M | ports/outcomes/cutover após entrega |
+131: | foundation | modules/inbox-and-conversations.md | M | política/consumers após entrega |
+132: 
+133: ### Not Expected Changed Paths
+134: | Repository | Path glob | Change types | Reason |
+135: | --- | --- | --- | --- |
+136: | api | .local-files/** | any | privado, nem percorrer |
+137: | api | .env* | any | segredo/config intocados |
+138: | api | prisma/** | any | sem mudança de persistência/migration |
+139: | root | .env* | any | privado |
+140: | root | .gitmodules | any | pipeline-owned |
+141: | root | api-app | any | gitlink pipeline-owned |
+142: | root | web-app | any | gitlink pipeline-owned |
+143: | root | delphi-ai | any | sem self-improvement |
+144: | web | dist/** | any | gerado, não fonte |
+145: 
+146: ### Diff Deviation Analysis (Required Only When the Guard Returns `no-go`)
+147: Guard público preliminar executado com fonte canônica inalterada e invocações Git limitadas ANTES da descoberta por pathspecs positivos (API/Web/root); não é guard final de entrega ou prova dos paths excluídos. Primeiro título com sufixo não foi reconhecido pelo parser; normalizado sem alterar obrigação. A segunda execução encontrou 88 mudanças públicas,85 esperadas e3 diferenças mecânicas de tipo, zero path proibido ou novo path fora do escopo.
+148: 
+149: | Finding | Classification | Resolution / authority |
+150: | --- | --- | --- |
+151: | api:test/channel-transport.e2e-spec.ts aparece ?? e já era adição A aprovada | noise; by-design/no-action in product | Comparação working_tree inclui arquivo ainda não staged; adicionar ?? ao mesmo glob já aprovado representa a mesma adição, não amplia paths nem produto; não stagear fonte por conveniência do guard |
+152: | web:e2e/channel-transport.spec.ts aparece ?? e já era adição A aprovada | noise; by-design/no-action in product | Mesmo ajuste mecânico A,?? no mesmo glob aprovado, sem mudar cobertura ou permissão funcional |
+153: | Foundation TODO aparece A contra baseline82fa66b e constava só M | noise; by-design/no-action in product | O contrato foi criado depois da baseline, portanto A,M expressa a criação/modificação documental já autorizada; nenhum novo artefato/escopo |
+154: 
+155: Evidência histórica: evidence/public-diff-working-tree-type-no-go.json. Ajuste de representação Git não muda Scope/DoD/decisões/risco/paths e não exige nova aprovação material; as duas admissões de paths reais permanecem validadas separadamente pelo usuário. Descoberta de path real não aprovado continua bloqueada e exige validação humana. Rerun preliminar e final ainda necessários.
+156: 
+157: ## Bounded But Elastic Guardrails
+158: - **May stay inside this TODO:** DI, DTO/fixture/componente subordinados ao mesmo envio comum e preservação de seus invariantes.
+159: - **Must update or split the TODO:** schema/novo provedor/capacidade real, template/intent novo, mudança de política fora das decisões e novos endpoints.
+160: 
+161: ## Definition of Done
+162: - [ ] DOD-01 — Channel e ChannelResolver são abstrações de domínio, com concretos atuais registrados e todos os senders comuns sem imports/dispatch por provider; fake de destinatário opaco prova extensão sem novo canal real.
+163: - [ ] DOD-02 — Resolução usa contexto server-side autorizado ou ingresso verificado, confere BU/canal/identidade e readiness, mantém segredo privado/contexto imutável e não vaza entre envios concorrentes.
+164: - [ ] DOD-03 — Seleção humana/pública segue última origem determinística ou único vínculo; bot fica no ingresso verificado; policy/janela comuns, ausência/ambiguidade sem fallback e disponibilidade/UI honestas preservam rascunho.
+165: - [ ] DOD-04 — Outcomes ACCEPTED/BLOCKED/REJECTED/UNKNOWN e projeções de erro obedecem D04/05; sem ID confirmado não há sucesso, sem retry de POST ou rejeição falsa por timeout.
+166: - [ ] DOD-05 — MessageAcceptanceService continua owner único e sender/echo conservam ID/autor/unread; finalização pública/humana não rouba claim e bot conserva fila/owner; falhas locais pós-ACK e unknown estão explícitas.
+167: - [ ] DOD-06 — Runner público corrigido antes de qualquer teste; harness de dependências/contrato, PG e CI-equivalent all/Playwright reais passam com fonte/bundle frescos e regressões de cadastro/API/bot.
+168: - [ ] DOD-07 — Operador confirma nova IN e resposta OUT em cada vínculo próprio oficial/não oficial após publicação local autorizada; prova observada não promete disponibilidade contínua nem nova rede.
+169: - [ ] DOD-08 — Decisões consolidadas, arquitetura/critique e assurance/cutover/security/pcv/TQA/final/debt/diff/authority/completion/closeout satisfeitos; consumidores05/04 recebem handoff, sem claim de produção.
+170: 
+171: ## Validation Steps
+172: - [ ] VAL-01 — Executar bash scripts/test-channels-local.sh all após boundary positivo, sem subset como aceite, com API/PG reais e bundle servido fresco.
+173: - [ ] VAL-02 — Exercitar contratos raw HTTP e compartilhados, fake Channel não WhatsApp, autorização BFF/API key/bot e barreiras PG de BUs/credencial/identidade/claim/eco.
+174: - [ ] VAL-03 — Executar web-app/e2e/channel-transport.spec.ts pelo runner real: envio por ambos, indisponibilidade/ambiguidade, unknown e rascunho, resposta atrasada em troca de BU/conversa.
+175: - [ ] VAL-04 — Revalidada readiness local, operador faz IN/OUT reais nos dois vínculos reservados, sem tokens em artifacts e sem fixture como substituto.
+176: - [ ] VAL-05 — Rodar revisões/pcv/cutover/diff público/authority/completion/closeout e consolidar módulos antes de encerrar;05/04 apenas rebase/handoff.
+177: 
+178: ## Completion Evidence Matrix (Required Before Delivery Claim)
+179: | Criterion ID | Source Section | Criterion | Evidence Type | Evidence Artifact / Command | Runtime Target | Status | Notes |
+180: | --- | --- | --- | --- | --- | --- | --- | --- |
+181: | DOD-01 | Definition of Done | DOD-01 — Channel e ChannelResolver são abstrações de domínio, com concretos atuais registrados e todos os senders comuns sem imports/dispatch por provider; fake de destinatário opaco prova extensão sem novo canal real. | test/runtime/review | test/channel-transport.e2e-spec.ts; e2e/channel-transport.spec.ts; all + gates VAL05; prova real para DOD07/VAL04 | namespace descartável; recursos próprios só assistidos | planned | Nenhum produto/teste/runtime nesta preparação. |
+182: | DOD-02 | Definition of Done | DOD-02 — Resolução usa contexto server-side autorizado ou ingresso verificado, confere BU/canal/identidade e readiness, mantém segredo privado/contexto imutável e não vaza entre envios concorrentes. | test/runtime/review | test/channel-transport.e2e-spec.ts; e2e/channel-transport.spec.ts; all + gates VAL05; prova real para DOD07/VAL04 | namespace descartável; recursos próprios só assistidos | planned | Nenhum produto/teste/runtime nesta preparação. |
+183: | DOD-03 | Definition of Done | DOD-03 — Seleção humana/pública segue última origem determinística ou único vínculo; bot fica no ingresso verificado; policy/janela comuns, ausência/ambiguidade sem fallback e disponibilidade/UI honestas preservam rascunho. | test/runtime/review | test/channel-transport.e2e-spec.ts; e2e/channel-transport.spec.ts; all + gates VAL05; prova real para DOD07/VAL04 | namespace descartável; recursos próprios só assistidos | planned | Nenhum produto/teste/runtime nesta preparação. |
+184: | DOD-04 | Definition of Done | DOD-04 — Outcomes ACCEPTED/BLOCKED/REJECTED/UNKNOWN e projeções de erro obedecem D04/05; sem ID confirmado não há sucesso, sem retry de POST ou rejeição falsa por timeout. | test/runtime/review | test/channel-transport.e2e-spec.ts; e2e/channel-transport.spec.ts; all + gates VAL05; prova real para DOD07/VAL04 | namespace descartável; recursos próprios só assistidos | planned | Nenhum produto/teste/runtime nesta preparação. |
+185: | DOD-05 | Definition of Done | DOD-05 — MessageAcceptanceService continua owner único e sender/echo conservam ID/autor/unread; finalização pública/humana não rouba claim e bot conserva fila/owner; falhas locais pós-ACK e unknown estão explícitas. | test/runtime/review | test/channel-transport.e2e-spec.ts; e2e/channel-transport.spec.ts; all + gates VAL05; prova real para DOD07/VAL04 | namespace descartável; recursos próprios só assistidos | planned | Nenhum produto/teste/runtime nesta preparação. |
+186: | DOD-06 | Definition of Done | DOD-06 — Runner público corrigido antes de qualquer teste; harness de dependências/contrato, PG e CI-equivalent all/Playwright reais passam com fonte/bundle frescos e regressões de cadastro/API/bot. | test/runtime/review | test/channel-transport.e2e-spec.ts; e2e/channel-transport.spec.ts; all + gates VAL05; prova real para DOD07/VAL04 | namespace descartável; recursos próprios só assistidos | planned | Nenhum produto/teste/runtime nesta preparação. |
+187: | DOD-07 | Definition of Done | DOD-07 — Operador confirma nova IN e resposta OUT em cada vínculo próprio oficial/não oficial após publicação local autorizada; prova observada não promete disponibilidade contínua nem nova rede. | test/runtime/review | test/channel-transport.e2e-spec.ts; e2e/channel-transport.spec.ts; all + gates VAL05; prova real para DOD07/VAL04 | namespace descartável; recursos próprios só assistidos | planned | Nenhum produto/teste/runtime nesta preparação. |
+188: | DOD-08 | Definition of Done | DOD-08 — Decisões consolidadas, arquitetura/critique e assurance/cutover/security/pcv/TQA/final/debt/diff/authority/completion/closeout satisfeitos; consumidores05/04 recebem handoff, sem claim de produção. | test/runtime/review | test/channel-transport.e2e-spec.ts; e2e/channel-transport.spec.ts; all + gates VAL05; prova real para DOD07/VAL04 | namespace descartável; recursos próprios só assistidos | planned | Nenhum produto/teste/runtime nesta preparação. |
+189: | VAL-01 | Validation Steps | VAL-01 — Executar bash scripts/test-channels-local.sh all após boundary positivo, sem subset como aceite, com API/PG reais e bundle servido fresco. | test/runtime/review | test/channel-transport.e2e-spec.ts; e2e/channel-transport.spec.ts; all + gates VAL05; prova real para DOD07/VAL04 | namespace descartável; recursos próprios só assistidos | planned | Nenhum produto/teste/runtime nesta preparação. |
+190: | VAL-02 | Validation Steps | VAL-02 — Exercitar contratos raw HTTP e compartilhados, fake Channel não WhatsApp, autorização BFF/API key/bot e barreiras PG de BUs/credencial/identidade/claim/eco. | test/runtime/review | test/channel-transport.e2e-spec.ts; e2e/channel-transport.spec.ts; all + gates VAL05; prova real para DOD07/VAL04 | namespace descartável; recursos próprios só assistidos | planned | Nenhum produto/teste/runtime nesta preparação. |
+191: | VAL-03 | Validation Steps | VAL-03 — Executar web-app/e2e/channel-transport.spec.ts pelo runner real: envio por ambos, indisponibilidade/ambiguidade, unknown e rascunho, resposta atrasada em troca de BU/conversa. | test/runtime/review | test/channel-transport.e2e-spec.ts; e2e/channel-transport.spec.ts; all + gates VAL05; prova real para DOD07/VAL04 | namespace descartável; recursos próprios só assistidos | planned | Nenhum produto/teste/runtime nesta preparação. |
+192: | VAL-04 | Validation Steps | VAL-04 — Revalidada readiness local, operador faz IN/OUT reais nos dois vínculos reservados, sem tokens em artifacts e sem fixture como substituto. | test/runtime/review | test/channel-transport.e2e-spec.ts; e2e/channel-transport.spec.ts; all + gates VAL05; prova real para DOD07/VAL04 | namespace descartável; recursos próprios só assistidos | planned | Nenhum produto/teste/runtime nesta preparação. |
+193: | VAL-05 | Validation Steps | VAL-05 — Rodar revisões/pcv/cutover/diff público/authority/completion/closeout e consolidar módulos antes de encerrar;05/04 apenas rebase/handoff. | test/runtime/review | test/channel-transport.e2e-spec.ts; e2e/channel-transport.spec.ts; all + gates VAL05; prova real para DOD07/VAL04 | namespace descartável; recursos próprios só assistidos | planned | Nenhum produto/teste/runtime nesta preparação. |
+194: 
+195: ## External Dependency Readiness (Required When External Systems Matter)
+196: | Dependency | Why It Matters | Status | Last Verified | Verification Method | Adjustment / Workaround |
+197: | --- | --- | --- | --- | --- | --- |
+198: | runner Docker próprio | regressões completas | unknown | fonte2026-10-20 | find amplo confirmado, não executado | corrigir antes de RED; Node22/PG16/namespace validation |
+199: | vínculos de teste oficial/QR | prova real de resposta | unknown | CP108 histórico2026-10-19 | prova passada não é saúde atual | revalidar runtime/túnel/operador depois de aprovação |
+200: | semântica de erros de provider | evitar falsa recusa | partial | fontes locais2026-10-20 | adapter atual colapsa falhas | classifier conservador D04, sem inferir de string |
+201: | redes futuras | extensibilidade | unknown | nenhuma integração | só fake independente | contratos próprios de identidade/capacidades, sem alegar funcionamento |
+202: 
+203: ## Profile Scope & Handoffs (Required Before `APROVADO`)
+204: - **Primary execution profile:** operational-coder
+205: - **Active technical scope:** nestjs,react,vite,postgresql,prisma,docker
+206: - **Expected supporting profiles:** strategic-cto,operational-devops,assurance-tester-quality,assurance-security-adversarial
+207: - **Scope-check command:** python3 delphi-ai/tools/profile_scope_check.py --profile strategic-cto foundation_documentation/todos/active/features/TODO-leadshug-channel-abstraction.md
+208: - **Gate 0:** Genesis rejeitado; contexto canônico existente. Genesis rejeitado pelo canon existente; ativo operational-coder com handoffs DevOps/assurance planejados.
+209: 
+210: ### Handoff Log (Update when execution crosses profile boundaries)
+211: | From Profile | To Profile | Why the Handoff Exists | Touched Surfaces | Status / Evidence |
+212: | --- | --- | --- | --- | --- |
+213: | strategic-cto | operational-coder | APROVADO explícito recebido2026-10-20 | API/Web/runner/harness | active; binding reload + authority-execution.json |
+214: | operational-coder | operational-devops | readiness/publicação local | imagem própria e recursos de teste | planned |
+215: | operational-coder | assurance-tester-quality | aderência/cutover/TQA/final | pacote público bounded | planned |
+216: | operational-coder | assurance-security-adversarial | isolamento/segredos/DI | resolução e surfaces | planned |
+217: 
+218: ## Complexity
+219: - **Level (`small|medium|big`):** big
+220: - **Checkpoint policy:** section-by-section
+221: - **Why this level:** cutover cross-stack de todos senders, auth/identidade e contratos de resultado externo, com mudanças funcionais expressas e regressão real.
+222: 
+223: ## Canonical Module Anchors (Required Before APROVADO)
+224: - **Primary module doc:** foundation_documentation/modules/integrations-and-channels.md
+225: - **Secondary module docs (if any):** foundation_documentation/modules/inbox-and-conversations.md
+226: - **Planned decision promotion targets (module sections):** Integrations: Channel/resolução/DI/outcomes/extensão; Inbox: seleção/disponibilidade/saída comum e limites.
+227: - **Module decision consolidation targets (required):** mesmos targets com provenance D01..10, retirar descrição de dispatch direto; invariantes de BU/aceitação/segredo preservados.
+228: 
+229: ## Decision Pending (Resolve Before Freeze)
+230: Nenhuma decisão de produto aberta. Assinaturas e semântica material congeladas abaixo para challenge tático; readiness externa continua desconhecida.
+231: 
+232: ## Decisions (Resolved Before Freeze)
+233: - [x] D-01 — Channel é abstract class no domínio, sendMessage recebe {kind:text,recipientRef:string,text:string} e retorna ChannelSendResult discriminado. recipientRef é opaco ao port; sem E164/WABA/phoneNumberId/instância/QR como contrato universal. Limites4096 atuais permanecem nos consumers atuais, não são requisito universal da abstração. ChannelResolver abstrato retorna implementação registrada; seleção por registro explícito, sem if/provider nos senders. Concretos atuais usam clients HTTP; nenhum new no domínio, global useClass único, ModuleRef/service locator ou singleton mutável de BU/token.
+234: - [x] D-02 — Resolução recebe referência de conversa/BU/canal carregada server-side após autorização de sessão ou API key OU referência do ingresso já verificado para Typebot; não aceita declaração de provider/owner/credencial do body. Validar owner BU/Mantenedora do vínculo e identidade corrente, ownNumberVerified/verifiedEpoch/readiness/receipt e envelope atuais usando o owner de credenciais existente. Expor somente binding/proveniência safe para aceitação; tokens/IDs de protocolo ficam privados ao concreto. Resolver atual não autoriza ator e não retorna versão: adequação explícita, sem fingir garantia já existente. Auth por sessão/API key/bot mantém fontes diferentes, nunca exigir usuário humano no bot ou tomar disponibilidade como grant.
+235: - [x] D-03 — Binding de operação captura channelId/BU/identidade/generation/epoch e activeCredentialVersion oficial, imutáveis e privados no dispatch. Revalidar owner/identidade/readiness/versão imediatamente antes do único POST por leitura/CAS local curta, sem HTTP em tx. Contexto alterado antes do dispatch bloqueia409 CHANNEL_CONTEXT_CHANGED sem rede. Depois do POST não há rollback externo: somente mudança de credentialVersion com identidade/generation/epoch TODOS inalterados permite aceitar o recibo capturado. REAUTORIZAR real incrementa generation, mesmo no mesmo recurso; não substituir a generation antiga. Mudança de identidade/generation/epoch depois do efeito não rebind/migra conteúdo:409 CHANNEL_CONTEXT_CHANGED; ACK conhecido conserva outcome ACCEPTED_LOCAL_INCOMPLETE e localMessageState RECORDED ou UNCONFIRMED conforme D05; sem ID, UNKNOWN. MessageAcceptance conserva seu fence. Testar REAUTORIZAR real concorrente e version-only separadamente. Janela entre leitura/CAS local e rede existe, sem fence atômico externo ou nova operação durável.
+236: - [x] D-04 — ChannelSendResult: ACCEPTED exige ID externo string não vazia de resposta válida, não significa entregue ao aparelho; BLOCKED é falha local de política/trust/config antes de HTTP; REJECTED exige recusa síncrona comprovada; UNKNOWN é padrão após POST inconclusivo, com evidence ACK_WITHOUT_ID ou TRANSPORT_UNCONFIRMED. Meta REJECTED apenas HTTP400/401/403 + error Graph válido/sem sucesso ou ID contraditório + is_transient não true + code10/100/190; outros códigos/non2xx/429/5xx/timeout/redirect/malformed permanecem UNKNOWN. Evolution pós-dispatch falha é UNKNOWN nesta versão; não inventar classifier por texto/status sem evidência de recusa. Raw clients têm resultado tipado para texto; métodos de cadastro conservam contratos/erros. Uma invocação externa, timeout10s, sem retries/sondagens/grant HTTP extras por envio.
+237: - [x] D-05 — Projeção pública de REJECTED conserva400 META_RECUSOU ou EVOLUTION_RECUSOU por mapper de composição, sem branch no negócio; texto fixo O canal recusou o envio e outcome REJECTED aditivo. UNKNOWN ACK_WITHOUT_ID tenta recordAmbiguousOutbound uma vez por execução: somente commit confirmado permite409 EXTERNAL_MESSAGE_ID_MISSING/outcome AMBIGUOUS_SEND_RECORDED, diagnóstico FALHOU/null-ID, nunca Message ENVIADA. Precedência: mudança detectada de identidade/generation/epoch após dispatch sem ID, inclusive antes ou durante o fence de recordAmbiguousOutbound, devolve409 CHANNEL_CONTEXT_CHANGED/outcome UNKNOWN; não rebind nem grava diagnóstico sob contexto novo. Somente OUTRAS falhas/commit incerto do diagnóstico devolvem503 OUTBOUND_LOCAL_INCOMPLETE/outcome UNKNOWN/evidence ACK_WITHOUT_ID/diagnosticPersistence UNCONFIRMED, sem afirmar diagnóstico gravado; no409 só declarar diagnóstico gravado com evidência positiva do commit capturado, senão UNCONFIRMED. UNKNOWN TRANSPORT_UNCONFIRMED conserva ausência de Message autoritativa dos throws atuais e400/código legado projetado, mas texto fixo Resultado do envio não confirmado; confira a conversa antes de tentar novamente e outcome UNKNOWN aditivo. Código legado não prova recusa. ACK externo válido seguido de QUALQUER falha local de aceitação/reconciliação/finalização conserva outcome ACCEPTED_LOCAL_INCOMPLETE;409 CHANNEL_CONTEXT_CHANGED se fence alterado, senão503 OUTBOUND_LOCAL_INCOMPLETE. Texto fixo O canal aceitou o envio, mas a conclusão local não foi confirmada; confira a conversa antes de tentar novamente. localMessageState RECORDED somente com commit de Message confirmado ou readback positivo pelo owner/chave/proveniência capturados; nos demais casos UNCONFIRMED, inclusive rollback local confirmado pois eco pode ter gravado em paralelo. No máximo um readback local bounded, sem rebind ou nova chamada externa. Falha após Message commit mantém RECORDED mesmo se atribuição/status falhar; nenhum erro local vira recusa externa. Propagação transient do recibo não cria intent/outbox/schema/segundo owner. UI preserva draft e nunca reenvia automaticamente; Typebot interrompe a rodada, sem replay de saídas. Sem durabilidade/recuperação prometida nem união heurística de Message nula ao eco; dedupe sem ID continua limite para ST-CON-04.
+238: - [x] D-06 — Orquestração outbound comum no domínio inbox (outbound*.ts), política extraída sem ciclo DI com ConversationsService, executa policy/Channel/result mapping e delega toda Message com ID ao MessageAcceptanceService atual; nenhum segundo owner de insert/unique/autoria/publicação. Input trusted distingue BFF humano, API EXTERNO com snapshot e bot; autoria/intenção de atribuição entram ANTES do dispatch. Remover message.update e conversation.update de conclusão no controller público; não limpar autoria comprovada no sender/echo. Para respostas humanas/públicas, atribuição após ACCEPTED é condicional sobre owner corrente, nunca snapshot semDono: claim concorrente é preservado, inclusive público vs claim humano e overlap BFF/público. Status humano/público move IN_SERVICE (grupo preservado); resposta aceita após close concorrente pode reabrir sem roubar novo owner. Bot conserva autoria/unread/status de fila/owner humano e não executa essa finalização humana. Toda falha local pós-ACK segue D05 mesmo após Message commit. MessageAcceptance e índices preservados, nenhum schema novo;04 reconverge primeiro envio depois.
+239: - [x] D-07 — Seleção para resposta BFF/API pública usa última mensagem por createdAt DESC,id DESC (ordenação DB, mesma timeline); se seu vínculo falta, nunca substitui por primeiro/outro conectado. Sem última origem: único vínculo pode ser usado; zero CANAL_AUSENTE400, múltiplos CANAL_AMBIGUO409. Origem sem vínculo CANAL_SELECIONADO_INDISPONIVEL409. Bot usa exclusivamente channelId/identidade do ingresso aceito/verificado, mesmo se outra entrada mais recente vier por outro transporte; sem fallback/rebind. Policy comum avalia readiness e requiresWindow do binding selecionado para TODOS, inclusive bot: corrigir explicitamente bypass atual do Typebot. Reavaliar janela antes de cada texto do bot; expiração bloqueia zeroPOST e interrompe rodada, sem replay. Cálculo temporal atual preservado; trusted timestamp novo pertence a04. disponivel observa localmente seleção/policy/trust/conexão/credencial cadastrada, não prova provider ativo/decrypt/grant externo; POST revalida. GET usa só metadados, sem token/rede/mutação; reutilizar metadados da BU na lista, sem novo fan-out por conversa, medir EPS. GET thread não falha por canal ausente: janela mantém exigida/aberta/expiraEm/canal e acrescenta disponivel:boolean/motivo:enum|null; aberta=false/canal=null se seleção impossível. Lista pública mantém campos e acrescenta envio_disponivel/motivo_indisponibilidade. API pública mantém criação prévia da conversa, inclusive vazia em erro; mudar isso é contrato04.
+240: - [x] D-08 — Extensão aberta por factories/registro DI tipado, inicialmente dois providers. Fake com recipientRef user:opaque não telefônico passa pelo mesmo resolver/owner/BFF com conversa seeded e bot/internal fixtures, sem alterar branches/interfaces dos senders. Regressão pública conserva telefone numérico/normalização atual; não exigir handle Telegram no POST /api/v1/messages. Enum físico OFICIAL/NAO_OFICIAL permanece no adapter de binding; fixture pode mapear slot existente ao fake, sem flag de produto nem alegar rede nova persistida. Registrar adapter estende o port; identidade/BU/contato/credenciais/ingress de redes futuras exigem contratos próprios. Capacidades terão ports pequenos em05/04 e lifecycle futuro, sem no-op/NotImplemented/casts/concrete instanceof nos consumers; não implementar runtime antecipado.
+241: - [x] D-09 — Um módulo de composição de transporte exporta resolver/orquestração para BFF/Public/Webhooks, mantendo middlewares e autenticações separados. Clients específicos podem ser usados por cadastro e adapters de protocolo, não por consumidores comuns de envio. Harness durável de dependências bloqueia imports/dispatch provider em Conversations/Incoming e no owner outbound comum, com allowlist exata de adapters/registro/mapper; testar o harness com violação sintética. Sem compat wrapper de envio antigo ou dispatch paralelo após cutover; fixture/mocks/DI de todas superfícies adaptados, não apenas testes novos.
+242: - [x] D-10 — UI Inbox e ErroDaApi em api.ts preservam outcome e metadados safe de incerteza do backend, exibem texto fixo honesto, bloqueiam composer por disponibilidade/motivo e mantêm draft em qualquer erro/UNKNOWN/ACCEPTED_LOCAL_INCOMPLETE; sem sucesso ou retry automático. Respostas atrasadas em troca BU/conversa conservam fencing monotônico atual. HTTP sucesso/DTOs de mensagem preservados; disponibilidade/outcome aditivos. Antes de qualquer RED/teste corrigir scripts/test-channels-local.sh para inventário positivo sem percorrer API root/.local-files ou ler dotenv privado; mounts positivos/descartáveis. all completo em leadshug_channels_validation/Node22/PG16, API3100/provider3101/Web4173, mais INOUT assistida dos dois vínculos. Consolidar owners/limites e rebase05/04 só após gates.
+243: 
+244: ## Module Decision Baseline Snapshot (Required Before APROVADO)
+245: | Module Decision Ref | Current Module Decision | Planned Handling | Evidence |
+246: | --- | --- | --- | --- |
+247: | constitution#system-invariants | BU/número, domínio backend, superfícies separadas | Preserve | D01/02/08/09 |
+248: | integrations#invariants | providers adapters, erros determinísticos, segredo privado | Preserve | D01/03/04/05 |
+249: | integrations#send-ST-CON-01 | consumer usa credencial scoped/current/receipt | Preserve | novo binding privado, send readiness intacta |
+250: | inbox#aceitação-ST-CON-01 | MessageAcceptance único, identity/gen/epoch, sender/echo | Preserve | D03/06, sem schema |
+251: | inbox#seleção/atribuição | sem troca automática/sem roubar claim | Preserve | corrigir desvio de fallback e snapshot de owner |
+252: | integrations/inbox#projeção-erros | código técnico específico distingue plataformas | Preserve | mapper explícito, outcome aditivo, sem false refusal de UNKNOWN |
+253: | ST-CON-05/04 pending | modelos/primeiro envio em contratos próprios | Preserve | só handoff/reconvergência, sem execução |
+254: 
+255: ## Decision Baseline (Frozen Before Implementation)
+256: - [ ] D-01 — Channel é abstract class no domínio, sendMessage recebe {kind:text,recipientRef:string,text:string} e retorna ChannelSendResult discriminado. recipientRef é opaco ao port; sem E164/WABA/phoneNumberId/instância/QR como contrato universal. Limites4096 atuais permanecem nos consumers atuais, não são requisito universal da abstração. ChannelResolver abstrato retorna implementação registrada; seleção por registro explícito, sem if/provider nos senders. Concretos atuais usam clients HTTP; nenhum new no domínio, global useClass único, ModuleRef/service locator ou singleton mutável de BU/token.
+257: - [ ] D-02 — Resolução recebe referência de conversa/BU/canal carregada server-side após autorização de sessão ou API key OU referência do ingresso já verificado para Typebot; não aceita declaração de provider/owner/credencial do body. Validar owner BU/Mantenedora do vínculo e identidade corrente, ownNumberVerified/verifiedEpoch/readiness/receipt e envelope atuais usando o owner de credenciais existente. Expor somente binding/proveniência safe para aceitação; tokens/IDs de protocolo ficam privados ao concreto. Resolver atual não autoriza ator e não retorna versão: adequação explícita, sem fingir garantia já existente. Auth por sessão/API key/bot mantém fontes diferentes, nunca exigir usuário humano no bot ou tomar disponibilidade como grant.
+258: - [ ] D-03 — Binding de operação captura channelId/BU/identidade/generation/epoch e activeCredentialVersion oficial, imutáveis e privados no dispatch. Revalidar owner/identidade/readiness/versão imediatamente antes do único POST por leitura/CAS local curta, sem HTTP em tx. Contexto alterado antes do dispatch bloqueia409 CHANNEL_CONTEXT_CHANGED sem rede. Depois do POST não há rollback externo: somente mudança de credentialVersion com identidade/generation/epoch TODOS inalterados permite aceitar o recibo capturado. REAUTORIZAR real incrementa generation, mesmo no mesmo recurso; não substituir a generation antiga. Mudança de identidade/generation/epoch depois do efeito não rebind/migra conteúdo:409 CHANNEL_CONTEXT_CHANGED; ACK conhecido conserva outcome ACCEPTED_LOCAL_INCOMPLETE e localMessageState RECORDED ou UNCONFIRMED conforme D05; sem ID, UNKNOWN. MessageAcceptance conserva seu fence. Testar REAUTORIZAR real concorrente e version-only separadamente. Janela entre leitura/CAS local e rede existe, sem fence atômico externo ou nova operação durável.
+259: - [ ] D-04 — ChannelSendResult: ACCEPTED exige ID externo string não vazia de resposta válida, não significa entregue ao aparelho; BLOCKED é falha local de política/trust/config antes de HTTP; REJECTED exige recusa síncrona comprovada; UNKNOWN é padrão após POST inconclusivo, com evidence ACK_WITHOUT_ID ou TRANSPORT_UNCONFIRMED. Meta REJECTED apenas HTTP400/401/403 + error Graph válido/sem sucesso ou ID contraditório + is_transient não true + code10/100/190; outros códigos/non2xx/429/5xx/timeout/redirect/malformed permanecem UNKNOWN. Evolution pós-dispatch falha é UNKNOWN nesta versão; não inventar classifier por texto/status sem evidência de recusa. Raw clients têm resultado tipado para texto; métodos de cadastro conservam contratos/erros. Uma invocação externa, timeout10s, sem retries/sondagens/grant HTTP extras por envio.
+260: - [ ] D-05 — Projeção pública de REJECTED conserva400 META_RECUSOU ou EVOLUTION_RECUSOU por mapper de composição, sem branch no negócio; texto fixo O canal recusou o envio e outcome REJECTED aditivo. UNKNOWN ACK_WITHOUT_ID tenta recordAmbiguousOutbound uma vez por execução: somente commit confirmado permite409 EXTERNAL_MESSAGE_ID_MISSING/outcome AMBIGUOUS_SEND_RECORDED, diagnóstico FALHOU/null-ID, nunca Message ENVIADA. Precedência: mudança detectada de identidade/generation/epoch após dispatch sem ID, inclusive antes ou durante o fence de recordAmbiguousOutbound, devolve409 CHANNEL_CONTEXT_CHANGED/outcome UNKNOWN; não rebind nem grava diagnóstico sob contexto novo. Somente OUTRAS falhas/commit incerto do diagnóstico devolvem503 OUTBOUND_LOCAL_INCOMPLETE/outcome UNKNOWN/evidence ACK_WITHOUT_ID/diagnosticPersistence UNCONFIRMED, sem afirmar diagnóstico gravado; no409 só declarar diagnóstico gravado com evidência positiva do commit capturado, senão UNCONFIRMED. UNKNOWN TRANSPORT_UNCONFIRMED conserva ausência de Message autoritativa dos throws atuais e400/código legado projetado, mas texto fixo Resultado do envio não confirmado; confira a conversa antes de tentar novamente e outcome UNKNOWN aditivo. Código legado não prova recusa. ACK externo válido seguido de QUALQUER falha local de aceitação/reconciliação/finalização conserva outcome ACCEPTED_LOCAL_INCOMPLETE;409 CHANNEL_CONTEXT_CHANGED se fence alterado, senão503 OUTBOUND_LOCAL_INCOMPLETE. Texto fixo O canal aceitou o envio, mas a conclusão local não foi confirmada; confira a conversa antes de tentar novamente. localMessageState RECORDED somente com commit de Message confirmado ou readback positivo pelo owner/chave/proveniência capturados; nos demais casos UNCONFIRMED, inclusive rollback local confirmado pois eco pode ter gravado em paralelo. No máximo um readback local bounded, sem rebind ou nova chamada externa. Falha após Message commit mantém RECORDED mesmo se atribuição/status falhar; nenhum erro local vira recusa externa. Propagação transient do recibo não cria intent/outbox/schema/segundo owner. UI preserva draft e nunca reenvia automaticamente; Typebot interrompe a rodada, sem replay de saídas. Sem durabilidade/recuperação prometida nem união heurística de Message nula ao eco; dedupe sem ID continua limite para ST-CON-04.
+261: - [ ] D-06 — Orquestração outbound comum no domínio inbox (outbound*.ts), política extraída sem ciclo DI com ConversationsService, executa policy/Channel/result mapping e delega toda Message com ID ao MessageAcceptanceService atual; nenhum segundo owner de insert/unique/autoria/publicação. Input trusted distingue BFF humano, API EXTERNO com snapshot e bot; autoria/intenção de atribuição entram ANTES do dispatch. Remover message.update e conversation.update de conclusão no controller público; não limpar autoria comprovada no sender/echo. Para respostas humanas/públicas, atribuição após ACCEPTED é condicional sobre owner corrente, nunca snapshot semDono: claim concorrente é preservado, inclusive público vs claim humano e overlap BFF/público. Status humano/público move IN_SERVICE (grupo preservado); resposta aceita após close concorrente pode reabrir sem roubar novo owner. Bot conserva autoria/unread/status de fila/owner humano e não executa essa finalização humana. Toda falha local pós-ACK segue D05 mesmo após Message commit. MessageAcceptance e índices preservados, nenhum schema novo;04 reconverge primeiro envio depois.
+262: - [ ] D-07 — Seleção para resposta BFF/API pública usa última mensagem por createdAt DESC,id DESC (ordenação DB, mesma timeline); se seu vínculo falta, nunca substitui por primeiro/outro conectado. Sem última origem: único vínculo pode ser usado; zero CANAL_AUSENTE400, múltiplos CANAL_AMBIGUO409. Origem sem vínculo CANAL_SELECIONADO_INDISPONIVEL409. Bot usa exclusivamente channelId/identidade do ingresso aceito/verificado, mesmo se outra entrada mais recente vier por outro transporte; sem fallback/rebind. Policy comum avalia readiness e requiresWindow do binding selecionado para TODOS, inclusive bot: corrigir explicitamente bypass atual do Typebot. Reavaliar janela antes de cada texto do bot; expiração bloqueia zeroPOST e interrompe rodada, sem replay. Cálculo temporal atual preservado; trusted timestamp novo pertence a04. disponivel observa localmente seleção/policy/trust/conexão/credencial cadastrada, não prova provider ativo/decrypt/grant externo; POST revalida. GET usa só metadados, sem token/rede/mutação; reutilizar metadados da BU na lista, sem novo fan-out por conversa, medir EPS. GET thread não falha por canal ausente: janela mantém exigida/aberta/expiraEm/canal e acrescenta disponivel:boolean/motivo:enum|null; aberta=false/canal=null se seleção impossível. Lista pública mantém campos e acrescenta envio_disponivel/motivo_indisponibilidade. API pública mantém criação prévia da conversa, inclusive vazia em erro; mudar isso é contrato04.
+263: - [ ] D-08 — Extensão aberta por factories/registro DI tipado, inicialmente dois providers. Fake com recipientRef user:opaque não telefônico passa pelo mesmo resolver/owner/BFF com conversa seeded e bot/internal fixtures, sem alterar branches/interfaces dos senders. Regressão pública conserva telefone numérico/normalização atual; não exigir handle Telegram no POST /api/v1/messages. Enum físico OFICIAL/NAO_OFICIAL permanece no adapter de binding; fixture pode mapear slot existente ao fake, sem flag de produto nem alegar rede nova persistida. Registrar adapter estende o port; identidade/BU/contato/credenciais/ingress de redes futuras exigem contratos próprios. Capacidades terão ports pequenos em05/04 e lifecycle futuro, sem no-op/NotImplemented/casts/concrete instanceof nos consumers; não implementar runtime antecipado.
+264: - [ ] D-09 — Um módulo de composição de transporte exporta resolver/orquestração para BFF/Public/Webhooks, mantendo middlewares e autenticações separados. Clients específicos podem ser usados por cadastro e adapters de protocolo, não por consumidores comuns de envio. Harness durável de dependências bloqueia imports/dispatch provider em Conversations/Incoming e no owner outbound comum, com allowlist exata de adapters/registro/mapper; testar o harness com violação sintética. Sem compat wrapper de envio antigo ou dispatch paralelo após cutover; fixture/mocks/DI de todas superfícies adaptados, não apenas testes novos.
+265: - [ ] D-10 — UI Inbox e ErroDaApi em api.ts preservam outcome e metadados safe de incerteza do backend, exibem texto fixo honesto, bloqueiam composer por disponibilidade/motivo e mantêm draft em qualquer erro/UNKNOWN/ACCEPTED_LOCAL_INCOMPLETE; sem sucesso ou retry automático. Respostas atrasadas em troca BU/conversa conservam fencing monotônico atual. HTTP sucesso/DTOs de mensagem preservados; disponibilidade/outcome aditivos. Antes de qualquer RED/teste corrigir scripts/test-channels-local.sh para inventário positivo sem percorrer API root/.local-files ou ler dotenv privado; mounts positivos/descartáveis. all completo em leadshug_channels_validation/Node22/PG16, API3100/provider3101/Web4173, mais INOUT assistida dos dois vínculos. Consolidar owners/limites e rebase05/04 só após gates.
+266: 
+267: ## Architecture Change Governance (Required When This TODO Establishes, Corrects, or Supersedes Architecture)
+268: - **Applicability (`required|not_needed`):** required
+269: - **Why this applies:** estabelece port comum e retira dispatch específico duplicado dos negócios.
+270: - **Deviation / debt being retired:** Consumers dependem de dois providers/IDs e mapeiam toda falha como recusa; seleção/atribuição violam intenção canônica.
+271: - **Target steady-state after closeout:** Channel/Resolver de domínio, registro/adapters privados, uma saída comum e aceitação única.
+272: - **Temporary exceptions allowed:** none
+273: - **Cutover / removal condition:** nenhum sender comum usa provider client/dispatch antigo; cadastro/protocolo específicos permanecem legítimos e não são compat shim.
+274: 
+275: ### Patterns To Enforce (Required when applicability = `required`)
+276: | Pattern / Decision | Source / ID | Scope | Why It Must Hold After Cutover |
+277: | --- | --- | --- | --- |
+278: | consumidor depende do Channel | D01/08/09 | outbound | extensibilidade verificável |
+279: | contexto privado por operação | D02/03 | resolver/concretos | sem vazamento ou cross-BU |
+280: | aceitação única | ST-CON-01/D06 | todos senders | dedupe/autoria/epoch |
+281: 
+282: ### Prohibited Anti-Patterns (Required when applicability = `required`)
+283: | Anti-Pattern / Wrong Path | Detection Signal | Why It Is Forbidden After Cutover | Exception Policy |
+284: | --- | --- | --- | --- |
+285: | adicionar interface e manter branch no sender | dependency harness/AST | falso DIP | none |
+286: | singleton que troca token/BU | barriers concorrentes | cross-tenant | none |
+287: | timeout como recusa ou retry POST | raw HTTP count | efeito externo incerto | none |
+288: | mega-interface com no-op/cast específico | shared contract/fake | quebra substituição/segregação | none |
+289: 
+290: ### Architecture Protection Harness (Required when applicability = `required`)
+291: | Harness Type | Surface | Command / Rule / Artifact | Regression It Must Catch | Adoption Timing | Evidence Plan / Follow-up |
+292: | --- | --- | --- | --- | --- | --- |
+293: | dependency guard/test | api src/domain/channels/transport/channel-dependencies.spec.ts | all + violation fixture | imports/dispatch diretos fora allowlist | implement-in-this-todo | DOD01/06/08 |
+294: | shared contract/PG | api test/channel-transport.e2e-spec.ts | all | substituição/scopes/identity/unknown/echo/claim | implement-in-this-todo | DOD02..06/VAL02 |
+295: | browser real BFF | web e2e/channel-transport.spec.ts | all | disponibilidade/envio/erro/rascunho/freshness | implement-in-this-todo | DOD03/04/06/VAL03 |
+296: 
+297: ## Architecture Review Gates (Deterministically Derived From Architecture Change Governance)
+298: - **Architecture decision review:** required
+299: - **Decision review lifecycle:** after diagnosis is closed and before APROVADO
+300: - **Decision review kind:** architecture_opinion
+301: - **Decision review package:** bounded-file-set
+302: - **Decision review status:** findings_integrated
+303: - **Decision review evidence / resolution:** artifacts/reviews/leadshug-channel-abstraction-20261020/architecture-opinion.md; parecer tático terminal no-go inicial, AR01..04 e obrigações integrados pelo owner antes da crítica; sem claim de implementação.
+304: - **Architecture adherence review:** required
+305: - **Adherence review lifecycle:** after implementation and before Completed
+306: - **Adherence review kind:** architecture_adherence
+307: - **Adherence review package:** bounded-file-set
+308: - **Adherence review status:** findings_integrated
+309: - **Adherence review evidence / resolution:** artifacts/reviews/leadshug-channel-abstraction-20261020/implementation-round-1/2/3-resolution.md; roundsfresh terminal/strictmerged. R01/R03/R04/R05 corrigidas no snapshot revisado; ST06-R02 permanece bloqueador até correção/evidência independente do harness.
+310: - **No-go handling:** reconvergir contrato, sem waiver automático.
+311: 
+312: ## Gate: Review Baseline Freeze
+313: - **Gate decision:** required
+314: - **Why this decision:** publicar autoridade do contrato antes de review/guard.
+315: - **Trigger stage:** before the first planning-side review or guard run
+316: - **Baseline branch:** main
+317: - **Baseline commit:** a35f676c696e21ec8b4e8ed5cbe6eafbe8da482c
+318: - **Baseline push reference:** origin/main
+319: - **Gate status:** no_material_findings
+320: - **Findings summary:** contrato publicado antes dos reviews/guardas; somente freeze metadata factual acrescentada depois.
+321: - **Evidence / reference:** origin/maina35f676c696e21ec8b4e8ed5cbe6eafbe8da482c push terminal0 em2026-10-20; CR01/02 integrados antes de reconvergência do reviewer.
+322: - **Waiver authority / reference (required if waived):** n/a
+323: 
+324: ## Gate: Review Scope Drift
+325: - **Gate decision:** required
+326: - **Why this decision:** aprovação usa o pacote efetivamente revisado.
+327: - **Trigger stage:** after the planning-side review/guard cycle converges and before APROVADO
+328: - **Baseline source:** Review Baseline Freeze -> Baseline commit
+329: - **Material sections compared:** Context|Scope|Out of Scope|Definition of Done|Validation Steps|Decisions|Decision Baseline|Assumptions Preview|Execution Plan|Security Risk Assessment|Performance & Concurrency Risk Assessment
+330: - **Guard command:** python3 delphi-ai/tools/review_scope_drift_guard.py --todo foundation_documentation/todos/active/features/TODO-leadshug-channel-abstraction.md
+331: - **No-go handling rule:** reconvergir review/freeze, sem código.
+332: - **Gate status:** no_material_findings
+333: - **Findings summary:** guard go;23 seções materiais comparadas,0 alterações frente a baselinea35f676c publicada/revisada.
+334: - **Evidence / reference:** foundation_documentation/artifacts/reviews/leadshug-channel-abstraction-20261020/evidence/review-scope-drift.json
+335: - **Waiver authority / reference (required if waived):** n/a
+336: 
+337: ## Questions To Close
+338: Nenhuma decisão funcional de produto aberta; D01..10 cobrem limites para challenge independente. Readiness real não é aprovação de escopo.
+339: 
+340: ## Pattern References (Optional; Enforced When Cited)
+341: n/a; decisões/canon citados diretamente, sem ID de catálogo presumido.
+342: 
+343: ## Assumptions Preview (Required Before Plan Review)
+344: | Assumption ID | Assumption | Evidence | If False | Confidence | Handling |
+345: | --- | --- | --- | --- | --- | --- |
+346: | A-01 | dois senders comuns escolhem diretamente Meta/Evolution. | api-app/src/domain/inbox/conversations.service.ts; api-app/src/domain/inbox/incoming.service.ts | ampliar inventário/reconvergir | High | Keep as Assumption |
+347: | A-02 | credential resolver não verifica actor grant e não retorna active version. | api-app/src/domain/channels/channel-credential-resolver.ts | reutilizar mecanismo real, sem duplicação | High | Keep as Assumption |
+348: | A-03 | aceitação é owner único keyed e faz fence de identidade. | api-app/src/domain/inbox/message-acceptance.service.ts | corrigir boundary antes de cutover | High | Keep as Assumption |
+349: | A-04 | BFF/API pública respondem pelo ConversationsService; compose DI repetida. | api-app/src/surfaces/bff/conversations.controller.ts; api-app/src/surfaces/public/conversations.controller.ts; api-app/src/surfaces/bff/bff.module.ts | adaptar todos consumers legítimos | High | Keep as Assumption |
+350: | A-05 | browser usa backend real/build e runner faz find amplo. | web-app/playwright.config.ts; scripts/test-channels-local.sh | readiness antes de teste | High | Keep as Assumption |
+351: 
+352: ## Execution Plan (Required Before `APROVADO`)
+353: ### Touched Surfaces
+354: Somente Diff Expectation Contract; nenhuma superfície privada/produto modificada durante preparação.
+355: 
+356: ### Ordered Steps
+357: 1. APROVADO específico, reload binding e authority/routing go, executor único no checkout principal. Corrigir runner para inventário positivo ANTES de qualquer teste, inclusive RED; não executar find antigo.
+358: 2. Test-first: harness dependências com negativa sintética, contrato Channel/fake opaco, raw HTTP/resultados/scopes/seleção. PG barriers/readbacks próprios; contexto muda antes do diagnóstico null-ID e durante seu fence vs falha ordinária/commit incerto:409/503/outcome/metadados, um POST e nenhum replay.
+359: 3. Ports/concretos/registro/binding privado com credencial owner existente; revalidar contexto e classificar outcomes, sem duplicar aceitação.
+360: 4. Orquestração/cutover BFF/Public/Typebot, política/projeção/DTO e UI indisponível/unknown; retirar dispatch antigo e adaptar fakes/DI de suites existentes.
+361: 5. CI-equivalent all completo em recursos descartáveis, Playwright real/fonte-servido e pcv. Não testar ambiente humano por conveniência.
+362: 6. DevOps revalida runtime/túnel e publica API/Web locais do código aprovado, conservando banco/canais; operador valida INOUT dos dois vínculos próprios. Nenhuma rotação/repareamento automático.
+363: 7. Adherence/cutover/security/TQA/final/debt/diff/authority/completion/closeout, módulos e handoff05/04; nenhum push/deploy de produto automático.
+364: 
+365: ### Test Strategy
+366: - **Strategy:** test-first
+367: - **Why:** cutover de side effects externos/auth e substituição real.
+368: - **Fail-first target(s) (when required):** dependency guard, fake opaco, raw unknown, owner/contexto e política seleção/claim.
+369: 
+370: ### Pre-APROVADO RED Evidence Capture (Optional for bugfix/regression)
+371: - **Decision (`required|recommended|not_needed|waived`):** not_needed
+372: - **Why now:** direção nova com diagnóstico por fonte suficiente; sem execução para congelar hipótese.
+373: - **Target symptom:** n/a
+374: - **Allowed surfaces:** none
+375: - **Forbidden surfaces reaffirmed:** production code|runtime/config/deploy|canonical project docs outside TODO authoring
+376: - **Planned command / target:** n/a
+377: - **Status (`not_run|running|red_reproduced|red_not_reproduced|blocked|waived`):** not_run
+378: - **Findings summary:** nenhuma execução de produto/testes atual.
+379: 
+380: ### Flow Evidence Planning Matrix (Required Before `APROVADO`)
+381: | Criterion / Flow | Why Flow-Impacting | Platform Parity | Required Runtime Lane | Mutation Lane Required? | Backend Real-Data Required? | Planned Evidence | Non-Applicability Rationale |
+382: | --- | --- | --- | --- | --- | --- | --- | --- |
+383: | DOD01/02 substituição/scope | refactor/auth/context | web-only | API PG + browser mutation | yes | yes | channel-transport.e2e/spec e shared contracts | n/a |
+384: | DOD03/04 disponibilidade/outcome | DTO/composer/persistência | web-only | Playwright mutation | yes | yes | e2e/channel-transport.spec.ts com BFF real | n/a |
+385: | DOD05/06 + VAL01/02/03 | aceitação/claim/echo/cutover | web-only | PG barriers + browser mutation | yes | yes | suites completas e served freshness | n/a |
+386: | DOD07/VAL04 | recursos verdadeiros | web-only | operador local | yes | yes | receipt redigido de INOUT dos dois vínculos | fake não substitui |
+387: | DOD08/VAL05 | consolidação/qualidade | web-only | audits + provas anteriores | yes | yes | pacote/guards por critério | n/a |
+388: 
+389: ### Local CI-Equivalent Suite Matrix (Required Before `APROVADO` and Before Delivery Claim)
+390: Colunas Status duplicadas projetam o mesmo fato para leitores determinísticos de índices distintos; evidence inclui ressalvas.
+391: 
+392: | Repository / CI Surface | Why In Scope | Local CI-Equivalent Command | Required Before | Status (completion projection) | Evidence Artifact / Command | Status (authority projection) | Notes | Behavior / Scenario Covered | Fixture / Seed / Runtime Preconditions |
+393: | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+394: | api / all PG/units/contracts | cutover/DI/auth/HTTP | bash scripts/test-channels-local.sh all | Local-Implemented | planned | npm ci/lint/build/unit/E2E completos + migration deploy/status de baseline | planned | subset só diagnóstico | Channel contract/opaque fake/unknown/scope/current identity/echo/claim | Node22/PG16 próprios; dois tenants/BUs; api-key e actor humano/bot; lease barriers/provider controlado |
+395: | web / all build/unit/browser | DTO/composer/erro | bash scripts/test-channels-local.sh all | Local-Implemented | planned | spec channel-transport e regressões completas, BFF não mockado | planned | mesmo all | positivo ambos, canal ausente/ambíguo, draft unknown e contexto atrasado | Web4173/API3100/provider3101, mesma DB/resolução da CI, bundle fresco |
+396: | root / runner topology | positive inventory | bash scripts/test-channels-local.sh all | Local-Implemented | planned | manifests/masks fictícios; nenhuma leitura dotenv/.local-files | planned | sem namespace humano | safe mount/config e origem da principal | leadshug_channels_validation inexistente antes do run, dados descartáveis |
+397: 
+398: ### Runtime / Rollout Notes
+399: Sem migration nova/schema/enum. Migrations existentes deploy/status em PG descartável fazem parte de all. Namespace validation exclusivo, bundles/builds da principal. Runtime humano somente publicação local planejada e prova assistida depois de readiness; banco/canais preservados, sem reset ou rotação. Nenhum transporte real futuro ou status externo de entrega presumido.
+400: 
+401: ## Plan Review Gate (Review of the Execution Plan; required for `medium|big`; abbreviated for low-risk `small`)
+402: ### Review Sections
+403: - [x] Architecture
+404: - [x] Code Quality
+405: - [x] Tests
+406: - [x] Performance
+407: - [x] Security
+408: - [x] Elegance
+409: - [x] Structural Soundness
+410: 
+411: Revisão de planejamento concluída: architecture_opinion findings_integrated e crítica fresh terminal go. Checkboxes representam análise do plano, não execução/testes/medição do produto. PLAN01/02 opçãoA adotada; AR01..04/CR01..02 resolvidos nos relatórios.
+412: 
+413: ### Issue Cards
+414: - **Issue ID:** PLAN-01
+415:   - **Severity:** high
+416:   - **Evidence:** conversations.service.ts:300; incoming.service.ts:94; resolver:24 não autoriza ator.
+417:   - **Why it matters now:** falsa abstração ou singleton de token mantém acoplamento/vaza escopo.
+418:   - **Option A (Recommended):** ports de domínio, contexto por operação, registro explícito e auth trusted-scoped.
+419:     - **Effort:** medium; **Risk:** medium; **Blast radius:** cross-module; **Maintenance burden:** low; **Performance impact:** neutral; **Elegance impact:** improves; **Structural soundness impact:** improves.
+420:   - **Option B (Alternative):** wrapper com switch no próprio consumer e config global.
+421:     - **Effort:** low; **Risk:** high; **Blast radius:** cross-module; **Maintenance burden:** high; **Performance impact:** neutral; **Elegance impact:** regresses; **Structural soundness impact:** regresses.
+422:   - **Option C (Do Nothing):** manter providers atuais; **Effort:** low; **Risk:** medium; **Blast radius:** module; **Maintenance burden:** high; **Performance impact:** neutral; **Elegance impact:** neutral; **Structural soundness impact:** regresses.
+423:   - **Recommendation:** A; direção humana expressa e menor mecanismo fiel ao escopo.
+424: - **Issue ID:** PLAN-02
+425:   - **Severity:** high
+426:   - **Evidence:** clients atuais string/null e generic errors, fallback canais[0].
+427:   - **Why it matters now:** contrato de substituição precisa outcomes e política verdadeiros, não apenas nomes iguais.
+428:   - **Option A (Recommended):** D03..07 com UNKNOWN conservador, projeção compatível e seleção explícita.
+429:     - **Effort:** medium; **Risk:** medium; **Blast radius:** cross-stack; **Maintenance burden:** medium; **Performance impact:** neutral; **Elegance impact:** improves; **Structural soundness impact:** improves.
+430:   - **Option B (Alternative):** ocultar falhas como recusa e trocar canal para enviar.
+431:     - **Effort:** low; **Risk:** high; **Blast radius:** cross-stack; **Maintenance burden:** high; **Performance impact:** regresses; **Elegance impact:** regresses; **Structural soundness impact:** regresses.
+432:   - **Option C (Do Nothing):** adiar o cutover; **Effort:** low; **Risk:** medium; **Blast radius:** module; **Maintenance burden:** high; **Performance impact:** neutral; **Elegance impact:** neutral; **Structural soundness impact:** neutral.
+433:   - **Recommendation:** A; sem plataforma de operação durável antecipada.
+434: 
+435: ### Failure Modes & Edge Cases
+436: - [ ] BUs concorrentes, actor sem grant, bot de tenant alheio, owner de canal divergente e stale epoch/version.
+437: - [ ] selected channel removido, dois vínculos sem última origem, leitura segura sem envio habilitado e draft preservado.
+438: - [ ] POST efeito seguido de timeout/5xx/malformed, ID ausente e receipt tardio após rotação/retirada.
+439: - [ ] eco antes/depois do sender; público vs claim humano/overlap BFF; Typebot retido enquanto outra origem chega, janela expira ou contexto muda; empate de createdAt entre transportes.
+440: - [ ] falha antes de acceptance, commit incerto, Message commit seguido de erro na finalização e diagnóstico null-ID sem commit: projeções D03/05, sem replay.
+441: - [ ] UI troca A→B→A durante erro/envio; nenhum retry ou limpeza de draft de outra conversa.
+442: 
+443: ### Residual Unknowns / Risks
+444: - [ ] Cutover sem intent durável conserva limite de crash antes da aceitação/publicação e diagnósticos null-ID sem dedupe; ST-CON-04 deve reconvergir esse limite, não inferir exactly-once.
+445: - [ ] Port extensível não significa persistência/contato/ingress de rede nova pronto; fake só prova substituição interna.
+446: - [ ] Readiness real e medições só depois de aprovação; coorte privada continua, sem produção/usuário não confiável liberado.
+447: - [ ] Arquitetura integrada e crítica fresh reconvergida go no pacote v1.2; guardas finais de planejamento abaixo, toda prova de produto permanece planned.
+448: 
+449: ## Additional Architectural Opinions (Required When Path Remains Materially Unclear)
+450: - **Needed:** no
+451: - **Why ambiguity remains:** diagnóstico teve parecer independente de enquadramento; agora gate architecture_opinion desafia D01..10, sem tratá-lo como duplicado satisfeito.
+452: - **Opinion count:** 1 framing advisory,1 tactical terminal com achados integrados
+453: - **Package mode:** bounded-file-set
+454: - **Internal reviewer mandate:** required na gate tática
+455: - **Required lenses:** correctness,performance,elegance,structural-soundness,operational-fit
+456: 
+457: ## Audit Trigger Matrix (Required Before Audit Decisions Are Trusted)
+458: - **Canonical method:** wf-docker-audit-escalation-method
+459: - **Guard command:** python3 delphi-ai/tools/audit_escalation_guard.py --todo foundation_documentation/todos/active/features/TODO-leadshug-channel-abstraction.md
+460: - **Latest TEACH evidence / artifact:** artifacts/reviews/leadshug-channel-abstraction-20261020/evidence/audit-floor.json; go/fa884bf1d2e7
+461: 
+462: | Trigger | Value | Notes |
+463: | --- | --- | --- |
+464: | complexity | big | cutover completo do envio comum |
+465: | blast_radius | cross-stack | API/Web/runner |
+466: | behavioral_change_or_bugfix | yes | política/erros/claim explícitos |
+467: | changes_public_contract | yes | campos aditivos/erro honesto |
+468: | touches_auth_or_tenant | yes | resolver e contexto |
+469: | touches_runtime_or_infra | yes | runner/publicação local |
+470: | touches_tests | yes | harness/suites |
+471: | critical_user_journey | yes | respostas reais |
+472: | release_or_promotion_critical | no | só local |
+473: | high_severity_plan_review_issue | yes | PLAN01/02 |
+474: | explicit_three_lane_request | no | floor derivado |
+475: 
+476: ## Independent No-Context Critique Gate (Deterministic Floor From Audit Escalation)
+477: - **Critique decision:** required
+478: - **Why this decision:** big/cross-stack/auth/side effect e cutover arquitetural.
+479: - **Impact signals in scope:** public contract/schema/api|auth|runtime
+480: - **Package mode:** bounded-file-set
+481: - **Package minimum contents:** TODO publicado, fontes públicas exatas, parecer/disposição e matrizes/risco.
+482: - **Critique isolation mode:** fresh internal no-context reviewer
+483: - **Internal reviewer mandate:** required, não executor; aguardar terminal sem prazo rígido.
+484: - **Critique lenses:** correctness,performance,elegance,structural-soundness,risk
+485: - **Critique status:** no_material_findings
+486: - **Findings summary:** CR01/02 integrados; reconvergência terminal go no contrato completo v1.2/baselinea35f676c, nenhum achado material aberto. Parecer no-go original preservado no ledger.
+487: - **Resolution ledger:** artifacts/reviews/leadshug-channel-abstraction-20261020/critique.md
+488: - **Evidence / reference:** artifacts/reviews/leadshug-channel-abstraction-20261020/critique.md; fresh /root/stcon06_critique gpt-6.1-sol/max, inicial81d56f5e + reconvergência terminala35f676c.
+489: - **Waiver authority / reference (required if waived):** n/a
+490: 
+491: ## Gate: Assumption Code Coherence
+492: - **Gate decision:** required
+493: - **Why this decision:** premissas concretas de senders/resolver/aceitação/runtime.
+494: - **Trigger stage:** after critique convergence and before APROVADO
+495: - **Guard scope:** A01..05
+496: - **Guard command:** python3 delphi-ai/tools/assumption_code_coherence_guard.py --todo foundation_documentation/todos/active/features/TODO-leadshug-channel-abstraction.md
+497: - **Gate status:** no_material_findings
+498: - **Findings summary:** revisão semântica A01..05 ancorada em fonte pública e conferida por arquitetura/crítica; adequações são trabalho explícito, sem fingir garantias atuais.
+499: - **Evidence / reference:** foundation_documentation/artifacts/reviews/leadshug-channel-abstraction-20261020/source-assumptions.json; architecture-opinion.md; critique.md; evidence/assumption-coherence.json, guard go/5 premissas.
+500: - **Waiver authority / reference (required if waived):** n/a
+501: 
+502: ## Approval
+503: - **Approved by:** usuário — autoridade humana deste contrato
+504: - **Approval reference:** resposta literal APROVADO nesta conversa em2026-10-20, após apresentação do contrato v1.2 publicado em Foundation781ea16e51e0db2a654e6956ea633a03dd509dfd (freeze materiala35f676c).
+505: - **Approval scope:** ST-CON-06/SCOPE01..05/D01..10, depois da convergência do pacote concreto; concordância com conceito não substitui APROVADO.
+506: - **Execution not authorized by approval:** todo Out of Scope, redes futuras,05/04, push/deploy de produto ou mudanças privadas.
+507: - **Renewed approval required when:** decisões/DoD/paths/risco/contrato mudarem materialmente.
+508: - **Pre-approval readiness evidence:** artifacts/reviews/leadshug-channel-abstraction-20261020/README.md; authority-preapproval.json = preflight-go, execution_authority_granted=false; estrutura PASS. APROVADO específico recebido; authority normal pós-ingestão registrado em evidence/authority-execution.json.
+509: 
+510: ## Rules Acknowledgement / Ingestion (Required After `APROVADO` and Before Execution)
+511: Binding reload realizado após APROVADO em2026-10-20 pelo orquestrador: fontes da tabela relidas; constituição/política/módulos recarregados e verify_context PACED-Ready. Executor relerá as regras técnicas pertinentes antes dos edits. Ingestão não é evidência de implementação/testes. Nenhum GOAL persistente foi criado.
+512: 
+513: | Source | Why It Applies Now | Must Preserve | Must Avoid | Execution Impact |
+514: | --- | --- | --- | --- | --- |
+515: | delphi-ai/main_instructions.md | autoridade e roteamento | executor único | código no planejamento | handoff após aprovação |
+516: | delphi-ai/workflows/docker/todo-approval-gates-method.md | aprovação | freeze/reviews/APROVADO | concordância genérica como execução | authority pré/post |
+517: | delphi-ai/workflows/docker/effort-selection-method.md | routing | agent_role_routing_guard.py | fingir modelo primário | guard antes da lane |
+518: | delphi-ai/workflows/nestjs/change-application-boundary-method.md | BFF/domínio | adapters finos | regra no controller | contratos E2E |
+519: | delphi-ai/workflows/react/change-ui-boundary-method.md | formulário/estado | freshness/draft | resposta atrasada | Playwright mutation |
+520: | delphi-ai/rules/stacks/prisma/prisma-schema-migration-always-on.md | schema | migration versionada | reset operacional | deploy/status descartável |
+521: | delphi-ai/rules/stacks/postgresql/postgresql-data-integrity-always-on.md | intenção/locks | unique/CAS | HTTP em tx | barriers reais |
+522: | foundation_documentation/project_constitution.md | multi-tenant | BU/Contato | credencial global | testes scoped |
+523: | foundation_documentation/policies/scope_subscope_governance.md | rotas existentes | BFF sessão | endpoint fora do owner | contrato explícito |
+524: | delphi-ai/workflows/docker/performance-concurrency-validation-method.md | pcv-1 | quatro lanes | prose sem artefato | JSON/hash antes entrega |
+525: 
+526: ## Agent Routing Preflight (Required Before Execution When Effort/Model Routing Applies)
+527: - **Client surface:** codex
+528: - **Current governed action:** implementation
+529: - **Selected role:** routine-executor
+530: - **Selected model:** gpt-6-luna
+531: - **Selected effort:** medium
+532: - **Proof mode:** declared
+533: - **Exception reason:** n/a
+534: - **Subagent / delegation authorization:** AGENTS/main instructions/workflows exigem reviews internos e executor; código só após APROVADO.
+535: - **Execution topology:** primary-checkout-single-writer
+536: - **Worktree / auxiliary-checkout authorization:** not-authorized
+537: - **Worktree authorization evidence:** n/a
+538: - **Writer scheduling policy:** single-writer-serialized
+539: - **Guard outcome:** go
+540: - **Waiver / exception reference:** n/a
+541: 
+542: Reviewers architecture_opinion e critique: gpt-6.1-sol/max, fresh fork_turns none, routing go distinto antes de dispatch. Primário não se declara outro modelo. Nenhum GOAL persistente criado sem pedido humano.
+543: 
+544: ## Decision Adherence Validation (Mandatory Before Delivery)
+545: Planejado para o gate de entrega após APROVADO; nenhum resultado de implementação reivindicado.
+546: 
+547: ## Module Decision Consistency Validation (1-1 Mandatory Before Delivery)
+548: Planejado para o gate de entrega após APROVADO; nenhum resultado de implementação reivindicado.
+549: 
+550: ## Pipeline/Copilot P1/P2 Preflight
+551: Planejado para o gate de entrega após APROVADO; nenhum resultado de implementação reivindicado.
+552: 
+553: ## Rule-Spirit Anti-Pattern Hunt
+554: Planejado para o gate de entrega após APROVADO; nenhum resultado de implementação reivindicado.
+555: 
+556: ## Promotion Finding Routing Ledger (Required When Promotion/Review Finds Any Finding)
+557: 
+558: Terminal architecture/security findings classified by review-finding-classification. All current-slice findings remain blockers until fixed and evidenced; no waiver/debt accepted. Exact text and deduplication: artifacts/reviews/leadshug-channel-abstraction-20261020/implementation-round-1-resolution.md.
+559: 
+560: | Finding ID | Severity | Classification | Routing Decision | Same TODO / Split Rationale | Status | Approval / Follow-up Reference |
+561: | --- | --- | --- | --- | --- | --- | --- |
+562: | ST06-R01 (ADH-01=SEC-01) | high | release-blocker | same-todo | Original non-first/malformed-ID counterexample corrected; new flag case tracked R05 | resolved in round2 snapshot; finalvalidation pending | implementation-round-1-resolution.md; existing D04 approval |
+563: | ST06-R02 (ADH-02) | medium | release-blocker | same-todo | Navigation corrected; await body/handler completion and prove same-text draft fence catches removal | open; round3 causal handler barrier | implementation-round-3-resolution.md; existing D10 approval |
+564: | ST06-R03 (SEC-02) | medium | release-blocker | same-todo | D04/05 Evolution empty object is not ACK; key:{} preserved | resolved in round2 snapshot; finalvalidation pending | implementation-round-1-resolution.md; existing D04/05 approval |
+565: | ST06-R04 (SEC-03) | medium | release-blocker | same-todo | Denied mutations/twoTENANT proof added; preDispatch must exercise real Meta/Evo adapters and detect omitted callback | resolved reviewed snapshot; final assurance pending | implementation-round-3-resolution.md; existing scope/validation approval |
+566: | ST06-R05 (adherence-round2 ADH-R2-01) | medium | release-blocker | same-todo | D04 explicit false/malformed success flag contradicts positive ACK; UNKNOWN/no authoritative write | resolved reviewed snapshot; final assurance pending | implementation-round-3-resolution.md; D04 existing approval |
+567: 
+568: 
+569: ## TODO Closeout Disposition
+570: - **Disposition:** keep-active
+571: - **Disposition reason:** contrato aprovado, implementação e validação em execução; não encerrar antes de todos gates.
+572: - **Post-commit/push status:** baseline materiala35f676c publicada/revisada; pacote documental finalizado com guardas pré-aprovação; produto Pending.
+573: - **Next path/status action:** executar ST-CON-06 aprovado, manter active até evidências e gates de entrega.
+574: 
+575: ## Security Risk Assessment (Mandatory Before Delivery)
+576: - **Risk level:** high
+577: - **Why this risk level:** canal/credencial de múltiplos tenants e side effect externo.
+578: - **Attack surface in scope:** sessão/key/bot, BU/channel/contexto, singleton/mapping forjado, rawerro/token, adapter recipient/URL e DI.
+579: - **Attack simulation decision:** required
+580: - **Review evidence:** planned após implementação, com actor sem grant/BU alheia/ingress falso/version stale e concorrência.
+581: - **Residual security risk:** coorte privada atual preservada; nenhum usuário não confiável ou produção autorizado.
+582: 
+583: ## Performance & Concurrency Risk Assessment (Mandatory Before Delivery)
+584: - **Policy schema version:** pcv-1
+585: - **Global sensitivity level:** high
+586: - **Why this level:** cutover de envio/identidade/aceitação/DI com concorrência real.
+587: - **Current delivery stage at review time:** Pending
+588: 
+589: | Lane ID | Lane | Trigger Result | Trigger Severity | Trigger Reason Code | Gate Deadline | Minimum Evidence Rule | State | Residual Risk | Uncertainty Reason Code |
+590: | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+591: | EPS | endpoint-performance-scrutiny | required | medium | EPS-QUERY-SHAPE-CHANGED | before_local_implemented | EPS-E2 | pending | none | none |
+592: | FRC | frontend-race-condition-validation | required | high | FRC-DUPLICATE-MUTATION | before_local_implemented | FRC-E3 | pending | none | none |
+593: | BCI | backend-concurrency-idempotency-validation | required | high | BCI-IRREVERSIBLE-SIDE-EFFECT | before_local_implemented | BCI-E3 | pending | external ambiguity explicit | none |
+594: | RLS | runtime-load-stress-validation | recommended | medium | RLS-CACHE-INDEX-SENSITIVE-PATH-CHANGED | before_local_implemented | RLS-E1 | pending | none | none |
+595: 
+596: ### Lane Detail Packet Template
+597: #### EPS
+598: - **Trigger rationale:** medir seleção/resolução scoped e projections de disponibilidade; EXPLAIN ANALYZE e cardinalidade representativa. Nenhuma chamada externa nova em GET e um POST por dispatch.
+599: - **Recorded at (UTC):** pending; planning only, record real UTC with execution evidence
+600: - **Executor ID:** planned-executor-st-con-06
+601: - **Evidence object:** pending; JSON pcv-1 com sha256 antes da entrega, não existe execução ainda.
+602: #### FRC
+603: - **Trigger rationale:** envio/erro e troca BU/conversa; draft, requests e readback BFF real.
+604: - **Recorded at (UTC):** pending; planning only, record real UTC with execution evidence
+605: - **Executor ID:** planned-executor-st-con-06
+606: - **Evidence object:** pending; JSON pcv-1 com sha256.
+607: #### BCI
+608: - **Trigger rationale:** barreiras PG/contador HTTP de BUs/credencial/identidade/claim/eco; provar D02..07 e ausência de retry. Crash recovery durável novo não é contratado.
+609: - **Recorded at (UTC):** pending; planning only, record real UTC with execution evidence
+610: - **Executor ID:** planned-executor-st-con-06
+611: - **Evidence object:** pending; JSON pcv-1 com sha256.
+612: #### RLS
+613: - **Trigger rationale:** ensaio bounded de concorrência no envio fake/PG, sem claim SLO/produção.
+614: - **Recorded at (UTC):** pending; planning only, record real UTC with execution evidence
+615: - **Executor ID:** planned-executor-st-con-06
+616: - **Evidence object:** pending; resolver recomendação com evidência ou waiver válido até o deadline, sem deixar pendente na entrega.
+617: 
+618: ## Verification Debt Assessment (Required Before `Completed`; mandatory audit for `medium|big` or when debt signals exist)
+619: - **Audit outcome:** high
+620: - **Why this outcome:** não implementado; toda evidência de produto pendente, sem claim de entrega.
+621: - **Inline code TODO debt:** none
+622: - **Evidence / audit artifact:** planned após implementação
+623: - **Accepted residual debt:** none; dependência externa não é waiver.
+624: 
+625: ## Independent Test Quality Audit Gate (Deterministic Floor From Audit Escalation)
+626: - **Audit decision:** required
+627: - **Why this decision:** big, contrato/API/schema/auth e fluxo crítico.
+628: - **Trigger signals in scope:** architectural change|shared contract/api/schema|critical-user-journey
+629: - **Impact signals in scope:** cross-module blast radius|public contract/schema/api|auth/payment
+630: - **Required evidence matrix (when architectural):** unit|integration|web real-backend
+631: - **Package mode:** bounded-file-set
+632: - **Package minimum contents:** baseline aprovado, diff público limitado, evidência por critério, aderência e riscos.
+633: - **Internal reviewer mandate:** required, fresh internal no-context reviewer, não executor; aguardar terminal.
+634: - **Canonical method:** wf-docker-independent-test-quality-audit-method
+635: - **Canonical multi-lane audit protocol (when required):** audit-protocol-triple-review
+636: - **Audit session / round evidence (when protocol used):** planned após implementação
+637: - **Audit status:** not_run
+638: - **Findings summary:** none; nenhuma auditoria de entrega executada
+639: - **Evidence / reference:** planned após implementação
+640: - **Waiver authority / reference (required if waived):** n/a
+641: 
+642: ## Independent No-Context Final Review Gate (Deterministic Floor From Audit Escalation)
+643: - **Final review decision:** required
+644: - **Why this decision:** big, contrato/API/schema/auth e fluxo crítico.
+645: - **Trigger signals in scope:** architectural change|shared contract/api/schema|critical-user-journey
+646: - **Impact signals in scope:** cross-module blast radius|public contract/schema/api|auth/payment
+647: - **Required evidence matrix (when architectural):** unit|integration|web real-backend
+648: - **Package mode:** bounded-file-set
+649: - **Package minimum contents:** baseline aprovado, diff público limitado, evidência por critério, aderência e riscos.
+650: - **Internal reviewer mandate:** required, fresh internal no-context reviewer, não executor; aguardar terminal.
+651: - **Canonical method:** wf-docker-independent-final-review-method
+652: - **Canonical multi-lane audit protocol (when required):** audit-protocol-triple-review
+653: - **Audit session / round evidence (when protocol used):** planned após implementação
+654: - **Final review status:** not_run
+655: - **Findings summary:** none; nenhuma auditoria de entrega executada
+656: - **Evidence / reference:** planned após implementação
+657: - **Waiver authority / reference (required if waived):** n/a
+658: 
+659: ## Independent Cutover Integrity Audit Gate
+660: - **Cutover audit decision:** required
+661: - **Why this decision:** migra todos senders comuns para owner/port canônicos e elimina dispatch antigo, mantendo protocolos legítimos separados.
+662: - **Cutover signals in scope:** intentional canonical boundary change|shared dispatch replacement
+663: - **Package mode:** bounded-file-set
+664: - **Canonical multi-lane audit protocol (when used):** audit-protocol-triple-review
+665: - **Cutover audit status:** not_run
+666: - **Findings summary:** planned after implementation
+667: - **Evidence / reference:** harness D09 e módulos/sources consolidados, sem shim temporário
+668: - **Waiver authority / reference (required if waived):** n/a
+669: 
+670: ## Delivery Confidence Gate (Required for `✅ Production-Ready`)
+671: Planejado para o gate de entrega após APROVADO; nenhum resultado de implementação reivindicado.
+672: 
+673: ## Module Consolidation Gate (Required Before `Completed`)
+674: Planejado para o gate de entrega após APROVADO; nenhum resultado de implementação reivindicado.
+675: 
+676: ## Commands (Run Locally)
+677: Guardas de planejamento após freeze. Produto somente após APROVADO: bash scripts/test-channels-local.sh all, depois do boundary positivo. Nenhum teste/runtime/account call nesta preparação.
+678: 
+679: ## Files Expected (Compatibility Note)
+680: Diff Expectation Contract governa os paths, sem autorização de mudanças além dele.
+681: 
+682: ## COMENTÁRIO:
+683: Nenhuma pergunta de produto material pendente.
+684: 
+685: 
+686: ## Producer / Consumer Contract Matrix
+687: 
+688: | Producer | Consumers | Auth / fields | Planned effect / constraint |
+689: | --- | --- | --- | --- |
+690: | Channel.sendMessage internal | OutboundService | opaque recipientRef/text; operation-bound implementation, no raw token | normalized result D04; one external POST, no retry, no DB message write by adapter |
+691: | ChannelResolver internal | OutboundService/policy | trusted reference derived from authorized session/API-key conversation or verified bot ingress; owner DB rechecked | Channel plus safe storage-provenance binding; no caller provider selection/secret |
+692: | GET /api/bff/conversations/:id/messages | Inbox | existing session/BU lookup, timeline fields unchanged; janela adds disponivel/motivo | observational availability, no external calls/secret decrypt; unavailable composer with fixed reason |
+693: | POST /api/bff/conversations/:id/messages | Inbox | existing session/CSRF/ATENDENTE+ and {texto}; success201 existing {id,canal,em} | shared outbound; D05 errors additive outcome, honest text; preserve draft and no auto resend |
+694: | GET /api/v1/conversations | public API clients | existing partner key scope; existing fields, adds envio_disponivel/motivo_indisponibilidade | existing window values remain, unavailable selection returns false/null rather than failing whole list |
+695: | GET /api/v1/conversations/:telefone/messages | public API client | existing partner key/BU and phone conversation lookup; timeline/window fields unchanged | disponibilidade aditiva como listagem, sem provider GET/segredo |
+696: | POST /api/v1/messages | public API client | existing API key/account_id, telefone/texto/atendente and rate limit | request shape/success unchanged; same shared outbound, source authorization and EXTERNO authorship; D05 error mapping |
+697: | IncomingService Typebot text response | existing bot sessions | accepted ingress exact channel/identity/tenant, no fabricated human user | same shared outbound/window/result/acceptance; preserve queue/status/human owner, stop on unknown/block/refusal, no replay |
+698: 
+699: **Fixed availability reasons:** CANAL_AUSENTE, CANAL_AMBIGUO, CANAL_SELECIONADO_INDISPONIVEL, CHANNEL_IDENTITY_NOT_VERIFIED, CHANNEL_NOT_READY, PENDING_CREDENTIAL, JANELA_FECHADA; null when observed available. Availability never grants authority or guarantees external delivery. Existing input limit4096/request phone normalization stays at current product boundaries; the Channel port has no universal WhatsApp address requirement. No new public route or channel choice field is introduced in06.
+700: 
+701: ## Planning references / provenance
+702: 
+703: Direction and extension requirements are explicit user statements2026-10-20. Initial framing opinion is artifacts/analysis/leadshug-channel-abstraction-framing-opinion-20261020.md (advisory only). Primary conceptual sources: NestJS custom providers https://docs.nestjs.com/fundamentals/custom-providers and Liskov/Wing1994 https://www.cs.cmu.edu/~wing/publications/LiskovWing94.pdf, previously consulted. Provider error source consulted by owner (bounded public reference; reviewer independently hit429): https://developers.facebook.com/documentation/business-messaging/whatsapp/support/error-codes/. Local code proves current behavior, not future platform integration or live readiness.
+704: 
+705: ## Execution Checkpoints
+706: 
+707: | Checkpoint | State | Evidence / limit |
+708: | --- | --- | --- |
+709: | CP01 — runner antes de testes | passed precondition | artifacts/reviews/leadshug-channel-abstraction-20261020/evidence/runner-checkpoint.json; allowlist antes de stat, sem varredura ampla; bash-n/diffcheck/mock config-only. Nenhum teste de produto ou Docker real executado neste checkpoint. |
+710: | CP02 — Channel/outbound/consumers + Web/tests | implementation, not delivered | Executor único; artifacts/tmp/stcon06-executor-* e evidence/executor-validation.json reservados. Initial RED dependencyguard175pass/1fail. all33610 terminal0:194unit/308PG/29Web/50browser, snapshot anterior agora insuficiente pelas findings round2. |
+711: | CP03 — independent adherence/security rounds1/2/3 | terminal; R02 protection gap open | R01/R03/R04/R05 corrected in reviewed snapshot; shippingadapter omission mutants fail409vs201 then exactrestored. R02 needs causal response.text/handler barrier. Full implementation-round-1/2/3-resolution.md; no waiver/debt or physicalproof. |
+712: | CP04 — actual R05 regression RED | reproduced before fix | Canonical API49493 terminal1: Meta200 success:false+ID expectedUNKNOWN/TRANSPORT_UNCONFIRMED, actualACCEPTED;20otherunitfiles green. Executor will preserve exact log/provenance and correct source after terminal. Not blanket RED for other cases. |
+713: 
+714: ## Supplemental Expected-Path Validation — 2026-10-20
+715: 
+716: User explicitly replied **“Validar os dois arquivos de apoio”** to the exact bounded proposal [test-companion-path-admission.md](../../../artifacts/reviews/leadshug-channel-abstraction-20261020/test-companion-path-admission.md). This validates only Web `src/api.spec.ts` and `e2e/timeline-freshness.ts` as M companions for D10/SCOPE05. Scope, DoD, public behavior, frozen D01..10, private-data prohibition and required checks are unchanged. The direct client test was already added before the path omission was noticed; its admission is explicit here. The nested helper correction was not applied or run before this validation. Executor remains sole product writer; browser/all may proceed only after both freshness inventories use positive pathspecs before discovery.
+717: 
+718: ## Implementation Assurance — Round 1
+719: 
+720: Architecture adherence and separate security reviews completed through canonical subagent_review_run.py, gpt-6.1-sol/xhigh, closed embedded source packages; strict merge passed. Architecture: changes required; security: source-only classification defects and evidence gaps, no demonstrated tenant breakout or credential disclosure. Artifacts: evidence/adherence.raw.json, adherence.merge.json; security.raw.json, security.merge.json. Reviews did not certify final all or physical proof. No live review was cancelled or repackaged. All findings integrated as approved-contract remediation, with delivery still Pending.
+721: 
+722: | Finding ID | Resolution (`Integrated|Challenged|Deferred`) | Usefulness (`useful|noise|mixed|unknown`) | Formalizable (`yes|partial|no|unknown`) | Candidate Rule Level (`paced|project|none|unknown`) | Candidate Rule ID | Rationale / Evidence |
+723: | --- | --- | --- | --- | --- | --- | --- |
+724: | ADH-01 | Integrated | useful | yes | project | n/a | ST06-R01; D04 complete-envelope classification, remediation open |
+725: | SEC-01 | Integrated | useful | yes | project | n/a | duplicate ADH-01 consolidated ST06-R01; same open blocker, not ignored |
+726: | ADH-02 | Integrated | useful | partial | project | n/a | ST06-R02; independently confirms browser navigation defect, remediation open |
+727: | SEC-02 | Integrated | useful | yes | project | n/a | ST06-R03; supported ACK structure vs malformed empty object, remediation open |
+728: | SEC-03 | Integrated | useful | yes | project | n/a | ST06-R04; reconcile source/proofs and add only missing local negative/isolation cases |
+729: 
+730: 
+731: ## Implementation Assurance — Round 2
+732: 
+733: Both canonical CLI reviews terminal0, strict merge passed: evidence/adherence-round2.raw.json and security-round2.raw.json. Full adjudication and exact overlapping ID bindings: implementation-round-2-resolution.md. Original R01/R03 counterexamples resolved at source; R02/R04 protection gaps remain and R05 is a new classifier case. No architecture expansion, waiver/debt or delivery claim. Runner33610 must terminate before further product edits.
+734: 
+735: | Finding ID | Resolution (`Integrated|Challenged|Deferred`) | Usefulness (`useful|noise|mixed|unknown`) | Formalizable (`yes|partial|no|unknown`) | Candidate Rule Level (`paced|project|none|unknown`) | Candidate Rule ID | Rationale / Evidence |
+736: | --- | --- | --- | --- | --- | --- | --- |
+737: | adherence-round2:ADH-R2-01 | Integrated | useful | yes | project | n/a | ST06-R05 Meta success:false contradiction; approved D04 remediation open |
+738: | adherence-round2:ADH-R2-02 | Integrated | useful | partial | project | n/a | ST06-R02 headers-only wait can falsely pass before stale completion |
+739: | adherence-round2:ADH-R2-03 | Integrated | useful | yes | project | n/a | ST06-R04 testfake owns guard, must exercise shipping adapter callback |
+740: | security-round2:ADH-R2-01 | Integrated | useful | yes | project | n/a | duplicate ST06-R04, same shipping-adapter harness gap |
+741: | security-round2:ADH-R2-02 | Integrated | useful | partial | project | n/a | duplicate ST06-R02, same browser completion gap |
+742: 
+743: ## Review round3 findings resolution
+744: 
+745: | Finding ID | Disposition | Usefulness | Formalizable | Candidate Rule Level | Rule Update | Evidence / limit |
+746: | --- | --- | --- | --- | --- | --- | --- |
+747: | adherence-round3:ADH-R3-01 | Integrated | useful | partial | project | n/a | ST06-R02; test-only native body-read task barrier, mutation proof and revised canonical validation pending |
+748: | security-round3:ST06-R02 | Integrated | useful | partial | project | n/a | same ST06-R02; no demonstrated production vulnerability, D10 protection gap retained blocking |
+```
+
+
+## Source foundation_documentation/modules/inbox-and-conversations.md
+
+Raw SHA256 `b9d2d151cceb2758e381c6787b8c4baf4e26630d88c62057ecfbc24e0dd26a72`; bytes12425.
+
+```
+1: # Module: Inbox and Conversations
+2: **Version:** 1.0
+3: 
+4: Owns contacts, conversations, messages, inbox, assignment and service responses across official and unofficial
+5: WhatsApp transports.
+6: 
+7: ## Invariants
+8: 
+9: - A conversation is unique by BU and contact, not by transport.
+10: - Incoming webhook processing is idempotent.
+11: - Outbound responses enforce the platform window and channel capability.
+12: 
+13: ## API Endpoint Definitions
+14: 
+15: BFF routes use `/api/bff`; public integrations use `/api/v1`; webhook contracts use `/webhooks`.
+16: 
+17: ## Contrato aprovado da timeline da inbox
+18: 
+19: Aprovado pelo usuário em 2026-10-14 no [TODO ST-ATT-01](../todos/completed/features/TODO-leadshug-inbox-message-timeline-pagination.md). Este módulo é o owner do contrato; implementação e verificação são registradas no TODO. Estado de verificação: **Verified local**, em2026-10-15. API115unit/224E2E, Web20unit/36browser e FRC3 passaram em Node22/PG16 descartável com fontes/build servido conferidos. Aderência e TQA independentes convergiram; [evidência e limites](../artifacts/reviews/leadshug-inbox-timeline-20261014/execution-evidence.md). Final review aceito e guardas de entrega go; commits locais APIae6a9662c29b77276351aa9de653a47276372246 e Web4e56f6c1f4515b918d05b8c87e890d42e8542c56 têm os16 blobs conferidos no [bridge de fonte](../artifacts/reviews/leadshug-inbox-timeline-20261014/evidence/committed-source-attestation.json). Entrega local, sem promoção operacional ou Production-Ready.
+20: 
+21: ### Thread paginada BFF v1 — GET /api/bff/conversations/:id/messages
+22: 
+23: - Sessão e grant ATENDENTE ou superior na BU; resolver/autorizar a conversa antes de validar ou consultar cursores. Sem sessão: 401. Recurso fora do escopo: 404, inclusive com query/cursor malformado.
+24: - Query: `limite` inteiro decimal 1..100, padrão 50; `antes` cursor opaco opcional, máximo 256 caracteres; `marcarLida` booleano textual `true|false` opcional.
+25: - Sem `antes`, `marcarLida` ausente equivale a true para conservar abertura humana. Cliente usa explicitamente false para refresh, pós-ação, poll, reconexão e recuperação. Com `antes`, leitura é sempre false; `marcarLida=true` explícito com `antes` é inválido. Valores inválidos, query repetida/array e cursor inexistente/alheio à conversa autorizada: 400 `PAGINACAO_INVALIDA`; query desconhecida é ignorada e não altera comportamento.
+26: - A marcação de abertura é uma única atualização atômica de `unreadCount=0`, depois da autorização e antes de buscar a página. Essa escrita é a fronteira de reconhecimento: incrementos de entrada serializados depois dela permanecem não lidos. Não fazer select-depois-reset nem adicionar estado de leitura por mensagem. Se abertura/marcação falhar, não executar uma escrita posterior compensatória que apague entradas novas.
+27: - Resposta conserva `conversa`, `janela` e `messages` e acrescenta `paginacao: { limite, temAnteriores, cursorAnterior }`.
+28: - Sem cursor, buscar as últimas N mensagens. Responder páginas em ordem crescente pelo par `(createdAt,id)`; ordenação de ID segue a comparação do banco.
+29: - Cursor versionado identifica a mensagem-âncora; resolver seus dados somente na conversa autorizada. Paginação anterior usa comparação estrita do par, busca no máximo N+1 registros e nunca escreve não lidas.
+30: - `cursorAnterior` representa o registro mais antigo da página quando há continuação; caso contrário null. Vazio: messages vazio, temAnteriores false, cursor null.
+31: - API pública e Consultar mantêm seus contratos e efeitos atuais. Dublês no backend de testes substituem somente portas externas; não há flag de teste no código de produção.
+32: 
+33: ### Recuperação e estado da inbox
+34: 
+35: - Manter somente a coleção da conversa ativa por ID; liberar contexto/páginas quando BU/conversa mudar. O cursor histórico pertence ao backfill e não é substituído pelo cursor da página recente de um refresh.
+36: - Na atualização, capturar uma fronteira fixa T igual ao timestamp da mensagem mais recente conhecida antes da passagem. Buscar página recente sem marcar leitura e caminhar para trás até alcançar timestamp estritamente menor que T, ou esgotar mensagens. Incluir integralmente o grupo empatado em T; encontrar um ID conhecido não encerra a recuperação.
+37: - Se a coleção ainda é vazia, atualização funciona como página inicial sem efeito de leitura. Separar o piso de cobertura confirmado do maior timestamp mesclado. A recuperação captura um piso pendente T e toda passagem coalescida/retomada/retry conserva esse piso original, mesmo quando a cabeça já avançou para H maior que T.
+38: - Evento durante a recuperação marca uma nova passagem necessária desde a página recente, ainda com o piso pendente T; terminar a caminhada atual não confirma cobertura. Só promover o piso confirmado quando uma passagem atravessar todo T sem evento/trabalho concorrente pendente. Se houver dirty/pending, conservar T e a indicação de atualização, com o mesmo orçamento de três queries por rodada. Não promover pelo máximo da coleção nem por um poll enquanto houver recuperação pendente.
+39: - A recuperação cobre inserções novas, incluindo ID menor em T atrás de um cursor já percorrido. Importação/backdating de histórico fora do grupo de cobertura permanece fora deste recorte. Mensagens mais recentes mescladas não eliminam essa prova de continuidade.
+40: - Recuperação tem cursor/progresso próprios e uma única passagem em voo por contexto. Cada rodada executa no máximo três queries de página, separadas e bounded; uma rodada incompleta mantém indicação visível de atualização/lacuna e cursor para `Continuar atualização`/retry. Novo evento não reinicia seu orçamento; polling pode retomar a rodada pendente. Não afirmar continuidade até cruzar toda a fronteira.
+41: - Disparadores: evento de mensagem coalescido, socket restabelecido sem depender de outro evento, pós-ação e poll da thread selecionada a cada 60 segundos. Registrar callback de conexão no helper existente; preservar seus consumidores.
+42: - Backfill altera somente coleção e cursor histórico. Metadados conversa/janela só são aplicados pela leitura atual com versão/frescor adequado; uma página anterior atrasada não desfaz close, troca de status ou atualização de janela.
+43: - Todo efeito assíncrono captura BU/conversa/geração. Resposta, erro, scroll e limpeza do texto enviado são ignorados se contexto mudou; limpeza de draft também verifica que o usuário não digitou outro texto enquanto o envio estava pendente.
+44: - Histórico anterior preserva posição do usuário. Mensagens novas não forçam deslocamento quando ele lê trecho antigo. Estados de loading, vazio, fim, recuperação pendente, falha/retry e acesso perdido são visíveis e operáveis por teclado.
+45: 
+46: ### Decisões verificadas e limites locais
+47: 
+48: - Acesso por cursor permanece limitado à conversa autorizada; reconhecimento atômico precede a página e leituras de fundo são neutras.
+49: - A coleção pertence somente à conversa ativa. Recuperação conserva T e o restart pendente, com no máximo3tentativas por rodada inclusive falhas; evento não renova saldo. Continue/poll autorizam retomada.
+50: - Notificações durante abertura/recuperação vazia são conservadas. Respostas, erros, rascunho, metadados e scroll respeitam geração; a limpeza do erro verifica sua versão/owner.
+51: - O EXPLAIN recente/profundo/empates e trial de índice não justificaram migration; o predicado profundo ainda filtra linhas mais recentes. Medições locais não estabelecem SLO/capacidade de produção.
+52: - API pública, Consultar, transporte/providers, transferência, estados de mensagens e mídia mantêm os contratos e escopos próprios.
+53: 
+54: 
+55: ## Aceitação de mensagens e automação — ST-CON-01
+56: 
+57: APROVADO em2026-10-15; implementação exercitada localmente em2026-10-16 ([all499/22migrações e fonte/freshness](../artifacts/reviews/leadshug-number-onboarding-20261015/evidence/root-cp27-receipt.json)); architecture/security, Performance/cutover e TQA independentes aceitos no escopo local. Final review local aceito; source commits/bridge byteexact registrados, prova externa local dos dois canais concluída CP106-108; encerramento local concluído CP108 no TODO, sem alterar o contrato de timeline verificado acima. Owner inbox-and-conversations; identidade externa e pareamento pertencem a [canais](integrations-and-channels.md#cadastro-de-números-st-con-01). Execução no [TODO](../todos/completed/features/TODO-leadshug-channel-connection-readiness.md).
+58: 
+59: Entrada aceita exige externalMessageId não vazio e chave única PostgreSQL (providerResourceIdentityId,externalMessageId); identidade já incorpora provider. Mesmo ID em recursos diferentes não colide. `Message` legado pode manter FK/chave nulas; não inventar IDs nem apagar duplicatas históricas. Só backfill inequivocamente comprovado é admitido. Novas entradas sem ID ficam rejeitadas com erro seguro antes de efeito de domínio. Após identidade validada, transação curta aceita Message e cria/reusa conversa BU/contato com incremento unread; conflito de unique desfaz os efeitos daquela tentativa. Somente a transação vencedora publica realtime e aciona automação. Echo OUT e resultado do sender compartilham a mesma aceitação transacional por identidade/ID, inclusive quando o echo chega primeiro; não criam outra Message, IN ou unread. Contrato detalhado abaixo. Replay sequencial/concorrente retorna sucesso idempotente para evento já aceito. Não se promete exactly-once externo: crash depois do commit pode deixar publicação/automação ausente; não repetir bot automaticamente nem introduzir plataforma de jobs/outbox neste recorte. Essa limitação precisa constar do runbook.
+60: 
+61: IncomingService deriva Mantenedora da BU verificada. Busca de trigger exige bot.mantenedoraId desse tenant e buId exata OU trigger global dentro do MESMO tenant. Sessão retomada deve pertencer à mesma Mantenedora/BU/contato; sessão estrangeira falha fechado antes de texto externo. Criação deriva owner do contexto verificado, não de um bot arbitrário. Dois tenants com triggers globais concorrentes não compartilham bot, texto, sessão, saída ou credencial. São defeitos preexistentes na superfície tocada, cuja correção fica expressamente incluída para sustentar o recebimento deste cadastro.
+62: 
+63: Um serviço de aceitação de mensagem no domínio inbox é o owner da chave (providerResourceIdentityId,externalMessageId) para TODAS as novas gravações com ID: entrada, eco OUT, resultado de envio BFF/público e Typebot. Sender captura a identidade do canal autenticado, faz HTTP fora de transação e depois cria-ou-reconcilia pelo mesmo índice PostgreSQL. Sender-first, echo-first e ecos concorrentes devolvem o MESMO Message.id; conflito de unique não pode virar segundo registro nulo nem erro de inserção depois do envio bem sucedido. Validar owner BU/conversa/contato/direção na reconciliação; incompatibilidade é erro/quarentena de identidade, sem sobrescrever outro recurso. Registro local sem externalId confirmado conserva pendência/erro explícitos, sem inventar ID, retry externo ou garantia de deduplicação por ID inexistente.
+64: 
+65: Eco primeiro cria OUT sem autoria humana inventada; resultado interno enriquece o mesmo registro com conteúdo/autoria humana ou Typebot comprovados pelo caller. Eco posterior não apaga/substitui essa autoria e não muda createdAt/ID. Só criação vencedora emite evento de nova mensagem; enriquecimento preserva a identidade e usa refresh/projeção existente, sem novo IN, unread ou bot. Retorno BFF/público mantém seus contratos e contém o registro reconciliado. Invariantes de janela, permissão, conversa BU/contato, ordenação e timeline permanecem. Nenhum cache de ecos em memória ou lookup-antes-insert substitui o índice/transação. Continua explícito o limite de crash depois do commit e antes da publicação; não há claim exactly-once externo.
+66: 
+67: A verificação final de mapping/epoch deve ser sincronizada à gravação de conteúdo, incluindo webhook em voo atravessando RENEW/remove-recreate. A projeção existente após refresh mostra o mesmo ID enriquecido; se exigir diff hoje excluído, registrar a falha antes de admitir mudança de escopo. Não há autorização para Nova conversa manual, importação, sequenciamento de bot para mensagens distintas, worker ou outbox.
+```
+
+
+## Source foundation_documentation/modules/integrations-and-channels.md
+
+Raw SHA256 `031fab31685d00d635794aa10d0b1b8ee0a830e54b32622958b6bdc3e079853d`; bytes31617.
+
+```
+1: # Module: Integrations and Channels
+2: **Version:** 1.0
+3: 
+4: Owns Meta Cloud API, Evolution/Baileys, outbound webhooks, API keys and transport adapters.
+5: 
+6: ## Invariants
+7: 
+8: - Providers are adapters; business workflows do not depend on provider payload shape.
+9: - Secrets never enter logs, docs, fixtures or client bundles.
+10: - Provider failures become deterministic application errors.
+11: 
+12: 
+13: ## Cadastro de números ST-CON-01
+14: 
+15: Contrato aprovado pelo usuário em2026-10-15 no [TODO governante](../todos/completed/features/TODO-leadshug-channel-connection-readiness.md), documentação publicada3302964c. Estado: **Approved; implementação exercitada localmente em2026-10-16 ([all499/22migrações e fonte/freshness](../artifacts/reviews/leadshug-number-onboarding-20261015/evidence/root-cp27-receipt.json)); architecture/security, Performance/cutover e TQA independentes aceitos no escopo local. Final review local aceito; source commits/bridge byteexact registrados, prova externa dos dois canais concluída CP106-108; encerramento local concluído CP108 no TODO**. Owner: integrations-and-channels, escopo Mantenedora/BU; mantém constituição e políticas de isolamento. O módulo é autoridade do contrato; o TODO registra execução/evidência. Fonte API em api-app; Web em web-app.
+16: 
+17: ### Disposição do complemento técnico de teste (CP84)
+18: 
+19: O [complemento ST-CON-01-TESTAUTH](../todos/active/features/TODO-leadshug-meta-api-test-number-binding.md) foi **Cancelled por decisão humana em 2026-10-18**, antes de qualquer implementação de produto. A entrada técnica por token privado do Test Number não integra o contrato entregue deste módulo. Seu planejamento/diagnósticos permanecem históricos; retoma-se ST-CON-01 por Embedded Signup; primeira prova oficial de recebimento passou em cp106 e recuperação com nova troca física passou em cp107-108. Inscrição ausente foi descoberta relatada pelo operador e corrige a premissa anterior; acesso/elegibilidade, callback e roteamento devem ser conferidos no contexto atual. Nenhum suporte de standby/handover é declarado ou implementado por esta disposição.
+20: 
+21: ### BFF e autorização
+22: 
+23: Contexto do provedor conferido em2026-10-19: no [modelo atual da Meta](https://developers.facebook.com/documentation/business-messaging/whatsapp/account-model-evolution/), WhatsApp account (WAAC) representa o telefone; Messaging account contém templates, billing e inscrições de webhook. Na fase atual, o WABA ID existente identifica a Messaging account e os phoneNumberIds/APIs continuam compatíveis. O [onboarding padrão](https://developers.facebook.com/documentation/business-messaging/whatsapp/account-model-evolution/onboarding/) cria uma Messaging account por parceiro e permite compartilhar um telefone já registrado com outro parceiro. Duas Messaging accounts no mesmo telefone ou ausência de templates de outro parceiro não comprovam erro do vínculo. Conferir autorização, associação do recurso e inscrição efetivas, além do roteamento no contexto atual. Registro do mesmo telefone e seleção da conta antiga são operações distintas; elegibilidade precisa ser observada na resposta real da Meta.
+24: 
+25: IDs/endpoints próprios de WAAC e transições obrigatórias futuras não são tratados como APIs disponíveis nesta entrega. O [parâmetro messaging_account_id](https://developers.facebook.com/documentation/business-messaging/whatsapp/account-model-evolution/messaging/) deve ser avaliado quando a credencial tem acesso de envio a mais de uma Messaging account no mesmo telefone; não é causa presumida de falta de entrada nem autorização para mudança antecipada de schema/consumer. Cadastro, primeira troca oficial e retomada local passaram cp106-108; encerramento local está registrado no TODO ST-CON-01 concluído.
+26: 
+27: - `GET /api/bff/number-registrations/capabilities`: sessão válida; expõe apenas appId/configId/Graph version e disponibilidade/explicação por modalidade, nunca app secret/token/chave. Não chama provider. A modalidade oficial depende de versão Graph explícita no formato `vXX.0` e do conjunto Meta completo da instalação; valores ausentes, vazios ou malformados não anunciam disponibilidade, sem fallback de versão presumida. A configuração Meta inteira ausente mantém a administração disponível; configuração parcial é erro de implantação.
+28: - `POST /api/bff/number-registrations`: `Idempotency-Key` UUID obrigatório, body exatamente uma origem (`buId` existente ou `novaBu:{nome,setorId?}`) e `tipo:OFICIAL|NAO_OFICIAL`, `operation:NOVO|REAUTORIZAR`; REAUTORIZAR exige BU existente, channelId e expectedGeneration. BU existente exige ADMIN nela; BU nova exige ADMIN na Mantenedora e herda grants/setor pela mesma regra transacional de TenancyService. Oficial sem app/config/crypto configurados e não oficial sem módulo contratado+teto configurado falham antes de criar BU/provider. Para NOVO, nova BU (quando pedida), reserva do canal e tentativa são atômicas no DB; REAUTORIZAR reutiliza canal conforme contrato de ativação abaixo; refatorar reuso transacional da criação existente, preservando audit e expansão dos grants. Mesmo key/payload retorna tentativa original; mesmo key e payload diferente409. Nenhum HTTP de provider dentro da transação.
+29: - `GET /api/bff/number-registrations/:id`: apenas ADMIN da BU e tenant da tentativa; devolve etapas, número redigido conforme DTO da BU, erro safe e progresso. Nunca devolve código/PIN/token. Sem sessão401, recurso fora do escopo404, papel insuficiente403; autorizar antes de revelar erro de payload/estado.
+30: - `POST /:id/authorize` (prefixo anterior): oficial, nonce+code recebido no callback SDK. Pertence à sessão exata/usuário da tentativa, hash da sessão/expiração/nonce checados; CAS PENDING→PROCESSING antes de trocar code. Código não persiste nem entra em URL/log/audit. Envelope candidato do token persistido na tentativa antes dos passos seguintes; nunca substitui a credencial ativa nesta etapa. Timeout de troca fica AMBIGUO e exige nova autorização; nunca reenvia code consumido automaticamente.
+31: - `GET /:id/options`: somente depois de autorizar; retorna WABAs/números permitidos pela credencial dessa tentativa. Backend prova app/audience, escopos e pertencimento do recurso; IDs postMessage não são autoridade. Página máxima100 e continuação explícita, sem scan infinito. `options` aceita `wabaId` e cursor opaco `after` limitado a512caracteres; `confirm` admite o mesmo `after` opcional para reler somente a página selecionada. Cursor e IDs do cliente não concedem autoridade: backend revalida app/escopos, WABA permitida e presença do phoneNumberId na página retornada pelo provider para ESSA WABA, com budget3requests/10s. Cursor forjado/velho sem o recurso falha sem promoção nem mutação; não seguir URL externa indicada pelo cliente. Número escolhido sempre confirmado pelo operador; nunca escolher primeiro por conveniência.
+32: - `POST /:id/confirm`: `wabaId,phoneNumberId,modoRegistro` validados contra provider e grant atual. Telefone obtido do provider deve coincidir com BU já numerada; se BU sem telefone, preencher por CAS na mesma transação do vínculo. A identidade externa tem proprietário durável e único por provider/recurso, inclusive após exclusão do canal; colisão ou tentativa de transferir entre BUs retorna409 sem revelar tenant alheio. Só a confirmação da mesma identidade permite promover a credencial candidata por CAS.
+33: - `modoRegistro:NOVO` admite PIN6dígitos e passo de register explícito conforme modalidade convencional Cloud API. `modoRegistro:JA_REGISTRADO` não redefine PIN nem chama registro destrutivo; vínculo fica pendente de prova operacional quando a leitura Meta não comprovar readiness. PIN não retorna em DTO/log, só persistência cifrada se necessário à recuperação. Não realizar migração/coexistência/unregister.
+34: - `POST /:id/advance` e `POST /:id/retry`: uma rodada tem no máximo3requests externos, cada um timeout10s e um único lease de45s por vínculo; persistir estágio/resultado após cada passo. Não há retry automático de mutação ambígua. Read-before-retry reconcilia estágio; se não houver operação segura, declarar pendente/reautorizar em vez de fingir exactly-once externo. Assinar WABA só depois de mapping channel↔providerID local durável; webhook pode chegar antes do fim sem perder o tenant correto. Configurar callback apenas da própria instalação/conta de teste, sem override alheio.
+35: - `POST /:id/cancel`: antes de side effect externo pode encerrar reserva; depois conserva vínculo/etapas parciais e informa limpeza necessária. Não apagar BU nem conversas, não fazer unsubscribe de WABA compartilhada automaticamente. Consumidores atuais exigem credencial e readiness do vínculo antes do OUT.
+36: - `POST /api/bff/business-units/:buId/channels/:tipo/verify`: ADMIN, um lease por vínculo, mesmo budget3×10s; listagem nunca faz fan-out. Resultado muda só a dimensão efetivamente observada. Erros externos mapeados para códigos de catálogo, sem texto/token/URL brutos.
+37: - `POST /api/bff/business-units/:buId/channels/nao-oficial/pair` inicia/renova pairing com intent INITIAL ou RENEW, sessão ADMIN, anti-CSRF, lease e geração atual. O antigo GET de QR retorna405 sem chamar Evolution nem iniciar/renovar conexão; nenhuma mutação de provider em GET. Resposta contém QR efêmero só ao admin; o QR nunca é persistido em eventos/audit. Nova UI não usa o POST antigo que conecta WABA pelo token global. Rota antiga deve recusar fluxo incompleto com instrução do contrato novo, sem fallback de token; atualizar seus testes de expectativa dentro do escopo.
+38: 
+39: A verificação administrativa de um número oficial já vinculado revalida app, escopos e WABA da credencial ativa uma vez; procura o ID exato em no máximo duas páginas de números, sem seguir URLs de continuação. O limite total é uma consulta de grant e duas páginas, cada request com timeout10s sob lease45s. O confirm do cadastro continua relendo somente a página escolhida pelo operador. Ausência só é conclusiva quando uma lista estruturalmente válida se esgota; JSON inválido, data ausente/não-array, linha inválida, paginação inconsistente, continuação além do limite, ciclo ou cursor inválido mantêm a observação anterior e devolve503/codeMETA_INDISPONIVEL com mensagem fixa segura. O serviço traduz apenas a falha Meta reconhecida, preserva erros de autorização/concorrência e libera o próprio lease; não expõe erro bruto nem promove status por consulta inconclusiva. O reparo cp36g valida também a estrutura do grant antes de iterar os escopos/alvos e usa a interseção completa de autorização para verificar o número persistido; o limite100 permanece na apresentação de opções. A validação corrente cp36j passou 174 testes unitários e 288 E2E PostgreSQL pelo runner canônico. Web28/browser47 são evidências cp36h reaproveitadas por fontes consumidoras idênticas, sem alegar novo browser ou all537. Os testes diretos de grant revogado e app_id estrangeiro, com os demais campos válidos, foram aceitos no TQA completo e na revisão final independente j. A imagem servida continua i: somente o teste excluído do build mudou, com ponte explícita de bytes/compilados, sem novo build ou rótulo j. A retomada automática não oficial e a troca posterior real estão comprovadas cp49/cp52; a nova conversa foi de outro contato e o histórico anterior foi preservado. A primeira troca oficial IN/OUT e o recebimento foram comprovados em cp106, com readback canônico CONECTADO/identidade verificada/SUBSCRIBED/receipt confirmado; recuperação oficial foi comprovada por restart permitido da API e nova IN/OUT cp107-108. O baseline histórico cp60 ainda não tinha receipt; cp106 o confirmou na BU Local Test Ofc. CP107 retomou a API e preservou os estados; CP108 confirmou nova troca física após interrupção. Entrega geral Pending e restrição privada de dependências preservadas.
+40: 
+41: ### Persistência e recuperação
+42: 
+43: `ChannelRegistrationAttempt` guarda id, Mantenedora/BU/canal, tipo, userId, hash de sessão, nonce hash, idempotencyKey+requestHash, estado, versão, leaseUntil, expiresAt, stage e erro safe. Unique Mantenedora/idempotencyKey e slot BuChannel(buId,type) já existente. IDs externos únicos por tipo; migrations detectam conflito preexistente antes de impor constraint. IDs internos podem ser prealocados sem compromisso de provider.
+44: 
+45: `ChannelCredential` mantém token/PIN em envelope com keyId/version/nonce/ciphertext/tag, ligado ao canal da BU e geração; não inventar vault genérico nem refletir o envelope no model público. AAD inclui provider/BU/channelID/generation. Tamper/decrypt/key ausente falha fechado, nunca fallback global. Passar credencial por interface de adapter, sem vazá-la a audit ou payload de domínio. Não copiar secrets do ambiente legado.
+46: 
+47: Cadastro pode ficar `PENDING_AUTH`, `PENDING_NUMBER`, `REGISTERING`, `PENDING_RECEIPT`, `CONNECTED`, `ERROR`, `CANCELLED`, com dimensão de providerConnection/receipt/credential e timestamps. O enum físico e mapeamento para status atual devem ser explícitos na migração; nenhum label mágico na UI. `CONNECTED` exige etapas aplicáveis concluídas, identidade correta e conexão confirmada; oficial já registrado sem endpoint conclusivo não recebe falso CONNECTED só pela lista de números. Primeira IN autenticada pode comprovar recebimento, não validade permanente do token de saída. Teste IN/OUT externo certifica somente a execução observada, não saúde contínua.
+48: 
+49: Reconexão e verificação administrativa repetida devem convergir de forma idempotente quando a tentativa corrente da mesma geração e do marcador de pareamento aplicável já está `CONNECTED`/`RECEIPT_VERIFIED`. No canal oficial, a tentativa conserva `pairingEpoch=null`, pois não há pareamento QR; no não oficial, exige o epoch numérico exato da rodada corrente. Essa aplicabilidade vem da modalidade confiável do canal, sem aceitar null como alternativa genérica para Evolution. Repetir essa observação não promove novamente nem incrementa a versão da tentativa; receipt e identidade existentes permanecem. Tentativa cancelada, etapa incompatível ou geração/epoch divergente falha fechada e não restaura estado do canal. A aceitação continua condicionada aos locks, owner, vínculo corrente e receipt; estado persistido durante indisponibilidade é a última observação, não garantia de saúde contínua.
+50: 
+51: Reserva idempotente da instância Evolution usa nome derivado de channelId+pairingEpoch persistida, estável durante retries desse epoch; nunca nome do operador+timestamp. Nova rodada de pareamento usa identidade externa distinta, conforme contrato de confiança abaixo. Se create retorna timeout, consultar a mesma identidade antes de retry; nenhuma segunda instância. Webhook deve ser configurado e verificado antes de concluir. Leitura de estado e evento usam geração e versionamento; retry de geração anterior não escreve após remove/recreate. Desconectar não apaga histórico. Callback tardio de instância sem vínculo não cria BU/tenant.
+52: 
+53: A tentativa expira em10min enquanto espera autorização. Após credencial ativa promovida, operações de recuperação do canal são administrativas e reautorizam grant/sessão corrente; não reaproveitam code/nonce antigos. Lease expirado não é sucesso e requer reconciliação; nenhuma transação DB é mantida durante rede. Não criar worker global ou sistema genérico de jobs neste slice.
+54: 
+55: ### UI e integrações
+56: 
+57: Wizard: nome/BU → modalidade → janela Meta ou QR → confirmar número → mostrar cadastro/recebimento e ação de retry quando parcial. Cancelar popup, trocar BU, desmontar tela ou nova tentativa invalida callbacks/efeitos antigos no cliente; backend ainda revalida scope. A UI não consome mensagens postMessage para autorização ou seleção; somente o callback do SDK correlacionado à operação atual inicia a troca do code. IDs externos são obtidos e confirmados pelas leituras autorizadas no backend. Callback de login fica preso à geração/attempt/nonce corrente; prova server-side da credencial/ID é obrigatória.
+58: 
+59: Permissões existentes preservadas: ADMIN da BU para conectar existente; ADMIN da Mantenedora para criar BU; ATENDENTE não ganha gestão; módulo não oficial depende do teto e contratação. Dados sensíveis nunca vão a config.js/bundle. UI mostra ausência de configuração e falhas por etapa, sem exigir WABA/token manual do operador comum no fluxo Meta. Administrador pode reautorizar conta já cadastrada; credencial manual de número já registrado, se usada, é caminho técnico explícito com conferência Meta e cifra, jamais env global implícita.
+60: 
+61: BFF responder e API pública responder preservam DTOs/janelas. Typebot preserva o comportamento dentro da mesma Mantenedora, com seleção e sessão obrigatoriamente isoladas pelo tenant da BU verificada. A entrada acrescenta identidade verificada e deduplicação transacional; credenciais são resolvidas por vínculo em todos os consumers. DI deve convergir nos módulos BFF/público/webhook. Primeira IN cria/reusa conversa pelo contrato existente, não manual. Nova conversa por contato aguardará ST-CON-04.
+62: 
+63: ### Reautorização e ativação da credencial (NUM-ARCH-06)
+64: 
+65: Criar tentativa distingue `operation:NOVO|REAUTORIZAR`. NOVO reserva slot vazio; REAUTORIZAR recebe channelId e expectedGeneration e reutiliza o slot existente, inclusive canal migrado sem credencial. Valida ADMIN/tenant antes do estado; conflito de geração409. A nova tentativa torna-se currentAttemptId por CAS, sem mudar a credencial ativa. Reserva anterior expirada/cancelada sem efeito externo pode ser substituída, preservando BU; com efeito parcial, recuperar a mesma identidade externa, sem criar segunda instância.
+66: 
+67: Cada nova autorização depois de code consumido, expirado ou troca ambígua exige tentativa e nonce novos; não há reapresentação automática do code. `ChannelRegistrationAttempt` mantém envelope candidato separado de `ChannelCredential` ativa. AAD candidato inclui propósito, attemptId, provider, BU, channelId e geração; AAD ativo inclui propósito e versão ativa. Após validação server-side de identidade/escopos e confirmação do mesmo número, uma transação curta verifica currentAttemptId+generation+activeCredentialVersion e promove o envelope, recifrando para AAD ativo. Candidata de outro número, sessão revogada ou tentativa velha não pode substituir a ativa. Credencial utilizável anterior segue em uso até promoção; se já inválida, mostrar PENDENTE_CREDENCIAL, sem fallback global. Cancelar/expirar elimina o segredo candidato, conserva somente metadados seguros e mantém a ativa.
+68: 
+69: ### Confiança do pareamento e reconciliação OUT (NUM-CRIT-01/02)
+70: 
+71: Antes de INITIAL/RENEW produzir qualquer efeito externo, transação curta reserva pairingEpoch monotônica, limpa ownNumberVerified/verifiedEpoch e invalida leases/observações antigas por CAS. Cada novo pareamento lógico tem nome externo derivado de channelId+epoch, imutável nessa rodada; retry/renovação de QR pendente reutiliza a MESMA tentativa/epoch/instância, sem criar outra. RENEW de um canal antes verificado é novo epoch, não mera leitura de QR. Evento ou verificação pendente do epoch anterior nunca restaura confiança. Instância antiga fica aposentada no mapping durável; callback antigo só permite metadados seguros, nunca conteúdo/receipt/estado do canal atual.
+72: 
+73: O desenho escolhe identidade de instância específica do epoch, sem depender de o payload carregar uma geração local. Só observações da instância EXATA da rodada atual podem participar da confirmação. `open`/wuid isolados não reabilitam conteúdo: etapa administrativa bounded consulta identidade própria dessa instância nova no provider, valida resposta/ownPhone e grava verifiedEpoch por CAS contra currentAttemptId+pairingEpoch+generation. O cadastro/criação/configuração precede essa consulta; não aceitar resposta de outra instância nem confiar no nome informado pelo operador. Se o provider fixado não oferecer prova inequívoca da identidade da instância nova, manter PENDING_IDENTITY e bloquear a prova externa. Telefone vazio da BU só é preenchido com identidade comprovada por CAS, assim como no oficial; divergente permanece quarentena.
+74: 
+75: Antes de criar outra instância externa, reconciliar criação/aposentadoria/limpeza da instância anterior própria; timeout é ambíguo e exige read-before-retry. Ação RENEW informa ao administrador que inicia novo pareamento e interrompe aceitação até confirmação. Limpeza só atua em instância criada por este LeadsHug e com ownership comprovado; nenhuma adoção/remoção de instância legada. Mesmos budgets/leases, nenhuma transação sobre HTTP, worker ou buffer novo. Aposentar mapping ocorre antes da rede, independentemente de a limpeza externa terminar. Eventos sem a nova identidade ficam rejeitados conforme503/409 já definidos, sem promessa de replay.
+76: 
+77: Concretização física do mesmo contrato após revisão de implementação: backfill de nome externo conserva owner da BU, mas não comprova gestão do runtime por esta instalação. A evidência da reserva/criação própria deve ser durável e distinta desse backfill; verify/cleanup nunca deduzem essa autoridade só do nome mapeado. O tombstone/attempt retido mantém resultado e fence de limpeza mesmo após unlink do canal, sem perder ambiguidades. Etapa reservada ainda não criada distingue-se de create ambíguo, permitindo criar exatamente a substituta já reservada depois de limpar antecessora própria. Essas são condições dos limites já aprovados, sem adoção de legado ou sistema genérico de jobs. Promoções e remoções usam ordem consistente de locks e CAS verificado até commit; a fixação do telefone da BU valida o valor canônico atual dentro da mesma transação.
+78: 
+79: Um serviço de aceitação de mensagem no domínio inbox é o owner da chave (providerResourceIdentityId,externalMessageId) para TODAS as novas gravações com ID: entrada, eco OUT, resultado de envio BFF/público e Typebot. Sender captura a identidade do canal autenticado, faz HTTP fora de transação e depois cria-ou-reconcilia pelo mesmo índice PostgreSQL. Sender-first, echo-first e ecos concorrentes devolvem o MESMO Message.id; conflito de unique não pode virar segundo registro nulo nem erro de inserção depois do envio bem sucedido. Validar owner BU/conversa/contato/direção na reconciliação; incompatibilidade é erro/quarentena de identidade, sem sobrescrever outro recurso. Registro local sem externalId confirmado conserva pendência/erro explícitos, sem inventar ID, retry externo ou garantia de deduplicação por ID inexistente.
+80: 
+81: Eco primeiro cria OUT sem autoria humana inventada; resultado interno enriquece o mesmo registro com conteúdo/autoria humana ou Typebot comprovados pelo caller. Eco posterior não apaga/substitui essa autoria e não muda createdAt/ID. Só criação vencedora emite evento de nova mensagem; enriquecimento preserva a identidade e usa refresh/projeção existente, sem novo IN, unread ou bot. Retorno BFF/público mantém seus contratos e contém o registro reconciliado. Invariantes de janela, permissão, conversa BU/contato, ordenação e timeline permanecem. Nenhum cache de ecos em memória ou lookup-antes-insert substitui o índice/transação. Continua explícito o limite de crash depois do commit e antes da publicação; não há claim exactly-once externo.
+82: 
+83: A regra de não adotar instâncias Evolution não gerenciadas não impede a reautorização oficial já contratada no slot migrado. Mapping OFICIAL backfilled conserva somente ownership local, sem credencial nem confiança. Uma nova REAUTORIZAR explícita por ADMIN, no mesmo slot/BU/telefone e com recurso e credencial novamente comprovados na Meta, pode estabelecer o vínculo pelo fluxo canônico atual e suas condições de promoção. Backfill isolado, recurso de outra BU/slot e instância Evolution legada continuam recusados; não há adoção ou cleanup externo por inferência de nome/mapping.
+84: 
+85: ### Segredos transitórios e webhook raw
+86: 
+87: Code SDK e PIN podem existir transitoriamente no formulário/memória do browser e seguir via BFF HTTPS; nunca em URL, storage, trace, screenshot, log ou DTO de retorno. Token, chave e envelope ficam somente no backend. Antes de persistir evento raw de provider autenticado, redigir recursivamente apikey, token, authorization, code, PIN, QR e componentes secretos de URLs; erros/audit usam catálogo e metadados allowlisted. Evento sem identidade verificada não persiste conteúdo. Harness envia envelope Evolution com apikey fictícia e comprova sua ausência em raw/audit/DTO/erro. QR só é devolvido efemeramente ao administrador no POST autorizado. Gateway Nginx, proxy e logs de aplicação não registram URI/token do callback Evolution: política explícita remove caminho secreto e query de access/error logs, inclusive erros; harness passa segredo fictício pelo gateway real e inspeciona logs/artefatos. Callback por header só se suportado e comprovado no provider fixado, sem presumir capacidade.
+88: 
+89: Meta raw é particionado por recurso verificado/BU, não por corpo de request inteiro. Batch assinado com entry/change/value de BUs diferentes produz registros scoped separados; fragmento desconhecido/retirado/sem identidade contribui apenas metadados allowlisted, sem conteúdo. Assinatura é verificada sobre o corpo original antes de parse/partição. REG-SEC-12/13 concretizam requisitos já existentes de segredo/owner, sem novo armazenamento genérico.
+90: 
+91: O suporte condicional de header foi confirmado no source fixado Evolution2.3.7 (`webhook.controller.ts` do commit cd800f2976e1e5b682fbf86a01ee4d85ae61f370): o provider aplica webhook.headers ao callback, mas registra URL em erros. Para cumprir a regra secret-free, o callback desta instalação usa URL sem segredo `POST /webhooks/evolution` e header privado `x-leadshug-webhook-secret`, comparado de modo timing-safe com EVOLUTION_WEBHOOK_SECRET. Não manter autenticação alternativa por path. Essa concretização exige teste real de callback/logs no runtime fixado antes da prova de aparelho; confirmação apenas de source não certifica execução. O segredo continua privado no adapter/backend, sem DTO/audit/raw/config.js.
+92: 
+93: Na prova privada cp49 de2026-10-17, a imagem API com a convergência corrigida recebeu o retorno automático da mesma Evolution após stop/start: connectedAt novo posterior ao start, identidade/geração/epoch/receipt atuais e tentativa já concluída v2 preservados, sem verificação administrativa posterior. A mesma conversa e suas duas mensagens anteriores permaneceram. Isso comprova somente essa retomada observada; INOUT02 humana e fluxo oficial continuam requisitos separados no TODO, e a cobertura isolada de app_id estrangeiro está sendo concluída antes da etapa oficial.
+94: 
+95: 
+96: ### Documento público de privacidade da instalação de testes
+97: 
+98: O complemento cp63 autorizado pelo usuário disponibiliza /privacidade.html como asset estático do Web, sem autenticação, resolução de Mantenedora/BU, formulários, SDK ou leitura de dados de negócio. A UNIFAST e o contato público unitech@unifast.com.br foram informados pelo responsável. A política distingue tokens oficiais cifrados de outras credenciais, histórico persistente de diagnósticos de webhook da API (rotina90dias), e cópias/estado mantidos pela integração, cuja retenção efetiva não foi demonstrada. Solicitações são tratadas por e-mail, sem promessa de exclusão integral automática. O documento descreve somente a instalação privada de testes; sua URL pública não autoriza publicação Meta/produção nem admissão de usuários não confiáveis.
+99: 
+100: Fonte cp63: único asset web-app/public/privacidade.html byteexact com cp63-privacy-policy.accepted.html SHA d0f72c588f0f014de46a327e34d6b26125ca115bc973b56bbb926cd8519e701d. Crítica independente terminal integrada; build e28testes Web passaram uma vez. A candidata6f teve prova direta/layout e final distinto aceitos; no HTTPS houve transformação Cloudflare, resolvida cp64 pela location exata no-transform da candidata cfd5. Prova pública independente root40f8df7d... confirma20012865/d0 sem scripts/formulários/CFmarkers/cookies/redirect; roothealth200 e JSd143. API segue mesma imagemfe5 com origem atual alinhada; publicação do mesmo app Meta autorizada cp66 e confirmada pelo operador cp67. Baseline posterior permanece semreceipt/connectedAt e IN0/OUT0 na identidade oficial atual; teste real02 não apareceu, readbackcp68 ainda semmensagens e GETMeta confirma appinscrito naWABA. Destinatário/tiques atuais aguardam conferência; causaaberta. O build transitório não foi tratado como prova de dist/HTTP. Evidência no pacote de revisão ST-CON-01.
+101: 
+102: Histórico operacional (cp106,2026-10-19): o operador concluiu o cadastro oficial Já registrado pelo fluxo atual e confirmou IN visível em Atendimento Local Test Ofc e OUT recebida no WhatsApp do interlocutor. BFF canônico confirmou BU ativa/OWNER, canal oficial CONECTADO/geração2/identidade própria verificada/SUBSCRIBED/receipt confirmado; IDs externos não são expostos nesse DTO. O QR da Local Test BU foi preservado CONECTADO/geração1/identidade e recebimento verificados; sua INOUT e retomada anteriores cp49/52 continuam válidas. Provas antigas de controle sintético e falhas cp62/68 são históricas. A hipótese de proprietário da conversa antiga não foi comprovada. Recuperação oficial CON-12/VAL05 e closeout permanecem pendentes; nenhuma prontidão geral, operação contínua ou conclusão do TODO é declarada. Evidência: artifacts/reviews/leadshug-number-onboarding-20261015/evidence/root-cp106-official-inout-readback.json.
+103: 
+104: Atualização operacional cp107 (2026-10-19): um único restart autorizado da API preservou seu ID/imagem e mudou StartedAt; health local e HTTPS voltaram200. BFF antes/depois preservou canais oficial/QR, gerações2/1, tentativas, identidade, provider SUBSCRIBED/CONNECTED e receipt true. Nenhuma alteração de fonte/configuração/Meta/credencial/banco. Isso comprova retomada do backend observado, sem comprovar nova IN/OUT ou reconexão da conta Meta. Nova troca física foi solicitada ao mesmo interlocutor alternativo; CON-12/VAL05 e closeout seguem pendentes. [Evidência cp107](../artifacts/reviews/leadshug-number-onboarding-20261015/evidence/root-cp107-api-restart-recovery.json).
+105: 
+106: Estado operacional CP108 (2026-10-19): usuário confirmou nova IN visível em Atendimento Local Test Ofc e resposta OUT recebida no WhatsApp após o reinício autorizado da API. Readback confirma o mesmo processo reiniciado, BUs ativas/OWNER, oficial CONECTADO/geração2/SUBSCRIBED/identidade e receipt true, QR preservado CONECTADO/geração1/CONNECTED/receipt true. Com CP106/107 e não oficial CP33/49/52, VAL05 físico local por ambos os canais está satisfeito. Contador Meta POST200 agregado é evidência separada de transporte, sem atribuição de conteúdo/conta. Encerramento local concluído CP108; sem alegar produção, disponibilidade contínua ou importação de histórico. Próximo recorte de produto permanece ST-CON-04 Nova conversa por contato, sujeito a contrato próprio. [Prova CP108](../artifacts/reviews/leadshug-number-onboarding-20261015/evidence/root-cp108-post-restart-official-inout.json).
+```
+
+
+## Source foundation_documentation/project_constitution.md
+
+Raw SHA256 `abfafa5576d051da58583e2be57499320c8ad155c4ae741f259c730bcca98390`; bytes4641.
+
+```
+1: # LeadsHug — Project Constitution
+2: **Version:** 1.0
+3: 
+4: ## Purpose and stack
+5: 
+6: Esta constituição governa o LeadsHug, uma central multi-tenant de relacionamento por WhatsApp. O stack ativo
+7: é NestJS, React, PostgreSQL, Prisma, Docker e Railway.
+8: 
+9: ## Authority hierarchy
+10: 
+11: 1. Documentos canônicos vigentes deste foundation. Uma decisão `Accepted` só se torna efetiva depois que todos os seus alvos canônicos nomeados forem consolidados; sua direção passa a valer por meio desses alvos atualizados, nunca por sobreposição do registro de decisão. Antes disso, o registro preserva racional e proveniência, mas não compete com a verdade corrente.
+12: 2. TODO tático ativo e aprovado.
+13: 3. Código e testes do repositório LeadsHug.
+14: 4. Regras e workflows reutilizáveis do `leadshug-engineering`.
+15: 
+16: Quando houver conflito, a regra mais específica do produto prevalece sobre a regra genérica de engenharia.
+17: 
+18: ## System invariants
+19: 
+20: - API, DTO and response projection changes require matching contract-test expectation updates in the same TODO.
+21: - Prisma schema changes require an applicable versioned migration; changes to either the schema or migration files require `prisma migrate deploy` and CI database validation.
+22: - Environment, port and topology changes require local validation with the same configuration as CI.
+23: - Web-flow changes require Playwright against a freshly built bundle and the real validation backend using the same `DATABASE_URL` and resolved API port/endpoint as the CI-equivalent job, without exposing secrets.
+24: 
+25: - Toda implementação possui um TODO ativo, escopo, Definition of Done e evidência de validação.
+26: - A Mantenedora contém Setores; a Business Unit é o número de WhatsApp.
+27: - Grants e leituras são sempre filtrados pela BU e pela conta correta; vazamento entre tenants é falha crítica.
+28: - Canal oficial e não oficial são transportes da BU; a conversa é unificada pelo par BU/Contato.
+29: - BFF, API pública, API interna e webhooks são superfícies distintas, com autenticação própria.
+30: - Documentos institucionais estáticos explicitamente autorizados, como /privacidade.html, são públicos e não resolvem tenant/BU nem consultam dados de negócio. Não alteram a autenticação das superfícies acima. Sua publicação local não autoriza publicação do app Meta ou produção.
+31: - Domínio e regras de negócio pertencem ao backend NestJS; React consome contratos explícitos.
+32: - Persistência usa PostgreSQL via Prisma; acesso ao banco não deve contornar a fronteira de domínio.
+33: - Serviços executam em Docker e são promovidos pela topologia Railway declarada no projeto.
+34: - Histórico de atendimento é persistente, consultável conforme permissão e auditável.
+35: - Templates, disparos, CRM e campanhas só entram em execução mediante TODO e contrato próprios.
+36: 
+37: ## TODO governance
+38: 
+39: `backlog/` registra candidatos não aprovados e é separado de `todos/active/`. `todos/active/` contém contratos
+40: táticos vivos, mas sua localização nunca concede execução: somente `APROVADO` explícito e o authority guard em
+41: `go` a concedem. Um TODO concluído deve conter evidência específica, validação e referência de branch/commit.
+42: 
+43: O lifecycle canônico em [evolution_lifecycle.md](evolution_lifecycle.md) define schemas, transições, papéis
+44: neutros de fornecedor e owner singular por campo. Backlog possui disposição/próximo gate; roadmap possui tema,
+45: horizonte, resultado, dependências e exit gate; módulos possuem verdade local estável; TODOs possuem
+46: aprovação/execução/evidência; decisões possuem racional/histórico; briefs e artifacts são evidência, não
+47: autoridade concorrente.
+48: 
+49: ## Profiles and handoffs
+50: 
+51: - Genesis define a primeira arquitetura documental.
+52: - Strategic/CTO-Tech-Lead governa constituição, lifecycle e roadmap.
+53: - Operational/Coder implementa backend, frontend e testes por TODO.
+54: - Operational/DevOps governa Docker, Railway, CI e runtime.
+55: - Assurance valida qualidade, aderência e segurança.
+56: 
+57: ## Lifecycle roles
+58: 
+59: - A autoridade humana de decisão valida escopo, produto e aprovação material.
+60: - O strategic steward governa constituição, lifecycle e roadmap.
+61: - O module owner governa ownership, invariantes e contratos locais.
+62: - O TODO owner/executor executa somente o contrato aprovado e mantém suas evidências.
+63: - O assurance reviewer valida qualidade, aderência e segurança sem adquirir autoridade de produto.
+64: 
+65: Ferramentas, agentes e fornecedores concretos são adapters desses papéis, não autoridade de produto.
+66: 
+67: ## Explicit non-goals
+68: 
+69: Não ativar capacidades de stack não declaradas no topology do LeadsHug sem decisão documental específica.
+```
+
+
+## Source api-app/prisma/schema.prisma
+
+Raw SHA256 `3dd87c61af51167ae8aaa07a1b35e8616f108d9e5a05b2c0911ea84a8bfa5636`; bytes26740.
+
+```
+1: // Schema do núcleo unificado (v1). Nomenclatura conforme ADR-0011:
+2: // estrutura em inglês, Mantenedora e BusinessUnit como nomes próprios do
+3: // domínio, snake_case no banco via @map.
+4: //
+5: // Regra 0 do CLAUDE.md: toda tabela de dado de negócio tem bu_id, e toda
+6: // leitura filtra pelo escopo do usuário. Quem tem mantenedora_id NÃO é dado de
+7: // negócio (app_users, api_keys, mantenedora_settings) e não entra nesse filtro.
+8: 
+9: generator client {
+10:   provider = "prisma-client-js"
+11: }
+12: 
+13: datasource db {
+14:   provider = "postgresql"
+15:   url      = env("DATABASE_URL")
+16: }
+17: 
+18: /* ------------------------------- tenancy -------------------------------- */
+19: 
+20: enum TenantStatus {
+21:   ATIVO
+22:   INATIVO
+23: }
+24: 
+25: /// A conta do cliente. Agrupa, endereça e é dona das integrações — não possui
+26: /// conversa e não recebe grant (ADR-0008).
+27: model Mantenedora {
+28:   id        String       @id @default(uuid())
+29:   name      String
+30:   status    TenantStatus @default(ATIVO)
+31:   createdAt DateTime     @default(now()) @map("created_at")
+32:   updatedAt DateTime     @updatedAt @map("updated_at")
+33: 
+34:   businessUnits BusinessUnit[]
+35:   setores       Setor[]
+36:   arquivos      Arquivo[]
+37:   appUsers      AppUser[]
+38:   apiKeys       ApiKey[]
+39:   settings      MantenedoraSettings?
+40:   typebotBots   TypebotBot[]
+41:   channelRegistrationAttempts ChannelRegistrationAttempt[]
+42: 
+43:   @@map("mantenedoras")
+44: }
+45: 
+46: /// A Business Unit É O NÚMERO (ADR-0008). É onde a permissão existe de fato e
+47: /// onde conversa e mensagem penduram.
+48: /// Setor — o agrupamento entre a Mantenedora e o número (ADR-0017).
+49: ///
+50: /// Ele NÃO é o escopo de permissão: o grant continua materializado na BU, e
+51: /// conceder um setor é EXPANSÃO. É isso que faz nenhuma leitura mudar.
+52: model Setor {
+53:   id            String       @id @default(uuid())
+54:   mantenedoraId String       @map("mantenedora_id")
+55:   mantenedora   Mantenedora  @relation(fields: [mantenedoraId], references: [id], onDelete: Cascade)
+56:   name          String
+57:   /// INATIVO some do seletor de cadastro e marca o setor como fora de uso. NÃO
+58:   /// interrompe atendimento: sumir com a inbox de um número por engano de
+59:   /// cadastro seria perder conversa (ADR-0017 §1).
+60:   status        TenantStatus @default(ATIVO)
+61:   createdAt     DateTime     @default(now()) @map("created_at")
+62: 
+63:   businessUnits BusinessUnit[]
+64:   grants        SetorGrant[]
+65: 
+66:   @@unique([mantenedoraId, name])
+67:   @@map("setores")
+68: }
+69: 
+70: /// A CONCESSÃO de um setor a alguém — o fato, separado da consequência.
+71: ///
+72: /// As linhas em `user_bu_roles` são a MATERIALIZAÇÃO dela, uma por número. Sem
+73: /// esta tabela, conceder um setor VAZIO não guardaria nada: a concessão só
+74: /// existiria derivada das linhas materializadas, e um setor sem número não teria
+75: /// nenhuma para derivar. O número adicionado depois não encontraria a concessão,
+76: /// e ninguém perceberia — porque o sintoma é um acesso que nunca aparece.
+77: model SetorGrant {
+78:   id        String   @id @default(uuid())
+79:   setorId   String   @map("setor_id")
+80:   setor     Setor    @relation(fields: [setorId], references: [id], onDelete: Cascade)
+81:   userId    String   @map("user_id")
+82:   user      AppUser  @relation(fields: [userId], references: [id], onDelete: Cascade)
+83:   role      Role
+84:   createdAt DateTime @default(now()) @map("created_at")
+85: 
+86:   @@unique([setorId, userId])
+87:   @@index([userId])
+88:   @@map("setor_grants")
+89: }
+90: 
+91: model BusinessUnit {
+92:   id            String       @id @default(uuid())
+93:   mantenedoraId String       @map("mantenedora_id")
+94:   mantenedora   Mantenedora  @relation(fields: [mantenedoraId], references: [id], onDelete: Restrict)
+95:   /// OBRIGATÓRIO (ADR-0017 §1): número sem setor é número que nenhum atendente
+96:   /// enxerga. Toda Mantenedora nasce com o setor `Geral`, e é nele que cai quem
+97:   /// não escolher.
+98:   setorId       String       @map("setor_id")
+99:   setor         Setor        @relation(fields: [setorId], references: [id], onDelete: Restrict)
+100:   name          String
+101:   /// Telefone em E.164, só dígitos. Nulo enquanto o canal não informar.
+102:   phone         String?
+103:   status        TenantStatus @default(ATIVO)
+104:   /// Rastreio da origem na migração (ADR-0003). Sai quando ninguém mais cruzar
+105:   /// com o sistema antigo.
+106:   legacyRef     String?      @map("legacy_ref")
+107:   createdAt     DateTime     @default(now()) @map("created_at")
+108:   updatedAt     DateTime     @updatedAt @map("updated_at")
+109: 
+110:   channels      BuChannel[]
+111:   roles         UserBuRole[]
+112:   conversations Conversation[]
+113:   channelRegistrationAttempts ChannelRegistrationAttempt[]
+114:   providerResourceIdentities ProviderResourceIdentity[]
+115: 
+116:   @@index([mantenedoraId, status])
+117:   @@index([setorId])
+118:   @@map("business_units")
+119: }
+120: 
+121: enum ChannelType {
+122:   OFICIAL
+123:   NAO_OFICIAL
+124: }
+125: 
+126: enum ChannelStatus {
+127:   CONECTANDO
+128:   CONECTADO
+129:   DESCONECTADO
+130:   DESLOGADO
+131: }
+132: 
+133: /// O vínculo da BU com a tecnologia. No máximo um de cada tipo por BU.
+134: model BuChannel {
+135:   id     String       @id @default(uuid())
+136:   buId   String       @map("bu_id")
+137:   bu     BusinessUnit @relation(fields: [buId], references: [id], onDelete: Cascade)
+138:   type   ChannelType
+139:   status ChannelStatus @default(CONECTANDO)
+140:   generation Int @default(1)
+141:   currentAttemptId String? @unique @map("current_attempt_id")
+142:   currentAttempt ChannelRegistrationAttempt? @relation("CurrentChannelAttempt", fields: [currentAttemptId], references: [id], onDelete: SetNull)
+143:   pairingEpoch Int @default(0) @map("pairing_epoch")
+144:   ownNumberVerified Boolean @default(false) @map("own_number_verified")
+145:   verifiedEpoch Int? @map("verified_epoch")
+146:   providerConnectionState String @default("PENDING") @map("provider_connection_state")
+147:   receiptVerifiedAt DateTime? @map("receipt_verified_at")
+148:   operationLeaseToken String? @map("operation_lease_token")
+149:   operationLeaseUntil DateTime? @map("operation_lease_until")
+150:   pendingCleanupInstanceName String? @map("pending_cleanup_instance_name")
+151:   pendingCleanupIdentityId String? @map("pending_cleanup_identity_id")
+152: 
+153:   /// Canal OFICIAL (Meta Cloud API)
+154:   wabaId        String? @map("waba_id")
+155:   phoneNumberId String? @map("phone_number_id")
+156: 
+157:   /// Canal NAO_OFICIAL (Evolution API)
+158:   evolutionInstanceName String? @unique @map("evolution_instance_name")
+159: 
+160:   /// A janela de 24h da Meta é atributo do CANAL, não do produto (ADR-0009).
+161:   requiresWindow Boolean   @default(false) @map("requires_window")
+162:   connectedAt    DateTime? @map("connected_at")
+163:   createdAt      DateTime  @default(now()) @map("created_at")
+164:   updatedAt      DateTime  @updatedAt @map("updated_at")
+165: 
+166:   credential ChannelCredential?
+167:   attempts ChannelRegistrationAttempt[]
+168:   providerIdentities ProviderResourceIdentity[]
+169: 
+170:   @@unique([buId, type])
+171:   @@map("bu_channels")
+172: }
+173: 
+174: enum ChannelRegistrationState {
+175:   PENDING_AUTH
+176:   PENDING_NUMBER
+177:   REGISTERING
+178:   PENDING_RECEIPT
+179:   CONNECTED
+180:   ERROR
+181:   CANCELLED
+182: }
+183: 
+184: enum ChannelRegistrationOperation {
+185:   NOVO
+186:   REAUTORIZAR
+187: }
+188: 
+189: /// Registration workflow state is deliberately separate from ChannelStatus,
+190: /// which preserves the existing transport-facing status contract.
+191: model ChannelRegistrationAttempt {
+192:   id String @id @default(uuid())
+193:   mantenedoraId String @map("mantenedora_id")
+194:   mantenedora Mantenedora @relation(fields: [mantenedoraId], references: [id], onDelete: Restrict)
+195:   buId String @map("bu_id")
+196:   bu BusinessUnit @relation(fields: [buId], references: [id], onDelete: Restrict)
+197:   channelId String? @map("channel_id")
+198:   channel BuChannel? @relation(fields: [channelId], references: [id], onDelete: Restrict)
+199:   currentForChannel BuChannel? @relation("CurrentChannelAttempt")
+200:   type ChannelType
+201:   operation ChannelRegistrationOperation @default(NOVO)
+202:   userId String @map("user_id")
+203:   sessionHash String @map("session_hash")
+204:   nonceHash String? @map("nonce_hash")
+205:   idempotencyKey String @map("idempotency_key")
+206:   requestHash String @map("request_hash")
+207:   state ChannelRegistrationState @default(PENDING_AUTH)
+208:   version Int @default(1)
+209:   generation Int @default(1)
+210:   pairingEpoch Int? @map("pairing_epoch")
+211:   leaseUntil DateTime? @map("lease_until")
+212:   expiresAt DateTime @map("expires_at")
+213:   stage String @default("RESERVED")
+214:   safeErrorCode String? @map("safe_error_code")
+215:   candidateKeyId String? @map("candidate_key_id")
+216:   candidateNonce Bytes? @map("candidate_nonce")
+217:   candidateCiphertext Bytes? @map("candidate_ciphertext")
+218:   candidateTag Bytes? @map("candidate_tag")
+219:   createdAt DateTime @default(now()) @map("created_at")
+220:   updatedAt DateTime @updatedAt @map("updated_at")
+221: 
+222:   @@unique([mantenedoraId, idempotencyKey])
+223:   @@index([buId, type, state])
+224:   @@index([state, expiresAt])
+225:   @@map("channel_registration_attempts")
+226: }
+227: 
+228: /// Active encrypted credential. Ciphertext is only ever passed to adapters
+229: /// through the channel credential resolver; never project this model publicly.
+230: model ChannelCredential {
+231:   id String @id @default(uuid())
+232:   channelId String @unique @map("channel_id")
+233:   channel BuChannel @relation(fields: [channelId], references: [id], onDelete: Restrict)
+234:   provider ChannelType
+235:   buId String @map("bu_id")
+236:   generation Int
+237:   version Int @default(1)
+238:   keyId String @map("key_id")
+239:   nonce Bytes
+240:   ciphertext Bytes
+241:   tag Bytes
+242:   createdAt DateTime @default(now()) @map("created_at")
+243:   updatedAt DateTime @updatedAt @map("updated_at")
+244: 
+245:   @@index([buId, provider])
+246:   @@map("channel_credentials")
+247: }
+248: 
+249: /// Durable ownership tombstone: deleting a channel detaches currentChannelId,
+250: /// while buId remains RESTRICT-owned and cannot be transferred. A PostgreSQL
+251: /// trigger also makes (provider, externalResourceId, buId) immutable after create.
+252: model ProviderResourceIdentity {
+253:   id String @id @default(uuid())
+254:   provider ChannelType
+255:   externalResourceId String @map("external_resource_id")
+256:   buId String @map("bu_id")
+257:   bu BusinessUnit @relation(fields: [buId], references: [id], onDelete: Restrict)
+258:   currentChannelId String? @map("current_channel_id")
+259:   currentChannel BuChannel? @relation(fields: [currentChannelId], references: [id], onDelete: SetNull)
+260:   createdAt DateTime @default(now()) @map("created_at")
+261:   retiredAt DateTime? @map("retired_at")
+262:   managedLifecycle Boolean @default(false) @map("managed_lifecycle")
+263:   cleanupState String @default("UNMANAGED") @map("cleanup_state")
+264:   cleanupLeaseToken String? @map("cleanup_lease_token")
+265:   cleanupLeaseUntil DateTime? @map("cleanup_lease_until")
+266:   messages Message[]
+267: 
+268:   @@unique([provider, externalResourceId])
+269:   @@index([buId])
+270:   @@index([currentChannelId])
+271:   @@map("provider_resource_identities")
+272: }
+273: 
+274: /* ------------------------------ identidade ------------------------------ */
+275: 
+276: /// De onde veio o grant (ADR-0017 §2). DIRETO é concessão nominal; os outros
+277: /// dois são expansão, e carregam o id da origem em `granted_via_id`.
+278: enum OrigemDoGrant {
+279:   DIRETO
+280:   SETOR
+281:   MANTENEDORA
+282: }
+283: 
+284: /// Três papéis (ADR-0018). VIEWER saiu, e o eixo de capacidades também:
+285: /// disponibilidade passou a ser MÓDULO (ADR-0016), não permissão de usuário.
+286: enum Role {
+287:   OWNER
+288:   ADMIN
+289:   ATENDENTE
+290: }
+291: 
+292: /// Pessoa que usa o produto. Sempre de UMA Mantenedora; e-mail único dentro
+293: /// dela, não globalmente (ADR-0008 §3).
+294: model AppUser {
+295:   id            String       @id @default(uuid())
+296:   mantenedoraId String       @map("mantenedora_id")
+297:   mantenedora   Mantenedora  @relation(fields: [mantenedoraId], references: [id], onDelete: Restrict)
+298:   name          String
+299:   email         String
+300:   /// bcrypt (ADR-0007). Hash PBKDF2 importado é reconhecido pelo prefixo e
+301:   /// reidratado no primeiro login.
+302:   /// NULO enquanto o convite não foi usado (ADR-0025 §2): pessoa sem credencial
+303:   /// existe no cadastro e não entra.
+304:   passwordHash  String?      @map("password_hash")
+305:   /// Só para o hash PBKDF2 legado, que guardava o salt em coluna separada.
+306:   /// Limpo na reidratação.
+307:   legacySalt    String?      @map("legacy_salt")
+308:   /// Contato da pessoa, editável por ela mesma no perfil. Não é credencial e
+309:   /// não participa de login — o e-mail é que identifica (ADR-0007).
+310:   phone         String?
+311:   /// Id do arquivo no armazenamento (ADR-0024), nunca um caminho.
+312:   avatar        String?
+313:   status        TenantStatus @default(ATIVO)
+314:   mustChangePassword Boolean  @default(false) @map("must_change_password")
+315:   passwordChangedAt  DateTime? @map("password_changed_at")
+316:   createdAt          DateTime  @default(now()) @map("created_at")
+317:   updatedAt          DateTime  @updatedAt @map("updated_at")
+318: 
+319:   roles       UserBuRole[]
+320:   setorGrants SetorGrant[]
+321:   tokens      TokenDeAcesso[]
+322: 
+323:   @@unique([mantenedoraId, email])
+324:   @@map("app_users")
+325: }
+326: 
+327: /// A única fonte de permissão. bu_id é SEMPRE uma BU — não existe grant em
+328: /// Mantenedora; o papel nela é calculado (ADR-0008 §4).
+329: model UserBuRole {
+330:   id     String       @id @default(uuid())
+331:   userId String       @map("user_id")
+332:   user   AppUser      @relation(fields: [userId], references: [id], onDelete: Cascade)
+333:   buId   String       @map("bu_id")
+334:   bu     BusinessUnit @relation(fields: [buId], references: [id], onDelete: Cascade)
+335:   role   Role
+336:   /// Proveniência, em PAR (ADR-0017 §2). Era um campo só, que só distinguia
+337:   /// direto de expansão da Mantenedora; com o Setor há três origens, e o tipo
+338:   /// precisa ser explícito. Grant DIRETO vence expansão, e revogar uma origem
+339:   /// remove só o que ela criou.
+340:   grantedViaTipo OrigemDoGrant @default(DIRETO) @map("granted_via_tipo")
+341:   grantedViaId   String?       @map("granted_via_id")
+342:   createdAt      DateTime      @default(now()) @map("created_at")
+343: 
+344:   @@unique([userId, buId])
+345:   @@index([buId])
+346:   @@map("user_bu_roles")
+347: }
+348: 
+349: /// Tentativas de senha erradas, por e-mail (ADR-0007 §4).
+350: model LoginAttempt {
+351:   email        String    @id
+352:   fails        Int       @default(0)
+353:   lastFailAt   DateTime? @map("last_fail_at")
+354:   blockedUntil DateTime? @map("blocked_until")
+355: 
+356:   @@map("login_attempts")
+357: }
+358: 
+359: /* ----------------------------- atendimento ------------------------------ */
+360: 
+361: enum ConversationStatus {
+362:   QUEUED
+363:   IN_SERVICE
+364:   CLOSED
+365: }
+366: 
+367: enum ContactType {
+368:   PESSOA
+369:   GRUPO
+370: }
+371: 
+372: enum AttendantOrigin {
+373:   INTERNO
+374:   EXTERNO
+375: }
+376: 
+377: /// Conversa é entidade e pendura na BU (ADR-0009). Chave natural (bu_id,
+378: /// contact); o JID fica no adaptador, nunca no domínio.
+379: model Conversation {
+380:   id      String       @id @default(uuid())
+381:   buId    String       @map("bu_id")
+382:   bu      BusinessUnit @relation(fields: [buId], references: [id], onDelete: Cascade)
+383:   /// Telefone E.164 só dígitos, ou o identificador do grupo.
+384:   contact     String
+385:   contactType ContactType        @default(PESSOA) @map("contact_type")
+386:   displayName String?            @map("display_name")
+387:   status      ConversationStatus @default(QUEUED)
+388: 
+389:   /// Atribuição: um conceito com proveniência (ADR-0009 §2). FK opcional com
+390:   /// SetNull + snapshot de nome (ADR-0007).
+391:   attendantUserId String?          @map("attendant_user_id")
+392:   attendantName   String?          @map("attendant_name")
+393:   attendantOrigin AttendantOrigin? @map("attendant_origin")
+394: 
+395:   unreadCount   Int       @default(0) @map("unread_count")
+396:   lastMessageAt DateTime? @map("last_message_at")
+397:   createdAt     DateTime  @default(now()) @map("created_at")
+398:   updatedAt     DateTime  @updatedAt @map("updated_at")
+399: 
+400:   messages Message[]
+401: 
+402:   @@unique([buId, contact])
+403:   @@index([buId, status, lastMessageAt])
+404:   @@map("conversations")
+405: }
+406: 
+407: enum MessageDirection {
+408:   IN
+409:   OUT
+410: }
+411: 
+412: enum MessageType {
+413:   TEXTO
+414:   IMAGEM
+415:   AUDIO
+416:   VIDEO
+417:   DOCUMENTO
+418:   OUTRO
+419: }
+420: 
+421: enum MessageStatus {
+422:   RECEBIDA
+423:   ENVIADA
+424:   ENTREGUE
+425:   LIDA
+426:   FALHOU
+427: }
+428: 
+429: model Message {
+430:   id             String       @id @default(uuid())
+431:   conversationId String       @map("conversation_id")
+432:   conversation   Conversation @relation(fields: [conversationId], references: [id], onDelete: Cascade)
+433:   /// Denormalizado do conversation para que TODA tabela de dado de negócio
+434:   /// tenha bu_id (regra 0).
+435:   buId          String           @map("bu_id")
+436:   direction     MessageDirection
+437:   messageType   MessageType      @default(TEXTO) @map("message_type")
+438:   content       String?
+439:   mediaRef      String?          @map("media_ref")
+440:   /// Por qual canal entrou ou saiu (ADR-0009 §1).
+441:   channelOrigin ChannelType      @map("channel_origin")
+442:   status        MessageStatus
+443:   externalId    String?          @map("external_id")
+444:   providerResourceIdentityId String? @map("provider_resource_identity_id")
+445:   providerResourceIdentity ProviderResourceIdentity? @relation(fields: [providerResourceIdentityId], references: [id], onDelete: Restrict)
+446:   /// Autoria: FK opcional SetNull + snapshot (ADR-0007). O payload cru NÃO
+447:   /// mora aqui — só no log de webhook, com expurgo (ADR-0009 §7).
+448:   authorUserId String?  @map("author_user_id")
+449:   authorName   String?  @map("author_name")
+450:   createdAt    DateTime @default(now()) @map("created_at")
+451: 
+452:   @@index([conversationId, createdAt])
+453:   @@index([buId, createdAt])
+454:   @@unique([providerResourceIdentityId, externalId])
+455:   @@map("messages")
+456: }
+457: 
+458: /* ------------------------------ integração ------------------------------ */
+459: 
+460: /// Chave da API pública. Pertence a uma Mantenedora; escopo nulo = todas as
+461: /// BUs DELA, nunca do sistema (ADR-0008 §6, ADR-0010).
+462: model ApiKey {
+463:   id            String      @id @default(uuid())
+464:   mantenedoraId String      @map("mantenedora_id")
+465:   mantenedora   Mantenedora @relation(fields: [mantenedoraId], references: [id], onDelete: Cascade)
+466:   name          String
+467:   /// Só o SHA-256. A chave em claro aparece uma vez, na criação.
+468:   keyHash    String    @unique @map("key_hash")
+469:   keyPrefix  String    @map("key_prefix")
+470:   scopeBuIds String[]  @map("scope_bu_ids")
+471:   lastUsedAt DateTime? @map("last_used_at")
+472:   revokedAt  DateTime? @map("revoked_at")
+473:   createdByName String? @map("created_by_name")
+474:   createdAt  DateTime  @default(now()) @map("created_at")
+475: 
+476:   @@index([mantenedoraId])
+477:   @@map("api_keys")
+478: }
+479: 
+480: /// Webhook de saída, agora POR MANTENEDORA — deixou de ser singleton
+481: /// (ADR-0008 §6).
+482: model MantenedoraSettings {
+483:   mantenedoraId         String      @id @map("mantenedora_id")
+484:   mantenedora           Mantenedora @relation(fields: [mantenedoraId], references: [id], onDelete: Cascade)
+485:   outboundWebhookUrl    String?     @map("outbound_webhook_url")
+486:   outboundWebhookSecret String?     @map("outbound_webhook_secret")
+487: 
+488:   /// O que ESTA Mantenedora contratou (ADR-0016). O teto continua sendo a env:
+489:   /// o efetivo é a interseção dos dois, e é ela que o /me devolve.
+490:   /// Chave ausente = módulo desligado.
+491:   modulos               Json        @default("{}")
+492: 
+493:   /// Marca, escolhida no wizard. Vira token de CSS no front, nunca env de build.
+494:   marcaNome             String?     @map("marca_nome")
+495:   marcaCor              String?     @map("marca_cor")
+496:   marcaCorClaro         String?     @map("marca_cor_claro")
+497:   marcaCorEscuro        String?     @map("marca_cor_escuro")
+498:   marcaCorSecundaria    String?     @map("marca_cor_secundaria")
+499:   /// Id do arquivo no armazenamento (ADR-0024), nunca um caminho nem uma URL.
+500:   marcaLogo             String?     @map("marca_logo")
+501:   marcaTema             String      @default("claro") @map("marca_tema")
+502: 
+503:   /// Subdomínio do cliente. Na v1 é RÓTULO, não roteamento (ADR-0016 §5): a
+504:   /// Mantenedora continua vindo da sessão.
+505:   host                  String?
+506:   /// Remetente dos e-mails de convite.
+507:   remetente             String?
+508:   /// Papel padrão de quem entra por convite. OWNER é recusado — seria
+509:   /// transferência de titularidade disfarçada de cadastro (ADR-0018 §4).
+510:   papelConvite          Role        @default(ATENDENTE) @map("papel_convite")
+511: 
+512:   /// Enquanto false, todo o resto do BFF responde 409 ONBOARDING_PENDENTE
+513:   /// (ADR-0016 §4). Painel sem módulo escolhido não tem o que mostrar.
+514:   onboardingConcluido   Boolean     @default(false) @map("onboarding_concluido")
+515: 
+516:   updatedAt             DateTime    @updatedAt @map("updated_at")
+517: 
+518:   @@map("mantenedora_settings")
+519: }
+520: 
+521: enum TypebotBotStatus {
+522:   ATIVO
+523:   INATIVO
+524: }
+525: 
+526: enum TypebotTriggerKind {
+527:   PALAVRA_CHAVE
+528:   NOVA_CONVERSA
+529: }
+530: 
+531: /// Catálogo local dos bots Typebot Cloud. O fluxo continua no Typebot; escopo,
+532: /// ativação e vínculo com a conta continuam no LeadsHug.
+533: model TypebotBot {
+534:   id            String          @id @default(uuid())
+535:   mantenedoraId String          @map("mantenedora_id")
+536:   mantenedora   Mantenedora     @relation(fields: [mantenedoraId], references: [id], onDelete: Cascade)
+537:   typebotId     String          @map("typebot_id")
+538:   publishedTypebotId String?    @map("published_typebot_id")
+539:   name          String
+540:   status        TypebotBotStatus @default(ATIVO)
+541:   editorUrl     String          @map("editor_url")
+542:   createdAt     DateTime        @default(now()) @map("created_at")
+543:   updatedAt     DateTime        @updatedAt @map("updated_at")
+544: 
+545:   triggers TypebotTrigger[]
+546:   sessions TypebotSession[]
+547: 
+548:   @@unique([mantenedoraId, typebotId])
+549:   @@index([mantenedoraId, status])
+550:   @@map("typebot_bots")
+551: }
+552: 
+553: model TypebotTrigger {
+554:   id        String             @id @default(uuid())
+555:   botId     String             @map("bot_id")
+556:   bot       TypebotBot         @relation(fields: [botId], references: [id], onDelete: Cascade)
+557:   kind      TypebotTriggerKind
+558:   value     String
+559:   buId      String?            @map("bu_id")
+560:   active    Boolean            @default(true)
+561:   createdAt DateTime           @default(now()) @map("created_at")
+562:   updatedAt DateTime           @updatedAt @map("updated_at")
+563: 
+564:   @@index([botId, active])
+565:   @@map("typebot_triggers")
+566: }
+567: 
+568: model TypebotSession {
+569:   id            String     @id @default(uuid())
+570:   botId         String     @map("bot_id")
+571:   bot           TypebotBot @relation(fields: [botId], references: [id], onDelete: Cascade)
+572:   mantenedoraId String     @map("mantenedora_id")
+573:   buId          String     @map("bu_id")
+574:   contato       String
+575:   sessionId     String     @map("session_id")
+576:   ativo         Boolean    @default(true)
+577:   createdAt     DateTime   @default(now()) @map("created_at")
+578:   updatedAt     DateTime   @updatedAt @map("updated_at")
+579: 
+580:   @@unique([botId, buId, contato])
+581:   @@index([mantenedoraId, buId, contato])
+582:   @@map("typebot_sessions")
+583: }
+584: 
+585: /// Quem é dono de cada arquivo (ADR-0024 §5). O binário mora no volume; esta
+586: /// tabela é o que permite barrar a leitura por escopo.
+587: model Arquivo {
+588:   id            String      @id
+589:   mantenedoraId String      @map("mantenedora_id")
+590:   mantenedora   Mantenedora @relation(fields: [mantenedoraId], references: [id], onDelete: Cascade)
+591:   tipo          String
+592:   bytes         Int
+593:   createdAt     DateTime    @default(now()) @map("created_at")
+594: 
+595:   @@index([mantenedoraId])
+596:   @@map("arquivos")
+597: }
+598: 
+599: /// Convite e recuperação de senha — o mesmo mecanismo, validade diferente
+600: /// (ADR-0025 §3).
+601: enum TipoDeToken {
+602:   CONVITE
+603:   RECUPERACAO
+604: }
+605: 
+606: /// O token vive HASHEADO: o valor em claro existe uma vez, no link. Vazamento do
+607: /// banco não vira vazamento de contas — mesmo raciocínio da chave de API.
+608: model TokenDeAcesso {
+609:   id        String      @id @default(uuid())
+610:   userId    String      @map("user_id")
+611:   user      AppUser     @relation(fields: [userId], references: [id], onDelete: Cascade)
+612:   tipo      TipoDeToken
+613:   /// sha256 do valor. Único, para que a busca seja por igualdade e não varredura.
+614:   hash      String      @unique
+615:   expiraEm  DateTime    @map("expira_em")
+616:   /// Uso ÚNICO: preenchido na mesma transação em que a senha é gravada.
+617:   usadoEm   DateTime?   @map("usado_em")
+618:   createdAt DateTime    @default(now()) @map("created_at")
+619: 
+620:   @@index([userId, tipo])
+621:   @@map("tokens_de_acesso")
+622: }
+623: 
+624: /* -------------------------- auditoria e webhook -------------------------- */
+625: 
+626: /// Ação humana auditável, transversal aos dois canais (ADR-0007 §5).
+627: /// Autoria por snapshot: sobrevive à exclusão do usuário.
+628: /// O escopo da linha (ADR-0020 §1.1). Existe para tornar o vazamento
+629: /// IRREPRESENTÁVEL, não improvável: com `bu_id` nulável, NULL significaria "ação
+630: /// da conta" E "alguém esqueceu de preencher" ao mesmo tempo, e a leitura teria
+631: /// de virar `bu_id IS NULL OR ...`, que é a forma que a regra 0 proíbe.
+632: enum EscopoDaAtividade {
+633:   BU
+634:   CONTA
+635: }
+636: 
+637: /// As seis categorias do filtro (ADR-0020 §1). Cinco vêm do desenho; EXPORTACAO
+638: /// é a sexta, e a divergência é deliberada.
+639: enum CategoriaDeAtividade {
+640:   CRIAR
+641:   EDITAR
+642:   MOVER
+643:   ATENDIMENTO
+644:   TAG
+645:   EXPORTACAO
+646: }
+647: 
+648: enum EntidadeDaAtividade {
+649:   CARD
+650:   CONVERSA
+651:   NUMERO
+652:   SETOR
+653:   USUARIO
+654:   INTEGRACAO
+655:   CONFIGURACAO
+656: }
+657: 
+658: /// O rastro das ações dos usuários (ADR-0020). NÃO é módulo: é núcleo, grava
+659: /// sempre, e **não expurga** — o volume é texto curto, e auditoria com data de
+660: /// validade falha justamente na pergunta antiga.
+661: model ActivityLog {
+662:   id            String   @id @default(uuid())
+663:   mantenedoraId String   @map("mantenedora_id")
+664: 
+665:   escopo        EscopoDaAtividade
+666:   /// Obrigatório quando escopo=BU, PROIBIDO quando escopo=CONTA. O CHECK no
+667:   /// banco é quem cobra — não este comentário.
+668:   buId          String?  @map("bu_id")
+669: 
+670:   userId        String?  @map("user_id")
+671:   /// CONGELADO: o nome de quem agiu, naquele dia. Sobrevive à remoção da pessoa
+672:   /// e ao renome de qualquer coisa.
+673:   userName      String?  @map("user_name")
+674:   userEmail     String?  @map("user_email")
+675: 
+676:   categoria     CategoriaDeAtividade
+677:   entidade      EntidadeDaAtividade
+678:   entidadeId    String?  @map("entidade_id")
+679:   campo         String?
+680:   de            String?
+681:   para          String?
+682:   /// Só para categoria que declare um formato no ADR-0022 — hoje, EXPORTACAO.
+683:   detalhe       Json?
+684: 
+685:   /// A frase pronta, em português, CONGELADA na escrita.
+686:   texto         String
+687: 
+688:   /// Compatibilidade com o que a v1 já gravava; some quando ninguém mais ler.
+689:   action        String
+690:   detail        String?
+691:   ip            String?
+692:   createdAt     DateTime @default(now()) @map("created_at")
+693: 
+694:   @@index([mantenedoraId, createdAt])
+695:   @@index([entidade, entidadeId])
+696:   @@map("activity_log")
+697: }
+698: 
+699: /// O payload cru vive AQUI e só aqui, com expurgo de 90 dias (ADR-0009 §7).
+700: model WebhookEvent {
+701:   id        String      @id @default(uuid())
+702:   channel   ChannelType
+703:   buId      String?     @map("bu_id")
+704:   eventType String      @map("event_type")
+705:   payload   Json
+706:   receivedAt DateTime   @default(now()) @map("received_at")
+707: 
+708:   @@index([receivedAt])
+709:   @@map("webhook_events")
+710: }
+```
+
+
+## Source api-app/vitest.config.ts
+
+Raw SHA256 `a5f2d4d79de1112776f0586e3b647487fe6961e89b2790c19f6a2ed9165924d5`; bytes414.
+
+```
+1: import swc from 'unplugin-swc';
+2: import { defineConfig } from 'vitest/config';
+3: 
+4: // Testes de unidade. E2E tem configuração própria (vitest.config.e2e.ts),
+5: // porque e2e precisa de banco e unidade não — ADR-0012 §1.
+6: export default defineConfig({
+7:   test: {
+8:     globals: true,
+9:     environment: 'node',
+10:     include: ['src/**/*.spec.ts'],
+11:   },
+12:   plugins: [swc.vite({ module: { type: 'es6' } })],
+13: });
+```
+
+
+## Source api-app/vitest.config.e2e.ts
+
+Raw SHA256 `ff76a3b94de4649d18f0f824a24bb45428afcbb751a872a6841a2e388f45f8ff`; bytes683.
+
+```
+1: import swc from 'unplugin-swc';
+2: import { defineConfig } from 'vitest/config';
+3: 
+4: // E2E roda contra Postgres DE VERDADE (ADR-0012 §4): o que precisa ser provado
+5: // é o filtro por BU dentro do SQL, e mock de repositório provaria só que o
+6: // código chama o método.
+7: export default defineConfig({
+8:   test: {
+9:     globals: true,
+10:     environment: 'node',
+11:     include: ['test/**/*.e2e-spec.ts'],
+12:     testTimeout: 30_000,
+13:     hookTimeout: 30_000,
+14:     fileParallelism: false,
+15:     maxWorkers: 1,
+16:     minWorkers: 1,
+17:     sequence: { concurrent: false, shuffle: false },
+18:     setupFiles: ['./test/setup-env.ts'],
+19:   },
+20:   plugins: [swc.vite({ module: { type: 'es6' } })],
+21: });
+```
+
+
+## Source api-app/tsconfig.build.json
+
+Raw SHA256 `44e82cf32b2bd7cfdb7c4d9ca48ab13101f6ff66349578545d2c229ef55cbca6`; bytes102.
+
+```
+1: {
+2:   "extends": "./tsconfig.json",
+3:   "exclude": ["node_modules", "dist", "test", "**/*.spec.ts"]
+4: }
+```
+
+
+## Source web-app/playwright.config.ts
+
+Raw SHA256 `53e9a54e97c9b785135d94846d99eb77c6f05789a58f27128544f9b2c903a63d`; bytes5773.
+
+```
+1: import { defineConfig } from '@playwright/test';
+2: 
+3: /** Porta própria: a 3000 desta máquina é de outro projeto. */
+4: const PORTA_DA_API = process.env.LEADSHUG_API_PORT ?? '3100';
+5: const API = `http://127.0.0.1:${PORTA_DA_API}`;
+6: const DATABASE_URL = process.env.LEADSHUG_E2E_DATABASE_URL;
+7: if (!DATABASE_URL) throw new Error('LEADSHUG_E2E_DATABASE_URL precisa apontar para o banco descartável dedicado.');
+8: 
+9: /**
+10:  * Teste de navegador contra a tela **buildada**, não contra o dev server.
+11:  *
+12:  * O que ele existe para pegar é justamente o que o teste de API não pega: erro
+13:  * de renderização, tela branca, rota que não leva a lugar nenhum. Foi assim que
+14:  * "Cannot read properties of undefined" apareceu — depois de o QA topar com ela.
+15:  *
+16:  * Sobe dois processos: a API (com o Postgres local do docker compose) e o
+17:  * `vite preview` servindo o `dist`. Mesma origem, como em desenvolvimento.
+18:  */
+19: export default defineConfig({
+20:   globalSetup: './e2e/number-onboarding-freshness.ts',
+21:   testDir: './e2e',
+22:   timeout: 30_000,
+23:   fullyParallel: false,
+24:   workers: 1,
+25:   use: {
+26:     baseURL: 'http://127.0.0.1:4173',
+27:     trace: 'retain-on-failure',
+28:   },
+29:   webServer: [
+30:     {
+31:       command: 'node ../api-app/test/timeline-fixtures.cjs',
+32:       url: 'http://127.0.0.1:3101/health',
+33:       reuseExistingServer: false,
+34:       timeout: 30_000,
+35:       stdout: 'pipe',
+36:       stderr: 'pipe',
+37:       env: {
+38:         DATABASE_URL,
+39:         LEADSHUG_E2E_DATABASE_URL: DATABASE_URL,
+40:         LEADSHUG_API_PORT: PORTA_DA_API,
+41:         LEADSHUG_FIXTURE_PORT: '3101',
+42:         META_APP_ID: 'fixture-app',
+43:         META_APP_SECRET: 'fixture-meta-secret-only',
+44:         META_SIGNUP_CONFIG_ID: 'fixture-config',
+45:         GRAPH_VERSION: 'v26.0',
+46:         CHANNEL_CREDENTIAL_KEY_ID: 'timeline-key-v1',
+47:         CHANNEL_CREDENTIAL_KEY: Buffer.alloc(32, 29).toString('base64'),
+48:         LH_CHANNEL_UNOFFICIAL: 'true',
+49:         EVOLUTION_API_URL: 'http://127.0.0.1:3101/provider/evolution',
+50:         EVOLUTION_API_KEY: 'timeline-provider-port-only',
+51:         EVOLUTION_WEBHOOK_URL: 'http://127.0.0.1:3100/webhooks/evolution',
+52:         EVOLUTION_WEBHOOK_SECRET: 'timeline-evolution-header-secret',
+53:       },
+54:     },
+55:     {
+56:       // `build &&` NÃO é zelo: `npm run start` da api é `node dist/main.js`, e
+57:       // sem construir antes o teste de tela valida uma API VELHA — que é o
+58:       // oposto do que ele existe para fazer. Foi assim que uma mudança de schema
+59:       // passou por aqui reportando 500 de um dist de duas fases atrás.
+60:       command: 'npm --prefix ../api-app run build && node ../api-app/test/browser-server.cjs',
+61:       url: `${API}/health`,
+62:       // Não reaproveitar: esta máquina roda outros serviços, e "já tem algo na
+63:       // porta" foi o que fez a primeira corrida testar o projeto vizinho.
+64:       reuseExistingServer: false,
+65:       // 60s cobriam só o `start`; o comando passou a incluir o build, e num
+66:       // runner frio isso não cabia.
+67:       timeout: 180_000,
+68:       // O log do servidor SOBE para a saída do teste.
+69:       //
+70:       // Sem isto, uma falha de boot aparece só como "Timed out waiting from
+71:       // config.webServer" — sem uma linha do que a API disse. Foi exatamente
+72:       // assim que este erro chegou do CI: um timeout, e nenhuma pista.
+73:       stdout: 'pipe',
+74:       stderr: 'pipe',
+75:       env: {
+76:         // O `.env` da API pode apontar para outro Postgres local (por exemplo,
+77:         // o serviço legado na 5433). O harness deve ser determinístico e falar
+78:         // com o Postgres deste compose, publicado na 55433.
+79:         DATABASE_URL,
+80:         LEADSHUG_E2E_DATABASE_URL: DATABASE_URL,
+81:         SESSION_SECRET: 'segredo-de-e2e',
+82:         INTERNAL_SERVICE_TOKEN: 'token-de-e2e',
+83:         // Public/fictitious registration and provider settings make every
+84:         // capability deterministic without consulting the operator's .env.
+85:         META_APP_ID: 'fixture-app',
+86:         META_APP_SECRET: 'fixture-meta-secret-only',
+87:         META_SIGNUP_CONFIG_ID: 'fixture-config',
+88:         GRAPH_VERSION: 'v26.0',
+89:         CHANNEL_CREDENTIAL_KEY_ID: 'timeline-key-v1',
+90:         CHANNEL_CREDENTIAL_KEY: Buffer.alloc(32, 29).toString('base64'),
+91:         LH_CHANNEL_UNOFFICIAL: 'true',
+92:         EVOLUTION_API_URL: 'http://127.0.0.1:3101/provider/evolution',
+93:         EVOLUTION_API_KEY: 'timeline-provider-port-only',
+94:         EVOLUTION_WEBHOOK_URL: `${API}/webhooks/evolution`,
+95:         EVOLUTION_WEBHOOK_SECRET: 'timeline-evolution-header-secret',
+96:         WEBHOOK_VERIFY_TOKEN: 'verify-token-de-teste',
+97:         // Volume de arquivo (ADR-0024). Sem ele o produto recusa upload — e o
+98:         // teste de tela precisa exercitar o caminho que EXISTE em stage.
+99:         LH_ARQUIVOS_DIR: '/tmp/leadshug-arquivos-e2e',
+100:         // O link do convite é montado com isto (ADR-0025): sem ele, o e-mail sai
+101:         // com caminho relativo, que não abre em lugar nenhum.
+102:         WEB_ORIGIN: 'http://127.0.0.1:4173',
+103:         PORT: PORTA_DA_API,
+104:       },
+105:     },
+106:     {
+107:       // `--host 127.0.0.1` NÃO é detalhe: o padrão do `vite preview` é `localhost`,
+108:       // e quem resolve esse nome é o sistema. Nesta máquina ele dá só IPv4; no
+109:       // runner do GitHub o `/etc/hosts` põe `::1` primeiro, o servidor sobe em
+110:       // `[::1]:4173` e o Playwright — que pergunta por `127.0.0.1` — bate em
+111:       // porta fechada. O log mostrava o preview NO AR e o teste estourando 60s.
+112:       //
+113:       // Todo o resto do harness já fala 127.0.0.1: a baseURL, o WEB_ORIGIN, o
+114:       // CORS da API. Só a ponta que ESCUTA ficava a cargo do resolvedor.
+115:       command: 'npm run preview -- --host 127.0.0.1 --port 4173 --strictPort',
+116:       stdout: 'pipe',
+117:       stderr: 'pipe',
+118:       env: { LEADSHUG_API: API },
+119:       url: 'http://127.0.0.1:4173',
+120:       reuseExistingServer: false,
+121:       timeout: 60_000,
+122:     },
+123:   ],
+124: });
+```
+
+
+## Source web-app/vite.config.ts
+
+Raw SHA256 `8b61a846e95c7fe77c938a2ebced24b48bbba45c42efcd25c8191491655e74b2`; bytes1865.
+
+```
+1: import react from '@vitejs/plugin-react';
+2: import { defineConfig } from 'vite';
+3: 
+4: // A porta da API em desenvolvimento é configurável porque esta máquina roda
+5: // outros projetos: a 3000 já é de outro serviço, e um harness que assume porta
+6: // fixa testa o vizinho por engano — foi o que aconteceu na primeira corrida.
+7: // Desenvolvimento local usa a API do Taskfile em 3000. O E2E continua
+8: // podendo sobrescrever LEADSHUG_API/LEADSHUG_API_PORT para usar 3100.
+9: const API = process.env.LEADSHUG_API ?? 'http://127.0.0.1:3000';
+10: const proxy = {
+11:   '/api': API,
+12:   '/health': API,
+13:   '/ws': { target: API.replace(/^http/, 'ws'), ws: true },
+14: };
+15: 
+16: // Em produção o front é SERVIÇO PRÓPRIO, num subdomínio do mesmo domínio da API
+17: // (ADR-0015) — origem diferente, mesmo site. Por isso a chamada real leva CORS
+18: // com credenciais e o cookie depende de WEB_ORIGIN e COOKIE_DOMAIN.
+19: //
+20: // O proxy abaixo NÃO reproduz isso: ele torna o local mesma-origem, que é mais
+21: // simples do que produção. É deliberado (evita configurar CORS para desenvolver),
+22: // e a consequência precisa estar dita: o caminho cross-origin não é exercitado
+23: // aqui — quem o prova é o stage. Ver ADR-0015, Emenda 1.
+24: export default defineConfig({
+25:   plugins: [react()],
+26:   // `e2e/` é do Playwright, e o Vitest não sabe executá-lo: coletado por engano,
+27:   // ele falha com "test.describe() não era esperado aqui" e deixa `npm test`
+28:   // VERMELHO PARA SEMPRE — que é como um teste de verdade quebrado passa
+29:   // despercebido no meio do ruído. Quem roda o e2e de tela é `npm run test:tela`.
+30:   test: { exclude: ['e2e/**', 'node_modules/**', 'dist/**'] },
+31:   // O proxy vale para `dev` E para `preview`: o teste de navegador roda contra
+32:   // o build, e sem ele as chamadas do front não achariam a API.
+33:   server: { proxy },
+34:   preview: { proxy },
+35: });
+```
+
+
+## Source .github/workflows/ci.yml
+
+Raw SHA256 `4448e7dbb47a85c432f4975bf55a1e786402f7e8c5ba3fe70d054eb182de1607`; bytes2374.
+
+```
+1: name: Verify workspace
+2: 
+3: on:
+4:   push:
+5:     branches: [main]
+6:   pull_request:
+7: 
+8: permissions:
+9:   contents: read
+10: 
+11: jobs:
+12:   compose:
+13:     name: Validate Compose
+14:     runs-on: ubuntu-latest
+15:     steps:
+16:       - uses: actions/checkout@v4
+17:       - name: Validate the runtime topology
+18:         env:
+19:           SESSION_SECRET: ci-session-secret
+20:           INTERNAL_SERVICE_TOKEN: ci-internal-token
+21:           WHATSAPP_TOKEN: ci-whatsapp-token
+22:         run: docker compose config --quiet
+23: 
+24:   api:
+25:     name: API
+26:     runs-on: ubuntu-latest
+27:     steps:
+28:       - uses: actions/checkout@v4
+29:       - name: Checkout the private API submodule
+30:         env:
+31:           SUBMODULES_REPO_TOKEN: ${{ secrets.SUBMODULES_REPO_TOKEN }}
+32:         run: |
+33:           test -n "$SUBMODULES_REPO_TOKEN" || {
+34:             echo "SUBMODULES_REPO_TOKEN must read the private LeadsHug submodules." >&2
+35:             exit 1
+36:           }
+37:           git config --global url."https://x-access-token:${SUBMODULES_REPO_TOKEN}@github.com/".insteadOf "https://github.com/"
+38:           git submodule sync -- api-app
+39:           git submodule update --init --depth=1 api-app
+40:       - uses: actions/setup-node@v4
+41:         with:
+42:           node-version: 22
+43:           cache: npm
+44:           cache-dependency-path: api-app/package-lock.json
+45:       - name: Install, lint, build, and test API
+46:         working-directory: api-app
+47:         run: |
+48:           npm ci
+49:           npm run lint
+50:           npm run build
+51:           npm test
+52: 
+53:   web:
+54:     name: Web
+55:     runs-on: ubuntu-latest
+56:     steps:
+57:       - uses: actions/checkout@v4
+58:       - name: Checkout the private Web submodule
+59:         env:
+60:           SUBMODULES_REPO_TOKEN: ${{ secrets.SUBMODULES_REPO_TOKEN }}
+61:         run: |
+62:           test -n "$SUBMODULES_REPO_TOKEN" || {
+63:             echo "SUBMODULES_REPO_TOKEN must read the private LeadsHug submodules." >&2
+64:             exit 1
+65:           }
+66:           git config --global url."https://x-access-token:${SUBMODULES_REPO_TOKEN}@github.com/".insteadOf "https://github.com/"
+67:           git submodule sync -- web-app
+68:           git submodule update --init --depth=1 web-app
+69:       - uses: actions/setup-node@v4
+70:         with:
+71:           node-version: 22
+72:           cache: npm
+73:           cache-dependency-path: web-app/package-lock.json
+74:       - name: Install, build, and test Web
+75:         working-directory: web-app
+76:         run: |
+77:           npm ci
+78:           npm run build
+79:           npm test
+```
+
+
+## Source docker-compose.channels.yml
+
+Raw SHA256 `9978e713ce190ad20b6bddb0ecf0b469d068c0e43bb4eaf50aa630ec03aea235`; bytes21180.
+
+```
+1: services:
+2:   postgres:
+3:     ports: !reset []
+4:     labels:
+5:       com.leadshug.channels.owner: number-onboarding
+6: 
+7:   api:
+8:     ports: !reset []
+9:     environment:
+10:       NODE_ENV: ${CHANNELS_NODE_ENV:-development}
+11:       WEB_ORIGIN: ${CHANNELS_LOCAL_ORIGIN:-http://localhost:${CHANNELS_GATEWAY_HOST_PORT:-8083}}
+12:       LEADSHUG_API_URL: ""
+13:     labels:
+14:       com.leadshug.channels.owner: number-onboarding
+15: 
+16:   web:
+17:     ports: !reset []
+18:     environment:
+19:       LEADSHUG_API_URL: ""
+20:     labels:
+21:       com.leadshug.channels.owner: number-onboarding
+22: 
+23:   gateway:
+24:     image: nginx:alpine
+25:     profiles: [channels-local]
+26:     depends_on:
+27:       api:
+28:         condition: service_healthy
+29:       web:
+30:         condition: service_started
+31:     ports:
+32:       - "127.0.0.1:${CHANNELS_GATEWAY_HOST_PORT:-8083}:80"
+33:     volumes:
+34:       - ./docker/local-gateway.conf.template:/etc/nginx/templates/default.conf.template:ro
+35:     labels:
+36:       com.leadshug.channels.owner: number-onboarding
+37:     restart: unless-stopped
+38: 
+39:   evolution-postgres:
+40:     image: postgres:16
+41:     profiles: [channels-local]
+42:     environment:
+43:       POSTGRES_DB: ${EVOLUTION_POSTGRES_DB:-evolution}
+44:       POSTGRES_USER: ${EVOLUTION_POSTGRES_USER:-evolution}
+45:       POSTGRES_PASSWORD: ${EVOLUTION_POSTGRES_PASSWORD:?Set EVOLUTION_POSTGRES_PASSWORD in .env.testing}
+46:     volumes:
+47:       - evolution_pg_data:/var/lib/postgresql/data
+48:     healthcheck:
+49:       test: ["CMD-SHELL", "pg_isready -U $$POSTGRES_USER -d $$POSTGRES_DB"]
+50:       interval: 5s
+51:       timeout: 5s
+52:       retries: 20
+53:     labels:
+54:       com.leadshug.channels.owner: number-onboarding
+55:     restart: unless-stopped
+56: 
+57:   evolution-redis:
+58:     image: redis:7.4-alpine
+59:     profiles: [channels-local]
+60:     command: ["redis-server", "--appendonly", "yes"]
+61:     volumes:
+62:       - evolution_redis_data:/data
+63:     healthcheck:
+64:       test: ["CMD", "redis-cli", "ping"]
+65:       interval: 5s
+66:       timeout: 3s
+67:       retries: 20
+68:     labels:
+69:       com.leadshug.channels.owner: number-onboarding
+70:     restart: unless-stopped
+71: 
+72:   evolution:
+73:     image: evoapicloud/evolution-api:v2.3.7@sha256:1bd8afc4a6cf48822e6cf02469aeae7bd35a12a6b616eacd1291926307f4d339
+74:     profiles: [channels-local]
+75:     depends_on:
+76:       evolution-postgres:
+77:         condition: service_healthy
+78:       evolution-redis:
+79:         condition: service_healthy
+80:     environment:
+81:       SERVER_NAME: evolution
+82:       SERVER_TYPE: http
+83:       SERVER_PORT: "8080"
+84:       SERVER_URL: ${EVOLUTION_SERVER_URL:-http://evolution:8080}
+85:       SERVER_DISABLE_DOCS: "true"
+86:       DATABASE_ENABLED: "true"
+87:       DATABASE_PROVIDER: postgresql
+88:       DATABASE_CONNECTION_URI: postgresql://${EVOLUTION_POSTGRES_USER:-evolution}:${EVOLUTION_POSTGRES_PASSWORD:?Set EVOLUTION_POSTGRES_PASSWORD in .env.testing}@evolution-postgres:5432/${EVOLUTION_POSTGRES_DB:-evolution}?schema=public
+89:       DATABASE_CONNECTION_CLIENT_NAME: leadshug_channels_local
+90:       DATABASE_SAVE_DATA_INSTANCE: "true"
+91:       DATABASE_SAVE_DATA_NEW_MESSAGE: "true"
+92:       DATABASE_SAVE_MESSAGE_UPDATE: "true"
+93:       DATABASE_SAVE_DATA_CONTACTS: "true"
+94:       DATABASE_SAVE_DATA_CHATS: "true"
+95:       DATABASE_SAVE_DATA_HISTORIC: "true"
+96:       DATABASE_SAVE_DATA_LABELS: "true"
+97:       AUTHENTICATION_API_KEY: ${EVOLUTION_AUTHENTICATION_API_KEY:?Set EVOLUTION_AUTHENTICATION_API_KEY in .env.testing}
+98:       CACHE_REDIS_ENABLED: "true"
+99:       CACHE_REDIS_URI: redis://evolution-redis:6379/6
+100:       CACHE_REDIS_PREFIX_KEY: leadshug_channels_local
+101:       CACHE_REDIS_SAVE_INSTANCES: "true"
+102:       CACHE_LOCAL_ENABLED: "false"
+103:       LOG_LEVEL: ${EVOLUTION_LOG_LEVEL:-ERROR,WARN}
+104:       LOG_COLOR: "false"
+105:     volumes:
+106:       - evolution_instances:/evolution/instances
+107:     expose:
+108:       - "8080"
+109:     labels:
+110:       com.leadshug.channels.owner: number-onboarding
+111:     restart: unless-stopped
+112: 
+113:   evolution-header-probe:
+114:     image: node:22.23.3-bookworm-slim
+115:     profiles: [channels-probe]
+116:     entrypoint: ["node", "-e"]
+117:     command:
+118:       - |
+119:         const http = require('node:http');
+120:         const { randomUUID } = require('node:crypto');
+121:         const os = require('node:os');
+122:         const port = 8091;
+123:         const receiverIp = Object.values(os.networkInterfaces()).flat().find(address => address && address.family === 'IPv4' && !address.internal)?.address;
+124:         let callbacks = [];
+125:         const server = http.createServer((req, res) => {
+126:           const chunks = [];
+127:           let bytes = 0;
+128:           req.on('data', chunk => { bytes += chunk.length; if (bytes <= 1048576) chunks.push(chunk); });
+129:           req.on('end', () => {
+130:             const headerMatches = req.headers['x-leadshug-webhook-secret'] === process.env.PROBE_EXPECTED_HEADER;
+131:             let event = 'other';
+132:             try {
+133:               const parsed = JSON.parse(Buffer.concat(chunks).toString('utf8'));
+134:               event = typeof parsed.event === 'string' ? parsed.event.toLowerCase() : 'other';
+135:             } catch {}
+136:             const status = headerMatches ? 200 : 403;
+137:             callbacks.push({ headerMatches, event, status });
+138:             console.log(JSON.stringify({ method: req.method, path: req.url === '/probe-callback' ? '/probe-callback' : 'other', event, headerMatches, status }));
+139:             res.writeHead(status).end();
+140:           });
+141:         });
+142:         server.listen(port, '0.0.0.0', async () => {
+143:           const base = 'http://evolution:8080';
+144:           const headers = { 'content-type': 'application/json', apikey: process.env.EVOLUTION_AUTHENTICATION_API_KEY };
+145:           const makeProbe = async (wrong) => {
+146:             const name = 'leadshug-cp17-' + randomUUID();
+147:             const expected = process.env.PROBE_EXPECTED_HEADER;
+148:             const response = await fetch(base + '/instance/create', {
+149:               method: 'POST', headers,
+150:               body: JSON.stringify({ instanceName: name, integration: 'WHATSAPP-BAILEYS', qrcode: false,
+151:                 webhook: { enabled: true, events: ['INSTANCE_CREATE'], url: 'http://' + receiverIp + ':8091/probe-callback', headers: { 'x-leadshug-webhook-secret': wrong ? 'deliberately-wrong' : expected }, byEvents: false, base64: false } })
+152:             });
+153:             await response.arrayBuffer();
+154:             const wanted = !wrong;
+155:             const until = Date.now() + 15000;
+156:             while (Date.now() < until && !callbacks.some(c => c.headerMatches === wanted && c.event === 'instance.create')) await new Promise(r => setTimeout(r, 100));
+157:             const received = callbacks.find(c => c.headerMatches === wanted && c.event === 'instance.create');
+158:             let instanceObservedBeforeDelete = false;
+159:             try {
+160:               const listed = await fetch(base + '/instance/fetchInstances', { headers: { apikey: process.env.EVOLUTION_AUTHENTICATION_API_KEY }, signal: AbortSignal.timeout(2000) });
+161:               const instances = listed.ok ? await listed.json() : null;
+162:               instanceObservedBeforeDelete = Array.isArray(instances) && instances.some(instance => instance?.instance?.instanceName === name || instance?.instanceName === name || instance?.name === name);
+163:             } catch {}
+164:             const del = await fetch(base + '/instance/delete/' + encodeURIComponent(name), { method: 'DELETE', headers, signal: AbortSignal.timeout(5000) });
+165:             await del.arrayBuffer();
+166:             let removed = false;
+167:             const cleanupUntil = Date.now() + 10000;
+168:             while (Date.now() < cleanupUntil) {
+169:               try {
+170:                 const listed = await fetch(base + '/instance/fetchInstances', { headers: { apikey: process.env.EVOLUTION_AUTHENTICATION_API_KEY }, signal: AbortSignal.timeout(2000) });
+171:                 if (!listed.ok) throw new Error('list_failed');
+172:                 const instances = await listed.json();
+173:                 if (!Array.isArray(instances)) throw new Error('invalid_list');
+174:                 const stillPresent = instances.some(instance => instance?.instance?.instanceName === name || instance?.instanceName === name || instance?.name === name);
+175:                 if (!stillPresent) { removed = true; break; }
+176:               } catch {}
+177:               await new Promise(r => setTimeout(r, 250));
+178:             }
+179:             return { createStatus: response.status, callbackReceived: !!received, callbackStatusExpected: !!received && received.status === (wrong ? 403 : 200), instanceObservedBeforeDelete, deleteStatus: del.status, removed };
+180:           };
+181:           try {
+182:             const correct = await makeProbe(false);
+183:             callbacks = [];
+184:             const wrong = await makeProbe(true);
+185:             console.log(JSON.stringify({ correct, wrong }));
+186:             if (correct.createStatus < 200 || correct.createStatus >= 300 || !correct.callbackReceived || !correct.callbackStatusExpected || !correct.instanceObservedBeforeDelete || correct.deleteStatus < 200 || correct.deleteStatus >= 300 || wrong.createStatus < 200 || wrong.createStatus >= 300 || !wrong.callbackReceived || !wrong.callbackStatusExpected || !wrong.instanceObservedBeforeDelete || wrong.deleteStatus < 200 || wrong.deleteStatus >= 300 || !correct.removed || !wrong.removed) process.exitCode = 1;
+187:           } catch {
+188:             console.log(JSON.stringify({ success: false, error: 'probe_failed' }));
+189:             process.exitCode = 1;
+190:           } finally { server.close(); }
+191:         });
+192:     environment:
+193:       EVOLUTION_AUTHENTICATION_API_KEY: ${EVOLUTION_AUTHENTICATION_API_KEY:?Set EVOLUTION_AUTHENTICATION_API_KEY in .env.testing}
+194:       PROBE_EXPECTED_HEADER: leadshug-cp21-fictitious-provider-probe-header
+195:     networks: [default]
+196:     labels:
+197:       com.leadshug.channels.owner: number-onboarding
+198:     restart: "no"
+199: 
+200:   validation-postgres:
+201:     image: postgres:16
+202:     profiles: [validation]
+203:     environment:
+204:       POSTGRES_DB: leadshug_timeline_channels_ci
+205:       POSTGRES_USER: channels_validation
+206:       POSTGRES_PASSWORD: channels_validation_only
+207:     volumes:
+208:       - validation_pg_data:/var/lib/postgresql/data
+209:     healthcheck:
+210:       test: ["CMD-SHELL", "pg_isready -U $$POSTGRES_USER -d $$POSTGRES_DB"]
+211:       interval: 5s
+212:       timeout: 5s
+213:       retries: 20
+214:     networks: [validation]
+215:     labels:
+216:       com.leadshug.channels.owner: number-onboarding-validation
+217: 
+218:   validation-runner:
+219:     image: node:22.23.3-bookworm-slim
+220:     profiles: [validation]
+221:     depends_on:
+222:       validation-postgres:
+223:         condition: service_healthy
+224:     working_dir: /workspace
+225:     environment:
+226:       DATABASE_URL: postgresql://channels_validation:channels_validation_only@validation-postgres:5432/leadshug_timeline_channels_ci?schema=public
+227:       LEADSHUG_E2E_DATABASE_URL: postgresql://channels_validation:channels_validation_only@validation-postgres:5432/leadshug_timeline_channels_ci?schema=public
+228:       LEADSHUG_API_PORT: "3100"
+229:       LEADSHUG_FIXTURE_PORT: "3101"
+230:       SESSION_SECRET: validation-session-secret-only
+231:       INTERNAL_SERVICE_TOKEN: validation-internal-token-only
+232:       LH_ARQUIVOS_DIR: /tmp/leadshug-channels-validation-files
+233:       LH_CHANNEL_UNOFFICIAL: "true"
+234:       META_APP_ID: fixture-app
+235:       META_APP_SECRET: fixture-meta-secret-only
+236:       META_SIGNUP_CONFIG_ID: fixture-config
+237:       GRAPH_VERSION: v26.0
+238:       CHANNEL_CREDENTIAL_KEY_ID: validation-key-v1
+239:       CHANNEL_CREDENTIAL_KEY: AAECAwQFBgcICQoLDA0ODxAREhMUFRYXGBkaGxwdHh8=
+240:       WEBHOOK_VERIFY_TOKEN: validation-webhook-token-only
+241:       EVOLUTION_API_URL: http://127.0.0.1:3101/provider/evolution
+242:       EVOLUTION_API_KEY: validation-provider-key-only
+243:       EVOLUTION_WEBHOOK_URL: http://127.0.0.1:3100/webhooks/evolution
+244:       EVOLUTION_WEBHOOK_SECRET: validation-evolution-header-secret
+245:       WEB_ORIGIN: http://127.0.0.1:4173
+246:       WEBHOOK_FAKE_MODE: "true"
+247:       CHANNELS_EXPECTED_WEB_PACKAGE_SHA256: ${CHANNELS_EXPECTED_WEB_PACKAGE_SHA256:-}
+248:     volumes:
+249:       - type: bind
+250:         source: ${CHANNELS_SOURCE_WINDOWS:-./}
+251:         target: /workspace
+252:         bind:
+253:           create_host_path: false
+254:       - channels_api_workspace:/workspace/api-app
+255:       - type: bind
+256:         source: ${CHANNELS_API_GIT_WINDOWS:-./api-app/.git}
+257:         target: /workspace/api-app/.git
+258:         read_only: true
+259:         bind: {create_host_path: false}
+260:       - type: bind
+261:         source: ${CHANNELS_API_SRC_WINDOWS:-./api-app/src}
+262:         target: /workspace/api-app/src
+263:         read_only: true
+264:         bind: {create_host_path: false}
+265:       - type: bind
+266:         source: ${CHANNELS_API_TEST_WINDOWS:-./api-app/test}
+267:         target: /workspace/api-app/test
+268:         read_only: true
+269:         bind: {create_host_path: false}
+270:       - type: bind
+271:         source: ${CHANNELS_API_PRISMA_WINDOWS:-./api-app/prisma}
+272:         target: /workspace/api-app/prisma
+273:         read_only: true
+274:         bind: {create_host_path: false}
+275:       - type: bind
+276:         source: ${CHANNELS_API_PACKAGE_JSON_WINDOWS:-./api-app/package.json}
+277:         target: /workspace/api-app/package.json
+278:         read_only: true
+279:         bind: {create_host_path: false}
+280:       - type: bind
+281:         source: ${CHANNELS_API_PACKAGE_LOCK_WINDOWS:-./api-app/package-lock.json}
+282:         target: /workspace/api-app/package-lock.json
+283:         read_only: true
+284:         bind: {create_host_path: false}
+285:       - type: bind
+286:         source: ${CHANNELS_API_ENV_EXAMPLE_WINDOWS:-./api-app/.env.example}
+287:         target: /workspace/api-app/.env.example
+288:         read_only: true
+289:         bind: {create_host_path: false}
+290:       - type: bind
+291:         source: ${CHANNELS_API_DOCKERIGNORE_WINDOWS:-./api-app/.dockerignore}
+292:         target: /workspace/api-app/.dockerignore
+293:         read_only: true
+294:         bind: {create_host_path: false}
+295:       - type: bind
+296:         source: ${CHANNELS_API_GITIGNORE_WINDOWS:-./api-app/.gitignore}
+297:         target: /workspace/api-app/.gitignore
+298:         read_only: true
+299:         bind: {create_host_path: false}
+300:       - type: bind
+301:         source: ${CHANNELS_API_ENTRYPOINT_WINDOWS:-./api-app/docker/entrypoint.sh}
+302:         target: /workspace/api-app/docker/entrypoint.sh
+303:         read_only: true
+304:         bind: {create_host_path: false}
+305:       - type: bind
+306:         source: ${CHANNELS_API_DOCKERFILE_WINDOWS:-./api-app/Dockerfile}
+307:         target: /workspace/api-app/Dockerfile
+308:         read_only: true
+309:         bind: {create_host_path: false}
+310:       - type: bind
+311:         source: ${CHANNELS_API_ESLINT_WINDOWS:-./api-app/eslint.config.mjs}
+312:         target: /workspace/api-app/eslint.config.mjs
+313:         read_only: true
+314:         bind: {create_host_path: false}
+315:       - type: bind
+316:         source: ${CHANNELS_API_NEST_WINDOWS:-./api-app/nest-cli.json}
+317:         target: /workspace/api-app/nest-cli.json
+318:         read_only: true
+319:         bind: {create_host_path: false}
+320:       - type: bind
+321:         source: ${CHANNELS_API_RAILWAY_WINDOWS:-./api-app/railway.json}
+322:         target: /workspace/api-app/railway.json
+323:         read_only: true
+324:         bind: {create_host_path: false}
+325:       - type: bind
+326:         source: ${CHANNELS_API_TSCONFIG_WINDOWS:-./api-app/tsconfig.json}
+327:         target: /workspace/api-app/tsconfig.json
+328:         read_only: true
+329:         bind: {create_host_path: false}
+330:       - type: bind
+331:         source: ${CHANNELS_API_TSCONFIG_BUILD_WINDOWS:-./api-app/tsconfig.build.json}
+332:         target: /workspace/api-app/tsconfig.build.json
+333:         read_only: true
+334:         bind: {create_host_path: false}
+335:       - type: bind
+336:         source: ${CHANNELS_API_VITEST_WINDOWS:-./api-app/vitest.config.ts}
+337:         target: /workspace/api-app/vitest.config.ts
+338:         read_only: true
+339:         bind: {create_host_path: false}
+340:       - type: bind
+341:         source: ${CHANNELS_API_VITEST_E2E_WINDOWS:-./api-app/vitest.config.e2e.ts}
+342:         target: /workspace/api-app/vitest.config.e2e.ts
+343:         read_only: true
+344:         bind: {create_host_path: false}
+345:       - type: bind
+346:         source: ${CHANNELS_API_VITEST_COV_WINDOWS:-./api-app/vitest.config.cov.ts}
+347:         target: /workspace/api-app/vitest.config.cov.ts
+348:         read_only: true
+349:         bind: {create_host_path: false}
+350:       - channels_api_node_modules:/workspace/api-app/node_modules
+351:       - channels_web_workspace:/workspace/web-app
+352:       - type: bind
+353:         source: ${CHANNELS_WEB_GIT_WINDOWS:-./web-app/.git}
+354:         target: /workspace/web-app/.git
+355:         read_only: true
+356:         bind: {create_host_path: false}
+357:       - type: bind
+358:         source: ${CHANNELS_WEB_SRC_WINDOWS:-./web-app/src}
+359:         target: /workspace/web-app/src
+360:         read_only: true
+361:         bind: {create_host_path: false}
+362:       - type: bind
+363:         source: ${CHANNELS_WEB_E2E_WINDOWS:-./web-app/e2e}
+364:         target: /workspace/web-app/e2e
+365:         read_only: true
+366:         bind: {create_host_path: false}
+367:       - type: bind
+368:         source: ${CHANNELS_WEB_PUBLIC_WINDOWS:-./web-app/public}
+369:         target: /workspace/web-app/public
+370:         read_only: true
+371:         bind: {create_host_path: false}
+372:       - type: bind
+373:         source: ${CHANNELS_WEB_PACKAGE_JSON_WINDOWS:-./web-app/package.json}
+374:         target: /workspace/web-app/package.json
+375:         read_only: true
+376:         bind: {create_host_path: false}
+377:       - type: bind
+378:         source: ${CHANNELS_WEB_PACKAGE_LOCK_WINDOWS:-./web-app/package-lock.json}
+379:         target: /workspace/web-app/package-lock.json
+380:         read_only: true
+381:         bind: {create_host_path: false}
+382:       - type: bind
+383:         source: ${CHANNELS_WEB_INDEX_WINDOWS:-./web-app/index.html}
+384:         target: /workspace/web-app/index.html
+385:         read_only: true
+386:         bind: {create_host_path: false}
+387:       - type: bind
+388:         source: ${CHANNELS_WEB_PLAYWRIGHT_WINDOWS:-./web-app/playwright.config.ts}
+389:         target: /workspace/web-app/playwright.config.ts
+390:         read_only: true
+391:         bind: {create_host_path: false}
+392:       - type: bind
+393:         source: ${CHANNELS_WEB_TSCONFIG_WINDOWS:-./web-app/tsconfig.json}
+394:         target: /workspace/web-app/tsconfig.json
+395:         read_only: true
+396:         bind: {create_host_path: false}
+397:       - type: bind
+398:         source: ${CHANNELS_WEB_VITE_WINDOWS:-./web-app/vite.config.ts}
+399:         target: /workspace/web-app/vite.config.ts
+400:         read_only: true
+401:         bind: {create_host_path: false}
+402:       - type: bind
+403:         source: ${CHANNELS_WEB_RAILWAY_WINDOWS:-./web-app/railway.json}
+404:         target: /workspace/web-app/railway.json
+405:         read_only: true
+406:         bind: {create_host_path: false}
+407:       - type: bind
+408:         source: ${CHANNELS_WEB_GITIGNORE_WINDOWS:-./web-app/.gitignore}
+409:         target: /workspace/web-app/.gitignore
+410:         read_only: true
+411:         bind: {create_host_path: false}
+412:       - type: bind
+413:         source: ${CHANNELS_WEB_DOCKERIGNORE_WINDOWS:-./web-app/.dockerignore}
+414:         target: /workspace/web-app/.dockerignore
+415:         read_only: true
+416:         bind: {create_host_path: false}
+417:       - type: bind
+418:         source: ${CHANNELS_WEB_DOCKERFILE_WINDOWS:-./web-app/Dockerfile}
+419:         target: /workspace/web-app/Dockerfile
+420:         read_only: true
+421:         bind: {create_host_path: false}
+422:       - type: bind
+423:         source: ${CHANNELS_WEB_CONFIG_JS_WINDOWS:-./web-app/docker/40-config-js.sh}
+424:         target: /workspace/web-app/docker/40-config-js.sh
+425:         read_only: true
+426:         bind: {create_host_path: false}
+427:       - type: bind
+428:         source: ${CHANNELS_WEB_NGINX_TEMPLATE_WINDOWS:-./web-app/nginx/default.conf.template}
+429:         target: /workspace/web-app/nginx/default.conf.template
+430:         read_only: true
+431:         bind: {create_host_path: false}
+432:       - channels_web_node_modules:/workspace/web-app/node_modules
+433:       - channels_npm_cache:/root/.npm
+434:       - channels_playwright_cache:/root/.cache/ms-playwright
+435:     configs:
+436:       - source: validation_api_env_mask
+437:         target: /workspace/api-app/.env
+438:       - source: validation_root_env_mask
+439:         target: /workspace/.env
+440:       - source: validation_root_env_testing_mask
+441:         target: /workspace/.env.testing
+442:     networks: [validation]
+443:     labels:
+444:       com.leadshug.channels.owner: number-onboarding-validation
+445: 
+446: networks:
+447:   default:
+448:     labels:
+449:       com.leadshug.channels.owner: number-onboarding
+450:   validation:
+451:     labels:
+452:       com.leadshug.channels.owner: number-onboarding-validation
+453: 
+454: volumes:
+455:   leadshug_pg_data:
+456:     labels:
+457:       com.leadshug.channels.owner: number-onboarding
+458:   leadshug_arquivos:
+459:     labels:
+460:       com.leadshug.channels.owner: number-onboarding
+461:   evolution_pg_data:
+462:     labels:
+463:       com.leadshug.channels.owner: number-onboarding
+464:   evolution_redis_data:
+465:     labels:
+466:       com.leadshug.channels.owner: number-onboarding
+467:   evolution_instances:
+468:     labels:
+469:       com.leadshug.channels.owner: number-onboarding
+470:   validation_pg_data:
+471:     labels:
+472:       com.leadshug.channels.owner: number-onboarding-validation
+473:   channels_api_node_modules:
+474:     labels:
+475:       com.leadshug.channels.owner: number-onboarding-validation
+476:   channels_api_workspace:
+477:     labels:
+478:       com.leadshug.channels.owner: number-onboarding-validation
+479:   channels_web_node_modules:
+480:     labels:
+481:       com.leadshug.channels.owner: number-onboarding-validation
+482:   channels_web_workspace:
+483:     labels:
+484:       com.leadshug.channels.owner: number-onboarding-validation
+485:   channels_npm_cache:
+486:     labels:
+487:       com.leadshug.channels.owner: number-onboarding-validation
+488:   channels_playwright_cache:
+489:     labels:
+490:       com.leadshug.channels.owner: number-onboarding-validation
+491: 
+492: configs:
+493:   validation_api_env_mask:
+494:     file: ./api-app/.env.example
+495:   validation_root_env_mask:
+496:     file: ./.env.example
+497:   validation_root_env_testing_mask:
+498:     file: ./.env.example
+```
+
+## Unchanged critical boundary context api-app/src/app.module.ts
+
+SHA256 `a59880adc1bd8250fdbf5d52637fc38fe3177a2615e1b25389716946da7ad420`.
+
+```
+1: import { Module } from '@nestjs/common';
+2: import { APP_FILTER } from '@nestjs/core';
+3: import { BancoAtrasadoFilter } from './infra/prisma/banco-atrasado.filter';
+4: import { HealthModule } from './health/health.module';
+5: import { PrismaModule } from './infra/prisma/prisma.module';
+6: import { RealtimeModule } from './realtime/realtime.module';
+7: import { RotinasModule } from './rotinas/rotinas.module';
+8: import { BffModule } from './surfaces/bff/bff.module';
+9: import { PublicApiModule } from './surfaces/public/public.module';
+10: import { InternalModule } from './surfaces/internal/internal.module';
+11: import { WebhooksModule } from './surfaces/webhooks/webhooks.module';
+12: 
+13: // Quatro superfícies de entrada, cada uma com guard próprio (ADR-0006), mais o
+14: // /health, que não é superfície — é trava de plataforma (ADR-0002) — e as
+15: // rotinas periódicas, que também não são superfície: ninguém as chama, elas
+16: // acordam sozinhas (ADR-0023).
+17: //
+18: // NENHUM guard global é registrado aqui, e isso é deliberado: um APP_GUARD
+19: // alcançaria também o /health, que precisa ser público, e a autenticação
+20: // deixaria de ser propriedade da superfície.
+21: @Module({
+22:   imports: [
+23:     PrismaModule,
+24:     RealtimeModule,
+25:     RotinasModule,
+26:     HealthModule,
+27:     BffModule,
+28:     PublicApiModule,
+29:     InternalModule,
+30:     WebhooksModule,
+31:   ],
+32:   providers: [
+33:     // Filtro de EXCEÇÃO registrado no MÓDULO, não no bootstrap: é assim que o
+34:     // teste roda com a mesma fiação da produção. Registrado no `main.ts`, ele
+35:     // existia só em produção — e o teste provaria outra coisa.
+36:     //
+37:     // Não é guard: não toca em autenticação, e o ADR-0006 continua valendo —
+38:     // quem autentica é a superfície, pelo prefixo.
+39:     { provide: APP_FILTER, useClass: BancoAtrasadoFilter },
+40:   ],
+41: })
+42: export class AppModule {}
+```
+
+
+## Unchanged critical boundary context api-app/src/surfaces/bff/session.middleware.ts
+
+SHA256 `80d8be0072b817ec34b3eb7d29218835bd218a40670c1f917d0b1787b0b57211`.
+
+```
+1: import { ConflictException, ForbiddenException, Injectable, NestMiddleware, UnauthorizedException } from '@nestjs/common';
+2: import type { NextFunction, Request, Response } from 'express';
+3: import { PrismaService } from '../../infra/prisma/prisma.service';
+4: import { SessionService } from '../../infra/session/session.service';
+5: 
+6: export interface UsuarioDaSessao {
+7:   id: string;
+8:   mantenedoraId: string;
+9:   nome: string;
+10:   email: string;
+11:   precisaTrocarSenha: boolean;
+12: }
+13: 
+14: declare global {
+15:   // eslint-disable-next-line @typescript-eslint/no-namespace
+16:   namespace Express {
+17:     interface Request {
+18:       usuario?: UsuarioDaSessao;
+19:     }
+20:   }
+21: }
+22: 
+23: /** Rotas liberadas dentro do BFF: são o que existe ANTES de haver sessão. */
+24: const PUBLICAS = new Set([
+25:   '/api/bff/auth/login',
+26:   // Convite e recuperação (ADR-0025 §6): quem pede recuperação não tem sessão
+27:   // por definição, e quem aceita convite ainda não tem conta utilizável. Não
+28:   // viram superfície nova — a plateia é a mesma do login: a tela.
+29:   '/api/bff/auth/recuperar',
+30: ]);
+31: 
+32: /** As rotas de token carregam o valor no caminho, então casam por prefixo. */
+33: const PUBLICAS_POR_PREFIXO = ['/api/bff/auth/token/'];
+34: 
+35: /** Enquanto a troca inicial não acontece, só estas respondem (ADR-0007 §4). */
+36: const LIBERADAS_EM_TROCA_OBRIGATORIA = new Set(['/api/bff/me', '/api/bff/me/password', '/api/bff/auth/logout']);
+37: 
+38: /**
+39:  * Enquanto o wizard não termina, só estas respondem (ADR-0016 §4).
+40:  *
+41:  * A ORDEM É `senha → wizard → produto` (ADR-0016, Emenda 1 §3), e é a razão de
+42:  * o wizard NÃO estar na lista acima: a troca de senha é trava de SEGURANÇA — a
+43:  * credencial do bootstrap passou por fora do produto — e o wizard é onboarding
+44:  * de PRODUTO. Segurança primeiro. Sem essa ordem, o OWNER recém-criado fica
+45:  * preso entre os dois portões sem rota para nenhum.
+46:  */
+47: const LIBERADAS_EM_ONBOARDING = new Set([
+48:   '/api/bff/me',
+49:   '/api/bff/me/password',
+50:   '/api/bff/auth/logout',
+51:   '/api/bff/onboarding',
+52: ]);
+53: 
+54: /**
+55:  * Guard da superfície BFF (ADR-0006): montado no PREFIXO, então rota nova nasce
+56:  * exigindo sessão sem ninguém lembrar de anotá-la.
+57:  *
+58:  * O cookie prova que ele é autêntico — não que o acesso continua válido AGORA.
+59:  * Por isso o usuário é relido do banco a cada request (ADR-0007 §1).
+60:  */
+61: @Injectable()
+62: export class SessionMiddleware implements NestMiddleware {
+63:   constructor(
+64:     private readonly sessions: SessionService,
+65:     private readonly prisma: PrismaService,
+66:   ) {}
+67: 
+68:   async use(req: Request, _res: Response, next: NextFunction): Promise<void> {
+69:     const caminho = req.path;
+70:     const mudaEstado = !['GET', 'HEAD', 'OPTIONS'].includes(req.method);
+71: 
+72:     // Rota pública do BFF (só o login). Ela muda estado e não tem sessão para
+73:     // proteger, mas ainda assim exige o cabeçalho: login por CSRF existe, e o
+74:     // custo de barrar é zero.
+75:     if (PUBLICAS.has(caminho) || PUBLICAS_POR_PREFIXO.some((p) => caminho.startsWith(p))) {
+76:       this.exigirCabecalhoAntiCsrf(req, mudaEstado);
+77:       return next();
+78:     }
+79: 
+80:     const token = this.sessions.extrairDoCabecalho(req.headers.cookie);
+81:     const claims = this.sessions.verificar(token);
+82:     if (!claims) {
+83:       throw new UnauthorizedException({ error: 'Não autenticado.', code: 'NAO_AUTENTICADO' });
+84:     }
+85: 
+86:     const user = await this.prisma.appUser.findUnique({ where: { id: claims.uid } });
+87:     // Excluído, inativado ou com senha trocada depois da emissão: a sessão cai
+88:     // na requisição seguinte, não no vencimento do cookie.
+89:     if (!user || user.status !== 'ATIVO') {
+90:       throw new UnauthorizedException({ error: 'Não autenticado.', code: 'NAO_AUTENTICADO' });
+91:     }
+92:     if (user.passwordChangedAt && user.passwordChangedAt.getTime() > claims.iat) {
+93:       throw new UnauthorizedException({ error: 'Sessão expirada.', code: 'NAO_AUTENTICADO' });
+94:     }
+95: 
+96:     if (user.mustChangePassword && !LIBERADAS_EM_TROCA_OBRIGATORIA.has(caminho)) {
+97:       throw new ForbiddenException({
+98:         error: 'Troque sua senha inicial antes de usar o sistema.',
+99:         code: 'TROCA_DE_SENHA_OBRIGATORIA',
+100:       });
+101:     }
+102: 
+103:     // O segundo portão, e SÓ depois que o primeiro foi vencido. Painel sem
+104:     // módulo escolhido não tem o que mostrar — a tela em branco do /inbox já
+105:     // custou uma sessão de QA.
+106:     if (!LIBERADAS_EM_ONBOARDING.has(caminho)) {
+107:       const cfg = await this.prisma.mantenedoraSettings.findUnique({
+108:         where: { mantenedoraId: user.mantenedoraId },
+109:         select: { onboardingConcluido: true },
+110:       });
+111:       if (!cfg?.onboardingConcluido) {
+112:         throw new ConflictException({
+113:           error: 'A conta ainda está sendo configurada.',
+114:           code: 'ONBOARDING_PENDENTE',
+115:         });
+116:       }
+117:     }
+118: 
+119:     // CSRF depois da sessão, de propósito: sem cookie válido não há nada que um
+120:     // site de terceiro possa cavalgar, e responder 403 antes do 401 só
+121:     // confundiria quem depura. SameSite=Lax cobre o caso comum; o cabeçalho
+122:     // cobre o que muda estado (ADR-0007 §1).
+123:     this.exigirCabecalhoAntiCsrf(req, mudaEstado);
+124: 
+125:     req.usuario = {
+126:       id: user.id,
+127:       mantenedoraId: user.mantenedoraId,
+128:       nome: user.name,
+129:       email: user.email,
+130:       precisaTrocarSenha: user.mustChangePassword,
+131:     };
+132:     next();
+133:   }
+134: 
+135:   private exigirCabecalhoAntiCsrf(req: Request, mudaEstado: boolean): void {
+136:     if (mudaEstado && !req.headers['x-requested-with']) {
+137:       throw new ForbiddenException({ error: 'Requisição sem X-Requested-With.', code: 'CSRF_SUSPEITO' });
+138:     }
+139:   }
+140: }
+```
+
+
+## Unchanged critical boundary context api-app/src/surfaces/public/api-key.middleware.ts
+
+SHA256 `f76cd8854c8145c4b456e8c9d2d1ab000c17bc5278af76997745b5696edd9877`.
+
+```
+1: import { Injectable, NestMiddleware, UnauthorizedException } from '@nestjs/common';
+2: import type { NextFunction, Request, Response } from 'express';
+3: import { ApiKeyService, ContextoDaChave } from '../../domain/integration/api-key.service';
+4: 
+5: declare global {
+6:   // eslint-disable-next-line @typescript-eslint/no-namespace
+7:   namespace Express {
+8:     interface Request {
+9:       chave?: ContextoDaChave;
+10:     }
+11:   }
+12: }
+13: 
+14: /**
+15:  * Guard da superfície pública (ADR-0006, ADR-0010): chave de parceiro, nunca
+16:  * cookie. **A Mantenedora sai da CHAVE** — nunca do corpo, do path ou de
+17:  * cabeçalho.
+18:  */
+19: @Injectable()
+20: export class ApiKeyMiddleware implements NestMiddleware {
+21:   constructor(private readonly chaves: ApiKeyService) {}
+22: 
+23:   async use(req: Request, _res: Response, next: NextFunction): Promise<void> {
+24:     const header = req.headers.authorization ?? '';
+25:     const match = /^Bearer\s+(.+)$/i.exec(header);
+26:     const recusa = () => {
+27:       throw new UnauthorizedException({
+28:         error: 'Chave de API ausente, inválida ou revogada.',
+29:         code: 'NAO_AUTENTICADO',
+30:       });
+31:     };
+32: 
+33:     if (!match) recusa();
+34:     const ctx = await this.chaves.resolver(match![1].trim());
+35:     if (!ctx) recusa();
+36: 
+37:     req.chave = ctx!;
+38:     next();
+39:   }
+40: }
+```
+
+
+## Unchanged critical boundary context api-app/src/domain/access/access.service.ts
+
+SHA256 `2ef3761a138d7c8c386c5ddb4bf2a2000c960328789834bde5e12135a1ea66e7`.
+
+```
+1: import { Injectable } from '@nestjs/common';
+2: import { PrismaService } from '../../infra/prisma/prisma.service';
+3: import { Role } from './role';
+4: import { Grant, buNoEscopo, escopoDoUsuario, papelNaBu, papelNaMantenedora } from './scope';
+5: 
+6: /**
+7:  * A única porta por onde um `bu_id` vindo do request pode passar.
+8:  *
+9:  * Regra 0 do CLAUDE.md: toda leitura de dado de negócio filtra por BU dentro do
+10:  * escopo do usuário, e a Mantenedora intersecciona esse conjunto — nunca o soma.
+11:  */
+12: @Injectable()
+13: export class AccessService {
+14:   constructor(private readonly prisma: PrismaService) {}
+15: 
+16:   async grantsDoUsuario(userId: string): Promise<Grant[]> {
+17:     const linhas = await this.prisma.userBuRole.findMany({
+18:       where: { userId, bu: { status: 'ATIVO' } },
+19:       select: { buId: true, role: true, grantedViaTipo: true, grantedViaId: true },
+20:     });
+21:     return linhas.map((l) => ({
+22:       buId: l.buId,
+23:       role: l.role as Role,
+24:       origemTipo: l.grantedViaTipo,
+25:       origemId: l.grantedViaId,
+26:     }));
+27:   }
+28: 
+29:   async escopo(userId: string): Promise<string[]> {
+30:     return escopoDoUsuario(await this.grantsDoUsuario(userId));
+31:   }
+32: 
+33:   /**
+34:    * Resolve uma BU pedida contra os grants. Devolve null quando não pode ser
+35:    * vista — e quem chama responde **404**, não 403: confirmar a existência de
+36:    * recurso alheio entrega informação a quem varre identificadores.
+37:    */
+38:   async resolverBu(userId: string, buId: string): Promise<{ id: string; name: string; papel: Role } | null> {
+39:     const grants = await this.grantsDoUsuario(userId);
+40:     if (!buNoEscopo(grants, buId)) return null;
+41: 
+42:     const bu = await this.prisma.businessUnit.findFirst({
+43:       where: { id: buId, status: 'ATIVO' },
+44:       select: { id: true, name: true },
+45:     });
+46:     if (!bu) return null;
+47: 
+48:     const papel = papelNaBu(grants, buId);
+49:     if (!papel) return null;
+50:     return { id: bu.id, name: bu.name, papel };
+51:   }
+52: 
+53:   /** Papel na Mantenedora: calculado, nunca armazenado (ADR-0008 §4). */
+54:   async papelNaMantenedoraDoUsuario(userId: string, mantenedoraId: string): Promise<Role | null> {
+55:     const grants = await this.grantsDoUsuario(userId);
+56:     const bus = await this.prisma.businessUnit.findMany({
+57:       where: { mantenedoraId, status: 'ATIVO' },
+58:       select: { id: true },
+59:     });
+60:     return papelNaMantenedora(grants, bus.map((b) => b.id));
+61:   }
+62: }
+```
+
+
+## Unchanged critical boundary context api-app/test/number-onboarding-message-acceptance.e2e-spec.ts
+
+SHA256 `c8b29c16412938b64fb8e2555729f0777d9e3eb69a57d29df3d65b56443c4bac`.
+
+```
+1: import { INestApplication } from '@nestjs/common';
+2: import { afterAll, beforeAll, describe, expect, it } from 'vitest';
+3: import { MessageAcceptanceService } from '../src/domain/inbox/message-acceptance.service';
+4: import { PrismaService } from '../src/infra/prisma/prisma.service';
+5: import { criarMantenedora, limparBanco, subirApp } from './helpers';
+6: 
+7: describe('number onboarding keyed message acceptance (PostgreSQL)', () => {
+8:   let app: INestApplication;
+9:   let prisma: PrismaService;
+10:   let acceptance: MessageAcceptanceService;
+11:   let buId: string;
+12:   let channelId: string;
+13:   let identityId: string;
+14: 
+15:   beforeAll(async () => {
+16:     ({ app, prisma } = await subirApp());
+17:     await limparBanco(prisma);
+18:     const tenant = await criarMantenedora(app, 'Acceptance fixture', 'acceptance-fixture@example.test');
+19:     buId = tenant.businessUnit.id;
+20:     const channel = await prisma.buChannel.create({
+21:       data: { buId, type: 'OFICIAL', status: 'CONECTADO', phoneNumberId: 'phone-acceptance-fixture', ownNumberVerified: true, verifiedEpoch: 0 },
+22:     });
+23:     channelId = channel.id;
+24:     const identity = await prisma.providerResourceIdentity.create({
+25:       data: { provider: 'OFICIAL', externalResourceId: 'phone-acceptance-fixture', buId, currentChannelId: channelId },
+26:     });
+27:     identityId = identity.id;
+28:     await prisma.conversation.create({
+29:       data: { buId, contact: '5584999000002', contactType: 'PESSOA', status: 'IN_SERVICE' },
+30:     });
+31:     acceptance = new MessageAcceptanceService(prisma);
+32:   });
+33: 
+34:   afterAll(async () => {
+35:     if (prisma) {
+36:       await prisma.message.deleteMany({ where: { providerResourceIdentityId: identityId } });
+37:       await prisma.providerResourceIdentity.deleteMany({ where: { id: identityId } });
+38:       await limparBanco(prisma);
+39:     }
+40:     await app?.close();
+41:   });
+42: 
+43:   it('accepts one incoming key once, creating one conversation and unread increment', async () => {
+44:     const input = baseInput({ externalMessageId: 'wamid-in-fixture-1', direction: 'IN', content: 'hello' });
+45:     const [a, b] = await Promise.all([acceptance.accept(input), acceptance.accept(input)]);
+46:     expect(a.message.id).toBe(b.message.id);
+47:     expect([a.creationWinner, b.creationWinner].filter(Boolean)).toHaveLength(1);
+48:     expect([a.reconciled, b.reconciled].filter(Boolean)).toHaveLength(1);
+49:     expect(await prisma.message.count({ where: { providerResourceIdentityId: identityId, externalId: input.externalMessageId } })).toBe(1);
+50:     const conversation = await prisma.conversation.findUniqueOrThrow({ where: { id: a.conversation.id } });
+51:     expect(conversation.unreadCount).toBe(1);
+52:   });
+53: 
+54:   it('reports the first conversation once and keeps a second immediate message in the same conversation', async () => {
+55:     const first = await acceptance.accept(baseInput({ externalMessageId: 'wamid-in-first-conversation', contact: '5584999000003' }));
+56:     const second = await acceptance.accept(baseInput({ externalMessageId: 'wamid-in-second-message', contact: '5584999000003' }));
+57:     expect(first.conversationCreated).toBe(true);
+58:     expect(first.reopened).toBe(false);
+59:     expect(second.conversationCreated).toBe(false);
+60:     expect(second.reopened).toBe(false);
+61:     expect(second.conversation.id).toBe(first.conversation.id);
+62:     expect(second.conversation.unreadCount).toBe(2);
+63:   });
+64: 
+65:   it('echo-first and sender result reconcile to the same OUT row without changing its identity or createdAt', async () => {
+66:     const echo = await acceptance.accept(baseInput({
+67:       externalMessageId: 'wamid-out-fixture-1', direction: 'OUT', content: 'echo body', contact: '5584999000002',
+68:     }));
+69:     const createdAt = echo.message.createdAt;
+70:     const sender = await acceptance.accept(baseInput({
+71:       externalMessageId: 'wamid-out-fixture-1', direction: 'OUT', content: 'trusted sender body', conversationId: echo.conversation.id,
+72:       contact: '5584999000002',
+73:       senderResult: true, authorName: 'Support fixture',
+74:     }));
+75:     expect(sender.message.id).toBe(echo.message.id);
+76:     expect(sender.message.createdAt).toEqual(createdAt);
+77:     expect(sender.message.authorName).toBe('Support fixture');
+78:     expect(sender.message.content).toBe('trusted sender body');
+79:     expect(sender.creationWinner).toBe(false);
+80:     expect(await prisma.message.count({ where: { providerResourceIdentityId: identityId, externalId: 'wamid-out-fixture-1' } })).toBe(1);
+81:     expect(await prisma.conversation.count({ where: { id: echo.conversation.id } })).toBe(1);
+82:     const laterEcho = await acceptance.accept(baseInput({
+83:       externalMessageId: 'wamid-out-fixture-1', direction: 'OUT', content: 'untrusted later echo', contact: '5584999000002',
+84:       conversationId: echo.conversation.id,
+85:     }));
+86:     expect(laterEcho.message.id).toBe(echo.message.id);
+87:     expect(laterEcho.message.createdAt).toEqual(createdAt);
+88:     expect(laterEcho.message.content).toBe('trusted sender body');
+89:     expect(laterEcho.message.authorName).toBe('Support fixture');
+90:   });
+91: 
+92:   it('persists redacted diagnostics only while the verified identity remains current', async () => {
+93:     const context = {
+94:       providerResourceIdentityId: identityId, buId, channelId, generation: 1, pairingEpoch: 0, channelOrigin: 'OFICIAL' as const,
+95:     };
+96:     await acceptance.persistVerifiedDiagnostic(context, 'messages.received', {
+97:       providerId: 'safe-fixture', apikey: 'fake-apikey-fixture', nested: { access_token: 'fake-token-fixture' },
+98:     });
+99:     const event = await prisma.webhookEvent.findFirstOrThrow({ where: { buId, eventType: 'messages.received' } });
+100:     expect(event.payload).toEqual({
+101:       providerId: 'safe-fixture', apikey: '[REDACTED]', nested: { access_token: '[REDACTED]' },
+102:     });
+103:     await prisma.providerResourceIdentity.update({ where: { id: identityId }, data: { currentChannelId: null, retiredAt: new Date() } });
+104:     await expect(acceptance.persistVerifiedDiagnostic(context, 'messages.late', { content: 'must not persist' }))
+105:       .rejects.toMatchObject({ response: { code: 'IDENTITY_NOT_CURRENT' } });
+106:     expect(await prisma.webhookEvent.count({ where: { buId, eventType: 'messages.late' } })).toBe(0);
+107:     await expect(prisma.$executeRaw`UPDATE provider_resource_identities SET bu_id = 'different-owner-fixture' WHERE id = ${identityId}`)
+108:       .rejects.toThrow();
+109:   });
+110: 
+111:   function baseInput(overrides: Partial<Parameters<MessageAcceptanceService['accept']>[0]>) {
+112:     return {
+113:       providerResourceIdentityId: identityId, externalMessageId: 'fixture-id', buId, channelId,
+114:       generation: 1, pairingEpoch: 0, contact: '5584999000001', contactType: 'PESSOA' as const,
+115:       channelOrigin: 'OFICIAL' as const, messageType: 'TEXTO' as const, direction: 'IN' as const,
+116:       content: 'fixture', ...overrides,
+117:     };
+118:   }
+119: });
+```
+
+
+## Current disposition implementation-round-3-resolution.md
+
+# ST-CON-06 — round3 adjudication
+
+Derived review disposition, not delivery approval. Both fresh internal CLI reviews gpt-6.1-sol/xhigh terminated0, were strictly merged and made no tool calls. Exact collection provenance: `evidence/round3-collection-proof.json`. Canonical all65587 subsequently terminated0 (194 API unit,309 real-PG E2E,29 Web unit,50 browser); source hashes for44 exact public source/context paths are unchanged in `evidence/candidate-source-after-all65587.json`. This green run does not override the protection-harness finding.
+
+| Stable finding | Review binding | Disposition | Evidence / next action |
+|---|---|---|---|
+| ST06-R01 | original ADH-01/SEC-01 | resolved original counterexample | Both round2/3 preserve complete Meta envelope classification; finalAPI309 green |
+| ST06-R03 | original SEC-02 | resolved original counterexample | Arbitrary Evolution2xx{} is unconfirmed, supported key:{} diagnostic distinct; finalAPI309 green |
+| ST06-R04 | round2 adherence ADH-R2-03 / security ADH-R2-01 | resolved in reviewed candidate | Actual shipping Meta/Evolution callbacks now exercised; omission mutants each fail409vs201 with308/309 passing and exact restoration independently observed; source observations/full logs in evidence. Negative session/CSRF/key and concurrent distinct tenant credentials retained |
+| ST06-R05 | round2 adherence ADH-R2-01 | resolved in reviewed candidate | False/malformed success indicators disallow positive acknowledgement; actual pre-fix RED reported honestly, real HTTP/PG raw cases now covered; API194/309 green |
+| ST06-R02 | round3 adherence ADH-R3-01 / security ST06-R02 | blocking, Integrated within same TODO | Network finished and two animation frames do not order browser body processing/Inbox continuation. Replace test timing with instrumentation of the exact application's native response.text() settlement followed by a browser task, then assert retained same-text draft/no alert. No production hook, payload or route. Repeat actual fence-omission failure, restore source and validate candidate |
+
+R02 is a test-protection gap, not a demonstrated shipping product vulnerability. Its explicit recorded D10 completion obligation makes it blocking. Neither reviewer requests redesign, additional network capabilities or approval change. All other dedicated audit, PCV, activated runtime, assisted IN/OUT and final-review gates remain pending. The implementation writer alone may edit the admitted test, with runtime untouched.
+
+## R02 remediation evidence after review
+
+The exact matching POST is now instrumented before the held fetch begins. Test-side window.fetch forwards the native call and returns its real Response unchanged apart from a forwarding text wrapper. The wrapper counts the native read and fulfillment, returns the original body, and schedules a browser task after the body Promise resolves. In this current api.ts→Inbox.responder path there is no further await between body parse/API resolution and the generation/draft decision, so those promise continuations drain before that task. The assertion waits this marker (exact started/settled/processed1/1/1), then checks retained same-text draft and no alert. It preserves real BFF/PG data and production DTOs/routes. No arbitrary sleep or production hook was introduced.
+
+Actual execution history is explicit:64345 failed because the instrumentation was initially installed after the in-flight fetch (harness ordering fault, no useful protection proof);63018 then passed50/50 with corrected ordering and the production guard present (diagnostic, not a mutant);30246 used a single exact guard→comment replacement, confirmed by root source hash reconstruction, and failed the intended draft assertion after the body barrier while49 other browser cases passed. The captured full raw log SHA is ca39192b9de886217901b5005177eff796150a89d95280752e14fe552c953c5a. This corrects the earlier transcript-only mutation limitation without rewriting its history.
+
+Root independently verified restored Inbox d70bde9e…586c, unchanged test b3604496…8e0f3 between green and true-mutant runs, and distinct real served bundles matching each run's dist/preserved public copy. Exact records: browser-causal-actual-mutant-source-observation.json, browser-causal-mutant-failure-restoration.json, browser-causal-green-mutant-provenance.json. Canonical all80903 is running on the restored production source and corrected test; do not treat it as terminal pass yet. Dedicated TQA/final review must challenge this synchronization and proof. R02 is fixed/evidenced locally, independent assurance remains pending.
+
+
+## Current disposition consumer-evidence-matrix.md
+
+# ST-CON-06 — producer / consumer evidence
+
+Derived implementation evidence for the dedicated audit. Baseline remains the approved TODO. Consumer code and canonical automated evidence exist for every changed producer. Existing external consumers are preserved; no new application/platform is claimed and no consumer-absence waiver is used. This is not local runtime/operator delivery proof. Canonical all65587 passed; R02 handler synchronization is being strengthened and must pass on final bytes.
+
+| Producer | Implemented consumer / ownership | Evidence | Status / limit |
+|---|---|---|---|
+| Internal Channel.sendMessage / result | OutboundService; operation-scoped Meta/Evolution factories via registry | channel-transport.e2e opaque independent fake with real resolver/BFF/PG; shipping adapter callback mutation failures; outbound.service.spec/raw client specs | consumer implemented + evidenced; fake proves port substitution, not new persisted network |
+| ChannelResolver / immutable context / availability | OutboundService + BFF/public metadata projection; verified ingress bot | PG pre/post generation/epoch/version, real REAUTORIZAR, version-only rotation, tie, cross-BU, ingress pinning, no-provider calls | consumer implemented + evidenced; observed metadata grants no send authority |
+| BFF GET conversations/:id/messages additive janela.disponivel/motivo | Inbox fixed unavailable reason and disabled composer; timeline unchanged | browser accepted/unknown/ambiguous composer scenario on real BFF/PG; existing timeline browser suites | consumer implemented + evidenced; existing thread read-marker mutation retained, availability projection itself observational |
+| BFF POST conversations/:id/messages normalized outcomes | api.ts safe metadata and Inbox success/error/draft lifecycle | api.spec safe outcome fields; browser201 accepted and409 unknown with real DB readback; FRC5x20 retriggers; A→B→A stale draft probe | consumer implemented + evidenced; R02 deterministic handler-barrier correction pending final validation; no automatic resend |
+| Public GET conversations/list/thread additive availability | Existing external partner API contract, public serializer | api-publica.e2e list/thread auth/window/fields, CHANNEL-EPS actual30-conversation query evidence | consumer implemented + evidenced at real API boundary; third-party UI not owned or claimed |
+| Public POST messages shared orchestration / truthful outcome | Existing partner API clients; HTTP contract/source EXTERNO preserved | api-publica.e2e accepted/unknown/echo + channel-transport public/human conditionalclaim overlap, scoped key denial | consumer implemented + evidenced at real API boundary; no new local UI is needed for existing external consumer |
+| Typebot text response dispatch | IncomingService existing bot sessions consume OutboundService with pinned verified ingress | number-onboarding-typebot realPG suites: trusted owner, pinning/retirement/window expiry, ACK noID/no resend, echo dedup | consumer implemented + evidenced; queue/human owner/unread preserved |
+
+Local operator browser and official/unofficial WhatsApp IN/OUT remain pending after new-image activation. No automated fixture result is represented as real provider delivery.
+
+
+## Final candidate evidence causal-final-validation80903.json
+
+```
+{
+  "captured_at_utc": "2026-10-20T16:29:29.365591+00:00",
+  "run": 80903,
+  "exit": 0,
+  "counts": {
+    "api_unit": 194,
+    "api_e2e": 309,
+    "web_unit": 29,
+    "browser": 50
+  },
+  "raw_log_sha256": "778f858923f4df7457d32908a98dfda31d0b4351579acabdc1fb90515bec8554",
+  "source_after": [
+    {
+      "path": "api-app/package.json",
+      "sha256": "df8551d3e506e7c68516cbd482362c4282671b7ec7eebbf121386390ac080a9d",
+      "unchanged": true,
+      "scope": "product_or_runner"
+    },
+    {
+      "path": "api-app/src/domain/channels/channel-credential-resolver.ts",
+      "sha256": "89cf17ac02af444092651470aee13e2d4a3bcee8d459508be818322b33b00c10",
+      "unchanged": true,
+      "scope": "product_or_runner"
+    },
+    {
+      "path": "api-app/src/domain/channels/transport/channel-dependencies.spec.ts",
+      "sha256": "f59d838baf635c0ce0d1ebe725c88fbb0b19fac42e9b382452e31fd38e0511a3",
+      "unchanged": true,
+      "scope": "product_or_runner"
+    },
+    {
+      "path": "api-app/src/domain/channels/transport/channel.ts",
+      "sha256": "432796b8685d07dcc53c3a699a7b9d1469ac4fb110aea080766ec207bec8621f",
+      "unchanged": true,
+      "scope": "product_or_runner"
+    },
+    {
+      "path": "api-app/src/domain/inbox/conversations.service.ts",
+      "sha256": "c7d84f983ed61c6022424d4648e07282e7eb53c40fa9aba249618d77b3c223de",
+      "unchanged": true,
+      "scope": "product_or_runner"
+    },
+    {
+      "path": "api-app/src/domain/inbox/incoming.service.ts",
+      "sha256": "b0ec43187b1f48720aa899e40f979dd0ae447321581d675b84ef9c71dbd0ff42",
+      "unchanged": true,
+      "scope": "product_or_runner"
+    },
+    {
+      "path": "api-app/src/domain/inbox/incoming.typebot.integration.spec.ts",
+      "sha256": "0cac10e5ed05da5a6e89b39c8b32a40810b4678af77b4d3b8d20b4d1afc4704c",
+      "unchanged": true,
+      "scope": "product_or_runner"
+    },
+    {
+      "path": "api-app/src/domain/inbox/message-acceptance.service.ts",
+      "sha256": "b053744ee44b7e91fd45b5c146f759f55c70b8e517b8fbb1cab39806407335e1",
+      "unchanged": true,
+      "scope": "product_or_runner"
+    },
+    {
+      "path": "api-app/src/domain/inbox/outbound.service.spec.ts",
+      "sha256": "ae1f9208d660c684dca9b1ac5727001d8e57c4c9504be9be1d20ecba32e01805",
+      "unchanged": true,
+      "scope": "product_or_runner"
+    },
+    {
+      "path": "api-app/src/domain/inbox/outbound.service.ts",
+      "sha256": "63bcf773e2b4c5a5ddd688a1bb13745a0a206d995fafc665925df3fecaf394aa",
+      "unchanged": true,
+      "scope": "product_or_runner"
+    },
+    {
+      "path": "api-app/src/integrations/channels/channel-adapter-factory.ts",
+      "sha256": "e0ebdd78e387f7ee3af902f038d22449e212c1301ffa642bbceb5a5f05d2abfc",
+      "unchanged": true,
+      "scope": "product_or_runner"
+    },
+    {
+      "path": "api-app/src/integrations/channels/channel-adapter-registry.ts",
+      "sha256": "655b735e239e89fbaede36689d1c22245d3804d66646f7736db991cb5099b02b",
+      "unchanged": true,
+      "scope": "product_or_runner"
+    },
+    {
+      "path": "api-app/src/integrations/channels/channel-transport.module.ts",
+      "sha256": "32203d3b8393a34a9effab4266683c389651d7ec197e8f9d704a77a6a37f40dc",
+      "unchanged": true,
+      "scope": "product_or_runner"
+    },
+    {
+      "path": "api-app/src/integrations/channels/evolution-channel.ts",
+      "sha256": "60faf1ea40fe17ad62495b0f42a2cf958defcb41e3ad72d3d2213751539b460c",
+      "unchanged": true,
+      "scope": "product_or_runner"
+    },
+    {
+      "path": "api-app/src/integrations/channels/meta-channel.ts",
+      "sha256": "997e739cf7d7231918dc97fc347bfeb32a1cd74d084ead8c64b01157022f8138",
+      "unchanged": true,
+      "scope": "product_or_runner"
+    },
+    {
+      "path": "api-app/src/integrations/channels/prisma-channel-resolver.ts",
+      "sha256": "5d01cca30f25ea4354651303633aa5a02f3adbe0b7cc37c44c53d821fe7c062f",
+      "unchanged": true,
+      "scope": "product_or_runner"
+    },
+    {
+      "path": "api-app/src/integrations/evolution/evolution.client.spec.ts",
+      "sha256": "119d962fdcd9c895b75845dca74d8506147e11480d74b82e8c37f29f97c04081",
+      "unchanged": true,
+      "scope": "product_or_runner"
+    },
+    {
+      "path": "api-app/src/integrations/evolution/evolution.client.ts",
+      "sha256": "b0824e8fd4f801a239521855aaa02da5e0943a8c86c4ac8778e2f1f352821698",
+      "unchanged": true,
+      "scope": "product_or_runner"
+    },
+    {
+      "path": "api-app/src/integrations/meta/meta.client.spec.ts",
+      "sha256": "d7e76f5c392afab1638363d3c851f8ce8c5223ff27c64801a79fdc8ec00d5e7a",
+      "unchanged": true,
+      "scope": "product_or_runner"
+    },
+    {
+      "path": "api-app/src/integrations/meta/meta.client.ts",
+      "sha256": "9f954f6c1c2bd10030f5eed0cb42e493d6e480106bcfc3f44977cb97a716d34f",
+      "unchanged": true,
+      "scope": "product_or_runner"
+    },
+    {
+      "path": "api-app/src/surfaces/bff/bff.module.ts",
+      "sha256": "327f34eba67746882abc601a3817d94270cff3018d6972a8095dae530a2d6e29",
+      "unchanged": true,
+      "scope": "product_or_runner"
+    },
+    {
+      "path": "api-app/src/surfaces/bff/conversations.controller.ts",
+      "sha256": "53d3cffaa258ba1ad45c21eae4ab8712e2011255b7ca14965f73221edd0cc002",
+      "unchanged": true,
+      "scope": "product_or_runner"
+    },
+    {
+      "path": "api-app/src/surfaces/public/conversations.controller.ts",
+      "sha256": "b55440061dd4574646e4fa1a3c265cdb8653bab4abf3aa0e86b4057bc7e365ff",
+      "unchanged": true,
+      "scope": "product_or_runner"
+    },
+    {
+      "path": "api-app/src/surfaces/public/public.module.ts",
+      "sha256": "00a96d54fde7061f61f4ddf2b9cef836a02ad77ca29b62ea422695b9d8f90ef8",
+      "unchanged": true,
+      "scope": "product_or_runner"
+    },
+    {
+      "path": "api-app/src/surfaces/webhooks/webhooks.module.ts",
+      "sha256": "abc8fd7960fcca1ce43d21d44a90f8d4708d47e07bde9a48c0009e02dc0503a6",
+      "unchanged": true,
+      "scope": "product_or_runner"
+    },
+    {
+      "path": "api-app/test/api-publica.e2e-spec.ts",
+      "sha256": "4ce7360eb02621f89d25d41924bfafb86b76e8bbec8216dfb509f86000308837",
+      "unchanged": true,
+      "scope": "product_or_runner"
+    },
+    {
+      "path": "api-app/test/browser-server.cjs",
+      "sha256": "40e56e2d6672800acd4a00f87b942fc88b8361c770d06ee6d7c8a883a15d3390",
+      "unchanged": true,
+      "scope": "product_or_runner"
+    },
+    {
+      "path": "api-app/test/channel-transport.e2e-spec.ts",
+      "sha256": "124d397bd3a5769271466e64b0e19b1235e08d1ea9a4df9f124fc629096822fe",
+      "unchanged": true,
+      "scope": "product_or_runner"
+    },
+    {
+      "path": "api-app/test/helpers.ts",
+      "sha256": "747dcd1a6db374c1ccb0f2a248b08d49c2ec62a46beb345cc03eea3c058d36f2",
+      "unchanged": true,
+      "scope": "product_or_runner"
+    },
+    {
+      "path": "api-app/test/number-onboarding-pcv.e2e-spec.ts",
+      "sha256": "c62a11fc6302cd3bb807ff0b55b9dbcc7e46847cef638b81c382b455a8a29f20",
+      "unchanged": true,
+      "scope": "product_or_runner"
+    },
+    {
+      "path": "api-app/test/number-onboarding-typebot.e2e-spec.ts",
+      "sha256": "22e1121d8a1f03b5e566fb8e314c3966e5d9355453b31b978afcd30de038fbd2",
+      "unchanged": true,
+      "scope": "product_or_runner"
+    },
+    {
+      "path": "api-app/test/timeline-fixtures.cjs",
+      "sha256": "889707ec7857e8a17a850e56eb60d24e6953e59028f40880edff3756340fd23a",
+      "unchanged": true,
+      "scope": "product_or_runner"
+    },
+    {
+      "path": "web-app/e2e/channel-transport.spec.ts",
+      "sha256": "b3604496727a85d7ce12c2cb6e7a479575356a61ef4c529d385047e066a8e0f3",
+      "unchanged": true,
+      "scope": "product_or_runner"
+    },
+    {
+      "path": "web-app/e2e/number-onboarding-freshness.ts",
+      "sha256": "880b49f8fa428568692b92a883dd00c5ce76214b1f2db5b35cafb9b0553ed9ad",
+      "unchanged": true,
+      "scope": "product_or_runner"
+    },
+    {
+      "path": "web-app/e2e/timeline-freshness.ts",
+      "sha256": "3a06fb36e3a9bcf20a12cd8201da2daa3b567775f15e2be5f068e97e840d7f53",
+      "unchanged": true,
+      "scope": "product_or_runner"
+    },
+    {
+      "path": "web-app/package.json",
+      "sha256": "fc9083821e246d50c080f409b3590902b033041231d1688c04c4140f097818de",
+      "unchanged": true,
+      "scope": "product_or_runner"
+    },
+    {
+      "path": "web-app/src/api.spec.ts",
+      "sha256": "e305671fc6d9775ef3c0365ed12470fb14ea3dd71ff3aca49f153262017147d6",
+      "unchanged": true,
+      "scope": "product_or_runner"
+    },
+    {
+      "path": "web-app/src/api.ts",
+      "sha256": "dd59a37799453d3e68fc64a6477e1578956d15d1a4920af90e22ff2b83057505",
+      "unchanged": true,
+      "scope": "product_or_runner"
+    },
+    {
+      "path": "web-app/src/telas/Inbox.tsx",
+      "sha256": "d70bde9ede67759d479f644598356e46aac2916a12b2ed1770c17a169118586c",
+      "unchanged": true,
+      "scope": "product_or_runner"
+    },
+    {
+      "path": "scripts/test-channels-local.sh",
+      "sha256": "b03176ef1a332c431ed55028c691052958ebc08ff7711db08d05316c1f8a34a6",
+      "unchanged": true,
+      "scope": "product_or_runner"
+    },
+    {
+      "path": "foundation_documentation/todos/active/features/TODO-leadshug-channel-abstraction.md",
+      "sha256": "cac9c160cf48ab721025672c826106a8fc61b60ff8c7ec321621a46d2e1702c9",
+      "unchanged": false,
+      "scope": "context"
+    },
+    {
+      "path": "foundation_documentation/modules/inbox-and-conversations.md",
+      "sha256": "b9d2d151cceb2758e381c6787b8c4baf4e26630d88c62057ecfbc24e0dd26a72",
+      "unchanged": true,
+      "scope": "context"
+    },
+    {
+      "path": "foundation_documentation/modules/integrations-and-channels.md",
+      "sha256": "031fab31685d00d635794aa10d0b1b8ee0a830e54b32622958b6bdc3e079853d",
+      "unchanged": true,
+      "scope": "context"
+    },
+    {
+      "path": "foundation_documentation/project_constitution.md",
+      "sha256": "abfafa5576d051da58583e2be57499320c8ad155c4ae741f259c730bcca98390",
+      "unchanged": true,
+      "scope": "context"
+    }
+  ],
+  "attestation": "browser-attestation-causal-final-all80903.json",
+  "served_bundle_sha256": "27c5db465495068402b278ba7c9d3a1f23b8b03797249639190c8a755759563b",
+  "dist_bundle_sha256": "27c5db465495068402b278ba7c9d3a1f23b8b03797249639190c8a755759563b",
+  "preserved_bundle_sha256": "27c5db465495068402b278ba7c9d3a1f23b8b03797249639190c8a755759563b",
+  "changed_source_manifest_matches": [
+    {
+      "path": "api-app/src/domain/channels/channel-credential-resolver.ts",
+      "matches": true
+    },
+    {
+      "path": "api-app/src/domain/channels/transport/channel-dependencies.spec.ts",
+      "matches": true
+    },
+    {
+      "path": "api-app/src/domain/channels/transport/channel.ts",
+      "matches": true
+    },
+    {
+      "path": "api-app/src/domain/inbox/conversations.service.ts",
+      "matches": true
+    },
+    {
+      "path": "api-app/src/domain/inbox/incoming.service.ts",
+      "matches": true
+    },
+    {
+      "path": "api-app/src/domain/inbox/incoming.typebot.integration.spec.ts",
+      "matches": true
+    },
+    {
+      "path": "api-app/src/domain/inbox/outbound.service.spec.ts",
+      "matches": true
+    },
+    {
+      "path": "api-app/src/domain/inbox/outbound.service.ts",
+      "matches": true
+    },
+    {
+      "path": "api-app/src/integrations/channels/channel-adapter-factory.ts",
+      "matches": true
+    },
+    {
+      "path": "api-app/src/integrations/channels/channel-adapter-registry.ts",
+      "matches": true
+    },
+    {
+      "path": "api-app/src/integrations/channels/channel-transport.module.ts",
+      "matches": true
+    },
+    {
+      "path": "api-app/src/integrations/channels/evolution-channel.ts",
+      "matches": true
+    },
+    {
+      "path": "api-app/src/integrations/channels/meta-channel.ts",
+      "matches": true
+    },
+    {
+      "path": "api-app/src/integrations/channels/prisma-channel-resolver.ts",
+      "matches": true
+    },
+    {
+      "path": "api-app/src/integrations/evolution/evolution.client.spec.ts",
+      "matches": true
+    },
+    {
+      "path": "api-app/src/integrations/evolution/evolution.client.ts",
+      "matches": true
+    },
+    {
+      "path": "api-app/src/integrations/meta/meta.client.spec.ts",
+      "matches": true
+    },
+    {
+      "path": "api-app/src/integrations/meta/meta.client.ts",
+      "matches": true
+    },
+    {
+      "path": "api-app/src/surfaces/bff/bff.module.ts",
+      "matches": true
+    },
+    {
+      "path": "api-app/src/surfaces/bff/conversations.controller.ts",
+      "matches": true
+    },
+    {
+      "path": "api-app/src/surfaces/public/conversations.controller.ts",
+      "matches": true
+    },
+    {
+      "path": "api-app/src/surfaces/public/public.module.ts",
+      "matches": true
+    },
+    {
+      "path": "api-app/src/surfaces/webhooks/webhooks.module.ts",
+      "matches": true
+    },
+    {
+      "path": "api-app/test/api-publica.e2e-spec.ts",
+      "matches": true
+    },
+    {
+      "path": "api-app/test/browser-server.cjs",
+      "matches": true
+    },
+    {
+      "path": "api-app/test/channel-transport.e2e-spec.ts",
+      "matches": true
+    },
+    {
+      "path": "api-app/test/helpers.ts",
+      "matches": true
+    },
+    {
+      "path": "api-app/test/number-onboarding-pcv.e2e-spec.ts",
+      "matches": true
+    },
+    {
+      "path": "api-app/test/number-onboarding-typebot.e2e-spec.ts",
+      "matches": true
+    },
+    {
+      "path": "api-app/test/timeline-fixtures.cjs",
+      "matches": true
+    },
+    {
+      "path": "web-app/e2e/channel-transport.spec.ts",
+      "matches": true
+    },
+    {
+      "path": "web-app/e2e/number-onboarding-freshness.ts",
+      "matches": true
+    },
+    {
+      "path": "web-app/e2e/timeline-freshness.ts",
+      "matches": true
+    },
+    {
+      "path": "web-app/src/api.spec.ts",
+      "matches": true
+    },
+    {
+      "path": "web-app/src/api.ts",
+      "matches": true
+    },
+    {
+      "path": "web-app/src/telas/Inbox.tsx",
+      "matches": true
+    }
+  ],
+  "runtime": "v22.23.3",
+  "external_gates": "dedicated audits/PCV adjudication, activation, assistedINOUT and finalreview pending; no deliveryclaim"
+}
+```
+
+
+## Final candidate evidence browser-causal-green-mutant-provenance.json
+
+```
+{
+  "scope": "Root read-only provenance: preserved canonical browserattestation/publicbundle copies; actual controlled shippingguard removal vsbaseline",
+  "records": [
+    {
+      "label": "causal-green-63018",
+      "runId": "2026-10-20T16-14-30-309Z",
+      "capturedAtUtc": "2026-10-20T16:14:30.309Z",
+      "served_sha256": "27c5db465495068402b278ba7c9d3a1f23b8b03797249639190c8a755759563b",
+      "dist_sha256": "27c5db465495068402b278ba7c9d3a1f23b8b03797249639190c8a755759563b",
+      "preserved_sha256": "27c5db465495068402b278ba7c9d3a1f23b8b03797249639190c8a755759563b",
+      "all_match": true,
+      "inbox_source": "d70bde9ede67759d479f644598356e46aac2916a12b2ed1770c17a169118586c",
+      "test_source": "b3604496727a85d7ce12c2cb6e7a479575356a61ef4c529d385047e066a8e0f3"
+    },
+    {
+      "label": "causal-mutant-30246",
+      "runId": "2026-10-20T16-18-37-921Z",
+      "capturedAtUtc": "2026-10-20T16:18:37.922Z",
+      "served_sha256": "cac7fee57717b6b9a02c0cb1a56d0cd50d7e259b85a3999b140e61f8f27c77cc",
+      "dist_sha256": "cac7fee57717b6b9a02c0cb1a56d0cd50d7e259b85a3999b140e61f8f27c77cc",
+      "preserved_sha256": "cac7fee57717b6b9a02c0cb1a56d0cd50d7e259b85a3999b140e61f8f27c77cc",
+      "all_match": true,
+      "inbox_source": "bdc6c54a40c3a3b4d4ce8d565c8f194c9dd86b41ec75e473c38f45aa94c28804",
+      "test_source": "b3604496727a85d7ce12c2cb6e7a479575356a61ef4c529d385047e066a8e0f3"
+    }
+  ],
+  "same_test_source": true,
+  "different_served_bundle": true
+}
+```
+
+
+## Final candidate evidence browser-causal-actual-mutant-source-observation.json
+
+```
+{
+  "captured_at_utc": "2026-10-20T16:17:12.435244+00:00",
+  "scope": "Root exact-source observation during declared disposable browser mutant; one guard replaced by explanatory comment, no runtime change",
+  "baseline_sha256": "d70bde9ede67759d479f644598356e46aac2916a12b2ed1770c17a169118586c",
+  "mutant_sha256": "bdc6c54a40c3a3b4d4ce8d565c8f194c9dd86b41ec75e473c38f45aa94c28804",
+  "reconstructed_baseline_sha256": "d70bde9ede67759d479f644598356e46aac2916a12b2ed1770c17a169118586c",
+  "single_guard_replacement_proven": true,
+  "patch_sha256": "f96b848a22576759e396820adc5f88e3906cb5a16b34d6f6f0496698ad0ec5e8",
+  "test_sha256": "b3604496727a85d7ce12c2cb6e7a479575356a61ef4c529d385047e066a8e0f3",
+  "instrumentation_precedes_heldsend": true,
+  "root_probe_note": "Initial readonly reconstruction inserted a guard without removing the replacementcomment and correctly failed hash assertion; corrected reconstruction removes exactcomment. No source was edited."
+}
+```
+
+
+## Final candidate evidence browser-causal-mutant-failure-restoration.json
+
+```
+{
+  "observed_at_utc": "2026-10-20T16:21:14.973927+00:00",
+  "run": 30246,
+  "reported_terminal_exit": 1,
+  "raw_log": "foundation_documentation/artifacts/tmp/stcon06-browser-causal-mutant-final.log",
+  "raw_log_sha256": "ca39192b9de886217901b5005177eff796150a89d95280752e14fe552c953c5a",
+  "raw_log_bytes": 66351,
+  "reported_counts": {
+    "pass": 49,
+    "fail": 1
+  },
+  "exact_guard_mutation_source_observation": "browser-causal-actual-mutant-source-observation.json",
+  "restored_inbox_sha256": "d70bde9ede67759d479f644598356e46aac2916a12b2ed1770c17a169118586c",
+  "restoration_exact": true,
+  "test_sha256": "b3604496727a85d7ce12c2cb6e7a479575356a61ef4c529d385047e066a8e0f3",
+  "limits": "Disposable browser/realBFF/PG/controlledprovider; failure must be draftempty after exactnativebody/taskbarrier, not instrumentationtimeout; production runtime untouched"
+}
+```
+
+
+## Final candidate evidence executor-validation.json
+
+```
+{
+  "schema": "stcon06-executor-validation-v1",
+  "scope": "ST-CON-06 implementation and canonical local validation only; no human runtime, publication, deployment, or delivery claim",
+  "runner": "bash scripts/test-channels-local.sh",
+  "final_all": {
+    "mode": "all",
+    "session": 80903,
+    "exit_code": 0,
+    "log": "foundation_documentation/artifacts/tmp/stcon06-causal-final-all.log",
+    "log_sha256": "778f858923f4df7457d32908a98dfda31d0b4351579acabdc1fb90515bec8554",
+    "results": {
+      "api_unit": {
+        "files_passed": 21,
+        "tests_passed": 194
+      },
+      "api_e2e": {
+        "files_passed": 27,
+        "tests_passed": 309
+      },
+      "web_unit": {
+        "files_passed": 5,
+        "tests_passed": 29
+      },
+      "browser": {
+        "tests_passed": 50,
+        "tests_failed": 0
+      }
+    },
+    "freshness_and_preview": {
+      "web_build_asset": "dist/assets/index-9DA0_PMk.js",
+      "vite_preview": "http://127.0.0.1:4173/",
+      "served_in_canonical_browser_run": true,
+      "host_bundle_sha256": "27c5db465495068402b278ba7c9d3a1f23b8b03797249639190c8a755759563b",
+      "host_bundle_sha256_note": "Served application JavaScript captured from the exact canonical run host attestation; SHA matches the generated served-app artifact.",
+      "attestation": "foundation_documentation/artifacts/reviews/leadshug-channel-abstraction-20261020/evidence/browser-attestation-causal-final-all80903.json",
+      "attestation_sha256": "217863acb449c5989e3f79cfa6e899dfbdc1f4b3da40c3b5d0f9cb9e3492a648",
+      "served_bundle_artifact": "foundation_documentation/artifacts/reviews/leadshug-channel-abstraction-20261020/evidence/served-app-causal-final-all80903.js",
+      "served_bundle_sha256": "27c5db465495068402b278ba7c9d3a1f23b8b03797249639190c8a755759563b",
+      "captured_at_utc": "2026-10-20T16:26:20.745Z",
+      "api_manifest_entries": 30,
+      "web_manifest_entries": 6,
+      "source_manifest_entries": 36,
+      "api_source_manifest": [
+        {
+          "path": "src/domain/channels/channel-credential-resolver.ts",
+          "status": "unstaged:M",
+          "sha256": "89cf17ac02af444092651470aee13e2d4a3bcee8d459508be818322b33b00c10"
+        },
+        {
+          "path": "src/domain/channels/transport/channel-dependencies.spec.ts",
+          "status": "??",
+          "sha256": "f59d838baf635c0ce0d1ebe725c88fbb0b19fac42e9b382452e31fd38e0511a3"
+        },
+        {
+          "path": "src/domain/channels/transport/channel.ts",
+          "status": "??",
+          "sha256": "432796b8685d07dcc53c3a699a7b9d1469ac4fb110aea080766ec207bec8621f"
+        },
+        {
+          "path": "src/domain/inbox/conversations.service.ts",
+          "status": "unstaged:M",
+          "sha256": "c7d84f983ed61c6022424d4648e07282e7eb53c40fa9aba249618d77b3c223de"
+        },
+        {
+          "path": "src/domain/inbox/incoming.service.ts",
+          "status": "unstaged:M",
+          "sha256": "b0ec43187b1f48720aa899e40f979dd0ae447321581d675b84ef9c71dbd0ff42"
+        },
+        {
+          "path": "src/domain/inbox/incoming.typebot.integration.spec.ts",
+          "status": "unstaged:M",
+          "sha256": "0cac10e5ed05da5a6e89b39c8b32a40810b4678af77b4d3b8d20b4d1afc4704c"
+        },
+        {
+          "path": "src/domain/inbox/outbound.service.spec.ts",
+          "status": "??",
+          "sha256": "ae1f9208d660c684dca9b1ac5727001d8e57c4c9504be9be1d20ecba32e01805"
+        },
+        {
+          "path": "src/domain/inbox/outbound.service.ts",
+          "status": "??",
+          "sha256": "63bcf773e2b4c5a5ddd688a1bb13745a0a206d995fafc665925df3fecaf394aa"
+        },
+        {
+          "path": "src/integrations/channels/channel-adapter-factory.ts",
+          "status": "??",
+          "sha256": "e0ebdd78e387f7ee3af902f038d22449e212c1301ffa642bbceb5a5f05d2abfc"
+        },
+        {
+          "path": "src/integrations/channels/channel-adapter-registry.ts",
+          "status": "??",
+          "sha256": "655b735e239e89fbaede36689d1c22245d3804d66646f7736db991cb5099b02b"
+        },
+        {
+          "path": "src/integrations/channels/channel-transport.module.ts",
+          "status": "??",
+          "sha256": "32203d3b8393a34a9effab4266683c389651d7ec197e8f9d704a77a6a37f40dc"
+        },
+        {
+          "path": "src/integrations/channels/evolution-channel.ts",
+          "status": "??",
+          "sha256": "60faf1ea40fe17ad62495b0f42a2cf958defcb41e3ad72d3d2213751539b460c"
+        },
+        {
+          "path": "src/integrations/channels/meta-channel.ts",
+          "status": "??",
+          "sha256": "997e739cf7d7231918dc97fc347bfeb32a1cd74d084ead8c64b01157022f8138"
+        },
+        {
+          "path": "src/integrations/channels/prisma-channel-resolver.ts",
+          "status": "??",
+          "sha256": "5d01cca30f25ea4354651303633aa5a02f3adbe0b7cc37c44c53d821fe7c062f"
+        },
+        {
+          "path": "src/integrations/evolution/evolution.client.spec.ts",
+          "status": "unstaged:M",
+          "sha256": "119d962fdcd9c895b75845dca74d8506147e11480d74b82e8c37f29f97c04081"
+        },
+        {
+          "path": "src/integrations/evolution/evolution.client.ts",
+          "status": "unstaged:M",
+          "sha256": "b0824e8fd4f801a239521855aaa02da5e0943a8c86c4ac8778e2f1f352821698"
+        },
+        {
+          "path": "src/integrations/meta/meta.client.spec.ts",
+          "status": "unstaged:M",
+          "sha256": "d7e76f5c392afab1638363d3c851f8ce8c5223ff27c64801a79fdc8ec00d5e7a"
+        },
+        {
+          "path": "src/integrations/meta/meta.client.ts",
+          "status": "unstaged:M",
+          "sha256": "9f954f6c1c2bd10030f5eed0cb42e493d6e480106bcfc3f44977cb97a716d34f"
+        },
+        {
+          "path": "src/surfaces/bff/bff.module.ts",
+          "status": "unstaged:M",
+          "sha256": "327f34eba67746882abc601a3817d94270cff3018d6972a8095dae530a2d6e29"
+        },
+        {
+          "path": "src/surfaces/bff/conversations.controller.ts",
+          "status": "unstaged:M",
+          "sha256": "53d3cffaa258ba1ad45c21eae4ab8712e2011255b7ca14965f73221edd0cc002"
+        },
+        {
+          "path": "src/surfaces/public/conversations.controller.ts",
+          "status": "unstaged:M",
+          "sha256": "b55440061dd4574646e4fa1a3c265cdb8653bab4abf3aa0e86b4057bc7e365ff"
+        },
+        {
+          "path": "src/surfaces/public/public.module.ts",
+          "status": "unstaged:M",
+          "sha256": "00a96d54fde7061f61f4ddf2b9cef836a02ad77ca29b62ea422695b9d8f90ef8"
+        },
+        {
+          "path": "src/surfaces/webhooks/webhooks.module.ts",
+          "status": "unstaged:M",
+          "sha256": "abc8fd7960fcca1ce43d21d44a90f8d4708d47e07bde9a48c0009e02dc0503a6"
+        },
+        {
+          "path": "test/api-publica.e2e-spec.ts",
+          "status": "unstaged:M",
+          "sha256": "4ce7360eb02621f89d25d41924bfafb86b76e8bbec8216dfb509f86000308837"
+        },
+        {
+          "path": "test/browser-server.cjs",
+          "status": "unstaged:M",
+          "sha256": "40e56e2d6672800acd4a00f87b942fc88b8361c770d06ee6d7c8a883a15d3390"
+        },
+        {
+          "path": "test/channel-transport.e2e-spec.ts",
+          "status": "??",
+          "sha256": "124d397bd3a5769271466e64b0e19b1235e08d1ea9a4df9f124fc629096822fe"
+        },
+        {
+          "path": "test/helpers.ts",
+          "status": "unstaged:M",
+          "sha256": "747dcd1a6db374c1ccb0f2a248b08d49c2ec62a46beb345cc03eea3c058d36f2"
+        },
+        {
+          "path": "test/number-onboarding-pcv.e2e-spec.ts",
+          "status": "unstaged:M",
+          "sha256": "c62a11fc6302cd3bb807ff0b55b9dbcc7e46847cef638b81c382b455a8a29f20"
+        },
+        {
+          "path": "test/number-onboarding-typebot.e2e-spec.ts",
+          "status": "unstaged:M",
+          "sha256": "22e1121d8a1f03b5e566fb8e314c3966e5d9355453b31b978afcd30de038fbd2"
+        },
+        {
+          "path": "test/timeline-fixtures.cjs",
+          "status": "unstaged:M",
+          "sha256": "889707ec7857e8a17a850e56eb60d24e6953e59028f40880edff3756340fd23a"
+        }
+      ],
+      "web_source_manifest": [
+        {
+          "path": "e2e/channel-transport.spec.ts",
+          "status": "??",
+          "sha256": "b3604496727a85d7ce12c2cb6e7a479575356a61ef4c529d385047e066a8e0f3"
+        },
+        {
+          "path": "e2e/number-onboarding-freshness.ts",
+          "status": "unstaged:M",
+          "sha256": "880b49f8fa428568692b92a883dd00c5ce76214b1f2db5b35cafb9b0553ed9ad"
+        },
+        {
+          "path": "e2e/timeline-freshness.ts",
+          "status": "unstaged:M",
+          "sha256": "3a06fb36e3a9bcf20a12cd8201da2daa3b567775f15e2be5f068e97e840d7f53"
+        },
+        {
+          "path": "src/api.spec.ts",
+          "status": "unstaged:M",
+          "sha256": "e305671fc6d9775ef3c0365ed12470fb14ea3dd71ff3aca49f153262017147d6"
+        },
+        {
+          "path": "src/api.ts",
+          "status": "unstaged:M",
+          "sha256": "dd59a37799453d3e68fc64a6477e1578956d15d1a4920af90e22ff2b83057505"
+        },
+        {
+          "path": "src/telas/Inbox.tsx",
+          "status": "unstaged:M",
+          "sha256": "d70bde9ede67759d479f644598356e46aac2916a12b2ed1770c17a169118586c"
+        }
+      ]
+    }
+  },
+  "red_first": [
+    {
+      "probe": "Meta HTTP 200 success:false with ID and without ID must remain UNKNOWN / TRANSPORT_UNCONFIRMED",
+      "runner_mode": "api",
+      "session": 49493,
+      "exit_code": 1,
+      "evidence_kind": "executor-observed canonical runner output; no separate raw log file retained",
+      "failure": "MetaHttpClient classification returned ACCEPTED where UNKNOWN / TRANSPORT_UNCONFIRMED was expected",
+      "corrected_and_green_in": 54152
+    }
+  ],
+  "fault_injection": [
+    {
+      "probe": "Remove Meta shipping adapter beforeDispatch binding fence",
+      "runner_mode": "api",
+      "session": 16223,
+      "exit_code": 1,
+      "log": "foundation_documentation/artifacts/tmp/stcon06-meta-shipping-mutant.log",
+      "log_sha256": "b6b02e76ade7471f4a26dd2670d768bd7952d59a30ad7456e9a8f56aba226ab0",
+      "failing_assertion": "test/channel-transport.e2e-spec.ts:165 expected 409 Conflict, got 201 Created",
+      "suite_summary": {
+        "api_unit_passed": 194,
+        "api_e2e_passed": 308,
+        "api_e2e_failed": 1
+      },
+      "source_sha256": {
+        "before": "997e739cf7d7231918dc97fc347bfeb32a1cd74d084ead8c64b01157022f8138",
+        "mutant_observed_by_root": "ff13fad8…",
+        "restored": "997e739cf7d7231918dc97fc347bfeb32a1cd74d084ead8c64b01157022f8138"
+      }
+    },
+    {
+      "probe": "Remove Evolution shipping adapter beforeDispatch binding fence",
+      "runner_mode": "api",
+      "session": 59583,
+      "exit_code": 1,
+      "log": "foundation_documentation/artifacts/tmp/stcon06-evolution-shipping-mutant.log",
+      "log_sha256": "bf7b65e18fa3e851a31a796adf3864b74e7a16080f2823492af80dbd6c3310a2",
+      "failing_assertion": "test/channel-transport.e2e-spec.ts:165 expected 409 Conflict, got 201 Created after the official mutation cases passed",
+      "suite_summary": {
+        "api_unit_passed": 194,
+        "api_e2e_passed": 308,
+        "api_e2e_failed": 1
+      },
+      "source_sha256": {
+        "before": "60faf1ea40fe17ad62495b0f42a2cf958defcb41e3ad72d3d2213751539b460c",
+        "mutant": "be111003d398e2f24cd8294c803068f97eda29a7b418ad04cce424a765f995ab",
+        "restored": "60faf1ea40fe17ad62495b0f42a2cf958defcb41e3ad72d3d2213751539b460c"
+      }
+    },
+    {
+      "probe": "Remove Inbox outbound generation/id fence after A→B→A thread switch",
+      "runner_mode": "browser",
+      "session": 97398,
+      "exit_code": 1,
+      "evidence_kind": "tool-result output observed in executor transcript; raw stdout was not redirected to a persistent log",
+      "suite_summary": {
+        "browser_passed": 49,
+        "browser_failed": 1
+      },
+      "failing_assertion": "e2e/channel-transport.spec.ts:100 expected same-text A draft to remain, received empty value after old request completed",
+      "mutation_restored": true,
+      "restored_source_sha256": "d70bde9ede67759d479f644598356e46aac2916a12b2ed1770c17a169118586c"
+    },
+    {
+      "probe": "Remove Inbox outbound generation/id fence after A→B→A thread switch, with causally observed native response body consumption",
+      "runner_mode": "browser",
+      "session": 30246,
+      "exit_code": 1,
+      "log": "foundation_documentation/artifacts/tmp/stcon06-browser-causal-mutant-final.log",
+      "log_sha256": "ca39192b9de886217901b5005177eff796150a89d95280752e14fe552c953c5a",
+      "suite_summary": {
+        "browser_passed": 49,
+        "browser_failed": 1
+      },
+      "failing_assertion": "e2e/channel-transport.spec.ts:152 expected same-text A draft to remain, received empty value after old request completed; body marker resolved {started:1,settled:1,processed:1}",
+      "mutation": {
+        "source": "web-app/src/telas/Inbox.tsx",
+        "original_sha256": "d70bde9ede67759d479f644598356e46aac2916a12b2ed1770c17a169118586c",
+        "mutant_sha256": "bdc6c54a40c3a3b4d4ce8d565c8f194c9dd86b41ec75e473c38f45aa94c28804",
+        "restored_sha256": "d70bde9ede67759d479f644598356e46aac2916a12b2ed1770c17a169118586c",
+        "patch": "foundation_documentation/artifacts/tmp/stcon06-inbox-generation-fence-mutant.patch",
+        "patch_sha256": "f96b848a22576759e396820adc5f88e3906cb5a16b34d6f6f0496698ad0ec5e8"
+      },
+      "attestation": "foundation_documentation/artifacts/reviews/leadshug-channel-abstraction-20261020/evidence/browser-attestation-causal-mutant-30246.json",
+      "served_bundle": "foundation_documentation/artifacts/reviews/leadshug-channel-abstraction-20261020/evidence/served-app-causal-mutant-30246.js",
+      "causal_marker": {
+        "started": 1,
+        "settled": 1,
+        "processed": 1
+      }
+    }
+  ],
+  "bounded_evidence": {
+    "channel_eps": {
+      "marker": "CHANNEL-EPS-EVIDENCE",
+      "page_conversations": 30,
+      "history_rows_per_conversation": 24,
+      "query_counts": {
+        "buChannelFindMany": 1,
+        "channelCredentialFindMany": 1,
+        "latestInboundWindowProjection": 1
+      },
+      "plan": "indexed per-conversation LIMIT 1 lookup; 30 inner loops",
+      "plan_execution_ms": 0.142,
+      "endpoint_elapsed_ms": 20.335361999999805,
+      "provider_calls_before": 0,
+      "provider_calls_after": 0,
+      "limits": "Disposable PostgreSQL and one bounded 30-conversation public page; local query count/plan observation, not a capacity or latency SLO claim."
+    },
+    "channel_outbound_overlap": {
+      "marker": "CHANNEL-OUTBOUND-OVERLAP",
+      "repetitions": 5,
+      "operations_per_repetition": 20,
+      "accepted_counts": [
+        20,
+        20,
+        20,
+        20,
+        20
+      ],
+      "recorded_counts": [
+        20,
+        20,
+        20,
+        20,
+        20
+      ],
+      "limits": "Disposable PostgreSQL and provider fake; concurrent integrity observation, not capacity/SLO evidence."
+    },
+    "frc_composer": {
+      "marker": "FRC-COMPOSER-EVIDENCE",
+      "waves": 5,
+      "retriggers_per_wave": 20,
+      "requests_per_wave": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "outcomes": [
+        "accepted",
+        "unknown",
+        "accepted",
+        "unknown",
+        "accepted"
+      ],
+      "draft_preserved_for_unknown": true,
+      "unknown_diagnostic_message_count": 1,
+      "limits": "Five real BFF/PostgreSQL submits held after the actual response; twenty user-form submit events per in-flight send; one request per wave; no capacity/SLO claim."
+    },
+    "rls_read_stage": {
+      "marker": "RLS-EVIDENCE",
+      "authenticated_clients": 5,
+      "own_reads_per_client": 3,
+      "foreign_reads_per_client": 3,
+      "total_scope_checks": 30,
+      "own_status": 200,
+      "foreign_tenant_status": 404,
+      "provider_call_delta_during_reads": 0,
+      "limits": "One bounded local PostgreSQL stage; not a capacity, latency SLO, or provider load claim."
+    }
+  },
+  "source_scope_review": {
+    "method": "positive-path git diff/status queries only for API src/test and Web src/e2e/package.json/vite.config.ts; no API-root discovery",
+    "api_tracked_modified": 19,
+    "api_untracked_transport_files": 11,
+    "web_tracked_modified": 5,
+    "web_untracked_e2e_files": 1,
+    "root_runner_modified": "scripts/test-channels-local.sh",
+    "foundation_changes": "This executor wrote only this authorized evidence file and transient logs under artifacts/tmp; parent owns all other Foundation documentation.",
+    "canonical_all_manifest": {
+      "api_entries": 30,
+      "web_entries": 6,
+      "api_tracked_modified": 19,
+      "api_untracked": 11,
+      "web_tracked_modified": 5,
+      "web_untracked": 1,
+      "manifest_source": "canonical all 80903 host attestation; positive public source roots only"
+    }
+  },
+  "remaining_external_gates": [
+    "independent review round 3 adjudication",
+    "TQA and final exact-source review",
+    "runtime/operator readiness and human IN/OUT evidence",
+    "no publication or deployment performed"
+  ],
+  "final_all_history": [
+    {
+      "mode": "all",
+      "session": 65587,
+      "exit_code": 0,
+      "log": "foundation_documentation/artifacts/tmp/stcon06-final-all.log",
+      "log_sha256": "97b84c7b813c364d20933a56b0f420b09e490c3885325317332ac9a2dd5d4445",
+      "results": {
+        "api_unit": {
+          "files_passed": 21,
+          "tests_passed": 194
+        },
+        "api_e2e": {
+          "files_passed": 27,
+          "tests_passed": 309
+        },
+        "web_unit": {
+          "files_passed": 5,
+          "tests_passed": 29
+        },
+        "browser": {
+          "tests_passed": 50,
+          "tests_failed": 0
+        }
+      },
+      "freshness_and_preview": {
+        "web_build_asset": "dist/assets/index-9DA0_PMk.js",
+        "vite_preview": "http://127.0.0.1:4173/",
+        "served_in_canonical_browser_run": true,
+        "host_bundle_sha256": null,
+        "host_bundle_sha256_note": "Canonical runner's validation workspace volume was torn down; asset hash was not available in the host checkout after the runner completed. The final log records successful build and preview startup."
+      }
+    }
+  ],
+  "diagnostic_runs": [
+    {
+      "probe": "Causal browser instrumentation ordered after held POST was already initiated; harness ordering failure, not product evidence",
+      "session": 64345,
+      "exit_code": 1,
+      "log": "foundation_documentation/artifacts/tmp/stcon06-browser-causal-mutant.log",
+      "log_sha256": "f17ec06ee34cb9d55abe72dcb047640054d45cc80ad21f3bf91ccacc14b46084",
+      "outcome": "body-read marker timed out; instrumentation corrected to install before submit"
+    },
+    {
+      "probe": "Causal browser marker green with generation guard intact; diagnostic only, not mutant proof",
+      "session": 63018,
+      "exit_code": 0,
+      "log": "foundation_documentation/artifacts/tmp/stcon06-browser-causal-mutant-ordered.log",
+      "log_sha256": "5f78278aa8ba478c1c5720527697f8de7489a466d820540bf105514c00ef3bf9",
+      "attestation": "foundation_documentation/artifacts/reviews/leadshug-channel-abstraction-20261020/evidence/browser-attestation-causal-green-63018.json",
+      "served_bundle": "foundation_documentation/artifacts/reviews/leadshug-channel-abstraction-20261020/evidence/served-app-causal-green-63018.js",
+      "outcome": "50/50 browser pass with guard intact; not counted as fault injection"
+    }
+  ]
+}
+```
+
+
+## Final candidate evidence public-diff-preliminary.json
+
+```
+{
+  "blocked": false,
+  "violations": [],
+  "context": {
+    "todo_path": "/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/todos/active/features/TODO-leadshug-channel-abstraction.md",
+    "repo_root": "/mnt/c/unifast/leadshug/leadshug_now_docker",
+    "contract_repository_count": 4,
+    "repositories": {
+      "root": {
+        "path": "/mnt/c/unifast/leadshug/leadshug_now_docker",
+        "baseline_commit": "80e3940126f22a941f90dba4f5e801b6c0eb2f58",
+        "actual_change_count": 1
+      },
+      "api": {
+        "path": "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app",
+        "baseline_commit": "db5a86758a165fac8a1ab587599c37b17890530c",
+        "actual_change_count": 30
+      },
+      "web": {
+        "path": "/mnt/c/unifast/leadshug/leadshug_now_docker/web-app",
+        "baseline_commit": "74b9d4b714044829796f875d00553f077c1c329d",
+        "actual_change_count": 6
+      },
+      "foundation": {
+        "path": "/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation",
+        "baseline_commit": "82fa66b33b81b31024dc8cebef9e72e9253964a7",
+        "actual_change_count": 134
+      }
+    },
+    "actual_change_count": 171,
+    "expected_change_count": 171,
+    "forbidden_change_count": 0,
+    "unclassified_change_count": 0
+  },
+  "bounded_invocation": {
+    "recorded_at_utc": "2026-10-20T16:26:42.674279+00:00",
+    "status": "preliminary implementation only",
+    "guard_source_unchanged": true,
+    "api_positive_pathspecs": [
+      "src",
+      "test",
+      "prisma",
+      "docker",
+      "Dockerfile",
+      "package.json",
+      "package-lock.json",
+      "tsconfig.json",
+      "tsconfig.build.json",
+      "nest-cli.json",
+      "eslint.config.mjs",
+      "vitest.config.ts",
+      "vitest.config.e2e.ts",
+      "vitest.config.cov.ts",
+      "railway.json",
+      ".dockerignore",
+      ".gitignore",
+      ".env.example"
+    ],
+    "web_positive_pathspecs": [
+      "src",
+      "e2e",
+      "public",
+      "docker",
+      "nginx",
+      "Dockerfile",
+      "package.json",
+      "package-lock.json",
+      "index.html",
+      "playwright.config.ts",
+      "vite.config.ts",
+      "tsconfig.json",
+      "tsconfig.app.json",
+      "tsconfig.node.json",
+      "eslint.config.js",
+      "railway.json",
+      ".dockerignore",
+      ".gitignore"
+    ],
+    "root_positive_pathspecs": [
+      "scripts",
+      "docker",
+      ".github",
+      "AGENTS.md",
+      "README.md",
+      "Makefile",
+      "docker-compose.yml",
+      "docker-compose.channels.yml",
+      ".env.example",
+      ".gitignore",
+      ".gitmodules",
+      "api-app",
+      "web-app",
+      "foundation_documentation",
+      "delphi-ai"
+    ],
+    "limitations": [
+      "Public-path only; excluded private/operational paths not enumerated or asserted clean.",
+      "Root submodule working contents ignored; no gitlink reconciliation."
+    ]
+  }
+}
+```
+
+
+## Final candidate evidence pcv-eps-candidate.json
+
+```
+{
+  "policy_schema_version": "pcv-1",
+  "schema_version": "stcon06-pcv-evidence-v1",
+  "todo_id": "ST-CON-06",
+  "run_id": "canonical-all80903",
+  "environment_id": "leadshug_channels_validation-Node22.23.3-PostgreSQL16",
+  "executor_id": "/root/stcon06_executor",
+  "reviewer_id": "pending-independent-dedicated-audit",
+  "recorded_at_utc": "2026-10-20T16:29:29.365591+00:00",
+  "evidence_type": "canonical-runner-structured-log",
+  "gate_status": "measured final candidate; independent dedicated review and row disposition pending",
+  "raw_log_sha256": "778f858923f4df7457d32908a98dfda31d0b4351579acabdc1fb90515bec8554",
+  "lane_id": "EPS",
+  "sample_profile_id": "EPS-SP-STRONG",
+  "acceptance_rule_id": "EPS-A2",
+  "result_summary": "30conversation page; one channel/credential/latestINquery; indexed LIMIT1; no external call",
+  "artifact_payload": {
+    "access_pattern_classification": "bounded-list with scoped exact binding and per-conversation indexed latest-IN",
+    "touched_path_audit_summary": "PrismaChannelResolver inspectForConversation/inspectMany, findCandidate/identity by indexed keys, credential metadata queries constrained to selected BU slots, latestInbound LATERAL LIMIT1; existing public list pagination retained; no provider walk/decrypt GET",
+    "strong_query_evidence_type": "query-log and EXPLAIN ANALYZE",
+    "observations": {
+      "policy_schema_version": "pcv-1",
+      "lane_id": "EPS",
+      "trigger_result": "required",
+      "trigger_severity": "medium",
+      "trigger_reason_code": "EPS-DATA-PATH-CHANGED",
+      "gate_deadline": "before_local_implemented",
+      "min_evidence_rule_id": "EPS-E2",
+      "acceptance_rule_id": "EPS-A2",
+      "sample_profile": "EPS-SP-STRONG",
+      "access_pattern_classification": "Public conversation page loads selected BU channels once, official credential metadata once, and one latest-IN SQL statement using an indexed LIMIT 1 lookup per conversation; no provider credentials are decrypted or probed.",
+      "pageConversations": 30,
+      "historyRowsPerConversation": 24,
+      "availabilitySample": [
+        {
+          "available": true,
+          "reason": null,
+          "windowOpen": true
+        },
+        {
+          "available": true,
+          "reason": null,
+          "windowOpen": true
+        },
+        {
+          "available": true,
+          "reason": null,
+          "windowOpen": true
+        }
+      ],
+      "queryCounts": {
+        "buChannelFindMany": 1,
+        "channelCredentialFindMany": 1,
+        "latestInboundWindowProjection": 1
+      },
+      "elapsedMs": 20.335361999999805,
+      "explainLatestInboundProjection": [
+        {
+          "Plan": {
+            "Node Type": "Nested Loop",
+            "Parallel Aware": false,
+            "Async Capable": false,
+            "Join Type": "Inner",
+            "Startup Cost": 4.25,
+            "Total Cost": 219.74,
+            "Plan Rows": 30,
+            "Plan Width": 40,
+            "Actual Startup Time": 0.024,
+            "Actual Total Time": 0.127,
+            "Actual Rows": 30,
+            "Actual Loops": 1,
+            "Inner Unique": false,
+            "Shared Hit Blocks": 120,
+            "Shared Read Blocks": 0,
+            "Shared Dirtied Blocks": 0,
+            "Shared Written Blocks": 0,
+            "Local Hit Blocks": 0,
+            "Local Read Blocks": 0,
+            "Local Dirtied Blocks": 0,
+            "Local Written Blocks": 0,
+            "Temp Read Blocks": 0,
+            "Temp Written Blocks": 0,
+            "Plans": [
+              {
+                "Node Type": "Function Scan",
+                "Parent Relationship": "Outer",
+                "Parallel Aware": false,
+                "Async Capable": false,
+                "Function Name": "unnest",
+                "Alias": "requested",
+                "Startup Cost": 0,
+                "Total Cost": 0.3,
+                "Plan Rows": 30,
+                "Plan Width": 32,
+                "Actual Startup Time": 0.003,
+                "Actual Total Time": 0.005,
+                "Actual Rows": 30,
+                "Actual Loops": 1,
+                "Shared Hit Blocks": 0,
+                "Shared Read Blocks": 0,
+                "Shared Dirtied Blocks": 0,
+                "Shared Written Blocks": 0,
+                "Local Hit Blocks": 0,
+                "Local Read Blocks": 0,
+                "Local Dirtied Blocks": 0,
+                "Local Written Blocks": 0,
+                "Temp Read Blocks": 0,
+                "Temp Written Blocks": 0
+              },
+              {
+                "Node Type": "Limit",
+                "Parent Relationship": "Inner",
+                "Parallel Aware": false,
+                "Async Capable": false,
+                "Startup Cost": 4.25,
+                "Total Cost": 7.29,
+                "Plan Rows": 1,
+                "Plan Width": 45,
+                "Actual Startup Time": 0.004,
+                "Actual Total Time": 0.004,
+                "Actual Rows": 1,
+                "Actual Loops": 30,
+                "Shared Hit Blocks": 120,
+                "Shared Read Blocks": 0,
+                "Shared Dirtied Blocks": 0,
+                "Shared Written Blocks": 0,
+                "Local Hit Blocks": 0,
+                "Local Read Blocks": 0,
+                "Local Dirtied Blocks": 0,
+                "Local Written Blocks": 0,
+                "Temp Read Blocks": 0,
+                "Temp Written Blocks": 0,
+                "Plans": [
+                  {
+                    "Node Type": "Incremental Sort",
+                    "Parent Relationship": "Outer",
+                    "Parallel Aware": false,
+                    "Async Capable": false,
+                    "Startup Cost": 4.25,
+                    "Total Cost": 80.45,
+                    "Plan Rows": 25,
+                    "Plan Width": 45,
+                    "Actual Startup Time": 0.004,
+                    "Actual Total Time": 0.004,
+                    "Actual Rows": 1,
+                    "Actual Loops": 30,
+                    "Sort Key": [
+                      "message.created_at DESC",
+                      "message.id DESC"
+                    ],
+                    "Presorted Key": [
+                      "message.created_at"
+                    ],
+                    "Full-sort Groups": {
+                      "Group Count": 30,
+                      "Sort Methods Used": [
+                        "quicksort"
+                      ],
+                      "Sort Space Memory": {
+                        "Average Sort Space Used": 25,
+                        "Peak Sort Space Used": 25
+                      }
+                    },
+                    "Shared Hit Blocks": 120,
+                    "Shared Read Blocks": 0,
+                    "Shared Dirtied Blocks": 0,
+                    "Shared Written Blocks": 0,
+                    "Local Hit Blocks": 0,
+                    "Local Read Blocks": 0,
+                    "Local Dirtied Blocks": 0,
+                    "Local Written Blocks": 0,
+                    "Temp Read Blocks": 0,
+                    "Temp Written Blocks": 0,
+                    "Plans": [
+                      {
+                        "Node Type": "Index Scan",
+                        "Parent Relationship": "Outer",
+                        "Parallel Aware": false,
+                        "Async Capable": false,
+                        "Scan Direction": "Backward",
+                        "Index Name": "messages_conversation_id_created_at_idx",
+                        "Relation Name": "messages",
+                        "Alias": "message",
+                        "Startup Cost": 0.28,
+                        "Total Cost": 79.5,
+                        "Plan Rows": 25,
+                        "Plan Width": 45,
+                        "Actual Startup Time": 0.003,
+                        "Actual Total Time": 0.003,
+                        "Actual Rows": 2,
+                        "Actual Loops": 30,
+                        "Index Cond": "(conversation_id = requested.conversation_id)",
+                        "Rows Removed by Index Recheck": 0,
+                        "Filter": "(direction = 'IN'::\"MessageDirection\")",
+                        "Rows Removed by Filter": 0,
+                        "Shared Hit Blocks": 120,
+                        "Shared Read Blocks": 0,
+                        "Shared Dirtied Blocks": 0,
+                        "Shared Written Blocks": 0,
+                        "Local Hit Blocks": 0,
+                        "Local Read Blocks": 0,
+                        "Local Dirtied Blocks": 0,
+                        "Local Written Blocks": 0,
+                        "Temp Read Blocks": 0,
+                        "Temp Written Blocks": 0
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "Planning": {
+            "Shared Hit Blocks": 47,
+            "Shared Read Blocks": 0,
+            "Shared Dirtied Blocks": 0,
+            "Shared Written Blocks": 0,
+            "Local Hit Blocks": 0,
+            "Local Read Blocks": 0,
+            "Local Dirtied Blocks": 0,
+            "Local Written Blocks": 0,
+            "Temp Read Blocks": 0,
+            "Temp Written Blocks": 0
+          },
+          "Planning Time": 0.164,
+          "Triggers": [],
+          "Execution Time": 0.142
+        }
+      ],
+      "providerCallsBefore": {
+        "meta": 0,
+        "evolution": 0
+      },
+      "providerCallsAfter": {
+        "meta": 0,
+        "evolution": 0
+      },
+      "limits": "Disposable PostgreSQL and one bounded 30-conversation public page; local query count/plan observation, not a capacity or latency SLO claim."
+    },
+    "classification_authority_note": "Raw marker labels inherited from fixture evidence do not supersede the approved TODO lane classification/reason/deadline; no classification reduction or waiver."
+  },
+  "artifact_sha256": "c1bb52678f695451db065ccfac8cbbc6667556911727f0f5dcd894c16e3fab12"
+}
+```
+
+
+## Final candidate evidence pcv-frc-candidate.json
+
+```
+{
+  "policy_schema_version": "pcv-1",
+  "schema_version": "stcon06-pcv-evidence-v1",
+  "todo_id": "ST-CON-06",
+  "run_id": "canonical-all80903",
+  "environment_id": "leadshug_channels_validation-Node22.23.3-PostgreSQL16",
+  "executor_id": "/root/stcon06_executor",
+  "reviewer_id": "pending-independent-dedicated-audit",
+  "recorded_at_utc": "2026-10-20T16:29:29.365591+00:00",
+  "evidence_type": "canonical-runner-structured-log",
+  "gate_status": "measured final candidate; independent dedicated review and row disposition pending",
+  "raw_log_sha256": "778f858923f4df7457d32908a98dfda31d0b4351579acabdc1fb90515bec8554",
+  "lane_id": "FRC",
+  "sample_profile_id": "FRC-SP-H",
+  "acceptance_rule_id": "FRC-A1",
+  "result_summary": "5wavesx20pending realform retriggers,onePOSTeach;unknown retainsdraft;R02 stalehandlerproofpending",
+  "artifact_payload": {
+    "concurrency_policy": "drop duplicate",
+    "stale_response_policy": "generation-fenced last-write-wins per BU/conversation; latecompletion cannot overwrite newdraft",
+    "burst_profile_observed": {
+      "waves": [
+        {
+          "requests": 1,
+          "retriggers": 20,
+          "outcome": "accepted",
+          "draftPreserved": false,
+          "messageCount": 1
+        },
+        {
+          "requests": 1,
+          "retriggers": 20,
+          "outcome": "unknown",
+          "draftPreserved": true,
+          "messageCount": 1
+        },
+        {
+          "requests": 1,
+          "retriggers": 20,
+          "outcome": "accepted",
+          "draftPreserved": false,
+          "messageCount": 1
+        },
+        {
+          "requests": 1,
+          "retriggers": 20,
+          "outcome": "unknown",
+          "draftPreserved": true,
+          "messageCount": 1
+        },
+        {
+          "requests": 1,
+          "retriggers": 20,
+          "outcome": "accepted",
+          "draftPreserved": false,
+          "messageCount": 1
+        }
+      ],
+      "limits": "Five real BFF/PostgreSQL submits held after the actual response; twenty user-form submit events per in-flight send; one request per wave; no capacity/SLO claim."
+    },
+    "runner_or_manual_path": "bash scripts/test-channels-local.sh all; e2e/channel-transport.spec.ts; real BFF/PG, providerdouble only",
+    "stale_response_gate": {
+      "green_final_run": 80903,
+      "test_sha256": "b3604496727a85d7ce12c2cb6e7a479575356a61ef4c529d385047e066a8e0f3",
+      "native_body_read_assertion": "started1/settled1/processed1 before draft/noalert",
+      "real_negative_control": 30246,
+      "negative_control_expected_failure": "same-text newdraft empty only without generationguard;49otherspassed",
+      "root_provenance": "browser-causal-green-mutant-provenance.json",
+      "restored_inbox_sha256": "d70bde9ede67759d479f644598356e46aac2916a12b2ed1770c17a169118586c"
+    },
+    "classification_authority_note": "Raw marker labels inherited from fixture evidence do not supersede the approved TODO lane classification/reason/deadline; no classification reduction or waiver."
+  },
+  "artifact_sha256": "c89d6855875c547423b00f21b780531d9305091d65e9019b7d3a756b13f2a16f"
+}
+```
+
+
+## Final candidate evidence pcv-bci-candidate.json
+
+```
+{
+  "policy_schema_version": "pcv-1",
+  "schema_version": "stcon06-pcv-evidence-v1",
+  "todo_id": "ST-CON-06",
+  "run_id": "canonical-all80903",
+  "environment_id": "leadshug_channels_validation-Node22.23.3-PostgreSQL16",
+  "executor_id": "/root/stcon06_executor",
+  "reviewer_id": "pending-independent-dedicated-audit",
+  "recorded_at_utc": "2026-10-20T16:29:29.365591+00:00",
+  "evidence_type": "canonical-runner-structured-log",
+  "gate_status": "measured final candidate; independent dedicated review and row disposition pending",
+  "raw_log_sha256": "778f858923f4df7457d32908a98dfda31d0b4351579acabdc1fb90515bec8554",
+  "lane_id": "BCI",
+  "sample_profile_id": "BCI-SP-H",
+  "acceptance_rule_id": "BCI-A1",
+  "result_summary": "5x20distinctconversations accepted/recorded; separate actual same-resource barriers and echo/claim probes",
+  "artifact_payload": {
+    "invariant_id": "ST06-BOUND-DISPATCH-SOLE-ACCEPTANCE",
+    "concurrency_policy": "optimistic concurrency",
+    "probe_profile_observed": {
+      "repetitions": 5,
+      "operationsPerRepetition": 20,
+      "operationCounts": [
+        20,
+        20,
+        20,
+        20,
+        20
+      ],
+      "acceptedCounts": [
+        20,
+        20,
+        20,
+        20,
+        20
+      ],
+      "recordedCounts": [
+        20,
+        20,
+        20,
+        20,
+        20
+      ],
+      "limits": "Disposable PostgreSQL and provider fake; concurrent integrity observation, not capacity/SLO evidence."
+    },
+    "domain_invariant": "One Message keyed by captured provider identity/externalID under sole MessageAcceptance owner; no tenant credential crossover; changedcontext blocks local completion; newer claim preserved",
+    "separate_overlap_probes": [
+      "real REAUTORIZAR generation during heldsend",
+      "active credentialversion-only rotation",
+      "predispatch Meta/Evo callback fences",
+      "public/bff claim overlap",
+      "sender/echo dedup",
+      "Typebot ingress retirement/windowexpiry"
+    ],
+    "limits": "20operations use20distinctconversations sameBU/binding perbatch; not evidence of same-key external exactlyonce or durable crashrecovery; UNKNOWN nullID diagnostics lack echo dedup",
+    "classification_authority_note": "Raw marker labels inherited from fixture evidence do not supersede the approved TODO lane classification/reason/deadline; no classification reduction or waiver."
+  },
+  "artifact_sha256": "92c2f3ac00556063f375e2505e9a45490fe0938852948d64a9471564b86d1001"
+}
+```
+
+
+## Final candidate evidence pcv-rls-candidate.json
+
+```
+{
+  "policy_schema_version": "pcv-1",
+  "schema_version": "stcon06-pcv-evidence-v1",
+  "todo_id": "ST-CON-06",
+  "run_id": "canonical-all80903",
+  "environment_id": "leadshug_channels_validation-Node22.23.3-PostgreSQL16",
+  "executor_id": "/root/stcon06_executor",
+  "reviewer_id": "pending-independent-dedicated-audit",
+  "recorded_at_utc": "2026-10-20T16:29:29.365591+00:00",
+  "evidence_type": "canonical-runner-structured-log",
+  "gate_status": "measured final candidate; independent dedicated review and row disposition pending",
+  "raw_log_sha256": "778f858923f4df7457d32908a98dfda31d0b4351579acabdc1fb90515bec8554",
+  "lane_id": "RLS",
+  "sample_profile_id": "RLS-SP-L",
+  "acceptance_rule_id": "RLS-A1",
+  "result_summary": "One bounded actual dispatch stage20overlapx5; allaccepted/recorded; no capacity/SLO claim",
+  "artifact_payload": {
+    "stage_profile_observed": {
+      "mode": "bounded concurrent dispatch load",
+      "stages": [
+        {
+          "overlapping_operations": 20,
+          "batches": 5,
+          "operations_total": 100,
+          "duration": "operation-count bounded, not sustained soak"
+        }
+      ]
+    },
+    "thresholds": {
+      "accepted_per_batch": 20,
+      "recorded_per_batch": 20,
+      "duplicate_rows_per_owned_subject": 0
+    },
+    "metrics_summary": {
+      "repetitions": 5,
+      "operationsPerRepetition": 20,
+      "operationCounts": [
+        20,
+        20,
+        20,
+        20,
+        20
+      ],
+      "acceptedCounts": [
+        20,
+        20,
+        20,
+        20,
+        20
+      ],
+      "recordedCounts": [
+        20,
+        20,
+        20,
+        20,
+        20
+      ],
+      "limits": "Disposable PostgreSQL and provider fake; concurrent integrity observation, not capacity/SLO evidence."
+    },
+    "comparison": {
+      "accepted_counts_equal_threshold": true,
+      "recorded_counts_equal_threshold": true
+    },
+    "supplementary_scoped_read_stage": {
+      "policy_schema_version": "pcv-1",
+      "lane_id": "RLS",
+      "trigger_result": "recommended",
+      "trigger_severity": "medium",
+      "trigger_reason_code": "RLS-QUEUE-WORKER-REALTIME-CHANGED",
+      "gate_deadline": "before_local_implemented",
+      "min_evidence_rule_id": "RLS-E1",
+      "acceptance_rule_id": "RLS-A1",
+      "stage_profile_observed": "RLS-SP-L",
+      "clients": 5,
+      "readsPerClient": 6,
+      "totalScopeChecks": 30,
+      "observed": [
+        {
+          "client": 1,
+          "ownReads": 3,
+          "foreignReads": 3
+        },
+        {
+          "client": 4,
+          "ownReads": 3,
+          "foreignReads": 3
+        },
+        {
+          "client": 0,
+          "ownReads": 3,
+          "foreignReads": 3
+        },
+        {
+          "client": 2,
+          "ownReads": 3,
+          "foreignReads": 3
+        },
+        {
+          "client": 3,
+          "ownReads": 3,
+          "foreignReads": 3
+        }
+      ],
+      "thresholds": {
+        "ownBuReadStatus": 200,
+        "foreignTenantReadStatus": 404,
+        "providerCallsDuringListing": 0
+      },
+      "providerCalls": {
+        "calibration": "one fixture Meta number-list operation was detected before the read stage",
+        "before": {
+          "meta": 1,
+          "evolution": 0
+        },
+        "after": {
+          "meta": 1,
+          "evolution": 0
+        },
+        "duringReadDelta": {
+          "meta": 0,
+          "evolution": 0
+        }
+      },
+      "elapsedMs": 77.99276400000008,
+      "metrics_summary": "Five authenticated clients ran concurrently; each completed three sequential own-BU and three sequential foreign-tenant reads; all instrumented Meta/Evolution operations remained unchanged during channel listing.",
+      "limits": "One bounded local PostgreSQL stage; not a capacity, latency SLO, or provider load claim."
+    },
+    "limits": "No latency distribution, throughput capacity, saturation or soak claim; observed elapsed time only; controlled provider not live WhatsApp",
+    "classification_authority_note": "Raw marker labels inherited from fixture evidence do not supersede the approved TODO lane classification/reason/deadline; no classification reduction or waiver."
+  },
+  "artifact_sha256": "bc49d6f722e9f64d0d07a824a83bab64e7768dd72e7677758f9325e3a256171a"
+}
+```

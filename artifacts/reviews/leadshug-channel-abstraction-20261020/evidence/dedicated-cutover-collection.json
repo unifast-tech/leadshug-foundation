@@ -1,0 +1,16 @@
+{
+  "session": 58882,
+  "requested_model": "gpt-5.6-terra",
+  "effort": "xhigh",
+  "terminal_exit": 0,
+  "event_types": {
+    "thread.started": 1,
+    "turn.started": 1,
+    "item.completed": 1,
+    "turn.completed": 1
+  },
+  "raw_sha256": "782bfb041af6bd13138fce1c2147294293ddb0ed95d7a9827e30eb8445b450df",
+  "result_recorded": true,
+  "no_waiver": true,
+  "limits": "Cutover-only source audit; no operational/deliverycertification"
+}

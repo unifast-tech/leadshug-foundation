@@ -1,0 +1,51 @@
+{
+  "allfreshinternal_nocontext": true,
+  "lanes": [
+    {
+      "lane": "performance",
+      "session": 17556,
+      "requested_model": "gpt-6.1-sol",
+      "effort": "xhigh",
+      "terminal": 0,
+      "event_types": {
+        "thread.started": 1,
+        "turn.started": 1,
+        "item.completed": 1,
+        "turn.completed": 1
+      },
+      "raw_sha256": "dc4aa0a96abe94aabef460cecd5b30dbaa725deab1b081353e8fe5d90e05066d",
+      "tools": 0
+    },
+    {
+      "lane": "test-quality",
+      "session": 9740,
+      "requested_model": "gpt-5.6-terra",
+      "effort": "xhigh",
+      "terminal": 0,
+      "event_types": {
+        "thread.started": 1,
+        "turn.started": 1,
+        "item.completed": 1,
+        "turn.completed": 1
+      },
+      "raw_sha256": "7ccdc1fd8aad2ae8ba97dca203c5c2dfe79bcef8d2b88248555ec0e0f496100a",
+      "tools": 0
+    },
+    {
+      "lane": "cutover-integrity",
+      "session": 58882,
+      "requested_model": "gpt-5.6-terra",
+      "effort": "xhigh",
+      "terminal": 0,
+      "event_types": {
+        "thread.started": 1,
+        "turn.started": 1,
+        "item.completed": 1,
+        "turn.completed": 1
+      },
+      "raw_sha256": "782bfb041af6bd13138fce1c2147294293ddb0ed95d7a9827e30eb8445b450df",
+      "tools": 0
+    }
+  ],
+  "scope": "actual808k boundedsource/fullrubric plus terminal80903proof; notdeliveryapproval"
+}

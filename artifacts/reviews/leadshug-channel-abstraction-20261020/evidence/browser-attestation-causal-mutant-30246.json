@@ -1,0 +1,217 @@
+{
+  "capturedAtUtc": "2026-10-20T16:18:37.922Z",
+  "runId": "2026-10-20T16-18-37-921Z",
+  "branch": {
+    "api": {
+      "name": "feature/number-onboarding",
+      "head": "db5a86758a165fac8a1ab587599c37b17890530c",
+      "declaredBaseline": "ae6a9662c29b77276351aa9de653a47276372246",
+      "diffSha256": "a5b609f01dbf0143720fc638e40eb1ab60e1f21ac3e555c77d1ab8d178d7a653",
+      "sourceManifest": [
+        {
+          "path": "src/domain/channels/channel-credential-resolver.ts",
+          "status": "unstaged:M",
+          "sha256": "89cf17ac02af444092651470aee13e2d4a3bcee8d459508be818322b33b00c10"
+        },
+        {
+          "path": "src/domain/channels/transport/channel-dependencies.spec.ts",
+          "status": "??",
+          "sha256": "f59d838baf635c0ce0d1ebe725c88fbb0b19fac42e9b382452e31fd38e0511a3"
+        },
+        {
+          "path": "src/domain/channels/transport/channel.ts",
+          "status": "??",
+          "sha256": "432796b8685d07dcc53c3a699a7b9d1469ac4fb110aea080766ec207bec8621f"
+        },
+        {
+          "path": "src/domain/inbox/conversations.service.ts",
+          "status": "unstaged:M",
+          "sha256": "c7d84f983ed61c6022424d4648e07282e7eb53c40fa9aba249618d77b3c223de"
+        },
+        {
+          "path": "src/domain/inbox/incoming.service.ts",
+          "status": "unstaged:M",
+          "sha256": "b0ec43187b1f48720aa899e40f979dd0ae447321581d675b84ef9c71dbd0ff42"
+        },
+        {
+          "path": "src/domain/inbox/incoming.typebot.integration.spec.ts",
+          "status": "unstaged:M",
+          "sha256": "0cac10e5ed05da5a6e89b39c8b32a40810b4678af77b4d3b8d20b4d1afc4704c"
+        },
+        {
+          "path": "src/domain/inbox/outbound.service.spec.ts",
+          "status": "??",
+          "sha256": "ae1f9208d660c684dca9b1ac5727001d8e57c4c9504be9be1d20ecba32e01805"
+        },
+        {
+          "path": "src/domain/inbox/outbound.service.ts",
+          "status": "??",
+          "sha256": "63bcf773e2b4c5a5ddd688a1bb13745a0a206d995fafc665925df3fecaf394aa"
+        },
+        {
+          "path": "src/integrations/channels/channel-adapter-factory.ts",
+          "status": "??",
+          "sha256": "e0ebdd78e387f7ee3af902f038d22449e212c1301ffa642bbceb5a5f05d2abfc"
+        },
+        {
+          "path": "src/integrations/channels/channel-adapter-registry.ts",
+          "status": "??",
+          "sha256": "655b735e239e89fbaede36689d1c22245d3804d66646f7736db991cb5099b02b"
+        },
+        {
+          "path": "src/integrations/channels/channel-transport.module.ts",
+          "status": "??",
+          "sha256": "32203d3b8393a34a9effab4266683c389651d7ec197e8f9d704a77a6a37f40dc"
+        },
+        {
+          "path": "src/integrations/channels/evolution-channel.ts",
+          "status": "??",
+          "sha256": "60faf1ea40fe17ad62495b0f42a2cf958defcb41e3ad72d3d2213751539b460c"
+        },
+        {
+          "path": "src/integrations/channels/meta-channel.ts",
+          "status": "??",
+          "sha256": "997e739cf7d7231918dc97fc347bfeb32a1cd74d084ead8c64b01157022f8138"
+        },
+        {
+          "path": "src/integrations/channels/prisma-channel-resolver.ts",
+          "status": "??",
+          "sha256": "5d01cca30f25ea4354651303633aa5a02f3adbe0b7cc37c44c53d821fe7c062f"
+        },
+        {
+          "path": "src/integrations/evolution/evolution.client.spec.ts",
+          "status": "unstaged:M",
+          "sha256": "119d962fdcd9c895b75845dca74d8506147e11480d74b82e8c37f29f97c04081"
+        },
+        {
+          "path": "src/integrations/evolution/evolution.client.ts",
+          "status": "unstaged:M",
+          "sha256": "b0824e8fd4f801a239521855aaa02da5e0943a8c86c4ac8778e2f1f352821698"
+        },
+        {
+          "path": "src/integrations/meta/meta.client.spec.ts",
+          "status": "unstaged:M",
+          "sha256": "d7e76f5c392afab1638363d3c851f8ce8c5223ff27c64801a79fdc8ec00d5e7a"
+        },
+        {
+          "path": "src/integrations/meta/meta.client.ts",
+          "status": "unstaged:M",
+          "sha256": "9f954f6c1c2bd10030f5eed0cb42e493d6e480106bcfc3f44977cb97a716d34f"
+        },
+        {
+          "path": "src/surfaces/bff/bff.module.ts",
+          "status": "unstaged:M",
+          "sha256": "327f34eba67746882abc601a3817d94270cff3018d6972a8095dae530a2d6e29"
+        },
+        {
+          "path": "src/surfaces/bff/conversations.controller.ts",
+          "status": "unstaged:M",
+          "sha256": "53d3cffaa258ba1ad45c21eae4ab8712e2011255b7ca14965f73221edd0cc002"
+        },
+        {
+          "path": "src/surfaces/public/conversations.controller.ts",
+          "status": "unstaged:M",
+          "sha256": "b55440061dd4574646e4fa1a3c265cdb8653bab4abf3aa0e86b4057bc7e365ff"
+        },
+        {
+          "path": "src/surfaces/public/public.module.ts",
+          "status": "unstaged:M",
+          "sha256": "00a96d54fde7061f61f4ddf2b9cef836a02ad77ca29b62ea422695b9d8f90ef8"
+        },
+        {
+          "path": "src/surfaces/webhooks/webhooks.module.ts",
+          "status": "unstaged:M",
+          "sha256": "abc8fd7960fcca1ce43d21d44a90f8d4708d47e07bde9a48c0009e02dc0503a6"
+        },
+        {
+          "path": "test/api-publica.e2e-spec.ts",
+          "status": "unstaged:M",
+          "sha256": "4ce7360eb02621f89d25d41924bfafb86b76e8bbec8216dfb509f86000308837"
+        },
+        {
+          "path": "test/browser-server.cjs",
+          "status": "unstaged:M",
+          "sha256": "40e56e2d6672800acd4a00f87b942fc88b8361c770d06ee6d7c8a883a15d3390"
+        },
+        {
+          "path": "test/channel-transport.e2e-spec.ts",
+          "status": "??",
+          "sha256": "124d397bd3a5769271466e64b0e19b1235e08d1ea9a4df9f124fc629096822fe"
+        },
+        {
+          "path": "test/helpers.ts",
+          "status": "unstaged:M",
+          "sha256": "747dcd1a6db374c1ccb0f2a248b08d49c2ec62a46beb345cc03eea3c058d36f2"
+        },
+        {
+          "path": "test/number-onboarding-pcv.e2e-spec.ts",
+          "status": "unstaged:M",
+          "sha256": "c62a11fc6302cd3bb807ff0b55b9dbcc7e46847cef638b81c382b455a8a29f20"
+        },
+        {
+          "path": "test/number-onboarding-typebot.e2e-spec.ts",
+          "status": "unstaged:M",
+          "sha256": "22e1121d8a1f03b5e566fb8e314c3966e5d9355453b31b978afcd30de038fbd2"
+        },
+        {
+          "path": "test/timeline-fixtures.cjs",
+          "status": "unstaged:M",
+          "sha256": "889707ec7857e8a17a850e56eb60d24e6953e59028f40880edff3756340fd23a"
+        }
+      ]
+    },
+    "web": {
+      "name": "feature/number-onboarding",
+      "head": "74b9d4b714044829796f875d00553f077c1c329d",
+      "declaredBaseline": "4e56f6c1f4515b918d05b8c87e890d42e8542c56",
+      "diffSha256": "c95a146e8d29955c09c904d5cb003cd3feb76a718275d3ba0bc2c5d1e4ff3e95",
+      "sourceManifest": [
+        {
+          "path": "e2e/channel-transport.spec.ts",
+          "status": "??",
+          "sha256": "b3604496727a85d7ce12c2cb6e7a479575356a61ef4c529d385047e066a8e0f3"
+        },
+        {
+          "path": "e2e/number-onboarding-freshness.ts",
+          "status": "unstaged:M",
+          "sha256": "880b49f8fa428568692b92a883dd00c5ce76214b1f2db5b35cafb9b0553ed9ad"
+        },
+        {
+          "path": "e2e/timeline-freshness.ts",
+          "status": "unstaged:M",
+          "sha256": "3a06fb36e3a9bcf20a12cd8201da2daa3b567775f15e2be5f068e97e840d7f53"
+        },
+        {
+          "path": "src/api.spec.ts",
+          "status": "unstaged:M",
+          "sha256": "e305671fc6d9775ef3c0365ed12470fb14ea3dd71ff3aca49f153262017147d6"
+        },
+        {
+          "path": "src/api.ts",
+          "status": "unstaged:M",
+          "sha256": "dd59a37799453d3e68fc64a6477e1578956d15d1a4920af90e22ff2b83057505"
+        },
+        {
+          "path": "src/telas/Inbox.tsx",
+          "status": "unstaged:M",
+          "sha256": "bdc6c54a40c3a3b4d4ce8d565c8f194c9dd86b41ec75e473c38f45aa94c28804"
+        }
+      ]
+    }
+  },
+  "runtime": "v22.23.3",
+  "database": {
+    "name": "leadshug_timeline_channels_ci",
+    "endpoint": "postgresql://validation-postgres:5432/leadshug_timeline_channels_ci",
+    "completedMigrations": 22
+  },
+  "endpoints": {
+    "apiHealth": 200,
+    "fixtureHealth": 200,
+    "preview": 200,
+    "servedBundle": "/assets/index-D8vnJ-Bx.js"
+  },
+  "servedBundleSha256": "cac7fee57717b6b9a02c0cb1a56d0cd50d7e259b85a3999b140e61f8f27c77cc",
+  "distBundleSha256": "cac7fee57717b6b9a02c0cb1a56d0cd50d7e259b85a3999b140e61f8f27c77cc",
+  "operationalDataBoundary": "API .local-files payloads and private dotenv files are excluded from public-source inventories and binary diff pathspecs; an omitted file is not reported as a source deletion."
+}

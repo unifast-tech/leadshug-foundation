@@ -1,0 +1,42 @@
+{
+  "schema_version": "subagent-review-merge-v2",
+  "artifact_kind": "subagent_review_merge",
+  "authoritative": false,
+  "edit_policy": "derived_merge_packet",
+  "dispatch_path": "/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/artifacts/reviews/leadshug-channel-abstraction-20261020/evidence/security-v13.dispatch.json",
+  "review_kind": "architecture_adherence",
+  "review_count": 1,
+  "reviewer_labels": [
+    "fresh-internal-package-only-security-reviewer"
+  ],
+  "highest_finding_severity": "medium",
+  "axis_summary": {
+    "performance": "acceptable",
+    "elegance": "acceptable",
+    "structural_soundness": "mixed",
+    "operational_fit": "mixed"
+  },
+  "recommended_paths": [
+    "Remediate SEC13-01 within the existing approved guard/runner paths, add the missing negative control before the fix, freeze the revised bytes, and repeat canonical all plus focused independent review. Preserve prior resolved findings and the approved architecture. Keep migration, activation, operator IN/OUT, PCV disposition, consolidation and final gates pending; no waiver or production approval is implied."
+  ],
+  "exact_next_step": "Record reviewer resolutions in the governing TODO using the machine-checkable resolution table or equivalent gate ledger, then extract the derived resolution packet and decide whether another bounded review pass is still required.",
+  "findings": [
+    {
+      "finding_id": "F-ED65AFA3",
+      "severity": "medium",
+      "title": "The parity guard admits shell-level masking of required suite failures",
+      "rationale": "scripts/check-channels-ci-parity.py:146 validates the shared lifecycle through ordered substring presence. Replacing the required command with `npm run test:e2e || true` preserves every required substring and its order. The existing missing-suite mutations still reject successfully, and fake_wrapper_checks runs config-only, exiting before RUNNER_SCRIPT execution. Consequently this mutation satisfies the guard while allowing an E2E failure to be ignored and a later successful browser command to determine an exit0 result. Appending `|| true` to the common guard invocation has the same presence-check weakness. This is source-demonstrable but was not executed in this review. The current supplied runner does propagate failures; the defect is that the newly required protection harness cannot detect this approval-breaking drift. D10 and the approved v1.3 proposal explicitly require rejection of bypasses and swallowed errors, so current green all2564 does not discharge this protection obligation. The blast radius is false acceptance of future shared local/CI validation, not a demonstrated application authorization exploit.",
+      "suggested_action": "Option A (recommended): strengthen validation of the mandatory command invocations and failure propagation within the already admitted guard/runner paths. Add an actual mutation containing `npm run test:e2e || true` and require rejection; cover masking of the common guard invocation as well. Add a safe executable failure control proving that a failed required leaf produces nonzero wrapper exit and observable cleanup. Option B: use another bounded lifecycle-validation approach with equivalent executable negatives if it is simpler to maintain. Option C: retain the current checks; this leaves the explicit fail-closed harness obligation unsatisfied. Preserve the sole shared RUNNER_SCRIPT owner, restore/freeze the source, and collect fresh canonical all evidence after remediation.",
+      "reviewer_labels": [
+        "fresh-internal-package-only-security-reviewer"
+      ],
+      "source_finding_ids": [
+        "SEC13-01"
+      ],
+      "category": "tests",
+      "formalizable_hint": "yes",
+      "candidate_rule_level": "project",
+      "candidate_rule_id": "n/a"
+    }
+  ]
+}

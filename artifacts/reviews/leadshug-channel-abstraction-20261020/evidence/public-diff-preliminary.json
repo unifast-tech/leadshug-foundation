@@ -9,12 +9,12 @@
       "root": {
         "path": "/mnt/c/unifast/leadshug/leadshug_now_docker",
         "baseline_commit": "80e3940126f22a941f90dba4f5e801b6c0eb2f58",
-        "actual_change_count": 1
+        "actual_change_count": 3
       },
       "api": {
         "path": "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app",
         "baseline_commit": "db5a86758a165fac8a1ab587599c37b17890530c",
-        "actual_change_count": 30
+        "actual_change_count": 32
       },
       "web": {
         "path": "/mnt/c/unifast/leadshug/leadshug_now_docker/web-app",
@@ -24,16 +24,16 @@
       "foundation": {
         "path": "/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation",
         "baseline_commit": "82fa66b33b81b31024dc8cebef9e72e9253964a7",
-        "actual_change_count": 80
+        "actual_change_count": 321
       }
     },
-    "actual_change_count": 117,
-    "expected_change_count": 117,
+    "actual_change_count": 362,
+    "expected_change_count": 362,
     "forbidden_change_count": 0,
     "unclassified_change_count": 0
   },
   "bounded_invocation": {
-    "recorded_at_utc": "2026-10-20T15:41:21.039357+00:00",
+    "recorded_at_utc": "2026-10-20T18:36:27.792440+00:00",
     "status": "preliminary implementation only",
     "guard_source_unchanged": true,
     "api_positive_pathspecs": [

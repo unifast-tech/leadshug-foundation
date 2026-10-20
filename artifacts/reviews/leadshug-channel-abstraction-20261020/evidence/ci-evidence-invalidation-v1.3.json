@@ -67,7 +67,7 @@
   "bounded_invocation": {
     "guard_source_unchanged": true,
     "guard_source_sha256": "d146dbe2fbf1952658e7e7526b31058b271ee4aff999e9494f089e6011f28aa2",
-    "recorded_at_utc": "2026-10-20T17:28:01.939240+00:00",
+    "recorded_at_utc": "2026-10-20T17:45:10.707891+00:00",
     "repo_root_binding": "/mnt/c/unifast/leadshug/leadshug_now_docker",
     "governing_todo_baseline_adapter": "Approved project DiffExpectation RepositoryBaselines+ExecutionLaneTracking, validated exact against complete report repo_states; core parser otherwise expects promotion-only CurrentBranchAuthority schema. No promotion or baseline facts bypassed.",
     "public_positive_pathspecs": {

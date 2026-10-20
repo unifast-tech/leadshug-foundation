@@ -1,0 +1,15 @@
+{
+  "schema": "stcon06-root-api-diagnostic-inspection-v1",
+  "recorded_at_utc": "2026-10-20T18:37:28.174044+00:00",
+  "executor_artifact_sha256": "c7058fa475e112e5bbe74cec25bdeeac5b21a1f916164c7fe51a51f78f105eac",
+  "reported_exit": 0,
+  "raw_log": "foundation_documentation/artifacts/tmp/stcon06-executor-v13r3-api-green.log",
+  "raw_log_sha256": "815163257987b6af07242d72fe3e77d429d48ad4b0eeb5c3a5c1c3778434ccdc",
+  "counts": {
+    "api_unit": 194,
+    "api_e2e": 315
+  },
+  "source_before_after_bytes_equal": true,
+  "root_inspection": "Full raw log read and total patterns/hash checked; both negative-limit endpoint tests now pass; selected-origin unavailable positive/negative projections and blockedPOST remain real PG. Host guard JSON separately inspected:23mutation rejections plus actual RUNNER_SCRIPT fake mandatory guard exit42 with run/down observed. Guard omission control is post-fix, not test-first.",
+  "next": "Mandatory fresh broad all; no runtime human activation or delivery inferred."
+}

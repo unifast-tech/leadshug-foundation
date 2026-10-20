@@ -1,0 +1,314 @@
+{
+  "schema": "stcon06-executor-local-build-v1",
+  "scope": "Ordered Step6 build preparation only; local API/Web images built without replacing serving containers, starting compose services, changing networks or volumes, tunnel/provider changes, or runtime publication.",
+  "readiness": {
+    "context_verification": "bash delphi-ai/verify_context.sh passed: PACED-Ready",
+    "project_verifier": "scripts/verify_environment.sh absent; no Compose config/env-file inspection was used as substitute",
+    "docker_server_version": "27.1.1",
+    "gateway_health_url": "http://127.0.0.1:8083/health",
+    "gateway_health_body": {
+      "status": "ok"
+    },
+    "gateway_health_artifact": "foundation_documentation/artifacts/tmp/stcon06-executor-gateway-health.json",
+    "gateway_health_sha256": "a29ee2b15c494311c52521766e44af56a3ad2248e7a8ab465e5206463c13d288",
+    "source_snapshot_attestation": "foundation_documentation/artifacts/reviews/leadshug-channel-abstraction-20261020/evidence/browser-attestation-causal-final-all80903.json",
+    "source_snapshot_attestation_sha256": "217863acb449c5989e3f79cfa6e899dfbdc1f4b3da40c3b5d0f9cb9e3492a648",
+    "source_snapshot_run_id": "2026-10-20T16-26-20-744Z",
+    "source_frozen_matches_all80903": {
+      "api": {
+        "entries": 30,
+        "all80903_hashes_match": true,
+        "mismatches": []
+      },
+      "web": {
+        "entries": 6,
+        "all80903_hashes_match": true,
+        "mismatches": []
+      }
+    }
+  },
+  "running_service_baseline": {
+    "project_label": "leadshug_channels_local",
+    "count": 7,
+    "services": [
+      {
+        "id": "9eccbea48251",
+        "name": "leadshug_channels_local-api-1",
+        "configured_image": "leadshug_channels_local-api",
+        "status": "Up 5 hours (healthy)",
+        "ports": "3000/tcp",
+        "image_id": "fe5fb7eaf6a68123f9da6b92a0a69483180d213f556b4bedf313f04a383b4821",
+        "state": "running",
+        "restart_policy": "unless-stopped",
+        "network_aliases": "leadshug_channels_local_default=[\"leadshug_channels_local-api-1\",\"api\"];"
+      },
+      {
+        "id": "9aa55b6681a8",
+        "name": "leadshug_channels_local-web-1",
+        "configured_image": "leadshug_channels_local-web",
+        "status": "Up 5 hours",
+        "ports": "80/tcp",
+        "image_id": "cfd5e58b91a67d2fae4f37759274a34209cd2501082650a49545a60a12642361",
+        "state": "running",
+        "restart_policy": "unless-stopped",
+        "network_aliases": "leadshug_channels_local_default=[\"leadshug_channels_local-web-1\",\"web\"];"
+      },
+      {
+        "id": "0c48d94e9fe5",
+        "name": "leadshug_channels_local-gateway-1",
+        "configured_image": "nginx:alpine",
+        "status": "Up 5 hours",
+        "ports": "127.0.0.1:8083->80/tcp",
+        "image_id": "76090a34b858323b6ab169711adc08253b5bee7123a973dc581ed46b643bc109",
+        "state": "running",
+        "restart_policy": "unless-stopped",
+        "network_aliases": "leadshug_channels_local_default=[\"leadshug_channels_local-gateway-1\",\"gateway\"];"
+      },
+      {
+        "id": "cf749491f714",
+        "name": "leadshug_channels_local-evolution-1",
+        "configured_image": "evoapicloud/evolution-api:v2.3.7",
+        "status": "Up 5 hours",
+        "ports": "8080/tcp",
+        "image_id": "385a3c4bedf42c66b46b43d06aae8712620144a84aa3b2c831b30c68435ab27c",
+        "state": "running",
+        "restart_policy": "unless-stopped",
+        "network_aliases": "leadshug_channels_local_default=[\"leadshug_channels_local-evolution-1\",\"evolution\"];"
+      },
+      {
+        "id": "3b2e8d153d79",
+        "name": "leadshug_channels_local-evolution-redis-1",
+        "configured_image": "redis:7.4-alpine",
+        "status": "Up 5 hours (healthy)",
+        "ports": "6379/tcp",
+        "image_id": "f84b0c4678011602b9b98c227a4dcd5468bf8b088b02fdd4165cb7758bad8058",
+        "state": "running",
+        "restart_policy": "unless-stopped",
+        "network_aliases": "leadshug_channels_local_default=[\"leadshug_channels_local-evolution-redis-1\",\"evolution-redis\"];"
+      },
+      {
+        "id": "150de898c3d9",
+        "name": "leadshug_channels_local-evolution-postgres-1",
+        "configured_image": "postgres:16",
+        "status": "Up 5 hours (healthy)",
+        "ports": "5432/tcp",
+        "image_id": "80f4c7a5e91618546dce5b4fe60cf03b14c0f9efa7e40157278d122772ced8d2",
+        "state": "running",
+        "restart_policy": "unless-stopped",
+        "network_aliases": "leadshug_channels_local_default=[\"leadshug_channels_local-evolution-postgres-1\",\"evolution-postgres\"];"
+      },
+      {
+        "id": "4fcd87b43133",
+        "name": "leadshug_channels_local-postgres-1",
+        "configured_image": "postgres:16",
+        "status": "Up 5 hours (healthy)",
+        "ports": "5432/tcp",
+        "image_id": "80f4c7a5e91618546dce5b4fe60cf03b14c0f9efa7e40157278d122772ced8d2",
+        "state": "running",
+        "restart_policy": "unless-stopped",
+        "network_aliases": "leadshug_channels_local_default=[\"leadshug_channels_local-postgres-1\",\"postgres\"];"
+      }
+    ],
+    "ps_artifact": "foundation_documentation/artifacts/tmp/stcon06-executor-service-baseline.txt",
+    "ps_sha256": "6c4ff832eb3dcc22c2a1a9d768f074205f2a3b044b2827910e3b2cb82f592ed0",
+    "inspect_artifact": "foundation_documentation/artifacts/tmp/stcon06-executor-service-inspect.txt",
+    "inspect_sha256": "d3c10ba0f8f8ae47382af3f488a68dff6cd053a4347758d45202e89aee98dcab",
+    "note": "Only selected metadata was inspected (IDs, configured/current image IDs, running state, restart policy, network aliases). Config.Env, process argv, mounts and private paths were not read."
+  },
+  "positive_build_contexts": {
+    "inventory_path": "foundation_documentation/artifacts/tmp/stcon06-executor-build-context-inventory.json",
+    "inventory_sha256": "ad3d939f7747f6496a9c8353555f3286b8189a4ff850e5510bcba4b7619f7137",
+    "api": {
+      "positive_roots": [
+        "Dockerfile",
+        "package.json",
+        "package-lock.json",
+        "prisma",
+        "src",
+        "tsconfig.json",
+        "tsconfig.build.json",
+        "nest-cli.json",
+        "docker/entrypoint.sh"
+      ],
+      "entries": 199,
+      "manifest_sha256": "41bb978a8f2dc4111c6a38fda458d18726ebf55522c41814364ba02f558c538e",
+      "archive_sha256": "efbe44d5f8fab5b1ef0429126cf6a86da118c384d39ebcebf3eb9a5973d22f23",
+      "archive_sha_file": "foundation_documentation/artifacts/tmp/stcon06-executor-api-context-archive.sha256"
+    },
+    "web": {
+      "positive_roots": [
+        "Dockerfile",
+        "package.json",
+        "package-lock.json",
+        "index.html",
+        "tsconfig.json",
+        "vite.config.ts",
+        "src",
+        "public",
+        "nginx/default.conf.template",
+        "docker/40-config-js.sh"
+      ],
+      "entries": 47,
+      "manifest_sha256": "679fe44bd4cfc3fbcef5322bf6256d328c8e44c7a7931b031994aacaf6ae6ed2",
+      "archive_sha256": "4a73af703e7af0c56a8f3b3cd78f452a46dd3227c0f80123df725ecba83b9162",
+      "archive_sha_file": "foundation_documentation/artifacts/tmp/stcon06-executor-web-context-archive.sha256"
+    },
+    "method": "GNU tar streamed to docker.exe build stdin; symlinks preserved, not dereferenced. Input roots were exact allowlists from the reviewed activation plan; no application root, dotenv, .git, node_modules, existing dist, or private local data was included."
+  },
+  "built_images": {
+    "api": {
+      "tag": "leadshug_channels_local-api:stcon06-41bb978a8f2d",
+      "image": {
+        "id": "sha256:542e34c1d5c104aa9b247d1188ef1cb63088de3e43db99c884883b8bfd3bd979",
+        "created": "2026-10-20T16:35:02.848286125Z",
+        "tags": [
+          "leadshug_channels_local-api:stcon06-41bb978a8f2d"
+        ]
+      },
+      "build_exit": 0,
+      "build_log": "foundation_documentation/artifacts/tmp/stcon06-executor-api-build.log",
+      "build_log_sha256": "2013a84c51a10906bdf73b00e9a8847e245ca4d1afa897edabfb005923caa839",
+      "runtime_node": "v22.23.3",
+      "runtime_node_log": "foundation_documentation/artifacts/tmp/stcon06-executor-api-node-version.txt",
+      "prior_running_image_id": "sha256:fe5fb7eaf6a68123f9da6b92a0a69483180d213f556b4bedf313f04a383b4821",
+      "prior_image_preserved": true,
+      "compiled_changed_modules": [
+        {
+          "source_path": "api-app/src/domain/channels/channel-credential-resolver.ts",
+          "source_sha256": "89cf17ac02af444092651470aee13e2d4a3bcee8d459508be818322b33b00c10",
+          "image_path": "/app/dist/domain/channels/channel-credential-resolver.js",
+          "image_sha256": "3a4ba232e829434271bc4262f6e982679e7923af02272a6f4767eba71d89428f"
+        },
+        {
+          "source_path": "api-app/src/domain/channels/transport/channel.ts",
+          "source_sha256": "432796b8685d07dcc53c3a699a7b9d1469ac4fb110aea080766ec207bec8621f",
+          "image_path": "/app/dist/domain/channels/transport/channel.js",
+          "image_sha256": "f8b384cb16398b45651c9838083e5cf556153fd2c6b66d7c97854abc64c5c49d"
+        },
+        {
+          "source_path": "api-app/src/domain/inbox/conversations.service.ts",
+          "source_sha256": "c7d84f983ed61c6022424d4648e07282e7eb53c40fa9aba249618d77b3c223de",
+          "image_path": "/app/dist/domain/inbox/conversations.service.js",
+          "image_sha256": "0310c0d6c1d9fad6b0885fcb77a05cc77c41afc92eecd53871bc3419b310f1a3"
+        },
+        {
+          "source_path": "api-app/src/domain/inbox/incoming.service.ts",
+          "source_sha256": "b0ec43187b1f48720aa899e40f979dd0ae447321581d675b84ef9c71dbd0ff42",
+          "image_path": "/app/dist/domain/inbox/incoming.service.js",
+          "image_sha256": "29345b059654c6d423a5f60067eca92437a17f1faa7ce6d7da19cc5be9a8be1b"
+        },
+        {
+          "source_path": "api-app/src/domain/inbox/outbound.service.ts",
+          "source_sha256": "63bcf773e2b4c5a5ddd688a1bb13745a0a206d995fafc665925df3fecaf394aa",
+          "image_path": "/app/dist/domain/inbox/outbound.service.js",
+          "image_sha256": "9ef67a3253be06991bfce785876ee3ec78a617839f92b3670faae53938e1e04c"
+        },
+        {
+          "source_path": "api-app/src/integrations/channels/channel-adapter-factory.ts",
+          "source_sha256": "e0ebdd78e387f7ee3af902f038d22449e212c1301ffa642bbceb5a5f05d2abfc",
+          "image_path": "/app/dist/integrations/channels/channel-adapter-factory.js",
+          "image_sha256": "ba4387d97f022816d754802234fbe47edd7069dc0be757575fa1183c9c64a01b"
+        },
+        {
+          "source_path": "api-app/src/integrations/channels/channel-adapter-registry.ts",
+          "source_sha256": "655b735e239e89fbaede36689d1c22245d3804d66646f7736db991cb5099b02b",
+          "image_path": "/app/dist/integrations/channels/channel-adapter-registry.js",
+          "image_sha256": "faf7d68ada9c565d7211bdbd0821f0270202dbdb2616b8298d3a06783cd5ca00"
+        },
+        {
+          "source_path": "api-app/src/integrations/channels/channel-transport.module.ts",
+          "source_sha256": "32203d3b8393a34a9effab4266683c389651d7ec197e8f9d704a77a6a37f40dc",
+          "image_path": "/app/dist/integrations/channels/channel-transport.module.js",
+          "image_sha256": "20b2d2d2408910adea781578ce97c0e6e37e68046f29ef3fc71543b9c04b730c"
+        },
+        {
+          "source_path": "api-app/src/integrations/channels/evolution-channel.ts",
+          "source_sha256": "60faf1ea40fe17ad62495b0f42a2cf958defcb41e3ad72d3d2213751539b460c",
+          "image_path": "/app/dist/integrations/channels/evolution-channel.js",
+          "image_sha256": "e927bf62d708506411f08fba65e5d258a6545d0a3bdcbafdf253131db9525263"
+        },
+        {
+          "source_path": "api-app/src/integrations/channels/meta-channel.ts",
+          "source_sha256": "997e739cf7d7231918dc97fc347bfeb32a1cd74d084ead8c64b01157022f8138",
+          "image_path": "/app/dist/integrations/channels/meta-channel.js",
+          "image_sha256": "16cea9af79bcd00bf3109970bba8ed95f158561bd29de90e6e598b729f047d31"
+        },
+        {
+          "source_path": "api-app/src/integrations/channels/prisma-channel-resolver.ts",
+          "source_sha256": "5d01cca30f25ea4354651303633aa5a02f3adbe0b7cc37c44c53d821fe7c062f",
+          "image_path": "/app/dist/integrations/channels/prisma-channel-resolver.js",
+          "image_sha256": "8fedc36acb41759ea0ea4c0d400f839858959a252151404ae27757202d0bb78b"
+        },
+        {
+          "source_path": "api-app/src/integrations/evolution/evolution.client.ts",
+          "source_sha256": "b0824e8fd4f801a239521855aaa02da5e0943a8c86c4ac8778e2f1f352821698",
+          "image_path": "/app/dist/integrations/evolution/evolution.client.js",
+          "image_sha256": "fbb109cc9f1617fdd4528138f75508fe0fc1fe752b7c2058b37f4ce32a159cc2"
+        },
+        {
+          "source_path": "api-app/src/integrations/meta/meta.client.ts",
+          "source_sha256": "9f954f6c1c2bd10030f5eed0cb42e493d6e480106bcfc3f44977cb97a716d34f",
+          "image_path": "/app/dist/integrations/meta/meta.client.js",
+          "image_sha256": "1189cbd6e1e899acaa592e219ffd4c3b40dded782222b7fb04c1f7179404da1f"
+        },
+        {
+          "source_path": "api-app/src/surfaces/bff/bff.module.ts",
+          "source_sha256": "327f34eba67746882abc601a3817d94270cff3018d6972a8095dae530a2d6e29",
+          "image_path": "/app/dist/surfaces/bff/bff.module.js",
+          "image_sha256": "4aa96e265bfeaa22bc6ce428b91723b1286654e0f98f474918f06ff66ecdad9e"
+        },
+        {
+          "source_path": "api-app/src/surfaces/bff/conversations.controller.ts",
+          "source_sha256": "53d3cffaa258ba1ad45c21eae4ab8712e2011255b7ca14965f73221edd0cc002",
+          "image_path": "/app/dist/surfaces/bff/conversations.controller.js",
+          "image_sha256": "1e09a40f008ed3b3aad221775c31911d81c49f8b6e83778ebd99956d1657cf70"
+        },
+        {
+          "source_path": "api-app/src/surfaces/public/conversations.controller.ts",
+          "source_sha256": "b55440061dd4574646e4fa1a3c265cdb8653bab4abf3aa0e86b4057bc7e365ff",
+          "image_path": "/app/dist/surfaces/public/conversations.controller.js",
+          "image_sha256": "f9b2e4ec88ce759d5c0fa5e099b17d39f9f8fbb9babfc5344a5df3537e348bd9"
+        },
+        {
+          "source_path": "api-app/src/surfaces/public/public.module.ts",
+          "source_sha256": "00a96d54fde7061f61f4ddf2b9cef836a02ad77ca29b62ea422695b9d8f90ef8",
+          "image_path": "/app/dist/surfaces/public/public.module.js",
+          "image_sha256": "4840243967b4b65fb8208b4e012d2c97b9a06c7c9ca908c5dc7d8f6e2398d40f"
+        },
+        {
+          "source_path": "api-app/src/surfaces/webhooks/webhooks.module.ts",
+          "source_sha256": "abc8fd7960fcca1ce43d21d44a90f8d4708d47e07bde9a48c0009e02dc0503a6",
+          "image_path": "/app/dist/surfaces/webhooks/webhooks.module.js",
+          "image_sha256": "0769e72bbc4db7c3c20636405263ae88b142d55f105a88eddf26d4c0a5379e5a"
+        }
+      ],
+      "compiled_hashes_artifact": "foundation_documentation/artifacts/tmp/stcon06-executor-api-compiled-hashes.txt",
+      "compiled_hashes_sha256": "eccad492b86b61232b1a6890ef9b9d8bda2fb6e38a73d9f4709a7df3eb813ce7"
+    },
+    "web": {
+      "tag": "leadshug_channels_local-web:stcon06-679fe44bd4fc",
+      "image": {
+        "id": "sha256:1114bc42c5d751b50594671fc7f01b784735e4d9f65815eef5a513a03d1b5dba",
+        "created": "2026-10-20T16:35:22.345950391Z",
+        "tags": [
+          "leadshug_channels_local-web:stcon06-679fe44bd4fc"
+        ]
+      },
+      "build_exit": 0,
+      "build_log": "foundation_documentation/artifacts/tmp/stcon06-executor-web-build.log",
+      "build_log_sha256": "dbf0b0ba6f039f1d474742c4ef100940e843a223b17e662716ebe446841c9c40",
+      "build_output": "Vite v5.4.21; asset index-9DA0_PMk.js",
+      "image_runtime": "nginx/1.31.7",
+      "runtime_version_log": "foundation_documentation/artifacts/tmp/stcon06-executor-web-nginx-version.txt",
+      "prior_running_image_id": "sha256:cfd5e58b91a67d2fae4f37759274a34209cd2501082650a49545a60a12642361",
+      "prior_image_preserved": true,
+      "built_asset_path": "/usr/share/nginx/html/assets/index-9DA0_PMk.js",
+      "built_asset_sha256": "27c5db465495068402b278ba7c9d3a1f23b8b03797249639190c8a755759563b",
+      "frozen_all80903_served_asset_sha256": "27c5db465495068402b278ba7c9d3a1f23b8b03797249639190c8a755759563b",
+      "asset_matches_all80903": true,
+      "asset_hashes_artifact": "foundation_documentation/artifacts/tmp/stcon06-executor-web-asset-hashes.txt",
+      "asset_hashes_sha256": "0f7abffe45572ee1440bf3a859abf00549240191ad31e2c746f4601198fa32e6"
+    }
+  },
+  "limits": "Local build and image inspection only. The seven existing services remained running on their recorded IDs and image IDs; no service replacement, Compose activation, migration, provider call, tunnel, public access or human IN/OUT proof occurred."
+}

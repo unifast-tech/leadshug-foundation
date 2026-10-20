@@ -1,0 +1,38 @@
+--- verified-before-all-TODO
++++ actual-after-all-TODO
+@@ -35,11 +35,11 @@
+ ## Delivery Status Canon (Required)
+ - **Current delivery stage:** Pending
+ - **Qualifiers:** none
+-- **Next exact step:** Executor único implementa RED/fix dos findings PERF-R2-01/TQA-R02-01/SEC13-01 (deduplicado com PERF-R2-02) nos arquivos já admitidos; diagnóstico API, congelamento de fonte v13r3, nova admissão/invalidação e novo all antes de fresh reviews. Migração/ativação/HTTPS/prova INOUT seguem depois desses gates.
++- **Next exact step:** Aguardar terminal do novo all v13r3 já autorizado sobre fonte61 congelada; conferir hashes/served bundle/limpeza, registrar resolução round2 e executar fresh reviews completos. Migração/ativação/HTTPS/prova INOUT continuam depois desses gates.
+ 
+ ## Active Work State (Required While TODO Remains In `active/`)
+ - **Work state:** implementation
+-- **Why this state now:** all2564 histórico verde, dedicated round2/security terminal e strictmerged; resolver três findings deduplicadas no mesmo bound aprovado: limite público, cobertura dos campos públicos e guard de falhas engolidas. Executor único captura RED e refaz all; nenhum runtime humano alterado.
++- **Why this state now:** remediação round2 entregue: RED independente dos dois endpoints, APIgreen194/315, guard23 e falha executável42 com cleanup. Fonte61 congelada/strictdiff362esperadas/authorityGO; invalidation manual renovada só para all novo, sem reuse de2564. Executor único valida; nenhum runtime humano alterado.
+ - **Exit condition:** implementação aderente com all/assurance/pcv e prova real pós-publicação local; nenhum bloqueador de review aberto antes de entrega.
+ 
+ ## Scope
+@@ -216,9 +216,9 @@
+ | From Profile | To Profile | Why the Handoff Exists | Touched Surfaces | Status / Evidence |
+ | --- | --- | --- | --- | --- |
+ | strategic-cto | operational-coder | APROVADO explícito recebido2026-10-20 | API/Web/runner/harness | active; binding reload + authority-execution.json |
+-| operational-coder | operational-devops | readiness/publicação local | imagem própria e recursos de teste | planned |
+-| operational-coder | assurance-tester-quality | aderência/cutover/TQA/final | pacote público bounded | active; dedicated-audit/session.json, round01; primary80903passed |
+-| operational-coder | assurance-security-adversarial | isolamento/segredos/DI | resolução e surfaces | rounds1/2/3 terminal; findings integrated, R02 proof/finalTQA pending |
++| operational-coder | operational-devops | CI/runner v1.3, validação descartável e posterior publicação local | .github/workflows/ci.yml, scripts/check-channels-ci-parity.py, runner, imagem própria e recursos de teste | active para CI/runner/validação; migração preservada/ativação API-Web/HTTPS ainda held até fresh automated reviews |
++| operational-coder | assurance-tester-quality | aderência/cutover/TQA/final | pacote público bounded | round2 terminal/strictmerged; remediação v13r3 com all novo em execução antes de round3; dedicated-audit/session.json |
++| operational-coder | assurance-security-adversarial | isolamento/segredos/DI | resolução e surfaces | security-v13 terminal/strictmerged, SEC13-01 remediado com controles causais; fresh delta review após all v13r3; R02 causal preservado |
+ 
+ ## Complexity
+ - **Level (`small|medium|big`):** big
+@@ -820,3 +820,8 @@
+ ## Dedicated round2 — full report and bounded remediation
+ 
+ All three dedicated lanes terminal/strictmerged, session needs_adjudication. Cutover has no findings. Performance resolves the original index issue but identifies retained request-controlled negative-limit resource exposure on the touched public endpoints. Complete TQA now supplies the required full workload and identifies missing public availability endpoint/negative assertions; its known pending real-provider condition is retained at the explicit post-automation operational gate. Guard swallowed-shell-command protection is non-blocking hardening integrated with mandatory fixes. Owner dispositions and approved-boundary rationale: artifacts/reviews/leadshug-channel-abstraction-20261020/dedicated-round2-adjudication.md. Source47 from all2564 remains frozen while live security-v13 completes; no source change or operational activation yet. After terminal, same sole executor captures meaningful RED, corrects only admitted public controller/test and guard paths, refreezes and executes fresh all/affected independent reviews. No new approval is needed for enforcing the already-approved500bound and specified public fields; no endpoint/schema/valid-input behavior expansion is authorized.
++
++
++## v13r3 bounded remediation checkpoint
++
++Executor report `evidence/executor-v13r3-validation.json` closed after diagnostic and post-fix causal guard control; root inspection `evidence/v13r3-api-root-inspection.json`. Real separated RED:2expected failures/313PG pass, list take-999999 and thread take-1000000 despite page bound; exact negative-limit normalization restored194unit/315PG green. Positive/unavailable list+thread fields and blockedPOST prove selected-origin no fallback/no provider/noOUT. Guard23 rejects both swallowed commands; real RUNNER_SCRIPT with fake tools propagates mandatory guard exit42 and wrapper down. Omission/restoration control is explicitly post-fix, not test-first. Same18public static scan has2new call-through observer hints classified in static-audit-triage.md, no hard bypass. Strict public diff362/362,0forbidden/0unclassified; source61 freeze SHAceac6f671a96cc3413c23af1cebd225db63d210fe60f3594b69ab4b4a0931a2e. Canonical invalidation exit11 remains unchanged/manual; existing explicit v1.3 approval, same working_tree contract, exact diff/source and normal authorityGO renew only fresh full all in `ci-source-authority-v13r3.json`. Fresh all authorized, not yet accepted; source writes/physical runtime activation held during run/reviews.

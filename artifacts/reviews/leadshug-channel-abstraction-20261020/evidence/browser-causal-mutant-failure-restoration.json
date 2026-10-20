@@ -1,0 +1,17 @@
+{
+  "observed_at_utc": "2026-10-20T16:21:14.973927+00:00",
+  "run": 30246,
+  "reported_terminal_exit": 1,
+  "raw_log": "foundation_documentation/artifacts/tmp/stcon06-browser-causal-mutant-final.log",
+  "raw_log_sha256": "ca39192b9de886217901b5005177eff796150a89d95280752e14fe552c953c5a",
+  "raw_log_bytes": 66351,
+  "reported_counts": {
+    "pass": 49,
+    "fail": 1
+  },
+  "exact_guard_mutation_source_observation": "browser-causal-actual-mutant-source-observation.json",
+  "restored_inbox_sha256": "d70bde9ede67759d479f644598356e46aac2916a12b2ed1770c17a169118586c",
+  "restoration_exact": true,
+  "test_sha256": "b3604496727a85d7ce12c2cb6e7a479575356a61ef4c529d385047e066a8e0f3",
+  "limits": "Disposable browser/realBFF/PG/controlledprovider; failure must be draftempty after exactnativebody/taskbarrier, not instrumentationtimeout; production runtime untouched"
+}

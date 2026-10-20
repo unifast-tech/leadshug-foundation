@@ -1,0 +1,11 @@
+{
+  "schema": "stcon06-format-check-v1",
+  "raw_api_exit": 2,
+  "crlf_aware_api_exit": 0,
+  "root_exit": 0,
+  "web_exit": 0,
+  "classification": "Noise: existing CRLF terminators treated as trailing whitespace by default Git check. Per-command cr-at-eol recognizes CRLF and retains actual blank-at-eol/eof/space-before-tab checks. No source or persistent Git configuration changed.",
+  "scope": "Positive public pathspecs only; no private cleanliness claim",
+  "raw": "api-diff-check-raw-v13.txt",
+  "crlf_aware": "api-diff-check-crlf-v13.txt"
+}

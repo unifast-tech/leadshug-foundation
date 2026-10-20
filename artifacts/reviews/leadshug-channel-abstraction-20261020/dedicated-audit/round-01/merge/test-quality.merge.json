@@ -1,0 +1,42 @@
+{
+  "schema_version": "subagent-review-merge-v2",
+  "artifact_kind": "subagent_review_merge",
+  "authoritative": false,
+  "edit_policy": "derived_merge_packet",
+  "dispatch_path": "/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/artifacts/reviews/leadshug-channel-abstraction-20261020/dedicated-audit/round-01/dispatch/test-quality.dispatch.json",
+  "review_kind": "test_quality_audit",
+  "review_count": 1,
+  "reviewer_labels": [
+    "fresh-no-context-test-quality-reviewer"
+  ],
+  "highest_finding_severity": "high",
+  "axis_summary": {
+    "performance": "acceptable",
+    "elegance": "acceptable",
+    "structural_soundness": "acceptable",
+    "operational_fit": "mixed"
+  },
+  "recommended_paths": [
+    "Keep the current local canonical evidence, but add CI execution of the canonical all gate or an equivalent isolated real-PG and freshly built-browser workflow. If that cannot be authorized, obtain an explicit human waiver before treating the required TQA gate as satisfied."
+  ],
+  "exact_next_step": "Record reviewer resolutions in the governing TODO using the machine-checkable resolution table or equivalent gate ledger, then extract the derived resolution packet and decide whether another bounded review pass is still required.",
+  "findings": [
+    {
+      "finding_id": "F-BF53420E",
+      "severity": "high",
+      "title": "Required integration and browser regression gates are absent from CI execution",
+      "rationale": "The CI workflow runs API lint/build/unit tests and Web build/unit tests only; it does not run API E2E against PostgreSQL or Playwright. The command-parity evidence explicitly confirms that no root CI PG-E2E or Playwright job is asserted. The new critical protections\u2014including adapter fences, cross-tenant mutation checks, and the causally synchronized A\u2192B\u2192A draft regression\u2014therefore rely solely on the local all80903 run. This leaves future regressions able to merge without executing the tests that substantiate the changed contract.",
+      "suggested_action": "Add a project-owned CI job that invokes the canonical all runner or an equivalent isolated Node 22/PostgreSQL/served-bundle Chromium workflow, retaining source and bundle freshness attestation. Do not replace it with mocks or a retry-only gate; if CI expansion is outside authorized scope, record an explicit approval-authority waiver and leave the required audit gate unsatisfied until then.",
+      "reviewer_labels": [
+        "fresh-no-context-test-quality-reviewer"
+      ],
+      "source_finding_ids": [
+        "TQA-01"
+      ],
+      "category": "tests",
+      "formalizable_hint": "yes",
+      "candidate_rule_level": "project",
+      "candidate_rule_id": "n/a"
+    }
+  ]
+}

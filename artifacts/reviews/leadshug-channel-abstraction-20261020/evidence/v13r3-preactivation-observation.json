@@ -1,0 +1,60 @@
+{
+  "schema": "stcon06-preserved-runtime-observation-v1",
+  "captured_at_utc": "2026-10-20T18:40:06.344300+00:00",
+  "method": "Read-only exact project-filtered docker.exe ps plus gateway ordinary HTTP health; no env/private files/provider/DB mutations",
+  "project": "leadshug_channels_local",
+  "containers": [
+    {
+      "name": "leadshug_channels_local-api-1",
+      "id_prefix": "9eccbea48251",
+      "image_reference": "leadshug_channels_local-api",
+      "status": "Up 7 hours (healthy)"
+    },
+    {
+      "name": "leadshug_channels_local-web-1",
+      "id_prefix": "9aa55b6681a8",
+      "image_reference": "leadshug_channels_local-web",
+      "status": "Up 7 hours"
+    },
+    {
+      "name": "leadshug_channels_local-gateway-1",
+      "id_prefix": "0c48d94e9fe5",
+      "image_reference": "nginx:alpine",
+      "status": "Up 7 hours"
+    },
+    {
+      "name": "leadshug_channels_local-evolution-1",
+      "id_prefix": "cf749491f714",
+      "image_reference": "evoapicloud/evolution-api:v2.3.7",
+      "status": "Up 7 hours"
+    },
+    {
+      "name": "leadshug_channels_local-evolution-redis-1",
+      "id_prefix": "3b2e8d153d79",
+      "image_reference": "redis:7.4-alpine",
+      "status": "Up 7 hours (healthy)"
+    },
+    {
+      "name": "leadshug_channels_local-evolution-postgres-1",
+      "id_prefix": "150de898c3d9",
+      "image_reference": "postgres:16",
+      "status": "Up 7 hours (healthy)"
+    },
+    {
+      "name": "leadshug_channels_local-postgres-1",
+      "id_prefix": "4fcd87b43133",
+      "image_reference": "postgres:16",
+      "status": "Up 7 hours (healthy)"
+    }
+  ],
+  "gateway_health": {
+    "status": "ok"
+  },
+  "candidate_activated": false,
+  "note": "Current original containers remain running while fresh all28261 uses separate disposable namespace. Reverify exact IDs/images/config privately in memory at later authorized activation; this observation is not fresh candidate runtime proof.",
+  "served_public_config": {
+    "path": "/config.js",
+    "api_base_same_origin": true,
+    "meaning": "New gateway HTTPS needs no private frontend API-base value change; OAuth registration is not needed for the current registered-channel proof."
+  }
+}

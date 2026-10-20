@@ -18,9 +18,39 @@ BFF, partner public API and Typebot consume one OutboundService. Trusted BFF hum
 
 Human/public responses use the deterministic latest message origin ordered by createdAt DESC,id DESC. An unavailable selected origin is not replaced by another connected channel. Without history, only a sole binding can be selected; zero and multiple bindings have explicit absent/ambiguous errors. Bot responses remain pinned to their accepted verified ingress even if another channel becomes the latest origin. The selected binding's free-text-window requirement applies to all senders before every text. Existing latest-IN stored timestamp without transport filtering is preserved and must be revisited in ST-CON-04.
 
-Availability is safe local metadata, separate from authorization and dispatch revalidation. BFF thread adds disponivel/motivo; public list/thread adds envio_disponivel/motivo_indisponibilidade. Batched public availability reads BU bindings/credential metadata at most once per page and latest-IN only for references whose actually selected binding requires a window, without decrypting secrets or calling providers. The managed Message index `(conversation_id,direction,created_at,id)` supports direction-constrained latest-IN lookup, including OUT-heavy/no-IN histories and equal-time ID ordering; it does not change the historical timestamp rule or imply a production capacity/SLO. Existing thread read-marker behavior is retained; only the availability projection is observational. No new route, user-supplied provider selection or Message DTO status field is introduced.
+Availability is safe local metadata, separate from authorization and dispatch revalidation. BFF thread adds disponivel/motivo; public list/thread adds envio_disponivel/motivo_indisponibilidade. Batched public availability reads BU bindings/credential metadata at most once per page and latest-IN only for references whose actually selected binding requires a window, without decrypting secrets or calling providers. The managed Message index `(conversation_id,direction,created_at,id)` supports direction-constrained latest-IN lookup, including OUT-heavy/no-IN histories and equal-time ID ordering; it does not change the historical timestamp rule or imply a production capacity/SLO. Public list and message-thread pagination normalize the optional limit before Prisma: maximum500, defaults200/list and100/thread for absent, blank, nonfinite, nonpositive or sub-one-after-floor values; finite positive fractions are floored. The list may fetch one additional row solely to report truncado, then projects availability for at most500 returned conversations. These bounds are part of the candidate and require the new request-level regression and finalall proof. Existing thread read-marker behavior is retained; only the availability projection is observational. No new route, user-supplied provider selection or Message DTO status field is introduced.
 
 Inbox shows fixed truthful explanations, disables unavailable sends, retains draft on uncertainty/local incomplete/error, and never automatically resends. Monotonic BU/conversation generations fence late completions, including A→B→A with a newly edited identical draft. Composer duplicate triggers are dropped while a send is in flight.
+
+## API Endpoint Definitions — intended canonical additions
+
+Existing authorization remains upstream of channel resolution: session/BU grant and CSRF for BFF mutations; scoped partner key/account for the public API; accepted verified ingress for Typebot. Availability grants no access and the POST revalidates the bound context. Message and success DTOs are preserved.
+
+| Surface | Contract addition / preserved result |
+|---|---|
+| GET `/api/bff/conversations/:id/messages` | `janela.disponivel:boolean`, `janela.motivo:AvailabilityReason|null`; existing `exigida`, `aberta`, `expiraEm`, `canal` and timeline pagination retained. Existing authorized read-marker semantics remain separate from observational availability. |
+| POST `/api/bff/conversations/:id/messages` | Existing `{texto}` and201 `{id,canal,em}`; shared outbound policy/acceptance and safe uncertainty projection below. |
+| GET `/api/v1/conversations` | Add `envio_disponivel:boolean`, `motivo_indisponibilidade:AvailabilityReason|null` per row; retain window/timeline fields. Bindings/credential metadata batched, latest-IN only for actually selected window-requiring origins. |
+| GET `/api/v1/conversations/:telefone/messages` | Add `envio_disponivel`, `motivo_indisponibilidade`; existing message/window fields and scoped lookup retained. |
+| POST `/api/v1/messages` | Existing numeric phone normalization, account/key scope, rate limit, `{account_id,telefone,texto,atendente?}` and201 `{ok:true,message_id,canal}` retained. Existing conversation creation before attempted send remains; first-send intent belongs to04. |
+| Accepted Typebot text output | Same bound abstract send/policy, exact verified ingress, no fabricated human actor, no external replay after refusal/uncertainty/block. |
+
+**Field Definitions**
+
+- `AvailabilityReason`: `CANAL_AUSENTE` no binding; `CANAL_AMBIGUO` multiple bindings without selecting history; `CANAL_SELECIONADO_INDISPONIVEL` selected origin has no usable binding; `CHANNEL_IDENTITY_NOT_VERIFIED` identity proof missing; `CHANNEL_NOT_READY` connection/receipt not ready; `PENDING_CREDENTIAL` credential metadata not active; `JANELA_FECHADA` applicable free-text window closed. Available observation has `motivo=null`.
+- Transport `ChannelSendResult.outcome`: `ACCEPTED` valid provider ID; `BLOCKED` local pre-dispatch failure; `REJECTED` proven synchronous refusal; `UNKNOWN` inconclusive dispatched result. Accepted does not mean handset delivery.
+- Safe error `outcome`: `BLOCKED`, `REJECTED`, `UNKNOWN`, plus `AMBIGUOUS_SEND_RECORDED` only a positively committed ACK-without-ID diagnostic, and `ACCEPTED_LOCAL_INCOMPLETE` known external acceptance with incomplete local conclusion.
+- `evidence`: `ACK_WITHOUT_ID` structurally supported acknowledgement missing ID, or `TRANSPORT_UNCONFIRMED` inconclusive transport result. `localMessageState` and `diagnosticPersistence`: `RECORDED` only positive commit/captured-key readback evidence; otherwise `UNCONFIRMED`. No raw provider text, token, URL, credential envelope or callback data enters these fields.
+
+| Safe error case | HTTP/code and state |
+|---|---|
+| Proven refusal |400 provider mapper code, `outcome=REJECTED`, fixed refusal text. |
+| Unconfirmed transport |Legacy400/code retained with `outcome=UNKNOWN`, `evidence=TRANSPORT_UNCONFIRMED`; no authoritative sent Message. A changed captured context instead takes409 `CHANNEL_CONTEXT_CHANGED`. |
+| ACK without ID, positive diagnostic commit |409 `EXTERNAL_MESSAGE_ID_MISSING`, `outcome=AMBIGUOUS_SEND_RECORDED`, `evidence=ACK_WITHOUT_ID`, `diagnosticPersistence=RECORDED`; diagnostic is failed/null-ID, never a sent Message. |
+| ACK without ID, diagnostic/context failure |Changed captured context takes409 `CHANNEL_CONTEXT_CHANGED`, `outcome=UNKNOWN`; other diagnostic failure takes503 `OUTBOUND_LOCAL_INCOMPLETE`, `outcome=UNKNOWN`. Persistence metadata reflects only observed commit. |
+| Valid provider ID, any local acceptance/finalization failure |409 `CHANNEL_CONTEXT_CHANGED` when captured identity/generation/epoch changed; otherwise503 `OUTBOUND_LOCAL_INCOMPLETE`. Both retain `outcome=ACCEPTED_LOCAL_INCOMPLETE` and truthful `localMessageState`. No extra provider call/rebind. |
+
+The Inbox retains drafts for every error, uses fixed safe text for uncertainty/local-incomplete outcomes, drops duplicate in-flight submit triggers and fences late body/completion effects by BU/conversation generation. Consumers must inspect outcome/evidence rather than infer rejection from a legacy400. No automatic retry is authorized.
 
 ## Later consumers / operational limits
 

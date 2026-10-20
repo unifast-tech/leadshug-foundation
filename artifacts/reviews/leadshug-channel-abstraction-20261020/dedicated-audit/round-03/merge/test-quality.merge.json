@@ -1,0 +1,59 @@
+{
+  "schema_version": "subagent-review-merge-v2",
+  "artifact_kind": "subagent_review_merge",
+  "authoritative": false,
+  "edit_policy": "derived_merge_packet",
+  "dispatch_path": "/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/artifacts/reviews/leadshug-channel-abstraction-20261020/dedicated-audit/round-03/dispatch/test-quality.dispatch.json",
+  "review_kind": "test_quality_audit",
+  "review_count": 1,
+  "reviewer_labels": [
+    "fresh-internal-no-context-tqa-round03"
+  ],
+  "highest_finding_severity": "high",
+  "axis_summary": {
+    "performance": "acceptable",
+    "elegance": "acceptable",
+    "structural_soundness": "mixed",
+    "operational_fit": "acceptable"
+  },
+  "recommended_paths": [
+    "changes_required_targeted_typebot_and_pagination_contract_regressions_then_rerun"
+  ],
+  "exact_next_step": "Record reviewer resolutions in the governing TODO using the machine-checkable resolution table or equivalent gate ledger, then extract the derived resolution packet and decide whether another bounded review pass is still required.",
+  "findings": [
+    {
+      "finding_id": "F-C9555DF9",
+      "severity": "high",
+      "title": "No regression proves Typebot stops a multi-message response round after the first failed outbound send",
+      "rationale": "D05 explicitly requires Typebot to stop the round without replay on uncertain, blocked, or refused output. The implementation awaits each outbound send inside a loop and the enclosing execution is caught, but supplied Typebot tests exercise only one text output. They do not prove that a first failure prevents a later message in the same provider response, nor verify provider-call and persisted-effect bounds for that failure mode.",
+      "suggested_action": "Add a real PostgreSQL webhook/integration test with at least two Typebot text outputs. Force the first shared outbound operation to return UNKNOWN and assert one provider attempt, no second text dispatch, expected diagnostic or absence of authoritative OUT as applicable, and successful containment of the webhook round. Cover applicable BLOCKED and REJECTED variants or document their common-path equivalence with direct tests.",
+      "reviewer_labels": [
+        "fresh-internal-no-context-tqa-round03"
+      ],
+      "source_finding_ids": [
+        "TQA-R03-01"
+      ],
+      "category": "tests",
+      "formalizable_hint": "partial",
+      "candidate_rule_level": "project",
+      "candidate_rule_id": "n/a"
+    },
+    {
+      "finding_id": "F-A9DAEFCC",
+      "severity": "medium",
+      "title": "Public pagination tests do not cover all normalizer input partitions",
+      "rationale": "The shared normalizer defines contract behavior for omitted, blank, non-finite, nonpositive, sub-one fractional, positive fractional, and over-cap values. The changed real HTTP/PG tests effectively protect the discovered negative-limit bypass and a normal positive value, but do not protect the rest of the newly centralized public-input contract.",
+      "suggested_action": "Add table-driven request-level cases for omitted, blank, non-finite, zero, sub-one fractional, positive fractional, exact-cap, and over-cap limits on list and thread endpoints. Retain the call-through Prisma observation for the query bound and list look-ahead semantics.",
+      "reviewer_labels": [
+        "fresh-internal-no-context-tqa-round03"
+      ],
+      "source_finding_ids": [
+        "TQA-R03-02"
+      ],
+      "category": "tests",
+      "formalizable_hint": "yes",
+      "candidate_rule_level": "project",
+      "candidate_rule_id": "n/a"
+    }
+  ]
+}

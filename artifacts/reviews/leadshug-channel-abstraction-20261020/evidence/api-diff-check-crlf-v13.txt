@@ -1,0 +1,12 @@
+warning: in the working copy of 'src/domain/channels/channel-credential-resolver.ts', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/domain/inbox/conversations.service.ts', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/domain/inbox/incoming.service.ts', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/integrations/evolution/evolution.client.spec.ts', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/integrations/evolution/evolution.client.ts', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/integrations/meta/meta.client.spec.ts', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/integrations/meta/meta.client.ts', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'test/browser-server.cjs', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'test/helpers.ts', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'test/number-onboarding-pcv.e2e-spec.ts', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'test/number-onboarding-typebot.e2e-spec.ts', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'test/timeline-fixtures.cjs', LF will be replaced by CRLF the next time Git touches it

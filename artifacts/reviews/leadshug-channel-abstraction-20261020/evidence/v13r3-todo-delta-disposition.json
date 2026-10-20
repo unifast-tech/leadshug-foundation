@@ -1,0 +1,30 @@
+{
+  "schema": "stcon06-source-document-delta-disposition-v1",
+  "path": "foundation_documentation/todos/active/features/TODO-leadshug-channel-abstraction.md",
+  "classification": "non-executable Foundation evidence/work-state metadata only; not product or frozen contract/decision change",
+  "root_owned_change": true,
+  "before_reconstruction": "Reverse only the exact root metadata edits from the actual post-run file; independently require raw SHA256 equality with preserved pre-run snapshot. Preserved before bytes are thus hash-proven, not inferred from HEAD.",
+  "before_sha256": "8ea150258c6ccc78ea3f6f27f3f5b20d262f98ce332ac5e07f0bc20354b68f6b",
+  "after_sha256": "a0c1992a4a16c9174d6a564ec876ea2ea46e532065596e713766f0fc4be800fe",
+  "before_bytes": 118031,
+  "after_bytes": 119611,
+  "diff": "evidence/v13r3-todo-metadata-only.diff",
+  "changes": [
+    "current next-action/work-state reason",
+    "profile handoff progress",
+    "append diagnostic/fresh-all checkpoint"
+  ],
+  "unchanged_contract_sections": [
+    "Scope",
+    "Out of Scope",
+    "Definition of Done",
+    "Validation Steps",
+    "Decision Baseline",
+    "Expected Changed Paths",
+    "Approval"
+  ],
+  "product_paths_unchanged": 60,
+  "snapshotted_paths": 61,
+  "test_inputs_include_todo": false,
+  "disposition": "No code/runner/build/schema/fixture/bundle change; actual all28261 remains valid for exact60public product/context paths. Preserve this mismatch honestly; no61/61 claim. Review uses a new frozen current TODO, and no prior snapshot is overwritten. No automatic rerun is justified by this metadata-only update."
+}

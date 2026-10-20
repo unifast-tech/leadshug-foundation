@@ -1,0 +1,59 @@
+{
+  "schema_version": "subagent-review-merge-v2",
+  "artifact_kind": "subagent_review_merge",
+  "authoritative": false,
+  "edit_policy": "derived_merge_packet",
+  "dispatch_path": "/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/artifacts/reviews/leadshug-channel-abstraction-20261020/dedicated-audit/round-01/dispatch/performance.dispatch.json",
+  "review_kind": "critique",
+  "review_count": 1,
+  "reviewer_labels": [
+    "fresh-internal-performance-critique-reviewer"
+  ],
+  "highest_finding_severity": "high",
+  "axis_summary": {
+    "performance": "mixed",
+    "elegance": "acceptable",
+    "structural_soundness": "acceptable",
+    "operational_fit": "mixed"
+  },
+  "recommended_paths": [
+    "Resolve PERF-01 and obtain candidate-bound evidence for OUT-heavy and no-IN histories before accepting the performance lane. Preserve D07's selection, stored-time calculation and expiry fields. If the fix requires an index, obtain renewed approval for that narrow schema-path change rather than silently expanding scope. Address PERF-02 as non-blocking evidence debt. Continue the separately declared delivery gates without reopening resolved findings or claiming capacity certification."
+  ],
+  "exact_next_step": "Record reviewer resolutions in the governing TODO using the machine-checkable resolution table or equivalent gate ledger, then extract the derived resolution packet and decide whether another bounded review pass is still required.",
+  "findings": [
+    {
+      "finding_id": "F-E840D181",
+      "severity": "high",
+      "title": "Latest-IN projection can scan complete histories for every conversation on a public page",
+      "rationale": "prisma-channel-resolver.ts:115-118 requests windows for every page ID whenever any BU channel requires a window. At lines 318-329, direction='IN' is a filter beneath LIMIT 1, while schema.prisma:452 supplies only the conversationId/createdAt index. An arbitrarily long recent OUT suffix must therefore be examined to reach an older IN; an OUT-only conversation can require examining its entire history. This also affects selected NAO_OFICIAL conversations that require no window when an official binding exists alongside them. The public page permits up to 500 conversations, multiplying history-dependent database work in one request. The supplied EXPLAIN confirms direction is a filter, and the fixture at number-onboarding-pcv.e2e-spec.ts:113-122 seeds only IN messages, so its fast indexed result does not exercise this counterexample. This is a source-demonstrable unbounded historical scan, not a measured outage or marginal index optimization. D07 preserves temporal semantics and requires batched metadata; it does not expressly waive unbounded scan work. The prohibition on schema changes must still be respected.",
+      "suggested_action": "Add deterministic OUT-heavy and no-IN histories and inspect actual rows examined and buffers for the endpoint's queries. Restrict window projection to references whose selected binding requires it, while also resolving the remaining official-history scan. Option A: obtain renewed approval for a narrowly scoped direction-aware ordered or partial index and validate its plan. Option B: demonstrate an equivalent bounded access path using the approved schema without changing expiry semantics. Do nothing retains the blocking runtime risk. Prefer the smallest proven solution; do not silently omit expired timestamps or alter channel selection.",
+      "reviewer_labels": [
+        "fresh-internal-performance-critique-reviewer"
+      ],
+      "source_finding_ids": [
+        "PERF-01"
+      ],
+      "category": "performance",
+      "formalizable_hint": "yes",
+      "candidate_rule_level": "project",
+      "candidate_rule_id": "n/a"
+    },
+    {
+      "finding_id": "F-D21CD7CB",
+      "severity": "low",
+      "title": "Load artifact declares a per-conversation duplicate threshold that the probe does not measure",
+      "rationale": "pcv-rls-candidate.json declares duplicate_rows_per_owned_subject=0, but channel-transport.e2e-spec.ts:510-516 checks only 20 successful responses and 20 aggregate OUT rows across 20 conversations. Those totals alone cannot distinguish one conversation missing its row from another containing two. The artifact comparison evaluates only accepted and recorded totals. This is non-blocking evidence precision debt, not a demonstrated persistence defect or a request for same-key external exactly-once guarantees.",
+      "suggested_action": "Option A: assert exactly one matching OUT row for each owned conversation and include those observations in the artifact comparison. Option B: narrow the artifact threshold and summary to the aggregate property actually measured, provided the governing acceptance remains satisfied. Do nothing leaves an unsupported threshold claim. Prefer A within the admitted test path.",
+      "reviewer_labels": [
+        "fresh-internal-performance-critique-reviewer"
+      ],
+      "source_finding_ids": [
+        "PERF-02"
+      ],
+      "category": "tests",
+      "formalizable_hint": "yes",
+      "candidate_rule_level": "project",
+      "candidate_rule_id": "n/a"
+    }
+  ]
+}

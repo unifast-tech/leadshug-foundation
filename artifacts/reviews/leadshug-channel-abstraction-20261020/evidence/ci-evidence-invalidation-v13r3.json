@@ -1,0 +1,243 @@
+{
+  "artifact_kind": "ci_equivalent_evidence_invalidation_decision",
+  "schema_version": "ci-equivalent-evidence-invalidation-v1",
+  "contract_id": "stcon06-local-all",
+  "project_root": "/mnt/c/unifast/leadshug/leadshug_now_docker",
+  "governing_todo": "/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/todos/active/features/TODO-leadshug-channel-abstraction.md",
+  "policy_path": "/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/artifacts/reviews/leadshug-channel-abstraction-20261020/evidence/ci-reuse-policy-v13r3.json",
+  "report_path": "/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/artifacts/reviews/leadshug-channel-abstraction-20261020/evidence/ci-contract-all2564-derived-v13r3.json",
+  "report_baseline_source": "report-repo-states",
+  "status": "blocked",
+  "enforcement": "manual_authority_refresh_required",
+  "overall_outcome": "manual-admission-required",
+  "repos": [
+    {
+      "repo_key": "root",
+      "repo_path": "/mnt/c/unifast/leadshug/leadshug_now_docker",
+      "baseline_branch": "feature/number-onboarding",
+      "baseline_sha": "80e3940126f22a941f90dba4f5e801b6c0eb2f58",
+      "current_branch": "feature/number-onboarding",
+      "current_sha": "80e3940126f22a941f90dba4f5e801b6c0eb2f58",
+      "changed_paths": [],
+      "safe_paths": [],
+      "invalidating_paths": [],
+      "decision": "manual-admission-required",
+      "notes": [
+        "baseline comes from the report artifact repo_states block",
+        "worktree is dirty; clean authoritative state is required"
+      ]
+    },
+    {
+      "repo_key": "api",
+      "repo_path": "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app",
+      "baseline_branch": "feature/number-onboarding",
+      "baseline_sha": "db5a86758a165fac8a1ab587599c37b17890530c",
+      "current_branch": "feature/number-onboarding",
+      "current_sha": "db5a86758a165fac8a1ab587599c37b17890530c",
+      "changed_paths": [],
+      "safe_paths": [],
+      "invalidating_paths": [],
+      "decision": "manual-admission-required",
+      "notes": [
+        "baseline comes from the report artifact repo_states block",
+        "worktree is dirty; clean authoritative state is required"
+      ]
+    },
+    {
+      "repo_key": "web",
+      "repo_path": "/mnt/c/unifast/leadshug/leadshug_now_docker/web-app",
+      "baseline_branch": "feature/number-onboarding",
+      "baseline_sha": "74b9d4b714044829796f875d00553f077c1c329d",
+      "current_branch": "feature/number-onboarding",
+      "current_sha": "74b9d4b714044829796f875d00553f077c1c329d",
+      "changed_paths": [],
+      "safe_paths": [],
+      "invalidating_paths": [],
+      "decision": "manual-admission-required",
+      "notes": [
+        "baseline comes from the report artifact repo_states block",
+        "worktree is dirty; clean authoritative state is required"
+      ]
+    }
+  ],
+  "resolutions": [
+    "refresh the authoritative branch/todo/report state first; deterministic evidence reuse is unsafe on the current topology.",
+    "when the branch authority and baseline artifact are coherent again, rerun this guard before deciding on stage-full reuse."
+  ],
+  "bounded_invocation": {
+    "guard_source_unchanged": true,
+    "guard_source_sha256": "d146dbe2fbf1952658e7e7526b31058b271ee4aff999e9494f089e6011f28aa2",
+    "recorded_at_utc": "2026-10-20T18:36:32.946933+00:00",
+    "repo_root_binding": "/mnt/c/unifast/leadshug/leadshug_now_docker",
+    "governing_todo_baseline_adapter": "Approved project DiffExpectation RepositoryBaselines+ExecutionLaneTracking, validated exact against complete report repo_states; core parser otherwise expects promotion-only CurrentBranchAuthority schema. No promotion or baseline facts bypassed.",
+    "public_positive_pathspecs": {
+      ".": [
+        "scripts",
+        ".github",
+        "docker",
+        "docker-compose.yml",
+        "docker-compose.channels.yml",
+        ".env.example",
+        "Dockerfile",
+        "Makefile",
+        "README.md"
+      ],
+      "api-app": [
+        "src",
+        "test",
+        "prisma",
+        "docker",
+        "Dockerfile",
+        "package.json",
+        "package-lock.json",
+        "tsconfig.json",
+        "tsconfig.build.json",
+        "nest-cli.json",
+        "eslint.config.mjs",
+        "vitest.config.ts",
+        "vitest.config.e2e.ts",
+        "vitest.config.cov.ts",
+        "railway.json",
+        ".dockerignore",
+        ".gitignore",
+        ".env.example"
+      ],
+      "web-app": [
+        "src",
+        "e2e",
+        "public",
+        "docker",
+        "nginx",
+        "Dockerfile",
+        "package.json",
+        "package-lock.json",
+        "index.html",
+        "playwright.config.ts",
+        "vite.config.ts",
+        "tsconfig.json",
+        "tsconfig.app.json",
+        "tsconfig.node.json",
+        "eslint.config.js",
+        "railway.json",
+        ".dockerignore",
+        ".gitignore"
+      ]
+    },
+    "git_calls": [
+      {
+        "repo": ".",
+        "args": [
+          "branch",
+          "--show-current"
+        ]
+      },
+      {
+        "repo": ".",
+        "args": [
+          "rev-parse",
+          "HEAD"
+        ]
+      },
+      {
+        "repo": ".",
+        "args": [
+          "status",
+          "--ignore-submodules=all",
+          "--short",
+          "--",
+          "scripts",
+          ".github",
+          "docker",
+          "docker-compose.yml",
+          "docker-compose.channels.yml",
+          ".env.example",
+          "Dockerfile",
+          "Makefile",
+          "README.md"
+        ]
+      },
+      {
+        "repo": "api-app",
+        "args": [
+          "branch",
+          "--show-current"
+        ]
+      },
+      {
+        "repo": "api-app",
+        "args": [
+          "rev-parse",
+          "HEAD"
+        ]
+      },
+      {
+        "repo": "api-app",
+        "args": [
+          "status",
+          "--short",
+          "--",
+          "src",
+          "test",
+          "prisma",
+          "docker",
+          "Dockerfile",
+          "package.json",
+          "package-lock.json",
+          "tsconfig.json",
+          "tsconfig.build.json",
+          "nest-cli.json",
+          "eslint.config.mjs",
+          "vitest.config.ts",
+          "vitest.config.e2e.ts",
+          "vitest.config.cov.ts",
+          "railway.json",
+          ".dockerignore",
+          ".gitignore",
+          ".env.example"
+        ]
+      },
+      {
+        "repo": "web-app",
+        "args": [
+          "branch",
+          "--show-current"
+        ]
+      },
+      {
+        "repo": "web-app",
+        "args": [
+          "rev-parse",
+          "HEAD"
+        ]
+      },
+      {
+        "repo": "web-app",
+        "args": [
+          "status",
+          "--short",
+          "--",
+          "src",
+          "e2e",
+          "public",
+          "docker",
+          "nginx",
+          "Dockerfile",
+          "package.json",
+          "package-lock.json",
+          "index.html",
+          "playwright.config.ts",
+          "vite.config.ts",
+          "tsconfig.json",
+          "tsconfig.app.json",
+          "tsconfig.node.json",
+          "eslint.config.js",
+          "railway.json",
+          ".dockerignore",
+          ".gitignore"
+        ]
+      }
+    ],
+    "private_paths_not_discovered": true,
+    "limits": "No full repository/private-cleanliness claim; historical reuse only, not test execution"
+  }
+}

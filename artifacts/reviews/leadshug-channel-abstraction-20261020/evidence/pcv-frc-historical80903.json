@@ -1,0 +1,73 @@
+{
+  "policy_schema_version": "pcv-1",
+  "schema_version": "stcon06-pcv-evidence-v1",
+  "todo_id": "ST-CON-06",
+  "run_id": "canonical-all80903",
+  "environment_id": "leadshug_channels_validation-Node22.23.3-PostgreSQL16",
+  "executor_id": "/root/stcon06_executor",
+  "reviewer_id": "pending-independent-dedicated-audit",
+  "recorded_at_utc": "2026-10-20T16:29:29.365591+00:00",
+  "evidence_type": "canonical-runner-structured-log",
+  "gate_status": "measured final candidate; independent dedicated review and row disposition pending",
+  "raw_log_sha256": "778f858923f4df7457d32908a98dfda31d0b4351579acabdc1fb90515bec8554",
+  "lane_id": "FRC",
+  "sample_profile_id": "FRC-SP-H",
+  "acceptance_rule_id": "FRC-A1",
+  "result_summary": "5wavesx20pending realform retriggers,onePOSTeach;unknown retainsdraft;R02 stalehandlerproofpending",
+  "artifact_payload": {
+    "concurrency_policy": "drop duplicate",
+    "stale_response_policy": "generation-fenced last-write-wins per BU/conversation; latecompletion cannot overwrite newdraft",
+    "burst_profile_observed": {
+      "waves": [
+        {
+          "requests": 1,
+          "retriggers": 20,
+          "outcome": "accepted",
+          "draftPreserved": false,
+          "messageCount": 1
+        },
+        {
+          "requests": 1,
+          "retriggers": 20,
+          "outcome": "unknown",
+          "draftPreserved": true,
+          "messageCount": 1
+        },
+        {
+          "requests": 1,
+          "retriggers": 20,
+          "outcome": "accepted",
+          "draftPreserved": false,
+          "messageCount": 1
+        },
+        {
+          "requests": 1,
+          "retriggers": 20,
+          "outcome": "unknown",
+          "draftPreserved": true,
+          "messageCount": 1
+        },
+        {
+          "requests": 1,
+          "retriggers": 20,
+          "outcome": "accepted",
+          "draftPreserved": false,
+          "messageCount": 1
+        }
+      ],
+      "limits": "Five real BFF/PostgreSQL submits held after the actual response; twenty user-form submit events per in-flight send; one request per wave; no capacity/SLO claim."
+    },
+    "runner_or_manual_path": "bash scripts/test-channels-local.sh all; e2e/channel-transport.spec.ts; real BFF/PG, providerdouble only",
+    "stale_response_gate": {
+      "green_final_run": 80903,
+      "test_sha256": "b3604496727a85d7ce12c2cb6e7a479575356a61ef4c529d385047e066a8e0f3",
+      "native_body_read_assertion": "started1/settled1/processed1 before draft/noalert",
+      "real_negative_control": 30246,
+      "negative_control_expected_failure": "same-text newdraft empty only without generationguard;49otherspassed",
+      "root_provenance": "browser-causal-green-mutant-provenance.json",
+      "restored_inbox_sha256": "d70bde9ede67759d479f644598356e46aac2916a12b2ed1770c17a169118586c"
+    },
+    "classification_authority_note": "Raw marker labels inherited from fixture evidence do not supersede the approved TODO lane classification/reason/deadline; no classification reduction or waiver."
+  },
+  "artifact_sha256": "c89d6855875c547423b00f21b780531d9305091d65e9019b7d3a756b13f2a16f"
+}

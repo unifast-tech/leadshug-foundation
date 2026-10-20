@@ -1,0 +1,18 @@
+{
+  "schema": "stcon06-review-input-admission-v1",
+  "current_round": 3,
+  "fresh_complete_package_sha256": "0294166d3a1e75e7cc1a88360005308e8e5e2db30e4138fb62062297295ff474",
+  "effective_round_package_sha256": "416b0103638832fafb7e0940e3dae8a73ec1f52ad98a5569919796e5d4c530ea",
+  "prompt_characters": {
+    "performance": 960351,
+    "test-quality": 960287,
+    "cutover-integrity": 960830
+  },
+  "limit": 1048576,
+  "source_contexts": 59,
+  "same_governing_TODO_no_duplicate_serialization": true,
+  "full_applicable_rubrics_and_full_TQA_workload": true,
+  "prior_round_resolutions_included": true,
+  "only_current_product_delta_since_all2564": "complete three-file diff plus full current source; historical baseline patch not duplicated",
+  "product_source_frozen": true
+}

@@ -1,0 +1,88 @@
+prisma/schema.prisma:453: trailing whitespace.
++  @@index([conversationId, direction, createdAt, id], map: "messages_conversation_direction_created_id_idx")
+src/domain/inbox/incoming.typebot.integration.spec.ts:27: trailing whitespace.
++    const outbound = { send: vi.fn().mockResolvedValue({ id: 'out-1' }) };
+src/domain/inbox/incoming.typebot.integration.spec.ts:28: trailing whitespace.
++    const service = new IncomingService(prisma as never, { publicarNaBu: publicar } as never, typebot as never, { accept: accepted } as never, outbound as never);
+src/domain/inbox/incoming.typebot.integration.spec.ts:34: trailing whitespace.
++    expect(accepted).toHaveBeenCalledTimes(1);
+src/domain/inbox/incoming.typebot.integration.spec.ts:35: trailing whitespace.
++    expect(outbound.send).toHaveBeenCalledWith(expect.objectContaining({
+src/domain/inbox/incoming.typebot.integration.spec.ts:36: trailing whitespace.
++      conversationId: 'conversation-1', buId: 'bu-1', text: 'Olá!', attribution: { kind: 'BOT', name: 'Typebot' },
+src/domain/inbox/incoming.typebot.integration.spec.ts:37: trailing whitespace.
++      ingress: { channelId: 'channel-1', providerResourceIdentityId: 'identity-1', channelOrigin: 'OFICIAL', generation: 1, pairingEpoch: 1 },
+src/domain/inbox/incoming.typebot.integration.spec.ts:38: trailing whitespace.
++    }));
+src/domain/inbox/incoming.typebot.integration.spec.ts:53: trailing whitespace.
++    const service = new IncomingService(prisma as never, { publicarNaBu: vi.fn() } as never, typebot as never, { accept: accepted } as never, { send: vi.fn() } as never);
+src/surfaces/bff/bff.module.ts:25: trailing whitespace.
++import { ChannelTransportModule } from '../../integrations/channels/channel-transport.module';
+src/surfaces/bff/bff.module.ts:50: trailing whitespace.
++  imports: [ChannelTransportModule],
+src/surfaces/bff/conversations.controller.ts:74: trailing whitespace.
++        disponivel: janela.disponivel,
+src/surfaces/bff/conversations.controller.ts:75: trailing whitespace.
++        motivo: janela.motivoIndisponibilidade,
+src/surfaces/bff/conversations.controller.ts:93: trailing whitespace.
++    const m = await this.conversas.responder(conversa.id, conversa.buId, texto, {
+src/surfaces/bff/conversations.controller.ts:94: trailing whitespace.
++      kind: 'BFF',
+src/surfaces/bff/conversations.controller.ts:96: trailing whitespace.
++      name: req.usuario!.nome,
+src/surfaces/public/conversations.controller.ts:77: trailing whitespace.
++      include: { messages: { orderBy: [{ createdAt: 'desc' }, { id: 'desc' }], take: 1 } },
+src/surfaces/public/conversations.controller.ts:80: trailing whitespace.
++    const pagina = linhas.slice(0, limite);
+src/surfaces/public/conversations.controller.ts:81: trailing whitespace.
++    const estados = await this.conversas.estadosDasJanelas(pagina.map((c) => ({
+src/surfaces/public/conversations.controller.ts:82: trailing whitespace.
++      conversationId: c.id, buId, latestMessageOrigin: c.messages[0]?.channelOrigin ?? null,
+src/surfaces/public/conversations.controller.ts:83: trailing whitespace.
++    })));
+src/surfaces/public/conversations.controller.ts:84: trailing whitespace.
++    const conversas = pagina.map((c) => {
+src/surfaces/public/conversations.controller.ts:85: trailing whitespace.
++        const janela = estados.get(c.id);
+src/surfaces/public/conversations.controller.ts:97: trailing whitespace.
++          janela_aberta: janela?.windowOpen ?? false,
+src/surfaces/public/conversations.controller.ts:98: trailing whitespace.
++          janela_expira_em: janela?.expiresAt?.toISOString() ?? null,
+src/surfaces/public/conversations.controller.ts:99: trailing whitespace.
++          envio_disponivel: janela?.available ?? false,
+src/surfaces/public/conversations.controller.ts:100: trailing whitespace.
++          motivo_indisponibilidade: janela ? janela.reason : 'CANAL_SELECIONADO_INDISPONIVEL',
+src/surfaces/public/conversations.controller.ts:102: trailing whitespace.
++      });
+src/surfaces/public/conversations.controller.ts:132: trailing whitespace.
++      envio_disponivel: janela.disponivel,
+src/surfaces/public/conversations.controller.ts:133: trailing whitespace.
++      motivo_indisponibilidade: janela.motivoIndisponibilidade,
+src/surfaces/public/conversations.controller.ts:165: trailing whitespace.
++    const m = await this.conversas.responder(conversa.id, buId, texto, { kind: 'PUBLIC', name: atendente });
+src/surfaces/public/public.module.ts:5: trailing whitespace.
++import { ChannelTransportModule } from '../../integrations/channels/channel-transport.module';
+src/surfaces/public/public.module.ts:15: trailing whitespace.
++  imports: [ChannelTransportModule],
+src/surfaces/webhooks/webhooks.module.ts:6: trailing whitespace.
++import { ChannelTransportModule } from '../../integrations/channels/channel-transport.module';
+src/surfaces/webhooks/webhooks.module.ts:18: trailing whitespace.
++  imports: [ChannelTransportModule],
+src/surfaces/webhooks/webhooks.module.ts:20: trailing whitespace.
++  providers: [IncomingService, { provide: TYPEBOT_CLIENT, useClass: TypebotHttpClient }],
+test/api-publica.e2e-spec.ts:143: trailing whitespace.
++      expect(c.envio_disponivel).toBe(true);
+test/api-publica.e2e-spec.ts:144: trailing whitespace.
++      expect(c.motivo_indisponibilidade).toBeNull();
+warning: in the working copy of 'src/domain/channels/channel-credential-resolver.ts', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/domain/inbox/conversations.service.ts', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/domain/inbox/incoming.service.ts', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/integrations/evolution/evolution.client.spec.ts', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/integrations/evolution/evolution.client.ts', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/integrations/meta/meta.client.spec.ts', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/integrations/meta/meta.client.ts', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'test/browser-server.cjs', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'test/helpers.ts', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'test/number-onboarding-pcv.e2e-spec.ts', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'test/number-onboarding-typebot.e2e-spec.ts', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'test/timeline-fixtures.cjs', LF will be replaced by CRLF the next time Git touches it

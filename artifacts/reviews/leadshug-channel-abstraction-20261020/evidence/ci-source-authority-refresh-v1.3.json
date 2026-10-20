@@ -1,12 +1,25 @@
 {
   "schema": "stcon06-ci-source-admission-v1",
-  "status": "authority-refreshed-fresh-run-required",
-  "recorded_at_utc": "2026-10-20T17:28:22.975281+00:00",
+  "status": "approved-principal-working-tree-admitted-for-fresh-all-only",
+  "recorded_at_utc": "2026-10-20T17:54:06.253005+00:00",
   "invalidation_guard": "evidence/ci-evidence-invalidation-v1.3.json",
   "canonical_outcome_preserved": "manual-admission-required (exit11); not reusable/not go",
   "authority_source": "User APROVADO \u2014 aditivo v1.3; governing TODO Comparison mode working_tree with exact expected public paths; normal authority-execution-v1.3.json GO/execution_authority_granted=true",
-  "admission": "Accept only the approved principal working_tree source after an exact public snapshot is frozen; HEAD alone does not identify it. No clean-source or old-all reuse claim. Final source freeze/check must precede expensive fresh broad run.",
-  "decision": "Mandatory fresh canonical all on final approved source; any new real path requires admission before use. API diagnostic can run separately; current source still in remediation.",
-  "next": "Executor completes guard/CI fixes after active API run; root final snapshot/publicdiff+normal authority checks; fresh all. Rerun guard if deciding on evidence reuse; reuse is not requested.",
-  "no_waiver": true
+  "admission": "Current explicit v1.3 human approval plus exact strict working_tree diff and frozen public bytes refresh manual source authority. Only a mandatory fresh full run is admitted; canonical exit11 remains unchanged and old80903 is not reusable.",
+  "decision": "GO for mandatory fresh same-wrapper all in approved Linux context on same Docker engine; no clean-HEAD/reuse/remote-CI claim.",
+  "next": "Wait actual terminal all with source freeze and served provenance, then independent complete audit. Local human DB/API/Web activation remains held.",
+  "no_waiver": true,
+  "source_snapshot": "evidence/v13-final-source-before-all.json",
+  "source_snapshot_sha256": "91420bba9818f97706206d38a8bf3e4c821aa41c55711493a3fded9c0c818dbc",
+  "source_paths": 47,
+  "public_diff": {
+    "artifact": "evidence/public-diff-preliminary.json",
+    "expected": 284,
+    "forbidden": 0,
+    "unclassified": 0,
+    "scope": "Public positive pathspecs before discovery; private paths not enumerated or asserted clean"
+  },
+  "normal_authority": "evidence/authority-v13-before-final-all.json GO, execution_authority_granted=true",
+  "linux93079": "Historical infrastructure bind failure; exact cleanup and47source match preserved in v13-linux93079-infra-diagnostic.json. Narrow same-socket WSL bind translation added only in approved wrapper/guard; current source refrozen and authorityGO. NativeCI POSIX and Windows paths preserved;19negative controls and path-faithfulness controls reported green; actual new all still required.",
+  "linux2": "Second infrastructure failure was equivalent public Compose config-mask path resolution; source47unchanged at terminal and namespace cleaned. Wrapper-only ephemeral overlay maps same three config names to same public examples with21negative/path/cleanup controls. Native/Windows original Compose unchanged. Actual config-only70845 passed without resources; not actual all acceptance. Current source refrozen with strictdiffGO284/284 and normal authorityGO; fresh all mandatory."
 }

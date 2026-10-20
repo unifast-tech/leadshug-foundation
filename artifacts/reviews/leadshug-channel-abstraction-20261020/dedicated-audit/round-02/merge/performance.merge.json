@@ -1,0 +1,59 @@
+{
+  "schema_version": "subagent-review-merge-v2",
+  "artifact_kind": "subagent_review_merge",
+  "authoritative": false,
+  "edit_policy": "derived_merge_packet",
+  "dispatch_path": "/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/artifacts/reviews/leadshug-channel-abstraction-20261020/dedicated-audit/round-02/dispatch/performance.dispatch.json",
+  "review_kind": "critique",
+  "review_count": 1,
+  "reviewer_labels": [
+    "fresh-no-context-performance-reviewer"
+  ],
+  "highest_finding_severity": "high",
+  "axis_summary": {
+    "performance": "mixed",
+    "elegance": "acceptable",
+    "structural_soundness": "acceptable",
+    "operational_fit": "mixed"
+  },
+  "recommended_paths": [
+    "Correct the public limit bound within the admitted controller/test paths, obtain candidate-bound canonical validation and review the correction before operational activation. Keep drift-guard hardening non-blocking and preserve all recorded external delivery gates."
+  ],
+  "exact_next_step": "Record reviewer resolutions in the governing TODO using the machine-checkable resolution table or equivalent gate ledger, then extract the derived resolution packet and decide whether another bounded review pass is still required.",
+  "findings": [
+    {
+      "finding_id": "F-C78B648B",
+      "severity": "high",
+      "title": "Negative public limits bypass the claimed 500-row workload bound",
+      "rationale": "PublicConversationsController.conversations computes Math.min(Number(q.limit) || 200, TETO) without a positive lower bound. For limit=-1000000, Prisma receives take=-999999. Negative take requests reverse-direction pagination, so this can retrieve tenant-scale conversation data and nested messages before slice(0, limite) discards the result. The messages endpoint retains the same parser and can request a million history rows directly. These are authenticated, request-controlled high-cardinality reads rather than speculative scaling concerns. Although the parser predates this diff, it is present on the changed listing path and concretely invalidates the bounded-page premise used by the new batching and performance assessment. D07 preserves legitimate public pagination behavior; it does not explicitly authorize oversized negative reads. This is a separate finding from resolved PERF-01 and is source-derived, not experimentally reproduced by this reviewer.",
+      "suggested_action": "Validate or normalize limits to a finite positive integer within 1..500 before either Prisma query, preserving supported positive inputs and defaults. Add real HTTP regressions for negative limits, including a large negative value, proving rejection or bounded normalization before history/relation loading. Revalidate through the canonical runner on the corrected frozen candidate.",
+      "reviewer_labels": [
+        "fresh-no-context-performance-reviewer"
+      ],
+      "source_finding_ids": [
+        "PERF-R2-01"
+      ],
+      "category": "performance",
+      "formalizable_hint": "yes",
+      "candidate_rule_level": "project",
+      "candidate_rule_id": "n/a"
+    },
+    {
+      "finding_id": "F-14470CB8",
+      "severity": "medium",
+      "title": "Lifecycle drift guard accepts commands whose failures are swallowed",
+      "rationale": "validate_contract checks ordered substrings in RUNNER_SCRIPT. Appending '|| true' to npm run test:e2e or to the common guard invocation preserves those substrings and their order, so the validator accepts the weakened lifecycle. Existing swallowed-error controls exercise workflow continue-on-error, not these shell-level cases. The current shipping runner does propagate failures, so this is non-blocking protection debt rather than evidence of a presently bypassed suite or grounds to reopen CIADM-01 wholesale.",
+      "suggested_action": "Add synthetic mutations that swallow the common guard and suite failures, and require their rejection. Validate the executable command form or narrowly compare the required command lines rather than accepting their presence as substrings. Keep the correction within the admitted guard/runner paths.",
+      "reviewer_labels": [
+        "fresh-no-context-performance-reviewer"
+      ],
+      "source_finding_ids": [
+        "PERF-R2-02"
+      ],
+      "category": "operational_fit",
+      "formalizable_hint": "yes",
+      "candidate_rule_level": "project",
+      "candidate_rule_id": "n/a"
+    }
+  ]
+}

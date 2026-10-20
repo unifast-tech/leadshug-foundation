@@ -1,15 +1,15 @@
 {
   "client_date": "2026-10-20",
-  "authority": "ST-CON-06 v1.2 explicitly APROVADO; normal authority/routing go; approval published Foundation0ef3310e",
+  "authority": "ST-CON-06 v1.3 explicit APROVADO — aditivo v1.3; routing/normalauthority GO after postapproval binding reload",
   "active_profile": "operational-coder",
-  "active_single_product_writer": "none; /root/stcon06_executor checkpoint terminal, awaits approved renewal",
+  "active_single_product_writer": "/root/stcon06_executor",
   "topology": "principal checkout only; no worktree/codecommit/push/private file access",
   "parent_owns": "all Foundation canonical docs/TODO/review artifacts except executor-validation.json and artifacts/tmp/stcon06-executor-* reserved to executor",
   "completed_preconditions": [
     "runner allowlist repair + bashn/diffcheck + synthetic config-only probe",
     "canonical api RED:175unit pass/1 dependencyguard failure duelegacydispatch"
   ],
-  "current_work": "v1.3 planning fully reconverged: architecture42479 ARCH13 integrated; critique22149 CRIT13 integrated; freshcritique69476 terminal0 no new material findings. Coherence6GO/scope23sections0driftGO/auditfloorGO/routingGO/authoritypreapprovalGO(falseexecution). Preparing final exact-owned Foundation publication and one human APROVADO renewal request. No source/CI/schema/runtime edits beyond priorv1.2checkpoint88536.",
+  "current_work": "Fresh Linux all2564 terminal0,194+312+29+50=585; source47 and browser38/servedbundle verified. PCV candidates refreshed. Root records round1 resolved finding remediation and prepares complete fresh dedicatedround2 plus affected adherence/security delta; human runtime migration/activation held.",
   "parent_integration_findings_sent": [
     "restore MessageAcceptance service baseline (outside expectedpaths), move sourceintent/finalization/readback to outbound*.ts",
     "remove commonproviderbranch and closedMeta/Evo-only errorcodes from commonChannelport; generic projection/open registration",
@@ -27,15 +27,15 @@
   ],
   "executor_reports": "Core integration findings applied; independent Channel fake via registry/real resolver, real REAUTORIZAR generation race, version-only reseal, ingress pinning/crossBU/tie/claim barriers added; channel-specific PCV metrics now executing.",
   "next_parent_steps": [
-    "Request one explicit APROVADO for reviewed v1.3 proposal, including named index/transaction lock limits and CI/runner admission; user earlier approved companions only",
-    "Upon renewed approval: actual binding reload/normalauthority, soleexecutor index/CI/inventory controls and actual isolated Linux rehearsal",
-    "Evidence invalidation, final fullall, refreshedPCV and fullindependentTQA/Performance/Cutover/security/adherence as affected; no incomplete TQA pass",
-    "Rebuild exact images; only then local indexmigration/API-Web activation/HTTPS and new operator INOUT both channels; other services/data/credentials preserved",
-    "Final consolidated modules/05-04 handoffs/finalreview/debt/diff/authority/completion/closeout before local delivery claim; remote run/promotion/sourcepush not authorized"
+    "Prepare source-safe canonical invalidation and complete audit rubrics while executor implements exactapprovedpaths",
+    "Collect checkpoint fullsourcehashes/guardmutation/PGplans+lockrollback/Linux topology evidence, then mandatory finalall on frozenprincipal",
+    "Resolve dedicatedround1findingledger with actualfixevidence, then freshcompletePerformance/TQA/Cutover with priorresolution; sourceadherence/security affecteddelta",
+    "Only after audits allow exactlocalimages/migration/API-Web activation/HTTPS and operator INOUT both; preserveotherservices/data/credentials",
+    "Canonicalmodule+05/04handoffs/finalreview/debt/diff/authority/completion/closeout before localdelivery; no sourcepush/production"
   ],
   "skill_read_for_future_audit": "delphi-ai/skills/audit-protocol-triple-review/SKILL.md; user informed in commentary; no audit session started yet",
   "product_delivery_stage": "Pending",
-  "user_input_needed_now": true,
+  "user_input_needed_now": false,
   "routing_note_for_future_reviews": "Current delphi-ai/config/agent_role_routing.json maps test_quality_audit and cutover_integrity_audit to technical_review model gpt-5.6-terra; architecture_adherence/critique ->gpt-6.1-sol, final_review ->gpt-6.1-sol. Use current guard at dispatch; do not falsely declare a different model. Native tool advertised models lacks terra; actual availability not yet attempted. Do not preemptively ask permission or alter Delphi.",
   "latest_api_green": {
     "session_id": 54152,
@@ -357,17 +357,78 @@
   },
   "scope_renewal": {
     "version": "1.3",
-    "status": "planning review; human approval pending",
+    "status": "implementation",
     "proposal": "scope-renewal-v1.3-proposal.md",
     "freeze": "23db059b",
     "architecture_session": 42479,
     "architecture_status": "terminal0 findingsARCH13-01/02 integrated; no deliveryauthority",
-    "new_implementation_authority": false,
+    "new_implementation_authority": true,
     "critique_session": 69476,
     "critique_status": "round2 terminal0 strictmerged no new material findings",
     "prisma_bounded_audit": "evidence/prisma-capability-bounded-v1.3.json ready, exactmanifest only",
     "readiness": "scope-renewal-v1.3-readiness.md",
     "preapproval_authority": "preflight-go, execution_authority_granted=false",
-    "human_approval": "pending"
+    "human_approval": "APROVADO — aditivo v1.3 recorded v1.3-human-approval.json",
+    "normal_authority": "authority-execution-v1.3.json GO"
+  },
+  "v13_diagnostics": {
+    "78310": {
+      "exit_code": 1,
+      "unit_passed": 194,
+      "e2e_passed": 310,
+      "e2e_total": 312,
+      "valid_observations": [
+        "composite index seek at500references",
+        "OUT-heavy/no-IN/expired/tie readback",
+        "DDL rollback on disposable fixture"
+      ],
+      "failures": "Composite-index assertions mistakenly attached to provider identity plan; intended30ref regex omitted Index Only Scan. Corrections and SQLSTATE precision pending next run.",
+      "not_final_all": true
+    }
+  },
+  "root_preparation": {
+    "snapshot_script": "/tmp/stcon06-v13-source-proof.py",
+    "pcv_refresh_script": "/tmp/stcon06-v13-refresh-pcv.py",
+    "audit_packet_script": "/tmp/stcon06-v13-audit-package.py",
+    "source_patch_script": "/tmp/stcon06-v13-public-patch.py",
+    "status": "prepared, none falsely executed as final evidence; scripts require actual frozen green broad result"
+  },
+  "foundation_approval_publication": {
+    "commit": "30c344cd",
+    "push_exit": 0,
+    "scope": "12 exact root-owned Foundation approval/preparation/diagnostic docs; no product/gitlinks"
+  },
+  "v13_pre_final_all": {
+    "source_snapshot": "evidence/v13-final-source-before-all.json",
+    "sha256": "91420bba9818f97706206d38a8bf3e4c821aa41c55711493a3fded9c0c818dbc",
+    "public_diff_expected": 284,
+    "forbidden": 0,
+    "unclassified": 0,
+    "normal_authority": "authority-v13-before-final-all.json GO",
+    "historical_reuse": "refused; canonicalexit11 preserved; exactapproved working_tree manual authority refresh",
+    "linux_topology": "Same engine/root WSL context; client bind and three public config mask source paths translated only for exact shared socket;21negative/path/cleanup controls passed. Current all2564 has completed API/PG/Web build/unit and browser is active; terminal not presumed.",
+    "source_edit_policy": "none until terminal"
+  },
+  "v13_final_all_running": {
+    "session": 2564,
+    "log": "artifacts/tmp/stcon06-executor-v13-all-linux-3.log",
+    "source_snapshot": "evidence/v13-final-source-before-all.json",
+    "sha256": "91420bba9818f97706206d38a8bf3e4c821aa41c55711493a3fded9c0c818dbc",
+    "source_edit_policy": "none untilterminal",
+    "status": "terminal0, source unchanged, not delivery",
+    "proof": "evidence/v13-final-validation.json"
+  },
+  "dedicated_audit_v13": {
+    "round": 2,
+    "source": "canonical-linux-all2564",
+    "package": "dedicated-audit-v13-complete-package.md",
+    "input_repair": "Original three attempts terminal1 at turn/start max1,048,576characters, before review. Preserved events/inputs. Compact JSON and removal of generated line labels preserve complete scope/rubrics/code/tests/diff/evidence; schema values and source lines checked. No live reviewer replaced.",
+    "retry_sessions": {
+      "performance": 45243,
+      "test-quality": 81801,
+      "cutover-integrity": 1253
+    },
+    "status": "fresh retry active, no outcome presumed",
+    "routing": "all3normalGO/xhigh;6.1sol performance,5.6terra TQA/cutover"
   }
 }

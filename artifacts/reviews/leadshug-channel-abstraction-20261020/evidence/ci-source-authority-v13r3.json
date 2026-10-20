@@ -1,0 +1,26 @@
+{
+  "schema": "stcon06-ci-source-admission-v1",
+  "recorded_at_utc": "2026-10-20T18:36:58.958771+00:00",
+  "status": "approved-principal-working-tree-admitted-for-fresh-all-only",
+  "authority_source": "Explicit user APROVADO — aditivo v1.3; same bounded TODO working_tree contract; round2 public-limit/coverage/guard remediation inside exact approved paths",
+  "canonical_invalidation": {
+    "artifact": "evidence/ci-evidence-invalidation-v13r3.json",
+    "exit": 11,
+    "outcome": "manual-admission-required",
+    "disposition": "Preserved, not go/reusable. Manual authority renewed by explicit existing approval + exact strict public diff + exact current source + normal authority GO, solely for mandatory fresh all."
+  },
+  "historical_run": "all2564 invalidated for current acceptance; never reused as current/remote CI",
+  "source_snapshot": "evidence/v13r3-source-before-all.json",
+  "source_snapshot_sha256": "ceac6f671a96cc3413c23af1cebd225db63d210fe60f3594b69ab4b4a0931a2e",
+  "source_paths": 61,
+  "source_path_scope": "Union of prior47 explicit validation files and59 fully reviewed public contexts; no directory discovery or private path reads; no excluded-path clean claim",
+  "public_diff": {
+    "artifact": "evidence/public-diff-v13r3.json",
+    "expected": 362,
+    "forbidden": 0,
+    "unclassified": 0
+  },
+  "normal_authority": "evidence/authority-v13r3-before-all.json GO/execution_authority_granted=true",
+  "decision": "GO only for fresh canonical all using existing same-engine Linux transport after closed executor diagnostic/causal controls. No source mutations or runtime human activation during all/review.",
+  "waiver": false
+}

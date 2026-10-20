@@ -1,0 +1,2003 @@
+REPOSITORY ., approved baseline 80e3940126f22a941f90dba4f5e801b6c0eb2f58; positive public paths before diff; untracked added files supplied in full source packet.
+diff --git a/.github/workflows/ci.yml b/.github/workflows/ci.yml
+index fde0ae0..0888115 100644
+--- a/.github/workflows/ci.yml
++++ b/.github/workflows/ci.yml
+@@ -14,6 +14,22 @@ jobs:
+     runs-on: ubuntu-latest
+     steps:
+       - uses: actions/checkout@v4
++      - name: Checkout private channel validation sources
++        env:
++          SUBMODULES_REPO_TOKEN: ${{ secrets.SUBMODULES_REPO_TOKEN }}
++        run: |
++          test -n "$SUBMODULES_REPO_TOKEN" || {
++            echo "SUBMODULES_REPO_TOKEN must read the private LeadsHug submodules." >&2
++            exit 1
++          }
++          git config --global url."https://x-access-token:${SUBMODULES_REPO_TOKEN}@github.com/".insteadOf "https://github.com/"
++          git submodule sync -- api-app web-app
++          git submodule update --init --depth=1 api-app web-app
++      - name: Check channel suite admission
++        run: |
++          sudo apt-get update -qq
++          sudo apt-get install -y --no-install-recommends python3-yaml
++          python3 scripts/check-channels-ci-parity.py --self-test
+       - name: Validate the runtime topology
+         env:
+           SESSION_SECRET: ci-session-secret
+@@ -21,6 +37,28 @@ jobs:
+           WHATSAPP_TOKEN: ci-whatsapp-token
+         run: docker compose config --quiet
+ 
++  channels-validation:
++    name: Channels PostgreSQL and browser
++    if: github.event_name == 'pull_request' && github.head_ref != 'main'
++    runs-on: ubuntu-latest
++    timeout-minutes: 60
++    permissions:
++      contents: read
++    steps:
++      - uses: actions/checkout@v4
++      - name: Checkout private channel validation sources
++        env:
++          SUBMODULES_REPO_TOKEN: ${{ secrets.SUBMODULES_REPO_TOKEN }}
++        run: |
++          test -n "$SUBMODULES_REPO_TOKEN" || exit 1
++          git config --global url."https://x-access-token:${SUBMODULES_REPO_TOKEN}@github.com/".insteadOf "https://github.com/"
++          git submodule sync -- api-app web-app
++          git submodule update --init --depth=1 api-app web-app
++      - name: Validate channel suite and lifecycle
++        env:
++          CHANNELS_DOCKER_TRANSPORT: linux
++        run: bash scripts/test-channels-local.sh all
++
+   api:
+     name: API
+     runs-on: ubuntu-latest
+diff --git a/scripts/test-channels-local.sh b/scripts/test-channels-local.sh
+index a2f567d..fa4d00c 100644
+--- a/scripts/test-channels-local.sh
++++ b/scripts/test-channels-local.sh
+@@ -8,24 +8,52 @@ case "$TARGET" in
+   *) printf 'Usage: %s [api|web|browser|all]\n' "$0" >&2; exit 2 ;;
+ esac
+ 
+-command -v docker.exe >/dev/null || { echo 'Windows Docker CLI (docker.exe) is required.' >&2; exit 1; }
+-command -v wslpath >/dev/null || { echo 'wslpath is required to bind the principal checkout.' >&2; exit 1; }
+-CHANNELS_SOURCE_WINDOWS="$(wslpath -w "$ROOT_DIR")"
++CHANNELS_DOCKER_TRANSPORT="${CHANNELS_DOCKER_TRANSPORT:-windows}"
++case "$CHANNELS_DOCKER_TRANSPORT" in
++  windows)
++    command -v docker.exe >/dev/null || { echo 'Windows Docker CLI (docker.exe) is required.' >&2; exit 1; }
++    command -v wslpath >/dev/null || { echo 'wslpath is required to bind the principal checkout.' >&2; exit 1; }
++    DOCKER=(docker.exe)
++    host_path() { wslpath -w "$1"; }
++    bind_host_path() { wslpath -w "$1"; }
++    ;;
++  linux)
++    command -v docker >/dev/null || { echo 'Linux Docker CLI (docker) is required for the linux transport.' >&2; exit 1; }
++    DOCKER=(docker)
++    host_path() { printf '%s' "$1"; }
++    bind_host_path() {
++      local path="$1"
++      if [[ -n "${WSL_DISTRO_NAME:-}" ]]; then
++        if [[ "${DOCKER_HOST:-}" != "unix:///mnt/wsl/docker-desktop/shared-sockets/guest-services/docker.sock" ]]; then
++          echo 'WSL Linux transport requires the verified Docker Desktop shared socket.' >&2
++          return 1
++        fi
++        if [[ "$path" =~ ^/mnt/([a-z])/(.+)$ ]]; then
++          printf '/run/desktop/mnt/host/%s/%s' "${BASH_REMATCH[1]}" "${BASH_REMATCH[2]}"
++        else
++          printf 'Unsupported WSL bind source path for Docker Desktop: %s\n' "$path" >&2
++          return 1
++        fi
++      else
++        printf '%s' "$path"
++      fi
++    }
++    ;;
++  *) printf 'Unsupported CHANNELS_DOCKER_TRANSPORT: %s\n' "$CHANNELS_DOCKER_TRANSPORT" >&2; exit 2 ;;
++esac
++CHANNELS_SOURCE_WINDOWS="$(bind_host_path "$ROOT_DIR")"
+ CHANNELS_EXPECTED_API_PACKAGE_SHA256="$(sha256sum "$ROOT_DIR/api-app/package.json" | cut -d ' ' -f 1)"
+ CHANNELS_EXPECTED_WEB_PACKAGE_SHA256="$(sha256sum "$ROOT_DIR/web-app/package.json" | cut -d ' ' -f 1)"
+ 
+-# Prisma and Vite can auto-load dotenv files from their project roots. The API
+-# private .env is masked by the Compose config below; reject any other private
+-# or unreviewed dotenv path before creating a container.
+-while IFS= read -r env_path; do
+-  case "$env_path" in
+-    "$ROOT_DIR/api-app/.env"|"$ROOT_DIR/api-app/.env.example") ;;
+-    *) printf 'Refusing unmasked dotenv input by filename: %s\n' "${env_path#"$ROOT_DIR"/}" >&2; exit 1 ;;
+-  esac
+-done < <(find "$ROOT_DIR/api-app" "$ROOT_DIR/web-app" -type f -name '.env*' -not -path '*/node_modules/*' -not -path '*/dist/*' -print)
++# Keep host inputs as a positive inventory. Do not discover dotenv files with
++# find/glob over either application tree: those trees can contain private
++# configuration and local-only data. The exact public bind paths are listed
++# below; only api-app/.env.example is mounted, while .env and .env.testing are
++# supplied inside the validation container by the Compose config masks below.
+ 
+ cd "$ROOT_DIR"
+ temp_env="$(mktemp)"
++temp_compose_overlay=""
+ chmod 600 "$temp_env"
+ cat > "$temp_env" <<EOF
+ CHANNELS_SOURCE_WINDOWS=$CHANNELS_SOURCE_WINDOWS
+@@ -40,8 +68,19 @@ CHANNELS_EXPECTED_WEB_PACKAGE_SHA256=$CHANNELS_EXPECTED_WEB_PACKAGE_SHA256
+ EOF
+ add_bind_path() {
+   local key="$1" path="$2"
++  local relative_path="${path#"$ROOT_DIR"/}"
++  case "$relative_path" in
++    .env|.env.testing|api-app/.env|api-app/.env.testing|api-app/.local-files|api-app/.local-files/*|web-app/.env|web-app/.env.*)
++      printf 'Refusing excluded private configuration/data path: %s\n' "$relative_path" >&2
++      exit 1
++      ;;
++  esac
++  case "$relative_path" in
++    api-app/.git|api-app/src|api-app/test|api-app/prisma|api-app/package.json|api-app/package-lock.json|api-app/.env.example|api-app/.dockerignore|api-app/.gitignore|api-app/docker/entrypoint.sh|api-app/Dockerfile|api-app/eslint.config.mjs|api-app/nest-cli.json|api-app/railway.json|api-app/tsconfig.json|api-app/tsconfig.build.json|api-app/vitest.config.ts|api-app/vitest.config.e2e.ts|api-app/vitest.config.cov.ts|web-app/.git|web-app/src|web-app/e2e|web-app/public|web-app/package.json|web-app/package-lock.json|web-app/index.html|web-app/playwright.config.ts|web-app/tsconfig.json|web-app/vite.config.ts|web-app/railway.json|web-app/.gitignore|web-app/.dockerignore|web-app/Dockerfile|web-app/docker/40-config-js.sh|web-app/nginx/default.conf.template) ;;
++    *) printf 'Refusing path outside the public bind inventory: %s\n' "$relative_path" >&2; exit 1 ;;
++  esac
+   [[ -e "$path" ]] || { printf 'Expected principal source path is missing: %s\n' "${path#"$ROOT_DIR"/}" >&2; exit 1; }
+-  printf '%s=%s\n' "$key" "$(wslpath -w "$path")" >> "$temp_env"
++  printf '%s=%s\n' "$key" "$(bind_host_path "$path")" >> "$temp_env"
+ }
+ add_bind_path CHANNELS_API_GIT_WINDOWS "$ROOT_DIR/api-app/.git"
+ add_bind_path CHANNELS_API_SRC_WINDOWS "$ROOT_DIR/api-app/src"
+@@ -78,41 +117,83 @@ add_bind_path CHANNELS_WEB_DOCKERIGNORE_WINDOWS "$ROOT_DIR/web-app/.dockerignore
+ add_bind_path CHANNELS_WEB_DOCKERFILE_WINDOWS "$ROOT_DIR/web-app/Dockerfile"
+ add_bind_path CHANNELS_WEB_CONFIG_JS_WINDOWS "$ROOT_DIR/web-app/docker/40-config-js.sh"
+ add_bind_path CHANNELS_WEB_NGINX_TEMPLATE_WINDOWS "$ROOT_DIR/web-app/nginx/default.conf.template"
+-trap 'rm -f "$temp_env"' EXIT
+-COMPOSE=(docker.exe compose --project-name leadshug_channels_validation \
+-  --env-file "$(wslpath -w "$ROOT_DIR/.env.example")" --env-file "$(wslpath -w "$temp_env")" \
+-  -f "$(wslpath -w "$ROOT_DIR/docker-compose.yml")" -f "$(wslpath -w "$ROOT_DIR/docker-compose.channels.yml")" --profile validation)
++trap 'rm -f "$temp_env" "$temp_compose_overlay"' EXIT
++COMPOSE=("${DOCKER[@]}" compose --project-name leadshug_channels_validation \
++  --env-file "$(host_path "$ROOT_DIR/.env.example")" --env-file "$(host_path "$temp_env")" \
++  -f "$(host_path "$ROOT_DIR/docker-compose.yml")" -f "$(host_path "$ROOT_DIR/docker-compose.channels.yml")" --profile validation)
++if [[ "$CHANNELS_DOCKER_TRANSPORT" == linux && -n "${WSL_DISTRO_NAME:-}" ]]; then
++  CHANNELS_API_ENV_EXAMPLE_WINDOWS="$(bind_host_path "$ROOT_DIR/api-app/.env.example")"
++  CHANNELS_ROOT_ENV_EXAMPLE_WINDOWS="$(bind_host_path "$ROOT_DIR/.env.example")"
++  yaml_scalar() {
++    local value="$1"
++    value="${value//\\/\\\\}"
++    value="${value//\"/\\\"}"
++    value="${value//\$/\$\$}"
++    printf '"%s"' "$value"
++  }
++  temp_compose_overlay="$(mktemp)"
++  chmod 600 "$temp_compose_overlay"
++  {
++    printf 'configs:\n'
++    printf '  validation_api_env_mask:\n    file: %s\n' "$(yaml_scalar "$CHANNELS_API_ENV_EXAMPLE_WINDOWS")"
++    printf '  validation_root_env_mask:\n    file: %s\n' "$(yaml_scalar "$CHANNELS_ROOT_ENV_EXAMPLE_WINDOWS")"
++    printf '  validation_root_env_testing_mask:\n    file: %s\n' "$(yaml_scalar "$CHANNELS_ROOT_ENV_EXAMPLE_WINDOWS")"
++  } > "$temp_compose_overlay"
++  COMPOSE+=(-f "$temp_compose_overlay")
++fi
+ 
+ resource_conflicts=()
++capture_inventory() {
++  local name="$1"; shift
++  local output
++  if ! output="$("${DOCKER[@]}" "$@")"; then
++    printf 'Docker %s inventory failed; validation namespace state is unknown.\n' "$name" >&2
++    exit 1
++  fi
++  printf '%s' "$output"
++}
++containers_inventory="$(capture_inventory 'container' ps -a --format '{{.Names}}')"
++volumes_inventory="$(capture_inventory 'volume' volume ls --format '{{.Name}}')"
++networks_inventory="$(capture_inventory 'network' network ls --format '{{.Name}}')"
+ while IFS= read -r resource_name; do
+   if [[ "$resource_name" == leadshug_channels_validation_* || "$resource_name" == leadshug_channels_validation-* ]]; then
+     resource_conflicts+=("container:$resource_name")
+   fi
+-done < <(docker.exe ps -a --format '{{.Names}}')
++done <<< "$containers_inventory"
+ while IFS= read -r resource_name; do
+   [[ "$resource_name" == leadshug_channels_validation_* ]] && resource_conflicts+=("volume:$resource_name")
+-done < <(docker.exe volume ls --format '{{.Name}}')
++done <<< "$volumes_inventory"
+ while IFS= read -r resource_name; do
+   [[ "$resource_name" == leadshug_channels_validation_* ]] && resource_conflicts+=("network:$resource_name")
+-done < <(docker.exe network ls --format '{{.Name}}')
++done <<< "$networks_inventory"
+ if ((${#resource_conflicts[@]})); then
+   echo 'Refusing any pre-existing validation namespace resource, regardless of labels.' >&2
+   printf '%s\n' "${resource_conflicts[@]}" >&2
+   exit 1
+ fi
+ 
+-"${COMPOSE[@]}" config --quiet
+-if [[ "${CHANNELS_CONFIG_ONLY:-0}" == 1 ]]; then
+-  echo 'Validation Compose config is valid; no resources were created.'
+-  exit 0
+-fi
+ started=0
+ cleanup() {
++  local status=$?
++  trap - EXIT INT TERM
+   if [[ "$started" == 1 ]]; then
+-    "${COMPOSE[@]}" down --volumes --remove-orphans >/dev/null 2>&1 || true
++    if ! "${COMPOSE[@]}" down --volumes --remove-orphans; then
++      echo 'Validation cleanup failed; disposable namespace may require inspection.' >&2
++      status=1
++    fi
+   fi
++  rm -f "$temp_env"
++  rm -f "$temp_compose_overlay"
++  exit "$status"
+ }
+-trap 'cleanup; rm -f "$temp_env"' EXIT
++trap cleanup EXIT
++trap 'exit 130' INT
++trap 'exit 143' TERM
++"${COMPOSE[@]}" config --quiet
++if [[ "${CHANNELS_CONFIG_ONLY:-0}" == 1 ]]; then
++  echo 'Validation Compose config is valid; no resources were created.'
++  exit 0
++fi
+ started=1
+ 
+ RUNNER_SCRIPT='set -eu
+@@ -120,7 +201,8 @@ target="$1"
+ printf "Runner Node: "
+ node --version
+ apt-get update -qq
+-DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends openssl libssl3 ca-certificates bash git >/dev/null
++DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends openssl libssl3 ca-certificates bash git python3 python3-yaml >/dev/null
++python3 /workspace/scripts/check-channels-ci-parity.py --self-test
+ rm -rf /var/lib/apt/lists/*
+ printf "OpenSSL: "
+ openssl version
+
+REPOSITORY api-app, approved baseline db5a86758a165fac8a1ab587599c37b17890530c; positive public paths before diff; untracked added files supplied in full source packet.
+diff --git a/prisma/schema.prisma b/prisma/schema.prisma
+index 022485a..b8303bd 100644
+--- a/prisma/schema.prisma
++++ b/prisma/schema.prisma
+@@ -450,6 +450,7 @@ model Message {
+   createdAt    DateTime @default(now()) @map("created_at")
+ 
+   @@index([conversationId, createdAt])
++  @@index([conversationId, direction, createdAt, id], map: "messages_conversation_direction_created_id_idx")
+   @@index([buId, createdAt])
+   @@unique([providerResourceIdentityId, externalId])
+   @@map("messages")
+diff --git a/src/domain/channels/channel-credential-resolver.ts b/src/domain/channels/channel-credential-resolver.ts
+index 73f8ce5..f907096 100644
+--- a/src/domain/channels/channel-credential-resolver.ts
++++ b/src/domain/channels/channel-credential-resolver.ts
+@@ -10,6 +10,7 @@ export interface ResolvedChannelCredential {
+   pairingEpoch: number;
+   providerResourceIdentityId: string;
+   externalResourceId: string;
++  activeCredentialVersion: number | null;
+   accessToken?: string;
+   phoneNumberId?: string;
+   wabaId?: string;
+@@ -21,6 +22,32 @@ export interface ResolvedChannelCredential {
+ export class ChannelCredentialResolver {
+   constructor(private readonly prisma: PrismaService) {}
+ 
++  /** Metadata-only check for GET availability; it never decrypts the credential. */
++  async inspectActiveCredential(channelId: string, generation: number): Promise<{ version: number | null; ready: boolean }> {
++    return (await this.inspectActiveCredentials([{ channelId, generation }])).get(channelId) ?? { version: null, ready: false };
++  }
++
++  /** One metadata-only credential read for a public conversation page. */
++  async inspectActiveCredentials(bindings: readonly { channelId: string; generation: number }[]): Promise<Map<string, { version: number | null; ready: boolean }>> {
++    const ids = [...new Set(bindings.map((binding) => binding.channelId))];
++    if (!ids.length) return new Map();
++    const credentials = await this.prisma.channelCredential.findMany({
++      where: { channelId: { in: ids } }, select: { channelId: true, version: true, generation: true, keyId: true },
++    });
++    let currentKeyId: string | null = null;
++    try {
++      currentKeyId = loadChannelCredentialKey(process.env).keyId;
++    } catch { /* absent key makes every official channel unavailable */ }
++    const byId = new Map(credentials.map((credential) => [credential.channelId, credential]));
++    return new Map(bindings.map(({ channelId, generation }) => {
++      const credential = byId.get(channelId);
++      return [channelId, {
++        version: credential?.version ?? null,
++        ready: Boolean(credential && credential.generation === generation && currentKeyId && credential.keyId === currentKeyId),
++      }];
++    }));
++  }
++
+   async resolve(channelId: string, purpose: 'send' | 'registration' | 'verify' = 'send'): Promise<ResolvedChannelCredential> {
+     const channel = await this.prisma.buChannel.findUnique({
+       where: { id: channelId }, include: { credential: true, providerIdentities: true },
+@@ -34,11 +61,14 @@ export class ChannelCredentialResolver {
+       throw new ConflictException({ code: 'CHANNEL_NOT_READY' });
+     }
+     const identity = channel.providerIdentities.find((row) => row.currentChannelId === channel.id);
+-    if (!identity || !identity.managedLifecycle) throw new ConflictException({ code: 'CHANNEL_IDENTITY_NOT_VERIFIED' });
++    if (!identity || !identity.managedLifecycle || identity.provider !== channel.type || identity.buId !== channel.buId) {
++      throw new ConflictException({ code: 'CHANNEL_IDENTITY_NOT_VERIFIED' });
++    }
+     const result: ResolvedChannelCredential = {
+       channelId: channel.id, buId: channel.buId, provider: channel.type, generation: channel.generation,
+       pairingEpoch: channel.pairingEpoch, providerResourceIdentityId: identity.id,
+       externalResourceId: identity.externalResourceId,
++      activeCredentialVersion: channel.type === 'OFICIAL' ? channel.credential?.version ?? null : null,
+       ...(channel.phoneNumberId ? { phoneNumberId: channel.phoneNumberId } : {}),
+       ...(channel.wabaId ? { wabaId: channel.wabaId } : {}),
+       ...(channel.evolutionInstanceName ? { evolutionInstanceName: channel.evolutionInstanceName } : {}),
+diff --git a/src/domain/inbox/conversations.service.ts b/src/domain/inbox/conversations.service.ts
+index 664ccf0..ed345be 100644
+--- a/src/domain/inbox/conversations.service.ts
++++ b/src/domain/inbox/conversations.service.ts
+@@ -1,18 +1,14 @@
+ import {
+   BadRequestException,
+   ConflictException,
+-  Inject,
+   Injectable,
+   NotFoundException,
+ } from '@nestjs/common';
+ import { PrismaService } from '../../infra/prisma/prisma.service';
+-import { EVOLUTION_CLIENT, EvolutionClient } from '../../integrations/evolution/evolution.client';
+-import { META_CLIENT, MetaClient } from '../../integrations/meta/meta.client';
+-import { CanalDeOrigem } from './incoming.service';
+ import { criarCursorTimeline, lerCursorTimeline } from './timeline-pagination';
+-import { MessageAcceptanceService } from './message-acceptance.service';
+-import { ChannelCredentialResolver } from '../channels/channel-credential-resolver';
+-import { RealtimeService } from '../../realtime/realtime.service';
++import { OutboundService } from './outbound.service';
++import { ChannelResolver, type ChannelOrigin } from '../channels/transport/channel';
++import type { OutboundAttribution } from './outbound.service';
+ 
+ export const JANELA_MS = 24 * 60 * 60 * 1000;
+ 
+@@ -25,11 +21,8 @@ export interface Atendente {
+ export class ConversationsService {
+   constructor(
+     private readonly prisma: PrismaService,
+-    @Inject(META_CLIENT) private readonly meta: MetaClient,
+-    @Inject(EVOLUTION_CLIENT) private readonly evolution: EvolutionClient,
+-    private readonly acceptance: MessageAcceptanceService,
+-    private readonly credentials: ChannelCredentialResolver,
+-    private readonly realtime: RealtimeService,
++    private readonly outbound: OutboundService,
++    private readonly channelResolver: ChannelResolver,
+   ) {}
+ 
+   /** Carrega a conversa **dentro do escopo**. Fora dele, ninguém sabe que ela existe. */
+@@ -160,89 +153,24 @@ export class ConversationsService {
+    * Trocar de número no meio da conversa é decisão de quem atende, nunca do
+    * sistema.
+    */
+-  async estadoDaJanela(conversaId: string, buId: string, agora = Date.now()) {
+-    const ultima = await this.prisma.message.findFirst({
+-      where: { conversationId: conversaId },
+-      orderBy: { createdAt: 'desc' },
+-      select: { channelOrigin: true },
+-    });
+-    const canais = await this.prisma.buChannel.findMany({ where: { buId } });
+-    if (canais.length === 0) return { canal: null, exigeJanela: false, aberta: false, expiraEm: null };
+-
+-    const tipo = (ultima?.channelOrigin ?? canais[0].type) as CanalDeOrigem;
+-    const canal = canais.find((c) => c.type === tipo) ?? canais[0];
+-    if (!canal.requiresWindow) {
+-      return { canal, exigeJanela: false, aberta: true, expiraEm: null as Date | null };
+-    }
+-
+-    const ultimaEntrada = await this.prisma.message.findFirst({
+-      where: { conversationId: conversaId, direction: 'IN' },
+-      orderBy: { createdAt: 'desc' },
+-      select: { createdAt: true },
+-    });
+-    if (!ultimaEntrada) return { canal, exigeJanela: true, aberta: false, expiraEm: null };
+-
+-    const expiraEm = new Date(ultimaEntrada.createdAt.getTime() + JANELA_MS);
+-    return { canal, exigeJanela: true, aberta: expiraEm.getTime() > agora, expiraEm };
++  async estadoDaJanela(conversaId: string, buId: string) {
++    const estado = await this.channelResolver.inspectForConversation({ conversationId: conversaId, buId });
++    return {
++      canal: estado.channelOrigin ? { type: estado.channelOrigin } : null,
++      exigeJanela: estado.requiresWindow,
++      aberta: estado.windowOpen,
++      expiraEm: estado.expiresAt,
++      disponivel: estado.available,
++      motivoIndisponibilidade: estado.reason,
++    };
+   }
+ 
+-  async responder(conversaId: string, texto: string, atendente: Atendente) {
+-    const conversa = await this.prisma.conversation.findUniqueOrThrow({ where: { id: conversaId } });
+-    const janela = await this.estadoDaJanela(conversaId, conversa.buId);
+-
+-    if (!janela.canal) {
+-      throw new BadRequestException({ error: 'Esta BU não tem canal conectado.', code: 'CANAL_AUSENTE' });
+-    }
+-    if (janela.exigeJanela && !janela.aberta) {
+-      // A alternativa (disparar um template) NÃO existe na v1: modelos e disparo
+-      // seguem na Central de Modelos até a v2. A tela leva para lá por link em
+-      // vez de fingir que há botão (ADR-0009 §3).
+-      throw new ConflictException({
+-        error:
+-          'Fora da janela de 24h da Meta: só é possível responder texto livre até 24h após a última mensagem da pessoa.',
+-        code: 'JANELA_FECHADA',
+-      });
+-    }
+-
+-    const scoped = await this.credentials.resolve(janela.canal.id);
+-    const externalId = await this.enviarPeloCanal(scoped, conversa.contact, texto);
+-    if (!externalId) {
+-      await this.acceptance.recordAmbiguousOutbound({
+-        providerResourceIdentityId: scoped.providerResourceIdentityId, channelId: scoped.channelId, generation: scoped.generation,
+-        pairingEpoch: scoped.pairingEpoch, buId: scoped.buId, channelOrigin: scoped.provider, contact: conversa.contact,
+-        contactType: conversa.contactType, conversationId: conversa.id, direction: 'OUT', messageType: 'TEXTO',
+-        content: texto, authorUserId: atendente.userId || null, authorName: atendente.nome, senderResult: true,
+-      });
+-      throw new ConflictException({
+-        code: 'EXTERNAL_MESSAGE_ID_MISSING', outcome: 'AMBIGUOUS_SEND_RECORDED',
+-        error: 'O provedor não confirmou o ID do envio. Verifique a conversa antes de tentar novamente.',
+-      });
+-    }
+-    const accepted = await this.acceptance.accept({
+-      providerResourceIdentityId: scoped.providerResourceIdentityId, channelId: scoped.channelId,
+-      generation: scoped.generation, pairingEpoch: scoped.pairingEpoch, buId: scoped.buId,
+-      channelOrigin: scoped.provider, externalMessageId: externalId, contact: conversa.contact,
+-      contactType: conversa.contactType, conversationId: conversa.id, direction: 'OUT', messageType: 'TEXTO',
+-      content: texto, authorUserId: atendente.userId || null, authorName: atendente.nome, senderResult: true,
+-    });
+-    const mensagem = accepted.message;
+-    if (accepted.creationWinner) this.realtime.publicarNaBu(conversa.buId, { tipo: 'mensagem', conversaId: conversa.id, contato: conversa.contact, direcao: 'OUT', canal: mensagem.channelOrigin, naoLidas: accepted.conversation.unreadCount });
+-
+-    // Responder move para IN_SERVICE e auto-atribui — mas só se ninguém estiver
+-    // atendendo: responder NÃO rouba conversa de outro (ADR-0009 §2).
+-    const semDono = !conversa.attendantUserId && !conversa.attendantName;
+-    await this.prisma.conversation.update({
+-      where: { id: conversa.id },
+-      data: {
+-        lastMessageAt: new Date(),
+-        status: conversa.contactType === 'GRUPO' ? undefined : 'IN_SERVICE',
+-        attendantUserId: semDono ? atendente.userId : undefined,
+-        attendantName: semDono ? atendente.nome : undefined,
+-        attendantOrigin: semDono ? 'INTERNO' : undefined,
+-      },
+-    });
++  async estadosDasJanelas(references: readonly { conversationId: string; buId: string; latestMessageOrigin: ChannelOrigin | null }[]) {
++    return this.channelResolver.inspectManyForConversations(references);
++  }
+ 
+-    return mensagem;
++  async responder(conversaId: string, buId: string, texto: string, attribution: OutboundAttribution) {
++    return this.outbound.send({ conversationId: conversaId, buId, text: texto, attribution });
+   }
+ 
+   /** Assumir sem responder. 409 se outro — interno ou externo — já está nela. */
+@@ -290,28 +218,4 @@ export class ConversationsService {
+       data: { status: 'CLOSED', attendantUserId: null, attendantName: null, attendantOrigin: null },
+     });
+   }
+-
+-  private async enviarPeloCanal(
+-    canal: Awaited<ReturnType<ChannelCredentialResolver['resolve']>>,
+-    contato: string,
+-    texto: string,
+-  ): Promise<string | null> {
+-    try {
+-      if (canal.provider === 'OFICIAL') {
+-        if (!canal.phoneNumberId || !canal.accessToken) {
+-          throw new BadRequestException({ error: 'Canal sem número de envio.', code: 'CANAL_SEM_NUMERO' });
+-        }
+-        return await this.meta.enviarTexto(canal.phoneNumberId, contato, texto, canal.accessToken);
+-      }
+-      if (!canal.evolutionInstanceName) {
+-        throw new BadRequestException({ error: 'Canal sem instância.', code: 'CANAL_SEM_INSTANCIA' });
+-      }
+-      return await this.evolution.enviarTexto(canal.evolutionInstanceName, contato, texto);
+-    } catch (e) {
+-      if (e instanceof BadRequestException || e instanceof ConflictException) throw e;
+-      // Os dois códigos ficam DISTINTOS de propósito: quem trata o erro quer
+-      // saber qual plataforma recusou, porque o contorno é diferente (ADR-0010).
+-      throw new BadRequestException({ error: 'O canal recusou o envio.', code: canal.provider === 'OFICIAL' ? 'META_RECUSOU' : 'EVOLUTION_RECUSOU' });
+-    }
+-  }
+ }
+diff --git a/src/domain/inbox/incoming.service.ts b/src/domain/inbox/incoming.service.ts
+index 634298a..417e1f3 100644
+--- a/src/domain/inbox/incoming.service.ts
++++ b/src/domain/inbox/incoming.service.ts
+@@ -1,13 +1,12 @@
+ import { Inject, Injectable } from '@nestjs/common';
+ import { PrismaService } from '../../infra/prisma/prisma.service';
+ import { RealtimeService } from '../../realtime/realtime.service';
+-import { META_CLIENT, MetaClient } from '../../integrations/meta/meta.client';
+ import { TYPEBOT_CLIENT, TypebotClient } from '../../integrations/typebot/typebot.client';
+-import { EVOLUTION_CLIENT, EvolutionClient } from '../../integrations/evolution/evolution.client';
+ import { MessageAcceptanceService } from './message-acceptance.service';
+-import { ChannelCredentialResolver } from '../channels/channel-credential-resolver';
++import { OutboundService } from './outbound.service';
++import type { ChannelOrigin } from '../channels/transport/channel';
+ 
+-export type CanalDeOrigem = 'OFICIAL' | 'NAO_OFICIAL';
++export type CanalDeOrigem = ChannelOrigin;
+ 
+ export interface MensagemRecebida {
+   buId: string;
+@@ -41,11 +40,9 @@ export class IncomingService {
+   constructor(
+     private readonly prisma: PrismaService,
+     private readonly realtime: RealtimeService,
+-    @Inject(META_CLIENT) private readonly meta: MetaClient,
+-    @Inject(EVOLUTION_CLIENT) private readonly evolution: EvolutionClient,
+     @Inject(TYPEBOT_CLIENT) private readonly typebot: TypebotClient,
+     private readonly acceptance: MessageAcceptanceService,
+-    private readonly credentials: ChannelCredentialResolver,
++    private readonly outbound: OutboundService,
+   ) {}
+ 
+   async registrar(m: MensagemRecebida) {
+@@ -76,11 +73,6 @@ export class IncomingService {
+     const normalized = texto.toLocaleLowerCase('pt-BR');
+     const gatilho = gatilhos.find((g) => gatilhoCombina(g.kind, g.value, normalized, conversationCreated));
+     if (!gatilho || !this.typebot.configurado()) return;
+-    const channel = await this.prisma.buChannel.findUnique({ where: { id: incoming.channelId } });
+-    if (!channel) return;
+-    const scoped = await this.credentials.resolve(channel.id);
+-    if (scoped.provider === 'OFICIAL' && (!scoped.phoneNumberId || !scoped.accessToken)) return;
+-    if (scoped.provider === 'NAO_OFICIAL' && !scoped.evolutionInstanceName) return;
+     const botId = gatilho.bot.publishedTypebotId;
+     if (!botId) return;
+     const atual = await this.prisma.typebotSession.findUnique({ where: { botId_buId_contato: { botId: gatilho.botId, buId, contato } } });
+@@ -91,24 +83,19 @@ export class IncomingService {
+     for (const mensagem of resposta.messages) {
+       const saida = textoDaRespostaTypebot(mensagem);
+       if (!saida) continue;
+-      const externalId = scoped.provider === 'OFICIAL'
+-        ? await this.meta.enviarTexto(scoped.phoneNumberId!, contato, saida, scoped.accessToken!)
+-        : await this.evolution.enviarTexto(scoped.evolutionInstanceName!, contato, saida);
+-      if (!externalId) {
+-        await this.acceptance.recordAmbiguousOutbound({
+-          providerResourceIdentityId: scoped.providerResourceIdentityId, channelId: scoped.channelId, generation: scoped.generation,
+-          pairingEpoch: scoped.pairingEpoch, buId, channelOrigin: scoped.provider, contact: contato, contactType: 'PESSOA',
+-          conversationId, direction: 'OUT', messageType: 'TEXTO', content: saida, authorName: 'Typebot', senderResult: true,
+-        });
+-        throw new Error('OUTBOUND_MESSAGE_ID_MISSING');
+-      }
+-      const accepted = await this.acceptance.accept({
+-        providerResourceIdentityId: scoped.providerResourceIdentityId, channelId: scoped.channelId, generation: scoped.generation,
+-        pairingEpoch: scoped.pairingEpoch, buId, channelOrigin: scoped.provider, externalMessageId: externalId,
+-        contact: contato, contactType: 'PESSOA', conversationId, direction: 'OUT', messageType: 'TEXTO', content: saida,
+-        authorName: 'Typebot', senderResult: true,
++      await this.outbound.send({
++        conversationId,
++        buId,
++        text: saida,
++        attribution: { kind: 'BOT', name: 'Typebot' },
++        ingress: {
++          channelId: incoming.channelId,
++          providerResourceIdentityId: incoming.providerResourceIdentityId,
++          channelOrigin: incoming.canal,
++          generation: incoming.generation,
++          pairingEpoch: incoming.pairingEpoch,
++        },
+       });
+-      if (accepted.creationWinner) this.realtime.publicarNaBu(buId, { tipo: 'mensagem', conversaId: conversationId, contato, direcao: 'OUT', canal: scoped.provider, naoLidas: accepted.conversation.unreadCount });
+     }
+   }
+ 
+diff --git a/src/domain/inbox/incoming.typebot.integration.spec.ts b/src/domain/inbox/incoming.typebot.integration.spec.ts
+index afd383c..7555a22 100644
+--- a/src/domain/inbox/incoming.typebot.integration.spec.ts
++++ b/src/domain/inbox/incoming.typebot.integration.spec.ts
+@@ -21,20 +21,21 @@ describe('ponte de evento Meta → Typebot → Meta', () => {
+       iniciar: vi.fn().mockResolvedValue({ sessionId: 'session-1', messages: [{ type: 'text', content: { richText: ['Olá!'] } }] }),
+       continuar: vi.fn(),
+     };
+-    const meta = { enviarTexto: vi.fn().mockResolvedValue('meta-message-1') };
+     const accepted = vi.fn()
+       .mockResolvedValueOnce({ conversation: { id: 'conversation-1', contact: '5584999990000', unreadCount: 1 }, message: { id: 'message-1' }, creationWinner: true, reconciled: false, conversationCreated: true, reopened: false })
+       .mockResolvedValueOnce({ conversation: { id: 'conversation-1', contact: '5584999990000', unreadCount: 1 }, message: { id: 'out-1' }, creationWinner: true, reconciled: false, conversationCreated: false, reopened: false });
+-    const credentials = { resolve: vi.fn().mockResolvedValue({ provider: 'OFICIAL', phoneNumberId: 'phone-1', accessToken: 'scoped-token', providerResourceIdentityId: 'identity-1', channelId: 'channel-1', generation: 1, pairingEpoch: 1 }) };
+-    const service = new IncomingService(prisma as never, { publicarNaBu: publicar } as never, meta as never, { enviarTexto: vi.fn() } as never, typebot as never, { accept: accepted } as never, credentials as never);
++    const outbound = { send: vi.fn().mockResolvedValue({ id: 'out-1' }) };
++    const service = new IncomingService(prisma as never, { publicarNaBu: publicar } as never, typebot as never, { accept: accepted } as never, outbound as never);
+ 
+     await service.registrar({ buId: 'bu-1', canal: 'OFICIAL', contato: '5584999990000', ehGrupo: false, direcao: 'IN', tipo: 'TEXTO', conteudo: 'oi', externalId: 'in-1', providerResourceIdentityId: 'identity-1', channelId: 'channel-1', generation: 1, pairingEpoch: 1 });
+ 
+     expect(typebot.iniciar).toHaveBeenCalledWith('public-1', '5584999990000', 'oi');
+     expect(registrarSessao).toHaveBeenCalledWith({ data: expect.objectContaining({ botId: 'bot-1', buId: 'bu-1', sessionId: 'session-1' }) });
+-    expect(meta.enviarTexto).toHaveBeenCalledWith('phone-1', '5584999990000', 'Olá!', 'scoped-token');
+-    expect(accepted).toHaveBeenCalledTimes(2);
+-    expect(accepted.mock.calls[1][0]).toMatchObject({ direction: 'OUT', externalMessageId: 'meta-message-1', senderResult: true });
++    expect(accepted).toHaveBeenCalledTimes(1);
++    expect(outbound.send).toHaveBeenCalledWith(expect.objectContaining({
++      conversationId: 'conversation-1', buId: 'bu-1', text: 'Olá!', attribution: { kind: 'BOT', name: 'Typebot' },
++      ingress: { channelId: 'channel-1', providerResourceIdentityId: 'identity-1', channelOrigin: 'OFICIAL', generation: 1, pairingEpoch: 1 },
++    }));
+     expect(publicar).toHaveBeenCalled();
+   });
+ 
+@@ -48,10 +49,8 @@ describe('ponte de evento Meta → Typebot → Meta', () => {
+       webhookEvent: { create: vi.fn() },
+     };
+     const typebot = { configurado: () => true, iniciar: vi.fn(), continuar: vi.fn().mockResolvedValue({ messages: [] }) };
+-    const meta = { enviarTexto: vi.fn() };
+     const accepted = vi.fn().mockResolvedValue({ conversation: { id: 'c', contact: '1', unreadCount: 1 }, message: { id: 'm' }, creationWinner: true, reconciled: false, conversationCreated: false, reopened: false });
+-    const credentials = { resolve: vi.fn().mockResolvedValue({ provider: 'OFICIAL', phoneNumberId: 'phone', accessToken: 'scoped-token', providerResourceIdentityId: 'identity-1', channelId: 'channel-1', generation: 1, pairingEpoch: 1 }) };
+-    const service = new IncomingService(prisma as never, { publicarNaBu: vi.fn() } as never, meta as never, { enviarTexto: vi.fn() } as never, typebot as never, { accept: accepted } as never, credentials as never);
++    const service = new IncomingService(prisma as never, { publicarNaBu: vi.fn() } as never, typebot as never, { accept: accepted } as never, { send: vi.fn() } as never);
+     await service.registrar({ buId: 'bu', canal: 'OFICIAL', contato: '1', ehGrupo: false, direcao: 'IN', tipo: 'TEXTO', conteudo: 'preciso de AJUDA', externalId: 'in-1', providerResourceIdentityId: 'identity-1', channelId: 'channel-1', generation: 1, pairingEpoch: 1 });
+     expect(typebot.continuar).toHaveBeenCalledWith('session', 'preciso de AJUDA');
+     expect(typebot.iniciar).not.toHaveBeenCalled();
+diff --git a/src/integrations/evolution/evolution.client.spec.ts b/src/integrations/evolution/evolution.client.spec.ts
+index b2aae82..51b166d 100644
+--- a/src/integrations/evolution/evolution.client.spec.ts
++++ b/src/integrations/evolution/evolution.client.spec.ts
+@@ -66,4 +66,35 @@ describe('EvolutionHttpClient instance creation response', () => {
+     expect(error.message).not.toMatch(/fixture-secret-key|secret URL/);
+     expect(fetchFake.mock.calls[0][1].redirect).toBe('error');
+   });
++
++  it('returns ACCEPTED only with an external ID and treats HTTP and post-dispatch failures as UNKNOWN once', async () => {
++    process.env.EVOLUTION_API_URL = 'https://evolution.invalid';
++    process.env.EVOLUTION_API_KEY = 'fixture-key';
++    const fetchFake = vi.fn()
++      .mockResolvedValueOnce({ ok: true, json: async () => ({ key: { id: 'evo-id-1' } }) })
++      .mockResolvedValueOnce({ ok: true, json: async () => ({ key: {} }) })
++      .mockResolvedValueOnce({ ok: false, status: 503, json: async () => ({ message: 'ambiguous provider body' }) })
++      .mockRejectedValueOnce(new TypeError('timeout after dispatch'))
++      .mockResolvedValueOnce({ ok: true, json: async () => { throw new SyntaxError('malformed'); } })
++      .mockResolvedValueOnce({ ok: false, status: 503, json: async () => ({ key: { id: 'contradictory-id' } }) })
++      .mockResolvedValueOnce({ ok: true, json: async () => ({}) });
++    vi.stubGlobal('fetch', fetchFake);
++    const client = new EvolutionHttpClient();
++    await expect(client.enviarTexto('fixture-instance', 'user:opaque', 'hello'))
++      .resolves.toMatchObject({ outcome: 'ACCEPTED', externalMessageId: 'evo-id-1' });
++    await expect(client.enviarTexto('fixture-instance', 'user:opaque', 'hello'))
++      .resolves.toMatchObject({ outcome: 'UNKNOWN', evidence: 'ACK_WITHOUT_ID' });
++    await expect(client.enviarTexto('fixture-instance', 'user:opaque', 'hello'))
++      .resolves.toMatchObject({ outcome: 'UNKNOWN', evidence: 'TRANSPORT_UNCONFIRMED' });
++    await expect(client.enviarTexto('fixture-instance', 'user:opaque', 'hello'))
++      .resolves.toMatchObject({ outcome: 'UNKNOWN', evidence: 'TRANSPORT_UNCONFIRMED' });
++    await expect(client.enviarTexto('fixture-instance', 'user:opaque', 'hello'))
++      .resolves.toMatchObject({ outcome: 'UNKNOWN', evidence: 'TRANSPORT_UNCONFIRMED' });
++    await expect(client.enviarTexto('fixture-instance', 'user:opaque', 'hello'))
++      .resolves.toMatchObject({ outcome: 'UNKNOWN', evidence: 'TRANSPORT_UNCONFIRMED' });
++    await expect(client.enviarTexto('fixture-instance', 'user:opaque', 'hello'))
++      .resolves.toMatchObject({ outcome: 'UNKNOWN', evidence: 'TRANSPORT_UNCONFIRMED' });
++    expect(fetchFake).toHaveBeenCalledTimes(7);
++    expect(fetchFake.mock.calls.every(([, options]) => options.signal instanceof AbortSignal)).toBe(true);
++  });
+ });
+diff --git a/src/integrations/evolution/evolution.client.ts b/src/integrations/evolution/evolution.client.ts
+index c8ef4ba..4d81f3c 100644
+--- a/src/integrations/evolution/evolution.client.ts
++++ b/src/integrations/evolution/evolution.client.ts
+@@ -1,4 +1,5 @@
+ import { Injectable } from '@nestjs/common';
++import type { ChannelSendResult } from '../../domain/channels/transport/channel';
+ 
+ export const EVOLUTION_CLIENT = Symbol('EVOLUTION_CLIENT');
+ 
+@@ -19,7 +20,7 @@ export interface EvolutionClient {
+   consultarInstancia(nome: string): Promise<InstanciaObservada | null>;
+   apagarInstancia(nome: string): Promise<void>;
+   /** Não existe janela aqui — o limite é o risco de ban, não a plataforma. */
+-  enviarTexto(instancia: string, para: string, texto: string): Promise<string | null>;
++  enviarTexto(instancia: string, para: string, texto: string): Promise<ChannelSendResult>;
+ }
+ 
+ export class EvolutionIndisponivelError extends Error {}
+@@ -93,9 +94,40 @@ export class EvolutionHttpClient implements EvolutionClient {
+     if (result.status !== 'SUCCESS' || result.error !== false) throw new EvolutionIndisponivelError('A Evolution não confirmou a remoção da instância.');
+   }
+ 
+-  async enviarTexto(instancia: string, para: string, texto: string): Promise<string | null> {
+-    const data = await this.chamar('POST', `/message/sendText/${instancia}`, { number: para, text: texto });
+-    return (data as { key?: { id?: string } }).key?.id ?? null;
++  async enviarTexto(instancia: string, para: string, texto: string): Promise<ChannelSendResult> {
++    if (!instancia || !this.configurado()) return { outcome: 'BLOCKED', reason: 'CHANNEL_NOT_READY' };
++    let response: Response;
++    try {
++      response = await fetch(`${this.base}/message/sendText/${encodeURIComponent(instancia)}`, {
++        method: 'POST',
++        headers: { apikey: this.chave, 'content-type': 'application/json' },
++        body: JSON.stringify({ number: para, text: texto }),
++        signal: AbortSignal.timeout(10_000), redirect: 'error',
++      });
++    } catch {
++      return { outcome: 'UNKNOWN', evidence: 'TRANSPORT_UNCONFIRMED', legacyCode: 'EVOLUTION_RECUSOU' };
++    }
++    let data: unknown;
++    try {
++      data = await response.json();
++    } catch {
++      return { outcome: 'UNKNOWN', evidence: 'TRANSPORT_UNCONFIRMED', legacyCode: 'EVOLUTION_RECUSOU' };
++    }
++    if (!response.ok) return { outcome: 'UNKNOWN', evidence: 'TRANSPORT_UNCONFIRMED', legacyCode: 'EVOLUTION_RECUSOU' };
++    if (!isRecord(data)) return { outcome: 'UNKNOWN', evidence: 'TRANSPORT_UNCONFIRMED', legacyCode: 'EVOLUTION_RECUSOU' };
++    if (data.error) return { outcome: 'UNKNOWN', evidence: 'TRANSPORT_UNCONFIRMED', legacyCode: 'EVOLUTION_RECUSOU' };
++    if (data.key !== undefined && data.key !== null && !isRecord(data.key)) {
++      return { outcome: 'UNKNOWN', evidence: 'TRANSPORT_UNCONFIRMED', legacyCode: 'EVOLUTION_RECUSOU' };
++    }
++    const key = isRecord(data.key) ? data.key : null;
++    if (!key) return { outcome: 'UNKNOWN', evidence: 'TRANSPORT_UNCONFIRMED', legacyCode: 'EVOLUTION_RECUSOU' };
++    if (key && Object.hasOwn(key, 'id') && typeof key.id !== 'string') {
++      return { outcome: 'UNKNOWN', evidence: 'TRANSPORT_UNCONFIRMED', legacyCode: 'EVOLUTION_RECUSOU' };
++    }
++    const id = typeof key?.id === 'string' && key.id.trim() ? key.id : null;
++    return id
++      ? { outcome: 'ACCEPTED', externalMessageId: id }
++      : { outcome: 'UNKNOWN', evidence: 'ACK_WITHOUT_ID', legacyCode: 'EVOLUTION_RECUSOU' };
+   }
+ 
+   private async chamar(metodo: string, caminho: string, corpo?: unknown): Promise<unknown> {
+@@ -118,3 +150,7 @@ export class EvolutionHttpClient implements EvolutionClient {
+     return data;
+   }
+ }
++
++function isRecord(value: unknown): value is Record<string, unknown> {
++  return typeof value === 'object' && value !== null && !Array.isArray(value);
++}
+diff --git a/src/integrations/meta/meta.client.spec.ts b/src/integrations/meta/meta.client.spec.ts
+index 0fa0b12..0822959 100644
+--- a/src/integrations/meta/meta.client.spec.ts
++++ b/src/integrations/meta/meta.client.spec.ts
+@@ -48,7 +48,8 @@ describe('MetaHttpClient scoped credentials', () => {
+     expect(fetchFake).not.toHaveBeenCalled();
+     expect(new MetaHttpClient().capabilities().graphVersion).toBeNull();
+     process.env.GRAPH_VERSION = '';
+-    await expect(new MetaHttpClient().enviarTexto('phone-id', '5584999990000', 'fixture body', 'scoped-channel-token')).rejects.toBeInstanceOf(MetaIndisponivelError);
++    await expect(new MetaHttpClient().enviarTexto('phone-id', '5584999990000', 'fixture body', 'scoped-channel-token'))
++      .resolves.toMatchObject({ outcome: 'BLOCKED', reason: 'CHANNEL_NOT_READY' });
+     expect(fetchFake).not.toHaveBeenCalled();
+   });
+ 
+@@ -72,10 +73,77 @@ describe('MetaHttpClient scoped credentials', () => {
+     process.env.WHATSAPP_TOKEN = 'legacy-token-must-not-be-used';
+     const fetchFake = vi.fn().mockResolvedValue({ ok: false, status: 400, json: async () => ({ error: { message: 'secret provider detail' } }) });
+     vi.stubGlobal('fetch', fetchFake);
+-    await expect(new MetaHttpClient().enviarTexto('phone-id', '558400000000', 'hello')).rejects.toBeInstanceOf(MetaIndisponivelError);
++    await expect(new MetaHttpClient().enviarTexto('phone-id', '558400000000', 'hello'))
++      .resolves.toMatchObject({ outcome: 'BLOCKED', reason: 'PENDING_CREDENTIAL' });
+     expect(fetchFake).not.toHaveBeenCalled();
+   });
+ 
++  it('classifies only allowlisted synchronous Graph refusals as REJECTED', async () => {
++    process.env.GRAPH_VERSION = 'v26.0';
++    const fetchFake = vi.fn()
++      .mockResolvedValueOnce({ ok: false, status: 400, json: async () => ({ error: { message: 'bad request', code: 100, is_transient: false } }) })
++      .mockResolvedValueOnce({ ok: false, status: 400, json: async () => ({ error: { message: 'unknown refusal', code: 999, is_transient: false } }) })
++      .mockResolvedValueOnce({ ok: true, status: 200, json: async () => ({ messages: [{ id: 'wamid-1' }] }) })
++      .mockResolvedValueOnce({ ok: true, status: 200, json: async () => ({ messages: [{}] }) })
++      .mockResolvedValueOnce({ ok: true, status: 200, json: async () => { throw new SyntaxError('malformed'); } })
++      .mockResolvedValueOnce({ ok: false, status: 503, json: async () => ({ messages: [{ id: 'contradictory-id' }] }) })
++      .mockResolvedValueOnce({ ok: false, status: 400, json: async () => ({
++        error: { message: 'refusal with contradictory accepted ID', code: 100, is_transient: false }, messages: [{ id: 'contradictory-refusal-id' }],
++      }) })
++      .mockResolvedValueOnce({ ok: false, status: 400, json: async () => ({
++        error: { message: 'refusal with contradictory success', code: 100, is_transient: false }, success: true,
++      }) })
++      .mockResolvedValueOnce({ ok: false, status: 400, json: async () => ({
++        error: { message: 'malformed transient flag', code: 100, is_transient: 'false' },
++      }) })
++      .mockResolvedValueOnce({ ok: false, status: 400, json: async () => ({
++        error: { message: 'later acknowledgement ID', code: 100, is_transient: false }, messages: [{}, { id: 'later-id' }],
++      }) })
++      .mockResolvedValueOnce({ ok: false, status: 400, json: async () => ({
++        error: { message: 'malformed message ID', code: 100, is_transient: false }, messages: [{ id: 42 }],
++      }) })
++      .mockResolvedValueOnce({ ok: true, status: 200, json: async () => ({ messages: [{}, { id: 'second-id' }] }) })
++      .mockResolvedValueOnce({ ok: true, status: 200, json: async () => ({ messages: [{ id: 42 }] }) })
++      .mockResolvedValueOnce({ ok: true, status: 200, json: async () => ({ success: false, messages: [{ id: 'ack-with-false-success' }] }) })
++      .mockResolvedValueOnce({ ok: true, status: 200, json: async () => ({ success: false, messages: [{}] }) })
++      .mockResolvedValueOnce({ ok: true, status: 200, json: async () => ({ success: 'false', messages: [{ id: 'malformed-success' }] }) });
++    vi.stubGlobal('fetch', fetchFake);
++    const client = new MetaHttpClient();
++    await expect(client.enviarTexto('phone-id', '558400000000', 'hello', 'scoped'))
++      .resolves.toMatchObject({ outcome: 'REJECTED', code: 'META_RECUSOU' });
++    await expect(client.enviarTexto('phone-id', '558400000000', 'hello', 'scoped'))
++      .resolves.toMatchObject({ outcome: 'UNKNOWN', evidence: 'TRANSPORT_UNCONFIRMED' });
++    await expect(client.enviarTexto('phone-id', '558400000000', 'hello', 'scoped'))
++      .resolves.toMatchObject({ outcome: 'ACCEPTED', externalMessageId: 'wamid-1' });
++    await expect(client.enviarTexto('phone-id', '558400000000', 'hello', 'scoped'))
++      .resolves.toMatchObject({ outcome: 'UNKNOWN', evidence: 'ACK_WITHOUT_ID' });
++    await expect(client.enviarTexto('phone-id', '558400000000', 'hello', 'scoped'))
++      .resolves.toMatchObject({ outcome: 'UNKNOWN', evidence: 'TRANSPORT_UNCONFIRMED' });
++    await expect(client.enviarTexto('phone-id', '558400000000', 'hello', 'scoped'))
++      .resolves.toMatchObject({ outcome: 'UNKNOWN', evidence: 'TRANSPORT_UNCONFIRMED' });
++    await expect(client.enviarTexto('phone-id', '558400000000', 'hello', 'scoped'))
++      .resolves.toMatchObject({ outcome: 'UNKNOWN', evidence: 'TRANSPORT_UNCONFIRMED' });
++    await expect(client.enviarTexto('phone-id', '558400000000', 'hello', 'scoped'))
++      .resolves.toMatchObject({ outcome: 'UNKNOWN', evidence: 'TRANSPORT_UNCONFIRMED' });
++    await expect(client.enviarTexto('phone-id', '558400000000', 'hello', 'scoped'))
++      .resolves.toMatchObject({ outcome: 'UNKNOWN', evidence: 'TRANSPORT_UNCONFIRMED' });
++    await expect(client.enviarTexto('phone-id', '558400000000', 'hello', 'scoped'))
++      .resolves.toMatchObject({ outcome: 'UNKNOWN', evidence: 'TRANSPORT_UNCONFIRMED' });
++    await expect(client.enviarTexto('phone-id', '558400000000', 'hello', 'scoped'))
++      .resolves.toMatchObject({ outcome: 'UNKNOWN', evidence: 'TRANSPORT_UNCONFIRMED' });
++    await expect(client.enviarTexto('phone-id', '558400000000', 'hello', 'scoped'))
++      .resolves.toMatchObject({ outcome: 'UNKNOWN', evidence: 'TRANSPORT_UNCONFIRMED' });
++    await expect(client.enviarTexto('phone-id', '558400000000', 'hello', 'scoped'))
++      .resolves.toMatchObject({ outcome: 'UNKNOWN', evidence: 'TRANSPORT_UNCONFIRMED' });
++    await expect(client.enviarTexto('phone-id', '558400000000', 'hello', 'scoped'))
++      .resolves.toMatchObject({ outcome: 'UNKNOWN', evidence: 'TRANSPORT_UNCONFIRMED' });
++    await expect(client.enviarTexto('phone-id', '558400000000', 'hello', 'scoped'))
++      .resolves.toMatchObject({ outcome: 'UNKNOWN', evidence: 'TRANSPORT_UNCONFIRMED' });
++    await expect(client.enviarTexto('phone-id', '558400000000', 'hello', 'scoped'))
++      .resolves.toMatchObject({ outcome: 'UNKNOWN', evidence: 'TRANSPORT_UNCONFIRMED' });
++    expect(fetchFake).toHaveBeenCalledTimes(16);
++  });
++
+   it('requires both scoped permissions on the same WABA before listing phone numbers', async () => {
+     process.env.META_APP_ID = 'fake-id';
+     process.env.META_APP_SECRET = 'fake-secret';
+diff --git a/src/integrations/meta/meta.client.ts b/src/integrations/meta/meta.client.ts
+index 7185f10..0d928ee 100644
+--- a/src/integrations/meta/meta.client.ts
++++ b/src/integrations/meta/meta.client.ts
+@@ -1,4 +1,5 @@
+ import { Injectable } from '@nestjs/common';
++import type { ChannelSendResult } from '../../domain/channels/transport/channel';
+ 
+ export const META_CLIENT = Symbol('META_CLIENT');
+ 
+@@ -19,6 +20,7 @@ export interface MetaCapabilities {
+ /** Every customer operation is explicitly scoped to a decrypted channel token. */
+ export interface MetaClient {
+   configurado(): boolean;
++  canSendText(): boolean;
+   capabilities(): MetaCapabilities;
+   exchangeCode(code: string): Promise<{ accessToken: string }>;
+   recursos(accessToken: string, wabaId?: string, after?: string): Promise<{ wabas: Array<{ id: string; name: string | null }>; numbers: MetaNumber[]; next: string | null }>;
+@@ -27,7 +29,7 @@ export interface MetaClient {
+   verificarNumeroVinculado(wabaId: string, phoneNumberId: string, accessToken: string): Promise<MetaNumber | null>;
+   registrarNumero(phoneNumberId: string, pin: string, accessToken: string): Promise<void>;
+   inscreverWaba(wabaId: string, accessToken: string): Promise<void>;
+-  enviarTexto(phoneNumberId: string, para: string, texto: string, accessToken?: string): Promise<string | null>;
++  enviarTexto(phoneNumberId: string, para: string, texto: string, accessToken?: string): Promise<ChannelSendResult>;
+ }
+ 
+ export class MetaIndisponivelError extends Error {
+@@ -62,6 +64,7 @@ export class MetaHttpClient implements MetaClient {
+ 
+   /** Compatibility probe for callers being retired; never supplies a credential. */
+   configurado(): boolean { return this.capabilities().available; }
++  canSendText(): boolean { return this.graphVersionValida(); }
+ 
+   async exchangeCode(code: string): Promise<{ accessToken: string }> {
+     if (!this.capabilities().available) throw new MetaIndisponivelError('Autorização Meta indisponível.');
+@@ -183,12 +186,66 @@ export class MetaHttpClient implements MetaClient {
+     if (result.success !== true && result.success !== 'true') throw new MetaIndisponivelError('A Meta não confirmou a inscrição do webhook.');
+   }
+ 
+-  async enviarTexto(phoneNumberId: string, para: string, texto: string, accessToken: string) {
+-    if (!accessToken) throw new MetaIndisponivelError('Credencial scoped do canal necessária.');
+-    const result = await this.request(`/${encodeURIComponent(phoneNumberId)}/messages`, accessToken, 'POST', {
+-      messaging_product: 'whatsapp', to: para, type: 'text', text: { body: texto },
+-    }) as { messages?: Array<{ id?: string }> };
+-    return result.messages?.[0]?.id ?? null;
++  async enviarTexto(phoneNumberId: string, para: string, texto: string, accessToken?: string): Promise<ChannelSendResult> {
++    if (!accessToken) return { outcome: 'BLOCKED', reason: 'PENDING_CREDENTIAL' };
++    if (!phoneNumberId || !this.graphVersionValida()) return { outcome: 'BLOCKED', reason: 'CHANNEL_NOT_READY' };
++    let response: Response;
++    try {
++      response = await fetch(`https://graph.facebook.com/${this.graphVersion}/${encodeURIComponent(phoneNumberId)}/messages`, {
++        method: 'POST',
++        headers: { accept: 'application/json', authorization: `Bearer ${accessToken}`, 'content-type': 'application/json' },
++        body: JSON.stringify({ messaging_product: 'whatsapp', to: para, type: 'text', text: { body: texto } }),
++        signal: AbortSignal.timeout(10_000), redirect: 'error',
++      });
++    } catch {
++      return { outcome: 'UNKNOWN', evidence: 'TRANSPORT_UNCONFIRMED', legacyCode: 'META_RECUSOU' };
++    }
++
++    let payload: unknown;
++    try {
++      payload = await response.json();
++    } catch {
++      return { outcome: 'UNKNOWN', evidence: 'TRANSPORT_UNCONFIRMED', legacyCode: 'META_RECUSOU' };
++    }
++    if (!isRecord(payload)) {
++      return { outcome: 'UNKNOWN', evidence: 'TRANSPORT_UNCONFIRMED', legacyCode: 'META_RECUSOU' };
++    }
++    if (payload.messages !== undefined && !Array.isArray(payload.messages)) {
++      return { outcome: 'UNKNOWN', evidence: 'TRANSPORT_UNCONFIRMED', legacyCode: 'META_RECUSOU' };
++    }
++    if (payload.error !== undefined && payload.error !== null && !isRecord(payload.error)) {
++      return { outcome: 'UNKNOWN', evidence: 'TRANSPORT_UNCONFIRMED', legacyCode: 'META_RECUSOU' };
++    }
++    const messages = Array.isArray(payload.messages) ? payload.messages : [];
++    const first = messages[0];
++    const validMessageEnvelope = messages.every((message) => isRecord(message)
++      && (message.id === undefined || (typeof message.id === 'string' && message.id.trim().length > 0)));
++    const id = messages.length === 1 && isRecord(first) && typeof first.id === 'string' && first.id.trim() ? first.id : null;
++    const error = isRecord(payload.error) ? payload.error : null;
++    const successIndicatorValid = payload.success === undefined || typeof payload.success === 'boolean';
++    const contradictedFailure = payload.success === false;
++    if (response.ok && successIndicatorValid && !contradictedFailure && !error && id) {
++      return { outcome: 'ACCEPTED', externalMessageId: id };
++    }
++
++    const refusalStatus = response.status === 400 || response.status === 401 || response.status === 403;
++    const validGraphError = error !== null
++      && typeof error.message === 'string' && error.message.length > 0
++      && typeof error.code === 'number';
++    const transientFieldValid = error && (error.is_transient === undefined || typeof error.is_transient === 'boolean');
++    const contradictorySuccess = payload.success === true;
++    const stableRefusal = validGraphError && transientFieldValid && error.is_transient !== true
++      && [10, 100, 190].includes(error.code as number);
++    if (refusalStatus && stableRefusal && successIndicatorValid && !contradictorySuccess
++      && (payload.messages === undefined || messages.length === 0)) {
++      return { outcome: 'REJECTED', code: 'META_RECUSOU' };
++    }
++    const validAckWithoutId = Array.isArray(payload.messages) && messages.length === 1
++      && validMessageEnvelope && isRecord(first) && first.id === undefined;
++    if (response.ok && successIndicatorValid && !contradictedFailure && !error && validAckWithoutId) {
++      return { outcome: 'UNKNOWN', evidence: 'ACK_WITHOUT_ID', legacyCode: 'META_RECUSOU' };
++    }
++    return { outcome: 'UNKNOWN', evidence: 'TRANSPORT_UNCONFIRMED', legacyCode: 'META_RECUSOU' };
+   }
+ 
+   private async request(path: string, accessToken?: string, method: 'GET' | 'POST' = 'GET', body?: unknown) {
+diff --git a/src/surfaces/bff/bff.module.ts b/src/surfaces/bff/bff.module.ts
+index 0362b53..eb5b6ab 100644
+--- a/src/surfaces/bff/bff.module.ts
++++ b/src/surfaces/bff/bff.module.ts
+@@ -5,9 +5,7 @@ import { LoginAttemptService } from '../../domain/identity/login-attempt.service
+ import { PasswordService } from '../../domain/identity/password.service';
+ import { SessionService } from '../../infra/session/session.service';
+ import { ChannelsService } from '../../domain/channels/channels.service';
+-import { ChannelCredentialResolver } from '../../domain/channels/channel-credential-resolver';
+ import { NumberRegistrationService } from '../../domain/channels/number-registration.service';
+-import { MessageAcceptanceService } from '../../domain/inbox/message-acceptance.service';
+ import { NumberRegistrationsController } from './number-registrations.controller';
+ import { ConversationsService } from '../../domain/inbox/conversations.service';
+ import { HistoricoService } from '../../domain/inbox/historico.service';
+@@ -24,8 +22,7 @@ import { EnvioDeEmail, ResendEmail } from '../../integrations/email/email.client
+ import { TokensService } from '../../domain/acesso/tokens.service';
+ import { ConvitesService } from '../../domain/acesso/convites.service';
+ import { LimiteDeRecuperacao } from '../../domain/acesso/limite-de-recuperacao.service';
+-import { EVOLUTION_CLIENT, EvolutionHttpClient } from '../../integrations/evolution/evolution.client';
+-import { META_CLIENT, MetaHttpClient } from '../../integrations/meta/meta.client';
++import { ChannelTransportModule } from '../../integrations/channels/channel-transport.module';
+ import { AuthController } from './auth.controller';
+ import { ChannelsController } from './channels.controller';
+ import { ConversationsController } from './conversations.controller';
+@@ -50,6 +47,7 @@ import { TYPEBOT_CLIENT, TypebotHttpClient } from '../../integrations/typebot/ty
+  * Hub, um router.use(requireAuth) sem path interceptou o webhook público.
+  */
+ @Module({
++  imports: [ChannelTransportModule],
+   controllers: [
+     AuthController,
+     MeController,
+@@ -73,9 +71,7 @@ import { TYPEBOT_CLIENT, TypebotHttpClient } from '../../integrations/typebot/ty
+     LoginAttemptService,
+     AccessService,
+     ChannelsService,
+-    ChannelCredentialResolver,
+     NumberRegistrationService,
+-    MessageAcceptanceService,
+     ConversationsService,
+     HistoricoService,
+     UsuariosService,
+@@ -95,8 +91,6 @@ import { TYPEBOT_CLIENT, TypebotHttpClient } from '../../integrations/typebot/ty
+     // Adaptadores de SAÍDA por porta (ADR-0006, Emenda 1): o domínio depende da
+     // interface, não do HTTP. É o que deixa o teste provar permissão sem a Meta
+     // nem a Evolution no ar.
+-    { provide: META_CLIENT, useClass: MetaHttpClient },
+-    { provide: EVOLUTION_CLIENT, useClass: EvolutionHttpClient },
+     { provide: TYPEBOT_CLIENT, useClass: TypebotHttpClient },
+   ],
+   exports: [SessionService, PasswordService],
+diff --git a/src/surfaces/bff/conversations.controller.ts b/src/surfaces/bff/conversations.controller.ts
+index e2f56cb..be602b7 100644
+--- a/src/surfaces/bff/conversations.controller.ts
++++ b/src/surfaces/bff/conversations.controller.ts
+@@ -71,6 +71,8 @@ export class ConversationsController {
+         aberta: janela.aberta,
+         expiraEm: janela.expiraEm,
+         canal: janela.canal?.type ?? null,
++        disponivel: janela.disponivel,
++        motivo: janela.motivoIndisponibilidade,
+       },
+       messages: timeline.messages,
+       paginacao: timeline.paginacao,
+@@ -88,9 +90,10 @@ export class ConversationsController {
+       throw new BadRequestException({ error: 'Mensagem muito longa (máx. 4096).', code: 'TEXTO_LONGO' });
+     }
+ 
+-    const m = await this.conversas.responder(conversa.id, texto, {
++    const m = await this.conversas.responder(conversa.id, conversa.buId, texto, {
++      kind: 'BFF',
+       userId: req.usuario!.id,
+-      nome: req.usuario!.nome,
++      name: req.usuario!.nome,
+     });
+     return { id: m.id, canal: m.channelOrigin, em: m.createdAt };
+   }
+diff --git a/src/surfaces/public/conversations.controller.ts b/src/surfaces/public/conversations.controller.ts
+index 435ee64..36821fa 100644
+--- a/src/surfaces/public/conversations.controller.ts
++++ b/src/surfaces/public/conversations.controller.ts
+@@ -74,12 +74,15 @@ export class PublicConversationsController {
+       where,
+       orderBy: { lastMessageAt: 'desc' },
+       take: limite + 1,
+-      include: { messages: { orderBy: { createdAt: 'desc' }, take: 1 } },
++      include: { messages: { orderBy: [{ createdAt: 'desc' }, { id: 'desc' }], take: 1 } },
+     });
+ 
+-    const conversas = await Promise.all(
+-      linhas.slice(0, limite).map(async (c) => {
+-        const janela = await this.conversas.estadoDaJanela(c.id, buId);
++    const pagina = linhas.slice(0, limite);
++    const estados = await this.conversas.estadosDasJanelas(pagina.map((c) => ({
++      conversationId: c.id, buId, latestMessageOrigin: c.messages[0]?.channelOrigin ?? null,
++    })));
++    const conversas = pagina.map((c) => {
++        const janela = estados.get(c.id);
+         return {
+           telefone: c.contact,
+           nome_whatsapp: c.displayName,
+@@ -91,11 +94,12 @@ export class PublicConversationsController {
+           nao_lidas: c.unreadCount,
+           // Campo generalizado: quem integrou só o Hub recebe `true` e não muda
+           // nada; quem integrou a Central continua lendo o que já lia.
+-          janela_aberta: janela.aberta,
+-          janela_expira_em: janela.expiraEm?.toISOString() ?? null,
++          janela_aberta: janela?.windowOpen ?? false,
++          janela_expira_em: janela?.expiresAt?.toISOString() ?? null,
++          envio_disponivel: janela?.available ?? false,
++          motivo_indisponibilidade: janela ? janela.reason : 'CANAL_SELECIONADO_INDISPONIVEL',
+         };
+-      }),
+-    );
++      });
+ 
+     return { conta: { id: buId }, conversations: conversas, truncado: linhas.length > limite };
+   }
+@@ -125,6 +129,8 @@ export class PublicConversationsController {
+     return {
+       telefone: conversa.contact,
+       janela_aberta: janela.aberta,
++      envio_disponivel: janela.disponivel,
++      motivo_indisponibilidade: janela.motivoIndisponibilidade,
+       messages: mensagens.map((m) => ({
+         id: m.id,
+         direcao: m.direction === 'OUT' ? 'enviada' : 'recebida',
+@@ -156,15 +162,7 @@ export class PublicConversationsController {
+ 
+     const conversa = await this.conversaOuNova(buId, telefone);
+     const atendente = String(body?.atendente ?? '').trim() || req.chave!.nome;
+-    const m = await this.conversas.responder(conversa.id, texto, { userId: '', nome: atendente });
+-
+-    // Quem responde pela API pública não é usuário daqui: fica só o snapshot do
+-    // nome, e a origem EXTERNO (ADR-0009 §2).
+-    await this.prisma.message.update({ where: { id: m.id }, data: { authorUserId: null } });
+-    await this.prisma.conversation.update({
+-      where: { id: conversa.id },
+-      data: { attendantOrigin: 'EXTERNO', attendantUserId: null, attendantName: atendente },
+-    });
++    const m = await this.conversas.responder(conversa.id, buId, texto, { kind: 'PUBLIC', name: atendente });
+ 
+     return { ok: true, message_id: m.id, canal: m.channelOrigin };
+   }
+diff --git a/src/surfaces/public/public.module.ts b/src/surfaces/public/public.module.ts
+index ac67d94..28df6fd 100644
+--- a/src/surfaces/public/public.module.ts
++++ b/src/surfaces/public/public.module.ts
+@@ -2,12 +2,9 @@ import { MiddlewareConsumer, Module, NestModule, RequestMethod } from '@nestjs/c
+ import { ApiKeyService } from '../../domain/integration/api-key.service';
+ import { RateLimitService } from '../../domain/integration/rate-limit.service';
+ import { ConversationsService } from '../../domain/inbox/conversations.service';
+-import { EVOLUTION_CLIENT, EvolutionHttpClient } from '../../integrations/evolution/evolution.client';
+-import { META_CLIENT, MetaHttpClient } from '../../integrations/meta/meta.client';
++import { ChannelTransportModule } from '../../integrations/channels/channel-transport.module';
+ import { ApiKeyMiddleware } from './api-key.middleware';
+ import { PublicConversationsController } from './conversations.controller';
+-import { MessageAcceptanceService } from '../../domain/inbox/message-acceptance.service';
+-import { ChannelCredentialResolver } from '../../domain/channels/channel-credential-resolver';
+ 
+ /**
+  * Superfície pública (ADR-0010): `/api/v1` no host novo, chave `lh_` da
+@@ -15,15 +12,12 @@ import { ChannelCredentialResolver } from '../../domain/channels/channel-credent
+  * terceiro, não refatoração.
+  */
+ @Module({
++  imports: [ChannelTransportModule],
+   controllers: [PublicConversationsController],
+   providers: [
+     ApiKeyService,
+     RateLimitService,
+     ConversationsService,
+-    MessageAcceptanceService,
+-    ChannelCredentialResolver,
+-    { provide: META_CLIENT, useClass: MetaHttpClient },
+-    { provide: EVOLUTION_CLIENT, useClass: EvolutionHttpClient },
+   ],
+   exports: [ApiKeyService],
+ })
+diff --git a/src/surfaces/webhooks/webhooks.module.ts b/src/surfaces/webhooks/webhooks.module.ts
+index 06033d7..8c413e4 100644
+--- a/src/surfaces/webhooks/webhooks.module.ts
++++ b/src/surfaces/webhooks/webhooks.module.ts
+@@ -2,11 +2,8 @@ import { Module } from '@nestjs/common';
+ import { IncomingService } from '../../domain/inbox/incoming.service';
+ import { EvolutionWebhookController } from './evolution.controller';
+ import { MetaWebhookController } from './meta.controller';
+-import { META_CLIENT, MetaHttpClient } from '../../integrations/meta/meta.client';
+ import { TYPEBOT_CLIENT, TypebotHttpClient } from '../../integrations/typebot/typebot.client';
+-import { MessageAcceptanceService } from '../../domain/inbox/message-acceptance.service';
+-import { ChannelCredentialResolver } from '../../domain/channels/channel-credential-resolver';
+-import { EVOLUTION_CLIENT, EvolutionHttpClient } from '../../integrations/evolution/evolution.client';
++import { ChannelTransportModule } from '../../integrations/channels/channel-transport.module';
+ 
+ /**
+  * Superfície de webhooks (ADR-0006): terceiros empurrando evento.
+@@ -18,7 +15,8 @@ import { EVOLUTION_CLIENT, EvolutionHttpClient } from '../../integrations/evolut
+  * esquecimento.
+  */
+ @Module({
++  imports: [ChannelTransportModule],
+   controllers: [MetaWebhookController, EvolutionWebhookController],
+-  providers: [IncomingService, MessageAcceptanceService, ChannelCredentialResolver, { provide: META_CLIENT, useClass: MetaHttpClient }, { provide: EVOLUTION_CLIENT, useClass: EvolutionHttpClient }, { provide: TYPEBOT_CLIENT, useClass: TypebotHttpClient }],
++  providers: [IncomingService, { provide: TYPEBOT_CLIENT, useClass: TypebotHttpClient }],
+ })
+ export class WebhooksModule {}
+diff --git a/test/api-publica.e2e-spec.ts b/test/api-publica.e2e-spec.ts
+index f2df824..c580964 100644
+--- a/test/api-publica.e2e-spec.ts
++++ b/test/api-publica.e2e-spec.ts
+@@ -140,6 +140,8 @@ describe('API pública v1', () => {
+       const c = res.body.conversations[0];
+       expect(c.telefone).toBe(CONTATO);
+       expect(c.janela_aberta).toBe(true);
++      expect(c.envio_disponivel).toBe(true);
++      expect(c.motivo_indisponibilidade).toBeNull();
+       expect(c.ultima_em).toMatch(/^\d{4}-\d{2}-\d{2}T.*Z$/);
+     });
+ 
+diff --git a/test/browser-server.cjs b/test/browser-server.cjs
+index 1bb1524..16cdcb9 100644
+--- a/test/browser-server.cjs
++++ b/test/browser-server.cjs
+@@ -56,6 +56,7 @@ const db = process.env.DATABASE_URL;
+   };
+   const metaFake = {
+     capabilities: () => ({ appId: 'fixture-app', configId: 'fixture-config', graphVersion: 'v26.0', available: true, reason: 'AVAILABLE' }),
++    canSendText: () => true,
+     configurado: () => true,
+     async exchangeCode(code) { await call('meta.exchange', { codeLength: String(code ?? '').length }); const safeCode = String(code ?? ''); const state = await fixture('/provider/state'); if (!Object.hasOwn(state.meta.grantResourceIds ?? {}, safeCode)) throw new Error('unknown fixture authorization grant'); return { accessToken: `timeline-code-token:${Buffer.from(safeCode).toString('base64url')}` }; },
+     async recursos(accessToken, wabaId, after) {
+@@ -102,7 +103,11 @@ const db = process.env.DATABASE_URL;
+       const permitted = accessToken === `timeline-scoped-token:${phoneNumberId}`
+         || (await providerResources(accessToken)).some((r) => r.id === phoneNumberId);
+       if (!permitted) throw new Error('verified scoped resource required');
+-      await call('meta.send', { phoneNumberId }); metaFake.enviados.push(texto); return `timeline-wamid-${metaFake.enviados.length}`;
++      await call('meta.send', { phoneNumberId }); metaFake.enviados.push(texto);
++      const state = await fixture('/provider/state');
++      return state.meta.sendMode === 'unknown'
++        ? { outcome: 'UNKNOWN', evidence: 'ACK_WITHOUT_ID', legacyCode: 'META_RECUSOU' }
++        : { outcome: 'ACCEPTED', externalMessageId: `timeline-wamid-${metaFake.enviados.length}` };
+     },
+     enviados: [],
+   };
+@@ -127,7 +132,7 @@ const db = process.env.DATABASE_URL;
+         const response = await fetch(`http://127.0.0.1:${process.env.PORT ?? '3100'}/webhooks/evolution`, { method: 'POST', headers: { 'content-type': 'application/json', 'x-leadshug-webhook-secret': process.env.EVOLUTION_WEBHOOK_SECRET }, body: JSON.stringify(payload) });
+         if (!response.ok) throw new Error('authenticated fixture webhook rejected');
+       }
+-      return id;
++      return { outcome: 'ACCEPTED', externalMessageId: id };
+     },
+     enviados: [],
+   };
+diff --git a/test/helpers.ts b/test/helpers.ts
+index 95048e3..50b8da8 100644
+--- a/test/helpers.ts
++++ b/test/helpers.ts
+@@ -3,6 +3,7 @@ import { Test } from '@nestjs/testing';
+ import type { NestExpressApplication } from '@nestjs/platform-express';
+ import request from 'supertest';
+ import { AppModule } from '../src/app.module';
++import { ChannelAdapterRegistry } from '../src/integrations/channels/channel-adapter-registry';
+ import { configurarBodyParsers } from '../src/infra/http/body-parsers';
+ import { PrismaService } from '../src/infra/prisma/prisma.service';
+ import { EVOLUTION_CLIENT, EvolutionClient } from '../src/integrations/evolution/evolution.client';
+@@ -52,10 +53,13 @@ export const metaFake: MetaClient & { wabaRecusada: string | null; wabaRecursos:
+     if (accessToken !== expected) throw new Error('scoped credential required');
+     metaFake.enviados.push({ para, texto });
+     const id = `wamid-enviado-${metaFake.enviados.length}`;
+-    if (!metaFake.sendIdNull) await metaFake.sendHook?.(id, para, texto);
+-    return metaFake.sendIdNull ? null : id;
++    await metaFake.sendHook?.(id, para, texto);
++    return metaFake.sendIdNull
++      ? { outcome: 'UNKNOWN', evidence: 'ACK_WITHOUT_ID', legacyCode: 'META_RECUSOU' }
++      : { outcome: 'ACCEPTED', externalMessageId: id };
+   },
+   configurado: () => true,
++  canSendText: () => true,
+   async numerosDaWaba(wabaId: string, accessToken?: string, after?: string) {
+     metaFake.providerCalls += 1;
+     if (metaFake.wabaRecusada === wabaId || accessToken !== 'fixture-scoped-token') throw new Error('WABA recusada');
+@@ -96,8 +100,10 @@ export const evolutionFake: EvolutionClient & { enviados: { para: string; texto:
+     evolutionFake.providerCalls += 1;
+     evolutionFake.enviados.push({ para, texto });
+     const id = `evo-enviado-${evolutionFake.enviados.length}`;
+-    if (!evolutionFake.sendIdNull) await evolutionFake.sendHook?.(id, para, texto);
+-    return evolutionFake.sendIdNull ? null : id;
++    await evolutionFake.sendHook?.(id, para, texto);
++    return evolutionFake.sendIdNull
++      ? { outcome: 'UNKNOWN', evidence: 'ACK_WITHOUT_ID', legacyCode: 'EVOLUTION_RECUSOU' }
++      : { outcome: 'ACCEPTED', externalMessageId: id };
+   },
+   async criarInstancia(nome) {
+     evolutionFake.providerCalls += 1;
+@@ -140,14 +146,14 @@ export async function contratarCanalNaoOficial(prisma: PrismaService, mantenedor
+ export const TOKEN_INTERNO = 'token-interno-de-teste';
+ export const META_APP_SECRET = 'segredo-do-app-meta';
+ export const EVOLUTION_WEBHOOK_SECRET = 'fixture-evolution-secret-header';
+-export const typebotFake: TypebotClient & { enabled: boolean; starts: number; continues: number; startedBots: Array<{ botId: string; contact: string; text: string }> } = {
+-  enabled: false, starts: 0, continues: 0, startedBots: [],
++export const typebotFake: TypebotClient & { enabled: boolean; starts: number; continues: number; startedBots: Array<{ botId: string; contact: string; text: string }>; beforeReply: (() => Promise<void>) | null } = {
++  enabled: false, starts: 0, continues: 0, startedBots: [], beforeReply: null,
+   configurado() { return typebotFake.enabled; }, async listarBots() { return []; }, editorUrl(id) { return `https://typebot.invalid/${id}`; }, workspaceUrl() { return 'https://typebot.invalid'; },
+-  async iniciar(botId, contact, text) { typebotFake.starts += 1; typebotFake.startedBots.push({ botId, contact, text }); return { sessionId: `fixture-typebot-${typebotFake.starts}`, messages: [{ type: 'text', content: { text: 'resposta do bot' } }] }; },
++  async iniciar(botId, contact, text) { typebotFake.starts += 1; typebotFake.startedBots.push({ botId, contact, text }); await typebotFake.beforeReply?.(); return { sessionId: `fixture-typebot-${typebotFake.starts}`, messages: [{ type: 'text', content: { text: 'resposta do bot' } }] }; },
+   async continuar() { typebotFake.continues += 1; return { messages: [] }; },
+ };
+ 
+-export async function subirApp(): Promise<{ app: INestApplication; prisma: PrismaService }> {
++export async function subirApp(registryOverride?: ChannelAdapterRegistry, captureQueries = false): Promise<{ app: INestApplication; prisma: PrismaService }> {
+   process.env.SESSION_SECRET ||= 'segredo-de-teste';
+   process.env.INTERNAL_SERVICE_TOKEN = TOKEN_INTERNO;
+   process.env.META_APP_ID = 'fixture-app';
+@@ -160,14 +166,18 @@ export async function subirApp(): Promise<{ app: INestApplication; prisma: Prism
+   process.env.CHANNEL_CREDENTIAL_KEY_ID = 'fixture-key-v1';
+   process.env.CHANNEL_CREDENTIAL_KEY = Buffer.alloc(32, 17).toString('base64');
+ 
+-  const moduleRef = await Test.createTestingModule({ imports: [AppModule] })
++  const testingModule = Test.createTestingModule({ imports: [AppModule] })
+     .overrideProvider(META_CLIENT)
+     .useValue(metaFake)
+     .overrideProvider(EVOLUTION_CLIENT)
+     .useValue(evolutionFake)
+     .overrideProvider(TYPEBOT_CLIENT)
+-    .useValue(typebotFake)
+-    .compile();
++    .useValue(typebotFake);
++  if (captureQueries) {
++    testingModule.overrideProvider(PrismaService).useValue(new PrismaService({ log: [{ emit: 'event', level: 'query' }] }));
++  }
++  if (registryOverride) testingModule.overrideProvider(ChannelAdapterRegistry).useValue(registryOverride);
++  const moduleRef = await testingModule.compile();
+   // A MESMA fiação de produção: sem isto o corpo bruto não existe e o teste de
+   // assinatura passaria a provar outra coisa.
+   const app = moduleRef.createNestApplication({ bodyParser: false });
+@@ -207,7 +217,7 @@ export async function limparBanco(prisma: PrismaService): Promise<void> {
+   metaFake.registrosNumero = 0;
+   metaFake.wabaRecusada = null;
+   metaFake.confirmHook = null; metaFake.registrosHook = null; metaFake.confirmCalls = 0; metaFake.subscriptionHook = null;
+-  typebotFake.enabled = false; typebotFake.starts = 0; typebotFake.continues = 0; typebotFake.startedBots.length = 0;
++  typebotFake.enabled = false; typebotFake.starts = 0; typebotFake.continues = 0; typebotFake.startedBots.length = 0; typebotFake.beforeReply = null;
+   evolutionFake.ownerPhone = '5584999990000'; evolutionFake.createdState = 'open'; evolutionFake.deleteFails = false;
+   await prisma.webhookEvent.deleteMany();
+   await prisma.message.deleteMany();
+diff --git a/test/number-onboarding-pcv.e2e-spec.ts b/test/number-onboarding-pcv.e2e-spec.ts
+index ef658e0..6d659dc 100644
+--- a/test/number-onboarding-pcv.e2e-spec.ts
++++ b/test/number-onboarding-pcv.e2e-spec.ts
+@@ -1,16 +1,25 @@
+ import { INestApplication } from '@nestjs/common';
+ import request from 'supertest';
+ import { performance } from 'node:perf_hooks';
++import { Prisma } from '@prisma/client';
+ import { afterAll, beforeAll, describe, expect, it } from 'vitest';
+ import { ChannelCredentialResolver } from '../src/domain/channels/channel-credential-resolver';
+ import { PrismaService } from '../src/infra/prisma/prisma.service';
+ import { criarCanalVerificado, criarMantenedora, limparBanco, login, metaFake, evolutionFake, subirApp } from './helpers';
+ 
++function postgresErrorCode(error: unknown): string | undefined {
++  if (typeof error !== 'object' || error === null || !('meta' in error)) return undefined;
++  const meta = (error as { meta?: unknown }).meta;
++  if (typeof meta !== 'object' || meta === null || !('code' in meta)) return undefined;
++  const code = (meta as { code?: unknown }).code;
++  return typeof code === 'string' ? code : undefined;
++}
++
+ describe('number onboarding bounded performance and read-scope probes (PostgreSQL)', () => {
+   let app: INestApplication;
+   let prisma: PrismaService;
+ 
+-  beforeAll(async () => { ({ app, prisma } = await subirApp()); await app.listen(0, '127.0.0.1'); await limparBanco(prisma); });
++  beforeAll(async () => { ({ app, prisma } = await subirApp(undefined, true)); await app.listen(0, '127.0.0.1'); await limparBanco(prisma); });
+   afterAll(async () => { if (prisma) await limparBanco(prisma); await app?.close(); });
+ 
+   it('captures the attempt exact-lookup plan and bounded response timings (EPS-E2)', async () => {
+@@ -98,7 +107,284 @@ describe('number onboarding bounded performance and read-scope probes (PostgreSQ
+     console.log(`[NUM-PERF-01-EVIDENCE]${JSON.stringify(evidence)}`);
+     expect(resolved).toMatchObject({ providerResourceIdentityId: identity.id, externalResourceId: 'eps-current-resource', buId: tenant.businessUnit.id });
+     expect(planText).toContain('provider_resource_identities_current_channel_id_idx');
+-    expect(planText).toMatch(/Index Scan|Bitmap Index Scan/);
++    expect(planText).toMatch(/Index (Only )?Scan|Bitmap Index Scan/);
++  });
++
++  it('batches public-list channel metadata to one binding, credential, and window query for a 30-conversation page', async () => {
++    const tenant = await criarMantenedora(app, 'Channel list EPS', 'channel-list-eps@example.test');
++    const cookie = await login(app, 'channel-list-eps@example.test');
++    await criarCanalVerificado(prisma, tenant.businessUnit.id, 'OFICIAL', 'channel-list-eps-resource');
++    const phone = '5586777000001';
++    const conversations = await Promise.all(Array.from({ length: 30 }, (_, index) => prisma.conversation.create({ data: {
++      buId: tenant.businessUnit.id, contact: `${phone}${String(index).padStart(2, '0')}`, contactType: 'PESSOA', status: 'QUEUED',
++    } })));
++    await prisma.message.createMany({ data: conversations.map((conversation, index) => ({
++      conversationId: conversation.id, buId: tenant.businessUnit.id, direction: 'IN', messageType: 'TEXTO',
++      content: `channel list inbound ${index}`, channelOrigin: 'OFICIAL', status: 'RECEBIDA', createdAt: new Date(Date.now() - index * 1000),
++    })) });
++    const historicalInbound = conversations.flatMap((conversation, conversationIndex) => Array.from({ length: 24 }, (_, historyIndex) => ({
++      conversationId: conversation.id, buId: tenant.businessUnit.id, direction: 'IN' as const, messageType: 'TEXTO' as const,
++      content: `channel list older inbound ${conversationIndex}/${historyIndex}`, channelOrigin: 'OFICIAL' as const, status: 'RECEBIDA' as const,
++      createdAt: new Date(Date.now() - 2 * 60 * 60 * 1000 - historyIndex * 1000),
++    })));
++    await prisma.message.createMany({ data: historicalInbound });
++    const key = await request(app.getHttpServer()).post('/api/bff/integracao/api-keys').set('Cookie', cookie)
++      .set('x-requested-with', 'eps').send({ nome: 'Channel list EPS key', buIds: [tenant.businessUnit.id] }).expect(201);
++    const sqlStatements: string[] = [];
++    prisma.$on('query', ({ query }) => sqlStatements.push(query));
++    const providerCallsBefore = { meta: metaFake.providerCalls, evolution: evolutionFake.providerCalls };
++    const started = performance.now();
++    const response = await request(app.getHttpServer()).get('/api/v1/conversations')
++      .query({ account_id: tenant.businessUnit.id, limit: 30 })
++      .set('Authorization', `Bearer ${key.body.chave}`).expect(200);
++    const elapsedMs = performance.now() - started;
++    const channelQueryCount = sqlStatements.filter((query) => query.includes('FROM "public"."bu_channels"')).length;
++    const credentialQueryCount = sqlStatements.filter((query) => query.includes('FROM "public"."channel_credentials"')).length;
++    const windowQueryCount = sqlStatements.filter((query) => query.includes('FROM unnest(ARRAY') && query.includes('LIMIT 1')).length;
++    const providerCallsAfter = { meta: metaFake.providerCalls, evolution: evolutionFake.providerCalls };
++    const ids = conversations.map(({ id }) => id);
++    await prisma.$executeRaw`ANALYZE messages`;
++    const planRows = await prisma.$queryRaw<Array<{ 'QUERY PLAN': unknown }>>`
++      EXPLAIN (ANALYZE, BUFFERS, FORMAT JSON)
++      SELECT requested.conversation_id, latest.created_at
++      FROM unnest(ARRAY[${Prisma.join(ids)}]::text[]) AS requested(conversation_id)
++      CROSS JOIN LATERAL (
++        SELECT message.created_at
++        FROM messages AS message
++        WHERE message.conversation_id = requested.conversation_id AND message.direction = 'IN'
++        ORDER BY message.created_at DESC, message.id DESC
++        LIMIT 1
++      ) AS latest
++    `;
++    const evidence = {
++      policy_schema_version: 'pcv-1', lane_id: 'EPS', trigger_result: 'required', trigger_severity: 'medium',
++      trigger_reason_code: 'EPS-DATA-PATH-CHANGED', gate_deadline: 'before_local_implemented',
++      min_evidence_rule_id: 'EPS-E2', acceptance_rule_id: 'EPS-A2', sample_profile: 'EPS-SP-STRONG',
++      access_pattern_classification: 'Public conversation page loads selected BU channels once, official credential metadata once, and one latest-IN SQL statement using an indexed LIMIT 1 lookup per conversation; no provider credentials are decrypted or probed.',
++      pageConversations: response.body.conversations.length,
++      historyRowsPerConversation: historicalInbound.length / conversations.length,
++      availabilitySample: response.body.conversations.slice(0, 3).map((row: Record<string, unknown>) => ({
++        available: row.envio_disponivel, reason: row.motivo_indisponibilidade, windowOpen: row.janela_aberta,
++      })),
++      queryCounts: { buChannelFindMany: channelQueryCount, channelCredentialFindMany: credentialQueryCount, latestInboundWindowProjection: windowQueryCount },
++      elapsedMs,
++      explainLatestInboundProjection: planRows[0]?.['QUERY PLAN'] ?? null,
++      providerCallsBefore: providerCallsBefore,
++      providerCallsAfter,
++      limits: 'Disposable PostgreSQL and one bounded 30-conversation public page; local query count/plan observation, not a capacity or latency SLO claim.',
++    };
++    console.log(`[CHANNEL-EPS-EVIDENCE]${JSON.stringify(evidence)}`);
++    expect(response.body.conversations).toHaveLength(30);
++    expect(response.body.conversations.every((row: { envio_disponivel: boolean }) => row.envio_disponivel), JSON.stringify(evidence.availabilitySample)).toBe(true);
++    expect(evidence.queryCounts).toEqual({ buChannelFindMany: 1, channelCredentialFindMany: 1, latestInboundWindowProjection: 1 });
++    expect(providerCallsAfter).toEqual(providerCallsBefore);
++    expect(planRows[0]?.['QUERY PLAN']).toBeTruthy();
++    const planText = JSON.stringify(planRows[0]?.['QUERY PLAN'] ?? null);
++    expect(planText).toContain('Limit');
++    expect(planText).toMatch(/Index (Only )?Scan|Bitmap Index Scan/);
++    expect(planText).toContain('messages_conversation_direction_created_id_idx');
++    expect(planText).toContain("direction = 'IN'");
++  });
++
++  it('measures OUT-heavy and OUT-only latest-IN work with actual PostgreSQL rows removed and buffers', async () => {
++    const tenant = await criarMantenedora(app, 'Channel history bound', 'channel-history-bound@example.test');
++    await criarCanalVerificado(prisma, tenant.businessUnit.id, 'OFICIAL', 'channel-history-bound-resource');
++    const pageSize = 500;
++    const conversationIds = Array.from({ length: pageSize }, (_, index) => `cb000000-0000-4000-8000-${String(index + 1).padStart(12, '0')}`);
++    await prisma.conversation.createMany({ data: conversationIds.map((id, index) => ({
++      id, buId: tenant.businessUnit.id, contact: `history-bound-${index}`, contactType: 'PESSOA' as const, status: 'QUEUED' as const,
++    })) });
++    const conversations = conversationIds.map((id) => ({ id }));
++    const oldestInboundAt = new Date(Date.now() - 48 * 60 * 60 * 1000);
++    const outSuffixLength = 500;
++    const outboundHistory = conversations.slice(0, 2).flatMap((conversation, conversationIndex) => Array.from({ length: outSuffixLength }, (_, index) => ({
++      conversationId: conversation.id, buId: tenant.businessUnit.id, direction: 'OUT' as const, messageType: 'TEXTO' as const,
++      content: `history bound ${conversationIndex}/${index}`, channelOrigin: 'OFICIAL' as const, status: 'ENVIADA' as const,
++      createdAt: new Date(oldestInboundAt.getTime() + 60 * 60 * 1000 + index * 1000),
++    })));
++    await prisma.message.createMany({ data: [
++      { conversationId: conversations[0].id, buId: tenant.businessUnit.id, direction: 'IN', messageType: 'TEXTO', content: 'older inbound behind OUT suffix', channelOrigin: 'OFICIAL', status: 'RECEBIDA', createdAt: oldestInboundAt },
++      { conversationId: conversations[2].id, buId: tenant.businessUnit.id, direction: 'IN', messageType: 'TEXTO', content: 'equal-time inbound lower id', channelOrigin: 'OFICIAL', status: 'RECEBIDA', id: 'cb100000-0000-4000-8000-000000000001', createdAt: oldestInboundAt },
++      { conversationId: conversations[2].id, buId: tenant.businessUnit.id, direction: 'IN', messageType: 'TEXTO', content: 'equal-time inbound higher id', channelOrigin: 'OFICIAL', status: 'RECEBIDA', id: 'cb100000-0000-4000-8000-000000000002', createdAt: oldestInboundAt },
++      ...outboundHistory,
++    ] });
++    await prisma.$executeRaw`ANALYZE messages`;
++    const ids = conversations.map(({ id }) => id);
++    const planRows = await prisma.$queryRaw<Array<{ 'QUERY PLAN': unknown }>>`
++      EXPLAIN (ANALYZE, BUFFERS, FORMAT JSON)
++      SELECT requested.conversation_id, latest.created_at
++      FROM unnest(ARRAY[${Prisma.join(ids)}]::text[]) AS requested(conversation_id)
++      CROSS JOIN LATERAL (
++        SELECT message.created_at
++        FROM messages AS message
++        WHERE message.conversation_id = requested.conversation_id AND message.direction = 'IN'
++        ORDER BY message.created_at DESC, message.id DESC
++        LIMIT 1
++      ) AS latest
++    `;
++    const plan = (planRows[0]?.['QUERY PLAN'] as Array<{ Plan?: Record<string, unknown>; 'Execution Time'?: number }> | undefined)?.[0];
++    const summarize = (node: Record<string, unknown>): { removed: number; nodes: Array<Record<string, unknown>> } => {
++      const children = (node.Plans as Array<Record<string, unknown>> | undefined) ?? [];
++      const below = children.map(summarize);
++      const loops = Number(node['Actual Loops'] ?? 1);
++      const removed = Number(node['Rows Removed by Filter'] ?? 0) * loops + below.reduce((sum, child) => sum + child.removed, 0);
++      return { removed, nodes: [node, ...below.flatMap((child) => child.nodes)] };
++    };
++    const planSummary = plan?.Plan ? summarize(plan.Plan) : { removed: 0, nodes: [] };
++    const evidence = {
++      finding_id: 'PERF-01', policy_schema_version: 'pcv-1',
++      fixture: { conversations: conversations.length, outSuffixLength, hasOlderInbound: true, hasOutOnlyHistory: true, equalTimeTie: true, pageAtMaximum: true },
++      actual: {
++        rowsRemovedByFilter: planSummary.removed,
++        sharedHitBlocks: Number(plan?.Plan?.['Shared Hit Blocks'] ?? 0),
++        sharedReadBlocks: Number(plan?.Plan?.['Shared Read Blocks'] ?? 0),
++        executionMs: plan?.['Execution Time'] ?? null,
++        scanNodes: planSummary.nodes.filter((node) => ['Index Scan', 'Index Only Scan', 'Bitmap Heap Scan', 'Seq Scan'].includes(String(node['Node Type'])))
++          .map((node) => ({ type: node['Node Type'], relation: node['Relation Name'], actualRows: node['Actual Rows'], rowsRemovedByFilter: node['Rows Removed by Filter'], loops: node['Actual Loops'], index: node['Index Name'], indexCondition: node['Index Cond'] })),
++      },
++      plan: planRows[0]?.['QUERY PLAN'] ?? null,
++      limits: 'Real disposable PostgreSQL EXPLAIN ANALYZE/BUFFERS with one older-IN history behind OUT rows and one OUT-only history; bounded fixture observation, not a production outage or capacity/SLO claim.',
++    };
++    console.log(`[CHANNEL-HISTORY-SCAN-EVIDENCE]${JSON.stringify(evidence)}`);
++    expect(evidence.fixture).toMatchObject({ conversations: 500, outSuffixLength: 500, hasOlderInbound: true, hasOutOnlyHistory: true, equalTimeTie: true, pageAtMaximum: true });
++    expect(evidence.actual.rowsRemovedByFilter, JSON.stringify(evidence.actual)).toBe(0);
++    expect(evidence.actual.scanNodes.some((node) => node.index === 'messages_conversation_direction_created_id_idx'
++      && String(node.indexCondition).includes("direction = 'IN'")), JSON.stringify(evidence.actual.scanNodes)).toBe(true);
++    const latestRows = await prisma.$queryRaw<Array<{ conversation_id: string; created_at: Date; id: string }>>`
++      SELECT requested.conversation_id, latest.created_at, latest.id
++      FROM unnest(ARRAY[${Prisma.join(ids)}]::text[]) AS requested(conversation_id)
++      CROSS JOIN LATERAL (
++        SELECT message.created_at, message.id
++        FROM messages AS message
++        WHERE message.conversation_id = requested.conversation_id AND message.direction = 'IN'
++        ORDER BY message.created_at DESC, message.id DESC
++        LIMIT 1
++      ) AS latest
++    `;
++    expect(latestRows).toHaveLength(2);
++    expect(latestRows.find(({ conversation_id }) => conversation_id === conversations[0].id)?.created_at.toISOString())
++      .toBe(oldestInboundAt.toISOString());
++    expect(latestRows.find(({ conversation_id }) => conversation_id === conversations[2].id)?.id)
++      .toBe('cb100000-0000-4000-8000-000000000002');
++  });
++
++  it('checks index migration timeout rollback on disposable PostgreSQL', async () => {
++    const table = 'channel_index_migration_probe';
++    await prisma.$executeRawUnsafe(`CREATE TABLE "${table}" (id text PRIMARY KEY, conversation_id text NOT NULL, direction text NOT NULL, created_at timestamptz NOT NULL)`);
++    let releaseBlocker = () => {};
++    let blocker = Promise.resolve();
++    let blockerFailure: unknown;
++    try {
++      await prisma.$executeRawUnsafe(`INSERT INTO "${table}" (id, conversation_id, direction, created_at) SELECT 'probe-' || n, 'conversation-' || (n % 500), CASE WHEN n % 2 = 0 THEN 'IN' ELSE 'OUT' END, now() + n * interval '1 microsecond' FROM generate_series(1, 100000) AS n`);
++      let signalBlockerStarted!: () => void;
++      const blockerStarted = new Promise<void>((resolve) => { signalBlockerStarted = resolve; });
++      const blockerRelease = new Promise<void>((resolve) => { releaseBlocker = resolve; });
++      blocker = prisma.$transaction(async (tx) => {
++        await tx.$executeRawUnsafe(`INSERT INTO "${table}" (id, conversation_id, direction, created_at) VALUES ('held-lock', 'held', 'OUT', now())`);
++        signalBlockerStarted();
++        await blockerRelease;
++      }, { maxWait: 5_000, timeout: 10_000 }).then(() => undefined).catch((error: unknown) => { blockerFailure = error; });
++
++      await blockerStarted;
++      const lockAttempt = prisma.$transaction(async (tx) => {
++        await tx.$executeRaw`SET LOCAL lock_timeout = '5s'`;
++        await tx.$executeRaw`SET LOCAL statement_timeout = '60s'`;
++        const [settings] = await tx.$queryRaw<Array<{ lock_timeout: string; statement_timeout: string }>>`SELECT current_setting('lock_timeout') AS lock_timeout, current_setting('statement_timeout') AS statement_timeout`;
++        expect(settings).toEqual({ lock_timeout: '5s', statement_timeout: '1min' });
++        await tx.$executeRaw`SET LOCAL lock_timeout = '100ms'`;
++        await tx.$executeRawUnsafe(`CREATE INDEX channel_index_migration_probe_lock_idx ON "${table}" (conversation_id, direction, created_at, id)`);
++      }, { maxWait: 5_000, timeout: 5_000 });
++      const lockError = await lockAttempt.then(() => null, (error: unknown) => error);
++      expect(lockError).not.toBeNull();
++      expect(postgresErrorCode(lockError), JSON.stringify({ code: postgresErrorCode(lockError), prismaCode: (lockError as { code?: string } | null)?.code })).toBe('55P03');
++      releaseBlocker();
++      await blocker;
++      if (blockerFailure) throw blockerFailure;
++
++      const timeoutAttempt = prisma.$transaction(async (tx) => {
++        await tx.$executeRaw`SET LOCAL lock_timeout = '5s'`;
++        await tx.$executeRaw`SET LOCAL statement_timeout = '60s'`;
++        const [settings] = await tx.$queryRaw<Array<{ lock_timeout: string; statement_timeout: string }>>`SELECT current_setting('lock_timeout') AS lock_timeout, current_setting('statement_timeout') AS statement_timeout`;
++        expect(settings).toEqual({ lock_timeout: '5s', statement_timeout: '1min' });
++        await tx.$executeRaw`SET LOCAL statement_timeout = '1ms'`;
++        await tx.$executeRawUnsafe(`CREATE INDEX channel_index_migration_probe_timeout_idx ON "${table}" (conversation_id, direction, created_at, id)`);
++      }, { maxWait: 5_000, timeout: 5_000 });
++      const timeoutError = await timeoutAttempt.then(() => null, (error: unknown) => error);
++      expect(timeoutError).not.toBeNull();
++      expect(postgresErrorCode(timeoutError), JSON.stringify({ code: postgresErrorCode(timeoutError), prismaCode: (timeoutError as { code?: string } | null)?.code })).toBe('57014');
++      const remainingIndexes = await prisma.$queryRaw<Array<{ indexname: string }>>`
++        SELECT indexname FROM pg_indexes
++        WHERE schemaname = current_schema() AND tablename = ${table}
++          AND indexname IN ('channel_index_migration_probe_lock_idx', 'channel_index_migration_probe_timeout_idx')
++      `;
++      const [{ count }] = await prisma.$queryRaw<Array<{ count: bigint }>>`SELECT count(*) AS count FROM "${Prisma.raw(table)}"`;
++      const baselineWriteStarted = performance.now();
++      await prisma.$executeRawUnsafe(`INSERT INTO "${table}" (id, conversation_id, direction, created_at) SELECT 'baseline-' || n, 'conversation-' || (n % 500), CASE WHEN n % 2 = 0 THEN 'IN' ELSE 'OUT' END, now() + n * interval '1 microsecond' FROM generate_series(100001, 101000) AS n`);
++      const baselineWriteMs = performance.now() - baselineWriteStarted;
++      await prisma.$executeRawUnsafe(`CREATE INDEX channel_index_migration_probe_write_idx ON "${table}" (conversation_id, direction, created_at, id)`);
++      const indexedWriteStarted = performance.now();
++      await prisma.$executeRawUnsafe(`INSERT INTO "${table}" (id, conversation_id, direction, created_at) SELECT 'indexed-' || n, 'conversation-' || (n % 500), CASE WHEN n % 2 = 0 THEN 'IN' ELSE 'OUT' END, now() + n * interval '1 microsecond' FROM generate_series(101001, 102000) AS n`);
++      const indexedWriteMs = performance.now() - indexedWriteStarted;
++      const [{ indexBytes }] = await prisma.$queryRaw<Array<{ indexBytes: bigint }>>`
++        SELECT pg_relation_size(index_class.oid) AS "indexBytes"
++        FROM pg_index AS index_row
++        JOIN pg_class AS table_class ON table_class.oid = index_row.indrelid
++        JOIN pg_class AS index_class ON index_class.oid = index_row.indexrelid
++        JOIN pg_namespace AS namespace_row ON namespace_row.oid = table_class.relnamespace
++        WHERE namespace_row.nspname = current_schema() AND table_class.relname = ${table}
++          AND index_class.relname = 'channel_index_migration_probe_write_idx'
++      `;
++      const evidence = {
++        finding_id: 'PERF-01', lock_timeout: '5s', statement_timeout: '60s',
++        test_acceleration: { lock_timeout: '100ms', statement_timeout: '1ms', note: 'short disposable probes; exact migration values separately observed above' },
++        sqlstates: { lock: postgresErrorCode(lockError), statement: postgresErrorCode(timeoutError) },
++        rowsAfterAbortedDDL: Number(count), survivingIndexesAfterAbort: remainingIndexes.length,
++        writeObservation: { batchRowsEach: 1_000, withoutIndexMs: baselineWriteMs, withIndexMs: indexedWriteMs, indexBytes: Number(indexBytes), note: 'same disposable table; bounded single-sample observation, no capacity/SLO threshold' },
++      };
++      console.log(`[CHANNEL-MIGRATION-ROLLBACK-EVIDENCE]${JSON.stringify(evidence)}`);
++      expect(remainingIndexes).toHaveLength(0);
++      expect(Number(count)).toBe(100001);
++      expect(Number(indexBytes)).toBeGreaterThan(0);
++    } finally {
++      releaseBlocker();
++      await blocker;
++      await prisma.$executeRawUnsafe(`DROP TABLE IF EXISTS "${table}"`);
++    }
++  });
++
++  it('does not request window history for references selected onto a non-window channel', async () => {
++    const tenant = await criarMantenedora(app, 'Channel window scope', 'channel-window-scope@example.test');
++    const cookie = await login(app, 'channel-window-scope@example.test');
++    await criarCanalVerificado(prisma, tenant.businessUnit.id, 'OFICIAL', 'channel-window-scope-official');
++    await criarCanalVerificado(prisma, tenant.businessUnit.id, 'NAO_OFICIAL', 'channel-window-scope-evolution', { requiresWindow: false });
++    const conversation = await prisma.conversation.create({ data: {
++      buId: tenant.businessUnit.id, contact: 'window-scope-selected-evolution', contactType: 'PESSOA', status: 'QUEUED',
++    } });
++    await prisma.message.create({ data: {
++      conversationId: conversation.id, buId: tenant.businessUnit.id, direction: 'IN', messageType: 'TEXTO',
++      content: 'selected non-window origin', channelOrigin: 'NAO_OFICIAL', status: 'RECEBIDA',
++    } });
++    const key = await request(app.getHttpServer()).post('/api/bff/integracao/api-keys').set('Cookie', cookie)
++      .set('x-requested-with', 'eps').send({ nome: 'Channel window scope key', buIds: [tenant.businessUnit.id] }).expect(201);
++    const statements: string[] = [];
++    prisma.$on('query', ({ query }) => statements.push(query));
++    const beforeRequest = statements.length;
++    const response = await request(app.getHttpServer()).get('/api/v1/conversations')
++      .query({ account_id: tenant.businessUnit.id, limit: 30 })
++      .set('Authorization', `Bearer ${key.body.chave}`).expect(200);
++    const windowQueries = statements.slice(beforeRequest).filter((query) => query.includes('FROM unnest(ARRAY') && query.includes('LIMIT 1'));
++    const selected = response.body.conversations.find((row: { telefone: string }) => row.telefone === conversation.contact);
++    const evidence = {
++      finding_id: 'PERF-01', policy_schema_version: 'pcv-1',
++      selectedReference: { conversationFound: Boolean(selected), latestDirection: selected?.ultima_direcao, requiresWindow: false, available: selected?.envio_disponivel },
++      officialWindowBindingsPresentInBu: true,
++      latestInboundWindowQueries: windowQueries.length,
++      expectedLatestInboundWindowQueries: 0,
++      limits: 'One real public-list request against disposable PostgreSQL; metadata batching remains operation-local.',
++    };
++    console.log(`[CHANNEL-WINDOW-SCOPE-EVIDENCE]${JSON.stringify(evidence)}`);
++    expect(selected).toMatchObject({ ultima_direcao: 'recebida', envio_disponivel: true, janela_expira_em: null });
++    expect(windowQueries, JSON.stringify(evidence)).toHaveLength(0);
+   });
+ 
+   it('runs five clients through six scoped channel reads each with zero provider fan-out (RLS-SP-L)', async () => {
+@@ -117,10 +403,12 @@ describe('number onboarding bounded performance and read-scope probes (PostgreSQ
+     const clientReadGroups = actors.map(async (actor, client) => {
+       const foreignBuId = actors[(client + 1) % actors.length].buId;
+       for (let read = 0; read < 3; read += 1) {
+-        const own = await request(app.getHttpServer()).get(`/api/bff/business-units/${actor.buId}/channels`).set('Cookie', actor.cookie).expect(200);
++        const own = await request(app.getHttpServer()).get(`/api/bff/business-units/${actor.buId}/channels`).set('Cookie', actor.cookie);
++        expect(own.status, JSON.stringify(own.body)).toBe(200);
+         expect(own.body.canais).toHaveLength(1);
+         expect(own.body.canais[0]).toMatchObject({ type: 'OFICIAL', ownNumberVerified: true });
+-        const foreign = await request(app.getHttpServer()).get(`/api/bff/business-units/${foreignBuId}/channels`).set('Cookie', actor.cookie).expect(404);
++        const foreign = await request(app.getHttpServer()).get(`/api/bff/business-units/${foreignBuId}/channels`).set('Cookie', actor.cookie);
++        expect(foreign.status, JSON.stringify(foreign.body)).toBe(404);
+         expect(foreign.body.code).toBe('NAO_ENCONTRADO');
+       }
+       observed.push({ client, ownReads: 3, foreignReads: 3 });
+diff --git a/test/number-onboarding-typebot.e2e-spec.ts b/test/number-onboarding-typebot.e2e-spec.ts
+index 48b79c2..147cf82 100644
+--- a/test/number-onboarding-typebot.e2e-spec.ts
++++ b/test/number-onboarding-typebot.e2e-spec.ts
+@@ -56,6 +56,75 @@ describe('Typebot tenant, trigger and resumed session isolation (PostgreSQL)', (
+     expect(outbound).toMatchObject({ authorName: 'Typebot', status: 'ENVIADA', providerResourceIdentityId: expect.any(String) });
+   });
+ 
++  it('pins a held bot reply to its verified ingress and preserves the live human queue state', async () => {
++    const evolution = await criarCanalVerificado(prisma, a.businessUnit.id, 'NAO_OFICIAL', 'typebot-later-origin', { requiresWindow: false });
++    const bot = await prisma.typebotBot.create({ data: { mantenedoraId: a.mantenedora.id, typebotId: 'bot-held-origin', publishedTypebotId: 'published-held-origin', status: 'ATIVO', name: 'A', editorUrl: 'https://typebot.invalid/a' } });
++    await prisma.typebotTrigger.create({ data: { botId: bot.id, kind: 'NOVA_CONVERSA', value: '*', buId: a.businessUnit.id } });
++    let markEntered!: () => void;
++    let release!: () => void;
++    const entered = new Promise<void>((resolve) => { markEntered = resolve; });
++    const gate = new Promise<void>((resolve) => { release = resolve; });
++    typebotFake.beforeReply = async () => {
++      markEntered();
++      await gate;
++      const conversation = await prisma.conversation.findUniqueOrThrow({ where: { buId_contact: { buId: a.businessUnit.id, contact } } });
++      await prisma.message.create({ data: {
++        conversationId: conversation.id, buId: a.businessUnit.id, direction: 'IN', messageType: 'TEXTO', content: 'later different origin',
++        channelOrigin: 'NAO_OFICIAL', status: 'RECEBIDA', providerResourceIdentityId: evolution.identity.id, externalId: 'typebot-later-origin-event',
++      } });
++      await prisma.conversation.update({ where: { id: conversation.id }, data: {
++        status: 'QUEUED', unreadCount: 7, attendantUserId: a.owner.id, attendantName: 'Human owner', attendantOrigin: 'INTERNO',
++      } });
++    };
++    const pending = trigger('typebot-held-origin').then((response) => response);
++    await entered;
++    release();
++    expect((await pending).status).toBe(200);
++    expect(metaFake.enviados).toEqual([{ para: contact, texto: 'resposta do bot' }]);
++    expect(evolutionFake.enviados).toHaveLength(0);
++    const conversation = await prisma.conversation.findUniqueOrThrow({ where: { buId_contact: { buId: a.businessUnit.id, contact } } });
++    expect(conversation).toMatchObject({ status: 'QUEUED', unreadCount: 7, attendantUserId: a.owner.id, attendantName: 'Human owner', attendantOrigin: 'INTERNO' });
++  });
++
++  it('does not dispatch a held bot reply after its required 24-hour window expires', async () => {
++    const bot = await prisma.typebotBot.create({ data: { mantenedoraId: a.mantenedora.id, typebotId: 'bot-held-window', publishedTypebotId: 'published-held-window', status: 'ATIVO', name: 'A', editorUrl: 'https://typebot.invalid/a' } });
++    await prisma.typebotTrigger.create({ data: { botId: bot.id, kind: 'NOVA_CONVERSA', value: '*', buId: a.businessUnit.id } });
++    let markEntered!: () => void;
++    let release!: () => void;
++    const entered = new Promise<void>((resolve) => { markEntered = resolve; });
++    const gate = new Promise<void>((resolve) => { release = resolve; });
++    typebotFake.beforeReply = async () => {
++      markEntered();
++      await gate;
++      const inbound = await prisma.message.findFirstOrThrow({ where: { buId: a.businessUnit.id, externalId: 'typebot-held-window' } });
++      await prisma.message.update({ where: { id: inbound.id }, data: { createdAt: new Date(Date.now() - 25 * 60 * 60 * 1000) } });
++    };
++    const pending = trigger('typebot-held-window').then((response) => response);
++    await entered;
++    release();
++    expect((await pending).status).toBe(200);
++    expect(metaFake.enviados).toHaveLength(0);
++    expect(await prisma.message.count({ where: { buId: a.businessUnit.id, direction: 'OUT' } })).toBe(0);
++  });
++
++  it('does not rebind a held bot reply after its ingress identity is retired', async () => {
++    const binding = await prisma.buChannel.findFirstOrThrow({ where: { buId: a.businessUnit.id, type: 'OFICIAL' }, include: { providerIdentities: true } });
++    const identity = binding.providerIdentities.find((row) => row.currentChannelId === binding.id)!;
++    const bot = await prisma.typebotBot.create({ data: { mantenedoraId: a.mantenedora.id, typebotId: 'bot-held-retire', publishedTypebotId: 'published-held-retire', status: 'ATIVO', name: 'A', editorUrl: 'https://typebot.invalid/a' } });
++    await prisma.typebotTrigger.create({ data: { botId: bot.id, kind: 'NOVA_CONVERSA', value: '*', buId: a.businessUnit.id } });
++    let markEntered!: () => void;
++    let release!: () => void;
++    const entered = new Promise<void>((resolve) => { markEntered = resolve; });
++    const gate = new Promise<void>((resolve) => { release = resolve; });
++    typebotFake.beforeReply = async () => { markEntered(); await gate; await prisma.providerResourceIdentity.update({ where: { id: identity.id }, data: { currentChannelId: null, retiredAt: new Date() } }); };
++    const pending = trigger('typebot-held-retire').then((response) => response);
++    await entered;
++    release();
++    expect((await pending).status).toBe(200);
++    expect(metaFake.enviados).toHaveLength(0);
++    expect(await prisma.message.count({ where: { buId: a.businessUnit.id, direction: 'OUT' } })).toBe(0);
++  });
++
+   it('selects the matching trigger from the current tenant when an earlier foreign global trigger also matches', async () => {
+     const botB = await prisma.typebotBot.create({ data: { mantenedoraId: b.mantenedora.id, typebotId: 'foreign-global-bot', publishedTypebotId: 'foreign-global-published', status: 'ATIVO', name: 'Foreign', editorUrl: 'https://typebot.invalid/foreign' } });
+     const botA = await prisma.typebotBot.create({ data: { mantenedoraId: a.mantenedora.id, typebotId: 'tenant-global-bot', publishedTypebotId: 'tenant-global-published', status: 'ATIVO', name: 'Tenant', editorUrl: 'https://typebot.invalid/tenant' } });
+diff --git a/test/timeline-fixtures.cjs b/test/timeline-fixtures.cjs
+index 88c4395..07a1f1b 100644
+--- a/test/timeline-fixtures.cjs
++++ b/test/timeline-fixtures.cjs
+@@ -9,12 +9,13 @@ const dedicatedUrl = process.env.LEADSHUG_E2E_DATABASE_URL;
+ const fixturePort = Number(process.env.LEADSHUG_FIXTURE_PORT ?? '3101');
+ const apiPort = Number(process.env.LEADSHUG_API_PORT ?? '3100');
+ const providerInventory = new Map();
++const fixtureConversationIds = new Set();
+ // Stateful provider-only controls for the real-BFF number-onboarding browser lane.
+ // No browser-visible API response is synthesized here; browser requests still
+ // traverse Nest, session/CSRF, policy, and PostgreSQL.
+ const onboarding = {
+   resources: [], calls: [], effects: [], failures: {}, holds: {}, holdsAfter: {}, ambiguousAfter: {}, releases: {},
+-  meta: { codeTokens: {}, grants: {}, pages: {} },
++  meta: { codeTokens: {}, grants: {}, pages: {}, sendMode: 'accepted' },
+   evolution: { inventory: {}, outcomes: {} },
+ };
+ const barriers = new Map();
+@@ -59,6 +60,7 @@ const bodyOf = (req) => new Promise((resolve, reject) => {
+ });
+ 
+ async function seed(data) {
++  onboarding.meta.sendMode = 'accepted';
+   const suffix = `${Date.now()}-${Math.random().toString(16).slice(2)}`;
+   const mantenedora = await prisma.mantenedora.create({ data: { name: `Timeline ${suffix}` } });
+   const setor = await prisma.setor.create({ data: { mantenedoraId: mantenedora.id, name: 'Geral' } });
+@@ -78,6 +80,13 @@ async function seed(data) {
+   const keyId = process.env.CHANNEL_CREDENTIAL_KEY_ID; const key = Buffer.from(process.env.CHANNEL_CREDENTIAL_KEY, 'base64');
+   const envelope = sealChannelCredential(`timeline-scoped-token:${phoneNumberId}`, keyId, key, { purpose: 'active', provider: 'OFICIAL', buId: businessUnit.id, channelId: channel.id, generation: channel.generation, version: 1 });
+   await prisma.channelCredential.create({ data: { channelId: channel.id, provider: 'OFICIAL', buId: businessUnit.id, generation: channel.generation, version: 1, keyId, nonce: new Uint8Array(envelope.nonce), ciphertext: new Uint8Array(envelope.ciphertext), tag: new Uint8Array(envelope.tag) } });
++  let evolutionInstanceName = null;
++  if (data.includeEvolution === true) {
++    evolutionInstanceName = `timeline-evolution-${suffix}`;
++    const evolution = await prisma.buChannel.create({ data: { buId: businessUnit.id, type: 'NAO_OFICIAL', evolutionInstanceName, requiresWindow: false, status: 'CONECTADO', generation: 1, pairingEpoch: 1, ownNumberVerified: true, verifiedEpoch: 1, providerConnectionState: 'CONNECTED', receiptVerifiedAt: new Date() } });
++    await prisma.providerResourceIdentity.create({ data: { provider: 'NAO_OFICIAL', externalResourceId: evolutionInstanceName, buId: businessUnit.id, currentChannelId: evolution.id, managedLifecycle: true, cleanupState: 'ACTIVE' } });
++    onboarding.evolution.inventory[evolutionInstanceName] = { name: evolutionInstanceName, ownerJid: '5584911112222@s.whatsapp.net', connectionStatus: 'open' };
++  }
+   providerInventory.set(phoneNumberId, { id: phoneNumberId, wabaId, telefone: timelinePhone });
+   const conversation = await prisma.conversation.create({ data: { buId: businessUnit.id, contact: '5584911112222', displayName: 'Cliente Timeline', contactType: 'PESSOA', status: 'QUEUED', unreadCount: 0 } });
+   const otherConversation = await prisma.conversation.create({ data: { buId: businessUnit.id, contact: '5584933334444', displayName: 'Cliente Secundário', contactType: 'PESSOA', status: 'QUEUED', unreadCount: 0 } });
+@@ -91,6 +100,9 @@ async function seed(data) {
+   const otherEnvelope = sealChannelCredential(`timeline-scoped-token:${otherBuPhoneNumberId}`, keyId, key, { purpose: 'active', provider: 'OFICIAL', buId: otherBu.id, channelId: otherChannel.id, generation: otherChannel.generation, version: 1 });
+   await prisma.channelCredential.create({ data: { channelId: otherChannel.id, provider: 'OFICIAL', buId: otherBu.id, generation: otherChannel.generation, version: 1, keyId, nonce: new Uint8Array(otherEnvelope.nonce), ciphertext: new Uint8Array(otherEnvelope.ciphertext), tag: new Uint8Array(otherEnvelope.tag) } });
+   const otherBuConversation = await prisma.conversation.create({ data: { buId: otherBu.id, contact: '5585555555555', displayName: 'Cliente Outra BU', contactType: 'PESSOA', status: 'QUEUED' } });
++  fixtureConversationIds.add(conversation.id);
++  fixtureConversationIds.add(otherConversation.id);
++  fixtureConversationIds.add(otherBuConversation.id);
+   const count = Math.max(0, Math.min(Number(data.count ?? 251), 10_000));
+   const tiedAt = new Date('2026-10-14T12:00:00.000Z');
+   const messages = Array.from({ length: count }, (_, i) => ({
+@@ -100,7 +112,7 @@ async function seed(data) {
+   }));
+   if (messages.length) await prisma.message.createMany({ data: messages });
+   const expectedIds = await prisma.message.findMany({ where: { conversationId: conversation.id }, orderBy: [{ createdAt: 'asc' }, { id: 'asc' }], select: { id: true } });
+-  return { email, password: 'senha-de-teste-1', userId: user.id, mantenedoraId: mantenedora.id, businessUnitId: businessUnit.id, conversationId: conversation.id, otherConversationId: otherConversation.id, otherBusinessUnitId: otherBu.id, otherBuConversationId: otherBuConversation.id, otherBuPhoneNumberId, phoneNumberId, wabaId, count, expectedIds: expectedIds.map((m) => m.id) };
++  return { email, password: 'senha-de-teste-1', userId: user.id, mantenedoraId: mantenedora.id, businessUnitId: businessUnit.id, conversationId: conversation.id, otherConversationId: otherConversation.id, otherBusinessUnitId: otherBu.id, otherBuConversationId: otherBuConversation.id, otherBuPhoneNumberId, phoneNumberId, wabaId, evolutionInstanceName, count, expectedIds: expectedIds.map((m) => m.id) };
+ }
+ 
+ async function seedNumberOnboarding() {
+@@ -153,13 +165,13 @@ const server = http.createServer(async (req, res) => {
+     if (req.method === 'GET' && req.url === '/provider/state') {
+       if (req.headers['x-fixture-provider-token'] !== 'timeline-provider-port-only') return json(res, 403, { error: 'forbidden' });
+       const inventory = Object.fromEntries(Object.entries(onboarding.evolution.inventory).map(([name, item]) => [name, { name, ownerJid: item.ownerJid, connectionStatus: item.connectionStatus }]));
+-      return json(res, 200, { resources: onboarding.resources, calls: onboarding.calls, effects: onboarding.effects, evolution: { inventory, outcomes: onboarding.evolution.outcomes }, meta: { grantResourceIds: Object.fromEntries(Object.entries(onboarding.meta.grants ?? {}).map(([code, grant]) => [code, grant.resources ?? []])), pages: onboarding.meta.pages }, failures: onboarding.failures, holds: onboarding.holds, holdsAfter: onboarding.holdsAfter, ambiguousAfter: onboarding.ambiguousAfter });
++      return json(res, 200, { resources: onboarding.resources, calls: onboarding.calls, effects: onboarding.effects, evolution: { inventory, outcomes: onboarding.evolution.outcomes }, meta: { grantResourceIds: Object.fromEntries(Object.entries(onboarding.meta.grants ?? {}).map(([code, grant]) => [code, grant.resources ?? []])), pages: onboarding.meta.pages, sendMode: onboarding.meta.sendMode }, failures: onboarding.failures, holds: onboarding.holds, holdsAfter: onboarding.holdsAfter, ambiguousAfter: onboarding.ambiguousAfter });
+     }
+     if (req.method === 'GET' && req.url === '/health') return json(res, 200, { status: 'ok' });
+     const data = await bodyOf(req);
+     if (req.url.startsWith('/provider/') && req.headers['x-fixture-provider-token'] !== 'timeline-provider-port-only') return json(res, 403, { error: 'forbidden' });
+     if (req.method === 'POST' && req.url === '/provider/config') {
+-      if (data.reset === true) { onboarding.calls = []; onboarding.effects = []; onboarding.failures = {}; onboarding.holds = {}; onboarding.holdsAfter = {}; onboarding.ambiguousAfter = {}; onboarding.resources = []; onboarding.meta = { codeTokens: {}, grants: {}, pages: {} }; onboarding.evolution = { inventory: {}, outcomes: {} }; providerInventory.clear(); barriers.clear(); }
++      if (data.reset === true) { onboarding.calls = []; onboarding.effects = []; onboarding.failures = {}; onboarding.holds = {}; onboarding.holdsAfter = {}; onboarding.ambiguousAfter = {}; onboarding.resources = []; onboarding.meta = { codeTokens: {}, grants: {}, pages: {}, sendMode: 'accepted' }; onboarding.evolution = { inventory: {}, outcomes: {} }; providerInventory.clear(); barriers.clear(); }
+       if (Array.isArray(data.resources)) onboarding.resources = data.resources.map((r) => ({ ...r }));
+       if (data.meta && typeof data.meta === 'object') Object.assign(onboarding.meta, data.meta);
+       if (data.evolution && typeof data.evolution === 'object') Object.assign(onboarding.evolution, data.evolution);
+@@ -227,7 +239,37 @@ const server = http.createServer(async (req, res) => {
+       const messages = await prisma.message.findMany({ where: { conversationId }, orderBy: [{ createdAt: 'asc' }, { id: 'asc' }], select: { id: true, content: true, direction: true, authorName: true, createdAt: true } });
+       return json(res, 200, { status: conversation.status, unreadCount: conversation.unreadCount, messages });
+     }
++    if (req.method === 'GET' && req.url.startsWith('/audit-outbound?')) {
++      const query = new URL(req.url, 'http://localhost').searchParams;
++      const conversationId = query.get('conversationId');
++      const content = query.get('content');
++      if (!conversationId || !fixtureConversationIds.has(conversationId) || !content) return json(res, 400, { error: 'invalid fixture audit scope' });
++      const messages = await prisma.message.findMany({ where: { conversationId, content, direction: 'OUT' }, select: { status: true, externalId: true } });
++      return json(res, 200, {
++        total: messages.length,
++        accepted: messages.filter((message) => message.status === 'ENVIADA').length,
++        failed: messages.filter((message) => message.status === 'FALHOU').length,
++        failedWithoutExternalId: messages.filter((message) => message.status === 'FALHOU' && !message.externalId).length,
++      });
++    }
+     if (req.method === 'POST' && req.url === '/seed') return json(res, 201, await seed(data));
++    if (req.method === 'POST' && req.url === '/send-mode') {
++      if (!['accepted', 'unknown'].includes(data.mode)) return json(res, 400, { error: 'invalid mode' });
++      onboarding.meta.sendMode = data.mode;
++      return json(res, 200, { mode: onboarding.meta.sendMode });
++    }
++    if (req.method === 'POST' && req.url === '/select-evolution') {
++      const conversation = await prisma.conversation.findUniqueOrThrow({ where: { id: data.conversationId } });
++      const channel = await prisma.buChannel.findFirstOrThrow({ where: { buId: conversation.buId, type: 'NAO_OFICIAL' } });
++      const identity = await prisma.providerResourceIdentity.findFirstOrThrow({ where: { currentChannelId: channel.id } });
++      const message = await prisma.message.create({ data: {
++        conversationId: conversation.id, buId: conversation.buId, direction: 'IN', messageType: 'TEXTO',
++        content: 'ingress fixture selects Evolution', channelOrigin: 'NAO_OFICIAL', status: 'RECEBIDA',
++        externalId: `fixture-ingress-${Date.now()}-${Math.random().toString(16).slice(2)}`,
++        providerResourceIdentityId: identity.id, createdAt: new Date(Date.now() + 60_000),
++      } });
++      return json(res, 201, { id: message.id });
++    }
+     if (req.method === 'POST' && req.url === '/incoming') return json(res, 200, await incoming(data));
+     if (req.method === 'POST' && req.url === '/late-tie') {
+       const conversation = await prisma.conversation.findUniqueOrThrow({ where: { id: data.conversationId } });
+
+REPOSITORY web-app, approved baseline 74b9d4b714044829796f875d00553f077c1c329d; positive public paths before diff; untracked added files supplied in full source packet.
+diff --git a/e2e/number-onboarding-freshness.ts b/e2e/number-onboarding-freshness.ts
+index c8a0970..3d51604 100644
+--- a/e2e/number-onboarding-freshness.ts
++++ b/e2e/number-onboarding-freshness.ts
+@@ -27,13 +27,13 @@ export default async function numberOnboardingFreshness(): Promise<void> {
+   const git = (directory: string, ...args: string[]) => execFileSync('git', [
+     '-c', `safe.directory=${directory}`, '-C', directory, ...args,
+   ], { encoding: 'utf8' }).trim();
+-  const changed = (directory: string, scope: RegExp) => {
++  const changed = (directory: string, scope: RegExp, publicPaths: string[]) => {
+     const args = ['-c', `safe.directory=${directory}`, '-C', directory];
+     const parse = (output: string, layer: string) => output.trim().split('\n').filter(Boolean)
+       .map((line) => { const [status, ...paths] = line.split('\t'); return { status: `${layer}:${status}`, path: paths.at(-1)! }; });
+-    const staged = parse(execFileSync('git', [...args, 'diff', '--cached', '--name-status', 'HEAD'], { encoding: 'utf8' }), 'staged');
+-    const unstaged = parse(execFileSync('git', [...args, 'diff', '--name-status'], { encoding: 'utf8' }), 'unstaged');
+-    const untracked = execFileSync('git', [...args, 'ls-files', '--others', '--exclude-standard'], { encoding: 'utf8' }).trim().split('\n').filter(Boolean)
++    const staged = parse(execFileSync('git', [...args, 'diff', '--cached', '--name-status', 'HEAD', '--', ...publicPaths], { encoding: 'utf8' }), 'staged');
++    const unstaged = parse(execFileSync('git', [...args, 'diff', '--name-status', '--', ...publicPaths], { encoding: 'utf8' }), 'unstaged');
++    const untracked = execFileSync('git', [...args, 'ls-files', '--others', '--exclude-standard', '--', ...publicPaths], { encoding: 'utf8' }).trim().split('\n').filter(Boolean)
+       .map((path) => ({ status: '??', path }));
+     const inventory = new Map<string, string>();
+     for (const item of [...staged, ...unstaged, ...untracked]) if (scope.test(item.path)) {
+@@ -41,8 +41,10 @@ export default async function numberOnboardingFreshness(): Promise<void> {
+     }
+     return [...inventory.entries()].sort(([a], [b]) => a.localeCompare(b));
+   };
+-  const webSources = changed(web, /^(src\/|e2e\/|playwright\.config\.ts$|vite\.config\.ts$|Dockerfile$|\.dockerignore$|package(?:-lock)?\.json$|tsconfig(?:\.[^/]+)?\.json$)/);
+-  const apiSources = changed(api, /^(src\/|prisma\/|test\/|package(?:-lock)?\.json$|Dockerfile$|\.dockerignore$|\.env\.example$|nest-cli\.json$|tsconfig(?:\.[^/]+)?\.json$)/);
++  const webSources = changed(web, /^(src\/|e2e\/|playwright\.config\.ts$|vite\.config\.ts$|Dockerfile$|\.dockerignore$|package(?:-lock)?\.json$|tsconfig(?:\.[^/]+)?\.json$)/,
++    ['src', 'e2e', 'package.json', 'package-lock.json', 'Dockerfile', '.dockerignore', 'playwright.config.ts', 'vite.config.ts', 'tsconfig.json', 'tsconfig.app.json', 'tsconfig.node.json']);
++  const apiSources = changed(api, /^(src\/|prisma\/|test\/|package(?:-lock)?\.json$|Dockerfile$|\.dockerignore$|\.env\.example$|nest-cli\.json$|tsconfig(?:\.[^/]+)?\.json$)/,
++    ['src', 'prisma', 'test', 'package.json', 'package-lock.json', 'Dockerfile', '.dockerignore', '.env.example', 'nest-cli.json', 'tsconfig.json', 'tsconfig.build.json']);
+   const manifest = async (directory: string, entries: Array<[string, string]>) => Promise.all(entries.map(async ([path, status]) => {
+     try { return { path, status, sha256: sha256(await readFile(resolve(directory, path))) }; }
+     catch (error) {
+diff --git a/e2e/timeline-freshness.ts b/e2e/timeline-freshness.ts
+index 58bd12d..15f65da 100644
+--- a/e2e/timeline-freshness.ts
++++ b/e2e/timeline-freshness.ts
+@@ -7,13 +7,13 @@ import { join, resolve } from 'node:path';
+ 
+ const hash = (value: Buffer | string) => createHash('sha256').update(value).digest('hex');
+ 
+-async function changedSourceFiles(directory: string, scope: RegExp): Promise<Array<{ path: string; status: string; sha256: string | null }>> {
++async function changedSourceFiles(directory: string, scope: RegExp, publicPaths: string[]): Promise<Array<{ path: string; status: string; sha256: string | null }>> {
+   const gitArgs = ['-c', `safe.directory=${directory}`, '-C', directory];
+   const parse = (output: string, layer: string) => output.trim().split('\n').filter(Boolean)
+     .map((line) => { const [status, ...paths] = line.split('\t'); return { status: `${layer}:${status}`, path: paths.at(-1)! }; });
+-  const staged = parse(execFileSync('git', [...gitArgs, 'diff', '--cached', '--name-status', 'HEAD'], { encoding: 'utf8' }), 'staged');
+-  const unstaged = parse(execFileSync('git', [...gitArgs, 'diff', '--name-status'], { encoding: 'utf8' }), 'unstaged');
+-  const untracked = execFileSync('git', [...gitArgs, 'ls-files', '--others', '--exclude-standard'], { encoding: 'utf8' }).trim().split('\n').filter(Boolean)
++  const staged = parse(execFileSync('git', [...gitArgs, 'diff', '--cached', '--name-status', 'HEAD', '--', ...publicPaths], { encoding: 'utf8' }), 'staged');
++  const unstaged = parse(execFileSync('git', [...gitArgs, 'diff', '--name-status', '--', ...publicPaths], { encoding: 'utf8' }), 'unstaged');
++  const untracked = execFileSync('git', [...gitArgs, 'ls-files', '--others', '--exclude-standard', '--', ...publicPaths], { encoding: 'utf8' }).trim().split('\n').filter(Boolean)
+     .map((path) => ({ status: '??', path }));
+   const inventory = new Map<string, string>();
+   for (const item of [...staged, ...unstaged, ...untracked]) if (scope.test(item.path)) {
+@@ -79,8 +79,10 @@ export default async function timelineFreshness(): Promise<void> {
+     'Dockerfile', '.dockerignore', '.gitignore', 'eslint.config.js', 'playwright.config.ts',
+     'railway.json', 'tsconfig.json', 'vite.config.ts', 'docker', 'nginx',
+   ];
+-  const apiSourceManifest = await changedSourceFiles(api, /^(src\/|prisma\/|test\/|package(?:-lock)?\.json$|Dockerfile$|\.dockerignore$|\.env\.example$|nest-cli\.json$|tsconfig(?:\.[^/]+)?\.json$)/);
+-  const webSourceManifest = await changedSourceFiles(web, /^(src\/|e2e\/|playwright\.config\.ts$|vite\.config\.ts$|Dockerfile$|\.dockerignore$|package(?:-lock)?\.json$|tsconfig(?:\.[^/]+)?\.json$)/);
++  const apiSourceManifest = await changedSourceFiles(api, /^(src\/|prisma\/|test\/|package(?:-lock)?\.json$|Dockerfile$|\.dockerignore$|\.env\.example$|nest-cli\.json$|tsconfig(?:\.[^/]+)?\.json$)/,
++    ['src', 'prisma', 'test', 'package.json', 'package-lock.json', 'Dockerfile', '.dockerignore', '.env.example', 'nest-cli.json', 'tsconfig.json', 'tsconfig.build.json']);
++  const webSourceManifest = await changedSourceFiles(web, /^(src\/|e2e\/|playwright\.config\.ts$|vite\.config\.ts$|Dockerfile$|\.dockerignore$|package(?:-lock)?\.json$|tsconfig(?:\.[^/]+)?\.json$)/,
++    ['src', 'e2e', 'package.json', 'package-lock.json', 'Dockerfile', '.dockerignore', 'playwright.config.ts', 'vite.config.ts', 'tsconfig.json', 'tsconfig.app.json', 'tsconfig.node.json']);
+   const requireFromApi = createRequire(join(api, 'package.json'));
+   const { PrismaClient } = requireFromApi('@prisma/client') as { PrismaClient: new (options: { datasources: { db: { url: string } } }) => any };
+   const prisma = new PrismaClient({ datasources: { db: { url: databaseUrl } } });
+diff --git a/src/api.spec.ts b/src/api.spec.ts
+index 6b29974..0f5ca57 100644
+--- a/src/api.spec.ts
++++ b/src/api.spec.ts
+@@ -108,6 +108,18 @@ describe('falha do servidor (o 500 do Nest)', () => {
+     responde(JSON.stringify({ error: 'E-mail ou senha inválidos.', code: 'CREDENCIAL_INVALIDA' }), { status: 401 });
+     await expect(api.post('/auth/login', {})).rejects.toThrow(/E-mail ou senha inválidos/);
+   });
++
++  it('retém outcome e metadados seguros de incerteza', async () => {
++    responde(JSON.stringify({
++      error: 'O envio não foi confirmado.', code: 'OUTBOUND_LOCAL_INCOMPLETE',
++      outcome: 'ACCEPTED_LOCAL_INCOMPLETE', evidence: 'ACK_WITHOUT_ID',
++      localMessageState: 'UNCONFIRMED', diagnosticPersistence: 'UNCONFIRMED',
++    }), { status: 503 });
++    await expect(api.post('/conversations/c1/messages', { texto: 'draft' })).rejects.toMatchObject({
++      codigo: 'OUTBOUND_LOCAL_INCOMPLETE', outcome: 'ACCEPTED_LOCAL_INCOMPLETE',
++      evidence: 'ACK_WITHOUT_ID', localMessageState: 'UNCONFIRMED', diagnosticPersistence: 'UNCONFIRMED',
++    });
++  });
+ });
+ 
+ describe('requisição com cabeçalho de correlação', () => {
+diff --git a/src/api.ts b/src/api.ts
+index b74666e..2934758 100644
+--- a/src/api.ts
++++ b/src/api.ts
+@@ -37,6 +37,10 @@ export class ErroDaApi extends Error {
+     readonly status: number,
+     readonly codigo: string | undefined,
+     mensagem: string,
++    readonly outcome?: string,
++    readonly evidence?: string,
++    readonly localMessageState?: string,
++    readonly diagnosticPersistence?: string,
+   ) {
+     super(mensagem);
+   }
+@@ -65,7 +69,7 @@ async function chamar<T>(caminho: string, init: RequestInit = {}): Promise<T> {
+   // ("Cannot read properties of undefined"), e mandava quem depura para o lugar
+   // errado. Falhar aqui, dizendo o que provavelmente está errado, é o mínimo.
+   const bruto = await res.text();
+-  let corpo: Record<string, string | undefined>;
++  let corpo: Record<string, unknown>;
+   try {
+     corpo = bruto ? JSON.parse(bruto) : {};
+   } catch {
+@@ -108,8 +112,12 @@ async function chamar<T>(caminho: string, init: RequestInit = {}): Promise<T> {
+     const dito = corpo.error ?? corpo.message;
+     throw new ErroDaApi(
+       res.status,
+-      corpo.code,
++      typeof corpo.code === 'string' ? corpo.code : undefined,
+       dito ? `${dito} (HTTP ${res.status})` : `A API respondeu ${res.status} sem explicar o motivo.`,
++      typeof corpo.outcome === 'string' ? corpo.outcome : undefined,
++      typeof corpo.evidence === 'string' ? corpo.evidence : undefined,
++      typeof corpo.localMessageState === 'string' ? corpo.localMessageState : undefined,
++      typeof corpo.diagnosticPersistence === 'string' ? corpo.diagnosticPersistence : undefined,
+     );
+   }
+   return corpo as T;
+@@ -255,7 +263,7 @@ export interface Mensagem {
+ 
+ export interface Thread {
+   conversa: { id: string; contato: string; nome: string | null; status: string; atendente: string | null };
+-  janela: { exigida: boolean; aberta: boolean; expiraEm: string | null; canal: string | null };
++  janela: { exigida: boolean; aberta: boolean; expiraEm: string | null; canal: string | null; disponivel: boolean; motivo: string | null };
+   messages: Mensagem[];
+   paginacao: { limite: number; temAnteriores: boolean; cursorAnterior: string | null };
+ }
+diff --git a/src/telas/Inbox.tsx b/src/telas/Inbox.tsx
+index 14735e6..fe7aada 100644
+--- a/src/telas/Inbox.tsx
++++ b/src/telas/Inbox.tsx
+@@ -10,6 +10,19 @@ const ABAS = [
+   { id: 'GRUPO', rotulo: 'Grupos' },
+ ];
+ 
++function explicarMotivoEnvio(motivo: string | null): string {
++  switch (motivo) {
++    case 'CANAL_AUSENTE': return 'Não há um canal conectado para responder.';
++    case 'CANAL_AMBIGUO': return 'Esta conversa ainda não tem um canal definido. Aguarde uma mensagem recebida para responder.';
++    case 'CANAL_SELECIONADO_INDISPONIVEL': return 'O canal desta conversa não está disponível.';
++    case 'CHANNEL_IDENTITY_NOT_VERIFIED': return 'A identidade do canal ainda precisa ser verificada.';
++    case 'CHANNEL_NOT_READY': return 'O canal ainda não está pronto para enviar.';
++    case 'PENDING_CREDENTIAL': return 'A credencial do canal precisa ser atualizada.';
++    case 'JANELA_FECHADA': return 'A janela de 24 horas foi encerrada.';
++    default: return 'O envio está temporariamente indisponível.';
++  }
++}
++
+ interface Recuperacao {
+   id: string;
+   geracao: number;
+@@ -392,6 +405,7 @@ export default function Inbox({ eu }: { eu: Eu }) {
+     }
+   }
+ 
++  const envioIndisponivel = aberta ? !aberta.janela.disponivel : false;
+   const janelaFechada = aberta?.janela.exigida && !aberta.janela.aberta;
+ 
+   return (
+@@ -443,10 +457,12 @@ export default function Inbox({ eu }: { eu: Eu }) {
+               {aberta.messages.length === 0 && <p className="suave">Nenhuma mensagem nesta conversa.</p>}
+             </div>
+ 
+-            {janelaFechada && <div className="aviso">Fora da janela de 24h da Meta: só dá para responder texto livre até 24h após a última mensagem da pessoa. A alternativa é disparar um modelo aprovado — isso ainda vive na Central de Modelos.</div>}
++            {envioIndisponivel && <div className="aviso" role="status">{janelaFechada
++              ? 'Fora da janela de 24h do canal selecionado. Texto livre está indisponível.'
++              : explicarMotivoEnvio(aberta.janela.motivo)}</div>}
+             <form className="linha" onSubmit={responder}>
+-              <input value={texto} onChange={(e) => guardarTexto(e.target.value)} placeholder={janelaFechada ? 'Janela fechada' : 'Escreva uma resposta'} disabled={Boolean(janelaFechada)} maxLength={4096} />
+-              <button className="primario" disabled={Boolean(janelaFechada) || enviando || !texto.trim()}>{enviando ? 'Enviando…' : 'Enviar'}</button>
++              <input value={texto} onChange={(e) => guardarTexto(e.target.value)} placeholder={envioIndisponivel ? 'Envio indisponível' : 'Escreva uma resposta'} disabled={envioIndisponivel} maxLength={4096} />
++              <button className="primario" disabled={envioIndisponivel || enviando || !texto.trim()}>{enviando ? 'Enviando…' : 'Enviar'}</button>
+             </form>
+             {aberta.conversa.status !== 'CLOSED' && <div className="linha">
+               <button onClick={() => void agir(() => api.post(`/conversations/${aberta.conversa.id}/claim`))}>Atender</button>

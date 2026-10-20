@@ -1,0 +1,337 @@
+{
+  "api_diagnostic_history": [
+    {
+      "exit_code": 1,
+      "log": "foundation_documentation/artifacts/tmp/stcon06-executor-v13-api-first.log",
+      "log_sha256": "201ee0b294c8f86886a11b753bc107854d197ad656126a87ffc30aac6507b630",
+      "mode": "api",
+      "result": "Initial index assertion accepted only Index Scan; PostgreSQL selected Index Only Scan. Product query plan evidence otherwise showed the composite index.",
+      "session": 39296
+    },
+    {
+      "exit_code": 1,
+      "log": "foundation_documentation/artifacts/tmp/stcon06-executor-v13-api.log",
+      "log_sha256": "c604423b8d84dca398584569cada29f07e617394eddf0b31a38de163c53e9583",
+      "mode": "api",
+      "result": "Harness assertions had been placed in the provider-identity lookup and 30-row matcher was still narrow; tests caught both.",
+      "session": 78310
+    },
+    {
+      "api_e2e": {
+        "files": 27,
+        "passed": 312
+      },
+      "api_unit": {
+        "files": 21,
+        "passed": 194
+      },
+      "exit_code": 0,
+      "log": "foundation_documentation/artifacts/tmp/stcon06-executor-v13-api2.log",
+      "log_sha256": "5a7891df31423274c7e9a85062f792513e4de5155f19db3e482c393167cbd416",
+      "mode": "api",
+      "result": "Index, migration rollback SQLSTATE probes, 500-row suffix/page and EPS plan assertions passed.",
+      "session": 45586,
+      "source_manifest_sha256": "bdca59493424846c01ade2328e56958256cd474a91eec7ea23460bbb3d5abe0d",
+      "source_unchanged_during_run": true
+    },
+    {
+      "api_e2e": {
+        "files": 27,
+        "passed": 312
+      },
+      "api_unit": {
+        "files": 21,
+        "passed": 194
+      },
+      "exit_code": 0,
+      "log": "foundation_documentation/artifacts/tmp/stcon06-executor-v13-api3.log",
+      "log_sha256": "bb5c927083eb57239885b7f1414b1c69e194a03c1167c2996741b3d1e85ef471",
+      "mode": "api",
+      "result": "PASS; latest source includes bounded write/storage observation and SQLSTATE-specific rollback assertions.",
+      "session": 16822,
+      "source_manifest_after": "foundation_documentation/artifacts/tmp/stcon06-executor-v13-api3-source-after.log",
+      "source_manifest_before": "foundation_documentation/artifacts/tmp/stcon06-executor-v13-api3-source-before.log",
+      "source_manifest_sha256": "36ce8324e2b558cc11478333e2a32497692d7cc749a2c07ea836bbb32b97f0e6",
+      "source_unchanged_during_run": true
+    }
+  ],
+  "final_all": {
+    "browser_freshness": {
+      "attestation": "foundation_documentation/artifacts/tmp/stcon06-executor-v13-all-linux-3-browser-attestation.json",
+      "attestation_sha256": "0ad1a0d732a59a7a27ee28991f56fc94627510d66a2e77d50da17c571bf857d1",
+      "captured_at_utc": "2026-10-20T17:59:52.298Z",
+      "database_name": "leadshug_timeline_channels_ci",
+      "dist_bundle_sha256": "27c5db465495068402b278ba7c9d3a1f23b8b03797249639190c8a755759563b",
+      "matches": true,
+      "run_id": "2026-10-20T17-59-52-297Z",
+      "runtime": "v22.23.3",
+      "served_asset_copy": "foundation_documentation/artifacts/tmp/stcon06-executor-v13-all-linux-3-served-app-authority.js",
+      "served_asset_sha256": "27c5db465495068402b278ba7c9d3a1f23b8b03797249639190c8a755759563b",
+      "served_bundle_sha256": "27c5db465495068402b278ba7c9d3a1f23b8b03797249639190c8a755759563b"
+    },
+    "command": "CHANNELS_DOCKER_TRANSPORT=linux with exact shared-socket DOCKER_HOST; bash scripts/test-channels-local.sh all",
+    "exit_code": 0,
+    "guard": {
+      "host_selftest": "foundation_documentation/artifacts/tmp/stcon06-executor-v13-all-linux-3-guard-selftest.json",
+      "host_selftest_sha256": "00ab4d258d8104f98eaa36c4e7a19c3b514a9f4ce7397d6e3c93ef1159cbf205",
+      "in_runner_marker": "channels-ci-parity-v1",
+      "mutations_rejected": 21,
+      "native_linux_posix_control": {
+        "exit_code": 0,
+        "overlay_added": false,
+        "posix_bind_paths_preserved": true
+      },
+      "unsupported_socket_control": {
+        "docker_calls": 0,
+        "exit_code": 1
+      },
+      "wsl_bind_translation_control": {
+        "dotenv_masks_same_public_sources": true,
+        "exit_code": 0,
+        "overlay_removed_after_exit": true,
+        "same_checkout_suffix": true
+      }
+    },
+    "limits": "Disposable local validation only; independent final audits and human operational IN/OUT remain pending; no human database migration or runtime activation.",
+    "manifest_sha256": "1101bdd5ab646c7e3e47599b5cb039d4824f62d6904c264bd0f7e39a590b8a7a",
+    "post_manifest": "foundation_documentation/artifacts/tmp/stcon06-executor-v13-all-linux-3-source-after.json",
+    "pre_manifest": "foundation_documentation/artifacts/tmp/stcon06-executor-v13-all-linux-3-source-before.json",
+    "pre_post_exact_equal": true,
+    "result": "PASS",
+    "runner_log": "foundation_documentation/artifacts/tmp/stcon06-executor-v13-all-linux-3.log",
+    "runner_log_sha256": "d54ad1d0a96aa1f9980d25b79ca569254e71a9dd199402d831aef3bf18927d00",
+    "session": 2564,
+    "source_freeze": "foundation_documentation/artifacts/reviews/leadshug-channel-abstraction-20261020/evidence/v13-final-source-before-all.json",
+    "source_freeze_sha256": "91420bba9818f97706206d38a8bf3e4c821aa41c55711493a3fded9c0c818dbc",
+    "source_records": 47,
+    "test_results": {
+      "api_postgres_e2e": {
+        "files": 27,
+        "passed": 312
+      },
+      "api_unit": {
+        "files": 21,
+        "passed": 194
+      },
+      "browser_e2e": {
+        "passed": 50
+      },
+      "web_unit": {
+        "files": 5,
+        "passed": 29
+      }
+    },
+    "validation_namespace_after_cleanup": {
+      "containers": 0,
+      "networks": 0,
+      "volumes": 0
+    }
+  },
+  "guard_proof": {
+    "actual_marker_in_api3_canonical_log": "guard=channels-ci-parity-v1",
+    "actual_wrapper_fake_docker_controls": {
+      "collision": {
+        "compose_calls": 0,
+        "exit_code": 1
+      },
+      "empty_namespace_config_only": {
+        "compose_calls": 1,
+        "exit_code": 0,
+        "resource_mutations": 0
+      },
+      "network_inventory_failure": {
+        "compose_calls": 0,
+        "exit_code": 1
+      },
+      "ps_inventory_failure": {
+        "compose_calls": 0,
+        "exit_code": 1
+      },
+      "volume_inventory_failure": {
+        "compose_calls": 0,
+        "exit_code": 1
+      }
+    },
+    "final_all_log": "foundation_documentation/artifacts/tmp/stcon06-executor-v13-all-linux-3.log",
+    "final_all_marker": "channels-ci-parity-v1",
+    "final_controls": {
+      "ephemeral_overlay_removed": true,
+      "native_linux_posix_preserved": true,
+      "unsupported_socket_rejected_before_docker": true,
+      "wsl_dotenv_masks_same_public_sources": true,
+      "wsl_same_checkout_suffix": true
+    },
+    "final_selftest_mutations_rejected": 21,
+    "guard_source": "scripts/check-channels-ci-parity.py",
+    "host_selftest_file": "foundation_documentation/artifacts/tmp/stcon06-executor-v13-all-linux-3-guard-selftest.json",
+    "host_selftest_sha256": "00ab4d258d8104f98eaa36c4e7a19c3b514a9f4ce7397d6e3c93ef1159cbf205",
+    "native_static_checks": {
+      "python_compile": "pass",
+      "shell_syntax": "pass"
+    },
+    "runner_source": "scripts/test-channels-local.sh",
+    "selftest_rejected_mutations": [
+      "missing PR trigger",
+      "missing channels job",
+      "missing retained guard",
+      "weakened job gate",
+      "job swallowed errors",
+      "skipped validate step with ${{ false }}",
+      "retained job swallowed errors",
+      "skipped retained admission with ${{ false }}",
+      "missing retained private checkout",
+      "missing common guard",
+      "missing API E2E",
+      "missing browser suite",
+      "missing migration",
+      "missing Prisma generate",
+      "missing lint",
+      "reordered suites",
+      "unchecked shell inventory guard"
+    ],
+    "workflow": "\\.github/workflows/ci.yml",
+    "yaml_controls": "duplicate-key and alias inputs rejected"
+  },
+  "latest_inbound_query_evidence": {
+    "equal_created_at_tie_break_verified_by_larger_id": true,
+    "execution_ms": 2.206,
+    "expired_inbound_remains_queryable": true,
+    "final_all_log": "foundation_documentation/artifacts/tmp/stcon06-executor-v13-all-linux-3.log",
+    "index": "messages_conversation_direction_created_id_idx",
+    "index_condition": "conversation_id equality AND direction=IN",
+    "limits": "One bounded disposable PostgreSQL observation; no production capacity/SLO claim.",
+    "log": "foundation_documentation/artifacts/tmp/stcon06-executor-v13-api3.log",
+    "marker": "CHANNEL-HISTORY-SCAN-EVIDENCE",
+    "older_inbound_preserved": true,
+    "out_only_and_empty_references_return_no_inbound_row": true,
+    "out_only_history_present": true,
+    "out_suffix_rows_per_each_of_two_representatives": 500,
+    "page_references": 500,
+    "rows_removed_by_filter": 0,
+    "scan": "Index Only Scan via messages_conversation_direction_created_id_idx, 500 loops",
+    "shared_hit_blocks": 1003,
+    "shared_read_blocks": 0
+  },
+  "linux_transport_rehearsal": {
+    "attempts": [
+      {
+        "exit_code": 1,
+        "failure": "Docker Desktop could not resolve bind source /mnt/c/.../api-app/.dockerignore; wrapper cleaned validation-prefixed resources.",
+        "log": "foundation_documentation/artifacts/tmp/stcon06-executor-v13-all-linux.log",
+        "log_sha256": "97b4f20ea6964059fcbe2d7c9999f4aa5d537cb172b18112acd0d28835b46af7",
+        "mode": "all",
+        "session": 93079
+      },
+      {
+        "exit_code": 1,
+        "failure": "After bind translation, Compose config file mask source /mnt/c/.../.env.example was still client-relative; wrapper cleaned validation-prefixed resources.",
+        "log": "foundation_documentation/artifacts/tmp/stcon06-executor-v13-all-linux-2.log",
+        "log_sha256": "0bbb0e61be2b9369e6a7ad923a281d2ba525bc0908ada9290a028822ddc35726",
+        "mode": "all",
+        "session": "Linux retry 2"
+      },
+      {
+        "exit_code": 0,
+        "log": "foundation_documentation/artifacts/tmp/stcon06-executor-v13-linux-config-overlay.log",
+        "log_sha256": "b98abc212fbcf612e0ea08bdb2e1946e8185e482d5eeeecc8b5cfdbc1f84e7f8",
+        "mode": "CHANNELS_CONFIG_ONLY=1",
+        "result": "Actual Compose config parsed with ephemeral mask overlay; config-only created no resources.",
+        "session": 70845
+      },
+      {
+        "exit_code": 0,
+        "log": "foundation_documentation/artifacts/tmp/stcon06-executor-v13-all-linux-3.log",
+        "log_sha256": "d54ad1d0a96aa1f9980d25b79ca569254e71a9dd199402d831aef3bf18927d00",
+        "mode": "all",
+        "result": "PASS; Linux transport used the same engine; no source edit during run.",
+        "session": 2564
+      }
+    ],
+    "engine_identity_proof": {
+      "file": "foundation_documentation/artifacts/tmp/stcon06-executor-v13-linux-engine-proof.json",
+      "id_sha256": "6d6d9b7b97702c5120902a41e1fd63a758e1627ff1caa5674051382a5282340a",
+      "same_engine": true,
+      "sha256": "a59a7b847b920fae87d797bed639b4df63c105abf73f2f51620e43bf69f76764"
+    },
+    "linux_context": "same Ubuntu 24.04.1 WSL distro and principal checkout path, root CLI",
+    "overlay": "WSL/shared-socket only; three existing config names point to the same translated public api-app/.env.example and root .env.example sources; ephemeral mode-600 file cleaned by EXIT/signal trap; native Linux and Windows use original Compose config.",
+    "post_cleanup_namespace": {
+      "containers": 0,
+      "filter": "com.docker.compose.project=leadshug_channels_validation",
+      "networks": 0,
+      "volumes": 0
+    },
+    "public_diff_refresh": "Root-owned frozen snapshot v13-final-source-before-all.json; 47 positive public records, strict diff 284/284 expected and zero forbidden/unclassified; normal authority GO.",
+    "shared_wsl_socket": "unix:///mnt/wsl/docker-desktop/shared-sockets/guest-services/docker.sock",
+    "status": "PASS on final canonical all after two preserved infrastructure failures",
+    "windows_docker_context": "desktop-linux (npipe); identity compared by SHA-256 only"
+  },
+  "migration_probe": {
+    "acceleration_limit": "Short induced failures on a separate disposable probe table; exact migration settings were observed, not claimed to have waited 5 or 60 seconds.",
+    "actual_migration_deployed_by_canonical_runner_to_disposable_pg16": true,
+    "configured_lock_timeout": "5s",
+    "configured_statement_timeout": "60s",
+    "final_all_log": "foundation_documentation/artifacts/tmp/stcon06-executor-v13-all-linux-3.log",
+    "local_preserved_database_touched": false,
+    "marker": "CHANNEL-MIGRATION-ROLLBACK-EVIDENCE",
+    "rollback_indexes_surviving": 0,
+    "rows_after_aborted_ddl": 100001,
+    "sqlstates": {
+      "lock": "55P03",
+      "statement": "57014"
+    },
+    "test_acceleration": {
+      "lock_timeout": "100ms",
+      "statement_timeout": "1ms"
+    },
+    "write_observation": {
+      "batchRowsEach": 1000,
+      "indexBytes": 6856704,
+      "note": "same disposable table; bounded single-sample observation, no capacity/SLO threshold",
+      "withIndexMs": 17.617960999999923,
+      "withoutIndexMs": 6.33472299999994
+    }
+  },
+  "remaining_gates": [
+    "Fresh independent performance/TQA/assurance adjudication of the final source and actual final runner evidence.",
+    "Root operator readiness and explicit operational release before any human runtime/index activation; no human DB migration or human IN/OUT has occurred.",
+    "Remote CI execution remains unobserved; the parity guard is local evidence, not a claim of remote workflow success."
+  ],
+  "schema": "stcon06-executor-v1.3-validation-v1",
+  "scope": "v1.3 local implementation and disposable canonical validation evidence; not final delivery, human database migration, runtime activation, publication, or remote CI success",
+  "selected_window_filter": {
+    "expected_queries": 0,
+    "final_all_log": "foundation_documentation/artifacts/tmp/stcon06-executor-v13-all-linux-3.log",
+    "final_result": {
+      "available": true,
+      "conversationFound": true,
+      "latestDirection": "recebida",
+      "requiresWindow": false
+    },
+    "latest_inbound_queries": 0,
+    "latest_inbound_window_queries": 0,
+    "marker": "CHANNEL-WINDOW-SCOPE-EVIDENCE",
+    "official_binding_also_present_in_bu": true,
+    "official_bindings_present": true,
+    "result": "verified in actual public list request",
+    "selected_channel_requires_window": false
+  },
+  "source_hashes_after_api3": {
+    "migration": "586e709e07736eca0908ab5dcc668cf0e0b317189b4c963b361399848a3c9710",
+    "number_onboarding_pcv": "3ae5c8646ea3f0a1d9ec7253cac74680922db5278067ef9fece6f87cf7273a34",
+    "parity_guard": "d1da80b6fae2e8456fea92ca17877359d283c7628aaed9a8f149c8a8d09f9a56",
+    "prisma_channel_resolver": "acf779d89162d339e37af2abe2aa91fd1a1b292d7f5208bb672090c87a23bf4d",
+    "runner": "7aac5f4db44503ac4540b67561310cea5a03a45a32a9ab1224dc14725f0ab7ef",
+    "schema": "26444c6a102755fa5a10f1930d4a9ff256a8f76bd515cc0e10e8b1fe6fb7cf99",
+    "workflow": "16acaf6d4b807a806a50a31c75715b14e8b2e220e0e17e2bac43ec4b740318e5"
+  },
+  "source_hashes_after_final_all": {
+    "migration": "586e709e07736eca0908ab5dcc668cf0e0b317189b4c963b361399848a3c9710",
+    "number_onboarding_pcv": "3ae5c8646ea3f0a1d9ec7253cac74680922db5278067ef9fece6f87cf7273a34",
+    "parity_guard": "c668d6f8c8e9377c011bee126863395951c2a840b6da07bbd15ed2cc398bdd30",
+    "runner": "de580538f3257a85448cb3ce5030c85b90f65507da53737e4491fdf543091e42",
+    "schema": "26444c6a102755fa5a10f1930d4a9ff256a8f76bd515cc0e10e8b1fe6fb7cf99",
+    "workflow": "16acaf6d4b807a806a50a31c75715b14e8b2e220e0e17e2bac43ec4b740318e5"
+  },
+  "source_owner": "sole executor; principal checkout; no product commit or push"
+}
