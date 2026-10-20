@@ -1,0 +1,33 @@
+{
+  "all_public_source_hashes_match": true,
+  "api": {
+    "container_id": "9795741bec7f58328d87f5b3fe23eae9fba7f13c8cb2d72c21f96497dbb9beb8",
+    "health": "healthy",
+    "image_id": "sha256:d50bc6a4281753e3bb6a31764c3ada9dc27351976515f2f605aceec66b8582b1",
+    "matches_activation_provenance": true,
+    "state": "running"
+  },
+  "channel_identity_connection_state_readback": "not_performed; no previously approved safe projection helper was available",
+  "frozen_manifest_sha256": "9cbead63a2a521211274e8210a0bb441760d755587835db7f814b851d16eef53",
+  "frozen_public_source_manifest": "foundation_documentation/artifacts/reviews/leadshug-channel-abstraction-20261020/evidence/v13r4-source-before-all.json",
+  "gateway_health_http_status": 200,
+  "message_content_read": false,
+  "message_counts_used_for_attribution": false,
+  "private_dotenv_or_local_files_read": false,
+  "product_or_runtime_mutated": false,
+  "public_source_files_checked": 57,
+  "schema": "stcon06-post-operator-local-provenance-readback-v1",
+  "scope": "bounded current runtime/source readback only; no message attribution",
+  "served_asset": {
+    "http_status": 200,
+    "matches_expected_image_asset": true,
+    "path": "/assets/index-9DA0_PMk.js",
+    "sha256": "27c5db465495068402b278ba7c9d3a1f23b8b03797249639190c8a755759563b"
+  },
+  "web": {
+    "container_id": "472b3f6fcde8c032bfa90997ef0cd674971dfccdb292e9ef057187c552e3dff5",
+    "image_id": "sha256:6015c99229f1c2d56a0bf94500a04a5e21338c5985cdf4b368d192c18341bd6b",
+    "matches_activation_provenance": true,
+    "state": "running"
+  }
+}

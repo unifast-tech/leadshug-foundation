@@ -1,0 +1,24 @@
+{
+  "schema": "stcon06-local-closeout-v1",
+  "recorded_at": "2026-10-20T22:48:38.723721+00:00",
+  "todo": "todos/completed/features/TODO-leadshug-channel-abstraction.md",
+  "status": "Completed",
+  "delivery_stage": "Local-Implemented",
+  "tests": 613,
+  "source_inputs": 57,
+  "source_unchanged": true,
+  "physical_official_INOUT": "operator_confirmed",
+  "physical_unofficial_INOUT": "operator_confirmed",
+  "preflight_findings": 0,
+  "final_findings": 0,
+  "pre_move_guards": "diff/authority/completion/closeout GO",
+  "canonical_modules_consolidated": true,
+  "successor_order": [
+    "ST-CON-05 planning/review",
+    "ST-CON-04 rebase after05"
+  ],
+  "accepted_low_debt": "ST06-DEBT-PERF-R4-01 explicit ST-CON-05 inherited work item",
+  "waivers": [],
+  "product_commit_push_or_deploy": false,
+  "remote_CI": "not_run"
+}

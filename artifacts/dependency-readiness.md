@@ -4,8 +4,8 @@ Registro baseado em `delphi-ai/templates/dependency_readiness_template.md`; mem�
 
 ## Snapshot
 
-- **Last updated:** 2026-10-20, ST-CON-06 em implementação. Provas CP108 continuam históricas; health local200 e sete serviços ativos conferidos agora, mas hostname HTTPS antigo falha DNS. Nova fonte ainda não ativada; INOUT pós-cutover pendente.
-- **Current session/profile:** operational-coder, NestJS/React/Vite/PostgreSQL/Prisma/Docker; handoff operacional-readiness read-only, publicação local planejada após validação. Coorte privada OWNER/R02 preservada. ST-CON-01 encerrado CP108; ST-CON-06 permanece Pending.
+- **Last updated:** 2026-10-20, ST-CON-06 v1.3: all93791/613testes, índice aplicado e API/Web ativados; HTTPS wins-viewing-federal-jason.trycloudflare.com validado; operador confirmou nova IN/OUT nos dois vínculos. Prova da execução observada, sem garantia contínua.
+- **Current session/profile:** assurance-tester-quality para fechamento06; NestJS/React/Vite/PostgreSQL/Prisma/Docker; coorte OWNER privada preservada. Revisão final sem findings e guards GO; ST-CON-06 encerrado localmente;05/04 somente handoff.
 - **Why this register matters now:** usuário disponibilizará oficial e não oficial; confirmou local primeiro e Railway depois. Fechar wiring e evidência antes de executar testes externos.
 
 ## Dependency Register
@@ -149,3 +149,8 @@ CP108 corrente: prova física de cadastro/troca/retomada dos dois canais conclu�
 ## ST-CON-06 — readiness preliminar em2026-10-20
 
 O usuário informou que os vínculos oficial/não oficial estão disponíveis e suspeitou de túneis fora do ar. Consulta read-only por label do projeto local observou sete containers ativos; API/PG/Redis com health do Docker, gateway apenas127.0.0.1:8083 e health local200. O hostname histórico não resolve DNS (curl6); isso não prova desconexão de canais. Nenhum restart, segredo/config privado, banco ou provider foi acessado/alterado. [Recibo preliminar](reviews/leadshug-channel-abstraction-20261020/evidence/local-readiness-preliminary.json). Publicação do novo código/HTTPS e INOUT pós-cutover continuam pendentes; testes automatizados ocorrem somente em leadshug_channels_validation.
+
+
+## ST-CON-06 v1.3 — readiness pontual após cutover
+
+Em2026-10-20 o runtime atualizado tem API saudável/Web em execução e imagem/bundle conferidos; migração Prisma única registrada sem reset e demais serviços/volumes/rede preservados. Novo HTTPS foi validado em Windows/WSL por DNS e TLS normal, health/privacidade/assets200. Operador confirmou challenge Meta válido e nova IN/OUT nos dois canais. Fonte57 e bundle permaneceram iguais após a prova. A tabela anterior e os demais checkpoints acima são históricos; este resultado não transfere disponibilidade contínua nem resolve a ausência de template aprovado. Evidências atuais: reviews/leadshug-channel-abstraction-20261020/evidence/local-operator-proof-v13r4.json, local-activation-provenance-v13r4-final.json, local-tunnel-validation-v13r4.json e post-operator-readback-v13r4.json. Railway/produção não executados.

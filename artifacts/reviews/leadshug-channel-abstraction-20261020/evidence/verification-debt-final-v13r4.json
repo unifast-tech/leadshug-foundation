@@ -1,0 +1,18 @@
+{
+  "schema": "stcon06-verification-debt-adjudication-v1",
+  "outcome": "low",
+  "inline_markers": [],
+  "public_source_files": 50,
+  "source57_unchanged": true,
+  "heuristic_exit": 2,
+  "heuristic_interpretation": "Historical planning unchecked items and Pending final review are not hidden debt or evidence of completed closeout; operator proof is current and canonical modules now consolidated. Final gate still pending.",
+  "accepted_debt": {
+    "id": "ST06-DEBT-PERF-R4-01",
+    "severity": "low",
+    "owner": "API performance-test maintainer",
+    "follow_up_todo": "todos/active/features/TODO-leadshug-official-template-authoring.md#follow-up-herdado-st06-debt-perf-r4-01",
+    "trigger": "next ordinary PCV-test change; integrate in successor planning before execution",
+    "action": "Distinguish emitted rows, filters/rechecks, buffers and rounded loop statistics; current no-filter/no-recheck plan remains accepted"
+  },
+  "waivers": []
+}

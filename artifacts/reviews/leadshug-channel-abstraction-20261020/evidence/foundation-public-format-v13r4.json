@@ -1,0 +1,20 @@
+{
+  "schema": "stcon06-documentary-format-check-v1",
+  "unmodified_source_format_proof": "evidence/public-format-v13r4.json",
+  "raw_documentary_diff_check_exit": 2,
+  "raw_findings": [
+    "artifacts/reviews/leadshug-channel-abstraction-20261020/evidence/delivery-preflight-v13r4.dispatch.md:158: new blank line at EOF.",
+    "artifacts/reviews/leadshug-channel-abstraction-20261020/evidence/delivery-preflight-v13r4.merge.md:44: new blank line at EOF.",
+    "artifacts/reviews/leadshug-channel-abstraction-20261020/evidence/final-review-v13r4.dispatch.md:158: new blank line at EOF.",
+    "artifacts/reviews/leadshug-channel-abstraction-20261020/evidence/final-review-v13r4.merge.md:44: new blank line at EOF."
+  ],
+  "owner_disposition": "Only canonical generated dispatch/merge Markdown double final newline. Preserve exact closed reviewer inputs/results rather than rewriting collected evidence. Not trailing source whitespace or a behavioral/verification debt. All other staged paths pass normal CRLF-aware diff check.",
+  "generated_artifacts_preserved": [
+    "artifacts/reviews/leadshug-channel-abstraction-20261020/evidence/delivery-preflight-v13r4.dispatch.md",
+    "artifacts/reviews/leadshug-channel-abstraction-20261020/evidence/delivery-preflight-v13r4.merge.md",
+    "artifacts/reviews/leadshug-channel-abstraction-20261020/evidence/final-review-v13r4.dispatch.md",
+    "artifacts/reviews/leadshug-channel-abstraction-20261020/evidence/final-review-v13r4.merge.md"
+  ],
+  "other_staged_diff_check_exit": 0,
+  "global_git_config_changed": false
+}

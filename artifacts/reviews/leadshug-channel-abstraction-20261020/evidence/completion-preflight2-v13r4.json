@@ -1,0 +1,116 @@
+{
+  "blocked": true,
+  "context": {
+    "acceptance_criteria_count": 0,
+    "allow_waivers": false,
+    "ci_equivalent_row_count": 3,
+    "current_delivery_stage": "Pending",
+    "definition_of_done_count": 8,
+    "delivery_claim": true,
+    "dod_count": 8,
+    "evidence_row_count": 19,
+    "mode": "single",
+    "pipeline_preflight_row_count": 1,
+    "rule_spirit_hunt_row_count": 5,
+    "scope_count": 6,
+    "todo_path": "/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/todos/active/features/TODO-leadshug-channel-abstraction.md",
+    "validation_count": 5,
+    "validation_steps_count": 5
+  },
+  "overall_outcome": "no-go",
+  "rule_id": "paced.todo.completion-evidence",
+  "schema_version": "todo-completion-guard-v1",
+  "status": "blocked",
+  "violations": [
+    {
+      "code": "PIPELINE-PREFLIGHT-UNRESOLVED-P1-P2",
+      "message": "Pipeline/Copilot P1/P2 Preflight row records an unresolved P1/P2 finding: Fresh internal no-context gpt-6.1-sol/xhigh; delivery-preflight-v13r4-package.md | Current code, all93791/613tests, tenant/auth, channel cutover, browser protection, current local activation/INOUT and canonical consolidation | passed | artifacts/reviews/leadshug-channel-abstraction-20261020/evidence/delivery-preflight-v13r4.raw.json and strictmerge, terminal0 | none P1/P2 | Separate fresh final-review lane follows. Low PERF-R4-01 already assigned with an explicit successor work item; no waiver or product promotion.",
+      "resolution": "Fix the P1/P2 issue, refresh the evidence, and rerun the gate before claiming delivery.",
+      "section": "Pipeline/Copilot P1/P2 Preflight"
+    },
+    {
+      "code": "RULE-SPIRIT-HUNT-EVIDENCE-NOT-REAL",
+      "message": "Rule-Spirit Anti-Pattern Hunt row claims `passed` but the evidence is not real completed execution: D10 safe topology/CI",
+      "resolution": "Replace planned/pending text with concrete completed review evidence. Use columns: Rule / Principle Surface, Bypass or Anti-Pattern Search Lens, Status, Evidence Artifact / Command, Findings, Resolution / Notes.",
+      "section": "Rule-Spirit Anti-Pattern Hunt"
+    },
+    {
+      "code": "RULE-SPIRIT-HUNT-EVIDENCE-NOT-REAL",
+      "message": "Rule-Spirit Anti-Pattern Hunt row claims `passed` but the evidence is not real completed execution: Verification and promotion",
+      "resolution": "Replace planned/pending text with concrete completed review evidence. Use columns: Rule / Principle Surface, Bypass or Anti-Pattern Search Lens, Status, Evidence Artifact / Command, Findings, Resolution / Notes.",
+      "section": "Rule-Spirit Anti-Pattern Hunt"
+    },
+    {
+      "code": "CRITERION-CHECKLIST-UNCHECKED",
+      "message": "Scope item is still unchecked under a delivery claim: SCOPE-05 \u2014 Runner de invent\u00e1rio positivo antes de testes, harness dur\u00e1vel de imports/contrato/PG/Playwright, regress\u00f5es completas e prova real assistida nos dois v\u00ednculos pr\u00f3prios; consolida\u00e7\u00e3o/revis\u00f5es de entrega.",
+      "resolution": "Check the TODO item only after the implementation and criterion-specific evidence are complete, or move the TODO back to a non-delivery stage.",
+      "section": "Scope"
+    },
+    {
+      "code": "LITERAL-MARKER-EVIDENCE-MISMATCH",
+      "message": "Criterion names `Playwright` but evidence does not prove the same marker: SCOPE-05 \u2014 Runner de invent\u00e1rio positivo antes de testes, harness dur\u00e1vel de imports/contrato/PG/Playwright, regress\u00f5es completas e prova real assistida nos dois v\u00ednculos pr\u00f3prios; consolida\u00e7\u00e3o/revis\u00f5es de entrega.",
+      "resolution": "Update the evidence to name the exact required artifact, or record an explicit approved waiver/deviation.",
+      "section": "Completion Evidence Matrix"
+    },
+    {
+      "code": "LITERAL-MARKER-EVIDENCE-MISMATCH",
+      "message": "Criterion names `browser` but evidence does not prove the same marker: SCOPE-06 \u2014 Corrigir PERF-01 com um \u00fanico \u00edndice Prisma-managed de Message e sele\u00e7\u00e3o de refer\u00eancias que realmente exigem janela; admitir a fam\u00edlia PG/browser no CI pelo mesmo runner/lifecycle, com guard fail-closed de paridade e replay local isolado. Escopo exato: artifacts/reviews/leadshug-channel-abstraction-20261020/scope-renewal-v1.3-proposal.md; pendente APROVADO v1.3.",
+      "resolution": "Update the evidence to name the exact required artifact, or record an explicit approved waiver/deviation.",
+      "section": "Completion Evidence Matrix"
+    },
+    {
+      "code": "BROWSER-WEB-PLAYWRIGHT-EVIDENCE-MISSING",
+      "message": "Browser/web-visible criterion lacks source-owned Playwright spec and runner evidence: DOD-06 \u2014 Runner p\u00fablico corrigido antes de qualquer teste; harness de depend\u00eancias/contrato, PG e CI-equivalent all/Playwright reais passam com fonte/bundle frescos e regress\u00f5es de cadastro/API/bot; \u00edndice latest-IN e refer\u00eancias selected-window t\u00eam prova OUT-heavy/no-IN, fam\u00edlia CI PG/browser compartilha all/lifecycle/guard e topologia Linux isolada validada, sem claim de execu\u00e7\u00e3o remota.",
+      "resolution": "Record the source-owned Playwright spec under tools/flutter/web_app_tests/** and the project-owned navigation runner command, plus target URL/lane, project-defined build/publish proof, and refreshed real-domain bundle provenance.",
+      "section": "Completion Evidence Matrix"
+    },
+    {
+      "code": "LITERAL-MARKER-EVIDENCE-MISMATCH",
+      "message": "Criterion names `browser` but evidence does not prove the same marker: DOD-06 \u2014 Runner p\u00fablico corrigido antes de qualquer teste; harness de depend\u00eancias/contrato, PG e CI-equivalent all/Playwright reais passam com fonte/bundle frescos e regress\u00f5es de cadastro/API/bot; \u00edndice latest-IN e refer\u00eancias selected-window t\u00eam prova OUT-heavy/no-IN, fam\u00edlia CI PG/browser compartilha all/lifecycle/guard e topologia Linux isolada validada, sem claim de execu\u00e7\u00e3o remota.",
+      "resolution": "Update the evidence to name the exact required artifact, or record an explicit approved waiver/deviation.",
+      "section": "Completion Evidence Matrix"
+    },
+    {
+      "code": "CRITERION-CHECKLIST-UNCHECKED",
+      "message": "Definition of Done item is still unchecked under a delivery claim: DOD-08 \u2014 Decis\u00f5es consolidadas, arquitetura/critique e assurance/cutover/security/pcv/TQA/final/debt/diff/authority/completion/closeout satisfeitos; consumidores05/04 recebem handoff, sem claim de produ\u00e7\u00e3o.",
+      "resolution": "Check the TODO item only after the implementation and criterion-specific evidence are complete, or move the TODO back to a non-delivery stage.",
+      "section": "Definition of Done"
+    },
+    {
+      "code": "EVIDENCE-STATUS-INVALID",
+      "message": "Evidence row status `pending` is invalid for criterion: DOD-08 \u2014 Decis\u00f5es consolidadas, arquitetura/critique e assurance/cutover/security/pcv/TQA/final/debt/diff/authority/completion/closeout satisfeitos; consumidores05/04 recebem handoff, sem claim de produ\u00e7\u00e3o.",
+      "resolution": "Use one of ['blocked', 'n/a', 'passed', 'planned', 'waived'].",
+      "section": "Completion Evidence Matrix"
+    },
+    {
+      "code": "EVIDENCE-ARTIFACT-NOT-REAL",
+      "message": "Evidence artifact/command is not real completed evidence for criterion: DOD-08 \u2014 Decis\u00f5es consolidadas, arquitetura/critique e assurance/cutover/security/pcv/TQA/final/debt/diff/authority/completion/closeout satisfeitos; consumidores05/04 recebem handoff, sem claim de produ\u00e7\u00e3o.",
+      "resolution": "Run the validation or record an explicit blocker/approved waiver instead of claiming delivery.",
+      "section": "Completion Evidence Matrix"
+    },
+    {
+      "code": "CRITERION-CHECKLIST-UNCHECKED",
+      "message": "Validation Steps item is still unchecked under a delivery claim: VAL-05 \u2014 Rodar revis\u00f5es/pcv/cutover/diff p\u00fablico/authority/completion/closeout e consolidar m\u00f3dulos antes de encerrar;05/04 apenas rebase/handoff.",
+      "resolution": "Check the TODO item only after the implementation and criterion-specific evidence are complete, or move the TODO back to a non-delivery stage.",
+      "section": "Validation Steps"
+    },
+    {
+      "code": "EVIDENCE-STATUS-INVALID",
+      "message": "Evidence row status `pending` is invalid for criterion: VAL-05 \u2014 Rodar revis\u00f5es/pcv/cutover/diff p\u00fablico/authority/completion/closeout e consolidar m\u00f3dulos antes de encerrar;05/04 apenas rebase/handoff.",
+      "resolution": "Use one of ['blocked', 'n/a', 'passed', 'planned', 'waived'].",
+      "section": "Completion Evidence Matrix"
+    },
+    {
+      "code": "EVIDENCE-ARTIFACT-NOT-REAL",
+      "message": "Evidence artifact/command is not real completed evidence for criterion: VAL-05 \u2014 Rodar revis\u00f5es/pcv/cutover/diff p\u00fablico/authority/completion/closeout e consolidar m\u00f3dulos antes de encerrar;05/04 apenas rebase/handoff.",
+      "resolution": "Run the validation or record an explicit blocker/approved waiver instead of claiming delivery.",
+      "section": "Completion Evidence Matrix"
+    },
+    {
+      "code": "FLOW-CRITERION-NAVIGATION-COVERAGE-MISSING",
+      "message": "User-visible/interactive/flow-impacting criterion lacks item-specific integration/device or navigation/browser evidence: VAL-05 \u2014 Rodar revis\u00f5es/pcv/cutover/diff p\u00fablico/authority/completion/closeout e consolidar m\u00f3dulos antes de encerrar;05/04 apenas rebase/handoff.",
+      "resolution": "Add the integration/device test or navigation/browser test that exercises this exact item, or record an explicit approved structure-only waiver/deviation proving no user-observable flow can change. In Flutter scope, integration is ADB/device execution; browser navigation is Playwright against the final domain after the project-defined web build/publish step.",
+      "section": "Completion Evidence Matrix"
+    }
+  ]
+}

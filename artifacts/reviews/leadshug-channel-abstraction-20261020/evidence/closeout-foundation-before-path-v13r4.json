@@ -1,0 +1,33 @@
+{
+  "generated_at_utc": "2026-10-20T22:47:34.958655Z",
+  "git": {
+    "ahead": 0,
+    "available": true,
+    "behind": 0,
+    "clean": false,
+    "root": "/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation",
+    "synced": false,
+    "upstream": "origin/main"
+  },
+  "overall_outcome": "go",
+  "rule_id": "paced.todo.closeout-disposition",
+  "todo_count": 1,
+  "todo_results": [
+    {
+      "context": {
+        "closeout_section_present": true,
+        "current_delivery_stage": "Pending",
+        "delivery_claim": false,
+        "disposition": "keep-active",
+        "next_exact_step": "Run final authority/completion/diff/closeout gates on this complete evidence projection; then archive the same local-only TODO and publish Foundation documentation. No product commit/push/deploy; next product work is ST-CON-05 planning/review.",
+        "path_state": "active",
+        "post_commit_push_status": "Foundation main checkpoint5d599ab1 published; current closeout evidence/docs pending final-review freeze publication. Product commits/push/deploy not authorized.",
+        "qualifiers": "none",
+        "todo_path": "/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/todos/active/features/TODO-leadshug-channel-abstraction.md",
+        "work_state": "review"
+      },
+      "violations": []
+    }
+  ],
+  "violations": []
+}

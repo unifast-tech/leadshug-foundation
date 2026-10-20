@@ -807,3 +807,14 @@ Usuário quer vendedor criar e enviar modelo para análise da Meta dentro do Lea
 ST-CON-04 conserva o objetivo funcional e permanece sem APROVADO específico de implementação. Nova direção humana exige Channel abstrato, concretos de WhatsApp e resolução/injeção scoped; preparar ST-CON-06 antes deste consumer. [Enquadramento e evidência](../../../artifacts/feature-briefs/leadshug-channel-abstraction-20261020.md).
 
 Decisões, pareceres e guardas de2026-10-19 descrevem o pacote então revisado; não são aprovação/readiness do contrato que será rebaseado. Este registro apenas invalida a indicação anterior de pronto para aprovação e preserva o histórico; assinaturas/paths/baseline serão reconvergidos no próximo ciclo de refinamento/reviews/guardas, sem adaptar código antecipadamente.
+
+
+## Handoff recebido de ST-CON-06 v1.3
+
+Fonte/cutover e quatro PCV convergidos; all93791/613testes, ativação local e nova troca física IN/OUT nos dois canais confirmadas. ST-CON-06 está encerrado localmente: revisão final sem findings e guards GO registrados no mesmo TODO concluído. Consumir agora os contratos canônicos de Channel/Resolver e OutboundService em modules/integrations-and-channels.md e modules/inbox-and-conversations.md. Não há aprovação de implementação desta história: reconvergir seu próprio contrato, fonte/baseline e revisões antes de novo APROVADO.
+
+Keep the user's selected behavior: the seller can start a conversation in LeadsHug by supplying the contact. Rebase this story after05: approved-template selection and parameters may be required when the official free-text window is closed. No template bypass or weakening of requiresWindow is authorized by06.
+
+Use the common abstract transport/orchestration and sole MessageAcceptance owner. Current public POST still creates the conversation before attempting a send and may leave it empty on failure;06 intentionally preserves this behavior. Any new intent/durability, deduplication, conversation-creation timing or recovery policy belongs in04's reviewed contract. ACCEPTED means a valid provider message ID, not handset delivery; UNKNOWN and ACCEPTED_LOCAL_INCOMPLETE forbid blind resend and require truthful UI/draft handling.
+
+Explicit residuals to reconverge: current latest-IN window uses stored createdAt without transport filtering; null-ID diagnostics cannot safely merge with echoes by heuristics; local-check-to-network and crash gaps remain. Do not silently substitute the latest/current channel identity into a captured dispatch. Resolve these against first-send requirements before renewed APROVADO, without portraying them as already solved in06.

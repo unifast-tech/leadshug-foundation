@@ -1,0 +1,465 @@
+{
+  "schema": "stcon06-final-review-inputs-v1",
+  "package": "foundation_documentation/artifacts/reviews/leadshug-channel-abstraction-20261020/delivery-preflight-v13r4-package.md",
+  "sha256": "046c7c5f36d4e4b026e245b3e0ecf1a4f7a995be8de949203143190a83ff37e6",
+  "characters": 812069,
+  "bytes": 814876,
+  "records": [
+    {
+      "path": "foundation_documentation/todos/active/features/TODO-leadshug-channel-abstraction.md",
+      "sha256": "7734330bca9e3c3dd9d694b3e49589e5534e5bd5e799415e1469f26ef1503585",
+      "bytes": 139389,
+      "embedded": true
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-channel-abstraction-20261020/evidence/v13r4-source-before-all.json",
+      "sha256": "9cbead63a2a521211274e8210a0bb441760d755587835db7f814b851d16eef53",
+      "bytes": 10495,
+      "embedded": true
+    },
+    {
+      "path": ".github/workflows/ci.yml",
+      "sha256": "16acaf6d4b807a806a50a31c75715b14e8b2e220e0e17e2bac43ec4b740318e5",
+      "bytes": 4049,
+      "embedded": true
+    },
+    {
+      "path": "api-app/package.json",
+      "sha256": "df8551d3e506e7c68516cbd482362c4282671b7ec7eebbf121386390ac080a9d",
+      "bytes": 1670,
+      "embedded": true
+    },
+    {
+      "path": "api-app/prisma/migrations/20261020170000_message_inbound_window_index/migration.sql",
+      "sha256": "586e709e07736eca0908ab5dcc668cf0e0b317189b4c963b361399848a3c9710",
+      "bytes": 212,
+      "embedded": true
+    },
+    {
+      "path": "api-app/prisma/schema.prisma",
+      "sha256": "26444c6a102755fa5a10f1930d4a9ff256a8f76bd515cc0e10e8b1fe6fb7cf99",
+      "bytes": 26850,
+      "embedded": true
+    },
+    {
+      "path": "api-app/src/app.module.ts",
+      "sha256": "a59880adc1bd8250fdbf5d52637fc38fe3177a2615e1b25389716946da7ad420",
+      "bytes": 1857,
+      "embedded": true
+    },
+    {
+      "path": "api-app/src/domain/access/access.service.ts",
+      "sha256": "2ef3761a138d7c8c386c5ddb4bf2a2000c960328789834bde5e12135a1ea66e7",
+      "bytes": 2390,
+      "embedded": true
+    },
+    {
+      "path": "api-app/src/domain/channels/channel-credential-resolver.ts",
+      "sha256": "89cf17ac02af444092651470aee13e2d4a3bcee8d459508be818322b33b00c10",
+      "bytes": 5053,
+      "embedded": true
+    },
+    {
+      "path": "api-app/src/domain/channels/transport/channel-dependencies.spec.ts",
+      "sha256": "f59d838baf635c0ce0d1ebe725c88fbb0b19fac42e9b382452e31fd38e0511a3",
+      "bytes": 2383,
+      "embedded": true
+    },
+    {
+      "path": "api-app/src/domain/channels/transport/channel.ts",
+      "sha256": "432796b8685d07dcc53c3a699a7b9d1469ac4fb110aea080766ec207bec8621f",
+      "bytes": 2678,
+      "embedded": true
+    },
+    {
+      "path": "api-app/src/domain/inbox/conversations.service.ts",
+      "sha256": "c7d84f983ed61c6022424d4648e07282e7eb53c40fa9aba249618d77b3c223de",
+      "bytes": 8137,
+      "embedded": true
+    },
+    {
+      "path": "api-app/src/domain/inbox/incoming.service.ts",
+      "sha256": "b0ec43187b1f48720aa899e40f979dd0ae447321581d675b84ef9c71dbd0ff42",
+      "bytes": 6076,
+      "embedded": true
+    },
+    {
+      "path": "api-app/src/domain/inbox/incoming.typebot.integration.spec.ts",
+      "sha256": "7b0e7d75fc5809b8c950896818779402fe2bf32ef37a94d970fe081240562975",
+      "bytes": 7081,
+      "embedded": true
+    },
+    {
+      "path": "api-app/src/domain/inbox/message-acceptance.service.ts",
+      "sha256": "b053744ee44b7e91fd45b5c146f759f55c70b8e517b8fbb1cab39806407335e1",
+      "bytes": 15730,
+      "embedded": true
+    },
+    {
+      "path": "api-app/src/domain/inbox/outbound.service.spec.ts",
+      "sha256": "ae1f9208d660c684dca9b1ac5727001d8e57c4c9504be9be1d20ecba32e01805",
+      "bytes": 8314,
+      "embedded": true
+    },
+    {
+      "path": "api-app/src/domain/inbox/outbound.service.ts",
+      "sha256": "63bcf773e2b4c5a5ddd688a1bb13745a0a206d995fafc665925df3fecaf394aa",
+      "bytes": 13056,
+      "embedded": true
+    },
+    {
+      "path": "api-app/src/integrations/channels/channel-adapter-factory.ts",
+      "sha256": "e0ebdd78e387f7ee3af902f038d22449e212c1301ffa642bbceb5a5f05d2abfc",
+      "bytes": 440,
+      "embedded": true
+    },
+    {
+      "path": "api-app/src/integrations/channels/channel-adapter-registry.ts",
+      "sha256": "655b735e239e89fbaede36689d1c22245d3804d66646f7736db991cb5099b02b",
+      "bytes": 975,
+      "embedded": true
+    },
+    {
+      "path": "api-app/src/integrations/channels/channel-transport.module.ts",
+      "sha256": "32203d3b8393a34a9effab4266683c389651d7ec197e8f9d704a77a6a37f40dc",
+      "bytes": 1663,
+      "embedded": true
+    },
+    {
+      "path": "api-app/src/integrations/channels/evolution-channel.ts",
+      "sha256": "60faf1ea40fe17ad62495b0f42a2cf958defcb41e3ad72d3d2213751539b460c",
+      "bytes": 1561,
+      "embedded": true
+    },
+    {
+      "path": "api-app/src/integrations/channels/meta-channel.ts",
+      "sha256": "997e739cf7d7231918dc97fc347bfeb32a1cd74d084ead8c64b01157022f8138",
+      "bytes": 1613,
+      "embedded": true
+    },
+    {
+      "path": "api-app/src/integrations/channels/prisma-channel-resolver.ts",
+      "sha256": "acf779d89162d339e37af2abe2aa91fd1a1b292d7f5208bb672090c87a23bf4d",
+      "bytes": 19223,
+      "embedded": true
+    },
+    {
+      "path": "api-app/src/integrations/evolution/evolution.client.spec.ts",
+      "sha256": "119d962fdcd9c895b75845dca74d8506147e11480d74b82e8c37f29f97c04081",
+      "bytes": 6530,
+      "embedded": true
+    },
+    {
+      "path": "api-app/src/integrations/evolution/evolution.client.ts",
+      "sha256": "b0824e8fd4f801a239521855aaa02da5e0943a8c86c4ac8778e2f1f352821698",
+      "bytes": 7214,
+      "embedded": true
+    },
+    {
+      "path": "api-app/src/integrations/meta/meta.client.spec.ts",
+      "sha256": "d7e76f5c392afab1638363d3c851f8ce8c5223ff27c64801a79fdc8ec00d5e7a",
+      "bytes": 38572,
+      "embedded": true
+    },
+    {
+      "path": "api-app/src/integrations/meta/meta.client.ts",
+      "sha256": "9f954f6c1c2bd10030f5eed0cb42e493d6e480106bcfc3f44977cb97a716d34f",
+      "bytes": 17388,
+      "embedded": true
+    },
+    {
+      "path": "api-app/src/surfaces/bff/bff.module.ts",
+      "sha256": "327f34eba67746882abc601a3817d94270cff3018d6972a8095dae530a2d6e29",
+      "bytes": 4917,
+      "embedded": true
+    },
+    {
+      "path": "api-app/src/surfaces/bff/conversations.controller.ts",
+      "sha256": "53d3cffaa258ba1ad45c21eae4ab8712e2011255b7ca14965f73221edd0cc002",
+      "bytes": 5626,
+      "embedded": true
+    },
+    {
+      "path": "api-app/src/surfaces/bff/session.middleware.ts",
+      "sha256": "80d8be0072b817ec34b3eb7d29218835bd218a40670c1f917d0b1787b0b57211",
+      "bytes": 5651,
+      "embedded": true
+    },
+    {
+      "path": "api-app/src/surfaces/public/api-key.middleware.ts",
+      "sha256": "f76cd8854c8145c4b456e8c9d2d1ab000c17bc5278af76997745b5696edd9877",
+      "bytes": 1274,
+      "embedded": true
+    },
+    {
+      "path": "api-app/src/surfaces/public/conversations.controller.ts",
+      "sha256": "bbb5ebf085e59840f3a9e9cbc1f07c57cdc58d1a5b6f846f934fb526cc29bfd1",
+      "bytes": 12059,
+      "embedded": true
+    },
+    {
+      "path": "api-app/src/surfaces/public/public.module.ts",
+      "sha256": "00a96d54fde7061f61f4ddf2b9cef836a02ad77ca29b62ea422695b9d8f90ef8",
+      "bytes": 1208,
+      "embedded": true
+    },
+    {
+      "path": "api-app/src/surfaces/webhooks/webhooks.module.ts",
+      "sha256": "abc8fd7960fcca1ce43d21d44a90f8d4708d47e07bde9a48c0009e02dc0503a6",
+      "bytes": 1111,
+      "embedded": true
+    },
+    {
+      "path": "api-app/test/api-publica.e2e-spec.ts",
+      "sha256": "353497daddfe6ca072ee697aa60d6e9d5762dd869f164d0d3b5b7fbee1d44060",
+      "bytes": 20607,
+      "embedded": true
+    },
+    {
+      "path": "api-app/test/browser-server.cjs",
+      "sha256": "40e56e2d6672800acd4a00f87b942fc88b8361c770d06ee6d7c8a883a15d3390",
+      "bytes": 11647,
+      "embedded": true
+    },
+    {
+      "path": "api-app/test/channel-transport.e2e-spec.ts",
+      "sha256": "69ddc87cbc9328136f92ea1c1cf9293b0bc2296ad383836322c6feb4b27c6015",
+      "bytes": 34765,
+      "embedded": true
+    },
+    {
+      "path": "api-app/test/helpers.ts",
+      "sha256": "747dcd1a6db374c1ccb0f2a248b08d49c2ec62a46beb345cc03eea3c058d36f2",
+      "bytes": 18367,
+      "embedded": true
+    },
+    {
+      "path": "api-app/test/number-onboarding-message-acceptance.e2e-spec.ts",
+      "sha256": "c8b29c16412938b64fb8e2555729f0777d9e3eb69a57d29df3d65b56443c4bac",
+      "bytes": 6700,
+      "embedded": true
+    },
+    {
+      "path": "api-app/test/number-onboarding-pcv.e2e-spec.ts",
+      "sha256": "9cf66e8950a60a0ed4e620d3f24bc8285a316edf2a72a8af3590326b478e308f",
+      "bytes": 42837,
+      "embedded": true
+    },
+    {
+      "path": "api-app/test/number-onboarding-typebot.e2e-spec.ts",
+      "sha256": "8c23956a13336c4091d62b9aee7383065f81c5e6575661729b044048626cbd8e",
+      "bytes": 19718,
+      "embedded": true
+    },
+    {
+      "path": "api-app/test/timeline-fixtures.cjs",
+      "sha256": "889707ec7857e8a17a850e56eb60d24e6953e59028f40880edff3756340fd23a",
+      "bytes": 24711,
+      "embedded": true
+    },
+    {
+      "path": "api-app/tsconfig.build.json",
+      "sha256": "44e82cf32b2bd7cfdb7c4d9ca48ab13101f6ff66349578545d2c229ef55cbca6",
+      "bytes": 102,
+      "embedded": true
+    },
+    {
+      "path": "api-app/vitest.config.e2e.ts",
+      "sha256": "ff76a3b94de4649d18f0f824a24bb45428afcbb751a872a6841a2e388f45f8ff",
+      "bytes": 683,
+      "embedded": true
+    },
+    {
+      "path": "api-app/vitest.config.ts",
+      "sha256": "a5f2d4d79de1112776f0586e3b647487fe6961e89b2790c19f6a2ed9165924d5",
+      "bytes": 414,
+      "embedded": true
+    },
+    {
+      "path": "docker-compose.channels.yml",
+      "sha256": "9978e713ce190ad20b6bddb0ecf0b469d068c0e43bb4eaf50aa630ec03aea235",
+      "bytes": 21180,
+      "embedded": true
+    },
+    {
+      "path": "scripts/check-channels-ci-parity.py",
+      "sha256": "d838d557177bf47423a063dfb0cb12b6cdf1e319986c4340286ada097742ce13",
+      "bytes": 29038,
+      "embedded": true
+    },
+    {
+      "path": "scripts/test-channels-local.sh",
+      "sha256": "de580538f3257a85448cb3ce5030c85b90f65507da53737e4491fdf543091e42",
+      "bytes": 12799,
+      "embedded": true
+    },
+    {
+      "path": "web-app/e2e/channel-transport.spec.ts",
+      "sha256": "b3604496727a85d7ce12c2cb6e7a479575356a61ef4c529d385047e066a8e0f3",
+      "bytes": 12119,
+      "embedded": true
+    },
+    {
+      "path": "web-app/e2e/number-onboarding-freshness.ts",
+      "sha256": "880b49f8fa428568692b92a883dd00c5ce76214b1f2db5b35cafb9b0553ed9ad",
+      "bytes": 5059,
+      "embedded": true
+    },
+    {
+      "path": "web-app/e2e/timeline-freshness.ts",
+      "sha256": "3a06fb36e3a9bcf20a12cd8201da2daa3b567775f15e2be5f068e97e840d7f53",
+      "bytes": 8499,
+      "embedded": true
+    },
+    {
+      "path": "web-app/package.json",
+      "sha256": "fc9083821e246d50c080f409b3590902b033041231d1688c04c4140f097818de",
+      "bytes": 701,
+      "embedded": true
+    },
+    {
+      "path": "web-app/playwright.config.ts",
+      "sha256": "53e9a54e97c9b785135d94846d99eb77c6f05789a58f27128544f9b2c903a63d",
+      "bytes": 5773,
+      "embedded": true
+    },
+    {
+      "path": "web-app/src/api.spec.ts",
+      "sha256": "e305671fc6d9775ef3c0365ed12470fb14ea3dd71ff3aca49f153262017147d6",
+      "bytes": 6256,
+      "embedded": true
+    },
+    {
+      "path": "web-app/src/api.ts",
+      "sha256": "dd59a37799453d3e68fc64a6477e1578956d15d1a4920af90e22ff2b83057505",
+      "bytes": 10385,
+      "embedded": true
+    },
+    {
+      "path": "web-app/src/telas/Inbox.tsx",
+      "sha256": "d70bde9ede67759d479f644598356e46aac2916a12b2ed1770c17a169118586c",
+      "bytes": 21225,
+      "embedded": true
+    },
+    {
+      "path": "web-app/vite.config.ts",
+      "sha256": "8b61a846e95c7fe77c938a2ebced24b48bbba45c42efcd25c8191491655e74b2",
+      "bytes": 1865,
+      "embedded": true
+    },
+    {
+      "path": "foundation_documentation/modules/integrations-and-channels.md",
+      "sha256": "6a03d2726b25393da8cbf37703688ee06b3616282bb512e167ce967677673da7",
+      "bytes": 40551,
+      "embedded": false
+    },
+    {
+      "path": "foundation_documentation/modules/inbox-and-conversations.md",
+      "sha256": "7021ca4cc6b9131466c71233a7b6154484124d832c23c2fbf614bfadbe11a637",
+      "bytes": 17186,
+      "embedded": false
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-channel-abstraction-20261020/dedicated-round3-resolution.md",
+      "sha256": "b562cd6e55420bbf544d7c865ef4c0d0448a9029afb6fe3dd437563eaebd0d44",
+      "bytes": 5705,
+      "embedded": true
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-channel-abstraction-20261020/dedicated-round4-resolution.md",
+      "sha256": "43ca6a5cbf8289f3bf8bd0e35ab4a6239305eb6752825a38c3bb290e87faada6",
+      "bytes": 3393,
+      "embedded": true
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-channel-abstraction-20261020/evidence/adherence-security-v13r4.raw.json",
+      "sha256": "54831b07bb93c3b0d93705df91d42c2d75bf9dcb47370ec1d11e5f3dfe585615",
+      "bytes": 13947,
+      "embedded": true
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-channel-abstraction-20261020/evidence/test-quality-v13r4-complete.raw.json",
+      "sha256": "7401078252944eeb2f78e8147d8f263360be34c6dde6f798dd99f53aa9a00a8e",
+      "bytes": 15084,
+      "embedded": true
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-channel-abstraction-20261020/evidence/performance-v13r4.raw.json",
+      "sha256": "6fca8875c68fe6267356050d3ec1d46ad6d18dffe88dce009e44b5467a69f4a7",
+      "bytes": 5128,
+      "embedded": true
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-channel-abstraction-20261020/evidence/cutover-integrity-v13r4.raw.json",
+      "sha256": "ca239980c5f2441e1146eef75d9253c6f23540bfeb865e6f7d2aa3d5743d4b9a",
+      "bytes": 1226,
+      "embedded": true
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-channel-abstraction-20261020/evidence/local-activation-provenance-v13r4-final.json",
+      "sha256": "ab9d7f4dcebf7ac80481e560a92d9fcaf3523f8bb05d02e2948dfc8c80d0c991",
+      "bytes": 6908,
+      "embedded": true
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-channel-abstraction-20261020/evidence/local-tunnel-validation-v13r4.json",
+      "sha256": "af65eee050058be54d17f498d54bfde2b2dfebea4e2bd9136df319e718daf1e5",
+      "bytes": 4889,
+      "embedded": true
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-channel-abstraction-20261020/evidence/post-operator-readback-v13r4.json",
+      "sha256": "a4e78bdeaa142fb9ff97029f04de96f85d1f9d10f93105fb8c7bb14316bce21f",
+      "bytes": 1574,
+      "embedded": true
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-channel-abstraction-20261020/evidence/local-operator-proof-v13r4.json",
+      "sha256": "ed2b1eb890d41b2836062201b79786a61199f487c0b172d2e764aafe46c6bb93",
+      "bytes": 1657,
+      "embedded": true
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-channel-abstraction-20261020/evidence/pcv-v13r4-adjudication.json",
+      "sha256": "dd0051de905a2db2f555052123e2c7c7159da0448dd078d525d4c155bf536f3a",
+      "bytes": 3689,
+      "embedded": true
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-channel-abstraction-20261020/evidence/verification-debt-final-v13r4.json",
+      "sha256": "6b0b37b8a2947d17877179f7caf43f57c471795e5cd673bf95c8b9cc41c1adb2",
+      "bytes": 952,
+      "embedded": true
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-channel-abstraction-20261020/evidence/v13r4-final-validation.json",
+      "sha256": "82068d228cd2a810aa70d19344240181b518b1c4148fd0518d66fe0af6b5f991",
+      "bytes": 62179,
+      "embedded": false
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-channel-abstraction-20261020/evidence/public-diff-final-v13r4.json",
+      "sha256": "753463d19f5de7003427f1bbaf5cca089fff7047d5474cdbc179ed1f3a266a80",
+      "bytes": 2926,
+      "embedded": false
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-channel-abstraction-20261020/evidence/rule-spirit-final-v13r4-triage.json",
+      "sha256": "8f6f3366e12753164eb66c1ec731a6d30c45bd4254e0329cc76b3583eec4eb73",
+      "bytes": 66408,
+      "embedded": false
+    },
+    {
+      "path": "foundation_documentation/todos/active/features/TODO-leadshug-official-template-authoring.md",
+      "sha256": "de18e182749340ec0d10b27356672c0d403a6c4b92508b2f01688441c826fe1c",
+      "bytes": 99654,
+      "embedded": false
+    },
+    {
+      "path": "foundation_documentation/todos/active/features/TODO-leadshug-start-conversation-by-contact.md",
+      "sha256": "4b358837107e8ab41209dd103c1a9869679608f386a8b8d68677f3bcc22012aa",
+      "bytes": 100068,
+      "embedded": false
+    }
+  ]
+}

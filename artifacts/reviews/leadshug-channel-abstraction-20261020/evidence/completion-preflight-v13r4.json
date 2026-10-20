@@ -1,0 +1,272 @@
+{
+  "blocked": true,
+  "context": {
+    "acceptance_criteria_count": 0,
+    "allow_waivers": false,
+    "ci_equivalent_row_count": 3,
+    "current_delivery_stage": "Pending",
+    "definition_of_done_count": 8,
+    "delivery_claim": true,
+    "dod_count": 8,
+    "evidence_row_count": 13,
+    "mode": "single",
+    "pipeline_preflight_row_count": 0,
+    "rule_spirit_hunt_row_count": 5,
+    "scope_count": 6,
+    "todo_path": "/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/todos/active/features/TODO-leadshug-channel-abstraction.md",
+    "validation_count": 5,
+    "validation_steps_count": 5
+  },
+  "overall_outcome": "no-go",
+  "rule_id": "paced.todo.completion-evidence",
+  "schema_version": "todo-completion-guard-v1",
+  "status": "blocked",
+  "violations": [
+    {
+      "code": "PIPELINE-PREFLIGHT-MISSING",
+      "message": "The TODO claims delivery progress but has no Pipeline/Copilot P1/P2 Preflight rows.",
+      "resolution": "Add a Pipeline/Copilot P1/P2 Preflight row for the implemented delivery package, or add an explicit `n/a` row with rationale when the gate truly does not apply.",
+      "section": "Pipeline/Copilot P1/P2 Preflight"
+    },
+    {
+      "code": "RULE-SPIRIT-HUNT-EVIDENCE-NOT-REAL",
+      "message": "Rule-Spirit Anti-Pattern Hunt row claims `passed` but the evidence is not real completed execution: D10 safe topology/CI",
+      "resolution": "Replace planned/pending text with concrete completed review evidence. Use columns: Rule / Principle Surface, Bypass or Anti-Pattern Search Lens, Status, Evidence Artifact / Command, Findings, Resolution / Notes.",
+      "section": "Rule-Spirit Anti-Pattern Hunt"
+    },
+    {
+      "code": "RULE-SPIRIT-HUNT-EVIDENCE-NOT-REAL",
+      "message": "Rule-Spirit Anti-Pattern Hunt row claims `passed` but the evidence is not real completed execution: Verification and promotion",
+      "resolution": "Replace planned/pending text with concrete completed review evidence. Use columns: Rule / Principle Surface, Bypass or Anti-Pattern Search Lens, Status, Evidence Artifact / Command, Findings, Resolution / Notes.",
+      "section": "Rule-Spirit Anti-Pattern Hunt"
+    },
+    {
+      "code": "CRITERION-CHECKLIST-UNCHECKED",
+      "message": "Scope item is still unchecked under a delivery claim: SCOPE-01 \u2014 Channel/ChannelResolver abstratos de dom\u00ednio, registro expl\u00edcito e inst\u00e2ncias por opera\u00e7\u00e3o, concretos oficial/n\u00e3o oficial e extens\u00e3o verificada com fake n\u00e3o WhatsApp.",
+      "resolution": "Check the TODO item only after the implementation and criterion-specific evidence are complete, or move the TODO back to a non-delivery stage.",
+      "section": "Scope"
+    },
+    {
+      "code": "CRITERION-EVIDENCE-MISSING",
+      "message": "Scope item lacks criterion-specific evidence: SCOPE-01 \u2014 Channel/ChannelResolver abstratos de dom\u00ednio, registro expl\u00edcito e inst\u00e2ncias por opera\u00e7\u00e3o, concretos oficial/n\u00e3o oficial e extens\u00e3o verificada com fake n\u00e3o WhatsApp.",
+      "resolution": "Add a Completion Evidence Matrix row quoting this criterion exactly and record concrete evidence.",
+      "section": "Completion Evidence Matrix"
+    },
+    {
+      "code": "CRITERION-CHECKLIST-UNCHECKED",
+      "message": "Scope item is still unchecked under a delivery claim: SCOPE-02 \u2014 Migrar envios de Conversa BFF/API p\u00fablica e respostas Typebot para a mesma orquestra\u00e7\u00e3o, mantendo autentica\u00e7\u00f5es pr\u00f3prias, pol\u00edtica e MessageAcceptanceService \u00fanico.",
+      "resolution": "Check the TODO item only after the implementation and criterion-specific evidence are complete, or move the TODO back to a non-delivery stage.",
+      "section": "Scope"
+    },
+    {
+      "code": "CRITERION-EVIDENCE-MISSING",
+      "message": "Scope item lacks criterion-specific evidence: SCOPE-02 \u2014 Migrar envios de Conversa BFF/API p\u00fablica e respostas Typebot para a mesma orquestra\u00e7\u00e3o, mantendo autentica\u00e7\u00f5es pr\u00f3prias, pol\u00edtica e MessageAcceptanceService \u00fanico.",
+      "resolution": "Add a Completion Evidence Matrix row quoting this criterion exactly and record concrete evidence.",
+      "section": "Completion Evidence Matrix"
+    },
+    {
+      "code": "CRITERION-CHECKLIST-UNCHECKED",
+      "message": "Scope item is still unchecked under a delivery claim: SCOPE-03 \u2014 Contexto autorizado e owner BU/canal, segredos privados, credencial/identidade correntes e fences expl\u00edcitos; nenhuma troca silenciosa do canal selecionado.",
+      "resolution": "Check the TODO item only after the implementation and criterion-specific evidence are complete, or move the TODO back to a non-delivery stage.",
+      "section": "Scope"
+    },
+    {
+      "code": "CRITERION-EVIDENCE-MISSING",
+      "message": "Scope item lacks criterion-specific evidence: SCOPE-03 \u2014 Contexto autorizado e owner BU/canal, segredos privados, credencial/identidade correntes e fences expl\u00edcitos; nenhuma troca silenciosa do canal selecionado.",
+      "resolution": "Add a Completion Evidence Matrix row quoting this criterion exactly and record concrete evidence.",
+      "section": "Completion Evidence Matrix"
+    },
+    {
+      "code": "CRITERION-CHECKLIST-UNCHECKED",
+      "message": "Scope item is still unchecked under a delivery claim: SCOPE-04 \u2014 Outcomes tipados verdadeiros, proje\u00e7\u00e3o p\u00fablica expl\u00edcita de erro/disponibilidade e UI honesta; sem retry externo autom\u00e1tico ou garantia de exactly-once.",
+      "resolution": "Check the TODO item only after the implementation and criterion-specific evidence are complete, or move the TODO back to a non-delivery stage.",
+      "section": "Scope"
+    },
+    {
+      "code": "CRITERION-EVIDENCE-MISSING",
+      "message": "Scope item lacks criterion-specific evidence: SCOPE-04 \u2014 Outcomes tipados verdadeiros, proje\u00e7\u00e3o p\u00fablica expl\u00edcita de erro/disponibilidade e UI honesta; sem retry externo autom\u00e1tico ou garantia de exactly-once.",
+      "resolution": "Add a Completion Evidence Matrix row quoting this criterion exactly and record concrete evidence.",
+      "section": "Completion Evidence Matrix"
+    },
+    {
+      "code": "CRITERION-CHECKLIST-UNCHECKED",
+      "message": "Scope item is still unchecked under a delivery claim: SCOPE-05 \u2014 Runner de invent\u00e1rio positivo antes de testes, harness dur\u00e1vel de imports/contrato/PG/Playwright, regress\u00f5es completas e prova real assistida nos dois v\u00ednculos pr\u00f3prios; consolida\u00e7\u00e3o/revis\u00f5es de entrega.",
+      "resolution": "Check the TODO item only after the implementation and criterion-specific evidence are complete, or move the TODO back to a non-delivery stage.",
+      "section": "Scope"
+    },
+    {
+      "code": "CRITERION-EVIDENCE-MISSING",
+      "message": "Scope item lacks criterion-specific evidence: SCOPE-05 \u2014 Runner de invent\u00e1rio positivo antes de testes, harness dur\u00e1vel de imports/contrato/PG/Playwright, regress\u00f5es completas e prova real assistida nos dois v\u00ednculos pr\u00f3prios; consolida\u00e7\u00e3o/revis\u00f5es de entrega.",
+      "resolution": "Add a Completion Evidence Matrix row quoting this criterion exactly and record concrete evidence.",
+      "section": "Completion Evidence Matrix"
+    },
+    {
+      "code": "CRITERION-CHECKLIST-UNCHECKED",
+      "message": "Scope item is still unchecked under a delivery claim: SCOPE-06 \u2014 Corrigir PERF-01 com um \u00fanico \u00edndice Prisma-managed de Message e sele\u00e7\u00e3o de refer\u00eancias que realmente exigem janela; admitir a fam\u00edlia PG/browser no CI pelo mesmo runner/lifecycle, com guard fail-closed de paridade e replay local isolado. Escopo exato: artifacts/reviews/leadshug-channel-abstraction-20261020/scope-renewal-v1.3-proposal.md; pendente APROVADO v1.3.",
+      "resolution": "Check the TODO item only after the implementation and criterion-specific evidence are complete, or move the TODO back to a non-delivery stage.",
+      "section": "Scope"
+    },
+    {
+      "code": "CRITERION-EVIDENCE-MISSING",
+      "message": "Scope item lacks criterion-specific evidence: SCOPE-06 \u2014 Corrigir PERF-01 com um \u00fanico \u00edndice Prisma-managed de Message e sele\u00e7\u00e3o de refer\u00eancias que realmente exigem janela; admitir a fam\u00edlia PG/browser no CI pelo mesmo runner/lifecycle, com guard fail-closed de paridade e replay local isolado. Escopo exato: artifacts/reviews/leadshug-channel-abstraction-20261020/scope-renewal-v1.3-proposal.md; pendente APROVADO v1.3.",
+      "resolution": "Add a Completion Evidence Matrix row quoting this criterion exactly and record concrete evidence.",
+      "section": "Completion Evidence Matrix"
+    },
+    {
+      "code": "CRITERION-CHECKLIST-UNCHECKED",
+      "message": "Definition of Done item is still unchecked under a delivery claim: DOD-01 \u2014 Channel e ChannelResolver s\u00e3o abstra\u00e7\u00f5es de dom\u00ednio, com concretos atuais registrados e todos os senders comuns sem imports/dispatch por provider; fake de destinat\u00e1rio opaco prova extens\u00e3o sem novo canal real.",
+      "resolution": "Check the TODO item only after the implementation and criterion-specific evidence are complete, or move the TODO back to a non-delivery stage.",
+      "section": "Definition of Done"
+    },
+    {
+      "code": "CRITERION-CHECKLIST-UNCHECKED",
+      "message": "Definition of Done item is still unchecked under a delivery claim: DOD-02 \u2014 Resolu\u00e7\u00e3o usa contexto server-side autorizado ou ingresso verificado, confere BU/canal/identidade e readiness, mant\u00e9m segredo privado/contexto imut\u00e1vel e n\u00e3o vaza entre envios concorrentes.",
+      "resolution": "Check the TODO item only after the implementation and criterion-specific evidence are complete, or move the TODO back to a non-delivery stage.",
+      "section": "Definition of Done"
+    },
+    {
+      "code": "EVIDENCE-ARTIFACT-NOT-REAL",
+      "message": "Evidence artifact/command is not real completed evidence for criterion: DOD-02 \u2014 Resolu\u00e7\u00e3o usa contexto server-side autorizado ou ingresso verificado, confere BU/canal/identidade e readiness, mant\u00e9m segredo privado/contexto imut\u00e1vel e n\u00e3o vaza entre envios concorrentes.",
+      "resolution": "Run the validation or record an explicit blocker/approved waiver instead of claiming delivery.",
+      "section": "Completion Evidence Matrix"
+    },
+    {
+      "code": "CRITERION-CHECKLIST-UNCHECKED",
+      "message": "Definition of Done item is still unchecked under a delivery claim: DOD-03 \u2014 Sele\u00e7\u00e3o humana/p\u00fablica segue \u00faltima origem determin\u00edstica ou \u00fanico v\u00ednculo; bot fica no ingresso verificado; policy/janela comuns, aus\u00eancia/ambiguidade sem fallback e disponibilidade/UI honestas preservam rascunho.",
+      "resolution": "Check the TODO item only after the implementation and criterion-specific evidence are complete, or move the TODO back to a non-delivery stage.",
+      "section": "Definition of Done"
+    },
+    {
+      "code": "CRITERION-CHECKLIST-UNCHECKED",
+      "message": "Definition of Done item is still unchecked under a delivery claim: DOD-04 \u2014 Outcomes ACCEPTED/BLOCKED/REJECTED/UNKNOWN e proje\u00e7\u00f5es de erro obedecem D04/05; sem ID confirmado n\u00e3o h\u00e1 sucesso, sem retry de POST ou rejei\u00e7\u00e3o falsa por timeout.",
+      "resolution": "Check the TODO item only after the implementation and criterion-specific evidence are complete, or move the TODO back to a non-delivery stage.",
+      "section": "Definition of Done"
+    },
+    {
+      "code": "FLOW-CRITERION-NAVIGATION-COVERAGE-MISSING",
+      "message": "User-visible/interactive/flow-impacting criterion lacks item-specific integration/device or navigation/browser evidence: DOD-04 \u2014 Outcomes ACCEPTED/BLOCKED/REJECTED/UNKNOWN e proje\u00e7\u00f5es de erro obedecem D04/05; sem ID confirmado n\u00e3o h\u00e1 sucesso, sem retry de POST ou rejei\u00e7\u00e3o falsa por timeout.",
+      "resolution": "Add the integration/device test or navigation/browser test that exercises this exact item, or record an explicit approved structure-only waiver/deviation proving no user-observable flow can change. In Flutter scope, integration is ADB/device execution; browser navigation is Playwright against the final domain after the project-defined web build/publish step.",
+      "section": "Completion Evidence Matrix"
+    },
+    {
+      "code": "CRITERION-CHECKLIST-UNCHECKED",
+      "message": "Definition of Done item is still unchecked under a delivery claim: DOD-05 \u2014 MessageAcceptanceService continua owner \u00fanico e sender/echo conservam ID/autor/unread; finaliza\u00e7\u00e3o p\u00fablica/humana n\u00e3o rouba claim e bot conserva fila/owner; falhas locais p\u00f3s-ACK e unknown est\u00e3o expl\u00edcitas.",
+      "resolution": "Check the TODO item only after the implementation and criterion-specific evidence are complete, or move the TODO back to a non-delivery stage.",
+      "section": "Definition of Done"
+    },
+    {
+      "code": "CRITERION-CHECKLIST-UNCHECKED",
+      "message": "Definition of Done item is still unchecked under a delivery claim: DOD-06 \u2014 Runner p\u00fablico corrigido antes de qualquer teste; harness de depend\u00eancias/contrato, PG e CI-equivalent all/Playwright reais passam com fonte/bundle frescos e regress\u00f5es de cadastro/API/bot; \u00edndice latest-IN e refer\u00eancias selected-window t\u00eam prova OUT-heavy/no-IN, fam\u00edlia CI PG/browser compartilha all/lifecycle/guard e topologia Linux isolada validada, sem claim de execu\u00e7\u00e3o remota.",
+      "resolution": "Check the TODO item only after the implementation and criterion-specific evidence are complete, or move the TODO back to a non-delivery stage.",
+      "section": "Definition of Done"
+    },
+    {
+      "code": "EVIDENCE-ARTIFACT-NOT-REAL",
+      "message": "Evidence artifact/command is not real completed evidence for criterion: DOD-06 \u2014 Runner p\u00fablico corrigido antes de qualquer teste; harness de depend\u00eancias/contrato, PG e CI-equivalent all/Playwright reais passam com fonte/bundle frescos e regress\u00f5es de cadastro/API/bot; \u00edndice latest-IN e refer\u00eancias selected-window t\u00eam prova OUT-heavy/no-IN, fam\u00edlia CI PG/browser compartilha all/lifecycle/guard e topologia Linux isolada validada, sem claim de execu\u00e7\u00e3o remota.",
+      "resolution": "Run the validation or record an explicit blocker/approved waiver instead of claiming delivery.",
+      "section": "Completion Evidence Matrix"
+    },
+    {
+      "code": "BROWSER-WEB-PLAYWRIGHT-EVIDENCE-MISSING",
+      "message": "Browser/web-visible criterion lacks source-owned Playwright spec and runner evidence: DOD-06 \u2014 Runner p\u00fablico corrigido antes de qualquer teste; harness de depend\u00eancias/contrato, PG e CI-equivalent all/Playwright reais passam com fonte/bundle frescos e regress\u00f5es de cadastro/API/bot; \u00edndice latest-IN e refer\u00eancias selected-window t\u00eam prova OUT-heavy/no-IN, fam\u00edlia CI PG/browser compartilha all/lifecycle/guard e topologia Linux isolada validada, sem claim de execu\u00e7\u00e3o remota.",
+      "resolution": "Record the source-owned Playwright spec under tools/flutter/web_app_tests/** and the project-owned navigation runner command, plus target URL/lane, project-defined build/publish proof, and refreshed real-domain bundle provenance.",
+      "section": "Completion Evidence Matrix"
+    },
+    {
+      "code": "BROWSER-WEB-BUILD-PROVENANCE-MISSING",
+      "message": "Browser/web-visible criterion lacks current web build/publish provenance: DOD-06 \u2014 Runner p\u00fablico corrigido antes de qualquer teste; harness de depend\u00eancias/contrato, PG e CI-equivalent all/Playwright reais passam com fonte/bundle frescos e regress\u00f5es de cadastro/API/bot; \u00edndice latest-IN e refer\u00eancias selected-window t\u00eam prova OUT-heavy/no-IN, fam\u00edlia CI PG/browser compartilha all/lifecycle/guard e topologia Linux isolada validada, sem claim de execu\u00e7\u00e3o remota.",
+      "resolution": "Record the build/publish proof before Playwright using the project-defined publish command and output target, plus evidence that the real browser-facing domain served the refreshed bundle such as __WEB_BUILD_SHA__.",
+      "section": "Completion Evidence Matrix"
+    },
+    {
+      "code": "LITERAL-MARKER-EVIDENCE-MISMATCH",
+      "message": "Criterion names `browser` but evidence does not prove the same marker: DOD-06 \u2014 Runner p\u00fablico corrigido antes de qualquer teste; harness de depend\u00eancias/contrato, PG e CI-equivalent all/Playwright reais passam com fonte/bundle frescos e regress\u00f5es de cadastro/API/bot; \u00edndice latest-IN e refer\u00eancias selected-window t\u00eam prova OUT-heavy/no-IN, fam\u00edlia CI PG/browser compartilha all/lifecycle/guard e topologia Linux isolada validada, sem claim de execu\u00e7\u00e3o remota.",
+      "resolution": "Update the evidence to name the exact required artifact, or record an explicit approved waiver/deviation.",
+      "section": "Completion Evidence Matrix"
+    },
+    {
+      "code": "LITERAL-MARKER-EVIDENCE-MISMATCH",
+      "message": "Criterion names `Playwright` but evidence does not prove the same marker: DOD-06 \u2014 Runner p\u00fablico corrigido antes de qualquer teste; harness de depend\u00eancias/contrato, PG e CI-equivalent all/Playwright reais passam com fonte/bundle frescos e regress\u00f5es de cadastro/API/bot; \u00edndice latest-IN e refer\u00eancias selected-window t\u00eam prova OUT-heavy/no-IN, fam\u00edlia CI PG/browser compartilha all/lifecycle/guard e topologia Linux isolada validada, sem claim de execu\u00e7\u00e3o remota.",
+      "resolution": "Update the evidence to name the exact required artifact, or record an explicit approved waiver/deviation.",
+      "section": "Completion Evidence Matrix"
+    },
+    {
+      "code": "CRITERION-CHECKLIST-UNCHECKED",
+      "message": "Definition of Done item is still unchecked under a delivery claim: DOD-07 \u2014 Operador confirma nova IN e resposta OUT em cada v\u00ednculo pr\u00f3prio oficial/n\u00e3o oficial ap\u00f3s publica\u00e7\u00e3o local autorizada; prova observada n\u00e3o promete disponibilidade cont\u00ednua nem nova rede.",
+      "resolution": "Check the TODO item only after the implementation and criterion-specific evidence are complete, or move the TODO back to a non-delivery stage.",
+      "section": "Definition of Done"
+    },
+    {
+      "code": "CRITERION-CHECKLIST-UNCHECKED",
+      "message": "Definition of Done item is still unchecked under a delivery claim: DOD-08 \u2014 Decis\u00f5es consolidadas, arquitetura/critique e assurance/cutover/security/pcv/TQA/final/debt/diff/authority/completion/closeout satisfeitos; consumidores05/04 recebem handoff, sem claim de produ\u00e7\u00e3o.",
+      "resolution": "Check the TODO item only after the implementation and criterion-specific evidence are complete, or move the TODO back to a non-delivery stage.",
+      "section": "Definition of Done"
+    },
+    {
+      "code": "EVIDENCE-STATUS-INVALID",
+      "message": "Evidence row status `pending` is invalid for criterion: DOD-08 \u2014 Decis\u00f5es consolidadas, arquitetura/critique e assurance/cutover/security/pcv/TQA/final/debt/diff/authority/completion/closeout satisfeitos; consumidores05/04 recebem handoff, sem claim de produ\u00e7\u00e3o.",
+      "resolution": "Use one of ['blocked', 'n/a', 'passed', 'planned', 'waived'].",
+      "section": "Completion Evidence Matrix"
+    },
+    {
+      "code": "EVIDENCE-ARTIFACT-NOT-REAL",
+      "message": "Evidence artifact/command is not real completed evidence for criterion: DOD-08 \u2014 Decis\u00f5es consolidadas, arquitetura/critique e assurance/cutover/security/pcv/TQA/final/debt/diff/authority/completion/closeout satisfeitos; consumidores05/04 recebem handoff, sem claim de produ\u00e7\u00e3o.",
+      "resolution": "Run the validation or record an explicit blocker/approved waiver instead of claiming delivery.",
+      "section": "Completion Evidence Matrix"
+    },
+    {
+      "code": "CRITERION-CHECKLIST-UNCHECKED",
+      "message": "Validation Steps item is still unchecked under a delivery claim: VAL-01 \u2014 Executar bash scripts/test-channels-local.sh all ap\u00f3s boundary positivo e admiss\u00e3o de paridade/invalidating drift, sem subset como aceite, com API/PG reais, migration/index latest-IN e bundle servido fresco; replay isolado do transporte Linux obrigat\u00f3rio para validar a topologia CI.",
+      "resolution": "Check the TODO item only after the implementation and criterion-specific evidence are complete, or move the TODO back to a non-delivery stage.",
+      "section": "Validation Steps"
+    },
+    {
+      "code": "LITERAL-MARKER-EVIDENCE-MISMATCH",
+      "message": "Criterion names `migration` but evidence does not prove the same marker: VAL-01 \u2014 Executar bash scripts/test-channels-local.sh all ap\u00f3s boundary positivo e admiss\u00e3o de paridade/invalidating drift, sem subset como aceite, com API/PG reais, migration/index latest-IN e bundle servido fresco; replay isolado do transporte Linux obrigat\u00f3rio para validar a topologia CI.",
+      "resolution": "Update the evidence to name the exact required artifact, or record an explicit approved waiver/deviation.",
+      "section": "Completion Evidence Matrix"
+    },
+    {
+      "code": "CRITERION-CHECKLIST-UNCHECKED",
+      "message": "Validation Steps item is still unchecked under a delivery claim: VAL-02 \u2014 Exercitar contratos raw HTTP e compartilhados, fake Channel n\u00e3o WhatsApp, autoriza\u00e7\u00e3o BFF/API key/bot e barreiras PG de BUs/credencial/identidade/claim/eco.",
+      "resolution": "Check the TODO item only after the implementation and criterion-specific evidence are complete, or move the TODO back to a non-delivery stage.",
+      "section": "Validation Steps"
+    },
+    {
+      "code": "CRITERION-CHECKLIST-UNCHECKED",
+      "message": "Validation Steps item is still unchecked under a delivery claim: VAL-03 \u2014 Executar web-app/e2e/channel-transport.spec.ts pelo runner real: envio por ambos, indisponibilidade/ambiguidade, unknown e rascunho, resposta atrasada em troca de BU/conversa.",
+      "resolution": "Check the TODO item only after the implementation and criterion-specific evidence are complete, or move the TODO back to a non-delivery stage.",
+      "section": "Validation Steps"
+    },
+    {
+      "code": "CRITERION-CHECKLIST-UNCHECKED",
+      "message": "Validation Steps item is still unchecked under a delivery claim: VAL-04 \u2014 Revalidada readiness local, operador faz IN/OUT reais nos dois v\u00ednculos reservados, sem tokens em artifacts e sem fixture como substituto.",
+      "resolution": "Check the TODO item only after the implementation and criterion-specific evidence are complete, or move the TODO back to a non-delivery stage.",
+      "section": "Validation Steps"
+    },
+    {
+      "code": "CRITERION-CHECKLIST-UNCHECKED",
+      "message": "Validation Steps item is still unchecked under a delivery claim: VAL-05 \u2014 Rodar revis\u00f5es/pcv/cutover/diff p\u00fablico/authority/completion/closeout e consolidar m\u00f3dulos antes de encerrar;05/04 apenas rebase/handoff.",
+      "resolution": "Check the TODO item only after the implementation and criterion-specific evidence are complete, or move the TODO back to a non-delivery stage.",
+      "section": "Validation Steps"
+    },
+    {
+      "code": "EVIDENCE-STATUS-INVALID",
+      "message": "Evidence row status `pending` is invalid for criterion: VAL-05 \u2014 Rodar revis\u00f5es/pcv/cutover/diff p\u00fablico/authority/completion/closeout e consolidar m\u00f3dulos antes de encerrar;05/04 apenas rebase/handoff.",
+      "resolution": "Use one of ['blocked', 'n/a', 'passed', 'planned', 'waived'].",
+      "section": "Completion Evidence Matrix"
+    },
+    {
+      "code": "EVIDENCE-ARTIFACT-NOT-REAL",
+      "message": "Evidence artifact/command is not real completed evidence for criterion: VAL-05 \u2014 Rodar revis\u00f5es/pcv/cutover/diff p\u00fablico/authority/completion/closeout e consolidar m\u00f3dulos antes de encerrar;05/04 apenas rebase/handoff.",
+      "resolution": "Run the validation or record an explicit blocker/approved waiver instead of claiming delivery.",
+      "section": "Completion Evidence Matrix"
+    },
+    {
+      "code": "FLOW-CRITERION-NAVIGATION-COVERAGE-MISSING",
+      "message": "User-visible/interactive/flow-impacting criterion lacks item-specific integration/device or navigation/browser evidence: VAL-05 \u2014 Rodar revis\u00f5es/pcv/cutover/diff p\u00fablico/authority/completion/closeout e consolidar m\u00f3dulos antes de encerrar;05/04 apenas rebase/handoff.",
+      "resolution": "Add the integration/device test or navigation/browser test that exercises this exact item, or record an explicit approved structure-only waiver/deviation proving no user-observable flow can change. In Flutter scope, integration is ADB/device execution; browser navigation is Playwright against the final domain after the project-defined web build/publish step.",
+      "section": "Completion Evidence Matrix"
+    }
+  ]
+}

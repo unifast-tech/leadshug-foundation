@@ -1,0 +1,25 @@
+{
+  "blocked": true,
+  "context": {
+    "client": "codex",
+    "contract_id": "delphi.agent-role-routing.v1",
+    "contract_path": "/mnt/c/Unifast/delphi-ai/config/agent_role_routing.json",
+    "exception_in_effect": false,
+    "exception_reason": "",
+    "proof_mode": "declared",
+    "selected_effort": "xhigh",
+    "selected_model": "gpt-6.1-sol",
+    "selected_role": "formal-reviewer",
+    "surface": "review",
+    "waiver_in_effect": false,
+    "waiver_reference_present": false
+  },
+  "outcome": "blocked",
+  "violations": [
+    {
+      "code": "SURFACE-UNKNOWN",
+      "message": "Unknown governed surface `review`.",
+      "resolution": "Use a surface declared in config/agent_role_routing.json."
+    }
+  ]
+}

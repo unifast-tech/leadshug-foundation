@@ -1,0 +1,40 @@
+{
+  "schema": "stcon06-local-assisted-operator-proof-v1",
+  "recorded_at": "2026-10-20T22:30:15.058069+00:00",
+  "source_validation": "all93791; 57 frozen product inputs; evidence/v13r4-final-validation.json",
+  "activation_evidence": "evidence/local-activation-provenance-v13r4-final.json",
+  "https_evidence": "evidence/local-tunnel-validation-v13r4.json",
+  "public_origin": "https://wins-viewing-federal-jason.trycloudflare.com",
+  "meta_callback_validation": {
+    "status": "operator_confirmed",
+    "source": "User response: Meta validou o webhook",
+    "independent_provider_readback": false
+  },
+  "physical_tests": {
+    "official": {
+      "business_unit": "Local Test Ofc",
+      "inbound": "operator_confirmed_visible_in_Attendance",
+      "outbound_handset_receipt": "operator_confirmed_received"
+    },
+    "unofficial": {
+      "business_unit": "Local Test BU",
+      "inbound": "operator_confirmed_visible_in_Attendance",
+      "outbound_handset_receipt": "operator_confirmed_received"
+    }
+  },
+  "limits": [
+    "No real-message receipt or delivery inferred from callback validation",
+    "No personal message content, phone, credential or payload recorded",
+    "No production, continuous availability or future-network readiness claim"
+  ],
+  "delivery_stage": "Local-Implemented",
+  "operator_result": {
+    "source": "User reply to call_c2728c4d7beb4ef0bae3f2fc0512809c",
+    "answer": "Ambos: entrada apareceu e resposta chegou",
+    "recorded_at": "2026-10-20T22:36:58.950257+00:00",
+    "synthetic_panel_events_used": false,
+    "channel_state_independently_queried": false
+  },
+  "physical_test_status": "passed",
+  "closeout_todo": "todos/completed/features/TODO-leadshug-channel-abstraction.md"
+}

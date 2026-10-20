@@ -44,7 +44,7 @@ O usuário quer que o vendedor prepare sua mensagem no LeadsHug e a deixe dispon
 
 - **Current delivery stage:** Pending
 - **Qualifiers:** none
-- **Next exact step:** reconvergir este contrato com Channel abstrato solicitado em2026-10-20, após enquadramento/contrato ST-CON-06; revisões e preflight anteriores são históricos, sem aprovação de execução sobre a nova direção.
+- **Next exact step:** Reconvergir o contrato ST-CON-05 sobre os módulos de Channel/Resolver e OutboundService entregues por ST-CON-06 v1.3; preservar vendedor cria e submete diretamente à Meta, atualizar baseline/reviews/guards e solicitar APROVADO próprio antes de implementação.
 
 ## Active Work State (Required While TODO Remains In `active/`)
 
@@ -807,3 +807,18 @@ Todos os artifacts acima pertencem a artifacts/reviews/leadshug-template-authori
 ST-CON-05 conserva o objetivo funcional e permanece sem APROVADO específico de implementação. Nova direção humana exige Channel abstrato, concretos de WhatsApp e resolução/injeção scoped; preparar ST-CON-06 antes deste consumer. [Enquadramento e evidência](../../../artifacts/feature-briefs/leadshug-channel-abstraction-20261020.md).
 
 Decisões, pareceres e guardas de2026-10-19 descrevem o pacote então revisado; não são aprovação/readiness do contrato que será rebaseado. Este registro apenas invalida a indicação anterior de pronto para aprovação e preserva o histórico; assinaturas/paths/baseline serão reconvergidos no próximo ciclo de refinamento/reviews/guardas, sem adaptar código antecipadamente.
+
+
+## Handoff recebido de ST-CON-06 v1.3
+
+Fonte/cutover e quatro PCV convergidos; all93791/613testes, ativação local e nova troca física IN/OUT nos dois canais confirmadas. ST-CON-06 está encerrado localmente: revisão final sem findings e guards GO registrados no mesmo TODO concluído. Consumir agora os contratos canônicos de Channel/Resolver e OutboundService em modules/integrations-and-channels.md e modules/inbox-and-conversations.md. Não há aprovação de implementação desta história: reconvergir seu próprio contrato, fonte/baseline e revisões antes de novo APROVADO.
+
+Preserve the explicit user decision: the seller creates the draft **and submits it to Meta for approval**. Do not insert an administrator approval step. The operator currently has no approved text template in the account used by LeadsHug.
+
+Rebase the planning contract on Channel/ChannelResolver, common outbound outcomes and scoped credential ownership once06 converges. Template authoring/catalog/submission is a separate narrow capability contract: it must not add unsupported methods, no-op implementations, concrete instanceof checks or protocol fields to the universal text Channel port. No real future-network implementation is implied by this extension point.
+
+The contract still needs to define the seller's authorized BU/channel scope, draft ownership, validation, submission/approval/rejection states, version/edit/resubmission semantics, parameter rules, safe errors, Meta status synchronization and user-facing mutation evidence. A saved draft or submitted request is not an approved template. Approval material and external requirements must be verified from current primary Meta sources during that story's planning, rather than inferred from06 text-send tests.
+
+### Follow-up herdado ST06-DEBT-PERF-R4-01
+
+Work item de manutenção de teste, owner API performance-test maintainer, originado em ST-CON-06 v1.3. Na próxima alteração ordinária dos testes PCV, diferenciar linhas emitidas de trabalho de scan/filtro/recheck/buffer; não interpretar ActualRows×Loops arredondado como contagem universal de visitas. Plano atual sem filtro/recheck residual: dívida baixa, sem defeito de runtime ou bloqueio da entrega06. Incorporar este item explicitamente ao refinamento/review da história05 antes de qualquer edição; a direção de planejamento não autoriza alterar produto agora. Evidência e racional: ../artifacts/reviews/leadshug-channel-abstraction-20261020/dedicated-round4-resolution.md.

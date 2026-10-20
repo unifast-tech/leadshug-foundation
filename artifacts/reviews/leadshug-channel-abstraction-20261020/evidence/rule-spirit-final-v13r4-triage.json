@@ -1,0 +1,1168 @@
+{
+  "schema": "stcon06-rule-spirit-triage-v1",
+  "raw_artifact": "rule-spirit-final-v13r4.json",
+  "raw_findings": 193,
+  "heuristic_max_severity": "warning",
+  "unresolved_P1_P2": 0,
+  "allowlist_used": false,
+  "dispositions": [
+    {
+      "key": "28298069dd96058b",
+      "location": "scripts/test-channels-local.sh:79",
+      "classification": "by-design/no-action",
+      "reason": "Explicit public allow/deny inventory, unavailable non-WSL self-test branch, or deliberate negative parity mutant. Actual same-engine Linux suite/control proof retained; no skipped proving case concealed."
+    },
+    {
+      "key": "65effbcc610063a8",
+      "location": "scripts/check-channels-ci-parity.py:372",
+      "classification": "by-design/no-action",
+      "reason": "Explicit public allow/deny inventory, unavailable non-WSL self-test branch, or deliberate negative parity mutant. Actual same-engine Linux suite/control proof retained; no skipped proving case concealed."
+    },
+    {
+      "key": "df1611f0fcc4a0f7",
+      "location": "scripts/check-channels-ci-parity.py:427",
+      "classification": "by-design/no-action",
+      "reason": "Explicit public allow/deny inventory, unavailable non-WSL self-test branch, or deliberate negative parity mutant. Actual same-engine Linux suite/control proof retained; no skipped proving case concealed."
+    },
+    {
+      "key": "7be7ce842e56aed3",
+      "location": "api-app/src/domain/channels/transport/channel-dependencies.spec.ts:23",
+      "classification": "by-design/no-action",
+      "reason": "Controlled test/runtime fixture or regex .test invocation; canonical all93791 exercises the declared isolated topology. Not a secret or production-domain bypass."
+    },
+    {
+      "key": "a729d6ef0ec3dc4c",
+      "location": "api-app/test/number-onboarding-typebot.e2e-spec.ts:20",
+      "classification": "by-design/no-action",
+      "reason": "Controlled test/runtime fixture or regex .test invocation; canonical all93791 exercises the declared isolated topology. Not a secret or production-domain bypass."
+    },
+    {
+      "key": "09d6498b633fc8a2",
+      "location": "api-app/test/number-onboarding-typebot.e2e-spec.ts:21",
+      "classification": "by-design/no-action",
+      "reason": "Controlled test/runtime fixture or regex .test invocation; canonical all93791 exercises the declared isolated topology. Not a secret or production-domain bypass."
+    },
+    {
+      "key": "9c3d54b2ea6db202",
+      "location": "api-app/test/api-publica.e2e-spec.ts:60",
+      "classification": "by-design/no-action",
+      "reason": "Controlled test/runtime fixture or regex .test invocation; canonical all93791 exercises the declared isolated topology. Not a secret or production-domain bypass."
+    },
+    {
+      "key": "c78c13b4c34a7fa8",
+      "location": "api-app/test/api-publica.e2e-spec.ts:61",
+      "classification": "by-design/no-action",
+      "reason": "Controlled test/runtime fixture or regex .test invocation; canonical all93791 exercises the declared isolated topology. Not a secret or production-domain bypass."
+    },
+    {
+      "key": "f0df2d58559fe85a",
+      "location": "api-app/test/api-publica.e2e-spec.ts:63",
+      "classification": "by-design/no-action",
+      "reason": "Controlled test/runtime fixture or regex .test invocation; canonical all93791 exercises the declared isolated topology. Not a secret or production-domain bypass."
+    },
+    {
+      "key": "fab1558b8af27534",
+      "location": "api-app/test/api-publica.e2e-spec.ts:78",
+      "classification": "by-design/no-action",
+      "reason": "Controlled test/runtime fixture or regex .test invocation; canonical all93791 exercises the declared isolated topology. Not a secret or production-domain bypass."
+    },
+    {
+      "key": "c428bb3b2b717358",
+      "location": "api-app/test/api-publica.e2e-spec.ts:83",
+      "classification": "by-design/no-action",
+      "reason": "Controlled test/runtime fixture or regex .test invocation; canonical all93791 exercises the declared isolated topology. Not a secret or production-domain bypass."
+    },
+    {
+      "key": "d2a3f9c07e18687d",
+      "location": "api-app/test/api-publica.e2e-spec.ts:111",
+      "classification": "by-design/no-action",
+      "reason": "Controlled test/runtime fixture or regex .test invocation; canonical all93791 exercises the declared isolated topology. Not a secret or production-domain bypass."
+    },
+    {
+      "key": "2913e925d89986e8",
+      "location": "api-app/test/api-publica.e2e-spec.ts:128",
+      "classification": "by-design/no-action",
+      "reason": "Controlled test/runtime fixture or regex .test invocation; canonical all93791 exercises the declared isolated topology. Not a secret or production-domain bypass."
+    },
+    {
+      "key": "5f5ff0981257b14b",
+      "location": "api-app/test/api-publica.e2e-spec.ts:305",
+      "classification": "by-design/no-action",
+      "reason": "Controlled test/runtime fixture or regex .test invocation; canonical all93791 exercises the declared isolated topology. Not a secret or production-domain bypass."
+    },
+    {
+      "key": "381b2a2a83fd94d1",
+      "location": "api-app/test/api-publica.e2e-spec.ts:316",
+      "classification": "by-design/no-action",
+      "reason": "Controlled test/runtime fixture or regex .test invocation; canonical all93791 exercises the declared isolated topology. Not a secret or production-domain bypass."
+    },
+    {
+      "key": "449848d1a122af9d",
+      "location": "api-app/test/api-publica.e2e-spec.ts:329",
+      "classification": "by-design/no-action",
+      "reason": "Controlled test/runtime fixture or regex .test invocation; canonical all93791 exercises the declared isolated topology. Not a secret or production-domain bypass."
+    },
+    {
+      "key": "dccf9d8ae5cd07e5",
+      "location": "api-app/test/number-onboarding-message-acceptance.e2e-spec.ts:18",
+      "classification": "by-design/no-action",
+      "reason": "Controlled test/runtime fixture or regex .test invocation; canonical all93791 exercises the declared isolated topology. Not a secret or production-domain bypass."
+    },
+    {
+      "key": "136bef79d231e8ba",
+      "location": "api-app/test/browser-server.cjs:23",
+      "classification": "by-design/no-action",
+      "reason": "Controlled test/runtime fixture or regex .test invocation; canonical all93791 exercises the declared isolated topology. Not a secret or production-domain bypass."
+    },
+    {
+      "key": "b21b0dfd7e8d27d3",
+      "location": "api-app/test/browser-server.cjs:26",
+      "classification": "by-design/no-action",
+      "reason": "Controlled test/runtime fixture or regex .test invocation; canonical all93791 exercises the declared isolated topology. Not a secret or production-domain bypass."
+    },
+    {
+      "key": "5864f4bd86b4b682",
+      "location": "api-app/test/browser-server.cjs:31",
+      "classification": "by-design/no-action",
+      "reason": "Controlled test/runtime fixture or regex .test invocation; canonical all93791 exercises the declared isolated topology. Not a secret or production-domain bypass."
+    },
+    {
+      "key": "eca028336b828de4",
+      "location": "api-app/test/browser-server.cjs:35",
+      "classification": "by-design/no-action",
+      "reason": "Controlled test/runtime fixture or regex .test invocation; canonical all93791 exercises the declared isolated topology. Not a secret or production-domain bypass."
+    },
+    {
+      "key": "ccef291b43d4b9c5",
+      "location": "api-app/test/browser-server.cjs:132",
+      "classification": "by-design/no-action",
+      "reason": "Controlled test/runtime fixture or regex .test invocation; canonical all93791 exercises the declared isolated topology. Not a secret or production-domain bypass."
+    },
+    {
+      "key": "526bb31d3ed0eeea",
+      "location": "api-app/test/browser-server.cjs:146",
+      "classification": "by-design/no-action",
+      "reason": "Controlled test/runtime fixture or regex .test invocation; canonical all93791 exercises the declared isolated topology. Not a secret or production-domain bypass."
+    },
+    {
+      "key": "13411ccaf8dd58b2",
+      "location": "api-app/test/number-onboarding-pcv.e2e-spec.ts:22",
+      "classification": "by-design/no-action",
+      "reason": "Controlled test/runtime fixture or regex .test invocation; canonical all93791 exercises the declared isolated topology. Not a secret or production-domain bypass."
+    },
+    {
+      "key": "554aea0f91675b6e",
+      "location": "api-app/test/number-onboarding-pcv.e2e-spec.ts:26",
+      "classification": "by-design/no-action",
+      "reason": "Controlled test/runtime fixture or regex .test invocation; canonical all93791 exercises the declared isolated topology. Not a secret or production-domain bypass."
+    },
+    {
+      "key": "e9650635f2c49f7b",
+      "location": "api-app/test/number-onboarding-pcv.e2e-spec.ts:27",
+      "classification": "by-design/no-action",
+      "reason": "Controlled test/runtime fixture or regex .test invocation; canonical all93791 exercises the declared isolated topology. Not a secret or production-domain bypass."
+    },
+    {
+      "key": "ee8bdc7688873616",
+      "location": "api-app/test/number-onboarding-pcv.e2e-spec.ts:75",
+      "classification": "by-design/no-action",
+      "reason": "Controlled test/runtime fixture or regex .test invocation; canonical all93791 exercises the declared isolated topology. Not a secret or production-domain bypass."
+    },
+    {
+      "key": "812db9a88827b7cf",
+      "location": "api-app/test/number-onboarding-pcv.e2e-spec.ts:114",
+      "classification": "by-design/no-action",
+      "reason": "Controlled test/runtime fixture or regex .test invocation; canonical all93791 exercises the declared isolated topology. Not a secret or production-domain bypass."
+    },
+    {
+      "key": "68699ce87aa7e9c7",
+      "location": "api-app/test/number-onboarding-pcv.e2e-spec.ts:115",
+      "classification": "by-design/no-action",
+      "reason": "Controlled test/runtime fixture or regex .test invocation; canonical all93791 exercises the declared isolated topology. Not a secret or production-domain bypass."
+    },
+    {
+      "key": "257db56e1d00d45d",
+      "location": "api-app/test/number-onboarding-pcv.e2e-spec.ts:143",
+      "classification": "by-design/no-action",
+      "reason": "Controlled test/runtime fixture or regex .test invocation; canonical all93791 exercises the declared isolated topology. Not a secret or production-domain bypass."
+    },
+    {
+      "key": "34b5d11ed64b128b",
+      "location": "api-app/test/number-onboarding-pcv.e2e-spec.ts:144",
+      "classification": "by-design/no-action",
+      "reason": "Controlled test/runtime fixture or regex .test invocation; canonical all93791 exercises the declared isolated topology. Not a secret or production-domain bypass."
+    },
+    {
+      "key": "6e62c4bf9fb2e635",
+      "location": "api-app/test/number-onboarding-pcv.e2e-spec.ts:191",
+      "classification": "by-design/no-action",
+      "reason": "Controlled test/runtime fixture or regex .test invocation; canonical all93791 exercises the declared isolated topology. Not a secret or production-domain bypass."
+    },
+    {
+      "key": "4f657b409c845d54",
+      "location": "api-app/test/number-onboarding-pcv.e2e-spec.ts:192",
+      "classification": "by-design/no-action",
+      "reason": "Controlled test/runtime fixture or regex .test invocation; canonical all93791 exercises the declared isolated topology. Not a secret or production-domain bypass."
+    },
+    {
+      "key": "a9cff9991dc31d11",
+      "location": "api-app/test/number-onboarding-pcv.e2e-spec.ts:247",
+      "classification": "by-design/no-action",
+      "reason": "Controlled test/runtime fixture or regex .test invocation; canonical all93791 exercises the declared isolated topology. Not a secret or production-domain bypass."
+    },
+    {
+      "key": "edc9dcdd344adc53",
+      "location": "api-app/test/number-onboarding-pcv.e2e-spec.ts:249",
+      "classification": "by-design/no-action",
+      "reason": "Controlled test/runtime fixture or regex .test invocation; canonical all93791 exercises the declared isolated topology. Not a secret or production-domain bypass."
+    },
+    {
+      "key": "855132e0487c98d4",
+      "location": "api-app/test/number-onboarding-pcv.e2e-spec.ts:250",
+      "classification": "by-design/no-action",
+      "reason": "Controlled test/runtime fixture or regex .test invocation; canonical all93791 exercises the declared isolated topology. Not a secret or production-domain bypass."
+    },
+    {
+      "key": "cd43c42e3608e57f",
+      "location": "api-app/test/number-onboarding-pcv.e2e-spec.ts:324",
+      "classification": "by-design/no-action",
+      "reason": "Controlled test/runtime fixture or regex .test invocation; canonical all93791 exercises the declared isolated topology. Not a secret or production-domain bypass."
+    },
+    {
+      "key": "d745d292ac615cd6",
+      "location": "api-app/test/number-onboarding-pcv.e2e-spec.ts:490",
+      "classification": "by-design/no-action",
+      "reason": "Controlled test/runtime fixture or regex .test invocation; canonical all93791 exercises the declared isolated topology. Not a secret or production-domain bypass."
+    },
+    {
+      "key": "36bdad998f7da2e6",
+      "location": "api-app/test/number-onboarding-pcv.e2e-spec.ts:491",
+      "classification": "by-design/no-action",
+      "reason": "Controlled test/runtime fixture or regex .test invocation; canonical all93791 exercises the declared isolated topology. Not a secret or production-domain bypass."
+    },
+    {
+      "key": "fc4a0831036d2ade",
+      "location": "api-app/test/number-onboarding-pcv.e2e-spec.ts:509",
+      "classification": "by-design/no-action",
+      "reason": "Controlled test/runtime fixture or regex .test invocation; canonical all93791 exercises the declared isolated topology. Not a secret or production-domain bypass."
+    },
+    {
+      "key": "6e7a9e5ac45942ba",
+      "location": "api-app/test/number-onboarding-pcv.e2e-spec.ts:510",
+      "classification": "by-design/no-action",
+      "reason": "Controlled test/runtime fixture or regex .test invocation; canonical all93791 exercises the declared isolated topology. Not a secret or production-domain bypass."
+    },
+    {
+      "key": "610d274149ead422",
+      "location": "api-app/test/number-onboarding-pcv.e2e-spec.ts:530",
+      "classification": "by-design/no-action",
+      "reason": "Controlled test/runtime fixture or regex .test invocation; canonical all93791 exercises the declared isolated topology. Not a secret or production-domain bypass."
+    },
+    {
+      "key": "a54edfda9777012c",
+      "location": "api-app/test/number-onboarding-pcv.e2e-spec.ts:532",
+      "classification": "by-design/no-action",
+      "reason": "Controlled test/runtime fixture or regex .test invocation; canonical all93791 exercises the declared isolated topology. Not a secret or production-domain bypass."
+    },
+    {
+      "key": "fc28e09689901399",
+      "location": "api-app/test/helpers.ts:164",
+      "classification": "by-design/no-action",
+      "reason": "Controlled test/runtime fixture or regex .test invocation; canonical all93791 exercises the declared isolated topology. Not a secret or production-domain bypass."
+    },
+    {
+      "key": "d5caaf36a5515fec",
+      "location": "api-app/test/channel-transport.e2e-spec.ts:70",
+      "classification": "by-design/no-action",
+      "reason": "Controlled test/runtime fixture or regex .test invocation; canonical all93791 exercises the declared isolated topology. Not a secret or production-domain bypass."
+    },
+    {
+      "key": "25395a8bcc5c28c4",
+      "location": "api-app/test/channel-transport.e2e-spec.ts:78",
+      "classification": "by-design/no-action",
+      "reason": "Controlled test/runtime fixture or regex .test invocation; canonical all93791 exercises the declared isolated topology. Not a secret or production-domain bypass."
+    },
+    {
+      "key": "62cd779fc0fcf186",
+      "location": "api-app/test/channel-transport.e2e-spec.ts:102",
+      "classification": "by-design/no-action",
+      "reason": "Controlled test/runtime fixture or regex .test invocation; canonical all93791 exercises the declared isolated topology. Not a secret or production-domain bypass."
+    },
+    {
+      "key": "397d6264478c2de1",
+      "location": "api-app/test/channel-transport.e2e-spec.ts:108",
+      "classification": "by-design/no-action",
+      "reason": "Controlled test/runtime fixture or regex .test invocation; canonical all93791 exercises the declared isolated topology. Not a secret or production-domain bypass."
+    },
+    {
+      "key": "6df67aa1171b5a5b",
+      "location": "api-app/test/channel-transport.e2e-spec.ts:139",
+      "classification": "by-design/no-action",
+      "reason": "Controlled test/runtime fixture or regex .test invocation; canonical all93791 exercises the declared isolated topology. Not a secret or production-domain bypass."
+    },
+    {
+      "key": "e97fd988676d6269",
+      "location": "api-app/test/channel-transport.e2e-spec.ts:148",
+      "classification": "by-design/no-action",
+      "reason": "Controlled test/runtime fixture or regex .test invocation; canonical all93791 exercises the declared isolated topology. Not a secret or production-domain bypass."
+    },
+    {
+      "key": "96bf553727462fad",
+      "location": "api-app/test/channel-transport.e2e-spec.ts:187",
+      "classification": "by-design/no-action",
+      "reason": "Controlled test/runtime fixture or regex .test invocation; canonical all93791 exercises the declared isolated topology. Not a secret or production-domain bypass."
+    },
+    {
+      "key": "f5549f7e57348fd7",
+      "location": "api-app/test/channel-transport.e2e-spec.ts:192",
+      "classification": "by-design/no-action",
+      "reason": "Controlled test/runtime fixture or regex .test invocation; canonical all93791 exercises the declared isolated topology. Not a secret or production-domain bypass."
+    },
+    {
+      "key": "dcab8e38f793b6bb",
+      "location": "api-app/test/channel-transport.e2e-spec.ts:219",
+      "classification": "by-design/no-action",
+      "reason": "Controlled test/runtime fixture or regex .test invocation; canonical all93791 exercises the declared isolated topology. Not a secret or production-domain bypass."
+    },
+    {
+      "key": "9f8e0317e801a917",
+      "location": "api-app/test/channel-transport.e2e-spec.ts:220",
+      "classification": "by-design/no-action",
+      "reason": "Controlled test/runtime fixture or regex .test invocation; canonical all93791 exercises the declared isolated topology. Not a secret or production-domain bypass."
+    },
+    {
+      "key": "6ae92de5af4ad584",
+      "location": "api-app/test/channel-transport.e2e-spec.ts:234",
+      "classification": "by-design/no-action",
+      "reason": "Controlled test/runtime fixture or regex .test invocation; canonical all93791 exercises the declared isolated topology. Not a secret or production-domain bypass."
+    },
+    {
+      "key": "81c3d099f0adf785",
+      "location": "api-app/test/channel-transport.e2e-spec.ts:262",
+      "classification": "by-design/no-action",
+      "reason": "Controlled test/runtime fixture or regex .test invocation; canonical all93791 exercises the declared isolated topology. Not a secret or production-domain bypass."
+    },
+    {
+      "key": "d46011fd6e3873da",
+      "location": "api-app/test/timeline-fixtures.cjs:153",
+      "classification": "by-design/no-action",
+      "reason": "Controlled test/runtime fixture or regex .test invocation; canonical all93791 exercises the declared isolated topology. Not a secret or production-domain bypass."
+    },
+    {
+      "key": "68ecff82501c4db1",
+      "location": "api-app/test/timeline-fixtures.cjs:223",
+      "classification": "by-design/no-action",
+      "reason": "Controlled test/runtime fixture or regex .test invocation; canonical all93791 exercises the declared isolated topology. Not a secret or production-domain bypass."
+    },
+    {
+      "key": "2d9f8ab34ce0ca64",
+      "location": "api-app/test/timeline-fixtures.cjs:236",
+      "classification": "by-design/no-action",
+      "reason": "Controlled test/runtime fixture or regex .test invocation; canonical all93791 exercises the declared isolated topology. Not a secret or production-domain bypass."
+    },
+    {
+      "key": "734af3761be24d6e",
+      "location": "api-app/test/timeline-fixtures.cjs:243",
+      "classification": "by-design/no-action",
+      "reason": "Controlled test/runtime fixture or regex .test invocation; canonical all93791 exercises the declared isolated topology. Not a secret or production-domain bypass."
+    },
+    {
+      "key": "0e738cfc91264419",
+      "location": "api-app/test/timeline-fixtures.cjs:304",
+      "classification": "by-design/no-action",
+      "reason": "Controlled test/runtime fixture or regex .test invocation; canonical all93791 exercises the declared isolated topology. Not a secret or production-domain bypass."
+    },
+    {
+      "key": "bc43ab2574e8e387",
+      "location": "docker-compose.channels.yml:11",
+      "classification": "by-design/no-action",
+      "reason": "Existing project-owned configurable local defaults/private env variable names, or fixed disposable validation endpoints and empty mask targets. Runner mounts only positive sources; no private file contents read."
+    },
+    {
+      "key": "fe020f1006d063e3",
+      "location": "docker-compose.channels.yml:32",
+      "classification": "by-design/no-action",
+      "reason": "Existing project-owned configurable local defaults/private env variable names, or fixed disposable validation endpoints and empty mask targets. Runner mounts only positive sources; no private file contents read."
+    },
+    {
+      "key": "22c39a4e7842e5f8",
+      "location": "docker-compose.channels.yml:45",
+      "classification": "by-design/no-action",
+      "reason": "Existing project-owned configurable local defaults/private env variable names, or fixed disposable validation endpoints and empty mask targets. Runner mounts only positive sources; no private file contents read."
+    },
+    {
+      "key": "660a5af14af9eb6c",
+      "location": "docker-compose.channels.yml:88",
+      "classification": "by-design/no-action",
+      "reason": "Existing project-owned configurable local defaults/private env variable names, or fixed disposable validation endpoints and empty mask targets. Runner mounts only positive sources; no private file contents read."
+    },
+    {
+      "key": "3aa172554bf0e2e8",
+      "location": "docker-compose.channels.yml:97",
+      "classification": "by-design/no-action",
+      "reason": "Existing project-owned configurable local defaults/private env variable names, or fixed disposable validation endpoints and empty mask targets. Runner mounts only positive sources; no private file contents read."
+    },
+    {
+      "key": "7d80a2e1dd3db49e",
+      "location": "docker-compose.channels.yml:193",
+      "classification": "by-design/no-action",
+      "reason": "Existing project-owned configurable local defaults/private env variable names, or fixed disposable validation endpoints and empty mask targets. Runner mounts only positive sources; no private file contents read."
+    },
+    {
+      "key": "e8c9d3976dba6697",
+      "location": "docker-compose.channels.yml:241",
+      "classification": "by-design/no-action",
+      "reason": "Existing project-owned configurable local defaults/private env variable names, or fixed disposable validation endpoints and empty mask targets. Runner mounts only positive sources; no private file contents read."
+    },
+    {
+      "key": "165c659dec071a24",
+      "location": "docker-compose.channels.yml:243",
+      "classification": "by-design/no-action",
+      "reason": "Existing project-owned configurable local defaults/private env variable names, or fixed disposable validation endpoints and empty mask targets. Runner mounts only positive sources; no private file contents read."
+    },
+    {
+      "key": "fe85cdb2ca8235bc",
+      "location": "docker-compose.channels.yml:245",
+      "classification": "by-design/no-action",
+      "reason": "Existing project-owned configurable local defaults/private env variable names, or fixed disposable validation endpoints and empty mask targets. Runner mounts only positive sources; no private file contents read."
+    },
+    {
+      "key": "7b4d385cb150895e",
+      "location": "docker-compose.channels.yml:441",
+      "classification": "by-design/no-action",
+      "reason": "Existing project-owned configurable local defaults/private env variable names, or fixed disposable validation endpoints and empty mask targets. Runner mounts only positive sources; no private file contents read."
+    },
+    {
+      "key": "6c5c31e204727563",
+      "location": "scripts/test-channels-local.sh:51",
+      "classification": "by-design/no-action",
+      "reason": "Explicit public allow/deny inventory, unavailable non-WSL self-test branch, or deliberate negative parity mutant. Actual same-engine Linux suite/control proof retained; no skipped proving case concealed."
+    },
+    {
+      "key": "c40df2b0ed8ef43b",
+      "location": "scripts/test-channels-local.sh:73",
+      "classification": "by-design/no-action",
+      "reason": "Explicit public allow/deny inventory, unavailable non-WSL self-test branch, or deliberate negative parity mutant. Actual same-engine Linux suite/control proof retained; no skipped proving case concealed."
+    },
+    {
+      "key": "57cc7a8a6d579efe",
+      "location": "scripts/test-channels-local.sh:212",
+      "classification": "by-design/no-action",
+      "reason": "Explicit public allow/deny inventory, unavailable non-WSL self-test branch, or deliberate negative parity mutant. Actual same-engine Linux suite/control proof retained; no skipped proving case concealed."
+    },
+    {
+      "key": "acf66f51b0557559",
+      "location": "web-app/playwright.config.ts:5",
+      "classification": "by-design/no-action",
+      "reason": "Controlled test/runtime fixture or regex .test invocation; canonical all93791 exercises the declared isolated topology. Not a secret or production-domain bypass."
+    },
+    {
+      "key": "27e2cb0cd9dd898c",
+      "location": "web-app/playwright.config.ts:26",
+      "classification": "by-design/no-action",
+      "reason": "Controlled test/runtime fixture or regex .test invocation; canonical all93791 exercises the declared isolated topology. Not a secret or production-domain bypass."
+    },
+    {
+      "key": "c474679a281bdf4b",
+      "location": "web-app/playwright.config.ts:32",
+      "classification": "by-design/no-action",
+      "reason": "Controlled test/runtime fixture or regex .test invocation; canonical all93791 exercises the declared isolated topology. Not a secret or production-domain bypass."
+    },
+    {
+      "key": "c1e9f5874cf33e2c",
+      "location": "web-app/playwright.config.ts:49",
+      "classification": "by-design/no-action",
+      "reason": "Controlled test/runtime fixture or regex .test invocation; canonical all93791 exercises the declared isolated topology. Not a secret or production-domain bypass."
+    },
+    {
+      "key": "05a9569e05a53474",
+      "location": "web-app/playwright.config.ts:51",
+      "classification": "by-design/no-action",
+      "reason": "Controlled test/runtime fixture or regex .test invocation; canonical all93791 exercises the declared isolated topology. Not a secret or production-domain bypass."
+    },
+    {
+      "key": "99e7efd53b453710",
+      "location": "web-app/playwright.config.ts:92",
+      "classification": "by-design/no-action",
+      "reason": "Controlled test/runtime fixture or regex .test invocation; canonical all93791 exercises the declared isolated topology. Not a secret or production-domain bypass."
+    },
+    {
+      "key": "2724cafc6afa4e33",
+      "location": "web-app/playwright.config.ts:102",
+      "classification": "by-design/no-action",
+      "reason": "Controlled test/runtime fixture or regex .test invocation; canonical all93791 exercises the declared isolated topology. Not a secret or production-domain bypass."
+    },
+    {
+      "key": "e18dc9df2ccadedb",
+      "location": "web-app/playwright.config.ts:107",
+      "classification": "by-design/no-action",
+      "reason": "Controlled test/runtime fixture or regex .test invocation; canonical all93791 exercises the declared isolated topology. Not a secret or production-domain bypass."
+    },
+    {
+      "key": "b3944584c04390c7",
+      "location": "web-app/playwright.config.ts:110",
+      "classification": "by-design/no-action",
+      "reason": "Controlled test/runtime fixture or regex .test invocation; canonical all93791 exercises the declared isolated topology. Not a secret or production-domain bypass."
+    },
+    {
+      "key": "80d24919003d5de4",
+      "location": "web-app/playwright.config.ts:113",
+      "classification": "by-design/no-action",
+      "reason": "Controlled test/runtime fixture or regex .test invocation; canonical all93791 exercises the declared isolated topology. Not a secret or production-domain bypass."
+    },
+    {
+      "key": "70a30acf61cec12b",
+      "location": "web-app/playwright.config.ts:115",
+      "classification": "by-design/no-action",
+      "reason": "Controlled test/runtime fixture or regex .test invocation; canonical all93791 exercises the declared isolated topology. Not a secret or production-domain bypass."
+    },
+    {
+      "key": "f245d9247e67ae2f",
+      "location": "web-app/playwright.config.ts:119",
+      "classification": "by-design/no-action",
+      "reason": "Controlled test/runtime fixture or regex .test invocation; canonical all93791 exercises the declared isolated topology. Not a secret or production-domain bypass."
+    },
+    {
+      "key": "894245a06a49ed9d",
+      "location": "web-app/e2e/number-onboarding-freshness.ts:39",
+      "classification": "by-design/no-action",
+      "reason": "Controlled test/runtime fixture or regex .test invocation; canonical all93791 exercises the declared isolated topology. Not a secret or production-domain bypass."
+    },
+    {
+      "key": "47251e9aa3f2f619",
+      "location": "web-app/src/api.ts:79",
+      "classification": "by-design/no-action",
+      "reason": "Existing HTML regex .test static-response detector or configurable LEADSHUG_API localhost default in Vite. No provider branch, tenant bypass or topology authority fabricated."
+    },
+    {
+      "key": "fd38e715b75a1ddb",
+      "location": "web-app/e2e/timeline-freshness.ts:19",
+      "classification": "by-design/no-action",
+      "reason": "Controlled test/runtime fixture or regex .test invocation; canonical all93791 exercises the declared isolated topology. Not a secret or production-domain bypass."
+    },
+    {
+      "key": "a5219b58a23b48b7",
+      "location": "web-app/e2e/timeline-freshness.ts:47",
+      "classification": "by-design/no-action",
+      "reason": "Controlled test/runtime fixture or regex .test invocation; canonical all93791 exercises the declared isolated topology. Not a secret or production-domain bypass."
+    },
+    {
+      "key": "b4e4f1ef92887f7f",
+      "location": "web-app/e2e/timeline-freshness.ts:50",
+      "classification": "by-design/no-action",
+      "reason": "Controlled test/runtime fixture or regex .test invocation; canonical all93791 exercises the declared isolated topology. Not a secret or production-domain bypass."
+    },
+    {
+      "key": "36cc2a01f5b3f6d3",
+      "location": "web-app/e2e/timeline-freshness.ts:51",
+      "classification": "by-design/no-action",
+      "reason": "Controlled test/runtime fixture or regex .test invocation; canonical all93791 exercises the declared isolated topology. Not a secret or production-domain bypass."
+    },
+    {
+      "key": "e0bcaf1bbbf840c7",
+      "location": "web-app/e2e/timeline-freshness.ts:59",
+      "classification": "by-design/no-action",
+      "reason": "Controlled test/runtime fixture or regex .test invocation; canonical all93791 exercises the declared isolated topology. Not a secret or production-domain bypass."
+    },
+    {
+      "key": "ef702cbe7ce76787",
+      "location": "web-app/e2e/timeline-freshness.ts:62",
+      "classification": "by-design/no-action",
+      "reason": "Controlled test/runtime fixture or regex .test invocation; canonical all93791 exercises the declared isolated topology. Not a secret or production-domain bypass."
+    },
+    {
+      "key": "5c5e6a50969bcf8b",
+      "location": "web-app/e2e/timeline-freshness.ts:112",
+      "classification": "by-design/no-action",
+      "reason": "Controlled test/runtime fixture or regex .test invocation; canonical all93791 exercises the declared isolated topology. Not a secret or production-domain bypass."
+    },
+    {
+      "key": "0436ea8e701f8438",
+      "location": "web-app/e2e/channel-transport.spec.ts:3",
+      "classification": "by-design/no-action",
+      "reason": "Controlled test/runtime fixture or regex .test invocation; canonical all93791 exercises the declared isolated topology. Not a secret or production-domain bypass."
+    },
+    {
+      "key": "f1ed0ae85527ba7f",
+      "location": "web-app/vite.config.ts:9",
+      "classification": "by-design/no-action",
+      "reason": "Existing HTML regex .test static-response detector or configurable LEADSHUG_API localhost default in Vite. No provider branch, tenant bypass or topology authority fabricated."
+    },
+    {
+      "key": "5bb04b9607fe9b05",
+      "location": "scripts/check-channels-ci-parity.py:157",
+      "classification": "by-design/no-action",
+      "reason": "Explicit public allow/deny inventory, unavailable non-WSL self-test branch, or deliberate negative parity mutant. Actual same-engine Linux suite/control proof retained; no skipped proving case concealed."
+    },
+    {
+      "key": "6be44c42b0754539",
+      "location": "api-app/src/domain/channels/transport/channel-dependencies.spec.ts:23",
+      "classification": "by-design/no-action",
+      "reason": "Controlled test/runtime fixture or regex .test invocation; canonical all93791 exercises the declared isolated topology. Not a secret or production-domain bypass."
+    },
+    {
+      "key": "2aff4fd4dc02b497",
+      "location": "api-app/test/helpers.ts:164",
+      "classification": "by-design/no-action",
+      "reason": "Controlled test/runtime fixture or regex .test invocation; canonical all93791 exercises the declared isolated topology. Not a secret or production-domain bypass."
+    },
+    {
+      "key": "19bdafe1a193f846",
+      "location": "api-app/test/api-publica.e2e-spec.ts:60",
+      "classification": "by-design/no-action",
+      "reason": "Controlled test/runtime fixture or regex .test invocation; canonical all93791 exercises the declared isolated topology. Not a secret or production-domain bypass."
+    },
+    {
+      "key": "a1411a128c6ee3ae",
+      "location": "api-app/test/api-publica.e2e-spec.ts:61",
+      "classification": "by-design/no-action",
+      "reason": "Controlled test/runtime fixture or regex .test invocation; canonical all93791 exercises the declared isolated topology. Not a secret or production-domain bypass."
+    },
+    {
+      "key": "ba3ab0449f358079",
+      "location": "api-app/test/api-publica.e2e-spec.ts:63",
+      "classification": "by-design/no-action",
+      "reason": "Controlled test/runtime fixture or regex .test invocation; canonical all93791 exercises the declared isolated topology. Not a secret or production-domain bypass."
+    },
+    {
+      "key": "398c1c19e8aaa3e6",
+      "location": "api-app/test/api-publica.e2e-spec.ts:78",
+      "classification": "by-design/no-action",
+      "reason": "Controlled test/runtime fixture or regex .test invocation; canonical all93791 exercises the declared isolated topology. Not a secret or production-domain bypass."
+    },
+    {
+      "key": "c2dad0636331da7b",
+      "location": "api-app/test/api-publica.e2e-spec.ts:83",
+      "classification": "by-design/no-action",
+      "reason": "Controlled test/runtime fixture or regex .test invocation; canonical all93791 exercises the declared isolated topology. Not a secret or production-domain bypass."
+    },
+    {
+      "key": "96b03b279a0cddd9",
+      "location": "api-app/test/api-publica.e2e-spec.ts:111",
+      "classification": "by-design/no-action",
+      "reason": "Controlled test/runtime fixture or regex .test invocation; canonical all93791 exercises the declared isolated topology. Not a secret or production-domain bypass."
+    },
+    {
+      "key": "0f6924b25d06d198",
+      "location": "api-app/test/api-publica.e2e-spec.ts:128",
+      "classification": "by-design/no-action",
+      "reason": "Controlled test/runtime fixture or regex .test invocation; canonical all93791 exercises the declared isolated topology. Not a secret or production-domain bypass."
+    },
+    {
+      "key": "7f119100722ee88b",
+      "location": "api-app/test/api-publica.e2e-spec.ts:305",
+      "classification": "by-design/no-action",
+      "reason": "Controlled test/runtime fixture or regex .test invocation; canonical all93791 exercises the declared isolated topology. Not a secret or production-domain bypass."
+    },
+    {
+      "key": "b488a62bec43c461",
+      "location": "api-app/test/api-publica.e2e-spec.ts:316",
+      "classification": "by-design/no-action",
+      "reason": "Controlled test/runtime fixture or regex .test invocation; canonical all93791 exercises the declared isolated topology. Not a secret or production-domain bypass."
+    },
+    {
+      "key": "9accaa8a2ed38a53",
+      "location": "api-app/test/api-publica.e2e-spec.ts:329",
+      "classification": "by-design/no-action",
+      "reason": "Controlled test/runtime fixture or regex .test invocation; canonical all93791 exercises the declared isolated topology. Not a secret or production-domain bypass."
+    },
+    {
+      "key": "7c5deed613a14448",
+      "location": "api-app/test/channel-transport.e2e-spec.ts:70",
+      "classification": "by-design/no-action",
+      "reason": "Controlled test/runtime fixture or regex .test invocation; canonical all93791 exercises the declared isolated topology. Not a secret or production-domain bypass."
+    },
+    {
+      "key": "0ec7afce84acac0a",
+      "location": "api-app/test/channel-transport.e2e-spec.ts:78",
+      "classification": "by-design/no-action",
+      "reason": "Controlled test/runtime fixture or regex .test invocation; canonical all93791 exercises the declared isolated topology. Not a secret or production-domain bypass."
+    },
+    {
+      "key": "a8336cdf70b129ed",
+      "location": "api-app/test/channel-transport.e2e-spec.ts:102",
+      "classification": "by-design/no-action",
+      "reason": "Controlled test/runtime fixture or regex .test invocation; canonical all93791 exercises the declared isolated topology. Not a secret or production-domain bypass."
+    },
+    {
+      "key": "f4e2c3edb527afba",
+      "location": "api-app/test/channel-transport.e2e-spec.ts:108",
+      "classification": "by-design/no-action",
+      "reason": "Controlled test/runtime fixture or regex .test invocation; canonical all93791 exercises the declared isolated topology. Not a secret or production-domain bypass."
+    },
+    {
+      "key": "931ab02977c21768",
+      "location": "api-app/test/channel-transport.e2e-spec.ts:139",
+      "classification": "by-design/no-action",
+      "reason": "Controlled test/runtime fixture or regex .test invocation; canonical all93791 exercises the declared isolated topology. Not a secret or production-domain bypass."
+    },
+    {
+      "key": "a7fb5ed07294bd30",
+      "location": "api-app/test/channel-transport.e2e-spec.ts:148",
+      "classification": "by-design/no-action",
+      "reason": "Controlled test/runtime fixture or regex .test invocation; canonical all93791 exercises the declared isolated topology. Not a secret or production-domain bypass."
+    },
+    {
+      "key": "19335d4e01607abc",
+      "location": "api-app/test/channel-transport.e2e-spec.ts:187",
+      "classification": "by-design/no-action",
+      "reason": "Controlled test/runtime fixture or regex .test invocation; canonical all93791 exercises the declared isolated topology. Not a secret or production-domain bypass."
+    },
+    {
+      "key": "9076087bd76eba00",
+      "location": "api-app/test/channel-transport.e2e-spec.ts:192",
+      "classification": "by-design/no-action",
+      "reason": "Controlled test/runtime fixture or regex .test invocation; canonical all93791 exercises the declared isolated topology. Not a secret or production-domain bypass."
+    },
+    {
+      "key": "d21ada7ba8f1b81c",
+      "location": "api-app/test/channel-transport.e2e-spec.ts:219",
+      "classification": "by-design/no-action",
+      "reason": "Controlled test/runtime fixture or regex .test invocation; canonical all93791 exercises the declared isolated topology. Not a secret or production-domain bypass."
+    },
+    {
+      "key": "040b74350ae1b1ad",
+      "location": "api-app/test/channel-transport.e2e-spec.ts:220",
+      "classification": "by-design/no-action",
+      "reason": "Controlled test/runtime fixture or regex .test invocation; canonical all93791 exercises the declared isolated topology. Not a secret or production-domain bypass."
+    },
+    {
+      "key": "3feec14bb5bd5e08",
+      "location": "api-app/test/channel-transport.e2e-spec.ts:234",
+      "classification": "by-design/no-action",
+      "reason": "Controlled test/runtime fixture or regex .test invocation; canonical all93791 exercises the declared isolated topology. Not a secret or production-domain bypass."
+    },
+    {
+      "key": "46a6191e35634fed",
+      "location": "api-app/test/channel-transport.e2e-spec.ts:262",
+      "classification": "by-design/no-action",
+      "reason": "Controlled test/runtime fixture or regex .test invocation; canonical all93791 exercises the declared isolated topology. Not a secret or production-domain bypass."
+    },
+    {
+      "key": "22f73b43a40526df",
+      "location": "api-app/test/browser-server.cjs:23",
+      "classification": "by-design/no-action",
+      "reason": "Controlled test/runtime fixture or regex .test invocation; canonical all93791 exercises the declared isolated topology. Not a secret or production-domain bypass."
+    },
+    {
+      "key": "85ea9bca5961a5f5",
+      "location": "api-app/test/browser-server.cjs:26",
+      "classification": "by-design/no-action",
+      "reason": "Controlled test/runtime fixture or regex .test invocation; canonical all93791 exercises the declared isolated topology. Not a secret or production-domain bypass."
+    },
+    {
+      "key": "caef5b2ecc4d6fc7",
+      "location": "api-app/test/browser-server.cjs:31",
+      "classification": "by-design/no-action",
+      "reason": "Controlled test/runtime fixture or regex .test invocation; canonical all93791 exercises the declared isolated topology. Not a secret or production-domain bypass."
+    },
+    {
+      "key": "60f1ad416463fc81",
+      "location": "api-app/test/browser-server.cjs:35",
+      "classification": "by-design/no-action",
+      "reason": "Controlled test/runtime fixture or regex .test invocation; canonical all93791 exercises the declared isolated topology. Not a secret or production-domain bypass."
+    },
+    {
+      "key": "5fd2abc7e60eab2a",
+      "location": "api-app/test/browser-server.cjs:132",
+      "classification": "by-design/no-action",
+      "reason": "Controlled test/runtime fixture or regex .test invocation; canonical all93791 exercises the declared isolated topology. Not a secret or production-domain bypass."
+    },
+    {
+      "key": "50d366b80944d1b2",
+      "location": "api-app/test/browser-server.cjs:146",
+      "classification": "by-design/no-action",
+      "reason": "Controlled test/runtime fixture or regex .test invocation; canonical all93791 exercises the declared isolated topology. Not a secret or production-domain bypass."
+    },
+    {
+      "key": "4af8bef627fa122e",
+      "location": "api-app/test/number-onboarding-message-acceptance.e2e-spec.ts:18",
+      "classification": "by-design/no-action",
+      "reason": "Controlled test/runtime fixture or regex .test invocation; canonical all93791 exercises the declared isolated topology. Not a secret or production-domain bypass."
+    },
+    {
+      "key": "6d93c2a980d7eee0",
+      "location": "api-app/test/number-onboarding-pcv.e2e-spec.ts:22",
+      "classification": "by-design/no-action",
+      "reason": "Controlled test/runtime fixture or regex .test invocation; canonical all93791 exercises the declared isolated topology. Not a secret or production-domain bypass."
+    },
+    {
+      "key": "6e974cadd6eb6ed9",
+      "location": "api-app/test/number-onboarding-pcv.e2e-spec.ts:26",
+      "classification": "by-design/no-action",
+      "reason": "Controlled test/runtime fixture or regex .test invocation; canonical all93791 exercises the declared isolated topology. Not a secret or production-domain bypass."
+    },
+    {
+      "key": "b5188a8efd15e952",
+      "location": "api-app/test/number-onboarding-pcv.e2e-spec.ts:27",
+      "classification": "by-design/no-action",
+      "reason": "Controlled test/runtime fixture or regex .test invocation; canonical all93791 exercises the declared isolated topology. Not a secret or production-domain bypass."
+    },
+    {
+      "key": "97b6050156d24871",
+      "location": "api-app/test/number-onboarding-pcv.e2e-spec.ts:75",
+      "classification": "by-design/no-action",
+      "reason": "Controlled test/runtime fixture or regex .test invocation; canonical all93791 exercises the declared isolated topology. Not a secret or production-domain bypass."
+    },
+    {
+      "key": "fc2c38d60d54810e",
+      "location": "api-app/test/number-onboarding-pcv.e2e-spec.ts:114",
+      "classification": "by-design/no-action",
+      "reason": "Controlled test/runtime fixture or regex .test invocation; canonical all93791 exercises the declared isolated topology. Not a secret or production-domain bypass."
+    },
+    {
+      "key": "9278abacfd3f8b96",
+      "location": "api-app/test/number-onboarding-pcv.e2e-spec.ts:115",
+      "classification": "by-design/no-action",
+      "reason": "Controlled test/runtime fixture or regex .test invocation; canonical all93791 exercises the declared isolated topology. Not a secret or production-domain bypass."
+    },
+    {
+      "key": "41dee8e5eba490da",
+      "location": "api-app/test/number-onboarding-pcv.e2e-spec.ts:143",
+      "classification": "by-design/no-action",
+      "reason": "Controlled test/runtime fixture or regex .test invocation; canonical all93791 exercises the declared isolated topology. Not a secret or production-domain bypass."
+    },
+    {
+      "key": "7b9adc26c46ff4f9",
+      "location": "api-app/test/number-onboarding-pcv.e2e-spec.ts:144",
+      "classification": "by-design/no-action",
+      "reason": "Controlled test/runtime fixture or regex .test invocation; canonical all93791 exercises the declared isolated topology. Not a secret or production-domain bypass."
+    },
+    {
+      "key": "864b0e68a9dc941a",
+      "location": "api-app/test/number-onboarding-pcv.e2e-spec.ts:191",
+      "classification": "by-design/no-action",
+      "reason": "Controlled test/runtime fixture or regex .test invocation; canonical all93791 exercises the declared isolated topology. Not a secret or production-domain bypass."
+    },
+    {
+      "key": "b538867fb6602741",
+      "location": "api-app/test/number-onboarding-pcv.e2e-spec.ts:192",
+      "classification": "by-design/no-action",
+      "reason": "Controlled test/runtime fixture or regex .test invocation; canonical all93791 exercises the declared isolated topology. Not a secret or production-domain bypass."
+    },
+    {
+      "key": "49a3b9bacf86d259",
+      "location": "api-app/test/number-onboarding-pcv.e2e-spec.ts:247",
+      "classification": "by-design/no-action",
+      "reason": "Controlled test/runtime fixture or regex .test invocation; canonical all93791 exercises the declared isolated topology. Not a secret or production-domain bypass."
+    },
+    {
+      "key": "a7e1129fbad5af12",
+      "location": "api-app/test/number-onboarding-pcv.e2e-spec.ts:249",
+      "classification": "by-design/no-action",
+      "reason": "Controlled test/runtime fixture or regex .test invocation; canonical all93791 exercises the declared isolated topology. Not a secret or production-domain bypass."
+    },
+    {
+      "key": "d4760738caf53cb6",
+      "location": "api-app/test/number-onboarding-pcv.e2e-spec.ts:250",
+      "classification": "by-design/no-action",
+      "reason": "Controlled test/runtime fixture or regex .test invocation; canonical all93791 exercises the declared isolated topology. Not a secret or production-domain bypass."
+    },
+    {
+      "key": "adf9d50ada81e1cb",
+      "location": "api-app/test/number-onboarding-pcv.e2e-spec.ts:324",
+      "classification": "by-design/no-action",
+      "reason": "Controlled test/runtime fixture or regex .test invocation; canonical all93791 exercises the declared isolated topology. Not a secret or production-domain bypass."
+    },
+    {
+      "key": "ad41ff0c828784f8",
+      "location": "api-app/test/number-onboarding-pcv.e2e-spec.ts:490",
+      "classification": "by-design/no-action",
+      "reason": "Controlled test/runtime fixture or regex .test invocation; canonical all93791 exercises the declared isolated topology. Not a secret or production-domain bypass."
+    },
+    {
+      "key": "83fdae673a7abb7b",
+      "location": "api-app/test/number-onboarding-pcv.e2e-spec.ts:491",
+      "classification": "by-design/no-action",
+      "reason": "Controlled test/runtime fixture or regex .test invocation; canonical all93791 exercises the declared isolated topology. Not a secret or production-domain bypass."
+    },
+    {
+      "key": "c0d02ff7ad34da6a",
+      "location": "api-app/test/number-onboarding-pcv.e2e-spec.ts:509",
+      "classification": "by-design/no-action",
+      "reason": "Controlled test/runtime fixture or regex .test invocation; canonical all93791 exercises the declared isolated topology. Not a secret or production-domain bypass."
+    },
+    {
+      "key": "2fd8591f39a5857d",
+      "location": "api-app/test/number-onboarding-pcv.e2e-spec.ts:510",
+      "classification": "by-design/no-action",
+      "reason": "Controlled test/runtime fixture or regex .test invocation; canonical all93791 exercises the declared isolated topology. Not a secret or production-domain bypass."
+    },
+    {
+      "key": "00f303517e8918e3",
+      "location": "api-app/test/number-onboarding-pcv.e2e-spec.ts:530",
+      "classification": "by-design/no-action",
+      "reason": "Controlled test/runtime fixture or regex .test invocation; canonical all93791 exercises the declared isolated topology. Not a secret or production-domain bypass."
+    },
+    {
+      "key": "fd4dc7086dc80dec",
+      "location": "api-app/test/number-onboarding-pcv.e2e-spec.ts:532",
+      "classification": "by-design/no-action",
+      "reason": "Controlled test/runtime fixture or regex .test invocation; canonical all93791 exercises the declared isolated topology. Not a secret or production-domain bypass."
+    },
+    {
+      "key": "0f0f77c82b5fc901",
+      "location": "api-app/test/number-onboarding-typebot.e2e-spec.ts:20",
+      "classification": "by-design/no-action",
+      "reason": "Controlled test/runtime fixture or regex .test invocation; canonical all93791 exercises the declared isolated topology. Not a secret or production-domain bypass."
+    },
+    {
+      "key": "626f3cf722853f94",
+      "location": "api-app/test/number-onboarding-typebot.e2e-spec.ts:21",
+      "classification": "by-design/no-action",
+      "reason": "Controlled test/runtime fixture or regex .test invocation; canonical all93791 exercises the declared isolated topology. Not a secret or production-domain bypass."
+    },
+    {
+      "key": "f5c6113ade2b78d5",
+      "location": "docker-compose.channels.yml:11",
+      "classification": "by-design/no-action",
+      "reason": "Existing project-owned configurable local defaults/private env variable names, or fixed disposable validation endpoints and empty mask targets. Runner mounts only positive sources; no private file contents read."
+    },
+    {
+      "key": "eb30cd74cf4272eb",
+      "location": "docker-compose.channels.yml:32",
+      "classification": "by-design/no-action",
+      "reason": "Existing project-owned configurable local defaults/private env variable names, or fixed disposable validation endpoints and empty mask targets. Runner mounts only positive sources; no private file contents read."
+    },
+    {
+      "key": "ee53791b3a833679",
+      "location": "docker-compose.channels.yml:45",
+      "classification": "by-design/no-action",
+      "reason": "Existing project-owned configurable local defaults/private env variable names, or fixed disposable validation endpoints and empty mask targets. Runner mounts only positive sources; no private file contents read."
+    },
+    {
+      "key": "231591e4e7a0bd87",
+      "location": "docker-compose.channels.yml:88",
+      "classification": "by-design/no-action",
+      "reason": "Existing project-owned configurable local defaults/private env variable names, or fixed disposable validation endpoints and empty mask targets. Runner mounts only positive sources; no private file contents read."
+    },
+    {
+      "key": "dd5071f75c8fe98f",
+      "location": "docker-compose.channels.yml:97",
+      "classification": "by-design/no-action",
+      "reason": "Existing project-owned configurable local defaults/private env variable names, or fixed disposable validation endpoints and empty mask targets. Runner mounts only positive sources; no private file contents read."
+    },
+    {
+      "key": "c5028752d91bb18c",
+      "location": "docker-compose.channels.yml:193",
+      "classification": "by-design/no-action",
+      "reason": "Existing project-owned configurable local defaults/private env variable names, or fixed disposable validation endpoints and empty mask targets. Runner mounts only positive sources; no private file contents read."
+    },
+    {
+      "key": "9a759d4e59519833",
+      "location": "docker-compose.channels.yml:241",
+      "classification": "by-design/no-action",
+      "reason": "Existing project-owned configurable local defaults/private env variable names, or fixed disposable validation endpoints and empty mask targets. Runner mounts only positive sources; no private file contents read."
+    },
+    {
+      "key": "19500d2b7c7de948",
+      "location": "docker-compose.channels.yml:243",
+      "classification": "by-design/no-action",
+      "reason": "Existing project-owned configurable local defaults/private env variable names, or fixed disposable validation endpoints and empty mask targets. Runner mounts only positive sources; no private file contents read."
+    },
+    {
+      "key": "6270972396ab5832",
+      "location": "docker-compose.channels.yml:245",
+      "classification": "by-design/no-action",
+      "reason": "Existing project-owned configurable local defaults/private env variable names, or fixed disposable validation endpoints and empty mask targets. Runner mounts only positive sources; no private file contents read."
+    },
+    {
+      "key": "91c6183748ff7890",
+      "location": "docker-compose.channels.yml:441",
+      "classification": "by-design/no-action",
+      "reason": "Existing project-owned configurable local defaults/private env variable names, or fixed disposable validation endpoints and empty mask targets. Runner mounts only positive sources; no private file contents read."
+    },
+    {
+      "key": "37fe1365acf79ea1",
+      "location": "api-app/test/timeline-fixtures.cjs:153",
+      "classification": "by-design/no-action",
+      "reason": "Controlled test/runtime fixture or regex .test invocation; canonical all93791 exercises the declared isolated topology. Not a secret or production-domain bypass."
+    },
+    {
+      "key": "b1f9689df7ae6307",
+      "location": "api-app/test/timeline-fixtures.cjs:223",
+      "classification": "by-design/no-action",
+      "reason": "Controlled test/runtime fixture or regex .test invocation; canonical all93791 exercises the declared isolated topology. Not a secret or production-domain bypass."
+    },
+    {
+      "key": "b9a811aa5c40d140",
+      "location": "api-app/test/timeline-fixtures.cjs:236",
+      "classification": "by-design/no-action",
+      "reason": "Controlled test/runtime fixture or regex .test invocation; canonical all93791 exercises the declared isolated topology. Not a secret or production-domain bypass."
+    },
+    {
+      "key": "a89a93444df5bfa3",
+      "location": "api-app/test/timeline-fixtures.cjs:243",
+      "classification": "by-design/no-action",
+      "reason": "Controlled test/runtime fixture or regex .test invocation; canonical all93791 exercises the declared isolated topology. Not a secret or production-domain bypass."
+    },
+    {
+      "key": "e5ac99a56a018dbd",
+      "location": "api-app/test/timeline-fixtures.cjs:304",
+      "classification": "by-design/no-action",
+      "reason": "Controlled test/runtime fixture or regex .test invocation; canonical all93791 exercises the declared isolated topology. Not a secret or production-domain bypass."
+    },
+    {
+      "key": "828da74e707a8dd7",
+      "location": "web-app/playwright.config.ts:5",
+      "classification": "by-design/no-action",
+      "reason": "Controlled test/runtime fixture or regex .test invocation; canonical all93791 exercises the declared isolated topology. Not a secret or production-domain bypass."
+    },
+    {
+      "key": "816dd3a8a5e912c3",
+      "location": "web-app/playwright.config.ts:26",
+      "classification": "by-design/no-action",
+      "reason": "Controlled test/runtime fixture or regex .test invocation; canonical all93791 exercises the declared isolated topology. Not a secret or production-domain bypass."
+    },
+    {
+      "key": "4fb262696bd2a81b",
+      "location": "web-app/playwright.config.ts:32",
+      "classification": "by-design/no-action",
+      "reason": "Controlled test/runtime fixture or regex .test invocation; canonical all93791 exercises the declared isolated topology. Not a secret or production-domain bypass."
+    },
+    {
+      "key": "9a2a55d9a3f17df8",
+      "location": "web-app/playwright.config.ts:49",
+      "classification": "by-design/no-action",
+      "reason": "Controlled test/runtime fixture or regex .test invocation; canonical all93791 exercises the declared isolated topology. Not a secret or production-domain bypass."
+    },
+    {
+      "key": "55d5670f7777b8a7",
+      "location": "web-app/playwright.config.ts:51",
+      "classification": "by-design/no-action",
+      "reason": "Controlled test/runtime fixture or regex .test invocation; canonical all93791 exercises the declared isolated topology. Not a secret or production-domain bypass."
+    },
+    {
+      "key": "049307cd9582dea4",
+      "location": "web-app/playwright.config.ts:92",
+      "classification": "by-design/no-action",
+      "reason": "Controlled test/runtime fixture or regex .test invocation; canonical all93791 exercises the declared isolated topology. Not a secret or production-domain bypass."
+    },
+    {
+      "key": "bed49dcf9fa77082",
+      "location": "web-app/playwright.config.ts:102",
+      "classification": "by-design/no-action",
+      "reason": "Controlled test/runtime fixture or regex .test invocation; canonical all93791 exercises the declared isolated topology. Not a secret or production-domain bypass."
+    },
+    {
+      "key": "936b15488a82dbb8",
+      "location": "web-app/playwright.config.ts:107",
+      "classification": "by-design/no-action",
+      "reason": "Controlled test/runtime fixture or regex .test invocation; canonical all93791 exercises the declared isolated topology. Not a secret or production-domain bypass."
+    },
+    {
+      "key": "05344bf196f62647",
+      "location": "web-app/playwright.config.ts:110",
+      "classification": "by-design/no-action",
+      "reason": "Controlled test/runtime fixture or regex .test invocation; canonical all93791 exercises the declared isolated topology. Not a secret or production-domain bypass."
+    },
+    {
+      "key": "3ee389c2505ed38c",
+      "location": "web-app/playwright.config.ts:113",
+      "classification": "by-design/no-action",
+      "reason": "Controlled test/runtime fixture or regex .test invocation; canonical all93791 exercises the declared isolated topology. Not a secret or production-domain bypass."
+    },
+    {
+      "key": "a7a40da758845521",
+      "location": "web-app/playwright.config.ts:115",
+      "classification": "by-design/no-action",
+      "reason": "Controlled test/runtime fixture or regex .test invocation; canonical all93791 exercises the declared isolated topology. Not a secret or production-domain bypass."
+    },
+    {
+      "key": "3dc2ea1c0ee92c93",
+      "location": "web-app/playwright.config.ts:119",
+      "classification": "by-design/no-action",
+      "reason": "Controlled test/runtime fixture or regex .test invocation; canonical all93791 exercises the declared isolated topology. Not a secret or production-domain bypass."
+    },
+    {
+      "key": "36f0ab1f79d23022",
+      "location": "scripts/test-channels-local.sh:51",
+      "classification": "by-design/no-action",
+      "reason": "Explicit public allow/deny inventory, unavailable non-WSL self-test branch, or deliberate negative parity mutant. Actual same-engine Linux suite/control proof retained; no skipped proving case concealed."
+    },
+    {
+      "key": "89d5c36aecaedd3b",
+      "location": "scripts/test-channels-local.sh:73",
+      "classification": "by-design/no-action",
+      "reason": "Explicit public allow/deny inventory, unavailable non-WSL self-test branch, or deliberate negative parity mutant. Actual same-engine Linux suite/control proof retained; no skipped proving case concealed."
+    },
+    {
+      "key": "0c085fb1f56adeec",
+      "location": "scripts/test-channels-local.sh:212",
+      "classification": "by-design/no-action",
+      "reason": "Explicit public allow/deny inventory, unavailable non-WSL self-test branch, or deliberate negative parity mutant. Actual same-engine Linux suite/control proof retained; no skipped proving case concealed."
+    },
+    {
+      "key": "45a0a750a6d95094",
+      "location": "web-app/src/api.ts:79",
+      "classification": "by-design/no-action",
+      "reason": "Existing HTML regex .test static-response detector or configurable LEADSHUG_API localhost default in Vite. No provider branch, tenant bypass or topology authority fabricated."
+    },
+    {
+      "key": "0ad7cf56c663a468",
+      "location": "web-app/e2e/number-onboarding-freshness.ts:39",
+      "classification": "by-design/no-action",
+      "reason": "Controlled test/runtime fixture or regex .test invocation; canonical all93791 exercises the declared isolated topology. Not a secret or production-domain bypass."
+    },
+    {
+      "key": "78962492f1c9ea8b",
+      "location": "web-app/e2e/timeline-freshness.ts:19",
+      "classification": "by-design/no-action",
+      "reason": "Controlled test/runtime fixture or regex .test invocation; canonical all93791 exercises the declared isolated topology. Not a secret or production-domain bypass."
+    },
+    {
+      "key": "99a5ca723f2ca9c5",
+      "location": "web-app/e2e/timeline-freshness.ts:47",
+      "classification": "by-design/no-action",
+      "reason": "Controlled test/runtime fixture or regex .test invocation; canonical all93791 exercises the declared isolated topology. Not a secret or production-domain bypass."
+    },
+    {
+      "key": "98599f7916ffc82e",
+      "location": "web-app/e2e/timeline-freshness.ts:50",
+      "classification": "by-design/no-action",
+      "reason": "Controlled test/runtime fixture or regex .test invocation; canonical all93791 exercises the declared isolated topology. Not a secret or production-domain bypass."
+    },
+    {
+      "key": "9e05fb4480cbf411",
+      "location": "web-app/e2e/timeline-freshness.ts:51",
+      "classification": "by-design/no-action",
+      "reason": "Controlled test/runtime fixture or regex .test invocation; canonical all93791 exercises the declared isolated topology. Not a secret or production-domain bypass."
+    },
+    {
+      "key": "1d022b7b53a0e33a",
+      "location": "web-app/e2e/timeline-freshness.ts:59",
+      "classification": "by-design/no-action",
+      "reason": "Controlled test/runtime fixture or regex .test invocation; canonical all93791 exercises the declared isolated topology. Not a secret or production-domain bypass."
+    },
+    {
+      "key": "6dd5ad8d243a1ffd",
+      "location": "web-app/e2e/timeline-freshness.ts:62",
+      "classification": "by-design/no-action",
+      "reason": "Controlled test/runtime fixture or regex .test invocation; canonical all93791 exercises the declared isolated topology. Not a secret or production-domain bypass."
+    },
+    {
+      "key": "352623a49cc34f9d",
+      "location": "web-app/e2e/timeline-freshness.ts:112",
+      "classification": "by-design/no-action",
+      "reason": "Controlled test/runtime fixture or regex .test invocation; canonical all93791 exercises the declared isolated topology. Not a secret or production-domain bypass."
+    },
+    {
+      "key": "ec9ae29e9ebfbe30",
+      "location": "web-app/e2e/channel-transport.spec.ts:3",
+      "classification": "by-design/no-action",
+      "reason": "Controlled test/runtime fixture or regex .test invocation; canonical all93791 exercises the declared isolated topology. Not a secret or production-domain bypass."
+    },
+    {
+      "key": "c1fea5b37f9f1eca",
+      "location": "web-app/vite.config.ts:9",
+      "classification": "by-design/no-action",
+      "reason": "Existing HTML regex .test static-response detector or configurable LEADSHUG_API localhost default in Vite. No provider branch, tenant bypass or topology authority fabricated."
+    },
+    {
+      "key": "fceb0056aa86141f",
+      "location": "scripts/check-channels-ci-parity.py:157",
+      "classification": "by-design/no-action",
+      "reason": "Explicit public allow/deny inventory, unavailable non-WSL self-test branch, or deliberate negative parity mutant. Actual same-engine Linux suite/control proof retained; no skipped proving case concealed."
+    }
+  ]
+}

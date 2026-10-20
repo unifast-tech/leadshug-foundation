@@ -1,0 +1,192 @@
+{
+  "schema_version": "subagent-review-dispatch-v1",
+  "artifact_kind": "subagent_review_dispatch",
+  "authoritative": false,
+  "edit_policy": "derived_dispatch_packet",
+  "review_kind": "final_review",
+  "bounded_package_path": "foundation_documentation/artifacts/reviews/leadshug-channel-abstraction-20261020/delivery-preflight-v13r4-package.md",
+  "reviewer_count": 1,
+  "no_context_required": true,
+  "required_axes": [
+    "adherence",
+    "residual_risk",
+    "performance",
+    "elegance",
+    "structural_soundness"
+  ],
+  "focus_points": [
+    "Review the delivered bounded package for regressions, adherence gaps, residual risk, and waiver quality.",
+    "Explicitly call out any performance regressions, elegance regressions, or brittle structural shortcuts.",
+    "Stay inside the bounded package and treat the review as closure-focused.",
+    "For each material finding, add category and formalizable-hint when you can judge them honestly.",
+    "When assessing design, seek the simplest faithful Clean Code/SOLID design for the approved intent. Do not invent future-facing work or erase explicit TODO intent. Planning review may challenge proposed intent; delivery review must preserve approved intent or return for renewed approval."
+  ],
+  "result_contract_fields": [
+    "overall_assessment",
+    "recommended_path",
+    "performance_position",
+    "elegance_position",
+    "structural_soundness_position",
+    "operational_fit_position",
+    "findings[].finding_id (optional)",
+    "findings[].category (optional)",
+    "findings[].formalizable_hint (optional)",
+    "findings[].candidate_rule_level (optional)",
+    "findings[]"
+  ],
+  "todo_path": "foundation_documentation/todos/active/features/TODO-leadshug-channel-abstraction.md",
+  "historical_disposition_policy": [
+    "Resolved findings are historical context only. Do not reopen them unless the current bounded package materially changes the same locus/behavior or fresh evidence shows regression.",
+    "Challenged findings stay closed unless the current bounded package materially changes the same locus/behavior or the prior rationale is objectively insufficient.",
+    "Deferred findings must cite the recorded follow-up/waiver path first. Re-raise them only when the current bounded package changes the same locus or closure now depends on that deferred risk.",
+    "Unresolved findings remain valid to re-raise until they are fixed, challenged, or formally deferred with authority."
+  ],
+  "historical_dispositions": [
+    {
+      "source_kind": "promotion_routing",
+      "finding_id": "ST06-R01 (ADH-01=SEC-01)",
+      "carry_forward_class": "resolved",
+      "source_disposition": "classification=release-blocker; routing=same-todo; status=resolved in round2 snapshot; finalvalidation pending",
+      "summary": "Original non-first/malformed-ID counterexample corrected; new flag case tracked R05",
+      "reference": "implementation-round-1-resolution.md; existing D04 approval"
+    },
+    {
+      "source_kind": "promotion_routing",
+      "finding_id": "ST06-R02 (ADH-02)",
+      "carry_forward_class": "resolved",
+      "source_disposition": "classification=release-blocker; routing=same-todo; status=resolved reviewed snapshot; new PERF blocker separate",
+      "summary": "Navigation corrected; await body/handler completion and prove same-text draft fence catches removal",
+      "reference": "implementation-round-3-resolution.md; dedicated round01 Performance/TQA confirm harness"
+    },
+    {
+      "source_kind": "promotion_routing",
+      "finding_id": "ST06-R03 (SEC-02)",
+      "carry_forward_class": "resolved",
+      "source_disposition": "classification=release-blocker; routing=same-todo; status=resolved in round2 snapshot; finalvalidation pending",
+      "summary": "D04/05 Evolution empty object is not ACK; key:{} preserved",
+      "reference": "implementation-round-1-resolution.md; existing D04/05 approval"
+    },
+    {
+      "source_kind": "promotion_routing",
+      "finding_id": "ST06-R04 (SEC-03)",
+      "carry_forward_class": "resolved",
+      "source_disposition": "classification=release-blocker; routing=same-todo; status=resolved reviewed snapshot; final assurance pending",
+      "summary": "Denied mutations/twoTENANT proof added; preDispatch must exercise real Meta/Evo adapters and detect omitted callback",
+      "reference": "implementation-round-3-resolution.md; existing scope/validation approval"
+    },
+    {
+      "source_kind": "promotion_routing",
+      "finding_id": "ST06-R05 (adherence-round2 ADH-R2-01)",
+      "carry_forward_class": "resolved",
+      "source_disposition": "classification=release-blocker; routing=same-todo; status=resolved reviewed snapshot; final assurance pending",
+      "summary": "D04 explicit false/malformed success flag contradicts positive ACK; UNKNOWN/no authoritative write",
+      "reference": "implementation-round-3-resolution.md; D04 existing approval"
+    },
+    {
+      "source_kind": "promotion_routing",
+      "finding_id": "PERF-01 (dedicated round01)",
+      "carry_forward_class": "resolved",
+      "source_disposition": "classification=release-blocker; routing=same-todo; status=resolved indexed latestIN, round3 Performance confirms all28261; initial child hydration separate PERF-R3-01",
+      "summary": "OUT-heavy/no-IN latest-IN scan unbounded; preserve expiry semantics, need actual plan and potentially narrowly approved index",
+      "reference": "dedicated-round1-resolution.md; exact v1.3 user approval/index migration"
+    },
+    {
+      "source_kind": "promotion_routing",
+      "finding_id": "PERF-02 (dedicated round01)",
+      "carry_forward_class": "deferred",
+      "source_disposition": "classification=follow-up-hardening; routing=same-todo; status=resolved checkpoint88536, fresh finalaudit pending",
+      "summary": "Precision corrected inline in already admitted test; no remaining post-version work for this finding",
+      "reference": "evidence/perf01-after-selection-root-proof.json; historical classification preserved"
+    },
+    {
+      "source_kind": "promotion_routing",
+      "finding_id": "TQA-01 / CIADM-01",
+      "carry_forward_class": "resolved",
+      "source_disposition": "classification=release-blocker; routing=same-todo; status=resolved sharedCI/runner family, round3 full TQA confirms; other test gaps separate",
+      "summary": "CI configuration/admission required now; remote-execution-as-local-prerequisite challenged by CIADM02",
+      "reference": "dedicated-round1-resolution.md; v1.3 approval/shared CI configured and Linux all real; remote not_run"
+    },
+    {
+      "source_kind": "promotion_routing",
+      "finding_id": "PERF-R2-01",
+      "carry_forward_class": "resolved",
+      "source_disposition": "classification=release-blocker; routing=same-todo; status=resolved scalar bound/realRED+all28261, confirmed round3; repeated-array issue separate PERF-R3-02",
+      "summary": "Invalid negative limit bypasses existing500bound on touched public list/thread; enforce approved bounded-page premise, preserve valid positive/default behavior",
+      "reference": "dedicated-round2-adjudication.md; existing controller/test ExpectedPaths and D07/SCOPE06"
+    },
+    {
+      "source_kind": "promotion_routing",
+      "finding_id": "PERF-R2-02",
+      "carry_forward_class": "deferred",
+      "source_disposition": "classification=follow-up-hardening; routing=same-todo; status=resolved inline all28261; standalone negatives and executable cleanup confirmed round3",
+      "summary": "Shipping runner fails closed; guard currently accepts swallowed shell commands. Add meaningful common-guard/suite negative controls inline",
+      "reference": "dedicated-round2-adjudication.md; already admitted guard/wrapper"
+    },
+    {
+      "source_kind": "promotion_routing",
+      "finding_id": "SEC13-01",
+      "carry_forward_class": "resolved",
+      "source_disposition": "classification=release-blocker; routing=same-todo; status=resolved all28261, independently confirmed adherence-security-v13r3",
+      "summary": "Mesmo locus de PERF-R2-02; obriga\u00e7\u00e3o fail-closed D10 exige detec\u00e7\u00e3o de shell masking e controle execut\u00e1vel seguro de falha/cleanup",
+      "reference": "security-v13.raw.json/strictmerge; dedicated-round2-adjudication.md"
+    },
+    {
+      "source_kind": "promotion_routing",
+      "finding_id": "TQA-R02-01",
+      "carry_forward_class": "resolved",
+      "source_disposition": "classification=release-blocker; routing=same-todo; status=resolved all28261, TQA round3 confirms realPG projections/no-fallback/blockedPOST",
+      "summary": "Public list/thread availability positive/negative contract and authoritative blocked POST need exact realPG coverage",
+      "reference": "dedicated-round2-adjudication.md; admitted api-publica test path/D07"
+    },
+    {
+      "source_kind": "promotion_routing",
+      "finding_id": "TQA-R02-02",
+      "carry_forward_class": "resolved",
+      "source_disposition": "classification=release-blocker; routing=same-todo; status=resolved actual operator INOUT on both current bindings; source-bound activation and post-readback; no waiver",
+      "summary": "Existing ordered operational delivery condition, outside automated candidate acceptance claim; keep blocking Local-Implemented, never fixture-equivalent or waived",
+      "reference": "DOD07/VAL04; dedicated-round2-adjudication.md"
+    },
+    {
+      "source_kind": "promotion_routing",
+      "finding_id": "PERF-R3-01",
+      "carry_forward_class": "resolved",
+      "source_disposition": "classification=release-blocker; routing=same-todo; status=resolved reproduced+boundedpage actual SQL/EXPLAIN+all93791; round4 Performance/fullTQA accepted",
+      "summary": "Potential unbounded initial nested-message hydration on touched public read; prove actual Prisma6.19.3 SQL/work and fix DB-bounded batch within existing controller/test paths, no extra schema",
+      "reference": "dedicated-round3-adjudication.md; D07/SCOPE06 public bound"
+    },
+    {
+      "source_kind": "promotion_routing",
+      "finding_id": "PERF-R3-02",
+      "carry_forward_class": "deferred",
+      "source_disposition": "classification=follow-up-hardening; routing=same-todo; status=integrated inline, not independent gate/new objective",
+      "summary": "Repeated query parameters can reach string-only trim; small inline normalization correction coupled to required public-input test remediation",
+      "reference": "dedicated-round3-adjudication.md; existing controller/public test paths"
+    },
+    {
+      "source_kind": "promotion_routing",
+      "finding_id": "TQA-R03-01",
+      "carry_forward_class": "resolved",
+      "source_disposition": "classification=release-blocker; routing=same-todo; status=resolved test-after realPG UNKNOWN/two-output plus BLOCKED/REJECTED unit equivalence in all93791; fullTQA18554/strictmerge confirms all93791",
+      "summary": "D05 multi-text Typebot round must stop after first failure; realPG/webhook mutation/provider/persistence coverage missing",
+      "reference": "dedicated-round3-adjudication.md; admitted Typebot e2e/helpers/spec paths"
+    },
+    {
+      "source_kind": "promotion_routing",
+      "finding_id": "TQA-R03-02",
+      "carry_forward_class": "resolved",
+      "source_disposition": "classification=release-blocker; routing=same-todo; status=resolved actualSQL limits/partitions+all93791; fullTQA18554/strictmerge confirms all93791",
+      "summary": "Declared normalizer partitions need real-request bounded-query evidence; extend existing call-through cases including repeated parameters",
+      "reference": "dedicated-round3-adjudication.md; D07 public limits"
+    },
+    {
+      "source_kind": "promotion_routing",
+      "finding_id": "PERF-R4-01",
+      "carry_forward_class": "deferred",
+      "source_disposition": "classification=follow-up-hardening; routing=same-todo; status=accepted-debt ST06-DEBT-PERF-R4-01; explicit inherited work item in ST-CON-05 planning, API PCV owner next ordinary change, no audit/test rerun solely for low",
+      "summary": "Test metric emitted rows is not general scan-work proof; actual current plan has0residual filtering/rechecks and no runtime defect",
+      "reference": "dedicated-round4-resolution.md; retain raw plan and distinguish emitted/filter/recheck/buffer metrics with rounding caveat"
+    }
+  ],
+  "goal": "Fresh independent Pipeline/Copilot P1/P2 preflight on implemented ST-CON-06 v1.3, actual current INOUT both bindings, module consolidation, test protection and residual-debt handling; findings first. This preflight is separate from the subsequent required fresh final review.",
+  "review_result_dispatch_path": "/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/artifacts/reviews/leadshug-channel-abstraction-20261020/evidence/delivery-preflight-v13r4.dispatch.json"
+}

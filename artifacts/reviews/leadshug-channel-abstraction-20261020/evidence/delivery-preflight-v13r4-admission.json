@@ -1,0 +1,9 @@
+{
+  "decision": "GO",
+  "characters": 822716,
+  "bytes": 825528,
+  "package_sha256": "046c7c5f36d4e4b026e245b3e0ecf1a4f7a995be8de949203143190a83ff37e6",
+  "isolation": "fresh internal ephemeral no-context, embedded package, no tools, no project/user rules",
+  "model": "gpt-6.1-sol",
+  "effort": "xhigh"
+}
