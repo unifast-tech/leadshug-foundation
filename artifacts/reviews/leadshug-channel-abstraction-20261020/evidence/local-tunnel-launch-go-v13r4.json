@@ -1,0 +1,14 @@
+{
+  "decision": "GO",
+  "operation": "launch_fresh_owned_quick_tunnel",
+  "maxInvocations": 1,
+  "helperSha256": "c57806447df6fe088376fee5126ca1b64003eb01ab04f150ef0f3af84c06b2cb",
+  "supervisorSha256": "bdf68028ea2da0699b1e04d191453b5d7090861b17f518d236ce6b084d45c69b",
+  "cloudflaredSha256": "86aee4017b26625cee8484c113558f48effa4cd47f7aa05fcf425604e5d2b23c",
+  "target": "http://127.0.0.1:8083",
+  "runtimeDirectory": "C:\\unifast\\leadshug\\leadshug_now_docker\\foundation_documentation\\artifacts\\tmp\\stcon06-executor-v13r4-activation\\cloudflared-runtime",
+  "recordedAtUtc": "2026-10-20T20:03:21.915513+00:00",
+  "authority": "Existing approved local activation/HTTPS step; all93791/reviews/PCV/managedmigration23+APIWebfreshhealthy. Root read exact helper; source SHA/emptyconfig/oldcp64+cp73+fresh counts0 checked, one new owned supervisor only.",
+  "activation_provenance_sha256": "82449f9b28a94b300c8cb73fea98933564f68b491dc7bef790e8f4e855387de2",
+  "postconditions": "Fresh exact process identity/state then ordinary TLS/DNS/health/index/privacy/callback reachability, no insecure bypass; no provider/channel changes; no oldprocess adoption/termination. Operator callback+privacy update follows only verified actual URL."
+}

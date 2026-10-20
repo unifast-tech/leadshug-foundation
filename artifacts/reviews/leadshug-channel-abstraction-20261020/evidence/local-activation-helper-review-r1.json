@@ -1,0 +1,29 @@
+{
+  "schema": "stcon06-operational-helper-owner-review-v1",
+  "recorded_at_utc": "2026-10-20T19:51:43.410032+00:00",
+  "profile": "operational-devops",
+  "reviewer": "/root",
+  "helper_hashes": {
+    "prepare_api_web_compose.py": "aa95accbc21254c203e0bf81c8d13a8f62a62e464e32eb05e8225bf5ad5ae175",
+    "apply_approved_index_once.py": "3f85c67ed40213b03941978bcf8895146b8c597f99e8e66adec51c132e64e6f4"
+  },
+  "state": "pre-mutation revision required; no DB mutation/service recreation performed",
+  "read_only_preflight": "Exact7containers, projectprimaryPG, existingnetwork/uploadvolume, APIWebenvJSONroundtrip correct; new positivecontext imagesbuilt and57validated sourcehashes unchanged.23source/22completed/onlyapprovedpending/idxabsent. Live message counts may rise; baseline not a static equality contract.",
+  "findings": [
+    {
+      "id": "OPS-01",
+      "severity": "blocking-before-execution",
+      "locus": "apply_approved_index_once.py apply mode",
+      "problem": "Direct psql applies index but never records normal managed Prisma migration; stillpending state would violate approved deploy/status outcome. It also chooses POSTGRES_DB without checking equality to the API database target.",
+      "action": "Use normal prisma migrate deploy in the reviewed new image with23migrations, single-pending preflight and localtarget binding; temporary container noports/volumes, exactnetwork, configsecret onlymemory/JSONstdinNUL+$$; no manualresolve/repair/auto-retry. Readback23completed/checksum/index definition/status and counts."
+    },
+    {
+      "id": "OPS-02",
+      "severity": "required-before-execution",
+      "locus": "prepare_api_web_compose.py",
+      "problem": "Read-only config validator is acceptable but is not yet the concrete recreation/health/envroundtrip/rollback operation.",
+      "action": "Prepare concrete two-service up helper and bounded postchecks/oldimage rollback before preserved migration, preserve non-targetservices and customlabels, let Compose own reservedlabels, no extra envfiles/hostmounts."
+    }
+  ],
+  "human_permission": "No new user approval needed; same approved local sequence. Root code review precedes operation; no rejected mutation was attempted."
+}

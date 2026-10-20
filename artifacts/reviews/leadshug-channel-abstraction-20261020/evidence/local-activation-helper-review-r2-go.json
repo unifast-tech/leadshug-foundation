@@ -1,0 +1,24 @@
+{
+  "schema": "stcon06-operational-helper-owner-review-v1",
+  "recorded_at_utc": "2026-10-20T19:59:30.005031+00:00",
+  "decision": "GO exact managed migration once, then conditional APIWeb recreation once",
+  "reviewer": "/root",
+  "same_human_approval": "Existing explicit v1.3; no new scope or permission",
+  "helper_hashes": {
+    "apply_approved_index_once.py": "0b482d365211077496ba185df6c6a7f3df65ee8215983743538d5bf411bccf3f",
+    "recreate_api_web_once.py": "2502cb01b38fdbcd9f9388f7426f682359371e96c560760dd2398f60b06ef113"
+  },
+  "source57_unchanged": true,
+  "OPS-01": "resolved: fixed immutable builder Prisma6.19.3/23names/embeddedSQLhash; exactAPI-PGalias/DBname/userpassmemorybinding; singlepending gate; local noports/nomount migration service, pullnever/NUL/discoverydisabled/dollar-roundtrip; actual normal migratedeploy, one exactapplyingline, status plus23finished/checksum/validready4columns catalogreadback. Name[] casttext[] prevents unsupported raw catalog type dependency. No manualresolve/repair/SQL bypass/DDLretry.",
+  "OPS-02": "resolved: concrete2serviceup captures effectiveenvmemory and oldimages; same customlabels/health/restart/volume/network/expose/user/command; validates sameenvroundtrip/oldrollbackimage references, no reservedlabels/no ports/no envfiles; postchecksnewimages/env/topology and gatewayhealth; one bounded oldimage rollback on returnedup orpostconditionfailure.",
+  "execution_order": [
+    "Run only apply_approved_index_once.py --apply-approved-migration once; capture safe JSON and actual terminal.",
+    "Only on deploy0 + expected migration/status/catalog/checksum/index allpositive run recreate_api_web_once.py --recreate-approved-services once.",
+    "Any nonzero/unexpected/uncertain result stops this sequence for exact safe state inspection. Do not rerun DDL or repair migration state. A CLI timeout/outer exception may leave a partial operation: inspect owned target status before any further action; do not assume automatic rollback.",
+    "After successful APIWebhealth/env/topology, prove source/image/container/HTTPcompiled assets and exact temporary-resource cleanup, preserving other5IDs, named storage/config.",
+    "Tunnel launch remains separately gated on fresh helper/binary/proof and ordinaryTLS checks. OperatorINOUT/module/final still pending."
+  ],
+  "message_preservation": "Live traffic increases row counts; compare timestamped before/after nondecreasing aggregate, not frozen equality; no content read or data mutation is required by index creation.",
+  "private_boundary": "No dotenv or .local-files discovery/read/stat/hash/mount; effective credentials/Compose output only in processmemory, no values/files/argv/rawlogs.",
+  "provider_or_remote_actions": false
+}

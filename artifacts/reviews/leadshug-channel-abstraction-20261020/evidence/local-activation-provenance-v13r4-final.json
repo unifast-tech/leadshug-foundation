@@ -1,0 +1,134 @@
+{
+  "api_runtime": {
+    "compiled_module_sha256": {
+      "app.module.js": "b45cdd1214f89b90539d28eeb418e4710fc116f777b75e2b2219dcf396ea9a2e",
+      "domain/access/access.service.js": "8d7aa42ad6374707bd7597b0a7276ddd8641099937b57d5f31acff6aadc3b0cd",
+      "domain/channels/channel-credential-resolver.js": "3a4ba232e829434271bc4262f6e982679e7923af02272a6f4767eba71d89428f",
+      "domain/channels/transport/channel.js": "f8b384cb16398b45651c9838083e5cf556153fd2c6b66d7c97854abc64c5c49d",
+      "domain/inbox/conversations.service.js": "0310c0d6c1d9fad6b0885fcb77a05cc77c41afc92eecd53871bc3419b310f1a3",
+      "domain/inbox/incoming.service.js": "29345b059654c6d423a5f60067eca92437a17f1faa7ce6d7da19cc5be9a8be1b",
+      "domain/inbox/message-acceptance.service.js": "ea91f6220e0937dcf4b8424f939653feb650d81146222148fb689dcf064b4deb",
+      "domain/inbox/outbound.service.js": "9ef67a3253be06991bfce785876ee3ec78a617839f92b3670faae53938e1e04c",
+      "integrations/channels/channel-adapter-factory.js": "ba4387d97f022816d754802234fbe47edd7069dc0be757575fa1183c9c64a01b",
+      "integrations/channels/channel-adapter-registry.js": "faf7d68ada9c565d7211bdbd0821f0270202dbdb2616b8298d3a06783cd5ca00",
+      "integrations/channels/channel-transport.module.js": "20b2d2d2408910adea781578ce97c0e6e37e68046f29ef3fc71543b9c04b730c",
+      "integrations/channels/evolution-channel.js": "e927bf62d708506411f08fba65e5d258a6545d0a3bdcbafdf253131db9525263",
+      "integrations/channels/meta-channel.js": "16cea9af79bcd00bf3109970bba8ed95f158561bd29de90e6e598b729f047d31",
+      "integrations/channels/prisma-channel-resolver.js": "1f3eed93d39b22a4719afc8a8111c0a38f52160a600eab2ff68e80f9f6e65472",
+      "integrations/evolution/evolution.client.js": "fbb109cc9f1617fdd4528138f75508fe0fc1fe752b7c2058b37f4ce32a159cc2",
+      "integrations/meta/meta.client.js": "1189cbd6e1e899acaa592e219ffd4c3b40dded782222b7fb04c1f7179404da1f",
+      "surfaces/bff/bff.module.js": "4aa96e265bfeaa22bc6ce428b91723b1286654e0f98f474918f06ff66ecdad9e",
+      "surfaces/bff/conversations.controller.js": "1e09a40f008ed3b3aad221775c31911d81c49f8b6e83778ebd99956d1657cf70",
+      "surfaces/bff/session.middleware.js": "fc5af440f1309c0925e430cf490bd32ca5ddbdf96d8d0736ffbe6af541d27e67",
+      "surfaces/public/api-key.middleware.js": "51c1ba5b526dbeac89707d3718f47cedc11c6c72d32f7224fc587ecd40e04465",
+      "surfaces/public/conversations.controller.js": "50e1b1d474981d6ae4d2860f6c03fcaaf77be8738a363e15295af7f524b08b33",
+      "surfaces/public/public.module.js": "4840243967b4b65fb8208b4e012d2c97b9a06c7c9ca908c5dc7d8f6e2398d40f",
+      "surfaces/webhooks/webhooks.module.js": "0769e72bbc4db7c3c20636405263ae88b142d55f105a88eddf26d4c0a5379e5a"
+    },
+    "compiled_source_modules": 23,
+    "container_id": "9795741bec7f58328d87f5b3fe23eae9fba7f13c8cb2d72c21f96497dbb9beb8",
+    "health": "healthy",
+    "image_container_hashes_equal": true,
+    "state": "running",
+    "version": {
+      "node": "v22.23.3",
+      "prisma": "6.19.3"
+    }
+  },
+  "build_inputs": {
+    "api_archive_sha256": "1fa0ffe2abba4b81894bcae2366c49f11657151ef38a53070a6a71088ac49c35",
+    "api_image": "leadshug_channels_local-api:stcon06-v13r4-1fa0ffe2abba",
+    "api_image_id": "sha256:d50bc6a4281753e3bb6a31764c3ada9dc27351976515f2f605aceec66b8582b1",
+    "web_archive_sha256": "5ae0ee1106529c8298f89222fe19bcc67c03c90d7fdf62f3ae48d192ba8b8938",
+    "web_image": "leadshug_channels_local-web:stcon06-v13r4-5ae0ee110652",
+    "web_image_id": "sha256:6015c99229f1c2d56a0bf94500a04a5e21338c5985cdf4b368d192c18341bd6b"
+  },
+  "gateway_http": {
+    "css_status": 200,
+    "gateway_reload_used": false,
+    "health_status": 200,
+    "js_status": 200,
+    "root_index_status": 200
+  },
+  "migration": {
+    "applied_once": true,
+    "approved_sql_sha256": "586e709e07736eca0908ab5dcc668cf0e0b317189b4c963b361399848a3c9710",
+    "finished_migration_count": 23,
+    "index_valid_ready_columns": [
+      "conversation_id",
+      "direction",
+      "created_at",
+      "id"
+    ],
+    "message_rows_after": "4819",
+    "migration": "20261020170000_message_inbound_window_index",
+    "prisma_status_up_to_date": true,
+    "target_checksum_valid": true
+  },
+  "mutation_counts": {
+    "api_web_recreation_invocations": 1,
+    "automatic_retry_or_repair": false,
+    "gateway_reload_count": 0,
+    "migration_invocations": 1,
+    "rollback_attempted": false
+  },
+  "preservation": {
+    "config_values_printed_or_written": false,
+    "message_content_read": false,
+    "named_volumes": [
+      "leadshug_channels_local_evolution_instances",
+      "leadshug_channels_local_evolution_pg_data",
+      "leadshug_channels_local_evolution_redis_data",
+      "leadshug_channels_local_leadshug_arquivos",
+      "leadshug_channels_local_leadshug_pg_data"
+    ],
+    "network_id": "d48c8a9ac92f00d8e2f1c1c6a1744ab14463aeba4abeab491f82719336925c20",
+    "non_target_containers": [
+      [
+        "leadshug_channels_local-gateway-1",
+        "0c48d94e9fe5b4ad75efd304db2752dfa4cab3befc59b9f736574d6cd551eea3"
+      ],
+      [
+        "leadshug_channels_local-evolution-1",
+        "cf749491f7149dc46ec4db597b2d9c12faf918dd4f05b5512ba75adaf8e29ea4"
+      ],
+      [
+        "leadshug_channels_local-evolution-redis-1",
+        "3b2e8d153d794a768ea87cb4f9cda7ba15dde242e2b8027bd372a475a9c26fbb"
+      ],
+      [
+        "leadshug_channels_local-evolution-postgres-1",
+        "150de898c3d9aa189ca0719eed7a65b95d95d8b948244e66b059a55f4554135a"
+      ],
+      [
+        "leadshug_channels_local-postgres-1",
+        "4fcd87b431339e3b65a40beafa27db86cdc978ca79f71b911199f7090c837495"
+      ]
+    ]
+  },
+  "schema": "stcon06-local-activation-provenance-v1",
+  "source_freeze": {
+    "current_exact_hash_matches": 57,
+    "expected_files": 57,
+    "path": "foundation_documentation/artifacts/reviews/leadshug-channel-abstraction-20261020/evidence/v13r4-source-before-all.json",
+    "sha256": "9cbead63a2a521211274e8210a0bb441760d755587835db7f814b851d16eef53"
+  },
+  "web_runtime": {
+    "container_id": "472b3f6fcde8c032bfa90997ef0cd674971dfccdb292e9ef057187c552e3dff5",
+    "gateway_served_assets": {
+      "app.js": "27c5db465495068402b278ba7c9d3a1f23b8b03797249639190c8a755759563b",
+      "index.html": "f151b1153cb9f1a15cb0c9a4bdcca4bc3695328238f3d71a336cafe438cfe40c",
+      "style.css": "38f979314555cda8b834189ed5c64826bbc309e294091c9f5c54ee5f8bd2aadd"
+    },
+    "image_assets": {
+      "assets/index-9DA0_PMk.js": "27c5db465495068402b278ba7c9d3a1f23b8b03797249639190c8a755759563b",
+      "assets/index-wuzy3kMN.css": "38f979314555cda8b834189ed5c64826bbc309e294091c9f5c54ee5f8bd2aadd",
+      "index.html": "f151b1153cb9f1a15cb0c9a4bdcca4bc3695328238f3d71a336cafe438cfe40c"
+    },
+    "image_container_assets_equal": true,
+    "served_image_hashes_equal": true,
+    "state": "running",
+    "version": "nginx/1.31.7",
+    "version_source": "docker exec nginx -v; stderr parsed, exit 0"
+  }
+}

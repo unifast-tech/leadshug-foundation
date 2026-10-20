@@ -1,0 +1,128 @@
+{
+  "dns": {
+    "addresses_recorded": false,
+    "max_five_bounded_lookups_per_environment": true,
+    "windows_answer_count": 4,
+    "windows_resolved": true,
+    "wsl_answer_count": 4,
+    "wsl_resolved": true
+  },
+  "fresh_runtime": {
+    "binary_hashes_match": true,
+    "child_exit_code": null,
+    "directory": "C:\\unifast\\leadshug\\leadshug_now_docker\\foundation_documentation\\artifacts\\tmp\\stcon06-executor-v13r4-activation\\cloudflared-runtime",
+    "empty_config_verified": true,
+    "error_events": 1,
+    "failure_category_present": false,
+    "hostname": "wins-viewing-federal-jason.trycloudflare.com",
+    "process_commandline_matches_expected": true,
+    "process_identity_exact": true,
+    "process_parent_exact": true,
+    "registered_connection_events": 1,
+    "state_write_failures": 0,
+    "stream_callback_faults": 0,
+    "supervisor_exit_code": null,
+    "target": "http://127.0.0.1:8083",
+    "transport": "http2"
+  },
+  "launch": {
+    "cloudflared_sha256": "86aee4017b26625cee8484c113558f48effa4cd47f7aa05fcf425604e5d2b23c",
+    "helper": "foundation_documentation/artifacts/tmp/stcon06-executor-v13r4-activation/launch_fresh_owned_tunnel.ps1",
+    "helper_sha256": "c57806447df6fe088376fee5126ca1b64003eb01ab04f150ef0f3af84c06b2cb",
+    "old_owned_processes_stopped_or_adopted": false,
+    "proof": "foundation_documentation/artifacts/reviews/leadshug-channel-abstraction-20261020/evidence/local-tunnel-launch-go-v13r4.json",
+    "proof_sha256": "ed71971b43d69e10f8f40b1ec87cbe0b63ab30ae42d41b7f96d82f9be91fc583",
+    "receipt": "foundation_documentation/artifacts/tmp/stcon06-executor-v13r4-activation/cloudflared-runtime/launch-receipt.json",
+    "receipt_sha256": "9fc31213c8c5a70502e9fb819fb4147cd87b4e5d5f3d5a8e75132e3716fc03e9",
+    "result": "new_owned_supervisor_created",
+    "supervisor_pid": 22564,
+    "supervisor_sha256": "bdf68028ea2da0699b1e04d191453b5d7090861b17f518d236ce6b084d45c69b",
+    "target": "http://127.0.0.1:8083"
+  },
+  "privacy": {
+    "redirect_followed": false,
+    "response_body_or_headers_recorded": false,
+    "set_cookie_present": false,
+    "source_or_runtime_secrets_read": false
+  },
+  "route_interpretation": {
+    "provider_or_callback_configuration_changed": false,
+    "webhooks_meta": "GET /webhooks/meta with no query returned expected 403 from Meta challenge route; proves routed API reachability only, no signature/challenge/provider operation"
+  },
+  "schema": "stcon06-local-tunnel-validation-v1",
+  "url_candidate": "https://wins-viewing-federal-jason.trycloudflare.com",
+  "windows_https": {
+    "all_expected": true,
+    "checks": [
+      {
+        "bytes": 694,
+        "path": "/",
+        "sha256": "f151b1153cb9f1a15cb0c9a4bdcca4bc3695328238f3d71a336cafe438cfe40c",
+        "status": 200
+      },
+      {
+        "bytes": 15,
+        "path": "/health",
+        "sha256": "a29ee2b15c494311c52521766e44af56a3ad2248e7a8ab465e5206463c13d288",
+        "status": 200
+      },
+      {
+        "bytes": 12865,
+        "path": "/privacidade.html",
+        "sha256": "d0f72c588f0f014de46a327e34d6b26125ca115bc973b56bbb926cd8519e701d",
+        "status": 200
+      },
+      {
+        "bytes": 259438,
+        "path": "/assets/index-9DA0_PMk.js",
+        "sha256": "27c5db465495068402b278ba7c9d3a1f23b8b03797249639190c8a755759563b",
+        "status": 200
+      },
+      {
+        "bytes": 40,
+        "expectedStatus": 403,
+        "path": "/webhooks/meta",
+        "sha256": "78fef13654a80508761fe8ecb45e952b2190e7c96de6b46d0fd5596cfe5096dd",
+        "status": 403
+      }
+    ],
+    "method": "Windows .NET HttpClient; default certificate validation; redirects disabled; cookie jar disabled; max body 400000 bytes per response; timeout 12s"
+  },
+  "wsl_https": {
+    "all_expected": true,
+    "checks": [
+      {
+        "bytes": 694,
+        "path": "/",
+        "sha256": "f151b1153cb9f1a15cb0c9a4bdcca4bc3695328238f3d71a336cafe438cfe40c",
+        "status": 200
+      },
+      {
+        "bytes": 15,
+        "path": "/health",
+        "sha256": "a29ee2b15c494311c52521766e44af56a3ad2248e7a8ab465e5206463c13d288",
+        "status": 200
+      },
+      {
+        "bytes": 12865,
+        "path": "/privacidade.html",
+        "sha256": "d0f72c588f0f014de46a327e34d6b26125ca115bc973b56bbb926cd8519e701d",
+        "status": 200
+      },
+      {
+        "bytes": 259438,
+        "path": "/assets/index-9DA0_PMk.js",
+        "sha256": "27c5db465495068402b278ba7c9d3a1f23b8b03797249639190c8a755759563b",
+        "status": 200
+      },
+      {
+        "bytes": 40,
+        "expectedStatus": 403,
+        "path": "/webhooks/meta",
+        "sha256": "78fef13654a80508761fe8ecb45e952b2190e7c96de6b46d0fd5596cfe5096dd",
+        "status": 403
+      }
+    ],
+    "method": "Python http.client.HTTPSConnection with ssl.create_default_context; redirects disabled; cookies disabled; max response 400000 bytes; timeout 12s"
+  }
+}
