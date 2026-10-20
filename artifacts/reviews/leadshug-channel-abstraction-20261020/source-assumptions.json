@@ -1,0 +1,63 @@
+{
+  "date": "2026-10-20",
+  "kind": "bounded-read-only-inspection",
+  "product_test_runs": 0,
+  "product_heads": {
+    "root": "80e3940126f22a941f90dba4f5e801b6c0eb2f58",
+    "api": "db5a86758a165fac8a1ab587599c37b17890530c",
+    "web": "74b9d4b714044829796f875d00553f077c1c329d"
+  },
+  "assumptions": [
+    {
+      "id": "A-01",
+      "paths": [
+        "api-app/src/domain/inbox/conversations.service.ts",
+        "api-app/src/domain/inbox/incoming.service.ts"
+      ],
+      "finding": "Conversations injects both provider interfaces and dispatches at300; bot dispatches at94. Both normalize via MessageAcceptance."
+    },
+    {
+      "id": "A-02",
+      "path": "api-app/src/domain/channels/channel-credential-resolver.ts",
+      "finding": "resolve(channelId,purpose) checks identity/readiness/credential; actor/grant authorization and active version in result absent. Token/protocol fields exposed to current callers; new binding internalizes them."
+    },
+    {
+      "id": "A-03",
+      "path": "api-app/src/domain/inbox/message-acceptance.service.ts",
+      "finding": "Identity row FOR SHARE, channel/gen/epoch validation and key external ID; same owner sender/echo. recordAmbiguousOutbound creates FALHOU null-ID diagnostic; no heuristic external correlation."
+    },
+    {
+      "id": "A-04",
+      "paths": [
+        "api-app/src/surfaces/bff/conversations.controller.ts",
+        "api-app/src/surfaces/public/conversations.controller.ts",
+        "api-app/src/surfaces/bff/bff.module.ts"
+      ],
+      "finding": "BFF and public POST /api/v1/messages call responder; own session/key checks. Public may create conversation first. DI provider registrations repeated across BFF/public/webhooks. Public controller also clears authorUserId and unconditionally assigns after send at161; D06 explicitly removes these writes, taking source intent into common owner."
+    },
+    {
+      "id": "A-05",
+      "paths": [
+        "web-app/playwright.config.ts",
+        "scripts/test-channels-local.sh"
+      ],
+      "finding": "Playwright real API/PG/build no reused servers; runner line25 broad find unsafe for private traversal. Runner not executed, correction before any product test."
+    }
+  ],
+  "primary_error_reference": {
+    "url": "https://developers.facebook.com/documentation/business-messaging/whatsapp/support/error-codes.md",
+    "method": "public curl.exe/HTML-unescape",
+    "confirmed_codes": [
+      10,
+      100,
+      190
+    ],
+    "account_calls": 0
+  },
+  "boundaries": "No .env contents or api-app/.local-files read/list/stat/hash/traversal/mount/stage. Head checks rev-parse only.",
+  "architecture_followups": {
+    "reauthorization": "number-registration.service.ts:346 actual REAUTORIZAR increments generation; D03 preserves actual fence",
+    "typebot": "incoming.service.ts:79 pins accepted ingress; currently no window check/human finalization. D06/07 preserve pin/status and explicitly correct window bypass",
+    "selection": "conversations.service.ts:164 createdAt-only ordering becomes createdAt DESC,id DESC per canonical timeline"
+  }
+}
