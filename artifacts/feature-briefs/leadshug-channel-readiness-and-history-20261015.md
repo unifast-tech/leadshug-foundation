@@ -84,7 +84,7 @@ ST-CON-05 precisa de editor/rascunho revisionado, variáveis/exemplos/prévia, c
 
 ## Solicitação de2026-10-20 — Channel abstrato antes dos novos consumers
 
-Usuário transmitiu a direção do responsável técnico: Channel é o abstrato; oficial/não oficial são concretos injetados, negócio chama sendMessage sem conhecer HTTP/provider. [Enquadramento específico e evidência atual](leadshug-channel-abstraction-20261020.md). A direção confirma DIP/substituição, preservando capacidades específicas e isolamento; Telegram é extensão futura exemplificativa. Proposta de ordem atual: ST-CON-01 concluído → ST-CON-06 abstração de envio comum → reconvergência ST-CON-05 modelos → reconvergência ST-CON-04 primeiro envio → histórico. O brief enquadra, não aprova refatoração ou novo canal.
+Usuário transmitiu a direção do responsável técnico: Channel é o abstrato; oficial/não oficial são concretos injetados, negócio chama sendMessage sem conhecer HTTP/provider. [Enquadramento específico e evidência atual](leadshug-channel-abstraction-20261020.md). A direção confirma DIP/substituição, preservando capacidades específicas e isolamento. Esclarecimento humano na mesma data: a arquitetura deve admitir Instagram, Facebook/Messenger, Telegram e outros por novas implementações registradas, sem seleção de provider nos consumers comuns; WhatsApp oficial/não oficial são apenas os concretos iniciais. Integrações reais futuras terão contratos de identidade/credencial/recebimento próprios. Proposta de ordem atual: ST-CON-01 concluído → ST-CON-06 abstração de envio comum → reconvergência ST-CON-05 modelos → reconvergência ST-CON-04 primeiro envio → histórico. O brief enquadra, não aprova refatoração ou novo canal.
 
 ## Story Decomposition
 

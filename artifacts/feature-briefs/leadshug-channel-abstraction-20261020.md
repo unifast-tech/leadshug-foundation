@@ -9,12 +9,12 @@
 
 ## Source Idea / Request
 
-Em2026-10-20 o usuário trouxe o alinhamento do responsável: Channel é a abstração, WhatsApp oficial/não oficial são implementações concretas, o código de negócio solicita sendMessage sem conhecer a integração escolhida. Dependência de abstrações, DI e substituição comportamental são direção confirmada. Telegram é exemplo de extensão futura, sem solicitação de implementar outro provedor agora.
+Em2026-10-20 o usuário trouxe o alinhamento do responsável: Channel é a abstração, WhatsApp oficial/não oficial são implementações concretas, o código de negócio solicita sendMessage sem conhecer a integração escolhida. Dependência de abstrações, DI e substituição comportamental são direção confirmada. O usuário esclareceu em seguida que as implementações concretas devem permanecer abertas para Instagram, Facebook/Messenger, Telegram e outros canais futuros. Oficial/não oficial são as primeiras implementações, não uma lista fechada. A abertura arquitetural é requisito atual; integrações adicionais terão seus contratos próprios.
 
 ## Problem / Desired Outcome
 
 - **Problem:** já há interfaces MetaClient/EvolutionClient e DI, mas os serviços de atendimento/bot importam os dois contratos específicos e selecionam o provedor. A inversão existe no nível HTTP, sem contrato comum de transporte para o negócio.
-- **Desired outcome:** consumidores comuns operam Channel; resolução autorizada seleciona implementação oficial ou não oficial. Identidade, grants, credencial, proveniência, aceitação de mensagens e regras atuais continuam explícitas.
+- **Desired outcome:** consumidores comuns operam Channel; resolução autorizada seleciona uma implementação registrada, inicialmente oficial ou não oficial, com extensão para novos canais sem alterar os consumidores comuns. Identidade, grants, credencial, proveniência, aceitação de mensagens e regras atuais continuam explícitas.
 - **Why now:** implementar autoria ou primeiro envio sobre dependências atuais consolidaria o acoplamento antes desta correção estrutural solicitada.
 
 ## Constraints / Non-Goals
@@ -31,9 +31,18 @@ Em2026-10-20 o usuário trouxe o alinhamento do responsável: Channel é a abstr
 - Providers concretos encapsulam protocolo/IDs/credencial/erros de transporte. Domínio conserva autorização, persistência, aceitação/dedupe e políticas de atendimento, por contratos; esconder tudo num mega-adapter não satisfaz a direção.
 - Sem novo canal, alteração de BU, desconexões, credenciais novas, chamadas Meta, mudança Delphi, worktrees/cópias, gitlinks/.gitmodules ou deploy. Não ler/listar/stat/hash/percorrer/montar api-app/.local-files nem ler .env/.env.testing.
 
+## Explicit Extension Contract — human clarification2026-10-20
+
+- Channel é uma abstração de comunicação extensível. WhatsApp oficial e não oficial são os concretos iniciais; Instagram, Facebook/Messenger, Telegram e outros são destinos futuros previstos, sem limite de dois provedores na arquitetura.
+- Novo canal acrescenta implementação/adapter, registro explícito na composição e testes do contrato. Atendimento, API e Typebot continuam consumindo os mesmos ports, sem novos if/switch por provider. O registro é configurado por DI; não é descoberta dinâmica de código/plugins não confiáveis.
+- O contrato comum usa referências de canal/destinatário e resultados de domínio. Não exigir WABA, phoneNumberId, nome de instância, QR, número E.164 ou janela específica do WhatsApp como campos/precondições universais. Tradução de endereçamento, credenciais, protocolo e requisitos próprios pertence à implementação/capacidade apropriada.
+- Capacidades como gestão de templates são extensões tipadas, não métodos obrigatórios de Instagram/Telegram. A resolução informa capacidade suportada/indisponível de forma explícita e mantém autorização server-side; não usar casts para concretos.
+- A prova de extensão planejada para o contrato ST-CON-06 inclui uma implementação fake adicional, independente de formatos WhatsApp, passando pelo mesmo resolvedor e pelos consumers comuns. Isso prova o ponto de extensão interno, não uma integração real com outra rede.
+- O modelo persistido atual ainda representa BU/número WhatsApp. Cada integração futura tratará sua identidade externa, vínculos, autenticação e recebimento normalizado em TODO próprio; adicionar um adapter sozinho não será apresentado como entrega completa de uma nova rede. A abertura do port evita replicar essa limitação de persistência no contrato comum.
+
 ## Canonical Touchpoints
 
-- **Constitution impact:** preservar invariantes, sem ampliar produto além de WhatsApp; consolidação futura deve distinguir transporte persistido e contrato comum.
+- **Constitution impact:** ST-CON-06 preserva o domínio WhatsApp existente e estabelece port extensível; ativar outras redes no futuro exige contrato e consolidação explícitos de identidade/BU/contato, porque a BU atual é número WhatsApp. A abstração comum não deve impor essa identidade ao protocolo de todos os canais.
 - **Roadmap impact:** coerência do núcleo unificado atual, sem mudar horizonte ou gate derivado.
 - **Primary module candidates:** modules/integrations-and-channels.md.
 - **Secondary module candidates:** modules/inbox-and-conversations.md; identidade/grants e bot existentes são regressões obrigatórias.
@@ -57,7 +66,7 @@ Fontes primárias consultadas: [NestJS custom providers](https://docs.nestjs.com
 
 ## Candidate Architecture / Review Questions
 
-Atendimento/bot → ChannelResolver abstrato, scoped → Channel abstrato → WhatsAppOfficialChannel ou WhatsAppUnofficialChannel → clients HTTP atuais. Esta é direção de enquadramento, não assinatura final de DTO nem classe implementada. Registro/composição seleciona concretos; consumidores comuns não importam MetaClient/EvolutionClient nem escolhem envio por enum de provider. Origem pode existir como metadado de auditoria/apresentação sem comandar dispatch no negócio.
+Atendimento/bot → ChannelResolver abstrato, scoped → Channel abstrato → implementação registrada (inicialmente WhatsAppOfficialChannel ou WhatsAppUnofficialChannel) → adapter/clients do provedor. Esta é direção de enquadramento, não assinatura final de DTO nem classe implementada. Registro/composição seleciona concretos; consumidores comuns não importam MetaClient/EvolutionClient nem escolhem envio por enum de provider. Origem pode existir como metadado de auditoria/apresentação sem comandar dispatch no negócio.
 
 | ID | Ambiguity | Why It Matters | Current Evidence | Handling |
 | --- | --- | --- | --- | --- |
@@ -69,7 +78,7 @@ Atendimento/bot → ChannelResolver abstrato, scoped → Channel abstrato → Wh
 
 | Story ID | Story / User Value | Primary Module | Secondary Modules | Acceptance Boundary | Candidate Validation Signal | Candidate TODO Decision | Dependencies / Blockers | Notes |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| ST-CON-06 | Negócio usa Channel abstrato para o transporte existente | integrations-and-channels | inbox-and-conversations | contrato comum/resolução autorizada/concretos oficial e não oficial; todos os senders comuns sem branch/import de provider; políticas, contratos públicos, credencial e aceitação preservados por critérios explícitos | teste de contrato compartilhado dos adapters + PostgreSQL/Playwright real e regressão BFF/API pública/bot; troca por fake Channel prova consumo abstrato; prova operacional dos recursos próprios no contrato futuro | create-next após enquadramento | assinatura/resultado/capacidades e fronteira de lifecycle precisam frozen TODO/reviews/APROVADO | não é novo provedor nem mudança de domínio BU |
+| ST-CON-06 | Negócio usa Channel abstrato para o transporte existente | integrations-and-channels | inbox-and-conversations | contrato comum extensível/resolução autorizada/registro de implementações, inicialmente oficial e não oficial; prova com fake independente de WhatsApp; todos os senders comuns sem branch/import de provider; políticas, contratos públicos, credencial e aceitação preservados por critérios explícitos | teste de contrato compartilhado dos adapters + PostgreSQL/Playwright real e regressão BFF/API pública/bot; troca por fake Channel prova consumo abstrato; prova operacional dos recursos próprios no contrato futuro | create-next após enquadramento | assinatura/resultado/capacidades e fronteira de lifecycle precisam frozen TODO/reviews/APROVADO | não é novo provedor nem mudança de domínio BU |
 | ST-CON-05 | Vendedor cria/submete/consulta modelos | integrations-and-channels | inbox-and-conversations | mesmo produto confirmado, domínio consome contrato abstrato de capacidade de template e credencial scoped, sem nova dependência de negócio em MetaClient | editor/submit/recovery/status com capacidade fake e adapter real em testes HTTP | reconverge existing | depende do contrato/cutover ST-CON-06 | vendedor envia para Meta sem aprovação ADMIN preservado |
 | ST-CON-04 | Nova conversa usa Channel e catálogo comum | inbox-and-conversations | integrations-and-channels | consumo abstrato de envio/capacidades, contato/intent/idempotência/primeiro envio preservados | browser/PG com ambos canais e template elegível | reconverge existing | ST-CON-06 e05 | aprovação antiga de cadastro não autoriza este envio |
 
