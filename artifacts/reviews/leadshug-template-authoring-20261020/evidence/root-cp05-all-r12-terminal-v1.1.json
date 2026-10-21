@@ -1,0 +1,38 @@
+{
+  "schema": "stcon05.all-r12-terminal.v1",
+  "recorded_at_utc": "2026-10-21T20:59:41.857575+00:00",
+  "terminal_exit": 1,
+  "log": "foundation_documentation/artifacts/tmp/st-con-05-all-r12-20261021TggY4BT.log",
+  "log_bytes": 207899,
+  "log_sha256": "3662507593e5002a04608055afe67299d8fe9b903c9b1a378052b564711b419a",
+  "receipt": "foundation_documentation/artifacts/tmp/st-con-05-all-r12-20261021TdbD0N4.exit",
+  "source_freeze": "root-cp05-source-freeze-r12-diagnostic-cause-v1.1.json",
+  "sources_exact_at_terminal": 38,
+  "completed": [
+    "25 disposable migrations/schema consistency",
+    "API lint/build;26 unit files/284 tests",
+    "API PostgreSQL30files/397tests",
+    "Web lint/build;6unitfiles/31tests"
+  ],
+  "browser": {
+    "passed": 56,
+    "failed": 2,
+    "total": 58,
+    "failures": [
+      {
+        "line": 469,
+        "expectation": "409 TEMPLATE_REFRESH_UNAVAILABLE after contradictory provider response",
+        "actual_http": 202
+      },
+      {
+        "line": 773,
+        "expectation": "409 CONTA_ALTERADA for previous-account draft submit",
+        "actual_http": 400
+      }
+    ]
+  },
+  "diagnosis": "Await exact request/timing/contract analysis. Do not classify either as product or fixture error from status alone.",
+  "scope_of_positive_evidence": "Current ACK and PostgreSQL regressions pass; template browser strict FRC and complete account-copy path were not reached after earlier assertions. Inherited number-onboarding FRC does not replace template FRC.",
+  "cleanup": "Owned validation namespace cleaned; no preserved runtime/DB/Meta action",
+  "next": "Narrow cause analysis and reviewed correction; no automatic retry or weakened expectations"
+}

@@ -42,7 +42,7 @@ O usuário quer preparar no LeadsHug a mensagem que usará para iniciar atendime
 ## Delivery Status Canon (Required)
 - **Current delivery stage:** Pending
 - **Qualifiers:** none
-- **Next exact step:** concluir correções bloqueantes r6 em checkpoints serializados: P1 estático recebido; P2A sessão/papel/texto em edição; P2B projeção de observação e ACK tardio conforme HOW revisado. Depois congelar fontes, executar all canônico atual e repetir assurance completa com resoluções anteriores. all747r6 é histórico; r7 reteve RED de elegibilidade e falha de oráculo da fixture. Helpers operacionais seguem sem execução; contenção da credencial aguarda confirmação do operador.
+- **Next exact step:** diagnosticar2falhas browser da rodada r12 (409 esperado vs202 na consulta contraditória;409 esperado vs400 no rascunho de conta anterior), preservar oráculos de negócio e corrigir somente a causa comprovada. API284unit/397PG e Web31unit passaram; browser56/58. Correções P1/P2A/P2B/P2C implementadas, ainda sem all atual integral verde ou assurance renovada. Credencial exposta: revogação/desativação confirmada pelo operador; revisão de segurança fresca avaliará a contenção. Depois: novo congelamento/validação justificada, assurance, preflight e ativação local aprovados.
 
 ## Active Work State (Required While TODO Remains In `active/`)
 - **Work state:** implementation

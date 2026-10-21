@@ -1,0 +1,38 @@
+{
+  "schema": "stcon05.all-r10-terminal.v1",
+  "recorded_at_utc": "2026-10-21T20:44:28.272600+00:00",
+  "terminal_exit": 1,
+  "log": "foundation_documentation/artifacts/tmp/st-con-05-all-r10-20261021TZr5kKA.log",
+  "log_bytes": 172068,
+  "log_sha256": "0489ff8fad56a7b9b10422e799c0cc25987d865fb7609f29494075286e8d6bc7",
+  "receipt": "foundation_documentation/artifacts/tmp/st-con-05-all-r10-20261021ThnDq7m.exit",
+  "source_freeze": "root-cp05-source-freeze-r10-projection-type-correction-v1.1.json",
+  "sources_exact_at_terminal": 38,
+  "completed": [
+    "25 disposable migrations and schema consistency",
+    "API lint/build",
+    "API unit 26 files/284 tests"
+  ],
+  "postgres_tests": {
+    "files": 30,
+    "passed": 369,
+    "failed": 28,
+    "total": 397,
+    "failed_files": [
+      "message-template-management.e2e-spec.ts",
+      "message-template-bff.e2e-spec.ts"
+    ]
+  },
+  "diagnosis": {
+    "confirmed_harness": "login helper referenced without import in new cases",
+    "confirmed_oracle": "EPS expected root Limit, but reviewed page-first CTE legitimately has bounded outer Sort. Preserve inner LIMIT/cardinality/childwork assertions for all5pages.",
+    "product_behavior": "Known ACK paths expected committed acceptance instead return503; many downstream tests cascade.",
+    "suspected_source_cause_not_yet_directly_observed": "New raw SQL compares UUID dispatch_claim_id to Prisma TEXT parameter without explicit uuid cast. Raw underlying SQL error not retained because production safely maps it; do not falsely claim direct error observation."
+  },
+  "not_reached": [
+    "Web unit/build/browser",
+    "current FRC or account-copy browser proof"
+  ],
+  "cleanup": "Canonical owned validation namespace cleanup completed; no preserved runtime/DB action",
+  "next": "Bounded source diagnosis/corrections then root-controlled new canonical run; no automatic retry or weakened oracle"
+}

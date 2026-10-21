@@ -1,0 +1,30 @@
+{
+  "schema": "stcon05.all-r8-terminal.v1",
+  "recorded_at_utc": "2026-10-21T20:33:26.831639+00:00",
+  "terminal_exit": 1,
+  "log": "foundation_documentation/artifacts/tmp/st-con-05-all-r8-20261021TvfSydi.log",
+  "log_bytes": 12898,
+  "log_sha256": "6a7d82fbebe72e399791d637672c248d9978c0dc0182bc86b5d7ea289eb1cc26",
+  "receipt": "foundation_documentation/artifacts/tmp/st-con-05-all-r8-20261021TMkFPPf.exit",
+  "source_freeze": "root-cp05-source-freeze-r8-reviewed-corrections-v1.1.json",
+  "source_count": 38,
+  "sources_exact_at_terminal": true,
+  "completed": [
+    "25 migrations deployed to disposable PostgreSQL; schema up to date"
+  ],
+  "failure": {
+    "phase": "API lint",
+    "file": "api-app/test/message-template-management.e2e-spec.ts",
+    "line": 376,
+    "diagnosis": "Missing closing parenthesis of expect around awaited draft projection; assertion semantics unchanged."
+  },
+  "not_reached": [
+    "API build",
+    "API unit tests",
+    "PostgreSQL application tests",
+    "Web unit/build/browser"
+  ],
+  "behavioral_red": false,
+  "cleanup": "Owned leadshug_channels_validation container, volumes and network removed by canonical runner; no preserved runtime operation",
+  "next": "Narrow syntax correction plus fresh r9 freeze and one canonical all; no automatic retry"
+}

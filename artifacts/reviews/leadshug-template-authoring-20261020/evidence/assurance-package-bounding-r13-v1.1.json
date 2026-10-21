@@ -1,0 +1,17 @@
+{
+  "schema": "stcon05.derived-package-bounding.v1",
+  "recorded_at_utc": "2026-10-21T21:03:55.674069+00:00",
+  "builder": "foundation_documentation/artifacts/reviews/leadshug-template-authoring-20261020/evidence/assurance-package-builder-r13.py",
+  "builder_sha256": "526705a46a9c9eabc6cc94456b0844108eeca79f05c79d647371ff79e7417092",
+  "scope": "Governance-only candidate packaging, not product/runtime or validation replacement",
+  "controls": [
+    "Every current source freeze hash and30inherited seals checked",
+    "Formal generation requires actual all exit0, PCV/EPS/RLS/templateFRC markers, fresh source attestation for everysource and served=dist",
+    "Lane-applicable FULL test-quality skill/method and PCV or Security rubric retained",
+    "Full calibration retained; only orchestrator session CLI mechanics omitted from reviewer packet",
+    "Explicit selected raw-wire test file includes full harness and nearby critical cases plus complete delta against immutable r6 package; unchanged tests remain hashed and executed",
+    "EPS all plan nodes and values encoded reversibly only for zero counters; exact decode roundtrip asserted",
+    "No live reviewer interrupted/repackaged; diagnostic size-only never writes formal evidence or counts as a passing run"
+  ],
+  "limits": "Final combined dispatch+effective round-package bytes must remain within supported CLI limit, verified before launch. No rubric or required gate waived."
+}

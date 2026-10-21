@@ -1,8 +1,18 @@
-# ST-CON-05 v1.1 — template authoring planning package
+# ST-CON-05 v1.1 — template authoring delivery package
 
 State: approved-v1.1-implementation-in-progress. Governing contract: ../../../todos/active/features/TODO-leadshug-official-template-authoring.md. Previous20261019 reviews remain history. This cycle rebases seller create/save/preview/submit/status onto delivered06 with a narrow TemplateManagementResolver/MessageTemplateProvider port, dedicated Meta integration, immutable scoped context and preserved textual Channel/OutboundService. Approval2026-10-21 authorizes the reviewed implementation; activation and assisted provider proof follow the disposable validation and assurance gates.
 
 Review focus: DIP/capability segregation, scope/management versus send authority, durable one-dispatch receipts and conservative ambiguity recovery, name/account isolation, status truth, UI fences, mandatory inherited working-tree seal, full CI-equivalent and actual assisted submission. Source baseline/evidence are public-only. Planned approval scope includes additive templates migration and source-bound local activation after disposable proof; no secret read/product push/deploy.
+
+## Estado atual — implementação e assurance
+
+Entrega **Pending**, sem ativação dos templates no banco local preservado e sem submissão real à Meta. O Docker foi restaurado e os sete serviços locais estão ativos. A rodada consolidada r6 passou **747 testes**; a [aceitação com limites](evidence/root-cp05-restored-all-acceptance-v1.1.json) registra fonte, runtime descartável e contagens. Esse resultado é histórico: a revisão independente encontrou correções adicionais.
+
+Os [achados de qualidade](evidence/root-candidate-r6-tqa-disposition-v1.1.json), [performance/segurança](evidence/root-candidate-r6-performance-security-disposition-v1.1.json) e [aderência/ACK tardio](evidence/root-candidate-r6-adherence-how-disposition-v1.1.json) estão em resolução. A rodada r7 reteve uma falha comportamental de elegibilidade e uma falha de oráculo da fixture, [sem inferir prova FRC não alcançada](evidence/root-browser-r7-counterexample-terminal-v1.1.json).
+
+Correções de paginação, parser, sessão/permissão após I/O, texto em edição, observação salva e ACK tardio estão implementadas. A [rodada r12](evidence/root-cp05-all-r12-terminal-v1.1.json) passou284testes unitários API,397PostgreSQL e31unitários Web; browser56/58. Os dois casos novos falharam na preparação (janela de debounce e fingerprint ausente); r13 corrige apenas essa preparação, preservando os oráculos e regras de produto, e está em execução. Ainda falta all atual integral verde e assurance renovada antes de migração/ativação/prova assistida. O operador confirmou a revogação ou desativação da credencial do conector mencionada no diagnóstico; a nova revisão de segurança avaliará essa contenção. O valor não integra este pacote.
+
+Os registros abaixo preservam a sequência histórica e não substituem este estado atual nem o TODO governante.
 
 ## Proposta para revisão
 

@@ -1,0 +1,28 @@
+{
+  "schema": "stcon05.all-r11-terminal.v1",
+  "recorded_at_utc": "2026-10-21T20:48:14.291441+00:00",
+  "terminal_exit": 1,
+  "log": "foundation_documentation/artifacts/tmp/st-con-05-all-r11-20261021TXR9FhH.log",
+  "log_bytes": 12992,
+  "log_sha256": "3ade20e52f94722141c9b42b57642d3d27c517e1df67692196bf7aef6182fb7d",
+  "receipt": "foundation_documentation/artifacts/tmp/st-con-05-all-r11-20261021TbiJUfh.exit",
+  "source_freeze": "root-cp05-source-freeze-r11-bounded-diagnostic-v1.1.json",
+  "sources_exact_at_terminal": 38,
+  "completed": [
+    "25 disposable migrations/schema consistency"
+  ],
+  "failure": {
+    "phase": "API lint",
+    "rule": "preserve-caught-error",
+    "file": "api-app/test/message-template-bff.e2e-spec.ts",
+    "line": 116,
+    "diagnosis": "New bounded diagnostic Error omitted prior caught cause. Restore cause without suppressing rule or changing assertions."
+  },
+  "not_reached": [
+    "API build/unit/application tests",
+    "Web/browser"
+  ],
+  "behavioral_red": false,
+  "next": "Exact cause-preservation correction, fresh r12 freeze and canonical all once; r10 behavioral failures not resolved by this lint result",
+  "cleanup": "Owned disposable validation namespace cleaned; no preserved data/runtime changes"
+}

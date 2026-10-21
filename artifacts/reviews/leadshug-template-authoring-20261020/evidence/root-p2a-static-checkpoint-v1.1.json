@@ -1,0 +1,66 @@
+{
+  "schema": "stcon05.p2a-static-checkpoint.v1",
+  "recorded_at_utc": "2026-10-21T20:10:48.364338+00:00",
+  "status": "Static checkpoint only; implementation/test behavior not executed",
+  "source_records": [
+    {
+      "path": "api-app/src/surfaces/bff/message-templates.controller.ts",
+      "sha256": "0e0449a80852a4513f626d0df7b1a5bb17b034eeceb50f53842fb91454ff4491"
+    },
+    {
+      "path": "api-app/src/domain/message-templates/template-observation.service.ts",
+      "sha256": "df3b170d6d095f63ce051ac1cd156394d549f8c5cf41a10da47cfc7bcc67b693"
+    },
+    {
+      "path": "api-app/test/message-template-management.e2e-spec.ts",
+      "sha256": "91b6befe5321a1ae0dfa0d1017792ad21b84307a4f37a01a0272aefaea94594e"
+    },
+    {
+      "path": "api-app/src/domain/message-templates/template-draft.service.ts",
+      "sha256": "65c8b415137b22b75fa0ab3fdd8099212fee0f2c3bac701d3a218782efc2177b"
+    },
+    {
+      "path": "api-app/src/integrations/meta/message-template.client.ts",
+      "sha256": "8dff223f7a97632cf228800cdbbb12ce6f5b151efc5fa30411d03e5ec3280cb5"
+    },
+    {
+      "path": "api-app/src/integrations/meta/message-template.client.spec.ts",
+      "sha256": "6b42b44577e2c06ae73fb0525dac10b99f7364a04e2c04184dc303c6d47872b8"
+    },
+    {
+      "path": "web-app/src/telas/Modelos.tsx",
+      "sha256": "292149bc02313547a0550e6be32073bc1d79306fbdfde0364e6de43f7647a351"
+    },
+    {
+      "path": "web-app/e2e/message-templates.spec.ts",
+      "sha256": "6968ba40ebca3b647ae1b9e6d9bd9395f4a83064d89067b523112d47b5113192"
+    },
+    {
+      "path": "api-app/test/timeline-fixtures.cjs",
+      "sha256": "181c76e232c560474ff520440ce3a4c089e84ce9bba01bfd4b6d67c283eb12b3"
+    }
+  ],
+  "findings_addressed": [
+    "PERF-R6-01",
+    "OPS-R6-02",
+    "SEC-R6-02",
+    "SEC-R6-03",
+    "ADH-R6-03",
+    "ADH-R6-04"
+  ],
+  "root_static_corrections": [
+    "Held Supertest must start via Promise before waiting for provider gate; executor corrected startup and joined cleanup.",
+    "Contradictory named-list preflight now has BFF/PG zero-create proof authored, distinct from post-create observation invalidation.",
+    "Session claims are milliseconds; exact exp+1 correction handed off with P2B."
+  ],
+  "unvalidated": [
+    "Deep-page plan bounds",
+    "Strengthened FRC and account-change copy journey",
+    "Captured-session/password/expiry/role held-response cases",
+    "Edit preservation during held submit/recovery",
+    "Contradictory GET parser and preflight noPOST"
+  ],
+  "next": "P2B saved observation projector/UI restore, then P2C late ACK; consolidated canonical all only after source freeze",
+  "operational_mutations": "none; preserved runtime and DB untouched",
+  "protected_public_seals": "30/30 independently exact at this continuation"
+}

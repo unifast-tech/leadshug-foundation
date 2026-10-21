@@ -18,9 +18,10 @@
     },
     {
       "id": "SEC-R6-01",
-      "classification": "blocking_security_containment",
-      "decision": "Pending operator confirmation",
-      "reason": "Actualcredentialdisclosure, redactioncannotrevoke; no secretduplicated or used. Operatorquestionpendingrevocation/disablementstate; no implicitacceptance."
+      "classification": "operator-confirmed_containment_for_review",
+      "decision": "Integrated; pending fresh security verification of disposition",
+      "reason": "Operator explicitly confirmed credential revoked or disabled in both pending questions. Confirmation does not retract earlier rendered output or prove historical use/absence; no credential value retained or invoked.",
+      "operator_confirmation_utc": "2026-10-21T20:29:57.265353+00:00"
     },
     {
       "id": "SEC-R6-02",

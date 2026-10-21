@@ -55,10 +55,10 @@
     },
     {
       "id": "ADH-R6-07",
-      "decision": "Pending operator confirmation",
-      "blocking": true,
+      "decision": "Operator confirmed revocation/disablement; fresh assurance pending",
+      "blocking": false,
       "duplicate_of": "SEC-R6-01",
-      "note": "Credential redaction is not revocation. No value recorded or invoked."
+      "note": "See credential-containment-operator-confirmation-v1.1.json; no credential repeated or tested."
     }
   ],
   "late_ack_advisory": {
