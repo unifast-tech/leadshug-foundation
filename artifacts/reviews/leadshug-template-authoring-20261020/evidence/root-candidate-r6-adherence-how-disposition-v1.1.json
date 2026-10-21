@@ -1,0 +1,94 @@
+{
+  "schema": "stcon05.adherence-r6-how-disposition.v1",
+  "recorded_at_utc": "2026-10-21T20:02:59.876749+00:00",
+  "profile": "Operational / Coder",
+  "scopes": [
+    "nestjs",
+    "react",
+    "prisma",
+    "postgresql"
+  ],
+  "authority": "Approved ST-CON-05 v1.1; same primary objective, paths and frozen WHAT. Single code writer in principal checkout. No runtime activation or preserved database mutation.",
+  "restored_environment": {
+    "docker_server": "27.1.1",
+    "driver": "overlay2",
+    "local_services": 7,
+    "disk_free_display": "122G",
+    "check": "Read-only; no recovery mutation performed."
+  },
+  "findings": [
+    {
+      "id": "ADH-R6-01",
+      "decision": "Integrated",
+      "blocking": true,
+      "how": "Internal immutable nullable acknowledgedRemoteTemplateId on existing operation plus atomic append-only ACK receipt. Preserve remote association and historical receipts. Both completion orders and conflicting IDs must remain truthful. No additional POST/retry/public phase."
+    },
+    {
+      "id": "ADH-R6-02",
+      "decision": "Integrated",
+      "blocking": true,
+      "duplicate_of": "SEC-R6-03"
+    },
+    {
+      "id": "ADH-R6-03",
+      "decision": "Integrated",
+      "blocking": true,
+      "how": "Revalidate current own-draft or ADMIN/OWNER authority under existing actor/grant locks after provider I/O. Catalogue ATENDENTE access preserved."
+    },
+    {
+      "id": "ADH-R6-04",
+      "decision": "Integrated",
+      "blocking": true,
+      "how": "Capture editEpoch before submit/recovery and guard every form replacement against edits while request is outstanding. Preserve durable operation and edited text without replay."
+    },
+    {
+      "id": "ADH-R6-05",
+      "decision": "Integrated",
+      "blocking": true,
+      "duplicate_of": "OPS-R6-02"
+    },
+    {
+      "id": "ADH-R6-06",
+      "decision": "Integrated",
+      "blocking": true,
+      "how": "Reuse existing observation owner for bounded read-only detail/operation projection and restore UI from saved observation. No provider calls or writes during GET, no list fan-out. Preserve expiry/context eligibility."
+    },
+    {
+      "id": "ADH-R6-07",
+      "decision": "Pending operator confirmation",
+      "blocking": true,
+      "duplicate_of": "SEC-R6-01",
+      "note": "Credential redaction is not revocation. No value recorded or invoked."
+    }
+  ],
+  "late_ack_advisory": {
+    "reviewer": "/root/late_ack_design_opinion",
+    "model": "gpt-6.1-sol",
+    "effort": "xhigh",
+    "mode": "readonly architecture opinion; no source or runtime mutation",
+    "accepted_option": "B",
+    "reason": "One durable fact separates original POST acceptance from associated resource identity; bounded indexed readback avoids lifetime receipt scans and projection fan-out.",
+    "atomicity": "Allocate ACK receipt identity before transaction; lock operation and validate original dispatch claim plus immutable owner/request/account context. Existing phase/version may legitimately advance during recovery. Operation update and exact receipt append commit together.",
+    "matching": "Correlation first plus matching ACK upgrades current provenance to ACKNOWLEDGED without replacing resource identity.",
+    "conflict": "Correlation first plus different ACK persists separate known ACK and receipt, preserves CORRELATED_BY_DEFINITION association, derives fixed conflict code and CONFIRMED acceptance. UI explains preservation honestly.",
+    "uncertainty": "Known in-memory ACK retains ACCEPTED/CONFIRMED. RECORDED requires commit or exact bounded readback. Otherwise safe503/UNCONFIRMED; never name release or second POST.",
+    "constraints": "ACK ID immutable once recorded; requires dispatch claim and ACCEPTED phase; current ACK provenance cannot downgrade. Preserve remote ID immutability and append-only receipts. Amend existing not-yet-applied operations migration, not a new migration.",
+    "scope_classification": "Internal HOW faithful to D06/CR-01/AR-V11-01, not new public phase or stronger durability promise. No renewed WHAT approval required.",
+    "required_proof": [
+      "both commit orders with same/different IDs",
+      "rollback and real postcommit return loss/unavailable readback",
+      "ACK outside latest ten receipts remains authoritative on all projections",
+      "wrong claim and immutable-ID/receipt database negatives",
+      "historical enrichment after context change cannot certify current eligibility",
+      "honest UI matching upgrade and conflicting association notice"
+    ]
+  },
+  "checkpoints": {
+    "P1": "Static only; no test/build or operational pass inferred. Page-first SQL, fenced failure invalidation, contradictory GET parser and strengthened regressions require execution.",
+    "P2A": "Sole executor authorized captured-session/current-role/editEpoch fixes and actual workflow zeroPOST proof. Static checkpoint before further changes.",
+    "P2B": "Pending explicit handoff for observation detail projection and accepted ACK HOW."
+  },
+  "delivery_stage": "Pending",
+  "qualifiers": "none",
+  "validation": "r6 all747 historical pass; r7 53/55 with one behavioral RED and one fixture oracle failure. Current sources changed; consolidated all and fresh independent assurance required."
+}

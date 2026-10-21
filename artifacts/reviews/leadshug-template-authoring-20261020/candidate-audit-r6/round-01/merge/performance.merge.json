@@ -1,0 +1,59 @@
+{
+  "schema_version": "subagent-review-merge-v2",
+  "artifact_kind": "subagent_review_merge",
+  "authoritative": false,
+  "edit_policy": "derived_merge_packet",
+  "dispatch_path": "/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/artifacts/reviews/leadshug-template-authoring-20261020/candidate-audit-r6/round-01/dispatch/performance.dispatch.json",
+  "review_kind": "critique",
+  "review_count": 1,
+  "reviewer_labels": [
+    "fresh-internal-performance-reviewer"
+  ],
+  "highest_finding_severity": "high",
+  "axis_summary": {
+    "performance": "regresses",
+    "elegance": "acceptable",
+    "structural_soundness": "mixed",
+    "operational_fit": "mixed"
+  },
+  "recommended_paths": [
+    "Fix the deep-pagination hydration path before clearing this candidate performance gate. Resolve the individual-refresh invalidation before claiming D07 complete. Verify both counterexamples, refresh the affected source freeze and required validation evidence, and continue through the already-approved activation/provider/final-review sequence. Keep the recorded R43 credential incident open in the security disposition: redaction does not establish revocation, and operator rotation remains unconfirmed."
+  ],
+  "exact_next_step": "Record reviewer resolutions in the governing TODO using the machine-checkable resolution table or equivalent gate ledger, then extract the derived resolution packet and decide whether another bounded review pass is still required.",
+  "findings": [
+    {
+      "finding_id": "F-D37C61DD",
+      "severity": "high",
+      "title": "Deep draft pagination hydrates operations for every skipped draft",
+      "rationale": "At api-app/src/domain/message-templates/template-draft.service.ts:149, listDrafts places LEFT JOIN LATERAL before the outer LIMIT/OFFSET. The retained EXPLAIN confirms Limit above Nested Loop, with an operation lookup for each consumed draft. Consequently, page=51 and limit=20 against the supplied 1,000-draft fixture can perform 1,000 operation probes while returning no items. Larger histories increase those probes without a bound, and the controller admits arbitrary positive safe-integer pages. Repeated deep-page requests therefore amplify database work despite bounded response size and constant query count. This meets the dispatch's blocking criterion for unbounded request hydration. Existing EPS checks exercise page 1 and cannot detect it. D07's approved page/total contract can remain intact while paging drafts before joining their operations.",
+      "suggested_action": "A: Select the ordered draft page in a materialized CTE or equivalent subquery, then join the latest operation only for those selected drafts. B: Fetch the draft page first and hydrate its operation summaries with one bounded batch query. C: Retain the current shape; this leaves the unbounded child-probe risk and is not recommended. Recommend A. Verify first, deep, last and beyond-last pages on the high-cardinality fixture, asserting operation-scan loops never exceed returned draft count, while preserving totals, ordering, ownership and page-size semantics.",
+      "reviewer_labels": [
+        "fresh-internal-performance-reviewer"
+      ],
+      "source_finding_ids": [
+        "PERF-R6-01"
+      ],
+      "category": "performance",
+      "formalizable_hint": "yes",
+      "candidate_rule_level": "project",
+      "candidate_rule_id": "n/a"
+    },
+    {
+      "finding_id": "F-E2031658",
+      "severity": "medium",
+      "title": "Failed individual refresh leaves an earlier APPROVED observation visibly eligible",
+      "rationale": "At web-app/src/telas/Modelos.tsx:503, atualizarStatus handles failure by setting an error only. Previously cached individualStatus and catalogPages remain available and APPROVED, while catalogFailure remains false. The eligibility calculation can consequently display eligibility until the prior observation's TTL expires, even though TemplateObservationService.markUnavailable has persisted available=false and observedEligible=false. This is a distinct failure-path gap beyond the repaired success-response fences. D07 explicitly requires errors to preserve the prior status with unavailable/stale eligibility. It is non-blocking for this dedicated performance lane, but the current behavior cannot substantiate D07 completion.",
+      "suggested_action": "A: Under the existing context/editor/request fences, invalidate the affected cached observation's availability on refresh failure while retaining its status and content. B: Mark it unavailable immediately, then reload the authorized local projection through GET without further provider calls. C: Preserve eligibility until TTL expiry; this would require renewed approval to change D07. Recommend A, optionally followed by B. Add a real-BFF browser counterexample that observes APPROVED, injects a provider refresh failure, and verifies immediate non-eligibility, retained prior status, and non-eligibility after reload.",
+      "reviewer_labels": [
+        "fresh-internal-performance-reviewer"
+      ],
+      "source_finding_ids": [
+        "OPS-R6-02"
+      ],
+      "category": "adherence",
+      "formalizable_hint": "yes",
+      "candidate_rule_level": "project",
+      "candidate_rule_id": "n/a"
+    }
+  ]
+}

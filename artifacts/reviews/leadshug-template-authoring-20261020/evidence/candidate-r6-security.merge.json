@@ -1,0 +1,93 @@
+{
+  "schema_version": "subagent-review-merge-v2",
+  "artifact_kind": "subagent_review_merge",
+  "authoritative": false,
+  "edit_policy": "derived_merge_packet",
+  "dispatch_path": "/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/artifacts/reviews/leadshug-template-authoring-20261020/evidence/candidate-r6-security.dispatch.json",
+  "review_kind": "critique",
+  "review_count": 1,
+  "reviewer_labels": [
+    "fresh-internal-security-r6"
+  ],
+  "highest_finding_severity": "high",
+  "axis_summary": {
+    "performance": "mixed",
+    "elegance": "acceptable",
+    "structural_soundness": "mixed",
+    "operational_fit": "mixed"
+  },
+  "recommended_paths": [
+    "Fix the observation-session and contradictory-provider-envelope blockers before candidate security approval. Keep the Bitrix24 disclosure open until the operator confirms containment or the appropriate human authority explicitly dispositions its residual risk; artifact redaction alone is insufficient. Resolve the recovery-abuse finding through a bounded approved control or explicit nonblocking debt for the private cohort. Verify fixes through controlled disposable BFF/PostgreSQL negatives, then refresh affected assurance evidence. Preserve the approved direct seller submission, historical receipts and prohibition on automatic POST replay. Keep delivery Pending through activation, assisted provider proof and final review. The broad Git-status deviation establishes neither protected-file exposure nor proof of its absence; retain that uncertainty without investigating protected paths. Account-change browser evidence must remain described as compositional."
+  ],
+  "exact_next_step": "Record reviewer resolutions in the governing TODO using the machine-checkable resolution table or equivalent gate ledger, then extract the derived resolution packet and decide whether another bounded review pass is still required.",
+  "findings": [
+    {
+      "finding_id": "F-B9EE5F80",
+      "severity": "high",
+      "title": "Disclosed Bitrix24 credential remains potentially usable",
+      "rationale": "Carry-forward of unresolved R43, not a new product regression. evidence/executor-startup-secret-redaction-v1.1.json:4 records confirmed credential disclosure through the inherited CLI diagnostic; its limit explicitly acknowledges that rendered output cannot be retracted. The package states operator rotation is unconfirmed. Scrubbing known artifacts and avoiding connector calls reduce further exposure but do not invalidate the disclosed credential. Anyone able to obtain the earlier output could exercise whatever Bitrix24 privileges it retains. Disclosure is confirmed; credential validity, distribution and misuse remain unknown. This affects operational security assurance, independently of the template feature's credential isolation.",
+      "suggested_action": "A) Recommended: the credential owner revokes the disclosed credential and reissues it through the normal connector configuration. B) Disable the credential or integration at its issuer while replacement is arranged. C) Leave it unchanged only under an explicit human risk disposition recording owner, scope, containment and follow-up; do not mark the incident resolved merely because artifacts were redacted. Verify through secret-free operator confirmation of invalidation/disablement and relevant access-audit metadata where available. Do not reproduce the credential, invoke it to test validity, or rotate unrelated product/runtime secrets. Promote the reusable lesson that malformed environment-variable names can themselves contain secrets and that internal review executors should isolate unnecessary connector startup.",
+      "reviewer_labels": [
+        "fresh-internal-security-r6"
+      ],
+      "source_finding_ids": [
+        "SEC-R6-01"
+      ],
+      "category": "security",
+      "formalizable_hint": "partial",
+      "candidate_rule_level": "paced",
+      "candidate_rule_id": "n/a"
+    },
+    {
+      "finding_id": "F-9A1EDEE2",
+      "severity": "medium",
+      "title": "Successful GET parsing accepts contradictory Graph error envelopes",
+      "rationale": "message-template.client.ts:225 readObject checks HTTP success and object shape but does not reject a top-level error. listTemplates at :106 therefore accepts HTTP 200 containing both data and error; data:[] can falsely establish name absence and permit the creation POST. getTemplate at :130 similarly accepts an otherwise valid APPROVED template accompanied by an error, allowing a contradictory response to become an eligible observation. Grant and creation parsing already reject comparable contradictions, so this is a gap in the GET boundary rather than a challenge to the approved refusal allowlist. No attacker-controlled Graph interception is established; exploitability depends on an inconsistent or compromised upstream response. Nevertheless, D05/D07 explicitly require inconclusive/error responses to fail closed. Existing raw tests cover contradictory debug-token and creation responses, not these GET cases.",
+      "suggested_action": "A) Recommended: reject top-level Graph errors and contradictory envelopes in the shared GET-object parser, retaining endpoint-specific shape validation. B) Apply equivalent explicit checks separately in listTemplates and getTemplate. C) Preserve current behavior only through renewed approval changing the fail-closed contract; do-nothing is not faithful to the existing baseline. Add raw HTTP tests for error plus empty data and error plus a valid APPROVED object. Verify that submission performs zero POSTs after contradictory preflight, while refresh preserves the previous observation as unavailable/ineligible and does not certify the contradictory status. Attribute this control to the embedded provider-trust requirements.",
+      "reviewer_labels": [
+        "fresh-internal-security-r6"
+      ],
+      "source_finding_ids": [
+        "SEC-R6-03"
+      ],
+      "category": "security",
+      "formalizable_hint": "yes",
+      "candidate_rule_level": "project",
+      "candidate_rule_id": "n/a"
+    },
+    {
+      "finding_id": "F-F8BF011A",
+      "severity": "medium",
+      "title": "Sequential reconciliation bypasses provider-read throttling",
+      "rationale": "template-submission.service.ts:27-28 defines submission quota windows, but reconcile's AMBIGUOUS branch does not apply them or a separate recovery budget. claimReconciliation prevents overlapping recovery; releaseReconciliationLease immediately permits another request after a no-match result or ordinary provider failure. An authorized actor possessing one persistently ambiguous operation can repeatedly trigger a grant lookup and up to two filtered provider GETs, plus durable claim/release writes. This bypasses the ten-second debounce protecting observation refresh and can consume shared account/provider resources despite submission quotas. The attack is plausible from the source and has not been reproduced. OWASP API4 is directly relevant. D05 quotas govern submission, so this is a residual abuse-control gap requiring disposition, not an assertion that the approved submission limits were implemented incorrectly.",
+      "suggested_action": "A) Recommended: approve a narrow persistent recovery cooldown or read budget, enforced before provider I/O and coordinated for the affected operation/account. B) Record explicit nonblocking debt for the existing private cohort with an owner, containment and follow-up. C) Do nothing without a recorded disposition leaves the abuse path unassessed. Do not add background polling, workers or mutation retries. Verify with repeated sequential and concurrent reconcile requests against disposable PostgreSQL: provider GET counts remain bounded, throttled requests preserve the same ambiguous operation/reservation, and creation POST count never increases. Any material change to the recovery contract should follow TODO approval governance.",
+      "reviewer_labels": [
+        "fresh-internal-security-r6"
+      ],
+      "source_finding_ids": [
+        "SEC-R6-04"
+      ],
+      "category": "residual_risk",
+      "formalizable_hint": "yes",
+      "candidate_rule_level": "project",
+      "candidate_rule_id": "n/a"
+    },
+    {
+      "finding_id": "F-A0AE7A8A",
+      "severity": "medium",
+      "title": "Observation refresh can promote results after session invalidation",
+      "rationale": "message-templates.controller.ts:126 and :145 invoke observation refresh without the captured-session revalidation supplied to submit and reconcile. TemplateObservationService.refreshDraft/refreshCatalog await provider HTTP, then ownsLease checks active user, BU, grant and channel context but never checks session expiry or passwordChangedAt. A session valid at request entry can expire or be invalidated by a password change while the provider response is held, yet still persist current observations, mark APPROVED results eligible and return account content. This is a source-established path, not a reproduced exploit. The identity module explicitly requires grant/session revalidation after HTTP before promoting observations; no approved exception covers these new routes.",
+      "suggested_action": "A) Recommended: carry captured session claims into the observation boundary and validate expiry/password invalidation against the transaction's already locked user row before writing. B) Reuse the existing narrow session revalidation after provider I/O, with a corresponding transactional check of the relevant user state. C) Leave unchanged only as an explicit security exception; the current package contains none. Add real-BFF/PostgreSQL held-response tests for both refresh routes: invalidate the session through passwordChangedAt or expire it before release, assert rejection, unchanged previous observation/page content and no newly eligible observation. Preserve historical submission receipts and avoid introducing another credential owner.",
+      "reviewer_labels": [
+        "fresh-internal-security-r6"
+      ],
+      "source_finding_ids": [
+        "SEC-R6-02"
+      ],
+      "category": "security",
+      "formalizable_hint": "yes",
+      "candidate_rule_level": "project",
+      "candidate_rule_id": "n/a"
+    }
+  ]
+}

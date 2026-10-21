@@ -1,0 +1,31 @@
+{
+  "schema": "stcon05.candidate-assurance-routing.v1",
+  "recorded_at_utc": "2026-10-21T19:32:10.514623+00:00",
+  "profile": "assurance-tester-quality with supporting security-adversarial and architectural adherence",
+  "scope": [
+    "nestjs",
+    "react",
+    "vite",
+    "prisma",
+    "postgresql",
+    "docker"
+  ],
+  "state": "candidate_no_delivery_claim",
+  "package": "candidate-assurance-r6-package-v1.1.md",
+  "package_sha256": "03c417596546a7d141c25febeaff6826a9de21e62dbaa7aff8ef32652bf84808",
+  "full_combined_prompt_bytes": {
+    "performance": 1039135,
+    "test_quality": 1039071,
+    "adherence": 1037165,
+    "security": 1037159
+  },
+  "formal_review_models": {
+    "performance": "gpt-6.1-sol/xhigh",
+    "test_quality_audit": "gpt-5.6-terra/xhigh",
+    "adherence": "gpt-6.1-sol/xhigh",
+    "security": "gpt-6.1-sol/xhigh"
+  },
+  "routing_guards": "GO for critique and test_quality_audit; adherenceguard required before dispatch",
+  "isolation": "Fresh CLI ephemeral read-only scratch cwd, ignore-user-config/ignore-rules, full embedded dispatch+package no tools; no previous thread",
+  "runtime_authority": "No preserved runtime/provider actions until fullcandidate assurance/preflight. Helpers preparation only allowed separately."
+}

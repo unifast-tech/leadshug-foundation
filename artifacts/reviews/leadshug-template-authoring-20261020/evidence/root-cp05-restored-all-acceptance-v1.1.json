@@ -1,0 +1,50 @@
+{
+  "schema": "stcon05.restored-all-root-acceptance.v1",
+  "recorded_at_utc": "2026-10-21T19:30:14.176334+00:00",
+  "outcome": "go_candidate_assurance_only",
+  "exit_code": 0,
+  "counts": {
+    "api_unit": 282,
+    "api_postgresql": 380,
+    "web_unit": 31,
+    "browser": 54,
+    "total": 747
+  },
+  "log": "foundation_documentation/artifacts/tmp/st-con-05-all-restored-20261021TV5gwIM.log",
+  "log_bytes": 178705,
+  "log_sha256": "0a7ff79d3402bf9720c2c00c29066b9e95485a63c03ad3a791934f6d78ec5752",
+  "exit_receipt": "foundation_documentation/artifacts/tmp/st-con-05-all-restored-20261021TAL1Yac.receipt",
+  "source_freeze": "foundation_documentation/artifacts/reviews/leadshug-template-authoring-20261020/evidence/root-cp05-source-freeze-r6-nullable-projection-v1.1.json",
+  "source38_matches": true,
+  "protected30_exact": true,
+  "heads": {
+    "root": "80e3940126f22a941f90dba4f5e801b6c0eb2f58",
+    "api": "db5a86758a165fac8a1ab587599c37b17890530c",
+    "web": "74b9d4b714044829796f875d00553f077c1c329d"
+  },
+  "proofs": [
+    {
+      "path": "foundation_documentation/artifacts/tmp/st-con-05-all-proof-r6-6Un2t7/pre-worker-freshness.json",
+      "sha256": "20755183cf37e03d8c6a64aef2d007395ccf261ab1b0ab6d61c09ea78f16f647",
+      "capturedAtUtc": "2026-10-21T19:26:03.924Z"
+    },
+    {
+      "path": "foundation_documentation/artifacts/tmp/st-con-05-all-proof-r6-6Un2t7/attestation-browser-authority.json",
+      "sha256": "1eac13b6f52b6eea693f798c49f113dafe2b4f6cb7b9cf24a1db06b50cf5cfae",
+      "capturedAtUtc": "2026-10-21T19:26:00.946Z"
+    }
+  ],
+  "served_dist_sha256": "3178d41035154c0a170989f4a86b99ab5bb8987297605024fbed8e7d118bcc16",
+  "template_frc": {
+    "profile": "FRC-SP-H",
+    "batches": 5,
+    "retriggersPerBatch": 20,
+    "attempted": 100,
+    "completed": 100,
+    "observedProviderListEffects": 1,
+    "quotaBypass": false,
+    "note": "Browser control retriggers are counted separately from lease-fenced provider effects."
+  },
+  "next": "Fresh full candidate assurance: adherence, security, dedicatedPerformance and fullTQA. No local preserved DB migrations/runtime/provider action before review/preflight.",
+  "not_claimed": "ActualMeta/localactivation/finalreview/localdelivery/promotion/production."
+}

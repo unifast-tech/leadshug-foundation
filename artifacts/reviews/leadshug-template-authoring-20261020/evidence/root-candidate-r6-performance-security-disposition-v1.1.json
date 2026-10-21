@@ -1,0 +1,50 @@
+{
+  "schema": "stcon05.performance-security-r6-initial-disposition.v1",
+  "recorded_at_utc": "2026-10-21T19:48:34.739271+00:00",
+  "performance_result": "candidate-audit-r6/round-01/results/performance.result.json",
+  "security_result": "evidence/candidate-r6-security.raw-attempt1.txt",
+  "findings": [
+    {
+      "id": "PERF-R6-01",
+      "classification": "blocking",
+      "decision": "Integrated",
+      "reason": "Avoidable unbounded childhydration beforeOFFSET verifiedsource/retainedplan. PagefirstmaterializedCTE/boundedbatchsamecontract, realPGdeep/last/beyondpages."
+    },
+    {
+      "id": "OPS-R6-02",
+      "classification": "blocking_for_D07_delivery",
+      "decision": "Integrated",
+      "reason": "Catchonlyerror retainseligibleAPPROVEDcache afterservermarksunavailable; fencedinvalidate matchingobservation retainstatus/content, realBFFbrowsercounterexample."
+    },
+    {
+      "id": "SEC-R6-01",
+      "classification": "blocking_security_containment",
+      "decision": "Pending operator confirmation",
+      "reason": "Actualcredentialdisclosure, redactioncannotrevoke; no secretduplicated or used. Operatorquestionpendingrevocation/disablementstate; no implicitacceptance."
+    },
+    {
+      "id": "SEC-R6-02",
+      "classification": "blocking",
+      "decision": "Integrated",
+      "reason": "PostHTTPsession revalidation explicitidentitymoduleinvariant; newobservationroutes omit capturedsessionvalidator despite submit/reconcile reuse. Narrowguardwithinlockedcommit andauthfailurenomutation, testsbothroutes."
+    },
+    {
+      "id": "SEC-R6-03",
+      "classification": "blocking",
+      "decision": "Integrated",
+      "reason": "GETparseraccepts200contradictoryerror+data/APPROVED; failclosedsharedparser plusrawandworkflowregressions."
+    },
+    {
+      "id": "SEC-R6-04",
+      "classification": "accepted-debt_for_private_local_cohort_only",
+      "decision": "Deferred with rationale",
+      "reason": "NewrecoverycooldownwouldchangefrozenHTTP/recoverycontract; approvedsubmissionquotaunchanged. Currentprivatecohorttrustedactors/localtest, no untrustedpublicaudienceauthorized. Sequentialauthorizedreads stillcanamplifyproviderload; notdismissed.",
+      "owner": "integrations-and-channels/security",
+      "containment": "Privateexistingtestcohort; no automatedreconcile, no publiconboarding/Railwaypromotion inthislane.",
+      "followup": "Planpersistentoperation/accountreadbudgetandsequential/concurrentnegativeproof beforeadmittinguntrusted/publiccohort; newapproval forcontractchange."
+    }
+  ],
+  "cross_lane_adjudication": "TQA acceptable performance position didnotassess deep-query counterexample, not evidenceoverriding dedicatedPerformanceactualplan. Sourceconcretefindingsstand; no cosmeticthirdopinionneeded. No releasegatewaiver.",
+  "scope": "Sameapprovedproduct/testpaths; 30seals/schema/publicAPI unchanged. r7browser onlytestpre-fixcounterexamplecurrentlyalive. Opshelpers incomplete/uninvoked.",
+  "assumption_correction": "Earlier root shorthand olddraftGETblocks was inaccurate: currentGETreturns authorized historicalsnapshot200 withoutcontextbinding; mutations/preview requirecurrentcontext/account and failCONTA_ALTERADA. D04frozenwordingdoesnotrequireblockinglocalhistoryGET. NewtestmustassertmutationalblockandUIpreviewdisable, notinventGET409. Beforeanyrooterrorcorrected source/contractrechecked; no productionchangemadefromwrongassumption."
+}

@@ -1,0 +1,34 @@
+{
+  "schema": "stcon05.tqa-r6-initial-disposition.v1",
+  "recorded_at_utc": "2026-10-21T19:38:02.919740+00:00",
+  "review_result": "candidate-audit-r6/round-01/results/test-quality.result.json",
+  "lane_status": "not_closed",
+  "findings": [
+    {
+      "id": "TQA-ST05-01",
+      "classification": "blocking",
+      "decision": "Integrated",
+      "reason": "Upper bound100 accepts everyburstrequest reachingprovider; deterministicheldleader proof required.",
+      "action": "100actualBFFrequests/99safe blocked/oneproviderleader; exactbound and postreleasecompletedread, no quotabypass."
+    },
+    {
+      "id": "TQA-ST05-02",
+      "classification": "blocking",
+      "decision": "Integrated",
+      "reason": "Explicit changed-account copy is required user-visible D04 integration. Compositional static/backend/sameaccountproof insufficient.",
+      "action": "RealBFF/browser changedaccount olddraftblocked and unchanged/newcopyboundcurrentaccount."
+    },
+    {
+      "id": "TQA-ST05-03",
+      "classification": "accepted-debt",
+      "decision": "Deferred with rationale",
+      "reason": "No retrospective behavioralRED manufactured; original strategytestfirst planned, actual evidence test-after/unknown. Historical orderingcannotberecovered; do not claimtestfirst. Independentaudit must assess remainingretrofitrisk againstactualstrongcoverage, no gatewaiver.",
+      "owner": "root assurance/testquality",
+      "next_action": "Record honest provenance and retain failfirst target on any futurebehaviorfix; new TQA required after blockers."
+    }
+  ],
+  "rubric_completion": "Original full rubric/package supplied, but returned result only materialfindings/positions. Not claimed a completeTQA pass. Next fresh audit must explicitly return all applicable framing/alignment/bypass/realboundary/fallback/DI/CI/platform/failure/adherence/coverage outputs in schema textualfields, plus mandatoryfivequestions.",
+  "implementation_handoff": "template_validation_recovery gpt-6-luna/medium, sameapprovedtestpaths only; opspreparedbutuninvoked; focusedbrowser thennewall onlyafterparentacceptance.",
+  "live_reviews": "Performance/security r6 remainaliveonimmutablepackage; neverinterrupted/replaced/shrunk. Newtestdelta must be reviewed afteractualnewvalidation.",
+  "runtime": "No preservedlocalDB/APIWeb/Meta/tunnel action authorizeduntilcandidate gates/preflight."
+}

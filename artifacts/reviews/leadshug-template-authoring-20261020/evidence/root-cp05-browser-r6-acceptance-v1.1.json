@@ -1,0 +1,38 @@
+{
+  "schema": "stcon05.browser-r6-root-acceptance.v1",
+  "recorded_at_utc": "2026-10-21T19:18:41.620287+00:00",
+  "exit": 0,
+  "passed": 54,
+  "log": "foundation_documentation/artifacts/tmp/st-con-05-browser-restored-20261021T19HNr4.log",
+  "bytes": 70271,
+  "sha256": "50440c8433186c549590c08de419ec8915352c89cd2ff66d96a5b16887ed3767",
+  "receipt": "foundation_documentation/artifacts/tmp/st-con-05-browser-restored-20261021T6krqNA.receipt",
+  "source_matches": 38,
+  "actual_heads_match": true,
+  "bundle_sha256": "3178d41035154c0a170989f4a86b99ab5bb8987297605024fbed8e7d118bcc16",
+  "proofs": [
+    {
+      "path": "foundation_documentation/artifacts/tmp/st-con-05-browser-proof-r6-fresh-yxEfz6/pre-worker-freshness.json",
+      "sha256": "1c9a4227b9799062841de2b778b309acf7c8ddac4dfb6f8b040f593ea788e530",
+      "capturedAtUtc": "2026-10-21T19:14:05.667Z"
+    },
+    {
+      "path": "foundation_documentation/artifacts/tmp/st-con-05-browser-proof-r6-fresh-yxEfz6/attestation-browser-authority.json",
+      "sha256": "0e58fd4dca925fbd9bb2954b6c0fa9e11993817cd07c525cc553e22155b801c1",
+      "capturedAtUtc": "2026-10-21T19:14:02.707Z"
+    }
+  ],
+  "template_frc": {
+    "profile": "FRC-SP-H",
+    "batches": 5,
+    "retriggersPerBatch": 20,
+    "attempted": 100,
+    "completed": 100,
+    "observedProviderListEffects": 1,
+    "quotaBypass": false,
+    "note": "Browser control retriggers are counted separately from lease-fenced provider effects."
+  },
+  "evidence_typo_correction": "Executor report omitted one4 in log SHA; root actual bytes SHA50440c... is authoritative. Receipt is exit=0 plus log path, not only numeral. First root check failed closed before any action, corrected against retained bytes.",
+  "followup": "GO sole executor one canonical all, same38sources frozen; exclusive log/terminal/newglobalsetup proofs. No product mutation during run.",
+  "claim_limit": "Focusedbrowser GREEN only; all/independentassurance/localactivation/actualMeta/finalreview still pending."
+}

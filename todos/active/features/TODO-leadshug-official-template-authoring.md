@@ -42,7 +42,7 @@ O usuário quer preparar no LeadsHug a mensagem que usará para iniciar atendime
 ## Delivery Status Canon (Required)
 - **Current delivery stage:** Pending
 - **Qualifiers:** none
-- **Next exact step:** executor serial corrige a divergência de serialização nullable no recibo/operação REJECTED e repete browser com freeze novo; retomada restaurada terminou53passed/1failed, FRC05atingiu100/100. Depois all consolidado, assurance candidata, ativação/prova assistida e revisão final. Sem aceite GREEN/entrega antecipado.
+- **Next exact step:** concluir correções bloqueantes r6 em checkpoints serializados: P1 estático recebido; P2A sessão/papel/texto em edição; P2B projeção de observação e ACK tardio conforme HOW revisado. Depois congelar fontes, executar all canônico atual e repetir assurance completa com resoluções anteriores. all747r6 é histórico; r7 reteve RED de elegibilidade e falha de oráculo da fixture. Helpers operacionais seguem sem execução; contenção da credencial aguarda confirmação do operador.
 
 ## Active Work State (Required While TODO Remains In `active/`)
 - **Work state:** implementation
@@ -411,6 +411,8 @@ Somente inventário positivo do Diff Expectation Contract. Nenhum código/runtim
 
 ### Test Strategy
 - **Strategy:** test-first
+- **Planned-versus-executed:** estratégia original, não prova de ordem executada; classificação real abaixo.
+- **Execution evidence:** test-after/unknown para a feature; RED comportamental completo anterior ao produto não foi retido. A falha browser nullable foi retida antes da correção; falhas de build/fixture não são RED de produto. TQA-ST05-03 registra a limitação, sem fabricar RED retrospectivo nem dispensar audit.
 - **Why:** novo estado persistido + side effect externo + autorização de vendedor.
 - **Fail-first target(s) (when required):** API E2E/PG e Playwright da criação/submit/status, duplicate POST e conta alheia.
 
@@ -1016,3 +1018,21 @@ O operador informou **“Tudo restaurado”**. Leitura bounded de espaço/motor/
 `evidence/root-restored-browser-terminal-v1.1.json` registra53passed/1failed, exit1, sem Bus error. FRC05real chegou a100/100retriggers (1provider effect). O browser preserva a asserção de remoteTemplateId:null; o projector de submissão omite o campo enquanto o contrato Web o declara string|null. Executor serial nativo gpt-6-luna/medium recebe correção estreita + browser novo;38fontes anteriores e30selos preservados antes de mutar. Nenhum all/ativação/prova real aceito antecipadamente.
 
 O incidente de diagnóstico CLI está registrado em `evidence/executor-startup-secret-redaction-v1.1.json`; nenhum valor é copiado ao TODO/pacote. Operador foi informado sobre revogar/reemitir a credencial Bitrix24. Próximos CLI ignoram configuração de usuário; executores nativos dispensam essa inicialização. Rotação ainda não confirmada; incidente não declarado encerrado.
+
+### Browser r6 aceito; all em execução
+
+`evidence/root-cp05-browser-r6-acceptance-v1.1.json`:54passed/exit0 e38fontes atuais conferidas. Projector preserva null explícito nos4campos existentes, com asserções originais de recusa/revisão mantidas. Só prova pós-globalsetup atual foi aceita. Executor serial recebeu GO para um all consolidado, sem fonte nova, preservando banco/runtime local. Qualquer falha retorna para diagnóstico; independent assurance permanece gate antes de ativar.
+
+### All r6 aceito; assurance candidata independente
+
+`evidence/root-cp05-restored-all-acceptance-v1.1.json`:747tests/exit0 (282unitAPI/380PostgreSQL/31unitWeb/54browser), lint/build e25migrações descartáveis sem pendências. Root conferiu38fontes,30selos,3HEADs, provas pós-globalsetup e served=dist; nenhum banco/runtime/Meta preservado alterado. `candidate-assurance-r6-package-v1.1.md` contém rubricas aplicáveis completas e prova atual; Performance e fullTQA iniciados no round01 de `candidate-audit-r6/session.json` sem contexto herdado. Modelos roteados conforme config: gpt-6.1-sol/xhigh e gpt-5.6-terra/xhigh. Reviews live não são reiniciados por tempo decorrido. Aderência/segurança seguem serializadas pelos slots. Helpers DevOps só preparação disjunta, sem runtime/build/DDL/túnel até gates e nova admissão do root.
+
+### TQA r6 — blockers de cobertura integrados
+
+A revisão independente devolveu2high: o limite FRC1..100 não captura amplificação1portrigger, e falta browser da cópia explícita após troca de contaD04. Ambos blocking/Integrated, com executor serial nos caminhos já aprovados. Design usa barreira real do provider fake +100BFFrequests, e troca de contexto normal ou fixture isolada sem rota de produto, preservando BFF/PG reais e draft/histórico original. Browser/all/freshTQA serão novos após alterações. TQA03medium registra test-after/unknown; nenhum RED retrospectivo ou claimtest-first. `evidence/root-candidate-r6-tqa-disposition-v1.1.json` contém classificação e exigência de completar toda a rubrica na próxima revisão. Performance/segurança r6 continuam vivos sobre pacote imutável; nenhum waiver, deploy ou entrega.
+
+### Performance e segurança r6 — disposição preliminar
+
+`evidence/root-candidate-r6-performance-security-disposition-v1.1.json` integra paginação antes de hidratação, invalidação de elegibilidade após falha, sessão capturada revalidada pós-HTTP no commit e parser GET contraditório fail-closed. Todos no mesmo objetivo e caminhos aprovados; regressões primeiro, produto só depois de terminal/GO. Reconcile sem cooldown sequencial é dívida explícita limitada à coorte privada local; nenhum cooldown/429/migração novo nesta entrega. Deve reconvergir antes de público não confiável/Railway. Incidente Bitrix exige confirmação do operador de revogação/desativação, pergunta pendente; redigir logs não encerra incidente. Não manipular conector/credenciais para testar.
+
+Correção de premissa do root: GET de draft devolve snapshot histórico autorizado200; a implementação atual não o bloqueia por conta diferente. Preview/mutações revalidam a conta e bloqueiam. D04 não exige ocultar histórico local autorizado; a próxima prova UI/BFF deve preservar leitura/definição e comprovar bloqueio de ação + cópia atual. Nenhuma alteração de produto foi feita a partir da premissa anterior incorreta.

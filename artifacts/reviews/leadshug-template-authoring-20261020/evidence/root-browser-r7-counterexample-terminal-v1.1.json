@@ -1,0 +1,16 @@
+{
+  "schema": "stcon05.browser-r7-counterexample-terminal.v1",
+  "recorded_at_utc": "2026-10-21T19:53:28.452924+00:00",
+  "log": "foundation_documentation/artifacts/tmp/st-con-05-browser-r7-sf4z55YD.log",
+  "log_bytes": 73268,
+  "log_sha256": "380ae717311de5f4f451502240836405183ec7d3b596e1e40fca2d14933a437a",
+  "exit": 1,
+  "passed": 53,
+  "failed": 2,
+  "valid_behavioral_red": "OPS-R6-02/ADH-R6-05: providerrefreshreturnsTEMPLATE_REFRESH_UNAVAILABLE, previousAPPROVED remainsvisiblyeligible; immediateineligibleassertionfailed",
+  "test_oracle_failure": "D04reauthhelperexpectsprivatewabaIdinpublicchannelDTO thatproperlyomitsit. Noaccountcopybehaviorproofyet.",
+  "template_frc_marker_present": false,
+  "claim_limit": "Do notclaimstrictnewFRCpassed: immediateUIassertionearlierpreventsFRCblock. InheritedonboardingFRCseparate. NoPGdeepregressionexecutedhere.",
+  "next": "Sameapprovedscopefix/oraclecorrectionafterrootGO; preserveactualRED.",
+  "product_state": "No productionfixappliedduringr7run; no preservedruntime/providerchanges"
+}

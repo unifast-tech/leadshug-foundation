@@ -1,0 +1,20 @@
+{
+  "schema": "st-con-05-ops-preparation-checkpoint-v1",
+  "recordedAtUtc": "2026-10-21T19:36:07.126489+00:00",
+  "status": "paused_for_TQA_test_design",
+  "r6SourcePackage": "foundation_documentation/artifacts/reviews/leadshug-template-authoring-20261020/evidence/root-cp05-source-freeze-r6-nullable-projection-v1.1.json",
+  "runtimeActions": "none; no runtime inspection, build, database command, container mutation, tunnel action, or provider call",
+  "activationHelper": "incomplete, untested, uninvoked; do not execute",
+  "partialArtifacts": [
+    {
+      "path": "foundation_documentation/artifacts/tmp/stcon05-activation-prep-r6/source-migration-catalog-r6.json",
+      "sha256": "8ac6d7677bb2d62cf93fa13afb58a5dc18aa0bc0844e7be3b7f0027ca49426e7"
+    },
+    {
+      "path": "foundation_documentation/artifacts/tmp/stcon05-activation-prep-r6/activation_common.py",
+      "sha256": "cd72548105a1e93b146bf4d87bbfa85684f4104f8e154c9d1ed3c7ceffb1f1d4",
+      "note": "partial; known incorrect ROOT calculation; not executable as a deliverable"
+    }
+  ],
+  "currentHold": "Parent directed no mutation or test execution until explicit GO for TQA-ST05-01 and TQA-ST05-02 remediation."
+}

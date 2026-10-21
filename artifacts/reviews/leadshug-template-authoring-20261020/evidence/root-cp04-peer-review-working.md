@@ -145,3 +145,19 @@ Exit1:53passed/1failed, retained log2da614756b0cf51586ee5bc0265e45b9dc5ae577de3c
 ## R43 — inherited CLI diagnostic credential incident
 
 A Bitrix24 credential was accidentally displayed in a malformed inherited MCP environment-variable diagnostic. Original value is not retained in this journal. Known owned artifacts were scrubbed; earlier rendered output cannot be retracted. User notified/recommended revocation/reissue. Future CLI ignore user configuration; native executor used now. No Bitrix tool call executed. Operator rotation not confirmed. Security assurance must disposition the incident and remaining risk; not silently closed.
+
+## R44 — focused browser r6 accepted
+
+54passed/exit0 after four nullable field projections, existing assertions untouched. Root independently matched38current hashes/freshproofs/actualHEADs/served=dist. Actual retained SHA50440c8433186c549590c08de419ec8915352c89cd2ff66d96a5b16887ed3767 corrects executor transcription missing one4; initial root hash check failed closed before action and then compared retained bytes. Stale first proof captured19:04 before19:11containerstart rejected; only fresh19:14post-globalsetup proof accepted. all now authorized once on same38sources; no more source mutation while validating.
+
+## R45 — independent TQA r6 blocking findings
+
+TQA-ST05-01 high:1..100providerbound permits exact100foldamplification; add deterministicheldleader100BFF/99safe202/oneproviderrequest/onecompletedread withoutquotabypass. TQA-ST05-02 high:actualchangedaccountcopybrowser missing; new olddraftblocked/unchanged and currentaccountnewcopy realBFF/PG journey required. Both Integrated/blocking; no productiondefect claimed fromcoveragegap. TQA03medium accepted processdebt:actualtest-after/unknown, originaltestfirststrategy notdemonstrated; nevermanufactureRED. Initial resultdoesnotcontainallfullrubricoutputs, notacceptedfullTQApass; requirecompletefreshreviewafterfix. Performance/securityliveimmutablepackage notinterrupted. all747r6 remainsvalidbase, notnewcandidateevidenceaftertestchange. Opsprepcheckpoint incomplete/uninvoked.
+
+## R46 — performance/security candidates and assumption correction
+
+PERF-R6-01blocking pagebeforelateralchildhydration, OPS-R6-02blockingD07cachedeligibilityafterfailedrefresh, SEC02blockingcapturedsessionafterHTTP/lockedcommit, SEC03blockingcontradictoryGETerrorenvelope. SEC01operatorrevocationconfirmationpending actualcredentialincident; no secretrepeated/invoked. SEC04explicitnonblockingdebt onlyprivatecohort, recoverybudgetcontractfollowupbeforepublic/untrusted. Rootcorrecteditsold-draftGET-block assumption bydirectcode: GETauthorizedhistorical200, preview/mutationscurrentbindingblock; frozenD04doesnotmandateGET409. NewtestoraclemustnotclickdisabledsubmitandexpectPOST orassertabsolutefirstproviderlistcountdespiteearliercalls. r7currentlyfrozen/live; noeditsuntilterminal, nooraclemisclassificationasproductRED.
+
+## R47 — adherence and late ACK HOW disposition
+
+ADH03 current owner/admin commit authority, ADH04 edit epoch preservation and ADH06 saved shared observation projection integrated as same-contract blocking corrections. ADH01 independently examined readonly; accepted internal immutable acknowledgedRemoteTemplateId plus atomic ACK receipt, preserving existing association in conflict and existing public outcome dimensions. No new phase, automatic conflict resolution, POST retry or stronger durability promise. Existing second template migration remains unapplied to preserved DB and may be amended before disposable revalidation. P1 is static only. P2A authorized narrow session/role/editor fixes with no runner/runtime; P2B requires separate root handoff. See root-candidate-r6-adherence-how-disposition-v1.1.json. Credential containment still awaits operator confirmation.
