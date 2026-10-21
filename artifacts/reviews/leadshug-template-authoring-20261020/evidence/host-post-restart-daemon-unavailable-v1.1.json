@@ -1,0 +1,39 @@
+{
+  "schema": "stcon05.host-readiness-recheck.v1",
+  "recorded_at_utc": "2026-10-21T18:13:53.468846+00:00",
+  "authority": "operator confirmed Restart Docker Desktop and requested recheck",
+  "profile": "operational-devops",
+  "space": {
+    "free_bytes": 145180233728,
+    "source": "bounded Win32_LogicalDisk C: projection"
+  },
+  "operator_ui_report": "Engine running",
+  "docker_api": {
+    "default_windows_info": "timeout12s",
+    "explicit_desktop_linux_info": "timeout10s",
+    "local_project_ps": "timeout12s",
+    "validation_project_ps": "timeout12s",
+    "endpoint": "npipe:////./pipe/dockerDesktopLinuxEngine"
+  },
+  "wsl": {
+    "Ubuntu": "Running2",
+    "docker-desktop": "Running2",
+    "shared_socket": "present; current user receives permission denied",
+    "sudo_readonly_probe": "noninteractive authorization unavailable; no password requested"
+  },
+  "connection_env_presence": {
+    "DOCKER_HOST": false,
+    "DOCKER_CONTEXT": false,
+    "DOCKER_CONFIG": false,
+    "DOCKER_API_VERSION": false,
+    "DOCKER_TLS_VERIFY": false,
+    "DOCKER_CERT_PATH": false
+  },
+  "outcome": "api-not-ready-despite-ui-running",
+  "next_step": "operator fully quits Docker Desktop using Quit/Sair and opens it again; then bounded API and project-health check before validation",
+  "limits": [
+    "Read-only diagnostics only, no environment/config change",
+    "No force kill, WSL shutdown, reset/prune, deletion, restart by agent or migration",
+    "No new tests or pass claim; preserved source and prior evidence remain"
+  ]
+}

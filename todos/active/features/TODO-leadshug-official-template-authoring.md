@@ -42,7 +42,7 @@ O usuário quer preparar no LeadsHug a mensagem que usará para iniciar atendime
 ## Delivery Status Canon (Required)
 - **Current delivery stage:** Pending
 - **Qualifiers:** Blocked
-- **Next exact step:** aguardar reinício do Docker Desktop pelo operador e confirmar daemon saudável; espaçoC: recuperado (~132GiB), motor ainda timeout.38fontes/30selos/3HEADs continuam exatos. Depois repetir browser interrompido, all consolidado, assurance candidata, ativação/prova assistida e revisão final. Sem aceite GREEN/entrega antecipado.
+- **Next exact step:** confirmar API Docker saudável após encerramento completo e reabertura do Desktop pelo operador; ele relatou reinício/Engine running, mas info e consultas dos2projetos continuam timeout, com~135GiB livres.38fontes/30selos/3HEADs preservados. Depois browser interrompido, all consolidado, assurance candidata, ativação/prova assistida e revisão final. Sem aceite GREEN/entrega antecipado.
 
 ## Active Work State (Required While TODO Remains In `active/`)
 - **Work state:** implementation
@@ -1000,3 +1000,8 @@ O all173629Z-r4 falhou somente no teste anterior `test/number-onboarding-bci.e2e
 ### Admissão validada do startup BCI —2026-10-21
 
 O usuário respondeu **“Validar o ajuste pontual do teste”** à proposta publicada7e486511. A baseline exata foi novamente conferida antes de mutação (`d21fef15…`). É admitido somente o diff de startup/listening/endereço em `test/number-onboarding-bci.e2e-spec.ts`; corpo dos testes,5×20, contadores, teardown e oráculos permanecem inalterados. Nenhum wrapper global de app.listen. Manifesto herdado41/30selos intocado. Recibo `evidence/baseline-bci-fixture-lifecycle-admission-v1.1.json`. Browser focado precederá novo all para revelar os cenários UI ainda não alcançados; não substitui o all/gates.
+
+
+### Readiness após reinício informado pelo operador
+
+O operador informou Restart Desktop e painel Engine running. Recheck positivo do espaço:145180233728bytes livres; API info e consultas pontuais dos projetos local/validation continuam timeout, inclusive com contexto Windows explícito desktop-linux. WSL mostra Ubuntu e docker-desktop em execução; isso não certifica API pronta. Nenhum override de conexão Docker está presente no ambiente atual. Não foi solicitada senha nem feita alteração de permissões/socket/serviço; sudo não interativo indisponível foi encerrado. Próxima tentativa manual: Quit/Sair completo e reabertura do Desktop; sem reset/prune ou shutdown global do WSL. `evidence/host-post-restart-daemon-unavailable-v1.1.json` registra o limite. Testes permanecem bloqueados antes de qualquer nova execução.
