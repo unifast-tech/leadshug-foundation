@@ -1,0 +1,31 @@
+{
+  "schema": "stcon05-meta-public-execution-reference-v1",
+  "recorded_at_utc": "2026-10-21T11:36:53.881456+00:00",
+  "browser_result": "official reference opens returned429; identical official pages successfully read using Accept:text/markdown",
+  "records": [
+    {
+      "url": "https://developers.facebook.com/documentation/business-messaging/whatsapp/reference/whatsapp-business-account/message-template-api/",
+      "http_status": 200,
+      "content_type": "text/markdown; charset=utf-8",
+      "sha256": "d596d69bf106e788956d2b6626dd25a0c2d4cd0f2611a56019e462c15f711383",
+      "bytes": 30808
+    },
+    {
+      "url": "https://developers.facebook.com/documentation/business-messaging/whatsapp/templates/components/",
+      "http_status": 200,
+      "content_type": "text/markdown; charset=utf-8",
+      "sha256": "9431553d241aacc1e0a13cfb2ecf7c342265bbeb8bc4204c584636e272ebea8c",
+      "bytes": 26124
+    }
+  ],
+  "bounded_paraphrases": [
+    "Create uses account/message_templates and explicit name/language/category/parameter_format/components; creation success and approval are separate.",
+    "List and template-ID GET expose bounded fields and cursor pagination; requested fields include parameter_format/status/components.",
+    "BODY named examples use example.body_text_named_params entries with param_name/example; BODY text cap1024. NAMED creation requires explicit parameter_format.",
+    "Text-only/static header/footer creation and stricter product limits remain approved slice restrictions, not claims of provider-wide limits."
+  ],
+  "account_api_calls": 0,
+  "credentials_or_private_env_accessed": false,
+  "product_contract_changed": false,
+  "whole_document_storage": "ephemeral /tmp only; not persisted to repository"
+}

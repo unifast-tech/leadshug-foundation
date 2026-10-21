@@ -25,3 +25,7 @@ O [TODO v1.1](../../../todos/active/features/TODO-leadshug-official-template-aut
 ## Execução autorizada — 2026-10-21
 
 O usuário respondeu APROVADO para v1.1. Aprovação e fontes binding estão no TODO; authority pós-aprovação GO com execução autorizada. A admissão inicial confirmou os3HEADs e todos41hashes herdados antes de qualquer código/teste. Executor único CP01 iniciou domínio/ports/parser/harness; demais checkpoints seguem serialmente na mesma aprovação. [Admissão inicial](evidence/initial-execution-admission-v1.1.json), [autoridade](evidence/authority-approved-v1.1.json) e [routing](evidence/routing-executor-approved-v1.1.json). Este estado não declara implementação concluída ou testes de05 passados.
+
+## Checkpoints de implementação
+
+CP01 base de domínio/parser/prévia/ports/harness implementada e conferida. Runner api com230testes unitários e338E2E PostgreSQL verdes foi reportado pelo executor; stdout não persistido, sem prova durável de all ainda. [Recibo e limites CP01](evidence/cp01-executor-report-v1.1.json). CP02 em andamento: persistência real dos rascunhos/revisões, CAS/autorização e migration aditiva em PostgreSQL descartável. Tela/integração Meta e teste assistido ainda pendentes.

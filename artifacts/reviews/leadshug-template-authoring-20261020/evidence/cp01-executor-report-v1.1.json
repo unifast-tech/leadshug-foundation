@@ -1,0 +1,214 @@
+{
+  "schema": "stcon05-cp01-executor-report-v1",
+  "recorded_at_utc": "2026-10-21T11:52:27.109242+00:00",
+  "executor": "/root/stcon05_executor",
+  "checkpoint": "CP01 domain base only",
+  "source_review": "Root read all five files before CP02 handoff; primitives accepted for subsequent implementation, not completed D09 or product delivery",
+  "owned_public_sources": [
+    {
+      "path": "api-app/src/domain/message-templates/template-management.ports.ts",
+      "sha256_at_root_checkpoint_capture": "56d5fc3ce647284c7724c3e83cb485e387e4ce1c99418408504c1e60e11bc970",
+      "bytes": 2652
+    },
+    {
+      "path": "api-app/src/domain/message-templates/template-definition.ts",
+      "sha256_at_root_checkpoint_capture": "cf5cc96078133d0b9111aff5fa6a82ca206165f6c8e3a29fd868c72dd39567f5",
+      "bytes": 6774
+    },
+    {
+      "path": "api-app/src/domain/message-templates/template-management.ports.spec.ts",
+      "sha256_at_root_checkpoint_capture": "6a407ad01a85244aff1d4f2f887282850aef2a4f9fa998e41e845206fb475e20",
+      "bytes": 2639
+    },
+    {
+      "path": "api-app/src/domain/message-templates/template-definition.spec.ts",
+      "sha256_at_root_checkpoint_capture": "4879d23f6926a1a704685afb6cb596dc8d112e3cb82b2751345d127876dcb4bf",
+      "bytes": 5505
+    },
+    {
+      "path": "api-app/src/domain/message-templates/template-management.dependencies.spec.ts",
+      "sha256_at_root_checkpoint_capture": "ee61e5bf54b35d3f5c62db0a07e4e20447495e52ae37a196206415745e3ed910",
+      "bytes": 2934
+    }
+  ],
+  "validation": {
+    "basis": "structured executor report in chat; stdout was NOT persisted. No invented raw-log digest. Final durable all validation still required.",
+    "command": "bash scripts/test-channels-local.sh api",
+    "red": {
+      "unit_suites_passed": 23,
+      "unit_suites_total": 24,
+      "tests_passed": 205,
+      "failure": "new definition spec could not import missing implementation"
+    },
+    "final_green": {
+      "terminal_exit_code_reported": 0,
+      "unit_suites": 24,
+      "unit_tests": 230,
+      "postgresql_e2e_suites": 27,
+      "postgresql_e2e_tests": 338,
+      "lint_build_migrate_deploy_status": "reported passed",
+      "namespace_cleanup": "reported normal"
+    },
+    "all_web_browser_meta_real": "not run"
+  },
+  "sealed30_root_recheck": [
+    {
+      "repository": "root",
+      "path": ".github/workflows/ci.yml",
+      "matches": true
+    },
+    {
+      "repository": "root",
+      "path": "scripts/test-channels-local.sh",
+      "matches": true
+    },
+    {
+      "repository": "root",
+      "path": "scripts/check-channels-ci-parity.py",
+      "matches": true
+    },
+    {
+      "repository": "api",
+      "path": "src/domain/inbox/conversations.service.ts",
+      "matches": true
+    },
+    {
+      "repository": "api",
+      "path": "src/domain/inbox/incoming.service.ts",
+      "matches": true
+    },
+    {
+      "repository": "api",
+      "path": "src/domain/inbox/incoming.typebot.integration.spec.ts",
+      "matches": true
+    },
+    {
+      "repository": "api",
+      "path": "src/integrations/evolution/evolution.client.spec.ts",
+      "matches": true
+    },
+    {
+      "repository": "api",
+      "path": "src/integrations/evolution/evolution.client.ts",
+      "matches": true
+    },
+    {
+      "repository": "api",
+      "path": "src/integrations/meta/meta.client.spec.ts",
+      "matches": true
+    },
+    {
+      "repository": "api",
+      "path": "src/integrations/meta/meta.client.ts",
+      "matches": true
+    },
+    {
+      "repository": "api",
+      "path": "src/surfaces/bff/conversations.controller.ts",
+      "matches": true
+    },
+    {
+      "repository": "api",
+      "path": "src/surfaces/public/conversations.controller.ts",
+      "matches": true
+    },
+    {
+      "repository": "api",
+      "path": "src/surfaces/public/public.module.ts",
+      "matches": true
+    },
+    {
+      "repository": "api",
+      "path": "src/surfaces/webhooks/webhooks.module.ts",
+      "matches": true
+    },
+    {
+      "repository": "api",
+      "path": "test/api-publica.e2e-spec.ts",
+      "matches": true
+    },
+    {
+      "repository": "api",
+      "path": "test/number-onboarding-typebot.e2e-spec.ts",
+      "matches": true
+    },
+    {
+      "repository": "api",
+      "path": "prisma/migrations/20261020170000_message_inbound_window_index/migration.sql",
+      "matches": true
+    },
+    {
+      "repository": "api",
+      "path": "src/domain/channels/transport/channel-dependencies.spec.ts",
+      "matches": true
+    },
+    {
+      "repository": "api",
+      "path": "src/domain/channels/transport/channel.ts",
+      "matches": true
+    },
+    {
+      "repository": "api",
+      "path": "src/domain/inbox/outbound.service.spec.ts",
+      "matches": true
+    },
+    {
+      "repository": "api",
+      "path": "src/domain/inbox/outbound.service.ts",
+      "matches": true
+    },
+    {
+      "repository": "api",
+      "path": "src/integrations/channels/channel-adapter-factory.ts",
+      "matches": true
+    },
+    {
+      "repository": "api",
+      "path": "src/integrations/channels/channel-adapter-registry.ts",
+      "matches": true
+    },
+    {
+      "repository": "api",
+      "path": "src/integrations/channels/channel-transport.module.ts",
+      "matches": true
+    },
+    {
+      "repository": "api",
+      "path": "src/integrations/channels/evolution-channel.ts",
+      "matches": true
+    },
+    {
+      "repository": "api",
+      "path": "src/integrations/channels/meta-channel.ts",
+      "matches": true
+    },
+    {
+      "repository": "api",
+      "path": "src/integrations/channels/prisma-channel-resolver.ts",
+      "matches": true
+    },
+    {
+      "repository": "api",
+      "path": "test/channel-transport.e2e-spec.ts",
+      "matches": true
+    },
+    {
+      "repository": "web",
+      "path": "src/telas/Inbox.tsx",
+      "matches": true
+    },
+    {
+      "repository": "web",
+      "path": "e2e/channel-transport.spec.ts",
+      "matches": true
+    }
+  ],
+  "inherited41_final_zero_drift": "reported by executor before CP02; initial root admission already independently proved41/3",
+  "limits": [
+    "Provider/catalogue/submission DTOs/outcomes still foundation-only; enrich within later checkpoints",
+    "Fake port exercise is preliminary; same-domain application behavior against a fake provider and real PostgreSQL remains pending",
+    "Byte-cap test isolation improvement admitted in CP02",
+    "Schema/HTTP/BFF/UI/PCV/assurance/real provider proof not delivered"
+  ],
+  "next": "CP02 real PostgreSQL draft/revision/CAS/auth/list/preview, additive schema, no fake-storage duplicate; sole executor serially authorized within approved paths"
+}

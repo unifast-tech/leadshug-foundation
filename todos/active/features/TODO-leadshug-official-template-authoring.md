@@ -42,7 +42,7 @@ O usuário quer preparar no LeadsHug a mensagem que usará para iniciar atendime
 ## Delivery Status Canon (Required)
 - **Current delivery stage:** Pending
 - **Qualifiers:** none
-- **Next exact step:** Executor único05 executa CP01 test-first em api-app/src/domain/message-templates/**; porta estreita/parser/prévia/harness. Authority pós-aprovação GO e admissão inicial3HEADs/41hashes concluídos; schema/HTTP/UI nos checkpoints seguintes, sem antecipar ST-CON-04.
+- **Next exact step:** Executor único05 implementa CP02 test-first: rascunhos/revisões/CAS/autorização em PostgreSQL real e schema/migration aditivos. CP01 base conferida; api230unit+338PG reportados, all/evidência durável e entrega completa ainda pendentes.
 
 ## Active Work State (Required While TODO Remains In `active/`)
 - **Work state:** implementation
@@ -941,3 +941,9 @@ APROVADO v1.1 registrado acima, binding10fontes recarregadas; readiness PACED-Re
 ### CP01 — domain foundation handoff
 
 Executor stcon05_executor (gpt-6-luna/medium), único writer de produto no principal, iniciado sob authority GO. Owned paths deste checkpoint: somente api-app/src/domain/message-templates/**. Objetivo: ports/DTO/contexto seguro, parser/prévia/fingerprints e testes/harness independentes da capacidade; sem schema/HTTP/UI/runtime humano ainda. Root mantém TODO/README/receipts Foundation; evidência cp01* do executor fica disjunta. Teste apenas após releitura do runner público/CI e selo30sealed; all completo continua gate de aceite posterior. Handoff não reduz escopo/provas aprovadas e checkpoint não equivale à entrega.
+
+### CP01 disposition and CP02 handoff
+
+CP01 base de domínio/parser/prévia/ports/harness recebida e5arquivos lidos pelo root; relatório estruturado em evidence/cp01-executor-report-v1.1.json. RED/GREEN api (230unit/338PG, lint/build/migrate/status) vêm do relatório do executor; stdout não foi salvo e nenhum hash de log foi inventado. Não substitui all/durabilidade/assurance/consumidor real. Root reconferiu30sealed byteexact; executor reportou41sem drift antes de avançar.
+
+CP02 autorizado serialmente no mesmo contrato: src/domain/message-templates/**, schema.prisma, novas migrations *_message_template*/migration.sql, test/message-template*.e2e-spec.ts e helpers.ts se necessário ao novo domínio. Persistência Prisma/PG real de rascunhos/revisões, owner+BU+tenant, idempotência de criação, CAS concorrente e prévia read-only; provider fake só na porta externa, zero chamadas remotas nestes fluxos. Sem camada fake-storage que duplique CAS de produção. DTOs/ports podem ser enriquecidos dentro de D09 para próximos passos. HTTP real de integração/BFF/UI e aplicação ao banco humano continuam checkpoints posteriores. CP02 deve persistir logs reais em artifacts/tmp e recibos cp02* antes de reportar validação.
