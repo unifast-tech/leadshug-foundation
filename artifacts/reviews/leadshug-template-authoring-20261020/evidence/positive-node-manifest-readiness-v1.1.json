@@ -1,0 +1,87 @@
+{
+  "schema": "stcon05-positive-node-manifest-readiness-v1",
+  "recorded_at_utc": "2026-10-21T11:55:11.294737+00:00",
+  "read_only_public_paths_only": true,
+  "generic_helper_not_run": {
+    "path": "delphi-ai/tools/node_capability_surface_audit.py",
+    "reason": "manifest_paths lines149-161 walks root; ignored directories do not include forbidden .local-files; audit line235 loads all manifests BEFORE --manifest filtering lines240ff. Project privacy prohibition takes precedence. No script change or traversal occurred.",
+    "alternative": "Exact owning package.json/package-lock.json positive reads, dependency identities, pinned versions and script presence; runtime still only canonical approved runner."
+  },
+  "records": [
+    {
+      "repo": "api-app",
+      "manifest_path": "api-app/package.json",
+      "manifest_sha256": "df8551d3e506e7c68516cbd482362c4282671b7ec7eebbf121386390ac080a9d",
+      "lock_path": "api-app/package-lock.json",
+      "lock_sha256": "d1e45274c4b10d134469d7ec63e88777ec26b917d48197a03a4b97cefda047c7",
+      "exact_dependencies": {
+        "@nestjs/core": {
+          "declared": "^11.0.0",
+          "locked": "11.2.1"
+        },
+        "prisma": {
+          "declared": "^6.0.0",
+          "locked": "6.19.3"
+        },
+        "@prisma/client": {
+          "declared": "^6.0.0",
+          "locked": "6.19.3"
+        }
+      },
+      "node_engines": {
+        "node": ">=22"
+      },
+      "required_scripts_present": [
+        "lint",
+        "build",
+        "test",
+        "test:e2e",
+        "prisma:generate",
+        "prisma:migrate"
+      ],
+      "script_names": [
+        "build",
+        "lint",
+        "prisma:dev",
+        "prisma:generate",
+        "prisma:migrate",
+        "start",
+        "start:dev",
+        "test",
+        "test:cov",
+        "test:e2e"
+      ]
+    },
+    {
+      "repo": "web-app",
+      "manifest_path": "web-app/package.json",
+      "manifest_sha256": "fc9083821e246d50c080f409b3590902b033041231d1688c04c4140f097818de",
+      "lock_path": "web-app/package-lock.json",
+      "lock_sha256": "546aec97be8273cf195a16b75c0127474ea3a5042668f8d4c93aab96c1619c8f",
+      "exact_dependencies": {
+        "react-dom": {
+          "declared": "^18.3.1",
+          "locked": "18.3.1"
+        },
+        "vite": {
+          "declared": "^5.4.11",
+          "locked": "5.4.21"
+        }
+      },
+      "node_engines": {},
+      "required_scripts_present": [
+        "build",
+        "test"
+      ],
+      "script_names": [
+        "build",
+        "dev",
+        "preview",
+        "test",
+        "test:tela",
+        "test:tela:ui"
+      ]
+    }
+  ],
+  "dependency_or_script_executions": 0
+}

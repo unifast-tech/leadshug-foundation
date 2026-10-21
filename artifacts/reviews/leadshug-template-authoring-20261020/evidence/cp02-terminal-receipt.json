@@ -1,0 +1,62 @@
+{
+  "schema": "stcon05-cp02-terminal-receipt-v1",
+  "recorded_at_utc": "2026-10-21T12:13:50Z",
+  "scope": "CP02 real PostgreSQL draft/revision persistence; templates domain only; no human DB or Meta provider call",
+  "runner": "bash scripts/test-channels-local.sh api",
+  "sealed_checkpoint": {
+    "manifest": "foundation_documentation/artifacts/reviews/leadshug-template-authoring-20261020/evidence/inherited-working-tree-v1.1.json",
+    "sealed_records_expected": 30,
+    "sealed_records_verified": 30,
+    "mismatches": []
+  },
+  "green_terminal_result": {
+    "log": "foundation_documentation/artifacts/tmp/stcon05-cp02-green3.log",
+    "result": "PASS",
+    "node": "v22.23.3",
+    "database": "PostgreSQL 16 disposable validation namespace",
+    "migrate": "deploy and status passed",
+    "lint": "passed",
+    "build": "passed",
+    "unit": "24 files / 234 tests passed",
+    "e2e": "28 files / 343 tests passed"
+  },
+  "runs": [
+    {
+      "log": "foundation_documentation/artifacts/tmp/stcon05-cp02-red.log",
+      "terminal_result": "RED preliminary: isolated UTF-8 byte-cap fixture assertion failed (fixture count was 1004).",
+      "sha256": "e8d76be28ffd4f30058fd35a27ac8289b38052518636b6e55ea993e39296a015"
+    },
+    {
+      "log": "foundation_documentation/artifacts/tmp/stcon05-cp02-red2.log",
+      "terminal_result": "RED: new PostgreSQL E2E failed to load the not-yet-implemented draft service; existing E2E passed.",
+      "sha256": "2a4e3c334357ed1eca19dd39fe72cd22153765c215226daa5c2bbc62c4bdcd13"
+    },
+    {
+      "log": "foundation_documentation/artifacts/tmp/stcon05-cp02-green.log",
+      "terminal_result": "Implementation attempt: migration/status and lint passed; build reported Prisma JSON typing errors.",
+      "sha256": "d88dcd79c0b13f101b3454069c10788e338dd3d770e41ba57127782fe3f64e21"
+    },
+    {
+      "log": "foundation_documentation/artifacts/tmp/stcon05-cp02-green2.log",
+      "terminal_result": "Implementation attempt: build and unit passed; new E2E exposed invalid placeholder-ending fixtures.",
+      "sha256": "7a2b5fabe78cfc0167e33a4330a36abd10120dfe897fe4e2efd9b77ffd6a7a00"
+    },
+    {
+      "log": "foundation_documentation/artifacts/tmp/stcon05-cp02-green3.log",
+      "terminal_result": "PASS: migration/status, lint, build, unit and PostgreSQL E2E completed green; 24 unit files / 234 tests and 28 E2E files / 343 tests.",
+      "sha256": "c31ab04e6a30720836c97c1ba79791f648d8a2e193617a2f5313ba3fb60f0f73"
+    }
+  ],
+  "source_sha256": {
+    "api-app/src/domain/message-templates/template-draft.service.ts": "75ad2af107ab431d2ab77d230e94a931b7c3573566c2c56fdc89aa795f2188c1",
+    "api-app/src/domain/message-templates/template-definition.ts": "a77a62ff5b5bd88e99603f54c915a9d58333f46edca5ffe78423ab6e99a318b8",
+    "api-app/src/domain/message-templates/template-definition.spec.ts": "5240ee3f51ffb890ae341b0a8ac483b9b6d84581240d4d09aa1e2ccf3cba3a80",
+    "api-app/src/domain/message-templates/template-management.ports.ts": "56d5fc3ce647284c7724c3e83cb485e387e4ce1c99418408504c1e60e11bc970",
+    "api-app/src/domain/message-templates/template-management.ports.spec.ts": "6a407ad01a85244aff1d4f2f887282850aef2a4f9fa998e41e845206fb475e20",
+    "api-app/src/domain/message-templates/template-management.dependencies.spec.ts": "a52ee7ae126135a01f75cfbff3fc5c5e0815451e132743a84ca7048b64860443",
+    "api-app/prisma/schema.prisma": "7462803e5bbbe78219bf81460a1e08b84621e01b6f86bb1687190cc4321cf011",
+    "api-app/prisma/migrations/20261021130000_message_template_drafts/migration.sql": "27d1deb2514ba602923ab5b0f0dc126ce4a4bcbd147de34f9ccb80fac64b96bc",
+    "api-app/test/message-template-drafts.e2e-spec.ts": "6f8386e82a8d4d45cc3b3bf9a8b448bc06310a43efaacd37e5e0833a483c29b9",
+    "api-app/test/helpers.ts": "4d98727935d0d1b65da9d2901806491208bb3234e85511e1d3f3601d4e4b35cc"
+  }
+}

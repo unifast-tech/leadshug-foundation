@@ -1,0 +1,42 @@
+{
+  "schema": "stcon05-root-checkpoint-review-v1",
+  "checkpoint": "CP02-green3",
+  "recorded_at_utc": "2026-10-21T12:21:05.889003+00:00",
+  "basis": "Read-only public source review and direct hash verification of five executor log paths; no product test/runtime run by root",
+  "executor_receipt": {
+    "path": "evidence/cp02-terminal-receipt.json",
+    "sha256": "895fc82a82e8be8e9c752075b2ccc3589c9bb000b4564099445b68d7753f5123"
+  },
+  "verification": {
+    "logs_compared": 5,
+    "log_hash_mismatches": [],
+    "sealed_records_compared": 30,
+    "sealed_mismatches": [],
+    "shared_delta_source": "evidence/inherited-shared-sources-v1.1.json; all11 source hashes equal approved immutable manifest",
+    "shared_deltas_reviewed": {
+      "api/prisma/schema.prisma": "New template draft/revision models and composite scope relations; inherited message index preserved. Channel FK requires correction.",
+      "api/test/helpers.ts": "Only two template cleanup deleteMany additions relative to inherited06 bytes; pre-existing fake semantics preserved."
+    }
+  },
+  "findings": [
+    {
+      "id": "CP02-R1",
+      "severity": "medium",
+      "status": "in-progress",
+      "issue": "Draft FK to ephemeral BuChannel Restrict prevents existing channel disconnect delete.",
+      "evidence": [
+        "api-app/prisma/schema.prisma: MessageTemplateDraft.channel",
+        "api-app/src/domain/channels/channels.service.ts:384"
+      ],
+      "resolution": "Same executor removes restrictive dependency preserving immutable historical channel ID and adds PostgreSQL disconnect/recreate/history regression; no edit to sealed channel code."
+    },
+    {
+      "id": "CP02-R2",
+      "severity": "medium",
+      "status": "scheduled-in-approved-CP03",
+      "issue": "Same-account credential/generation rotation is currently rejected by draft binding comparison.",
+      "resolution": "Preserve original identity/account/channel snapshots, capture current context for fresh preview/submit fences; reject changed account and recreated channel; no automatic rebinding."
+    }
+  ],
+  "disposition": "partial; green3 does not close checkpoint until R1 regression green; no all/UI/provider/human-DB evidence claimed"
+}

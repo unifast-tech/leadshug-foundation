@@ -42,7 +42,7 @@ O usuário quer preparar no LeadsHug a mensagem que usará para iniciar atendime
 ## Delivery Status Canon (Required)
 - **Current delivery stage:** Pending
 - **Qualifiers:** none
-- **Next exact step:** Executor único05 implementa CP02 test-first: rascunhos/revisões/CAS/autorização em PostgreSQL real e schema/migration aditivos. CP01 base conferida; api230unit+338PG reportados, all/evidência durável e entrega completa ainda pendentes.
+- **Next exact step:** Fechar revisão CP02: green3 api234unit+343PG com logs/hashes conferidos; corrigir FK que bloquearia desconectar canal com rascunho e provar preservação do histórico. Depois CP03 integração scoped/propósito explícito e HTTP templates dedicado, sob a mesma aprovação; all/assurance/tela/ativação/prova assistida pendentes.
 
 ## Active Work State (Required While TODO Remains In `active/`)
 - **Work state:** implementation
@@ -615,9 +615,9 @@ Planejado para o gate de entrega após APROVADO; nenhum resultado de implementa�
 ## TODO Closeout Disposition
 
 - **Disposition:** keep-active
-- **Disposition reason:** reconvergência v1.1 de ST-CON-05 após entrega06; novo freeze/reviews/guards antes de aprovação.
-- **Post-commit/push status:** pacote documental publicado em Foundation main; execução pendente de APROVADO.
-- **Next path/status action:** manter active/Review; pedir APROVADO v1.1 específico após guardas finais, sem produto entregue.
+- **Disposition reason:** v1.1 aprovada2026-10-21; implementação/testes em checkpoints seriais, sem entrega completa ainda.
+- **Post-commit/push status:** aprovação/admissão e inícioCP01/02 publicados em Foundation main; produto permanece sem commit/push.
+- **Next path/status action:** manter active/In-Progress; concluir checkpoints, all e assurance antes de ativação/prova assistida/closeout.
 
 ## Security Risk Assessment (Mandatory Before Delivery)
 
@@ -947,3 +947,7 @@ Executor stcon05_executor (gpt-6-luna/medium), único writer de produto no princ
 CP01 base de domínio/parser/prévia/ports/harness recebida e5arquivos lidos pelo root; relatório estruturado em evidence/cp01-executor-report-v1.1.json. RED/GREEN api (230unit/338PG, lint/build/migrate/status) vêm do relatório do executor; stdout não foi salvo e nenhum hash de log foi inventado. Não substitui all/durabilidade/assurance/consumidor real. Root reconferiu30sealed byteexact; executor reportou41sem drift antes de avançar.
 
 CP02 autorizado serialmente no mesmo contrato: src/domain/message-templates/**, schema.prisma, novas migrations *_message_template*/migration.sql, test/message-template*.e2e-spec.ts e helpers.ts se necessário ao novo domínio. Persistência Prisma/PG real de rascunhos/revisões, owner+BU+tenant, idempotência de criação, CAS concorrente e prévia read-only; provider fake só na porta externa, zero chamadas remotas nestes fluxos. Sem camada fake-storage que duplique CAS de produção. DTOs/ports podem ser enriquecidos dentro de D09 para próximos passos. HTTP real de integração/BFF/UI e aplicação ao banco humano continuam checkpoints posteriores. CP02 deve persistir logs reais em artifacts/tmp e recibos cp02* antes de reportar validação.
+
+### CP02 — revisão do primeiro green durável
+
+Recibo evidence/cp02-terminal-receipt.json: api green3 terminal, migration deploy/status/lint/build,234unit e343PG. Root leu serviço/schema/migration/nova suíte e conferiu SHA256 dos cinco logs reais, sem declarar all ou D09 completo. A revisão identificou FK draft→BuChannel Restrict incompatível com ChannelsService.desconectar, que remove o canal efêmero após preservar a identidade. Correção serial no schema/migration05 e regressão PG da desconexão/preservação/recriação requisitadas ao mesmo executor; nenhum arquivo Channel herdado será alterado. Reautorização da mesma conta e reconfirmação de generation atual permanecem requisito D04 do próximo checkpoint, sem rebinding do account imutável.
