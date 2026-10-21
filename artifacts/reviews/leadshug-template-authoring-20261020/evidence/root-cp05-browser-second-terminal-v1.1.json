@@ -1,0 +1,23 @@
+{
+  "schema": "stcon05.root-cp05-browser-terminal.v1",
+  "recorded_at_utc": "2026-10-21T16:37:46.773362+00:00",
+  "outcome": "failed-test-expectations-not-delivered",
+  "log": "foundation_documentation/artifacts/tmp/stcon05-cp05-browser-20261021T171500Z.log",
+  "log_bytes": 72069,
+  "log_sha256": "3ce9405c04f2ce9703979417b6b6a169418aa78bb7c3f92049c498eb9acfb946",
+  "browser_passed": 50,
+  "browser_failed": 2,
+  "failures": [
+    "Before saving, submit action is absent rather than disabled; assert no reachable submit and zero external effects.",
+    "After reload, editor is intentionally empty; assert correlated provenance in list then explicitly reopen own draft to inspect durable editor projection."
+  ],
+  "additional_static_findings": [
+    "Pending CREATE recovery overwrote text edited before retry because editEpoch snapshot was captured after editing; preserve form and adopt saved identity only.",
+    "Inspect first-response-only loss fixture, real replay200, discard dialog handling, duplicated ACK notices, reverse observation busy policy, local cached reload versus explicit remote refresh, and last receipt source after reload before candidate acceptance."
+  ],
+  "limits": [
+    "No full template browser journey or FRC pass yet",
+    "Repeated fixture/locator failures are not product behavior RED",
+    "No preserved runtime/provider action"
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "schema": "stcon05.root-cp05-second-all-terminal.v1",
+  "recorded_at_utc": "2026-10-21T16:26:22.464692+00:00",
+  "outcome": "failed-browser-not-delivered",
+  "log": "foundation_documentation/artifacts/tmp/stcon05-cp05-all-20261021T163500Z.log",
+  "log_sha256": "8867ad9cd4491a906985a92f6d2a010f55b9a8f22bfb3309c48af886050cacc9",
+  "log_bytes": 176254,
+  "api_unit_passed": 282,
+  "pg_passed": 379,
+  "web_unit_passed": 30,
+  "browser_passed": 50,
+  "browser_failed": 1,
+  "source_freeze_records": 36,
+  "source_changes_observed_after_terminal": [],
+  "failure": "New template browser setup createOfficialChannel expected subscription-ready UI; test resource hardcoded phone disagrees with dynamically seeded BU phone. Product own-number guard must remain unchanged. Use the owned BU phone via real authenticated BFF, as existing onboarding E2E does.",
+  "remaining": [
+    "Browser template journey has not yet executed; no FRC/template-consumer passing claim",
+    "R28 authoritative correlation provenance on reload; no inferred authorship",
+    "R30 explicit local copy into new current-context draft when old account binding is blocked",
+    "Focused browser validation then complete canonical all",
+    "Independent candidate assurance; preserved local activation/assisted template; final review/closeout"
+  ],
+  "limits": [
+    "Phase results are retained evidence, not a green all",
+    "Any source changes here occur after terminal; re-freeze for the next run",
+    "No preserved database/runtime/provider action performed"
+  ]
+}

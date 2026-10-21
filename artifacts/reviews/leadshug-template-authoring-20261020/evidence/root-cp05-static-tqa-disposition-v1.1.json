@@ -1,0 +1,49 @@
+{
+  "schema": "stcon05.root-static-tqa-signal-disposition.v1",
+  "recorded_at_utc": "2026-10-21T16:08:54.934160+00:00",
+  "outcome": "signals-require-independent-review",
+  "gate_satisfying": false,
+  "command": "test_quality_audit.sh with16 explicit absolute public --path arguments, no git discovery/default traversal",
+  "targets": [
+    "api-app/src/domain/channels/channel-credential-resolver.spec.ts",
+    "api-app/src/domain/message-templates/template-definition.spec.ts",
+    "api-app/src/domain/message-templates/template-management.dependencies.spec.ts",
+    "api-app/src/domain/message-templates/template-management.ports.spec.ts",
+    "api-app/src/integrations/meta/message-template.client.spec.ts",
+    "api-app/test/browser-server.cjs",
+    "api-app/test/helpers.ts",
+    "api-app/test/message-template-bff.e2e-spec.ts",
+    "api-app/test/message-template-drafts.e2e-spec.ts",
+    "api-app/test/message-template-management.e2e-spec.ts",
+    "api-app/test/number-onboarding-pcv.e2e-spec.ts",
+    "api-app/test/timeline-fixtures.cjs",
+    "web-app/e2e/message-templates.spec.ts",
+    "web-app/e2e/number-onboarding-freshness.ts",
+    "web-app/e2e/timeline-freshness.ts",
+    "web-app/src/api.spec.ts"
+  ],
+  "static_exit_code": 2,
+  "log": "foundation_documentation/artifacts/tmp/stcon05-cp05-static-tqa-r2-20261021T1608.log",
+  "log_sha256": "281eab4bb4d7991c99c72676e6323430c370028a4faf193e3cc0752b6798e0cf",
+  "counts": {
+    "hard_bypass": 0,
+    "test_support": 0,
+    "auth_shortcut": 0,
+    "status_only": 6,
+    "no_exception_only": 0,
+    "ambient_subject_fallback": 1,
+    "di_override": 0,
+    "mock_hint": 13
+  },
+  "root_triage": {
+    "status_only": "Six hints occur alongside real business assertions: own scoped response identity; held create replay preserving editing; confirmed commit before injected503; accepted outcome/remoteId/receipt/POST count; refusal reopening; new revision/key acceptance. Independent review must inspect the full nearby tests, not infer pass from status alone.",
+    "ambient_subject_fallback": "Unchanged inherited web/e2e/timeline-freshness.ts projects COUNT aggregate _prisma_migrations rows[0], not an ambient subject/candidate fallback; both freshness source seals remain exact. Default0 is not itself proof migrations were applied; canonical deploy/status separately supplies that evidence.",
+    "mock_hint": "Transaction boundary/clock spies are declared fault controls around real PostgreSQL commit/rollback or observation time. Must preserve real work and joins; no fake repository success or provider fallback. Independent TQA remains required.",
+    "preparation_correction": "Initial static pass omitted credential-resolver.spec.ts and test fixture paths; r2 includes all16, with unchanged full audit rules."
+  },
+  "limitations": [
+    "Canonical all still running; no final test result claimed",
+    "No-context technical-review/TQA not yet dispatched",
+    "Root triage is not an independent audit or waiver"
+  ]
+}

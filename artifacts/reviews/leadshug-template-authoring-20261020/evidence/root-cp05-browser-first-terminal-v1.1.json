@@ -1,0 +1,25 @@
+{
+  "schema": "stcon05.root-cp05-browser-terminal.v1",
+  "recorded_at_utc": "2026-10-21T16:33:33.962761+00:00",
+  "outcome": "failed-test-fixture-selectors-not-delivered",
+  "log": "foundation_documentation/artifacts/tmp/stcon05-cp05-browser-20261021T170500Z.log",
+  "log_sha256": "5dbdb6b1b3ed2f482472ad01f1d862fc1915a71f854d49251eb322ac0c6a7b91",
+  "log_bytes": 72584,
+  "browser_passed": 50,
+  "browser_failed": 2,
+  "failures": [
+    "First case selected channel from owned BU snapshot obtained before channel creation; refresh actual BFF after creation instead of bypassing identity guard.",
+    "Correlation scenario reached actual AMBIGUOUS/reconcile result, but strict text locator matched status notice and persisted editor projection. Scope each oracle explicitly; keep reload and POST1 assertions."
+  ],
+  "remaining": [
+    "Focused browser and complete consolidated all",
+    "Independent candidate assurance",
+    "Preserved local activation and assisted provider proof",
+    "Final review and closeout"
+  ],
+  "limits": [
+    "No overall GREEN; existing 50 passing specs do not prove the interrupted template journey",
+    "Controlled lost-response fixture is deliberate and not a production error",
+    "No preserved runtime or provider action performed"
+  ]
+}

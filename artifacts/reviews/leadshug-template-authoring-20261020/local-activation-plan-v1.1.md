@@ -1,6 +1,8 @@
 # ST-CON-05 v1.1 — local activation handoff
 
-Derived HOW preparation under the existing APROVADO, not runtime or migration evidence. Coder implementation, complete canonical `all`, independent adherence/security/PCV/test-quality/final review and the final source freeze precede activation. Keep one product/runtime writer. This handoff does not authorize product history, remote promotion, another credential mode or a recipient send.
+Derived HOW preparation under the existing APROVADO, not runtime or migration evidence. Coder implementation, complete canonical `all`, independent candidate adherence/security/PCV/test-quality assurance and the accepted source freeze precede activation. Following approved Ordered Steps6–7, the final no-context review consumes the candidate assurance plus the actual activation/assisted-provider evidence before closeout. Keep one product/runtime writer. This handoff does not authorize product history, remote promotion, another credential mode or a recipient send.
+
+This ordering corrects the first preparation draft, which placed final review before the very runtime/provider proof that it needs to assess. It changes HOW only: every required gate remains mandatory, no producer consumer is waived, no migration/runtime action starts before candidate assurance/preflight, and no completion is claimed before the final delivery review. The approval's Ordered Steps6–7 remain the authority.
 
 ## Preparation ownership
 

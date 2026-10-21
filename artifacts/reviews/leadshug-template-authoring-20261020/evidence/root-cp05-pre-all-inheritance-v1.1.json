@@ -1,0 +1,357 @@
+{
+  "schema": "stcon05.root-pre-all-inheritance-check.v1",
+  "recorded_at_utc": "2026-10-21T16:05:48.068850+00:00",
+  "outcome": "go",
+  "sealed_count": 30,
+  "sealed_exact": 30,
+  "shared_exact": 2,
+  "shared_changed": 9,
+  "records": [
+    {
+      "repository": "root",
+      "path": ".github/workflows/ci.yml",
+      "sealed": true,
+      "original_sha256": "16acaf6d4b807a806a50a31c75715b14e8b2e220e0e17e2bac43ec4b740318e5",
+      "current_sha256": "16acaf6d4b807a806a50a31c75715b14e8b2e220e0e17e2bac43ec4b740318e5",
+      "matches_original": true
+    },
+    {
+      "repository": "root",
+      "path": "scripts/test-channels-local.sh",
+      "sealed": true,
+      "original_sha256": "de580538f3257a85448cb3ce5030c85b90f65507da53737e4491fdf543091e42",
+      "current_sha256": "de580538f3257a85448cb3ce5030c85b90f65507da53737e4491fdf543091e42",
+      "matches_original": true
+    },
+    {
+      "repository": "root",
+      "path": "scripts/check-channels-ci-parity.py",
+      "sealed": true,
+      "original_sha256": "d838d557177bf47423a063dfb0cb12b6cdf1e319986c4340286ada097742ce13",
+      "current_sha256": "d838d557177bf47423a063dfb0cb12b6cdf1e319986c4340286ada097742ce13",
+      "matches_original": true
+    },
+    {
+      "repository": "api",
+      "path": "prisma/schema.prisma",
+      "sealed": false,
+      "original_sha256": "26444c6a102755fa5a10f1930d4a9ff256a8f76bd515cc0e10e8b1fe6fb7cf99",
+      "current_sha256": "dcdeaca442cfaf5ef263e155097b9d86db032726bb42e48468960f1ef782250e",
+      "matches_original": false
+    },
+    {
+      "repository": "api",
+      "path": "src/domain/channels/channel-credential-resolver.ts",
+      "sealed": false,
+      "original_sha256": "89cf17ac02af444092651470aee13e2d4a3bcee8d459508be818322b33b00c10",
+      "current_sha256": "7782792bb945701cc6f6d0ac1460d0504356fa8d73a4261f37112f7c892a23ac",
+      "matches_original": false
+    },
+    {
+      "repository": "api",
+      "path": "src/domain/inbox/conversations.service.ts",
+      "sealed": true,
+      "original_sha256": "c7d84f983ed61c6022424d4648e07282e7eb53c40fa9aba249618d77b3c223de",
+      "current_sha256": "c7d84f983ed61c6022424d4648e07282e7eb53c40fa9aba249618d77b3c223de",
+      "matches_original": true
+    },
+    {
+      "repository": "api",
+      "path": "src/domain/inbox/incoming.service.ts",
+      "sealed": true,
+      "original_sha256": "b0ec43187b1f48720aa899e40f979dd0ae447321581d675b84ef9c71dbd0ff42",
+      "current_sha256": "b0ec43187b1f48720aa899e40f979dd0ae447321581d675b84ef9c71dbd0ff42",
+      "matches_original": true
+    },
+    {
+      "repository": "api",
+      "path": "src/domain/inbox/incoming.typebot.integration.spec.ts",
+      "sealed": true,
+      "original_sha256": "7b0e7d75fc5809b8c950896818779402fe2bf32ef37a94d970fe081240562975",
+      "current_sha256": "7b0e7d75fc5809b8c950896818779402fe2bf32ef37a94d970fe081240562975",
+      "matches_original": true
+    },
+    {
+      "repository": "api",
+      "path": "src/integrations/evolution/evolution.client.spec.ts",
+      "sealed": true,
+      "original_sha256": "119d962fdcd9c895b75845dca74d8506147e11480d74b82e8c37f29f97c04081",
+      "current_sha256": "119d962fdcd9c895b75845dca74d8506147e11480d74b82e8c37f29f97c04081",
+      "matches_original": true
+    },
+    {
+      "repository": "api",
+      "path": "src/integrations/evolution/evolution.client.ts",
+      "sealed": true,
+      "original_sha256": "b0824e8fd4f801a239521855aaa02da5e0943a8c86c4ac8778e2f1f352821698",
+      "current_sha256": "b0824e8fd4f801a239521855aaa02da5e0943a8c86c4ac8778e2f1f352821698",
+      "matches_original": true
+    },
+    {
+      "repository": "api",
+      "path": "src/integrations/meta/meta.client.spec.ts",
+      "sealed": true,
+      "original_sha256": "d7e76f5c392afab1638363d3c851f8ce8c5223ff27c64801a79fdc8ec00d5e7a",
+      "current_sha256": "d7e76f5c392afab1638363d3c851f8ce8c5223ff27c64801a79fdc8ec00d5e7a",
+      "matches_original": true
+    },
+    {
+      "repository": "api",
+      "path": "src/integrations/meta/meta.client.ts",
+      "sealed": true,
+      "original_sha256": "9f954f6c1c2bd10030f5eed0cb42e493d6e480106bcfc3f44977cb97a716d34f",
+      "current_sha256": "9f954f6c1c2bd10030f5eed0cb42e493d6e480106bcfc3f44977cb97a716d34f",
+      "matches_original": true
+    },
+    {
+      "repository": "api",
+      "path": "src/surfaces/bff/bff.module.ts",
+      "sealed": false,
+      "original_sha256": "327f34eba67746882abc601a3817d94270cff3018d6972a8095dae530a2d6e29",
+      "current_sha256": "d4e24c7c1a5c88d4a39903383403de742a61700cb208133a77c2d6d5967c0d41",
+      "matches_original": false
+    },
+    {
+      "repository": "api",
+      "path": "src/surfaces/bff/conversations.controller.ts",
+      "sealed": true,
+      "original_sha256": "53d3cffaa258ba1ad45c21eae4ab8712e2011255b7ca14965f73221edd0cc002",
+      "current_sha256": "53d3cffaa258ba1ad45c21eae4ab8712e2011255b7ca14965f73221edd0cc002",
+      "matches_original": true
+    },
+    {
+      "repository": "api",
+      "path": "src/surfaces/public/conversations.controller.ts",
+      "sealed": true,
+      "original_sha256": "bbb5ebf085e59840f3a9e9cbc1f07c57cdc58d1a5b6f846f934fb526cc29bfd1",
+      "current_sha256": "bbb5ebf085e59840f3a9e9cbc1f07c57cdc58d1a5b6f846f934fb526cc29bfd1",
+      "matches_original": true
+    },
+    {
+      "repository": "api",
+      "path": "src/surfaces/public/public.module.ts",
+      "sealed": true,
+      "original_sha256": "00a96d54fde7061f61f4ddf2b9cef836a02ad77ca29b62ea422695b9d8f90ef8",
+      "current_sha256": "00a96d54fde7061f61f4ddf2b9cef836a02ad77ca29b62ea422695b9d8f90ef8",
+      "matches_original": true
+    },
+    {
+      "repository": "api",
+      "path": "src/surfaces/webhooks/webhooks.module.ts",
+      "sealed": true,
+      "original_sha256": "abc8fd7960fcca1ce43d21d44a90f8d4708d47e07bde9a48c0009e02dc0503a6",
+      "current_sha256": "abc8fd7960fcca1ce43d21d44a90f8d4708d47e07bde9a48c0009e02dc0503a6",
+      "matches_original": true
+    },
+    {
+      "repository": "api",
+      "path": "test/api-publica.e2e-spec.ts",
+      "sealed": true,
+      "original_sha256": "353497daddfe6ca072ee697aa60d6e9d5762dd869f164d0d3b5b7fbee1d44060",
+      "current_sha256": "353497daddfe6ca072ee697aa60d6e9d5762dd869f164d0d3b5b7fbee1d44060",
+      "matches_original": true
+    },
+    {
+      "repository": "api",
+      "path": "test/browser-server.cjs",
+      "sealed": false,
+      "original_sha256": "40e56e2d6672800acd4a00f87b942fc88b8361c770d06ee6d7c8a883a15d3390",
+      "current_sha256": "a5da3c6eb80d5344a383b6079a7a38b107a2794825fc4189891335f9c79fd600",
+      "matches_original": false
+    },
+    {
+      "repository": "api",
+      "path": "test/helpers.ts",
+      "sealed": false,
+      "original_sha256": "747dcd1a6db374c1ccb0f2a248b08d49c2ec62a46beb345cc03eea3c058d36f2",
+      "current_sha256": "117e4f85c81dda37ab30e7eb23704b31538c8c5161aa7562a844eaf11de6819c",
+      "matches_original": false
+    },
+    {
+      "repository": "api",
+      "path": "test/number-onboarding-pcv.e2e-spec.ts",
+      "sealed": false,
+      "original_sha256": "9cf66e8950a60a0ed4e620d3f24bc8285a316edf2a72a8af3590326b478e308f",
+      "current_sha256": "cc5b2c440abe2e6389ee4f4a612a9f01f2584338dc3fc4e5ee4605339ffa0bf9",
+      "matches_original": false
+    },
+    {
+      "repository": "api",
+      "path": "test/number-onboarding-typebot.e2e-spec.ts",
+      "sealed": true,
+      "original_sha256": "8c23956a13336c4091d62b9aee7383065f81c5e6575661729b044048626cbd8e",
+      "current_sha256": "8c23956a13336c4091d62b9aee7383065f81c5e6575661729b044048626cbd8e",
+      "matches_original": true
+    },
+    {
+      "repository": "api",
+      "path": "test/timeline-fixtures.cjs",
+      "sealed": false,
+      "original_sha256": "889707ec7857e8a17a850e56eb60d24e6953e59028f40880edff3756340fd23a",
+      "current_sha256": "037294e0b71678156ed88f56a3e13159bbb4e1d66216a31ff850ae3a0797d6c1",
+      "matches_original": false
+    },
+    {
+      "repository": "api",
+      "path": "prisma/migrations/20261020170000_message_inbound_window_index/migration.sql",
+      "sealed": true,
+      "original_sha256": "586e709e07736eca0908ab5dcc668cf0e0b317189b4c963b361399848a3c9710",
+      "current_sha256": "586e709e07736eca0908ab5dcc668cf0e0b317189b4c963b361399848a3c9710",
+      "matches_original": true
+    },
+    {
+      "repository": "api",
+      "path": "src/domain/channels/transport/channel-dependencies.spec.ts",
+      "sealed": true,
+      "original_sha256": "f59d838baf635c0ce0d1ebe725c88fbb0b19fac42e9b382452e31fd38e0511a3",
+      "current_sha256": "f59d838baf635c0ce0d1ebe725c88fbb0b19fac42e9b382452e31fd38e0511a3",
+      "matches_original": true
+    },
+    {
+      "repository": "api",
+      "path": "src/domain/channels/transport/channel.ts",
+      "sealed": true,
+      "original_sha256": "432796b8685d07dcc53c3a699a7b9d1469ac4fb110aea080766ec207bec8621f",
+      "current_sha256": "432796b8685d07dcc53c3a699a7b9d1469ac4fb110aea080766ec207bec8621f",
+      "matches_original": true
+    },
+    {
+      "repository": "api",
+      "path": "src/domain/inbox/outbound.service.spec.ts",
+      "sealed": true,
+      "original_sha256": "ae1f9208d660c684dca9b1ac5727001d8e57c4c9504be9be1d20ecba32e01805",
+      "current_sha256": "ae1f9208d660c684dca9b1ac5727001d8e57c4c9504be9be1d20ecba32e01805",
+      "matches_original": true
+    },
+    {
+      "repository": "api",
+      "path": "src/domain/inbox/outbound.service.ts",
+      "sealed": true,
+      "original_sha256": "63bcf773e2b4c5a5ddd688a1bb13745a0a206d995fafc665925df3fecaf394aa",
+      "current_sha256": "63bcf773e2b4c5a5ddd688a1bb13745a0a206d995fafc665925df3fecaf394aa",
+      "matches_original": true
+    },
+    {
+      "repository": "api",
+      "path": "src/integrations/channels/channel-adapter-factory.ts",
+      "sealed": true,
+      "original_sha256": "e0ebdd78e387f7ee3af902f038d22449e212c1301ffa642bbceb5a5f05d2abfc",
+      "current_sha256": "e0ebdd78e387f7ee3af902f038d22449e212c1301ffa642bbceb5a5f05d2abfc",
+      "matches_original": true
+    },
+    {
+      "repository": "api",
+      "path": "src/integrations/channels/channel-adapter-registry.ts",
+      "sealed": true,
+      "original_sha256": "655b735e239e89fbaede36689d1c22245d3804d66646f7736db991cb5099b02b",
+      "current_sha256": "655b735e239e89fbaede36689d1c22245d3804d66646f7736db991cb5099b02b",
+      "matches_original": true
+    },
+    {
+      "repository": "api",
+      "path": "src/integrations/channels/channel-transport.module.ts",
+      "sealed": true,
+      "original_sha256": "32203d3b8393a34a9effab4266683c389651d7ec197e8f9d704a77a6a37f40dc",
+      "current_sha256": "32203d3b8393a34a9effab4266683c389651d7ec197e8f9d704a77a6a37f40dc",
+      "matches_original": true
+    },
+    {
+      "repository": "api",
+      "path": "src/integrations/channels/evolution-channel.ts",
+      "sealed": true,
+      "original_sha256": "60faf1ea40fe17ad62495b0f42a2cf958defcb41e3ad72d3d2213751539b460c",
+      "current_sha256": "60faf1ea40fe17ad62495b0f42a2cf958defcb41e3ad72d3d2213751539b460c",
+      "matches_original": true
+    },
+    {
+      "repository": "api",
+      "path": "src/integrations/channels/meta-channel.ts",
+      "sealed": true,
+      "original_sha256": "997e739cf7d7231918dc97fc347bfeb32a1cd74d084ead8c64b01157022f8138",
+      "current_sha256": "997e739cf7d7231918dc97fc347bfeb32a1cd74d084ead8c64b01157022f8138",
+      "matches_original": true
+    },
+    {
+      "repository": "api",
+      "path": "src/integrations/channels/prisma-channel-resolver.ts",
+      "sealed": true,
+      "original_sha256": "acf779d89162d339e37af2abe2aa91fd1a1b292d7f5208bb672090c87a23bf4d",
+      "current_sha256": "acf779d89162d339e37af2abe2aa91fd1a1b292d7f5208bb672090c87a23bf4d",
+      "matches_original": true
+    },
+    {
+      "repository": "api",
+      "path": "test/channel-transport.e2e-spec.ts",
+      "sealed": true,
+      "original_sha256": "69ddc87cbc9328136f92ea1c1cf9293b0bc2296ad383836322c6feb4b27c6015",
+      "current_sha256": "69ddc87cbc9328136f92ea1c1cf9293b0bc2296ad383836322c6feb4b27c6015",
+      "matches_original": true
+    },
+    {
+      "repository": "web",
+      "path": "e2e/number-onboarding-freshness.ts",
+      "sealed": false,
+      "original_sha256": "880b49f8fa428568692b92a883dd00c5ce76214b1f2db5b35cafb9b0553ed9ad",
+      "current_sha256": "880b49f8fa428568692b92a883dd00c5ce76214b1f2db5b35cafb9b0553ed9ad",
+      "matches_original": true
+    },
+    {
+      "repository": "web",
+      "path": "e2e/timeline-freshness.ts",
+      "sealed": false,
+      "original_sha256": "3a06fb36e3a9bcf20a12cd8201da2daa3b567775f15e2be5f068e97e840d7f53",
+      "current_sha256": "3a06fb36e3a9bcf20a12cd8201da2daa3b567775f15e2be5f068e97e840d7f53",
+      "matches_original": true
+    },
+    {
+      "repository": "web",
+      "path": "src/api.spec.ts",
+      "sealed": false,
+      "original_sha256": "e305671fc6d9775ef3c0365ed12470fb14ea3dd71ff3aca49f153262017147d6",
+      "current_sha256": "5df822dbb810b823a7922dd15e1568b9e8a6f4e5b16541ca5452daaca642d75f",
+      "matches_original": false
+    },
+    {
+      "repository": "web",
+      "path": "src/api.ts",
+      "sealed": false,
+      "original_sha256": "dd59a37799453d3e68fc64a6477e1578956d15d1a4920af90e22ff2b83057505",
+      "current_sha256": "07f97a1e3308ccbac7a75fcd2b29a618f0e4fa4ae4645218e83741f957eb24cb",
+      "matches_original": false
+    },
+    {
+      "repository": "web",
+      "path": "src/telas/Inbox.tsx",
+      "sealed": true,
+      "original_sha256": "d70bde9ede67759d479f644598356e46aac2916a12b2ed1770c17a169118586c",
+      "current_sha256": "d70bde9ede67759d479f644598356e46aac2916a12b2ed1770c17a169118586c",
+      "matches_original": true
+    },
+    {
+      "repository": "web",
+      "path": "e2e/channel-transport.spec.ts",
+      "sealed": true,
+      "original_sha256": "b3604496727a85d7ce12c2cb6e7a479575356a61ef4c529d385047e066a8e0f3",
+      "current_sha256": "b3604496727a85d7ce12c2cb6e7a479575356a61ef4c529d385047e066a8e0f3",
+      "matches_original": true
+    }
+  ],
+  "heads": {
+    "root": {
+      "expected": "80e3940126f22a941f90dba4f5e801b6c0eb2f58",
+      "actual": "80e3940126f22a941f90dba4f5e801b6c0eb2f58",
+      "matches": true
+    },
+    "api": {
+      "expected": "db5a86758a165fac8a1ab587599c37b17890530c",
+      "actual": "db5a86758a165fac8a1ab587599c37b17890530c",
+      "matches": true
+    },
+    "web": {
+      "expected": "74b9d4b714044829796f875d00553f077c1c329d",
+      "actual": "74b9d4b714044829796f875d00553f077c1c329d",
+      "matches": true
+    }
+  },
+  "limit": "Public41path manifest and3HEAD comparison; not full final diff/adherence or test evidence."
+}

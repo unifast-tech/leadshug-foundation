@@ -1,0 +1,21 @@
+{
+  "schema": "stcon05.root-cp05-first-all-terminal.v1",
+  "recorded_at_utc": "2026-10-21T16:13:11.118397+00:00",
+  "outcome": "failed-not-delivered",
+  "log": "foundation_documentation/artifacts/tmp/stcon05-cp05-all-20261021T160614Z.log",
+  "log_sha256": "04d427e50bfd21bd87a795d426375efe7e0f7e2da356b0c8e210540c34984cc4",
+  "log_bytes": 119943,
+  "unit_passed": 282,
+  "pg_passed": 377,
+  "pg_failed": 2,
+  "web_executed": false,
+  "browser_executed": false,
+  "source_freeze_records": 36,
+  "source_freeze_mismatches_at_root_check": [],
+  "failures": [
+    "EPS receipt access expected exact index while small15row fixture selected Bitmap Heap Scan",
+    "Refusal final-projection fault returned AMBIGUOUS; chained boundary spy is a concrete fixture concern, awaits correction/verification"
+  ],
+  "root_review_R29": "Direct operation projection still nested receipt take10 and timestamp/id ordering; verify emitted SQL and use actual bounded sequence-based history. Approved D06/D08/EPS, not new external scope.",
+  "next": "Source mutations allowed after terminal; correct defects, execute Web/Browser and complete all. No preserved local DB/runtime or provider submission performed."
+}

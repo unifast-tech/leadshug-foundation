@@ -1,0 +1,198 @@
+{
+  "schema": "stcon05.root-cp05-source-freeze.v1",
+  "recorded_at_utc": "2026-10-21T16:17:03.113822+00:00",
+  "canonical_run": "bash scripts/test-channels-local.sh all",
+  "run_log": "foundation_documentation/artifacts/tmp/stcon05-cp05-all-20261021T163500Z.log",
+  "state": "running-no-result-claimed",
+  "scope": "Same36 exact public approved paths as first freeze; no private discovery",
+  "records": [
+    {
+      "path": "api-app/prisma/migrations/20261021130000_message_template_drafts/migration.sql",
+      "bytes": 4453,
+      "sha256": "3feab40fed1c9be1bac9e43464fd587d57693424c4b3012d8c4b8536661d51dd"
+    },
+    {
+      "path": "api-app/prisma/migrations/20261021150000_message_template_operations/migration.sql",
+      "bytes": 11561,
+      "sha256": "adfe490db883aae3027384db5af5ea4e4595c306860fa205276f6804fff0702b"
+    },
+    {
+      "path": "api-app/prisma/schema.prisma",
+      "bytes": 38860,
+      "sha256": "dcdeaca442cfaf5ef263e155097b9d86db032726bb42e48468960f1ef782250e"
+    },
+    {
+      "path": "api-app/src/domain/channels/channel-credential-resolver.spec.ts",
+      "bytes": 4021,
+      "sha256": "a60d142fcc335de43c5a697d9f7758f722883a1725c824dd0a4b4f0a2f7fb03b"
+    },
+    {
+      "path": "api-app/src/domain/channels/channel-credential-resolver.ts",
+      "bytes": 6500,
+      "sha256": "7782792bb945701cc6f6d0ac1460d0504356fa8d73a4261f37112f7c892a23ac"
+    },
+    {
+      "path": "api-app/src/domain/historico/catalogo.ts",
+      "bytes": 7494,
+      "sha256": "5e218ba32cab9f289c77741d43b7c3af7aa93f63cbb58aa52573c6097d77db22"
+    },
+    {
+      "path": "api-app/src/domain/historico/cobertura.ts",
+      "bytes": 7676,
+      "sha256": "b0813176bf1c8fe124a3e17cdaf825433301d0ed8c753dccb228ac098c962e24"
+    },
+    {
+      "path": "api-app/src/domain/message-templates/template-definition.spec.ts",
+      "bytes": 7219,
+      "sha256": "9a60549d1c79d73889fd2d47b7ea3bb25b8a0bf140da805f64216decc6ff9d97"
+    },
+    {
+      "path": "api-app/src/domain/message-templates/template-definition.ts",
+      "bytes": 9341,
+      "sha256": "1f28bfd19454b1e187b854c4f2e9785b59e7726032c20f82d62460d87401203c"
+    },
+    {
+      "path": "api-app/src/domain/message-templates/template-draft.service.ts",
+      "bytes": 25692,
+      "sha256": "f476f645c241340cf93fefa2202c3892f8e05dee6f4a5bcfd5918a8b624b2b82"
+    },
+    {
+      "path": "api-app/src/domain/message-templates/template-management.dependencies.spec.ts",
+      "bytes": 3510,
+      "sha256": "a03a567e5b96a348b4ab40bb18282a555d30ad3533e6efb929c5d2f2614c82b2"
+    },
+    {
+      "path": "api-app/src/domain/message-templates/template-management.ports.spec.ts",
+      "bytes": 2963,
+      "sha256": "ddf581459b66bf0eb26ec710ded050f45713e5dd5317066cea574dacf57a68bc"
+    },
+    {
+      "path": "api-app/src/domain/message-templates/template-management.ports.ts",
+      "bytes": 4562,
+      "sha256": "c7ed169d87a4224f82f8d1abe109bfa02b913bb2cb63303fc6477673f45ed693"
+    },
+    {
+      "path": "api-app/src/domain/message-templates/template-observation.service.ts",
+      "bytes": 31415,
+      "sha256": "7a860d4a021fcf7ffef321b55c4d411298503fa59b1156ae069eb553c55d1bfc"
+    },
+    {
+      "path": "api-app/src/domain/message-templates/template-submission.service.ts",
+      "bytes": 54103,
+      "sha256": "42a8a64a6ea9a83ff8859ac01177709552ccb64236adac526e678c4c90fba11c"
+    },
+    {
+      "path": "api-app/src/domain/message-templates/template-transaction-boundary.ts",
+      "bytes": 978,
+      "sha256": "ea3e0550ad5c82b263391dbfb3dae6b9e8656d219f18aa0d7c55cd5668722123"
+    },
+    {
+      "path": "api-app/src/integrations/message-templates/template-management.module.ts",
+      "bytes": 595,
+      "sha256": "aabfb344eab0b244772f0a2a8066dbae71bb24973a0a498c69af676c17f0acdd"
+    },
+    {
+      "path": "api-app/src/integrations/message-templates/template-management.resolver.ts",
+      "bytes": 5094,
+      "sha256": "2a2a57355ff9fa29774cd4dfef33d9d3fd876bdf5d8a8fe654f0c0435284b59a"
+    },
+    {
+      "path": "api-app/src/integrations/meta/message-template.client.spec.ts",
+      "bytes": 21223,
+      "sha256": "0c0a54fdea9625049b4fd127b9e111cdf9dd801c599a21ad79c0901db6381959"
+    },
+    {
+      "path": "api-app/src/integrations/meta/message-template.client.ts",
+      "bytes": 21839,
+      "sha256": "9e58d06c22aef4d458703950acbc18a44a2b14498575044b20a66c122cd7b8ee"
+    },
+    {
+      "path": "api-app/src/surfaces/bff/bff.module.ts",
+      "bytes": 6047,
+      "sha256": "d4e24c7c1a5c88d4a39903383403de742a61700cb208133a77c2d6d5967c0d41"
+    },
+    {
+      "path": "api-app/src/surfaces/bff/message-templates.controller.ts",
+      "bytes": 11245,
+      "sha256": "6da0b797597d2e3f4dd4d92d7f73333ec531db97acb77d50080fb1171fec98d3"
+    },
+    {
+      "path": "api-app/test/browser-server.cjs",
+      "bytes": 12270,
+      "sha256": "a5da3c6eb80d5344a383b6079a7a38b107a2794825fc4189891335f9c79fd600"
+    },
+    {
+      "path": "api-app/test/helpers.ts",
+      "bytes": 18758,
+      "sha256": "117e4f85c81dda37ab30e7eb23704b31538c8c5161aa7562a844eaf11de6819c"
+    },
+    {
+      "path": "api-app/test/message-template-bff.e2e-spec.ts",
+      "bytes": 28042,
+      "sha256": "521b0eb48453759040b549f652a6e6e1158a1596245029a1e8b89d8f96ff06b9"
+    },
+    {
+      "path": "api-app/test/message-template-drafts.e2e-spec.ts",
+      "bytes": 14664,
+      "sha256": "cda2cda9f4fd92bc80a84d18604b72a92f7614bcc8c41dd05b46bf792597130a"
+    },
+    {
+      "path": "api-app/test/message-template-management.e2e-spec.ts",
+      "bytes": 116374,
+      "sha256": "a8a3f985a458582e46cafa720c5b0c9ab08608b0d11ab64e14a7cc1c5f82d1c7"
+    },
+    {
+      "path": "api-app/test/number-onboarding-pcv.e2e-spec.ts",
+      "bytes": 43808,
+      "sha256": "cc5b2c440abe2e6389ee4f4a612a9f01f2584338dc3fc4e5ee4605339ffa0bf9"
+    },
+    {
+      "path": "api-app/test/timeline-fixtures.cjs",
+      "bytes": 29032,
+      "sha256": "037294e0b71678156ed88f56a3e13159bbb4e1d66216a31ff850ae3a0797d6c1"
+    },
+    {
+      "path": "web-app/e2e/message-templates.spec.ts",
+      "bytes": 23943,
+      "sha256": "c09fdd0ca2aa923f8da8570fac78dcdee1a7f48f4aa2ffa8dcc214f9a72cfeeb"
+    },
+    {
+      "path": "web-app/e2e/number-onboarding-freshness.ts",
+      "bytes": 5059,
+      "sha256": "880b49f8fa428568692b92a883dd00c5ce76214b1f2db5b35cafb9b0553ed9ad"
+    },
+    {
+      "path": "web-app/e2e/timeline-freshness.ts",
+      "bytes": 8499,
+      "sha256": "3a06fb36e3a9bcf20a12cd8201da2daa3b567775f15e2be5f068e97e840d7f53"
+    },
+    {
+      "path": "web-app/src/App.tsx",
+      "bytes": 12285,
+      "sha256": "2d9f3b3d03658a8d6d6132986346f3be8f36a2582faca29285b3d46c9920307e"
+    },
+    {
+      "path": "web-app/src/api.spec.ts",
+      "bytes": 7167,
+      "sha256": "5df822dbb810b823a7922dd15e1568b9e8a6f4e5b16541ca5452daaca642d75f"
+    },
+    {
+      "path": "web-app/src/api.ts",
+      "bytes": 15909,
+      "sha256": "07f97a1e3308ccbac7a75fcd2b29a618f0e4fa4ae4645218e83741f957eb24cb"
+    },
+    {
+      "path": "web-app/src/telas/Modelos.tsx",
+      "bytes": 39880,
+      "sha256": "9459b950dcbce3bdce96b6198a88c22e8587f45f0a9047b77466201e568997fa"
+    }
+  ],
+  "changes_from_previous_freeze": [
+    "api-app/src/domain/message-templates/template-draft.service.ts",
+    "api-app/src/domain/message-templates/template-submission.service.ts",
+    "api-app/test/message-template-bff.e2e-spec.ts",
+    "api-app/test/message-template-management.e2e-spec.ts",
+    "web-app/src/telas/Modelos.tsx"
+  ],
+  "limit": "R28 correlation copy/reload consumer proof remains pending, known while sources are frozen. Do not claim final source acceptance."
+}

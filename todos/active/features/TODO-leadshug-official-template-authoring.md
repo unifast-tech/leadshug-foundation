@@ -42,7 +42,7 @@ O usuário quer preparar no LeadsHug a mensagem que usará para iniciar atendime
 ## Delivery Status Canon (Required)
 - **Current delivery stage:** Pending
 - **Qualifiers:** none
-- **Next exact step:** CP05 liberado ao mesmo executor único após terminal CP04 final5 (282unit;375/376PG; buffer assert residual). Implementar consumidor Web e provas R25/R26; validar pacote consolidado via all antes de assurance/ativação/prova assistida. CP04 não declarado GREEN.
+- **Next exact step:** CP05 segunda execução all: API282unit/379PG e Web30unit passaram; browser50/51 interrompido no preparo do cenário. Browser focado posterior50/52 encontrou snapshot anterior ao cadastro e locator ambíguo; corrigidos pelo executor, nova execução em curso. Concluir browser/all consolidado, assurance candidata, ativação/prova assistida e revisão final. Sem claim GREEN/entrega.
 
 ## Active Work State (Required While TODO Remains In `active/`)
 - **Work state:** implementation
