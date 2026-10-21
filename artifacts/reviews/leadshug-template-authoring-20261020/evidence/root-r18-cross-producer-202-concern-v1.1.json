@@ -1,0 +1,20 @@
+{
+  "schema": "stcon05.cross-producer-202-concern.v1",
+  "recorded_at_utc": "2026-10-21T22:11:10.160810+00:00",
+  "parent_finding": "ADH-R13-02/D07, additional cross-producer subcase, no WHAT expansion",
+  "status": "source-confirmed feasible order; behavioral regression not yet authored/run; r18 all remains live unchanged",
+  "sources": [
+    "web-app/src/telas/Modelos.tsx:loadCatalogPage",
+    "web-app/src/telas/Modelos.tsx:atualizarStatus"
+  ],
+  "ordering": "catalogue leader dispatch while provider held; individual button remains enabled (catalogBusy does not set busy), increments shared observationEpoch, receives202/no observation mutation; later catalogue200 fails shared epoch guard. Inverse individual leader then catalogue202 likewise. Existing Map only coalesces same catalogue page.",
+  "risk": "A provider PAUSED observation can remain unrendered with priorAPPROVED UI after a blocked cross-route intent. Current new separateUIburst proves duplicate catalogue path only.",
+  "no_action": "Do not edit/cancel/repackage live all or claim behavioral failure. After terminal obtain exact realBFF RED bothdirections before correction and freshcurrentall.",
+  "design_opinion": "Fresh read-only /root/observation_202_authority_opinion, no inheritedcontext, gpt-6.1-sol/xhigh; routing formal-review/formal-reviewer declared guard GO. Architecture advisory only, not current delivery gate.",
+  "options_under_review": [
+    "completed meaningful result authority, 202 never promotes; keep independent context/editor guards and latest meaningful failure/empty-page barriers",
+    "buffer older results until newer pending intents classify as202 or meaningful",
+    "global cross-route coalescing may prevent approved meaningful superseding reads under held response; assess against existing tests"
+  ],
+  "delivery": "Pending, no preserved runtime/DB/provider proof or activation"
+}

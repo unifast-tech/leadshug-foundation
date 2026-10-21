@@ -1,0 +1,47 @@
+{
+  "schema": "stcon05.cross-producer-202-independent-opinion-intake.v1",
+  "recorded_at_utc": "2026-10-21T22:14:06.366682+00:00",
+  "reviewer": "/root/observation_202_authority_opinion",
+  "context": "fresh no inherited turns; bounded positive public source reads only",
+  "routing": "formal-review/formal-reviewer/gpt-6.1-sol/xhigh/declared GO before spawn; no tools/edits/tests/runtime authorised",
+  "artifact_kind": "structured intake of terminal advisory, not raw transcript or delivery GO",
+  "result": "Confirms source race both directions, recommends completed-meaningful-result shared authority with inherited derivedGET intent",
+  "evidence": [
+    "Modelos.tsx186/193/194 catalogue issue+guard before202",
+    "Modelos.tsx547/551/552 individual issue+guard before202",
+    "Modelos.tsx695/710 controls allow cross-route overlap",
+    "observation.service.ts70-74/96-100 returns202 before provider",
+    "TODO924-927 zero observation change for202 and oldsuccess/error fencing",
+    "browser359-442 tests hold afterroute.fetch and allow newermeaningful200 afterdebounce"
+  ],
+  "options": {
+    "A": "Recommended: issued intent token; only acceptedmeaningful200/error advances O(1) completion authority;202 never advances. Context/editor independent; no API/pagefence invented.",
+    "B": "Buffer old results until laterpending classified; more state/retention/error paths and delays legitimate result.",
+    "C": "Global coalescing blocks unlike catalogue cursor/individual responses and meaningful supersession already promised/tested; queue/follow-up adds unneeded behaviour."
+  },
+  "critical_constraints": [
+    "Remove issue-equality authority gates requestCounter/statusRequest/observationEpoch for observation adoption; loading ownership counters remain separate",
+    "200empty and meaningful failure also advance authority so oldsuccess cannot resurrect observation/availability/cursor/metadata",
+    "Context/editor stale response never claims authority; preserve same-resource observedFence comparison",
+    "Automatic catalogueGET after individual success inherits original refresh intent, not new sequence",
+    "No new provider reads or changes to publicDTO/backendlease/quotas"
+  ],
+  "derived_get_counterexample": "Old individual200 held afterroute.fetch; newercatalogue providerPAUSED starts; releaseindividual causes automaticGET toreadoldAPPROVED. A fresh sequence onthatderivedGET would incorrectly beat and discard latercatalogue200PAUSED. Inheritoriginalintent.",
+  "required_proofs": [
+    "RealBFF/PG provider-held cataloguePAUSED→individual202→leader200→bothDOMPAUSED/ineligible",
+    "Inverse individualPAUSED→catalogue202",
+    "202 delivered after200, notjustbefore",
+    "DerivedGET cannotoutvote newerpendingcatalogue intent",
+    "Newer failure or200empty blocks heldoldsuccess",
+    "Existing100BFF and5x20UI coalescing + heldmeaningfulsuccessbothorders remain intact"
+  ],
+  "root_disposition": "Integrated as additional ADH-R13-02 subcase. B coalescing of duplicatecatalogue clicks remains valid for efficiency, but insufficient as shared producer authority. Select A for shared observation completion, retaining distinct coalescing policy. Within D07/D08 HOW; no WHAT renewal. First author meaningful realboundary regressions then RED before product correction; r18all must finish unchanged.",
+  "positions_root_assessment": {
+    "correctness": "Accept only with202 noauthority, derivedGETintentinheritance, failure/empty barriers and contextownership preserved",
+    "performance": "O(1) authority metadata, no extra network calls; current cataloguecoalescing remains",
+    "elegance": "One shared meaningfullycompleted observation owner avoids bufferedresponse registry or blockingdifferent operations",
+    "structural_soundness": "Separate response authority from in-flight/loading IDs; maintain backend persistentfence as independent writeauthority",
+    "operational_fit": "Existing endpoints/fixtures/runner only; no migration/publicDTO/runtime change"
+  },
+  "delivery": "Pending"
+}

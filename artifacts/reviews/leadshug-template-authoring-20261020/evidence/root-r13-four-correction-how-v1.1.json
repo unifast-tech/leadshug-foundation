@@ -1,0 +1,17 @@
+{
+  "schema": "stcon05.r13-four-correction-how.v1",
+  "recorded_at_utc": "2026-10-21T21:50:02.883372+00:00",
+  "authority": "Existing approved ST-CON-05 v1.1 D04/D07/D08; no WHAT/public DTO/schema/migration extension",
+  "execution_status": "GO bounded four correction after independent root browser/API semanticRED terminal verification; staticfreeze and review required before all",
+  "single_writer": "template_validation_recovery; no new source paths or parallel writers",
+  "202_options": {
+    "A": "Track blocked202 separately while preserving100UI requests. Requires response authority for meaningful failures/empty pages and cross-status reads without page-level fence; higher race/maintenance risk. Not selected.",
+    "B": "Selected: synchronous ref keyed by captured context/BU/channel, coalesce UI catalogue refresh attempts BEFORE incrementing request or observation epochs. finally clears only its own record. Existing backend lease/quotas remain authoritative across clients; no API change. Lower incidental complexity and remote load.",
+    "C": "No correction leaves actual PAUSED provider observation unrendered, violating D07. Rejected."
+  },
+  "mandatory_proof_split": "Keep100actual authenticated APIRequestContext BFF POSTs5x20/99blocked202/oneheldproviderlist/one200completepayload. Separate100UI attempts phase must assert1actualBFF/oneproviderread and editor+cataloguePAUSED/ineligible after priorAPPROVED. No claim100UI=>100BFF after coalescing. Retain existingstale/failure/quota/crosscontext assertions.",
+  "recovery": "Captured context+editor guard BEFORE operation result restoration, other setters and subsequent draftGET; preserve dirtytext/immutableoperation metadata. Do not compare fences across distinct resources as ownership. Existing guarded call sites retained.",
+  "projection": "Resolve authorized current channel context; use exact indexed observation key only if immutable tenant/BU/channel/resource/account identity matches original association, allowing generation/credential renewal. Operation/ACK binding stays unchanged. If no current authorized matching row, exact original historical row may be null or explicitly stale/unavailable/ineligible. No providercall or observation/receipt write on GET; no listN+1/pagewalking.",
+  "timestamp": "Editor/catalogue render semantic time/dateTime from actual shared TemplateSummary.observedAt with accessible label; receipt time remains distinct. Later catalogue observation updates both. TTL/failure retain truthful time while removing eligibility.",
+  "validation": "API RED terminal diagnosis; bounded product/test delta and static checks/sourcefreeze; one fresh canonical all; independent affected full TQA/performance/security/adherence follow-up, prior resolutions carried. No preserved runtime/DB/tunnel/Meta action before candidate gates."
+}

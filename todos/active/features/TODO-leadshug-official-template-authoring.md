@@ -42,7 +42,7 @@ O usuário quer preparar no LeadsHug a mensagem que usará para iniciar atendime
 ## Delivery Status Canon (Required)
 - **Current delivery stage:** Pending
 - **Qualifiers:** none
-- **Next exact step:** corrigir4lacunas confirmadas pela assurance r13 dentro de D04/D07/D08: observação de recuperação atrasada, líder200 descartado após202, reidratação após reauth mesma conta e observedAt visível. Criar regressões reais antes das correções, validar RED com causa/oráculos corretos, corrigir e executar novo all/follow-up afetado. all770r13 continua histórico verdadeiro; entrega Pending. Migração/ativação/prova real aguardam fechamento dessas lacunas. Contenção da credencial aceita pela revisão de segurança.
+- **Next exact step:** revisar novas regressões browser test-only do subcaso ADH-R13-02:202 cruzado entre catálogo e status invalida único200; produto r18 ficará congelado até RED real. allr18 terminou773pass/1falha de rótulo acessível (dadosobservedAt e ambasprovasFRC passaram); root conferiu fontes/runtime/log. Parecer independente recomenda autoridade de resultado significativo compartilhada,202noop, GETderivada herda intenção original e barreiras de falha/200vazio. Rootreview/freeze antes de1browserRED; depois corrigir owner/label, novoall e assuranceafetada. Entrega Pending; migração/ativação/prova real aguardam gates.
 
 ## Active Work State (Required While TODO Remains In `active/`)
 - **Work state:** implementation

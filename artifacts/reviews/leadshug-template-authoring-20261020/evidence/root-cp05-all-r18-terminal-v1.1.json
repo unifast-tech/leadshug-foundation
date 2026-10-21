@@ -1,0 +1,78 @@
+{
+  "schema": "stcon05.all-r18-root-terminal.v1",
+  "recorded_at_utc": "2026-10-21T22:17:48.096128+00:00",
+  "outcome": "not_green; no automaticretry/candidateassurance/activation",
+  "log": "foundation_documentation/artifacts/tmp/st-con-05-all-r18-itETro/canonical-all.log",
+  "log_bytes": 209587,
+  "log_sha256": "ffcce1ba34d47965cd72fc0209c5f28ac5b68ea27ad0b553a2a9959d2013d160",
+  "receipt": "foundation_documentation/artifacts/tmp/st-con-05-all-r18-itETro/runner-exit.txt",
+  "exit": 1,
+  "freeze": "foundation_documentation/artifacts/reviews/leadshug-template-authoring-20261020/evidence/executor-cp05-static-source-freeze-r18-frc-ui-oracle-v1.1.json",
+  "freeze_sha256": "51ee8f8992f17aaf0dcc6b3170108445b5f5f536ef6204b798d647a3f2f91eb8",
+  "source38_exact": true,
+  "protected30_exact": true,
+  "heads3_exact": true,
+  "counts": {
+    "api_unit_passed": 284,
+    "api_postgresql_passed": 398,
+    "web_unit_passed": 31,
+    "playwright_passed": 60,
+    "playwright_failed": 1,
+    "playwright_total": 61,
+    "playwright_pure_consumer": 1,
+    "playwright_browser": 60,
+    "total_passed": 773,
+    "total_failed": 1,
+    "total": 774
+  },
+  "proofs": [
+    {
+      "path": "foundation_documentation/artifacts/tmp/st-con-05-all-proof-r18-root/pre-worker-freshness.json",
+      "sha256": "7f626c19bd83d47e148dd150afd631488121c1b215b0615e99cfc24e0e9e7f6f"
+    },
+    {
+      "path": "foundation_documentation/artifacts/tmp/st-con-05-all-proof-r18-root/attestation-browser-authority.json",
+      "sha256": "a8251edc5a7b195c307b9093eb39f252679b4aaf29de2f38085d0ccd354b0558"
+    }
+  ],
+  "source_capture_utc": "2026-10-21T22:08:34.950Z",
+  "runtime_capture_utc": "2026-10-21T22:08:32.026Z",
+  "served_dist_sha256": "8dc9ab1ca9ddc25af13a1fe76df688f39693be64fdc20e9a9082a60a30b48f99",
+  "frc": {
+    "TEMPLATE-FRC-EVIDENCE": {
+      "profile": "FRC-SP-H",
+      "batches": 5,
+      "retriggersPerBatch": 20,
+      "attempted": 100,
+      "blockedBeforeLeaderRelease": 99,
+      "blockedStatusCounts": {
+        "accepted202": 99
+      },
+      "dispatchedProviderListCallsWhileLeaderHeld": 1,
+      "quotaBypass": false,
+      "note": "The original 100-BFF-call proof remains direct and independent of the UI coalescing proof; every call arrived while one provider-list leader was held.",
+      "completed": 100,
+      "completedLeaderResponses": 1,
+      "completedPageAvailable": true,
+      "completedPageItems": 1,
+      "finalStatusCounts": {
+        "accepted202": 99,
+        "completed200": 1
+      }
+    },
+    "TEMPLATE-FRC-UI-EVIDENCE": {
+      "waves": 5,
+      "attemptsPerWave": 20,
+      "uiAttempts": 100,
+      "bffRefreshRequests": 1,
+      "providerListCallsAcrossBothPhases": 2,
+      "editorStatus": "PAUSED",
+      "catalogStatus": "PAUSED",
+      "eligible": false
+    }
+  },
+  "failure": "message-templates.spec.ts1130: actual time datetime and localized visible date present, but aria-label Observado em absent. Firstindividual datetime and later shared editor datetime assertions passed; cataloguetime label and later TTL/failure timestamp assertions not reached.",
+  "classification": "Narrow asserted accessible-time-label gap, not lost observedAt or infrastructure failure. Correct label alongside next bounded source correction; no testweakening/retry on its own.",
+  "new_remaining_concern": "root-r18-cross-producer-202-concern-v1.1.json and independentopinion confirm static feasible crossroute202 invalidates sole200; not behavioralRED yet, author/run before correction.",
+  "next": "Test-only cross-producer regression package on unchanged productr18; rootreview/freeze then one canonicalbrowserRED. Only afterward correct shared meaningful authority + inheritedderivedGET + label. No preservedruntime/DB/provideraction."
+}

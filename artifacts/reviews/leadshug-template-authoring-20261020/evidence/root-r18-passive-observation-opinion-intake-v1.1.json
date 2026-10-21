@@ -1,0 +1,40 @@
+{
+  "schema": "stcon05.passive-observation-independent-opinion-intake.v1",
+  "recorded_at_utc": "2026-10-21T22:24:50.419112+00:00",
+  "reviewer": "/root/observation_202_authority_opinion",
+  "kind": "same bounded read-only advisory continuation, no delivery GO or code/tests/runtime",
+  "status": "terminal; source-confirmed feasible stale passive hydration in same editor",
+  "evidence": [
+    "Modelos.tsx154-156 compares saved onlyagainstindividualStatus, ignoring current catalogue",
+    "206: catalogue doesnotfillnullindividual",
+    "465 submit success restore",
+    "475/477/478-486 catch operationGET→oldrestore→newdraftGETmetadatawithoutrestoringnewerobservation",
+    "505-513 recuperar prefers refreshed.savedObservation via?? evenifdraftGETnewer",
+    "529-537 consultarOperacao existingassociationguard butcatalogueignored",
+    "339 abrirRascunho direct savedObservation write",
+    "backend observation174-196 GETsnapshot validwhenfetched mayagewhileheld"
+  ],
+  "root_disposition": "Integrated into same D07 consumer-observation owner correction; no WHAT/publicAPI/schema change. Require realBFF stale passive GET regression before implementation; separate operation/draftmetadata admission from observation admission.",
+  "recommended_how": [
+    "Passive reads never issue/promote global meaningful authority",
+    "Immediately before each passiveHTTP capture lastCOMPLETEDmeaningful watermark, notlastissuedpendingintent",
+    "Context/editor/requestownership guards remain; metadata/ACK/receipts/dirtytext apply independently evenwhen savedObservation rejected",
+    "Admit passiveobservation onlyifcapturedbarrierstillvalid; selectnewestcurrentlyknown SAMEremote/context fromcacheincludingcatalogue+individual, nevercapturedoldReactclosure",
+    "Rejectlowerfence; equal-fencepreserves availability/eligibility restrictions; catalogueSummarywithouteligibleForUse cannotgrant extra drafteligibility",
+    "Rejectedoldpassivecandidate maystillhydrateeditorfromcurrentPAUSEDcache; subsequentdraftGET capturesnewwatermarkwithoutpromotingandmayrestorecurrentrow",
+    "Offerbothrecoveredsaved+draftsavedsnapshotstoselector, not??presencepriority",
+    "Passive doesnotclearfailure/empty200barrier/cataloguecursor/availability"
+  ],
+  "tests_requested": [
+    "Actualcatch oldAPPROVEDoperationGETheldafterfetch→newcataloguePAUSED→release; bothDOMPAUSED, ACK/receipt+oneoriginalPOST and dirtytextkept",
+    "Recoveredoldoperation versusnewdraftGET, openGETheldwhilecatalogueadvances; openingBmustnotdiscardvalidA catalogue",
+    "Focusedselectorlowerfence/equalunavailable/failure-emptybarrier/202noauthority checks; meaningfulrealbrowserprimaryRED stillmandatory"
+  ],
+  "positions": {
+    "performance": "Linear over alreadyloadeditems or constantindexedcache; no HTTP/newdatafetch",
+    "elegance": "Narrow component-local ref/reducer observationowner, no genericstoreframework",
+    "structural_soundness": "Separate metadataauthority, observationwatermark andsame-resourcefence; preserve draft-specificeligibility",
+    "operational_fit": "ExistingWebsources/fixtures/runner, no actualexternalmutation"
+  },
+  "limits": "Onlysourcefeasibility independentlyconfirmed; no new behavioralRED untilexecutor-authoredcasesrun. Existingallr18 onlyknownaria-label failure; no retroactiveclaim. Newbrowser file beingedited wasnotreadbyreviewer."
+}

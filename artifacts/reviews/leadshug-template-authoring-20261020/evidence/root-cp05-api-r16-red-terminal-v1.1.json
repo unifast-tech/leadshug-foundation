@@ -1,0 +1,22 @@
+{
+  "schema": "stcon05.r16-api-red-root-terminal.v1",
+  "recorded_at_utc": "2026-10-21T21:53:44.726274+00:00",
+  "outcome": "behavioral_red_confirmed",
+  "log": "foundation_documentation/artifacts/tmp/st-con-05-r16-api-red-n2ObJU/api.log",
+  "log_bytes": 149208,
+  "log_sha256": "3552e1b8ba3db62a47a5c7158ee4483a753e246c2f2152ed7344a3d2b4081c40",
+  "receipt": "foundation_documentation/artifacts/tmp/st-con-05-r16-api-red-n2ObJU/exit-code.txt",
+  "exit": 1,
+  "freeze": "foundation_documentation/artifacts/reviews/leadshug-template-authoring-20261020/evidence/executor-cp05-static-test-freeze-r16-reviewed-test-oracles-v1.1.json",
+  "freeze_sha256": "d200eaca840eabda91a9e53598f379b62b0e509da46ed1d9920a12ab242ccf3c",
+  "source38_exact": true,
+  "protected30_exact": true,
+  "heads3_exact": true,
+  "api_unit_passed": 284,
+  "api_postgresql_passed": 397,
+  "api_postgresql_failed": 1,
+  "api_test_files": 30,
+  "confirmed_red": "message-template-management.e2e-spec.ts524: current-generation explicit refresh200PAUSED succeeds; draftGET/operationGET200; draft.savedObservation null rather than exact current timestamp/fence/status.",
+  "limits": "Fails on first projection assertion. Operation savedObservation, zero additional provider reads/writes, unchanged bindings/receipts and changed-account negative are authored but later assertions NOT reached. Browser not run in api mode. Runtime/DB/Meta preserved.",
+  "next": "GO bounded four correction HOW implementation; staticfreeze/rootreview before one fresh canonical all; no automatic retry."
+}
