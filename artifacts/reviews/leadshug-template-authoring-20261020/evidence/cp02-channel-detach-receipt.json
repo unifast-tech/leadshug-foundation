@@ -1,0 +1,72 @@
+{
+  "schema": "stcon05-cp02-channel-detach-receipt-v1",
+  "recorded_at_utc": "2026-10-21T12:30:00Z",
+  "command": "bash scripts/test-channels-local.sh api",
+  "scope": "CP02 correction: permit channel detach while preserving local draft/revisions and prevent replacement-channel authorization; no real provider or human database",
+  "regression": {
+    "red": "The original draft->BuChannel RESTRICT foreign key made ChannelsService.desconectar fail at buChannel.delete with P2003.",
+    "fix": "channelId remains immutable historical text without a BuChannel FK; the composite BU/tenant FK now uses ON DELETE RESTRICT.",
+    "evidence": "Test disconnects the channel, verifies draft and revision remain, verifies BU delete is RESTRICT and the channel FK is absent, reuses the same provider resource identity under a new BuChannel id, and verifies the old draft save fails 409."
+  },
+  "terminal": {
+    "result": "PASS",
+    "runtime": "Node v22.23.3 / disposable PostgreSQL 16",
+    "migration": "deploy and migrate status passed",
+    "lint": "passed",
+    "build": "passed",
+    "unit": "24 files / 234 tests passed",
+    "e2e": "28 files / 344 tests passed",
+    "cleanup": "validation namespace removed"
+  },
+  "integrity": {
+    "sealed_manifest": "foundation_documentation/artifacts/reviews/leadshug-template-authoring-20261020/evidence/inherited-working-tree-v1.1.json",
+    "sealed_records": 30,
+    "sealed_mismatches_before_final_runner": 0,
+    "sealed_mismatches_after_final_runner": 0,
+    "admitted_shared_source": "foundation_documentation/artifacts/reviews/leadshug-template-authoring-20261020/evidence/inherited-shared-sources-v1.1.json",
+    "admitted_shared_records": 11,
+    "changed_shared_paths": [
+      "api-app/prisma/schema.prisma",
+      "api-app/test/helpers.ts"
+    ],
+    "other_admitted_shared_records_unchanged": 9
+  },
+  "runs": [
+    {
+      "log": "foundation_documentation/artifacts/tmp/stcon05-cp02-channel-detach-red.log",
+      "result": "RED: PostgreSQL integration reproduced P2003 at message_template_drafts_channel_id_bu_id_fkey; other 343 E2E tests passed.",
+      "sha256": "ca5125ac17cb34ff8dfbf284542d282adbf86a516cb1f3f632015011b93b095e"
+    },
+    {
+      "log": "foundation_documentation/artifacts/tmp/stcon05-cp02-channel-detach-green.log",
+      "result": "Intermediate GREEN: migration/lint/build/unit and 28 E2E suites / 344 tests passed; superseded because replacement fixture used a different provider resource.",
+      "sha256": "bab703c2a076a11937f3655ba4ff6e6bbcee4a8aa6c56f92e489aecbdfe2efcd"
+    },
+    {
+      "log": "foundation_documentation/artifacts/tmp/stcon05-cp02-channel-detach-final-green.log",
+      "result": "FINAL PASS: canonical api runner; migration/status, lint, build, 24 unit suites / 234 tests and 28 PostgreSQL E2E suites / 344 tests passed; same provider resource identity reused under a new channel id; disposable namespace cleanup completed.",
+      "sha256": "adbaef3f10ba799343532dd6af9979b4c4d7dba37e6a08fd66db180ae03ba1c9"
+    }
+  ],
+  "source_sha256": {
+    "api-app/prisma/schema.prisma": "7f20189eb6b094bb36897f8840bb7f9a3dd88a60fd2d8431d2ce8d61ccc891ed",
+    "api-app/prisma/migrations/20261021130000_message_template_drafts/migration.sql": "296bce2feb8bb49702954e22cb98d95b6c7881995952ee5c1f2c7b66b396f4bd",
+    "api-app/test/message-template-drafts.e2e-spec.ts": "45addeeebee0341f5d71dc6b452fc49760734260ff25790adae4b7c60e8ce1d9",
+    "api-app/src/domain/message-templates/template-draft.service.ts": "75ad2af107ab431d2ab77d230e94a931b7c3573566c2c56fdc89aa795f2188c1",
+    "api-app/src/domain/message-templates/template-definition.ts": "a77a62ff5b5bd88e99603f54c915a9d58333f46edca5ffe78423ab6e99a318b8",
+    "api-app/src/domain/message-templates/template-definition.spec.ts": "5240ee3f51ffb890ae341b0a8ac483b9b6d84581240d4d09aa1e2ccf3cba3a80",
+    "api-app/src/domain/message-templates/template-management.dependencies.spec.ts": "a52ee7ae126135a01f75cfbff3fc5c5e0815451e132743a84ca7048b64860443",
+    "api-app/test/helpers.ts": "4d98727935d0d1b65da9d2901806491208bb3234e85511e1d3f3601d4e4b35cc"
+  },
+  "source_notes": {
+    "api-app/prisma/schema.prisma": "CP02 schema: draft BU FK RESTRICT and channelId history scalar without transient-channel FK",
+    "api-app/prisma/migrations/20261021130000_message_template_drafts/migration.sql": "CP02 additive migration: immutable historical channel reference, no BuChannel FK, BU delete RESTRICT",
+    "api-app/test/message-template-drafts.e2e-spec.ts": "PostgreSQL draft persistence, detach/recreate same resource, BU restrict, authorization and CAS regressions",
+    "api-app/src/domain/message-templates/template-draft.service.ts": "Draft service and fail-closed binding on a replacement BuChannel id",
+    "api-app/src/domain/message-templates/template-definition.ts": "Definition normalization and persisted/unpersisted preview fingerprint",
+    "api-app/src/domain/message-templates/template-definition.spec.ts": "Unit parser and isolated serialized UTF-8 16 KiB bound",
+    "api-app/src/domain/message-templates/template-management.dependencies.spec.ts": "Domain-to-adapter dependency harness",
+    "api-app/test/helpers.ts": "Fixture cleanup for revisions and drafts"
+  },
+  "next_checkpoint_proposal": "CP03 scoped template management resolver/provider/Meta HTTP raw contract; no BFF/UI or durable submission operation."
+}

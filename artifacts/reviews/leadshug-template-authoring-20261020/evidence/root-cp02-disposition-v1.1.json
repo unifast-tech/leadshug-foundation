@@ -1,0 +1,22 @@
+{
+  "schema": "stcon05-checkpoint-disposition-v1",
+  "recorded_at_utc": "2026-10-21T12:31:19.631881+00:00",
+  "checkpoint": "CP02-final",
+  "disposition": "accepted-with-CP02-R1-resolved; remaining approved contract not delivered",
+  "executor_receipt": "evidence/cp02-channel-detach-receipt.json",
+  "executor_receipt_sha256": "92127ec4f593d1b8c9bea500a4e63785606f0a66dd5001b9648d501058f62902",
+  "independent_root_checks": {
+    "log_hashes_compared": 3,
+    "hash_mismatches": [],
+    "sources_read": [
+      "schema.prisma draft models",
+      "new05 migration",
+      "draft PG regression",
+      "existing ChannelsService.desconectar implementation"
+    ],
+    "regression": "same external resource/identity; different ephemeral channel ID; disconnect succeeds; historical draft and revision retained; replacement cannot save it",
+    "test_result": "canonical api migration/status/lint/build;234unit and344PG; disposable cleanup complete"
+  },
+  "scope_limits": "No all/Web/browser/BFF/Meta runtime/human DB evidence; D09 capability and CP02-R2 same-account rotation still next CP03.",
+  "next": "Conditional serial CP03 handoff activated on final green; same executor and approval."
+}

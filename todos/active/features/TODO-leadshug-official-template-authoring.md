@@ -42,7 +42,7 @@ O usuário quer preparar no LeadsHug a mensagem que usará para iniciar atendime
 ## Delivery Status Canon (Required)
 - **Current delivery stage:** Pending
 - **Qualifiers:** none
-- **Next exact step:** Fechar revisão CP02: green3 api234unit+343PG com logs/hashes conferidos; corrigir FK que bloquearia desconectar canal com rascunho e provar preservação do histórico. Depois CP03 integração scoped/propósito explícito e HTTP templates dedicado, sob a mesma aprovação; all/assurance/tela/ativação/prova assistida pendentes.
+- **Next exact step:** CP02 final aceito com234unit/344PG e regressão desconectar/recriar mesma identidade. Executor único iniciou CP03: propósito scoped template-management, resolver/provider/DI e Meta HTTP de modelos com contratos raw; operações duráveis/BFF/tela/all/assurance/ativação/prova assistida ainda pendentes.
 
 ## Active Work State (Required While TODO Remains In `active/`)
 - **Work state:** implementation
@@ -951,3 +951,11 @@ CP02 autorizado serialmente no mesmo contrato: src/domain/message-templates/**, 
 ### CP02 — revisão do primeiro green durável
 
 Recibo evidence/cp02-terminal-receipt.json: api green3 terminal, migration deploy/status/lint/build,234unit e343PG. Root leu serviço/schema/migration/nova suíte e conferiu SHA256 dos cinco logs reais, sem declarar all ou D09 completo. A revisão identificou FK draft→BuChannel Restrict incompatível com ChannelsService.desconectar, que remove o canal efêmero após preservar a identidade. Correção serial no schema/migration05 e regressão PG da desconexão/preservação/recriação requisitadas ao mesmo executor; nenhum arquivo Channel herdado será alterado. Reautorização da mesma conta e reconfirmação de generation atual permanecem requisito D04 do próximo checkpoint, sem rebinding do account imutável.
+
+### CP03 — handoff serial condicionado ao terminal CP02
+
+Sob a aprovação v1.1 existente, mesmo executor único gpt-6-luna/medium pode iniciar CP03 após api final verde/recibo CP02 e conferência30sealed. Routing GO: evidence/routing-cp03-v1.1.json. Paths ativos limitados a domínio message-templates, integrações message-templates, NOVOS integration/meta/message-template*.ts, ChannelCredentialResolver e spec novo, test/message-template*.e2e-spec.ts/helpers só se necessário à DI. Novo purpose template-management, contexto/conta scoped, provider bound e grant remoto lazy uma vez por operação; módulo importa ChannelTransportModule/owner único, DItoken abstrato. DTOs de catálogo/semântica e outcomes tipados mais contratos HTTP raw independentes; sem mudar MetaClient/Channel/OutboundService/send gate. Reauth mesma conta reconfirma contexto/fingerprint atuais sem rebinding; conta diferente CONTA_ALTERADA. Serviços de domínio não filtram provider concreto. CP03 não inclui BFF/tela/operações duráveis, outra migration, banco humano, provider verdadeiro, runtime ou Git produto. Logs reais e recibos cp03* pertencem ao executor; TODO/README/root* ao root. Parar ao fim para revisão da fronteira antes de operações duráveis.
+
+### CP02 final aceito; CP03 iniciado
+
+CP02-R1 resolvido: o RED reproduziu P2003; final green migração/status/lint/build/234unit/344PG com cleanup descartável. Teste reusa o mesmo externalResourceId/ProviderResourceIdentity sob outro BuChannel ID e impede herança do draft antigo. Root leu a correção e conferiu SHA256 dos3logs; evidence/cp02-channel-detach-receipt.json e root-cp02-disposition-v1.1.json. Schema mantém channelId histórico sem FK efêmera e BU Restrict preservando snapshots. CP03 plano informativo recebido e handoff condicional ativado; same-account generation/credential refresh e fingerprint atuais seguem D04, sem novo WHAT/renovação de aprovação. Não são prova de all ou implementação/entrega completa.
