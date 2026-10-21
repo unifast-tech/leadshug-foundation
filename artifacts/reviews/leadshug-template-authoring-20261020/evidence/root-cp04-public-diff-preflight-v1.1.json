@@ -1,0 +1,294 @@
+{
+  "blocked": false,
+  "violations": [],
+  "context": {
+    "todo_path": "/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/todos/active/features/TODO-leadshug-official-template-authoring.md",
+    "repo_root": "/mnt/c/unifast/leadshug/leadshug_now_docker",
+    "contract_repository_count": 4,
+    "repositories": {
+      "root": {
+        "path": "/mnt/c/unifast/leadshug/leadshug_now_docker",
+        "baseline_commit": "80e3940126f22a941f90dba4f5e801b6c0eb2f58",
+        "actual_change_count": 3
+      },
+      "api": {
+        "path": "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app",
+        "baseline_commit": "db5a86758a165fac8a1ab587599c37b17890530c",
+        "actual_change_count": 46
+      },
+      "web": {
+        "path": "/mnt/c/unifast/leadshug/leadshug_now_docker/web-app",
+        "baseline_commit": "74b9d4b714044829796f875d00553f077c1c329d",
+        "actual_change_count": 6
+      },
+      "foundation": {
+        "path": "/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation",
+        "baseline_commit": "83ed072337330465f4be3b5ced739b461e33b602",
+        "actual_change_count": 66
+      }
+    },
+    "actual_change_count": 121,
+    "expected_change_count": 121,
+    "forbidden_change_count": 0,
+    "unclassified_change_count": 0
+  },
+  "public_discovery_contract": {
+    "mode": "positive pathspecs before all diff/untracked discovery",
+    "coverage": "API src/test/prisma and exact public manifests/configs; Web src/e2e/public and public configs; root public tooling/config; Foundation full",
+    "excluded_private_tree_inspected": false,
+    "unchanged_classifier_sha256": "63326e57e58af1aed1e02b2b5f155dbde7624bc2c639b1dc295a3da600dc0e34",
+    "wrapper_sha256": "6c63c2435bfe3bd558c5dac567f4c62b6fcbc4f027ff197dd80409b11ce70176",
+    "commands": [
+      {
+        "repository": ".",
+        "arguments": [
+          "rev-parse",
+          "--show-toplevel"
+        ]
+      },
+      {
+        "repository": ".",
+        "arguments": [
+          "rev-parse",
+          "--verify",
+          "80e3940126f22a941f90dba4f5e801b6c0eb2f58^{commit}"
+        ]
+      },
+      {
+        "repository": "api-app",
+        "arguments": [
+          "rev-parse",
+          "--show-toplevel"
+        ]
+      },
+      {
+        "repository": "api-app",
+        "arguments": [
+          "rev-parse",
+          "--verify",
+          "db5a86758a165fac8a1ab587599c37b17890530c^{commit}"
+        ]
+      },
+      {
+        "repository": "web-app",
+        "arguments": [
+          "rev-parse",
+          "--show-toplevel"
+        ]
+      },
+      {
+        "repository": "web-app",
+        "arguments": [
+          "rev-parse",
+          "--verify",
+          "74b9d4b714044829796f875d00553f077c1c329d^{commit}"
+        ]
+      },
+      {
+        "repository": "foundation_documentation",
+        "arguments": [
+          "rev-parse",
+          "--show-toplevel"
+        ]
+      },
+      {
+        "repository": "foundation_documentation",
+        "arguments": [
+          "rev-parse",
+          "--verify",
+          "83ed072337330465f4be3b5ced739b461e33b602^{commit}"
+        ]
+      },
+      {
+        "repository": ".",
+        "arguments": [
+          "diff",
+          "--ignore-submodules=all",
+          "--name-status",
+          "--find-renames",
+          "--no-ext-diff",
+          "-z",
+          "80e3940126f22a941f90dba4f5e801b6c0eb2f58",
+          "--",
+          ".github",
+          "scripts",
+          "README.md",
+          "docker-compose.yml",
+          "docker-compose.channels.yml",
+          "docker-compose.testing.yml",
+          "Dockerfile",
+          ".dockerignore",
+          ".gitignore",
+          ".gitmodules",
+          "AGENTS.md",
+          "package.json",
+          "package-lock.json"
+        ]
+      },
+      {
+        "repository": ".",
+        "arguments": [
+          "ls-files",
+          "--others",
+          "--exclude-standard",
+          "-z",
+          "--",
+          ".github",
+          "scripts",
+          "README.md",
+          "docker-compose.yml",
+          "docker-compose.channels.yml",
+          "docker-compose.testing.yml",
+          "Dockerfile",
+          ".dockerignore",
+          ".gitignore",
+          ".gitmodules",
+          "AGENTS.md",
+          "package.json",
+          "package-lock.json"
+        ]
+      },
+      {
+        "repository": "api-app",
+        "arguments": [
+          "diff",
+          "--ignore-submodules=all",
+          "--name-status",
+          "--find-renames",
+          "--no-ext-diff",
+          "-z",
+          "db5a86758a165fac8a1ab587599c37b17890530c",
+          "--",
+          "src",
+          "test",
+          "prisma",
+          "package.json",
+          "package-lock.json",
+          ".env.example",
+          ".dockerignore",
+          ".gitignore",
+          "docker/entrypoint.sh",
+          "Dockerfile",
+          "eslint.config.mjs",
+          "nest-cli.json",
+          "railway.json",
+          "tsconfig.json",
+          "tsconfig.build.json",
+          "vitest.config.ts",
+          "vitest.config.e2e.ts",
+          "vitest.config.cov.ts"
+        ]
+      },
+      {
+        "repository": "api-app",
+        "arguments": [
+          "ls-files",
+          "--others",
+          "--exclude-standard",
+          "-z",
+          "--",
+          "src",
+          "test",
+          "prisma",
+          "package.json",
+          "package-lock.json",
+          ".env.example",
+          ".dockerignore",
+          ".gitignore",
+          "docker/entrypoint.sh",
+          "Dockerfile",
+          "eslint.config.mjs",
+          "nest-cli.json",
+          "railway.json",
+          "tsconfig.json",
+          "tsconfig.build.json",
+          "vitest.config.ts",
+          "vitest.config.e2e.ts",
+          "vitest.config.cov.ts"
+        ]
+      },
+      {
+        "repository": "web-app",
+        "arguments": [
+          "diff",
+          "--ignore-submodules=all",
+          "--name-status",
+          "--find-renames",
+          "--no-ext-diff",
+          "-z",
+          "74b9d4b714044829796f875d00553f077c1c329d",
+          "--",
+          "src",
+          "e2e",
+          "public",
+          "package.json",
+          "package-lock.json",
+          "index.html",
+          "playwright.config.ts",
+          "tsconfig.json",
+          "vite.config.ts",
+          "railway.json",
+          ".gitignore",
+          ".dockerignore",
+          "Dockerfile",
+          "docker/40-config-js.sh",
+          "nginx/default.conf.template"
+        ]
+      },
+      {
+        "repository": "web-app",
+        "arguments": [
+          "ls-files",
+          "--others",
+          "--exclude-standard",
+          "-z",
+          "--",
+          "src",
+          "e2e",
+          "public",
+          "package.json",
+          "package-lock.json",
+          "index.html",
+          "playwright.config.ts",
+          "tsconfig.json",
+          "vite.config.ts",
+          "railway.json",
+          ".gitignore",
+          ".dockerignore",
+          "Dockerfile",
+          "docker/40-config-js.sh",
+          "nginx/default.conf.template"
+        ]
+      },
+      {
+        "repository": "foundation_documentation",
+        "arguments": [
+          "diff",
+          "--ignore-submodules=all",
+          "--name-status",
+          "--find-renames",
+          "--no-ext-diff",
+          "-z",
+          "83ed072337330465f4be3b5ced739b461e33b602",
+          "--"
+        ]
+      },
+      {
+        "repository": "foundation_documentation",
+        "arguments": [
+          "ls-files",
+          "--others",
+          "--exclude-standard",
+          "-z"
+        ]
+      }
+    ]
+  },
+  "recorded_at_utc": "2026-10-21T13:25:55.758514+00:00",
+  "claim": "preliminary public path classification before CP04 changes; not a final delivery diff or full/private tree audit",
+  "adapter_source": "\"\"\"Invoke the unchanged Delphi diff classifier with positive public discovery.\nPrivate paths are outside discovery, not post-filtered. No product mutation.\n\"\"\"\nfrom pathlib import Path\nimport importlib.util, subprocess, sys, json, hashlib\nroot=Path('/mnt/c/unifast/leadshug/leadshug_now_docker')\nspec=importlib.util.spec_from_file_location('stcon05_diff_guard',root/'delphi-ai/tools/todo_diff_expectation_guard.py')\nm=importlib.util.module_from_spec(spec); spec.loader.exec_module(m)\npublic={\n root: ['.github','scripts','README.md','docker-compose.yml','docker-compose.channels.yml','docker-compose.testing.yml','Dockerfile','.dockerignore','.gitignore','.gitmodules','AGENTS.md','package.json','package-lock.json'],\n root/'api-app':['src','test','prisma','package.json','package-lock.json','.env.example','.dockerignore','.gitignore','docker/entrypoint.sh','Dockerfile','eslint.config.mjs','nest-cli.json','railway.json','tsconfig.json','tsconfig.build.json','vitest.config.ts','vitest.config.e2e.ts','vitest.config.cov.ts'],\n root/'web-app':['src','e2e','public','package.json','package-lock.json','index.html','playwright.config.ts','tsconfig.json','vite.config.ts','railway.json','.gitignore','.dockerignore','Dockerfile','docker/40-config-js.sh','nginx/default.conf.template'],\n root/'foundation_documentation':None,\n}\ncommands=[]\ndef public_git(repo,args,*,check=True):\n repo=repo.resolve()\n repo=next((known for known in public if str(known).casefold()==str(repo).casefold()),repo)\n if repo not in public:raise RuntimeError('Repository outside the approved topology')\n args=list(args)\n if args[0] in ('diff','ls-files'):\n  paths=public[repo]\n  if args[0]=='diff':args.insert(1,'--ignore-submodules=all')\n  if paths:\n   if '--' not in args:args.append('--')\n   args.extend(paths)\n elif args[0]!='rev-parse':raise RuntimeError('Unexpected guard Git operation')\n commands.append({'repository':str(repo.relative_to(root)),'arguments':args})\n winpath=subprocess.check_output(['wslpath','-w',str(repo)],text=True).strip()\n result=subprocess.run(['git.exe','-C',winpath,*args],check=check,capture_output=True,text=True,encoding='utf-8')\n if args==['rev-parse','--show-toplevel'] and result.returncode==0:\n  translated=subprocess.check_output(['wslpath','-u',result.stdout.strip()],text=True).strip()\n  translated=str(next((known for known in public if str(known).casefold()==translated.casefold()),Path(translated)))\n  return subprocess.CompletedProcess(result.args,result.returncode,translated+'\\n',result.stderr)\n return result\nm.run_git=public_git\nresult=m.validate_todo(root/'foundation_documentation/todos/active/features/TODO-leadshug-official-template-authoring.md',root)\nresult['public_discovery_contract']={'mode':'positive pathspecs before all diff/untracked discovery','coverage':'API src/test/prisma and exact public manifests/configs; Web src/e2e/public and public configs; root public tooling/config; Foundation full','excluded_private_tree_inspected':False,'unchanged_classifier_sha256':hashlib.sha256((root/'delphi-ai/tools/todo_diff_expectation_guard.py').read_bytes()).hexdigest(),'wrapper_sha256':hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),'commands':commands}\nif len(sys.argv)>1:Path(sys.argv[1]).write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\\n')\nprint(m.format_response(result))\nraise SystemExit(2 if result['blocked'] else 0)\n",
+  "preliminary_setup_corrections": [
+    "Canonical classifier matches exact Diff Expectation Contract heading; removed explanatory parenthetical from that heading without changing any normative path/content.",
+    "Windows Git root path case normalized to the already declared exact topology; no repository discovery."
+  ]
+}

@@ -84,7 +84,7 @@ n/a nesta preparação; apenas Foundation main pode receber commits/push documen
 - [ ] Mudança do gate de envio de mensagens ST-CON-01, nova credencial manual, token no browser/log, leitura de .env.testing ou modificação Meta durante planejamento.
 - [ ] Railway/deploy/push de produto, worktrees/cópias, gitlinks/.gitmodules manuais, alteração Delphi e qualquer leitura/listagem/stat/hash/mount de api-app/.local-files.
 
-## Diff Expectation Contract (Required Before Delivery)
+## Diff Expectation Contract
 
 - **Contract status:** required
 - **Policy:** strict; unclassified or forbidden paths block delivery
@@ -971,3 +971,7 @@ Root conferiu os6logs preservados/17sources/30sealed/3HEADs e os deltas de crede
 Mesmo executor único/routing-cp04-v1.1.json GO, mesma aprovação v1.1, perfil operational-coder/nestjs+prisma+postgresql+docker. CP04 pode concluir backend nos paths já aprovados: domínio/message-templates, integrações/message-templates e novos Meta/message-template*, schema e novas migrations *_message_template*, message-templates.controller.ts/BffModule, tests/message-template* e helpers; number-onboarding-pcv somente precisão PERF-R4-01/impacto dos índices. Sem Web, runner/CI, canais herdados, segredos, banco humano/runtime ou Git produto. Root conserva TODO/README/root*; executor cp04* e produto. Node audit genérico não pode percorrer API: readiness positivo publicado substitui inventário invasivo; nenhuma leitura/listagem/stat/hash/mount de .local-files.
 
 GOAL CP04: operação/revisão/recibos duráveis e Local Commit Certainty, reserva/quota global por conta canônica, recuperação GET-only, lease/fence único catálogo↔individual, BFF sessão/CSRF e contratos negativos/concorrência PG reais. Incluir o guard privado depois do grant imediatamente antes do POST (rotação retida →0POST), runtime invalid view fail-closed, atuais permissões/conta/contexto e deduplicação. Sem quarto método público no provider, sem HTTP em transação, sem outbox/genérico, sem alterar Channel/send gate. Provas dos quatro limites de commit usam transação real e erro antes/depois do commit, readback independente bounded e contador HTTP; recibo externo ACCEPTED nunca vira recusa por erro local. Cada run usa log único persistido; não reescrever logs. Fazer RED comportamental significativo, implementação e api canônico verde; parar com recibo terminal honesto para revisão. PCV EPS/BCI/RLS backend conforme contrato; FRC/browser e all ficam após Web. D09 e entrega só com consumidores/gates completos.
+
+### CP04 governança preliminar de diff público
+
+Classificador canônico inalterado com adapter efêmero Git Windows/case do volume e pathspecs positivos antes de diff/untracked discovery:121/121paths esperados,0forbidden/0unclassified nesta fotografia anterior às mudançasCP04. evidence/root-cp04-public-diff-preflight-v1.1.json registra código/hash/commands/limite; nenhuma inspeção da árvore privada e nenhuma equivalência com auditoria global. Primeiro no-go de parsing corrigido removendo apenas o sufixo explicativo do heading Diff Expectation Contract, que o helper exige exato; contrato normativo não mudou. Reexecutar após estado final. Backlog atualizado factualmente de aguardando aprovação para implementação autorizada; não promove entrega.
