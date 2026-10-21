@@ -1,0 +1,216 @@
+{
+  "schema": "stcon05-seal-planning-inspection-v1",
+  "recorded_at": "2026-10-21T00:38:35.210704+00:00",
+  "checked_all_records": 41,
+  "matching_records": 41,
+  "product_heads_match": true,
+  "records": [
+    {
+      "repository": "root",
+      "path": ".github/workflows/ci.yml",
+      "matches": true
+    },
+    {
+      "repository": "root",
+      "path": "scripts/test-channels-local.sh",
+      "matches": true
+    },
+    {
+      "repository": "root",
+      "path": "scripts/check-channels-ci-parity.py",
+      "matches": true
+    },
+    {
+      "repository": "api",
+      "path": "prisma/schema.prisma",
+      "matches": true
+    },
+    {
+      "repository": "api",
+      "path": "src/domain/channels/channel-credential-resolver.ts",
+      "matches": true
+    },
+    {
+      "repository": "api",
+      "path": "src/domain/inbox/conversations.service.ts",
+      "matches": true
+    },
+    {
+      "repository": "api",
+      "path": "src/domain/inbox/incoming.service.ts",
+      "matches": true
+    },
+    {
+      "repository": "api",
+      "path": "src/domain/inbox/incoming.typebot.integration.spec.ts",
+      "matches": true
+    },
+    {
+      "repository": "api",
+      "path": "src/integrations/evolution/evolution.client.spec.ts",
+      "matches": true
+    },
+    {
+      "repository": "api",
+      "path": "src/integrations/evolution/evolution.client.ts",
+      "matches": true
+    },
+    {
+      "repository": "api",
+      "path": "src/integrations/meta/meta.client.spec.ts",
+      "matches": true
+    },
+    {
+      "repository": "api",
+      "path": "src/integrations/meta/meta.client.ts",
+      "matches": true
+    },
+    {
+      "repository": "api",
+      "path": "src/surfaces/bff/bff.module.ts",
+      "matches": true
+    },
+    {
+      "repository": "api",
+      "path": "src/surfaces/bff/conversations.controller.ts",
+      "matches": true
+    },
+    {
+      "repository": "api",
+      "path": "src/surfaces/public/conversations.controller.ts",
+      "matches": true
+    },
+    {
+      "repository": "api",
+      "path": "src/surfaces/public/public.module.ts",
+      "matches": true
+    },
+    {
+      "repository": "api",
+      "path": "src/surfaces/webhooks/webhooks.module.ts",
+      "matches": true
+    },
+    {
+      "repository": "api",
+      "path": "test/api-publica.e2e-spec.ts",
+      "matches": true
+    },
+    {
+      "repository": "api",
+      "path": "test/browser-server.cjs",
+      "matches": true
+    },
+    {
+      "repository": "api",
+      "path": "test/helpers.ts",
+      "matches": true
+    },
+    {
+      "repository": "api",
+      "path": "test/number-onboarding-pcv.e2e-spec.ts",
+      "matches": true
+    },
+    {
+      "repository": "api",
+      "path": "test/number-onboarding-typebot.e2e-spec.ts",
+      "matches": true
+    },
+    {
+      "repository": "api",
+      "path": "test/timeline-fixtures.cjs",
+      "matches": true
+    },
+    {
+      "repository": "api",
+      "path": "prisma/migrations/20261020170000_message_inbound_window_index/migration.sql",
+      "matches": true
+    },
+    {
+      "repository": "api",
+      "path": "src/domain/channels/transport/channel-dependencies.spec.ts",
+      "matches": true
+    },
+    {
+      "repository": "api",
+      "path": "src/domain/channels/transport/channel.ts",
+      "matches": true
+    },
+    {
+      "repository": "api",
+      "path": "src/domain/inbox/outbound.service.spec.ts",
+      "matches": true
+    },
+    {
+      "repository": "api",
+      "path": "src/domain/inbox/outbound.service.ts",
+      "matches": true
+    },
+    {
+      "repository": "api",
+      "path": "src/integrations/channels/channel-adapter-factory.ts",
+      "matches": true
+    },
+    {
+      "repository": "api",
+      "path": "src/integrations/channels/channel-adapter-registry.ts",
+      "matches": true
+    },
+    {
+      "repository": "api",
+      "path": "src/integrations/channels/channel-transport.module.ts",
+      "matches": true
+    },
+    {
+      "repository": "api",
+      "path": "src/integrations/channels/evolution-channel.ts",
+      "matches": true
+    },
+    {
+      "repository": "api",
+      "path": "src/integrations/channels/meta-channel.ts",
+      "matches": true
+    },
+    {
+      "repository": "api",
+      "path": "src/integrations/channels/prisma-channel-resolver.ts",
+      "matches": true
+    },
+    {
+      "repository": "api",
+      "path": "test/channel-transport.e2e-spec.ts",
+      "matches": true
+    },
+    {
+      "repository": "web",
+      "path": "e2e/number-onboarding-freshness.ts",
+      "matches": true
+    },
+    {
+      "repository": "web",
+      "path": "e2e/timeline-freshness.ts",
+      "matches": true
+    },
+    {
+      "repository": "web",
+      "path": "src/api.spec.ts",
+      "matches": true
+    },
+    {
+      "repository": "web",
+      "path": "src/api.ts",
+      "matches": true
+    },
+    {
+      "repository": "web",
+      "path": "src/telas/Inbox.tsx",
+      "matches": true
+    },
+    {
+      "repository": "web",
+      "path": "e2e/channel-transport.spec.ts",
+      "matches": true
+    }
+  ],
+  "role": "Read-only planning source inspection; NOT future execution admission. Repeat against immutable approved baseline immediately before first mutation or product test after APROVADO.",
+  "product_mutated_or_tests_run": false
+}

@@ -1,0 +1,8 @@
+{
+  "decision": "GO",
+  "characters": 475299,
+  "bytes": 478565,
+  "mode": "fresh internal no-context isolated complete embedded packet; no tools",
+  "routing": "routing-architecture-v1.1.json",
+  "product_code_or_runtime_mutated": false
+}

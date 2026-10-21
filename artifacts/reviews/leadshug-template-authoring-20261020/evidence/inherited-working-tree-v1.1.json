@@ -334,5 +334,10 @@
       "active_mutation_admitted": false
     }
   ],
-  "enforcement": "Before every execution/checkpoint/delivery, all inherited records with active_mutation_admitted=false must retain their exact hash. New changed paths must satisfy strict Expected Changed Paths. Shared admitted paths may change only for ST05; semantic baseline and other consumers remain protected by full all and independent review."
+  "enforcement": "Initial admission BEFORE the first ST05 mutation or test: compare the three product HEADs AND ALL41 original public record hashes, including11 actively admitted shared files, to this immutable reviewed/pushed baseline. Any drift stops for explicit attribution and affected re-review, not silent rebasing. After admission, every checkpoint/delivery keeps30 non-active inherited records byte-exact and reviews shared-file deltas against the immutable initial baseline. New changed paths remain strict ExpectedPaths only.",
+  "product_heads": {
+    "root": "80e3940126f22a941f90dba4f5e801b6c0eb2f58",
+    "api": "db5a86758a165fac8a1ab587599c37b17890530c",
+    "web": "74b9d4b714044829796f875d00553f077c1c329d"
+  }
 }

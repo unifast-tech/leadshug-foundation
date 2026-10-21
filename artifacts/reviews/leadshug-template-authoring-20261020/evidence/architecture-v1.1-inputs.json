@@ -1,0 +1,229 @@
+{
+  "schema": "stcon05-review-inputs-v1",
+  "package_sha256": "1db5628d0c94f1cb9e15807a4779a8d99961b3c908e3208cc211043847436f6e",
+  "bytes": 474955,
+  "records": [
+    {
+      "path": "foundation_documentation/todos/active/features/TODO-leadshug-official-template-authoring.md",
+      "sha256": "227b5f6be6c496ba223502f4d92f7e09a3c4fdeea4944c3ffc257eed7322c880",
+      "bytes": 115070,
+      "embedded_full": true
+    },
+    {
+      "path": "foundation_documentation/project_constitution.md",
+      "sha256": "abfafa5576d051da58583e2be57499320c8ad155c4ae741f259c730bcca98390",
+      "bytes": 4641,
+      "embedded_full": true
+    },
+    {
+      "path": "foundation_documentation/policies/scope_subscope_governance.md",
+      "sha256": "aa18357e37417617b63ec5e58aba87c0f8c1e7518d6834d5cadfeda0a561dd84",
+      "bytes": 1183,
+      "embedded_full": true
+    },
+    {
+      "path": "foundation_documentation/project_mandate.md",
+      "sha256": "939bb4b065e031f591970fd51024c91544876def3eaa0522b75c50093cd16987",
+      "bytes": 873,
+      "embedded_full": true
+    },
+    {
+      "path": "foundation_documentation/domain_entities.md",
+      "sha256": "630fe4e362cb3e312eb77254e7d0a3a6636e3caa04fa78c5f251a5ed2812afa2",
+      "bytes": 985,
+      "embedded_full": true
+    },
+    {
+      "path": "foundation_documentation/modules/integrations-and-channels.md",
+      "sha256": "4c8ab34be3e0c24798876031f72ab0875a25344e45b27b2e7f846aecc9010d94",
+      "bytes": 40554,
+      "embedded_full": false
+    },
+    {
+      "path": "foundation_documentation/modules/inbox-and-conversations.md",
+      "sha256": "0859be57a12c14cbc90eec7f59411eefd229162f22fe7c431bc2539c57c3a13c",
+      "bytes": 17189,
+      "embedded_full": false
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-template-authoring-20261020/README.md",
+      "sha256": "aa8568ddb68866776d00a2a4705e089c16127ffcf9c37bdb1adf9c4a1e4ec619",
+      "bytes": 2826,
+      "embedded_full": true
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-template-authoring-20261020/primary-meta-reference-v1.1.md",
+      "sha256": "099584c5c76965c2144b017e1f4d1e8dc3bc214d0acdb7c3a54f35891a6ad789",
+      "bytes": 3585,
+      "embedded_full": true
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-template-authoring-20261020/evidence/inherited-working-tree-v1.1.json",
+      "sha256": "0a78e94c8dad1b1e1ac1d18a7710849d0269044f6e799378c4580811b64f72a4",
+      "bytes": 11692,
+      "embedded_full": true
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-template-authoring-20261020/evidence/planning-source-v1.1.json",
+      "sha256": "f8ff719bdc6a369d4cbab3ce7ccfaf17bdd6d3c1fb3aa6badb791258a812bf3c",
+      "bytes": 4440,
+      "embedded_full": true
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-template-authoring-20261020/evidence/source-assumptions-v1.1.json",
+      "sha256": "628088e3c7b835d255e95cd04e2363185fbec4cc7d5e66c993dd14b47fd653e7",
+      "bytes": 1142,
+      "embedded_full": true
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-template-authoring-20261020/evidence/audit-floor-v1.1.json",
+      "sha256": "1c05d12be8251d7fa932cceccd311c0a7e616ca282b369c92ca1ff969efa2184",
+      "bytes": 3440,
+      "embedded_full": true
+    },
+    {
+      "path": "api-app/src/domain/channels/channel-credential-resolver.ts",
+      "sha256": "89cf17ac02af444092651470aee13e2d4a3bcee8d459508be818322b33b00c10",
+      "bytes": 5053,
+      "embedded_full": true
+    },
+    {
+      "path": "api-app/src/domain/channels/transport/channel.ts",
+      "sha256": "432796b8685d07dcc53c3a699a7b9d1469ac4fb110aea080766ec207bec8621f",
+      "bytes": 2678,
+      "embedded_full": true
+    },
+    {
+      "path": "api-app/src/integrations/channels/channel-adapter-factory.ts",
+      "sha256": "e0ebdd78e387f7ee3af902f038d22449e212c1301ffa642bbceb5a5f05d2abfc",
+      "bytes": 440,
+      "embedded_full": true
+    },
+    {
+      "path": "api-app/src/integrations/channels/channel-adapter-registry.ts",
+      "sha256": "655b735e239e89fbaede36689d1c22245d3804d66646f7736db991cb5099b02b",
+      "bytes": 975,
+      "embedded_full": true
+    },
+    {
+      "path": "api-app/src/integrations/channels/channel-transport.module.ts",
+      "sha256": "32203d3b8393a34a9effab4266683c389651d7ec197e8f9d704a77a6a37f40dc",
+      "bytes": 1663,
+      "embedded_full": true
+    },
+    {
+      "path": "api-app/src/integrations/channels/prisma-channel-resolver.ts",
+      "sha256": "acf779d89162d339e37af2abe2aa91fd1a1b292d7f5208bb672090c87a23bf4d",
+      "bytes": 19223,
+      "embedded_full": true
+    },
+    {
+      "path": "api-app/src/domain/inbox/outbound.service.ts",
+      "sha256": "63bcf773e2b4c5a5ddd688a1bb13745a0a206d995fafc665925df3fecaf394aa",
+      "bytes": 13056,
+      "embedded_full": true
+    },
+    {
+      "path": "api-app/src/domain/inbox/message-acceptance.service.ts",
+      "sha256": "b053744ee44b7e91fd45b5c146f759f55c70b8e517b8fbb1cab39806407335e1",
+      "bytes": 15730,
+      "embedded_full": true
+    },
+    {
+      "path": "api-app/src/domain/access/access.service.ts",
+      "sha256": "2ef3761a138d7c8c386c5ddb4bf2a2000c960328789834bde5e12135a1ea66e7",
+      "bytes": 2390,
+      "embedded_full": true
+    },
+    {
+      "path": "api-app/src/integrations/meta/meta.client.ts",
+      "sha256": "9f954f6c1c2bd10030f5eed0cb42e493d6e480106bcfc3f44977cb97a716d34f",
+      "bytes": 17388,
+      "embedded_full": true
+    },
+    {
+      "path": "api-app/src/integrations/meta/meta.client.spec.ts",
+      "sha256": "d7e76f5c392afab1638363d3c851f8ce8c5223ff27c64801a79fdc8ec00d5e7a",
+      "bytes": 38572,
+      "embedded_full": true
+    },
+    {
+      "path": "api-app/src/surfaces/bff/bff.module.ts",
+      "sha256": "327f34eba67746882abc601a3817d94270cff3018d6972a8095dae530a2d6e29",
+      "bytes": 4917,
+      "embedded_full": true
+    },
+    {
+      "path": "api-app/src/surfaces/bff/session.middleware.ts",
+      "sha256": "80d8be0072b817ec34b3eb7d29218835bd218a40670c1f917d0b1787b0b57211",
+      "bytes": 5651,
+      "embedded_full": true
+    },
+    {
+      "path": "api-app/prisma/schema.prisma",
+      "sha256": "26444c6a102755fa5a10f1930d4a9ff256a8f76bd515cc0e10e8b1fe6fb7cf99",
+      "bytes": 26850,
+      "embedded_full": true
+    },
+    {
+      "path": "api-app/test/helpers.ts",
+      "sha256": "747dcd1a6db374c1ccb0f2a248b08d49c2ec62a46beb345cc03eea3c058d36f2",
+      "bytes": 18367,
+      "embedded_full": true
+    },
+    {
+      "path": "api-app/test/number-onboarding-pcv.e2e-spec.ts",
+      "sha256": "9cf66e8950a60a0ed4e620d3f24bc8285a316edf2a72a8af3590326b478e308f",
+      "bytes": 42837,
+      "embedded_full": true
+    },
+    {
+      "path": "web-app/src/App.tsx",
+      "sha256": "2562715676e2c06d1eab190b1739becae8bc5a9f24eacc47036566c11945236a",
+      "bytes": 12123,
+      "embedded_full": true
+    },
+    {
+      "path": "web-app/src/api.ts",
+      "sha256": "dd59a37799453d3e68fc64a6477e1578956d15d1a4920af90e22ff2b83057505",
+      "bytes": 10385,
+      "embedded_full": true
+    },
+    {
+      "path": "web-app/playwright.config.ts",
+      "sha256": "53e9a54e97c9b785135d94846d99eb77c6f05789a58f27128544f9b2c903a63d",
+      "bytes": 5773,
+      "embedded_full": true
+    },
+    {
+      "path": "web-app/e2e/number-onboarding-freshness.ts",
+      "sha256": "880b49f8fa428568692b92a883dd00c5ce76214b1f2db5b35cafb9b0553ed9ad",
+      "bytes": 5059,
+      "embedded_full": true
+    },
+    {
+      "path": "web-app/e2e/timeline-freshness.ts",
+      "sha256": "3a06fb36e3a9bcf20a12cd8201da2daa3b567775f15e2be5f068e97e840d7f53",
+      "bytes": 8499,
+      "embedded_full": true
+    },
+    {
+      "path": "scripts/test-channels-local.sh",
+      "sha256": "de580538f3257a85448cb3ce5030c85b90f65507da53737e4491fdf543091e42",
+      "bytes": 12799,
+      "embedded_full": true
+    },
+    {
+      "path": ".github/workflows/ci.yml",
+      "sha256": "16acaf6d4b807a806a50a31c75715b14e8b2e220e0e17e2bac43ec4b740318e5",
+      "bytes": 4049,
+      "embedded_full": true
+    },
+    {
+      "path": "scripts/check-channels-ci-parity.py",
+      "sha256": "d838d557177bf47423a063dfb0cb12b6cdf1e319986c4340286ada097742ce13",
+      "bytes": 29038,
+      "embedded_full": true
+    }
+  ]
+}
