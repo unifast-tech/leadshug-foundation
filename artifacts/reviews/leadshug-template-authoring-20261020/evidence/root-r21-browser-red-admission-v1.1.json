@@ -1,0 +1,29 @@
+{
+  "schema": "stcon05.r21-browser-red-root-admission.v1",
+  "recorded_at_utc": "2026-10-21T22:31:17.789379+00:00",
+  "outcome": "GO one canonical browser RED",
+  "command": "bash scripts/test-channels-local.sh browser",
+  "freeze": "foundation_documentation/artifacts/reviews/leadshug-template-authoring-20261020/evidence/executor-cp05-static-source-freeze-r21-race-order-correction-v1.1.json",
+  "freeze_sha256": "b12e69fa80b93e03de5cdf10382afb1326f3347c9b58876c29c7c8eb1a758c4b",
+  "source38_exact": true,
+  "protected30_exact": true,
+  "heads_exact": true,
+  "only_change_since_r18": "web-app/e2e/message-templates.spec.ts",
+  "static_corrections": [
+    "r19/r20 never executed; r21 corrects full debounce budget after helper warmup",
+    "Derived localGET must complete while newer provider catalogue result remains pending, then release catalogue and assert PAUSED/ineligible",
+    "All held route/provider gates released in finally, owned completion signals joined"
+  ],
+  "new_cases": [
+    "Both cross-route leaders versus202 before/after meaningful200, four cases",
+    "Newer meaningful failure blocks delayed old200",
+    "Derived GET inherits original individual intent while newer catalogue is pending",
+    "Passive operationGET snapshot cannot replace newer catalogue; dirty text and one original POST/effect preserved"
+  ],
+  "limits": [
+    "Existing accessibility-label failure intentionally unchanged",
+    "Empty200 real browser race has no fixture oracle; no proof claimed",
+    "Derived case may fail before automaticGET because current r18 discards individual completion while newer catalogue pending; record exact reached assertions"
+  ],
+  "boundaries": "Same single-writer/routing authority, unique log/numeric receipt, no retry or edits during run; disposable validation only. No preserved runtime/DB/Meta action."
+}

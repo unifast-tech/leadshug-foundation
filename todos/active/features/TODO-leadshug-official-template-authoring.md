@@ -42,7 +42,7 @@ O usuário quer preparar no LeadsHug a mensagem que usará para iniciar atendime
 ## Delivery Status Canon (Required)
 - **Current delivery stage:** Pending
 - **Qualifiers:** none
-- **Next exact step:** revisar novas regressões browser test-only do subcaso ADH-R13-02:202 cruzado entre catálogo e status invalida único200; produto r18 ficará congelado até RED real. allr18 terminou773pass/1falha de rótulo acessível (dadosobservedAt e ambasprovasFRC passaram); root conferiu fontes/runtime/log. Parecer independente recomenda autoridade de resultado significativo compartilhada,202noop, GETderivada herda intenção original e barreiras de falha/200vazio. Rootreview/freeze antes de1browserRED; depois corrigir owner/label, novoall e assuranceafetada. Entrega Pending; migração/ativação/prova real aguardam gates.
+- **Next exact step:** revisar freeze estático da correção Web do owner de observações após r21:61pass/7fail,5novosREDsemânticos confirmados; GETderivada incompleto earia-label conhecido separados. HOW revisto emroot-r21-observation-owner-how-v1.1.json,3arquivosWeb,semAPI/schema/runner. Antes de novoall, rootconfere diff/fontes/selos eoráculos; migração/ativação/prova Meta seguem pendentes.
 
 ## Active Work State (Required While TODO Remains In `active/`)
 - **Work state:** implementation

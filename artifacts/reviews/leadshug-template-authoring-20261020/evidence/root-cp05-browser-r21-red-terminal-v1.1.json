@@ -1,0 +1,48 @@
+{
+  "schema": "stcon05.r21-browser-root-terminal.v1",
+  "recorded_at_utc": "2026-10-21T22:48:44.317090+00:00",
+  "outcome": "five new semantic REDs confirmed; derived scenario incomplete; known label failure retained",
+  "log": "foundation_documentation/artifacts/tmp/st-con-05-browser-r21-LmU4ks/canonical-browser.log",
+  "log_bytes": 84649,
+  "log_sha256": "01358f0ad4f096776474fcc2d4e0be204daf9bd5d1f948f64780b1fb2f92b19d",
+  "receipt": "foundation_documentation/artifacts/tmp/st-con-05-browser-r21-LmU4ks/runner-exit.txt",
+  "exit": 1,
+  "freeze": "foundation_documentation/artifacts/reviews/leadshug-template-authoring-20261020/evidence/executor-cp05-static-source-freeze-r21-race-order-correction-v1.1.json",
+  "freeze_sha256": "b12e69fa80b93e03de5cdf10382afb1326f3347c9b58876c29c7c8eb1a758c4b",
+  "source38_exact": true,
+  "protected30_exact": true,
+  "heads_exact": true,
+  "playwright_passed": 61,
+  "playwright_failed": 7,
+  "pure_consumer_passed": 1,
+  "confirmed_red": [
+    "Four cross-route202 cases at browser215: real completedleader200PAUSED asserted, editorPAUSED absent295. Later DOM and late202release assertions not inferred.",
+    "Passive recovery at477: actual operationGET200ACCEPTED/savedAPPROVED captured; actual newer catalogue200PAUSED and PAUSED/ineligibleDOM passed; after oldoperationGET release editorPAUSED absent581. Later dirtytext/metadata/onePOST assertions not reached."
+  ],
+  "incomplete": [
+    "Derived case384:180s timeout waitingautomaticcatalogueGET; finallyproviderrelease encounteredclosedcontext469. No reached derivedGET-overwrite or finalPAUSED proof claimed."
+  ],
+  "known_failure": "ObservedAt time datetime correct; aria-label Observadoem missing1570. Latercataloguelabel/TTL/failure timestamp assertions not reached.",
+  "preserved": [
+    "Newer individual failure versus delayed oldcatalogue200 passed",
+    "Strict100BFF/99blocked202/oneproviderlist/onecompleted200 marker passed",
+    "UI5wavesx20attempts coalescedoneBFF/providerperphase,editor+catalogPAUSED/ineligible marker passed",
+    "Existingdirtytext/draftAtoB/sameaccountreauth regressions passed"
+  ],
+  "proofs": [
+    {
+      "path": "foundation_documentation/artifacts/tmp/st-con-05-browser-proof-r21-root/pre-worker-freshness.json",
+      "sha256": "0de07fedf1ccf2fc6de4c7773d8cf0b62f4f82e5196ac6abe3d06509520677ac"
+    },
+    {
+      "path": "foundation_documentation/artifacts/tmp/st-con-05-browser-proof-r21-root/attestation-browser-authority.json",
+      "sha256": "e2399db9d0c59f95c2e766001fe8b672de6c370a399a5dbdaa0d793bc4cc7e36"
+    }
+  ],
+  "source_capture_utc": "2026-10-21T22:33:23.322Z",
+  "runtime_capture_utc": "2026-10-21T22:33:20.419Z",
+  "served_dist_sha256": "8dc9ab1ca9ddc25af13a1fe76df688f39693be64fdc20e9a9082a60a30b48f99",
+  "attestation_correction": "Executor called setup proofs stale by comparing later test50payload22:41. Root verified r21freeze22:30:18 then pre-workerproofs22:33 before12.5minrun; all38sourcehashes andserved=dist match, so proofs are current for r21.",
+  "oracle_correction": "Root found passive final heading Confirmada absent from actual operationLabel; unreachable inthisRED. Correct literal correlated label+provenance/receipt assertion before nextvalidation, not product workaround.",
+  "next": "Reviewed sameD07/D08HOW correction in3Webfiles then staticfreeze/rootreview before newall; no automaticretry/preservedruntime/DB/Metaaction."
+}

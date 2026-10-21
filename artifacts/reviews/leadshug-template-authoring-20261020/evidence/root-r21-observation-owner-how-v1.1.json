@@ -1,0 +1,32 @@
+{
+  "schema": "stcon05.r21-observation-owner-correction-how.v1",
+  "recorded_at_utc": "2026-10-21T22:48:44.317090+00:00",
+  "authority": "Same approved ST-CON-05v1.1 D07/D08 HOW; no WHAT/publicAPI/schema expansion",
+  "outcome": "GO single-writer source correction; static review before validation",
+  "paths": [
+    "web-app/src/telas/Modelos.tsx",
+    "web-app/src/telas/Modelos.spec.ts",
+    "web-app/e2e/message-templates.spec.ts"
+  ],
+  "rules": [
+    "One coherent local observation owner/reducer reads currentcache atomically",
+    "Explicitrefresh capturesmonotonicintent; meaningful200includingempty/failure accepts onlyifnotolderthanacceptedmeaningfulintent;202noop",
+    "Loading/requestcounters remain separate from observationauthority",
+    "DerivedcatalogueGET inherits originalindividualintent, never mints newer intent; capturescompletedbarrier beforeHTTP",
+    "Each passiveGET capturescompleted watermark beforeHTTP and never promotes it; context/editor/request/association guards retained",
+    "SelectnewestcurrentSAMEresourcecache and candidate byvalidfence; equal-fence preservesavailability/eligibility restrictions; draft-specificfalse ormissingproof cannotgrant editor eligibility",
+    "Passive rejectedcandidate canhydrateeditorfromcurrentPAUSEDcache; operation/ACK/receiptmetadata anddirtytext independent",
+    "Meaningfulauthority also guards cursor/pageavailability/failure andempty200; passive cannotclear barriers",
+    "Retain synchronoussamecatalogue-flight coalescing andown-finally cleanup",
+    "AddactualObservedAt aria-label; keepdatetime/sourceclock semantics",
+    "Correct unreachablewrong passiveheading to literalcorrelatedlabel withprovenance/receipt assertion; boundedderivedGET wait allowsfinallycleanup beforetestcontext closes"
+  ],
+  "validation": "Focusedsemanticowner tests plusall existingrealBFF/PG/browser regressions; no meaningless compileREDclaim. Existingr21genuineREDpredatescorrection. Empty200browserrace stillunproved; focusedowner branch coverage is separate.",
+  "forbidden": [
+    "API/DTO/schema/migration/runner/fixturechanges",
+    "ExtraHTTP/globalblocking/manualcredentialmode",
+    "Preservedruntime/DB/Metaaction",
+    "Productcommits/worktrees"
+  ],
+  "next": "Staticr22freeze+rootreview, thenonecanonicalall ifadmitted."
+}
