@@ -1,0 +1,26 @@
+{
+  "schema": "stcon05.r24-metadata-ordering-independent-opinion.v1",
+  "recorded_at_utc": "2026-10-21T23:19:33.675136+00:00",
+  "reviewer": "/root/observation_202_authority_opinion",
+  "status": "terminal read-only source-confirmed material defect; no behavioralRED yet",
+  "evidence": [
+    "Modelos574–585 operationGET then sequentialdraftGET butrevisionequality overrides latercurrentOperation with earlierrecovered",
+    "recuperar614–622 repeats olderrefreshed override",
+    "Draftdetail293–315 returns coherent current phase/remote/provenance/safeCode/lease/recovery/updatedAt; currentreceipts available recentOperations297",
+    "editorObservation245–247 requires resultingremoteID; oldAMBIGUOUS/null canhidefreshPAUSED afterreconcileACCEPTED"
+  ],
+  "options": {
+    "A": "Later sequential authoritative draft currentOperation wins, use matching fresh recent receipts and same chosen operation for notices/phase cleanup; recommended, no newHTTP/state/framework",
+    "B": "General version/freshness merge; unnecessary and DTOhasno totaloperationversion",
+    "C": "Another operationGET afterdraft; addsHTTP+anotherstaleness window, rejected"
+  },
+  "positions": {
+    "correctness": "Revision identifies submitteddefinition, not metadata ordering; latersequential read owns current operationmetadata",
+    "performance": "No extraHTTP/query/storage",
+    "elegance": "Remove override instead of creating generic operation merge framework",
+    "structure": "Keep metadata association/provenance/safeCode/recovery coherent; independent observation anddirtytextguards",
+    "operational_fit": "Existing3Webfiles/currentDTO/normalBFFnetworkfixture"
+  },
+  "root_disposition": "Integrated withinD08/D07 HOW; require realBFF oldAMBIGUOUSopGET vsnewACCEPTEDdraftGET RED forautomaticcatch+manualrecuperar beforeproductfix. Currentr24 remains frozen.",
+  "not_established": "Two legitimate opssame revision: backendunique(draftId,revision) prevents this. consultarOperacao IDguard is defensive only, no fabricated regressioncase or expansion."
+}

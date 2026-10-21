@@ -1,0 +1,18 @@
+{
+  "schema": "stcon05.r27-correction-how-admission.v1",
+  "recorded_at_utc": "2026-10-21T23:38:25.592089+00:00",
+  "outcome": "GO serial product correction only; no test run or preserved action yet",
+  "approved_scope": "ST-CON-05 v1.1 D07/D08, same3Web paths and current capability; no WHAT/publicAPI/schema/runner change",
+  "reviewed_how": "root-r27-correction-how-preparation-v1.1.json",
+  "reviewed_how_sha256": "d48d153f921e9404d4fc342ab332ebdc720938685979654612ffa37dd07f8a2f",
+  "actual_red": "root-cp05-browser-r27-red-terminal-v1.1.json",
+  "actual_red_sha256": "492755fabd45c0d12e0abc9a028bf881796453460e3205d44c0b94b86f572856",
+  "executor": "/root/template_validation_recovery; existing routed sole product writer, principal checkout",
+  "now_owned": [
+    "web-app/src/telas/Modelos.tsx"
+  ],
+  "tests": "Keep r27 substantive assertions and pure cases byte-exact for now. Exact catalogue response barrier in main journey is under read-only review; no test weakening or retry admitted.",
+  "required": "Implement the reviewed selector context/semantic-proof rules and keep later sequential authoritative draft metadata/current receipts/phase cleanup/notices coherent. Preserve dirty form, observation intent/passive gates, truthful UNKNOWN correlation, one POST and invalid-fence rejection. Remove stale override instead of extraHTTP/state/cache/framework.",
+  "stop": "Report focused source diff and proposed new freeze for root static review. Do not run all/browser, edit other product paths, alter fixtures/debounce/runner, or touch runtime/DB/Meta/Git product. Root will admit one fully tee-captured all only after static review and readiness disposition.",
+  "delivery": "Pending; independent candidate assurance, PCV, bounded TEST migration/source activation/assisted real Meta and final fresh review remain gates."
+}

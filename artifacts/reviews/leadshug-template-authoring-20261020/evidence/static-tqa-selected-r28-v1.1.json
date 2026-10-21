@@ -1,0 +1,25 @@
+{
+  "schema": "stcon05.r28-static-tqa-support.v1",
+  "recorded_at_utc": "2026-10-21T23:43:48.091318+00:00",
+  "exit": 2,
+  "paths": [
+    "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app/src/domain/channels/channel-credential-resolver.spec.ts",
+    "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app/src/domain/message-templates/template-definition.spec.ts",
+    "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app/src/domain/message-templates/template-management.dependencies.spec.ts",
+    "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app/src/domain/message-templates/template-management.ports.spec.ts",
+    "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app/src/integrations/meta/message-template.client.spec.ts",
+    "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app/test/message-template-bff.e2e-spec.ts",
+    "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app/test/message-template-drafts.e2e-spec.ts",
+    "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app/test/message-template-management.e2e-spec.ts",
+    "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app/test/number-onboarding-bci.e2e-spec.ts",
+    "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app/test/number-onboarding-pcv.e2e-spec.ts",
+    "/mnt/c/unifast/leadshug/leadshug_now_docker/web-app/e2e/message-templates.spec.ts",
+    "/mnt/c/unifast/leadshug/leadshug_now_docker/web-app/src/api.spec.ts",
+    "/mnt/c/unifast/leadshug/leadshug_now_docker/web-app/src/telas/Modelos.spec.ts"
+  ],
+  "raw": "foundation_documentation/artifacts/reviews/leadshug-template-authoring-20261020/evidence/static-tqa-selected-r28.txt",
+  "raw_sha256": "8b7b10d5ca4cf499cbef5d2994abbc9194f634f481939b58f5ad00f451c4c8ab",
+  "counts": "Counts: hard_bypass=0 test_support=0 auth_shortcut=0 status_only=81 no_exception_only=0 ambient_subject_fallback=0 di_override=0 mock_hint=16",
+  "disposition": "Root contextual support review: all12 additional HTTP-status hints belong to the two real BFF metadata-ordering scenarios or exact reload-response barriers and coexist with literal phase/identity/provenance/receipt/PAUSED payload and DOM assertions. They are not status-only evidence. The16 unchanged mock hints are intentional transaction/commit/clock fault injection with real PostgreSQL, not fallback. Zero hard bypass/support-route/auth-shortcut/ambient-fallback/DI-override/no-exception-only signals. Raw helper exit2 is retained, not relabeled. Required full fresh independent affected TQA remains pending.",
+  "boundary": "13 explicit public test files, read-only; no broad Git scan or private traversal, no product/runtime mutation."
+}

@@ -1,0 +1,12 @@
+{
+  "schema": "stcon05.r24-live-oracle-concern.v1",
+  "recorded_at_utc": "2026-10-21T23:08:59.895729+00:00",
+  "status": "source-confirmed test-oracle defect found during live immutable r24; terminal not yet known",
+  "evidence": [
+    "New passive browser case expects providerAcceptance CONFIRMED together with CORRELATED_BY_DEFINITION after ambiguous-create recovery",
+    "template-submission.service.ts:788 projects providerAcceptance CONFIRMED only when acknowledgedRemoteTemplateId exists; otherwise UNKNOWN",
+    "This scenario reconciles by definition and has no original ACK; r21 did not assert this added field"
+  ],
+  "disposition": "Root missed this semantic oracle issue before all admission despite prior explicit no-falseACK requirement. Keep live run unchanged. After terminal preserve exact reached assertions and correct new passive expectations to UNKNOWN while retaining ACCEPTED/CORRELATED_BY_DEFINITION/RECORDED and truthful UI label. Do not infer passive fix proof if the new precondition stops the case.",
+  "boundaries": "No edit/interruption/retry while r24 live; no provider/runtime mutation; no new WHAT."
+}

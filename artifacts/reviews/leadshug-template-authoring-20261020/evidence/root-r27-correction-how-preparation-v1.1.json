@@ -1,0 +1,43 @@
+{
+  "schema": "stcon05.r27-correction-how-preparation.v1",
+  "status": "Prepared HOW only; product correction is not released before the current browser run terminates and its behavioral evidence is adjudicated",
+  "authority": "Existing approved ST-CON-05 v1.1 D07/D08; no new behavior, public contract, migration, runtime, provider or Git-product authority",
+  "profile": "Operational / Coder; root governance and read-only review, existing single executor owns product writes",
+  "scope": [
+    "web-app/src/telas/Modelos.tsx",
+    "web-app/src/telas/Modelos.spec.ts",
+    "web-app/e2e/message-templates.spec.ts"
+  ],
+  "inputs": [
+    "root-cp05-all-r24-terminal-v1.1.json",
+    "root-r24-selector-regressions-opinion-intake-v1.1.json",
+    "root-r24-metadata-ordering-opinion-intake-v1.1.json",
+    "root-cp05-source-freeze-r27-metadata-test-only-v1.1.json"
+  ],
+  "observation_selection": {
+    "context_boundary": "Before comparing numeric fences, distinguish only the explicit TEMPLATE_CONTEXT_STALE historical class. A current-context observation wins over historical evidence in either merge order; do not carry historical restrictions into the current context. TEMPLATE_REFRESH_UNAVAILABLE and generic unavailable observations are not historical.",
+    "within_context": "Keep invalid-fence rejection, monotonic numeric fence selection within a context class and conservative equal-fence availability/eligibility. Historical classification must not grant authority to malformed fences. Do not invent a global fence order across contexts.",
+    "draft_proof": "After selecting the winning observation, fill absent draft-specific proof symmetrically. A positive proof may transfer only for the same remote identity and identical non-null semanticFingerprint. Changed or null fingerprints cannot inherit positive proof. Explicit newer proof replaces older flags; equal-fence restrictions remain conservative.",
+    "ownership": "Use the existing selector and synchronous projection. No additional cache, corrective effect, request, schema, DTO or generic freshness framework. Preserve observation intent authority, 202 no-op, derived-read inheritance and passive-read guards."
+  },
+  "operation_metadata": {
+    "ordering": "The later sequential authorized draft GET owns currentOperation and recentOperations. Revision equality identifies the definition, not freshness of operation metadata; do not overwrite the later draft snapshot with an earlier operation GET or reconcile response.",
+    "coherence": "Use the chosen current draft operation for phase-based cleanup and notices, and matching current recentOperations receipts for presentation. Preserve phase, remote identity, acceptance provenance, provider acceptance, safeCode and recovery metadata as a coherent snapshot.",
+    "guards": "Preserve context/editor/request guards and unsaved form editing. Apply saved observations only for the matching current operation/resource under the existing observation authority. Do not add another HTTP read or synthesize acknowledgement from correlation.",
+    "excluded": "No fabricated two-operations-per-revision scenario: backend uniqueness prevents it. No unrelated historical-operation feature or generalized merge framework."
+  },
+  "evidence_gate": {
+    "selector": "Two actual r24 browser failures already establish lost eligibility and lost current-context status. r27 adds focused pure cases; browser mode does not execute those unit cases.",
+    "metadata": "Require the r27 real BFF old AMBIGUOUS operation GET followed by the later ACCEPTED draft GET and matching persisted receipt, then a failing DOM assertion in each automatic/manual path. Setup, fixture, compiler or capture failures are not product RED.",
+    "logging": "The r27 runner was launched without the required tee. Preserve raw subsequent exec chunks and terminal exit; explicitly disclose any missing prefix or truncation. Never represent the recovered stream as complete canonical stdout.",
+    "after_correction": "Root static review and exact freeze before one properly tee-captured canonical all. No source changes during a run. All and fresh independent assurance/PCV/runtime/provider gates remain required."
+  },
+  "bug_evidence_questions": {
+    "existing_coverage": "r24 all exposed both selector defects; the old operation-vs-new-draft metadata window was missing and is now tested before correction.",
+    "payload_compatibility": "Current typed draft producer returns a currentOperation summary without receipts and matching recentOperations with receipts. Tests inspect actual BFF/PostgreSQL payloads, not fabricated JSON.",
+    "exact_failed_tests": "r24 main journey lost future eligibility after catalogue warming; same-account reauthorization lost current APPROVED display. New metadata tests must establish their own actual RED.",
+    "new_tests": "Both automatic catch and manual recovery hold an actual old operation response, reconcile through normal authorized BFF, then inspect the later draft payload and final UI. Pure cases cover both merge orders, incompatible semantics and historical/current context fences.",
+    "analyzer_assessment": "no-rule-needed: the decisive operation ordering, context-relative fences and semantic proof compatibility depend on runtime data and timing. A generic static ban would have excessive false positives; retain focused behavioral regression coverage. No analyzer changes authorized."
+  },
+  "delivery": "Pending; no activation, preserved migration or real Meta proof admitted by this preparation"
+}

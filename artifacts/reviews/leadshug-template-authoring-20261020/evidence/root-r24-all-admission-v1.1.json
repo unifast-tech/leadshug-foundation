@@ -1,0 +1,13 @@
+{
+  "schema": "stcon05.r24-all-root-admission.v1",
+  "recorded_at_utc": "2026-10-21T22:57:39.144245+00:00",
+  "outcome": "GO exactly one canonical all",
+  "command": "bash scripts/test-channels-local.sh all",
+  "freeze": "foundation_documentation/artifacts/reviews/leadshug-template-authoring-20261020/evidence/root-cp05-source-freeze-r24-observation-owner-v1.1.json",
+  "freeze_sha256": "2baa84006b13b5f01f884b5f045229e16a2c6a5c13bded6b670370dea134172e",
+  "source38_exact": true,
+  "protected30_exact": true,
+  "heads_exact": true,
+  "scope": "Existing single-writer declaredroutingGO; unique log/numericreceipt; no codeedit/retry untilterminal. Disposablevalidation only, no preservedruntime/DB/Metaaction.",
+  "next": "Rootacceptactualterminal/source-servedproof beforecurrentauditpacket/PCVartifacts/affectedindependentassurance."
+}

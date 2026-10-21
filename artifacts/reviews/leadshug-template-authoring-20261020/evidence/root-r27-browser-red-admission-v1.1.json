@@ -1,0 +1,13 @@
+{
+  "schema": "stcon05.r27-browser-red-admission.v1",
+  "recorded_at_utc": "2026-10-21T23:24:04.338630+00:00",
+  "outcome": "GO exactlyonecanonicalbrowserRED",
+  "command": "bash scripts/test-channels-local.sh browser",
+  "freeze": "foundation_documentation/artifacts/reviews/leadshug-template-authoring-20261020/evidence/root-cp05-source-freeze-r27-metadata-test-only-v1.1.json",
+  "freeze_sha256": "1a0d0a297befa2854febb003cf9bacff2fc9fcf2018c1a93eed1043f144f5b78",
+  "source38_exact": true,
+  "protected30_exact": true,
+  "heads_exact": true,
+  "scope": "Existingsoleexecutor/routingGO, unique log+numericreceipt, sourcefrozen untilrootterminalverification; no retry/productfix orpreservedruntime/DB/Metaaction.",
+  "after_terminal": "Rootclassifiesactualreachedassertions thenadmit coherentmetadata+selectorHOW, sourcefreeze/rootreview beforeall."
+}

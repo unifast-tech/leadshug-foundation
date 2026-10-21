@@ -1,0 +1,76 @@
+{
+  "schema": "stcon05.r27-browser-root-terminal.v1",
+  "outcome": "Terminal failed; two new metadata-ordering behavioral REDs accepted with explicit partial-stdout limitation",
+  "command": "bash scripts/test-channels-local.sh browser",
+  "log": "foundation_documentation/artifacts/tmp/st-con-05-r27-browser-capture-20261021T2325Z/worker-capture-recovered-partial.log",
+  "log_bytes": 29502,
+  "log_sha256": "7e1c195dd333ef2221f9df8472368c0a198721bd70a92d376c8e9549b36a4f2d",
+  "receipt": "foundation_documentation/artifacts/tmp/st-con-05-r27-browser-capture-20261021T2325Z/numeric-exit-receipt.txt",
+  "receipt_sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865",
+  "exit": 1,
+  "freeze": "foundation_documentation/artifacts/reviews/leadshug-template-authoring-20261020/evidence/root-cp05-source-freeze-r27-metadata-test-only-v1.1.json",
+  "freeze_sha256": "1a0d0a297befa2854febb003cf9bacff2fc9fcf2018c1a93eed1043f144f5b78",
+  "source38_exact": true,
+  "protected30_exact": true,
+  "heads_exact": true,
+  "capture": {
+    "complete_canonical_stdout": false,
+    "limitation": "Executor launched without the required tee; pre-capture setup output is lost. Poll012 was reported empty but its raw JSON was not saved due a path typo. No reconstruction or retry was performed.",
+    "raw_chunks": "foundation_documentation/artifacts/tmp/st-con-05-r27-browser-capture-20261021T2325Z/chunks/001.json through011.json and013.json through027.json",
+    "root_verified": "Concatenation of all26saved output fields exactly equals the recovered log; no truncation warning; worker start Running70tests, all70unique numbered case results without gaps/duplicates, full detailed failure summary and actual terminal exit_code1 retained.",
+    "permitted_use": "Bounded behavioral RED and reached-assertion evidence only. This is not a complete canonical all log or candidate GREEN. Future all requires normal complete tee capture."
+  },
+  "proofs": [
+    {
+      "path": "foundation_documentation/artifacts/tmp/st-con-05-r27-browser-capture-20261021T2325Z/pre-worker-freshness.json",
+      "sha256": "44467c2508ff13bf10a89738e4b86368449aac453f22bede3156bc0e9a4e2a62"
+    },
+    {
+      "path": "foundation_documentation/artifacts/tmp/st-con-05-r27-browser-capture-20261021T2325Z/attestation-browser-authority.json",
+      "sha256": "d5fd6c72e283f1d2f0ffc1f21f2f53a6aac5b4c892d8736fa218c64a915a9975"
+    }
+  ],
+  "source_capture_utc": "2026-10-21T23:26:26.772Z",
+  "runtime_capture_utc": "2026-10-21T23:26:23.843Z",
+  "served_dist_sha256": "0d4fc8c13ad60e3ed0930c26b3049f1926b6598c0587c0ba63cb6db7f085225e",
+  "playwright_passed": 66,
+  "playwright_failed": 4,
+  "playwright_total": 70,
+  "failures": [
+    {
+      "case": "605 automatic catch metadata ordering",
+      "reached": "Actual held operationGET200AMBIGUOUS/null; normal authorized reconcile200ACCEPTED/UNKNOWN/CORRELATED_BY_DEFINITION/RECORDED; actual later draftGET200 with matching ACCEPTED summary, matching persisted receipt and PAUSED available observation",
+      "assertion": "712 expected heading Operação: Correspondência localizada visible; absent after two animation frames and5s locator wait",
+      "classification": "Genuine product RED: older operation response overwrites later draft metadata",
+      "not_reached": "Later DOM receipt/status/eligibility/dirty-text/one-effect final assertions"
+    },
+    {
+      "case": "731 manual recovery metadata ordering",
+      "reached": "Actual automatic operationGET fetched then transport-aborted; actual held manual operationGET200AMBIGUOUS/null; same normal reconcile and later draftGET summary/receipt/PAUSED assertions as automatic case",
+      "assertion": "857 expected heading Operação: Correspondência localizada visible; absent",
+      "classification": "Genuine product RED: same older metadata override in manual recovery",
+      "not_reached": "Later DOM receipt/status/eligibility/dirty-text/one-effect final assertions"
+    },
+    {
+      "case": "1024 main journey",
+      "assertion": "1134 route.fetch expected200 butreceived202 before held old individual response was established",
+      "classification": "Readiness/ordering evidence incomplete for this scenario; not a new product RED or proof of the cause of202",
+      "source_concern": "The prior catalogue POST completion is inferred from reusable notice/already PAUSED UI rather than its exact response. Review a completion barrier before the subsequent debounce wait, preserving strict200 and payload assertions. Do not change product lease/debounce or retry202 into a pass.",
+      "not_reached": "Later stale individual race, FRC UI marker and later lifecycle assertions"
+    },
+    {
+      "case": "1728 same-account reauthorization",
+      "assertion": "1788 actual refresh200APPROVED/availabletrue/numeric fence asserted; editor APPROVED absent",
+      "classification": "Repeats r24 historical/current-context selector product RED",
+      "not_reached": "Later provider-call and reload assertions"
+    }
+  ],
+  "passed": [
+    "Passive saved observation recovery with corrected UNKNOWN correlation oracle",
+    "Cross-producer202 directions/order cases and newer individual failure over held catalogue success",
+    "Actual derived local catalogue GET while a newer provider request is pending",
+    "Observation time/TTL and existing dirty-editor/context isolation cases"
+  ],
+  "limits": "Browser mode did not run API/PG or Web unit suites; no API TEMPLATE-FRC marker expected. No preserved migration, API/Web activation, tunnel or actual Meta operation occurred. Candidate assurance/PCV remain pending.",
+  "next": "Release reviewed selector/sequential-metadata HOW to the single executor; resolve exact-response readiness admission before browser test change. Root static freeze before one fully captured all."
+}

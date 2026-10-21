@@ -1,0 +1,139 @@
+Test Quality Audit
+Repository: /mnt/c/unifast/leadshug/leadshug_now_docker
+Outcome heuristic: medium
+
+Scan paths:
+  - /mnt/c/unifast/leadshug/leadshug_now_docker/api-app/src/domain/channels/channel-credential-resolver.spec.ts
+  - /mnt/c/unifast/leadshug/leadshug_now_docker/api-app/src/domain/message-templates/template-definition.spec.ts
+  - /mnt/c/unifast/leadshug/leadshug_now_docker/api-app/src/domain/message-templates/template-management.dependencies.spec.ts
+  - /mnt/c/unifast/leadshug/leadshug_now_docker/api-app/src/domain/message-templates/template-management.ports.spec.ts
+  - /mnt/c/unifast/leadshug/leadshug_now_docker/api-app/src/integrations/meta/message-template.client.spec.ts
+  - /mnt/c/unifast/leadshug/leadshug_now_docker/api-app/test/message-template-bff.e2e-spec.ts
+  - /mnt/c/unifast/leadshug/leadshug_now_docker/api-app/test/message-template-drafts.e2e-spec.ts
+  - /mnt/c/unifast/leadshug/leadshug_now_docker/api-app/test/message-template-management.e2e-spec.ts
+  - /mnt/c/unifast/leadshug/leadshug_now_docker/api-app/test/number-onboarding-bci.e2e-spec.ts
+  - /mnt/c/unifast/leadshug/leadshug_now_docker/api-app/test/number-onboarding-pcv.e2e-spec.ts
+  - /mnt/c/unifast/leadshug/leadshug_now_docker/web-app/e2e/message-templates.spec.ts
+  - /mnt/c/unifast/leadshug/leadshug_now_docker/web-app/src/api.spec.ts
+  - /mnt/c/unifast/leadshug/leadshug_now_docker/web-app/src/telas/Modelos.spec.ts
+
+Hard bypass markers:
+  - none
+
+Test-only support route usage:
+  - none
+
+Auth shortcut hints:
+  - none
+
+Status-only assertion hints:
+  - 58:      expect(winner.status).toBe(200);
+  - 80:      expect((await verificationResult).status).toBe(200);
+  - 139:      expect(first.status).toBe(200);
+  - 553:        expect(own.status, JSON.stringify(own.body)).toBe(200);
+  - 83:  expect(reservation.status()).toBe(201);
+  - 152:    expect(response.status()).toBe(201);
+  - 179:  expect(submitted.status()).toBe(201);
+  - 186:  expect(individual.status()).toBe(200);
+  - 190:  expect(catalog.status()).toBe(200);
+  - 274:        expect(crossResponse.status()).toBe(202);
+  - 289:      expect(leaderResponse.status()).toBe(200);
+  - 303:        expect(fetched202?.status).toBe(202);
+  - 306:        expect(crossResponse.status()).toBe(202);
+  - 344:      expect(response.status()).toBe(200);
+  - 369:    expect(oldCatalogResponse.status()).toBe(200);
+  - 405:      expect(response.status()).toBe(200);
+  - 417:      expect(response.status()).toBe(200);
+  - 446:    expect(individualResponse.status()).toBe(200);
+  - 449:    expect(localCatalogRead.status()).toBe(200);
+  - 461:    expect(catalogRequest.status()).toBe(200);
+  - 544:    expect(reconcile.status()).toBe(200);
+  - 552:    expect(explicitRefresh.status()).toBe(200);
+  - 570:    expect(catalogResponse.status()).toBe(200);
+  - 582:    expect(operationResponseReal.status()).toBe(200);
+  - 671:    expect(reconcile.status()).toBe(200);
+  - 680:    expect(explicitRefresh.status()).toBe(200);
+  - 688:    expect(catalogResponse.status()).toBe(200);
+  - 697:    expect((await operationResponsePromise).status()).toBe(200);
+  - 699:    expect(draftResponse.status()).toBe(200);
+  - 817:    expect(reconcile.status()).toBe(200);
+  - 825:    expect(explicitRefresh.status()).toBe(200);
+  - 833:    expect(catalogResponse.status()).toBe(200);
+  - 842:    expect((await manualResponsePromise).status()).toBe(200);
+  - 844:    expect(draftResponse.status()).toBe(200);
+  - 915:  await expect.poll(() => createStatus).toBe(201);
+  - 948:      expect(response.status()).toBe(201);
+  - 952:    expect(response.status()).toBe(200);
+  - 1035:  expect(submitted.status()).toBe(201);
+  - 1067:  expect(initialIndividual.response.status()).toBe(200);
+  - 1084:    expect(response.status()).toBe(200);
+  - 1096:  expect(freshIndividual.status()).toBe(200);
+  - 1102:  expect(staleCatalogResponse.status()).toBe(200);
+  - 1117:  expect(reloadedIndividual.response.status()).toBe(200);
+  - 1126:  expect(reloadedCatalogResponse.status()).toBe(200);
+  - 1142:    expect(response.status()).toBe(200);
+  - 1155:  expect(freshCatalogResponse.status()).toBe(200);
+  - 1160:  expect(staleIndividualResponse.status()).toBe(200);
+  - 1189:  expect(approvedBeforeFailure.response.status()).toBe(200);
+  - 1209:  expect(recoveredAfterContradiction.response.status()).toBe(200);
+  - 1241:  expect(warmApprovedIndividual.response.status()).toBe(200);
+  - 1251:  expect(warmCatalogResponse.status()).toBe(200);
+  - 1288:  expect(leaderResponse.status()).toBe(200);
+  - 1325:  expect(uiLeaderResponse.status()).toBe(200);
+  - 1349:  expect(refusalResponse.status()).toBe(201);
+  - 1365:  expect(retryResponse.status()).toBe(201);
+  - 1380:  expect((await submitResponse).status()).toBe(201);
+  - 1386:  expect((await statusResponse).status()).toBe(200);
+  - 1451:  expect(lostOperationRead.status).toBe(200);
+  - 1565:  expect(copyResponse.status()).toBe(201);
+  - 1687:    expect(reconcile.status()).toBe(200);
+  - 1694:    expect(explicitRefresh.status()).toBe(200);
+  - 1707:    expect(actualOperationResponse.status()).toBe(200);
+  - 1709:    expect(heldOperationResponse?.status).toBe(200);
+  - 1745:  expect(submitResponse.status()).toBe(201);
+  - 1756:  expect(firstRefresh.status()).toBe(200);
+  - 1792:  expect(renewedRefresh.status()).toBe(200);
+  - 1818:  expect(submitResponse.status()).toBe(201);
+  - 1829:  expect(individualResponse.status()).toBe(200);
+  - 1844:  expect(catalogResponse.status()).toBe(200);
+  - 409:      expect(submitted.status).toBe(201);
+  - 415:      expect(refresh.status).toBe(200);
+  - 430:      expect(detail.status).toBe(200);
+  - 431:      expect(operation.status).toBe(200);
+  - 450:      expect(staleContext.status).toBe(200);
+  - 487:      expect(submitted.status).toBe(201);
+  - 508:      expect(refresh.status).toBe(200);
+  - 522:      expect(detail.status).toBe(200);
+  - 523:      expect(operation.status).toBe(200);
+  - 542:      expect(changedAccountDetail.status).toBe(200);
+  - 543:      expect(changedAccountOperation.status).toBe(200);
+  - 610:      expect(submitted.status).toBe(201);
+
+No-exception-only assertion hints:
+  - none
+
+Ambient subject fallback hints:
+  - none
+
+DI override hints:
+  - none
+
+Mock / fallback hints:
+  - 194:      vi.spyOn(boundary, 'run').mockImplementation(async (phase, work) => {
+  - 337:      const boundarySpy = vi.spyOn(boundary, 'run').mockImplementation(async (phase, work) => {
+  - 402:    const clockSpy = vi.spyOn(clock, 'now').mockImplementation(() => new Date(now));
+  - 730:    const spy = vi.spyOn(boundary, 'run').mockImplementation(async (phase, work) => {
+  - 752:    vi.spyOn(boundary, 'run').mockImplementation(async (phase, work) => {
+  - 803:    vi.spyOn(boundary, 'run').mockImplementation(async (phase, work) => {
+  - 850:    vi.spyOn(boundary, 'run').mockImplementation(async (phase, work) => {
+  - 922:    vi.spyOn(boundary, 'run').mockImplementation(async (phase, work) => {
+  - 998:    vi.spyOn(boundary, 'run').mockImplementation(async (phase, work) => {
+  - 1580:    if (fault !== 'none') vi.spyOn(boundary, 'run').mockImplementation(async (phase, work) => {
+  - 1983:    const boundarySpy = vi.spyOn(boundary, 'run').mockImplementation((phase, work) => originalRun(phase, (tx) => {
+  - 2057:    const clockSpy = vi.spyOn(clock, 'now').mockImplementation(() => new Date(now));
+  - 2152:    const clockSpy = vi.spyOn(clock, 'now').mockImplementation(() => new Date(now));
+  - 2223:    const clockSpy = vi.spyOn(clock, 'now').mockImplementation(() => new Date(now));
+  - 2231:    const boundarySpy = vi.spyOn(boundary, 'run').mockImplementation(async (phase, work) => {
+  - 2325:    const clockSpy = vi.spyOn(clock, 'now').mockImplementation(() => new Date(now));
+
+Counts: hard_bypass=0 test_support=0 auth_shortcut=0 status_only=81 no_exception_only=0 ambient_subject_fallback=0 di_override=0 mock_hint=16

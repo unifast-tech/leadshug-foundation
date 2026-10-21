@@ -1,0 +1,25 @@
+{
+  "schema": "stcon05.r24-static-tqa-support.v1",
+  "recorded_at_utc": "2026-10-21T23:01:03.550896+00:00",
+  "exit": 2,
+  "paths": [
+    "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app/src/domain/channels/channel-credential-resolver.spec.ts",
+    "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app/src/domain/message-templates/template-definition.spec.ts",
+    "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app/src/domain/message-templates/template-management.dependencies.spec.ts",
+    "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app/src/domain/message-templates/template-management.ports.spec.ts",
+    "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app/src/integrations/meta/message-template.client.spec.ts",
+    "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app/test/message-template-bff.e2e-spec.ts",
+    "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app/test/message-template-drafts.e2e-spec.ts",
+    "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app/test/message-template-management.e2e-spec.ts",
+    "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app/test/number-onboarding-bci.e2e-spec.ts",
+    "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app/test/number-onboarding-pcv.e2e-spec.ts",
+    "/mnt/c/unifast/leadshug/leadshug_now_docker/web-app/e2e/message-templates.spec.ts",
+    "/mnt/c/unifast/leadshug/leadshug_now_docker/web-app/src/api.spec.ts",
+    "/mnt/c/unifast/leadshug/leadshug_now_docker/web-app/src/telas/Modelos.spec.ts"
+  ],
+  "raw": "foundation_documentation/artifacts/reviews/leadshug-template-authoring-20261020/evidence/static-tqa-selected-r24.txt",
+  "raw_sha256": "364a35800ec71eb6e9c796df0b83ae85d863da34ae15da3691feaa887f6d637d",
+  "counts": "Counts: hard_bypass=0 test_support=0 auth_shortcut=0 status_only=69 no_exception_only=0 ambient_subject_fallback=0 di_override=0 mock_hint=16",
+  "disposition": "Heuristic medium signals require contextual review; zero hard bypass/support-route/authshortcut/ambientfallback/DIoverride/noexception-only signals. Status checks coexist with substantive business/DOM/fence/negative assertions; provider/transaction/clock doubles are deliberate controlled failure injections, not fallback to hide real PG/browser. Independent full affected TQA remains pending.",
+  "boundary": "Read-only static helper on13explicitpublictest paths; no source or runtime mutation and no broadGit scan."
+}

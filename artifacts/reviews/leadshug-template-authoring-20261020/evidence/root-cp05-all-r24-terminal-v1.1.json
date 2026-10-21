@@ -1,0 +1,69 @@
+{
+  "schema": "stcon05.r24-all-root-terminal.v1",
+  "recorded_at_utc": "2026-10-21T23:17:42.830279+00:00",
+  "outcome": "terminal failed, not candidateGREEN",
+  "log": "foundation_documentation/artifacts/tmp/st-con-05-r24-all-GDELCs/canonical-all.log",
+  "log_bytes": 214999,
+  "log_sha256": "5668aa0034b6255860991a39647d9af3ac67019b0cb9458580c2d991a95e22f2",
+  "receipt": "foundation_documentation/artifacts/tmp/st-con-05-r24-all-GDELCs/runner-exit.txt",
+  "exit": 1,
+  "freeze": "foundation_documentation/artifacts/reviews/leadshug-template-authoring-20261020/evidence/root-cp05-source-freeze-r24-observation-owner-v1.1.json",
+  "freeze_sha256": "2baa84006b13b5f01f884b5f045229e16a2c6a5c13bded6b670370dea134172e",
+  "source38_exact": true,
+  "protected30_exact": true,
+  "heads_exact": true,
+  "api_unit_passed": 284,
+  "api_pg_passed": 398,
+  "web_unit_passed": 34,
+  "playwright_passed": 65,
+  "playwright_failed": 3,
+  "total_passed": 781,
+  "total_failed": 3,
+  "pure_consumer_passed": 1,
+  "migrations": "25 disposable migrations deployed/statusclean; preservedlocalTEST unaffected",
+  "proofs": [
+    {
+      "path": "foundation_documentation/artifacts/tmp/st-con-05-all-proof-r24-root/pre-worker-freshness.json",
+      "sha256": "bd78cf4e9f4137776b0f86f49bd1c0a3aa8245953fb7306d13caba8354194922"
+    },
+    {
+      "path": "foundation_documentation/artifacts/tmp/st-con-05-all-proof-r24-root/attestation-browser-authority.json",
+      "sha256": "5a73b474a3b7df4c3dec134cdeadaf032f15bb44fe1665bd602da2de6a7387b1"
+    }
+  ],
+  "source_capture_utc": "2026-10-21T23:04:51.450Z",
+  "runtime_capture_utc": "2026-10-21T23:04:48.512Z",
+  "served_dist_sha256": "0d4fc8c13ad60e3ed0930c26b3049f1926b6598c0587c0ba63cb6db7f085225e",
+  "failures": [
+    {
+      "case": "passive recovery478",
+      "assertion": "546: expectedCONFIRMED butactualUNKNOWN withACCEPTED/CORRELATED_BY_DEFINITION/RECORDED",
+      "classification": "new testoracle error; intended savedAPPROVED staleGET case not reached"
+    },
+    {
+      "case": "mainworkflow752",
+      "assertion": "1020: realUIAPPROVED visible buteditorfutureeligibility absent after commoncatalogue warm",
+      "classification": "new selector projection regression; FRCUI phase/marker not reached"
+    },
+    {
+      "case": "sameaccountreauth1456",
+      "assertion": "1516: actualrefresh200APPROVED/availabletrue asserted; editorAPPROVED absent",
+      "classification": "new historical/current context fence comparison regression; laterreload proof not reached"
+    }
+  ],
+  "passed": [
+    "All4cross-route202cases",
+    "Newerfailureoverheldsuccess",
+    "ActualderivedlocalGETAPPROVEDwhilelatercatalogueproviderpending followedbyPAUSED/ineligibleDOM",
+    "ObservedAt datetime/aria-label/TTL/failure preservation",
+    "Strict100BFF99blocked202/one200/oneprovidermarker",
+    "Existingdirtytext/contextrecovery cases"
+  ],
+  "not_claimed": [
+    "FRCUI100attempt phase not reached",
+    "SavedAPPROVED passivefix proof after correctedUNKNOWN expectation",
+    "Freshsameaccountreload laterassertions",
+    "Candidateassurance/PCV/runtimeactivation/actualMeta proof"
+  ],
+  "next": "Test-only UNKNOWN oracle correction, metadata-ordering realBFF regression(s), and focused selector context/semantic-proof cases. Rootstaticreview beforeonebrowserRED. No product fix or automaticretry yet."
+}

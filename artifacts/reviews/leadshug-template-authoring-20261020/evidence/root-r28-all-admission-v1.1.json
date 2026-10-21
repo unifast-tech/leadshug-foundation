@@ -1,0 +1,16 @@
+{
+  "schema": "stcon05.r28-all-root-admission.v1",
+  "outcome": "GO exactly one canonical all on the reviewed frozen sources",
+  "command": "bash scripts/test-channels-local.sh all",
+  "freeze": "foundation_documentation/artifacts/reviews/leadshug-template-authoring-20261020/evidence/root-cp05-source-freeze-r28-reviewed-web-correction-v1.1.json",
+  "freeze_sha256": "d4d2510381514be1b53ec60336344c519041e4ecf9020aeb217c037481c0632b",
+  "source38_exact": true,
+  "protected30_exact": true,
+  "heads_exact": true,
+  "authority": "Normal TODO authority guard GO/execution_authority_granted; existing routine-executor gpt-6-luna/medium single-writer routing unchanged",
+  "public_diff_guard": "351expected changes,0forbidden,0unclassified; positive public pathspec adapter, no private traversal",
+  "capture_requirement": "Create an exclusive owned run directory. Launch the canonical command with stderr merged and piped to tee from the very first byte. Preserve the actual runner PIPESTATUS exit to a numeric receipt even on failure. Verify the destination and capture command before launch; do not repeat the r27 missing-tee mistake.",
+  "during_run": "Source freeze remains immutable; no product edits, retry, selected tests, skip, runner change, other validation, preserved runtime/database/tunnel/Meta action or product Git write. Single owned disposable validation namespace only.",
+  "after_terminal": "Preserve full unique log/receipt and current setup source/runtime proofs. Stop for root independent verification and exact reached-assertion classification. No automatic retry/correction/activation or candidate acceptance.",
+  "delivery": "Pending; independent candidate assurance, PCV, two bounded TEST migrations, source-bound activation, assisted real Meta template proof and final fresh review remain required"
+}

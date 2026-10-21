@@ -1,0 +1,19 @@
+{
+  "schema": "stcon05.r27-exact-response-readiness-admission.v1",
+  "outcome": "GO narrow synchronization of the existing main browser journey, by the same sole executor",
+  "reviewer": "/root/observation_202_authority_opinion; terminal read-only source opinion",
+  "actual_failure": "r27 main journey1134 expected200 butreceived202 before establishing held old individual response; not classified as new product RED",
+  "source_evidence": [
+    "The reload already displays PAUSED. The next individual refresh is awaited only through that reusable DOM state.",
+    "The following catalogue refresh is awaited only through reusable Catálogo atualizado notice and already PAUSED item. Modelos does not clear the prior notice when starting catalogue refresh.",
+    "The server requires both elapsed debounce and free/expired lease;202 does not distinguish them or identify the competing acquisition."
+  ],
+  "approved_change": [
+    "In the main journey immediately after reload, use the existing refreshIndividual helper to register its exact POST response before clicking; require actual200 and PAUSED payload before starting the next10.1s wait. Preserve DOM assertions.",
+    "Before the subsequent catalogue click, register waitForResponse for the exact catalogue POST path. Await it, require200 and the owned remote template identity with PAUSED status in its actual body. Preserve notice/item/ineligibility DOM assertions; start the following cooldown only after this response completion."
+  ],
+  "owned_path": "web-app/e2e/message-templates.spec.ts",
+  "limits": "No changed expectation,202 acceptance, retry, timeout increase, server clock/debounce change, new fixture route, runner change or broad rewrite. Preserve1134 strict200/APPROVED held-response oracle and every later lifecycle/FRC assertion. This improves preparation and diagnosis; it does not prove why the original202 occurred or promise it is resolved.",
+  "sequence": "Same executor applies serially with the already admitted Modelos correction, then stops for root static review/new freeze. No run before explicit root admission.",
+  "authority": "Existing ST-CON-05 v1.1 approved Web test path and D07/D08 proof; no functional scope expansion"
+}

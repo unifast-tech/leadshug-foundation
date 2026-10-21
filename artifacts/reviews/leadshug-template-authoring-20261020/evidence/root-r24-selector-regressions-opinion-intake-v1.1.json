@@ -1,0 +1,30 @@
+{
+  "schema": "stcon05.r24-selector-regressions-independent-opinion.v1",
+  "recorded_at_utc": "2026-10-21T23:19:33.675136+00:00",
+  "reviewer": "/root/observation_202_authority_opinion",
+  "status": "terminal read-only diagnoses align with two actualr24 browserREDs",
+  "evidence": [
+    "Catalogue-first merge plus order<0 returnlosesolder draft-specificpositiveproof; actualeditoreligibility absent1020",
+    "Reverse-direction carryMissing alreadytransfers oldflags without semanticFingerprint guard",
+    "Backend154–196 marks exacthistoricalfallback TEMPLATE_CONTEXT_STALE; observationlease199–215 fencezero initializationpercontextKey, so historical/newcontextfences are incomparable",
+    "Currentequal-fenceAND preservesoldhistoricalPAUSED against newcontext200APPROVED; actualeditorAPPROVED absent1516"
+  ],
+  "options": {
+    "A": "Refine existing selector: historicalclass priority beforefence; symmetric missingproof onlysafe semantics; recommended",
+    "B": "Separate common/draftproof caches; expandsownership unnecessarily",
+    "C": "Statewipe/additionalrefresh; masksinformationloss/addsHTTP, rejected"
+  },
+  "recommended_rules": [
+    "ExactCTX_STALE classification beforefence; current wins inbothorders independently ofnumbers, withoutcarrying historicalrestrictions",
+    "Sameclassfence ordering; equalcurrentcontext availability/eligibility remainsconservative; genericunavailable orREFRESH_UNAVAILABLE isnot historical",
+    "Onlysame remoteID andsame nonnullsemanticFingerprint authorize carryingpositiveold draftproof; changed/null fingerprint no positivegrant",
+    "Missingnegativeproof mayremainrestrictive; explicitnewerproof overrides oldvalues; equal-fence remainsrestrictive"
+  ],
+  "positions": {
+    "performance": "Currentlinear loaded-cache complexity unchanged, no calls/schema/storage",
+    "elegance": "One selector with explicitcriteria, no newcaches/fallbackframework",
+    "structure": "Uses existing safeCodeboundary without pretending numericfence is global acrosscontexts",
+    "operational_fit": "ExistingtypedSummary/Websources/fixtures"
+  },
+  "root_disposition": "Integrated sameD07/D08 HOW. Actualr24browserRED exists; addfocusedunit cases before implementation and preserve existingbrowseroracles. No WHAT/publicDTO/schema/runner change."
+}

@@ -42,7 +42,7 @@ O usuário quer preparar no LeadsHug a mensagem que usará para iniciar atendime
 ## Delivery Status Canon (Required)
 - **Current delivery stage:** Pending
 - **Qualifiers:** none
-- **Next exact step:** revisar freeze estático da correção Web do owner de observações após r21:61pass/7fail,5novosREDsemânticos confirmados; GETderivada incompleto earia-label conhecido separados. HOW revisto emroot-r21-observation-owner-how-v1.1.json,3arquivosWeb,semAPI/schema/runner. Antes de novoall, rootconfere diff/fontes/selos eoráculos; migração/ativação/prova Meta seguem pendentes.
+- **Next exact step:** acompanhar o único all r28 admitido com log integral/receipt, fonte congelada e prova atual de bundle/BFF; julgar terminal antes de qualquer correção/retry. Rootfreeze38fontes/30selos/3HEADs em evidence/root-cp05-source-freeze-r28-reviewed-web-correction-v1.1.json; authorityGO e publicdiff351expected/0forbidden/0unclassified. Browser r27 anterior66pass/4fail estabeleceu os2REDs de metadados; seu log permanece parcial, com todos70resultados/erros/exit preservados. Correção estática e barreiras exatas revisadas; nenhum allGREEN/assurance/PCV/ativação reivindicado.
 
 ## Active Work State (Required While TODO Remains In `active/`)
 - **Work state:** implementation
