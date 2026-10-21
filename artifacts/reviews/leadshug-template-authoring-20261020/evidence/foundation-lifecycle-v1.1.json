@@ -1,0 +1,93 @@
+{
+  "generated_at_utc": "2026-10-21T00:53:52.761140Z",
+  "git": {
+    "ahead": 0,
+    "available": true,
+    "behind": 0,
+    "clean": false,
+    "root": "/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation",
+    "synced": false,
+    "upstream": "origin/main"
+  },
+  "overall_outcome": "go",
+  "rule_id": "paced.todo.closeout-disposition",
+  "todo_count": 5,
+  "todo_results": [
+    {
+      "context": {
+        "closeout_section_present": true,
+        "current_delivery_stage": "Pending",
+        "delivery_claim": false,
+        "disposition": "blocked",
+        "next_exact_step": "none in this cancelled contract; CP84 cleanup is complete, retain historical evidence. Continue official onboarding/receipt work only under the parent contract. Reopening this child requires renewed human scope and approval.",
+        "path_state": "active",
+        "post_commit_push_status": "CP84 documentation-only checkpoint on Foundation main; guarded publication receipt retained in artifacts/tmp/number-onboarding-execution/cp84-publication-receipt.json.",
+        "qualifiers": "Blocked",
+        "todo_path": "/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/todos/active/features/TODO-leadshug-meta-api-test-number-binding.md",
+        "work_state": "blocked"
+      },
+      "violations": []
+    },
+    {
+      "context": {
+        "closeout_section_present": false,
+        "current_delivery_stage": "Not-Started",
+        "delivery_claim": false,
+        "disposition": null,
+        "next_exact_step": "explicit user approval, then implement the approved contract.",
+        "path_state": "active",
+        "post_commit_push_status": null,
+        "qualifiers": "awaiting-approval",
+        "todo_path": "/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/todos/active/features/TODO-leadshug-mode-specific-primary-and-secondary-color.md",
+        "work_state": null
+      },
+      "violations": []
+    },
+    {
+      "context": {
+        "closeout_section_present": true,
+        "current_delivery_stage": "Pending",
+        "delivery_claim": false,
+        "disposition": "keep-active",
+        "next_exact_step": "Publicar freeze v1.1 e executar arquitetura/cr\u00edtica independentes sobre a capacidade estreita de templates, escopos e baseline working-tree herdada; resolver achados e guards de planejamento antes de pedir APROVADO espec\u00edfico. Nenhuma implementa\u00e7\u00e3o autorizada.",
+        "path_state": "active",
+        "post_commit_push_status": "pacote documental publicado em Foundation main; execu\u00e7\u00e3o pendente de APROVADO.",
+        "qualifiers": "none",
+        "todo_path": "/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/todos/active/features/TODO-leadshug-official-template-authoring.md",
+        "work_state": "review"
+      },
+      "violations": []
+    },
+    {
+      "context": {
+        "closeout_section_present": true,
+        "current_delivery_stage": "Pending",
+        "delivery_claim": false,
+        "disposition": "keep-active",
+        "next_exact_step": "reconvergir este contrato com Channel abstrato solicitado em2026-10-20, ap\u00f3s enquadramento/contrato ST-CON-06; revis\u00f5es e preflight anteriores s\u00e3o hist\u00f3ricos, sem aprova\u00e7\u00e3o de execu\u00e7\u00e3o sobre a nova dire\u00e7\u00e3o.",
+        "path_state": "active",
+        "post_commit_push_status": "complete",
+        "qualifiers": "none",
+        "todo_path": "/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/todos/active/features/TODO-leadshug-start-conversation-by-contact.md",
+        "work_state": "review"
+      },
+      "violations": []
+    },
+    {
+      "context": {
+        "closeout_section_present": true,
+        "current_delivery_stage": "In-Progress",
+        "delivery_claim": false,
+        "disposition": "keep-active",
+        "next_exact_step": "validate one real Typebot flow through an official WhatsApp number; automated implementation and regression checks are complete.",
+        "path_state": "active",
+        "post_commit_push_status": "pending",
+        "qualifiers": "approved; enhancement-scope-recorded; automated-checks-green; real-channel-validation-pending",
+        "todo_path": "/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/todos/active/features/TODO-leadshug-typebot-automation-integration.md",
+        "work_state": "review"
+      },
+      "violations": []
+    }
+  ],
+  "violations": []
+}

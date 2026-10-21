@@ -1,0 +1,7 @@
+{
+  "schema": "stcon05-critique-package-v1",
+  "freeze": "961dba71015f61a1f1c1badecb9efe090a77b306",
+  "package_sha256": "82b61323bd02c95a2d4e470558b438e4d10441bd4fb24ac132f7200f3461c46f",
+  "source24_unchanged": true,
+  "source_corpus": "complete prior37input corpus retained, current full TODO/README and added full first critique/disposition; no source removed"
+}

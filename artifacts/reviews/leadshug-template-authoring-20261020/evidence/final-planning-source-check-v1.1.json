@@ -1,0 +1,10 @@
+{
+  "schema": "stcon05-final-planning-source-check-v1",
+  "recorded_at": "2026-10-21T00:53:10.162501+00:00",
+  "source24_unchanged": true,
+  "inherited41_unchanged": true,
+  "product3heads_unchanged": true,
+  "no_product_tests_or_runtime_changes": true,
+  "no_private_reads": true,
+  "future_execution_initial_admission_still_required": true
+}

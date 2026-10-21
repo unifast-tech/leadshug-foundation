@@ -42,7 +42,7 @@ O usuário quer preparar no LeadsHug a mensagem que usará para iniciar atendime
 ## Delivery Status Canon (Required)
 - **Current delivery stage:** Pending
 - **Qualifiers:** none
-- **Next exact step:** Publicar freeze v1.1 e executar arquitetura/crítica independentes sobre a capacidade estreita de templates, escopos e baseline working-tree herdada; resolver achados e guards de planejamento antes de pedir APROVADO específico. Nenhuma implementação autorizada.
+- **Next exact step:** Aguardar APROVADO específico do ST-CON-05 v1.1 revisado. Arquitetura/duas críticas convergiram, code-coherence/scope-drift GO e authority preflight-go; após aprovação, registrar autoridade, reload binding e conferir admissão inicial3HEADs/41hashes antes de produto/testes. Implementação ainda não autorizada.
 
 ## Active Work State (Required While TODO Remains In `active/`)
 - **Work state:** review
@@ -339,7 +339,7 @@ Nenhuma pergunta funcional humana aberta: vendedor cria/submete; recorte textual
 - **Decision review kind:** architecture_opinion
 - **Decision review package:** bounded-file-set
 - **Decision review status:** findings_integrated
-- **Decision review evidence / resolution:** architecture-v1.1.raw.json/strictmerge terminal21346; AR-V11-01/02/03 integrated below; fresh critique on evolved current freeze follows. Historical2019 separate.
+- **Decision review evidence / resolution:** architecture-v1.1.raw/merge terminal21346; AR-V11-01/02/03 integrated; full fresh critique-r1 and critique-r2 independently confirm integration; current-r2 terminal/strictmerge, no material findings. See current resolution receipts; no implementation pass inferred.
 - **Architecture adherence review:** required
 - **Adherence review lifecycle:** after implementation and before Completed
 - **Adherence review kind:** architecture_adherence
@@ -353,11 +353,11 @@ Nenhuma pergunta funcional humana aberta: vendedor cria/submete; recorte textual
 - **Why this decision:** Capacidade estreita e baseline herdada devem ser avaliadas sobre proposta publicada exata.
 - **Trigger stage:** before the first planning-side review or guard run
 - **Baseline branch:** main
-- **Baseline commit:** pending-freeze
+- **Baseline commit:** 961dba71015f61a1f1c1badecb9efe090a77b306
 - **Baseline push reference:** origin/main
-- **Gate status:** not_run
-- **Findings summary:** CR-V11-01 shared observation fence integrated; renewed freeze required before fresh affected full critique. Previous bcb43f94 freeze and reviews remain historical current-cycle evidence.
-- **Evidence / reference:** artifacts/reviews/leadshug-template-authoring-20261020/critique-v1.1-resolution.md; prepared-pre-freeze follow-up.
+- **Gate status:** no_material_findings
+- **Findings summary:** CR-V11-01 integrated and renewed complete contract published before fresh affected full critique. Previous bcb43f94 freeze and reviews remain historical current-cycle evidence.
+- **Evidence / reference:** origin/main@961dba71015f61a1f1c1badecb9efe090a77b306; guarded push terminal0, complete evolved TODO and critique resolution included.
 - **Waiver authority / reference (required if waived):** n/a
 
 ## Gate: Review Scope Drift
@@ -369,9 +369,9 @@ Nenhuma pergunta funcional humana aberta: vendedor cria/submete; recorte textual
 - **Material sections compared:** Context|Contract Boundary|Scope|Out of Scope|Definition of Done|Validation Steps|Execution Lane Tracking|Canonical Module Anchors|Decisions|Decision Baseline|Architecture Change Governance|Questions To Close|Assumptions Preview|Execution Plan|Flow Evidence Planning Matrix|Local CI-Equivalent Suite Matrix|Runtime / Rollout Notes|Security Risk Assessment|Performance & Concurrency Risk Assessment
 - **Guard command:** python3 delphi-ai/tools/review_scope_drift_guard.py --todo foundation_documentation/todos/active/features/TODO-leadshug-official-template-authoring.md
 - **No-go handling rule:** reconvergir pacote/review e renovar freeze, sem implementação.
-- **Gate status:** not_run
-- **Findings summary:** v1.1 prepared-pre-freeze; revisões e validações atuais ainda não executadas.
-- **Evidence / reference:** artifacts/reviews/leadshug-template-authoring-20261020/README.md; histórico20261019 não reutilizado como resultado atual.
+- **Gate status:** no_material_findings
+- **Findings summary:** Actual scope-drift GO:23material sections unchanged against published961dba71 freeze; separate extended-scope seal confirms all4normative appendices unchanged. Only factual review/guard receipts updated afterward.
+- **Evidence / reference:** artifacts/reviews/leadshug-template-authoring-20261020/evidence/scope-drift-v1.1.json; freeze961dba71015f61a1f1c1badecb9efe090a77b306
 - **Waiver authority / reference (required if waived):** n/a
 
 ## Questions To Close
@@ -502,7 +502,7 @@ Migration aditiva de modelos/índices/FKs de templates; deploy/status e rollback
 
 - **Canonical method:** wf-docker-audit-escalation-method
 - **Guard command:** python3 delphi-ai/tools/audit_escalation_guard.py --todo foundation_documentation/todos/active/features/TODO-leadshug-official-template-authoring.md
-- **Latest TEACH evidence / artifact:** artifacts/reviews/leadshug-template-authoring-20261020/evidence/audit-floor-v1.1.json; current GO/8501ca58ebe4 after freeze, same trigger values but fresh execution; no old result reused.
+- **Latest TEACH evidence / artifact:** artifacts/reviews/leadshug-template-authoring-20261020/evidence/audit-floor-final-v1.1.json; fresh current GO/8501ca58ebe4 after review convergence; no derived gate downgraded.
 
 | Trigger | Value | Notes |
 | --- | --- | --- |
@@ -528,10 +528,10 @@ Migration aditiva de modelos/índices/FKs de templates; deploy/status e rollback
 - **Critique isolation mode:** fresh internal no-context reviewer
 - **Internal reviewer mandate:** required; reviewer não executor, aguardar terminal sem prazo arbitrário
 - **Critique lenses:** correctness,performance,elegance,structural-soundness,risk
-- **Critique status:** not_run
-- **Findings summary:** First fresh critique terminal16799/strictmerge resolved all3 architecture findings and raised CR-V11-01; integrated below. New full affected critique follows renewed published freeze; no current pass inferred.
-- **Resolution ledger:** Critique v1.1 Finding Resolution below; all earlier histories preserved.
-- **Evidence / reference:** artifacts/reviews/leadshug-template-authoring-20261020/evidence/critique-v1.1.raw.json and critique-v1.1-resolution.md; follow-up prepared-pre-freeze.
+- **Critique status:** no_material_findings
+- **Findings summary:** Fresh complete r2 critique terminal3864/strictmerge: no findings; AR-V11-01/02/03 and CR-V11-01 integration confirmed at planning-contract level. Product tests/runtime/provider proof remain planned and unexecuted.
+- **Resolution ledger:** Architecture v1.1 and Critique v1.1 Finding Resolution tables; all4 findings Integrated, no waiver; current convergence receipt.
+- **Evidence / reference:** artifacts/reviews/leadshug-template-authoring-20261020/evidence/critique-v1.1-r2.raw.json; critique-v1.1-r2.merge.json; planning-convergence-v1.1.md
 - **Waiver authority / reference (required if waived):** n/a
 
 ## Gate: Assumption Code Coherence
@@ -541,9 +541,9 @@ Migration aditiva de modelos/índices/FKs de templates; deploy/status e rollback
 - **Trigger stage:** after critique convergence and before APROVADO
 - **Guard scope:** A-01..07
 - **Guard command:** python3 delphi-ai/tools/assumption_code_coherence_guard.py --todo foundation_documentation/todos/active/features/TODO-leadshug-official-template-authoring.md
-- **Gate status:** not_run
-- **Findings summary:** v1.1 prepared-pre-freeze; revisões e validações atuais ainda não executadas.
-- **Evidence / reference:** artifacts/reviews/leadshug-template-authoring-20261020/README.md; histórico20261019 não reutilizado como resultado atual.
+- **Gate status:** no_material_findings
+- **Findings summary:** All24 bounded public source hashes still match the actually inspected corpus;7 live assumptions remain concretely anchored. All41 inherited files and3HEADs unchanged; actual code-coherence guard GO, no product tests/code/runtime/private reads.
+- **Evidence / reference:** artifacts/reviews/leadshug-template-authoring-20261020/evidence/planning-source-v1.1.json; source-assumptions-v1.1.json; final-planning-source-check-v1.1.json; code-coherence-v1.1.json
 - **Waiver authority / reference (required if waived):** n/a
 
 ## Approval
@@ -926,4 +926,10 @@ Refresh individual do rascunho e refresh de uma página do catálogo são dois p
 
 | Finding ID | Resolution | Usefulness | Formalizable | Candidate Rule Level | Candidate Rule ID | Rationale / Evidence |
 | --- | --- | --- | --- | --- | --- | --- |
-| CR-V11-01 | Integrated | useful | yes | project | n/a | D07/baseline, API/flow/CI matrices and Shared Observation Fence Contract specify common lease/fence and bidirectional PG/browser held-response proof. Fresh affected full critique after renewed freeze. |
+| CR-V11-01 | Integrated | useful | yes | project | n/a | D07/baseline, API/flow/CI matrices and Shared Observation Fence Contract specify common lease/fence and bidirectional PG/browser held-response proof. Fresh full r2 critique terminal3864/strictmerge confirms integration with no findings. |
+
+## Current Pre-approval Planning Receipt — ST-CON-05 v1.1
+
+Architecture21346 and full critiques16799/3864 terminal0 with strict merge; all4medium findings integrated, current critique no findings. Code coherence GO for7live assumptions; scope drift GO/23unchanged sections against published961dba71 plus4extended normative contracts unchanged; source24/inherited41/product3HEADs unchanged; deterministic TODO PASS, strategic-cto scope in-scope, Foundation lifecycle GO and audit-floor GO. Authority preflight returns preflight-go with execution_authority_granted=false. Full current receipts are in artifacts/reviews/leadshug-template-authoring-20261020/evidence/.
+
+Plan is ready for explicit human APROVADO v1.1, not implemented. Pending delivery gates,613old tests and actual06INOUT are not05results. Approval proposal covers the exact listed surfaces and limits, additive migration on preserved local TEST database only after disposable/assurance preflight and bounded timeouts, source-bound local API/Web activation and one assisted test-template submit/status query. No recipient message, product commit/push/deploy or Meta account configuration is authorized by this planning receipt.

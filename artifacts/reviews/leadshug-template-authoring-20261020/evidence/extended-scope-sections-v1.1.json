@@ -1,0 +1,26 @@
+{
+  "schema": "stcon05-extended-contract-seal-v1",
+  "baseline": "961dba71015f61a1f1c1badecb9efe090a77b306",
+  "records": [
+    {
+      "section": "Local Commit Certainty Contract — AR-V11-01",
+      "unchanged": true,
+      "normalized_section_sha256": "2de5bda545eaa246891647565df3d5a0aedfff4df8cf007a921bad7249c0f718"
+    },
+    {
+      "section": "Shared Account Coordination Contract — AR-V11-02",
+      "unchanged": true,
+      "normalized_section_sha256": "4679ddf0af776045f4f3f5ea4f3d32ae6f43eb004f65d0effaa688e1d643e5af"
+    },
+    {
+      "section": "Initial Inherited Source Admission Contract — AR-V11-03",
+      "unchanged": true,
+      "normalized_section_sha256": "5cf0c7e850022689cbaea4204606354522b52558fcf4a6194e5a515119460754"
+    },
+    {
+      "section": "Shared Observation Fence Contract — CR-V11-01",
+      "unchanged": true,
+      "normalized_section_sha256": "ba876ba261ef53be5e82b711cc664f6f1a3e1c9e14ca0bcdc1198e5c65378c64"
+    }
+  ]
+}

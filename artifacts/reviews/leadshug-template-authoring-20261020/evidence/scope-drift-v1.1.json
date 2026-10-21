@@ -1,0 +1,51 @@
+{
+  "artifact_kind": "review_scope_drift_guard",
+  "todo_path": "/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/todos/active/features/TODO-leadshug-official-template-authoring.md",
+  "repo_root": "/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation",
+  "todo_relative_path": "todos/active/features/TODO-leadshug-official-template-authoring.md",
+  "overall_outcome": "go",
+  "baseline_gate": {
+    "section_present": true,
+    "decision": "required",
+    "status": "no_material_findings",
+    "branch": "main",
+    "commit": "961dba71015f61a1f1c1badecb9efe090a77b306",
+    "push_reference": "origin/main",
+    "evidence_reference": "origin/main@961dba71015f61a1f1c1badecb9efe090a77b306; guarded push terminal0, complete evolved TODO and critique resolution included.",
+    "waiver_reference": "n/a"
+  },
+  "scope_drift_gate": {
+    "section_present": true,
+    "decision": "required",
+    "status": "no_material_findings",
+    "evidence_reference": "artifacts/reviews/leadshug-template-authoring-20261020/evidence/scope-drift-v1.1.json; freeze961dba71015f61a1f1c1badecb9efe090a77b306",
+    "waiver_reference": "n/a"
+  },
+  "changed_sections": [],
+  "material_headings": [
+    "## Context",
+    "## Framing Source & Story Slice",
+    "## Contract Boundary",
+    "## Scope",
+    "## Out of Scope",
+    "## Bounded But Elastic Guardrails",
+    "## Definition of Done",
+    "## Validation Steps",
+    "## Execution Lane Tracking",
+    "## Diff Expectation Contract",
+    "## Complexity",
+    "## Canonical Module Anchors",
+    "## Decisions (Resolved Before Freeze)",
+    "## Module Decision Baseline Snapshot",
+    "## Decision Baseline (Frozen Before Implementation)",
+    "## Architecture Change Governance",
+    "## Questions To Close",
+    "## Assumptions Preview",
+    "## Execution Plan",
+    "## Flow Evidence Planning Matrix",
+    "## Runtime / Rollout Notes",
+    "## Security Risk Assessment",
+    "## Performance & Concurrency Risk Assessment"
+  ],
+  "issues": []
+}

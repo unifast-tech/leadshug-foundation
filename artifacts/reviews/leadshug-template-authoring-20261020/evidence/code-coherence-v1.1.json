@@ -1,0 +1,134 @@
+{
+  "artifact_kind": "assumption_code_coherence_guard",
+  "todo_path": "/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/todos/active/features/TODO-leadshug-official-template-authoring.md",
+  "repo_root": "/mnt/c/unifast/leadshug/leadshug_now_docker",
+  "overall_outcome": "go",
+  "live_assumption_ids": [
+    "A-01",
+    "A-02",
+    "A-03",
+    "A-04",
+    "A-05",
+    "A-06",
+    "A-07"
+  ],
+  "gate": {
+    "section_present": true,
+    "decision": "required",
+    "status": "no_material_findings",
+    "evidence_reference": "artifacts/reviews/leadshug-template-authoring-20261020/evidence/planning-source-v1.1.json; source-assumptions-v1.1.json; final-planning-source-check-v1.1.json; code-coherence-v1.1.json",
+    "waiver_reference": "n/a"
+  },
+  "assumptions": [
+    {
+      "assumption_id": "A-01",
+      "handling": "Keep as Assumption",
+      "evidence": "api-app/src/integrations/meta/meta.client.ts:21",
+      "path_tokens": [
+        "api-app/src/integrations/meta/meta.client.ts"
+      ],
+      "resolved_paths": [
+        "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app/src/integrations/meta/meta.client.ts"
+      ],
+      "resolved_code_paths": [
+        "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app/src/integrations/meta/meta.client.ts"
+      ]
+    },
+    {
+      "assumption_id": "A-02",
+      "handling": "Keep as Assumption",
+      "evidence": "api-app/src/domain/channels/channel-credential-resolver.ts:49",
+      "path_tokens": [
+        "api-app/src/domain/channels/channel-credential-resolver.ts"
+      ],
+      "resolved_paths": [
+        "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app/src/domain/channels/channel-credential-resolver.ts"
+      ],
+      "resolved_code_paths": [
+        "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app/src/domain/channels/channel-credential-resolver.ts"
+      ]
+    },
+    {
+      "assumption_id": "A-03",
+      "handling": "Keep as Assumption",
+      "evidence": "api-app/src/surfaces/bff/bff.module.ts; src/integrations/channels/channel-transport.module.ts",
+      "path_tokens": [
+        "api-app/src/surfaces/bff/bff.module.ts",
+        "src/integrations/channels/channel-transport.module.ts"
+      ],
+      "resolved_paths": [
+        "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app/src/surfaces/bff/bff.module.ts"
+      ],
+      "resolved_code_paths": [
+        "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app/src/surfaces/bff/bff.module.ts"
+      ]
+    },
+    {
+      "assumption_id": "A-04",
+      "handling": "Keep as Assumption",
+      "evidence": "web-app/src/App.tsx; web-app/src/api.ts",
+      "path_tokens": [
+        "web-app/src/App.tsx",
+        "web-app/src/api.ts"
+      ],
+      "resolved_paths": [
+        "/mnt/c/unifast/leadshug/leadshug_now_docker/web-app/src/App.tsx",
+        "/mnt/c/unifast/leadshug/leadshug_now_docker/web-app/src/api.ts"
+      ],
+      "resolved_code_paths": [
+        "/mnt/c/unifast/leadshug/leadshug_now_docker/web-app/src/App.tsx",
+        "/mnt/c/unifast/leadshug/leadshug_now_docker/web-app/src/api.ts"
+      ]
+    },
+    {
+      "assumption_id": "A-05",
+      "handling": "Keep as Assumption",
+      "evidence": "scripts/test-channels-local.sh; .github/workflows/ci.yml; ST-CON-06 all93791",
+      "path_tokens": [
+        "scripts/test-channels-local.sh",
+        ".github/workflows/ci.yml"
+      ],
+      "resolved_paths": [
+        "/mnt/c/unifast/leadshug/leadshug_now_docker/scripts/test-channels-local.sh",
+        "/mnt/c/unifast/leadshug/leadshug_now_docker/.github/workflows/ci.yml"
+      ],
+      "resolved_code_paths": [
+        "/mnt/c/unifast/leadshug/leadshug_now_docker/scripts/test-channels-local.sh"
+      ]
+    },
+    {
+      "assumption_id": "A-06",
+      "handling": "Keep as Assumption",
+      "evidence": "api-app/src/domain/channels/transport/channel.ts; channel-adapter-registry.ts",
+      "path_tokens": [
+        "api-app/src/domain/channels/transport/channel.ts",
+        "channel-adapter-registry.ts"
+      ],
+      "resolved_paths": [
+        "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app/src/domain/channels/transport/channel.ts"
+      ],
+      "resolved_code_paths": [
+        "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app/src/domain/channels/transport/channel.ts"
+      ]
+    },
+    {
+      "assumption_id": "A-07",
+      "handling": "Keep as Assumption",
+      "evidence": "api-app/src/domain/channels/transport/channel.ts; scripts/test-channels-local.sh; evidence/inherited-working-tree-v1.1.json/Git public metadata",
+      "path_tokens": [
+        "api-app/src/domain/channels/transport/channel.ts",
+        "scripts/test-channels-local.sh",
+        "evidence/inherited-working-tree-v1.1.json"
+      ],
+      "resolved_paths": [
+        "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app/src/domain/channels/transport/channel.ts",
+        "/mnt/c/unifast/leadshug/leadshug_now_docker/scripts/test-channels-local.sh"
+      ],
+      "resolved_code_paths": [
+        "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app/src/domain/channels/transport/channel.ts",
+        "/mnt/c/unifast/leadshug/leadshug_now_docker/scripts/test-channels-local.sh"
+      ]
+    }
+  ],
+  "issues": []
+}
