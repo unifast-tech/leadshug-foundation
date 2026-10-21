@@ -42,7 +42,7 @@ O usuário quer preparar no LeadsHug a mensagem que usará para iniciar atendime
 ## Delivery Status Canon (Required)
 - **Current delivery stage:** Pending
 - **Qualifiers:** none
-- **Next exact step:** aguardar validação do único path de teste adicional na proposta baseline-bci-fixture-lifecycle-admission-v1.1-proposal.md. All173629Z-r4 terminal1:282unit/379de380PG, templates e RLS novos passaram; teste BCI anterior fora dos paths ativos falhou ECONNRESET. Proposta mantém servidor HTTP estável e todos os oráculos. Após admissão, all integral; depois assurance candidata, ativação/prova assistida e revisão final. Sem claim GREEN/entrega.
+- **Next exact step:** aplicar diff pontual BCI validado pelo usuário, conferir baseline e38fontes; executar browser para os cenários pendentes e all consolidado. Depois assurance candidata, ativação/prova assistida e revisão final. Nenhum aceite GREEN/entrega antecipado.
 
 ## Active Work State (Required While TODO Remains In `active/`)
 - **Work state:** implementation
@@ -118,6 +118,7 @@ n/a nesta preparação; apenas Foundation main pode receber commits/push documen
 | api | test/helpers.ts | M | fake externo da nova porta/DI, sem mudar semântica dos fakes textuais existentes |
 | api | test/timeline-fixtures.cjs | M | provider de templates determinístico para browser real |
 | api | test/browser-server.cjs | M | injeção/bootstrap de templates e fixtures explícitas |
+| api | test/number-onboarding-bci.e2e-spec.ts | M | admissão humana pontual2026-10-21: somente listener explícito loopback/porta efêmera e2asserções de startup conforme proposta publicada7e486511; corpo dos testes/oráculos/perfil5×20 preservados |
 | api | test/number-onboarding-pcv.e2e-spec.ts | M | herança PERF-R4-01: corrigir precisão de métricas do teste existente ao revalidar impacto de novos índices; sem alterar query/produtoST06 |
 | web | src/telas/Modelos* | any | página/editor/listas/status e testes locais |
 | web | src/componentes/Modelo* | any | componentes locais da mesma jornada, se necessários |
@@ -994,3 +995,8 @@ GOAL: jornada real BFF/PG Cadastros→Modelos para ATENDENTE+, rascunho versiona
 ### Proposta de admissão da fixture BCI anterior — aguardando validação
 
 O all173629Z-r4 falhou somente no teste anterior `test/number-onboarding-bci.e2e-spec.ts` com `read ECONNRESET`;282unit/379de380PG. Este arquivo está fora dos caminhos ativos, mas não integra os41records selados da herança. Os30selos e3HEADs continuam exatos;37fontes da rodada permaneceram congeladas. A proposta `artifacts/reviews/leadshug-template-authoring-20261020/baseline-bci-fixture-lifecycle-admission-v1.1-proposal.md` contém diff limitado ao listener127.0.0.1/porta efêmera e2asserções de startup, preservando teardown,5×20requests e oráculos. Nenhuma alteração ao arquivo proposta foi aplicada. Wrapper idempotente global de app.listen foi rejeitado. A validação exigida por Diff Expectation Contract continua pendente; sem novo runner até essa admissão.
+
+
+### Admissão validada do startup BCI —2026-10-21
+
+O usuário respondeu **“Validar o ajuste pontual do teste”** à proposta publicada7e486511. A baseline exata foi novamente conferida antes de mutação (`d21fef15…`). É admitido somente o diff de startup/listening/endereço em `test/number-onboarding-bci.e2e-spec.ts`; corpo dos testes,5×20, contadores, teardown e oráculos permanecem inalterados. Nenhum wrapper global de app.listen. Manifesto herdado41/30selos intocado. Recibo `evidence/baseline-bci-fixture-lifecycle-admission-v1.1.json`. Browser focado precederá novo all para revelar os cenários UI ainda não alcançados; não substitui o all/gates.
