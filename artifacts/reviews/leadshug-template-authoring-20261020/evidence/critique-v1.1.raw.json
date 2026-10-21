@@ -1,0 +1,28 @@
+{
+  "schema_version": "subagent-review-result-v1",
+  "artifact_kind": "subagent_review_result",
+  "dispatch_path": "/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/artifacts/reviews/leadshug-template-authoring-20261020/evidence/critique-v1.1.dispatch.json",
+  "review_kind": "critique",
+  "reviewer_label": "fresh-internal-critique-v1.1",
+  "findings": [
+    {
+      "finding_id": "CR-V11-01",
+      "severity": "medium",
+      "category": "structural_soundness",
+      "formalizable_hint": "yes",
+      "candidate_rule_level": "project",
+      "title": "Catalog and individual refreshes need an explicit shared observation fence",
+      "rationale": "D07 specifies resource/context leases and fences against changed generations, accounts and credential versions. The API matrix nevertheless introduces two producers of status for the same remote template: catalog refresh and individual draft refresh. Their shared ordering rule is unspecified. A catalog request can capture APPROVED and stall, an individual refresh can record PAUSED, and the older catalog result can then replace that observation while every identity field remains current. UI response fences cannot protect persisted state subsequently returned by GET or reload. This could restore observedEligible=true despite a newer known PAUSED observation, conflicting with DOD-04/05. The existing historical resolutions do not establish ordering across these two producers.",
+      "suggested_action": "Before APROVADO, require both refresh paths to use a shared observation ordering rule within the authorized account/context. An account/context lease shared by both paths or a common observation-version fence would suffice; preserve scoped business data and the single projector. Explicitly prevent an older in-flight result from superseding a newer observation. Add planned real-PostgreSQL held-response cases in both directions between catalog and individual refresh, proving that APPROVED→PAUSED remains PAUSED and ineligible through GET and reload.",
+      "affected_paths": [
+        "foundation_documentation/todos/active/features/TODO-leadshug-official-template-authoring.md"
+      ]
+    }
+  ],
+  "overall_assessment": "One material planning gap remains before APROVADO. Otherwise, the complete contract adheres to seller submission without an administrator intermediary, preserves management versus message readiness, and keeps recipient sending and future capabilities outside this slice. AR-V11-01 is resolved at the planning-contract level through positive original-claim confirmation, bounded captured readback, truthful persistence certainty and retained external acceptance. AR-V11-02 is resolved through global canonical account/name/language coordination with scoped business data and safe conflicts. AR-V11-03 is resolved through initial verification of all 41 hashes and three HEADs, followed by 30 sealed files and reviewed shared deltas. These conclusions establish no implementation or runtime pass.",
+  "recommended_path": "Retain D09's narrow resolver/provider capability, dedicated Meta adapter and single existing credential owner; this is a simple, faithful DIP design without a generic capability platform. Resolve the shared observation fence, reconverge the affected freeze/review evidence, complete the pending planning guards and obtain specific human approval. Performance planning is acceptable: bounded provider calls, pagination, durable quotas, quota-aware fixtures and scan/filter/recheck/buffer measurements are explicit. Operational planning is also acceptable: source admission, additive migration checks, independent wire tests, real PostgreSQL/browser validation and assisted provider proof remain mandatory and unexecuted.",
+  "performance_position": "acceptable",
+  "elegance_position": "acceptable",
+  "structural_soundness_position": "mixed",
+  "operational_fit_position": "acceptable"
+}

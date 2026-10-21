@@ -1,0 +1,7 @@
+{
+  "schema": "stcon05-critique-package-v1",
+  "freeze": "bcb43f94752ad88ea6b6f125c859f6536405b0cc",
+  "package_sha256": "952eb190265a655f1ad145239c67fb2f02b8fda60cf30c72ac99da5530dc1b81",
+  "source24_unchanged": true,
+  "source_corpus": "complete original37input architecture package with current full TODO/manifest and added complete architecture result; no source removed"
+}

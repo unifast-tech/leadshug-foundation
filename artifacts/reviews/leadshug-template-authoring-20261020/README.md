@@ -1,6 +1,6 @@
 # ST-CON-05 v1.1 — template authoring planning package
 
-State: prepared-pre-freeze. Governing contract: ../../../todos/active/features/TODO-leadshug-official-template-authoring.md. Previous20261019 reviews remain history. This cycle rebases seller create/save/preview/submit/status onto delivered06 with a narrow TemplateManagementResolver/MessageTemplateProvider port, dedicated Meta integration, immutable scoped context and preserved textual Channel/OutboundService. No product/runtime/provider operation authorized yet.
+State: renewed-freeze-preparation after first architecture and critique findings integrated. Governing contract: ../../../todos/active/features/TODO-leadshug-official-template-authoring.md. Previous20261019 reviews remain history. This cycle rebases seller create/save/preview/submit/status onto delivered06 with a narrow TemplateManagementResolver/MessageTemplateProvider port, dedicated Meta integration, immutable scoped context and preserved textual Channel/OutboundService. No product/runtime/provider operation authorized yet.
 
 Review focus: DIP/capability segregation, scope/management versus send authority, durable one-dispatch receipts and conservative ambiguity recovery, name/account isolation, status truth, UI fences, mandatory inherited working-tree seal, full CI-equivalent and actual assisted submission. Source baseline/evidence are public-only. Planned approval scope includes additive templates migration and source-bound local activation after disposable proof; no secret read/product push/deploy.
 

@@ -1,0 +1,3 @@
+# ST-CON-05 v1.1 — critique disposition
+
+Fresh full critique terminal16799/strictmerge validates planning resolution of AR-V11-01/02/03 and identifies one medium finding CR-V11-01. Owner accepts and integrates it in both D07 copies, API/flow/CI matrices and the Shared Observation Fence Contract. Both producers now share one persistent scoped lease/fence and logical observation; expired replies cannot overwrite a newer PAUSED result, errors or metadata. Mandatory bidirectional real-PG held-response and browser GET/reload proof is planned. No test/code/provider/runtime operation executed. No waiver. Renewed freeze and fresh full critique required before approval.
