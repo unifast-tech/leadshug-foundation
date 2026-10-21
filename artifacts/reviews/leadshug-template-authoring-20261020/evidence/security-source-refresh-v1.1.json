@@ -1,0 +1,37 @@
+{
+  "schema": "stcon05.security-source-refresh.v1",
+  "recorded_at_utc": "2026-10-21T16:40:28.011232+00:00",
+  "status": "review-input-not-security-pass",
+  "risk": "high",
+  "attack_simulation_decision": "required",
+  "safe_environment": "Existing controlled disposable real BFF/PostgreSQL harness only; no production/provider abuse",
+  "sources": [
+    {
+      "url": "https://api-security.owasp.org/editions/2023/en/0xa1-broken-object-level-authorization/",
+      "category": "BOLA",
+      "mapping": "Review per-object authorization of draft/operation, own actor versus BU admin, foreign tenant404, current grants before replay and dispatch; UUID obscurity is not authorization."
+    },
+    {
+      "url": "https://api-security.owasp.org/editions/2023/en/0xa4-unrestricted-resource-consumption/",
+      "category": "Resource consumption",
+      "mapping": "Inspect bounded definition/cursor/page payloads, response byte and timeout limits, account/actor moving-window quota and shared refresh lease/debounce; distinguish max page20/50 from bounded child SQL."
+    },
+    {
+      "url": "https://cheatsheetseries.owasp.org/cheatsheets/Cross-Site_Request_Forgery_Prevention_Cheat_Sheet.html",
+      "category": "CSRF",
+      "mapping": "Inspect existing cookie session and custom non-simple mutation header with actual CORS owner. Inherited middleware remains unchanged; new routes must receive it by prefix. Test missing header/session and ensure no effects."
+    }
+  ],
+  "trust_boundary_map": [
+    "Browser untrusted ID/definition/revision/key -> BFF session/CSRF -> scoped draft owner",
+    "Authorized local draft/account metadata -> operation-bound provider -> private credential lookup",
+    "Untrusted remote response/cursor -> strict parser and safe typed outcome -> persistent shared observation fence",
+    "Durable PostgreSQL operation/receipts -> reload/UI no inferred external authorship"
+  ],
+  "limitations": [
+    "Source refresh guides independent threat assessment; no vulnerability reproduced by browsing",
+    "No new dependency or framework version change is authorized",
+    "Process deviation positive-pathspec omission must be disposed factually without investigating protected files",
+    "Do not claim security gate pass until fresh independent review and exact scope evidence are complete"
+  ]
+}

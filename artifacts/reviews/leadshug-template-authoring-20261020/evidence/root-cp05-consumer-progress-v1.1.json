@@ -1,0 +1,44 @@
+{
+  "schema": "stcon05.root-cp05-consumer-progress.v1",
+  "recorded_at_utc": "2026-10-21T17:12:26.001814+00:00",
+  "state": "implementation-validation-not-delivered",
+  "retained_runs": [
+    {
+      "path": "foundation_documentation/artifacts/tmp/stcon05-cp05-browser-20261021T190000Z.log",
+      "bytes": 73175,
+      "sha256": "e2439b60f318237b92a334d66f2d75eb8126bfe55d624c3193763d727e9e87c0",
+      "browser_passed": 52,
+      "browser_failed": 2,
+      "terminal_cleanup_observed": true
+    },
+    {
+      "path": "foundation_documentation/artifacts/tmp/stcon05-cp05-browser-20261021T170600Z.log",
+      "bytes": 72083,
+      "sha256": "858bd2101d797fadfe67bab9436caccbd3b35b14b36c43756223a4d00f4c88b0",
+      "browser_passed": 52,
+      "browser_failed": 2,
+      "terminal_cleanup_observed": true
+    }
+  ],
+  "established": [
+    "Separated draft/preview/save with retained create passed against real BFF/PG.",
+    "Separated uncertain local create/idempotent replay plus late PATCH/preview after draft switching passed.",
+    "Earlier181500 correlation/reload/copy passed; newer combined safe503/read-loss variant still needs completion."
+  ],
+  "diagnosis": [
+    "Initial refresh failure did not expose HTTP status/body; debounce was an unproven hypothesis. Exact fake Graph code showed a template-ID GET incorrectly passed through WABA-ID authorization and returned403. Correct only the external fixture with token-authorized WABA lookup.",
+    "Safe503 recovery identity becomes visible before awaited GET finishes; synchronous read of test variable can race actual route.fetch. Wait the real read explicitly, then simulate only lost client response.",
+    "Frontend cached observations need monotonic observedFence merging/dedup and coverage of multiple pages; timestamp fallback is not authoritative.",
+    "A pre-bootstrap docker cp copied previous-run attestation files. They were rejected by capturedAt and source hash; executor re-collected after global setup and matched current sources. Filename alone is never freshness."
+  ],
+  "remaining": [
+    "Current fixes, bounded projection unit proof, browser journey/FRC and consolidated all",
+    "Fresh full candidate assurance before preserved local migration/runtime activation",
+    "Actual assisted template submit/status then final independent review and closeout"
+  ],
+  "limits": [
+    "All is not GREEN; source changes after each terminal invalidate reuse as final candidate",
+    "No preserved human DB/runtime/provider changes",
+    "No gate waiver or unrelated feature authorized"
+  ]
+}

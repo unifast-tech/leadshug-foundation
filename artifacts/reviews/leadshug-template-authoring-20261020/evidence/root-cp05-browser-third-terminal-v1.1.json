@@ -1,0 +1,24 @@
+{
+  "schema": "stcon05.root-cp05-browser-terminal.v1",
+  "recorded_at_utc": "2026-10-21T16:50:50.395621+00:00",
+  "outcome": "failed-one-locator-not-delivered",
+  "log": "foundation_documentation/artifacts/tmp/stcon05-cp05-browser-20261021T181500Z.log",
+  "log_bytes": 70609,
+  "log_sha256": "35fa8b8c82888d1b62f18a7b4820f2bc603dab80753c7a9f817e44b77050f2da",
+  "browser_passed": 51,
+  "browser_failed": 1,
+  "passed_new_behavior": "Real BFF/PG AMBIGUOUS→compatible reconcile→reload→explicit reopen→correlated provenance→copy; no confirmed authorship and one create POST. This does not prove account-change browser.",
+  "failure": "Novo rascunho loose accessible-name match also matched Copiar como novo rascunho; exact selector needed. Long scenario stopped after early draft revision2; its later FRC/status/refusal assertions remain unexecuted.",
+  "retained_freshness": [
+    "foundation_documentation/artifacts/tmp/stcon05-cp05-attestation-browser-authority-20261021T181500Z.json",
+    "foundation_documentation/artifacts/tmp/stcon05-cp05-pre-worker-freshness-20261021T181500Z.json"
+  ],
+  "served_bundle_sha256": "f445f0942443264c14408882bb277444b17231df994d452154ecd3598d01e255",
+  "runtime": "v22.23.3",
+  "source_heads_match": true,
+  "limits": [
+    "No complete browser/all claim",
+    "Full candidate assurance and actual provider proof pending",
+    "Root requests independent scenarios so one early failure cannot hide later oracles"
+  ]
+}

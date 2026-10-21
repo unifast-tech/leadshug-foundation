@@ -1,0 +1,31 @@
+{
+  "schema": "stcon05.validation-log-disposition.v1",
+  "recorded_at_utc": "2026-10-21T17:21:38.950835+00:00",
+  "earlier_log_loss": {
+    "path": "foundation_documentation/artifacts/tmp/stcon05-cp05-browser-20261021T171500Z.log",
+    "previous_verified_sha256": "3ce9405c04f2ce9703979417b6b6a169418aa78bb7c3f92049c498eb9acfb946",
+    "previous_receipt": "evidence/root-cp05-browser-second-terminal-v1.1.json",
+    "disposition": "overwritten by executor reusing basename; original bytes unavailable; previous receipt historical only, not retained final-gate evidence"
+  },
+  "latest_run": {
+    "path": "foundation_documentation/artifacts/tmp/stcon05-cp05-browser-20261021T171500Z-attempt2.log",
+    "bytes": 73152,
+    "sha256": "388a559cbd15443d0f835836208964fe90ca827badefed749692ba4d01d8eafd",
+    "executor_reported_exit": 1,
+    "counts": {
+      "passed": 52,
+      "failed": 2
+    },
+    "cleanup": "terminal log contains disposable project cleanup",
+    "failures": [
+      "catalogue fixture remained APPROVED during a later refresh while expecting PAUSED",
+      "LOCKED draft intentionally omits submit control; test expected disabled control"
+    ]
+  },
+  "limits": [
+    "Root confirmed exact canonical attempt2 path exists and original basename absent; root did not rename/delete these paths.",
+    "Temporary failed path probes do not establish concurrent deletion; no actor or cause inferred beyond reported basename overwrite.",
+    "attempt2-recovered.log contains Docker No such container only and is not validation evidence.",
+    "Corrections and revision-descending remote refresh regression require new complete canonical all with exclusive log/exit names; no pass inferred."
+  ]
+}

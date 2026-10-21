@@ -1,0 +1,24 @@
+{
+  "schema": "stcon05.root-cp05-web-compilation.v1",
+  "recorded_at_utc": "2026-10-21T16:43:04.097948+00:00",
+  "logs": [
+    {
+      "path": "foundation_documentation/artifacts/tmp/stcon05-cp05-browser-20261021T173000Z.log",
+      "bytes": 57167,
+      "sha256": "b08f1b7f8510b23923f740ede06363e5dd1ccb6d4f99b31d056781b126d52e5f",
+      "result": "TS2304-no-browser-proof"
+    },
+    {
+      "path": "foundation_documentation/artifacts/tmp/stcon05-cp05-web-20261021T180000Z.log",
+      "bytes": 9226,
+      "sha256": "c9a11aad66f1a72d5a1f1bb48348416a3ca9447f2c39d9e614649d897857384e",
+      "result": "build-and30unit-passed-cleanup-terminal-pending"
+    }
+  ],
+  "source_state": "Executor completes grouped fixture/UI fixes; no consolidated all pass",
+  "limits": [
+    "Compilation failure is mechanical, not behavior RED",
+    "Web unit phase pass is not complete browser evidence",
+    "No provider/runtime action"
+  ]
+}

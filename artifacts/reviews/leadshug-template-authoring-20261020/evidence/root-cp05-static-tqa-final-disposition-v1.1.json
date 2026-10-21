@@ -1,0 +1,49 @@
+{
+  "schema": "stcon05.root-static-tqa-signal-disposition.v1",
+  "recorded_at_utc": "2026-10-21T17:22:19.582716+00:00",
+  "outcome": "signals-require-independent-review",
+  "gate_satisfying": false,
+  "command": "test_quality_audit.sh with17 explicit absolute public --path arguments, no git discovery/default traversal",
+  "targets": [
+    "api-app/src/domain/channels/channel-credential-resolver.spec.ts",
+    "api-app/src/domain/message-templates/template-definition.spec.ts",
+    "api-app/src/domain/message-templates/template-management.dependencies.spec.ts",
+    "api-app/src/domain/message-templates/template-management.ports.spec.ts",
+    "api-app/src/integrations/meta/message-template.client.spec.ts",
+    "api-app/test/browser-server.cjs",
+    "api-app/test/helpers.ts",
+    "api-app/test/message-template-bff.e2e-spec.ts",
+    "api-app/test/message-template-drafts.e2e-spec.ts",
+    "api-app/test/message-template-management.e2e-spec.ts",
+    "api-app/test/number-onboarding-pcv.e2e-spec.ts",
+    "api-app/test/timeline-fixtures.cjs",
+    "web-app/e2e/message-templates.spec.ts",
+    "web-app/e2e/number-onboarding-freshness.ts",
+    "web-app/e2e/timeline-freshness.ts",
+    "web-app/src/api.spec.ts",
+    "web-app/src/telas/Modelos.spec.ts"
+  ],
+  "static_exit_code": 2,
+  "log": "foundation_documentation/artifacts/tmp/stcon05-cp05-static-tqa-final-20261021T1724.log",
+  "log_sha256": "ab37e25b8a5baa43e455040c0ed6a5f369485441b2df9fa292fa1bd0e04d827a",
+  "counts": {
+    "hard_bypass": 0,
+    "test_support": 0,
+    "auth_shortcut": 0,
+    "status_only": 16,
+    "no_exception_only": 0,
+    "ambient_subject_fallback": 1,
+    "di_override": 0,
+    "mock_hint": 12
+  },
+  "root_triage": {
+    "status_only": "16 status hints require full nearby review. Browser oracles independently assert retained text/preview/version, owned rows, exact dispatch counts, provenance, selected current status and non-eligibility; PG own status pairs subject identity and tenant response. No hint is dismissed by transport success alone.",
+    "ambient_subject_fallback": "Unchanged inherited web/e2e/timeline-freshness.ts projects COUNT aggregate _prisma_migrations rows[0], not an ambient subject/candidate fallback; both freshness source seals remain exact. Default0 is not itself proof migrations were applied; canonical deploy/status separately supplies that evidence.",
+    "mock_hint": "Transaction boundary/clock spies are declared fault controls around real PostgreSQL commit/rollback or observation time. Must preserve real work and joins; no fake repository success or provider fallback. Independent TQA remains required.",
+    "preparation_correction": "Initial static pass omitted credential-resolver.spec.ts and test fixture paths; r2 includes all16, with unchanged full audit rules."
+  },
+  "limitations": [
+    "Primary all live; no final test result inferred",
+    "Independent full TQA remains required; static signal triage is not gate-satisfying"
+  ]
+}
