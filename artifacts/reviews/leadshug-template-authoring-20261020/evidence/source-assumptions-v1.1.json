@@ -1,0 +1,25 @@
+{
+  "schema": "stcon05-source-assumptions-v1",
+  "profile": "strategic-cto",
+  "gate0": "Genesis ruled out: existing canonical package",
+  "scope": [
+    "nestjs",
+    "react",
+    "vite",
+    "postgresql",
+    "prisma",
+    "docker"
+  ],
+  "source_manifest": "planning-source-v1.1.json",
+  "assumptions": {
+    "A-01": "Current MetaClient interface has no template methods",
+    "A-02": "resolve purpose send/registration/verify, send checks readiness; new management absent",
+    "A-03": "BFF imports ChannelTransportModule, prefix SessionMiddleware, single credential owner exported",
+    "A-04": "App routes/menu no /modelos; api.postWithHeaders exists",
+    "A-05": "current safe all runner positive inventory and shared CI; existing evidence historical verified, no current05 run",
+    "A-06": "Channel textual only; ChannelResolver and registry provide no management capability",
+    "A-07": "product heads fixed, inherited working-tree manifest41records (30sealed outside active scope)"
+  },
+  "inspection": "actual bounded current public files read; no product tests/runtime/private paths",
+  "guard_status": "prepared-pre-freeze"
+}

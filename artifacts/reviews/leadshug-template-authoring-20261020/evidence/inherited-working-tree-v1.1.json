@@ -1,0 +1,338 @@
+{
+  "schema": "stcon05-inherited-working-tree-v1",
+  "recorded_at": "2026-10-21T00:25:26.533088+00:00",
+  "authority": "ST-CON-06 local delivered contract and final-reviewed principal working tree; explicit current ST05 planning only",
+  "product_history_written": false,
+  "scope": "Positive public pathspecs before discovery; private inputs never enumerated; Foundation base is current published main",
+  "records": [
+    {
+      "repository": "root",
+      "path": ".github/workflows/ci.yml",
+      "git_status": "M",
+      "bytes": 4049,
+      "sha256": "16acaf6d4b807a806a50a31c75715b14e8b2e220e0e17e2bac43ec4b740318e5",
+      "active_mutation_admitted": false
+    },
+    {
+      "repository": "root",
+      "path": "scripts/test-channels-local.sh",
+      "git_status": "M",
+      "bytes": 12799,
+      "sha256": "de580538f3257a85448cb3ce5030c85b90f65507da53737e4491fdf543091e42",
+      "active_mutation_admitted": false
+    },
+    {
+      "repository": "root",
+      "path": "scripts/check-channels-ci-parity.py",
+      "git_status": "??",
+      "bytes": 29038,
+      "sha256": "d838d557177bf47423a063dfb0cb12b6cdf1e319986c4340286ada097742ce13",
+      "active_mutation_admitted": false
+    },
+    {
+      "repository": "api",
+      "path": "prisma/schema.prisma",
+      "git_status": "M",
+      "bytes": 26850,
+      "sha256": "26444c6a102755fa5a10f1930d4a9ff256a8f76bd515cc0e10e8b1fe6fb7cf99",
+      "active_mutation_admitted": true
+    },
+    {
+      "repository": "api",
+      "path": "src/domain/channels/channel-credential-resolver.ts",
+      "git_status": "M",
+      "bytes": 5053,
+      "sha256": "89cf17ac02af444092651470aee13e2d4a3bcee8d459508be818322b33b00c10",
+      "active_mutation_admitted": true
+    },
+    {
+      "repository": "api",
+      "path": "src/domain/inbox/conversations.service.ts",
+      "git_status": "M",
+      "bytes": 8137,
+      "sha256": "c7d84f983ed61c6022424d4648e07282e7eb53c40fa9aba249618d77b3c223de",
+      "active_mutation_admitted": false
+    },
+    {
+      "repository": "api",
+      "path": "src/domain/inbox/incoming.service.ts",
+      "git_status": "M",
+      "bytes": 6076,
+      "sha256": "b0ec43187b1f48720aa899e40f979dd0ae447321581d675b84ef9c71dbd0ff42",
+      "active_mutation_admitted": false
+    },
+    {
+      "repository": "api",
+      "path": "src/domain/inbox/incoming.typebot.integration.spec.ts",
+      "git_status": "M",
+      "bytes": 7081,
+      "sha256": "7b0e7d75fc5809b8c950896818779402fe2bf32ef37a94d970fe081240562975",
+      "active_mutation_admitted": false
+    },
+    {
+      "repository": "api",
+      "path": "src/integrations/evolution/evolution.client.spec.ts",
+      "git_status": "M",
+      "bytes": 6530,
+      "sha256": "119d962fdcd9c895b75845dca74d8506147e11480d74b82e8c37f29f97c04081",
+      "active_mutation_admitted": false
+    },
+    {
+      "repository": "api",
+      "path": "src/integrations/evolution/evolution.client.ts",
+      "git_status": "M",
+      "bytes": 7214,
+      "sha256": "b0824e8fd4f801a239521855aaa02da5e0943a8c86c4ac8778e2f1f352821698",
+      "active_mutation_admitted": false
+    },
+    {
+      "repository": "api",
+      "path": "src/integrations/meta/meta.client.spec.ts",
+      "git_status": "M",
+      "bytes": 38572,
+      "sha256": "d7e76f5c392afab1638363d3c851f8ce8c5223ff27c64801a79fdc8ec00d5e7a",
+      "active_mutation_admitted": false
+    },
+    {
+      "repository": "api",
+      "path": "src/integrations/meta/meta.client.ts",
+      "git_status": "M",
+      "bytes": 17388,
+      "sha256": "9f954f6c1c2bd10030f5eed0cb42e493d6e480106bcfc3f44977cb97a716d34f",
+      "active_mutation_admitted": false
+    },
+    {
+      "repository": "api",
+      "path": "src/surfaces/bff/bff.module.ts",
+      "git_status": "M",
+      "bytes": 4917,
+      "sha256": "327f34eba67746882abc601a3817d94270cff3018d6972a8095dae530a2d6e29",
+      "active_mutation_admitted": true
+    },
+    {
+      "repository": "api",
+      "path": "src/surfaces/bff/conversations.controller.ts",
+      "git_status": "M",
+      "bytes": 5626,
+      "sha256": "53d3cffaa258ba1ad45c21eae4ab8712e2011255b7ca14965f73221edd0cc002",
+      "active_mutation_admitted": false
+    },
+    {
+      "repository": "api",
+      "path": "src/surfaces/public/conversations.controller.ts",
+      "git_status": "M",
+      "bytes": 12059,
+      "sha256": "bbb5ebf085e59840f3a9e9cbc1f07c57cdc58d1a5b6f846f934fb526cc29bfd1",
+      "active_mutation_admitted": false
+    },
+    {
+      "repository": "api",
+      "path": "src/surfaces/public/public.module.ts",
+      "git_status": "M",
+      "bytes": 1208,
+      "sha256": "00a96d54fde7061f61f4ddf2b9cef836a02ad77ca29b62ea422695b9d8f90ef8",
+      "active_mutation_admitted": false
+    },
+    {
+      "repository": "api",
+      "path": "src/surfaces/webhooks/webhooks.module.ts",
+      "git_status": "M",
+      "bytes": 1111,
+      "sha256": "abc8fd7960fcca1ce43d21d44a90f8d4708d47e07bde9a48c0009e02dc0503a6",
+      "active_mutation_admitted": false
+    },
+    {
+      "repository": "api",
+      "path": "test/api-publica.e2e-spec.ts",
+      "git_status": "M",
+      "bytes": 20607,
+      "sha256": "353497daddfe6ca072ee697aa60d6e9d5762dd869f164d0d3b5b7fbee1d44060",
+      "active_mutation_admitted": false
+    },
+    {
+      "repository": "api",
+      "path": "test/browser-server.cjs",
+      "git_status": "M",
+      "bytes": 11647,
+      "sha256": "40e56e2d6672800acd4a00f87b942fc88b8361c770d06ee6d7c8a883a15d3390",
+      "active_mutation_admitted": true
+    },
+    {
+      "repository": "api",
+      "path": "test/helpers.ts",
+      "git_status": "M",
+      "bytes": 18367,
+      "sha256": "747dcd1a6db374c1ccb0f2a248b08d49c2ec62a46beb345cc03eea3c058d36f2",
+      "active_mutation_admitted": true
+    },
+    {
+      "repository": "api",
+      "path": "test/number-onboarding-pcv.e2e-spec.ts",
+      "git_status": "M",
+      "bytes": 42837,
+      "sha256": "9cf66e8950a60a0ed4e620d3f24bc8285a316edf2a72a8af3590326b478e308f",
+      "active_mutation_admitted": true
+    },
+    {
+      "repository": "api",
+      "path": "test/number-onboarding-typebot.e2e-spec.ts",
+      "git_status": "M",
+      "bytes": 19718,
+      "sha256": "8c23956a13336c4091d62b9aee7383065f81c5e6575661729b044048626cbd8e",
+      "active_mutation_admitted": false
+    },
+    {
+      "repository": "api",
+      "path": "test/timeline-fixtures.cjs",
+      "git_status": "M",
+      "bytes": 24711,
+      "sha256": "889707ec7857e8a17a850e56eb60d24e6953e59028f40880edff3756340fd23a",
+      "active_mutation_admitted": true
+    },
+    {
+      "repository": "api",
+      "path": "prisma/migrations/20261020170000_message_inbound_window_index/migration.sql",
+      "git_status": "??",
+      "bytes": 212,
+      "sha256": "586e709e07736eca0908ab5dcc668cf0e0b317189b4c963b361399848a3c9710",
+      "active_mutation_admitted": false
+    },
+    {
+      "repository": "api",
+      "path": "src/domain/channels/transport/channel-dependencies.spec.ts",
+      "git_status": "??",
+      "bytes": 2383,
+      "sha256": "f59d838baf635c0ce0d1ebe725c88fbb0b19fac42e9b382452e31fd38e0511a3",
+      "active_mutation_admitted": false
+    },
+    {
+      "repository": "api",
+      "path": "src/domain/channels/transport/channel.ts",
+      "git_status": "??",
+      "bytes": 2678,
+      "sha256": "432796b8685d07dcc53c3a699a7b9d1469ac4fb110aea080766ec207bec8621f",
+      "active_mutation_admitted": false
+    },
+    {
+      "repository": "api",
+      "path": "src/domain/inbox/outbound.service.spec.ts",
+      "git_status": "??",
+      "bytes": 8314,
+      "sha256": "ae1f9208d660c684dca9b1ac5727001d8e57c4c9504be9be1d20ecba32e01805",
+      "active_mutation_admitted": false
+    },
+    {
+      "repository": "api",
+      "path": "src/domain/inbox/outbound.service.ts",
+      "git_status": "??",
+      "bytes": 13056,
+      "sha256": "63bcf773e2b4c5a5ddd688a1bb13745a0a206d995fafc665925df3fecaf394aa",
+      "active_mutation_admitted": false
+    },
+    {
+      "repository": "api",
+      "path": "src/integrations/channels/channel-adapter-factory.ts",
+      "git_status": "??",
+      "bytes": 440,
+      "sha256": "e0ebdd78e387f7ee3af902f038d22449e212c1301ffa642bbceb5a5f05d2abfc",
+      "active_mutation_admitted": false
+    },
+    {
+      "repository": "api",
+      "path": "src/integrations/channels/channel-adapter-registry.ts",
+      "git_status": "??",
+      "bytes": 975,
+      "sha256": "655b735e239e89fbaede36689d1c22245d3804d66646f7736db991cb5099b02b",
+      "active_mutation_admitted": false
+    },
+    {
+      "repository": "api",
+      "path": "src/integrations/channels/channel-transport.module.ts",
+      "git_status": "??",
+      "bytes": 1663,
+      "sha256": "32203d3b8393a34a9effab4266683c389651d7ec197e8f9d704a77a6a37f40dc",
+      "active_mutation_admitted": false
+    },
+    {
+      "repository": "api",
+      "path": "src/integrations/channels/evolution-channel.ts",
+      "git_status": "??",
+      "bytes": 1561,
+      "sha256": "60faf1ea40fe17ad62495b0f42a2cf958defcb41e3ad72d3d2213751539b460c",
+      "active_mutation_admitted": false
+    },
+    {
+      "repository": "api",
+      "path": "src/integrations/channels/meta-channel.ts",
+      "git_status": "??",
+      "bytes": 1613,
+      "sha256": "997e739cf7d7231918dc97fc347bfeb32a1cd74d084ead8c64b01157022f8138",
+      "active_mutation_admitted": false
+    },
+    {
+      "repository": "api",
+      "path": "src/integrations/channels/prisma-channel-resolver.ts",
+      "git_status": "??",
+      "bytes": 19223,
+      "sha256": "acf779d89162d339e37af2abe2aa91fd1a1b292d7f5208bb672090c87a23bf4d",
+      "active_mutation_admitted": false
+    },
+    {
+      "repository": "api",
+      "path": "test/channel-transport.e2e-spec.ts",
+      "git_status": "??",
+      "bytes": 34765,
+      "sha256": "69ddc87cbc9328136f92ea1c1cf9293b0bc2296ad383836322c6feb4b27c6015",
+      "active_mutation_admitted": false
+    },
+    {
+      "repository": "web",
+      "path": "e2e/number-onboarding-freshness.ts",
+      "git_status": "M",
+      "bytes": 5059,
+      "sha256": "880b49f8fa428568692b92a883dd00c5ce76214b1f2db5b35cafb9b0553ed9ad",
+      "active_mutation_admitted": true
+    },
+    {
+      "repository": "web",
+      "path": "e2e/timeline-freshness.ts",
+      "git_status": "M",
+      "bytes": 8499,
+      "sha256": "3a06fb36e3a9bcf20a12cd8201da2daa3b567775f15e2be5f068e97e840d7f53",
+      "active_mutation_admitted": true
+    },
+    {
+      "repository": "web",
+      "path": "src/api.spec.ts",
+      "git_status": "M",
+      "bytes": 6256,
+      "sha256": "e305671fc6d9775ef3c0365ed12470fb14ea3dd71ff3aca49f153262017147d6",
+      "active_mutation_admitted": true
+    },
+    {
+      "repository": "web",
+      "path": "src/api.ts",
+      "git_status": "M",
+      "bytes": 10385,
+      "sha256": "dd59a37799453d3e68fc64a6477e1578956d15d1a4920af90e22ff2b83057505",
+      "active_mutation_admitted": true
+    },
+    {
+      "repository": "web",
+      "path": "src/telas/Inbox.tsx",
+      "git_status": "M",
+      "bytes": 21225,
+      "sha256": "d70bde9ede67759d479f644598356e46aac2916a12b2ed1770c17a169118586c",
+      "active_mutation_admitted": false
+    },
+    {
+      "repository": "web",
+      "path": "e2e/channel-transport.spec.ts",
+      "git_status": "??",
+      "bytes": 12119,
+      "sha256": "b3604496727a85d7ce12c2cb6e7a479575356a61ef4c529d385047e066a8e0f3",
+      "active_mutation_admitted": false
+    }
+  ],
+  "enforcement": "Before every execution/checkpoint/delivery, all inherited records with active_mutation_admitted=false must retain their exact hash. New changed paths must satisfy strict Expected Changed Paths. Shared admitted paths may change only for ST05; semantic baseline and other consumers remain protected by full all and independent review."
+}
