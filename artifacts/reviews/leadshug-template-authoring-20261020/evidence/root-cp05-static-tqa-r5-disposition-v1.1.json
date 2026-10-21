@@ -1,0 +1,125 @@
+{
+  "schema": "stcon05.root-static-tqa-signal-disposition.v1",
+  "recorded_at_utc": "2026-10-21T17:50:30.611035+00:00",
+  "outcome": "signals-require-independent-review",
+  "gate_satisfying": false,
+  "command": "test_quality_audit.sh with18 explicit absolute public --path arguments, no git discovery/default traversal",
+  "targets": [
+    "api-app/src/domain/channels/channel-credential-resolver.spec.ts",
+    "api-app/src/domain/message-templates/template-definition.spec.ts",
+    "api-app/src/domain/message-templates/template-management.dependencies.spec.ts",
+    "api-app/src/domain/message-templates/template-management.ports.spec.ts",
+    "api-app/src/integrations/meta/message-template.client.spec.ts",
+    "api-app/test/browser-server.cjs",
+    "api-app/test/helpers.ts",
+    "api-app/test/message-template-bff.e2e-spec.ts",
+    "api-app/test/message-template-drafts.e2e-spec.ts",
+    "api-app/test/message-template-management.e2e-spec.ts",
+    "api-app/test/number-onboarding-pcv.e2e-spec.ts",
+    "api-app/test/timeline-fixtures.cjs",
+    "web-app/e2e/message-templates.spec.ts",
+    "web-app/e2e/number-onboarding-freshness.ts",
+    "web-app/e2e/timeline-freshness.ts",
+    "web-app/src/api.spec.ts",
+    "web-app/src/telas/Modelos.spec.ts",
+    "api-app/test/number-onboarding-bci.e2e-spec.ts"
+  ],
+  "static_exit_code": 2,
+  "log": "foundation_documentation/artifacts/tmp/stcon05-cp05-static-tqa-r5-20261021T1750.log",
+  "log_sha256": "4d71484a02b988c48902f191468e53398a0fd5c17a39737bbdb472c8b2321cf1",
+  "counts": {
+    "hard_bypass": 0,
+    "test_support": 0,
+    "auth_shortcut": 0,
+    "status_only": 19,
+    "no_exception_only": 0,
+    "ambient_subject_fallback": 1,
+    "di_override": 0,
+    "mock_hint": 13
+  },
+  "root_triage": {
+    "status_only": "16 status hints require full nearby review. Browser oracles independently assert retained text/preview/version, owned rows, exact dispatch counts, provenance, selected current status and non-eligibility; PG own status pairs subject identity and tenant response. No hint is dismissed by transport success alone.",
+    "ambient_subject_fallback": "Unchanged inherited web/e2e/timeline-freshness.ts projects COUNT aggregate _prisma_migrations rows[0], not an ambient subject/candidate fallback; both freshness source seals remain exact. Default0 is not itself proof migrations were applied; canonical deploy/status separately supplies that evidence.",
+    "mock_hint": "Transaction boundary/clock spies are declared fault controls around real PostgreSQL commit/rollback or observation time. Must preserve real work and joins; no fake repository success or provider fallback. Independent TQA remains required.",
+    "preparation_correction": "Initial static pass omitted credential-resolver.spec.ts and test fixture paths; r2 includes all16, with unchanged full audit rules.",
+    "bci_startup": "Existing BCI suite admitted only for persistent loopback ephemeral server startup plus positive listening/address checks. Existing5x20 HTTP intents, business counts and teardown remain byte-identical outside exact admitted delta. Static hints in its assertions still require full independent TQA; no rewrite to clear signals."
+  },
+  "limitations": [
+    "Primary all live; no final test result inferred",
+    "Independent full TQA remains required; static signal triage is not gate-satisfying"
+  ],
+  "source_hashes": [
+    {
+      "path": "api-app/src/domain/channels/channel-credential-resolver.spec.ts",
+      "sha256": "a60d142fcc335de43c5a697d9f7758f722883a1725c824dd0a4b4f0a2f7fb03b"
+    },
+    {
+      "path": "api-app/src/domain/message-templates/template-definition.spec.ts",
+      "sha256": "9a60549d1c79d73889fd2d47b7ea3bb25b8a0bf140da805f64216decc6ff9d97"
+    },
+    {
+      "path": "api-app/src/domain/message-templates/template-management.dependencies.spec.ts",
+      "sha256": "a03a567e5b96a348b4ab40bb18282a555d30ad3533e6efb929c5d2f2614c82b2"
+    },
+    {
+      "path": "api-app/src/domain/message-templates/template-management.ports.spec.ts",
+      "sha256": "ddf581459b66bf0eb26ec710ded050f45713e5dd5317066cea574dacf57a68bc"
+    },
+    {
+      "path": "api-app/src/integrations/meta/message-template.client.spec.ts",
+      "sha256": "0c0a54fdea9625049b4fd127b9e111cdf9dd801c599a21ad79c0901db6381959"
+    },
+    {
+      "path": "api-app/test/browser-server.cjs",
+      "sha256": "a5da3c6eb80d5344a383b6079a7a38b107a2794825fc4189891335f9c79fd600"
+    },
+    {
+      "path": "api-app/test/helpers.ts",
+      "sha256": "117e4f85c81dda37ab30e7eb23704b31538c8c5161aa7562a844eaf11de6819c"
+    },
+    {
+      "path": "api-app/test/message-template-bff.e2e-spec.ts",
+      "sha256": "f6175834f9fd9c596b5e8bd3fb2d625bc32ec831e78cdfe7564f1e405fb40c16"
+    },
+    {
+      "path": "api-app/test/message-template-drafts.e2e-spec.ts",
+      "sha256": "cda2cda9f4fd92bc80a84d18604b72a92f7614bcc8c41dd05b46bf792597130a"
+    },
+    {
+      "path": "api-app/test/message-template-management.e2e-spec.ts",
+      "sha256": "d29798dad0e6bb8db77e8fef11f2640b3c2619e521f48a18d3522bb705e6afa4"
+    },
+    {
+      "path": "api-app/test/number-onboarding-pcv.e2e-spec.ts",
+      "sha256": "cc5b2c440abe2e6389ee4f4a612a9f01f2584338dc3fc4e5ee4605339ffa0bf9"
+    },
+    {
+      "path": "api-app/test/timeline-fixtures.cjs",
+      "sha256": "0b85a693e5d534cf692f40b8362da1462d86d016485af6b90e1519d3cbd86127"
+    },
+    {
+      "path": "web-app/e2e/message-templates.spec.ts",
+      "sha256": "419475559d52e169af0d133f98897e956d87a4ef1c84a10c8dad096c9dc78762"
+    },
+    {
+      "path": "web-app/e2e/number-onboarding-freshness.ts",
+      "sha256": "880b49f8fa428568692b92a883dd00c5ce76214b1f2db5b35cafb9b0553ed9ad"
+    },
+    {
+      "path": "web-app/e2e/timeline-freshness.ts",
+      "sha256": "3a06fb36e3a9bcf20a12cd8201da2daa3b567775f15e2be5f068e97e840d7f53"
+    },
+    {
+      "path": "web-app/src/api.spec.ts",
+      "sha256": "5df822dbb810b823a7922dd15e1568b9e8a6f4e5b16541ca5452daaca642d75f"
+    },
+    {
+      "path": "web-app/src/telas/Modelos.spec.ts",
+      "sha256": "bafd271ea40f0b74a82a1b5c57edc1d4e686c8162dd31c94029040444cfcbc69"
+    },
+    {
+      "path": "api-app/test/number-onboarding-bci.e2e-spec.ts",
+      "sha256": "779ad4f9f201ef366cd66c2692098957290a15857179d2a5b249415aef1c7bbd"
+    }
+  ]
+}

@@ -41,8 +41,8 @@ O usuário quer preparar no LeadsHug a mensagem que usará para iniciar atendime
 
 ## Delivery Status Canon (Required)
 - **Current delivery stage:** Pending
-- **Qualifiers:** none
-- **Next exact step:** aplicar diff pontual BCI validado pelo usuário, conferir baseline e38fontes; executar browser para os cenários pendentes e all consolidado. Depois assurance candidata, ativação/prova assistida e revisão final. Nenhum aceite GREEN/entrega antecipado.
+- **Qualifiers:** Blocked
+- **Next exact step:** aguardar reinício do Docker Desktop pelo operador e confirmar daemon saudável; espaçoC: recuperado (~132GiB), motor ainda timeout.38fontes/30selos/3HEADs continuam exatos. Depois repetir browser interrompido, all consolidado, assurance candidata, ativação/prova assistida e revisão final. Sem aceite GREEN/entrega antecipado.
 
 ## Active Work State (Required While TODO Remains In `active/`)
 - **Work state:** implementation
@@ -63,7 +63,7 @@ n/a; sem entrega reivindicada.
 
 ## Blocker Notes (Required if `Qualifiers` includes `Blocked`)
 
-Planejamento não bloqueado. O operador ainda não possui template aprovado; a própria capacidade de criar/submeter é esta história. Aprovação externa pode ser recusada/demorada e não pode ser simulada. Primeiro envio físico pertence ao ST-CON-04 e depende de recurso elegível.
+Validação bloqueada pelo motor Docker Desktop local sem resposta após esgotamento de espaçoC:. O usuário liberou espaço; Win32_LogicalDisk agora informa142093606912bytes livres, mas docker.exe info ainda expira em15s. O browser anterior terminou com41passed e Bus error, sem asserção conclusiva do caso42; cleanup encontrou filesystem read-only. Nenhum aceite completo é inferido. Reinício global do Desktop aguarda ação explícita do operador porque pode interromper outros containers; nenhum prune/reset/exclusão ou restart foi executado pelo agente.38fontes e30selos/3HEADs foram novamente conferidos. Evidência: artifacts/reviews/leadshug-template-authoring-20261020/evidence/host-space-recovery-daemon-pending-v1.1.json. Banco/runtime/Meta preservados sem nova ação. Após recuperação: browser/all e gates permanecem obrigatórios.
 
 ## Execution Lane Tracking (Required)
 

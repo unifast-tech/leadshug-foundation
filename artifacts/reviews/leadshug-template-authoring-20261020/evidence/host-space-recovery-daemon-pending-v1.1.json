@@ -1,0 +1,181 @@
+{
+  "schema": "stcon05.host-readiness-recheck.v1",
+  "recorded_at_utc": "2026-10-21T18:04:04.402259+00:00",
+  "authority": "user reports space cleanup complete; read-only recheck before validation resumes",
+  "profile": "operational-devops",
+  "scope": "docker readiness; no runtime mutation",
+  "space": {
+    "device": "C:",
+    "size_bytes": 943918497792,
+    "free_bytes": 142093606912,
+    "source": "Win32_LogicalDisk bounded DeviceID/Size/FreeSpace projection"
+  },
+  "docker": {
+    "context": "desktop-linux",
+    "info": "timeout15s",
+    "desktop_processes_present": true,
+    "backend_processes_present": true,
+    "desktop_cli_capabilities": "alpha CLI exposes version/module; no restart command advertised"
+  },
+  "candidate_source_matches": [
+    {
+      "path": "api-app/prisma/migrations/20261021130000_message_template_drafts/migration.sql",
+      "matches": true
+    },
+    {
+      "path": "api-app/prisma/migrations/20261021150000_message_template_operations/migration.sql",
+      "matches": true
+    },
+    {
+      "path": "api-app/prisma/schema.prisma",
+      "matches": true
+    },
+    {
+      "path": "api-app/src/domain/channels/channel-credential-resolver.spec.ts",
+      "matches": true
+    },
+    {
+      "path": "api-app/src/domain/channels/channel-credential-resolver.ts",
+      "matches": true
+    },
+    {
+      "path": "api-app/src/domain/historico/catalogo.ts",
+      "matches": true
+    },
+    {
+      "path": "api-app/src/domain/historico/cobertura.ts",
+      "matches": true
+    },
+    {
+      "path": "api-app/src/domain/message-templates/template-definition.spec.ts",
+      "matches": true
+    },
+    {
+      "path": "api-app/src/domain/message-templates/template-definition.ts",
+      "matches": true
+    },
+    {
+      "path": "api-app/src/domain/message-templates/template-draft.service.ts",
+      "matches": true
+    },
+    {
+      "path": "api-app/src/domain/message-templates/template-management.dependencies.spec.ts",
+      "matches": true
+    },
+    {
+      "path": "api-app/src/domain/message-templates/template-management.ports.spec.ts",
+      "matches": true
+    },
+    {
+      "path": "api-app/src/domain/message-templates/template-management.ports.ts",
+      "matches": true
+    },
+    {
+      "path": "api-app/src/domain/message-templates/template-observation.service.ts",
+      "matches": true
+    },
+    {
+      "path": "api-app/src/domain/message-templates/template-submission.service.ts",
+      "matches": true
+    },
+    {
+      "path": "api-app/src/domain/message-templates/template-transaction-boundary.ts",
+      "matches": true
+    },
+    {
+      "path": "api-app/src/integrations/message-templates/template-management.module.ts",
+      "matches": true
+    },
+    {
+      "path": "api-app/src/integrations/message-templates/template-management.resolver.ts",
+      "matches": true
+    },
+    {
+      "path": "api-app/src/integrations/meta/message-template.client.spec.ts",
+      "matches": true
+    },
+    {
+      "path": "api-app/src/integrations/meta/message-template.client.ts",
+      "matches": true
+    },
+    {
+      "path": "api-app/src/surfaces/bff/bff.module.ts",
+      "matches": true
+    },
+    {
+      "path": "api-app/src/surfaces/bff/message-templates.controller.ts",
+      "matches": true
+    },
+    {
+      "path": "api-app/test/browser-server.cjs",
+      "matches": true
+    },
+    {
+      "path": "api-app/test/helpers.ts",
+      "matches": true
+    },
+    {
+      "path": "api-app/test/message-template-bff.e2e-spec.ts",
+      "matches": true
+    },
+    {
+      "path": "api-app/test/message-template-drafts.e2e-spec.ts",
+      "matches": true
+    },
+    {
+      "path": "api-app/test/message-template-management.e2e-spec.ts",
+      "matches": true
+    },
+    {
+      "path": "api-app/test/number-onboarding-bci.e2e-spec.ts",
+      "matches": true
+    },
+    {
+      "path": "api-app/test/number-onboarding-pcv.e2e-spec.ts",
+      "matches": true
+    },
+    {
+      "path": "api-app/test/timeline-fixtures.cjs",
+      "matches": true
+    },
+    {
+      "path": "web-app/e2e/message-templates.spec.ts",
+      "matches": true
+    },
+    {
+      "path": "web-app/e2e/number-onboarding-freshness.ts",
+      "matches": true
+    },
+    {
+      "path": "web-app/e2e/timeline-freshness.ts",
+      "matches": true
+    },
+    {
+      "path": "web-app/src/App.tsx",
+      "matches": true
+    },
+    {
+      "path": "web-app/src/api.spec.ts",
+      "matches": true
+    },
+    {
+      "path": "web-app/src/api.ts",
+      "matches": true
+    },
+    {
+      "path": "web-app/src/telas/Modelos.spec.ts",
+      "matches": true
+    },
+    {
+      "path": "web-app/src/telas/Modelos.tsx",
+      "matches": true
+    }
+  ],
+  "outcome": "host-space-recovered-daemon-unavailable",
+  "pending_action": "user performs Docker Desktop Troubleshoot Restart Docker Desktop when shared-container interruption is acceptable; then bounded health/readiness check before tests",
+  "limits": [
+    "No private dotenv or local-files read/list/stat/hash/mount",
+    "No Docker prune/reset/delete/restart or application/migration action",
+    "No new test result claimed; browser41-before-crash remains failed/incomplete"
+  ]
+}

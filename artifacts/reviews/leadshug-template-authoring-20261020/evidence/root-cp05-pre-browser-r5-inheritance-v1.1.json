@@ -1,0 +1,70 @@
+{
+  "schema": "stcon05.root-exact-inheritance.v1",
+  "recorded_at_utc": "2026-10-21T17:48:54.633293+00:00",
+  "outcome": "go",
+  "sealed_exact": 30,
+  "sealed_mismatches": [],
+  "heads_match": {
+    "root": true,
+    "api": true,
+    "web": true
+  },
+  "shared": [
+    {
+      "repository": "api",
+      "path": "prisma/schema.prisma",
+      "matches_original": false
+    },
+    {
+      "repository": "api",
+      "path": "src/domain/channels/channel-credential-resolver.ts",
+      "matches_original": false
+    },
+    {
+      "repository": "api",
+      "path": "src/surfaces/bff/bff.module.ts",
+      "matches_original": false
+    },
+    {
+      "repository": "api",
+      "path": "test/browser-server.cjs",
+      "matches_original": false
+    },
+    {
+      "repository": "api",
+      "path": "test/helpers.ts",
+      "matches_original": false
+    },
+    {
+      "repository": "api",
+      "path": "test/number-onboarding-pcv.e2e-spec.ts",
+      "matches_original": false
+    },
+    {
+      "repository": "api",
+      "path": "test/timeline-fixtures.cjs",
+      "matches_original": false
+    },
+    {
+      "repository": "web",
+      "path": "e2e/number-onboarding-freshness.ts",
+      "matches_original": true
+    },
+    {
+      "repository": "web",
+      "path": "e2e/timeline-freshness.ts",
+      "matches_original": true
+    },
+    {
+      "repository": "web",
+      "path": "src/api.spec.ts",
+      "matches_original": false
+    },
+    {
+      "repository": "web",
+      "path": "src/api.ts",
+      "matches_original": false
+    }
+  ],
+  "limits": "Only exact41approvedpublicpaths and3HEADs; no private discovery. Shared deltas require independent review; this is not delivery assurance."
+}

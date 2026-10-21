@@ -1,0 +1,218 @@
+{
+  "schema": "stcon05.browser-infrastructure-failure.v1",
+  "recorded_at_utc": "2026-10-21T17:55:07.898597+00:00",
+  "log": "foundation_documentation/artifacts/tmp/stcon05-cp05-browser-20261021T174901Z-r5.log",
+  "log_sha256": "22451f83cc5f5c52514878843aa8548c9414100d1cdee703476f39fa182cd39c",
+  "log_bytes": 65268,
+  "terminal_exit": 1,
+  "browser_passed_before_abort": 41,
+  "case42": "marked failed after36.5s; no assertion stack retained before Bus error(core dumped); not classified as product defect",
+  "infrastructure": "Docker overlay2 cleanup returned read-only file system; actual diagnostics pending",
+  "template_frc_marker_present": false,
+  "attestation": {
+    "path": "foundation_documentation/artifacts/tmp/stcon05-cp05-attestation-browser-authority-20261021T174901Z-r5.json",
+    "sha256": "7ba7101518963ae9c02880503fe209654c18680b5f09d1fed239ec68f3ed08ae",
+    "captured_at_utc": "2026-10-21T17:51:43.908Z",
+    "run_id": "2026-10-21T17-51-43-908Z",
+    "served_sha256": "3178d41035154c0a170989f4a86b99ab5bb8987297605024fbed8e7d118bcc16",
+    "dist_sha256": "3178d41035154c0a170989f4a86b99ab5bb8987297605024fbed8e7d118bcc16",
+    "served_matches_dist": true
+  },
+  "pre_worker": {
+    "path": "foundation_documentation/artifacts/tmp/stcon05-cp05-pre-worker-freshness-20261021T174901Z-r5.json",
+    "sha256": "be7264c82f9f31ae1fa2465fb11e27778ec542a781cf76e915aa549091ed2f3f"
+  },
+  "source_matches": [
+    {
+      "path": "api-app/prisma/migrations/20261021130000_message_template_drafts/migration.sql",
+      "source_matches": true,
+      "attested_matches": true
+    },
+    {
+      "path": "api-app/prisma/migrations/20261021150000_message_template_operations/migration.sql",
+      "source_matches": true,
+      "attested_matches": true
+    },
+    {
+      "path": "api-app/prisma/schema.prisma",
+      "source_matches": true,
+      "attested_matches": true
+    },
+    {
+      "path": "api-app/src/domain/channels/channel-credential-resolver.spec.ts",
+      "source_matches": true,
+      "attested_matches": true
+    },
+    {
+      "path": "api-app/src/domain/channels/channel-credential-resolver.ts",
+      "source_matches": true,
+      "attested_matches": true
+    },
+    {
+      "path": "api-app/src/domain/historico/catalogo.ts",
+      "source_matches": true,
+      "attested_matches": true
+    },
+    {
+      "path": "api-app/src/domain/historico/cobertura.ts",
+      "source_matches": true,
+      "attested_matches": true
+    },
+    {
+      "path": "api-app/src/domain/message-templates/template-definition.spec.ts",
+      "source_matches": true,
+      "attested_matches": true
+    },
+    {
+      "path": "api-app/src/domain/message-templates/template-definition.ts",
+      "source_matches": true,
+      "attested_matches": true
+    },
+    {
+      "path": "api-app/src/domain/message-templates/template-draft.service.ts",
+      "source_matches": true,
+      "attested_matches": true
+    },
+    {
+      "path": "api-app/src/domain/message-templates/template-management.dependencies.spec.ts",
+      "source_matches": true,
+      "attested_matches": true
+    },
+    {
+      "path": "api-app/src/domain/message-templates/template-management.ports.spec.ts",
+      "source_matches": true,
+      "attested_matches": true
+    },
+    {
+      "path": "api-app/src/domain/message-templates/template-management.ports.ts",
+      "source_matches": true,
+      "attested_matches": true
+    },
+    {
+      "path": "api-app/src/domain/message-templates/template-observation.service.ts",
+      "source_matches": true,
+      "attested_matches": true
+    },
+    {
+      "path": "api-app/src/domain/message-templates/template-submission.service.ts",
+      "source_matches": true,
+      "attested_matches": true
+    },
+    {
+      "path": "api-app/src/domain/message-templates/template-transaction-boundary.ts",
+      "source_matches": true,
+      "attested_matches": true
+    },
+    {
+      "path": "api-app/src/integrations/message-templates/template-management.module.ts",
+      "source_matches": true,
+      "attested_matches": true
+    },
+    {
+      "path": "api-app/src/integrations/message-templates/template-management.resolver.ts",
+      "source_matches": true,
+      "attested_matches": true
+    },
+    {
+      "path": "api-app/src/integrations/meta/message-template.client.spec.ts",
+      "source_matches": true,
+      "attested_matches": true
+    },
+    {
+      "path": "api-app/src/integrations/meta/message-template.client.ts",
+      "source_matches": true,
+      "attested_matches": true
+    },
+    {
+      "path": "api-app/src/surfaces/bff/bff.module.ts",
+      "source_matches": true,
+      "attested_matches": true
+    },
+    {
+      "path": "api-app/src/surfaces/bff/message-templates.controller.ts",
+      "source_matches": true,
+      "attested_matches": true
+    },
+    {
+      "path": "api-app/test/browser-server.cjs",
+      "source_matches": true,
+      "attested_matches": true
+    },
+    {
+      "path": "api-app/test/helpers.ts",
+      "source_matches": true,
+      "attested_matches": true
+    },
+    {
+      "path": "api-app/test/message-template-bff.e2e-spec.ts",
+      "source_matches": true,
+      "attested_matches": true
+    },
+    {
+      "path": "api-app/test/message-template-drafts.e2e-spec.ts",
+      "source_matches": true,
+      "attested_matches": true
+    },
+    {
+      "path": "api-app/test/message-template-management.e2e-spec.ts",
+      "source_matches": true,
+      "attested_matches": true
+    },
+    {
+      "path": "api-app/test/number-onboarding-bci.e2e-spec.ts",
+      "source_matches": true,
+      "attested_matches": true
+    },
+    {
+      "path": "api-app/test/number-onboarding-pcv.e2e-spec.ts",
+      "source_matches": true,
+      "attested_matches": true
+    },
+    {
+      "path": "api-app/test/timeline-fixtures.cjs",
+      "source_matches": true,
+      "attested_matches": true
+    },
+    {
+      "path": "web-app/e2e/message-templates.spec.ts",
+      "source_matches": true,
+      "attested_matches": true
+    },
+    {
+      "path": "web-app/e2e/number-onboarding-freshness.ts",
+      "source_matches": true,
+      "attested_matches": true
+    },
+    {
+      "path": "web-app/e2e/timeline-freshness.ts",
+      "source_matches": true,
+      "attested_matches": true
+    },
+    {
+      "path": "web-app/src/App.tsx",
+      "source_matches": true,
+      "attested_matches": true
+    },
+    {
+      "path": "web-app/src/api.spec.ts",
+      "source_matches": true,
+      "attested_matches": true
+    },
+    {
+      "path": "web-app/src/api.ts",
+      "source_matches": true,
+      "attested_matches": true
+    },
+    {
+      "path": "web-app/src/telas/Modelos.spec.ts",
+      "source_matches": true,
+      "attested_matches": true
+    },
+    {
+      "path": "web-app/src/telas/Modelos.tsx",
+      "source_matches": true,
+      "attested_matches": true
+    }
+  ],
+  "result": "not-green; no all/runtime/Meta action; infrastructure diagnostics only; original protected source and code freeze retained"
+}
