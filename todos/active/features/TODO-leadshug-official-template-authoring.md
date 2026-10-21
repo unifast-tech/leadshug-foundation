@@ -42,7 +42,7 @@ O usuário quer preparar no LeadsHug a mensagem que usará para iniciar atendime
 ## Delivery Status Canon (Required)
 - **Current delivery stage:** Pending
 - **Qualifiers:** none
-- **Next exact step:** CP02 final aceito com234unit/344PG e regressão desconectar/recriar mesma identidade. Executor único iniciou CP03: propósito scoped template-management, resolver/provider/DI e Meta HTTP de modelos com contratos raw; operações duráveis/BFF/tela/all/assurance/ativação/prova assistida ainda pendentes.
+- **Next exact step:** CP03 aceito como fundamento parcial (281unit/351PG, hashes conferidos); executor único CP04 implementa submissão durável, observação compartilhada, BFF e provas PG. Web/all/assurance/ativação/prova assistida continuam pendentes.
 
 ## Active Work State (Required While TODO Remains In `active/`)
 - **Work state:** implementation
@@ -959,3 +959,15 @@ Sob a aprovação v1.1 existente, mesmo executor único gpt-6-luna/medium pode i
 ### CP02 final aceito; CP03 iniciado
 
 CP02-R1 resolvido: o RED reproduziu P2003; final green migração/status/lint/build/234unit/344PG com cleanup descartável. Teste reusa o mesmo externalResourceId/ProviderResourceIdentity sob outro BuChannel ID e impede herança do draft antigo. Root leu a correção e conferiu SHA256 dos3logs; evidence/cp02-channel-detach-receipt.json e root-cp02-disposition-v1.1.json. Schema mantém channelId histórico sem FK efêmera e BU Restrict preservando snapshots. CP03 plano informativo recebido e handoff condicional ativado; same-account generation/credential refresh e fingerprint atuais seguem D04, sem novo WHAT/renovação de aprovação. Não são prova de all ou implementação/entrega completa.
+
+### Precisão de paths CP03 — composição DI
+
+O handoff interno inicialCP03 omitira BffModule e dizia sem BFF. Executor informou composição TemplateManagementModule/TemplateDraftService ao concluir REDdebuild (import DI type-only; nenhuma prova comportamental reivindicada). Root admitiu expressamente também src/surfaces/bff/bff.module.ts neste checkpoint, somente import do módulo e registro do service, ambos já explicitamente ativos/aprovados v1.1/D09. Executor confirmou somente esses2pontos, sem controller/rota. É concretização de DI dentro do WHAT e paths previamente aprovados pelo usuário, não nova funcionalidade nem renovação de aprovação. Delta deve ser conferido contra evidence/inherited-shared-sources-v1.1.json e preserva composição06; HTTP/controller fica checkpoint posterior.
+
+### CP03 terminal aceito; CP04 backend autorizado serialmente
+
+Root conferiu os6logs preservados/17sources/30sealed/3HEADs e os deltas de credential resolver/BffModule contra a origem shared imutável. Canonical api terminal0:281unit/351PG; não é all nem entrega. evidence/cp03-terminal-receipt.json e root-cp03-disposition-v1.1.json distinguem falhas intermediárias, incluindo build sem log preservado, e limitações.
+
+Mesmo executor único/routing-cp04-v1.1.json GO, mesma aprovação v1.1, perfil operational-coder/nestjs+prisma+postgresql+docker. CP04 pode concluir backend nos paths já aprovados: domínio/message-templates, integrações/message-templates e novos Meta/message-template*, schema e novas migrations *_message_template*, message-templates.controller.ts/BffModule, tests/message-template* e helpers; number-onboarding-pcv somente precisão PERF-R4-01/impacto dos índices. Sem Web, runner/CI, canais herdados, segredos, banco humano/runtime ou Git produto. Root conserva TODO/README/root*; executor cp04* e produto. Node audit genérico não pode percorrer API: readiness positivo publicado substitui inventário invasivo; nenhuma leitura/listagem/stat/hash/mount de .local-files.
+
+GOAL CP04: operação/revisão/recibos duráveis e Local Commit Certainty, reserva/quota global por conta canônica, recuperação GET-only, lease/fence único catálogo↔individual, BFF sessão/CSRF e contratos negativos/concorrência PG reais. Incluir o guard privado depois do grant imediatamente antes do POST (rotação retida →0POST), runtime invalid view fail-closed, atuais permissões/conta/contexto e deduplicação. Sem quarto método público no provider, sem HTTP em transação, sem outbox/genérico, sem alterar Channel/send gate. Provas dos quatro limites de commit usam transação real e erro antes/depois do commit, readback independente bounded e contador HTTP; recibo externo ACCEPTED nunca vira recusa por erro local. Cada run usa log único persistido; não reescrever logs. Fazer RED comportamental significativo, implementação e api canônico verde; parar com recibo terminal honesto para revisão. PCV EPS/BCI/RLS backend conforme contrato; FRC/browser e all ficam após Web. D09 e entrega só com consumidores/gates completos.

@@ -1,0 +1,151 @@
+{
+  "schema": "leadshug-template-authoring-cp03-terminal-receipt-v1",
+  "recorded_at_utc": "2026-10-21T13:12:25.513958+00:00",
+  "checkpoint": "CP03 scoped template-management integration",
+  "canonical_command": "bash scripts/test-channels-local.sh api",
+  "final_run": {
+    "log": "foundation_documentation/artifacts/tmp/stcon05-cp03-green-final.log",
+    "sha256": "a0b5c5116187c1558867c65044c3c594fc88829a3d53c63770d63eeeb6185f46",
+    "exit_code": 0,
+    "runner_node": "v22.23.3",
+    "phases": [
+      "Prisma migrate deploy/status",
+      "lint",
+      "Nest build",
+      "unit tests",
+      "PostgreSQL E2E",
+      "container and volume cleanup"
+    ],
+    "unit": {
+      "files_passed": 26,
+      "tests_passed": 281
+    },
+    "e2e": {
+      "files_passed": 29,
+      "tests_passed": 351
+    },
+    "template_management_e2e": {
+      "tests_passed": 6,
+      "pool_limit": 5,
+      "concurrent_distinct_draft_saves": 20,
+      "revision_snapshots_after_saves": 40
+    },
+    "cleanup_complete": true
+  },
+  "earlier_runs": [
+    {
+      "phase": "RED expected build/DI failure",
+      "log": "foundation_documentation/artifacts/tmp/stcon05-cp03-red.log",
+      "sha256": "6354cf2f5beddc51115f60359054ae6620fdc61d466babcc81134ecc23fd15b3",
+      "exit_code": 1,
+      "result": "lint passed; build failed on resolver token import type"
+    },
+    {
+      "phase": "initial implementation run",
+      "log": "foundation_documentation/artifacts/tmp/stcon05-cp03-green.log",
+      "sha256": "540e1abd0ce87770281bf8a4215864fc75b1536bcc6009595d0f53b880d7cc37",
+      "exit_code": 1,
+      "result": "unit 273 passed / 3 failed; fixture and expectation corrections followed"
+    },
+    {
+      "phase": "build duplicate import",
+      "log": null,
+      "sha256": null,
+      "exit_code": 1,
+      "result": "build reported duplicate Prisma import; this attempt reused the later final log path, which was overwritten by the successful run"
+    },
+    {
+      "phase": "unit corrections",
+      "log": "foundation_documentation/artifacts/tmp/stcon05-cp03-green-final2.log",
+      "sha256": "69288fe2e1b3884bc0ba188308453261a209404809482105e138cd69e384ee79",
+      "exit_code": 1,
+      "result": "unit 278 passed / 2 failed; invalid parser expectations corrected"
+    },
+    {
+      "phase": "first complete E2E attempt",
+      "log": "foundation_documentation/artifacts/tmp/stcon05-cp03-green-final3.log",
+      "sha256": "7114979042f33f19c122cc8f3c4426f0660062e2eed516d6152116c015fb474b",
+      "exit_code": 1,
+      "result": "unit 281 passed; E2E 345 passed / 6 failed due duplicate official channels in one BU fixture"
+    },
+    {
+      "phase": "BU2 and pool-bounded E2E",
+      "log": "foundation_documentation/artifacts/tmp/stcon05-cp03-terminal.log",
+      "sha256": "b3fbca4f4b7611660054ad5490da1dcde1672ecfe1e085981499222c7f944c90",
+      "exit_code": 1,
+      "result": "unit 281 passed; E2E 350 passed / 1 failed on app-secret test expectation; template block 5/6 passed including bounded-pool concurrency"
+    }
+  ],
+  "boundary": {
+    "sealed_records_verified": "30/30 byte-exact before final runner and after terminal",
+    "shared_deltas": [
+      {
+        "path": "api-app/prisma/schema.prisma",
+        "sha256": "7f20189eb6b094bb36897f8840bb7f9a3dd88a60fd2d8431d2ce8d61ccc891ed",
+        "note": "CP02 additive schema delta retained"
+      },
+      {
+        "path": "api-app/test/helpers.ts",
+        "sha256": "4d98727935d0d1b65da9d2901806491208bb3234e85511e1d3f3601d4e4b35cc",
+        "note": "CP02 fixture/cleanup delta retained"
+      },
+      {
+        "path": "api-app/src/domain/channels/channel-credential-resolver.ts",
+        "sha256": "7782792bb945701cc6f6d0ac1460d0504356fa8d73a4261f37112f7c892a23ac"
+      },
+      {
+        "path": "api-app/src/surfaces/bff/bff.module.ts",
+        "sha256": "63139888fc80ae8fd82fc31226057bdab675d238d8cff12c2654fb9a308bc52f",
+        "note": "only TemplateManagementModule import and TemplateDraftService provider added"
+      }
+    ],
+    "no_meta_runtime": true,
+    "http_tests": "fetch fake; no real Meta requests"
+  },
+  "source_sha256": {
+    "api-app/src/domain/message-templates/template-management.ports.ts": "2b8eb2a2407b1b4b9988d36856c9c006f783a33f7a0d494ee6c714e0a8cb0f78",
+    "api-app/src/domain/message-templates/template-management.ports.spec.ts": "2b902a6c11e49e9aa3a3ffdef2aeaf6553c8659a497b511656d11154cb5d51ff",
+    "api-app/src/domain/message-templates/template-definition.ts": "f439b2568d9a9ce10af88d416258a54fd077cbefb61725587ea9a549ee5b68a7",
+    "api-app/src/domain/message-templates/template-definition.spec.ts": "29c33eb77dccb42f37df35ff34b500c63b99283205bc4a118e332bc631b039ac",
+    "api-app/src/domain/message-templates/template-draft.service.ts": "7b573051d96cfd9bfc3f25b0ae7af6b5beabde223d051d4fe5de7b18035490b0",
+    "api-app/src/domain/message-templates/template-management.dependencies.spec.ts": "a03a567e5b96a348b4ab40bb18282a555d30ad3533e6efb929c5d2f2614c82b2",
+    "api-app/src/domain/channels/channel-credential-resolver.ts": "7782792bb945701cc6f6d0ac1460d0504356fa8d73a4261f37112f7c892a23ac",
+    "api-app/src/domain/channels/channel-credential-resolver.spec.ts": "a60d142fcc335de43c5a697d9f7758f722883a1725c824dd0a4b4f0a2f7fb03b",
+    "api-app/src/integrations/message-templates/template-management.resolver.ts": "adea82c19a64f76f82e416a14093a55a2e2d2c63150dff5ed271854ce6ff915f",
+    "api-app/src/integrations/message-templates/template-management.module.ts": "aabfb344eab0b244772f0a2a8066dbae71bb24973a0a498c69af676c17f0acdd",
+    "api-app/src/integrations/meta/message-template.client.ts": "2330fe950bfa57e6a942d9846830d761ecd4aceb84ad28412cce338a716d9c87",
+    "api-app/src/integrations/meta/message-template.client.spec.ts": "78edb1ad1822c272df75bc862ff714fd247791f095aa72169e1123a0ed5a160d",
+    "api-app/src/surfaces/bff/bff.module.ts": "63139888fc80ae8fd82fc31226057bdab675d238d8cff12c2654fb9a308bc52f",
+    "api-app/test/message-template-drafts.e2e-spec.ts": "560e25d3880eb74120347881d63904cc2f20d520bd0715a5c52a3361d3745bd8",
+    "api-app/test/message-template-management.e2e-spec.ts": "9f461ec183fc01a9c8ae0ecc437dbe35951e1d69770ba4eb5536055adb01615b",
+    "api-app/prisma/schema.prisma": "7f20189eb6b094bb36897f8840bb7f9a3dd88a60fd2d8431d2ce8d61ccc891ed",
+    "api-app/test/helpers.ts": "4d98727935d0d1b65da9d2901806491208bb3234e85511e1d3f3601d4e4b35cc"
+  },
+  "actual_log_hashes": {
+    "stcon05-cp03-red.log": {
+      "sha256": "6354cf2f5beddc51115f60359054ae6620fdc61d466babcc81134ecc23fd15b3",
+      "bytes": 13354
+    },
+    "stcon05-cp03-green.log": {
+      "sha256": "540e1abd0ce87770281bf8a4215864fc75b1536bcc6009595d0f53b880d7cc37",
+      "bytes": 19303
+    },
+    "stcon05-cp03-green-final.log": {
+      "sha256": "a0b5c5116187c1558867c65044c3c594fc88829a3d53c63770d63eeeb6185f46",
+      "bytes": 76353
+    },
+    "stcon05-cp03-green-final2.log": {
+      "sha256": "69288fe2e1b3884bc0ba188308453261a209404809482105e138cd69e384ee79",
+      "bytes": 17868
+    },
+    "stcon05-cp03-green-final3.log": {
+      "sha256": "7114979042f33f19c122cc8f3c4426f0660062e2eed516d6152116c015fb474b",
+      "bytes": 81332
+    },
+    "stcon05-cp03-terminal.log": {
+      "sha256": "b3fbca4f4b7611660054ad5490da1dcde1672ecfe1e085981499222c7f944c90",
+      "bytes": 76877
+    }
+  },
+  "known_follow_up": "D04 partial for CP04: the bound provider checks current local credential/context before invoking the Meta client, then the first create may hold a grant while awaiting HTTP. Add a private local-context fence after grant and immediately before POST, with held-grant + credential/generation rotation PG coverage; no fourth public provider method. CP03 does not claim D09 complete."
+}

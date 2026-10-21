@@ -1,0 +1,33 @@
+{
+  "schema": "stcon05-root-cp03-disposition-v1",
+  "recorded_at_utc": "2026-10-21T13:18:20.102286+00:00",
+  "disposition": "accepted-partial-foundation",
+  "receipt": "cp03-terminal-receipt.json",
+  "root_verified": {
+    "log_hashes": 6,
+    "source_hashes": 17,
+    "sealed_byte_exact": 30,
+    "product_heads_exact": 3,
+    "shared_deltas": [
+      "api schema",
+      "api helpers",
+      "api credential resolver",
+      "api BffModule"
+    ]
+  },
+  "source_review": "Credential purpose/metadata-only transaction option and minimal BFF DI deltas compared against byte-exact inherited shared source evidence; no new controller or route. Root ran no product tests.",
+  "validation": {
+    "command": "bash scripts/test-channels-local.sh api",
+    "exit_code": 0,
+    "unit": 281,
+    "postgresql": 351,
+    "all": false
+  },
+  "limitations": [
+    "One intermediate duplicate-import build failure has no retained log; receipt explicitly discloses overwritten path. No invented evidence.",
+    "Prisma transaction option in domain resolver is a type-only persistence coupling to scrutinize in independent adherence review; avoids root-connection starvation inside real transactions.",
+    "Private post-grant pre-POST context fence and held-grant rotation proof remain CP04; D04/D09 not declared complete.",
+    "Domain listDrafts must reject runtime invalid view before query, not rely only on future BFF enum validation."
+  ],
+  "next_checkpoint": "CP04 approved backend durable operations, shared observations, BFF and real-PG fault/concurrency proofs; no human runtime/database or Web mutation yet"
+}
