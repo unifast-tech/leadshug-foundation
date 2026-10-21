@@ -42,3 +42,6 @@ CP05 tem interface e novos casos implementados. Primeiro all terminal:282unit/37
 
 
 CP05 evoluiu para quatro cenários independentes de interface. Criação/recuperação local já passaram; status/concorrência e recuperação de submissão ainda exigem rodada consolidada integral. [Progresso factual](evidence/root-cp05-consumer-progress-v1.1.json) e [perda de log e terminal seguinte](evidence/root-cp05-log-loss-and-terminal-v1.1.json) registram os limites: um log antigo foi sobrescrito por colisão de nome e não é evidência final retida. Guard atual mantém30selos/3HEADs exatos;37fontes públicas congeladas para all. O novo teste PG deve preparar timestamps no INSERT, mantendo a identidade imutável. Estado continua Pending, sem ativação nem submissão Meta.
+
+
+All173629Z-r4 terminou com282unit e379/380PG: a regressão de revisão e o RLS novo de templates passaram. Única falha: ECONNRESET no teste BCI anterior de cadastro. [Recibo da rodada](evidence/root-cp05-all-r4-terminal-v1.1.json) e [proposta pontual da fixture](baseline-bci-fixture-lifecycle-admission-v1.1-proposal.md). O arquivo não integra os41records herdados, mas está fora dos paths ativos e aguarda validação humana. Nenhum limiar/retry/skip ou regra de produto foi alterado; helper global idempotente foi rejeitado. Interface/all integral e gates continuam pendentes.

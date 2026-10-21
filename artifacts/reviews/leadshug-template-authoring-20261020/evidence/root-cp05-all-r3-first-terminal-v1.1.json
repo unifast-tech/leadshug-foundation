@@ -1,0 +1,17 @@
+{
+  "schema": "stcon05.canonical-all-terminal.v1",
+  "recorded_at_utc": "2026-10-21T17:28:17.525684+00:00",
+  "log": "foundation_documentation/artifacts/tmp/stcon05-cp05-all-20261021T172111Z-final.log",
+  "bytes": 120282,
+  "sha256": "bdc675bcd45284f4fd8fc09af92dffc7df7895674208b7f0e8769a6827ee94c7",
+  "terminal_exit": 1,
+  "api_unit_passed": 282,
+  "api_pg": {
+    "passed": 379,
+    "total": 380
+  },
+  "web_browser": "not reached due to API fail-fast",
+  "failure": "new fixture attempted UPDATE createdAt; immutable identity trigger correctly rejected23514",
+  "correction": "test-only reserve tx proxy injects divergent createdAt into actual INSERT; no trigger bypass or product schema change",
+  "result": "not-green; new complete canonical all required"
+}

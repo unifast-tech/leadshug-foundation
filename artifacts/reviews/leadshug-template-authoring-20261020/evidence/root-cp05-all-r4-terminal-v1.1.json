@@ -1,0 +1,167 @@
+{
+  "schema": "stcon05.canonical-all-terminal.v1",
+  "recorded_at_utc": "2026-10-21T17:45:00.339887+00:00",
+  "log": "foundation_documentation/artifacts/tmp/stcon05-cp05-all-20261021T173629Z-r4.log",
+  "bytes": 115462,
+  "sha256": "96507d2420eea8e6e5fb2f1e7f1390af34bbba5659e3bf77394c22e76d3ceff9",
+  "terminal_exit": 1,
+  "api_unit_passed": 282,
+  "api_pg": {
+    "passed": 379,
+    "total": 380
+  },
+  "web_browser": "not reached due to API fail-fast",
+  "template_bff_rls": "5own200/5foreign404/5accepted/5grant/preflight/POST, stable listener; measured144.57ms",
+  "failure": "preexisting number-onboarding-bci.e2e-spec.ts first5x20 test: read ECONNRESET; unchanged file outside active paths",
+  "source_matches": [
+    {
+      "path": "api-app/prisma/migrations/20261021130000_message_template_drafts/migration.sql",
+      "matches": true
+    },
+    {
+      "path": "api-app/prisma/migrations/20261021150000_message_template_operations/migration.sql",
+      "matches": true
+    },
+    {
+      "path": "api-app/prisma/schema.prisma",
+      "matches": true
+    },
+    {
+      "path": "api-app/src/domain/channels/channel-credential-resolver.spec.ts",
+      "matches": true
+    },
+    {
+      "path": "api-app/src/domain/channels/channel-credential-resolver.ts",
+      "matches": true
+    },
+    {
+      "path": "api-app/src/domain/historico/catalogo.ts",
+      "matches": true
+    },
+    {
+      "path": "api-app/src/domain/historico/cobertura.ts",
+      "matches": true
+    },
+    {
+      "path": "api-app/src/domain/message-templates/template-definition.spec.ts",
+      "matches": true
+    },
+    {
+      "path": "api-app/src/domain/message-templates/template-definition.ts",
+      "matches": true
+    },
+    {
+      "path": "api-app/src/domain/message-templates/template-draft.service.ts",
+      "matches": true
+    },
+    {
+      "path": "api-app/src/domain/message-templates/template-management.dependencies.spec.ts",
+      "matches": true
+    },
+    {
+      "path": "api-app/src/domain/message-templates/template-management.ports.spec.ts",
+      "matches": true
+    },
+    {
+      "path": "api-app/src/domain/message-templates/template-management.ports.ts",
+      "matches": true
+    },
+    {
+      "path": "api-app/src/domain/message-templates/template-observation.service.ts",
+      "matches": true
+    },
+    {
+      "path": "api-app/src/domain/message-templates/template-submission.service.ts",
+      "matches": true
+    },
+    {
+      "path": "api-app/src/domain/message-templates/template-transaction-boundary.ts",
+      "matches": true
+    },
+    {
+      "path": "api-app/src/integrations/message-templates/template-management.module.ts",
+      "matches": true
+    },
+    {
+      "path": "api-app/src/integrations/message-templates/template-management.resolver.ts",
+      "matches": true
+    },
+    {
+      "path": "api-app/src/integrations/meta/message-template.client.spec.ts",
+      "matches": true
+    },
+    {
+      "path": "api-app/src/integrations/meta/message-template.client.ts",
+      "matches": true
+    },
+    {
+      "path": "api-app/src/surfaces/bff/bff.module.ts",
+      "matches": true
+    },
+    {
+      "path": "api-app/src/surfaces/bff/message-templates.controller.ts",
+      "matches": true
+    },
+    {
+      "path": "api-app/test/browser-server.cjs",
+      "matches": true
+    },
+    {
+      "path": "api-app/test/helpers.ts",
+      "matches": true
+    },
+    {
+      "path": "api-app/test/message-template-bff.e2e-spec.ts",
+      "matches": true
+    },
+    {
+      "path": "api-app/test/message-template-drafts.e2e-spec.ts",
+      "matches": true
+    },
+    {
+      "path": "api-app/test/message-template-management.e2e-spec.ts",
+      "matches": true
+    },
+    {
+      "path": "api-app/test/number-onboarding-pcv.e2e-spec.ts",
+      "matches": true
+    },
+    {
+      "path": "api-app/test/timeline-fixtures.cjs",
+      "matches": true
+    },
+    {
+      "path": "web-app/e2e/message-templates.spec.ts",
+      "matches": true
+    },
+    {
+      "path": "web-app/e2e/number-onboarding-freshness.ts",
+      "matches": true
+    },
+    {
+      "path": "web-app/e2e/timeline-freshness.ts",
+      "matches": true
+    },
+    {
+      "path": "web-app/src/App.tsx",
+      "matches": true
+    },
+    {
+      "path": "web-app/src/api.spec.ts",
+      "matches": true
+    },
+    {
+      "path": "web-app/src/api.ts",
+      "matches": true
+    },
+    {
+      "path": "web-app/src/telas/Modelos.spec.ts",
+      "matches": true
+    },
+    {
+      "path": "web-app/src/telas/Modelos.tsx",
+      "matches": true
+    }
+  ],
+  "result": "not-green; awaiting human admission of concrete one-path fixture correction; no provider/runtime/db preserved action"
+}

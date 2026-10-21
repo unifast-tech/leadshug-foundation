@@ -1,0 +1,20 @@
+{
+  "schema": "stcon05.canonical-all-terminal.v1",
+  "recorded_at_utc": "2026-10-21T17:36:07.025825+00:00",
+  "log": "foundation_documentation/artifacts/tmp/stcon05-cp05-all-20261021T172830Z-r3.log",
+  "bytes": 115872,
+  "sha256": "01dbdaa13fd306aeb778f381d9bcccdb4c8a4fc87be6a1e2448f3d6c0c3c8934",
+  "terminal_exit": 1,
+  "api_unit_passed": 282,
+  "api_pg": {
+    "passed": 379,
+    "total": 380
+  },
+  "web_browser": "not reached due to API fail-fast",
+  "revision_regression": "passed; actual real-INSERT inverse timestamps and newest-revision GET",
+  "failure": "one joined RLS group rejected ECONNRESET; exact per-request phase was not retained",
+  "correction_candidate": "real BFF listens once on127.0.0.1 ephemeral port until afterAll, positive listening assertion and phase diagnostics; all five concurrent groups/assertions retained",
+  "mechanism_reference": "https://raw.githubusercontent.com/forwardemail/supertest/v7.2.2/lib/test.js lines56-65,125-147",
+  "certainty_limit": "locked7.2.2 auto-listen/auto-close on an unlistened server is a verified mechanism compatible with this failure; original close event was not retained, so exclusive retrospective causality is not proven",
+  "result": "not-green; new complete canonical all required"
+}

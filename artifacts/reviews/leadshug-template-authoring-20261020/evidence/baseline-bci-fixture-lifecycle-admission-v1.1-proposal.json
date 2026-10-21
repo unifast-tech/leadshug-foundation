@@ -1,0 +1,24 @@
+{
+  "schema": "stcon05.bci-lifecycle-path-proposal.v1",
+  "recorded_at_utc": "2026-10-21T17:44:20.786009+00:00",
+  "state": "awaiting-human-path-validation-no-product-mutation",
+  "path": "api-app/test/number-onboarding-bci.e2e-spec.ts",
+  "baseline_sha256": "d21fef15e4bc3efbce43d86367f76031c22885cecbbfd8c39f6c0aded61b6974",
+  "baseline_bytes": 14273,
+  "proposed_sha256": "779ad4f9f201ef366cd66c2692098957290a15857179d2a5b249415aef1c7bbd",
+  "original_inherited41_contains_path": false,
+  "original30seals_unchanged": true,
+  "scope": "explicit stable loopback ephemeral HTTP listener plus two startup assertions; unchanged existing shutdown, requests, 5x20 profile, business assertions, quotas and production source",
+  "required_authority": "TODO Diff Expectation Contract: User validation required on deviation",
+  "current_failed_run": {
+    "log": "foundation_documentation/artifacts/tmp/stcon05-cp05-all-20261021T173629Z-r4.log",
+    "sha256": "96507d2420eea8e6e5fb2f1e7f1390af34bbba5659e3bf77394c22e76d3ceff9",
+    "exit": 1,
+    "unit": 282,
+    "pg_passed": 379,
+    "pg_total": 380,
+    "failure": "number-onboarding-bci first concurrent test: read ECONNRESET; Web/browser not reached"
+  },
+  "proposed_delta": "--- before/api-app/test/number-onboarding-bci.e2e-spec.ts\n+++ proposed/api-app/test/number-onboarding-bci.e2e-spec.ts\n@@ -10,7 +10,7 @@\n   let tenant: Awaited<ReturnType<typeof criarMantenedora>>;\n   let cookie: string;\n \n-  beforeAll(async () => { tetoComCanalNaoOficial(); ({ app, prisma } = await subirApp()); await limparBanco(prisma); tenant = await criarMantenedora(app, 'BCI registration', 'bci-owner@example.test'); cookie = await login(app, 'bci-owner@example.test'); metaFake.confirmCalls = 0; const base = await prisma.businessUnit.findUniqueOrThrow({ where: { id: tenant.businessUnit.id }, select: { phone: true } }); metaFake.wabaRecursos = [{ wabaId: '123456789', phoneNumberId: '111111111', telefone: base.phone! }, ...Array.from({ length: 5 }, (_, i) => ({ wabaId: '123456789', phoneNumberId: String(700000001 + i), telefone: `5586${String(10000000 + i)}` }))]; });\n+  beforeAll(async () => { tetoComCanalNaoOficial(); ({ app, prisma } = await subirApp()); await app.listen(0, '127.0.0.1'); expect(app.getHttpServer().listening).toBe(true); expect(app.getHttpServer().address()).toMatchObject({ address: '127.0.0.1', family: 'IPv4' }); await limparBanco(prisma); tenant = await criarMantenedora(app, 'BCI registration', 'bci-owner@example.test'); cookie = await login(app, 'bci-owner@example.test'); metaFake.confirmCalls = 0; const base = await prisma.businessUnit.findUniqueOrThrow({ where: { id: tenant.businessUnit.id }, select: { phone: true } }); metaFake.wabaRecursos = [{ wabaId: '123456789', phoneNumberId: '111111111', telefone: base.phone! }, ...Array.from({ length: 5 }, (_, i) => ({ wabaId: '123456789', phoneNumberId: String(700000001 + i), telefone: `5586${String(10000000 + i)}` }))]; });\n   afterAll(async () => { if (prisma) await limparBanco(prisma); await app?.close(); });\n \n   it('repeats 20 overlapping create/finalize operations five times, with mismatched-key negative controls', async () => {\n",
+  "rejected_option": "Global helper app.listen idempotent override: would change standard Nest lifecycle semantics and conceal fixture ownership; other existing suites explicitly listen."
+}
