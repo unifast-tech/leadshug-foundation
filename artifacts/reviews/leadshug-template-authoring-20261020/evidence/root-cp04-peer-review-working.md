@@ -137,3 +137,11 @@ R40 inherited regression fixture admission: all173629Z-r4 terminal1,282unit/379o
 
 
 R41 browser infrastructure interruption: focused browser174901Z-r5 terminal1 with41passed, then case42 marked failed and Bus error(core dumped) before an assertion stack. Cleanup reported Docker overlay2 read-only filesystem. Do not attribute this to product or borrow inherited Channel/number-onboarding FRC as05 proof; TEMPLATE-FRC-EVIDENCE marker was absent. Root independently matched38current source hashes to fresh17:51:43/47 pre-worker artifacts, actual served=dist, and retained log/attestation hashes. No renderer correction or runner retry without environment diagnosis; no Docker prune/reset/restart authorized by this failure. Root switched to DevOps read-only diagnostics, preserving source/runtime/data.
+
+## R42 — restored browser actual terminal
+
+Exit1:53passed/1failed, retained log2da614756b0cf51586ee5bc0265e45b9dc5ae577de3c3facdeb36f0f890c2f3d. No infrastructure abort. Actual TEMPLATE-FRC-EVIDENCE100attempts/100completed/1provider list effect. Failure at rejected operation required remoteTemplateId:null, response omits field. Submission projector undefined disagrees with Web string|null contract. Keep failure/counter/revision assertions; serialize explicit null consistently. Sole routine executor assigned narrow correction and browser, no all yet. Source/proof details root-restored-browser-terminal-v1.1.json. No delivery/actual Meta claim.
+
+## R43 — inherited CLI diagnostic credential incident
+
+A Bitrix24 credential was accidentally displayed in a malformed inherited MCP environment-variable diagnostic. Original value is not retained in this journal. Known owned artifacts were scrubbed; earlier rendered output cannot be retracted. User notified/recommended revocation/reissue. Future CLI ignore user configuration; native executor used now. No Bitrix tool call executed. Operator rotation not confirmed. Security assurance must disposition the incident and remaining risk; not silently closed.

@@ -1,0 +1,235 @@
+{
+  "schema": "stcon05.restored-source-admission.v1",
+  "recorded_at_utc": "2026-10-21T18:59:41.973696+00:00",
+  "outcome": "go",
+  "sealed_exact": 30,
+  "sealed_mismatches": [],
+  "heads_match": {
+    "root": true,
+    "api": true,
+    "web": true
+  },
+  "shared": [
+    {
+      "repository": "api",
+      "path": "prisma/schema.prisma",
+      "matches_original": false
+    },
+    {
+      "repository": "api",
+      "path": "src/domain/channels/channel-credential-resolver.ts",
+      "matches_original": false
+    },
+    {
+      "repository": "api",
+      "path": "src/surfaces/bff/bff.module.ts",
+      "matches_original": false
+    },
+    {
+      "repository": "api",
+      "path": "test/browser-server.cjs",
+      "matches_original": false
+    },
+    {
+      "repository": "api",
+      "path": "test/helpers.ts",
+      "matches_original": false
+    },
+    {
+      "repository": "api",
+      "path": "test/number-onboarding-pcv.e2e-spec.ts",
+      "matches_original": false
+    },
+    {
+      "repository": "api",
+      "path": "test/timeline-fixtures.cjs",
+      "matches_original": false
+    },
+    {
+      "repository": "web",
+      "path": "e2e/number-onboarding-freshness.ts",
+      "matches_original": true
+    },
+    {
+      "repository": "web",
+      "path": "e2e/timeline-freshness.ts",
+      "matches_original": true
+    },
+    {
+      "repository": "web",
+      "path": "src/api.spec.ts",
+      "matches_original": false
+    },
+    {
+      "repository": "web",
+      "path": "src/api.ts",
+      "matches_original": false
+    }
+  ],
+  "candidate_source_matches": [
+    {
+      "path": "api-app/prisma/migrations/20261021130000_message_template_drafts/migration.sql",
+      "matches": true
+    },
+    {
+      "path": "api-app/prisma/migrations/20261021150000_message_template_operations/migration.sql",
+      "matches": true
+    },
+    {
+      "path": "api-app/prisma/schema.prisma",
+      "matches": true
+    },
+    {
+      "path": "api-app/src/domain/channels/channel-credential-resolver.spec.ts",
+      "matches": true
+    },
+    {
+      "path": "api-app/src/domain/channels/channel-credential-resolver.ts",
+      "matches": true
+    },
+    {
+      "path": "api-app/src/domain/historico/catalogo.ts",
+      "matches": true
+    },
+    {
+      "path": "api-app/src/domain/historico/cobertura.ts",
+      "matches": true
+    },
+    {
+      "path": "api-app/src/domain/message-templates/template-definition.spec.ts",
+      "matches": true
+    },
+    {
+      "path": "api-app/src/domain/message-templates/template-definition.ts",
+      "matches": true
+    },
+    {
+      "path": "api-app/src/domain/message-templates/template-draft.service.ts",
+      "matches": true
+    },
+    {
+      "path": "api-app/src/domain/message-templates/template-management.dependencies.spec.ts",
+      "matches": true
+    },
+    {
+      "path": "api-app/src/domain/message-templates/template-management.ports.spec.ts",
+      "matches": true
+    },
+    {
+      "path": "api-app/src/domain/message-templates/template-management.ports.ts",
+      "matches": true
+    },
+    {
+      "path": "api-app/src/domain/message-templates/template-observation.service.ts",
+      "matches": true
+    },
+    {
+      "path": "api-app/src/domain/message-templates/template-submission.service.ts",
+      "matches": true
+    },
+    {
+      "path": "api-app/src/domain/message-templates/template-transaction-boundary.ts",
+      "matches": true
+    },
+    {
+      "path": "api-app/src/integrations/message-templates/template-management.module.ts",
+      "matches": true
+    },
+    {
+      "path": "api-app/src/integrations/message-templates/template-management.resolver.ts",
+      "matches": true
+    },
+    {
+      "path": "api-app/src/integrations/meta/message-template.client.spec.ts",
+      "matches": true
+    },
+    {
+      "path": "api-app/src/integrations/meta/message-template.client.ts",
+      "matches": true
+    },
+    {
+      "path": "api-app/src/surfaces/bff/bff.module.ts",
+      "matches": true
+    },
+    {
+      "path": "api-app/src/surfaces/bff/message-templates.controller.ts",
+      "matches": true
+    },
+    {
+      "path": "api-app/test/browser-server.cjs",
+      "matches": true
+    },
+    {
+      "path": "api-app/test/helpers.ts",
+      "matches": true
+    },
+    {
+      "path": "api-app/test/message-template-bff.e2e-spec.ts",
+      "matches": true
+    },
+    {
+      "path": "api-app/test/message-template-drafts.e2e-spec.ts",
+      "matches": true
+    },
+    {
+      "path": "api-app/test/message-template-management.e2e-spec.ts",
+      "matches": true
+    },
+    {
+      "path": "api-app/test/number-onboarding-bci.e2e-spec.ts",
+      "matches": true
+    },
+    {
+      "path": "api-app/test/number-onboarding-pcv.e2e-spec.ts",
+      "matches": true
+    },
+    {
+      "path": "api-app/test/timeline-fixtures.cjs",
+      "matches": true
+    },
+    {
+      "path": "web-app/e2e/message-templates.spec.ts",
+      "matches": true
+    },
+    {
+      "path": "web-app/e2e/number-onboarding-freshness.ts",
+      "matches": true
+    },
+    {
+      "path": "web-app/e2e/timeline-freshness.ts",
+      "matches": true
+    },
+    {
+      "path": "web-app/src/App.tsx",
+      "matches": true
+    },
+    {
+      "path": "web-app/src/api.spec.ts",
+      "matches": true
+    },
+    {
+      "path": "web-app/src/api.ts",
+      "matches": true
+    },
+    {
+      "path": "web-app/src/telas/Modelos.spec.ts",
+      "matches": true
+    },
+    {
+      "path": "web-app/src/telas/Modelos.tsx",
+      "matches": true
+    }
+  ],
+  "runtime_readiness": {
+    "docker_server_version": "27.1.1",
+    "driver": "overlay2",
+    "free_C_bytes": 132278902784,
+    "api": "healthy",
+    "main_postgres": "healthy",
+    "evolution_postgres": "healthy",
+    "evolution_redis": "healthy",
+    "other_local_services": "running",
+    "stale_validation_postgres": "Exited255; cleanup ownership inspection required"
+  },
+  "authority": "existing APROVADO v1.1 and user reports restored after full Docker Desktop recovery; no new scope"
+}

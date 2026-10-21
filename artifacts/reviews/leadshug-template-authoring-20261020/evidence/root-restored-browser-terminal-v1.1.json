@@ -1,0 +1,40 @@
+{
+  "schema": "stcon05.restored-browser-terminal.v1",
+  "recorded_at_utc": "2026-10-21T19:11:26.082599+00:00",
+  "exit_code": 1,
+  "passed": 53,
+  "failed": 1,
+  "log": "foundation_documentation/artifacts/tmp/st-con-05-browser-restored-20261021T7oZDNg.log",
+  "log_bytes": 71578,
+  "log_sha256": "2da614756b0cf51586ee5bc0265e45b9dc5ae577de3c3facdeb36f0f890c2f3d",
+  "source_freeze": "foundation_documentation/artifacts/reviews/leadshug-template-authoring-20261020/evidence/root-cp05-source-freeze-r5-v1.1.json",
+  "proofs": [
+    {
+      "path": "foundation_documentation/artifacts/tmp/st-con-05-onboarding-proof-restored-20261021TanHkvF.json",
+      "sha256": "d23d93e0421d3a9a983b6255433e833672d8aec0afab07eddf44d4b5a16e8425",
+      "captured_at_utc": "2026-10-21T19:04:14.995Z"
+    },
+    {
+      "path": "foundation_documentation/artifacts/tmp/st-con-05-timeline-proof-restored-20261021TCIUSBG.json",
+      "sha256": "1f90bbe31725ef9f20b6c34f3e12451edb76616f54f4758f4630789a9ac26b87",
+      "captured_at_utc": "2026-10-21T19:04:12.055Z"
+    }
+  ],
+  "served_equals_dist": true,
+  "frc_actual_marker": {
+    "profile": "FRC-SP-H",
+    "batches": 5,
+    "retriggersPerBatch": 20,
+    "attempted": 100,
+    "completed": 100,
+    "observedProviderListEffects": 1,
+    "quotaBypass": false,
+    "note": "Browser control retriggers are counted separately from lease-fenced provider effects."
+  },
+  "failure": "message-templates.spec.ts:458 required remoteTemplateId:null missing from rejected operation response; first reached contract failure after prior infrastructure abort",
+  "diagnosis": "Submission projector maps nullable persisted remote ID to undefined, whereas Web operation/receipt contract declares string|null. Candidate fix must preserve browser refusal and retry assertions. No test waiver.",
+  "followup": "Sole native routine executor template_validation_recovery, gpt-6-luna/medium, narrow serialization alignment then fresh canonical browser. all not yet permitted.",
+  "claim_limit": "Failed browser is not GREEN; template FRC reached in this run only, no proof borrowed for final candidate; no preserved DB/runtime/provider proof.",
+  "root_independent_source_proof_matches": 38,
+  "actual_api_web_heads_match": true
+}

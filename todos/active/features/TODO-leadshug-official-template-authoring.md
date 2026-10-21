@@ -41,8 +41,8 @@ O usuário quer preparar no LeadsHug a mensagem que usará para iniciar atendime
 
 ## Delivery Status Canon (Required)
 - **Current delivery stage:** Pending
-- **Qualifiers:** Blocked
-- **Next exact step:** confirmar API Docker saudável após encerramento completo e reabertura do Desktop pelo operador; ele relatou reinício/Engine running, mas info e consultas dos2projetos continuam timeout, com~135GiB livres.38fontes/30selos/3HEADs preservados. Depois browser interrompido, all consolidado, assurance candidata, ativação/prova assistida e revisão final. Sem aceite GREEN/entrega antecipado.
+- **Qualifiers:** none
+- **Next exact step:** executor serial corrige a divergência de serialização nullable no recibo/operação REJECTED e repete browser com freeze novo; retomada restaurada terminou53passed/1failed, FRC05atingiu100/100. Depois all consolidado, assurance candidata, ativação/prova assistida e revisão final. Sem aceite GREEN/entrega antecipado.
 
 ## Active Work State (Required While TODO Remains In `active/`)
 - **Work state:** implementation
@@ -63,7 +63,7 @@ n/a; sem entrega reivindicada.
 
 ## Blocker Notes (Required if `Qualifiers` includes `Blocked`)
 
-Validação bloqueada pelo motor Docker Desktop local sem resposta após esgotamento de espaçoC:. O usuário liberou espaço; Win32_LogicalDisk agora informa142093606912bytes livres, mas docker.exe info ainda expira em15s. O browser anterior terminou com41passed e Bus error, sem asserção conclusiva do caso42; cleanup encontrou filesystem read-only. Nenhum aceite completo é inferido. Reinício global do Desktop aguarda ação explícita do operador porque pode interromper outros containers; nenhum prune/reset/exclusão ou restart foi executado pelo agente.38fontes e30selos/3HEADs foram novamente conferidos. Evidência: artifacts/reviews/leadshug-template-authoring-20261020/evidence/host-space-recovery-daemon-pending-v1.1.json. Banco/runtime/Meta preservados sem nova ação. Após recuperação: browser/all e gates permanecem obrigatórios.
+Bloqueio de infraestrutura anterior removido após o operador informar tudo restaurado. Docker27.1.1/overlay2 responde; API/PG/Redis estão saudáveis e os7serviços locais estão ativos. C:132278902784bytes livres.38fontes/30selos/3HEADs exatos. O browser anterior segue failed/incompleto; recuperação do ambiente não substitui nova execução e não atribui sua falha ao produto. `evidence/host-recovered-validation-handoff-v1.1.json` registra a retomada controlada, com cleanup apenas de recursos comprovadamente descartáveis da namespace validation.
 
 ## Execution Lane Tracking (Required)
 
@@ -1005,3 +1005,14 @@ O usuário respondeu **“Validar o ajuste pontual do teste”** à proposta pub
 ### Readiness após reinício informado pelo operador
 
 O operador informou Restart Desktop e painel Engine running. Recheck positivo do espaço:145180233728bytes livres; API info e consultas pontuais dos projetos local/validation continuam timeout, inclusive com contexto Windows explícito desktop-linux. WSL mostra Ubuntu e docker-desktop em execução; isso não certifica API pronta. Nenhum override de conexão Docker está presente no ambiente atual. Não foi solicitada senha nem feita alteração de permissões/socket/serviço; sudo não interativo indisponível foi encerrado. Próxima tentativa manual: Quit/Sair completo e reabertura do Desktop; sem reset/prune ou shutdown global do WSL. `evidence/host-post-restart-daemon-unavailable-v1.1.json` registra o limite. Testes permanecem bloqueados antes de qualquer nova execução.
+
+
+### Retomada após restauração do Docker
+
+O operador informou **“Tudo restaurado”**. Leitura bounded de espaço/motor/labels confirmou ambiente saudável e namespace local preservada; recheck de38fontes/30selos/3HEADs GO. Ferramentas de subagente da sessão anterior não estão disponíveis neste cliente; a lane routine-executor foi reestabelecida por CLI interno fresh gpt-6-luna/medium, conforme routing GO e handoff de validação. Parent continua somente governança; executor único faz cleanup de restos descartáveis por ownership e browser, sem editar fonte nem iniciar all antes do aceite do terminal. Nenhuma credencial/Meta/migration preservada foi acessada ou alterada na retomada.
+
+### Browser restaurado — terminal e retomada do contrato
+
+`evidence/root-restored-browser-terminal-v1.1.json` registra53passed/1failed, exit1, sem Bus error. FRC05real chegou a100/100retriggers (1provider effect). O browser preserva a asserção de remoteTemplateId:null; o projector de submissão omite o campo enquanto o contrato Web o declara string|null. Executor serial nativo gpt-6-luna/medium recebe correção estreita + browser novo;38fontes anteriores e30selos preservados antes de mutar. Nenhum all/ativação/prova real aceito antecipadamente.
+
+O incidente de diagnóstico CLI está registrado em `evidence/executor-startup-secret-redaction-v1.1.json`; nenhum valor é copiado ao TODO/pacote. Operador foi informado sobre revogar/reemitir a credencial Bitrix24. Próximos CLI ignoram configuração de usuário; executores nativos dispensam essa inicialização. Rotação ainda não confirmada; incidente não declarado encerrado.
