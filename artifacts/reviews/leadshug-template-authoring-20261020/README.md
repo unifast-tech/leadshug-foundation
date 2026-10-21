@@ -1,6 +1,6 @@
 # ST-CON-05 v1.1 — template authoring planning package
 
-State: planning-reviewed-awaiting-APROVADO-v1.1. Governing contract: ../../../todos/active/features/TODO-leadshug-official-template-authoring.md. Previous20261019 reviews remain history. This cycle rebases seller create/save/preview/submit/status onto delivered06 with a narrow TemplateManagementResolver/MessageTemplateProvider port, dedicated Meta integration, immutable scoped context and preserved textual Channel/OutboundService. No product/runtime/provider operation authorized yet.
+State: approved-v1.1-implementation-in-progress. Governing contract: ../../../todos/active/features/TODO-leadshug-official-template-authoring.md. Previous20261019 reviews remain history. This cycle rebases seller create/save/preview/submit/status onto delivered06 with a narrow TemplateManagementResolver/MessageTemplateProvider port, dedicated Meta integration, immutable scoped context and preserved textual Channel/OutboundService. No product/runtime/provider operation authorized yet.
 
 Review focus: DIP/capability segregation, scope/management versus send authority, durable one-dispatch receipts and conservative ambiguity recovery, name/account isolation, status truth, UI fences, mandatory inherited working-tree seal, full CI-equivalent and actual assisted submission. Source baseline/evidence are public-only. Planned approval scope includes additive templates migration and source-bound local activation after disposable proof; no secret read/product push/deploy.
 
@@ -21,3 +21,7 @@ A implementação futura inclui schema/migration aditivos, deploy/status descart
 Parecer arquitetural e duas críticas completas independentes concluídos; quatro achados incorporados, última crítica sem novos achados. O contrato protege confirmação incerta no banco, nome/quota por conta compartilhada, base pública herdada e ordem de atualização do catálogo/status. As conferências de código/escopo, estrutura, perfil, ciclo de vida e preparação de autoridade passaram. Resultado da autoridade: **preflight-go**, sem autorização de executar.
 
 O [TODO v1.1](../../../todos/active/features/TODO-leadshug-official-template-authoring.md) é a proposta concreta. [Convergência das revisões](planning-convergence-v1.1.md) e [pré-aprovação](evidence/authority-preapproval-v1.1.json) registram o resultado. Freeze revisado:961dba71015f61a1f1c1badecb9efe090a77b306. Nenhum código, teste de produto, banco, ambiente ou conta externa foi alterado nesta etapa.
+
+## Execução autorizada — 2026-10-21
+
+O usuário respondeu APROVADO para v1.1. Aprovação e fontes binding estão no TODO; authority pós-aprovação GO com execução autorizada. A admissão inicial confirmou os3HEADs e todos41hashes herdados antes de qualquer código/teste. Executor único CP01 iniciou domínio/ports/parser/harness; demais checkpoints seguem serialmente na mesma aprovação. [Admissão inicial](evidence/initial-execution-admission-v1.1.json), [autoridade](evidence/authority-approved-v1.1.json) e [routing](evidence/routing-executor-approved-v1.1.json). Este estado não declara implementação concluída ou testes de05 passados.

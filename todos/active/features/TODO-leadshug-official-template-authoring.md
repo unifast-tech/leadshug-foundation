@@ -7,7 +7,7 @@ LeadsHug — ST-CON-05: vendedor prepara e submete modelos oficiais
 ## Artifact Identity
 
 - **Artifact type:** tactical_execution_contract
-- **Status:** Review
+- **Status:** In-Progress
 - **Version:** 1.1
 - **Created:** 2026-10-19
 - **Template provenance:** copied delphi-ai/templates/todo_template.md before refinement.
@@ -42,12 +42,12 @@ O usuário quer preparar no LeadsHug a mensagem que usará para iniciar atendime
 ## Delivery Status Canon (Required)
 - **Current delivery stage:** Pending
 - **Qualifiers:** none
-- **Next exact step:** Aguardar APROVADO específico do ST-CON-05 v1.1 revisado. Arquitetura/duas críticas convergiram, code-coherence/scope-drift GO e authority preflight-go; após aprovação, registrar autoridade, reload binding e conferir admissão inicial3HEADs/41hashes antes de produto/testes. Implementação ainda não autorizada.
+- **Next exact step:** Executor único05 executa CP01 test-first em api-app/src/domain/message-templates/**; porta estreita/parser/prévia/harness. Authority pós-aprovação GO e admissão inicial3HEADs/41hashes concluídos; schema/HTTP/UI nos checkpoints seguintes, sem antecipar ST-CON-04.
 
 ## Active Work State (Required While TODO Remains In `active/`)
-- **Work state:** review
-- **Why this state now:** ST-CON-06 encerrado; a nova direção torna concreta a capacidade de templates e exige reconvergência do contrato e provas de planejamento atuais.
-- **Exit condition:** Contrato v1.1 revisado, freezes/assumptions/scope/authority preflight GO e APROVADO específico, seguido de reload binding e authority normal GO.
+- **Work state:** implementation
+- **Why this state now:** APROVADO v1.1 recebido2026-10-21; binding rules recarregadas e admissão inicial confirma3HEADs/41hashes da base revisada antes de qualquer código/teste.
+- **Exit condition:** SCOPE/DOD/VAL e gates derivados satisfeitos, incluindo testes reais PG/browser, assurance e prova assistida; sem antecipar entrega antes das evidências.
 
 ## Scope
 
@@ -244,7 +244,7 @@ Planejamento v1.1 ainda não executou guard de entrega. O produto contém altera
 ### Handoff Log (Update when execution crosses profile boundaries)
 | From Profile | To Profile | Why the Handoff Exists | Touched Surfaces | Status / Evidence |
 | --- | --- | --- | --- | --- |
-| strategic-cto | operational-coder | implementar após APROVADO | API/Web e testes | planned |
+| strategic-cto | operational-coder | APROVADO explícito v1.1 recebido2026-10-21 | API/Web e testes | accepted; principal single-writer, profile operational-coder, no worktrees |
 | operational-coder | operational-devops | publicação local e readiness | runner/containers próprios | planned |
 | operational-coder | assurance-tester-quality | TQA e aderência | pacote limitado | planned |
 | operational-coder | assurance-security-adversarial | auth/idempotência/segredos | BFF e adapter | planned |
@@ -548,15 +548,15 @@ Migration aditiva de modelos/índices/FKs de templates; deploy/status e rollback
 
 ## Approval
 
-- **Approved by:** pending
-- **Approval reference:** pending
-- **Approval scope:** proposta ST-CON-05/SCOPE01..05/D01..09; confirmação vendedor cria/submete define direção e não substitui APROVADO de implementação.
+- **Approved by:** Usuário, autoridade humana de produto; APROVADO explícito em2026-10-21
+- **Approval reference:** Mensagem “APROVADO” em2026-10-21 após pedido de aprovação ST-CON-05 v1.1; proposta publicada a238cb1191a126cd74666098802001aa5287dd67, freeze normativo961dba71015f61a1f1c1badecb9efe090a77b306.
+- **Approval scope:** ST-CON-05 v1.1/SCOPE01..05/D01..09 e contratos normativos AR-V11-01/02/03/CR-V11-01, exatamente como revisados/publicados; criar/salvar/prévia/submeter/consultar modelos, testes, migration aditiva no DB local TEST só após descartável/assurance/preflight bounded, ativação API/Web local e uma prova assistida de submit/status. Sem envio ao contato ou execução antecipada ST-CON-04.
 - **Execution not authorized by approval:** todo Out of Scope, consumo ST-CON-04 e ações externas durante planejamento.
 - **Renewed approval required when:** decisão/critério/risco/paths ou objetivo mudam materialmente.
 
 ## Rules Acknowledgement / Ingestion (Required After `APROVADO` and Before Execution)
 
-Ingestão de planejamento; reload binding obrigatório após APROVADO antes de produto.
+Binding reload realizado em2026-10-21 após APROVADO: fontes abaixo lidas diretamente; métodos complementares de schema/query/Vite e módulos atuais carregados. Perfil operational-coder; Genesis excluído por canon/contrato existentes; escopos nestjs,react,vite,postgresql,prisma,docker. Nenhum código/teste antes de authority normal GO e admissão inicial.
 
 | Source | Why It Applies Now | Must Preserve | Must Avoid | Execution Impact |
 | --- | --- | --- | --- | --- |
@@ -933,3 +933,11 @@ Refresh individual do rascunho e refresh de uma página do catálogo são dois p
 Architecture21346 and full critiques16799/3864 terminal0 with strict merge; all4medium findings integrated, current critique no findings. Code coherence GO for7live assumptions; scope drift GO/23unchanged sections against published961dba71 plus4extended normative contracts unchanged; source24/inherited41/product3HEADs unchanged; deterministic TODO PASS, strategic-cto scope in-scope, Foundation lifecycle GO and audit-floor GO. Authority preflight returns preflight-go with execution_authority_granted=false. Full current receipts are in artifacts/reviews/leadshug-template-authoring-20261020/evidence/.
 
 Plan is ready for explicit human APROVADO v1.1, not implemented. Pending delivery gates,613old tests and actual06INOUT are not05results. Approval proposal covers the exact listed surfaces and limits, additive migration on preserved local TEST database only after disposable/assurance preflight and bounded timeouts, source-bound local API/Web activation and one assisted test-template submit/status query. No recipient message, product commit/push/deploy or Meta account configuration is authorized by this planning receipt.
+
+## Execution Admission — 2026-10-21
+
+APROVADO v1.1 registrado acima, binding10fontes recarregadas; readiness PACED-Ready. Manifesto imutável da proposta a238cb11 conferido:3HEADs e41hashes exatos (11shared admitidos depois da admissão;30sealed continuam protegidos a cada checkpoint). Recibo: artifacts/reviews/leadshug-template-authoring-20261020/evidence/initial-execution-admission-v1.1.json. Routing executor gpt-6-luna/medium/principal-single-writer GO em routing-executor-approved-v1.1.json. Nenhuma mutação/teste de produto iniciada até este recibo; authority normal retornou GO/execution_authority_granted=true em authority-approved-v1.1.json antes do handoff CP01 ao executor stcon05_executor. Pipeline/gitlinks, private paths/env e produto commit/push continuam excluídos.
+
+### CP01 — domain foundation handoff
+
+Executor stcon05_executor (gpt-6-luna/medium), único writer de produto no principal, iniciado sob authority GO. Owned paths deste checkpoint: somente api-app/src/domain/message-templates/**. Objetivo: ports/DTO/contexto seguro, parser/prévia/fingerprints e testes/harness independentes da capacidade; sem schema/HTTP/UI/runtime humano ainda. Root mantém TODO/README/receipts Foundation; evidência cp01* do executor fica disjunta. Teste apenas após releitura do runner público/CI e selo30sealed; all completo continua gate de aceite posterior. Handoff não reduz escopo/provas aprovadas e checkpoint não equivale à entrega.
