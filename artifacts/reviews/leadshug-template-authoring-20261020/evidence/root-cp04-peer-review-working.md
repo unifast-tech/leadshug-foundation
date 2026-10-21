@@ -50,3 +50,35 @@ Root also verified SHA256 `50fc3ac827adae11a6119c3ad56fdbafbf1b15a851d7061298c31
 R22: before-fault injection originally threw before entering the real transaction, and the after-commit fixture refused POST2 while expecting its ACK and accepted POST3 while expecting its refusal. Executor reports repairing the fixture identity and moving failures after work inside real transactions. The required4-boundary matrix,100-intent per-owner correspondence, EPS high-cardinality SQL and RLS remain subject to executed evidence. Raw negative grant cases must additionally assert request method/URL, because total call count1 alone is not independent proof of zero create POSTs.
 
 R23: Prisma nested take per parent is not itself proof of bounded SQL. Examine emitted list-current-operation and detail-receipt SQL under child cardinality pressure. If Prisma fetches all children then truncates in memory, replace that access path within the existing owner with a bounded indexed query; no N+1 or new dependency/preview feature. Executor has this requirement before final backend acceptance.
+
+## Later executed evidence and companion admission
+
+Root verified the later retained runs without executing a second validation lane:
+
+| Log under `artifacts/tmp/` | SHA256 | Terminal outcome |
+| --- | --- | --- |
+| stcon05-cp04-api-final-20261021T143530Z.log | e3b11a8c410ae034d122b74bd2aacab97427ce6719d7a84c4ba1185a25958787 | unit275/282,7 failed typed pre-dispatch expectations; no E2E proof; cleanup completed |
+| stcon05-cp04-api-final-20261021T143733Z.log | e34d102aa386dc262782825d0f1dc6b2fa1f311f3886f4b071f6f7a004fe17f5 | unit282/282; PG354/374,20 failed in4files; cleanup completed |
+| stcon05-cp04-api-final-20261021T151000Z.log | fc74c1fa023ad2bd1e59827f40cc1a057b4b875e1f11ee93d75cd2578ec0fab3 | deploy/status/lint/build and unit282/282; PG368/374,6 failed; cleanup completed |
+
+The20-failure run included an async Supertest helper, a fake tenant field missing from BuChannel, and restoration of a spy on a dynamic Prisma delegate. That restoration removed findFirst and produced cascading failures/unjoined BCI requests; these are not20 independently diagnosed product defects. The next run did execute100 owned BCI intents without that cascade; its last assertion incorrectly required a particular index although PostgreSQL selected another bounded indexed path. Preserve proof of uniqueness separately and report actual scan/filter/recheck/buffer work rather than forcing a planner choice.
+
+R24: the6-failure run established a real schema/migration mismatch: MessageTemplateObservationLease.activeCredentialVersion lacked the map to SQL active_credential_version. Acquisition consequently failed in shared-observation tests; the writer fixture timed out with an unhandled rejection. Correct the mapping and join/release fixtures, without increasing timeout or accepting unhandled errors. Add bounded new-model metadata compatibility proof. The detach fixture's BU lookup used the old constraint name; preserve actual BU RESTRICT and absence of an ephemeral-channel FK while correcting the exact lookup.
+
+The route coverage failure led to the concrete2-file history companion proposal, published in da41a3fc. The user explicitly validated both paths; admission, pre-mutation clean metadata and hashes are in history-companion-path-admission-v1.1.json, published5726954c. Do not bypass the guard or exempt business mutations. Existing owner records4 real changes transactionally;3 provider/read-only consultations receive reasoned exemptions. No new schema/entity/provider/recipient behavior is authorized by this admission.
+
+R23 is now confirmed by emitted SQL in the failed `stcon05-cp04-api-20261021T-final2.log`: child operations and receipts have OFFSET without per-parent LIMIT. The catalogue plan emits50/filters950 and casts CHAR context_key to text. Root preserved the exact evidence and terminal log hash in root-cp04-sql-findings-v1.1.json. This is an actual bounded-query defect, not merely a fragile expected index name. Executor reports replacing these access paths with per-parent SQL LIMIT and typed context equality, using existing revision/sequence indexes; acceptance still awaits execution.
+
+## Residual coverage before the full consumer run
+
+R25: the approved RLS fixture calls for concurrent scoped application reads mixed with dispatch, including foreign404. The current100-intent BCI checks owned persistence after each submit wave; that is not independently sufficient evidence for the mixed read/dispatch claim. Executor must map an existing executed case or add bounded application reads under the configured quotas, await every task and preserve per-owner correspondence. This may run in the next canonical all together with the Web consumer; no requirement is waived and CP04 is not declared complete from the BCI label alone.
+
+R26: the current bidirectional observation case proves two stale successful APPROVED responses lose to PAUSED, and the writer case proves transactional locking. It does not yet explicitly execute an old provider error/release after a newer owner. CR-V11-01(d) requires this negative case to leave observation, cursor, availability and the newer lease unchanged. Add/map it before full assurance; do not infer that success-response races prove the error branch.
+
+The final5 live EPS output shows the catalogue access now uses a Function Scan over50 requested IDs and50 indexed point lookups (`mt_observation_context_remote_uq`, one row per loop), instead of the earlier50-emitted/950-filtered sequential scan. The run still shows an EPS assertion failure and has no accepted terminal receipt at this observation. Keep actual query work and test outcome distinct.
+
+## Process deviations to include in final assurance
+
+The executor initially mapped the2 Web seals to sibling `../leadshug-web`; that root is not canonical. Root directly read the2 exact canonical public files under web-app and verified both original hashes plus Web HEAD. Executor corrected the mapping, confirmed30/30 seals and5 changed/6 exact shared records, and reported no sibling mutation. The temporary7/4 shared count was also corrected; do not describe either as canonical drift.
+
+The executor reported running `git -C api-app status --short --untracked-files=no` without the required positive pathspec while diagnosing new-file discovery. This is a process deviation from the public-path constraint. The report states no private file was opened; the traversal effect of that command was not observed or independently established. Do not assert either private traversal/exposure or full proof of its absence. Root required no further inquiry into the protected path, and reinstated git.exe from the declared project root with explicit public src/test/prisma paths plus exact public manifests. No protected-path list/stat/hash or credential rotation is authorized as an investigation. The final security/adherence package must include this deviation factually; it is not a waived gate or a product-change permission.

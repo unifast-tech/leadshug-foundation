@@ -1,0 +1,227 @@
+{
+  "schema": "stcon05.root.cp04.sql-findings.v1",
+  "kind": "root-peer-review-not-independent-final-audit",
+  "source_log": "foundation_documentation/artifacts/tmp/stcon05-cp04-api-20261021T-final2.log",
+  "source_log_sha256": "075dcb2eb6c7eb36d3e5ea4a293bb2265cb66e108dc1f72b27df795a5c9c7756",
+  "source_log_bytes": 110540,
+  "status": "blocking-sql-findings-confirmed-at-failed-checkpoint",
+  "reported_terminal": {
+    "exit_code": 1,
+    "unit_passed": 282,
+    "pg_passed": 373,
+    "pg_total": 376
+  },
+  "list": {
+    "page20Items": 20,
+    "page50Items": 50,
+    "page20QueryCount": 9,
+    "page50QueryCount": 9,
+    "queryDurationsMs": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      2,
+      0,
+      0
+    ],
+    "relatedQueries": [
+      "SELECT \"public\".\"message_template_operations\".\"id\", \"public\".\"message_template_operations\".\"phase\"::text, \"public\".\"message_template_operations\".\"revision\", \"public\".\"message_template_operations\".\"safe_code\", \"public\".\"message_template_operations\".\"remote_template_id\", \"public\".\"message_template_operations\".\"acceptance_provenance\"::text, \"public\".\"message_template_operations\".\"updated_at\", \"public\".\"message_template_operations\".\"lease_until\", \"public\".\"message_template_operations\".\"recovery_lease_until\", \"public\".\"message_template_operations\".\"draft_id\", \"public\".\"message_template_operations\".\"bu_id\", \"public\".\"message_template_operations\".\"mantenedora_id\" FROM \"public\".\"message_template_operations\" WHERE (\"public\".\"message_template_operations\".\"draft_id\",\"public\".\"message_template_operations\".\"bu_id\",\"public\".\"message_template_operations\".\"mantenedora_id\") IN (($1,$2,$3),($4,$5,$6),($7,$8,$9),($10,$11,$12),($13,$14,$15),($16,$17,$18),($19,$20,$21),($22,$23,$24),($25,$26,$27),($28,$29,$30),($31,$32,$33),($34,$35,$36),($37,$38,$39),($40,$41,$42),($43,$44,$45),($46,$47,$48),($49,$50,$51),($52,$53,$54),($55,$56,$57),($58,$59,$60)) ORDER BY \"public\".\"message_template_operations\".\"created_at\" DESC, \"public\".\"message_template_operations\".\"id\" DESC OFFSET $61",
+      "SELECT \"public\".\"message_template_operations\".\"id\", \"public\".\"message_template_operations\".\"phase\"::text, \"public\".\"message_template_operations\".\"revision\", \"public\".\"message_template_operations\".\"safe_code\", \"public\".\"message_template_operations\".\"remote_template_id\", \"public\".\"message_template_operations\".\"acceptance_provenance\"::text, \"public\".\"message_template_operations\".\"updated_at\", \"public\".\"message_template_operations\".\"lease_until\", \"public\".\"message_template_operations\".\"recovery_lease_until\", \"public\".\"message_template_operations\".\"draft_id\", \"public\".\"message_template_operations\".\"bu_id\", \"public\".\"message_template_operations\".\"mantenedora_id\" FROM \"public\".\"message_template_operations\" WHERE (\"public\".\"message_template_operations\".\"draft_id\",\"public\".\"message_template_operations\".\"bu_id\",\"public\".\"message_template_operations\".\"mantenedora_id\") IN (($1,$2,$3),($4,$5,$6),($7,$8,$9),($10,$11,$12),($13,$14,$15),($16,$17,$18),($19,$20,$21),($22,$23,$24),($25,$26,$27),($28,$29,$30),($31,$32,$33),($34,$35,$36),($37,$38,$39),($40,$41,$42),($43,$44,$45),($46,$47,$48),($49,$50,$51),($52,$53,$54),($55,$56,$57),($58,$59,$60),($61,$62,$63),($64,$65,$66),($67,$68,$69),($70,$71,$72),($73,$74,$75),($76,$77,$78),($79,$80,$81),($82,$83,$84),($85,$86,$87),($88,$89,$90),($91,$92,$93),($94,$95,$96),($97,$98,$99),($100,$101,$102),($103,$104,$105),($106,$107,$108),($109,$110,$111),($112,$113,$114),($115,$116,$117),($118,$119,$120),($121,$122,$123),($124,$125,$126),($127,$128,$129),($130,$131,$132),($133,$134,$135),($136,$137,$138),($139,$140,$141),($142,$143,$144),($145,$146,$147),($148,$149,$150)) ORDER BY \"public\".\"message_template_operations\".\"created_at\" DESC, \"public\".\"message_template_operations\".\"id\" DESC OFFSET $151"
+    ],
+    "draftExplainAnalyzeBuffers": [
+      {
+        "Plan": {
+          "Node Type": "Limit",
+          "Parallel Aware": false,
+          "Async Capable": false,
+          "Startup Cost": 0.28,
+          "Total Cost": 5.65,
+          "Plan Rows": 20,
+          "Plan Width": 577,
+          "Actual Startup Time": 0.014,
+          "Actual Total Time": 0.024,
+          "Actual Rows": 20,
+          "Actual Loops": 1,
+          "Shared Hit Blocks": 5,
+          "Shared Read Blocks": 0,
+          "Shared Dirtied Blocks": 0,
+          "Shared Written Blocks": 0,
+          "Local Hit Blocks": 0,
+          "Local Read Blocks": 0,
+          "Local Dirtied Blocks": 0,
+          "Local Written Blocks": 0,
+          "Temp Read Blocks": 0,
+          "Temp Written Blocks": 0,
+          "Plans": [
+            {
+              "Node Type": "Index Scan",
+              "Parent Relationship": "Outer",
+              "Parallel Aware": false,
+              "Async Capable": false,
+              "Scan Direction": "Backward",
+              "Index Name": "mt_draft_bu_created_idx",
+              "Relation Name": "message_template_drafts",
+              "Alias": "message_template_drafts",
+              "Startup Cost": 0.28,
+              "Total Cost": 269.02,
+              "Plan Rows": 1000,
+              "Plan Width": 577,
+              "Actual Startup Time": 0.013,
+              "Actual Total Time": 0.022,
+              "Actual Rows": 20,
+              "Actual Loops": 1,
+              "Index Cond": "(bu_id = '8daa7893-af54-4425-81fc-8fd5d716f26b'::text)",
+              "Rows Removed by Index Recheck": 0,
+              "Filter": "(creator_user_id = '49bd1000-79bc-42f4-ac3f-003dea0091fe'::text)",
+              "Rows Removed by Filter": 0,
+              "Shared Hit Blocks": 5,
+              "Shared Read Blocks": 0,
+              "Shared Dirtied Blocks": 0,
+              "Shared Written Blocks": 0,
+              "Local Hit Blocks": 0,
+              "Local Read Blocks": 0,
+              "Local Dirtied Blocks": 0,
+              "Local Written Blocks": 0,
+              "Temp Read Blocks": 0,
+              "Temp Written Blocks": 0
+            }
+          ]
+        },
+        "Planning": {
+          "Shared Hit Blocks": 0,
+          "Shared Read Blocks": 0,
+          "Shared Dirtied Blocks": 0,
+          "Shared Written Blocks": 0,
+          "Local Hit Blocks": 0,
+          "Local Read Blocks": 0,
+          "Local Dirtied Blocks": 0,
+          "Local Written Blocks": 0,
+          "Temp Read Blocks": 0,
+          "Temp Written Blocks": 0
+        },
+        "Planning Time": 0.075,
+        "Triggers": [],
+        "Execution Time": 0.036
+      }
+    ]
+  },
+  "detail": {
+    "recentOperations": 11,
+    "receiptCounts": [
+      10,
+      10,
+      10,
+      10,
+      10,
+      10,
+      10,
+      10,
+      10,
+      10,
+      10
+    ],
+    "operationQueries": [
+      "SELECT \"public\".\"message_template_operations\".\"id\", \"public\".\"message_template_operations\".\"mantenedora_id\", \"public\".\"message_template_operations\".\"bu_id\", \"public\".\"message_template_operations\".\"draft_id\", \"public\".\"message_template_operations\".\"actor_user_id\", \"public\".\"message_template_operations\".\"idempotency_key\", \"public\".\"message_template_operations\".\"request_hash\", \"public\".\"message_template_operations\".\"expected_fingerprint\", \"public\".\"message_template_operations\".\"revision\", \"public\".\"message_template_operations\".\"definition_snapshot\", \"public\".\"message_template_operations\".\"channel_id\", \"public\".\"message_template_operations\".\"provider_resource_identity_id\", \"public\".\"message_template_operations\".\"account_reference\", \"public\".\"message_template_operations\".\"channel_generation\", \"public\".\"message_template_operations\".\"pairing_epoch\", \"public\".\"message_template_operations\".\"active_credential_version\", \"public\".\"message_template_operations\".\"phase\"::text, \"public\".\"message_template_operations\".\"version\", \"public\".\"message_template_operations\".\"dispatch_claim_id\", \"public\".\"message_template_operations\".\"lease_owner_id\", \"public\".\"message_template_operations\".\"lease_until\", \"public\".\"message_template_operations\".\"recovery_owner_id\", \"public\".\"message_template_operations\".\"recovery_lease_until\", \"public\".\"message_template_operations\".\"remote_template_id\", \"public\".\"message_template_operations\".\"safe_code\", \"public\".\"message_template_operations\".\"provider_status\", \"public\".\"message_template_operations\".\"acceptance_provenance\"::text, \"public\".\"message_template_operations\".\"created_at\", \"public\".\"message_template_operations\".\"updated_at\" FROM \"public\".\"message_template_operations\" WHERE (\"public\".\"message_template_operations\".\"draft_id\" = $1 AND \"public\".\"message_template_operations\".\"bu_id\" = $2 AND \"public\".\"message_template_operations\".\"mantenedora_id\" = $3) ORDER BY \"public\".\"message_template_operations\".\"created_at\" DESC, \"public\".\"message_template_operations\".\"id\" DESC LIMIT $4 OFFSET $5"
+    ],
+    "receiptQueries": [
+      "SELECT \"public\".\"message_template_submission_receipts\".\"id\", \"public\".\"message_template_submission_receipts\".\"operation_id\", \"public\".\"message_template_submission_receipts\".\"sequence\", \"public\".\"message_template_submission_receipts\".\"phase\"::text, \"public\".\"message_template_submission_receipts\".\"safe_code\", \"public\".\"message_template_submission_receipts\".\"remote_template_id\", \"public\".\"message_template_submission_receipts\".\"acceptance_provenance\"::text, \"public\".\"message_template_submission_receipts\".\"created_at\" FROM \"public\".\"message_template_submission_receipts\" WHERE \"public\".\"message_template_submission_receipts\".\"operation_id\" IN ($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11) ORDER BY \"public\".\"message_template_submission_receipts\".\"created_at\" DESC, \"public\".\"message_template_submission_receipts\".\"id\" DESC OFFSET $12"
+    ]
+  },
+  "catalogue": {
+    "items": 50,
+    "queryCount": 15,
+    "queryDurationsMs": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1
+    ],
+    "observationExplainAnalyzeBuffers": [
+      {
+        "Plan": {
+          "Node Type": "Seq Scan",
+          "Parallel Aware": false,
+          "Async Capable": false,
+          "Relation Name": "message_template_remote_observations",
+          "Alias": "message_template_remote_observations",
+          "Startup Cost": 0.12,
+          "Total Cost": 66.12,
+          "Plan Rows": 1,
+          "Plan Width": 465,
+          "Actual Startup Time": 0.009,
+          "Actual Total Time": 0.227,
+          "Actual Rows": 50,
+          "Actual Loops": 1,
+          "Filter": "(((remote_template_id)::text = ANY ('{eps_catalog_0000,eps_catalog_0001,eps_catalog_0002,eps_catalog_0003,eps_catalog_0004,eps_catalog_0005,eps_catalog_0006,eps_catalog_0007,eps_catalog_0008,eps_catalog_0009,eps_catalog_0010,eps_catalog_0011,eps_catalog_0012,eps_catalog_0013,eps_catalog_0014,eps_catalog_0015,eps_catalog_0016,eps_catalog_0017,eps_catalog_0018,eps_catalog_0019,eps_catalog_0020,eps_catalog_0021,eps_catalog_0022,eps_catalog_0023,eps_catalog_0024,eps_catalog_0025,eps_catalog_0026,eps_catalog_0027,eps_catalog_0028,eps_catalog_0029,eps_catalog_0030,eps_catalog_0031,eps_catalog_0032,eps_catalog_0033,eps_catalog_0034,eps_catalog_0035,eps_catalog_0036,eps_catalog_0037,eps_catalog_0038,eps_catalog_0039,eps_catalog_0040,eps_catalog_0041,eps_catalog_0042,eps_catalog_0043,eps_catalog_0044,eps_catalog_0045,eps_catalog_0046,eps_catalog_0047,eps_catalog_0048,eps_catalog_0049}'::text[])) AND ((context_key)::text = '26c75061dbea0a9c23439e6d2354119e7f71d08b36754a300395167c9b2c20b0'::text))",
+          "Rows Removed by Filter": 950,
+          "Shared Hit Blocks": 46,
+          "Shared Read Blocks": 0,
+          "Shared Dirtied Blocks": 0,
+          "Shared Written Blocks": 0,
+          "Local Hit Blocks": 0,
+          "Local Read Blocks": 0,
+          "Local Dirtied Blocks": 0,
+          "Local Written Blocks": 0,
+          "Temp Read Blocks": 0,
+          "Temp Written Blocks": 0
+        },
+        "Planning": {
+          "Shared Hit Blocks": 117,
+          "Shared Read Blocks": 0,
+          "Shared Dirtied Blocks": 0,
+          "Shared Written Blocks": 0,
+          "Local Hit Blocks": 0,
+          "Local Read Blocks": 0,
+          "Local Dirtied Blocks": 0,
+          "Local Written Blocks": 0,
+          "Temp Read Blocks": 0,
+          "Temp Written Blocks": 0
+        },
+        "Planning Time": 0.255,
+        "Triggers": [],
+        "Execution Time": 0.236
+      }
+    ]
+  },
+  "findings": [
+    {
+      "id": "R23-LIST",
+      "fact": "Generated child-operation SELECTs for20/50 draft parents have OFFSET but no per-parent LIMIT; Prisma truncates the related output after fetching children.",
+      "required": "One bounded batched query with LIMIT1 per authorized draft, indexed ordering; no N+1."
+    },
+    {
+      "id": "R23-RECEIPTS",
+      "fact": "Generated receipt SELECT for11 operations has OFFSET but no per-operation LIMIT, despite10 returned receipts per operation.",
+      "required": "LIMIT10 per authorized operation inside SQL, indexed ordering; preserve current+recent semantics."
+    },
+    {
+      "id": "R23-CATALOG",
+      "fact": "Observed Seq Scan emits50 rows, removes950 by filter; CHAR context_key is cast to text.",
+      "required": "Typed point/batch lookups bounded by the server-owned page; prove actual plan/work without planner forcing or treating emitted rows as rows visited."
+    }
+  ],
+  "disposition": "Executor correcting after terminal; not yet accepted, no later GREEN inferred."
+}
