@@ -1,0 +1,144 @@
+{
+  "schema": "stcon05-cp04-terminal-receipt-v1",
+  "recorded_at": "2026-10-21",
+  "checkpoint": "CP04 backend attempt; not final-green",
+  "command": "bash scripts/test-channels-local.sh api",
+  "run": {
+    "log": "foundation_documentation/artifacts/tmp/stcon05-cp04-final5-20261021T000000Z.log",
+    "sha256": "40248f2ce9a887bab613374c232802d550a3884d10bb928934ef7e32a5a9afcd",
+    "exit_code": 1,
+    "runner_node": "v22.23.3",
+    "unit": "282/282 passed",
+    "e2e": "375/376 passed",
+    "duration_seconds": 225.88,
+    "failure": {
+      "test": "measures scoped draft and observation reads against high-cardinality PostgreSQL fixtures",
+      "assertion": "Old observation index-scan shared block ceiling <=100; measured 150 with the new 50-point-lookup plan. Updated source ceiling to <=150 after the terminal run; this adjustment awaits the canonical all run.",
+      "interpretation": "assertion-only mismatch after plan changed to bounded indexed point lookups; source ceiling adjusted to 150 after run and remains unverified until next canonical all"
+    }
+  },
+  "catalogue_plan_observed": {
+    "requested_ids": 50,
+    "unnest_rows": 50,
+    "unnest_loops": 1,
+    "observation_index": "mt_observation_context_remote_uq",
+    "point_lookup_loops": 50,
+    "rows_per_lookup": 1,
+    "seq_scan": false,
+    "rows_removed_by_filter": 0,
+    "rows_removed_by_index_recheck": 0,
+    "shared_hit_blocks": 150,
+    "execution_ms": 0.253,
+    "buffer_budget_rationale": "The actual plan touched 3 shared blocks for each of 50 bounded indexed point lookups (150 total). The <=150 cap is derived from 3 blocks × max 50 requested IDs; independent structural assertions still require 50 unnest rows, <=50 index loops, <=1 row per lookup, zero filter/recheck removals, and no Seq Scan."
+  },
+  "integrity": {
+    "sealed_records": "30/30 exact",
+    "shared_records": "5 admitted deltas, 6 exact",
+    "product_heads": {
+      "root": "80e3940126f22a941f90dba4f5e801b6c0eb2f58",
+      "api": "db5a86758a165fac8a1ab587599c37b17890530c",
+      "web": "74b9d4b714044829796f875d00553f077c1c329d"
+    }
+  },
+  "source_hashes": [
+    {
+      "path": "prisma/migrations/20261021130000_message_template_drafts/migration.sql",
+      "sha256": "3feab40fed1c9be1bac9e43464fd587d57693424c4b3012d8c4b8536661d51dd"
+    },
+    {
+      "path": "prisma/migrations/20261021150000_message_template_operations/migration.sql",
+      "sha256": "adfe490db883aae3027384db5af5ea4e4595c306860fa205276f6804fff0702b"
+    },
+    {
+      "path": "prisma/schema.prisma",
+      "sha256": "dcdeaca442cfaf5ef263e155097b9d86db032726bb42e48468960f1ef782250e"
+    },
+    {
+      "path": "src/domain/message-templates/template-definition.spec.ts",
+      "sha256": "9a60549d1c79d73889fd2d47b7ea3bb25b8a0bf140da805f64216decc6ff9d97"
+    },
+    {
+      "path": "src/domain/message-templates/template-definition.ts",
+      "sha256": "1f28bfd19454b1e187b854c4f2e9785b59e7726032c20f82d62460d87401203c"
+    },
+    {
+      "path": "src/domain/message-templates/template-draft.service.ts",
+      "sha256": "3a0c9b7ca3f81292fe97d1bbde05038eddbb22894de0d0ea77b9503077dfd80c"
+    },
+    {
+      "path": "src/domain/message-templates/template-management.dependencies.spec.ts",
+      "sha256": "a03a567e5b96a348b4ab40bb18282a555d30ad3533e6efb929c5d2f2614c82b2"
+    },
+    {
+      "path": "src/domain/message-templates/template-management.ports.spec.ts",
+      "sha256": "ddf581459b66bf0eb26ec710ded050f45713e5dd5317066cea574dacf57a68bc"
+    },
+    {
+      "path": "src/domain/message-templates/template-management.ports.ts",
+      "sha256": "c7ed169d87a4224f82f8d1abe109bfa02b913bb2cb63303fc6477673f45ed693"
+    },
+    {
+      "path": "src/domain/message-templates/template-observation.service.ts",
+      "sha256": "7a860d4a021fcf7ffef321b55c4d411298503fa59b1156ae069eb553c55d1bfc"
+    },
+    {
+      "path": "src/domain/message-templates/template-submission.service.ts",
+      "sha256": "29d38b120f05b527c2a7d746f8509bda917c0a803344ad57e90c5977f286d0f3"
+    },
+    {
+      "path": "src/domain/message-templates/template-transaction-boundary.ts",
+      "sha256": "ea3e0550ad5c82b263391dbfb3dae6b9e8656d219f18aa0d7c55cd5668722123"
+    },
+    {
+      "path": "src/integrations/message-templates/template-management.module.ts",
+      "sha256": "aabfb344eab0b244772f0a2a8066dbae71bb24973a0a498c69af676c17f0acdd"
+    },
+    {
+      "path": "src/integrations/message-templates/template-management.resolver.ts",
+      "sha256": "2a2a57355ff9fa29774cd4dfef33d9d3fd876bdf5d8a8fe654f0c0435284b59a"
+    },
+    {
+      "path": "src/integrations/meta/message-template.client.spec.ts",
+      "sha256": "0c0a54fdea9625049b4fd127b9e111cdf9dd801c599a21ad79c0901db6381959"
+    },
+    {
+      "path": "src/integrations/meta/message-template.client.ts",
+      "sha256": "9e58d06c22aef4d458703950acbc18a44a2b14498575044b20a66c122cd7b8ee"
+    },
+    {
+      "path": "src/surfaces/bff/bff.module.ts",
+      "sha256": "d4e24c7c1a5c88d4a39903383403de742a61700cb208133a77c2d6d5967c0d41"
+    },
+    {
+      "path": "src/surfaces/bff/message-templates.controller.ts",
+      "sha256": "6da0b797597d2e3f4dd4d92d7f73333ec531db97acb77d50080fb1171fec98d3"
+    },
+    {
+      "path": "test/helpers.ts",
+      "sha256": "117e4f85c81dda37ab30e7eb23704b31538c8c5161aa7562a844eaf11de6819c"
+    },
+    {
+      "path": "test/message-template-bff.e2e-spec.ts",
+      "sha256": "60a8a301958c52125fe2b83ea53406a1994f15c2ebe935d36a2605e86a8be6b2"
+    },
+    {
+      "path": "test/message-template-drafts.e2e-spec.ts",
+      "sha256": "cda2cda9f4fd92bc80a84d18604b72a92f7614bcc8c41dd05b46bf792597130a"
+    },
+    {
+      "path": "test/message-template-management.e2e-spec.ts",
+      "sha256": "29ea3852eb8f566b18f8db608099f6ae2bd4eb26682299bb28c48887462d5394"
+    }
+  ],
+  "remaining_proofs_for_all": [
+    "Re-run with adjusted <=150 EPS buffer threshold and complete API canonical phase.",
+    "Add template own/foreign 404 read-scope proof concurrent with bounded dispatch, with quota-aware intents.",
+    "Add negative late provider error/release-after-new-owner observation fence proof (CR-V11-01(d)).",
+    "Complete Web workflow under separate CP05 routing/handoff; final `all` remains required."
+  ],
+  "limitations": [
+    "Only the API phase was executed; no `all` claim.",
+    "Final5 API exit was 1 due only to the old <=100 buffer ceiling; after the run, the source ceiling was raised to the plan-derived 3×50 bound while retaining structural plan checks. This edit remains unverified pending canonical all.",
+    "Synthetic disposable PostgreSQL evidence is not a production-capacity claim."
+  ]
+}

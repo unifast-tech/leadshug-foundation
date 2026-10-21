@@ -1,0 +1,145 @@
+{
+  "schema": "stcon05.root-cp04-terminal-disposition.v1",
+  "recorded_at_utc": "2026-10-21T15:40:10.405802+00:00",
+  "outcome": "partial-not-green",
+  "authority": "Existing APROVADO v1.1; CP05 handoff in TODO published ad520c7e",
+  "terminal_log": {
+    "path": "foundation_documentation/artifacts/tmp/stcon05-cp04-final5-20261021T000000Z.log",
+    "sha256": "40248f2ce9a887bab613374c232802d550a3884d10bb928934ef7e32a5a9afcd",
+    "bytes": 113627,
+    "executor_reported_exit": 1,
+    "unit_passed": 282,
+    "pg_passed": 375,
+    "pg_failed": 1,
+    "failure": "EPS buffer assertion <=100 observed150",
+    "disposable_cleanup": "visible completed in retained terminal log"
+  },
+  "catalogue_actual_plan_nodes": [
+    {
+      "Node Type": "Function Scan",
+      "Function Name": "unnest",
+      "Actual Rows": 50,
+      "Actual Loops": 1,
+      "Shared Hit Blocks": 0,
+      "Shared Read Blocks": 0
+    },
+    {
+      "Node Type": "Index Scan",
+      "Relation Name": "message_template_remote_observations",
+      "Index Name": "mt_observation_context_remote_uq",
+      "Actual Rows": 1,
+      "Actual Loops": 50,
+      "Rows Removed by Index Recheck": 0,
+      "Shared Hit Blocks": 150,
+      "Shared Read Blocks": 0
+    }
+  ],
+  "disposition": "Index-bounded50-row catalogue path corrected, test budget adjustment remains unexecuted until full all. Do not label CP04 GREEN or feature delivered. Carry approved RLS and stale-error negative proofs with the Web consumer into canonical all.",
+  "remaining": [
+    "R25 concurrent scoped reads/foreign404 mixed with dispatch",
+    "R26 late provider error/release after new observation owner",
+    "Web consumer and real BFF/PG Playwright",
+    "canonical all",
+    "independent adherence/security/PCV/TQA/final",
+    "preserved local migration/runtime freshness and assisted real template submit/status"
+  ],
+  "source_limit": "Retained execution log attestation, not a final source freeze. Root independently verified30 sealed paths and3 productHEADs before this handoff; subsequent changes need renewed final comparison.",
+  "human_database_changed": false,
+  "provider_submission_performed": false,
+  "product_history_written": false,
+  "executor_receipt": {
+    "path": "evidence/cp04-terminal-receipt.json",
+    "sha256": "5c00f6620a43534f6ff43e91f3a54b1692e398364e9499347be783711db12380",
+    "source_snapshot_verified": [
+      {
+        "path": "prisma/migrations/20261021130000_message_template_drafts/migration.sql",
+        "matches_snapshot": true
+      },
+      {
+        "path": "prisma/migrations/20261021150000_message_template_operations/migration.sql",
+        "matches_snapshot": true
+      },
+      {
+        "path": "prisma/schema.prisma",
+        "matches_snapshot": true
+      },
+      {
+        "path": "src/domain/message-templates/template-definition.spec.ts",
+        "matches_snapshot": true
+      },
+      {
+        "path": "src/domain/message-templates/template-definition.ts",
+        "matches_snapshot": true
+      },
+      {
+        "path": "src/domain/message-templates/template-draft.service.ts",
+        "matches_snapshot": true
+      },
+      {
+        "path": "src/domain/message-templates/template-management.dependencies.spec.ts",
+        "matches_snapshot": true
+      },
+      {
+        "path": "src/domain/message-templates/template-management.ports.spec.ts",
+        "matches_snapshot": true
+      },
+      {
+        "path": "src/domain/message-templates/template-management.ports.ts",
+        "matches_snapshot": true
+      },
+      {
+        "path": "src/domain/message-templates/template-observation.service.ts",
+        "matches_snapshot": true
+      },
+      {
+        "path": "src/domain/message-templates/template-submission.service.ts",
+        "matches_snapshot": true
+      },
+      {
+        "path": "src/domain/message-templates/template-transaction-boundary.ts",
+        "matches_snapshot": true
+      },
+      {
+        "path": "src/integrations/message-templates/template-management.module.ts",
+        "matches_snapshot": true
+      },
+      {
+        "path": "src/integrations/message-templates/template-management.resolver.ts",
+        "matches_snapshot": true
+      },
+      {
+        "path": "src/integrations/meta/message-template.client.spec.ts",
+        "matches_snapshot": true
+      },
+      {
+        "path": "src/integrations/meta/message-template.client.ts",
+        "matches_snapshot": true
+      },
+      {
+        "path": "src/surfaces/bff/bff.module.ts",
+        "matches_snapshot": true
+      },
+      {
+        "path": "src/surfaces/bff/message-templates.controller.ts",
+        "matches_snapshot": true
+      },
+      {
+        "path": "test/helpers.ts",
+        "matches_snapshot": true
+      },
+      {
+        "path": "test/message-template-bff.e2e-spec.ts",
+        "matches_snapshot": true
+      },
+      {
+        "path": "test/message-template-drafts.e2e-spec.ts",
+        "matches_snapshot": true
+      },
+      {
+        "path": "test/message-template-management.e2e-spec.ts",
+        "matches_snapshot": true
+      }
+    ],
+    "source_snapshot_limit": "Post-run snapshot includes the pending EPS threshold change; not identical to all tested bytes and not a final source freeze."
+  }
+}

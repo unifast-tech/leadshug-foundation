@@ -75,7 +75,11 @@ R25: the approved RLS fixture calls for concurrent scoped application reads mixe
 
 R26: the current bidirectional observation case proves two stale successful APPROVED responses lose to PAUSED, and the writer case proves transactional locking. It does not yet explicitly execute an old provider error/release after a newer owner. CR-V11-01(d) requires this negative case to leave observation, cursor, availability and the newer lease unchanged. Add/map it before full assurance; do not infer that success-response races prove the error branch.
 
+R27: the known-ACK final-projection gap was corrected, but the same failure class remains after a positive PREPARED readback (`submitDraft` returning projectOperation) and after confirmed refusal/release (`finishRejected` projections). A failed final local projection must return the approved safe503 with authorized operationId and already-established persistence certainty; it must not leak a generic500, erase known state or perform another mutation/readback/retry. Executor accepted the correction and real-PG fault coverage in the existing owner/tests for the consolidated all. This is an in-scope AR-V11-01 completeness fix, not a new external capability.
+
 The final5 live EPS output shows the catalogue access now uses a Function Scan over50 requested IDs and50 indexed point lookups (`mt_observation_context_remote_uq`, one row per loop), instead of the earlier50-emitted/950-filtered sequential scan. The run still shows an EPS assertion failure and has no accepted terminal receipt at this observation. Keep actual query work and test outcome distinct.
+
+Subsequent terminal final5 independently verified: retained log113627bytes, SHA25640248f2ce9a887bab613374c232802d550a3884d10bb928934ef7e32a5a9afcd;282unit/375of376PG, sole failure buffers≤100 versus150 for50 indexed lookups, disposable cleanup completed. Executor adjusted the test budget without another api-only run. This is a pending expectation adjustment, not GREEN. CP05 released after terminal, same approved scope/single writer, carrying R25/R26 and full consumer/all gates. See root-cp04-terminal-disposition-v1.1.json. Final TQA must explicitly assess the budget adjustment rationale alongside the stronger no-sequential-scan/bounded-work assertions.
 
 ## Process deviations to include in final assurance
 
