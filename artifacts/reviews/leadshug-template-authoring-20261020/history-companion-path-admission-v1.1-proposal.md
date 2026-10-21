@@ -42,4 +42,4 @@ Testes PG dentro de `test/message-template*` conferem atividades novas, autoria 
 
 ## Disposição atual
 
-Pendente de validação humana da inclusão dos2 caminhos. Nenhuma edição nesses2 arquivos foi executada. A proposta é complementar ao APROVADO v1.1, não uma autorização de produto/Git/deploy adicional.
+Validado pelo usuário em2026-10-21: **“Validar os dois arquivos de apoio”**. A proposta publicada em `da41a3fc` foi admitida no TODO; baseline pública dos2 arquivos capturada antes de sua primeira mutação. Execução pelo mesmo único executor, após o terminal da suíte em andamento. A admissão é complementar ao APROVADO v1.1, não uma autorização de produto/Git/deploy adicional.

@@ -1,0 +1,35 @@
+{
+  "schema": "stcon05.history-companion-admission.v1",
+  "date": "2026-10-21",
+  "outcome": "go",
+  "execution_authority_granted": true,
+  "authorization": "User reply: Validar os dois arquivos de apoio",
+  "proposal_published_commit": "da41a3fc",
+  "proposal_path": "foundation_documentation/artifacts/reviews/leadshug-template-authoring-20261020/history-companion-path-admission-v1.1-proposal.md",
+  "scope": "Two companion public paths only; same approved template story and existing history owner",
+  "product_git_history_written": false,
+  "initial_positive_git_status": "clean for both exact paths before first mutation",
+  "records": [
+    {
+      "repository": "api",
+      "path": "src/domain/historico/catalogo.ts",
+      "bytes": 6780,
+      "sha256": "6fc8cbe0b04cd96889d96e665ac30da223a1b4addcc1f8685ffef3c33dd5403f"
+    },
+    {
+      "repository": "api",
+      "path": "src/domain/historico/cobertura.ts",
+      "bytes": 6673,
+      "sha256": "324e111156ee0d2d2c85859640175f2b0032e608452e69e451c1c3cc28d238fa"
+    }
+  ],
+  "constraints": [
+    "single existing executor",
+    "wait for current canonical API runner terminal before mutation",
+    "four real mutation actions, three reasoned read exemptions",
+    "no changes to original route coverage test",
+    "no content/examples/secrets in history",
+    "no new schema, entity enum, provider behavior or recipient send",
+    "30 inherited seals and original 41-record initial admission remain unchanged"
+  ]
+}
