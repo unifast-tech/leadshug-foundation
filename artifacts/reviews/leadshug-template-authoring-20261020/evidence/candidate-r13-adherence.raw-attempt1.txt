@@ -1,0 +1,75 @@
+{
+  "schema_version": "subagent-review-result-v1",
+  "artifact_kind": "subagent_review_result",
+  "dispatch_path": "/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/artifacts/reviews/leadshug-template-authoring-20261020/evidence/candidate-r13-adherence.dispatch.json",
+  "review_kind": "architecture_adherence",
+  "reviewer_label": "fresh-internal-no-context-adherence-r13",
+  "overall_assessment": "Candidate changes required before activation. The approved architecture is substantially preserved, including the accepted late-ACK HOW, but four concrete consumer/projection gaps remain. Assessment is limited to the embedded source and retained evidence; no tools or commands were executed.\n\nDecision adherence:\n- D01–D03: Seller access, backend definition/preview ownership, revision CAS, immutable snapshots and administrative access to BU drafts follow the approved design. No intermediate administrator approval was introduced.\n- D04: The explicit template-management credential purpose preserves the send readiness gate. Account-change blocking and explicit copying now have actual browser evidence. However, saved observation projection cannot recover a newly refreshed observation after same-account reauthorization because it always looks up the operation's original context.\n- D05: Persistent operation/name coordination, global account namespace, durable quotas, bounded filtered preflight and the final dispatch guard preserve the approved submission boundary. HTTP remains outside transactions.\n- D06: The separate immutable acknowledgedRemoteTemplateId correctly distinguishes original POST acceptance from an already established resource association. Both completion orders, matching/conflicting IDs, rollback, post-commit return loss, unavailable readback, immutable association and ACK authority outside the latest ten receipts have substantive PostgreSQL coverage. The conflict retains the correlated association and records confirmed provider acceptance without another POST. No current ACK regression was identified.\n- D07: Shared observation ownership, persistent lease/fence, strict contradictory-response rejection, unavailable-state persistence and bidirectional stale-producer protection are present. Remaining gaps are successful refresh results discarded after later 202 responses, historical-context-only reload projection following reauthorization, and missing observation timestamps in the rendered status/catalogue.\n- D08: Held submit/recovery tests substantiate preservation of dirty editor text. One operation-read completion still restores an observation before checking the captured BU/editor fence, allowing stale context to affect the current screen.\n- D09: Channel remains a narrow text-send abstraction. Template ports, scoped resolver, explicit factory registry and dedicated HTTP adapter remain separate. TemplateManagementModule reuses ChannelTransportModule's credential owner. The dependency harness includes synthetic prohibited-coupling cases; no compatibility shim, parallel technical route or generic plugin platform was introduced.\n\nCR/AR adherence: CR-01 preserves observational GETs and explicit same-operation recovery without POST replay. CR-02 retains conservative typed refusal/ambiguity classification. AR-V11-01 has meaningful real-transaction rollback and post-commit boundary evidence, with bounded positive readback rather than inferred certainty. AR-V11-02 keeps global technical coordination separate from tenant-owned business data. The package records inherited-source seals and source/validation bindings for AR-V11-03; this review does not independently recompute those hashes. CR-V11-01 is substantively implemented at the persistence boundary; the remaining refresh finding concerns consumer authority over successful versus lease-blocked responses.\n\nEvidence calibration: The retained r13 terminal reports 770 passing tests and matching current source attestations, including 397 real PostgreSQL tests and 58 Playwright cases. The strict FRC marker establishes 100 actual BFF requests, 99 blocked responses and one completed provider leader; it does not establish that the UI adopts that leader's result. The ACK conflict consumer case is correctly identified as a pure function test. Primary feature-test provenance remains test-after/unknown; historical RED and infrastructure failures are not relabeled. This is adherence review, not completion of the separate full TQA, security or PCV gates.\n\nPerformance is acceptable for the approved bounded slice: page selection precedes child hydration, operation/receipt windows are bounded, catalogue lookup uses one bounded indexed query, and provider reads do not fan out. Deep OFFSET/count costs remain disclosed; the independent-account measurements establish no production capacity or SLO. The design's complexity largely reflects the approved certainty and concurrency requirements; no broad decomposition or redesign is justified by this package.\n\nPrior dispositions remain respected. The deferred recovery-read budget retains its recorded private-cohort containment and backlog gate before untrusted/public admission or Railway promotion. Operator-confirmed credential revocation/disablement is containment evidence only, not proof of historical non-use or retraction of rendered output. Preserved-database migration, runtime activation, assisted Meta proof, module consolidation and final delivery review remain honestly pending. The additive activation plan preserves transactional migration limits, bounded metadata preflight and source-to-runtime attribution.",
+  "recommended_path": "Hold candidate adherence closure and activation until the four findings are corrected within the existing approved scope. Preserve the accepted ACK design and existing regression assertions. Add targeted real-boundary regressions for the uncovered UI/context paths, validate affected behavior, refresh the source freeze and obtain affected independent follow-up review. Once all candidate lanes close, perform the approved bounded activation preflight, local migration/runtime activation and assisted provider proof, followed by the required fresh final review. Delivery remains Pending.",
+  "performance_position": "acceptable",
+  "elegance_position": "acceptable",
+  "structural_soundness_position": "mixed",
+  "operational_fit_position": "mixed",
+  "findings": [
+    {
+      "finding_id": "ADH-R13-01",
+      "severity": "high",
+      "category": "adherence",
+      "formalizable_hint": "yes",
+      "candidate_rule_level": "project",
+      "title": "Operation recovery restores an observation before checking the current editor/context fence",
+      "rationale": "Blocking D08 gap. In web-app/src/telas/Modelos.tsx:458–460, enviar() awaits templateApi.operation(), then immediately calls restoreSavedObservation(recovered.savedObservation); the captured contextEpoch/editorEpoch checks occur afterward. If that real operation response is held while the user changes BU or opens another draft, its saved observation can populate individualStatus and the merged catalogue in the newly selected context. This is reachable when another tab has already submitted/refreshed the draft and the stale editor receives TEMPLATE_RECOVERY_REQUIRED, or when an accepted submission returns local-incomplete metadata. The restored observation can carry a different account's name/status and fresh eligibility. The later guard protects draft/form updates but cannot undo this preceding state mutation.",
+      "suggested_action": "A: Check the captured context/editor and target draft immediately after the operation read, before restoring any observation or starting subsequent readback; retain the check after every later await. Recommended. B: Centralize observation restoration behind a helper requiring a validated context/editor token and matching selected resource. C: Leave unchanged; unsuitable because it violates the explicit stale-response contract. Verification: retain a real BFF operation response containing a saved observation, switch BU and draft, then release it and assert that editor status, catalogue entries, eligibility and recovery metadata remain unchanged; preserve the single-provider-POST assertion.",
+      "affected_paths": [
+        "web-app/src/telas/Modelos.tsx:458",
+        "web-app/e2e/message-templates.spec.ts"
+      ]
+    },
+    {
+      "finding_id": "ADH-R13-02",
+      "severity": "high",
+      "category": "adherence",
+      "formalizable_hint": "yes",
+      "candidate_rule_level": "project",
+      "title": "Lease-blocked refresh requests supersede the sole successful refresh in the UI",
+      "rationale": "Blocking D07 consumer gap. In web-app/src/telas/Modelos.tsx:173–185, every catalogue request advances requestCounter and observationEpoch, and both guards run before REFRESH_IN_PROGRESS is distinguished from an observation-bearing response. In the retained 100-request FRC scenario, the held provider leader belongs to the first request; later requests return 202 and advance both counters. When the sole 200 leader completes, the UI discards it. Starting from a fresh APPROVED display and changing the provider to PAUSED therefore leaves the UI showing eligible APPROVED until another action or TTL expiry, although the requested refresh persisted PAUSED. The strengthened test verifies the completed BFF page through an event listener, but never requires the rendered catalogue to adopt it.",
+      "suggested_action": "A: Preserve context fencing while allowing the newest authoritative observation result to apply when intervening responses only report 202; use observation authority/fences rather than treating every blocked trigger as replacement data. Recommended. B: Coalesce duplicate UI refresh triggers while preserving the durable backend lease and a separate 100-request BFF contention proof. C: Wait for TTL or another user refresh; unsuitable for the approved explicit-update behavior. Verification: extend the real browser held-leader case to begin with eligible APPROVED, return PAUSED from the sole leader, and require the rendered editor/catalogue to become ineligible PAUSED immediately after release, with exactly one provider list call.",
+      "affected_paths": [
+        "web-app/src/telas/Modelos.tsx:173",
+        "web-app/e2e/message-templates.spec.ts"
+      ]
+    },
+    {
+      "finding_id": "ADH-R13-03",
+      "severity": "medium",
+      "category": "structural_soundness",
+      "formalizable_hint": "yes",
+      "candidate_rule_level": "project",
+      "title": "Reload projection loses current observations after same-account reauthorization",
+      "rationale": "Blocking D04/D07/DOD-05 gap. TemplateObservationService.projectSavedObservation(), at api-app/src/domain/message-templates/template-observation.service.ts:154–176, derives its lookup key exclusively from the supplied historical operation binding and returns immediately when that old-context row is absent. Both draft and operation detail supply the operation's captured generation/credential version. By contrast, refreshDraft() legitimately resolves the current context for the same account and writes the refreshed observation under its new context key. After same-account generation or credential rotation, an explicit refresh can therefore display a current result, but a subsequent detail GET/reload returns either no observation or the old observation marked stale, never the newly persisted result. Existing reload proof keeps the context unchanged, and existing reauthorization proof exercises editable draft save rather than accepted-template refresh/reload.",
+      "suggested_action": "A: Keep operation identity immutable, but resolve the authorized current observation context when the original channel/resource/account association still matches; project its saved row and retain historical unavailable projection when the account association changed. Recommended. B: Persist a separate explicit observation-context reference owned by the observation projector, without rebinding the operation; this adds complexity and needs equivalent fences. C: Keep historical-only lookup; safe against false approval but fails the approved refresh/reload behavior. Verification: submit and observe, reauthorize the same account through the normal flow, explicitly refresh under the new generation/version, then reload and read both draft and operation. Assert the new status/fence is restored with zero additional provider reads, while changed-account history remains unavailable.",
+      "affected_paths": [
+        "api-app/src/domain/message-templates/template-observation.service.ts:154",
+        "api-app/src/domain/message-templates/template-draft.service.ts",
+        "api-app/src/domain/message-templates/template-submission.service.ts",
+        "api-app/test/message-template-management.e2e-spec.ts",
+        "web-app/e2e/message-templates.spec.ts"
+      ]
+    },
+    {
+      "finding_id": "ADH-R13-04",
+      "severity": "medium",
+      "category": "operational_fit",
+      "formalizable_hint": "yes",
+      "candidate_rule_level": "project",
+      "title": "Rendered approval status omits the required observation time",
+      "rationale": "D07 explicitly requires approval to be presented as observed at observedAt. In web-app/src/telas/Modelos.tsx:690 and the catalogue rendering around lines 698–703, status and eligibility are rendered without observedAt. The nearby 'Última atualização registrada' uses latestReceipt.createdAt, which records submission history rather than the status query and can differ materially. Backend timestamps and TTL checks are present, but users cannot identify when the displayed approval/status was actually consulted. This is an unmet frozen user-visible freshness requirement, not a request for additional provider probing.",
+      "suggested_action": "A: Render the observation's observedAt beside editor and catalogue status, retaining that timestamp when the observation becomes unavailable or stale. Recommended. B: Provide an accessible observation-details presentation that clearly associates each status with its query time. C: Retain only receipt time; unsuitable because it represents different evidence. Verification: use distinct receipt and observation timestamps, refresh and reload through the real BFF, and assert that the displayed query time comes from observedAt and remains truthful after refresh failure and freshness expiry.",
+      "affected_paths": [
+        "web-app/src/telas/Modelos.tsx:690",
+        "web-app/src/telas/Modelos.tsx:698",
+        "web-app/e2e/message-templates.spec.ts"
+      ]
+    }
+  ]
+}

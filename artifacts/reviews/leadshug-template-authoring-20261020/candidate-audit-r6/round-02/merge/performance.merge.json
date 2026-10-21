@@ -1,0 +1,42 @@
+{
+  "schema_version": "subagent-review-merge-v2",
+  "artifact_kind": "subagent_review_merge",
+  "authoritative": false,
+  "edit_policy": "derived_merge_packet",
+  "dispatch_path": "/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/artifacts/reviews/leadshug-template-authoring-20261020/candidate-audit-r6/round-02/dispatch/performance.dispatch.json",
+  "review_kind": "critique",
+  "review_count": 1,
+  "reviewer_labels": [
+    "fresh-no-context-performance-reviewer"
+  ],
+  "highest_finding_severity": "medium",
+  "axis_summary": {
+    "performance": "acceptable",
+    "elegance": "mixed",
+    "structural_soundness": "acceptable",
+    "operational_fit": "mixed"
+  },
+  "recommended_paths": [
+    "Accept the performance correction without another performance-driven redesign round. Route the nonblocking UI finding to the executor and adherence lane for a narrow fence correction and targeted regression. Preserve the private-cohort debt restriction and all pending activation, provider-proof, formal PCV and final-delivery gates."
+  ],
+  "exact_next_step": "Record reviewer resolutions in the governing TODO using the machine-checkable resolution table or equivalent gate ledger, then extract the derived resolution packet and decide whether another bounded review pass is still required.",
+  "findings": [
+    {
+      "finding_id": "F-057A75B2",
+      "severity": "medium",
+      "title": "Late operation recovery can restore an observation into a different editor context",
+      "rationale": "In web-app/src/telas/Modelos.tsx, enviar's catch block executes the line restoreSavedObservation(recovered.savedObservation) immediately after awaiting templateApi.operation, before checking the captured contextEpoch and editorEpoch. A submission returning an operationId can start this read; switching BU, channel or draft while it is pending does not prevent its saved observation from updating the newly selected editor. The helper also compares fences across different remote IDs, although those fences belong to their captured contexts. A late observation can therefore display the previous account/model's status and eligibility in the current editor. This is fresh evidence in the revised saved-observation hydration path, distinct from the resolved form-replacement defect. It violates D08's response ownership requirement, but does not establish the severe server/runtime risk required for a blocking finding in this dispatch.",
+      "suggested_action": "A: move observation restoration behind the existing context/editor checks and validate the target draft/operation before applying it; recommended as the smallest correction. B: make the restoration helper require captured context/editor ownership so every asynchronous caller enforces the same rule. C: retain the code with an explicit D08 residual; not recommended because the correction is narrow. Verify with a real-BFF operation read carrying a nonnull savedObservation, hold its response, switch editor/context, then release it and assert that status, catalog membership and eligibility remain owned by the current selection; include A\u2192B\u2192A ordering.",
+      "reviewer_labels": [
+        "fresh-no-context-performance-reviewer"
+      ],
+      "source_finding_ids": [
+        "OPS-R2-01"
+      ],
+      "category": "operational_fit",
+      "formalizable_hint": "yes",
+      "candidate_rule_level": "project",
+      "candidate_rule_id": "n/a"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "schema": "stcon05.api-red-admission.v1",
+  "recorded_at_utc": "2026-10-21T21:47:22.680173+00:00",
+  "outcome": "GO one canonical API run",
+  "command": "bash scripts/test-channels-local.sh api",
+  "freeze": "executor-cp05-static-test-freeze-r16-reviewed-test-oracles-v1.1.json",
+  "sha256": "d200eaca840eabda91a9e53598f379b62b0e509da46ed1d9920a12ab242ccf3c",
+  "owner": "template_validation_recovery single writer",
+  "preconditions": "routing guard GO; unchanged38sources/30seals/3HEADs",
+  "scope": "unit+realPG canonical suite on disposable DB only, unique log/numeric receipt",
+  "limits": "No product/test edit/retry or preserved runtime/DB action. BrowserRED does not establish API regression RED. Terminal diagnosis required before corrections."
+}

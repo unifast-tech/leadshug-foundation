@@ -42,10 +42,11 @@
       "reason": "NewrecoverycooldownwouldchangefrozenHTTP/recoverycontract; approvedsubmissionquotaunchanged. Currentprivatecohorttrustedactors/localtest, no untrustedpublicaudienceauthorized. Sequentialauthorizedreads stillcanamplifyproviderload; notdismissed.",
       "owner": "integrations-and-channels/security",
       "containment": "Privateexistingtestcohort; no automatedreconcile, no publiconboarding/Railwaypromotion inthislane.",
-      "followup": "Planpersistentoperation/accountreadbudgetandsequential/concurrentnegativeproof beforeadmittinguntrusted/publiccohort; newapproval forcontractchange."
+      "followup": "Planpersistentoperation/accountreadbudgetandsequential/concurrentnegativeproof beforeadmittinguntrusted/publiccohort; newapproval forcontractchange.",
+      "followup_reference": "foundation_documentation/backlog/README.md#BLG-leadshug-template-recovery-read-budget (immutable table ID)"
     }
   ],
   "cross_lane_adjudication": "TQA acceptable performance position didnotassess deep-query counterexample, not evidenceoverriding dedicatedPerformanceactualplan. Sourceconcretefindingsstand; no cosmeticthirdopinionneeded. No releasegatewaiver.",
-  "scope": "Sameapprovedproduct/testpaths; 30seals/schema/publicAPI unchanged. r7browser onlytestpre-fixcounterexamplecurrentlyalive. Opshelpers incomplete/uninvoked.",
+  "scope": "Same approved product/test path authority;30inheritedseals and publicAPI contract preserved. Internal immutableACKfact and guards amend only the feature-owned operations migration not yet applied to preservedDB, following reviewed HOW. Initial r7counterexample is historical; r12PGpassed, r13browserfix validation pending. Opshelpers remain uninvoked.",
   "assumption_correction": "Earlier root shorthand olddraftGETblocks was inaccurate: currentGETreturns authorized historicalsnapshot200 withoutcontextbinding; mutations/preview requirecurrentcontext/account and failCONTA_ALTERADA. D04frozenwordingdoesnotrequireblockinglocalhistoryGET. NewtestmustassertmutationalblockandUIpreviewdisable, notinventGET409. Beforeanyrooterrorcorrected source/contractrechecked; no productionchangemadefromwrongassumption."
 }

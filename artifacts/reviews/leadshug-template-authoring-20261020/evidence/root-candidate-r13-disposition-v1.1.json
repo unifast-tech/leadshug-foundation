@@ -1,0 +1,47 @@
+{
+  "schema": "stcon05.r13-candidate-root-disposition.v1",
+  "recorded_at_utc": "2026-10-21T21:27:43.157006+00:00",
+  "delivery": "Pending",
+  "all770": "Accepted current historical candidate proof; new corrections will require fresh validation",
+  "tqa": "Full applicable workload substantively returned, zero new findings; D07 reference to assisted proof is imprecise (actual D08/SCOPE05), no claim that proof happened. Table formatting alone does not reopen a nonblocking audit. Current new cross-lane concrete gaps override broad acceptable position; source corrections will receive affected fresh audit.",
+  "cross_lane_adjudication": "OPS-R2-01 nonblocking-for-performance and SEC-R13-01/ADH-R13-01 blocking-for-context contract describe same confirmed source seam, not material disagreement requiring another opinion.",
+  "findings": [
+    {
+      "ids": [
+        "OPS-R2-01",
+        "SEC-R13-01",
+        "ADH-R13-01"
+      ],
+      "classification": "blocking D08/context",
+      "decision": "Integrated into bounded correction",
+      "reason": "restoreSavedObservation runs before captured UI epoch/editor checks in enviar catch; realBFF nonnull observation race required"
+    },
+    {
+      "ids": [
+        "ADH-R13-02"
+      ],
+      "classification": "blocking D07 consumer authority",
+      "decision": "Integrated into bounded correction",
+      "reason": "Root confirmed every 202 trigger increments request/observation counters so sole successful provider leader is ignored. Existing backend-count FRC passes but lacks actual DOM adoption. Must warmAPPROVED then solePAUSEDleader and assert UI ineligible immediately."
+    },
+    {
+      "ids": [
+        "ADH-R13-03"
+      ],
+      "classification": "blocking D04/D07 reload",
+      "decision": "Integrated into bounded correction",
+      "reason": "Root confirmed saved projector looks up original operation-context key before resolvingcurrentcontext; same-account reauth current refresh writes a different key and is lost on reload. Resolve current authorized sameaccount/channel/resource context without rebinding operation; old history must remain unavailable when account changes. Bounded indexed reads, no provider reads/writes on GET."
+    },
+    {
+      "ids": [
+        "ADH-R13-04"
+      ],
+      "classification": "blocking frozen freshness presentation",
+      "decision": "Integrated into bounded correction",
+      "reason": "Root confirmed editor/catalog status omit observedAt; receipt createdAt is different evidence. Render real observedAt accessibly in both, preserve timestamp on stale/unavailable."
+    }
+  ],
+  "scope": "Existing approved product/test paths only. No WHAT/public endpoint/migration change needed. Same single writer; all reviewers terminal before edits. Preserve ACK HOW, dirty editor, quotas, actual FRC cardinality and30seals.",
+  "security_containment": "Fresh security accepts operator-confirmed revocation/disablement with residual historical limits. No new confirmation/retest needed. SEC-R6-04 privatecohort debt unchanged; canonical backlog reference retained.",
+  "next": "Author real-boundary regressions first. Root review tests/staticfreeze before RED run. Diagnose terminal before product correction; no fabricated BFF businessresponses or weakening existing oracles. Then fresh all and affected independent follow-up; no preserved runtime action."
+}

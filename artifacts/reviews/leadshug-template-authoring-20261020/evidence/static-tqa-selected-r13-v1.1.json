@@ -1,0 +1,20 @@
+{
+  "schema": "stcon05.static-tqa-selected.v1",
+  "exit_code": 2,
+  "outcome": "medium heuristic signals require manual independent assessment, not proven bypass or productfailure",
+  "artifact": "foundation_documentation/artifacts/reviews/leadshug-template-authoring-20261020/evidence/static-tqa-selected-r13.txt",
+  "sha256": "31308f74486431ef85fe457e1c3af7917648146ce9609f77d9e7b58fe3c81ec7",
+  "selected_test_files": 13,
+  "counts": {
+    "hard_bypass": 0,
+    "test_support": 0,
+    "auth_shortcut": 0,
+    "status_only": 31,
+    "no_exception_only": 0,
+    "ambient_subject_fallback": 0,
+    "di_override": 0,
+    "mock_hint": 16
+  },
+  "scope": "Explicit positive test file paths from r13freeze; no scan-git-modified/default recursive discovery",
+  "disposition": "No hard bypass, support route, auth shortcut, no-exception or ambient fallback signal.31transport-status assertion hints and16spies need full surrounding semantic/real-boundary assessment; do not delete assertions or widenstubs to clear heuristic. Fresh TQA will judge actual testsource."
+}

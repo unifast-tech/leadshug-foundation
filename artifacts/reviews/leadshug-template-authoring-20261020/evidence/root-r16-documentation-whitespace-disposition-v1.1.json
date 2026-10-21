@@ -1,0 +1,44 @@
+{
+  "schema": "stcon05.immutable-review-evidence-whitespace.v1",
+  "recorded_at_utc": "2026-10-21T21:49:01.165967+00:00",
+  "decision": "Preserve exact frozen dispatched capsule/raw audit bytes; whitespace-only unifieddiff context and raw EOF are content, not product whitespace. Standard CR-at-eol check remains required on every other staged path. No product/runner gate changed.",
+  "immutable_exceptions": [
+    {
+      "path": "artifacts/reviews/leadshug-template-authoring-20261020/candidate-assurance-r13-adherence-package-v1.1.md",
+      "sha256": "4bf94ad997820eca290c90d428e7909c80db16a84092a952f975f56a860e3e6e"
+    },
+    {
+      "path": "artifacts/reviews/leadshug-template-authoring-20261020/candidate-assurance-r13-baseline-b-package-v1.1.md",
+      "sha256": "45399bab6500d70e0132671cc397c19a475b9c13e8357dfbd45c4bebddcd1c64"
+    },
+    {
+      "path": "artifacts/reviews/leadshug-template-authoring-20261020/candidate-assurance-r13-baseline-package-v1.1.md",
+      "sha256": "9cbb7ec334a520070262166a6da4e62cccd60780bd149e76e642f465eeb67640"
+    },
+    {
+      "path": "artifacts/reviews/leadshug-template-authoring-20261020/candidate-assurance-r13-security-package-v1.1.md",
+      "sha256": "e9e32dc4582d522fcfd788686d86a3e83d171e8dd7839accd553ab1506e75014"
+    },
+    {
+      "path": "artifacts/reviews/leadshug-template-authoring-20261020/candidate-audit-r6/round-02/round-package.md",
+      "sha256": "cc597d2189c7571dfe922b0fdde46811bf602a902e333f3dd740bf43bc8ad80e"
+    },
+    {
+      "path": "artifacts/reviews/leadshug-template-authoring-20261020/evidence/static-tqa-selected-r13.txt",
+      "sha256": "31308f74486431ef85fe457e1c3af7917648146ce9609f77d9e7b58fe3c81ec7"
+    }
+  ],
+  "derived_markdown_eof_normalized": [
+    "artifacts/reviews/leadshug-template-authoring-20261020/candidate-audit-r6/progress.md",
+    "artifacts/reviews/leadshug-template-authoring-20261020/candidate-audit-r6/round-02/dispatch/performance.dispatch.md",
+    "artifacts/reviews/leadshug-template-authoring-20261020/candidate-audit-r6/round-02/dispatch/test-quality.dispatch.md",
+    "artifacts/reviews/leadshug-template-authoring-20261020/candidate-audit-r6/round-02/merge/performance.merge.md",
+    "artifacts/reviews/leadshug-template-authoring-20261020/candidate-audit-r6/round-02/merge/test-quality.merge.md",
+    "artifacts/reviews/leadshug-template-authoring-20261020/candidate-audit-r6/round-02/round-summary.md",
+    "artifacts/reviews/leadshug-template-authoring-20261020/evidence/candidate-r13-adherence.dispatch.md",
+    "artifacts/reviews/leadshug-template-authoring-20261020/evidence/candidate-r13-adherence.merge.md",
+    "artifacts/reviews/leadshug-template-authoring-20261020/evidence/candidate-r13-security.dispatch.md",
+    "artifacts/reviews/leadshug-template-authoring-20261020/evidence/candidate-r13-security.merge.md"
+  ],
+  "note": "Only generated dispatch/merge/progress EOF normalized; dispatch JSON/results/events/frozen packets unchanged."
+}

@@ -1,0 +1,54 @@
+{
+  "schema": "stcon05.r16-browser-red-root-terminal.v1",
+  "recorded_at_utc": "2026-10-21T21:46:44.702484+00:00",
+  "outcome": "behavioral_red_confirmed",
+  "log": "foundation_documentation/artifacts/tmp/st-con-05-r16-browser-red-K7GECd/browser.log",
+  "log_bytes": 78370,
+  "log_sha256": "964ef2278bcd796f8d42065da33dc6b2fb050959afe8e0d295a6352570ff9994",
+  "receipt": "foundation_documentation/artifacts/tmp/st-con-05-r16-browser-red-K7GECd/exit-code.txt",
+  "exit": 1,
+  "freeze": "foundation_documentation/artifacts/reviews/leadshug-template-authoring-20261020/evidence/executor-cp05-static-test-freeze-r16-reviewed-test-oracles-v1.1.json",
+  "freeze_sha256": "d200eaca840eabda91a9e53598f379b62b0e509da46ed1d9920a12ab242ccf3c",
+  "source38_exact": true,
+  "protected30_exact": true,
+  "heads_exact": true,
+  "browser_passed": 57,
+  "browser_failed": 4,
+  "pure_consumer_passed": 1,
+  "proofs": [
+    {
+      "path": "foundation_documentation/artifacts/tmp/st-con-05-r16-browser-red-root-proof/pre-worker-freshness.json",
+      "sha256": "647e2265eaf2e2ae0169cbc4b192fdc8ca1219e3b8bd5bd1d69c9cdaf5dcd500"
+    },
+    {
+      "path": "foundation_documentation/artifacts/tmp/st-con-05-r16-browser-red-root-proof/attestation-browser-authority.json",
+      "sha256": "fc9f97bf6b7b99d85e17543ca0f4c0c42ca05b90dc058a9c39483bb4117d39cd"
+    }
+  ],
+  "source_capture_utc": "2026-10-21T21:39:36.406Z",
+  "runtime_capture_utc": "2026-10-21T21:39:33.527Z",
+  "served_dist_sha256": "05d1b7b89256a6cac3d25c6ec13853d5af65aa809fa8d4633b30b1563c59646c",
+  "confirmed_red": [
+    {
+      "finding": "ADH-R13-02",
+      "assertion": "message-templates.spec.ts:594: editor lacks PAUSED after strict100BFF99x202/1x200+actualPAUSEDleader assertions passed",
+      "limits": "Final FRC marker not emitted, later variation/refusal section not reached in this case"
+    },
+    {
+      "finding": "SEC-R13-01/ADH-R13-01/OPS-R2-01",
+      "assertion": "line978 expected no B status after actual A savedObservation APPROVED GET200 released; received1; B heading/text assertions passed",
+      "limits": "Later B eligibility/catalog/reopenA assertions not reached"
+    },
+    {
+      "finding": "ADH-R13-03",
+      "assertion": "line1067 status APPROVED absent after actual sameaccountreauth/currentrefresh/reload/reopen",
+      "limits": "No API PostgreSQL suite run; postfailure provider count assertion not reached"
+    },
+    {
+      "finding": "ADH-R13-04",
+      "assertion": "line1100 actual individual observedAt differs from receipt, but editor time[datetime] missing",
+      "limits": "Catalogue, TTL/failure/reload timestamp assertions not reached"
+    }
+  ],
+  "next": "One canonical API RED run on unchanged r16 test-only freeze before product correction; no automatic retry. Then bounded HOW review."
+}

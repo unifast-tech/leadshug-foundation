@@ -1,0 +1,12 @@
+{
+  "schema": "stcon05.r16-test-red-admission.v1",
+  "recorded_at_utc": "2026-10-21T21:36:48.625821+00:00",
+  "scope": "Test-only current freeze;38records2test changes, product unchanged",
+  "freeze": "foundation_documentation/artifacts/reviews/leadshug-template-authoring-20261020/evidence/executor-cp05-static-test-freeze-r16-reviewed-test-oracles-v1.1.json",
+  "freeze_sha256": "d200eaca840eabda91a9e53598f379b62b0e509da46ed1d9920a12ab242ccf3c",
+  "root_review": "Normalized names, completed actual GET/render-turn witness, latest shared observedAt, explicit nullable historical projection and actual headings checked. APIrotation fixture isolates key-change; browser uses normal sameaccount reauth. No claimed post-ABA stale release (A→B release→A history).",
+  "outcome": "GO one canonical browser RED only; no product correction/retry before terminal diagnosis",
+  "canonical_command": "bash scripts/test-channels-local.sh browser",
+  "expected_semantic_red": "Stale automatic recovery status enters B; sole paused leader not adopted; renewed sameaccount observation lost onreload; no observedAt time markup",
+  "limits": "Expected failures do not prove causes until exact assertions/payloads/normal prerequisite success checked. API PG regression authored but not executed by browser mode. Do not infer its RED. No runner/CI/selection changes or preserved runtime action."
+}

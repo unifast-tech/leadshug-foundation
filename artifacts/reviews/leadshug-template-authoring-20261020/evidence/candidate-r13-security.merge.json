@@ -1,0 +1,42 @@
+{
+  "schema_version": "subagent-review-merge-v2",
+  "artifact_kind": "subagent_review_merge",
+  "authoritative": false,
+  "edit_policy": "derived_merge_packet",
+  "dispatch_path": "/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/artifacts/reviews/leadshug-template-authoring-20261020/evidence/candidate-r13-security.dispatch.json",
+  "review_kind": "critique",
+  "review_count": 1,
+  "reviewer_labels": [
+    "fresh-internal-security-r13"
+  ],
+  "highest_finding_severity": "medium",
+  "axis_summary": {
+    "performance": "acceptable",
+    "elegance": "acceptable",
+    "structural_soundness": "mixed",
+    "operational_fit": "mixed"
+  },
+  "recommended_paths": [
+    "Return for the bounded stale-recovery observation correction and a controlled real-BFF regression. Revalidate the changed candidate through its required checks and affected independent review, preserve SEC-R6-04 unchanged, then proceed through the existing activation/preflight/provider-proof/final-review sequence."
+  ],
+  "exact_next_step": "Record reviewer resolutions in the governing TODO using the machine-checkable resolution table or equivalent gate ledger, then extract the derived resolution packet and decide whether another bounded review pass is still required.",
+  "findings": [
+    {
+      "finding_id": "F-FD50F034",
+      "severity": "medium",
+      "title": "Late submission recovery installs an observation before checking the current UI context",
+      "rationale": "Blocking for D05/D08 candidate assurance. In web-app/src/telas/Modelos.tsx, enviar()'s recovery catch calls restoreSavedObservation(recovered.savedObservation) immediately after the awaited operation GET and before checking contextEpoch/editorEpoch. The helper updates individualStatus without validating context or selected draft; that state is displayed as the current model status and merged into the current account catalogue. A submit for context A can become AMBIGUOUS, then be correlated and observed through another authorized tab while its automatic operation read is held. If the user switches to context or draft B before that read returns, A's valid saved observation can enter B's screen, including an APPROVED eligibility indication. Observation fences are context-specific and cannot establish that A belongs to B. This requires an authenticated actor with access to the relevant objects and suitable response timing; it does not demonstrate tenant authorization bypass or recipient sending. The defect is source-supported but unexecuted here, and the supplied browser cases do not cover this recovery-observation ordering.",
+      "suggested_action": "A (recommended): return immediately when the captured context/editor is stale, and repeat those checks after the operation GET before restoring any observation or other UI state. B: make the restoration helper require and validate the captured context/editor identity, updating all callers consistently. C: leave the behavior unchanged; this preserves a concrete D05/D08 violation and is unsuitable for closing candidate assurance. Verify with real BFF/PostgreSQL responses: produce one ambiguous A submission, hold its automatic operation read, correlate and refresh that same operation through an authorized second client, switch the first screen to B, then release the read. Assert that B's draft, individual status, catalogue and eligibility contain no A observation and that provider creation remains exactly one POST. Retain the existing recovery and stale-response assertions and complete the required validation for the source change.",
+      "reviewer_labels": [
+        "fresh-internal-security-r13"
+      ],
+      "source_finding_ids": [
+        "SEC-R13-01"
+      ],
+      "category": "security",
+      "formalizable_hint": "yes",
+      "candidate_rule_level": "project",
+      "candidate_rule_id": "n/a"
+    }
+  ]
+}

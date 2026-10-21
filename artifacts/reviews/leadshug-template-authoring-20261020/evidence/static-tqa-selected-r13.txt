@@ -1,0 +1,90 @@
+Test Quality Audit
+Repository: /mnt/c/unifast/leadshug/leadshug_now_docker
+Outcome heuristic: medium
+
+Scan paths:
+  - /mnt/c/unifast/leadshug/leadshug_now_docker/api-app/src/domain/channels/channel-credential-resolver.spec.ts
+  - /mnt/c/unifast/leadshug/leadshug_now_docker/api-app/src/domain/message-templates/template-definition.spec.ts
+  - /mnt/c/unifast/leadshug/leadshug_now_docker/api-app/src/domain/message-templates/template-management.dependencies.spec.ts
+  - /mnt/c/unifast/leadshug/leadshug_now_docker/api-app/src/domain/message-templates/template-management.ports.spec.ts
+  - /mnt/c/unifast/leadshug/leadshug_now_docker/api-app/src/integrations/meta/message-template.client.spec.ts
+  - /mnt/c/unifast/leadshug/leadshug_now_docker/api-app/test/message-template-bff.e2e-spec.ts
+  - /mnt/c/unifast/leadshug/leadshug_now_docker/api-app/test/message-template-drafts.e2e-spec.ts
+  - /mnt/c/unifast/leadshug/leadshug_now_docker/api-app/test/message-template-management.e2e-spec.ts
+  - /mnt/c/unifast/leadshug/leadshug_now_docker/api-app/test/number-onboarding-bci.e2e-spec.ts
+  - /mnt/c/unifast/leadshug/leadshug_now_docker/api-app/test/number-onboarding-pcv.e2e-spec.ts
+  - /mnt/c/unifast/leadshug/leadshug_now_docker/web-app/e2e/message-templates.spec.ts
+  - /mnt/c/unifast/leadshug/leadshug_now_docker/web-app/src/api.spec.ts
+  - /mnt/c/unifast/leadshug/leadshug_now_docker/web-app/src/telas/Modelos.spec.ts
+
+Hard bypass markers:
+  - none
+
+Test-only support route usage:
+  - none
+
+Auth shortcut hints:
+  - none
+
+Status-only assertion hints:
+  - 58:      expect(winner.status).toBe(200);
+  - 80:      expect((await verificationResult).status).toBe(200);
+  - 139:      expect(first.status).toBe(200);
+  - 553:        expect(own.status, JSON.stringify(own.body)).toBe(200);
+  - 78:  expect(reservation.status()).toBe(201);
+  - 147:    expect(response.status()).toBe(201);
+  - 196:  await expect.poll(() => createStatus).toBe(201);
+  - 229:      expect(response.status()).toBe(201);
+  - 233:    expect(response.status()).toBe(200);
+  - 316:  expect(submitted.status()).toBe(201);
+  - 348:  expect(initialIndividual.response.status()).toBe(200);
+  - 365:    expect(response.status()).toBe(200);
+  - 377:  expect(freshIndividual.status()).toBe(200);
+  - 383:  expect(staleCatalogResponse.status()).toBe(200);
+  - 415:    expect(response.status()).toBe(200);
+  - 428:  expect(freshCatalogResponse.status()).toBe(200);
+  - 433:  expect(staleIndividualResponse.status()).toBe(200);
+  - 462:  expect(approvedBeforeFailure.response.status()).toBe(200);
+  - 482:  expect(recoveredAfterContradiction.response.status()).toBe(200);
+  - 585:  expect(refusalResponse.status()).toBe(201);
+  - 601:  expect(retryResponse.status()).toBe(201);
+  - 616:  expect((await submitResponse).status()).toBe(201);
+  - 622:  expect((await statusResponse).status()).toBe(200);
+  - 687:  expect(lostOperationRead.status).toBe(200);
+  - 801:  expect(copyResponse.status()).toBe(201);
+  - 409:      expect(submitted.status).toBe(201);
+  - 415:      expect(refresh.status).toBe(200);
+  - 430:      expect(detail.status).toBe(200);
+  - 431:      expect(operation.status).toBe(200);
+  - 450:      expect(staleContext.status).toBe(200);
+  - 516:      expect(submitted.status).toBe(201);
+
+No-exception-only assertion hints:
+  - none
+
+Ambient subject fallback hints:
+  - none
+
+DI override hints:
+  - none
+
+Mock / fallback hints:
+  - 194:      vi.spyOn(boundary, 'run').mockImplementation(async (phase, work) => {
+  - 337:      const boundarySpy = vi.spyOn(boundary, 'run').mockImplementation(async (phase, work) => {
+  - 402:    const clockSpy = vi.spyOn(clock, 'now').mockImplementation(() => new Date(now));
+  - 636:    const spy = vi.spyOn(boundary, 'run').mockImplementation(async (phase, work) => {
+  - 658:    vi.spyOn(boundary, 'run').mockImplementation(async (phase, work) => {
+  - 709:    vi.spyOn(boundary, 'run').mockImplementation(async (phase, work) => {
+  - 756:    vi.spyOn(boundary, 'run').mockImplementation(async (phase, work) => {
+  - 828:    vi.spyOn(boundary, 'run').mockImplementation(async (phase, work) => {
+  - 904:    vi.spyOn(boundary, 'run').mockImplementation(async (phase, work) => {
+  - 1486:    if (fault !== 'none') vi.spyOn(boundary, 'run').mockImplementation(async (phase, work) => {
+  - 1889:    const boundarySpy = vi.spyOn(boundary, 'run').mockImplementation((phase, work) => originalRun(phase, (tx) => {
+  - 1963:    const clockSpy = vi.spyOn(clock, 'now').mockImplementation(() => new Date(now));
+  - 2058:    const clockSpy = vi.spyOn(clock, 'now').mockImplementation(() => new Date(now));
+  - 2129:    const clockSpy = vi.spyOn(clock, 'now').mockImplementation(() => new Date(now));
+  - 2137:    const boundarySpy = vi.spyOn(boundary, 'run').mockImplementation(async (phase, work) => {
+  - 2231:    const clockSpy = vi.spyOn(clock, 'now').mockImplementation(() => new Date(now));
+
+Counts: hard_bypass=0 test_support=0 auth_shortcut=0 status_only=31 no_exception_only=0 ambient_subject_fallback=0 di_override=0 mock_hint=16
+

@@ -1,0 +1,64 @@
+{
+  "schema": "stcon05.all-r13-root-acceptance.v1",
+  "recorded_at_utc": "2026-10-21T21:14:49.769778+00:00",
+  "outcome": "go_candidate_assurance_only",
+  "counts": {
+    "api_unit": 284,
+    "api_postgresql": 397,
+    "web_unit": 31,
+    "playwright": 58,
+    "playwright_pure_consumer": 1,
+    "playwright_browser": 57,
+    "total": 770
+  },
+  "log": "foundation_documentation/artifacts/tmp/st-con-05-all-r13-20261021T8m8kRG.log",
+  "log_bytes": 206309,
+  "log_sha256": "ed559f92c629356c209e59f2e3717264ffc0cd276a50dd84d9fa08560534eb5c",
+  "receipt": "foundation_documentation/artifacts/tmp/st-con-05-all-r13-20261021TcPwYDw.exit",
+  "exit": 0,
+  "freeze": "foundation_documentation/artifacts/reviews/leadshug-template-authoring-20261020/evidence/root-cp05-source-freeze-r13-browser-oracle-corrections-v1.1.json",
+  "freeze_sha256": "79baf11a7d1d6cb45aa60dc34f6df65c183c567662c2bb000d5f9a27ce75418b",
+  "source38_matches": true,
+  "protected30_exact": true,
+  "bci_approved_exact": true,
+  "heads": {
+    "root": "80e3940126f22a941f90dba4f5e801b6c0eb2f58",
+    "api": "db5a86758a165fac8a1ab587599c37b17890530c",
+    "web": "74b9d4b714044829796f875d00553f077c1c329d"
+  },
+  "proofs": [
+    {
+      "path": "foundation_documentation/artifacts/tmp/st-con-05-all-proof-r13-root/pre-worker-freshness.json",
+      "sha256": "46e180768e8deba14ff71ce8a3b92278e67adbac30066344a1b9441e8d177703"
+    },
+    {
+      "path": "foundation_documentation/artifacts/tmp/st-con-05-all-proof-r13-root/attestation-browser-authority.json",
+      "sha256": "4675bf381667cf33a533d645cbd4515e0cae95cb24f244758743ab7eeb60eebe"
+    }
+  ],
+  "source_capture_utc": "2026-10-21T21:08:38.258Z",
+  "runtime_capture_utc": "2026-10-21T21:08:35.299Z",
+  "served_dist_sha256": "05d1b7b89256a6cac3d25c6ec13853d5af65aa809fa8d4633b30b1563c59646c",
+  "template_frc": {
+    "profile": "FRC-SP-H",
+    "batches": 5,
+    "retriggersPerBatch": 20,
+    "attempted": 100,
+    "blockedBeforeLeaderRelease": 99,
+    "blockedStatusCounts": {
+      "accepted202": 99
+    },
+    "dispatchedProviderListCallsWhileLeaderHeld": 1,
+    "quotaBypass": false,
+    "note": "Ninety-nine BFF refreshes are lease-blocked while one provider-list leader is held; explicit release completes the sole provider read.",
+    "completed": 100,
+    "completedLeaderResponses": 1,
+    "completedPageAvailable": true,
+    "completedPageItems": 1,
+    "finalStatusCounts": {
+      "accepted202": 99,
+      "completed200": 1
+    }
+  },
+  "limits": "One pureconsumerPlaywrightcase; providerfakeatnetworkboundary, no realMeta/template activation yet. API/Web/PGlocallypreserved untouched. Currentcandidateassurance still required; no localdelivery/promotionclaim."
+}

@@ -1,0 +1,13 @@
+{
+  "schema": "stcon05.predispatch-capacity-correction.v1",
+  "recorded_at_utc": "2026-10-21T21:16:46.644755+00:00",
+  "old_effective_package_sha256": "d1f996b274f76b928f7f4a5e31f9a39458a3c1ee1e4232a0fa39486a227fe9d5",
+  "old_base_package": "/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/artifacts/reviews/leadshug-template-authoring-20261020/candidate-assurance-r13-baseline-package-v1.1.md",
+  "proven_combined_prompt_bytes": {
+    "performance": 1050147,
+    "test-quality": 1050083
+  },
+  "cli_limit": 1048576,
+  "state": "Prepared only; no reviewer invoked, no terminal audit failure or retry consumed",
+  "correction": "Deduplicate only historical rootjournal compile/fixture/operator chronology, retaining complete code/test/rubric and prior resolution. Canonical build_round/save_session regenerate current preparedround; round01findings/resolution unchanged."
+}
