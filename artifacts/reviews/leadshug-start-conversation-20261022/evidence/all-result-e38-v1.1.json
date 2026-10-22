@@ -1,0 +1,115 @@
+{
+  "checkpoint": "E38 frozen canonical all stops in API/PG",
+  "canonical_command": "bash scripts/test-channels-local.sh all",
+  "unified_exec_session_id": 48123,
+  "exit_code": 1,
+  "synthetic_stdout": "/tmp/stcon04-executor-all-e38.txt",
+  "stdout_sha256": "3eb2933df45e9a5852ea0981fc73017c6f12c2fc78e8dc0832402f78663b3220",
+  "source_seal": "all-source-seal-e38-v1.1.json",
+  "source_recheck": "all-source-recheck-e38-v1.1.json",
+  "root_verified": [
+    "Synthetic stdout hash, phase/test summaries and bounded failure stacks",
+    "All259 source bytes/full positive inventory unchanged before writer release",
+    "Owned disposable cleanup"
+  ],
+  "phases": {
+    "generate_deploy_status_lint_build": "passed",
+    "api_unit": {
+      "files_passed": 34,
+      "tests_passed": 353,
+      "duration_seconds": 4.27
+    },
+    "api_postgresql": {
+      "files_passed": 30,
+      "files_failed": 3,
+      "tests_passed": 429,
+      "tests_failed": 4,
+      "duration_seconds": 275.71
+    },
+    "web": "not reached",
+    "browser": "not reached",
+    "owned_cleanup": "completed"
+  },
+  "failure_facts": [
+    {
+      "path": "api-app/test/conversation-start.e2e-spec.ts",
+      "case": "OUT-heavy listing batching",
+      "observed": "Expected HTTP200; got500. Actual stack ConversationsService.listar loaded.map atline96.",
+      "postterminal_diagnosis": "New spy on Prisma dynamic findMany delegate returned undefined. Real call-through or actual SQL query instrumentation required; do not fabricate results or remove batching assertions."
+    },
+    {
+      "path": "api-app/test/dispatch-admission.e2e-spec.ts",
+      "case": "ST04 schema/index facts",
+      "observed": "Actual sorted index names put conversations_inbox_order_idx first; expected list put it fourth.",
+      "limit": "Later columns/native/enum/constraints assertions in this case were not reached."
+    },
+    {
+      "path": "api-app/test/initial-message.e2e-spec.ts",
+      "case": "BFF risk acknowledgment",
+      "observed": "Expected uncertain409; received accepted201.",
+      "postterminal_diagnosis": "Fixture uses Evolution/NAO_OFICIAL but toggled Meta sendIdNull and counted Meta sends; correct only fake selection and retain all safety checks."
+    },
+    {
+      "path": "api-app/test/initial-message.e2e-spec.ts",
+      "case": "Template negative missing messaging grant",
+      "observed": "Expected INITIAL_TEMPLATE_UNSUPPORTED; received UNSUPPORTED_KIND.",
+      "postterminal_diagnosis": "Blanket catch in template preflight conflates grant/network unavailable with unsupported. Writer is separating unavailability and correcting exact assertions without weakening zeroPOST/slot facts.",
+      "causality_limit": "Wrong expected subtype is not a valid historical causal RED for a later CHANNEL_NOT_READY classification."
+    }
+  ],
+  "new_individual_passing_cases": [
+    "Nine-field operation-context mismatch matrix in API unit phase",
+    "Five waves of20 BFF same-key requests:19active202 replays,1provider fake call/1Message per wave; metrics below",
+    "Actual15000-row canonical COALESCE inbox EXPLAIN uses expression index,50rows,8shared-buffer hits",
+    "Safe preAdmission rejection and other-actor known-receipt local recovery cases"
+  ],
+  "bci_synthetic_metrics": [
+    {
+      "wave": 1,
+      "requests": 20,
+      "replay202": 19,
+      "posts": 1,
+      "messages": 1,
+      "elapsedMs": 191
+    },
+    {
+      "wave": 2,
+      "requests": 20,
+      "replay202": 19,
+      "posts": 1,
+      "messages": 1,
+      "elapsedMs": 147
+    },
+    {
+      "wave": 3,
+      "requests": 20,
+      "replay202": 19,
+      "posts": 1,
+      "messages": 1,
+      "elapsedMs": 144
+    },
+    {
+      "wave": 4,
+      "requests": 20,
+      "replay202": 19,
+      "posts": 1,
+      "messages": 1,
+      "elapsedMs": 145
+    },
+    {
+      "wave": 5,
+      "requests": 20,
+      "replay202": 19,
+      "posts": 1,
+      "messages": 1,
+      "elapsedMs": 137
+    }
+  ],
+  "limits": [
+    "Overall API/all remains RED; no Web/browser behavior execution from this run.",
+    "Partial assertions within a failing compound case are not labeled a passed full case.",
+    "No full ST04 schema parity, delivery or own-provider proof claimed.",
+    "E02/E04/E18/E35a and inherited debts remain."
+  ],
+  "next": "Writer released only after postseal for exact failure corrections, then new complete-candidate seal and canonical all. No live edits occurred."
+}

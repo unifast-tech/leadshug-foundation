@@ -62,3 +62,7 @@ A interface compilou em TypeScript/Vite e passou em49 testes unitários de7 arqu
 ## Checkpoint E37 — retomada compila; navegador completo ainda pendente
 
 O novo estado de retomada compilou e a suíte Web passou em51 testes unitários; os259 arquivos públicos ficaram idênticos durante a rodada. [Recibo E37](evidence/web-result-e37-v1.1.json). Esse resultado não executa a persistência/replay no navegador, API/PostgreSQL ou as novas negativas de protocolo. Essas provas seguem para o candidato completo. A [proposta de exceção de inspeção do diff guard](evidence/final-diff-guard-boundary-proposal-v1.1.json) permanece apenas proposta, sem autorização de inspeção privada ou GO do guard.
+
+## Checkpoint E38 — rodada completa parou na integração
+
+A API passou em353 testes unitários e429 de integração; quatro casos de integração falharam e impediram a execução Web/navegador nessa rodada. Os259 arquivos públicos ficaram idênticos durante a execução. [Recibo E38](evidence/all-result-e38-v1.1.json) registra causas, limites e as provas individuais que passaram (incluindo5ondas×20 submits sem duplicação). O executor corrige as falhas específicas antes de novo candidato; não há entrega04 ou API/all GREEN deste checkpoint.
