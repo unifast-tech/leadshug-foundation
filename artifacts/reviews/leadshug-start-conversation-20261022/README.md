@@ -50,3 +50,7 @@ O estado continua InProgress/Pending/implementation. Ainda faltam a matriz compl
 ## Checkpoint E34 — confirmação perdida, rollback e concorrência
 
 A API ampliada passou em339 testes unitários e428 de integração, com257 arquivos públicos idênticos antes/depois da execução. [Recibo E34](evidence/api-bff-result-e34-v1.1.json). Os novos casos distinguem commit confirmado no banco com confirmação perdida e rollback real, exercitam conflito P2002 com eco concorrente, preservação de atendimento assumido/encerrado, isolamento de empresa, perda de sessão/permissão durante preflight, limites de tentativas e recuperação por outro ator autorizado. O plano de consulta usa o índice aditivo de ordenação da inbox. Há limites explícitos de prova e de cronologia dos testes no recibo. A interface completa, navegador real, negativas restantes, schema e gates finais continuam em andamento; não há entrega04 nem teste de provedor real concluído neste checkpoint.
+
+## Checkpoint E35 — lacuna de interface confirmada no navegador
+
+O navegador passou em75 testes existentes. O teste novo abriu a conversa pelo BFF real, confirmou estado vazio sem envio e falhou somente ao exigir o formulário de primeira mensagem, ainda ausente. Os258 arquivos públicos permaneceram idênticos durante a rodada. [Recibo E35](evidence/browser-result-e35-v1.1.json). A interface completa segue em implementação após esse RED causal; a asserção posterior de ausência do composer comum não chegou a executar. Não há conclusão04 ou nova prova de provedor real neste checkpoint.

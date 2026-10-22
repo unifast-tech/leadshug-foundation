@@ -1,0 +1,46 @@
+{
+  "checkpoint": "E35 frozen browser first-flow causal RED",
+  "canonical_command": "bash scripts/test-channels-local.sh browser",
+  "unified_exec_session_id": 91478,
+  "exit_code": 1,
+  "synthetic_stdout": "/tmp/stcon04-executor-browser-red-e35.txt",
+  "stdout_sha256": "4b9a721ee3557534bd35dad177caeaf67414d18267f89b2526dc8af549621615",
+  "source_seal": "browser-source-seal-e35-v1.1.json",
+  "source_recheck": "browser-source-recheck-e35-v1.1.json",
+  "root_verified": [
+    "Synthetic stdout SHA and terminal failure/summary",
+    "All258 positive-public source bytes and complete positive inventory unchanged before writer release",
+    "Owned disposable cleanup completed"
+  ],
+  "browser": {
+    "passed": 75,
+    "failed": 1,
+    "duration_minutes": 14.4
+  },
+  "causal_failure": {
+    "test": "web-app/e2e/start-conversation.spec.ts",
+    "assertion_line": 59,
+    "assertion": "expect(page.getByLabel('Mensagem inicial')).toBeVisible()",
+    "observed": "element(s) not found after5s",
+    "meaning": "New first-message UI is absent before its implementation; this is an assertion RED, not a build/harness failure."
+  },
+  "prior_assertions_reached_and_passed": [
+    "Real BFF manual open returns201 with one created conversation and normalized explicit-DDI contact",
+    "Empty conversation is visible; PostgreSQL-backed audit reports QUEUED and zero Message",
+    "Browser made zero initial-message POST; synthetic provider calls/effects unchanged"
+  ],
+  "not_reached": [
+    "The later assertion that ordinary reply composer is absent was not reached after the initial-field failure; no separate observed claim is made for it."
+  ],
+  "test_causality": "New first-flow browser assertion was added before new initial-send UI implementation. Existing partial manual-open UI predates this test; do not extend this causal claim to that earlier code or backend tests.",
+  "next": "Sole writer released after root postseal to implement complete approved first-send UI and narrow admitted fixture support. New freeze required before next canonical runner.",
+  "remaining": [
+    "Full first-send UI/template/preview/recovery/ACK and browser matrix",
+    "Remaining negative protocol/window/schema proof and canonical all",
+    "Independent assurance, guard/private-boundary resolution, source-bound preserved-runtime and operator-assisted own-channel proof"
+  ],
+  "limits": [
+    "No complete ST-CON-04 delivery or provider proof claimed.",
+    "Existing controlled provider failures are synthetic test cases; E02/E04/E18 chronology and carried debts remain."
+  ]
+}
