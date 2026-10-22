@@ -1,0 +1,47 @@
+{
+  "checkpoint": "E29 frozen real-BFF journey candidate; build failure",
+  "canonical_command": "bash scripts/test-channels-local.sh api",
+  "unified_exec_session_id": 9981,
+  "exit_code": 1,
+  "synthetic_stdout": "/tmp/stcon04-executor-api-bff-e29.txt",
+  "stdout_sha256": "b5382d7e3aa0c29e38976545e3432860238842cca4bb31f5f1c8c9e8822f2027",
+  "root_verified": [
+    "stdout hash and bounded terminal build errors",
+    "all256 prelaunch source hashes and complete positive inventory unchanged",
+    "owned disposable cleanup"
+  ],
+  "phases": {
+    "prisma_generate": "passed",
+    "disposable_migrate_deploy": "passed",
+    "disposable_migrate_status": "up to date",
+    "lint": "passed",
+    "build": "failed,10 TypeScript errors",
+    "unit": "not reached",
+    "postgresql_e2e": "not reached",
+    "owned_cleanup": "completed"
+  },
+  "failure_groups": [
+    {
+      "code": "TS2345",
+      "count": 2,
+      "path": "api-app/src/domain/inbox/dispatch-admission.service.ts",
+      "cause": "Prisma InputJsonValue vs JsonValue at canonical stored request helper"
+    },
+    {
+      "code": "TS2339",
+      "count": 4,
+      "path": "api-app/src/domain/inbox/initial-message.service.ts",
+      "cause": "Nested discriminated request narrowing not preserved inside callback"
+    },
+    {
+      "code": "TS2367",
+      "count": 4,
+      "path": "api-app/src/domain/inbox/outbound.service.ts",
+      "cause": "Control flow cannot infer callback mutation of claim outcome"
+    }
+  ],
+  "new_test_source": "api-app/test/initial-message.e2e-spec.ts",
+  "new_test_status": "Written post-implementation, not reached; no causal RED or behavior pass claim. Includes real-BFF nonofficial first text, official named/positional template protocol, replay and grant-revocation scenarios.",
+  "source_preservation": "all36 exact protected paths and both E23 exact companion hashes matched before run",
+  "next": "Same sole executor makes type-correct contract-preserving changes, then new source seal and canonical API run. No private/runtime/provider proof performed."
+}
