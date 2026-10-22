@@ -1,0 +1,6 @@
+{
+  "schema": "stcon05.r35-tqa-initial-intake.v1",
+  "recorded_at_utc": "2026-10-22T02:17:10.022350+00:00",
+  "status": "terminal0 zero findings; output completeness supplementation pending",
+  "reason": "Initial assessment answers core efficacy/pass-the-test questions but lacks required explicit command/coverage/platform and per-decision evidence table. Do not silently accept a shortened rubric; retain original raw and request full output on the same unchanged self-contained package. No source fix or test rerun."
+}

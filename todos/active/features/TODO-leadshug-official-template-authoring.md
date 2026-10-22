@@ -42,7 +42,7 @@ O usuário quer preparar no LeadsHug a mensagem que usará para iniciar atendime
 ## Delivery Status Canon (Required)
 - **Current delivery stage:** Pending
 - **Qualifiers:** none
-- **Next exact step:** aguardar e atribuir o único all r35, congelado em `evidence/root-cp05-source-freeze-r35-common-failure-ownership-v1.1.json`, admissão `evidence/root-r35-all-admission-v1.1.json`. r34 confirmou o veto draft-only indevido no catálogo e na recuperação, com captura parcial explicitamente limitada. A correção altera só o helper de falha e suas chamadas; root reconstruiu o hash pai integral por inversão. Testes r34 exatos, 38 fontes/30 selos/3 HEADs e autoridade/diff GO. Diretório exclusivo da execução usa uma única variável para tee/recibo; nenhum retry automático ou ação preservada/Meta liberados. GREEN completo, revisões afetadas/PCV, ativação e prova real continuam gates posteriores.
+- **Next exact step:** resolver SEC-R35-01/ADH-R35-01 no owner local de observações: seleção atual ao adotar página, incluindo troca A→B e Novo rascunho, sem perder PAUSED conhecido nem restaurar editor abandonado. Teste browser de limpeza pronto, produto ainda r35 exato; novo HOW/testes puros/baseline causal antecedem correção. all r35 797/797 permanece evidência histórica honesta; TQA completo0, performance não bloqueante e security/adherence identificaram estes novos contraexemplos. OPS-R4-01 conservador aguarda opinião contratual, sem waiver implícito. Nenhuma ativação preservada/Meta realizada; gates atuais e prova final continuam obrigatórios.
 
 ## Active Work State (Required While TODO Remains In `active/`)
 - **Work state:** implementation
@@ -675,7 +675,7 @@ Planejado para o gate de entrega após APROVADO; nenhum resultado de implementa�
 - **Why this outcome:** entrega ainda pendente: há validação candidata extensa, mas a correção atual aguarda all/revisões, ativação preservada e prova Meta real. Este campo não afirma ausência de implementação.
 - **Inline code TODO debt:** none
 - **Evidence / audit artifact:** `evidence/root-candidate-r30-tqa-intake-v1.1.json`, `evidence/root-candidate-r30-disposition-v1.1.json`, terminais r31/r32 e freeze/admissão r33; disposição final após os gates atuais.
-- **Accepted residual debt:** TQA-ST05-03 conserva classificação original test-after/unknown, sem RED retroativo. SEC-R6-04 conserva restrição à coorte privada local e follow-up de budget antes de público/Railway. São disposições históricas carregadas, sem ampliar confiança ou dispensar prova externa.
+- **Accepted residual debt:** TQA-ST05-03 conserva classificação original test-after/unknown, sem RED retroativo. SEC-R6-04 conserva restrição à coorte privada local e follow-up de budget antes de público/Railway. São disposições históricas carregadas, sem ampliar confiança ou dispensar prova externa. OPS-R4-01 aceito como indisponibilidade local conservadora após erro atrasado, sem perda de status/horário/fence/conteúdo ou promoção de elegibilidade; nova atualização explícita recupera. Parecer contratual independente e disposição em `evidence/root-failed-observation-authority-r35-disposition-v1.1.json`; owner Web/integrations, candidato `backlog/README.md#BLG-leadshug-template-failure-observation-authority`. Não dispensa CAS/fence do produtor nem os blockers atuais de seleção SEC-R35-01/ADH-R35-01.
 
 ## Independent Test Quality Audit Gate (Deterministic Floor From Audit Escalation)
 

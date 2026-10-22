@@ -1,0 +1,42 @@
+{
+  "schema_version": "subagent-review-merge-v2",
+  "artifact_kind": "subagent_review_merge",
+  "authoritative": false,
+  "edit_policy": "derived_merge_packet",
+  "dispatch_path": "/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/artifacts/reviews/leadshug-template-authoring-20261020/candidate-audit-r6/round-04/dispatch/performance.dispatch.json",
+  "review_kind": "critique",
+  "review_count": 1,
+  "reviewer_labels": [
+    "fresh-internal-no-context-performance-r4"
+  ],
+  "highest_finding_severity": "medium",
+  "axis_summary": {
+    "performance": "acceptable",
+    "elegance": "acceptable",
+    "structural_soundness": "mixed",
+    "operational_fit": "mixed"
+  },
+  "recommended_paths": [
+    "Accept the performance portion without another performance-driven redesign. Route OPS-R4-01 to the observation/adherence owner for a narrow correction or explicit bounded disposition before declaring the affected failure-ordering behavior closed. Preserve existing debt restrictions and complete the remaining independent assurance, formal PCV, activation and actual-provider gates."
+  ],
+  "exact_next_step": "Record reviewer resolutions in the governing TODO using the machine-checkable resolution table or equivalent gate ledger, then extract the derived resolution packet and decide whether another bounded review pass is still required.",
+  "findings": [
+    {
+      "finding_id": "F-D567D4D5",
+      "severity": "medium",
+      "title": "An older failed refresh can invalidate a newer passive observation",
+      "rationale": "Nonblocking under the severe-runtime threshold. In web-app/src/telas/Modelos.tsx:786, atualizarStatus dispatches unavailable using only the remote ID after completeMeaningfulIntent succeeds. The reducer then marks the currently cached observation unavailable without comparing failure authority with its persisted fence. A feasible ordering is: an individual refresh commits failure at fence 2 and its real 409 response is held; another authorized client persists successful APPROVED evidence at fence 3; an already pending passive catalogue GET delivers fence 3 to this screen; the held failure is then released. Passive adoption does not advance completedIntent, so the older intent remains admissible and invalidates the newer fence-3 observation, including its editor proof. No derived read follows this catch. The catalogue failure branch has the analogous unconditional catalogFailure veto. The new successful-response race cases and the existing newer-failure-versus-older-success case do not cover this reverse ordering. This is a source-derived counterexample, not an executed reproduction, and creates a conservative availability false-negative rather than demonstrated unauthorized use or server exhaustion.",
+      "suggested_action": "A (recommended): add a real-BFF regression holding the completed failure response until newer persisted success arrives through a passive read, then implement reviewed failure-authority comparison within the existing observation owner while preserving genuinely current unavailability. B: if the current safe error response lacks sufficient context/fence information, obtain a bounded HOW/contract review for that metadata instead of inferring authority from arrival order or suppressing every failure. C: explicitly defer the conservative false-negative with a named owner, recovery limitation and follow-up. Keep this nonblocking for the performance lane and preserve the existing opposite-order failure assertions.",
+      "reviewer_labels": [
+        "fresh-internal-no-context-performance-r4"
+      ],
+      "source_finding_ids": [
+        "OPS-R4-01"
+      ],
+      "category": "operational_fit",
+      "formalizable_hint": "partial",
+      "candidate_rule_level": "project",
+      "candidate_rule_id": "n/a"
+    }
+  ]
+}

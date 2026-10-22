@@ -1,0 +1,66 @@
+{
+  "schema": "stcon05.r35-documentation-whitespace.v1",
+  "at_utc": "2026-10-22T02:24:53.815651+00:00",
+  "exceptions": [
+    {
+      "path": "artifacts/reviews/leadshug-template-authoring-20261020/candidate-assurance-r35-followup-package-v1.1.md",
+      "sha256": "7243afcaa92fb818c6c320cd1d07dbfae1b6a5eccf4f6c1a5c9d2e2138b13ccb",
+      "signals": 22,
+      "disposition": "Frozen exact review packet: meaningful unified-diff context spaces or generated dispatch final blank line retained. No source exception."
+    },
+    {
+      "path": "artifacts/reviews/leadshug-template-authoring-20261020/candidate-audit-r6/round-04/dispatch/performance.dispatch.md",
+      "sha256": "27de1fff3fa42c6738c2021daca319cfa9dec9e3e9cea463912838484f2f4f10",
+      "signals": 1,
+      "disposition": "Frozen exact review packet: meaningful unified-diff context spaces or generated dispatch final blank line retained. No source exception."
+    },
+    {
+      "path": "artifacts/reviews/leadshug-template-authoring-20261020/candidate-audit-r6/round-04/dispatch/test-quality.dispatch.md",
+      "sha256": "1ae5c66277582cf89ac1b5963f303415c793e3ddf115ee363dd8fcc7a940f4a2",
+      "signals": 1,
+      "disposition": "Frozen exact review packet: meaningful unified-diff context spaces or generated dispatch final blank line retained. No source exception."
+    },
+    {
+      "path": "artifacts/reviews/leadshug-template-authoring-20261020/candidate-audit-r6/round-04/round-package.md",
+      "sha256": "3870fb5d94d1f20c78ad8ad088388063cad3d1f1b512c7aeb6e62d274c1e9fb1",
+      "signals": 22,
+      "disposition": "Frozen exact review packet: meaningful unified-diff context spaces or generated dispatch final blank line retained. No source exception."
+    },
+    {
+      "path": "artifacts/reviews/leadshug-template-authoring-20261020/evidence/candidate-r35-adherence.dispatch.md",
+      "sha256": "0694669d5a38fcad9d95026697dc2cb1c5d53d1f090de660c4d1717f7f648348",
+      "signals": 1,
+      "disposition": "Frozen exact review packet: meaningful unified-diff context spaces or generated dispatch final blank line retained. No source exception."
+    },
+    {
+      "path": "artifacts/reviews/leadshug-template-authoring-20261020/evidence/candidate-r35-security.dispatch.md",
+      "sha256": "79bb95de59e6d370fb5f4d696d4e3f8ea998785529b1bd33446ed4ab638794f9",
+      "signals": 1,
+      "disposition": "Frozen exact review packet: meaningful unified-diff context spaces or generated dispatch final blank line retained. No source exception."
+    },
+    {
+      "path": "artifacts/reviews/leadshug-template-authoring-20261020/evidence/candidate-r35-test-quality-complete.dispatch.md",
+      "sha256": "7621a41b779ef387e107b3273add85ffa5f55c86125ba34338a3f126817b9d5e",
+      "signals": 1,
+      "disposition": "Frozen exact review packet: meaningful unified-diff context spaces or generated dispatch final blank line retained. No source exception."
+    },
+    {
+      "path": "artifacts/reviews/leadshug-template-authoring-20261020/evidence/failed-observation-authority-how-r35.dispatch.md",
+      "sha256": "2e97e204ce3d57a0e1dd257c0d5406f96673f9622837d6284a86c38b11e37cbc",
+      "signals": 1,
+      "disposition": "Frozen exact review packet: meaningful unified-diff context spaces or generated dispatch final blank line retained. No source exception."
+    },
+    {
+      "path": "artifacts/reviews/leadshug-template-authoring-20261020/failed-observation-authority-how-r35-package-v1.1.md",
+      "sha256": "5436b94a329aebde33497a4005af622598fed20166c100797b49940904346777",
+      "signals": 22,
+      "disposition": "Frozen exact review packet: meaningful unified-diff context spaces or generated dispatch final blank line retained. No source exception."
+    }
+  ],
+  "normalized_unfrozen_derived_summaries": [
+    "artifacts/reviews/leadshug-template-authoring-20261020/candidate-audit-r6/progress.md",
+    "artifacts/reviews/leadshug-template-authoring-20261020/candidate-audit-r6/round-04/merge/performance.merge.md",
+    "artifacts/reviews/leadshug-template-authoring-20261020/candidate-audit-r6/round-04/merge/test-quality.merge.md",
+    "artifacts/reviews/leadshug-template-authoring-20261020/candidate-audit-r6/round-04/round-summary.md"
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "schema": "stcon05.r35-failed-observation-authority-disposition.v1",
+  "at_utc": "2026-10-22T02:29:03.496221+00:00",
+  "finding": "OPS-R4-01",
+  "decision": "accepted-debt; nonblocking conservative local availability false-negative",
+  "independent_opinion": "foundation_documentation/artifacts/reviews/leadshug-template-authoring-20261020/evidence/failed-observation-authority-how-r35.raw-attempt1.txt",
+  "opinion_sha256": "9d8ee7b45061ab45400c220f3175d0c3740b727dfeb2129ca57ee8bd9b944179",
+  "owner": "integrations-and-channels/Web observation maintainer",
+  "canonical_followup": "foundation_documentation/backlog/README.md#BLG-leadshug-template-failure-observation-authority",
+  "reason": "D07/DOD04 require unavailable-after-error while preserving prior facts. Persisted producer CAS remains monotonic; delayed error performs no later backend write. Current safe error contains no committed failure fence/context. Consumer preserves latest status/time/fence/resource/content and withdraws local availability conservatively; subsequent explicit successful refresh recovers. Passive success is not contractually a completed newer explicit intent. No stale APPROVED promotion, tenant breakout or send is established. This is not permission to weaken mandatory server fences or current-failure handling.",
+  "exact_limit": "Held completed failure2, canonical success3 by another authorized client, passive3 delivered, then failure2 delivered can show3 unavailable until explicit refresh. Both individual and catalogue directions source-supported, not executed; all797 does not prove that ordering.",
+  "tradeoff": "Accept occasional extra operator refresh under the existing approved error semantics instead of adding unapproved error metadata/extra HTTP/new state owner. Stronger guarantees need truthful producer-owned committed failure authority with uncertainty semantics and boundary tests.",
+  "mandatory_current_fix": "SEC-R35-01 and ADH-R35-01 current-selected retention remain blocking; no debt waiver for them. No migration/runtime/Meta admission.",
+  "preserved": "All current common-negative, editor-proof, TTL, historical, current-failure and opposite-order tests; immutable ACK and existing read-budget debt unchanged. No repeated credential confirmation/retest."
+}

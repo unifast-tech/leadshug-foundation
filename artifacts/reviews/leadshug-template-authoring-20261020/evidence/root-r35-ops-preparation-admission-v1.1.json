@@ -1,0 +1,17 @@
+{
+  "schema": "stcon05.r35-ops-preparation-admission.v1",
+  "at_utc": "2026-10-22T02:18:20.460835+00:00",
+  "profile": "Operational/DevOps preparation only; existing project rules out Genesis; docker/prisma/postgresql/nestjs/react/vite",
+  "executor": "/root/template_validation_recovery; sole product/runtime/helper writer, only after a reviewer slot is free",
+  "source": "r35 all797 accepted; source38/seals30/productHeads3 stay frozen",
+  "allowed": "Prepare a new dormant r35 exact-source-bound migration helper and activation plan under artifacts/tmp/stcon05-activation-prep-r35 only; old helper immutable. Inspect positive public source and historical safe activation procedure. AST/static checks only, no helper execution, Docker/DB/config probes, image build/recreation, tunnel or Meta action. Root must read exact final helper and grant phase-specific GO after candidate assurance/PCV.",
+  "required_corrections": [
+    "Full container IDs; exact project/service/owner/state/network/volume identity preserved",
+    "Actual canonical git.exe three HEAD checks against r35 freeze; no private status scan",
+    "Project only exact container/image/network/volume metadata; peer Config.Env never materialized. Only exact API DATABASE_URL in memory when authorized by future phase, no PG secret reads; API/Web effective full values only for separately admitted recreation",
+    "Bounded read-only metadata transaction lock5s/statement60s plus bounded transaction/client/exec; only current_database, migration/checksum/completion flags and explicitly named schema objects. No business content/rows/counts/migration logs",
+    "Update accepted r35 source hash, unchanged25 SQL inventory/23+2 gate, exclusive once marker, parent-GO hashes, safe unknown-outcome stop/no retry/reset/resolve/drop",
+    "Positive Dockerfile COPY-input archives with symlinks never dereferenced, no dotenv/.local-files/approot/node_modules/dist/.git. Source\u2192image\u2192running compiled API/served Web attribution and prior-image rollback. Existing effective env preserved only in memory via stdinCompose empty env/discoveryoff/$ escaping; target API/Web only, no peers/orphans. Gateway reload only if separately proven necessary"
+  ],
+  "limitations": "Current candidate reviews assess frozen product/package. Dormant preparation changes no product/runtime state and does not waive or anticipate their outcome. Existing credential containment requires no new confirmation/retest."
+}

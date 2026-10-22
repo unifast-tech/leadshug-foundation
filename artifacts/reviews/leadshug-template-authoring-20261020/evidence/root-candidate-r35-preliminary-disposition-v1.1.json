@@ -1,0 +1,22 @@
+{
+  "schema": "stcon05.r35-candidate-preliminary-disposition.v1",
+  "recorded_at_utc": "2026-10-22T02:22:45.064107+00:00",
+  "all": "r35 all797 honest accepted candidate, not evidence for new counterexamples",
+  "tqa": "Two terminal independent results: baseline0 findings plus full-output supplemental0 findings. Strict schema normalized; full mandatory coverage/commands/platform/DI/CI/decision table present in supplement. Baseline retains canonical binding, supplemental retains its own exact binding. No original raw rewritten.",
+  "findings": [
+    {
+      "id": "SEC-R35-01",
+      "disposition": "blocking; Integrated test-only reproduction handoff",
+      "source": "loadCatalogPage retains request-start selected ID after Novo rascunho/open editor increments editorEpoch and clears individual slice; response still account-admissible. Reducer can repopulate old individual when page omits resource. Root source confirms feasible ordering; not executed.",
+      "direction": "Use existing editorEpoch to guard only selected-editor retention at completion, while applying authorized account page/cursor normally. No third store/new interface/backend change required. Fail-first actual BFF test first; product frozen until causal review."
+    },
+    {
+      "id": "OPS-R4-01",
+      "disposition": "nonblocking performance; contract/risk adjudication pending",
+      "source": "Late failed response has no observation fence, can conservatively invalidate newer passive observation. Source-supported, not executed. Status/time/fence remain truthful; no unauthorized eligibility/send/tenant break demonstrated.",
+      "direction": "Do not silently add error metadata or extra HTTP, weaken common failure or erase current unavailable proof. Assess frozen contract and bounded private-local risk explicitly before deciding narrow fix versus recorded debt."
+    }
+  ],
+  "adherence": "current independent review still live; immutable r35 packet retained",
+  "authority": "No migration/runtime/provider action. Only new test file may change under sole executor; source/API/fixtures/runner remain r35 exact. Delivery Pending."
+}
