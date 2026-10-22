@@ -1,0 +1,31 @@
+{
+  "schema": "stcon05.root-r41-public-old-image-label-diagnostic.v1",
+  "projections": [
+    {
+      "reference": "leadshug_channels_local-api:stcon06-v13r4-1fa0ffe2abba",
+      "projection": "unguarded",
+      "exit": 1,
+      "nil_index_error": true
+    },
+    {
+      "reference": "leadshug_channels_local-api:stcon06-v13r4-1fa0ffe2abba",
+      "projection": "absent_safe",
+      "exit": 0,
+      "public_identity_label_result": "sha256:d50bc6a4281753e3bb6a31764c3ada9dc27351976515f2f605aceec66b8582b1|"
+    },
+    {
+      "reference": "leadshug_channels_local-web:stcon06-v13r4-5ae0ee110652",
+      "projection": "unguarded",
+      "exit": 0,
+      "public_identity_label_result": "sha256:6015c99229f1c2d56a0bf94500a04a5e21338c5985cdf4b368d192c18341bd6b|<no value>"
+    },
+    {
+      "reference": "leadshug_channels_local-web:stcon06-v13r4-5ae0ee110652",
+      "projection": "absent_safe",
+      "exit": 0,
+      "public_identity_label_result": "sha256:6015c99229f1c2d56a0bf94500a04a5e21338c5985cdf4b368d192c18341bd6b|<no value>"
+    }
+  ],
+  "runtime_mutation": false,
+  "private_values_read": false
+}

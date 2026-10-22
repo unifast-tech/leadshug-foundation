@@ -1,0 +1,20 @@
+{
+  "schema": "stcon05.root-public-volume-normalization-diagnostic.v1",
+  "requested_volume": [
+    {
+      "type": "volume",
+      "source": "owned_volume_0",
+      "target": "/dados/arquivos",
+      "read_only": false
+    }
+  ],
+  "resolved_volume": [
+    {
+      "type": "volume",
+      "source": "owned_volume_0",
+      "target": "/dados/arquivos"
+    }
+  ],
+  "runtime_mutation": false,
+  "private_files_or_settings_read": false
+}

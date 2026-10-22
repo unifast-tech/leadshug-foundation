@@ -1,0 +1,85 @@
+{
+  "schema": "stcon05.root-r41-recreation-acceptance.v1",
+  "at_utc": "2026-10-22T05:57:56.827090+00:00",
+  "outcome": "verified_recreated",
+  "receipt_sha256": "19f3e0d1817034116fe5d6e4969f4ac80176e3a95950e52dad27873c0b02da41",
+  "exit": 0,
+  "actual_receipt": {
+    "api_web_mutation_attempted": true,
+    "automatic_rollback_or_retry": false,
+    "candidate_images": {
+      "api": "leadshug_channels_local-api:stcon05-r41-f6fc6cb71015d9092b355baa731964e4bb09aebc6eff2b812bad29616eed4ac5",
+      "web": "leadshug_channels_local-web:stcon05-r41-5b259e36016421c4d2773dcbb651adc603689e6ba8af19b3e5e20246b0b6e502"
+    },
+    "compose_return_code": 0,
+    "effective_environment_output_or_file": false,
+    "freeze_sha256": "dfcbd6a59880b02fd362d0cb6ced83ff44c9363c95aae400addb1c1934a143c6",
+    "outcome": "recreated_and_bounded_postconditions_passed",
+    "postconditions": {
+      "API_Web_mounts_networks_labels_match": true,
+      "api_healthy": true,
+      "candidate_image_ids_match": true,
+      "effective_environment_roundtrip_exact_in_memory": true,
+      "preserved_peer_ids_network_and_volume_names_match": true,
+      "runtime_web_config_matches_effective_environment_in_memory": true,
+      "web_running": true
+    },
+    "pre_topology": {
+      "network_id": "d48c8a9ac92f00d8e2f1c1c6a1744ab14463aeba4abeab491f82719336925c20",
+      "peer_ids": {
+        "evolution": "cf749491f7149dc46ec4db597b2d9c12faf918dd4f05b5512ba75adaf8e29ea4",
+        "evolution-postgres": "150de898c3d9aa189ca0719eed7a65b95d95d8b948244e66b059a55f4554135a",
+        "evolution-redis": "3b2e8d153d794a768ea87cb4f9cda7ba15dde242e2b8027bd372a475a9c26fbb",
+        "gateway": "0c48d94e9fe5b4ad75efd304db2752dfa4cab3befc59b9f736574d6cd551eea3",
+        "postgres": "4fcd87b431339e3b65a40beafa27db86cdc978ca79f71b911199f7090c837495"
+      },
+      "volume_names": [
+        "leadshug_channels_local_evolution_instances",
+        "leadshug_channels_local_evolution_pg_data",
+        "leadshug_channels_local_evolution_redis_data",
+        "leadshug_channels_local_leadshug_arquivos",
+        "leadshug_channels_local_leadshug_pg_data"
+      ]
+    },
+    "prior_image_ids_and_refs": {
+      "api": {
+        "id": "sha256:d50bc6a4281753e3bb6a31764c3ada9dc27351976515f2f605aceec66b8582b1",
+        "reference": "leadshug_channels_local-api:stcon06-v13r4-1fa0ffe2abba"
+      },
+      "web": {
+        "id": "sha256:6015c99229f1c2d56a0bf94500a04a5e21338c5985cdf4b368d192c18341bd6b",
+        "reference": "leadshug_channels_local-web:stcon06-v13r4-5ae0ee110652"
+      }
+    },
+    "prior_named_mounts": {
+      "api": [
+        {
+          "Destination": "/dados/arquivos",
+          "Name": "leadshug_channels_local_leadshug_arquivos",
+          "RW": true,
+          "Type": "volume"
+        }
+      ],
+      "web": []
+    },
+    "prior_target_container_ids": {
+      "api": "9795741bec7f58328d87f5b3fe23eae9fba7f13c8cb2d72c21f96497dbb9beb8",
+      "web": "472b3f6fcde8c032bfa90997ef0cd674971dfccdb292e9ef057187c552e3dff5"
+    },
+    "raw_compose_output_persisted_or_printed": false,
+    "schema": "stcon05-r41-api-web-recreation.v1"
+  },
+  "root_independent_positive_identity_projection": {
+    "api": {
+      "id": "f28024755f14774ac8726db262b1c31800a043ad6f71c51e3fa7b42009d797c3",
+      "image": "sha256:90e5e528357c36d206193ea1220ae36a5f3d26a07f8728be5fc38f0b9ea20976",
+      "state": "running"
+    },
+    "web": {
+      "id": "35a2f5a9342cdf896cc49d289bd3b4962fe281792ab630810c86e61f248638db",
+      "image": "sha256:ad57dfed419414d50bec413ddd89ea15cc1acf31ca8d0dd263e31f44fa6f744b",
+      "state": "running"
+    }
+  },
+  "gateway_content_proof": "pending separate verify"
+}

@@ -1,0 +1,19 @@
+{
+  "runtimeMutation": false,
+  "argvRead": false,
+  "targetMatches": true,
+  "schema": "stcon05-root-existing-owned-tunnel-metadata-v1",
+  "hostname": "wins-viewing-federal-jason.trycloudflare.com",
+  "processes": [
+    {
+      "exactPathProcessCount": 0,
+      "identityMatches": false,
+      "role": "supervisor"
+    },
+    {
+      "exactPathProcessCount": 0,
+      "identityMatches": false,
+      "role": "child"
+    }
+  ]
+}

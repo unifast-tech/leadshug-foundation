@@ -1,0 +1,29 @@
+{
+  "processes": [
+    {
+      "exactPathProcessCount": 1,
+      "pid": 1908,
+      "identityMatches": true,
+      "role": "supervisor"
+    },
+    {
+      "exactPathProcessCount": 1,
+      "pid": 22488,
+      "identityMatches": true,
+      "role": "child"
+    }
+  ],
+  "emptyConfigBytes": 0,
+  "failureIsNull": true,
+  "streamCallbackFaults": 0,
+  "schema": "stcon05-root-new-owned-tunnel-identity-v1",
+  "targetMatches": true,
+  "registeredConnectionEvents": 1,
+  "supervisorExitIsNull": true,
+  "childExitIsNull": true,
+  "hostnameShapeValid": true,
+  "hostname": "spell-suzuki-losing-completing.trycloudflare.com",
+  "argvRead": false,
+  "runtimeMutation": false,
+  "stateWriteFailures": 0
+}

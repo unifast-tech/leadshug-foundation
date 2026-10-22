@@ -1,0 +1,12 @@
+{
+  "schema": "stcon05.root-r41-assisted-provider-proof-request.v1",
+  "at_utc": "2026-10-22T06:14:48.589430+00:00",
+  "status": "awaiting_operator_result",
+  "origin": "https://spell-suzuki-losing-completing.trycloudflare.com",
+  "operator_flow": "Normal OWNER login; Cadastros -> Modelos; existing official Local Test Ofc; one fictitious draft, preview, save, ONE explicit Meta submit, ONE status refresh, reload persistence. No recipient send.",
+  "requested_template_name": "leadshug_validacao_20261022_01",
+  "provider_result_claimed": false,
+  "callback_or_oauth_settings_changed": false,
+  "manual_token_collected": false,
+  "next_after_actual_proof": "Consolidate module decisions, fresh full final review and required delivery guards. Delivery stays Pending."
+}

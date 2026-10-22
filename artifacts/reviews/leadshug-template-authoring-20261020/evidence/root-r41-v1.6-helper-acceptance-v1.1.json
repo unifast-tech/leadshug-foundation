@@ -1,0 +1,13 @@
+{
+  "schema": "stcon05.root-r41-v16-helper-review.v1",
+  "at_utc": "2026-10-22T05:51:54.253969+00:00",
+  "outcome": "accepted_preflight_only_after_exact_go",
+  "artifacts": {
+    "activate_api_web_r41_v1_6.py": "0316c5a894a4e0af44f37a880041c10e9320f0743223adf4af8a7877e5772d84",
+    "activation-projection-plan-v1.6.md": "06f281d4c8cfff97f3a1d7e360e28f78408d52d170cadaca35b2a9df304b80a4",
+    "full-diff-v1.5-to-v1.6.diff": "70592d75e0ad21d2f07826814e18396fcea58484bf95cf7dfc9e3cde8a90818f",
+    "static-proof-v1.6.json": "0b42c580430635423812cad9cb94d4887a775c04ffcd39105c412e2db055bda5"
+  },
+  "review": "Full narrowdiff/plan/staticproof read. Normalize absentread_only tofalse only onclosedrows, strictbool, exacttype/source/target/count/order remain, true changes rejected andextra keys rejected. Postruntime RW/fullmount equality andWebnoneguard remain. No new mutation before readiness. Originalsource/receipts/images unchanged.",
+  "helper_invoked": false
+}

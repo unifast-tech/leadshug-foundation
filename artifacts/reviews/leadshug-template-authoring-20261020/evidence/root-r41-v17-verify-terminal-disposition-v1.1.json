@@ -1,0 +1,13 @@
+{
+  "schema": "stcon05.root-r41-v17-verify-terminal-disposition.v1",
+  "at_utc": "2026-10-22T06:00:47.067245+00:00",
+  "exit": 2,
+  "reason": "gateway-served index differs from Web image",
+  "source_image_running_proof_receipt": false,
+  "api_web_recreation_still_verified": true,
+  "root_diagnostic": "root-r41-gateway-content-diagnostic-v1.1.json",
+  "actual_gateway_http": 502,
+  "running_web_equals_image": true,
+  "next": "Separateexactgatewaynginx-t thenreload GO9a7e4984ee6886c600190d97079757d2d3c535d7c28d1c6dd33c284883cc2d88; preservegatewayID. Freshv18verify-onlyhelper+freshownedproofpaths after actualgatewaychange, nohelperexecutionuntilrootreview.",
+  "root_cause_limit": "Stale gateway upstream resolution consistent with restart; not yet causally established. No productsourcebug inferred."
+}

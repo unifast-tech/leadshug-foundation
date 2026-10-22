@@ -1,0 +1,23 @@
+{
+  "schema": "stcon05.root-r41-recreate-preflight-acceptance.v1",
+  "at_utc": "2026-10-22T05:56:21.843622+00:00",
+  "outcome": "verified_ready_no_runtime_mutation",
+  "helper_sha256": "582a2c28033341659f9d37c886c5df89249f5b4b953804821bb7efdf7534fe1a",
+  "go_sha256": "3fe8a04b746e5e4d10fadd069de524b58830cb4462bfc3b394973e92457767f6",
+  "receipt_sha256": "16fd275f156a3daae1ae8e86975140d0f954d77e997b8e5695fdc6fafbd8105d",
+  "actual_receipt": {
+    "accepted_source_and_protected_seals_verified": true,
+    "compose_config_and_roundtrip_verified_in_memory": true,
+    "compose_up_executed": false,
+    "image_receipt_and_candidate_images_verified": true,
+    "migration_receipt_gate_verified": true,
+    "mounts_network_membership_and_preserved_topology_verified": true,
+    "prior_images_and_container_metadata_verified": true,
+    "ready": true,
+    "runtime_settings_checked_in_memory": true,
+    "schema": "stcon05-r41-recreate-preflight.v1",
+    "settings_commands_or_values_serialized": false,
+    "settings_or_commands_hashed": false
+  },
+  "exit": 0
+}

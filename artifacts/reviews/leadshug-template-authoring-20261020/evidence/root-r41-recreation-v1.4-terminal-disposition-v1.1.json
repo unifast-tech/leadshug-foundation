@@ -1,0 +1,12 @@
+{
+  "schema": "stcon05.root-r41-recreation-v1.4-terminal-disposition.v1",
+  "at_utc": "2026-10-22T05:46:14.316522+00:00",
+  "exit": 2,
+  "receipt_created": false,
+  "reason": "API/Web network driver mode changed",
+  "actual_public_diagnostic": "root-r41-v14-network-diagnostic-v1.1.json",
+  "cause": "HostConfig.NetworkMode returns exact owned network ID rather than network name; selected named membership and networkID match accepted preserved network. API/Web oldIDs/images unchanged and running.",
+  "next": "Fresh v1.5 helper admits name OR exact owned freshly-verified networkID and adds separate complete non-mutating recreate-preflight phase before any next manual recreation GO. No new build/archive/migration.",
+  "runtime_mutation": false,
+  "delivery": "Pending"
+}

@@ -483,3 +483,42 @@ Actual recreatev1.3 terminal2 with sanitized boundedcontainerprojection error an
 ### R102 — Exact v1.4 JSON numeric guard admitted
 
 Fresh helper9c0c2507bd3765df7542a6aa59126e974a868b825720cca3d6262995747c24e5 static/full narrowdiff accepted. Newownedv14artifactdirectory references immutablev13 archives/image receipt without copies; this HOW variation accepted. Plan proseoldhash typo documented; staticproof/rootactual original195372...b4c402abaf5... authoritative. SevenselectedJSONresourcefields parsed strict numericzero, boolguard unchanged. Freshmanual recreateGO6299662f2418de4ad1d52c5b5528c6f15fb77e6a1daa7aa61240b602112c7185 admitted to fresh v14executor. No automaticretry, no rebuild/reapply.
+
+
+### R103 — v1.4 pre-Compose network representation guard; full preparation preflight
+
+Actual v1.4 terminal2/no recreationreceipt. Root exactpositive ID/image/status/NetworkMode/membership projection proves oldAPI/Web unchanged and bothNetworkMode equal accepted networkIDd48c8..., with namednetwork membership matching. Name-onlyguard was too strict for Docker representation. Freshv15executor prepares nameORexactaccepted+freshnetworkID and separate recreate-preflight that completes allpublicmetadata/images/mounts/settings-in-memory/Compose config roundtrip and returns boolean-only readiness before up. Nextrecreate requires exactrootGO+preflightreceipthash. No auto-nextphase/reapply/build. Root also independently checked synthetic public Compose expose/health normalization (no privatevalues/runtime mutation); shapes retained. Foundationcheckpoint0025ea34 pushed0; producthistory untouched.
+
+
+### R104 — Full recreation preflight reaches Compose volume normalization
+
+Exactv15helper/full diff independently reconstructed+ASTreviewaccepted; preflight-onlyGO444969600c5a92d9e44427a260ff8522fef4e4f4d4066fb14761d9c69d6be9fc. Actualreadonlypreflight terminal2/no readinessreceipt, resolvedvolumes mismatch. Root independent syntheticpublicComposeconfig reproduces omittedfalse default forread_only whileexacttype/source/target unchanged. Freshv16prepares strict semanticnormalization only, retainingextra-field rejection/exactcounts/ROtrue/postmountchecks; no runtimeup yet. Root also independently checked old API/Webimage refs stillresolve torunningIDs. Migrations25complete/all802 andassurance unchanged.
+
+
+### R105 — v1.6 full preflight reaches retained prior image labels
+
+Narrowclosedvolume normalization accepted in root-r41-v1.6-helper-acceptance-v1.1.json; preflightGO6ccec17886295db165bb9ae8e2f1a9c5b4573720a538b2a44502e29051a30042, actualterminal2/no readinessreceipt, imageprojectionfailed. Root independently reproduced oldAPIimage nilConfig.Labels causingindexerror and safewith-map3namedlabel read. Candidateimagelabel guardsstaystrict; oldimage retentionneedsID/refonly andbothrefs verifiedmatch. Freshv17prepares onlyabsence-safe projections andphaseartifactnames. No up/rebuild/reapply.
+
+
+### R106 — Complete preflight actual0/readytrue; actual API/Web up admitted
+
+Root accepted exactv17helper582a2c28033341659f9d37c886c5df89249f5b4b953804821bb7efdf7534fe1a/fullnarrowdiff/plan/proof. SeparatepreflightGO3fe8a04b746e5e4d10fadd069de524b58830cb4462bfc3b394973e92457767f6. Actualcomplete readonlypreflight terminal0/readytrue, receipt16fd275f156a3daae1ae8e86975140d0f954d77e997b8e5695fdc6fafbd8105d; allsource/protected/metadata/images/migration/mounts/network/settingsmemory/Composeconfig+roundtrip/priorimages passed beforeup; booleansonly no settingshash. Root accepted thenissued separateactualrecreateGOf0ea612cef87067e05113f914f6ce170757134dab404d49ac6caa5bb8ae917c8; repeatsconditions andoneboundedup only. No rebuild/reapply/automaticretry/rollback. Delivery Pending.
+
+
+### R107 — Actual API/Web recreation0; gateway502 content-proof boundary
+
+Actualrecreation0/postconditionspassed receipt19f3e0d1817034116fe5d6e4969f4ac80176e3a95950e52dad27873c0b02da41 accepted. Root independently checks newrunningAPI f28024755f14774ac8726db262b1c31800a043ad6f71c51e3fa7b42009d797c3/Web35a2f5a9342cdf896cc49d289bd3b4962fe281792ab630810c86e61f248638db exactcandidateIDs. SeparateverifyGOb97db6bd9631a908a48e6ecf66f283c714897f3090a59a0175732d9e15c7b772 actualterminal2 gatewayindexdiff, no proofreceipt. Root imageindex72c872... equalsrunningWebindex; gatewayHTTP502, so staleupstreamresolution plausible butnotcausallyproven. Separate2commandgateway-onlyGO9a7e4984ee6886c600190d97079757d2d3c535d7c28d1c6dd33c284883cc2d88 to freshv18executor: validateexactID/running, nginx-t0 thenonereload, preservesID/config/peers. Newverify-onlyhelper+freshproofpaths preparedafterreload, no sourcechange orautomaticretry/recreation/migrationrepeat. Delivery Pending.
+
+
+### R108 — Full content proof accepted; existing HTTPS owner is stopped
+
+Gateway test and single reload both exited 0 and preserved its ID. Fresh v1.8 verifier was reviewed and admitted by exact GO 184f6fc4d3d987ea0f32856a54bb7e702650c377ea1e8b68841d984c5967c253. Actual terminal 0; proof SHA 4e924b3cddf31b9546b91423de3549a29835db4500feef39882a9fe58948aabc. Root checked the receipt and independently fetched index, JS, CSS and privacy with HTTP200 and exact hashes. Served JS ba7560... equals the accepted all r41 bundle. Runtime versions are actual facts: API Node v22.23.3/Alpine3.24.2, Web nginx1.31.7/Alpine3.24.2, with no inferred runtime PG version. Dynamic config remains memory only.
+
+Root read only the known owned tunnel state/binary paths and queried exact executable paths with SELECT of PID, parent, executable and creation date; no argv or unknown process scan. Both old ST06 tunnel processes are absent. The same executor prepares a new owned launcher from reviewed cp73 source, with hash/identity/root-GO gates, without launch until root review. API/Web and migrations need no repeat. Actual Meta and final review remain pending.
+
+
+### R109 — New owned HTTPS accepted; assisted Meta proof requested
+
+Root reviewed the current launcher and all four hashes, confirmed correct old ST06 paths and independently queried all six known Windows executable paths without a case filter: all zero. Exact launch GO 8f169668a9578ac9fe32d3778e16520c71783456743eeab78a62e48b2804c472 admitted one detached owned supervisor. Actual launch exited0, receipt e1060e46404d7084357151c627a68918c2fe2fd14ed1f23b56f8a853d656fd06, supervisor1908/child22488. Root verified exact PIDs, parent, executable paths, creation dates, both binary hashes, zero-byte config, expected8083 target, null failures/exits and a registered connection; no argv or unknown process access.
+
+Normal Windows DNS/TLS checks passed at https://spell-suzuki-losing-completing.trycloudflare.com with index, JS, CSS and privacy hashes equal to accepted images, health200 and unauthenticated webhookGET403. No redirects, insecure TLS override, environment/origin/provider configuration or credential changes. Metadata/HTTPS evidence is public and contains no secret values. A normal OWNER assisted test was requested asynchronously: existing official BU, fictitious draft/preview/save, one Meta submit, one status refresh and reload. No actual provider result has been reported yet. Callback/OAuth settings were not changed or claimed validated at Meta for this new origin. Module consolidation/fresh final review remain after actual proof; Delivery Pending.

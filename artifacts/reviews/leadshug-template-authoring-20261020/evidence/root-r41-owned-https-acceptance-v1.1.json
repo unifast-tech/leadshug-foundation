@@ -1,0 +1,53 @@
+{
+  "schema": "stcon05.root-r41-owned-https-acceptance.v1",
+  "at_utc": "2026-10-22T06:12:48.898348+00:00",
+  "outcome": "verified",
+  "origin": "https://spell-suzuki-losing-completing.trycloudflare.com",
+  "identity_evidence": "root-r41-new-tunnel-identity-v1.1.json",
+  "normal_dns_and_tls": true,
+  "requests": [
+    {
+      "path": "/",
+      "http": 200,
+      "normal_tls_verified": true,
+      "redirects": 0,
+      "sha256": "72c8725859577668a78e8d6ca9d2eb72c7f1c687b9f89b866fe53b384d9b5e12"
+    },
+    {
+      "path": "/assets/index-Dk6aXW-k.js",
+      "http": 200,
+      "normal_tls_verified": true,
+      "redirects": 0,
+      "sha256": "ba7560c12923e68148560d108f2b04571897b84e04e3e8a82339241101bc90fb"
+    },
+    {
+      "path": "/assets/index-wuzy3kMN.css",
+      "http": 200,
+      "normal_tls_verified": true,
+      "redirects": 0,
+      "sha256": "38f979314555cda8b834189ed5c64826bbc309e294091c9f5c54ee5f8bd2aadd"
+    },
+    {
+      "path": "/privacidade.html",
+      "http": 200,
+      "normal_tls_verified": true,
+      "redirects": 0,
+      "sha256": "d0f72c588f0f014de46a327e34d6b26125ca115bc973b56bbb926cd8519e701d"
+    },
+    {
+      "path": "/health",
+      "http": 200,
+      "normal_tls_verified": true,
+      "redirects": 0
+    },
+    {
+      "path": "/webhooks/meta",
+      "http": 403,
+      "normal_tls_verified": true,
+      "redirects": 0
+    }
+  ],
+  "private_values_read_or_serialized": false,
+  "provider_mutation": false,
+  "new_origin_or_env_changes": false
+}

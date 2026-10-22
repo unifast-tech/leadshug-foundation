@@ -1,0 +1,29 @@
+{
+  "schema": "stcon05.root-r41-gateway-and-v18-review.v1",
+  "at_utc": "2026-10-22T06:02:38.098080+00:00",
+  "gateway_result_sha256": "96bd6291064953d84a3735ae569e094bd0e68f6e8e7245bb2c85af944e830037",
+  "gateway_result": {
+    "schema": "stcon05-r41-gateway-reload-result.v1",
+    "operation": "test_then_single_nginx_reload",
+    "target": "leadshug_channels_local-gateway-1",
+    "expected_container_id": "0c48d94e9fe5b4ad75efd304db2752dfa4cab3befc59b9f736574d6cd551eea3",
+    "pre_container_id": "0c48d94e9fe5b4ad75efd304db2752dfa4cab3befc59b9f736574d6cd551eea3",
+    "pre_running": true,
+    "nginx_test_exit_code": 0,
+    "reload_attempted": true,
+    "reload_exit_code": 0,
+    "post_container_id": "0c48d94e9fe5b4ad75efd304db2752dfa4cab3befc59b9f736574d6cd551eea3",
+    "post_running": true,
+    "same_container_id": true,
+    "outcome": "passed"
+  },
+  "root_postreload_http": "root-r41-post-gateway-reload-http-v1.1.json (index/health/privacy200, candidateindexhashmatches)",
+  "helper_artifacts": {
+    "activate_api_web_r41_v1_8.py": "83db97450d7f6c28860e50c032b41f1d99005f0cdcf6856ab79f6a114a19cccc",
+    "full-diff-v1.7-to-v1.8.diff": "10e7bad95ffd5ea475c7bd06d26914a7298f15673604b85c93b2f102e744ffc6",
+    "activation-projection-plan-v1.8.md": "a2f53fe18033c8882b93b7649bdae01485f53e233aa37e55bdf12f67223e5b5d",
+    "static-proof-v1.8.json": "9b832435a2b93efa2ec9d01f0f396db3cca4c9d535662714062a69b2cc4a52bf"
+  },
+  "review": "Full narrowdiff/plan/staticproof read and actualhashes/AST verified. Onlyfreshownedproofoutputpaths/verify-onlyentry/GOname and immutablev17recreationparent reads changed. Allsource38/protected30/heads/image/source/compiled/served/configmemory/Windowspath/peeridentity checks retained. No priorproof rewrite or appsrecreation/migrationrepeat.",
+  "outcome": "accepted_for_separate_verify_go"
+}

@@ -1,0 +1,11 @@
+{
+  "schema": "stcon05.root-r41-v15-preflight-terminal-disposition.v1",
+  "at_utc": "2026-10-22T05:50:50.875457+00:00",
+  "exit": 2,
+  "ready_receipt_created": false,
+  "reason": "resolved Compose volumes changed",
+  "runtime_mutation": false,
+  "diagnosis": "Root independently reproduced public Compose volume config removing explicit read_only:false because false is default; type/source/target retained. Correct comparison must normalize only omittedfalse while preservingtrue and rejectingunmodeledfields.",
+  "diagnostic": "root-r41-v15-compose-volume-diagnostic-v1.1.json",
+  "next": "Freshv16 routineexecutor prepares narrow volume semanticnormalization; full readonlypreflight before anynewrecreate. No rebuild/reapply."
+}

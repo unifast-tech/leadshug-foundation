@@ -1,0 +1,11 @@
+{
+  "schema": "stcon05.root-r41-gateway-content-diagnostic.v1",
+  "gateway_http": 502,
+  "image_index_sha256": "72c8725859577668a78e8d6ca9d2eb72c7f1c687b9f89b866fe53b384d9b5e12",
+  "running_web_index_sha256": "72c8725859577668a78e8d6ca9d2eb72c7f1c687b9f89b866fe53b384d9b5e12",
+  "gateway_index_sha256": "d03faa24cebc1b1d82a126ac0aa7a9dbb7f9a7d005b610b8f9954ef2ca35eb5f",
+  "running_web_equals_image": true,
+  "gateway_equals_image": false,
+  "runtime_mutation": false,
+  "private_settings_read": false
+}

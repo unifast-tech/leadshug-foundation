@@ -1,0 +1,21 @@
+{
+  "schema": "stcon05.root-post-gateway-reload-http.v1",
+  "public_http_projections": [
+    {
+      "path": "/",
+      "http": 200,
+      "public_body_sha256": "72c8725859577668a78e8d6ca9d2eb72c7f1c687b9f89b866fe53b384d9b5e12"
+    },
+    {
+      "path": "/health",
+      "http": 200
+    },
+    {
+      "path": "/privacidade.html",
+      "http": 200,
+      "public_body_sha256": "d0f72c588f0f014de46a327e34d6b26125ca115bc973b56bbb926cd8519e701d"
+    }
+  ],
+  "private_values_read": false,
+  "runtime_mutation": false
+}

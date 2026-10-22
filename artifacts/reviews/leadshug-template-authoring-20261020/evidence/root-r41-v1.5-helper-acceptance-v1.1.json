@@ -1,0 +1,13 @@
+{
+  "schema": "stcon05.root-r41-v15-helper-review.v1",
+  "at_utc": "2026-10-22T05:48:07.803120+00:00",
+  "outcome": "accepted_preflight_only_after_exact_go",
+  "artifacts": {
+    "activate_api_web_r41_v1_5.py": "7dfd284e6358b5f4b715b1ed7544acfce189783269c2c6e94652f66f9ca96f75",
+    "activation-projection-plan-v1.5.md": "d1a915a21f0f6cb7686ed49e72979374b20bcb24ee73f686371d621aca62329f",
+    "full-diff-v1.4-to-v1.5.diff": "999aed447d9aa00908bafa23364643691f7a82a0f48d326bec84091ac6312002",
+    "static-proof-v1.5.json": "f05dbc0dbbd62ad8ca5cc61553955304c0493926f0ae2d9a493e54d967a6b161"
+  },
+  "root_review": "Full diff/plan/staticproof read; independently reconstructed newhelper from immutablev14 and exactdiff; AST parsed. NetworkMode nameORexactaccepted+freshID with exactmembership retained. Complete pre-up checks shared with separate preflight_only return beforeup; boolean-only receipt; recreate requires rootGO exactreceiptpath/hash then repeatschecks. API/WebEnv staysmemory, no settingshash. Source38/protected30/heads/SQLmigrationreceipt/imageIDs/topology/volumeguards retained.",
+  "note": "Preparation receipt is write-once by pre-existence guard in single-writer lane; plan exclusive wording is not an atomic file-create guarantee. No runtime proof yet."
+}

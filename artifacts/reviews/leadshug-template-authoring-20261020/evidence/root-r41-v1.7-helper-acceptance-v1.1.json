@@ -1,0 +1,13 @@
+{
+  "schema": "stcon05.root-r41-v17-helper-review.v1",
+  "at_utc": "2026-10-22T05:55:20.093695+00:00",
+  "outcome": "accepted_preflight_only_after_exact_go",
+  "artifacts": {
+    "activate_api_web_r41_v1_7.py": "582a2c28033341659f9d37c886c5df89249f5b4b953804821bb7efdf7534fe1a",
+    "activation-projection-plan-v1.7.md": "003ce521771754e0be3fe7b9972e677b381243204c41a59aba6a2ba9a3643ad5",
+    "full-diff-v1.6-to-v1.7.diff": "014b5db24586c46ba1c4d93c59db6fd9fc6e1c656e5700012c704d13a41367a3",
+    "static-proof-v1.7.json": "f6ca961fbd37580e2fbba3212d345cad647b99bacd54e1da63659d418532fe0d"
+  },
+  "review": "Full narrowdiff/plan/staticproof read. Threeabsent-safe withLabelmap own-label projections match rootactualDockerdiagnostic, preserve7selectedidentityfields, nofullconfig/Env/alllabels. ExactcandidateID/3source-label guards retained; priorIDmatchunchanged. All16fixes andfullpreflight separation retained.",
+  "helper_invoked": false
+}

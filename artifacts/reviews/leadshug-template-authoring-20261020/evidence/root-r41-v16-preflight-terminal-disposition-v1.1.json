@@ -1,0 +1,11 @@
+{
+  "schema": "stcon05.root-r41-v16-preflight-terminal-disposition.v1",
+  "at_utc": "2026-10-22T05:54:49.503694+00:00",
+  "exit": 2,
+  "readiness_receipt": false,
+  "runtime_mutation": false,
+  "reason": "image metadata projection failed",
+  "diagnostic": "root-r41-v16-image-label-diagnostic-v1.1.json",
+  "cause": "OldAPIimage has nilLabelmap; Go index fails. Absent-safe withmap projection independently works. OldWeb absentownlabel non-nilmap valid. Candidateimages must retain exact3labels; oldimages onlyneedID/reference retained.",
+  "next": "Freshv17 narrow absentlabelprojectionfix, immutablepriorartifacts, fullreadonlypreflight before furtherGO; no build/migrationrepeat."
+}

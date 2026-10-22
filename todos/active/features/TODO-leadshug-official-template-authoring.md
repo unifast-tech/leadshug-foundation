@@ -42,7 +42,7 @@ O usuário quer preparar no LeadsHug a mensagem que usará para iniciar atendime
 ## Delivery Status Canon (Required)
 - **Current delivery stage:** Pending
 - **Qualifiers:** none
-- **Next exact step:** helperv1.4 revisado em evidence/root-r41-v1.4-helper-acceptance-v1.1.json; nova admissão manual6299662f2418de4ad1d52c5b5528c6f15fb77e6a1daa7aa61240b602112c7185 para recriaçãoAPI/Web somente após provar falhav1.3 antesdeCompose e serviços intactos. Executor fresco template_activation_projection_r41_v14 executaUMAvez; aguardar terminal antes de prova fonte/imagem/runtime/HTTP. Archives/imagens aceitos/migrations25complete NÃO reaplicar/all802/assurance/PCV mantidos. Delivery Pending.
+- **Next exact step:** aguardar resultado da prova Meta assistida solicitada em evidence/root-r41-assisted-provider-proof-request-v1.1.json. Ambiente fonte→imagem→runtime→HTTP verificado0 e novo HTTPS https://spell-suzuki-losing-completing.trycloudflare.com validado por identidade dos processos, DNS/TLS normais e hashes de index/JS/CSS/privacidade (evidence/root-r41-owned-https-acceptance-v1.1.json). Operador usa OWNER/BU oficial existente: prévia/salvar/UMA submissão/consulta/reload. Após prova real, consolidar módulos e executar final fresco/guardas. Sem envio ao contato; Delivery Pending.
 
 ## Active Work State (Required While TODO Remains In `active/`)
 - **Work state:** implementation
@@ -621,8 +621,8 @@ Planejado para o gate de entrega após APROVADO; nenhum resultado de implementa�
 
 - **Disposition:** keep-active
 - **Disposition reason:** v1.1 aprovada2026-10-21; implementação/testes em checkpoints seriais, sem entrega completa ainda.
-- **Post-commit/push status:** Foundation main publicou `524ac232` com all r41 aceito0/802, assurance completa/PCV e preflight metadata preservado0/23+2; produto permanece sem commit/push.
-- **Next path/status action:** manter active/In-Progress; concluir checkpoints, all e assurance antes de ativação/prova assistida/closeout.
+- **Post-commit/push status:** Foundation main publicou `0025ea34` com imagens reais aceitas, migrations TEST25complete e falhas pré-Compose contidas; all802/assurance/PCV preservados; produto permanece sem commit/push.
+- **Next path/status action:** manter active/In-Progress; concluir prova assistida, consolidação dos módulos, final fresco e guardas de closeout.
 
 ## Security Risk Assessment (Mandatory Before Delivery)
 

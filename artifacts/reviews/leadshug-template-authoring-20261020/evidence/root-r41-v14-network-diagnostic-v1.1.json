@@ -1,0 +1,15 @@
+{
+  "schema": "stcon05.root-positive-network-diagnostic.v1",
+  "projections": [
+    {
+      "service": "api",
+      "public_identity_network": "9795741bec7f58328d87f5b3fe23eae9fba7f13c8cb2d72c21f96497dbb9beb8|sha256:d50bc6a4281753e3bb6a31764c3ada9dc27351976515f2f605aceec66b8582b1|running|d48c8a9ac92f00d8e2f1c1c6a1744ab14463aeba4abeab491f82719336925c20|leadshug_channels_local_default=d48c8a9ac92f00d8e2f1c1c6a1744ab14463aeba4abeab491f82719336925c20"
+    },
+    {
+      "service": "web",
+      "public_identity_network": "472b3f6fcde8c032bfa90997ef0cd674971dfccdb292e9ef057187c552e3dff5|sha256:6015c99229f1c2d56a0bf94500a04a5e21338c5985cdf4b368d192c18341bd6b|running|d48c8a9ac92f00d8e2f1c1c6a1744ab14463aeba4abeab491f82719336925c20|leadshug_channels_local_default=d48c8a9ac92f00d8e2f1c1c6a1744ab14463aeba4abeab491f82719336925c20"
+    }
+  ],
+  "runtime_mutation": false,
+  "private_settings_read": false
+}

@@ -1,0 +1,32 @@
+{
+  "caseInsensitiveWindowsWql": true,
+  "schema": "stcon05-root-exact-known-tunnel-prelaunch-v1",
+  "matches": [
+    {
+      "executable": "C:\\unifast\\leadshug\\leadshug_now_docker\\foundation_documentation\\artifacts\\tmp\\stcon06-executor-v13r4-activation\\cloudflared-runtime\\cp64-supervisor.exe",
+      "count": 0
+    },
+    {
+      "executable": "C:\\unifast\\leadshug\\leadshug_now_docker\\foundation_documentation\\artifacts\\tmp\\stcon06-executor-v13r4-activation\\cloudflared-runtime\\cloudflared-windows-amd64.exe",
+      "count": 0
+    },
+    {
+      "executable": "C:\\unifast\\leadshug\\leadshug_now_docker\\foundation_documentation\\artifacts\\tmp\\number-onboarding-execution\\T\\cloudflared-cp64\\cp64-supervisor.exe",
+      "count": 0
+    },
+    {
+      "executable": "C:\\unifast\\leadshug\\leadshug_now_docker\\foundation_documentation\\artifacts\\tmp\\number-onboarding-execution\\T\\cloudflared-cp64\\cloudflared-windows-amd64.exe",
+      "count": 0
+    },
+    {
+      "executable": "C:\\unifast\\leadshug\\leadshug_now_docker\\foundation_documentation\\artifacts\\tmp\\stcon05-access-r41-v1.1\\cloudflared-runtime\\cp64-supervisor.exe",
+      "count": 0
+    },
+    {
+      "executable": "C:\\unifast\\leadshug\\leadshug_now_docker\\foundation_documentation\\artifacts\\tmp\\stcon05-access-r41-v1.1\\cloudflared-runtime\\cloudflared-windows-amd64.exe",
+      "count": 0
+    }
+  ],
+  "argvRead": false,
+  "runtimeMutation": false
+}

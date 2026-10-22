@@ -1,0 +1,14 @@
+{
+  "schema": "stcon05.root-owned-access-launch-review.v1",
+  "at_utc": "2026-10-22T06:10:18.402144+00:00",
+  "outcome": "accepted_one_launch_after_exact_go",
+  "artifacts": {
+    "launch-owned-quick-tunnel-r41-v1.1.ps1": "775680c81f6d0077bae019bb474ecd2407bf4d2f927e18fe6c85f0f38f70b9bc",
+    "full-diff-cp73-to-r41-v1.1.diff": "cc0609bcc1267248ac96aa293e412ffe8bb7998de534c5d6f578e032615fef42",
+    "owned-access-launch-plan-v1.1.md": "902bc816558c4a62abf4b19df7a1dcd58856cefa571296bb9950edd732430397",
+    "static-proof-v1.1.json": "f6dc1a34e20a84b666dfe4174b58a871197126d800d23f363e5cd6e2b47ee9e9"
+  },
+  "review": "Full cp73 source and full currentdiff/plan/staticproof read. Correct oldST06 cp64supervisor leaf now bound. Newruntime fresh, hashes/emptyconfig/target/rootGO/path gated beforecopy+detachedWin32Create; exactsafeCIMfields, no argv/unknownkill/adoption. No productsettings/provider mutation. Root independently queried all6knownfullpaths with Windows case-insensitive WQL and no casefilter: allzero. This actual independent probe is authority for current one-use admission; launcher own additional case-sensitivefilter is not relied on to exclude differently-cased priorprocesses.",
+  "prelaunch_actual_probe": "root-r41-tunnel-prelaunch-path-check-v1.1.json",
+  "content_proof_sha256": "4e924b3cddf31b9546b91423de3549a29835db4500feef39882a9fe58948aabc"
+}
