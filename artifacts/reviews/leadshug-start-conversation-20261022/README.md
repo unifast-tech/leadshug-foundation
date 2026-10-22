@@ -66,3 +66,7 @@ O novo estado de retomada compilou e a suíte Web passou em51 testes unitários;
 ## Checkpoint E38 — rodada completa parou na integração
 
 A API passou em353 testes unitários e429 de integração; quatro casos de integração falharam e impediram a execução Web/navegador nessa rodada. Os259 arquivos públicos ficaram idênticos durante a execução. [Recibo E38](evidence/all-result-e38-v1.1.json) registra causas, limites e as provas individuais que passaram (incluindo5ondas×20 submits sem duplicação). O executor corrige as falhas específicas antes de novo candidato; não há entrega04 ou API/all GREEN deste checkpoint.
+
+## Checkpoint E39 — consultas e schema passam; uma expectativa restante
+
+A rodada passou em353 testes unitários e432 de integração. Restou uma expectativa de código de erro no primeiro caso de modelo pausado; os casos negativos seguintes da mesma sequência não executaram. A instrumentação SQL real, as verificações restritas de schema e o teste de confirmação de risco passaram. [Recibo E39](evidence/all-result-e39-v1.1.json). Os259 arquivos públicos permaneceram idênticos durante a execução; Web/navegador ainda não foram alcançados. O estado continua InProgress/Pending/implementation.

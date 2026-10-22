@@ -1,0 +1,97 @@
+{
+  "checkpoint": "E39 frozen full candidate stops at one API/PG assertion",
+  "canonical_command": "bash scripts/test-channels-local.sh all",
+  "unified_exec_session_id": 60648,
+  "exit_code": 1,
+  "synthetic_stdout": "/tmp/stcon04-executor-all-e39.txt",
+  "stdout_sha256": "d4df36cf1bfd31334b689270f451c5368ffcc95703f471843cd6c990d759c5df",
+  "source_seal": "all-source-seal-e39-v1.1.json",
+  "source_recheck": "all-source-recheck-e39-v1.1.json",
+  "source_count": 259,
+  "source_fingerprint": "89ae76ca41980de96cac836055560fc6a569e686b598b781cdc6a4a5b0c51ccf",
+  "root_verified": [
+    "Complete positive source inventory and all bytes unchanged before writer release",
+    "Synthetic stdout SHA, bounded failure stack and phase summaries",
+    "Owned disposable cleanup"
+  ],
+  "phases": {
+    "generate_deploy_status_lint_build": "passed",
+    "api_unit": {
+      "files_passed": 34,
+      "tests_passed": 353,
+      "duration_seconds": 3.99
+    },
+    "api_postgresql": {
+      "files_passed": 32,
+      "files_failed": 1,
+      "tests_passed": 432,
+      "tests_failed": 1,
+      "duration_seconds": 276.39
+    },
+    "web": "not reached",
+    "browser": "not reached",
+    "owned_cleanup": "completed"
+  },
+  "failure": {
+    "path": "api-app/test/initial-message.e2e-spec.ts:656",
+    "case": "Compound official NAMED/POSITIONAL same-account journey, first no-dispatch loop item paused",
+    "observed": "Expected INITIAL_TEMPLATE_UNSUPPORTED; received UNSUPPORTED_KIND, HTTP409.",
+    "meaning": "Adapter deliberately returns typed unsupported for semantic/status ineligibility; test expectation correction must retain zero extra POST and durable rejected/released facts. No new production error classification implied.",
+    "not_reached": "Later no-dispatch loop items: unknown-status, off-account, missing-messaging-grant, two-page-overflow, changed-definition, duplicate-template-id. Earlier bounded happy paths executed but entire compound case remains failed."
+  },
+  "new_passing_proofs": [
+    "Actual SQL instrumentation fixes prior Prisma spy artifact; OUT-heavy QUEUED list batching case passes.",
+    "Schema/index/column/native precision/enum/constraint assertions pass within bounded ST04 test; this is not whole-DB drift parity.",
+    "BFF uncertainty/risk-ack fixture passes using actual Evolution fixture, including early ACK refusal.",
+    "Five waves x20 BFF same-key requests: one provider fake POST/one Message/19 active replay202 per wave."
+  ],
+  "bci_synthetic_metrics": [
+    {
+      "wave": 1,
+      "requests": 20,
+      "replay202": 19,
+      "posts": 1,
+      "messages": 1,
+      "elapsedMs": 563
+    },
+    {
+      "wave": 2,
+      "requests": 20,
+      "replay202": 19,
+      "posts": 1,
+      "messages": 1,
+      "elapsedMs": 147
+    },
+    {
+      "wave": 3,
+      "requests": 20,
+      "replay202": 19,
+      "posts": 1,
+      "messages": 1,
+      "elapsedMs": 144
+    },
+    {
+      "wave": 4,
+      "requests": 20,
+      "replay202": 19,
+      "posts": 1,
+      "messages": 1,
+      "elapsedMs": 129
+    },
+    {
+      "wave": 5,
+      "requests": 20,
+      "replay202": 19,
+      "posts": 1,
+      "messages": 1,
+      "elapsedMs": 130
+    }
+  ],
+  "limits": [
+    "Overall all remains RED; no Web/browser execution in this run.",
+    "Subsequent negative loop cases are NOT passed merely because their expected labels are present in source.",
+    "E02/E04/E18/E35a and inherited debt remain for independent assurance.",
+    "No full diff guard, own-provider, runtime activation or delivery claim."
+  ],
+  "next": "Postseal verified before writer released. Correct exact unsupported expectation, assess snapshot-persistence failure safety, then new frozen candidate/run."
+}
