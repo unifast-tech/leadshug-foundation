@@ -1,0 +1,56 @@
+{
+  "schema": "stcon05.r41-root-metadata-acceptance.v1",
+  "at_utc": "2026-10-22T05:04:45.850900+00:00",
+  "executor": "/root/template_activation_runtime_r41",
+  "command_exit": 0,
+  "invocations": 1,
+  "receipt": "foundation_documentation/artifacts/tmp/stcon05-activation-prep-r41-v1.2/metadata-preflight.json",
+  "receipt_sha256": "2d54871a663a3b278e40b849f44e32a4ef19a414e600c30c9364cc4134a1d542",
+  "actual_receipt": {
+    "authorization_sha256": "688077a2d94218a99d7eb3e12a3845184ec0020df720266b69eaab4fb40558f6",
+    "catalog": {
+      "completed_count": 23,
+      "migration_count": 25,
+      "pending": [
+        "20261021130000_message_template_drafts",
+        "20261021150000_message_template_operations"
+      ],
+      "template_catalog_complete": false
+    },
+    "configuration_values_persisted": false,
+    "created_at_utc": "2026-10-22T05:03:00Z",
+    "database_target_verified_in_memory": true,
+    "helper_sha256": "29096ec3f9c88bb4bee6c6cb9cead0616d894c301508398ca1a8c174ff707e08",
+    "mutation_performed": false,
+    "schema": "stcon05-metadata-preflight-v1",
+    "source": {
+      "freeze_sha256": "dfcbd6a59880b02fd362d0cb6ced83ff44c9363c95aae400addb1c1934a143c6",
+      "heads_verified": true,
+      "migration_count": 25,
+      "protected_original_count": 30,
+      "source_count": 38
+    },
+    "topology": {
+      "api_id": "9795741bec7f58328d87f5b3fe23eae9fba7f13c8cb2d72c21f96497dbb9beb8",
+      "db_endpoint_matches_owned_service": true,
+      "network_id": "d48c8a9ac92f00d8e2f1c1c6a1744ab14463aeba4abeab491f82719336925c20",
+      "postgres_id": "4fcd87b431339e3b65a40beafa27db86cdc978ca79f71b911199f7090c837495",
+      "preserved_ids": {
+        "evolution": "cf749491f7149dc46ec4db597b2d9c12faf918dd4f05b5512ba75adaf8e29ea4",
+        "evolution-postgres": "150de898c3d9aa189ca0719eed7a65b95d95d8b948244e66b059a55f4554135a",
+        "evolution-redis": "3b2e8d153d794a768ea87cb4f9cda7ba15dde242e2b8027bd372a475a9c26fbb",
+        "gateway": "0c48d94e9fe5b4ad75efd304db2752dfa4cab3befc59b9f736574d6cd551eea3",
+        "postgres": "4fcd87b431339e3b65a40beafa27db86cdc978ca79f71b911199f7090c837495"
+      },
+      "volumes": [
+        "leadshug_channels_local_evolution_instances",
+        "leadshug_channels_local_evolution_pg_data",
+        "leadshug_channels_local_evolution_redis_data",
+        "leadshug_channels_local_leadshug_arquivos",
+        "leadshug_channels_local_leadshug_pg_data"
+      ]
+    }
+  },
+  "outcome": "Readonlypreflight accepted; exact23applied/2pending/no partialtemplateobjects. No mutation/configpersist/businessreads. Next ONLY exact image/archive helper preparation/review; no build/apply/recreate automatic permission.",
+  "limits": "Source/identity/migration/catalog metadata only; existing local channelcredentials and services unchanged. ActualMeta/runtimeversion delivery proof remains future."
+}

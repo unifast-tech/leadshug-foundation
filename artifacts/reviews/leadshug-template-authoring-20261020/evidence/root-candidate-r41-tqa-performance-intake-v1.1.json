@@ -1,0 +1,28 @@
+{
+  "schema": "stcon05.r41-tqa-performance-intake.v1",
+  "at_utc": "2026-10-22T04:55:22.431255+00:00",
+  "results": [
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-template-authoring-20261020/evidence/candidate-r41-test-quality.raw-attempt1.txt",
+      "sha256": "dc23663a4676708e10ece0382ad88f9a3d1779bcd7fbf340cb2aa0589f1689fa",
+      "dispatch_binding": "/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/artifacts/reviews/leadshug-template-authoring-20261020/candidate-audit-r6/round-05/dispatch/test-quality.dispatch.json",
+      "findings": 0
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-template-authoring-20261020/evidence/candidate-r41-test-quality-complete.raw-attempt1.txt",
+      "sha256": "5b347ebb66b59bbc50341b157dcb5e46685721934c2e95e3a859684e586a7bd2",
+      "dispatch_binding": "/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/artifacts/reviews/leadshug-template-authoring-20261020/evidence/candidate-r41-test-quality-complete.dispatch.json",
+      "findings": 0
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-template-authoring-20261020/evidence/candidate-r41-performance.raw-attempt1.txt",
+      "sha256": "048a3c6654e1e1c7dd39533ee5d1d8e637a099d56fc31031e83994c11b345e98",
+      "dispatch_binding": "/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/artifacts/reviews/leadshug-template-authoring-20261020/candidate-audit-r6/round-05/dispatch/performance.dispatch.json",
+      "findings": 0
+    }
+  ],
+  "outcome": "TQA full output complete and zero material findings; performance zero findings. Canonical baseline and supplemental bindings remain distinct/original.",
+  "full_tqa": "Root checked five explicit answers, command/topology/capability/coverage/platform/exclusions matrix, bypass/auth/fallback/DI token-scope-composition-lifetime/CI/source-served table, EACH frozen decision row and fail-first/runtime/provider limits. Initial shorter result retained honestly and supplemented, not silently accepted. No source/test rerun or gate waiver.",
+  "performance": "No newHTTP/fanout/store, bounded SQL/selected-owner work and current2x100FRC/BCI/RLS limits assessed; OPS-R4-01 accepted debt carried without reopening.",
+  "pending": "Canonical round05 merge is needs_adjudication solely because recommended_path free-text differs from a short label; both actual recommendations explicitly proceed to remaining candidate/activation gates and zero findings. Root will record this compatible recommendation adjudication without another cosmetic review round. Separate security/adherence remain live. PCV disposition/helper review precede preservedTEST metadata/migrations/activation; actualMeta and freshfinal mandatory; no delivery acceptance."
+}

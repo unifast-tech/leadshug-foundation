@@ -1,10 +1,10 @@
 # Dedicated Multi-Lane Audit Session Progress
 
 - **Session file:** `/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/artifacts/reviews/leadshug-template-authoring-20261020/candidate-audit-r6/session.json`
-- **Bounded package:** `/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/artifacts/reviews/leadshug-template-authoring-20261020/candidate-assurance-r35-followup-package-v1.1.md`
+- **Bounded package:** `/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/artifacts/reviews/leadshug-template-authoring-20261020/candidate-assurance-r41-followup-package-v1.2.md`
 - **Related TODO:** `/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/todos/active/features/TODO-leadshug-official-template-authoring.md`
 - **Run root:** `/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/artifacts/reviews/leadshug-template-authoring-20261020/candidate-audit-r6`
-- **Current round:** `4`
+- **Current round:** `5`
 
 ## Round 01
 - **Status:** `merged`
@@ -47,11 +47,24 @@
 - **Prepared at:** `2026-10-22T02:14:38+00:00`
 - **Merged at:** `2026-10-22T02:21:16+00:00`
 - **Round classification:** `needs_adjudication`
+- **Resolution:** `accepted-debt` at `/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/artifacts/reviews/leadshug-template-authoring-20261020/candidate-audit-r6/round-04/resolution.md`
 - **Lane files:**
   - `performance`: dispatch=`/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/artifacts/reviews/leadshug-template-authoring-20261020/candidate-audit-r6/round-04/dispatch/performance.dispatch.md` result=`/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/artifacts/reviews/leadshug-template-authoring-20261020/candidate-audit-r6/round-04/results/performance.result.json` (present)
   - `test-quality`: dispatch=`/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/artifacts/reviews/leadshug-template-authoring-20261020/candidate-audit-r6/round-04/dispatch/test-quality.dispatch.md` result=`/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/artifacts/reviews/leadshug-template-authoring-20261020/candidate-audit-r6/round-04/results/test-quality.result.json` (present)
 - **Summary markdown:** `/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/artifacts/reviews/leadshug-template-authoring-20261020/candidate-audit-r6/round-04/round-summary.md`
 - **Effective round package:** `/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/artifacts/reviews/leadshug-template-authoring-20261020/candidate-audit-r6/round-04/round-package.md`
 
+## Round 05
+- **Status:** `merged`
+- **Prepared at:** `2026-10-22T04:49:51+00:00`
+- **Merged at:** `2026-10-22T04:55:22+00:00`
+- **Round classification:** `needs_adjudication`
+- **Resolution:** `accepted-debt` at `/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/artifacts/reviews/leadshug-template-authoring-20261020/candidate-audit-r6/round-05/resolution.md`
+- **Lane files:**
+  - `performance`: dispatch=`/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/artifacts/reviews/leadshug-template-authoring-20261020/candidate-audit-r6/round-05/dispatch/performance.dispatch.md` result=`/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/artifacts/reviews/leadshug-template-authoring-20261020/candidate-audit-r6/round-05/results/performance.result.json` (present)
+  - `test-quality`: dispatch=`/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/artifacts/reviews/leadshug-template-authoring-20261020/candidate-audit-r6/round-05/dispatch/test-quality.dispatch.md` result=`/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/artifacts/reviews/leadshug-template-authoring-20261020/candidate-audit-r6/round-05/results/test-quality.result.json` (present)
+- **Summary markdown:** `/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/artifacts/reviews/leadshug-template-authoring-20261020/candidate-audit-r6/round-05/round-summary.md`
+- **Effective round package:** `/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/artifacts/reviews/leadshug-template-authoring-20261020/candidate-audit-r6/round-05/round-package.md`
+
 ## Exact Next Step
-Prepare a contradiction note, run the follow-up no-context challenge if needed, adjudicate the conflict explicitly, record the resolution with `record-resolution --status resolved`, then open the next round.
+If all remaining findings are non-blocking under the calibrated gate, record the accepted debt in the delivery evidence and close the audit gate. Open another round only for a bounded blocker/delta package.

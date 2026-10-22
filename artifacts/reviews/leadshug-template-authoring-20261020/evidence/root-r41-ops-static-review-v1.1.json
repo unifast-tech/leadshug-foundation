@@ -1,0 +1,32 @@
+{
+  "schema": "stcon05.r41-ops-static-review.v1",
+  "at_utc": "2026-10-22T04:57:54.588337+00:00",
+  "mode": "Operational/DevOps exact full helper/static handoff review only; no helper/Docker/DB/config/runtime execution",
+  "helper": "foundation_documentation/artifacts/tmp/stcon05-activation-prep-r41/stcon05_local_migrations_once.py",
+  "sha256": "1774dbbf6d238a05116206ae275fc8339f0da9db4feaed6046a3c787c175c305",
+  "outcome": "HOLD bounded dormant repair; candidate review/PCV also pending",
+  "accepted_direction": "Source38/seal30/25SQL/phaseGO/helperhash/currentfreeze/fullDockerIDs/projections/API-onlyDATABASE_URL/boundedreadonlymetadata/23+2/onceapply/positiveimage/sourcechecks and sanitizedfailures are proportionate. No broad peerConfig.Env or privatefile access.",
+  "defects": [
+    {
+      "id": "OPS-PREP-R41-01",
+      "issue": "canonical_head passes Linux absolute path to Windows git.exe -C; canonical workspace requires cwd-relative path.",
+      "repair": "git.exe -C .|api-app|web-app with cwdROOT; same exact3HEAD checks."
+    },
+    {
+      "id": "OPS-PREP-R41-02",
+      "issue": "Web archive whitelist omits nginx/default.conf.template and docker/40-config-js.sh required by actual Dockerfile.",
+      "repair": "Include both positive public COPY inputs; no whole-root context."
+    },
+    {
+      "id": "OPS-PREP-R41-03",
+      "issue": "Plan says25 migrationrecords while actualpreflight correctly expects23 existing rows+2pending source dirs; credential wording ambiguous.",
+      "repair": "25source/23applied/2pending prose; only Bitrixconnector revoked, Meta channel credentials preserved."
+    },
+    {
+      "id": "OPS-PREP-R41-04",
+      "issue": "Nested index EndpointSettings by stringAliases is representation-dependent.",
+      "repair": "Use standard Go selector (index expectednetwork).Aliases, preserving positive expectednetwork projection; no Docker probe during preparation."
+    }
+  ],
+  "next": "Same sole dormantexecutor preparesNEWv1.2 filenames/exactdiff/hash/static only, prior1774helper immutable. Root readreview before anymetadataGO; no productsource/test rerun/reviewpackage change."
+}

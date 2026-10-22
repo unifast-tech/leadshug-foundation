@@ -6,11 +6,11 @@
   "created_at": "2026-10-21T19:30:26+00:00",
   "session_path": "/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/artifacts/reviews/leadshug-template-authoring-20261020/candidate-audit-r6/session.json",
   "progress_markdown_path": "/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/artifacts/reviews/leadshug-template-authoring-20261020/candidate-audit-r6/progress.md",
-  "package_path": "/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/artifacts/reviews/leadshug-template-authoring-20261020/candidate-assurance-r35-followup-package-v1.1.md",
+  "package_path": "/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/artifacts/reviews/leadshug-template-authoring-20261020/candidate-assurance-r41-followup-package-v1.2.md",
   "todo_path": "/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/todos/active/features/TODO-leadshug-official-template-authoring.md",
   "extra_lane_ids": [],
   "run_root": "/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/artifacts/reviews/leadshug-template-authoring-20261020/candidate-audit-r6",
-  "current_round": 4,
+  "current_round": 5,
   "rounds": [
     {
       "round": 1,
@@ -148,8 +148,45 @@
       "resolution_markdown_path": "/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/artifacts/reviews/leadshug-template-authoring-20261020/candidate-audit-r6/round-04/resolution.md",
       "round_package_path": "/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/artifacts/reviews/leadshug-template-authoring-20261020/candidate-audit-r6/round-04/round-package.md",
       "merged_at": "2026-10-22T02:21:16+00:00",
-      "round_status": "needs_adjudication"
+      "round_status": "needs_adjudication",
+      "resolution_status": "accepted-debt",
+      "resolution_recorded_at": "2026-10-22T04:47:31+00:00"
+    },
+    {
+      "round": 5,
+      "status": "merged",
+      "prepared_at": "2026-10-22T04:49:51+00:00",
+      "lanes": [
+        {
+          "id": "performance",
+          "review_kind": "critique",
+          "goal": "Bounded critique with performance focus. Treat performance and operational fit as the primary decision lenses. Escalate as blocking only for concrete severe server/runtime risk: unbounded scans, N+1 or request-loop behavior where one query/endpoint is required, exact lookup through list/page walking, high-cardinality in-memory filtering, scheduler/job fetch-all reconciliation, load-amplifying cache/hydration paths, or resource-exhaustion/security exposure. Marginal micro-optimizations and speculative scaling polish are non-blocking debt.",
+          "dispatch_json_path": "/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/artifacts/reviews/leadshug-template-authoring-20261020/candidate-audit-r6/round-05/dispatch/performance.dispatch.json",
+          "dispatch_markdown_path": "/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/artifacts/reviews/leadshug-template-authoring-20261020/candidate-audit-r6/round-05/dispatch/performance.dispatch.md",
+          "result_path": "/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/artifacts/reviews/leadshug-template-authoring-20261020/candidate-audit-r6/round-05/results/performance.result.json",
+          "merge_json_path": "/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/artifacts/reviews/leadshug-template-authoring-20261020/candidate-audit-r6/round-05/merge/performance.merge.json",
+          "merge_markdown_path": "/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/artifacts/reviews/leadshug-template-authoring-20261020/candidate-audit-r6/round-05/merge/performance.merge.md"
+        },
+        {
+          "id": "test-quality",
+          "review_kind": "test_quality_audit",
+          "goal": "Bounded test-quality audit. Treat regression protection, assertion effectiveness, and test realism as the primary decision lenses. Escalate as blocking when final behavior, CRUD/mutation, backend contract semantics, required navigation/integration gates, real-backend coverage, CI execution, or anti-mock/fallback requirements are missing or invalid. Test organization/readability suggestions are non-blocking when required behavior coverage is valid.",
+          "dispatch_json_path": "/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/artifacts/reviews/leadshug-template-authoring-20261020/candidate-audit-r6/round-05/dispatch/test-quality.dispatch.json",
+          "dispatch_markdown_path": "/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/artifacts/reviews/leadshug-template-authoring-20261020/candidate-audit-r6/round-05/dispatch/test-quality.dispatch.md",
+          "result_path": "/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/artifacts/reviews/leadshug-template-authoring-20261020/candidate-audit-r6/round-05/results/test-quality.result.json",
+          "merge_json_path": "/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/artifacts/reviews/leadshug-template-authoring-20261020/candidate-audit-r6/round-05/merge/test-quality.merge.json",
+          "merge_markdown_path": "/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/artifacts/reviews/leadshug-template-authoring-20261020/candidate-audit-r6/round-05/merge/test-quality.merge.md"
+        }
+      ],
+      "summary_json_path": "/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/artifacts/reviews/leadshug-template-authoring-20261020/candidate-audit-r6/round-05/round-summary.json",
+      "summary_markdown_path": "/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/artifacts/reviews/leadshug-template-authoring-20261020/candidate-audit-r6/round-05/round-summary.md",
+      "resolution_markdown_path": "/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/artifacts/reviews/leadshug-template-authoring-20261020/candidate-audit-r6/round-05/resolution.md",
+      "round_package_path": "/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/artifacts/reviews/leadshug-template-authoring-20261020/candidate-audit-r6/round-05/round-package.md",
+      "merged_at": "2026-10-22T04:55:22+00:00",
+      "round_status": "needs_adjudication",
+      "resolution_status": "accepted-debt",
+      "resolution_recorded_at": "2026-10-22T05:00:58+00:00"
     }
   ],
-  "exact_next_step": "Prepare a contradiction note, run the follow-up no-context challenge if needed, adjudicate the conflict explicitly, record the resolution with `record-resolution --status resolved`, then open the next round."
+  "exact_next_step": "If all remaining findings are non-blocking under the calibrated gate, record the accepted debt in the delivery evidence and close the audit gate. Open another round only for a bounded blocker/delta package."
 }

@@ -1,0 +1,23 @@
+{
+  "schema": "stcon05.r41-metadata-phase-admission.v1",
+  "at_utc": "2026-10-22T05:02:01.571340+00:00",
+  "go": "foundation_documentation/artifacts/tmp/stcon05-activation-prep-r41-v1.2/root-preflight-go.json",
+  "go_sha256": "688077a2d94218a99d7eb3e12a3845184ec0020df720266b69eaab4fb40558f6",
+  "helper_sha256": "29096ec3f9c88bb4bee6c6cb9cead0616d894c301508398ca1a8c174ff707e08",
+  "executor": "/root/template_activation_runtime_r41",
+  "mode": "readonlymetadataonly, oneinvocation; noapply/activation/provider",
+  "evidence": {
+    "root-candidate-r41-assurance-disposition-v1.1.json": {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-template-authoring-20261020/evidence/root-candidate-r41-assurance-disposition-v1.1.json",
+      "sha256": "bf5a31af0043070272141a75cea6409c7764d3553b61fec226d4c68ad3b0c2c9"
+    },
+    "root-cp05-all-r41-acceptance-v1.1.json": {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-template-authoring-20261020/evidence/root-cp05-all-r41-acceptance-v1.1.json",
+      "sha256": "8470f3139ffc2d6c603445d17ec29bdeaebcbefe10de40970ad9ce8faf2e4199"
+    },
+    "root-r41-ops-v1.2-review-v1.1.json": {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-template-authoring-20261020/evidence/root-r41-ops-v1.2-review-v1.1.json",
+      "sha256": "0a4c750d6c494c117c6167144a3a507fc685a6e4fec0db90cbfb56da564955d3"
+    }
+  }
+}

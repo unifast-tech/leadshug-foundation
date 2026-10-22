@@ -1,0 +1,10 @@
+{
+  "schema": "stcon05.r41-packet-capacity-disposition.v1",
+  "at_utc": "2026-10-22T04:49:34.435432+00:00",
+  "parent_builder": "foundation_documentation/artifacts/reviews/leadshug-template-authoring-20261020/evidence/assurance-current-builder-r41-preparation.py",
+  "parent_sha256": "5a147579c214ad3f754ddeeff9c593452e4e94378d4ebfb10cf9c0890c5bae2d",
+  "builder": "foundation_documentation/artifacts/reviews/leadshug-template-authoring-20261020/evidence/assurance-current-builder-r41-v1.2.py",
+  "builder_sha256": "121b260f93cb6773c3eefe53d1a59d25716b406cd7b9edd8cf0b136e6981c017",
+  "reason": "Actual base packet v1.1 is990430bytes; canonical wrapper must also include21708bytes of unchanged prior resolutions plus headings. Before any review launch, omit duplicate prior-resolution bodies from BASE only and add exact hash inventory/mandatory full wrapper check. Canonical effective packet retains every full prior resolution once, all full changed product source/test bodies, all applicable rubrics, current proof/markers and full TQA workload. No current gate waiver or live review change. Original base/builder immutable; v1.2 is a new derived packet.",
+  "execution": "AST valid; no source/helper/runtime mutation, test rerun or review launched."
+}

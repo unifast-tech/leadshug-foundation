@@ -1,0 +1,7 @@
+{
+  "schema": "stcon05.r41-tqa-initial-intake.v1",
+  "at_utc": "2026-10-22T04:52:15.377670+00:00",
+  "result": "Actualterminal0; baseline0 findings recorded with original exact canonical binding. Not sufficient to close fullTQA gate yet.",
+  "reason": "Answers core positions substantively but omits required EACH decision evidence table, explicit coverage/platform/DI/CI matrix and explicit fivequestion answers. Complete applicable rubric requires these outputs; no shorter audit substitution.",
+  "next": "One fresh full-output supplement on SAME immutable complete effective992852byte package, own distinct dispatch/binding; no raw/binding rewrite or product/test change/rerun. Request only already-required full outputs, no expanded functionality."
+}

@@ -1,0 +1,13 @@
+{
+  "schema": "stcon05.r41-ops-v12-root-review.v1",
+  "at_utc": "2026-10-22T05:00:05.854403+00:00",
+  "profile": "Operational/DevOps preparation, Docker/Prisma/PostgreSQL/NestJS/React/Vite; Genesis ruled out; required workflows/localplan read; no invocation yet",
+  "helper": "foundation_documentation/artifacts/tmp/stcon05-activation-prep-r41-v1.2/stcon05_local_migrations_once.py",
+  "sha256": "29096ec3f9c88bb4bee6c6cb9cead0616d894c301508398ca1a8c174ff707e08",
+  "handoff": "foundation_documentation/artifacts/tmp/stcon05-activation-prep-r41-v1.2/activation-handoff-r41-v1.2.md",
+  "handoff_sha256": "f8ad68ee9a289c313d0c8c0dd2629b2779371766b3192aaaafdb563ece746487",
+  "outcome": "Accepted exact dormant helper for separately signed bounded metadata-preflight phase; no automatic apply/build/recreate/access/provider permission",
+  "review": "Root read whole r41 helper and whole handoff/staticrecord, then full v1.2 helperdiff/handoffdiff; AST and Go-format literal inspected without importing/executing helper. Exact changes cwdROOT+relativeGit/.Aliases/artifactdir; all other operations/source/identity/SQL/GO/once safeguards preserved. Literal Goformat has single escaping, no extra JSON escaping. Prior1774helper remains immutable.",
+  "corrections": "Four originalr30issues+metadataDBtimeouts resolved; r41Gitpath/WebCOPY/prose/selector issues resolved. Image archive/build/recreation remains plan only, must receive exact newscript review and phaseGO.",
+  "future_metadata_admission": "Only after signed phasepreflightGO with exacthelperhash/currentfreeze/candidateassurancedisposition. Exact projectlabels/fullIDs/ownednetwork/namedvolumes; only API DATABASE_URL memory; one readonly metadata transaction5s/60s/maxWait5s/tx70s/client85s; current_database+23appliedrecords/checksums/no9templateobjects; two pending source dirs. No businessrows/counts/migrationlogs, no privatefiles, no mutation."
+}

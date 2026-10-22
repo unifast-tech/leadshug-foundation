@@ -1,0 +1,123 @@
+{
+  "schema": "stcon05.r41-candidate-assurance-disposition.v1",
+  "at_utc": "2026-10-22T04:59:15.665123+00:00",
+  "delivery": "Pending",
+  "outcome": "GO bounded preserved localTEST metadata preflight ONLY after exact currenthelper review/phaseGO; no activation/Meta yet",
+  "current_all": "foundation_documentation/artifacts/reviews/leadshug-template-authoring-20261020/evidence/root-cp05-all-r41-acceptance-v1.1.json",
+  "reviews": [
+    {
+      "lane": "test-quality",
+      "path": "foundation_documentation/artifacts/reviews/leadshug-template-authoring-20261020/evidence/candidate-r41-test-quality.raw-attempt1.txt",
+      "sha256": "dc23663a4676708e10ece0382ad88f9a3d1779bcd7fbf340cb2aa0589f1689fa",
+      "dispatch_path": "/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/artifacts/reviews/leadshug-template-authoring-20261020/candidate-audit-r6/round-05/dispatch/test-quality.dispatch.json",
+      "finding_count": 0,
+      "positions": {
+        "performance_position": "acceptable",
+        "elegance_position": "acceptable",
+        "structural_soundness_position": "acceptable",
+        "operational_fit_position": "acceptable"
+      }
+    },
+    {
+      "lane": "test-quality-complete",
+      "path": "foundation_documentation/artifacts/reviews/leadshug-template-authoring-20261020/evidence/candidate-r41-test-quality-complete.raw-attempt1.txt",
+      "sha256": "5b347ebb66b59bbc50341b157dcb5e46685721934c2e95e3a859684e586a7bd2",
+      "dispatch_path": "/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/artifacts/reviews/leadshug-template-authoring-20261020/evidence/candidate-r41-test-quality-complete.dispatch.json",
+      "finding_count": 0,
+      "positions": {
+        "performance_position": "acceptable",
+        "elegance_position": "acceptable",
+        "structural_soundness_position": "acceptable",
+        "operational_fit_position": "acceptable"
+      }
+    },
+    {
+      "lane": "performance",
+      "path": "foundation_documentation/artifacts/reviews/leadshug-template-authoring-20261020/evidence/candidate-r41-performance.raw-attempt1.txt",
+      "sha256": "048a3c6654e1e1c7dd39533ee5d1d8e637a099d56fc31031e83994c11b345e98",
+      "dispatch_path": "/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/artifacts/reviews/leadshug-template-authoring-20261020/candidate-audit-r6/round-05/dispatch/performance.dispatch.json",
+      "finding_count": 0,
+      "positions": {
+        "performance_position": "acceptable",
+        "elegance_position": "acceptable",
+        "structural_soundness_position": "acceptable",
+        "operational_fit_position": "mixed"
+      }
+    },
+    {
+      "lane": "security",
+      "path": "foundation_documentation/artifacts/reviews/leadshug-template-authoring-20261020/evidence/candidate-r41-security.raw-attempt1.txt",
+      "sha256": "9b01306c60a89cbd69d1178dc6b37ca00e3ffd95f5af3d485c3ed6d2f4a1b681",
+      "dispatch_path": "/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/artifacts/reviews/leadshug-template-authoring-20261020/evidence/candidate-r41-security.dispatch.json",
+      "finding_count": 0,
+      "positions": {
+        "performance_position": "acceptable",
+        "elegance_position": "acceptable",
+        "structural_soundness_position": "mixed",
+        "operational_fit_position": "mixed"
+      }
+    },
+    {
+      "lane": "adherence",
+      "path": "foundation_documentation/artifacts/reviews/leadshug-template-authoring-20261020/evidence/candidate-r41-adherence.raw-attempt1.txt",
+      "sha256": "297df8fb5640a391de36aeab68d3766e65a725b6a261efed141fea9bff9fa6d0",
+      "dispatch_path": "/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/artifacts/reviews/leadshug-template-authoring-20261020/evidence/candidate-r41-adherence.dispatch.json",
+      "finding_count": 0,
+      "positions": {
+        "performance_position": "acceptable",
+        "elegance_position": "acceptable",
+        "structural_soundness_position": "acceptable",
+        "operational_fit_position": "mixed"
+      }
+    }
+  ],
+  "adjudication": "Round05 canonical merge needs_adjudication solely recommended_path string mismatch: performance free paragraph and TQA short label both explicitly recommend same remaining candidate/activation gates; zero findings in each. Mixed structural/operational positions acknowledge existing accepted debts and later proof gates, not new blockers. Root accepts compatibility without cosmetic round or extra opinion. FullTQA supplement keeps separate own binding and supplies mandatory tables/5answers.",
+  "findings": "SEC-R35-01 and ADH-R35-01 integrated and independently accepted on currentselectedowner correction; no unresolved currentcandidate blocking finding.",
+  "pcv": [
+    {
+      "lane": "EPS",
+      "state": "passed",
+      "artifact": "foundation_documentation/artifacts/reviews/leadshug-template-authoring-20261020/evidence/pcv-r41-current-v1.1-eps.json",
+      "artifact_sha256": "99e6e9b5ad4b0f664f1c3774fb4d164515a76fdc60354f41835678b8f2a725a7",
+      "file_sha256": "09084b1d93938417fa2b95da26850c9d5a0caece43edae7f75f9154e72fb9a23",
+      "profile": "EPS-SP-STRONG",
+      "rule": "EPS-A2"
+    },
+    {
+      "lane": "FRC",
+      "state": "passed",
+      "artifact": "foundation_documentation/artifacts/reviews/leadshug-template-authoring-20261020/evidence/pcv-r41-current-v1.1-frc.json",
+      "artifact_sha256": "a8af2ce0b6e4ded6294d3d46a8c580296a859ca65dd5f7a179e769762a380131",
+      "file_sha256": "d7678418b765d3a44c4ea25b54af68572653cc52b12f7775a9c635396a7d986f",
+      "profile": "FRC-SP-H",
+      "rule": "FRC-A1"
+    },
+    {
+      "lane": "BCI",
+      "state": "passed",
+      "artifact": "foundation_documentation/artifacts/reviews/leadshug-template-authoring-20261020/evidence/pcv-r41-current-v1.1-bci.json",
+      "artifact_sha256": "41538de644b5fbd21e5dd418778a8faab648d8e5f80fee6b6e0be673b4884e6b",
+      "file_sha256": "ab21954ea849580651abce4b4355d44835a09773ae23d192397ea060a9bebd0f",
+      "profile": "BCI-SP-H",
+      "rule": "BCI-A1"
+    },
+    {
+      "lane": "RLS",
+      "state": "passed",
+      "artifact": "foundation_documentation/artifacts/reviews/leadshug-template-authoring-20261020/evidence/pcv-r41-current-v1.1-rls.json",
+      "artifact_sha256": "7e47f9ffe46b98aa5b0f0256de4c5e7c6661ce281dc308a9e383d33e0583732e",
+      "file_sha256": "21f7088d887e0d5f554abdf6cfe622fd9db161d65cd8ad5229de19ae79dd0074",
+      "profile": "RLS-SP-L",
+      "rule": "RLS-A1"
+    }
+  ],
+  "pcv_disposition": "All4current pcv-1 hashes and actual markers accepted at private localcandidate scope with independent currentperformance/TQA/security/adherence. EPS realboundedSQL/plans;FRC separate100BFF and100UI;BCI100distinctownedintents plus carriedsameaccountfaultcontention;RLSboundedfivegroupfunctional only. No productionlatency/capacity/external exactlyonce/hostedCI claim.",
+  "debt": [
+    "OPS-R4-01 conservative localavailability after latefailure; explicitrefresh recovery; Web/integrations backlog followup",
+    "SEC-R6-04 recoveryreadbudget restrictedexistingprivatecohort; integrations/security followup beforepublic/Railway",
+    "TQA-ST05-03 originalfeature test-after/unknown; no retroactiveRED",
+    "r39opaque60s historicaltimeout remainsunattributed/notreproduced; currentdiagnosticpass not rootcausefix"
+  ],
+  "credential": "Operator-reported revoked/disabled Bitrixconnector containment closed, no reconfirm/retest/historicalnonuse claim. ExistingMeta channelcredentials unchanged.",
+  "remaining": "Exacthelperstaticreview+phaseGO, bounded readonlypreservedTESTmetadata, reviewedpositivearchives/images, twoadditivemigrationsonce, sourceboundAPI/Webactivation/ownedHTTPS, oneassistedactualMeta submit/status, canonicalmodules/freshfinal/guards/closeout. Norecipient/ST04/productGit/publicRailway."
+}

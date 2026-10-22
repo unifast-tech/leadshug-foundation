@@ -1,0 +1,21 @@
+# Round05 resolution — current r41 candidate assurance
+
+All affected fresh no-context reviews reached actual terminal0 on the same immutable992852byte canonical package: performance, security, adherence, baseline TQA and a separate full-output TQA supplement. All have zero material findings. Raw outputs/dispatch bindings remain original; the supplement keeps its own binding. Root checked its five explicit answers, commands/topology/coverage/platform/DI/CI/source-served tables, all15 decision rows, and uncertainty limits. Initial terse TQA output was retained and supplemented rather than treated as the full gate.
+
+## Adjudication
+
+The deterministic merge says needs_adjudication solely because recommended_path strings differ: performance returned a descriptive paragraph and baseline TQA a short label. Both substantively recommend completing remaining candidate/activation gates. There is no architectural contradiction or new blocking finding. Mixed structure/operational positions in security/performance/adherence correctly acknowledge accepted debt and later actual proof gates. Root accepts those compatible positions without another cosmetic round, altered review binding, risk waiver or source change.
+
+SEC-R35-01 and ADH-R35-01 are integrated and independently accepted against the current reducer-owned selection. The correction uses the existing two observation slices plus identity metadata, protects all12 real draft commits and exact page/cursor semantics, and adds no HTTP/cache/framework/backend contract. New pure and real-BFF selection tests pass. The exact normal-create counter repair preserves expected2 and every prior business assertion. The diagnostic-only API test preserves seven actual boundary entries, six401/admin403, observation snapshot equality, genuine request drain and clock/fetch restoration. Historical r39 timeout remains unattributed and not labeled fixed/flaky.
+
+## Current evidence and PCV disposition
+
+Root independently accepted the canonical all0/802:284APIunit/398PG/45Web/75Playwright,38sources/30seals/approvedBCI/3productHEADs, current original-byte source/runtime proof, served=dist,25disposable migrations and all5template markers. New cases40/41 and entire main54 pass, including exact recovered200 ownedresource/strictfence/allpositiveflags plus separate100BFF and100UI FRC probes. No further broad rerun is justified without a new source change, failure or concern.
+
+Current four pcv-1 artifacts are hash-checked and passed at the private local candidate scope with current independent performance/TQA/security/adherence disposition. EPS supports bounded page-before-hydration/access plans. FRC supports distinct direct-BFF and UI-coalescing probes. BCI's100independentowned intents do not substitute for the separate same-account conflict/fault tests. RLS supports a bounded five-group functional stage, not production capacity, latency SLOs or saturation. Details and exact review/artifact hashes: evidence/root-candidate-r41-assurance-disposition-v1.1.json.
+
+## Retained debt and boundaries
+
+OPS-R4-01 remains nonblocking conservative availability debt after delayed code-only failure, preserving canonical status/time/fence/content; explicit successful refresh recovers. Owner Web/integrations, BLG-leadshug-template-failure-observation-authority. SEC-R6-04 remains private-local-cohort-only recovery-read-budget debt, owner integrations/security, BLG-leadshug-template-recovery-read-budget before untrusted/public admission or Railway. TQA-ST05-03 remains original feature test-after/unknown process debt. Exact historical causal/capture limits are unchanged. Operator-reported revoked/disabled Bitrix credential containment remains closed, without retest/reconfirmation/historicalnonuse claim; Meta channel credentials are unchanged.
+
+Zero unresolved current candidate source blockers remain. Root may admit only separately reviewed exact bounded preservedTEST metadata next; helper review and phaseGO are separate from this review. Two additive migrations/source-bound API-Web activation/ownedHTTPS/one assisted actualMeta draft-submit-once-status and canonical module consolidation/fresh final/closeout remain mandatory. No recipient send/ST-CON-04/productGit/Railway/public promotion or delivery claim. Delivery Pending.

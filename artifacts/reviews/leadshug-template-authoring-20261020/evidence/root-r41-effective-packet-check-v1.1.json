@@ -1,0 +1,32 @@
+{
+  "schema": "stcon05.r41-effective-packet-root-check.v1",
+  "at_utc": "2026-10-22T04:50:01.079539+00:00",
+  "base": "foundation_documentation/artifacts/reviews/leadshug-template-authoring-20261020/candidate-assurance-r41-followup-package-v1.2.md",
+  "package": "foundation_documentation/artifacts/reviews/leadshug-template-authoring-20261020/candidate-audit-r6/round-05/round-package.md",
+  "bytes": 992852,
+  "sha256": "584b523936fc173783e893f5d30a57af6f805857c104fcebafc5a7913015f4f0",
+  "prior_resolutions": [
+    {
+      "round": 1,
+      "sha256": "86373bd0b4258d9dd0c64399205706c015fe231670050a5e04fcb2c968fcc584",
+      "complete_body_once": true
+    },
+    {
+      "round": 2,
+      "sha256": "bf2e5623ffecdfc9d956cd63830a22dfc8d945d40a470cdd49bfb4766f01693b",
+      "complete_body_once": true
+    },
+    {
+      "round": 3,
+      "sha256": "ec97a47ff584908276391c55992d6f5e23aa72591b02cafcf605905f71ac3c31",
+      "complete_body_once": true
+    },
+    {
+      "round": 4,
+      "sha256": "8396c7d58866b9ba9f120a1390b503dff5d85ab713eb397452616eaa693cf629",
+      "complete_body_once": true
+    }
+  ],
+  "scope": "4 admitted changed paths, full changed production source and changed test bodies, all full applicable rubrics/current proof/all5markers; no workload waiver. Duplicate prior bodies removed only from base before any review launch; actual canonical wrapper completeness/cap checked.",
+  "verdict": "GO fresh no-context candidate reviews only; no runtime admission"
+}
