@@ -329,7 +329,7 @@ Official primary references consulted 2026-10-22: [WhatsApp Send Messages](https
 
 | From Profile | To Profile | Why the Handoff Exists | Touched Surfaces | Status / Evidence |
 | --- | --- | --- | --- | --- |
-| Strategic / CTO-Tech-Lead | Operational / Coder | after v1.1 contract freeze, fresh reviews/guards, and explicit APROVADO | scoped product paths in diff contract | planned; no implementation authority |
+| Strategic / CTO-Tech-Lead | Operational / Coder | v1.1 frozen, planning reviews/guards passed and user explicitly approved | scoped product paths in diff contract | executing under normal authority GO; E01–E35 evidence below |
 | Operational / Coder | Assurance / Tester-Quality + Security | independent delivery evidence after implementation | harness/evidence package | planned |
 | Operational / Coder | Operational / DevOps | disposable migration, source-bound local activation and assisted proof | approved local runtime only | planned |
 
@@ -776,9 +776,9 @@ No promotion review exists for v1.1. Root-owned review artifacts are authoritati
 ## TODO Closeout Disposition
 
 - **Disposition:** keep-active
-- **Disposition reason:** current planning reviews/guards converged; keep active NotStarted/Pending/review while awaiting explicit APROVADO, with no execution authority.
+- **Disposition reason:** user-approved v1.1 is in implementation; API E34 passed and browser E35 isolated the missing first-send UI. Keep active InProgress/Pending/implementation until all approved delivery criteria and gates have exact evidence.
 - **Post-commit/push status:** planning evidence publication only on Foundation main; final commit/push and clean status recorded in session, no product Git write
-- **Next path/status action:** remain active/NotStarted/review; no implementation until authorized.
+- **Next path/status action:** remain active/InProgress/implementation; sole writer completes the approved UI, remaining proofs and fresh validation before delivery assurance/runtime gates.
 
 ## Security Risk Assessment
 
@@ -1158,3 +1158,7 @@ Frozen runner74359 exited0: generate/deploy/status/lint/build,34 unit files/339 
 ## Execution checkpoint E35 — first-flow browser assertion RED
 
 Frozen canonical browser runner91478 exited1:75 existing tests passed; the only new case failed at `getByLabel('Mensagem inicial')` after the real BFF open returned201, empty QUEUED state/zero Message and zero initial POST/provider effects were asserted. The later ordinary-composer assertion was not reached. Root verified stdout SHA, all258 public source bytes/full positive inventory unchanged and owned cleanup before releasing the writer. This is causal RED for the absent new first-message UI; partial open UI and backend tests retain their actual earlier chronology. Evidence: evidence/browser-source-seal-e35-v1.1.json, evidence/browser-source-recheck-e35-v1.1.json, evidence/browser-result-e35-v1.1.json. Sole writer continues the complete approved UI and narrow admitted fake-provider support; no full04 delivery, completed scope/DoD/VAL or real-provider proof is claimed.
+
+## Execution checkpoint E35a — root topology inspection deviation
+
+While assessing the canonical diff guard/private-boundary incompatibility, root read the exact root `.gitmodules` alongside public ignore files. The contract explicitly restricts inspection of that topology path; its public/known content did not authorize the read. Only three submodule paths/public GitHub URLs were returned, with no credential value. No mutation or Git-topology operation occurred. The inspection path stopped; no metadata/private waiver or full compliance claim is inferred. Preserve for independent adherence/security/final review. Evidence: evidence/root-topology-inspection-deviation-e35a-v1.1.json. Implementation and validation continue inside their already approved paths; the full diff-guard boundary remains unresolved.

@@ -1,0 +1,15 @@
+{
+  "checkpoint": "E35a root inspection deviation",
+  "actor": "root orchestrator",
+  "trigger": "Read-only investigation of canonical final diff guard versus no-private-inspection boundary",
+  "action": "A bounded cat command read the exact root .gitmodules together with exact public .gitignore files.",
+  "contract_violation": "Root .gitmodules is an explicit Not Expected Changed Paths row whose reason also disallows inspection. Its known/public nature did not override the approved boundary.",
+  "observed_output": "Three submodule path and public GitHub URL declarations; no credential value was returned.",
+  "containment": [
+    "No write, stage, commit or topology operation on .gitmodules occurred.",
+    "Root stopped that inspection path and retains the canonical diff-guard incompatibility as unresolved.",
+    "Do not repeat the read or infer a general metadata/private-inspection waiver."
+  ],
+  "assurance": "Preserve for independent adherence/security/final review alongside E02, mixed test chronology and E18. No claim of full procedural/privacy compliance.",
+  "product_authority": "No product scope expansion; sole writer and candidate validation freeze rules remain unchanged."
+}
