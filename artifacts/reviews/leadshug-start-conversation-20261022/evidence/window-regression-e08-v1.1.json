@@ -1,0 +1,33 @@
+{
+  "checkpoint": "E08 strict current-resource window regression run",
+  "command": "bash scripts/test-channels-local.sh api",
+  "runner_session": 83187,
+  "exit_code": 1,
+  "stdout": "/tmp/stcon04-executor-public-window.txt",
+  "stdout_sha256": "dfcb360e6d338d83a075ff1185cf02f893999e09635166e59878cc0a4c535dfc",
+  "root_verified_stdout_hash": true,
+  "results": {
+    "unit_files_passed": 29,
+    "unit_tests_passed": 303,
+    "e2e_files_passed": 25,
+    "e2e_files_failed": 5,
+    "e2e_tests_passed": 384,
+    "e2e_tests_failed": 16,
+    "cleanup_reported": "completed"
+  },
+  "failed_suites": {
+    "test/api-publica.e2e-spec.ts": 5,
+    "test/atendimento.e2e-spec.ts": 4,
+    "test/number-onboarding-pcv.e2e-spec.ts": 1,
+    "test/number-onboarding-typebot.e2e-spec.ts": 5,
+    "test/webhooks.e2e-spec.ts": 1
+  },
+  "assessment": "New strict-window test passed; inherited positive-send fixtures omit qualified timestamp/current resource, so they now fail closed. Missing-date acceptance remains supported. No createdAt fallback or global fixture interception is admitted.",
+  "root_review": {
+    "migration_timeout_native_type_correction": "Observed explicit BEGIN/SET LOCAL5s+60s/TIMESTAMP(3)/COMMIT; next full candidate still required.",
+    "single_policy": "Post-run executor reports consolidation into admitted channel-window-policy boundary; not yet candidate-validated.",
+    "readonly_companion_paths": "Two required fixtures are exact inherited NO new mutation paths. Root requested minimal exact proposal without product mutation before human admission. Other mutable fixtures may be updated under existing approval."
+  },
+  "causality": "Regression evidence after window implementation; not historical fail-first for timestamp policy.",
+  "next": "Review minimal companion admission proposal, ask required user path validation asynchronously, continue independent approved backend work."
+}

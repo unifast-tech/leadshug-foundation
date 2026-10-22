@@ -1,0 +1,23 @@
+{
+  "status": "proposal only; NOT applied or approved",
+  "paths": [
+    {
+      "path": "api-app/test/number-onboarding-typebot.e2e-spec.ts",
+      "before_bytes_sha256": "8c23956a13336c4091d62b9aee7383065f81c5e6575661729b044048626cbd8e",
+      "proposed_normalized_text_sha256": "7526f755280fa99adb9cb91dd5062810f239c0e7d4e047af3bdb91444433c74d"
+    },
+    {
+      "path": "api-app/test/number-onboarding-pcv.e2e-spec.ts",
+      "before_bytes_sha256": "cc5b2c440abe2e6389ee4f4a612a9f01f2584338dc3fc4e5ee4605339ffa0bf9",
+      "proposed_normalized_text_sha256": "3825b0286f9906781e83666616caa05417647ee47c022763fc76e39a3c4ddca0"
+    }
+  ],
+  "patch": "artifacts/reviews/leadshug-start-conversation-20261022/window-fixture-companion-admission-v1.1.patch",
+  "patch_sha256": "c35143d98838f25e7b44eafd24085ca5dd08b8869985120c6125a14359f07957",
+  "limits": [
+    "Test-only synthetic input alignment and corresponding trusted-window EXPLAIN; no product behavior changes.",
+    "All current assertions/counters retained except index-name expectation aligned to approved current query; direction predicate assertion retained and channel-origin added.",
+    "Separate legacy direction-created index/OUT-heavy regression remains byte-exact.",
+    "No global fixture interception, backfill or createdAt policy fallback."
+  ]
+}

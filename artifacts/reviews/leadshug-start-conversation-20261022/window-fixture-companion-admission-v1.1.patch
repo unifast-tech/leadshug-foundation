@@ -1,0 +1,92 @@
+--- a/test/number-onboarding-typebot.e2e-spec.ts
++++ b/test/number-onboarding-typebot.e2e-spec.ts
+@@ -25,7 +25,7 @@
+   });
+ 
+   function trigger(id: string) {
+-    const webhook = { entry: [{ changes: [{ field: 'messages', value: { metadata: { phone_number_id: phoneId }, messages: [{ id, from: contact, type: 'text', text: { body: 'ajuda' } }] } }] }] };
++    const webhook = { entry: [{ changes: [{ field: 'messages', value: { metadata: { phone_number_id: phoneId }, messages: [{ id, from: contact, timestamp: String(Math.floor(Date.now() / 1000)), type: 'text', text: { body: 'ajuda' } }] } }] }] };
+     const signature = `sha256=${createHmac('sha256', META_APP_SECRET).update(JSON.stringify(webhook)).digest('hex')}`;
+     return request(app.getHttpServer()).post('/webhooks/meta').set('x-hub-signature-256', signature).send(webhook);
+   }
+@@ -97,7 +97,10 @@
+       markEntered();
+       await gate;
+       const inbound = await prisma.message.findFirstOrThrow({ where: { buId: a.businessUnit.id, externalId: 'typebot-held-window' } });
+-      await prisma.message.update({ where: { id: inbound.id }, data: { createdAt: new Date(Date.now() - 25 * 60 * 60 * 1000) } });
++      await prisma.message.update({ where: { id: inbound.id }, data: {
++        createdAt: new Date(Date.now() - 25 * 60 * 60 * 1000),
++        officialInboundAt: new Date(Date.now() - 25 * 60 * 60 * 1000),
++      } });
+     };
+     const pending = trigger('typebot-held-window').then((response) => response);
+     await entered;
+--- a/test/number-onboarding-pcv.e2e-spec.ts
++++ b/test/number-onboarding-pcv.e2e-spec.ts
+@@ -113,18 +113,23 @@
+   it('batches public-list channel metadata to one binding, credential, and window query for a 30-conversation page', async () => {
+     const tenant = await criarMantenedora(app, 'Channel list EPS', 'channel-list-eps@example.test');
+     const cookie = await login(app, 'channel-list-eps@example.test');
+-    await criarCanalVerificado(prisma, tenant.businessUnit.id, 'OFICIAL', 'channel-list-eps-resource');
++    const { identity } = await criarCanalVerificado(prisma, tenant.businessUnit.id, 'OFICIAL', 'channel-list-eps-resource');
+     const phone = '5586777000001';
+     const conversations = await Promise.all(Array.from({ length: 30 }, (_, index) => prisma.conversation.create({ data: {
+       buId: tenant.businessUnit.id, contact: `${phone}${String(index).padStart(2, '0')}`, contactType: 'PESSOA', status: 'QUEUED',
+     } })));
+     await prisma.message.createMany({ data: conversations.map((conversation, index) => ({
+       conversationId: conversation.id, buId: tenant.businessUnit.id, direction: 'IN', messageType: 'TEXTO',
+-      content: `channel list inbound ${index}`, channelOrigin: 'OFICIAL', status: 'RECEBIDA', createdAt: new Date(Date.now() - index * 1000),
++      content: `channel list inbound ${index}`, channelOrigin: 'OFICIAL', status: 'RECEBIDA',
++      providerResourceIdentityId: identity.id,
++      officialInboundAt: new Date(Date.now() - index * 1000),
++      createdAt: new Date(Date.now() - index * 1000),
+     })) });
+     const historicalInbound = conversations.flatMap((conversation, conversationIndex) => Array.from({ length: 24 }, (_, historyIndex) => ({
+       conversationId: conversation.id, buId: tenant.businessUnit.id, direction: 'IN' as const, messageType: 'TEXTO' as const,
+       content: `channel list older inbound ${conversationIndex}/${historyIndex}`, channelOrigin: 'OFICIAL' as const, status: 'RECEBIDA' as const,
++      providerResourceIdentityId: identity.id,
++      officialInboundAt: new Date(Date.now() - 2 * 60 * 60 * 1000 - historyIndex * 1000),
+       createdAt: new Date(Date.now() - 2 * 60 * 60 * 1000 - historyIndex * 1000),
+     })));
+     await prisma.message.createMany({ data: historicalInbound });
+@@ -147,13 +152,16 @@
+     await prisma.$executeRaw`ANALYZE messages`;
+     const planRows = await prisma.$queryRaw<Array<{ 'QUERY PLAN': unknown }>>`
+       EXPLAIN (ANALYZE, BUFFERS, FORMAT JSON)
+-      SELECT requested.conversation_id, latest.created_at
++      SELECT requested.conversation_id, latest.official_inbound_at
+       FROM unnest(ARRAY[${Prisma.join(ids)}]::text[]) AS requested(conversation_id)
+       CROSS JOIN LATERAL (
+-        SELECT message.created_at
++        SELECT message.official_inbound_at
+         FROM messages AS message
+-        WHERE message.conversation_id = requested.conversation_id AND message.direction = 'IN'
+-        ORDER BY message.created_at DESC, message.id DESC
++        WHERE message.conversation_id = requested.conversation_id
++          AND message.provider_resource_identity_id = ${identity.id}
++          AND message.direction = 'IN' AND message.channel_origin = 'OFICIAL'
++          AND message.official_inbound_at IS NOT NULL AND message.official_inbound_at <= CURRENT_TIMESTAMP
++        ORDER BY message.official_inbound_at DESC, message.id DESC
+         LIMIT 1
+       ) AS latest
+     `;
+@@ -161,7 +169,7 @@
+       policy_schema_version: 'pcv-1', lane_id: 'EPS', trigger_result: 'required', trigger_severity: 'medium',
+       trigger_reason_code: 'EPS-DATA-PATH-CHANGED', gate_deadline: 'before_local_implemented',
+       min_evidence_rule_id: 'EPS-E2', acceptance_rule_id: 'EPS-A2', sample_profile: 'EPS-SP-STRONG',
+-      access_pattern_classification: 'Public conversation page loads selected BU channels once, official credential metadata once, one bounded latest-any-message projection for returned page IDs, and one separate indexed latest-IN statement when selected bindings require window metadata; no provider credentials are decrypted or probed.',
++      access_pattern_classification: 'Public conversation page loads selected BU channels once, official credential metadata once, one bounded latest-any-message projection for returned page IDs, and one batched indexed selected-resource trusted Meta IN timestamp query when selected bindings require a window; no provider credentials are decrypted or probed.',
+       pageConversations: response.body.conversations.length,
+       historyRowsPerConversation: historicalInbound.length / conversations.length,
+       availabilitySample: response.body.conversations.slice(0, 3).map((row: Record<string, unknown>) => ({
+@@ -183,8 +191,9 @@
+     const planText = JSON.stringify(planRows[0]?.['QUERY PLAN'] ?? null);
+     expect(planText).toContain('Limit');
+     expect(planText).toMatch(/Index (Only )?Scan|Bitmap Index Scan/);
+-    expect(planText).toContain('messages_conversation_direction_created_id_idx');
++    expect(planText).toContain('messages_conversation_trusted_window_idx');
+     expect(planText).toContain("direction = 'IN'");
++    expect(planText).toContain("channel_origin = 'OFICIAL'");
+   });
+ 
+   it('bounds latest-message hydration for a deep public page and reports the executed SQL plan', async () => {
