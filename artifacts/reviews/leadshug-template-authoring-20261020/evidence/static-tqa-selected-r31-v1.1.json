@@ -1,0 +1,25 @@
+{
+  "schema": "stcon05.r31-static-tqa-support.v1",
+  "recorded_at_utc": "2026-10-22T00:53:54.966712+00:00",
+  "exit": 2,
+  "paths": [
+    "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app/src/domain/channels/channel-credential-resolver.spec.ts",
+    "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app/src/domain/message-templates/template-definition.spec.ts",
+    "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app/src/domain/message-templates/template-management.dependencies.spec.ts",
+    "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app/src/domain/message-templates/template-management.ports.spec.ts",
+    "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app/src/integrations/meta/message-template.client.spec.ts",
+    "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app/test/message-template-bff.e2e-spec.ts",
+    "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app/test/message-template-drafts.e2e-spec.ts",
+    "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app/test/message-template-management.e2e-spec.ts",
+    "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app/test/number-onboarding-bci.e2e-spec.ts",
+    "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app/test/number-onboarding-pcv.e2e-spec.ts",
+    "/mnt/c/unifast/leadshug/leadshug_now_docker/web-app/e2e/message-templates.spec.ts",
+    "/mnt/c/unifast/leadshug/leadshug_now_docker/web-app/src/api.spec.ts",
+    "/mnt/c/unifast/leadshug/leadshug_now_docker/web-app/src/telas/Modelos.spec.ts"
+  ],
+  "raw": "foundation_documentation/artifacts/reviews/leadshug-template-authoring-20261020/evidence/static-tqa-selected-r31.txt",
+  "raw_sha256": "f9915baf60d9e9cd2708a9e42fac9b18c7be0ff4d046be2e265d767fd7aa0d6c",
+  "counts": "Counts: hard_bypass=0 test_support=0 auth_shortcut=0 status_only=98 no_exception_only=0 ambient_subject_fallback=0 di_override=0 mock_hint=16",
+  "disposition": "Current frozen test-only delta adds real BFF response/owned resource/fence/state/time checks before semantic DOM assertions and preserves provider-effect bounds. Status hints require that local context, not a status-only pass. Controlled fault-injection mocks remain intentional. Independent r30 full TQA was current before these new cases; this static support neither reruns implementation tests nor replaces later full affected independent TQA. New pure helper coupling is separately challenged by the fresh HOW opinion; no execution of that unit is claimed.",
+  "boundary": "13 exact public files only; no broad Git scan, private path traversal or product/runtime mutation."
+}

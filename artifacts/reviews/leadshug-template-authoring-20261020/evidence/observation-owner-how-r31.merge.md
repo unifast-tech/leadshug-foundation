@@ -1,0 +1,86 @@
+# PACED Subagent Review Merge: architecture_opinion
+
+## Merge Identity
+- **Artifact kind:** `subagent_review_merge`
+- **Authoritative:** `false`
+- **Edit policy:** `derived_merge_packet`
+- **Dispatch path:** `/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/artifacts/reviews/leadshug-template-authoring-20261020/evidence/observation-owner-how-r31.dispatch.json`
+- **Review count:** `1`
+- **Highest finding severity:** `high`
+
+## Axis Summary
+- **Performance:** `acceptable`
+- **Elegance:** `acceptable`
+- **Structural soundness:** `mixed`
+- **Operational fit:** `mixed`
+
+## Recommended Paths
+- `Choose A with two explicit responsibilities: same-resource observation selection and source-aware common-versus-draft projection. Keep catalogPages and individualStatus; stop successful individual refreshes from copying complete draft-scoped payloads into catalogue pages. Let the final pure projection resolve the two slices, preserving individual-only rendering and strict editor proof. Common eligible must retain authoritative common provenance; draft-narrowed eligible and ACK restrictions must not become common negative facts. Do not reconstruct eligibility from status, OR booleans, or attach an older positive fact to a newer observation.
+
+In loadCatalogPage, reconcile every incoming item against observations for the same ID across the current cached pages inside the functional updater, before applying the returned page membership. A first-page refresh may still replace the page set; preserve higher cached values only for IDs in the returned membership. Keep page availability, nextCursor and membership separate from item selection. The final merge against individualStatus supplies cross-slice ordering without reading sibling state from stale closures. Preserve historical classification in atualizarStatus failure handling.
+
+The correction points are mergeTemplateObservations, applyIndividualObservation, restoreSavedObservation, loadCatalogPage and atualizarStatus, including the catalogItems/editorObservation projection boundary. Reuse selectTemplateObservation, carryMissingObservationRestrictions, mergeEqualFenceRestrictions and TemplateObservationAuthority with their conservative same-scope semantics. Leave api.ts and backend eligibility/projector semantics unchanged. Internal source typing is appropriate if needed; public DTO changes are outside this recommendation.
+
+This should improve elegance by removing a duplicated successful write and improve structural soundness by separating membership, facts and proof. Performance remains acceptable: a temporary index over loaded rows permits linear reconciliation, adds no HTTP and creates no persistent second cache. B offers atomic page/individual transitions but changes more state plumbing than these defects require. Use a small local reducer only if implementation reveals a necessary cross-slice dependency that the pure projection cannot resolve safely; do not introduce updater side effects or a mirrored ref cache. C is unsuitable because eventual GET correction permits a known PAUSED observation to regress.`
+
+## Merged Findings
+### F-DA94160B [high] Both producer directions must preserve higher observations already admitted
+- **Reviewers:** fresh-internal-no-context-observation-owner-r31
+- **Category:** `structural_soundness`
+- **Formalizable hint:** `yes`
+- **Candidate rule level:** `project`
+- **Candidate rule id:** `n/a`
+- **Suggested action:** Remove complete individual-success payload replacement of page items and keep final cross-slice selection monotonic. For every passive, explicit and inherited catalogue result, reconcile returned IDs against the full current page cache before replacing membership, including higher observations held on pages discarded by a first-page refresh. Do not resurrect IDs omitted from the returned page, concatenate discarded pages, or derive cursors from winning items. Retain page-level blocking failures independently. Use functional updates and a temporary index, avoiding cross-state writes inside an updater. Prove held older individual and held older explicit-catalogue responses after a newer passive PAUSED observation, with derived GET held during assertions. Also prove first-page replacement, overlapping cursors, omitted IDs, invalid fences, current-versus-historical precedence, 202 no-op, passive watermark rejection and context/editor isolation. Provider-call counts and dirty text must remain unchanged.
+- **Rationale:** atualizarStatus selects against individualStatus but blindly replaces matching page entries. Independently, loadCatalogPage replaces a page or the entire page set without comparing incoming items with higher cached fences. A passive GET can admit a newer persisted observation without advancing completedIntent, so an older explicit response can remain authorized while being stale relative to the cache. Meaningful intent admission and persisted-fence ordering solve different problems. Fixing only individual replacement leaves the sibling catalogue defect intact.
+
+### F-6B3FCF1E [medium] The described pure assertion binds common projection semantics to an unscoped selector
+- **Reviewers:** fresh-internal-no-context-observation-owner-r31
+- **Category:** `tests`
+- **Formalizable hint:** `yes`
+- **Candidate rule level:** `project`
+- **Candidate rule id:** `n/a`
+- **Suggested action:** Explicitly retarget this expectation to mergeTemplateObservations or the source-aware common/editor projection introduced by the correction. Exercise both source arrival orders and assert common eligibility plus strict editor rejection, retaining genuine common false gates. Keep selector-level coverage for same-scope equal-fence restrictions, numeric ordering and historical precedence. If the selector instead becomes explicitly scoped, test that declared contract rather than inferring scope from optional flags. Preserve the real-BFF external-definition-change browser scenario and all existing behavioral assertions. This is a test-contract correction, not permission to weaken expectations or claim the pending RED occurred.
+- **Rationale:** According to the package description, the frozen unit passes common eligible=true and draft eligible=false directly to selectTemplateObservation and expects common semantics in both orders. Its signature provides no source or projection scope, and it also serves individual draft state. Changing its generic equal-fence false handling to satisfy that assertion could suppress genuine common failures or weaken draft restrictions. The behavior expectation is valid; the asserted helper boundary is questionable.
+
+### F-9363BF88 [medium] Failure projection must preserve historical context classification
+- **Reviewers:** fresh-internal-no-context-observation-owner-r31
+- **Category:** `structural_soundness`
+- **Formalizable hint:** `yes`
+- **Candidate rule level:** `project`
+- **Candidate rule id:** `n/a`
+- **Suggested action:** Keep TEMPLATE_CONTEXT_STALE when marking historical observations unavailable; use refresh-unavailable classification for observations already belonging to the current context. Preserve observedAt and the retained fence, and apply conservative availability/use restrictions without claiming a new observation. A new public context field is unnecessary for this bounded correction. Prove historical high-fence restore, actual failed refresh, and lower-fence current success with the derived read held: historical time remains truthful during failure, and current success immediately replaces historical status. Retain same-account resource matching, changed-account isolation and existing current-context failure behavior.
+- **Rationale:** selectTemplateObservation gives current observations precedence over TEMPLATE_CONTEXT_STALE before comparing numeric fences. atualizarStatus's unavailable transform replaces that exact marker with TEMPLATE_REFRESH_UNAVAILABLE while retaining the historical fence. This manufactures current-class authority from historical evidence and allows an old high fence to defeat a later lower-fence current success. Both individual and matching page transformations need the same classification discipline.
+
+### F-6BC8CF45 [medium] Common eligibility needs explicit ownership separate from draft proof
+- **Reviewers:** fresh-internal-no-context-observation-owner-r31
+- **Category:** `architecture`
+- **Formalizable hint:** `yes`
+- **Candidate rule level:** `project`
+- **Candidate rule id:** `n/a`
+- **Suggested action:** In mergeTemplateObservations and its individual-adoption inputs, retain common eligibility provenance separately from matchesDefinition, eligibleForUse and draft association diagnostics. Select observation status, fence and time consistently, then apply the appropriate restrictions for each view. Preserve genuine common eligible=false and available=false at equal fences. Keep positive draft proof tied to the semantic definition and retain the approved conservative handling of missing restrictions. Prove common eligibility with editor rejection for equal-fence definition mismatch and ACK conflict, both arrival orders, and negative common gates. Also preserve individual-only observations and immediate current status adoption; removing page writes must not silently remove these behaviors. Backend projectSavedObservation, projectObservation, projectRow and refreshDraft are semantic references, not proposed edit targets.
+- **Rationale:** projectRow exposes common eligibility, while projectSavedObservation narrows eligible using definition and ACK association. refreshDraft also narrows eligible on ACK conflict. Consequently, eligible does not have interchangeable meaning across the supplied producers. Equal-fence AND is conservative for like-scoped facts but cannot distinguish a genuine common false from a draft-only restriction. Copying complete individual payloads into pages further destroys that distinction. The correction belongs at the source-aware consumer boundary, rather than in a rule that guesses scope from false booleans or safeCode.
+
+## Reviewer Summaries
+### fresh-internal-no-context-observation-owner-r31
+- **Assessment:** Recommend refined path A: retain the existing local state and authority, separate common observation facts from draft association proof in the consumer projection, and make page adoption monotonic before replacing cached membership. The supplied source supports all three integrated defects, including both individual and catalogue replacement directions. No pending RED is treated as reproduced, and this opinion authorizes neither implementation nor delivery.
+
+The corrections fit the supplied SCOPE-04 and DOD-04/DOD-05 expectations and the recorded D04/D07/D08 dispositions. They preserve immutable ACK handling, same-account reauthorization, observational GETs, one-POST behavior and the existing trust boundaries. The full governing TODO text is not embedded; no additional TODO exception or blocking drift is independently adjudicated here. Position values describe the supplied owner: performance and its basic design are acceptable, while structural soundness and operational fit remain mixed until the identified compositions are corrected and validated.
+- **Recommended path:** `Choose A with two explicit responsibilities: same-resource observation selection and source-aware common-versus-draft projection. Keep catalogPages and individualStatus; stop successful individual refreshes from copying complete draft-scoped payloads into catalogue pages. Let the final pure projection resolve the two slices, preserving individual-only rendering and strict editor proof. Common eligible must retain authoritative common provenance; draft-narrowed eligible and ACK restrictions must not become common negative facts. Do not reconstruct eligibility from status, OR booleans, or attach an older positive fact to a newer observation.
+
+In loadCatalogPage, reconcile every incoming item against observations for the same ID across the current cached pages inside the functional updater, before applying the returned page membership. A first-page refresh may still replace the page set; preserve higher cached values only for IDs in the returned membership. Keep page availability, nextCursor and membership separate from item selection. The final merge against individualStatus supplies cross-slice ordering without reading sibling state from stale closures. Preserve historical classification in atualizarStatus failure handling.
+
+The correction points are mergeTemplateObservations, applyIndividualObservation, restoreSavedObservation, loadCatalogPage and atualizarStatus, including the catalogItems/editorObservation projection boundary. Reuse selectTemplateObservation, carryMissingObservationRestrictions, mergeEqualFenceRestrictions and TemplateObservationAuthority with their conservative same-scope semantics. Leave api.ts and backend eligibility/projector semantics unchanged. Internal source typing is appropriate if needed; public DTO changes are outside this recommendation.
+
+This should improve elegance by removing a duplicated successful write and improve structural soundness by separating membership, facts and proof. Performance remains acceptable: a temporary index over loaded rows permits linear reconciliation, adds no HTTP and creates no persistent second cache. B offers atomic page/individual transitions but changes more state plumbing than these defects require. Use a small local reducer only if implementation reveals a necessary cross-slice dependency that the pure projection cannot resolve safely; do not introduce updater side effects or a mirrored ref cache. C is unsuitable because eventual GET correction permits a known PAUSED observation to regress.`
+- **Performance:** `acceptable`
+- **Elegance:** `acceptable`
+- **Structural soundness:** `mixed`
+- **Operational fit:** `mixed`
+- **Findings:**
+  - [medium] HOW-R31-01 Common eligibility needs explicit ownership separate from draft proof: projectRow exposes common eligibility, while projectSavedObservation narrows eligible using definition and ACK association. refreshDraft also narrows eligible on ACK conflict. Consequently, eligible does not have interchangeable meaning across the supplied producers. Equal-fence AND is conservative for like-scoped facts but cannot distinguish a genuine common false from a draft-only restriction. Copying complete individual payloads into pages further destroys that distinction. The correction belongs at the source-aware consumer boundary, rather than in a rule that guesses scope from false booleans or safeCode.
+  - [high] HOW-R31-02 Both producer directions must preserve higher observations already admitted: atualizarStatus selects against individualStatus but blindly replaces matching page entries. Independently, loadCatalogPage replaces a page or the entire page set without comparing incoming items with higher cached fences. A passive GET can admit a newer persisted observation without advancing completedIntent, so an older explicit response can remain authorized while being stale relative to the cache. Meaningful intent admission and persisted-fence ordering solve different problems. Fixing only individual replacement leaves the sibling catalogue defect intact.
+  - [medium] HOW-R31-03 Failure projection must preserve historical context classification: selectTemplateObservation gives current observations precedence over TEMPLATE_CONTEXT_STALE before comparing numeric fences. atualizarStatus's unavailable transform replaces that exact marker with TEMPLATE_REFRESH_UNAVAILABLE while retaining the historical fence. This manufactures current-class authority from historical evidence and allows an old high fence to defeat a later lower-fence current success. Both individual and matching page transformations need the same classification discipline.
+  - [medium] HOW-R31-04 The described pure assertion binds common projection semantics to an unscoped selector: According to the package description, the frozen unit passes common eligible=true and draft eligible=false directly to selectTemplateObservation and expects common semantics in both orders. Its signature provides no source or projection scope, and it also serves individual draft state. Changing its generic equal-fence false handling to satisfy that assertion could suppress genuine common failures or weaken draft restrictions. The behavior expectation is valid; the asserted helper boundary is questionable.
+
+## Exact Next Step
+Record reviewer resolutions in the governing TODO using the machine-checkable resolution table or equivalent gate ledger, then extract the derived resolution packet and decide whether another bounded review pass is still required.

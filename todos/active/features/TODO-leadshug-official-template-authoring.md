@@ -42,7 +42,7 @@ O usuário quer preparar no LeadsHug a mensagem que usará para iniciar atendime
 ## Delivery Status Canon (Required)
 - **Current delivery stage:** Pending
 - **Qualifiers:** none
-- **Next exact step:** executar e atribuir o único browser RED r31, somente novos testes e produto r30 byte-exato. Freeze38/30selos/3HEADs em `evidence/root-cp05-source-freeze-r31-orderings-test-only-v1.1.json`; autoridade GO/diff público421esperados e zero desvios. Três famílias novas cobrem same-fence comum/draft, histórico→falha→sucesso após reauth e fence passivo maior contra respostas antigas dos DOIS produtores. Root corrigiu preparação mascaradora antes da execução, preservou asserts/cooldowns e timeout antigo. O unit novo não roda em browser mode. Só após terminal real haverá diagnóstico/correção; nenhum runtime preservado/Meta liberado.
+- **Next exact step:** concluir a correção estreita do owner de observações no Web, conforme `evidence/root-r33-observation-owner-how-admission-v1.1.json`, e revisar estaticamente/congelar antes de um novo all canônico. Browser r31 reproduziu três falhas de consumidor; web r32 confirmou 37 passed/1 failed no composto comum/draft. A falha de setup do quarto browser recebeu identidade de fixture exclusiva, sem enfraquecer asserções; sua corrida ainda não foi provada. Reducer local sobre as duas fatias existentes é admitido somente para retenção atômica da observação do editor quando a primeira página omite seu ID, sem nova cache ou contrato público. Ativação preservada e Meta continuam retidas; contenção da credencial já confirmada.
 
 ## Active Work State (Required While TODO Remains In `active/`)
 - **Work state:** implementation

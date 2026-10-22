@@ -1,0 +1,21 @@
+{
+  "schema": "stcon05.r32-web-root-terminal.v1",
+  "recorded_at_utc": "2026-10-22T01:14:01.424403+00:00",
+  "outcome": "Causal mixed-producer unit RED; production unchanged",
+  "log": "foundation_documentation/artifacts/tmp/st-con-05-r32-web-ryuT5n/canonical-web.log",
+  "log_bytes": 10671,
+  "log_sha256": "3fda030dd1b5c85102be02e2b441d84ca2bdc971cb7db8611a970fd23393885a",
+  "receipt": "foundation_documentation/artifacts/tmp/st-con-05-r32-web-ryuT5n/runner-exit.txt",
+  "receipt_sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865",
+  "exit": 1,
+  "passed": 37,
+  "failed": 1,
+  "freeze": "foundation_documentation/artifacts/reviews/leadshug-template-authoring-20261020/evidence/root-cp05-source-freeze-r32-source-aware-test-only-v1.1.json",
+  "freeze_sha256": "f15cc3034c5477b3a9d0d86ec6fff7aa9d1b5e06af4aeb4a4f458de7a3e2780e",
+  "source38_exact": true,
+  "protected30_exact": true,
+  "heads_exact": true,
+  "reached": "Common-only and restricted-draft-only controls pass. Composed same-ID/same-fence projection fails at line191: expected common eligible true, actual false. Status/time/fence and draft restrictions remain as supplied.",
+  "not_reached": "Later common eligibility helper, editor strict check, ACK-restriction shape and common negative iterations in this new case. No browser/API/PG execution from web mode.",
+  "limits": "Not all GREEN, not candidate or runtime acceptance. Existing r31 browser proof remains separately attributed."
+}

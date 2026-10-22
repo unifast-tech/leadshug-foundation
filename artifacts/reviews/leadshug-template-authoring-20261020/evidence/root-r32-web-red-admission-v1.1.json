@@ -1,0 +1,12 @@
+{
+  "schema": "stcon05.r32-web-red-admission.v1",
+  "recorded_at_utc": "2026-10-22T01:11:43.423655+00:00",
+  "outcome": "GO exactly one canonical web RED, no production correction",
+  "command": "bash scripts/test-channels-local.sh web",
+  "freeze": "foundation_documentation/artifacts/reviews/leadshug-template-authoring-20261020/evidence/root-cp05-source-freeze-r32-source-aware-test-only-v1.1.json",
+  "freeze_sha256": "f15cc3034c5477b3a9d0d86ec6fff7aa9d1b5e06af4aeb4a4f458de7a3e2780e",
+  "capture": "Exclusive artifacts/tmp directory, first-byte combined tee and actual PIPESTATUS receipt; source remains frozen until terminal.",
+  "guards": "execution authority GO; positive public diff440 expected, zero forbidden/unclassified",
+  "stop": "No retry/source mutation, selected tests, preserved runtime/DB/private env/Meta/product Git.",
+  "next": "Accept exact causal terminal then root HOW product admission; source-supported sibling direction is still not claimed reproduced."
+}

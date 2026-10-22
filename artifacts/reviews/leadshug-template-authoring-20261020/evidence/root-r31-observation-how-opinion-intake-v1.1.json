@@ -1,0 +1,20 @@
+{
+  "schema": "stcon05.r31-how-opinion-root-intake.v1",
+  "recorded_at_utc": "2026-10-22T00:53:11.090498+00:00",
+  "review": "foundation_documentation/artifacts/reviews/leadshug-template-authoring-20261020/evidence/observation-owner-how-r31.raw-attempt1.txt",
+  "review_sha256": "466fdd8cede6e93d543b68c245de5c9e219a1132777010d02a51fdc50192c763",
+  "process_exit": 0,
+  "decision": "Accept refined pathA as bounded HOW preparation; no implementation or test change admitted until actual current RED terminal/root attribution. No public contract change.",
+  "recommended_ownership": [
+    "Keep existing local page and individual state plus pure source-aware final projection; no second persistent cache/ref or generic store.",
+    "Common pages retain common-producer facts. Stop copying complete draft-scoped success payloads into pages. Preserve individual-only display and strict editor proof.",
+    "For every catalogue adoption, reconcile returned same-resource items against the current loaded page cache in its functional updater before replacing membership. First-page replacement keeps only returnedIDs, nextCursor/page availability separate; no resurrection or page concatenation.",
+    "Keep meaningful completed intent distinct from persisted per-resource fence ordering, including passive higher-fence reads and both explicit producer directions.",
+    "Preserve exact historical classification and observedAt/fence when failure marks an already historical item unavailable. Current failure remains conservative.",
+    "Retarget new pure test to the explicit common-versus-draft projection boundary rather than silently changing the unscoped selector to infer origins from optional booleans. Keep same-scope equal-fence restrictions and all behavior expectations. Add ACK-restriction and genuine common-negative projection cases as appropriate; no browser ACK-race claim."
+  ],
+  "scope_limits": "No backend/api.ts/DTO/schema/ACK/Channel/runner change, extra HTTP, generic safeCode veto or recomputed backend eligibility. New helper unit cases may supplement actual real-BFF RED; do not call a missing-export/compiler failure behavioral RED.",
+  "current_execution": "One browser RED r31 still live with frozen tests/product. Do not change files or retry. This opinion performed no tools or independent reproduction.",
+  "adjudication": "Reviewer package deliberately omitted full TODO and therefore did not claim all-contract adjudication. Root cross-checks the recommended responsibilities against the loaded D07/D08/Scope04; refinement stays within the approved WHAT.",
+  "later": "After actual RED, root must admit exact product patch and any justified test retargeting, review static source/freeze, then required canonical validation and affected fresh assurance. No candidate or runtime gate closed by this opinion."
+}

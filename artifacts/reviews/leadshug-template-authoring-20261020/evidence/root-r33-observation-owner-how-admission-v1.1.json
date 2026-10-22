@@ -1,0 +1,25 @@
+{
+  "schema": "stcon05.r33-observation-owner-how-admission.v1",
+  "recorded_at_utc": "2026-10-22T01:14:01.424403+00:00",
+  "outcome": "GO bounded correction and its faithful regression supplements; root static freeze before validation",
+  "authority": "Approved ST-CON-05 v1.1, D07/D08, scope04 and current execution authority GO. Fresh HOW supports refined A with necessary small reducer only for cross-slice atomicity.",
+  "evidence": [
+    "root-cp05-browser-r31-red-terminal-v1.1.json",
+    "root-cp05-web-r32-red-terminal-v1.1.json",
+    "root-r31-observation-how-opinion-intake-v1.1.json"
+  ],
+  "owned_paths": [
+    "web-app/src/telas/Modelos.tsx",
+    "web-app/src/telas/Modelos.spec.ts",
+    "web-app/e2e/message-templates.spec.ts"
+  ],
+  "correction": [
+    "Keep common catalogue producer facts separate from draft-scoped definition/association restrictions in final pure projection. Equal-fence common eligibility keeps explicit common provenance; genuine common eligible/available false remain vetoes. No recomputation from APPROVED, boolean OR or generic safeCode veto. Preserve individual-only rendering and strict editor proof.",
+    "Stop copying full successful individual payloads into catalogue pages. Adopt each returned catalogue ID against highest current cached same-resource observation across all pages before applying exact response membership. Page availability/cursor remain response metadata; do not resurrect old page IDs.",
+    "Use a small local pure reducer over the existing page and individual slices only if needed for the demonstrated cross-slice dependency: a selected editor retains its highest known observation when first-page membership omits the resource. Carry conservative proof with existing helpers, do not create a third cache/ref/framework or change public DTO. A page absence is not deletion. This source-supported transition has not been behaviorally reproduced yet; add faithful pure coverage without claiming prior RED.",
+    "Keep TEMPLATE_CONTEXT_STALE on historical failure transforms while retaining observedAt and fence. Current-context failures stay unavailable and conservative. Current lower-fence success outranks historical high-fence evidence.",
+    "Preserve existing observation intent/context/editor/edit guards, 202 no-op, passive watermark rules, form/operation/receipt handling, TTL and provider effect bounds. No extra HTTP."
+  ],
+  "regression_supplements": "Keep all pre-existing assertions. Supplement pure page/state tests for first-page replacement with higher cached item, overlap/cursors, omitted IDs and selected higher editor observation. Existing source-aware mixed/ACK shape and browser exact body/held-response tests remain. Sibling browser setup suffix80 repair is admitted; no sibling RED claim.",
+  "stop": "After source patch and concise report, stop before tests/build. Root reads full delta, verifies 38 sources/30 seals/heads, runs guards, freezes and admits one canonical all. No backend/API/schema/fixture/runner/BCI/sealed edit, private paths/config, preserved runtime/DB/provider action or product Git."
+}

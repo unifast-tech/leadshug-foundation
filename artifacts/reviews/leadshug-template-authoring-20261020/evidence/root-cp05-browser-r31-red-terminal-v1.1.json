@@ -1,0 +1,63 @@
+{
+  "schema": "stcon05.r31-browser-root-terminal.v1",
+  "recorded_at_utc": "2026-10-22T01:05:04.357445+00:00",
+  "outcome": "Terminal failed; three new meaningful consumer REDs and one setup failure before the fourth race",
+  "log": "foundation_documentation/artifacts/tmp/st-con-05-r31-browser-5CVbeb/canonical-browser.log",
+  "log_bytes": 82734,
+  "log_sha256": "25bcec43c2e1516633e911d5df4e282863090076d9f455acffc67ec67a682d29",
+  "receipt": "foundation_documentation/artifacts/tmp/st-con-05-r31-browser-5CVbeb/runner-exit.txt",
+  "receipt_sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865",
+  "exit": 1,
+  "freeze": "foundation_documentation/artifacts/reviews/leadshug-template-authoring-20261020/evidence/root-cp05-source-freeze-r31-orderings-test-only-v1.1.json",
+  "freeze_sha256": "336d25c5bb84de14738414380ce43f5bf1aa374066efbabba6722280b82c88a8",
+  "source38_exact": true,
+  "protected30_exact": true,
+  "heads_exact": true,
+  "browser_passed": 69,
+  "browser_failed": 4,
+  "pure_consumer_passed": 1,
+  "proofs": [
+    {
+      "path": "foundation_documentation/artifacts/tmp/st-con-05-r31-browser-5CVbeb/proofs/pre-worker-freshness.json",
+      "sha256": "3d8a7a085d4d50482b5a27bcb6728642c06eda4a8153f63b5f7657844cc47e77"
+    },
+    {
+      "path": "foundation_documentation/artifacts/tmp/st-con-05-r31-browser-5CVbeb/proofs/attestation-browser-authority.json",
+      "sha256": "1cc27ff63105396964193b95f08a57b40ed08cd06e9fd78bd969d766946ba909"
+    }
+  ],
+  "source_capture_utc": "2026-10-22T00:50:13.950Z",
+  "runtime_capture_utc": "2026-10-22T00:50:08.207Z",
+  "served_dist_sha256": "bdee8e7298ede5792324a00a00dd0fa1bbd3a04b51b6256f9fc0679db5fa2639",
+  "template_marker_counts": {
+    "TEMPLATE-FRC-EVIDENCE": 1,
+    "TEMPLATE-FRC-UI-EVIDENCE": 1
+  },
+  "confirmed_red": [
+    {
+      "case": "58 same-account reauth/failure/current refresh",
+      "failure": "1845 expected editor APPROVED visible; absent",
+      "reached": "Normal same-account reauth; backend historical PAUSED with retained time/high fence; actual new-context failure409/TEMPLATE_REFRESH_UNAVAILABLE; backend still-historical read; actual success200 APPROVED/available with strictly lower current fence.",
+      "not_reached": "Post-success provider-call counter and final reload assertions."
+    },
+    {
+      "case": "60 same-fence common vs draft",
+      "failure": "2012 expected article Elegível para uso futuro after opening restricted draft; absent",
+      "reached": "Actual provider-boundary supported external definition; BFF common200 APPROVED/supported/available/eligible; eligible article before draft open; BFF draft retains immutable original definition/revision and same-fence/same-fingerprint saved projection with draft eligible/matchesDefinition/eligibleForUse false; article still APPROVED.",
+      "not_reached": "Later editor-specific DOM and one-create-effect assertions."
+    },
+    {
+      "case": "61 passive higher-fence vs older individual completion",
+      "failure": "2157 expected editor PAUSED after old individual response released while derived GET held; absent",
+      "reached": "Actual older individual200 APPROVED held; independent authorized BFF catalogue200 PAUSED has higher fence; passive GET returns that PAUSED; editor/catalogue PAUSED and ineligible before old release; old200 APPROVED released and derived GET started/held.",
+      "not_reached": "Remaining post-release negatives, derived GET release/result and final provider-call bounds."
+    }
+  ],
+  "incomplete_case": {
+    "case": "62 sibling explicit catalogue race",
+    "failure": "createOfficialChannel70 confirmation notice not found during setup",
+    "classification": "Setup/readiness failure; no behavioral RED for sibling catalogue direction. Its old/passive/new ordering never began. Must diagnose exact fixture setup without changing product or weakening confirmation."
+  },
+  "limits": "Browser mode runs no API unit/PG suite or new Web unit. Both existing FRC markers and prior metadata scenarios passed; no all GREEN or candidate/PCV/activation/provider claim. Full first-byte tee/actual receipt and current setup proofs retained.",
+  "next": "Diagnose failed setup and retarget the coupled pure test under the accepted HOW, product unchanged. Root admission/static freeze before any new test run or correction. Existing three actual REDs support the bounded owner correction; sibling direction still needs executed coverage."
+}
