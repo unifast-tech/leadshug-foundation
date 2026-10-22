@@ -1,0 +1,9 @@
+{
+  "checkpoint": "E31 post-terminal source check before resumed writes",
+  "count": 256,
+  "fingerprint": "4eb3457aa43d84dc4471cb19cf977fe0c22c4983c733c7c7c9cd532481ff01f5",
+  "mismatches": [],
+  "added": [],
+  "removed": [],
+  "unchanged": true
+}

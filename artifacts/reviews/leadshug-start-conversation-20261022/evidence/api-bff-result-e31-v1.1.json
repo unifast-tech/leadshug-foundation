@@ -1,0 +1,88 @@
+{
+  "checkpoint": "E31 source-sealed API reaches PostgreSQL initial journey",
+  "canonical_command": "bash scripts/test-channels-local.sh api",
+  "unified_exec_session_id": 94361,
+  "exit_code": 1,
+  "synthetic_stdout": "/tmp/stcon04-executor-api-bff-e31.txt",
+  "stdout_sha256": "59745f843ae2ab71e7a436092be6e4a8caf536e23327eced1d055e92ed413444",
+  "root_verified": [
+    "stdout SHA and bounded failure/summary excerpts",
+    "all256 source hashes and complete positive public inventory unchanged",
+    "owned disposable cleanup"
+  ],
+  "phases": {
+    "generate_deploy_status_lint_build": "passed",
+    "unit": {
+      "files_passed": 34,
+      "tests_passed": 336
+    },
+    "postgresql_e2e": {
+      "files_passed": 30,
+      "files_failed": 3,
+      "tests_passed": 402,
+      "tests_failed": 14,
+      "unhandled_errors": 7,
+      "duration_seconds": 468.42
+    },
+    "owned_cleanup": "completed"
+  },
+  "targeted_observed_passes": [
+    {
+      "path": "api-app/test/initial-message.e2e-spec.ts",
+      "passed_cases": [
+        "Authenticated open/options/preview/nonofficial first text and exact terminal replay, no duplicate send/Message",
+        "Official closed-window NAMED and reversed/repeated POSITIONAL catalog-to-preview-to-wire and exact replay, no extra Graph I/O"
+      ],
+      "limitation": "Third grant-withdrawal case fails response certainty metadata assertion before its later DB assertions; not claimed passed."
+    },
+    {
+      "path": "api-app/test/dispatch-admission.e2e-spec.ts",
+      "tests_passed": 8,
+      "limitation": "Includes real local recovery and late receipt/slot cases, not complete commit/fault and concurrency floor."
+    },
+    {
+      "path": "api-app/test/conversation-start.e2e-spec.ts",
+      "tests_passed": 5,
+      "limitation": "Includes20x5 same-contact proof; broader remaining criteria unchanged."
+    },
+    {
+      "path": "api-app/test/number-onboarding-pcv.e2e-spec.ts",
+      "tests_passed": 8,
+      "authority": "E23 exact approved companion patch preserved"
+    },
+    {
+      "path": "api-app/test/number-onboarding-typebot.e2e-spec.ts",
+      "tests_passed": 9,
+      "authority": "E23 exact approved companion patch preserved"
+    }
+  ],
+  "failure_groups": [
+    {
+      "path": "api-app/test/atendimento.e2e-spec.ts",
+      "tests_failed": 1,
+      "observation": "Ordinary retirement fixture creates empty conversation then waits for provider hook; new BFF empty guard rejects before hook."
+    },
+    {
+      "path": "api-app/test/channel-transport.e2e-spec.ts",
+      "tests_failed": 12,
+      "observation": "Ordinary send cases need explicit established-conversation fixtures;20x5 timed out and7ECONNRESET were unhandled. Full load/barriers/assertions must remain; own listener/pending teardown must be sound."
+    },
+    {
+      "path": "api-app/test/initial-message.e2e-spec.ts",
+      "tests_failed": 1,
+      "observation": "Known accepted local failure returned correct503/code/outcome but omitted providerAcceptance, receiptPersistence, localMessageState, recoveryAction. Preserve test assertions; consolidate all initial known-ACK error projections."
+    }
+  ],
+  "interpretation_recalibration": {
+    "previous_root_advice": "Reuse strict full dispatch context at local Message completion, including current credential/readiness.",
+    "confirmed_contract": "Full current credential/readiness equality at pre-POST claim remains required. Existing post-dispatch semantics permit same-identity active credential rotation; local known-ACK work needs current physical identity/account/generation/epoch plus current actor, without requiring old credential version or online readiness.",
+    "correction": "Use proper after-dispatch transaction validation and same Message owner; test known-ACK rotation/recovery. Never permit retired identity/account/generation or weaken dispatch claim.",
+    "status": "Correction of overstrict implementation interpretation within approved contract; not a new scope/permission or passed test."
+  },
+  "positive_diff_inventory": "positive-public-diff-inventory-e31-v1.1.json:93names under positive pathspecs classified (root3/api79/web11). NOT full canonical diff guard; type/unknown/private/root-wide guarantees absent.",
+  "limits": [
+    "No overall API GREEN, full fault matrix, UI/browser, actual provider/preserved runtime or final assurance claim.",
+    "All new tests remain accurately post-implementation; E02/E04/E18 disclosures retained."
+  ],
+  "next": "Sole executor fixes admitted fixtures without weakening new gate, error certainty fields, owned listener/unhandled teardown and appropriate after-dispatch local fence; new freeze/run."
+}

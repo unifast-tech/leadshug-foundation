@@ -1,0 +1,1083 @@
+{
+  "method": "Positive-public pathspec Git name inventory, not canonical full diff guard",
+  "source_context": "E31 frozen API candidate, runner active; inventory only, no source changes",
+  "repos": [
+    {
+      "repo": "root",
+      "baseline": "80e3940126f22a941f90dba4f5e801b6c0eb2f58",
+      "positive_pathspecs": [
+        ".github/workflows/ci.yml",
+        "scripts/check-channels-ci-parity.py",
+        "scripts/test-channels-local.sh"
+      ],
+      "records": [
+        {
+          "status": "M",
+          "path": ".github/workflows/ci.yml",
+          "matches": [
+            {
+              "glob": ".github/workflows/ci.yml",
+              "types": "any",
+              "reason": "Inherited baseline ONLY, NO new mutation; byte-exact seal required"
+            }
+          ]
+        },
+        {
+          "status": "M",
+          "path": "scripts/test-channels-local.sh",
+          "matches": [
+            {
+              "glob": "scripts/test-channels-local.sh",
+              "types": "any",
+              "reason": "Inherited baseline ONLY, NO new mutation; byte-exact seal required"
+            }
+          ]
+        },
+        {
+          "status": "??",
+          "path": "scripts/check-channels-ci-parity.py",
+          "matches": [
+            {
+              "glob": "scripts/check-channels-ci-parity.py",
+              "types": "any",
+              "reason": "Inherited baseline ONLY, NO new mutation; byte-exact seal required"
+            }
+          ]
+        }
+      ],
+      "unclassified": [],
+      "stderr_line_count": 0
+    },
+    {
+      "repo": "api",
+      "baseline": "db5a86758a165fac8a1ab587599c37b17890530c",
+      "positive_pathspecs": [
+        "src",
+        "test",
+        "prisma",
+        "package.json",
+        "package-lock.json"
+      ],
+      "records": [
+        {
+          "status": "M",
+          "path": "prisma/schema.prisma",
+          "matches": [
+            {
+              "glob": "prisma/schema.prisma",
+              "types": "any",
+              "reason": "Inherited exact baseline with bounded ST04 mutation proposed after APROVADO for the named journey; initial hash still mandatory before FIRST change"
+            }
+          ]
+        },
+        {
+          "status": "M",
+          "path": "src/domain/channels/channel-credential-resolver.ts",
+          "matches": [
+            {
+              "glob": "src/domain/channels/channel-credential-resolver.ts",
+              "types": "any",
+              "reason": "Inherited baseline ONLY, NO new mutation; byte-exact seal required"
+            }
+          ]
+        },
+        {
+          "status": "M",
+          "path": "src/domain/historico/catalogo.ts",
+          "matches": [
+            {
+              "glob": "src/domain/historico/catalogo.ts",
+              "types": "any",
+              "reason": "Inherited exact baseline with bounded ST04 mutation proposed after APROVADO for the named journey; initial hash still mandatory before FIRST change"
+            }
+          ]
+        },
+        {
+          "status": "M",
+          "path": "src/domain/historico/cobertura.ts",
+          "matches": [
+            {
+              "glob": "src/domain/historico/cobertura.ts",
+              "types": "any",
+              "reason": "Inherited exact baseline with bounded ST04 mutation proposed after APROVADO for the named journey; initial hash still mandatory before FIRST change"
+            }
+          ]
+        },
+        {
+          "status": "M",
+          "path": "src/domain/inbox/conversations.service.ts",
+          "matches": [
+            {
+              "glob": "src/domain/inbox/conversations.service.ts",
+              "types": "any",
+              "reason": "Inherited exact baseline with bounded ST04 mutation proposed after APROVADO for the named journey; initial hash still mandatory before FIRST change"
+            }
+          ]
+        },
+        {
+          "status": "M",
+          "path": "src/domain/inbox/incoming.service.ts",
+          "matches": [
+            {
+              "glob": "src/domain/inbox/incoming.service.ts",
+              "types": "any",
+              "reason": "Inherited exact baseline with bounded ST04 mutation proposed after APROVADO for the named journey; initial hash still mandatory before FIRST change"
+            }
+          ]
+        },
+        {
+          "status": "M",
+          "path": "src/domain/inbox/incoming.typebot.integration.spec.ts",
+          "matches": [
+            {
+              "glob": "src/domain/inbox/incoming.typebot.integration.spec.ts",
+              "types": "any",
+              "reason": "Inherited exact baseline with bounded ST04 mutation after APROVADO: qualified window, shared admission and manual-open first-inbound automation regression only; initial hash mandatory before FIRST change"
+            }
+          ]
+        },
+        {
+          "status": "M",
+          "path": "src/domain/inbox/message-acceptance.service.ts",
+          "matches": [
+            {
+              "glob": "src/domain/inbox/message-acceptance.service.ts",
+              "types": "M",
+              "reason": "Same acceptance owner tx-capable primitive and original-CAS ordering; existing bytes sealed in supplemental-source-seal-v1.1.json before first mutation"
+            }
+          ]
+        },
+        {
+          "status": "M",
+          "path": "src/integrations/evolution/evolution.client.spec.ts",
+          "matches": [
+            {
+              "glob": "src/integrations/evolution/evolution.client.spec.ts",
+              "types": "any",
+              "reason": "Inherited baseline ONLY, NO new mutation; byte-exact seal required"
+            }
+          ]
+        },
+        {
+          "status": "M",
+          "path": "src/integrations/evolution/evolution.client.ts",
+          "matches": [
+            {
+              "glob": "src/integrations/evolution/evolution.client.ts",
+              "types": "any",
+              "reason": "Inherited baseline ONLY, NO new mutation; byte-exact seal required"
+            }
+          ]
+        },
+        {
+          "status": "M",
+          "path": "src/integrations/meta/meta.client.spec.ts",
+          "matches": [
+            {
+              "glob": "src/integrations/meta/meta.client.spec.ts",
+              "types": "any",
+              "reason": "Inherited baseline ONLY, NO new mutation; byte-exact seal required"
+            }
+          ]
+        },
+        {
+          "status": "M",
+          "path": "src/integrations/meta/meta.client.ts",
+          "matches": [
+            {
+              "glob": "src/integrations/meta/meta.client.ts",
+              "types": "any",
+              "reason": "Inherited baseline ONLY, NO new mutation; byte-exact seal required"
+            }
+          ]
+        },
+        {
+          "status": "M",
+          "path": "src/surfaces/bff/bff.module.ts",
+          "matches": [
+            {
+              "glob": "src/surfaces/bff/bff.module.ts",
+              "types": "any",
+              "reason": "Inherited exact baseline with bounded ST04 mutation proposed after APROVADO for the named journey; initial hash still mandatory before FIRST change"
+            }
+          ]
+        },
+        {
+          "status": "M",
+          "path": "src/surfaces/bff/conversations.controller.ts",
+          "matches": [
+            {
+              "glob": "src/surfaces/bff/conversations.controller.ts",
+              "types": "any",
+              "reason": "Inherited exact baseline with bounded ST04 mutation after APROVADO: BFF manual open/options/preview/intent/admission-recovery endpoints and scoped ACL; initial hash mandatory before FIRST change"
+            }
+          ]
+        },
+        {
+          "status": "M",
+          "path": "src/surfaces/public/conversations.controller.ts",
+          "matches": [
+            {
+              "glob": "src/surfaces/public/conversations.controller.ts",
+              "types": "any",
+              "reason": "Inherited baseline ONLY, NO new mutation; byte-exact seal required"
+            }
+          ]
+        },
+        {
+          "status": "M",
+          "path": "src/surfaces/public/public.module.ts",
+          "matches": [
+            {
+              "glob": "src/surfaces/public/public.module.ts",
+              "types": "any",
+              "reason": "Inherited baseline ONLY, NO new mutation; byte-exact seal required"
+            }
+          ]
+        },
+        {
+          "status": "M",
+          "path": "src/surfaces/webhooks/meta.controller.ts",
+          "matches": [
+            {
+              "glob": "src/surfaces/webhooks/meta.controller.ts",
+              "types": "M",
+              "reason": "signed timestamp extraction only"
+            }
+          ]
+        },
+        {
+          "status": "M",
+          "path": "src/surfaces/webhooks/webhooks.module.ts",
+          "matches": [
+            {
+              "glob": "src/surfaces/webhooks/webhooks.module.ts",
+              "types": "any",
+              "reason": "Inherited baseline ONLY, NO new mutation; byte-exact seal required"
+            }
+          ]
+        },
+        {
+          "status": "M",
+          "path": "test/api-publica.e2e-spec.ts",
+          "matches": [
+            {
+              "glob": "test/api-publica.e2e-spec.ts",
+              "types": "any",
+              "reason": "Inherited exact baseline with bounded ST04 mutation after APROVADO: ordinary public text/window/admission mappings; initial hash mandatory before FIRST change"
+            }
+          ]
+        },
+        {
+          "status": "M",
+          "path": "test/atendimento.e2e-spec.ts",
+          "matches": [
+            {
+              "glob": "test/atendimento.e2e-spec.ts",
+              "types": "M",
+              "reason": "common BFF sender/window compatibility"
+            }
+          ]
+        },
+        {
+          "status": "M",
+          "path": "test/browser-server.cjs",
+          "matches": [
+            {
+              "glob": "test/browser-server.cjs",
+              "types": "any",
+              "reason": "Inherited exact baseline with bounded ST04 mutation proposed after APROVADO for the named journey; initial hash still mandatory before FIRST change"
+            }
+          ]
+        },
+        {
+          "status": "M",
+          "path": "test/helpers.ts",
+          "matches": [
+            {
+              "glob": "test/helpers.ts",
+              "types": "any",
+              "reason": "Inherited exact baseline with bounded ST04 mutation proposed after APROVADO for the named journey; initial hash still mandatory before FIRST change"
+            }
+          ]
+        },
+        {
+          "status": "M",
+          "path": "test/number-onboarding-bci.e2e-spec.ts",
+          "matches": [
+            {
+              "glob": "test/number-onboarding-bci.e2e-spec.ts",
+              "types": "any",
+              "reason": "Inherited baseline ONLY, NO new mutation; byte-exact seal required"
+            }
+          ]
+        },
+        {
+          "status": "M",
+          "path": "test/number-onboarding-pcv.e2e-spec.ts",
+          "matches": [
+            {
+              "glob": "test/number-onboarding-pcv.e2e-spec.ts",
+              "types": "M",
+              "reason": "Human-validated E23 bounded test-only synthetic signed timestamp/current-resource alignment and corresponding trusted-window EXPLAIN per window-fixture-companion-admission-v1.1.patch; all other baseline bytes/scenarios/counters preserved"
+            }
+          ]
+        },
+        {
+          "status": "M",
+          "path": "test/number-onboarding-typebot.e2e-spec.ts",
+          "matches": [
+            {
+              "glob": "test/number-onboarding-typebot.e2e-spec.ts",
+              "types": "M",
+              "reason": "Human-validated E23 bounded test-only synthetic signed timestamp/current-resource alignment and corresponding trusted-window EXPLAIN per window-fixture-companion-admission-v1.1.patch; all other baseline bytes/scenarios/counters preserved"
+            }
+          ]
+        },
+        {
+          "status": "M",
+          "path": "test/timeline-fixtures.cjs",
+          "matches": [
+            {
+              "glob": "test/timeline-fixtures.cjs",
+              "types": "any",
+              "reason": "Inherited exact baseline with bounded ST04 mutation proposed after APROVADO for the named journey; initial hash still mandatory before FIRST change"
+            }
+          ]
+        },
+        {
+          "status": "M",
+          "path": "test/webhooks.e2e-spec.ts",
+          "matches": [
+            {
+              "glob": "test/webhooks.e2e-spec.ts",
+              "types": "M",
+              "reason": "timestamp signature and origin/resource proof"
+            }
+          ]
+        },
+        {
+          "status": "??",
+          "path": "prisma/migrations/20261020170000_message_inbound_window_index/migration.sql",
+          "matches": [
+            {
+              "glob": "prisma/migrations/20261020170000_message_inbound_window_index/migration.sql",
+              "types": "any",
+              "reason": "Inherited baseline ONLY, NO new mutation; byte-exact seal required"
+            }
+          ]
+        },
+        {
+          "status": "??",
+          "path": "prisma/migrations/20261021130000_message_template_drafts/migration.sql",
+          "matches": [
+            {
+              "glob": "prisma/migrations/20261021130000_message_template_drafts/migration.sql",
+              "types": "any",
+              "reason": "Inherited baseline ONLY, NO new mutation; byte-exact seal required"
+            }
+          ]
+        },
+        {
+          "status": "??",
+          "path": "prisma/migrations/20261021150000_message_template_operations/migration.sql",
+          "matches": [
+            {
+              "glob": "prisma/migrations/20261021150000_message_template_operations/migration.sql",
+              "types": "any",
+              "reason": "Inherited baseline ONLY, NO new mutation; byte-exact seal required"
+            }
+          ]
+        },
+        {
+          "status": "??",
+          "path": "prisma/migrations/20261022140000_initial_message_orchestration/migration.sql",
+          "matches": [
+            {
+              "glob": "prisma/migrations/*_initial_message*/migration.sql",
+              "types": "A, ??",
+              "reason": "additive intent/timestamp/index migration; no unrelated migration edit"
+            }
+          ]
+        },
+        {
+          "status": "??",
+          "path": "prisma/migrations/20261022150000_initial_message_admissions/migration.sql",
+          "matches": [
+            {
+              "glob": "prisma/migrations/*_initial_message*/migration.sql",
+              "types": "A, ??",
+              "reason": "additive intent/timestamp/index migration; no unrelated migration edit"
+            }
+          ]
+        },
+        {
+          "status": "??",
+          "path": "src/domain/channels/channel-credential-resolver.spec.ts",
+          "matches": [
+            {
+              "glob": "src/domain/channels/channel-credential-resolver.spec.ts",
+              "types": "any",
+              "reason": "Inherited baseline ONLY, NO new mutation; byte-exact seal required"
+            }
+          ]
+        },
+        {
+          "status": "??",
+          "path": "src/domain/channels/transport/channel-dependencies.spec.ts",
+          "matches": [
+            {
+              "glob": "src/domain/channels/transport/channel-dependencies.spec.ts",
+              "types": "any",
+              "reason": "Inherited baseline ONLY, NO new mutation; byte-exact seal required"
+            },
+            {
+              "glob": "src/domain/channels/transport/channel*.spec.ts",
+              "types": "any",
+              "reason": "union/fence/substitution architecture harness"
+            }
+          ]
+        },
+        {
+          "status": "??",
+          "path": "src/domain/channels/transport/channel-initial-message.spec.ts",
+          "matches": [
+            {
+              "glob": "src/domain/channels/transport/channel*.spec.ts",
+              "types": "any",
+              "reason": "union/fence/substitution architecture harness"
+            }
+          ]
+        },
+        {
+          "status": "??",
+          "path": "src/domain/channels/transport/channel.ts",
+          "matches": [
+            {
+              "glob": "src/domain/channels/transport/channel.ts",
+              "types": "any",
+              "reason": "Inherited exact baseline with bounded ST04 mutation proposed after APROVADO for the named journey; initial hash still mandatory before FIRST change"
+            }
+          ]
+        },
+        {
+          "status": "??",
+          "path": "src/domain/inbox/channel-window-policy.spec.ts",
+          "matches": [
+            {
+              "glob": "src/domain/inbox/channel-window-policy*",
+              "types": "any",
+              "reason": "one trusted-window query and its tests"
+            }
+          ]
+        },
+        {
+          "status": "??",
+          "path": "src/domain/inbox/channel-window-policy.ts",
+          "matches": [
+            {
+              "glob": "src/domain/inbox/channel-window-policy*",
+              "types": "any",
+              "reason": "one trusted-window query and its tests"
+            }
+          ]
+        },
+        {
+          "status": "??",
+          "path": "src/domain/inbox/conversation-start.service.spec.ts",
+          "matches": [
+            {
+              "glob": "src/domain/inbox/conversation-start*",
+              "types": "any",
+              "reason": "open/reuse and tests"
+            }
+          ]
+        },
+        {
+          "status": "??",
+          "path": "src/domain/inbox/conversation-start.service.ts",
+          "matches": [
+            {
+              "glob": "src/domain/inbox/conversation-start*",
+              "types": "any",
+              "reason": "open/reuse and tests"
+            }
+          ]
+        },
+        {
+          "status": "??",
+          "path": "src/domain/inbox/dispatch-admission.service.spec.ts",
+          "matches": [
+            {
+              "glob": "src/domain/inbox/dispatch-admission*.ts",
+              "types": "A, ??",
+              "reason": "Finite ordinary admission/exclusive-initial interlock and unit cases, no global operation platform"
+            }
+          ]
+        },
+        {
+          "status": "??",
+          "path": "src/domain/inbox/dispatch-admission.service.ts",
+          "matches": [
+            {
+              "glob": "src/domain/inbox/dispatch-admission*.ts",
+              "types": "A, ??",
+              "reason": "Finite ordinary admission/exclusive-initial interlock and unit cases, no global operation platform"
+            }
+          ]
+        },
+        {
+          "status": "??",
+          "path": "src/domain/inbox/initial-message-template-renderer.spec.ts",
+          "matches": [
+            {
+              "glob": "src/domain/inbox/initial-message*",
+              "types": "any",
+              "reason": "intent/selection/renderer/state, exact scoped services and specs; no second Message or catalog owner"
+            }
+          ]
+        },
+        {
+          "status": "??",
+          "path": "src/domain/inbox/initial-message-template-renderer.ts",
+          "matches": [
+            {
+              "glob": "src/domain/inbox/initial-message*",
+              "types": "any",
+              "reason": "intent/selection/renderer/state, exact scoped services and specs; no second Message or catalog owner"
+            }
+          ]
+        },
+        {
+          "status": "??",
+          "path": "src/domain/inbox/initial-message.service.spec.ts",
+          "matches": [
+            {
+              "glob": "src/domain/inbox/initial-message*",
+              "types": "any",
+              "reason": "intent/selection/renderer/state, exact scoped services and specs; no second Message or catalog owner"
+            }
+          ]
+        },
+        {
+          "status": "??",
+          "path": "src/domain/inbox/initial-message.service.ts",
+          "matches": [
+            {
+              "glob": "src/domain/inbox/initial-message*",
+              "types": "any",
+              "reason": "intent/selection/renderer/state, exact scoped services and specs; no second Message or catalog owner"
+            }
+          ]
+        },
+        {
+          "status": "??",
+          "path": "src/domain/inbox/message-acceptance.service.spec.ts",
+          "matches": [
+            {
+              "glob": "src/domain/inbox/message-acceptance.service.spec.ts",
+              "types": "any",
+              "reason": "same owner transaction and sender/echo contract"
+            }
+          ]
+        },
+        {
+          "status": "??",
+          "path": "src/domain/inbox/outbound.service.spec.ts",
+          "matches": [
+            {
+              "glob": "src/domain/inbox/outbound.service.spec.ts",
+              "types": "any",
+              "reason": "Inherited exact baseline with bounded ST04 mutation proposed after APROVADO for the named journey; initial hash still mandatory before FIRST change"
+            }
+          ]
+        },
+        {
+          "status": "??",
+          "path": "src/domain/inbox/outbound.service.ts",
+          "matches": [
+            {
+              "glob": "src/domain/inbox/outbound.service.ts",
+              "types": "any",
+              "reason": "Inherited exact baseline with bounded ST04 mutation proposed after APROVADO for the named journey; initial hash still mandatory before FIRST change"
+            }
+          ]
+        },
+        {
+          "status": "??",
+          "path": "src/domain/message-templates/template-definition.spec.ts",
+          "matches": [
+            {
+              "glob": "src/domain/message-templates/template-definition.spec.ts",
+              "types": "any",
+              "reason": "Inherited baseline ONLY, NO new mutation; byte-exact seal required"
+            }
+          ]
+        },
+        {
+          "status": "??",
+          "path": "src/domain/message-templates/template-definition.ts",
+          "matches": [
+            {
+              "glob": "src/domain/message-templates/template-definition.ts",
+              "types": "any",
+              "reason": "Inherited baseline ONLY, NO new mutation; byte-exact seal required"
+            }
+          ]
+        },
+        {
+          "status": "??",
+          "path": "src/domain/message-templates/template-draft.service.ts",
+          "matches": [
+            {
+              "glob": "src/domain/message-templates/template-draft.service.ts",
+              "types": "any",
+              "reason": "Inherited baseline ONLY, NO new mutation; byte-exact seal required"
+            }
+          ]
+        },
+        {
+          "status": "??",
+          "path": "src/domain/message-templates/template-management.dependencies.spec.ts",
+          "matches": [
+            {
+              "glob": "src/domain/message-templates/template-management.dependencies.spec.ts",
+              "types": "any",
+              "reason": "Inherited baseline ONLY, NO new mutation; byte-exact seal required"
+            }
+          ]
+        },
+        {
+          "status": "??",
+          "path": "src/domain/message-templates/template-management.ports.spec.ts",
+          "matches": [
+            {
+              "glob": "src/domain/message-templates/template-management.ports.spec.ts",
+              "types": "any",
+              "reason": "Inherited baseline ONLY, NO new mutation; byte-exact seal required"
+            }
+          ]
+        },
+        {
+          "status": "??",
+          "path": "src/domain/message-templates/template-management.ports.ts",
+          "matches": [
+            {
+              "glob": "src/domain/message-templates/template-management.ports.ts",
+              "types": "any",
+              "reason": "Inherited baseline ONLY, NO new mutation; byte-exact seal required"
+            }
+          ]
+        },
+        {
+          "status": "??",
+          "path": "src/domain/message-templates/template-observation.service.ts",
+          "matches": [
+            {
+              "glob": "src/domain/message-templates/template-observation.service.ts",
+              "types": "any",
+              "reason": "Inherited exact baseline with bounded ST04 mutation proposed after APROVADO for the named journey; initial hash still mandatory before FIRST change"
+            }
+          ]
+        },
+        {
+          "status": "??",
+          "path": "src/domain/message-templates/template-submission.service.ts",
+          "matches": [
+            {
+              "glob": "src/domain/message-templates/template-submission.service.ts",
+              "types": "any",
+              "reason": "Inherited baseline ONLY, NO new mutation; byte-exact seal required"
+            }
+          ]
+        },
+        {
+          "status": "??",
+          "path": "src/domain/message-templates/template-transaction-boundary.ts",
+          "matches": [
+            {
+              "glob": "src/domain/message-templates/template-transaction-boundary.ts",
+              "types": "any",
+              "reason": "Inherited baseline ONLY, NO new mutation; byte-exact seal required"
+            }
+          ]
+        },
+        {
+          "status": "??",
+          "path": "src/integrations/channels/account-reference.ts",
+          "matches": [
+            {
+              "glob": "src/integrations/channels/account-reference.ts",
+              "types": "A, ??",
+              "reason": "extract exact existing opaque hash helper"
+            }
+          ]
+        },
+        {
+          "status": "??",
+          "path": "src/integrations/channels/channel-adapter-factory.ts",
+          "matches": [
+            {
+              "glob": "src/integrations/channels/channel-adapter-factory.ts",
+              "types": "any",
+              "reason": "Inherited exact baseline with bounded ST04 mutation proposed after APROVADO for the named journey; initial hash still mandatory before FIRST change"
+            }
+          ]
+        },
+        {
+          "status": "??",
+          "path": "src/integrations/channels/channel-adapter-registry.ts",
+          "matches": [
+            {
+              "glob": "src/integrations/channels/channel-adapter-registry.ts",
+              "types": "any",
+              "reason": "Inherited exact baseline with bounded ST04 mutation proposed after APROVADO for the named journey; initial hash still mandatory before FIRST change"
+            }
+          ]
+        },
+        {
+          "status": "??",
+          "path": "src/integrations/channels/channel-transport.module.ts",
+          "matches": [
+            {
+              "glob": "src/integrations/channels/channel-transport.module.ts",
+              "types": "any",
+              "reason": "Inherited exact baseline with bounded ST04 mutation proposed after APROVADO for the named journey; initial hash still mandatory before FIRST change"
+            }
+          ]
+        },
+        {
+          "status": "??",
+          "path": "src/integrations/channels/evolution-channel.ts",
+          "matches": [
+            {
+              "glob": "src/integrations/channels/evolution-channel.ts",
+              "types": "any",
+              "reason": "Inherited exact baseline with bounded ST04 mutation proposed after APROVADO for the named journey; initial hash still mandatory before FIRST change"
+            }
+          ]
+        },
+        {
+          "status": "??",
+          "path": "src/integrations/channels/meta-channel.ts",
+          "matches": [
+            {
+              "glob": "src/integrations/channels/meta-channel.ts",
+              "types": "any",
+              "reason": "Inherited exact baseline with bounded ST04 mutation proposed after APROVADO for the named journey; initial hash still mandatory before FIRST change"
+            }
+          ]
+        },
+        {
+          "status": "??",
+          "path": "src/integrations/channels/prisma-channel-resolver.ts",
+          "matches": [
+            {
+              "glob": "src/integrations/channels/prisma-channel-resolver.ts",
+              "types": "any",
+              "reason": "Inherited exact baseline with bounded ST04 mutation proposed after APROVADO for the named journey; initial hash still mandatory before FIRST change"
+            }
+          ]
+        },
+        {
+          "status": "??",
+          "path": "src/integrations/message-templates/template-management.module.ts",
+          "matches": [
+            {
+              "glob": "src/integrations/message-templates/template-management.module.ts",
+              "types": "any",
+              "reason": "Inherited baseline ONLY, NO new mutation; byte-exact seal required"
+            }
+          ]
+        },
+        {
+          "status": "??",
+          "path": "src/integrations/message-templates/template-management.resolver.ts",
+          "matches": [
+            {
+              "glob": "src/integrations/message-templates/template-management.resolver.ts",
+              "types": "any",
+              "reason": "Inherited exact baseline with bounded ST04 mutation proposed after APROVADO for the named journey; initial hash still mandatory before FIRST change"
+            }
+          ]
+        },
+        {
+          "status": "??",
+          "path": "src/integrations/meta/initial-message.client.spec.ts",
+          "matches": [
+            {
+              "glob": "src/integrations/meta/initial-message.client*.ts",
+              "types": "any",
+              "reason": "provider-private protocol preflight/text/template for new attempts inside same Meta Channel; old client interface preserved"
+            }
+          ]
+        },
+        {
+          "status": "??",
+          "path": "src/integrations/meta/initial-message.client.ts",
+          "matches": [
+            {
+              "glob": "src/integrations/meta/initial-message.client*.ts",
+              "types": "any",
+              "reason": "provider-private protocol preflight/text/template for new attempts inside same Meta Channel; old client interface preserved"
+            }
+          ]
+        },
+        {
+          "status": "??",
+          "path": "src/integrations/meta/message-template.client.spec.ts",
+          "matches": [
+            {
+              "glob": "src/integrations/meta/message-template.client.spec.ts",
+              "types": "any",
+              "reason": "Inherited baseline ONLY, NO new mutation; byte-exact seal required"
+            }
+          ]
+        },
+        {
+          "status": "??",
+          "path": "src/integrations/meta/message-template.client.ts",
+          "matches": [
+            {
+              "glob": "src/integrations/meta/message-template.client.ts",
+              "types": "any",
+              "reason": "Inherited baseline ONLY, NO new mutation; byte-exact seal required"
+            }
+          ]
+        },
+        {
+          "status": "??",
+          "path": "src/surfaces/bff/message-templates.controller.ts",
+          "matches": [
+            {
+              "glob": "src/surfaces/bff/message-templates.controller.ts",
+              "types": "any",
+              "reason": "Inherited baseline ONLY, NO new mutation; byte-exact seal required"
+            }
+          ]
+        },
+        {
+          "status": "??",
+          "path": "test/channel-transport.e2e-spec.ts",
+          "matches": [
+            {
+              "glob": "test/channel-transport.e2e-spec.ts",
+              "types": "any",
+              "reason": "Inherited exact baseline with bounded ST04 mutation proposed after APROVADO for the named journey; initial hash still mandatory before FIRST change"
+            }
+          ]
+        },
+        {
+          "status": "??",
+          "path": "test/conversation-start.e2e-spec.ts",
+          "matches": [
+            {
+              "glob": "test/conversation-start*",
+              "types": "any",
+              "reason": "open races and list SQL"
+            }
+          ]
+        },
+        {
+          "status": "??",
+          "path": "test/dispatch-admission.e2e-spec.ts",
+          "matches": [
+            {
+              "glob": "test/dispatch-admission*.e2e-spec.ts",
+              "types": "A, ??",
+              "reason": "Real PG interlock/expiry/owner-CAS/commit certainty barriers"
+            }
+          ]
+        },
+        {
+          "status": "??",
+          "path": "test/initial-message.e2e-spec.ts",
+          "matches": [
+            {
+              "glob": "test/initial-message*",
+              "types": "any",
+              "reason": "real PG/BFF/PCV/scoped account and durability fault contracts"
+            }
+          ]
+        },
+        {
+          "status": "??",
+          "path": "test/message-template-bff.e2e-spec.ts",
+          "matches": [
+            {
+              "glob": "test/message-template-bff.e2e-spec.ts",
+              "types": "any",
+              "reason": "Inherited baseline ONLY, NO new mutation; byte-exact seal required"
+            }
+          ]
+        },
+        {
+          "status": "??",
+          "path": "test/message-template-drafts.e2e-spec.ts",
+          "matches": [
+            {
+              "glob": "test/message-template-drafts.e2e-spec.ts",
+              "types": "any",
+              "reason": "Inherited baseline ONLY, NO new mutation; byte-exact seal required"
+            }
+          ]
+        },
+        {
+          "status": "??",
+          "path": "test/message-template-management.e2e-spec.ts",
+          "matches": [
+            {
+              "glob": "test/message-template-management.e2e-spec.ts",
+              "types": "any",
+              "reason": "Inherited baseline ONLY, NO new mutation; byte-exact seal required"
+            }
+          ]
+        }
+      ],
+      "unclassified": [],
+      "stderr_line_count": 20
+    },
+    {
+      "repo": "web",
+      "baseline": "74b9d4b714044829796f875d00553f077c1c329d",
+      "positive_pathspecs": [
+        "src",
+        "e2e",
+        "package.json",
+        "package-lock.json"
+      ],
+      "records": [
+        {
+          "status": "M",
+          "path": "e2e/number-onboarding-freshness.ts",
+          "matches": [
+            {
+              "glob": "e2e/number-onboarding-freshness.ts",
+              "types": "any",
+              "reason": "Inherited exact baseline with bounded ST04 mutation proposed after APROVADO for the named journey; initial hash still mandatory before FIRST change"
+            }
+          ]
+        },
+        {
+          "status": "M",
+          "path": "e2e/timeline-freshness.ts",
+          "matches": [
+            {
+              "glob": "e2e/timeline-freshness.ts",
+              "types": "any",
+              "reason": "Inherited exact baseline with bounded ST04 mutation proposed after APROVADO for the named journey; initial hash still mandatory before FIRST change"
+            }
+          ]
+        },
+        {
+          "status": "M",
+          "path": "src/App.tsx",
+          "matches": [
+            {
+              "glob": "src/App.tsx",
+              "types": "any",
+              "reason": "Inherited baseline ONLY, NO new mutation; byte-exact seal required"
+            }
+          ]
+        },
+        {
+          "status": "M",
+          "path": "src/api.spec.ts",
+          "matches": [
+            {
+              "glob": "src/api.spec.ts",
+              "types": "any",
+              "reason": "Inherited exact baseline with bounded ST04 mutation proposed after APROVADO for the named journey; initial hash still mandatory before FIRST change"
+            }
+          ]
+        },
+        {
+          "status": "M",
+          "path": "src/api.ts",
+          "matches": [
+            {
+              "glob": "src/api.ts",
+              "types": "any",
+              "reason": "Inherited exact baseline with bounded ST04 mutation proposed after APROVADO for the named journey; initial hash still mandatory before FIRST change"
+            }
+          ]
+        },
+        {
+          "status": "M",
+          "path": "src/telas/Inbox.tsx",
+          "matches": [
+            {
+              "glob": "src/telas/Inbox.tsx",
+              "types": "any",
+              "reason": "Inherited exact baseline with bounded ST04 mutation proposed after APROVADO for the named journey; initial hash still mandatory before FIRST change"
+            }
+          ]
+        },
+        {
+          "status": "??",
+          "path": "e2e/channel-transport.spec.ts",
+          "matches": [
+            {
+              "glob": "e2e/channel-transport.spec.ts",
+              "types": "any",
+              "reason": "Inherited exact baseline with bounded ST04 mutation after APROVADO: inherited ordinary text/window browser regressions; initial hash mandatory before FIRST change"
+            }
+          ]
+        },
+        {
+          "status": "??",
+          "path": "e2e/message-templates.spec.ts",
+          "matches": [
+            {
+              "glob": "e2e/message-templates.spec.ts",
+              "types": "any",
+              "reason": "Inherited baseline ONLY, NO new mutation; byte-exact seal required"
+            }
+          ]
+        },
+        {
+          "status": "??",
+          "path": "src/componentes/NovaConversa.tsx",
+          "matches": [
+            {
+              "glob": "src/componentes/NovaConversa*",
+              "types": "any",
+              "reason": "local form/confirmation and tests"
+            }
+          ]
+        },
+        {
+          "status": "??",
+          "path": "src/telas/Modelos.spec.ts",
+          "matches": [
+            {
+              "glob": "src/telas/Modelos.spec.ts",
+              "types": "any",
+              "reason": "Inherited baseline ONLY, NO new mutation; byte-exact seal required"
+            }
+          ]
+        },
+        {
+          "status": "??",
+          "path": "src/telas/Modelos.tsx",
+          "matches": [
+            {
+              "glob": "src/telas/Modelos.tsx",
+              "types": "any",
+              "reason": "Inherited baseline ONLY, NO new mutation; byte-exact seal required"
+            }
+          ]
+        }
+      ],
+      "unclassified": [],
+      "stderr_line_count": 5
+    }
+  ],
+  "limits": [
+    "No root-wide discovery or private path access.",
+    "No Foundation repository diff included.",
+    "No full guard GO or delivery claim.",
+    "Change-type compatibility and all unknown/private surfaces are NOT established by this bounded inventory.",
+    "Read-only inherited diffs are inherited; exact seals separately prove no new mutation."
+  ]
+}
