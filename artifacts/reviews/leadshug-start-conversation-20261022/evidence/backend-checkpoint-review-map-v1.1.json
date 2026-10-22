@@ -1,0 +1,84 @@
+{
+  "kind": "root implementation checkpoint review map; derived only",
+  "authority": "Approved ST-CON-04 v1.1 TODO; this map adds no requirements or scope",
+  "claim": "No row is validated or completed by this planning aid. Phase1 GREEN does not satisfy backend delivery.",
+  "rows": [
+    {
+      "id": "OPEN",
+      "anchor": "D-01/SCOPE-01/DOD-01",
+      "evidence_to_inspect": "Real PostgreSQL parallel open yields one creation winner, others reuse; no existing-row changes or bot/read/send effects; local-ready metadata required only on creation; COALESCE order and id tie-break.",
+      "state": "pending"
+    },
+    {
+      "id": "WINDOW",
+      "anchor": "D-04/SCOPE-05/DOD-07",
+      "evidence_to_inspect": "Signature boundary qualifies positive nonfuture integer Meta seconds; missing/malformed remains null without dropping Message; current-resource IN/OFICIAL query uses max, strict <24h, batch/index; timeline unchanged.",
+      "state": "pending"
+    },
+    {
+      "id": "ABSTRACTION",
+      "anchor": "D-02/D-03/SCOPE-02/SCOPE-07",
+      "evidence_to_inspect": "One Channel.sendMessage union; capabilities; selected initial resolver/context equality; Evolution unsupported zero HTTP; no domain concrete branches; acyclic composition; one sender/acceptance owner.",
+      "state": "pending"
+    },
+    {
+      "id": "PREFLIGHT",
+      "anchor": "D-05/D-06/SCOPE-04/SCOPE-10",
+      "evidence_to_inspect": "Same-account exhausted bounded filtered listing and exact approved semantics; account pinned server-side; +DDI wire; all GET before final positive claim; max6GET/1POST,10s per request,75s total.",
+      "state": "pending"
+    },
+    {
+      "id": "INTENT",
+      "anchor": "D-07/SCOPE-08",
+      "evidence_to_inspect": "BU+actor UUID replay after current grant before provider reads; independent exclusive slot; lease/deadline90s immutable; one POST; explicit known receipt persisted before local acceptance.",
+      "state": "pending"
+    },
+    {
+      "id": "INTERLOCK",
+      "anchor": "D-07/SCOPE-09",
+      "evidence_to_inspect": "Ordinary tokens coexist; initial reserve and ordinary admissions use SAME conversation row lock; unknown dispatch never clock-expires into takeover; per-owner cleanup cannot release successor.",
+      "state": "pending"
+    },
+    {
+      "id": "ACK_CERTAINTY",
+      "anchor": "D-07 normative r1",
+      "evidence_to_inspect": "Lost commit ACK handled through captured-key exact readback at reserve/claim/receipt/settle/release; missing confirmed original SENDING means zero POST; confirmed external never converted to refusal.",
+      "state": "pending"
+    },
+    {
+      "id": "LOCAL_COMPLETION",
+      "anchor": "D-03/D-07/DOD-06",
+      "evidence_to_inspect": "Identity -> BU/contact advisory when applicable -> conversation -> intent/admission lock order; ORIGINAL preHTTP status/updatedAt/owner CAS evaluated before own acceptance mutation; unique conflict whole rollback then max1 local re-entry.",
+      "state": "pending"
+    },
+    {
+      "id": "RECOVERY",
+      "anchor": "D-07/SCOPE-08/SCOPE-09",
+      "evidence_to_inspect": "Read/reconcile/ack zero external calls; no missing-ID Message/fuzzy match; both allowed uncertainty/block states wait DB deadline; explicit risk; release irreversible; late result cannot reacquire slot or alter current owner/status.",
+      "state": "pending"
+    },
+    {
+      "id": "ACL_LIMITS",
+      "anchor": "SCOPE-01/SCOPE-06/SCOPE-10",
+      "evidence_to_inspect": "BFF session/CSRF/current ATENDENTE grant before detailed validation; safe DTO/error; limit10/min actor and60/h canonical account/resource across local BU/tenant links, without foreign leaks.",
+      "state": "pending"
+    },
+    {
+      "id": "REGRESSIONS",
+      "anchor": "SCOPE-09/SCOPE-12",
+      "evidence_to_inspect": "Preserve BFF/public/BOT text mappings outside new explicit interlock; ordinary ACK-without-ID diagnostics remain; manual open makes later first inbound conversationCreated=false while keyword still fires.",
+      "state": "pending"
+    },
+    {
+      "id": "PERFORMANCE",
+      "anchor": "VAL performance/pcv-1",
+      "evidence_to_inspect": "EPS bounded query/EXPLAIN, BCI actual deterministic overlap and counters with approved sample floor; later frontend race/RLS evidence.",
+      "state": "pending"
+    }
+  ],
+  "required_disclosures": [
+    "E02 private traversal outcome unknown; independent security assessment required.",
+    "E04 initial module RED and later assertion RED; controlled post-hoc reversion is not historical test-first."
+  ],
+  "consumer_gate": "Backend candidate cannot close ST-CON-04; full UI/real-BFF browser, assurance and assisted own-contact proof remain."
+}
