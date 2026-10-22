@@ -42,7 +42,7 @@ O usuário quer preparar no LeadsHug a mensagem que usará para iniciar atendime
 ## Delivery Status Canon (Required)
 - **Current delivery stage:** Pending
 - **Qualifiers:** none
-- **Next exact step:** concluir assurance independente afetada do candidato r30. O único all atual encerrou0 com789testes:284API unit,398PostgreSQL,37Web unit e70Playwright (69navegador +1consumer puro). Root verificou38fontes/30selos/3HEADs, receipt/log integral, bundle servido=dist e os cinco marcadores atuais de templates. A nova barreira de catálogo200/ID próprio/APPROVED/available/eligible e DOM passaram; ambos TEMPLATE-FRC executaram. Evidência: `evidence/root-cp05-all-r30-acceptance-v1.1.json`. Gate de assurance/PCV, preflight/migração TEST, ativação e prova assistida Meta/final review continuam pendentes; nenhuma entrega reivindicada.
+- **Next exact step:** executar e atribuir o único browser RED r31, somente novos testes e produto r30 byte-exato. Freeze38/30selos/3HEADs em `evidence/root-cp05-source-freeze-r31-orderings-test-only-v1.1.json`; autoridade GO/diff público421esperados e zero desvios. Três famílias novas cobrem same-fence comum/draft, histórico→falha→sucesso após reauth e fence passivo maior contra respostas antigas dos DOIS produtores. Root corrigiu preparação mascaradora antes da execução, preservou asserts/cooldowns e timeout antigo. O unit novo não roda em browser mode. Só após terminal real haverá diagnóstico/correção; nenhum runtime preservado/Meta liberado.
 
 ## Active Work State (Required While TODO Remains In `active/`)
 - **Work state:** implementation

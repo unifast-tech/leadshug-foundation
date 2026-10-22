@@ -1,0 +1,59 @@
+{
+  "schema_version": "subagent-review-merge-v2",
+  "artifact_kind": "subagent_review_merge",
+  "authoritative": false,
+  "edit_policy": "derived_merge_packet",
+  "dispatch_path": "/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/artifacts/reviews/leadshug-template-authoring-20261020/evidence/candidate-r30-security.dispatch.json",
+  "review_kind": "critique",
+  "review_count": 1,
+  "reviewer_labels": [
+    "fresh-internal-no-context-security-r30"
+  ],
+  "highest_finding_severity": "medium",
+  "axis_summary": {
+    "performance": "acceptable",
+    "elegance": "acceptable",
+    "structural_soundness": "mixed",
+    "operational_fit": "mixed"
+  },
+  "recommended_paths": [
+    "Return for the two narrow projection corrections and meaningful regression evidence within the existing approved paths. Preserve common eligibility gates, editor-specific restrictions, historical associations, one-POST behavior and accepted debt. After current validation and affected independent reassessment close, continue the already approved PCV, TEST preflight, activation, assisted Meta proof and final-review sequence; delivery remains Pending."
+  ],
+  "exact_next_step": "Record reviewer resolutions in the governing TODO using the machine-checkable resolution table or equivalent gate ledger, then extract the derived resolution packet and decide whether another bounded review pass is still required.",
+  "findings": [
+    {
+      "finding_id": "F-97FB1C7D",
+      "severity": "medium",
+      "title": "Refresh failure erases historical classification and lets an old fence defeat current success",
+      "rationale": "In web-app/src/telas/Modelos.tsx, atualizarStatus's catch creates unavailable(item) by unconditionally replacing safeCode with TEMPLATE_REFRESH_UNAVAILABLE. The new selector uses exact TEMPLATE_CONTEXT_STALE classification before comparing context-relative numeric fences. After same-account reauthorization, an original-context PAUSED observation at fence 100 can be restored as historical while the new context has no observation. A failed explicit refresh relabels that historical copy as a current-class unavailable observation, retaining fence 100. A later successful current-context APPROVED response at fence 2 then loses numeric selection against 100, leaving historical PAUSED/unavailable status visible despite successful refresh. An unwarmed catalogue need not provide another current copy to rescue selection. Existing tests cover direct historical-to-current selection and same-context failure separately, leaving this composition uncovered. The newly introduced classifier makes this a changed-locus interaction rather than reopening unchanged architecture. The sequence is source-supported and has not been reproduced by this reviewer; it creates a conservative availability/status regression, without evidence of unauthorized sending.",
+      "suggested_action": "A (recommended): preserve historical-context classification when marking an already historical observation unavailable, so failure cannot manufacture current-context authority. Keep conservative failure restrictions for observations already belonging to the current context. B: represent context classification explicitly inside the existing observation owner if that can be done without expanding the public contract or adding another cache. C: require reload to recover the current observation; this leaves the approved explicit-refresh behavior unmet. Add a deterministic regression with an old historical fence greater than the restarted current fence: historical restore, current refresh failure, then current refresh success. Assert truthful retained time during failure and immediate adoption of current status/eligibility after success, with existing provider-call bounds and immutable operation binding preserved.",
+      "reviewer_labels": [
+        "fresh-internal-no-context-security-r30"
+      ],
+      "source_finding_ids": [
+        "SEC-R30-02"
+      ],
+      "category": "structural_soundness",
+      "formalizable_hint": "yes",
+      "candidate_rule_level": "project",
+      "candidate_rule_id": "n/a"
+    },
+    {
+      "finding_id": "F-E0B6E4E1",
+      "severity": "medium",
+      "title": "Equal-fence merging still applies draft-specific ineligibility to the common catalogue",
+      "rationale": "In web-app/src/telas/Modelos.tsx, selectTemplateObservation's equal-fence branch ANDs current.eligible with candidate.eligible. TemplateObservationService.projectSavedObservation separately narrows eligible for draft-definition matching and ACK association. Consequently, a fresh supported APPROVED catalogue row with available=true and eligible=true becomes commonly ineligible when an authorized draft read supplies the same remote ID/fence with available=true but draft-specific eligible=false. This occurs for a changed remote definition or PROVIDER_ACK_CONFLICT. mergeTemplateObservations processes catalogue pages and then the individual projection, so the common catalogue also displays the restriction. Removing the unconditional eligibleForUse veto does not resolve this equal-fence path because item.eligible is already false. The current scope test covers an older PAUSED individual and a newer catalogue fence, not this pairing. This is fresh evidence in the changed selector/scope correction and contradicts the explicit common-versus-draft boundary; it does not challenge accepted ACK handling. Exploitability is source-supported but unexecuted here. Blast radius is incorrect eligibility presentation for an already authorized account asset.",
+      "suggested_action": "A (recommended): preserve the authoritative common observation's eligibility when combining equal-fence common and draft projections, while retaining matchesDefinition/eligibleForUse and ACK restrictions for the editor. Preserve genuinely false common eligible/available gates; do not simply remove item.eligible or add a generic safeCode veto. B: make the existing projection explicitly scope-aware for the two views, using the same state owner and no additional API/cache. C: retain the extra catalogue restriction; this requires explicit disposition of the approved scope exception and should not silently close D07. Verify equal-fence common APPROVED/available/eligible data combined with draft-only rejection in both relevant orders: the catalogue remains eligible, the editor remains restricted, and false common gates still block. Use actual projector payload semantics; no browser ACK-conflict proof is inferred from the existing pure consumer case.",
+      "reviewer_labels": [
+        "fresh-internal-no-context-security-r30"
+      ],
+      "source_finding_ids": [
+        "SEC-R30-01"
+      ],
+      "category": "adherence",
+      "formalizable_hint": "yes",
+      "candidate_rule_level": "project",
+      "candidate_rule_id": "n/a"
+    }
+  ]
+}

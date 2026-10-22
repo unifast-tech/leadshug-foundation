@@ -1,0 +1,38 @@
+{
+  "schema": "stcon05.r30-root-candidate-disposition.v1",
+  "recorded_at_utc": "2026-10-22T00:37:12.844930+00:00",
+  "delivery": "Pending",
+  "current_all": "r30 all789 remains an honest accepted historical candidate; it does not cover the newly identified orderings. No rerun or product mutation yet.",
+  "adjudication": "Performance and TQA do not establish a severe runtime or test-quality blocker; security and adherence identify concrete changed-owner D07/D08 counterexamples. Lane thresholds are compatible. Root integrates three bounded corrections; no cosmetic third opinion and no debt waiver for these current behavior defects.",
+  "findings": [
+    {
+      "ids": [
+        "OPS-R3-01",
+        "SEC-R30-01",
+        "ADH-R30-02"
+      ],
+      "decision": "Integrated; blocking current candidate context/catalogue contract",
+      "evidence": "Common projectRow eligible=true versus same-fence projectSavedObservation eligible=false due draft association; equal-fence AND contaminates common view. Root confirmed source, not executed yet.",
+      "direction": "Preserve authoritative common eligibility separately from draft proof inside the existing component owner; retain genuine false common gates, strict editor proof and immutable ACK semantics. Add pure merge-order cases plus real BFF externally changed supported definition, no BFF mocking."
+    },
+    {
+      "ids": [
+        "SEC-R30-02"
+      ],
+      "decision": "Integrated; blocking current refresh/reload contract",
+      "evidence": "atualizarStatus catch overwrites exact historical classification with generic refresh-unavailable while retaining old context-relative numeric fence. Root confirmed source; sequence unexecuted.",
+      "direction": "Failure must not manufacture current-context authority from a historical observation. Test old high fence restored after normal same-account reauthorization, actual failed refresh, then actual lower-fence current success; retained time and immediate current DOM adoption."
+    },
+    {
+      "ids": [
+        "ADH-R30-01"
+      ],
+      "decision": "Integrated; blocking known newer PAUSED observation regression",
+      "evidence": "Successful individual refresh blindly replaces catalogue entry rather than selecting against its current known higher fence. Passive GET does not advance completed intent, so source-supported feasible ordering can revert PAUSED to old APPROVED before derived GET. Root confirmed source; no executed reproduction yet.",
+      "direction": "Select each same-resource page item against incoming status within current state; keep intent authority and persisted fence ordering independent. Real BFF held older individual response, newer cached PAUSED via passive GET, derived GET held during UI assertions; no added provider call or new store."
+    }
+  ],
+  "test_admission": "One sole executor may add deterministic fail-first regressions only on web-app/src/telas/Modelos.spec.ts and web-app/e2e/message-templates.spec.ts after public source inspection. Product Modelos/API/fixtures remain byte-exact. Stop for root static review/freeze before any canonical browser RED run. Preserve every existing assertion/cooldown/cardinality and real BFF payload. No selected tests, runner changes, broad fixtures or product correction in this step.",
+  "runtime": "DevOps preparation may finish as unexecuted public artifacts only. No preserved inspection/migration/build/recreate/tunnel/Meta action until new gates close.",
+  "security": "Reported credential containment and existing private-cohort read-budget debt remain unchanged; no new secret confirmation/retest."
+}

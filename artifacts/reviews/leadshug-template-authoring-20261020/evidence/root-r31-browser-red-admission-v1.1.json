@@ -1,0 +1,14 @@
+{
+  "schema": "stcon05.r31-browser-red-root-admission.v1",
+  "recorded_at_utc": "2026-10-22T00:47:39.547532+00:00",
+  "outcome": "GO exactly one canonical browser RED attempt; production unchanged",
+  "command": "bash scripts/test-channels-local.sh browser",
+  "freeze": "foundation_documentation/artifacts/reviews/leadshug-template-authoring-20261020/evidence/root-cp05-source-freeze-r31-orderings-test-only-v1.1.json",
+  "freeze_sha256": "336d25c5bb84de14738414380ce43f5bf1aa374066efbabba6722280b82c88a8",
+  "guards": "Normal execution authority GO; public diff snapshot421expected/0forbidden/0unclassified",
+  "executor": "Existing routed sole executor /root/template_validation_recovery; principal checkout; no auxiliary copy/worktree",
+  "capture": "Create exclusive artifacts/tmp/st-con-05-r31-browser-<timestamp>/; combined stdout/stderr tee from FIRST byte, capture immediate actual PIPESTATUS numeric runner-exit.txt even if nonzero, preserve source/runtime setup proofs after terminal.",
+  "stop": "No source edits, runner changes, selected tests, retry, concurrent validation, preserved Docker/DB/private config/build/recreate/tunnel/Meta action or product Git write. Stop at terminal for root evidence attribution.",
+  "expected_scope": "73 Playwright cases including1pure consumer. Modified historical-failure/current-fence case and3new actual BFF cases must reach exact relevant assertions. Both old FRC browser markers remain expected from main journey. New Web unit case is NOT executed in browser mode. No pre-accepted expected failure.",
+  "delivery": "Pending; current r30all789 remains historical candidate only. Three findings plus sibling catalogue race held. HOW opinion may run in parallel read-only, but no correction admitted until actual RED terminal and root review."
+}

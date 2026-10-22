@@ -1,0 +1,36 @@
+{
+  "schema": "stcon05.r30-new-ordering-evidence-plan.v1",
+  "recorded_at_utc": "2026-10-22T00:38:22.141538+00:00",
+  "status": "Source-supported counterexamples; new execution pending. r30 GREEN is not relabeled as a reproduction.",
+  "mandatory_answers": {
+    "1_existing_tests": "The current789 cover common/draft when catalogue fence is strictly newer, current-vs-historical direct selection, same-account refresh/reload, same-context refresh failure and passive reads versus newer UI intents. They do not cover equal-fence draft restrictions, failure laundering historical classification, or higher passive cache data arriving before an older admitted explicit completion.",
+    "2_real_payload": "Root inspected current backend projectRow/projectSavedObservation and current rendering/selection code. Existing canonical real-PG/BFF proofs establish those producer shapes generally, not these exact new sequences. The new browser cases must inspect actual BFF bodies and fences before code correction; no fabricated body or preserved business-data inspection is admitted.",
+    "3_exact_failed_test": "None of the existing789 failed. Current tests omit the three compositional orders identified by fresh security/adherence; new actual RED has not yet run. A readiness/compiler/fixture failure must not be called a product RED.",
+    "4_new_tests_before_fix": "Pure equal-fence merge-order/negative gates plus three real-BFF browser regressions: changed supported remote definition vs immutable draft; historical high fence→new-context failed refresh→lower current success; passive higher fence while older individual response is held, followed by held derived GET. Product remains frozen until static test review/admitted canonical browser RED terminal.",
+    "5_analyzer_assessment": "no-rule-needed for this bounded correction: validity depends on producer scope, context classes, persisted fences and actual async ordering. Generic syntactic bans on status assignment would have substantial false positives and cannot prove the protocol. Keep causal boundary tests and one selector owner. No rule or Delphi change authorized."
+  },
+  "coverage_matrix": [
+    {
+      "stage": "Provider fixture→real BFF→Prisma/PostgreSQL",
+      "state": "covered for existing scenarios; new exact payload sequences pending"
+    },
+    {
+      "stage": "Backend projection/DTO parsing",
+      "state": "existing proof plus source confirmation; new equal-fence/current-context composition pending"
+    },
+    {
+      "stage": "Web selector/cache adoption",
+      "state": "missing three exact orderings; tests being authored before correction"
+    },
+    {
+      "stage": "Final DOM/status/eligibility/time",
+      "state": "missing three exact orderings; must be asserted while race is still held"
+    },
+    {
+      "stage": "Actual Meta/preserved activation",
+      "state": "separate later approved gates; fixtures cannot substitute"
+    }
+  ],
+  "negative_guards": "Keep genuine common available=false/eligible=false, strict editor proof, same-context failure restrictions, truthful observedAt, immutable submission snapshot and exactly one create effect. All existing789 assertions remain required.",
+  "scope": "No API/schema/fixture/runner/Channel/ACK change, no new API/cache/credential mode or recipient send."
+}

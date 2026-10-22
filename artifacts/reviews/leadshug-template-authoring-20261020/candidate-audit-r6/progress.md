@@ -31,13 +31,15 @@
 - **Effective round package:** `/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/artifacts/reviews/leadshug-template-authoring-20261020/candidate-audit-r6/round-02/round-package.md`
 
 ## Round 03
-- **Status:** `prepared`
+- **Status:** `merged`
 - **Prepared at:** `2026-10-22T00:28:51+00:00`
+- **Merged at:** `2026-10-22T00:35:25+00:00`
+- **Round classification:** `needs_adjudication`
 - **Lane files:**
-  - `performance`: dispatch=`/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/artifacts/reviews/leadshug-template-authoring-20261020/candidate-audit-r6/round-03/dispatch/performance.dispatch.md` result=`/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/artifacts/reviews/leadshug-template-authoring-20261020/candidate-audit-r6/round-03/results/performance.result.json` (missing)
-  - `test-quality`: dispatch=`/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/artifacts/reviews/leadshug-template-authoring-20261020/candidate-audit-r6/round-03/dispatch/test-quality.dispatch.md` result=`/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/artifacts/reviews/leadshug-template-authoring-20261020/candidate-audit-r6/round-03/results/test-quality.result.json` (missing)
+  - `performance`: dispatch=`/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/artifacts/reviews/leadshug-template-authoring-20261020/candidate-audit-r6/round-03/dispatch/performance.dispatch.md` result=`/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/artifacts/reviews/leadshug-template-authoring-20261020/candidate-audit-r6/round-03/results/performance.result.json` (present)
+  - `test-quality`: dispatch=`/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/artifacts/reviews/leadshug-template-authoring-20261020/candidate-audit-r6/round-03/dispatch/test-quality.dispatch.md` result=`/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/artifacts/reviews/leadshug-template-authoring-20261020/candidate-audit-r6/round-03/results/test-quality.result.json` (present)
 - **Summary markdown:** `/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/artifacts/reviews/leadshug-template-authoring-20261020/candidate-audit-r6/round-03/round-summary.md`
 - **Effective round package:** `/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/artifacts/reviews/leadshug-template-authoring-20261020/candidate-audit-r6/round-03/round-package.md`
 
 ## Exact Next Step
-Spawn one no-context reviewer per required lane using the new current-round dispatch markdown files, then record each JSON result with `record-result`.
+Prepare a contradiction note, run the follow-up no-context challenge if needed, adjudicate the conflict explicitly, record the resolution with `record-resolution --status resolved`, then open the next round.

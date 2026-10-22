@@ -1,0 +1,42 @@
+{
+  "schema_version": "subagent-review-merge-v2",
+  "artifact_kind": "subagent_review_merge",
+  "authoritative": false,
+  "edit_policy": "derived_merge_packet",
+  "dispatch_path": "/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/artifacts/reviews/leadshug-template-authoring-20261020/candidate-audit-r6/round-03/dispatch/performance.dispatch.json",
+  "review_kind": "critique",
+  "review_count": 1,
+  "reviewer_labels": [
+    "fresh-internal-no-context-performance-r3"
+  ],
+  "highest_finding_severity": "medium",
+  "axis_summary": {
+    "performance": "acceptable",
+    "elegance": "acceptable",
+    "structural_soundness": "mixed",
+    "operational_fit": "mixed"
+  },
+  "recommended_paths": [
+    "Accept the performance corrections at candidate scope without another performance-driven redesign. Route OPS-R3-01 to the observation/adherence owner for narrow correction or explicit disposition. Preserve the private-cohort recovery-budget restriction and complete the remaining independent assurance, formal PCV, preserved TEST preflight, activation, actual provider proof and final review gates."
+  ],
+  "exact_next_step": "Record reviewer resolutions in the governing TODO using the machine-checkable resolution table or equivalent gate ledger, then extract the derived resolution packet and decide whether another bounded review pass is still required.",
+  "findings": [
+    {
+      "finding_id": "F-06BC46AD",
+      "severity": "medium",
+      "title": "Equal-fence merging can apply draft-specific ineligibility to the common catalogue",
+      "rationale": "Nonblocking under this dispatch's severe-runtime threshold. In web-app/src/telas/Modelos.tsx:123, the equal-fence branch combines eligible with current.eligible && candidate.eligible. TemplateObservationService.projectSavedObservation explicitly sets eligible=false when the saved draft definition differs or its ACK conflicts with the associated resource, while getCatalog/projectRow can correctly return eligible=true for the same current APPROVED, supported observation. Both projections carry the same remote ID and observation fence. Merging that draft observation into the common page therefore makes the catalogue ineligible even with draftScoped=false. The recent eligibility correction removes the eligibleForUse veto, but the contaminated eligible field still vetoes the common result. Consequently, opening a restricted draft can change an otherwise eligible account asset's catalogue presentation. This contradicts the package's explicit distinction between draft association restrictions and common catalogue eligibility. It is a source-derived counterexample, not an executed reproduction, and does not reopen durable ACK association semantics.",
+      "suggested_action": "A (recommended): preserve common-producer eligibility for catalogue presentation while retaining definition/ACK restrictions in the draft-scoped proof; keep genuinely unavailable or ineligible common observations restrictive. Resolve this within the existing owner without additional requests or frontend recomputation of backend eligibility. B: distinguish common observation eligibility and draft association eligibility explicitly in internal projection types, with contract review if public fields change. C: record the conservative catalogue false-negative as bounded nonblocking debt with an owner and follow-up. Verify equal-fence common APPROVED/eligible=true plus an actual draft projection restricted by definition mismatch or ACK conflict, in both merge orders: catalogue remains eligible, editor remains restricted, and common available=false or eligible=false still blocks both.",
+      "reviewer_labels": [
+        "fresh-internal-no-context-performance-r3"
+      ],
+      "source_finding_ids": [
+        "OPS-R3-01"
+      ],
+      "category": "operational_fit",
+      "formalizable_hint": "partial",
+      "candidate_rule_level": "project",
+      "candidate_rule_id": "n/a"
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "schema": "stcon05.immutable-dispatch-eof-whitespace.v1",
+  "recorded_at_utc": "2026-10-22T00:49:44.248948+00:00",
+  "decision": "Keep exact live-dispatched HOW prompt bytes, only generated EOF blank line. Standard check on all other staged paths; no source/runner gate change.",
+  "exceptions": {
+    "artifacts/reviews/leadshug-template-authoring-20261020/evidence/observation-owner-how-r31.dispatch.md": "5ba97caf9cefc41b8c26e88f837a2ff5f51bf6906fd56ea5b20448d7c848ff65"
+  }
+}

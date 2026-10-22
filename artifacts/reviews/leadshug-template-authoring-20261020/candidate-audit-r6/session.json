@@ -84,7 +84,7 @@
     },
     {
       "round": 3,
-      "status": "prepared",
+      "status": "merged",
       "prepared_at": "2026-10-22T00:28:51+00:00",
       "lanes": [
         {
@@ -111,8 +111,10 @@
       "summary_json_path": "/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/artifacts/reviews/leadshug-template-authoring-20261020/candidate-audit-r6/round-03/round-summary.json",
       "summary_markdown_path": "/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/artifacts/reviews/leadshug-template-authoring-20261020/candidate-audit-r6/round-03/round-summary.md",
       "resolution_markdown_path": "/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/artifacts/reviews/leadshug-template-authoring-20261020/candidate-audit-r6/round-03/resolution.md",
-      "round_package_path": "/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/artifacts/reviews/leadshug-template-authoring-20261020/candidate-audit-r6/round-03/round-package.md"
+      "round_package_path": "/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/artifacts/reviews/leadshug-template-authoring-20261020/candidate-audit-r6/round-03/round-package.md",
+      "merged_at": "2026-10-22T00:35:25+00:00",
+      "round_status": "needs_adjudication"
     }
   ],
-  "exact_next_step": "Spawn one no-context reviewer per required lane using the new current-round dispatch markdown files, then record each JSON result with `record-result`."
+  "exact_next_step": "Prepare a contradiction note, run the follow-up no-context challenge if needed, adjudicate the conflict explicitly, record the resolution with `record-resolution --status resolved`, then open the next round."
 }

@@ -1,0 +1,18 @@
+{
+  "recorded_at_utc": "2026-10-22T00:31:31.580772+00:00",
+  "review": "foundation_documentation/artifacts/reviews/leadshug-template-authoring-20261020/evidence/candidate-r30-test-quality.raw-attempt1.txt",
+  "sha256": "af9b12102b333f5111affb44fe3dad01561148c6548d2d8cc40c0b7cd56a8fd7",
+  "process_exit": 0,
+  "rubric_checks": {
+    "audit_framing": true,
+    "fail_first_and_limits": true,
+    "bypass_real_boundary_DI": true,
+    "CI_topology_platform": true,
+    "assertion_efficacy_efficiency": true,
+    "all_baseline_decisions": true,
+    "five_required_answers": true,
+    "remaining_gates_truthful": true
+  },
+  "decision": "Full applicable candidate TQA substantively returned; zero findings. The decision table is a textual mapping rather than Markdown rows; presentation alone does not reopen a nonblocking audit. Formal lane result recorded canonically.",
+  "limits": "Performance/security/adherence and preserved activation/provider/final review remain pending. Historical test-after/unknown and exact RED limits retained; no delivery claim."
+}

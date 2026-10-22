@@ -1,0 +1,28 @@
+{
+  "schema": "stcon05.ops-preparation-r30-root-static-review.v1",
+  "recorded_at_utc": "2026-10-22T00:39:29.074492+00:00",
+  "profile": "Operational/DevOps preparation review only; Genesis ruled out; docker/prisma/postgresql/nestjs/react/vite scopes; environment-readiness/profile/local activation plan reloaded. Return to Operational/Coder test handoff afterward.",
+  "helper": "foundation_documentation/artifacts/tmp/stcon05-activation-prep-r30/stcon05_local_migrations_once.py",
+  "sha256": "a33adb1e51b2f3b4f4d6bc57d3beb7268bbe474869818e4a536b0f9d5fa3456b",
+  "status": "Not executable as admitted delivery; never invoked. Product candidate currently held.",
+  "useful_preparation": "Separate phase-specific GO; exclusive deploy marker; exact source/migration inventories; metadata-only catalog; no dotenv/local-files traversal; stdin Compose fragment with empty env discovery; positive archive plan.",
+  "required_before_future_admission": [
+    {
+      "issue": "Container lookup uses docker ps --quiet without --no-trunc but inspect_one compares full row.Id to supplied ID; normal Docker output will fail cardinality/identity validation.",
+      "action": "Use full IDs or canonicalize safely inside exact owned lookup, never relax project/service/owner checks."
+    },
+    {
+      "issue": "Plan claims three HEADs checked but verify_static_sources hashes source/seals only; no HEAD comparison present.",
+      "action": "Add explicit read-only canonical git.exe HEAD checks against the accepted final freeze."
+    },
+    {
+      "issue": "Generic full docker inspect materializes peer Config.Env; future private reads must be narrowly authorized and projected.",
+      "action": "Use positive metadata projection for preserved peers and topology; admit API effective DATABASE_URL only in memory for actual connection, avoiding unrelated peer secrets. Reconcile any necessary PostgreSQL setting check explicitly before execution."
+    },
+    {
+      "issue": "All38-source freeze hardcoded r30 will become stale after current test/source correction.",
+      "action": "Refresh final source freeze/hash and exact helper static review after all/assurance, never weaken hash admission."
+    }
+  ],
+  "authority": "No helper execution, Docker/DB probe, image build, Config.Env read, migration, recreation, tunnel or provider action admitted. Prior helper remains dormant; sole writer should prioritize browser regressions and serialize any later helper repair."
+}

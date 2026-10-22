@@ -1,0 +1,59 @@
+{
+  "schema_version": "subagent-review-merge-v2",
+  "artifact_kind": "subagent_review_merge",
+  "authoritative": false,
+  "edit_policy": "derived_merge_packet",
+  "dispatch_path": "/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/artifacts/reviews/leadshug-template-authoring-20261020/evidence/candidate-r30-adherence.dispatch.json",
+  "review_kind": "architecture_adherence",
+  "review_count": 1,
+  "reviewer_labels": [
+    "fresh-internal-no-context-adherence-r30"
+  ],
+  "highest_finding_severity": "high",
+  "axis_summary": {
+    "performance": "acceptable",
+    "elegance": "mixed",
+    "structural_soundness": "mixed",
+    "operational_fit": "mixed"
+  },
+  "recommended_paths": [
+    "Hold candidate adherence closure for the two narrow observation-consumer corrections. Preserve the approved backend, ACK design and existing assertions. Add deterministic regressions for higher cached fence preservation and equal-fence common-versus-draft eligibility, run the required validation for the corrected source, and obtain affected independent reassessment. Then continue through the remaining candidate/PCV gates, bounded TEST preflight and activation, assisted actual Meta proof and fresh final review."
+  ],
+  "exact_next_step": "Record reviewer resolutions in the governing TODO using the machine-checkable resolution table or equivalent gate ledger, then extract the derived resolution packet and decide whether another bounded review pass is still required.",
+  "findings": [
+    {
+      "finding_id": "F-98F188B7",
+      "severity": "high",
+      "title": "An admitted refresh can overwrite a higher observation fence already cached in a catalogue page",
+      "rationale": "Blocking D07/D08 consumer gap in web-app/src/telas/Modelos.tsx, atualizarStatus(): the successful branch selects the response only against individualStatus, then unconditionally replaces matching catalogue items with that response. It never compares the incoming fence with the current catalogue item. A feasible ordering is: an individual refresh produces APPROVED at fence 2 but its response is held; another authorized client persists PAUSED at fence 3; an already pending passive catalogue GET reads fence 3 and reaches this screen while the individual response remains held. Passive reads correctly do not advance completedIntent, so the old individual intent remains admissible. Releasing fence 2 selects it against an older individualStatus and replaces the cached fence-3 catalogue item. Both views can revert to eligible APPROVED until the subsequent derived GET completes. Holding that derived GET exposes the regression. The current meaningful-intent tests do not cover this ordering because the newer observation here arrives through a passive read, without a newer completed UI intent. This is source-supported, not a reviewer-executed reproduction.",
+      "suggested_action": "A (recommended): apply the existing same-resource selector against the current catalogue entry before replacing it, and preserve the highest currently known observation across individual and catalogue state. Retain meaningful-intent admission as a separate condition; it does not replace persisted-fence ordering. B: centralize these writes in the already intended component-local observation reducer so every adoption reads the current cache atomically; no new API, provider call or generic store is needed. C: retain eventual correction by the derived GET; unsuitable because it permits a known PAUSED observation to regress during an outstanding read. Add a real-BFF regression with a held older individual response, a newer PAUSED observation admitted through a passive catalogue GET, and a held derived GET. Assert that editor/catalogue remain PAUSED and ineligible throughout release, with unchanged provider mutation counts.",
+      "reviewer_labels": [
+        "fresh-internal-no-context-adherence-r30"
+      ],
+      "source_finding_ids": [
+        "ADH-R30-01"
+      ],
+      "category": "adherence",
+      "formalizable_hint": "partial",
+      "candidate_rule_level": "project",
+      "candidate_rule_id": "n/a"
+    },
+    {
+      "finding_id": "F-30198E37",
+      "severity": "medium",
+      "title": "Equal-fence merging still promotes a draft-specific eligibility restriction into the common catalogue",
+      "rationale": "Blocking gap in the scoped-eligibility correction. TemplateObservationService.projectRow() returns common eligibility, whereas projectSavedObservation() replaces eligible with a value additionally constrained by matchesDefinition and ACK association. For the same current APPROVED, supported, available observation and fence, the catalogue can therefore return eligible=true while an authorized saved draft projection returns eligible=false, matchesDefinition=false and eligibleForUse=false. selectTemplateObservation(), at web-app/src/telas/Modelos.tsx:125\u2013126, combines equal-fence eligible values with AND. mergeTemplateObservations consequently produces eligible=false for the common item, and templateObservationEligible(..., draftScoped=false) still rejects it through item.eligible. Removing the unconditional eligibleForUse veto fixes the strictly-newer catalogue case tested in r29/r30, but not this equal-fence case. A changed remote definition or draft ACK-association conflict can thus suppress common catalogue eligibility. This contradicts the package's explicit separation of common catalogue eligibility from draft-specific proof; no generic safeCode veto is involved.",
+      "suggested_action": "A (recommended): preserve the common catalogue eligibility fact independently of draft-specific matchesDefinition/eligibleForUse restrictions within the existing selector/projection, while continuing to require both strict flags in the editor. Preserve real common eligible=false and available=false failures; do not repair this with a blanket OR or client-side eligibility recomputation. B: explicitly distinguish common observation facts from draft association proof in the existing internal projection, reviewing any public-contract change before implementation. C: retain false common ineligibility as an exception; not recommended and not currently approved. Add both merge-order tests using equal fences, available=true, common eligible=true and draft eligible=false/matchesDefinition=false/eligibleForUse=false. Require common eligibility true and editor eligibility false, retaining negative common-gate cases. Include a real-BFF saved-draft/catalogue case for an externally changed supported definition without changing immutable snapshots or ACK policy.",
+      "reviewer_labels": [
+        "fresh-internal-no-context-adherence-r30"
+      ],
+      "source_finding_ids": [
+        "ADH-R30-02"
+      ],
+      "category": "adherence",
+      "formalizable_hint": "yes",
+      "candidate_rule_level": "project",
+      "candidate_rule_id": "n/a"
+    }
+  ]
+}
