@@ -1,0 +1,9 @@
+{
+  "created_at_utc": "2026-10-22T14:37:07.505188+00:00",
+  "baseline_branch": "main",
+  "baseline_commit": "ef1ff014ab158760aadd6436e7c7f3542870c0ab",
+  "push_reference": "origin/main",
+  "push_exit_code": 0,
+  "scope": "planning only; all r1 material integrations and field/consumer mappings published before critique; no product mutation",
+  "prior_freeze": "b7dfb2120347c83996830a4c011b0a930ca4eadc"
+}

@@ -1,0 +1,14 @@
+{
+  "created_at_utc": "2026-10-22T14:38:40.373679+00:00",
+  "private_inspection": false,
+  "source": "explicitly enumerated public paths only; actual positive byte/hash comparisons",
+  "inherited_records_matched": 68,
+  "supplemental_records_matched": 1,
+  "current_product_heads": {
+    ".": "80e3940126f22a941f90dba4f5e801b6c0eb2f58",
+    "api-app": "db5a86758a165fac8a1ab587599c37b17890530c",
+    "web-app": "74b9d4b714044829796f875d00553f077c1c329d"
+  },
+  "product_mutation": false,
+  "runtime_tests_executed": false
+}

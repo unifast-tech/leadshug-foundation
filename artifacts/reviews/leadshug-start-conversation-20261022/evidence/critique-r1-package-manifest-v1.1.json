@@ -1,0 +1,158 @@
+{
+  "created_at_utc": "2026-10-22T14:37:34.573143+00:00",
+  "path": "foundation_documentation/artifacts/reviews/leadshug-start-conversation-20261022/critique-r1-package-v1.1.md",
+  "bytes": 531478,
+  "sha256": "7863ed57fa2714576415c20b428d00fce34bada7319997be5364734177bc48d6",
+  "source_files": [
+    {
+      "path": "foundation_documentation/todos/active/features/TODO-leadshug-start-conversation-by-contact.md",
+      "bytes": 143307,
+      "sha256": "dc1d2d40972c66f00f1ebdee344def481767d70c51d7f9d7dbc76d61bc7d4fce"
+    },
+    {
+      "path": "foundation_documentation/project_constitution.md",
+      "bytes": 4641,
+      "sha256": "abfafa5576d051da58583e2be57499320c8ad155c4ae741f259c730bcca98390"
+    },
+    {
+      "path": "foundation_documentation/policies/scope_subscope_governance.md",
+      "bytes": 1183,
+      "sha256": "aa18357e37417617b63ec5e58aba87c0f8c1e7518d6834d5cadfeda0a561dd84"
+    },
+    {
+      "path": "foundation_documentation/modules/inbox-and-conversations.md",
+      "bytes": 17733,
+      "sha256": "24b3f1edd8f10bf991d61135be2364b49679c43e5894ce024c2d5169921756a2"
+    },
+    {
+      "path": "foundation_documentation/modules/integrations-and-channels.md",
+      "bytes": 59235,
+      "sha256": "6b1865ab4f27458e1e1e225535e2f4a713e987e18344ca86d3f9411fa6c6f168"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-start-conversation-20261022/evidence/inherited-source-seal-v1.1.json",
+      "bytes": 16227,
+      "sha256": "25ab222f8fb25cb4e995a4fb08edc2b44363a61159162b77012215f91eb1ac0e"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-start-conversation-20261022/evidence/meta-primary-reference-receipt-v1.1.json",
+      "bytes": 2508,
+      "sha256": "7e0f20411a6bbe2a8d20282eda55885a14060fdf223357aa49aeb5bebdeec0df"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-start-conversation-20261022/evidence/freeze-after-architecture-v1.1.json",
+      "bytes": 406,
+      "sha256": "bcbff1131c56dd5a9994bcfec9e2fdcc5023f9ddfb0137ac257cc916aa12e607"
+    },
+    {
+      "path": "api-app/src/domain/channels/transport/channel.ts",
+      "bytes": 2678,
+      "sha256": "432796b8685d07dcc53c3a699a7b9d1469ac4fb110aea080766ec207bec8621f"
+    },
+    {
+      "path": "api-app/src/domain/channels/channel-credential-resolver.ts",
+      "bytes": 6500,
+      "sha256": "7782792bb945701cc6f6d0ac1460d0504356fa8d73a4261f37112f7c892a23ac"
+    },
+    {
+      "path": "api-app/src/domain/inbox/outbound.service.ts",
+      "bytes": 13056,
+      "sha256": "63bcf773e2b4c5a5ddd688a1bb13745a0a206d995fafc665925df3fecaf394aa"
+    },
+    {
+      "path": "api-app/src/domain/inbox/message-acceptance.service.ts",
+      "bytes": 15730,
+      "sha256": "b053744ee44b7e91fd45b5c146f759f55c70b8e517b8fbb1cab39806407335e1"
+    },
+    {
+      "path": "api-app/src/domain/inbox/conversations.service.ts",
+      "bytes": 8137,
+      "sha256": "c7d84f983ed61c6022424d4648e07282e7eb53c40fa9aba249618d77b3c223de"
+    },
+    {
+      "path": "api-app/src/domain/inbox/incoming.service.ts",
+      "bytes": 6076,
+      "sha256": "b0ec43187b1f48720aa899e40f979dd0ae447321581d675b84ef9c71dbd0ff42"
+    },
+    {
+      "path": "api-app/src/integrations/channels/prisma-channel-resolver.ts",
+      "bytes": 19223,
+      "sha256": "acf779d89162d339e37af2abe2aa91fd1a1b292d7f5208bb672090c87a23bf4d"
+    },
+    {
+      "path": "api-app/src/integrations/channels/meta-channel.ts",
+      "bytes": 1613,
+      "sha256": "997e739cf7d7231918dc97fc347bfeb32a1cd74d084ead8c64b01157022f8138"
+    },
+    {
+      "path": "api-app/src/integrations/channels/evolution-channel.ts",
+      "bytes": 1561,
+      "sha256": "60faf1ea40fe17ad62495b0f42a2cf958defcb41e3ad72d3d2213751539b460c"
+    },
+    {
+      "path": "api-app/src/integrations/channels/channel-adapter-factory.ts",
+      "bytes": 440,
+      "sha256": "e0ebdd78e387f7ee3af902f038d22449e212c1301ffa642bbceb5a5f05d2abfc"
+    },
+    {
+      "path": "api-app/src/integrations/channels/channel-transport.module.ts",
+      "bytes": 1663,
+      "sha256": "32203d3b8393a34a9effab4266683c389651d7ec197e8f9d704a77a6a37f40dc"
+    },
+    {
+      "path": "api-app/src/integrations/message-templates/template-management.module.ts",
+      "bytes": 595,
+      "sha256": "aabfb344eab0b244772f0a2a8066dbae71bb24973a0a498c69af676c17f0acdd"
+    },
+    {
+      "path": "api-app/src/integrations/message-templates/template-management.resolver.ts",
+      "bytes": 5094,
+      "sha256": "2a2a57355ff9fa29774cd4dfef33d9d3fd876bdf5d8a8fe654f0c0435284b59a"
+    },
+    {
+      "path": "api-app/src/integrations/meta/message-template.client.ts",
+      "bytes": 21888,
+      "sha256": "8dff223f7a97632cf228800cdbbb12ce6f5b151efc5fa30411d03e5ec3280cb5"
+    },
+    {
+      "path": "api-app/src/domain/message-templates/template-management.ports.ts",
+      "bytes": 4562,
+      "sha256": "c7ed169d87a4224f82f8d1abe109bfa02b913bb2cb63303fc6477673f45ed693"
+    },
+    {
+      "path": "api-app/src/domain/message-templates/template-observation.service.ts",
+      "bytes": 39343,
+      "sha256": "41c7c640fd31ca0759d0d88647e24c74787597dcf75fd8a3c773fe6e02965488"
+    },
+    {
+      "path": "api-app/src/surfaces/bff/conversations.controller.ts",
+      "bytes": 5626,
+      "sha256": "53d3cffaa258ba1ad45c21eae4ab8712e2011255b7ca14965f73221edd0cc002"
+    },
+    {
+      "path": "api-app/src/surfaces/bff/message-templates.controller.ts",
+      "bytes": 11822,
+      "sha256": "0e0449a80852a4513f626d0df7b1a5bb17b034eeceb50f53842fb91454ff4491"
+    },
+    {
+      "path": "api-app/src/surfaces/webhooks/meta.controller.ts",
+      "bytes": 6998,
+      "sha256": "64fd78568c1dc99e74df8a3f5b3157c43c6467ef03544b7741f0b9c7dc11200b"
+    },
+    {
+      "path": "api-app/prisma/schema.prisma",
+      "bytes": 38957,
+      "sha256": "fcbeb82ee13f96fd71ec83eb18b29749ba51bfcdd86fe82108d6e8a3b96efd69"
+    },
+    {
+      "path": "web-app/src/telas/Inbox.tsx",
+      "bytes": 21225,
+      "sha256": "d70bde9ede67759d479f644598356e46aac2916a12b2ed1770c17a169118586c"
+    },
+    {
+      "path": "web-app/src/api.ts",
+      "bytes": 16058,
+      "sha256": "177d660cccb7d74e47ef1dd180d9e74f830bce97b631c896c4e82fa39ae44a84"
+    }
+  ]
+}
