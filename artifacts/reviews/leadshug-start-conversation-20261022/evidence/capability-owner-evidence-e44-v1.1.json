@@ -1,0 +1,67 @@
+{
+  "kind": "Exact known manifest capability/command evidence; not canonical discovery-tool GO",
+  "recorded_at_utc": "2026-10-22T22:07:59.025596+00:00",
+  "source_seal": "browser-source-seal-e44-v1.1.json",
+  "owners": [
+    {
+      "manifest": "api-app/package.json",
+      "manifest_sha256": "df8551d3e506e7c68516cbd482362c4282671b7ec7eebbf121386390ac080a9d",
+      "lockfile": "api-app/package-lock.json",
+      "lockfile_sha256": "d1e45274c4b10d134469d7ec63e88777ec26b917d48197a03a4b97cefda047c7",
+      "capability_dependencies": {
+        "nestjs": {
+          "@nestjs/core": "^11.0.0"
+        },
+        "prisma": {
+          "@prisma/client": "^6.0.0",
+          "prisma": "^6.0.0"
+        }
+      },
+      "required_scripts": {
+        "build": "nest build",
+        "lint": "eslint \"{src,test}/**/*.ts\"",
+        "test": "vitest run --config vitest.config.ts",
+        "test:e2e": "vitest run --config vitest.config.e2e.ts --no-file-parallelism --maxWorkers=1",
+        "prisma:generate": "prisma generate",
+        "prisma:migrate": "prisma migrate deploy"
+      },
+      "execution_owner": "bash scripts/test-channels-local.sh all",
+      "observed_last_complete_phases": "E43 build/lint/unit/realPG andWebunit passed;browserRED3; no broad parity claim."
+    },
+    {
+      "manifest": "web-app/package.json",
+      "manifest_sha256": "fc9083821e246d50c080f409b3590902b033041231d1688c04c4140f097818de",
+      "lockfile": "web-app/package-lock.json",
+      "lockfile_sha256": "546aec97be8273cf195a16b75c0127474ea3a5042668f8d4c93aab96c1619c8f",
+      "capability_dependencies": {
+        "react": {
+          "react": "^18.3.1",
+          "react-dom": "^18.3.1"
+        },
+        "vite": {
+          "vite": "^5.4.11"
+        },
+        "browser": {
+          "@playwright/test": "^1.62.1"
+        }
+      },
+      "required_scripts": {
+        "build": "tsc -b && vite build",
+        "test": "vitest run",
+        "test:tela": "npm run build && playwright test"
+      },
+      "execution_owner": "bash scripts/test-channels-local.sh all",
+      "observed_last_complete_phases": "E43 build/lint/unit/realPG andWebunit passed;browserRED3; no broad parity claim."
+    }
+  ],
+  "canonical_helper_not_executed": {
+    "path": "delphi-ai/tools/node_capability_surface_audit.py",
+    "reason": "Even --manifest first calls load_manifests(root), whose manifest_paths os.walk recursively enumerates repository directories. It has no private-directory prune for .local-files; this conflicts with explicit approved no-private-traversal boundary.",
+    "source_references": [
+      "manifest_paths:155-169",
+      "audit:229-246"
+    ],
+    "handling": "Read only2explicit known public package.json/locks and attest against full source seal, owning dependencies/scripts and actual canonical runner. No modified/copied repository, monkeypatch, filtered faux GO, user waiver or silent private discovery."
+  },
+  "scope_limit": "This establishes only these known project owners and current declared commands; it does not inventory unknown packages or certify the whole actual filesystem. Fresh independent TQA still required."
+}

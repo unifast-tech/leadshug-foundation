@@ -1,0 +1,12 @@
+{
+  "checkpoint": "E44 terminal full positive source recheck",
+  "stage": "After actual executor terminal and owned cleanup; BEFORE writer release",
+  "count": 259,
+  "fingerprint": "f64b80cee172e00b056278976dd79aacce29d14c96e7c9d21561e1ca601e4e54",
+  "matches_preseal_full_inventory_and_bytes": true,
+  "record_reference": "browser-source-seal-e44-v1.1.json#records",
+  "stdout_sha256": "8f7c82457524c5f63ea62212ba5afdc3dfc5cd7c9a7edf9014f7e0227f303858",
+  "executor_reported_exit_code": 1,
+  "recorded_at_utc": "2026-10-22T22:23:46.507067+00:00",
+  "boundary": "Only declared positive public roots and7 exact publicfiles; no actual env/data/process inspection."
+}

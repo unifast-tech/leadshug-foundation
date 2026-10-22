@@ -1,0 +1,384 @@
+{
+  "kind": "Criterion-specific candidate evidence index; not completion or review outcome",
+  "source_seal": "browser-source-seal-e44-v1.1.json",
+  "source_fingerprint": "f64b80cee172e00b056278976dd79aacce29d14c96e7c9d21561e1ca601e4e54",
+  "execution_state": "E43 all terminal RED; API353/PG435/Web53 passed, browser82/85. E44 browser active with expected storage-read causal RED; no complete current GREEN.",
+  "interpretation": "Each row is a proof target index and actual checkpoint limits, not a completed criterion. Fresh current all, exact assertion/review sufficiency, preserved-runtime image/migration and operator proofs are still needed.",
+  "criteria": [
+    {
+      "criterion_id": "DOD-01",
+      "approved_criterion": "opening invokes no automation; manual-open-without-send then first inbound leaves NOVA_CONVERSA false while keyword automation retains its predicate; authorized operator opens/reuses BU/contact atomically; no side effects listed in SCOPE-01 occur; new conversation has truthful empty state and deterministic list ordering.",
+      "candidate_source_references": [
+        "api-app/test/conversation-start.e2e-spec.ts",
+        "web-app/e2e/start-conversation.spec.ts"
+      ],
+      "proof_target": [
+        "Atomic open/reuse,5x20 open requests, no trigger on open/first IN and separate keyword case.",
+        "Browser empty-open and reuse-before-send audit."
+      ],
+      "remaining_or_limit": [
+        "E43 API cases passed and E44 open browser passed individually; exact final-candidate assertion sufficiency and full current GREEN pending."
+      ],
+      "state": "candidate proof indexed; not complete",
+      "current_checkpoint": "E43 actual result: all-result-e43-v1.1.json and all-source-recheck-e43-v1.1.json; E44 still active"
+    },
+    {
+      "criterion_id": "DOD-02",
+      "approved_criterion": "stale/foreign BU, actor, slot, selected channel, grant, credential epoch/version, conversation generation, template fingerprint, or policy context fails closed before external dispatch.",
+      "candidate_source_references": [
+        "api-app/src/domain/channels/transport/channel-initial-message.spec.ts",
+        "api-app/test/initial-message.e2e-spec.ts",
+        "api-app/test/dispatch-admission.e2e-spec.ts",
+        "web-app/e2e/start-conversation.spec.ts"
+      ],
+      "proof_target": [
+        "Nine-field immutable-context mismatch unit matrix.",
+        "BFF forged grant/current session/grant/preflight deadline and owner/close fences.",
+        "Browser stale A-B-A preview and permission recovery."
+      ],
+      "remaining_or_limit": [
+        "Complete negative compound case, fresh browser execution, security review."
+      ],
+      "state": "candidate proof indexed; not complete",
+      "current_checkpoint": "E43 actual result: all-result-e43-v1.1.json and all-source-recheck-e43-v1.1.json; E44 still active"
+    },
+    {
+      "criterion_id": "DOD-03",
+      "approved_criterion": "Preview is escaped, deterministic, local/read-only and context-bound; supported textual subset and exact limits are enforced server-side.",
+      "candidate_source_references": [
+        "api-app/src/domain/inbox/initial-message-template-renderer.spec.ts",
+        "api-app/src/domain/inbox/initial-message.service.spec.ts",
+        "api-app/test/initial-message.e2e-spec.ts",
+        "web-app/e2e/start-conversation.spec.ts"
+      ],
+      "proof_target": [
+        "NAMED/POSITIONAL ordering/repeats/static component order/unsupported subset.",
+        "Local preview and changed-context preAdmission rejection.",
+        "React preview and explicit confirmation."
+      ],
+      "remaining_or_limit": [
+        "Three exact renderer boundary tests added E44 are not yet executed in API mode. Escaped inert HTML and no-effect preview passed individually in E44; whole browser terminal pending."
+      ],
+      "state": "candidate proof indexed; not complete",
+      "current_checkpoint": "E43 actual result: all-result-e43-v1.1.json and all-source-recheck-e43-v1.1.json; E44 still active"
+    },
+    {
+      "criterion_id": "DOD-04",
+      "approved_criterion": "existing Channel consumers remain substitutable; Meta supports declared text/template kinds; Evolution template is typed unsupported with zero HTTP; no second send method/provider branching outside adapters or DI cycle; immutable descriptor plus same-operation fence preserves common dispatch.",
+      "candidate_source_references": [
+        "api-app/src/domain/channels/transport/channel-dependencies.spec.ts",
+        "api-app/src/domain/channels/transport/channel-initial-message.spec.ts",
+        "api-app/test/channel-transport.e2e-spec.ts"
+      ],
+      "proof_target": [
+        "Inherited sealed dependency harness; union substitution and unsupported Evolution0HTTP.",
+        "Ordinary legacy text and initial protocol in same bound Channel."
+      ],
+      "remaining_or_limit": [
+        "Fresh independent architecture/adherence/cutover review."
+      ],
+      "state": "candidate proof indexed; not complete",
+      "current_checkpoint": "E43 actual result: all-result-e43-v1.1.json and all-source-recheck-e43-v1.1.json; E44 still active"
+    },
+    {
+      "criterion_id": "DOD-05",
+      "approved_criterion": "prove commit certainty at reservation/dispatch-claim/receipt/release, including real commit with lost ACK and real rollback; every remote eligibility/grant/phone GET completes before durable SENDING claim; the abstract fence CAS-claims immediately before one POST, and expiry of PREPARED during delayed preflight produces zero POST. Each initial attempt dispatches at most one POST; failures are classified truthfully; known provider ID is durably separate from local Message; recovery never contacts provider and never creates a Message without external ID.",
+      "candidate_source_references": [
+        "api-app/test/dispatch-admission.e2e-spec.ts",
+        "api-app/test/initial-message.e2e-spec.ts",
+        "web-app/e2e/start-conversation.spec.ts"
+      ],
+      "proof_target": [
+        "Actual PG commit-with-lost-ACK versus actual rollback at reservation/claim/receipt/release/completion.",
+        "Delayed remote GET expiry0POST, bounded protocol and same-key5x20.",
+        "Browser unknown response, reload and same-key replay/storage failure."
+      ],
+      "remaining_or_limit": [
+        "E43 complete protocol negative and actual commit/rollback ambiguity classification passed. E44 dedicated storage-read test reproduced deletion of original key; product correction and full fresh GREEN required. No external exactly-once claim."
+      ],
+      "state": "candidate proof indexed; not complete",
+      "current_checkpoint": "E43 actual result: all-result-e43-v1.1.json and all-source-recheck-e43-v1.1.json; E44 still active"
+    },
+    {
+      "criterion_id": "DOD-06",
+      "approved_criterion": "initial transaction locks identity then conversation, checks original pre-HTTP status/owner CAS before acceptance mutates updatedAt, permits eligible acceptance when status CAS fails, and recovers unique conflict by whole-local-transaction rollback/readback/re-entry at most once; MessageAcceptance remains sole Message owner and existing sender/error behavior is preserved; CAS prevents late initial outcome from changing concurrent claim/close/owner or reacquiring released slot. Initial acknowledgment in either allowed state waits for immutable dispatchDeadlineAt; before it409 ACK_TOO_EARLY and zero release.",
+      "candidate_source_references": [
+        "api-app/test/dispatch-admission.e2e-spec.ts",
+        "api-app/test/initial-message.e2e-spec.ts",
+        "api-app/src/domain/inbox/dispatch-admission.service.spec.ts",
+        "api-app/src/domain/inbox/message-acceptance.service.spec.ts"
+      ],
+      "proof_target": [
+        "Original owner/status CAS, competing echo P2002 in local reconciliation, known receipt local completion.",
+        "Risk ACK before/after DB deadline; exact deadline-1/equality/+1 deterministic unit predicate."
+      ],
+      "remaining_or_limit": [
+        "Independent transaction/lock-order review; do not call unit equality a PG wall-clock equality proof."
+      ],
+      "state": "candidate proof indexed; not complete",
+      "current_checkpoint": "E43 actual result: all-result-e43-v1.1.json and all-source-recheck-e43-v1.1.json; E44 still active"
+    },
+    {
+      "criterion_id": "DOD-07",
+      "approved_criterion": "official window uses only qualified trusted Meta IN timestamp for selected resource; all current BFF/public/BOT availability and send policy consumers use the same rule; timeline/cursors and performance bounds hold.",
+      "candidate_source_references": [
+        "api-app/src/domain/inbox/channel-window-policy.spec.ts",
+        "api-app/test/webhooks.e2e-spec.ts",
+        "api-app/test/number-onboarding-pcv.e2e-spec.ts",
+        "api-app/test/number-onboarding-typebot.e2e-spec.ts",
+        "api-app/test/api-publica.e2e-spec.ts",
+        "web-app/e2e/channel-transport.spec.ts"
+      ],
+      "proof_target": [
+        "Signed timestamp provenance, duplicate immutability, selected resource strict24h.",
+        "Single inspect/inspectMany boundary, batched public projection and OUT-heavy/no-IN EXPLAIN.",
+        "Preserved timeline/cursor suites included in all."
+      ],
+      "remaining_or_limit": [
+        "Fresh all/browser, cross-consumer cutover assessment."
+      ],
+      "state": "candidate proof indexed; not complete",
+      "current_checkpoint": "E43 actual result: all-result-e43-v1.1.json and all-source-recheck-e43-v1.1.json; E44 still active"
+    },
+    {
+      "criterion_id": "DOD-08",
+      "approved_criterion": "owner-scoped ordinary admissions and exclusive initial reservation serialize under the same conversation lock without serializing ordinary-versus-ordinary sends; uncertain dispatched tokens block initial reservation until settlement or explicit risk acknowledgment, never time takeover; late owner release cannot touch successor; existing composer is blocked before HTTP for new/empty/unresolved slot; public/BOT respect slot and retain existing mappings; text regressions pass.",
+      "candidate_source_references": [
+        "api-app/src/domain/inbox/outbound.service.spec.ts",
+        "api-app/test/dispatch-admission.e2e-spec.ts",
+        "api-app/test/channel-transport.e2e-spec.ts",
+        "api-app/test/atendimento.e2e-spec.ts",
+        "api-app/test/api-publica.e2e-spec.ts",
+        "web-app/e2e/start-conversation.spec.ts"
+      ],
+      "proof_target": [
+        "Ordinary per-owner overlap and exclusive initial slot; SENDING never time takeover.",
+        "BFF empty gate, PUBLIC/BOT mappings, owner-scoped settlement and late release.",
+        "Browser empty/unresolved composer block and risk controls."
+      ],
+      "remaining_or_limit": [
+        "Fresh browser and independent review."
+      ],
+      "state": "candidate proof indexed; not complete",
+      "current_checkpoint": "E43 actual result: all-result-e43-v1.1.json and all-source-recheck-e43-v1.1.json; E44 still active"
+    },
+    {
+      "criterion_id": "DOD-09",
+      "approved_criterion": "NAMED and POSITIONAL initial support is derived by the initial text renderer from the unchanged catalog components/format, independently of inherited authoring flags; exact full context binds management descriptor to selected transport and final text-window fence; current eligibility is checked before every new official template dispatch via bounded same-account reads; template is actually APPROVED; Meta request pins server-captured `messaging_account_id`, uses `+` plus full DDI, and preserves existing ordinary text semantics. Tests cover same-country and cross-country recipients. Official raw reference receipt confirms account pin and recipient formatting; actual own-account readiness remains unverified.",
+      "candidate_source_references": [
+        "api-app/src/domain/inbox/initial-message-template-renderer.spec.ts",
+        "api-app/src/domain/channels/transport/channel-initial-message.spec.ts",
+        "api-app/src/integrations/meta/initial-message.client.spec.ts",
+        "api-app/test/initial-message.e2e-spec.ts",
+        "web-app/e2e/start-conversation.spec.ts"
+      ],
+      "proof_target": [
+        "ST05 catalog flags remain unchanged; initial renderer independent.",
+        "Pinned account,+fullDDI,same/cross-country raw protocol,6GET/1POST upper case.",
+        "Negative current status/account/definition/membership bounds."
+      ],
+      "remaining_or_limit": [
+        "E43 API compound passed; E44 corrected shared catalog refresh/POSITIONAL browser passed individually. Actual same-account approved asset send/reply remains pending authorized runtime activation."
+      ],
+      "state": "candidate proof indexed; not complete",
+      "current_checkpoint": "E43 actual result: all-result-e43-v1.1.json and all-source-recheck-e43-v1.1.json; E44 still active"
+    },
+    {
+      "criterion_id": "DOD-10",
+      "approved_criterion": "per actor/account limits, tenant isolation, request/deadline budgets and zero-network recovery are demonstrated with real bounded counters/barriers.",
+      "candidate_source_references": [
+        "api-app/test/dispatch-admission.e2e-spec.ts",
+        "api-app/test/initial-message.e2e-spec.ts",
+        "api-app/src/integrations/meta/initial-message.client.spec.ts"
+      ],
+      "proof_target": [
+        "10/min actor,60/h opaque canonical account, retained released attempts; forged grant rejection.",
+        "75s bounded preflight, immutable90s lease, no-retry provider counters, local-only recovery."
+      ],
+      "remaining_or_limit": [
+        "Final exact safety/rate scenario coverage review; metrics synthetic only."
+      ],
+      "state": "candidate proof indexed; not complete",
+      "current_checkpoint": "E43 actual result: all-result-e43-v1.1.json and all-source-recheck-e43-v1.1.json; E44 still active"
+    },
+    {
+      "criterion_id": "DOD-11",
+      "approved_criterion": "additive migration passes explicit preflight and disposable local validation without reset/drop; current source/image/API freshness and approved local validation topology are proven.",
+      "candidate_source_references": [
+        "api-app/prisma/schema.prisma",
+        "api-app/prisma/migrations/20261022140000_initial_message_orchestration/migration.sql",
+        "api-app/prisma/migrations/20261022150000_initial_message_admissions/migration.sql",
+        "api-app/prisma/migrations/20261022160000_initial_message_inbox_order/migration.sql",
+        "api-app/test/dispatch-admission.e2e-spec.ts",
+        "web-app/e2e/timeline-freshness.ts"
+      ],
+      "proof_target": [
+        "Disposable migrate deploy/status; ST04 columns/native types/enum/constraints/index facts.",
+        "5s lock timeout/60s statement timeout; positive-public source pre/post seals."
+      ],
+      "remaining_or_limit": [
+        "Preserved actual local runtime plan authorization, application/image/served bundle binding, migration review; not whole-DB drift proof."
+      ],
+      "state": "candidate proof indexed; not complete",
+      "current_checkpoint": "E43 actual result: all-result-e43-v1.1.json and all-source-recheck-e43-v1.1.json; E44 still active"
+    },
+    {
+      "criterion_id": "DOD-12",
+      "approved_criterion": "assisted proof: operator sends first unofficial message, an actually APPROVED official template, receives a reply; no auto-contact; if eligible approved asset is unavailable, completion remains blocked.",
+      "candidate_source_references": [],
+      "proof_target": [
+        "User reports own prior model APPROVED; human attestation only, not provider query or send."
+      ],
+      "remaining_or_limit": [
+        "Actual assisted first nonofficial text and approved official template plus recipient replies after fresh source-bound activation."
+      ],
+      "state": "candidate proof indexed; not complete",
+      "current_checkpoint": "E43 actual result: all-result-e43-v1.1.json and all-source-recheck-e43-v1.1.json; E44 still active"
+    },
+    {
+      "criterion_id": "DOD-13",
+      "approved_criterion": "architecture/adherence/security/performance/TQA/final/cutover/debt and delivery guards pass at their required stages; no open P1/P2; constraints SEC-R6-04, OPS-R4-01, TQA-ST05-03 remain truthfully carried.",
+      "candidate_source_references": [],
+      "proof_target": [
+        "Chronology/deviations E02/E04/E18/E35a and inherited SEC-R6-04/OPS-R4-01/TQA-ST05-03 explicitly preserved."
+      ],
+      "remaining_or_limit": [
+        "Full canonical diff guard exception/GO, independent formal reviews, PCV packets, module consolidation, delivery/completion gates."
+      ],
+      "state": "candidate proof indexed; not complete",
+      "current_checkpoint": "E43 actual result: all-result-e43-v1.1.json and all-source-recheck-e43-v1.1.json; E44 still active"
+    }
+  ],
+  "validation_crosswalk": {
+    "VAL-01": [
+      "DOD-01",
+      "DOD-04",
+      "DOD-08"
+    ],
+    "VAL-02": [
+      "DOD-02",
+      "DOD-05",
+      "DOD-06",
+      "DOD-08",
+      "DOD-10"
+    ],
+    "VAL-03": [
+      "DOD-02",
+      "DOD-04",
+      "DOD-09"
+    ],
+    "VAL-04": [
+      "DOD-07"
+    ],
+    "VAL-05": [
+      "DOD-07",
+      "DOD-10"
+    ],
+    "VAL-06": [
+      "DOD-01",
+      "DOD-02",
+      "DOD-03",
+      "DOD-05",
+      "DOD-08"
+    ],
+    "VAL-07": [
+      "DOD-11"
+    ],
+    "VAL-08": [
+      "DOD-11",
+      "DOD-12"
+    ],
+    "VAL-09": [
+      "DOD-13"
+    ]
+  },
+  "causality": "Do not retroactively claim test-first: only documented actual causal REDs qualify. Most added fault/protocol/storage cases are alongside/post-implementation.",
+  "validation_rows": [
+    {
+      "criterion_id": "VAL-01",
+      "mapped_dod_ids": [
+        "DOD-01",
+        "DOD-04",
+        "DOD-08"
+      ],
+      "state": "pending exact current terminal/review and runtime where applicable",
+      "criterion_source": "Approved TODO Validation Steps, not inferred from aggregate counts"
+    },
+    {
+      "criterion_id": "VAL-02",
+      "mapped_dod_ids": [
+        "DOD-02",
+        "DOD-05",
+        "DOD-06",
+        "DOD-08",
+        "DOD-10"
+      ],
+      "state": "pending exact current terminal/review and runtime where applicable",
+      "criterion_source": "Approved TODO Validation Steps, not inferred from aggregate counts"
+    },
+    {
+      "criterion_id": "VAL-03",
+      "mapped_dod_ids": [
+        "DOD-02",
+        "DOD-04",
+        "DOD-09"
+      ],
+      "state": "pending exact current terminal/review and runtime where applicable",
+      "criterion_source": "Approved TODO Validation Steps, not inferred from aggregate counts"
+    },
+    {
+      "criterion_id": "VAL-04",
+      "mapped_dod_ids": [
+        "DOD-07"
+      ],
+      "state": "pending exact current terminal/review and runtime where applicable",
+      "criterion_source": "Approved TODO Validation Steps, not inferred from aggregate counts"
+    },
+    {
+      "criterion_id": "VAL-05",
+      "mapped_dod_ids": [
+        "DOD-07",
+        "DOD-10"
+      ],
+      "state": "pending exact current terminal/review and runtime where applicable",
+      "criterion_source": "Approved TODO Validation Steps, not inferred from aggregate counts"
+    },
+    {
+      "criterion_id": "VAL-06",
+      "mapped_dod_ids": [
+        "DOD-01",
+        "DOD-02",
+        "DOD-03",
+        "DOD-05",
+        "DOD-08"
+      ],
+      "state": "pending exact current terminal/review and runtime where applicable",
+      "criterion_source": "Approved TODO Validation Steps, not inferred from aggregate counts"
+    },
+    {
+      "criterion_id": "VAL-07",
+      "mapped_dod_ids": [
+        "DOD-11"
+      ],
+      "state": "pending exact current terminal/review and runtime where applicable",
+      "criterion_source": "Approved TODO Validation Steps, not inferred from aggregate counts"
+    },
+    {
+      "criterion_id": "VAL-08",
+      "mapped_dod_ids": [
+        "DOD-11",
+        "DOD-12"
+      ],
+      "state": "pending exact current terminal/review and runtime where applicable",
+      "criterion_source": "Approved TODO Validation Steps, not inferred from aggregate counts"
+    },
+    {
+      "criterion_id": "VAL-09",
+      "mapped_dod_ids": [
+        "DOD-13"
+      ],
+      "state": "pending exact current terminal/review and runtime where applicable",
+      "criterion_source": "Approved TODO Validation Steps, not inferred from aggregate counts"
+    }
+  ]
+}

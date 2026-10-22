@@ -51,6 +51,7 @@
   "activation": [
     "Recreate only selected API/Web using newly verified local images, no pull/restart of preserved providers or databases.",
     "Verify health and compiled/bundle equality through the existing gateway.",
+    "Public gateway config uses static upstream host resolution. After API/Web replacement, validate nginx config and gracefully reload only the existing gateway process so it resolves current API/Web container addresses; preserve its container/network/volume. Record health and served bundle after reload, not an old cached upstream. No provider/database restart.",
     "If a new owned temporary HTTPS tunnel is needed, validate DNS/TLS/health/assets and then have operator update Meta callback/privacy URLs; no automatic provider configuration changes."
   ],
   "assisted_proof": [
@@ -60,5 +61,39 @@
     "Record only safe outcome/state/timestamps and source-runtime attestation. Do not persist phone/contact/body/token.",
     "No automated sends, new contacts, routing changes, migration/registration at Meta, or Railway deployment."
   ],
-  "current_status": "Proposal only; no actual runtime/provider/private operation executed. E43 canonical all running on frozen source119149da; two test-counter discrepancies found by static audit remain queued after terminal. Own approved template availability is human-attested only."
+  "current_status": "Proposal only; no actual runtime/provider/private operation executed. E43 all ended RED (353API/435PG/53Web pass,82browser pass/3fail). E44 test-only browser is running frozen: corrected shared-catalog journey passed individually; dedicated storage-read test has causal RED before product fix. Full current candidate GREEN, independent reviews and own-account operator proof remain required.",
+  "build_context_positive_inputs": {
+    "api": {
+      "roots": [
+        "api-app/src",
+        "api-app/prisma"
+      ],
+      "exact_files": [
+        "api-app/Dockerfile",
+        "api-app/package.json",
+        "api-app/package-lock.json",
+        "api-app/tsconfig.json",
+        "api-app/tsconfig.build.json",
+        "api-app/nest-cli.json",
+        "api-app/docker/entrypoint.sh"
+      ]
+    },
+    "web": {
+      "roots": [
+        "web-app/src",
+        "web-app/public"
+      ],
+      "exact_files": [
+        "web-app/Dockerfile",
+        "web-app/package.json",
+        "web-app/package-lock.json",
+        "web-app/tsconfig.json",
+        "web-app/vite.config.ts",
+        "web-app/index.html",
+        "web-app/nginx/default.conf.template",
+        "web-app/docker/40-config-js.sh"
+      ]
+    },
+    "policy": "Reject symlinks; hash each positive input, produce generated archive only. Exclude every .env, node_modules, existing dist, e2e/test artifacts and all unlisted paths. Add no extra file by discovery or implicit COPY context. Source specs under admitted src remain public build inputs; build exclusions remain canonical."
+  }
 }

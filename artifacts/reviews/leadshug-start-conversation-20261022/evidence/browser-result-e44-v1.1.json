@@ -1,0 +1,46 @@
+{
+  "checkpoint": "E44 canonical browser terminal RED",
+  "recorded_at_utc": "2026-10-22T22:24:39.509520+00:00",
+  "command": "bash scripts/test-channels-local.sh browser",
+  "executor_session_id": 88340,
+  "actual_exit_code": 1,
+  "browser": {
+    "passed": 83,
+    "failed": 2,
+    "total": 85,
+    "duration": "14.6m"
+  },
+  "stdout_sha256": "8f7c82457524c5f63ea62212ba5afdc3dfc5cd7c9a7edf9014f7e0227f303858",
+  "owned_disposable_cleanup_observed": true,
+  "independent_postseal": "browser-source-recheck-e44-v1.1.json",
+  "freshness": "browser-freshness-collection-e44-v1.1.json",
+  "failures": [
+    {
+      "test": "retry com resposta pré-admission não apaga uma submissão anterior incerta",
+      "path": "web-app/e2e/start-conversation.spec.ts:231",
+      "actual": "Role alert does not contain expected recovery notice; exact expected notice is under role status.",
+      "classification": "Test selector mismatch; no product bug or suite success inferred. Later assertions in this test not reached.",
+      "next": "Select actual status region, preserving all immutable key/body/retry/negative-effect assertions."
+    },
+    {
+      "test": "mantém snapshot após resposta perdida e não repete o envio automaticamente no reload",
+      "path": "web-app/e2e/start-conversation.spec.ts:363",
+      "actual": "After an actually accepted BFF/PG send and lost browser response, persistent scoped Storage.getItem exception on reload; stored snapshot lookup via Object.entries is null. Production UI byte-exact to E43 before this test-only run.",
+      "classification": "Causal assertion RED before product fix: read exception catch deleted original persisted replay identity.",
+      "preceding_assertions": "Original key/body captured; accepted Message persisted; original BU/conversation explicitly reopened; read-fault flag true and no automatic second BFF POST.",
+      "not_reached": "Original key/body retention assertions after null, explicit read-error gate/button, blocked reread, later successful local reread, exact-key replay and final one-effect/Message assertions.",
+      "next": "Fail closed and preserve original storage on read failure; explicit local reread only. Recover same request/key, no automatic resend."
+    }
+  ],
+  "newly_passing_individual_proofs": [
+    "Shared raw-provider catalog refresh returns200 with available template, UI chooses POSITIONAL and dispatches once; no manual lease/catalog-observation seeding.",
+    "Escaped inert HTML preview is displayed as text with zero nested markup nodes; preview leaves local Message/state/provider counters unchanged.",
+    "Five20-trigger browser waves preserve single open request and single initial send/effect/Message per wave.",
+    "Existing protected template/onboarding browser test files pass unchanged."
+  ],
+  "limits": [
+    "Browser mode does not execute current API unit/fullPG/Web unit suites. Three new renderer boundary cases await next full all.",
+    "No criterion or delivery stage promoted. No actual preserved runtime/provider proof, independent implementation review or full diff-guard GO."
+  ],
+  "handoff": "Root independently verified259 records/full inventory,93changed source hashes and served/dist bundle, then released sole writer for bounded E45 UI/read retry and selector correction."
+}

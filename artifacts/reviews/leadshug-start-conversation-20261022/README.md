@@ -86,3 +86,7 @@ Os testes existentes passaram; quatro cenários novos ainda precisam de correç�
 ## Checkpoint E43 — API e Web passam; três provas de navegador pendentes
 
 Passaram353unitários deAPI,435integrações PostgreSQL e53Web; no navegador82/85. A rodada confirmou as novas falhas de gravação e o fluxo pelo teclado. [Resultado E43](evidence/all-result-e43-v1.1.json). Além dos ajustes de teste, haverá reprodução de um risco na leitura do snapshot antes de qualquer correção de produto. O estado continua InProgress/Pending; não há ativação local ou entrega04 concluída.
+
+## Checkpoint E44 — template passa; recuperação precisa preservar a chave
+
+O navegador terminou com83testes aprovados e2falhas. O fluxo de template pela tela passou. A nova reprodução confirmou que uma falha de leitura no navegador apagava a chave original após uma resposta perdida; a correção foi liberada somente após conferir todas as259fontes e o bundle servido. A outra falha é um seletor de teste. [Resultado E44](evidence/browser-result-e44-v1.1.json). As próximas provas serão uma rodada completa e a revisão independente; a ativação local continua apenas proposta.

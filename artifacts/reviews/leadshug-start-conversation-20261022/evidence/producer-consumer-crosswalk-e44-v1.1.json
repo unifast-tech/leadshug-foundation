@@ -1,0 +1,118 @@
+{
+  "kind": "Candidate producer-to-consumer implementation/evidence crosswalk; not completion or independent finding clearance",
+  "recorded_at_utc": "2026-10-22T22:15:26.696170+00:00",
+  "source_seal": "browser-source-seal-e44-v1.1.json",
+  "state": "Current browser run active and source frozen",
+  "rows": [
+    {
+      "id": "manual-open",
+      "producer": "ConversationStartService atomically returns created/reused row without send/read/claim/automation",
+      "consumers": [
+        "NovaConversa dialog POST and onOpened",
+        "Inbox selected manual conversation / truthful list order"
+      ],
+      "exact_test_references": [
+        "api-app/test/conversation-start.e2e-spec.ts:25",
+        "api-app/test/conversation-start.e2e-spec.ts:64",
+        "api-app/test/conversation-start.e2e-spec.ts:153",
+        "api-app/test/conversation-start.e2e-spec.ts:177",
+        "web-app/e2e/start-conversation.spec.ts:74"
+      ],
+      "evidence_and_limit": "API assertions passed E43; first open browser passed E44 individually; full current result pending"
+    },
+    {
+      "id": "qualified-window",
+      "producer": "Verified signed Meta IN timestamp accepted only for current managed identity; Message.officialInboundAt nullable",
+      "consumers": [
+        "PrismaChannelResolver.inspectForConversation",
+        "PrismaChannelResolver.inspectManyForConversations via BFF/public listing",
+        "OutboundService ordinary BFF/PUBLIC/BOT",
+        "Initial text dispatch claim in transaction"
+      ],
+      "exact_test_references": [
+        "api-app/src/domain/inbox/channel-window-policy.spec.ts",
+        "api-app/test/webhooks.e2e-spec.ts",
+        "api-app/test/number-onboarding-pcv.e2e-spec.ts",
+        "api-app/test/number-onboarding-typebot.e2e-spec.ts",
+        "api-app/test/api-publica.e2e-spec.ts",
+        "web-app/e2e/channel-transport.spec.ts"
+      ],
+      "evidence_and_limit": "E43 corresponding suites passed; fresh current all and cross-consumer review pending"
+    },
+    {
+      "id": "shared-template-catalog",
+      "producer": "ST05 bounded catalog projector/lease/TTL remains owner; initial renderer consumes unchanged components",
+      "consumers": [
+        "Shared catalog route and PrimeiraMensagem template selector",
+        "Read-only local preview/escaped React text",
+        "Fresh same-account remote eligibility before new dispatch"
+      ],
+      "exact_test_references": [
+        "api-app/src/domain/inbox/initial-message-template-renderer.spec.ts:18",
+        "api-app/src/domain/inbox/initial-message-template-renderer.spec.ts:64",
+        "api-app/test/initial-message.e2e-spec.ts:329",
+        "web-app/e2e/start-conversation.spec.ts:447"
+      ],
+      "evidence_and_limit": "API NAMED/POSITIONAL compound passed E43; corrected real refresh+POSITIONAL browser passed E44 individually; new renderer boundary assertions not run until next all"
+    },
+    {
+      "id": "abstract-channel-union",
+      "producer": "One Channel.sendMessage(text|approved-template), readonly supportedKinds, awaited operation fence",
+      "consumers": [
+        "OutboundService ordinary calls",
+        "Initial coordinator through same OutboundService",
+        "Meta adapter concrete formatter",
+        "Evolution adapter text-only typed refusal"
+      ],
+      "exact_test_references": [
+        "api-app/src/domain/channels/transport/channel-dependencies.spec.ts",
+        "api-app/src/domain/channels/transport/channel-initial-message.spec.ts:46",
+        "api-app/src/domain/channels/transport/channel-initial-message.spec.ts:62",
+        "api-app/test/channel-transport.e2e-spec.ts"
+      ],
+      "evidence_and_limit": "E43 tests passed; fresh architecture/cutover review still required"
+    },
+    {
+      "id": "durable-intent-outcome",
+      "producer": "Immutable original key/body/context and truthful persisted receipt/uncertainty/state projection",
+      "consumers": [
+        "Scoped BFF create/read/reconcile/ack routes with session+grant+CSRF",
+        "api.ts safe closed error metadata",
+        "PrimeiraMensagem explicit recovery/exact retry and actor+BU+conversation sessionStorage"
+      ],
+      "exact_test_references": [
+        "api-app/test/dispatch-admission.e2e-spec.ts:165",
+        "api-app/test/dispatch-admission.e2e-spec.ts:196",
+        "api-app/test/initial-message.e2e-spec.ts:95",
+        "api-app/test/initial-message.e2e-spec.ts:206",
+        "web-app/e2e/start-conversation.spec.ts:198",
+        "web-app/e2e/start-conversation.spec.ts:266",
+        "web-app/e2e/start-conversation.spec.ts:599"
+      ],
+      "evidence_and_limit": "Backend E43 passed; current browser storage-read failure is causal RED and product fix is not yet made; status selector correction also pending terminal/postseal"
+    },
+    {
+      "id": "shared-admission-interlock",
+      "producer": "Ordinary per-owner tokens and exclusive initial slot use same conversation lock; no SENDING clock takeover",
+      "consumers": [
+        "BFF ordinary composer empty/unresolved gate",
+        "PUBLIC ordinary sender through ConversationsService",
+        "BOT ordinary sender through IncomingService",
+        "Initial reservation and explicit local risk release controls"
+      ],
+      "exact_test_references": [
+        "api-app/test/dispatch-admission.e2e-spec.ts:328",
+        "api-app/test/dispatch-admission.e2e-spec.ts:367",
+        "api-app/test/dispatch-admission.e2e-spec.ts:379",
+        "api-app/test/dispatch-admission.e2e-spec.ts:434",
+        "api-app/test/dispatch-admission.e2e-spec.ts:457",
+        "api-app/test/channel-transport.e2e-spec.ts",
+        "api-app/test/api-publica.e2e-spec.ts",
+        "web-app/e2e/start-conversation.spec.ts:531"
+      ],
+      "evidence_and_limit": "E43 corresponding tests passed; no external exactly-once or idempotency guarantee assigned to legacy PUBLIC/BOT"
+    }
+  ],
+  "external_proof_boundary": "Synthetic provider boundary plus real disposable BFF/PostgreSQL/browser. User attests own template APPROVED; same-account first-template actual send/reply and nonofficial first-send/reply are pending source-bound local activation.",
+  "assurance_boundary": "No full diff-guard, required implementation reviews, runtime activation or criterion checkbox promoted."
+}
