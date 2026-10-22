@@ -1,0 +1,13 @@
+{
+  "kind": "bounded positive-public API untracked inventory precheck only",
+  "source_command": "git.exe -C api-app ls-files --others --exclude-standard -z -- src test prisma",
+  "classification": "Current TODO expected glob inventory. Historical readonly hashes require separate exact seal check.",
+  "public_untracked_count": 41,
+  "unclassified_public_paths": [],
+  "all_classified": true,
+  "private_traversal": "No root-wide inventory command; explicit public src/test/prisma pathspec only.",
+  "limitations": [
+    "Not full Git diff expectation guard, no tracked diff or root/private/config coverage.",
+    "Not delivery/authority/strict readonly mutation proof."
+  ]
+}

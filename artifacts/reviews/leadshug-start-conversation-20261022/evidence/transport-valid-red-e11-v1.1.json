@@ -1,0 +1,30 @@
+{
+  "checkpoint": "E11 corrected admitted transport causal RED before production edits",
+  "command": "bash scripts/test-channels-local.sh api",
+  "runs": [
+    {
+      "session": 97310,
+      "exit": 1,
+      "stdout": "/tmp/stcon04-executor-transport-red.txt",
+      "stdout_sha256": "119929cbf00acd6c13ebf74e1f915d28b9666231f82610be58609c66c0ff88f4",
+      "unit": "28 files pass/2fail;304 pass/4fail",
+      "limitation": "Initial protocol fixture lacked captured account and staged late fence; corrected before production."
+    },
+    {
+      "session": 85250,
+      "exit": 1,
+      "stdout": "/tmp/stcon04-executor-transport-red2.txt",
+      "stdout_sha256": "7c89c58700dd03597418894582908553d802ecc810561b8fd725e1a9a57b029e",
+      "unit": "29 files pass/1fail;305 pass/3fail",
+      "target": "Evolution unsupported template makes legacy provider send; Meta template/initial text do not use new injected protocol client; ordinary text preservation tested independently."
+    }
+  ],
+  "stages": "Both synthetic stdout show generate/migrate, lint and build before failing unit suite. E2E not reached. Delegated no-lint/build prose is corrected by direct evidence.",
+  "causal_limits": [
+    "Only each first failed assertion was reached; WABA pin/fence/return reason/capability assertions later in tests are pending GREEN proof.",
+    "Corrected RED2 is before new Channel/adapters/client production changes; open/window post-wiring chronology remains unchanged."
+  ],
+  "path_resolution": "New test now at admitted domain/channels/transport/channel-initial-message.spec.ts; old executor-owned integration path absent from bounded positive-public untracked inventory.",
+  "coverage_scope": "Only transport initial dispatch boundary, not whole intent/admission/Meta protocol freshness/current authorization or delivered journey.",
+  "next": "Implement same abstract send union + readonly capabilities and new private Meta initial protocol dependency, preserve legacy client/ordinary text; protocol/preflight durability tests still required."
+}

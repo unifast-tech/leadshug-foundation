@@ -1,0 +1,31 @@
+{
+  "checkpoint": "E09 manual open + centralized window canonical checkpoint",
+  "command": "bash scripts/test-channels-local.sh api",
+  "runner_session": 31732,
+  "exit_code": 1,
+  "stdout": "/tmp/stcon04-executor-public-open.txt",
+  "stdout_sha256": "6ab8be78537b40fc383299bda9840501cfd0ed2fdc2a9d8deeaa309b0ae029fa",
+  "root_verified_stdout_hash": true,
+  "results": {
+    "unit_files_passed": 29,
+    "unit_tests_passed": 304,
+    "e2e_files_passed": 25,
+    "e2e_files_failed": 6,
+    "e2e_tests_passed": 385,
+    "e2e_tests_failed": 17,
+    "cleanup_reported": "completed"
+  },
+  "targeted_passes": [
+    "New test/conversation-start.e2e-spec.ts: empty QUEUED creation and immutable reuse after channel disconnected.",
+    "10 concurrent BFF open requests for same BU/contact: one201, nine200, same conversation ID, one row, no Message/provider send.",
+    "Current-resource trusted-window integration case remains passing."
+  ],
+  "not_full_proof": [
+    "Open authorization matrix, small-pool concurrency floor, manual-open first-inbound NOVA_CONVERSA/keyword, empty sorting/real browser still outstanding.",
+    "Durable intent/admission/first send/approved own template not delivered."
+  ],
+  "current_failures": "16 legacy fixture/window failures + new route catalog coverage assertion; no full GREEN.",
+  "route_coverage_adjudication": "src/domain/historico/catalogo.ts and cobertura.ts already explicitly admitted for bounded ST04; no new permission required for safe route/audit coverage. Test itself remains unchanged.",
+  "pending_deviation": "Two sealed test fixtures proposal awaits actual user validation; no application yet.",
+  "root_source_review": "Potential pool starvation from global Prisma metadata query while advisory-lock transaction held sent for correction/proof; retain scoped hydration and truthful createdAt."
+}

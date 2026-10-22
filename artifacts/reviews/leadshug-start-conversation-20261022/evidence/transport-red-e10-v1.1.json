@@ -1,0 +1,33 @@
+{
+  "checkpoint": "E10 transport first RED attempt, corrected test contract required",
+  "runner_session": 86380,
+  "command": "bash scripts/test-channels-local.sh api",
+  "exit_code": 1,
+  "stdout": "/tmp/stcon04-executor-public-channel-red.txt",
+  "stdout_sha256": "1ab45d3bcfc88db4c38af216017cfb6a6f2f1cefde0af76a448b4848dc2fea3d",
+  "root_verified_stdout_hash": true,
+  "results_from_stdout": {
+    "unit_files_passed": 28,
+    "unit_files_failed": 2,
+    "unit_tests_passed": 304,
+    "unit_tests_failed": 4,
+    "e2e": "not reached",
+    "cleanup_reported": "completed"
+  },
+  "count_correction": "Delegated prose reported306 pass; actual synthetic stdout summary is304 pass/4fail, used here.",
+  "causal_assessment": [
+    "Capabilities assertions failed because supportedKinds absent; valid contract-level target.",
+    "Evolution unsupported/zero-send assertion appears after failing capability assertion and was not reached; no zero-HTTP proof claimed.",
+    "Meta template test incorrectly expected object payload through immutable legacy MetaClient.enviarTexto; rejected before production implementation.",
+    "Non-Brazil ordinary text +DDI assertion contradicts preserving ordinary text semantics; corrected initial-only protocol test required.",
+    "Open unit failed brittle findUnique count1 vs2 after outside readiness correction; not a product regression claim."
+  ],
+  "path_deviation": {
+    "owned_new_test_path": "api-app/src/integrations/channels/channel-initial-message.spec.ts",
+    "issue": "Not in approved expected paths; public test-only temporary path drift.",
+    "resolution": "After terminal runner relocate same owned test into already admitted src/domain/channels/transport/channel-initial-message.spec.ts; adjust imports and wrong expectations; no product behavior/scope expansion.",
+    "status": "executor instructed; not yet independently rechecked"
+  },
+  "next": "Correct contract-valid tests at admitted path and capture actual RED before Channel/adapters/client production modifications.",
+  "delivery": "No transport implementation or whole04 delivery claim."
+}
