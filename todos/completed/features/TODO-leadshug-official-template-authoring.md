@@ -672,8 +672,8 @@ No product promotion authorized. Prior candidate adjudications and accepted priv
 
 - **Disposition:** move-completed
 - **Disposition reason:** escopo local aprovado concluído: all802, assurance/PCV/TQA, migrations e ativação preservadas, prova Meta assistida e revisões finais com achados integrados. Promoção de produto/Railway/produção está fora deste contrato e não impede seu closeout local.
-- **Post-commit/push status:** pending
-- **Next path/status action:** arquivo movido para todos/completed/features/TODO-leadshug-official-template-authoring.md; somente commit/push documental Foundation main após guardas finais. Nenhum commit/push de produto.
+- **Post-commit/push status:** pushed — Foundation main `8a3ce60e` publicado com closeout, módulos e evidências; atualização deste recibo é somente documental. Produto permanece sem commit/push.
+- **Next path/status action:** movimento para todos/completed/features/TODO-leadshug-official-template-authoring.md concluído; seguir ao refinamento separado de ST-CON-04, sem implementação antecipada. Nenhuma promoção de produto autorizada.
 
 ## Security Risk Assessment (Mandatory Before Delivery)
 

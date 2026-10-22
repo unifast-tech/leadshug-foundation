@@ -85,6 +85,6 @@
     "no production capacity/SLO/continuous health claim",
     "no product Git or deployment mutation"
   ],
-  "foundation_publication": "pending scoped documentation commit/push; guarded autonomous main surface",
+  "foundation_publication": "8a3ce60e committed and pushed to Foundation main, actual exit0. This receipt update is a separate documentation-only post-push checkpoint; no product Git writes.",
   "publication_formatting_note": "Four immutable tool-generated dispatch/merge Markdown inputs contain one final blank line. Default diff --check reports only those four EOF formatting notices. Preserve exact historical reviewer inputs; command-scoped core.whitespace=-blank-at-eof checks every other whitespace error. No product, approval or content check disabled."
 }
