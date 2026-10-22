@@ -1,0 +1,47 @@
+{
+  "checkpoint": "E28 source-sealed partial API integration candidate; lint failure",
+  "canonical_command": "bash scripts/test-channels-local.sh api",
+  "unified_exec_session_id": 47317,
+  "exit_code": 1,
+  "synthetic_stdout": "/tmp/stcon04-executor-api-integration-e28.txt",
+  "stdout_sha256": "6e092c57d894453009e162532c5475db8e98a6d06b5e43b3cbdd2704a377ded7",
+  "root_independently_verified": [
+    "Synthetic stdout SHA-256",
+    "Terminal bounded lint errors and disposable cleanup",
+    "All255 public source hashes and inventory unchanged from prelaunch freeze"
+  ],
+  "phases": {
+    "prisma_generate": "passed",
+    "disposable_migrate_deploy": "passed",
+    "disposable_migrate_status": "up to date",
+    "lint": "failed,3 errors",
+    "build": "not reached",
+    "unit": "not reached",
+    "postgresql_e2e": "not reached",
+    "owned_cleanup": "completed"
+  },
+  "failures": [
+    {
+      "path": "api-app/src/domain/inbox/outbound.service.spec.ts",
+      "line": 66,
+      "rule": "no-useless-assignment",
+      "variable": "allowed"
+    },
+    {
+      "path": "api-app/src/domain/inbox/outbound.service.ts",
+      "line": 208,
+      "rule": "no-useless-assignment",
+      "variable": "receipt"
+    },
+    {
+      "path": "api-app/src/integrations/meta/initial-message.client.ts",
+      "line": 67,
+      "rule": "@typescript-eslint/no-unused-vars",
+      "variable": "deadlineAt"
+    }
+  ],
+  "causality": "Candidate verification failure before tests, never claimed behavioral RED or GREEN. New recovery/receipt/ACK tests were written after their implementation and remain unvalidated.",
+  "scope": "Partial approved backend integration only; actual authenticated initial first-send BFF journey, exhaustive faults/concurrency, UI/browser and final assurance remain incomplete.",
+  "synchronization": "Queued planning message about next BFF test arrived between freeze and launch. Executor explicitly confirmed no additions/edits; complete postseal inventory corroborates. No live-edit violation inferred.",
+  "next": "Sole executor may now fix lint, implement actual BFF initial journey tests and remaining approved certainty/fingerprint/status corrections before another freeze. No preserved-runtime/provider operation."
+}
