@@ -1,0 +1,9 @@
+{
+  "schema": "stcon05.r34-capture-recovery-admission.v1",
+  "recorded_at_utc": "2026-10-22T01:47:15.813215+00:00",
+  "incident": "Executor created st-con-05-web while tee targeted st-con-05-r34-web; tee could not open the intended full-capture file. The one canonical web process was already live.",
+  "disposition": "Continue same execution with frozen source and recover available initial chunks plus complete later worker/terminal output. No retry and no claim of full first-byte capture. Creating the exact intended parent solely to preserve the live shell receipt is admitted.",
+  "requirements": "Retain actual runner PIPESTATUS, not tee/shell failure inference; provenance and omitted/truncated prefix disclosed. Exact executed unit assertions and source freeze control whether causal RED evidence can be accepted. Otherwise no acceptance.",
+  "limits": "This is not GREEN/full validation, candidate assurance, PCV or runtime admission. Final mandatory all still requires exclusive first-byte tee.",
+  "prevention": "Use one exclusive mktemp directory variable consistently for tee and receipt in later launches; no runner/CI change."
+}

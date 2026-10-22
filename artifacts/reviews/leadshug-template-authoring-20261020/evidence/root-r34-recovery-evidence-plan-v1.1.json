@@ -1,0 +1,12 @@
+{
+  "schema": "stcon05.r34-recovery-evidence-plan.v1",
+  "recorded_at_utc": "2026-10-22T01:45:28.798705+00:00",
+  "mandatory_answers": {
+    "existing_coverage": "Main browser actually failed after recovered200/APPROVED at1218. r33 pure failure coverage stopped at unavailable state or historical-context replacement and omitted current failure to positive individual to common page composition.",
+    "payload": "Root read unchanged backend projectObservation/projectRow: draft adds matchesDefinition/eligibleForUse; common projectRow omits them. r33 actual recovered status APPROVED is known; other recovered fields remain unobserved until added browser assertions execute. API/PG398 passed unchanged but not substituted for this precise payload.",
+    "failed_test": "Existing main case failed exact original editor eligibility oracle after recovery. New ordering cases58\u201362 all passed. Both template FRC markers were not reached.",
+    "new_tests": "Pure three-transition regression before product fix; current common failure fact must not gain draft-only proof, individual use stays conservative. Browser strengthens actual response/fence diagnostics before unchanged existing UI oracle, without more HTTP.",
+    "analyzer_assessment": "no-rule-needed for this bounded fix: current shared DTO helpers do not encode producer origin, so a syntactic flag ban would misclassify legitimate editor proof handling. Keep the origin boundary explicit and regression causal; no Delphi/rule change is authorized."
+  },
+  "contract_correction": "The r33-added test required a draft-only eligibleForUse flag on a common failure fact. That implementation-shaped expectation conflicts with the already accepted fresh HOW. Corrected to absent field plus all real common-negative gates, not weakened to pass current code. A true definition match stays true on availability failure."
+}

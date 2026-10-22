@@ -1,0 +1,16 @@
+{
+  "schema": "stcon05.r35-common-failure-proof-how-admission.v1",
+  "recorded_at_utc": "2026-10-22T01:49:13.476152+00:00",
+  "outcome": "GO minimal common-failure ownership correction; root static freeze before one all",
+  "authority": "Approved ST-CON-05 v1.1 D07/D08 and fresh source-aware HOW; no new WHAT/API/behavior scope.",
+  "evidence": [
+    "root-cp05-all-r33-terminal-v1.1.json",
+    "root-cp05-web-r34-recovered-red-terminal-v1.1.json",
+    "root-r34-recovery-evidence-plan-v1.1.json"
+  ],
+  "owned_path": "web-app/src/telas/Modelos.tsx",
+  "exact_direction": "The shared unavailable transform must only mark common observation facts available=false/eligible=false and preserve status/time/fence/historical classification. Do not introduce eligibleForUse=false into common pages. Apply eligibleForUse=false only to the matching individual/editor projection; preserve matchesDefinition semantic fact. Keep every other page/individual selection, reducer, source-aware projection and authority behavior unchanged.",
+  "prohibitions": "No generic clearing of safeCode, available/eligible true synthesis, suppression of real failed common facts, relaxed positive proof, page writes from individual success, extra HTTP/cache/type framework, or test assertion/cooldown/timeout changes. No backend/API/DTO/schema/fixtures/runner/helper/BCI/sealed/runtime/private/provider/product Git action.",
+  "stop": "Patch only source, report exact diff/hash then stop before tests/build. Root static review/reconstruction, freeze/guards and exclusive complete-capture all admission follow. Test-only files stay exact r34.",
+  "capture_prevention": "Future launch uses a single exclusive mktemp -d assigned variable for both tee and receipt. Existing failed capture is preserved, not retried or erased."
+}

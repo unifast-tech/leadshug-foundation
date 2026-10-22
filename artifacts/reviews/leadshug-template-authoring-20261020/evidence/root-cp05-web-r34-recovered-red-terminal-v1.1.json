@@ -1,0 +1,35 @@
+{
+  "schema": "stcon05.r34-recovered-web-root-terminal.v1",
+  "recorded_at_utc": "2026-10-22T01:49:13.476152+00:00",
+  "outcome": "Accept exact causal worker RED only; capture incomplete, not canonical full stdout",
+  "log": "foundation_documentation/artifacts/tmp/st-con-05-r34-web/recovered-worker-capture.log",
+  "log_bytes": 10597,
+  "log_sha256": "831b25d6a818eec33f7f9976b30387eef32a9883eec943d462e971f67d2c2f3e",
+  "capture_provenance": "foundation_documentation/artifacts/tmp/st-con-05-r34-web/capture-provenance.txt",
+  "capture_provenance_sha256": "c4f18029c4efa669238901bb7c54629442e9203bdb818d166d79ccaed8f93d52",
+  "receipt": "foundation_documentation/artifacts/tmp/st-con-05-r34-web/runner-exit-recovered.txt",
+  "receipt_sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865",
+  "exit": 1,
+  "exit_provenance": "Executor reports original exec shell exit1 after assigning runner PIPESTATUS and exiting it; canonical receipt write failed. Recovered receipt is explicitly a transcription of process result, not original shell receipt. Unit failures directly retained.",
+  "capture_limits": "Missing initial runner/setup prefix; recovered log starts debconf line. Tee parent mismatch and receipt-redirection failure retained. Never relabel as first-byte canonical stdout. No retry occurred.",
+  "passed": 40,
+  "failed": 2,
+  "freeze": "foundation_documentation/artifacts/reviews/leadshug-template-authoring-20261020/evidence/root-cp05-source-freeze-r34-failure-recovery-test-only-v1.1.json",
+  "freeze_sha256": "0562e33884994f212050bba100b63279a68ef4b559ca70d9d1fd3f4aeeb49762",
+  "source38_exact": true,
+  "protected30_exact": true,
+  "heads_exact": true,
+  "exact_red": [
+    {
+      "location": "Modelos.spec.ts:236:61",
+      "reached": "Common failure retained status/time/fence/current code and unavailable/eligible=false, then absence-of-draft-proof assertion fails: eligibleForUse exists as false.",
+      "not_reached": "Later individual/current/historical assertions in that case."
+    },
+    {
+      "location": "Modelos.spec.ts:292:22",
+      "reached": "Positive common+individualN, unavailable transition, positive individualN+1 proof asserted true, then commonN+1 without draft fields. Final projection has actual eligibleForUse false instead of true; all other matched observation/status/fence/time fields agree.",
+      "not_reached": "Final templateObservationEligible common/editor helper assertions after composed object check."
+    }
+  ],
+  "limits": "No browser new body diagnostics executed; actual r33 original UI failure supplies independent consumer symptom. This partial causal proof plus fresh HOW/source semantics supports narrow fix, not a full validation/assurance/runtime gate. Next all requires full exclusive first-byte capture."
+}

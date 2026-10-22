@@ -1,0 +1,61 @@
+{
+  "schema": "stcon05.r33-all-root-terminal.v1",
+  "recorded_at_utc": "2026-10-22T01:42:45.234283+00:00",
+  "outcome": "Failed one existing main consumer assertion; all newly admitted r31 ordering regressions now pass",
+  "log": "foundation_documentation/artifacts/tmp/st-con-05-r33-all/canonical-all.log",
+  "log_bytes": 214286,
+  "log_sha256": "f0cd0c5f884058ae9f2e396e70eebbe8778fdc186e7a8cadc028a128b48dff48",
+  "receipt": "foundation_documentation/artifacts/tmp/st-con-05-r33-all/runner-exit.txt",
+  "receipt_sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865",
+  "exit": 1,
+  "counts": {
+    "api_unit_passed": 284,
+    "postgresql_passed": 398,
+    "web_unit_passed": 41,
+    "playwright_passed": 72,
+    "playwright_failed": 1,
+    "total_passed": 795,
+    "total_cases": 796
+  },
+  "freeze": "foundation_documentation/artifacts/reviews/leadshug-template-authoring-20261020/evidence/root-cp05-source-freeze-r33-reviewed-observation-owner-v1.1.json",
+  "freeze_sha256": "e0b9336e7f62b1f2b2e9535c4c78aa5abc3b62e9112dfc9a0e6ca57fb3a37eed",
+  "source38_exact": true,
+  "protected30_exact": true,
+  "heads_exact": true,
+  "proofs": [
+    {
+      "path": "foundation_documentation/artifacts/tmp/st-con-05-r33-all/proofs/pre-worker-freshness.json",
+      "sha256": "2a1e6004113448dc2397e613b098afcc803b901cadaad6964bd147d17c20452e"
+    },
+    {
+      "path": "foundation_documentation/artifacts/tmp/st-con-05-r33-all/proofs/attestation-browser-authority.json",
+      "sha256": "7a872ffb0fffeee306184675e9b5210467f6a9ff6ce12622c26da13a3fe405b3"
+    }
+  ],
+  "source_capture_utc": "2026-10-22T01:27:20.232Z",
+  "runtime_capture_utc": "2026-10-22T01:27:14.446Z",
+  "served_dist_sha256": "fc60ad16a94147a3843df5d67fbfb104d46324e0e4c5fac08a899a4fdf4c4dc1",
+  "template_marker_counts": {
+    "MESSAGE-TEMPLATE-PCV": 1,
+    "MESSAGE-TEMPLATE-EPS": 1,
+    "TEMPLATE-RLS-EVIDENCE": 1,
+    "TEMPLATE-FRC-EVIDENCE": 0,
+    "TEMPLATE-FRC-UI-EVIDENCE": 0
+  },
+  "new_browser_cases_passed": [
+    "✓  58 e2e/message-templates.spec.ts:1743:1 › adota fence atual menor após falha de refresh e reautorização da mesma conta (55.2s)",
+    "✓  59 e2e/message-templates.spec.ts:1858:1 › apresenta observedAt real no editor e catálogo e o preserva após falha e expiração (34.9s)",
+    "✓  60 e2e/message-templates.spec.ts:1953:1 › mantém catálogo elegível e editor restrito quando a projeção do draft diverge no mesmo fence (13.1s)",
+    "✓  61 e2e/message-templates.spec.ts:2019:1 › GET passivo e refresh individual antigo não substituem PAUSED persistido com fence mais novo (53.8s)",
+    "✓  62 e2e/message-templates.spec.ts:2186:1 › GET passivo PAUSED vence resposta antiga do refresh explícito do catálogo (53.8s)"
+  ],
+  "failure": {
+    "test": "52 main template workflow",
+    "location": "web-app/e2e/message-templates.spec.ts:1218",
+    "error": "Expected editor elegível para uso futuro; element absent after 5000 ms locator wait. This is not the 240000 ms test timeout.",
+    "reached": "Submission, held-response ordering, reload, positive approval, contradictory GET 409, unavailable editor, then recovered refresh actual200 and body.status APPROVED. Existing UI eligibility assertion remains unchanged.",
+    "not_reached": "Later main failure-recovery cases, FRC browser probes/markers and subsequent main lifecycle assertions. Actual recovered available/eligible/draft-proof fields were not asserted by this original helper; do not claim them observed."
+  },
+  "source_supported_hypothesis": "The new unavailable reducer writes draft-specific eligibleForUse=false into common pages. Later common page adoption carries that false into a newer same-resource page lacking draft proof, which can then defeat equal-fence positive individual proof. Pure transition RED and stronger actual response diagnostics are pending, production still frozen.",
+  "next": "Test-only causal transition and factual response diagnostic, root static review/freeze then one canonical web RED. No automatic retry, preserved action or acceptance."
+}

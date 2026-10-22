@@ -1,0 +1,13 @@
+{
+  "schema": "stcon05.r35-all-admission.v1",
+  "recorded_at_utc": "2026-10-22T01:51:01.070616+00:00",
+  "outcome": "GO exactly one canonical all with complete capture on frozen principal source",
+  "command": "bash scripts/test-channels-local.sh all",
+  "freeze": "foundation_documentation/artifacts/reviews/leadshug-template-authoring-20261020/evidence/root-cp05-source-freeze-r35-common-failure-ownership-v1.1.json",
+  "freeze_sha256": "f6e6ef370bb3ddad89c081cbd5f5a727ae9ff7febffdef7e40b5afbee7d5fb48",
+  "guards": "38 sources/30 seals/3 heads exact; normal execution authority GO; public diff466 expected / zero deviations; static whitespace PASS",
+  "capture_prevention": "Before starting runner assign task_dir=$(mktemp -d foundation_documentation/artifacts/tmp/st-con-05-r35-all-XXXXXX), verify directory and opening both exclusive log/receipt destinations use SAME variable, never separately typed folder names. Retain tee first byte and immediately actual PIPESTATUS[0] numeric receipt even on failure. Preserve setup proof copies at terminal.",
+  "expected_scope": "284 API unit +398 real PostgreSQL +42 Web unit +73 Playwright =797 cases if all pass; expectations are not acceptance. All five template markers and actual recovered response diagnostics/unchanged DOM oracle required.",
+  "stop": "No source/test edit, automatic retry, selected tests, helper repair, concurrent validation, preserved runtime/DB/private config/provider/product Git. Stop at actual terminal/root attribution.",
+  "later": "Affected candidate assurance/PCV then bounded preserved metadata preflight, two TEST migrations, source-bound activation, actual Meta proof and fresh final review remain mandatory. Delivery Pending."
+}

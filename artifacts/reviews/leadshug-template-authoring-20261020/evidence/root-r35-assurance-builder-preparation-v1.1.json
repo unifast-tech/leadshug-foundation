@@ -1,0 +1,12 @@
+{
+  "schema": "stcon05.r35-assurance-builder-preparation.v1",
+  "recorded_at_utc": "2026-10-22T01:53:04.941228+00:00",
+  "mode": "Preparation only; syntax parsed, no future packet or fake GREEN generated",
+  "parent_builder": "foundation_documentation/artifacts/reviews/leadshug-template-authoring-20261020/evidence/assurance-post-r30-builder-preparation.py",
+  "parent_sha256": "aa04e90aef39ac497688399cdca7e99241c35267d3a3eacf1658dd1bc3217fe1",
+  "builder": "foundation_documentation/artifacts/reviews/leadshug-template-authoring-20261020/evidence/assurance-post-r30-builder-r35-preparation.py",
+  "builder_sha256": "067999bcc54ba35ed765c6955cc58ef8f6732b88d4c156596be78e6f786b3a08",
+  "bytes": 15217,
+  "changes": "Add exact root reducer-admission and recovery/capture dispositions, optional hash-checked capture provenance from RED records, and explicit scope/partial-capture calibration. Full changed source/diffs, full audit rubrics, prior resolutions, actual accepted all/log/receipt/markers/source/runtime bindings and 1000000-byte cap remain required. No live review was dispatched or reduced.",
+  "later": "Requires actual current GREEN and recorded round03 resolution before generating a package. Only the three admitted Web files may differ from reviewed r30."
+}

@@ -1,0 +1,12 @@
+{
+  "schema": "stcon05.r34-web-red-admission.v1",
+  "recorded_at_utc": "2026-10-22T01:45:28.798705+00:00",
+  "outcome": "GO exactly one canonical web RED; production unchanged",
+  "command": "bash scripts/test-channels-local.sh web",
+  "freeze": "foundation_documentation/artifacts/reviews/leadshug-template-authoring-20261020/evidence/root-cp05-source-freeze-r34-failure-recovery-test-only-v1.1.json",
+  "freeze_sha256": "0562e33884994f212050bba100b63279a68ef4b559ca70d9d1fd3f4aeeb49762",
+  "guards": "38 sources/30 seals/3 heads exact; execution authority GO; public diff458 expected / zero deviations",
+  "capture": "Exclusive artifacts/tmp/st-con-05-r34-web directory, complete combined first-byte tee and actual PIPESTATUS receipt even on nonzero.",
+  "stop": "No retry/edit/selected test/helper repair or preserved runtime/DB/private config/provider/product Git action. Stop at terminal for root exact attribution and narrow correction admission.",
+  "scope": "42 Web unit cases expected; the browser diagnostics remain unexecuted in this mode. No preaccepted failure/activation claim."
+}

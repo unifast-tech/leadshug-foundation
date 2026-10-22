@@ -1,0 +1,25 @@
+{
+  "schema": "stcon05.r35-static-tqa-support.v1",
+  "recorded_at_utc": "2026-10-22T01:50:33.899901+00:00",
+  "exit": 2,
+  "paths": [
+    "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app/src/domain/channels/channel-credential-resolver.spec.ts",
+    "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app/src/domain/message-templates/template-definition.spec.ts",
+    "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app/src/domain/message-templates/template-management.dependencies.spec.ts",
+    "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app/src/domain/message-templates/template-management.ports.spec.ts",
+    "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app/src/integrations/meta/message-template.client.spec.ts",
+    "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app/test/message-template-bff.e2e-spec.ts",
+    "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app/test/message-template-drafts.e2e-spec.ts",
+    "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app/test/message-template-management.e2e-spec.ts",
+    "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app/test/number-onboarding-bci.e2e-spec.ts",
+    "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app/test/number-onboarding-pcv.e2e-spec.ts",
+    "/mnt/c/unifast/leadshug/leadshug_now_docker/web-app/e2e/message-templates.spec.ts",
+    "/mnt/c/unifast/leadshug/leadshug_now_docker/web-app/src/api.spec.ts",
+    "/mnt/c/unifast/leadshug/leadshug_now_docker/web-app/src/telas/Modelos.spec.ts"
+  ],
+  "raw": "foundation_documentation/artifacts/reviews/leadshug-template-authoring-20261020/evidence/static-tqa-selected-r35.txt",
+  "raw_sha256": "223f78e21c4cf4364ac0a0f57f3989abfe5a7d366af70d4d9805be07b3532a30",
+  "counts": "Counts: hard_bypass=0 test_support=0 auth_shortcut=0 status_only=98 no_exception_only=0 ambient_subject_fallback=0 di_override=0 mock_hint=16",
+  "disposition": "Same 13 exact public tests. New actual browser recovery response asserts owned ID, availability, eligibility, draft proof and strict numeric fence advance before the unchanged DOM oracle; bounded metadata console is synthetic provider data only, not replacement for assertions. New pure recovery sequence proved causal RED; r33-added common proof-presence expectation was corrected explicitly under root HOW, retaining stronger failure facts and individual restriction. No original assertion/cooldown/timeout/request removed. Static hints require context; full independent TQA still mandatory.",
+  "boundary": "13 exact public files only; no broad Git scan, private path traversal or product/runtime mutation."
+}
