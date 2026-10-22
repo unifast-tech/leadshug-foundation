@@ -1,0 +1,11 @@
+{
+  "schema": "stcon05.r39-packet-builder-preparation.v1",
+  "at_utc": "2026-10-22T03:51:02.469942+00:00",
+  "outcome": "AST/static preparation only; no candidate package or review generated",
+  "old_path": "foundation_documentation/artifacts/reviews/leadshug-template-authoring-20261020/evidence/assurance-current-selection-builder-r37-preparation.py",
+  "old_sha256": "d4cbc5a42dc74eb09c24e36f36c987168d1fd15a976f65e4d9705e30cb887621",
+  "new_path": "foundation_documentation/artifacts/reviews/leadshug-template-authoring-20261020/evidence/assurance-current-selection-builder-r39-preparation.py",
+  "new_sha256": "3a2f81cae13ebcbb9e5845c0291c8bd86c5e8d27bacb5628f97452229b6a3e30",
+  "exact_change": "Only serialized inventory key unchanged_since_r30 -> unchanged_since_r35; actual builder baseline comparison is r35, so label must match. No workload/source omission/rubric/policy change; max1MB and all current acceptance/source/runtime/marker assertions intact.",
+  "future_use": "After actual GREEN/round04 resolution: current acceptance/freeze/source-runtime proofs; root-how root-r39-counter-root-review; staticTQA r39; red-evidence r36 causal + r37 compile terminal + r38 measurement terminal (failure records explicitly not original causal browser RED). r37 current-owner HOW and r38 typed review remain linked. PCV existing r37 generic extractor reads executor_id from accepted metadata; output basename prefix r39. Effective packet cap checked before any review."
+}

@@ -1,0 +1,27 @@
+{
+  "schema": "stcon05.r38-live-proof-capture-root.v1",
+  "recorded_at_utc": "2026-10-22T03:38:50.907551+00:00",
+  "outcome": "source/served proof snapshot only; all still running with browser failure, no gate acceptance",
+  "correction": "D/proofs was an assumed snapshot destination, not a runner output configuration. Canonical freshness helpers write fixed host Foundation tmp paths as declared in source. Root located actual current captured03:30 files and copied exact original bytes to exclusive r38 task namespace before any subsequent run. No evidence regeneration, runtime command, test rerun or product mutation.",
+  "source38_matches": true,
+  "api_web_heads_match": true,
+  "served_equals_dist": true,
+  "served_dist_sha256": "ba7560c12923e68148560d108f2b04571897b84e04e3e8a82339241101bc90fb",
+  "source_capture": "2026-10-22T03:30:31.071Z",
+  "runtime_capture": "2026-10-22T03:30:28.116Z",
+  "proofs": [
+    {
+      "canonical_host_path": "foundation_documentation/artifacts/tmp/number-onboarding-execution/pre-worker-freshness.json",
+      "snapshot": "foundation_documentation/artifacts/tmp/st-con-05-r38-all-WsVoGG/proofs/pre-worker-freshness.json",
+      "bytes": 13028,
+      "sha256": "8c51c61fdd5211f7e210a858effc0da68db697e4078be88fbc3ab36a6c4f5110"
+    },
+    {
+      "canonical_host_path": "foundation_documentation/artifacts/tmp/inbox-timeline-execution/attestation-browser-authority.json",
+      "snapshot": "foundation_documentation/artifacts/tmp/st-con-05-r38-all-WsVoGG/proofs/attestation-browser-authority.json",
+      "bytes": 14612,
+      "sha256": "78735f06b8ce05ef0f1cb9a8c293dccf50e1e433515cffdc026b46dced0d0a37"
+    }
+  ],
+  "limits": "Actual current all terminal/complete failure trace still required; no browser success or preserved activation claim."
+}

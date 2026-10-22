@@ -1,0 +1,61 @@
+{
+  "schema": "stcon05.r38-root-all-terminal.v1",
+  "recorded_at_utc": "2026-10-22T03:47:22.488076+00:00",
+  "outcome": "STOP one browser measurement assertion; not GREEN or delivery acceptance",
+  "executor_id": "/root/template_selection_executor_r37",
+  "counts": {
+    "api_unit": 284,
+    "api_postgresql": 398,
+    "web_unit": 45,
+    "playwright_passed": 74,
+    "playwright_failed": 1,
+    "total_passed": 801,
+    "total_failed": 1
+  },
+  "log": "foundation_documentation/artifacts/tmp/st-con-05-r38-all-WsVoGG/canonical-all.log",
+  "log_bytes": 213816,
+  "log_sha256": "2953620e2108ee74a1b0af7410ed80f97f6e413436310f83c2bfe81f24d723d5",
+  "receipt": "foundation_documentation/artifacts/tmp/st-con-05-r38-all-WsVoGG/runner-exit.txt",
+  "receipt_sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865",
+  "exit": 1,
+  "handoff": "foundation_documentation/artifacts/tmp/st-con-05-r38-all-WsVoGG/handoff.json",
+  "handoff_sha256": "c2e5abe4a43fe22decbdfa48a03a8093c84355d9c35bb50e865aedc7fc7936d4",
+  "freeze": "foundation_documentation/artifacts/reviews/leadshug-template-authoring-20261020/evidence/root-cp05-source-freeze-r38-current-selected-owner-typed-v1.1.json",
+  "freeze_sha256": "05b144997fff3b97eb15bb94cd08694591fe7389d2a396f29468c5d486bd1b38",
+  "source38_matches": true,
+  "protected30_exact": true,
+  "heads": {
+    "root": "80e3940126f22a941f90dba4f5e801b6c0eb2f58",
+    "api": "db5a86758a165fac8a1ab587599c37b17890530c",
+    "web": "74b9d4b714044829796f875d00553f077c1c329d"
+  },
+  "proofs": [
+    {
+      "path": "foundation_documentation/artifacts/tmp/st-con-05-r38-all-WsVoGG/proofs/pre-worker-freshness.json",
+      "sha256": "8c51c61fdd5211f7e210a858effc0da68db697e4078be88fbc3ab36a6c4f5110"
+    },
+    {
+      "path": "foundation_documentation/artifacts/tmp/st-con-05-r38-all-WsVoGG/proofs/attestation-browser-authority.json",
+      "sha256": "78735f06b8ce05ef0f1cb9a8c293dccf50e1e433515cffdc026b46dced0d0a37"
+    }
+  ],
+  "served_dist_sha256": "ba7560c12923e68148560d108f2b04571897b84e04e3e8a82339241101bc90fb",
+  "template_marker_counts": {
+    "MESSAGE-TEMPLATE-PCV": 1,
+    "MESSAGE-TEMPLATE-EPS": 1,
+    "TEMPLATE-RLS-EVIDENCE": 1,
+    "TEMPLATE-FRC-EVIDENCE": 1,
+    "TEMPLATE-FRC-UI-EVIDENCE": 1
+  },
+  "exact_failure": {
+    "test": "retém a observação passiva mais nova do draft B quando refresh antigo de A omite B",
+    "source": "web-app/e2e/message-templates.spec.ts:415",
+    "expected": 2,
+    "actual": 0,
+    "measurement": "effects.filter(meta.template.create)",
+    "reached": "Every preceding assertion in same case passed, including real BFF201 A/B accepted creation, exact empty page/cursor, B newer PAUSED fence, passive response, editor PAUSED/ineligible before and after old response, retained B article PAUSED/ineligible and A absent. Failure is final create counter only. No skipped/not-reached target UI assertion claimed."
+  },
+  "attribution": "Fixture timeline-fixtures.cjs records every template HTTP request in meta.templateCalls and providerCall before dispatch; normal accepted create appends resource but calls providerEffect only when holdsAfter/ambiguousAfter are configured. This normal scenario does not configure them. effects=[] is valid fixture behavior, so the new counter oracle queried the wrong collection. Existing templateCallCount reads the authoritative normal call record and can enforce exactly2 attempted POSTs, paired with already required201/ACCEPTED/resource identities. No fixture/product/contract change needed.",
+  "limits": "Exact terminal full log/receipt/source-served proof verified; reported container error-context.md unavailable after normal cleanup, not recreated or claimed. Candidate all failed, though all5 structured markers/main workflow and existing tests passed. No preserved DB/runtime/Meta/activation/production proof.",
+  "next": "Admit only last counter type/accessor change to existing templateCallCount, preserving expected2 and all other assertions; source product/tests immutable except these2browser lines. Fresh full all after root exact diff/freeze; candidate assurance still pending."
+}

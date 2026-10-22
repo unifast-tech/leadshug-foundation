@@ -1,0 +1,19 @@
+{
+  "schema": "stcon05.r39-counter-root-review.v1",
+  "outcome": "GO staticTQA and one complete current all",
+  "freeze": "foundation_documentation/artifacts/reviews/leadshug-template-authoring-20261020/evidence/root-cp05-source-freeze-r39-current-selection-counter-v1.1.json",
+  "freeze_sha256": "01e047218deb79b32b4ad6a229a476a3f697dd4ef31d0ce91fb3d60fd042e72c",
+  "source38_root_rehashed": true,
+  "all37_other_sources_exact": true,
+  "protected30_exact": true,
+  "heads": {
+    "root": "80e3940126f22a941f90dba4f5e801b6c0eb2f58",
+    "api": "db5a86758a165fac8a1ab587599c37b17890530c",
+    "web": "74b9d4b714044829796f875d00553f077c1c329d"
+  },
+  "diff": "--- r38/browser\n+++ r39/browser\n@@ -411,8 +411,8 @@\n     await expect(retainedBArticle.getByText('Não elegível para uso')).toBeVisible();\n     await expect(page.getByRole('region', { name: 'Modelos da conta' })\n       .getByText('retention_selection_a', { exact: true })).toHaveCount(0);\n-    const state = await fixture(request, '/provider/state') as { effects: Array<{ operation: string; name?: string }> };\n-    expect(state.effects.filter((effect) => effect.operation === 'meta.template.create')).toHaveLength(2);\n+    const state = await fixture(request, '/provider/state') as { meta: { templateCalls: Array<{ operation: string }> } };\n+    expect(templateCallCount(state, 'meta.template.create')).toBe(2);\n   } finally {\n     releasePassive();\n     releaseOldPage();\n",
+  "counter_contract": "Existing helper counts every attempted template-create HTTP request in meta.templateCalls; fixture providerCall always records it. Normal accepted paths do not record providerEffect unless hold/ambiguous conditions are configured. Expected2 plus existing actual201/ACCEPTED/owned remote identities and reached semantic/UI assertions enforce two successful independent creates and no extra POST; no expected0, assertion deletion, new fixture endpoint/hold or product change.",
+  "causal_and_how": "Original r36 pure causal RED; root-r37-current-selection-how-admission; exact typed r38 root-review; root-cp05-all-r38-counter-oracle-failure with full actual behavioral assertions reached but final counter failed. r38 browser is not original causal RED. All runtime/assurance/final gates remain pending.",
+  "capture": "Current all launch must record canonical host proof source paths and eventual snapshots separately. Copy exact current pre-worker and attestation bytes into task_dir/proofs after verifying source/capture, before any later run; do not assume runner writes directly there. Full first-byte log/numeric receipt/handoff.",
+  "limits": "No test or build rerun yet. Delivery Pending; no preserved action."
+}

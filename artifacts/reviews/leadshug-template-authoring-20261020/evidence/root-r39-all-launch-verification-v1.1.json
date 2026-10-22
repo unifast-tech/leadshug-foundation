@@ -1,0 +1,12 @@
+{
+  "schema": "stcon05.r39-all-launch-root-verification.v1",
+  "at_utc": "2026-10-22T03:51:41.426248+00:00",
+  "status": "running only; not terminal verdict",
+  "task_dir": "foundation_documentation/artifacts/tmp/st-con-05-r39-all-3KOaki",
+  "launch": "foundation_documentation/artifacts/tmp/st-con-05-r39-all-3KOaki/launch.json",
+  "launch_sha256": "49b344838c87b7e67310090b2f6bf2f3fb68e84cf09fdca3ac3011fe16300e77",
+  "executor_id": "/root/template_selection_executor_r37",
+  "session": 41974,
+  "command": "bash scripts/test-channels-local.sh all",
+  "next": "await same terminal; source/helper freeze; snapshot actual canonical host proofs after source/capture match, no regeneration/retry. All required gates remain."
+}

@@ -42,7 +42,7 @@ O usuário quer preparar no LeadsHug a mensagem que usará para iniciar atendime
 ## Delivery Status Canon (Required)
 - **Current delivery stage:** Pending
 - **Qualifiers:** none
-- **Next exact step:** executar e atribuir um único all r38 sobre evidence/root-cp05-source-freeze-r38-current-selected-owner-typed-v1.1.json, após revisão root exata dos dois ajustes nullable (reconstrução inversa do SHA r37,37outrasfontes/tests/browser imutáveis,30selos/3HEADs). All r37 terminou1: API unit284/PG398 passaram; Web unit/browser não executados por dois TS2345 já corrigidos. Captura first-byte/diretório real/recibo numérico/handoff byte-based, sem edição/retry durante execução. Após GREEN: resolução round04/fresh assurance afetada/PCV, ativação TEST/Meta assistida/final. Delivery Pending.
+- **Next exact step:** executar e atribuir um único all r39 sobre evidence/root-cp05-source-freeze-r39-current-selection-counter-v1.1.json, após root conferir inversão exata das2linhas do contador,37outrasfontes atuais/30selos/3HEADs e staticTQA13paths (0bypass/auth/support/ambient/DI). Produto r38 inalterado; expected2 permanece em templateCallCount normal. All r38 terminou801pass/1falha só no contador; alvos semânticos do caso41 e5markers passaram. Captura first-byte/recibo/handoff + snapshots de bytes originais dos paths host canônicos de freshness; sem edição/retry. Após GREEN: round04/fresh assurance/PCV, ativação TEST/Meta assistida/final. Delivery Pending.
 
 ## Active Work State (Required While TODO Remains In `active/`)
 - **Work state:** implementation

@@ -1,0 +1,16 @@
+{
+  "schema": "stcon05.r39-counter-repair-admission.v1",
+  "at_utc": "2026-10-22T03:48:12.017110+00:00",
+  "outcome": "GO only final counter source/accessor repair in new browser case",
+  "executor_id": "/root/template_selection_executor_r37",
+  "basis": "root-cp05-all-r38-counter-oracle-failure-v1.1.json; exact fixture lines200..243 and existing templateCallCount prove normal create records templateCalls always but effects only for configured holdsAfter/ambiguousAfter. Root reviewed source; no model/API behavior defect shown by final measurement failure. Authority/routing/publicdiff all GO.",
+  "owned_path": "web-app/e2e/message-templates.spec.ts",
+  "exact_changes": [
+    "Only state type at the end of case starting line277: replace effects Array with meta.templateCalls Array of operation:string.",
+    "Replace final effects filter/toHaveLength(2) with existing templateCallCount(state, meta.template.create)/toBe(2). Exact2 remains mandatory; preceding real201/ACCEPTED/remote identity, newer fence/PAUSED/UI/membership/cursor assertions all retained."
+  ],
+  "immutable": "All product sources, Modelos.spec.ts, all other browser lines/tests, helper/fixture/CI unchanged. No global effects instrumentation, holds, special test-only provider endpoints, expected0, remove assertion, payload rewriting, skipped coverage or source relaxation.",
+  "handoff": "Patch only then stop. Byte-generated handoff with exact before/after, hashes and37other frozen source checks under exclusive tmp/stcon05-selection-r39. No test/build/runtime/Git product until root current freeze/all admission.",
+  "verification": "Root inverse reconstruction must match exact r38 browser hash. Refresh staticTQA for changed test logic; one full canonical all after freeze. Snapshot ACTUAL canonical host freshness files into new task_dir/proofs after matching current source/capture; source paths are number-onboarding-execution/pre-worker-freshness.json and inbox-timeline-execution/attestation-browser-authority.json. No fake path proof or regeneration.",
+  "limits": "r38 reached all behavioral assertions of case41; final measurement failed. It is not browser causal RED for original selected-owner bug. Original r36 pure causal RED and test-after/unknown debt remain.801pass/1fail of802 is not a complete GREEN; no delivery/activation."
+}
