@@ -51,5 +51,7 @@
     "E43 all in progress, not terminal proof.",
     "Formal fresh no-context TQA and exact criterion matrix remain required.",
     "No retroactive test-first, whole-suite pass, delivery or runtime claim."
-  ]
+  ],
+  "durable_public_output": "test-quality-static-output-e43-v1.1.txt",
+  "durable_output_policy": "Exact source-only scan output from11explicit public test files; not actual runtime/process/business logs."
 }

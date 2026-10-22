@@ -1,0 +1,49 @@
+{
+  "kind": "Evidence-first recovery risk investigation; runtime reproduction pending",
+  "recorded_at_utc": "2026-10-22T21:56:10.186441+00:00",
+  "skill": "delphi-ai/skills/bug-fix-evidence-loop/SKILL.md",
+  "source_fingerprint_before": "119149da2b803ed539962d57eaeb6ee0485bf6853ed1cdebeda6a56c4cc3bdfa",
+  "source_fact": {
+    "path": "web-app/src/componentes/NovaConversa.tsx",
+    "stage": "PrimeiraMensagem storageKey load effect",
+    "observation": "getItem/parse/validation failures share catch; catch attempts removeItem, then snapshotLoaded becomes true. A read exception is treated as absence and can erase an exact persisted replay key.",
+    "certainty": "Source-grounded potential contract violation; no dedicated runtime RED yet."
+  },
+  "mandatory_questions": {
+    "1_existing_end_to_end_tests": "Lost-response reload covers normal storage reads and explicit exact retry; quota case covers failed write before dispatch. Neither injects read failure after a possibly accepted initial send.",
+    "2_current_real_payload": "Owned disposable real PostgreSQL/BFF current tests exercise persisted SUCCEEDED/Message and closed key/body. No actual private business DB or provider data queried, as prohibited. The risk concerns browser storage failure, not a hypothesized live DTO mismatch.",
+    "3_existing_failing_test": "No existing dedicated getItem-throws case; current all may pass that untested failure chain. E43 two queued count assertions are unrelated and not causal proof for this risk.",
+    "4_test_before_fix": "Extend admitted source-owned browser path: persist original key/body, lose response after actual BFF/PG accepted send, inject transient getItem exception scoped to initial-send key, reload/reopen original BU/conversation, require no new first-send action and preserved key; restore reading and explicitly recover exact original request with one total provider effect/Message. Freeze and run canonical browser before changing production.",
+    "5_architectural_rule_assessment": "Tentative no-rule-needed: failure depends on storage availability plus lost-response/reload ordering, not a proven recurring statically invalid dependency shape. Behavioral regression test is the protection. No analyzer/Delphi change authorized."
+  },
+  "coverage_matrix": [
+    {
+      "stage": "Provider boundary / actual disposable BFF+PG acceptance",
+      "state": "covered",
+      "evidence": "E43 initial-message9/9 and current browser accepted-send assertions; terminal package pending."
+    },
+    {
+      "stage": "Closed request/key DTO and normal replay",
+      "state": "covered",
+      "evidence": "Existing API replay and browser lost-response/normal-read paths."
+    },
+    {
+      "stage": "Browser persisted snapshot read exception after possible effect",
+      "state": "missing",
+      "evidence": "No dedicated storage-get exception case currently."
+    },
+    {
+      "stage": "UI gate while durable replay identity cannot be read",
+      "state": "missing",
+      "evidence": "Source catches and continues; runtime RED pending."
+    }
+  ],
+  "planned_checkpoints": {
+    "E43": "No edits; finish frozen all and independent postseal.",
+    "E44": "Test-only bounded corrections and new storage-read regression; canonical browser RED required before production fix.",
+    "E45": "If causal RED confirmed, sole writer adds fail-closed read handling on admitted UI path; fresh canonical all and postseal."
+  },
+  "safety": "Only owned disposable synthetic browser/BFF/PG/provider doubles. No actual env/data/logs, real contacts or provider changes. No rollback of implementation to fabricate test-first chronology.",
+  "state": "not_confirmed_pending_runtime_red",
+  "next": "Wait E43 terminal and root postseal before releasing test-only writer."
+}

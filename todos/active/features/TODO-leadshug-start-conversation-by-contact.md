@@ -46,12 +46,12 @@ Este v1.1 substitui a autoridade ativa da minuta revisada em 2026-10-19. O origi
 
 - **Current delivery stage:** `Pending`
 - **Qualifiers:** `none`
-- **Next exact step:** executar a suíte canônica completa E43 no candidato congelado, com correções dos quatro cenários E42 e provas de classificação incerta, teclado e limite de snapshot; conferir o pós-seal antes de qualquer nova edição. As duas fixtures de E23 estão validadas; os demais caminhos selados permanecem protegidos.
+- **Next exact step:** preparar apenas testes E44 após E43 terminal e pós-seal: corrigir três condições do navegador, cobrir limites/preview e reproduzir falha de leitura do snapshot antes de alterar a UI; novo selo e authority GO antes do runner. As duas fixtures de E23 estão validadas; os demais caminhos selados permanecem protegidos.
 
 ## Active Work State (Required While TODO Remains In `active/`)
 
 - **Work state:** `implementation`
-- **Why this state now:** APROVADO humano e dois ajustes exatos de fixtures validados; implementação e validação completas em andamento sob normal authority GO e um writer. E43 preparado para validação completa no candidato congelado de 259 fontes, com 38 caminhos protegidos idênticos. Cinco arquivos autorizados mudaram após E42; nenhuma entrega promovida.
+- **Why this state now:** APROVADO humano e dois ajustes exatos de fixtures validados; implementação e validação completas em andamento sob normal authority GO e um writer. E43 terminou com API353/435PG e Web53 passando; navegador82/85. Pós-seal confirmou259fontes idênticas. Writer liberado apenas para testes E44 e reprodução causal de leitura do snapshot; nenhuma entrega promovida.
 - **Exit condition:** implementação e todas as evidências/reviews/gates de entrega aprovados; estágio continua Pending até os critérios locais reais, sem claim de entrega por aprovação.
 
 ## Scope
@@ -1198,3 +1198,7 @@ The canonical browser runner exited 1: 81 passed, four failed, 85 total. Root in
 ## Execution checkpoint E43 — full candidate prepared
 
 The sole writer froze five admitted changed paths after E42: coherent generation/credential fixture, explicit reload replay/catalog refresh/keyboard browser proof, PostgreSQL ambiguity classification fault cases and bounded snapshot restoration. Root independently enumerated all 259 positive public files, verified all 38 protected/exact-companion checks and captured current Git identities. The serialized snapshot ceiling now covers 4096 codepoints at worst-case JSON escaping plus bounded metadata; the template test uses four 1024-codepoint values, not an invalid 20K rendered message. The canonical all runner may start only after normal authority GO. Sources stay frozen through terminal plus independent postseal. Evidence: evidence/all-source-seal-e43-v1.1.json. No result or completion claimed.
+
+## Execution checkpoint E43 — terminal result and focused reproduction
+
+Canonical all exited1 with API unit353, realPG435 and Web53 passing; browser82passed/3failed. Root verified full259source inventory/bytes, exact stdoutSHA and owned cleanup before test-only release. Remaining failures: duplicated notice selector, inherited BFF count1after correct explicit replay2, and empty template catalog. The latter still constructs lease/observation/page manually; source also exposes a fake-grant gap: scoped-token debug_token has no derived WABA target, while protected production correctly requires it. The exact E43 refresh HTTP response was not captured; E44 will assert the real refresh result and use raw provider seed/precise fake target. New PG commit-vs-rollback classification, snapshot bounds and keyboard passed. A separate source-grounded storage-read risk was found: catch may delete the original key and treat unavailable reading as absence. E44 adds a causal browser test before production changes; no bug reproduction/fix claim yet. Renderer-bound and escaped/read-only preview coverage is also being made explicit. No criterion, delivery, full diff guard or actual runtime claim. Evidence: evidence/all-result-e43-v1.1.json, all-source-recheck-e43-v1.1.json, browser-freshness-collection-e43-v1.1.json and storage-read-recovery-evidence-loop-v1.1.json.

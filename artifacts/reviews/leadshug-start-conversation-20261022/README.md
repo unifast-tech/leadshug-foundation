@@ -82,3 +82,7 @@ A rodada passou em353 testes unitários de API,433 de integração PostgreSQL e5
 ## Checkpoint E42 — 81 de 85 testes de navegador passaram
 
 Os testes existentes passaram; quatro cenários novos ainda precisam de correções nas condições de teste. A abertura e o primeiro envio, cinco ondas de 20 ações, recuperação e recusa por falha de armazenamento passaram individualmente. As 259 fontes ficaram idênticas durante a rodada, com bundle servido conferido. [Resultado E42](evidence/browser-result-e42-v1.1.json). A implementação continua e será submetida novamente à suíte completa; nenhum critério foi encerrado por essa rodada parcial.
+
+## Checkpoint E43 — API e Web passam; três provas de navegador pendentes
+
+Passaram353unitários deAPI,435integrações PostgreSQL e53Web; no navegador82/85. A rodada confirmou as novas falhas de gravação e o fluxo pelo teclado. [Resultado E43](evidence/all-result-e43-v1.1.json). Além dos ajustes de teste, haverá reprodução de um risco na leitura do snapshot antes de qualquer correção de produto. O estado continua InProgress/Pending; não há ativação local ou entrega04 concluída.

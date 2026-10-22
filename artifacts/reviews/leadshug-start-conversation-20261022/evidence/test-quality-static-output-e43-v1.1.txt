@@ -1,0 +1,75 @@
+Test Quality Audit
+Repository: /mnt/c/unifast/leadshug/leadshug_now_docker
+Outcome heuristic: medium
+
+Scan paths:
+  - /mnt/c/unifast/leadshug/leadshug_now_docker/api-app/test/conversation-start.e2e-spec.ts
+  - /mnt/c/unifast/leadshug/leadshug_now_docker/api-app/test/dispatch-admission.e2e-spec.ts
+  - /mnt/c/unifast/leadshug/leadshug_now_docker/api-app/test/initial-message.e2e-spec.ts
+  - /mnt/c/unifast/leadshug/leadshug_now_docker/api-app/src/domain/inbox/dispatch-admission.service.spec.ts
+  - /mnt/c/unifast/leadshug/leadshug_now_docker/api-app/src/domain/inbox/initial-message-template-renderer.spec.ts
+  - /mnt/c/unifast/leadshug/leadshug_now_docker/api-app/src/domain/inbox/channel-window-policy.spec.ts
+  - /mnt/c/unifast/leadshug/leadshug_now_docker/api-app/src/domain/channels/transport/channel-initial-message.spec.ts
+  - /mnt/c/unifast/leadshug/leadshug_now_docker/api-app/src/integrations/meta/initial-message.client.spec.ts
+  - /mnt/c/unifast/leadshug/leadshug_now_docker/web-app/src/componentes/NovaConversa.spec.ts
+  - /mnt/c/unifast/leadshug/leadshug_now_docker/web-app/e2e/start-conversation.spec.ts
+  - /mnt/c/unifast/leadshug/leadshug_now_docker/web-app/e2e/channel-transport.spec.ts
+
+Hard bypass markers:
+  - none
+
+Test-only support route usage:
+  - none
+
+Auth shortcut hints:
+  - none
+
+Status-only assertion hints:
+  - 7:  expect(response.status()).toBe(201);
+  - 143:    expect(responseAntiga.status()).toBe(201);
+  - 206:        expect(actualStatus).toBe(201);
+  - 209:      expect(auditResponse.status()).toBe(200);
+  - 8:  expect(response.status()).toBe(201);
+  - 93:    expect(opened.status()).toBe(201);
+  - 128:    expect((await sendResponse).status()).toBe(201);
+  - 169:    }).then((response) => expect(response.status()).toBe(200));
+  - 233:    expect((await reopen).status()).toBe(200);
+  - 242:    }).then((response) => expect(response.status()).toBe(200));
+  - 328:      expect((await reusedResponse).status()).toBe(200);
+  - 335:      expect((await replay).status()).toBe(200);
+  - 418:    expect(opened.status()).toBe(200);
+  - 456:    expect((await sendResponse).status()).toBe(201);
+  - 484:    }).then((response) => expect(response.status()).toBe(200));
+  - 492:    expect(opened.status()).toBe(201);
+  - 517:    expect((await reopenedResponse).status()).toBe(200);
+  - 524:    expect(expire.status()).toBe(200);
+  - 532:    expect((await ackResponse).status()).toBe(200);
+  - 549:    }).then((response) => expect(response.status()).toBe(200));
+  - 557:    expect(opened.status()).toBe(201);
+  - 573:    expect(revoked.status()).toBe(200);
+  - 577:    expect(released.status()).toBe(200);
+  - 585:    expect(restored.status()).toBe(200);
+  - 589:    expect((await reconcileResponse).status()).toBe(200);
+  - 613:    expect(opened.status()).toBe(201);
+  - 700:      expect(opened.status()).toBe(201);
+  - 734:        expect(response.status(), JSON.stringify({ code: result?.code, state: result?.state, preAdmission: result?.preAdmission })).toBe(201);
+  - 174:        expect(first.status).toBe(201);
+  - 616:        expect(accepted.status).toBe(201);
+
+No-exception-only assertion hints:
+  - none
+
+Ambient subject fallback hints:
+  - 50:    if (rows[0]?.waiting) return;
+
+DI override hints:
+  - none
+
+Mock / fallback hints:
+  - 571:    const wrapped = vi.spyOn(acceptance, 'acceptInTransaction').mockImplementation(async (tx, input, beforeConversationMutation) => {
+  - 251:    const mark = vi.spyOn(admission, 'markInitialAmbiguous').mockImplementation((input) =>
+  - 570:      const expiryClock = vi.spyOn(Date, 'now');
+  - 24:    vi.spyOn(Date, 'now').mockImplementation(() => now);
+  - 267:    const clock = vi.spyOn(Date, 'now').mockImplementation(() => now);
+
+Counts: hard_bypass=0 test_support=0 auth_shortcut=0 status_only=30 no_exception_only=0 ambient_subject_fallback=1 di_override=0 mock_hint=5

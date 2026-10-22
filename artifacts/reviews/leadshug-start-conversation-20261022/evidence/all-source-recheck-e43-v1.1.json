@@ -1,0 +1,12 @@
+{
+  "checkpoint": "E43 full canonical terminal RED postseal",
+  "capture_stage": "After actual exit1 and cleanup, BEFORE writer release",
+  "source_count": 259,
+  "source_fingerprint": "119149da2b803ed539962d57eaeb6ee0485bf6853ed1cdebeda6a56c4cc3bdfa",
+  "full_positive_inventory_and_bytes_unchanged": true,
+  "record_reference": "all-source-seal-e43-v1.1.json#records",
+  "stdout_sha256": "57245208e1a4c108fbb277f77d243d5db761c751ec90190c6c1091acaaff4fea",
+  "exit_code": 1,
+  "exit_metadata_source": "Executor actual session3551 terminal result",
+  "boundary": "Declared positive public roots and7exact publicfiles only. No actual env/data/process/private inspection."
+}

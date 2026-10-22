@@ -1,0 +1,117 @@
+{
+  "checkpoint": "E43 full canonical all terminal RED",
+  "canonical_command": "bash scripts/test-channels-local.sh all",
+  "unified_exec_session_id": 3551,
+  "exit_code": 1,
+  "exit_metadata_source": "Executor actual terminal; root independently verified owned stdout SHA, cleanup and full positive postseal.",
+  "synthetic_stdout": "/tmp/stcon04-executor-all-e43.txt",
+  "stdout_sha256": "57245208e1a4c108fbb277f77d243d5db761c751ec90190c6c1091acaaff4fea",
+  "source_seal": "all-source-seal-e43-v1.1.json",
+  "source_recheck": "all-source-recheck-e43-v1.1.json",
+  "source_fingerprint": "119149da2b803ed539962d57eaeb6ee0485bf6853ed1cdebeda6a56c4cc3bdfa",
+  "source_count": 259,
+  "phases": {
+    "setup_generate_migrations_status_lint_build": "passed",
+    "api_unit": {
+      "files": 34,
+      "passed": 353
+    },
+    "api_postgresql": {
+      "files": 33,
+      "passed": 435
+    },
+    "web_build": "passed",
+    "web_unit": {
+      "files": 7,
+      "passed": 53
+    },
+    "browser": {
+      "passed": 82,
+      "failed": 3,
+      "total": 85,
+      "reported_minutes": 14.6
+    },
+    "owned_cleanup": "complete"
+  },
+  "freshness": "browser-freshness-collection-e43-v1.1.json",
+  "browser_failures": [
+    {
+      "case": "prior unknown then pre-admission replay",
+      "actual": "Both correct alert and status carry same safe notice; getByText is ambiguous. Key/body,2BFFrequests and disabled message assertions preceding it passed. Later audit not reached.",
+      "handling": "Use exact alert role plus text, preserve request/audit assertions."
+    },
+    {
+      "case": "lost-response reload",
+      "actual": "Explicit original replay200, exact snapshot removal,1Message and1provider effect passed; last inherited postCount1 assertion sees2.",
+      "handling": "2BFFPOSTs expected: original plus explicit replay;1provider effect remains required."
+    },
+    {
+      "case": "manual history approved template",
+      "actual": "After refresh click, catalog option count remains1 placeholder. Preview/send and later counters not reached.",
+      "handling": "Remove manually constructed catalog internals in unique initialTemplate fixture; seed raw provider template, use real explicit refresh response and action-specific counters. Actual E43 refresh HTTP/code not collected, so causal claim bounded."
+    }
+  ],
+  "source_grounded_harness_gap": {
+    "path": "api-app/test/timeline-fixtures.cjs",
+    "fact": "debug_token branch derives default WABA targets only from code-token; actual initial seed uses scoped-token, yielding empty target_ids. Protected MetaTemplateClient.loadGrant requires selectedWaba target.",
+    "handling": "Derive exact owned inventory resource/WABA for recognized scoped-token, retain code-token and explicit grant overrides. Unknown token still fails; do not relax production authorization.",
+    "certainty": "Static source gap established; exact E43 refresh failure response not captured. E44 real BFF refresh assertion will verify."
+  },
+  "passing_new_proofs": [
+    "RealPG ambiguity classification commit-ACK-loss vs rollback: committed stateAMBIGUOUS vs503withoutstate/SENDING retained; one send and noMessage each.",
+    "Both current serialized snapshot boundary tests passed in Web unit.",
+    "Coherent generation credential rotation lets first pre-admission editing browser case pass.",
+    "Actual keyboard Enter open/confirm first browser case passed.",
+    "Existing protected suites pass;5x20 browser triggers,UNKNOWN acknowledgment/known local reconciliation/A-B-A/storage-write-failure passed individually."
+  ],
+  "bci_metric_interpretation": "posts counts Evolution fake port invocations, not TCP/Graph HTTP. Raw Meta6GET/1POST budget is independently tested in compound realBFF/PG protocol case.",
+  "bci_synthetic_metrics": [
+    {
+      "wave": 1,
+      "requests": 20,
+      "replay202": 19,
+      "posts": 1,
+      "messages": 1,
+      "elapsedMs": 174
+    },
+    {
+      "wave": 2,
+      "requests": 20,
+      "replay202": 19,
+      "posts": 1,
+      "messages": 1,
+      "elapsedMs": 140
+    },
+    {
+      "wave": 3,
+      "requests": 20,
+      "replay202": 19,
+      "posts": 1,
+      "messages": 1,
+      "elapsedMs": 151
+    },
+    {
+      "wave": 4,
+      "requests": 20,
+      "replay202": 19,
+      "posts": 1,
+      "messages": 1,
+      "elapsedMs": 140
+    },
+    {
+      "wave": 5,
+      "requests": 20,
+      "replay202": 19,
+      "posts": 1,
+      "messages": 1,
+      "elapsedMs": 124
+    }
+  ],
+  "limits": [
+    "Whole candidate RED; no delivery or criteria completion.",
+    "Storage-read failure recovery is newly identified source-grounded risk, not yet a dedicated runtime RED.",
+    "No actual provider/runtime/private operation or full diff-guard GO.",
+    "No retroactive TDD claim; recorded chronology and E02/E04/E18/E35a retained."
+  ],
+  "next": "After root postseal, sole writer test-only E44: fix3browser proof conditions, add exact renderer bounds/escaped read-only preview and storage-read failure case. Current production snapshot load remains byte-exact for causalRED before fix."
+}

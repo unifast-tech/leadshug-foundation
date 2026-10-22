@@ -32,7 +32,8 @@
     "Use explicit positive public build-input inventory from principal checkout; no root-wide context capture or private traversal.",
     "No copied writable checkout/worktree; disposable build context/archive is a generated build artifact only.",
     "Record approved public input hashes, image IDs/digests, API compiled hashes and Web built/served bundle equality.",
-    "Do not claim an unbuilt source fingerprint as the served image. Fresh attestation must precede interpreting operator/browser proof."
+    "Do not claim an unbuilt source fingerprint as the served image. Fresh attestation must precede interpreting operator/browser proof.",
+    "Public Dockerfiles were inspected for this proposal: API explicitly COPYs package/lock,prisma,src,tsconfigs,nest-cli and docker/entrypoint; Web uses COPY . . in its builder, so its generated build context must contain only individually admitted public inputs (never the whole checkout). These Dockerfiles are not mutated. Actual Alpine image health is required; Debian disposable-suite results alone do not establish native runtime compatibility."
   ],
   "proposed_private_exception": {
     "purpose": "Mechanical Compose consumption of the existing private test configuration to preserve current runtime settings.",
@@ -44,7 +45,8 @@
     "Only three approved additive initial_message migrations from sealed source after disposable deploy/status/schema proof.",
     "Preflight exact local TEST database/service; record migration names/checksums/status and no unexpected pending drift.",
     "SET lock_timeout5s and statement_timeout60s as in approved SQL; stop on lock/migration failure; no blind retry/reset.",
-    "No destructive down migration; rollback assessment is application compatibility plus preserved data, not dropping new tables/columns."
+    "No destructive down migration; rollback assessment is application compatibility plus preserved data, not dropping new tables/columns.",
+    "Rollback assessment: an older API does not enforce the new initial-intent interlock. Do not automatically revert to an old API after a possible dispatch or while an initial outcome is unresolved; stop outbound use, preserve data and review the exact attempt in the normal UI. No destructive down/reset or blind migration retry is admitted. Initial activation checks precede operator sends."
   ],
   "activation": [
     "Recreate only selected API/Web using newly verified local images, no pull/restart of preserved providers or databases.",
