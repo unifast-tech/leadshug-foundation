@@ -42,7 +42,7 @@ O usuário quer preparar no LeadsHug a mensagem que usará para iniciar atendime
 ## Delivery Status Canon (Required)
 - **Current delivery stage:** Pending
 - **Qualifiers:** none
-- **Next exact step:** executar e atribuir um único all r37 sobre `evidence/root-cp05-source-freeze-r37-current-selected-owner-v1.1.json`. Root revisou12pontos setDraft/seleção, preservação das90asserções r35 e três alvos RED r36, browser exato,38fontes/30selos/3HEADs. Novo owner é metadata no reducer existente; sem campo capturado de seleção no produto/novo cache/ref/HTTP. Captura deve imprimir diretório real gerado antes de iniciar e produzir handoff byte-based; nenhum retry/alteração durante execução. Após GREEN: resolução round04/fresh assurance afetada/PCV; ativação TEST/Meta assistida/final continuam obrigatórios, Delivery Pending.
+- **Next exact step:** executar e atribuir um único all r38 sobre evidence/root-cp05-source-freeze-r38-current-selected-owner-typed-v1.1.json, após revisão root exata dos dois ajustes nullable (reconstrução inversa do SHA r37,37outrasfontes/tests/browser imutáveis,30selos/3HEADs). All r37 terminou1: API unit284/PG398 passaram; Web unit/browser não executados por dois TS2345 já corrigidos. Captura first-byte/diretório real/recibo numérico/handoff byte-based, sem edição/retry durante execução. Após GREEN: resolução round04/fresh assurance afetada/PCV, ativação TEST/Meta assistida/final. Delivery Pending.
 
 ## Active Work State (Required While TODO Remains In `active/`)
 - **Work state:** implementation

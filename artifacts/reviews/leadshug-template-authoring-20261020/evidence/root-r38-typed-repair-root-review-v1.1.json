@@ -1,0 +1,16 @@
+{
+  "schema": "stcon05.r38-typed-repair-root-review.v1",
+  "outcome": "GO one current canonical all only",
+  "freeze": "foundation_documentation/artifacts/reviews/leadshug-template-authoring-20261020/evidence/root-cp05-source-freeze-r38-current-selected-owner-typed-v1.1.json",
+  "freeze_sha256": "05b144997fff3b97eb15bb94cd08694591fe7389d2a396f29468c5d486bd1b38",
+  "source38_matches": true,
+  "protected30_exact": true,
+  "heads": {
+    "root": "80e3940126f22a941f90dba4f5e801b6c0eb2f58",
+    "api": "db5a86758a165fac8a1ab587599c37b17890530c",
+    "web": "74b9d4b714044829796f875d00553f077c1c329d"
+  },
+  "exact_delta": "--- r37/Modelos.tsx\n+++ r38/Modelos.tsx\n@@ -248,10 +248,12 @@\n   if (selectedId && !Object.values(catalogPages).some((page) => page.items.some((item) => item.remoteTemplateId === selectedId))) {\n     const previousPageObservation = bestCatalogObservation(current.catalogPages, selectedId);\n     const previousIndividualObservation = current.individualStatus?.remoteTemplateId === selectedId\n       ? current.individualStatus : null;\n-    const retained = selectTemplateObservation(previousPageObservation ?? previousIndividualObservation,\n-      previousPageObservation ? previousIndividualObservation : null);\n+    const candidate = previousPageObservation ?? previousIndividualObservation;\n+    const retained = candidate\n+      ? selectTemplateObservation(candidate, previousPageObservation ? previousIndividualObservation : null)\n+      : null;\n     if (retained) individualStatus = retained;\n   }\n   return { ...current, catalogPages, individualStatus };\n }\n@@ -554,9 +556,9 @@\n       const openedObservationRead = opened.channelId === channelId ? observationRead : observationAuthority.capturePassiveRead();\n       const selectedOperation = operationFromDraft(opened);\n       dispatchObservationSlices({ type: 'selected-operation', remoteTemplateId: selectedOperation?.remoteTemplateId ?? null });\n       restoreSavedObservation(opened.savedObservation ?? opened.currentOperation?.savedObservation, openedObservationRead,\n-        selectedOperation?.remoteTemplateId);\n+        selectedOperation?.remoteTemplateId ?? null);\n       setDraft(opened); setSavedDefinition(opened.definition); setForm(opened.definition);\n       setChannelId(opened.channelId); setPreview(null); setPreviewText(''); setNotice('Rascunho aberto.'); setError(null);\n       editEpoch.current += 1;\n     } catch (cause) { ignorarSessaoMorta(cause); if (requestId === openRequest.current && epoch === contextEpoch.current && editor === editorEpoch.current) setError('Não foi possível abrir este rascunho.'); }\n",
+  "basis": "root-r37-current-selection-how-admission-v1.1.json plus root-r38-typed-repair-admission-v1.1.json; actual r37 compile failures attributed. Entire changed file inverse SHA reconstructs original frozen r37, so no other source mutation. Candidate nonnull branch preserves selector numeric fence checks. Explicit missing operation identity normalizes to null consistently with owner dispatch. All12 setDraft sites/90old assertions/3r36causal targets/exact r36browser remain as root r37 review.",
+  "verification": "Full canonical all; no focused/build-only replacement or retry; no preclaim of GREEN. Current all source/runtime and all5template markers required before affected assurance."
+}

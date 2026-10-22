@@ -1,0 +1,14 @@
+{
+  "schema": "stcon05.r38-all-admission.v1",
+  "at_utc": "2026-10-22T03:23:12.764039+00:00",
+  "outcome": "GO one canonical all; source/process freeze until actual terminal",
+  "freeze": "foundation_documentation/artifacts/reviews/leadshug-template-authoring-20261020/evidence/root-cp05-source-freeze-r38-current-selected-owner-typed-v1.1.json",
+  "freeze_sha256": "05b144997fff3b97eb15bb94cd08694591fe7389d2a396f29468c5d486bd1b38",
+  "executor_id": "/root/template_selection_executor_r37",
+  "command": "bash scripts/test-channels-local.sh all",
+  "capture": "Assign one exclusive mktemp -d to task_dir. Derive log/receipt/launch/handoff from that same variable. Check destinations absent. Emit actual computed JSON directory path/session immediately as launch tool output, root verifies existing directory. Full first-byte canonical stdout+stderr tee; immediately capture PIPESTATUS[0], write numeric receipt and exit same code. No set-e early loss. Terminal handoff JSON generated deterministically from actual bytes with log/receipt hashes, counts, proof paths/hashes; parent reads it rather than trusting prose hash transcription.",
+  "scope": "One all includes all API lint/build/unit/PostgreSQL, Web build/unit and full Playwright. No focused tests/rerun/recapture/helper repair during live. Expected expanded suite is only a prediction; actual counts and semantic reached assertions control.",
+  "source_static": "root-r38-typed-repair-root-review-v1.1.json: exact inverse reconstructs r37, 37other sources/tests/browser unchanged, source38/seals30/heads3 checked. Existing r37 staticTQA13paths remains exact test source; no rerun needed for unchanged test logic. Actual r37 exit1/API682GREEN/TS2345 attributed in root-cp05-all-r37-build-failure-v1.1.json. This is one necessary complete current-state validation after correction, not automatic retry or substitution of partial gate.",
+  "stop": "Any failure stops for root attribution with unchanged source; no automatic repair/retry or live patches. No preserved Docker/DB/Config.Env/image/helper/tunnel/Meta/provider/credential/Git product action. All artifacts under this exact owned validation namespace; no private source traversal/mount.",
+  "next": "Only after actual GREEN/root proof acceptance: round04 resolution and fresh affected candidate assurance/current PCV, then bounded TEST metadata/migrations/source-bound activation/actual assisted Meta/fresh final. Delivery Pending."
+}

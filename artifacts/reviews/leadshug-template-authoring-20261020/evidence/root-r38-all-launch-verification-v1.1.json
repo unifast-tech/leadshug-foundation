@@ -1,0 +1,12 @@
+{
+  "schema": "stcon05.r38-all-launch-root-verification.v1",
+  "at_utc": "2026-10-22T03:23:57.500206+00:00",
+  "status": "running only, no terminal verdict",
+  "task_dir": "foundation_documentation/artifacts/tmp/st-con-05-r38-all-WsVoGG",
+  "launch": "foundation_documentation/artifacts/tmp/st-con-05-r38-all-WsVoGG/launch.json",
+  "launch_sha256": "e1084461129ef561f89f6307e24ad5b89f0640437780bf1294de5dd1e4f08bba",
+  "executor_id": "/root/template_selection_executor_r37",
+  "session": 41514,
+  "expected_command": "bash scripts/test-channels-local.sh all",
+  "next": "await same terminal; no retry or source/helper mutation; byte-based handoff and actual full log/receipt/proofs required"
+}

@@ -1,0 +1,31 @@
+{
+  "schema": "stcon05.r37-all-root-terminal.v1",
+  "recorded_at_utc": "2026-10-22T03:20:39.183186+00:00",
+  "outcome": "STOP web TypeScript build; no Web unit or browser execution",
+  "log": "foundation_documentation/artifacts/tmp/st-con-05-r37-all-Ou4yck/canonical-all.log",
+  "log_bytes": 147579,
+  "log_sha256": "2cd00055f9e87e082ca36360fd3adf8cb654acee6eec3139ab2162b18d98e356",
+  "receipt": "foundation_documentation/artifacts/tmp/st-con-05-r37-all-Ou4yck/runner-exit.txt",
+  "receipt_sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865",
+  "exit": 1,
+  "handoff": "foundation_documentation/artifacts/tmp/st-con-05-r37-all-Ou4yck/handoff.json",
+  "handoff_sha256": "ca1aef0ce86188c33367e8a4de12200275735c2f01887f42f4d2cedd487a2bc1",
+  "counts": {
+    "api_unit": 284,
+    "api_postgresql": 398,
+    "total_passed": 682
+  },
+  "errors": [
+    "src/telas/Modelos.tsx(252,48): error TS2345: Argument of type 'TemplateSummary | null' is not assignable to parameter of type 'TemplateSummary'.",
+    "src/telas/Modelos.tsx(558,9): error TS2345: Argument of type 'string | null | undefined' is not assignable to parameter of type 'string | null'."
+  ],
+  "source38_matches": true,
+  "protected30_exact": true,
+  "heads": {
+    "root": "80e3940126f22a941f90dba4f5e801b6c0eb2f58",
+    "api": "db5a86758a165fac8a1ab587599c37b17890530c",
+    "web": "74b9d4b714044829796f875d00553f077c1c329d"
+  },
+  "attribution": "New r37 reducer passes nullable candidate to a non-null selector, and abrirRascunho passes optional undefined instead of explicit null. These are actual compile failures, not behavioral RED or environment failure. API/PG stages passed; no Web unit/browser/FRC/served proof exists for r37. No preserved action or retry.",
+  "next": "Admit only nullable argument narrowing and explicit null normalization in Modelos.tsx; preserve tests, selector/eligibility semantics and browser fixtures. Freeze new exact state before one current canonical all."
+}

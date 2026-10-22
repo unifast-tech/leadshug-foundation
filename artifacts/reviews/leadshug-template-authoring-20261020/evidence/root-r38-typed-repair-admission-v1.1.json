@@ -1,0 +1,15 @@
+{
+  "schema": "stcon05.r38-typed-repair-admission.v1",
+  "at_utc": "2026-10-22T03:21:11.005340+00:00",
+  "outcome": "GO two typed corrections only, no test or behavior relaxation",
+  "executor_id": "/root/template_selection_executor_r37",
+  "basis": "root-cp05-all-r37-build-failure-v1.1.json; routing/authority/public-diff all GO",
+  "owned_path": "web-app/src/telas/Modelos.tsx",
+  "exact_changes": [
+    "In selected observation retention compute candidate = previousPageObservation ?? previousIndividualObservation, invoke selectTemplateObservation only when candidate is non-null, retain existing second argument logic. Do not bypass fence validation or change selector signature.",
+    "abrirRascunho restoreSavedObservation third argument selectedOperation?.remoteTemplateId ?? null, explicit absence equal to dispatch owner."
+  ],
+  "immutable": "Every other frozen source, all assertions/fixtures, browser exact r36, all 30 inherited seals/3 product HEADs. No casts/as any/non-null assertions/default fabricated observation/reducer redesign/backend/CI change.",
+  "verification": "Patch then byte-generated handoff with exact replacements and hashes; root independently checks full changed file versus r37 bytes and source38/seals30/heads3, freezes r38. No command/test/build/runtime/provider/Git product until next root all admission.",
+  "limits": "r37 actual compile failure is not behavioral RED. Root original r36 pure causal RED remains. No Web/browser proof claimed. Delivery Pending."
+}
