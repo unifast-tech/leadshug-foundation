@@ -1,6 +1,6 @@
 # ST-CON-04 — proposta de admissão de duas fixtures de teste
 
-Estado: proposta pronta, não aplicada; aguarda validação do usuário.
+Estado atual: validado explicitamente pelo usuário em2026-10-22 (“Validar os dois ajustes de teste”), conforme [recibo E23](evidence/fixture-validation-and-asset-e23-v1.1.json). Aplicação e validação do diff ainda pendentes. O JSON da proposta e o patch preservam o registro anterior à validação.
 
 O contrato aprovado exige a data qualificada de uma mensagem Meta assinada, ligada ao recurso atual. O runner canônico83187 mostrou16 falhas em5 suítes; duas das suítes têm arquivos explicitamente protegidos como `NO new mutation`. Alterar um helper global ou aceitar `createdAt` esconderia o problema de proveniência.
 

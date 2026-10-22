@@ -36,3 +36,7 @@ Abertura/reuso com PostgreSQL e a persistência de data qualificada passaram em 
 ## Checkpoint E14 — concorrência de abertura e protocolo
 
 A rodada seguinte passou em311 testes unitários e399 testes PostgreSQL; restam seis falhas nas duas fixtures protegidas, aguardando validação. O stress de abertura passou com100 solicitações:5 criações,95 reusos, uma conversa por contato e nenhum envio ao provedor. Os três testes diretos de protocolo passaram, sem reivindicar RED causal anterior para eles. [Recibo E14](evidence/transport-and-open-e14-v1.1.json). Admissão e tentativa duráveis seguem em implementação; não há entrega04 completa.
+
+## Checkpoint E23 — validação humana das fixtures e modelo aprovado
+
+O usuário validou os dois ajustes exatos de fixtures e informou que o modelo criado já está aprovado. [Recibo E23](evidence/fixture-validation-and-asset-e23-v1.1.json) e [authority GO](evidence/authority-fixture-companion-e23-v1.1.json). Aplicação do patch e provas automatizadas ainda serão registradas; a aprovação do modelo foi informada pelo usuário e será conferida na conta/recurso selecionado antes da prova assistida. Menções anteriores a “aguarda validação” ou “enum desconhecido” descrevem checkpoints anteriores, sem autorização ou sucesso retroativos. Backend completo, interface e provas finais seguem em andamento.

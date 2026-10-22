@@ -1,0 +1,21 @@
+{
+  "checkpoint": "E24 serialized executor state reset",
+  "workflow": "delphi-ai/workflows/docker/effort-selection-method.md sticky-state reset for stale/confused executor state",
+  "trigger": "Repeated absent public source-path reports contradicted root exact absolute-path checks; previous executor reached terminal and stopped before replacement.",
+  "old_executor": "/root/stcon04_executor",
+  "old_status": "completed; no runner active",
+  "new_executor_objective": "Complete remaining approved ST-CON-04 v1.1 backend and UI/tests under one product writer; root owns Foundation docs/assurance.",
+  "model": "gpt-6-luna",
+  "effort": "medium",
+  "routing": "routing-executor-reset-e24-v1.1.json GO",
+  "topology": "Same principal checkout, max1 product writer; no worktrees/copies/productGit.",
+  "chronology_caution": "Old terminal handoff says ordinary/rate/receipt edits predated42918, but root post42918 source inspections show ordinary integration changing after its valid RED. Treat candidate as unvalidated and derive actual implementation from exact current public source, not prose ordering.",
+  "fixture_patch_result": {
+    "typebot_sha256": "7526f755280fa99adb9cb91dd5062810f239c0e7d4e047af3bdb91444433c74d",
+    "pcv_sha256": "3825b0286f9906781e83666616caa05417647ee47c022763fc76e39a3c4ddca0",
+    "root_verified": true,
+    "equals_reviewed_proposal": true
+  },
+  "latest_valid_red": "42918 ordinary reserve/fence/release/uncertain/refusal; unit320pass4targetfail, noPG",
+  "pending": "All initial orchestration/atomic completion/BFF/UI and realPG/fault/performance/assurance/operator proof; existing code under review not delivered."
+}

@@ -144,7 +144,7 @@ n/a nesta etapa; nenhum código, promoção ou implantação autorizado.
 | api | test/message-template-drafts.e2e-spec.ts | any | Inherited baseline ONLY, NO new mutation; byte-exact seal required |
 | api | test/message-template-management.e2e-spec.ts | any | Inherited baseline ONLY, NO new mutation; byte-exact seal required |
 | api | test/number-onboarding-bci.e2e-spec.ts | any | Inherited baseline ONLY, NO new mutation; byte-exact seal required |
-| api | test/number-onboarding-pcv.e2e-spec.ts | any | Inherited baseline ONLY, NO new mutation; byte-exact seal required |
+| api | test/number-onboarding-pcv.e2e-spec.ts | M | Human-validated E23 bounded test-only synthetic signed timestamp/current-resource alignment and corresponding trusted-window EXPLAIN per window-fixture-companion-admission-v1.1.patch; all other baseline bytes/scenarios/counters preserved |
 | api | test/timeline-fixtures.cjs | any | Inherited exact baseline with bounded ST04 mutation proposed after APROVADO for the named journey; initial hash still mandatory before FIRST change |
 | web | e2e/message-templates.spec.ts | any | Inherited baseline ONLY, NO new mutation; byte-exact seal required |
 | web | e2e/number-onboarding-freshness.ts | any | Inherited exact baseline with bounded ST04 mutation proposed after APROVADO for the named journey; initial hash still mandatory before FIRST change |
@@ -169,7 +169,7 @@ n/a nesta etapa; nenhum código, promoção ou implantação autorizado.
 | api | src/surfaces/public/public.module.ts | any | Inherited baseline ONLY, NO new mutation; byte-exact seal required |
 | api | src/surfaces/webhooks/webhooks.module.ts | any | Inherited baseline ONLY, NO new mutation; byte-exact seal required |
 | api | test/api-publica.e2e-spec.ts | any | Inherited exact baseline with bounded ST04 mutation after APROVADO: ordinary public text/window/admission mappings; initial hash mandatory before FIRST change |
-| api | test/number-onboarding-typebot.e2e-spec.ts | any | Inherited baseline ONLY, NO new mutation; byte-exact seal required |
+| api | test/number-onboarding-typebot.e2e-spec.ts | M | Human-validated E23 bounded test-only synthetic signed timestamp/current-resource alignment and corresponding trusted-window EXPLAIN per window-fixture-companion-admission-v1.1.patch; all other baseline bytes/scenarios/counters preserved |
 | api | prisma/migrations/20261020170000_message_inbound_window_index/migration.sql | any | Inherited baseline ONLY, NO new mutation; byte-exact seal required |
 | api | src/domain/channels/transport/channel-dependencies.spec.ts | any | Inherited baseline ONLY, NO new mutation; byte-exact seal required |
 | api | src/domain/channels/transport/channel.ts | any | Inherited exact baseline with bounded ST04 mutation proposed after APROVADO for the named journey; initial hash still mandatory before FIRST change |
@@ -917,7 +917,7 @@ Planning contract reviewed and ready for explicit human APROVADO. This status gr
 - **Approval status:** approved — APROVADO
 - **Approver:** current human user/task authority
 - **Approval reference:** user reply “APROVADO” on2026-10-22 after current reviewed ST-CON-04 request; evidence/approval-execution-admission-v1.1.json; reviewed Foundation fbbdfa6fd4faf3a1d4cdb62297a06e57676d9cd3
-- **Approval scope:** ST-CON-04 v1.1 SCOPE-01..12 and D-01..10 including normative architecture-r1/critique-r1 contracts, strict file admission, local-only validation/activation sequence and every required delivery gate. No delivery or provider success is inferred.
+- **Approval scope:** ST-CON-04 v1.1 SCOPE-01..12 and D-01..10 including normative architecture-r1/critique-r1 contracts, strict file admission, local-only validation/activation sequence and every required delivery gate. Supplemental human validation E23 admits ONLY the two exact test fixture adjustments in window-fixture-companion-admission-v1.1.patch (SHA c35143d98838f25e7b44eafd24085ca5dd08b8869985120c6125a14359f07957), reply “Validar os dois ajustes de teste”. No delivery or provider success is inferred.
 - **Exclusions:** all existing Out of Scope constraints remain; no private file/data inspection, automatic real recipient actions, product Git/promotion/Railway, worktrees/auxiliary copies, unrelated debt fixes or implicit broader exposure.
 - **Renewed-approval trigger:** material scope/decision/API/schema/validation change, strict path deviation, new private/public exposure or independently testable objective outside the approved journey.
 
@@ -1106,3 +1106,11 @@ Runner50255 exited1:30 unit files passed/one failed,320 tests passed/two failed;
 ## Execution checkpoint E22 — four-case ordinary sender causal RED
 
 Runner42918 exited1:30 unit files passed/one failed,320 tests passed/four failed; no PG. Root verified stdout hash/cleanup. All four split target tests reach their own assertions: missing reserve/final claim gives preflight/unfenced-post, preflight block has no reserved-owner release, UNKNOWN lacks UNCERTAIN settlement, confirmed refusal lacks SETTLED settlement. This is valid assertion-level RED before ordinary sender production integration. Evidence: evidence/outbound-valid-red-e22-v1.1.json. Sole executor now continues the approved full backend; no additional RED merely to change presentation is needed. Admission PG/barriers, original claim/commit certainty, full coordinator/receipt/atomic local completion, recovery, BFF, UI/browser and final assurance remain required.
+
+## Execution checkpoint E23 — explicit fixture validation and reported approved model
+
+User replied “Validar os dois ajustes de teste” to the exact Typebot/PCV companion proposal. Root rechecked both original file hashes and the reviewed patch hash; all match. Only those two exact Diff Expectation rows are changed to bounded test-only exceptions; remaining inherited read-only rows stay byte-exact. This is necessary/justifiable synthetic contract alignment, not functional expansion, global interception or policy fallback. Normal authority must remain GO before executor applies the exact patch. Evidence: evidence/fixture-validation-and-asset-e23-v1.1.json. User separately reports the previously created model is now APPROVED; this removes the unknown-state planning assumption but is human attestation only. Same selected account/resource, fresh exact eligibility and actual first-send/reply remain to prove after candidate gates; no current provider query/send occurred.
+
+## Execution checkpoint E24 — exact companion patch applied and serialized executor reset
+
+Root independently verified both fixture result hashes equal the exact E23-reviewed proposal; no additional companion scope is admitted. Repeated executor path confusion prompted the Effort Selection workflow compact-state reset. Old executor is terminal/no runner active; a fresh configured Luna/medium executor receives the SAME approved objective on the SAME principal checkout, sole product writer, after routing GO. No model/topology/scope escalation or human reapproval is inferred/needed. Candidate remains unvalidated; old handoff chronology is advisory and must not override actual root source/RED observations. Evidence: evidence/executor-reset-e24-v1.1.json and routing-executor-reset-e24-v1.1.json. Root retains shared TODO/evidence ownership and will not write product concurrently.

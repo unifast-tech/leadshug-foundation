@@ -1,0 +1,39 @@
+{
+  "checkpoint": "E23 human fixture companion validation and approved-asset state",
+  "date": "2026-10-22",
+  "fixture_validation": {
+    "reply": "Validar os dois ajustes de teste",
+    "question_item_id": "call_c0670c08c9514702b9ddaf19998163eb:0",
+    "authority": "Current human user/task approver; explicit response to exact two-path proposal.",
+    "proposal": "window-fixture-companion-admission-v1.1.md",
+    "patch_sha256": "c35143d98838f25e7b44eafd24085ca5dd08b8869985120c6125a14359f07957",
+    "pre_mutation_checks": [
+      {
+        "path": "api-app/test/number-onboarding-typebot.e2e-spec.ts",
+        "expected": "8c23956a13336c4091d62b9aee7383065f81c5e6575661729b044048626cbd8e",
+        "actual": "8c23956a13336c4091d62b9aee7383065f81c5e6575661729b044048626cbd8e",
+        "matches": true
+      },
+      {
+        "path": "api-app/test/number-onboarding-pcv.e2e-spec.ts",
+        "expected": "cc5b2c440abe2e6389ee4f4a612a9f01f2584338dc3fc4e5ee4605339ffa0bf9",
+        "actual": "cc5b2c440abe2e6389ee4f4a612a9f01f2584338dc3fc4e5ee4605339ffa0bf9",
+        "matches": true
+      }
+    ],
+    "scope": "Only exact synthetic-input/date/current-resource and corresponding EXPLAIN adjustments in two protected files, per immutable reviewed patch. Preserve scenarios/counters and legacy standalone performance test.",
+    "implementation_state": "Authorized; not yet applied by this receipt.",
+    "does_not_authorize": [
+      "Any other sealed-file mutation",
+      "Global fixture interception/backfill/createdAt fallback",
+      "Functional scope expansion or real sends"
+    ]
+  },
+  "official_asset": {
+    "reply": "Já está aprovado",
+    "question_item_id": "call_5eb0c3954e0a41ed8b2a67ae1f4b81df:0",
+    "evidence_type": "Human state attestation only",
+    "status": "APPROVED reported by user; actual selected-account/resource eligibility will be rechecked during assisted proof.",
+    "no_claim": "No provider query, dispatch, binding equivalence or delivery proof is inferred."
+  }
+}

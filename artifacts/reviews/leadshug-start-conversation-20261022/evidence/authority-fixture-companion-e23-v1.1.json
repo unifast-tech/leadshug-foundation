@@ -1,0 +1,25 @@
+{
+  "blocked": false,
+  "context": {
+    "approval_scope_present": true,
+    "approval_section_present": true,
+    "architecture_governance_required": true,
+    "architecture_governance_section_present": true,
+    "architecture_review_gates_required": true,
+    "architecture_supersede_trigger": true,
+    "current_delivery_stage": "Pending",
+    "delivery_claim": false,
+    "delivery_gate_rows": {},
+    "execution_authority_granted": true,
+    "promotion_routing_rows": 0,
+    "require_delivery_gates": false,
+    "routing_preflight_outcome": "go",
+    "routing_preflight_required": true,
+    "routing_preflight_section_present": true,
+    "rules_ingestion_rows": 10,
+    "todo_path": "foundation_documentation/todos/active/features/TODO-leadshug-start-conversation-by-contact.md",
+    "validation_mode": "execution-authority"
+  },
+  "pre_approval": false,
+  "violations": []
+}
