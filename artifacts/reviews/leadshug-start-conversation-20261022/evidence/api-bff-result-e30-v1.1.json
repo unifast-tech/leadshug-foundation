@@ -1,0 +1,50 @@
+{
+  "checkpoint": "E30 frozen API/BFF candidate reaches unit phase",
+  "canonical_command": "bash scripts/test-channels-local.sh api",
+  "unified_exec_session_id": 57781,
+  "exit_code": 1,
+  "synthetic_stdout": "/tmp/stcon04-executor-api-bff-e30.txt",
+  "stdout_sha256": "b4b7cda1083feb504565ec62aa78c02223d2aa018d0722f02aa72305c9c5ca21",
+  "root_verified": [
+    "stdout SHA256 and bounded failure summary",
+    "all256 public source hashes and inventory unchanged",
+    "disposable cleanup complete"
+  ],
+  "phases": {
+    "generate_deploy_status": "passed; disposable schema up to date",
+    "lint": "passed",
+    "build": "passed",
+    "unit": {
+      "files_passed": 31,
+      "files_failed": 3,
+      "tests_passed": 330,
+      "tests_failed": 4
+    },
+    "postgresql_e2e": "not reached",
+    "owned_cleanup": "completed"
+  },
+  "failures": [
+    {
+      "test": "admission idempotent replay keeps original nonce",
+      "observation": "Fake omits immutable stored request/context now required for canonical comparison; exact complete input must be modeled."
+    },
+    {
+      "test": "admission allows conversation with history",
+      "observation": "Fake new reservation omits required canonical contact/account namespace; complete scoped input required."
+    },
+    {
+      "test": "coordinator idempotent replay",
+      "observation": "AMBIGUOUS fixture expects success response; frozen contract requires409. Preserve terminal replay and add separate uncertain no-I/O assertion."
+    },
+    {
+      "test": "channel dependency boundary",
+      "observation": "Outbound persisted context parser contains literal provider-origin comparisons, caught by unchanged architecture harness. Move typed context validation to appropriate transport contract owner; no regex evasion/harness weakening."
+    }
+  ],
+  "limits": [
+    "New BFF/PG first-send and recovery cases have not executed.",
+    "This is post-implementation candidate failure, not a claim of new historical test-first RED.",
+    "No full API or ST-CON-04 delivery, no Web/browser/provider/preserved-runtime/independent assurance."
+  ],
+  "next": "Sole writer corrects owned fakes/expectations and transport-bound context validation, then new source seal and canonical run."
+}
