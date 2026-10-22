@@ -1,0 +1,30 @@
+{
+  "checkpoint": "E15 dispatch-admission causal module-loading RED",
+  "runner_session": 65756,
+  "command": "bash scripts/test-channels-local.sh api",
+  "exit_code": 1,
+  "stdout": "/tmp/stcon04-executor-admission-red2.txt",
+  "stdout_sha256": "af08079f3cb90e9f3f17f691d82889d734e7c85d680235bbabd34f6de2cba4cb",
+  "root_verified_stdout_hash": true,
+  "phases": {
+    "generate_deploy_status": "passed",
+    "lint": "passed",
+    "build": "passed",
+    "unit_passed_files": 30,
+    "unit_passed_tests": 311,
+    "new_suite_failed_to_load": 1,
+    "admission_behavior_assertions": "not reached",
+    "pg": "not run",
+    "cleanup": "observed owned removal"
+  },
+  "cause": "New admitted dispatch-admission.service.spec.ts imports absent implementation before admission production changes. Valid module-loading RED only.",
+  "prior_attempt": {
+    "session": 62370,
+    "result": "TypeScript TS18048 from optional Meta callback narrowing before units; not admission RED."
+  },
+  "limits": [
+    "Sequential unit fake is owner-CAS/stored-token evidence only, never concurrency proof; exact-ID fixture duplication is not database uniqueness proof.",
+    "Real PG overlap, both reservation orderings, shared lock and commit/readback certainty, recovery and UI remain required.",
+    "No implementation delivery claim; remaining protected fixture changes still await human validation."
+  ]
+}

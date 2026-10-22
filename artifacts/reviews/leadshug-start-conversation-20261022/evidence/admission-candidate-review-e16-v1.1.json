@@ -1,0 +1,30 @@
+{
+  "checkpoint": "E16 admission candidate review; not a validation pass",
+  "authority": "Approved ST-CON-04 v1.1 remains unchanged.",
+  "owned_path_noise": {
+    "reported": "New migration initially created outside api-app at checkout-root path; exact owned staging file/empty directories subsequently removed by executor.",
+    "current_admitted_path": "api-app/prisma/migrations/20261022150000_initial_message_admissions/migration.sql",
+    "current_path_read_by_root": true,
+    "classification": "Owned implementation noise relocated inside existing exact glob; no new human admission or private discovery authorized.",
+    "lesson_applied": "Explicit principal workdir and exact positive-public output-location check for each new path."
+  },
+  "review_corrections": [
+    "Capture reservation IDs before transaction and read exact owner/scope after lost database acknowledgment.",
+    "Obtain database clock after acquiring conversation lock; claim cannot use pre-wait clock.",
+    "Map Prisma unique index to migration exact name; bounded migration transaction remains5s lock/60s statement.",
+    "Replace JSON.stringify equality with order-independent canonical comparison: PostgreSQL JSONB object order is not insertion order.",
+    "Use consistent transaction return type and explicit boolean owner comparison.",
+    "Late known original-token result can settle after explicit risk acknowledgment without changing earlier release timestamp or successor state."
+  ],
+  "implementation_state": "In-progress. Some corrections applied, others queued; no unit/PG/service or whole journey GREEN claim.",
+  "pending_proof": [
+    "Commit-loss fault pairs at every mutation boundary.",
+    "Both ordinary/initial lock orderings and ordinary coexistence with real PG overlap.",
+    "Full intent coordinator, shared sender/acceptance integration, current context/authorization/window fence.",
+    "Local recovery/ack, frontend/browser, performance/assurance and assisted channel proof."
+  ],
+  "limits": [
+    "E02 traversal outcome unknown remains a required security/adherence disclosure.",
+    "Protected fixture edits still await actual human validation."
+  ]
+}

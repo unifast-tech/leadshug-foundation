@@ -1,0 +1,37 @@
+{
+  "checkpoint": "E17 partial admission candidate before PG proof",
+  "session": 68010,
+  "command": "bash scripts/test-channels-local.sh api",
+  "exit_code": 1,
+  "stdout": "/tmp/stcon04-executor-admission-candidate1.txt",
+  "stdout_sha256": "99de3d48039272ee319c6bb81edc7fb75a46a583f4550fb91cb9e5d34342be11",
+  "root_verified_stdout_hash": true,
+  "phases": {
+    "generate_deploy_status": "passed",
+    "lint": "passed",
+    "build": "passed",
+    "unit_files_passed": 30,
+    "unit_files_failed": 1,
+    "unit_tests_passed": 318,
+    "unit_tests_failed": 2,
+    "admission_cases_passed": 7,
+    "admission_cases_failed": 2,
+    "pg": "not reached",
+    "owned_cleanup": "observed terminal output"
+  },
+  "failures": [
+    "New reservation IDs are caller-captured generated UUIDs, while old unit assertions expected hardcoded fake ID.",
+    "Root initialMessageIntent readback delegate omitted from unit fake: ordinary-token conflict catch could not perform exact readback."
+  ],
+  "queued_corrections": [
+    "Use actual captured generated ID and exact lookup assertion in unit fake.",
+    "Provide proper root readback delegate for missing-row negative.",
+    "Final DB-time check after awaited validation and SQL expiry predicate at claim CAS.",
+    "Add real-PG ordinary coexistence, both exclusion orderings, immutable replay owner and deadline crossing cases."
+  ],
+  "limits": [
+    "No real-PG admission or full journey pass by this run.",
+    "Applicability of disposable migration is not schema drift/parity proof.",
+    "New PG assertions follow service implementation, not a retrospective assertion RED."
+  ]
+}

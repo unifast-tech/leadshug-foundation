@@ -1,0 +1,34 @@
+{
+  "kind": "Read-only final guard compatibility assessment; not a guard result",
+  "tool": "delphi-ai/tools/todo_diff_expectation_guard.py",
+  "source_observations": [
+    {
+      "line": 406,
+      "command": "git diff --name-status --find-renames --no-ext-diff -z <baseline> --",
+      "boundary": "No positive public pathspec; tracked root-wide query."
+    },
+    {
+      "line": 427,
+      "command": "git ls-files --others --exclude-standard -z",
+      "boundary": "No positive public pathspec; potential directory traversal outside admitted public paths."
+    },
+    {
+      "line": 582,
+      "supported_arguments": [
+        "todo_path",
+        "--repo-root",
+        "--json-output"
+      ],
+      "boundary": "No manifest/pathspec/private-prune option exposed."
+    }
+  ],
+  "approved_boundary": "No reading/listing/stat/hash/traversal/mount of api-app/.local-files, .env or .env.testing; only positively admitted public paths. No Delphi edits.",
+  "execution": "NOT RUN: the default full guard has not been executed and no GO is claimed.",
+  "consequence": "Before final delivery, resolve this real guard-vs-private-boundary incompatibility without silently widening inspection or modifying Delphi. A bounded public path precheck is useful but is not the full canonical guard.",
+  "status": "Pending delivery-method resolution; does not block independent approved implementation.",
+  "no_authority_inferred": [
+    "No private inspection waiver.",
+    "No alternative classifier GO or approval.",
+    "No full diff-completeness claim from narrowed inventory."
+  ]
+}
