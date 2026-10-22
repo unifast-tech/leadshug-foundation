@@ -1,0 +1,23 @@
+{
+  "schema": "stcon05.root-r42-assisted-provider-proof.v1",
+  "recorded_at_utc": "2026-10-22T13:30:49.394241+00:00",
+  "source": "operator response to the exact assisted test request",
+  "operator_report": "Modelo enviado; status consultado e persistiu ap\u00f3s recarregar",
+  "result": "passed_for_requested_creation_status_reload_flow",
+  "origin": "https://spell-suzuki-losing-completing.trycloudflare.com",
+  "request_evidence": "root-r41-assisted-provider-proof-request-v1.1.json",
+  "source_runtime_evidence": "root-r41-source-image-running-acceptance-v1.1.json",
+  "https_freshness_evidence": "root-r41-owned-https-acceptance-v1.1.json",
+  "current_integrity": {
+    "source_files": 38,
+    "protected_files": 30,
+    "product_heads": 3,
+    "all_match_accepted_freeze": true
+  },
+  "limits": [
+    "Operator-reported real own-account creation, explicit status query and reload persistence; no new provider call, business-row lookup or credential read by root.",
+    "Actual Meta approval enum, remote receipt/ID, response payload and latency were not reported or collected. Do not infer APPROVED.",
+    "No recipient send, first-conversation creation, physical delivery, general load capacity, Railway/public admission or continuing channel health is established."
+  ],
+  "next": "Consolidate approved module decisions and run fresh independent full final review before closeout."
+}

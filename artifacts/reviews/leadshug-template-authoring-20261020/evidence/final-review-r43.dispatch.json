@@ -1,0 +1,56 @@
+{
+  "schema_version": "subagent-review-dispatch-v1",
+  "artifact_kind": "subagent_review_dispatch",
+  "authoritative": false,
+  "edit_policy": "derived_dispatch_packet",
+  "review_kind": "final_review",
+  "bounded_package_path": "foundation_documentation/artifacts/reviews/leadshug-template-authoring-20261020/final-review-r43-package-v1.1.md",
+  "reviewer_count": 1,
+  "no_context_required": true,
+  "required_axes": [
+    "adherence",
+    "residual_risk",
+    "performance",
+    "elegance",
+    "structural_soundness"
+  ],
+  "focus_points": [
+    "Review the delivered bounded package for regressions, adherence gaps, residual risk, and waiver quality.",
+    "Explicitly call out any performance regressions, elegance regressions, or brittle structural shortcuts.",
+    "Stay inside the bounded package and treat the review as closure-focused.",
+    "For each material finding, add category and formalizable-hint when you can judge them honestly.",
+    "When assessing design, seek the simplest faithful Clean Code/SOLID design for the approved intent. Do not invent future-facing work or erase explicit TODO intent. Planning review may challenge proposed intent; delivery review must preserve approved intent or return for renewed approval."
+  ],
+  "result_contract_fields": [
+    "overall_assessment",
+    "recommended_path",
+    "performance_position",
+    "elegance_position",
+    "structural_soundness_position",
+    "operational_fit_position",
+    "findings[].finding_id (optional)",
+    "findings[].category (optional)",
+    "findings[].formalizable_hint (optional)",
+    "findings[].candidate_rule_level (optional)",
+    "findings[]"
+  ],
+  "todo_path": "foundation_documentation/todos/active/features/TODO-leadshug-official-template-authoring.md",
+  "historical_disposition_policy": [
+    "Resolved findings are historical context only. Do not reopen them unless the current bounded package materially changes the same locus/behavior or fresh evidence shows regression.",
+    "Challenged findings stay closed unless the current bounded package materially changes the same locus/behavior or the prior rationale is objectively insufficient.",
+    "Deferred findings must cite the recorded follow-up/waiver path first. Re-raise them only when the current bounded package changes the same locus or closure now depends on that deferred risk.",
+    "Unresolved findings remain valid to re-raise until they are fixed, challenged, or formally deferred with authority."
+  ],
+  "historical_dispositions": [
+    {
+      "source_kind": "final_review",
+      "finding_id": "F-57808DFC",
+      "carry_forward_class": "resolved",
+      "source_disposition": "resolution=Integrated; usefulness=useful; formalizable=yes",
+      "summary": "Source FINAL-R42-01: canonical module now uses actual template phases/acceptance provenance/providerAcceptance/receiptPersistence/projectionPersistence and TEMPLATE_SUBMISSION_LOCAL_INCOMPLETE; missing-ID stays AMBIGUOUS. ST-CON-06 unchanged. root-r42-module-review-v1.2.json supersedes only prior acceptance; no source/test/runtime edit or new approval needed.",
+      "reference": "final_review:findings_integrated"
+    }
+  ],
+  "goal": "Fresh final confirmation after FINAL-R42-01 documentation correction. Reassess corrected template semantics against actual source and full delivery rubric; preserve unchanged product assurance and accepted local-only debt. No new execution claims.",
+  "review_result_dispatch_path": "/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/artifacts/reviews/leadshug-template-authoring-20261020/evidence/final-review-r43.dispatch.json"
+}

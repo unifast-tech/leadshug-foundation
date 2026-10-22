@@ -1,0 +1,90 @@
+{
+  "schema": "stcon05.root-local-closeout.v1",
+  "recorded_at_utc": "2026-10-22T13:55:20.938456+00:00",
+  "status": "Completed",
+  "delivery_stage": "Local-Implemented",
+  "todo": "foundation_documentation/todos/completed/features/TODO-leadshug-official-template-authoring.md",
+  "tests": {
+    "actual_exit": 0,
+    "total": 802,
+    "api_unit": 284,
+    "real_postgresql": 398,
+    "web_unit": 45,
+    "playwright": 75,
+    "browser_subset": 74
+  },
+  "operator_proof": "root-r42-assisted-provider-proof-v1.1.json",
+  "final_reviews": [
+    "final-review-r42.raw-attempt1.txt",
+    "final-review-r43.raw-attempt1.txt"
+  ],
+  "finding_resolutions": {
+    "FINAL-R42-01": "Integrated documentation-only",
+    "FINAL-R43-01": "Integrated documentation-only; exact outer503 fields verified"
+  },
+  "final_review_no_context": true,
+  "further_review_disposition": "two complete fresh internal final rubrics obtained; only remaining narrow documentation discrepancy corrected exactly as recommended and checked against returned object; no broad test or provider action repeated",
+  "source_integrity": {
+    "files38_exact": true,
+    "protected30_exact": true,
+    "heads": {
+      "root": "80e3940126f22a941f90dba4f5e801b6c0eb2f58",
+      "api": "db5a86758a165fac8a1ab587599c37b17890530c",
+      "web": "74b9d4b714044829796f875d00553f077c1c329d"
+    }
+  },
+  "canonical_modules": [
+    {
+      "path": "modules/integrations-and-channels.md",
+      "sha256": "6b1865ab4f27458e1e1e225535e2f4a713e987e18344ca86d3f9411fa6c6f168"
+    },
+    {
+      "path": "modules/inbox-and-conversations.md",
+      "sha256": "24b3f1edd8f10bf991d61135be2364b49679c43e5894ce024c2d5169921756a2"
+    }
+  ],
+  "guards": {
+    "authority": {
+      "path": "authority-r43-completed-v1.1.json",
+      "sha256": "5ccc0f7cd4ca4df36dd67636d4c7619a037c3795f899c2bb9a2718f5f0435204",
+      "outcome": "go"
+    },
+    "completion": {
+      "path": "completion-r43-completed-v1.1.json",
+      "sha256": "60d26071dd79c53603e48fa2fbb916c550ca039eddad9d8a663f942aee790767",
+      "outcome": "go"
+    },
+    "diff": {
+      "path": "diff-r43-completed-v1.1.json",
+      "sha256": "9b67b4b4c0fd38c222312885397221fb11f87e73a0cf505433f5fb6889d7cb85",
+      "outcome": "go"
+    },
+    "closeout": {
+      "path": "closeout-r43-completed-v1.1.json",
+      "sha256": "cc81284b7b58d20c5b4aae12d09b098c1671286edacfb178ccde94d6f46436f5",
+      "outcome": "go"
+    }
+  },
+  "debt": "verification-debt-r43-disposition.json",
+  "public_diff_wrapper": {
+    "path": "/tmp/stcon05-public-diff-guard.py",
+    "sha256": "2f4f1aad7bb5381ae28aab62acfed97f6dee3c28e76f2fdfc1cb92d123075312",
+    "reason": "canonical guard uses git.exe and closed positive public inventory before discovery; no .local-files or actual env traversal"
+  },
+  "preflight_collection_notes": [
+    "Dispatch preparation initially rejected unsupported passed gate enum; fixed derived metadata to no_material_findings before reviewer launch; all rubric/input scope preserved",
+    "No reviewer process started for those dispatch errors; r42/r43 are actual completed review executions",
+    "Completion metadata now quotes exact criteria, includes five Scope mappings and current CI execution status",
+    "React/Nest source-owned runner equivalence is documented explicitly for generic Flutter-named guard marker; no Flutter test execution claimed",
+    "Lifecycle move type classification R/D is only the already-approved active/completed TODO administrative move"
+  ],
+  "limits": [
+    "actual Meta approval enum not reported; no APPROVED inference",
+    "no recipient send/ST-CON-04 implementation",
+    "private local cohort only; no public/untrusted/Railway/production admission",
+    "no production capacity/SLO/continuous health claim",
+    "no product Git or deployment mutation"
+  ],
+  "foundation_publication": "pending scoped documentation commit/push; guarded autonomous main surface",
+  "publication_formatting_note": "Four immutable tool-generated dispatch/merge Markdown inputs contain one final blank line. Default diff --check reports only those four EOF formatting notices. Preserve exact historical reviewer inputs; command-scoped core.whitespace=-blank-at-eof checks every other whitespace error. No product, approval or content check disabled."
+}

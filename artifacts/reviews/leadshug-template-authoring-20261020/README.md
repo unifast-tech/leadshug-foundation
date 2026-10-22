@@ -1,10 +1,16 @@
 # ST-CON-05 v1.1 — template authoring delivery package
 
-State: approved-v1.1-implementation-in-progress. Governing contract: ../../../todos/active/features/TODO-leadshug-official-template-authoring.md. Previous20261019 reviews remain history. This cycle rebases seller create/save/preview/submit/status onto delivered06 with a narrow TemplateManagementResolver/MessageTemplateProvider port, dedicated Meta integration, immutable scoped context and preserved textual Channel/OutboundService. Approval2026-10-21 authorizes the reviewed implementation; activation and assisted provider proof follow the disposable validation and assurance gates.
+State: completed-local-implemented-v1.1. Governing contract: ../../../todos/completed/features/TODO-leadshug-official-template-authoring.md. Previous20261019 reviews remain history. This cycle rebases seller create/save/preview/submit/status onto delivered06 with a narrow TemplateManagementResolver/MessageTemplateProvider port, dedicated Meta integration, immutable scoped context and preserved textual Channel/OutboundService. Approval2026-10-21 authorizes the reviewed implementation; activation and assisted provider proof follow the disposable validation and assurance gates.
 
 Review focus: DIP/capability segregation, scope/management versus send authority, durable one-dispatch receipts and conservative ambiguity recovery, name/account isolation, status truth, UI fences, mandatory inherited working-tree seal, full CI-equivalent and actual assisted submission. Source baseline/evidence are public-only. Planned approval scope includes additive templates migration and source-bound local activation after disposable proof; no secret read/product push/deploy.
 
-## Estado atual — implementação e assurance
+## Estado atual — 2026-10-22
+
+A criação/submissão real, consulta de status e persistência após recarregar foram confirmadas pelo operador no fluxo normal do LeadsHug. [Prova e limites](evidence/root-r42-assisted-provider-proof-v1.1.json): o enum de aprovação Meta não foi informado; não inferimos APPROVED nem envio a destinatário.
+
+A candidata atual passou **802 testes** (284 unitários API,398 PostgreSQL,45 unitários Web,75 Playwright). [Aceitação r41](evidence/root-cp05-all-r41-acceptance-v1.1.json), [assurance independente completa](evidence/root-candidate-r41-assurance-disposition-v1.1.json), [migrations preservadas25/25](evidence/root-r41-migration-acceptance-v1.1.json), [fonte/imagem/runtime](evidence/root-r41-source-image-running-acceptance-v1.1.json) e [HTTPS próprio](evidence/root-r41-owned-https-acceptance-v1.1.json) registram as evidências distintas. Os módulos canônicos foram consolidados e [conferidos e corrigidos](evidence/root-r43-module-review-v1.1.json). [Revisões finais r42/r43](evidence/final-review-r43.raw-attempt1.txt) concluídas; dois achados documentais integrados em [disposição exata](evidence/root-r43-module-review-v1.1.json). Authority/completion/diff/closeout preclaim GO; TODO encerrado localmente e movido para completed. Escopo privado local; ST-CON-04 e produção permanecem separados.
+
+## Snapshot histórico — implementação e assurance até r18
 
 Entrega **Pending**, sem ativação dos templates no banco local preservado e sem submissão real à Meta. O Docker foi restaurado e os sete serviços locais estão ativos. A rodada consolidada r6 passou **747 testes**; a [aceitação com limites](evidence/root-cp05-restored-all-acceptance-v1.1.json) registra fonte, runtime descartável e contagens. Esse resultado é histórico: a revisão independente encontrou correções adicionais.
 
@@ -30,7 +36,7 @@ A implementação futura inclui schema/migration aditivos, deploy/status descart
 
 Parecer arquitetural e duas críticas completas independentes concluídos; quatro achados incorporados, última crítica sem novos achados. O contrato protege confirmação incerta no banco, nome/quota por conta compartilhada, base pública herdada e ordem de atualização do catálogo/status. As conferências de código/escopo, estrutura, perfil, ciclo de vida e preparação de autoridade passaram. Resultado da autoridade: **preflight-go**, sem autorização de executar.
 
-O [TODO v1.1](../../../todos/active/features/TODO-leadshug-official-template-authoring.md) é a proposta concreta. [Convergência das revisões](planning-convergence-v1.1.md) e [pré-aprovação](evidence/authority-preapproval-v1.1.json) registram o resultado. Freeze revisado:961dba71015f61a1f1c1badecb9efe090a77b306. Nenhum código, teste de produto, banco, ambiente ou conta externa foi alterado nesta etapa.
+O [TODO v1.1](../../../todos/completed/features/TODO-leadshug-official-template-authoring.md) é a proposta concreta. [Convergência das revisões](planning-convergence-v1.1.md) e [pré-aprovação](evidence/authority-preapproval-v1.1.json) registram o resultado. Freeze revisado:961dba71015f61a1f1c1badecb9efe090a77b306. Nenhum código, teste de produto, banco, ambiente ou conta externa foi alterado nesta etapa.
 
 ## Execução autorizada — 2026-10-21
 

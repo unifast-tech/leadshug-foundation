@@ -1,0 +1,42 @@
+{
+  "schema_version": "subagent-review-merge-v2",
+  "artifact_kind": "subagent_review_merge",
+  "authoritative": false,
+  "edit_policy": "derived_merge_packet",
+  "dispatch_path": "/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/artifacts/reviews/leadshug-template-authoring-20261020/evidence/final-review-r42.dispatch.json",
+  "review_kind": "final_review",
+  "review_count": 1,
+  "reviewer_labels": [
+    "fresh-internal-no-context-final-r42"
+  ],
+  "highest_finding_severity": "medium",
+  "axis_summary": {
+    "performance": "acceptable",
+    "elegance": "mixed",
+    "structural_soundness": "mixed",
+    "operational_fit": "mixed"
+  },
+  "recommended_paths": [
+    "Correct FINAL-R42-01, refresh the module-consistency evidence and record explicit final-review adjudication. Then complete the required authority, strict diff, debt, completion and closeout guards before marking the local TODO complete and moving cross-links. Preserve all accepted private-local restrictions and evidence limits. No architectural reset, additional Meta mutation or broad suite rerun is justified by this documentation-only finding."
+  ],
+  "exact_next_step": "Record reviewer resolutions in the governing TODO using the machine-checkable resolution table or equivalent gate ledger, then extract the derived resolution packet and decide whether another bounded review pass is still required.",
+  "findings": [
+    {
+      "finding_id": "F-57808DFC",
+      "severity": "medium",
+      "title": "Canonical template documentation substitutes outbound-message outcomes for template submission semantics",
+      "rationale": "The newly consolidated ST-CON-05 section in integrations-and-channels.md defines error/receipt outcomes as BLOCKED, REJECTED, UNKNOWN, AMBIGUOUS_SEND_RECORDED and ACCEPTED_LOCAL_INCOMPLETE, then describes a positively committed ACK-without-ID diagnostic. Those are ST-CON-06 message-send concepts. The approved D06, CR-02 and Local Commit Certainty Contract instead require template creation without an ID to remain AMBIGUOUS, and known creation followed by unconfirmed local persistence to return TEMPLATE_SUBMISSION_LOCAL_INCOMPLETE with outcome ACCEPTED, providerAcceptance CONFIRMED and receiptPersistence UNCONFIRMED. The embedded TemplateCreateOutcome and TemplateSubmissionService implement that template-specific contract; they do not create the documented message diagnostic. This is fresh drift in the module consolidation, not a reopening of accepted implementation debt. The canonical module now contradicts both the frozen TODO and production source, so DOD-08 module consistency is not yet satisfied despite the supplied module-review receipt.",
+      "suggested_action": "Correct only the ST-CON-05 field definitions and dispatch/recovery prose to describe the actual template phases, acceptance provenance, providerAcceptance, receiptPersistence and template error codes. Remove the imported message-diagnostic semantics from that section while preserving the existing ST-CON-06 contract. Recheck the module against D06/CR-02/AR-V11-01 and refresh the module-consistency disposition before delivery guards. This documentation correction does not require renewed product approval or another broad test run.",
+      "reviewer_labels": [
+        "fresh-internal-no-context-final-r42"
+      ],
+      "source_finding_ids": [
+        "FINAL-R42-01"
+      ],
+      "category": "adherence",
+      "formalizable_hint": "yes",
+      "candidate_rule_level": "project",
+      "candidate_rule_id": "n/a"
+    }
+  ]
+}

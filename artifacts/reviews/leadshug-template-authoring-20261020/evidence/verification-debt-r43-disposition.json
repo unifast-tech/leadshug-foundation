@@ -1,0 +1,25 @@
+{
+  "schema": "stcon05.root-verification-debt-disposition.v1",
+  "recorded_at_utc": "2026-10-22T13:53:36.755485+00:00",
+  "outcome": "low",
+  "inline_code_todo_debt": "none",
+  "helper_exit": 2,
+  "heuristic_counts": "Counts: waiver=68 blocker=23 unchecked=25 accepted_inline=0 canonical_link_missing=0 cleanup_required=0",
+  "positive_files": 38,
+  "no_private_or_git_modified_scan": true,
+  "heuristic_adjudication": [
+    "Generic helper treats historical planning/failed checkpoints, approved exclusion checkboxes and frozen baseline checklist markers as current unresolved work",
+    "Normative PENDING/UNKNOWN/AMBIGUOUS/LOCAL_INCOMPLETE enum names are product states, not closure blockers",
+    "All5Scope/8DoD/5Validation items checked with criterion-specific concrete evidence; all802/candidate assurance/actual activation/Meta proof/two final reviews complete",
+    "No waiver of required gate; both final documentation findings integrated against exact source; deterministic authority/completion/diff/closeout preclaim GO",
+    "No new inline debt markers in38 positive source paths; no canon promotion debt after module correction"
+  ],
+  "accepted_limits": {
+    "OPS-R4-01": "Web/integrations; BLG-leadshug-template-failure-observation-authority; conservative unavailable and explicit refresh recovery",
+    "SEC-R6-04": "integrations/security; BLG-leadshug-template-recovery-read-budget before untrusted public/Railway; existing private cohort only",
+    "TQA-ST05-03": "original test-after/unknown retained; no retroactive RED",
+    "r39_timeout": "unattributed, not reproduced, not claimed fixed",
+    "coverage": "broader empty-success authority branch and browser ACK/conflict race unestablished"
+  },
+  "future_trigger": "reassess before public/untrusted cohort, Railway, production capacity or ST-CON-04 own approval; no implementation of follow-ups authorized"
+}

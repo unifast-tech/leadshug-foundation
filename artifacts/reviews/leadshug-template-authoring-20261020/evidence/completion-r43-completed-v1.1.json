@@ -1,0 +1,25 @@
+{
+  "blocked": false,
+  "context": {
+    "acceptance_criteria_count": 0,
+    "allow_waivers": false,
+    "ci_equivalent_row_count": 3,
+    "current_delivery_stage": "Local-Implemented",
+    "definition_of_done_count": 8,
+    "delivery_claim": true,
+    "dod_count": 8,
+    "evidence_row_count": 18,
+    "mode": "single",
+    "pipeline_preflight_row_count": 3,
+    "rule_spirit_hunt_row_count": 3,
+    "scope_count": 5,
+    "todo_path": "/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/todos/completed/features/TODO-leadshug-official-template-authoring.md",
+    "validation_count": 5,
+    "validation_steps_count": 5
+  },
+  "overall_outcome": "go",
+  "rule_id": "paced.todo.completion-evidence",
+  "schema_version": "todo-completion-guard-v1",
+  "status": "ready",
+  "violations": []
+}

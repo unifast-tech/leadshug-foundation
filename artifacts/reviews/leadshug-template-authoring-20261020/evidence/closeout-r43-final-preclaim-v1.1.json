@@ -1,0 +1,33 @@
+{
+  "generated_at_utc": "2026-10-22T13:52:07.527345Z",
+  "git": {
+    "ahead": 0,
+    "available": true,
+    "behind": 0,
+    "clean": false,
+    "root": "/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation",
+    "synced": false,
+    "upstream": "origin/main"
+  },
+  "overall_outcome": "go",
+  "rule_id": "paced.todo.closeout-disposition",
+  "todo_count": 1,
+  "todo_results": [
+    {
+      "context": {
+        "closeout_section_present": true,
+        "current_delivery_stage": "Pending",
+        "delivery_claim": false,
+        "disposition": "keep-active",
+        "next_exact_step": "prova real confirmada pelo operador: modelo enviado, status consultado e persist\u00eancia ap\u00f3s reload. M\u00f3dulos consolidados e duas revis\u00f5es finais independentes conclu\u00eddas; achados documentais integrados. Executar authority/diff/debt/completion/closeout finais e mover o TODO aprovado para completed. Nenhum estado APPROVED inferido; sem envio ao contato. Delivery Pending at\u00e9 os gates finais.",
+        "path_state": "active",
+        "post_commit_push_status": "Foundation main publicou `0025ea34` com imagens reais aceitas, migrations TEST25complete e falhas pr\u00e9-Compose contidas; all802/assurance/PCV preservados; produto permanece sem commit/push.",
+        "qualifiers": "none",
+        "todo_path": "/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/todos/active/features/TODO-leadshug-official-template-authoring.md",
+        "work_state": "review"
+      },
+      "violations": []
+    }
+  ],
+  "violations": []
+}

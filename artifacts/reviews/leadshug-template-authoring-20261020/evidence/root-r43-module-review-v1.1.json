@@ -1,0 +1,28 @@
+{
+  "schema": "stcon05.root-r43-module-correction-disposition.v1",
+  "recorded_at_utc": "2026-10-22T13:51:45.314452+00:00",
+  "status": "Integrated; module contract matches outer endpoint response",
+  "finding": "FINAL-R43-01 / F-F7937CD8",
+  "supersedes_acceptance_only": "root-r42-module-review-v1.2.json",
+  "prior_review_limit": "v1.2 followed inner ACK persistence metadata but missed outer submit exception omitting provenance; final r43 correctly found one field mismatch; prior evidence preserved",
+  "checked_source": "api-app/src/domain/message-templates/template-submission.service.ts:260-275; projectOperation:783-801",
+  "actual_response_contract": {
+    "error": "TEMPLATE_SUBMISSION_LOCAL_INCOMPLETE",
+    "outcome": "ACCEPTED",
+    "phase": "ACCEPTED",
+    "providerAcceptance": "CONFIRMED",
+    "receiptPersistence": "UNCONFIRMED",
+    "acceptanceProvenance": "not included in outer submit exception; read separately in persisted projections when available"
+  },
+  "module_sha256": "a66174d35e71c28e44b3f16d1e8a06911ed20b53b556fbfebf0254ca36a3e350",
+  "source_sha256": "a2b8b33ecfb0af165c2b94b50703d18a364d5b64ef581bbdd7659325bc631709",
+  "disposition": "both independent final findings integrated; full r42/r43 rubrics complete; narrow docs-only correction directly checked against exact returned object; no further review or broad run required by canonical method or reviewer recommendation",
+  "unchanged": [
+    "product source",
+    "test source",
+    "runtime",
+    "Meta resource",
+    "ST-CON-06 message documentation"
+  ],
+  "limits": "private local only; exact Meta approval enum unknown; accepted SEC-R6-04/OPS-R4-01/TQA-ST05-03 retained"
+}

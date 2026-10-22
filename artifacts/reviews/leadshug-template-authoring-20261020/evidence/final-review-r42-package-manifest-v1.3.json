@@ -1,0 +1,244 @@
+{
+  "recorded_at_utc": "2026-10-22T13:42:17.498770+00:00",
+  "mode": "bounded-summary",
+  "package": "foundation_documentation/artifacts/reviews/leadshug-template-authoring-20261020/final-review-r42-package-v1.3.md",
+  "bytes": 858046,
+  "sha256": "2f013a4b591c9ec4e19eef04e213d1c02077c7eb24c5280125375fc0a53f67dc",
+  "files": [
+    {
+      "path": "foundation_documentation/todos/active/features/TODO-leadshug-official-template-authoring.md",
+      "bytes": 175827,
+      "sha256": "165da1eb754bfe0312bc184639319cf0e3132b1d7a81fe037859be2358335300"
+    },
+    {
+      "path": "foundation_documentation/modules/integrations-and-channels.md",
+      "bytes": 58222,
+      "sha256": "c8165e04d2d4d30fbeb73af0a9418713db4326d50014cf992ee6ded7835b678e"
+    },
+    {
+      "path": "foundation_documentation/modules/inbox-and-conversations.md",
+      "bytes": 17733,
+      "sha256": "24b3f1edd8f10bf991d61135be2364b49679c43e5894ce024c2d5169921756a2"
+    },
+    {
+      "path": "delphi-ai/workflows/docker/independent-final-review-method.md",
+      "bytes": 9192,
+      "sha256": "d70c09421601c5f2d0b994d5b2f3a54241fe736e84cf31186ea51a03ead0163f"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-template-authoring-20261020/evidence/root-cp05-source-freeze-r40-session-diagnostics-v1.1.json",
+      "bytes": 11651,
+      "sha256": "dfcbd6a59880b02fd362d0cb6ced83ff44c9363c95aae400addb1c1934a143c6"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-template-authoring-20261020/evidence/root-cp05-all-r41-acceptance-v1.1.json",
+      "bytes": 7265,
+      "sha256": "8470f3139ffc2d6c603445d17ec29bdeaebcbefe10de40970ad9ce8faf2e4199"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-template-authoring-20261020/evidence/root-candidate-r41-assurance-disposition-v1.1.json",
+      "bytes": 7842,
+      "sha256": "bf5a31af0043070272141a75cea6409c7764d3553b61fec226d4c68ad3b0c2c9"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-template-authoring-20261020/evidence/root-candidate-r41-tqa-performance-intake-v1.1.json",
+      "bytes": 2824,
+      "sha256": "dc6db0c5c070304b805ac778d2dc047d56374975a3f9be1ef41b1d2ebf4fcaee"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-template-authoring-20261020/evidence/candidate-r41-adherence.raw-attempt1.txt",
+      "bytes": 15965,
+      "sha256": "297df8fb5640a391de36aeab68d3766e65a725b6a261efed141fea9bff9fa6d0"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-template-authoring-20261020/evidence/candidate-r41-security.raw-attempt1.txt",
+      "bytes": 12344,
+      "sha256": "9b01306c60a89cbd69d1178dc6b37ca00e3ffd95f5af3d485c3ed6d2f4a1b681"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-template-authoring-20261020/evidence/candidate-r41-performance.raw-attempt1.txt",
+      "bytes": 7934,
+      "sha256": "048a3c6654e1e1c7dd39533ee5d1d8e637a099d56fc31031e83994c11b345e98"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-template-authoring-20261020/evidence/candidate-r41-test-quality-complete.raw-attempt1.txt",
+      "bytes": 12965,
+      "sha256": "5b347ebb66b59bbc50341b157dcb5e46685721934c2e95e3a859684e586a7bd2"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-template-authoring-20261020/evidence/root-round04-r41-resolution-v1.1.md",
+      "bytes": 6448,
+      "sha256": "8396c7d58866b9ba9f120a1390b503dff5d85ab713eb397452616eaa693cf629"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-template-authoring-20261020/evidence/root-r41-migration-acceptance-v1.1.json",
+      "bytes": 1197,
+      "sha256": "45b0ae00e0506653746c0e0b996a426c3b25bbb295731ae0eff80265b4853397"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-template-authoring-20261020/evidence/root-r41-recreation-acceptance-v1.1.json",
+      "bytes": 3662,
+      "sha256": "824ccee152e9cab5205d5644da22d25c5fd3bee9f9718c06c6fd880ff1a35da5"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-template-authoring-20261020/evidence/root-r41-source-image-running-acceptance-v1.1.json",
+      "bytes": 3683,
+      "sha256": "18c83b19053e0ebe8734a3498509053821d64badc1872ffcfdf2659f20f41b21"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-template-authoring-20261020/evidence/root-r41-owned-https-acceptance-v1.1.json",
+      "bytes": 1497,
+      "sha256": "421ef8a5b650a91b8796793c47368ffafd8788aaac247e414930a96d951fb96e"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-template-authoring-20261020/evidence/root-r41-new-tunnel-identity-v1.1.json",
+      "bytes": 695,
+      "sha256": "a49911fb7646bf87dbe2b56d0ef60581297ee00eb7a2d3e1803b2213ca56b0f7"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-template-authoring-20261020/evidence/root-r41-assisted-provider-proof-request-v1.1.json",
+      "bytes": 771,
+      "sha256": "9db3c0f8cbde5c04e5d190ce97b84b56a767ee71c7a2c6717e518eb1337a4323"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-template-authoring-20261020/evidence/root-r42-assisted-provider-proof-v1.1.json",
+      "bytes": 1393,
+      "sha256": "242a4697ebaa7b867b8e6c91a2adf2fa6c22a99bfba0dac177a9b6243e4cb5c1"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-template-authoring-20261020/evidence/root-r42-module-review-v1.1.json",
+      "bytes": 1134,
+      "sha256": "28ce71eb9d2b40e2ed215ce093e00bd3157a7589b27f897eee46a110072e2047"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-template-authoring-20261020/evidence/routing-final-r42-v1.1.json",
+      "bytes": 999,
+      "sha256": "276f3bc5a1f7af99c65fe40fb2399699d08ebcd1512509fc7f1876eb3aaf0e30"
+    },
+    {
+      "path": "api-app/src/domain/channels/channel-credential-resolver.ts",
+      "bytes": 6500,
+      "sha256": "7782792bb945701cc6f6d0ac1460d0504356fa8d73a4261f37112f7c892a23ac"
+    },
+    {
+      "path": "api-app/src/domain/historico/catalogo.ts",
+      "bytes": 7494,
+      "sha256": "5e218ba32cab9f289c77741d43b7c3af7aa93f63cbb58aa52573c6097d77db22"
+    },
+    {
+      "path": "api-app/src/domain/historico/cobertura.ts",
+      "bytes": 7676,
+      "sha256": "b0813176bf1c8fe124a3e17cdaf825433301d0ed8c753dccb228ac098c962e24"
+    },
+    {
+      "path": "api-app/src/domain/message-templates/template-definition.ts",
+      "bytes": 9341,
+      "sha256": "1f28bfd19454b1e187b854c4f2e9785b59e7726032c20f82d62460d87401203c"
+    },
+    {
+      "path": "api-app/src/domain/message-templates/template-draft.service.ts",
+      "bytes": 29240,
+      "sha256": "429a078fb48d5a66601d83883275dcc12cea659692e463e94a17d41d5cdf0713"
+    },
+    {
+      "path": "api-app/src/domain/message-templates/template-management.ports.ts",
+      "bytes": 4562,
+      "sha256": "c7ed169d87a4224f82f8d1abe109bfa02b913bb2cb63303fc6477673f45ed693"
+    },
+    {
+      "path": "api-app/src/domain/message-templates/template-observation.service.ts",
+      "bytes": 39343,
+      "sha256": "41c7c640fd31ca0759d0d88647e24c74787597dcf75fd8a3c773fe6e02965488"
+    },
+    {
+      "path": "api-app/src/domain/message-templates/template-submission.service.ts",
+      "bytes": 63540,
+      "sha256": "a2b8b33ecfb0af165c2b94b50703d18a364d5b64ef581bbdd7659325bc631709"
+    },
+    {
+      "path": "api-app/src/domain/message-templates/template-transaction-boundary.ts",
+      "bytes": 978,
+      "sha256": "ea3e0550ad5c82b263391dbfb3dae6b9e8656d219f18aa0d7c55cd5668722123"
+    },
+    {
+      "path": "api-app/src/integrations/message-templates/template-management.module.ts",
+      "bytes": 595,
+      "sha256": "aabfb344eab0b244772f0a2a8066dbae71bb24973a0a498c69af676c17f0acdd"
+    },
+    {
+      "path": "api-app/src/integrations/message-templates/template-management.resolver.ts",
+      "bytes": 5094,
+      "sha256": "2a2a57355ff9fa29774cd4dfef33d9d3fd876bdf5d8a8fe654f0c0435284b59a"
+    },
+    {
+      "path": "api-app/src/integrations/meta/message-template.client.ts",
+      "bytes": 21888,
+      "sha256": "8dff223f7a97632cf228800cdbbb12ce6f5b151efc5fa30411d03e5ec3280cb5"
+    },
+    {
+      "path": "api-app/src/surfaces/bff/bff.module.ts",
+      "bytes": 6047,
+      "sha256": "d4e24c7c1a5c88d4a39903383403de742a61700cb208133a77c2d6d5967c0d41"
+    },
+    {
+      "path": "api-app/src/surfaces/bff/message-templates.controller.ts",
+      "bytes": 11822,
+      "sha256": "0e0449a80852a4513f626d0df7b1a5bb17b034eeceb50f53842fb91454ff4491"
+    },
+    {
+      "path": "web-app/src/App.tsx",
+      "bytes": 12285,
+      "sha256": "2d9f3b3d03658a8d6d6132986346f3be8f36a2582faca29285b3d46c9920307e"
+    },
+    {
+      "path": "web-app/src/api.ts",
+      "bytes": 16058,
+      "sha256": "177d660cccb7d74e47ef1dd180d9e74f830bce97b631c896c4e82fa39ae44a84"
+    },
+    {
+      "path": "web-app/src/telas/Modelos.tsx",
+      "bytes": 58744,
+      "sha256": "ec5410d1e38a5dd963fe48d3ba715697d9c49cd574875c784fa8e6300275771c"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-template-authoring-20261020/evidence/pcv-r41-current-v1.1-eps.json",
+      "bytes": 100640,
+      "sha256": "09084b1d93938417fa2b95da26850c9d5a0caece43edae7f75f9154e72fb9a23"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-template-authoring-20261020/evidence/pcv-r41-current-v1.1-frc.json",
+      "bytes": 12203,
+      "sha256": "d7678418b765d3a44c4ea25b54af68572653cc52b12f7775a9c635396a7d986f"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-template-authoring-20261020/evidence/pcv-r41-current-v1.1-bci.json",
+      "bytes": 12352,
+      "sha256": "ab21954ea849580651abce4b4355d44835a09773ae23d192397ea060a9bebd0f"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-template-authoring-20261020/evidence/pcv-r41-current-v1.1-rls.json",
+      "bytes": 11947,
+      "sha256": "21f7088d887e0d5f554abdf6cfe622fd9db161d65cd8ad5229de19ae79dd0074"
+    },
+    {
+      "path": "foundation_documentation/artifacts/tmp/stcon05-activation-prep-r41-v1.2/stcon05_local_migrations_once.py",
+      "bytes": 34177,
+      "sha256": "29096ec3f9c88bb4bee6c6cb9cead0616d894c301508398ca1a8c174ff707e08"
+    },
+    {
+      "path": "foundation_documentation/artifacts/tmp/stcon05-image-activation-r41-v1.8/source-image-running-proof.json",
+      "bytes": 2495,
+      "sha256": "4e924b3cddf31b9546b91423de3549a29835db4500feef39882a9fe58948aabc"
+    },
+    {
+      "path": "foundation_documentation/artifacts/tmp/stcon05-image-activation-r41-v1.8/gateway-reload-result.json",
+      "bytes": 609,
+      "sha256": "96bd6291064953d84a3735ae569e094bd0e68f6e8e7245bb2c85af944e830037"
+    },
+    {
+      "path": "foundation_documentation/artifacts/tmp/stcon05-access-r41-v1.1/launch-owned-quick-tunnel-r41-v1.1.ps1",
+      "bytes": 6281,
+      "sha256": "775680c81f6d0077bae019bb474ecd2407bf4d2f927e18fe6c85f0f38f70b9bc"
+    }
+  ]
+}

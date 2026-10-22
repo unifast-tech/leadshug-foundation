@@ -1,0 +1,20 @@
+{
+  "schema_version": "gate-finding-resolution-v1",
+  "artifact_kind": "gate_finding_resolution",
+  "authoritative": false,
+  "edit_policy": "derived_from_todo",
+  "todo_path": "foundation_documentation/todos/active/features/TODO-leadshug-official-template-authoring.md",
+  "review_kind": "final_review",
+  "gate_status": "findings_integrated",
+  "findings": [
+    {
+      "finding_id": "F-57808DFC",
+      "resolution": "Integrated",
+      "usefulness": "useful",
+      "formalizable": "yes",
+      "candidate_rule_level": "project",
+      "candidate_rule_id": "n/a",
+      "rationale": "Source FINAL-R42-01: canonical module now uses actual template phases/acceptance provenance/providerAcceptance/receiptPersistence/projectionPersistence and TEMPLATE_SUBMISSION_LOCAL_INCOMPLETE; missing-ID stays AMBIGUOUS. ST-CON-06 unchanged. root-r42-module-review-v1.2.json supersedes only prior acceptance; no source/test/runtime edit or new approval needed."
+    }
+  ]
+}

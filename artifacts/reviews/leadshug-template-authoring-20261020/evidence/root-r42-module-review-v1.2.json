@@ -1,0 +1,29 @@
+{
+  "schema": "stcon05.root-r42-module-review.v1.2",
+  "recorded_at_utc": "2026-10-22T13:46:40.534797+00:00",
+  "status": "passed_after_FINAL-R42-01_correction",
+  "supersedes_acceptance_only": "root-r42-module-review-v1.1.json",
+  "prior_review_limit": "root v1.1 missed copied outbound-message outcome semantics; fresh independent final found drift; old receipt and review retained unchanged",
+  "finding": "FINAL-R42-01 / merge F-57808DFC",
+  "resolution": "Integrated",
+  "actual_checks": [
+    "full ST-CON-05 module reread against TemplateCreateOutcome and submission service lines241-275,398-441,567-668,783-801",
+    "missing-ID remains AMBIGUOUS; known ACK local-incomplete ACCEPTED/CONFIRMED with independent receipt/projection certainty",
+    "ACKNOWLEDGED versus CORRELATED_BY_DEFINITION and ACK conflict retained",
+    "ST-CON-06 original message outcome documentation unchanged",
+    "seven module baseline decisions preserved; all38 source hashes,30 inherited seals and3 HEADs exact"
+  ],
+  "source_files_exact": 38,
+  "protected_files_exact": 30,
+  "files": [
+    {
+      "path": "foundation_documentation/modules/integrations-and-channels.md",
+      "sha256": "023cd3500caea7d3a248418a273a9b3ed75110b53799017d29b6c83221f3b8b5"
+    },
+    {
+      "path": "foundation_documentation/modules/inbox-and-conversations.md",
+      "sha256": "24b3f1edd8f10bf991d61135be2364b49679c43e5894ce024c2d5169921756a2"
+    }
+  ],
+  "validation_scope": "documentation-only; no product/test/runtime change; all802 and current assurance remain applicable; no Meta call repeated"
+}

@@ -1,0 +1,110 @@
+{
+  "blocked": true,
+  "context": {
+    "acceptance_criteria_count": 0,
+    "allow_waivers": false,
+    "ci_equivalent_row_count": 3,
+    "current_delivery_stage": "Pending",
+    "definition_of_done_count": 8,
+    "delivery_claim": true,
+    "dod_count": 8,
+    "evidence_row_count": 18,
+    "mode": "single",
+    "pipeline_preflight_row_count": 3,
+    "rule_spirit_hunt_row_count": 3,
+    "scope_count": 5,
+    "todo_path": "/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/todos/active/features/TODO-leadshug-official-template-authoring.md",
+    "validation_count": 5,
+    "validation_steps_count": 5
+  },
+  "overall_outcome": "no-go",
+  "rule_id": "paced.todo.completion-evidence",
+  "schema_version": "todo-completion-guard-v1",
+  "status": "blocked",
+  "violations": [
+    {
+      "code": "EVIDENCE-NOT-PASSED",
+      "message": "Evidence status `planned` does not satisfy delivery for criterion: SCOPE-05 \u2014 Harness de depend\u00eancias/capacidade e testes de dom\u00ednio/contrato/concorr\u00eancia PostgreSQL, Playwright contra BFF real e prova de cria\u00e7\u00e3o/consulta em recurso oficial pr\u00f3prio, sem envio a destinat\u00e1rio; consolida\u00e7\u00e3o do contrato e revis\u00f5es derivadas.",
+      "resolution": "Record `passed` with concrete evidence, or use `--allow-waivers` only after an approved waiver is recorded.",
+      "section": "Completion Evidence Matrix"
+    },
+    {
+      "code": "EVIDENCE-ARTIFACT-NOT-REAL",
+      "message": "Evidence artifact/command is not real completed evidence for criterion: SCOPE-05 \u2014 Harness de depend\u00eancias/capacidade e testes de dom\u00ednio/contrato/concorr\u00eancia PostgreSQL, Playwright contra BFF real e prova de cria\u00e7\u00e3o/consulta em recurso oficial pr\u00f3prio, sem envio a destinat\u00e1rio; consolida\u00e7\u00e3o do contrato e revis\u00f5es derivadas.",
+      "resolution": "Run the validation or record an explicit blocker/approved waiver instead of claiming delivery.",
+      "section": "Completion Evidence Matrix"
+    },
+    {
+      "code": "LITERAL-MARKER-EVIDENCE-MISMATCH",
+      "message": "Criterion names `Playwright` but evidence does not prove the same marker: SCOPE-05 \u2014 Harness de depend\u00eancias/capacidade e testes de dom\u00ednio/contrato/concorr\u00eancia PostgreSQL, Playwright contra BFF real e prova de cria\u00e7\u00e3o/consulta em recurso oficial pr\u00f3prio, sem envio a destinat\u00e1rio; consolida\u00e7\u00e3o do contrato e revis\u00f5es derivadas.",
+      "resolution": "Update the evidence to name the exact required artifact, or record an explicit approved waiver/deviation.",
+      "section": "Completion Evidence Matrix"
+    },
+    {
+      "code": "LITERAL-MARKER-EVIDENCE-MISMATCH",
+      "message": "Criterion names `schema` but evidence does not prove the same marker: DOD-06 \u2014 Schema/migration deploy/status, harness dur\u00e1vel, CI-equivalent completo e Playwright mutation passam com API/PG reais e bundle servido fresco; gate send de ST-CON-01 e contratos Channel/OutboundService de ST-CON-06 permanecem inalterados.",
+      "resolution": "Update the evidence to name the exact required artifact, or record an explicit approved waiver/deviation.",
+      "section": "Completion Evidence Matrix"
+    },
+    {
+      "code": "LITERAL-MARKER-EVIDENCE-MISMATCH",
+      "message": "Criterion names `migration` but evidence does not prove the same marker: DOD-06 \u2014 Schema/migration deploy/status, harness dur\u00e1vel, CI-equivalent completo e Playwright mutation passam com API/PG reais e bundle servido fresco; gate send de ST-CON-01 e contratos Channel/OutboundService de ST-CON-06 permanecem inalterados.",
+      "resolution": "Update the evidence to name the exact required artifact, or record an explicit approved waiver/deviation.",
+      "section": "Completion Evidence Matrix"
+    },
+    {
+      "code": "CRITERION-CHECKLIST-UNCHECKED",
+      "message": "Definition of Done item is still unchecked under a delivery claim: DOD-08 \u2014 Decis\u00f5es e contrato promovidos ao m\u00f3dulo respons\u00e1vel, revis\u00f5es derivadas/seguran\u00e7a/pcv/TQA/final e guardas de entrega satisfeitos; sem P1/P2 aberto e sem claim de produ\u00e7\u00e3o.",
+      "resolution": "Check the TODO item only after the implementation and criterion-specific evidence are complete, or move the TODO back to a non-delivery stage.",
+      "section": "Definition of Done"
+    },
+    {
+      "code": "EVIDENCE-NOT-PASSED",
+      "message": "Evidence status `planned` does not satisfy delivery for criterion: DOD-08 \u2014 Decis\u00f5es e contrato promovidos ao m\u00f3dulo respons\u00e1vel, revis\u00f5es derivadas/seguran\u00e7a/pcv/TQA/final e guardas de entrega satisfeitos; sem P1/P2 aberto e sem claim de produ\u00e7\u00e3o.",
+      "resolution": "Record `passed` with concrete evidence, or use `--allow-waivers` only after an approved waiver is recorded.",
+      "section": "Completion Evidence Matrix"
+    },
+    {
+      "code": "EVIDENCE-ARTIFACT-NOT-REAL",
+      "message": "Evidence artifact/command is not real completed evidence for criterion: DOD-08 \u2014 Decis\u00f5es e contrato promovidos ao m\u00f3dulo respons\u00e1vel, revis\u00f5es derivadas/seguran\u00e7a/pcv/TQA/final e guardas de entrega satisfeitos; sem P1/P2 aberto e sem claim de produ\u00e7\u00e3o.",
+      "resolution": "Run the validation or record an explicit blocker/approved waiver instead of claiming delivery.",
+      "section": "Completion Evidence Matrix"
+    },
+    {
+      "code": "BROWSER-WEB-PLAYWRIGHT-EVIDENCE-MISSING",
+      "message": "Browser/web-visible criterion lacks source-owned Playwright spec and runner evidence: VAL-01 \u2014 Executar bash scripts/test-channels-local.sh all, com boundary p\u00fablico positivo de ST-CON-06 preservado, incluindo deploy/status de migrations, lint/build/unit/E2E/Web/Playwright e fonte/served fingerprints.",
+      "resolution": "Record the source-owned Playwright spec under tools/flutter/web_app_tests/** and the project-owned navigation runner command, plus target URL/lane, project-defined build/publish proof, and refreshed real-domain bundle provenance.",
+      "section": "Completion Evidence Matrix"
+    },
+    {
+      "code": "LITERAL-MARKER-EVIDENCE-MISMATCH",
+      "message": "Criterion names `web` but evidence does not prove the same marker: VAL-01 \u2014 Executar bash scripts/test-channels-local.sh all, com boundary p\u00fablico positivo de ST-CON-06 preservado, incluindo deploy/status de migrations, lint/build/unit/E2E/Web/Playwright e fonte/served fingerprints.",
+      "resolution": "Update the evidence to name the exact required artifact, or record an explicit approved waiver/deviation.",
+      "section": "Completion Evidence Matrix"
+    },
+    {
+      "code": "LITERAL-MARKER-EVIDENCE-MISMATCH",
+      "message": "Criterion names `Playwright` but evidence does not prove the same marker: VAL-01 \u2014 Executar bash scripts/test-channels-local.sh all, com boundary p\u00fablico positivo de ST-CON-06 preservado, incluindo deploy/status de migrations, lint/build/unit/E2E/Web/Playwright e fonte/served fingerprints.",
+      "resolution": "Update the evidence to name the exact required artifact, or record an explicit approved waiver/deviation.",
+      "section": "Completion Evidence Matrix"
+    },
+    {
+      "code": "CRITERION-CHECKLIST-UNCHECKED",
+      "message": "Validation Steps item is still unchecked under a delivery claim: VAL-05 \u2014 Rodar architecture adherence/security/pcv/TQA/final/debt/diff p\u00fablico e authority/completion/closeout antes de entrega; reconvergir ST-CON-04 apenas no handoff seguinte.",
+      "resolution": "Check the TODO item only after the implementation and criterion-specific evidence are complete, or move the TODO back to a non-delivery stage.",
+      "section": "Validation Steps"
+    },
+    {
+      "code": "EVIDENCE-NOT-PASSED",
+      "message": "Evidence status `planned` does not satisfy delivery for criterion: VAL-05 \u2014 Rodar architecture adherence/security/pcv/TQA/final/debt/diff p\u00fablico e authority/completion/closeout antes de entrega; reconvergir ST-CON-04 apenas no handoff seguinte.",
+      "resolution": "Record `passed` with concrete evidence, or use `--allow-waivers` only after an approved waiver is recorded.",
+      "section": "Completion Evidence Matrix"
+    },
+    {
+      "code": "EVIDENCE-ARTIFACT-NOT-REAL",
+      "message": "Evidence artifact/command is not real completed evidence for criterion: VAL-05 \u2014 Rodar architecture adherence/security/pcv/TQA/final/debt/diff p\u00fablico e authority/completion/closeout antes de entrega; reconvergir ST-CON-04 apenas no handoff seguinte.",
+      "resolution": "Run the validation or record an explicit blocker/approved waiver instead of claiming delivery.",
+      "section": "Completion Evidence Matrix"
+    }
+  ]
+}

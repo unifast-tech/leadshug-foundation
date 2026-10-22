@@ -1,0 +1,54 @@
+{
+  "blocked": true,
+  "context": {
+    "approval_scope_present": true,
+    "approval_section_present": true,
+    "architecture_governance_required": true,
+    "architecture_governance_section_present": true,
+    "architecture_review_gates_required": true,
+    "architecture_supersede_trigger": false,
+    "current_delivery_stage": "Pending",
+    "delivery_claim": true,
+    "delivery_gate_rows": {
+      "Local CI-Equivalent Suite Matrix": 3,
+      "Pipeline/Copilot P1/P2 Preflight": 3,
+      "Rule-Spirit Anti-Pattern Hunt": 3
+    },
+    "execution_authority_granted": false,
+    "promotion_routing_rows": 0,
+    "require_delivery_gates": true,
+    "routing_preflight_outcome": "go",
+    "routing_preflight_required": true,
+    "routing_preflight_section_present": true,
+    "rules_ingestion_rows": 10,
+    "todo_path": "foundation_documentation/todos/active/features/TODO-leadshug-official-template-authoring.md",
+    "validation_mode": "execution-authority"
+  },
+  "pre_approval": false,
+  "violations": [
+    {
+      "code": "DELIVERY-GATE-STATUS-NOT-PASSING",
+      "message": "Local CI-Equivalent Suite Matrix row status `planned` does not satisfy delivery: api / API + PostgreSQL E2E | schema/dom\u00ednio/Meta/role | bash scripts/test-channels-local.sh all | Local-Implemented | planned | Nenhuma execu\u00e7\u00e3o atual; npm ci/lint/build/unit/E2E completos, deploy/status | planned | sem subset como aceite | CAS/replay/mesmo nome/tenant/purpose/status/parser + lease de observa\u00e7\u00e3o compartilhado cat\u00e1logo\u2194individual, expira\u00e7\u00e3o, held-response e GET/reload PAUSED/ineligible + mesma conta por2Mantenedoras, quota global e contas distintas; rollback real e commit real seguido de perda de ACK de reserva/claim/recibo/release | Node22/PG16 pr\u00f3prios, provider fake determin\u00edstico; dois vendedores+admin, ator sem grant e duas BUs/tenants; draft alheio e mesmo revision com keys/atores diferentes",
+      "resolution": "Run the gate, fix the blocker, or record an approved waiver/n/a rationale before claiming delivery.",
+      "section": "Local CI-Equivalent Suite Matrix"
+    },
+    {
+      "code": "DELIVERY-GATE-STATUS-NOT-PASSING",
+      "message": "Local CI-Equivalent Suite Matrix row status `planned` does not satisfy delivery: web / build+unit+browser | menu/editor/fluxo | bash scripts/test-channels-local.sh all | Local-Implemented | planned | e2e/message-templates.spec.ts e regress\u00f5es completas; BFF n\u00e3o simulado | planned | mesmo run all | draft/save/submit/status/erro/stale/refresh | DB/API mesmos de CI-equivalent;4173/3100/3101; fonte e bundle servido fresco comprovados",
+      "resolution": "Run the gate, fix the blocker, or record an approved waiver/n/a rationale before claiming delivery.",
+      "section": "Local CI-Equivalent Suite Matrix"
+    },
+    {
+      "code": "DELIVERY-GATE-STATUS-NOT-PASSING",
+      "message": "Local CI-Equivalent Suite Matrix row status `planned` does not satisfy delivery: root / compose/runner | boundary operacional | bash scripts/test-channels-local.sh all | Local-Implemented | planned | s\u00f3 invent\u00e1rio p\u00fablico positivo/masks falsas; nenhum .env real/.local-files | planned | n\u00e3o tocar namespace humano | montagem/ownership/build de valida\u00e7\u00e3o | namespace validation exclusivo, sem recurso preexistente",
+      "resolution": "Run the gate, fix the blocker, or record an approved waiver/n/a rationale before claiming delivery.",
+      "section": "Local CI-Equivalent Suite Matrix"
+    },
+    {
+      "code": "DELIVERY-GATE-UNRESOLVED-P1-P2",
+      "message": "Pipeline/Copilot P1/P2 Preflight row records an unresolved P1/P2 finding: Frozen API/Web current candidate | session/tenant/CSRF and stale result regressions; provider ambiguity | passed | evidence/candidate-r41-security.raw-attempt1.txt; evidence/candidate-r41-adherence.raw-attempt1.txt; evidence/root-cp05-all-r41-acceptance-v1.1.json | none unresolved P1/P2 | Prior current-selection findings integrated and causally covered; no static-only substitute for browser/PG",
+      "resolution": "Fix or explicitly adjudicate the P1/P2 finding before delivery or promotion readiness claims.",
+      "section": "Pipeline/Copilot P1/P2 Preflight"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "blocked": false,
+  "context": {
+    "approval_scope_present": true,
+    "approval_section_present": true,
+    "architecture_governance_required": true,
+    "architecture_governance_section_present": true,
+    "architecture_review_gates_required": true,
+    "architecture_supersede_trigger": false,
+    "current_delivery_stage": "Pending",
+    "delivery_claim": true,
+    "delivery_gate_rows": {
+      "Local CI-Equivalent Suite Matrix": 3,
+      "Pipeline/Copilot P1/P2 Preflight": 3,
+      "Rule-Spirit Anti-Pattern Hunt": 3
+    },
+    "execution_authority_granted": true,
+    "promotion_routing_rows": 0,
+    "require_delivery_gates": true,
+    "routing_preflight_outcome": "go",
+    "routing_preflight_required": true,
+    "routing_preflight_section_present": true,
+    "rules_ingestion_rows": 10,
+    "todo_path": "foundation_documentation/todos/active/features/TODO-leadshug-official-template-authoring.md",
+    "validation_mode": "execution-authority"
+  },
+  "pre_approval": false,
+  "violations": []
+}

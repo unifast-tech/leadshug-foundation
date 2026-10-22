@@ -1,0 +1,29 @@
+{
+  "schema_version": "gate-finding-resolution-v1",
+  "artifact_kind": "gate_finding_resolution",
+  "authoritative": false,
+  "edit_policy": "derived_from_todo",
+  "todo_path": "foundation_documentation/todos/active/features/TODO-leadshug-official-template-authoring.md",
+  "review_kind": "final_review",
+  "gate_status": "findings_integrated",
+  "findings": [
+    {
+      "finding_id": "F-57808DFC",
+      "resolution": "Integrated",
+      "usefulness": "useful",
+      "formalizable": "yes",
+      "candidate_rule_level": "project",
+      "candidate_rule_id": "n/a",
+      "rationale": "Source FINAL-R42-01: canonical module now uses actual template phases/acceptance provenance/providerAcceptance/receiptPersistence/projectionPersistence and TEMPLATE_SUBMISSION_LOCAL_INCOMPLETE; missing-ID stays AMBIGUOUS. ST-CON-06 unchanged. root-r43-module-review-v1.1.json supersedes only prior acceptance; no source/test/runtime edit or new approval needed."
+    },
+    {
+      "finding_id": "F-F7937CD8",
+      "resolution": "Integrated",
+      "usefulness": "useful",
+      "formalizable": "yes",
+      "candidate_rule_level": "project",
+      "candidate_rule_id": "n/a",
+      "rationale": "Source FINAL-R43-01: canonical module now matches the exact outer503 object at submitDraft lines260\u2013275; acceptanceProvenance is read separately from persisted operation/receipt projections, not promised in this error. Root exact-source disposition root-r43-module-review-v1.1.json; no product/test/runtime change."
+    }
+  ]
+}

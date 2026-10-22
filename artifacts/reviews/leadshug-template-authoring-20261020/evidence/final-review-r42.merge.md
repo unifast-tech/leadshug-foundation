@@ -1,0 +1,59 @@
+# PACED Subagent Review Merge: final_review
+
+## Merge Identity
+- **Artifact kind:** `subagent_review_merge`
+- **Authoritative:** `false`
+- **Edit policy:** `derived_merge_packet`
+- **Dispatch path:** `/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/artifacts/reviews/leadshug-template-authoring-20261020/evidence/final-review-r42.dispatch.json`
+- **Review count:** `1`
+- **Highest finding severity:** `medium`
+
+## Axis Summary
+- **Performance:** `acceptable`
+- **Elegance:** `mixed`
+- **Structural soundness:** `mixed`
+- **Operational fit:** `mixed`
+
+## Recommended Paths
+- `Correct FINAL-R42-01, refresh the module-consistency evidence and record explicit final-review adjudication. Then complete the required authority, strict diff, debt, completion and closeout guards before marking the local TODO complete and moving cross-links. Preserve all accepted private-local restrictions and evidence limits. No architectural reset, additional Meta mutation or broad suite rerun is justified by this documentation-only finding.`
+
+## Merged Findings
+### F-57808DFC [medium] Canonical template documentation substitutes outbound-message outcomes for template submission semantics
+- **Reviewers:** fresh-internal-no-context-final-r42
+- **Category:** `adherence`
+- **Formalizable hint:** `yes`
+- **Candidate rule level:** `project`
+- **Candidate rule id:** `n/a`
+- **Suggested action:** Correct only the ST-CON-05 field definitions and dispatch/recovery prose to describe the actual template phases, acceptance provenance, providerAcceptance, receiptPersistence and template error codes. Remove the imported message-diagnostic semantics from that section while preserving the existing ST-CON-06 contract. Recheck the module against D06/CR-02/AR-V11-01 and refresh the module-consistency disposition before delivery guards. This documentation correction does not require renewed product approval or another broad test run.
+- **Rationale:** The newly consolidated ST-CON-05 section in integrations-and-channels.md defines error/receipt outcomes as BLOCKED, REJECTED, UNKNOWN, AMBIGUOUS_SEND_RECORDED and ACCEPTED_LOCAL_INCOMPLETE, then describes a positively committed ACK-without-ID diagnostic. Those are ST-CON-06 message-send concepts. The approved D06, CR-02 and Local Commit Certainty Contract instead require template creation without an ID to remain AMBIGUOUS, and known creation followed by unconfirmed local persistence to return TEMPLATE_SUBMISSION_LOCAL_INCOMPLETE with outcome ACCEPTED, providerAcceptance CONFIRMED and receiptPersistence UNCONFIRMED. The embedded TemplateCreateOutcome and TemplateSubmissionService implement that template-specific contract; they do not create the documented message diagnostic. This is fresh drift in the module consolidation, not a reopening of accepted implementation debt. The canonical module now contradicts both the frozen TODO and production source, so DOD-08 module consistency is not yet satisfied despite the supplied module-review receipt.
+
+## Reviewer Summaries
+### fresh-internal-no-context-final-r42
+- **Assessment:** One material module-contract finding requires correction before closeout. No additional executable product blocker is established by this bounded review. Assessment used only the embedded package; no tools, edits, execution or independent hash verification were performed.
+
+Decision adherence: The implementation and supplied assurance support D01–D09: direct seller submission within existing grants; backend-authoritative validation, preview and durable fingerprints; one draft/revision/submission owner; scoped management credentials without weakening send readiness; durable reservation, quota and dispatch claims; conservative acceptance/ambiguity and explicit GET-only recovery; shared observation leases/fences and bounded freshness; context/editor ownership guards; and a separate narrow template capability. CR-01/02 and AR-V11-01/02/03 are supported by the shown production paths and carried PostgreSQL/admission evidence. The canonical module generally preserves the seven prior decisions and leaves ST-CON-04 unimplemented, but its newly introduced receipt documentation contradicts D06 and must be corrected.
+
+Test quality and evidence: The supplied current all r41 receipt reports exit 0 and 802 passing cases: 284 API unit, 398 PostgreSQL, 45 Web unit and 75 Playwright, including 74 browser cases and one pure consumer case. Full TQA, security, adherence and performance challenge reports have distinct bindings and disclose their reliance on carried evidence. Assertions cover durable effects, authorization, resource identity, fences, exact page membership/cursors, PAUSED/ineligible state and provider-call cardinality. Separate 100-request BFF and 100-attempt UI probes avoid confusing server contention with browser coalescing. The counter correction retains the expected two creates and preceding behavioral assertions. Test hashes and reports provide bounded evidence; this review did not inspect every omitted test body or reproduce results.
+
+Historical limits remain intact. Original feature execution is test-after/unknown under TQA-ST05-03. Later causal RED does not change that classification. The r39 timeout remains unattributed and unreproduced; passing diagnostics do not prove its cause or correction. Broader empty-success authority coverage and a browser ACK/conflict race remain unestablished. These limits do not justify reopening resolved findings without a new counterexample.
+
+Security and operations: The shown implementation retains scoped account resolution, session/CSRF boundaries, current authorization checks around observation commits, escaped rendering, safe errors and explicit recovery. The supplied seven provider-entry scenarios, six 401 responses, administrator 403 and unchanged snapshots support the affected authorization behavior. Preserved TEST migration receipts report 25/25 completed migrations; activation receipts bind accepted source to images, running containers and served assets while preserving peers and volumes. The separate gateway reload receipt and successful content proof establish the observed recovery without proving the earlier 502 cause. The operator's response to the exact requested own-account flow is sufficient for the bounded submit/status/reload criterion. It establishes neither APPROVED nor recipient delivery, and requires no additional credential read or provider requery.
+
+Performance: No new material regression is demonstrated. Parent pagination precedes child hydration, detail receipts and catalogue probes are bounded, HTTP remains outside transactions, and current-selection retention adds constant-sized ownership metadata without another persistent cache or provider request. Deep OFFSET, exact counts and sequential page writes retain their disclosed costs. EPS/FRC/BCI/RLS disposition supports private-local correctness and access-path conclusions, not production capacity, sustained-load behavior or latency guarantees.
+
+Elegance and structural soundness: The narrow capability, explicit integration composition and existing two-slice reducer remain faithful to the approved design. No executable compatibility bridge, generic framework, duplicated sender or brittle structural shortcut is established. The module's copied outbound-message semantics are an avoidable coherence regression and account for the mixed documentation positions; they do not warrant redesigning the implementation.
+
+Pipeline, rule spirit and debt: No additional runtime P1/P2 defect or demonstrated test/authority bypass is established. Local CI-equivalent results are not represented as hosted CI, fixtures are confined to external boundaries, runtime hashes are substantive, and submission is not represented as approval. OPS-R4-01 remains bounded conservative availability debt under BLG-leadshug-template-failure-observation-authority, with Web/integrations ownership and explicit refresh recovery. SEC-R6-04 remains restricted to the existing private cohort under BLG-leadshug-template-recovery-read-budget before untrusted/public or Railway admission. Credential containment remains operator-confirmed without retesting or historical-nonuse claims. These dispositions have explicit limits and follow-ups and are not blanket waivers.
+
+Closeout: Keeping DOD-08, VAL-05 and delivery Pending is appropriate while this finding is adjudicated and deterministic guards remain unfinished. Pending authority/diff/completion/closeout gates are not missing product implementation. Final review supplies challenge evidence only; root retains adjudication authority and no product Git, promotion or deployment permission follows.
+- **Recommended path:** `Correct FINAL-R42-01, refresh the module-consistency evidence and record explicit final-review adjudication. Then complete the required authority, strict diff, debt, completion and closeout guards before marking the local TODO complete and moving cross-links. Preserve all accepted private-local restrictions and evidence limits. No architectural reset, additional Meta mutation or broad suite rerun is justified by this documentation-only finding.`
+- **Performance:** `acceptable`
+- **Elegance:** `mixed`
+- **Structural soundness:** `mixed`
+- **Operational fit:** `mixed`
+- **Findings:**
+  - [medium] FINAL-R42-01 Canonical template documentation substitutes outbound-message outcomes for template submission semantics: The newly consolidated ST-CON-05 section in integrations-and-channels.md defines error/receipt outcomes as BLOCKED, REJECTED, UNKNOWN, AMBIGUOUS_SEND_RECORDED and ACCEPTED_LOCAL_INCOMPLETE, then describes a positively committed ACK-without-ID diagnostic. Those are ST-CON-06 message-send concepts. The approved D06, CR-02 and Local Commit Certainty Contract instead require template creation without an ID to remain AMBIGUOUS, and known creation followed by unconfirmed local persistence to return TEMPLATE_SUBMISSION_LOCAL_INCOMPLETE with outcome ACCEPTED, providerAcceptance CONFIRMED and receiptPersistence UNCONFIRMED. The embedded TemplateCreateOutcome and TemplateSubmissionService implement that template-specific contract; they do not create the documented message diagnostic. This is fresh drift in the module consolidation, not a reopening of accepted implementation debt. The canonical module now contradicts both the frozen TODO and production source, so DOD-08 module consistency is not yet satisfied despite the supplied module-review receipt.
+
+## Exact Next Step
+Record reviewer resolutions in the governing TODO using the machine-checkable resolution table or equivalent gate ledger, then extract the derived resolution packet and decide whether another bounded review pass is still required.
+

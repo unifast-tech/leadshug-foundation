@@ -1,0 +1,194 @@
+{
+  "blocked": true,
+  "context": {
+    "acceptance_criteria_count": 0,
+    "allow_waivers": false,
+    "ci_equivalent_row_count": 3,
+    "current_delivery_stage": "Pending",
+    "definition_of_done_count": 8,
+    "delivery_claim": true,
+    "dod_count": 8,
+    "evidence_row_count": 13,
+    "mode": "single",
+    "pipeline_preflight_row_count": 3,
+    "rule_spirit_hunt_row_count": 3,
+    "scope_count": 5,
+    "todo_path": "/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/todos/active/features/TODO-leadshug-official-template-authoring.md",
+    "validation_count": 5,
+    "validation_steps_count": 5
+  },
+  "overall_outcome": "no-go",
+  "rule_id": "paced.todo.completion-evidence",
+  "schema_version": "todo-completion-guard-v1",
+  "status": "blocked",
+  "violations": [
+    {
+      "code": "CI-EQUIVALENT-PLACEHOLDER",
+      "message": "CI-equivalent suite row contains placeholder content: api / API + PostgreSQL E2E | schema/dom\u00ednio/Meta/role | bash scripts/test-channels-local.sh all | Local-Implemented | planned | Nenhuma execu\u00e7\u00e3o atual; npm ci/lint/build/unit/E2E completos, deploy/status | planned | sem subset como aceite | CAS/replay/mesmo nome/tenant/purpose/status/parser + lease de observa\u00e7\u00e3o compartilhado cat\u00e1logo\u2194individual, expira\u00e7\u00e3o, held-response e GET/reload PAUSED/ineligible + mesma conta por2Mantenedoras, quota global e contas distintas; rollback real e commit real seguido de perda de ACK de reserva/claim/recibo/release | Node22/PG16 pr\u00f3prios, provider fake determin\u00edstico; dois vendedores+admin, ator sem grant e duas BUs/tenants; draft alheio e mesmo revision com keys/atores diferentes",
+      "resolution": "Replace placeholders with the exact repo-owned CI suite/job, the local equivalent command, and concrete execution evidence.",
+      "section": "Local CI-Equivalent Suite Matrix"
+    },
+    {
+      "code": "CI-EQUIVALENT-STATUS-NOT-PASSED",
+      "message": "CI-equivalent suite row status `planned` does not satisfy delivery: api / API + PostgreSQL E2E",
+      "resolution": "Run and pass the same local suite/job that CI will execute, or record an explicit approved waiver/`n/a` rationale when no CI surface truly applies.",
+      "section": "Local CI-Equivalent Suite Matrix"
+    },
+    {
+      "code": "CI-EQUIVALENT-PLACEHOLDER",
+      "message": "CI-equivalent suite row contains placeholder content: web / build+unit+browser | menu/editor/fluxo | bash scripts/test-channels-local.sh all | Local-Implemented | planned | e2e/message-templates.spec.ts e regress\u00f5es completas; BFF n\u00e3o simulado | planned | mesmo run all | draft/save/submit/status/erro/stale/refresh | DB/API mesmos de CI-equivalent;4173/3100/3101; fonte e bundle servido fresco comprovados",
+      "resolution": "Replace placeholders with the exact repo-owned CI suite/job, the local equivalent command, and concrete execution evidence.",
+      "section": "Local CI-Equivalent Suite Matrix"
+    },
+    {
+      "code": "CI-EQUIVALENT-STATUS-NOT-PASSED",
+      "message": "CI-equivalent suite row status `planned` does not satisfy delivery: web / build+unit+browser",
+      "resolution": "Run and pass the same local suite/job that CI will execute, or record an explicit approved waiver/`n/a` rationale when no CI surface truly applies.",
+      "section": "Local CI-Equivalent Suite Matrix"
+    },
+    {
+      "code": "CI-EQUIVALENT-PLACEHOLDER",
+      "message": "CI-equivalent suite row contains placeholder content: root / compose/runner | boundary operacional | bash scripts/test-channels-local.sh all | Local-Implemented | planned | s\u00f3 invent\u00e1rio p\u00fablico positivo/masks falsas; nenhum .env real/.local-files | planned | n\u00e3o tocar namespace humano | montagem/ownership/build de valida\u00e7\u00e3o | namespace validation exclusivo, sem recurso preexistente",
+      "resolution": "Replace placeholders with the exact repo-owned CI suite/job, the local equivalent command, and concrete execution evidence.",
+      "section": "Local CI-Equivalent Suite Matrix"
+    },
+    {
+      "code": "CI-EQUIVALENT-STATUS-NOT-PASSED",
+      "message": "CI-equivalent suite row status `planned` does not satisfy delivery: root / compose/runner",
+      "resolution": "Run and pass the same local suite/job that CI will execute, or record an explicit approved waiver/`n/a` rationale when no CI surface truly applies.",
+      "section": "Local CI-Equivalent Suite Matrix"
+    },
+    {
+      "code": "PIPELINE-PREFLIGHT-UNRESOLVED-P1-P2",
+      "message": "Pipeline/Copilot P1/P2 Preflight row records an unresolved P1/P2 finding: Frozen API/Web current candidate | session/tenant/CSRF and stale result regressions; provider ambiguity | passed | evidence/candidate-r41-security.raw-attempt1.txt; evidence/candidate-r41-adherence.raw-attempt1.txt; evidence/root-cp05-all-r41-acceptance-v1.1.json | none unresolved P1/P2 | Prior current-selection findings integrated and causally covered; no static-only substitute for browser/PG",
+      "resolution": "Fix the P1/P2 issue, refresh the evidence, and rerun the gate before claiming delivery.",
+      "section": "Pipeline/Copilot P1/P2 Preflight"
+    },
+    {
+      "code": "PIPELINE-PREFLIGHT-EVIDENCE-NOT-REAL",
+      "message": "Pipeline/Copilot P1/P2 Preflight row claims `passed` but the evidence is not real completed execution: Operational activation and canonical modules",
+      "resolution": "Replace planned/pending text with concrete completed review evidence. Use columns: Reviewer Surface / Package, Review Focus, Status, Evidence Artifact / Command, Findings, Resolution / Notes.",
+      "section": "Pipeline/Copilot P1/P2 Preflight"
+    },
+    {
+      "code": "CRITERION-EVIDENCE-MISSING",
+      "message": "Scope item lacks criterion-specific evidence: SCOPE-01 \u2014 P\u00e1gina autenticada Modelos de mensagem, com BU/canal oficial expl\u00edcitos, listagem dos pr\u00f3prios rascunhos, editor textual com vari\u00e1veis/exemplos e pr\u00e9via.",
+      "resolution": "Add a Completion Evidence Matrix row quoting this criterion exactly and record concrete evidence.",
+      "section": "Completion Evidence Matrix"
+    },
+    {
+      "code": "CRITERION-EVIDENCE-MISSING",
+      "message": "Scope item lacks criterion-specific evidence: SCOPE-02 \u2014 Vendedor ATENDENTE+ cria/edita seus rascunhos e envia para an\u00e1lise da Meta, sem aprova\u00e7\u00e3o de ADMIN intermedi\u00e1ria; ADMIN/OWNER da BU pode administrar rascunhos locais da mesma BU.",
+      "resolution": "Add a Completion Evidence Matrix row quoting this criterion exactly and record concrete evidence.",
+      "section": "Completion Evidence Matrix"
+    },
+    {
+      "code": "CRITERION-EVIDENCE-MISSING",
+      "message": "Scope item lacks criterion-specific evidence: SCOPE-03 \u2014 Capacidade abstrata estreita de gerenciamento de templates, separada de Channel.sendMessage; submiss\u00e3o oficial scoped, revisionada/idempotente, reserva de nome por conta/idioma e recupera\u00e7\u00e3o de resultado incerto sem repetir POST automaticamente; criptografia/segredos atuais preservados.",
+      "resolution": "Add a Completion Evidence Matrix row quoting this criterion exactly and record concrete evidence.",
+      "section": "Completion Evidence Matrix"
+    },
+    {
+      "code": "CRITERION-EVIDENCE-MISSING",
+      "message": "Scope item lacks criterion-specific evidence: SCOPE-04 \u2014 Atualiza\u00e7\u00e3o expl\u00edcita de status/cat\u00e1logo da Messaging account correta; aprovado/pendente/recusado/pausado/desativado/indispon\u00edvel com evid\u00eancia de consulta; somente APPROVED suportado pode ser indicado como apto para uso futuro.",
+      "resolution": "Add a Completion Evidence Matrix row quoting this criterion exactly and record concrete evidence.",
+      "section": "Completion Evidence Matrix"
+    },
+    {
+      "code": "CRITERION-EVIDENCE-MISSING",
+      "message": "Scope item lacks criterion-specific evidence: SCOPE-05 \u2014 Harness de depend\u00eancias/capacidade e testes de dom\u00ednio/contrato/concorr\u00eancia PostgreSQL, Playwright contra BFF real e prova de cria\u00e7\u00e3o/consulta em recurso oficial pr\u00f3prio, sem envio a destinat\u00e1rio; consolida\u00e7\u00e3o do contrato e revis\u00f5es derivadas.",
+      "resolution": "Add a Completion Evidence Matrix row quoting this criterion exactly and record concrete evidence.",
+      "section": "Completion Evidence Matrix"
+    },
+    {
+      "code": "CRITERION-EVIDENCE-MISSING",
+      "message": "Definition of Done item lacks criterion-specific evidence: DOD-01 \u2014 Vendedor ATENDENTE+ abre Modelos de mensagem, cria/salva/reabre seu rascunho por BU/canal, edita com revision CAS, preenche exemplos e v\u00ea pr\u00e9via coerente; atores sem grant na BU e escopos alheios falham antes de efeitos.",
+      "resolution": "Add a Completion Evidence Matrix row quoting this criterion exactly and record concrete evidence.",
+      "section": "Completion Evidence Matrix"
+    },
+    {
+      "code": "CRITERION-EVIDENCE-MISSING",
+      "message": "Definition of Done item lacks criterion-specific evidence: DOD-02 \u2014 Submiss\u00e3o no LeadsHug n\u00e3o exige ADMIN; usa a conta/credencial verificadas do canal, valida texto/vari\u00e1veis/categoria/idioma e confirma snapshot/revis\u00e3o; nenhuma mensagem ou conversa \u00e9 criada.",
+      "resolution": "Add a Completion Evidence Matrix row quoting this criterion exactly and record concrete evidence.",
+      "section": "Completion Evidence Matrix"
+    },
+    {
+      "code": "CRITERION-EVIDENCE-MISSING",
+      "message": "Definition of Done item lacks criterion-specific evidence: DOD-03 \u2014 Replays/duplo clique/crash n\u00e3o repetem POST por opera\u00e7\u00e3o; conta/nome/idioma concorrentes s\u00e3o protegidos; resultado incerto permanece expl\u00edcito e reconcile n\u00e3o faz POST externo nem vincula defini\u00e7\u00e3o diferente.",
+      "resolution": "Add a Completion Evidence Matrix row quoting this criterion exactly and record concrete evidence.",
+      "section": "Completion Evidence Matrix"
+    },
+    {
+      "code": "CRITERION-EVIDENCE-MISSING",
+      "message": "Definition of Done item lacks criterion-specific evidence: DOD-04 \u2014 Consulta/status e cat\u00e1logo paginados refletem Meta com frescor/categoria efetiva, sem promover PENDING/UNKNOWN/recusado/pausado a pronto; erro seguro conserva estado anterior e n\u00e3o finge cat\u00e1logo vazio.",
+      "resolution": "Add a Completion Evidence Matrix row quoting this criterion exactly and record concrete evidence.",
+      "section": "Completion Evidence Matrix"
+    },
+    {
+      "code": "CRITERION-EVIDENCE-MISSING",
+      "message": "Definition of Done item lacks criterion-specific evidence: DOD-05 \u2014 Troca de BU/canal/revis\u00e3o, saves concorrentes e status atrasado n\u00e3o sobrescrevem draft/estado atual; refresh da p\u00e1gina recupera opera\u00e7\u00e3o sem chave do browser e sem divulgar token/segredo.",
+      "resolution": "Add a Completion Evidence Matrix row quoting this criterion exactly and record concrete evidence.",
+      "section": "Completion Evidence Matrix"
+    },
+    {
+      "code": "CRITERION-EVIDENCE-MISSING",
+      "message": "Definition of Done item lacks criterion-specific evidence: DOD-06 \u2014 Schema/migration deploy/status, harness dur\u00e1vel, CI-equivalent completo e Playwright mutation passam com API/PG reais e bundle servido fresco; gate send de ST-CON-01 e contratos Channel/OutboundService de ST-CON-06 permanecem inalterados.",
+      "resolution": "Add a Completion Evidence Matrix row quoting this criterion exactly and record concrete evidence.",
+      "section": "Completion Evidence Matrix"
+    },
+    {
+      "code": "CRITERION-EVIDENCE-MISSING",
+      "message": "Definition of Done item lacks criterion-specific evidence: DOD-07 \u2014 Operador valida criar/submeter um modelo textual de teste na conta correta e consultar seu resultado real; decis\u00e3o Meta pode ser PENDING/REJECTED sem falsear APPROVED. Consumo f\u00edsico aprovado no ST-CON-04 continua depend\u00eancia separada.",
+      "resolution": "Add a Completion Evidence Matrix row quoting this criterion exactly and record concrete evidence.",
+      "section": "Completion Evidence Matrix"
+    },
+    {
+      "code": "CRITERION-CHECKLIST-UNCHECKED",
+      "message": "Definition of Done item is still unchecked under a delivery claim: DOD-08 \u2014 Decis\u00f5es e contrato promovidos ao m\u00f3dulo respons\u00e1vel, revis\u00f5es derivadas/seguran\u00e7a/pcv/TQA/final e guardas de entrega satisfeitos; sem P1/P2 aberto e sem claim de produ\u00e7\u00e3o.",
+      "resolution": "Check the TODO item only after the implementation and criterion-specific evidence are complete, or move the TODO back to a non-delivery stage.",
+      "section": "Definition of Done"
+    },
+    {
+      "code": "CRITERION-EVIDENCE-MISSING",
+      "message": "Definition of Done item lacks criterion-specific evidence: DOD-08 \u2014 Decis\u00f5es e contrato promovidos ao m\u00f3dulo respons\u00e1vel, revis\u00f5es derivadas/seguran\u00e7a/pcv/TQA/final e guardas de entrega satisfeitos; sem P1/P2 aberto e sem claim de produ\u00e7\u00e3o.",
+      "resolution": "Add a Completion Evidence Matrix row quoting this criterion exactly and record concrete evidence.",
+      "section": "Completion Evidence Matrix"
+    },
+    {
+      "code": "CRITERION-EVIDENCE-MISSING",
+      "message": "Validation Steps item lacks criterion-specific evidence: VAL-01 \u2014 Executar bash scripts/test-channels-local.sh all, com boundary p\u00fablico positivo de ST-CON-06 preservado, incluindo deploy/status de migrations, lint/build/unit/E2E/Web/Playwright e fonte/served fingerprints.",
+      "resolution": "Add a Completion Evidence Matrix row quoting this criterion exactly and record concrete evidence.",
+      "section": "Completion Evidence Matrix"
+    },
+    {
+      "code": "CRITERION-EVIDENCE-MISSING",
+      "message": "Validation Steps item lacks criterion-specific evidence: VAL-02 \u2014 Executar barreiras PostgreSQL + contador HTTP para save CAS, key replay, reserva do mesmo nome entre vendedores, lease vencido, timeout p\u00f3s-dispatch, keys/atores diferentes na mesma revis\u00e3o, mesma conta por BUs/Mantenedoras diferentes versus contas distintas, rollback real e commit real com ACK local perdido em reserva/claim/recibo/release, e altera\u00e7\u00e3o de conta/gera\u00e7\u00e3o/vers\u00e3o de credencial em voo; sem HTTP em transa\u00e7\u00e3o.",
+      "resolution": "Add a Completion Evidence Matrix row quoting this criterion exactly and record concrete evidence.",
+      "section": "Completion Evidence Matrix"
+    },
+    {
+      "code": "CRITERION-EVIDENCE-MISSING",
+      "message": "Validation Steps item lacks criterion-specific evidence: VAL-03 \u2014 Executar web-app/e2e/message-templates.spec.ts via runner can\u00f4nico com BFF real: editor/preview/save/reopen/submit/refresh/recusa/incerteza/roles/BU-stale e prote\u00e7\u00e3o de opera\u00e7\u00e3o, sem mock BFF.",
+      "resolution": "Add a Completion Evidence Matrix row quoting this criterion exactly and record concrete evidence.",
+      "section": "Completion Evidence Matrix"
+    },
+    {
+      "code": "CRITERION-EVIDENCE-MISSING",
+      "message": "Validation Steps item lacks criterion-specific evidence: VAL-04 \u2014 Confirmada readiness da conta pr\u00f3pria, operador submete modelo de teste e atualiza status pelo LeadsHug; registrar resultado redigido, sem enviar mensagem a destinat\u00e1rio nem declarar aprova\u00e7\u00e3o por fixture.",
+      "resolution": "Add a Completion Evidence Matrix row quoting this criterion exactly and record concrete evidence.",
+      "section": "Completion Evidence Matrix"
+    },
+    {
+      "code": "CRITERION-CHECKLIST-UNCHECKED",
+      "message": "Validation Steps item is still unchecked under a delivery claim: VAL-05 \u2014 Rodar architecture adherence/security/pcv/TQA/final/debt/diff p\u00fablico e authority/completion/closeout antes de entrega; reconvergir ST-CON-04 apenas no handoff seguinte.",
+      "resolution": "Check the TODO item only after the implementation and criterion-specific evidence are complete, or move the TODO back to a non-delivery stage.",
+      "section": "Validation Steps"
+    },
+    {
+      "code": "CRITERION-EVIDENCE-MISSING",
+      "message": "Validation Steps item lacks criterion-specific evidence: VAL-05 \u2014 Rodar architecture adherence/security/pcv/TQA/final/debt/diff p\u00fablico e authority/completion/closeout antes de entrega; reconvergir ST-CON-04 apenas no handoff seguinte.",
+      "resolution": "Add a Completion Evidence Matrix row quoting this criterion exactly and record concrete evidence.",
+      "section": "Completion Evidence Matrix"
+    }
+  ]
+}

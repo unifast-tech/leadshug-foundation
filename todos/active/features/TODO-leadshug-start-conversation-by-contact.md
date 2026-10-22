@@ -800,7 +800,7 @@ Assumption-code guard inicialmente retornou NO-GO apenas em A01: seu parser PATH
 
 ## Sequencing handoff — request2026-10-19
 
-Usuário quer vendedor criar e enviar modelo para análise da Meta dentro do LeadsHug. Autoridade desse novo objetivo é o [TODO ST-CON-05](TODO-leadshug-official-template-authoring.md), não uma ampliação silenciosa deste sender. ST-CON-04 permanece sem aprovação/implementação e preserva suas exclusões de criação/gestão. Após entrega do ST-CON-05, rebasear premissas/source/diff/DI para consumir o mesmo domínio/catálogo, sem duplicá-lo; rerodar reviews afetados/guardas e pedir APROVADO do consumer então. Revisões/guardas anteriores continuam evidência histórica de seu próprio baseline, não autorização do programa ampliado.
+Usuário quer vendedor criar e enviar modelo para análise da Meta dentro do LeadsHug. Autoridade desse novo objetivo é o [TODO ST-CON-05](../../completed/features/TODO-leadshug-official-template-authoring.md), não uma ampliação silenciosa deste sender. ST-CON-04 permanece sem aprovação/implementação e preserva suas exclusões de criação/gestão. Após entrega do ST-CON-05, rebasear premissas/source/diff/DI para consumir o mesmo domínio/catálogo, sem duplicá-lo; rerodar reviews afetados/guardas e pedir APROVADO do consumer então. Revisões/guardas anteriores continuam evidência histórica de seu próprio baseline, não autorização do programa ampliado.
 
 ## Reframing — Channel abstraction request, 2026-10-20
 
@@ -818,3 +818,7 @@ Keep the user's selected behavior: the seller can start a conversation in LeadsH
 Use the common abstract transport/orchestration and sole MessageAcceptance owner. Current public POST still creates the conversation before attempting a send and may leave it empty on failure;06 intentionally preserves this behavior. Any new intent/durability, deduplication, conversation-creation timing or recovery policy belongs in04's reviewed contract. ACCEPTED means a valid provider message ID, not handset delivery; UNKNOWN and ACCEPTED_LOCAL_INCOMPLETE forbid blind resend and require truthful UI/draft handling.
 
 Explicit residuals to reconverge: current latest-IN window uses stored createdAt without transport filtering; null-ID diagnostics cannot safely merge with echoes by heuristics; local-check-to-network and crash gaps remain. Do not silently substitute the latest/current channel identity into a captured dispatch. Resolve these against first-send requirements before renewed APROVADO, without portraying them as already solved in06.
+
+## Handoff de ST-CON-05 — 2026-10-22
+
+ST-CON-06 e ST-CON-05 estão concluídos localmente. [ST-CON-05 encerrado](../../completed/features/TODO-leadshug-official-template-authoring.md) entrega autoria/submissão/consulta e catálogo/projetor comum; all802 e prova real de submit/status/reload. Isso não informa APPROVED e não implementa primeiro envio. Reconvergir este contrato contra Channel textual atual e TemplateManagement separado, consumir o catálogo compartilhado e revalidar elegibilidade/contexto/readiness de envio de forma independente. Este handoff não altera o status NotStarted nem concede APROVADO, não muda decisões congeladas e não autoriza código, contato, envio ou deploy.
