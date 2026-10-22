@@ -1,0 +1,91 @@
+{
+  "checkpoint": "E40 frozen full candidate stops at fixture actor rate limit",
+  "canonical_command": "bash scripts/test-channels-local.sh all",
+  "unified_exec_session_id": 35920,
+  "exit_code": 1,
+  "synthetic_stdout": "/tmp/stcon04-executor-all-e40.txt",
+  "stdout_sha256": "ed48c7ffc544e28f08a8e089e949bcdd4b9953852627f42a8f6a554479bf9bfe",
+  "source_seal": "all-source-seal-e40-v1.1.json",
+  "source_recheck": "all-source-recheck-e40-v1.1.json",
+  "source_count": 259,
+  "source_fingerprint": "cddb23f12ac1b96f48beb0e405b63b94729dbbe9be132c6caf2734aac7fe1947",
+  "root_verified": [
+    "Complete positive inventory and bytes unchanged before writer release",
+    "Synthetic transcript SHA and exact bounded failure stack",
+    "Owned disposable cleanup"
+  ],
+  "phases": {
+    "generate_deploy_status_lint_build": "passed",
+    "api_unit": {
+      "files_passed": 34,
+      "tests_passed": 353,
+      "duration_seconds": 4.07
+    },
+    "api_postgresql": {
+      "files_passed": 32,
+      "files_failed": 1,
+      "tests_passed": 432,
+      "tests_failed": 1,
+      "duration_seconds": 274.75
+    },
+    "web": "not reached",
+    "browser": "not reached",
+    "owned_cleanup": "completed"
+  },
+  "failure": {
+    "path": "api-app/test/initial-message.e2e-spec.ts:656",
+    "observed": "First paused-template loop expected UNSUPPORTED_KIND; got INITIAL_RATE_LIMIT before the intended provider semantic check.",
+    "cause": "Compound fixture reuses one actor for prior successful/held/refused reservations and seven additional negative cases. Real10/min actor guard includes released/rejected intents.",
+    "correction": "Isolate each negative case with its own actually authorized same-BU fixture actor/session; preserve production actor/account limits and all zeroPOST/rejected/released assertions.",
+    "not_reached": "Full seven-item negative loop and subsequent per-item noPOST/durable facts are not passed. E39/E40 overall case remains RED."
+  },
+  "bci_synthetic_metrics": [
+    {
+      "wave": 1,
+      "requests": 20,
+      "replay202": 19,
+      "posts": 1,
+      "messages": 1,
+      "elapsedMs": 155
+    },
+    {
+      "wave": 2,
+      "requests": 20,
+      "replay202": 19,
+      "posts": 1,
+      "messages": 1,
+      "elapsedMs": 141
+    },
+    {
+      "wave": 3,
+      "requests": 20,
+      "replay202": 19,
+      "posts": 1,
+      "messages": 1,
+      "elapsedMs": 126
+    },
+    {
+      "wave": 4,
+      "requests": 20,
+      "replay202": 19,
+      "posts": 1,
+      "messages": 1,
+      "elapsedMs": 132
+    },
+    {
+      "wave": 5,
+      "requests": 20,
+      "replay202": 19,
+      "posts": 1,
+      "messages": 1,
+      "elapsedMs": 139
+    }
+  ],
+  "limits": [
+    "New browser persistence quota-failure case and current UI are not executed by this run.",
+    "Actual rate guard is preserved; fixture isolation is not cap relaxation.",
+    "E02/E04/E18/E35a and inherited debts remain.",
+    "No delivery, actual provider proof, full diff guard or runtime activation."
+  ],
+  "next": "Writer released after independent postseal for exact fixture actor isolation, then new preseal/canonical all."
+}

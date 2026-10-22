@@ -1,0 +1,62 @@
+{
+  "kind": "Reviewable future local activation/proof plan; NOT approved or executed",
+  "governing_todo": "foundation_documentation/todos/active/features/TODO-leadshug-start-conversation-by-contact.md",
+  "preconditions": [
+    "Frozen complete candidate passes canonical all with identical pre/post public source manifest.",
+    "Required independent implementation/migration/security/architecture assessments resolve material findings.",
+    "Full diff guard inspection exception is separately explicit; no inferred private inspection.",
+    "Reconfirm preserved local project identity from exact approved public topology and safe selected Docker metadata; stop on unexpected topology/resources."
+  ],
+  "proposed_target": {
+    "project": "leadshug_channels_local",
+    "profile": "channels-local",
+    "public_composition": [
+      "docker-compose.yml",
+      "docker-compose.channels.yml"
+    ],
+    "operator_origin": "existing loopback gateway on127.0.0.1:8083; current availability unknown",
+    "services_to_replace": [
+      "api",
+      "web"
+    ],
+    "services_to_preserve": [
+      "postgres",
+      "gateway",
+      "evolution-postgres",
+      "evolution-redis",
+      "evolution"
+    ],
+    "data": "All existing volumes, BUs, channels, credentials and conversation history preserved. No reset/drop/truncate/deletion."
+  },
+  "build_provenance": [
+    "Use explicit positive public build-input inventory from principal checkout; no root-wide context capture or private traversal.",
+    "No copied writable checkout/worktree; disposable build context/archive is a generated build artifact only.",
+    "Record approved public input hashes, image IDs/digests, API compiled hashes and Web built/served bundle equality.",
+    "Do not claim an unbuilt source fingerprint as the served image. Fresh attestation must precede interpreting operator/browser proof."
+  ],
+  "proposed_private_exception": {
+    "purpose": "Mechanical Compose consumption of the existing private test configuration to preserve current runtime settings.",
+    "allowed": "Only existing .env.testing as an opaque input to existing Compose; no printing/copying/dumping values. Local migration process may use its existing DB connection in-memory.",
+    "forbidden": "No .local-files access; no process argument/env/log dumps; no manual token/provider probe; no credential/session password read by agent; no private-file edits unless separately concrete and approved.",
+    "unknown": "HTTPS current hostname/process state unknown; no existing tunnel adopted/killed by assumption. If origin change requires private-file mutation, prepare exact bounded change first."
+  },
+  "migration": [
+    "Only three approved additive initial_message migrations from sealed source after disposable deploy/status/schema proof.",
+    "Preflight exact local TEST database/service; record migration names/checksums/status and no unexpected pending drift.",
+    "SET lock_timeout5s and statement_timeout60s as in approved SQL; stop on lock/migration failure; no blind retry/reset.",
+    "No destructive down migration; rollback assessment is application compatibility plus preserved data, not dropping new tables/columns."
+  ],
+  "activation": [
+    "Recreate only selected API/Web using newly verified local images, no pull/restart of preserved providers or databases.",
+    "Verify health and compiled/bundle equality through the existing gateway.",
+    "If a new owned temporary HTTPS tunnel is needed, validate DNS/TLS/health/assets and then have operator update Meta callback/privacy URLs; no automatic provider configuration changes."
+  ],
+  "assisted_proof": [
+    "Operator logs in normally; agent does not extract OWNER password or enumerate live business rows.",
+    "In the nonofficial BU, operator opens a consenting test contact with explicit DDI, previews and confirms one first text; recipient replies.",
+    "In the official BU, operator selects the already-approved own-account text template through the shared catalog, fills fictitious/test values, previews and confirms once; recipient replies.",
+    "Record only safe outcome/state/timestamps and source-runtime attestation. Do not persist phone/contact/body/token.",
+    "No automated sends, new contacts, routing changes, migration/registration at Meta, or Railway deployment."
+  ],
+  "current_status": "Proposal only; all actual runtime/provider/private operations remain unexecuted. Candidate E40 all still in progress."
+}

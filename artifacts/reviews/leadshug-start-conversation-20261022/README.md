@@ -70,3 +70,7 @@ A API passou em353 testes unitários e429 de integração; quatro casos de integ
 ## Checkpoint E39 — consultas e schema passam; uma expectativa restante
 
 A rodada passou em353 testes unitários e432 de integração. Restou uma expectativa de código de erro no primeiro caso de modelo pausado; os casos negativos seguintes da mesma sequência não executaram. A instrumentação SQL real, as verificações restritas de schema e o teste de confirmação de risco passaram. [Recibo E39](evidence/all-result-e39-v1.1.json). Os259 arquivos públicos permaneceram idênticos durante a execução; Web/navegador ainda não foram alcançados. O estado continua InProgress/Pending/implementation.
+
+## Checkpoint E40 — isolamento dos usuários de teste
+
+A rodada passou em353 testes unitários e432 de integração. A sequência de negativas atingiu o limite real de10 tentativas/minuto do mesmo ator antes de alcançar a recusa de modelo pretendida. [Recibo E40](evidence/all-result-e40-v1.1.json). Os cenários serão isolados por usuários autorizados distintos; os limites do produto permanecem iguais. Web/navegador e a falha de armazenamento seguem sem execução nessa rodada. [Índice preliminar por critério](evidence/candidate-criterion-index-e40-v1.1.json) e [plano futuro de ativação local](evidence/local-activation-proof-plan-proposal-v1.1.json) não declaram conclusão ou autorização de runtime/inspeção privada.
