@@ -1,0 +1,28 @@
+{
+  "checkpoint": "E25 main coordinator pre-implementation RED",
+  "session": 46343,
+  "exit_code": 1,
+  "stdout": "/tmp/stcon04-executor-initial-coordinator-red.txt",
+  "stdout_sha256": "faa0d38d61b7190e89cd4cdfee912d0b6f8cb638424de4e1f3c0a4cebb87eac9",
+  "root_verified_stdout_hash": true,
+  "source_seal_fingerprint": "edb93acfac17c57bae1cea0007180ca2412a61160df491585b84141167c59e9a",
+  "source_records_checked": 252,
+  "source_unchanged": true,
+  "source_changes": [],
+  "source_additions": [],
+  "summary": [
+    " FAIL  src/domain/inbox/initial-message.service.spec.ts [ src/domain/inbox/initial-message.service.spec.ts ]",
+    " FAIL  src/domain/inbox/dispatch-admission.service.spec.ts > DispatchAdmissionService owner-token interlock > refuses an initial reservation while any ordinary token remains unreleased",
+    " FAIL  src/domain/channels/transport/channel-initial-message.spec.ts > MetaInitialMessageClient protocol boundary > reuses one management grant over two bounded template pages before messaging grant, fence, and pinned template POST",
+    " Test Files  3 failed | 30 passed (33)",
+    "      Tests  2 failed | 327 passed (329)"
+  ],
+  "cleanup_tail": [
+    " Volume leadshug_channels_validation_channels_web_node_modules  Removed",
+    " Volume leadshug_channels_validation_validation_pg_data  Removed",
+    " Volume leadshug_channels_validation_channels_playwright_cache  Removed",
+    " Volume leadshug_channels_validation_channels_api_node_modules  Removed",
+    " Volume leadshug_channels_validation_channels_web_workspace  Removed"
+  ],
+  "limits": "Coordinator RED is absent-module load, not actual callback/request-idempotency assertion proof. Other actual failures require separate classification; no new backend GREEN or PG proof."
+}
