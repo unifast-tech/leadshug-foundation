@@ -1,0 +1,11 @@
+{
+  "schema": "stcon05.r37-current-selected-packet-builder-preparation.v1",
+  "at_utc": "2026-10-22T03:03:23.975011+00:00",
+  "status": "AST/static preparation only; no future GREEN packet generated or gate claimed",
+  "package_builder": "foundation_documentation/artifacts/reviews/leadshug-template-authoring-20261020/evidence/assurance-current-selection-builder-r37-preparation.py",
+  "package_builder_sha256": "d4cbc5a42dc74eb09c24e36f36c987168d1fd15a976f65e4d9705e30cb887621",
+  "pcv_builder": "foundation_documentation/artifacts/reviews/leadshug-template-authoring-20261020/evidence/pcv-artifact-builder-r37-preparation.py",
+  "pcv_builder_sha256": "77bc052a8c157ec76441d2a205ac23cca2c7c8d8862fde8b9cc27f8826379f0f",
+  "scope": "Frozen r35 baseline packet/source hash; full changed3Webfiles/exactdelta/fullrubrics/TODO/constitution/unchanged producer source selection; actual current acceptance/receipt/5markers/proofs mandatory; round04 recorded resolution required. Current accepted debt and full TQA output explicitly carried. Max1MB capacity admission before dispatch, never shrink a live review. PCV only changes executor attribution from actual acceptance, no metric/threshold changes.",
+  "limits": "Neither builder executed; all r37 is live, source/process freeze remains. No helper/runtime/DB/provider action."
+}

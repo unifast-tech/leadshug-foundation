@@ -1,0 +1,24 @@
+{
+  "schema": "stcon05.r37-static-tqa-support.v1",
+  "at_utc": "2026-10-22T03:00:17.341674+00:00",
+  "exit": 2,
+  "paths": [
+    "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app/src/domain/channels/channel-credential-resolver.spec.ts",
+    "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app/src/domain/message-templates/template-definition.spec.ts",
+    "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app/src/domain/message-templates/template-management.dependencies.spec.ts",
+    "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app/src/domain/message-templates/template-management.ports.spec.ts",
+    "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app/src/integrations/meta/message-template.client.spec.ts",
+    "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app/test/message-template-bff.e2e-spec.ts",
+    "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app/test/message-template-drafts.e2e-spec.ts",
+    "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app/test/message-template-management.e2e-spec.ts",
+    "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app/test/number-onboarding-bci.e2e-spec.ts",
+    "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app/test/number-onboarding-pcv.e2e-spec.ts",
+    "/mnt/c/unifast/leadshug/leadshug_now_docker/web-app/e2e/message-templates.spec.ts",
+    "/mnt/c/unifast/leadshug/leadshug_now_docker/web-app/src/api.spec.ts",
+    "/mnt/c/unifast/leadshug/leadshug_now_docker/web-app/src/telas/Modelos.spec.ts"
+  ],
+  "raw": "foundation_documentation/artifacts/reviews/leadshug-template-authoring-20261020/evidence/static-tqa-selected-r37.txt",
+  "raw_sha256": "53214295c47d8ea65654e94ffd1c7517d6781d865b97734c596f60ece7db8ab9",
+  "counts": "Counts: hard_bypass=0 test_support=0 auth_shortcut=0 status_only=104 no_exception_only=0 ambient_subject_fallback=0 di_override=0 mock_hint=16",
+  "disposition": "13 exact public files; no bypass/auth/support/ambient/DI signals. Status/mock hints require contextual review. New pure causal inputs retained via named structurally extra hint fixtures while product action no longer declares/uses them. Three actual r36 semantic REDs; browser sequences unexecuted until current all. No formal TQA waiver."
+}

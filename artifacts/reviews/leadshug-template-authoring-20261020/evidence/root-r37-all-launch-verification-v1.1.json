@@ -1,0 +1,18 @@
+{
+  "schema": "stcon05.r37-launch-root-verification.v1",
+  "at_utc": "2026-10-22T03:08:26.095299+00:00",
+  "launch_path": "foundation_documentation/artifacts/tmp/st-con-05-r37-all-Ou4yck/launch.json",
+  "launch_sha256": "31aded106543a9ba43965499ae961bd6ae97fefe207633d45134b48d7795525c",
+  "launch": {
+    "schema": "stcon05.r37-canonical-all-launch.v1",
+    "task_dir": "foundation_documentation/artifacts/tmp/st-con-05-r37-all-Ou4yck",
+    "command": "bash scripts/test-channels-local.sh all",
+    "stdout_stderr_log": "foundation_documentation/artifacts/tmp/st-con-05-r37-all-Ou4yck/canonical-all.log",
+    "numeric_exit_receipt": "foundation_documentation/artifacts/tmp/st-con-05-r37-all-Ou4yck/runner-exit.txt",
+    "source_freeze": "foundation_documentation/artifacts/reviews/leadshug-template-authoring-20261020/evidence/root-cp05-source-freeze-r37-current-selected-owner-v1.1.json"
+  },
+  "directory_exists": true,
+  "log_exists": true,
+  "receipt_at_verification": false,
+  "status": "In progress only; no result/timeout inference, source/process freeze"
+}

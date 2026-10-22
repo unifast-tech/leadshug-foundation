@@ -1,0 +1,13 @@
+{
+  "schema": "stcon05.r36-web-red-admission.v1",
+  "at_utc": "2026-10-22T02:35:58.920517+00:00",
+  "outcome": "GO one canonical web only, test-only source freeze",
+  "freeze": "foundation_documentation/artifacts/reviews/leadshug-template-authoring-20261020/evidence/root-cp05-source-freeze-r36-current-selection-test-only-v1.1.json",
+  "freeze_sha256": "ce2df04a5048d47605cc104aa03ee1f2341143a6124b5bb79eb6a203389801dc",
+  "executor": "/root/template_validation_recovery; sole writer/validator",
+  "command": "bash scripts/test-channels-local.sh web",
+  "capture": "Single exclusive mktemp -d assigned once; complete first-byte stdout+stderr tee and actual PIPESTATUS[0] numeric receipt in same directory. Check destinations absent before launch. No retry or recapture run.",
+  "causal_target": "Old product must fail semantic current-selected B higher PAUSED retention and clear-selection/omission tests; build/setup failure is not behavioral RED. Browser tests authored but not executed in this mode. Existing42 Web units expected unchanged,3 new cases anticipated. Root attribution requires actual terminal/counts/diff/freeze/seals/heads.",
+  "HOW_after_root": "Current selected remote association is metadata inside existing reducer. Clear on selected editor change/reset; set from guarded current operation even if snapshot absent; use current association at page adoption, preserve highest same-resource prior observation only in existing individual slice. Preserve exact page membership/cursor and all eligibility/failure/TTL/ACK semantics. No stale request-selected field retained in product contract, third cache/ref/newHTTP/backend. Exact product edit remains not admitted until causal RED.",
+  "prohibitions": "No edits during run; no focused tests/retries/runner/fixtures/other source/BCI/SQL/seals/helper repair/preserved Docker/DB/Config.Env/runtime/tunnel/Meta/Git product action."
+}

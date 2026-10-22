@@ -1,0 +1,24 @@
+{
+  "schema": "stcon05.r36-current-selection-evidence-plan.v1",
+  "at_utc": "2026-10-22T02:32:42.416425+00:00",
+  "profile": "Operational/Coder, React/Vite scoped consumer correction; existing NestJS/Prisma/PostgreSQL producer untouched. Bug-fix and React UI boundary methods reloaded.",
+  "findings": [
+    "SEC-R35-01",
+    "ADH-R35-01"
+  ],
+  "mandatory_answers": {
+    "Q1": "Existing tests cover fixed selected-resource omission, equal-fence eligibility, historical/current fences and both successful-response producer orderings. They do not cover clearing or switching editor while a catalogue response remains admitted for the same account. r35 all797 is honest but incomplete for those sequences.",
+    "Q2": "Current r35 actual disposable BFF payload/fresh proofs were independently checked, including fields remoteTemplateId/status/available/eligible/matchesDefinition/eligibleForUse/observedFence and recovered fence12>10. No preserved DB/business data inspected. New empty/omitting-page and switched-B payload sequence has not yet executed; tests must inspect unchanged real responses at the browser boundary. Source parser/DTO unchanged, not presumed externally Meta-compatible.",
+    "Q3": "No existing r35 test failed; positive omission test held the same selection and successful race cases61/62 kept the same editor. Current reviews identify request-start selection carried into account-owned late page adoption, so latest editor facts can be lost or old selection restored. New sequence missing, not hidden by a claimed whole-surface proof.",
+    "Q4": "Before product correction: pure reducer current B301/PAUSED plus individualB300/APPROVED and old-A replacement, clear-selection then omission, page-only selectedB with no individual snapshot; real-BFF held page after Novo and A-to-B/higher-passive/omission. Preserve positive fixed-selected omission and every common/editor negative. Test-only static freeze then one canonical Web RED, product minimal current-owner metadata after root acceptance, final full all browser/PG proof. Browser scenarios are not claimed RED unless actually executed.",
+    "Q5": "no-rule-needed: violation depends on current selection, response ordering, omitted page membership and split observations. A generic AST ban on captured IDs would reject legitimate immutable targets and miss guarded paths. Existing scope/architecture/quality rules remain; no Delphi/analyzer changes. Runtime state-machine regressions are the precise guard."
+  },
+  "coverage_matrix": {
+    "API/provider/DTO": "covered unchanged at r35 candidate scope; deterministic external provider fixture, real BFF/PG. New page payload must be observed, not fabricated.",
+    "persisted observation/projector": "covered unchanged shared producer fence; no server correction authorized",
+    "local reducer selection": "false-green for two new selection sequences; pure tests before fix",
+    "actual component/DOM": "missing new selection sequences; authored browser controls retain actual BFF responses, final canonical all required"
+  },
+  "HOW_direction": "Selected remote resource is metadata owned by the existing observation reducer, not an observation cache/ref/new backend field. Clear transitions erase it; guarded normal operation selection establishes it even when snapshot absent. Page adoption uses current reducer owner and highest current same-ID observation before exact replacement; no stale action-selected ID, no reinserted omitted page IDs, no relaxed editor proof. Exact wiring and tests subject to root static admission.",
+  "excluded": "OPS-R4-01 is independently adjudicated bounded availability debt; no failure metadata/extraHTTP/lease change. No product Git/private dotenv/local-files/preserved runtime/Meta action."
+}

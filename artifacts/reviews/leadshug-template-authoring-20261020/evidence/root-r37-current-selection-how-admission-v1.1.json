@@ -1,0 +1,23 @@
+{
+  "schema": "stcon05.r37-current-selection-how-admission.v1",
+  "at_utc": "2026-10-22T02:51:06.265367+00:00",
+  "status": "GO serialized product patch only; root accepted r36 semantic RED; stop before tests/build",
+  "authority": "Approved D07/D08/CR-V11-01; independent SEC-R35-01/ADH-R35-01 OptionB and root source review; no public contract/WHAT expansion",
+  "owned_paths": [
+    "web-app/src/telas/Modelos.tsx",
+    "web-app/src/telas/Modelos.spec.ts"
+  ],
+  "plan": [
+    "Add current selectedRemoteTemplateId nullable metadata to existing TemplateObservationSlices and explicit guarded selected-operation event. It is selection identity, not another observation store/ref/cache or backend fact.",
+    "clear-all resets pointer; clear-individual clears pointer and individual; clear-catalog/failure/observation transitions preserve correct owner. Page adoption reads current reducer owner, never request-start ID. Remove obsolete request-selected parameter from page actions/loadCatalogPage/refresh callers instead of retaining compatibility fallback.",
+    "Normal guarded open/submit/recovery/operation reads establish selection from the ACTUAL selected operation association even when savedObservation absent. Review every setDraft commit, including create/save/retry paths and original error recovery; do not infer association from a candidate/correlation hint. Selection follows current metadata independently of whether its older observation lease is admitted. Candidate observation still obeys existing context/editor/read/intent checks.",
+    "Owner change erases unrelated individual observation; same owner retains its highest known observation. Before exact page replacement, select current selected resource against currently known same-ID page/individual observations, retaining only in existing individual slice if omitted. Do not reinsert omitted IDs into pages or alter returned cursor/metadata.",
+    "Preserve semantic current-B PAUSED301/page-only/clear/Novo assertions and existing selected-A positive omission/common-negatives/editor-proof/time/fence/ACK assertions. Test fixture owner seeds/events may be adapted for the new local state shape; no assertion weakening. Browser two new cases remain exact r36 unless an observed setup failure is separately diagnosed.",
+    "All prior selector/source ownership, failure flags/debt, TTL300s,202no-op, passive/derived intent, dirty form, immutable ACK/operation and provider-call bounds stay unchanged. No API/DTO/schema/runner/fixture/BCI/seal/sourcehelper/runtime/credential edits."
+  ],
+  "future_sequence": "Root causal r36 acceptance -> sole executor patch -> exact root static/source/handler ownership review -> new freeze/authority/publicdiff/staticTQA -> one complete first-byte canonical all -> actual root acceptance -> round04 resolution and fresh affected candidate reviews/PCV -> bounded preserved TEST activation/actual Meta/fresh final. No automatic retry.",
+  "red_evidence": "root-cp05-web-r36-red-terminal-v1.1.json",
+  "executor": "fresh compact /root/template_selection_executor_r37; old executor terminal/idle and no longer owns source",
+  "test_adaptation": "Only metadata seeds/events or typed named action fixtures necessary for the new local canonical owner; preserve every r36 behavioral assertion and old negative/positive assertions. Keep the browser spec exact r36.",
+  "capture_improvement": "Next launcher prints an actual computed launch JSON path immediately from the assigned exclusive directory; parent verifies it exists before status. All hashes/paths/receipts are generated from file bytes into a handoff artifact, not manually transcribed by the model."
+}

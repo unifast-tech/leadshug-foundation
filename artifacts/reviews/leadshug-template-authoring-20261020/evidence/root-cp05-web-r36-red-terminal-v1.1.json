@@ -1,0 +1,44 @@
+{
+  "schema": "stcon05.r36-web-causal-red-terminal.v1",
+  "at_utc": "2026-10-22T02:49:53.950511+00:00",
+  "outcome": "accepted_causal_unit_red_only",
+  "counts": {
+    "web_passed": 42,
+    "web_failed": 3,
+    "web_total": 45,
+    "browser_executed": false
+  },
+  "log": "foundation_documentation/artifacts/tmp/st-con-05-r36-web-FyPpZR/canonical-web.log",
+  "log_bytes": 13349,
+  "log_sha256": "4c0739ad4457bbd3a8ddb93d72cc18e573330ea4717da7c73f3084487453f40e",
+  "receipt": "foundation_documentation/artifacts/tmp/st-con-05-r36-web-FyPpZR/runner-exit.txt",
+  "receipt_sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865",
+  "exit": 1,
+  "freeze": "foundation_documentation/artifacts/reviews/leadshug-template-authoring-20261020/evidence/root-cp05-source-freeze-r36-current-selection-test-only-v1.1.json",
+  "freeze_sha256": "ce2df04a5048d47605cc104aa03ee1f2341143a6124b5bb79eb6a203389801dc",
+  "source38_matches": true,
+  "protected30_exact": true,
+  "heads": {
+    "root": "80e3940126f22a941f90dba4f5e801b6c0eb2f58",
+    "api": "db5a86758a165fac8a1ab587599c37b17890530c",
+    "web": "74b9d4b714044829796f875d00553f077c1c329d"
+  },
+  "actual_failures": [
+    {
+      "at": "src/telas/Modelos.spec.ts:218:39",
+      "observed": "selected B stayed APPROVED/eligible=true/fence300 instead of newer PAUSED/eligible=false/fence301; exact empty membership/cursor assertions preceding it passed",
+      "limit": "Later merged UI-projection assertion and page-only B branch in same test not reached before first failure."
+    },
+    {
+      "at": "src/telas/Modelos.spec.ts:245:21",
+      "observed": "clear-individual kept selected A rather than null, while clearing individual observation"
+    },
+    {
+      "at": "src/telas/Modelos.spec.ts:258:27",
+      "observed": "after cleared selection, omitting page restored A APPROVED/fence320 into individualStatus; returned object also dropped selection metadata",
+      "limit": "Following page-items assertion not reached."
+    }
+  ],
+  "capture": "Complete first-byte canonical stdout/stderr and actual numeric receipt verified. Agent earlier transcribed nonexistent Qz9xID directory and one final SHA character incorrectly; root independently computed actual FyPpZR path,13349bytes/hash/receipt. No log rewriting or retry inferred; exact launch provenance requested separately.",
+  "limits": "Pure reducer causal RED with successful Web build and all42 inherited units passing. Browser cases authored only, not executed; no browser/actual Meta/preserved runtime proof. Dependency-install silence was readiness observation only, not a product failure or second run."
+}
