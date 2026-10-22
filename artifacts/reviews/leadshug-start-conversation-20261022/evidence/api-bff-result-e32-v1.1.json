@@ -1,0 +1,60 @@
+{
+  "checkpoint": "E32 source-sealed API regression narrowing",
+  "canonical_command": "bash scripts/test-channels-local.sh api",
+  "unified_exec_session_id": 12041,
+  "exit_code": 1,
+  "synthetic_stdout": "/tmp/stcon04-executor-api-bff-e32.txt",
+  "stdout_sha256": "5340abb33dc6ea8024e942d24be3bb2f74ee6dcc71c480f029cc8289fdb0ea19",
+  "source_seal": "api-bff-source-seal-e32-v1.1.json",
+  "source_recheck": "api-bff-source-recheck-e32-v1.1.json",
+  "root_verified": [
+    "Synthetic stdout SHA and bounded failure/summary excerpts",
+    "All256 source hashes and complete positive public inventory unchanged after terminal",
+    "Owned disposable cleanup"
+  ],
+  "phases": {
+    "generate_deploy_status_lint_build": "passed",
+    "unit": { "files_passed": 34, "tests_passed": 336 },
+    "postgresql_e2e": {
+      "files_passed": 31,
+      "files_failed": 2,
+      "tests_passed": 412,
+      "tests_failed": 4,
+      "unhandled_errors_reported": 0,
+      "duration_seconds": 267.76
+    },
+    "owned_cleanup": "completed"
+  },
+  "observed_passes": [
+    "All3 authenticated initial-message journeys, including current-grant withdrawal after known acceptance with safe recovery metadata",
+    "All8 admission/recovery cases, including same-identity credential rotation and late receipt after risk release",
+    "Channel transport20x5 overlap completed without the previous ECONNRESET report"
+  ],
+  "remaining_failures": [
+    {
+      "path": "api-app/test/channel-transport.e2e-spec.ts",
+      "case": "Opaque user recipient through independent Channel fake",
+      "observation": "Expected201, got503; verify fake honors the generic awaited pre-dispatch contract."
+    },
+    {
+      "path": "api-app/test/channel-transport.e2e-spec.ts",
+      "case": "Real binding changes inside adapter pre-dispatch callbacks",
+      "observation": "Expected CHANNEL_CONTEXT_CHANGED, got CANAL_SELECIONADO_INDISPONIVEL. Source helper seeds OFICIAL even in NAO_OFICIAL iteration; preserve real zero-call fence assertions."
+    },
+    {
+      "path": "api-app/test/channel-transport.e2e-spec.ts",
+      "case": "Ambiguous binding",
+      "observation": "New seeded inbound unintentionally selects OFICIAL and eliminates the intended ambiguity. Preserve ambiguous GET and provider-zero proof; the approved empty-conversation BFF send mapping is INITIAL_SEND_REQUIRED."
+    },
+    {
+      "path": "api-app/test/message-template-management.e2e-spec.ts",
+      "case": "Current BFF session and observation role before commit",
+      "observation": "Protected unchanged file; exact diagnostic is individual-success-expiry HTTP401 before provider entry, not a generic timeout. Cause unestablished. No sealed fixture, session behavior or global test interception change is authorized."
+    }
+  ],
+  "next": "Postseal root released the sole writer to correct admitted channel fixtures and investigate the protected synthetic auth failure, then continue the approved backend fault matrix and UI. Freeze before next canonical run.",
+  "limits": [
+    "Overall API remains RED; no complete backend fault matrix, frontend/browser, provider, preserved-runtime or final-assurance claim.",
+    "E02 discovery, mixed test causality and E18 mutable-run disclosures remain applicable."
+  ]
+}
