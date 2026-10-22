@@ -40,3 +40,9 @@ A rodada seguinte passou em311 testes unitários e399 testes PostgreSQL; restam 
 ## Checkpoint E23 — validação humana das fixtures e modelo aprovado
 
 O usuário validou os dois ajustes exatos de fixtures e informou que o modelo criado já está aprovado. [Recibo E23](evidence/fixture-validation-and-asset-e23-v1.1.json) e [authority GO](evidence/authority-fixture-companion-e23-v1.1.json). Aplicação do patch e provas automatizadas ainda serão registradas; a aprovação do modelo foi informada pelo usuário e será conferida na conta/recurso selecionado antes da prova assistida. Menções anteriores a “aguarda validação” ou “enum desconhecido” descrevem checkpoints anteriores, sem autorização ou sucesso retroativos. Backend completo, interface e provas finais seguem em andamento.
+
+## Checkpoint E33 — API completa passa; entrega em andamento
+
+O patch exato das duas fixtures foi aplicado e passou nas rodadas seguintes. A rodada E33 passou em336 testes unitários e416 testes de integração PostgreSQL, além de lint/build e migrações descartáveis; os256 arquivos públicos permaneceram idênticos durante a execução. [Recibo E33](evidence/api-bff-result-e33-v1.1.json). Os fluxos BFF de primeiro texto, modelos NAMED/POSITIONAL e recuperação após aceitação conhecida passaram. O teste protegido de sessão passou sem alteração; a causa do401 observado em E32 permanece desconhecida.
+
+O estado continua InProgress/Pending/implementation. Ainda faltam a matriz completa de falhas/concorrência, provas de isolamento e orçamento, SQL/schema, a interface e o navegador real, assurance e a prova assistida pelos canais próprios. Os checkpoints anteriores são históricos; E33 não conclui ST-CON-04 nem autoriza promoção de produto. Os desvios E02/E04/E18 e a incompatibilidade do diff guard com a fronteira privada continuam registrados.

@@ -1,0 +1,9 @@
+{
+  "checkpoint": "E33 post-terminal source recheck",
+  "source_seal": "api-bff-source-seal-e33-v1.1.json",
+  "count": 256,
+  "all_hashes_and_positive_inventory_match": true,
+  "fingerprint": "026e6d89a8382be69263cb4f7cad44fb2a6e5ea16511e50b8c24b7d26c5b5ed6",
+  "synthetic_stdout_sha256": "537baf81b2005a50b784a1c630c691b4235cb6b5c2fec516a3bf52db8b9eed22",
+  "owned_cleanup_terminal": true
+}

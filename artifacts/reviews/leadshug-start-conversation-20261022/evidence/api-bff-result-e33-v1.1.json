@@ -1,0 +1,40 @@
+{
+  "checkpoint": "E33 frozen full API checkpoint GREEN",
+  "canonical_command": "bash scripts/test-channels-local.sh api",
+  "unified_exec_session_id": 56106,
+  "exit_code": 0,
+  "synthetic_stdout": "/tmp/stcon04-executor-api-bff-e33.txt",
+  "stdout_sha256": "537baf81b2005a50b784a1c630c691b4235cb6b5c2fec516a3bf52db8b9eed22",
+  "source_seal": "api-bff-source-seal-e33-v1.1.json",
+  "source_recheck": "api-bff-source-recheck-e33-v1.1.json",
+  "root_verified": [
+    "Synthetic stdout SHA and bounded summaries",
+    "All256 source bytes and positive public inventory unchanged after terminal",
+    "Owned disposable cleanup"
+  ],
+  "phases": {
+    "generate_deploy_status_lint_build": "passed",
+    "unit": { "files_passed": 34, "tests_passed": 336, "duration_seconds": 4.02 },
+    "postgresql_e2e": { "files_passed": 33, "tests_passed": 416, "duration_seconds": 269.32 },
+    "owned_cleanup": "completed"
+  },
+  "change_since_e32": ["api-app/test/channel-transport.e2e-spec.ts"],
+  "regression_observations": [
+    "All17 channel-transport cases pass, including complete independent fake hook, actual origin in mutation matrix, ambiguous GET/empty BFF gate, and five rounds of twenty overlapping sends.",
+    "Protected template-management session/role test passes without any source mutation. E32 early401 cause remains unknown; second-granularity hypothesis was withdrawn because SessionService iat uses Date.now milliseconds.",
+    "All3 initial-message BFF journeys and8 admission/recovery cases pass."
+  ],
+  "remaining_approved_work": [
+    "Real PostgreSQL commit-with-lost-ACK and rollback at reserve/claim/receipt/release, whole-transaction unique conflict/readback and original CAS/echo-first barriers",
+    "Exact risk-ack timing/classification, scoped cross-actor recovery, tenant/rate and bounded protocol counters",
+    "New fence session/role/tenant and preview unsupported-error checks; list/window SQL plans and additive schema parity",
+    "Complete frontend, authoritative preview and safe attempt metadata, duplicate/stale-context protections, real-BFF browser flow and current canonical all suite",
+    "Fresh independent assurance, bounded preserved TEST activation, source/image/runtime binding and assisted own-channel proof"
+  ],
+  "next": "Root released the sole product writer only after postseal. Continue remaining approved implementation/proof; E33 is a full API checkpoint, not full ST-CON-04 delivery.",
+  "limits": [
+    "No Scope/DoD/VAL completion or provider/preserved-runtime claim is inferred from this checkpoint.",
+    "Protected source seals and E23 exact companion patches remain enforced.",
+    "E02 discovery, E04 mixed test causality, E18 invalid mutable run and the unresolved full diff-guard/private-boundary conflict remain disclosed."
+  ]
+}
