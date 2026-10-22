@@ -1,0 +1,55 @@
+{
+  "kind": "Bounded static TQA preflight, not independent gate outcome",
+  "recorded_at_utc": "2026-10-22T21:38:38.257447+00:00",
+  "source_seal": "all-source-seal-e43-v1.1.json",
+  "source_fingerprint": "119149da2b803ed539962d57eaeb6ee0485bf6853ed1cdebeda6a56c4cc3bdfa",
+  "command": "bash delphi-ai/tools/test_quality_audit.sh --repo <R> --path <11 explicit public test paths>",
+  "exit_code": 2,
+  "heuristic_outcome": "medium",
+  "raw_owned_artifact": "/tmp/stcon04-test-quality-static-e43.txt",
+  "raw_sha256": "ec9dfe4932fc04b7384e7ce664039e7d314b12d0d7a70227f8807ca24e06b344",
+  "counts": {
+    "hard_bypass": 0,
+    "test_support": 0,
+    "auth_shortcut": 0,
+    "status_only": 30,
+    "no_exception_only": 0,
+    "ambient_subject_fallback": 1,
+    "di_override": 0,
+    "mock_hint": 5
+  },
+  "classification": [
+    {
+      "signal": "status-only hints",
+      "disposition": "Review full adjacent scenario; many are fixture setup/HTTP checks paired with persisted content/owner/counter invariants. No blanket false-positive dismissal or gate clearance."
+    },
+    {
+      "signal": "rows[0]?.waiting in initial-message.e2e-spec.ts",
+      "disposition": "Single SELECT EXISTS returns exactly one controlled pg_stat_activity lock observation; bounded500attempt wait fails loudly. It does not select ambient business subject or fallback to arbitrary candidate."
+    },
+    {
+      "signal": "5 mock hints",
+      "disposition": "Actual PG completion P2002 interposition; actual PG ambiguity transaction ACK-loss/rollback interposition; bounded synthetic clock controls. Preserve fault ownership and restoration; do not substitute unit evidence for realPG or browser."
+    }
+  ],
+  "new_review_findings": [
+    {
+      "id": "E43-TQA-RELOAD-COUNT",
+      "path": "web-app/e2e/start-conversation.spec.ts",
+      "fact": "Explicit replay asserts2BFFPOSTs, but later inherited assertion in same try still expects1; provider effect separately correctly expects1.",
+      "handling": "Sources frozen during E43; queue exact test correction after terminal/postseal, do not edit live or claim GREEN."
+    },
+    {
+      "id": "E43-TQA-CATALOG-COUNT",
+      "path": "web-app/e2e/start-conversation.spec.ts",
+      "fact": "Whole-case list counter expects1 despite explicit catalog refresh plus fresh dispatch same-account list.",
+      "handling": "Verify terminal actual result; separate action-specific baselines/counters. Do not weaken current eligibility or onePOST checks."
+    }
+  ],
+  "scope_boundary": "Explicit positive public paths only; no --scan-git-modified, root-wide discovery or actual env/data/process inspection.",
+  "limits": [
+    "E43 all in progress, not terminal proof.",
+    "Formal fresh no-context TQA and exact criterion matrix remain required.",
+    "No retroactive test-first, whole-suite pass, delivery or runtime claim."
+  ]
+}

@@ -46,12 +46,12 @@ Este v1.1 substitui a autoridade ativa da minuta revisada em 2026-10-19. O origi
 
 - **Current delivery stage:** `Pending`
 - **Qualifiers:** `none`
-- **Next exact step:** corrigir os quatro cenários novos de navegador após E42 (81/85 passaram), acrescentar a prova de classificação incerta e teclado; congelar fontes e repetir a suíte canônica completa. As duas fixtures de E23 estão validadas; os demais caminhos selados permanecem protegidos.
+- **Next exact step:** executar a suíte canônica completa E43 no candidato congelado, com correções dos quatro cenários E42 e provas de classificação incerta, teclado e limite de snapshot; conferir o pós-seal antes de qualquer nova edição. As duas fixtures de E23 estão validadas; os demais caminhos selados permanecem protegidos.
 
 ## Active Work State (Required While TODO Remains In `active/`)
 
 - **Work state:** `implementation`
-- **Why this state now:** APROVADO humano e dois ajustes exatos de fixtures validados; implementação e validação completas em andamento sob normal authority GO e um writer. E42 terminou com 81 testes de navegador passando e quatro falhando; o pós-seal confirmou as 259 fontes idênticas. O único writer foi liberado para correções limitadas e nova validação completa; nenhuma entrega promovida.
+- **Why this state now:** APROVADO humano e dois ajustes exatos de fixtures validados; implementação e validação completas em andamento sob normal authority GO e um writer. E43 preparado para validação completa no candidato congelado de 259 fontes, com 38 caminhos protegidos idênticos. Cinco arquivos autorizados mudaram após E42; nenhuma entrega promovida.
 - **Exit condition:** implementação e todas as evidências/reviews/gates de entrega aprovados; estágio continua Pending até os critérios locais reais, sem claim de entrega por aprovação.
 
 ## Scope
@@ -1194,3 +1194,7 @@ Seven admitted paths changed after E41; all38 protected/exact companion checks m
 ## Execution checkpoint E42 — terminal result and correction handoff
 
 The canonical browser runner exited 1: 81 passed, four failed, 85 total. Root independently checked stdout SHA and the complete positive 259-file inventory/bytes against the preseal before releasing the writer. All four failures are in the new first-contact suite; the existing protected suites passed without test-file edits. The remaining failures concern a generation-only credential fixture, an ambiguous locator and an omitted explicit catalog refresh. The reload case also has a later unexecuted expectation requiring correction: retain the exact key/body through reload and explicitly replay the original request, never infer a terminal intent from a recent conversation. Passing individual cases include 5×20 browser triggers, initial send, both recovery paths, A-B-A and storage refusal; these do not make the whole candidate GREEN. Next: bounded corrections and meaningful UNKNOWN-classification/keyboard proof, followed by a new full canonical all run. No real runtime/provider, full diff guard or delivery claim. Evidence: evidence/browser-result-e42-v1.1.json, browser-source-recheck-e42-v1.1.json and browser-freshness-collection-e42-v1.1.json.
+
+## Execution checkpoint E43 — full candidate prepared
+
+The sole writer froze five admitted changed paths after E42: coherent generation/credential fixture, explicit reload replay/catalog refresh/keyboard browser proof, PostgreSQL ambiguity classification fault cases and bounded snapshot restoration. Root independently enumerated all 259 positive public files, verified all 38 protected/exact-companion checks and captured current Git identities. The serialized snapshot ceiling now covers 4096 codepoints at worst-case JSON escaping plus bounded metadata; the template test uses four 1024-codepoint values, not an invalid 20K rendered message. The canonical all runner may start only after normal authority GO. Sources stay frozen through terminal plus independent postseal. Evidence: evidence/all-source-seal-e43-v1.1.json. No result or completion claimed.
