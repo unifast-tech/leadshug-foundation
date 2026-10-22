@@ -1,0 +1,51 @@
+{
+  "checkpoint": "E42 browser terminal RED",
+  "canonical_command": "bash scripts/test-channels-local.sh browser",
+  "unified_exec_session_id": 19672,
+  "exit_code": 1,
+  "exit_metadata_source": "Executor reported actual terminal result; root independently verified synthetic stdout SHA and full postseal. Root session polling after compaction was unavailable.",
+  "synthetic_stdout": "/tmp/stcon04-executor-browser-e42.txt",
+  "stdout_sha256": "4811d08e24fe50261f4886d4fc46b6346b128cd19a98cba37e55ca234f117bd1",
+  "source_seal": "browser-source-seal-e42-v1.1.json",
+  "source_recheck": "browser-source-recheck-e42-v1.1.json",
+  "source_count": 259,
+  "source_fingerprint": "c8f47b9676c33a6ccc4507c8b574aa08cd6a85b1289533f95154a7a92170aad9",
+  "freshness": "browser-freshness-collection-e42-v1.1.json",
+  "browser": {
+    "passed": 81,
+    "failed": 4,
+    "total": 85,
+    "reported_minutes": 15.1
+  },
+  "owned_cleanup": "Disposable containers, volumes and network removed, observed in owned transcript.",
+  "failures": [
+    {
+      "case": "Pre-admission refusal then edit/repreview",
+      "cause": "Generation-only synthetic mutation leaves old credential AAD; actual PENDING_CREDENTIAL is correct. Fixture must simulate completed same-resource reauthorization before asserting CHANNEL_CONTEXT_CHANGED/current readiness."
+    },
+    {
+      "case": "Prior unknown replay followed by pre-admission response",
+      "cause": "Same generation-only fixture inconsistency; immutable key/body preservation must remain asserted."
+    },
+    {
+      "case": "Lost-response reload",
+      "cause": "getByLabel partial selector matches region and select; later automatic-clear expectation was not reached and is independently incompatible with exact-key explicit recovery. Require explicit original retry, same key/body, no extra provider dispatch."
+    },
+    {
+      "case": "Reused manual history with approved template",
+      "cause": "Test did not perform explicit shared catalog refresh before expecting options; inspect/simplify synthetic seed and assert actual catalog route plus intent-specific call counters."
+    }
+  ],
+  "passing_individual_proofs": [
+    "Existing protected authoring/onboarding suites now pass with helper correction; protected files byte-exact.",
+    "Actual first-text opening/send, 5 waves of20 browser triggers, UNKNOWN acknowledgment recovery, known-accepted local recovery, A-B-A and storage-quota refusal passed individually.",
+    "UNKNOWN durable-state browser projection and manual-history first-form visibility no longer exhibit E41 failures."
+  ],
+  "limits": [
+    "Browser mode does not execute full current API unit/PostgreSQL/Web-unit coverage.",
+    "Whole candidate remains RED; no completed criterion, delivery, actual provider/runtime or full diff-guard claim.",
+    "Do not attribute E41 final409 to lingering hold as established fact.",
+    "No retroactive test-first claim; distinguish observed failed assertion from later unexecuted assertion."
+  ],
+  "next": "Writer released after independently unchanged full259-source postseal for bounded corrections and regression tests; root will preseal and require authority GO before next canonical all."
+}

@@ -46,12 +46,12 @@ Este v1.1 substitui a autoridade ativa da minuta revisada em 2026-10-19. O origi
 
 - **Current delivery stage:** `Pending`
 - **Qualifiers:** `none`
-- **Next exact step:** completar a UI do primeiro envio e recuperação pelo único writer, após API E34 GREEN e RED causal de navegador E35; congelar fontes antes de nova validação canônica. As duas fixtures de E23 já foram explicitamente validadas e aplicadas; os demais caminhos selados permanecem protegidos.
+- **Next exact step:** corrigir os quatro cenários novos de navegador após E42 (81/85 passaram), acrescentar a prova de classificação incerta e teclado; congelar fontes e repetir a suíte canônica completa. As duas fixtures de E23 estão validadas; os demais caminhos selados permanecem protegidos.
 
 ## Active Work State (Required While TODO Remains In `active/`)
 
 - **Work state:** `implementation`
-- **Why this state now:** APROVADO humano e dois ajustes exatos de fixtures validados; implementação e validação completas em andamento sob normal authority GO e um writer. E41 executa o candidato congelado de259 fontes públicas após correções específicas das rodadas anteriores; nenhuma entrega promovida.
+- **Why this state now:** APROVADO humano e dois ajustes exatos de fixtures validados; implementação e validação completas em andamento sob normal authority GO e um writer. E42 terminou com 81 testes de navegador passando e quatro falhando; o pós-seal confirmou as 259 fontes idênticas. O único writer foi liberado para correções limitadas e nova validação completa; nenhuma entrega promovida.
 - **Exit condition:** implementação e todas as evidências/reviews/gates de entrega aprovados; estágio continua Pending até os critérios locais reais, sem claim de entrega por aprovação.
 
 ## Scope
@@ -329,7 +329,7 @@ Official primary references consulted 2026-10-22: [WhatsApp Send Messages](https
 
 | From Profile | To Profile | Why the Handoff Exists | Touched Surfaces | Status / Evidence |
 | --- | --- | --- | --- | --- |
-| Strategic / CTO-Tech-Lead | Operational / Coder | v1.1 frozen, planning reviews/guards passed and user explicitly approved | scoped product paths in diff contract | executing under normal authority GO; E01–E40 terminal evidence below; E41 candidate running |
+| Strategic / CTO-Tech-Lead | Operational / Coder | v1.1 frozen, planning reviews/guards passed and user explicitly approved | scoped product paths in diff contract | executing under normal authority GO; E01–E42 terminal evidence below; bounded corrections after E42 |
 | Operational / Coder | Assurance / Tester-Quality + Security | independent delivery evidence after implementation | harness/evidence package | planned |
 | Operational / Coder | Operational / DevOps | disposable migration, source-bound local activation and assisted proof | approved local runtime only | planned |
 
@@ -875,7 +875,7 @@ Required at closeout. Explicitly carry ST-05 `SEC-R6-04`, `OPS-R4-01`, and `TQA-
 - **Audit session / round evidence (when protocol used):** planned after implementation; no current delivery review
 - **Audit focus:** one abstract send operation, qualified window in every caller/projection, sole acceptance owner, zero hidden fallback
 - **Cutover audit status:** not_run
-- **Findings summary:** implementation candidate running E41; independent delivery cutover audit not yet dispatched
+- **Findings summary:** bounded candidate corrections after E42; independent delivery cutover audit not yet dispatched
 - **Resolution ledger:** delivery-stage findings will be recorded with disposition and evidence
 - **Evidence / reference:** current delivered source and future implemented diff; no cutover evidence yet
 - **Waiver authority / reference (required if waived):** n/a
@@ -1186,3 +1186,11 @@ Frozen canonical all runner35920 exited1:34 unit files/353 tests and432 PostgreS
 ## Execution checkpoint E41 — full API/Web pass; fresh browser exposes defects
 
 Canonical all runner81570 completed with353 API unit,433 PostgreSQL and51Web unit tests passing; build/migrations passed. Fresh Playwright:48pass/37fail across85tests,6.8min; owned cleanup observed. Original shell exit metadata was not collected and session was unavailable on later poll, so no fabricated exit-code claim. Root verified all259 source bytes/full positive inventory unchanged before release and exported the exact disposable attestation before cleanup:93changed-source hashes match, actual heads match, served/distJS7cdb7083 equal, Node22.23.3,28migrations. Protected Modelos/onboarding regressions expose const reassignment in the owned OAuth fixture helper; no protected suite/product-authoring edits authorized. New browser REDs identify manual-reuse UI selection cleared by options effect and missing safe state in initial UNKNOWN error. Other failures concern synthetic audit externalId projection, cumulative provider counters, an exact preAdmission code expectation, reload/reopen timeouts and a409 in20x5; latter causes remain to establish. Quota-storage-failure case passes. First new text case reaches201/visible persistedOUT before fixture projection assertion fails; entire case remains failed. Evidence: evidence/all-source-seal-e41-v1.1.json, all-source-recheck-e41-v1.1.json, all-result-e41-v1.1.json, browser-freshness-e41-v1.1.json and collection receipt. Writer released after postseal for exact corrections, preserving protected bytes and production limits. No completed criteria, delivery or actual provider proof claimed.
+
+## Execution checkpoint E42 — browser correction candidate running
+
+Seven admitted paths changed after E41; all38 protected/exact companion checks match. Source seal259/fpc8f47b96 precedes canonical browser runner19672. Corrections address owned OAuth const reassignment, manual-history initial-flow ownership, positively confirmed UNKNOWN state projection, synthetic externalId audit, resource-scoped counters and safe fixture expectations. Root established the reload timeout precondition defect: seed creates two granted BUs; API nameASC/Inbox first-row default selects the alternate on reload, while tests awaited the originalBU endpoint. Both tests now explicitly select their original fixtureBU; no product persistence behavior added. Held routes drain in finally and safe diagnostics preserve strict endpoint/status expectations. Final20x5 prior409 cause is not claimed established. Builds reported passed; browser terminal pending. Evidence: evidence/browser-source-seal-e42-v1.1.json and browser-correction-diagnosis-e42-v1.1.json. Browser mode does not run current APIunit/lint/fullPG/Webunit; fullall remains required. No delivery, actual provider/runtime, or full diff-guard claim.
+
+## Execution checkpoint E42 — terminal result and correction handoff
+
+The canonical browser runner exited 1: 81 passed, four failed, 85 total. Root independently checked stdout SHA and the complete positive 259-file inventory/bytes against the preseal before releasing the writer. All four failures are in the new first-contact suite; the existing protected suites passed without test-file edits. The remaining failures concern a generation-only credential fixture, an ambiguous locator and an omitted explicit catalog refresh. The reload case also has a later unexecuted expectation requiring correction: retain the exact key/body through reload and explicitly replay the original request, never infer a terminal intent from a recent conversation. Passing individual cases include 5×20 browser triggers, initial send, both recovery paths, A-B-A and storage refusal; these do not make the whole candidate GREEN. Next: bounded corrections and meaningful UNKNOWN-classification/keyboard proof, followed by a new full canonical all run. No real runtime/provider, full diff guard or delivery claim. Evidence: evidence/browser-result-e42-v1.1.json, browser-source-recheck-e42-v1.1.json and browser-freshness-collection-e42-v1.1.json.

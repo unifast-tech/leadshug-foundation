@@ -1,0 +1,11 @@
+{
+  "checkpoint": "E42 terminal failed browser full positive source recheck",
+  "stage": "AFTER85browser results/ownedcleanup and executor terminal exit1; BEFORE writer release",
+  "count": 259,
+  "fingerprint": "c8f47b9676c33a6ccc4507c8b574aa08cd6a85b1289533f95154a7a92170aad9",
+  "matches_preseal_full_inventory_and_bytes": true,
+  "record_reference": "browser-source-seal-e42-v1.1.json#records",
+  "stdout_sha256": "4811d08e24fe50261f4886d4fc46b6346b128cd19a98cba37e55ca234f117bd1",
+  "executor_reported_exit_code": 1,
+  "boundary": "Only declared positive public roots and7exact publicfiles; no actual env/data/process inspection."
+}

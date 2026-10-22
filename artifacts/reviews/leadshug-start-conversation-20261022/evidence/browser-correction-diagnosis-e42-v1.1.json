@@ -1,0 +1,57 @@
+{
+  "kind": "E42 bounded correction/diagnosis record before browser outcome",
+  "source_seal": "browser-source-seal-e42-v1.1.json",
+  "source_fingerprint": "c8f47b9676c33a6ccc4507c8b574aa08cd6a85b1289533f95154a7a92170aad9",
+  "facts": [
+    {
+      "id": "E42-OAUTH-HELPER",
+      "path": "api-app/test/browser-server.cjs",
+      "diagnosis": "const reassignment in code-token resources helper",
+      "correction": "let binding; existing filtering/scoped-token behavior preserved",
+      "protected_tests": "Byte-exact Modelos/onboarding test files retained; their outcomes require actual retest."
+    },
+    {
+      "id": "E42-MANUAL-REUSE",
+      "path": "web-app/src/telas/Inbox.tsx",
+      "diagnosis": "Options effect cleared manual first-flow ownership immediately after open/reuse",
+      "correction": "Remove that reset; clear on ordinary row navigation/BU/cancel/completion",
+      "causality": "Actual E41 browser missing-form assertion precedes correction."
+    },
+    {
+      "id": "E42-UNKNOWN-STATE",
+      "path": "api-app/src/domain/inbox/outbound.service.ts",
+      "diagnosis": "UNKNOWN response omitted safe durable state",
+      "correction": "Project AMBIGUOUS only after positive classification or exact scoped owner/state/slot readback; otherwise retain unknown503",
+      "causality": "Actual E41 response.state undefined assertion precedes correction; BFF assertion added alongside fix."
+    },
+    {
+      "id": "E42-RELOAD-BU",
+      "path": "web-app/e2e/start-conversation.spec.ts",
+      "diagnosis": "seed creates N\u00famero timeline and N\u00famero alternativo; me.controller.ts lists nameASC; Inbox mount selects first row; reload tests omitted originalBU selection",
+      "evidence": [
+        "api-app/test/timeline-fixtures.cjs seed creates2granted same-tenant BUs",
+        "api-app/src/surfaces/bff/me.controller.ts:177 nameASC",
+        "web-app/src/telas/Inbox.tsx initial lista[0] selection",
+        "Both E41 strict expected originalBU open-response waits timed out after reload"
+      ],
+      "correction": "Explicitly select fixture.businessUnitId after reload, preserving strict endpoint/assertions; no sticky-BU product feature."
+    },
+    {
+      "id": "E42-AUDIT-COUNTERS",
+      "paths": [
+        "api-app/test/timeline-fixtures.cjs",
+        "web-app/e2e/start-conversation.spec.ts"
+      ],
+      "diagnosis": "Synthetic audit omitted externalId; provider call/effect arrays cumulative across fixtures",
+      "correction": "Narrow externalId projection and resource-scoped metrics; no weakened no-send/no-repeat invariant."
+    },
+    {
+      "id": "E42-OTHER-PROOF",
+      "path": "web-app/e2e/start-conversation.spec.ts",
+      "correction": "Exact PENDING_CREDENTIAL/preAdmission for generation-only fixture, owned held-response finally release/drain, bounded safe diagnostics.5x20 retained.",
+      "unresolved": "E41 final5x20 409 exact body not captured; lingering hold is hypothesis only pending E42 diagnostics/retest."
+    }
+  ],
+  "validation_state": "Canonical browser run19672 active; no terminal outcome. Builds reported passed. No APIunit/lint/fullPG/Webunit from browser target.",
+  "next": "Full post-terminal source recheck before writer release. Completeall later after browser convergence; no delivery/actualruntime claim."
+}

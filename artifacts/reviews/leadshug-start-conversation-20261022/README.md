@@ -78,3 +78,7 @@ A rodada passou em353 testes unitários e432 de integração. A sequência de ne
 ## Checkpoint E41 — API e Web passam; navegador encontra falhas
 
 A rodada passou em353 testes unitários de API,433 de integração PostgreSQL e51Web. No navegador,48 passaram e37 falharam. O bundle servido foi conferido contra o build, com93hashes de fontes alteradas iguais e259fontes públicas preservadas durante a rodada. [Recibo E41](evidence/all-result-e41-v1.1.json) e [freshness](evidence/browser-freshness-collection-e41-v1.1.json). Há dois defeitos funcionais confirmados (reuso manual e projeção de resultado incerto), um erro no helper OAuth que afeta suítes protegidas e ajustes de provas sintéticas; causas restantes ainda estão em investigação. O teste de falha de armazenamento passou sem envio. A implementação continua; não há entrega04 ou prova de canal real deste candidato.
+
+## Checkpoint E42 — 81 de 85 testes de navegador passaram
+
+Os testes existentes passaram; quatro cenários novos ainda precisam de correções nas condições de teste. A abertura e o primeiro envio, cinco ondas de 20 ações, recuperação e recusa por falha de armazenamento passaram individualmente. As 259 fontes ficaram idênticas durante a rodada, com bundle servido conferido. [Resultado E42](evidence/browser-result-e42-v1.1.json). A implementação continua e será submetida novamente à suíte completa; nenhum critério foi encerrado por essa rodada parcial.
