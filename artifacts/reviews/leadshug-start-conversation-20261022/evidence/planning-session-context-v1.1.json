@@ -1,0 +1,18 @@
+{
+  "profile": "strategic-cto",
+  "genesis": "rejected; existing canonical project and approved delivered slices",
+  "technical_scope": [
+    "nestjs",
+    "react",
+    "vite",
+    "postgresql",
+    "prisma",
+    "docker"
+  ],
+  "user_direction": "advance next planned step after completed ST-CON-05",
+  "authority": "planning/reviews only; ST-CON-04 has no current APROVADO",
+  "topology": "primary-checkout-single-writer; no worktrees/copies/product Git/runtime",
+  "inherited_source68_exact": true,
+  "foundation_head": "197e7a0713c132c6213e218748655bcda5a19c72",
+  "external": "Meta message docs429 on2026-10-22; official WhatsApp policy and official Meta Postman overview fetched. Historical technical references retained; no new wire fields inferred from third-party results."
+}

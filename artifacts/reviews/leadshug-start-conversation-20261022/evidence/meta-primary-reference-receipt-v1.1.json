@@ -1,0 +1,46 @@
+{
+  "recorded_at_utc": "2026-10-22T14:11:11.501568+00:00",
+  "results": [
+    {
+      "url": "https://developers.facebook.com/documentation/business-messaging/whatsapp/account-model-evolution/messaging/",
+      "status": 200,
+      "content_type": "text/markdown; charset=utf-8",
+      "bytes": 7321,
+      "sha256": "d681158244a335981a9e243533d6d2d095de0cf531b98dd0d244f6063383feaa",
+      "method": "anonymous public HTTP Accept:text/markdown; no credentials or provider operations"
+    },
+    {
+      "url": "https://developers.facebook.com/documentation/business-messaging/whatsapp/reference/whatsapp-business-phone-number/message-api",
+      "status": 200,
+      "content_type": "text/markdown; charset=utf-8",
+      "bytes": 13661,
+      "sha256": "55ac95f3f363f325808abe095f85997df7b188cf86441b74f0677823e51a6988",
+      "method": "anonymous public HTTP Accept:text/markdown; no credentials or provider operations"
+    },
+    {
+      "url": "https://developers.facebook.com/documentation/business-messaging/whatsapp/templates/overview/",
+      "status": 200,
+      "content_type": "text/markdown; charset=utf-8",
+      "bytes": 17202,
+      "sha256": "636489f74cb2267cb7cdd642ffd11b0f5946a627444044afe83ca403f786dafc",
+      "method": "anonymous public HTTP Accept:text/markdown; no credentials or provider operations"
+    },
+    {
+      "url": "https://developers.facebook.com/documentation/business-messaging/whatsapp/messages/send-messages/",
+      "status": 200,
+      "content_type": "text/markdown; charset=utf-8",
+      "bytes": 18483,
+      "sha256": "08f39dc8aa09d1cd1247fcb9b00bf2aa8a337c9b8c8b8cd33770bd4f8b622a2c",
+      "method": "anonymous public HTTP Accept:text/markdown; no credentials or provider operations"
+    }
+  ],
+  "provenance": "web reader initially returned429; official server Markdown representation succeeded anonymously200; not a live account check",
+  "facts": [
+    "Meta templates are account assets; only APPROVED supports send; NAMED and POSITIONAL parameter semantics are distinct",
+    "Service messaging bounded by actual customer interaction window; calls are a platform feature outside this slice",
+    "Shared-number multiple messaging-account access requires explicit server-bound messaging_account_id; exactly-one scope omits it and Meta resolves",
+    "Meta recommends explicit plus and country code for API recipient; storage identity stays normalized digits",
+    "API acceptance is separate from delivery status"
+  ],
+  "quoted_material_saved": false
+}
