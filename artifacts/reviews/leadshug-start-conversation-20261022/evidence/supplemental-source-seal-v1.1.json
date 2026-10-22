@@ -1,0 +1,13 @@
+{
+  "created_at_utc": "2026-10-22T14:34:54.560642+00:00",
+  "scope": "existing clean acceptance owner omitted from initial path admission; no source mutation",
+  "product_head": "db5a86758a165fac8a1ab587599c37b17890530c",
+  "records": [
+    {
+      "path": "api-app/src/domain/inbox/message-acceptance.service.ts",
+      "bytes": 15730,
+      "sha256": "b053744ee44b7e91fd45b5c146f759f55c70b8e517b8fbb1cab39806407335e1",
+      "bounded_mutation_proposed_after_approval": true
+    }
+  ]
+}

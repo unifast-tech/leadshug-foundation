@@ -1,0 +1,34 @@
+{
+  "blocked": true,
+  "context": {
+    "allowed_roles": "primary-chat, formal-reviewer",
+    "client": "codex",
+    "contract_id": "delphi.agent-role-routing.v1",
+    "contract_path": "/mnt/c/Unifast/delphi-ai/config/agent_role_routing.json",
+    "exception_in_effect": false,
+    "exception_reason": "",
+    "execution_topology": "n/a",
+    "expected_efforts": "xhigh, max, extra-high, extra high, highest-review-tier, extraright, extraright-or-closest-equivalent",
+    "expected_models": "gpt-6.1-sol",
+    "proof_mode": "declared",
+    "required_lane": "review",
+    "review_kind": "critique",
+    "selected_effort": "xhigh",
+    "selected_model": "gpt-5.6-terra",
+    "selected_model_family": "governance_review",
+    "selected_role": "formal-reviewer",
+    "surface": "formal-review",
+    "waiver_in_effect": false,
+    "waiver_reference_present": false,
+    "worktree_authorization": "n/a",
+    "worktree_authorization_reference_present": false
+  },
+  "outcome": "review-required",
+  "violations": [
+    {
+      "code": "MODEL-MISMATCH",
+      "message": "Selected model `gpt-5.6-terra` does not match the expected routing model(s) for `codex` on `formal-review`.",
+      "resolution": "Use one of: gpt-6.1-sol."
+    }
+  ]
+}

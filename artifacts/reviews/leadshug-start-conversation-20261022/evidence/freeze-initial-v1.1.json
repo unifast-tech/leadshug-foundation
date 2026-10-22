@@ -1,0 +1,7 @@
+{
+  "baseline_commit": "b7dfb2120347c83996830a4c011b0a930ca4eadc",
+  "branch": "main",
+  "push_reference": "origin/main",
+  "push_actual_exit": 0,
+  "scope": "planning only, no implementation; gate metadata changed only after push"
+}

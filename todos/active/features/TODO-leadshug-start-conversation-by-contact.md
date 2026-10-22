@@ -33,7 +33,7 @@ Este v1.1 substitui a autoridade ativa da minuta revisada em 2026-10-19. O origi
 - Este TODO define **WHAT** será entregue; `Assumptions Preview` e `Execution Plan` registram a proposta **HOW** para revisão.
 - O escopo é fechado ao início manual e primeiro envio de uma conversa. Qualquer alteração material de Scope, DoD, validação, contrato público ou decisões requer retorno à revisão e nova aprovação antes de execução.
 - “Aceito” significa ID externo válido persistido; não significa entrega ao aparelho nem leitura.
-- Este draft é `pending-freeze`. Nenhum parecer ou guard atual foi executado sobre este texto.
+- Baseline inicial publicado antes dos primeiros guards/review; parecer arquitetural r1 integrado abaixo. Mudanças materiais decorrentes do parecer serão publicadas em novo freeze antes da crítica. Nenhuma implementação ou aprovação humana é reivindicada.
 
 ## Implementation Intent
 
@@ -46,12 +46,12 @@ Este v1.1 substitui a autoridade ativa da minuta revisada em 2026-10-19. O origi
 
 - **Current delivery stage:** `Pending`
 - **Qualifiers:** `none`
-- **Next exact step:** root concluir o freeze do draft e iniciar reviews/guards frescos no baseline congelado.
+- **Next exact step:** publicar o contrato com a resolução arquitetural r1 e submetê-lo à crítica independente fresca.
 
 ## Active Work State (Required While TODO Remains In `active/`)
 
 - **Work state:** `review`
-- **Why this state now:** contrato v1.1 está sendo rebaseado contra ST-CON-05/06 e ainda não passou por freeze, crítica, opinião arquitetural ou guards próprios.
+- **Why this state now:** contrato v1.1 tem freeze inicial e parecer arquitetural r1; alterações decorrentes estão sendo consolidadas antes de novo freeze e crítica.
 - **Exit condition:** review/guards do texto corrente convergidos e decisão humana explícita; execução exige ainda authority guard `go`.
 
 ## Scope
@@ -64,7 +64,7 @@ Este v1.1 substitui a autoridade ativa da minuta revisada em 2026-10-19. O origi
 - [ ] **SCOPE-06 — Subconjunto de template:** BODY textual NAMED/POSITIONAL, header/footer somente estáticos; sem botão, mídia, auth, flows, arbitrary Graph payload ou ampliação de categorias suportadas. Texto final 1–4096 chars; até 20 parâmetros de 1–1024 chars; snapshot total até 4096. Catálogo é observação, nunca autorização de envio: antes de cada novo envio validar remotamente asset/status atual da mesma conta; detectar mudança/pausa/unknown e falhar fechado. `getTemplate(id)` isolado não prova vínculo de conta; usar listagem existente por nome salvo na observação confiável, filtrada em até 2 páginas de 50, com correspondência exata ID/nome/idioma/semântica e resultado esgotado. Cursor/URL do browser nunca autoriza fetch.
 - [ ] **SCOPE-07 — Saga local e owner:** coordenador de intenção vive no domínio inbox e chama o `OutboundService` comum; reutilizar seu dispatch abstrato e `MessageAcceptanceService` como único owner de Message. Se necessário, permitir que esse mesmo owner aceite via transação scoped, preservando wrapper existente; hoje `OutboundService.finalize` separado e `MessageAcceptanceService.accept` transacional não devem ser descritos como já integrados. Efeitos de status/owner do novo fluxo só por CAS contra `updatedAt/state` capturados antes do HTTP e owner ativo; preservar claim/close concorrentes, sem roubo.
 - [ ] **SCOPE-08 — Estados e recuperação:** UUID keyed por BU+actor; replay do request canônico acontece antes de leituras de provider, respeitando grant atual. Slot único ativo separado do outcome. `PREPARED` lease 90s; `SENDING` só após todos os reads remotos de elegibilidade/grant/phone preflight e claim CAS persistido pelo abstract dispatch-fence hook imediatamente antes do POST; no máximo um POST externo por tentativa e nenhuma repetição automática. Falha/expiração comprovadamente pré-dispatch → `REJECTED`, slot liberado por CAS. SENDING abandonado/timeout/resultado desconhecido/ID faltante → `AMBIGUOUS`, slot bloqueado. ID conhecido → `EXTERNAL_ACCEPTED` persistido separado da Message local; recuperação apenas local. Não fazer provider GET/POST, fuzzy echo matching ou criar Message sem externalID. `EXTERNAL_ACCEPTED_LOCAL_BLOCKED` conserva o fato e ID, sem falsificar sucesso. Acknowledgment apenas após classificação de incerteza/bloqueio, com risco explícito de duplicata e liberação irreversível; resultado tardio não readquire slot nem altera owner/status corrente.
-- [ ] **SCOPE-09 — Compatibilidade de callers:** composer BFF existente deve bloquear, antes de qualquer HTTP, conversa nova/vazia ou qualquer slot inicial não resolvido. BFF público e BOT também consultam/respeitam slot ativo antes de dispatch para evitar duplicação; manter suas atuais formas de aceitação/erro e não lhes atribuir idempotência global. Casos e resultado de bloqueio exato ficam sob revisão. Preservar semântica diagnóstica de ACK nulo de ST-CON-06 para callers antigos; regra de Message sem externalID aplica-se ao novo coordenador.
+- [ ] **SCOPE-09 — Compatibilidade de callers:** composer BFF existente deve bloquear, antes de qualquer HTTP, conversa nova/vazia ou qualquer slot inicial não resolvido. BFF público e BOT também consultam/respeitam slot ativo antes de dispatch para evitar duplicação; manter suas atuais formas de aceitação/erro e não lhes atribuir idempotência global. Interlock finito definido no aditivo normativo r1 abaixo: tokens ordinários por owner, compatíveis entre si, excluem reserva inicial até settlement ou acknowledgment explícito de incerteza. Expiração de SENDING nunca libera por relógio. Preservar semântica diagnóstica de ACK nulo de ST-CON-06 para callers antigos; regra de Message sem externalID aplica-se ao novo coordenador.
 - [ ] **SCOPE-10 — Bounded I/O, prova e limites:** readiness permanece RECEIPT/identidade própria/epoch/estado CONECTADO/`activeCredentialVersion`; management purpose não desvia a prova de envio. Reutilizar reads estreitos ST-05 e client de protocolo de template-send dentro do adapter Meta; nenhum HTTP Meta no inbox. Até 6 GETs no novo template dispatch: 1 grant management + 2 páginas filtered templates + 1 messaging grant + 2 membership pages; no máximo 1 POST. Timeout por request 10s, orçamento total 75s dentro de lease 90s. Reutilizar grant por request-bound adapter sem probe oculto/double count. Limites de nova intenção: 10/min por ator e 60/h por namespace canônico de conta/recurso, inclusive links locais entre BUs/tenants da mesma conta, sem expor dados estrangeiros. Leituras de catálogo preservam limites/dívidas privadas de ST-05; recovery tem zero rede.
 - [ ] **SCOPE-11 — Prova assistida futura:** depois de candidate GREEN, assurance de imagens e migration descartável/local, validar primeiro envio assistido não oficial, template oficial realmente `APPROVED` próprio e reply do destinatário. A ausência de asset elegível bloqueia conclusão; fixture não prova aprovação. Nenhum contato automático.
 - [ ] **SCOPE-12 — Harness e consumidores:** dependency/fake substitutability, testes negativos Evolution zero HTTP, regressões de texto BFF/public/BOT, janela/projeções batched, timeline/cursor e performance. Preservar SEC-R6-04, OPS-R4-01 e TQA-ST05-03 como limitações entregues; não implementar backlog dessas histórias aqui.
@@ -159,16 +159,16 @@ n/a nesta etapa; nenhum código, promoção ou implantação autorizado.
 | root | scripts/check-channels-ci-parity.py | any | Inherited baseline ONLY, NO new mutation; byte-exact seal required |
 | api | src/domain/inbox/conversations.service.ts | any | Inherited exact baseline with bounded ST04 mutation proposed after APROVADO for the named journey; initial hash still mandatory before FIRST change |
 | api | src/domain/inbox/incoming.service.ts | any | Inherited exact baseline with bounded ST04 mutation proposed after APROVADO for the named journey; initial hash still mandatory before FIRST change |
-| api | src/domain/inbox/incoming.typebot.integration.spec.ts | any | Inherited baseline ONLY, NO new mutation; byte-exact seal required |
+| api | src/domain/inbox/incoming.typebot.integration.spec.ts | any | Inherited exact baseline with bounded ST04 mutation after APROVADO: qualified window and shared admission regression only; initial hash mandatory before FIRST change |
 | api | src/integrations/evolution/evolution.client.spec.ts | any | Inherited baseline ONLY, NO new mutation; byte-exact seal required |
 | api | src/integrations/evolution/evolution.client.ts | any | Inherited baseline ONLY, NO new mutation; byte-exact seal required |
 | api | src/integrations/meta/meta.client.spec.ts | any | Inherited baseline ONLY, NO new mutation; byte-exact seal required |
 | api | src/integrations/meta/meta.client.ts | any | Inherited baseline ONLY, NO new mutation; byte-exact seal required |
-| api | src/surfaces/bff/conversations.controller.ts | any | Inherited baseline ONLY, NO new mutation; byte-exact seal required |
+| api | src/surfaces/bff/conversations.controller.ts | any | Inherited exact baseline with bounded ST04 mutation after APROVADO: BFF manual open/options/preview/intent/admission-recovery endpoints and scoped ACL; initial hash mandatory before FIRST change |
 | api | src/surfaces/public/conversations.controller.ts | any | Inherited baseline ONLY, NO new mutation; byte-exact seal required |
 | api | src/surfaces/public/public.module.ts | any | Inherited baseline ONLY, NO new mutation; byte-exact seal required |
 | api | src/surfaces/webhooks/webhooks.module.ts | any | Inherited baseline ONLY, NO new mutation; byte-exact seal required |
-| api | test/api-publica.e2e-spec.ts | any | Inherited baseline ONLY, NO new mutation; byte-exact seal required |
+| api | test/api-publica.e2e-spec.ts | any | Inherited exact baseline with bounded ST04 mutation after APROVADO: ordinary public text/window/admission mappings; initial hash mandatory before FIRST change |
 | api | test/number-onboarding-typebot.e2e-spec.ts | any | Inherited baseline ONLY, NO new mutation; byte-exact seal required |
 | api | prisma/migrations/20261020170000_message_inbound_window_index/migration.sql | any | Inherited baseline ONLY, NO new mutation; byte-exact seal required |
 | api | src/domain/channels/transport/channel-dependencies.spec.ts | any | Inherited baseline ONLY, NO new mutation; byte-exact seal required |
@@ -183,29 +183,24 @@ n/a nesta etapa; nenhum código, promoção ou implantação autorizado.
 | api | src/integrations/channels/prisma-channel-resolver.ts | any | Inherited exact baseline with bounded ST04 mutation proposed after APROVADO for the named journey; initial hash still mandatory before FIRST change |
 | api | test/channel-transport.e2e-spec.ts | any | Inherited exact baseline with bounded ST04 mutation proposed after APROVADO for the named journey; initial hash still mandatory before FIRST change |
 | web | src/telas/Inbox.tsx | any | Inherited exact baseline with bounded ST04 mutation proposed after APROVADO for the named journey; initial hash still mandatory before FIRST change |
-| web | e2e/channel-transport.spec.ts | any | Inherited baseline ONLY, NO new mutation; byte-exact seal required |
+| web | e2e/channel-transport.spec.ts | any | Inherited exact baseline with bounded ST04 mutation after APROVADO: inherited ordinary text/window browser regressions; initial hash mandatory before FIRST change |
 | api | src/domain/inbox/initial-message* | any | intent/selection/renderer/state, exact scoped services and specs; no second Message or catalog owner |
 | api | src/domain/inbox/conversation-start* | any | open/reuse and tests |
 | api | src/domain/inbox/channel-window-policy* | any | one trusted-window query and its tests |
 | api | src/domain/inbox/message-acceptance.service.spec.ts | any | same owner transaction and sender/echo contract |
 | api | src/domain/inbox/conversations.service.spec.ts | any | list/open/empty/read effects |
-| api | src/domain/inbox/incoming.typebot.integration.spec.ts | M | qualified timestamp and active-slot regression only |
 | api | src/domain/channels/transport/channel*.spec.ts | any | union/fence/substitution architecture harness |
 | api | src/integrations/channels/account-reference.ts | A, ?? | extract exact existing opaque hash helper |
 | api | src/integrations/meta/initial-message.client*.ts | any | provider-private protocol preflight/text/template for new attempts inside same Meta Channel; old client interface preserved |
-| api | src/surfaces/bff/conversations.controller.ts | M | open/options/preview/intent/recovery endpoints and ACL |
 | api | src/surfaces/webhooks/meta.controller.ts | M | signed timestamp extraction only |
 | api | prisma/migrations/*_initial_message*/migration.sql | A, ?? | additive intent/timestamp/index migration; no unrelated migration edit |
 | api | test/initial-message* | any | real PG/BFF/PCV/scoped account and durability fault contracts |
 | api | test/conversation-start* | any | open races and list SQL |
 | api | test/atendimento.e2e-spec.ts | M | common BFF sender/window compatibility |
-| api | test/api-publica.e2e-spec.ts | M | common public sender/window/slot expectations |
 | api | test/webhooks.e2e-spec.ts | M | timestamp signature and origin/resource proof |
-| api | test/number-onboarding-*.e2e-spec.ts | M | affected trusted-time/readiness fixture assertions only; unchanged recovery oracles |
 | web | src/componentes/NovaConversa* | any | local form/confirmation and tests |
 | web | src/telas/Inbox.spec.ts* | any | composer/freshness/recovery regression |
 | web | e2e/start-conversation.spec.ts | A, ?? | new real-BFF browser mutation flow |
-| web | e2e/channel-transport.spec.ts | M | inherited common text/window regressions |
 | foundation | todos/active/features/TODO-leadshug-start-conversation-by-contact.md | M, D, R | contract and approved lifecycle closeout |
 | foundation | todos/completed/features/TODO-leadshug-start-conversation-by-contact.md | A, ??, R | only after delivery gates |
 | foundation | artifacts/reviews/leadshug-start-conversation-20261022/** | any | planning/review/implementation evidence |
@@ -214,6 +209,9 @@ n/a nesta etapa; nenhum código, promoção ou implantação autorizado.
 | foundation | artifacts/feature-briefs/leadshug-channel-readiness-and-history-20261015.md | M | factual story sequence |
 | foundation | backlog/README.md | M | current gate only |
 | foundation | artifacts/dependency-readiness.md | M | redacted runtime readiness only |
+| api | src/domain/inbox/message-acceptance.service.ts | M | Same acceptance owner tx-capable primitive and original-CAS ordering; existing bytes sealed in supplemental-source-seal-v1.1.json before first mutation |
+| api | src/domain/inbox/dispatch-admission*.ts | A, ?? | Finite ordinary admission/exclusive-initial interlock and unit cases, no global operation platform |
+| api | test/dispatch-admission*.e2e-spec.ts | A, ?? | Real PG interlock/expiry/owner-CAS/commit certainty barriers |
 
 ### Not Expected Changed Paths
 | Repository | Path glob | Change types | Reason |
@@ -241,11 +239,11 @@ Closed68-file inventory: evidence/inherited-source-seal-v1.1.json. Before first 
 - [ ] **DOD-02:** stale/foreign BU, actor, slot, selected channel, grant, credential epoch/version, conversation generation, template fingerprint, or policy context fails closed before external dispatch.
 - [ ] **DOD-03:** Preview is escaped, deterministic, local/read-only and context-bound; supported textual subset and exact limits are enforced server-side.
 - [ ] **DOD-04:** existing Channel consumers remain substitutable; Meta supports declared text/template kinds; Evolution template is typed unsupported with zero HTTP; no second send method/provider branching outside adapters or DI cycle; immutable descriptor plus same-operation fence preserves common dispatch.
-- [ ] **DOD-05:** every remote eligibility/grant/phone GET completes before durable SENDING claim; the abstract fence CAS-claims immediately before one POST, and expiry of PREPARED during delayed preflight produces zero POST. Each initial attempt dispatches at most one POST; failures are classified truthfully; known provider ID is durably separate from local Message; recovery never contacts provider and never creates a Message without external ID.
-- [ ] **DOD-06:** MessageAcceptance remains sole Message owner and existing sender/error behavior is preserved; CAS prevents late initial outcome from changing concurrent claim/close/owner or reacquiring released slot.
+- [ ] **DOD-05:** prove commit certainty at reservation/dispatch-claim/receipt/release, including real commit with lost ACK and real rollback; every remote eligibility/grant/phone GET completes before durable SENDING claim; the abstract fence CAS-claims immediately before one POST, and expiry of PREPARED during delayed preflight produces zero POST. Each initial attempt dispatches at most one POST; failures are classified truthfully; known provider ID is durably separate from local Message; recovery never contacts provider and never creates a Message without external ID.
+- [ ] **DOD-06:** initial transaction locks identity then conversation, checks original pre-HTTP status/owner CAS before acceptance mutates updatedAt, permits eligible acceptance when status CAS fails, and recovers unique conflict by whole-local-transaction rollback/readback/re-entry at most once; MessageAcceptance remains sole Message owner and existing sender/error behavior is preserved; CAS prevents late initial outcome from changing concurrent claim/close/owner or reacquiring released slot.
 - [ ] **DOD-07:** official window uses only qualified trusted Meta IN timestamp for selected resource; all current BFF/public/BOT availability and send policy consumers use the same rule; timeline/cursors and performance bounds hold.
-- [ ] **DOD-08:** existing composer is blocked before HTTP for new/empty/unresolved slot; public/BOT respect slot and retain existing mappings; text regressions pass.
-- [ ] **DOD-09:** current eligibility is checked before every new official template dispatch via bounded same-account reads; template is actually APPROVED; Meta request pins server-captured `messaging_account_id`, uses `+` plus full DDI, and preserves existing ordinary text semantics. Tests cover same-country and cross-country recipients. Official raw reference receipt confirms account pin and recipient formatting; actual own-account readiness remains unverified.
+- [ ] **DOD-08:** owner-scoped ordinary admissions and exclusive initial reservation serialize under the same conversation lock without serializing ordinary-versus-ordinary sends; uncertain dispatched tokens block initial reservation until settlement or explicit risk acknowledgment, never time takeover; late owner release cannot touch successor; existing composer is blocked before HTTP for new/empty/unresolved slot; public/BOT respect slot and retain existing mappings; text regressions pass.
+- [ ] **DOD-09:** NAMED and POSITIONAL initial support is derived by the initial text renderer from the unchanged catalog components/format, independently of inherited authoring flags; exact full context binds management descriptor to selected transport and final text-window fence; current eligibility is checked before every new official template dispatch via bounded same-account reads; template is actually APPROVED; Meta request pins server-captured `messaging_account_id`, uses `+` plus full DDI, and preserves existing ordinary text semantics. Tests cover same-country and cross-country recipients. Official raw reference receipt confirms account pin and recipient formatting; actual own-account readiness remains unverified.
 - [ ] **DOD-10:** per actor/account limits, tenant isolation, request/deadline budgets and zero-network recovery are demonstrated with real bounded counters/barriers.
 - [ ] **DOD-11:** additive migration passes explicit preflight and disposable local validation without reset/drop; current source/image/API freshness and approved local validation topology are proven.
 - [ ] **DOD-12:** assisted proof: operator sends first unofficial message, an actually APPROVED official template, receives a reply; no auto-contact; if eligible approved asset is unavailable, completion remains blocked.
@@ -271,14 +269,14 @@ Closed68-file inventory: evidence/inherited-source-seal-v1.1.json. Before first 
 ## Validation Steps
 
 - [ ] **VAL-01:** after approval only, run contract/unit/dependency harness and exact existing BFF/public/BOT textual regressions; no test execution is part of this planning draft.
-- [ ] **VAL-02:** PostgreSQL race/barrier and fault injection for unique BU/contact creation, idempotent replay, delayed remote preflight vs PREPARED expiry with zero POST, claim immediately before POST, claim/close during HTTP, timeout/late provider result, ack/release then successor; assert provider counters and no lock-held HTTP.
-- [ ] **VAL-03:** adapter substitution and raw protocol tests; Evolution template unsupported produces zero requests; Meta pages/status/account membership limits and same-account exact tuple are bounded.
+- [ ] **VAL-02:** PostgreSQL race/barrier and fault injection for unique BU/contact creation, idempotent replay, delayed remote preflight vs PREPARED expiry with zero POST, claim immediately before POST, claim/close during HTTP, timeout/late provider result, ack/release then successor; assert provider counters and no lock-held HTTP; both ordinary/initial admission orderings, ordinary concurrency preserved, suspension before/after claim, uncertain token never expires into takeover, owner-CAS late release; real rollback/commit-ACK-loss at all four local boundaries; pre-acceptance CAS and echo-first conflicts.
+- [ ] **VAL-03:** adapter substitution and raw protocol tests; Evolution template unsupported produces zero requests; Meta pages/status/account membership limits and same-account exact tuple are bounded; NAMED and POSITIONAL end-to-end order; closed-window template allowed, text-window expiry during preflight blocked, every descriptor/context dimension mismatch blocked before POST.
 - [ ] **VAL-04:** signed webhook cases for valid, absent, malformed, future, nonofficial, duplicate and old timestamps; assert nullable provenance and unchanged timeline/cursors.
 - [ ] **VAL-05:** same trusted-window policy across BFF/public/BOT availability and dispatch; EXPLAIN/query count for large OUT-heavy and no-IN histories; enforce batched consumer bounds.
 - [ ] **VAL-06:** Playwright on freshly served React/Vite bundle + real BFF/PostgreSQL: open/reuse, preview, stale context, create/replay/read/reconcile/ack, safe errors, refresh, composer block, preserve draft, keyboard flow.
 - [ ] **VAL-07:** migrations: explicit additive preflight, lock timeout 5s, statement timeout 60s, disposable TEST target, migration deploy/status and rollback assessment; never reset/drop or run before separate authorized implementation stage.
 - [ ] **VAL-08:** local source-bound API/Web activation and owned stable/temporary HTTPS only under later approved runtime plan; assisted own-channel proofs as DOD-12.
-- [ ] **VAL-09:** run appropriate architecture, critique, assumption/code, review drift, decision adherence, module consistency, security, performance/concurrency, TQA, final, cutover and completion guards after their proper lifecycle stages. All are currently pending-freeze/not run for this v1.1.
+- [ ] **VAL-09:** run appropriate architecture, critique, assumption/code, review drift, decision adherence, module consistency, security, performance/concurrency, TQA, final, cutover and completion guards after their proper lifecycle stages. Architecture planning r1 exists; other planning/delivery gates require their actual current artifacts. No implementation validation is claimed.
 
 ## Completion Evidence Matrix (Required Before Delivery Claim)
 
@@ -287,25 +285,25 @@ Closed68-file inventory: evidence/inherited-source-seal-v1.1.json. Before first 
 | DOD-01 | Definition of Done | authorized operator opens/reuses BU/contact atomically; no side effects listed in SCOPE-01 occur; new conversation has truthful empty state and deterministic list ordering. | test/runtime/review/migration | exact future artifact/command to be frozen after approval | local disposable PG + real BFF/browser + owned local origin | planned | no v1.1 execution evidence exists |
 | DOD-02 | Definition of Done | stale/foreign BU, actor, slot, selected channel, grant, credential epoch/version, conversation generation, template fingerprint, or policy context fails closed before external dispatch. | test/runtime/review/migration | exact future artifact/command to be frozen after approval | local disposable PG + real BFF/browser + owned local origin | planned | no v1.1 execution evidence exists |
 | DOD-03 | Definition of Done | Preview is escaped, deterministic, local/read-only and context-bound; supported textual subset and exact limits are enforced server-side. | test/runtime/review/migration | exact future artifact/command to be frozen after approval | local disposable PG + real BFF/browser + owned local origin | planned | no v1.1 execution evidence exists |
-| DOD-04 | Definition of Done | existing Channel consumers remain substitutable; Meta supports declared text/template kinds; Evolution template is typed unsupported with zero HTTP; no second send method/provider branching outside adapters. | test/runtime/review/migration | exact future artifact/command to be frozen after approval | local disposable PG + real BFF/browser + owned local origin | planned | no v1.1 execution evidence exists |
-| DOD-05 | Definition of Done | each initial attempt dispatches at most one POST; failures are classified truthfully; known provider ID is durably separate from local Message; recovery never contacts provider and never creates a Message without external ID. | test/runtime/review/migration | exact future artifact/command to be frozen after approval | local disposable PG + real BFF/browser + owned local origin | planned | no v1.1 execution evidence exists |
-| DOD-06 | Definition of Done | MessageAcceptance remains sole Message owner and existing sender/error behavior is preserved; CAS prevents late initial outcome from changing concurrent claim/close/owner or reacquiring released slot. | test/runtime/review/migration | exact future artifact/command to be frozen after approval | local disposable PG + real BFF/browser + owned local origin | planned | no v1.1 execution evidence exists |
+| DOD-04 | Definition of Done | existing Channel consumers remain substitutable; Meta supports declared text/template kinds; Evolution template is typed unsupported with zero HTTP; no second send method/provider branching outside adapters or DI cycle; immutable descriptor plus same-operation fence preserves common dispatch. | test/runtime/review/migration | exact future artifact/command to be frozen after approval | local disposable PG + real BFF/browser + owned local origin | planned | no v1.1 execution evidence exists |
+| DOD-05 | Definition of Done | prove commit certainty at reservation/dispatch-claim/receipt/release, including real commit with lost ACK and real rollback; every remote eligibility/grant/phone GET completes before durable SENDING claim; the abstract fence CAS-claims immediately before one POST, and expiry of PREPARED during delayed preflight produces zero POST. Each initial attempt dispatches at most one POST; failures are classified truthfully; known provider ID is durably separate from local Message; recovery never contacts provider and never creates a Message without external ID. | test/runtime/review/migration | exact future artifact/command to be frozen after approval | local disposable PG + real BFF/browser + owned local origin | planned | no v1.1 execution evidence exists |
+| DOD-06 | Definition of Done | initial transaction locks identity then conversation, checks original pre-HTTP status/owner CAS before acceptance mutates updatedAt, permits eligible acceptance when status CAS fails, and recovers unique conflict by whole-local-transaction rollback/readback/re-entry at most once; MessageAcceptance remains sole Message owner and existing sender/error behavior is preserved; CAS prevents late initial outcome from changing concurrent claim/close/owner or reacquiring released slot. | test/runtime/review/migration | exact future artifact/command to be frozen after approval | local disposable PG + real BFF/browser + owned local origin | planned | no v1.1 execution evidence exists |
 | DOD-07 | Definition of Done | official window uses only qualified trusted Meta IN timestamp for selected resource; all current BFF/public/BOT availability and send policy consumers use the same rule; timeline/cursors and performance bounds hold. | test/runtime/review/migration | exact future artifact/command to be frozen after approval | local disposable PG + real BFF/browser + owned local origin | planned | no v1.1 execution evidence exists |
-| DOD-08 | Definition of Done | existing composer is blocked before HTTP for new/empty/unresolved slot; public/BOT respect slot and retain existing mappings; text regressions pass. | test/runtime/review/migration | exact future artifact/command to be frozen after approval | local disposable PG + real BFF/browser + owned local origin | planned | no v1.1 execution evidence exists |
-| DOD-09 | Definition of Done | current eligibility is checked before every new official template dispatch via bounded same-account reads; template is actually APPROVED; Meta request pins server-captured `messaging_account_id`, uses `+` plus full DDI, and preserves existing ordinary text semantics. Tests cover same-country and cross-country recipients. Official raw reference receipt confirms account pin and recipient formatting; actual own-account readiness remains unverified. | test/runtime/review/migration | exact future artifact/command to be frozen after approval | local disposable PG + real BFF/browser + owned local origin | planned | no v1.1 execution evidence exists |
+| DOD-08 | Definition of Done | owner-scoped ordinary admissions and exclusive initial reservation serialize under the same conversation lock without serializing ordinary-versus-ordinary sends; uncertain dispatched tokens block initial reservation until settlement or explicit risk acknowledgment, never time takeover; late owner release cannot touch successor; existing composer is blocked before HTTP for new/empty/unresolved slot; public/BOT respect slot and retain existing mappings; text regressions pass. | test/runtime/review/migration | exact future artifact/command to be frozen after approval | local disposable PG + real BFF/browser + owned local origin | planned | no v1.1 execution evidence exists |
+| DOD-09 | Definition of Done | NAMED and POSITIONAL initial support is derived by the initial text renderer from the unchanged catalog components/format, independently of inherited authoring flags; exact full context binds management descriptor to selected transport and final text-window fence; current eligibility is checked before every new official template dispatch via bounded same-account reads; template is actually APPROVED; Meta request pins server-captured `messaging_account_id`, uses `+` plus full DDI, and preserves existing ordinary text semantics. Tests cover same-country and cross-country recipients. Official raw reference receipt confirms account pin and recipient formatting; actual own-account readiness remains unverified. | test/runtime/review/migration | exact future artifact/command to be frozen after approval | local disposable PG + real BFF/browser + owned local origin | planned | no v1.1 execution evidence exists |
 | DOD-10 | Definition of Done | per actor/account limits, tenant isolation, request/deadline budgets and zero-network recovery are demonstrated with real bounded counters/barriers. | test/runtime/review/migration | exact future artifact/command to be frozen after approval | local disposable PG + real BFF/browser + owned local origin | planned | no v1.1 execution evidence exists |
 | DOD-11 | Definition of Done | additive migration passes explicit preflight and disposable local validation without reset/drop; current source/image/API freshness and approved local validation topology are proven. | test/runtime/review/migration | exact future artifact/command to be frozen after approval | local disposable PG + real BFF/browser + owned local origin | planned | no v1.1 execution evidence exists |
 | DOD-12 | Definition of Done | assisted proof: operator sends first unofficial message, an actually APPROVED official template, receives a reply; no auto-contact; if eligible approved asset is unavailable, completion remains blocked. | test/runtime/review/migration | exact future artifact/command to be frozen after approval | local disposable PG + real BFF/browser + owned local origin | planned | no v1.1 execution evidence exists |
 | DOD-13 | Definition of Done | architecture/adherence/security/performance/TQA/final/cutover/debt and delivery guards pass at their required stages; no open P1/P2; constraints SEC-R6-04, OPS-R4-01, TQA-ST05-03 remain truthfully carried. | test/runtime/review/migration | exact future artifact/command to be frozen after approval | local disposable PG + real BFF/browser + owned local origin | planned | no v1.1 execution evidence exists |
 | VAL-01 | Validation Steps | after approval only, run contract/unit/dependency harness and exact existing BFF/public/BOT textual regressions; no test execution is part of this planning draft. | test/runtime/review/manual | exact future artifact/command to be frozen after approval | n/a until approved execution | planned | no v1.1 execution evidence exists |
-| VAL-02 | Validation Steps | PostgreSQL race/barrier and fault injection for unique BU/contact creation, idempotent replay, delayed remote preflight vs PREPARED expiry with zero POST, claim immediately before POST, claim/close during HTTP, timeout/late provider result, ack/release then successor; assert provider counters and no lock-held HTTP. | test/runtime/review/manual | exact future artifact/command to be frozen after approval | n/a until approved execution | planned | no v1.1 execution evidence exists |
-| VAL-03 | Validation Steps | adapter substitution and raw protocol tests; Evolution template unsupported produces zero requests; Meta pages/status/account membership limits and same-account exact tuple are bounded. | test/runtime/review/manual | exact future artifact/command to be frozen after approval | n/a until approved execution | planned | no v1.1 execution evidence exists |
+| VAL-02 | Validation Steps | PostgreSQL race/barrier and fault injection for unique BU/contact creation, idempotent replay, delayed remote preflight vs PREPARED expiry with zero POST, claim immediately before POST, claim/close during HTTP, timeout/late provider result, ack/release then successor; assert provider counters and no lock-held HTTP; both ordinary/initial admission orderings, ordinary concurrency preserved, suspension before/after claim, uncertain token never expires into takeover, owner-CAS late release; real rollback/commit-ACK-loss at all four local boundaries; pre-acceptance CAS and echo-first conflicts. | test/runtime/review/manual | exact future artifact/command to be frozen after approval | n/a until approved execution | planned | no v1.1 execution evidence exists |
+| VAL-03 | Validation Steps | adapter substitution and raw protocol tests; Evolution template unsupported produces zero requests; Meta pages/status/account membership limits and same-account exact tuple are bounded; NAMED and POSITIONAL end-to-end order; closed-window template allowed, text-window expiry during preflight blocked, every descriptor/context dimension mismatch blocked before POST. | test/runtime/review/manual | exact future artifact/command to be frozen after approval | n/a until approved execution | planned | no v1.1 execution evidence exists |
 | VAL-04 | Validation Steps | signed webhook cases for valid, absent, malformed, future, nonofficial, duplicate and old timestamps; assert nullable provenance and unchanged timeline/cursors. | test/runtime/review/manual | exact future artifact/command to be frozen after approval | n/a until approved execution | planned | no v1.1 execution evidence exists |
 | VAL-05 | Validation Steps | same trusted-window policy across BFF/public/BOT availability and dispatch; EXPLAIN/query count for large OUT-heavy and no-IN histories; enforce batched consumer bounds. | test/runtime/review/manual | exact future artifact/command to be frozen after approval | n/a until approved execution | planned | no v1.1 execution evidence exists |
 | VAL-06 | Validation Steps | Playwright on freshly served React/Vite bundle + real BFF/PostgreSQL: open/reuse, preview, stale context, create/replay/read/reconcile/ack, safe errors, refresh, composer block, preserve draft, keyboard flow. | test/runtime/review/manual | exact future artifact/command to be frozen after approval | n/a until approved execution | planned | no v1.1 execution evidence exists |
 | VAL-07 | Validation Steps | migrations: explicit additive preflight, lock timeout 5s, statement timeout 60s, disposable TEST target, migration deploy/status and rollback assessment; never reset/drop or run before separate authorized implementation stage. | test/runtime/review/manual | exact future artifact/command to be frozen after approval | n/a until approved execution | planned | no v1.1 execution evidence exists |
 | VAL-08 | Validation Steps | local source-bound API/Web activation and owned stable/temporary HTTPS only under later approved runtime plan; assisted own-channel proofs as DOD-12. | test/runtime/review/manual | exact future artifact/command to be frozen after approval | n/a until approved execution | planned | no v1.1 execution evidence exists |
-| VAL-09 | Validation Steps | run appropriate architecture, critique, assumption/code, review drift, decision adherence, module consistency, security, performance/concurrency, TQA, final, cutover and completion guards after their proper lifecycle stages. All are currently pending-freeze/not run for this v1.1. | test/runtime/review/manual | exact future artifact/command to be frozen after approval | n/a until approved execution | planned | no v1.1 execution evidence exists |
+| VAL-09 | Validation Steps | run appropriate architecture, critique, assumption/code, review drift, decision adherence, module consistency, security, performance/concurrency, TQA, final, cutover and completion guards after their proper lifecycle stages. Architecture planning r1 exists; other planning/delivery gates require their actual current artifacts. No implementation validation is claimed. | test/runtime/review/manual | exact future artifact/command to be frozen after approval | n/a until approved execution | planned | no v1.1 execution evidence exists |
 
 ## External Reference Evidence
 
@@ -358,11 +356,11 @@ Decisões selecionadas para revisão, ainda sem aprovação de execução. A alt
 
 - [x] D-01 — preserve BU+contact uniqueness and current grant; required 8–15 digit normalized DDI without country guess. No CRM/provider side effects on open. New conversation `QUEUED`, unread zero, lastMessageAt null; order empty rows by COALESCE(lastMessageAt,createdAt).
 - [x] D-02 — alternatives: **A)** a second `sendTemplate` Channel method (splits the abstract operation and adds obligations to every adapter); **B)** parallel concrete sender (bypasses scoped resolver/common acceptance); **C)** one `sendMessage` with discriminated text/template union and readonly `supportedKinds` (selected proposal). C intentionally supersedes ST-CON-06's delivered text-only payload while retaining one method. Avoid DI cycle: `TemplateManagementModule` already imports `ChannelTransportModule`, therefore `ChannelTransportModule`/`OutboundService` must not import or inject management. Initial orchestration composes both, reuses `listTemplates/getTemplate`, and passes a validated immutable provider-agnostic descriptor plus optional generic per-attempt dispatch fence through the same `sendMessage`; management port gets no send method. Meta send client completes its remaining grant/phone GETs, then calls the fence to CAS-claim immediately before POST, chained with current-context guard. No network/retry in fence/transaction, provider branching in domain/consumers, casts/`instanceof`, or generic plugin platform. Reviewer assesses substitutability, dependency/harness, blast, maintenance and performance.
-- [x] D-03 — initial-intent coordinator belongs to inbox; calls common `OutboundService` dispatch and sole `MessageAcceptanceService`. If needed, add scoped transaction collaboration to that owner while preserving current wrapper. Do not copy sender, acceptance or finalization into coordinator; no claim existing transaction integration already exists.
+- [x] D-03 — initial-intent coordinator belongs to inbox; calls common `OutboundService` dispatch and sole `MessageAcceptanceService`. If needed, add scoped transaction collaboration to that owner while preserving current wrapper. Do not copy sender, acceptance or finalization into coordinator; no claim existing transaction integration already exists. Normative r1 explicit initial selection/context equality and payload/window-specific fence below are part of this decision.
 - [x] D-04 — new nullable officialInboundAt is written only from verified signed Meta IN timestamp passing positive integer/nonfuture/resource identity checks. No backfill. Window is max trusted IN on selected current resource and conversation `<24h`; same policy for sender and availability/batched BFF/public/BOT projections. Preserve createdAt timeline/cursors; use bounded index and retain ST06 index.
-- [x] D-05 — shared ST-05 catalog route/projector only. Preview route `POST /api/bff/conversations/:id/initial-message-preview` is local/read-only. Before each new template send, recheck same-account current asset by trusted observed name using existing `listTemplates`, at most two filtered pages, and require exhausted exact ID/name/language/semantic match; `getTemplate(id)` alone does not prove account membership. Official raw reference receipt confirms optional supported `messaging_account_id`; pin the server-captured account. Meta recipient wire format is `+` plus full DDI while domain identity remains canonical digits; no fallback/retry on rejection.
-- [x] D-06 — endpoints: `POST /conversations/:id/initial-messages`; `GET start-options`; `GET attempt`; authenticated `POST reconcile` and `POST acknowledge`. UUID per BU+actor; replay canonical request before provider reads after current grant check. PREPARED lease 90s. All remote asset/grant/phone preflight GETs complete before the SENDING claim; a generic dispatch-fence hook on the same `sendMessage` CAS-claims immediately before the sole POST. Expiry during preflight proves zero POST. Pre-dispatch failure rejects/releases; uncertain SENDING locks slot as AMBIGUOUS. Persist known external ID separately before local acceptance; recovery is local-only, with no fuzzy echo or missing-ID Message. Acknowledgment follows explicit classification and irreversibly releases; a late result cannot reacquire slot or mutate newer owner/status.
-- [x] D-07 — composer BFF blocks new/empty/unresolved slot before any HTTP; public/BOT must honor same active slot before dispatch without global durable-intent conversion; preserve existing mappings outside this bounded change. O resultado novo é BLOCKED, code INITIAL_SEND_IN_PROGRESS, HTTP409, somente attemptId local autorizado e safe state; nenhuma rede. Sem slot, callers antigos seguem fluxo anterior. BFF /messages em conversa sem mensagem de transporte retorna INITIAL_SEND_REQUIRED409; API pública/BOT sem slot preservam seu fluxo próprio existente. Ver Dispatch Interlock abaixo.
+- [x] D-05 — shared ST-05 catalog route/projector only. Preview route `POST /api/bff/conversations/:id/initial-message-preview` is local/read-only. Before each new template send, recheck same-account current asset by trusted observed name using existing `listTemplates`, at most two filtered pages, and require exhausted exact ID/name/language/semantic match; `getTemplate(id)` alone does not prove account membership. Official raw reference receipt confirms optional supported `messaging_account_id`; pin the server-captured account. Meta recipient wire format is `+` plus full DDI while domain identity remains canonical digits; no fallback/retry on rejection. Normative r1 initial renderer validates POSITIONAL independently of inherited authoring flags and fingerprints unchanged catalog components.
+- [x] D-06 — endpoints: `POST /conversations/:id/initial-messages`; `GET start-options`; `GET attempt`; authenticated `POST reconcile` and `POST acknowledge`. UUID per BU+actor; replay canonical request before provider reads after current grant check. PREPARED lease 90s. All remote asset/grant/phone preflight GETs complete before the SENDING claim; a generic dispatch-fence hook on the same `sendMessage` CAS-claims immediately before the sole POST. Expiry during preflight proves zero POST. Pre-dispatch failure rejects/releases; uncertain SENDING locks slot as AMBIGUOUS. Persist known external ID separately before local acceptance; recovery is local-only, with no fuzzy echo or missing-ID Message. Acknowledgment follows explicit classification and irreversibly releases; a late result cannot reacquire slot or mutate newer owner/status. Normative r1 transaction ordering and exact readback/one local re-entry applies.
+- [x] D-07 — composer BFF blocks new/empty/unresolved slot before any HTTP; public/BOT must honor same active slot before dispatch without global durable-intent conversion; preserve existing mappings outside this bounded change. O resultado novo é BLOCKED, code INITIAL_SEND_IN_PROGRESS, HTTP409, somente attemptId local autorizado e safe state; nenhuma rede. Sem slot, callers antigos seguem fluxo anterior. BFF /messages em conversa sem mensagem de transporte retorna INITIAL_SEND_REQUIRED409; API pública/BOT sem slot preservam seu fluxo próprio existente. Ver Dispatch Interlock abaixo. Normative r1 owner-token admission, no time takeover of uncertain dispatch and separate local-only token recovery applies.
 - [x] D-08 — template renderer supports text BODY NAMED/POSITIONAL, static header/footer only, <=20 params and stated length bounds. Preview binds exact conversation/contact/context/fingerprint, escaped and read-only. Catalog observation at most 300s is not send authorization.
 - [x] D-09 — maximum six GETs / one POST per new official template attempt, 10s each, 75s budget <90s lease; limits 10/min actor, 60/hour canonical account/resource. Official raw-contract receipt confirms account pinning and recipient formatting; actual account/asset readiness remains unknown. Disposable local TEST migration only after approval, explicit preflight, lock5s/statement60s, no reset/drop. Local proof sequence as DOD-12.
 
@@ -386,11 +384,11 @@ Proposta selecionada abaixo deve coincidir com o freeze publicado e os reviews a
 
 - [ ] D-01 — preserve BU+contact uniqueness and current grant; required 8–15 digit normalized DDI without country guess. No CRM/provider side effects on open. New conversation `QUEUED`, unread zero, lastMessageAt null; order empty rows by COALESCE(lastMessageAt,createdAt).
 - [ ] D-02 — alternatives: **A)** a second `sendTemplate` Channel method (splits the abstract operation and adds obligations to every adapter); **B)** parallel concrete sender (bypasses scoped resolver/common acceptance); **C)** one `sendMessage` with discriminated text/template union and readonly `supportedKinds` (selected proposal). C intentionally supersedes ST-CON-06's delivered text-only payload while retaining one method. Avoid DI cycle: `TemplateManagementModule` already imports `ChannelTransportModule`, therefore `ChannelTransportModule`/`OutboundService` must not import or inject management. Initial orchestration composes both, reuses `listTemplates/getTemplate`, and passes a validated immutable provider-agnostic descriptor plus optional generic per-attempt dispatch fence through the same `sendMessage`; management port gets no send method. Meta send client completes its remaining grant/phone GETs, then calls the fence to CAS-claim immediately before POST, chained with current-context guard. No network/retry in fence/transaction, provider branching in domain/consumers, casts/`instanceof`, or generic plugin platform. Reviewer assesses substitutability, dependency/harness, blast, maintenance and performance.
-- [ ] D-03 — initial-intent coordinator belongs to inbox; calls common `OutboundService` dispatch and sole `MessageAcceptanceService`. If needed, add scoped transaction collaboration to that owner while preserving current wrapper. Do not copy sender, acceptance or finalization into coordinator; no claim existing transaction integration already exists.
+- [ ] D-03 — initial-intent coordinator belongs to inbox; calls common `OutboundService` dispatch and sole `MessageAcceptanceService`. If needed, add scoped transaction collaboration to that owner while preserving current wrapper. Do not copy sender, acceptance or finalization into coordinator; no claim existing transaction integration already exists. Normative r1 explicit initial selection/context equality and payload/window-specific fence below are part of this decision.
 - [ ] D-04 — new nullable officialInboundAt is written only from verified signed Meta IN timestamp passing positive integer/nonfuture/resource identity checks. No backfill. Window is max trusted IN on selected current resource and conversation `<24h`; same policy for sender and availability/batched BFF/public/BOT projections. Preserve createdAt timeline/cursors; use bounded index and retain ST06 index.
-- [ ] D-05 — shared ST-05 catalog route/projector only. Preview route `POST /api/bff/conversations/:id/initial-message-preview` is local/read-only. Before each new template send, recheck same-account current asset by trusted observed name using existing `listTemplates`, at most two filtered pages, and require exhausted exact ID/name/language/semantic match; `getTemplate(id)` alone does not prove account membership. Official raw reference receipt confirms optional supported `messaging_account_id`; pin the server-captured account. Meta recipient wire format is `+` plus full DDI while domain identity remains canonical digits; no fallback/retry on rejection.
-- [ ] D-06 — endpoints: `POST /conversations/:id/initial-messages`; `GET start-options`; `GET attempt`; authenticated `POST reconcile` and `POST acknowledge`. UUID per BU+actor; replay canonical request before provider reads after current grant check. PREPARED lease 90s. All remote asset/grant/phone preflight GETs complete before the SENDING claim; a generic dispatch-fence hook on the same `sendMessage` CAS-claims immediately before the sole POST. Expiry during preflight proves zero POST. Pre-dispatch failure rejects/releases; uncertain SENDING locks slot as AMBIGUOUS. Persist known external ID separately before local acceptance; recovery is local-only, with no fuzzy echo or missing-ID Message. Acknowledgment follows explicit classification and irreversibly releases; a late result cannot reacquire slot or mutate newer owner/status.
-- [ ] D-07 — composer BFF blocks new/empty/unresolved slot before any HTTP; public/BOT must honor same active slot before dispatch without global durable-intent conversion; preserve existing mappings outside this bounded change. O resultado novo é BLOCKED, code INITIAL_SEND_IN_PROGRESS, HTTP409, somente attemptId local autorizado e safe state; nenhuma rede. Sem slot, callers antigos seguem fluxo anterior. BFF /messages em conversa sem mensagem de transporte retorna INITIAL_SEND_REQUIRED409; API pública/BOT sem slot preservam seu fluxo próprio existente. Ver Dispatch Interlock abaixo.
+- [ ] D-05 — shared ST-05 catalog route/projector only. Preview route `POST /api/bff/conversations/:id/initial-message-preview` is local/read-only. Before each new template send, recheck same-account current asset by trusted observed name using existing `listTemplates`, at most two filtered pages, and require exhausted exact ID/name/language/semantic match; `getTemplate(id)` alone does not prove account membership. Official raw reference receipt confirms optional supported `messaging_account_id`; pin the server-captured account. Meta recipient wire format is `+` plus full DDI while domain identity remains canonical digits; no fallback/retry on rejection. Normative r1 initial renderer validates POSITIONAL independently of inherited authoring flags and fingerprints unchanged catalog components.
+- [ ] D-06 — endpoints: `POST /conversations/:id/initial-messages`; `GET start-options`; `GET attempt`; authenticated `POST reconcile` and `POST acknowledge`. UUID per BU+actor; replay canonical request before provider reads after current grant check. PREPARED lease 90s. All remote asset/grant/phone preflight GETs complete before the SENDING claim; a generic dispatch-fence hook on the same `sendMessage` CAS-claims immediately before the sole POST. Expiry during preflight proves zero POST. Pre-dispatch failure rejects/releases; uncertain SENDING locks slot as AMBIGUOUS. Persist known external ID separately before local acceptance; recovery is local-only, with no fuzzy echo or missing-ID Message. Acknowledgment follows explicit classification and irreversibly releases; a late result cannot reacquire slot or mutate newer owner/status. Normative r1 transaction ordering and exact readback/one local re-entry applies.
+- [ ] D-07 — composer BFF blocks new/empty/unresolved slot before any HTTP; public/BOT must honor same active slot before dispatch without global durable-intent conversion; preserve existing mappings outside this bounded change. O resultado novo é BLOCKED, code INITIAL_SEND_IN_PROGRESS, HTTP409, somente attemptId local autorizado e safe state; nenhuma rede. Sem slot, callers antigos seguem fluxo anterior. BFF /messages em conversa sem mensagem de transporte retorna INITIAL_SEND_REQUIRED409; API pública/BOT sem slot preservam seu fluxo próprio existente. Ver Dispatch Interlock abaixo. Normative r1 owner-token admission, no time takeover of uncertain dispatch and separate local-only token recovery applies.
 - [ ] D-08 — template renderer supports text BODY NAMED/POSITIONAL, static header/footer only, <=20 params and stated length bounds. Preview binds exact conversation/contact/context/fingerprint, escaped and read-only. Catalog observation at most 300s is not send authorization.
 - [ ] D-09 — maximum six GETs / one POST per new official template attempt, 10s each, 75s budget <90s lease; limits 10/min actor, 60/hour canonical account/resource. Official raw-contract receipt confirms account pinning and recipient formatting; actual account/asset readiness remains unknown. Disposable local TEST migration only after approval, explicit preflight, lock5s/statement60s, no reset/drop. Local proof sequence as DOD-12.
 - [ ] D-10 — Certeza local: reserva, claim, persistência de ID externo/recibo e release de slot exigem confirmação positiva ou readback exato da chave capturada após erro de commit. Erro Prisma não prova rollback. Sem confirmação de claim original não há POST; persistência incerta não libera slot nem admite nova tentativa. ACK externo conhecido permanece CONFIRMED e nunca vira recusa por falha local. Persistência do fato/Message e projeção/realtime são dimensões separadas, sem falso RECORDED. Provar rollback real e commit real com perda do ACK em cada fronteira com PG, sem protocolo genérico de operações. Hash opaco canônico de conta usa o namespace existente meta-waba+NUL+accountId; extrair helper de integração preservando bytes/ST05observations, e expor só referência opaca no contexto do canal, nunca aceitar accountId do browser.
@@ -398,11 +396,11 @@ Proposta selecionada abaixo deve coincidir com o freeze publicado e os reviews a
 ## Architecture Change Governance (Required When This TODO Establishes, Corrects, or Supersedes Architecture)
 
 - **Applicability:** `required`
-- **Why:** contract introduces durable first-send ownership and intentionally proposes two narrow supersedes to Channel payload and official-window timestamp truth.
-- **Deviation / debt addressed:** split/missing first-send lifecycle; current timestamp selection can use unrelated stored IN; Channel's delivered payload is text-only.
-- **Target steady-state:** one Channel send abstraction; one common Outbound dispatch; sole MessageAcceptance owner; one template-management/catalog owner; one initial-intent coordinator; current selected resource's trusted official window; monotonic attempt and slot recovery.
-- **Temporary exceptions:** none proposed.
-- **Cutover/removal:** no duplicate channel/template routes or send owners; only after all current callers and projections share the approved policy and regression matrix passes.
+- **Why this applies:** contract introduces durable first-send ownership and intentionally proposes two narrow supersedes to Channel payload and official-window timestamp truth.
+- **Deviation / debt being retired:** split/missing first-send lifecycle; current timestamp selection can use unrelated stored IN; Channel's delivered payload is text-only.
+- **Target steady-state after closeout:** one Channel send abstraction; one common Outbound dispatch; sole MessageAcceptance owner; one template-management/catalog owner; one initial-intent coordinator; current selected resource's trusted official window; monotonic attempt and slot recovery.
+- **Temporary exceptions allowed:** none proposed.
+- **Cutover / removal condition:** no duplicate channel/template routes or send owners; only after all current callers and projections share the approved policy and regression matrix passes.
 
 ### Patterns To Enforce
 
@@ -429,11 +427,11 @@ Proposta selecionada abaixo deve coincidir com o freeze publicado e os reviews a
 
 ### Architecture Protection Harness
 
-| Harness Type | Surface | Command / Rule / Artifact | Regression It Must Catch | Adoption Timing | Evidence Plan |
+| Harness Type | Surface | Command / Rule / Artifact | Regression It Must Catch | Adoption Timing | Evidence Plan / Follow-up |
 | --- | --- | --- | --- | --- | --- |
 | dependency/substitutability tests | Channel/factories | existing harness plus new typed-kind cases | concrete branching, new required methods, wrong support declaration | implement-in-this-TODO | contract and fake tests |
 | adapter protocol tests | Meta/Evolution | request recorder, no live provider | extra/unbounded HTTP; Evolution template HTTP | implement-in-this-TODO | exact counters and payload fixtures |
-| architecture/adherence check | inbox/integrations | canonical project guard after freeze | duplicate owners, provider leak, wrong route owner | required review | post-implementation review |
+| architecture/adherence check | inbox/integrations | canonical project guard after freeze | duplicate owners, provider leak, wrong route owner | implement-in-this-todo | post-implementation review |
 | DB race/fault harness | attempt/slot/Message | PG barriers and CAS checks | duplicate POST, slot reacquisition, status/owner steal | implement-in-this-TODO | real disposable PG |
 | schema/migration gate | Prisma | migrate deploy/status with bounded preflight | destructive or blocking migration | implement-in-this-TODO | authorized local DB only |
 | consumer regressions | BFF/public/BOT/Web | existing API/E2E/Playwright suites | broken text send/window/timeline/UI recovery | implement-in-this-TODO | exact commands after approval |
@@ -444,8 +442,8 @@ Proposta selecionada abaixo deve coincidir com o freeze publicado e os reviews a
 - **Decision review lifecycle:** after diagnosis is closed and before APROVADO
 - **Decision review kind:** `architecture_opinion`
 - **Decision review package:** `bounded-file-set`
-- **Decision review status:** `not_run`
-- **Decision review evidence / resolution:** new current package after freeze
+- **Decision review status:** `findings_integrated`
+- **Decision review evidence / resolution:** artifacts/reviews/leadshug-start-conversation-20261022/evidence/architecture-r1.merge.json + architecture-r1-resolution.md; four material findings integrated into the contract, subject to fresh critique before approval
 - **Architecture adherence review:** `required`
 - **Adherence review lifecycle:** after implementation and before Completed
 - **Adherence review kind:** `architecture_adherence`
@@ -459,11 +457,11 @@ Proposta selecionada abaixo deve coincidir com o freeze publicado e os reviews a
 - **Why this decision:** current proposed04 package must be published before reviews.
 - **Trigger stage:** before first planning review/guard
 - **Baseline branch:** main
-- **Baseline commit:** pending-freeze
+- **Baseline commit:** b7dfb2120347c83996830a4c011b0a930ca4eadc
 - **Baseline push reference:** origin/main
-- **Gate status:** not_run
-- **Findings summary:** prepared-pre-freeze only; no current review performed
-- **Evidence / reference:** artifacts/reviews/leadshug-start-conversation-20261022/evidence
+- **Gate status:** no_material_findings
+- **Findings summary:** proposed v1.1 published to origin/main with actual push0; gate metadata added without changing WHAT; architecture review not_run.
+- **Evidence / reference:** Foundation main b7dfb2120347c83996830a4c011b0a930ca4eadc pushed origin/main, exit0. Initial draft descriptions above are authoring history; this gate records current freeze truth.
 - **Waiver authority / reference (required if waived):** n/a
 
 ## Gate: Review Scope Drift
@@ -482,12 +480,12 @@ Proposta selecionada abaixo deve coincidir com o freeze publicado e os reviews a
 
 ## Questions To Close
 
-1. Does option C preserve Channel substitution and common dispatch while avoiding a DI cycle and ordering all preflight GETs before a same-method dispatch fence/claim immediately before POST?
-2. What minimal transaction collaboration lets the existing MessageAcceptance owner accept in the initial-attempt transaction without duplicate finalization or changed existing mappings?
-3. Exactly which current public/BOT/composer entry points can race an active initial slot, and what stable typed block preserves their existing response contract?
-4. Do request barriers prove all remote asset/grant/phone reads precede the SENDING claim, that the same-operation dispatch fence claims immediately before POST, and that expired PREPARED yields zero POST?
-5. Which API schemas/migrations and exact source paths are required after review, with no unrelated ST-05/06 path mutation?
-6. What current approved Meta asset and disposable owned local runtime can satisfy future assisted proof? Unknown now; do not infer.
+- [x] Architecture option C, explicit initial resolver and descriptor-to-context equality: selected by r1 and frozen in normative r1 contract; fresh critique still required.
+- [x] MessageAcceptance transaction collaboration and CAS-before-own-mutation: fixed ordering and bounded whole-local-tx recovery defined in normative r1 contract.
+- [x] Ordinary-versus-initial race: per-owner admissions with no uncertain time takeover; same lock admission, independent token release and explicit local risk acknowledgment, detailed below.
+- [x] POSITIONAL consumption: initial renderer validates existing components without changing ST-05 flags/parser/projector.
+- [x] Exact source admission: same acceptance owner explicitly included with supplemental pre-edit seal; other allowed paths remain in strict inventory.
+- [ ] Future execution dependency only: actual own-account APPROVED asset and healthy disposable/runtime source binding; no current enum/runtime claim. Required proof cannot be waived by mocks or this planning approval.
 
 ## Assumptions Preview
 
@@ -499,7 +497,7 @@ Proposta selecionada abaixo deve coincidir com o freeze publicado e os reviews a
 | A-04 | Catalog and template provider owner already delivered; read-ID alone lacks fresh parent membership proof | api-app/src/domain/message-templates/template-observation.service.ts:115; api-app/src/integrations/meta/message-template.client.ts:118 | do not duplicate catalog or assume ID grants account scope | High; source inspection only | Keep as Assumption |
 | A-05 | Window currently uses stored createdAt/latest any IN; signed Meta adapter discards provider timestamp | api-app/src/domain/inbox/outbound.service.ts:244; api-app/src/integrations/channels/prisma-channel-resolver.ts:68; api-app/src/surfaces/webhooks/meta.controller.ts:103 | reconverge all projections/consumers before approval | High; source inspection only | Keep as Assumption |
 | A-06 | Template management depends on transport for its single credential resolver, so reverse import would cycle | api-app/src/integrations/message-templates/template-management.module.ts:1; api-app/src/integrations/channels/channel-transport.module.ts:1 | composition of initial flow imports both; no reverse dependency | High; source inspection only | Keep as Assumption |
-| A-07 | Browser has context generations and shared catalog API wrapper | web-app/src/telas/Inbox.tsx:50; web-app/src/api.ts:352; web-app/e2e/start-conversation.spec.ts (new planned, not evidence) | reuse actual guards and freeze new flow-specific freshness | High; source inspection only | Keep as Assumption |
+| A-07 | Browser has context generations and shared catalog API wrapper | web-app/src/telas/Inbox.tsx:50; web-app/src/api.ts:352 | reuse actual guards and freeze new flow-specific freshness | High; source inspection only | Keep as Assumption |
 | A-08 | Current canonical opaque management account reference uses a private hash helper | api-app/src/integrations/message-templates/template-management.resolver.ts:83 | extract exact byte-compatible integration helper; no protocol IDs in domain input | High; source inspection only | Keep as Assumption |
 
 External facts and actual readiness are dependency records, not fictitious code-backed assumptions: official primary docs verified200 anonymously via Accept:text/markdown on2026-10-22; approved asset enum/current runtime not queried.
@@ -508,12 +506,12 @@ External facts and actual readiness are dependency records, not fictitious code-
 
 ### Touched Surfaces
 
-Candidate only: inbox domain/services/schema, BFF and inbound webhook boundary, Channel abstract contract and concrete adapters/resolver, Meta template protocol adapter, React Inbox, focused contract/E2E/Playwright harness. Exact file admission remains pending freeze/review. No template authoring/catalog owner, no credentials/config, no runtime routing changes.
+Candidate only: inbox domain/services/schema, BFF and inbound webhook boundary, Channel abstract contract and concrete adapters/resolver, Meta template protocol adapter, React Inbox, focused contract/E2E/Playwright harness. Exact proposed admission is in the strict inventory, including r1 supplemental acceptance-owner seal; any further deviation returns to review. No template authoring/catalog owner, no credentials/config, no runtime routing changes.
 
 ### Ordered Steps
 
 1. Freeze this v1.1 TODO and sealed baseline through root-owned Foundation workflow; preserve the v1.0 archive untouched.
-2. Fresh architecture opinion challenges D-01..09 and compares A/B/C with cost, risk, blast radius, maintenance, performance, elegance and structural quality.
+2. Fresh architecture opinion challenges D-01..10 and compares A/B/C with cost, risk, blast radius, maintenance, performance, elegance and structural quality.
 3. Fresh independent critique; integrate findings in TODO and regenerate only affected package; run assumption/code and scope-drift guards. All statuses are not_run until actually produced.
 4. Use the verified official raw contract: pin the server-captured `messaging_account_id`, format Meta recipients as `+` + full DDI, keep storage/domain identity provider-neutral digits, and test same-country/cross-country plus existing ordinary text semantics. Never fallback/retry if pinned request is rejected.
 5. Human explicitly approves the converged v1.1, then authority guard must return go before implementation begins.
@@ -525,19 +523,37 @@ Candidate only: inbox domain/services/schema, BFF and inbound webhook boundary, 
 
 ### Test Strategy
 
+- **Strategy:** test-first
+- **Why:** irreversible external side effects, shared dispatch contract and concurrency require causal fail-first proof.
+- **Fail-first targets:** open/reuse authorization and races; typed unsupported zero HTTP; trusted resource window; intent/dispatch/readback fault barriers; real-BFF initiation/recovery browser flow. Capture RED after approval and before the corresponding production change.
+
 No implementation tests have been run for this planning draft. Future tests are those in VAL-01..09, including substitutability, zero-HTTP negative case, PG barriers, one-POST counters, signature/timestamp provenance, current account list membership, endpoint ACL/CSRF, consumer regressions, freshness and real browser mutation. Never substitute mocks for the required real BFF/PG flow or an actual approved-asset proof.
 
 ### Flow Evidence Planning Matrix
 
-| Producer / contract | Consumer | Boundary | Planned evidence |
+| Criterion / Flow | Why Flow-Impacting | Platform Parity | Required Runtime Lane | Mutation Lane Required? | Backend Real-Data Required? | Planned Evidence | Non-Applicability Rationale |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| DOD-01 open/reuse + empty list | creates persisted conversation; changes list projection | web-only | Playwright mutation | yes | yes | start-conversation.spec.ts with real BFF/PG, parallel open/readback and truthful empty list | n/a |
+| DOD-03/09 catalog and preview | safe DTO, rendered text, freshness, current supported template | web-only | Playwright mutation | yes | yes | existing shared catalog + preview request counter, persisted observation fixture and escaped DOM | n/a |
+| DOD-02/04/05/06 initial send | external effect, persisted outcome and conversation ownership | web-only | Playwright mutation | yes | yes | real BFF/PG and protocol-bound fake, exact POST counter, ID/Message/owner readback | n/a |
+| DOD-05 recovery/reconcile/ack | safe state/actions persist after reload; irreversible slot release | web-only | Playwright mutation | yes | yes | timeout/ACK-loss fixtures, reload, local reconcile/ack, late-result barrier | n/a |
+| DOD-07 qualified window | affects options/composer and public/BOT send eligibility | web-only | Playwright mutation | yes | yes | signed-provider fixture and selected resource, boundary timestamp, unchanged timeline/cursor | n/a |
+| DOD-08 ordinary composer interlock | send must block on initial activity, preserve normal text callers | web-only | Playwright mutation | yes | yes | backend races/counters and real browser error/recovery; API/BOT contract tests | n/a |
+| DOD-10/11 rate/schema/runtime | safe errors and persisted state; served bundle must match source | web-only | Playwright mutation | yes | yes | migration/provenance + tenant/rate test fixture and refreshed served bundle | n/a |
+| DOD-12 own unofficial and approved official | actual channel capability, provider acceptance and recipient reply | web-only | Playwright readonly | no | yes | later explicitly authorized operator first-send + reply, own preserved local source-bound runtime | operator performs actual sends; no browser automation contacts real recipients |
+
+### Frontend / Consumer Matrix
+
+| Producer / contract | Existing consumer / owner | Required preservation or deliberate change | Planned proof |
 | --- | --- | --- | --- |
-| open/reuse POST | Nova conversa + Inbox | current BU, ATENDENTE+, session/CSRF | create/race/reuse/readback; no send/read/status effects |
-| catalog GET | template selector | shared ST-05 catalog route | exact DTO/freshness; no duplicate catalog owner |
-| preview POST | preview/confirmation UI | local context, session/CSRF | escaped deterministic body; zero DB writes/provider calls |
-| initial-message POST | confirmation/outcome | immutable request/context, attempt ID | at most one external POST and monotonic outcome |
-| attempt GET/reconcile/ack | recovery UI | scoped current BU/session/CSRF | refresh recovery; zero provider requests; irreversible release behavior |
-| signed IN timestamp | windows in all consumers | signature + verified managed resource | valid/malformed/future/nonofficial cases; timeline invariant |
-| explicit Channel resolver | OutboundService | current immutable context + credential version | fake substitution, provider protocol counters, unsupported zero HTTP |
+| conversation open/list | React Inbox + BFF conversations controller | no implicit send/read/claim; empty ordering based on COALESCE, stable createdAt/id | PG contract + real browser create/reuse/list |
+| shared template catalog | Inbox selector + delivered Modelos | same ST-05 DTO, projector, lease/fence/TTL; authoring behavior stays sealed | catalog dependency and inherited authoring regressions |
+| preview/new attempt state | new NovaConversa + Inbox | explicit channel; context generations and draft ownership; escaped rendering | real-BFF Playwright A-B-A/role revoke/late response |
+| attempt read/reconcile/ack | recovery controls | local state only; no credentials; irreversible release and duplicate risk stated | real PG/readback + browser reload/recovery |
+| Channel.sendMessage | common OutboundService + bound Meta/Evolution/fakes | one operation; text regression; declared kinds and unsupported zero HTTP | substitutability/dependency/raw protocol |
+| common outbound dispatch interlock | BFF /messages, public API, incoming BOT | same shared dispatch boundary; typed safe block while unresolved; existing outside-slot mappings | parallel PG barriers + endpoint/BOT regressions |
+| signed officialInboundAt | sender policy + availability projections | one trusted current-resource rule, batch/index bounds; no createdAt fallback | signed timestamp cases, API DTO and browser options |
+| keyed MessageAcceptance | sender and verified provider echo | sole owner, exact identity/externalID dedup; no missing-ID Message for new flow | PG dual-order barriers and realtime winner count |
 
 ### Local CI-Equivalent Suite Matrix
 
@@ -553,12 +569,15 @@ No config/credential/routing mutation during planning. Future local proof only a
 
 ## Plan Review Gate
 
+- **Complexity:** big
+- **Checkpoint policy:** section-by-section architecture/contract, schema/concurrency, adapter/security, browser/performance and final adherence. Planning reviews precede APROVADO; delivery checkpoints require their own actual evidence.
+
 - **Decision:** required, fresh after freeze
-- **Status:** `not_run`
-- **Pre-freeze state:** `pending-freeze`
+- **Status:** `running`
+- **Baseline history:** initial freeze published; r1 material integration queued for refreshed freeze before critique
 - **Review sections:** architecture, quality, tests, performance, security, elegance and structural design.
 
-### Issue Cards
+### Scoped Review Questions
 
 | ID | Section | Finding / question to challenge | Options / tradeoff | Required disposition |
 | --- | --- | --- | --- | --- |
@@ -578,6 +597,44 @@ No config/credential/routing mutation during planning. Future local proof only a
 | ELEGANCE-01 | Elegance | Does proposal use existing owners with minimal new concepts? | one coordinator + one common sender + one acceptance + shared catalog vs duplicates | explain each boundary; no parallel template authoring or platform abstraction |
 | STRUCT-01 | Structural | Are modules and dependency direction coherent across inbox, channels, templates and BFF? | inbox orchestrates ports; adapters own provider protocol; catalog stays ST-05 | no domain Meta HTTP/provider branches; no new owner for Message/template observation |
 | STRUCT-02 | Structural | Are schema, transaction and external side-effect boundaries explicit and recoverable? | durable states/slot/unique constraints/CAS vs locks or memory state | migration and crash matrix; no pretending at-most-once means exactly-once |
+
+### Plan Review Issue Cards — full option comparison
+
+The recommended options below include the r1 fixes. These are plan-review choices, not implemented evidence. Cost means relative implementation/test work for this bounded slice. All impacts are predicted; runtime performance is unmeasured. No material finding is hidden by a low-cost option.
+
+| Issue ID / axis | Severity | Concrete evidence | Why now | Recommendation |
+| --- | --- | --- | --- | --- |
+| PR-ARCH / Architecture | high | api-app/src/domain/channels/transport/channel.ts:24; integrations/channel composition; ARCH-R1-03 | template outside window needs explicit scoped selection, one abstract method and no dependency cycle | C |
+| PR-QUAL / Code Quality | high | api-app/src/domain/inbox/message-acceptance.service.ts:82,231; ARCH-R1-02 | self-mutated updatedAt and aborted transaction must not fake a current CAS | A |
+| PR-TEST / Tests | high | api-app/src/domain/inbox/outbound.service.spec.ts:1; test/channel-transport.e2e-spec.ts; ARCH-R1-01 | mocks cannot prove exclusion or real commit/rollback ACK certainty | A |
+| PR-PERF / Performance | medium | api-app/src/domain/inbox/outbound.service.ts:244; integrations/channels/prisma-channel-resolver.ts:68 | new window/account validation must be index-backed, batched and finitely bounded | A |
+| PR-SEC / Security | high | api-app/src/surfaces/bff/conversations.controller.ts:20; integrations/message-templates/template-management.resolver.ts:83 | external first contact binds tenant/actor/context and exact current account/template | A |
+| PR-ELEG / Elegance | medium | api-app/src/integrations/message-templates/template-management.module.ts:1; channel-transport.module.ts | avoid a second sender/projector or provider plugin platform | A |
+| PR-STRUCT / Structural Soundness | high | api-app/src/domain/inbox/outbound.service.ts:37; ARCH-R1-01/02 | exclusive initial intent must coexist with ordinary callers without HTTP locks or unsafe lease takeover | A |
+
+| Issue | Option / outcome | Effort | Risk | Blast radius | Maintenance | Performance | Elegance | Structural soundness |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| PR-ARCH | A: second Channel.sendTemplate operation | medium | medium | cross-module | medium | neutral vs C | regresses: operation-specific expansion | mixed: ownership possible but broader contract |
+| PR-ARCH | B: parallel concrete template sender | medium | high | cross-module | high | unknown, duplicate preflight likely | regresses | regresses: bypasses common scoped dispatch/acceptance |
+| PR-ARCH | C recommended: discriminated same sendMessage + supportedKinds + explicit initial resolver/fence | high | medium | cross-module | medium | bounded extra validation; measured later | improves coherence | improves: one operation and owner graph |
+| PR-QUAL | A recommended: same acceptance owner, pre-acceptance CAS, bounded whole-local-tx re-entry | medium | medium | module | low | extra short row lock; no network lock | improves | improves: truthful atomic local completion |
+| PR-QUAL | B: duplicate Message/finalizer in initial service | medium | high | cross-module | high | unknown duplication | regresses | regresses: two mutation owners |
+| PR-QUAL | C: do nothing; finalize after acceptance with stale updatedAt | low | high | module | high | fewer checks, invalid behavior | regresses | regresses: self-invalidating CAS |
+| PR-TEST | A recommended: causal RED + real PG barriers/ACK faults + protocol recorder + real BFF browser | high | medium | cross-stack | medium | test time increases within owned runner | improves confidence without product workaround | improves |
+| PR-TEST | B: happy-path mocks only | low | high | module | medium | faster tests, no concurrency proof | mixed | regresses: required failure states unproved |
+| PR-TEST | C: weaken assertions to existing behavior | low | high | module | high | no valid improvement claim | regresses | regresses: test-only shortcut |
+| PR-PERF | A recommended: filtered two-page account reads, shared request grant, bounded index/batched window | medium | medium | cross-module | medium | bounded extra latency/query work; measure | improves predictable limits | improves |
+| PR-PERF | B: full account scan / per-row IN queries | medium | high | cross-module | high | regresses unbounded work/N+1 | regresses | regresses |
+| PR-PERF | C: trust stale local catalog and createdAt window | low | high | cross-module | high | fewer reads with false authorization | regresses | regresses |
+| PR-SEC | A recommended: current auth/CSRF, immutable full context, fresh exact account eligibility, local-only recovery | high | medium | cross-module | medium | bounded extra checks | improves explicit authority | improves |
+| PR-SEC | B: accept arbitrary browser Graph payload/account/URL | low | high | cross-stack | high | unknown/unbounded | regresses | regresses: crosses credential/tenant boundary |
+| PR-SEC | C: do nothing; no manual first contact capability | low | low | local | low | neutral | neutral | preserves baseline but does not deliver agreed story |
+| PR-ELEG | A recommended: inbox coordinator composes delivered transport and management; one acceptance/projector | medium | medium | cross-module | low | avoids duplicated HTTP/cache | improves | improves |
+| PR-ELEG | B: new generic provider/plugin/workflow platform | high | high | cross-stack | high | unknown overhead | regresses incidental complexity | mixed, unauthorized future platform |
+| PR-ELEG | C: scattered provider branches in Inbox/domain | low | high | cross-stack | high | unknown drift | regresses | regresses DIP |
+| PR-STRUCT | A recommended: per-owner ordinary tokens coexist, exclude initial slot; uncertain dispatch never expires into takeover | high | medium | cross-module | medium | short admission writes, ordinary concurrency preserved | acceptable bounded safety state | improves truthful exclusion |
+| PR-STRUCT | B: one exclusive send lease for every caller | high | high | cross-module | high | regresses ordinary concurrency; unsafe expiry unless expanded recovery | regresses unnecessary platform | mixed, changes ordinary compatibility |
+| PR-STRUCT | C: early SELECT or auto-expire SENDING | low | high | cross-module | high | superficially cheap but permits concurrent dispatch | regresses | regresses external-effect safety |
 
 ## Failure Modes & Edge Cases
 
@@ -600,18 +657,29 @@ No config/credential/routing mutation during planning. Future local proof only a
 - The current official own account and eligible APPROVED asset are not verified; documentation evidence does not establish account readiness.
 - No current own-account APPROVED template availability is asserted.
 - Runtime state/current validation owner is intentionally not reprobed during this planning-only slice.
-- Some exact paths/lines for all consumers and affected public/BOT mappings await fresh frozen-source review.
+- Exact current source anchors and consumer matrix are attached; final implementations must still prove inherited public/BOT mappings and ordinary concurrency.
 - This contract proposes a material Channel supersede; architecture reviewer can reject C and require a revised draft/reapproval.
 
 ## Additional Architectural Opinions
 
-Required. Fresh no-context review after freeze must compare A/B/C explicitly and assess cost, risk, blast radius, maintenance, performance, elegance and structural quality. Do not reuse 2026-10-19/20 opinions as evidence for v1.1. Root owns review artifacts and orchestration.
+Fresh internal no-context r1 completed: option C recommended, four material findings integrated as normative contract below. Raw/strict merge and resolution in current review package. Performance mixed/unmeasured; elegance acceptable; structural and operational fit mixed until r1 fixes are validated. Fresh critique must assess those fixes, not reuse old19/20 opinions. Root owns serialized documentation orchestration.
+
+## Planning Finding Resolution Ledger
+
+| Finding ID | Resolution | Usefulness | Formalizable | Candidate Rule Level | Candidate Rule ID | Rationale / Evidence |
+| --- | --- | --- | --- | --- | --- | --- |
+| ARCH-R1-01 / F-E3C20901 | Integrated | useful | partial | project | n/a | Normative r1 owner-token interlock, explicit ordinary compatibility, no uncertain expiry takeover, local-only risk recovery and complete barriers; Scope09/DoD08/Val02 updated. |
+| ARCH-R1-02 / F-2D3CB947 | Integrated | useful | yes | project | n/a | Same acceptance owner explicitly admitted/sealed; original CAS before self-mutation; identity/conversation lock order; whole-local-tx rollback/readback/one re-entry; Scope07/DoD06/Val02. |
+| ARCH-R1-03 / F-0715A55A | Integrated | useful | yes | project | n/a | Explicit initial resolver, exact management/transport full context equality, parameter/semantic descriptor, applicable text-window check at final fence; DoD09/Val03. |
+| ARCH-R1-04 / F-E2F76277 | Integrated | useful | yes | project | n/a | Initial renderer over unchanged existing catalog components; separate initial semantic fingerprint and POSITIONAL ordering; no authoring/parser/projector flag change; DoD09/Val03. |
+
+These dispositions amend proposed contract only. Fresh no-context critique must assess them after refreshed freeze. They do not assert production fixes or grant execution authority.
 
 ## Audit Trigger Matrix
 
 - **Canonical method:** wf-docker-audit-escalation-method
 - **Guard command:** python3 delphi-ai/tools/audit_escalation_guard.py --todo foundation_documentation/todos/active/features/TODO-leadshug-start-conversation-by-contact.md
-- **Latest TEACH evidence / artifact:** not_run; derive current floor only after pushed v1.1 freeze.
+- **Latest TEACH evidence / artifact:** artifacts/reviews/leadshug-start-conversation-20261022/evidence/audit-floor-v1.1.json; actual current guard GO after initial pushed freeze; no implementation audit claimed.
 
 | Trigger | Value | Notes |
 | --- | --- | --- |
@@ -624,7 +692,7 @@ Required. Fresh no-context review after freeze must compare A/B/C explicitly and
 | touches_tests | yes | escopo ST-CON-04; derivar após freeze |
 | critical_user_journey | yes | escopo ST-CON-04; derivar após freeze |
 | release_or_promotion_critical | no | escopo ST-CON-04; derivar após freeze |
-| high_severity_plan_review_issue | no | escopo ST-CON-04; derivar após freeze |
+| high_severity_plan_review_issue | yes | escopo ST-CON-04; derivar após freeze |
 | explicit_three_lane_request | no | escopo ST-CON-04; derivar após freeze |
 
 ## Independent No-Context Critique Gate
@@ -662,18 +730,19 @@ Ingestão de planejamento; reload binding obrigatório após APROVADO antes de p
 
 ## Agent Routing Preflight
 
-- **Client:** codex
-- **Governed surface:** implementation
+- **Client surface:** codex
+- **Current governed action:** implementation
 - **Selected role:** routine-executor
 - **Selected model:** gpt-6-luna
 - **Selected effort:** medium
 - **Proof mode:** declared
+- **Exception reason:** n/a
 - **Routing evidence:** artifacts/reviews/leadshug-start-conversation-20261022/evidence/routing-planning-writer-v1.1.json; proposed product executor same tuple, new GO required after APROVADO
 - **Execution topology:** primary-checkout-single-writer
 - **Subagent / delegation authorization:** repository workflow authorizes executors/reviewers; no product execution yet
 - **Git isolation authorization:** not-authorized
-- **Worktree / auxiliary-checkout authorization:** not-authorized
-- **Worktree authorization evidence:** n/a
+- **Worktree authorization:** not-authorized
+- **Worktree authorization reference:** n/a
 - **Writer scheduling policy:** single-writer-serialized
 - **Guard outcome:** go
 - **Waiver / exception reference:** n/a
@@ -731,22 +800,22 @@ No promotion review exists for v1.1. Root-owned review artifacts are authoritati
 ### Lane Detail Packet Template
 #### EPS
 - **Trigger rationale:** listagem de conversas vazias/ordem e lookup scoped/intenção; EXPLAIN ANALYZE com amostra cardinalidade, limite de página e budget externo. Sem N+1/catalog fan-out.
-- **Recorded at (UTC):** 2026-10-19T20:34:09Z
+- **Recorded at (UTC):** 2026-10-22T00:00:00Z (planning date marker, not execution time)
 - **Executor ID:** planned-executor-st-con-04
 - **Evidence object:** pending; JSON pcv-1 com sha256 antes da entrega, não existe execução ainda.
 #### FRC
 - **Trigger rationale:** duas submissões e atraso em troca BU/canal/draft; Playwright real, rastrear requests e estado no backend.
-- **Recorded at (UTC):** 2026-10-19T20:34:09Z
+- **Recorded at (UTC):** 2026-10-22T00:00:00Z (planning date marker, not execution time)
 - **Executor ID:** planned-executor-st-con-04
 - **Evidence object:** pending; JSON pcv-1 com sha256.
 #### BCI
 - **Trigger rationale:** barreiras PG e contador HTTP externo, crash antes/depois POST, replay e echo; provar invariantes D-06/07.
-- **Recorded at (UTC):** 2026-10-19T20:34:09Z
+- **Recorded at (UTC):** 2026-10-22T00:00:00Z (planning date marker, not execution time)
 - **Executor ID:** planned-executor-st-con-04
 - **Evidence object:** pending; JSON pcv-1 com sha256.
 #### RLS
 - **Trigger rationale:** pequeno ensaio de concorrência/load bounded do novo fluxo/listagem no PG descartável; não claim SLO ou produção.
-- **Recorded at (UTC):** 2026-10-19T20:34:09Z
+- **Recorded at (UTC):** 2026-10-22T00:00:00Z (planning date marker, not execution time)
 - **Executor ID:** planned-executor-st-con-04
 - **Evidence object:** pending; resolver recomendação com evidência ou waiver válido até o deadline, sem deixar pendente na entrega.
 
@@ -790,13 +859,20 @@ Required at closeout. Explicitly carry ST-05 `SEC-R6-04`, `OPS-R4-01`, and `TQA-
 - **Evidence / reference:** planned current implementation evidence only; prior planning artifacts historical
 - **Waiver authority / reference (required if waived):** n/a
 
-## Independent Cutover Integrity Audit
+## Independent Cutover Integrity Audit Gate
 
-- **Decision:** required
-- **Why:** intentional Channel text-only supersede and stored-createdAt window supersede; verify no fallback/duplicate owner remains.
-- **Lifecycle:** after implementation and before delivery.
-- **Status:** `not_run`
-- **Findings/evidence:** pending.
+- **Cutover audit decision:** required
+- **Why this decision:** intentionally replace the Channel text-only payload restriction and stored-createdAt window rule without duplicate dispatch/catalog/Message owners.
+- **Cutover signals in scope:** canonical cutover; legacy-path retirement
+- **Package mode:** bounded-file-set
+- **Canonical multi-lane audit protocol (when used):** audit-protocol-triple-review
+- **Audit session / round evidence (when protocol used):** planned after implementation; no current delivery review
+- **Audit focus:** one abstract send operation, qualified window in every caller/projection, sole acceptance owner, zero hidden fallback
+- **Cutover audit status:** not_run
+- **Findings summary:** implementation has not begun
+- **Resolution ledger:** delivery-stage findings will be recorded with disposition and evidence
+- **Evidence / reference:** current delivered source and future implemented diff; no cutover evidence yet
+- **Waiver authority / reference (required if waived):** n/a
 
 ## Delivery Confidence Gate (Required for `✅ Production-Ready`)
 
@@ -808,11 +884,11 @@ Pending after delivery evidence. Update inbox/channels module docs only after ac
 
 ## Commands (Run Locally)
 
-No product/test/runtime command was run or is authorized in this task. Future commands are determined after approval from current dependency-readiness and frozen validation plan.
+Planning-only review/guard and Foundation main publication commands are recorded in current evidence. No product/test/runtime command was run or authorized by this planning slice. Future product commands use the declared canonical suite and approved disposable/local topology after APROVADO.
 
 ## Files Expected (Compatibility Note)
 
-This author is authorized to edit only this active TODO. Root owns archive and review/evidence artifacts. The 68-file source seal is planning evidence; no source edits are made now.
+Root owns this active TODO, archive and review/evidence artifacts; the terminal draft author previously owned only the TODO. The 68-file source seal is planning evidence; no source edits are made now.
 
 ## COMENTÁRIO
 
@@ -841,10 +917,10 @@ Planning draft only. Human decision requested only after root has frozen it and 
 
 ## Prior-cycle provenance and sequencing handoffs
 
-- The original 2026-10-19 planning/review record is archived by root at `foundation_documentation/todos/active/features/historical-planning-20261019-20261020.md`; retain its content unmodified.
+- The original 2026-10-19 planning/review record is archived by root at `foundation_documentation/artifacts/reviews/leadshug-start-conversation-20261022/historical-planning-20261019-20261020.md`; retain its content unmodified.
 - ST-CON-06 v1.3 and ST-CON-05 v1.1 are completed locally with their own evidence and limits. Their reviews do not transfer approval to ST-CON-04.
 - The old separate `GET /conversations/:id/channels/:channelId/templates` is superseded in this proposal by the one ST-05 catalog route/projector.
-- The 2026-10-19 assumption-code, review, critique, and preflight outcomes remain historical only. Every fresh v1.1 field above is `pending-freeze`/`not_run` until root supplies current evidence.
+- The 2026-10-19 assumption-code, review, critique, and preflight outcomes remain historical only. Current v1.1 evidence is recorded gate by gate; original pending-freeze statements are authoring history, not current success evidence.
 
 ## API Endpoint Definitions — proposed ST-CON-04 v1.1
 
@@ -873,7 +949,7 @@ Shared catalog continues existing GET/POST /business-units/:buId/channels/:chann
 
 The new initial coordinator reserves an intent and immutable request/scope, not a Message. Common OutboundService alone resolves/binds the abstract channel and performs dispatch; common MessageAcceptanceService alone creates/reconciles keyed Message. Extend that SAME acceptance owner with an explicit tx-capable primitive, keeping its existing accept wrapper. A shared Outbound finalization collaboration consumes it for initial local acceptance/intent state/CAS effects in one short transaction, preserving the existing sender wrappers. Initial orchestration composes transport and management modules; transport never imports management, preventing a DI cycle. The Meta initial protocol client is an integration detail of the SAME bound Meta Channel, never a parallel application sender.
 
-Before every dispatch from any existing BFF/public/BOT caller, the same domain interlock checks for an active initial slot. A mere early SELECT is insufficient: ordinary dispatch and initial-slot reservation must serialize admission using the same conversation lock/transaction or dedicated per-conversation dispatch lease. The admitted ordinary dispatch holds a bounded logical claim outside the DB transaction through its HTTP; a concurrent initial attempt cannot reserve past it. This claim is not a new durable idempotency/recovery platform for existing callers. No DB lock spans HTTP. The implementation must prove both orderings with PG barriers and explicit release/expiry behavior; if a minimal correct interlock cannot fit existing owner contracts, return for architecture reconvergence before implementation.
+Before every ordinary dispatch and exclusive initial reservation, use the owner-token admission defined in the normative r1 integration below. The earlier lock-or-lease alternative is closed; no time takeover of uncertain dispatched tokens and no ordinary-versus-ordinary serialization.
 
 For a new initial attempt, all provider preflight reads precede its SENDING claim. The same-method fence rechecks live user/grant/channel/resource/generation/epoch/active credential and payload fingerprint in the short claim transaction. A failed/expired PREPARED claim does zero POST. Positive original-claim commit/readback is the only dispatch authority. Exactly one POST per attempt; no transport mutation retry. A fresh independent credential/account/template preflight remains outside the transaction. This fence constrains local authority and cannot retract an HTTP call already accepted externally.
 
@@ -882,3 +958,35 @@ Only an active initial slot holder may finalize status/owner via CAS against pre
 ## Planned operational admission and proof
 
 After explicit APROVADO and current authority GO: test-first admitted public paths only; full canonical all suite; current security/PCV/TQA/adherence assurance; disposable migration deploy/status, then one bounded local preserved TEST preflight/apply with5s lock/60s command limits, no reset/drop/resolve retry; source-bound API/Web images/runtime/static proof, preserve peers/volumes. Temporary owned HTTPS only after those gates; never adopt/kill unknown processes or require raw env/log reads. Assisted operator tests use only already designated private test channels/contacts; no automatic real send. Both unofficial first text+reply and official genuinely APPROVED template+reply are completion requirements; operator authorizes actual recipient tests at that stage. Publication/promotion of product/Railway remains excluded. Actual approval enum is currently unknown, and current runtime health has not been reprobed. Existing SEC-R6-04/OPS-R4-01/TQA-ST05-03 remain bounded, not fixed or generalized here.
+
+## Normative architecture r1 integration — exact bounded contracts
+
+This section is part of SCOPE-02/04/06/07/08/09/10 and D-03/05/06/07/10; it resolves ARCH-R1-01..04 and overrides earlier open-ended interlock alternatives, never the private boundary. These are proposed contract changes awaiting human APROVADO.
+
+### Ordinary admission and exclusive initial reservation
+
+Use a small durable per-send `DispatchAdmission` record for ordinary sends, separate from initial-message intent. Fields: id/token, conversation/BU, caller kind and current attributable actor, immutable selected context, owner nonce, `PREPARED|SENDING|SETTLED|UNCERTAIN`, deadline and irreversible releasedAt. This record authorizes exclusion only; it is not ordinary-send idempotency, retry, Message acceptance, provider lookup or a second operation owner. Every BFF/public/BOT dispatch obtains its own token under the SAME conversation row lock used by initial-slot reservation. Existing ordinary tokens can coexist; ordinary-versus-ordinary concurrency and response mappings remain unchanged. Any unreleased ordinary token blocks initial reservation; active initial slot blocks admission of a new ordinary send. Initial and ordinary admissions never pass each other through a SELECT race.
+
+Ordinary PREPARED admission has 90s deadline; bounded provider preflight completes before a same-operation fence validates current owner/context/applicable trusted window and positively commits SENDING. If expiry wins while still PREPARED, classify/release as undispatched and fence produces zero POST. No automatically released dispatched token: SENDING expiry, process death, timeout or missing provider ID becomes UNCERTAIN and still blocks INITIAL reservation. Known accepted/refused/blocked result settles only that owner's token; unknown result keeps the token while existing caller outcome/diagnostic behavior remains unchanged. No automatic retry or provider recovery is added. All normal finally/catch release uses token+owner CAS; a late release never releases an initial slot or another owner's token.
+
+A small local-only recovery surface exists solely to unblock initial admission: `GET start-options` adds up to10 active ordinary admissions plus truncated flag; `POST /conversations/:id/dispatch-admissions/:admissionId/reconcile` locally closes expired PREPARED or classifies expired SENDING, and `POST .../acknowledge` irreversibly releases only UNCERTAIN after its 90s dispatch deadline, current ATENDENTE+ and CSRF, with explicit duplicate-risk confirmation/audit. Never expose service principals/foreign state. Acknowledgment cannot cancel an already-claimed HTTP request; suspension after the fence or late response can still cause an external effect, which is the stated risk, not a guarantee. It never retries or changes ordinary response/Message. Known result can subsequently settle only its original token; release remains irreversible. Initial reservation seeing active token returns BLOCKED/ORDINARY_SEND_IN_PROGRESS409 with authorized local token IDs; missing/unconfirmed admission or SENDING commit means zero POST. Exact captured-key readback, no inference of rollback from an exception, applies to reserve/claim/settle/release. Local readback inconclusive keeps exclusion conservative.
+
+Admission rows live in the same short conversation transaction as exclusive-slot checks, but never hold DB locks over HTTP. Rate limits and active-token read bounds apply; bounded row/index queries only. Preserve caller compatibility outside this narrowly reviewed admission change. Tests prove both orderings, multiple ordinary sends remain concurrent, suspension before/after fence, PREPARED expiry vs late fence, uncertain dispatch without time takeover, manual risk release, successor and late owner-CAS release. This finite recovery is included here, not delegated to an unspecified future interlock.
+
+### Initial resolution and dispatch descriptor
+
+Add narrow abstract `resolveForInitial` reference to ChannelResolver: current conversation/BU, explicit selected channel, expected immutable channel/resource/generation/epoch/credential-version/account-reference context and message kind. Resolve explicit channel, never infer latest origin or fallback. Approved-template resolution does not apply the free-text window; text resolution and final claim do. Existing ordinary resolver methods preserve current semantics except the explicitly superseded qualified window rule.
+
+Initial coordinator composes transport and management and gives common dispatch an immutable descriptor containing normalized recipient from the stored conversation, complete scoped channel context, payload kind, exact template ID/name/language/category/format/canonical text components and ordered/keyed parameter values, rendered snapshot and request fingerprint. Validated management context MUST equal selected transport context in BU, channel, resource identity, opaque account reference, generation, pairing epoch and active credential version. Browser provides neither account/protocol address nor a credential. Keep transport independent of management DI. Fresh exact same-account definition/status verification completes first; generic same-send fence then verifies current user/grant, full context equality, immutable payload fingerprint, slot/owner/deadline and applicable trusted text-window at claim time, immediately before one POST. Window expiry during preflight rejects text before dispatch; closed-window approved template remains allowed. External status can change after check; provider refusal is not converted to success/fallback/retry.
+
+### Transaction ordering and local recovery
+
+Keep the known external receipt committed separately before local Message work. Reuse `MessageAcceptanceService.acceptInTransaction` (proposed name) as SAME owner primitive; current `accept` remains wrapper with its existing observable behavior. Initial short local completion obtains current verified-identity lock first, BU/contact advisory lock where required, then conversation row lock, then intent/admission rows in that order; no reverse acquisition in new collaborators. Under that row lock evaluate ORIGINAL pre-HTTP updatedAt/status/owner + active initial-slot CAS BEFORE acceptance's own lastMessageAt/updatedAt mutation. Capture the boolean; do not refresh expected values from a newer/echo-first conversation. A false status/owner CAS skips those effects but does not reject an otherwise eligible keyed Message. Same owner accepts/reconciles exact resource+external ID, and same transaction records initial completion and slot release. Echo-first may conservatively suppress assignment/reopen; never steal/reopen on a newly captured baseline.
+
+Unique conflict aborts the entire local transaction. Do not query/reconcile inside an aborted transaction. After rollback, exact positive readback of receipt/Message/intent then at most ONE fresh whole-local transaction may reconcile through the same primitive and original CAS context; no external call. Commit-ACK loss first uses exact readback; if still unconfirmed, keep truthful CONFIRMED external acceptance, UNCONFIRMED local projection and unreleased slot. Local-only later reconcile can resume after current identity/grant checks. Old wrapper's acceptance/error/unknown mapping stays covered. Realtime emits only for the Message creation winner after confirmed local commit; crash-gap remains best-effort (no outbox claim).
+
+### Initial template subset over unchanged ST-05 catalogue
+
+The delivered `supported`, `eligible` and `semanticFingerprint` fields describe ST-05 authoring support and mark POSITIONAL unsupported. They are preserved byte/semantics-compatible and are NOT authorization or complete initial-send support flags. New initial text renderer consumes existing sanitized `TemplateSummary.components`, `parameterFormat`, account-bound observation freshness/availability/status and exact ID/name/language/category. It validates its own strictly narrower text-send grammar: one BODY, max one static TEXT HEADER and FOOTER, no other/unknown component, no placeholder in header/footer; NAMED unique keys or POSITIONAL contiguous keys1..N with repeated occurrences mapped consistently. Every supplied value must exactly match the required names/positions and existing bounds. Unknown/unsupported syntax fails closed. This renderer is not a second catalogue/projector and writes no remote observation.
+
+Derive an initial-only semantic fingerprint from a fixed canonical versioned representation of the existing sanitized ID/name/language/category/parameterFormat/text components, then combine context, recipient and ordered/keyed values into preview/request fingerprint. Do not reuse null ST-05 positional fingerprint or silently treat eligible=false as send permission. Initial UI labels subset support based on this same renderer/preview, not inherited authoring flags. Fresh bounded same-account reads pass through the SAME renderer and must exactly match selected initial semantics and APPROVED status before POST. No shared parser/DTO/authoring change admitted. If actual raw semantics cannot be represented unambiguously by sanitized components, reject that template rather than broaden parser scope. End-to-end POSITIONAL and NAMED catalog→preview→fresh-check→wire-order tests are required.
