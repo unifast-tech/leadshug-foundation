@@ -1,0 +1,97 @@
+{
+  "policy_schema_version": "pcv-1",
+  "schema_version": "pcv-1",
+  "todo_id": "ST-CON-04",
+  "run_id": "E45-canonical-all-57348",
+  "environment_id": "owned-disposable-node22-postgresql16-real-BFF-fake-external-provider",
+  "executor_id": "stcon04_continuation",
+  "reviewer_id": "root-independent-source-and-output-collector; formal lane assessment pending",
+  "recorded_at_utc": "2026-10-22T22:58:02.921158+00:00",
+  "lane_id": "BCI",
+  "evidence_type": "real-concurrent-BFF-PG-barrier-and-state-readback",
+  "sample_profile_id": "BCI-SP-H",
+  "acceptance_rule_id": "BCI-A1",
+  "result_summary": "Five20-request same-key waves each persist one intent and one Message, dispatch once and return19 in-flight replays; manual open five20-request waves create five rows and send zero messages.",
+  "artifact_payload": {
+    "evidence_receipt": "all-result-e45-v1.1.json",
+    "stdout_sha256": "76923c5f6b39ecb4deec0c296c7d5360b8a8ebc0620e1f43908e43df97600233",
+    "source_seal": "all-source-seal-e45-v1.1.json",
+    "source_fingerprint": "27e37bc4ac9398e64b3035aa785135d8c639c8dd1beefe53db1c16a39e0bd87f",
+    "terminal_exit_code": 0,
+    "assessment_status": "Observed acceptance assertions passed; candidate evidence for independent assessment, no delivery/runtime/provider claim.",
+    "invariant_id": "ST04-one-owned-active-slot-and-at-most-one-POST-per-immutable-initial-intent",
+    "concurrency_policy": "idempotent same-key replay",
+    "probe_profile_observed": {
+      "waves": 5,
+      "overlapping_requests_per_wave": 20,
+      "same_key_initial_waves": [
+        {
+          "wave": 1,
+          "requests": 20,
+          "replay202": 19,
+          "posts": 1,
+          "messages": 1,
+          "elapsedMs": 191
+        },
+        {
+          "wave": 2,
+          "requests": 20,
+          "replay202": 19,
+          "posts": 1,
+          "messages": 1,
+          "elapsedMs": 153
+        },
+        {
+          "wave": 3,
+          "requests": 20,
+          "replay202": 19,
+          "posts": 1,
+          "messages": 1,
+          "elapsedMs": 136
+        },
+        {
+          "wave": 4,
+          "requests": 20,
+          "replay202": 19,
+          "posts": 1,
+          "messages": 1,
+          "elapsedMs": 132
+        },
+        {
+          "wave": 5,
+          "requests": 20,
+          "replay202": 19,
+          "posts": 1,
+          "messages": 1,
+          "elapsedMs": 138
+        }
+      ],
+      "manual_open": {
+        "waves": 5,
+        "requests_per_wave": 20,
+        "created": 5,
+        "reused": 95,
+        "distinct_conversations": 5,
+        "provider_call_delta": 0,
+        "message_count": 0
+      }
+    },
+    "additional_barriers": "Ordinary-vs-initial admission, unique echo race, CAS owner/closed preservation, commit ACK loss versus rollback and after-deadline local risk acknowledgment passed actual PG suites.",
+    "sources": [
+      {
+        "path": "api-app/test/initial-message.e2e-spec.ts",
+        "sha256": "d5b08d0117138f126858c9c26fc19dd278c7ed998a9776e5bdc1258f4cd2e8e5"
+      },
+      {
+        "path": "api-app/test/conversation-start.e2e-spec.ts",
+        "sha256": "35ead6bdea966ab05a3c9b792316867a918929194570b766767bacebb5bf4f11"
+      },
+      {
+        "path": "api-app/test/dispatch-admission.e2e-spec.ts",
+        "sha256": "8bd551202e6c1fed1013a4c5bcf6d7c988b5f5737d3aa2c26c9204aa55bce876"
+      }
+    ],
+    "limits": "posts in ST04_BCI_5x20 are Evolution fake-port invocations, not external TCP requests. Durable external exactly-once is not claimed."
+  },
+  "artifact_sha256": "7d5ec472c230fc9729d45b8e0c8a056f3350470506101d26d3db45c6d25655ed"
+}

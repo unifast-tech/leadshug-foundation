@@ -1,0 +1,12 @@
+{
+  "checkpoint": "E45 terminal full positive source recheck",
+  "stage": "After actual executor terminal and owned cleanup; BEFORE writer release",
+  "count": 259,
+  "fingerprint": "27e37bc4ac9398e64b3035aa785135d8c639c8dd1beefe53db1c16a39e0bd87f",
+  "matches_preseal_full_inventory_and_bytes": true,
+  "record_reference": "all-source-seal-e45-v1.1.json#records",
+  "stdout_sha256": "76923c5f6b39ecb4deec0c296c7d5360b8a8ebc0620e1f43908e43df97600233",
+  "executor_reported_exit_code": 0,
+  "recorded_at_utc": "2026-10-22T22:49:30.695194+00:00",
+  "boundary": "Only declared positive public roots and7 exact publicfiles; no actual env/data/process inspection."
+}

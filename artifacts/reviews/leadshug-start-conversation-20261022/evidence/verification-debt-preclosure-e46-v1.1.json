@@ -1,0 +1,36 @@
+{
+  "kind": "Pre-closure verification-debt audit, complete positive public roots",
+  "recorded_at_utc": "2026-10-22T22:57:26.296530+00:00",
+  "command": [
+    "bash",
+    "delphi-ai/tools/verification_debt_audit.sh",
+    "--todo",
+    "foundation_documentation/todos/active/features/TODO-leadshug-start-conversation-by-contact.md",
+    "--path",
+    "api-app/src",
+    "--path",
+    "api-app/test",
+    "--path",
+    "api-app/prisma",
+    "--path",
+    "web-app/src",
+    "--path",
+    "web-app/e2e"
+  ],
+  "actual_exit_code": 2,
+  "stdout_sha256": "c565d5609b509e0c37371c9b3851c353a3b58bcba81280e5560ad6f5dfb7d4d4",
+  "raw_public_output": "verification-debt-output-e46-v1.1.txt",
+  "summary_lines": [
+    "Inline code TODO debt classification: none",
+    "Unchecked checklist items:",
+    "Counts: waiver=42 blocker=58 unchecked=45 accepted_inline=0 canonical_link_missing=0 cleanup_required=0"
+  ],
+  "boundary": "No --scan-git-modified, no actual env/private paths. Exact TODO plus five public source roots.",
+  "stage": "Pending implementation assurance; unchecked delivery criteria and later runtime/guard approval are explicit gates, not hidden debt or evidence of completion.",
+  "retained_prior_debt": [
+    "SEC-R6-04",
+    "OPS-R4-01",
+    "TQA-ST05-03"
+  ],
+  "final_disposition": "Not final clean closure; classify reported evidence/inline findings before delivery."
+}

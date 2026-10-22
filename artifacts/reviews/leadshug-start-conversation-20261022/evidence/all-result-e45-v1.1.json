@@ -1,0 +1,284 @@
+{
+  "checkpoint": "E45 canonical all terminal GREEN, not delivery",
+  "recorded_at_utc": "2026-10-22T22:50:14.887276+00:00",
+  "command": "bash scripts/test-channels-local.sh all",
+  "executor_session_id": 57348,
+  "actual_exit_code": 0,
+  "phases": {
+    "generate_migrate_deploy_status_lint_api_build": "passed",
+    "api_unit": {
+      "files": 34,
+      "passed": 356
+    },
+    "postgresql_integration": {
+      "files": 33,
+      "passed": 435
+    },
+    "web_typescript_vite_build": "passed",
+    "web_unit": {
+      "files": 7,
+      "passed": 53
+    },
+    "browser": {
+      "passed": 85,
+      "failed": 0,
+      "duration": "14.5m"
+    }
+  },
+  "stdout_sha256": "76923c5f6b39ecb4deec0c296c7d5360b8a8ebc0620e1f43908e43df97600233",
+  "source_recheck": "all-source-recheck-e45-v1.1.json",
+  "freshness": "browser-freshness-collection-e45-v1.1.json",
+  "owned_cleanup_observed": true,
+  "specific_proofs": [
+    "E44 causal snapshot-read failure now passes: persistent read fault preserves original key/body and blocks sends, failed local reread adds no POST, explicit successful reread enables only original-key replay;2BFFPOSTs total/1provider effect/1Message.",
+    "Status-specific recovery selector passes original immutable-key/preAdmission provenance test.",
+    "Shared catalog real refresh/POSITIONAL browser dispatch, escaped/read-only preview, keyboard,5x20 frontend triggers all pass.",
+    "New renderer4096/4097 final snapshot,1024/1025 Unicode per-value and20/21 distinct-param boundaries pass.",
+    "Actual PG commit-with-lost-ACK vs rollback at reserve/claim/receipt/releases/local acceptance; unique echo/CAS and risk deadlines pass.",
+    "Current API/public/BOT/window/timeline/template/onboarding regression suites pass; protected test bytes unchanged."
+  ],
+  "metrics": {
+    "initial_same_key_waves": [
+      {
+        "wave": 1,
+        "requests": 20,
+        "replay202": 19,
+        "posts": 1,
+        "messages": 1,
+        "elapsedMs": 191
+      },
+      {
+        "wave": 2,
+        "requests": 20,
+        "replay202": 19,
+        "posts": 1,
+        "messages": 1,
+        "elapsedMs": 153
+      },
+      {
+        "wave": 3,
+        "requests": 20,
+        "replay202": 19,
+        "posts": 1,
+        "messages": 1,
+        "elapsedMs": 136
+      },
+      {
+        "wave": 4,
+        "requests": 20,
+        "replay202": 19,
+        "posts": 1,
+        "messages": 1,
+        "elapsedMs": 132
+      },
+      {
+        "wave": 5,
+        "requests": 20,
+        "replay202": 19,
+        "posts": 1,
+        "messages": 1,
+        "elapsedMs": 138
+      }
+    ],
+    "inbox_order": {
+      "rowCount": 50,
+      "plan": "Limit  (cost=0.41..9.23 rows=50 width=45) (actual time=0.015..0.030 rows=50 loops=1)\n  Buffers: shared hit=6\n  ->  Index Scan using conversations_inbox_order_idx on conversations  (cost=0.41..2645.78 rows=15000 width=45) (actual time=0.014..0.026 rows=50 loops=1)\n        Index Cond: ((bu_id = '2d5ef223-1ad0-4812-b634-24014bce4b6f'::text) AND (contact_type = 'PESSOA'::\"ContactType\"))\n        Filter: (status = 'QUEUED'::\"ConversationStatus\")\n        Buffers: shared hit=6\nPlanning:\n  Buffers: shared hit=71\nPlanning Time: 0.207 ms\nExecution Time: 0.043 ms"
+    },
+    "inbox_out_heavy": {
+      "rows": 60,
+      "listed": 50,
+      "conversationQueries": 3,
+      "messageQueries": 0
+    },
+    "public_trusted_window": {
+      "policy_schema_version": "pcv-1",
+      "lane_id": "EPS",
+      "trigger_result": "required",
+      "trigger_severity": "medium",
+      "trigger_reason_code": "EPS-DATA-PATH-CHANGED",
+      "gate_deadline": "before_local_implemented",
+      "min_evidence_rule_id": "EPS-E2",
+      "acceptance_rule_id": "EPS-A2",
+      "sample_profile": "EPS-SP-STRONG",
+      "access_pattern_classification": "Public conversation page loads selected BU channels once, official credential metadata once, one bounded latest-any-message projection for returned page IDs, and one batched indexed selected-resource trusted Meta IN timestamp query when selected bindings require a window; no provider credentials are decrypted or probed.",
+      "pageConversations": 30,
+      "historyRowsPerConversation": 24,
+      "availabilitySample": [
+        {
+          "available": true,
+          "reason": null,
+          "windowOpen": true
+        },
+        {
+          "available": true,
+          "reason": null,
+          "windowOpen": true
+        },
+        {
+          "available": true,
+          "reason": null,
+          "windowOpen": true
+        }
+      ],
+      "queryCounts": {
+        "buChannelFindMany": 1,
+        "channelCredentialFindMany": 1,
+        "latestAnyMessageProjection": 1,
+        "latestInboundWindowProjection": 1
+      },
+      "elapsedMs": 14.70497800000021,
+      "explainLatestInboundProjection": [
+        {
+          "Plan": {
+            "Node Type": "Nested Loop",
+            "Parallel Aware": false,
+            "Async Capable": false,
+            "Join Type": "Inner",
+            "Startup Cost": 0.28,
+            "Total Cost": 96.31,
+            "Plan Rows": 30,
+            "Plan Width": 40,
+            "Actual Startup Time": 0.024,
+            "Actual Total Time": 0.19,
+            "Actual Rows": 30,
+            "Actual Loops": 1,
+            "Inner Unique": false,
+            "Shared Hit Blocks": 90,
+            "Shared Read Blocks": 0,
+            "Shared Dirtied Blocks": 0,
+            "Shared Written Blocks": 0,
+            "Local Hit Blocks": 0,
+            "Local Read Blocks": 0,
+            "Local Dirtied Blocks": 0,
+            "Local Written Blocks": 0,
+            "Temp Read Blocks": 0,
+            "Temp Written Blocks": 0,
+            "Plans": [
+              {
+                "Node Type": "Function Scan",
+                "Parent Relationship": "Outer",
+                "Parallel Aware": false,
+                "Async Capable": false,
+                "Function Name": "unnest",
+                "Alias": "requested",
+                "Startup Cost": 0,
+                "Total Cost": 0.3,
+                "Plan Rows": 30,
+                "Plan Width": 32,
+                "Actual Startup Time": 0.004,
+                "Actual Total Time": 0.005,
+                "Actual Rows": 30,
+                "Actual Loops": 1,
+                "Shared Hit Blocks": 0,
+                "Shared Read Blocks": 0,
+                "Shared Dirtied Blocks": 0,
+                "Shared Written Blocks": 0,
+                "Local Hit Blocks": 0,
+                "Local Read Blocks": 0,
+                "Local Dirtied Blocks": 0,
+                "Local Written Blocks": 0,
+                "Temp Read Blocks": 0,
+                "Temp Written Blocks": 0
+              },
+              {
+                "Node Type": "Limit",
+                "Parent Relationship": "Inner",
+                "Parallel Aware": false,
+                "Async Capable": false,
+                "Startup Cost": 0.28,
+                "Total Cost": 3.18,
+                "Plan Rows": 1,
+                "Plan Width": 45,
+                "Actual Startup Time": 0.006,
+                "Actual Total Time": 0.006,
+                "Actual Rows": 1,
+                "Actual Loops": 30,
+                "Shared Hit Blocks": 90,
+                "Shared Read Blocks": 0,
+                "Shared Dirtied Blocks": 0,
+                "Shared Written Blocks": 0,
+                "Local Hit Blocks": 0,
+                "Local Read Blocks": 0,
+                "Local Dirtied Blocks": 0,
+                "Local Written Blocks": 0,
+                "Temp Read Blocks": 0,
+                "Temp Written Blocks": 0,
+                "Plans": [
+                  {
+                    "Node Type": "Index Only Scan",
+                    "Parent Relationship": "Outer",
+                    "Parallel Aware": false,
+                    "Async Capable": false,
+                    "Scan Direction": "Backward",
+                    "Index Name": "messages_conversation_trusted_window_idx",
+                    "Relation Name": "messages",
+                    "Alias": "message",
+                    "Startup Cost": 0.28,
+                    "Total Cost": 72.85,
+                    "Plan Rows": 25,
+                    "Plan Width": 45,
+                    "Actual Startup Time": 0.006,
+                    "Actual Total Time": 0.006,
+                    "Actual Rows": 1,
+                    "Actual Loops": 30,
+                    "Index Cond": "((conversation_id = requested.conversation_id) AND (provider_resource_identity_id = '399453c9-f007-4ae2-b81c-14a4e8a9fa2c'::text) AND (direction = 'IN'::\"MessageDirection\") AND (channel_origin = 'OFICIAL'::\"ChannelType\") AND (official_inbound_at IS NOT NULL) AND (official_inbound_at <= CURRENT_TIMESTAMP))",
+                    "Rows Removed by Index Recheck": 0,
+                    "Heap Fetches": 30,
+                    "Shared Hit Blocks": 90,
+                    "Shared Read Blocks": 0,
+                    "Shared Dirtied Blocks": 0,
+                    "Shared Written Blocks": 0,
+                    "Local Hit Blocks": 0,
+                    "Local Read Blocks": 0,
+                    "Local Dirtied Blocks": 0,
+                    "Local Written Blocks": 0,
+                    "Temp Read Blocks": 0,
+                    "Temp Written Blocks": 0
+                  }
+                ]
+              }
+            ]
+          },
+          "Planning": {
+            "Shared Hit Blocks": 68,
+            "Shared Read Blocks": 0,
+            "Shared Dirtied Blocks": 0,
+            "Shared Written Blocks": 0,
+            "Local Hit Blocks": 0,
+            "Local Read Blocks": 0,
+            "Local Dirtied Blocks": 0,
+            "Local Written Blocks": 0,
+            "Temp Read Blocks": 0,
+            "Temp Written Blocks": 0
+          },
+          "Planning Time": 0.216,
+          "Triggers": [],
+          "Execution Time": 0.203
+        }
+      ],
+      "providerCallsBefore": {
+        "meta": 0,
+        "evolution": 0
+      },
+      "providerCallsAfter": {
+        "meta": 0,
+        "evolution": 0
+      },
+      "limits": "Disposable PostgreSQL and one bounded 30-conversation public page; local query count/plan observation, not a capacity or latency SLO claim."
+    }
+  },
+  "metric_interpretation": {
+    "initial_same_key_waves": "Each20-request wave includes1held original and19concurrent replays. posts counts Evolution fake-port invocations, not external TCP. Actual Message/intent counts asserted independently.",
+    "inbox_order": "Fixture creates15000 conversations; logged rowCount50 is returned page size, not fixture cardinality. SQL-only expression index observed, no external sort.",
+    "inbox_out_heavy": "3queries touching conversations, not3totalSQL;0standalone Message hydration queries.",
+    "public_trusted_window": "One channel binding/credential metadata/latest-any projection/batched trusted-IN projection for30rows; no external credential probe.",
+    "runtime": "Disposable synthetic stage only; no production capacity/SLO or actual Meta delivery claim."
+  },
+  "remaining": [
+    "OrdinaryRecovery new consumer has no direct browser reconcile/ack proof yet; one already-admitted test-only real90s-deadline case queued after this postseal. No product bug inferred.",
+    "Required independent architecture/security/PCV/TQA/cutover/final/debt and complete item-specific evidence disposition remain.",
+    "Full canonical diff guard/private-boundary exception and preserved local activation plan are unapproved/unexecuted.",
+    "Own-account approved template human attestation does not establish source-bound first-send/reply; assisted nonofficial/official operator proof still required."
+  ],
+  "delivery": "InProgress/Pending/implementation, no completed checkbox or runtime promotion"
+}

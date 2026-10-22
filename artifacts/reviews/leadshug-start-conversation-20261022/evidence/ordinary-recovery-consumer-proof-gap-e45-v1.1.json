@@ -1,0 +1,41 @@
+{
+  "kind": "Bounded consumer-proof gap, not a demonstrated product bug",
+  "recorded_at_utc": "2026-10-22T22:36:57.464928+00:00",
+  "source_seal": "all-source-seal-e45-v1.1.json",
+  "stage": "E45 terminalGREEN/postsealed; E46 browser active/frozen",
+  "governing_requirement": [
+    "Scope02/09 finite ordinary/initial interlock recovery",
+    "Frontend / Consumer Matrix: attempt read/reconcile/ack recovery controls",
+    "No-context orchestration requires consumer implemented + evidenced before dispatch"
+  ],
+  "source_facts": {
+    "producer": [
+      "api-app/src/surfaces/bff/conversations.controller.ts:128 reconcileAdmission",
+      "api-app/src/surfaces/bff/conversations.controller.ts:139 acknowledgeAdmission"
+    ],
+    "consumer": [
+      "web-app/src/componentes/NovaConversa.tsx:672 OrdinaryRecovery",
+      "web-app/src/telas/Inbox.tsx:516 manual reuse selects OrdinaryRecovery"
+    ],
+    "existing_evidence": "Actual PG service interlock/ordinary risk acknowledgment tests and inherited BFF ordinary send tests exist. Current Playwright initial recovery uses /initial-messages/:id; source search found no /dispatch-admissions/ call or OrdinaryRecovery action assertions in e2e sources. This is a coverage gap to confirm with sole executor, not proof that runtime wiring fails."
+  },
+  "required_next_proof": [
+    "Real ordinary BFF send on controlled existing history yields owned UNCERTAIN admission, preserving inherited missing-ID diagnostic semantics.",
+    "Operator opens/reuses same contact through real UI and sees common-send recovery; no implicit initial send.",
+    "Actual UI reconcile invokes scoped BFF with no provider operation or Message duplication.",
+    "Risk acknowledgment requires explicit checkbox, correct header/empty body and elapsed server deadline; compare exact before/after state/counters.",
+    "Preserve original author/owner/history and no automatic provider resend."
+  ],
+  "scope": "Only the already-admitted web-app/e2e/start-conversation.spec.ts; no product or shared fixture mutation. Keep E45 frozen until terminal+independent postseal.",
+  "causality": "Coverage added after implementation must stay labeled post-implementation unless it exposes a real assertion RED before any subsequent product fix. No rollback to manufacture test-first.",
+  "status": "E46 additional test stopped before consumer actions; ordinary fake counter expectation incorrect, correction queued only after terminal+postseal",
+  "executor_readonly_confirmation": "Executor independently searched e2e and confirmed only initial-intent recovery actions are exercised; ordinary UNKNOWN inherited test checks error/draft but does not reopen/reconcile/acknowledge.",
+  "selected_proof_plan": "One additional start-conversation.spec.ts case using real immutable90s deadline, own150s per-test timeout, disabled risk button before deadline, polling past eligibility then actual BFF ACK; no new fixture endpoint or deadline mutation. Existing PG proof retains exact equality/before/after distinction. Preserve ordinary missing-ID diagnostic Message semantics and owner/history; compare zero extra provider/Message effects.",
+  "diagnostic": {
+    "exact_test_line": "web-app/e2e/start-conversation.spec.ts:438",
+    "observed": "calls delta1 passed; effects delta1 failed actual0. Navigation begins440 and was not reached.",
+    "source": "api-app/test/browser-server.cjs:122\u2013132 ordinary enviarTexto records call(meta.send) and private fake enviados.push, not providerEffect. Initial route timeline-fixtures.cjs221\u2013222 records both.",
+    "next": "Preserve call count1 and exact audit; assert no further calls/counters after recovery. No fixture/product mutation needed for this expectation correction. Full consumer proof still pending.",
+    "synthetic_context_sha256": "45524bb535e243bee484b3dfdc00005f02ce2e6bd6c85b2261226fa44e8b00bf"
+  }
+}

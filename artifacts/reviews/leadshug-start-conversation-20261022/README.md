@@ -90,3 +90,13 @@ Passaram353unitários deAPI,435integrações PostgreSQL e53Web; no navegador82/8
 ## Checkpoint E44 — template passa; recuperação precisa preservar a chave
 
 O navegador terminou com83testes aprovados e2falhas. O fluxo de template pela tela passou. A nova reprodução confirmou que uma falha de leitura no navegador apagava a chave original após uma resposta perdida; a correção foi liberada somente após conferir todas as259fontes e o bundle servido. A outra falha é um seletor de teste. [Resultado E44](evidence/browser-result-e44-v1.1.json). As próximas provas serão uma rodada completa e a revisão independente; a ativação local continua apenas proposta.
+
+## Checkpoint E45 — suíte completa aprovada
+
+Passaram356testes unitários daAPI,435comPostgreSQL,53Web e85de navegador. O erro de perda da chave foi reproduzido antes da correção e agora passou com recuperação explícita e um único efeito no canal. As259fontes e o bundle servido foram conferidos. [Resultado E45](evidence/all-result-e45-v1.1.json) e [índice por critério](evidence/candidate-criterion-index-e45-v1.1.json). Falta uma prova específica dos controles de recuperação do envio comum; a revisão independente e o teste assistido nos canais reais continuam pendentes. O estado permanece InProgress/Pending.
+
+## E45 completo e prova adicional E46
+
+A suíte completa terminou com exit0:356 testes API,435 PostgreSQL,53 Web e85 Playwright. Os259 arquivos públicos e93 registros de freshness conferem com o pré-selo, e os38 arquivos protegidos/companions permanecem iguais. [Recibo E45](evidence/all-result-e45-v1.1.json). A falha causal de leitura do snapshot E44 foi corrigida e a recuperação da chave original passou.
+
+E46 acrescenta apenas o teste de recuperação comum ainda ausente. A execução está ativa; o novo caso parou numa expectativa incorreta do contador de efeitos do simulador, antes das ações de recuperação. A diferença foi localizada na instrumentação existente, sem defeito de produto demonstrado. Correção somente depois de terminal e pós-selo. [Gap e diagnóstico](evidence/ordinary-recovery-consumer-proof-gap-e45-v1.1.json). PCV tem quatro artefatos de observações reais para avaliação independente; a auditoria prévia de dívida encontra zero marcadores inline e conserva gates de runtime/review/guard abertos. Não há entrega ou ativação dos canais reais.

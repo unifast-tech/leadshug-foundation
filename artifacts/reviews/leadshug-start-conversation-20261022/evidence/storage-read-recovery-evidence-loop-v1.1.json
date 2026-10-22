@@ -29,13 +29,13 @@
     },
     {
       "stage": "Browser persisted snapshot read exception after possible effect",
-      "state": "causal_RED",
-      "evidence": "browser-result-e44-v1.1.json: null snapshot at line363; no product fix preceded this run."
+      "state": "covered",
+      "evidence": "E44 causal RED followed by E45 full browser PASS with preserved exact key/body."
     },
     {
       "stage": "UI gate while durable replay identity cannot be read",
-      "state": "pending_fix_and_GREEN",
-      "evidence": "First retention assertion fails; control/button assertions not reached."
+      "state": "covered",
+      "evidence": "E45 actual UI blocked under persistent read exception; explicit failed/successful local reread and exact original replay verified, one provider effect/Message."
     }
   ],
   "planned_checkpoints": {
@@ -44,7 +44,9 @@
     "E45": "If causal RED confirmed, sole writer adds fail-closed read handling on admitted UI path; fresh canonical all and postseal."
   },
   "safety": "Only owned disposable synthetic browser/BFF/PG/provider doubles. No actual env/data/logs, real contacts or provider changes. No rollback of implementation to fabricate test-first chronology.",
-  "state": "confirmed_runtime_red_fix_pending",
-  "next": "Sole writer E45 fail-closed storage read and explicit local reread; new full canonical all with pre/post seals.",
-  "red_evidence": "browser-result-e44-v1.1.json"
+  "state": "causal_RED_then_frozen_full_GREEN",
+  "next": "Keep exact regression; technical assurance and actual local/provider proof remain separate gates.",
+  "red_evidence": "browser-result-e44-v1.1.json",
+  "green_evidence": "all-result-e45-v1.1.json and all-source-recheck-e45-v1.1.json",
+  "architecture_prevention_final": "no-rule-needed: runtime storage availability/lost-response/reload ordering; dedicated behavioral regression guards it. No analyzer/Delphi rule added."
 }

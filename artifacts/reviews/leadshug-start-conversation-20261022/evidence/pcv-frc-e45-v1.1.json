@@ -1,0 +1,43 @@
+{
+  "policy_schema_version": "pcv-1",
+  "schema_version": "pcv-1",
+  "todo_id": "ST-CON-04",
+  "run_id": "E45-canonical-all-57348",
+  "environment_id": "owned-disposable-node22-postgresql16-real-BFF-fake-external-provider",
+  "executor_id": "stcon04_continuation",
+  "reviewer_id": "root-independent-source-and-output-collector; formal lane assessment pending",
+  "recorded_at_utc": "2026-10-22T22:58:02.921158+00:00",
+  "lane_id": "FRC",
+  "evidence_type": "deterministic-real-browser-real-BFF-post-readback",
+  "sample_profile_id": "FRC-SP-H",
+  "acceptance_rule_id": "FRC-A1",
+  "result_summary": "Five independent first-send flows each receive20 synchronous open/confirm triggers; assertions require1open/1initialPOST/1provider invocation/1persistedOUT per flow.",
+  "artifact_payload": {
+    "evidence_receipt": "all-result-e45-v1.1.json",
+    "stdout_sha256": "76923c5f6b39ecb4deec0c296c7d5360b8a8ebc0620e1f43908e43df97600233",
+    "source_seal": "all-source-seal-e45-v1.1.json",
+    "source_fingerprint": "27e37bc4ac9398e64b3035aa785135d8c639c8dd1beefe53db1c16a39e0bd87f",
+    "terminal_exit_code": 0,
+    "assessment_status": "Observed acceptance assertions passed; candidate evidence for independent assessment, no delivery/runtime/provider claim.",
+    "concurrency_policy": "drop duplicate",
+    "burst_profile_observed": {
+      "bursts": 5,
+      "triggers_per_burst": 20,
+      "open_requests_per_burst": 1,
+      "initial_posts_per_burst": 1,
+      "provider_invocations_per_burst": 1,
+      "persisted_out_per_burst": 1,
+      "observation_type": "Exact loop/assertions in test that passed E45; not separately emitted metric trace."
+    },
+    "runner_or_manual_path": "bash scripts/test-channels-local.sh all -> Playwright start-conversation.spec.ts: cinco envios recebem vinte gatilhos síncronos cada sem duplicar o POST",
+    "additional_race_coverage": "Delayed A-B-A preview, session/grant refusal, lost response reload, failed storage writes/reads and original-key explicit replay also passed E45. New ordinary-recovery browser test E46 pending.",
+    "sources": [
+      {
+        "path": "web-app/e2e/start-conversation.spec.ts",
+        "sha256": "99af98def8f08a1874f50f74d1893800c1f00bf9f23a9adf9516c67d52dbd419"
+      }
+    ],
+    "limits": "Route delays a real BFF response after actual route.fetch(); external provider fake. No real WhatsApp/SLO claim."
+  },
+  "artifact_sha256": "98e761516f2ed7953a38a2a9bfc8a9086b008e16dc31a0f3b52b13e781467cb4"
+}

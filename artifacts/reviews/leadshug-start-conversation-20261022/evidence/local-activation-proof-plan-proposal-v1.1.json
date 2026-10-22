@@ -61,7 +61,7 @@
     "Record only safe outcome/state/timestamps and source-runtime attestation. Do not persist phone/contact/body/token.",
     "No automated sends, new contacts, routing changes, migration/registration at Meta, or Railway deployment."
   ],
-  "current_status": "Proposal only; no actual runtime/provider/private operation executed. E43 all ended RED (353API/435PG/53Web pass,82browser pass/3fail). E44 test-only browser is running frozen: corrected shared-catalog journey passed individually; dedicated storage-read test has causal RED before product fix. Full current candidate GREEN, independent reviews and own-account operator proof remain required.",
+  "current_status": "E45 all terminalGREEN:356API/435PG/53Web/85browser; full259 source/freshness postseal matches. E46 test-only ordinary-recovery proof running; case stops at an incorrect fake effect-counter expectation before consumer actions. No product failure established; no actual runtime/private activation. Prepared positive-only build archives exist, not image builds.",
   "build_context_positive_inputs": {
     "api": {
       "roots": [
@@ -80,8 +80,7 @@
     },
     "web": {
       "roots": [
-        "web-app/src",
-        "web-app/public"
+        "web-app/src"
       ],
       "exact_files": [
         "web-app/Dockerfile",
@@ -91,9 +90,12 @@
         "web-app/vite.config.ts",
         "web-app/index.html",
         "web-app/nginx/default.conf.template",
-        "web-app/docker/40-config-js.sh"
+        "web-app/docker/40-config-js.sh",
+        "web-app/public/config.js",
+        "web-app/public/privacidade.html"
       ]
     },
     "policy": "Reject symlinks; hash each positive input, produce generated archive only. Exclude every .env, node_modules, existing dist, e2e/test artifacts and all unlisted paths. Add no extra file by discovery or implicit COPY context. Source specs under admitted src remain public build inputs; build exclusions remain canonical."
-  }
+  },
+  "prepared_build_context_receipt": "positive-build-contexts-e46-v1.1.json"
 }
