@@ -1,0 +1,13 @@
+{
+  "capturedAtUtc": "2026-10-22T00:19:35.514151+00:00",
+  "pre_dispatch_only": true,
+  "defect": "Previous prepared package estimate exceeded the 1000000-byte bound before any dispatch. No live review was repackaged.",
+  "prior_source_and_diff_estimate_bytes": 1054940,
+  "unchanged_test_suffix_saved_bytes": 129680,
+  "unchanged_producer_methods_saved_bytes": 33948,
+  "source_and_diff_estimate_after_selection": 891312,
+  "selection_authority": "Full changed product source, whole changed and adjacent PostgreSQL test cases, complete exact diffs and all rubric workloads retained. Omitted bytes proven unchanged from reviewed r13; full-file hashes/inventory remain.",
+  "builder": "foundation_documentation/artifacts/reviews/leadshug-template-authoring-20261020/evidence/assurance-followup-package-builder-r30-preparation.py",
+  "builder_sha256": "536c465a846d3f889aa983c8c7e3122c7b9849296aa6f846c66d80e50abbc77b",
+  "limitations": "Estimate excludes current actual markers, terminal, resolution and formatting. Final builder hard cap remains mandatory. No fake acceptance and no audit packet generated."
+}

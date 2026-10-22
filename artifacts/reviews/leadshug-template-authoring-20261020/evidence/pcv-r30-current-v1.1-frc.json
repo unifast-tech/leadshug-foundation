@@ -1,0 +1,137 @@
+{
+  "policy_schema_version": "pcv-1",
+  "schema_version": "stcon05-pcv-current-v1",
+  "lane_id": "FRC",
+  "todo_id": "ST-CON-05",
+  "run_id": "st-con-05-r30-all-20261022T0012Z",
+  "environment_id": "leadshug_channels_validation-disposable",
+  "executor_id": "/root/template_validation_recovery",
+  "reviewer_id": "/root",
+  "recorded_at_utc": "2026-10-22T00:28:36.152596+00:00",
+  "evidence_type": "canonical-runner-structured-log-and-source-review",
+  "sample_profile_id": "FRC-SP-H",
+  "acceptance_rule_id": "FRC-A1",
+  "result_summary": "Separate actual100 BFF lease calls and5x20 UI attempts→one BFF/provider with APPROVED→PAUSED/ineligible DOM; held stale recovery/context/edit races pass.",
+  "review_scope": "Root independently checked actual all/freeze/receipt/current source/runtime/markers. Candidate evidence; affected independent assurance and TODO row disposition remain separate gates.",
+  "artifact_payload": {
+    "log": "foundation_documentation/artifacts/tmp/st-con-05-r30-all-20261022T0012Z/canonical-all.log",
+    "log_sha256": "898ad30d8b44fa0cb977204dc7459acfd6f97a2a5c4cb4f42ba6772b819568ad",
+    "acceptance": "foundation_documentation/artifacts/reviews/leadshug-template-authoring-20261020/evidence/root-cp05-all-r30-acceptance-v1.1.json",
+    "acceptance_sha256": "d0f095fe78667f45a07bc50fbc78c8e2b5a065166c0a81099db758d5ebde04a4",
+    "freeze": "foundation_documentation/artifacts/reviews/leadshug-template-authoring-20261020/evidence/root-cp05-source-freeze-r30-scoped-eligibility-v1.1.json",
+    "freeze_sha256": "027d72ad6a752828f59b730e1495cc520987472d452c1a3ace20da16c27e7f0f",
+    "source_hashes": {
+      "api-app/prisma/migrations/20261021130000_message_template_drafts/migration.sql": "3feab40fed1c9be1bac9e43464fd587d57693424c4b3012d8c4b8536661d51dd",
+      "api-app/prisma/migrations/20261021150000_message_template_operations/migration.sql": "2822bff860b5aa3476e7614f6a5d5515520dfd8e40708767d1bc4c5bfe2d991d",
+      "api-app/prisma/schema.prisma": "fcbeb82ee13f96fd71ec83eb18b29749ba51bfcdd86fe82108d6e8a3b96efd69",
+      "api-app/src/domain/channels/channel-credential-resolver.spec.ts": "a60d142fcc335de43c5a697d9f7758f722883a1725c824dd0a4b4f0a2f7fb03b",
+      "api-app/src/domain/channels/channel-credential-resolver.ts": "7782792bb945701cc6f6d0ac1460d0504356fa8d73a4261f37112f7c892a23ac",
+      "api-app/src/domain/historico/catalogo.ts": "5e218ba32cab9f289c77741d43b7c3af7aa93f63cbb58aa52573c6097d77db22",
+      "api-app/src/domain/historico/cobertura.ts": "b0813176bf1c8fe124a3e17cdaf825433301d0ed8c753dccb228ac098c962e24",
+      "api-app/src/domain/message-templates/template-definition.spec.ts": "9a60549d1c79d73889fd2d47b7ea3bb25b8a0bf140da805f64216decc6ff9d97",
+      "api-app/src/domain/message-templates/template-definition.ts": "1f28bfd19454b1e187b854c4f2e9785b59e7726032c20f82d62460d87401203c",
+      "api-app/src/domain/message-templates/template-draft.service.ts": "429a078fb48d5a66601d83883275dcc12cea659692e463e94a17d41d5cdf0713",
+      "api-app/src/domain/message-templates/template-management.dependencies.spec.ts": "a03a567e5b96a348b4ab40bb18282a555d30ad3533e6efb929c5d2f2614c82b2",
+      "api-app/src/domain/message-templates/template-management.ports.spec.ts": "ddf581459b66bf0eb26ec710ded050f45713e5dd5317066cea574dacf57a68bc",
+      "api-app/src/domain/message-templates/template-management.ports.ts": "c7ed169d87a4224f82f8d1abe109bfa02b913bb2cb63303fc6477673f45ed693",
+      "api-app/src/domain/message-templates/template-observation.service.ts": "41c7c640fd31ca0759d0d88647e24c74787597dcf75fd8a3c773fe6e02965488",
+      "api-app/src/domain/message-templates/template-submission.service.ts": "a2b8b33ecfb0af165c2b94b50703d18a364d5b64ef581bbdd7659325bc631709",
+      "api-app/src/domain/message-templates/template-transaction-boundary.ts": "ea3e0550ad5c82b263391dbfb3dae6b9e8656d219f18aa0d7c55cd5668722123",
+      "api-app/src/integrations/message-templates/template-management.module.ts": "aabfb344eab0b244772f0a2a8066dbae71bb24973a0a498c69af676c17f0acdd",
+      "api-app/src/integrations/message-templates/template-management.resolver.ts": "2a2a57355ff9fa29774cd4dfef33d9d3fd876bdf5d8a8fe654f0c0435284b59a",
+      "api-app/src/integrations/meta/message-template.client.spec.ts": "6b42b44577e2c06ae73fb0525dac10b99f7364a04e2c04184dc303c6d47872b8",
+      "api-app/src/integrations/meta/message-template.client.ts": "8dff223f7a97632cf228800cdbbb12ce6f5b151efc5fa30411d03e5ec3280cb5",
+      "api-app/src/surfaces/bff/bff.module.ts": "d4e24c7c1a5c88d4a39903383403de742a61700cb208133a77c2d6d5967c0d41",
+      "api-app/src/surfaces/bff/message-templates.controller.ts": "0e0449a80852a4513f626d0df7b1a5bb17b034eeceb50f53842fb91454ff4491",
+      "api-app/test/browser-server.cjs": "a5da3c6eb80d5344a383b6079a7a38b107a2794825fc4189891335f9c79fd600",
+      "api-app/test/helpers.ts": "117e4f85c81dda37ab30e7eb23704b31538c8c5161aa7562a844eaf11de6819c",
+      "api-app/test/message-template-bff.e2e-spec.ts": "e0212463856dace44908e3762aa206d1ed86deeb95ebbdc926a354d1518902e4",
+      "api-app/test/message-template-drafts.e2e-spec.ts": "1a7367fc0a97fb9f727276b38186cddb796fc965ce4a9ec9e1078603670f2996",
+      "api-app/test/message-template-management.e2e-spec.ts": "e3705cf23067994922aa4a47def30698f8e3099f62ac84b5fbc9ef1dd26914b7",
+      "api-app/test/number-onboarding-bci.e2e-spec.ts": "779ad4f9f201ef366cd66c2692098957290a15857179d2a5b249415aef1c7bbd",
+      "api-app/test/number-onboarding-pcv.e2e-spec.ts": "cc5b2c440abe2e6389ee4f4a612a9f01f2584338dc3fc4e5ee4605339ffa0bf9",
+      "api-app/test/timeline-fixtures.cjs": "181c76e232c560474ff520440ce3a4c089e84ce9bba01bfd4b6d67c283eb12b3",
+      "web-app/e2e/message-templates.spec.ts": "a8a9faedc38e4513cdf00f9406ea54be6556db094cc0984c33e13e0b8a488b2f",
+      "web-app/e2e/number-onboarding-freshness.ts": "880b49f8fa428568692b92a883dd00c5ce76214b1f2db5b35cafb9b0553ed9ad",
+      "web-app/e2e/timeline-freshness.ts": "3a06fb36e3a9bcf20a12cd8201da2daa3b567775f15e2be5f068e97e840d7f53",
+      "web-app/src/App.tsx": "2d9f3b3d03658a8d6d6132986346f3be8f36a2582faca29285b3d46c9920307e",
+      "web-app/src/api.spec.ts": "5df822dbb810b823a7922dd15e1568b9e8a6f4e5b16541ca5452daaca642d75f",
+      "web-app/src/api.ts": "177d660cccb7d74e47ef1dd180d9e74f830bce97b631c896c4e82fa39ae44a84",
+      "web-app/src/telas/Modelos.spec.ts": "4699432adfc054ace48b2557c44e13452ff7bb1bc40fa56986291dc63dcd9678",
+      "web-app/src/telas/Modelos.tsx": "0a1796367f9f415e1de6b552b06dc56e322898ec84789043a6be868c63f4fd19"
+    },
+    "source_runtime_proofs": [
+      {
+        "path": "foundation_documentation/artifacts/tmp/st-con-05-r30-all-20261022T0012Z/pre-worker-freshness.json",
+        "sha256": "b3dd485c8e4cef675aaaf27556cb6ae414f31ed9499e6a595b1a6b5fb58c7edd"
+      },
+      {
+        "path": "foundation_documentation/artifacts/tmp/st-con-05-r30-all-20261022T0012Z/attestation-browser-authority.json",
+        "sha256": "b5eb270874e1cc6d77791cc6753763c66a5ad03b79ab60e2963d9df549b21ab3"
+      }
+    ],
+    "context_evidence": [
+      {
+        "path": "foundation_documentation/artifacts/reviews/leadshug-template-authoring-20261020/evidence/root-r29-scoped-eligibility-how-admission-v1.1.json",
+        "sha256": "f2fadf9ecfc65f3e38dfadda9d95eb016e33e2c152330c093e3bf2400854aba0"
+      },
+      {
+        "path": "foundation_documentation/artifacts/reviews/leadshug-template-authoring-20261020/evidence/root-cp05-browser-r21-red-terminal-v1.1.json",
+        "sha256": "d07952f9ab725b44623d025552e6d5dfb1d8fc8b1e48e470b013daafe74a16cb"
+      },
+      {
+        "path": "foundation_documentation/artifacts/reviews/leadshug-template-authoring-20261020/evidence/root-cp05-browser-r27-red-terminal-v1.1.json",
+        "sha256": "492755fabd45c0d12e0abc9a028bf881796453460e3205d44c0b94b86f572856"
+      },
+      {
+        "path": "foundation_documentation/artifacts/reviews/leadshug-template-authoring-20261020/evidence/root-cp05-web-r29-red-terminal-v1.1.json",
+        "sha256": "39bf257c8e5b2dd10ecf9bd5179a97204b168178fc40790ec58a8c685f0de588"
+      }
+    ],
+    "limits": "Current disposable validation only. Browser uses deterministic external provider network fixtures with real session/BFF/Prisma/PostgreSQL; API cases use typed-port or fetch doubles for provider effects with real PostgreSQL and applicable HTTP boundary. No actual Meta template or preserved activation proof; no production capacity/SLO/external exactly-once guarantee. Original implementation test-after/unknown remains separate from actual later bugfix RED. Historical RED capture limits remain as declared by their root records.",
+    "concurrency_policy": "drop duplicate",
+    "surface_policies": {
+      "catalogue_refresh": "drop duplicate",
+      "save_submit": "idempotent server-side",
+      "editor_context": "cancel previous"
+    },
+    "burst_profile_observed": {
+      "provider_contention": {
+        "profile": "FRC-SP-H",
+        "batches": 5,
+        "retriggersPerBatch": 20,
+        "attempted": 100,
+        "blockedBeforeLeaderRelease": 99,
+        "blockedStatusCounts": {
+          "accepted202": 99
+        },
+        "dispatchedProviderListCallsWhileLeaderHeld": 1,
+        "quotaBypass": false,
+        "note": "The original 100-BFF-call proof remains direct and independent of the UI coalescing proof; every call arrived while one provider-list leader was held.",
+        "completed": 100,
+        "completedLeaderResponses": 1,
+        "completedPageAvailable": true,
+        "completedPageItems": 1,
+        "finalStatusCounts": {
+          "accepted202": 99,
+          "completed200": 1
+        }
+      },
+      "ui_coalescing": {
+        "waves": 5,
+        "attemptsPerWave": 20,
+        "uiAttempts": 100,
+        "bffRefreshRequests": 1,
+        "providerListCallsAcrossBothPhases": 2,
+        "editorStatus": "PAUSED",
+        "catalogStatus": "PAUSED",
+        "eligible": false
+      }
+    },
+    "runner_or_manual_path": "bash scripts/test-channels-local.sh all; web-app/e2e/message-templates.spec.ts",
+    "observation_authority_scope": "Explicit intent versus completed meaningful result;202noop;derivedGET inherits origin;passive completed-watermark/current-cache selection. Exact historical-context classification precedes context-relative numeric fences. Positive draft proof transfers only with identical non-null semantics. Draft-specific matchesDefinition/eligibleForUse gates apply only to the editor; the common catalogue retains all common eligibility/availability/status/support/fence/TTL gates without backend-rule recomputation. Sequential later draft metadata is independent of observation authority and older operation responses. Empty200 browser race is not claimed; focused owner coverage is separate.",
+    "stale_response_evidence": "RealBFF cross-producer202 before/after200 in both directions; newer failure vs heldsuccess; actual derivedGET while newercatalogueprovider pending; passiveoldoperationGET vsnewerPAUSED anddirtytext. Automatic catch and manual recovery preserve later ACCEPTED draft phase, remote identity, truthful correlation and matching durable receipt after an old AMBIGUOUS operation response is released; PAUSED/ineligible observation, dirty text and one create effect asserted. Also real BFF held A operation GET released during editor B; catalogue negative and persisted A reopen; existing dirty text/context A→B→A cases; actual sameaccount reauth/reload and observedAt TTL/failure tests. Pure selector cases cover both semantic-proof merge orders, historical/current fence restart, and common-versus-draft eligibility after an old PAUSED snapshot, with negative common gates. The latter has actual r29 unit RED; the final catalogue browser POST is inspected before the DOM oracle.",
+    "scope_limit": "One Playwright pure consumer ACK presentation case is separate; it does not establish browser ACK conflict race."
+  },
+  "artifact_sha256": "3c7d2474fc4e623f8cea8b545ffdfbe1b68fdff2be37ce687376bfed0ceef6ab"
+}

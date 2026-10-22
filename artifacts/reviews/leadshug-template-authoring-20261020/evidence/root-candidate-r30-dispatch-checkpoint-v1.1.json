@@ -1,0 +1,17 @@
+{
+  "recorded_at_utc": "2026-10-22T00:30:09.043535+00:00",
+  "candidate": "r30 all789 accepted for candidate assurance only",
+  "package": "foundation_documentation/artifacts/reviews/leadshug-template-authoring-20261020/candidate-assurance-r30-followup-package-v1.1.md",
+  "package_sha256": "89fd5689d7c7ada356f7860c2a3f063e3d8037a47ba1b22c2c39f10ce50bfa68",
+  "effective_round_package": "foundation_documentation/artifacts/reviews/leadshug-template-authoring-20261020/candidate-audit-r6/round-03/round-package.md",
+  "effective_package_sha256": "b2ad9a2fa84020d88e8f6ab133031efbd2819f283867166d433768220159cb09",
+  "review_sessions": {
+    "performance": 2087,
+    "test_quality": 38208,
+    "security": 69692
+  },
+  "adherence": "prepared; queued until one review reaches objective terminal",
+  "isolation": "ephemeral/read-only/no tools/ignore user config and rules; full embedded bounded packet; stateless",
+  "executor": "idle after immediate serialization interruption; no product/runtime action",
+  "delivery": "Pending"
+}

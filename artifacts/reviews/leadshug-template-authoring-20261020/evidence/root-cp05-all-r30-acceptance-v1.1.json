@@ -1,0 +1,84 @@
+{
+  "schema": "stcon05.all-r30-root-acceptance.v1",
+  "recorded_at_utc": "2026-10-22T00:27:37.331279+00:00",
+  "outcome": "go_candidate_assurance_only",
+  "counts": {
+    "api_unit": 284,
+    "api_postgresql": 398,
+    "web_unit": 37,
+    "playwright": 70,
+    "playwright_pure_consumer": 1,
+    "playwright_browser": 69,
+    "total": 789
+  },
+  "log": "foundation_documentation/artifacts/tmp/st-con-05-r30-all-20261022T0012Z/canonical-all.log",
+  "log_bytes": 214132,
+  "log_sha256": "898ad30d8b44fa0cb977204dc7459acfd6f97a2a5c4cb4f42ba6772b819568ad",
+  "receipt": "foundation_documentation/artifacts/tmp/st-con-05-r30-all-20261022T0012Z/runner-exit.txt",
+  "receipt_sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+  "exit": 0,
+  "freeze": "foundation_documentation/artifacts/reviews/leadshug-template-authoring-20261020/evidence/root-cp05-source-freeze-r30-scoped-eligibility-v1.1.json",
+  "freeze_sha256": "027d72ad6a752828f59b730e1495cc520987472d452c1a3ace20da16c27e7f0f",
+  "source38_matches": true,
+  "protected30_exact": true,
+  "bci_approved_exact": true,
+  "heads": {
+    "root": "80e3940126f22a941f90dba4f5e801b6c0eb2f58",
+    "api": "db5a86758a165fac8a1ab587599c37b17890530c",
+    "web": "74b9d4b714044829796f875d00553f077c1c329d"
+  },
+  "proofs": [
+    {
+      "path": "foundation_documentation/artifacts/tmp/st-con-05-r30-all-20261022T0012Z/pre-worker-freshness.json",
+      "sha256": "b3dd485c8e4cef675aaaf27556cb6ae414f31ed9499e6a595b1a6b5fb58c7edd"
+    },
+    {
+      "path": "foundation_documentation/artifacts/tmp/st-con-05-r30-all-20261022T0012Z/attestation-browser-authority.json",
+      "sha256": "b5eb270874e1cc6d77791cc6753763c66a5ad03b79ab60e2963d9df549b21ab3"
+    }
+  ],
+  "source_capture_utc": "2026-10-22T00:15:19.624Z",
+  "runtime_capture_utc": "2026-10-22T00:15:13.820Z",
+  "served_dist_sha256": "bdee8e7298ede5792324a00a00dd0fa1bbd3a04b51b6256f9fc0679db5fa2639",
+  "template_marker_counts": {
+    "MESSAGE-TEMPLATE-PCV": 1,
+    "MESSAGE-TEMPLATE-EPS": 1,
+    "TEMPLATE-RLS-EVIDENCE": 1,
+    "TEMPLATE-FRC-EVIDENCE": 1,
+    "TEMPLATE-FRC-UI-EVIDENCE": 1
+  },
+  "template_frc": {
+    "profile": "FRC-SP-H",
+    "batches": 5,
+    "retriggersPerBatch": 20,
+    "attempted": 100,
+    "blockedBeforeLeaderRelease": 99,
+    "blockedStatusCounts": {
+      "accepted202": 99
+    },
+    "dispatchedProviderListCallsWhileLeaderHeld": 1,
+    "quotaBypass": false,
+    "note": "The original 100-BFF-call proof remains direct and independent of the UI coalescing proof; every call arrived while one provider-list leader was held.",
+    "completed": 100,
+    "completedLeaderResponses": 1,
+    "completedPageAvailable": true,
+    "completedPageItems": 1,
+    "finalStatusCounts": {
+      "accepted202": 99,
+      "completed200": 1
+    }
+  },
+  "template_frc_ui": {
+    "waves": 5,
+    "attemptsPerWave": 20,
+    "uiAttempts": 100,
+    "bffRefreshRequests": 1,
+    "providerListCallsAcrossBothPhases": 2,
+    "editorStatus": "PAUSED",
+    "catalogStatus": "PAUSED",
+    "eligible": false
+  },
+  "new_scope_proof": "New exact final catalogue response200/owned resource/APPROVED/available/eligible and subsequent common-eligibility DOM passed in the main case before both template FRC markers. All37 Web unit cases passed, including both common-vs-draft merge orders and common-negative gates.",
+  "limits": "Disposable provider fixtures only; browser has real session/BFF/Prisma/PostgreSQL and one separate pure consumer case. No actual Meta or preserved DB/runtime activation, delivery or promotion claim. Fresh affected independent candidate assurance and PCV disposition remain required.",
+  "root_verification_note": "Initial root parser expected a TAP tests heading; actual runner uses Vitest Tests 284 passed (284). Corrected the read-only receipt parser against literal log lines; no validation rerun or source mutation."
+}

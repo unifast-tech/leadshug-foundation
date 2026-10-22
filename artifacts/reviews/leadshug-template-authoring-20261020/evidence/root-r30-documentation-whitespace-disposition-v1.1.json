@@ -1,0 +1,355 @@
+{
+  "schema": "stcon05.immutable-review-evidence-whitespace.v1",
+  "recorded_at_utc": "2026-10-22T00:30:54.507072+00:00",
+  "decision": "Preserve frozen live-dispatched package and dispatch bytes. Unified-diff context blank-line markers and generated dispatch EOF are exact evidence formatting, not product whitespace. No live reviewer package/dispatch was changed. Standard check remains mandatory on every other staged path.",
+  "immutable_exceptions": [
+    {
+      "path": "artifacts/reviews/leadshug-template-authoring-20261020/candidate-assurance-r30-followup-package-v1.1.md",
+      "sha256": "89fd5689d7c7ada356f7860c2a3f063e3d8037a47ba1b22c2c39f10ce50bfa68"
+    },
+    {
+      "path": "artifacts/reviews/leadshug-template-authoring-20261020/candidate-audit-r6/round-03/dispatch/performance.dispatch.md",
+      "sha256": "bd397f63720daf25eee8bcf2242799b57cda37c7cbd1f9ff63449341721042a3"
+    },
+    {
+      "path": "artifacts/reviews/leadshug-template-authoring-20261020/candidate-audit-r6/round-03/dispatch/test-quality.dispatch.md",
+      "sha256": "08735085c493850f4348054f471d5d3033ff534229503b5f2d9df8da8b9bb141"
+    },
+    {
+      "path": "artifacts/reviews/leadshug-template-authoring-20261020/candidate-audit-r6/round-03/round-package.md",
+      "sha256": "b2ad9a2fa84020d88e8f6ab133031efbd2819f283867166d433768220159cb09"
+    },
+    {
+      "path": "artifacts/reviews/leadshug-template-authoring-20261020/evidence/candidate-r30-adherence.dispatch.md",
+      "sha256": "861e566ee132cf4620f566d23181c08111f7d781f6188acf6d1290f2cbc2abfe"
+    },
+    {
+      "path": "artifacts/reviews/leadshug-template-authoring-20261020/evidence/candidate-r30-security.dispatch.md",
+      "sha256": "111e4fa6df1c3abb6d6eec07e567e80736c81564be5ba77ad94844fc8d910afc"
+    }
+  ],
+  "verified_warnings": [
+    {
+      "path": "artifacts/reviews/leadshug-template-authoring-20261020/candidate-assurance-r30-followup-package-v1.1.md",
+      "line": 2881,
+      "classification": "trailing whitespace."
+    },
+    {
+      "path": "artifacts/reviews/leadshug-template-authoring-20261020/candidate-assurance-r30-followup-package-v1.1.md",
+      "line": 2923,
+      "classification": "trailing whitespace."
+    },
+    {
+      "path": "artifacts/reviews/leadshug-template-authoring-20261020/candidate-assurance-r30-followup-package-v1.1.md",
+      "line": 2939,
+      "classification": "trailing whitespace."
+    },
+    {
+      "path": "artifacts/reviews/leadshug-template-authoring-20261020/candidate-assurance-r30-followup-package-v1.1.md",
+      "line": 3680,
+      "classification": "trailing whitespace."
+    },
+    {
+      "path": "artifacts/reviews/leadshug-template-authoring-20261020/candidate-assurance-r30-followup-package-v1.1.md",
+      "line": 5612,
+      "classification": "trailing whitespace."
+    },
+    {
+      "path": "artifacts/reviews/leadshug-template-authoring-20261020/candidate-assurance-r30-followup-package-v1.1.md",
+      "line": 5617,
+      "classification": "trailing whitespace."
+    },
+    {
+      "path": "artifacts/reviews/leadshug-template-authoring-20261020/candidate-assurance-r30-followup-package-v1.1.md",
+      "line": 5628,
+      "classification": "trailing whitespace."
+    },
+    {
+      "path": "artifacts/reviews/leadshug-template-authoring-20261020/candidate-assurance-r30-followup-package-v1.1.md",
+      "line": 5632,
+      "classification": "trailing whitespace."
+    },
+    {
+      "path": "artifacts/reviews/leadshug-template-authoring-20261020/candidate-assurance-r30-followup-package-v1.1.md",
+      "line": 5640,
+      "classification": "trailing whitespace."
+    },
+    {
+      "path": "artifacts/reviews/leadshug-template-authoring-20261020/candidate-assurance-r30-followup-package-v1.1.md",
+      "line": 6385,
+      "classification": "trailing whitespace."
+    },
+    {
+      "path": "artifacts/reviews/leadshug-template-authoring-20261020/candidate-assurance-r30-followup-package-v1.1.md",
+      "line": 6415,
+      "classification": "trailing whitespace."
+    },
+    {
+      "path": "artifacts/reviews/leadshug-template-authoring-20261020/candidate-assurance-r30-followup-package-v1.1.md",
+      "line": 6572,
+      "classification": "trailing whitespace."
+    },
+    {
+      "path": "artifacts/reviews/leadshug-template-authoring-20261020/candidate-assurance-r30-followup-package-v1.1.md",
+      "line": 7074,
+      "classification": "trailing whitespace."
+    },
+    {
+      "path": "artifacts/reviews/leadshug-template-authoring-20261020/candidate-assurance-r30-followup-package-v1.1.md",
+      "line": 8119,
+      "classification": "trailing whitespace."
+    },
+    {
+      "path": "artifacts/reviews/leadshug-template-authoring-20261020/candidate-assurance-r30-followup-package-v1.1.md",
+      "line": 8123,
+      "classification": "trailing whitespace."
+    },
+    {
+      "path": "artifacts/reviews/leadshug-template-authoring-20261020/candidate-assurance-r30-followup-package-v1.1.md",
+      "line": 8250,
+      "classification": "trailing whitespace."
+    },
+    {
+      "path": "artifacts/reviews/leadshug-template-authoring-20261020/candidate-assurance-r30-followup-package-v1.1.md",
+      "line": 8268,
+      "classification": "trailing whitespace."
+    },
+    {
+      "path": "artifacts/reviews/leadshug-template-authoring-20261020/candidate-assurance-r30-followup-package-v1.1.md",
+      "line": 8290,
+      "classification": "trailing whitespace."
+    },
+    {
+      "path": "artifacts/reviews/leadshug-template-authoring-20261020/candidate-assurance-r30-followup-package-v1.1.md",
+      "line": 8300,
+      "classification": "trailing whitespace."
+    },
+    {
+      "path": "artifacts/reviews/leadshug-template-authoring-20261020/candidate-assurance-r30-followup-package-v1.1.md",
+      "line": 8323,
+      "classification": "trailing whitespace."
+    },
+    {
+      "path": "artifacts/reviews/leadshug-template-authoring-20261020/candidate-assurance-r30-followup-package-v1.1.md",
+      "line": 8328,
+      "classification": "trailing whitespace."
+    },
+    {
+      "path": "artifacts/reviews/leadshug-template-authoring-20261020/candidate-assurance-r30-followup-package-v1.1.md",
+      "line": 8335,
+      "classification": "trailing whitespace."
+    },
+    {
+      "path": "artifacts/reviews/leadshug-template-authoring-20261020/candidate-assurance-r30-followup-package-v1.1.md",
+      "line": 8424,
+      "classification": "trailing whitespace."
+    },
+    {
+      "path": "artifacts/reviews/leadshug-template-authoring-20261020/candidate-assurance-r30-followup-package-v1.1.md",
+      "line": 8433,
+      "classification": "trailing whitespace."
+    },
+    {
+      "path": "artifacts/reviews/leadshug-template-authoring-20261020/candidate-assurance-r30-followup-package-v1.1.md",
+      "line": 8449,
+      "classification": "trailing whitespace."
+    },
+    {
+      "path": "artifacts/reviews/leadshug-template-authoring-20261020/candidate-assurance-r30-followup-package-v1.1.md",
+      "line": 8463,
+      "classification": "trailing whitespace."
+    },
+    {
+      "path": "artifacts/reviews/leadshug-template-authoring-20261020/candidate-assurance-r30-followup-package-v1.1.md",
+      "line": 8496,
+      "classification": "trailing whitespace."
+    },
+    {
+      "path": "artifacts/reviews/leadshug-template-authoring-20261020/candidate-assurance-r30-followup-package-v1.1.md",
+      "line": 8610,
+      "classification": "trailing whitespace."
+    },
+    {
+      "path": "artifacts/reviews/leadshug-template-authoring-20261020/candidate-assurance-r30-followup-package-v1.1.md",
+      "line": 8631,
+      "classification": "trailing whitespace."
+    },
+    {
+      "path": "artifacts/reviews/leadshug-template-authoring-20261020/candidate-assurance-r30-followup-package-v1.1.md",
+      "line": 8684,
+      "classification": "trailing whitespace."
+    },
+    {
+      "path": "artifacts/reviews/leadshug-template-authoring-20261020/candidate-audit-r6/round-03/dispatch/performance.dispatch.md",
+      "line": 84,
+      "classification": "new blank line at EOF."
+    },
+    {
+      "path": "artifacts/reviews/leadshug-template-authoring-20261020/candidate-audit-r6/round-03/dispatch/test-quality.dispatch.md",
+      "line": 84,
+      "classification": "new blank line at EOF."
+    },
+    {
+      "path": "artifacts/reviews/leadshug-template-authoring-20261020/candidate-audit-r6/round-03/round-package.md",
+      "line": 2900,
+      "classification": "trailing whitespace."
+    },
+    {
+      "path": "artifacts/reviews/leadshug-template-authoring-20261020/candidate-audit-r6/round-03/round-package.md",
+      "line": 2942,
+      "classification": "trailing whitespace."
+    },
+    {
+      "path": "artifacts/reviews/leadshug-template-authoring-20261020/candidate-audit-r6/round-03/round-package.md",
+      "line": 2958,
+      "classification": "trailing whitespace."
+    },
+    {
+      "path": "artifacts/reviews/leadshug-template-authoring-20261020/candidate-audit-r6/round-03/round-package.md",
+      "line": 3699,
+      "classification": "trailing whitespace."
+    },
+    {
+      "path": "artifacts/reviews/leadshug-template-authoring-20261020/candidate-audit-r6/round-03/round-package.md",
+      "line": 5631,
+      "classification": "trailing whitespace."
+    },
+    {
+      "path": "artifacts/reviews/leadshug-template-authoring-20261020/candidate-audit-r6/round-03/round-package.md",
+      "line": 5636,
+      "classification": "trailing whitespace."
+    },
+    {
+      "path": "artifacts/reviews/leadshug-template-authoring-20261020/candidate-audit-r6/round-03/round-package.md",
+      "line": 5647,
+      "classification": "trailing whitespace."
+    },
+    {
+      "path": "artifacts/reviews/leadshug-template-authoring-20261020/candidate-audit-r6/round-03/round-package.md",
+      "line": 5651,
+      "classification": "trailing whitespace."
+    },
+    {
+      "path": "artifacts/reviews/leadshug-template-authoring-20261020/candidate-audit-r6/round-03/round-package.md",
+      "line": 5659,
+      "classification": "trailing whitespace."
+    },
+    {
+      "path": "artifacts/reviews/leadshug-template-authoring-20261020/candidate-audit-r6/round-03/round-package.md",
+      "line": 6404,
+      "classification": "trailing whitespace."
+    },
+    {
+      "path": "artifacts/reviews/leadshug-template-authoring-20261020/candidate-audit-r6/round-03/round-package.md",
+      "line": 6434,
+      "classification": "trailing whitespace."
+    },
+    {
+      "path": "artifacts/reviews/leadshug-template-authoring-20261020/candidate-audit-r6/round-03/round-package.md",
+      "line": 6591,
+      "classification": "trailing whitespace."
+    },
+    {
+      "path": "artifacts/reviews/leadshug-template-authoring-20261020/candidate-audit-r6/round-03/round-package.md",
+      "line": 7093,
+      "classification": "trailing whitespace."
+    },
+    {
+      "path": "artifacts/reviews/leadshug-template-authoring-20261020/candidate-audit-r6/round-03/round-package.md",
+      "line": 8138,
+      "classification": "trailing whitespace."
+    },
+    {
+      "path": "artifacts/reviews/leadshug-template-authoring-20261020/candidate-audit-r6/round-03/round-package.md",
+      "line": 8142,
+      "classification": "trailing whitespace."
+    },
+    {
+      "path": "artifacts/reviews/leadshug-template-authoring-20261020/candidate-audit-r6/round-03/round-package.md",
+      "line": 8269,
+      "classification": "trailing whitespace."
+    },
+    {
+      "path": "artifacts/reviews/leadshug-template-authoring-20261020/candidate-audit-r6/round-03/round-package.md",
+      "line": 8287,
+      "classification": "trailing whitespace."
+    },
+    {
+      "path": "artifacts/reviews/leadshug-template-authoring-20261020/candidate-audit-r6/round-03/round-package.md",
+      "line": 8309,
+      "classification": "trailing whitespace."
+    },
+    {
+      "path": "artifacts/reviews/leadshug-template-authoring-20261020/candidate-audit-r6/round-03/round-package.md",
+      "line": 8319,
+      "classification": "trailing whitespace."
+    },
+    {
+      "path": "artifacts/reviews/leadshug-template-authoring-20261020/candidate-audit-r6/round-03/round-package.md",
+      "line": 8342,
+      "classification": "trailing whitespace."
+    },
+    {
+      "path": "artifacts/reviews/leadshug-template-authoring-20261020/candidate-audit-r6/round-03/round-package.md",
+      "line": 8347,
+      "classification": "trailing whitespace."
+    },
+    {
+      "path": "artifacts/reviews/leadshug-template-authoring-20261020/candidate-audit-r6/round-03/round-package.md",
+      "line": 8354,
+      "classification": "trailing whitespace."
+    },
+    {
+      "path": "artifacts/reviews/leadshug-template-authoring-20261020/candidate-audit-r6/round-03/round-package.md",
+      "line": 8443,
+      "classification": "trailing whitespace."
+    },
+    {
+      "path": "artifacts/reviews/leadshug-template-authoring-20261020/candidate-audit-r6/round-03/round-package.md",
+      "line": 8452,
+      "classification": "trailing whitespace."
+    },
+    {
+      "path": "artifacts/reviews/leadshug-template-authoring-20261020/candidate-audit-r6/round-03/round-package.md",
+      "line": 8468,
+      "classification": "trailing whitespace."
+    },
+    {
+      "path": "artifacts/reviews/leadshug-template-authoring-20261020/candidate-audit-r6/round-03/round-package.md",
+      "line": 8482,
+      "classification": "trailing whitespace."
+    },
+    {
+      "path": "artifacts/reviews/leadshug-template-authoring-20261020/candidate-audit-r6/round-03/round-package.md",
+      "line": 8515,
+      "classification": "trailing whitespace."
+    },
+    {
+      "path": "artifacts/reviews/leadshug-template-authoring-20261020/candidate-audit-r6/round-03/round-package.md",
+      "line": 8629,
+      "classification": "trailing whitespace."
+    },
+    {
+      "path": "artifacts/reviews/leadshug-template-authoring-20261020/candidate-audit-r6/round-03/round-package.md",
+      "line": 8650,
+      "classification": "trailing whitespace."
+    },
+    {
+      "path": "artifacts/reviews/leadshug-template-authoring-20261020/candidate-audit-r6/round-03/round-package.md",
+      "line": 8703,
+      "classification": "trailing whitespace."
+    },
+    {
+      "path": "artifacts/reviews/leadshug-template-authoring-20261020/evidence/candidate-r30-adherence.dispatch.md",
+      "line": 84,
+      "classification": "new blank line at EOF."
+    },
+    {
+      "path": "artifacts/reviews/leadshug-template-authoring-20261020/evidence/candidate-r30-security.dispatch.md",
+      "line": 84,
+      "classification": "new blank line at EOF."
+    }
+  ],
+  "derived_progress_eof_normalized": "foundation_documentation/artifacts/reviews/leadshug-template-authoring-20261020/candidate-audit-r6/progress.md",
+  "previous_policy_reference": "artifacts/reviews/leadshug-template-authoring-20261020/evidence/root-r16-documentation-whitespace-disposition-v1.1.json"
+}

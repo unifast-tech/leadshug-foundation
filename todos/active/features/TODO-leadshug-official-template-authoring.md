@@ -42,7 +42,7 @@ O usuário quer preparar no LeadsHug a mensagem que usará para iniciar atendime
 ## Delivery Status Canon (Required)
 - **Current delivery stage:** Pending
 - **Qualifiers:** none
-- **Next exact step:** acompanhar o único `all` r30 com fonte congelada e log integral; avaliar o terminal e a resposta real do catálogo antes de qualquer correção ou nova execução. O `web` r29 teve 36 testes passando e uma falha no novo caso de elegibilidade comum. Root revisou a remoção de apenas esse veto incondicional, preservando a prova exigida pelo editor e todas as verificações comuns; reinserir a expressão reproduz exatamente o hash anterior. Freeze de 38 fontes, 30 selos e três HEADs em `evidence/root-cp05-source-freeze-r30-scoped-eligibility-v1.1.json`; autoridade GO e diff público com 364 caminhos esperados, nenhum proibido ou não classificado. Os dois marcadores TEMPLATE-FRC do navegador ainda exigem execução atual. Revisões independentes, PCV e ativação pendentes.
+- **Next exact step:** concluir assurance independente afetada do candidato r30. O único all atual encerrou0 com789testes:284API unit,398PostgreSQL,37Web unit e70Playwright (69navegador +1consumer puro). Root verificou38fontes/30selos/3HEADs, receipt/log integral, bundle servido=dist e os cinco marcadores atuais de templates. A nova barreira de catálogo200/ID próprio/APPROVED/available/eligible e DOM passaram; ambos TEMPLATE-FRC executaram. Evidência: `evidence/root-cp05-all-r30-acceptance-v1.1.json`. Gate de assurance/PCV, preflight/migração TEST, ativação e prova assistida Meta/final review continuam pendentes; nenhuma entrega reivindicada.
 
 ## Active Work State (Required While TODO Remains In `active/`)
 - **Work state:** implementation
