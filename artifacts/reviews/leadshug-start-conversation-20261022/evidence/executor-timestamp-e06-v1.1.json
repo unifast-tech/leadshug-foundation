@@ -1,0 +1,38 @@
+{
+  "checkpoint": "E06 timestamp persistence substep",
+  "provenance": "delegated executor terminal report; stdout not saved, no stdout hash or independent stdout inspection claimed",
+  "runner_session": 34233,
+  "command": "bash scripts/test-channels-local.sh api",
+  "exit_code": 0,
+  "reported_results": {
+    "lint": "passed",
+    "build": "passed",
+    "unit_files": 29,
+    "unit_tests": 303,
+    "e2e_files": 30,
+    "e2e_tests": 399,
+    "disposable_migration_deploy_status": "passed",
+    "cleanup": "owned validation container, network and disposable volumes removed"
+  },
+  "new_test": "api-app/test/webhooks.e2e-spec.ts: signed valid timestamp persists, missing/malformed/future accepted with null provenance",
+  "causality": "Post-wiring verification; no historical assertion RED for this timestamp substep.",
+  "root_read_only_review_findings": [
+    {
+      "path": "api-app/prisma/migrations/20261022140000_initial_message_orchestration/migration.sql",
+      "issue": "Missing explicit short transaction with lock_timeout5s and statement_timeout60s.",
+      "status": "executor instructed to correct after terminal runner"
+    },
+    {
+      "path": "api-app/prisma/schema.prisma + new initial migration",
+      "issue": "Unannotated Prisma DateTime default TIMESTAMP(3) differs from new SQL TIMESTAMPTZ; deploy/status is not schema parity proof.",
+      "status": "executor instructed to align before candidate validation"
+    }
+  ],
+  "limits": [
+    "Trusted-window current-resource query/consumer integration still pending.",
+    "No preserved local DB or provider operation.",
+    "No full ST-CON-04 or migration parity delivery claim.",
+    "New migration remains editable before candidate freeze and preserved application; inherited migrations stay sealed."
+  ],
+  "next": "Fix migration candidate issues and integrate bounded current-resource window queries and consumers with real PostgreSQL proof."
+}
