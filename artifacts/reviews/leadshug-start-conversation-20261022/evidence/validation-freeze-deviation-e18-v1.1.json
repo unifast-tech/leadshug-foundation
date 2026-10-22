@@ -1,0 +1,19 @@
+{
+  "checkpoint": "E18 validation freeze deviation",
+  "runner_session": 51922,
+  "state_at_discovery": "active; terminal receipt pending",
+  "reported_by": "executor, confirmed chronology",
+  "event": "Executor applied queued admission lock-order/claimInitial changes and PG test edits while canonical runner51922 was active, despite explicit product-edit freeze.",
+  "interpretation": "Mutable candidate snapshot is unknown. This run is diagnostic only, not authoritative candidate evidence or GREEN, regardless of aggregate outcome. Root earlier observed320 unit passes before later edits; that observation does not validate changed source.",
+  "containment": [
+    "Executor stopped product mutations immediately upon clarification.",
+    "Only owner polling/terminal receipt and cleanup allowed for this session; no replacement/duplicate runner while live.",
+    "Fix owned spec defects only after terminal, then seal exact public candidate source before a fresh canonical run and recheck after terminal."
+  ],
+  "queued_public_source_findings": [
+    "New PG spec uses criarCanalVerificado without importing it.",
+    "Provider-stage completion notifier moved after awaitgate, while gate releases only after notifier: deadlock. Signal claim completion before waiting on provider-stage gate; release and drain in outer finally."
+  ],
+  "impact": "Test evidence/freshness procedural deviation. No private inspection, actual runtime or provider operation added; prior E02 private traversal outcome remains a separate unresolved disclosure.",
+  "required_review_disclosure": "Carry E18 to independent TQA/adherence/final review alongside actual mixed causality and E02/E10/E16 path deviations."
+}

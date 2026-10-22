@@ -46,7 +46,7 @@ Este v1.1 substitui a autoridade ativa da minuta revisada em 2026-10-19. O origi
 
 - **Current delivery stage:** `Pending`
 - **Qualifiers:** `none`
-- **Next exact step:** executar RED/test-first e implementar o fluxo aprovado com único writer; preservar baseline herdado não admitido e registrar cada checkpoint antes da assurance.
+- **Next exact step:** concluir a admissão/transição de tentativa do backend com candidato congelado e prova PostgreSQL, pelo único writer, preservando as duas fixtures protegidas até validação humana.
 
 ## Active Work State (Required While TODO Remains In `active/`)
 
@@ -1086,3 +1086,23 @@ The first admission candidate adds finite ordinary tokens and initial intents wi
 ## Execution checkpoint E17 — partial admission candidate and remaining proof
 
 Runner68010 exited1 after generate/deploy/status/lint/build:30 unit files passed/one failed,318 tests passed/two failed. Seven new admission assertions passed; two owned fake setups retained a hardcoded ID or omitted the root intent-readback delegate. Root verified stdout hash and owned cleanup. This is partial unit evidence only; no PG admission or schema drift/parity claim. Executor corrected the fakes, added a DB-time recheck after awaited validator plus SQL-clock expiry CAS, and added post-implementation real-PG interlock/deadline cases before runner51922. Current service remains unintegrated with ordinary sender and full initial coordinator/recovery/UI. Evidence: evidence/admission-candidate-e17-v1.1.json. Final diff-guard compatibility assessment (evidence/final-diff-guard-private-boundary-assessment-v1.1.json) records an unresolved required-method conflict: default helper performs root-wide untracked discovery without positive pathspec/private-prune support; it has NOT run and no GO/waiver is inferred. Independent authorized implementation continues while final-method resolution remains pending.
+
+## Execution checkpoint E18 — active validation freeze deviation
+
+Executor confirmed product/spec edits occurred while runner51922 was active, contrary to the explicit frozen-candidate rule. Snapshot exercised is unknown; this run is diagnostic only and cannot establish candidate GREEN. Root earlier observation of320 unit passes applies to the earlier mutable snapshot, not the later lock-order/claimInitial changes. Executor stopped writes; only owner polling/terminal receipt/cleanup continues, with no duplicate runner. After terminal, fix the owned PG missing import and notifier-after-held-gate deadlock, capture exact public source hashes, then rerun canonically and recheck source after terminal. Evidence: evidence/validation-freeze-deviation-e18-v1.1.json. This evidence-quality deviation must remain in independent TQA/adherence/final review; it does not rewrite E02 or authorize private inspection. User was informed of the invalidated-round/retest correction.
+
+## Execution checkpoint E19 — exact protected source preservation
+
+Root rehashed only the38 positively named inherited read-only public paths from corrected E07v1.2: all match the original seals, including both pending fixture companions. Evidence: evidence/readonly-source-recheck-e19-v1.1.json. This is neither a full inventory/diff guard nor candidate freshness proof; runner51922 remains non-authoritative under E18. No private traversal/metadata/read was used.
+
+## Execution checkpoint E20 — terminal diagnostic and corrected outbound RED contract
+
+Invalidated51922 exited1:320 unit pass;399 PG pass/11 fail, exactly5 admission fixture-setup failures,1 PCV and5 Typebot (root verified transcript hash/cleanup). Candidate remains non-authoritative under E18. After terminal, import and held-gate notifier fixed. New outbound tests then ran in61864: delegated320 pass/two fail, no saved stdout/hash and root does not claim transcript verification; earlier “redirected capture” launch prose was wrong. Root250positivepublic-file capture taken during bootstrap (after launch, not prelaunch) matches all exact bytes/inventory after terminal before edits. The second RED case had an invalid expectation (successful claim followed by releasePrepared); root rejected it before production wiring. Corrected safe unclaimed/uncertain/refusal cases run under captured50255 before ordinary sender integration. Evidence: evidence/validation-chronology-e20-v1.1.json and runner61864-public-source-capture/recheck-v1.1.json. No full admission/PG/initial journey pass.
+
+## Execution checkpoint E21 — valid ordinary-send integration causal RED
+
+Runner50255 exited1:30 unit files passed/one failed,320 tests passed/two failed; no PG. Root verified synthetic stdout hash and cleanup. Corrected preflight-block test reaches expected409 then releasePrepared assertion fails with0calls: valid causal missing-integration RED before production wiring. Ordering fake detects absent generic callback and old sender maps UNKNOWN, so later full trace is not reached; this is bounded missing-hook evidence, not proof of all later assertions. Combined uncertain/refusal assertions were not reached. Executor split cases/recorded unfenced acceptance for clearer trace in subsequent42918; no further RED solely for presentation is required once current valid target failure is observed. Evidence: evidence/outbound-causal-red-e21-v1.1.json. Full admission/initial journey remains pending.
+
+## Execution checkpoint E22 — four-case ordinary sender causal RED
+
+Runner42918 exited1:30 unit files passed/one failed,320 tests passed/four failed; no PG. Root verified stdout hash/cleanup. All four split target tests reach their own assertions: missing reserve/final claim gives preflight/unfenced-post, preflight block has no reserved-owner release, UNKNOWN lacks UNCERTAIN settlement, confirmed refusal lacks SETTLED settlement. This is valid assertion-level RED before ordinary sender production integration. Evidence: evidence/outbound-valid-red-e22-v1.1.json. Sole executor now continues the approved full backend; no additional RED merely to change presentation is needed. Admission PG/barriers, original claim/commit certainty, full coordinator/receipt/atomic local completion, recovery, BFF, UI/browser and final assurance remain required.

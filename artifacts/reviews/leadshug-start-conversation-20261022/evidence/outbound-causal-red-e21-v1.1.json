@@ -1,0 +1,26 @@
+{
+  "checkpoint": "E21 corrected ordinary-send integration causal RED",
+  "session": 50255,
+  "command": "bash scripts/test-channels-local.sh api",
+  "exit_code": 1,
+  "stdout": "/tmp/stcon04-executor-outbound-red2.txt",
+  "stdout_sha256": "cef4b4d13a013a849516c5c6294a7d6d8b7314d6bc22b455c5a5d3ae3ad4d153",
+  "root_verified_stdout_hash": true,
+  "unit_files_passed": 30,
+  "unit_files_failed": 1,
+  "unit_tests_passed": 320,
+  "unit_tests_failed": 2,
+  "pg": "not reached",
+  "cleanup": "root observed terminal owned resource removal",
+  "causal_observations": [
+    "Existing sender does not provide the generic durable callback; test fake raises missing-hook error, old sender maps UNKNOWN and cannot satisfy intended acceptance. Later exact trace assertion not reached.",
+    "Preflight BLOCKED case raises the expected409, then releasePrepared assertion fails with0calls. This is valid causal absence-of-admission integration evidence before production wiring."
+  ],
+  "not_reached": [
+    "Later uncertain/refusal assertions in combined case.",
+    "Full order assertion after first send.",
+    "Real-PG admission proof and current overall API GREEN."
+  ],
+  "subsequent_actions": "Executor split cases and changed first fake to record unfenced acceptance for clearer order assertion;42918captured RED in progress. Further RED repetitions solely for presentation are not required if valid causal target is already observed. Production wiring follows terminal corrected-target evidence.",
+  "authority": "Existing approved same-owner ordinary send/admission integration only; no public/sealed fixture scope expansion."
+}

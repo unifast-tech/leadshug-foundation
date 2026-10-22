@@ -1,0 +1,28 @@
+{
+  "checkpoint": "E22 ordinary sender integration four-case causal RED",
+  "session": 42918,
+  "command": "bash scripts/test-channels-local.sh api",
+  "exit_code": 1,
+  "stdout": "/tmp/stcon04-executor-outbound-red3.txt",
+  "stdout_sha256": "40386bc8c4352df828cdfd1d95cdcc84e7c141fa4fc21a9303e37eaaedead908",
+  "root_verified_stdout_hash": true,
+  "unit_files_passed": 30,
+  "unit_files_failed": 1,
+  "unit_tests_passed": 320,
+  "unit_tests_failed": 4,
+  "pg": "not reached",
+  "cleanup": "root observed terminal owned removal",
+  "cases": [
+    "Missing reserve/final claim gives unfenced synthetic sequence preflight/unfenced-post.",
+    "Preflight block has no owner reservation/release.",
+    "Unknown claimed result has no UNCERTAIN settlement.",
+    "Known refusal has no SETTLED settlement."
+  ],
+  "causality": "All four split target tests reached their own assertions before ordinary admission production wiring. This is valid assertion-level RED; not all durable/fault/real-PG/backend/browser behavior is proven.",
+  "executor_action": "Continue full approved backend sender/interlock and initial coordinator/receipt/recovery/BFF, then real-PG and phase3 UI. No additional permission required within scope.",
+  "constraints": [
+    "Two protected fixture companions remain untouched pending actual human reply.",
+    "No product Git, private inspection, preserved runtime/provider or tunnel operation.",
+    "E02/E04/E10/E16/E18 remain independent review disclosures."
+  ]
+}

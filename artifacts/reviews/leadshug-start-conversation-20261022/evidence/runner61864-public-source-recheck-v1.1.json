@@ -1,0 +1,10 @@
+{
+  "runner_session": 61864,
+  "capture_stage": "Root capture after runner start during bootstrap, before result interpretation; executor reports no product writes since launch. NOT retrospectively labeled pre-run capture.",
+  "checked_records": 250,
+  "fingerprint": "647bc02081a78f0d662d66bed1646a1927b6522810c123259f90b94f29bffd1b",
+  "matches": true,
+  "changed": [],
+  "positive_source_additions": [],
+  "limits": "Exact public snapshot aid only. Start capture occurred after launch during bootstrap; no strict prelaunch attestation or test-result/candidate GREEN claim."
+}

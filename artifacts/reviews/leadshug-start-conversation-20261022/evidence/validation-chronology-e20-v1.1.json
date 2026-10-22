@@ -1,0 +1,35 @@
+{
+  "checkpoint": "E20 invalidated validation terminal and first outbound RED review",
+  "invalidated_session": {
+    "session": 51922,
+    "exit_code": 1,
+    "stdout": "/tmp/stcon04-executor-admission-candidate2.txt",
+    "stdout_sha256": "b12144fb56d79fecb73ec25638c09d62ccbae6fc95569b27e586cb5247160f4e",
+    "root_verified_stdout_hash": true,
+    "unit_passed": 320,
+    "pg_passed": 399,
+    "pg_failed": 11,
+    "pg_failure_split": {
+      "dispatch-admission.e2e-spec.ts": 5,
+      "number-onboarding-pcv.e2e-spec.ts": 1,
+      "number-onboarding-typebot.e2e-spec.ts": 5
+    },
+    "owned_cleanup": "observed terminal output",
+    "candidate_validity": "NON_AUTHORITATIVE due E18 edits while live; all five new PG failures stopped at same beforeEach missing helper import. Initial delegated two-new/nine-Typebot attribution corrected by root."
+  },
+  "outbound_red_first": {
+    "session": 61864,
+    "exit_code_reported": 1,
+    "unit_passed_reported": 320,
+    "unit_failed_reported": 2,
+    "stdout": "NOT SAVED; executor tool response truncated",
+    "stdout_sha256": null,
+    "root_transcript_verified": false,
+    "owned_cleanup": "delegated report only",
+    "launch_receipt_correction": "Earlier claim output was redirected was incorrect; canonical runner streams output unless caller redirects it. Future invocations use explicit synthetic /tmp stdout capture.",
+    "source_identity": "Root250public-file capture during bootstrap (AFTERlaunch, honestly labeled) matches exact source and positive-public inventory after terminal before further edits.",
+    "scope_of_red": "First reserve/fence-order case can demonstrate absent wiring. Second fake incorrectly invoked successful claim then expected releasePrepared; root rejected this expectation before production wiring. Corrected cases need new captured valid RED. No blanket accepted assertion RED or GREEN by this run."
+  },
+  "next": "Correct tests then captured canonical50255 RED, freeze writes through terminal, implement ordinary sender/interlock only after valid target RED. Full initial coordinator/receipt/recovery/UI remain incomplete.",
+  "disclosures": "E02,E04,E10,E16,E18 remain required independent review inputs. No private or actual provider/runtime operations added."
+}
