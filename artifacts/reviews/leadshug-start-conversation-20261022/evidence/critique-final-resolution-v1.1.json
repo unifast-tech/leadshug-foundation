@@ -1,0 +1,29 @@
+{
+  "schema_version": "gate-finding-resolution-v1",
+  "artifact_kind": "gate_finding_resolution",
+  "authoritative": false,
+  "edit_policy": "derived_from_todo",
+  "todo_path": "foundation_documentation/todos/active/features/TODO-leadshug-start-conversation-by-contact.md",
+  "review_kind": "critique",
+  "gate_status": "findings_integrated",
+  "findings": [
+    {
+      "finding_id": "CR-R1-01",
+      "resolution": "Integrated",
+      "usefulness": "useful",
+      "formalizable": "yes",
+      "candidate_rule_level": "project",
+      "candidate_rule_id": "n/a",
+      "rationale": "Uniform immutable90s dispatchDeadlineAt predicate for AMBIGUOUS and EXTERNAL_ACCEPTED_LOCAL_BLOCKED; endpoint, Scope08/DoD06/Val02 and normative r2 appendix aligned; merged F-49CD0618."
+    },
+    {
+      "finding_id": "CR-R1-02",
+      "resolution": "Integrated",
+      "usefulness": "useful",
+      "formalizable": "partial",
+      "candidate_rule_level": "project",
+      "candidate_rule_id": "n/a",
+      "rationale": "Preserve actual NOVA_CONVERSA row-creation predicate and keyword behavior; no automation on manual open; Scope01/DoD01/Val01, consumer/flow and existing admitted Typebot test scope aligned; merged F-4ACC72C3."
+    }
+  ]
+}

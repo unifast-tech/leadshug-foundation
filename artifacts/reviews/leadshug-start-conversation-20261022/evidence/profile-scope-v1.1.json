@@ -1,0 +1,14 @@
+{
+  "created_at_utc": "2026-10-22T15:00:00.425418+00:00",
+  "command": [
+    "python3",
+    "delphi-ai/tools/profile_scope_check.py",
+    "--profile",
+    "strategic-cto",
+    "foundation_documentation/todos/active/features/TODO-leadshug-start-conversation-by-contact.md",
+    "foundation_documentation/artifacts/reviews/leadshug-start-conversation-20261022/README.md"
+  ],
+  "exit_code": 0,
+  "stdout": "Profile: strategic-cto\nDescription: Strategic review and governance; docs only by default.\nChanged paths: 2\nAllowed:\n- foundation_documentation/todos/active/features/TODO-leadshug-start-conversation-by-contact.md\n- foundation_documentation/artifacts/reviews/leadshug-start-conversation-20261022/README.md\nReminder: this tool validates surfaces only. It does not infer whether mixed changes came from a valid handoff.\nCompare any non-allowed paths with the TODO `Profile Scope & Handoffs` section before treating them as violations.\nResult: in scope\n",
+  "stderr": ""
+}

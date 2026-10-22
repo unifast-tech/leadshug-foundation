@@ -1,0 +1,9 @@
+{
+  "created_at_utc": "2026-10-22T14:52:37.091628+00:00",
+  "baseline_branch": "main",
+  "baseline_commit": "a107a6ab73172c70ef18dc3a34c8681d5e1b5f31",
+  "push_reference": "origin/main",
+  "push_exit_code": 0,
+  "scope": "planning only; both finite critique-r1 clarifications published before affected fresh critique-r2; no product mutation",
+  "prior_freeze": "ef1ff014ab158760aadd6436e7c7f3542870c0ab"
+}

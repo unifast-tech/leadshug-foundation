@@ -46,12 +46,12 @@ Este v1.1 substitui a autoridade ativa da minuta revisada em 2026-10-19. O origi
 
 - **Current delivery stage:** `Pending`
 - **Qualifiers:** `none`
-- **Next exact step:** publicar o contrato com as duas clarificações da crítica r1 e conferir a revisão afetada antes dos guards finais de planejamento.
+- **Next exact step:** aguardar APROVADO humano do ST-CON-04 v1.1 revisado; após aprovação, recarregar regras binding, obter authority GO e iniciar RED/test-first nos caminhos admitidos.
 
 ## Active Work State (Required While TODO Remains In `active/`)
 
 - **Work state:** `review`
-- **Why this state now:** parecer arquitetural e crítica r1 concluídos; clarificações finitas de deadline e automação estão integradas, aguardando freeze atualizado e crítica r2.
+- **Why this state now:** arquitetura r1 e críticas r1/r2 convergiram; assumptions8/8 GO, scope-drift zero material changes GO e authority pre-approval preflight-go. Falta APROVADO humano; execution_authority_granted=false.
 - **Exit condition:** review/guards do texto corrente convergidos e decisão humana explícita; execução exige ainda authority guard `go`.
 
 ## Scope
@@ -323,7 +323,7 @@ Official primary references consulted 2026-10-22: [WhatsApp Send Messages](https
 - **Primary execution profile:** `strategic-cto` for this rebase; future implementation `operational-coder` after approval.
 - **Active technical scope:** `nestjs`, `react`, `vite`, `postgresql`, `prisma`, `docker`.
 - **Expected supporting profiles:** `assurance-tester-quality`, `assurance-security-adversarial`, `operational-devops` at their gates.
-- **Scope-check command:** `python3 delphi-ai/tools/profile_scope_check.py --profile strategic-cto` (not run in this planning task).
+- **Scope-check command:** `python3 delphi-ai/tools/profile_scope_check.py --profile strategic-cto foundation_documentation/todos/active/features/TODO-leadshug-start-conversation-by-contact.md foundation_documentation/artifacts/reviews/leadshug-start-conversation-20261022/README.md` returned in scope, exit0; documentation only.
 
 ### Handoff Log
 
@@ -457,11 +457,11 @@ Proposta selecionada abaixo deve coincidir com o freeze publicado e os reviews a
 - **Why this decision:** current proposed04 package must be published before reviews.
 - **Trigger stage:** before first planning review/guard
 - **Baseline branch:** main
-- **Baseline commit:** ef1ff014ab158760aadd6436e7c7f3542870c0ab
+- **Baseline commit:** a107a6ab73172c70ef18dc3a34c8681d5e1b5f31
 - **Baseline push reference:** origin/main
 - **Gate status:** no_material_findings
-- **Findings summary:** initial baseline preceded architecture r1; all r1 material integrations published in refreshed freeze ef1ff014 before fresh critique; metadata only added afterward.
-- **Evidence / reference:** Foundation main ef1ff014ab158760aadd6436e7c7f3542870c0ab pushed origin/main, exit0; evidence/freeze-after-architecture-v1.1.json records actual publication.
+- **Findings summary:** architecture r1 and critique r1 completed; both finite critique clarifications published in refreshed freeze a107a6ab before affected fresh critique r2; only gate metadata added afterward.
+- **Evidence / reference:** Foundation main a107a6ab73172c70ef18dc3a34c8681d5e1b5f31 pushed origin/main, exit0; evidence/freeze-after-critique-r1-v1.1.json records actual publication.
 - **Waiver authority / reference (required if waived):** n/a
 
 ## Gate: Review Scope Drift
@@ -473,9 +473,9 @@ Proposta selecionada abaixo deve coincidir com o freeze publicado e os reviews a
 - **Material sections compared:** Context|Contract Boundary|Scope|Out of Scope|Definition of Done|Validation Steps|Execution Lane Tracking|Canonical Module Anchors|Decisions|Decision Baseline|Architecture Change Governance|Questions To Close|Assumptions Preview|Execution Plan|Flow Evidence Planning Matrix|Local CI-Equivalent Suite Matrix|Runtime / Rollout Notes|Security Risk Assessment|Performance & Concurrency Risk Assessment
 - **Guard command:** python3 delphi-ai/tools/review_scope_drift_guard.py --todo foundation_documentation/todos/active/features/TODO-leadshug-start-conversation-by-contact.md
 - **No-go handling rule:** reconvergir pacote/review e renovar freeze, sem implementação.
-- **Gate status:** not_run
-- **Findings summary:** current v1.1 proposed baseline; guard not_run until fresh review convergence.
-- **Evidence / reference:** new package evidence only; previous20261019 outputs are historical
+- **Gate status:** no_material_findings
+- **Findings summary:** canonical guard GO:23 material sections compared, zero changed against pushed a107a6ab. Initial run v1.1 exposed only Windows path casing in Git adapter; corrected orchestration adapter v1.2 confirmed no scope drift; no Delphi/product change.
+- **Evidence / reference:** artifacts/reviews/leadshug-start-conversation-20261022/evidence/review-scope-drift-v1.2.json GO against pushed a107a6ab; v1.1 is preserved failed adapter evidence, not a waiver
 - **Waiver authority / reference (required if waived):** n/a
 
 ## Questions To Close
@@ -574,8 +574,8 @@ No config/credential/routing mutation during planning. Future local proof only a
 - **Checkpoint policy:** section-by-section architecture/contract, schema/concurrency, adapter/security, browser/performance and final adherence. Planning reviews precede APROVADO; delivery checkpoints require their own actual evidence.
 
 - **Decision:** required, fresh after freeze
-- **Status:** `running`
-- **Baseline history:** initial freeze published; r1 material integration queued for refreshed freeze before critique
+- **Status:** `findings_integrated`
+- **Baseline history:** architecture r1 and critique r1 integrations published through a107a6ab before fresh critique r2; r2 no material findings; full seven-axis issue/option cards and checkpoint policy retained
 - **Review sections:** architecture, quality, tests, performance, security, elegance and structural design.
 
 ### Scoped Review Questions
@@ -680,7 +680,7 @@ These dispositions amend proposed contract only. Fresh no-context critique must 
 
 - **Canonical method:** wf-docker-audit-escalation-method
 - **Guard command:** python3 delphi-ai/tools/audit_escalation_guard.py --todo foundation_documentation/todos/active/features/TODO-leadshug-start-conversation-by-contact.md
-- **Latest TEACH evidence / artifact:** artifacts/reviews/leadshug-start-conversation-20261022/evidence/audit-floor-v1.1.json; actual current guard GO after initial pushed freeze; no implementation audit claimed.
+- **Latest TEACH evidence / artifact:** artifacts/reviews/leadshug-start-conversation-20261022/evidence/audit-floor-after-architecture-v1.1.json; actual guard GO with high review issue signal; finite deadline/automation clarifications do not change trigger matrix; no implementation audit claimed.
 
 | Trigger | Value | Notes |
 | --- | --- | --- |
@@ -707,9 +707,9 @@ These dispositions amend proposed contract only. Fresh no-context critique must 
 - **Internal reviewer mandate:** required; novo agente, não executor, aguardar terminal sem prazo artificial
 - **Critique lenses:** correctness,performance,elegance,structural-soundness,risk
 - **Critique status:** findings_integrated
-- **Findings summary:** fresh critique r1 confirms four architecture findings integrated; its medium initial-deadline clarification and low automation compatibility case integrated; fresh focused critique r2 required before APROVADO
+- **Findings summary:** critique r1 two finite findings integrated; fresh critique r2 reports no material planning findings and confirms all architecture/r1 dispositions at contract level. Performance mixed/unmeasured; elegance, structural soundness and operational fit acceptable for planning.
 - **Resolution ledger:** machine-checkable critique dispositions below; architecture ledger retained separately
-- **Evidence / reference:** artifacts/reviews/leadshug-start-conversation-20261022/evidence/critique-r1.merge.json + critique-r1-resolution.md; raw and strict merge immutable; old reviews historical
+- **Evidence / reference:** artifacts/reviews/leadshug-start-conversation-20261022/evidence/critique-r2.merge.json plus critique-r1-resolution.md and machine-checkable rows; both current raw/strict merges immutable, old reviews historical
 - **Waiver authority / reference (required if waived):** n/a
 
 | Finding ID | Resolution | Usefulness | Formalizable | Candidate Rule Level | Candidate Rule ID | Rationale / Evidence |
@@ -776,8 +776,8 @@ No promotion review exists for v1.1. Root-owned review artifacts are authoritati
 ## TODO Closeout Disposition
 
 - **Disposition:** keep-active
-- **Disposition reason:** current v1.1 contract awaits fresh published review convergence and explicit APROVADO.
-- **Post-commit/push status:** pending
+- **Disposition reason:** current planning reviews/guards converged; keep active NotStarted/Pending/review while awaiting explicit APROVADO, with no execution authority.
+- **Post-commit/push status:** planning evidence publication only on Foundation main; final commit/push and clean status recorded in session, no product Git write
 - **Next path/status action:** remain active/NotStarted/review; no implementation until authorized.
 
 ## Security Risk Assessment
@@ -898,7 +898,7 @@ Root owns this active TODO, archive and review/evidence artifacts; the terminal 
 
 ## COMENTÁRIO
 
-Planning draft only. Human decision requested only after root has frozen it and completed fresh review/guard work; this text itself does not ask for approval.
+Planning contract reviewed and ready for explicit human APROVADO. This status grants no execution authority; product tests/runtime/provider work remain future approved execution.
 
 ## Gate: Assumption Code Coherence
 
@@ -907,9 +907,9 @@ Planning draft only. Human decision requested only after root has frozen it and 
 - **Trigger stage:** after critique convergence and before APROVADO
 - **Guard scope:** A-01..08
 - **Guard command:** python3 delphi-ai/tools/assumption_code_coherence_guard.py --todo foundation_documentation/todos/active/features/TODO-leadshug-start-conversation-by-contact.md
-- **Gate status:** not_run
-- **Findings summary:** fresh source-backed assumptions await current reviews and guard
-- **Evidence / reference:** new current package, after review convergence
+- **Gate status:** no_material_findings
+- **Findings summary:** dedicated post-review source assessment found A-01..08 coherent with exact current code; implementation, template enum and runtime health not inferred.
+- **Evidence / reference:** artifacts/reviews/leadshug-start-conversation-20261022/assumption-code-observations-v1.1.md + evidence/assumption-code-source-manifest-v1.1.json; evidence/assumption-code-coherence-v1.1.json actual GO,8 live source-backed assumptions
 - **Waiver authority / reference (required if waived):** n/a
 
 ## Approval
@@ -1004,3 +1004,13 @@ Derive an initial-only semantic fingerprint from a fixed canonical versioned rep
 For a never-released initial attempt, acknowledgment requires current authorization/CSRF, classified AMBIGUOUS or EXTERNAL_ACCEPTED_LOCAL_BLOCKED, captured non-null dispatchDeadlineAt and database time at/after it. This uniform timing applies even to a confirmed external acceptance blocked locally: no earlier exception. Before it, return409 ACK_TOO_EARLY with safe eligibleAt and leave slot/outcome unchanged. Unknown transaction/readback never supplies release authority. After it, explicit duplication-risk confirmation may irreversibly release; a request paused after claim may still produce a late external effect, so this is knowingly accepted risk, never a cancellation guarantee. Repeat acknowledgment on a previously released attempt is idempotent; late improvement of that attempt cannot reclaim its slot or alter successor state. Reconcile before deadline does not expire a live SENDING claim; an explicit transport timeout may already classify AMBIGUOUS but still cannot be acknowledged early. Cases at deadline-1ms, equality, +1ms, PREPARED with no claim, active SENDING, both classified states, lost release ACK, successor and late original response must be tested.
 
 **Automation preservation:** current IncomingService calls NOVA_CONVERSA with acceptance.conversationCreated, not 'first inbound ever'. Manual open creates the row without any bot/provider side effect. A later first inbound into that manually opened empty row therefore does not fire NOVA_CONVERSA, even if the seller abandoned the draft. Keep that delivered predicate; no new first-inbound semantic, automation execution on open or trigger migration is admitted. Keyword automation retains its current matching predicate. Add focused real-PG/domain integration fixtures: open-without-send then first inbound with only NOVA_CONVERSA configured produces no bot start; the corresponding keyword trigger still matches. Browser validates open/readback without automation. No production automation behavior change beyond the explicit consequence of manually creating the conversation.
+
+## Planning execution-readiness preflight — 2026-10-22
+
+- **Authority pre-approval:** actual `preflight-go`, evidence/authority-preapproval-v1.1.json, execution_authority_granted=false. Normal authority GO requires actual human APROVADO and binding ingestion; it has not run for04.
+- **Current planning review chain:** architecture-r1 four integrated; critique-r1 two integrated; fresh affected critique-r2 no material findings; immutable raw/strict merges and current resolution rows retained.
+- **Source/assumption coherence:** dedicated post-review semantic assessment A-01..08 and exact source manifest; deterministic guard GO. Real account template approval/runtime remain unknown future dependencies.
+- **Review scope:** canonical23-section comparison to a107a6ab pushed freeze gives zero material changes, GO. Temporary Git adapter only translates canonical git.exe path/case output for Python guard; no methodology/guard semantics or product change.
+- **Preservation:**68 inherited public source records + supplemental acceptance owner match their seals;3 product HEADs unchanged. No env/private/runtime/business/provider query, test run, product Git or deployment in this planning turn.
+- **Future execution:** test-first + full canonical runner, actual PG/real BFF/browser, candidate assurance and only then bounded preserved local migration/source-bound runtime/operator-assisted own-contact proof. Actual APPROVED official asset remains a completion dependency; baseline802 are prior05 evidence only.
+- **Required binding sources:** the10 concrete rules/workflows named in Rules Acknowledgement / Ingestion, including TODO Approval Gates, NestJS application boundary, React UI boundary, Prisma migration, PostgreSQL integrity and performance/concurrency methods. Reload after approval; no inferred authority from advisory reviewers.

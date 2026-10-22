@@ -1,0 +1,74 @@
+{
+  "created_at_utc": "2026-10-22T14:57:28.128332+00:00",
+  "source": "explicit public premise paths re-read after review convergence",
+  "records": [
+    {
+      "path": "api-app/prisma/schema.prisma",
+      "sha256": "fcbeb82ee13f96fd71ec83eb18b29749ba51bfcdd86fe82108d6e8a3b96efd69"
+    },
+    {
+      "path": "api-app/src/domain/inbox/conversations.service.ts",
+      "sha256": "c7d84f983ed61c6022424d4648e07282e7eb53c40fa9aba249618d77b3c223de"
+    },
+    {
+      "path": "api-app/src/surfaces/bff/conversations.controller.ts",
+      "sha256": "53d3cffaa258ba1ad45c21eae4ab8712e2011255b7ca14965f73221edd0cc002"
+    },
+    {
+      "path": "api-app/src/domain/channels/transport/channel.ts",
+      "sha256": "432796b8685d07dcc53c3a699a7b9d1469ac4fb110aea080766ec207bec8621f"
+    },
+    {
+      "path": "api-app/src/integrations/channels/meta-channel.ts",
+      "sha256": "997e739cf7d7231918dc97fc347bfeb32a1cd74d084ead8c64b01157022f8138"
+    },
+    {
+      "path": "api-app/src/integrations/channels/evolution-channel.ts",
+      "sha256": "60faf1ea40fe17ad62495b0f42a2cf958defcb41e3ad72d3d2213751539b460c"
+    },
+    {
+      "path": "api-app/src/domain/inbox/message-acceptance.service.ts",
+      "sha256": "b053744ee44b7e91fd45b5c146f759f55c70b8e517b8fbb1cab39806407335e1"
+    },
+    {
+      "path": "api-app/src/domain/inbox/outbound.service.ts",
+      "sha256": "63bcf773e2b4c5a5ddd688a1bb13745a0a206d995fafc665925df3fecaf394aa"
+    },
+    {
+      "path": "api-app/src/domain/message-templates/template-observation.service.ts",
+      "sha256": "41c7c640fd31ca0759d0d88647e24c74787597dcf75fd8a3c773fe6e02965488"
+    },
+    {
+      "path": "api-app/src/integrations/meta/message-template.client.ts",
+      "sha256": "8dff223f7a97632cf228800cdbbb12ce6f5b151efc5fa30411d03e5ec3280cb5"
+    },
+    {
+      "path": "api-app/src/integrations/channels/prisma-channel-resolver.ts",
+      "sha256": "acf779d89162d339e37af2abe2aa91fd1a1b292d7f5208bb672090c87a23bf4d"
+    },
+    {
+      "path": "api-app/src/surfaces/webhooks/meta.controller.ts",
+      "sha256": "64fd78568c1dc99e74df8a3f5b3157c43c6467ef03544b7741f0b9c7dc11200b"
+    },
+    {
+      "path": "api-app/src/integrations/message-templates/template-management.module.ts",
+      "sha256": "aabfb344eab0b244772f0a2a8066dbae71bb24973a0a498c69af676c17f0acdd"
+    },
+    {
+      "path": "api-app/src/integrations/channels/channel-transport.module.ts",
+      "sha256": "32203d3b8393a34a9effab4266683c389651d7ec197e8f9d704a77a6a37f40dc"
+    },
+    {
+      "path": "web-app/src/telas/Inbox.tsx",
+      "sha256": "d70bde9ede67759d479f644598356e46aac2916a12b2ed1770c17a169118586c"
+    },
+    {
+      "path": "web-app/src/api.ts",
+      "sha256": "177d660cccb7d74e47ef1dd180d9e74f830bce97b631c896c4e82fa39ae44a84"
+    },
+    {
+      "path": "api-app/src/integrations/message-templates/template-management.resolver.ts",
+      "sha256": "2a2a57355ff9fa29774cd4dfef33d9d3fd876bdf5d8a8fe654f0c0435284b59a"
+    }
+  ]
+}

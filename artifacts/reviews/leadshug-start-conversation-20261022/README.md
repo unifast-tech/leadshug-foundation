@@ -1,11 +1,22 @@
-# ST-CON-04 v1.1 — planning and review package
+# ST-CON-04 v1.1 — início manual de conversa: plano pronto para aprovação
 
-[Active contract](../../../todos/active/features/TODO-leadshug-start-conversation-by-contact.md). State: planning/review only, no APROVADO or implementation authority. Completed local ST-CON-05/06 are dependencies. Earlier19/20 planning is archived historical evidence only.
+[Contrato ativo](../../../todos/active/features/TODO-leadshug-start-conversation-by-contact.md). Estado: NotStarted / Pending / review. A implementação depende de APROVADO explícito deste novo contrato; a autorização das etapas05/06 não se transfere.
 
-Scope: manual open/reuse by BU/contact, explicit abstract Channel first text or approved-template send, shared existing catalog, qualified inbound-time policy, durable initial intent and local recovery. Explicit supersedes: delivered text-only payload restriction and ingestion-createdAt official-window rule. No duplicate management/catalog/sender/Message owner or generic future platform.
+O vendedor informará telefone com DDI, abrirá ou reutilizará a conversa, escolherá o canal, conferirá texto/modelo e confirmará o primeiro envio. O canal oficial utilizará um modelo elegível realmente aprovado quando necessário. Haverá recuperação local após falha, sem reenvio automático nem troca automática de canal. O mesmo Channel abstrato e os owners existentes de envio, aceitação de Message e catálogo serão preservados.
 
-Initial planning freeze b7dfb2120347c83996830a4c011b0a930ca4eadc was pushed before initial guards and the fresh internal architecture r1. That opinion recommends one discriminated send operation and reports four material findings, integrated in [architecture resolution](architecture-r1-resolution.md) and the normative TODO contract. A refreshed freeze precedes fresh independent critique. Review performance remains mixed/unmeasured; delivery proof is future work.
+## Revisões e verificações de planejamento
 
-The68 inherited public source seals and supplemental same-acceptance-owner seal protect delivered05/06. No actual env/private storage, runtime, business rows, provider account operations, product Git or deployment are inspected or changed. Foundation main is the only publication lane. [Official primary documentation receipt](evidence/meta-primary-reference-receipt-v1.1.json) is external contract evidence, not actual account readiness. Current own APPROVED template enum and runtime health remain unknown.
+- Arquitetura r1: recomenda uma operação discriminada de envio; quatro findings integrados em [resolução](architecture-r1-resolution.md).
+- Crítica r1: duas clarificações integradas em [resolução](critique-r1-resolution.md): prazo de acknowledgment e automação após abertura manual.
+- [Crítica r2](evidence/critique-r2.merge.json): sem novos findings materiais; elegância, estrutura e operação aceitáveis para planejamento. Performance mista e ainda não medida.
+- [Coerência com código](assumption-code-observations-v1.1.md): oito premissas rechecadas após as revisões; [guard GO](evidence/assumption-code-coherence-v1.1.json).
+- [Escopo](evidence/review-scope-drift-v1.2.json):23 seções, zero mudanças materiais contra o freeze publicado a107a6ab. v1.1 conserva falha inicial de casing do adaptador Git, resolvida sem alterar guard/produto.
+- [Authority preapproval](evidence/authority-preapproval-v1.1.json): preflight-go; execution_authority_granted=false.
 
-Next: refreshed freeze, fresh no-context critique, current source/assumption coherence, scope-drift and authority preapproval. Ask APROVADO only after convergence. Product tests, delivery assurance and actual own-contact proof occur only after that approval.
+Freeze inicial b7dfb212 antecede os primeiros guards/review; ef1ff014 publica integrações arquiteturais; a107a6ab publica as duas clarificações antes da crítica r2. Histórico19/20 é preservado e não equivale a revisão atual.
+
+## Limites preservados
+
+As68 fontes públicas herdadas e o owner de aceitação suplementar mantêm seus bytes; não houve alteração de produto nem consulta/alteração de ambiente privado, dados de negócio, runtime, conta/provedor ou credencial. Foundation main é a única publicação. [Recibo primário da Meta](evidence/meta-primary-reference-receipt-v1.1.json) prova apenas o contrato externo documentado. O enum de aprovação do modelo próprio e a saúde atual do runtime continuam desconhecidos.
+
+Após aprovação: implementação test-first, testes de contrato/PG e navegador real, assurance e migração local autorizada; depois prova assistida pelos canais próprios. Nenhum teste de implementação04 foi executado. As limitações SEC-R6-04, OPS-R4-01 e TQA-ST05-03 seguem com seus owners; não são corrigidas por este plano. Produto/Railway/promoção continuam fora do escopo atual.

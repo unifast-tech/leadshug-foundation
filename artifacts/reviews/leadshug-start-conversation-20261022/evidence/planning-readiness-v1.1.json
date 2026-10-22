@@ -1,0 +1,22 @@
+{
+  "created_at_utc": "2026-10-22T14:59:31.789485+00:00",
+  "state": "planning-ready-for-explicit-human-approval",
+  "todo": "foundation_documentation/todos/active/features/TODO-leadshug-start-conversation-by-contact.md",
+  "material_review_baseline": "a107a6ab73172c70ef18dc3a34c8681d5e1b5f31",
+  "review_chain": {
+    "architecture_r1": "4 integrated",
+    "critique_r1": "2 integrated",
+    "critique_r2": "no material findings"
+  },
+  "gates": {
+    "assumption_code": "go;8 live",
+    "scope_drift": "go;23 sections;0 changed",
+    "authority_preapproval": "preflight-go"
+  },
+  "execution_authority_granted": false,
+  "product_or_runtime_tests_executed": false,
+  "product_mutation": false,
+  "private_or_provider_account_queries": false,
+  "todo_sha256": "57b77d47bb77b02cde7414764ca8555d58a0df75d013e38116fbd7d9f1df1a82",
+  "next_exact_step": "explicit APROVADO of current ST-CON-04, then binding ingestion and normal authority GO"
+}

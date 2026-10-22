@@ -1,0 +1,165 @@
+{
+  "artifact_kind": "assumption_code_coherence_guard",
+  "todo_path": "/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/todos/active/features/TODO-leadshug-start-conversation-by-contact.md",
+  "repo_root": "/mnt/c/unifast/leadshug/leadshug_now_docker",
+  "overall_outcome": "go",
+  "live_assumption_ids": [
+    "A-01",
+    "A-02",
+    "A-03",
+    "A-04",
+    "A-05",
+    "A-06",
+    "A-07",
+    "A-08"
+  ],
+  "gate": {
+    "section_present": true,
+    "decision": "required",
+    "status": "no_material_findings",
+    "evidence_reference": "artifacts/reviews/leadshug-start-conversation-20261022/assumption-code-observations-v1.1.md + evidence/assumption-code-source-manifest-v1.1.json; deterministic assumption-code guard output recorded separately",
+    "waiver_reference": "n/a"
+  },
+  "assumptions": [
+    {
+      "assumption_id": "A-01",
+      "handling": "Keep as Assumption",
+      "evidence": "api-app/prisma/schema.prisma:389; api-app/src/domain/inbox/conversations.service.ts:61; api-app/src/surfaces/bff/conversations.controller.ts:20",
+      "path_tokens": [
+        "api-app/src/domain/inbox/conversations.service.ts",
+        "api-app/src/surfaces/bff/conversations.controller.ts"
+      ],
+      "resolved_paths": [
+        "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app/src/domain/inbox/conversations.service.ts",
+        "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app/src/surfaces/bff/conversations.controller.ts"
+      ],
+      "resolved_code_paths": [
+        "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app/src/domain/inbox/conversations.service.ts",
+        "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app/src/surfaces/bff/conversations.controller.ts"
+      ]
+    },
+    {
+      "assumption_id": "A-02",
+      "handling": "Keep as Assumption",
+      "evidence": "api-app/src/domain/channels/transport/channel.ts:28; api-app/src/integrations/channels/meta-channel.ts:13; api-app/src/integrations/channels/evolution-channel.ts:13",
+      "path_tokens": [
+        "api-app/src/domain/channels/transport/channel.ts",
+        "api-app/src/integrations/channels/meta-channel.ts",
+        "api-app/src/integrations/channels/evolution-channel.ts"
+      ],
+      "resolved_paths": [
+        "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app/src/domain/channels/transport/channel.ts",
+        "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app/src/integrations/channels/meta-channel.ts",
+        "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app/src/integrations/channels/evolution-channel.ts"
+      ],
+      "resolved_code_paths": [
+        "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app/src/domain/channels/transport/channel.ts",
+        "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app/src/integrations/channels/meta-channel.ts",
+        "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app/src/integrations/channels/evolution-channel.ts"
+      ]
+    },
+    {
+      "assumption_id": "A-03",
+      "handling": "Keep as Assumption",
+      "evidence": "api-app/src/domain/inbox/message-acceptance.service.ts:82; api-app/src/domain/inbox/outbound.service.ts:83",
+      "path_tokens": [
+        "api-app/src/domain/inbox/message-acceptance.service.ts",
+        "api-app/src/domain/inbox/outbound.service.ts"
+      ],
+      "resolved_paths": [
+        "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app/src/domain/inbox/message-acceptance.service.ts",
+        "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app/src/domain/inbox/outbound.service.ts"
+      ],
+      "resolved_code_paths": [
+        "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app/src/domain/inbox/message-acceptance.service.ts",
+        "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app/src/domain/inbox/outbound.service.ts"
+      ]
+    },
+    {
+      "assumption_id": "A-04",
+      "handling": "Keep as Assumption",
+      "evidence": "api-app/src/domain/message-templates/template-observation.service.ts:115; api-app/src/integrations/meta/message-template.client.ts:118",
+      "path_tokens": [
+        "api-app/src/domain/message-templates/template-observation.service.ts",
+        "api-app/src/integrations/meta/message-template.client.ts"
+      ],
+      "resolved_paths": [
+        "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app/src/domain/message-templates/template-observation.service.ts",
+        "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app/src/integrations/meta/message-template.client.ts"
+      ],
+      "resolved_code_paths": [
+        "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app/src/domain/message-templates/template-observation.service.ts",
+        "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app/src/integrations/meta/message-template.client.ts"
+      ]
+    },
+    {
+      "assumption_id": "A-05",
+      "handling": "Keep as Assumption",
+      "evidence": "api-app/src/domain/inbox/outbound.service.ts:244; api-app/src/integrations/channels/prisma-channel-resolver.ts:68; api-app/src/surfaces/webhooks/meta.controller.ts:103",
+      "path_tokens": [
+        "api-app/src/domain/inbox/outbound.service.ts",
+        "api-app/src/integrations/channels/prisma-channel-resolver.ts",
+        "api-app/src/surfaces/webhooks/meta.controller.ts"
+      ],
+      "resolved_paths": [
+        "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app/src/domain/inbox/outbound.service.ts",
+        "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app/src/integrations/channels/prisma-channel-resolver.ts",
+        "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app/src/surfaces/webhooks/meta.controller.ts"
+      ],
+      "resolved_code_paths": [
+        "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app/src/domain/inbox/outbound.service.ts",
+        "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app/src/integrations/channels/prisma-channel-resolver.ts",
+        "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app/src/surfaces/webhooks/meta.controller.ts"
+      ]
+    },
+    {
+      "assumption_id": "A-06",
+      "handling": "Keep as Assumption",
+      "evidence": "api-app/src/integrations/message-templates/template-management.module.ts:1; api-app/src/integrations/channels/channel-transport.module.ts:1",
+      "path_tokens": [
+        "api-app/src/integrations/message-templates/template-management.module.ts",
+        "api-app/src/integrations/channels/channel-transport.module.ts"
+      ],
+      "resolved_paths": [
+        "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app/src/integrations/message-templates/template-management.module.ts",
+        "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app/src/integrations/channels/channel-transport.module.ts"
+      ],
+      "resolved_code_paths": [
+        "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app/src/integrations/message-templates/template-management.module.ts",
+        "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app/src/integrations/channels/channel-transport.module.ts"
+      ]
+    },
+    {
+      "assumption_id": "A-07",
+      "handling": "Keep as Assumption",
+      "evidence": "web-app/src/telas/Inbox.tsx:50; web-app/src/api.ts:352",
+      "path_tokens": [
+        "web-app/src/telas/Inbox.tsx",
+        "web-app/src/api.ts"
+      ],
+      "resolved_paths": [
+        "/mnt/c/unifast/leadshug/leadshug_now_docker/web-app/src/telas/Inbox.tsx",
+        "/mnt/c/unifast/leadshug/leadshug_now_docker/web-app/src/api.ts"
+      ],
+      "resolved_code_paths": [
+        "/mnt/c/unifast/leadshug/leadshug_now_docker/web-app/src/telas/Inbox.tsx",
+        "/mnt/c/unifast/leadshug/leadshug_now_docker/web-app/src/api.ts"
+      ]
+    },
+    {
+      "assumption_id": "A-08",
+      "handling": "Keep as Assumption",
+      "evidence": "api-app/src/integrations/message-templates/template-management.resolver.ts:83",
+      "path_tokens": [
+        "api-app/src/integrations/message-templates/template-management.resolver.ts"
+      ],
+      "resolved_paths": [
+        "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app/src/integrations/message-templates/template-management.resolver.ts"
+      ],
+      "resolved_code_paths": [
+        "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app/src/integrations/message-templates/template-management.resolver.ts"
+      ]
+    }
+  ],
+  "issues": []
+}

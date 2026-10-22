@@ -1,0 +1,62 @@
+{
+  "artifact_kind": "review_scope_drift_guard",
+  "todo_path": "/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/todos/active/features/TODO-leadshug-start-conversation-by-contact.md",
+  "repo_root": "/mnt/c/Unifast/LeadsHug/leadshug_now_docker/foundation_documentation",
+  "todo_relative_path": "missing",
+  "overall_outcome": "no-go",
+  "baseline_gate": {
+    "section_present": true,
+    "decision": "required",
+    "status": "no_material_findings",
+    "branch": "main",
+    "commit": "a107a6ab73172c70ef18dc3a34c8681d5e1b5f31",
+    "push_reference": "origin/main",
+    "evidence_reference": "Foundation main a107a6ab73172c70ef18dc3a34c8681d5e1b5f31 pushed origin/main, exit0; evidence/freeze-after-critique-r1-v1.1.json records actual publication.",
+    "waiver_reference": "n/a"
+  },
+  "scope_drift_gate": {
+    "section_present": true,
+    "decision": "required",
+    "status": "no_material_findings",
+    "evidence_reference": "current a107a6ab pushed freeze; evidence/review-scope-drift-v1.1.json is the separate deterministic result, old20261019 outputs historical",
+    "waiver_reference": "n/a"
+  },
+  "changed_sections": [],
+  "material_headings": [
+    "## Context",
+    "## Framing Source & Story Slice",
+    "## Contract Boundary",
+    "## Scope",
+    "## Out of Scope",
+    "## Bounded But Elastic Guardrails",
+    "## Definition of Done",
+    "## Validation Steps",
+    "## Execution Lane Tracking",
+    "## Diff Expectation Contract",
+    "## Complexity",
+    "## Canonical Module Anchors",
+    "## Decisions (Resolved Before Freeze)",
+    "## Module Decision Baseline Snapshot",
+    "## Decision Baseline (Frozen Before Implementation)",
+    "## Architecture Change Governance",
+    "## Questions To Close",
+    "## Assumptions Preview",
+    "## Execution Plan",
+    "## Flow Evidence Planning Matrix",
+    "## Runtime / Rollout Notes",
+    "## Security Risk Assessment",
+    "## Performance & Concurrency Risk Assessment"
+  ],
+  "issues": [
+    {
+      "severity": "error",
+      "code": "REVIEW-SCOPE-DRIFT-REPO-ROOT-FAILED",
+      "message": "'/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/todos/active/features/TODO-leadshug-start-conversation-by-contact.md' is not in the subpath of '/mnt/c/Unifast/LeadsHug/leadshug_now_docker/foundation_documentation'"
+    },
+    {
+      "severity": "error",
+      "code": "REVIEW-BASELINE-FILE-MISSING",
+      "message": "TODO file does not exist at the recorded baseline commit."
+    }
+  ]
+}
