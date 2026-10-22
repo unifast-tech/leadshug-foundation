@@ -1,0 +1,52 @@
+{
+  "checkpoint": "E12 root read-only transport candidate contract observations",
+  "review_kind": "ongoing primary-source review; NOT fresh independent assurance or delivery gate",
+  "candidate_hashes": {
+    "api-app/src/domain/channels/transport/channel.ts": "d5836e98f9f8cf51297516c3c8633b78040251296172f4e02cec8314796bacb9",
+    "api-app/src/integrations/channels/meta-channel.ts": "a8ec33260d84ccf8a33c7ee7272362d81a97228282cff52a332b0a4ed378989f",
+    "api-app/src/integrations/channels/evolution-channel.ts": "b3e374343c890d2eb16c1a0bcdd02bbf6a91d59919114c2ccd2a8c97a3b9f935",
+    "api-app/src/integrations/meta/initial-message.client.ts": "da24317e7cde487206d39786e5512e1d99e0188a9f6e69417d16aa507eb5f67d"
+  },
+  "observations": [
+    {
+      "id": "TR-01",
+      "finding": "Both initial POST kinds lack messaging_account_id",
+      "correction": "New template raw body omits captured account; new initial text delegates unchanged legacy encoder that also omits pin. Implement new-client raw initial POST for both kinds, plusDDI and captured pin, leave ordinary legacy text unchanged.",
+      "status": "pending correction and direct protocol proof"
+    },
+    {
+      "id": "TR-02",
+      "finding": "Late composed context+claim fence and exact context equality",
+      "correction": "Meta initial path forwards options callback without bound context guard. Compare complete scoped management/transport tuple and compose bound context guard+generic durable claim after ALL preflight GETs, directly before POST.",
+      "status": "pending correction and direct protocol proof"
+    },
+    {
+      "id": "TR-03",
+      "finding": "Typed template descriptor",
+      "correction": "Readonly<Record<string,unknown>>/casts hide the required approved template definition/values/context shape. Establish typed provider-neutral descriptor before coordinator builds on it.",
+      "status": "pending correction and direct protocol proof"
+    },
+    {
+      "id": "TR-04",
+      "finding": "Response certainty",
+      "correction": "Current template parser can confirm ID despite contradictory error/success:false. Reject malformed/contradictory certainty, distinguish proven refusal vs uncertain missing-ID/transport, never surface provider bodies or retry.",
+      "status": "pending correction and direct protocol proof"
+    },
+    {
+      "id": "TR-05",
+      "finding": "Generic ordinary admission fence",
+      "correction": "Optional beforeDispatch must apply to ordinary sends too, without setting initial purpose and thereby changing their wire semantics. Preserve old no-options behavior.",
+      "status": "pending correction and direct protocol proof"
+    },
+    {
+      "id": "TR-06",
+      "finding": "Preclaim configuration and finite I/O proof",
+      "correction": "Known graph config/immutable wire validation must happen before SENDING claim; total75s/request10s and6GET/1POST counters/order need actual raw protocol tests. Existing MetaTemplateClient per-attempt grantPromise reuse across two pages is correct, do not duplicate grant.",
+      "status": "pending correction and direct protocol proof"
+    }
+  ],
+  "authority": "Approved ST-CON-04 v1.1 normative architecture/IO/pinned-account/abstraction requirements; no new functional scope",
+  "runner": "78537 terminal exit1;66596 still active at review messages; no product edits during canonical runners",
+  "test_limits": "Factory tests with fake initial client cannot prove actual raw protocol pin/preflight/account membership/response certainty. Corrected causal union RED2 remains valid for the boundary it actually exercises.",
+  "next": "After runner terminal implement corrections in admitted files and run direct initial-message.client*.spec.ts raw protocol/fault/count/order tests, preserving exact existing client interfaces and hash extraction semantics."
+}

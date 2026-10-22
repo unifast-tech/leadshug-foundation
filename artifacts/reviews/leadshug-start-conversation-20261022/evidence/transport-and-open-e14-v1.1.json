@@ -1,0 +1,67 @@
+{
+  "checkpoint": "E14 direct protocol unit and manual-open concurrency checkpoint; full API still RED",
+  "runner_session": 81812,
+  "command": "bash scripts/test-channels-local.sh api",
+  "exit_code": 1,
+  "stdout": "/tmp/stcon04-executor-transport-candidate3.txt",
+  "stdout_sha256": "420f35ee43aa858b40e5115d1ccd6c13933d5240eccbbadaf728e783e0456ae9",
+  "root_verified_stdout_hash": true,
+  "results": {
+    "prisma_generate_deploy_status": "passed",
+    "lint": "passed",
+    "build": "passed",
+    "unit_files_passed": 30,
+    "unit_tests_passed": 311,
+    "e2e_files_passed": 29,
+    "e2e_files_failed": 2,
+    "e2e_tests_passed": 399,
+    "e2e_tests_failed": 6,
+    "owned_cleanup": "observed terminal stdout removal"
+  },
+  "remaining_failures": {
+    "test/number-onboarding-pcv.e2e-spec.ts": 1,
+    "test/number-onboarding-typebot.e2e-spec.ts": 5
+  },
+  "manual_open_concurrency": {
+    "waves": 5,
+    "opens_per_wave": 20,
+    "open_count": 100,
+    "created": 5,
+    "reused": 95,
+    "created_per_wave": [
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "statuses": {
+      "200": 95,
+      "201": 5
+    },
+    "provider_call_delta": 0,
+    "fixture_change": "Explicit owned loopback listener corrected Supertest implicit listener lifecycle; load/assertions retained."
+  },
+  "direct_protocol_tests": "Three direct raw-protocol tests pass after correcting invalid synthetic WABA grant targets. They cover pinned text/template payloads, preflight-fence-POST order, contradictory ACK and stable refusal classification. No pre-fix causal RED is claimed for these three tests.",
+  "intermediate_runs": [
+    {
+      "session": 35934,
+      "result": "eslint no-useless-assignment before unit",
+      "stdout_sha256_reported": "62ae4916b9b96f9658b4cb8eb71b26fb487457d63d271741d50718df78f9a0cc"
+    },
+    {
+      "session": 62998,
+      "result": "308 unit pass / 3 direct protocol failures blocked by invalid nonnumeric synthetic WABA grant fixture; no PG",
+      "stdout_sha256_reported": "d48def43f1f6f9b69bb5cfa7813203634117eca7241dac7289184ada11029ca6"
+    }
+  ],
+  "after_terminal_changes_not_validated_by_this_run": [
+    "Restore truly omitted signed Meta timestamp negative case, not literal null only.",
+    "Route supported approved-template through initial protocol independently of optional purpose selector, still requiring durable fence."
+  ],
+  "limits": [
+    "Both remaining failing fixture paths are sealed and await actual human companion-path validation; no approval inferred.",
+    "75s total I/O budget, full transport/management tuple equality, durable admission/intent integration, final SQL plans, UI/browser, assurance and assisted provider proof remain pending.",
+    "No full API or ST04 delivery GREEN. E02/E04/E10 mixed evidence and procedural disclosures remain."
+  ]
+}

@@ -1,6 +1,6 @@
-# ST-CON-04 v1.1 — início manual de conversa: plano pronto para aprovação
+# ST-CON-04 v1.1 — início manual de conversa: implementação em andamento
 
-[Contrato ativo](../../../todos/active/features/TODO-leadshug-start-conversation-by-contact.md). Estado: NotStarted / Pending / review. A implementação depende de APROVADO explícito deste novo contrato; a autorização das etapas05/06 não se transfere.
+[Contrato ativo](../../../todos/active/features/TODO-leadshug-start-conversation-by-contact.md). Estado atual: InProgress / Pending / implementation, após APROVADO explícito do usuário. A entrega completa ainda depende dos testes e gates registrados no contrato. As seções de planejamento preservam o histórico anterior à aprovação.
 
 O vendedor informará telefone com DDI, abrirá ou reutilizará a conversa, escolherá o canal, conferirá texto/modelo e confirmará o primeiro envio. O canal oficial utilizará um modelo elegível realmente aprovado quando necessário. Haverá recuperação local após falha, sem reenvio automático nem troca automática de canal. O mesmo Channel abstrato e os owners existentes de envio, aceitação de Message e catálogo serão preservados.
 
@@ -17,9 +17,9 @@ Freeze inicial b7dfb212 antecede os primeiros guards/review; ef1ff014 publica in
 
 ## Limites preservados
 
-As68 fontes públicas herdadas e o owner de aceitação suplementar mantêm seus bytes; não houve alteração de produto nem consulta/alteração de ambiente privado, dados de negócio, runtime, conta/provedor ou credencial. Foundation main é a única publicação. [Recibo primário da Meta](evidence/meta-primary-reference-receipt-v1.1.json) prova apenas o contrato externo documentado. O enum de aprovação do modelo próprio e a saúde atual do runtime continuam desconhecidos.
+No encerramento do planejamento, as68 fontes públicas herdadas e o owner de aceitação suplementar mantinham seus bytes, sem alteração de produto. Essa afirmação é histórica: a execução autorizada abaixo já contém alterações de produto, e E02 registra o desvio de descoberta. Foundation main continua sendo a única publicação Git autorizada. [Recibo primário da Meta](evidence/meta-primary-reference-receipt-v1.1.json) prova apenas o contrato externo documentado. O enum de aprovação do modelo próprio e a saúde atual do runtime continuam desconhecidos.
 
-Após aprovação: implementação test-first, testes de contrato/PG e navegador real, assurance e migração local autorizada; depois prova assistida pelos canais próprios. Nenhum teste de implementação04 foi executado. As limitações SEC-R6-04, OPS-R4-01 e TQA-ST05-03 seguem com seus owners; não são corrigidas por este plano. Produto/Railway/promoção continuam fora do escopo atual.
+Após aprovação: implementação test-first, testes de contrato/PG e navegador real, assurance e migração local autorizada; depois prova assistida pelos canais próprios. No encerramento do planejamento, nenhum teste de implementação04 havia sido executado; os checkpoints de execução abaixo registram as rodadas posteriores. As limitações SEC-R6-04, OPS-R4-01 e TQA-ST05-03 seguem com seus owners; não são corrigidas por este plano. Produto/Railway/promoção continuam fora do escopo atual.
 
 ## Execução autorizada — 2026-10-22
 
@@ -28,3 +28,11 @@ O usuário respondeu APROVADO para v1.1; [admissão](evidence/approval-execution
 ## Checkpoint E05 — API GREEN parcial
 
 A primeira camada passou no runner canônico:303 testes unitários e398 testes E2E PostgreSQL, além de lint/build/migrations. [Recibo e limites](evidence/executor-phase1-green-e05-v1.1.json). Abertura ainda tem prova mock-based e a política de janela ainda precisa de integração. A execução04 continua em andamento pelo mesmo executor; não há entrega completa, prova de navegador ou envio real nesta etapa. E02 e a cronologia causal E04 continuam válidos para assurance independente.
+
+## Checkpoints E06–E13 — execução parcial e limites
+
+Abertura/reuso com PostgreSQL e a persistência de data qualificada passaram em cenários específicos. A rodada mais recente teve308 testes unitários aprovados, mas a API completa continua RED: há ajustes de fixtures e um ECONNRESET no novo stress20×5. A revisão também exige correções do protocolo inicial real (conta explícita, fence, DTO e certeza do ACK), que o cliente simulado não prova. [Último recibo](evidence/transport-unit-and-bci-e13-v1.1.json). [Proposta de duas fixtures protegidas](window-fixture-companion-admission-v1.1.md) aguarda validação do usuário. A saga/admissão, interface, assurance e prova assistida permanecem pendentes. Nenhuma entrega04 completa é reivindicada.
+
+## Checkpoint E14 — concorrência de abertura e protocolo
+
+A rodada seguinte passou em311 testes unitários e399 testes PostgreSQL; restam seis falhas nas duas fixtures protegidas, aguardando validação. O stress de abertura passou com100 solicitações:5 criações,95 reusos, uma conversa por contato e nenhum envio ao provedor. Os três testes diretos de protocolo passaram, sem reivindicar RED causal anterior para eles. [Recibo E14](evidence/transport-and-open-e14-v1.1.json). Admissão e tentativa duráveis seguem em implementação; não há entrega04 completa.

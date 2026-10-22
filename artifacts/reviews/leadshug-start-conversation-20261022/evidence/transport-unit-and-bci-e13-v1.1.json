@@ -1,0 +1,44 @@
+{
+  "checkpoint": "E13 union unit pass, full API regression and new BCI failure distinct",
+  "runner_session": 66596,
+  "command": "bash scripts/test-channels-local.sh api",
+  "exit_code": 1,
+  "stdout": "/tmp/stcon04-executor-transport-green2.txt",
+  "stdout_sha256": "a9c7a73cd4428ed43e105882618c14d9ebbd8c853bf3a5db15cb6fc133952069",
+  "root_verified_stdout_hash": true,
+  "results": {
+    "lint": "passed",
+    "build": "passed",
+    "prisma_generate_deploy_status": "passed",
+    "unit_files_passed": 30,
+    "unit_tests_passed": 308,
+    "e2e_files_passed": 25,
+    "e2e_files_failed": 6,
+    "e2e_tests_passed": 388,
+    "e2e_tests_failed": 17,
+    "cleanup_reported": "completed"
+  },
+  "five_existing_fixture_failures": [
+    "api-publica",
+    "atendimento",
+    "number-onboarding-pcv",
+    "number-onboarding-typebot",
+    "webhooks"
+  ],
+  "distinct_sixth_suite_failure": {
+    "path": "test/conversation-start.e2e-spec.ts",
+    "case": "20 simultaneous opens per wave x5 different synthetic contacts",
+    "result": "read ECONNRESET; no BCI pass claim",
+    "candidate_diagnosis": "Supertest implicit ephemeral HTTP listener lifecycle on initialized but not explicitly listening app; explicit owned loopback listener in new admitted fixture proposed, pending rerun. Do not weaken stress/HTTP/pool invariants."
+  },
+  "targeted_passes": [
+    "Factory union capabilities/unsupported/initial client dispatch unit assertions now pass.",
+    "New manual-open NOVA_CONVERSA=false and retained PALAVRA_CHAVE PG cases passed in this run."
+  ],
+  "limits": [
+    "Raw initial protocol still has root TR01..06 corrections pending; factory mock pass does not satisfy them.",
+    "Full API not GREEN, no BCI floor pass, no frontend or provider proof.",
+    "Two protected test fixture proposal paths still await actual user validation; no approval inferred from elapsed time."
+  ],
+  "next": "Correct raw protocol with direct tests, already admitted fixture alignment and owned HTTP listener correction, then durable admission/intent fail-first."
+}
