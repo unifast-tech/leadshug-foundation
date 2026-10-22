@@ -1,0 +1,11 @@
+{
+  "checkpoint": "E41 terminal failed browser full positive source recheck",
+  "stage": "AFTER85browser results/ownedcleanup and unavailable session81570; BEFORE writer release",
+  "count": 259,
+  "fingerprint": "809555c242e6cb0844d7b614cdb6773c15262f064aaf3cca530f2b4bea2f0cde",
+  "matches_preseal_full_inventory_and_bytes": true,
+  "record_reference": "all-source-seal-e41-v1.1.json#records",
+  "stdout_sha256": "84758646c920689c22dfed2c59907892a1c65a4694ab634d7ee709ec2c00ab5a",
+  "boundary": "Only declared positive public roots and7exact publicfiles; no actual env/data/process inspection.",
+  "exit_metadata_limit": "Executor reports unified session81570 no longer exists; actual shell exit code not collected. Browser37failed/48passed and cleanup independently observed; no fabricated exit-code claim."
+}

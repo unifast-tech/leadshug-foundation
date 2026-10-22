@@ -1,0 +1,92 @@
+{
+  "kind": "Candidate adversarial security map; not final assessment/closure",
+  "risk_level": "high",
+  "attack_simulation_decision": "required",
+  "source_seal": "all-source-seal-e41-v1.1.json",
+  "execution_state": "E41 all running; initial-message compound suite reported passed, full run not terminal",
+  "threat_intelligence": [
+    {
+      "source": "OWASP API1:2023 Broken Object Level Authorization",
+      "url": "https://api-security.owasp.org/editions/2023/en/0xa1-broken-object-level-authorization/",
+      "consulted_date": "2026-10-22",
+      "paraphrase": "Every object-based action needs permission checks for that object. A valid login and an opaque UUID alone do not establish authorization.",
+      "applies_to": "BU/conversation/channel/template/attempt/admission ownership; forged grants and foreign references."
+    },
+    {
+      "source": "OWASP API4:2023 Unrestricted Resource Consumption",
+      "url": "https://api-security.owasp.org/editions/2023/en/0xa4-unrestricted-resource-consumption/",
+      "consulted_date": "2026-10-22",
+      "paraphrase": "Bound execution time, pages, operation counts and third-party resource use. Concurrent valid calls can consume provider and server resources.",
+      "applies_to": "Actor/account limits, bounded template/membership pages, overall lease/preflight budget, one external POST, local-only recovery."
+    }
+  ],
+  "surfaces": [
+    {
+      "entry": "Authenticated BFF open/options/preview/initial/read/reconcile/ack",
+      "boundary": "Session+CSRF+current home-tenant/BU role before detailed validation; current grant after awaits/inside mutation",
+      "abuse": "Forge cross-tenant BU grant; change object IDs; revoke session/role while provider GET held",
+      "source_tests": [
+        "api-app/test/initial-message.e2e-spec.ts"
+      ],
+      "status": "Candidate tests present/executed individually; full E41 final receipt pending."
+    },
+    {
+      "entry": "Selected Channel descriptor and scoped credential",
+      "boundary": "Immutable BU/channel/origin/resource/generation/epoch/version/account/window context; no browser credentials/account override",
+      "abuse": "Confuse descriptor/transport account or use rotated/retired resource before POST",
+      "source_tests": [
+        "api-app/src/domain/channels/transport/channel-initial-message.spec.ts",
+        "api-app/test/channel-transport.e2e-spec.ts"
+      ],
+      "status": "Source and prior specific executions; fresh full E41 pending."
+    },
+    {
+      "entry": "Template catalog/preview/provider preflight",
+      "boundary": "Sanitized shared catalog, exact bounded renderer, fresh same-account eligibility/status and grant membership",
+      "abuse": "Use paused/unknown/off-account/changed/duplicate template; unbounded pages; inject provider fields",
+      "source_tests": [
+        "api-app/test/initial-message.e2e-spec.ts",
+        "api-app/src/domain/inbox/initial-message-template-renderer.spec.ts"
+      ],
+      "status": "Seven no-dispatch scenarios now reached in E41 compound case per executor; root final receipt/assertion review still pending."
+    },
+    {
+      "entry": "Initial/ordinary dispatch admissions and local acceptance",
+      "boundary": "Durable owned slot, immutable key/request/context, positive claim readback; exactly one POST maximum per intent, no automatic retry",
+      "abuse": "Concurrent replay, delayed preflight after expiry, commit ACK loss, late outcome after explicit risk release, echo unique conflict",
+      "source_tests": [
+        "api-app/test/dispatch-admission.e2e-spec.ts",
+        "api-app/test/initial-message.e2e-spec.ts"
+      ],
+      "status": "Prior frozen PG fault evidence; full E41 source-bound receipt pending."
+    },
+    {
+      "entry": "Signed official webhook timestamp",
+      "boundary": "Verified signature/current resource/positive integer nonfuture timestamp; no createdAt/nonofficial fallback",
+      "abuse": "Manufacture free-text window with invalid/future/foreign/duplicate/nonofficial IN",
+      "source_tests": [
+        "api-app/test/webhooks.e2e-spec.ts",
+        "api-app/src/domain/inbox/channel-window-policy.spec.ts"
+      ],
+      "status": "Prior frozen cases; latest full E41 pending."
+    },
+    {
+      "entry": "Browser compose/recovery/storage and safe errors",
+      "boundary": "Actor/BU/conversation-scoped immutable snapshot, explicit confirmation, no automatic POST on reload; escaped React text, closed safe error fields",
+      "abuse": "Double-trigger, stale A-B-A preview, quota/storage failure before dispatch, lost response followed by context refusal and new key",
+      "source_tests": [
+        "web-app/e2e/start-conversation.spec.ts",
+        "web-app/src/api.spec.ts"
+      ],
+      "status": "Current browser behavior not yet exercised; remains pending."
+    }
+  ],
+  "validation_safety": "Owned disposable synthetic DB/provider boundary only. No actual provider probes, contacts, private data/env/log inspection or destructive test.",
+  "residuals": [
+    "SEC-R6-04 existing management recovery read budget debt not silently resolved; new initial recovery performs no provider I/O.",
+    "OPS-R4-01 and TQA-ST05-03 retained.",
+    "Procedural E02/E04/E18/E35a stay in independent assurance packet; no blanket privacy compliance claim.",
+    "Candidate map does not replace final security findings/decision, independent review, actual runtime proof or canonical guards."
+  ],
+  "promotion_candidates": "None proposed; no Delphi edits."
+}

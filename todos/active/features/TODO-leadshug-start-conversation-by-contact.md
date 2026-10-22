@@ -51,7 +51,7 @@ Este v1.1 substitui a autoridade ativa da minuta revisada em 2026-10-19. O origi
 ## Active Work State (Required While TODO Remains In `active/`)
 
 - **Work state:** `implementation`
-- **Why this state now:** APROVADO humano recebido para v1.1; regras binding recarregadas e69 fontes/3HEADs conferidos. Reviews e guards de planejamento preservados; normal authority GO é gate anterior à primeira edição de produto.
+- **Why this state now:** APROVADO humano e dois ajustes exatos de fixtures validados; implementação e validação completas em andamento sob normal authority GO e um writer. E41 executa o candidato congelado de259 fontes públicas após correções específicas das rodadas anteriores; nenhuma entrega promovida.
 - **Exit condition:** implementação e todas as evidências/reviews/gates de entrega aprovados; estágio continua Pending até os critérios locais reais, sem claim de entrega por aprovação.
 
 ## Scope
@@ -86,7 +86,7 @@ n/a; planning draft em revisão, não marcado blocked.
 
 ## Promotion Evidence (Required Before `🟣 Lane-Promoted` / `✅ Production-Ready`)
 
-n/a nesta etapa; nenhum código, promoção ou implantação autorizado.
+n/a para promoção: a implementação local está autorizada e em andamento; nenhuma promoção de produto, Railway ou implantação pública foi autorizada.
 
 ## Out of Scope
 
@@ -314,7 +314,7 @@ Official primary references consulted 2026-10-22: [WhatsApp Send Messages](https
 | Dependency | Why It Matters | Status (`unknown|healthy|degraded|failing|rate-limited|stale`) | Last Verified | Verification Method | Adjustment / Workaround |
 | --- | --- | --- | --- | --- | --- |
 | Meta official raw contract/docs | confirm exact send wire fields and recipient formatting | `healthy` | 2026-10-22 | anonymous official HTTP `Accept: text/markdown`; provenance receipt above | pin server-captured `messaging_account_id`; use `+` plus full DDI; no fallback/retry on rejection |
-| Meta own account approved asset | real proof requires actually APPROVED eligible template | `unknown` | not probed in this planning turn | future operator-assisted proof only | no fixture substitutes; unavailable asset prevents completed claim |
+| Meta own account approved asset | real proof requires actually APPROVED eligible template | `unknown` | E23 human attestation: model APPROVED; provider/current selected account not independently probed | future scoped operator-assisted proof after candidate gates | human attestation preserved; no fixture substitutes actual same-account send/reply |
 | Existing local runtime/readiness | delivery needs current clean candidate and disposable validation | `stale` | not reprobed for this task | future DevOps handoff | source-bound assurances and topology re-resolution required |
 | ST-CON-05 catalog | shared template observation/lease/fence/TTL and remote port | inherited delivered contract | 2026-10-22 handoff | completed TODO, not re-run here | reuse unchanged; any required mutation returns to review |
 
@@ -329,7 +329,7 @@ Official primary references consulted 2026-10-22: [WhatsApp Send Messages](https
 
 | From Profile | To Profile | Why the Handoff Exists | Touched Surfaces | Status / Evidence |
 | --- | --- | --- | --- | --- |
-| Strategic / CTO-Tech-Lead | Operational / Coder | v1.1 frozen, planning reviews/guards passed and user explicitly approved | scoped product paths in diff contract | executing under normal authority GO; E01–E35 evidence below |
+| Strategic / CTO-Tech-Lead | Operational / Coder | v1.1 frozen, planning reviews/guards passed and user explicitly approved | scoped product paths in diff contract | executing under normal authority GO; E01–E40 terminal evidence below; E41 candidate running |
 | Operational / Coder | Assurance / Tester-Quality + Security | independent delivery evidence after implementation | harness/evidence package | planned |
 | Operational / Coder | Operational / DevOps | disposable migration, source-bound local activation and assisted proof | approved local runtime only | planned |
 
@@ -875,7 +875,7 @@ Required at closeout. Explicitly carry ST-05 `SEC-R6-04`, `OPS-R4-01`, and `TQA-
 - **Audit session / round evidence (when protocol used):** planned after implementation; no current delivery review
 - **Audit focus:** one abstract send operation, qualified window in every caller/projection, sole acceptance owner, zero hidden fallback
 - **Cutover audit status:** not_run
-- **Findings summary:** implementation has not begun
+- **Findings summary:** implementation candidate running E41; independent delivery cutover audit not yet dispatched
 - **Resolution ledger:** delivery-stage findings will be recorded with disposition and evidence
 - **Evidence / reference:** current delivered source and future implemented diff; no cutover evidence yet
 - **Waiver authority / reference (required if waived):** n/a
@@ -1182,3 +1182,7 @@ Frozen canonical all runner60648 exited1:34 unit files/353 tests pass; PostgreSQ
 ## Execution checkpoint E40 — negative fixture reaches real actor rate guard
 
 Frozen canonical all runner35920 exited1:34 unit files/353 tests and432 PostgreSQL tests pass; one compound case fails. First paused-template loop receives INITIAL_RATE_LIMIT before its intended semantic provider check because the same actor already owns prior successful/held/refused reservations. Actor10/min includes released/rejected intents. Root verified all259 positive source bytes/full inventory unchanged, transcript SHA and owned cleanup before writer release. Exact correction isolates each of seven negative cases using a separately authorized same-BU actor/session and own-intent readback; no production limit/config/counter change. Web/browser and the new quota-failure snapshot case were not reached. Evidence: evidence/all-source-seal-e40-v1.1.json, evidence/all-source-recheck-e40-v1.1.json, evidence/all-result-e40-v1.1.json. Candidate criterion index and local-activation proposal are explicitly pending/proposed, not completion or private/runtime authorization. No full all GREEN or delivery claim.
+
+## Execution checkpoint E41 — full API/Web pass; fresh browser exposes defects
+
+Canonical all runner81570 completed with353 API unit,433 PostgreSQL and51Web unit tests passing; build/migrations passed. Fresh Playwright:48pass/37fail across85tests,6.8min; owned cleanup observed. Original shell exit metadata was not collected and session was unavailable on later poll, so no fabricated exit-code claim. Root verified all259 source bytes/full positive inventory unchanged before release and exported the exact disposable attestation before cleanup:93changed-source hashes match, actual heads match, served/distJS7cdb7083 equal, Node22.23.3,28migrations. Protected Modelos/onboarding regressions expose const reassignment in the owned OAuth fixture helper; no protected suite/product-authoring edits authorized. New browser REDs identify manual-reuse UI selection cleared by options effect and missing safe state in initial UNKNOWN error. Other failures concern synthetic audit externalId projection, cumulative provider counters, an exact preAdmission code expectation, reload/reopen timeouts and a409 in20x5; latter causes remain to establish. Quota-storage-failure case passes. First new text case reaches201/visible persistedOUT before fixture projection assertion fails; entire case remains failed. Evidence: evidence/all-source-seal-e41-v1.1.json, all-source-recheck-e41-v1.1.json, all-result-e41-v1.1.json, browser-freshness-e41-v1.1.json and collection receipt. Writer released after postseal for exact corrections, preserving protected bytes and production limits. No completed criteria, delivery or actual provider proof claimed.

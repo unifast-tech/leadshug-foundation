@@ -1,0 +1,145 @@
+{
+  "checkpoint": "E41 API/Web green; actual fresh browser RED",
+  "canonical_command": "bash scripts/test-channels-local.sh all",
+  "unified_exec_session_id": 81570,
+  "execution_outcome": "failed browser assertions; terminal transcript and owned cleanup observed",
+  "exit_code": null,
+  "exit_metadata_limit": "Executor could not retrieve original shell metadata; session no longer existed when polled. Do not fabricate exit1 or exit0.",
+  "synthetic_stdout": "/tmp/stcon04-executor-all-e41.txt",
+  "stdout_sha256": "84758646c920689c22dfed2c59907892a1c65a4694ab634d7ee709ec2c00ab5a",
+  "source_seal": "all-source-seal-e41-v1.1.json",
+  "source_recheck": "all-source-recheck-e41-v1.1.json",
+  "source_count": 259,
+  "source_fingerprint": "809555c242e6cb0844d7b614cdb6773c15262f064aaf3cca530f2b4bea2f0cde",
+  "fresh_browser_artifact": "browser-freshness-e41-v1.1.json",
+  "fresh_browser_collection": "browser-freshness-collection-e41-v1.1.json",
+  "root_verified": [
+    "Full259positive public source inventory and every byte unchanged before writer release",
+    "Synthetic stdout SHA and bounded failure stacks",
+    "Exact owned browser freshness JSON saved before cleanup;93changed-source manifest hashes match core seal; actualAPI/Webheads match,served/distJS equal",
+    "Owned disposable cleanup"
+  ],
+  "phases": {
+    "generate_deploy_status_lint_build": "passed",
+    "api_unit": {
+      "files_passed": 34,
+      "tests_passed": 353,
+      "duration_seconds": 4.01
+    },
+    "api_postgresql": {
+      "files_passed": 33,
+      "tests_passed": 433,
+      "duration_seconds": 277.33
+    },
+    "web_build": "passed",
+    "web_unit": {
+      "files_passed": 7,
+      "tests_passed": 51,
+      "duration_seconds": 0.682
+    },
+    "browser": {
+      "tests_passed": 48,
+      "tests_failed": 37,
+      "tests_total": 85,
+      "reported_duration_minutes": 6.8
+    },
+    "owned_cleanup": "completed"
+  },
+  "browser_failure_groups": {
+    "channel_transport_existing": 1,
+    "message_templates_protected": 24,
+    "number_onboarding_existing": 3,
+    "new_start_conversation": 9
+  },
+  "confirmed_diagnoses": [
+    {
+      "path": "api-app/test/browser-server.cjs",
+      "fact": "providerResources declares const all then reassigns in code-token branch. Representative protected Modelos/onboarding failures cannot populate WABA options.",
+      "handling": "Correct owned helper; keep protected suites/product authoring sources byte-exact. Do not assert every inherited failure has same cause before retest."
+    },
+    {
+      "path": "web-app/src/telas/Inbox.tsx",
+      "fact": "Manual onOpened sets manualInitialConversationId, but start-options effect immediately clears it. Reuse with history loses initial-message form.",
+      "causality": "Actual E41 browser assertion RED precedes this correction."
+    },
+    {
+      "path": "api-app/src/domain/inbox/outbound.service.ts",
+      "fact": "UNKNOWN initial outcome throws outcome:AMBIGUOUS/attemptId but omits safe state. Actual browser expects state:AMBIGUOUS and receives undefined.",
+      "handling": "Only positively persisted/read-back state may be projected; no false state certainty. Actual browser RED precedes correction."
+    },
+    {
+      "path": "api-app/test/timeline-fixtures.cjs",
+      "fact": "GET/audit Message select omits externalId required by new tests; first new initial-text case had201 and visible/message content before this audit assertion fails.",
+      "handling": "Narrow synthetic projection correction; not a failed product send."
+    },
+    {
+      "path": "web-app/e2e/start-conversation.spec.ts",
+      "fact": "Global provider calls/effects are cumulative across fixtures; known-ACK and stale-preview tests expected absolute1/0 and saw4.",
+      "handling": "Scoped same-resource or before/after counters, never weakened no-repeat/zero-send invariant."
+    },
+    {
+      "path": "web-app/e2e/start-conversation.spec.ts",
+      "fact": "Direct generation mutation triggers PENDING_CREDENTIAL preAdmission:true, not expected CHANNEL_CONTEXT_CHANGED.",
+      "handling": "Align exact synthetic-cause expectation; no product semantic relaxation."
+    }
+  ],
+  "other_unresolved_browser_facts": [
+    "Two reload/reopen tests time out waiting for open response; exact cause not established.",
+    "5x20 browser case receives409 instead of201; lingering synthetic hold is a hypothesis, not proven cause.",
+    "Existing empty-thread test expects disabled ordinary Enviar; new approved initial-flow UI hides ordinary composer. Preserve noHTTP and prior draft/race assertions when aligning test."
+  ],
+  "passing_individual_proofs": [
+    "Complete actual API/PG current compound template case now passes, including all7semantic/account negative scenarios with own authorized fixture actors.",
+    "Browser snapshot quota-failure test passes: no BFF POST, no Message, no additional provider effect.",
+    "First new initial-text browser case reaches201 and displays/persists OUT before failing fixture-only externalId projection."
+  ],
+  "bci_metric_interpretation": "posts is the Evolution fake port invocation count, not actual TCP/Graph HTTP. Actual raw Meta GET/POST counters belong to separate compound protocol case.",
+  "bci_synthetic_metrics": [
+    {
+      "wave": 1,
+      "requests": 20,
+      "replay202": 19,
+      "posts": 1,
+      "messages": 1,
+      "elapsedMs": 176
+    },
+    {
+      "wave": 2,
+      "requests": 20,
+      "replay202": 19,
+      "posts": 1,
+      "messages": 1,
+      "elapsedMs": 146
+    },
+    {
+      "wave": 3,
+      "requests": 20,
+      "replay202": 19,
+      "posts": 1,
+      "messages": 1,
+      "elapsedMs": 135
+    },
+    {
+      "wave": 4,
+      "requests": 20,
+      "replay202": 19,
+      "posts": 1,
+      "messages": 1,
+      "elapsedMs": 131
+    },
+    {
+      "wave": 5,
+      "requests": 20,
+      "replay202": 19,
+      "posts": 1,
+      "messages": 1,
+      "elapsedMs": 132
+    }
+  ],
+  "limits": [
+    "All/browser RED; no delivery, full diff guard, actual runtime/provider proof or completed criteria.",
+    "E02/E04/E18/E35a and inherited debt remain for assurance.",
+    "Do not rewrite original alongside/post-implementation test chronology as test-first; only the identified real E41 assertion REDs precede their upcoming corrections."
+  ],
+  "next": "Writer released only after root postseal for scoped helper,UI/error projection and test isolation fixes; next candidate must be resealed before canonical validation."
+}
