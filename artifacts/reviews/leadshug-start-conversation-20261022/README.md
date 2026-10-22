@@ -58,3 +58,7 @@ O navegador passou em75 testes existentes. O teste novo abriu a conversa pelo BF
 ## Checkpoint E36 — interface compila e testes unitários passam
 
 A interface compilou em TypeScript/Vite e passou em49 testes unitários de7 arquivos; os259 arquivos públicos permaneceram idênticos durante a execução. [Recibo E36](evidence/web-result-e36-v1.1.json). Esse modo não executa Playwright, API/PostgreSQL ou o protocolo simulado. A matriz de navegador e as provas restantes seguem em preparação para a rodada completa; não há conclusão04 neste checkpoint.
+
+## Checkpoint E37 — retomada compila; navegador completo ainda pendente
+
+O novo estado de retomada compilou e a suíte Web passou em51 testes unitários; os259 arquivos públicos ficaram idênticos durante a rodada. [Recibo E37](evidence/web-result-e37-v1.1.json). Esse resultado não executa a persistência/replay no navegador, API/PostgreSQL ou as novas negativas de protocolo. Essas provas seguem para o candidato completo. A [proposta de exceção de inspeção do diff guard](evidence/final-diff-guard-boundary-proposal-v1.1.json) permanece apenas proposta, sem autorização de inspeção privada ou GO do guard.

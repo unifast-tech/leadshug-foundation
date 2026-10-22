@@ -1,0 +1,27 @@
+{
+  "kind": "Concrete proposed one-time delivery inspection exception; NOT approved or executed",
+  "governing_todo": "foundation_documentation/todos/active/features/TODO-leadshug-start-conversation-by-contact.md",
+  "existing_restriction": "The approved TODO forbids reading/listing/stat/hash/traversal/mount of private paths, and permits only positive public inspection. No exception has been inferred.",
+  "why_needed": "The required unmodified canonical todo_diff_expectation_guard.py enumerates real tracked and non-ignored untracked differences for all four declared repositories. It has no positive-pathspec/private-prune argument. A public-only inventory cannot truthfully substitute for that guard.",
+  "proposed_exception": {
+    "purpose": "One-time canonical delivery diff inspection, after the functional candidate and reviewable evidence are complete.",
+    "scope": "Only operations the canonical guard and its Git subprocesses require for declared root/api/web/foundation repository baselines.",
+    "private_access": "May enumerate/stat private paths and internally read/hash tracked file bytes as Git requires to compare changes or detect renames. No private file content is printed or published.",
+    "mutations": "None: no private-file edits/deletes, Git staging/commit, topology changes or service/provider changes are authorized by this exception.",
+    "raw_result_destination": "Restricted local /tmp files, mode0600; do not commit raw stdout/JSON or private filenames.",
+    "public_receipt": "Tool-source hash, exact canonical arguments, terminal exit/outcome, counts and stable violation codes only. No private path values or content.",
+    "on_failure": "Classify and report the guard failure; do not erase private files, silently filter violations, edit Delphi or claim GO.",
+    "scope_lifetime": "One completed canonical guard run and redacted collection; follow-up private inspection requires its own established authority."
+  },
+  "canonical_command_proposed": [
+    "python3",
+    "delphi-ai/tools/todo_diff_expectation_guard.py",
+    "foundation_documentation/todos/active/features/TODO-leadshug-start-conversation-by-contact.md",
+    "--repo-root",
+    "/mnt/c/unifast/leadshug/leadshug_now_docker",
+    "--json-output",
+    "/tmp/stcon04-final-diff-guard-private.json"
+  ],
+  "approval_handling": "Present the concrete candidate and this exact exception to the user before any private inspection. If explicitly approved, record the limited exception in the governing TODO and re-run normal authority before executing. No implementation scope, DoD or classifier weakening is proposed.",
+  "current_status": "Proposal only. Implementation and positively bounded test work continue. Full diff-guard GO remains absent."
+}

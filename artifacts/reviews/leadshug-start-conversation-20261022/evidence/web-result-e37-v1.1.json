@@ -1,0 +1,46 @@
+{
+  "checkpoint": "E37 frozen scoped pending-snapshot Web build/unit GREEN",
+  "canonical_command": "bash scripts/test-channels-local.sh web",
+  "unified_exec_session_id": 96599,
+  "exit_code": 0,
+  "synthetic_stdout": "/tmp/stcon04-executor-web-e37.txt",
+  "stdout_sha256": "f2153881c46fcdbe9928a26fcdb395730a889b1ad7940cd59134993e798bd98a",
+  "source_seal": "web-source-seal-e37-v1.1.json",
+  "source_recheck": "web-source-recheck-e37-v1.1.json",
+  "root_verified": [
+    "Synthetic stdout hash, TypeScript/Vite and7files/51unit summary",
+    "All259 source bytes/full positive inventory unchanged before writer release",
+    "Owned disposable cleanup"
+  ],
+  "phases": {
+    "typescript_vite_build": "passed",
+    "web_unit": {
+      "files_passed": 7,
+      "tests_passed": 51,
+      "api_client_tests": 19,
+      "semantic_hash_tests": 2,
+      "duration_seconds": 0.688
+    },
+    "owned_cleanup": "completed"
+  },
+  "actual_changes_since_e36": 13,
+  "reason_for_additional_web_checkpoint": "New versioned actor/BU/conversation-scoped pending snapshot restoration and preAdmission uncertainty provenance materially changed frontend state since E36; compile/unit checkpoint was requested before full all.",
+  "source_changes_not_behavior_verified": [
+    "SessionStorage snapshot load/save/explicit replay and reload isolation",
+    "Browser same-frame open/confirm bursts, ABA, uncertain/reload/known acceptance/local recovery and safe preAdmission paths",
+    "API provenance/safe state projection, outbound response changes, new webhook/protocol/admission tests"
+  ],
+  "migration_change_source_observation": "The new, not-yet-preserved-runtime-applied admissions migration adds comments documenting SQL-only partial/expression indexes. E37 web does not validate that migration or database parity.",
+  "chronology": "Additional tests were written alongside implementation changes; E35 alone retains its exact earlier first-UI assertion RED.",
+  "next": "Sole writer released after postseal to finish exact negative protocol/window/context/schema/query-count coverage, then request a complete-candidate all freeze.",
+  "remaining": [
+    "Actual full API/PG/browser all run",
+    "Criterion-specific SQL/native/enum/constraint/query-bound and protocol evidence",
+    "Independent assurance, full diff-guard boundary resolution and approved local/operator proof"
+  ],
+  "limits": [
+    "Web build/unit is not browser, storage/recovery, API/PG or complete ST-CON-04 validation.",
+    "No delivery criterion or stage is promoted by this checkpoint.",
+    "E02/E04/E18/E35a and inherited debt remain applicable."
+  ]
+}
