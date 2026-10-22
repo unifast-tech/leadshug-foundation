@@ -1,0 +1,103 @@
+{
+  "schema": "stcon05.root-selected-public-resource-projections.v1",
+  "projections": [
+    {
+      "service": "api",
+      "field": "NanoCpus",
+      "value": 0,
+      "type": "int"
+    },
+    {
+      "service": "api",
+      "field": "Memory",
+      "value": 0,
+      "type": "int"
+    },
+    {
+      "service": "api",
+      "field": "MemorySwap",
+      "value": 0,
+      "type": "int"
+    },
+    {
+      "service": "api",
+      "field": "MemoryReservation",
+      "value": 0,
+      "type": "int"
+    },
+    {
+      "service": "api",
+      "field": "CpuQuota",
+      "value": 0,
+      "type": "int"
+    },
+    {
+      "service": "api",
+      "field": "CpuPeriod",
+      "value": 0,
+      "type": "int"
+    },
+    {
+      "service": "api",
+      "field": "CpuShares",
+      "value": 0,
+      "type": "int"
+    },
+    {
+      "service": "api",
+      "field": "CpusetCpus",
+      "value": "",
+      "type": "str"
+    },
+    {
+      "service": "web",
+      "field": "NanoCpus",
+      "value": 0,
+      "type": "int"
+    },
+    {
+      "service": "web",
+      "field": "Memory",
+      "value": 0,
+      "type": "int"
+    },
+    {
+      "service": "web",
+      "field": "MemorySwap",
+      "value": 0,
+      "type": "int"
+    },
+    {
+      "service": "web",
+      "field": "MemoryReservation",
+      "value": 0,
+      "type": "int"
+    },
+    {
+      "service": "web",
+      "field": "CpuQuota",
+      "value": 0,
+      "type": "int"
+    },
+    {
+      "service": "web",
+      "field": "CpuPeriod",
+      "value": 0,
+      "type": "int"
+    },
+    {
+      "service": "web",
+      "field": "CpuShares",
+      "value": 0,
+      "type": "int"
+    },
+    {
+      "service": "web",
+      "field": "CpusetCpus",
+      "value": "",
+      "type": "str"
+    }
+  ],
+  "private_config_read": false,
+  "runtime_mutation": false
+}

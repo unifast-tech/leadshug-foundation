@@ -1,0 +1,55 @@
+{
+  "schema": "stcon05.r41-image-helper-root-static-review.v1",
+  "at_utc": "2026-10-22T05:21:01.156531+00:00",
+  "mode": "Root Operational/DevOps full895linehelper/fullplan/fullstaticrecord read; AST/literal data shape checks only, never invoked",
+  "helper": "foundation_documentation/artifacts/tmp/stcon05-image-activation-r41/activate_api_web_r41.py",
+  "helper_sha256": "87e65877a295528654f28e6668c7521ab0b07ec22039403e6f5a9a8a1d50f7fa",
+  "outcome": "HOLD before anyarchive/build/runtime phase; fresh bounded executor context fornewv1.2 repairs; priorhelper immutable",
+  "findings": [
+    {
+      "id": "IMG-R41-01",
+      "severity": "high",
+      "evidence": "load_freeze/verify_frozen_sources/main never check30 inheritedseals, and source/HEAD checks runonlyarchive/build. Protected outbound/channel sources may be archived outside38 and mustremainexact.",
+      "repair": "Verify30exact inherited manifestpaths and3HEADs/38sources beforeALLphases; compare archivedcurrent frozen/protectedregulars toexpectedhashes."
+    },
+    {
+      "id": "IMG-R41-02",
+      "severity": "high",
+      "evidence": "METADATA_PARENT points raw metadata-preflight.json, which has topology directly. preserved_topology and phase_recreate instead read [actual_receipt][topology], a wrapper that exists onlyinrootEacceptance.",
+      "repair": "Read rawmetadata topology; retain accepted2d548...binding."
+    },
+    {
+      "id": "IMG-R41-03",
+      "severity": "high",
+      "evidence": "docker.exe cp andcurl.exe --output receiveLinuxabsolute /mnt/c paths. Windowsclients needtranslatedWindowsdestinations orstdout streams. verify wouldfailafterrecreation.",
+      "repair": "Use explicitWindows-safe pathtranslation forownedproof destinations orstreamtar stdout forselectedcompiledtrees; useexistingcurl_local_in_memory forALLgatewayfetches toavoiddisk/temp andWindowsoutputpath issue. Neverserialize runtimeconfig."
+    },
+    {
+      "id": "IMG-R41-04",
+      "severity": "medium",
+      "evidence": "Recreate onlybindsimage-receipt parent; no actual verified migration-result receipt admission.",
+      "repair": "Require rootGOexactsuccessfulcurrentmigrationreceipthash/path; validate schema/status/source/25completed/no pending beforemutation. ParentrootGO remains phaseauthority."
+    },
+    {
+      "id": "IMG-R41-05",
+      "severity": "medium",
+      "evidence": "Targetvolume_names uses subset ofuploadsallowlist, permitsemptyset. Existing nameduploads mustbepreserved.",
+      "repair": "Require exactone nameduploads mount inAPIandnoneinWeb, preserveitsactualdestination/RW; rejectunmodeledCPU/memory limits ratherthandropping them."
+    },
+    {
+      "id": "IMG-R41-06",
+      "severity": "medium",
+      "evidence": "Archive/manifest validation checks separatehashes but doesnot compare actualtarfiles/members tologicalmanifest orrechecknonfrozeninputs beforebuild.",
+      "repair": "Bounded validate exactmembers/filehashes/positivepaths/symlinks and currentallmanifestinputbytes beforebuild; no entireapproot traversals."
+    },
+    {
+      "id": "IMG-R41-07",
+      "severity": "low",
+      "evidence": "root_signature onlychecks32char marker; plan saysauthenticity butnotcryptographicverification.",
+      "repair": "Describe aslocalrootissued/hashbound receiptidentifier (rename root_receipt_id beforeanyGO), no cryptographicclaim/newsecretflow."
+    }
+  ],
+  "accepted": "PositiveCOPY inputs/no privatefiletraversal, separatephaseGO/parenthashes, externalproviderexclusion, API/Webenvonlymemory/stdinCompose/no peers/once/no auto rollback/retry, dynamicconfigmemoryseparate fromstaticassets, actualruntimefacts direction sound. No productsource defect/test rerun ornewreviewpackage needed.",
+  "next": "Fresh routineexecutor repairsONLY newtempv1.2 artifacts, AST/static/explicitdiff/hashes; rootrereads exactdiff/criticalwholefunctions beforearchiveGO. No invocation orprivateDocker/configread.",
+  "helper_line_count": 895
+}

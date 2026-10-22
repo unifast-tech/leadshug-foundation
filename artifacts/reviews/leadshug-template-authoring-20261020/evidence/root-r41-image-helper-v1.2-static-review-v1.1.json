@@ -1,0 +1,27 @@
+{
+  "schema": "stcon05.root-image-helper-v1.2-static-review.v1",
+  "reviewed_at_utc": "2026-10-22T05:30:57.125116+00:00",
+  "outcome": "hold_no_execution",
+  "helper_sha256": "25bf1daebdec5388cc97eff00f17cb57fff0cacecd3de597dfbd174876e10dc6",
+  "helper_invoked": false,
+  "runtime_mutation": false,
+  "findings": [
+    {
+      "id": "IMG-R41-08",
+      "line": 119,
+      "finding": "previous_r39_sha256 equality checks active freeze continuity, not inherited protected seals. All 30 protected inherited paths have zero overlap with the 38 frozen sources. Require exact hash-bound inherited-working-tree-v1.1.json, select active_mutation_admitted false exactly30 and rehash mapped public paths before every phase; include matching protected archive files in manifest expected-hash checks.",
+      "inherited_inventory_sha256": "34ef44537437eebae5b7f7b461afa1bfffa92645ebdc3c28c37096073298c543"
+    },
+    {
+      "id": "IMG-R41-09",
+      "line": 381,
+      "finding": "Python tarfile removes trailing directory slash in getmembers: independently reproduced TarInfo(src/) -> member.name src. Normalize member and manifest directory keys consistently; retain exact uniqueness, kind, link, bytes/hash and allowlist checks."
+    },
+    {
+      "id": "IMG-R41-10",
+      "line": 527,
+      "finding": "Go template if .HostConfig.NanoCpus != 0 is invalid syntax. Use Go template ne or numeric field truthiness; string CpusetCpus through ne with empty string. No Docker invocation performed."
+    }
+  ],
+  "instruction": "New v1.3 dormant helper/plan/diff/static proof only. Preserve v1.1/v1.2 bytes. Fresh routine executor after terminal static failure. No GO/build/runtime execution."
+}

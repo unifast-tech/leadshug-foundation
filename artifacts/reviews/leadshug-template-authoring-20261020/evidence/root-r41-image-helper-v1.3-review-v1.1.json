@@ -1,0 +1,23 @@
+{
+  "schema": "stcon05.root-image-helper-v1.3-review.v1",
+  "at_utc": "2026-10-22T05:34:15.635323+00:00",
+  "outcome": "accepted_for_archive_phase_only_after_exact_go",
+  "artifacts": {
+    "activate_api_web_r41_v1_3.py": "195372de4e93cb9c0dfdc11fc09c8ec1540dac21e78b4c402abaf5a1918338bc",
+    "plan.md": "2a03666e26b99c4bb9b21cb95b275d4366fc7d0945ea297b4d4b721c4095e6c0",
+    "full-diff-v1.2-to-v1.3.diff": "39890235ab50a0afeec8f9033348692aea4a07dc6fc4f3692f519d87b79ce59c",
+    "static-proof.json": "882026222b19a3e713fce44bfc68b007bef26a01d1d04b36907e81442a025cf7"
+  },
+  "root_review": "Full original895lines, full v1.2 repair diff and criticalfunctions, full v1.3 diff and plan/staticproof read. Protected30 now separately hashbound and checked everyphase with38/3heads. Tar directory keys normalized consistently; exact manifest/currenttar byte comparison retained. Go ne syntax valid by source inspection. Raw metadata topology, Windows destinations, in-memory fetch/config, migration gate, exact uploads and CPU/memory guards retained. No runtime behavior claimed.",
+  "helper_invoked": false,
+  "remaining_phase_gates": [
+    "archive actual receipt root review",
+    "build separate GO and actual image receipt",
+    "migration once apply GO and result",
+    "API/Web recreation separate GO",
+    "source-image-running verify separate GO",
+    "access actual proof",
+    "one assisted provider template submit/status",
+    "fresh final review"
+  ]
+}

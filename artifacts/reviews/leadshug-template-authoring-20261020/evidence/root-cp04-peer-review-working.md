@@ -443,3 +443,43 @@ Root independently accepted actual canonical all0/802:284 API unit,398 PG,45 Web
 ## R94 — all affected candidate assurance/PCV accepted; dormant Ops v1.2 reviewed
 
 Fresh terminal0 performance/security/adherence and full-outputTQA supplement all0materialfindings on identical992852byte canonicalround05package. BaselineTQA preserved distinctbinding and supplemented mandatorytables/5answers/15decisions. Canonical needs_adjudication only recommended_path free-text mismatch; semanticallysame nextgates, recorded accepted-debt without cosmeticround. Root current4PCVlanes passed with hashcheckedactualmarker evidence/privatecohortlimits. OPS/readbudget/testafter/opaqueR39 limits retained. DormantOps helper1774 rootread all; relativeGit/WebCOPY/prose/.Aliases correctedNEWv1.2 SHA29096ec3f9c88bb4bee6c6cb9cead0616d894c301508398ca1a8c174ff707e08, root exactdiff/AST/staticGoescapedliteral reviewed; no runtime invocation. Next separate signedpreflightGO/metadataprobe only, newfreshDevOpsexecutor afterprepterminal; no migrations/build/activation/access until exactlaterGO. DeliveryPending.
+
+
+## R95 — preserved TEST metadata actually accepted; source-image helper preparation
+
+One exact reviewedv1.2 phasepreflight invocation exited0, metadatareceipt SHA2d54871a663a3b278e40b849f44e32a4ef19a414e600c30c9364cc4134a1d542 root independently checked.23applied/2approvedpending/no partialtemplateobjects/currenttarget/source38/seals30/heads/ownedfullIDs/network/namedvolumes; no businessrows/migrationlogs/configpersist/mutation. E/root-r41-metadata-acceptance-v1.1.json is current rootreceipt. Newfresh routineexecutor template_activation_image_r41 preparesONLY dormant archive/build/recreate/verify helpers under tmp/stcon05-image-activation-r41. PositiveCOPY/symlink/no privatefiles/source-image-runtime/onlyAPI-Web/envmemory/emptyComposeEnv/once/noautoretryrollback constraints. Root reloaded DevOps/environment/localplan and read full historicalST06recreation source as reference, not executionpermission. Published Foundation524ac232/push0, producthistory unchanged; exact8frozenpacket/dispatch whitespace exception documented, otherstagedpaths normaldiffcheck0. Current TODO nextstep/PCV identitytimestamps corrected postcommit. No archive/build/migration/recreate/tunnel/Meta action yet. DeliveryPending.
+
+
+## R96 — first image helper static HOLD; fresh bounded v1.2 repair
+
+Root read entire895linehelper87e65877a295528654f28e6668c7521ab0b07ec22039403e6f5a9a8a1d50f7fa, fullplan/staticproof, no invocation. Found concrete missing30seal/allphase sourceguards; rawmetadata[actual_receipt]shape mismatch; WindowsDockerCP/CurlLinuxpath issue; no appliedmigrationreceipt gate; targetvolumesubset permitsmissinguploads; tar/manifest/sourceinput binding incomplete; signature marker prose. E/root-r41-image-helper-static-review-v1.1.json classifies/HOLD. Configjs alreadymemoryonly correct; nofalseclaimthatprivateconfigwaswritten. Sourceproduct/testall remainsunchanged, candidateassurance/PCV valid. Freshcontext routineexecutor template_image_repair_r41 ownsNEWtmp/stcon05-image-activation-r41-v1.2 only, parent87eimmutable, AST/static/diff/hashes no actualarchive/build/runtime. RootmustreviewbeforearchiveGO. No user approval needed forbounded HOWrepairs; no newtest/product scope. DeliveryPending.
+
+
+### R97 — Static image helper v1.2 hold; fresh v1.3 repair
+
+Operator credential revocation/disable remains contained and closed; no retest or private connector call. Profile Operational / DevOps, active Docker, Prisma, PostgreSQL, NestJS, React, Vite; Genesis ruled out (existing approved implementation). Read-only context verifier PACED-Ready. Root independently rechecked all38 current public sources,30 distinct inherited protected paths and3 product HEADs. v1.2 remains unexecuted: IMG-R41-08..10 document exact inherited-seal omission, independently reproduced tarfile directory normalization, and invalid Go template comparison syntax. Fresh gpt-6-luna/medium routine executor prepares NEW dormant v1.3 only under routing GO; no runtime or source mutation. All802 and candidate assurance/PCV remain accepted. Delivery Pending.
+
+
+### R98 — Exact v1.3 archive admission
+
+Fresh preparation terminal and immutable; root read full v1.3 diff/plan/staticproof, independently matched all4artifact hashes and parsed AST without import. IMG-R41-08..10 corrected: separate30seals, normalizedtar directorykeys, valid Go ne. Exact helper195372de4e93cb9c0dfdc11fc09c8ec1540dac21e78b4c402abaf5a1918338bc accepted only for separately gated phases. Root issued archive-only GO b8b3ab2134a0da345e7a33be7479098e83633cdf338b1b6613fb9e4650dac845; fresh routineexecutor template_image_executor_r41_v13 executes one archive phase then stops. No build/migration/runtime permission granted yet. Delivery Pending.
+
+
+### R99 — Actual source archives accepted; candidate build admitted
+
+Archive helper ran one time terminal0 with empty streams. Actual receipt402b33111f22fd92a5997bd815644f28af35a58b29dc52366f9d2574fbfd3b6f. Root independently read all tar members in memory and checked normalized uniqueness/kinds/content bytes, manifest hashes/allowlists/source paths/currentpositiveinputs and included38/30 hashes; API159regularfiles/Web45. No extraction or runtime mutation. Separate build-only GO fbeaabf8439553ed1b4ba5ac1f9c0829b893a7a25e1a6e75157cba25fc3d1949 admitted to same soleexecutor after archive terminal; no migration/recreation authority.
+
+
+### R100 — Actual candidate images and preserved TEST migrations accepted
+
+Build terminal0, image-receipt e9751c83e0909191c44e5ea7ca1965ed5a9de735e6210d216c3e82697bfa84cb. Root independently projected imageIDs and3source labels for API90e5e528357c36d206193ea1220ae36a5f3d26a07f8728be5fc38f0b9ea20976/Webad57dfed419414d50bec413ddd89ea15cc1acf31ca8d0dd263e31f44fa6f744b. Separate applyGO7fe3bd64fb2f7258bf596e44ae18911aca1d3e2769f3ea96b6ad7e653ae9d2fb admitted immutable migrationhelper29096. Actual applyterminal0, result3b03c5cb6b4286f8d368781572917419433defccb30b31128400494fa0288125 verified25complete/no pending/templatecatalogcomplete/deploy0/status0/topologypreserved/no retry. Root accepted exactresult, then separate API/Web-only recreateGO00c9412e1a74b6a690c1c64295d1232f8f199bdd2b33454d5c961964a9f70332 handed to soleexecutor. No gateway/tunnel/provider authority yet. Delivery Pending.
+
+
+### R101 — Pre-Compose projection failure contained; exact JSON numeric correction
+
+Actual recreatev1.3 terminal2 with sanitized boundedcontainerprojection error and no recreationreceipt. Root read helper controlflow and independently confirmed both oldAPI/Web IDs+imageIDs/running unchanged, so no Compose mutation. Root reproduced `ne` JSONwrappednumber-vs-int error; numerictruthinessalso incorrectlytrue atzero. All7neededresourcefields selected via exactjson projections parse0; cpusetempty. Fresh routineexecutor v14 prepares narrow JSONnumericguard fix and distinctphaseGOfilenames, preserving immutablearchives/images/25complete migrations. No automaticretry/rebuild/reapply or productmutation. Delivery Pending.
+
+
+### R102 — Exact v1.4 JSON numeric guard admitted
+
+Fresh helper9c0c2507bd3765df7542a6aa59126e974a868b825720cca3d6262995747c24e5 static/full narrowdiff accepted. Newownedv14artifactdirectory references immutablev13 archives/image receipt without copies; this HOW variation accepted. Plan proseoldhash typo documented; staticproof/rootactual original195372...b4c402abaf5... authoritative. SevenselectedJSONresourcefields parsed strict numericzero, boolguard unchanged. Freshmanual recreateGO6299662f2418de4ad1d52c5b5528c6f15fb77e6a1daa7aa61240b602112c7185 admitted to fresh v14executor. No automaticretry, no rebuild/reapply.

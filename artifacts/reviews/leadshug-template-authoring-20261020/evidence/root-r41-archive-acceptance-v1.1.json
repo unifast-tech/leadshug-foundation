@@ -1,0 +1,23 @@
+{
+  "schema": "stcon05.root-r41-archive-acceptance.v1",
+  "at_utc": "2026-10-22T05:35:38.146376+00:00",
+  "outcome": "verified",
+  "archive_receipt_sha256": "402b33111f22fd92a5997bd815644f28af35a58b29dc52366f9d2574fbfd3b6f",
+  "exit": 0,
+  "root_independent_validation": "All actual tar members normalized/unique/kinds/content hashes and exact current positive files checked; manifest allowlists/source mapping validated; all included frozen/protected digests matched. No archive extracted or helper import.",
+  "archives": {
+    "api": {
+      "manifest_entries": 222,
+      "regular_files": 159,
+      "archive_sha256": "ce8a9491da6f150add37b916b73a77b5efe10f65a02b104d931baff97583f1de",
+      "manifest_sha256": "9ea3ce214f5d90454d6de374a7e21021909114cb90ab5f93dea7b1210f1b3377"
+    },
+    "web": {
+      "manifest_entries": 48,
+      "regular_files": 45,
+      "archive_sha256": "672f08814c3c03750df5cd88a322550f8525cd095e0b6c5970a493a8ae8a86fb",
+      "manifest_sha256": "7d2bbfe360bb795426187bc2fbef50f14ce2cee00ca68dea4a3a6dca0a0bcbad"
+    }
+  },
+  "runtime_mutation": false
+}

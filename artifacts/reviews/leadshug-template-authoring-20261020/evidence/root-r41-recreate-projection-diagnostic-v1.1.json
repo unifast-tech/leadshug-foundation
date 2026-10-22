@@ -1,0 +1,55 @@
+{
+  "schema": "stcon05.root-bounded-public-projection-diagnostic.v1",
+  "projections": [
+    {
+      "service": "api",
+      "projection": "identity",
+      "exit": 0,
+      "public_result": "9795741bec7f58328d87f5b3fe23eae9fba7f13c8cb2d72c21f96497dbb9beb8|sha256:d50bc6a4281753e3bb6a31764c3ada9dc27351976515f2f605aceec66b8582b1|running"
+    },
+    {
+      "service": "api",
+      "projection": "nanocpus_ne",
+      "exit": 1,
+      "incompatible_comparison_types": true
+    },
+    {
+      "service": "api",
+      "projection": "nanocpus_truth",
+      "exit": 0,
+      "public_result": "yes"
+    },
+    {
+      "service": "api",
+      "projection": "cpuset",
+      "exit": 0,
+      "public_result": "no"
+    },
+    {
+      "service": "web",
+      "projection": "identity",
+      "exit": 0,
+      "public_result": "472b3f6fcde8c032bfa90997ef0cd674971dfccdb292e9ef057187c552e3dff5|sha256:6015c99229f1c2d56a0bf94500a04a5e21338c5985cdf4b368d192c18341bd6b|running"
+    },
+    {
+      "service": "web",
+      "projection": "nanocpus_ne",
+      "exit": 1,
+      "incompatible_comparison_types": true
+    },
+    {
+      "service": "web",
+      "projection": "nanocpus_truth",
+      "exit": 0,
+      "public_result": "yes"
+    },
+    {
+      "service": "web",
+      "projection": "cpuset",
+      "exit": 0,
+      "public_result": "no"
+    }
+  ],
+  "private_config_read": false,
+  "runtime_mutation": false
+}

@@ -1,0 +1,31 @@
+{
+  "schema": "stcon05.root-r41-local-migration-acceptance.v1",
+  "at_utc": "2026-10-22T05:38:34.474379+00:00",
+  "outcome": "verified",
+  "actual_result_sha256": "3b03c5cb6b4286f8d368781572917419433defccb30b31128400494fa0288125",
+  "actual_result": {
+    "authorization_sha256": "7fe3bd64fb2f7258bf596e44ae18911aca1d3e2769f3ea96b6ad7e653ae9d2fb",
+    "catalog": {
+      "completed_count": 25,
+      "migration_count": 25,
+      "pending": [],
+      "template_catalog_complete": true
+    },
+    "configuration_values_persisted": false,
+    "deploy_exit": 0,
+    "migrate_status_exit": 0,
+    "preflight_sha256": "2d54871a663a3b278e40b849f44e32a4ef19a414e600c30c9364cc4134a1d542",
+    "retry": false,
+    "schema": "stcon05-apply-result-v1",
+    "source": {
+      "freeze_sha256": "dfcbd6a59880b02fd362d0cb6ced83ff44c9363c95aae400addb1c1934a143c6",
+      "heads_verified": true,
+      "migration_count": 25,
+      "protected_original_count": 30,
+      "source_count": 38
+    },
+    "status": "verified",
+    "topology_preserved": true
+  },
+  "authority": "Existing approved2additivemigrations/localTEST; oneexactapplyGO, candidateAPI90e5, no retry/resolve/reset/drop; API/Web not yet recreated."
+}

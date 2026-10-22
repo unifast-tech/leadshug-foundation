@@ -1,0 +1,14 @@
+{
+  "schema": "stcon05.root-r41-v14-helper-review.v1",
+  "at_utc": "2026-10-22T05:43:22.190702+00:00",
+  "outcome": "accepted_for_new_exact_recreate_go",
+  "artifacts": {
+    "activate_api_web_r41_v1_4.py": "9c0c2507bd3765df7542a6aa59126e974a868b825720cca3d6262995747c24e5",
+    "full-diff-v1.3-to-v1.4.diff": "4ff1cdc5c9cf239158fb749a6a53be5f1237cef10094cc83a6d6169be59c55ae",
+    "activation-projection-plan-v1.4.md": "977a710cea43fb4aea9753cffbf0d37c5b8ab012d7046dde283dffe37204e55c",
+    "static-proof-v1.4.json": "33f4a3dae2414fbd7ece8c5c66d7692700d45c1a30ae256132e435190f8cd647"
+  },
+  "root_review": "Full narrow diff/plan/staticproof read. Seven positive JSON numeric fields strict zero excludingbool match actualreadonlyDockerproof. Prior bool/slice/mapguards retained. Newownedv14directory with pathbounded references to immutablev13archives/image receipt accepted as HOW; no sourcecopy/build/reapply needed. All38/30/heads/migration/settings/topology/once gates retained.",
+  "provenance_note": "Plan prose oldhelperhash drops af substring; staticproof old/expected_old and root independent actual SHA195372de4e93cb9c0dfdc11fc09c8ec1540dac21e78b4c402abaf5a1918338bc authoritative. No frozen artifact rewritten.",
+  "runtime_mutation": false
+}

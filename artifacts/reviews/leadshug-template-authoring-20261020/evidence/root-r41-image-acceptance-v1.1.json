@@ -1,0 +1,11 @@
+{
+  "schema": "stcon05.root-r41-image-acceptance.v1",
+  "at_utc": "2026-10-22T05:37:16.097997+00:00",
+  "outcome": "verified_candidate_images",
+  "image_receipt_sha256": "e9751c83e0909191c44e5ea7ca1965ed5a9de735e6210d216c3e82697bfa84cb",
+  "build_exit": 0,
+  "root_independent_readback": "Exact image IDs and three positive source labels match receipt for API and Web; no Config.Env read. Real source archive build exit0 accepted. Running services not changed.",
+  "migration_candidate_api": "leadshug_channels_local-api:stcon05-r41-f6fc6cb71015d9092b355baa731964e4bb09aebc6eff2b812bad29616eed4ac5",
+  "migration_candidate_api_id": "sha256:90e5e528357c36d206193ea1220ae36a5f3d26a07f8728be5fc38f0b9ea20976",
+  "runtime_activation_claim": false
+}

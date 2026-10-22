@@ -42,7 +42,7 @@ O usuário quer preparar no LeadsHug a mensagem que usará para iniciar atendime
 ## Delivery Status Canon (Required)
 - **Current delivery stage:** Pending
 - **Qualifiers:** none
-- **Next exact step:** candidata r41 aceita0/802 e assurance fresca TQA completa/performance/security/adherence sem novos achados; round05 accepted-debt e4lanes PCV atuais passed em evidence/root-candidate-r41-assurance-disposition-v1.1.json. Helper dormente v1.2 exato revisado por root em evidence/root-r41-ops-v1.2-review-v1.1.json. Emitir GO estrito e executar apenas metadata readonly no TEST preservado; revisar recibo antes de archives/images/duas migrations/ativação API-Web/HTTPS. Uma prova Meta assistida e final fresco continuam obrigatórios. Delivery Pending.
+- **Next exact step:** helperv1.4 revisado em evidence/root-r41-v1.4-helper-acceptance-v1.1.json; nova admissão manual6299662f2418de4ad1d52c5b5528c6f15fb77e6a1daa7aa61240b602112c7185 para recriaçãoAPI/Web somente após provar falhav1.3 antesdeCompose e serviços intactos. Executor fresco template_activation_projection_r41_v14 executaUMAvez; aguardar terminal antes de prova fonte/imagem/runtime/HTTP. Archives/imagens aceitos/migrations25complete NÃO reaplicar/all802/assurance/PCV mantidos. Delivery Pending.
 
 ## Active Work State (Required While TODO Remains In `active/`)
 - **Work state:** implementation
@@ -621,7 +621,7 @@ Planejado para o gate de entrega após APROVADO; nenhum resultado de implementa�
 
 - **Disposition:** keep-active
 - **Disposition reason:** v1.1 aprovada2026-10-21; implementação/testes em checkpoints seriais, sem entrega completa ainda.
-- **Post-commit/push status:** Foundation main publicou `db721a25` com diagnóstico API aceito e admissão do all r41; a execução atual0/802 e a nova assurance estão sendo consolidadas; produto permanece sem commit/push.
+- **Post-commit/push status:** Foundation main publicou `524ac232` com all r41 aceito0/802, assurance completa/PCV e preflight metadata preservado0/23+2; produto permanece sem commit/push.
 - **Next path/status action:** manter active/In-Progress; concluir checkpoints, all e assurance antes de ativação/prova assistida/closeout.
 
 ## Security Risk Assessment (Mandatory Before Delivery)
@@ -650,23 +650,23 @@ Planejado para o gate de entrega após APROVADO; nenhum resultado de implementa�
 ### Lane Detail Packet Template
 #### EPS
 - **Trigger rationale:** listagem/lookup scoped de drafts/observações e reserva de nome; EXPLAIN ANALYZE com amostra cardinalidade, limite de página e budget externo. Sem N+1/catalog fan-out.
-- **Recorded at (UTC):** 2026-10-19T20:34:09Z
-- **Executor ID:** planned-executor-st-con-05
+- **Recorded at (UTC):** 2026-10-22T04:59:15Z
+- **Executor ID:** /root/template_session_diagnostics_r40
 - **Evidence object:** `evidence/pcv-r41-current-v1.1-eps.json`, hash pcv-1 conferido e lane passed sob disposição independente corrente: `evidence/root-candidate-r41-assurance-disposition-v1.1.json`. Private local candidate only; sem prova Meta/runtime preservado/capacidade de produção.
 #### FRC
 - **Trigger rationale:** save+submit e atraso em troca BU/canal/draft; Playwright real, rastrear requests e estado no backend.
-- **Recorded at (UTC):** 2026-10-19T20:34:09Z
-- **Executor ID:** planned-executor-st-con-05
+- **Recorded at (UTC):** 2026-10-22T04:59:15Z
+- **Executor ID:** /root/template_session_diagnostics_r40
 - **Evidence object:** `evidence/pcv-r41-current-v1.1-frc.json`, hash pcv-1 conferido e lane passed sob disposição independente corrente: `evidence/root-candidate-r41-assurance-disposition-v1.1.json`. Private local candidate only; sem prova Meta/runtime preservado/capacidade de produção.
 #### BCI
 - **Trigger rationale:** barreiras PG/contador HTTP, submit e reserva de nome, crash antes/depois POST e reconcile seguro; provar também coordenação da mesma conta entre tenants e Local Commit Certainty Contract com PG real (rollback e commit concluído seguido de erro na borda de ACK); provar invariantes D-06/07 com nova instância de serviço sobre PG durável, GET observacional antes do POST recovery, dois recuperadores e executor/resposta tardios, não apenas throw na request viva.
-- **Recorded at (UTC):** 2026-10-19T20:34:09Z
-- **Executor ID:** planned-executor-st-con-05
+- **Recorded at (UTC):** 2026-10-22T04:59:15Z
+- **Executor ID:** /root/template_session_diagnostics_r40
 - **Evidence object:** `evidence/pcv-r41-current-v1.1-bci.json`, hash pcv-1 conferido e lane passed sob disposição independente corrente: `evidence/root-candidate-r41-assurance-disposition-v1.1.json`. Private local candidate only; sem prova Meta/runtime preservado/capacidade de produção.
 #### RLS
 - **Trigger rationale:** pequeno ensaio de concorrência/load bounded do novo fluxo/listagem no PG descartável; não claim SLO ou produção.
-- **Recorded at (UTC):** 2026-10-19T20:34:09Z
-- **Executor ID:** planned-executor-st-con-05
+- **Recorded at (UTC):** 2026-10-22T04:59:15Z
+- **Executor ID:** /root/template_session_diagnostics_r40
 - **Evidence object:** `evidence/pcv-r41-current-v1.1-rls.json`, hash pcv-1 conferido e lane passed sob disposição independente corrente: `evidence/root-candidate-r41-assurance-disposition-v1.1.json`. Private local candidate only; sem prova Meta/runtime preservado/capacidade de produção.
 
 ## Verification Debt Assessment (Required Before `Completed`; mandatory audit for `medium|big` or when debt signals exist)

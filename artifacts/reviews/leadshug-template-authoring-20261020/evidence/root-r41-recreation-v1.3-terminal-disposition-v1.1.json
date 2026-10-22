@@ -1,0 +1,12 @@
+{
+  "schema": "stcon05.root-r41-recreation-v1.3-terminal-disposition.v1",
+  "at_utc": "2026-10-22T05:41:05.246025+00:00",
+  "exit": 2,
+  "receipt_created": false,
+  "stdout_sha256": "10e1f9cade4a97ab583a7b4255907429d2a1ccc70a2f3238396f18b73cc644ed",
+  "reason": "bounded container projection failed",
+  "cause": "Root reproduced Go numeric comparison incompatible types and truthiness of wrapped numeric zero returning yes. Exact positive JSON projections parse numeric0 for all7resourcefields onAPI/Web.",
+  "containment": "Root independently confirmed unchanged original API9795741bec7f58328d87f5b3fe23eae9fba7f13c8cb2d72c21f96497dbb9beb8/Web472b3f6fcde8c032bfa90997ef0cd674971dfccdb292e9ef057187c552e3dff5 running oldimageIDs. Failure is before compose up in helper controlflow. Migrations remain25complete; no reapply.",
+  "next": "freshroutine executor prepares NEWv1.4 helper strict positive JSONnumericzero checks, sameimmutablearchive/imageparents, distinctnewphaseGO paths; noexecution pendingrootreview.",
+  "delivery": "Pending"
+}
