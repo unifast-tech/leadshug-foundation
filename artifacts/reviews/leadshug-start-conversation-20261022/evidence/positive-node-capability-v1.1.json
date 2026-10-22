@@ -1,0 +1,57 @@
+{
+  "recorded_at_utc": "2026-10-22T15:19:01.127301+00:00",
+  "method": "positive exact public manifest/lockfile JSON inspection; not recursive CLI execution",
+  "unsafe_optional_helper": "node_capability_surface_audit.py scans os.walk(root) even with --manifest; deliberately not run against app/root to preserve approved private boundary",
+  "records": [
+    {
+      "manifest": "api-app/package.json",
+      "lockfile": "api-app/package-lock.json",
+      "dependencies": {
+        "@nestjs/core": {
+          "declared": "^11.0.0",
+          "locked": "11.2.1"
+        },
+        "prisma": {
+          "declared": "^6.0.0",
+          "locked": "6.19.3"
+        },
+        "@prisma/client": {
+          "declared": "^6.0.0",
+          "locked": "6.19.3"
+        }
+      },
+      "required_scripts": {
+        "lint": "eslint \"{src,test}/**/*.ts\"",
+        "build": "nest build",
+        "test": "vitest run --config vitest.config.ts",
+        "test:e2e": "vitest run --config vitest.config.e2e.ts --no-file-parallelism --maxWorkers=1",
+        "prisma:generate": "prisma generate",
+        "prisma:migrate": "prisma migrate deploy"
+      },
+      "engines": {
+        "node": ">=22"
+      }
+    },
+    {
+      "manifest": "web-app/package.json",
+      "lockfile": "web-app/package-lock.json",
+      "dependencies": {
+        "react-dom": {
+          "declared": "^18.3.1",
+          "locked": "18.3.1"
+        },
+        "vite": {
+          "declared": "^5.4.11",
+          "locked": "5.4.21"
+        }
+      },
+      "required_scripts": {
+        "build": "tsc -b && vite build",
+        "test": "vitest run",
+        "test:tela": "npm run build && playwright test"
+      },
+      "engines": {}
+    }
+  ],
+  "scope": "API Node>=22, Prisma locked major6, React/Vite manifests; no inferred runtime readiness"
+}

@@ -7,11 +7,11 @@ LeadsHug — ST-CON-04: abrir conversa por contato e conduzir o primeiro envio c
 ## Artifact Identity
 
 - **Artifact type:** `tactical_execution_contract`
-- **Status:** NotStarted
+- **Status:** InProgress
 - **Version:** 1.1
 - **Created:** 2026-10-19; materially rebased 2026-10-22
 - **Template provenance:** copied from `delphi-ai/templates/todo_template.md` before refinement.
-- **Authority:** this is a planning contract only. No current `APROVADO` exists for ST-CON-04.
+- **Authority:** APROVADO explicitly received from the user on2026-10-22 for reviewed ST-CON-04 v1.1 at Foundation fbbdfa6f; execution requires current normal authority GO, binding rules and strict approved boundaries.
 
 ## Context
 
@@ -46,13 +46,13 @@ Este v1.1 substitui a autoridade ativa da minuta revisada em 2026-10-19. O origi
 
 - **Current delivery stage:** `Pending`
 - **Qualifiers:** `none`
-- **Next exact step:** aguardar APROVADO humano do ST-CON-04 v1.1 revisado; após aprovação, recarregar regras binding, obter authority GO e iniciar RED/test-first nos caminhos admitidos.
+- **Next exact step:** executar RED/test-first e implementar o fluxo aprovado com único writer; preservar baseline herdado não admitido e registrar cada checkpoint antes da assurance.
 
 ## Active Work State (Required While TODO Remains In `active/`)
 
-- **Work state:** `review`
-- **Why this state now:** arquitetura r1 e críticas r1/r2 convergiram; assumptions8/8 GO, scope-drift zero material changes GO e authority pre-approval preflight-go. Falta APROVADO humano; execution_authority_granted=false.
-- **Exit condition:** review/guards do texto corrente convergidos e decisão humana explícita; execução exige ainda authority guard `go`.
+- **Work state:** `implementation`
+- **Why this state now:** APROVADO humano recebido para v1.1; regras binding recarregadas e69 fontes/3HEADs conferidos. Reviews e guards de planejamento preservados; normal authority GO é gate anterior à primeira edição de produto.
+- **Exit condition:** implementação e todas as evidências/reviews/gates de entrega aprovados; estágio continua Pending até os critérios locais reais, sem claim de entrega por aprovação.
 
 ## Scope
 
@@ -79,7 +79,7 @@ n/a; planning draft em revisão, não marcado blocked.
 
 ## Execution Lane Tracking (Required)
 
-- **Local implementation branches:** api/web/root conforme branch declarada pelo owner no handoff; Foundation permanece `main`. Não executar nesta etapa.
+- **Local implementation branches:** root/api/web all feature/number-onboarding, observed immediately after approval; principal checkout only. Foundation main. No product Git writes or topology changes authorized.
 - **Promotion lane path:** local → lanes definidas pelos TODOs/repos após approval; não assumidas neste planejamento.
 - **Lane-promoted threshold:** pending contract/review.
 - **Production-ready threshold:** fora da autorização atual.
@@ -320,7 +320,7 @@ Official primary references consulted 2026-10-22: [WhatsApp Send Messages](https
 
 ## Profile Scope & Handoffs (Required Before `APROVADO`)
 
-- **Primary execution profile:** `strategic-cto` for this rebase; future implementation `operational-coder` after approval.
+- **Primary execution profile:** `operational-coder` after approved strategic handoff; supporting assurance and DevOps profiles at their scoped gates.
 - **Active technical scope:** `nestjs`, `react`, `vite`, `postgresql`, `prisma`, `docker`.
 - **Expected supporting profiles:** `assurance-tester-quality`, `assurance-security-adversarial`, `operational-devops` at their gates.
 - **Scope-check command:** `python3 delphi-ai/tools/profile_scope_check.py --profile strategic-cto foundation_documentation/todos/active/features/TODO-leadshug-start-conversation-by-contact.md foundation_documentation/artifacts/reviews/leadshug-start-conversation-20261022/README.md` returned in scope, exit0; documentation only.
@@ -719,7 +719,7 @@ These dispositions amend proposed contract only. Fresh no-context critique must 
 
 ## Rules Acknowledgement / Ingestion
 
-Ingestão de planejamento; reload binding obrigatório após APROVADO antes de produto.
+Binding ingestion completed after current APROVADO on2026-10-22 for all10 paths below, plus execution/profile/schema/relational workflows. Implementer must reload its touched-surface sources. No rule waiver or product Git authority is inferred.
 
 | Source | Why It Applies Now | Must Preserve | Must Avoid | Execution Impact |
 | --- | --- | --- | --- | --- |
@@ -743,7 +743,7 @@ Ingestão de planejamento; reload binding obrigatório após APROVADO antes de p
 - **Selected effort:** medium
 - **Proof mode:** declared
 - **Exception reason:** n/a
-- **Routing evidence:** artifacts/reviews/leadshug-start-conversation-20261022/evidence/routing-planning-writer-v1.1.json; proposed product executor same tuple, new GO required after APROVADO
+- **Routing evidence:** artifacts/reviews/leadshug-start-conversation-20261022/evidence/routing-implementation-v1.1.json; actual post-APROVADO implementation route GO, one routine executor serialized
 - **Execution topology:** primary-checkout-single-writer
 - **Subagent / delegation authorization:** repository workflow authorizes executors/reviewers; no product execution yet
 - **Git isolation authorization:** not-authorized
@@ -914,12 +914,12 @@ Planning contract reviewed and ready for explicit human APROVADO. This status gr
 
 ## Approval
 
-- **Approval status:** not-approved
-- **Approver:** human task authority
-- **Approval reference:** none for current v1.1; user authorized advance planning, not implementation
-- **Approved scope:** none until explicit APROVADO of current reviewed04
-- **Exclusions:** product source/tests/runtime/Meta actions remain untouched during planning
-- **Renewed-approval trigger:** material scope/decision/API/schema/validation change or new private/public exposure.
+- **Approval status:** approved — APROVADO
+- **Approver:** current human user/task authority
+- **Approval reference:** user reply “APROVADO” on2026-10-22 after current reviewed ST-CON-04 request; evidence/approval-execution-admission-v1.1.json; reviewed Foundation fbbdfa6fd4faf3a1d4cdb62297a06e57676d9cd3
+- **Approval scope:** ST-CON-04 v1.1 SCOPE-01..12 and D-01..10 including normative architecture-r1/critique-r1 contracts, strict file admission, local-only validation/activation sequence and every required delivery gate. No delivery or provider success is inferred.
+- **Exclusions:** all existing Out of Scope constraints remain; no private file/data inspection, automatic real recipient actions, product Git/promotion/Railway, worktrees/auxiliary copies, unrelated debt fixes or implicit broader exposure.
+- **Renewed-approval trigger:** material scope/decision/API/schema/validation change, strict path deviation, new private/public exposure or independently testable objective outside the approved journey.
 
 ## Prior-cycle provenance and sequencing handoffs
 
@@ -1014,3 +1014,23 @@ For a never-released initial attempt, acknowledgment requires current authorizat
 - **Preservation:**68 inherited public source records + supplemental acceptance owner match their seals;3 product HEADs unchanged. No env/private/runtime/business/provider query, test run, product Git or deployment in this planning turn.
 - **Future execution:** test-first + full canonical runner, actual PG/real BFF/browser, candidate assurance and only then bounded preserved local migration/source-bound runtime/operator-assisted own-contact proof. Actual APPROVED official asset remains a completion dependency; baseline802 are prior05 evidence only.
 - **Required binding sources:** the10 concrete rules/workflows named in Rules Acknowledgement / Ingestion, including TODO Approval Gates, NestJS application boundary, React UI boundary, Prisma migration, PostgreSQL integrity and performance/concurrency methods. Reload after approval; no inferred authority from advisory reviewers.
+
+## Execution admission checkpoint E01 — 2026-10-22
+
+Operational/Coder active for NestJS/React/Vite/PostgreSQL/Prisma/Docker, Genesis rejected (existing reviewed canonical package). verify_context: PACED-Ready exit0. All10 binding rule sources and execution/profile/schema/relational methods reloaded. Current post-approval route: routine-executor/gpt-6-luna/medium, GO; principal-checkout-single-writer, no worktree authority. Initial69 public-source seals and3 productHEADs match; current root/api/web branch feature/number-onboarding. Raw secrets, private storage, process args/env/logs and business data excluded. No persistent tool GOAL is created absent explicit human request; bounded executor objective is documented here.
+
+Next implementation checkpoint: causal RED for manual contact/open, initial renderer and qualified window; then same-owner transport/admission/intent lifecycle, real-PG/barrier/commit certainty and UI proof. Root owns this TODO and review/evidence; delegated executor alone owns admitted product changes. Any runtime/test namespace operation uses the canonical public-only disposable runner; preserved local/provider proof follows candidate gates only. No product code was changed before normal authority GO.
+
+## Execution checkpoint E02 — discovery deviation and containment
+
+The delegated executor reported an initial broad `find .. -name AGENTS.md -print`, despite the approved positive-public-path restriction. The wrapper printed an empty output while losing terminal/session metadata; exact traversal and termination outcome are unknown. No private path/content was returned or used. Root prohibited further broad discovery and checked process name only (`pgrep -x find`, exit1/no PID); no live find remained, no process arguments/env/logs or private surface were inspected for remediation. This is a procedural deviation, not proof of privacy compliance; it must be included in independent security/adherence/final packages. Evidence: evidence/execution-discovery-deviation-e02-v1.1.json. Subsequent public implementation/testing remains authorized under the unchanged strict boundary. No inferred credential exposure, runtime/credential change or user data query is performed.
+
+Exact Node/Prisma/React/Vite dependency/script evidence was collected from the four explicit public package/lockfile paths. Recursive node_capability_surface_audit CLI was intentionally not invoked because it traverses before applying --manifest and does not exclude .local-files. Evidence/positive-node-capability-v1.1.json records declared and locked versions, scripts, method and this limitation; it is not a claimed recursive-helper PASS.
+
+## Execution checkpoint E03 — initial causal RED
+
+Delegated canonical API runner returned exit1 after reaching Vitest: the three newly admitted service spec suites could not import their absent implementation modules;26 existing suites/284 tests passed. This is module-loading RED for a new feature, not assertion-level behavior RED. Disposable cleanup was observed by the executor. Receipt: evidence/executor-red-e03-v1.1.json; full synthetic validation stdout remains at the designated temporary path with its hash, not copied into source/evidence as actual-runtime logs. A later compile error in the first implementation attempt (TS2339 union narrowing in initial renderer) was recorded before further correction; no GREEN claim is made. Boundary/order assertion cases were then added before behavioral fixes, with a second canonical RED run in progress. All04 DoD/VAL remain unchecked.
+
+## Execution checkpoint E04 — test causality and pending phase1 GREEN
+
+Actual sequence remains explicit: initial module-loading RED (no service files); first implementation build failed TS2339 before tests; narrow compile-only corrections preceded a true assertion RED3 (2 renderer failures,298 tests passed). Some additional edge cases were completed after preliminary behavior corrections. The executor then temporarily restored pre-fix methods and ran RED4:6 assertion failures/297 tests passed in2 suites,27 passed suites. RED4 is controlled post-hoc causal/reversion evidence, NEVER retrospective test-first proof. It isolated raw phone41-char valid-digit+allowed-space overflow, control-whitespace trimming, reverse/repeated positional binding, blank BODY with static header and raw component-order display. Correct behavior was reapplied before a new canonical API GREEN run. Current unit open/reuse test mocks upsert and is not real-PG/create-vs-reuse/race evidence. No Scope/DoD/VAL is marked complete by this checkpoint; exact PG, authorization/readiness and real-browser evidence remain required. TQA must assess the actual mixed causality, not a rewritten timeline.

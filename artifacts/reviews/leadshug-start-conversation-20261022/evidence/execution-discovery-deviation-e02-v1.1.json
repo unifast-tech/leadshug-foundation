@@ -1,0 +1,18 @@
+{
+  "recorded_at_utc": "2026-10-22T15:21:30.829820+00:00",
+  "incident": "executor used non-admitted recursive AGENTS discovery",
+  "reported_command": "find .. -name AGENTS.md -print followed by public documentation reads",
+  "cwd": "/mnt/c/unifast/leadshug/leadshug_now_docker",
+  "original_tool_return": "executor printed only empty output, losing any session/terminal metadata; termination and traversed scope cannot be established",
+  "private_content_returned": false,
+  "private_traversal_outcome": "unknown; forbidden traversal could have occurred; not a privacy compliance pass",
+  "containment": {
+    "broad_discovery": "stopped and expressly prohibited; positive public inventories only",
+    "process_probe": "pgrep -x find",
+    "probe_exit_code": 1,
+    "probe_result": "no live find PID; no args/env/process logs read",
+    "private_remediation": "none; no further private surface inspected; no credential exposure inferred"
+  },
+  "continuation": "authorized public product work and single canonical disposable RED runner only",
+  "required_follow_up": "carry incident into independent security/adherence/final review; no claim that this session never traversed private paths"
+}

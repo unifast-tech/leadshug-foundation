@@ -1,0 +1,294 @@
+{
+  "recorded_at_utc": "2026-10-22T15:15:50.103413+00:00",
+  "operation": "pre-first-edit-approved-source-preservation",
+  "matches": 69,
+  "heads": {
+    "root": "80e3940126f22a941f90dba4f5e801b6c0eb2f58",
+    "api": "db5a86758a165fac8a1ab587599c37b17890530c",
+    "web": "74b9d4b714044829796f875d00553f077c1c329d"
+  },
+  "branches": {
+    "root": "feature/number-onboarding",
+    "api": "feature/number-onboarding",
+    "web": "feature/number-onboarding"
+  },
+  "records": [
+    {
+      "path": "api-app/prisma/migrations/20261021130000_message_template_drafts/migration.sql",
+      "matched": true
+    },
+    {
+      "path": "api-app/prisma/migrations/20261021150000_message_template_operations/migration.sql",
+      "matched": true
+    },
+    {
+      "path": "api-app/prisma/schema.prisma",
+      "matched": true
+    },
+    {
+      "path": "api-app/src/domain/channels/channel-credential-resolver.spec.ts",
+      "matched": true
+    },
+    {
+      "path": "api-app/src/domain/channels/channel-credential-resolver.ts",
+      "matched": true
+    },
+    {
+      "path": "api-app/src/domain/historico/catalogo.ts",
+      "matched": true
+    },
+    {
+      "path": "api-app/src/domain/historico/cobertura.ts",
+      "matched": true
+    },
+    {
+      "path": "api-app/src/domain/message-templates/template-definition.spec.ts",
+      "matched": true
+    },
+    {
+      "path": "api-app/src/domain/message-templates/template-definition.ts",
+      "matched": true
+    },
+    {
+      "path": "api-app/src/domain/message-templates/template-draft.service.ts",
+      "matched": true
+    },
+    {
+      "path": "api-app/src/domain/message-templates/template-management.dependencies.spec.ts",
+      "matched": true
+    },
+    {
+      "path": "api-app/src/domain/message-templates/template-management.ports.spec.ts",
+      "matched": true
+    },
+    {
+      "path": "api-app/src/domain/message-templates/template-management.ports.ts",
+      "matched": true
+    },
+    {
+      "path": "api-app/src/domain/message-templates/template-observation.service.ts",
+      "matched": true
+    },
+    {
+      "path": "api-app/src/domain/message-templates/template-submission.service.ts",
+      "matched": true
+    },
+    {
+      "path": "api-app/src/domain/message-templates/template-transaction-boundary.ts",
+      "matched": true
+    },
+    {
+      "path": "api-app/src/integrations/message-templates/template-management.module.ts",
+      "matched": true
+    },
+    {
+      "path": "api-app/src/integrations/message-templates/template-management.resolver.ts",
+      "matched": true
+    },
+    {
+      "path": "api-app/src/integrations/meta/message-template.client.spec.ts",
+      "matched": true
+    },
+    {
+      "path": "api-app/src/integrations/meta/message-template.client.ts",
+      "matched": true
+    },
+    {
+      "path": "api-app/src/surfaces/bff/bff.module.ts",
+      "matched": true
+    },
+    {
+      "path": "api-app/src/surfaces/bff/message-templates.controller.ts",
+      "matched": true
+    },
+    {
+      "path": "api-app/test/browser-server.cjs",
+      "matched": true
+    },
+    {
+      "path": "api-app/test/helpers.ts",
+      "matched": true
+    },
+    {
+      "path": "api-app/test/message-template-bff.e2e-spec.ts",
+      "matched": true
+    },
+    {
+      "path": "api-app/test/message-template-drafts.e2e-spec.ts",
+      "matched": true
+    },
+    {
+      "path": "api-app/test/message-template-management.e2e-spec.ts",
+      "matched": true
+    },
+    {
+      "path": "api-app/test/number-onboarding-bci.e2e-spec.ts",
+      "matched": true
+    },
+    {
+      "path": "api-app/test/number-onboarding-pcv.e2e-spec.ts",
+      "matched": true
+    },
+    {
+      "path": "api-app/test/timeline-fixtures.cjs",
+      "matched": true
+    },
+    {
+      "path": "web-app/e2e/message-templates.spec.ts",
+      "matched": true
+    },
+    {
+      "path": "web-app/e2e/number-onboarding-freshness.ts",
+      "matched": true
+    },
+    {
+      "path": "web-app/e2e/timeline-freshness.ts",
+      "matched": true
+    },
+    {
+      "path": "web-app/src/App.tsx",
+      "matched": true
+    },
+    {
+      "path": "web-app/src/api.spec.ts",
+      "matched": true
+    },
+    {
+      "path": "web-app/src/api.ts",
+      "matched": true
+    },
+    {
+      "path": "web-app/src/telas/Modelos.spec.ts",
+      "matched": true
+    },
+    {
+      "path": "web-app/src/telas/Modelos.tsx",
+      "matched": true
+    },
+    {
+      "path": ".github/workflows/ci.yml",
+      "matched": true
+    },
+    {
+      "path": "scripts/test-channels-local.sh",
+      "matched": true
+    },
+    {
+      "path": "scripts/check-channels-ci-parity.py",
+      "matched": true
+    },
+    {
+      "path": "api-app/src/domain/inbox/conversations.service.ts",
+      "matched": true
+    },
+    {
+      "path": "api-app/src/domain/inbox/incoming.service.ts",
+      "matched": true
+    },
+    {
+      "path": "api-app/src/domain/inbox/incoming.typebot.integration.spec.ts",
+      "matched": true
+    },
+    {
+      "path": "api-app/src/integrations/evolution/evolution.client.spec.ts",
+      "matched": true
+    },
+    {
+      "path": "api-app/src/integrations/evolution/evolution.client.ts",
+      "matched": true
+    },
+    {
+      "path": "api-app/src/integrations/meta/meta.client.spec.ts",
+      "matched": true
+    },
+    {
+      "path": "api-app/src/integrations/meta/meta.client.ts",
+      "matched": true
+    },
+    {
+      "path": "api-app/src/surfaces/bff/conversations.controller.ts",
+      "matched": true
+    },
+    {
+      "path": "api-app/src/surfaces/public/conversations.controller.ts",
+      "matched": true
+    },
+    {
+      "path": "api-app/src/surfaces/public/public.module.ts",
+      "matched": true
+    },
+    {
+      "path": "api-app/src/surfaces/webhooks/webhooks.module.ts",
+      "matched": true
+    },
+    {
+      "path": "api-app/test/api-publica.e2e-spec.ts",
+      "matched": true
+    },
+    {
+      "path": "api-app/test/number-onboarding-typebot.e2e-spec.ts",
+      "matched": true
+    },
+    {
+      "path": "api-app/prisma/migrations/20261020170000_message_inbound_window_index/migration.sql",
+      "matched": true
+    },
+    {
+      "path": "api-app/src/domain/channels/transport/channel-dependencies.spec.ts",
+      "matched": true
+    },
+    {
+      "path": "api-app/src/domain/channels/transport/channel.ts",
+      "matched": true
+    },
+    {
+      "path": "api-app/src/domain/inbox/outbound.service.spec.ts",
+      "matched": true
+    },
+    {
+      "path": "api-app/src/domain/inbox/outbound.service.ts",
+      "matched": true
+    },
+    {
+      "path": "api-app/src/integrations/channels/channel-adapter-factory.ts",
+      "matched": true
+    },
+    {
+      "path": "api-app/src/integrations/channels/channel-adapter-registry.ts",
+      "matched": true
+    },
+    {
+      "path": "api-app/src/integrations/channels/channel-transport.module.ts",
+      "matched": true
+    },
+    {
+      "path": "api-app/src/integrations/channels/evolution-channel.ts",
+      "matched": true
+    },
+    {
+      "path": "api-app/src/integrations/channels/meta-channel.ts",
+      "matched": true
+    },
+    {
+      "path": "api-app/src/integrations/channels/prisma-channel-resolver.ts",
+      "matched": true
+    },
+    {
+      "path": "api-app/test/channel-transport.e2e-spec.ts",
+      "matched": true
+    },
+    {
+      "path": "web-app/src/telas/Inbox.tsx",
+      "matched": true
+    },
+    {
+      "path": "web-app/e2e/channel-transport.spec.ts",
+      "matched": true
+    },
+    {
+      "path": "api-app/src/domain/inbox/message-acceptance.service.ts",
+      "matched": true
+    }
+  ],
+  "private_inspection": false
+}

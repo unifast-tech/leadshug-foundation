@@ -1,0 +1,23 @@
+{
+  "recorded_at_utc": "2026-10-22T15:17:05.918425+00:00",
+  "human_reply": "APROVADO",
+  "source": "current user message after reviewed ST-CON-04 v1.1 approval request",
+  "approved_document_commit": "fbbdfa6fd4faf3a1d4cdb62297a06e57676d9cd3",
+  "approved_document_sha256": "57b77d47bb77b02cde7414764ca8555d58a0df75d013e38116fbd7d9f1df1a82",
+  "scope": "ST-CON-04 v1.1 SCOPE-01..12, D-01..10, normative architecture-r1 and critique-r1 clauses, strict paths and all validation gates",
+  "excluded": "private files/data; real recipient actions before explicit operator proof; product Git/promotion/Railway; worktrees/auxiliary copies; unrelated inherited debt",
+  "source_preservation": "execution-baseline-seal-v1.1.json:69 public records and3 product HEADs match",
+  "binding_ingestion": "10 listed concrete rule/workflow sources reloaded after approval; extra schema/relational/profile/execution workflows loaded",
+  "profile": "operational-coder",
+  "scope_overlays": [
+    "nestjs",
+    "react",
+    "vite",
+    "postgresql",
+    "prisma",
+    "docker"
+  ],
+  "topology": "primary-checkout-single-writer",
+  "product_writer": "one delegated routine executor; root documentation/orchestration only",
+  "goal_policy": "no tool goal created: user did not explicitly request persistent goal"
+}

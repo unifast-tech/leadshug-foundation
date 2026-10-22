@@ -1,0 +1,18 @@
+{
+  "command": "scripts/test-channels-local.sh api",
+  "exit_code": 1,
+  "observed_at_utc": "2026-10-22 15:22:19 UTC",
+  "vitest_started_at": "15:21:28",
+  "test_counts": {
+    "failed_suites": 3,
+    "passed_suites": 26,
+    "passed_tests": 284,
+    "assertion_failures": 0
+  },
+  "failure_phase": "module loading: the three new specs could not import the not-yet-created admitted service modules",
+  "stdout_path": "/tmp/stcon04-executor-public-red.txt",
+  "stdout_sha256": "4ab2dcc27c18dcc09fd0ee2d7ce1caa4216bc34a7403e9166dad2071ffb11b76",
+  "cleanup": "canonical runner removed validation containers, volumes and network",
+  "evidence_kind": "executor_reported_causal_new_feature_module_loading_red",
+  "root_adjudication": "not assertion-level behavior RED; not04 delivery validation"
+}
