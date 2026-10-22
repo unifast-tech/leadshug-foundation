@@ -1,0 +1,151 @@
+{
+  "schema": "stcon05.r40-api-diagnostic-root-acceptance.v1",
+  "at_utc": "2026-10-22T04:20:52.727248+00:00",
+  "outcome": "GO current complete all only; API diagnostic passed, original cause NOT attributed",
+  "executor_id": "/root/template_session_diagnostics_r40",
+  "command": "bash scripts/test-channels-local.sh api",
+  "counts": {
+    "api_unit": 284,
+    "api_postgresql": 398,
+    "total": 682
+  },
+  "exit": 0,
+  "log": "foundation_documentation/artifacts/tmp/st-con-05-r40-api-Wa3jFk/canonical-api.log",
+  "log_bytes": 163278,
+  "log_sha256": "ba86ec86c6df8b6da90527e0fb4a8d36a3a275e99d3fa162da1e537da99b0afe",
+  "receipt": "foundation_documentation/artifacts/tmp/st-con-05-r40-api-Wa3jFk/exit-receipt.json",
+  "receipt_sha256": "9a6a0221d723a21d6e34dd4790d155b57ed9b161a1de805210affcdf2935932a",
+  "receipt_format": "Actual immutable JSON receipt with numeric runner_exit=0, not claimed as ASCII numeric receipt; do not synthesize retroactively. Future full all requires explicit runner-exit.txt ASCII0/1 for packet builders, plus JSON optional.",
+  "handoff": "foundation_documentation/artifacts/tmp/st-con-05-r40-api-Wa3jFk/terminal-handoff.json",
+  "handoff_sha256": "7292a9f5f3984d7e02d8c5d9b3dd8cf110a40c3480b3b8dd98db071d9c649008",
+  "diagnostic_sequence": "foundation_documentation/artifacts/tmp/st-con-05-r40-api-Wa3jFk/diagnostic-sequence.json",
+  "diagnostic_sequence_sha256": "cb4ef618c5ee959b9359c7b05ea3aec577175e4a49b4f8122988ec382ec67d95",
+  "diagnostic_records": 92,
+  "provider_entries": [
+    {
+      "phase": "provider-wait",
+      "label": "individual-success-password",
+      "outcome": "entry"
+    },
+    {
+      "phase": "provider-wait",
+      "label": "individual-error-password",
+      "outcome": "entry"
+    },
+    {
+      "phase": "provider-wait",
+      "label": "catalog-success-password",
+      "outcome": "entry"
+    },
+    {
+      "phase": "provider-wait",
+      "label": "catalog-error-password",
+      "outcome": "entry"
+    },
+    {
+      "phase": "provider-wait",
+      "label": "individual-success-expiry",
+      "outcome": "entry"
+    },
+    {
+      "phase": "provider-wait",
+      "label": "catalog-success-expiry",
+      "outcome": "entry"
+    },
+    {
+      "phase": "provider-wait",
+      "label": "admin-individual-success-role",
+      "outcome": "entry"
+    }
+  ],
+  "responses": [
+    {
+      "phase": "response-drain",
+      "label": "individual-success-password",
+      "outcome": "http-fulfilled",
+      "status": 401
+    },
+    {
+      "phase": "response-drain",
+      "label": "individual-error-password",
+      "outcome": "http-fulfilled",
+      "status": 401
+    },
+    {
+      "phase": "response-drain",
+      "label": "catalog-success-password",
+      "outcome": "http-fulfilled",
+      "status": 401
+    },
+    {
+      "phase": "response-drain",
+      "label": "catalog-error-password",
+      "outcome": "http-fulfilled",
+      "status": 401
+    },
+    {
+      "phase": "response-drain",
+      "label": "individual-success-expiry",
+      "outcome": "http-fulfilled",
+      "status": 401
+    },
+    {
+      "phase": "response-drain",
+      "label": "catalog-success-expiry",
+      "outcome": "http-fulfilled",
+      "status": 401
+    },
+    {
+      "phase": "response-drain",
+      "label": "admin-individual-success-role",
+      "outcome": "http-fulfilled",
+      "status": 403
+    }
+  ],
+  "snapshots_completed": 8,
+  "cleanup": [
+    {
+      "phase": "cleanup",
+      "label": "release-held-gate",
+      "outcome": "started"
+    },
+    {
+      "phase": "cleanup",
+      "label": "release-held-gate",
+      "outcome": "settled"
+    },
+    {
+      "phase": "cleanup",
+      "label": "drain-inflight",
+      "outcome": "started"
+    },
+    {
+      "phase": "cleanup",
+      "label": "drain-inflight",
+      "outcome": "settled"
+    },
+    {
+      "phase": "cleanup",
+      "label": "restore-observation-clock",
+      "outcome": "settled"
+    },
+    {
+      "phase": "cleanup",
+      "label": "restore-fetch",
+      "outcome": "settled"
+    }
+  ],
+  "early_http_or_rejection_or_deadline": false,
+  "freeze": "foundation_documentation/artifacts/reviews/leadshug-template-authoring-20261020/evidence/root-cp05-source-freeze-r40-session-diagnostics-v1.1.json",
+  "freeze_sha256": "dfcbd6a59880b02fd362d0cb6ced83ff44c9363c95aae400addb1c1934a143c6",
+  "source38_matches": true,
+  "protected30_exact": true,
+  "heads": {
+    "root": "80e3940126f22a941f90dba4f5e801b6c0eb2f58",
+    "api": "db5a86758a165fac8a1ab587599c37b17890530c",
+    "web": "74b9d4b714044829796f875d00553f077c1c329d"
+  },
+  "attribution_limit": "r39 opaque60s timeout NOT reproduced, no evidence of prior early202, auth failure, runtime or product root cause. Source-aware HOW proved observability gap only; it is now diagnosed/fails safely, not a proven root-cause fix. All six401/admin403/no-observation-write snapshots and genuine cleanup passed currentrealPG/BFF. CurrentWeb/browser counter not yet revalidated, no fullall/source-served acceptance.",
+  "debt_classification": "Carry historical opaque timeout honestly as evidentiary limitation, not silently call flaky or fixed. Future fullall and fresh affectedTQA/security/adherence assess readiness. No demonstrated unresolved product defect from this API run; no forcedlease reset/clockadvance/gatewaiver authorized.",
+  "next": "One complete current all on samefreeze, no additional source change; then exact proof acceptance/round04resolution/freshaffectedassurance+PCV/boundedTESTactivation/actualMeta/freshfinal. Delivery Pending."
+}

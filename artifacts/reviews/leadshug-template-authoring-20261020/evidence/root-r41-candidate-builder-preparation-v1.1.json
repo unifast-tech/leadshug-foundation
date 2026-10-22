@@ -1,0 +1,11 @@
+{
+  "schema": "stcon05.r41-candidate-builder-preparation.v1",
+  "at_utc": "2026-10-22T04:21:49.591975+00:00",
+  "status": "AST/static preparation only; no package/review generated",
+  "parent": "foundation_documentation/artifacts/reviews/leadshug-template-authoring-20261020/evidence/assurance-current-selection-builder-r39-preparation.py",
+  "parent_sha256": "3a2f81cae13ebcbb9e5845c0291c8bd86c5e8d27bacb5628f97452229b6a3e30",
+  "builder": "foundation_documentation/artifacts/reviews/leadshug-template-authoring-20261020/evidence/assurance-current-builder-r41-preparation.py",
+  "builder_sha256": "5a147579c214ad3f754ddeeff9c593452e4e94378d4ebfb10cf9c0890c5bae2d",
+  "changes": "Admit already-approved API test path only for complete sole changed final session test+harness, all other44tests raw-prefix hash/whole-before reconstructed r35SHA; full exact whole-file delta. Add full unchanged session/middleware, whole real login helper and actual diagnostic/HOW evidence. Three changedWebfiles remain full. No changed production source or changed test body omitted; full applicable rubrics and same strict actual current acceptance/38source/30seals/runtime/5markers/cap1MB gates preserved.",
+  "future": "Only after actual complete currentallGREEN/rootacceptance and canonicalround04resolution. Verify effective packet size before dispatch; any cap deficit resolved before reviewlaunch without reducing applicable workload or current changed source/required evidence. Existing PCV r37 generic extractor uses accepted executor_id, output-prefix basename r41."
+}

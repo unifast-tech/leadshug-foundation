@@ -1,0 +1,12 @@
+{
+  "schema": "stcon05.r41-all-launch-root-verification.v1",
+  "at_utc": "2026-10-22T04:24:12.469866+00:00",
+  "status": "actual launch/path/log verified; running only",
+  "task_dir": "foundation_documentation/artifacts/tmp/st-con-05-r41-all-6ZnrCq",
+  "launch": "foundation_documentation/artifacts/tmp/st-con-05-r41-all-6ZnrCq/launch.json",
+  "launch_sha256": "6ea6d37edc2e4d8617046ee0b568c59c00bc75c90f8651df47bcbcba7208de2e",
+  "session": 60212,
+  "executor_id": "/root/template_session_diagnostics_r40",
+  "command": "bash scripts/test-channels-local.sh all",
+  "next": "actualterminal/plainASCIIreceipt/38source/30seal/3head/currentoriginalhostproofsnapshots/all5markers/2newbrowser/mainworkflow and securityprobes; no source/helper mutations/retries/preservedaction"
+}
