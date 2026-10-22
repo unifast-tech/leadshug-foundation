@@ -1,0 +1,48 @@
+{
+  "checkpoint": "E36 frozen Web build/unit checkpoint GREEN",
+  "canonical_command": "bash scripts/test-channels-local.sh web",
+  "unified_exec_session_id": 59938,
+  "exit_code": 0,
+  "synthetic_stdout": "/tmp/stcon04-executor-web-e36.txt",
+  "stdout_sha256": "387a0c88ed32a12ff9f057c85c26b274863d0340a7c35f307d6177e1a9de22b1",
+  "source_seal": "web-source-seal-e36-v1.1.json",
+  "source_recheck": "web-source-recheck-e36-v1.1.json",
+  "root_verified": [
+    "Synthetic stdout SHA, build/unit summary and owned cleanup",
+    "All259 source bytes/full positive-public inventory unchanged before writer release",
+    "All36 protected files and both exact E23 companion results matched before launch"
+  ],
+  "phases": {
+    "typescript_vite_build": "passed",
+    "web_unit": {
+      "files_passed": 7,
+      "tests_passed": 49,
+      "duration_seconds": 0.654
+    },
+    "owned_cleanup": "completed"
+  },
+  "actual_changes_since_e35": 10,
+  "candidate_source_includes": [
+    "Structured template parameter fields, explicit channel/kind availability, authoritative preview and first-send/recovery controls",
+    "Initial-only safe API metadata projection and allowlist client tests",
+    "Synthetic browser/provider support, four new/expanded browser cases and BFF/PG5x20 same-key stress case"
+  ],
+  "not_executed_in_this_mode": [
+    "Playwright and served-browser behavior",
+    "Changed API projectIntent projection or new PostgreSQL stress test",
+    "Synthetic provider membership/messages fixture behavior"
+  ],
+  "test_causality": "E35 remains the causal assertion RED for absent new UI. The additional unit/stress/browser cases were added alongside UI/source changes; no retrospective RED claim.",
+  "root_source_observation_for_next_candidate": "Reused-history browser case must expect the approved post-send owner/status CAS (IN_SERVICE), while asserting no read/claim before send. Do not change production CAS to satisfy the current QUEUED-after-send assertion.",
+  "next": "Writer released after postseal to complete remaining browser and backend/schema proofs before a fresh complete-candidate all run.",
+  "remaining": [
+    "Browser A-B-A/late-preview/read/replay/local recovery/reload/ACK and same-frame bursts",
+    "Negative protocol/window/timestamp and actual schema/query-bound proof",
+    "Canonical all, independent assurance/guards and source-bound local/operator proofs"
+  ],
+  "limits": [
+    "Checkpoint Web GREEN is neither browser/API GREEN nor full ST-CON-04 delivery.",
+    "E02/E04/E18/E35a disclosures and inherited debt remain applicable.",
+    "No full diff-guard GO or private inspection waiver inferred."
+  ]
+}

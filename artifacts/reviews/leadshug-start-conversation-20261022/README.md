@@ -54,3 +54,7 @@ A API ampliada passou em339 testes unitários e428 de integração, com257 arqui
 ## Checkpoint E35 — lacuna de interface confirmada no navegador
 
 O navegador passou em75 testes existentes. O teste novo abriu a conversa pelo BFF real, confirmou estado vazio sem envio e falhou somente ao exigir o formulário de primeira mensagem, ainda ausente. Os258 arquivos públicos permaneceram idênticos durante a rodada. [Recibo E35](evidence/browser-result-e35-v1.1.json). A interface completa segue em implementação após esse RED causal; a asserção posterior de ausência do composer comum não chegou a executar. Não há conclusão04 ou nova prova de provedor real neste checkpoint.
+
+## Checkpoint E36 — interface compila e testes unitários passam
+
+A interface compilou em TypeScript/Vite e passou em49 testes unitários de7 arquivos; os259 arquivos públicos permaneceram idênticos durante a execução. [Recibo E36](evidence/web-result-e36-v1.1.json). Esse modo não executa Playwright, API/PostgreSQL ou o protocolo simulado. A matriz de navegador e as provas restantes seguem em preparação para a rodada completa; não há conclusão04 neste checkpoint.
