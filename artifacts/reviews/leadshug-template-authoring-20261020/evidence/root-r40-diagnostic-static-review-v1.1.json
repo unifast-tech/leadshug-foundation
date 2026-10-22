@@ -1,0 +1,20 @@
+{
+  "schema": "stcon05.r40-diagnostic-root-static-review.v1",
+  "outcome": "GO one canonical api diagnostic after routing/admission",
+  "freeze": "foundation_documentation/artifacts/reviews/leadshug-template-authoring-20261020/evidence/root-cp05-source-freeze-r40-session-diagnostics-v1.1.json",
+  "freeze_sha256": "dfcbd6a59880b02fd362d0cb6ced83ff44c9363c95aae400addb1c1934a143c6",
+  "source38_matches": true,
+  "other37_exact": true,
+  "protected30_exact": true,
+  "heads": {
+    "root": "80e3940126f22a941f90dba4f5e801b6c0eb2f58",
+    "api": "db5a86758a165fac8a1ab587599c37b17890530c",
+    "web": "74b9d4b714044829796f875d00553f077c1c329d"
+  },
+  "inverse_original_file_exact": true,
+  "assertion_statements_retained": "All original expect statements match after only normalizing awaited HTTP.status expression to the single local result.status. Both snapshot equality oracles and all six session/admin scenario inputs unchanged.",
+  "entry_guard": "Same pending Promise used; fulfilled/rejected tagged outcome handled without raw exception. Native10s timer cleared in finally. Provider-entry branch must actually resolve before invalidation; earlyHTTP/deadline logs+throws fixedlabels. No fake clock or response drain bound introduced. TypeScript union discriminants/as const are local static narrowing, not auth casts.",
+  "logging": "All labels fixed strings or kind/mode/invalidation enum interpolation; optional status numeric. No secret/ID/token/body/error/path data in diagnostics.",
+  "clock_cleanup": "Expiry Date.now remains overridden through actual pending HTTP settlement, restored same finally. Outer cleanup gate release→genuine Promise.allSettled; nested observation-clock/global fetch restoration; no cancellation/drained claim beforeactualsettlement. 60s unchanged.",
+  "scope_limit": "Source-aware opinion ARCH01/02 integrated, ARCH03 early202lease hypothesis unproved. Any passing diagnostic would not identify historical timeout cause. No product fix/rerun or preserved action yet."
+}

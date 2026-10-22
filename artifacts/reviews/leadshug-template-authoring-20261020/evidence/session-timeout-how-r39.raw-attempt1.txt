@@ -1,0 +1,57 @@
+{
+  "schema_version": "subagent-review-result-v1",
+  "artifact_kind": "subagent_review_result",
+  "dispatch_path": "/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/artifacts/reviews/leadshug-template-authoring-20261020/evidence/session-timeout-how-r39.dispatch.json",
+  "review_kind": "architecture_opinion",
+  "reviewer_label": "independent-no-context-reviewer",
+  "overall_assessment": "Recommend narrowly scoped test diagnostics, with explicit limits around response and cleanup waits. The embedded source establishes an observability defect: an HTTP request can finish without entering the held fetch branch, leaving the test waiting indefinitely for provider entry. It does not establish which phase timed out in r39 or a product root cause. SessionService uses milliseconds for both iat and exp, so passwordChangedAt = iat + 1 and Date.now = exp + 1 are consistent with the shown session checks. The separate observation clock governs debounce, leases and freshness. The proposed entry guard can preserve the security proof because it completes before session or role invalidation; native diagnostic timers must not advance either clock. Expected performance improves for early-response failures, with small test-only scheduling overhead and unchanged production performance. A local helper improves clarity and structure without adding production abstractions. Operational confidence remains mixed until the exact diff and diagnostic evidence exist. The governing TODO contents are absent, so its decisions and exceptions cannot be independently cross-checked; this review makes no blocking-drift determination. No execution or reproduction was performed, and feature acceptance remains Pending.",
+  "recommended_path": "Choose A: one test-local, tagged race between provider entry, the corresponding existing real HTTP promise, and a native 10-second diagnostic deadline, covering all six session scenarios and the ADMIN role scenario. Clear the timer on every outcome. Report only fixed scenario/phase labels and HTTP status when available; classify rejection or deadline exhaustion with fixed safe labels. Preserve the existing request promise, provider gate, invalidation-before-release ordering, 401/403 assertions, exact snapshots, real database/session path and overall 60-second timeout. Include minimal fixed-phase breadcrumbs around preparation, response and cleanup waits because the existing evidence cannot locate the hang. B, breadcrumbs alone, is smaller but retains the full timeout delay and does not immediately identify an early HTTP response. C, additional bounds around real-response waits, is a viable follow-up only if A locates the stall after provider entry; it requires careful handling of outstanding work while Date.now is overridden. A's main tradeoff is a diagnostic admission budget that can fail under slow execution and must not be interpreted as a security defect. Source-only reasoning supplies hypotheses but cannot attribute r39. Next, prepare the bounded diagnostic diff for root review, then perform one admitted canonical API diagnostic run. A passing run would leave the original timeout unattributed.",
+  "performance_position": "acceptable",
+  "elegance_position": "acceptable",
+  "structural_soundness_position": "acceptable",
+  "operational_fit_position": "mixed",
+  "findings": [
+    {
+      "finding_id": "ARCH-01",
+      "severity": "medium",
+      "category": "tests",
+      "formalizable_hint": "yes",
+      "candidate_rule_level": "project",
+      "title": "Provider-entry waits cannot observe an already completed request",
+      "rationale": "In message-template-management.e2e-spec.ts, declared lines 2283..2398, both await active.started.promise sites ignore pending until after provider entry. Middleware rejection, resolver failure or acquire returning REFRESH_IN_PROGRESS can complete HTTP without resolving started. This control-flow gap is proven by the source; its occurrence in r39 is unproven. MetaTemplateClient.request supplies AbortSignal.timeout, but the held fetch mock does not consume that signal, so the production fetch timeout does not bound this synchronization.",
+      "suggested_action": "Use the proposed tagged three-way race at every runtime provider-entry wait, including the ADMIN case. Observe fulfilled and rejected HTTP outcomes without logging raw errors, bodies or request paths containing identifiers. Fail on an early response rather than proceeding with invalidation. Preserve the invariant that each passing scenario demonstrably reaches the held external boundary before invalidation, then releases it and proves rejection without observation writes.",
+      "affected_paths": [
+        "api-app/test/message-template-management.e2e-spec.ts",
+        "api-app/src/integrations/meta/message-template.client.ts"
+      ]
+    },
+    {
+      "finding_id": "ARCH-02",
+      "severity": "medium",
+      "category": "structural_soundness",
+      "formalizable_hint": "partial",
+      "candidate_rule_level": "project",
+      "title": "An entry deadline does not diagnose response or cleanup stalls",
+      "rationale": "The same test awaits preparation, HTTP completion, snapshots and logins outside the proposed entry guard. Its outer finally releases the held gate, then awaits Promise.allSettled(inFlight) before restoring the observation spy and fetch global. A stalled request can therefore consume the remaining overall timeout during cleanup and obscure the original diagnostic. Adding a timeout around await pending in an expiry scenario would also restore Date.now while the request might still be authorizing.",
+      "suggested_action": "Emit fixed phase breadcrumbs before otherwise opaque preparation, response and cleanup waits, and preserve the primary diagnostic before draining. Retain gate release and genuine awaiting of pending requests; place spy/global restoration in a nested finally. Do not present Promise.race as cancellation or claim that requests drained after a deadline. Keep post-release response bounds out of the first change unless outstanding-request handling preserves the expiry condition until settlement and clearly reports incomplete cleanup.",
+      "affected_paths": [
+        "api-app/test/message-template-management.e2e-spec.ts"
+      ]
+    },
+    {
+      "finding_id": "ARCH-03",
+      "severity": "low",
+      "category": "residual_risk",
+      "formalizable_hint": "partial",
+      "candidate_rule_level": "none",
+      "title": "The source supports a concrete early-202 hypothesis, not attribution",
+      "rationale": "TemplateObservationService.acquire requires both the 10-second debounce and an absent or expired 60-second lease. The test's 11-second observation-clock advances satisfy debounce but do not expire a surviving lease. releaseLeaseAfterAuthorizationFailure deliberately suppresses cleanup errors; if cleanup is unconfirmed, the next request can return 202 before the held fetch branch. Successful individual and catalog commits revalidate session and current access inside their transactions, and unavailable commits do likewise through markUnavailable. The shown release paths do not establish a deterministic missing-release bug. The receipts provide no evidence that cleanup failure or early 202 occurred.",
+      "suggested_action": "Use the early-response diagnostic to establish whether this path occurred before proposing a product fix. Preserve owner/fence-checked lease handling and transactional session/current-role checks before both successful and unavailable observation writes. Do not force lease clearance, advance the clock past the lease, or bypass authorization to obtain provider entry. Keep r38 success and any passing diagnostic run separate from root-cause evidence.",
+      "affected_paths": [
+        "api-app/src/domain/message-templates/template-observation.service.ts",
+        "api-app/src/surfaces/bff/message-templates.controller.ts",
+        "api-app/test/message-template-management.e2e-spec.ts"
+      ]
+    }
+  ]
+}

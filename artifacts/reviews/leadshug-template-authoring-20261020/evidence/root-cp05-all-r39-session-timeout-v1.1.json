@@ -1,0 +1,39 @@
+{
+  "schema": "stcon05.r39-root-all-terminal.v1",
+  "at_utc": "2026-10-22T04:00:20.531019+00:00",
+  "outcome": "STOP API security-test timeout; no blind retry",
+  "counts": {
+    "api_unit_passed": 284,
+    "api_postgresql_passed": 397,
+    "api_postgresql_failed": 1,
+    "total_passed": 681,
+    "total_failed": 1
+  },
+  "log": "foundation_documentation/artifacts/tmp/st-con-05-r39-all-3KOaki/canonical-all.log",
+  "log_bytes": 148409,
+  "log_sha256": "7e689084ccb9be2c0ac09c3bd7270fae0365467eecaf82aad7c711e62b9c782a",
+  "receipt": "foundation_documentation/artifacts/tmp/st-con-05-r39-all-3KOaki/runner-exit.txt",
+  "receipt_sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865",
+  "exit": 1,
+  "handoff": "foundation_documentation/artifacts/tmp/st-con-05-r39-all-3KOaki/handoff.json",
+  "handoff_sha256": "f3edc387a72f24436dd4a6273afa061ba7e4121ab851c37db1f71ae31c7a346a",
+  "freeze": "foundation_documentation/artifacts/reviews/leadshug-template-authoring-20261020/evidence/root-cp05-source-freeze-r39-current-selection-counter-v1.1.json",
+  "freeze_sha256": "01e047218deb79b32b4ad6a229a476a3f697dd4ef31d0ce91fb3d60fd042e72c",
+  "source38_matches": true,
+  "protected30_exact": true,
+  "heads": {
+    "root": "80e3940126f22a941f90dba4f5e801b6c0eb2f58",
+    "api": "db5a86758a165fac8a1ab587599c37b17890530c",
+    "web": "74b9d4b714044829796f875d00553f077c1c329d"
+  },
+  "failure": {
+    "path": "api-app/test/message-template-management.e2e-spec.ts:2283",
+    "test": "revalidates BFF session and current observation role before success and unavailable commits",
+    "observed": "Vitest60s timeout only, no scenario/stage/assertion trace; same test passed r37/r38. API/product unchanged; r39 changed only browser counter, which was not executed.",
+    "unknown": "Which preparation/provider gate/response phase waited, whether request settled before provider entry, and whether cause is test timing, early legitimate refusal, runtime or product. No flaky/environment/product root cause claim."
+  },
+  "web_unit": "not reached",
+  "browser": "not reached; new counter still requires verification",
+  "freshness": "Current globalSetup not reached; 03:30 host files/previous browser hash were correctly NOT copied or claimed current. r38 snapshots remain separate actual historical proof.",
+  "next": "Read-only source-aware independent HOW opinion and minimal diagnostic-only test instrumentation plan, preserving all6 session scenarios/admin-role403/snapshot/no-write oracles and timeout60s. No product change, bypass, relaxed assertion, automatic retry or preserved action. Then root review/admission of a bounded canonical api diagnostic run before any new full all."
+}

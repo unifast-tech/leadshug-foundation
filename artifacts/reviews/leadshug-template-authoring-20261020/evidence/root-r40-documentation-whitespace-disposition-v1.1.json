@@ -1,0 +1,11 @@
+{
+  "schema": "stcon05.r40-documentation-whitespace-disposition.v1",
+  "at_utc": "2026-10-22T04:14:34.822138+00:00",
+  "scope": "ONE immutable generated dispatch already consumed by terminal no-context HOW review",
+  "exception": {
+    "path": "foundation_documentation/artifacts/reviews/leadshug-template-authoring-20261020/evidence/session-timeout-how-r39.dispatch.md",
+    "sha256": "42ae185cfd7a0eddcfc815e33d930b61dc71e307058b1ce2cc7d398bf0ca38e8",
+    "finding": "new blank line at EOF only; generated dispatch formatting, no source or rule whitespace change"
+  },
+  "resolution": "Preserve exact reviewed dispatch bytes and binding; do not rewrite a frozen audit input. Exclude this single hashed artifact only from staged whitespace recheck; all remaining staged files must be clean. Existing root-r35-documentation-whitespace-disposition precedent carries same narrow evidence-integrity rationale. No product/runtime/test/CI bypass or weakening of required test gates."
+}

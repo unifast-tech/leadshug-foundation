@@ -42,7 +42,7 @@ O usuário quer preparar no LeadsHug a mensagem que usará para iniciar atendime
 ## Delivery Status Canon (Required)
 - **Current delivery stage:** Pending
 - **Qualifiers:** none
-- **Next exact step:** executar e atribuir um único all r39 sobre evidence/root-cp05-source-freeze-r39-current-selection-counter-v1.1.json, após root conferir inversão exata das2linhas do contador,37outrasfontes atuais/30selos/3HEADs e staticTQA13paths (0bypass/auth/support/ambient/DI). Produto r38 inalterado; expected2 permanece em templateCallCount normal. All r38 terminou801pass/1falha só no contador; alvos semânticos do caso41 e5markers passaram. Captura first-byte/recibo/handoff + snapshots de bytes originais dos paths host canônicos de freshness; sem edição/retry. Após GREEN: round04/fresh assurance/PCV, ativação TEST/Meta assistida/final. Delivery Pending.
+- **Next exact step:** executar e atribuir um único api diagnóstico r40 sobre evidence/root-cp05-source-freeze-r40-session-diagnostics-v1.1.json (SHA dfcbd6a59880b02fd362d0cb6ced83ff44c9363c95aae400addb1c1934a143c6), executor novo template_session_diagnostics_r40. Parecer source-aware terminal0 integrou corrida entry/HTTP/deadline10s e breadcrumbs/cleanup; causa opaca r39 segue desconhecida. Root conferiu inversão exata do último teste API/prefixo/sufixo/expect preservados,37outrasfontes/30selos/3HEADs/staticTQA13paths e publicdiff GO. Mesmos6cenários/admin/401/403/snapshots/Date.now/clock11s/timeout60s, sem mudança de produto ou bypass. Nenhum retry/edição durante execução. APIgreen não identifica causa histórica nem substitui all atual; assurance/runtime/Meta/final continuam. Delivery Pending.
 
 ## Active Work State (Required While TODO Remains In `active/`)
 - **Work state:** implementation

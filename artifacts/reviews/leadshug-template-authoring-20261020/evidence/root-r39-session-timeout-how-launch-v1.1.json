@@ -1,0 +1,14 @@
+{
+  "schema": "stcon05.r39-session-timeout-how-launch.v1",
+  "at_utc": "2026-10-22T04:01:51.734419+00:00",
+  "status": "running; no result or gate closure",
+  "session": 91138,
+  "package": "foundation_documentation/artifacts/reviews/leadshug-template-authoring-20261020/session-timeout-how-r39-package-v1.1.md",
+  "package_bytes": 119481,
+  "package_sha256": "50f3edab87dda603e52e16507f2100c9e0ddf9c39a8d2e6142be6d199f0b000a",
+  "dispatch": "foundation_documentation/artifacts/reviews/leadshug-template-authoring-20261020/evidence/session-timeout-how-r39.dispatch.md",
+  "model": "gpt-6.1-sol",
+  "effort": "xhigh",
+  "isolation": "fresh ephemeral/read-only/no tools/user config/rules ignored, no thread context",
+  "limits": "Source-aware diagnostic HOW only, not reproduction/final/candidate acceptance. No live interruption/restart/shrink/repackaging for elapsed time. Source freeze unchanged; no retry or test weakening."
+}

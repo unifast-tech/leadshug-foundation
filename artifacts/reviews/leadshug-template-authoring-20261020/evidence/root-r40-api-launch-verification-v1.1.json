@@ -1,0 +1,12 @@
+{
+  "schema": "stcon05.r40-api-launch-root-verification.v1",
+  "at_utc": "2026-10-22T04:13:51.462760+00:00",
+  "outcome": "actual launch/file/log verified, running only",
+  "task_dir": "foundation_documentation/artifacts/tmp/st-con-05-r40-api-Wa3jFk",
+  "launch": "foundation_documentation/artifacts/tmp/st-con-05-r40-api-Wa3jFk/launch.json",
+  "launch_sha256": "2b9120f80f08985c3352db21f0de70f189fc4a120594b027c2437342b4d9e6c2",
+  "session": 65038,
+  "executor_id": "/root/template_session_diagnostics_r40",
+  "command": "bash scripts/test-channels-local.sh api",
+  "next": "same actualterminal/numericreceipt/source and fixed diagnostic sequence; no retry or extra command; no browser proof expected"
+}

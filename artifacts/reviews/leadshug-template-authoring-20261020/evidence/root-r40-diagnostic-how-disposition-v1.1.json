@@ -1,0 +1,15 @@
+{
+  "schema": "stcon05.r40-diagnostic-how-root-disposition.v1",
+  "at_utc": "2026-10-22T04:06:44.805814+00:00",
+  "outcome": "GO diagnostic-only exact target test patch proposal; no validation command yet",
+  "opinion": "foundation_documentation/artifacts/reviews/leadshug-template-authoring-20261020/evidence/session-timeout-how-r39.raw-attempt1.txt",
+  "opinion_sha256": "83815681f50f8e6cfe748adf13b72ac255b0e28ea24a4dee4df60f4e8576ab55",
+  "terminal_exit": 0,
+  "finding_disposition": {
+    "ARCH-01": "Integrated: race both provider-entry waits (6session scenarios +admin) against own real HTTP result and native10s diagnostic deadline; no earlier legitimate reply can silently leave an unobservable wait. Original r39 occurrence unknown.",
+    "ARCH-02": "Integrated: fixed preparation/provider/response/snapshot/relogin/cleanup phase breadcrumbs, log primary early-response/deadline before drain, release gate and genuinely await pending, restore clock/fetch in nested finally. No response/cleanup bound introduced that would restore Date.now before live authorization settles.",
+    "ARCH-03": "Open hypothesis only: unreleased lease could yield202, not demonstrated. No forced lease reset/clock advance/product fix, auth bypass, timeout increase or retry.",
+    "TODO-caveat": "Opinion package deliberately scoped to diagnostic code/callchain, not full TODO; reviewer rightly makes no binding decision-drift assessment. Root crosschecked current approved API test path and allD01-D09 invariants; diagnostics are HOW in existing scope, not feature/production code or gate waiver."
+  },
+  "limits": "No reproduction by reviewer or attribution of r39. A passing diagnostic run would leave opaque timeout cause unknown. Current required all remains failed; final/candidate assurance separate."
+}
