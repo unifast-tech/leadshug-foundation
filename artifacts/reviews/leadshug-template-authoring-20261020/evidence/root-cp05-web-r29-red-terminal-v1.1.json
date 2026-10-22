@@ -1,0 +1,20 @@
+{
+  "schema": "stcon05.r29-web-root-red-terminal.v1",
+  "recorded_at_utc": "2026-10-22T00:06:05.527818+00:00",
+  "outcome": "Actual pure eligibility gate RED; no compiler/harness failure",
+  "log": "foundation_documentation/artifacts/tmp/st-con-05-r29-web-20261022T0004Z/canonical-web.log",
+  "log_bytes": 10479,
+  "log_sha256": "889a4f5484f46603dc2fa7c7d27385bd837b0efc66e4d2eaaf0941d04e9a17c0",
+  "receipt": "foundation_documentation/artifacts/tmp/st-con-05-r29-web-20261022T0004Z/runner-exit.txt",
+  "exit": 1,
+  "freeze": "foundation_documentation/artifacts/reviews/leadshug-template-authoring-20261020/evidence/root-cp05-source-freeze-r29-eligibility-test-only-v1.1.json",
+  "freeze_sha256": "ddc894a69b48d9acdb8c0f5cc1baa70fe8e53a40f570d2dd3225e906a2d9ba74",
+  "source38_exact": true,
+  "protected30_exact": true,
+  "heads_exact": true,
+  "web_unit_passed": 36,
+  "web_unit_failed": 1,
+  "assertion": "Modelos.spec.ts163: newer common APPROVED observation retained old draft-specific eligibleForUse=false; default/common gate expectedtrue gotfalse. First merge order reached; second order and later negative assertions not reached in this failing test.",
+  "mode_limit": "Canonical web mode did not execute the new browser response barrier, real BFF/browser proof or API/PG suites. No template FRC marker, preserved action or provider proof inferred.",
+  "next": "Apply reviewed constant-time draftScoped gate correction only, root static freeze then one complete captured all."
+}

@@ -1,0 +1,14 @@
+{
+  "schema": "stcon05.r29-scoped-eligibility-how-admission.v1",
+  "outcome": "GO one bounded product correction; no run until root static review",
+  "actual_red": "foundation_documentation/artifacts/reviews/leadshug-template-authoring-20261020/evidence/root-cp05-web-r29-red-terminal-v1.1.json",
+  "actual_red_sha256": "39bf257c8e5b2dd10ecf9bd5179a97204b168178fc40790ec58a8c685f0de588",
+  "independent_how": "root-r28-eligibility-scope-opinion-intake-v1.1.json",
+  "independent_how_sha256": "3bd452017deb58a756d621700308f513a8f7c6e74b4dd01e697973191473a339",
+  "owned_path": "web-app/src/telas/Modelos.tsx",
+  "change": "In templateObservationEligible remove only the unconditional item.eligibleForUse!==false veto. Keep the existing draftScoped clause requiring matchesDefinition===true AND eligibleForUse===true. Thus draft-specific flags affect only the editor; all common fence/catalogAvailable/item.available/item.eligible/supported/APPROVED/timestamp/TTL checks remain unchanged.",
+  "not_authorized": "No merge changes, common eligibility recomputation, generic safeCode veto, ACK policy change, cache/API/backend/fixture/runner/schema/test edits, retry, preserved action or product Git write.",
+  "executor": "Existing routed single product writer /root/template_validation_recovery, principal checkout",
+  "stop": "Static patch/hash report; root source freeze before one properly tee-captured canonical all. Browser final-response assertion remains unexecuted until that next run.",
+  "delivery": "Pending; no candidate/PCV/runtime/provider gate accepted"
+}

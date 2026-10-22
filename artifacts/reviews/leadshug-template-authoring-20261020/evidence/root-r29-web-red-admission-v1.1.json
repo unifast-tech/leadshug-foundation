@@ -1,0 +1,11 @@
+{
+  "schema": "stcon05.r29-web-red-root-admission.v1",
+  "outcome": "GO exactly one canonical web fail-first run",
+  "command": "bash scripts/test-channels-local.sh web",
+  "freeze": "foundation_documentation/artifacts/reviews/leadshug-template-authoring-20261020/evidence/root-cp05-source-freeze-r29-eligibility-test-only-v1.1.json",
+  "freeze_sha256": "ddc894a69b48d9acdb8c0f5cc1baa70fe8e53a40f570d2dd3225e906a2d9ba74",
+  "executor": "Existing routed sole executor /root/template_validation_recovery, principal checkout",
+  "capture": "Exclusive owned tmp directory, complete tee from first byte, actual PIPESTATUS numeric receipt even on failure",
+  "target": "New pure gate test should fail common catalogue eligibility on unchanged r28 product. This mode does not execute the browser response barrier or establish actual provider/PG/browser causality. Compiler/harness errors are not product RED.",
+  "boundary": "No source mutation during run; no product fix/retry/all/preserved runtime/DB/Meta/Git action. Stop at terminal for root verification."
+}

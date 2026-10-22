@@ -1,0 +1,25 @@
+{
+  "schema": "stcon05.r30-static-tqa-support.v1",
+  "recorded_at_utc": "2026-10-22T00:08:56.171128+00:00",
+  "exit": 2,
+  "paths": [
+    "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app/src/domain/channels/channel-credential-resolver.spec.ts",
+    "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app/src/domain/message-templates/template-definition.spec.ts",
+    "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app/src/domain/message-templates/template-management.dependencies.spec.ts",
+    "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app/src/domain/message-templates/template-management.ports.spec.ts",
+    "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app/src/integrations/meta/message-template.client.spec.ts",
+    "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app/test/message-template-bff.e2e-spec.ts",
+    "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app/test/message-template-drafts.e2e-spec.ts",
+    "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app/test/message-template-management.e2e-spec.ts",
+    "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app/test/number-onboarding-bci.e2e-spec.ts",
+    "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app/test/number-onboarding-pcv.e2e-spec.ts",
+    "/mnt/c/unifast/leadshug/leadshug_now_docker/web-app/e2e/message-templates.spec.ts",
+    "/mnt/c/unifast/leadshug/leadshug_now_docker/web-app/src/api.spec.ts",
+    "/mnt/c/unifast/leadshug/leadshug_now_docker/web-app/src/telas/Modelos.spec.ts"
+  ],
+  "raw": "foundation_documentation/artifacts/reviews/leadshug-template-authoring-20261020/evidence/static-tqa-selected-r30.txt",
+  "raw_sha256": "f794f84e762668559c208f8320799c43582dbc79a7266313fdb3ea09e17c0673",
+  "counts": "Counts: hard_bypass=0 test_support=0 auth_shortcut=0 status_only=82 no_exception_only=0 ambient_subject_fallback=0 di_override=0 mock_hint=16",
+  "disposition": "Root support review: new status hint is the exact final catalogue POST barrier followed by owned identity/APPROVED/available/eligible payload and original DOM assertions. New pure scope case asserts common-versus-draft behavior and negative common gates, with genuine r29 unit RED. Prior hints/fault injection unchanged. Raw medium exit2 retained; required independent full affected TQA still pending.",
+  "boundary": "13 explicit public test files, read-only; no broad Git scan or private traversal, no product/runtime mutation."
+}

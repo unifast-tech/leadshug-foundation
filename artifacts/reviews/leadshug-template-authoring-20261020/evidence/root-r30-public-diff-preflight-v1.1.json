@@ -1,0 +1,35 @@
+{
+  "blocked": false,
+  "context": {
+    "actual_change_count": 364,
+    "contract_repository_count": 4,
+    "expected_change_count": 364,
+    "forbidden_change_count": 0,
+    "repo_root": "/mnt/c/unifast/leadshug/leadshug_now_docker",
+    "repositories": {
+      "api": {
+        "actual_change_count": 55,
+        "baseline_commit": "db5a86758a165fac8a1ab587599c37b17890530c",
+        "path": "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app"
+      },
+      "foundation": {
+        "actual_change_count": 296,
+        "baseline_commit": "83ed072337330465f4be3b5ced739b461e33b602",
+        "path": "/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation"
+      },
+      "root": {
+        "actual_change_count": 3,
+        "baseline_commit": "80e3940126f22a941f90dba4f5e801b6c0eb2f58",
+        "path": "/mnt/c/unifast/leadshug/leadshug_now_docker"
+      },
+      "web": {
+        "actual_change_count": 10,
+        "baseline_commit": "74b9d4b714044829796f875d00553f077c1c329d",
+        "path": "/mnt/c/unifast/leadshug/leadshug_now_docker/web-app"
+      }
+    },
+    "todo_path": "/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/todos/active/features/TODO-leadshug-official-template-authoring.md",
+    "unclassified_change_count": 0
+  },
+  "violations": []
+}

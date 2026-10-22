@@ -1,0 +1,15 @@
+{
+  "schema": "stcon05.template-frc-marker-attribution-clarification.v1",
+  "status": "Root correction of evidence attribution; immutable prior logs/receipts/capsules unchanged",
+  "correct_attribution": "Both TEMPLATE-FRC-EVIDENCE and TEMPLATE-FRC-UI-EVIDENCE are emitted by web-app/e2e/message-templates.spec.ts. The first drives100real BFF requests through the browser suite API context; the second drives5x20UI triggers. They are not API e2e-suite markers.",
+  "corrected_statement": "The r27 root terminal record incorrectly said no API TEMPLATE-FRC marker was expected in browser mode. Both template FRC markers were absent because the main browser journey failed before those later assertions, not because browser mode excludes them. The current source explicitly shows their browser emitters.",
+  "independently_counted": {
+    "r21_browser": { "template_bff_frc": 1, "template_ui_frc": 1 },
+    "r24_all": { "template_bff_frc": 1, "template_ui_frc": 0 },
+    "r27_browser": { "template_bff_frc": 0, "template_ui_frc": 0 },
+    "r28_all": { "template_bff_frc": 0, "template_ui_frc": 0 }
+  },
+  "separate_marker": "FRC-COMPOSER-EVIDENCE belongs to the inherited inbox composer and cannot substitute for either template marker.",
+  "impact": "No failed run was accepted as candidate GREEN. r21/r24 historical passed marker statements above remain valid; neither current template FRC lane is claimed complete from r27/r28. Future current candidate acceptance and PCV generation require all five template markers from the actual successful canonical all.",
+  "review_packet": "Include this clarification beside the prior frozen terminal records so a no-context reviewer receives the correction without relying on thread history."
+}

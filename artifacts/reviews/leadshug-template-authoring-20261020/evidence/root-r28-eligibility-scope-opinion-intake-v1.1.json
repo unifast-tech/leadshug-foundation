@@ -1,0 +1,27 @@
+{
+  "schema": "stcon05.r28-eligibility-scope-independent-opinion.v1",
+  "reviewer": "/root/observation_202_authority_opinion; terminal read-only, no implementation or execution",
+  "status": "Source-confirmed projection defect; final browser POST response not yet proven",
+  "evidence": [
+    "carryMissingObservationRestrictions preserves eligibleForUse=false from an older PAUSED individual observation when a newer common catalogue observation wins.",
+    "templateObservationEligible unconditionally rejects eligibleForUse=false even with draftScoped=false; catalogue uses false, editor explicitly uses true.",
+    "Backend getCatalog/projectRow projects common eligibility. projectSavedObservation additionally evaluates draft definition and ACK association, returning draft-specific eligible/matchesDefinition/eligibleForUse."
+  ],
+  "options": {
+    "A": "Use the existing draftScoped parameter: draft-specific matchesDefinition/eligibleForUse gates only for the editor; preserve every common availability/eligible/status/support/fence/TTL gate. Recommended constant-time correction, no new owner or call.",
+    "B": "Recompute eligibleForUse from common observation and cached proof. Rejected: duplicates backend eligibility and ACK rules.",
+    "C": "Separate caches/ownership. Rejected for this bounded defect: unnecessary architecture expansion."
+  },
+  "safety": "An item with eligible=false or available=false remains blocked in both views. safeCode alone is not a generic veto. PROVIDER_ACK_CONFLICT is operation/draft association evidence, not an additional global catalogue rule. Do not grant editor eligibility from a catalogue alone.",
+  "root_disposition": "Integrated same D07/D08 HOW, subject to fail-first pure gate proof before product correction. Preserve the conservative merge and editor requirements; scope only the misplaced draft-specific veto.",
+  "test_only_admission": {
+    "paths": [
+      "web-app/src/telas/Modelos.spec.ts",
+      "web-app/e2e/message-templates.spec.ts"
+    ],
+    "unit": "Add a valid old individual PAUSED/eligibleForUse=false snapshot followed by a newer common APPROVED/available/eligible observation, in both merge orders. Require general catalogue eligible and draft editor restricted. Retain negative common availability/eligible assertions. No product-derived expected values or changed existing assertions.",
+    "browser": "Before the final catalogue refresh now at1168, register exact POST response before click. Require actual200 and owned remote identity APPROVED/available=true/eligible=true before the existing capital eligibility DOM assertion. Retain one click, existing cooldowns and all subsequent TTL/lifecycle/FRC checks. No retry or202 acceptance.",
+    "next": "Sole executor edits tests only, then stops for root static review/freeze. Root may admit one properly captured canonical web run to establish unit RED; browser additions will not be claimed executed by that mode. No product correction before actual RED disposition."
+  },
+  "limits": "The r28 browser failure1169 does not by itself prove the final POST was200 or this precise cause. New response inspection must close that gap in the subsequent browser run. No runtime, database, provider, runner, schema or public contract change."
+}

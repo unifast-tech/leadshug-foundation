@@ -1,0 +1,59 @@
+{
+  "schema": "stcon05.r28-all-root-terminal.v1",
+  "recorded_at_utc": "2026-10-22T00:01:04.358905+00:00",
+  "outcome": "Terminal failed; not candidate GREEN",
+  "log": "foundation_documentation/artifacts/tmp/st-con-05-r28-all-20261021T2342Z/canonical-all.log",
+  "log_bytes": 212528,
+  "log_sha256": "be5214ce52a8de9bcc5940af871940952bf44b24a8d16abe73d4d26ca56bf0b6",
+  "receipt": "foundation_documentation/artifacts/tmp/st-con-05-r28-all-20261021T2342Z/runner-exit.txt",
+  "receipt_sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865",
+  "exit": 1,
+  "freeze": "foundation_documentation/artifacts/reviews/leadshug-template-authoring-20261020/evidence/root-cp05-source-freeze-r28-reviewed-web-correction-v1.1.json",
+  "freeze_sha256": "d4d2510381514be1b53ec60336344c519041e4ecf9020aeb217c037481c0632b",
+  "source38_exact": true,
+  "protected30_exact": true,
+  "heads_exact": true,
+  "api_unit_passed": 284,
+  "api_pg_passed": 398,
+  "web_unit_passed": 36,
+  "playwright_passed": 69,
+  "playwright_failed": 1,
+  "total_passed": 787,
+  "total_failed": 1,
+  "migrations": "25 disposable migrations deployed/status clean; no preserved DB change",
+  "proofs": [
+    {
+      "path": "foundation_documentation/artifacts/tmp/st-con-05-r28-all-20261021T2342Z/pre-worker-freshness.json",
+      "sha256": "dc273de1c04155e7bf91bc411c399dba1069ef4ec3e35d13f9bf150f5686d5d9"
+    },
+    {
+      "path": "foundation_documentation/artifacts/tmp/st-con-05-r28-all-20261021T2342Z/attestation-browser-authority.json",
+      "sha256": "cecae33ce990e9daea34fe688fe53ffd7ac1712040486384956a0c9781ed3879"
+    }
+  ],
+  "source_capture_utc": "2026-10-21T23:49:51.043Z",
+  "runtime_capture_utc": "2026-10-21T23:49:48.086Z",
+  "served_dist_sha256": "ae0f58f33b659ee3d240e318127a457805948cba5e52146b8b0632ba0a59896b",
+  "template_marker_counts": {
+    "MESSAGE-TEMPLATE-PCV": 1,
+    "MESSAGE-TEMPLATE-EPS": 1,
+    "TEMPLATE-RLS-EVIDENCE": 1,
+    "TEMPLATE-FRC-EVIDENCE": 0,
+    "TEMPLATE-FRC-UI-EVIDENCE": 0
+  },
+  "passed": [
+    "Both automatic catch and manual recovery metadata cases including final DOM/receipt/PAUSED/ineligibility/dirty-text/one-effect assertions",
+    "Same-account reauthorization and subsequent reload",
+    "All6 Web selector/authority unit cases",
+    "Existing cross202/passive/derived observation and observedAt/TTL cases"
+  ],
+  "sole_failure": {
+    "case": "main journey1024",
+    "assertion": "1169 expected capital Elegível para uso futuro visible after final catalogue refresh click; absent",
+    "reached": "Prior individual200PAUSED and owned catalogue200PAUSED exact barriers; old individual200APPROVED held/released and later PAUSED DOM asserted",
+    "uncertainty": "The final APPROVED catalogue POST body/status was not captured by this test oracle. Do not assert its actual200 or cause from this run. Source suggests old draft-scoped eligibleForUse=false can restrict the general catalogue; independent read-only review requested.",
+    "not_reached": "Subsequent expiry/lifecycle, both template FRC BFF/UI markers, refusal and retry assertions"
+  },
+  "scope_limit": "FRC-COMPOSER-EVIDENCE belongs to inherited inbox composer, not the missing template UI proof. Browser is69real browser cases plus1pure consumer case; source/runtime proof exact. No activation/provider action occurred.",
+  "next": "Adjudicate eligibility projection scope; test-only fail-first change and exact final response barrier before any reviewed product correction. No automatic retry."
+}

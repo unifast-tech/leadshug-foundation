@@ -1,0 +1,17 @@
+{
+  "schema": "stcon05.r30-all-root-admission.v1",
+  "outcome": "GO exactly one canonical all with full tee capture",
+  "command": "bash scripts/test-channels-local.sh all",
+  "freeze": "foundation_documentation/artifacts/reviews/leadshug-template-authoring-20261020/evidence/root-cp05-source-freeze-r30-scoped-eligibility-v1.1.json",
+  "freeze_sha256": "027d72ad6a752828f59b730e1495cc520987472d452c1a3ace20da16c27e7f0f",
+  "source38_exact": true,
+  "protected30_exact": true,
+  "heads_exact": true,
+  "root_static_review": "Only the one admitted unconditional draft-veto removal changed product bytes; reverse insertion reproduces the parent hash. Existing editor proof and every common eligibility gate unchanged. Both test files remain exact from the fail-first freeze.",
+  "guards": "Normal execution authority GO; positive public diff364expected/0forbidden/0unclassified",
+  "executor": "Existing routed sole product writer /root/template_validation_recovery, principal checkout",
+  "capture": "Exclusive owned run directory, combined stdout/stderr tee from first byte, immediate actual PIPESTATUS numeric receipt even on failure. Preserve current setup source/runtime proofs after terminal.",
+  "boundary": "No source mutation, retry, selected tests, runner edit, second validation, preserved migration/runtime/tunnel/Meta action or product Git write. Stop at terminal for root exact assertion/source/runtime adjudication.",
+  "evidence_requirements": "All37Web unit cases and70Playwright cases must actually run; the new final catalogue POST barrier must inspect200/ownedID/APPROVED/available/eligible before the existing DOM. Both template FRC markers come from the later browser main journey, not the API e2e suite or inherited composer marker. Do not pre-accept any phase.",
+  "delivery": "Pending; candidate independent assurance/PCV, bounded TEST activation and assisted actual Meta proof/final fresh review remain mandatory"
+}
