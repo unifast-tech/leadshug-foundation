@@ -46,7 +46,7 @@ Este v1.1 substitui a autoridade ativa da minuta revisada em 2026-10-19. O origi
 
 - **Current delivery stage:** `Pending`
 - **Qualifiers:** `none`
-- **Next exact step:** concluir a admissão/transição de tentativa do backend com candidato congelado e prova PostgreSQL, pelo único writer, preservando as duas fixtures protegidas até validação humana.
+- **Next exact step:** concluir o coordenador/recuperação/BFF conforme o contrato congelado, pelo único writer; congelar fontes e executar prova canônica API/PostgreSQL antes da UI. As duas fixtures de E23 já foram explicitamente validadas e aplicadas; os demais caminhos selados permanecem protegidos.
 
 ## Active Work State (Required While TODO Remains In `active/`)
 
@@ -1118,3 +1118,7 @@ Root independently verified both fixture result hashes equal the exact E23-revie
 ## Execution checkpoint E25 — source-sealed initial coordinator module RED
 
 Root captured252 explicitly public source hashes BEFORE launch, then independently rechecked all bytes/inventory after terminal: unchanged. Runner46343 exited1 after lint/build/migration phases:30 unit files passed/three failed;327 tests passed/two failed plus expected absent initial-message.service module suite load failure. Root verified saved synthetic stdout hash and owned cleanup. This is valid absent-coordinator module RED before main implementation, not replay assertion proof. Other failures: synthetic admission context lacks canonical account/resource namespace (CHANNEL_CONTEXT_CHANGED before ordinary-interlock assertion), and Meta template protocol fixture receives UNSUPPORTED_KIND; exact causes require contract-preserving correction. Evidence: evidence/initial-coordinator-red-source-seal-e25-v1.1.json and initial-coordinator-red-e25-v1.1.json. The new same-owner acceptance primitive/callback specs were written AFTER primitive editing (explicit executor disclosure); their pass does not become historical test-first proof or real-PG transaction/concurrency proof. Main coordinator, late receipt/recovery and UI remain incomplete.
+
+## Execution checkpoint E26 — source audit before coherent backend candidate
+
+Root source inspection identified contract corrections for the same approved journey: sealed client API preservation, exact recovery routes and safe persisted response projections; template window exemption; known-receipt/local-acceptance certainty; original conversation/owner CAS preserved for recovery; final context-bound preview and catalog selection; abstract capability projection; numeric POSITIONAL wire order; current-grant and cross-actor idempotent risk acknowledgment. These are implementation corrections, not scope expansion or delivered behavior. The sole executor is addressing them before source freeze; no new canonical run is claimed. Root independently rechecked29 exact API read-only paths against E25: all match. Remaining Web protected paths were not included in this narrow check. E25 Foundation commit d2c3af3f is now pushed. Evidence: evidence/implementation-source-audit-e26-v1.1.json. Full backend/PG/UI/browser, fault/barrier and final assurance remain pending; prior causality, discovery and mutable-run disclosures stay in force.

@@ -1,0 +1,64 @@
+{
+  "checkpoint": "E26 implementation source audit; correction queue, not a candidate result",
+  "date": "2026-10-22",
+  "profile": "Operational / Coder; NestJS, React, Vite, PostgreSQL, Prisma, Docker",
+  "authority": "Same approved ST-CON-04 v1.1 and E23 exact fixture companion authorization",
+  "ownership": "stcon04_continuation sole product writer; root read-only advisory and Foundation owner",
+  "observations": [
+    {
+      "id": "E26-01",
+      "issue": "Private initial client used an undeclared extension of sealed MetaClient and constructor extension of sealed MetaTemplateClient. Executor reports restoration; verify exact current hashes and actual supported API before freeze."
+    },
+    {
+      "id": "E26-02",
+      "issue": "Recovery endpoints used initial-message-attempts rather than frozen initial-messages paths; align approved public contract."
+    },
+    {
+      "id": "E26-03",
+      "issue": "Coordinator replay/raw intent and stale PREPARED response require safe persisted outcome projection; ordinary reconcile must also omit nonce/context."
+    },
+    {
+      "id": "E26-04",
+      "issue": "Initial template late fence incorrectly applied the free-text window; approved template must remain usable outside the window."
+    },
+    {
+      "id": "E26-05",
+      "issue": "Durable receipt failure and second acceptance transaction failure must preserve known provider acceptance; recovery uses same MessageAcceptance owner and no provider reads."
+    },
+    {
+      "id": "E26-06",
+      "issue": "Persist original conversation CAS including external owner metadata; recovery or late result cannot steal current/successor ownership."
+    },
+    {
+      "id": "E26-07",
+      "issue": "Final preview validation must use one exact captured descriptor; support approved language/cursor/expected semantics contract, not only catalog first page."
+    },
+    {
+      "id": "E26-08",
+      "issue": "Derive capabilities from abstract bound Channel, never provider branch in inbox; bounded options must include active/recent attempts and safe readiness/window metadata."
+    },
+    {
+      "id": "E26-09",
+      "issue": "POSITIONAL wire parameters must be numeric order, independent of reverse/repeated placeholder occurrence; add protocol assertion."
+    },
+    {
+      "id": "E26-10",
+      "issue": "Risk acknowledgment replay must be idempotent for any currently authorized actor; preserve original audit attribution and validate current grant at mutation."
+    }
+  ],
+  "verification": {
+    "new_runner": "not launched during this checkpoint",
+    "api_exact_readonly_check": {
+      "count": 29,
+      "mismatches": 0,
+      "method": "current TODO api NO new mutation exact paths against E25 public source seal only"
+    },
+    "foundation_prior_e25": "d2c3af3f pushed main to origin successfully, 46aaa3ca..d2c3af3f"
+  },
+  "limits": [
+    "Source observations are advisory implementation checks, not independent delivery review.",
+    "No full API/PG/UI/browser/candidate pass is claimed.",
+    "No private path traversal, actual runtime, provider query, tunnel, preserved database migration or product Git write.",
+    "E02, E04, E18 and prior evidence disclosures remain applicable."
+  ]
+}
