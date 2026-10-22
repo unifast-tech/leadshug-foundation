@@ -42,7 +42,7 @@ O usuário quer preparar no LeadsHug a mensagem que usará para iniciar atendime
 ## Delivery Status Canon (Required)
 - **Current delivery stage:** Pending
 - **Qualifiers:** none
-- **Next exact step:** concluir a correção estreita do owner de observações no Web, conforme `evidence/root-r33-observation-owner-how-admission-v1.1.json`, e revisar estaticamente/congelar antes de um novo all canônico. Browser r31 reproduziu três falhas de consumidor; web r32 confirmou 37 passed/1 failed no composto comum/draft. A falha de setup do quarto browser recebeu identidade de fixture exclusiva, sem enfraquecer asserções; sua corrida ainda não foi provada. Reducer local sobre as duas fatias existentes é admitido somente para retenção atômica da observação do editor quando a primeira página omite seu ID, sem nova cache ou contrato público. Ativação preservada e Meta continuam retidas; contenção da credencial já confirmada.
+- **Next exact step:** aguardar e atribuir o único all canônico r33, com a correção Web estaticamente revisada e fonte congelada em `evidence/root-cp05-source-freeze-r33-reviewed-observation-owner-v1.1.json`. Admissão em `evidence/root-r33-all-admission-v1.1.json`; 38 fontes/30 selos/3 HEADs exatos, autoridade GO e diff público 446 esperado/zero desvios. Falhas atuais devem ser diagnosticadas sem retry automático. Se GREEN real, seguir às revisões independentes afetadas e PCV, depois preflight TEST/migrations/ativação e prova Meta assistida. Nenhum desses gates foi antecipado; contenção da credencial já confirmada.
 
 ## Active Work State (Required While TODO Remains In `active/`)
 - **Work state:** implementation

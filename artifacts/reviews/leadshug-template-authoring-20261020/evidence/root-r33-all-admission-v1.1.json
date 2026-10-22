@@ -1,0 +1,13 @@
+{
+  "schema": "stcon05.r33-all-admission.v1",
+  "recorded_at_utc": "2026-10-22T01:20:04.121886+00:00",
+  "outcome": "GO exactly one canonical all on consolidated principal source",
+  "command": "bash scripts/test-channels-local.sh all",
+  "freeze": "foundation_documentation/artifacts/reviews/leadshug-template-authoring-20261020/evidence/root-cp05-source-freeze-r33-reviewed-observation-owner-v1.1.json",
+  "freeze_sha256": "e0b9336e7f62b1f2b2e9535c4c78aa5abc3b62e9112dfc9a0e6ca57fb3a37eed",
+  "guards": "execution authority GO; public diff446 expected, zero forbidden/unclassified; 38 sources/30 seals/3 heads exact",
+  "capture": "Unique artifacts/tmp/st-con-05-r33-all directory, complete combined first-byte tee and immediate actual PIPESTATUS receipt even on failure; retain post-globalsetup source/runtime proofs after terminal.",
+  "expected_scope": "284 API unit,398 real PG,41 Web unit and73 Playwright if all current cases pass; counts are expectation, not prior acceptance. All five actual template markers required for GREEN.",
+  "stop": "Source frozen until root terminal attribution; no automatic retry, selected tests, further source edits, concurrent validation, preserved DB/runtime/private config/build/recreate/tunnel/Meta action or product Git.",
+  "next": "If actual GREEN, current affected independent assurance/PCV before bounded preserved preflight, migrations and activation. Delivery Pending."
+}

@@ -1,0 +1,11 @@
+{
+  "schema": "stcon05.ops-preparation-timeout-addendum.v1",
+  "recorded_at_utc": "2026-10-22T01:24:43.073813+00:00",
+  "mode": "Read-only preparation; helper not invoked or edited",
+  "helper": "foundation_documentation/artifacts/tmp/stcon05-activation-prep-r30/stcon05_local_migrations_once.py",
+  "helper_sha256": "a33adb1e51b2f3b4f4d6bc57d3beb7268bbe474869818e4a536b0f9d5fa3456b",
+  "prior": "root-ops-preparation-r30-static-review-v1.1.json",
+  "finding": "CATALOG_JS issues several metadata SELECTs with no DB-side read-only transaction or statement/lock timeout. The outer docker-exec 90 s bound alone may leave server work running after a client timeout.",
+  "required_before_admission": "After current validation/candidate gate, sole executor must revise the helper to use one bounded read-only metadata transaction with lock timeout5s and statement timeout60s, plus bounded client transaction/exec timeouts. Keep only current_database, migration names/checksums/completion flags and explicitly named schema object metadata; no business rows/counts or migration logs. Exact script re-review/fresh source binding precedes runtime admission.",
+  "authority": "Preparation adds no runtime/DB permission; source/process freeze of the current all remains. Existing four static helper blockers also remain open."
+}
