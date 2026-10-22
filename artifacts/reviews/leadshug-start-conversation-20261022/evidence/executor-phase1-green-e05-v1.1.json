@@ -1,0 +1,78 @@
+{
+  "checkpoint": "E05 phase1 canonical API GREEN",
+  "scope": "Six new pure/service/spec files only; no delivered full ST-CON-04 journey",
+  "handoff": {
+    "checkpoint": "ST-CON-04 v1.1 phase 1",
+    "status": "bounded initial layer reviewable; awaiting root continuation",
+    "changed_product_paths": [
+      "api-app/src/domain/inbox/conversation-start.service.ts",
+      "api-app/src/domain/inbox/conversation-start.service.spec.ts",
+      "api-app/src/domain/inbox/initial-message-template-renderer.ts",
+      "api-app/src/domain/inbox/initial-message-template-renderer.spec.ts",
+      "api-app/src/domain/inbox/channel-window-policy.ts",
+      "api-app/src/domain/inbox/channel-window-policy.spec.ts"
+    ],
+    "red_green_sequence": {
+      "initial_red": {
+        "command": "scripts/test-channels-local.sh api",
+        "exit_code": 1,
+        "summary": "3 new suites failed on missing modules; 26 existing suites and 284 tests passed; assertion_failures=0",
+        "stdout": "/tmp/stcon04-executor-public-red.txt",
+        "stdout_sha256": "4ab2dcc27c18dcc09fd0ee2d7ce1caa4216bc34a7403e9166dad2071ffb11b76",
+        "receipt": "/tmp/stcon04-executor-red-receipt.json"
+      },
+      "posthoc_behavior_red": {
+        "command": "scripts/test-channels-local.sh api",
+        "exit_code": 1,
+        "summary": "post-hoc causal mutation/reversion proof, not historical test-first order: 6 assertion failures (two whitespace controls, valid 41-character padded phone, positional ordering, blank body, display order), 297 tests passed",
+        "stdout": "/tmp/stcon04-executor-public-red4.txt",
+        "stdout_sha256": "ace5e8275d769fa6a512dcc36937fb21a15229268321aad6fb2ce5add932582c"
+      },
+      "green": {
+        "command": "scripts/test-channels-local.sh api",
+        "exit_code": 0,
+        "summary": "lint/build passed; disposable migration deploy/status passed; unit 29 files/303 tests passed; E2E 30 files/398 tests passed; cleanup completed",
+        "stdout": "/tmp/stcon04-executor-public-green-final.txt",
+        "stdout_sha256": "c8479967da1702c59fbb52cac181b6b302086cd79936d7298ea4ebcbcd60598c"
+      }
+    },
+    "decisions": [
+      "Phone input accepts optional leading plus and only digits, literal spaces, parentheses, periods, and hyphens; raw input max 40 characters; normalized digits 8-15, no country inference.",
+      "Conversation start uses BU/contact unique upsert, creates QUEUED/PESSOA/unread=0/lastMessageAt=null and has an empty update branch; no external/automation calls.",
+      "Initial template renderer validates the unchanged sanitized summary grammar and parameters; NAMED keys are exact; POSITIONAL positions are contiguous and mapped numerically; static header/body/footer render order is canonical; independent SHA-256 semantic fingerprint ignores inherited authoring supported/fingerprint flags.",
+      "Window helpers qualify signed Meta Unix-second input only when positive integer and nonfuture, then apply strict less-than-24h only to IN/OFICIAL evidence for the selected resource; createdAt is never used. Helpers are not yet wired into webhook persistence or common sender/projections."
+    ],
+    "open_phase2_work": [
+      "PostgreSQL open/create race and trustworthy created-vs-reused result; current ConversationStartService test mocks Prisma upsert and is not PG evidence.",
+      "Persist qualified verified timestamp through signature-verified webhook and MessageAcceptance into additive schema; wire same-resource current window through resolver/common text sender and all availability consumers.",
+      "Connect initial-message flow into BFF and UI; then common typed Channel dispatch, admissions, intent durability and integration.",
+      "Add real PostgreSQL coverage for timestamp provenance/window, automation consequence and concurrent open before declaring phase 1 complete."
+    ],
+    "privacy_deviation": "The initial broad `find .. -name AGENTS.md -print` outcome is unknown; no paths/content were returned. Root recorded it for independent security/adherence assessment."
+  },
+  "stdout_hash_checks": [
+    {
+      "lane": "initial_red",
+      "sha256_verified": "4ab2dcc27c18dcc09fd0ee2d7ce1caa4216bc34a7403e9166dad2071ffb11b76",
+      "exit_code": 1
+    },
+    {
+      "lane": "posthoc_behavior_red",
+      "sha256_verified": "ace5e8275d769fa6a512dcc36937fb21a15229268321aad6fb2ce5add932582c",
+      "exit_code": 1
+    },
+    {
+      "lane": "green",
+      "sha256_verified": "c8479967da1702c59fbb52cac181b6b302086cd79936d7298ea4ebcbcd60598c",
+      "exit_code": 0
+    }
+  ],
+  "limits": [
+    "Open/reuse proof uses mocked upsert only; actual PostgreSQL creation/readiness/uniqueness/concurrency is outstanding.",
+    "Qualified timestamp/window helpers are not yet wired to webhook persistence, send policy or projections.",
+    "No browser, new migration, preserved runtime, actual provider or own approved-template proof in this checkpoint.",
+    "RED4 is post-hoc controlled reversion; mixed historical causality remains recorded in E04.",
+    "E02 discovery deviation remains for independent security/adherence assessment."
+  ],
+  "next": "Same sole executor continues approved backend integration; no new approval or scope change."
+}

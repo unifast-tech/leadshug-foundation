@@ -24,3 +24,7 @@ Após aprovação: implementação test-first, testes de contrato/PG e navegador
 ## Execução autorizada — 2026-10-22
 
 O usuário respondeu APROVADO para v1.1; [admissão](evidence/approval-execution-admission-v1.1.json) e [authority normal GO](evidence/authority-execution-admission-v1.2.json) registram execução autorizada, com perfil Operational/Coder e um executor de produto. O estado atual é InProgress/Pending/implementation. Seções anteriores de “aguarda aprovação” descrevem o encerramento do planejamento; não são o estado atual. As69 fontes herdadas foram conferidas antes da primeira edição. [Desvio procedural E02](evidence/execution-discovery-deviation-e02-v1.1.json) registra busca ampla inicial do executor, resultado de travessia desconhecido e contenção; não se afirma conformidade integral de privacidade desta execução. Primeira rodada RED por ausência dos novos módulos está [registrada](evidence/executor-red-e03-v1.1.json); nenhuma entrega04 GREEN ou prova real é reivindicada.
+
+## Checkpoint E05 — API GREEN parcial
+
+A primeira camada passou no runner canônico:303 testes unitários e398 testes E2E PostgreSQL, além de lint/build/migrations. [Recibo e limites](evidence/executor-phase1-green-e05-v1.1.json). Abertura ainda tem prova mock-based e a política de janela ainda precisa de integração. A execução04 continua em andamento pelo mesmo executor; não há entrega completa, prova de navegador ou envio real nesta etapa. E02 e a cronologia causal E04 continuam válidos para assurance independente.
