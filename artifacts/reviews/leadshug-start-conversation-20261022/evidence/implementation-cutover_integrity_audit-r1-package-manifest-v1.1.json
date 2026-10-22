@@ -1,0 +1,183 @@
+{
+  "review_kind": "cutover_integrity_audit",
+  "package": "/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/artifacts/reviews/leadshug-start-conversation-20261022/implementation-cutover_integrity_audit-r1-package-v1.1.md",
+  "package_sha256": "22a9f0654541dc5b90bc3d0dd08ff43834f51d3b07ec396a58c2b4c712e5f07f",
+  "source_fingerprint": "603cc71df6648aba2f53be093383348e503231c60e06f89d46e9c8ce111b6d01",
+  "source_files": [
+    {
+      "path": "api-app/src/domain/channels/transport/channel.ts",
+      "sha256": "49b24179666a0fa90becfb2bf24ebc31acde7bf342b34d3b110a42465ccb69f9",
+      "bytes": 6698,
+      "initial_seal_classification": "changed since exact pre-ST04 seal within admitted mutation scope"
+    },
+    {
+      "path": "api-app/src/domain/inbox/channel-window-policy.ts",
+      "sha256": "46dfcf887f2ad4ed0670664186e918816699e6541d1670aa9c32ac79a193e43e",
+      "bytes": 5700,
+      "initial_seal_classification": "not in inherited dirty-file seal; current exact source supplied, not inferred as newly added"
+    },
+    {
+      "path": "api-app/src/domain/inbox/conversation-start.service.ts",
+      "sha256": "97ee440ce06007eac1aed98e0afe4997056722c8d62508a0698655a2de5d1118",
+      "bytes": 2328,
+      "initial_seal_classification": "not in inherited dirty-file seal; current exact source supplied, not inferred as newly added"
+    },
+    {
+      "path": "api-app/src/domain/inbox/initial-message.service.ts",
+      "sha256": "5d0456be3e4643e0b21309fd575440037c5113a48e2f69447e2b70ee571fc0a3",
+      "bytes": 24350,
+      "initial_seal_classification": "not in inherited dirty-file seal; current exact source supplied, not inferred as newly added"
+    },
+    {
+      "path": "api-app/src/domain/inbox/dispatch-admission.service.ts",
+      "sha256": "23d7beeb11324fbdbd285c8a59286d7163ec09fffc59b2cf3bdacf5d5b9e10d4",
+      "bytes": 44830,
+      "initial_seal_classification": "not in inherited dirty-file seal; current exact source supplied, not inferred as newly added"
+    },
+    {
+      "path": "api-app/src/domain/inbox/outbound.service.ts",
+      "sha256": "c023b7dbfbaa03e78822cb7b0a8d9b84e134054b41fb12498f0c48bcce272d5e",
+      "bytes": 39078,
+      "initial_seal_classification": "changed since exact pre-ST04 seal within admitted mutation scope"
+    },
+    {
+      "path": "api-app/src/domain/inbox/message-acceptance.service.ts",
+      "sha256": "71194c70b12cb920054586a7a86266d90f8eca0b7008b1b5688627e0694979f1",
+      "bytes": 16712,
+      "initial_seal_classification": "not in inherited dirty-file seal; current exact source supplied, not inferred as newly added"
+    },
+    {
+      "path": "api-app/src/domain/inbox/conversations.service.ts",
+      "sha256": "6dba438e7e59dff56b2b98413532210bac62b7d744cf1b80c5a2c748923b431c",
+      "bytes": 9091,
+      "initial_seal_classification": "changed since exact pre-ST04 seal within admitted mutation scope"
+    },
+    {
+      "path": "api-app/src/domain/inbox/incoming.service.ts",
+      "sha256": "390d48de06ad863b9d9c47344c1eb2919d0ba07aa96626b0ef1596fcbde4795b",
+      "bytes": 6157,
+      "initial_seal_classification": "changed since exact pre-ST04 seal within admitted mutation scope"
+    },
+    {
+      "path": "api-app/src/integrations/channels/meta-channel.ts",
+      "sha256": "99a9ca01a57527a76de54cdbdf8b49f65b5dcceb1a71abce883d1845c6cd8f26",
+      "bytes": 3900,
+      "initial_seal_classification": "changed since exact pre-ST04 seal within admitted mutation scope"
+    },
+    {
+      "path": "api-app/src/integrations/channels/evolution-channel.ts",
+      "sha256": "6a41ef2f3b0ee9e5c6b381d54faf48b0b2c672e52751f8be1480ad01cb178a34",
+      "bytes": 2211,
+      "initial_seal_classification": "changed since exact pre-ST04 seal within admitted mutation scope"
+    },
+    {
+      "path": "api-app/src/integrations/channels/prisma-channel-resolver.ts",
+      "sha256": "60005fd226534a178b646d6ec775bb059ec55cc4cfea24a3d72d2c6e4a1ca64a",
+      "bytes": 25890,
+      "initial_seal_classification": "changed since exact pre-ST04 seal within admitted mutation scope"
+    },
+    {
+      "path": "api-app/src/integrations/meta/initial-message.client.ts",
+      "sha256": "e21efb3df6910c0b740afec40da919542f672302429217268fdb56c282446721",
+      "bytes": 11410,
+      "initial_seal_classification": "not in inherited dirty-file seal; current exact source supplied, not inferred as newly added"
+    },
+    {
+      "path": "api-app/src/integrations/message-templates/template-management.resolver.ts",
+      "sha256": "1d26d05183645def5b0ef4ba317f7d024b3a08c610c910593a35308309e99e00",
+      "bytes": 4910,
+      "initial_seal_classification": "changed since exact pre-ST04 seal within admitted mutation scope"
+    },
+    {
+      "path": "api-app/src/domain/message-templates/template-observation.service.ts",
+      "sha256": "41c7c640fd31ca0759d0d88647e24c74787597dcf75fd8a3c773fe6e02965488",
+      "bytes": 39343,
+      "initial_seal_classification": "unchanged inherited pre-ST04 bytes"
+    },
+    {
+      "path": "api-app/src/surfaces/bff/conversations.controller.ts",
+      "sha256": "f8682cc211695df59caaa3f32799ad6a0444e120d683592e32984a71d71c8c1d",
+      "bytes": 19043,
+      "initial_seal_classification": "changed since exact pre-ST04 seal within admitted mutation scope"
+    },
+    {
+      "path": "api-app/src/surfaces/public/conversations.controller.ts",
+      "sha256": "bbb5ebf085e59840f3a9e9cbc1f07c57cdc58d1a5b6f846f934fb526cc29bfd1",
+      "bytes": 12059,
+      "initial_seal_classification": "unchanged inherited pre-ST04 bytes"
+    },
+    {
+      "path": "api-app/src/surfaces/webhooks/meta.controller.ts",
+      "sha256": "261bf12e6ef021e00d90000a714ff54c66e3753f85d287a95015035fb584518f",
+      "bytes": 7195,
+      "initial_seal_classification": "not in inherited dirty-file seal; current exact source supplied, not inferred as newly added"
+    },
+    {
+      "path": "web-app/src/componentes/NovaConversa.tsx",
+      "sha256": "770fb4e0742eed6e4970e66c6ef40e99282cf144bd65c58ba32079624736aa10",
+      "bytes": 40644,
+      "initial_seal_classification": "not in inherited dirty-file seal; current exact source supplied, not inferred as newly added"
+    },
+    {
+      "path": "web-app/src/telas/Inbox.tsx",
+      "sha256": "bbd6facb3f60fafb01f661ec5fe6c0dec826b3023c9ba5ad44aec5b31865ddbd",
+      "bytes": 25549,
+      "initial_seal_classification": "changed since exact pre-ST04 seal within admitted mutation scope"
+    },
+    {
+      "path": "web-app/src/api.ts",
+      "sha256": "7c80a2e738655c5b54382e2805d5e8e808b80e25af283ca90402e932a3d3794c",
+      "bytes": 16785,
+      "initial_seal_classification": "changed since exact pre-ST04 seal within admitted mutation scope"
+    },
+    {
+      "path": "api-app/src/surfaces/bff/bff.module.ts",
+      "sha256": "8591bf48dbc3275cc24bb57b5c94d0e492dbd7c1c9aac9f7f58c91013a24cc8a",
+      "bytes": 6282,
+      "initial_seal_classification": "changed since exact pre-ST04 seal within admitted mutation scope"
+    },
+    {
+      "path": "api-app/src/integrations/message-templates/template-management.module.ts",
+      "sha256": "aabfb344eab0b244772f0a2a8066dbae71bb24973a0a498c69af676c17f0acdd",
+      "bytes": 595,
+      "initial_seal_classification": "unchanged inherited pre-ST04 bytes"
+    },
+    {
+      "path": "api-app/src/domain/channels/transport/channel-dependencies.spec.ts",
+      "sha256": "f59d838baf635c0ce0d1ebe725c88fbb0b19fac42e9b382452e31fd38e0511a3",
+      "bytes": 2383,
+      "initial_seal_classification": "unchanged inherited pre-ST04 bytes"
+    }
+  ],
+  "evidence_files": [
+    "browser-result-e44-v1.1.json",
+    "storage-read-recovery-evidence-loop-v1.1.json",
+    "test-quality-public-roots-e46-v1.1.json",
+    "capability-owner-evidence-e44-v1.1.json",
+    "producer-consumer-crosswalk-e47-v1.1.json",
+    "candidate-criterion-index-e47-v1.1.json",
+    "security-candidate-map-e45-v1.1.json",
+    "decision-module-candidate-map-e45-v1.1.json",
+    "additive-migration-assessment-e45-v1.1.json",
+    "local-activation-proof-plan-proposal-v1.1.json",
+    "final-diff-guard-boundary-proposal-v1.1.json",
+    "root-topology-inspection-deviation-e35a-v1.1.json",
+    "execution-discovery-deviation-e02-v1.1.json",
+    "all-result-e45-v1.1.json",
+    "all-source-recheck-e45-v1.1.json",
+    "browser-freshness-collection-e45-v1.1.json",
+    "ordinary-recovery-consumer-proof-gap-e45-v1.1.json",
+    "verification-debt-preclosure-e46-v1.1.json",
+    "positive-build-contexts-e46-v1.1.json",
+    "pcv-eps-e45-v1.1.json",
+    "pcv-frc-e45-v1.1.json",
+    "pcv-bci-e45-v1.1.json",
+    "pcv-rls-e45-v1.1.json",
+    "browser-result-e46-v1.1.json",
+    "browser-source-recheck-e46-v1.1.json",
+    "browser-ordinary-consumer-e47-v1.1.json",
+    "browser-live-review-source-check-e47-v1.1.json"
+  ],
+  "stage": "review-ready candidate",
+  "bytes": 762812
+}

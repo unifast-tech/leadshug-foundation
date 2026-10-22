@@ -1,0 +1,12 @@
+{
+  "kind": "Current source binding for already prepared public build artifacts",
+  "recorded_at_utc": "2026-10-22T23:24:21.043725+00:00",
+  "current_source_seal": "browser-source-seal-e47-v1.1.json",
+  "current_source_fingerprint": "603cc71df6648aba2f53be093383348e503231c60e06f89d46e9c8ce111b6d01",
+  "original_archive_receipt": "positive-build-contexts-e46-v1.1.json",
+  "verified_current_input_records": 224,
+  "verified_archives": 2,
+  "all_bytes_and_archive_hashes_match": true,
+  "delta_assessment": "E46\u2192E47 changes only a browser test excluded from both build contexts. Production and exact public Dockerfiles/config/manifests remain equal.",
+  "activation_status": "No image build/activation/private input consumption yet. Reviewer packets remain frozen; this supplemental metadata does not replace current full browser terminal/postseal or independent review."
+}

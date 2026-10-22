@@ -1,0 +1,83 @@
+{
+  "kind": "Current full positive-public-root static TQA scan, not independent audit clearance",
+  "recorded_at_utc": "2026-10-22T23:05:59.710359+00:00",
+  "source_seal": "browser-source-seal-e46-v1.1.json",
+  "command": [
+    "bash",
+    "delphi-ai/tools/test_quality_audit.sh",
+    "--path",
+    "api-app/src",
+    "--path",
+    "api-app/test",
+    "--path",
+    "web-app/src",
+    "--path",
+    "web-app/e2e"
+  ],
+  "exit_code": 2,
+  "heuristic_outcome": "high",
+  "raw_sha256": "68204d6fbdec375e51642de5c5fad5b8db015d753b35073cd0b6a61fa4cb14be",
+  "counts": {
+    "hard_bypass": 5,
+    "test_support": 0,
+    "auth_shortcut": 0,
+    "status_only": 178,
+    "no_exception_only": 4,
+    "ambient_subject_fallback": 16,
+    "di_override": 0,
+    "mock_hint": 26
+  },
+  "hard_bypass_disposition": [
+    {
+      "path": "api-app/src/domain/setor/setor.service.ts",
+      "sha256": "d8cb22d68452d1ab9ea9daa69fe9660d867612f81db8e9e9a7fb34a6e56cda84",
+      "lines": [
+        35
+      ],
+      "source_fact": "Prisma findMany argument skip beside take/orderBy; pagination offset, not a disabled/skipped test.",
+      "disposition": "False positive for hard test bypass; no source change needed."
+    },
+    {
+      "path": "api-app/src/domain/identity/usuarios.service.ts",
+      "sha256": "ff82f54a7aa6e495c5ce20626e88221fc20f4474a5ec84ff2f257b081f803364",
+      "lines": [
+        51
+      ],
+      "source_fact": "Prisma findMany argument skip beside take/orderBy; pagination offset, not a disabled/skipped test.",
+      "disposition": "False positive for hard test bypass; no source change needed."
+    },
+    {
+      "path": "api-app/src/domain/historico/atividades.service.ts",
+      "sha256": "9a081318375268d76839a83502d194bb12bfc1fb619a3cb6badab80c425d4609",
+      "lines": [
+        53
+      ],
+      "source_fact": "Prisma findMany argument skip beside take/orderBy; pagination offset, not a disabled/skipped test.",
+      "disposition": "False positive for hard test bypass; no source change needed."
+    },
+    {
+      "path": "api-app/src/domain/inbox/historico.service.ts",
+      "sha256": "811212eeb5b9e8318ef344eb6660385382707cb6d6882c5e9f84e8d4951ccfaa",
+      "lines": [
+        38,
+        101
+      ],
+      "source_fact": "Prisma findMany argument skip beside take/orderBy; pagination offset, not a disabled/skipped test.",
+      "disposition": "False positive for hard test bypass; no source change needed."
+    }
+  ],
+  "remaining_signals": "Require adjacent scenario and inherited-vs-current-delta assessment by fresh independent TQA. No blanket dismissal of status-only/no-exception/ambient/mock hints, no full gate clearance. The scan includes production and inherited files and intentionally reports heuristic overmatches.",
+  "scope_boundary": "Only four explicit positive public source roots. No --scan-git-modified, actual env, .local-files, process inspection or root-wide Git discovery.",
+  "durable_raw": "test-quality-public-roots-output-e46-v1.1.txt",
+  "limits": [
+    "E45 full all passed; E46 extra browser test running with known counter expectation failure before consumer actions.",
+    "Static heuristics alone do not clear TQA or replace fresh no-context audit."
+  ],
+  "exact_test_focus_skip_crosscheck": {
+    "exit_code": 1,
+    "matches": 0,
+    "scope": "Same four complete positive public roots; supplementary, not a narrowed replacement for static scan."
+  },
+  "actual_exit_code": 2,
+  "stdout_sha256": "68204d6fbdec375e51642de5c5fad5b8db015d753b35073cd0b6a61fa4cb14be"
+}

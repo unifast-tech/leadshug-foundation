@@ -1,0 +1,53 @@
+{
+  "kind": "Root source-confirmed recovery defect candidate found during independent assurance; runtime assertion RED not yet obtained",
+  "issue_id": "ST04-PREPARED-RECOVERY-01",
+  "recorded_at_utc": "2026-10-22T23:27:35.749902+00:00",
+  "severity": "high",
+  "routing": "release-blocker pending targeted reproduction/resolution",
+  "source_seal": "browser-source-seal-e47-v1.1.json",
+  "state": "Root and sole executor separately confirmed the source control flow; this is not a fresh formal reviewer finding or runtime assertion RED. No product mutation; live E47 and r1 reviewers remain frozen/running.",
+  "evidence": [
+    {
+      "path": "api-app/src/domain/inbox/initial-message.service.ts",
+      "symbol": "projectIntent",
+      "fact": "PREPARED projects recoveryAction null; getAttempt/options read it without calling reconcileInitial."
+    },
+    {
+      "path": "web-app/src/componentes/NovaConversa.tsx",
+      "lines": "312\u2013314,541\u2013575,600\u2013611",
+      "fact": "An unreleased active PREPARED attempt locks first-send form. Only Consultar estado GET is shown; local reconcile requires recoveryAction RECONCILE."
+    },
+    {
+      "path": "api-app/src/domain/inbox/dispatch-admission.service.ts",
+      "lines": "178\u2013183,551\u2013574",
+      "fact": "An existing active initial intent blocks another reservation. Local reconcileInitial safely rejects/releases expired PREPARED, but UI does not invoke that route for PREPARED."
+    }
+  ],
+  "failure_hypothesis": "After process interruption or uncertain reservation readback leaves durable unclaimed PREPARED, reopen/reload shows locked panel; repeated GET remains PREPARED even past lease. No UI action reaches existing local-only cleanup, so future first/ordinary send can remain blocked.",
+  "scope": "Already approved finite first-send recovery/Frontend Consumer Matrix, DOD05/08; no new provider, transport, state machine, migration or global platform requested.",
+  "options": [
+    {
+      "id": "A",
+      "change": "Expose existing scoped local reconciliation for PREPARED in the existing safe projection/UI action, with current grant/CSRF and immutable lease check.",
+      "assessment": "Recommended bounded correction; no external dispatch or unsafe time takeover of SENDING."
+    },
+    {
+      "id": "B",
+      "change": "Automatically mutate/clean up expired preparation during GET/read.",
+      "assessment": "Not recommended: changes observational read semantics and complicates write certainty."
+    },
+    {
+      "id": "C",
+      "change": "Leave only GET and require manual API tooling.",
+      "assessment": "Does not satisfy recoverable operator flow; not delivery-ready."
+    }
+  ],
+  "test_first_plan": [
+    "After actual E47terminal+cleanup+independent postseal and sole-writer release, add focused failing assertion before corresponding product change.",
+    "Prove persisted unclaimed PREPARED recovery via real BFF/PG/browser; fixture represents an interrupted local preparation, never claims an actual provider crash/send.",
+    "Before lease expiry, local reconcile leaves slot/state and sends zero; after expiry it rejects/releases the same owned slot, returns composer/new first-send form without provider call or Message.",
+    "Preserve existing SENDING/AMBIGUOUS no-time-takeover and explicit risk acknowledgment behavior; run affected canonical full suite after backend projection change."
+  ],
+  "review_handling": "Do not interrupt/mutate live r1 packets or reuse their eventual conclusions as approval for a different candidate. Preserve result/source binding; integrate/recheck affected findings on corrected candidate.",
+  "method": "Real new defect needs causal assertion RED before fix; prior ordinary effects-counter test failure was not a product RED."
+}

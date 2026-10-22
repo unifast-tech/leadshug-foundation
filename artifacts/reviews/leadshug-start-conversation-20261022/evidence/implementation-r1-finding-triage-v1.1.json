@@ -1,0 +1,332 @@
+{
+  "kind": "Authoritative root r1 finding triage and in-scope remediation plan; fixes pending",
+  "recorded_at_utc": "2026-10-22T23:40:01.058997+00:00",
+  "candidate_source_seal": "browser-source-seal-e47-v1.1.json",
+  "deduplication": "Root ST04-PREPARED-RECOVERY-01 is same locus as ARCH-ST04-R1-01/F-3E65B77F, not an eleventh finding.",
+  "rows": [
+    {
+      "finding_id": "F-511FF1D6",
+      "source_finding_id": "ARCH-ST04-R1-06",
+      "review_kind": "architecture_adherence",
+      "severity": "medium",
+      "title": "The dependency protection harness omits the new initial coordinator",
+      "classification": "release-blocker",
+      "status": "open",
+      "planned_resolution": "Integrate",
+      "actual_resolution": "Pending integration; no fix/PASS claimed",
+      "options": [
+        {
+          "id": "A",
+          "action": "Add companion protection in admitted channel-initial-message.spec.ts with synthetic forbidden coupling controls.",
+          "assessment": "recommended, existing approved objective"
+        },
+        {
+          "id": "B",
+          "action": "Edit sealed inherited harness (unneeded approval deviation).",
+          "assessment": "not recommended"
+        },
+        {
+          "id": "C",
+          "action": "Leave new coordinator outside protection.",
+          "assessment": "not acceptable for current delivery confidence"
+        }
+      ],
+      "source_assessment": "Current coordinator has no forbidden dispatch; this is harness coverage added after implementation, not a product RED. Keep inherited38protected bytes.",
+      "same_scope_basis": "Already-approved recovery/dispatch/renderer/performance/protection and evidence contract; no new product behavior/provider/state/migration/global platform.",
+      "formalization": "Candidate hints preserved in original review; no analyzer/Delphi rule implementation authorized.",
+      "remediation_owner": "stcon04_continuation sole code writer; root assurance"
+    },
+    {
+      "finding_id": "F-8E89FC19",
+      "source_finding_id": "ARCH-ST04-R1-02",
+      "review_kind": "architecture_adherence",
+      "severity": "medium",
+      "title": "Ordinary success ignores an unconfirmed settlement result",
+      "classification": "release-blocker",
+      "status": "open",
+      "planned_resolution": "Integrate",
+      "actual_resolution": "Pending integration; no fix/PASS claimed",
+      "options": [
+        {
+          "id": "A",
+          "action": "Check positive settlement boolean; preserve known ACK/recorded Message in incomplete result when false.",
+          "assessment": "recommended, existing approved objective"
+        },
+        {
+          "id": "B",
+          "action": "Introduce additional settlement retry machinery (unneeded extra semantics).",
+          "assessment": "not recommended"
+        },
+        {
+          "id": "C",
+          "action": "Report normal success while durable exclusion remains unresolved.",
+          "assessment": "not acceptable for current delivery confidence"
+        }
+      ],
+      "source_assessment": "Root verified boolean false path is ignored by current Outbound.send; real rollback/ACK-loss regression queued.",
+      "same_scope_basis": "Already-approved recovery/dispatch/renderer/performance/protection and evidence contract; no new product behavior/provider/state/migration/global platform.",
+      "formalization": "Candidate hints preserved in original review; no analyzer/Delphi rule implementation authorized.",
+      "remediation_owner": "stcon04_continuation sole code writer; root assurance"
+    },
+    {
+      "finding_id": "F-ED2FCC37",
+      "source_finding_id": "ARCH-ST04-R1-03",
+      "review_kind": "architecture_adherence",
+      "severity": "medium",
+      "title": "Local initial reconciliation omits realtime publication for its creation winner",
+      "classification": "release-blocker",
+      "status": "open",
+      "planned_resolution": "Integrate",
+      "actual_resolution": "Pending integration; no fix/PASS claimed",
+      "options": [
+        {
+          "id": "A",
+          "action": "Publish only after confirmed local creation-winner commit through same common owner, echo/replay zero.",
+          "assessment": "recommended, existing approved objective"
+        },
+        {
+          "id": "B",
+          "action": "Add a new worker/outbox subsystem (outside scope).",
+          "assessment": "not recommended"
+        },
+        {
+          "id": "C",
+          "action": "Leave recovered creation unannounced until polling.",
+          "assessment": "not acceptable for current delivery confidence"
+        }
+      ],
+      "source_assessment": "Root verified reconcile returns accepted.message without using creationWinner; PG event counter regression queued.",
+      "same_scope_basis": "Already-approved recovery/dispatch/renderer/performance/protection and evidence contract; no new product behavior/provider/state/migration/global platform.",
+      "formalization": "Candidate hints preserved in original review; no analyzer/Delphi rule implementation authorized.",
+      "remediation_owner": "stcon04_continuation sole code writer; root assurance"
+    },
+    {
+      "finding_id": "F-C8AF5811",
+      "source_finding_id": "ARCH-ST04-R1-05",
+      "review_kind": "architecture_adherence",
+      "severity": "medium",
+      "title": "Every ordinary BFF send counts the complete message history",
+      "classification": "release-blocker",
+      "status": "open",
+      "planned_resolution": "Integrate",
+      "actual_resolution": "Pending integration; no fix/PASS claimed",
+      "options": [
+        {
+          "id": "A",
+          "action": "Use bounded indexed existence lookup and actual large-history query proof.",
+          "assessment": "recommended, existing approved objective"
+        },
+        {
+          "id": "B",
+          "action": "Introduce a cached Message-count write model (extra consistency burden).",
+          "assessment": "not recommended"
+        },
+        {
+          "id": "C",
+          "action": "Keep full history COUNT per ordinary BFF send.",
+          "assessment": "not acceptable for current delivery confidence"
+        }
+      ],
+      "source_assessment": "Message.channelOrigin is required ChannelType in schema; every Message is transport, so preserve existing conversation predicate without inventing a new filter/index. Root confirmed COUNT is only used for existence.",
+      "same_scope_basis": "Already-approved recovery/dispatch/renderer/performance/protection and evidence contract; no new product behavior/provider/state/migration/global platform.",
+      "formalization": "Candidate hints preserved in original review; no analyzer/Delphi rule implementation authorized.",
+      "remediation_owner": "stcon04_continuation sole code writer; root assurance"
+    },
+    {
+      "finding_id": "F-3E65B77F",
+      "source_finding_id": "ARCH-ST04-R1-01",
+      "review_kind": "architecture_adherence",
+      "severity": "medium",
+      "title": "An abandoned PREPARED attempt has no usable browser recovery action",
+      "classification": "release-blocker",
+      "status": "open",
+      "planned_resolution": "Integrate",
+      "actual_resolution": "Pending integration; no fix/PASS claimed",
+      "options": [
+        {
+          "id": "A",
+          "action": "Expose existing local PREPARED reconciliation, with live-lease retention and expired safe release.",
+          "assessment": "recommended, existing approved objective"
+        },
+        {
+          "id": "B",
+          "action": "Mutate/clean up PREPARED implicitly during GET (changes observational semantics).",
+          "assessment": "not recommended"
+        },
+        {
+          "id": "C",
+          "action": "Leave the operator stranded with only GET/manual tooling.",
+          "assessment": "not acceptable for current delivery confidence"
+        }
+      ],
+      "source_assessment": "Source independently confirmed by root/executor and fresh architecture reviewer; actual new BFF RED queued E48.",
+      "same_scope_basis": "Already-approved recovery/dispatch/renderer/performance/protection and evidence contract; no new product behavior/provider/state/migration/global platform.",
+      "formalization": "Candidate hints preserved in original review; no analyzer/Delphi rule implementation authorized.",
+      "remediation_owner": "stcon04_continuation sole code writer; root assurance"
+    },
+    {
+      "finding_id": "F-F7C06078",
+      "source_finding_id": "ARCH-ST04-R1-04",
+      "review_kind": "architecture_adherence",
+      "severity": "medium",
+      "title": "Active-slot refusals do not implement the frozen interlock error contract",
+      "classification": "release-blocker",
+      "status": "open",
+      "planned_resolution": "Integrate",
+      "actual_resolution": "Pending integration; no fix/PASS claimed",
+      "options": [
+        {
+          "id": "A",
+          "action": "Implement exact frozen BLOCKED/INITIAL_SEND_IN_PROGRESS and authorized ordinary-token conflict metadata; preserve empty INITIAL_SEND_REQUIRED and other legacy mappings.",
+          "assessment": "recommended, existing approved objective"
+        },
+        {
+          "id": "B",
+          "action": "Change approved contract to match weaker implemented codes (would require renewed approval).",
+          "assessment": "not recommended"
+        },
+        {
+          "id": "C",
+          "action": "Retain conflated empty/active slot errors and missing scoped metadata.",
+          "assessment": "not acceptable for current delivery confidence"
+        }
+      ],
+      "source_assessment": "Frozen D07 and normative interlock explicitly define these distinctions; tests must protect approved behavior, not current divergent codes.",
+      "same_scope_basis": "Already-approved recovery/dispatch/renderer/performance/protection and evidence contract; no new product behavior/provider/state/migration/global platform.",
+      "formalization": "Candidate hints preserved in original review; no analyzer/Delphi rule implementation authorized.",
+      "remediation_owner": "stcon04_continuation sole code writer; root assurance"
+    },
+    {
+      "finding_id": "F-B25EB3CF",
+      "source_finding_id": "TQA-ST04-02",
+      "review_kind": "test_quality_audit",
+      "severity": "high",
+      "title": "Required full browser-platform evidence is not terminal for the current E47 source seal",
+      "classification": "release-blocker",
+      "status": "fixed",
+      "planned_resolution": "Integrate",
+      "actual_resolution": "Integrated with actual E47 terminal proof",
+      "options": [
+        {
+          "id": "A",
+          "action": "Collect current full E47 terminal/cleanup/independent postseal.",
+          "assessment": "recommended, existing approved objective"
+        },
+        {
+          "id": "B",
+          "action": "Waive full platform evidence (neither necessary nor authorized).",
+          "assessment": "not recommended"
+        },
+        {
+          "id": "C",
+          "action": "Infer aggregate GREEN from one test.",
+          "assessment": "not acceptable for current delivery confidence"
+        }
+      ],
+      "source_assessment": "Resolved by actual E47terminal0/86pass/cleanup/postseal259fp603cc.../93freshness hashes. This resolves E47 only; changed E48+candidate needs its own fresh full run.",
+      "same_scope_basis": "Already-approved recovery/dispatch/renderer/performance/protection and evidence contract; no new product behavior/provider/state/migration/global platform.",
+      "formalization": "Candidate hints preserved in original review; no analyzer/Delphi rule implementation authorized.",
+      "remediation_owner": "root documentation/evidence"
+    },
+    {
+      "finding_id": "F-8D9F2A1C",
+      "source_finding_id": "TQA-ST04-01",
+      "review_kind": "test_quality_audit",
+      "severity": "high",
+      "title": "Browser snapshot and input limits use UTF-16 length while server template validation uses Unicode code points",
+      "classification": "release-blocker",
+      "status": "open",
+      "planned_resolution": "Integrate",
+      "actual_resolution": "Pending integration; no fix/PASS claimed",
+      "options": [
+        {
+          "id": "A",
+          "action": "Match code-point input/parameter-snapshot limits with server; retain separate JSON size budget and exact Unicode boundary/browser proof.",
+          "assessment": "recommended, existing approved objective"
+        },
+        {
+          "id": "B",
+          "action": "Reduce server to UTF16 units (rejects approved valid text).",
+          "assessment": "not recommended"
+        },
+        {
+          "id": "C",
+          "action": "Keep valid astral messages blocked.",
+          "assessment": "not acceptable for current delivery confidence"
+        }
+      ],
+      "source_assessment": "Confirmed for parameter snapshots and HTML maxLength. Free-text snapshot already uses code points at139; preserve that correct guard instead of repeating the reviewer overbroad subclaim.",
+      "same_scope_basis": "Already-approved recovery/dispatch/renderer/performance/protection and evidence contract; no new product behavior/provider/state/migration/global platform.",
+      "formalization": "Candidate hints preserved in original review; no analyzer/Delphi rule implementation authorized.",
+      "remediation_owner": "stcon04_continuation sole code writer; root assurance"
+    },
+    {
+      "finding_id": "F-9EFF5F01",
+      "source_finding_id": "TQA-ST04-04",
+      "review_kind": "test_quality_audit",
+      "severity": "medium",
+      "title": "Test-first evidence is partial; most behavior-defining fault and protocol coverage is retrofit evidence",
+      "classification": "release-blocker",
+      "status": "open",
+      "planned_resolution": "Integrate",
+      "actual_resolution": "Pending integration; no fix/PASS claimed",
+      "options": [
+        {
+          "id": "A",
+          "action": "Preserve group-level causal vs post-implementation chronology and enforce fail-first for current new defects.",
+          "assessment": "recommended, existing approved objective"
+        },
+        {
+          "id": "B",
+          "action": "Rewrite history as if all tests were fail-first (invalid).",
+          "assessment": "not recommended"
+        },
+        {
+          "id": "C",
+          "action": "Leave broad test-first implication unqualified.",
+          "assessment": "not acceptable for current delivery confidence"
+        }
+      ],
+      "source_assessment": "Most later fault/protocol tests are final-state regression evidence. No retroactive reversion RED or missing-module bootstrap as a business assertion proof. Detailed chronology qualification still to consolidate; no product change follows merely from history.",
+      "same_scope_basis": "Already-approved recovery/dispatch/renderer/performance/protection and evidence contract; no new product behavior/provider/state/migration/global platform.",
+      "formalization": "Candidate hints preserved in original review; no analyzer/Delphi rule implementation authorized.",
+      "remediation_owner": "root documentation/evidence",
+      "root_chronology_correction": "Detailed honest evidence classifications recorded in test-causality-chronology-r1-v1.1.json; current status remains open for independent reassessment, not a product fix or claim of universal test-first."
+    },
+    {
+      "finding_id": "F-B360C531",
+      "source_finding_id": "TQA-ST04-03",
+      "review_kind": "test_quality_audit",
+      "severity": "medium",
+      "title": "Acknowledgement coverage does not fully exercise EXTERNAL_ACCEPTED_LOCAL_BLOCKED through the BFF lifecycle",
+      "classification": "release-blocker",
+      "status": "open",
+      "planned_resolution": "Integrate",
+      "actual_resolution": "Pending integration; no fix/PASS claimed",
+      "options": [
+        {
+          "id": "A",
+          "action": "Reach known-accepted/local-blocked state through actual BFF, assert early/late ACK and successor isolation/zero resend, then UI consumer coverage.",
+          "assessment": "recommended, existing approved objective"
+        },
+        {
+          "id": "B",
+          "action": "Rely on pure predicate and AMBIGUOUS-only endpoint proof.",
+          "assessment": "not recommended"
+        },
+        {
+          "id": "C",
+          "action": "Leave irreversible known-ACK release unexercised.",
+          "assessment": "not acceptable for current delivery confidence"
+        }
+      ],
+      "source_assessment": "Existing known-blocked case736 uses local reconcile to success, not ACK; new endpoint lifecycle coverage is required.",
+      "same_scope_basis": "Already-approved recovery/dispatch/renderer/performance/protection and evidence contract; no new product behavior/provider/state/migration/global platform.",
+      "formalization": "Candidate hints preserved in original review; no analyzer/Delphi rule implementation authorized.",
+      "remediation_owner": "stcon04_continuation sole code writer; root assurance"
+    }
+  ],
+  "scope_admission": "API tests/dispatch/initial/new companion and Web Unicode tests remain in current admitted paths. Sealed inherited dependency harness and Typebot/PCV companions are not reopened. No additional approval requested for these already-authorized correctness fixes.",
+  "stage": "E47fullGREEN does not close assurance findings; E48test-only handoff released after actual terminal/postseal/r1collection and normal authorityGO.",
+  "follow_up_policy": "No product finding discarded as nonblocking. All material fixes/coverage addressed in current TODO; optional rule formalization hints remain proposals only, not an invented scope."
+}

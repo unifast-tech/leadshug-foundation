@@ -1,0 +1,40 @@
+{
+  "kind": "Actual fresh internal r1 review collection",
+  "recorded_at_utc": "2026-10-22T23:34:20.075902+00:00",
+  "source_fingerprint": "603cc71df6648aba2f53be093383348e503231c60e06f89d46e9c8ce111b6d01",
+  "reviews": [
+    {
+      "review_kind": "architecture_adherence",
+      "session_id": 61515,
+      "actual_exit_code": 0,
+      "actual_turn_completed": 1,
+      "tool_items": 0,
+      "requested_model": "gpt-6.1-sol",
+      "effort": "xhigh via canonical CLI adapter",
+      "routing_proof": "declared, no extra runtime model identity claim",
+      "result_sha256": "08514d9b451a7ac42e163d1c64c55b07588b9c399695e592c04db3da6ee2f43c",
+      "events_sha256": "bfd15dad19ef3d388f205651a22b1c772a575ad4d57eb914e7829dad1ce47ca8",
+      "stderr_sha256": "730e95c61f5b02dbf22b55941b096cabf308ef8bed78c3e1d6d4711c7d5022dc",
+      "strict_merge": "implementation-architecture_adherence-r1-merge-v1.1.json",
+      "findings": 6,
+      "outcome": "changes required; no gate PASS inferred"
+    },
+    {
+      "review_kind": "test_quality_audit",
+      "session_id": 38550,
+      "actual_exit_code": 0,
+      "actual_turn_completed": 1,
+      "tool_items": 0,
+      "requested_model": "gpt-5.6-terra",
+      "effort": "xhigh via canonical CLI adapter",
+      "routing_proof": "declared, no extra runtime model identity claim",
+      "result_sha256": "2a8505fd8efb4323a677946bdbd78a71d648e12751f142dd0a91c67365a4f1b8",
+      "events_sha256": "606f5638d2c056455bf084df0f46c827e42974e4e68f73a9452d7c7dc9955fba",
+      "stderr_sha256": "5e3868d5e7bdfa225e40af7255e2d2aa46ad6e2c63e31a368a9cda67edde58c8",
+      "strict_merge": "implementation-test_quality_audit-r1-merge-v1.1.json",
+      "findings": 4,
+      "outcome": "changes required; no gate PASS inferred"
+    }
+  ],
+  "source_status": "Full E47 still running/frozen. R1 source candidate findings must be resolved/rechecked against later changed candidate; no outcome reused as approval."
+}

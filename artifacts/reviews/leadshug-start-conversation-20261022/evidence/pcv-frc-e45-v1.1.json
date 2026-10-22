@@ -37,7 +37,38 @@
         "sha256": "99af98def8f08a1874f50f74d1893800c1f00bf9f23a9adf9516c67d52dbd419"
       }
     ],
-    "limits": "Route delays a real BFF response after actual route.fetch(); external provider fake. No real WhatsApp/SLO claim."
+    "limits": "Route delays a real BFF response after actual route.fetch(); external provider fake. No real WhatsApp/SLO claim.",
+    "per_action_policy": [
+      {
+        "action": "Manual open and initial confirmation",
+        "policy": "drop duplicate",
+        "proof": "Synchronous latches; five20-trigger browser waves with real BFF and one provider invocation/Message per flow."
+      },
+      {
+        "action": "Preview/channel/BU/draft-dependent options and completion",
+        "policy": "last-write-wins",
+        "scope": "Only matching mounted owner/generation/conversation/draft; an older same-text A→B→A result cannot update newer ownership.",
+        "proof": "Delayed preview, context switches and late-body/completion browser cases passed E45."
+      },
+      {
+        "action": "Initial read/reconcile/acknowledge",
+        "policy": "drop duplicate",
+        "scope": "Busy latch plus mounted owner/generation; explicit actions and immutable key/deadline.",
+        "proof": "Initial uncertainty/read and known-receipt local-reconcile browser cases passed E45; no provider operation."
+      },
+      {
+        "action": "Ordinary recovery reconcile/acknowledge",
+        "policy": "drop duplicate",
+        "scope": "Same local action latch/owner fence; checkbox and immutable deadline required.",
+        "proof": "New dedicated E47 browser consumer proof pending; do not claim it passed from E45."
+      },
+      {
+        "action": "Saved snapshot reread",
+        "policy": "serialize",
+        "scope": "Explicit synchronous local storage read only; failed read blocks writes and preserves original key/body.",
+        "proof": "Causal E44 read-loss RED then E45 actual failed/successful local reread and same-key replay PASS."
+      }
+    ]
   },
-  "artifact_sha256": "98e761516f2ed7953a38a2a9bfc8a9086b008e16dc31a0f3b52b13e781467cb4"
+  "artifact_sha256": "0799e760f3b7060237850febf928d273cb374d8ddf3594b7834661e27c97478d"
 }

@@ -1,0 +1,30 @@
+{
+  "checkpoint": "E46 canonical browser terminal1, one test expectation failure; no product failure established",
+  "recorded_at_utc": "2026-10-22T23:14:06.198364+00:00",
+  "command": "bash scripts/test-channels-local.sh browser",
+  "executor_session_id": 56503,
+  "actual_exit_code": 1,
+  "browser": {
+    "passed": 85,
+    "failed": 1,
+    "total": 86,
+    "duration": "14.5m"
+  },
+  "stdout_sha256": "915ed54a2ae132fd83002124066bb371caa03e9f1b142e13e19bdb97f567c7e9",
+  "owned_disposable_cleanup_observed": true,
+  "independent_postseal": "browser-source-recheck-e46-v1.1.json",
+  "freshness": "browser-freshness-collection-e46-v1.1.json",
+  "failure": {
+    "file": "web-app/e2e/start-conversation.spec.ts:438",
+    "observed": "Ordinary provider call delta1 passed; effects delta1 failed actual0.",
+    "classification": "Incorrect expectation about existing owned fake instrumentation: ordinary enviarTexto records meta.send and enviados, not providerEffect. Actual BFF409 and one diagnostic OUT/FALHOU without externalId were proved.",
+    "not_reached": "Navigation A\u2192B\u2192A begins440; ordinary recovery panel/reconcile/ACK/deadline assertions were not reached.",
+    "synthetic_error_context_sha256": "45524bb535e243bee484b3dfdc00005f02ce2e6bd6c85b2261226fa44e8b00bf",
+    "next": "Test-only counter correction after root postseal. No product/fixture fix or test-first product RED claim."
+  },
+  "composite_scope": "E45 full all356API/435PG/53Web/85browser production-identical. E46 new browser test only, existing85browser regressions passed; ordinary recovery proof remains incomplete.",
+  "limits": [
+    "No preserved actual runtime/provider activation or operator proof.",
+    "No current full diff-guard GO or final assurance closure."
+  ]
+}

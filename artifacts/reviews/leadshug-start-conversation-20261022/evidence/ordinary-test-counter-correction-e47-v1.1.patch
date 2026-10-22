@@ -1,0 +1,20 @@
+--- E46 sealed public test
+
++++ E47 public candidate
+
+@@ -435,7 +435,13 @@
+
+       headers: { 'x-fixture-provider-token': FIXTURE_TOKEN },
+     }).then((response) => response.json()) as typeof providerBefore;
+     expect(resourceCallCount(providerAfterSend.calls, fixture.phoneNumberId) - resourceCallCount(providerBefore.calls, fixture.phoneNumberId)).toBe(1);
+-    expect(resourceCallCount(providerAfterSend.effects, fixture.phoneNumberId) - resourceCallCount(providerBefore.effects, fixture.phoneNumberId)).toBe(1);
++    expect(providerAfterSend.calls.slice(providerBefore.calls.length)
++      .filter((record) => record.phoneNumberId === fixture.phoneNumberId)
++      .map((record) => record.operation)).toEqual(['meta.send']);
++    // This ordinary fake route records meta.send in calls, but does not add
++    // provider effects. Recovery assertions below compare both snapshots to
++    // prove that reconcile/acknowledge add no fixture operations.
++    expect(providerAfterSend.effects).toEqual(providerBefore.effects);
+ 
+     await page.getByRole('button', { name: 'Cliente Secundário' }).click();
+     const activeThreadHeading = page.locator('.inbox > .cartao.grade > .linha > strong').filter({ hasText: 'Cliente Secundário' });

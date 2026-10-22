@@ -1,0 +1,14 @@
+{
+  "checkpoint": "E48 test-only lint failure, not behavior RED",
+  "exit_code": 1,
+  "session": 68044,
+  "stdout_sha256": "0f7229aa3a73ffe5b5dd969287fc371a8e94bc748410a4aaeec03553cca4454f",
+  "source_count": 259,
+  "source_fingerprint": "5c58609e79767010adc70ed74af0aa5c5826a624d24ff5e476b707b468807c5a",
+  "full_inventory_and_bytes_match_preseal": true,
+  "cleanup": "actual owned resource removal observed",
+  "failed_phase": "ESLint: two no-useless-assignment findings in new test finally blocks, before build/unit/PG",
+  "behavior_assertions": "not reached; no PREPARED payload or causal business RED yet",
+  "production_unchanged": true,
+  "next": "Narrow test-only cleanup fix; preserve assertions and product; fresh preseal before next canonical runner."
+}

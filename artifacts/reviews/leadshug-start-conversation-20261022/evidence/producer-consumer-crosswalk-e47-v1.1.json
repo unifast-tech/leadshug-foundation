@@ -1,0 +1,156 @@
+{
+  "kind": "Current frozen producer-to-consumer composite implementation/evidence crosswalk",
+  "recorded_at_utc": "2026-10-22T23:20:52.889039+00:00",
+  "source_seal": "browser-source-seal-e47-v1.1.json",
+  "state": "Each declared producer has implemented+evidenced consumer: E45all/E46existing85browser plus actual E47 ordinary case. Full E47 browser still running; no delivery/runtime claim.",
+  "rows": [
+    {
+      "id": "manual-open",
+      "producer": "ConversationStartService atomically returns created/reused row without send/read/claim/automation",
+      "consumers": [
+        "NovaConversa dialog POST and onOpened",
+        "Inbox selected manual conversation / truthful list order"
+      ],
+      "exact_test_references": [
+        "api-app/test/conversation-start.e2e-spec.ts:25",
+        "api-app/test/conversation-start.e2e-spec.ts:64",
+        "api-app/test/conversation-start.e2e-spec.ts:153",
+        "api-app/test/conversation-start.e2e-spec.ts:177",
+        "web-app/e2e/start-conversation.spec.ts:74"
+      ],
+      "evidence_and_limit": "E45 atomic PG5x20/no automation and real browser open/reuse passed; E46 corresponding browser regression passed.",
+      "consumer_state": "implemented + evidenced",
+      "actual_receipts": [
+        "all-result-e45-v1.1.json",
+        "browser-result-e46-v1.1.json"
+      ]
+    },
+    {
+      "id": "qualified-window",
+      "producer": "Verified signed Meta IN timestamp accepted only for current managed identity; Message.officialInboundAt nullable",
+      "consumers": [
+        "PrismaChannelResolver.inspectForConversation",
+        "PrismaChannelResolver.inspectManyForConversations via BFF/public listing",
+        "OutboundService ordinary BFF/PUBLIC/BOT",
+        "Initial text dispatch claim in transaction"
+      ],
+      "exact_test_references": [
+        "api-app/src/domain/inbox/channel-window-policy.spec.ts",
+        "api-app/test/webhooks.e2e-spec.ts",
+        "api-app/test/number-onboarding-pcv.e2e-spec.ts",
+        "api-app/test/number-onboarding-typebot.e2e-spec.ts",
+        "api-app/test/api-publica.e2e-spec.ts",
+        "web-app/e2e/channel-transport.spec.ts"
+      ],
+      "evidence_and_limit": "E45 signed timestamp/resource policy, BFF/public/BOT projected/send regressions and raw/substitution tests passed; public index/query counts in actual PCV receipt.",
+      "consumer_state": "implemented + evidenced",
+      "actual_receipts": [
+        "all-result-e45-v1.1.json",
+        "browser-result-e46-v1.1.json"
+      ]
+    },
+    {
+      "id": "shared-template-catalog",
+      "producer": "ST05 bounded catalog projector/lease/TTL remains owner; initial renderer consumes unchanged components",
+      "consumers": [
+        "Shared catalog route and PrimeiraMensagem template selector",
+        "Read-only local preview/escaped React text",
+        "Fresh same-account remote eligibility before new dispatch"
+      ],
+      "exact_test_references": [
+        "api-app/src/domain/inbox/initial-message-template-renderer.spec.ts:18",
+        "api-app/src/domain/inbox/initial-message-template-renderer.spec.ts:64",
+        "api-app/test/initial-message.e2e-spec.ts:329",
+        "web-app/e2e/start-conversation.spec.ts:447"
+      ],
+      "evidence_and_limit": "E45 renderer exact bounds/NAMED/POSITIONAL, real catalog refresh, escaped read-only preview, same-account fresh membership before dispatch passed. Protected authoring/catalog browser cases passed E46.",
+      "consumer_state": "implemented + evidenced",
+      "actual_receipts": [
+        "all-result-e45-v1.1.json",
+        "browser-result-e46-v1.1.json"
+      ]
+    },
+    {
+      "id": "abstract-channel-union",
+      "producer": "One Channel.sendMessage(text|approved-template), readonly supportedKinds, awaited operation fence",
+      "consumers": [
+        "OutboundService ordinary calls",
+        "Initial coordinator through same OutboundService",
+        "Meta adapter concrete formatter",
+        "Evolution adapter text-only typed refusal"
+      ],
+      "exact_test_references": [
+        "api-app/src/domain/channels/transport/channel-dependencies.spec.ts",
+        "api-app/src/domain/channels/transport/channel-initial-message.spec.ts:46",
+        "api-app/src/domain/channels/transport/channel-initial-message.spec.ts:62",
+        "api-app/test/channel-transport.e2e-spec.ts"
+      ],
+      "evidence_and_limit": "E45 dependency/substitution, Evolution typed zeroHTTP, raw Meta account/recipient protocol and ordinary BFF/public/BOT text regressions passed.",
+      "consumer_state": "implemented + evidenced",
+      "actual_receipts": [
+        "all-result-e45-v1.1.json",
+        "browser-result-e46-v1.1.json"
+      ]
+    },
+    {
+      "id": "durable-intent-outcome",
+      "producer": "Immutable original key/body/context and truthful persisted receipt/uncertainty/state projection",
+      "consumers": [
+        "Scoped BFF create/read/reconcile/ack routes with session+grant+CSRF",
+        "api.ts safe closed error metadata",
+        "PrimeiraMensagem explicit recovery/exact retry and actor+BU+conversation sessionStorage"
+      ],
+      "exact_test_references": [
+        "api-app/test/dispatch-admission.e2e-spec.ts:165",
+        "api-app/test/dispatch-admission.e2e-spec.ts:196",
+        "api-app/test/initial-message.e2e-spec.ts:95",
+        "api-app/test/initial-message.e2e-spec.ts:206",
+        "web-app/e2e/start-conversation.spec.ts:198",
+        "web-app/e2e/start-conversation.spec.ts:266",
+        "web-app/e2e/start-conversation.spec.ts:599"
+      ],
+      "evidence_and_limit": "E45 actual PG barriers/readback/CAS and browser read/reconcile/ACK, failed local storage read/write, lost-response original-key replay passed. E46 those browser cases pass.",
+      "consumer_state": "implemented + evidenced",
+      "actual_receipts": [
+        "all-result-e45-v1.1.json",
+        "browser-result-e46-v1.1.json"
+      ]
+    },
+    {
+      "id": "shared-admission-interlock",
+      "producer": "Ordinary per-owner tokens and exclusive initial slot use same conversation lock; no SENDING clock takeover",
+      "consumers": [
+        "BFF ordinary composer empty/unresolved gate",
+        "PUBLIC ordinary sender through ConversationsService",
+        "BOT ordinary sender through IncomingService",
+        "Initial reservation and explicit local risk release controls",
+        "OrdinaryRecovery actual scoped reconcile/acknowledge controls on reopened thread"
+      ],
+      "exact_test_references": [
+        "api-app/test/dispatch-admission.e2e-spec.ts:328",
+        "api-app/test/dispatch-admission.e2e-spec.ts:367",
+        "api-app/test/dispatch-admission.e2e-spec.ts:379",
+        "api-app/test/dispatch-admission.e2e-spec.ts:434",
+        "api-app/test/dispatch-admission.e2e-spec.ts:457",
+        "api-app/test/channel-transport.e2e-spec.ts",
+        "api-app/test/api-publica.e2e-spec.ts",
+        "web-app/e2e/start-conversation.spec.ts:531"
+      ],
+      "evidence_and_limit": "E45 real PG races/ordinary concurrency, public/BOT and empty BFF mapping pass; E47 actual ordinary BFF browser uncertain send\u2192reopen\u2192reconcile\u2192real90s risk ACK\u2192composer return with unchanged provider/audit snapshots passed.",
+      "consumer_state": "implemented + evidenced",
+      "actual_receipts": [
+        "all-result-e45-v1.1.json",
+        "browser-result-e46-v1.1.json",
+        "browser-ordinary-consumer-e47-v1.1.json"
+      ]
+    }
+  ],
+  "external_proof_boundary": "Synthetic provider boundary plus real disposable BFF/PostgreSQL/browser. User attests own template APPROVED; same-account first-template actual send/reply and nonofficial first-send/reply are pending source-bound local activation.",
+  "assurance_boundary": "No full diff-guard, required implementation reviews, runtime activation or criterion checkbox promoted.",
+  "remaining_required_gates": [
+    "E47 full browser terminal + cleanup + full independent postseal",
+    "Independent architecture/TQA/security/cutover assessments and resolution",
+    "Later separately approved actual preserved local activation/migration/source-image-binding and operator first-send/reply proof",
+    "Required canonical full diff inspection exception/guard and final closure gates"
+  ]
+}

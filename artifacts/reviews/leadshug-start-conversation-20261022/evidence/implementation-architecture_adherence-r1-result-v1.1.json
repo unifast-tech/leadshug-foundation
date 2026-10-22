@@ -1,0 +1,100 @@
+{
+  "schema_version": "subagent-review-result-v1",
+  "artifact_kind": "subagent_review_result",
+  "dispatch_path": "/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/artifacts/reviews/leadshug-start-conversation-20261022/evidence/implementation-architecture_adherence-r1-dispatch-v1.1.json",
+  "review_kind": "architecture_adherence",
+  "reviewer_label": "fresh-bounded-reviewer-r1",
+  "overall_assessment": "Changes required. The implementation preserves the approved Channel, Outbound, MessageAcceptance and catalog owners, including the intentional union and trusted-window supersedes. The supplied negative proofs support the initial session, tenant, grant, webhook and bounded provider checks; no bypass is established by this review. However, recovery, settlement certainty and caller-contract defects remain. E45 and the explicitly bounded E46/E47 composite provide useful implementation evidence without establishing full E47 completion or preserved-runtime readiness.",
+  "recommended_path": "Keep E47 frozen through terminal execution, cleanup and independent postseal before releasing the writer. Resolve the findings and run canonical all against the revised frozen candidate. The activation proposal preserves data and provider services and correctly leaves private configuration consumption and full diff inspection subject to separate approval. DOD-11/12/13, actual Alpine image/runtime provenance, preserved-database migration preflight, assisted first-send/reply proofs, module consolidation and final guards remain required gates.",
+  "performance_position": "mixed",
+  "elegance_position": "acceptable",
+  "structural_soundness_position": "mixed",
+  "operational_fit_position": "mixed",
+  "findings": [
+    {
+      "finding_id": "ARCH-ST04-R1-01",
+      "severity": "medium",
+      "category": "operational_fit",
+      "title": "An abandoned PREPARED attempt has no usable browser recovery action",
+      "rationale": "projectIntent assigns PREPARED a null recoveryAction. PrimeiraMensagem treats its active slot as locked and renders local reconciliation only for recoveryAction=RECONCILE. Consultar estado performs observational reads, so even after lease expiry the browser cannot invoke the endpoint that rejects and releases expired PREPARED. A crash after reservation and before dispatch can therefore strand the conversation despite the approved finite recovery contract.",
+      "suggested_action": "Expose explicit local reconciliation for PREPARED, preserving the live-lease 202 behavior and expired undispatched release. Add a real-BFF/browser case covering abandoned reservation, reload, expiry, reconciliation and successor admission with zero provider calls.",
+      "formalizable_hint": "partial",
+      "candidate_rule_level": "project",
+      "affected_paths": [
+        "api-app/src/domain/inbox/initial-message.service.ts",
+        "web-app/src/componentes/NovaConversa.tsx"
+      ]
+    },
+    {
+      "finding_id": "ARCH-ST04-R1-02",
+      "severity": "medium",
+      "category": "structural_soundness",
+      "title": "Ordinary success ignores an unconfirmed settlement result",
+      "rationale": "settleOrdinary can return false after a real transaction rollback leaves the token SENDING and unreleased. OutboundService.send awaits settlement but ignores that boolean, then finalizes and returns success. Its catch handles thrown failures only. Consequently, an ordinary send can report successful completion while retaining exclusion that later requires uncertainty recovery, contrary to the approved positive-confirmation requirement at settlement/release.",
+      "suggested_action": "Require a positively confirmed settlement result before reporting complete ordinary success. Preserve known provider acceptance and recorded Message metadata when settlement remains unconfirmed. Add an actual rollback case through OutboundService.send, alongside commit-ACK-loss readback coverage.",
+      "formalizable_hint": "yes",
+      "candidate_rule_level": "project",
+      "affected_paths": [
+        "api-app/src/domain/inbox/outbound.service.ts",
+        "api-app/src/domain/inbox/dispatch-admission.service.ts",
+        "api-app/test/dispatch-admission.e2e-spec.ts"
+      ]
+    },
+    {
+      "finding_id": "ARCH-ST04-R1-03",
+      "severity": "medium",
+      "category": "adherence",
+      "title": "Local initial reconciliation omits realtime publication for its creation winner",
+      "rationale": "reconcileInitial can create and commit the first Message through acceptInTransaction, but returns accepted.message without inspecting creationWinner or publishing realtime. The normal sendInitial path performs that publication. Recovery therefore deterministically omits the event even after a positively confirmed creation commit; this exceeds the approved best-effort crash-gap limitation and leaves other consumers waiting for polling.",
+      "suggested_action": "Apply the same post-commit winner-only publication rule to successful local reconciliation. Verify one event for a recovered creation winner, zero additional events for an existing echo or replay, and zero provider I/O.",
+      "formalizable_hint": "partial",
+      "candidate_rule_level": "project",
+      "affected_paths": [
+        "api-app/src/domain/inbox/outbound.service.ts",
+        "api-app/test/dispatch-admission.e2e-spec.ts"
+      ]
+    },
+    {
+      "finding_id": "ARCH-ST04-R1-04",
+      "severity": "medium",
+      "category": "adherence",
+      "title": "Active-slot refusals do not implement the frozen interlock error contract",
+      "rationale": "reserveOrdinary returns INITIAL_SEND_REQUIRED for an active initial slot, and assertOrdinaryDispatchAllowed conflates that condition with an empty conversation. Neither supplies the approved BLOCKED outcome, INITIAL_SEND_IN_PROGRESS code and authorized attempt/state metadata. Initial reservation blocked by ordinary admissions similarly omits the authorized token IDs specified by the normative contract. The embedded tests assert some of these divergent mappings rather than protecting the approved distinction.",
+      "suggested_action": "Keep INITIAL_SEND_REQUIRED for the BFF empty-conversation case and implement the approved active-slot and ordinary-admission conflict projections separately. Update BFF/public/BOT regressions to assert exact safe codes, outcomes, scoped identifiers and zero dispatch.",
+      "formalizable_hint": "yes",
+      "candidate_rule_level": "project",
+      "affected_paths": [
+        "api-app/src/domain/inbox/dispatch-admission.service.ts",
+        "api-app/src/domain/inbox/initial-message.service.ts",
+        "api-app/test/dispatch-admission.e2e-spec.ts"
+      ]
+    },
+    {
+      "finding_id": "ARCH-ST04-R1-05",
+      "severity": "medium",
+      "category": "performance",
+      "title": "Every ordinary BFF send counts the complete message history",
+      "rationale": "assertOrdinaryDispatchAllowed uses message.count where it only needs to establish whether a transport message exists. This introduces history-proportional database work on every ordinary BFF response. The supplied list/window EXPLAIN evidence does not exercise this new sender lookup.",
+      "suggested_action": "Use an indexed, bounded existence lookup with the approved transport-message predicate. Verify the ordinary-send admission path against a large history without counting or hydrating that history.",
+      "formalizable_hint": "yes",
+      "candidate_rule_level": "paced",
+      "affected_paths": [
+        "api-app/src/domain/inbox/initial-message.service.ts"
+      ]
+    },
+    {
+      "finding_id": "ARCH-ST04-R1-06",
+      "severity": "medium",
+      "category": "tests",
+      "title": "The dependency protection harness omits the new initial coordinator",
+      "rationale": "The supplied channel-dependencies harness scans conversations.service, incoming.service and outbound-prefixed files only. It never scans initial-message.service, the newly introduced orchestration locus that must remain free of concrete provider imports and dispatch. Thus its passing result does not protect a central boundary required by the Architecture Protection Harness, although the current coordinator itself shows no concrete provider dispatch.",
+      "suggested_action": "Add an admitted companion architecture test covering the initial coordinator and synthetic forbidden provider coupling while retaining sealed inherited harness bytes. Include this protection in the canonical suite and evidence mapping.",
+      "formalizable_hint": "yes",
+      "candidate_rule_level": "project",
+      "affected_paths": [
+        "api-app/src/domain/channels/transport/channel-dependencies.spec.ts",
+        "api-app/src/domain/inbox/initial-message.service.ts"
+      ]
+    }
+  ]
+}

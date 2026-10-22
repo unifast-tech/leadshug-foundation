@@ -1,0 +1,330 @@
+{
+  "kind": "One-to-one implementation decision and future module-consolidation candidate mapping",
+  "recorded_at_utc": "2026-10-22T23:03:48.548443+00:00",
+  "approved_baseline": "TODO Decision Baseline (Frozen Before Implementation), D-01 through D-10 exact wording remains authority",
+  "source_seal": "all-source-seal-e45-v1.1.json",
+  "execution_receipt": "all-result-e45-v1.1.json",
+  "current_status": "No final Adherent/Exception decision or module consolidation pass yet; independent review and real runtime/ordinary browser proof remain.",
+  "canonical_module_baselines": [
+    {
+      "path": "foundation_documentation/modules/inbox-and-conversations.md",
+      "sha256": "24b3f1edd8f10bf991d61135be2364b49679c43e5894ce024c2d5169921756a2"
+    },
+    {
+      "path": "foundation_documentation/modules/integrations-and-channels.md",
+      "sha256": "6b1865ab4f27458e1e1e225535e2f4a713e987e18344ca86d3f9411fa6c6f168"
+    }
+  ],
+  "rows": [
+    {
+      "decision_id": "D-01",
+      "proposed_handling": "Preserve",
+      "implementation_claim": "BU/contact unique, normalization and no-send manual open; COALESCE order for empty rows.",
+      "implementation_sources": [
+        {
+          "path": "api-app/src/domain/inbox/conversation-start.service.ts",
+          "sha256": "97ee440ce06007eac1aed98e0afe4997056722c8d62508a0698655a2de5d1118"
+        },
+        {
+          "path": "api-app/src/domain/inbox/conversations.service.ts",
+          "sha256": "6dba438e7e59dff56b2b98413532210bac62b7d744cf1b80c5a2c748923b431c"
+        },
+        {
+          "path": "api-app/src/domain/inbox/incoming.service.ts",
+          "sha256": "390d48de06ad863b9d9c47344c1eb2919d0ba07aa96626b0ef1596fcbde4795b"
+        }
+      ],
+      "test_sources": [
+        {
+          "path": "api-app/test/conversation-start.e2e-spec.ts",
+          "e45_sha256": "35ead6bdea966ab05a3c9b792316867a918929194570b766767bacebb5bf4f11"
+        }
+      ],
+      "promotion_target": "inbox: manual open and truthful empty state",
+      "assessment": "candidate evidence; independent decision pending"
+    },
+    {
+      "decision_id": "D-02",
+      "proposed_handling": "Supersede (Intentional)",
+      "implementation_claim": "Text-only payload restriction becomes one discriminated sendMessage union with declared kinds; narrow management capability remains separate.",
+      "implementation_sources": [
+        {
+          "path": "api-app/src/domain/channels/transport/channel.ts",
+          "sha256": "49b24179666a0fa90becfb2bf24ebc31acde7bf342b34d3b110a42465ccb69f9"
+        },
+        {
+          "path": "api-app/src/integrations/channels/meta-channel.ts",
+          "sha256": "99a9ca01a57527a76de54cdbdf8b49f65b5dcceb1a71abce883d1845c6cd8f26"
+        },
+        {
+          "path": "api-app/src/integrations/channels/evolution-channel.ts",
+          "sha256": "6a41ef2f3b0ee9e5c6b381d54faf48b0b2c672e52751f8be1480ad01cb178a34"
+        },
+        {
+          "path": "api-app/src/integrations/channels/channel-transport.module.ts",
+          "sha256": "4aa42bb2e873c576b63b5ac1f50db368fbecb189fe91be19f3b7fb726733370d"
+        }
+      ],
+      "test_sources": [
+        {
+          "path": "api-app/src/domain/channels/transport/channel-initial-message.spec.ts",
+          "e45_sha256": "69d6709584f8034bf8e77754d2ae5958c92cab7b97e668a5c28dc732cf071c5b"
+        },
+        {
+          "path": "api-app/src/domain/channels/transport/channel-dependencies.spec.ts",
+          "e45_sha256": "f59d838baf635c0ce0d1ebe725c88fbb0b19fac42e9b382452e31fd38e0511a3"
+        }
+      ],
+      "promotion_target": "integrations: ST06 payload supersede, historical ST05 D09 unchanged",
+      "assessment": "candidate evidence; independent decision pending"
+    },
+    {
+      "decision_id": "D-03",
+      "proposed_handling": "Preserve",
+      "implementation_claim": "Inbox coordinator uses common OutboundService and same MessageAcceptance owner; transactional collaboration stays there.",
+      "implementation_sources": [
+        {
+          "path": "api-app/src/domain/inbox/initial-message.service.ts",
+          "sha256": "5d0456be3e4643e0b21309fd575440037c5113a48e2f69447e2b70ee571fc0a3"
+        },
+        {
+          "path": "api-app/src/domain/inbox/outbound.service.ts",
+          "sha256": "c023b7dbfbaa03e78822cb7b0a8d9b84e134054b41fb12498f0c48bcce272d5e"
+        },
+        {
+          "path": "api-app/src/domain/inbox/message-acceptance.service.ts",
+          "sha256": "71194c70b12cb920054586a7a86266d90f8eca0b7008b1b5688627e0694979f1"
+        }
+      ],
+      "test_sources": [
+        {
+          "path": "api-app/test/dispatch-admission.e2e-spec.ts",
+          "e45_sha256": "8bd551202e6c1fed1013a4c5bcf6d7c988b5f5737d3aa2c26c9204aa55bce876"
+        }
+      ],
+      "promotion_target": "inbox: first-send ownership and tx boundaries",
+      "assessment": "candidate evidence; independent decision pending"
+    },
+    {
+      "decision_id": "D-04",
+      "proposed_handling": "Supersede (Intentional)",
+      "implementation_claim": "Qualified signed Meta IN timestamp replaces historical createdAt latest-IN window; timeline timestamp/cursors preserved.",
+      "implementation_sources": [
+        {
+          "path": "api-app/src/domain/inbox/channel-window-policy.ts",
+          "sha256": "46dfcf887f2ad4ed0670664186e918816699e6541d1670aa9c32ac79a193e43e"
+        },
+        {
+          "path": "api-app/src/surfaces/webhooks/meta.controller.ts",
+          "sha256": "261bf12e6ef021e00d90000a714ff54c66e3753f85d287a95015035fb584518f"
+        },
+        {
+          "path": "api-app/src/integrations/channels/prisma-channel-resolver.ts",
+          "sha256": "60005fd226534a178b646d6ec775bb059ec55cc4cfea24a3d72d2c6e4a1ca64a"
+        }
+      ],
+      "test_sources": [
+        {
+          "path": "api-app/src/domain/inbox/channel-window-policy.spec.ts",
+          "e45_sha256": "e20eaefd11256c8ca9f2156560ac23a1478f333b3932e865d1d52666cbd78692"
+        },
+        {
+          "path": "api-app/test/webhooks.e2e-spec.ts",
+          "e45_sha256": "e9f80894181676b2fcb4ec18339a6ebdb1e189f3f13374cd1c2e77d13e647f4a"
+        },
+        {
+          "path": "api-app/test/number-onboarding-pcv.e2e-spec.ts",
+          "e45_sha256": "3825b0286f9906781e83666616caa05417647ee47c022763fc76e39a3c4ddca0"
+        }
+      ],
+      "promotion_target": "inbox/integrations: trusted-window provenance and bounded query",
+      "assessment": "candidate evidence; independent decision pending"
+    },
+    {
+      "decision_id": "D-05",
+      "proposed_handling": "Preserve with bounded initial-send addition",
+      "implementation_claim": "Same ST05 catalog; local preview and independent renderer/current same-account eligibility; Meta wire account pin/full international recipient.",
+      "implementation_sources": [
+        {
+          "path": "api-app/src/domain/inbox/initial-message-template-renderer.ts",
+          "sha256": "a5ce98823c8f0a4480386bc755e392b5f6287107cbfc0ad13ad50c06bc234ecf"
+        },
+        {
+          "path": "api-app/src/domain/inbox/initial-message.service.ts",
+          "sha256": "5d0456be3e4643e0b21309fd575440037c5113a48e2f69447e2b70ee571fc0a3"
+        },
+        {
+          "path": "api-app/src/integrations/meta/initial-message.client.ts",
+          "sha256": "e21efb3df6910c0b740afec40da919542f672302429217268fdb56c282446721"
+        }
+      ],
+      "test_sources": [
+        {
+          "path": "api-app/test/initial-message.e2e-spec.ts",
+          "e45_sha256": "d5b08d0117138f126858c9c26fc19dd278c7ed998a9776e5bdc1258f4cd2e8e5"
+        },
+        {
+          "path": "api-app/test/channel-transport.e2e-spec.ts",
+          "e45_sha256": "a143b1fdb4ba23883b731b58c78008f06714d80e16b5f077b0bf9763056ba011"
+        }
+      ],
+      "promotion_target": "inbox/integrations: eligible template first-send, no authoring changes",
+      "assessment": "candidate evidence; independent decision pending"
+    },
+    {
+      "decision_id": "D-06",
+      "proposed_handling": "New bounded first-send contract",
+      "implementation_claim": "Captured request/key/slot/context; all GET preflight then same-operation claim and onePOST; local-only reconciliation and explicit elapsed-deadline risk ACK.",
+      "implementation_sources": [
+        {
+          "path": "api-app/src/domain/inbox/initial-message.service.ts",
+          "sha256": "5d0456be3e4643e0b21309fd575440037c5113a48e2f69447e2b70ee571fc0a3"
+        },
+        {
+          "path": "api-app/src/domain/inbox/dispatch-admission.service.ts",
+          "sha256": "23d7beeb11324fbdbd285c8a59286d7163ec09fffc59b2cf3bdacf5d5b9e10d4"
+        },
+        {
+          "path": "api-app/src/surfaces/bff/conversations.controller.ts",
+          "sha256": "f8682cc211695df59caaa3f32799ad6a0444e120d683592e32984a71d71c8c1d"
+        }
+      ],
+      "test_sources": [
+        {
+          "path": "api-app/test/initial-message.e2e-spec.ts",
+          "e45_sha256": "d5b08d0117138f126858c9c26fc19dd278c7ed998a9776e5bdc1258f4cd2e8e5"
+        },
+        {
+          "path": "api-app/test/dispatch-admission.e2e-spec.ts",
+          "e45_sha256": "8bd551202e6c1fed1013a4c5bcf6d7c988b5f5737d3aa2c26c9204aa55bce876"
+        }
+      ],
+      "promotion_target": "inbox: immutable intent and local recovery",
+      "assessment": "candidate evidence; independent decision pending"
+    },
+    {
+      "decision_id": "D-07",
+      "proposed_handling": "Preserve ordinary semantics with explicit interlock",
+      "implementation_claim": "Owner tokens exclude initial intent while ordinary requests remain concurrent; uncertain token never expires into blind takeover. BFF empty thread requires first flow, public/BOT legacy behavior retained without slot.",
+      "implementation_sources": [
+        {
+          "path": "api-app/src/domain/inbox/outbound.service.ts",
+          "sha256": "c023b7dbfbaa03e78822cb7b0a8d9b84e134054b41fb12498f0c48bcce272d5e"
+        },
+        {
+          "path": "api-app/src/domain/inbox/dispatch-admission.service.ts",
+          "sha256": "23d7beeb11324fbdbd285c8a59286d7163ec09fffc59b2cf3bdacf5d5b9e10d4"
+        },
+        {
+          "path": "web-app/src/telas/Inbox.tsx",
+          "sha256": "bbd6facb3f60fafb01f661ec5fe6c0dec826b3023c9ba5ad44aec5b31865ddbd"
+        }
+      ],
+      "test_sources": [
+        {
+          "path": "api-app/test/dispatch-admission.e2e-spec.ts",
+          "e45_sha256": "8bd551202e6c1fed1013a4c5bcf6d7c988b5f5737d3aa2c26c9204aa55bce876"
+        },
+        {
+          "path": "api-app/test/channel-transport.e2e-spec.ts",
+          "e45_sha256": "a143b1fdb4ba23883b731b58c78008f06714d80e16b5f077b0bf9763056ba011"
+        },
+        {
+          "path": "web-app/e2e/start-conversation.spec.ts",
+          "e45_sha256": "99af98def8f08a1874f50f74d1893800c1f00bf9f23a9adf9516c67d52dbd419"
+        }
+      ],
+      "promotion_target": "inbox/integrations: ordinary interlock and finite recovery; browser proof pending",
+      "assessment": "candidate evidence; independent decision pending"
+    },
+    {
+      "decision_id": "D-08",
+      "proposed_handling": "New bounded textual subset",
+      "implementation_claim": "NAMED/POSITIONAL plain text from unchanged catalog components; static header/footer, <=20values, Unicode length and context-bound escaped read-only preview.",
+      "implementation_sources": [
+        {
+          "path": "api-app/src/domain/inbox/initial-message-template-renderer.ts",
+          "sha256": "a5ce98823c8f0a4480386bc755e392b5f6287107cbfc0ad13ad50c06bc234ecf"
+        },
+        {
+          "path": "web-app/src/componentes/NovaConversa.tsx",
+          "sha256": "770fb4e0742eed6e4970e66c6ef40e99282cf144bd65c58ba32079624736aa10"
+        }
+      ],
+      "test_sources": [
+        {
+          "path": "api-app/src/domain/inbox/initial-message-template-renderer.spec.ts",
+          "e45_sha256": "c783e835575ab8cf89af5524e0f02402956975f80faecf6b9d1467c1a8a0bdf0"
+        },
+        {
+          "path": "web-app/e2e/start-conversation.spec.ts",
+          "e45_sha256": "99af98def8f08a1874f50f74d1893800c1f00bf9f23a9adf9516c67d52dbd419"
+        }
+      ],
+      "promotion_target": "inbox: template subset and preview safety",
+      "assessment": "candidate evidence; independent decision pending"
+    },
+    {
+      "decision_id": "D-09",
+      "proposed_handling": "New bounded budgets/local proof",
+      "implementation_claim": "Max6GET+1POST,10s/request75s aggregate90s immutable reservation; actor10/min,account60/hour. Additive migration and later approved preserved local proof.",
+      "implementation_sources": [
+        {
+          "path": "api-app/src/integrations/meta/initial-message.client.ts",
+          "sha256": "e21efb3df6910c0b740afec40da919542f672302429217268fdb56c282446721"
+        },
+        {
+          "path": "api-app/src/domain/inbox/dispatch-admission.service.ts",
+          "sha256": "23d7beeb11324fbdbd285c8a59286d7163ec09fffc59b2cf3bdacf5d5b9e10d4"
+        }
+      ],
+      "test_sources": [
+        {
+          "path": "api-app/src/integrations/meta/initial-message.client.spec.ts",
+          "e45_sha256": "0467fbad2f0b8666491d93b6efb0b648037fde08ee0655ffb4500747e68fd057"
+        },
+        {
+          "path": "api-app/test/dispatch-admission.e2e-spec.ts",
+          "e45_sha256": "8bd551202e6c1fed1013a4c5bcf6d7c988b5f5737d3aa2c26c9204aa55bce876"
+        }
+      ],
+      "promotion_target": "integrations/inbox: budget invariants; actual-runtime proof pending",
+      "assessment": "candidate evidence; independent decision pending"
+    },
+    {
+      "decision_id": "D-10",
+      "proposed_handling": "Preserve sole Message owner and explicit local certainty",
+      "implementation_claim": "Positive commit/captured-key exact readback distinguishes ACK loss vs rollback; no claim/noPOST, no fake RECORDED or unsafe release; canonical opaque account hash namespace remains byte-compatible.",
+      "implementation_sources": [
+        {
+          "path": "api-app/src/domain/inbox/dispatch-admission.service.ts",
+          "sha256": "23d7beeb11324fbdbd285c8a59286d7163ec09fffc59b2cf3bdacf5d5b9e10d4"
+        },
+        {
+          "path": "api-app/src/domain/inbox/initial-message.service.ts",
+          "sha256": "5d0456be3e4643e0b21309fd575440037c5113a48e2f69447e2b70ee571fc0a3"
+        },
+        {
+          "path": "api-app/src/domain/inbox/message-acceptance.service.ts",
+          "sha256": "71194c70b12cb920054586a7a86266d90f8eca0b7008b1b5688627e0694979f1"
+        },
+        {
+          "path": "api-app/src/integrations/channels/account-reference.ts",
+          "sha256": "da2b4572b07477407f9adf08c30c3876d10f92ae157cfadb3b8bdc5fc99d0d24"
+        }
+      ],
+      "test_sources": [
+        {
+          "path": "api-app/test/dispatch-admission.e2e-spec.ts",
+          "e45_sha256": "8bd551202e6c1fed1013a4c5bcf6d7c988b5f5737d3aa2c26c9204aa55bce876"
+        },
+        {
+          "path": "api-app/test/initial-message.e2e-spec.ts",
+          "e45_sha256": "d5b08d0117138f126858c9c26fc19dd278c7ed998a9776e5bdc1258f4cd2e8e5"
+        }
+      ],
+      "promotion_target": "inbox/integrations: commit certainty, CAS, known receipt and opaque account",
+      "assessment": "candidate evidence; independent decision pending"
+    }
+  ]
+}

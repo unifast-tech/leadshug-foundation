@@ -1,0 +1,9 @@
+{
+  "kind": "Documentary checkpoint whitespace adjudication",
+  "diff_check_exit": 2,
+  "observations": [
+    "Exact retained E47 correction patch contains one whitespace context line.",
+    "Canonical generated review dispatch/merge Markdown has extra terminal blank lines."
+  ],
+  "disposition": "Preserve original tool-generated/review evidence bytes and raw patch; no product-source whitespace defect or functional validation bypass is asserted. This checkpoint commits documents only; no delivery or clean-whitespace claim."
+}

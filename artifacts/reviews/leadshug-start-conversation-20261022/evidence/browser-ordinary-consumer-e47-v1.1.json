@@ -1,0 +1,25 @@
+{
+  "kind": "Actual individual ordinary-recovery consumer PASS, not full E47 terminal",
+  "recorded_at_utc": "2026-10-22T23:20:52.822047+00:00",
+  "executor_session_id": 13535,
+  "command": "bash scripts/test-channels-local.sh browser",
+  "actual_pass_line": "  \u2713   8 e2e/start-conversation.spec.ts:401:3 \u203a Nova conversa pelo BFF com PostgreSQL real \u203a recupera um envio comum incerto pelo BFF e s\u00f3 libera risco ap\u00f3s o prazo real (1.4m)",
+  "collected_stdout_prefix_sha256": "04a1d876ec2b6c856671a4459e750ce294b4b3a4f4fd72da9c983320a86474c8",
+  "run_id": "2026-10-22T23-18-00-762Z",
+  "source_seal": "browser-source-seal-e47-v1.1.json",
+  "source_fingerprint": "603cc71df6648aba2f53be093383348e503231c60e06f89d46e9c8ce111b6d01",
+  "live_source_recheck": "browser-live-review-source-check-e47-v1.1.json",
+  "test_source": "web-app/e2e/start-conversation.spec.ts",
+  "test_source_sha256": "b329e7102b231d95097d70b300286507272c9a2ba8b1298e6a1139bbab89fe2a",
+  "actual_assertions": [
+    "Actual ordinary BFF send returns409 ACK_WITHOUT_ID, persists one inherited OUT/FALHOU diagnostic without externalId, and calls exactly one meta.send for the owned resource.",
+    "Navigate existing thread A\u2192B\u2192A, GET real start-options exposes UNCERTAIN admission and immutable future dispatch deadline; actual OrdinaryRecovery panel appears.",
+    "Explicit UI local reconcile sends correct scoped POST, returns UNCERTAIN/unreleased, and adds no provider call or diagnostic Message.",
+    "ACK button stays disabled before checkbox and before real immutable90s eligibility; explicit UI ACK after deadline sends true risk header and returns200 acknowledged.",
+    "Recovery panel disappears, ordinary composer returns; queued/unassigned status and exact audit/Message/provider snapshots remain unchanged."
+  ],
+  "instrumentation_limit": "Ordinary fake records call(meta.send) and enviados, not providerEffect. No physical provider-effect or live handset delivery claim. Full snapshot comparisons establish no additional fake operations during local recovery.",
+  "causality": "Post-implementation consumer coverage; E46 counter expectation failure is not a product RED. Product and fixtures remain byte-identical to E45 full all.",
+  "current_full_runner_state": "RUNNING, not terminal or GREEN",
+  "composite_proof": "E45 all356API/435PG/53Web/85browser terminalGREEN; E46 browser existing85cases pass; E47 additional consumer PASS on exact test-only correction. Full E47 regression still required."
+}

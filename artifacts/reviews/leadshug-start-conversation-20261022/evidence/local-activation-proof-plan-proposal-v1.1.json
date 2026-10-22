@@ -61,7 +61,7 @@
     "Record only safe outcome/state/timestamps and source-runtime attestation. Do not persist phone/contact/body/token.",
     "No automated sends, new contacts, routing changes, migration/registration at Meta, or Railway deployment."
   ],
-  "current_status": "E45 all terminalGREEN:356API/435PG/53Web/85browser; full259 source/freshness postseal matches. E46 test-only ordinary-recovery proof running; case stops at an incorrect fake effect-counter expectation before consumer actions. No product failure established; no actual runtime/private activation. Prepared positive-only build archives exist, not image builds.",
+  "current_status": "E45 all terminalGREEN356API/435PG/53Web/85browser; E46existing85browser regressions pass. Current test-only E47 ordinary recovery case passed actual UI/BFF after real90s deadline. Full E47 browser remainsRUNNING/frozen; terminal/cleanup/postseal and independent assessment required before actual activation. Prepared positive public build archives exist, no images/activation yet.",
   "build_context_positive_inputs": {
     "api": {
       "roots": [
@@ -97,5 +97,6 @@
     },
     "policy": "Reject symlinks; hash each positive input, produce generated archive only. Exclude every .env, node_modules, existing dist, e2e/test artifacts and all unlisted paths. Add no extra file by discovery or implicit COPY context. Source specs under admitted src remain public build inputs; build exclusions remain canonical."
   },
-  "prepared_build_context_receipt": "positive-build-contexts-e46-v1.1.json"
+  "prepared_build_context_receipt": "positive-build-contexts-e46-v1.1.json",
+  "entrypoint_scope": "Existing API entrypoint mechanically keeps ownership of the preserved named file volume at /dados/arquivos, then runs as node. No host .local-files bind, agent content inspection, payload mutation or file deletion is proposed."
 }

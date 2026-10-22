@@ -1,0 +1,91 @@
+{
+  "kind": "Honest test causality and regression chronology",
+  "version": "1.1",
+  "recorded_at_utc": "2026-10-22T23:47:37.148844+00:00",
+  "finding": "TQA-ST04-04",
+  "scope": "ST-CON-04 whole approved journey, including inherited and new verification",
+  "adjudication": "Test-first coverage is partial. Final-state regression, post-hoc controlled reversion, module loading and causal assertion failures are distinct evidence classes. No retroactive reversion or repeated run solely to fabricate chronology.",
+  "rows": [
+    {
+      "checkpoint": "E03",
+      "source_receipt": "executor-red-e03-v1.1.json",
+      "classification": "module-loading only",
+      "observed_fact": "New modules absent; 3 suites fail to load, 284 existing tests pass and zero behavior assertions fail.",
+      "claim_limit": "No business-level test-first proof."
+    },
+    {
+      "checkpoint": "E04",
+      "source_receipt": "TODO#E04",
+      "classification": "mixed chronology",
+      "observed_fact": "After compile-only repair, RED3 reaches two renderer assertions before their fixes; later RED4 temporarily reverts a preliminary implementation and reaches six failures.",
+      "claim_limit": "RED3 causal only for reached renderer assertions; RED4 controlled post-hoc verification, never original test-first."
+    },
+    {
+      "checkpoint": "E11",
+      "source_receipt": "transport-valid-red-e11-v1.1.json",
+      "classification": "causal assertion RED",
+      "observed_fact": "Corrected transport fixture reaches three failures before transport implementation: unsupported Evolution dispatch and missing Meta protocol delegation.",
+      "claim_limit": "Earlier invalid protocol fixture is not product RED; later pin/fence assertions not reached."
+    },
+    {
+      "checkpoint": "E15",
+      "source_receipt": "dispatch-admission-red-e15-v1.1.json",
+      "classification": "module-loading only",
+      "observed_fact": "Absent new admission implementation prevents suite loading; 311 existing unit tests pass.",
+      "claim_limit": "Admission behavior and PostgreSQL assertions not reached."
+    },
+    {
+      "checkpoint": "E21/E22",
+      "source_receipt": "outbound-causal-red-e21-v1.1.json; outbound-valid-red-e22-v1.1.json",
+      "classification": "causal assertion RED",
+      "observed_fact": "Before ordinary sender admission wiring, split tests reach missing reserve/claim, prepared release, uncertain settlement and refusal settlement assertions.",
+      "claim_limit": "Unit boundary proof only; real PG/concurrency is later regression verification."
+    },
+    {
+      "checkpoint": "E25",
+      "source_receipt": "initial-coordinator-red-e25-v1.1.json",
+      "classification": "module-loading plus unrelated assertion failures",
+      "observed_fact": "Coordinator import is absent-module failure; two actual assertions fail in admission/protocol suites.",
+      "claim_limit": "No request/idempotency/coordinator business assertion RED; other failures require their own causal classification."
+    },
+    {
+      "checkpoint": "E35",
+      "source_receipt": "browser-result-e35-v1.1.json",
+      "classification": "causal browser assertion RED",
+      "observed_fact": "Actual first-message field is missing before new initial-send UI implementation. Real BFF open/empty PG/zero-provider assertions passed first.",
+      "claim_limit": "Existing manual-open UI/backend predates test; later ordinary-composer assertion not reached."
+    },
+    {
+      "checkpoint": "E41",
+      "source_receipt": "all-result-e41-v1.1.json",
+      "classification": "mixed product and test-support failures",
+      "observed_fact": "Actual UI reuse state loss and missing AMBIGUOUS state projection fail before their corrections.",
+      "claim_limit": "Fixture reassignment/audit omission/cumulative counters/mapping expectations are not product behavior REDs; shell exit metadata unavailable, no invented exit code."
+    },
+    {
+      "checkpoint": "E44/E45",
+      "source_receipt": "storage-read-recovery-evidence-loop-v1.1.json",
+      "classification": "causal browser regression RED then full GREEN",
+      "observed_fact": "Actual accepted-send/lost-response/storage-read failure deletes original replay snapshot; failure precedes fix preserving key/body and blocking unsafe actions; full E45 all passes.",
+      "claim_limit": "Only named storage recovery behavior has this causal history; whole suite does not inherit it."
+    },
+    {
+      "checkpoint": "E46/E47",
+      "source_receipt": "browser-result-e46-v1.1.json; browser-result-e47-v1.1.json",
+      "classification": "post-implementation recovery coverage",
+      "observed_fact": "New ordinary recovery case first fails an invalid fake-effects counter; narrow correction followed by full86browser pass.",
+      "claim_limit": "Counter failure is not production RED. Added ordinary UI recovery coverage is post-implementation regression proof."
+    },
+    {
+      "checkpoint": "E48",
+      "source_receipt": "api-source-seal-e48-v1.1.json",
+      "classification": "new bug regressions running",
+      "observed_fact": "Four test-only files frozen before r1 product fixes; canonical API run launched after independent preseal/authority GO.",
+      "claim_limit": "No assertion or test-first outcome claimed until actual terminal evidence; architecture companion current-source pass is expected, not manufactured RED."
+    }
+  ],
+  "broader_coverage": "Most PostgreSQL fault/commit/protocol/boundary/rate/concurrency cases were added alongside or after their production implementation. They are meaningful final-state regression evidence, not universally pre-implementation causal RED.",
+  "review_correction": "The broad r1 reviewer shorthand naming E03/E25 as selected causal RED is qualified here by exact receipts: their new coordinator/admission behavior failed to load and did not reach business assertions. Original raw review results remain immutable.",
+  "method_assessment": "No generic rule/analyzer edit is warranted solely by chronology. Preserve evidence classification and add actual causal regressions for newly found bugs before fixing those bugs.",
+  "resolution": "Root evidence correction recorded; independent fresh final audit must assess remaining coverage and current candidate. No delivery or full-test-first claim."
+}

@@ -1,0 +1,59 @@
+{
+  "kind": "Prepared recovery evidence-first bug loop, before new test/fix",
+  "issue_id": "ST04-PREPARED-RECOVERY-01",
+  "recorded_at_utc": "2026-10-22T23:30:06.267282+00:00",
+  "skill": "delphi-ai/skills/bug-fix-evidence-loop/SKILL.md",
+  "source_finding": "prepared-recovery-source-finding-e47-v1.1.json",
+  "mandatory_questions": [
+    {
+      "question": 1,
+      "answer": "No end-to-end PREPARED crash/read\u2192UI reconciliation proof found. Existing PG tests exercise prepare/claim/expiry cleanup; UI/browser recovery proves SENDING/AMBIGUOUS/known receipt and ordinary uncertainty, not a persisted PREPARED activeAttempt action."
+    },
+    {
+      "question": 2,
+      "answer": "Current source/projection/render chain was inspected by root and executor. No actual preserved user DB/payload was read, by approved privacy boundary. Capture actual owned disposable PostgreSQL row and scoped BFF GET payload before fix in the new targeted test; this is still pending, not a fictitious runtime sample."
+    },
+    {
+      "question": 3,
+      "answer": "No existing test failed for this state omission. E45fullGREEN and E47 current individual recovery PASS concern other states. E46 effects-counter failure was a fake observation mismatch unrelated to this defect. A runtime false-green label waits for concrete new contract assertion RED."
+    },
+    {
+      "question": 4,
+      "answer": "Before product changes, add actual PG/BFF PREPARED read-model regression for unexpired/expired durable unclaimed intents, expecting the existing local reconciliation action and verifying read does not mutate/dispatch. Add actual browser persisted-PREPARED recovery coverage through scoped BFF POST and exact state/provider/Message audits; do not fabricate provider death, rewrite a sent intent into PREPARED or stub BFF payloads. Final suite exercises full UI flow."
+    },
+    {
+      "question": 5,
+      "answer": "Provisional no-rule-needed: this is a finite recovery state\u2192action semantic omission across safe DTO and rendering. Exhaustive enum syntax alone can still explicitly map PREPARED to wrong null; a generic analyzer cannot safely infer this product action policy. Add behavior/state coverage and preserve same local-only recovery owner. No Delphi/analyzer edits authorized."
+    }
+  ],
+  "coverage_chain": [
+    {
+      "stage": "Persisted PREPARED and deadline CAS/reconciliation",
+      "state": "covered",
+      "evidence": "Existing dispatch-admission actual PG tests; new consumer action proof missing."
+    },
+    {
+      "stage": "BFF projectIntent safe state/action DTO",
+      "state": "missing",
+      "evidence": "Source maps PREPARED to null; new actual PG/BFF assertion needed before fix."
+    },
+    {
+      "stage": "API client typed InitialAttempt",
+      "state": "covered",
+      "evidence": "Existing RECONCILE value accepted; no new enum/provider-specific operation required."
+    },
+    {
+      "stage": "React locked recovery branch and local POST handler",
+      "state": "missing",
+      "evidence": "Button only when recoveryAction RECONCILE. PREPARED receives null and GET consult does not change it."
+    },
+    {
+      "stage": "Full browser recovery after persisted preparation interruption",
+      "state": "missing",
+      "evidence": "Queue new real-BFF/PG Playwright scenario; final actual assertion result pending."
+    }
+  ],
+  "selected_direction": "OptionA: expose existing local-only reconciliation through the safe PREPARED projection and existing UI action; preserve GET read-only, same grant/CSRF/immutable lease/owner CAS and no automatic dispatch. Final code choice awaits independent findings and exact regression design.",
+  "sequencing": "Keep E47 and live r1 source packets frozen. Wait actual runner terminal/cleanup/postseal and review lifecycle terminal before sole-writer test-first handoff. No test-only route in production or additional provider/platform capability.",
+  "proof_limits": "Before state is source-confirmed; no new real assertion RED, fixed state or full delivery is claimed."
+}

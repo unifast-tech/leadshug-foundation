@@ -1,0 +1,42 @@
+{
+  "kind": "Bounded additive migration assessment, disposable proof only",
+  "recorded_at_utc": "2026-10-22T23:07:06.928239+00:00",
+  "source_seal": "all-source-seal-e45-v1.1.json",
+  "migrations": [
+    {
+      "path": "api-app/prisma/migrations/20261022140000_initial_message_orchestration/migration.sql",
+      "sha256": "a8b26d5dfc7eb8f658cf703cee0f1f6061b5afa2ad84ca0f37cd4baec9d68437",
+      "bounded_transaction": true
+    },
+    {
+      "path": "api-app/prisma/migrations/20261022150000_initial_message_admissions/migration.sql",
+      "sha256": "78963dce996b2cec9e0990812a5091725238f9995e892c196e614ce9b2a6464f",
+      "bounded_transaction": true
+    },
+    {
+      "path": "api-app/prisma/migrations/20261022160000_initial_message_inbox_order/migration.sql",
+      "sha256": "60e7f76b8ccbee5e51dd939bdf126eeecaa1b1c1871f393a4363add94274a544",
+      "bounded_transaction": true
+    }
+  ],
+  "source_findings": [
+    "Nullable official_inbound_at is added without fabricated backfill/default timestamp; selected-resource direction/origin timestamp index added.",
+    "New finite dispatch admission and initial intent tables/enums; existing conversation FK references preserved with declared cascade only on future explicit parent deletion. No data deletion is executed by migration.",
+    "SQL-only unreleased-slot partial unique, JSONB account-rate expression and COALESCE inbox-order indexes are explicit; ordinary admission owner nonce and initial BU+actor+key unique indexes remain represented.",
+    "Nonconcurrent CREATE INDEX may take table write locks;5s lock wait/60s statement bound means local migration can fail. Never treat additive as lock-free, auto-retry, reset or skip unexpected pending drift."
+  ],
+  "actual_disposable_evidence": {
+    "receipt": "all-result-e45-v1.1.json",
+    "freshness": "browser-freshness-collection-e45-v1.1.json",
+    "completed_migrations": 28,
+    "schema_assertions": "dispatch-admission.e2e-spec.ts:87 asserts new columns/native precision/enums and intentional SQL-only indexes; actual PG tests include admission uniqueness and transaction barriers.",
+    "explain_receipt": "pcv-eps-e45-v1.1.json"
+  },
+  "scope_limits": [
+    "No whole-database schema equivalence claim from bounded new-column/index assertions.",
+    "No migration, preflight connection, dump or data read on the preserved user test runtime has been performed.",
+    "Apply only under the later approved local plan after exact local database identity/status/source preflight; stop on mismatch/lock failure.",
+    "No destructive rollback. An older API lacks the new interlock; do not blindly revert after possible send or unresolved intent."
+  ],
+  "independent_status": "Candidate assessment submitted for fresh architecture/TQA/cutover challenge, not self-certified final delivery."
+}

@@ -1,0 +1,24 @@
+{
+  "checkpoint": "E47 canonical full browser terminal GREEN, independent findings block delivery",
+  "recorded_at_utc": "2026-10-22T23:35:32.601164+00:00",
+  "command": "bash scripts/test-channels-local.sh browser",
+  "executor_session_id": 13535,
+  "actual_exit_code": 0,
+  "browser": {
+    "passed": 86,
+    "failed": 0,
+    "total": 86,
+    "duration": "15.9m"
+  },
+  "stdout_sha256": "34f73a7a192c4e35bd8299d76ce5cf94e506afd5da84dc4b27124cbc577fbcb2",
+  "owned_disposable_cleanup_observed": true,
+  "independent_postseal": "browser-source-recheck-e47-v1.1.json",
+  "freshness": "browser-freshness-collection-e47-v1.1.json",
+  "specific_proof": "Ordinary uncertain response actual BFF diagnostic/meta.send, reopened thread recovery, local reconcile, real90s deadline/explicit risk ACK and no new provider/Message effects pass.",
+  "scope": "E47 browser only rebuilds and runs browser; unchanged production/API/PG/Webunit binds E45 all356/435/53 proof. No new API/unit run claimed.",
+  "assurance_state": "Architecture r1 and TQA r1 actual terminal0/strict merges identify material defects:PREPARED recovery action, settlement certainty, winner realtime, conflict metadata, bounded history lookup, protection harness, Unicode parity and known-accepted risk ACK coverage. Correct and rerun affected canonical all before asking actual runtime activation.",
+  "limits": [
+    "A passing suite does not establish absent cases; independent findings block readiness.",
+    "No actual preserved runtime/provider activation or assisted first-send/reply proof, full diff-guard exception/GO, final delivery or product promotion."
+  ]
+}
