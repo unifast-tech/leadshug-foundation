@@ -1,0 +1,9 @@
+{
+  "checkpoint": "E34 post-terminal public source check",
+  "source_seal": "api-bff-source-seal-e34-v1.1.json",
+  "count": 257,
+  "all_hashes_and_positive_inventory_match": true,
+  "fingerprint": "ba628a919778be3e839b344e74bde113421a752a0fa9b93248b62a29efd813b1",
+  "synthetic_stdout_sha256": "6d01d5eb3b70cebc84a7db8d35f2f0cf689ef9f35b17d69749995c649f03fd06",
+  "owned_cleanup_terminal": true
+}

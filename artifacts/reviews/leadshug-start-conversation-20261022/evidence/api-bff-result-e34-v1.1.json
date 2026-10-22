@@ -1,0 +1,50 @@
+{
+  "checkpoint": "E34 frozen API fault and fence checkpoint GREEN",
+  "canonical_command": "bash scripts/test-channels-local.sh api",
+  "unified_exec_session_id": 74359,
+  "exit_code": 0,
+  "synthetic_stdout": "/tmp/stcon04-executor-api-bff-e34.txt",
+  "stdout_sha256": "6d01d5eb3b70cebc84a7db8d35f2f0cf689ef9f35b17d69749995c649f03fd06",
+  "source_seal": "api-bff-source-seal-e34-v1.1.json",
+  "source_recheck": "api-bff-source-recheck-e34-v1.1.json",
+  "root_verified": [
+    "Synthetic stdout SHA, summaries and bounded new-test excerpts",
+    "All257 source bytes and positive public inventory unchanged after terminal",
+    "Owned disposable cleanup"
+  ],
+  "phases": {
+    "generate_deploy_status_lint_build": "passed",
+    "unit": { "files_passed": 34, "tests_passed": 339, "duration_seconds": 3.99 },
+    "postgresql_e2e": { "files_passed": 33, "tests_passed": 428, "duration_seconds": 284.09 },
+    "owned_cleanup": "completed"
+  },
+  "actual_inventory": {
+    "changes_since_e33": 11,
+    "added_files": 1,
+    "removed_files": 0,
+    "note": "Executor withdrew its preliminary nine-file estimate; root preseal is the actual inventory."
+  },
+  "new_observed_proof": [
+    "Per-instance actual PostgreSQL transaction injection: reservation, claim, receipt, prepared release, risk-release plus audit, and local known-receipt completion distinguish commit with lost acknowledgment from real rollback.",
+    "Real competing echo commits after the initial exact-key lookup; initial completion hits PostgreSQL P2002, whole transaction rolls back, exact readback and one fresh local transaction complete one Message without provider I/O. This particular race exercises reconcileInitial, not a second actual external send.",
+    "Initial risk helper checks deadline-1ms/equality/+1ms for both allowed states and rejects PREPARED/SENDING. PostgreSQL proves before/after release and successor fencing; exact equality is unit evidence, not claimed wall-clock PostgreSQL equality.",
+    "Actor/account rate windows and cross-BU shared opaque account namespace; released attempts remain counted.",
+    "Authenticated BFF: forged cross-tenant grants denied on all new routes; actual Meta phone-GET barriers exercise PREPARED expiry and current role/session withdrawal before claim, with zero POST/Message.",
+    "Accepted provider result preserves concurrent closed status and external owner; another currently authorized actor recovers locally with original sender attribution.",
+    "Unsupported template preview maps to safe409 without reservation/send. Echo-first completion suppresses owner/status changes.",
+    "Canonical inbox-order EXPLAIN ANALYZE/BUFFERS on15000 synthetic rows uses the additive SQL-only COALESCE index and returns50 rows; protocol test exercises total75s deadline before claim."
+  ],
+  "test_causality": "These post-E33 tests and fixes were added alongside/after implementation, without a fresh pre-fix canonical assertion RED. Do not claim retrospective test-first proof or erase E04 chronology. UI first-flow causal RED remains next.",
+  "remaining": [
+    "Complete UI, safe attempt metadata, explicit catalog/channel selection, authoritative preview, duplicate/stale-context and recovery controls",
+    "Real-BFF browser mutation proof and fresh canonical all suite",
+    "Remaining negative protocol/window/timestamp cases, schema/SQL-only parity and criterion-level assurance",
+    "Independent architecture/adherence/security/performance/TQA/final/cutover/debt, unresolved full diff-guard/private boundary, preserved TEST activation and operator-assisted own-channel proof"
+  ],
+  "next": "Root released the sole writer only after postseal for Web test-first work; request a new seal before any runner.",
+  "limits": [
+    "API checkpoint GREEN is not complete ST-CON-04 delivery or an actual provider/recipient proof.",
+    "All36 exact protected paths and both E23 fixture result hashes matched before launch; no broader file admission is inferred.",
+    "E02 discovery, mixed causality and E18 mutable-run disclosures remain applicable."
+  ]
+}
