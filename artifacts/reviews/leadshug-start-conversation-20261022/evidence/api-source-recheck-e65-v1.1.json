@@ -1,0 +1,12 @@
+{
+  "checkpoint": "E65 terminal full positive source recheck",
+  "stage": "After actual executor terminal and owned cleanup; BEFORE writer release",
+  "count": 259,
+  "fingerprint": "e8358f4989a936a4d2483355b891b1d3147e0f901a1e30630b381c1329abc108",
+  "matches_preseal_full_inventory_and_bytes": true,
+  "record_reference": "api-source-seal-e65-v1.1.json#records",
+  "stdout_sha256": "87709920ee7c908fea48b24c05edd7b247a4c3d53d4d8fc28cea61e5a944a9a3",
+  "executor_reported_exit_code": 1,
+  "recorded_at_utc": "2026-10-23T03:35:59.183436+00:00",
+  "boundary": "Only declared positive public roots and7 exact publicfiles; no actual env/data/process inspection."
+}

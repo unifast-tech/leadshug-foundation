@@ -1,0 +1,73 @@
+{
+  "checkpoint": "E65 causal claim and cross-owner lock reproductions; options EXPLAIN support failure",
+  "recorded_at_utc": "2026-10-23T03:37:43.366248+00:00",
+  "command": "bash scripts/test-channels-local.sh api",
+  "executor_session_id": 39313,
+  "exit_code": 1,
+  "stdout_sha256": "87709920ee7c908fea48b24c05edd7b247a4c3d53d4d8fc28cea61e5a944a9a3",
+  "source_fingerprint": "e8358f4989a936a4d2483355b891b1d3147e0f901a1e30630b381c1329abc108",
+  "full259source_postseal": true,
+  "owned_cleanup_observed": true,
+  "production_changed_since_e64": false,
+  "phases": {
+    "unit": {
+      "files": 34,
+      "passed_tests": 368,
+      "failed_tests": 0
+    },
+    "postgresql": {
+      "passed_files": 32,
+      "failed_files": 1,
+      "passed_tests": 444,
+      "failed_tests": 5,
+      "total_tests": 449
+    },
+    "web_browser": "not run"
+  },
+  "findings": [
+    {
+      "id": "ARCH-ST04-R4-01-window",
+      "classification": "causal assertion failure",
+      "actual_status": 201,
+      "expected_status": 409,
+      "actor_lock_wait_observed": true,
+      "database_clock_crossed_window_expiry": true,
+      "lease_still_live": true,
+      "limits": "Emitted postsDelta=0 was sampled BEFORE releasing role lock/awaiting response. It proves no POST while blocked only; final zero-POST/zero-Message/state assertions were not reached after status failure. No final provider-count claim."
+    },
+    {
+      "id": "ARCH-ST04-R4-01-credential",
+      "classification": "causal assertion failure",
+      "actual_status": 201,
+      "expected_status": 409,
+      "actor_lock_wait_observed": true,
+      "synthetic_credential_rotated_while_role_lock_held": true,
+      "actual_final_provider_posts_delta": 1,
+      "limits": "Later zero-Message/released-state assertions not reached after status failure."
+    },
+    {
+      "id": "ARCH-ST04-R4-02-claim",
+      "classification": "causal actual PostgreSQL deadlock increase",
+      "actual_refresh_status": 200,
+      "actual_send_status": 409,
+      "database_deadlocks_before": 0,
+      "database_deadlocks_after": 1,
+      "limits": "Subsequent slot/effect assertions after failed deadlock assertion not reached."
+    },
+    {
+      "id": "ARCH-ST04-R4-02-local-completion",
+      "classification": "causal actual PostgreSQL deadlock increase",
+      "actual_refresh_status": 200,
+      "database_deadlocks_before": 1,
+      "database_deadlocks_after": 2,
+      "limits": "Subsequent one-POST/truthful receipt-state assertions after deadlock check not reached."
+    },
+    {
+      "id": "ARCH-ST04-R4-03",
+      "classification": "test-support capture matcher failure before intended oracle",
+      "actual": "recentSql undefined at line258",
+      "limits": "No captured-query EXPLAIN, scan bound or Sort assertion reached; no causal performance RED claimed. Correct support matcher then run before index fix."
+    }
+  ],
+  "next": "Bounded compatible production HOW preflight for reproduced claim/locks; repair exact SQL capture and marker sampling. No actual runtime activation/private inspection."
+}

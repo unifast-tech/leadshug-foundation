@@ -1,0 +1,17 @@
+{
+  "kind": "E65 test-only source preflight; no actual compiler/test RED or product fix inferred",
+  "recorded_at_utc": "2026-10-23T03:27:56.963557+00:00",
+  "source_seal": "api-source-seal-e65-v1.1.json",
+  "only_changed_path": "api-app/test/initial-message.e2e-spec.ts",
+  "sha256": "3dec4fa0842d3ba31a0049aafa481d2d33483cffc0e59a2aad917485d91b24b0",
+  "reviewed_setup": [
+    "Owned actual BFF/PG request pre-auth/reservation reaches phone preflight before actor/refresh lock contention.",
+    "Natural trusted-window expiry across real actor wait; PostgreSQL clock check, lease90s retained. Newly sealed private SYNTHETIC credential rotation uses fixture key only.",
+    "Actual preserved ST05 refresh owner overlaps claim or post-HTTP local work; held provider POST precedes channel barrier for compatibility with corrected claim pinning.",
+    "Actual BFF-generated qualified SQL/params are EXPLAINed over2048released intents/256active tokens; both Sort/Incremental Sort and scan count asserted softly.",
+    "Actor observers abort/drain, db activity limited to current synthetic DB; holder/request cleanup in finally."
+  ],
+  "preseal_corrections": "Earlier unsealed test draft had undeclared diagnostic variable, qualified SQL matcher and barrier ordering issues. Root requested exact test-support repairs before any canonical run. These were static fixture findings, never causal runtime/compile RED.",
+  "scope": "No production/schema/protected owner change. All38protected/exact-companion bytes still match. Current test-only mutation awaits actual canonical API results.",
+  "source_fingerprint": "e8358f4989a936a4d2483355b891b1d3147e0f901a1e30630b381c1329abc108"
+}

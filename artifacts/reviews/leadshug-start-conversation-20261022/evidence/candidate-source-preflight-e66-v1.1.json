@@ -1,0 +1,13 @@
+{
+  "kind": "E66 support-only repair preflight before actual API run; production still E64",
+  "recorded_at_utc": "2026-10-23T03:39:48.867561+00:00",
+  "source_seal": "api-source-seal-e66-v1.1.json",
+  "source_fingerprint": "aaf6068e4d381a8c6ebcc476616c8266550410d3d30aac4e219c533025fcb360",
+  "only_changed_path": "api-app/test/initial-message.e2e-spec.ts",
+  "sha256": "6a47f1669acf4daf0e37376db54fc5e7ce93e07e8309ea2e42838563887bd972",
+  "changes": [
+    "Capture exact Prisma options SQL with schema+table-qualified order identifiers; retain actual SQL/params EXPLAIN and independent soft no-sort/scan predicates. Missing-capture diagnostic bounded to synthetic SQL; missing capture still fails.",
+    "Sample final provider POST count after releasing actor lock and awaiting request; keep separate no-POST-while-blocked assertion."
+  ],
+  "causal_boundary": "No production/schema migration changes; no performance RED or current result inferred before run. All38protected unchanged."
+}

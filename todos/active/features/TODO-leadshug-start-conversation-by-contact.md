@@ -38,7 +38,7 @@ Este v1.1 substitui a autoridade ativa da minuta revisada em 2026-10-19. O origi
 ## Implementation Intent
 
 - **Current delivery:** implementar o contrato v1.1 aprovado de abertura/reuso BU+contato e primeiro envio textual/template oficial elegível, com intenção durável e recuperação sem reenvio cego; etapa Pending até assurance e prova assistida.
-- **Planned next steps:** obter assurance independente sobre a regressão completa E64 e imagens atuais, preparar a ativação local preservada com autorização exata, executar a prova assistida e fechar os gates. Planejamento/APROVADO e seus recibos permanecem históricos abaixo.
+- **Planned next steps:** corrigir os bloqueios r4 reproduzidos em E65, medir os planos de opções e obter regressão/revisão/imagens das fontes corrigidas; depois preparar a ativação local preservada com autorização exata, executar a prova assistida e fechar os gates. E64 e os recibos de planejamento/APROVADO permanecem históricos.
 - **Anticipatory implementation authorized now:** none.
 - **Rationale:** reaproveitar os owners existentes de conversa, transporte, aceitação de Message e catálogo. O fluxo novo coordenará uma intenção durável; não duplicará sender, aceitação ou catálogo.
 
@@ -46,12 +46,12 @@ Este v1.1 substitui a autoridade ativa da minuta revisada em 2026-10-19. O origi
 
 - **Current delivery stage:** `Pending`
 - **Qualifiers:** `none`
-- **Next exact step:** reproduzir em PostgreSQL as3falhas arquiteturais r4 e concretizar correções compatíveis com a ordem de locks aprovada; novas fontes/provas/imagens/revisão antes de qualquer ativação.
+- **Next exact step:** corrigir as falhas de claim/concorrência reproduzidas em E65, preservando a ordem de locks aprovada; reparar o capturador SQL e medir o plano antes de alterar índices. Novas fontes/provas/imagens/revisão antes de qualquer ativação.
 
 ## Active Work State (Required While TODO Remains In `active/`)
 
 - **Work state:** `implementation`
-- **Why this state now:** E64 regressão completa/imagens e correções r1/r2/r3 passaram; TQA r5 completo e cutover r4 aceitam o candidato sintético com gates operacionais pendentes. Arquitetura/segurança r4 identificou3novos release-blockers de claim/locks/consulta, ainda sem reprodução runtime. Nenhuma ativação real/entrega; full259after-review confere E64.
+- **Why this state now:** E64 regressão completa/imagens e correções r1/r2/r3 passaram; TQA r5 completo e cutover r4 aceitam o candidato sintético com gates operacionais pendentes. Arquitetura/segurança r4 identificou3novos release-blockers de claim/locks/consulta. E65 reproduziu autorização após janela expirada, envio após rotação de credencial e dois deadlocks com refresh ST05; o teste de plano parou no capturador SQL antes do EXPLAIN. Unit368pass/PG444pass+5falhas; full259postseal confere E65 test-only. Nenhuma ativação real/entrega.
 - **Exit condition:** implementação e todas as evidências/reviews/gates de entrega aprovados; estágio continua Pending até os critérios locais reais, sem claim de entrega por aprovação.
 
 ## Scope
