@@ -1,0 +1,28 @@
+{
+  "checkpoint": "E60 consumer availability implementation compile failure; browser not reached",
+  "recorded_at_utc": "2026-10-23T01:44:25.652283+00:00",
+  "command": "bash scripts/test-channels-local.sh browser",
+  "executor_session_id": 48480,
+  "exit_code": 1,
+  "stdout_sha256": "da1d18f74c08adcdd155a166beb75baab3a01727e9774b8e4052342ab34adbd7",
+  "source_fingerprint": "c718ea8e074e099e83370f7f270ed087025cb5110eef18e45e6a347f3225c732",
+  "full259source_postseal": true,
+  "owned_cleanup_observed": true,
+  "actual_failure": {
+    "phase": "API build before browser globalSetup",
+    "code": "TS2339",
+    "path": "api-app/src/domain/inbox/initial-message.service.ts",
+    "lines": [
+      65,
+      123
+    ],
+    "message": "TemplateSummary has no available property; catalog observation metadata was erased by prior consumer cast"
+  },
+  "classification": "Implementation type-boundary failure; not causal UI RED or after-fix availability GREEN",
+  "unreached": [
+    "Playwright cases",
+    "browser attestation",
+    "current availability PG regression"
+  ],
+  "next": "Keep producer/provider contracts sealed. Select and check producer-inferred observation before existing Summary renderer boundary; repeat canonical browser after new preseal."
+}

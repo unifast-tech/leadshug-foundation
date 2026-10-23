@@ -792,7 +792,7 @@ Fresh internal r1 architecture/TQA results are derived challenge evidence; the r
 | F-EB21E40D | internal no-context test_quality_audit r3 / TQA-R3-01 | medium | release-blocker | complete current test-quality evidence | open | Attach all250signals with exact canonical-pattern path/line/current source hash, adjacent assertions and individual dispositions; preserve full positive-root raw high exit2 and any actual inherited weaknesses. Root owns evidence, no Delphi/analyzer edits. evidence/implementation-r2-finding-triage-v1.1.json |
 
 
-Fresh r2 architecture exposed three in-scope source-confirmed failures; causal test proof is still pending. Cutover found no current implementation-integrity blocker, and its low delivery-gate note remains an explicit prerequisite. TQA output completeness is still being completed.
+Fresh r2/r3 reviewers are all terminal. Ordinary outcome masking has E56 causal unitRED then E57/E58/E59 unit+realPG proof; availability omission now has E59 causal realPG/BFF/effectRED. BU-switch browser proof and consolidated corrections remain pending. Full TQA r3 identified individual static-signal and scenario-isolation gaps; the250E54dispositions exist, and current candidate refresh/independent challenge remain required. Cutover’s delivery-gate note remains explicit.
 
 
 ## TODO Closeout Disposition
@@ -1293,3 +1293,20 @@ Canonical API session84269 actually exited1 with owned cleanup. Build/lint/migra
 ## Execution checkpoint E57 — narrow ordinary fix and faithful test setup frozen
 
 Only OutboundService ordinary result-bookkeeping projection is corrected after actual E56unitRED; template/UI production stay E54. Source-preflight also corrects the new unavailable-observation fixture to respect the actual shared10s owner debounce with the existing controlled clock, retaining page freshness and restoration. Independent protocol now has exact3POST/OUT and correct NAMED/POSITIONAL indexes; separate owner-CAS keeps its own fourth effect/message delta. These are unexecuted test-precondition/refactor refinements, not product REDs or dropped assertions. Full259preseal and38protected matches precede canonical API; no fresh result yet. Evidence: api-source-seal-e57-v1.1.json and candidate-source-preflight-e57-v1.1.json.
+
+
+## Execution checkpoint E57/E58 — ordinary proof and observation setup validity
+
+E57 API session9724 actually exited1 with cleanup and an independent259record/full-byte postseal:368unit and443PG tests pass, including all four outcome-projection regressions, the real ordinary missing-ID/settlement rollback diagnostic, and all four independently seeded template groups. The new availability case stopped at its original preview prerequisite (expected200/actual409), before either consumer assertion; this is fixture invalidity, not product RED. E58 changes only that new test to compute the existing renderer fingerprint, then reruns canonical API; no new result is inferred while active. Template/UI product remains unchanged for causal proof. Exact evidence: api-result-e57-v1.1.json, api-source-recheck-e57-v1.1.json and api-source-seal-e58-v1.1.json.
+
+Root also disclosed a context-rehydration lapse: a broad AGENTS file search returned no paths but exceeded the approved positive discovery surface. No private values were observed; empty output does not establish traversal internals. Discovery was stopped and exact public paths used thereafter. See context-rehydration-boundary-disclosure-e57-v1.1.json. This is not silently counted as full boundary compliance.
+
+
+## Execution checkpoint E58/E59 — actual unavailable-item consumer RED
+
+E58 terminal1 passed368unit/443PG but stopped at a new draft setup using unsupported authoring language, before the availability transition. E59 keeps all producers sealed and repairs only that setup to actual valid create→catalog→preview→individual503 behavior, respecting10s debounce. Canonical API session46480 actually terminated1 with cleanup/full259postseal:368unit/443otherPG pass; the new case reaches all8soft failures. A fresh catalog page retains APPROVED item available=false, but preview200 and newsubmit201 SUCCEEDED create1messagePOST,1intent and1OUT. This is causal consumer RED before its fix, not a reclassification of earlier setup failures. Sole writer released after normalGO only for both selected-summary availability guards. UI remains exact E54 for a separate real-browser BU-change regression; consolidated ALL follows both fixes. See api-result-e58-v1.1.json, api-result-e59-v1.1.json and api-source-recheck-e59-v1.1.json. Stage remains Pending, no actual provider/private runtime action.
+
+
+## Execution checkpoint E60 — consumer type-boundary correction required
+
+Canonical browser session48480 actually exited1 before globalSetup/Playwright: API build TS2339 at both new available guards, because existing consumer cast erased catalog-observation metadata into provider TemplateSummary. Root full259postseal and cleanup are complete; no browser case, freshness attestation or after-fix availability proof is claimed. Sole writer released after normalGO only to preserve the inferred observation through availability checks before existing renderer/payload Summary narrowing. Sealed ST05/provider contracts remain unchanged. E61 browser will reproduce the still-unchanged BU UI, then consolidated ALL validates both fixes. See browser-result-e60-v1.1.json and browser-source-recheck-e60-v1.1.json.

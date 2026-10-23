@@ -1,0 +1,64 @@
+{
+  "checkpoint": "E59 causal real-PG/BFF unavailable-observation RED before consumer fix",
+  "recorded_at_utc": "2026-10-23T01:41:01.972176+00:00",
+  "command": "bash scripts/test-channels-local.sh api",
+  "executor_session_id": 46480,
+  "exit_code": 1,
+  "stdout_sha256": "6bad3fef1116ce787cc8d4adcb27578a96b5a2b312f92ac87e55aa930efccf61",
+  "source_fingerprint": "7bd410636ee6f70506d23fd91cee60eca6329db3655ac9a8da81ebf96e82ef5e",
+  "full259source_postseal": true,
+  "owned_cleanup_observed": true,
+  "phases": {
+    "migrations_lint_build": "passed",
+    "unit": {
+      "files": 34,
+      "passed_tests": 368,
+      "failed_tests": 0
+    },
+    "postgresql": {
+      "passed_files": 32,
+      "failed_files": 1,
+      "passed_tests": 443,
+      "failed_tests": 1
+    },
+    "web_browser": "not run"
+  },
+  "reached_producer_preconditions": [
+    "Actual owned BFF draft creation and submission succeeded with supported pt_BR/punctuated BODY and same-name provider-created resource.",
+    "Actual catalog owner refreshed APPROVED item with available=true and valid initial preview rendered Hello Ada.",
+    "Existing observation clock advanced10001ms respects shared debounce; actual individual provider503 causes ST05 refresh409 TEMPLATE_REFRESH_UNAVAILABLE.",
+    "Actual catalog read still page available=true; same APPROVED item available=false."
+  ],
+  "reached_consumer_observations": {
+    "preview": {
+      "actual_status": 200,
+      "expected_status": 409,
+      "actual_text": "Hello Ada.",
+      "expected_code": "INITIAL_TEMPLATE_UNAVAILABLE"
+    },
+    "new_submit": {
+      "actual_status": 201,
+      "expected_status": 409,
+      "actual_state": "SUCCEEDED",
+      "actual_provider_acceptance": "CONFIRMED",
+      "actual_receipt_persistence": "RECORDED",
+      "expected_code": "INITIAL_TEMPLATE_UNAVAILABLE",
+      "expected_preAdmission": true
+    },
+    "provider_message_posts": {
+      "actual": 1,
+      "expected": 0
+    },
+    "initial_intents": {
+      "actual": 1,
+      "expected": 0
+    },
+    "out_messages": {
+      "actual": 1,
+      "expected": 0
+    },
+    "soft_assertion_failures": 8
+  },
+  "causal_boundary": "Template consumer and UI production remained exact E54; narrow ordinary result fix was independently proved. This actual assertion/effect vector precedes availability fix; no post-hoc reversion.",
+  "next": "Only selected observation.available consumer guards after normalGO; browser causal BU test before UI fix; full ALL after both corrections. No actual provider/runtime activation."
+}

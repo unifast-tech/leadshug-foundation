@@ -1,0 +1,43 @@
+{
+  "checkpoint": "E58 valid preview; draft setup fails before unavailable producer transition",
+  "recorded_at_utc": "2026-10-23T01:33:12.280174+00:00",
+  "command": "bash scripts/test-channels-local.sh api",
+  "executor_session_id": 46988,
+  "exit_code": 1,
+  "stdout_sha256": "95d0dec2303f9b91a019e1fe31d4b8cfef42764cabce98e98fd6aedf9ac9e5dd",
+  "source_fingerprint": "c4e22756836d4a42802039d901822a0c61877a19571a1b3d025d29972428510f",
+  "full259source_postseal": true,
+  "owned_cleanup_observed": true,
+  "phases": {
+    "migrations_lint_build": "passed",
+    "unit": {
+      "files": 34,
+      "passed_tests": 368,
+      "failed_tests": 0
+    },
+    "postgresql": {
+      "passed_files": 32,
+      "failed_files": 1,
+      "passed_tests": 443,
+      "failed_tests": 1
+    },
+    "web_browser": "not run"
+  },
+  "reached_proofs": [
+    "Four new captured-outcome unit regressions now pass after scoped ordinary fix.",
+    "Real PostgreSQL ordinary diagnostic/settlement fault case passed within dispatch-admission21tests.",
+    "All four independently seeded template scenario groups passed.",
+    "The original APPROVED-item initial preview now actually passed; only later draft setup failed."
+  ],
+  "actual_failure": {
+    "file": "api-app/test/initial-message.e2e-spec.ts",
+    "line": 487,
+    "operation": "draft creation prerequisite",
+    "expected_status": 201,
+    "actual_status": 500,
+    "actual_owned_synthetic_error": "TemplateDefinitionError, field language, reason INVALID_FORMAT",
+    "classification": "Existing authoring accepts pt_BR only; unavailable producer transition/consumer assertions NOT reached"
+  },
+  "root_source_diagnosis": "Same valid renderer fingerprint makes the original preview succeed. New draft still used en_US; existing authoring requires pt_BR and separately forbids body ending in a variable. The latter is source-preflight diagnosis, not a reached runtime failure.",
+  "next": "After normal GO repair only new fixture to valid ST05 definition/create\u2192catalog\u2192preview\u2192unavailable lifecycle. Keep sealed producer, template consumer and UI unchanged."
+}

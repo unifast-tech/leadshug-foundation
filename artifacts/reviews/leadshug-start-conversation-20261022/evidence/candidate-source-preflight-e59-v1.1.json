@@ -1,0 +1,19 @@
+{
+  "kind": "E59 source-preflight test lifecycle reconciliation, not runtime result",
+  "recorded_at_utc": "2026-10-23T01:39:54.222229+00:00",
+  "source_seal": "api-source-seal-e59-v1.1.json",
+  "previous_actual_results": [
+    "api-result-e57-v1.1.json",
+    "api-result-e58-v1.1.json"
+  ],
+  "exact_test_only_refinements": [
+    "Use current initial renderer fingerprint, independently of authoring semanticFingerprint.",
+    "Use supported ST05 pt_BR and non-variable body edge; preserve broader en_US/POSITIONAL initial protocol cases separately.",
+    "Actual real draft BFF create/submit before real catalog refresh, one same-name provider-created remote template and explicit stateful owned fake.",
+    "Respect actual owner debounce10_001ms through existing clock seam, preserve fresh page, restored spy.",
+    "Exact owned phone membership and exact-name filtered list make remote send otherwise valid.",
+    "Preview rejection code only; preAdmission marker belongs to submit catch only.",
+    "Soft assertions retain exact zero effects/intent/OUT requirements while permitting every observation after causal failure."
+  ],
+  "limits": "No product patch, sealed ST05 owner mutation, test exclusion or relaxed contract. Setup errors do not become retroactive causal business RED. Unsupported authoring-language500 handling observed in E58 is preserved preexisting behavior, outside this initial-contact change; no new API error policy waiver implied."
+}

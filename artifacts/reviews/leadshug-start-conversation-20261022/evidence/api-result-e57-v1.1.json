@@ -1,0 +1,41 @@
+{
+  "checkpoint": "E57 ordinary fix GREEN; observation setup failure, not consumer RED",
+  "recorded_at_utc": "2026-10-23T01:24:45.581666+00:00",
+  "command": "bash scripts/test-channels-local.sh api",
+  "executor_session_id": 9724,
+  "exit_code": 1,
+  "stdout_sha256": "25ab47021d0ab43ba884d45568d94f700a66fb4f151b7e1b403fc59b33bb42fa",
+  "source_fingerprint": "d430ca40481bb10434e6e9460c512e7792a7589db90633ac922acbf40e38897c",
+  "full259source_postseal": true,
+  "owned_cleanup_observed": true,
+  "phases": {
+    "migrations_lint_build": "passed",
+    "unit": {
+      "files": 34,
+      "passed_tests": 368,
+      "failed_tests": 0
+    },
+    "postgresql": {
+      "passed_files": 32,
+      "failed_files": 1,
+      "passed_tests": 443,
+      "failed_tests": 1
+    },
+    "web_browser": "not run"
+  },
+  "reached_proofs": [
+    "Four new captured-outcome unit regressions now pass after scoped ordinary fix.",
+    "Real PostgreSQL ordinary diagnostic/settlement fault case passed within dispatch-admission21tests.",
+    "All four independently seeded template scenario groups passed."
+  ],
+  "actual_failure": {
+    "file": "api-app/test/initial-message.e2e-spec.ts",
+    "line": 476,
+    "operation": "originalPreview prerequisite",
+    "expected_status": 200,
+    "actual_status": 409,
+    "classification": "test setup validity; intended unavailable-observation producer transition and consumer assertions NOT reached"
+  },
+  "root_source_diagnosis": "New test passes catalog-item semanticFingerprint directly rather than using existing renderInitialTemplate(summary, values).semanticFingerprint as proven peer cases do. No body/code was captured by failing supertest expectation; do not infer exact error code.",
+  "next": "After normal authority GO, only the new observation test setup may change. Consumer availability/UI production remain E54 for causal proof."
+}

@@ -1,0 +1,10 @@
+{
+  "recorded_at_utc": "2026-10-23T01:24:45.581666+00:00",
+  "command": "rg --files -g AGENTS.md -g !node_modules -g !**/.env* -g !**/.local-files/**",
+  "cwd": "workspace parent",
+  "actual_exit": 1,
+  "actual_stdout": "empty",
+  "classification": "root-wide file discovery was broader than the approved positive public roots; procedural lapse",
+  "limits": "No private values or returned filenames were observed. Empty output does not prove which directories ripgrep traversed. No product/runtime mutation.",
+  "correction": "Stopped broad discovery. Exact ancestor AGENTS reads and declared positive public source/evidence paths only thereafter."
+}

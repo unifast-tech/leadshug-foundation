@@ -1,7 +1,7 @@
 {
   "kind": "Honest test causality and regression chronology",
   "version": "1.1",
-  "recorded_at_utc": "2026-10-22T23:47:37.148844+00:00",
+  "recorded_at_utc": "2026-10-23T01:44:25.652283+00:00",
   "finding": "TQA-ST04-04",
   "scope": "ST-CON-04 whole approved journey, including inherited and new verification",
   "adjudication": "Test-first coverage is partial. Final-state regression, post-hoc controlled reversion, module loading and causal assertion failures are distinct evidence classes. No retroactive reversion or repeated run solely to fabricate chronology.",
@@ -99,10 +99,45 @@
     },
     {
       "checkpoint": "E52/E53/E54",
-      "source_receipt": "candidate-source-preflight-e52-v1.1.json; all-result-e53-v1.1.json; all-source-seal-e54-v1.1.json",
+      "source_receipt": "candidate-source-preflight-e52-v1.1.json; all-result-e53-v1.1.json; all-result-e54-v1.1.json; all-source-recheck-e54-v1.1.json",
       "classification": "faithful fixture/source preflight and post-implementation test baseline repair",
       "observed_fact": "E52 did not run: fixture corrected to real owner reservation with90s lease and full canonical data, early UIACK tests actual BFF409 rather than adding an unapproved timer feature. E53 product regressions pass (364unit/438PG); new late-old test incorrectly compares to pre-ACK null timestamp, while actual late state is SUCCEEDED and release remains nonnull. E54 changes only that test to exact post-ACK timestamp and reruns full ALL.",
-      "claim_limit": "E53 stale expectation is not product RED. E54 currently running; 12initial-message PG tests passed individually, no full candidate/Web/browser result yet."
+      "claim_limit": "E53 stale expectation is not product RED. E54 actually completed exit0:364unit/439PG/54Web/88browser, full259source postseal and93manifest freshness checks. Fresh independent reviews subsequently found additional gaps; E54 GREEN did not close delivery."
+    },
+    {
+      "checkpoint": "E55/E56",
+      "source_receipt": "candidate-source-preflight-e55-v1.1.json; api-result-e56-v1.1.json",
+      "classification": "E55 no-run fixture preflight; E56 four causal ordinary unit failures before product fix",
+      "observed_fact": "E56 actual unit364pass/4fail; persistence errors replace captured BLOCKED/REJECTED/UNKNOWN/ACK_WITHOUT_ID projection. Later per-case counters and PG were not reached.",
+      "claim_limit": "Do not label E55 as runtime RED or E56 as real-PG causal before-fix proof."
+    },
+    {
+      "checkpoint": "E57",
+      "source_receipt": "api-result-e57-v1.1.json; api-source-recheck-e57-v1.1.json",
+      "classification": "ordinary fix verified; new observation setup failed before intended consumer assertions",
+      "observed_fact": "368unit and443PG tests pass; one PG setup expected200\u2192409 at originalPreview line476. Four independently seeded protocol groups pass.",
+      "claim_limit": "Unavailable observation and BU-switch defects still source-confirmed, not runtime-reproduced. No Web/browser run."
+    },
+    {
+      "checkpoint": "E58",
+      "source_receipt": "api-result-e58-v1.1.json; api-source-recheck-e58-v1.1.json",
+      "classification": "new observation fixture draft-validation failure; not product RED",
+      "observed_fact": "368unit/443PG pass; valid original preview now passes, draft creation returns500 from unsupported en_US authoring language before unavailable producer transition.",
+      "claim_limit": "No availability consumer assertion reached. pt_BR-only and body-edge rules are preserved authoring constraints, not authority to broaden ST05."
+    },
+    {
+      "checkpoint": "E59",
+      "source_receipt": "api-result-e59-v1.1.json; api-source-recheck-e59-v1.1.json",
+      "classification": "causal real-PG/BFF availability-consumer assertion and side-effect RED before consumer fix",
+      "observed_fact": "Valid actual ST05 create/catalog/individual-failure transition leaves page fresh and APPROVED item unavailable. Initial preview200 and submit201 SUCCEEDED produce1messagePOST/intent/OUT where409 pre-admission and zero were required. All8soft failure assertions reached; other443PG/368unit pass.",
+      "claim_limit": "Disposable owned fake provider, not real Meta delivery. Earlier E57/E58 setup failures remain setup-only, never retroactively causal. BU browser still not run."
+    },
+    {
+      "checkpoint": "E60",
+      "source_receipt": "browser-result-e60-v1.1.json; browser-source-recheck-e60-v1.1.json",
+      "classification": "implementation type-boundary compile failure before browser",
+      "observed_fact": "API build TS2339 after adding availability guard to a TemplateSummary-cast item. Provider summary intentionally lacks observation metadata; current source did not compile.",
+      "claim_limit": "No Playwright/globalSetup/freshness or BU causal RED; no availability after-fix result. Narrow consumer correction preserves inferred observation before Summary cast."
     }
   ],
   "broader_coverage": "Most PostgreSQL fault/commit/protocol/boundary/rate/concurrency cases were added alongside or after their production implementation. They are meaningful final-state regression evidence, not universally pre-implementation causal RED.",
