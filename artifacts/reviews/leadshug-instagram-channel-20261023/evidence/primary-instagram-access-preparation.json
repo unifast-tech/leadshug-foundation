@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "kind": "public-primary-access-recheck",
+  "date": "2026-10-23",
+  "purpose": "Later controlled physical test preparation; no actual grant or runtime readiness inferred",
+  "webToolOpen": "inaccessible; urllib official public HTTPS only",
+  "sources": [
+    {
+      "url": "https://developers.facebook.com/documentation/instagram-platform/instagram-api-with-instagram-login/get-started",
+      "httpStatus": 200,
+      "bodySha256": "689fbcd351b83c745e158136fb30cca162cf872241fc52b22397af9d7f149bf6",
+      "textSha256": "7779ea4d8c43be6e18c448dc9fcbe0c167b363b27183aa5f1df31ac8ea550717"
+    },
+    {
+      "url": "https://developers.facebook.com/documentation/instagram-platform/instagram-api-with-instagram-login/messaging-api",
+      "httpStatus": 200,
+      "bodySha256": "e6dffec60d4a547afcfb852672b2fd6b38a012d3a31177c7b3e64714c30b8d5b",
+      "textSha256": "fd9c0e3c63d488ec897a7e9055a2303efc90a17c71fa52336db3f4f6b77416d8"
+    }
+  ],
+  "thirdPartySearchUsedAsAuthority": false,
+  "privateInputsUsed": false,
+  "verifiedFacts": [
+    "The messaging guide distinguishes Standard Access for professional accounts owned/managed by the app operator or added in its dashboard, and Advanced Access for professional accounts beyond that set.",
+    "The get-started guide connects Advanced Access with app review. Neither guide proves this installation has its required grants."
+  ],
+  "notVerified": [
+    "actual professional account ownership/roles",
+    "actual app access level or granted permissions",
+    "which sender is eligible for a development-mode physical test",
+    "real messages or subscription health"
+  ]
+}

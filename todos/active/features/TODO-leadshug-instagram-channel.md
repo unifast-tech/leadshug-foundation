@@ -31,7 +31,7 @@ Este TODO define WHAT, exclusões e critérios de entrega. A baseline v1.3 abaix
 ## Delivery Status Canon (Required)
 - **Current delivery stage:** Pending
 - **Qualifiers:** none
-- **Next exact step:** CP1: manter37fontes e TODO congelados, executar API completo em lane somente validação e coletar revisão independente r5; nenhuma nova edição até ambas terminais.
+- **Next exact step:** CP1: concluir revisão da proposta delimitada para observação Evolution; obter validação dos dois caminhos protegidos antes de corrigir R5-01. API completo r5 passou; demais checkpoints pendentes.
 
 ## Active Work State (Required While TODO Remains In `active/`)
 - **Work state:** implementation
@@ -584,20 +584,21 @@ Historical planning observation retained: IG-REV-01..04, strategic source, high/
 | --- | --- | --- | --- | --- | --- | --- |
 | IG-CP1-R1-01 | high | release-blocker | fix in this TODO | immutable qualified peer is SCOPE-02/DOD-01 | closed by r2 | adherence-cp1-r2-result.json; source/proof repair reviewed; no delivery acceptance |
 | IG-CP1-R1-02 | high | release-blocker | fix in this TODO | current provider attachment equality is SCOPE-02/DOD-01 | closed by r3 | adherence-cp1-r3-result.json; final persisted association defect repaired; actual official confirmation proved |
-| IG-CP1-R1-03 | high | release-blocker | fix in this TODO | durable cross-adapter resource ownership is SCOPE-02/DOD-01 | open | adherence-cp1-r3-result.json; residual current-instance trust contradiction |
+| IG-CP1-R1-03 | high | release-blocker | fix in this TODO | durable cross-adapter resource ownership is SCOPE-02/DOD-01 | closed by r5 | adherence-cp1-r5-result.json; exact current quarantine recovery after actual prior receipt |
 | IG-CP1-R1-04 | high | release-blocker | fix in this TODO | qualified contact reuse is SCOPE-02,03 | closed by r2 | adherence-cp1-r2-result.json; source/proof repair reviewed; no delivery acceptance |
 | IG-CP1-R1-05 | medium | release-blocker | fix in this TODO | retained ownership/cardinality is SCOPE-02/DOD-01 | closed by r2 | adherence-cp1-r2-result.json; source/proof repair reviewed; no delivery acceptance |
 | IG-CP1-R1-06 | medium | release-blocker | fix in this TODO | safe canonical migration is DOD-02/VAL-02 | closed by r2 | adherence-cp1-r2-result.json; source/proof repair reviewed; no delivery acceptance |
-| IG-CP1-R1-07 | medium | release-blocker | fix in this TODO | preserved regression tests are SCOPE-08/DOD-09 | open | cp1-r2-repair-full-api-red.json; preserved fixture/context obligations |
+| IG-CP1-R1-07 | medium | release-blocker | fix in this TODO | preserved regression tests are SCOPE-08/DOD-09 | closed by r5 | cp1-frozen-full-api-green-r5.json; complete379unit/483e2e GREEN on matching37sources |
 | IG-CP1-R1-08 | medium | release-blocker | fix in this TODO | required historical cohort is DOD-02/VAL-02 | closed by r2 | adherence-cp1-r2-result.json; source/proof repair reviewed; no delivery acceptance |
 | IG-CP1-R2-01 | high | release-blocker | fix in this TODO | one coherent WA business scope is SCOPE-02/DOD-01 | closed by r3 | adherence-cp1-r3-result.json; WA business scope BU agrees with CHECK/FK and actual positive route |
 | IG-CP1-R2-02 | high | release-blocker | fix in this TODO | honest unverified renewal staging is SCOPE-02/DOD-01 | closed by r3 | adherence-cp1-r3-result.json; original reservation/proof defect repaired; distinct pending lifecycle findings remain below |
-| IG-CP1-R3-01 | high | release-blocker | fix in this TODO | single-create/read-before-retry after pending renewal is SCOPE-02/08 | open | adherence-cp1-r3-result.json |
-| IG-CP1-R3-02 | high | release-blocker | fix in this TODO | managed cleanup ownership survives staged unlink under SCOPE-02/08 | open | adherence-cp1-r3-result.json |
-| IG-CP1-R3-03 | medium | release-blocker | fix in this TODO | durable quarantine and later correct-proof recovery preserve existing channel contract | open | adherence-cp1-r3-result.json |
-| IG-CP1-R3-04 | low | release-blocker | fix in this TODO | required ownership concurrency proof cannot assume winner scheduling; fix assertions in this TODO | open | adherence-cp1-r3-result.json |
-| IG-CP1-ROOT-01 | high | release-blocker | fix in this TODO | pending current ingress remains retryable without content/trust before proof | open | cp1-r3-root-staged-ingress-finding.json |
-| IG-CP1-R4-01 | high | release-blocker | repeat affected proof in this TODO | four mutations violated the explicit r4 freeze; preserve evidence and validate current bytes anew | open | cp1-r4-freeze-breach.json; adherence-cp1-r4-result.json |
+| IG-CP1-R3-01 | high | release-blocker | fix in this TODO | single-create/read-before-retry after pending renewal is SCOPE-02/08 | closed by r5 | adherence-cp1-r5-result.json; single create and read-before-retry retained |
+| IG-CP1-R3-02 | high | release-blocker | fix in this TODO | managed cleanup ownership survives staged unlink under SCOPE-02/08 | closed by r5 | adherence-cp1-r5-result.json; current staged unlink and stale snapshot fence repaired |
+| IG-CP1-R3-03 | medium | release-blocker | fix in this TODO | durable quarantine and later correct-proof recovery preserve existing channel contract | closed by r5 | adherence-cp1-r5-result.json; wrong-number quarantine and correct-proof recovery retained |
+| IG-CP1-R3-04 | low | release-blocker | fix in this TODO | required ownership concurrency proof cannot assume winner scheduling; fix assertions in this TODO | closed by r5 | adherence-cp1-r5-result.json; actual-winner concurrency assertion retained |
+| IG-CP1-ROOT-01 | high | release-blocker | fix in this TODO | pending current ingress remains retryable without content/trust before proof | closed by r5 | adherence-cp1-r5-result.json; metadata-only staged retry and accepted-key proof retained |
+| IG-CP1-R4-01 | high | release-blocker | repeat affected proof in this TODO | four mutations violated the explicit r4 freeze; preserve evidence and validate current bytes anew | closed by r5 | adherence-cp1-r5-result.json; cp1-frozen-full-api-green-r5.json; new stable proof replaces invalidated acceptance |
+| IG-CP1-R5-01 | medium | release-blocker | bounded companion in this TODO; protected path validation required | current staged cleanup guarantee depends on a truthful absence observation; inherited adapter weakness is not a new Instagram regression | open; proposed only | adherence-cp1-r5-result.json; evolution-observation-companion-proposal.json |
 
 ## TODO Closeout Disposition
 - **Disposition:** blocked
@@ -851,7 +852,7 @@ Authority preflight final: `artifacts/reviews/leadshug-instagram-channel-2026102
 
 | Checkpoint | State | Owner / next proof |
 | --- | --- | --- |
-| CP1 Identity/route/state cutover | frozen; r5/full API pending | residual causal RED/GREEN captured; validation-only executor and fresh reviewer; no edits until both terminal |
+| CP1 Identity/route/state cutover | r5/full API terminal; source admission pending | previous defects and freeze evidence closed; inherited observation ambiguity R5-01 requires bounded companion validation |
 | CP2 OAuth/ingress | pending | follows CP1 accepted checkpoint |
 | CP3 Channel/policy/consumers | pending | shared sender/acceptance only |
 | CP4 UI/CI/browser | pending | profile handoff for CI/runtime tooling |
@@ -949,3 +950,17 @@ A fresh bounded routine executor replaces the terminal sticky executor under the
 CP1 residual recovery RED/GREEN: `evidence/cp1-r4-residual-causal-red.json` records a clean targeted RED after real prior receipt/CONNECTED and after the actual stale unlink/renewal interleaving. Earlier harness iterations remain qualified in separate receipts and are not suite acceptance. `cp1-r4-residual-diagnostic-green.json` records379unit/25Instagram e2e passes after the repair. The scheduling wrapper returns the unchanged actual helper/DB snapshot and fabricates no transaction/constraint results.
 
 The residual executor is terminal. `cp1-r4-residual-frozen-source-manifest.json` seals all37public sources. Root will start a separate validation-only complete API lane and fresh no-context r5 reviewer. Neither lane may edit source or TODO; repairs require a later explicit root handoff after both lanes terminal. R4-01 remains open until that new stable proof is collected. All remaining checkpoint, physical and independent delivery gates stay mandatory.
+
+## CP1 Finding Resolution Ledger — adherence r5
+
+Both frozen lanes are terminal. Fresh r5 source review preserves prior source closures and closes current quarantine-recovery, stale-unlink, single-create, valid quarantine, concurrency-winner and metadata/retry defects. Root matched all37source hashes and frozen TODO after the complete API runner. `evidence/cp1-frozen-full-api-green-r5.json` records30migrations, lint/build,379unit and483integration passes, with disposable cleanup; it resolves R1-07 and the remaining R4-01 evidence requirement. The invalidated r4 history remains intact. CP1 is not accepted because the distinct R5-01 observation limitation remains.
+
+R5-01 is Integrated, useful and project-level. Its malformed-success-to-absence behavior predates this work and the protected client/spec remain byte-exact. Root classifies it as a release-blocker for the current staged cleanup guarantee: an inconclusive provider observation cannot release the retained cleanup fence merely because the domain received null. This is a subordinate concretization of the same cleanup/identity objective, not permission for general Evolution hardening. No follow-up waiver is inferred.
+
+## Proposed bounded source admission — Evolution observation companion
+
+Status: proposed, unapplied, awaiting independent proposal review and human path validation. Existing approved WHAT and private/runtime exclusions remain unchanged.
+
+The candidate in `evidence/evolution-observation-companion-proposal.json` and its exact `evolution-observation-companion-proposed.diff` admits only `api-app/src/integrations/evolution/evolution.client.ts` and `api-app/src/integrations/evolution/evolution.client.spec.ts` for strict inventory-shape/ambiguity interpretation and unit regressions. Existing response projection and confirmed absence stay compatible. No new request, fallback, send/auth/signature behavior, dependency or real-runtime action is included. The already-admitted lifecycle spec must prove malformed actual-adapter observation retains CLEANUP_PENDING with zero new creates and that valid absence/deletion enables recovery.
+
+The current immutable-path rows and preservation policy are NOT lifted by this proposal. If validated, root will record the limited exception while retaining original hashes as baseline facts; the remaining inherited files stay byte-exact. Test-first causal RED/GREEN, frozen complete API and fresh review remain required after implementation. No code change can start on these paths before validation.

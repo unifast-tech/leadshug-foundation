@@ -1,0 +1,90 @@
+diff --git a/api-app/src/integrations/evolution/evolution.client.ts b/api-app/src/integrations/evolution/evolution.client.ts
+--- a/api-app/src/integrations/evolution/evolution.client.ts
++++ b/api-app/src/integrations/evolution/evolution.client.ts
+@@ -79,12 +79,30 @@ export class EvolutionHttpClient implements EvolutionClient {
+   async consultarInstancia(nome: string): Promise<InstanciaObservada | null> {
+     const query = new URLSearchParams({ instanceName: nome });
+     const data = await this.chamar('GET', `/instance/fetchInstances?${query.toString()}`);
+-    const instances = Array.isArray(data) ? data : [];
+-    const found = instances.find((item) => item && typeof item === 'object' && (item as { name?: unknown }).name === nome) as Record<string, unknown> | undefined;
++    if (!Array.isArray(data)) {
++      throw new EvolutionIndisponivelError('A Evolution retornou inventário de instâncias inválido.');
++    }
++    const instances = data.map((item) => {
++      if (!isRecord(item) || typeof item.name !== 'string' || !item.name.trim()) {
++        throw new EvolutionIndisponivelError('A Evolution retornou inventário de instâncias inválido.');
++      }
++      if (
++        (item.ownerJid !== undefined && item.ownerJid !== null && typeof item.ownerJid !== 'string') ||
++        (item.connectionStatus !== undefined && item.connectionStatus !== null && typeof item.connectionStatus !== 'string')
++      ) {
++        throw new EvolutionIndisponivelError('A Evolution retornou inventário de instâncias inválido.');
++      }
++      return item;
++    });
++    const matches = instances.filter((item) => item.name === nome);
++    if (matches.length > 1) {
++      throw new EvolutionIndisponivelError('A Evolution retornou inventário de instâncias ambíguo.');
++    }
++    const found = matches[0];
+     if (!found) return null;
+     return {
+       name: typeof found.name === 'string' ? found.name : nome,
+       ownerJid: typeof found.ownerJid === 'string' ? found.ownerJid : null,
+       connectionStatus: typeof found.connectionStatus === 'string' ? found.connectionStatus : null,
+     };
+   }
+diff --git a/api-app/src/integrations/evolution/evolution.client.spec.ts b/api-app/src/integrations/evolution/evolution.client.spec.ts
+--- a/api-app/src/integrations/evolution/evolution.client.spec.ts
++++ b/api-app/src/integrations/evolution/evolution.client.spec.ts
+@@ -57,6 +57,50 @@ describe('EvolutionHttpClient instance creation response', () => {
+     expect(String(fetchFake.mock.calls[0][0])).toContain('/instance/delete/lh-exact-name');
+   });
+ 
++  it.each([
++    { label: 'object', json: async () => ({ instances: [] }) },
++    { label: 'null', json: async () => null },
++    { label: 'string', json: async () => '[]' },
++    { label: 'invalid JSON', json: async () => { throw new SyntaxError('malformed'); } },
++    { label: 'malformed row', json: async () => [{ name: 'another-instance' }, null] },
++    { label: 'malformed optional field', json: async () => [{ name: 'another-instance', ownerJid: 7 }] },
++    { label: 'duplicate exact names', json: async () => [{ name: 'lh-target' }, { name: 'lh-target' }] },
++  ])('rejects $label inventory as an ambiguous observation', async ({ json }) => {
++    process.env.EVOLUTION_API_URL = 'https://evolution.invalid';
++    process.env.EVOLUTION_API_KEY = 'fixture-key';
++    const fetchFake = vi.fn().mockResolvedValue({ ok: true, json });
++    vi.stubGlobal('fetch', fetchFake);
++    await expect(new EvolutionHttpClient().consultarInstancia('lh-target'))
++      .rejects.toBeInstanceOf(EvolutionIndisponivelError);
++    expect(fetchFake).toHaveBeenCalledTimes(1);
++  });
++
++  it.each([
++    { label: 'empty inventory', rows: [] },
++    { label: 'valid nonmatching inventory', rows: [{ name: 'another-instance', ownerJid: null, connectionStatus: null }] },
++  ])('returns confirmed absence for $label', async ({ rows }) => {
++    process.env.EVOLUTION_API_URL = 'https://evolution.invalid';
++    process.env.EVOLUTION_API_KEY = 'fixture-key';
++    const fetchFake = vi.fn().mockResolvedValue({ ok: true, json: async () => rows });
++    vi.stubGlobal('fetch', fetchFake);
++    await expect(new EvolutionHttpClient().consultarInstancia('lh-target')).resolves.toBeNull();
++    expect(fetchFake).toHaveBeenCalledTimes(1);
++  });
++
++  it('returns the exact unique matching observation from a valid inventory', async () => {
++    process.env.EVOLUTION_API_URL = 'https://evolution.invalid';
++    process.env.EVOLUTION_API_KEY = 'fixture-key';
++    const fetchFake = vi.fn().mockResolvedValue({ ok: true, json: async () => [
++      { name: 'another-instance' },
++      { name: 'lh-target', ownerJid: '15551234567@s.whatsapp.net', connectionStatus: 'open' },
++    ] });
++    vi.stubGlobal('fetch', fetchFake);
++    await expect(new EvolutionHttpClient().consultarInstancia('lh-target')).resolves.toEqual({
++      name: 'lh-target', ownerJid: '15551234567@s.whatsapp.net', connectionStatus: 'open',
++    });
++    expect(fetchFake).toHaveBeenCalledTimes(1);
++  });
++
+   it('rejects redirects without following them or exposing the configured key', async () => {
+     process.env.EVOLUTION_API_URL = 'https://evolution.invalid';
+     process.env.EVOLUTION_API_KEY = 'fixture-secret-key';

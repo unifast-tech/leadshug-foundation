@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "kind": "r5-finding-classification",
+  "finding": "IG-CP1-R5-01",
+  "severity": "medium",
+  "classification": "release-blocker",
+  "routing": "subordinate bounded companion in current approved objective; proposed source admission needed",
+  "changedVsInherited": "Adapter and original null-to-CLEANED behavior are inherited and byte-exact; no new-regression attribution. New staged lifecycle proof depends on the same observation semantics.",
+  "rationale": "Current claimed cleanup uncertainty guarantee cannot be satisfied when malformed successful observation is treated as conclusive absence. Preserve fence until validated absence or confirmed exact deletion.",
+  "alternativesRejected": {
+    "byDesignNoAction": "Real ambiguity, not intended behavior",
+    "automaticProtectedEdit": "Explicit byte-exact path contract is still in force",
+    "parallelProviderProbe": "Duplicates transport and evades protected dependency instead of fixing its meaning"
+  },
+  "sourceAdmission": "Only exact client/spec parsing and unit regressions proposed; no approval yet",
+  "criterionRefs": [
+    "SCOPE-02",
+    "SCOPE-08",
+    "DOD-01",
+    "DOD-08"
+  ],
+  "review": "adherence-cp1-r5-result.json",
+  "proposal": "evolution-observation-companion-proposal.json",
+  "runtimeAuthority": false
+}

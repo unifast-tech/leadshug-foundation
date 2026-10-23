@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "kind": "bounded-unapplied-companion-critique",
+  "objective": "Independently review exact minimal protected-path admission proposal for inherited Evolution observation ambiguity, NOT implemented patch acceptance. Challenge correctness, scope, tests, privacy, performance, elegance and operational semantics; current full API GREEN does not test this unapplied proposal.",
+  "governingTodo": {
+    "path": "foundation_documentation/todos/active/features/TODO-leadshug-instagram-channel.md",
+    "sha256": "d0cb8466c834f7602d359264495241c02239f89309809fa03572351fd85ef987"
+  },
+  "proposal": "evolution-observation-companion-proposal.json",
+  "proposalDiff": {
+    "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/evolution-observation-companion-proposed.diff",
+    "sha256": "ae1805a0efe20f37edcbb211683b2410b65567059f9903bd36e71578310aefc2"
+  },
+  "currentSource": {
+    "api-app/src/integrations/evolution/evolution.client.ts": "b0824e8fd4f801a239521855aaa02da5e0943a8c86c4ac8778e2f1f352821698",
+    "api-app/src/integrations/evolution/evolution.client.spec.ts": "119d962fdcd9c895b75845dca74d8506147e11480d74b82e8c37f29f97c04081"
+  },
+  "additionalExactRead": [
+    "api-app/src/domain/channels/channels.service.ts",
+    "api-app/test/instagram-lifecycle.e2e-spec.ts",
+    "foundation_documentation/project_constitution.md",
+    "foundation_documentation/modules/integrations-and-channels.md",
+    "foundation_documentation/policies/scope_subscope_governance.md"
+  ],
+  "evidence": [
+    "adherence-cp1-r5-result.json",
+    "cp1-r5-finding-classification.json",
+    "cp1-frozen-full-api-green-r5.json",
+    "inherited-public-preservation-v1.1.json",
+    "evolution-observation-companion-proposal.json"
+  ],
+  "frontendConsumerContract": "Read complete governing TODO Frontend/Consumer Matrix. No new producer/route/UI here; existing connection lifecycle outcomes use existing channels endpoint/connection UI. Current same-slice service regression and later CP4 browser/CP5 ALL obligations remain mandatory, no UI waiver.",
+  "strictBounds": "Only consultarInstancia observation interpretation and meaningful adapter unit cases on the two protected paths proposed; actual product-path malformed observation/no-CLEANED/zero-create proof required in already-admitted Instagram spec. Keep existing actual[]/nonmatching valid absence, known single observation and all existing tests. No arbitrary HTTP probing, fallback, send/auth/URL/signature/dependency/runtime/private changes.",
+  "readOnlyCheck": "Root git apply --check -p2 passed; no application/tests. You may repeat --check only if useful, no mutation or runner.",
+  "knownLimits": "User path validation not yet received; proposal not applied. Current379unit/483e2e full API proves existing source only. Original hashes remain immutable until explicit limited exception. Runtime/Meta/private grant still excluded.",
+  "collection": "Fresh no-context native internal reviewer, canonical dispatch + strict schema merge; bounded file-set must inspect actual protected source and exact candidate diff.",
+  "forbidden": "No writes, tests/runners, private .env reads/list/hash, .local-files, actual runtime/DB/logs/process args/env/volumes, broad scans/Git status/diff or worktrees/copies/product Git writes. No GOAL tools."
+}

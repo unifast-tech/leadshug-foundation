@@ -1,0 +1,51 @@
+{
+  "artifact_type": "proposed_scope_companion",
+  "status": "PROPOSED_UNAPPLIED",
+  "date": "2026-10-23",
+  "classification": "pending root strategic review; no source finding classified here",
+  "scope": "Minimal Evolution inventory observation guard and adapter unit coverage only.",
+  "authority": "Preparation-only delegation. This proposal grants no implementation authority. Approved TODO and CP1 sources remain frozen during the validator and independent review.",
+  "governance": {
+    "approved_todo": "foundation_documentation/todos/active/features/TODO-leadshug-instagram-channel.md",
+    "approved_todo_version": "1.3",
+    "proposed_diff_paths": [
+      "api-app/src/integrations/evolution/evolution.client.ts",
+      "api-app/src/integrations/evolution/evolution.client.spec.ts"
+    ],
+    "frozen_inherited_sources": true,
+    "source_hashes": {
+      "api-app/src/integrations/evolution/evolution.client.ts": "b0824e8fd4f801a239521855aaa02da5e0943a8c86c4ac8778e2f1f352821698",
+      "api-app/src/integrations/evolution/evolution.client.spec.ts": "119d962fdcd9c895b75845dca74d8506147e11480d74b82e8c37f29f97c04081"
+    },
+    "preservation_record_hashes_match": true
+  },
+  "observed_issue": "consultarInstancia currently maps successful non-array JSON to an empty array. chamar() maps successful JSON parse failures to {}. Thus invalid object/null/string or invalid JSON becomes null (apparent absence); cleanup callers may then mark CLEANED. This behavior predates the Instagram feature and is not asserted as a new regression or classified as a defect in this proposal.",
+  "proposed_behavior": {
+    "valid_absence": "Only a valid array inventory with well-formed rows and no exact target name returns null; [] and valid nonmatching rows remain conclusive absence.",
+    "malformed_or_ambiguous": "Non-array payloads, invalid JSON (normalized to {} by current transport helper), malformed rows/optional fields, and duplicate exact target names throw the existing safe EvolutionIndisponivelError.",
+    "known_observation": "A unique exact-name row retains the existing projection: name plus ownerJid and connectionStatus as string or null.",
+    "transport_and_scope": "No new HTTP call or probing path. No change to status/transport outcomes, sends, auth, URLs, secrets, timeouts, or signatures. No fallback is introduced."
+  },
+  "unit_cases_in_proposed_diff": [
+    "200 object body rejects",
+    "200 null body rejects",
+    "200 string body rejects",
+    "invalid JSON rejects after existing {} normalization",
+    "malformed inventory row rejects",
+    "malformed optional observation field rejects",
+    "duplicate matching names reject",
+    "valid empty inventory returns null",
+    "valid nonmatching inventory returns null",
+    "valid unique matching row preserves exact observation"
+  ],
+  "required_product_path_regression_case_if_accepted": "Add service-level coverage in the already-admitted Instagram feature spec: seed an admitted Instagram create/renew pairing flow with a managed prior identity in CLEANUP_PENDING, have the existing consultarInstancia observation receive a successful malformed inventory (plus an invalid-JSON case if coverage permits), then assert the product result remains cleanup-ambiguous, the prior identity remains CLEANUP_PENDING, and Evolution createInstancia is called zero times. Cover both recovery of an existing pending cleanup and the completePairing prior-resource cleanup path if both are reached by the admitted feature flow. A subsequent valid [] inventory should remain the only absence case that can proceed as absence. No separate HTTP probe or parallel domain path.",
+  "proposal_diff_file": "evolution-observation-companion-proposed.diff",
+  "proposal_diff": "diff --git a/api-app/src/integrations/evolution/evolution.client.ts b/api-app/src/integrations/evolution/evolution.client.ts\n--- a/api-app/src/integrations/evolution/evolution.client.ts\n+++ b/api-app/src/integrations/evolution/evolution.client.ts\n@@ -79,12 +79,30 @@ export class EvolutionHttpClient implements EvolutionClient {\n   async consultarInstancia(nome: string): Promise<InstanciaObservada | null> {\n     const query = new URLSearchParams({ instanceName: nome });\n     const data = await this.chamar('GET', `/instance/fetchInstances?${query.toString()}`);\n-    const instances = Array.isArray(data) ? data : [];\n-    const found = instances.find((item) => item && typeof item === 'object' && (item as { name?: unknown }).name === nome) as Record<string, unknown> | undefined;\n+    if (!Array.isArray(data)) {\n+      throw new EvolutionIndisponivelError('A Evolution retornou inventário de instâncias inválido.');\n+    }\n+    const instances = data.map((item) => {\n+      if (!isRecord(item) || typeof item.name !== 'string' || !item.name.trim()) {\n+        throw new EvolutionIndisponivelError('A Evolution retornou inventário de instâncias inválido.');\n+      }\n+      if (\n+        (item.ownerJid !== undefined && item.ownerJid !== null && typeof item.ownerJid !== 'string') ||\n+        (item.connectionStatus !== undefined && item.connectionStatus !== null && typeof item.connectionStatus !== 'string')\n+      ) {\n+        throw new EvolutionIndisponivelError('A Evolution retornou inventário de instâncias inválido.');\n+      }\n+      return item;\n+    });\n+    const matches = instances.filter((item) => item.name === nome);\n+    if (matches.length > 1) {\n+      throw new EvolutionIndisponivelError('A Evolution retornou inventário de instâncias ambíguo.');\n+    }\n+    const found = matches[0];\n     if (!found) return null;\n     return {\n       name: typeof found.name === 'string' ? found.name : nome,\n       ownerJid: typeof found.ownerJid === 'string' ? found.ownerJid : null,\n       connectionStatus: typeof found.connectionStatus === 'string' ? found.connectionStatus : null,\n     };\n   }\ndiff --git a/api-app/src/integrations/evolution/evolution.client.spec.ts b/api-app/src/integrations/evolution/evolution.client.spec.ts\n--- a/api-app/src/integrations/evolution/evolution.client.spec.ts\n+++ b/api-app/src/integrations/evolution/evolution.client.spec.ts\n@@ -57,6 +57,50 @@ describe('EvolutionHttpClient instance creation response', () => {\n     expect(String(fetchFake.mock.calls[0][0])).toContain('/instance/delete/lh-exact-name');\n   });\n \n+  it.each([\n+    { label: 'object', json: async () => ({ instances: [] }) },\n+    { label: 'null', json: async () => null },\n+    { label: 'string', json: async () => '[]' },\n+    { label: 'invalid JSON', json: async () => { throw new SyntaxError('malformed'); } },\n+    { label: 'malformed row', json: async () => [{ name: 'another-instance' }, null] },\n+    { label: 'malformed optional field', json: async () => [{ name: 'another-instance', ownerJid: 7 }] },\n+    { label: 'duplicate exact names', json: async () => [{ name: 'lh-target' }, { name: 'lh-target' }] },\n+  ])('rejects $label inventory as an ambiguous observation', async ({ json }) => {\n+    process.env.EVOLUTION_API_URL = 'https://evolution.invalid';\n+    process.env.EVOLUTION_API_KEY = 'fixture-key';\n+    const fetchFake = vi.fn().mockResolvedValue({ ok: true, json });\n+    vi.stubGlobal('fetch', fetchFake);\n+    await expect(new EvolutionHttpClient().consultarInstancia('lh-target'))\n+      .rejects.toBeInstanceOf(EvolutionIndisponivelError);\n+    expect(fetchFake).toHaveBeenCalledTimes(1);\n+  });\n+\n+  it.each([\n+    { label: 'empty inventory', rows: [] },\n+    { label: 'valid nonmatching inventory', rows: [{ name: 'another-instance', ownerJid: null, connectionStatus: null }] },\n+  ])('returns confirmed absence for $label', async ({ rows }) => {\n+    process.env.EVOLUTION_API_URL = 'https://evolution.invalid';\n+    process.env.EVOLUTION_API_KEY = 'fixture-key';\n+    const fetchFake = vi.fn().mockResolvedValue({ ok: true, json: async () => rows });\n+    vi.stubGlobal('fetch', fetchFake);\n+    await expect(new EvolutionHttpClient().consultarInstancia('lh-target')).resolves.toBeNull();\n+    expect(fetchFake).toHaveBeenCalledTimes(1);\n+  });\n+\n+  it('returns the exact unique matching observation from a valid inventory', async () => {\n+    process.env.EVOLUTION_API_URL = 'https://evolution.invalid';\n+    process.env.EVOLUTION_API_KEY = 'fixture-key';\n+    const fetchFake = vi.fn().mockResolvedValue({ ok: true, json: async () => [\n+      { name: 'another-instance' },\n+      { name: 'lh-target', ownerJid: '15551234567@s.whatsapp.net', connectionStatus: 'open' },\n+    ] });\n+    vi.stubGlobal('fetch', fetchFake);\n+    await expect(new EvolutionHttpClient().consultarInstancia('lh-target')).resolves.toEqual({\n+      name: 'lh-target', ownerJid: '15551234567@s.whatsapp.net', connectionStatus: 'open',\n+    });\n+    expect(fetchFake).toHaveBeenCalledTimes(1);\n+  });\n+\n   it('rejects redirects without following them or exposing the configured key', async () => {\n     process.env.EVOLUTION_API_URL = 'https://evolution.invalid';\n     process.env.EVOLUTION_API_KEY = 'fixture-secret-key';\n",
+  "validation": {
+    "source_hashes_rechecked": true,
+    "todo_and_sources_edited": false,
+    "tests_run": false,
+    "runners_run": false,
+    "git_or_runtime_operations": false
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "kind": "cp1-frozen-complete-api-green-r5",
+  "command": "bash scripts/test-channels-local.sh api",
+  "executorReportedExit": 0,
+  "rootObservedSummary": [
+    "Test Files  36 passed (36)",
+    "Tests  379 passed (379)",
+    "Test Files  36 passed (36)",
+    "Tests  483 passed (483)"
+  ],
+  "migrations": "all30applied, schema up-to-date; lint/build passed",
+  "log": {
+    "path": "foundation_documentation/artifacts/tmp/instagram-channel-implementation/cp1-api-full-r5-01.log",
+    "sha256": "b43eb06a36d68ffb434fd064dbcc63106e0fc9ff09207b0c8be56fe823d11ef9",
+    "bytes": 197532
+  },
+  "rootSourceCheck": {
+    "manifest": "cp1-r4-residual-frozen-source-manifest.json",
+    "checked": 37,
+    "mismatches": [],
+    "todoSha256": "6f538d81c7fecbd3fc9e6e2c8de496b1eaa45cf3ecbc8945c0c426cd5f174cc6"
+  },
+  "cleanup": "validator terminal; root observed disposable container/network/volume removal lines",
+  "closesEvidencePortions": [
+    "IG-CP1-R1-07",
+    "IG-CP1-R4-01"
+  ],
+  "qualification": "R5 inherited observation finding still requires root classification; no CP1/Instagram delivery acceptance from API GREEN alone. ALL/PCV/browser and CP2..CP6 pending."
+}
