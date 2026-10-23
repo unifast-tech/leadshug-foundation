@@ -883,8 +883,8 @@ All r6 reviewers are terminal. Root integrated F-CF091066 and F-5E961B39 after a
 
 - **Disposition:** move-completed
 - **Disposition reason:** todos os critérios locais do contrato aprovado e do aditivo documental v1.2 foram satisfeitos; guards finais GO. Não há trabalho local requerido restante além do movimento/publicação documental em curso.
-- **Post-commit/push status:** Awaiting closure documentation commit/push after validated path movement; Foundation main only, no product/root Git write.
-- **Next path/status action:** Same governing TODO moved to todos/completed/features/TODO-leadshug-start-conversation-by-contact.md; publish the exact owned Foundation closure paths. No further lifecycle move required for this local slice.
+- **Post-commit/push status:** complete — closure commit c49265f38e0b7cc41515371d7ad9fa1806022972 pushed successfully to Foundation origin/main; this final status receipt is documentary bookkeeping only. Four preexisting carried artifact modifications retained, no clean-worktree claim; no product/root Git write.
+- **Next path/status action:** Same governing TODO moved to completed and closure commit c49265f3 published on Foundation main; no remaining lifecycle action for this local slice.
 
 ## Security Risk Assessment
 
@@ -1582,3 +1582,7 @@ Current product, runtime, modules, reviews and observed-noise admission criteria
 ## Final local closure — 2026-10-23
 
 Actual final authority guard with require-delivery-gates, completion guard with require-delivery and closeout disposition guard all exited0/GO against the fully evidenced current candidate. Completion covers12Scope,13DoD and9Validation items with34criterion-specific rows,3CI rows and actual preflight/hunt evidence; no waiver. This follows actual canonical fullguardGO786/786 and ALL approved companion predicates before/after. All local contract requirements are satisfied; statusCompleted/Local-Implemented is authorized at this threshold. Same governing TODO moves to completed, retaining all historical failures, independent results, human approvals and inherited limitations. No source/test/runtime/credential/provider/recipient/root or product Git action occurred during closeout; only Foundation documentation. Evidence: evidence/closure-authority-before-move-v1.2.json; evidence/closure-completion-before-move-v1.2.json; evidence/closure-disposition-before-move-v1.2.json.
+
+## Closure publication — actual Foundation push confirmed
+
+Closure commit c49265f38e0b7cc41515371d7ad9fa1806022972 was actually pushed to origin/main; source and tracking ref match. Same TODO is in completed with Local-Implemented stage. Final status bookkeeping preserves the original fullguard proof, all tests/reviews/operator receipts and inherited limitations. Four known preexisting carried artifact modifications remain untouched/unstaged; no whole-worktree clean claim. No product/root Git or runtime change. All-active closeout is checked after publication; any future history work requires its own tactical contract.

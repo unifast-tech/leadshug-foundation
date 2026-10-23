@@ -1,0 +1,63 @@
+{
+  "generated_at_utc": "2026-10-23T17:17:25.579211Z",
+  "git": {
+    "ahead": 0,
+    "available": true,
+    "behind": 0,
+    "clean": false,
+    "root": "/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation",
+    "synced": false,
+    "upstream": "origin/main"
+  },
+  "overall_outcome": "go",
+  "rule_id": "paced.todo.closeout-disposition",
+  "todo_count": 3,
+  "todo_results": [
+    {
+      "context": {
+        "closeout_section_present": true,
+        "current_delivery_stage": "Pending",
+        "delivery_claim": false,
+        "disposition": "blocked",
+        "next_exact_step": "none in this cancelled contract; CP84 cleanup is complete, retain historical evidence. Continue official onboarding/receipt work only under the parent contract. Reopening this child requires renewed human scope and approval.",
+        "path_state": "active",
+        "post_commit_push_status": "CP84 documentation-only checkpoint on Foundation main; guarded publication receipt retained in artifacts/tmp/number-onboarding-execution/cp84-publication-receipt.json.",
+        "qualifiers": "Blocked",
+        "todo_path": "/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/todos/active/features/TODO-leadshug-meta-api-test-number-binding.md",
+        "work_state": "blocked"
+      },
+      "violations": []
+    },
+    {
+      "context": {
+        "closeout_section_present": false,
+        "current_delivery_stage": "Not-Started",
+        "delivery_claim": false,
+        "disposition": null,
+        "next_exact_step": "explicit user approval, then implement the approved contract.",
+        "path_state": "active",
+        "post_commit_push_status": null,
+        "qualifiers": "awaiting-approval",
+        "todo_path": "/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/todos/active/features/TODO-leadshug-mode-specific-primary-and-secondary-color.md",
+        "work_state": null
+      },
+      "violations": []
+    },
+    {
+      "context": {
+        "closeout_section_present": true,
+        "current_delivery_stage": "In-Progress",
+        "delivery_claim": false,
+        "disposition": "keep-active",
+        "next_exact_step": "validate one real Typebot flow through an official WhatsApp number; automated implementation and regression checks are complete.",
+        "path_state": "active",
+        "post_commit_push_status": "pending",
+        "qualifiers": "approved; enhancement-scope-recorded; automated-checks-green; real-channel-validation-pending",
+        "todo_path": "/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/todos/active/features/TODO-leadshug-typebot-automation-integration.md",
+        "work_state": "review"
+      },
+      "violations": []
+    }
+  ],
+  "violations": []
+}
