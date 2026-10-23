@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-23",
+  "kind": "derived-cp2-integration-preparation",
+  "authority": "Approved v1.3 HOW preparation only; CP2 execution waits accepted CP1",
+  "state": "advisory preparation only; wait accepted CP1",
+  "existingComposition": [
+    "ChannelTransportModule owns shared MessageAcceptanceService, DispatchAdmissionService, ChannelCredentialResolver and registry; add IG HTTP boundary/factory here as approved, do not create parallel sender or acceptance owner",
+    "BffModule has authenticated prefix, AccessService, SessionService and registration providers; register Instagram authorizations controller/service without changing session middleware or duplicating authentication",
+    "WebhooksModule imports shared transport and owns IncomingService; signed IG controller must share acceptance but never activate Typebot accidentally",
+    "configurarBodyParsers currently global1mb JSON + raw bytes; new route-specific8MiB IG and16KiB OAuth must run before generic parser, preserving WA1MiB/reply behavior",
+    "Credential crypto currently narrows provider to WA; extend AAD provider union for IG and retain same envelope/old WA ciphertext validity; add actual expiry metadata without rewriting prior WA facts",
+    "IG business/contact scope must use identical verified app/API+professional-account qualifier for route CHECK; preserve app-scoped auth id distinct"
+  ],
+  "concerns": [
+    "Request-key replay must return same usable authorization URL while nonce stored hash-only; derive purpose-bound authenticated state from high entropy attempt/session/config, or equivalent safe design. Do not persist plaintext state or fake replay with unusable hash.",
+    "Small payload limits apply only authorizations endpoints, never shared WhatsApp reply.",
+    "Do not promote credential/subscription before atomic verified resource ownership; cancellation retains committed partial facts.",
+    "Prior CP1 recovery helper accepts only PENDING/CONNECTED; do not generalize arbitrary ERROR or use it as Instagram authorization owner.",
+    "Per-update partial batch retry cannot HTTP200 silentlydrop; preflight bounds before any batch effects.",
+    "20overlap tests must not assume contenderorder or fake DB outcomes.",
+    "Keep authenticated BFF prefix unchanged. OAuth callback is top-level GET with state/session binding, so existing SameSite=Lax cookie can apply; route errors/303 headers and gateway query suppression must avoid code/state disclosure even on denied callbacks.",
+    "Qualified account/peer namespace must use the configured app + API family and verified professional account, with opaque strings; Graph version changes must not manufacture a different contact/resource namespace. Keep authorization app-scoped user ref separate."
+  ],
+  "testFirstNotes": [
+    "For absent new feature, prefer black-box authenticated endpoint assertions that fail on actual missing route/capability or signature behavior, rather than compile failures from importing not-yet-existing implementation.",
+    "Fake external HTTP only. New fake must stay exact-host/purpose bounded, synthetic credentials and immutable endpoint allowlist; no production arbitrary base-url override just for test convenience.",
+    "If CP2 is internally sequenced OAuth then signed ingress, both remain required CP2 work with all16obligations and a final stable full-API + review; an intermediate targeted pass is not full checkpoint acceptance."
+  ]
+}

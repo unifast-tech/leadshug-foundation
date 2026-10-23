@@ -1,0 +1,8 @@
+{
+  "schemaVersion": 1,
+  "kind": "exact-inherited-public-preservation-check",
+  "checked": 37,
+  "mismatches": [],
+  "policy": "inherited-public-preservation-v1.1.json",
+  "privateInputsUsed": false
+}

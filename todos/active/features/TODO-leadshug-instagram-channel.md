@@ -31,7 +31,7 @@ Este TODO define WHAT, exclusões e critérios de entrega. A baseline v1.3 abaix
 ## Delivery Status Canon (Required)
 - **Current delivery stage:** Pending
 - **Qualifiers:** none
-- **Next exact step:** CP1: corrigir recuperação da quarentena após recebimento e unlink concorrente apontados em r4; refazer freeze, API completo e revisão independente após invalidar a rodada r4 por edição concorrente.
+- **Next exact step:** CP1: manter37fontes e TODO congelados, executar API completo em lane somente validação e coletar revisão independente r5; nenhuma nova edição até ambas terminais.
 
 ## Active Work State (Required While TODO Remains In `active/`)
 - **Work state:** implementation
@@ -851,7 +851,7 @@ Authority preflight final: `artifacts/reviews/leadshug-instagram-channel-2026102
 
 | Checkpoint | State | Owner / next proof |
 | --- | --- | --- |
-| CP1 Identity/route/state cutover | running; r4 invalidated, changes required | fresh serial executor; repair prior-receipt recovery/stale unlink, then stable API and fresh review |
+| CP1 Identity/route/state cutover | frozen; r5/full API pending | residual causal RED/GREEN captured; validation-only executor and fresh reviewer; no edits until both terminal |
 | CP2 OAuth/ingress | pending | follows CP1 accepted checkpoint |
 | CP3 Channel/policy/consumers | pending | shared sender/acceptance only |
 | CP4 UI/CI/browser | pending | profile handoff for CI/runtime tooling |
@@ -945,3 +945,7 @@ The fresh r4 reviewer returned terminal `changes_required`; its package was inva
 Qualified r4 observations on its originally inspected bytes support the original-defect repairs for R3-01/03/04 and ROOT-01, but confer no acceptance on changed files. R1-03 remains open for a previously received/CONNECTED channel that cannot recover its quarantined current attempt after correct proof; R3-02 remains open for stale unlink deleting a newer generation without cleanup; R1-07 still requires complete stable-source API GREEN. R4-01 is Integrated, useful, project-level and a release-blocker: preserve invalidated evidence, establish a new freeze, validate it and obtain fresh review. No shared Delphi policy change or new scope is authorized.
 
 A fresh bounded routine executor replaces the terminal sticky executor under the same single-writer contract and approved WHAT. Root owns Foundation documentation. The next lane first adds actual residual transition RED cases, then repairs only admitted current lifecycle/fixture code, captures targeted results and becomes terminal. Root alone authorizes the subsequent frozen complete API run and fresh review; that validation lane cannot edit sources. CP2–CP6 remain mandatory and pending. Real runtime, private inputs, Meta and full private diff guard remain excluded until later concrete plan approval.
+
+CP1 residual recovery RED/GREEN: `evidence/cp1-r4-residual-causal-red.json` records a clean targeted RED after real prior receipt/CONNECTED and after the actual stale unlink/renewal interleaving. Earlier harness iterations remain qualified in separate receipts and are not suite acceptance. `cp1-r4-residual-diagnostic-green.json` records379unit/25Instagram e2e passes after the repair. The scheduling wrapper returns the unchanged actual helper/DB snapshot and fabricates no transaction/constraint results.
+
+The residual executor is terminal. `cp1-r4-residual-frozen-source-manifest.json` seals all37public sources. Root will start a separate validation-only complete API lane and fresh no-context r5 reviewer. Neither lane may edit source or TODO; repairs require a later explicit root handoff after both lanes terminal. R4-01 remains open until that new stable proof is collected. All remaining checkpoint, physical and independent delivery gates stay mandatory.

@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "kind": "cp1-r4-residual-causal-red-baseline-check",
+  "baseline": "cp1-r4-terminal-source-baseline.json",
+  "mismatches": [
+    {
+      "path": "api-app/test/instagram-lifecycle.e2e-spec.ts",
+      "baselineSha256": "ef425c52ad50beb147ecf373922b376d0e83ca49cb4d2dfdf5816631942c2303",
+      "currentSha256": "25c87a8975ab460d22f6f76c49ed97e973299510dfe23fc939cafdd533bbff61"
+    }
+  ],
+  "productionUnchanged": true,
+  "expectedOnlyTest": "api-app/test/instagram-lifecycle.e2e-spec.ts",
+  "capturedBeforeProductionRepair": true
+}

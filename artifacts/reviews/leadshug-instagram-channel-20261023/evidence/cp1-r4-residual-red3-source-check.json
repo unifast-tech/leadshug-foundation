@@ -1,0 +1,9 @@
+{
+  "schemaVersion": 1,
+  "kind": "cp1-r4-residual-red3-source-check",
+  "productionMismatches": [],
+  "lifecycleTestSha256": "6fbf9ec7b0a236314cb0114af9f2bc1a8bbb37bab0f12de2f2b01df86092c8b2",
+  "lifecycleTestBytes": 32809,
+  "baseline": "cp1-r4-terminal-source-baseline.json",
+  "acceptance": false
+}

@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "kind": "cp1-r4-residual-red3-qualified-observations",
+  "log": {
+    "path": "foundation_documentation/artifacts/tmp/instagram-channel-implementation/cp1-r4-residual-red3-20261023.log",
+    "sha256": "9abd68dbf5f0dc9476a0f1a936592b2ab12bec80e3549563187acaadebf4f79a",
+    "bytes": 26465
+  },
+  "summary": [
+    "Test Files  36 passed (36)",
+    "Tests  379 passed (379)",
+    "Test Files  1 failed | 2 passed (3)",
+    "Tests  3 failed | 22 passed (25)"
+  ],
+  "observations": [
+    "Previous real receipt/CONNECTED then correct-proof recovery returns409",
+    "Eager real stale unlink after completed renewal returns204; current channel missing",
+    "Later test fails because Prisma delegate spy restoration corrupts proxy"
+  ],
+  "causalLimit": "First two reached product outcomes are qualified residual RED observations. Later harness failure prevents suite acceptance; helper-level scheduling wrapper will preserve actual DB read and fix restoration without fabricating state.",
+  "preRepairSourceCheck": "cp1-r4-residual-red3-source-check.json",
+  "acceptance": false
+}

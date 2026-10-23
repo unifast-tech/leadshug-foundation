@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-23",
+  "command": "bash scripts/test-channels-local.sh api-instagram",
+  "executorReportedExit": 0,
+  "rootObservedSummary": [
+    "Test Files  36 passed (36)",
+    "Tests  379 passed (379)",
+    "Test Files  3 passed (3)",
+    "Tests  25 passed (25)"
+  ],
+  "log": {
+    "path": "foundation_documentation/artifacts/tmp/instagram-channel-implementation/cp1-r4-residual-green-20261023.log",
+    "sha256": "048bea9b36e294d6547e6640a73465999282f2b98f64476af1d0343f17ec898c",
+    "bytes": 22980
+  },
+  "sourceManifest": "cp1-r4-residual-frozen-source-manifest.json",
+  "causalRed": "cp1-r4-residual-causal-red.json",
+  "outcome": "targeted GREEN; no complete API or fresh review acceptance yet",
+  "cleanup": "executor reports disposable validation namespace cleanup complete",
+  "limits": "CP2..CP6 pending; no real runtime/private/Meta touched"
+}

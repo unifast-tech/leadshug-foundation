@@ -62,5 +62,10 @@
   "currentSourceFullApiProof": false,
   "restriction": "All product writes stopped; no rollback to hide drift. New freeze and validation/review required. No private or operational runtime touched.",
   "strictReviewMerge": "adherence-cp1-r4-merge.json",
-  "disposition": "release-blocker IG-CP1-R4-01; fresh serial executor and new evidence required"
+  "disposition": "release-blocker IG-CP1-R4-01; fresh serial executor and new evidence required",
+  "executorClarification": {
+    "messageAcceptanceTiming": "changed before r4-green-02, not after; objective unchanged hash agrees",
+    "runnerOverlap": false,
+    "sequence": "full r4-01 exited and completed cleanup before targeted green03; source changes still overlapped active reviewer"
+  }
 }

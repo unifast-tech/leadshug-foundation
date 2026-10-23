@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "kind": "cp1-r4-residual-causal-red",
+  "log": {
+    "path": "foundation_documentation/artifacts/tmp/instagram-channel-implementation/cp1-r4-residual-red4-20261023.log",
+    "sha256": "97b6d8fc442be4c97c493cfb3cef364121c8451d1ab8893f0c5e283128eed6f5",
+    "bytes": 24349
+  },
+  "summary": [
+    "Test Files  36 passed (36)",
+    "Tests  379 passed (379)",
+    "Test Files  1 failed | 2 passed (3)",
+    "Tests  2 failed | 23 passed (25)"
+  ],
+  "executorReportedExit": 1,
+  "executorReportedCleanup": "complete; synthetic validation namespace only",
+  "causalCases": [
+    {
+      "finding": "IG-CP1-R1-03",
+      "observation": "Actual accepted IN reached CONNECTED/receipt, quarantine persisted, then exact correct-proof recovery returned409 instead of200."
+    },
+    {
+      "finding": "IG-CP1-R3-02",
+      "observation": "Actual snapshot read \u2192 completed real RENEW/replacement \u2192 stale DELETE returned204 instead of409."
+    }
+  ],
+  "harness": "Helper wrapper delegates unchanged real completed DB read; one-shot root client exact BU/type scheduling only; no fabricated DB/transaction/constraint results. Eager request; finally release/restore. No suite side failures.",
+  "testSealAtTerminal": "3452ec9481087843201266c8b5a57f794e33f961babc0ac4fb70c9e040267e1f",
+  "productionMismatchesAtRootCapture": [
+    "api-app/src/domain/channels/channels.service.ts"
+  ],
+  "qualification": "Post-RED repairs may begin after the reported terminal result; production hash drift at later capture is not attributed to the runner. Root prior checks preserved baseline through test-only phase.",
+  "completionClaim": false
+}

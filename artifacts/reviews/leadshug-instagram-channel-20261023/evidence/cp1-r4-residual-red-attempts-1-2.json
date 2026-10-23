@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "kind": "cp1-r4-residual-red-attempts-1-2",
+  "runs": [
+    {
+      "path": "foundation_documentation/artifacts/tmp/instagram-channel-implementation/cp1-r4-residual-red-20261023.log",
+      "sha256": "bd9724c9962b711046073cfcfc88ae971fbe0c2bfb70dd5bc3ffc4694b5a0820",
+      "bytes": 25457,
+      "summary": [
+        "Test Files  36 passed (36)",
+        "Tests  379 passed (379)",
+        "Test Files  1 failed | 2 passed (3)",
+        "Tests  3 failed | 22 passed (25)"
+      ]
+    },
+    {
+      "path": "foundation_documentation/artifacts/tmp/instagram-channel-implementation/cp1-r4-residual-red2-20261023.log",
+      "sha256": "36c1edeb5261536e895506a3438bac3643f3abc019cdb11ac7f93f0b7581b19d",
+      "bytes": 24464,
+      "summary": [
+        "Test Files  36 passed (36)",
+        "Tests  379 passed (379)",
+        "Test Files  1 failed | 2 passed (3)",
+        "Tests  2 failed | 23 passed (25)"
+      ]
+    }
+  ],
+  "productionUnchangedEvidence": "cp1-r4-residual-red-baseline-check.json",
+  "causalProof": "Recovery after actual prior receipt/CONNECTED rejects fresh correct proof with409.",
+  "notCausal": "Both race attempts timed out on a lazy unstarted Supertest DELETE; neither proves stale unlink behavior. Test scheduling will be corrected before production repair.",
+  "runtime": "disposable synthetic validation only; both runners terminal/cleaned",
+  "acceptance": false,
+  "additionalFirstRunFailure": "Sequential cleanup expected CLEANUP_AMBIGUOUS but received CLEANUP_COMPLETED_RETRY_PAIR. Second run passed that case. No product-cause attribution from this observation; invalid timed-out concurrent test may affect shared fake/cleanup state."
+}
