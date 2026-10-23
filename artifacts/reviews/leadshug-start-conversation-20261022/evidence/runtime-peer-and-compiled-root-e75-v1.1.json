@@ -1,0 +1,89 @@
+{
+  "kind": "Root independent preserved-runtime and complete compiled-dist comparison",
+  "recorded_at_utc": "2026-10-23T14:03:23.324772+00:00",
+  "peer_checks": [
+    {
+      "service": "postgres",
+      "same_container_id": true,
+      "same_started_at": true,
+      "same_named_volumes": true,
+      "same_image_id": true,
+      "same_owner_label": true
+    },
+    {
+      "service": "gateway",
+      "same_container_id": true,
+      "same_started_at": true,
+      "same_named_volumes": true,
+      "same_image_id": true,
+      "same_owner_label": true
+    },
+    {
+      "service": "evolution-postgres",
+      "same_container_id": true,
+      "same_started_at": true,
+      "same_named_volumes": true,
+      "same_image_id": true,
+      "same_owner_label": true
+    },
+    {
+      "service": "evolution-redis",
+      "same_container_id": true,
+      "same_started_at": true,
+      "same_named_volumes": true,
+      "same_image_id": true,
+      "same_owner_label": true
+    },
+    {
+      "service": "evolution",
+      "same_container_id": true,
+      "same_started_at": true,
+      "same_named_volumes": true,
+      "same_image_id": true,
+      "same_owner_label": true
+    }
+  ],
+  "api_file_volume_preserved": true,
+  "api_image_id": "sha256:092005eb90275c3ab55e14c6ff2fe5fde241d4bde15324ce84bfb21f0a11c2f2",
+  "web_image_id": "sha256:9787da8f734123e4f2875ce9b47c7bb23b45a8d64bbba98a830d51dd05f9f53b",
+  "api_health": "healthy",
+  "compiled_js_file_count": 106,
+  "runtime_and_exact_image_full_path_hash_arrays_equal": true,
+  "new_aggregate_method": "SHA256 of sorted relative path + space + fileSHA256 + LF",
+  "new_runtime_and_image_aggregate_sha256": "50227167a0364135014ceef4a0e3c8056c6f8554622545cab25dd907ccf1ea8b",
+  "five_key_compiled_hashes_match_original_E74_receipt": true,
+  "historical_aggregate_note": "Original E74 aggregate8c04e9 does not reproduce using its documented path-space-hash-LF method on the exact image. Cause remains unresolved; original artifacts retained. Current direct106file runtime/image arrays plus five original key hashes and immutable exact image/build-source binding establish current provenance; old aggregate equality is NOT claimed.",
+  "metadata_projection_correction": "First final projection labeled Compose working_dir as owner and included bind mounts unlike baseline. Root caught this before collection. New structured capture selects exact owner label and named-volume tuples, preserving old artifacts. All corrected before/after comparisons pass.",
+  "source_receipts": [
+    {
+      "name": "final-runtime-receipt-e75.json",
+      "sha256": "5b4a46b80e3f58b8ba38d7df06d7a762782e77a5a62a959c999c354bc11218d6"
+    },
+    {
+      "name": "baseline-runtime-metadata-e75.json",
+      "sha256": "dd0a2a1d20f1cd69f618ffca83c31858f17d1c22f8f71d85dfb89664ba3f9a0b"
+    },
+    {
+      "name": "corrected-final-selected-metadata-e75.json",
+      "sha256": "3b91cd78255b1556ca23c7fb5014e2f34f8d22b4724563991b23e8489933d467"
+    },
+    {
+      "name": "migration-checksum-reconciliation-e75.json",
+      "sha256": "1f74923d027aaa7849834e97ba80adc38a55fb3f9b8ab056d098974d2871dab1"
+    },
+    {
+      "name": "runtime-dist-manifest-array-e75.json",
+      "sha256": "2ff51204247bacbf9b2defffee453ec5e702ce91d25e0274f1a9f7cf24ba06a1"
+    },
+    {
+      "name": "image-dist-manifest-array-e75.json",
+      "sha256": "2ff51204247bacbf9b2defffee453ec5e702ce91d25e0274f1a9f7cf24ba06a1"
+    },
+    {
+      "name": "running-api-dist-attestation-e75.json",
+      "sha256": "c3b17c9430e2d67ff269317147288402a35e22c4c7349ded887ac7e9bbdb8dfe"
+    }
+  ],
+  "public_proof": "runtime-public-root-attestation-e75-v1.1.json",
+  "operator_proof": "Not performed; next operator Meta callback/privacy update and assisted first sends/replies."
+}

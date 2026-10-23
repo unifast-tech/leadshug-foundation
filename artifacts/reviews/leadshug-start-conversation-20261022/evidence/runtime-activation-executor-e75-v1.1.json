@@ -1,0 +1,112 @@
+{
+  "task": "ST-CON-04 E75 preserved-local runtime activation",
+  "project": "leadshug_channels_local",
+  "compose_profile": "channels-local",
+  "profile": "Operational / DevOps",
+  "technical_scope": [
+    "docker",
+    "nestjs",
+    "react",
+    "vite",
+    "postgresql",
+    "prisma"
+  ],
+  "approved_plan_sha256": "bed9d83407ccbac28498c3f8f6eab9fabc14aadd1d3ed311c303b7fc8a4163fd",
+  "source_and_images": "E74 source/build/archive and migration hashes matched sealed plan; exact approved API/Web images existed locally and were activated.",
+  "migrations": {
+    "exact_set": [
+      "20261022140000_initial_message_orchestration",
+      "20261022150000_initial_message_admissions",
+      "20261022160000_initial_message_inbox_order"
+    ],
+    "deploy_exit_code": 0,
+    "applied_set_exact_match": true,
+    "source_checksums": {
+      "20261022140000_initial_message_orchestration": "a8b26d5dfc7eb8f658cf703cee0f1f6061b5afa2ad84ca0f37cd4baec9d68437",
+      "20261022150000_initial_message_admissions": "41df36b473c3163e9e29ea1cc6c12df3376994081698be83c83e50a812e3922a",
+      "20261022160000_initial_message_inbox_order": "60e7f76b8ccbee5e51dd939bdf126eeecaa1b1c1871f393a4363add94274a544"
+    },
+    "checksum_reconciliation": {
+      "db_rows": 28,
+      "all_names_match_e74_image": true,
+      "all_checksums_match_e74_image": true,
+      "all_finished_not_rolled_back": true,
+      "approved_three_finished": true
+    },
+    "sequencing_gap": "Applied migration checksum reconciliation was completed after successful migrate deploy, before API/Web activation. It is not pre-deploy evidence. Pre-deploy status/filtered metadata established exactly the three approved migrations pending and no others."
+  },
+  "runtime": {
+    "api_image_id": "sha256:092005eb90275c3ab55e14c6ff2fe5fde241d4bde15324ce84bfb21f0a11c2f2",
+    "web_image_id": "sha256:9787da8f734123e4f2875ce9b47c7bb23b45a8d64bbba98a830d51dd05f9f53b",
+    "api_health": "healthy",
+    "web_state": "running",
+    "nginx_config_test_exit_code": 0,
+    "nginx_graceful_reload_exit_code": 0,
+    "local_health_http": 200,
+    "cors_preflight_http": 204,
+    "cors_allow_origin_matches_public_origin": true,
+    "public_origin": "https://wins-courier-minutes-appear.trycloudflare.com",
+    "web_origin_alignment": "explicit public WEB_ORIGIN set through generated owned temporary Compose override; no private file edited",
+    "public_access": {
+      "dns_resolved": true,
+      "tls_verified": true,
+      "health_http": 200,
+      "index_http": 200,
+      "privacy_http": 200
+    },
+    "served_assets": {
+      "main_js_sha256": "f8e97efa6777dbc496b74cd527b1bae78e7766e4a4d58f752f7816cb62444343",
+      "main_css_sha256": "38f979314555cda8b834189ed5c64826bbc309e294091c9f5c54ee5f8bd2aadd",
+      "privacy_html_sha256": "d0f72c588f0f014de46a327e34d6b26125ca115bc973b56bbb926cd8519e701d",
+      "all_match_plan": true
+    },
+    "peer_preservation_checks": {
+      "peer_container_ids_unchanged": true,
+      "peer_started_at_unchanged": true,
+      "peer_named_volumes_unchanged": true,
+      "api_file_volume_identity_preserved": true,
+      "seven_services_present": true,
+      "api_target_image": true,
+      "web_target_image": true,
+      "api_healthy": true
+    },
+    "all_peer_and_volume_checks_match": true,
+    "owned_tunnel": {
+      "provider": "Cloudflare Quick Tunnel",
+      "url": "https://wins-courier-minutes-appear.trycloudflare.com",
+      "tool_session_id": "61808",
+      "active_process_pid": "not safely observable from this tool session"
+    }
+  },
+  "operator_boundary": {
+    "first_send_proof": "not performed; operator performs Meta URL updates and first send",
+    "agent_login_or_business_data_contact": false,
+    "automated_send": false
+  },
+  "evidence_files": [
+    "migration-preflight-e75.json",
+    "migration-checksum-reconciliation-e75.json",
+    "final-runtime-metadata-e75.json",
+    "final-topology-check-e75.json",
+    "nginx-test-final.raw",
+    "nginx-reload-final.raw",
+    "final-local-health.raw",
+    "final-cors-status.raw",
+    "final-public-health.raw",
+    "final-public-index-meta.raw",
+    "final-public-privacy-meta.raw",
+    "final-public-main.js",
+    "final-public-main.css",
+    "final-public-privacy.html",
+    "running-api-dist-attestation-e75.json"
+  ],
+  "running_api_dist_attestation": {
+    "receipt": "running-api-dist-attestation-e75.json",
+    "dist_js_count": 106,
+    "running_and_exact_e74_image_aggregate_sha256": "50227167a0364135014ceef4a0e3c8056c6f8554622545cab25dd907ccf1ea8b",
+    "four_key_compiled_files_match_published_e74": true,
+    "published_e74_manifest_sha256": "8c04e9efd81751e93e251867b19864d05baa95c0aaf9809ae5a8b92d47fa7c4b",
+    "published_aggregate_reproduces_under_documented_method": false,
+    "note": "Running API and exact E74 image agree under documented aggregate algorithm; published E74 manifest is inconsistent with recomputation on exact E74 image."
+  }
+}

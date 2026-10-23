@@ -1,0 +1,36 @@
+{
+  "kind": "Independent root public HTTPS and served-source attestation",
+  "recorded_at_utc": "2026-10-23T13:57:26.554383+00:00",
+  "origin": "https://wins-courier-minutes-appear.trycloudflare.com",
+  "requests": "Unauthenticated public health/static pages/assets only; no business endpoint, credentials, login or recipient action. Explicit direct networking bypassed a nonresolving configured proxy; TLS verification remained enabled.",
+  "checks": {
+    "/health": {
+      "status": 200,
+      "sha256": "a29ee2b15c494311c52521766e44af56a3ad2248e7a8ab465e5206463c13d288",
+      "bytes": 15,
+      "tls": "default certificate and hostname verification"
+    },
+    "/": {
+      "status": 200,
+      "sha256": "cf24ab6c9ad71d0260042ff483c208f8e087aac7ef14c3f0c9ead052831656dc",
+      "bytes": 694,
+      "tls": "default certificate and hostname verification"
+    },
+    "/privacidade.html": {
+      "status": 200,
+      "sha256": "d0f72c588f0f014de46a327e34d6b26125ca115bc973b56bbb926cd8519e701d",
+      "bytes": 12865,
+      "tls": "default certificate and hostname verification"
+    },
+    "/assets/index-DPFJ9ybt.js": {
+      "status": 200,
+      "sha256": "f8e97efa6777dbc496b74cd527b1bae78e7766e4a4d58f752f7816cb62444343",
+      "bytes": 318109,
+      "tls": "default certificate and hostname verification"
+    }
+  },
+  "served_js_matches_approved_E74": true,
+  "privacy_matches_current_public_source": true,
+  "source_fingerprint": "589c753670cfcf54020b785e6bae6b85ec1a8b4bab707f333f8e64d8aaf38c8e",
+  "limits": "Actual operator first sends/replies and Meta callback update remain pending; not delivery or production proof."
+}

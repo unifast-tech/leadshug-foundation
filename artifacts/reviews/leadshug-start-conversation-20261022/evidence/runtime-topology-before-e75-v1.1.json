@@ -1,0 +1,119 @@
+{
+  "project": "leadshug_channels_local",
+  "compose_profile": "channels-local",
+  "service_count": 7,
+  "services": [
+    {
+      "service": "api",
+      "container_name": "leadshug_channels_local-api-1",
+      "container_id": "f28024755f14774ac8726db262b1c31800a043ad6f71c51e3fa7b42009d797c3",
+      "owner": "number-onboarding",
+      "image_id": "sha256:90e5e528357c36d206193ea1220ae36a5f3d26a07f8728be5fc38f0b9ea20976",
+      "state": "running",
+      "health": "healthy",
+      "started_at": "2026-10-23T11:44:52.064153608Z",
+      "mounts": [
+        {
+          "type": "volume",
+          "name": "leadshug_channels_local_leadshug_arquivos",
+          "destination": "/dados/arquivos",
+          "rw": true
+        }
+      ]
+    },
+    {
+      "service": "evolution",
+      "container_name": "leadshug_channels_local-evolution-1",
+      "container_id": "cf749491f7149dc46ec4db597b2d9c12faf918dd4f05b5512ba75adaf8e29ea4",
+      "owner": "number-onboarding",
+      "image_id": "sha256:385a3c4bedf42c66b46b43d06aae8712620144a84aa3b2c831b30c68435ab27c",
+      "state": "running",
+      "health": null,
+      "started_at": "2026-10-23T11:44:47.804071346Z",
+      "mounts": [
+        {
+          "type": "volume",
+          "name": "leadshug_channels_local_evolution_instances",
+          "destination": "/evolution/instances",
+          "rw": true
+        }
+      ]
+    },
+    {
+      "service": "evolution-postgres",
+      "container_name": "leadshug_channels_local-evolution-postgres-1",
+      "container_id": "150de898c3d9aa189ca0719eed7a65b95d95d8b948244e66b059a55f4554135a",
+      "owner": "number-onboarding",
+      "image_id": "sha256:80f4c7a5e91618546dce5b4fe60cf03b14c0f9efa7e40157278d122772ced8d2",
+      "state": "running",
+      "health": "healthy",
+      "started_at": "2026-10-23T11:44:47.805871218Z",
+      "mounts": [
+        {
+          "type": "volume",
+          "name": "leadshug_channels_local_evolution_pg_data",
+          "destination": "/var/lib/postgresql/data",
+          "rw": true
+        }
+      ]
+    },
+    {
+      "service": "evolution-redis",
+      "container_name": "leadshug_channels_local-evolution-redis-1",
+      "container_id": "3b2e8d153d794a768ea87cb4f9cda7ba15dde242e2b8027bd372a475a9c26fbb",
+      "owner": "number-onboarding",
+      "image_id": "sha256:f84b0c4678011602b9b98c227a4dcd5468bf8b088b02fdd4165cb7758bad8058",
+      "state": "running",
+      "health": "healthy",
+      "started_at": "2026-10-23T11:44:47.654712193Z",
+      "mounts": [
+        {
+          "type": "volume",
+          "name": "leadshug_channels_local_evolution_redis_data",
+          "destination": "/data",
+          "rw": true
+        }
+      ]
+    },
+    {
+      "service": "gateway",
+      "container_name": "leadshug_channels_local-gateway-1",
+      "container_id": "0c48d94e9fe5b4ad75efd304db2752dfa4cab3befc59b9f736574d6cd551eea3",
+      "owner": "number-onboarding",
+      "image_id": "sha256:76090a34b858323b6ab169711adc08253b5bee7123a973dc581ed46b643bc109",
+      "state": "running",
+      "health": null,
+      "started_at": "2026-10-23T11:44:47.778062999Z",
+      "mounts": []
+    },
+    {
+      "service": "postgres",
+      "container_name": "leadshug_channels_local-postgres-1",
+      "container_id": "4fcd87b431339e3b65a40beafa27db86cdc978ca79f71b911199f7090c837495",
+      "owner": "number-onboarding",
+      "image_id": "sha256:80f4c7a5e91618546dce5b4fe60cf03b14c0f9efa7e40157278d122772ced8d2",
+      "state": "running",
+      "health": "healthy",
+      "started_at": "2026-10-23T11:44:47.841086263Z",
+      "mounts": [
+        {
+          "type": "volume",
+          "name": "leadshug_channels_local_leadshug_pg_data",
+          "destination": "/var/lib/postgresql/data",
+          "rw": true
+        }
+      ]
+    },
+    {
+      "service": "web",
+      "container_name": "leadshug_channels_local-web-1",
+      "container_id": "35a2f5a9342cdf896cc49d289bd3b4962fe281792ab630810c86e61f248638db",
+      "owner": "number-onboarding",
+      "image_id": "sha256:ad57dfed419414d50bec413ddd89ea15cc1acf31ca8d0dd263e31f44fa6f744b",
+      "state": "running",
+      "health": null,
+      "started_at": "2026-10-23T11:44:47.730875091Z",
+      "mounts": []
+    }
+  ]
+}

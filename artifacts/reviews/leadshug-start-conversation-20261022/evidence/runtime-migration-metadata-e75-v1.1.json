@@ -1,0 +1,183 @@
+{
+  "project": "leadshug_channels_local",
+  "compose_profile": "channels-local",
+  "target_api_image_id": "sha256:092005eb90275c3ab55e14c6ff2fe5fde241d4bde15324ce84bfb21f0a11c2f2",
+  "db_migration_rows": [
+    {
+      "name": "20260818125556_nucleo_v1_tenancy_identidade_atendimento",
+      "checksum": "680ff78cf5c8dab2bc5ec51688b83252bb86d214e8af7817356ee125ed47daa4",
+      "applied": true,
+      "rolled_back": false
+    },
+    {
+      "name": "20260821175101_modulos_e_marca_por_mantenedora",
+      "checksum": "fe2155893de7a9ade15493617e36e77e299bcffc9b86ec19ad813a15bfd1c6bc",
+      "applied": true,
+      "rolled_back": false
+    },
+    {
+      "name": "20260821180000_tres_papeis_owner_admin_atendente",
+      "checksum": "ecf379d151e2f73ff1b81baef00c27561b2b9f1acc885599144603541987b7f7",
+      "applied": true,
+      "rolled_back": false
+    },
+    {
+      "name": "20260821190000_setor_e_proveniencia_do_grant",
+      "checksum": "968394573271ce426d3011db774ce9a219750dc5822f251fdea291e588d12d59",
+      "applied": true,
+      "rolled_back": false
+    },
+    {
+      "name": "20260821190500_concessao_de_setor_e_fato_proprio",
+      "checksum": "176c7664c7c1458f0e06beb33f21359db72511e6cd20f1da5fb63b7eec50cdbf",
+      "applied": true,
+      "rolled_back": false
+    },
+    {
+      "name": "20260821200000_historico_de_atividades",
+      "checksum": "3a87e44c2cc8a3a7f91fc59819bae065e9a1f1eeacfc28685710e8d5d7e18a75",
+      "applied": true,
+      "rolled_back": false
+    },
+    {
+      "name": "20260821210000_wizard_de_onboarding",
+      "checksum": "013d4428d36afe752966762ae8a2d6195032d88c57ab9d18b2c147df21865735",
+      "applied": true,
+      "rolled_back": false
+    },
+    {
+      "name": "20260821220000_preserva_modulo_ja_em_uso",
+      "checksum": "a33a51234e7097f95e10452c3652b33e9e5c5c1b488a4545404222711d5abec5",
+      "applied": true,
+      "rolled_back": false
+    },
+    {
+      "name": "20260824122559_perfil_do_proprio_usuario",
+      "checksum": "5f14615eef62afaa05be2f6e1a144667c30e4c2f618f899ade8c108c7ae9a80e",
+      "applied": true,
+      "rolled_back": false
+    },
+    {
+      "name": "20260824125224_arquivos_logo_e_avatar",
+      "checksum": "4a8bb54855ff5de7c89632df84f92c5589ffd99cd9e8c5001a080d01f7c121d1",
+      "applied": true,
+      "rolled_back": false
+    },
+    {
+      "name": "20260824125227_arquivos_dono",
+      "checksum": "864ced863cd894f7df333f16a6eaafe0870d72f263c18600b7cf4985e5c8120a",
+      "applied": true,
+      "rolled_back": false
+    },
+    {
+      "name": "20260824125334_avatar_e_do_usuario_nao_da_bu",
+      "checksum": "297f051ce252e4e6abc6b7dde2ded19a126c5db074e74c29b937ef7787f0cfa8",
+      "applied": true,
+      "rolled_back": false
+    },
+    {
+      "name": "20260824161138_convite_e_recuperacao_de_senha",
+      "checksum": "a46e62f79cd2e0f4d818bada129caf89f800fc372d963da4bbac6b9e597229c3",
+      "applied": true,
+      "rolled_back": false
+    },
+    {
+      "name": "20260827170000_cor_secundaria",
+      "checksum": "01d41f5e3772b4278b41511b2a7efbb39bd76a62e31f67b2a4967de4e6357380",
+      "applied": true,
+      "rolled_back": false
+    },
+    {
+      "name": "20260831130000_cores_primarias_por_tema",
+      "checksum": "03cecfbf50ed896fed322d63dbb1fea40126685b9193d08e677a4e598c5b4e30",
+      "applied": true,
+      "rolled_back": false
+    },
+    {
+      "name": "20260901120000_typebot_bots_and_triggers",
+      "checksum": "62188240b4f2f7db65a3f2e8d45cf866b5c22311225782a669bf6389d517a8a9",
+      "applied": true,
+      "rolled_back": false
+    },
+    {
+      "name": "20260901130000_typebot_sessions",
+      "checksum": "47fa9f58f4b89cf038eda3cf54cd576d3ab4cd3b2e54be1f7474c94a2f43f795",
+      "applied": true,
+      "rolled_back": false
+    },
+    {
+      "name": "20261015120000_number_onboarding_foundation",
+      "checksum": "55d84f5eef1b9b9e9a22891695812e522fe4e405041341218984507426ef0946",
+      "applied": true,
+      "rolled_back": false
+    },
+    {
+      "name": "20261015130000_number_onboarding_provider_resource_ownership_immutable",
+      "checksum": "a6fa9ad9e99a0b55ed5d9e86b99d42b603b404c13f41f97ac718e6443f29a3fe",
+      "applied": true,
+      "rolled_back": false
+    },
+    {
+      "name": "20261015140000_number_onboarding_channel_operation_fence",
+      "checksum": "e484edd01e78133bcaf23f12fb47e44e92cba44a89b29803eff1530b103bc496",
+      "applied": true,
+      "rolled_back": false
+    },
+    {
+      "name": "20261015150000_number_onboarding_managed_cleanup",
+      "checksum": "27a07435e3327f004ad8d46cd4c18eec57b89ce3cdbf51c39631b248555214ad",
+      "applied": true,
+      "rolled_back": false
+    },
+    {
+      "name": "20261016160000_number_onboarding_current_channel_identity_index",
+      "checksum": "aadefab2ce66f3484661e66fdf918f5e295926bf9b89b0af4c3e2c8c5c78b740",
+      "applied": true,
+      "rolled_back": false
+    },
+    {
+      "name": "20261020170000_message_inbound_window_index",
+      "checksum": "586e709e07736eca0908ab5dcc668cf0e0b317189b4c963b361399848a3c9710",
+      "applied": true,
+      "rolled_back": false
+    },
+    {
+      "name": "20261021130000_message_template_drafts",
+      "checksum": "3feab40fed1c9be1bac9e43464fd587d57693424c4b3012d8c4b8536661d51dd",
+      "applied": true,
+      "rolled_back": false
+    },
+    {
+      "name": "20261021150000_message_template_operations",
+      "checksum": "2822bff860b5aa3476e7614f6a5d5515520dfd8e40708767d1bc4c5bfe2d991d",
+      "applied": true,
+      "rolled_back": false
+    },
+    {
+      "name": "20261022140000_initial_message_orchestration",
+      "checksum": "a8b26d5dfc7eb8f658cf703cee0f1f6061b5afa2ad84ca0f37cd4baec9d68437",
+      "applied": true,
+      "rolled_back": false
+    },
+    {
+      "name": "20261022150000_initial_message_admissions",
+      "checksum": "41df36b473c3163e9e29ea1cc6c12df3376994081698be83c83e50a812e3922a",
+      "applied": true,
+      "rolled_back": false
+    },
+    {
+      "name": "20261022160000_initial_message_inbox_order",
+      "checksum": "60e7f76b8ccbee5e51dd939bdf126eeecaa1b1c1871f393a4363add94274a544",
+      "applied": true,
+      "rolled_back": false
+    }
+  ],
+  "e74_image_migration_count": 28,
+  "db_migration_row_count": 28,
+  "all_db_migration_names_present_in_e74_image": true,
+  "all_db_checksums_match_e74_image_sql": true,
+  "all_db_rows_finished_and_not_rolled_back": true,
+  "missing_image_migration_names": [],
+  "checksum_mismatch_names": [],
+  "exact_approved_three_present_and_finished": true
+}

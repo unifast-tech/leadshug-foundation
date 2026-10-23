@@ -1,0 +1,11 @@
+{
+  "kind": "Operator callback/privacy update requested after actual E75 public proof",
+  "recorded_at_utc": "2026-10-23T14:05:28.045582+00:00",
+  "origin": "https://wins-courier-minutes-appear.trycloudflare.com",
+  "callback": "https://wins-courier-minutes-appear.trycloudflare.com/webhooks/meta",
+  "privacy": "https://wins-courier-minutes-appear.trycloudflare.com/privacidade.html",
+  "status": "awaiting operator confirmation; no provider mutation by agent",
+  "first_send_proof": "not performed",
+  "full_guard": "already authorized, reserved for final validation; zero executions so far",
+  "question_reference": "Current-conversation request_user_input_async tool accepted the callback/privacy question; opaque call ID was not returned, so none is asserted."
+}

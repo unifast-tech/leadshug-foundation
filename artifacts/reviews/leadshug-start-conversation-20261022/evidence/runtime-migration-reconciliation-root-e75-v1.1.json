@@ -1,0 +1,155 @@
+{
+  "kind": "Root current migration metadata/source reconciliation; sequencing deviation disclosed",
+  "recorded_at_utc": "2026-10-23T13:50:16.651029+00:00",
+  "source_receipt_sha256": "1f74923d027aaa7849834e97ba80adc38a55fb3f9b8ab056d098974d2871dab1",
+  "api_image_id": "sha256:092005eb90275c3ab55e14c6ff2fe5fde241d4bde15324ce84bfb21f0a11c2f2",
+  "count": 28,
+  "checks": [
+    {
+      "name": "20260818125556_nucleo_v1_tenancy_identidade_atendimento",
+      "sha256": "680ff78cf5c8dab2bc5ec51688b83252bb86d214e8af7817356ee125ed47daa4",
+      "matches_public_sealed_migration_source": true
+    },
+    {
+      "name": "20260821175101_modulos_e_marca_por_mantenedora",
+      "sha256": "fe2155893de7a9ade15493617e36e77e299bcffc9b86ec19ad813a15bfd1c6bc",
+      "matches_public_sealed_migration_source": true
+    },
+    {
+      "name": "20260821180000_tres_papeis_owner_admin_atendente",
+      "sha256": "ecf379d151e2f73ff1b81baef00c27561b2b9f1acc885599144603541987b7f7",
+      "matches_public_sealed_migration_source": true
+    },
+    {
+      "name": "20260821190000_setor_e_proveniencia_do_grant",
+      "sha256": "968394573271ce426d3011db774ce9a219750dc5822f251fdea291e588d12d59",
+      "matches_public_sealed_migration_source": true
+    },
+    {
+      "name": "20260821190500_concessao_de_setor_e_fato_proprio",
+      "sha256": "176c7664c7c1458f0e06beb33f21359db72511e6cd20f1da5fb63b7eec50cdbf",
+      "matches_public_sealed_migration_source": true
+    },
+    {
+      "name": "20260821200000_historico_de_atividades",
+      "sha256": "3a87e44c2cc8a3a7f91fc59819bae065e9a1f1eeacfc28685710e8d5d7e18a75",
+      "matches_public_sealed_migration_source": true
+    },
+    {
+      "name": "20260821210000_wizard_de_onboarding",
+      "sha256": "013d4428d36afe752966762ae8a2d6195032d88c57ab9d18b2c147df21865735",
+      "matches_public_sealed_migration_source": true
+    },
+    {
+      "name": "20260821220000_preserva_modulo_ja_em_uso",
+      "sha256": "a33a51234e7097f95e10452c3652b33e9e5c5c1b488a4545404222711d5abec5",
+      "matches_public_sealed_migration_source": true
+    },
+    {
+      "name": "20260824122559_perfil_do_proprio_usuario",
+      "sha256": "5f14615eef62afaa05be2f6e1a144667c30e4c2f618f899ade8c108c7ae9a80e",
+      "matches_public_sealed_migration_source": true
+    },
+    {
+      "name": "20260824125224_arquivos_logo_e_avatar",
+      "sha256": "4a8bb54855ff5de7c89632df84f92c5589ffd99cd9e8c5001a080d01f7c121d1",
+      "matches_public_sealed_migration_source": true
+    },
+    {
+      "name": "20260824125227_arquivos_dono",
+      "sha256": "864ced863cd894f7df333f16a6eaafe0870d72f263c18600b7cf4985e5c8120a",
+      "matches_public_sealed_migration_source": true
+    },
+    {
+      "name": "20260824125334_avatar_e_do_usuario_nao_da_bu",
+      "sha256": "297f051ce252e4e6abc6b7dde2ded19a126c5db074e74c29b937ef7787f0cfa8",
+      "matches_public_sealed_migration_source": true
+    },
+    {
+      "name": "20260824161138_convite_e_recuperacao_de_senha",
+      "sha256": "a46e62f79cd2e0f4d818bada129caf89f800fc372d963da4bbac6b9e597229c3",
+      "matches_public_sealed_migration_source": true
+    },
+    {
+      "name": "20260827170000_cor_secundaria",
+      "sha256": "01d41f5e3772b4278b41511b2a7efbb39bd76a62e31f67b2a4967de4e6357380",
+      "matches_public_sealed_migration_source": true
+    },
+    {
+      "name": "20260831130000_cores_primarias_por_tema",
+      "sha256": "03cecfbf50ed896fed322d63dbb1fea40126685b9193d08e677a4e598c5b4e30",
+      "matches_public_sealed_migration_source": true
+    },
+    {
+      "name": "20260901120000_typebot_bots_and_triggers",
+      "sha256": "62188240b4f2f7db65a3f2e8d45cf866b5c22311225782a669bf6389d517a8a9",
+      "matches_public_sealed_migration_source": true
+    },
+    {
+      "name": "20260901130000_typebot_sessions",
+      "sha256": "47fa9f58f4b89cf038eda3cf54cd576d3ab4cd3b2e54be1f7474c94a2f43f795",
+      "matches_public_sealed_migration_source": true
+    },
+    {
+      "name": "20261015120000_number_onboarding_foundation",
+      "sha256": "55d84f5eef1b9b9e9a22891695812e522fe4e405041341218984507426ef0946",
+      "matches_public_sealed_migration_source": true
+    },
+    {
+      "name": "20261015130000_number_onboarding_provider_resource_ownership_immutable",
+      "sha256": "a6fa9ad9e99a0b55ed5d9e86b99d42b603b404c13f41f97ac718e6443f29a3fe",
+      "matches_public_sealed_migration_source": true
+    },
+    {
+      "name": "20261015140000_number_onboarding_channel_operation_fence",
+      "sha256": "e484edd01e78133bcaf23f12fb47e44e92cba44a89b29803eff1530b103bc496",
+      "matches_public_sealed_migration_source": true
+    },
+    {
+      "name": "20261015150000_number_onboarding_managed_cleanup",
+      "sha256": "27a07435e3327f004ad8d46cd4c18eec57b89ce3cdbf51c39631b248555214ad",
+      "matches_public_sealed_migration_source": true
+    },
+    {
+      "name": "20261016160000_number_onboarding_current_channel_identity_index",
+      "sha256": "aadefab2ce66f3484661e66fdf918f5e295926bf9b89b0af4c3e2c8c5c78b740",
+      "matches_public_sealed_migration_source": true
+    },
+    {
+      "name": "20261020170000_message_inbound_window_index",
+      "sha256": "586e709e07736eca0908ab5dcc668cf0e0b317189b4c963b361399848a3c9710",
+      "matches_public_sealed_migration_source": true
+    },
+    {
+      "name": "20261021130000_message_template_drafts",
+      "sha256": "3feab40fed1c9be1bac9e43464fd587d57693424c4b3012d8c4b8536661d51dd",
+      "matches_public_sealed_migration_source": true
+    },
+    {
+      "name": "20261021150000_message_template_operations",
+      "sha256": "2822bff860b5aa3476e7614f6a5d5515520dfd8e40708767d1bc4c5bfe2d991d",
+      "matches_public_sealed_migration_source": true
+    },
+    {
+      "name": "20261022140000_initial_message_orchestration",
+      "sha256": "a8b26d5dfc7eb8f658cf703cee0f1f6061b5afa2ad84ca0f37cd4baec9d68437",
+      "matches_public_sealed_migration_source": true
+    },
+    {
+      "name": "20261022150000_initial_message_admissions",
+      "sha256": "41df36b473c3163e9e29ea1cc6c12df3376994081698be83c83e50a812e3922a",
+      "matches_public_sealed_migration_source": true
+    },
+    {
+      "name": "20261022160000_initial_message_inbox_order",
+      "sha256": "60e7f76b8ccbee5e51dd939bdf126eeecaa1b1c1871f393a4363add94274a544",
+      "matches_public_sealed_migration_source": true
+    }
+  ],
+  "exact_approved_three_finished": true,
+  "deployment_report": "Executor reported terminal deploy0/exact three approved migration names; post-deploy status0/up-to-date. This collection independently checks supplied safe DB metadata against current public SQL file hashes.",
+  "procedural_deviation": "All applied checksum comparison was completed after deployment, not before it. Prior preflight verified the exact pending three and approved source hashes. Root requested the complete applied-metadata check before actual deployment, but the message arrived after deploy finished. No pre-deploy whole-chain checksum proof is retroactively claimed.",
+  "compensating_validation": "Before API/Web activation all28 metadata checksums/names match both E74 image and public source, all finished/not rolled back; no mismatch found. Peers reported preserved. No reset/down/resolve or business-row query performed.",
+  "wrapper_failure": "First attempted wrapper rejected unsupported Compose --pull before Prisma ran; corrected invocation reached actual deployment once. This is not a failed-migration blind retry.",
+  "next_step": "Exact E74 API/Web activation/native health and before-after peer preservation proof; final review must see this chronology."
+}

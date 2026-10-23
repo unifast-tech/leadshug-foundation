@@ -1,0 +1,64 @@
+{
+  "evidence": "E75 running API compiled public dist content attestation",
+  "project": "leadshug_channels_local",
+  "compose_profile": "channels-local",
+  "profile": "Operational / DevOps",
+  "technical_scope": [
+    "docker",
+    "nestjs",
+    "prisma"
+  ],
+  "running_api_container_id": "150b5d97b5e40df69f1ca709de534735b560d74577b36ae264a0fcb7cc0fcd23",
+  "running_api_image_id": "sha256:092005eb90275c3ab55e14c6ff2fe5fde241d4bde15324ce84bfb21f0a11c2f2",
+  "dist_scope": "Only regular *.js files under known /app/dist; no logs, environment, database, or mounted file volume read.",
+  "aggregate_method": "SHA-256 of sorted lines: relative-js-path, space, file SHA-256, newline (as stated in E74 build attestation).",
+  "published_e74_expected": {
+    "distJsCount": 106,
+    "distManifestSha256": "8c04e9efd81751e93e251867b19864d05baa95c0aaf9809ae5a8b92d47fa7c4b",
+    "distMainJsSha256": "4939123b00a86d0fb47ed2483ee13cb8ec0fbc374e565653c32724e920c2b9f0",
+    "initialMessageServiceJsSha256": "702084dc0a0135af7d31fef56e342145e7925aafc65594eafa20112e8e012b16",
+    "outboundServiceJsSha256": "3ac0314c34de5bdb33b48e90cb52ddcad849fb1697af5cf34e7e8135b3e558a5",
+    "dispatchAdmissionServiceJsSha256": "fdc8586bd835931c11fcfd541db58a32b90ff6515d244b32474a5d88ea495dc1",
+    "messageAcceptanceServiceJsSha256": "c39417b3b901d3347014f1735e3881194dadf5da3a5a8049540b6568e7f2d019"
+  },
+  "running_api_actual": {
+    "distJsCount": 106,
+    "distManifestSha256": "50227167a0364135014ceef4a0e3c8056c6f8554622545cab25dd907ccf1ea8b",
+    "keyFiles": [
+      [
+        "domain/inbox/dispatch-admission.service.js",
+        "fdc8586bd835931c11fcfd541db58a32b90ff6515d244b32474a5d88ea495dc1"
+      ],
+      [
+        "domain/inbox/initial-message.service.js",
+        "702084dc0a0135af7d31fef56e342145e7925aafc65594eafa20112e8e012b16"
+      ],
+      [
+        "domain/inbox/message-acceptance.service.js",
+        "c39417b3b901d3347014f1735e3881194dadf5da3a5a8049540b6568e7f2d019"
+      ],
+      [
+        "domain/inbox/outbound.service.js",
+        "3ac0314c34de5bdb33b48e90cb52ddcad849fb1697af5cf34e7e8135b3e558a5"
+      ],
+      [
+        "main.js",
+        "4939123b00a86d0fb47ed2483ee13cb8ec0fbc374e565653c32724e920c2b9f0"
+      ]
+    ]
+  },
+  "offline_exact_e74_image_actual_same_method": {
+    "count": 106,
+    "hash": "50227167a0364135014ceef4a0e3c8056c6f8554622545cab25dd907ccf1ea8b"
+  },
+  "checks": {
+    "running_count_equals_published_e74": true,
+    "running_count_equals_offline_e74_image": true,
+    "running_manifest_equals_exact_e74_image_same_method": true,
+    "running_manifest_equals_published_inspection_receipt": false,
+    "running_manifest_equals_published_build_attestation": false,
+    "key_compiled_hashes_match_published_e74": true
+  },
+  "conclusion": "Running API and exact E74 image produce the same 106-file aggregate (50227167...). Every checked key compiled file matches the E74 offline receipt. The published E74 aggregate (8c04e9...) does not reproduce from the exact E74 image when applying its documented aggregate method, so published aggregate equality is false; this is an inconsistency in the prior E74 receipt/method description rather than evidence of runtime/image divergence.",
+  "raw_command_stdout": "running-api-dist-hash-final.raw and offline-image-dist-hash.raw; diagnostics are restricted."
+}

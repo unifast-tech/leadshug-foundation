@@ -1,0 +1,429 @@
+{
+  "distJsCount": 106,
+  "files": [
+    {
+      "path": "app.module.js",
+      "sha256": "b45cdd1214f89b90539d28eeb418e4710fc116f777b75e2b2219dcf396ea9a2e"
+    },
+    {
+      "path": "domain/access/access.service.js",
+      "sha256": "8d7aa42ad6374707bd7597b0a7276ddd8641099937b57d5f31acff6aadc3b0cd"
+    },
+    {
+      "path": "domain/access/require-role.js",
+      "sha256": "01c8962096c66d0e1451d28f29f7cec9512a173685f8b73c09d5b6dec8b02a48"
+    },
+    {
+      "path": "domain/access/role.js",
+      "sha256": "ebfb47023cc3fbd63a8978efb9711dde0734e039ab61b7efbcfc3028707b564f"
+    },
+    {
+      "path": "domain/access/scope.js",
+      "sha256": "2131a69cd9981aa6e235f4e1c8685cfdb7a3afc1b6b6171230acc15fac787b2b"
+    },
+    {
+      "path": "domain/acesso/convites.service.js",
+      "sha256": "37ef502137d0554f62b0f78c38b6e8f32ed54eb559c52af2e8d7611aa2c4285d"
+    },
+    {
+      "path": "domain/acesso/limite-de-recuperacao.service.js",
+      "sha256": "20da372c4de39f758b4a88cca70ca60f7d0e55a8024a16662de33d682ffe6837"
+    },
+    {
+      "path": "domain/acesso/tokens.service.js",
+      "sha256": "80a6613caba01ee3051869f181945d9be17393f2e91bdfa3c73c255beea5c20e"
+    },
+    {
+      "path": "domain/channels/channel-credential-crypto.js",
+      "sha256": "986125e74e8e716a12a6aaedd29ff3ea6f6ae63cf9199f9e2e7045f4edfa2b9c"
+    },
+    {
+      "path": "domain/channels/channel-credential-resolver.js",
+      "sha256": "2629102e6f609b1e2aecc422c9470d3b0d7d9831bd808626be87bdb2bb087e91"
+    },
+    {
+      "path": "domain/channels/channels.service.js",
+      "sha256": "aa2d4e51ee906b3cc7dd79d4835cd331b00eaa772655506630e6f944d13bda73"
+    },
+    {
+      "path": "domain/channels/number-registration.service.js",
+      "sha256": "a1a7820c0d944ea94834c43948a110708259d01f3cfe39548b74f83a4f2ef1ce"
+    },
+    {
+      "path": "domain/channels/receipt-attempt-convergence.js",
+      "sha256": "93495861c2b300b66c5d5292803e3fbb71819c662896ae81ef457e8a4abbd1c4"
+    },
+    {
+      "path": "domain/channels/safe-redaction.js",
+      "sha256": "66f63e806eca7a850ea938aec80e13645700695d0ace6c2eca97f7f4dc72a525"
+    },
+    {
+      "path": "domain/channels/transport/channel.js",
+      "sha256": "44709927230f56613801ac1dc8a8c97fece0b7ed45df77070aa4c35e9c9be497"
+    },
+    {
+      "path": "domain/historico/atividades.service.js",
+      "sha256": "a925f7d06685a4142777fffaa8e4a3ba2a80bc902a9ef1603006ff108043227e"
+    },
+    {
+      "path": "domain/historico/catalogo.js",
+      "sha256": "11559e2bdec323c405422834b03308dcf7e3379ae6f6032c7113fdf6ff9743d2"
+    },
+    {
+      "path": "domain/historico/cobertura.js",
+      "sha256": "bd64469ef3ba4b51da325b5ff21c5cb0e15e685963eb81397fb38e67ed900ffa"
+    },
+    {
+      "path": "domain/historico/registro.service.js",
+      "sha256": "b50329210510d0f926eb26c3f816322c2e21a846c1798cd1d451b162e256c893"
+    },
+    {
+      "path": "domain/identity/identity.service.js",
+      "sha256": "698d8817dd63f1b5d12676683fbdf397a70af9b817b2c4373d6d6bd87d3a97c9"
+    },
+    {
+      "path": "domain/identity/login-attempt.service.js",
+      "sha256": "42f01773f7a4e03801288db3d5d170f82c77b27b319a308bfdf732060b4cf766"
+    },
+    {
+      "path": "domain/identity/password.service.js",
+      "sha256": "68ca98aa0d8a7129b032637fb3c7af964c5e3278b538b107846b0b4ce8c62aa3"
+    },
+    {
+      "path": "domain/identity/usuarios.service.js",
+      "sha256": "b0554e647531537d035be9442db457a2e6e99f361c6bf16cc017cbbec12f6bf1"
+    },
+    {
+      "path": "domain/inbox/channel-window-policy.js",
+      "sha256": "d574ddbc6570e25048bb9db9888548172963bbdbdf74165340feb38740c73521"
+    },
+    {
+      "path": "domain/inbox/conversation-start.service.js",
+      "sha256": "62bca59d0dbbb7fd2669910dd286de57608512240db4ab247fa4c047ae824891"
+    },
+    {
+      "path": "domain/inbox/conversations.service.js",
+      "sha256": "166f1d7d949c8f6a831a9a6048efaca92eeeb06558a7e6c53f5fc1a8ab2ecf92"
+    },
+    {
+      "path": "domain/inbox/dispatch-admission.service.js",
+      "sha256": "fdc8586bd835931c11fcfd541db58a32b90ff6515d244b32474a5d88ea495dc1"
+    },
+    {
+      "path": "domain/inbox/historico.service.js",
+      "sha256": "2a6dfb49672caa7d6756cfb4acb4cd922103824424da1284785e395ed1c44b1d"
+    },
+    {
+      "path": "domain/inbox/incoming.service.js",
+      "sha256": "380ebabfbaca33071001c5e280002b86c23f0a743348514dd3749f4680851429"
+    },
+    {
+      "path": "domain/inbox/initial-message-template-renderer.js",
+      "sha256": "7c4b754370488bd4d3b2afd3ee87c4566edd84f2c88058ca012380b4d42a3ed8"
+    },
+    {
+      "path": "domain/inbox/initial-message.service.js",
+      "sha256": "702084dc0a0135af7d31fef56e342145e7925aafc65594eafa20112e8e012b16"
+    },
+    {
+      "path": "domain/inbox/message-acceptance.service.js",
+      "sha256": "c39417b3b901d3347014f1735e3881194dadf5da3a5a8049540b6568e7f2d019"
+    },
+    {
+      "path": "domain/inbox/outbound.service.js",
+      "sha256": "3ac0314c34de5bdb33b48e90cb52ddcad849fb1697af5cf34e7e8135b3e558a5"
+    },
+    {
+      "path": "domain/inbox/timeline-pagination.js",
+      "sha256": "976fe29a100cdbdc97d7800f7c1cd0983ffd78709194ad251bb85668ef457f4f"
+    },
+    {
+      "path": "domain/integration/api-key.service.js",
+      "sha256": "5c073dab7bd47f48bc87a711613a1556365cea969473e87e4acfbbb5bfa2c3e2"
+    },
+    {
+      "path": "domain/integration/outbound-webhook.service.js",
+      "sha256": "f3053779b4df7125e3155cf58c325f9ece72e8148b2816f0c783d577d09f460b"
+    },
+    {
+      "path": "domain/integration/rate-limit.service.js",
+      "sha256": "76e2e5a4553142e1aefeadb0dc9c2e722d37a1819b945bd3a926477145916349"
+    },
+    {
+      "path": "domain/message-templates/template-definition.js",
+      "sha256": "b56cccfeba42229d863d0aa46c080540f8d87ddeda9f300376d4fd3ff5c0dd4c"
+    },
+    {
+      "path": "domain/message-templates/template-draft.service.js",
+      "sha256": "3735c4eb4dbd7984ffa159244b05dd519d50fa2f6c31f055c6f70a7206194db2"
+    },
+    {
+      "path": "domain/message-templates/template-management.ports.js",
+      "sha256": "8156a524dab6a1909e95fd6e33b4f8700f9449d14202a2389ed94a608bd9fda5"
+    },
+    {
+      "path": "domain/message-templates/template-observation.service.js",
+      "sha256": "0f5ef0fc55ec04c5ab8963f1257b149ab027318713e4defaa7af268f6ade3d70"
+    },
+    {
+      "path": "domain/message-templates/template-submission.service.js",
+      "sha256": "57b737c5a322833a39552e59ad5ccc00124e0836982412a770c6851ae86b3ba7"
+    },
+    {
+      "path": "domain/message-templates/template-transaction-boundary.js",
+      "sha256": "3276e3b71ab9febc1ba04972ff908147805fc81b750bf06d7e1c8931637ab9a1"
+    },
+    {
+      "path": "domain/painel/painel.service.js",
+      "sha256": "323162d57a84bec6daa10851a13629eab4b7ac95d9ef22d3245cabdeb2fe4930"
+    },
+    {
+      "path": "domain/produto/modulos.service.js",
+      "sha256": "8c728689339ddadb96328ceffbd230cafb5760d2af960678ff7da19c7d1caef1"
+    },
+    {
+      "path": "domain/produto/onboarding.service.js",
+      "sha256": "297dfeae78d8a8a6af3708b2ee50556ef137713c86b7b12742949a76f1da2dbd"
+    },
+    {
+      "path": "domain/setor/setor.service.js",
+      "sha256": "b6b5dcac241025885ba48be11a9c9175171e13440befa5bd9156a7b5119d17a6"
+    },
+    {
+      "path": "domain/tenancy/tenancy.service.js",
+      "sha256": "0bde27080222de4c57f5b1e18574144c97ec18161c415b763681758e9400332d"
+    },
+    {
+      "path": "health/health.controller.js",
+      "sha256": "8a1b0a6d628ae4745e2f8ade580f930091bcdea034fc32a32efed67072eb3ad1"
+    },
+    {
+      "path": "health/health.module.js",
+      "sha256": "efe431d857e37b6198f8a0e0aaca4c706b1a71fc1e90b94799d1b8e312101a3d"
+    },
+    {
+      "path": "infra/arquivos/armazenamento.js",
+      "sha256": "d64de1bf42bdd06d1b807ed983e9469a0d020a4a18953510475c4c969496495d"
+    },
+    {
+      "path": "infra/config/modulos.js",
+      "sha256": "296d61858f9d53cfbb990492c722b192b5a64c2c531e71c8740d13619e1846ea"
+    },
+    {
+      "path": "infra/http/body-parsers.js",
+      "sha256": "74ac17e839b9e59f5089c4275d354432a92dddf06437c39169d578a930f6887b"
+    },
+    {
+      "path": "infra/http/origens.js",
+      "sha256": "bb01d013d47881c4680c144cfff3675151a8bf6ec04ab11855449f130a522de6"
+    },
+    {
+      "path": "infra/prisma/banco-atrasado.filter.js",
+      "sha256": "000132808c610f7388a4debba13892382649498f5fa5299c0e5b59df49c0078f"
+    },
+    {
+      "path": "infra/prisma/migracoes.js",
+      "sha256": "6858e42cdac13a0e0c1a640137fa00c7d44bb9fd00b4fe249491306aff24f82e"
+    },
+    {
+      "path": "infra/prisma/prisma.module.js",
+      "sha256": "bd50cc179c8ded790745340f8e9b3f68dbc45a6dd9e5cc6db5e6927b72695278"
+    },
+    {
+      "path": "infra/prisma/prisma.service.js",
+      "sha256": "d62e2bd3aabe40f217750b9d2648f180b208f8fde190ab154080df4cf0482010"
+    },
+    {
+      "path": "infra/session/session.service.js",
+      "sha256": "d2faf29db0146fff05629985e1e53c2bb0460e1cfd565869f362c45ae382344a"
+    },
+    {
+      "path": "integrations/channels/account-reference.js",
+      "sha256": "5d18dbb52811bf41bb6206b1a03279b0155e5f4a265e9f067764cb6ef4995f18"
+    },
+    {
+      "path": "integrations/channels/channel-adapter-factory.js",
+      "sha256": "ba4387d97f022816d754802234fbe47edd7069dc0be757575fa1183c9c64a01b"
+    },
+    {
+      "path": "integrations/channels/channel-adapter-registry.js",
+      "sha256": "faf7d68ada9c565d7211bdbd0821f0270202dbdb2616b8298d3a06783cd5ca00"
+    },
+    {
+      "path": "integrations/channels/channel-transport.module.js",
+      "sha256": "698afd4b9f724898bf0182bc504e9e2a5a4e31fb10349699e64c1fed0f698f8c"
+    },
+    {
+      "path": "integrations/channels/evolution-channel.js",
+      "sha256": "7e16366fc55a909bdd4bd5908669c862ea656c36bad938e2299b65e388d36404"
+    },
+    {
+      "path": "integrations/channels/meta-channel.js",
+      "sha256": "38aa1988a01e842ff29dd0d9f73e37085a5aab805f8fd74f5f9cb0c513a09111"
+    },
+    {
+      "path": "integrations/channels/prisma-channel-resolver.js",
+      "sha256": "9ce7fecea64eed241f6945a60f9f025fd1a44870f3ee3275d97556c6275ebe55"
+    },
+    {
+      "path": "integrations/email/email.client.js",
+      "sha256": "401225fff6a75f28bceca207b3e48a4d72e37b2688efd824d979cc5cc68cc446"
+    },
+    {
+      "path": "integrations/evolution/evolution.client.js",
+      "sha256": "fbb109cc9f1617fdd4528138f75508fe0fc1fe752b7c2058b37f4ce32a159cc2"
+    },
+    {
+      "path": "integrations/message-templates/template-management.module.js",
+      "sha256": "15bf382edbb7de8866145c15fe8d03bfcb0aac5c3883078076b8e91cfa877db1"
+    },
+    {
+      "path": "integrations/message-templates/template-management.resolver.js",
+      "sha256": "60c45cb5f7f944f5820c61e93f909faa09b2eb455f761d0895a18c6ca9cbc20e"
+    },
+    {
+      "path": "integrations/meta/initial-message.client.js",
+      "sha256": "74123d02fccc6f05906bc88ed1df6196927dec695dcab18616b7aaee70ebdbe1"
+    },
+    {
+      "path": "integrations/meta/message-template.client.js",
+      "sha256": "ddaf50028d7baa3816e20c33057cad72db3164bb67b6b89b42c865f66130e229"
+    },
+    {
+      "path": "integrations/meta/meta.client.js",
+      "sha256": "1189cbd6e1e899acaa592e219ffd4c3b40dded782222b7fb04c1f7179404da1f"
+    },
+    {
+      "path": "integrations/typebot/typebot.client.js",
+      "sha256": "6617d233eba4994712cbfa0ff2b843f5fa553744af58182291d08deb4aa23980"
+    },
+    {
+      "path": "main.js",
+      "sha256": "4939123b00a86d0fb47ed2483ee13cb8ec0fbc374e565653c32724e920c2b9f0"
+    },
+    {
+      "path": "realtime/realtime.module.js",
+      "sha256": "97bbba1dac2ec12e212252752b4668d308e75ecc1abab53562e6131907ae47a1"
+    },
+    {
+      "path": "realtime/realtime.service.js",
+      "sha256": "584e1fdaf42605d4977f947746299626c90be7c9f4082ce66cbcba16a6c3b91d"
+    },
+    {
+      "path": "rotinas/agendador.service.js",
+      "sha256": "ac67fc82e61e4623ad4df1b1780e402ccbc0506c73364c10879a82a2c63bd646"
+    },
+    {
+      "path": "rotinas/expurgo-de-webhook.rotina.js",
+      "sha256": "c5b63269edbb6addfb2992b121d4fec9c86cd8ca6886eaf12e57ab36122a1031"
+    },
+    {
+      "path": "rotinas/rotina-periodica.js",
+      "sha256": "b4308c664abf488ac88794d3c70beb53f85c2ded0d389cfe93db4b6fe05372aa"
+    },
+    {
+      "path": "rotinas/rotinas.module.js",
+      "sha256": "477fa6ea09780db6846e6c98b1ae5d3c49d0dd4d1da83d35a89b3d10cc44f787"
+    },
+    {
+      "path": "surfaces/bff/arquivos.controller.js",
+      "sha256": "1611c531ab804d52bfaa9ee863d300f36de51b2440dfc9b8c7158ec4cb0627ac"
+    },
+    {
+      "path": "surfaces/bff/atividades.controller.js",
+      "sha256": "e1a42ca0f779cd9b0c7cab5f06ef566dd36f601405316a1d8b30f80ce3126cfe"
+    },
+    {
+      "path": "surfaces/bff/auth.controller.js",
+      "sha256": "487de6414692719df868e029dc9767d607807586d432df7061990256204bdbf0"
+    },
+    {
+      "path": "surfaces/bff/bff.module.js",
+      "sha256": "badc6c906c27f84b93efbd6712d33fe63a136539bc7d4b16d9269c068d39a87a"
+    },
+    {
+      "path": "surfaces/bff/channels.controller.js",
+      "sha256": "143c45c525068f60a760c3b38a4b01d6aad1423969a09b788aaaa5f460a3fc87"
+    },
+    {
+      "path": "surfaces/bff/conversations.controller.js",
+      "sha256": "6a8e874e4e0a5e7fa2f990a55880c1e12305712c583094cd92ee4365b06a95a8"
+    },
+    {
+      "path": "surfaces/bff/historico.controller.js",
+      "sha256": "e982961367a40c41df247787c7f5d5aaa22b929374fc88028bfc4464c9b89c0f"
+    },
+    {
+      "path": "surfaces/bff/integracao.controller.js",
+      "sha256": "431e5820de4421360ce679a9a748b9d3f500999a1474c2ef096635ff94b460f7"
+    },
+    {
+      "path": "surfaces/bff/me.controller.js",
+      "sha256": "535ee5730c82750fd16b299e505b22fd83ef543e3bf66e5d266296ed18ba03d4"
+    },
+    {
+      "path": "surfaces/bff/message-templates.controller.js",
+      "sha256": "17439430732ff88536c2dfab6a1ce57f7ba14eb1741e8411a539b7e97cb3e4ca"
+    },
+    {
+      "path": "surfaces/bff/number-registrations.controller.js",
+      "sha256": "db555b01a8dcf13a8140dc929d053f8284d7901bd0783c236b05a2a29fadd9c4"
+    },
+    {
+      "path": "surfaces/bff/onboarding.controller.js",
+      "sha256": "835092e537421aa6c666fa60ec1e38422e6b502f87e93c6d30a5870bb18e2caf"
+    },
+    {
+      "path": "surfaces/bff/painel.controller.js",
+      "sha256": "1e46acc3988aa590790118b4fbd0adf77b7a91bc44096f8e9627b823ac3cdf83"
+    },
+    {
+      "path": "surfaces/bff/session.middleware.js",
+      "sha256": "fc5af440f1309c0925e430cf490bd32ca5ddbdf96d8d0736ffbe6af541d27e67"
+    },
+    {
+      "path": "surfaces/bff/setores.controller.js",
+      "sha256": "cdf8e88792b0908cdca31d1b9a36283fa7971bedd021bc3ebeb9951c28cbd038"
+    },
+    {
+      "path": "surfaces/bff/usuarios.controller.js",
+      "sha256": "9af33d16920d3bad25b9b74819b29013a438e0d92080ca772f3b7510299b4aa2"
+    },
+    {
+      "path": "surfaces/internal/internal.module.js",
+      "sha256": "c92b694a24980f6b2b370174de2004ebcfc102949e25dc814c6b6c4a636d9689"
+    },
+    {
+      "path": "surfaces/internal/mantenedoras.controller.js",
+      "sha256": "e45802cd4ffff98bf828560878ee6611123f3a45344c6f2152e2ca9ecb39210c"
+    },
+    {
+      "path": "surfaces/internal/service-credential.middleware.js",
+      "sha256": "2084df02fec5029971c695e61b6add89cbf76bf9806a6da56a32194a171d0274"
+    },
+    {
+      "path": "surfaces/public/api-key.middleware.js",
+      "sha256": "51c1ba5b526dbeac89707d3718f47cedc11c6c72d32f7224fc587ecd40e04465"
+    },
+    {
+      "path": "surfaces/public/conversations.controller.js",
+      "sha256": "50e1b1d474981d6ae4d2860f6c03fcaaf77be8738a363e15295af7f524b08b33"
+    },
+    {
+      "path": "surfaces/public/public.module.js",
+      "sha256": "4840243967b4b65fb8208b4e012d2c97b9a06c7c9ca908c5dc7d8f6e2398d40f"
+    },
+    {
+      "path": "surfaces/webhooks/evolution.controller.js",
+      "sha256": "09b1ba14d22f90d345cce9f1e87cfcee8de4560a755c6f59528e22b7955d47ac"
+    },
+    {
+      "path": "surfaces/webhooks/meta.controller.js",
+      "sha256": "279facaf49acf55e9d7ee39e22951a4040c073c8fa58fa3d6a3177c7f5fabb12"
+    },
+    {
+      "path": "surfaces/webhooks/webhooks.module.js",
+      "sha256": "0769e72bbc4db7c3c20636405263ae88b142d55f105a88eddf26d4c0a5379e5a"
+    }
+  ]
+}

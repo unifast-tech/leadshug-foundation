@@ -1,0 +1,19 @@
+{
+  "kind": "Root resolution of pre-activation baseline versus replacement image interpretation",
+  "recorded_at_utc": "2026-10-23T13:45:10.408307+00:00",
+  "initial_stop_receipt_sha256": "1a697e1671f91984c31c9fa4839bdfea59e6204bb589bef462a074fb3939a4df",
+  "historical_delivered_baseline_receipt": "foundation_documentation/artifacts/reviews/leadshug-template-authoring-20261020/evidence/root-r41-source-image-running-acceptance-v1.1.json",
+  "historical_receipt_sha256": "18c83b19053e0ebe8734a3498509053821d64badc1872ffcfdf2659f20f41b21",
+  "running_old_image_ids": {
+    "api": "sha256:90e5e528357c36d206193ea1220ae36a5f3d26a07f8728be5fc38f0b9ea20976",
+    "web": "sha256:ad57dfed419414d50bec413ddd89ea15cc1acf31ca8d0dd263e31f44fa6f744b"
+  },
+  "both_match_last_delivered_ST05_baseline": true,
+  "approved_replacement_ids": {
+    "api": "sha256:092005eb90275c3ab55e14c6ff2fe5fde241d4bde15324ce84bfb21f0a11c2f2",
+    "web": "sha256:9787da8f734123e4f2875ce9b47c7bb23b45a8d64bbba98a830d51dd05f9f53b"
+  },
+  "interpretation": "The approved operation replaces old API/Web images with these exact E74 targets. The current old images are a known delivered baseline, not an unexpected runtime. Their pre-activation inequality with the target is expected. The immutable initial stop remains an actual observation; pending migrations must still be checked.",
+  "decision": "Continue existing authorized upgrade without renewed approval; no scope/target/private exception expansion. Stop on actual unexpected topology, migration drift/failure or private-edit need.",
+  "current_mutation": "none at this adjudication"
+}

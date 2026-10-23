@@ -1,0 +1,34 @@
+{
+  "kind": "Explicit human approval of exact E74 preserved-local plan and bounded private exception",
+  "recorded_at_utc": "2026-10-23T13:40:32.439805+00:00",
+  "question_id": "call_b05e552a8af0499f91fa2e59acb560c4",
+  "human_reply": "Aprovar plano local e exceção limitada",
+  "approved_plan": "local-activation-proof-plan-e74-ready-v1.1.json",
+  "approved_plan_sha256": "bed9d83407ccbac28498c3f8f6eab9fabc14aadd1d3ed311c303b7fc8a4163fd",
+  "authority": "User approval in current conversation; persists for this plan without repeated confirmation.",
+  "authorized": [
+    "Replace only API/Web with exact E74 images after preflight",
+    "Only three exact additive migrations; preserve all data/peers; safe gateway reload and own HTTPS if needed",
+    "Existing .env.testing solely opaque Compose input; no value display/manual secret read",
+    "One exact canonical read-only full TODO diff guard, including its enumeration/read/hash of private files, raw output restricted",
+    "Operator-assisted own-channel text/template first sends and replies; no agent sends"
+  ],
+  "still_forbidden": [
+    "Manual private env/.local-files inspection/edit",
+    "Business-row/process/env/log dumps",
+    "Provider routing/registration changes",
+    "Automated recipient actions",
+    "Product Git/Railway/worktrees/auxiliary checkouts"
+  ],
+  "profile": "Operational / DevOps",
+  "technical_scope": [
+    "docker",
+    "nestjs",
+    "react",
+    "vite",
+    "postgresql",
+    "prisma"
+  ],
+  "genesis": "rejected; existing canonical product",
+  "delegation": "Single serialized runtime executor per AGENTS/main; root owns Foundation and bounded guard collection."
+}

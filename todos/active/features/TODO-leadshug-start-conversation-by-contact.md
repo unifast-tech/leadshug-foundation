@@ -46,12 +46,12 @@ Este v1.1 substitui a autoridade ativa da minuta revisada em 2026-10-19. O origi
 
 - **Current delivery stage:** `Pending`
 - **Qualifiers:** `none`
-- **Next exact step:** solicitar a única aprovação do plano local E74 concreto: duas imagens, três migrações aditivas, entrada opaca do .env.testing, gateway/HTTPS próprio e prova assistida; incluir a exceção para uma execução do full diff guard canônico. Nenhuma ativação ou inspeção privada antes dessa resposta.
+- **Next exact step:** obter do operador a confirmação do callback/política Meta no HTTPS E75 validado e então executar pelo operador primeiro texto não oficial e primeiro template oficial aprovado, com replies. Guard canônico único já autorizado reservado ao fechamento após a prova; sem nova aprovação para esse plano.
 
 ## Active Work State (Required While TODO Remains In `active/`)
 
 - **Work state:** `review`
-- **Why this state now:** código/testes E74 congelados e967pass; todas as três revisões r7 terminaram sem novo defeito material de implementação/testes. Full259source pós-review confere; patch dos dois módulos está revisado e pronto; aplicação canônica permanece adiada até a evidência local real. A consistência1:1 do alvo proposto está registrada abaixo. Runtime preservado/prova assistida/fullguard privado/review final continuam abertos; plano limitado aguarda aprovação explícita.
+- **Why this state now:** código/testes E74 congelados e967pass; todas as três revisões r7 terminaram sem novo defeito material de implementação/testes. Full259source pós-review confere; patch dos dois módulos está revisado e pronto; aplicação canônica permanece adiada até a evidência local real. A consistência1:1 do alvo proposto está registrada abaixo. Runtime preservado/prova assistida/fullguard privado/review final continuam abertos; plano E75 aprovado e ativado; aguardando confirmação do callback Meta e prova assistida de primeiro envio. Os desvios de sequência/descrição de evidência estão registrados para review final.
 - **Exit condition:** implementação e todas as evidências/reviews/gates de entrega aprovados; estágio continua Pending até os critérios locais reais, sem claim de entrega por aprovação.
 
 ## Scope
@@ -331,7 +331,7 @@ Official primary references consulted 2026-10-22: [WhatsApp Send Messages](https
 | --- | --- | --- | --- | --- |
 | Strategic / CTO-Tech-Lead | Operational / Coder | v1.1 frozen, planning reviews/guards passed and user explicitly approved | scoped product paths in diff contract | executing under normal authority GO; E01–E42 terminal evidence below; bounded corrections after E42 |
 | Operational / Coder | Assurance / Tester-Quality + Security | independent delivery evidence after implementation | harness/evidence package | planned |
-| Operational / Coder | Operational / DevOps | disposable migration, source-bound local activation and assisted proof | approved local runtime only | planned |
+| Operational / Coder | Operational / DevOps | disposable migration, source-bound local activation and assisted proof | approved local runtime only | executing E75; explicit exact plan/private exceptions approved; source/image/old runtime baseline preflight verified |
 
 ## Complexity
 
@@ -1447,3 +1447,29 @@ The implementation candidate is ready for a single concrete runtime/private-boun
 ## Execution checkpoint E74 — module application sequencing corrected before publication
 
 Root caught that the approved expected-path row for the channels module and Module Consolidation Gate place canonical application after delivery evidence. The just-applied exact owned patch was therefore reversed before any commit/push: both modules are byte-exact at their reviewed baselines again. The applied receipt above remains a truthful historical event, not current canonical state. The independently reviewed proposal and10decision/7module target mapping are concrete and ready; canonical consolidation/final consistency remain open after actual runtime/operator proof. This corrects stage order without new scope, product/private/runtime change or a user approval request for routine documentation sequencing. Evidence: evidence/module-consolidation-r7-sequencing-correction-v1.1.json.
+
+## Runtime plan approval E75 — explicit bounded human authority
+
+The user answered “Aprovar plano local e exceção limitada” to question call_b05e552a8af0499f91fa2e59acb560c4. This explicitly approves the exact ready plan SHA256 bed9d83407ccbac28498c3f8f6eab9fabc14aadd1d3ed311c303b7fc8a4163fd and its two exceptions: existing .env.testing as opaque Compose input, and one unmodified canonical full read-only TODO diff guard whose Git work may enumerate/read/hash private paths. No manual secret reads/edits, .local-files inspection, business rows, process/env/log dumps or provider/recipient/product-Git actions are authorized. No repeat approval is required for steps already inside this exact plan.
+
+Active handoff is Operational / DevOps with Docker, NestJS, React/Vite, PostgreSQL and Prisma; Genesis remains inapplicable. Root owns Foundation/approval and restricted one-shot guard collection; the delegated sole runtime executor owns preflight/migration/API-Web activation/gateway/owned-tunnel evidence on the principal checkout. Runtime proof is not delivery or production proof. Evidence: evidence/runtime-plan-human-approval-e75-v1.1.json; evidence/local-activation-proof-plan-e74-ready-v1.1.json.
+
+## Runtime preflight E75 — expected delivered baseline resolved
+
+The executor first stopped because running API/Web did not already use E74. Root independently compared both full running image IDs to the last delivered ST05-r41 source/image/runtime receipt: both match exactly. Since the approved operation replaces these old images, their pre-activation inequality with the target is expected; no target or scope changed. All259current public source bytes,224build inputs, archives, three SQL hashes and both replacement image IDs were verified. Seven expected services/mounts exist. Original stop retained; migration metadata is still to be verified before any mutation. Root directed continuation under the existing approval, with before/after selected peer IDs/start-times/volume identities. Evidence: evidence/runtime-baseline-adjudication-e75-v1.1.json.
+
+## Runtime E75 — exact additive migrations applied; checksum sequencing disclosed
+
+Executor reports actual deploy0 applying only the approved three names and post-status0/up-to-date. Root independently compares all28 supplied DB migration names/checksums/finished statuses to public SQL files; all match. This whole-chain comparison happened after deployment, before API/Web activation; it was not a completed pre-deploy check. Initial metadata preflight proved the exact pending three and source hashes, but the complete applied-checksum step was missed until root called it out. The instruction arrived after actual deploy; no false earlier-proof claim, rollback or blind retry. An earlier unsupported Compose flag failed before reaching Prisma and was corrected separately. Exact chronology remains for final review. No business rows/private values were queried or displayed. Evidence: evidence/runtime-migration-reconciliation-root-e75-v1.1.json.
+
+## Runtime E75 — active exact images, preserved peers and verified public access
+
+API/Web run the exact approved E74 image IDs; API native health is healthy. The exact three additive migrations are finished; all28 migration metadata names/checksums match image and public SQL. Five preserved postgres/gateway/Evolution peers retain their full container IDs, StartedAt values and named volumes; API file volume identity is preserved. nginx config test and graceful reload succeeded. The root independently fetched public health/index/privacy/JS using verified TLS and matched the approved served JS hash. Public CORS preflight matches the explicit public origin override; no private file edit occurred.
+
+Current owned HTTPS: https://wins-courier-minutes-appear.trycloudflare.com/ ; tunnel tool session61808. It is temporary and was actually verified at the receipt timestamp, not a promise of continued availability. The operator was asked to update only Meta callback and privacy URL with the same local verify token; no provider settings or recipients were changed by the agent.
+
+Root directly compared the full106compiled JS path/hash arrays from the running API and exact network-none/read-only E74 image: identical. Five original key compiled hashes also match. The historical E74 aggregate8c04e9 does not reproduce with its documented serialization; the new explicit path-space-fileSHA-LF aggregate is50227167a0364135014ceef4a0e3c8056c6f8554622545cab25dd907ccf1ea8b for both runtime and image. Cause of the old aggregate inconsistency remains unresolved; it is not silently rewritten or claimed equal. Current per-file equality plus immutable image/build/source binding is the direct provenance proof. A metadata projection initially confused owner with Compose working_dir and named volumes with bind mounts; root caught it, the executor collected a new exact structured projection, and all corrected comparisons pass. Earlier artifacts remain untouched under owned tmp. Neither issue caused a product/source change or runtime restart.
+
+Actual first-send/reply proof is not yet performed. Final review must receive the migration-checksum timing gap, old aggregate inconsistency and corrected metadata projection alongside current successful direct proofs. The one full canonical diff guard is approved but unexecuted, reserved for final validation after operator proof/module consolidation. Delivery remains Pending/review; no closure, production or promotion is claimed.
+
+Evidence: evidence/runtime-activation-executor-e75-v1.1.json; evidence/runtime-topology-before-e75-v1.1.json; evidence/runtime-topology-after-e75-v1.1.json; evidence/runtime-migration-metadata-e75-v1.1.json; evidence/runtime-api-dist-manifest-e75-v1.1.json; evidence/image-api-dist-manifest-e75-v1.1.json; evidence/runtime-peer-and-compiled-root-e75-v1.1.json; evidence/runtime-public-root-attestation-e75-v1.1.json; evidence/runtime-migration-reconciliation-root-e75-v1.1.json.
