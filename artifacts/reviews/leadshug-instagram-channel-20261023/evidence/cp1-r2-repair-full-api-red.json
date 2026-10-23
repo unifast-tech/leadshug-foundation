@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-23",
+  "command": "bash scripts/test-channels-local.sh api",
+  "reportedExitCode": 1,
+  "rootObservedSummaryAndHeadings": [
+    "Test Files  36 passed (36)",
+    "Tests  379 passed (379)",
+    "FAIL  test/channel-transport.e2e-spec.ts > common Channel outbound (PostgreSQL)",
+    "\u23af\u23af\u23af\u23af\u23af\u23af\u23af Failed Tests 3 \u23af\u23af\u23af\u23af\u23af\u23af\u23af",
+    "FAIL  test/channel-transport.e2e-spec.ts > common Channel outbound (PostgreSQL) > fences a held send after a real same-resource REAUTORIZAR generation change",
+    "FAIL  test/number-onboarding-flow.e2e-spec.ts > BFF number registration workflow (PostgreSQL) > fences a held old verification across verified RENEW and accepts the same inbound key only after current X verification",
+    "FAIL  test/number-onboarding-flow.e2e-spec.ts > BFF number registration workflow (PostgreSQL) > rejects a divergent Evolution owner phone before accepting content",
+    "Test Files  2 failed | 34 passed (36)",
+    "Tests  3 failed | 474 passed (477)",
+    "runner_exit=1"
+  ],
+  "log": {
+    "path": "foundation_documentation/artifacts/tmp/instagram-channel-implementation/cp1-api-full-r3-01.log",
+    "bytes": 200114,
+    "sha256": "c5fd568e3bb23701c6633b2962030cb80e3f7fcb70d794dd63d8fe9320436574"
+  },
+  "sourceManifest": "cp1-r2-repair-source-manifest.json",
+  "sourceMismatches": [],
+  "frozenTodoMatches": true,
+  "outcome": "RED:34/36e2e files and474/477cases passed;3failedcases plus1suitehook timeout",
+  "limits": "Targeted379unit/19IGe2e GREEN does not replace full API or ALL. Fresh r3 assessment remains pending. Synthetic disposable DB only; no private/runtime/Meta proof."
+}

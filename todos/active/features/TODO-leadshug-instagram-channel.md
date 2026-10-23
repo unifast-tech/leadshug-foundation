@@ -31,7 +31,7 @@ Este TODO define WHAT, exclusões e critérios de entrega. A baseline v1.3 abaix
 ## Delivery Status Canon (Required)
 - **Current delivery stage:** Pending
 - **Qualifiers:** none
-- **Next exact step:** CP1: concluir os findings remanescentes r1/r2 e restaurar API completo GREEN sobre fontes estáveis; sem acessar dados reais.
+- **Next exact step:** CP1: corrigir confiança/quarentena, renovação pendente, limpeza/ingresso e fixtures apontados em r3; provar RED/GREEN e API completo sobre fontes estáveis.
 
 ## Active Work State (Required While TODO Remains In `active/`)
 - **Work state:** implementation
@@ -583,15 +583,20 @@ Historical planning observation retained: IG-REV-01..04, strategic source, high/
 | Finding ID | Severity | Classification | Routing Decision | Same TODO / Split Rationale | Status | Approval / Follow-up Reference |
 | --- | --- | --- | --- | --- | --- | --- |
 | IG-CP1-R1-01 | high | release-blocker | fix in this TODO | immutable qualified peer is SCOPE-02/DOD-01 | closed by r2 | adherence-cp1-r2-result.json; source/proof repair reviewed; no delivery acceptance |
-| IG-CP1-R1-02 | high | release-blocker | fix in this TODO | current provider attachment equality is SCOPE-02/DOD-01 | open | approved v1.3; adherence-cp1-r1-result.json |
-| IG-CP1-R1-03 | high | release-blocker | fix in this TODO | durable cross-adapter resource ownership is SCOPE-02/DOD-01 | open | approved v1.3; adherence-cp1-r1-result.json |
+| IG-CP1-R1-02 | high | release-blocker | fix in this TODO | current provider attachment equality is SCOPE-02/DOD-01 | closed by r3 | adherence-cp1-r3-result.json; final persisted association defect repaired; actual official confirmation proved |
+| IG-CP1-R1-03 | high | release-blocker | fix in this TODO | durable cross-adapter resource ownership is SCOPE-02/DOD-01 | open | adherence-cp1-r3-result.json; residual current-instance trust contradiction |
 | IG-CP1-R1-04 | high | release-blocker | fix in this TODO | qualified contact reuse is SCOPE-02,03 | closed by r2 | adherence-cp1-r2-result.json; source/proof repair reviewed; no delivery acceptance |
 | IG-CP1-R1-05 | medium | release-blocker | fix in this TODO | retained ownership/cardinality is SCOPE-02/DOD-01 | closed by r2 | adherence-cp1-r2-result.json; source/proof repair reviewed; no delivery acceptance |
 | IG-CP1-R1-06 | medium | release-blocker | fix in this TODO | safe canonical migration is DOD-02/VAL-02 | closed by r2 | adherence-cp1-r2-result.json; source/proof repair reviewed; no delivery acceptance |
-| IG-CP1-R1-07 | medium | release-blocker | fix in this TODO | preserved regression tests are SCOPE-08/DOD-09 | open | approved v1.3; admitted six regression companions |
+| IG-CP1-R1-07 | medium | release-blocker | fix in this TODO | preserved regression tests are SCOPE-08/DOD-09 | open | cp1-r2-repair-full-api-red.json; preserved fixture/context obligations |
 | IG-CP1-R1-08 | medium | release-blocker | fix in this TODO | required historical cohort is DOD-02/VAL-02 | closed by r2 | adherence-cp1-r2-result.json; source/proof repair reviewed; no delivery acceptance |
-| IG-CP1-R2-01 | high | release-blocker | fix in this TODO | one coherent WA business scope is SCOPE-02/DOD-01 | open | approved v1.3; adherence-cp1-r2-result.json |
-| IG-CP1-R2-02 | high | release-blocker | fix in this TODO | honest unverified renewal staging is SCOPE-02/DOD-01 | open | approved v1.3; adherence-cp1-r2-result.json |
+| IG-CP1-R2-01 | high | release-blocker | fix in this TODO | one coherent WA business scope is SCOPE-02/DOD-01 | closed by r3 | adherence-cp1-r3-result.json; WA business scope BU agrees with CHECK/FK and actual positive route |
+| IG-CP1-R2-02 | high | release-blocker | fix in this TODO | honest unverified renewal staging is SCOPE-02/DOD-01 | closed by r3 | adherence-cp1-r3-result.json; original reservation/proof defect repaired; distinct pending lifecycle findings remain below |
+| IG-CP1-R3-01 | high | release-blocker | fix in this TODO | single-create/read-before-retry after pending renewal is SCOPE-02/08 | open | adherence-cp1-r3-result.json |
+| IG-CP1-R3-02 | high | release-blocker | fix in this TODO | managed cleanup ownership survives staged unlink under SCOPE-02/08 | open | adherence-cp1-r3-result.json |
+| IG-CP1-R3-03 | medium | release-blocker | fix in this TODO | durable quarantine and later correct-proof recovery preserve existing channel contract | open | adherence-cp1-r3-result.json |
+| IG-CP1-R3-04 | low | release-blocker | fix in this TODO | required ownership concurrency proof cannot assume winner scheduling; fix assertions in this TODO | open | adherence-cp1-r3-result.json |
+| IG-CP1-ROOT-01 | high | release-blocker | fix in this TODO | pending current ingress remains retryable without content/trust before proof | open | cp1-r3-root-staged-ingress-finding.json |
 
 ## TODO Closeout Disposition
 - **Disposition:** blocked
@@ -845,7 +850,7 @@ Authority preflight final: `artifacts/reviews/leadshug-instagram-channel-2026102
 
 | Checkpoint | State | Owner / next proof |
 | --- | --- | --- |
-| CP1 Identity/route/state cutover | running; changes required r2 | serial executor; repair4current r2 blockers + API regressions, fresh re-review |
+| CP1 Identity/route/state cutover | running; changes required r3 | serial executor; repair pending lifecycle/quarantine/ingress and canonical fixtures, fresh re-review |
 | CP2 OAuth/ingress | pending | follows CP1 accepted checkpoint |
 | CP3 Channel/policy/consumers | pending | shared sender/acceptance only |
 | CP4 UI/CI/browser | pending | profile handoff for CI/runtime tooling |
@@ -905,3 +910,27 @@ Serialized r2 repair handoff: `evidence/cp1-r2-repair-handoff.json`; prior execu
 CP2 preparation only: `evidence/cp2-test-first-handoff-plan.json` derives sixteen OAuth/ingress test obligations from the approved v1.3 clauses. It grants no additional scope and records no executed case; CP2 execution still depends on accepted CP1.
 
 CP1 r2 causal RED established before production repairs: `evidence/cp1-r2-causal-red.json`. The corrected actual lifecycle suite reached all seven intended defects, with379unit cases passing and7of19Instagram e2e cases failing. Original35source hashes were preserved through the pre-fix seal; the new lifecycle spec hash was independently matched. Earlier lint/fixture-only failures are explicitly excluded as product RED evidence. Product repair follows this seal; GREEN and fresh review remain pending.
+
+CP1 r2 targeted GREEN: `evidence/cp1-r2-repair-diagnostic-green.json` records root-observed30migrations,379unit cases and19Instagram integration cases passing. `cp1-r2-repair-source-manifest.json` freezes36exact public paths; the37immutable inherited public paths still match their original hashes. Complete API validation and fresh r3 adherence run against this same source freeze. No code edits until both are terminal; no CP1 or delivery acceptance yet.
+
+## CP1 Finding Resolution Ledger — adherence r3
+
+Fresh no-context r3 returned changes_required, strict schema merge passed. All36source hashes and frozen TODO matched before/after. R1-02/R2-01/R2-02 original defects are closed; R1-03 remains open for contradictory proof about an already trusted current Evolution instance. R1-07 remains open for complete API GREEN. The previous five r2 closures remain supported.
+
+| Finding ID | Resolution | Usefulness | Formalizable | Candidate Rule Level | Candidate Rule ID | Rationale / Evidence |
+| --- | --- | --- | --- | --- | --- | --- |
+| IG-CP1-R1-03 | Integrated | useful | yes | project | n/a | current-instance contradictory proof must durably invalidate trust; official wrong candidate still preserves old credential |
+| IG-CP1-R1-07 | Integrated | useful | partial | project | n/a | canonical scope/proved phone fixtures, preserved assertions and held-request finally cleanup; API remains RED |
+| IG-CP1-R3-01 | Integrated | useful | yes | project | n/a | claim create durably before external effect; connecting/ambiguous retry observes rather than repeats create |
+| IG-CP1-R3-02 | Integrated | useful | yes | project | n/a | staged unlink retains exact managed resource cleanup fence through deletion/recreate |
+| IG-CP1-R3-03 | Integrated | useful | yes | project | n/a | preserve channel/attempt quarantine and later correct-proof recovery using durable owner |
+| IG-CP1-R3-04 | Integrated | useful | yes | project | n/a | assert actual successful contender, one winner/rejection and unchanged losing tuple |
+| IG-CP1-ROOT-01 | Integrated | useful | yes | project | n/a | root exact-source cross-check: detached current staging bypasses existing503/safe metadata branch; causal product test required |
+
+Root-observed full API is RED:379unit cases pass;34of36integration files and474of477cases pass,3case failures plus1suite-hook timeout. Receipt cp1-r2-repair-full-api-red.json retains exact log hash/headings and36source/TODO freeze checks. No source edit occurred until both reviewer and validator became terminal. Corrections stay within approved identity/lifecycle/ingress and regression obligations. No waiver or new functional scope.
+
+The explicit unverified/noneligible state is approved WHAT; currentChannelId=NULL was an implementation choice. A simpler explicitly unproved attachment may be evaluated if DB guards still enforce BU/provider/instance/current-operation consistency, block every trusted/ingress/send path before fresh proof and never populate the candidate business owner from the retained channel. Preserve legitimate metadata/retry and cleanup contracts. Prove any chosen representation through actual lifecycle/ingress regressions and fresh review.
+
+Serialized r3 repair resumed only after both frozen lanes were terminal; `evidence/cp1-r3-repair-handoff.json`. Root remains documentation owner and the existing coder is sole product writer. No new human approval is required for these corrections inside approved WHAT; real runtime/private/Meta authority still requires its later concrete plan.
+
+CP1 r3 causal RED established before production edits: `evidence/cp1-r3-causal-red.json`. All production paths remained unchanged; only the admitted lifecycle spec changed.379unit cases pass,4of23Instagram cases fail on quarantine outcome, repeated create, lost cleanup fence and pending message200instead of503. The receipt distinguishes the first failed quarantine assertion from dynamic exploit proof; all subsequent no-content/unread/realtime/bot and recovery assertions must execute in GREEN.

@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-23",
+  "command": "bash scripts/test-channels-local.sh api-instagram",
+  "rootObservedSummary": [
+    "All migrations have been successfully applied.",
+    "Test Files  36 passed (36)",
+    "Tests  379 passed (379)",
+    "Test Files  3 passed (3)",
+    "Tests  19 passed (19)",
+    "runner_exit=0"
+  ],
+  "log": {
+    "path": "foundation_documentation/artifacts/tmp/instagram-channel-implementation/cp1-api-instagram-r3-green-04.log",
+    "bytes": 21914,
+    "sha256": "c447c473dfd320857d0ac181548ad6741eafcc109bab7709b71f6e30bf607024"
+  },
+  "sourceManifest": "cp1-r2-repair-source-manifest.json",
+  "coverage": "30migrations, lint/build,379unit cases,19Instagram identity/lifecycle/migration e2e cases",
+  "outcome": "targeted GREEN only; full API active and fresh CP1 r3 pending",
+  "limits": "No full ALL/performance/browser/Meta/device proof; no checkpoint or delivery acceptance."
+}

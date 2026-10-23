@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-23",
+  "findingId": "IG-CP1-ROOT-01",
+  "reviewerSurface": "root architecture/source cross-check after terminal r3",
+  "severity": "high",
+  "classification": "release-blocker",
+  "resolution": "Integrated",
+  "locus": {
+    "path": "api-app/src/surfaces/webhooks/evolution.controller.ts",
+    "sha256": "12139a5b50b4dacf43492e038c91f006c9db999d0f6a76fd5d73e45ee987a041",
+    "lines": "32-37;53"
+  },
+  "fact": "The new detached current unverified staging row has currentChannelId NULL; existing controller returns200 before its PENDING_IDENTITY metadata/503 branch. Held RENEW regression later requires safe metadata, zero content and retryable503 for the current unproved instance; earlier association assertion currently hides that failure.",
+  "impact": "A known current pending message can be acknowledged and discarded before provider proof; explicitly unverified/noneligible must not silently lose the existing retry contract.",
+  "requiredProof": "Actual current pending-renewal message request returns503 with redacted metadata and zero content/unread/realtime/bot effects, then same key is accepted once after fresh correct proof. Run causal RED before fix. Retired unknown instances remain distinct.",
+  "scope": "Approved SCOPE-02/05/08 and preserved WhatsApp ingress; no new channel or public endpoint",
+  "implementationChoice": "Detached representation is not frozen WHAT. Evaluate the simplest explicit unproved association with DB trust/BU/provider/instance/generation guards, preserving immutable business ownership and no guessed business mapping.",
+  "deliveryClaim": false
+}

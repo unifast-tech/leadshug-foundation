@@ -1,0 +1,107 @@
+{
+  "schema_version": "subagent-review-result-v1",
+  "artifact_kind": "subagent_review_result",
+  "dispatch_path": "/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/adherence-cp1-r3-dispatch.json",
+  "review_kind": "architecture_adherence",
+  "reviewer_label": "instagram_cp1_adherence_r3",
+  "overall_assessment": "changes_required for bounded CP1. All 36 source SHA256 values and the frozen TODO matched before and after complete source review. Additional source reads were limited to the exact 28 historical migrations enumerated by instagram-migration.e2e-spec.ts. Per-ID assessment: IG-CP1-R1-02 is resolved for its final-row association defect: both deferred checks reload persisted rows, the actual fresh official BFF confirmation commits credential promotion, and PostgreSQL negatives retain BU/resource/adapter enforcement. IG-CP1-R1-03 is partially repaired but remains open: initial, pending and migrated administrative paths now claim provider-proved ownership, while contradictory proof concerning an already trusted Evolution instance leaves its old trust usable after rollback. IG-CP1-R1-07 remains open: both bulk preparations retain their 15000/60-row datasets and original performance assertions, but the terminal stable-source API result is RED. IG-CP1-R2-01 is resolved: production claims use business scope BU, consistent with the route CHECK/FK, and the positive actual-claim route case passes. IG-CP1-R2-02 is resolved for the original reservation-before-proof failure: DB-checked detached staging commits without copying retained ownership, and exact current operation/instance proof attaches it atomically. Distinct retry and unlink defects in that staged lifecycle remain blocking below. Prior closures IG-CP1-R1-01/04/05/06/08 remain closed. The migration continues to preserve original rows, timestamps, pending snapshots and receipts without inventing business provenance. The seven lifecycle RED cases and subsequent 379-unit/19-Instagram-case GREEN establish meaningful causal proof, but their immediate-open renewal fixtures omit pending replacement and staged unlink behavior. The final receipt cp1-r2-repair-full-api-red.json records 379 unit passes, 474/477 integration passes, 34/36 integration files passing, three failed cases and one suite-hook timeout. Architecture and security boundaries have improved; quality, elegance, structural soundness and operational fit remain mixed because lifecycle transitions are incomplete. Performance of the new foundation remains unmeasured. The complete Frontend/Consumer Matrix and consumer contracts were considered: CP2–CP6 remain mandatory future checkpoint work, including all producers, consumers, v2 writers, state-specific v1 recovery, browser, ALL and independent audits. They are neither waived nor classified as missing CP1 delivery. This review performed no writes, tests, runtime or network operations and grants no implementation, delivery, cutover, runtime or Meta acceptance.",
+  "recommended_path": "Keep CP1 changes_required. Record the supported original-defect closures while retaining IG-CP1-R1-03 and IG-CP1-R1-07. Repair the distinct lifecycle findings with actual product-path causal RED/GREEN cases, preserve the original quarantine, ingress, generation, cleanup, query-count and dataset assertions, and correct canonical fixture provenance without restoring BU.phone authority. Re-freeze sources, capture complete API GREEN and obtain another bounded CP1 review before advancing through the already approved CP2–CP6 sequence. Preserve SEC-R6-04, OPS-R4-01 and TQA-ST05-03 restrictions.",
+  "performance_position": "unknown",
+  "elegance_position": "mixed",
+  "structural_soundness_position": "mixed",
+  "operational_fit_position": "mixed",
+  "findings": [
+    {
+      "finding_id": "IG-CP1-R1-03",
+      "severity": "high",
+      "category": "security",
+      "title": "Contradictory current-instance proof leaves prior Evolution trust usable",
+      "rationale": "ChannelsService.verificar obtains fresh proof for the current managed Evolution instance, then calls claimWhatsAppBusinessResource inside its final transaction. If the proved phone differs from the retained WhatsApp owner, business-resource-ownership.ts:74 throws PHONE_MISMATCH. The transaction rolls back without invalidating an already true ownNumberVerified, matching verifiedEpoch, receipt or current provider attachment. MessageAcceptanceService.lockAndValidateCurrentIdentity continues to accept those retained trust fields and currentChannelId; it has no knowledge of the contradictory proof. Thus the initial verification bypass is repaired, but an already trusted current instance can remain eligible after administrative verification proves that it serves another number. Existing lifecycle negatives begin with untrusted channels, and their credential/grant preservation checks do not exercise this transition.",
+      "suggested_action": "Fence and persist quarantine for contradictory proof about the exact current Evolution instance before returning the conflict, while retaining immutable ownership, credentials, grants and historical receipts. Add an actual service/request RED case starting with a trusted retained owner, make the current instance prove a different number, then prove ingress cannot create content, unread, realtime or bot effects. Preserve the separate official candidate-reauthorization rule that a wrong candidate cannot replace the active credential.",
+      "formalizable_hint": "yes",
+      "candidate_rule_level": "project",
+      "affected_paths": [
+        "api-app/src/domain/channels/channels.service.ts",
+        "api-app/src/domain/channels/business-resource-ownership.ts",
+        "api-app/src/domain/inbox/message-acceptance.service.ts",
+        "api-app/test/instagram-lifecycle.e2e-spec.ts"
+      ]
+    },
+    {
+      "finding_id": "IG-CP1-R1-07",
+      "severity": "medium",
+      "category": "tests",
+      "title": "Complete API validation remains RED on inconsistent canonical fixtures",
+      "rationale": "The terminal frozen-source receipt reports three failed cases plus a suite-hook timeout. helpers.ts:312 still creates WhatsApp business identities with scopeReference=WHATSAPP, while production claims require BU; its business phone is derived from buId rather than the provider proof used by reauthorization. The held same-resource reauthorization consequently does not reach its expected successful generation transition. The held RENEW case expects currentChannelId to equal the channel before fresh proof, conflicting with the explicit detached staging model. The divergent-owner case seeds only BU.phone, which the approved architecture correctly no longer treats as ownership authority, so it receives 200. These fixtures require faithful canonical adaptation; the existing quarantine, stale-ingress and generation assertions remain obligations. The two bulk fixture defects themselves are repaired and their original datasets, EXPLAIN and query assertions remain present.",
+      "suggested_action": "Use canonical BU business scope and a provider-proved retained phone in fixtures that claim verified ownership. Adapt pre-proof renewal association expectations to explicit detached staging while preserving all subsequent trust and ingress checks. Seed a genuinely proved retained owner for the divergent-phone scenario, repair the product quarantine behavior, and retain the original assertions. Release held requests in finally blocks so assertion failures cannot strand teardown. Capture a complete GREEN API rerun on newly frozen sources.",
+      "formalizable_hint": "partial",
+      "candidate_rule_level": "project",
+      "affected_paths": [
+        "api-app/test/helpers.ts",
+        "api-app/test/channel-transport.e2e-spec.ts",
+        "api-app/test/number-onboarding-flow.e2e-spec.ts",
+        "api-app/test/conversation-start.e2e-spec.ts",
+        "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp1-r2-repair-full-api-red.json"
+      ]
+    },
+    {
+      "finding_id": "IG-CP1-R3-01",
+      "severity": "high",
+      "category": "adherence",
+      "title": "A connecting renewed instance remains marked never created and receives another create",
+      "rationale": "After predecessor cleanup, channels.service.ts:181 persists RESERVED_NEVER_CREATED. completePairing recognizes that stage at :189 and calls criarInstancia at :200 without a preceding observation. When creation succeeds but the instance remains connecting or lacks owner proof, no transition removes RESERVED_NEVER_CREATED. The next INITIAL preserves that stage at :103 and repeats the create operation instead of observing the existing replacement. A crash after the external effect has the same unsafe recovery classification. The current renewal cases immediately return open with a proved owner, which advances the stage and hides this pending path. This violates the preserved read-before-retry and single-creation lifecycle contract.",
+      "suggested_action": "Durably claim the first replacement create under the current operation fence and leave RESERVED_NEVER_CREATED before external dispatch. Subsequent pending or uncertain recovery must observe the same instance and must not repeat create without proof that creation never occurred. Add actual RENEW→cleanup→connecting replacement→repeated INITIAL RED/GREEN cases asserting one replacement create, stable attempt/epoch/name, detached untrusted staging and bounded observation.",
+      "formalizable_hint": "yes",
+      "candidate_rule_level": "project",
+      "affected_paths": [
+        "api-app/src/domain/channels/channels.service.ts",
+        "api-app/test/instagram-lifecycle.e2e-spec.ts",
+        "api-app/test/number-onboarding-flow.e2e-spec.ts"
+      ]
+    },
+    {
+      "finding_id": "IG-CP1-R3-02",
+      "severity": "high",
+      "category": "operational_fit",
+      "title": "Unlink loses the cleanup fence for a detached staged replacement",
+      "rationale": "Renewal intentionally creates unverifiedStaging providers with currentChannelId=NULL at channels.service.ts:130–134. desconectar finds that exact provider by its external resource, but its lock at :373 requires current_channel_id=snapshot.id; it therefore discards the staged provider as identity=null. The channel and attempt association are removed without retiring the provider, recording CLEANUP_PENDING or retaining a cleanup lease. A replacement that was created but remains unproved, including an ambiguous create, can remain managed and ACTIVE externally. A later INITIAL searches only detached CLEANUP_PENDING identities and can create another instance without reconciling the abandoned one. Current unlink regressions use attached providers and do not cover the newly detached representation.",
+      "suggested_action": "Include the exact current staged provider in unlink and retirement using its trusted BU, managed provenance, instance, attempt and operation fences. Retain creation uncertainty and cleanup ownership after channel deletion, and reconcile it before another managed create. Keep business ownership durable and ingress disabled. Add actual pending-renewal unlink/recreate and ambiguous-create cleanup RED/GREEN cases, including cleanup failure and late old-instance content.",
+      "formalizable_hint": "yes",
+      "candidate_rule_level": "project",
+      "affected_paths": [
+        "api-app/src/domain/channels/channels.service.ts",
+        "api-app/test/instagram-lifecycle.e2e-spec.ts",
+        "api-app/test/number-onboarding-flow.e2e-spec.ts"
+      ]
+    },
+    {
+      "finding_id": "IG-CP1-R3-03",
+      "severity": "medium",
+      "category": "adherence",
+      "title": "Renewal number divergence no longer records the preserved quarantine outcome",
+      "rationale": "For a syntactically valid replacement phone differing from the retained proved owner, completePairing reaches claimWhatsAppBusinessResource and throws PHONE_MISMATCH. Its only durable IDENTITY_QUARANTINED branch handles absent or invalid parsed proof, so the valid-but-wrong-number path leaves the channel and attempt pending. The retained held-verification regression requires IDENTITY_QUARANTINED on both channel and attempt, followed by continued content rejection and recovery only after current correct proof. The new lifecycle case instead checks PHONE_MISMATCH and ownNumberVerified=false, which proves ownership rejection but does not establish the original quarantine behavior. Replacing BU.phone authority with durable proved ownership does not waive that behavior.",
+      "suggested_action": "Use the retained proved business owner to classify replacement-number divergence and persist the original fenced quarantine state and safe attempt outcome without transferring ownership. Add a causal product-path case using a genuinely proved retained owner, and preserve the existing quarantine, no-message, no-bot, no-realtime and later correct-proof recovery assertions.",
+      "formalizable_hint": "yes",
+      "candidate_rule_level": "project",
+      "affected_paths": [
+        "api-app/src/domain/channels/channels.service.ts",
+        "api-app/src/domain/channels/business-resource-ownership.ts",
+        "api-app/test/instagram-lifecycle.e2e-spec.ts",
+        "api-app/test/number-onboarding-flow.e2e-spec.ts"
+      ]
+    },
+    {
+      "finding_id": "IG-CP1-R3-04",
+      "severity": "low",
+      "category": "tests",
+      "title": "The concurrent ownership test assumes which contender wins",
+      "rationale": "The cross-adapter claim case in instagram-identity.e2e-spec.ts correctly requires one fulfilled and one rejected transaction, but then asserts owner.buId equals ownerBuId, the first submitted contender. PostgreSQL scheduling does not guarantee that ordering. A valid Evolution winner can fail this test despite preserving the intended invariant. The observed GREEN still demonstrates one-owner behavior for that run; it does not justify fixing the winner in the test.",
+      "suggested_action": "Associate each settled result with its input and assert that the durable owner and linked tuples belong to the actual successful contender. Assert the losing contender retains its prior tuple. Preserve the one-winner and one-rejection requirements.",
+      "formalizable_hint": "yes",
+      "candidate_rule_level": "project",
+      "affected_paths": [
+        "api-app/test/instagram-identity.e2e-spec.ts"
+      ]
+    }
+  ]
+}

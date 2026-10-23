@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-23",
+  "kind": "serialized-approved-cp1-r3-repair-handoff",
+  "authority": "ST-IG-03 v1.3 approval; unchanged functional objective and private/runtime exclusions",
+  "executor": "/root/instagram_cp1_executor",
+  "routing": "routing-execution-cp1.json",
+  "preconditions": {
+    "fullApiValidatorTerminal": true,
+    "r3ReviewerTerminal": true,
+    "sourceAndTodoFreezeMatched": true
+  },
+  "openFindings": [
+    "IG-CP1-R1-03",
+    "IG-CP1-R1-07",
+    "IG-CP1-R3-01",
+    "IG-CP1-R3-02",
+    "IG-CP1-R3-03",
+    "IG-CP1-R3-04",
+    "IG-CP1-ROOT-01"
+  ],
+  "requiredSequence": [
+    "actual lifecycle and ingress causal RED on frozen baseline before production repair",
+    "canonical fixture adaptation preserving all original assertions",
+    "repair current proof quarantine, one-create recovery and staged cleanup/retry",
+    "targeted GREEN then frozen full API GREEN",
+    "fresh independent CP1 r4 review"
+  ],
+  "implementationChoice": "Explicit unproved association may remain attached if DB trust/BU/provider/instance/current-operation invariants hold and it cannot expose content/send or infer a business owner before proof. Detached representation is not frozen WHAT.",
+  "invariants": [
+    "immutable qualified peer and business owner",
+    "same scoped route and proved credential promotion",
+    "historical snapshots/receipts/timestamps unchanged",
+    "no BU.phone authority, no copied candidate owner",
+    "ordinary WhatsApp contracts, quarantine and ingress retry retained"
+  ],
+  "forbidden": "real private inputs/runtime/Meta, new external channels, product Git writes, worktrees/copies, weakened regression assertions",
+  "completionClaim": false
+}

@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-23",
+  "kind": "causal-behavioral-RED-before-r3-production-repairs",
+  "command": "bash scripts/test-channels-local.sh api-instagram",
+  "log": {
+    "path": "foundation_documentation/artifacts/tmp/instagram-channel-implementation/cp1-api-instagram-r4-red-01.log",
+    "bytes": 26188,
+    "sha256": "07151e0b6bd4747b745165d5a98bdeadd25461cd2f616f8d4316230f4cb2cbd2"
+  },
+  "rootObservedSummaryAndHeadings": [
+    "Test Files  36 passed (36)",
+    "Tests  379 passed (379)",
+    "\u23af\u23af\u23af\u23af\u23af\u23af\u23af Failed Tests 4 \u23af\u23af\u23af\u23af\u23af\u23af\u23af",
+    "FAIL  test/instagram-lifecycle.e2e-spec.ts > Instagram CP1 WhatsApp ownership lifecycle (PostgreSQL) > quarantines a trusted current Evolution identity after contradictory current-instance proof",
+    "FAIL  test/instagram-lifecycle.e2e-spec.ts > Instagram CP1 WhatsApp ownership lifecycle (PostgreSQL) > observes a connecting replacement on repeated INITIAL without creating twice",
+    "FAIL  test/instagram-lifecycle.e2e-spec.ts > Instagram CP1 WhatsApp ownership lifecycle (PostgreSQL) > retains cleanup ownership when unlinking a pending replacement and blocks recreation until cleanup",
+    "FAIL  test/instagram-lifecycle.e2e-spec.ts > Instagram CP1 WhatsApp ownership lifecycle (PostgreSQL) > returns retryable redacted metadata for current unproved staging, then accepts its key once after proof",
+    "Test Files  1 failed | 2 passed (3)",
+    "Tests  4 failed | 19 passed (23)",
+    "runner_exit=1"
+  ],
+  "baselineCheck": "cp1-r3-causal-red-baseline-check.json",
+  "baselineObservation": "36exact prior paths checked; only lifecycle spec changed;35other files including all production source unchanged",
+  "newSpecSeal": {
+    "path": "api-app/test/instagram-lifecycle.e2e-spec.ts",
+    "reportedSha256": "8cadd203b9535d149cc08cd895f65526cfd9fddebe6bd028e107d2198c72df42",
+    "rootObservedMatches": true
+  },
+  "executorReportedFailurePoints": [
+    "current trusted contradiction reports PHONE_MISMATCH instead of durable IDENTITY_QUARANTINED",
+    "successful connecting replacement/ack loss then repeated INITIAL creates twice instead of once",
+    "pending staged unlink leaves managed provider ACTIVE instead of CLEANUP_PENDING",
+    "current unproved staged message returns200 instead of503"
+  ],
+  "proofLimits": "Baseline first failure on the trusted contradiction case is quarantine outcome; do not claim dynamic pre-fix accepted-content exploit proof unless separately reached. Source r3 identifies retained trust risk; all post-proof content/unread/realtime/bot assertions must execute in GREEN.",
+  "outcome": "RED:379units pass;4/23Instagram cases fail",
+  "next": "repair approved invariants and canonical fixtures, targeted GREEN, complete frozen API GREEN, fresh r4",
+  "privateOrRealRuntimeUsed": false,
+  "deliveryAcceptance": false
+}

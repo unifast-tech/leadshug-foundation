@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-23",
+  "purpose": "Root independent pre-fix source check during r4 RED",
+  "baselineManifest": "cp1-r2-repair-source-manifest.json",
+  "checkedPublicPaths": 36,
+  "changedPaths": [
+    "api-app/test/instagram-lifecycle.e2e-spec.ts"
+  ],
+  "productionChanges": [],
+  "sealedInstagramSpecs": [
+    {
+      "path": "api-app/test/instagram-identity.e2e-spec.ts",
+      "sha256": "aaa288a746f5d287796012c13793f41b944c3c23500e48cecb410a88fab70e5e",
+      "bytes": 14128
+    },
+    {
+      "path": "api-app/test/instagram-migration.e2e-spec.ts",
+      "sha256": "4deae0c82e317688c1217d230ce2d98215d783434c35ec19137937438d8618ec",
+      "bytes": 27927
+    },
+    {
+      "path": "api-app/test/instagram-lifecycle.e2e-spec.ts",
+      "sha256": "8cadd203b9535d149cc08cd895f65526cfd9fddebe6bd028e107d2198c72df42",
+      "bytes": 23273
+    }
+  ],
+  "run": "cp1-api-instagram-r4-red-01.log",
+  "runStatus": "in progress; no behavioral RED accepted yet",
+  "privateOrRuntimeInputsUsed": false
+}
