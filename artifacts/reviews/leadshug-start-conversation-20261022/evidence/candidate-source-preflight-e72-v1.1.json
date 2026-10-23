@@ -1,0 +1,21 @@
+{
+  "kind": "E72 actual root public candidate preflight before causal API run; no test result",
+  "recorded_at_utc": "2026-10-23T05:12:51.480887+00:00",
+  "source_seal": "api-source-seal-e72-v1.1.json",
+  "source_fingerprint": "0f92d1121f2a2d67d29d1d4ba4c976af2648ef2a633932c11cf4f86876f84031",
+  "authority": "authority-e72-v1.1.json",
+  "routing": "routing-e72-v1.1.json",
+  "prior_full_candidate": "all-result-e71-v1.1.json",
+  "exact_delta": [
+    "api-app/test/initial-message.e2e-spec.ts",
+    "api-app/test/webhooks.e2e-spec.ts"
+  ],
+  "expected_assertions": [
+    "Four missing/malformed/multiple/negative native statistics calls must reject; helper currently unchanged from E71.",
+    "Signed unmanaged current verified resource IN is retained with null provenance; management activation and duplicate replay cannot open window/upgrade old timestamp; fresh qualified managed IN does. Soft assertions reach the whole matrix."
+  ],
+  "product_source_unchanged_from_e71": true,
+  "all38protected_and_companions_match": true,
+  "freeze": "No edits from preseal through actual terminal cleanup and independent full259 postseal.",
+  "limits": "Owned disposable API/PG only; no Web/browser/runtime/provider proof inferred."
+}

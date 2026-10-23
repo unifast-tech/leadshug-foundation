@@ -1,0 +1,19 @@
+{
+  "kind": "Current E73 root correction/source preflight before canonical ALL; no GREEN inferred",
+  "recorded_at_utc": "2026-10-23T05:22:42.565449+00:00",
+  "source_seal": "all-source-seal-e73-v1.1.json",
+  "source_fingerprint": "589c753670cfcf54020b785e6bae6b85ec1a8b4bab707f333f8e64d8aaf38c8e",
+  "exact_delta_from_causal_red": [
+    "api-app/src/domain/inbox/message-acceptance.service.ts",
+    "api-app/test/initial-message.e2e-spec.ts"
+  ],
+  "all38protected_and_companion_bytes_match": true,
+  "causal_receipt": "api-result-e72-v1.1.json",
+  "causal_red_stdout_sha256": "8bad3c08ed817a791d9fd7d10016e84da1e535e8050e3c7c34cb422618ec7030",
+  "root_source_assessment": [
+    "Existing locked identity SELECT FOR SHARE now returns its managed_lifecycle qualification. Only official trusted timestamp persistence is conditional; existing message/diagnostic acceptance, lock ordering, duplicate no-upgrade and Message owner remain. No stale caller flag, extra identity query, controller fork, new schema or provider operation.",
+    "Native required statistics read now rejects non-array/missing/multiple rows and non-bigint/negative values with a loud deadlock-stat error. Existing4negative cases and actual native overlaps are preserved."
+  ],
+  "freeze": "No source edits through actual ALL terminal/cleanup and root independent full259postseal.",
+  "limits": "No current regression/image/native runtime/provider/delivery proof inferred before actual execution."
+}

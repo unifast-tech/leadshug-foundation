@@ -1,0 +1,12 @@
+{
+  "checkpoint": "E72 terminal full positive source recheck",
+  "stage": "After actual executor terminal and owned cleanup; BEFORE writer release",
+  "count": 259,
+  "fingerprint": "0f92d1121f2a2d67d29d1d4ba4c976af2648ef2a633932c11cf4f86876f84031",
+  "matches_preseal_full_inventory_and_bytes": true,
+  "record_reference": "api-source-seal-e72-v1.1.json#records",
+  "stdout_sha256": "8bad3c08ed817a791d9fd7d10016e84da1e535e8050e3c7c34cb422618ec7030",
+  "executor_reported_exit_code": 1,
+  "recorded_at_utc": "2026-10-23T05:20:34.502349+00:00",
+  "boundary": "Only declared positive public roots and7 exact publicfiles; no actual env/data/process inspection."
+}

@@ -1,0 +1,49 @@
+{
+  "checkpoint": "E72 causal test-only API RED for two r6 findings",
+  "recorded_at_utc": "2026-10-23T05:20:34.578740+00:00",
+  "command": "bash scripts/test-channels-local.sh api",
+  "executor_session_id": 42676,
+  "exit_code": 1,
+  "actual_exit_code": 1,
+  "stdout_sha256": "8bad3c08ed817a791d9fd7d10016e84da1e535e8050e3c7c34cb422618ec7030",
+  "source_fingerprint": "0f92d1121f2a2d67d29d1d4ba4c976af2648ef2a633932c11cf4f86876f84031",
+  "source_seal": "api-source-seal-e72-v1.1.json",
+  "source_recheck": "api-source-recheck-e72-v1.1.json",
+  "full259source_postseal": true,
+  "all38protected_and_companion_bytes_match": true,
+  "product_bytes_unchanged_from_e71": true,
+  "owned_cleanup_observed": true,
+  "phases": {
+    "lint_and_build": "passed",
+    "api_unit": {
+      "files": 34,
+      "tests": 368,
+      "passed": 368
+    },
+    "api_postgresql": {
+      "files": 33,
+      "tests": 456,
+      "passed": 451,
+      "failed": 5
+    },
+    "web_and_browser": "not reached/not part of API command"
+  },
+  "findings": [
+    {
+      "finding_id": "F-5E961B39",
+      "source_finding_id": "TQA-R6-01",
+      "classification": "actual reached causal assertion RED",
+      "actual": "All four owned helper-only malformed-row fixtures resolve instead of rejecting: empty, malformed string, multiple rows and negative bigint. One-call spy restored in finally. Existing helper is unchanged.",
+      "limits": "Does not claim actual native statistics were absent; explicitly injected required-read failure shapes in the owned fixture."
+    },
+    {
+      "finding_id": "F-CF091066",
+      "source_finding_id": "ARCH-ST04-R6-01",
+      "classification": "actual reached signed-webhook/real-PostgreSQL causal assertion RED",
+      "actual": "Current associated/verified identity managedLifecycle=false receives a retained IN with non-null officialInboundAt; resolver reports windowOpen=true both before and after managed=true; duplicate replay retains that timestamp. Four soft assertions fail, while whole matrix reaches subsequent new-managed-IN positive, unread/duplicate counts and zero provider effects.",
+      "limits": "No actual outbound attempt or real provider exploit is claimed. Timestamp/window read projection is observed, not immediate dispatch authority."
+    }
+  ],
+  "remaining_positive_proof": "Existing final-window CAS, BU/credential pins and both actual ST05 refresh overlap cases pass, preserving original E71 fix evidence.",
+  "next": "Bounded Message acceptance owner qualification and strict statistics helper fix, preserving causal tests, protected ST05 and all source/runner/private boundaries; reseal full ALL before review/images/runtime plan."
+}

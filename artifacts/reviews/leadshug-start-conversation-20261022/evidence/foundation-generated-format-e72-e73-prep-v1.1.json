@@ -1,0 +1,11 @@
+{
+  "kind": "Actual generated patch artifact format diagnostic",
+  "recorded_at_utc": "2026-10-23T05:36:37.645654+00:00",
+  "command": "git diff --cached --check",
+  "actual_exit_code": 2,
+  "diagnostic_sha256": "65e8328fc99ab596859413b29450d9db4609d0b5505cc7b4b8b4dbab3a463601",
+  "affected_paths": [
+    "artifacts/reviews/leadshug-start-conversation-20261022/module-consolidation-r7-v1.1.patch"
+  ],
+  "disposition": "Preserve literal unified-diff context blank-line markers and exact reviewable patch bytes; canonical modules are not applied. TODO text and JSON evidence have no reported whitespace issue. Not claimed clean."
+}

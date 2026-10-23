@@ -46,7 +46,7 @@ Este v1.1 substitui a autoridade ativa da minuta revisada em 2026-10-19. O origi
 
 - **Current delivery stage:** `Pending`
 - **Qualifiers:** `none`
-- **Next exact step:** adicionar somente as duas regressões r6 nos caminhos de teste já admitidos, preservar produto E71 e capturar RED no runner API antes das correções.
+- **Next exact step:** corrigir somente o owner que qualifica o timestamp e o helper de estatísticas após RED E72 confirmado; congelar E73 e rodar ALL completo antes de nova revisão/imagens.
 
 ## Active Work State (Required While TODO Remains In `active/`)
 
@@ -1360,3 +1360,9 @@ Root integrated the three r4 findings against current source/proof in evidence/i
 All three fresh no-context r6 processes completed exit0 with one turn/zero tools each and strict canonical merge0. Architecture supplies D01–D10/security/performance assessment and accepts the three r4 corrections; its new F-CF091066/ARCH-ST04-R6-01 is source-confirmed: the locked identity projection does not include managedLifecycle when qualifying officialInboundAt. The compatible correction belongs to the existing Message acceptance owner: preserve the Message and null unqualified provenance, never trust a caller-supplied lifecycle flag or stale pre-lock check. Signed-webhook/real-PG unmanaged→managed and duplicate/new-message regressions must precede mutation.
 
 TQA F-5E961B39/TQA-R6-01 confirms the explicit root signal: native deadlock statistics must reject missing/malformed data instead of defaulting to0. Add a scoped helper-failure regression before changing it. TQA r6 returned only a short assessment, so its material findings are preserved but its requested full eight-section/five-question audit is not claimed complete. Cutover reports no new code integrity gap and retains existing delivery gates. Exact E71 source inventory/bytes were rechecked after all terminals and image builds;259records still match before writer release. E71 images/activation proposal remain historical candidate evidence until corrected sources are revalidated. No private/runtime/provider work is authorized.
+
+## Execution checkpoint E72 — both r6 defects reproduced before fixes
+
+Canonical API session42676 exited1 with owned cleanup:34unit files/368passed;33PGfiles/456tests,451passed/5failed. Four narrow helper-only fixtures prove empty/malformed/multiple/negative native statistics currently resolve rather than reject. The actual signed-webhook/PG unmanaged→managed/replay matrix reached all stages: four soft failures show a non-null trusted timestamp for the unmanaged but current verified identity, windowOpen=true before and after lifecycle activation, and retained promoted timestamp after duplicate. Message/unread counts and later new-qualified-IN positive/zero-provider checks were reached; this is not an actual outbound exploit. Product/helper bytes remained exactly E71 during RED.
+
+Root independently rechecked all259public sources/full inventory and38protected/companion bytes, matching fingerprint0f92d1121f2a2d67d29d1d4ba4c976af2648ef2a633932c11cf4f86876f84031. Evidence: evidence/api-result-e72-v1.1.json and api-source-recheck-e72-v1.1.json. Release is now only for the bounded same-scope correction, with causal tests retained. No new schema/route/transport/provider behavior, protected ST05 edits or private/runtime authority. E71 fullGREEN/images remain historical, not current corrected delivery.
