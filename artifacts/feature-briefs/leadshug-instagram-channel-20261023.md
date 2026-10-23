@@ -2,6 +2,8 @@
 
 **Version:** 1.1. **Data:** 2026-10-23. **Perfil:** Strategic / CTO-Tech-Lead. Escopo de análise: NestJS, React, PostgreSQL e Prisma. Enquadramento baseado em `delphi-ai/templates/feature_brief_template.md` e `workflows/docker/feature-framing-method.md`.
 
+**Handoff:** o [TODO ST-IG-03 v1.3](../../todos/active/features/TODO-leadshug-instagram-channel.md) recebeu APROVADO em2026-10-23 e authority normal go; implementação iniciada. Este brief conserva enquadramento/proveniência, sem substituir o contrato nem comprovar entrega.
+
 ## Artifact Role
 
 - **Why this brief exists now:** o usuário pediu Instagram como próxima frente funcional, antes do histórico, para exercitar a abstração Channel com outro meio de conversação. Há decisões de identidade e autorização que precisam preceder o contrato de implementação.

@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-23",
+  "approvedBy": "user in active chat",
+  "approvalPhrase": "APROVADO",
+  "approvalReference": "User response APROVADO to Instagram v1.3 implementation approval request, IDE active TODO-leadshug-instagram-channel.md",
+  "contractVersion": "1.3",
+  "approvedTodoSha256": "496045b39d24871dfe438b7e3ee89af06dbafbc7ece8aa9bd9d56b46a23d9cd0",
+  "reviewedBaseline": "f4891ba1bddec62737f5624cac8d4a32224006d7",
+  "publishedApprovalReadyCommit": "2043d6df7a9591994e50c25f9723260f2ef1fe55",
+  "authorized": "SCOPE-01..08, D-01..10, DOD/VAL and normative integrations of v1.3; product code and disposable synthetic validation within strict paths",
+  "excluded": "real private files/data/runtime/Meta actions, external sends, product Git writes, gitlink mutations, worktrees/copies, production/AppReview; separate rollout plan later",
+  "routing": "routing-execution-cp1.json",
+  "readiness": "manual initialization checklist for positive public authorities; no private inventory or dotenv access"
+}

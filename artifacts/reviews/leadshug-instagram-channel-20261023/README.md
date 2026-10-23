@@ -1,5 +1,7 @@
 # Instagram Direct — pacote para aprovação
 
+**Atualização de execução:** APROVADO recebido em2026-10-23, registrado em [aprovação CP1](evidence/approval-execution-cp1.json); [authority normal go](evidence/authority-execution-cp1.json). Implementação em curso no TODO. As seções de preparação abaixo preservam a evidência pré-aprovação e não são um novo pedido.
+
 Contrato v1.3 pronto para decisão humana em2026-10-23. Este índice reúne a preparação e as revisões; a autoridade de escopo é o [TODO ST-IG-03](../../../todos/active/features/TODO-leadshug-instagram-channel.md). Nenhum código, banco, serviço ou configuração Meta foi alterado nesta preparação.
 
 A primeira entrega conecta uma conta profissional com login do Instagram à BU, recebe DM textual iniciada pelo contato e permite resposta humana pela conta e rota corretas, usando Channel e os owners comuns de envio/aceitação. A BU pode reunir WhatsApp e várias contas Instagram com os mesmos grants. Nesta fatia, permanece um recurso empresarial WhatsApp por BU, compartilhado pelos adapters comprovados oficial/não oficial.
@@ -16,4 +18,4 @@ As revisões independentes encerraram sem achado material pendente:
 
 A baseline revisada é [f4891ba1](evidence/review-baseline-freeze-r4.json). Os pareceres anteriores e suas correções permanecem no diretório de evidências. Permissões reais, configuração Meta, rollout local, DM/resposta físicas e retomada são provas futuras sob plano runtime próprio. Não há resultado de teste de implementação Instagram nesta preparação.
 
-Próxima ação: APROVADO explícito do TODO v1.3, seguido de registro de aprovação, ingestão das regras e authority normal go antes da implementação. Aprovação de código não concede a exceção de arquivos privados nem autoriza rollout, produção, App Review ou Git de produto.
+Próxima ação de execução: CP1 de identidade/rotas/cutover e seus testes, conforme TODO já aprovado. Aprovação, ingestão e authority normal foram registrados depois do pacote de preparação. Aprovação de código não concede a exceção de arquivos privados nem autoriza rollout, produção, App Review ou Git de produto.

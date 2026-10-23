@@ -15,4 +15,4 @@ An `Accepted` decision is effective only after its named canonical targets are c
 ## Records
 
 - [ST-01 Foundation lifecycle decisions](ST-01-foundation-lifecycle-decisions.md) — eleven accepted decisions with alternatives, rationale, provenance, named targets, and target-consolidation evidence.
-- [Multichannel identity decisions](leadshug-multichannel-identity-decisions.md) — human-confirmed operational BU consolidated as target architecture; qualified contacts, business-resource ownership and explicit routing remain proposed for the implementation contract.
+- [Multichannel identity decisions](leadshug-multichannel-identity-decisions.md) — operational BU, qualified contacts, durable business-resource ownership and explicit routing accepted and consolidated as target architecture under ST-IG-03 v1.3 APROVADO; implementation and delivery evidence remain in its tactical TODO.

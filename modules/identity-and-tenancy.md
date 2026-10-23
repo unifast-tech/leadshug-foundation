@@ -31,3 +31,11 @@ APROVADO em2026-10-15; implementação exercitada localmente em2026-10-16 ([all4
 - Tentativa oficial liga usuário/Mantenedora/BU/hash de sessão/nonce com expiração10min e consumo CAS; code/nonce consumidos ou ambíguos exigem tentativa nova. SDK IDs são candidatos, nunca autoridade.
 - Nova BU, reserva/tentativa e grants/audit são atômicos. Mesmo Idempotency-Key e payload devolvem a mesma tentativa; payload diferente409; reautorização usa slot existente e expectedGeneration.
 - ProviderResourceIdentity conserva owner de BU após remoção de canal e não é transferível entre BUs neste recorte. Webhooks têm autenticação própria e só passam conteúdo após identidade corrente comprovada.
+
+## Ownership multicanal aprovado — ST-IG-03
+
+Arquitetura aprovada em2026-10-23 no [contrato v1.3](../todos/active/features/TODO-leadshug-instagram-channel.md), implementação em curso. Tenancy continua dona da BU e grants; Inbox possui contato/conversa/rota; Canais possui conexão, credencial e identidades empresarial/provedor.
+
+O recurso empresarial qualificado conserva owner de BU após desconexão e atravessa adapters comprovados. Não vincular o mesmo número por oficial na BU A e Evolution na BU B. Claim e associação são atômicos; conflito falha fechado sem revelar outro tenant. Uma BU admite um recurso WhatsApp durável e múltiplas contas Instagram nesta fatia; múltiplos números WhatsApp exigem contrato próprio. Trocar a credencial não troca recurso ou owner. Nenhuma conexão cria permissões além dos grants existentes.
+
+Os endpoints legados de BU mantêm sua projeção de canais apenas nos dois bindings WhatsApp compatíveis do recurso único; o catálogo Instagram é paginado e pertence a Canais. Não usar disponibilidade para esconder ambiguidade nem hidratar todos os perfis na lista de BUs.

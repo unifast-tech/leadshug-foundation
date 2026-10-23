@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-23",
+  "profile": "strategic-cto",
+  "guardOutcome": "review required",
+  "unknownPath": "foundation_documentation/decisions/leadshug-multichannel-identity-decisions.md",
+  "adjudication": "allowed within explicitly approved SCOPE-01",
+  "basis": [
+    "approved TODO SCOPE-01 requires consolidating three named decisions in canonical owners",
+    "Expected Changed Paths explicitly admits decisions/leadshug-multichannel-identity-decisions.md",
+    "project_constitution hierarchy and evolution_lifecycle assign canonical decision ratification/consolidation to strategic stewardship",
+    "profile check marks unknown not forbidden and directs comparison to approved handoffs"
+  ],
+  "limits": "documentation governance only; no product/runtime edits and no Delphi rule change",
+  "rootProfile": "Strategic / CTO-Tech-Lead; product execution delegated to operational-coder"
+}

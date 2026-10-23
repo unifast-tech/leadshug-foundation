@@ -5,8 +5,8 @@ ST-IG-03 — Conectar Instagram e atender DMs na mesma BU dos WhatsApps
 
 ## Artifact Identity
 - **Artifact type:** `tactical_execution_contract`
-- **Artifact status:** Review
-- **Contract version:** 1.3 — approval-ready after architecture/critique and preapproval checks; no execution authorized, sem execução autorizada.
+- **Artifact status:** In-Progress
+- **Contract version:** 1.3 — APROVADO em2026-10-23; implementação governada, sem ativação real autorizada.
 - **Template:** copiado de `delphi-ai/templates/todo_template.md` em2026-10-23; seções aplicáveis preenchidas abaixo.
 
 ## Context
@@ -30,23 +30,20 @@ Este TODO define WHAT, exclusões e critérios de entrega. Planejamento e baseli
 
 ## Delivery Status Canon (Required)
 - **Current delivery stage:** Pending
-- **Qualifiers:** Blocked
-- **Next exact step:** solicitar APROVADO explícito para o contrato v1.3; depois registrar aprovação, recarregar regras e exigir authority normal go antes de código. Runtime real continua sob plano posterior próprio.
+- **Qualifiers:** none
+- **Next exact step:** CP1: RED causal de identidade/ownership/rota/cutover, seguido de schema/migration preservativos e validação descartável; sem acessar dados reais.
 
 ## Active Work State (Required While TODO Remains In `active/`)
-- **Work state:** blocked
-- **Why this state now:** planejamento/reviews concluídos; implementação ainda não autorizada, aguardando APROVADO explícito do contrato v1.3.
-- **Exit condition:** APROVADO explícito, registro de escopo/regras e authority normal go antes de execução.
+- **Work state:** implementation
+- **Why this state now:** usuário respondeu APROVADO ao contrato v1.3 em2026-10-23; execução por checkpoints, um writer, authority normal exigido antes do primeiro código.
+- **Exit condition:** todos os checkpoints e critérios validados, revisões/guards completos e prova runtime posterior explicitamente aprovada; nenhum fechamento parcial implícito.
 
-## Blocker Notes (Required if `Qualifiers` includes `Blocked`)
-- **Blocker:** APROVADO explícito ainda não recebido para Instagram; preparação e revisão não concedem autoridade de implementação.
-- **Why blocked now:** arquitetura/crítica e guards de planejamento concluídos; somente a decisão humana sobre o contrato está pendente. Elegibilidade/configuração reais pertencem à fase runtime posterior.
-- **What unblocks it:** APROVADO para implementação, seguido de ingestão e authority normal go; valores/saúde da instalação serão verificados no plano runtime próprio.
-- **Owner / source:** usuário como autoridade de aprovação; strategic steward mantém o contrato, operador atua no painel Meta só na fase própria.
-- **Last confirmed truth:** conta profissional e acesso disponíveis; app existente oferece Instagram; BU conjunta escolhida. Não reenviar perguntas já respondidas, migrar número ou desconectar WhatsApp.
+## Blocker Notes
+- **Blocker:** none for approved code/disposable synthetic validation. Human approval was received; no unresolved planning blocker.
+- **Runtime boundary:** ativação local real, leitura privada, Meta e prova física dependem do plano próprio posterior já exigido no contrato; não bloqueiam CP1..CP5.
 
 ## Scope
-- [ ] SCOPE-01 Consolidar, após aprovação, as propostas DEC-qualified-contact-conversation, DEC-business-resource-provider-identity e DEC-explicit-channel-routing nos owners canônicos, distinguindo arquitetura e entrega.
+- [x] SCOPE-01 Consolidar, após aprovação, as propostas DEC-qualified-contact-conversation, DEC-business-resource-provider-identity e DEC-explicit-channel-routing nos owners canônicos, distinguindo arquitetura e entrega.
 - [ ] SCOPE-02 Estabelecer contato local e identidade externa qualificada, recursos empresariais e rotas imutáveis; no máximo um recurso empresarial WhatsApp durável por BU (oficial+Evolution no mesmo número comprovado) e múltiplas contas Instagram; preservar IDs de BU/conversa/mensagem e identidades técnicas existentes.
 - [ ] SCOPE-03 Migrar consumidores de telefone/tipo para identidade/rota; BFF multicanal, API pública, Typebot e Consultar (lista/drilldown/CSV) preservados no subconjunto WhatsApp, sem Instagram acidental.
 - [ ] SCOPE-04 Conexão Instagram Login no app existente com configuração própria do produto, tentativas por ator/sessão/BU, autorização server-side, armazenamento cifrado, reautorização e desconexão locais explícitas.
@@ -315,7 +312,7 @@ Cada SCOPE/DOD/VAL terá linha com o texto exato do critério e prova específic
 | integrations-and-channels#templates | gestão e envio de templates WhatsApp | Preserve | nenhuma elegibilidade fictícia Instagram |
 
 ## Decision Baseline (Frozen Before Implementation)
-D-01..D-10 e as cláusulas normativas são o candidato revisado a baseline, não decisões aprovadas de implementação. Q-IG-01/02 foram reconvergidos para review; novos achados materiais impedem pedir APROVADO até resolvidos. A baseline publicada para review congela o pacote de diagnóstico/proposta, sem alterar esse fato.
+D-01..D-10 e as cláusulas normativas v1.3 estão FROZEN e APROVADAS para implementação pela resposta humana de2026-10-23. Receipt approval-execution-cp1.json preserva hash do TODO apresentado e baseline f4891ba1. Atualizações de status/ingestão registram a aprovação, sem mudar WHAT; novos achados materiais exigem reconvergência/renovação antes de executar o desvio.
 
 ## Architecture Change Governance (Required When This TODO Establishes, Corrects, or Supersedes Architecture)
 - **Applicability (`required|not_needed`):** required
@@ -505,7 +502,7 @@ Q-IG-01/02 estão reconvergidos para review; arquitetura/crítica e guards ainda
 - **Evidence / reference:** artifacts/reviews/leadshug-instagram-channel-20261023/evidence/critique-r2-result.json; terminal go, três achados r1 fechados no contrato v1.3 publicado.
 
 ## Rules Acknowledgement / Ingestion
-Planejadas; ingestão vinculante somente após APROVADO. Não há waiver.
+Ingestão vinculante recarregada após APROVADO em2026-10-23: fontes abaixo e workflow de execução/orquestração; executor recarrega o subconjunto do checkpoint antes de editar. Não há waiver.
 
 | Source | Why It Applies Now | Must Preserve | Must Avoid | Execution Impact |
 | --- | --- | --- | --- | --- |
@@ -528,7 +525,7 @@ Planejadas; ingestão vinculante somente após APROVADO. Não há waiver.
 - **Selected effort:** medium
 - **Proof mode:** declared
 - **Exception reason:** n/a
-- **Routing evidence:** artifacts/reviews/leadshug-instagram-channel-20261023/evidence/routing-planned-executor-r2.json; plano de lane validado, repetir antes de implementação.
+- **Routing evidence:** artifacts/reviews/leadshug-instagram-channel-20261023/evidence/routing-execution-cp1.json; actual go pós-aprovação, gpt-6-luna medium, um writer no checkout principal.
 - **Execution topology:** primary-checkout-single-writer
 - **Subagent / delegation authorization:** workflows de executor/review; um writer de produto serializado.
 - **Git isolation authorization:** not-authorized
@@ -639,9 +636,10 @@ Somente análise pública e guards documentais antes da aprovação. Depois: run
 - **Evidence / reference:** artifacts/reviews/leadshug-instagram-channel-20261023/evidence/assumption-code-manual-r4.json; leitura delimitada confirmou A-01..04, sem achado material. Guard determinístico artifacts/reviews/leadshug-instagram-channel-20261023/evidence/assumption-code-guard-r4.json retornou actual go; elegibilidade real segue runtime.
 
 ## Approval
-- **Approval status:** pending
-- **Approval reference:** none; “Pode fazer” autoriza preparar/revisar contrato somente.
-- **Approval scope:** nenhuma execução de produto/runtime ainda.
+- **Approval status:** APROVADO
+- **Approved by:** usuário desta conversa, em2026-10-23, resposta explícita `APROVADO` ao contrato Instagram v1.3.
+- **Approval reference:** artifacts/reviews/leadshug-instagram-channel-20261023/evidence/approval-execution-cp1.json; hash do pacote apresentado e baseline revisada preservados nesse receipt.
+- **Approval scope:** SCOPE-01..08, D-01..10, DOD/VAL e cláusulas normativas v1.3; implementação API/Web, documentação e validação descartável sintética exclusivamente nos caminhos admitidos. Não autoriza arquivos privados/dados reais, ativação local, Meta/envios externos, Git de produto, gitlinks, worktrees/cópias, produção ou App Review; plano runtime próprio continua obrigatório.
 - **Renewed approval trigger:** mudança material de WHAT/decisões/validação/escopo ou qualquer caminho não admitido.
 
 
@@ -801,3 +799,22 @@ As três correções abaixo integram o parecer changes_required de critique-r1-r
 Arquitetura r2 e crítica r2 retornaram go. Crítica revisou as sete lentes e fechou os três findings r1. Coherence e scope-drift retornaram go; nenhuma das23seções materiais mudou após a baseline revisada. Authority preflight é estrutural, não execução. Full diff guard/runtime/API/Meta/provas físicas ainda não foram executados nesta preparação e permanecem para suas fases próprias. APROVADO do contrato não autoriza leitura privada, banco real, callbacks, envio externo, Git de produto, produção ou App Review.
 
 Authority preflight final: `artifacts/reviews/leadshug-instagram-channel-20261023/evidence/authority-preflight-final-r4.json`, outcome preflight-go, execution_authority_granted=false. Aprovação humana permanece pendente.
+
+## Execution Checkpoints — approved v1.3
+
+| Checkpoint | State | Owner / next proof |
+| --- | --- | --- |
+| CP1 Identity/route/state cutover | running | serial executor; RED/GREEN + disposable PostgreSQL proof |
+| CP2 OAuth/ingress | pending | follows CP1 accepted checkpoint |
+| CP3 Channel/policy/consumers | pending | shared sender/acceptance only |
+| CP4 UI/CI/browser | pending | profile handoff for CI/runtime tooling |
+| CP5 independent audits | pending | consolidated source and ALL evidence |
+| CP6 local real rollout/proof | pending separate plan | approval later; no real runtime/private inputs now |
+
+## CP1 execution notes
+
+- Aprovação original conferida contra o seal v1.3 antes de alterar status; authority normal go em authority-execution-cp1.json e roteamento de código/validação go.
+- Root atua em Strategic/CTO para documentação; `/root/instagram_cp1_executor` é o único writer de produto, gpt-6-luna medium, Operational/Coder. Nenhum worktree, cópia ou Git de produto.
+- SCOPE-01 documental concluído: três decisões Accepted e todos os alvos canônicos consolidados, com receipt `artifacts/reviews/leadshug-instagram-channel-20261023/evidence/canonical-consolidation-cp1.json`. Lifecycle exit0 após corrigir a forma das referências de evidência. Isso não comprova migração/schema ou Instagram operando.
+- Profile classifier não catalogava decisions/** como regra explícita: resultado review-required adjudicado pelo SCOPE-01 e caminho exato já aprovado, sem ampliar escopo ou alterar o classificador; receipt próprio.
+- CP1 de código está em andamento; RED/GREEN e prova PostgreSQL ainda pendentes. Demais critérios continuam abertos.

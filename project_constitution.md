@@ -36,7 +36,7 @@ Quando houver conflito, a regra mais específica do produto prevalece sobre a re
 
 ## Multichannel adoption boundary
 
-A decisão [DEC-bu-operational-multichannel](decisions/leadshug-multichannel-identity-decisions.md), confirmada pelo usuário em2026-10-23, estabelece a arquitetura alvo de BU operacional. O produto entregue e os contratos ST-CON existentes continuam limitados às implementações WhatsApp. Evolução de identidade/schema, cadastro Instagram, rotas de resposta e novos endpoints dependem de seus TODOs, revisão, aprovação e evidências; atualizar a definição não comprova migração nem disponibilidade. As demais decisões de identidade e roteamento nesse registro continuam propostas.
+A decisão [DEC-bu-operational-multichannel](decisions/leadshug-multichannel-identity-decisions.md), confirmada pelo usuário em2026-10-23, estabelece a arquitetura alvo de BU operacional. O produto entregue e os contratos ST-CON existentes continuam limitados às implementações WhatsApp. Evolução de identidade/schema, cadastro Instagram, rotas de resposta e novos endpoints dependem de seus TODOs, revisão, aprovação e evidências; atualizar a definição não comprova migração nem disponibilidade. As decisões de contato qualificado, recurso empresarial/provedor e rota explícita foram ratificadas pelo APROVADO do [ST-IG-03 v1.3](todos/active/features/TODO-leadshug-instagram-channel.md) em2026-10-23 e consolidadas nos owners. Sua implementação está em curso; a capacidade entregue permanece a provada nos módulos, sem inferir migração ou operação Instagram por este aceite.
 
 ## TODO governance
 
@@ -71,3 +71,13 @@ Ferramentas, agentes e fornecedores concretos são adapters desses papéis, não
 ## Explicit non-goals
 
 Não ativar capacidades de stack não declaradas no topology do LeadsHug sem decisão documental específica.
+
+## Identidade e rota multicanal — arquitetura aprovada ST-IG-03
+
+- Contato e conversa usam IDs locais por BU; identidades externas são qualificadas por plataforma, namespace e escopo. Não unir pessoas entre Instagram/WhatsApp ou contas por similaridade de metadados.
+- Recurso empresarial tem owner durável único no LeadsHug, inclusive atravessando adapters. Identidades técnicas de provedor e deduplicação histórica permanecem distintas. Nesta fatia, uma BU conserva um recurso WhatsApp durável e admite várias contas Instagram; ampliar números WhatsApp exige contrato próprio.
+- Rota é imutável e prova mesma BU, contato, destinatário e recurso da conexão capturada. Consumidores dependem de Channel e política abstratos; composição registra os concretos. Sem primeiro canal pronto, fallback silencioso ou sender paralelo.
+- Contextos novos são versionados; dados e receipts antigos mantêm IDs, snapshots, fingerprints e deadlines. Recuperação v1 é leitura/conclusão local comprovada, sem novo HTTP ou writer canônico v1.
+- Instagram desta fatia é DM textual recebida primeiro e resposta humana. API v1, Typebot e Consultar por telefone continuam WhatsApp-only; modelo aprovado não habilita bots, merge, mídia ou histórico Instagram.
+
+Os contratos detalhados pertencem a [Inbox](modules/inbox-and-conversations.md) e [Canais](modules/integrations-and-channels.md). Provas de implementação/runtime permanecem pendentes no TODO, com rollout real sujeito ao plano posterior.

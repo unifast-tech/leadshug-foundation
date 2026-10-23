@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-23",
+  "criterion": "SCOPE-01",
+  "outcome": "canonical consolidation complete",
+  "humanAuthority": "APROVADO ST-IG-03 v1.3 recorded in approval-execution-cp1.json",
+  "decisions": [
+    "DEC-qualified-contact-conversation",
+    "DEC-business-resource-provider-identity",
+    "DEC-explicit-channel-routing"
+  ],
+  "state": "Accepted and consolidated as target architecture, product implementation in progress",
+  "files": {
+    "domain_entities.md": "e24222d8a7dae9d174c099f6bb1eaf996adc8df320429563e4dccd8901518c4f",
+    "project_constitution.md": "3dc38716b44d7b769e35a82a1501c6af96a88eb6c6ba723a5ed1b7ad3cc42ee8",
+    "policies/scope_subscope_governance.md": "3dea5e473ce63c9c9acd8289016c0d95391e1d90b691292b55c1d52af81aaf6d",
+    "modules/identity-and-tenancy.md": "2a96578f4b7d141df9ddc3ba1685e45732bcce9f87acc86366668a9fa95149a3",
+    "modules/inbox-and-conversations.md": "59834e1de45196d1a1d7d84b21ce1e6af9a0455564b4d48d2c0c44c1ec3aea98",
+    "modules/integrations-and-channels.md": "d2de7295b69da9e183cfbe6eadf07ef12cecb49d22af601eb4269c86ef2fba25",
+    "decisions/leadshug-multichannel-identity-decisions.md": "95d7e01b00ea77c7e6d2e57e53da869d0d5c5b215dfb481800a3abf7bcce76c6"
+  },
+  "validation": {
+    "lifecycle": "exit0 after canonical evidence syntax correction",
+    "profileUnknown": "decisions path adjudicated against explicit SCOPE-01, see profile-consolidation-adjudication-cp1.json"
+  },
+  "limits": "no product/runtime/physical proof claimed"
+}

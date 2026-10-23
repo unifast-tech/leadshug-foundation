@@ -122,3 +122,17 @@ Availability is safe local metadata, separate from authorization and dispatch re
 Inbox shows fixed truthful explanations, disables unavailable sends, retains draft on uncertainty/local incomplete/error, and never automatically resends. Monotonic BU/conversation generations fence late completions, including A→B→A with a newly edited identical draft. Composer duplicate triggers are dropped while a send is in flight.
 
 Contrato de campos e erros: [canais e envio comum](integrations-and-channels.md#channel-abstrato-e-envio-comum--st-con-06).
+
+## Identidade multicanal e rota — contrato Instagram ST-IG-03
+
+**Estado:** arquitetura aprovada no [TODO v1.3](../todos/active/features/TODO-leadshug-instagram-channel.md) por APROVADO em2026-10-23; implementação e provas pendentes. Essa seção define o alvo ratificado, sem reclassificar a capacidade WhatsApp já entregue como Instagram implementado.
+
+Contato é local da BU com ID estável; ContactIdentity contém plataforma/namespace/escopo/peer opaco. WhatsApp pessoa usa identidade E.164 qualificada, compartilhável por oficial/Evolution comprovados; grupo usa namespace próprio. Instagram inclui contexto do app/API e conta profissional atendida. Nenhum merge por username/nome/número textual; uma conversa pertence ao par BU/contato local.
+
+ConversationRoute é imutável e prova mesma BU e contato entre conversa e identidade destinatária, mais recurso empresarial compatível com conexão/provider. O envio captura rota/conexão/recurso/geração/credencial num contexto v2; peer é resolvido no servidor. Novo ingresso por outra rota não redireciona rascunho ou envio em andamento. Sem interação selecionada e com mais de uma rota, exigir escolha explícita. Não escolher primeiro canal pronto nem trocar de plataforma por falha.
+
+ChannelEligibilityPolicy resolve elegibilidade de reply/initial/automation sem acoplamento do sender à política concreta. O único OutboundService e MessageAcceptanceService conservam claims, autoria, unread, receipts e dedup por recurso do provedor/ID externo. Instagram só oferece texto e resposta a IN textual assinada, até24hdo timestamp original qualificado; echo/read/out/receivedAt não abrem janela. Initial/automation Instagram são desabilitados antes de reservar ou chamar Typebot.
+
+A migração conserva IDs de BU/conversa/mensagem/provider e bytes lógicos de request/fingerprint/contexto/snapshot/nonce/deadlines v1. Não tocar updatedAt usado pelo CAS nem inventar rota histórica. Reader v1 só lê/reconcilia fatos e completa localmente aceites comprovados; PREPARED/SENDING/incertos preservam as exclusões e prazos originais conforme matriz do TODO. Nenhuma recuperação v1 repete provider HTTP ou cria novo writer v1; associação desconhecida impede adoção afetada.
+
+API v1, Typebot e Consultar/lista/drilldown/CSV continuam WhatsApp-only, usando identidades qualificadas e recurso empresarial comprovado. Instagram aparece no Atendimento pela própria conta/rota; conta só Instagram não produz linha telefônica no Consultar. O ingresso Instagram não ativa webhook de saída para parceiro. Lista de até50conversas usa batch apenas de IDs relevantes, sem HTTP por conversa; catálogos de conexões são paginados. Contexto e ações React ficam presos a BU/conversa/rota/geração, incluindo A→B→A e respostas atrasadas.

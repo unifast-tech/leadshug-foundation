@@ -2,6 +2,8 @@
 
 **Version:** 1.0. **Data:** 2026-10-23. **Perfil:** Strategic / CTO-Tech-Lead. Documento de proposta técnica ST-IG-01, sem autoridade de execução. [Brief de origem](../feature-briefs/leadshug-instagram-channel-20261023.md).
 
+**Disposição posterior:** proposta ratificada pelo APROVADO do [TODO ST-IG-03 v1.3](../../todos/active/features/TODO-leadshug-instagram-channel.md) em2026-10-23, com decisões consolidadas nos owners canônicos. O texto abaixo conserva a análise de origem; implementação e provas são acompanhadas pelo TODO, ainda em curso.
+
 ## Direção humana confirmada e limites
 
 O usuário confirmou: **a mesma BU deve reunir WhatsApp e Instagram, com os mesmos vendedores e permissões**. A BU representa a operação de atendimento; número e perfil pertencem às conexões. Há conta profissional Instagram de teste disponível e acesso humano para autorizá-la. A configuração do app Meta e as permissões efetivas ainda não foram verificadas.
