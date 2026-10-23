@@ -1,0 +1,88 @@
+{
+  "artifact_kind": "assumption_code_coherence_guard",
+  "todo_path": "/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/todos/active/features/TODO-leadshug-instagram-channel.md",
+  "repo_root": "/mnt/c/unifast/leadshug/leadshug_now_docker",
+  "overall_outcome": "go",
+  "live_assumption_ids": [
+    "A-01"
+  ],
+  "gate": {
+    "section_present": true,
+    "decision": "required",
+    "status": "no_material_findings",
+    "evidence_reference": "artifacts/reviews/leadshug-instagram-channel-20261023/evidence/assumption-code-manual-r4.json; leitura delimitada confirmou A-01..04, sem achado material. Guard determin\u00edstico de anchors a seguir; elegibilidade real segue runtime.",
+    "waiver_reference": "missing"
+  },
+  "assumptions": [
+    {
+      "assumption_id": "A-01",
+      "handling": "Keep as Assumption",
+      "evidence": "api-app/src/domain/channels/transport/channel.ts; api-app/src/domain/inbox/outbound.service.ts; api-app/src/domain/inbox/message-acceptance.service.ts",
+      "path_tokens": [
+        "api-app/src/domain/channels/transport/channel.ts",
+        "api-app/src/domain/inbox/outbound.service.ts",
+        "api-app/src/domain/inbox/message-acceptance.service.ts"
+      ],
+      "resolved_paths": [
+        "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app/src/domain/channels/transport/channel.ts",
+        "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app/src/domain/inbox/outbound.service.ts",
+        "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app/src/domain/inbox/message-acceptance.service.ts"
+      ],
+      "resolved_code_paths": [
+        "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app/src/domain/channels/transport/channel.ts",
+        "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app/src/domain/inbox/outbound.service.ts",
+        "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app/src/domain/inbox/message-acceptance.service.ts"
+      ]
+    },
+    {
+      "assumption_id": "A-02",
+      "handling": "Promote to Decision",
+      "evidence": "api-app/src/integrations/channels/prisma-channel-resolver.ts; api-app/prisma/schema.prisma; web-app/src/telas/Numeros.tsx",
+      "path_tokens": [
+        "api-app/src/integrations/channels/prisma-channel-resolver.ts",
+        "web-app/src/telas/Numeros.tsx"
+      ],
+      "resolved_paths": [
+        "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app/src/integrations/channels/prisma-channel-resolver.ts",
+        "/mnt/c/unifast/leadshug/leadshug_now_docker/web-app/src/telas/Numeros.tsx"
+      ],
+      "resolved_code_paths": [
+        "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app/src/integrations/channels/prisma-channel-resolver.ts",
+        "/mnt/c/unifast/leadshug/leadshug_now_docker/web-app/src/telas/Numeros.tsx"
+      ]
+    },
+    {
+      "assumption_id": "A-03",
+      "handling": "Promote to Decision",
+      "evidence": "api-app/src/surfaces/public/conversations.controller.ts; api-app/src/domain/inbox/incoming.service.ts",
+      "path_tokens": [
+        "api-app/src/surfaces/public/conversations.controller.ts",
+        "api-app/src/domain/inbox/incoming.service.ts"
+      ],
+      "resolved_paths": [
+        "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app/src/surfaces/public/conversations.controller.ts",
+        "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app/src/domain/inbox/incoming.service.ts"
+      ],
+      "resolved_code_paths": [
+        "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app/src/surfaces/public/conversations.controller.ts",
+        "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app/src/domain/inbox/incoming.service.ts"
+      ]
+    },
+    {
+      "assumption_id": "A-04",
+      "handling": "Promote to Decision",
+      "evidence": "api-app/src/surfaces/webhooks/meta.controller.ts \u00e9 somente WhatsApp; primary-instagram-contract-r1.json e confirma\u00e7\u00e3o do t\u00edtulo Instagram Login",
+      "path_tokens": [
+        "api-app/src/surfaces/webhooks/meta.controller.ts",
+        "primary-instagram-contract-r1.json"
+      ],
+      "resolved_paths": [
+        "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app/src/surfaces/webhooks/meta.controller.ts"
+      ],
+      "resolved_code_paths": [
+        "/mnt/c/unifast/leadshug/leadshug_now_docker/api-app/src/surfaces/webhooks/meta.controller.ts"
+      ]
+    }
+  ],
+  "issues": []
+}

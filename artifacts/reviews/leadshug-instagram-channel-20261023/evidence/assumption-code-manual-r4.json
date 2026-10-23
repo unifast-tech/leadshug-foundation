@@ -1,0 +1,53 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-23",
+  "method": "bounded source reads, distinct from deterministic anchor guard",
+  "outcome": "no_material_findings",
+  "assumptions": {
+    "A-01": {
+      "outcome": "code-coherent",
+      "evidence": [
+        {
+          "path": "api-app/src/domain/channels/transport/channel.ts",
+          "facts": "Channel.sendMessage/supportKinds and ChannelResolver are existing abstraction; persisted context currently v1 without new contact/route fields"
+        },
+        {
+          "path": "api-app/src/domain/inbox/outbound.service.ts",
+          "facts": "single existing sender uses resolver/admission/acceptance and original accepted-operation recovery; OfficialChannelWindowPolicy coupling is explicitly to be replaced by narrow policy port"
+        },
+        {
+          "path": "api-app/src/domain/inbox/message-acceptance.service.ts",
+          "facts": "shared accept/acceptInTransaction own Message and unique provider-resource/external-id key, with receipt confirmation only on accepted inbound"
+        }
+      ]
+    },
+    "A-02": {
+      "outcome": "current-state verified; promoted target decision",
+      "evidence": [
+        "api-app/prisma/schema.prisma",
+        "api-app/src/integrations/channels/prisma-channel-resolver.ts",
+        "web-app/src/telas/Numeros.tsx"
+      ],
+      "facts": "current BU.phone/contact string/type-based bindings require actual model+consumer cutover; no claim they already support IG"
+    },
+    "A-03": {
+      "outcome": "current-state verified; promoted bounded consumer decision",
+      "evidence": [
+        "api-app/src/surfaces/public/conversations.controller.ts",
+        "api-app/src/domain/inbox/incoming.service.ts",
+        "api-app/src/domain/inbox/historico.service.ts",
+        "api-app/src/surfaces/bff/me.controller.ts"
+      ],
+      "facts": "phone-addressed APIv1/Typebot/Consultar stay WA; eager BU producer explicitly bounded by current proposal; dormant partner webhook not activated"
+    },
+    "A-04": {
+      "outcome": "protocol target verified; live eligibility explicitly unknown",
+      "evidence": [
+        "api-app/src/surfaces/webhooks/meta.controller.ts",
+        "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/primary-instagram-contract-r1.json"
+      ],
+      "facts": "current Meta ingress is WhatsApp-specific; separate IG route/config proposed; primary documentation and user title confirmation do not prove actual grants or runtime"
+    }
+  },
+  "limitations": "static evidence; no implementation or tests/runtime/provider proof; final guard after critique convergence"
+}

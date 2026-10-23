@@ -6,7 +6,7 @@ ST-IG-03 — Conectar Instagram e atender DMs na mesma BU dos WhatsApps
 ## Artifact Identity
 - **Artifact type:** `tactical_execution_contract`
 - **Artifact status:** Review
-- **Contract version:** 1.3 — critique findings integrated, awaiting re-review, sem execução autorizada.
+- **Contract version:** 1.3 — approval-ready after architecture/critique and preapproval checks; no execution authorized, sem execução autorizada.
 - **Template:** copiado de `delphi-ai/templates/todo_template.md` em2026-10-23; seções aplicáveis preenchidas abaixo.
 
 ## Context
@@ -31,18 +31,18 @@ Este TODO define WHAT, exclusões e critérios de entrega. Planejamento e baseli
 ## Delivery Status Canon (Required)
 - **Current delivery stage:** Pending
 - **Qualifiers:** Blocked
-- **Next exact step:** publicar a baseline reconvergida v1.3 e rerodar crítica independente/Plan Review; depois executar coherence/scope/authority preflight antes de pedir aprovação.
+- **Next exact step:** solicitar APROVADO explícito para o contrato v1.3; depois registrar aprovação, recarregar regras e exigir authority normal go antes de código. Runtime real continua sob plano posterior próprio.
 
 ## Active Work State (Required While TODO Remains In `active/`)
 - **Work state:** blocked
-- **Why this state now:** arquitetura r2go; três achados da crítica r1 integrados ao candidato v1.3 aguardam re-review e guards.
-- **Exit condition:** plano reconvergido, dependências pré-aprovação resolvidas, guards preflight-go e aprovação explícita antes de execução.
+- **Why this state now:** planejamento/reviews concluídos; implementação ainda não autorizada, aguardando APROVADO explícito do contrato v1.3.
+- **Exit condition:** APROVADO explícito, registro de escopo/regras e authority normal go antes de execução.
 
 ## Blocker Notes (Required if `Qualifiers` includes `Blocked`)
-- **Blocker:** crítica/Plan Review e preflight finais ainda não concluídos; não há autorização de implementação.
-- **Why blocked now:** protocolo e arquitetura revisados; não pedir aprovação sem crítica/guards finais nem inferir permissões da conta real.
-- **What unblocks it:** crítica da baseline v1.3 e guards de preapproval; valores/saúde da instalação serão verificados na fase runtime própria.
-- **Owner / source:** strategic steward para contrato/reviews; operador para painel Meta.
+- **Blocker:** APROVADO explícito ainda não recebido para Instagram; preparação e revisão não concedem autoridade de implementação.
+- **Why blocked now:** arquitetura/crítica e guards de planejamento concluídos; somente a decisão humana sobre o contrato está pendente. Elegibilidade/configuração reais pertencem à fase runtime posterior.
+- **What unblocks it:** APROVADO para implementação, seguido de ingestão e authority normal go; valores/saúde da instalação serão verificados no plano runtime próprio.
+- **Owner / source:** usuário como autoridade de aprovação; strategic steward mantém o contrato, operador atua no painel Meta só na fase própria.
 - **Last confirmed truth:** conta profissional e acesso disponíveis; app existente oferece Instagram; BU conjunta escolhida. Não reenviar perguntas já respondidas, migrar número ou desconectar WhatsApp.
 
 ## Scope
@@ -368,19 +368,19 @@ D-01..D-10 e as cláusulas normativas são o candidato revisado a baseline, não
 - **Gate decision:** required
 - **Trigger stage:** before the first planning-side review or guard run
 - **Baseline branch:** main
-- **Baseline commit:** c59c3782a362a923f8b6efe3432b31e27563ad8d
+- **Baseline commit:** f4891ba1bddec62737f5624cac8d4a32224006d7
 - **Baseline push reference:** origin/main
 - **Gate status:** no_material_findings
-- **Findings summary:** baseline v1.2 publicada após r2go e alinhamento das projeções; crítica permitida, sem execução de produto.
-- **Evidence / reference:** artifacts/reviews/leadshug-instagram-channel-20261023/evidence/review-baseline-freeze-r3.json
+- **Findings summary:** baseline v1.3 publicada após integração dos três achados de crítica r1; re-review permitido, sem execução de produto.
+- **Evidence / reference:** artifacts/reviews/leadshug-instagram-channel-20261023/evidence/review-baseline-freeze-r4.json
 - **Pre-freeze packet-prep rule:** prepared-pre-freeze não equivale a passed; guards formais só depois do commit/push.
 
 ## Gate: Review Scope Drift
 - **Gate decision:** required
 - **Baseline source:** Review Baseline Freeze -> Baseline commit
 - **Guard command:** `python3 delphi-ai/tools/review_scope_drift_guard.py --todo foundation_documentation/todos/active/features/TODO-leadshug-instagram-channel.md`
-- **Gate status:** not_run
-- **Evidence / reference:** executar após reconvergência.
+- **Gate status:** no_material_findings
+- **Evidence / reference:** artifacts/reviews/leadshug-instagram-channel-20261023/evidence/review-scope-guard-r4.json; actual go,23seções materiais comparadas e0alteradas contra baseline publicada f4891ba1.
 
 ## Questions To Close
 - Q-IG-01/02 reconvergidos para review: verificar suficiência na nova rodada. Detalhe físico de classes sem efeito no contrato não vira pergunta de produto.
@@ -442,16 +442,16 @@ Contrato de API proposto e modelo físico a seguir; lista estrita e herança pú
 Local primeiro, projeto runtime existente `leadshug_channels_local`; validação descartável `leadshug_channels_validation`, conforme runner. NÃO executar runtime nesta tarefa. Ativação, acesso opaco ao .env.testing, migração em DB real e callbacks/túneis dependem de plano próprio posterior. Plano deverá provar preservação de peers/volumes, snapshots/admissões pendentes, versões/checksums e abort-before-write em conflito. Lock timeout5s/statement60s nos comandos de migração; nenhum reset. Aprovação de código não publica app Meta nem autoriza produção.
 
 ## Plan Review Gate
-**Status:** arquitetura r2go, findings r1/r2 integrados; crítica r1 realizou sete lentes e exigiu três correções, agora integradas; rerun pendente. Não declarar passado antes da rodada reconvergida.
+**Status:** arquitetura r2go, findings r1/r2 integrados; crítica r2 terminal go após as três correções r1; sete lentes revisadas, sem achado material pendente. Evidência critique-r2-result.json; isso não prova implementação.
 
 ### Review Sections
-- [ ] Architecture
-- [ ] Code Quality
-- [ ] Tests
-- [ ] Performance
-- [ ] Security
-- [ ] Elegance
-- [ ] Structural Soundness
+- [x] Architecture
+- [x] Code Quality
+- [x] Tests
+- [x] Performance
+- [x] Security
+- [x] Elegance
+- [x] Structural Soundness
 
 ### Issue Cards
 | Issue ID / evidence / why now | Option A — recommended | Option B | Option C — do nothing | Recommendation |
@@ -501,8 +501,8 @@ Q-IG-01/02 estão reconvergidos para review; arquitetura/crítica e guards ainda
 - **Critique isolation mode:** fresh internal no-context reviewer
 - **Internal reviewer mandate:** required; não implementing agent; wait status-based, external provider não satisfaz gate.
 - **Canonical multi-lane audit protocol (when required):** audit-protocol-triple-review, posterior à implementação e adicional à crítica.
-- **Critique status:** findings_integrated
-- **Evidence / reference:** artifacts/reviews/leadshug-instagram-channel-20261023/evidence/critique-r1-result.json; três achados integrados ao candidato v1.3, rerun após publicar baseline.
+- **Critique status:** no_material_findings
+- **Evidence / reference:** artifacts/reviews/leadshug-instagram-channel-20261023/evidence/critique-r2-result.json; terminal go, três achados r1 fechados no contrato v1.3 publicado.
 
 ## Rules Acknowledgement / Ingestion
 Planejadas; ingestão vinculante somente após APROVADO. Não há waiver.
@@ -557,9 +557,9 @@ Planned: telefone sintético, segredo global, provider branch nos consumers, fal
 
 ## TODO Closeout Disposition
 - **Disposition:** blocked
-- **Disposition reason:** contrato em preparação e revisão; não implementado.
+- **Disposition reason:** contrato v1.3 revisado e pronto para aprovação; não implementado.
 - **Post-commit/push status:** pending
-- **Next path/status action:** manter ativo; publicar baseline v1.3, concluir crítica/guards antes de aprovação.
+- **Next path/status action:** manter ativo; aguardar APROVADO explícito e authority normal go para iniciar implementação.
 
 ## Security Risk Assessment
 - **Risk level:** high
@@ -634,9 +634,9 @@ Somente análise pública e guards documentais antes da aprovação. Depois: run
 
 ## Gate: Assumption Code Coherence
 - **Gate decision:** required
-- **Gate status:** not_run
+- **Gate status:** no_material_findings
 - **Guard command:** `python3 delphi-ai/tools/assumption_code_coherence_guard.py --todo foundation_documentation/todos/active/features/TODO-leadshug-instagram-channel.md`
-- **Evidence / reference:** após reviews convergirem; a estrutura de protocolo já tem fonte primária e D-05; permissões reais pertencem ao gate runtime.
+- **Evidence / reference:** artifacts/reviews/leadshug-instagram-channel-20261023/evidence/assumption-code-manual-r4.json; leitura delimitada confirmou A-01..04, sem achado material. Guard determinístico artifacts/reviews/leadshug-instagram-channel-20261023/evidence/assumption-code-guard-r4.json retornou actual go; elegibilidade real segue runtime.
 
 ## Approval
 - **Approval status:** pending
@@ -779,11 +779,11 @@ Essa disposição resolve a proposta documental para a nova rodada; não muda o 
 | IG-ARCH-R2-01 | Integrated | closed | chaves duráveis OAuth/initial, concorrência ordinary preservada e BCI delimitado; correção inspecionada pelo reviewer |
 | IG-ARCH-R2-02 | Integrated | closed | limites Instagram separados de WhatsApp4096/parser; correção inspecionada pelo reviewer |
 
-Parecer terminal r2go, estático e sem execução; receipt architecture-r2-result.json. Crítica independente e guards de aprovação ainda pendentes.
+Parecer terminal r2go, estático e sem execução; receipt architecture-r2-result.json. Crítica r2go e guards de coerência/escopo concluídos posteriormente, com receipts próprios; nenhuma autorização de implementação.
 
 ## Normative critique r1 integration — candidate v1.3
 
-As três correções abaixo integram o parecer changes_required de critique-r1-result.json; nenhum teste/código foi editado. Publicar esta baseline e rerodar crítica antes de aprovação.
+As três correções abaixo integram o parecer changes_required de critique-r1-result.json; nenhum teste/código foi editado. Baseline v1.3 publicada em f4891ba1 e crítica r2go concluída posteriormente; ver receipt próprio.
 
 - IG-CRIT-R1-01: seis arquivos exatos de regressão admitidos acima. conversation-start e dispatch-admission deixam de ter freeze final byte-exact, mas hashes originais continuam fatos de baseline. Só fixtures canônicas, lookup qualificado e contextos versionados podem ser adaptados; preservar todos os cenários, asserts, contadores e evidência causal. Casos v1 deliberados continuam como cutover, não writers novos. Os outros quatro arquivos recebem apenas fixtures, exceto historico que também testa a fronteira explícita abaixo. Não interceptar Prisma nem criar writer/trigger legado para satisfazer fixtures obsoletas. A política v1.1 de preservação governa essas exceções; as observações anteriores não são apagadas.
 - IG-CRIT-R1-02: GET /api/bff/business-units e seu detalhe preservam a projeção legacy channels/canais apenas WhatsApp, no máximo os dois bindings compatíveis do recurso empresarial durável único. Resolver bindings atuais/proveniência antes de readiness; desconectado não é apagado para esconder ambiguidade. Histórico de bindings aposentados não vira catálogo implícito. Incompatibilidade/cardinalidade excedida é conflito explícito, sem take/slice silencioso. me.controller.ts é admitido somente para essa projeção limitada; grants/criação e outras responsabilidades ficam preservadas. A UI Instagram usa channel-connections paginado, sem hidratar toda a conta via business-units. Testes provam zero contas Instagram nessa projeção, inclusive com12contas, consultas limitadas e ausência de HTTP externo.
@@ -792,6 +792,12 @@ As três correções abaixo integram o parecer changes_required de critique-r1-r
 
 | Finding ID | Resolution | Status | Evidence |
 | --- | --- | --- | --- |
-| IG-CRIT-R1-01 | Integrated | awaiting re-review | seis caminhos exatos e política de preservação v1.1 |
-| IG-CRIT-R1-02 | Integrated | awaiting re-review | produtor BU legacy limitado e Instagram paginado |
-| IG-CRIT-R1-03 | Integrated | awaiting re-review | Consultar WhatsApp qualificado, testes de isolamento/collision |
+| IG-CRIT-R1-01 | Integrated | closed by critique r2 | seis caminhos exatos e política de preservação v1.1 |
+| IG-CRIT-R1-02 | Integrated | closed by critique r2 | produtor BU legacy limitado e Instagram paginado |
+| IG-CRIT-R1-03 | Integrated | closed by critique r2 | Consultar WhatsApp qualificado, testes de isolamento/collision |
+
+## Approval Readiness Evidence — v1.3
+
+Arquitetura r2 e crítica r2 retornaram go. Crítica revisou as sete lentes e fechou os três findings r1. Coherence e scope-drift retornaram go; nenhuma das23seções materiais mudou após a baseline revisada. Authority preflight é estrutural, não execução. Full diff guard/runtime/API/Meta/provas físicas ainda não foram executados nesta preparação e permanecem para suas fases próprias. APROVADO do contrato não autoriza leitura privada, banco real, callbacks, envio externo, Git de produto, produção ou App Review.
+
+Authority preflight final: `artifacts/reviews/leadshug-instagram-channel-20261023/evidence/authority-preflight-final-r4.json`, outcome preflight-go, execution_authority_granted=false. Aprovação humana permanece pendente.
