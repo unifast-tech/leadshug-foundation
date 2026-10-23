@@ -38,7 +38,7 @@ Este v1.1 substitui a autoridade ativa da minuta revisada em 2026-10-19. O origi
 ## Implementation Intent
 
 - **Current delivery:** implementar o contrato v1.1 aprovado de abertura/reuso BU+contato e primeiro envio textual/template oficial elegível, com intenção durável e recuperação sem reenvio cego; etapa Pending até assurance e prova assistida.
-- **Planned next steps:** obter a aprovação específica do plano local E74 e da inspeção canônica limitada; depois executar preflight/ativação/prova assistida e gates finais. Revisões r7 concluídas; patch dos dois módulos revisado e pronto para aplicação após a prova local real.
+- **Planned next steps:** concluir a prova assistida de primeiro envio e reply nos dois canais no ambiente E75 já aprovado e ativado; depois consolidar módulos e executar os gates finais. Revisões r7 concluídas; patch dos dois módulos revisado e pronto para aplicação após a prova local real.
 - **Anticipatory implementation authorized now:** none.
 - **Rationale:** reaproveitar os owners existentes de conversa, transporte, aceitação de Message e catálogo. O fluxo novo coordenará uma intenção durável; não duplicará sender, aceitação ou catálogo.
 
@@ -46,12 +46,12 @@ Este v1.1 substitui a autoridade ativa da minuta revisada em 2026-10-19. O origi
 
 - **Current delivery stage:** `Pending`
 - **Qualifiers:** `none`
-- **Next exact step:** obter do operador a confirmação do callback/política Meta no HTTPS E75 validado e então executar pelo operador primeiro texto não oficial e primeiro template oficial aprovado, com replies. Guard canônico único já autorizado reservado ao fechamento após a prova; sem nova aprovação para esse plano.
+- **Next exact step:** aguardar o resultado do primeiro texto não oficial iniciado pelo operador via Nova conversa na Local Test BU; em seguida testar primeiro template oficial aprovado e respectivos replies. O operador confirmou a validação Meta do callback E75. Guard canônico único já autorizado reservado ao fechamento após a prova; sem nova aprovação para esse plano.
 
 ## Active Work State (Required While TODO Remains In `active/`)
 
 - **Work state:** `review`
-- **Why this state now:** código/testes E74 congelados e967pass; todas as três revisões r7 terminaram sem novo defeito material de implementação/testes. Full259source pós-review confere; patch dos dois módulos está revisado e pronto; aplicação canônica permanece adiada até a evidência local real. A consistência1:1 do alvo proposto está registrada abaixo. Runtime preservado/prova assistida/fullguard privado/review final continuam abertos; plano E75 aprovado e ativado; aguardando confirmação do callback Meta e prova assistida de primeiro envio. Os desvios de sequência/descrição de evidência estão registrados para review final.
+- **Why this state now:** código/testes E74 congelados e967pass; todas as três revisões r7 terminaram sem novo defeito material de implementação/testes. Full259source pós-review confere; patch dos dois módulos está revisado e pronto; aplicação canônica permanece adiada até a evidência local real. A consistência1:1 do alvo proposto está registrada abaixo. Runtime preservado/prova assistida/fullguard privado/review final continuam abertos; plano E75 aprovado e ativado; callback Meta validado conforme confirmação humana; aguardando prova assistida de primeiro envio. Os desvios de sequência/descrição de evidência estão registrados para review final.
 - **Exit condition:** implementação e todas as evidências/reviews/gates de entrega aprovados; estágio continua Pending até os critérios locais reais, sem claim de entrega por aprovação.
 
 ## Scope
@@ -1473,3 +1473,7 @@ Root directly compared the full106compiled JS path/hash arrays from the running 
 Actual first-send/reply proof is not yet performed. Final review must receive the migration-checksum timing gap, old aggregate inconsistency and corrected metadata projection alongside current successful direct proofs. The one full canonical diff guard is approved but unexecuted, reserved for final validation after operator proof/module consolidation. Delivery remains Pending/review; no closure, production or promotion is claimed.
 
 Evidence: evidence/runtime-activation-executor-e75-v1.1.json; evidence/runtime-topology-before-e75-v1.1.json; evidence/runtime-topology-after-e75-v1.1.json; evidence/runtime-migration-metadata-e75-v1.1.json; evidence/runtime-api-dist-manifest-e75-v1.1.json; evidence/image-api-dist-manifest-e75-v1.1.json; evidence/runtime-peer-and-compiled-root-e75-v1.1.json; evidence/runtime-public-root-attestation-e75-v1.1.json; evidence/runtime-migration-reconciliation-root-e75-v1.1.json.
+
+## Operator checkpoint E75 — Meta callback validated; first-send proof requested
+
+The user confirmed “Meta validou o webhook” in response to call_7e60893418bb4948b45fa1080435d2fe. This is an operator attestation, not an agent inspection of Meta settings. Root rechecked current public health with verified TLS: HTTP200. No provider/private/runtime mutation occurred. The operator was guided through Atendimento → Local Test BU → Nova conversa → explicit-DDI contact → Abrir ou reutilizar → WhatsApp não oficial → Texto → Pré-visualizar → Confirmar primeiro envio once, followed by recipient receipt and inbound reply. No incoming-first action was requested. The official approved-template proof follows this result; neither proof is yet claimed. Evidence: evidence/operator-meta-callback-confirmed-e75-v1.1.json. Delivery remains Pending; module consolidation, the already authorized one-shot full guard and final review remain pending.

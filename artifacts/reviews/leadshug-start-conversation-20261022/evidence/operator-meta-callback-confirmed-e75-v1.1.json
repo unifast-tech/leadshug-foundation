@@ -1,0 +1,17 @@
+{
+  "kind": "Operator attestation: Meta callback validation confirmed",
+  "recorded_at_utc": "2026-10-23T14:15:33.311891+00:00",
+  "question_id": "call_7e60893418bb4948b45fa1080435d2fe",
+  "operator_answer": "Meta validou o webhook",
+  "origin": "https://wins-courier-minutes-appear.trycloudflare.com",
+  "provenance": "User report; agent did not inspect Meta settings or perform provider mutations.",
+  "public_health_recheck": {
+    "status": 200,
+    "tls_verification": true,
+    "proxy_bypassed": true
+  },
+  "next_step": "Operator starts text through Nova conversa in Local Test BU, confirms exactly once, checks recipient delivery and inbound reply; then approved official template proof.",
+  "first_send_proof": "pending operator result",
+  "full_guard": "Authorized; not executed; reserved for final validation.",
+  "delivery_stage": "Pending"
+}
