@@ -1,0 +1,42 @@
+{
+  "checkpoint": "E50 actual r1 causal assertion RED before product fixes",
+  "exit_code": 1,
+  "session": 25991,
+  "recorded_at_utc": "2026-10-23T00:00:01.821396+00:00",
+  "stdout_sha256": "07889c1cf4d849be54524d3f0b62971c2371dd09c8bed504a4a88adfc5fcdd2c",
+  "source_count": 259,
+  "source_fingerprint": "c4f327b54a574e7ac9850fb83141aca9beeabeb3b390cb28276b86a88541bbfc",
+  "full_inventory_and_bytes_match_preseal": true,
+  "production_and_fixtures_unchanged_from_e47": true,
+  "phases": {
+    "migrations_lint_build": "passed",
+    "unit": {
+      "files_passed": 34,
+      "tests_passed": 363
+    },
+    "postgresql": {
+      "files_passed": 31,
+      "files_failed": 2,
+      "tests_passed": 435,
+      "tests_failed": 4
+    },
+    "cleanup": "actual owned containers volumes network removal observed"
+  },
+  "failures": [
+    "PREPARED scoped projection recoveryAction null; active ordinary send wrong REQUIRED code and competing initial conflict lacks attempt/state. Soft assertions allow remaining local recovery checks.",
+    "Ordinary-send query event capture contains COUNT(*) over messages instead of bounded existence.",
+    "Local initial creation-winner reconcile publishes zero realtime events, expected one.",
+    "Ordinary provider ACK and Message accepted but real settlement rollback still returns normal201."
+  ],
+  "causal_limits": [
+    "Actual assertions precede corresponding product changes.",
+    "PREPARED live202/no release and expired200 REJECTED/released local recovery checks executed and passed despite soft projection failures; no extra provider/Message.",
+    "Known-accepted blocked ACK lifecycle case passed in PostgreSQL; real browser counterpart still pending.",
+    "Architecture current-source and synthetic negative controls passed after test-detector repair; this is post-implementation harness protection, not a product defect RED.",
+    "Unicode Web not run yet. Full candidate GREEN, actual providers, preserved runtime and final delivery not claimed."
+  ],
+  "safe_synthetic_markers": [
+    "ST04_PREPARED_OPTIONS {\"state\":\"PREPARED\",\"recoveryAction\":null}",
+    "ST04_ACTIVE_SLOT_CONFLICT {\"code\":\"INITIAL_SEND_IN_PROGRESS\",\"attemptId\":null,\"state\":null}"
+  ]
+}

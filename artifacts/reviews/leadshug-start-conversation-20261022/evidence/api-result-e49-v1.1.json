@@ -1,0 +1,20 @@
+{
+  "checkpoint": "E49 synthetic architecture control failure, not product behavior RED",
+  "exit_code": 1,
+  "session": 97238,
+  "stdout_sha256": "9f87d0da9fb8f4f31c787c96417bd02d544de5f2d182c99cf3d9b23a81b8faf0",
+  "source_count": 259,
+  "source_fingerprint": "07568ccb876b3c9a61f0fdb9043d197103fea0928b5510d4580e9d4ce0e1b7a7",
+  "full_inventory_and_bytes_match_preseal": true,
+  "cleanup": "actual owned removal observed",
+  "phases": {
+    "migrations_lint_build": "passed",
+    "unit_passed": 362,
+    "unit_failed": 1,
+    "unit_files_passed": 33,
+    "unit_files_failed": 1,
+    "pg": "not reached"
+  },
+  "failure": "Test-only forbidden-HTTP detector matches direct axios() but misses axios.post() synthetic negative control. Current production coordinator boundary assertion passes.",
+  "next": "Repair negative-control detector, align active-slot contract assertions and complete valid PREPARED local recovery test support; keep production untouched before causal API/Web run."
+}

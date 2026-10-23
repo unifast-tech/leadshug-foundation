@@ -1,0 +1,29 @@
+{
+  "kind": "Live real disposable BFF payload before product correction",
+  "checkpoint": "E50",
+  "stage": "Actual markers reached, runner still active; not terminal/full-suite evidence",
+  "captured_at_utc": "2026-10-22T23:55:50.768498+00:00",
+  "source_seal": "api-source-seal-e50-v1.1.json",
+  "source_fingerprint": "c4f327b54a574e7ac9850fb83141aca9beeabeb3b390cb28276b86a88541bbfc",
+  "synthetic_stdout_prefix_sha256": "1bf53cc9328b6bb45ca59c00aa6049dfcc3b17feebac25305f776bd61b3238da",
+  "synthetic_stdout_bytes_at_capture": 122009,
+  "payloads": [
+    {
+      "marker": "ST04_PREPARED_OPTIONS",
+      "payload": {
+        "state": "PREPARED",
+        "recoveryAction": null
+      }
+    },
+    {
+      "marker": "ST04_ACTIVE_SLOT_CONFLICT",
+      "payload": {
+        "code": "INITIAL_SEND_IN_PROGRESS",
+        "attemptId": null,
+        "state": null
+      }
+    }
+  ],
+  "interpretation": "Actual stored valid unclaimed PREPARED intent is scoped/read via authenticated BFF and projects null recoveryAction; active initial reservation conflict lacks local attempt/state. No actual preserved runtime or personal data was read.",
+  "limits": "Subsequent assertions/cases and full execution remain pending until terminal receipt."
+}

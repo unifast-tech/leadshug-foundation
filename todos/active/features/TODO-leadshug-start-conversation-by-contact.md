@@ -46,7 +46,7 @@ Este v1.1 substitui a autoridade ativa da minuta revisada em 2026-10-19. O origi
 
 - **Current delivery stage:** `Pending`
 - **Qualifiers:** `none`
-- **Next exact step:** corrigir apenas o lint dos testes E48 após terminal/pós-selo; obter RED comportamental de API/Web antes de corrigir os findings r1 e revalidar o candidato completo.
+- **Next exact step:** concluir as correções r1 liberadas após RED causal E50/E51 e pós-selos; congelar o candidato com novas provas reais de navegador antes de executar novamente a suíte completa.
 
 ## Active Work State (Required While TODO Remains In `active/`)
 
@@ -1234,3 +1234,8 @@ Only NovaConversa.tsx and its admitted start-conversation browser test differ fr
 ## Execution checkpoint E45 — full canonical candidate GREEN
 
 Canonical all57348 exited0:34APIunitfiles/356tests,33realPGfiles/435tests,7Webfiles/53tests and85/85browser in14.5min; build/lint/migrations passed and owned cleanup completed. Root independently re-enumerated259public sources/full bytes unchanged at27e37bc4, checked stdoutSHA76923c5f and93fresh source hashes plus served/dist bundleca94c89f. E44 snapshot-loss assertion now passes through original-key preservation, explicit failed/successful local reread, exact replay and1provider effect/Message; no post-hoc reversion. All3new renderer boundary cases pass. E45 criterion index replaces stale no-execution placeholders, without closing checkboxes or delivery stage. A confirmed consumer-proof gap remains: OrdinaryRecovery has no e2e click/reconcile/ACK assertion despite backend service proof. One admitted browser test will exercise actual90s deadline with its own150s budget, avoiding a fixture mutation endpoint or product change. Writer released after postseal only for that file. E45API/PG/Web proof may be reused only if its exact source bytes remain unchanged; current browser must include the new case. Evidence: evidence/all-result-e45-v1.1.json, all-source-recheck-e45-v1.1.json, browser-freshness-collection-e45-v1.1.json, candidate-criterion-index-e45-v1.1.json and ordinary-recovery-consumer-proof-gap-e45-v1.1.json. Required independent reviews, full diff guard exception and actual local/operator proof remain; no delivery or provider claim.
+
+
+## Execution checkpoint E50/E51 — actual regression RED before r1 fixes
+
+E50 passed migrations/lint/build and363unit tests; real PostgreSQL had435pass/4failed tests. Failures reproduce PREPARED missing recovery action, active-slot contract omissions, full-history COUNT, missing winner realtime and normal201 despite post-ACK settlement rollback. Live PREPARED202 and expired local rejection/release checks passed with zero additional provider/Message. E51 Web build passed;53pass/1failed test reproduced rejection of a valid1024astral positional parameter. NAMED later assertions were not reached. Both executions have actual terminal1, owned cleanup and independent259-record byte/inventory postseals; no current full GREEN or runtime delivery claim. See evidence/api-result-e50-v1.1.json, evidence/web-result-e51-v1.1.json and evidence/test-causality-chronology-r1-v1.1.json. Sole writer is released only for approved in-scope r1 product fixes and admitted browser/fixture coverage, then must freeze before a new full canonical run. All38 protected/exact companion sources remain unchanged.

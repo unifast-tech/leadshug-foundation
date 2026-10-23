@@ -77,15 +77,29 @@
       "claim_limit": "Counter failure is not production RED. Added ordinary UI recovery coverage is post-implementation regression proof."
     },
     {
-      "checkpoint": "E48",
-      "source_receipt": "api-source-seal-e48-v1.1.json",
-      "classification": "new bug regressions running",
-      "observed_fact": "Four test-only files frozen before r1 product fixes; canonical API run launched after independent preseal/authority GO.",
-      "claim_limit": "No assertion or test-first outcome claimed until actual terminal evidence; architecture companion current-source pass is expected, not manufactured RED."
+      "checkpoint": "E48/E49",
+      "source_receipt": "api-result-e48-v1.1.json; api-result-e49-v1.1.json",
+      "classification": "test-support failures before target regressions",
+      "observed_fact": "E48 lint fails on spy assertion capture in finally; E49 lint/build pass, 362unit tests pass and one negative-control detector test fails because axios.post is not recognized. PostgreSQL never reached.",
+      "claim_limit": "Neither failure proves a production defect. PREPARED payload and r1 behavior assertion RED still pending. Product unchanged; detector and contract tests are being corrected before next run."
+    },
+    {
+      "checkpoint": "E50",
+      "source_receipt": "api-result-e50-v1.1.json; api-source-recheck-e50-v1.1.json; prepared-recovery-live-payload-e50-v1.1.json",
+      "classification": "causal real PostgreSQL/BFF assertion RED",
+      "observed_fact": "Before product fixes, four integration tests fail on PREPARED action/active-slot safe metadata and wrong ordinary code, full-history COUNT, omitted realtime creation-winner event and ordinary201 after actual settlement rollback. 363unit and435otherPG tests pass.",
+      "claim_limit": "Actual owned synthetic state and payload proof, no real provider/preserved runtime claim. Local PREPARED live202 and expired REJECTED release steps passed; missing browser action proof still pending."
+    },
+    {
+      "checkpoint": "E51",
+      "source_receipt": "web-result-e51-v1.1.json; web-source-recheck-e51-v1.1.json",
+      "classification": "causal Unicode snapshot assertion RED",
+      "observed_fact": "Valid1024astral POSITIONAL parameter is rejected before product fix; prior text4096/4097 code-point checks pass. Build and53otherWebunit tests pass.",
+      "claim_limit": "Later NAMED branch and positional1025 assertion were not reached in combined test; require final complete passing unit and actual input/browser proof."
     }
   ],
   "broader_coverage": "Most PostgreSQL fault/commit/protocol/boundary/rate/concurrency cases were added alongside or after their production implementation. They are meaningful final-state regression evidence, not universally pre-implementation causal RED.",
   "review_correction": "The broad r1 reviewer shorthand naming E03/E25 as selected causal RED is qualified here by exact receipts: their new coordinator/admission behavior failed to load and did not reach business assertions. Original raw review results remain immutable.",
   "method_assessment": "No generic rule/analyzer edit is warranted solely by chronology. Preserve evidence classification and add actual causal regressions for newly found bugs before fixing those bugs.",
-  "resolution": "Root evidence correction recorded; independent fresh final audit must assess remaining coverage and current candidate. No delivery or full-test-first claim."
+  "resolution": "Explicit chronology correction complete. Current newly found product regressions now have actual causal E50/E51 assertions before their fixes; original alongside/post-implementation chronology remains unchanged. Independent reassessment pending."
 }

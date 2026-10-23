@@ -1,5 +1,5 @@
 {
-  "kind": "Prepared recovery evidence-first bug loop, before new test/fix",
+  "kind": "Living prepared-recovery evidence loop; initial pre-test answers retained with later execution update",
   "issue_id": "ST04-PREPARED-RECOVERY-01",
   "recorded_at_utc": "2026-10-22T23:30:06.267282+00:00",
   "skill": "delphi-ai/skills/bug-fix-evidence-loop/SKILL.md",
@@ -7,7 +7,7 @@
   "mandatory_questions": [
     {
       "question": 1,
-      "answer": "No end-to-end PREPARED crash/read\u2192UI reconciliation proof found. Existing PG tests exercise prepare/claim/expiry cleanup; UI/browser recovery proves SENDING/AMBIGUOUS/known receipt and ordinary uncertainty, not a persisted PREPARED activeAttempt action."
+      "answer": "No end-to-end PREPARED crash/read→UI reconciliation proof found. Existing PG tests exercise prepare/claim/expiry cleanup; UI/browser recovery proves SENDING/AMBIGUOUS/known receipt and ordinary uncertainty, not a persisted PREPARED activeAttempt action."
     },
     {
       "question": 2,
@@ -23,7 +23,7 @@
     },
     {
       "question": 5,
-      "answer": "Provisional no-rule-needed: this is a finite recovery state\u2192action semantic omission across safe DTO and rendering. Exhaustive enum syntax alone can still explicitly map PREPARED to wrong null; a generic analyzer cannot safely infer this product action policy. Add behavior/state coverage and preserve same local-only recovery owner. No Delphi/analyzer edits authorized."
+      "answer": "Provisional no-rule-needed: this is a finite recovery state→action semantic omission across safe DTO and rendering. Exhaustive enum syntax alone can still explicitly map PREPARED to wrong null; a generic analyzer cannot safely infer this product action policy. Add behavior/state coverage and preserve same local-only recovery owner. No Delphi/analyzer edits authorized."
     }
   ],
   "coverage_chain": [
@@ -55,5 +55,29 @@
   ],
   "selected_direction": "OptionA: expose existing local-only reconciliation through the safe PREPARED projection and existing UI action; preserve GET read-only, same grant/CSRF/immutable lease/owner CAS and no automatic dispatch. Final code choice awaits independent findings and exact regression design.",
   "sequencing": "Keep E47 and live r1 source packets frozen. Wait actual runner terminal/cleanup/postseal and review lifecycle terminal before sole-writer test-first handoff. No test-only route in production or additional provider/platform capability.",
-  "proof_limits": "Before state is source-confirmed; no new real assertion RED, fixed state or full delivery is claimed."
+  "proof_limits": "E50 now proves the actual disposable PG/BFF failure before product correction. Initial mandatory answers describe pre-test E47 knowledge; execution_update supplies current reached evidence. No post-fix or full browser/runtime delivery proof yet.",
+  "execution_update": {
+    "checkpoint": "E50 actual terminal1 with root full259source postseal",
+    "recorded_at_utc": "2026-10-23T00:03:57.063457+00:00",
+    "actual_payload": {
+      "state": "PREPARED",
+      "recoveryAction": null
+    },
+    "evidence": [
+      "prepared-recovery-live-payload-e50-v1.1.json",
+      "api-result-e50-v1.1.json",
+      "api-source-recheck-e50-v1.1.json"
+    ],
+    "questions_updated": {
+      "2": "Yes: actual valid owned disposable PostgreSQL reservation plus authenticated scoped BFF options and attempt GET, captured before product fix. No actual preserved private database or payload was accessed.",
+      "3": "New exact regression fails on PREPARED recoveryAction and active-slot contract while existing E47 full browser was GREEN. Earlier tests covered other states and lacked this durable PREPARED producer/consumer branch. E50 is concrete assertion RED, not just source inference.",
+      "4": "New BFF test reaches actual observational reads, live local202 unchanged slot, and expiry local rejection/release with zero extra provider and Message. Final real browser action test remains required before closing the UI gap."
+    },
+    "current_coverage": {
+      "persistence_and_local_recovery": "covered by actual E50 PG steps",
+      "BFF_safe_action_projection": "new regression catches failure before fix",
+      "React_button_and_full_browser": "missing proof until new real-BFF/PG browser case passes"
+    },
+    "fix_status": "Sole writer released after E50/E51 actual terminal postseals; product fixes in progress, no after/GREEN claim."
+  }
 }

@@ -1,0 +1,36 @@
+{
+  "checkpoint": "E51 actual Unicode snapshot causal assertion RED before product fix",
+  "exit_code": 1,
+  "session": 70146,
+  "stdout_sha256": "f3f11e53cbe8ccb46dd27fcd6512853611b7cd7bc3ddbef9e9cb8fff1da37677",
+  "recorded_at_utc": "2026-10-23T00:02:00.440091+00:00",
+  "source_count": 259,
+  "source_fingerprint": "c4f327b54a574e7ac9850fb83141aca9beeabeb3b390cb28276b86a88541bbfc",
+  "full_inventory_and_bytes_match_preseal": true,
+  "phases": {
+    "web_build": "passed,60modules",
+    "unit": {
+      "files_passed": 6,
+      "files_failed": 1,
+      "tests_passed": 53,
+      "tests_failed": 1
+    },
+    "cleanup": "owned removal observed"
+  },
+  "causal_failure": "isInitialSendSnapshot rejects valid POSITIONAL parameter with1024astral code points because .length counts2048UTF16 units. Actual assertion NovaConversa.spec.ts69 before fix.",
+  "prior_assertions_passed": [
+    "4096astral free text accepted",
+    "4097astral free text rejected",
+    "JSON envelope remains below32768units"
+  ],
+  "not_reached": [
+    "Later positional1025 rejection",
+    "NAMED1024/1025 branch in same combined case"
+  ],
+  "required_final_coverage": [
+    "Both POSITIONAL/NAMED snapshot bounds",
+    "Real browser input value/preview/send/persistence without HTML UTF16 truncation"
+  ],
+  "limits": "Unit/build only; no actual browser/PG/external provider/preserved runtime or delivery claim.",
+  "next": "Sole writer may now fix r1 defects inside admitted scope and add real BFF/PG browser recovery proof; final candidate requires fresh complete freeze/all/independent review."
+}
