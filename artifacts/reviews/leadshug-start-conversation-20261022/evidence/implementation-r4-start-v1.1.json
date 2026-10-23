@@ -1,0 +1,32 @@
+{
+  "kind": "Fresh r4 review start receipt; not completion",
+  "recorded_at_utc": "2026-10-23T02:54:04.088119+00:00",
+  "source_seal": "all-source-seal-e64-v1.1.json",
+  "preflight": "implementation-r4-package-preflight-v1.1.json",
+  "reviewers": [
+    {
+      "kind": "architecture_adherence",
+      "session_id": 84697,
+      "model": "gpt-6.1-sol",
+      "effort": "xhigh",
+      "state": "running",
+      "security_full_lens_required": true
+    },
+    {
+      "kind": "test_quality_audit",
+      "session_id": 82474,
+      "model": "gpt-5.6-terra",
+      "effort": "xhigh",
+      "state": "running",
+      "complete_applicable_audit_required": true
+    },
+    {
+      "kind": "cutover_integrity_audit",
+      "session_id": 8244,
+      "model": "gpt-5.6-terra",
+      "effort": "xhigh",
+      "state": "running"
+    }
+  ],
+  "boundary": "Fresh internal codex exec ephemeral/read-only/no inherited chat; package-only no-tools instructions. No project-context isolation/fallback. Wait actual terminal, no elapsed-time cancellation. Product sources remain frozen."
+}

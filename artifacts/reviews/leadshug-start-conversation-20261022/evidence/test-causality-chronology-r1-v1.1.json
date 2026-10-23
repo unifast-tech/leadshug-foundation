@@ -1,7 +1,7 @@
 {
   "kind": "Honest test causality and regression chronology",
   "version": "1.1",
-  "recorded_at_utc": "2026-10-23T01:44:25.652283+00:00",
+  "recorded_at_utc": "2026-10-23T02:09:44.526169+00:00",
   "finding": "TQA-ST04-04",
   "scope": "ST-CON-04 whole approved journey, including inherited and new verification",
   "adjudication": "Test-first coverage is partial. Final-state regression, post-hoc controlled reversion, module loading and causal assertion failures are distinct evidence classes. No retroactive reversion or repeated run solely to fabricate chronology.",
@@ -138,6 +138,27 @@
       "classification": "implementation type-boundary compile failure before browser",
       "observed_fact": "API build TS2339 after adding availability guard to a TemplateSummary-cast item. Provider summary intentionally lacks observation metadata; current source did not compile.",
       "claim_limit": "No Playwright/globalSetup/freshness or BU causal RED; no availability after-fix result. Narrow consumer correction preserves inferred observation before Summary cast."
+    },
+    {
+      "checkpoint": "E61",
+      "source_receipt": "browser-result-e61-v1.1.json; browser-source-recheck-e61-v1.1.json",
+      "classification": "implementation projection assertion compile failure, not UI RED",
+      "observed_fact": "TS2352 rejects root-proposed direct item cast because JsonValue components and provider component union differ. Build fails before browser.",
+      "claim_limit": "No cases/freshness/consumer GREEN. E62 uses the existing array boundary plus local boolean metadata view, preserving producer/provider types and no unknown/any widening."
+    },
+    {
+      "checkpoint": "E62",
+      "source_receipt": "browser-result-e62-v1.1.json; browser-failure-triage-e62-v1.1.json; browser-source-recheck-e62-v1.1.json",
+      "classification": "causal BU UI assertion RED plus separate test-consumer synchronization failure",
+      "observed_fact": "87/89pass,2fail. CurrentBU dialog remains visible but Fechar disabled after held old response, actual5s assertion before UI fix. Existing replay test observes storage too early while DOM Enviando; samekey/body/postCount2 passed but later audit/provider bounds not reached.",
+      "claim_limit": "No retroactive test-first claim for timing repair; availability after-fix API-PG remains pending. Source full259 and93manifest/bundle match."
+    },
+    {
+      "checkpoint": "E63/E64",
+      "source_receipt": "all-result-e63-v1.1.json; all-source-recheck-e63-v1.1.json; all-source-seal-e64-v1.1.json",
+      "classification": "incomplete old unit observation fixture, faithful one-field correction then pending consolidatedALL",
+      "observed_fact": "E63 actual367unitpass/1fail because unsupported-component item omitted available metadata. E64 adds available:true only, preserving expected unsupported rejection; real producer always provides that field.",
+      "claim_limit": "E63 PG/Web/browser not reached. E64 is currently running; no full/current GREEN inferred."
     }
   ],
   "broader_coverage": "Most PostgreSQL fault/commit/protocol/boundary/rate/concurrency cases were added alongside or after their production implementation. They are meaningful final-state regression evidence, not universally pre-implementation causal RED.",

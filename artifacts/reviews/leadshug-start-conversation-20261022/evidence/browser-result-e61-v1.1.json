@@ -1,0 +1,28 @@
+{
+  "checkpoint": "E61 consumer item assertion compile failure; browser not reached",
+  "recorded_at_utc": "2026-10-23T01:48:06.803678+00:00",
+  "command": "bash scripts/test-channels-local.sh browser",
+  "executor_session_id": 72263,
+  "exit_code": 1,
+  "stdout_sha256": "e0ddc00610bd5c80fcfd00597347707f057f55eff706391b4a07004fe4cbb151",
+  "source_fingerprint": "06cd27094111d035a0b2787e6a558213ce8982748b1691e12ae909b26ffc6846",
+  "full259source_postseal": true,
+  "owned_cleanup_observed": true,
+  "actual_failure": {
+    "phase": "API build before browser globalSetup",
+    "code": "TS2352",
+    "path": "api-app/src/domain/inbox/initial-message.service.ts",
+    "lines": [
+      66,
+      125
+    ],
+    "message": "ProjectedSavedObservation components JsonValue prevents direct per-item TemplateSummary assertion"
+  },
+  "classification": "Root suggested direct per-item assertion did not type-check; implementation type-boundary failure, not browser RED",
+  "unreached": [
+    "Playwright cases",
+    "browser attestation",
+    "current availability PG regression"
+  ],
+  "next": "Restore prior compiling array assertion boundary with a bounded local observed-summary view that retains available; no any/unknown or sealed provider contract change. E62 browser remains pending."
+}

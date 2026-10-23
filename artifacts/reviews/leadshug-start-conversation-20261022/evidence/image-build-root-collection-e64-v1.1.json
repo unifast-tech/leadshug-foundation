@@ -1,0 +1,28 @@
+{
+  "kind": "Root independent exact synthetic build receipt collection",
+  "recorded_at_utc": "2026-10-23T02:41:12.783345+00:00",
+  "source_seal": "all-source-seal-e64-v1.1.json",
+  "executor_attestation_sha256": "d070978ee51c2cb29a063444822c83799b7db4a2589a8bec044fd6de235924d9",
+  "checks": [
+    {
+      "service": "api",
+      "actual_build_stdout_hash_matches": true,
+      "exact_archive_hash_matches": true,
+      "image_id": "sha256:0b6d31296ca7ac8aee3ddfc2ce93a8c8e6af453af23a4218c5c4c416e0974a83",
+      "build_session_id": 60401,
+      "executor_actual_exit_code": 0
+    },
+    {
+      "service": "web",
+      "actual_build_stdout_hash_matches": true,
+      "exact_archive_hash_matches": true,
+      "image_id": "sha256:9787da8f734123e4f2875ce9b47c7bb23b45a8d64bbba98a830d51dd05f9f53b",
+      "build_session_id": 97473,
+      "executor_actual_exit_code": 0
+    }
+  ],
+  "inspection_receipts_all_hash_match": true,
+  "api_image_schema_matches_current_source": true,
+  "web_image_bundle_matches_actual_E64_served_and_dist": true,
+  "limits": "Successful source-bound Alpine builds/offline metadata only; no actual preserved DB/native runtime health, activation or provider proof."
+}

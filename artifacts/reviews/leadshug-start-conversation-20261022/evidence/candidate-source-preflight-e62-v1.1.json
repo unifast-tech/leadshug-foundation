@@ -1,0 +1,14 @@
+{
+  "kind": "E62 bounded observation view preflight, no new run result",
+  "recorded_at_utc": "2026-10-23T01:48:06.803678+00:00",
+  "source_seal": "browser-source-seal-e62-v1.1.json",
+  "only_changed_path": "api-app/src/domain/inbox/initial-message.service.ts",
+  "change": "Existing provider-shape array assertion enriched by local ObservedTemplateSummary intersection with readonly available:boolean; both selected-item guards retain observation metadata before rendering.",
+  "constraints": [
+    "No sealed observation/ports/auth/provider edits.",
+    "No any or unknown type widening; no provider-specific Channel branching/cast.",
+    "Do not gate on authoring supported/eligible; initial POSITIONAL remains allowed when available.",
+    "Exact replay still precedes current eligibility checks."
+  ],
+  "historical_limits": "E60/E61 build failures preserved, neither UI RED nor current compiler success. E59 is actual availability causal RED; current after-fix PG remains pending."
+}

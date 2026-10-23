@@ -1,0 +1,117 @@
+{
+  "policy_schema_version": "pcv-1",
+  "schema_version": "pcv-1",
+  "todo_id": "ST-CON-04",
+  "run_id": "E64-canonical-all-86049",
+  "environment_id": "owned-disposable-node22-postgresql16-real-BFF-fake-external-provider",
+  "executor_id": "stcon04_continuation",
+  "reviewer_id": "root-independent-source-and-output-collector; formal lane assessment pending",
+  "recorded_at_utc": "2026-10-23T02:37:24.743780+00:00",
+  "lane_id": "BCI",
+  "evidence_type": "real-concurrent-BFF-PG-barrier-and-state-readback",
+  "sample_profile_id": "BCI-SP-H",
+  "acceptance_rule_id": "BCI-A1",
+  "result_summary": "Five20-request same-key waves each persist one intent and one Message, dispatch once and return19 in-flight replays; manual open five20-request waves create five rows and send zero messages.",
+  "artifact_payload": {
+    "evidence_receipt": "all-result-e64-v1.1.json",
+    "stdout_sha256": "adc0e77eb3b330707f02f30844659100d80781b457176c81a54cc92ed807bf96",
+    "source_seal": "all-source-seal-e64-v1.1.json",
+    "source_fingerprint": "70c038f24f15cf4a26a65c545bc9e3fba336a67a9cde7bfcb8cdec9910949340",
+    "terminal_exit_code": 0,
+    "assessment_status": "Observed acceptance assertions passed; candidate evidence for independent assessment, no delivery/runtime/provider claim.",
+    "invariant_id": "ST04-one-owned-active-slot-and-at-most-one-POST-per-immutable-initial-intent",
+    "concurrency_policy": "idempotent same-key replay",
+    "probe_profile_observed": {
+      "waves": 5,
+      "overlapping_requests_per_wave": 20,
+      "same_key_initial_waves": [
+        {
+          "wave": 1,
+          "requests": 20,
+          "replay202": 19,
+          "posts": 1,
+          "messages": 1,
+          "elapsedMs": 146
+        },
+        {
+          "wave": 2,
+          "requests": 20,
+          "replay202": 19,
+          "posts": 1,
+          "messages": 1,
+          "elapsedMs": 143
+        },
+        {
+          "wave": 3,
+          "requests": 20,
+          "replay202": 19,
+          "posts": 1,
+          "messages": 1,
+          "elapsedMs": 135
+        },
+        {
+          "wave": 4,
+          "requests": 20,
+          "replay202": 19,
+          "posts": 1,
+          "messages": 1,
+          "elapsedMs": 126
+        },
+        {
+          "wave": 5,
+          "requests": 20,
+          "replay202": 19,
+          "posts": 1,
+          "messages": 1,
+          "elapsedMs": 126
+        }
+      ],
+      "manual_open": {
+        "waves": 5,
+        "requests_per_wave": 20,
+        "created": 5,
+        "reused": 95,
+        "distinct_conversations": 5,
+        "provider_call_delta": 0,
+        "message_count": 0
+      }
+    },
+    "additional_barriers": "Ordinary-vs-initial admission, unique echo race, CAS owner/closed preservation, commit ACK loss versus rollback and after-deadline local risk acknowledgment passed actual PG suites. E64 also proves settlement rollback after provider ACK, EALB early/late acknowledgment and late-old isolation.",
+    "sources": [
+      {
+        "path": "api-app/test/initial-message.e2e-spec.ts",
+        "sha256": "5721d1a154f493d239fe1ae942b740ff24ea9eac1dd4a3eba9e69a3a4b3b7f35"
+      },
+      {
+        "path": "api-app/test/conversation-start.e2e-spec.ts",
+        "sha256": "35ead6bdea966ab05a3c9b792316867a918929194570b766767bacebb5bf4f11"
+      },
+      {
+        "path": "api-app/test/dispatch-admission.e2e-spec.ts",
+        "sha256": "8493ee59713c1e1cf445c8c1c325d918ac1193f460b4187f15a27b62d481de3f"
+      }
+    ],
+    "limits": "posts in ST04_BCI_5x20 are Evolution fake-port invocations, not external TCP requests. Durable external exactly-once is not claimed.",
+    "current_raw_metrics_reference": "current-synthetic-pcv-samples-e64-v1.1.json",
+    "manual_open_actual_emitted_sample": {
+      "waves": 5,
+      "opensPerWave": 20,
+      "openCount": 100,
+      "createdCount": 5,
+      "reusedCount": 95,
+      "createdPerWave": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "statusCounts": {
+        "200": 95,
+        "201": 5
+      },
+      "providerCallDelta": 0
+    }
+  },
+  "artifact_sha256": "74add2e65db7b0a4799e448cb3ea8ada81ea529254e845107dcd2e45c6803eaf"
+}

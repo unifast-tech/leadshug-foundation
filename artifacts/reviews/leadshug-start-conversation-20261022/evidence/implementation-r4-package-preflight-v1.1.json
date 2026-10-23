@@ -1,0 +1,32 @@
+{
+  "kind": "R4 current package pre-dispatch integrity and concrete proven input-limit check",
+  "recorded_at_utc": "2026-10-23T02:52:06.735234+00:00",
+  "rows": [
+    {
+      "review_kind": "architecture_adherence",
+      "package_sha256": "7c8b0e081eeedaae92357db41e3994d44d460e9258b45b1baad370def0009553",
+      "dispatch_sha256": "a57d91b72125470e56c25b5417888682b1fde6225c9722ca6b1599270b24da89",
+      "actual_input_characters": 931861,
+      "input_limit_characters": 1048576,
+      "stage": "prepared; not yet dispatched"
+    },
+    {
+      "review_kind": "test_quality_audit",
+      "package_sha256": "7fed0bfd0288a46d4f9bd68928b0ef94f42f980a219db5249dde137819a7abb8",
+      "dispatch_sha256": "5a256ef636af79eac8592ed3a6a0adbc881e438b085fddd811c551a192f19287",
+      "actual_input_characters": 1039136,
+      "input_limit_characters": 1048576,
+      "stage": "prepared; not yet dispatched"
+    },
+    {
+      "review_kind": "cutover_integrity_audit",
+      "package_sha256": "b8e21123838e059cc0fa049ac4442d8b3569e23ae1d264d6d6c37100b5c031bc",
+      "dispatch_sha256": "403dacf847195f369a33240935e880c968f1fb08dab5293432645d8ade820217",
+      "actual_input_characters": 729672,
+      "input_limit_characters": 1048576,
+      "stage": "prepared; not yet dispatched"
+    }
+  ],
+  "tqa_representation": "25full critical source files unchanged; full applicable skill/workflow and approved contract; all255signals losslessly table-encoded, repeated anchors interned and long support text may reference exact already-embedded source/line. Supporting receipts are explicitly bounded readable summaries with original full raw hashes, no new raw passing claims. Historical unrelated detailed timeline paging omitted while ST01/ST06 baseline sections and full frozen decision snapshot remain.",
+  "preparation_failures": "Collector size limit rejected oversized drafts before any live reviewer. No live review interrupted or repackaged. Full audit workload, all test scenarios/source/individual signals retained."
+}

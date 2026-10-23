@@ -1,0 +1,56 @@
+{
+  "policy_schema_version": "pcv-1",
+  "schema_version": "pcv-1",
+  "todo_id": "ST-CON-04",
+  "run_id": "E64-canonical-all-86049",
+  "environment_id": "owned-disposable-node22-postgresql16-real-BFF-fake-external-provider",
+  "executor_id": "stcon04_continuation",
+  "reviewer_id": "root-independent-source-and-output-collector; formal lane assessment pending",
+  "recorded_at_utc": "2026-10-23T02:37:24.743780+00:00",
+  "lane_id": "RLS",
+  "evidence_type": "bounded-disposable-one-stage-concurrent-load",
+  "sample_profile_id": "RLS-SP-L",
+  "acceptance_rule_id": "RLS-A1",
+  "result_summary": "Declared bounded stage of20 overlapping initial requests repeated five times stays below15000ms per wave; not a production capacity/SLO measurement.",
+  "artifact_payload": {
+    "evidence_receipt": "all-result-e64-v1.1.json",
+    "stdout_sha256": "adc0e77eb3b330707f02f30844659100d80781b457176c81a54cc92ed807bf96",
+    "source_seal": "all-source-seal-e64-v1.1.json",
+    "source_fingerprint": "70c038f24f15cf4a26a65c545bc9e3fba336a67a9cde7bfcb8cdec9910949340",
+    "terminal_exit_code": 0,
+    "assessment_status": "Observed acceptance assertions passed; candidate evidence for independent assessment, no delivery/runtime/provider claim.",
+    "stage_profile_observed": {
+      "stages": 1,
+      "concurrency": 20,
+      "waves": 5,
+      "request_count": 100,
+      "request_type": "same-key BFF initial sends with held first provider operation"
+    },
+    "thresholds": {
+      "wave_elapsed_ms_strictly_less_than": 15000,
+      "definition_time": "Predeclared expect(durationMs).toBeLessThan(15_000), present in frozen source before E45 runner."
+    },
+    "metrics_summary": {
+      "elapsed_ms": [
+        146,
+        143,
+        135,
+        126,
+        126
+      ],
+      "max_elapsed_ms": 146,
+      "all_five_below_threshold": true,
+      "per_wave_provider_invocations": 1,
+      "per_wave_persisted_OUT": 1
+    },
+    "sources": [
+      {
+        "path": "api-app/test/initial-message.e2e-spec.ts",
+        "sha256": "5721d1a154f493d239fe1ae942b740ff24ea9eac1dd4a3eba9e69a3a4b3b7f35"
+      }
+    ],
+    "limits": "Reuses explicitly bound BCI stage metrics as allowed by pcv-1; fake provider held by deterministic barrier. No throughput saturation, live provider latency or production SLO claim.",
+    "current_raw_metrics_reference": "current-synthetic-pcv-samples-e64-v1.1.json"
+  },
+  "artifact_sha256": "a4d1d9884a90d2ede37b45357bf1b0d03a49c178433a9a0523403bb73801158c"
+}

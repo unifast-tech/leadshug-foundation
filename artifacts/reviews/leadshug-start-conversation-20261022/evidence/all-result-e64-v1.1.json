@@ -1,0 +1,57 @@
+{
+  "checkpoint": "E64 corrected full canonical candidate GREEN",
+  "recorded_at_utc": "2026-10-23T02:37:01.338465+00:00",
+  "command": "bash scripts/test-channels-local.sh all",
+  "executor_session_id": 86049,
+  "exit_code": 0,
+  "actual_exit_code": 0,
+  "terminal_authority": "Actual session terminal tool exit0 collected by owning executor; root independently bound stdout/full inventory and browser attestation.",
+  "phases": {
+    "migrations": 28,
+    "lint_and_build": "passed",
+    "api_unit": {
+      "files": 34,
+      "tests": 368,
+      "duration_seconds": 3.92
+    },
+    "api_postgresql": {
+      "files": 33,
+      "tests": 444,
+      "duration_seconds": 273.46
+    },
+    "web_unit": {
+      "files": 7,
+      "tests": 54,
+      "duration_seconds": 0.662
+    },
+    "browser": {
+      "tests": 89,
+      "passed": 89,
+      "duration_minutes": 15.9
+    }
+  },
+  "stdout_sha256": "adc0e77eb3b330707f02f30844659100d80781b457176c81a54cc92ed807bf96",
+  "source_recheck": "all-source-recheck-e64-v1.1.json",
+  "source_fingerprint": "70c038f24f15cf4a26a65c545bc9e3fba336a67a9cde7bfcb8cdec9910949340",
+  "freshness": "browser-freshness-collection-e64-v1.1.json",
+  "owned_cleanup_observed": true,
+  "specific_proofs": [
+    "Valid PREPARED service reservation -> read-only action -> actual BFF/UI local reconcile live202 then synthetic expiry local rejection, zero provider/Message",
+    "EALB early UI/BFF409 then synthetic expiry ACK200 -> one successor -> late-original local recovery preserving current owner/slot",
+    "Actual90s ordinary uncertainty risk acknowledgment -> composer return",
+    "Unicode4096text and1024positional actual input/preview/send, named/positional snapshot exact code-point unit bounds",
+    "Ordinary settlement actual rollback after known ACK produces local incomplete, bounded history existence query and confirmed winner-only realtime",
+    "Same-key5x20 and browser20-trigger5waves, signed trusted-window/current-resource, shared BFF/PUBLIC/BOT transport regressions",
+    "Fresh page with individually unavailable APPROVED item rejects preview and new submission before intent/provider/OUT, using actual ST05 producer transition; available POSITIONAL authoring-supported=false remains eligible.",
+    "Ordinary captured BLOCKED/REJECTED/UNKNOWN outcomes survive local settlement/release uncertainty; real PostgreSQL rollback preserves inherited no-ID diagnostic without release or repeated send.",
+    "Held old manual-open BFF response across BU switch cannot leave current dialog busy or select/close current BU; real served browser case4 passed.",
+    "Lost-response reload browser case9 keeps same key/body and explicit request counts, waits unchanged snapshot-clear predicate and verifies one provider effect/one Message.",
+    "Template contract scenarios are independently seeded across claim/preflight, owner CAS race, protocol shapes and seven isolated negative modes."
+  ],
+  "limits": [
+    "Disposable synthetic DB and owned fake provider, not actual WhatsApp delivery",
+    "EALB/PREPARED fixture deadline arrangement is not actual90s elapsed claim",
+    "R1/r2 corrections and isolated tests have current full regression proof; fresh independent complete r4 challenge remains required.",
+    "No preserved runtime activation, module consolidation, full canonical diff guard or delivery claim"
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "kind": "E62 live per-case root triage; full run remains active",
+  "recorded_at_utc": "2026-10-23T01:55:36.410558+00:00",
+  "source_seal": "browser-source-seal-e62-v1.1.json",
+  "new_BU_case": {
+    "path": "web-app/e2e/start-conversation.spec.ts",
+    "test_start_line": 74,
+    "actual_assertion": "Fechar must be enabled after exact seeded BU switch and held old BFF open response201",
+    "actual_state": "Fechar remains disabled; current BU/dialog assertions reached",
+    "classification": "actual causal UI assertion RED, production Inbox/NovaConversa still E54"
+  },
+  "existing_lost_response_case": {
+    "test_start_line": 369,
+    "actual_assertion": "immediate one-shot sessionStorage no-initial-key predicate expectedfalse actualtrue after replay HTTP200",
+    "preceding_checks": "same request key/body and postCount2 passed; explicit replay, not auto resend",
+    "actual_owned_failure_UI": "first-message form still disabled, button Enviando\u2026; no terminal completed composer yet",
+    "source_grounding": [
+      "web-app/src/api.ts:81 waits response text after fetch headers",
+      "web-app/src/componentes/NovaConversa.tsx:428 waits parsed API result;434 clears terminal snapshot",
+      "web-app/e2e/start-conversation.spec.ts:485 probes storage immediately after replay response status/request/count checks; no terminal UI/body-consumer synchronization."
+    ],
+    "classification": "test event synchronization failure; not evidence snapshot remains after consumer completion",
+    "planned_same_scope_correction": "Await same no-key predicate with normal bounded Playwright expect.poll; retain all exact replay/provider/Message assertions, no timeout increase/exclusion or snapshot product change.",
+    "actual_failed_line": 485
+  },
+  "limits": "Per-case actual observations only. No full89result, cleanup/source postseal or after-fix availability assertion proof yet. Root will not release writer before actual terminal.",
+  "exact_owned_failure_contexts": [
+    {
+      "case": "bu-response",
+      "owned_artifact": "/tmp/stcon04-e62-bu-response-error-context.md",
+      "sha256": "51257e036b3339cdeacacdcf0d0a2926f9a99a63d6386775027da0894894ed44"
+    },
+    {
+      "case": "lost-response",
+      "owned_artifact": "/tmp/stcon04-e62-lost-response-error-context.md",
+      "sha256": "a419fa3208f16dbd513df9cb2e4bedef384b43aaf49cab664f1e8751b3730f39"
+    }
+  ]
+}

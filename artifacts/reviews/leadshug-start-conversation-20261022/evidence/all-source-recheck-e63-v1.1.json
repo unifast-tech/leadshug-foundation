@@ -1,0 +1,12 @@
+{
+  "checkpoint": "E63 terminal full positive source recheck",
+  "stage": "After actual executor terminal and owned cleanup; BEFORE writer release",
+  "count": 259,
+  "fingerprint": "8cb6129b4352a738dd20bbae56ef498e2f0bab739807180acee2c603785622ba",
+  "matches_preseal_full_inventory_and_bytes": true,
+  "record_reference": "all-source-seal-e63-v1.1.json#records",
+  "stdout_sha256": "c4c8971024ddcbd197dd71c031300b4c3c39f027459b5259c291a5502dac6c7d",
+  "executor_reported_exit_code": 1,
+  "recorded_at_utc": "2026-10-23T02:10:34.077775+00:00",
+  "boundary": "Only declared positive public roots and7 exact publicfiles; no actual env/data/process inspection."
+}

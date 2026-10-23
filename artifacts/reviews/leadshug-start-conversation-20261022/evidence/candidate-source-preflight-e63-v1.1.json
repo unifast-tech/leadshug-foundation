@@ -1,0 +1,16 @@
+{
+  "kind": "E63 consolidated candidate source preflight; run result pending",
+  "recorded_at_utc": "2026-10-23T02:09:44.526169+00:00",
+  "source_seal": "all-source-seal-e63-v1.1.json",
+  "ordinary_fix_proof": "E56 causal4unit failures; E57/E58/E59 unit+realPG ordinary outcome preservation passed.",
+  "availability_fix_proof": "E59 actual realPG/BFF/effect causalRED; E60/E61 compile errors preserved; E62 compiled and template browser cases passed; actual after-fix PG case still pending E63.",
+  "BU_fix": "Inbox NovaConversa key={buId}, after E62 actual disabled-close assertionRED; existing component unmount/generation guards preserved.",
+  "test_synchronization": "Only old one-shot no-key assertion becomes await expect.poll on identical predicate with default bound. No test skipped, no timeout increase, no response/provider/row checks removed.",
+  "current_sources": [
+    "api-app/src/domain/inbox/outbound.service.ts",
+    "api-app/src/domain/inbox/initial-message.service.ts",
+    "web-app/src/telas/Inbox.tsx",
+    "web-app/e2e/start-conversation.spec.ts"
+  ],
+  "limits": "No current fullGREEN, independent finding closure, private/runtime action or delivery claim."
+}

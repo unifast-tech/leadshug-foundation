@@ -61,7 +61,7 @@
     "Record only safe outcome/state/timestamps and source-runtime attestation. Do not persist phone/contact/body/token.",
     "No automated sends, new contacts, routing changes, migration/registration at Meta, or Railway deployment."
   ],
-  "current_status": "Full E54 ALL and independent259/93postseal passed; both exact source-bound Alpine images actually built successfully, offline schema/compiled/bundle inspected. Fresh architecture/TQA/cutover reviews are in progress. No preserved runtime or operator first-send/reply proof executed.",
+  "current_status": "Actual E64 fullALL0/API368/PG444/Web54/browser89 with independent259source/93browser binding. Both current exact-source Alpine images built/offline inspected. Fresh architecture/security/TQA/cutover r4 challenge next; no preserved runtime or operator first-send proof.",
   "build_context_positive_inputs": {
     "api": {
       "roots": [
@@ -97,22 +97,26 @@
     },
     "policy": "Reject symlinks; hash each positive input, produce generated archive only. Exclude every .env, node_modules, existing dist, e2e/test artifacts and all unlisted paths. Add no extra file by discovery or implicit COPY context. Source specs under admitted src remain public build inputs; build exclusions remain canonical."
   },
-  "prepared_build_context_receipt": "positive-build-contexts-e53-v1.1.json",
+  "prepared_build_context_receipt": "positive-build-contexts-e64-v1.1.json",
   "entrypoint_scope": "Existing API entrypoint mechanically keeps ownership of the preserved named file volume at /dados/arquivos, then runs as node. No host .local-files bind, agent content inspection, payload mutation or file deletion is proposed.",
-  "candidate_receipt": "all-result-e54-v1.1.json",
-  "build_context_current_recheck": "positive-build-contexts-e54-recheck-v1.1.json",
+  "candidate_receipt": "all-result-e64-v1.1.json",
+  "build_context_current_recheck": "image-build-root-collection-e64-v1.1.json",
   "concrete_images": {
     "api": {
-      "tag": "leadshug-stcon04-api:e54",
-      "id": "sha256:e73a20bf17bcf0e4b9f9285e3d754b283f060a7a2a498c1a45fbb6614fd9be85"
+      "tag": "leadshug-stcon04-api:e64",
+      "id": "sha256:0b6d31296ca7ac8aee3ddfc2ce93a8c8e6af453af23a4218c5c4c416e0974a83"
     },
     "web": {
-      "tag": "leadshug-stcon04-web:e54",
-      "id": "sha256:cd9480a1b0e047828eab18e93fb24c64eaefaf142809bcce235c274ceb3d12fb"
+      "tag": "leadshug-stcon04-web:e64",
+      "id": "sha256:9787da8f734123e4f2875ce9b47c7bb23b45a8d64bbba98a830d51dd05f9f53b"
     }
   },
   "concrete_image_evidence": [
-    "image-build-attestation-e54-v1.1.json",
-    "image-build-root-collection-e54-v1.1.json"
-  ]
+    "image-build-attestation-e64-v1.1.json",
+    "image-build-root-collection-e64-v1.1.json"
+  ],
+  "current_source_fingerprint": "70c038f24f15cf4a26a65c545bc9e3fba336a67a9cde7bfcb8cdec9910949340",
+  "current_web_bundle_sha256": "f8e97efa6777dbc496b74cd527b1bae78e7766e4a4d58f752f7816cb62444343",
+  "recorded_at_utc": "2026-10-23T02:41:54.779940+00:00",
+  "historical_images": "E54 images remain historical build proof only and must not activate this changed candidate."
 }

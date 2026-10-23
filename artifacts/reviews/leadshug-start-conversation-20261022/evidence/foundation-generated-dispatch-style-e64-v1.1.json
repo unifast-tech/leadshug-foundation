@@ -1,0 +1,14 @@
+{
+  "kind": "Exact canonical generated dispatch formatting diagnostic; not a clean diff-check claim",
+  "recorded_at_utc": "2026-10-23T02:54:04.088119+00:00",
+  "command": "git.exe diff --cached --check",
+  "actual_exit_code": 2,
+  "owned_output_sha256": "5ec851e57be807de0d4fc330d2e7ebb29db4907e1351a4f7e66398f84d9d05fe",
+  "actual_diagnostics": [
+    "artifacts/reviews/leadshug-start-conversation-20261022/implementation-architecture_adherence-r4-dispatch-v1.1.md:154: new blank line at EOF.",
+    "artifacts/reviews/leadshug-start-conversation-20261022/implementation-cutover_integrity_audit-r4-dispatch-v1.1.md:155: new blank line at EOF.",
+    "artifacts/reviews/leadshug-start-conversation-20261022/implementation-test_quality_audit-r4-dispatch-v1.1.md:154: new blank line at EOF."
+  ],
+  "classification": "Only3canonical generated dispatch EOF blank-line warnings. Exact dispatch bytes are already submitted to live reviewers, deliberately preserved for provenance; no product/test/private input mutation or guard waiver inferred.",
+  "limits": "This style diagnostic is retained as exit2, not represented as clean/PASS. Governing delivery guards and reviews remain pending."
+}

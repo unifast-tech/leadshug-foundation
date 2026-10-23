@@ -1,0 +1,49 @@
+{
+  "checkpoint": "E62 actual causal BU browser RED and separate test-synchronization failure",
+  "recorded_at_utc": "2026-10-23T02:09:44.526169+00:00",
+  "command": "bash scripts/test-channels-local.sh browser",
+  "executor_session_id": 35448,
+  "exit_code": 1,
+  "stdout_sha256": "226e26585133112a84f6e7295c13f02bdf8f447934db57908d063ccd1afb971a",
+  "source_fingerprint": "ca21a62ffb66068d7434558e42e72373a9d53d22e43d9c5ed8784fecdebf53ec",
+  "full259source_postseal": true,
+  "owned_cleanup_observed": true,
+  "phases": {
+    "API_build": "passed",
+    "browser": {
+      "total": 89,
+      "passed": 87,
+      "failed": 2
+    },
+    "API_unit_PG": "not run in browser mode"
+  },
+  "freshness": "browser-freshness-collection-e62-v1.1.json",
+  "attestation_sha256": "1111effe2da2388cef69f1a0b303049418e3acdf557fc0bc3abd167800459428",
+  "manifest_records_checked": 93,
+  "served_dist_bundle_sha256": "05af33d08741c946111a078f58de739340bbf0fbf4e4e945679b355c51e4cfd7",
+  "failed_cases": [
+    {
+      "path": "web-app/e2e/start-conversation.spec.ts",
+      "start_line": 74,
+      "classification": "causal UI business assertion RED before product fix",
+      "observation": "held old open201 completed after selecting exact other BU, current dialog visible/current BU correct; Fechar stayed disabled through normal5000ms assertion timeout",
+      "owned_error_context_sha256": "51257e036b3339cdeacacdcf0d0a2926f9a99a63d6386775027da0894894ed44"
+    },
+    {
+      "path": "web-app/e2e/start-conversation.spec.ts",
+      "start_line": 369,
+      "failed_line": 485,
+      "classification": "existing test synchronizes headers rather than completion; not product bug proof",
+      "observation": "explicit replay200/same key/body/postCount2 checks passed; immediate no-storage-key probe true while saved UI still Enviando\u2026",
+      "owned_error_context_sha256": "a419fa3208f16dbd513df9cb2e4bedef384b43aaf49cab664f1e8751b3730f39",
+      "unreached": "later same-case final audit1Message/provider1effect checks were not reached and are not counted as passed."
+    }
+  ],
+  "limits": [
+    "Template browser scenarios passed with compiled availability guard; real API-PG unavailable-observation regression after fix still awaits consolidatedALL.",
+    "Owned disposable source-bound browser is not real WhatsApp or preserved runtime proof.",
+    "UI product stayed exactE54 before this actual causal failure.",
+    "No source changes until actualterminal/cleanup/rootpostseal."
+  ],
+  "next": "Minimal BU-keyed dialog plus same-predicate bounded storage wait, then full canonical E63ALL."
+}

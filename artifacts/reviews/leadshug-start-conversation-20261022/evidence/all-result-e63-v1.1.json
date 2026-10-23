@@ -1,0 +1,29 @@
+{
+  "checkpoint": "E63 full-run stopped at incomplete old unit readmodel fixture",
+  "recorded_at_utc": "2026-10-23T02:12:39.466751+00:00",
+  "command": "bash scripts/test-channels-local.sh all",
+  "executor_session_id": 31910,
+  "exit_code": 1,
+  "stdout_sha256": "c4c8971024ddcbd197dd71c031300b4c3c39f027459b5259c291a5502dac6c7d",
+  "source_fingerprint": "8cb6129b4352a738dd20bbae56ef498e2f0bab739807180acee2c603785622ba",
+  "full259source_postseal": true,
+  "owned_cleanup_observed": true,
+  "phases": {
+    "migrations_lint_build": "passed",
+    "unit": {
+      "passed_files": 33,
+      "failed_files": 1,
+      "passed_tests": 367,
+      "failed_tests": 1
+    },
+    "postgresql_web_browser": "not reached"
+  },
+  "actual_failure": {
+    "path": "api-app/src/domain/inbox/initial-message.service.spec.ts",
+    "line": 100,
+    "expected_code": "INITIAL_TEMPLATE_UNSUPPORTED",
+    "actual_code": "INITIAL_TEMPLATE_UNAVAILABLE",
+    "classification": "fixture omitted per-item available flag while trying to exercise unsupported components"
+  },
+  "next": "Only add available:true to this existing unit fixture, preserve unsupported oracle and all assertions; full E64 then checks consolidated current candidate."
+}

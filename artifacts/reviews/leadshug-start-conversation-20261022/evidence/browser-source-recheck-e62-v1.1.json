@@ -1,0 +1,12 @@
+{
+  "checkpoint": "E62 terminal full positive source recheck",
+  "stage": "After actual executor terminal and owned cleanup; BEFORE writer release",
+  "count": 259,
+  "fingerprint": "ca21a62ffb66068d7434558e42e72373a9d53d22e43d9c5ed8784fecdebf53ec",
+  "matches_preseal_full_inventory_and_bytes": true,
+  "record_reference": "browser-source-seal-e62-v1.1.json#records",
+  "stdout_sha256": "226e26585133112a84f6e7295c13f02bdf8f447934db57908d063ccd1afb971a",
+  "executor_reported_exit_code": 1,
+  "recorded_at_utc": "2026-10-23T02:07:42.200569+00:00",
+  "boundary": "Only declared positive public roots and7 exact publicfiles; no actual env/data/process inspection."
+}
