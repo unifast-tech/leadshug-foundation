@@ -1,0 +1,23 @@
+{
+  "kind": "Approved one-shot unmodified canonical full diff guard; restricted raw output",
+  "recorded_at_utc": "2026-10-23T14:58:25.323777+00:00",
+  "executions": 1,
+  "exit_code": 2,
+  "outcome": "no-go",
+  "counts": {
+    "contract_repository_count": 0,
+    "actual_change_count": null,
+    "expected_change_count": null,
+    "forbidden_change_count": null,
+    "unclassified_change_count": null
+  },
+  "violation_codes": {
+    "DIFF-CONTRACT-MISSING": 1
+  },
+  "raw_sha256": "8bde1af9cdc517f30ef363d7a541df846159e6e62e3fd394ee9208516dac4d8d",
+  "stdout_sha256": "16b65f974e8e72764be369b46d2b575e0f46711626dbfc3c592302bfed5454ac",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "privacy": "Raw report/stdout/stderr restricted0600. Only safe counts/codes/hashes published; no private path/content/secret values echoed.",
+  "authorization": "runtime-plan-human-approval-e75-v1.1.json",
+  "unchanged_guard": true
+}

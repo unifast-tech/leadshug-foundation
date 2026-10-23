@@ -1,0 +1,29 @@
+{
+  "schema_version": "gate-finding-resolution-v1",
+  "artifact_kind": "gate_finding_resolution",
+  "authoritative": false,
+  "edit_policy": "derived_from_todo",
+  "todo_path": "foundation_documentation/todos/active/features/TODO-leadshug-start-conversation-by-contact.md",
+  "review_kind": "final_review",
+  "gate_status": "findings_integrated",
+  "findings": [
+    {
+      "finding_id": "F-D3421BCB",
+      "resolution": "Integrated",
+      "usefulness": "useful",
+      "formalizable": "partial",
+      "candidate_rule_level": "paced",
+      "candidate_rule_id": "n/a",
+      "rationale": "Keep fullguard/closure blocker open; explicit renewed one-shot approval required, then actual guard result and final closure guards. Local/operator/module portions now satisfied."
+    },
+    {
+      "finding_id": "F-D1C09F1B",
+      "resolution": "Integrated",
+      "usefulness": "useful",
+      "formalizable": "yes",
+      "candidate_rule_level": "project",
+      "candidate_rule_id": "n/a",
+      "rationale": "Fixed current intent/next-step/work-state/closeout fields: old authorization consumed; corrected fullguard not yet authorized. Historical receipts/frozen decisions retained."
+    }
+  ]
+}

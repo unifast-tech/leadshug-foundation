@@ -1,0 +1,23 @@
+{
+  "kind": "Proposed single corrected canonical full guard invocation; not authorized or executed",
+  "recorded_at_utc": "2026-10-23T15:02:42.384132+00:00",
+  "reason": "Prior single approved attempt terminated before Git at exact section-name parser; documentary suffix removed, no contract boundary/baseline/policy/path-row changes.",
+  "prior_receipt": "final-diff-guard-e75-v1.1.json",
+  "repair_receipt": "final-diff-contract-heading-repair-e75-v1.1.json",
+  "command": [
+    "python3",
+    "delphi-ai/tools/todo_diff_expectation_guard.py",
+    "foundation_documentation/todos/active/features/TODO-leadshug-start-conversation-by-contact.md",
+    "--repo-root",
+    "/mnt/c/unifast/leadshug/leadshug_now_docker",
+    "--json-output",
+    "/tmp/stcon04-final-diff-guard-retry-private.json"
+  ],
+  "maximum_invocations": 1,
+  "read_only": true,
+  "guard_unmodified": true,
+  "exception": "Only this guard may enumerate/read/hash private paths as required by canonical Git diff; no manual private inspection/edit.",
+  "output": "Restricted0600 raw JSON/stdout/stderr; public only counts/codes/hashes.",
+  "forbidden": "No cleanup/deletion, private mutation, product Git write, provider action, recipient contact, runtime change or automatic further retry.",
+  "approval": "pending explicit human approval after current independent final review"
+}

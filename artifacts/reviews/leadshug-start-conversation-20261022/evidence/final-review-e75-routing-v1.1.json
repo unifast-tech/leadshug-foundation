@@ -1,0 +1,13 @@
+{
+  "kind": "Final reviewer dispatch authorization and frozen package",
+  "recorded_at_utc": "2026-10-23T15:08:45.920415+00:00",
+  "model": "gpt-6.1-sol",
+  "effort": "xhigh",
+  "routing_guard": "go, actual formal-review final_review preflight",
+  "context": "fresh ephemeral isolated internal review; no tools/edits",
+  "package_sha256": "257d0d63d6baad8cc019995decc3c0713226152e1fecfb22e11bf0e107f5edd6",
+  "effort_wrapper_sha256": "bd21a5e615ffe87779553259b9a39a7010459e76363deebb00cefb4aca42e246",
+  "protocol": "Canonical subagent_review_run.py; no inherited project/user rules; complete package embedded; strongest_review lane.",
+  "goal_policy": "not used; user did not request goal",
+  "status": "prepared; terminal result not inferred"
+}

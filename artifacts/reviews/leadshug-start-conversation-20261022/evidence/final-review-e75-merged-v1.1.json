@@ -1,0 +1,59 @@
+{
+  "schema_version": "subagent-review-merge-v2",
+  "artifact_kind": "subagent_review_merge",
+  "authoritative": false,
+  "edit_policy": "derived_merge_packet",
+  "dispatch_path": "/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/artifacts/reviews/leadshug-start-conversation-20261022/evidence/final-review-e75-dispatch-v1.1.json",
+  "review_kind": "final_review",
+  "review_count": 1,
+  "reviewer_labels": [
+    "fresh-no-context-final-e75"
+  ],
+  "highest_finding_severity": "high",
+  "axis_summary": {
+    "performance": "acceptable",
+    "elegance": "acceptable",
+    "structural_soundness": "acceptable",
+    "operational_fit": "mixed"
+  },
+  "recommended_paths": [
+    "Retain the unchanged candidate and accept the supplied local runtime, operator and module evidence with its disclosed limitations. Correct the current TODO authority projections, integrate this review, then request explicit approval for the exact bounded fullguard retry. Adjudicate its actual result and complete the remaining closure guards before changing delivery status. Preserve historical receipts and inherited cohort restrictions; no additional product redesign, remote CI, promotion or repeated recipient proof is required by this review."
+  ],
+  "exact_next_step": "Record reviewer resolutions in the governing TODO using the machine-checkable resolution table or equivalent gate ledger, then extract the derived resolution packet and decide whether another bounded review pass is still required.",
+  "findings": [
+    {
+      "finding_id": "F-D3421BCB",
+      "severity": "high",
+      "title": "Canonical full diff validation and closure remain incomplete",
+      "rationale": "The existing delivery blocker remains valid in narrowed form. The sole approved fullguard invocation exited 2 with DIFF-CONTRACT-MISSING before Git discovery and parsed zero repositories. The subsequent parser-only check validates neither actual changes nor forbidden or unclassified paths. Runtime, operator and module evidence now address those portions of the historical findings, but DOD-13 and VAL-09 still cannot close.",
+      "suggested_action": "Keep delivery Pending. Obtain explicit renewed approval for the exact one-invocation retry plan, run the unmodified guard with restricted raw output, and adjudicate its actual findings. Complete the remaining final guards before closure; infer neither a waiver nor further retry authority.",
+      "reviewer_labels": [
+        "fresh-no-context-final-e75"
+      ],
+      "source_finding_ids": [
+        "F-035510C8"
+      ],
+      "category": "adherence",
+      "formalizable_hint": "partial",
+      "candidate_rule_level": "paced",
+      "candidate_rule_id": "n/a"
+    },
+    {
+      "finding_id": "F-D1C09F1B",
+      "severity": "medium",
+      "title": "Current next-step fields still imply unused fullguard authority",
+      "rationale": "Delivery Status Canon still directs execution of the fullguard 'j\u00e1 autorizado', and TODO Closeout Disposition describes the remaining guard as '\u00fanico autorizado'. These current operational fields conflict with the latest checkpoint and retry plan, which correctly record that the one-shot authorization was consumed and renewal is pending. They also describe consolidation as outstanding despite its completed E75 receipt. Unlike timestamped historical evidence, these fields prescribe the next action and could misroute private inspection.",
+      "suggested_action": "Update the current status, next-step and closeout projections to record completed consolidation, the failed first guard invocation and pending renewed approval. Reconcile current completion notes while preserving frozen decisions, criteria and historical receipts.",
+      "reviewer_labels": [
+        "fresh-no-context-final-e75"
+      ],
+      "source_finding_ids": [
+        "FINAL-E75-02"
+      ],
+      "category": "adherence",
+      "formalizable_hint": "yes",
+      "candidate_rule_level": "project",
+      "candidate_rule_id": "n/a"
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "blocked": true,
+  "context": {
+    "approval_scope_present": true,
+    "approval_section_present": true,
+    "architecture_governance_required": true,
+    "architecture_governance_section_present": true,
+    "architecture_review_gates_required": true,
+    "architecture_supersede_trigger": true,
+    "current_delivery_stage": "Pending",
+    "delivery_claim": true,
+    "delivery_gate_rows": {
+      "Local CI-Equivalent Suite Matrix": 3,
+      "Pipeline/Copilot P1/P2 Preflight": 1,
+      "Rule-Spirit Anti-Pattern Hunt": 1
+    },
+    "execution_authority_granted": false,
+    "promotion_routing_rows": 34,
+    "require_delivery_gates": true,
+    "routing_preflight_outcome": "go",
+    "routing_preflight_required": true,
+    "routing_preflight_section_present": true,
+    "rules_ingestion_rows": 10,
+    "todo_path": "foundation_documentation/todos/active/features/TODO-leadshug-start-conversation-by-contact.md",
+    "validation_mode": "execution-authority"
+  },
+  "pre_approval": false,
+  "violations": [
+    {
+      "code": "DELIVERY-GATE-UNRESOLVED-P1-P2",
+      "message": "Pipeline/Copilot P1/P2 Preflight row records an unresolved P1/P2 finding: E74 exact current259source and r7 independent review | Current public contract/schema/DI/CI/build/browser and runtime correctness | passed | evidence/final-root-assessment-e75-v1.1.json; evidence/ci-parity-current-marker-e74-v1.1.json; implementation-architecture_adherence-r7-collection-v1.1.json | No unresolved product P1/P2 identified | Raw scan remains high/exit2; fullguard and independent final review are separate open delivery gates.",
+      "resolution": "Fix or explicitly adjudicate the P1/P2 finding before delivery or promotion readiness claims.",
+      "section": "Pipeline/Copilot P1/P2 Preflight"
+    },
+    {
+      "code": "DELIVERY-GATE-UNRESOLVED-P1-P2",
+      "message": "Rule-Spirit Anti-Pattern Hunt row records an unresolved P1/P2 finding: E74 exact current259source and r7 independent review | All268 static signals individually adjudicated; sole owners and no disguised provider/retry bypass | passed | evidence/final-root-assessment-e75-v1.1.json; evidence/root-static-adjudication-e74-v1.1.json; implementation-test_quality_audit-r7-collection-v1.1.json | No unresolved product P1/P2 identified | Raw scan remains high/exit2; fullguard and independent final review are separate open delivery gates.",
+      "resolution": "Fix or explicitly adjudicate the P1/P2 finding before delivery or promotion readiness claims.",
+      "section": "Rule-Spirit Anti-Pattern Hunt"
+    }
+  ]
+}

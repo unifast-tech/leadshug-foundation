@@ -1,0 +1,11 @@
+{
+  "kind": "Public contract parser compatibility correction; no full guard rerun",
+  "recorded_at_utc": "2026-10-23T14:59:30.059049+00:00",
+  "original_failure": "DIFF-CONTRACT-MISSING",
+  "cause": "Guard requires exact section title Diff Expectation Contract; TODO had suffix (Required Before Delivery).",
+  "change": "Only heading suffix removed; strict policy, baselines, expected/forbidden rows unchanged.",
+  "parser_only": "Canonical parse_contract returns zero violations and four repositories; diff_entries/validate_diff/Git diff traversal not invoked.",
+  "full_guard": "The one authorized full invocation terminated before repository/diff discovery. No second invocation authorized or performed.",
+  "private_inspection": "No repository diff or private path enumeration/read/hash reached by the first run.",
+  "needs": "Explicit authorization for one corrected full canonical invocation; preserve original failure."
+}

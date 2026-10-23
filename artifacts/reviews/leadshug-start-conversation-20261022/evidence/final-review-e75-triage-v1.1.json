@@ -1,0 +1,28 @@
+{
+  "kind": "Final E75 post-review finding classification and resolution",
+  "recorded_at_utc": "2026-10-23T15:16:35.457185+00:00",
+  "method": "delphi-ai/skills/review-finding-classification/SKILL.md; project constitution and TODO; README contains no separate taxonomy section",
+  "source": "final-review-e75-merged-v1.1.json",
+  "findings": [
+    {
+      "finding_id": "F-D3421BCB",
+      "source_finding_id": "F-035510C8",
+      "severity": "high",
+      "classification": "release-blocker",
+      "status": "open",
+      "reason": "Existing closure gate narrowed to corrected fullguard under renewed one-invocation authorization and final closure guards. Local/operator/module portions are now satisfied.",
+      "action": "Seek exact renewed guard approval; no execution before reply."
+    },
+    {
+      "finding_id": "F-D1C09F1B",
+      "source_finding_id": "FINAL-E75-02",
+      "severity": "medium",
+      "classification": "release-blocker",
+      "status": "fixed",
+      "reason": "Current next-step, work-state, intent and disposition explicitly state first authorization consumed and corrected retry not authorized; modules/runtime/operator proofs complete. Historical checkpoints and frozen decisions retained.",
+      "verification": "Root exact current section projections checked; no implementation/test/runtime change."
+    }
+  ],
+  "scope": "No new material product defect or scope expansion; docs/evidence-only correction. No additional independent round warranted for exactly requested projection reconciliation.",
+  "closure": "Still Pending; no waiver inferred."
+}

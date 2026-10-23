@@ -1,0 +1,27 @@
+{
+  "kind": "Actual fresh internal no-context final-review collection",
+  "recorded_at_utc": "2026-10-23T15:16:35.457185+00:00",
+  "session_id": 8418,
+  "actual_exit_code": 0,
+  "strict_merge_exit_code": 0,
+  "turns_completed": 1,
+  "tool_items": 0,
+  "result_sha256": "a102b231eccdd791809332e453318e925180b82a989964d8628d992714906d18",
+  "events_sha256": "28e0e457b603c18678ecb1fe22ef89732119ea0f6e80b0c4ac9be1f647da1fd9",
+  "model": "gpt-6.1-sol",
+  "effort": "xhigh, explicit launcher flag",
+  "overall": "No new material product defect. Local runtime/operator/module evidence conditionally accepted with explicit limitations; fullguard and closure remain blocked.",
+  "limitations_reviewed": [
+    "postdeploy whole-chain checksum comparison",
+    "nonreproducible historical aggregate compensated by106file equality",
+    "corrected selected metadata projections",
+    "historical mixed RED/stale rejected export/lost E73 output",
+    "user-assisted proofs at attestation level",
+    "inherited cohort/debt restrictions"
+  ],
+  "findings": {
+    "F-D3421BCB": "release-blocker open; actual one-shot fullguard no-go, corrected renewal still needed",
+    "F-D1C09F1B": "release-blocker fixed by current authority projection corrections; no product/source change"
+  },
+  "further_review": "No new product redesign, broad test repeat, recipient proof, remote CI or promotion required by reviewer; remaining actual guard result must still be adjudicated."
+}

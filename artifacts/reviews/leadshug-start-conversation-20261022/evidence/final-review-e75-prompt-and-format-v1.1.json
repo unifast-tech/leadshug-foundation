@@ -1,0 +1,21 @@
+{
+  "kind": "Final review exact prompt and documentation-only formatting collection",
+  "recorded_at_utc": "2026-10-23T15:18:11.080300+00:00",
+  "complete_prompt_characters": 774508,
+  "complete_prompt_sha256": "ef55dbb7f637cdc2e87ec57cfa1cf9625307b226b3bce8953cfe5ebe72c6dd70",
+  "dispatch_file_sha256": "f99265b178ba2a07561a44617cce90bf8e6bbd8fb2c76bb1e5e04b7cb7bab513",
+  "package_sha256": "257d0d63d6baad8cc019995decc3c0713226152e1fecfb22e11bf0e107f5edd6",
+  "staged_diff_check_exit_code": 2,
+  "format_signals": [
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-start-conversation-20261022/final-review-e75-dispatch-v1.1.md",
+      "kind": "one extra blank line at EOF"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-start-conversation-20261022/final-review-e75-merged-v1.1.md",
+      "kind": "one extra blank line at EOF"
+    }
+  ],
+  "disposition": "Preserve exact actual reviewed canonical dispatcher output and strict merger output; documentary formatting only, no product/source/test defect or alteration. Not a diff-guard PASS.",
+  "full_guard": "First invocation no-go preserved; no corrected retry performed or authorized."
+}

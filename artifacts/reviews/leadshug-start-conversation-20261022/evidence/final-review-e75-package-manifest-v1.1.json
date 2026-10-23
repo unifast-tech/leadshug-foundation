@@ -1,0 +1,222 @@
+{
+  "kind": "Frozen bounded final-review package",
+  "recorded_at_utc": "2026-10-23T15:08:17.508461+00:00",
+  "package": "foundation_documentation/artifacts/reviews/leadshug-start-conversation-20261022/final-review-e75-package-v1.1.md",
+  "characters": 750346,
+  "sha256": "257d0d63d6baad8cc019995decc3c0713226152e1fecfb22e11bf0e107f5edd6",
+  "files": [
+    {
+      "path": "foundation_documentation/todos/active/features/TODO-leadshug-start-conversation-by-contact.md",
+      "sha256": "47b7165435e9eae8ab9f1c025c5cc0f22558bb3c381e9fd40d7fb09fa5d908ca",
+      "characters": 325517
+    },
+    {
+      "path": "foundation_documentation/modules/inbox-and-conversations.md",
+      "sha256": "a6711b55b173f2f8b3f6bf83ed4fbb55e6a7e2ffa0132dfd80f594d838d75d44",
+      "characters": 25615
+    },
+    {
+      "path": "foundation_documentation/modules/integrations-and-channels.md",
+      "sha256": "3dfd99329d974e5a1aac22f04745017764d4c94b2566e0c63383151b1ef7459f",
+      "characters": 64818
+    },
+    {
+      "path": "api-app/src/domain/channels/transport/channel.ts",
+      "sha256": "49b24179666a0fa90becfb2bf24ebc31acde7bf342b34d3b110a42465ccb69f9",
+      "characters": 6698
+    },
+    {
+      "path": "api-app/src/domain/inbox/initial-message.service.ts",
+      "sha256": "61a52116f29e5753ed27bae607dbebd5dfdb5b1fd1dc8954a02602e8d81a8e6e",
+      "characters": 24784
+    },
+    {
+      "path": "api-app/src/domain/inbox/dispatch-admission.service.ts",
+      "sha256": "2c3e19f9bcacd75d047ee73e5913ad77e9a8700a43427af27556b801234bcda9",
+      "characters": 45810
+    },
+    {
+      "path": "api-app/src/domain/inbox/message-acceptance.service.ts",
+      "sha256": "285647f1dee08b14dbae8661743c75198f1be85d5b523e9f73c7d51dfbe30ff4",
+      "characters": 16901
+    },
+    {
+      "path": "api-app/src/domain/inbox/channel-window-policy.ts",
+      "sha256": "46dfcf887f2ad4ed0670664186e918816699e6541d1670aa9c32ac79a193e43e",
+      "characters": 5700
+    },
+    {
+      "path": "api-app/src/integrations/meta/initial-message.client.ts",
+      "sha256": "e21efb3df6910c0b740afec40da919542f672302429217268fdb56c282446721",
+      "characters": 11410
+    },
+    {
+      "path": "web-app/src/componentes/NovaConversa.tsx",
+      "sha256": "2702cae2c4d913d511e33ca8d305ecc03d7ee56f34623877058865d884aa1bdd",
+      "characters": 40558
+    },
+    {
+      "path": "api-app/prisma/migrations/20261022140000_initial_message_orchestration/migration.sql",
+      "sha256": "a8b26d5dfc7eb8f658cf703cee0f1f6061b5afa2ad84ca0f37cd4baec9d68437",
+      "characters": 343
+    },
+    {
+      "path": "api-app/prisma/migrations/20261022150000_initial_message_admissions/migration.sql",
+      "sha256": "41df36b473c3163e9e29ea1cc6c12df3376994081698be83c83e50a812e3922a",
+      "characters": 3851
+    },
+    {
+      "path": "api-app/prisma/migrations/20261022160000_initial_message_inbox_order/migration.sql",
+      "sha256": "60e7f76b8ccbee5e51dd939bdf126eeecaa1b1c1871f393a4363add94274a544",
+      "characters": 398
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-start-conversation-20261022/evidence/all-result-e74-v1.1.json",
+      "sha256": "e8c56ed6745b3a1d66f9bf2dde86704a5a58f8d936e1ff763f7e75b0e3386818",
+      "characters": 1756
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-start-conversation-20261022/evidence/all-source-seal-e74-v1.1.json",
+      "sha256": "40ad3c8844a20d2d688269ac60f0b2648460bb3c26d6e6bf2fe912fcd5694d4c",
+      "characters": 49182
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-start-conversation-20261022/evidence/candidate-criterion-index-e74-v1.1.json",
+      "sha256": "dad974d4ba2b8ffe6c771e47536d4dcb7a83b62b53f45d473c5f811551b2df83",
+      "characters": 34559
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-start-conversation-20261022/evidence/security-candidate-map-e74-v1.1.json",
+      "sha256": "72fb6dae512a01c7ebaea38328bd8c0f18155dd1a4f333a176b70e0ad05a5391",
+      "characters": 19527
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-start-conversation-20261022/evidence/ci-parity-current-marker-e74-v1.1.json",
+      "sha256": "0568a5972438e5a026326190ea73c97c619acc1ca792a7d7ff3c134760d5bcf5",
+      "characters": 2924
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-start-conversation-20261022/evidence/static-root-collection-e74-v1.1.json",
+      "sha256": "b906a3b0e3c388daf0f9b9652e799c12964ac65a3bc636abcda5b9ff92387ede",
+      "characters": 2542
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-start-conversation-20261022/evidence/runtime-plan-human-approval-e75-v1.1.json",
+      "sha256": "460b0715b58ab6dbf902536166c8ba7feef51cd1477bb21728f5e8affa2fc40d",
+      "characters": 1660
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-start-conversation-20261022/evidence/runtime-migration-reconciliation-root-e75-v1.1.json",
+      "sha256": "7455774aea3c20ebc451c9f358162c20983dce29be7af2d1f8d904f05a29e9ea",
+      "characters": 7553
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-start-conversation-20261022/evidence/runtime-peer-and-compiled-root-e75-v1.1.json",
+      "sha256": "222c252ad1cfa4c1b45fd67a246e37874a7ba9acf4a81c83fd4e26e7c17c6993",
+      "characters": 3770
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-start-conversation-20261022/evidence/runtime-public-root-attestation-e75-v1.1.json",
+      "sha256": "889dbf513e40775d64d7d51046b41c6d3971d248397a8ef643af52b31e815c03",
+      "characters": 1634
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-start-conversation-20261022/evidence/operator-qr-first-send-e75-v1.1.json",
+      "sha256": "bb10b66550fbee8b3dea7673d1276d55367a637aa3d9f45f02d67b3d89f5eeda",
+      "characters": 663
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-start-conversation-20261022/evidence/operator-qr-reply-confirmed-e75-v1.1.json",
+      "sha256": "b2ccf5daa795ad076bbabd1c7bfe6fb575e8caadd6a4d9419151f05ad0fce0c4",
+      "characters": 738
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-start-conversation-20261022/evidence/operator-official-roundtrip-e75-v1.1.json",
+      "sha256": "3afb34580265ef2a3ecee6b80e92fc830565b20711740aa825d7f3f9f9b2be04",
+      "characters": 1132
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-start-conversation-20261022/evidence/module-consolidation-final-e75-v1.1.json",
+      "sha256": "8af4dc672b85a5631487810853019d0a49ce68edc84262807988f24d38236fd8",
+      "characters": 1127
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-start-conversation-20261022/evidence/final-public-source-recheck-e75-v1.1.json",
+      "sha256": "70d82c27125f83933206b3afaae47584c4de71a7487c6e33845f621320c31c95",
+      "characters": 516
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-start-conversation-20261022/evidence/final-root-assessment-e75-v1.1.json",
+      "sha256": "815c1c9d8c10e5b0c22b8e18963f150cbb8f34ba7eb6e1e1a5ccf2254e90c290",
+      "characters": 3944
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-start-conversation-20261022/evidence/final-diff-guard-e75-v1.1.json",
+      "sha256": "da829c31d18481e0389d401b0d8a91505ae3d1522cbd968b785be2c8b73f49f6",
+      "characters": 959
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-start-conversation-20261022/evidence/final-diff-contract-heading-repair-e75-v1.1.json",
+      "sha256": "7ed5641495304fe2a979c3646be56ed9f1eb60ccf9c1b26f0958823d0dcc7fc6",
+      "characters": 929
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-start-conversation-20261022/evidence/final-diff-guard-retry-plan-e75-v1.1.json",
+      "sha256": "117fccbfcae34daf4936566a35d9031f771136b9f11527116b3d6b2de1cb337b",
+      "characters": 1349
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-start-conversation-20261022/evidence/implementation-architecture_adherence-r7-collection-v1.1.json",
+      "sha256": "26d205f229609381b3588f9e8966b6509dd91f82c4c948873e01e7425fdc6a61",
+      "characters": 760
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-start-conversation-20261022/evidence/implementation-architecture_adherence-r7-result-v1.1.json",
+      "sha256": "9c058fa7aa077a17d6bdc721a481d3e71082760f145e9078508773bca397c91b",
+      "characters": 10767
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-start-conversation-20261022/evidence/implementation-cutover_integrity_audit-r7-collection-v1.1.json",
+      "sha256": "e5c0cd0c382b36a88bb07180cfbadadf74c58395f13964711c093f5c7ea57c8a",
+      "characters": 677
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-start-conversation-20261022/evidence/implementation-cutover_integrity_audit-r7-result-v1.1.json",
+      "sha256": "e27609a2da1c1a98f78957f6615e20680f77f6b00ebf38052342d2c9776e4608",
+      "characters": 3042
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-start-conversation-20261022/evidence/implementation-test_quality_audit-r7-collection-v1.1.json",
+      "sha256": "8f3e495d4fcac4f6b3a60eff400206ddb58307e5868f663cb299d41d11640f0f",
+      "characters": 1545
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-start-conversation-20261022/evidence/implementation-test_quality_audit-r7-result-v1.1.json",
+      "sha256": "61e06d1c67a06f7974760c045fe98cc5d61b14e82b60a8b5e096bc9bd2060123",
+      "characters": 6821
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-start-conversation-20261022/evidence/pcv-eps-e74-v1.1.json",
+      "sha256": "394d50914ecb7b4ba80b60615ec80fb823c153fad1fdb101f24b03668042748a",
+      "projection": "Explicit metadata/proof/limits fields; original immutable."
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-start-conversation-20261022/evidence/pcv-frc-e74-v1.1.json",
+      "sha256": "818ee62c65785b3cdf1cf09dd8eca83e9e8781de11301bacb43a2ae967c47d5e",
+      "projection": "Explicit metadata/proof/limits fields; original immutable."
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-start-conversation-20261022/evidence/pcv-bci-e74-v1.1.json",
+      "sha256": "65e424d1522b786408828f1593e875e618c6a9b0b4303d3b0a821a741f8ded34",
+      "projection": "Explicit metadata/proof/limits fields; original immutable."
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-start-conversation-20261022/evidence/pcv-rls-e74-v1.1.json",
+      "sha256": "507e7790cf3aea01fef2c09ee53f6cabe3849ad72116bce10bd7bd2e0c59a0fd",
+      "projection": "Explicit metadata/proof/limits fields; original immutable."
+    }
+  ],
+  "mode": "bounded-file-set",
+  "reviewer": "fresh internal no-context; gpt-6.1-sol/xhigh; no tools/edits",
+  "open_gate": "Canonical fullguard no-go; corrected retry awaits specific authorization."
+}

@@ -1,0 +1,86 @@
+{
+  "blocked": true,
+  "context": {
+    "acceptance_criteria_count": 0,
+    "allow_waivers": false,
+    "ci_equivalent_row_count": 3,
+    "current_delivery_stage": "Pending",
+    "definition_of_done_count": 13,
+    "delivery_claim": true,
+    "dod_count": 13,
+    "evidence_row_count": 34,
+    "mode": "single",
+    "pipeline_preflight_row_count": 1,
+    "rule_spirit_hunt_row_count": 1,
+    "scope_count": 12,
+    "todo_path": "/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/todos/active/features/TODO-leadshug-start-conversation-by-contact.md",
+    "validation_count": 9,
+    "validation_steps_count": 9
+  },
+  "overall_outcome": "no-go",
+  "rule_id": "paced.todo.completion-evidence",
+  "schema_version": "todo-completion-guard-v1",
+  "status": "blocked",
+  "violations": [
+    {
+      "code": "PIPELINE-PREFLIGHT-UNRESOLVED-P1-P2",
+      "message": "Pipeline/Copilot P1/P2 Preflight row records an unresolved P1/P2 finding: E74 exact current259source and r7 independent review | Current public contract/schema/DI/CI/build/browser and runtime correctness | passed | evidence/final-root-assessment-e75-v1.1.json; evidence/ci-parity-current-marker-e74-v1.1.json; implementation-architecture_adherence-r7-collection-v1.1.json | No unresolved product P1/P2 identified | Raw scan remains high/exit2; fullguard and independent final review are separate open delivery gates.",
+      "resolution": "Fix the P1/P2 issue, refresh the evidence, and rerun the gate before claiming delivery.",
+      "section": "Pipeline/Copilot P1/P2 Preflight"
+    },
+    {
+      "code": "RULE-SPIRIT-HUNT-UNRESOLVED-P1-P2",
+      "message": "Rule-Spirit Anti-Pattern Hunt row records an unresolved P1/P2 finding: E74 exact current259source and r7 independent review | All268 static signals individually adjudicated; sole owners and no disguised provider/retry bypass | passed | evidence/final-root-assessment-e75-v1.1.json; evidence/root-static-adjudication-e74-v1.1.json; implementation-test_quality_audit-r7-collection-v1.1.json | No unresolved product P1/P2 identified | Raw scan remains high/exit2; fullguard and independent final review are separate open delivery gates.",
+      "resolution": "Fix the P1/P2 issue, refresh the evidence, and rerun the gate before claiming delivery.",
+      "section": "Rule-Spirit Anti-Pattern Hunt"
+    },
+    {
+      "code": "LITERAL-MARKER-EVIDENCE-MISMATCH",
+      "message": "Criterion names `endpoint` but evidence does not prove the same marker: **SCOPE-02 \u2014 Primeiro envio dur\u00e1vel:** endpoints autenticados BFF para op\u00e7\u00f5es, preview, cria\u00e7\u00e3o de inten\u00e7\u00e3o, leitura/reconcilia\u00e7\u00e3o/acknowledgment; UUID idempotency por BU+ator; slot ativo por conversa; request/context/fingerprint imut\u00e1veis. Fallback autom\u00e1tico entre canais \u00e9 proibido.",
+      "resolution": "Update the evidence to name the exact required artifact, or record an explicit approved waiver/deviation.",
+      "section": "Completion Evidence Matrix"
+    },
+    {
+      "code": "LITERAL-MARKER-EVIDENCE-MISMATCH",
+      "message": "Criterion names `browser` but evidence does not prove the same marker: **SCOPE-06 \u2014 Subconjunto de template:** BODY textual NAMED/POSITIONAL, header/footer somente est\u00e1ticos; sem bot\u00e3o, m\u00eddia, auth, flows, arbitrary Graph payload ou amplia\u00e7\u00e3o de categorias suportadas. Texto final 1\u20134096 chars; at\u00e9 20 par\u00e2metros de 1\u20131024 chars; snapshot total at\u00e9 4096. Cat\u00e1logo \u00e9 observa\u00e7\u00e3o, nunca autoriza\u00e7\u00e3o de envio: antes de cada novo envio validar remotamente asset/status atual da mesma conta; detectar mudan\u00e7a/pausa/unknown e falhar fechado. `getTemplate(id)` isolado n\u00e3o prova v\u00ednculo de conta; usar listagem existente por nome salvo na observa\u00e7\u00e3o confi\u00e1vel, filtrada em at\u00e9 2 p\u00e1ginas de 50, com correspond\u00eancia exata ID/nome/idioma/sem\u00e2ntica e resultado esgotado. Cursor/URL do browser nunca autoriza fetch.",
+      "resolution": "Update the evidence to name the exact required artifact, or record an explicit approved waiver/deviation.",
+      "section": "Completion Evidence Matrix"
+    },
+    {
+      "code": "LITERAL-MARKER-EVIDENCE-MISMATCH",
+      "message": "Criterion names `migration` but evidence does not prove the same marker: **SCOPE-11 \u2014 Prova assistida futura:** depois de candidate GREEN, assurance de imagens e migration descart\u00e1vel/local, validar primeiro envio assistido n\u00e3o oficial, template oficial realmente `APPROVED` pr\u00f3prio e reply do destinat\u00e1rio. A aus\u00eancia de asset eleg\u00edvel bloqueia conclus\u00e3o; fixture n\u00e3o prova aprova\u00e7\u00e3o. Nenhum contato autom\u00e1tico.",
+      "resolution": "Update the evidence to name the exact required artifact, or record an explicit approved waiver/deviation.",
+      "section": "Completion Evidence Matrix"
+    },
+    {
+      "code": "CRITERION-CHECKLIST-UNCHECKED",
+      "message": "Definition of Done item is still unchecked under a delivery claim: **DOD-13:** architecture/adherence/security/performance/TQA/final/cutover/debt and delivery guards pass at their required stages; no open P1/P2; constraints SEC-R6-04, OPS-R4-01, TQA-ST05-03 remain truthfully carried.",
+      "resolution": "Check the TODO item only after the implementation and criterion-specific evidence are complete, or move the TODO back to a non-delivery stage.",
+      "section": "Definition of Done"
+    },
+    {
+      "code": "EVIDENCE-NOT-PASSED",
+      "message": "Evidence status `planned` does not satisfy delivery for criterion: **DOD-13:** architecture/adherence/security/performance/TQA/final/cutover/debt and delivery guards pass at their required stages; no open P1/P2; constraints SEC-R6-04, OPS-R4-01, TQA-ST05-03 remain truthfully carried.",
+      "resolution": "Record `passed` with concrete evidence, or use `--allow-waivers` only after an approved waiver is recorded.",
+      "section": "Completion Evidence Matrix"
+    },
+    {
+      "code": "LITERAL-MARKER-EVIDENCE-MISMATCH",
+      "message": "Criterion names `web` but evidence does not prove the same marker: **VAL-08:** local source-bound API/Web activation and owned stable/temporary HTTPS only under later approved runtime plan; assisted own-channel proofs as DOD-12.",
+      "resolution": "Update the evidence to name the exact required artifact, or record an explicit approved waiver/deviation.",
+      "section": "Completion Evidence Matrix"
+    },
+    {
+      "code": "CRITERION-CHECKLIST-UNCHECKED",
+      "message": "Validation Steps item is still unchecked under a delivery claim: **VAL-09:** run appropriate architecture, critique, assumption/code, review drift, decision adherence, module consistency, security, performance/concurrency, TQA, final, cutover and completion guards after their proper lifecycle stages. Architecture planning r1 exists; other planning/delivery gates require their actual current artifacts. No implementation validation is claimed.",
+      "resolution": "Check the TODO item only after the implementation and criterion-specific evidence are complete, or move the TODO back to a non-delivery stage.",
+      "section": "Validation Steps"
+    },
+    {
+      "code": "EVIDENCE-NOT-PASSED",
+      "message": "Evidence status `planned` does not satisfy delivery for criterion: **VAL-09:** run appropriate architecture, critique, assumption/code, review drift, decision adherence, module consistency, security, performance/concurrency, TQA, final, cutover and completion guards after their proper lifecycle stages. Architecture planning r1 exists; other planning/delivery gates require their actual current artifacts. No implementation validation is claimed.",
+      "resolution": "Record `passed` with concrete evidence, or use `--allow-waivers` only after an approved waiver is recorded.",
+      "section": "Completion Evidence Matrix"
+    }
+  ]
+}

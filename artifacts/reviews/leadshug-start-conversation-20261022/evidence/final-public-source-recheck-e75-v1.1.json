@@ -1,0 +1,11 @@
+{
+  "kind": "Final exact E74 positive-public source recheck",
+  "recorded_at_utc": "2026-10-23T14:59:32.482367+00:00",
+  "count": 259,
+  "all_record_bytes_equal": true,
+  "inventory_equal": true,
+  "public_extra_paths": [],
+  "fingerprint": "589c753670cfcf54020b785e6bae6b85ec1a8b4bab707f333f8e64d8aaf38c8e",
+  "expected_fingerprint": "589c753670cfcf54020b785e6bae6b85ec1a8b4bab707f333f8e64d8aaf38c8e",
+  "scope": "Only declared five positive source roots and seven exact public files; no root/private traversal."
+}

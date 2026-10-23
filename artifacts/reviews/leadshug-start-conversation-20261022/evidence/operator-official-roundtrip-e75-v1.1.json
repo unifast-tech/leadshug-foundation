@@ -1,0 +1,20 @@
+{
+  "kind": "Operator proof: approved official first template and reply confirmed",
+  "recorded_at_utc": "2026-10-23T14:57:09.559882+00:00",
+  "initial_question_id": "call_e313ab140f264548a64dc41d50afa271",
+  "initial_answer": "Sim apareceu",
+  "clarification_question_id": "call_5489da7f7b7545dc94b6e3f37cbefbb1",
+  "clarification_answer": "Sim, os dois funcionaram",
+  "business_unit": "Local Test Ofc",
+  "approved_template": "leadshug_validacao_20261022_01",
+  "scenario": "Nova conversa; open/reuse explicit-DDI test contact; select official and APPROVED catalog template; preview; confirm first send once; recipient replies.",
+  "outbound_recipient_delivery": "confirmed by operator",
+  "inbound_reply_in_LeadsHug": "confirmed by operator",
+  "freshness": [
+    "runtime-public-root-attestation-e75-v1.1.json",
+    "runtime-peer-and-compiled-root-e75-v1.1.json"
+  ],
+  "provenance": "User-assisted real-resource validation only. No agent automated recipient action, provider mutation or business-row inspection.",
+  "nonofficial_proof": "operator-qr-reply-confirmed-e75-v1.1.json",
+  "delivery_stage": "Pending final gates"
+}

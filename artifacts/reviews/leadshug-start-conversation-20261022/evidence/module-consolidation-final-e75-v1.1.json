@@ -1,0 +1,17 @@
+{
+  "kind": "Final canonical application of exact independently reviewed two-module patch",
+  "recorded_at_utc": "2026-10-23T14:57:23.402746+00:00",
+  "patch": "module-consolidation-r7-v1.1.patch",
+  "patch_sha256": "70b6d9fc91f037556b936be2b143601aa10339d3313d67b2fe692acada5ace9f",
+  "resulting_lf_sha256": {
+    "modules/inbox-and-conversations.md": "a6711b55b173f2f8b3f6bf83ed4fbb55e6a7e2ffa0132dfd80f594d838d75d44",
+    "modules/integrations-and-channels.md": "3dfd99329d974e5a1aac22f04745017764d4c94b2566e0c63383151b1ef7459f"
+  },
+  "sequencing": "Applied after both operator first-send and reply proofs, unlike the historical reversed temporary application.",
+  "proofs": [
+    "operator-qr-reply-confirmed-e75-v1.1.json",
+    "operator-official-roundtrip-e75-v1.1.json"
+  ],
+  "one_to_one_consistency": "All seven reviewed module rows and ten implementation decisions retained by byte-exact reviewed result; sole acceptance/catalog/sender ownership retained; two explicit approved supersedes retained.",
+  "remaining": "One-shot canonical full guard and independent final review; no production or product Git claim."
+}
