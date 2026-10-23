@@ -31,7 +31,7 @@ Este TODO define WHAT, exclusões e critérios de entrega. A baseline v1.3 abaix
 ## Delivery Status Canon (Required)
 - **Current delivery stage:** Pending
 - **Qualifiers:** none
-- **Next exact step:** CP1: corrigir confiança/quarentena, renovação pendente, limpeza/ingresso e fixtures apontados em r3; provar RED/GREEN e API completo sobre fontes estáveis.
+- **Next exact step:** CP1: corrigir recuperação da quarentena após recebimento e unlink concorrente apontados em r4; refazer freeze, API completo e revisão independente após invalidar a rodada r4 por edição concorrente.
 
 ## Active Work State (Required While TODO Remains In `active/`)
 - **Work state:** implementation
@@ -597,6 +597,7 @@ Historical planning observation retained: IG-REV-01..04, strategic source, high/
 | IG-CP1-R3-03 | medium | release-blocker | fix in this TODO | durable quarantine and later correct-proof recovery preserve existing channel contract | open | adherence-cp1-r3-result.json |
 | IG-CP1-R3-04 | low | release-blocker | fix in this TODO | required ownership concurrency proof cannot assume winner scheduling; fix assertions in this TODO | open | adherence-cp1-r3-result.json |
 | IG-CP1-ROOT-01 | high | release-blocker | fix in this TODO | pending current ingress remains retryable without content/trust before proof | open | cp1-r3-root-staged-ingress-finding.json |
+| IG-CP1-R4-01 | high | release-blocker | repeat affected proof in this TODO | four mutations violated the explicit r4 freeze; preserve evidence and validate current bytes anew | open | cp1-r4-freeze-breach.json; adherence-cp1-r4-result.json |
 
 ## TODO Closeout Disposition
 - **Disposition:** blocked
@@ -850,7 +851,7 @@ Authority preflight final: `artifacts/reviews/leadshug-instagram-channel-2026102
 
 | Checkpoint | State | Owner / next proof |
 | --- | --- | --- |
-| CP1 Identity/route/state cutover | running; changes required r3 | serial executor; repair pending lifecycle/quarantine/ingress and canonical fixtures, fresh re-review |
+| CP1 Identity/route/state cutover | running; r4 invalidated, changes required | fresh serial executor; repair prior-receipt recovery/stale unlink, then stable API and fresh review |
 | CP2 OAuth/ingress | pending | follows CP1 accepted checkpoint |
 | CP3 Channel/policy/consumers | pending | shared sender/acceptance only |
 | CP4 UI/CI/browser | pending | profile handoff for CI/runtime tooling |
@@ -934,3 +935,13 @@ The explicit unverified/noneligible state is approved WHAT; currentChannelId=NUL
 Serialized r3 repair resumed only after both frozen lanes were terminal; `evidence/cp1-r3-repair-handoff.json`. Root remains documentation owner and the existing coder is sole product writer. No new human approval is required for these corrections inside approved WHAT; real runtime/private/Meta authority still requires its later concrete plan.
 
 CP1 r3 causal RED established before production edits: `evidence/cp1-r3-causal-red.json`. All production paths remained unchanged; only the admitted lifecycle spec changed.379unit cases pass,4of23Instagram cases fail on quarantine outcome, repeated create, lost cleanup fence and pending message200instead of503. The receipt distinguishes the first failed quarantine assertion from dynamic exploit proof; all subsequent no-content/unread/realtime/bot and recovery assertions must execute in GREEN.
+
+CP1 r3 targeted GREEN: `evidence/cp1-r3-repair-diagnostic-green.json` records root-observed379unit/24Instagram e2e passes on37frozen public paths. All37immutable inherited public paths still match. The implementation retains explicit detached staging and adds tightly fenced current-stage metadata/retry handling; source acceptance is pending independent r4 and the complete API result. No source edits until both lanes become terminal.
+
+## CP1 r4 invalidation and serialized recovery
+
+The fresh r4 reviewer returned terminal `changes_required`; its package was invalidated after four source mutations while review remained active. `evidence/cp1-r4-freeze-breach.json` preserves the original and observed hashes. The executor acknowledged the error and became terminal. No edits were reverted to hide the drift. Its later targeted GREEN (379 unit/24 Instagram cases) is on different bytes from the complete API RED (477/482 e2e cases,34/36 files), and neither constitutes acceptance of current source. `cp1-r4-terminal-source-baseline.json` seals the actual retained37paths for the next repair.
+
+Qualified r4 observations on its originally inspected bytes support the original-defect repairs for R3-01/03/04 and ROOT-01, but confer no acceptance on changed files. R1-03 remains open for a previously received/CONNECTED channel that cannot recover its quarantined current attempt after correct proof; R3-02 remains open for stale unlink deleting a newer generation without cleanup; R1-07 still requires complete stable-source API GREEN. R4-01 is Integrated, useful, project-level and a release-blocker: preserve invalidated evidence, establish a new freeze, validate it and obtain fresh review. No shared Delphi policy change or new scope is authorized.
+
+A fresh bounded routine executor replaces the terminal sticky executor under the same single-writer contract and approved WHAT. Root owns Foundation documentation. The next lane first adds actual residual transition RED cases, then repairs only admitted current lifecycle/fixture code, captures targeted results and becomes terminal. Root alone authorizes the subsequent frozen complete API run and fresh review; that validation lane cannot edit sources. CP2–CP6 remain mandatory and pending. Real runtime, private inputs, Meta and full private diff guard remain excluded until later concrete plan approval.

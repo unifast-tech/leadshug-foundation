@@ -1,0 +1,82 @@
+{
+  "schema_version": "subagent-review-result-v1",
+  "artifact_kind": "subagent_review_result",
+  "dispatch_path": "/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/adherence-cp1-r4-dispatch.json",
+  "review_kind": "architecture_adherence",
+  "reviewer_label": "instagram_cp1_adherence_r4",
+  "overall_assessment": "changes_required; r4 package invalidated by source movement during review. Before review, all 37 source hashes and the TODO hash matched. After source inspection, four source files differed: channels.service.ts, helpers.ts, instagram-lifecycle.e2e-spec.ts and evolution.controller.ts; the other 33 sources and TODO still matched. Root independently confirmed the drift and reported that the executor admitted edits and became terminal. The observations below concern the originally inspected r4 bytes, not clean acceptance of current source. On those inspected bytes: IG-CP1-R1-03 remains open because correct-proof recovery fails when a prior receipt and completed attempt exist; IG-CP1-R1-07 remains open because complete stable-source API GREEN was not supplied and the retained staged connection-event path conflicts with its regression assertion; IG-CP1-R3-01 supports closure of the repeated-create defect through a durable pre-dispatch stage transition and same-instance observation on retry; IG-CP1-R3-02 remains open because stale unlink snapshots can lose the current managed resource's cleanup fence; IG-CP1-R3-03 supports closure of replacement-number quarantine and subsequent correct-proof recovery without a previous receipt; IG-CP1-R3-04 supports closure because assertions follow the actual successful contender and preserve the losing tuple; IG-CP1-ROOT-01 supports closure of its specific pending-message defect through safe metadata, retryable 503 and same-key acceptance after actual proof. These qualified source dispositions do not accept the subsequently changed files. Prior supported closures R1-01/02/04/05/06/08 and R2-01/02 remain supported. Architecture/adherence, code quality, tests, security, performance, elegance, structural soundness and operational fit were considered. The targeted receipt reports 379 unit and 24 Instagram integration passes; four product-path RED cases are meaningful, but the first quarantine failure does not prove dynamically reached pre-fix content acceptance, and additional variants establish post-change coverage only. No complete API, ALL, browser, performance or real-provider acceptance is inferred. The complete Frontend/Consumer Matrix and endpoint/consumer contracts remain mandatory CP2–CP6 obligations, not missing CP1 work or waivers. Additional immediate public dependency reads were limited to receipt-attempt-convergence.ts, safe-redaction.ts, incoming.service.ts, surfaces/bff/channels.controller.ts and integrations/evolution/evolution.client.ts. This reviewer performed no edits, tests, runtime or network access.",
+  "recommended_path": "Keep CP1 changes_required and record r4 as invalidated. Preserve the qualified observations and historical closures, retain R1-03/R1-07/R3-02, and repair them without weakening assertions or changing approved WHAT. Establish a new explicit source manifest and dispatch after the writer is terminal; obtain causal product-path evidence for the residual transitions, complete API GREEN on stable sources and fresh bounded review before accepting CP1. Preserve single-create, read-before-retry, ambiguity, immutable ownership and unproved-staging boundaries. CP2–CP6, inherited SEC-R6-04/OPS-R4-01/TQA-ST05-03 restrictions and separately approved real-runtime proof remain required. This result grants no delivery, cutover, runtime or Meta authority.",
+  "performance_position": "unknown",
+  "elegance_position": "mixed",
+  "structural_soundness_position": "mixed",
+  "operational_fit_position": "mixed",
+  "findings": [
+    {
+      "finding_id": "IG-CP1-R4-01",
+      "severity": "high",
+      "category": "tests",
+      "title": "Four source mutations invalidate the frozen r4 review package",
+      "rationale": "The admitted manifest and TODO produced 38 matching hashes before review. The subsequent exact-path check produced only 34 matches: channels.service.ts, helpers.ts, instagram-lifecycle.e2e-spec.ts and evolution.controller.ts changed while this review was active. Root independently confirmed the same drift and the executor's admission of edits. These include the principal implementation and proof loci under review. Consequently, the prior targeted GREEN, inspected source, pending full API run and current files cannot be treated as one stable evidence set. The package explicitly prohibited source edits until reviewer and validator were terminal; silently substituting current bytes would erase that failed condition.",
+      "suggested_action": "Record r4 as invalidated and preserve its original manifest, receipts and qualified observations. After all writers and validators are terminal, establish a new manifest and canonical dispatch, validate the exact stable sources and obtain a fresh review. Do not transfer acceptance from the targeted receipt to the changed files.",
+      "formalizable_hint": "yes",
+      "candidate_rule_level": "project",
+      "affected_paths": [
+        "api-app/src/domain/channels/channels.service.ts",
+        "api-app/test/helpers.ts",
+        "api-app/test/instagram-lifecycle.e2e-spec.ts",
+        "api-app/src/surfaces/webhooks/evolution.controller.ts",
+        "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp1-r3-repair-source-manifest.json",
+        "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/adherence-cp1-r4-package.json"
+      ]
+    },
+    {
+      "finding_id": "IG-CP1-R1-03",
+      "severity": "medium",
+      "category": "adherence",
+      "title": "A quarantined previously connected attempt cannot recover through correct current proof",
+      "rationale": "In the inspected channels.service.ts:363–366, contradictory proof correctly persists ownNumberVerified=false and changes the current attempt to ERROR/IDENTITY_QUARANTINED while preserving its historical receipt. For a channel that already received an inbound message, receiptVerifiedAt remains populated. Later correct proof reaches :375–381 and invokes convergeReceiptVerifiedAttempt. That helper accepts PENDING_NUMBER/PENDING_RECEIPT or an already CONNECTED/RECEIPT_VERIFIED attempt, but rejects the ERROR/IDENTITY_QUARANTINED state just persisted. ATTEMPT_STALE therefore rolls back the correct-proof recovery. The new lifecycle test at :191–220 obtains own-number proof but receives no message before the contradiction, so receiptVerifiedAt is null and it exercises the other recovery branch. Initial quarantine is repaired; recovery of a genuinely previously connected channel remains defective. This is a source-derived transition finding, not a reviewer-executed runtime result.",
+      "suggested_action": "Permit recovery of the exact current quarantined attempt only after fresh correct provider proof and the existing identity, generation, epoch, attempt and lease checks. Preserve the receipt and historical facts, and retain rejection of cancelled, incompatible or stale attempts. Add a product-path case that first reaches CONNECTED through actual inbound acceptance, then quarantines on contradictory proof and recovers on correct proof while preserving the old receipt and accepting a pending key once.",
+      "formalizable_hint": "yes",
+      "candidate_rule_level": "project",
+      "affected_paths": [
+        "api-app/src/domain/channels/channels.service.ts",
+        "api-app/src/domain/channels/receipt-attempt-convergence.ts",
+        "api-app/test/instagram-lifecycle.e2e-spec.ts",
+        "api-app/test/number-onboarding-flow.e2e-spec.ts"
+      ]
+    },
+    {
+      "finding_id": "IG-CP1-R3-02",
+      "severity": "high",
+      "category": "operational_fit",
+      "title": "A stale unlink snapshot can delete the renewed channel without retaining its cleanup ownership",
+      "rationale": "The inspected desconectar reads snapshot and its resource outside the transaction at channels.service.ts:399–404. If a RENEW and pending replacement creation finish before unlink acquires its transactional locks, the old resource no longer satisfies :406; identity becomes null at :407. The method then reads the newer channel at :411 and, after its operation lease has cleared, cancels attempts and deletes that channel at :421–425 without comparing its generation, epoch, attempt or instance against the original snapshot. The replacement managed provider remains ACTIVE without a cleanup lease; a detached staging row has no channel FK that would repair this omission. Subsequent INITIAL searches CLEANUP_PENDING rows only and can create another instance without reconciling that resource. The new sequential pending-unlink case covers the ordinary staging repair but not this source-reachable interleaving. No dynamic reproduction was performed by this reviewer.",
+      "suggested_action": "Fence unlink against snapshot replacement before any cancellation or deletion. Under the existing lock order, reject a changed generation, epoch, attempt or resource and require a fresh operation, or otherwise resolve and retire the exact current managed identity safely. Preserve cleanup uncertainty through channel deletion and require reconciliation before another managed create. Add a deterministic product-path race covering unlink's old snapshot followed by completed renewal and pending replacement.",
+      "formalizable_hint": "yes",
+      "candidate_rule_level": "project",
+      "affected_paths": [
+        "api-app/src/domain/channels/channels.service.ts",
+        "api-app/test/instagram-lifecycle.e2e-spec.ts",
+        "api-app/test/number-onboarding-flow.e2e-spec.ts"
+      ]
+    },
+    {
+      "finding_id": "IG-CP1-R1-07",
+      "severity": "medium",
+      "category": "tests",
+      "title": "Complete stable-source API proof remains absent and the retained staged connection path is inconsistent",
+      "rationale": "The inspected helper now uses BU scope and an explicit provedBusinessPhone option, and the 15000/60-row fixtures retain their datasets, EXPLAIN and query assertions. However, the retained held-renewal regression at number-onboarding-flow.e2e-spec.ts:919–923 requires the current unproved staging connection.update to return 200 and update connection metadata while leaving identity and receipt unproved. The inspected Evolution controller recognizes that staging and persists safe metadata, then calls tratarConexao, whose provider lock requires current_channel_id=context.channelId. Detached staging necessarily fails that condition and returns IDENTITY_NOT_CURRENT/409 before the retained assertions. The targeted 24-case suite does not execute this regression. No terminal complete API receipt was supplied to this reviewer, and the four subsequent source mutations invalidate stable-source attribution in any event. This identifies the source conflict; it does not claim an observed full-run failure.",
+      "suggested_action": "Preserve the original staged connection, quarantine, stale-generation and same-key recovery assertions. Make the permitted connection metadata path honor the exact current staging fences without granting proof, receipt or content eligibility. Retain canonical fixture adaptations and guaranteed release of held requests. Capture a complete GREEN API run against a newly sealed source set before closing this finding.",
+      "formalizable_hint": "partial",
+      "candidate_rule_level": "project",
+      "affected_paths": [
+        "api-app/src/surfaces/webhooks/evolution.controller.ts",
+        "api-app/src/domain/inbox/message-acceptance.service.ts",
+        "api-app/test/number-onboarding-flow.e2e-spec.ts",
+        "api-app/test/channel-transport.e2e-spec.ts",
+        "api-app/test/helpers.ts",
+        "api-app/test/conversation-start.e2e-spec.ts"
+      ]
+    }
+  ]
+}

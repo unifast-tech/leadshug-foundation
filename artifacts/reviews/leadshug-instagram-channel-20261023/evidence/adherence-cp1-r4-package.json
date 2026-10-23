@@ -1,0 +1,113 @@
+{
+  "schemaVersion": 1,
+  "kind": "bounded-cp1-architecture-adherence-r4-package",
+  "authority": "User APROVADO for ST-IG-03 v1.3; normal authority GO in authority-execution-cp1.json. This review confers no new scope or runtime authority.",
+  "frozenTodo": {
+    "path": "foundation_documentation/todos/active/features/TODO-leadshug-instagram-channel.md",
+    "sha256": "48621f9278d969b9ab974e5598132677ea69c6c2e43a781be7a1a23a7cea7803"
+  },
+  "sourceManifest": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp1-r3-repair-source-manifest.json",
+  "baseline": "f4891ba1bddec62737f5624cac8d4a32224006d7 planning; original 218 API/54 Web source hash baseline in public-source-baseline.json; prior uncommitted product must not be attributed to Instagram",
+  "reviewObjective": "Fresh complete bounded CP1 re-review of seven open r3/root findings, preserving prior closed invariants. Assess each claimed repair from actual source/tests; identify new defects without reducing detection. This is a checkpoint, not delivery or CP2..CP6 acceptance.",
+  "sourceFreeze": "All37public API paths and TODO frozen. Sole coder runs full API only on disposable synthetic DB. No edits until reviewer and validator terminal.",
+  "canonicalContext": [
+    "foundation_documentation/project_constitution.md",
+    "foundation_documentation/domain_entities.md",
+    "foundation_documentation/policies/scope_subscope_governance.md",
+    "foundation_documentation/modules/identity-and-tenancy.md",
+    "foundation_documentation/modules/inbox-and-conversations.md",
+    "foundation_documentation/modules/integrations-and-channels.md",
+    "foundation_documentation/decisions/leadshug-multichannel-identity-decisions.md"
+  ],
+  "boundedAdditionalRead": "Actual28historical migration.sql paths explicitly enumerated in instagram-migration.e2e-spec.ts; exact immediate PUBLIC dependencies if necessary, listing added paths in assessment. No wider repository inventory.",
+  "evidence": [
+    "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp1-red-reported.json",
+    "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp1-progress-reported.json",
+    "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp1-executor-pause.json",
+    "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/inherited-public-preservation-v1.1.json",
+    "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/primary-instagram-contract-r1.json",
+    "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/adherence-cp1-r1-result.json",
+    "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/adherence-cp1-r1-merge.json",
+    "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp1-full-api-before-repair.json",
+    "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp1-r1-repair-diagnostic-green.json",
+    "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/adherence-cp1-r2-result.json",
+    "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/adherence-cp1-r2-merge.json",
+    "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp1-r1-repair-full-api-red.json",
+    "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp1-r2-causal-red.json",
+    "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp1-r2-causal-red-baseline-check.json",
+    "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp1-r2-repair-diagnostic-green.json",
+    "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp1-r2-inherited-preservation-check.json",
+    "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/adherence-cp1-r3-result.json",
+    "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/adherence-cp1-r3-merge.json",
+    "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp1-r2-repair-full-api-red.json",
+    "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp1-r3-root-staged-ingress-finding.json",
+    "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp1-r3-causal-red-baseline-check.json",
+    "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp1-r3-causal-red.json",
+    "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp1-r3-repair-diagnostic-green.json",
+    "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp1-r3-inherited-preservation-check.json"
+  ],
+  "knownValidationLimits": "Root observed complete targeted green-02:30migrations/lint/build,379unit+24IGe2e pass. Four actual r4 behavioral RED cases before product edits; one first-failed quarantine outcome does not establish dynamic pre-fix exploit reachability. Extra pending variants provide post-change coverage. Complete API cp1-api-full-r4-01.log active, outcome pending; root will supply terminal receipt. No ALL/PCV/browser/real-provider proof.",
+  "checkpointBoundary": {
+    "inScopeNow": [
+      "qualified BU-local contacts",
+      "one durable WhatsApp resource per BU across adapters, multiple IG resources",
+      "same-contact/same-BU/same-IG-account DB route invariants",
+      "immutable ownership and routes",
+      "preservative actual baseline-to-new migration fixture",
+      "exact v1 reader and v2 tuple definitions",
+      "necessary canonical contact fixture and lookup adaptations"
+    ],
+    "laterAlreadyRequired": [
+      "CP2 OAuth and signed ingress",
+      "CP3 all new writers v2 plus state-specific v1 local-only recovery, shared Channel/Outbound/policy and all consumer boundaries",
+      "CP4 UI/CI/real-backend browser",
+      "CP5 full ALL/PCV/security/TQA/cutover/final independent gates",
+      "CP6 later separately approved real runtime/Meta/physical proof"
+    ],
+    "consumerMatrix": "Read complete Frontend / Consumer Matrix and Consumer Surface Contract in governing TODO. Their UI producers/consumers remain mandatory future checkpoint work, not delivered or waived by CP1."
+  },
+  "reviewLenses": [
+    "architecture/adherence",
+    "code quality",
+    "tests including evidence weakness and fixture-only shortcuts",
+    "performance (no measurements claimed)",
+    "security and cross-BU/account identity boundaries",
+    "elegance",
+    "structural soundness"
+  ],
+  "watchFor": [
+    "IG account A peer routed via account B",
+    "WA person namespace/provider splits",
+    "implicit first-match alias selection",
+    "backfill inventing verified resource provenance",
+    "timestamps or pending receipts rewritten",
+    "schema/service checks that do not actually enforce stated ownership",
+    "fixture interception or weakened assertions hiding defects",
+    "staged provider gaining trust/ingress or foreign attachment before its own fresh proof",
+    "global resource claim lock ordering with existing channel/provider locks",
+    "same-number renewal or detach secretly releasing durable ownership",
+    "business scope factory/CHECK/FK contradictions",
+    "new column/trigger changing prior preserved rows or receipts",
+    "reported GREEN based on weaker test expectations rather than actual intended path",
+    "metadata-only staging guard accidentally becoming trusted acceptance bypass",
+    "current contradictory proof quarantine invalidating a different renewed generation",
+    "stage create uncertainty erased before side effect is observed",
+    "cleanup selected from another channel/BU/name rather than exact current managed staging",
+    "synthetic verified owner inferred from arbitrary BU display phone rather than explicit provider fixture proof",
+    "new test variants overclaimed as pre-fix causal evidence"
+  ],
+  "inheritedRisks": "SEC-R6-04/OPS-R4-01/TQA-ST05-03 restrictions remain; no waiver. Actual Meta eligibility/config/physical delivery unknown. Full private diff guard not authorized.",
+  "forbidden": "No source/doc edits, tests/runtime/network/Meta requests, private .env reads/list/hash, .local-files, operational DB/logs/process args/volumes, broad Git status/diff/scan, worktrees/copies or product Git writes.",
+  "repairClaimsToChallenge": {
+    "IG-CP1-R1-03": "Current Evolution contradictory proof persists fenced quarantine rather than rolling back to usable old trust; later correct proof recovery, unchanged ownership/credentials/grants/history. Distinguish official wrong candidate from proof about current instance.",
+    "IG-CP1-R1-07": "Canonical helper scope BU and explicit provider-proved phone option; held workflow context adaptations and guaranteed barrier release; all original datasets/query/ingress/quarantine assertions retained. Full API result still required.",
+    "IG-CP1-R3-01": "First replacement create durably claimed before HTTP; normal connecting success and lost ACK variants observe on repeated INITIAL and create only once; generation/epoch/attempt/name stable.",
+    "IG-CP1-R3-02": "Exact detached managed staging is retired and cleanup-fenced through unlink; failed/ambiguous cleanup blocks new managed create until reconciliation, preserving ownership and ignoring stale content.",
+    "IG-CP1-R3-03": "Valid but wrong retained number persists IDENTITY_QUARANTINED channel/attempt and later current correct-proof recovery; do not infer from BU.phone.",
+    "IG-CP1-R3-04": "Concurrency test binds durable owner/linked tuple to actual fulfilled contender and checks loser tuple rather than submitted-order assumption.",
+    "IG-CP1-ROOT-01": "New Evolution controller/current-staging metadata path identifies exact current BU/channel/attempt/generation/instance and detached unproved managed PRI; stores safe metadata only and messages503 before proof. No new content/unread/realtime/bot or trust via a spoofed connection event; after actual proof same key accepted once."
+  },
+  "priorFindingDisposition": "Supported prior closures: R1-01/02/04/05/06/08 and R2-01/02. Reopen only on materially changed locus or fresh regression. R1-03/07, R3-01..04 and ROOT-01 remain open release blockers; claimed fixes/targeted GREEN do not close them. No waiver or scope expansion.",
+  "immutableInheritedScope": "37exact inherited public rows in preservation policy remain immutable; tests on six admitted regression companions can change canonical fixtures/qualified lookups/versioned contexts, not weaken original scenarios/counters/assertions.",
+  "collection": "Fresh native internal no-context collaboration reviewer with explicit model/effort and bounded file reads; canonical dispatch and strict schema/merge. CLI helper creates an embedded no-tools summary prompt; native file-set inspection is used here as in earlier checkpoint reviews."
+}

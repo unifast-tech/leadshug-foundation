@@ -1,0 +1,66 @@
+{
+  "schemaVersion": 1,
+  "kind": "cp1-r4-source-freeze-breach",
+  "date": "2026-10-23",
+  "frozenManifest": "cp1-r3-repair-source-manifest.json",
+  "observedMismatchCount": 4,
+  "mismatches": [
+    {
+      "path": "api-app/src/domain/channels/channels.service.ts",
+      "frozenSha256": "2fe943742b3092b5e4b9ef6fe99b2759a51d280c184b9a091461db36e9cc645e",
+      "observedSha256": "581d4c42cb98f5cc9e142c3abf09e36a91e7df8221144705bad8f434c04fa34c",
+      "observedBytes": 39745
+    },
+    {
+      "path": "api-app/test/helpers.ts",
+      "frozenSha256": "a5264443af7343ff5bc33ca57df78b5282e369857137982c5ac7614c783be2a2",
+      "observedSha256": "f525ffc537a5e081747245ffb84e152e8b426ced3bb71e19dec4b31f7c924403",
+      "observedBytes": 22496
+    },
+    {
+      "path": "api-app/test/instagram-lifecycle.e2e-spec.ts",
+      "frozenSha256": "0227592339ec7cab4820542b10997d6080d6b2fe98bcec31459923599d7b5c3e",
+      "observedSha256": "ef425c52ad50beb147ecf373922b376d0e83ca49cb4d2dfdf5816631942c2303",
+      "observedBytes": 26324
+    },
+    {
+      "path": "api-app/src/surfaces/webhooks/evolution.controller.ts",
+      "frozenSha256": "945f732bbbc388833a2309965a2e6f1f3c339865f356ab63435dc1ed2dcdee27",
+      "observedSha256": "91d7d098ac77368b67537025e1169484fecd6acaf9f609bd272bbee60ea0071c",
+      "observedBytes": 10030
+    }
+  ],
+  "runs": [
+    {
+      "path": "foundation_documentation/artifacts/tmp/instagram-channel-implementation/cp1-api-full-r4-01.log",
+      "sha256": "10f1595e8f6d68ca6b1e8e74526e593381fa5e537c6680a346dc30e2969a0b7a",
+      "bytes": 205178,
+      "summary": [
+        "Test Files  36 passed (36)",
+        "Tests  379 passed (379)",
+        "Test Files  2 failed | 34 passed (36)",
+        "Tests  5 failed | 477 passed (482)",
+        "runner_exit=1"
+      ]
+    },
+    {
+      "path": "foundation_documentation/artifacts/tmp/instagram-channel-implementation/cp1-api-instagram-r4-green-03.log",
+      "sha256": "7a025a4abb397f23059ea1e78bd162465d9e3678cf41f8487594b22b6c11ec00",
+      "bytes": 22828,
+      "summary": [
+        "Test Files  36 passed (36)",
+        "Tests  379 passed (379)",
+        "Test Files  3 passed (3)",
+        "Tests  24 passed (24)",
+        "runner_exit=0"
+      ]
+    }
+  ],
+  "executorTerminal": true,
+  "reviewerTerminal": true,
+  "sourceAcceptance": false,
+  "currentSourceFullApiProof": false,
+  "restriction": "All product writes stopped; no rollback to hide drift. New freeze and validation/review required. No private or operational runtime touched.",
+  "strictReviewMerge": "adherence-cp1-r4-merge.json",
+  "disposition": "release-blocker IG-CP1-R4-01; fresh serial executor and new evidence required"
+}

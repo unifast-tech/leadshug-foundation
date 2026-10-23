@@ -1,0 +1,8 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-23",
+  "checkedExactPublicPaths": 37,
+  "mismatches": [],
+  "policy": "inherited-public-preservation-v1.1.json",
+  "limits": "positive public paths only; no full private diff guard"
+}

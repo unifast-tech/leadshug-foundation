@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "kind": "cp1-r4-residual-recovery-handoff",
+  "date": "2026-10-23",
+  "authority": "Approved ST-IG-03 v1.3; same WHAT; routing-execution-cp1-r4-recovery.json",
+  "baseline": "cp1-r4-terminal-source-baseline.json",
+  "readFirst": [
+    "adherence-cp1-r4-result.json",
+    "cp1-r4-freeze-breach.json"
+  ],
+  "residualFindings": [
+    "IG-CP1-R1-03",
+    "IG-CP1-R3-02",
+    "IG-CP1-R1-07",
+    "IG-CP1-R4-01"
+  ],
+  "ownedWrites": [
+    "api-app/src/domain/channels/channels.service.ts",
+    "api-app/test/instagram-lifecycle.e2e-spec.ts"
+  ],
+  "conditionalAdmittedCompanions": [
+    "api-app/test/helpers.ts",
+    "api-app/src/surfaces/webhooks/evolution.controller.ts",
+    "api-app/src/domain/inbox/message-acceptance.service.ts",
+    "api-app/test/number-onboarding-flow.e2e-spec.ts",
+    "api-app/test/channel-transport.e2e-spec.ts"
+  ],
+  "sequence": [
+    "Load applicable rules and TODO; positive public paths only",
+    "Extend lifecycle proof to actual receipt/CONNECTED before contradiction and preserve historical receipt/message/unread facts; add deterministic stale-snapshot unlink interleaving without fake DB results/transaction mocks",
+    "Capture causal residual RED on current actual source through canonical api-instagram runner; stop/reconcile if not reproduced",
+    "Repair exact current quarantine recovery under provider/generation/epoch/attempt/lease fences; reject stale unlink snapshot before any cancellation/deletion; no arbitrary ERROR/cancelled/stale recovery",
+    "Run targeted GREEN on final source, then terminal report without further edits/runs",
+    "Root will establish a fresh freeze and later separately authorize validation-only full API and fresh reviewer"
+  ],
+  "forbidden": "No runtime/private/Meta; no product Git writes/worktrees; no new GOAL tools; no weakened assertions; no changes during root review/validation freeze",
+  "noDeliveryClaim": true
+}
