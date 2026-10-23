@@ -38,7 +38,7 @@ Este v1.1 substitui a autoridade ativa da minuta revisada em 2026-10-19. O origi
 ## Implementation Intent
 
 - **Current delivery:** implementar o contrato v1.1 aprovado de abertura/reuso BU+contato e primeiro envio textual/template oficial elegível, com intenção durável e recuperação sem reenvio cego; etapa Pending até assurance e prova assistida.
-- **Planned next steps:** concluir a prova de recuperação comum em navegador, obter assurance independente, preparar a ativação local preservada com autorização exata, executar a prova assistida e fechar os gates. Planejamento/APROVADO e seus recibos permanecem históricos abaixo.
+- **Planned next steps:** obter assurance independente sobre a regressão completa E54, preparar a ativação local preservada com autorização exata, executar a prova assistida e fechar os gates. Planejamento/APROVADO e seus recibos permanecem históricos abaixo.
 - **Anticipatory implementation authorized now:** none.
 - **Rationale:** reaproveitar os owners existentes de conversa, transporte, aceitação de Message e catálogo. O fluxo novo coordenará uma intenção durável; não duplicará sender, aceitação ou catálogo.
 
@@ -46,12 +46,12 @@ Este v1.1 substitui a autoridade ativa da minuta revisada em 2026-10-19. O origi
 
 - **Current delivery stage:** `Pending`
 - **Qualifiers:** `none`
-- **Next exact step:** concluir as correções r1 liberadas após RED causal E50/E51 e pós-selos; congelar o candidato com novas provas reais de navegador antes de executar novamente a suíte completa.
+- **Next exact step:** revisar o candidato E54 integral em r2 independente, resolver eventuais findings e concluir imagens/proposta concreta antes da aprovação da ativação local preservada e teste assistido.
 
 ## Active Work State (Required While TODO Remains In `active/`)
 
-- **Work state:** `implementation`
-- **Why this state now:** E45allGREEN356API/435PG/53Web/85browser. E46browser85pass1fail, pós-seal259/93freshness/cleanup conferidos; falha de expectativa effects no teste, não defeito de produto. E47 altera só a asserção para meta.send e preserva recuperação/prazos/auditoria. Sem entrega promovida.
+- **Work state:** `review`
+- **Why this state now:** candidato corrigido E54 terminal0:364APIunit/439PostgreSQL/54Web/88browser; inventário259 e93 hashes/served-bundle conferidos. Findings r1 integrados com prova atual; r2 e gates de runtime/operador/módulos/guards permanecem pendentes. Perfil corrente Assurance / Tester-Quality com Security-Adversarial; próximo handoff DevOps limitado à preparação de imagens, sem ativação preservada ainda.
 - **Exit condition:** implementação e todas as evidências/reviews/gates de entrega aprovados; estágio continua Pending até os critérios locais reais, sem claim de entrega por aprovação.
 
 ## Scope
@@ -775,23 +775,23 @@ Fresh internal r1 architecture/TQA results are derived challenge evidence; the r
 
 | Finding ID | Finding Source | Severity | Classification | Required Action | Status | Rationale / Follow-up Reference |
 | --- | --- | --- | --- | --- | --- | --- |
-| F-511FF1D6 | internal no-context architecture_adherence r1 / ARCH-ST04-R1-06 | medium | release-blocker | fix in current TODO; preserve approved intent | open | Current coordinator has no forbidden dispatch; this is harness coverage added after implementation, not a product RED. Keep inherited38protected bytes. evidence/implementation-r1-finding-triage-v1.1.json |
-| F-8E89FC19 | internal no-context architecture_adherence r1 / ARCH-ST04-R1-02 | medium | release-blocker | fix in current TODO; preserve approved intent | open | Root verified boolean false path is ignored by current Outbound.send; real rollback/ACK-loss regression queued. evidence/implementation-r1-finding-triage-v1.1.json |
-| F-ED2FCC37 | internal no-context architecture_adherence r1 / ARCH-ST04-R1-03 | medium | release-blocker | fix in current TODO; preserve approved intent | open | Root verified reconcile returns accepted.message without using creationWinner; PG event counter regression queued. evidence/implementation-r1-finding-triage-v1.1.json |
-| F-C8AF5811 | internal no-context architecture_adherence r1 / ARCH-ST04-R1-05 | medium | release-blocker | fix in current TODO; preserve approved intent | open | Message.channelOrigin is required ChannelType in schema; every Message is transport, so preserve existing conversation predicate without inventing a new filter/index. Root confirmed COUNT is only used for existence. evidence/implementation-r1-finding-triage-v1.1.json |
-| F-3E65B77F | internal no-context architecture_adherence r1 / ARCH-ST04-R1-01 | medium | release-blocker | fix in current TODO; preserve approved intent | open | Source independently confirmed by root/executor and fresh architecture reviewer; actual new BFF RED queued E48. evidence/implementation-r1-finding-triage-v1.1.json |
-| F-F7C06078 | internal no-context architecture_adherence r1 / ARCH-ST04-R1-04 | medium | release-blocker | fix in current TODO; preserve approved intent | open | Frozen D07 and normative interlock explicitly define these distinctions; tests must protect approved behavior, not current divergent codes. evidence/implementation-r1-finding-triage-v1.1.json |
-| F-B25EB3CF | internal no-context test_quality_audit r1 / TQA-ST04-02 | high | release-blocker | fix in current TODO; preserve approved intent | fixed | Resolved by actual E47terminal0/86pass/cleanup/postseal259fp603cc.../93freshness hashes. This resolves E47 only; changed E48+candidate needs its own fresh full run. evidence/implementation-r1-finding-triage-v1.1.json |
-| F-8D9F2A1C | internal no-context test_quality_audit r1 / TQA-ST04-01 | high | release-blocker | fix in current TODO; preserve approved intent | open | Confirmed for parameter snapshots and HTML maxLength. Free-text snapshot already uses code points at139; preserve that correct guard instead of repeating the reviewer overbroad subclaim. evidence/implementation-r1-finding-triage-v1.1.json |
-| F-9EFF5F01 | internal no-context test_quality_audit r1 / TQA-ST04-04 | medium | release-blocker | fix in current TODO; preserve approved intent | open | Most later fault/protocol tests are final-state regression evidence. No retroactive reversion RED or missing-module bootstrap as a business assertion proof. Detailed chronology consolidated in evidence/test-causality-chronology-r1-v1.1.json; no product change follows merely from history; independent reassessment remains required. evidence/implementation-r1-finding-triage-v1.1.json |
-| F-B360C531 | internal no-context test_quality_audit r1 / TQA-ST04-03 | medium | release-blocker | fix in current TODO; preserve approved intent | open | Existing known-blocked case736 uses local reconcile to success, not ACK; new endpoint lifecycle coverage is required. evidence/implementation-r1-finding-triage-v1.1.json |
+| F-511FF1D6 | internal no-context architecture_adherence r1 / ARCH-ST04-R1-06 | medium | release-blocker | fix in current TODO; preserve approved intent | fixed | Current coordinator dependency harness added with actual-source import/HTTP protection and synthetic forbidden controls. Current evidence/implementation-r1-resolution-v1.1.json and all-result-e54-v1.1.json; fresh r2 challenge pending. |
+| F-8E89FC19 | internal no-context architecture_adherence r1 / ARCH-ST04-R1-02 | medium | release-blocker | fix in current TODO; preserve approved intent | fixed | Ordinary local settlement must be positive; false/throw returns known accepted/local incomplete preserving Message and ACK; actual PG rollback regression passed. Current evidence/implementation-r1-resolution-v1.1.json and all-result-e54-v1.1.json; fresh r2 challenge pending. |
+| F-ED2FCC37 | internal no-context architecture_adherence r1 / ARCH-ST04-R1-03 | medium | release-blocker | fix in current TODO; preserve approved intent | fixed | Only confirmed local creationWinner publishes best-effort realtime after commit; replay/echo/uncertain readback do not duplicate. Current evidence/implementation-r1-resolution-v1.1.json and all-result-e54-v1.1.json; fresh r2 challenge pending. |
+| F-C8AF5811 | internal no-context architecture_adherence r1 / ARCH-ST04-R1-05 | medium | release-blocker | fix in current TODO; preserve approved intent | fixed | Ordinary BFF uses bounded findFirst select id rather than whole-history COUNT; query-event regression passed. Current evidence/implementation-r1-resolution-v1.1.json and all-result-e54-v1.1.json; fresh r2 challenge pending. |
+| F-3E65B77F | internal no-context architecture_adherence r1 / ARCH-ST04-R1-01 | medium | release-blocker | fix in current TODO; preserve approved intent | fixed | PREPARED safe action RECONCILE; actual E50 before payload RED and full E54 PG/UI live/expired zero-network proof. Current evidence/implementation-r1-resolution-v1.1.json and all-result-e54-v1.1.json; fresh r2 challenge pending. |
+| F-F7C06078 | internal no-context architecture_adherence r1 / ARCH-ST04-R1-04 | medium | release-blocker | fix in current TODO; preserve approved intent | fixed | Active initial conflict includes scoped safe attemptId/state and BLOCKED; empty remains REQUIRED; ordinary admissions use bounded scoped10+truncation. Current evidence/implementation-r1-resolution-v1.1.json and all-result-e54-v1.1.json; fresh r2 challenge pending. |
+| F-B25EB3CF | internal no-context test_quality_audit r1 / TQA-ST04-02 | high | release-blocker | fix in current TODO; preserve approved intent | fixed | E47 actually terminated86pass with cleanup/postseal; current corrected E54 now actually terminated88pass with full259/93 source/bundle binding. Current evidence/implementation-r1-resolution-v1.1.json and all-result-e54-v1.1.json; fresh r2 challenge pending. |
+| F-8D9F2A1C | internal no-context test_quality_audit r1 / TQA-ST04-01 | high | release-blocker | fix in current TODO; preserve approved intent | fixed | Input clamps and named/positional snapshot validation use code points; E51 causal RED then current unit and Unicode browser proof; separate JSON bound preserved. Current evidence/implementation-r1-resolution-v1.1.json and all-result-e54-v1.1.json; fresh r2 challenge pending. |
+| F-9EFF5F01 | internal no-context test_quality_audit r1 / TQA-ST04-04 | medium | release-blocker | fix in current TODO; preserve approved intent | fixed | Chronology corrected explicitly: absent-module/fixture/detector failures and post-hoc reversion never business assertion test-first; mixed sequencing remains disclosed, not retroactively fixed. Current evidence/implementation-r1-resolution-v1.1.json and all-result-e54-v1.1.json; fresh r2 challenge pending. |
+| F-B360C531 | internal no-context test_quality_audit r1 / TQA-ST04-03 | medium | release-blocker | fix in current TODO; preserve approved intent | fixed | Actual EALB early UI409 unchanged slot, disposable expiry ACK200, successor and late-old local reconciliation isolating owner/provider verified in full E54. Current evidence/implementation-r1-resolution-v1.1.json and all-result-e54-v1.1.json; fresh r2 challenge pending. |
 
 ## TODO Closeout Disposition
 
 - **Disposition:** keep-active
-- **Disposition reason:** E47browser86pass and E45API356/PG435/Web53 have source-bound proof, but independent r1 exposes material defects/coverage gaps. E48test-first remediation stays active/InProgress/Pending; actual runtime proof and closure gates remain required.
+- **Disposition reason:** implementação e regressão completa E54 concluídas com fonte atual; manter ativo para r2 independente, preparação de imagens, aprovação de ativação preservada, prova assistida e fechamento obrigatório.
 - **Post-commit/push status:** planning evidence publication only on Foundation main; final commit/push and clean status recorded in session, no product Git write
-- **Next path/status action:** remain active/InProgress/implementation; sole writer adds focused E48 causal regressions, then corrects/revalidates r1 findings before assurance/runtime gates.
+- **Next path/status action:** remain active/InProgress/review and deliveryPending; no completion or promotion before all required current gates.
 
 ## Security Risk Assessment
 
@@ -799,7 +799,7 @@ Fresh internal r1 architecture/TQA results are derived challenge evidence; the r
 - **Why this risk level:** cross-tenant first-contact external side effect, account selection, credentials and irreversible ambiguity.
 - **Attack surface in scope:** session/CSRF, BU/contact/channel/template/account/attempt IDs, parameter renderer, stale contexts, payload/key/rate limits, sender-slot races.
 - **Attack simulation decision:** required
-- **Review evidence:** planned after implementation; no live provider/runtime query performed.
+- **Review evidence:** actual high-risk negative synthetic scenarios passed full E54; current map evidence/security-candidate-map-e54-v1.1.json. Fresh independent challenge pending; no live provider/runtime query performed.
 - **Residual security risk:** private existing local cohort only. Delivered SEC-R6-04 recovery-budget debt remains outside04;04 recovery does no external reads. OPS-R4-01 and TQA-ST05-03 retain their dispositions. A fresh current approved template is not presumed.
 
 ## Performance & Concurrency Risk Assessment
@@ -821,25 +821,25 @@ Fresh internal r1 architecture/TQA results are derived challenge evidence; the r
 - **Trigger rationale:** listagem de conversas vazias/ordem e lookup scoped/intenção; EXPLAIN ANALYZE com amostra cardinalidade, limite de página e budget externo. Sem N+1/catalog fan-out.
 - **Recorded at (UTC):** 2026-10-22T23:00:47.612421+00:00
 - **Executor ID:** stcon04_continuation; root-independent-source-and-output-collector
-- **Evidence object:** candidate actual execution: `artifacts/reviews/leadshug-start-conversation-20261022/evidence/pcv-eps-e45-v1.1.json`; schema pcv-1; run E45-canonical-all-57348; SHA256 `1c4036bcaf419447ac5c08295b625be6a61c4a1ca9ca2b3e2930c70c14d9c074`; sample EPS-SP-STRONG; acceptance EPS-A2. Independent assessment pending; no delivery/runtime/provider claim.
+- **Evidence object:** candidate actual execution: `artifacts/reviews/leadshug-start-conversation-20261022/evidence/pcv-eps-e54-v1.1.json`; schema pcv-1; run E54-canonical-all-2734; SHA256 `08138da3019c4a4269e82701d38732f84fcd7ae0476c37127e84257b7c868ab5`; sample EPS-SP-STRONG; acceptance EPS-A2. Independent assessment pending; no delivery/runtime/provider claim.
 
 #### FRC
 - **Trigger rationale:** duas submissões e atraso em troca BU/canal/draft; Playwright real, rastrear requests e estado no backend.
 - **Recorded at (UTC):** 2026-10-22T23:00:47.620028+00:00
 - **Executor ID:** stcon04_continuation; root-independent-source-and-output-collector
-- **Evidence object:** candidate actual execution: `artifacts/reviews/leadshug-start-conversation-20261022/evidence/pcv-frc-e45-v1.1.json`; schema pcv-1; run E45-canonical-all-57348; SHA256 `0799e760f3b7060237850febf928d273cb374d8ddf3594b7834661e27c97478d`; sample FRC-SP-H; acceptance FRC-A1. Independent assessment pending; no delivery/runtime/provider claim.
+- **Evidence object:** candidate actual execution: `artifacts/reviews/leadshug-start-conversation-20261022/evidence/pcv-frc-e54-v1.1.json`; schema pcv-1; run E54-canonical-all-2734; SHA256 `994c5487144cd1be2301b4099b0c7d05af4f88aa5955b9441e5b9910736f0e4a`; sample FRC-SP-H; acceptance FRC-A1. Independent assessment pending; no delivery/runtime/provider claim.
 
 #### BCI
 - **Trigger rationale:** barreiras PG e contador HTTP externo, crash antes/depois POST, replay e echo; provar invariantes D-06/07.
 - **Recorded at (UTC):** 2026-10-22T23:00:47.626397+00:00
 - **Executor ID:** stcon04_continuation; root-independent-source-and-output-collector
-- **Evidence object:** candidate actual execution: `artifacts/reviews/leadshug-start-conversation-20261022/evidence/pcv-bci-e45-v1.1.json`; schema pcv-1; run E45-canonical-all-57348; SHA256 `7d5ec472c230fc9729d45b8e0c8a056f3350470506101d26d3db45c6d25655ed`; sample BCI-SP-H; acceptance BCI-A1. Independent assessment pending; no delivery/runtime/provider claim.
+- **Evidence object:** candidate actual execution: `artifacts/reviews/leadshug-start-conversation-20261022/evidence/pcv-bci-e54-v1.1.json`; schema pcv-1; run E54-canonical-all-2734; SHA256 `c505c53965ac7a15999d0f91915e75dac1fac6e9c3a0fca6694a3078f54aa5f2`; sample BCI-SP-H; acceptance BCI-A1. Independent assessment pending; no delivery/runtime/provider claim.
 
 #### RLS
 - **Trigger rationale:** pequeno ensaio de concorrência/load bounded do novo fluxo/listagem no PG descartável; não claim SLO ou produção.
 - **Recorded at (UTC):** 2026-10-22T23:00:47.632810+00:00
 - **Executor ID:** stcon04_continuation; root-independent-source-and-output-collector
-- **Evidence object:** candidate actual execution: `artifacts/reviews/leadshug-start-conversation-20261022/evidence/pcv-rls-e45-v1.1.json`; schema pcv-1; run E45-canonical-all-57348; SHA256 `7af25e3c2c83036ea998ac83511be727a836cff473d7a2b3027c67b543b2995d`; sample RLS-SP-L; acceptance RLS-A1. Independent assessment pending; no delivery/runtime/provider claim.
+- **Evidence object:** candidate actual execution: `artifacts/reviews/leadshug-start-conversation-20261022/evidence/pcv-rls-e54-v1.1.json`; schema pcv-1; run E54-canonical-all-2734; SHA256 `25f71eadd5ac094b794fbf1ffb694a49d3031791486f4cb473537d08698c7fb8`; sample RLS-SP-L; acceptance RLS-A1. Independent assessment pending; no delivery/runtime/provider claim.
 
 ## Verification Debt Assessment
 
@@ -1239,3 +1239,23 @@ Canonical all57348 exited0:34APIunitfiles/356tests,33realPGfiles/435tests,7Webfi
 ## Execution checkpoint E50/E51 — actual regression RED before r1 fixes
 
 E50 passed migrations/lint/build and363unit tests; real PostgreSQL had435pass/4failed tests. Failures reproduce PREPARED missing recovery action, active-slot contract omissions, full-history COUNT, missing winner realtime and normal201 despite post-ACK settlement rollback. Live PREPARED202 and expired local rejection/release checks passed with zero additional provider/Message. E51 Web build passed;53pass/1failed test reproduced rejection of a valid1024astral positional parameter. NAMED later assertions were not reached. Both executions have actual terminal1, owned cleanup and independent259-record byte/inventory postseals; no current full GREEN or runtime delivery claim. See evidence/api-result-e50-v1.1.json, evidence/web-result-e51-v1.1.json and evidence/test-causality-chronology-r1-v1.1.json. Sole writer is released only for approved in-scope r1 product fixes and admitted browser/fixture coverage, then must freeze before a new full canonical run. All38 protected/exact companion sources remain unchanged.
+
+
+## Execution checkpoint E52/E53 — corrected candidate frozen, ALL running
+
+E52 was a source-preflight draft only; no runner started. The PREPARED fixture was corrected to call the real compiled reservation owner with its90s DB-time lease and complete canonical request; active-slot test expectations were aligned to frozen D07. Early known-accepted ACK is tested through the real UI/BFF409 response, preserving the existing server-authoritative deadline; disabling that initial UI button before deadline was a stronger root inference, not an approved new product requirement. E53 independently seals259public files (fingerprint3d1d7e83d7425b7c9f82258768d00e4cb5d066ab54d645ddf7b0b6fa275d17ec), all38protected/exact companions unchanged. Normal authority GO released one canonical ALL runner, session19182, with no concurrent edits or image build. Its364APIunit tests have passed; PG/Web/browser terminal status remains pending. See evidence/candidate-source-preflight-e52-v1.1.json and evidence/all-source-seal-e53-v1.1.json. No current full GREEN, preserved-runtime or delivery claim.
+
+
+## Execution checkpoint E53/E54 — test baseline repair, fresh ALL running
+
+E53 terminal1 and owned cleanup were independently collected; all259source bytes/inventory matched. All364APIunit and438PG tests passed; one new PG assertion failed because it compared the old released attempt to a pre-ACK snapshot whose release timestamp was null. Actual late recovery was SUCCEEDED with a retained nonnull release; this is a test baseline error, not product RED. Later same-case assertions and Web/browser were not reached. Only the test changed to capture the actual post-ACK row and compare the exact immutable timestamp. E54 source preseal fingerprint604a6867f1d715ffac564e6a47c68539e0b07a657b046145542d42620cbbbe0c confirms that sole delta and all38protected bytes unchanged; authority GO released canonical ALL session2734. APIunit364 and initial-message PG12 have passed individually; remaining execution is active, with no full/current browser proof yet. See evidence/all-result-e53-v1.1.json and evidence/all-source-seal-e54-v1.1.json.
+
+
+## Execution checkpoint E54 — corrected full canonical candidate GREEN
+
+Canonical ALL session2734 actually terminated0 with owned cleanup:34APIunitfiles/364tests,33realPGfiles/439tests,7Webfiles/54tests and88/88browser. Root re-enumerated the full259positive sources; inventory and bytes match fingerprint604a6867f1d715ffac564e6a47c68539e0b07a657b046145542d42620cbbbe0c. All93browser manifest records bind current sources and served/dist bundle05af33d08741c946111a078f58de739340bbf0fbf4e4e945679b355c51e4cfd7. Actual E50/E51 causal regression failures now pass alongside new PREPARED and EALB full BFF/UI cases; ordinary uncertainty waits the real90s deadline. PREPARED/EALB browser expiry uses explicit disposable fixture arrangement, not a false wall-clock claim. R1 findings are integrated as indexed in evidence/implementation-r1-resolution-v1.1.json; independent fresh r2 is next. Current security/decision/producer-consumer/13DoD+9VAL/pcv-1 maps bind E54; no criterion checkbox, preserved runtime/operator proof, module consolidation, full diff guard or delivery claim is promoted. Positive image archives exist; actual Alpine images remain to build before the concrete activation approval step.
+
+
+## Execution checkpoint E54 — concrete images and fresh reviews
+
+After full terminal/postseal, both positive-only Alpine image builds actually passed: API e73a20bf17bcf0e4b9f9285e3d754b283f060a7a2a498c1a45fbb6614fd9be85 and Web cd9480a1b0e047828eab18e93fb24c64eaefaf142809bcce235c274ceb3d12fb. Root verified archive/build hashes, current schema and exact Web image bundle against actual E54 served/dist. Offline metadata is not preserved-runtime DB/native health. No application entrypoint/Compose/privateinput/tunnel/migration/actual provider activation occurred. Architecture r2 and first cutover review are live; TQA r2 actually terminated before a review turn with stdin-character ceiling1048576. One complete fresh retry uses lossless JSON whitespace compaction only, all24fullsources and complete rubric retained, exactstdin1033623. No live reviewer was replaced/repackaged and no gate PASS is inferred. Evidence: image-build-attestation-e54-v1.1.json, image-build-root-collection-e54-v1.1.json and implementation-test_quality_audit-r2-tool-failure-v1.1.json.

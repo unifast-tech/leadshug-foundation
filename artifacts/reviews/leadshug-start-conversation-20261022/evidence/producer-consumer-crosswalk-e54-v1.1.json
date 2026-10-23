@@ -1,0 +1,214 @@
+{
+  "kind": "Current E54 full-execution producer-to-consumer crosswalk",
+  "recorded_at_utc": "2026-10-23T00:47:04.414607+00:00",
+  "source_seal": "all-source-seal-e54-v1.1.json",
+  "state": "Full canonical ALL terminal GREEN; each listed consumer has current candidate execution. No actual provider/runtime delivery claim.",
+  "rows": [
+    {
+      "id": "manual-open",
+      "producer": "ConversationStartService atomically returns created/reused row without send/read/claim/automation",
+      "consumers": [
+        "NovaConversa dialog POST and onOpened",
+        "Inbox selected manual conversation / truthful list order"
+      ],
+      "exact_test_references": [
+        "api-app/test/conversation-start.e2e-spec.ts:25",
+        "api-app/test/conversation-start.e2e-spec.ts:64",
+        "api-app/test/conversation-start.e2e-spec.ts:153",
+        "api-app/test/conversation-start.e2e-spec.ts:177",
+        "web-app/e2e/start-conversation.spec.ts:74"
+      ],
+      "consumer_state": "implemented + evidenced",
+      "actual_receipts": [
+        "all-result-e54-v1.1.json",
+        "browser-freshness-collection-e54-v1.1.json"
+      ],
+      "historical_evidence": "E45 atomic PG5x20/no automation and real browser open/reuse passed; E46 corresponding browser regression passed.",
+      "evidence_and_limit": "Relevant API/PG/served-browser scenarios passed full E54. Exact test file references remain source anchors; historical line numbers describe older source and are not asserted as current positions."
+    },
+    {
+      "id": "qualified-window",
+      "producer": "Verified signed Meta IN timestamp accepted only for current managed identity; Message.officialInboundAt nullable",
+      "consumers": [
+        "PrismaChannelResolver.inspectForConversation",
+        "PrismaChannelResolver.inspectManyForConversations via BFF/public listing",
+        "OutboundService ordinary BFF/PUBLIC/BOT",
+        "Initial text dispatch claim in transaction"
+      ],
+      "exact_test_references": [
+        "api-app/src/domain/inbox/channel-window-policy.spec.ts",
+        "api-app/test/webhooks.e2e-spec.ts",
+        "api-app/test/number-onboarding-pcv.e2e-spec.ts",
+        "api-app/test/number-onboarding-typebot.e2e-spec.ts",
+        "api-app/test/api-publica.e2e-spec.ts",
+        "web-app/e2e/channel-transport.spec.ts"
+      ],
+      "consumer_state": "implemented + evidenced",
+      "actual_receipts": [
+        "all-result-e54-v1.1.json",
+        "browser-freshness-collection-e54-v1.1.json"
+      ],
+      "historical_evidence": "E45 signed timestamp/resource policy, BFF/public/BOT projected/send regressions and raw/substitution tests passed; public index/query counts in actual PCV receipt.",
+      "evidence_and_limit": "Relevant API/PG/served-browser scenarios passed full E54. Exact test file references remain source anchors; historical line numbers describe older source and are not asserted as current positions."
+    },
+    {
+      "id": "shared-template-catalog",
+      "producer": "ST05 bounded catalog projector/lease/TTL remains owner; initial renderer consumes unchanged components",
+      "consumers": [
+        "Shared catalog route and PrimeiraMensagem template selector",
+        "Read-only local preview/escaped React text",
+        "Fresh same-account remote eligibility before new dispatch"
+      ],
+      "exact_test_references": [
+        "api-app/src/domain/inbox/initial-message-template-renderer.spec.ts:18",
+        "api-app/src/domain/inbox/initial-message-template-renderer.spec.ts:64",
+        "api-app/test/initial-message.e2e-spec.ts:329",
+        "web-app/e2e/start-conversation.spec.ts:447"
+      ],
+      "consumer_state": "implemented + evidenced",
+      "actual_receipts": [
+        "all-result-e54-v1.1.json",
+        "browser-freshness-collection-e54-v1.1.json"
+      ],
+      "historical_evidence": "E45 renderer exact bounds/NAMED/POSITIONAL, real catalog refresh, escaped read-only preview, same-account fresh membership before dispatch passed. Protected authoring/catalog browser cases passed E46.",
+      "evidence_and_limit": "Relevant API/PG/served-browser scenarios passed full E54. Exact test file references remain source anchors; historical line numbers describe older source and are not asserted as current positions."
+    },
+    {
+      "id": "abstract-channel-union",
+      "producer": "One Channel.sendMessage(text|approved-template), readonly supportedKinds, awaited operation fence",
+      "consumers": [
+        "OutboundService ordinary calls",
+        "Initial coordinator through same OutboundService",
+        "Meta adapter concrete formatter",
+        "Evolution adapter text-only typed refusal"
+      ],
+      "exact_test_references": [
+        "api-app/src/domain/channels/transport/channel-dependencies.spec.ts",
+        "api-app/src/domain/channels/transport/channel-initial-message.spec.ts:46",
+        "api-app/src/domain/channels/transport/channel-initial-message.spec.ts:62",
+        "api-app/test/channel-transport.e2e-spec.ts"
+      ],
+      "consumer_state": "implemented + evidenced",
+      "actual_receipts": [
+        "all-result-e54-v1.1.json",
+        "browser-freshness-collection-e54-v1.1.json"
+      ],
+      "historical_evidence": "E45 dependency/substitution, Evolution typed zeroHTTP, raw Meta account/recipient protocol and ordinary BFF/public/BOT text regressions passed.",
+      "evidence_and_limit": "Relevant API/PG/served-browser scenarios passed full E54. Exact test file references remain source anchors; historical line numbers describe older source and are not asserted as current positions."
+    },
+    {
+      "id": "durable-intent-outcome",
+      "producer": "Immutable original key/body/context and truthful persisted receipt/uncertainty/state projection",
+      "consumers": [
+        "Scoped BFF create/read/reconcile/ack routes with session+grant+CSRF",
+        "api.ts safe closed error metadata",
+        "PrimeiraMensagem explicit recovery/exact retry and actor+BU+conversation sessionStorage"
+      ],
+      "exact_test_references": [
+        "api-app/test/dispatch-admission.e2e-spec.ts:165",
+        "api-app/test/dispatch-admission.e2e-spec.ts:196",
+        "api-app/test/initial-message.e2e-spec.ts:95",
+        "api-app/test/initial-message.e2e-spec.ts:206",
+        "web-app/e2e/start-conversation.spec.ts:198",
+        "web-app/e2e/start-conversation.spec.ts:266",
+        "web-app/e2e/start-conversation.spec.ts:599"
+      ],
+      "consumer_state": "implemented + evidenced",
+      "actual_receipts": [
+        "all-result-e54-v1.1.json",
+        "browser-freshness-collection-e54-v1.1.json"
+      ],
+      "historical_evidence": "E45 actual PG barriers/readback/CAS and browser read/reconcile/ACK, failed local storage read/write, lost-response original-key replay passed. E46 those browser cases pass.",
+      "evidence_and_limit": "Relevant API/PG/served-browser scenarios passed full E54. Exact test file references remain source anchors; historical line numbers describe older source and are not asserted as current positions."
+    },
+    {
+      "id": "shared-admission-interlock",
+      "producer": "Ordinary per-owner tokens and exclusive initial slot use same conversation lock; no SENDING clock takeover",
+      "consumers": [
+        "BFF ordinary composer empty/unresolved gate",
+        "PUBLIC ordinary sender through ConversationsService",
+        "BOT ordinary sender through IncomingService",
+        "Initial reservation and explicit local risk release controls",
+        "OrdinaryRecovery actual scoped reconcile/acknowledge controls on reopened thread"
+      ],
+      "exact_test_references": [
+        "api-app/test/dispatch-admission.e2e-spec.ts:328",
+        "api-app/test/dispatch-admission.e2e-spec.ts:367",
+        "api-app/test/dispatch-admission.e2e-spec.ts:379",
+        "api-app/test/dispatch-admission.e2e-spec.ts:434",
+        "api-app/test/dispatch-admission.e2e-spec.ts:457",
+        "api-app/test/channel-transport.e2e-spec.ts",
+        "api-app/test/api-publica.e2e-spec.ts",
+        "web-app/e2e/start-conversation.spec.ts:531"
+      ],
+      "consumer_state": "implemented + evidenced",
+      "actual_receipts": [
+        "all-result-e54-v1.1.json",
+        "browser-freshness-collection-e54-v1.1.json"
+      ],
+      "historical_evidence": "E45 real PG races/ordinary concurrency, public/BOT and empty BFF mapping pass; E47 actual ordinary BFF browser uncertain send→reopen→reconcile→real90s risk ACK→composer return with unchanged provider/audit snapshots passed.",
+      "evidence_and_limit": "Relevant API/PG/served-browser scenarios passed full E54. Exact test file references remain source anchors; historical line numbers describe older source and are not asserted as current positions."
+    },
+    {
+      "id": "prepared-safe-action",
+      "producer": "Valid durable PREPARED projected as RECONCILE, GET read-only",
+      "consumers": [
+        "PrimeiraMensagem existing local recovery action",
+        "Scoped BFF reconcile"
+      ],
+      "exact_test_references": [
+        "api-app/test/initial-message.e2e-spec.ts",
+        "web-app/e2e/start-conversation.spec.ts"
+      ],
+      "evidence_and_limit": "Current full E54: live202 unchanged slot then synthetic DB expiry local reject/release, zero provider/Message. Actual compiled reserveInitial fixture uses canonical request/fingerprint and90s lease.",
+      "consumer_state": "implemented + evidenced",
+      "actual_receipts": [
+        "all-result-e54-v1.1.json"
+      ]
+    },
+    {
+      "id": "known-ack-local-blocked-risk-release",
+      "producer": "EXTERNAL_ACCEPTED_LOCAL_BLOCKED safe state, immutable original deadline, scoped409 metadata",
+      "consumers": [
+        "Actual UI early acknowledgment409",
+        "Explicit after-deadline acknowledgment200",
+        "Successor and late-old local recovery"
+      ],
+      "exact_test_references": [
+        "api-app/test/initial-message.e2e-spec.ts",
+        "web-app/e2e/start-conversation.spec.ts"
+      ],
+      "evidence_and_limit": "E54 real BFF early ACK_TOO_EARLY409 leaves slot/provider/Message unchanged; synthetic disposable deadline expiry permits one successor, later original local completion never reacquires slot or changes current owner. No disabled-button requirement invented.",
+      "consumer_state": "implemented + evidenced",
+      "actual_receipts": [
+        "all-result-e54-v1.1.json"
+      ]
+    },
+    {
+      "id": "unicode-contract",
+      "producer": "Server code-point limits4096 text/1024 template values",
+      "consumers": [
+        "NovaConversa input clamp",
+        "Scoped session snapshot restore",
+        "Escaped preview and actual initial POST"
+      ],
+      "exact_test_references": [
+        "web-app/src/componentes/NovaConversa.spec.ts",
+        "web-app/e2e/start-conversation.spec.ts"
+      ],
+      "evidence_and_limit": "E51 real positional snapshot RED precedes fix; E54 named and positional1024/1025 plus text4096/4097 unit bounds, actual4096-text and1024-positional browser input/preview/send. No separate named full-browser1024 claim.",
+      "consumer_state": "implemented + evidenced",
+      "actual_receipts": [
+        "all-result-e54-v1.1.json",
+        "web-result-e51-v1.1.json"
+      ]
+    }
+  ],
+  "external_proof_boundary": "Synthetic provider boundary plus real disposable BFF/PostgreSQL/browser. User attests own template APPROVED; same-account first-template actual send/reply and nonofficial first-send/reply are pending source-bound local activation.",
+  "assurance_boundary": "No full diff-guard, required implementation reviews, runtime activation or criterion checkbox promoted.",
+  "remaining_required_gates": [
+    "Fresh architecture/TQA/cutover assessment and material finding resolution",
+    "Concrete Alpine images then separately approved preserved-local activation/migrations/operator first-send/reply",
+    "Modules, full canonical diff inspection exception/guard and final closure gates"
+  ]
+}

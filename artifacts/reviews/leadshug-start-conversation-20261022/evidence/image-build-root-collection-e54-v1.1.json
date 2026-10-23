@@ -1,0 +1,23 @@
+{
+  "kind": "Root independent exact synthetic build receipt collection",
+  "recorded_at_utc": "2026-10-23T00:51:53.600899+00:00",
+  "source_seal": "all-source-seal-e54-v1.1.json",
+  "executor_attestation_sha256": "8fe553f09fd7f59a9e3f04f96f5a69ec9a0eedfc37a80ca95d16ae02f5b4c0c9",
+  "checks": [
+    {
+      "service": "api",
+      "actual_build_stdout_hash_matches": true,
+      "exact_archive_hash_matches": true,
+      "image_id": "sha256:e73a20bf17bcf0e4b9f9285e3d754b283f060a7a2a498c1a45fbb6614fd9be85"
+    },
+    {
+      "service": "web",
+      "actual_build_stdout_hash_matches": true,
+      "exact_archive_hash_matches": true,
+      "image_id": "sha256:cd9480a1b0e047828eab18e93fb24c64eaefaf142809bcce235c274ceb3d12fb"
+    }
+  ],
+  "api_image_schema_matches_current_source": true,
+  "web_image_bundle_matches_actual_E54_served_and_dist": true,
+  "limits": "Successful Alpine build and offline metadata/hashes are not actual preserved-runtime DB/native health or real provider proof. No application activation yet."
+}

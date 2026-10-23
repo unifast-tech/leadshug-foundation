@@ -1,0 +1,81 @@
+{
+  "checkpoint": "E54 source-bound local image build; no application activation",
+  "recorded_at_utc": "2026-10-23T00:50:27Z",
+  "source_fingerprint": "604a6867f1d715ffac564e6a47c68539e0b07a657b046145542d42620cbbbe0c",
+  "build_inputs": {
+    "api": {
+      "archive": "/tmp/stcon04-build-context-api-e53.tar",
+      "records": 177,
+      "sha256": "3a4716b1870223d79ae9853d0790c00b4aefbaa248c53c5dfcc8032b5def7aec"
+    },
+    "web": {
+      "archive": "/tmp/stcon04-build-context-web-e53.tar",
+      "records": 47,
+      "sha256": "c06f8b1f0923fd257806084e7250ad2ca4468349ef46eca7222630df2a00e612"
+    }
+  },
+  "images": {
+    "api": {
+      "tag": "leadshug-stcon04-api:e54",
+      "id": "sha256:e73a20bf17bcf0e4b9f9285e3d754b283f060a7a2a498c1a45fbb6614fd9be85",
+      "platform": "linux/amd64",
+      "entrypoint": [
+        "/entrypoint.sh"
+      ],
+      "cmd": [
+        "node",
+        "dist/main.js"
+      ],
+      "build_exit_code": 0,
+      "build_stdout_sha256": "71b538bb4b2d9f010d18c05515754bfee03342aaea0255acf3ac7e82782cdbad",
+      "offline_inspection": {
+        "network": "none",
+        "process": "Node metadata and file hashing only",
+        "node": "v22.23.3",
+        "prisma_client": "6.19.3",
+        "prisma_engine": "c2990dca591cba766e3b7ef5d9e8a84796e47ab7",
+        "inspection_stdout_sha256": "21f52c91c183a0352ba4471882d1808f937e8c4266d2ed120add599bdb340ffb",
+        "sha256": {
+          "dist/domain/inbox/initial-message.service.js": "b68510e3c815445c60f20167a0fb58e265cd4c938d337eb0c3e73646ebab18a5",
+          "dist/domain/inbox/dispatch-admission.service.js": "9d7dd55421ec554908898b06b1f1cdfa63401835e08e374351541adb0c4f3eda",
+          "dist/domain/inbox/outbound.service.js": "b38f6d46c57589bc927b66ec63888fbbbce86fa49ad3466fc250f17795a3f417",
+          "prisma/schema.prisma": "d2c94a0b0908d268f498ed0e288924343abeb1bb206d71f8291063caec50fbed"
+        }
+      }
+    },
+    "web": {
+      "tag": "leadshug-stcon04-web:e54",
+      "id": "sha256:cd9480a1b0e047828eab18e93fb24c64eaefaf142809bcce235c274ceb3d12fb",
+      "platform": "linux/amd64",
+      "entrypoint": [
+        "/docker-entrypoint.sh"
+      ],
+      "cmd": [
+        "nginx",
+        "-g",
+        "daemon off;"
+      ],
+      "build_exit_code": 0,
+      "build_stdout_sha256": "bc30b44ad9de282a88a073dc17880c8f5d2581f6b9e1874f6517b02246ad6440",
+      "offline_inspection": {
+        "network": "none",
+        "process": "shell file hashing only",
+        "inspection_stdout_sha256": "015a0a1de066da9cd50218ea58d933e916efbbfec118a01bc5d6da964e47a4a5",
+        "sha256": {
+          "/usr/share/nginx/html/assets/index-D1NNbpuS.js": "05af33d08741c946111a078f58de739340bbf0fbf4e4e945679b355c51e4cfd7",
+          "/usr/share/nginx/html/index.html": "3c206eb326505a99e3171affdc39e603aeb316b6c8645788dbfb58fcdea114b1"
+        }
+      }
+    }
+  },
+  "browser_freshness_crosscheck": {
+    "served_bundle_sha256": "05af33d08741c946111a078f58de739340bbf0fbf4e4e945679b355c51e4cfd7",
+    "dist_bundle_sha256": "05af33d08741c946111a078f58de739340bbf0fbf4e4e945679b355c51e4cfd7",
+    "web_image_bundle_matches_both": true
+  },
+  "limits": [
+    "Builds only from the two E54-rechecked positive public archives.",
+    "Offline one-off containers did not run application entrypoints.",
+    "No Compose, runtime config, private data, network, provider, tunnel, migration deployment, or promotion."
+  ]
+}

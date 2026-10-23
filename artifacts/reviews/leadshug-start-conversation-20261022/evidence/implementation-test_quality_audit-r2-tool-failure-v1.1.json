@@ -1,0 +1,24 @@
+{
+  "kind": "Actual objectively terminal independent-review transport input failure",
+  "recorded_at_utc": "2026-10-23T00:50:27.807948+00:00",
+  "review_kind": "test_quality_audit",
+  "session": 68591,
+  "exit_code": 1,
+  "turn_completed": 0,
+  "event_types": [
+    "thread.started"
+  ],
+  "tool_items": 0,
+  "recognized_failure": "input exceeds maximum character length / input too large",
+  "stderr_sha256": "67d59fb38515bf2aee19995545ea5a0778b36ec16c9986a403212f8073e309e9",
+  "raw_boundary": "Restricted local raw stderr not published; can include startup configuration URLs.",
+  "lifecycle": "Actual terminal tool failure, no review/finding/gate PASS. Architecture r2 remains live and untouched.",
+  "retry_plan": "Repair proven package-size defect while preserving complete rubric, all24current full source files, approved contract, baselines, exact current receipts and original r1 resolutions. Remove redundant pretty-printing/duplicated historical receipt bulk only. One fresh canonical retry of complete gate; not live repackaging.",
+  "actual_stdin_character_limit": 1048576,
+  "complete_retry": {
+    "session": 77879,
+    "exact_stdin_characters": 1033623,
+    "state": "running",
+    "repair": "31JSON blocks whitespace compacted; all24 full sources/complete rubric/evidence JSON values preserved."
+  }
+}

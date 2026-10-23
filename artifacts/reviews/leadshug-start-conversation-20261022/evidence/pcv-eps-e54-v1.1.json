@@ -1,0 +1,236 @@
+{
+  "policy_schema_version": "pcv-1",
+  "schema_version": "pcv-1",
+  "todo_id": "ST-CON-04",
+  "run_id": "E54-canonical-all-2734",
+  "environment_id": "owned-disposable-node22-postgresql16-real-BFF-fake-external-provider",
+  "executor_id": "stcon04_continuation",
+  "reviewer_id": "root-independent-source-and-output-collector; formal lane assessment pending",
+  "recorded_at_utc": "2026-10-23T00:47:04.414607+00:00",
+  "lane_id": "EPS",
+  "evidence_type": "explain-and-query-log",
+  "sample_profile_id": "EPS-SP-STRONG",
+  "acceptance_rule_id": "EPS-A2",
+  "result_summary": "Disposable PostgreSQL EXPLAIN and bounded projection counts satisfy the declared page/query shape; no N+1 credential/provider probe.",
+  "artifact_payload": {
+    "evidence_receipt": "all-result-e54-v1.1.json",
+    "stdout_sha256": "f6c6049a3e31cbe33d62c9d3376d4bf7d476fd552dac1c9232c2a94f36882a5f",
+    "source_seal": "all-source-seal-e54-v1.1.json",
+    "source_fingerprint": "604a6867f1d715ffac564e6a47c68539e0b07a657b046145542d42620cbbbe0c",
+    "terminal_exit_code": 0,
+    "assessment_status": "Observed acceptance assertions passed; candidate evidence for independent assessment, no delivery/runtime/provider claim.",
+    "access_pattern_classification": "Scoped exact open/intent/admission lookups and batched indexed page projection of current-resource trusted IN timestamps. Empty-conversation ordering uses additive expression index.",
+    "touched_path_audit_summary": {
+      "list_order_fixture_conversations": 15000,
+      "list_returned_rows": 50,
+      "out_heavy_fixture_conversations": 60,
+      "out_heavy_returned_rows": 50,
+      "conversation_query_count": 3,
+      "standalone_message_hydration_query_count": 0,
+      "counts_limit": "Three queries touching conversations, not total SQL count.",
+      "trusted_window_fixture_conversations": 30,
+      "history_rows_per_conversation": 24,
+      "current_resource_batch_counts": {
+        "buChannelFindMany": 1,
+        "channelCredentialFindMany": 1,
+        "latestAnyMessageProjection": 1,
+        "latestInboundWindowProjection": 1
+      },
+      "provider_probe_count": 0
+    },
+    "strong_query_evidence_type": "EXPLAIN ANALYZE BUFFERS plus Prisma query-event counts",
+    "inbox_order": {
+      "rowCount": 50,
+      "plan": "Limit  (cost=0.41..9.23 rows=50 width=45) (actual time=0.015..0.030 rows=50 loops=1)\n  Buffers: shared hit=6\n  ->  Index Scan using conversations_inbox_order_idx on conversations  (cost=0.41..2645.78 rows=15000 width=45) (actual time=0.014..0.026 rows=50 loops=1)\n        Index Cond: ((bu_id = '2d5ef223-1ad0-4812-b634-24014bce4b6f'::text) AND (contact_type = 'PESSOA'::\"ContactType\"))\n        Filter: (status = 'QUEUED'::\"ConversationStatus\")\n        Buffers: shared hit=6\nPlanning:\n  Buffers: shared hit=71\nPlanning Time: 0.207 ms\nExecution Time: 0.043 ms"
+    },
+    "trusted_window": {
+      "policy_schema_version": "pcv-1",
+      "lane_id": "EPS",
+      "trigger_result": "required",
+      "trigger_severity": "medium",
+      "trigger_reason_code": "EPS-DATA-PATH-CHANGED",
+      "gate_deadline": "before_local_implemented",
+      "min_evidence_rule_id": "EPS-E2",
+      "acceptance_rule_id": "EPS-A2",
+      "sample_profile": "EPS-SP-STRONG",
+      "access_pattern_classification": "Public conversation page loads selected BU channels once, official credential metadata once, one bounded latest-any-message projection for returned page IDs, and one batched indexed selected-resource trusted Meta IN timestamp query when selected bindings require a window; no provider credentials are decrypted or probed.",
+      "pageConversations": 30,
+      "historyRowsPerConversation": 24,
+      "availabilitySample": [
+        {
+          "available": true,
+          "reason": null,
+          "windowOpen": true
+        },
+        {
+          "available": true,
+          "reason": null,
+          "windowOpen": true
+        },
+        {
+          "available": true,
+          "reason": null,
+          "windowOpen": true
+        }
+      ],
+      "queryCounts": {
+        "buChannelFindMany": 1,
+        "channelCredentialFindMany": 1,
+        "latestAnyMessageProjection": 1,
+        "latestInboundWindowProjection": 1
+      },
+      "elapsedMs": 14.70497800000021,
+      "explainLatestInboundProjection": [
+        {
+          "Plan": {
+            "Node Type": "Nested Loop",
+            "Parallel Aware": false,
+            "Async Capable": false,
+            "Join Type": "Inner",
+            "Startup Cost": 0.28,
+            "Total Cost": 96.31,
+            "Plan Rows": 30,
+            "Plan Width": 40,
+            "Actual Startup Time": 0.024,
+            "Actual Total Time": 0.19,
+            "Actual Rows": 30,
+            "Actual Loops": 1,
+            "Inner Unique": false,
+            "Shared Hit Blocks": 90,
+            "Shared Read Blocks": 0,
+            "Shared Dirtied Blocks": 0,
+            "Shared Written Blocks": 0,
+            "Local Hit Blocks": 0,
+            "Local Read Blocks": 0,
+            "Local Dirtied Blocks": 0,
+            "Local Written Blocks": 0,
+            "Temp Read Blocks": 0,
+            "Temp Written Blocks": 0,
+            "Plans": [
+              {
+                "Node Type": "Function Scan",
+                "Parent Relationship": "Outer",
+                "Parallel Aware": false,
+                "Async Capable": false,
+                "Function Name": "unnest",
+                "Alias": "requested",
+                "Startup Cost": 0,
+                "Total Cost": 0.3,
+                "Plan Rows": 30,
+                "Plan Width": 32,
+                "Actual Startup Time": 0.004,
+                "Actual Total Time": 0.005,
+                "Actual Rows": 30,
+                "Actual Loops": 1,
+                "Shared Hit Blocks": 0,
+                "Shared Read Blocks": 0,
+                "Shared Dirtied Blocks": 0,
+                "Shared Written Blocks": 0,
+                "Local Hit Blocks": 0,
+                "Local Read Blocks": 0,
+                "Local Dirtied Blocks": 0,
+                "Local Written Blocks": 0,
+                "Temp Read Blocks": 0,
+                "Temp Written Blocks": 0
+              },
+              {
+                "Node Type": "Limit",
+                "Parent Relationship": "Inner",
+                "Parallel Aware": false,
+                "Async Capable": false,
+                "Startup Cost": 0.28,
+                "Total Cost": 3.18,
+                "Plan Rows": 1,
+                "Plan Width": 45,
+                "Actual Startup Time": 0.006,
+                "Actual Total Time": 0.006,
+                "Actual Rows": 1,
+                "Actual Loops": 30,
+                "Shared Hit Blocks": 90,
+                "Shared Read Blocks": 0,
+                "Shared Dirtied Blocks": 0,
+                "Shared Written Blocks": 0,
+                "Local Hit Blocks": 0,
+                "Local Read Blocks": 0,
+                "Local Dirtied Blocks": 0,
+                "Local Written Blocks": 0,
+                "Temp Read Blocks": 0,
+                "Temp Written Blocks": 0,
+                "Plans": [
+                  {
+                    "Node Type": "Index Only Scan",
+                    "Parent Relationship": "Outer",
+                    "Parallel Aware": false,
+                    "Async Capable": false,
+                    "Scan Direction": "Backward",
+                    "Index Name": "messages_conversation_trusted_window_idx",
+                    "Relation Name": "messages",
+                    "Alias": "message",
+                    "Startup Cost": 0.28,
+                    "Total Cost": 72.85,
+                    "Plan Rows": 25,
+                    "Plan Width": 45,
+                    "Actual Startup Time": 0.006,
+                    "Actual Total Time": 0.006,
+                    "Actual Rows": 1,
+                    "Actual Loops": 30,
+                    "Index Cond": "((conversation_id = requested.conversation_id) AND (provider_resource_identity_id = '399453c9-f007-4ae2-b81c-14a4e8a9fa2c'::text) AND (direction = 'IN'::\"MessageDirection\") AND (channel_origin = 'OFICIAL'::\"ChannelType\") AND (official_inbound_at IS NOT NULL) AND (official_inbound_at <= CURRENT_TIMESTAMP))",
+                    "Rows Removed by Index Recheck": 0,
+                    "Heap Fetches": 30,
+                    "Shared Hit Blocks": 90,
+                    "Shared Read Blocks": 0,
+                    "Shared Dirtied Blocks": 0,
+                    "Shared Written Blocks": 0,
+                    "Local Hit Blocks": 0,
+                    "Local Read Blocks": 0,
+                    "Local Dirtied Blocks": 0,
+                    "Local Written Blocks": 0,
+                    "Temp Read Blocks": 0,
+                    "Temp Written Blocks": 0
+                  }
+                ]
+              }
+            ]
+          },
+          "Planning": {
+            "Shared Hit Blocks": 68,
+            "Shared Read Blocks": 0,
+            "Shared Dirtied Blocks": 0,
+            "Shared Written Blocks": 0,
+            "Local Hit Blocks": 0,
+            "Local Read Blocks": 0,
+            "Local Dirtied Blocks": 0,
+            "Local Written Blocks": 0,
+            "Temp Read Blocks": 0,
+            "Temp Written Blocks": 0
+          },
+          "Planning Time": 0.216,
+          "Triggers": [],
+          "Execution Time": 0.203
+        }
+      ],
+      "providerCallsBefore": {
+        "meta": 0,
+        "evolution": 0
+      },
+      "providerCallsAfter": {
+        "meta": 0,
+        "evolution": 0
+      },
+      "limits": "Disposable PostgreSQL and one bounded 30-conversation public page; local query count/plan observation, not a capacity or latency SLO claim."
+    },
+    "sources": [
+      {
+        "path": "api-app/test/conversation-start.e2e-spec.ts",
+        "sha256": "35ead6bdea966ab05a3c9b792316867a918929194570b766767bacebb5bf4f11"
+      },
+      {
+        "path": "api-app/test/number-onboarding-pcv.e2e-spec.ts",
+        "sha256": "3825b0286f9906781e83666616caa05417647ee47c022763fc76e39a3c4ddca0"
+      }
+    ],
+    "bounded_existence_query": "New actual query-event regression asserts findFirst bounded existence instead of whole-history COUNT; no new path-specific EXPLAIN claim.",
+    "historical_plan_samples": "Existing exact EXPLAIN samples below are from E45; unchanged plan-test source executed again E54. They are historical samples, not relabeled current measured costs."
+  },
+  "artifact_sha256": "08138da3019c4a4269e82701d38732f84fcd7ae0476c37127e84257b7c868ab5"
+}

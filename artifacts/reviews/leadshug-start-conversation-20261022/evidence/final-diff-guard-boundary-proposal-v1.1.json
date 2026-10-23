@@ -23,5 +23,10 @@
     "/tmp/stcon04-final-diff-guard-private.json"
   ],
   "approval_handling": "Present the concrete candidate and this exact exception to the user before any private inspection. If explicitly approved, record the limited exception in the governing TODO and re-run normal authority before executing. No implementation scope, DoD or classifier weakening is proposed.",
-  "current_status": "Proposal only. Implementation and positively bounded test work continue. Full diff-guard GO remains absent."
+  "current_status": "Proposal only. Implementation and positively bounded test work continue. Full diff-guard GO remains absent.",
+  "other_closeout_helpers_assessment": {
+    "todo_completion_guard": "Use explicit governing TODO argument, not --all-completed; inspected helper reads documentary TODO/evidence, no Git/private product enumeration.",
+    "todo_closeout_guard": "Use canonical --repo foundation_documentation with explicit governing TODO. Inspected git_context invokes full status only on that selected Foundation repository; this is the authorized documentary authority, not root/API/Web private-product repositories. No private-product exception inferred for closeout.",
+    "scope_lifetime": "Only the full diff guard remains the proposed one-time private inspection exception. Runtime opaque Compose configuration access is separately named in the activation proposal."
+  }
 }

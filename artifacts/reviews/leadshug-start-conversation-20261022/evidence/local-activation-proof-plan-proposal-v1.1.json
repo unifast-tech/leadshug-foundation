@@ -61,7 +61,7 @@
     "Record only safe outcome/state/timestamps and source-runtime attestation. Do not persist phone/contact/body/token.",
     "No automated sends, new contacts, routing changes, migration/registration at Meta, or Railway deployment."
   ],
-  "current_status": "E45 all terminalGREEN356API/435PG/53Web/85browser; E46existing85browser regressions pass. Current test-only E47 ordinary recovery case passed actual UI/BFF after real90s deadline. Full E47 browser remainsRUNNING/frozen; terminal/cleanup/postseal and independent assessment required before actual activation. Prepared positive public build archives exist, no images/activation yet.",
+  "current_status": "Full E54 ALL and independent259/93postseal passed; both exact source-bound Alpine images actually built successfully, offline schema/compiled/bundle inspected. Fresh architecture/TQA/cutover reviews are in progress. No preserved runtime or operator first-send/reply proof executed.",
   "build_context_positive_inputs": {
     "api": {
       "roots": [
@@ -97,6 +97,22 @@
     },
     "policy": "Reject symlinks; hash each positive input, produce generated archive only. Exclude every .env, node_modules, existing dist, e2e/test artifacts and all unlisted paths. Add no extra file by discovery or implicit COPY context. Source specs under admitted src remain public build inputs; build exclusions remain canonical."
   },
-  "prepared_build_context_receipt": "positive-build-contexts-e46-v1.1.json",
-  "entrypoint_scope": "Existing API entrypoint mechanically keeps ownership of the preserved named file volume at /dados/arquivos, then runs as node. No host .local-files bind, agent content inspection, payload mutation or file deletion is proposed."
+  "prepared_build_context_receipt": "positive-build-contexts-e53-v1.1.json",
+  "entrypoint_scope": "Existing API entrypoint mechanically keeps ownership of the preserved named file volume at /dados/arquivos, then runs as node. No host .local-files bind, agent content inspection, payload mutation or file deletion is proposed.",
+  "candidate_receipt": "all-result-e54-v1.1.json",
+  "build_context_current_recheck": "positive-build-contexts-e54-recheck-v1.1.json",
+  "concrete_images": {
+    "api": {
+      "tag": "leadshug-stcon04-api:e54",
+      "id": "sha256:e73a20bf17bcf0e4b9f9285e3d754b283f060a7a2a498c1a45fbb6614fd9be85"
+    },
+    "web": {
+      "tag": "leadshug-stcon04-web:e54",
+      "id": "sha256:cd9480a1b0e047828eab18e93fb24c64eaefaf142809bcce235c274ceb3d12fb"
+    }
+  },
+  "concrete_image_evidence": [
+    "image-build-attestation-e54-v1.1.json",
+    "image-build-root-collection-e54-v1.1.json"
+  ]
 }

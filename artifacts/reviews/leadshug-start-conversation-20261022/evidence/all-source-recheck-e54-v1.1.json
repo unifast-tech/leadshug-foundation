@@ -1,0 +1,12 @@
+{
+  "checkpoint": "E54 terminal full positive source recheck",
+  "stage": "After actual executor terminal and owned cleanup; BEFORE writer release",
+  "count": 259,
+  "fingerprint": "604a6867f1d715ffac564e6a47c68539e0b07a657b046145542d42620cbbbe0c",
+  "matches_preseal_full_inventory_and_bytes": true,
+  "record_reference": "all-source-seal-e54-v1.1.json#records",
+  "stdout_sha256": "f6c6049a3e31cbe33d62c9d3376d4bf7d476fd552dac1c9232c2a94f36882a5f",
+  "executor_reported_exit_code": 0,
+  "recorded_at_utc": "2026-10-23T00:46:32.920900+00:00",
+  "boundary": "Only declared positive public roots and7 exact publicfiles; no actual env/data/process inspection."
+}

@@ -1,0 +1,97 @@
+{
+  "policy_schema_version": "pcv-1",
+  "schema_version": "pcv-1",
+  "todo_id": "ST-CON-04",
+  "run_id": "E54-canonical-all-2734",
+  "environment_id": "owned-disposable-node22-postgresql16-real-BFF-fake-external-provider",
+  "executor_id": "stcon04_continuation",
+  "reviewer_id": "root-independent-source-and-output-collector; formal lane assessment pending",
+  "recorded_at_utc": "2026-10-23T00:47:04.414607+00:00",
+  "lane_id": "BCI",
+  "evidence_type": "real-concurrent-BFF-PG-barrier-and-state-readback",
+  "sample_profile_id": "BCI-SP-H",
+  "acceptance_rule_id": "BCI-A1",
+  "result_summary": "Five20-request same-key waves each persist one intent and one Message, dispatch once and return19 in-flight replays; manual open five20-request waves create five rows and send zero messages.",
+  "artifact_payload": {
+    "evidence_receipt": "all-result-e54-v1.1.json",
+    "stdout_sha256": "f6c6049a3e31cbe33d62c9d3376d4bf7d476fd552dac1c9232c2a94f36882a5f",
+    "source_seal": "all-source-seal-e54-v1.1.json",
+    "source_fingerprint": "604a6867f1d715ffac564e6a47c68539e0b07a657b046145542d42620cbbbe0c",
+    "terminal_exit_code": 0,
+    "assessment_status": "Observed acceptance assertions passed; candidate evidence for independent assessment, no delivery/runtime/provider claim.",
+    "invariant_id": "ST04-one-owned-active-slot-and-at-most-one-POST-per-immutable-initial-intent",
+    "concurrency_policy": "idempotent same-key replay",
+    "probe_profile_observed": {
+      "waves": 5,
+      "overlapping_requests_per_wave": 20,
+      "same_key_initial_waves": [
+        {
+          "wave": 1,
+          "requests": 20,
+          "replay202": 19,
+          "posts": 1,
+          "messages": 1,
+          "elapsedMs": 169
+        },
+        {
+          "wave": 2,
+          "requests": 20,
+          "replay202": 19,
+          "posts": 1,
+          "messages": 1,
+          "elapsedMs": 142
+        },
+        {
+          "wave": 3,
+          "requests": 20,
+          "replay202": 19,
+          "posts": 1,
+          "messages": 1,
+          "elapsedMs": 135
+        },
+        {
+          "wave": 4,
+          "requests": 20,
+          "replay202": 19,
+          "posts": 1,
+          "messages": 1,
+          "elapsedMs": 132
+        },
+        {
+          "wave": 5,
+          "requests": 20,
+          "replay202": 19,
+          "posts": 1,
+          "messages": 1,
+          "elapsedMs": 125
+        }
+      ],
+      "manual_open": {
+        "waves": 5,
+        "requests_per_wave": 20,
+        "created": 5,
+        "reused": 95,
+        "distinct_conversations": 5,
+        "provider_call_delta": 0,
+        "message_count": 0
+      }
+    },
+    "additional_barriers": "Ordinary-vs-initial admission, unique echo race, CAS owner/closed preservation, commit ACK loss versus rollback and after-deadline local risk acknowledgment passed actual PG suites. E54 also proves settlement rollback after provider ACK, EALB early/late acknowledgment and late-old isolation.",
+    "sources": [
+      {
+        "path": "api-app/test/initial-message.e2e-spec.ts",
+        "sha256": "a549c2dc260906480d3a8c513349c36a15d9cd46df1a7493b3d784592f838b74"
+      },
+      {
+        "path": "api-app/test/conversation-start.e2e-spec.ts",
+        "sha256": "35ead6bdea966ab05a3c9b792316867a918929194570b766767bacebb5bf4f11"
+      },
+      {
+        "path": "api-app/test/dispatch-admission.e2e-spec.ts",
+        "sha256": "ec1975b985ea766dcc9b8136bb6d1288cf71f4a40bde34bb23cfbc19f7669d47"
+      }
+    ],
+    "limits": "posts in ST04_BCI_5x20 are Evolution fake-port invocations, not external TCP requests. Durable external exactly-once is not claimed."
+  },
+  "artifact_sha256": "c505c53965ac7a15999d0f91915e75dac1fac6e9c3a0fca6694a3078f54aa5f2"
+}

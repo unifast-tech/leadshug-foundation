@@ -1,0 +1,34 @@
+{
+  "kind": "Actual r2 dispatch start record, no result claimed",
+  "source_fingerprint": "604a6867f1d715ffac564e6a47c68539e0b07a657b046145542d42620cbbbe0c",
+  "lanes": [
+    {
+      "review_kind": "architecture_adherence",
+      "session": 12050,
+      "model": "gpt-6.1-sol",
+      "effort": "xhigh",
+      "state": "running"
+    },
+    {
+      "review_kind": "test_quality_audit",
+      "session": 68591,
+      "model": "gpt-5.6-terra",
+      "effort": "xhigh",
+      "state": "actual terminal tool failure, no review turn",
+      "actual_exit_code": 1
+    }
+  ],
+  "cutover_state": "Canonical fresh internal first cutover review running, session3852, gpt-5.6-terra/xhigh; no result claimed.",
+  "lifecycle": "Wait actual terminal; no elapsed-time substitution, no live repackaging or result repair.",
+  "context": "Fresh ephemeral internal no-context canonical CLI; exact source-bound packages frozen. No isolation/fallback invoked.",
+  "retry": {
+    "review_kind": "test_quality_audit",
+    "session": 77879,
+    "state": "running",
+    "model": "gpt-5.6-terra",
+    "effort": "xhigh",
+    "stdin_characters": 1033623,
+    "lossless_json_compaction_only": true,
+    "full_rubric_and24sources_preserved": true
+  }
+}

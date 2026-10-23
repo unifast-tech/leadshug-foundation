@@ -55,7 +55,7 @@
   ],
   "selected_direction": "OptionA: expose existing local-only reconciliation through the safe PREPARED projection and existing UI action; preserve GET read-only, same grant/CSRF/immutable lease/owner CAS and no automatic dispatch. Final code choice awaits independent findings and exact regression design.",
   "sequencing": "Keep E47 and live r1 source packets frozen. Wait actual runner terminal/cleanup/postseal and review lifecycle terminal before sole-writer test-first handoff. No test-only route in production or additional provider/platform capability.",
-  "proof_limits": "E50 now proves the actual disposable PG/BFF failure before product correction. Initial mandatory answers describe pre-test E47 knowledge; execution_update supplies current reached evidence. No post-fix or full browser/runtime delivery proof yet.",
+  "proof_limits": "Historical E47/E50 answers are retained. E54 now proves corrected valid PREPARED producer, read-only BFF projection and actual UI local reconciliation with real disposable PG. No preserved runtime/provider delivery claim.",
   "execution_update": {
     "checkpoint": "E50 actual terminal1 with root full259source postseal",
     "recorded_at_utc": "2026-10-23T00:03:57.063457+00:00",
@@ -79,5 +79,22 @@
       "React_button_and_full_browser": "missing proof until new real-BFF/PG browser case passes"
     },
     "fix_status": "Sole writer released after E50/E51 actual terminal postseals; product fixes in progress, no after/GREEN claim."
+  },
+  "after_fix": {
+    "checkpoint": "E54",
+    "recorded_at_utc": "2026-10-23T00:47:04.414607+00:00",
+    "evidence": [
+      "all-result-e54-v1.1.json",
+      "all-source-recheck-e54-v1.1.json",
+      "browser-freshness-collection-e54-v1.1.json"
+    ],
+    "actual_safe_payload": {
+      "state": "PREPARED",
+      "recoveryAction": "RECONCILE"
+    },
+    "coverage_chain": "Real reserveInitial 90s reservation -> observational scoped GET RECONCILE -> served React local action -> live202 no release -> synthetic DB expiry -> REJECTED/release; zero provider calls and Message in both phases. Browser fixture invokes actual compiled reservation service, not sent-intent state rewrite.",
+    "coverage_status": "All formerly missing BFF and React/browser stages now covered; independent review remains.",
+    "root_cause": "Safe DTO omitted the existing local reconciliation action for durable PREPARED state; UI correctly rendered only declared actions.",
+    "rule_decision": "no-rule-needed: finite product state/action semantics; companion behavior regression, no Delphi/analyzer change."
   }
 }

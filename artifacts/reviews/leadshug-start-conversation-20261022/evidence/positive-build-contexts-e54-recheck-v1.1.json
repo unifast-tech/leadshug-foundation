@@ -1,0 +1,20 @@
+{
+  "kind": "Current full E54 build input/archive recheck before image execution",
+  "source_seal": "all-source-seal-e54-v1.1.json",
+  "source_fingerprint": "604a6867f1d715ffac564e6a47c68539e0b07a657b046145542d42620cbbbe0c",
+  "checks": [
+    {
+      "service": "api",
+      "records": 177,
+      "archive_sha256": "3a4716b1870223d79ae9853d0790c00b4aefbaa248c53c5dfcc8032b5def7aec",
+      "all_input_hashes_match": true
+    },
+    {
+      "service": "web",
+      "records": 47,
+      "archive_sha256": "c06f8b1f0923fd257806084e7250ad2ca4468349ef46eca7222630df2a00e612",
+      "all_input_hashes_match": true
+    }
+  ],
+  "status": "Current exact224input bytes and both prepared archive digests verified; no image or runtime yet."
+}

@@ -96,6 +96,13 @@
       "classification": "causal Unicode snapshot assertion RED",
       "observed_fact": "Valid1024astral POSITIONAL parameter is rejected before product fix; prior text4096/4097 code-point checks pass. Build and53otherWebunit tests pass.",
       "claim_limit": "Later NAMED branch and positional1025 assertion were not reached in combined test; require final complete passing unit and actual input/browser proof."
+    },
+    {
+      "checkpoint": "E52/E53/E54",
+      "source_receipt": "candidate-source-preflight-e52-v1.1.json; all-result-e53-v1.1.json; all-source-seal-e54-v1.1.json",
+      "classification": "faithful fixture/source preflight and post-implementation test baseline repair",
+      "observed_fact": "E52 did not run: fixture corrected to real owner reservation with90s lease and full canonical data, early UIACK tests actual BFF409 rather than adding an unapproved timer feature. E53 product regressions pass (364unit/438PG); new late-old test incorrectly compares to pre-ACK null timestamp, while actual late state is SUCCEEDED and release remains nonnull. E54 changes only that test to exact post-ACK timestamp and reruns full ALL.",
+      "claim_limit": "E53 stale expectation is not product RED. E54 currently running; 12initial-message PG tests passed individually, no full candidate/Web/browser result yet."
     }
   ],
   "broader_coverage": "Most PostgreSQL fault/commit/protocol/boundary/rate/concurrency cases were added alongside or after their production implementation. They are meaningful final-state regression evidence, not universally pre-implementation causal RED.",

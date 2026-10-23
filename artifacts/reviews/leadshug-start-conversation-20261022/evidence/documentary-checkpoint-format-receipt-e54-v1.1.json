@@ -1,0 +1,9 @@
+{
+  "kind": "Documentary-only staged format adjudication",
+  "actual_diffcheck_exit": 2,
+  "diagnostics": 4,
+  "type": "Canonical generated dispatch markdown one extra EOF blank line in each of4derived outputs.",
+  "raw_sha256": "9162b9d991e811eff902d0543841e6107e25f459a93aff43f31adf79c64d0dcc",
+  "decision": "Preserve exact canonical generated dispatch bytes and their live-review provenance; do not rewrite while reviews are live. These4format-only diagnostics have no product/runtime/test semantics. Raw exit2 is retained, not reported as clean or a full delivery guard GO.",
+  "scope": "Only Foundation main documentary checkpoint; product Git, private files and final diff guard untouched."
+}

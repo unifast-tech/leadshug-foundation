@@ -1,0 +1,50 @@
+{
+  "checkpoint": "E54 corrected full canonical candidate GREEN",
+  "recorded_at_utc": "2026-10-23T00:46:53.721503+00:00",
+  "command": "bash scripts/test-channels-local.sh all",
+  "executor_session_id": 2734,
+  "exit_code": 0,
+  "actual_exit_code": 0,
+  "terminal_authority": "Actual session terminal tool exit0 collected by owning executor; root independently bound stdout/full inventory and browser attestation.",
+  "phases": {
+    "migrations": 28,
+    "lint_and_build": "passed",
+    "api_unit": {
+      "files": 34,
+      "tests": 364
+    },
+    "api_postgresql": {
+      "files": 33,
+      "tests": 439,
+      "duration_seconds": 274.67
+    },
+    "web_unit": {
+      "files": 7,
+      "tests": 54
+    },
+    "browser": {
+      "tests": 88,
+      "passed": 88,
+      "duration_minutes": 15.9
+    }
+  },
+  "stdout_sha256": "f6c6049a3e31cbe33d62c9d3376d4bf7d476fd552dac1c9232c2a94f36882a5f",
+  "source_recheck": "all-source-recheck-e54-v1.1.json",
+  "source_fingerprint": "604a6867f1d715ffac564e6a47c68539e0b07a657b046145542d42620cbbbe0c",
+  "freshness": "browser-freshness-collection-e54-v1.1.json",
+  "owned_cleanup_observed": true,
+  "specific_proofs": [
+    "Valid PREPARED service reservation -> read-only action -> actual BFF/UI local reconcile live202 then synthetic expiry local rejection, zero provider/Message",
+    "EALB early UI/BFF409 then synthetic expiry ACK200 -> one successor -> late-original local recovery preserving current owner/slot",
+    "Actual90s ordinary uncertainty risk acknowledgment -> composer return",
+    "Unicode4096text and1024positional actual input/preview/send, named/positional snapshot exact code-point unit bounds",
+    "Ordinary settlement actual rollback after known ACK produces local incomplete, bounded history existence query and confirmed winner-only realtime",
+    "Same-key5x20 and browser20-trigger5waves, signed trusted-window/current-resource, shared BFF/PUBLIC/BOT transport regressions"
+  ],
+  "limits": [
+    "Disposable synthetic DB and owned fake provider, not actual WhatsApp delivery",
+    "EALB/PREPARED fixture deadline arrangement is not actual90s elapsed claim",
+    "R1 fixes have regression proof; fresh independent review still required",
+    "No preserved runtime activation, module consolidation, full canonical diff guard or delivery claim"
+  ]
+}

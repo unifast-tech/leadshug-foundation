@@ -1,0 +1,169 @@
+{
+  "kind": "Actual integrated r1 finding resolutions for fresh independent r2 challenge",
+  "recorded_at_utc": "2026-10-23T00:47:04.414607+00:00",
+  "source_seal": "all-source-seal-e54-v1.1.json",
+  "rows": [
+    {
+      "finding_id": "F-511FF1D6",
+      "source_finding_id": "ARCH-ST04-R1-06",
+      "review_kind": "architecture_adherence",
+      "resolution": "Integrated",
+      "resolution_evidence": "Current coordinator dependency harness added with actual-source import/HTTP protection and synthetic forbidden controls.",
+      "source": {
+        "path": "api-app/src/domain/channels/transport/channel-initial-message.spec.ts",
+        "sha256": "46d9c0806eb418401dfbd2e538e78b2ee24e8d674a3962fb88802ecb5923a5fa"
+      },
+      "proof": [
+        "all-result-e54-v1.1.json",
+        "all-source-recheck-e54-v1.1.json"
+      ],
+      "limits": "Fresh r2 challenge still required; no delivery/real-provider claim."
+    },
+    {
+      "finding_id": "F-8E89FC19",
+      "source_finding_id": "ARCH-ST04-R1-02",
+      "review_kind": "architecture_adherence",
+      "resolution": "Integrated",
+      "resolution_evidence": "Ordinary local settlement must be positive; false/throw returns known accepted/local incomplete preserving Message and ACK; actual PG rollback regression passed.",
+      "source": {
+        "path": "api-app/src/domain/inbox/outbound.service.ts",
+        "sha256": "0fe7e51f992c7582493db1f5611685e6fb6928394c6e61f3b2e2a9f6aab7bdb1"
+      },
+      "proof": [
+        "all-result-e54-v1.1.json",
+        "all-source-recheck-e54-v1.1.json"
+      ],
+      "limits": "Fresh r2 challenge still required; no delivery/real-provider claim."
+    },
+    {
+      "finding_id": "F-ED2FCC37",
+      "source_finding_id": "ARCH-ST04-R1-03",
+      "review_kind": "architecture_adherence",
+      "resolution": "Integrated",
+      "resolution_evidence": "Only confirmed local creationWinner publishes best-effort realtime after commit; replay/echo/uncertain readback do not duplicate.",
+      "source": {
+        "path": "api-app/src/domain/inbox/outbound.service.ts",
+        "sha256": "0fe7e51f992c7582493db1f5611685e6fb6928394c6e61f3b2e2a9f6aab7bdb1"
+      },
+      "proof": [
+        "all-result-e54-v1.1.json",
+        "all-source-recheck-e54-v1.1.json"
+      ],
+      "limits": "Fresh r2 challenge still required; no delivery/real-provider claim."
+    },
+    {
+      "finding_id": "F-C8AF5811",
+      "source_finding_id": "ARCH-ST04-R1-05",
+      "review_kind": "architecture_adherence",
+      "resolution": "Integrated",
+      "resolution_evidence": "Ordinary BFF uses bounded findFirst select id rather than whole-history COUNT; query-event regression passed.",
+      "source": {
+        "path": "api-app/src/domain/inbox/initial-message.service.ts",
+        "sha256": "ba61c0777b72ad0e8ba7d42a7d444d152a3cdb00f6327223bf7d3c0e8ab4b8e6"
+      },
+      "proof": [
+        "all-result-e54-v1.1.json",
+        "all-source-recheck-e54-v1.1.json"
+      ],
+      "limits": "Fresh r2 challenge still required; no delivery/real-provider claim."
+    },
+    {
+      "finding_id": "F-3E65B77F",
+      "source_finding_id": "ARCH-ST04-R1-01",
+      "review_kind": "architecture_adherence",
+      "resolution": "Integrated",
+      "resolution_evidence": "PREPARED safe action RECONCILE; actual E50 before payload RED and full E54 PG/UI live/expired zero-network proof.",
+      "source": {
+        "path": "api-app/src/domain/inbox/initial-message.service.ts",
+        "sha256": "ba61c0777b72ad0e8ba7d42a7d444d152a3cdb00f6327223bf7d3c0e8ab4b8e6"
+      },
+      "proof": [
+        "all-result-e54-v1.1.json",
+        "all-source-recheck-e54-v1.1.json"
+      ],
+      "limits": "Fresh r2 challenge still required; no delivery/real-provider claim."
+    },
+    {
+      "finding_id": "F-F7C06078",
+      "source_finding_id": "ARCH-ST04-R1-04",
+      "review_kind": "architecture_adherence",
+      "resolution": "Integrated",
+      "resolution_evidence": "Active initial conflict includes scoped safe attemptId/state and BLOCKED; empty remains REQUIRED; ordinary admissions use bounded scoped10+truncation.",
+      "source": {
+        "path": "api-app/src/domain/inbox/dispatch-admission.service.ts",
+        "sha256": "bebcc9813d5b5b03121c1da1844e85f11251aa261e2bf7665e1b894de0b4d7fc"
+      },
+      "proof": [
+        "all-result-e54-v1.1.json",
+        "all-source-recheck-e54-v1.1.json"
+      ],
+      "limits": "Fresh r2 challenge still required; no delivery/real-provider claim."
+    },
+    {
+      "finding_id": "F-B25EB3CF",
+      "source_finding_id": "TQA-ST04-02",
+      "review_kind": "test_quality_audit",
+      "resolution": "Integrated",
+      "resolution_evidence": "E47 actually terminated86pass with cleanup/postseal; current corrected E54 now actually terminated88pass with full259/93 source/bundle binding.",
+      "source": {
+        "path": "web-app/e2e/start-conversation.spec.ts",
+        "sha256": "16f1027b323f55805b4b26a2addbaf849001acb6ced8e7dda9044b6a6a039649"
+      },
+      "proof": [
+        "all-result-e54-v1.1.json",
+        "all-source-recheck-e54-v1.1.json"
+      ],
+      "limits": "Fresh r2 challenge still required; no delivery/real-provider claim."
+    },
+    {
+      "finding_id": "F-8D9F2A1C",
+      "source_finding_id": "TQA-ST04-01",
+      "review_kind": "test_quality_audit",
+      "resolution": "Integrated",
+      "resolution_evidence": "Input clamps and named/positional snapshot validation use code points; E51 causal RED then current unit and Unicode browser proof; separate JSON bound preserved.",
+      "source": {
+        "path": "web-app/src/componentes/NovaConversa.tsx",
+        "sha256": "2702cae2c4d913d511e33ca8d305ecc03d7ee56f34623877058865d884aa1bdd"
+      },
+      "proof": [
+        "all-result-e54-v1.1.json",
+        "all-source-recheck-e54-v1.1.json"
+      ],
+      "limits": "Fresh r2 challenge still required; no delivery/real-provider claim."
+    },
+    {
+      "finding_id": "F-9EFF5F01",
+      "source_finding_id": "TQA-ST04-04",
+      "review_kind": "test_quality_audit",
+      "resolution": "Integrated",
+      "resolution_evidence": "Chronology corrected explicitly: absent-module/fixture/detector failures and post-hoc reversion never business assertion test-first; mixed sequencing remains disclosed, not retroactively fixed.",
+      "source": {
+        "path": "api-app/test/initial-message.e2e-spec.ts",
+        "sha256": "a549c2dc260906480d3a8c513349c36a15d9cd46df1a7493b3d784592f838b74"
+      },
+      "proof": [
+        "all-result-e54-v1.1.json",
+        "all-source-recheck-e54-v1.1.json"
+      ],
+      "limits": "Fresh r2 challenge still required; no delivery/real-provider claim."
+    },
+    {
+      "finding_id": "F-B360C531",
+      "source_finding_id": "TQA-ST04-03",
+      "review_kind": "test_quality_audit",
+      "resolution": "Integrated",
+      "resolution_evidence": "Actual EALB early UI409 unchanged slot, disposable expiry ACK200, successor and late-old local reconciliation isolating owner/provider verified in full E54.",
+      "source": {
+        "path": "web-app/e2e/start-conversation.spec.ts",
+        "sha256": "16f1027b323f55805b4b26a2addbaf849001acb6ced8e7dda9044b6a6a039649"
+      },
+      "proof": [
+        "all-result-e54-v1.1.json",
+        "all-source-recheck-e54-v1.1.json"
+      ],
+      "limits": "Fresh r2 challenge still required; no delivery/real-provider claim."
+    }
+  ],
+  "chronology": "test-causality-chronology-r1-v1.1.json",
+  "remaining": "Runtime/operator/module/guard/final review gates remain; no waiver or unsupported completion."
+}

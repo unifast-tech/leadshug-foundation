@@ -1,0 +1,47 @@
+{
+  "checkpoint": "E53 corrected product regressions pass, stale test snapshot failure",
+  "exit_code": 1,
+  "session": 19182,
+  "recorded_at_utc": "2026-10-23T00:20:35.502824+00:00",
+  "stdout_sha256": "081eadbce34fcb341eb92379ed571eac12032a579bd2973751f74650ed18f78f",
+  "source_count": 259,
+  "source_fingerprint": "3d1d7e83d7425b7c9f82258768d00e4cb5d066ab54d645ddf7b0b6fa275d17ec",
+  "full_inventory_and_bytes_match_preseal": true,
+  "phases": {
+    "migrations_lint_build": "passed,28migrations",
+    "api_unit": {
+      "files_passed": 34,
+      "tests_passed": 364
+    },
+    "api_postgresql": {
+      "files_passed": 32,
+      "files_failed": 1,
+      "tests_passed": 438,
+      "tests_failed": 1,
+      "duration_seconds": 272.85
+    },
+    "web_and_browser": "not reached",
+    "cleanup": "actual owned removal observed"
+  },
+  "failure": {
+    "path": "api-app/test/initial-message.e2e-spec.ts",
+    "line": 906,
+    "actual": "Late old attempt is SUCCEEDED with nonnull release timestamp. Prior body and successor assertions passed.",
+    "expected_incorrectly": "slotReleasedAt from intent captured before acknowledgment, hence null.",
+    "classification": "Test expectation baseline mismatch, not product behavior RED; preserve immutable actual post-ACK release timestamp."
+  },
+  "passing_r1_proofs": [
+    "PREPARED read-only action/local live202/expired rejection and no provider/Message",
+    "Active-slot409 BLOCKED metadata vs empty REQUIRED",
+    "Bounded history existence SQL, no COUNT",
+    "Realtime winner-only local reconcile with no replay/echo duplicate",
+    "Actual ordinary-settlement rollback yields accepted-local-incomplete, not201",
+    "Known accepted earlyACK409 then release and successor; late body SUCCEEDED passed before stale timestamp comparison"
+  ],
+  "not_reached": [
+    "Final same-case original timestamp/owner/Message/provider invariants after failed comparison",
+    "All Web unit/build/browser; no freshness artifact exists"
+  ],
+  "limits": "Current whole ALL is RED; no fresh browser or full candidate GREEN, source/image/runtime/provider delivery claim. Canonical product fixes are verified by reached API regressions only.",
+  "next": "Narrow one-test timestamp capture repair after root postseal, then fresh complete canonical candidate."
+}

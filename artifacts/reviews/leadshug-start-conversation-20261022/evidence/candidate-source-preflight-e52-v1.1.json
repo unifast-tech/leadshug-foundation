@@ -1,0 +1,17 @@
+{
+  "checkpoint": "E52 source preflight fixture fidelity correction",
+  "recorded_at_utc": "2026-10-23T00:09:58.781197+00:00",
+  "source_seal": "all-source-seal-e52-v1.1.json",
+  "fingerprint": "3b0576dd2900bfc16a9c63492aaab58b17bc661c7f9a06de9f7076a1701bade1",
+  "runner_started": false,
+  "finding": [
+    "New unclaimed PREPARED browser fixture uses direct row creation with300s lease rather than90s and lacks canonical complete request fingerprint.",
+    "New known-accepted blocked ACK browser case must prove early-disabled control before explicit synthetic expiry."
+  ],
+  "disposition": "Do not run or claim RED/GREEN for this draft. Sole writer released only for two admitted test support paths; production remains frozen. Fresh full preseal/authority required afterward.",
+  "scope": "Test-only: timeline-fixtures.cjs, start-conversation.spec.ts, dispatch-admission.service.spec.ts and dispatch-admission.e2e-spec.ts, all already admitted existing paths. No production/timer/route/schema changes.",
+  "root_requirement_recalibration": "Initial UI need not disable its confirmed-risk action before the deadline: the approved contract requires server-side refusal without slot release. Root earlier zero-BFF-POST/disabled-button demand was stronger than frozen intent. Preserve current production and prove actual early UI request yields409ACK_TOO_EARLY/no effect, then synthetic expiry yields200ACK; no new timer feature or extra causal run.",
+  "additional_faithful_test_alignment": [
+    "Existing unit dispatch-admission.service.spec.ts77 and PG dispatch-admission.e2e-spec.ts385 still asserted INITIAL_SEND_REQUIRED for active initial slot. These contradict frozen D07 and new correct code; align only those expectations to IN_PROGRESS/safe metadata and retain empty REQUIRED scenarios."
+  ]
+}
