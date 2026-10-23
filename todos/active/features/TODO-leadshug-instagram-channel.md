@@ -6,7 +6,7 @@ ST-IG-03 — Conectar Instagram e atender DMs na mesma BU dos WhatsApps
 ## Artifact Identity
 - **Artifact type:** `tactical_execution_contract`
 - **Artifact status:** Review
-- **Contract version:** 1.1 — reconverging for review, sem execução autorizada.
+- **Contract version:** 1.2 — architecture reviewed, awaiting critique, sem execução autorizada.
 - **Template:** copiado de `delphi-ai/templates/todo_template.md` em2026-10-23; seções aplicáveis preenchidas abaixo.
 
 ## Context
@@ -31,17 +31,17 @@ Este TODO define WHAT, exclusões e critérios de entrega. Planejamento e baseli
 ## Delivery Status Canon (Required)
 - **Current delivery stage:** Pending
 - **Qualifiers:** Blocked
-- **Next exact step:** publicar a baseline reconvergida v1.1 e concluir a nova rodada de arquitetura/crítica independentes; depois executar coherence/scope/authority preflight antes de pedir aprovação.
+- **Next exact step:** publicar a baseline revisada v1.2 e concluir crítica independente/Plan Review; depois executar coherence/scope/authority preflight antes de pedir aprovação.
 
 ## Active Work State (Required While TODO Remains In `active/`)
 - **Work state:** blocked
-- **Why this state now:** baseline r1 publicada e parecer arquitetural concluído; quatro findings integrados ao contrato v1.1 aguardam nova revisão, crítica e guards.
+- **Why this state now:** arquitetura r2go após integrar os achados; contrato v1.2 aguarda crítica independente e guards.
 - **Exit condition:** plano reconvergido, dependências pré-aprovação resolvidas, guards preflight-go e aprovação explícita antes de execução.
 
 ## Blocker Notes (Required if `Qualifiers` includes `Blocked`)
-- **Blocker:** gates de planejamento v1.1 e preflight ainda não concluídos; não há autorização de implementação.
-- **Why blocked now:** a estrutura de protocolo foi verificada em fonte primária e no título do painel, mas o contrato evoluiu após r1; não pedir aprovação sem nova revisão nem inferir permissões da conta real.
-- **What unblocks it:** reviews da baseline v1.1 e guards de preapproval; valores/saúde da instalação serão verificados na fase runtime própria.
+- **Blocker:** crítica/Plan Review e preflight finais ainda não concluídos; não há autorização de implementação.
+- **Why blocked now:** protocolo e arquitetura revisados; não pedir aprovação sem crítica/guards finais nem inferir permissões da conta real.
+- **What unblocks it:** crítica da baseline v1.2 e guards de preapproval; valores/saúde da instalação serão verificados na fase runtime própria.
 - **Owner / source:** strategic steward para contrato/reviews; operador para painel Meta.
 - **Last confirmed truth:** conta profissional e acesso disponíveis; app existente oferece Instagram; BU conjunta escolhida. Não reenviar perguntas já respondidas, migrar número ou desconectar WhatsApp.
 
@@ -317,12 +317,24 @@ D-01..D-10 e as cláusulas normativas são o candidato revisado a baseline, não
 - **Why this applies:** aposenta BU=número no comportamento e seleção por enum único; muda identidade/rotas canônicas.
 - **Deviation / debt being retired:** telefone/username como identidade de domínio e primeiro canal do tipo como endereço de dispatch.
 - **Target steady-state after closeout:** BU operacional, contato/peer/empresa/provider separados, conexão e rota explícitas e um Channel/Outbound/Acceptance.
+- **Temporary exceptions allowed:** reader v1 somente para leitura/replay/conclusão local de fatos preexistentes, e colunas legadas read-only para preservar evidência; limites definidos na matriz por estado IG-ARCH-R1-02. Nenhuma escrita canônica v1 ou dispatch nesse reader.
+- **Cutover / removal condition:** migrações descartáveis e auditoria provam novos writes exclusivamente v2/identidades/rotas; consumidores deixam de resolver destinatário por contact string ou BU.phone. Reader de fatos v1 fica restrito ao acervo imutável, sem reinserir o caminho antigo de envio.
 
 ### Patterns To Enforce
-DIP, DI, capacidade explícita e Liskov; constraints e transações curtas, HTTP fora de transação; ownership durável; contexto imutável de envio; dados privados apenas no adapter/crypto.
+| Pattern / Decision | Source / ID | Scope | Why It Must Hold After Cutover |
+| --- | --- | --- | --- |
+| DIP/DI e capacidades explícitas, substituição pelo contrato Channel | D-01, D-06, D-07 | consumers/Channel/composição | nenhum cast concreto ou sender paralelo |
+| Constraints, ownership durável e rota/contexto imutáveis | D-02, D-03, D-04, IG-ARCH-R1-01 | PostgreSQL/Inbox/Canais | mesma BU, contato e recurso comprovados antes de dispatch |
+| Transações curtas, HTTP fora da transação e aceitação comum | D-07, D-08 | OAuth/ingresso/envio | concorrência e recuperação não repetem efeito externo |
+| Segredo por finalidade e dados privados somente no adapter/crypto | D-05 | configuração/OAuth/webhook | nenhuma credencial ou destinatário controlado pelo browser |
 
 ### Prohibited Anti-Patterns
-Contato numérico sem namespace; casts para concreto; segredo global como fallback; copiar sender/inbox; getters que mutam provider; desligar testes/asserts para passar; truncamento silencioso de vínculos; bot Instagram ativado sem contrato; inferir rota legada; dual-write canônico indefinido.
+| Anti-Pattern / Wrong Path | Detection Signal | Why It Is Forbidden After Cutover | Exception Policy |
+| --- | --- | --- | --- |
+| Contato sem namespace, primeiro canal pronto, rota inferida ou lista truncada | testes de colisão/rota/cardinalidade e revisão | destinatário e recurso errados | none |
+| Cast concreto, sender/inbox duplicado ou fallback de segredo | dependency harness e testes negativos | viola contrato comum e isolamento | none |
+| Getter que muta provider, bot Instagram implícito ou HTTP de recuperação v1 | contadores HTTP/Typebot e cutover | efeitos não autorizados/duplicação | none |
+| Asserts removidos, fonte stale ou dual-write canônico indefinido | ALL/freshness/TQA/cutover | prova fraca ou autoridade concorrente | somente reader v1 limitado, sem novos writes |
 
 ### Architecture Protection Harness
 | Harness Type | Surface | Command / Rule / Artifact | Regression It Must Catch | Adoption Timing (`already-enforced|implement-in-this-todo|follow-up-approved|manual-only-with-rationale`) | Evidence Plan / Follow-up |
@@ -337,8 +349,8 @@ Contato numérico sem namespace; casts para concreto; segredo global como fallba
 - **Decision review lifecycle:** after diagnosis is closed and before APROVADO
 - **Decision review kind:** architecture_opinion
 - **Decision review package:** bounded-file-set
-- **Decision review status:** findings_integrated
-- **Decision review evidence / resolution:** artifacts/reviews/leadshug-instagram-channel-20261023/evidence/architecture-r1-result.json; quatro findings integrados nas cláusulas normativas v1.1, nova rodada necessária.
+- **Decision review status:** no_material_findings
+- **Decision review evidence / resolution:** artifacts/reviews/leadshug-instagram-channel-20261023/evidence/architecture-r2-result.json; terminal go sobre r1 integrado e duas clarificações r2 revisadas/fechadas, sem autoridade de implementação.
 - **Architecture adherence review:** required
 - **Adherence review lifecycle:** after implementation and before Completed
 - **Adherence review kind:** architecture_adherence
@@ -351,11 +363,11 @@ Contato numérico sem namespace; casts para concreto; segredo global como fallba
 - **Gate decision:** required
 - **Trigger stage:** before the first planning-side review or guard run
 - **Baseline branch:** main
-- **Baseline commit:** e21d077b041e74c4a9261d97aba6321732926af2
+- **Baseline commit:** 92c282326c953eda96650c2ae2d26643b4070cb9
 - **Baseline push reference:** origin/main
 - **Gate status:** no_material_findings
-- **Findings summary:** pacote documental publicado; início das reviews permitido, sem execução de produto; Q-IG-01/02 reconvergidos depois do parecer r1 e submetidos à nova baseline.
-- **Evidence / reference:** artifacts/reviews/leadshug-instagram-channel-20261023/evidence/review-baseline-freeze-r1.json
+- **Findings summary:** baseline v1.1 publicada após integrar os quatro achados r1 e reconvergir Q-IG-01/02; reviews permitidas, sem execução de produto.
+- **Evidence / reference:** artifacts/reviews/leadshug-instagram-channel-20261023/evidence/review-baseline-freeze-r2.json
 - **Pre-freeze packet-prep rule:** prepared-pre-freeze não equivale a passed; guards formais só depois do commit/push.
 
 ## Gate: Review Scope Drift
@@ -425,7 +437,7 @@ Contrato de API proposto e modelo físico a seguir; lista estrita e herança pú
 Local primeiro, projeto runtime existente `leadshug_channels_local`; validação descartável `leadshug_channels_validation`, conforme runner. NÃO executar runtime nesta tarefa. Ativação, acesso opaco ao .env.testing, migração em DB real e callbacks/túneis dependem de plano próprio posterior. Plano deverá provar preservação de peers/volumes, snapshots/admissões pendentes, versões/checksums e abort-before-write em conflito. Lock timeout5s/statement60s nos comandos de migração; nenhum reset. Aprovação de código não publica app Meta nem autoriza produção.
 
 ## Plan Review Gate
-**Status:** r1architecture changes_required integrado ao candidato v1.1; Plan Review sete lentes e crítica ainda pendentes. Não declarar passado antes da rodada reconvergida.
+**Status:** arquitetura r2go, findings r1/r2 integrados; Plan Review sete lentes e crítica ainda pendentes. Não declarar passado antes da rodada reconvergida.
 
 ### Review Sections
 - [ ] Architecture
@@ -453,14 +465,14 @@ Q-IG-01/02 estão reconvergidos para review; arquitetura/crítica e guards ainda
 ## Additional Architectural Opinions
 - **Needed:** yes
 - **Why ambiguity remains:** modelo físico, cutover e protocolo operacional precisam de challenge no pacote completo; opinião estratégica prévia não revisou este TODO.
-- **Opinion count:** 1 para este TODO, r1changes_required integrado; r2pendente
+- **Opinion count:** 2 para este TODO; r1changes_required integrado e r2go terminal
 - **Package mode:** bounded-file-set
 - **Internal reviewer mandate:** required; fresh internal no-context reviewer, sem implementação; esperar estado terminal sem interromper/reempacotar por demora.
 - **Required lenses:** correctness, performance, elegance, structural-soundness, operational-fit.
 
 ## Audit Trigger Matrix
 - **Canonical method:** wf-docker-audit-escalation-method
-- **Latest TEACH evidence / artifact:** artifacts/reviews/leadshug-instagram-channel-20261023/evidence/audit-floor-r1.json, actual go; todas as lanes abaixo preservam o piso required.
+- **Latest TEACH evidence / artifact:** artifacts/reviews/leadshug-instagram-channel-20261023/evidence/audit-floor-r2.json, actual go; todas as lanes abaixo preservam o piso required.
 
 | Trigger | Value | Notes |
 | --- | --- | --- |
@@ -511,14 +523,14 @@ Planejadas; ingestão vinculante somente após APROVADO. Não há waiver.
 - **Selected effort:** medium
 - **Proof mode:** declared
 - **Exception reason:** n/a
-- **Routing evidence:** planned; executar antes de implementação.
+- **Routing evidence:** artifacts/reviews/leadshug-instagram-channel-20261023/evidence/routing-planned-executor-r2.json; plano de lane validado, repetir antes de implementação.
 - **Execution topology:** primary-checkout-single-writer
 - **Subagent / delegation authorization:** workflows de executor/review; um writer de produto serializado.
 - **Git isolation authorization:** not-authorized
 - **Worktree authorization:** not-authorized
 - **Worktree authorization reference:** n/a
 - **Writer scheduling policy:** single-writer-serialized
-- **Guard outcome:** not_run
+- **Guard outcome:** go
 - **Waiver / exception reference:** n/a
 
 ## Decision Adherence Validation
@@ -542,7 +554,7 @@ Planned: telefone sintético, segredo global, provider branch nos consumers, fal
 - **Disposition:** blocked
 - **Disposition reason:** contrato em preparação e revisão; não implementado.
 - **Post-commit/push status:** pending
-- **Next path/status action:** manter ativo; publicar baseline v1.1, executar reviews reconvergidas e guards antes de aprovação.
+- **Next path/status action:** manter ativo; publicar baseline v1.2, concluir crítica/guards antes de aprovação.
 
 ## Security Risk Assessment
 - **Risk level:** high
@@ -649,7 +661,7 @@ Compatibilidade admitida é delimitada: receipt reader v1 conserva fatos antigos
 
 ### Auth, projeções e endpoints candidatos
 
-Todos os endpoints BFF resolvem tenant pela sessão e BU pelos grants atuais; ADMIN+ administra conexões; ATENDENTE+ lê/atende. POST exige anti-CSRF e Idempotency-Key UUID nas criações/envios. Respostas:401sem sessão,403papel insuficiente em BU conhecida,404fora do escopo,400payload inválido após autorização,409contexto/geração/conflito,429budget com Retry-After,503resultado externo inconclusivo. Erros nunca carregam payload bruto/URL/token. Nenhuma operação recebe URL externa arbitrária, WABA, credencial ou peer Instagram declarado pelo browser.
+Todos os endpoints BFF resolvem tenant pela sessão e BU pelos grants atuais; ADMIN+ administra conexões; ATENDENTE+ lê/atende. POST exige anti-CSRF. Idempotency-Key UUID e replay/conflito duráveis são exigidos nas criações/confirmações OAuth e nos primeiros envios já contratados; resposta ordinária preserva as admissões existentes, sem prometer idempotência durável por request key após término. Respostas:401sem sessão,403papel insuficiente em BU conhecida,404fora do escopo,400payload inválido após autorização,409contexto/geração/conflito,429budget com Retry-After,503resultado externo inconclusivo. Erros nunca carregam payload bruto/URL/token. Nenhuma operação recebe URL externa arbitrária, WABA, credencial ou peer Instagram declarado pelo browser.
 
 | Endpoint | Entrada e autorização | Resultado/efeitos |
 | --- | --- | --- |
@@ -668,11 +680,11 @@ Todos os endpoints BFF resolvem tenant pela sessão e BU pelos grants atuais; AD
 | GET /api/bff/conversations/:id/reply-options | ATENDENTE+; sem provider HTTP | rotas/vínculos da conversa, capacidades e política locais com versão/fingerprint. Conteúdo é autorizado antes da consulta. |
 | POST /api/bff/conversations/:id/messages (existente, ampliado) | ATENDENTE+, CSRF; text e routeId/channelId/expectedGeneration/contextFingerprint | captura rota e destinatário server-side, passa pelo único OutboundService/admissões; contexto obsoleto409, sem enviar. Ack remoto e persistência local seguem resultados existentes. |
 
-O único endpoint BFF de resposta continua POST /api/bff/conversations/:id/messages, com texto e contexto de rota obrigatório no cliente atualizado. Não criar POST /reply concorrente nem duplicar sender. A projeção de leitura devolve IDs locais/display, separando telefone WhatsApp e username Instagram; atualizar React/fixtures/expectativas no mesmo contrato. API v1/account_id e telefone continuam WhatsApp-only: filtrar accounts/canais/conversations e resolver messages/claim/release/post por identidade WhatsApp. Conta sem WhatsApp não aparece como número nulo usável no contrato legado. Typebot e webhook OUT não recebem Instagram por acidente.
+O único endpoint BFF de resposta continua POST /api/bff/conversations/:id/messages, com texto e contexto de rota obrigatório no cliente atualizado. Instagram aceita1..1000caracteres, WhatsApp mantém4096e seu parser/envelope atual; não reduzir o limite do WhatsApp por causa da nova plataforma. A resposta ordinária preserva concorrência entre replies existentes e claims single-use, com exclusão entre primeiro envio e reply, sem novo subsistema de request-key. O cliente impede duplo clique da mesma ação e não repete automaticamente envio incerto. Não criar POST /reply concorrente nem duplicar sender. A projeção de leitura devolve IDs locais/display, separando telefone WhatsApp e username Instagram; atualizar React/fixtures/expectativas no mesmo contrato. API v1/account_id e telefone continuam WhatsApp-only: filtrar accounts/canais/conversations e resolver messages/claim/release/post por identidade WhatsApp. Conta sem WhatsApp não aparece como número nulo usável no contrato legado. Typebot e webhook OUT não recebem Instagram por acidente.
 
 ### Limites de produto e confiança
 
-- Instagram textual inicialmente entre1e1000caracteres, request BFF até16KiB e webhook Instagram até8MiB com no máximo1000updates por POST, conforme limite de batch documentado. Parser/gateway aplicam8MiB somente nessa rota; demais limites permanecem. Excedentes413antes de efeitos, sem slice/drop silencioso. Batch com falha parcial usa o mesmo replay/dedup das entradas já confirmadas; não retornar200para trabalho perdido.
+- Instagram textual inicialmente entre1e1000caracteres; WhatsApp mantém4096e o envelope/parser atual. Novas rotas OAuth de payload pequeno limitam16KiB; não aplicar esse limite ao reply WhatsApp. Webhook Instagram até8MiB com no máximo1000updates por POST, conforme limite de batch documentado. Parser/gateway aplicam8MiB somente nessa rota; demais limites permanecem. Excedentes413antes de efeitos, sem slice/drop silencioso. Batch com falha parcial usa o mesmo replay/dedup das entradas já confirmadas; não retornar200para trabalho perdido.
 - OAuth/troca de code, inscrição e send: um dispatch por claim, timeout10s/request e no máximo3requests externos por etapa administrativa; HTTP fora da transação. Máximo10tentativas de autorização/ator/hora e30/BU/hora persistentes. verify/advance usam lease por vínculo e cooldown10s; listagens não chamam provider.
 - Token nunca no bundle, URL de retorno, docs, logs, histórico, eventos ou erros. Variáveis públicas exemplificam INSTAGRAM_CLIENT_ID, INSTAGRAM_CLIENT_SECRET, INSTAGRAM_WEBHOOK_APP_SECRET, INSTAGRAM_WEBHOOK_VERIFY_TOKEN, INSTAGRAM_API_VERSION e redirect/origin permitidos; os propósitos e a origem dos segredos seguem o contrato primário abaixo, sem fallback automático a META_APP_SECRET.
 - Credential expiry vem do expires_in verificado na troca obrigatória curta→longa, armazenado com instante de aquisição e margem de60spara bloquear uso perto da expiração. Reautorização explícita renova a concessão; nada é chamado permanente. Nenhum cron/refresh automático ou token manual global nesta entrega.
@@ -709,7 +721,7 @@ Preservar request/canonicalRequest/requestFingerprint/selectedContext/ownerNonce
 | v1 SENDING sem receipt | manter exclusão/deadline original; após prazo, usar reconciliação local existente para AMBIGUOUS(initial) ou UNCERTAIN(ordinário) | não reenviar HTTP nem liberar por migração/restart |
 | v1 AMBIGUOUS/UNCERTAIN | manter registro e exclusão; liberar somente com ação humana explícita de risco e deadline original, conforme contrato ST-CON-04 | migração não faz acknowledge automático nem zera lease/deadline |
 | v1 EXTERNAL_ACCEPTED / EXTERNAL_ACCEPTED_LOCAL_BLOCKED | completar Message/slot localmente pelo mesmo owner, receipt/ator/snapshot e associação comprovada; se associação/grant/CAS não passar, conservar bloqueio e fatos | não repetir provider POST, apagar ACK ou recalcular originalConversation.updatedAt para forçar CAS |
-| v1 terminal ou ordinário SETTLED | conservar fatos e replay/leitura; owner comprovado protege leitura; novo envio é v2 com chave nova | não editar desfecho nem reabrir exclusão como se nunca enviado |
+| v1 terminal ou ordinário SETTLED | conservar fatos e replay/leitura; owner comprovado protege leitura; novo envio é v2 com nova key quando o owner já a exige; reply ordinário recebe nova admissão/nonce | não editar desfecho nem reabrir exclusão como se nunca enviado |
 | versão desconhecida ou associação sem prova | registrar diagnóstico seguro e bloquear adoção/fluxo afetado antes de qualquer dispatch; intervenção explícita sob plano runtime | não inferir rota de BU.phone, do primeiro canal ou de coincidência de externalId |
 
 Fixtures PostgreSQL devem cobrir todos os estados, snapshots/keys/deadlines antes/depois e zero chamadas de provider em recuperação v1. Opções de versão e migração mantêm v1 só para leitura/conclusão local; não há novo writer canônico v1 nem dual-write. IDs de mensagens/recurso e autoria/timestamps permanecem. Conflitos de owner ou duas conversas legadas para a mesma identidade não podem ser resolvidos por merge automático.
@@ -727,7 +739,7 @@ Múltiplos números empresariais WhatsApp na mesma BU são fora desta entrega e 
 - start-options de abertura manual/primeira mensagem continua apenas WhatsApp, no máximo seus dois adapters; Instagram pronto não torna abertura por telefone elegível. Não manter take10silencioso sobre todos os tipos; catalogar conexões por página e resolver apenas as selecionadas. Verificar ambiguidade antes de readiness.
 - EPS: seed10milconversas/BU em duas BUs/tenants, doze contas Instagram por BU+um recurso WA com dois adapters; leituras por ID e listagem50, cinco rodadas de20clientes após warmup. p95<=1000ms lookup/options e<=2000ms lista50; no máximo8queries de domínio por página e zero HTTP externo; plano de índice para peer/owner/rota, sem N+1. Registrar CPU/memória/DB, versões/imagens, amostra, percentis e query counts.
 - FRC: navegação/mutações A→B→A e respostas em ordem inversa, duplo clique, popup cancelado, recarga/storage indisponível, chegada por outra conta com rascunho aberto; destino/rascunho/estado nunca atravessam contexto, zero POST no destino errado.
-- BCI: cinco ondas20requisições com mesmo key/payload e20replays de ingresso sobre a mesma mensagem; um claim/um POST/uma aceitação, mismatches409, retries locais sem novo HTTP. Também20claims de recurso concorrentes de BUs/adapters distintos, um owner apenas. Barriers reais, não mocks de transação.
+- BCI: nos owners com key durável (OAuth e primeiro envio), cinco ondas20requisições com mesmo key/payload: um claim/um POST/uma aceitação e mismatches409. Mais20replays de ingresso sobre a mesma mensagem: uma persistência, sem duplicar unread. Resposta ordinária preserva concorrência ordinary→ordinary e exclusão initial↔ordinary existentes: cada claim só é usado uma vez; o cliente é single-flight por ação, sem retry automático após incerteza. Não se promete um único ordinary admission global nem replay por key após estado terminal; retries locais conhecidos não repetem HTTP. Também20claims de recurso concorrentes de BUs/adapters distintos, um owner apenas. Barriers reais, não mocks de transação.
 - RLS: sobre a mesma amostra, burst20readers+20mensagens sintéticas concorrentes por5rodadas; erro inesperado zero, nenhum bloqueio/deadlock pendente, preservação dos invariantes e dos budgets de leitura. Batch de1000updates textuais documentado: aceitar todos com dedup em até15sno teste isolado; replay sem novos efeitos. Execução é descartável com fake HTTP; não é SLA de provedor nem teste de carga no número real.
 
 ## Primary Instagram protocol reconvergence — r1
@@ -754,3 +766,12 @@ Fonte primária direta retornou200 em2026-10-23 após o acesso via ferramenta we
 | IG-ARCH-R1-04 | Integrated | useful | partial | project | n/a | batch/cardinalidade/paginação exatos e thresholds EPS/FRC/BCI/RLS; ainda sem medição |
 
 Essa disposição resolve a proposta documental para a nova rodada; não muda o outcome histórico changes_required do r1 e não prova a implementação. Nenhum finding foi dispensado ou tratado como waiver.
+
+## Planning Finding Resolution Ledger — architecture r2
+
+| Finding ID | Resolution | Status | Evidence |
+| --- | --- | --- | --- |
+| IG-ARCH-R2-01 | Integrated | closed | chaves duráveis OAuth/initial, concorrência ordinary preservada e BCI delimitado; correção inspecionada pelo reviewer |
+| IG-ARCH-R2-02 | Integrated | closed | limites Instagram separados de WhatsApp4096/parser; correção inspecionada pelo reviewer |
+
+Parecer terminal r2go, estático e sem execução; receipt architecture-r2-result.json. Crítica independente e guards de aprovação ainda pendentes.

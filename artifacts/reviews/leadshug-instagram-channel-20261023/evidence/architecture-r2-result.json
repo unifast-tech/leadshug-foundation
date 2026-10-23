@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-23",
+  "reviewKind": "architecture_opinion",
+  "reviewer": "/root/instagram_architecture_r2",
+  "isolation": "fresh internal no-context",
+  "model": "gpt-6.1-sol",
+  "effort": "xhigh",
+  "baseline": "92c282326c953eda96650c2ae2d26643b4070cb9",
+  "reviewedDelta": "narrow ordinary-key/concurrency and platform-specific text/envelope corrections inspected during review",
+  "outcome": "go",
+  "unresolvedFindings": 0,
+  "findings": [
+    {
+      "id": "IG-ARCH-R2-01",
+      "severity": "medium",
+      "resolution": "Integrated",
+      "status": "closed",
+      "summary": "durable keys only OAuth/initial owners; ordinary concurrency and single-use admission preserved; client single-flight and no automatic uncertain retry"
+    },
+    {
+      "id": "IG-ARCH-R2-02",
+      "severity": "medium",
+      "resolution": "Integrated",
+      "status": "closed",
+      "summary": "Instagram1000 only; WhatsApp4096/parser preserved; OAuth-only16KiB"
+    }
+  ],
+  "lenses": {
+    "correctness": "favorable after r1/r2 integrations",
+    "performance": "acceptable design; measurement still required",
+    "elegance": "favorable distinct responsibilities and narrow policy port",
+    "structuralSoundness": "favorable; durable ownership and bounded v1 recovery",
+    "operationalFit": "favorable DM-first human response; actual provider eligibility and delivery pending"
+  },
+  "limitations": "static read-only opinion; no implementation/runtime authority; no tests/network/private inspection"
+}

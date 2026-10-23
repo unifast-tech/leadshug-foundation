@@ -126,3 +126,7 @@ Parecer terminal de `/root/instagram_identity_opinion`, em2026-10-23, sem histó
 | IG-REV-04 | Baixa: cardinalidade ampliada pode introduzir fan-out e truncamento; opções atuais limitam dez vínculos | Integrated como requisito do futuro TODO: batch, índices, paginação/limites explícitos e nenhum HTTP por conversa da lista. |
 
 Posições do parecer: performance viável com índices e unicidade, sem medições nesta etapa; simplicidade/elegância favoráveis, sem tabela de rota ou framework genérico obrigatórios; estrutura sólida após as duas clarificações de identidade/ownership; operação humana DM/resposta bem delimitada. As duas lacunas que impediam consolidar a proposta foram resolvidas documentalmente acima. Nenhum achado foi renomeado como prova de implementação ou dispensado.
+
+## Contrato tático em revisão
+
+O desenho físico, endpoints e cutover foram concretizados no [TODO ST-IG-03](../../todos/active/features/TODO-leadshug-instagram-channel.md), ainda candidato à aprovação. A fatia admite múltiplas contas Instagram por BU e um único recurso empresarial WhatsApp durável, com seus dois adapters sobre o mesmo número comprovado. Essa restrição preserva a semântica da API v1 e do Typebot; ampliar números WhatsApp por BU exige contrato próprio. A pesquisa de protocolo foi reconvergida no [receipt de fontes primárias](../reviews/leadshug-instagram-channel-20261023/evidence/primary-instagram-contract-r1.json); nenhuma concessão ou entrega operacional foi inferida dessa leitura.

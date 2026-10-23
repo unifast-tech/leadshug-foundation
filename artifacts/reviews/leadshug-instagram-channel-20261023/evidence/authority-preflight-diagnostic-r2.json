@@ -1,0 +1,54 @@
+{
+  "blocked": true,
+  "context": {
+    "architecture_governance_required": true,
+    "architecture_governance_section_present": true,
+    "architecture_review_gates_required": true,
+    "architecture_supersede_trigger": true,
+    "current_delivery_stage": "Pending",
+    "delivery_claim": false,
+    "delivery_gate_rows": {},
+    "execution_authority_granted": false,
+    "promotion_routing_rows": 1,
+    "require_delivery_gates": false,
+    "routing_preflight_outcome": "not run",
+    "routing_preflight_required": true,
+    "routing_preflight_section_present": true,
+    "rules_ingestion_rows": 10,
+    "todo_path": "foundation_documentation/todos/active/features/TODO-leadshug-instagram-channel.md",
+    "validation_mode": "pre-approval"
+  },
+  "pre_approval": true,
+  "violations": [
+    {
+      "code": "ROUTING-PREFLIGHT-OUTCOME-INVALID",
+      "message": "`Agent Routing Preflight` uses invalid guard outcome `not_run`.",
+      "resolution": "Use one of: go, delegate-required, review-required, waiver-required, blocked.",
+      "section": "Agent Routing Preflight"
+    },
+    {
+      "code": "ARCHITECTURE-GOVERNANCE-FIELD-MISSING",
+      "message": "Architecture Change Governance field `Temporary exceptions allowed` is missing or still placeholder.",
+      "resolution": "Fill `Temporary exceptions allowed` with the concrete architecture-correction contract detail.",
+      "section": "Architecture Change Governance"
+    },
+    {
+      "code": "ARCHITECTURE-GOVERNANCE-FIELD-MISSING",
+      "message": "Architecture Change Governance field `Cutover / removal condition` is missing or still placeholder.",
+      "resolution": "Fill `Cutover / removal condition` with the concrete architecture-correction contract detail.",
+      "section": "Architecture Change Governance"
+    },
+    {
+      "code": "ARCHITECTURE-PATTERNS-MISSING",
+      "message": "Required architecture-correction TODO is missing `Patterns To Enforce` rows.",
+      "resolution": "Add at least one concrete pattern/decision row that must remain true after cutover.",
+      "section": "Patterns To Enforce"
+    },
+    {
+      "code": "ARCHITECTURE-ANTI-PATTERNS-MISSING",
+      "message": "Required architecture-correction TODO is missing `Prohibited Anti-Patterns` rows.",
+      "resolution": "Add at least one concrete wrong-path row that becomes forbidden after cutover.",
+      "section": "Prohibited Anti-Patterns"
+    }
+  ]
+}

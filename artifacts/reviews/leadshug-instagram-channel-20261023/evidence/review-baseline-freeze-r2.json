@@ -1,0 +1,13 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-23",
+  "contractVersion": "1.1",
+  "branch": "main",
+  "commit": "92c282326c953eda96650c2ae2d26643b4070cb9",
+  "pushReference": "origin/main",
+  "observedRemoteRef": "92c282326c953eda96650c2ae2d26643b4070cb9",
+  "publishedTodoSha256": "ca062cce3d92be392137ba681177c66d67b73d92ac16dc6bda9f1eb21188de4b",
+  "outcome": "go",
+  "scope": "documentation review baseline only; no implementation authority",
+  "pushResult": "exit0, e21d077b..92c28232 main -> main"
+}
