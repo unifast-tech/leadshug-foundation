@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-23",
+  "checkpoint": "CP1",
+  "reportedBy": "/root/instagram_cp1_executor",
+  "evidenceOrigin": "executor reports during implementation; not independently rerun by orchestrator",
+  "command": "bash scripts/test-channels-local.sh api",
+  "target": "leadshug_channels_validation, disposable synthetic database only",
+  "reportedPassingStages": {
+    "prismaGeneration": true,
+    "migrationsApplied": 30,
+    "lint": true,
+    "build": true,
+    "unitFiles": 36,
+    "unitTests": 373
+  },
+  "integrationAttempt": {
+    "passedCases": 389,
+    "failedCases": 69,
+    "failedFiles": 14,
+    "sourceState": "executor reports attempt used an earlier source snapshot while subsequent fixture edits were being made",
+    "reportedFailures": [
+      "Synthetic cleanup attempted to delete immutable conversation routes",
+      "Old WhatsApp fixture labels were not qualified E.164 peers",
+      "Residual queries referenced removed compound selectors"
+    ],
+    "outcome": "failed; repairs and stable-source rerun pending"
+  },
+  "pendingProof": [
+    "Integration suite with stable source manifest",
+    "Isolated schema seeded before the two new migrations, with before/after preservation assertions",
+    "Database rejection of a peer from one Instagram account routed through another account",
+    "Independent checkpoint review after sole code writer stops"
+  ],
+  "deliveryClaim": "none",
+  "limits": "No complete API/ALL pass, no final source attestation, no real runtime access, no Meta grant or physical delivery proof. State-specific v1 recovery wiring remains a CP3 obligation."
+}

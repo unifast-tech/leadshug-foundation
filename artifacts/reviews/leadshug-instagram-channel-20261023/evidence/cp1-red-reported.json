@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-23",
+  "checkpoint": "CP1",
+  "reportedBy": "/root/instagram_cp1_executor",
+  "evidenceOrigin": "executor tool-run report; raw outputs retained by executor if applicable",
+  "command": "bash scripts/test-channels-local.sh api",
+  "target": "leadshug_channels_validation, disposable synthetic DB only",
+  "outcome": "causal_red",
+  "baselineMigrationsApplied": 28,
+  "lint": "passed",
+  "build": "passed",
+  "unitFiles": {
+    "passed": 34,
+    "total": 35
+  },
+  "newFailingCases": 3,
+  "causalFailure": "parseChannelOperationContextV2 and parseLegacyChannelOperationContextV1 exports absent in baseline",
+  "cleanup": "executor reports disposable DB/volumes removed by runner",
+  "limits": "not GREEN, not schema migration proof for new models, not all-suite success, no runtime/provider proof",
+  "testPath": "api-app/src/domain/channels/transport/channel-operation-context.spec.ts",
+  "caseNamesObservedInSource": [
+    "parses the complete v2 route and ownership tuple",
+    "rejects v2 contexts that omit an immutable route identity or use an unknown version",
+    "reads only the exact unversioned v1 shape and never treats unknown data as v1"
+  ],
+  "details": "Case names read from the public source after the executor report; final checkpoint validation and stable-source manifest remain pending."
+}

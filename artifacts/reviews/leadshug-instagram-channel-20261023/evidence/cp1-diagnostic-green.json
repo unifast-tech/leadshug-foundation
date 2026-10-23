@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-23",
+  "checkpoint": "CP1 diagnostic",
+  "executor": "/root/instagram_runner_diagnostics",
+  "profile": "Operational/DevOps",
+  "command": "bash scripts/test-channels-local.sh api-instagram",
+  "target": "leadshug_channels_validation; synthetic disposable PostgreSQL only",
+  "reportedExitCode": 0,
+  "observedInCompleteSyntheticLog": {
+    "migrationsDeployed": 30,
+    "unitFilesPassed": 36,
+    "unitCasesPassed": 373,
+    "e2eFilesPassed": 2,
+    "e2eCasesPassed": 8,
+    "legacyMigrationPreservationCasePassed": true,
+    "cleanupReportedRemovedResources": true
+  },
+  "reportedAdditionalChecks": {
+    "bashSyntax": "passed",
+    "paritySelfTest": "passed;26mutation cases rejected"
+  },
+  "sourceHashes": {
+    "scripts/test-channels-local.sh": "01782b74c8ab4bf90ce84f90e6d7656b1217ac72699cbaa340d716ef41524759",
+    "scripts/check-channels-ci-parity.py": "0dee14bf5a860e9cde852181168392af24f603be925ad0e8053ddd3f30650238",
+    "foundation_documentation/artifacts/tmp/instagram-channel-implementation/api-instagram.stdout-stderr.log": "63ca539ffa3a9b910b06c95b7ceab4a9056303934fa938f69cb5a086d888b59c"
+  },
+  "apiSourceFreeze": {
+    "exactPublicFiles": 33,
+    "mismatches": []
+  },
+  "fullApiOrAllClaim": false,
+  "ciCompletionClaim": false,
+  "realRuntimeOrMetaClaim": false,
+  "limits": "All8current Instagram e2e cases passed; this is not coverage of all VAL-02 edge cases or CP3 recovery. Previous three full API e2e failures still require a complete captured rerun and repair. No private inputs used."
+}

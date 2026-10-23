@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-23",
+  "checkpoint": "CP1",
+  "executor": "/root/instagram_cp1_executor",
+  "state": "terminal; code writer paused for serialized DevOps handoff",
+  "evidenceOrigin": "executor final report, not an independent validation",
+  "lastFullApiAttempt": {
+    "session": "13631",
+    "generation": "passed",
+    "migrationsApplied": 30,
+    "lint": "passed",
+    "build": "passed",
+    "unitFiles": 36,
+    "unitCasesPassed": 373,
+    "e2eFailuresReported": 3,
+    "e2eDetails": "tool output truncated; no complete file-level result retained",
+    "outcome": "not GREEN; latest cutover fixture and adversarial scope changes are not proved"
+  },
+  "preparedUnvalidatedProof": [
+    "PostgreSQL check rejecting Instagram peer account A with business resource account B",
+    "Isolated schema with 28 historical migration scripts, seeded before the two new scripts",
+    "Exact unversioned nine-field v1 context and canonical initial request snapshot",
+    "Separate legacy conversations and PREPARED/SENDING/accepted-local-blocked/terminal states",
+    "Nonzero unread count, authorship and full original-row snapshot comparisons"
+  ],
+  "remaining": [
+    "Run corrected cutover and route-scope cases",
+    "Locate and resolve all three full API integration failures",
+    "Stable-source manifest and independent CP1 review",
+    "CP3 v2 new-write integration and state-specific v1 local recovery"
+  ],
+  "handoff": {
+    "owner": "/root/instagram_runner_diagnostics",
+    "profile": "Operational/DevOps",
+    "ownedPaths": ["scripts/test-channels-local.sh", "scripts/check-channels-ci-parity.py"],
+    "purpose": "Fixed safe Instagram diagnostic target; no replacement of complete API/ALL/CI gates",
+    "coderResume": "Only after DevOps terminal releases sole writer slot"
+  },
+  "deliveryClaim": "none",
+  "realRuntimeOrPrivateInputsAuthorized": false
+}

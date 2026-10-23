@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-23",
+  "checkpoint": "CP1 pre-review-repair full API",
+  "executor": "/root/instagram_cp1_executor",
+  "command": "bash scripts/test-channels-local.sh api",
+  "target": "leadshug_channels_validation disposable synthetic database",
+  "exitCodeObserved": 1,
+  "completeSyntheticLog": {
+    "path": "foundation_documentation/artifacts/tmp/instagram-channel-implementation/cp1-api-full-20261023-01.stdout-stderr.log",
+    "bytes": 8469153,
+    "sha256": "16c50db0c38b91c427127febcc79a575a08a8c2c2273c1a03550f101371d6c47"
+  },
+  "summaryObserved": [
+    "Test Files  36 passed (36)",
+    "Tests  373 passed (373)",
+    "Test Files  1 failed | 34 passed (35)",
+    "Tests  2 failed | 462 passed (464)"
+  ],
+  "reportedPassingStages": [
+    "Prisma generation",
+    "30 migrations deploy and status",
+    "lint",
+    "build"
+  ],
+  "failures": [
+    {
+      "path": "api-app/test/conversation-start.e2e-spec.ts",
+      "case": "uses the bounded SQL-only expression index for the canonical inbox order",
+      "cause": "Fixture line99 creates15kconversations without required contactId"
+    },
+    {
+      "path": "api-app/test/conversation-start.e2e-spec.ts",
+      "case": "keeps OUT-heavy QUEUED inbox listing batched and performs no per-row IN/message hydration",
+      "cause": "Fixture line124 creates60conversations without required contactId"
+    }
+  ],
+  "sourceFreeze": "executor checked33exact public manifest paths before and after; no source mutation",
+  "migrationCases": "7identity and1actual isolated old-to-new migration cases passed; expanded cohort required by IG-CP1-R1-08 is not yet proved",
+  "outcome": "RED; repair same-TODO findings01..08 and repeat stable-source validation",
+  "privateInputsUsed": false,
+  "fullAllOrDeliveryClaim": false
+}

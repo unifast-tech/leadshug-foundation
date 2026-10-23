@@ -1,0 +1,70 @@
+{
+  "schemaVersion": 1,
+  "kind": "bounded-cp1-architecture-adherence-package",
+  "authority": "User APROVADO for ST-IG-03 v1.3; normal authority GO in authority-execution-cp1.json. This review confers no new scope or runtime authority.",
+  "frozenTodo": {
+    "path": "foundation_documentation/todos/active/features/TODO-leadshug-instagram-channel.md",
+    "sha256": "b1a0560125573a50d6785195e29b1a236435e57d833610d56ec0fb3e939faab7"
+  },
+  "sourceManifest": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp1-paused-source-manifest.json",
+  "baseline": "f4891ba1bddec62737f5624cac8d4a32224006d7 planning; original 218 API/54 Web source hash baseline in public-source-baseline.json; prior uncommitted product must not be attributed to Instagram",
+  "reviewObjective": "Challenge CP1 identity, durable ownership, immutable route, new schema/backfill and exact-v1/v2 parser architecture against the approved contract. Identify concrete defects now, before the paused coder resumes. Not a final delivery or ALL/cutover acceptance review.",
+  "sourceFreeze": "API writer is terminal. Sole DevOps writer may change only scripts/test-channels-local.sh and scripts/check-channels-ci-parity.py; these root files are excluded from reviewed CP1 source. No API source mutation until reviewer terminal.",
+  "canonicalContext": [
+    "foundation_documentation/project_constitution.md",
+    "foundation_documentation/domain_entities.md",
+    "foundation_documentation/policies/scope_subscope_governance.md",
+    "foundation_documentation/modules/identity-and-tenancy.md",
+    "foundation_documentation/modules/inbox-and-conversations.md",
+    "foundation_documentation/modules/integrations-and-channels.md",
+    "foundation_documentation/decisions/leadshug-multichannel-identity-decisions.md"
+  ],
+  "boundedAdditionalRead": "Actual 28 historical migration.sql paths explicitly enumerated in test/instagram-migration.e2e-spec.ts; immediate exact public source dependencies of the 33 manifest files if necessary, documenting any extra path. No wider repository inventories.",
+  "evidence": [
+    "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp1-red-reported.json",
+    "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp1-progress-reported.json",
+    "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp1-executor-pause.json",
+    "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/inherited-public-preservation-v1.1.json",
+    "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/primary-instagram-contract-r1.json"
+  ],
+  "knownValidationLimits": "373/373 units and30migrations/lint/build reported passing. Last full API attempt13631 reported3e2e failures with truncated detail. Latest seeded migration fixture and cross-account route CHECK are not proved. Do not treat planned tests or public source location as execution evidence.",
+  "checkpointBoundary": {
+    "inScopeNow": [
+      "qualified BU-local contacts",
+      "one durable WhatsApp resource per BU across adapters, multiple IG resources",
+      "same-contact/same-BU/same-IG-account DB route invariants",
+      "immutable ownership and routes",
+      "preservative actual baseline-to-new migration fixture",
+      "exact v1 reader and v2 tuple definitions",
+      "necessary canonical contact fixture and lookup adaptations"
+    ],
+    "laterAlreadyRequired": [
+      "CP2 OAuth and signed ingress",
+      "CP3 all new writers v2 plus state-specific v1 local-only recovery, shared Channel/Outbound/policy and all consumer boundaries",
+      "CP4 UI/CI/real-backend browser",
+      "CP5 full ALL/PCV/security/TQA/cutover/final independent gates",
+      "CP6 later separately approved real runtime/Meta/physical proof"
+    ],
+    "consumerMatrix": "Read complete Frontend / Consumer Matrix and Consumer Surface Contract in governing TODO. Their UI producers/consumers remain mandatory future checkpoint work, not delivered or waived by CP1."
+  },
+  "reviewLenses": [
+    "architecture/adherence",
+    "code quality",
+    "tests including evidence weakness and fixture-only shortcuts",
+    "performance (no measurements claimed)",
+    "security and cross-BU/account identity boundaries",
+    "elegance",
+    "structural soundness"
+  ],
+  "watchFor": [
+    "IG account A peer routed via account B",
+    "WA person namespace/provider splits",
+    "implicit first-match alias selection",
+    "backfill inventing verified resource provenance",
+    "timestamps or pending receipts rewritten",
+    "schema/service checks that do not actually enforce stated ownership",
+    "fixture interception or weakened assertions hiding defects"
+  ],
+  "inheritedRisks": "SEC-R6-04/OPS-R4-01/TQA-ST05-03 restrictions remain; no waiver. Actual Meta eligibility/config/physical delivery unknown. Full private diff guard not authorized.",
+  "forbidden": "No source/doc edits, tests/runtime/network/Meta requests, private .env reads/list/hash, .local-files, operational DB/logs/process args/volumes, broad Git status/diff/scan, worktrees/copies or product Git writes."
+}
