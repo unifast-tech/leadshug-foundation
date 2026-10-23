@@ -1,0 +1,9 @@
+{
+  "kind": "Explicit human approval of exact five-entry documentary addendum and one canonical invocation",
+  "recorded_at_utc": "2026-10-23T17:03:07.458815+00:00",
+  "question_id": "call_736538236f144b609deefdf429ea78e8",
+  "answer": "Aprovar aditivo e execução única",
+  "ready_plan_sha256": "bd4897b3cbc33b8e442f5891f6fe8e29173d0aa1aa74b75d273696172ce848ee",
+  "exact_patch_sha256": "f4b2c22b79d7d5358e96bb5a8ca7b25c26980ac2694ffacd7fc197adc3ce4051",
+  "limit": "One exact documentary patch, full companion checks before/after, ONE unmodified full canonical guard with preverified0600 output capture. No cleanup/product/root Git/runtime/provider/recipient mutation or automatic further retry."
+}

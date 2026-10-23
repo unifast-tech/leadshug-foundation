@@ -1,0 +1,26 @@
+{
+  "kind": "Actual approved admission v1.2 single full canonical diff guard and ALL companion checks",
+  "recorded_at_utc": "2026-10-23T17:04:26.888726+00:00",
+  "fullguard_invocations_under_this_approval": 1,
+  "prior_attempts": 2,
+  "exit_code": 0,
+  "outcome": "go",
+  "counts": {
+    "contract_repository_count": 4,
+    "actual_change_count": 786,
+    "expected_change_count": 786,
+    "forbidden_change_count": 0,
+    "unclassified_change_count": 0
+  },
+  "violation_codes": {},
+  "raw_sha256": "f3ac3f363bef250d7a77d459f6b8eeb4950b5ef1d31bb9b8d2bd02513cdf1195",
+  "stdout_sha256": "885373ae02deabd0b78ab046cbe4c595d03c42e38a6025184cd763e61d100905",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "all_companions_before": true,
+  "all_companions_after": true,
+  "capture_modes_before_AND_after_code": "0600_regular_owned",
+  "canonical_tool_unchanged": true,
+  "private_raw_output_restricted": true,
+  "further_fullguard_authorized": false,
+  "approval": "diff-observed-noise-admission-v1.2-human-approval.json"
+}

@@ -1,0 +1,33 @@
+{
+  "generated_at_utc": "2026-10-23T17:09:23.519043Z",
+  "git": {
+    "ahead": 0,
+    "available": true,
+    "behind": 0,
+    "clean": false,
+    "root": "/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation",
+    "synced": false,
+    "upstream": "origin/main"
+  },
+  "overall_outcome": "go",
+  "rule_id": "paced.todo.closeout-disposition",
+  "todo_count": 1,
+  "todo_results": [
+    {
+      "context": {
+        "closeout_section_present": true,
+        "current_delivery_stage": "Pending",
+        "delivery_claim": false,
+        "disposition": "move-completed",
+        "next_exact_step": "validar o fechamento com authority/completion/closeout guards e ent\u00e3o mover este mesmo TODO para todos/completed/features/TODO-leadshug-start-conversation-by-contact.md, atualizar links e publicar apenas Foundation main. Provas funcionais, m\u00f3dulos, revis\u00f5es, fullguard e ALL companions est\u00e3o conclu\u00eddos.",
+        "path_state": "active",
+        "post_commit_push_status": "Awaiting closure documentation commit/push after validated path movement; Foundation main only, no product/root Git write.",
+        "qualifiers": "none",
+        "todo_path": "/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/todos/active/features/TODO-leadshug-start-conversation-by-contact.md",
+        "work_state": "review"
+      },
+      "violations": []
+    }
+  ],
+  "violations": []
+}

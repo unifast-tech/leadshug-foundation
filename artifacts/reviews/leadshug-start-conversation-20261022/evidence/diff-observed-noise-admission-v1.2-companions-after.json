@@ -1,0 +1,32 @@
+{
+  "kind": "ALL mandatory documentary-admission companions verified",
+  "stage": "after",
+  "recorded_at_utc": "2026-10-23T17:04:26.882518+00:00",
+  "all_predicates_pass": true,
+  "root_index_links": {
+    "API": "5db3fbe2043428749895fc3ff6441e9457467dd0",
+    "WEB": "6c99c27dafdce8ed9b461d17aaaaa491b8ae16e9",
+    "FOUNDATION": "40828a20f2d6c3a1443e7ee132f42483840d6abb"
+  },
+  "approved_source_HEADs": {
+    "API": "db5a86758a165fac8a1ab587599c37b17890530c",
+    "WEB": "74b9d4b714044829796f875d00553f077c1c329d"
+  },
+  "source_count": 259,
+  "source_fingerprint": "589c753670cfcf54020b785e6bae6b85ec1a8b4bab707f333f8e64d8aaf38c8e",
+  "source_inventory_equal": true,
+  "historical_baseline_HEAD_working_normalized_hashes": [
+    "65da96cc3790d9ac415a48087e67bb27befd2d3591685a4f14b3bc3cf7e8dcd6",
+    "65da96cc3790d9ac415a48087e67bb27befd2d3591685a4f14b3bc3cf7e8dcd6",
+    "65da96cc3790d9ac415a48087e67bb27befd2d3591685a4f14b3bc3cf7e8dcd6"
+  ],
+  "retained_JSON_byte_count": 109,
+  "retained_JSON_sha256": "b9e84a70e27049eb661ac7c9496c0db2a8721f8c46909aa90f872e6c40ec7c80",
+  "retained_JSON_path_sha256": "2feb7b42cad1f5b0410cbb1652851e179bb26e4e5f7b23aefc28e273640fe459",
+  "Foundation_branch_code": "MAIN",
+  "Foundation_authority_code": "GO",
+  "Foundation_authority_output_sha256": "5ecb055464635ba42191e3eb7f5aef5d127c94e792f990a23a906f3f009cc11b",
+  "owned_staged_path_count": 0,
+  "foreign_staged_path_count": 0,
+  "source_runtime_private_mutation": "none"
+}

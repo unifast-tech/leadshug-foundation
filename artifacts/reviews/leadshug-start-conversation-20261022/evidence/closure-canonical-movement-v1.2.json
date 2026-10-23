@@ -1,0 +1,32 @@
+{
+  "kind": "Actual same-TODO local completion movement and canonical link/status updates",
+  "recorded_at_utc": "2026-10-23T17:12:34.184133+00:00",
+  "from": "todos/active/features/TODO-leadshug-start-conversation-by-contact.md",
+  "to": "todos/completed/features/TODO-leadshug-start-conversation-by-contact.md",
+  "status": "Completed",
+  "delivery_stage": "Local-Implemented",
+  "pre_move_authority_completion_closeout": "all GO; strict delivery modes; source/index/content companions plus actual fullguard GO",
+  "module_updates": [
+    {
+      "code": "inbox-and-conversations.md",
+      "updated_links": 1,
+      "lf_sha256": "97f27607545ec52aba34864f63020840a768d9453ed2c0939b36ac9ce89084f4",
+      "other_module_content_changed": false
+    },
+    {
+      "code": "integrations-and-channels.md",
+      "updated_links": 1,
+      "lf_sha256": "f484525a046cf639cfd792e1a1fc0fed918d29ab02c4b1b67de2b1082d1ea187",
+      "other_module_content_changed": false
+    }
+  ],
+  "other_canonical_updates": [
+    "feature brief factual ST04/ST06 lifecycle",
+    "backlog current gate only",
+    "dependency approved-template readiness and local closure receipt"
+  ],
+  "functional_code_mutation": false,
+  "product_root_Git_write": false,
+  "private_cleanup_or_mutation": false,
+  "promotion_or_production_claim": false
+}

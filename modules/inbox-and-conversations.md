@@ -16,7 +16,7 @@ BFF routes use `/api/bff`; public integrations use `/api/v1`; webhook contracts 
 
 ### Iniciar conversa e primeiro envio — ST-CON-04
 
-Contrato v1.1 aprovado no [TODO ST-CON-04](../todos/active/features/TODO-leadshug-start-conversation-by-contact.md). O TODO registra a execução, os resultados e o estágio de entrega; esta definição não transforma aceitação do provedor em entrega ao destinatário.
+Contrato v1.1 aprovado no [TODO ST-CON-04](../todos/completed/features/TODO-leadshug-start-conversation-by-contact.md). O TODO registra a execução, os resultados e o estágio de entrega; esta definição não transforma aceitação do provedor em entrega ao destinatário.
 
 A abertura manual exige telefone com DDI explícito e autorização ATENDENTE ou superior na BU. Normalizar somente espaços, parênteses, hífen, ponto e um `+` inicial; aceitar 8–15 dígitos, primeiro diferente de zero, sem inventar país. BU/contato continuam uma identidade única. Nova conversa fica QUEUED, unreadCount=0 e lastMessageAt=null; a reutilização conserva o estado existente. Abrir não envia, marca leitura, assume atendimento, reabre/fecha, nem dispara bot. A primeira IN conserva os triggers existentes; nenhum trigger é inventado para a abertura manual.
 

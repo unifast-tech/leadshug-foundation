@@ -1,0 +1,11 @@
+{
+  "kind": "Restricted capture destinations created and VERIFIED before canonical subprocess",
+  "recorded_at_utc": "2026-10-23T17:04:18.413459+00:00",
+  "json_mode_code": "0600",
+  "stdout_mode_code": "0600",
+  "stderr_mode_code": "0600",
+  "regular_owned_by_current_uid": true,
+  "flags_code": "O_EXCL_O_NOFOLLOW",
+  "raw_console_forwarding": false,
+  "single_invocation_intent": true
+}

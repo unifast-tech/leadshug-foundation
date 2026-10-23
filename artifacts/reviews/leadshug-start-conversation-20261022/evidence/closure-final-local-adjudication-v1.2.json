@@ -1,0 +1,28 @@
+{
+  "kind": "Local closure delivery adjudication after actual post-move guard success",
+  "recorded_at_utc": "2026-10-23T17:14:43.344353+00:00",
+  "status": "Completed",
+  "stage": "Local-Implemented",
+  "governing_todo": "todos/completed/features/TODO-leadshug-start-conversation-by-contact.md",
+  "tests": {
+    "api_unit": 368,
+    "api_postgresql": 456,
+    "web_unit": 54,
+    "Playwright": 89,
+    "total": 967
+  },
+  "operator_proofs": "Nonofficial initiated text and reply; own APPROVED official template first send and reply explicitly confirmed. User attestations tied to exact E75 runtime; no agent recipient/business-row inspection.",
+  "fullguard": "Actual v1.2 GO786/786, zero forbidden/unclassified, ONE approved invocation; original two no-go attempts retained.",
+  "companions": "ALL baseline-index/source-HEAD/259source/content/authority predicates before AND after GO; raw files preverified0600.",
+  "post_move_guards": {
+    "authority_require_delivery": "go",
+    "completion_require_delivery": "go",
+    "closeout": "go",
+    "all_active_closeout": "go"
+  },
+  "local_scope_only": true,
+  "no_waiver": true,
+  "remaining_required_local_work": "Only Foundation closure publication in progress; no remaining product/test/review/migration/operator gate.",
+  "carried_conditions": "SEC-R6-04/OPS-R4-01/TQA-ST05-03 restrictions and evidence/procedural history retained; no production or promotion claim.",
+  "future": "History ST-CON-02/ST-CON-03 must be framed and approved separately; no anticipatory implementation."
+}

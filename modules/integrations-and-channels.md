@@ -156,7 +156,7 @@ ST-CON-05 is approved and implemented locally; its durable contract is consolida
 
 ## Primeiro envio e proveniência — ST-CON-04
 
-Contrato v1.1 aprovado no [TODO ST-CON-04](../todos/active/features/TODO-leadshug-start-conversation-by-contact.md); estado/evidência de entrega pertencem ao TODO. Owner de abertura/intenção/recuperação e [endpoints BFF](inbox-and-conversations.md#iniciar-conversa-e-primeiro-envio--st-con-04): inbox-and-conversations. Este módulo mantém transporte, resolução scoped e catálogo/observação, sem segunda API de modelos.
+Contrato v1.1 aprovado no [TODO ST-CON-04](../todos/completed/features/TODO-leadshug-start-conversation-by-contact.md); estado/evidência de entrega pertencem ao TODO. Owner de abertura/intenção/recuperação e [endpoints BFF](inbox-and-conversations.md#iniciar-conversa-e-primeiro-envio--st-con-04): inbox-and-conversations. Este módulo mantém transporte, resolução scoped e catálogo/observação, sem segunda API de modelos.
 
 O Channel continua a abstração única de envio: `sendMessage` recebe a união discriminada `text | approved-template`, com `supportedKinds` readonly. Consumidores dependem do abstrato; factory/registry injetam concretos imutáveis por operação. Meta implementa os dois tipos e seu protocolo; Evolution declara somente text e rejeita template com resultado tipado e zero HTTP. Instagram, Messenger e Telegram continuam pontos futuros de extensão, sem implementação, métodos no-op, casts concretos ou service locator. Transporte não importa management; o coordenador inbox compõe as duas capacidades estreitas, preservando DI acíclica.
 

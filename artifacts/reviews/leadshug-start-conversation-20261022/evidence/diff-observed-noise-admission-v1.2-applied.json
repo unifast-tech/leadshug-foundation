@@ -1,0 +1,9 @@
+{
+  "kind": "Exact approved documentary addendum applied",
+  "recorded_at_utc": "2026-10-23T17:03:07.697715+00:00",
+  "patch_sha256": "f4b2c22b79d7d5358e96bb5a8ca7b25c26980ac2694ffacd7fc197adc3ce4051",
+  "check_exit_code": 0,
+  "apply_exit_code": 0,
+  "mutation": "Only tactical TODO diff contract; functional scope/code/private patterns/repository baselines/tool unchanged. No fullguard result inferred.",
+  "approval": "diff-observed-noise-admission-v1.2-human-approval.json"
+}
