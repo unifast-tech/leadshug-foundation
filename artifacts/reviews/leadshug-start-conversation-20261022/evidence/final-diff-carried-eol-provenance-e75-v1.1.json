@@ -1,0 +1,8 @@
+{
+  "kind": "Known carried public historical diff changes only by CRLF/LF versus contract baseline and current HEAD",
+  "baseline_lf_sha256": "65da96cc3790d9ac415a48087e67bb27befd2d3591685a4f14b3bc3cf7e8dcd6",
+  "head_lf_sha256": "65da96cc3790d9ac415a48087e67bb27befd2d3591685a4f14b3bc3cf7e8dcd6",
+  "working_lf_sha256": "65da96cc3790d9ac415a48087e67bb27befd2d3591685a4f14b3bc3cf7e8dcd6",
+  "baseline_head_working_lf_equal": true,
+  "untouched": true
+}

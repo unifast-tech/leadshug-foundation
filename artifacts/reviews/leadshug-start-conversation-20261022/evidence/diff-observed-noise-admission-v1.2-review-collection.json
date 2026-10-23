@@ -1,0 +1,48 @@
+{
+  "kind": "Actual independent documentary-admission review and exact bounded resolution",
+  "recorded_at_utc": "2026-10-23T15:47:07.243424+00:00",
+  "session_id": 8583,
+  "model": "gpt-6.1-sol",
+  "effort": "xhigh",
+  "actual_exit_code": 0,
+  "strict_merge_exit_code": 0,
+  "turns_completed": 1,
+  "tool_items": 0,
+  "result_sha256": "dc96de0f0055827ed8e8955dc92c15a57ebaa115d6205d3419e0a57f2a1f47f9",
+  "events_sha256": "488b11bc2e0fb8d6c098aa009f73ad11be5dfcbaf744a0c43170569a25415dd0",
+  "reviewer_assessment": "Five-entry documentary admission defensible subject to companions; no product/performance/elegance defect established. Three bounded plan/evidence gaps identified.",
+  "findings": [
+    {
+      "finding_id": "F-F8B4C73B",
+      "source_finding_id": "ADMISSION-V12-02",
+      "severity": "medium",
+      "classification": "release-blocker",
+      "status": "fixed",
+      "action": "Ready plan precreates all three output paths O_EXCL|O_NOFOLLOW0600, verifies fd regular/uid/mode BEFORE subprocess, captures stdout/stderr directly and never prints raw output; canonical command/tool unchanged.",
+      "verification": "diff-observed-noise-admission-v1.2-ready-plan.json; diff-observed-noise-admission-v1.2-status-union-proof.json"
+    },
+    {
+      "finding_id": "F-5406333B",
+      "source_finding_id": "ADMISSION-V12-01",
+      "severity": "medium",
+      "classification": "release-blocker",
+      "status": "fixed",
+      "action": "Ready plan explicitly requires ALL seven companion groups pre AND post, including all259source bytes, LF equality, retained JSON hash and continuing Foundation authority; mismatch blocks closure.",
+      "verification": "diff-observed-noise-admission-v1.2-ready-plan.json; diff-observed-noise-admission-v1.2-status-union-proof.json"
+    },
+    {
+      "finding_id": "F-82E81EF5",
+      "source_finding_id": "ADMISSION-V12-03",
+      "severity": "low",
+      "classification": "release-blocker",
+      "status": "fixed",
+      "action": "Exact candidate union of all matching expected rows verified for all five cached entries; four M-only and one ??-only, with all eight other status controls rejected. No new fullguard/private discovery.",
+      "verification": "diff-observed-noise-admission-v1.2-ready-plan.json; diff-observed-noise-admission-v1.2-status-union-proof.json"
+    }
+  ],
+  "resolved_ready_plan_sha256": "bd4897b3cbc33b8e442f5891f6fe8e29173d0aa1aa74b75d273696172ce848ee",
+  "exact_patch_sha256": "f4b2c22b79d7d5358e96bb5a8ca7b25c26980ac2694ffacd7fc197adc3ce4051",
+  "root_disposition": "Incorporate all three exact requested constraints; no new product/scope design beyond reviewed admission, so no further independent round required before seeking explicit approval. This does not infer approval or fullguard GO.",
+  "still_open": "Human validation of exact addendum and ONE new canonical guard invocation; fullguard actual no-go and closure gates retained.",
+  "metadata_correction": "Old public lexical category said trailing space. Cached report confirms one leading space; corrected description only, no bytes changed."
+}

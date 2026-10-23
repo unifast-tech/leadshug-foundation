@@ -1,0 +1,56 @@
+{
+  "kind": "Safe scope classification projection; raw paths withheld",
+  "findings": [
+    {
+      "item": 1,
+      "code": "DIFF-FORBIDDEN-PATH",
+      "repository_code": "root",
+      "status_code": "M",
+      "path_sha256": "f7894a9e71c94e12fd41907644882fa3a6b06a32896a34d387f7164185ece008",
+      "role_code": "path",
+      "source_record_index": null,
+      "category_code": "ROOT_DECLARED_SUBMODULE_ENTRY"
+    },
+    {
+      "item": 2,
+      "code": "DIFF-UNCLASSIFIED-PATH",
+      "repository_code": "root",
+      "status_code": "M",
+      "path_sha256": "1fa1099231d1324fc424618e62246da910d614405b7390295d2c18d2bb2e605d",
+      "role_code": "path",
+      "source_record_index": null,
+      "category_code": "ROOT_DECLARED_SUBMODULE_ENTRY"
+    },
+    {
+      "item": 3,
+      "code": "DIFF-FORBIDDEN-PATH",
+      "repository_code": "root",
+      "status_code": "M",
+      "path_sha256": "a7a1d1b1b26d8785d3cae7a3b8b137b8f08991a2412713846e58baaba5683a4c",
+      "role_code": "path",
+      "source_record_index": null,
+      "category_code": "ROOT_DECLARED_SUBMODULE_ENTRY"
+    },
+    {
+      "item": 4,
+      "code": "DIFF-UNCLASSIFIED-PATH",
+      "repository_code": "root",
+      "status_code": "??",
+      "path_sha256": "2feb7b42cad1f5b0410cbb1652851e179bb26e4e5f7b23aefc28e273640fe459",
+      "role_code": "untracked",
+      "source_record_index": null,
+      "category_code": "OPAQUE_UNCLASSIFIED_PATH_NO_INSPECTION"
+    },
+    {
+      "item": 5,
+      "code": "DIFF-UNCLASSIFIED-PATH",
+      "repository_code": "foundation",
+      "status_code": "M",
+      "path_sha256": "21ed8866fe2fff3f942d1089f7a73b1d71a49e6f1ab6da68e36066532354f5ea",
+      "role_code": "path",
+      "source_record_index": null,
+      "category_code": "FOUNDATION_PUBLIC_DOCUMENTATION"
+    }
+  ],
+  "policy": "No private path/content disclosed; source bytes read only for known positive-public source record; other paths not manually inspected."
+}

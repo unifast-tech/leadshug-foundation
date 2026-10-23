@@ -1,0 +1,29 @@
+{
+  "kind": "Exact three public submodule index/baseline/head metadata, no root diff/private traversal",
+  "rows": [
+    {
+      "repository_code": "API",
+      "baseline_link_sha": "5db3fbe2043428749895fc3ff6441e9457467dd0",
+      "current_index_link_sha": "5db3fbe2043428749895fc3ff6441e9457467dd0",
+      "index_link_equals_recorded_baseline": true,
+      "source_head_sha": "db5a86758a165fac8a1ab587599c37b17890530c",
+      "source_head_equals_recorded_link": false
+    },
+    {
+      "repository_code": "WEB",
+      "baseline_link_sha": "6c99c27dafdce8ed9b461d17aaaaa491b8ae16e9",
+      "current_index_link_sha": "6c99c27dafdce8ed9b461d17aaaaa491b8ae16e9",
+      "index_link_equals_recorded_baseline": true,
+      "source_head_sha": "74b9d4b714044829796f875d00553f077c1c329d",
+      "source_head_equals_recorded_link": false
+    },
+    {
+      "repository_code": "FOUNDATION",
+      "baseline_link_sha": "40828a20f2d6c3a1443e7ee132f42483840d6abb",
+      "current_index_link_sha": "40828a20f2d6c3a1443e7ee132f42483840d6abb",
+      "index_link_equals_recorded_baseline": true,
+      "source_head_sha": "4241c633c8ec25fbb8aaebdbca9b6183acd44fa2",
+      "source_head_equals_recorded_link": false
+    }
+  ]
+}

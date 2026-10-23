@@ -1,0 +1,110 @@
+{
+  "kind": "Exact candidate cached rule-overlap union and negative-status proof; not a repository/fullguard run",
+  "recorded_at_utc": "2026-10-23T15:44:39.488329+00:00",
+  "candidate_sha256": "a65496d2e6b635e99ae1c9d66bf6018aa58b99a4a123adb6ad93b34db835ce53",
+  "patch_sha256": "f4b2c22b79d7d5358e96bb5a8ca7b25c26980ac2694ffacd7fc197adc3ce4051",
+  "canonical_parser_errors": 0,
+  "cases": [
+    {
+      "entry_item": 1,
+      "matching_expected_rows": 1,
+      "allowed_type_union": [
+        "M"
+      ],
+      "negative_status_controls": {
+        "A": "rejected_by_expected_type",
+        "D": "rejected_by_expected_type",
+        "R": "rejected_by_expected_type",
+        "T": "rejected_by_expected_type",
+        "U": "rejected_by_expected_type",
+        "X": "rejected_by_expected_type",
+        "B": "rejected_by_expected_type",
+        "??": "rejected_by_expected_type"
+      },
+      "positive_status_controls": {
+        "M": "permitted_subject_to_companion_predicates"
+      }
+    },
+    {
+      "entry_item": 2,
+      "matching_expected_rows": 1,
+      "allowed_type_union": [
+        "M"
+      ],
+      "negative_status_controls": {
+        "A": "rejected_by_expected_type",
+        "D": "rejected_by_expected_type",
+        "R": "rejected_by_expected_type",
+        "T": "rejected_by_expected_type",
+        "U": "rejected_by_expected_type",
+        "X": "rejected_by_expected_type",
+        "B": "rejected_by_expected_type",
+        "??": "rejected_by_expected_type"
+      },
+      "positive_status_controls": {
+        "M": "permitted_subject_to_companion_predicates"
+      }
+    },
+    {
+      "entry_item": 3,
+      "matching_expected_rows": 1,
+      "allowed_type_union": [
+        "M"
+      ],
+      "negative_status_controls": {
+        "A": "rejected_by_expected_type",
+        "D": "rejected_by_expected_type",
+        "R": "rejected_by_expected_type",
+        "T": "rejected_by_expected_type",
+        "U": "rejected_by_expected_type",
+        "X": "rejected_by_expected_type",
+        "B": "rejected_by_expected_type",
+        "??": "rejected_by_expected_type"
+      },
+      "positive_status_controls": {
+        "M": "permitted_subject_to_companion_predicates"
+      }
+    },
+    {
+      "entry_item": 4,
+      "matching_expected_rows": 1,
+      "allowed_type_union": [
+        "??"
+      ],
+      "negative_status_controls": {
+        "A": "rejected_by_expected_type",
+        "M": "rejected_by_expected_type",
+        "D": "rejected_by_expected_type",
+        "R": "rejected_by_expected_type",
+        "T": "rejected_by_expected_type",
+        "U": "rejected_by_expected_type",
+        "X": "rejected_by_expected_type",
+        "B": "rejected_by_expected_type"
+      },
+      "positive_status_controls": {
+        "??": "permitted_subject_to_companion_predicates"
+      }
+    },
+    {
+      "entry_item": 5,
+      "matching_expected_rows": 1,
+      "allowed_type_union": [
+        "M"
+      ],
+      "negative_status_controls": {
+        "A": "rejected_by_expected_type",
+        "D": "rejected_by_expected_type",
+        "R": "rejected_by_expected_type",
+        "T": "rejected_by_expected_type",
+        "U": "rejected_by_expected_type",
+        "X": "rejected_by_expected_type",
+        "B": "rejected_by_expected_type",
+        "??": "rejected_by_expected_type"
+      },
+      "positive_status_controls": {
+        "M": "permitted_subject_to_companion_predicates"
+      }
+    }
+  ],
+  "result": "Four exact M-only unions and one exact ??-only union; no ANY/other matching expected rule. No new enumeration/private input or fullguard invocation."
+}

@@ -1,0 +1,11 @@
+{
+  "kind": "Frozen internal bounded documentary-admission package",
+  "recorded_at_utc": "2026-10-23T15:38:31.918359+00:00",
+  "private_package": "/tmp/stcon04-diff-admission-v1.2-review-package.md",
+  "package_sha256": "14c6bba5cdc2a6e9f1542c82a0bc6e57445e3537512c91b5a9ac11288df7d3c2",
+  "characters": 50870,
+  "private_exact_patch": "/tmp/stcon04-diff-admission-v1.2.patch",
+  "patch_sha256": "f4b2c22b79d7d5358e96bb5a8ca7b25c26980ac2694ffacd7fc197adc3ce4051",
+  "canonical_contract_changed": false,
+  "further_fullguard_authorized": false
+}

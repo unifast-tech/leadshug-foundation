@@ -1,0 +1,64 @@
+{
+  "kind": "Reviewed-intent proposal for documentary addendum and one final canonical guard; not authorized",
+  "recorded_at_utc": "2026-10-23T15:37:35.038652+00:00",
+  "functional_todo_version": "ST-CON-04 v1.1 unchanged",
+  "documentary_addendum": "v1.2 exact five observed entries",
+  "exact_private_patch": "/tmp/stcon04-diff-admission-v1.2.patch",
+  "exact_patch_sha256": "f4b2c22b79d7d5358e96bb5a8ca7b25c26980ac2694ffacd7fc197adc3ce4051",
+  "changes": [
+    {
+      "entry_code": "DECLARED_API_SUBMODULE",
+      "type": "M only",
+      "predicate": "Root index baseline link unchanged; existing approved source HEAD db5a86758a165fac8a1ab587599c37b17890530c and259source seal unchanged"
+    },
+    {
+      "entry_code": "DECLARED_WEB_SUBMODULE",
+      "type": "M only",
+      "predicate": "Root index baseline link unchanged; existing approved source HEAD74b9d4b714044829796f875d00553f077c1c329d and259source seal unchanged"
+    },
+    {
+      "entry_code": "DECLARED_FOUNDATION_SUBMODULE",
+      "type": "M only",
+      "predicate": "Already authorized main-only documentation commits; root index baseline link unchanged"
+    },
+    {
+      "entry_code": "CARRIED_PUBLIC_HISTORICAL_DIFF",
+      "type": "M only",
+      "predicate": "Baseline/HEAD/worktree LF normalizedSHA65da96cc3790d9ac415a48087e67bb27befd2d3591685a4f14b3bc3cf7e8dcd6; retain untouched"
+    },
+    {
+      "entry_code": "STRAY_PUBLIC_BROWSER_OUTPUT_JSON",
+      "type": "?? only; one exact escaped-literal-space pattern",
+      "path_sha256": "2feb7b42cad1f5b0410cbb1652851e179bb26e4e5f7b23aefc28e273640fe459",
+      "predicate": "Exact109byte SHA b9e84a70e27049eb661ac7c9496c0db2a8721f8c46909aa90f872e6c40ec7c80; retain untouched, not proof; source references0; outside source/build input roots"
+    }
+  ],
+  "guard_constraints": "Keep canonical tool unchanged; no ignore-submodules, omitted repository, path wildcard expansion, baseline/private pattern change or no-go waiver. Exact M-only rows replace two overlapping forbidden entries; all non-M statuses rejected by expected-type check. Mandatory root index companion check rejects index mutation even if path status is M.",
+  "sequence": [
+    "After explicit approval apply ONLY exact TODO patch; record approval and documentary authority state",
+    "Verify companion predicates: three root index baseline links, API/Web HEADs/259source bytes, normalized historical diff and retained JSON hash; stop on any mismatch",
+    "Invoke unmodified canonical full guard ONCE with restricted raw output",
+    "Recheck exact root index/HEAD companion predicates; analyze actual guard result; close only if all required guards GO"
+  ],
+  "command": [
+    "python3",
+    "delphi-ai/tools/todo_diff_expectation_guard.py",
+    "foundation_documentation/todos/active/features/TODO-leadshug-start-conversation-by-contact.md",
+    "--repo-root",
+    "/mnt/c/unifast/leadshug/leadshug_now_docker",
+    "--json-output",
+    "/tmp/stcon04-final-diff-guard-admission-private.json"
+  ],
+  "maximum_fullguard_invocations": 1,
+  "private_exception": "Only canonical guard may enumerate/read/hash private paths;0600 raw outputs; public only safe counts/codes/hashes. No manual private inspection/mutation.",
+  "no_authority_for": [
+    "product or root Git writes",
+    "gitlink mutation",
+    "source or runtime changes",
+    "deletion/restore/cleanup",
+    "provider/recipient action",
+    "automatic further retry",
+    "tool/methodology edit"
+  ],
+  "approval_requirement": "User validation: required on deviation; previous corrected single invocation was consumed with no-go, no new execution inferred."
+}

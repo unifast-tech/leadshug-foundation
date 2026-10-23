@@ -1,0 +1,95 @@
+{
+  "kind": "Ready exact documentary admission and single canonical invocation plan; reviewed constraints integrated; NOT authorized",
+  "recorded_at_utc": "2026-10-23T15:37:35.038652+00:00",
+  "functional_todo_version": "ST-CON-04 v1.1 unchanged",
+  "documentary_addendum": "v1.2 exact five observed entries",
+  "exact_private_patch": "/tmp/stcon04-diff-admission-v1.2.patch",
+  "exact_patch_sha256": "f4b2c22b79d7d5358e96bb5a8ca7b25c26980ac2694ffacd7fc197adc3ce4051",
+  "changes": [
+    {
+      "entry_code": "DECLARED_API_SUBMODULE",
+      "type": "M only",
+      "predicate": "Root index baseline link unchanged; existing approved source HEAD db5a86758a165fac8a1ab587599c37b17890530c and259source seal unchanged"
+    },
+    {
+      "entry_code": "DECLARED_WEB_SUBMODULE",
+      "type": "M only",
+      "predicate": "Root index baseline link unchanged; existing approved source HEAD74b9d4b714044829796f875d00553f077c1c329d and259source seal unchanged"
+    },
+    {
+      "entry_code": "DECLARED_FOUNDATION_SUBMODULE",
+      "type": "M only",
+      "predicate": "Already authorized main-only documentation commits; root index baseline link unchanged"
+    },
+    {
+      "entry_code": "CARRIED_PUBLIC_HISTORICAL_DIFF",
+      "type": "M only",
+      "predicate": "Baseline/HEAD/worktree LF normalizedSHA65da96cc3790d9ac415a48087e67bb27befd2d3591685a4f14b3bc3cf7e8dcd6; retain untouched"
+    },
+    {
+      "entry_code": "STRAY_PUBLIC_BROWSER_OUTPUT_JSON",
+      "type": "?? only; one exact escaped-literal-space pattern",
+      "path_sha256": "2feb7b42cad1f5b0410cbb1652851e179bb26e4e5f7b23aefc28e273640fe459",
+      "predicate": "Exact109byte SHA b9e84a70e27049eb661ac7c9496c0db2a8721f8c46909aa90f872e6c40ec7c80; retain untouched, not proof; source references0; outside source/build input roots"
+    }
+  ],
+  "guard_constraints": "Keep canonical tool unchanged; no ignore-submodules, omitted repository, path wildcard expansion, baseline/private pattern change or no-go waiver. Exact M-only rows replace two overlapping forbidden entries; all non-M statuses rejected by expected-type check. Mandatory root index companion check rejects index mutation even if path status is M.",
+  "sequence": [
+    "Only after explicit human validation, apply ONLY the exact patch SHA f4b2c22b79d7d5358e96bb5a8ca7b25c26980ac2694ffacd7fc197adc3ce4051 and record approval",
+    "Verify and record ALL companion predicates listed below before invocation; stop before fullguard on any mismatch",
+    "Prepare and VERIFY restricted0600 JSON/stdout/stderr destinations BEFORE invocation using the exact capture procedure below",
+    "Invoke unchanged canonical command ONCE, capturing raw stdout/stderr without displaying them",
+    "Verify and record ALL SAME companion predicates AGAIN after invocation, including all259source bytes, historical normalized content, retained JSON hash and continuing Foundation authority",
+    "Publish only safe counts/codes/hashes; adjudicate actual result; close only after actual fullguard GO and all remaining final gates. Any mismatch/no-go keeps closure blocked and permits no automatic retry"
+  ],
+  "command": [
+    "python3",
+    "delphi-ai/tools/todo_diff_expectation_guard.py",
+    "foundation_documentation/todos/active/features/TODO-leadshug-start-conversation-by-contact.md",
+    "--repo-root",
+    "/mnt/c/unifast/leadshug/leadshug_now_docker",
+    "--json-output",
+    "/tmp/stcon04-final-diff-guard-admission-private.json"
+  ],
+  "maximum_fullguard_invocations": 1,
+  "private_exception": "Only canonical guard may enumerate/read/hash private paths;0600 raw outputs; public only safe counts/codes/hashes. No manual private inspection/mutation.",
+  "no_authority_for": [
+    "product or root Git writes",
+    "gitlink mutation",
+    "source or runtime changes",
+    "deletion/restore/cleanup",
+    "provider/recipient action",
+    "automatic further retry",
+    "tool/methodology edit"
+  ],
+  "approval_requirement": "Still explicit human validation of exact documentary deviation and ONE new fullguard invocation; no execution authority from review.",
+  "revises_plan_sha256": "918688e8a4728728657970be1f6a59f014473a7364a31ed7c6d0bce7e6c58021",
+  "review": "Fresh internal no-context gpt-6.1-sol/xhigh session8583 terminal0/strictmerge0; three bounded plan/evidence gaps incorporated exactly; no product change",
+  "all_companion_predicates_before_AND_after": {
+    "root_index_baseline_links": {
+      "API": "5db3fbe2043428749895fc3ff6441e9457467dd0",
+      "WEB": "6c99c27dafdce8ed9b461d17aaaaa491b8ae16e9",
+      "FOUNDATION": "40828a20f2d6c3a1443e7ee132f42483840d6abb"
+    },
+    "source_HEADs": {
+      "API": "db5a86758a165fac8a1ab587599c37b17890530c",
+      "WEB": "74b9d4b714044829796f875d00553f077c1c329d"
+    },
+    "all259_positive_public_source_bytes": "Exact equality with all-source-seal-e74-v1.1.json and fingerprint589c753670cfcf54020b785e6bae6b85ec1a8b4bab707f333f8e64d8aaf38c8e",
+    "historical_diff": "Baseline/HEAD/worktree LF normalizedSHA65da96cc3790d9ac415a48087e67bb27befd2d3591685a4f14b3bc3cf7e8dcd6",
+    "retained_output_JSON": "Exact109byte SHA b9e84a70e27049eb661ac7c9496c0db2a8721f8c46909aa90f872e6c40ec7c80, pathSHA2feb7b42cad1f5b0410cbb1652851e179bb26e4e5f7b23aefc28e273640fe459; not delivery proof",
+    "continuing_Foundation_authority": "Branch main; existing documentary authority guard GO; stage/commit only exact owned Foundation paths; root index links unchanged; no product/root Git write"
+  },
+  "restricted_capture_procedure": {
+    "creation_policy": "Set umask077. Refuse existing JSON/stdout/stderr paths; open each with os.open(O_WRONLY|O_CREAT|O_EXCL|O_NOFOLLOW,0600). Verify each fd is regular, owned by current uid, fstat mode0600 BEFORE launching. JSON path is precreated0600 then closed; canonical write_text truncates existing file retaining0600. stdout/stderr remain open descriptors passed directly to subprocess.run.",
+    "destinations": {
+      "json": "/tmp/stcon04-final-diff-guard-admission-private.json",
+      "stdout": "/tmp/stcon04-final-diff-guard-admission-private.stdout",
+      "stderr": "/tmp/stcon04-final-diff-guard-admission-private.stderr"
+    },
+    "invocation": "Use exactly plan command, subprocess stdout/stderr set to restricted descriptors; no raw console forwarding. Guard itself remains unchanged.",
+    "after_exit": "Verify outputs remain regular owned0600; parse JSON without printing paths/content. Publish only counts, codes, hashes and safe category predicates. Preserve raw output even on failure.",
+    "stop_conditions": "If precreation/ownership/mode/companion check fails, stop before subprocess. If subprocess or postchecks fail, retain no-go; no second invocation inferred."
+  },
+  "status_exclusivity_evidence": "diff-observed-noise-admission-v1.2-status-union-proof.json"
+}

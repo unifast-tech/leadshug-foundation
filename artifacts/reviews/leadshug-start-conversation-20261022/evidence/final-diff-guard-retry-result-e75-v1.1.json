@@ -1,0 +1,26 @@
+{
+  "kind": "Actual single approved corrected unmodified full canonical diff guard",
+  "recorded_at_utc": "2026-10-23T15:19:43.602991+00:00",
+  "corrected_invocations": 1,
+  "original_prior_attempts": 1,
+  "exit_code": 2,
+  "outcome": "no-go",
+  "counts": {
+    "contract_repository_count": 4,
+    "actual_change_count": 764,
+    "expected_change_count": 759,
+    "forbidden_change_count": 2,
+    "unclassified_change_count": 3
+  },
+  "violation_codes": {
+    "DIFF-FORBIDDEN-PATH": 2,
+    "DIFF-UNCLASSIFIED-PATH": 3
+  },
+  "raw_sha256": "21e8e6b757ffb3e0d4394ede2ca517f4e07df3c472ea65576c32302109450ce3",
+  "stdout_sha256": "37fc978db913b0329abd20170a1fe523dca271267748b2fc129043b8ba3bc281",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "privacy": "Raw output0600; public only safe counts/codes/hashes. No private path or content echoed.",
+  "approval": "final-diff-guard-retry-human-approval-e75-v1.1.json",
+  "guard_unmodified": true,
+  "further_invocations": "Not authorized."
+}

@@ -1,0 +1,10 @@
+{
+  "kind": "Stray public browser-output record excluded from frozen product source",
+  "recorded_at_utc": "2026-10-23T15:33:26.986992+00:00",
+  "source_count": 259,
+  "all_same_e74_bytes": true,
+  "stray_path_sha256": "2feb7b42cad1f5b0410cbb1652851e179bb26e4e5f7b23aefc28e273640fe459",
+  "exact_path_or_malformed_namespace_references_in_source": 0,
+  "artifact_role": "109byte JSON in public browser-output namespace; not accepted as current source/build/runtime proof; origin not established beyond output location.",
+  "action": "Retain untouched; no deletion, restore or product Git change."
+}

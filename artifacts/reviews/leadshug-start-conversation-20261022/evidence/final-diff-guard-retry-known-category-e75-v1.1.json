@@ -1,0 +1,39 @@
+{
+  "kind": "Safe lexical category refinement, no unknown/private content inspection",
+  "findings": [
+    {
+      "item": 1,
+      "code": "DIFF-FORBIDDEN-PATH",
+      "category_code": "DECLARED_API_SUBMODULE",
+      "path_sha256": "f7894a9e71c94e12fd41907644882fa3a6b06a32896a34d387f7164185ece008"
+    },
+    {
+      "item": 2,
+      "code": "DIFF-UNCLASSIFIED-PATH",
+      "category_code": "DECLARED_FOUNDATION_SUBMODULE",
+      "path_sha256": "1fa1099231d1324fc424618e62246da910d614405b7390295d2c18d2bb2e605d"
+    },
+    {
+      "item": 3,
+      "code": "DIFF-FORBIDDEN-PATH",
+      "category_code": "DECLARED_WEB_SUBMODULE",
+      "path_sha256": "a7a1d1b1b26d8785d3cae7a3b8b137b8f08991a2412713846e58baaba5683a4c"
+    },
+    {
+      "item": 4,
+      "code": "DIFF-UNCLASSIFIED-PATH",
+      "category_code": "OPAQUE_UNTRACKED_ROOT_ENTRY",
+      "lexical_directory_suffix": false,
+      "extension_code": ".json",
+      "hidden_name": false,
+      "task_name_marker": false,
+      "public_derived_prefix": null
+    },
+    {
+      "item": 5,
+      "code": "DIFF-UNCLASSIFIED-PATH",
+      "known_carried_doc_index": 1,
+      "category_code": "KNOWN_PREEXISTING_CARRIED_FOUNDATION_DOC"
+    }
+  ]
+}

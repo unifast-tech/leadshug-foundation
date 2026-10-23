@@ -1,0 +1,10 @@
+{
+  "kind": "Explicit bounded human approval for one corrected full canonical diff guard",
+  "recorded_at_utc": "2026-10-23T15:19:35.278644+00:00",
+  "question_id": "call_777a9c61191846ec85db36a2a384df73",
+  "answer": "Autorizar uma execução corrigida",
+  "plan": "foundation_documentation/artifacts/reviews/leadshug-start-conversation-20261022/evidence/final-diff-guard-retry-plan-e75-v1.1.json",
+  "plan_sha256": "117fccbfcae34daf4936566a35d9031f771136b9f11527116b3d6b2de1cb337b",
+  "maximum_invocations": 1,
+  "scope": "Read-only unmodified canonical guard only; private enumeration/read/hash exception solely within guard, restricted raw output, public counts/codes/hashes. No mutation/runtime/provider/recipient/product Git action or automatic retry."
+}

@@ -37,8 +37,8 @@ Este v1.1 substitui a autoridade ativa da minuta revisada em 2026-10-19. O origi
 
 ## Implementation Intent
 
-- **Current delivery:** implementar o contrato v1.1 aprovado de abertura/reuso BU+contato e primeiro envio textual/template oficial elegível, com intenção durável e recuperação sem reenvio cego; etapa Pending até assurance e prova assistida.
-- **Planned next steps:** solicitar aprovação explícita para UMA execução corrigida do guard canônico completo conforme evidence/final-diff-guard-retry-plan-e75-v1.1.json; após autorização, analisar o resultado real e concluir os guards de fechamento. Revisão final E75 concluída/integrada, provas dos dois canais e consolidação canônica já completas.
+- **Current delivery:** funcionalidade v1.1 implementada e comprovada por E74/967testes e dois round-trips reais E75; entrega permanece Pending até validação do aditivo documental de diff, fullguard GO e fechamento.
+- **Planned next steps:** obter validação explícita do aditivo documental exato v1.2 e de UMA execução canônica conforme evidence/diff-observed-noise-admission-v1.2-ready-plan.json. Revisão independente concluída e três restrições incorporadas; patch e nova execução ainda não autorizados.
 - **Anticipatory implementation authorized now:** none.
 - **Rationale:** reaproveitar os owners existentes de conversa, transporte, aceitação de Message e catálogo. O fluxo novo coordenará uma intenção durável; não duplicará sender, aceitação ou catálogo.
 
@@ -46,12 +46,12 @@ Este v1.1 substitui a autoridade ativa da minuta revisada em 2026-10-19. O origi
 
 - **Current delivery stage:** `Pending`
 - **Qualifiers:** `none`
-- **Next exact step:** obter aprovação humana explícita do plano de UMA nova execução do guard completo corrigido. A autorização anterior foi consumida pela falha DIFF-CONTRACT-MISSING antes do Git; a correção do título e o parser-only não autorizam repetir. Código/testes, runtime, provas dos dois canais, módulos e revisão final estão completos nos respectivos níveis de evidência.
+- **Next exact step:** solicitar aprovação humana do patch documental SHA f4b2c22b79d7d5358e96bb5a8ca7b25c26980ac2694ffacd7fc197adc3ce4051 e do plano pronto SHA bd4897b3cbc33b8e442f5891f6fe8e29173d0aa1aa74b75d273696172ce848ee, incluindo UMA execução fullguard com companions completos antes/depois e captura0600 prévia. Não aplicar nem executar antes da resposta.
 
 ## Active Work State (Required While TODO Remains In `active/`)
 
 - **Work state:** `review`
-- **Why this state now:** E74 completo967pass e259source unchanged; E75 runtime/source-bound e dois round-trips assistidos confirmados. Dois módulos canônicos consolidados pelo patch revisado. Revisão final independente E75 terminal0/merge0 aceita evidência local com ressalvas; projeções de autoridade corrigidas. Restam renovação explícita da execução única do fullguard, seu resultado real e guards finais. Nenhum fullguard GO ou fechamento é presumido.
+- **Why this state now:** produto E74/967pass/259source frozen, runtime e dois round-trips E75, módulos e revisão final de produto completos. Fullguard real no-go em cinco observações; revisão documental8583 terminou0/merge0 e três achados de plano foram incorporados exatamente. Aditivo não aplicado; nova execução não autorizada. Restam validação humana da divergência, actual fullguard GO e fechamento.
 - **Exit condition:** implementação e todas as evidências/reviews/gates de entrega aprovados; estágio continua Pending até os critérios locais reais, sem claim de entrega por aprovação.
 
 ## Scope
@@ -858,6 +858,10 @@ Fresh internal r1 architecture/TQA results are derived challenge evidence; the r
 | F-EC13E519 | internal no-context test_quality_audit r7 / F-035510C8 | high | release-blocker | complete already-required delivery gates | open | Current E75 local runtime, operator and module evidence accepted; remaining fullguard no-go and closure gates stay open. See evidence/final-review-e75-collection-v1.1.json and evidence/final-review-e75-triage-v1.1.json. |
 | F-D3421BCB | internal fresh final_review E75 / F-035510C8 | high | release-blocker | exact fullguard approval, execution and closure guards | open | Actual reviewed existing gate; no inferred retry authority. evidence/final-review-e75-triage-v1.1.json |
 | F-D1C09F1B | internal fresh final_review E75 / FINAL-E75-02 | medium | release-blocker | correct current authority projections | fixed | Exact requested documentary correction verified; previous authorization consumed and renewed approval pending. evidence/final-review-e75-triage-v1.1.json |
+| F-F8B4C73B | independent documentary admission v1.2 / ADMISSION-V12-02 | medium | release-blocker | incorporate exact reviewed plan/evidence requirement | fixed | Ready plan precreates all three output paths O_EXCL e O_NOFOLLOW0600, verifies fd regular/uid/mode BEFORE subprocess, captures stdout/stderr directly and never prints raw output; canonical command/tool unchanged. evidence/diff-observed-noise-admission-v1.2-review-collection.json |
+| F-5406333B | independent documentary admission v1.2 / ADMISSION-V12-01 | medium | release-blocker | incorporate exact reviewed plan/evidence requirement | fixed | Ready plan explicitly requires ALL seven companion groups pre AND post, including all259source bytes, LF equality, retained JSON hash and continuing Foundation authority; mismatch blocks closure. evidence/diff-observed-noise-admission-v1.2-review-collection.json |
+| F-82E81EF5 | independent documentary admission v1.2 / ADMISSION-V12-03 | low | release-blocker | incorporate exact reviewed plan/evidence requirement | fixed | Exact candidate union of all matching expected rows verified for all five cached entries; four M-only and one ??-only, with all eight other status controls rejected. No new fullguard/private discovery. evidence/diff-observed-noise-admission-v1.2-review-collection.json |
+
 
 
 All r6 reviewers are terminal. Root integrated F-CF091066 and F-5E961B39 after actual causal E72 RED and current E73 full967pass/source proof; E74 unchanged repeat is solely for durable lost-output recovery. Architecture r6 accepts the three reproduced/fixed r4 behaviors. TQA r6 does not satisfy the full required eight-section audit workload; a fresh complete audit of corrected sources remains required. All operational/module/private-inspection/final delivery gates stay open. See evidence/implementation-review-collection-r6-v1.1.json.
@@ -866,7 +870,7 @@ All r6 reviewers are terminal. Root integrated F-CF091066 and F-5E961B39 after a
 ## TODO Closeout Disposition
 
 - **Disposition:** keep-active
-- **Disposition reason:** provas de produto/runtime/operador/módulos e revisão final E75 concluídas; primeira execução única do fullguard falhou antes do Git. A execução corrigida ainda requer nova aprovação explícita; restam seu resultado e guards de fechamento.
+- **Disposition reason:** aguarda validação humana de cinco admissões documentais exatas mais UMA execução canônica; proposta revisada e companions completos/captura prévia0600 incorporados. Preservar actual fullguard no-go até execução autorizada e GO.
 - **Post-commit/push status:** Evidence and canonical module publication on Foundation main only; final receipt/push recorded in session. No product Git write or promotion.
 - **Next path/status action:** remain active/InProgress/review and deliveryPending; no completion or promotion before all required current gates.
 
@@ -1534,3 +1538,21 @@ This is an open validation gate, not a product failure or implicit authority to 
 Actual internal no-context gpt-6.1-sol/xhigh runner8418 exited0, one turn/zero tools; strict merge0. Reviewer establishes no new material product defect and accepts current local runtime/operator/module proof at its stated attestation level. It explicitly evaluates and retains the postdeploy checksum timing, inconsistent historical aggregate, corrected metadata, mixed RED and lost-output limitations; inherited cohort/debt limits remain. The current exact-source candidate does not require broad tests or recipient proof again.
 
 F-D3421BCB retains the actual fullguard/closure blocker. F-D1C09F1B identifies contradictory current next-step authority projections; root corrected intent, status/work-state and disposition to state that the one-shot authorization was consumed and the corrected retry is not yet approved. No historical record or frozen decision was rewritten. Evidence: evidence/final-review-e75-collection-v1.1.json; evidence/final-review-e75-triage-v1.1.json. The concrete exact one-invocation plan is evidence/final-diff-guard-retry-plan-e75-v1.1.json. Delivery remains Pending, TODO active/review; no product Git/Railway/production action.
+
+## Corrected fullguard E75 — bounded renewed human approval
+
+The user explicitly answered “Autorizar uma execução corrigida” to call_777a9c61191846ec85db36a2a384df73, approving the exact one-invocation corrected plan in evidence/final-diff-guard-retry-plan-e75-v1.1.json. Evidence: evidence/final-diff-guard-retry-human-approval-e75-v1.1.json. This renews only the single read-only canonical full guard and its restricted private enumeration/read/hash exception. No broader private mutation, provider/recipient/runtime/product Git action or automatic retry is authorized. No result is inferred from approval.
+
+## Corrected fullguard E75 — actual no-go and five-item deviation analysis
+
+The renewed exact canonical invocation completed once, unchanged:4repositories,764actual changes,759expected,2DIFF-FORBIDDEN-PATH and3DIFF-UNCLASSIFIED-PATH. Restricted raw output remains0600; only safe counts/codes/hashes published in evidence/final-diff-guard-retry-result-e75-v1.1.json. That one-invocation approval is consumed; no automatic retry is authorized. No file removal/restore, product/root Git write, provider/recipient action or runtime change occurred.
+
+Three root submodule projections reflect source HEADs differing from old root links. Exact named public Git metadata proves all three INDEX links still equal the recorded root baseline; API/Web HEADs equal the approved source-repo baselines. Foundation main advancement is already authorized. A carried historical public diff is normalized-byte identical across contract baseline, HEAD and worktree; only CRLF differs. The final109byte JSON lies in a browser-output namespace beneath a malformed Foundation directory with one LEADING space. Earlier category labels saying trailing space were incorrect; hash/content unchanged. Its origin beyond output location is unknown, no source-inventory schema exists and it is NOT accepted as current validation proof. It stays untouched and has zero exact path/malformed namespace references across all259 unchanged public source files. These facts support a proposed observation-only admission, not a claim of fullguard success or new implementation authority.
+
+The exact five-entry documentary patch is private and frozen by SHA in evidence/diff-observed-noise-admission-v1.2-proposal.json. It is NOT applied. It proposes exact M-only submodule rows plus mandatory baseline-index/source-HEAD/source-seal companions, retention-only historical LF equality and the exact untracked JSON hash. Private patterns, baselines, functional Scope/DoD/frozen decisions and canonical tool remain unchanged. No ignored repository or broad wildcard. Parser-only/cached-five matching passed, not a new fullguard. Draft matcher/leading-space syntax errors were corrected before dispatch; no canonical mutation or hidden rerun. The bounded single-run plan is evidence/diff-observed-noise-admission-v1.2-runtime-plan.json. User validation remains required on deviation and renewed guard authority; deliveryPending/review.
+
+## Documentary admission v1.2 — terminal independent review; exact constraints incorporated
+
+Fresh internal no-context gpt-6.1-sol/xhigh runner8583 exited0, one turn/zero tools; strict merge0. Reviewer considers the exact five-entry observation admission defensible, conditioned on compulsory index/source/content/authority predicates. It establishes no product/performance/elegance defect and treats the stray109byte JSON only as unknown-origin observed output, never delivery proof. Three bounded plan/evidence gaps were integrated before seeking approval: ALL companions must be verified and recorded both before and after; raw JSON/stdout/stderr must be precreated and verified owned/regular0600 with exclusive/no-follow flags before actual subprocess; cached rule unions and negative statuses must prove four M-only rows and one ??-only row across every matching rule. Exact requested fixes are now in evidence/diff-observed-noise-admission-v1.2-ready-plan.json and evidence/diff-observed-noise-admission-v1.2-status-union-proof.json.
+
+Exact patch remains SHA f4b2c22b79d7d5358e96bb5a8ca7b25c26980ac2694ffacd7fc197adc3ce4051, unapplied. Ready plan SHA bd4897b3cbc33b8e442f5891f6fe8e29173d0aa1aa74b75d273696172ce848ee is not approved; no third fullguard ran. This is the concrete forthcoming human deviation/single-execution request, required by the approved strict contract. All existing files and root index links remain untouched. Evidence: evidence/diff-observed-noise-admission-v1.2-review-collection.json.

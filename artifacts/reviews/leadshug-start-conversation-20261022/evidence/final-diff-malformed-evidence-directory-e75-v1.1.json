@@ -1,0 +1,8 @@
+{
+  "kind": "Malformed public evidence directory provenance; no deletion/mutation",
+  "recorded_at_utc": "2026-10-23T15:28:02.986465+00:00",
+  "path_sha256": "2feb7b42cad1f5b0410cbb1652851e179bb26e4e5f7b23aefc28e273640fe459",
+  "category_code": "PUBLIC_BROWSER_RECEIPT_IN_FOUNDATION_DIRECTORY_WITH_TRAILING_SPACE",
+  "canonical_counterpart_exists": false,
+  "content_inspection": "Not performed; no existing canonical same-path counterpart established."
+}

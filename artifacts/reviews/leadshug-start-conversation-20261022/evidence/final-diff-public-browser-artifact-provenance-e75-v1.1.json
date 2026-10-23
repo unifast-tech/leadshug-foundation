@@ -1,0 +1,18 @@
+{
+  "kind": "Public generated browser evidence outside canonical Foundation due whitespace in directory name",
+  "recorded_at_utc": "2026-10-23T15:29:45.036214+00:00",
+  "path_sha256": "2feb7b42cad1f5b0410cbb1652851e179bb26e4e5f7b23aefc28e273640fe459",
+  "content_sha256": "b9e84a70e27049eb661ac7c9496c0db2a8721f8c46909aa90f872e6c40ec7c80",
+  "byte_count": 109,
+  "top_level_field_count": 5,
+  "recognized_schema_field_codes": [],
+  "all_top_level_name_hashes": [
+    "f967134cbbc7640dd407e62de350d3b708e2bce4fdc4d7c4351844f23d6cc595",
+    "0b1463c7d575e7a0551ebbaae9c9b15864f8f97f7fed26b2f42e57088354cc4a",
+    "e0ee8bb50685e05fa0f47ed04203ae953fdfd055f5bd2892ea186504254f8c3a",
+    "5c3a09bf22e12411b6af48dfe0b85c2d9d1181cd391e089574c8cf3ca1e5e4ad",
+    "30b46fbc8e9d61dcc3e73ee5c262e457b586b3e8a8b41ac70be710e546e90972"
+  ],
+  "schema_has_array_source_inventory": false,
+  "interpretation": "Generated public browser metadata inspected only after exact positive identification of Foundation/artifacts/tmp browser-receipt namespace. No values printed. Retained untouched; not used as current source/runtime proof."
+}

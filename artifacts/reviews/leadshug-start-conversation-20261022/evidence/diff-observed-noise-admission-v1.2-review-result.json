@@ -1,0 +1,45 @@
+{
+  "schema_version": "subagent-review-result-v1",
+  "artifact_kind": "subagent_review_result",
+  "dispatch_path": "/tmp/stcon04-diff-admission-v1.2-dispatch.json",
+  "review_kind": "final_review",
+  "reviewer_label": "fresh-no-context-final-v1.2",
+  "overall_assessment": "The five-entry amendment is defensible as conditional documentary admission rather than a guard bypass. Unchanged baseline index gitlinks, frozen API/Web HEADs and source bytes, and narrowly retained evidence can preserve the approved intent without changing the canonical tool. STRAY_PUBLIC_BROWSER_OUTPUT_JSON is admissible only as frozen observed noise of unknown origin, never as delivery proof. No performance or elegance regression is established. Structural safety depends on companion predicates that fullguard cannot enforce; the runtime plan incompletely specifies their post-run verification and private-output handling. Delivery remains blocked: the completed no-go stands, cached matching is not fullguard GO, and no further invocation is currently authorized. This assessment uses only the embedded package.",
+  "recommended_path": "Resolve the bounded plan and evidence gaps below, then obtain explicit user deviation validation covering the exact patch and one later canonical invocation. Apply only the approved patch, verify companions, invoke the unchanged guard once with restricted raw capture, and verify all companions again. Adjudicate the actual result and remaining final guards before closure. A mismatch or no-go preserves the delivery block and grants no retry authority.",
+  "performance_position": "acceptable",
+  "elegance_position": "acceptable",
+  "structural_soundness_position": "mixed",
+  "operational_fit_position": "mixed",
+  "findings": [
+    {
+      "finding_id": "ADMISSION-V12-01",
+      "severity": "medium",
+      "category": "adherence",
+      "formalizable_hint": "yes",
+      "candidate_rule_level": "project",
+      "title": "Post-run verification does not explicitly repeat every mandatory companion",
+      "rationale": "The dispatch requires baseline-index, source-HEAD and all259source predicates before and after the actual guard. The runtime sequence checks all companions beforehand but afterward explicitly names only root index and HEAD predicates. It also omits explicit post-run verification of the normalized historical diff and STRAY_PUBLIC_BROWSER_OUTPUT_JSON hash. Fullguard classifies paths and statuses; its GO cannot establish these content predicates.",
+      "suggested_action": "Require recorded pre-run and post-run verification of all three baseline index gitlinks, API/Web HEADs, all259 E74 source bytes, historical normalized equality, STRAY_PUBLIC_BROWSER_OUTPUT_JSON hash, and continuing Foundation documentary authority. Any mismatch must block closure without an automatic additional invocation."
+    },
+    {
+      "finding_id": "ADMISSION-V12-02",
+      "severity": "medium",
+      "category": "security",
+      "formalizable_hint": "yes",
+      "candidate_rule_level": "project",
+      "title": "The reviewed invocation lacks a concrete restricted-output procedure",
+      "rationale": "The plan requires 0600 raw outputs, but the supplied command alone does not establish that boundary. The canonical source creates JSON through ordinary write_text permissions and unconditionally prints the detailed report to stdout. Default permissions or ordinary tool-output forwarding could therefore violate the stated private-output restriction. No actual disclosure is established.",
+      "suggested_action": "Bind the invocation to a concrete capture procedure that creates or verifies 0600 output destinations before execution and captures stdout and stderr without displaying raw content. Publish only permitted counts, codes and hashes. Preserve the canonical command and tool; do not rely on chmod after execution."
+    },
+    {
+      "finding_id": "ADMISSION-V12-03",
+      "severity": "low",
+      "category": "tests",
+      "formalizable_hint": "yes",
+      "candidate_rule_level": "project",
+      "title": "Positive cached matches do not prove exclusive status admission",
+      "rationale": "The cached checks show one expected-type match for each observed item. They do not establish the broader claim that every disallowed status fails. The canonical validator accepts a status permitted by any matching expected row, so an overlapping row permitting another status would escape those positive-only checks. This is an evidence gap, not an established overlapping-rule defect.",
+      "suggested_action": "For the same candidate hash, report the union of allowed types across all matching expected rows for each of the five entry codes, or provide cached negative-status checks. Establish M-only admission for the four M entries and ??-only admission for STRAY_PUBLIC_BROWSER_OUTPUT_JSON without another fullguard invocation or tool modification."
+    }
+  ]
+}

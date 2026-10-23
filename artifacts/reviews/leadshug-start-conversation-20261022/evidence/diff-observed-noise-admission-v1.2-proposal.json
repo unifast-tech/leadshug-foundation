@@ -1,0 +1,48 @@
+{
+  "kind": "Exact five observed-noise admission proposal v1.2; NOT applied or approved",
+  "recorded_at_utc": "2026-10-23T15:35:38.203861+00:00",
+  "private_exact_patch": "/tmp/stcon04-diff-admission-v1.2.patch",
+  "patch_sha256": "f4b2c22b79d7d5358e96bb5a8ca7b25c26980ac2694ffacd7fc197adc3ce4051",
+  "candidate_sha256": "a65496d2e6b635e99ae1c9d66bf6018aa58b99a4a123adb6ad93b34db835ce53",
+  "schema_parser_only": {
+    "repository_count": 4,
+    "violations": 0
+  },
+  "cached_five_item_path_matching_only": [
+    {
+      "item": 1,
+      "forbidden_matches": 0,
+      "expected_type_matches": 1
+    },
+    {
+      "item": 2,
+      "forbidden_matches": 0,
+      "expected_type_matches": 1
+    },
+    {
+      "item": 3,
+      "forbidden_matches": 0,
+      "expected_type_matches": 1
+    },
+    {
+      "item": 4,
+      "forbidden_matches": 0,
+      "expected_type_matches": 1
+    },
+    {
+      "item": 5,
+      "forbidden_matches": 0,
+      "expected_type_matches": 1
+    }
+  ],
+  "limits": "Public TODO parser and cached five-entry matching only; no new Git diff or private enumeration. Not fullguard GO, not approval.",
+  "scope": "Five exact metadata/evidence entries only; no source/runtime/private pattern/tool change or cleanup/root-product Git write. Exact M-only expected rows plus mandatory baseline-index/source-head predicates replace two overlapping forbidden paths.",
+  "predicates": [
+    "Root index links equal contract baseline",
+    "API/Web HEAD and259E74source bytes frozen",
+    "Historical diff normalized baseline/HEAD/worktree equal",
+    "109byte output JSON exact SHA retained, not delivery proof"
+  ],
+  "draft_repairs": "Unpublished parser-only drafts corrected forbidden matcher status-insensitivity and Markdown leading-space trimming. Exact literal space now [ ] character class, not wildcard. No canonical contract change or fullguard rerun.",
+  "review_next": "Fresh internal no-context governance review then user validation and one exact fullguard authorization."
+}
