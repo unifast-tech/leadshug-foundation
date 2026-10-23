@@ -1,0 +1,10 @@
+{
+  "kind": "Root independent after all actual r6 review terminals and offline builds, before writer release",
+  "recorded_at_utc": "2026-10-23T05:09:06.921758+00:00",
+  "source_seal": "all-source-seal-e71-v1.1.json",
+  "count": 259,
+  "fingerprint": "4f35237f1d6aaf55f98e129631e17184d8f5b196249f6c56c10f210add52daf4",
+  "all_positive_inventory_and_bytes_match": true,
+  "private_boundary_preserved": "Only presealed positive public roots and7exactfiles; no actual env/files/data/process inspection.",
+  "stage": "No runtime activated; next release is bounded test-only causal evidence for two integrated r6 findings."
+}

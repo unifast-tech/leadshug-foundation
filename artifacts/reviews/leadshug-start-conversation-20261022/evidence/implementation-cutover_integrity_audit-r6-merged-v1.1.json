@@ -1,0 +1,76 @@
+{
+  "schema_version": "subagent-review-merge-v2",
+  "artifact_kind": "subagent_review_merge",
+  "authoritative": false,
+  "edit_policy": "derived_merge_packet",
+  "dispatch_path": "/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/artifacts/reviews/leadshug-start-conversation-20261022/evidence/implementation-cutover_integrity_audit-r6-dispatch-v1.1.json",
+  "review_kind": "cutover_integrity_audit",
+  "review_count": 1,
+  "reviewer_labels": [
+    "fresh_no_context_cutover_reviewer_r6"
+  ],
+  "highest_finding_severity": "high",
+  "axis_summary": {
+    "performance": "acceptable",
+    "elegance": "acceptable",
+    "structural_soundness": "acceptable",
+    "operational_fit": "mixed"
+  },
+  "recommended_paths": [
+    "preserve_the_current_canonical_cutover_and_complete_the_explicit_delivery_gates"
+  ],
+  "exact_next_step": "Record reviewer resolutions in the governing TODO using the machine-checkable resolution table or equivalent gate ledger, then extract the derived resolution packet and decide whether another bounded review pass is still required.",
+  "findings": [
+    {
+      "finding_id": "F-DDEC87AA",
+      "severity": "high",
+      "title": "Final delivery gate remains open",
+      "rationale": "The E71 candidate supplies strong disposable PG/BFF/browser and source-bound image evidence, but DOD-13 remains explicitly incomplete: independent delivery assessments, the canonical full diff guard, final review, and closure must not be inferred from candidate GREEN.",
+      "suggested_action": "Do not mark the TODO delivered or activate the candidate. Complete and adjudicate the required independent delivery/final guards under their approved boundaries.",
+      "reviewer_labels": [
+        "fresh_no_context_cutover_reviewer_r6"
+      ],
+      "source_finding_ids": [
+        "F-035510C8"
+      ],
+      "category": "residual_risk",
+      "formalizable_hint": "partial",
+      "candidate_rule_level": "paced",
+      "candidate_rule_id": "n/a"
+    },
+    {
+      "finding_id": "F-B7D9A74B",
+      "severity": "medium",
+      "title": "Preserved-runtime and assisted operator proof remain pending",
+      "rationale": "The package expressly limits E71 to a disposable database and fake provider. DOD-11/DOD-12 still require approved preserved-local activation, additive migration validation in that target, assisted first sends, and recipient replies; no real provider or recipient result is evidenced.",
+      "suggested_action": "After the separately approved runtime plan and preflight, obtain the bounded source/runtime attestation and operator-assisted nonofficial and approved-template send/reply evidence without automated contact actions.",
+      "reviewer_labels": [
+        "fresh_no_context_cutover_reviewer_r6"
+      ],
+      "source_finding_ids": [
+        "F-91F64098"
+      ],
+      "category": "operational_fit",
+      "formalizable_hint": "no",
+      "candidate_rule_level": "none",
+      "candidate_rule_id": "n/a"
+    },
+    {
+      "finding_id": "F-E217C1D6",
+      "severity": "medium",
+      "title": "Canonical documentation consolidation and full diff inspection remain open",
+      "rationale": "The module consolidation is only a proposal, and the canonical cross-repository diff guard has not run because its required private-boundary exception is not approved. The current code does not present an unauthorized compatibility bridge, but these governance gates remain necessary before closeout.",
+      "suggested_action": "Obtain explicit authority for the bounded diff inspection if still needed, run the canonical guard, then consolidate the approved supersessions into canonical modules and complete the associated consistency review.",
+      "reviewer_labels": [
+        "fresh_no_context_cutover_reviewer_r6"
+      ],
+      "source_finding_ids": [
+        "F-300A50BF"
+      ],
+      "category": "adherence",
+      "formalizable_hint": "partial",
+      "candidate_rule_level": "project",
+      "candidate_rule_id": "n/a"
+    }
+  ]
+}

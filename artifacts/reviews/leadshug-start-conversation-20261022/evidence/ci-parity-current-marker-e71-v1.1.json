@@ -1,0 +1,102 @@
+{
+  "kind": "Actual existing E71 ALL mandatory CI-parity self-test marker, no extra invocation",
+  "source_seal": "all-source-seal-e71-v1.1.json",
+  "stdout_sha256": "9ba7f1567d32b3be71e2f6cf232e4d6786e776f4100f144036dfb424fb7a4042",
+  "marker": {
+    "guard": "channels-ci-parity-v1",
+    "mutations_rejected": [
+      "missing-pr-trigger",
+      "missing-channels-job",
+      "missing-retained-guard",
+      "weakened-job-gate",
+      "swallowed-job-errors",
+      "skipped-validate-step",
+      "swallowed-retained-job",
+      "skipped-retained-admission",
+      "missing-retained-private-checkout",
+      "missing-common-guard",
+      "swallowed-common-guard-failure",
+      "missing-e2e",
+      "swallowed-e2e-failure",
+      "missing-browser",
+      "missing-migrate",
+      "missing-generate",
+      "missing-lint",
+      "reordered-suite",
+      "missing-shell-guard",
+      "widened-wsl-socket",
+      "changed-wsl-host-prefix",
+      "wrong-wsl-mask-source",
+      "missing-wsl-overlay"
+    ],
+    "outer_wrapper": {
+      "collision_control": {
+        "compose_calls": 0,
+        "exit_code": 1
+      },
+      "empty_config_control": {
+        "compose_calls": [
+          [
+            "compose",
+            "--project-name",
+            "leadshug_channels_validation",
+            "--env-file",
+            "/workspace/.env.example",
+            "--env-file",
+            "/tmp/tmp.J56TZHd0QP",
+            "-f",
+            "/workspace/docker-compose.yml",
+            "-f",
+            "/workspace/docker-compose.channels.yml",
+            "--profile",
+            "validation",
+            "config",
+            "--quiet"
+          ]
+        ],
+        "exit_code": 0
+      },
+      "inventory_failures": {
+        "network": {
+          "compose_calls": 0,
+          "docker_calls": 3,
+          "exit_code": 1
+        },
+        "ps": {
+          "compose_calls": 0,
+          "docker_calls": 1,
+          "exit_code": 1
+        },
+        "volume": {
+          "compose_calls": 0,
+          "docker_calls": 2,
+          "exit_code": 1
+        }
+      },
+      "mandatory_failure_cleanup": {
+        "cleanup_observed": true,
+        "compose_lifecycle": [
+          "run",
+          "down"
+        ],
+        "exit_code": 42,
+        "provider_or_real_docker_invoked": false,
+        "required_leaf": "fake python3 reached through actual RUNNER_SCRIPT and returned 42"
+      },
+      "native_path_control": {
+        "exit_code": 0,
+        "overlay_added": false,
+        "posix_bind_paths_preserved": true
+      },
+      "unsupported_wsl_socket_control": {
+        "docker_calls": 0,
+        "exit_code": 1
+      },
+      "wsl_bind_path_control": {
+        "skipped": "self-test checkout is not on a WSL-mounted drive"
+      }
+    },
+    "yaml": "safe-no-alias-no-duplicates"
+  },
+  "limits": "Local shared-runner/CI contract and fake-wrapper failure/cleanup controls only; not remote CI execution or preserved runtime."
+}

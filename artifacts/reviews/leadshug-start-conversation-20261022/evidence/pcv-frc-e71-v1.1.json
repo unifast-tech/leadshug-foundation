@@ -1,0 +1,115 @@
+{
+  "policy_schema_version": "pcv-1",
+  "schema_version": "pcv-1",
+  "todo_id": "ST-CON-04",
+  "run_id": "E71-canonical-all-17070",
+  "environment_id": "owned-disposable-node22-postgresql16-real-BFF-fake-external-provider",
+  "executor_id": "stcon04_continuation",
+  "reviewer_id": "root-independent-source-and-output-collector; formal lane assessment pending",
+  "recorded_at_utc": "2026-10-23T04:54:41.268852+00:00",
+  "lane_id": "FRC",
+  "evidence_type": "deterministic-real-browser-real-BFF-post-readback",
+  "sample_profile_id": "FRC-SP-H",
+  "acceptance_rule_id": "FRC-A1",
+  "result_summary": "Five independent first-send flows each receive20 synchronous open/confirm triggers; assertions require1open/1initialPOST/1provider invocation/1persistedOUT per flow.",
+  "artifact_payload": {
+    "evidence_receipt": "all-result-e71-v1.1.json",
+    "stdout_sha256": "9ba7f1567d32b3be71e2f6cf232e4d6786e776f4100f144036dfb424fb7a4042",
+    "source_seal": "all-source-seal-e71-v1.1.json",
+    "source_fingerprint": "4f35237f1d6aaf55f98e129631e17184d8f5b196249f6c56c10f210add52daf4",
+    "terminal_exit_code": 0,
+    "assessment_status": "Observed acceptance assertions passed; candidate evidence for independent assessment, no delivery/runtime/provider claim.",
+    "concurrency_policy": "drop duplicate",
+    "burst_profile_observed": {
+      "bursts": 5,
+      "triggers_per_burst": 20,
+      "open_requests_per_burst": 1,
+      "initial_posts_per_burst": 1,
+      "provider_invocations_per_burst": 1,
+      "persisted_out_per_burst": 1,
+      "observation_type": "Exact loop/assertions in current E71 test passed; not separately emitted metric trace."
+    },
+    "runner_or_manual_path": "bash scripts/test-channels-local.sh all -> Playwright start-conversation.spec.ts: cinco envios recebem vinte gatilhos s\u00edncronos cada sem duplicar o POST",
+    "additional_race_coverage": "Current E71 includes A-B-A, storage refusal, same-key replay, actual90s ordinary recovery, valid PREPARED and EALB successor/late-old UI proof. Current full run also passes held-old-BU busy-state fix and explicit snapshot-replay cleanup synchronized to browser completion.",
+    "sources": [
+      {
+        "path": "web-app/e2e/start-conversation.spec.ts",
+        "sha256": "95143e86de9ffec726a95f015f24d8f7dc580f1be92a098a4cbbbb33c34c8284"
+      }
+    ],
+    "limits": "Route delays a real BFF response after actual route.fetch(); external provider fake. No real WhatsApp/SLO claim.",
+    "per_action_policy": [
+      {
+        "action": "Manual open and initial confirmation",
+        "policy": "drop duplicate",
+        "proof": "Synchronous latches; five20-trigger browser waves with real BFF and one provider invocation/Message per flow."
+      },
+      {
+        "action": "Preview/channel/BU/draft-dependent options and completion",
+        "policy": "last-write-wins",
+        "scope": "Only matching mounted owner/generation/conversation/draft; an older same-text A\u2192B\u2192A result cannot update newer ownership.",
+        "proof": "Delayed preview, context switches and late-body/completion browser cases passed E45."
+      },
+      {
+        "action": "Initial read/reconcile/acknowledge",
+        "policy": "drop duplicate",
+        "scope": "Busy latch plus mounted owner/generation; explicit actions and immutable key/deadline.",
+        "proof": "Initial uncertainty/read and known-receipt local-reconcile browser cases passed E45; no provider operation."
+      },
+      {
+        "action": "Ordinary recovery reconcile/acknowledge",
+        "policy": "drop duplicate",
+        "scope": "Same local action latch/owner fence; checkbox and immutable deadline required.",
+        "proof": "Dedicated actual E71 real BFF/browser case passed through actual90s risk acknowledgment and composer return."
+      },
+      {
+        "action": "Saved snapshot reread",
+        "policy": "serialize",
+        "scope": "Explicit synchronous local storage read only; failed read blocks writes and preserves original key/body.",
+        "proof": "Causal E44 read-loss RED then E45 actual failed/successful local reread and same-key replay PASS."
+      }
+    ],
+    "current_raw_metrics_reference": "current-synthetic-pcv-samples-e71-v1.1.json",
+    "additional_actual_composer_wave_sample": {
+      "waves": [
+        {
+          "requests": 1,
+          "retriggers": 20,
+          "outcome": "accepted",
+          "draftPreserved": false,
+          "messageCount": 1
+        },
+        {
+          "requests": 1,
+          "retriggers": 20,
+          "outcome": "unknown",
+          "draftPreserved": true,
+          "messageCount": 1
+        },
+        {
+          "requests": 1,
+          "retriggers": 20,
+          "outcome": "accepted",
+          "draftPreserved": false,
+          "messageCount": 1
+        },
+        {
+          "requests": 1,
+          "retriggers": 20,
+          "outcome": "unknown",
+          "draftPreserved": true,
+          "messageCount": 1
+        },
+        {
+          "requests": 1,
+          "retriggers": 20,
+          "outcome": "accepted",
+          "draftPreserved": false,
+          "messageCount": 1
+        }
+      ],
+      "limits": "Five real BFF/PostgreSQL submits held after the actual response; twenty user-form submit events per in-flight send; one request per wave; no capacity/SLO claim."
+    }
+  },
+  "artifact_sha256": "983202382519d8c6a8093f784a14aae4126a784c27852d0f3fb917750e2b5027"
+}

@@ -1,0 +1,51 @@
+{
+  "checkpoint": "E71 corrected r4 full canonical candidate GREEN",
+  "recorded_at_utc": "2026-10-23T04:54:41.212310+00:00",
+  "command": "bash scripts/test-channels-local.sh all",
+  "executor_session_id": 17070,
+  "exit_code": 0,
+  "actual_exit_code": 0,
+  "terminal_authority": "Actual terminal exit0 and owned cleanup reported by owning executor; root independently checked actual stdout aggregates, full259 inventory/bytes and93browser manifest records.",
+  "phases": {
+    "migrations": 28,
+    "lint_and_build": "passed",
+    "api_unit": {
+      "files": 34,
+      "tests": 368,
+      "duration_seconds": 4.02
+    },
+    "api_postgresql": {
+      "files": 33,
+      "tests": 451,
+      "duration_seconds": 278.62
+    },
+    "web_unit": {
+      "files": 7,
+      "tests": 54,
+      "duration_seconds": 0.662
+    },
+    "browser": {
+      "tests": 89,
+      "passed": 89,
+      "duration_minutes": 15.8
+    }
+  },
+  "stdout_sha256": "9ba7f1567d32b3be71e2f6cf232e4d6786e776f4100f144036dfb424fb7a4042",
+  "source_recheck": "all-source-recheck-e71-v1.1.json",
+  "source_fingerprint": "4f35237f1d6aaf55f98e129631e17184d8f5b196249f6c56c10f210add52daf4",
+  "full259source_postseal": true,
+  "freshness": "browser-freshness-collection-e71-v1.1.json",
+  "owned_cleanup_observed": true,
+  "specific_proofs": [
+    "Both initial and ordinary final trusted-window CAS reject after actual database-clock expiry, within the live original lease.",
+    "Actual active BU and credential updates wait on held shared pins; current session validation uses the actual signed verifier clock seam after remote preflight.",
+    "Actual unmodified ST05 refresh overlaps claim/local completion without increasing database deadlocks; known acceptance is retained when local completion cannot commit.",
+    "Recent intents, active options and whole-conversation conflict actual captured queries each use no-sort indexed access examining11records; zero provider/Message effects in conflict.",
+    "All existing first-send, recovery, lost-response, idempotency, ownership, template, window, public/BOT, timeline and browser journeys pass in the complete shared runner."
+  ],
+  "limits": [
+    "Disposable synthetic database and owned fake provider, not actual WhatsApp delivery.",
+    "Root integration findings require fresh complete independent r6 challenge; no review approval is inferred from tests.",
+    "No preserved runtime activation, canonical module consolidation, full canonical private-boundary diff guard, assisted own-channel first send or completed delivery."
+  ]
+}

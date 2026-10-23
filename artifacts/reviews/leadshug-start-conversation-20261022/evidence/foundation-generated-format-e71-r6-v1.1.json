@@ -1,0 +1,15 @@
+{
+  "kind": "Exact generated evidence formatting observation, not clean-check claim",
+  "actual_git_diff_check_exit": 2,
+  "diagnostic_sha256": "3ca730d3dde9eaed1ca62a0df1e5914ab423dd1348c0386b8359c30d4adeb5c3",
+  "affected_paths": [
+    "artifacts/reviews/leadshug-start-conversation-20261022/evidence/test-quality-public-roots-output-e71-v1.1.txt",
+    "artifacts/reviews/leadshug-start-conversation-20261022/implementation-architecture_adherence-r6-dispatch-v1.1.md",
+    "artifacts/reviews/leadshug-start-conversation-20261022/implementation-architecture_adherence-r6-package-v1.1.md",
+    "artifacts/reviews/leadshug-start-conversation-20261022/implementation-cutover_integrity_audit-r6-dispatch-v1.1.md",
+    "artifacts/reviews/leadshug-start-conversation-20261022/implementation-test_quality_audit-r6-dispatch-v1.1.md",
+    "artifacts/reviews/leadshug-start-conversation-20261022/implementation-test_quality_audit-r6-package-v1.1.md"
+  ],
+  "handling": "Preserve original actual static scan stdout and immutable generated review dispatch/packages. Do not normalize evidence bytes or mutate completed review input merely to remove diagnostic whitespace. Actual check2 is disclosed, not promoted to PASS. No product files are staged.",
+  "limits": "Formatting observation only; no waiver of product/source tests or pending delivery gates."
+}

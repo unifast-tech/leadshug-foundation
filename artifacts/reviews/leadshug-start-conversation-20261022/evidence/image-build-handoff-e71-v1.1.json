@@ -1,0 +1,10 @@
+{
+  "kind": "Current E71 full-GREEN source-bound image-build handoff",
+  "recorded_at_utc": "2026-10-23T04:55:53.572599+00:00",
+  "authority": "authority-image-build-e71-v1.1.json",
+  "routing": "routing-image-build-e71-v1.1.json",
+  "precondition": "Actual ALL0; independent full259source/93browser postseal matches",
+  "inputs": "positive-build-contexts-e71-v1.1.json",
+  "allowed": "Build newly tagged leadshug-stcon04-api:e71 and leadshug-stcon04-web:e71 from exact positive-only tar archives; offline inspect owned images with network none, read-only filesystem and entrypoint override. No source/config mutation.",
+  "not_authorized": "Preserved runtime activation, actual private env/data/process/log access, Compose private input, migrations, tunnels, provider calls, Git or worktrees/copies."
+}

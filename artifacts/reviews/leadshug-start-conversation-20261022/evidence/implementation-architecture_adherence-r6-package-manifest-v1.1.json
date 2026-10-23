@@ -1,0 +1,269 @@
+{
+  "review_kind": "architecture_adherence",
+  "package": "/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/artifacts/reviews/leadshug-start-conversation-20261022/implementation-architecture_adherence-r6-package-v1.1.md",
+  "package_sha256": "a9f3b376776f98f0e3947db7a19bce849aac4ed28c70865791a8642fb5fa9c15",
+  "source_fingerprint": "4f35237f1d6aaf55f98e129631e17184d8f5b196249f6c56c10f210add52daf4",
+  "source_files": [
+    {
+      "path": "api-app/src/domain/channels/transport/channel.ts",
+      "sha256": "49b24179666a0fa90becfb2bf24ebc31acde7bf342b34d3b110a42465ccb69f9",
+      "bytes": 6698,
+      "initial_seal_classification": "changed since exact pre-ST04 seal within admitted mutation scope"
+    },
+    {
+      "path": "api-app/src/domain/inbox/conversation-start.service.ts",
+      "sha256": "97ee440ce06007eac1aed98e0afe4997056722c8d62508a0698655a2de5d1118",
+      "bytes": 2328,
+      "initial_seal_classification": "not in inherited dirty-file seal; current exact source supplied, not inferred as newly added"
+    },
+    {
+      "path": "api-app/src/domain/inbox/initial-message-template-renderer.ts",
+      "sha256": "a5ce98823c8f0a4480386bc755e392b5f6287107cbfc0ad13ad50c06bc234ecf",
+      "bytes": 5657,
+      "initial_seal_classification": "not in inherited dirty-file seal; current exact source supplied, not inferred as newly added"
+    },
+    {
+      "path": "api-app/src/domain/inbox/initial-message.service.ts",
+      "sha256": "61a52116f29e5753ed27bae607dbebd5dfdb5b1fd1dc8954a02602e8d81a8e6e",
+      "bytes": 24784,
+      "initial_seal_classification": "not in inherited dirty-file seal; current exact source supplied, not inferred as newly added"
+    },
+    {
+      "path": "api-app/src/domain/inbox/dispatch-admission.service.ts",
+      "sha256": "2c3e19f9bcacd75d047ee73e5913ad77e9a8700a43427af27556b801234bcda9",
+      "bytes": 45818,
+      "initial_seal_classification": "not in inherited dirty-file seal; current exact source supplied, not inferred as newly added"
+    },
+    {
+      "path": "api-app/src/domain/inbox/outbound.service.ts",
+      "sha256": "cb4b2e68c7377411991960c65e3d15cef8bc1aea927049cd99345e523433bd9f",
+      "bytes": 41025,
+      "initial_seal_classification": "changed since exact pre-ST04 seal within admitted mutation scope"
+    },
+    {
+      "path": "api-app/src/domain/inbox/message-acceptance.service.ts",
+      "sha256": "71194c70b12cb920054586a7a86266d90f8eca0b7008b1b5688627e0694979f1",
+      "bytes": 16712,
+      "initial_seal_classification": "not in inherited dirty-file seal; current exact source supplied, not inferred as newly added"
+    },
+    {
+      "path": "api-app/src/domain/inbox/channel-window-policy.ts",
+      "sha256": "46dfcf887f2ad4ed0670664186e918816699e6541d1670aa9c32ac79a193e43e",
+      "bytes": 5700,
+      "initial_seal_classification": "not in inherited dirty-file seal; current exact source supplied, not inferred as newly added"
+    },
+    {
+      "path": "api-app/src/domain/inbox/conversations.service.ts",
+      "sha256": "6dba438e7e59dff56b2b98413532210bac62b7d744cf1b80c5a2c748923b431c",
+      "bytes": 9091,
+      "initial_seal_classification": "changed since exact pre-ST04 seal within admitted mutation scope"
+    },
+    {
+      "path": "api-app/src/domain/inbox/incoming.service.ts",
+      "sha256": "390d48de06ad863b9d9c47344c1eb2919d0ba07aa96626b0ef1596fcbde4795b",
+      "bytes": 6157,
+      "initial_seal_classification": "changed since exact pre-ST04 seal within admitted mutation scope"
+    },
+    {
+      "path": "api-app/src/integrations/channels/meta-channel.ts",
+      "sha256": "99a9ca01a57527a76de54cdbdf8b49f65b5dcceb1a71abce883d1845c6cd8f26",
+      "bytes": 3900,
+      "initial_seal_classification": "changed since exact pre-ST04 seal within admitted mutation scope"
+    },
+    {
+      "path": "api-app/src/integrations/channels/evolution-channel.ts",
+      "sha256": "6a41ef2f3b0ee9e5c6b381d54faf48b0b2c672e52751f8be1480ad01cb178a34",
+      "bytes": 2211,
+      "initial_seal_classification": "changed since exact pre-ST04 seal within admitted mutation scope"
+    },
+    {
+      "path": "api-app/src/integrations/channels/prisma-channel-resolver.ts",
+      "sha256": "bd6b455d06fd6a5c2b4f09ca7d15ea4a55670a0555abc2744309c68072b6e943",
+      "bytes": 26686,
+      "initial_seal_classification": "changed since exact pre-ST04 seal within admitted mutation scope"
+    },
+    {
+      "path": "api-app/src/integrations/channels/channel-adapter-factory.ts",
+      "sha256": "e0ebdd78e387f7ee3af902f038d22449e212c1301ffa642bbceb5a5f05d2abfc",
+      "bytes": 440,
+      "initial_seal_classification": "unchanged inherited pre-ST04 bytes"
+    },
+    {
+      "path": "api-app/src/integrations/channels/channel-adapter-registry.ts",
+      "sha256": "655b735e239e89fbaede36689d1c22245d3804d66646f7736db991cb5099b02b",
+      "bytes": 975,
+      "initial_seal_classification": "unchanged inherited pre-ST04 bytes"
+    },
+    {
+      "path": "api-app/src/integrations/channels/channel-transport.module.ts",
+      "sha256": "4aa42bb2e873c576b63b5ac1f50db368fbecb189fe91be19f3b7fb726733370d",
+      "bytes": 2242,
+      "initial_seal_classification": "changed since exact pre-ST04 seal within admitted mutation scope"
+    },
+    {
+      "path": "api-app/src/integrations/channels/account-reference.ts",
+      "sha256": "da2b4572b07477407f9adf08c30c3876d10f92ae157cfadb3b8bdc5fc99d0d24",
+      "bytes": 424,
+      "initial_seal_classification": "not in inherited dirty-file seal; current exact source supplied, not inferred as newly added"
+    },
+    {
+      "path": "api-app/src/integrations/meta/initial-message.client.ts",
+      "sha256": "e21efb3df6910c0b740afec40da919542f672302429217268fdb56c282446721",
+      "bytes": 11410,
+      "initial_seal_classification": "not in inherited dirty-file seal; current exact source supplied, not inferred as newly added"
+    },
+    {
+      "path": "api-app/src/integrations/message-templates/template-management.resolver.ts",
+      "sha256": "1d26d05183645def5b0ef4ba317f7d024b3a08c610c910593a35308309e99e00",
+      "bytes": 4910,
+      "initial_seal_classification": "changed since exact pre-ST04 seal within admitted mutation scope"
+    },
+    {
+      "path": "api-app/src/domain/message-templates/template-observation.service.ts",
+      "sha256": "41c7c640fd31ca0759d0d88647e24c74787597dcf75fd8a3c773fe6e02965488",
+      "bytes": 39343,
+      "initial_seal_classification": "unchanged inherited pre-ST04 bytes"
+    },
+    {
+      "path": "api-app/src/surfaces/bff/conversations.controller.ts",
+      "sha256": "0967a901f8fca2fb275c1423a5ccd4d3185b9f55544862d3565c91bb528f19f3",
+      "bytes": 19795,
+      "initial_seal_classification": "changed since exact pre-ST04 seal within admitted mutation scope"
+    },
+    {
+      "path": "api-app/src/surfaces/bff/session.middleware.ts",
+      "sha256": "80d8be0072b817ec34b3eb7d29218835bd218a40670c1f917d0b1787b0b57211",
+      "bytes": 5651,
+      "initial_seal_classification": "not in inherited dirty-file seal; current exact source supplied, not inferred as newly added"
+    },
+    {
+      "path": "api-app/src/infra/session/session.service.ts",
+      "sha256": "884618471c7cc58c037f04d20c790979409bbbcfc2fe61b34312b2625b28e200",
+      "bytes": 5483,
+      "initial_seal_classification": "not in inherited dirty-file seal; current exact source supplied, not inferred as newly added"
+    },
+    {
+      "path": "api-app/src/surfaces/webhooks/meta.controller.ts",
+      "sha256": "261bf12e6ef021e00d90000a714ff54c66e3753f85d287a95015035fb584518f",
+      "bytes": 7195,
+      "initial_seal_classification": "not in inherited dirty-file seal; current exact source supplied, not inferred as newly added"
+    },
+    {
+      "path": "api-app/src/surfaces/public/conversations.controller.ts",
+      "sha256": "bbb5ebf085e59840f3a9e9cbc1f07c57cdc58d1a5b6f846f934fb526cc29bfd1",
+      "bytes": 12059,
+      "initial_seal_classification": "unchanged inherited pre-ST04 bytes"
+    },
+    {
+      "path": "api-app/prisma/schema.prisma",
+      "sha256": "19ea60e6e5a1675a4ff12581237b2f91c2359b61d7b8bcb9e8bf1c1ebf26435d",
+      "bytes": 42543,
+      "initial_seal_classification": "changed since exact pre-ST04 seal within admitted mutation scope"
+    },
+    {
+      "path": "api-app/prisma/migrations/20261022140000_initial_message_orchestration/migration.sql",
+      "sha256": "a8b26d5dfc7eb8f658cf703cee0f1f6061b5afa2ad84ca0f37cd4baec9d68437",
+      "bytes": 343,
+      "initial_seal_classification": "not in inherited dirty-file seal; current exact source supplied, not inferred as newly added"
+    },
+    {
+      "path": "api-app/prisma/migrations/20261022150000_initial_message_admissions/migration.sql",
+      "sha256": "41df36b473c3163e9e29ea1cc6c12df3376994081698be83c83e50a812e3922a",
+      "bytes": 3851,
+      "initial_seal_classification": "not in inherited dirty-file seal; current exact source supplied, not inferred as newly added"
+    },
+    {
+      "path": "api-app/prisma/migrations/20261022160000_initial_message_inbox_order/migration.sql",
+      "sha256": "60e7f76b8ccbee5e51dd939bdf126eeecaa1b1c1871f393a4363add94274a544",
+      "bytes": 398,
+      "initial_seal_classification": "not in inherited dirty-file seal; current exact source supplied, not inferred as newly added"
+    },
+    {
+      "path": "web-app/src/componentes/NovaConversa.tsx",
+      "sha256": "2702cae2c4d913d511e33ca8d305ecc03d7ee56f34623877058865d884aa1bdd",
+      "bytes": 40678,
+      "initial_seal_classification": "not in inherited dirty-file seal; current exact source supplied, not inferred as newly added"
+    },
+    {
+      "path": "web-app/src/telas/Inbox.tsx",
+      "sha256": "66658161c7c74610288bf6c92583b616bacc1ada0fced27af01997ed22481737",
+      "bytes": 25560,
+      "initial_seal_classification": "changed since exact pre-ST04 seal within admitted mutation scope"
+    },
+    {
+      "path": "web-app/src/api.ts",
+      "sha256": "7c80a2e738655c5b54382e2805d5e8e808b80e25af283ca90402e932a3d3794c",
+      "bytes": 16785,
+      "initial_seal_classification": "changed since exact pre-ST04 seal within admitted mutation scope"
+    },
+    {
+      "path": "api-app/test/initial-message.e2e-spec.ts",
+      "sha256": "44ce516d60168219ddc5aec66ef89ecbb7483b36959a5c3f3620174f0eaf5e55",
+      "bytes": 121581,
+      "initial_seal_classification": "not in inherited dirty-file seal; current exact source supplied, not inferred as newly added"
+    },
+    {
+      "path": "api-app/test/dispatch-admission.e2e-spec.ts",
+      "sha256": "da6ae029d8ade6c3e7cc67809e2d971d6585a5888c72d99b294f6fd0a920324f",
+      "bytes": 52285,
+      "initial_seal_classification": "not in inherited dirty-file seal; current exact source supplied, not inferred as newly added"
+    },
+    {
+      "path": "api-app/src/surfaces/bff/bff.module.ts",
+      "sha256": "8591bf48dbc3275cc24bb57b5c94d0e492dbd7c1c9aac9f7f58c91013a24cc8a",
+      "bytes": 6282,
+      "initial_seal_classification": "changed since exact pre-ST04 seal within admitted mutation scope"
+    },
+    {
+      "path": "api-app/src/integrations/message-templates/template-management.module.ts",
+      "sha256": "aabfb344eab0b244772f0a2a8066dbae71bb24973a0a498c69af676c17f0acdd",
+      "bytes": 595,
+      "initial_seal_classification": "unchanged inherited pre-ST04 bytes"
+    },
+    {
+      "path": "api-app/src/domain/channels/transport/channel-dependencies.spec.ts",
+      "sha256": "f59d838baf635c0ce0d1ebe725c88fbb0b19fac42e9b382452e31fd38e0511a3",
+      "bytes": 2383,
+      "initial_seal_classification": "unchanged inherited pre-ST04 bytes"
+    }
+  ],
+  "evidence_files": [
+    "all-result-e71-v1.1.json",
+    "all-source-recheck-e71-v1.1.json",
+    "browser-freshness-collection-e71-v1.1.json",
+    "test-quality-public-roots-e71-v1.1.json",
+    "capability-owner-evidence-e44-v1.1.json",
+    "producer-consumer-crosswalk-e71-v1.1.json",
+    "candidate-criterion-index-e71-v1.1.json",
+    "security-candidate-map-e71-v1.1.json",
+    "decision-module-candidate-map-e71-v1.1.json",
+    "test-causality-chronology-r1-v1.1.json",
+    "implementation-r1-resolution-v1.1.json",
+    "implementation-r2-r3-resolution-v1.1.json",
+    "additive-migration-assessment-e45-v1.1.json",
+    "local-activation-proof-plan-proposal-v1.1.json",
+    "final-diff-guard-boundary-proposal-v1.1.json",
+    "verification-debt-preclosure-e46-v1.1.json",
+    "context-rehydration-boundary-disclosure-e57-v1.1.json",
+    "implementation-review-collection-r4-r5-v1.1.json",
+    "image-build-attestation-e71-v1.1.json",
+    "implementation-r4-resolution-e71-v1.1.json",
+    "ci-parity-current-marker-e71-v1.1.json",
+    "current-synthetic-pcv-samples-e71-v1.1.json",
+    "candidate-source-preflight-e71-v1.1.json",
+    "candidate-source-preflight-e70-v1.1.json",
+    "all-result-e70-v1.1.json",
+    "api-result-e65-v1.1.json",
+    "api-result-e66-v1.1.json",
+    "all-result-e67-v1.1.json",
+    "all-result-e68-v1.1.json",
+    "all-result-e69-v1.1.json",
+    "remaining-failure-triage-e69-v1.1.json",
+    "pcv-eps-e71-v1.1.json",
+    "pcv-frc-e71-v1.1.json",
+    "pcv-bci-e71-v1.1.json",
+    "pcv-rls-e71-v1.1.json"
+  ],
+  "stage": "review-ready candidate",
+  "bytes": 956017
+}

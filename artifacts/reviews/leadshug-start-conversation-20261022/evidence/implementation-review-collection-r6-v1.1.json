@@ -1,0 +1,54 @@
+{
+  "kind": "Actual terminal independent r6 collection and root disposition",
+  "recorded_at_utc": "2026-10-23T05:08:44.112208+00:00",
+  "source_seal": "all-source-seal-e71-v1.1.json",
+  "reviews": [
+    {
+      "kind": "architecture_adherence",
+      "actual_session_id": 8723,
+      "actual_exit_code": 0,
+      "actual_turns": 1,
+      "actual_tools": 0,
+      "result": "implementation-architecture_adherence-r6-result-v1.1.json",
+      "result_sha256": "7ab3f292fbc7d812733225605b79e91489a76800b156965c086bd0b20ede00fa",
+      "finding_ids": [
+        "ARCH-ST04-R6-01"
+      ]
+    },
+    {
+      "kind": "test_quality_audit",
+      "actual_session_id": 81829,
+      "actual_exit_code": 0,
+      "actual_turns": 1,
+      "actual_tools": 0,
+      "result": "implementation-test_quality_audit-r6-result-v1.1.json",
+      "result_sha256": "8ac37114ee7c8ba04e838012b6531f764cf0128e05e1d86624fedf2b84112844",
+      "finding_ids": [
+        "F-035510C8",
+        "TQA-R6-01"
+      ]
+    },
+    {
+      "kind": "cutover_integrity_audit",
+      "actual_session_id": 21413,
+      "actual_exit_code": 0,
+      "actual_turns": 1,
+      "actual_tools": 0,
+      "result": "implementation-cutover_integrity_audit-r6-result-v1.1.json",
+      "result_sha256": "454787177a18cbe96e7ac6c77be468c2f4de0796e8c0a6ce903f3cc8f149fa54",
+      "finding_ids": [
+        "F-035510C8",
+        "F-91F64098",
+        "F-300A50BF"
+      ]
+    }
+  ],
+  "root_disposition": [
+    "Architecture accepts the three corrected r4 behaviors at the bounded synthetic level; new ARCH-ST04-R6-01 is source-confirmed by root, Integrated for a narrow managed-lifecycle timestamp writer fix with causal signed-webhook/real-PG proof before mutation. Keep message acceptance compatible; null trusted timestamp for unmanaged identity.",
+    "TQA-R6-01 is Integrated: required native deadlock statistics must not default missing/malformed data to zero. Add a focused failure regression before helper fix.",
+    "TQA r6 has useful material findings and actual terminal/schema output, but does not deliver its requested complete eight-section whole-workload assessment. It is NOT accepted as the full independent TQA gate. Obtain a complete fresh audit against the corrected candidate; exact five questions,267/current signals, command/platform/DI/CI, causal chronology and decisions must be substantive text within permitted JSON fields.",
+    "Cutover finds no new code cutover defect; its runtime/operator/module/fullguard/final delivery gates remain integrated and open. Repeated F-ids are qualified by review/source; no pending gate is silently closed.",
+    "Current E71 images and activation proposal are now historical candidate proof until the two new findings are corrected and fresh source-bound validation/images/reviews exist. No activation/private-inspection request is issued."
+  ],
+  "remaining": "InProgress/Pending; code release after exact test-only handoff/authority, immutable E71 receipts preserved."
+}

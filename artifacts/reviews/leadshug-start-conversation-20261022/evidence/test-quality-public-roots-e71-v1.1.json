@@ -1,0 +1,87 @@
+{
+  "kind": "Current full positive-public-root static TQA scan, not independent audit clearance",
+  "recorded_at_utc": "2026-10-23T04:56:28.459231+00:00",
+  "source_seal": "all-source-seal-e71-v1.1.json",
+  "command": [
+    "bash",
+    "delphi-ai/tools/test_quality_audit.sh",
+    "--path",
+    "api-app/src",
+    "--path",
+    "api-app/test",
+    "--path",
+    "web-app/src",
+    "--path",
+    "web-app/e2e"
+  ],
+  "exit_code": 2,
+  "heuristic_outcome": "high",
+  "raw_sha256": "253d7347be086d1a59de813523a020471be472a1e45dd8c3d7e34ac6146b4276",
+  "counts": {
+    "hard_bypass": 5,
+    "test_support": 0,
+    "auth_shortcut": 0,
+    "status_only": 201,
+    "no_exception_only": 4,
+    "ambient_subject_fallback": 21,
+    "di_override": 0,
+    "mock_hint": 36
+  },
+  "hard_bypass_disposition": [
+    {
+      "path": "api-app/src/domain/setor/setor.service.ts",
+      "sha256": "d8cb22d68452d1ab9ea9daa69fe9660d867612f81db8e9e9a7fb34a6e56cda84",
+      "lines": [
+        35
+      ],
+      "source_fact": "Prisma findMany argument skip beside take/orderBy; pagination offset, not a disabled/skipped test.",
+      "disposition": "False positive for hard test bypass; no source change needed."
+    },
+    {
+      "path": "api-app/src/domain/identity/usuarios.service.ts",
+      "sha256": "ff82f54a7aa6e495c5ce20626e88221fc20f4474a5ec84ff2f257b081f803364",
+      "lines": [
+        51
+      ],
+      "source_fact": "Prisma findMany argument skip beside take/orderBy; pagination offset, not a disabled/skipped test.",
+      "disposition": "False positive for hard test bypass; no source change needed."
+    },
+    {
+      "path": "api-app/src/domain/historico/atividades.service.ts",
+      "sha256": "9a081318375268d76839a83502d194bb12bfc1fb619a3cb6badab80c425d4609",
+      "lines": [
+        53
+      ],
+      "source_fact": "Prisma findMany argument skip beside take/orderBy; pagination offset, not a disabled/skipped test.",
+      "disposition": "False positive for hard test bypass; no source change needed."
+    },
+    {
+      "path": "api-app/src/domain/inbox/historico.service.ts",
+      "sha256": "811212eeb5b9e8318ef344eb6660385382707cb6d6882c5e9f84e8d4951ccfaa",
+      "lines": [
+        38,
+        101
+      ],
+      "source_fact": "Prisma findMany argument skip beside take/orderBy; pagination offset, not a disabled/skipped test.",
+      "disposition": "False positive for hard test bypass; no source change needed."
+    }
+  ],
+  "remaining_signals": "All267signals require individual current root adjudication and independent full TQA; actual high/exit2 is retained.",
+  "scope_boundary": "Only four explicit positive public source roots. No --scan-git-modified, actual env, .local-files, process inspection or root-wide Git discovery.",
+  "durable_raw": "test-quality-public-roots-output-e71-v1.1.txt",
+  "limits": "Current full E71 ALL0 with259source/93browser binding, not actual provider/runtime or audit clearance.",
+  "exact_test_focus_skip_crosscheck": {
+    "exit_code": 1,
+    "matches": 0,
+    "scope": "Same four complete positive public roots; supplemental, not narrowed replacement."
+  },
+  "actual_exit_code": 2,
+  "stdout_sha256": "253d7347be086d1a59de813523a020471be472a1e45dd8c3d7e34ac6146b4276",
+  "current_raw_summary": [
+    "Outcome heuristic: high",
+    "Counts: hard_bypass=5 test_support=0 auth_shortcut=0 status_only=201 no_exception_only=4 ambient_subject_fallback=21 di_override=0 mock_hint=36"
+  ],
+  "individual_inventory": "test-quality-signal-inventory-e71-v1.1.json",
+  "individual_dispositions": "test-quality-signal-dispositions-e71-v1.1.json",
+  "collection_note": "The first metadata collector stopped after the actual immutable scan/inventory on a TEST_ONLY_ROUTE versus printed test_support label mismatch. Finalized from the same original raw bytes and inventory with exact field mapping; no scan was rerun or source/rule edited and no PASS inferred."
+}

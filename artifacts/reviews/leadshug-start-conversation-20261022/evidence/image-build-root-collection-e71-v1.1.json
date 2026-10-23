@@ -1,0 +1,54 @@
+{
+  "kind": "Root independent exact public build/archive/log/offline inspection/freshness binding",
+  "recorded_at_utc": "2026-10-23T05:05:23.960604+00:00",
+  "source_seal": "all-source-seal-e71-v1.1.json",
+  "source_fingerprint": "4f35237f1d6aaf55f98e129631e17184d8f5b196249f6c56c10f210add52daf4",
+  "actual_builds_exit0": true,
+  "file_checks": [
+    {
+      "service": "api",
+      "kind": "archive",
+      "sha256": "2bdcff1fd5f8b53fb1e232bbde475883b0f0a8e353ca21ea7439113bddfd2286",
+      "matches": true
+    },
+    {
+      "service": "api",
+      "kind": "build_stdout",
+      "sha256": "11798d2a39d8f216c469363acc1f8651120d72c4490ed9e35725bb0d2ae7a784",
+      "matches": true
+    },
+    {
+      "service": "web",
+      "kind": "archive",
+      "sha256": "959355f4dfc16824cdc8a83632dfda673c8ba71a7d8170d055164e89180152c7",
+      "matches": true
+    },
+    {
+      "service": "web",
+      "kind": "build_stdout",
+      "sha256": "3147b2fa0ea14f807999787fd31241ba9b848d6c0678a92678af20f2db46b7ad",
+      "matches": true
+    },
+    {
+      "service": "api",
+      "kind": "inspectionReceipt",
+      "sha256": "4de4b00db86f475603e4a28f0e40152bee8d1822d4917ab3b3dbbeab0bd64b2f",
+      "matches": true
+    },
+    {
+      "service": "api",
+      "kind": "metadataReceipt",
+      "sha256": "924449dca0e9851de8fb4c53ede0c0e7cda8834bfaa59ae89c43ef1d82a99f42",
+      "matches": true
+    },
+    {
+      "service": "web",
+      "kind": "inspectionReceipt",
+      "sha256": "ffe0df470a936034f3e83663d17f8cbf6f9b4bb129dc85bd11e9cd18ce13e9ba",
+      "matches": true
+    }
+  ],
+  "schema_migration_current_hashes_match": true,
+  "served_dist_offline_web_bundle_equal": true,
+  "limits": "Owned image outputs only. No application entrypoint, DB/provider/private config or preserved runtime inspection."
+}

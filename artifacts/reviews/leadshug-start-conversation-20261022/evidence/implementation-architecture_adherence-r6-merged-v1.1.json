@@ -1,0 +1,42 @@
+{
+  "schema_version": "subagent-review-merge-v2",
+  "artifact_kind": "subagent_review_merge",
+  "authoritative": false,
+  "edit_policy": "derived_merge_packet",
+  "dispatch_path": "/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/artifacts/reviews/leadshug-start-conversation-20261022/evidence/implementation-architecture_adherence-r6-dispatch-v1.1.json",
+  "review_kind": "architecture_adherence",
+  "review_count": 1,
+  "reviewer_labels": [
+    "independent-no-context-architecture-r6"
+  ],
+  "highest_finding_severity": "medium",
+  "axis_summary": {
+    "performance": "acceptable",
+    "elegance": "acceptable",
+    "structural_soundness": "mixed",
+    "operational_fit": "mixed"
+  },
+  "recommended_paths": [
+    "Add the narrow managed-resource timestamp protection and capture a causal signed-webhook/PostgreSQL regression before fixing it. Revalidate the affected behavior against a sealed candidate and obtain the required independent assessments. Preserve the three r4 resolutions. Implementation readiness must remain conditional until the new finding is resolved. Keep F-91F64098, F-300A50BF and F-035510C8 open for their recorded delivery gates: preserved-runtime migration/health/provenance, assisted own-channel sends and replies, module consolidation, separately authorized canonical diff inspection, and final assurance/closure. Refresh the activation proposal's historical E64 image/source references to the selected corrected candidate before presenting it for approval. E71 offline images and synthetic GREEN do not authorize activation or establish delivery; remote CI is not an additional required gate for this local-only scope."
+  ],
+  "exact_next_step": "Record reviewer resolutions in the governing TODO using the machine-checkable resolution table or equivalent gate ledger, then extract the derived resolution packet and decide whether another bounded review pass is still required.",
+  "findings": [
+    {
+      "finding_id": "F-CF091066",
+      "severity": "medium",
+      "title": "Trusted timestamp persistence does not require a managed resource identity",
+      "rationale": "SCOPE-03 and D-04 require officialInboundAt to originate from a signed, verified Meta IN event for a managed resource. MetaWebhookController checks the signature, current association and own-number verification, but never checks identity.managedLifecycle before forwarding the timestamp. MessageAcceptanceService.lockAndValidateCurrentIdentity likewise omits managedLifecycle, while qualifiedOfficialTimestamp checks only direction, origin and date validity. Consequently, a currently associated, verified identity with managedLifecycle=false satisfies the supplied writer code and receives a non-null trusted timestamp. Resolver-side managedLifecycle checks prevent immediate dispatch through that identity, but do not repair the stored provenance; a subsequent transition to managed status could make that previously unqualified timestamp eligible. This is a source-confirmed missing predicate, not a reproduced public exploit. Exploitability depends on the lifecycle state being reachable; the package supplies no invariant excluding it. The affected boundary is trusted-window provenance, rather than cross-tenant access.",
+      "suggested_action": "Qualify timestamp persistence using managedLifecycle from the existing locked identity validation boundary. Preserve compatible message acceptance by storing officialInboundAt=null when this qualification fails. Add a signed-webhook/real-PG regression with an unmanaged but currently associated and verified identity: retain the Message, persist no trusted timestamp, and demonstrate that later management activation cannot open the window from that row. Retain the managed positive case and existing malformed/future/duplicate cases, then provide current source-bound regression evidence.",
+      "reviewer_labels": [
+        "independent-no-context-architecture-r6"
+      ],
+      "source_finding_ids": [
+        "ARCH-ST04-R6-01"
+      ],
+      "category": "adherence",
+      "formalizable_hint": "yes",
+      "candidate_rule_level": "project",
+      "candidate_rule_id": "n/a"
+    }
+  ]
+}

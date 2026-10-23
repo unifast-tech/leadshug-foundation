@@ -1,0 +1,72 @@
+{
+  "evidenceType": "local-public-image-build-and-offline-inspection",
+  "run": "E71",
+  "sourceSeal": "all-source-seal-e71-v1.1.json",
+  "sourceFingerprint": "4f35237f1d6aaf55f98e129631e17184d8f5b196249f6c56c10f210add52daf4",
+  "builds": {
+    "api": {
+      "sessionId": 14009,
+      "exitCode": 0,
+      "command": "docker.exe build --tag leadshug-stcon04-api:e71 - < /tmp/stcon04-build-context-api-e71.tar",
+      "archiveSha256": "2bdcff1fd5f8b53fb1e232bbde475883b0f0a8e353ca21ea7439113bddfd2286",
+      "stdoutPath": "/tmp/stcon04-image-build-api-e71.txt",
+      "stdoutSha256": "11798d2a39d8f216c469363acc1f8651120d72c4490ed9e35725bb0d2ae7a784",
+      "imageId": "sha256:9bd3b525c0b3f8cc611964bd080ff74e39ba04bc2027b14e2d4023edfba0bdea",
+      "platform": "linux/amd64",
+      "entrypoint": ["/entrypoint.sh"],
+      "cmd": ["node", "dist/main.js"],
+      "workingDirectory": "/app"
+    },
+    "web": {
+      "sessionId": null,
+      "exitCode": 0,
+      "command": "docker.exe build --tag leadshug-stcon04-web:e71 - < /tmp/stcon04-build-context-web-e71.tar",
+      "archiveSha256": "959355f4dfc16824cdc8a83632dfda673c8ba71a7d8170d055164e89180152c7",
+      "stdoutPath": "/tmp/stcon04-image-build-web-e71.txt",
+      "stdoutSha256": "3147b2fa0ea14f807999787fd31241ba9b848d6c0678a92678af20f2db46b7ad",
+      "imageId": "sha256:9787da8f734123e4f2875ce9b47c7bb23b45a8d64bbba98a830d51dd05f9f53b",
+      "platform": "linux/amd64",
+      "entrypoint": ["/docker-entrypoint.sh"],
+      "cmd": ["nginx", "-g", "daemon off;"],
+      "workingDirectory": "/"
+    }
+  },
+  "offlineInspection": {
+    "network": "none",
+    "filesystem": "read-only",
+    "entrypointOverridden": true,
+    "applicationEntrypointStarted": false,
+    "api": {
+      "inspectionReceipt": {"path": "/tmp/stcon04-image-inspect-api-e71.txt", "sha256": "4de4b00db86f475603e4a28f0e40152bee8d1822d4917ab3b3dbbeab0bd64b2f"},
+      "metadataReceipt": {"path": "/tmp/stcon04-image-inspect-metadata-e71.txt", "sha256": "924449dca0e9851de8fb4c53ede0c0e7cda8834bfaa59ae89c43ef1d82a99f42"},
+      "nodeVersion": "v22.23.3",
+      "prismaClientVersion": "6.19.3",
+      "distMainJsSha256": "4939123b00a86d0fb47ed2483ee13cb8ec0fbc374e565653c32724e920c2b9f0",
+      "initialMessageServiceJsSha256": "702084dc0a0135af7d31fef56e342145e7925aafc65594eafa20112e8e012b16",
+      "outboundServiceJsSha256": "3ac0314c34de5bdb33b48e90cb52ddcad849fb1697af5cf34e7e8135b3e558a5",
+      "dispatchAdmissionServiceJsSha256": "fdc8586bd835931c11fcfd541db58a32b90ff6515d244b32474a5d88ea495dc1",
+      "prismaSchemaSha256": "19ea60e6e5a1675a4ff12581237b2f91c2359b61d7b8bcb9e8bf1c1ebf26435d",
+      "initialMessageAdmissionsMigrationSha256": "41df36b473c3163e9e29ea1cc6c12df3376994081698be83c83e50a812e3922a",
+      "distJsCount": 106,
+      "allDistJsManifestAggregateSha256": "c764480b019e7628863f5f9170a1cb510ed0dc28768a5a5168f89afdfba6b59d"
+    },
+    "web": {
+      "inspectionReceipt": {"path": "/tmp/stcon04-image-inspect-web-e71.txt", "sha256": "ffe0df470a936034f3e83663d17f8cbf6f9b4bb129dc85bd11e9cd18ce13e9ba"},
+      "indexHtmlSha256": "cf24ab6c9ad71d0260042ff483c208f8e087aac7ef14c3f0c9ead052831656dc",
+      "bundlePath": "/usr/share/nginx/html/assets/index-DPFJ9ybt.js",
+      "bundleSha256": "f8e97efa6777dbc496b74cd527b1bae78e7766e4a4d58f752f7816cb62444343",
+      "equalsCurrentServedAndDistBundle": true
+    }
+  },
+  "freshness": {
+    "attestationPath": "/tmp/stcon04-browser-attestation-e71.json",
+    "attestationSha256": "39a2836c0d50c6845cb7833f46ba2e7b6f6e45bda0b9af101bcc280306ac73cd",
+    "servedBundleSha256": "f8e97efa6777dbc496b74cd527b1bae78e7766e4a4d58f752f7816cb62444343",
+    "distBundleSha256": "f8e97efa6777dbc496b74cd527b1bae78e7766e4a4d58f752f7816cb62444343"
+  },
+  "limitations": [
+    "No application entrypoint was started.",
+    "No Compose, private env/input, database, provider, tunnel, or preserved runtime was used.",
+    "Build artifacts are local; no deployment or delivery claim is made."
+  ]
+}

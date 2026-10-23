@@ -1,0 +1,30 @@
+{
+  "kind": "E71 same-scope partial-index correction after actualE70planRED",
+  "recorded_at_utc": "2026-10-23T04:29:26.411256+00:00",
+  "source_seal": "all-source-seal-e71-v1.1.json",
+  "source_fingerprint": "4f35237f1d6aaf55f98e129631e17184d8f5b196249f6c56c10f210add52daf4",
+  "exact_delta": [
+    "api-app/prisma/schema.prisma",
+    "api-app/prisma/migrations/20261022150000_initial_message_admissions/migration.sql",
+    "api-app/test/initial-message.e2e-spec.ts",
+    "api-app/test/dispatch-admission.e2e-spec.ts"
+  ],
+  "HOW": "Replace sameone full admission ordering index with (conversation_id,created_atDESC,idDESC,bu_id) WHERE released_atISNULL. Bothactualconsumersalreadyemitexactliteralpredicate; conversation-wideinterlockandBUreadscopeunchanged. RemovePrismaunfilteredindexdeclaration, addexplicitSQL-onlyschemaannotationunderexistingpinnedprojectconvention.",
+  "unchanged": [
+    "Allotherquota/uniqueindexes, migration5slock/60sstatementbounds, alreadydeliveredhistory. OnlydisposableST04migrationamended.",
+    "E70dataset256active+2048released, actualproducercontext, actualSQL/params/EXPLAINcosts/buffers, strictnoSort/\u226411limits, allprovider/Message/sessionoracles.",
+    "Currentclaim/window/pins/actor/recoveryproductionbytesexactE69; all38protected exact."
+  ],
+  "actual_causal_basis": "E66pre-fixscan andE70actualdefaultplannerfullindex+2304sort; no pretense that current partial index already works. Newnativeindexdefinitiontestexpects partialpredicate explicitly; oldstalenativeassert aligned, no assertionsremoved.",
+  "primary_sources": [
+    {
+      "url": "https://www.postgresql.org/docs/16/indexes-partial.html",
+      "support": "Partial indexes retain rows satisfying predicate; query must imply matching predicate. Here released_atISNULL is literalinbothqueries, not a parameterized inequality."
+    },
+    {
+      "url": "https://www.postgresql.org/docs/16/indexes-ordering.html",
+      "support": "B-tree matchingORDER BY/LIMIT can avoid explicit allrowsort. Proposed shape remains subject to actualdefaultplannermeasurement."
+    }
+  ],
+  "authority": "SameapprovedboundedperformanceHOW, no newpubliccontract/state/provider/retry/lockorder or preservedDBaction. Freshnormal/routingGOE71 actualexit0; fullALLpending."
+}
