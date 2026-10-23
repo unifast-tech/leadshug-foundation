@@ -46,12 +46,12 @@ Este v1.1 substitui a autoridade ativa da minuta revisada em 2026-10-19. O origi
 
 - **Current delivery stage:** `Pending`
 - **Qualifiers:** `none`
-- **Next exact step:** implementar as correções de claim/concorrência e índices sustentadas pela reprodução E66, preservando a ordem de locks aprovada; novo API/ALL, provas de janela/pinning/plano e revisão antes de qualquer ativação.
+- **Next exact step:** concluir a correção do relógio da fixture de sessão e do índice compartilhado pelas duas consultas de admissões, com histórico representativo; reseal e ALL antes da revisão/imagens/ativação.
 
 ## Active Work State (Required While TODO Remains In `active/`)
 
 - **Work state:** `implementation`
-- **Why this state now:** E64 regressão completa/imagens e correções r1/r2/r3 passaram; TQA r5 completo e cutover r4 aceitam o candidato sintético com gates operacionais pendentes. Arquitetura/segurança r4 identificou3novos release-blockers de claim/locks/consulta. E65 reproduziu autorização após janela expirada, envio após rotação de credencial e dois deadlocks com refresh ST05. E66 reparou somente o suporte: confirmou1POST após expiração/rotação e os2deadlocks; EXPLAIN real examinou/ordenou2048tentativas e256admissões paraLIMIT11. Unit368pass/PG444pass+5falhas; full259postseal confere E66 test-only. Correções mesmascope autorizadas sob GOE67; nenhuma delas validada ainda. Nenhuma ativação real/entrega.
+- **Why this state now:** E64 regressão completa/imagens e correções r1/r2/r3 passaram; TQA r5 completo e cutover r4 aceitam o candidato sintético com gates operacionais pendentes. Arquitetura/segurança r4 identificou3novos release-blockers de claim/locks/consulta. E65 reproduziu autorização após janela expirada, envio após rotação de credencial e dois deadlocks com refresh ST05. E66 reparou somente o suporte: confirmou1POST após expiração/rotação e os2deadlocks; EXPLAIN real examinou/ordenou2048tentativas e256admissões paraLIMIT11. Unit368pass/PG444pass+5falhas; full259postseal confere E66 test-only. Correções mesmascope sob GOE67; E67parou no lint e E68no import, sem testes. E69lint/build+368unit passaram e PG449/451:6provas novas confirmaram janela/pins/zero-deadlock; restam2casos de sessão/consulta. Web/browser não alcançados; nenhuma regressão completa/imagem corrente/ativação reivindicada. Nenhuma ativação real/entrega.
 - **Exit condition:** implementação e todas as evidências/reviews/gates de entrega aprovados; estágio continua Pending até os critérios locais reais, sem claim de entrega por aprovação.
 
 ## Scope

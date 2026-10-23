@@ -1,0 +1,59 @@
+{
+  "kind": "E67 root preflight of corrected source before actual canonicalALL; not test/compiler proof",
+  "recorded_at_utc": "2026-10-23T04:02:52.648640+00:00",
+  "source_seal": "all-source-seal-e67-v1.1.json",
+  "source_fingerprint": "1b28cbefb2822c112cedcc7ecd04a0edac36e2946a9801b77dc41f727a6b4705",
+  "full_public_count": 259,
+  "protected_exact_count": 38,
+  "changed_sources": [
+    {
+      "path": "api-app/prisma/migrations/20261022150000_initial_message_admissions/migration.sql",
+      "sha256": "10c3ee59b49e936bc0c85ac054467424dc8ed02bcc0ce158e33d6ceadc5c2685"
+    },
+    {
+      "path": "api-app/prisma/schema.prisma",
+      "sha256": "99b78f0108af3b8d462bcf1c04e8eb8b82c3a549ec0bdec4708030a424644677"
+    },
+    {
+      "path": "api-app/src/domain/inbox/dispatch-admission.service.spec.ts",
+      "sha256": "687345771d8394ef8317142f38736876e730fc28cfdddd974a0fdd363fa7b78d"
+    },
+    {
+      "path": "api-app/src/domain/inbox/dispatch-admission.service.ts",
+      "sha256": "2c3e19f9bcacd75d047ee73e5913ad77e9a8700a43427af27556b801234bcda9"
+    },
+    {
+      "path": "api-app/src/domain/inbox/outbound.service.ts",
+      "sha256": "cb4b2e68c7377411991960c65e3d15cef8bc1aea927049cd99345e523433bd9f"
+    },
+    {
+      "path": "api-app/src/integrations/channels/prisma-channel-resolver.ts",
+      "sha256": "bd6b455d06fd6a5c2b4f09ca7d15ea4a55670a0555abc2744309c68072b6e943"
+    },
+    {
+      "path": "api-app/src/surfaces/bff/conversations.controller.ts",
+      "sha256": "06df1f94db638605b886e5291cb55800a8374d30d3cdc266070d657b8141f7a2"
+    },
+    {
+      "path": "api-app/test/dispatch-admission.e2e-spec.ts",
+      "sha256": "e788f4efdef0c240b978f1b05e7aaece890fa74a678160bb6bf8733a65d929c5"
+    },
+    {
+      "path": "api-app/test/initial-message.e2e-spec.ts",
+      "sha256": "a18e7b15cc3e012c484536c4dc73b0e78853a07e2f87fa822cec6c9d033dec8d"
+    }
+  ],
+  "source_assessment": [
+    "DispatchClaimEligibility is internal admission/outbound boundary; Channel public union/single method unchanged. Shared ordinary/initial SENDING SQL includes strict trusted expiresAt DBclock condition plus original lease/owner/slot predicates.",
+    "One existing policy provides expiry. Resolver pins active BU readiness, channel and official credential rows NOWAIT through claimcommit, validates scoped tuple; identity\u2192contact\u2192conversation\u2192intent relative order preserved. Current actor/session/grant SHARE NOWAIT remains separate and throws translated conflict so SQL failure causes rollback, no query continuation.",
+    "Accepted-local/recovery actor fence refuses contention; receipt remains separately persisted before local acceptance and uses existing localblocked recovery without provider retry.",
+    "Two exact ordered schema/migration indexes follow observedE66 SELECT/order; all quota/unique indexes retained. Only isolated-disposable150000 amendment; accepted prior history unchanged.",
+    "Independent post-policy and post-resolver test barriers invoke real implementations and use DB clock/actual waiting row updates. Direct ordinary SQL-boundary probe distinguishes claim state, not network. Existing legacy outcomes and protected fixtures unchanged."
+  ],
+  "preseal_repairs": [
+    "Mutable holder avoids closure-narrowing; static support correction only, never called actualcompileRED.",
+    "BU pin test initially forced zeroPOST after postcommit deactivation; before any execution corrected to truthful onePOST with exact201success or503knownlocalblocked receipt/Message/slot branches. Credential test uses same outcome discipline."
+  ],
+  "causal_classification": "E65/E66 actual failures precede product fixes. New orthogonal finalCAS/pinning oracles added alongside fixes; no retroactive testfirst/reversion claim. All validation remains pending until actual terminal.",
+  "next": "CanonicalALL under fresh normal authority/routing, frozen source, actual full postseal and current browser attestation if reached. No preserved runtime/real WhatsApp/private inspection."
+}

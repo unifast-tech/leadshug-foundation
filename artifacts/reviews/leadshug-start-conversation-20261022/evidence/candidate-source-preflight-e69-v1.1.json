@@ -1,0 +1,10 @@
+{
+  "kind": "E69 import-only compile repair before actualALL",
+  "recorded_at_utc": "2026-10-23T04:07:25.099870+00:00",
+  "source_fingerprint": "52e0b344787961f7fed4a4cbeed9fbfd94898d226b0f487f871e447cfc43750a",
+  "source_seal": "all-source-seal-e69-v1.1.json",
+  "only_delta": "api-app/src/surfaces/bff/conversations.controller.ts",
+  "sha256": "0967a901f8fca2fb275c1423a5ccd4d3185b9f55544862d3565c91bb528f19f3",
+  "change": "Add missing Nest ConflictException import; statement/branch/schema/test logic unchanged fromE68. Exact-file diffcheck passed, other changed-symbol imports statically inspected.",
+  "limits": "Full259seal/all38protectedexact; actual build/unit/PG/browser results still pending."
+}

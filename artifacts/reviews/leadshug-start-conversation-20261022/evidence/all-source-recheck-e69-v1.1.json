@@ -1,0 +1,12 @@
+{
+  "checkpoint": "E69 terminal full positive source recheck",
+  "stage": "After actual executor terminal and owned cleanup; BEFORE writer release",
+  "count": 259,
+  "fingerprint": "52e0b344787961f7fed4a4cbeed9fbfd94898d226b0f487f871e447cfc43750a",
+  "matches_preseal_full_inventory_and_bytes": true,
+  "record_reference": "all-source-seal-e69-v1.1.json#records",
+  "stdout_sha256": "5a17290d222549da5ff118081a74d4a20fd81becdbaec83050e73fddbfbc107f",
+  "executor_reported_exit_code": 1,
+  "recorded_at_utc": "2026-10-23T04:14:33.818512+00:00",
+  "boundary": "Only declared positive public roots and7 exact publicfiles; no actual env/data/process inspection."
+}

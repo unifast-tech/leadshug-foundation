@@ -1,0 +1,29 @@
+{
+  "checkpoint": "E67 canonicalALL stops at actual lint support failure",
+  "recorded_at_utc": "2026-10-23T04:05:28.321760+00:00",
+  "command": "bash scripts/test-channels-local.sh all",
+  "executor_session_id": 34033,
+  "exit_code": 1,
+  "stdout_sha256": "647e4c04b33d432e9fb015022bcd062ea1c36f1d3c860ef5c5b39b68659700a9",
+  "source_fingerprint": "1b28cbefb2822c112cedcc7ecd04a0edac36e2946a9801b77dc41f727a6b4705",
+  "full259source_postseal": true,
+  "owned_cleanup_observed": true,
+  "phases": {
+    "prisma_generation": "completed",
+    "disposable_migrations": {
+      "completed": 28,
+      "status": "Database schema is up to date",
+      "limits": "Schema/migration execution only; new plan/race assertions not reached."
+    },
+    "api_lint": {
+      "status": "failed",
+      "path": "api-app/test/initial-message.e2e-spec.ts",
+      "line": 879,
+      "rule": "@typescript-eslint/no-unused-vars",
+      "message": "expiryActorId assigned but never used"
+    },
+    "api_build_unit_postgresql_web_browser": "not reached"
+  },
+  "classification": "Actual lint/test-support failure, not behavior RED or corrected GREEN; no browser freshness or provider proof.",
+  "next": "Remove unused variable binding only, preserve awaited user creation; resealE68 and canonicalALL."
+}

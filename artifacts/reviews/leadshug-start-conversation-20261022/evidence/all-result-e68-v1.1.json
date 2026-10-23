@@ -1,0 +1,25 @@
+{
+  "checkpoint": "E68 canonicalALL actual API compile failure",
+  "recorded_at_utc": "2026-10-23T04:07:25.099870+00:00",
+  "command": "bash scripts/test-channels-local.sh all",
+  "executor_session_id": 92893,
+  "exit_code": 1,
+  "stdout_sha256": "45e7750cae294741d8cfb29f878e750ec6dceb8ce1a91c9e9d6bfca55bce3c25",
+  "source_fingerprint": "e0a9bd5a0833e5cabdb780ca9a0fb74dd732b7ce8660e2d317a1327842204b52",
+  "full259source_postseal": true,
+  "owned_cleanup_observed": true,
+  "phases": {
+    "disposable_migrations": "applied/status passed",
+    "api_lint": "passed",
+    "api_build": {
+      "status": "failed",
+      "code": "TS2304",
+      "path": "api-app/src/surfaces/bff/conversations.controller.ts",
+      "line": 220,
+      "message": "Cannot find name ConflictException"
+    },
+    "api_unit_postgresql_web_browser": "not reached"
+  },
+  "classification": "Actual compile/import failure; no corrected behavior result, provider or browser proof.",
+  "next": "Import existing Nest ConflictException symbol only, no code-logic change; resealE69/canonicalALL."
+}

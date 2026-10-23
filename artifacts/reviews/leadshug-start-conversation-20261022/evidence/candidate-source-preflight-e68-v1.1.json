@@ -1,0 +1,10 @@
+{
+  "kind": "E68 actual-lint support-only correction before canonicalALL",
+  "recorded_at_utc": "2026-10-23T04:05:28.321760+00:00",
+  "source_fingerprint": "e0a9bd5a0833e5cabdb780ca9a0fb74dd732b7ce8660e2d317a1327842204b52",
+  "source_seal": "all-source-seal-e68-v1.1.json",
+  "only_delta": "api-app/test/initial-message.e2e-spec.ts",
+  "sha256": "44944b44d2c0b61fa87567c98332308a52252fde9f6e3ca744723b857013c5a8",
+  "change": "Remove unused expiryActorId binding, keep actual awaited user fixture creation/session expiry flow. Production/schema/migration and all other test bytes exactE67.",
+  "limits": "Static diffcheck only; no compile/tests result yet. Same approved bounded HOW; full259seal/all38protected exact."
+}

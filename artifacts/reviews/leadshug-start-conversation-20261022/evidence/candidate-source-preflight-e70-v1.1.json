@@ -1,0 +1,19 @@
+{
+  "kind": "E70 bounded index refinement and faithful session/performance fixture preflight; actual validation pending",
+  "recorded_at_utc": "2026-10-23T04:19:49.099445+00:00",
+  "source_seal": "all-source-seal-e70-v1.1.json",
+  "source_fingerprint": "0867ad4ad9eefb75d2a9d7ea7a1a04db605fd49c2364549c6774d876e5c1286a",
+  "exact_delta": [
+    "api-app/prisma/migrations/20261022150000_initial_message_admissions/migration.sql",
+    "api-app/prisma/schema.prisma",
+    "api-app/test/initial-message.e2e-spec.ts"
+  ],
+  "decisions": [
+    "Retain one active-admission index, order conversation/released/createdDESC/idDESC/BU to serve both scoped options and conversation-wide conflict lookup. Preserve whole-conversation exclusion and every existingquota/unique index. Same admittedschema/disposable-only150000 migration;5s/60s unchanged.",
+    "Actual real producer context from existing prepareInitial seeds representative rows. Keep256active admissions, add2048released history; released attempts/admissions2hoursold avoid independently testing quota refusal before intended conflict query. No quota bypass or result weakening.",
+    "Defaultplanner, actualPrismaSQL/params, native indexdef and plan costs/rows/buffers captured. Original noSort/\u226411strictoracles remain, extended to actualconflictPOST query with same10/truncation andzeroactualport/Messageeffects. HistoricalE69small-table scan retained; no universal planner/latency claim.",
+    "Existing SessionService explicit-clock seam used only after phoneGETbarrier. Real signed verifier called with future time; provider clock untouched. Retain409exactcode/zeroPOST/OUT plusnewactualexpiredclockcall and persistedREJECTED/nodispatch/releasedslot proofs. ProtectedSessionService unchanged."
+  ],
+  "causality": "E65/E66 are actual pre-fix claim/lock/planRED. E67lint andE68import failures are distinct. E69actual6raceprobes passed; representative-volume/clock fixes added after genuine support mismatch, no retroactive testfirst or new-volume causalRED claim.",
+  "scope": "Same approved WHAT/lockorder/publiccontract; exact3sourcechanges. Currentfixed claim sources unchangedE69. No preservedruntime/private/provider access; all38protected exact."
+}

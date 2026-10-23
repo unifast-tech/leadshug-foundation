@@ -1,0 +1,140 @@
+{
+  "checkpoint": "E69 corrected races pass actualPG; fullALL stops on two remaining test cases",
+  "recorded_at_utc": "2026-10-23T04:15:50.161738+00:00",
+  "command": "bash scripts/test-channels-local.sh all",
+  "executor_session_id": 76889,
+  "exit_code": 1,
+  "stdout_sha256": "5a17290d222549da5ff118081a74d4a20fd81becdbaec83050e73fddbfbc107f",
+  "source_fingerprint": "52e0b344787961f7fed4a4cbeed9fbfd94898d226b0f487f871e447cfc43750a",
+  "full259source_postseal": true,
+  "owned_cleanup_observed": true,
+  "phases": {
+    "api_lint_build": "passed",
+    "api_unit": {
+      "passed_files": 34,
+      "passed_tests": 368
+    },
+    "postgresql": {
+      "passed_files": 32,
+      "failed_files": 1,
+      "passed_tests": 449,
+      "failed_tests": 2,
+      "total_tests": 451
+    },
+    "web_browser": "not reached"
+  },
+  "actual_claim_probes": {
+    "ST04_FINAL_WINDOW_CAS": {
+      "inspectedOpen": true,
+      "expiresAt": "2026-10-23T04:09:30.153Z",
+      "databaseClockExpired": true,
+      "databaseNow": "2026-10-23T04:09:30.155Z",
+      "postsDeltaWhilePaused": 0,
+      "postsDelta": 0,
+      "outMessagesDelta": 0,
+      "finalState": "REJECTED",
+      "leaseBudgetMs": 90000
+    },
+    "ST04_CREDENTIAL_PIN": {
+      "validationSucceeded": true,
+      "credentialUpdateWaited": true,
+      "credentialVersionAdvanced": true,
+      "postsDeltaWhilePinned": 0,
+      "postsDelta": 1,
+      "outMessagesDelta": 1,
+      "sendStatus": 201,
+      "finalState": "SUCCEEDED"
+    },
+    "ST04_BU_READINESS_PIN": {
+      "validationSucceeded": true,
+      "readinessUpdateWaited": true,
+      "postsDeltaWhilePinned": 0,
+      "postsDelta": 1,
+      "outMessagesDelta": 0,
+      "sendStatus": 503,
+      "buStatusAfterUpdate": "INATIVO",
+      "intentState": "EXTERNAL_ACCEPTED_LOCAL_BLOCKED",
+      "receiptState": "RECORDED"
+    },
+    "ST04_ST05_CLAIM_OVERLAP": {
+      "st05WaitedOnChannel": true,
+      "actorGrantWaitObserved": false,
+      "refreshStatus": 200,
+      "sendStatus": 409,
+      "deadlocksDelta": 0,
+      "postsDelta": 0,
+      "outMessages": 0,
+      "intentState": "REJECTED",
+      "receiptState": "NONE"
+    },
+    "ST04_ST05_LOCAL_OVERLAP": {
+      "st05WaitedOnChannel": true,
+      "actorGrantWaitObserved": false,
+      "refreshStatus": 200,
+      "sendStatus": 503,
+      "deadlocksDelta": 0,
+      "postsDelta": 1,
+      "localOutMessages": 0,
+      "intentState": "EXTERNAL_ACCEPTED_LOCAL_BLOCKED",
+      "receiptState": "RECORDED"
+    },
+    "ST04_ORDINARY_FINAL_WINDOW_CAS": {
+      "capturedEligible": true,
+      "databaseWindowExpiredBeforeClaimUpdate": true,
+      "claimGranted": false,
+      "state": "PREPARED",
+      "dispatchDeadlineAt": null,
+      "releasedAt": null
+    }
+  },
+  "actual_options_plans": {
+    "recent": {
+      "sql": "SELECT \"public\".\"initial_message_intents\".\"id\", \"public\".\"initial_message_intents\".\"conversation_id\", \"public\".\"initial_message_intents\".\"bu_id\", \"public\".\"initial_message_intents\".\"actor_id\", \"public\".\"initial_message_intents\".\"idempotency_key\", \"public\".\"initial_message_intents\".\"owner_nonce\", \"public\".\"initial_message_intents\".\"request_fingerprint\", \"public\".\"initial_message_intents\".\"request\", \"public\".\"initial_message_intents\".\"selected_context\", \"public\".\"initial_message_intents\".\"state\"::text, \"public\".\"initial_message_intents\".\"lease_expires_at\", \"public\".\"initial_message_intents\".\"dispatch_deadline_at\", \"public\".\"initial_message_intents\".\"external_message_id\", \"public\".\"initial_message_intents\".\"slot_released_at\", \"public\".\"initial_message_intents\".\"risk_acknowledged_at\", \"public\".\"initial_message_intents\".\"risk_acknowledged_by_actor_id\", \"public\".\"initial_message_intents\".\"created_at\", \"public\".\"initial_message_intents\".\"updated_at\" FROM \"public\".\"initial_message_intents\" WHERE (\"public\".\"initial_message_intents\".\"conversation_id\" = $1 AND \"public\".\"initial_message_intents\".\"bu_id\" = $2) ORDER BY \"public\".\"initial_message_intents\".\"created_at\" DESC, \"public\".\"initial_message_intents\".\"id\" DESC LIMIT $3 OFFSET $4",
+      "params": [
+        "214f905c-9334-47c5-94de-fb3778b036f4",
+        "56dcbba4-a397-4f25-96d6-b7cf03b3e8af",
+        11,
+        0
+      ],
+      "nodeTypes": [
+        "Limit",
+        "Index Scan"
+      ],
+      "scannedRows": 11
+    },
+    "active": {
+      "sql": "SELECT \"public\".\"dispatch_admissions\".\"id\", \"public\".\"dispatch_admissions\".\"conversation_id\", \"public\".\"dispatch_admissions\".\"bu_id\", \"public\".\"dispatch_admissions\".\"caller\"::text, \"public\".\"dispatch_admissions\".\"actor_id\", \"public\".\"dispatch_admissions\".\"owner_nonce\", \"public\".\"dispatch_admissions\".\"selected_context\", \"public\".\"dispatch_admissions\".\"state\"::text, \"public\".\"dispatch_admissions\".\"expires_at\", \"public\".\"dispatch_admissions\".\"dispatch_deadline_at\", \"public\".\"dispatch_admissions\".\"released_at\", \"public\".\"dispatch_admissions\".\"risk_acknowledged_at\", \"public\".\"dispatch_admissions\".\"risk_acknowledged_by_actor_id\", \"public\".\"dispatch_admissions\".\"created_at\", \"public\".\"dispatch_admissions\".\"updated_at\" FROM \"public\".\"dispatch_admissions\" WHERE (\"public\".\"dispatch_admissions\".\"conversation_id\" = $1 AND \"public\".\"dispatch_admissions\".\"bu_id\" = $2 AND \"public\".\"dispatch_admissions\".\"released_at\" IS NULL) ORDER BY \"public\".\"dispatch_admissions\".\"created_at\" DESC, \"public\".\"dispatch_admissions\".\"id\" DESC LIMIT $3 OFFSET $4",
+      "params": [
+        "214f905c-9334-47c5-94de-fb3778b036f4",
+        "56dcbba4-a397-4f25-96d6-b7cf03b3e8af",
+        11,
+        0
+      ],
+      "nodeTypes": [
+        "Limit",
+        "Sort",
+        "Seq Scan"
+      ],
+      "scannedRows": 256
+    }
+  },
+  "remaining_failures": [
+    {
+      "case": "large history options plans",
+      "actual": "recent intent Limit\u2192Index Scan11; active admission Limit\u2192Sort\u2192Seq Scan256",
+      "assertions_failed": 2,
+      "limits": "Active admissions table only256rows with empty context and no released history. Native index definition/costs not captured yet; planner reason unproven. No forced-index or claim that any tiny seqscan is outage."
+    },
+    {
+      "case": "claim/preflight fences session expiry",
+      "line": 902,
+      "actual_code": "CHANNEL_NOT_READY",
+      "expected_code": "CHANNEL_CONTEXT_CHANGED",
+      "actual_status": 409,
+      "actual_outcome": "BLOCKED",
+      "classification": "Fixture clock jumps globally during real phone GET, also affects transport budget; intended final session-fence oracle not reached, later effect/state assertions unreached. Correct clock scoping, do not relax expected code."
+    }
+  ],
+  "limits": "All new race/pinning/overlap metrics are actual current positive proof, not fullALLGREEN, no actualMeta/preservedruntime orbrowser freshness. OriginalE65/E66pre-fix failures remain immutable.",
+  "next": "Scoped real-session-verifier clock fixture, representative released+active admission distribution/native index proof and both consumer ordering support; reseal and canonicalALL."
+}

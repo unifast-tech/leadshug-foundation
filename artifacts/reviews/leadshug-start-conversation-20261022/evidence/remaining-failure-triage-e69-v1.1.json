@@ -1,0 +1,26 @@
+{
+  "kind": "Root source/primary-documentation triage after actualE69 terminal; no newfix validation",
+  "recorded_at_utc": "2026-10-23T04:17:15.002978+00:00",
+  "actual_receipt": "all-result-e69-v1.1.json",
+  "session_fixture": {
+    "confirmed": "Existing SessionService.verificar(token, agora=Date.now()) provides a synchronous explicit clock seam. E69 fixture globally advanced Date.now during phoneGET, also expiring shared transport budget before final grant fence.",
+    "chosen_support_fix": "After actualphoneGETbarrier enable scoped wrapper calling real signed-token verification with explicit expiresAt+1. Do not change provider clock, fake claims/results, protected SessionService or expected error/effect/state predicates."
+  },
+  "options_access_path": {
+    "confirmed": "ActualE69 recent-intent index used11rows; active admission default planner sorted256 total rows. Current fixture lacks settled/released admission history and stores empty context, despite testing accumulated history. Native definitions/costs absent, so do not assert exact reason yet.",
+    "primary_sources": [
+      {
+        "url": "https://www.postgresql.org/docs/16/indexes-examine.html",
+        "verified": "ANALYZE and representative distributions matter; very small tables may correctly favor sequential scans. Synthetic uniform/sorted distributions limit inference."
+      },
+      {
+        "url": "https://www.postgresql.org/docs/16/using-explain.html",
+        "verified": "Planner seeks lower estimated cost; emitted row counts are not scanned work, so retain actual scan/filter accounting."
+      }
+    ],
+    "required_proof": "Native actual index definitions, actual query/params/default-planner cost/row/time/buffer data. Preserve256active+strictnoSort/11bound on representative released+active history. No enable_seqscan manipulation or raisedthreshold toforceGREEN.",
+    "second_consumer": "reserveInitial conflict query orders same active admissions but scopes conversation only. Preserve whole-conversation interlock; do not addBUfilter that could ignore a malformed other-BU token. Assess one shared ordered index and measure actual conflict SQL too."
+  },
+  "authority": "Same bounded approved readiness/window/interlock/queries; no publiccontract/provider/state/retry or preservedDB change. Product index HOW awaits executor recommendation/root adjudication; test-support repair authorized only.",
+  "limits": "New representative-volume and clock-seam fixes are test-support changes, not retroactive causalRED or a claim oldsmallplanoutage. KeepE65/E66/E69 actual receipts immutable."
+}
