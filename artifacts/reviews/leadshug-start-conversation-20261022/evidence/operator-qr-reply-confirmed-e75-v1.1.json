@@ -1,0 +1,15 @@
+{
+  "kind": "Operator proof: nonofficial first outbound and reply confirmed",
+  "recorded_at_utc": "2026-10-23T14:40:41.547673+00:00",
+  "question_id": "call_3c117f5e7e93444196c6fe981cf8de36",
+  "operator_answer": "Sim, a resposta apareceu no LeadsHug",
+  "outbound_evidence": "operator-qr-first-send-e75-v1.1.json",
+  "channel": "nonofficial",
+  "business_unit": "Local Test BU",
+  "outbound_delivery": "confirmed by operator",
+  "inbound_reply": "confirmed by operator in LeadsHug",
+  "provenance": "Operator-assisted real test; no independent business-row or provider inspection by agent.",
+  "official_template_proof": "requested; pending operator result",
+  "delivery_stage": "Pending",
+  "full_guard": "Authorized; not executed."
+}

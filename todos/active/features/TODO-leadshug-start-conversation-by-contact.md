@@ -46,12 +46,12 @@ Este v1.1 substitui a autoridade ativa da minuta revisada em 2026-10-19. O origi
 
 - **Current delivery stage:** `Pending`
 - **Qualifiers:** `none`
-- **Next exact step:** confirmar explicitamente o reply não oficial no Atendimento: o operador informou “Chegou” para o primeiro envio, confirmando a chegada ao destinatário, mas ainda sem confirmação separada do retorno; em seguida testar primeiro template oficial aprovado e reply. O operador confirmou a validação Meta do callback E75. Guard canônico único já autorizado reservado ao fechamento após a prova; sem nova aprovação para esse plano.
+- **Next exact step:** aguardar a prova assistida de primeiro template oficial aprovado e reply na Local Test Ofc. Primeiro texto não oficial e reply na Local Test BU foram explicitamente confirmados pelo operador. O operador confirmou a validação Meta do callback E75. Guard canônico único já autorizado reservado ao fechamento após a prova; sem nova aprovação para esse plano.
 
 ## Active Work State (Required While TODO Remains In `active/`)
 
 - **Work state:** `review`
-- **Why this state now:** código/testes E74 congelados e967pass; todas as três revisões r7 terminaram sem novo defeito material de implementação/testes. Full259source pós-review confere; patch dos dois módulos está revisado e pronto; aplicação canônica permanece adiada até a evidência local real. A consistência1:1 do alvo proposto está registrada abaixo. Runtime preservado/prova assistida/fullguard privado/review final continuam abertos; plano E75 aprovado e ativado; callback Meta validado conforme confirmação humana; aguardando prova assistida de primeiro envio. Os desvios de sequência/descrição de evidência estão registrados para review final.
+- **Why this state now:** código/testes E74 congelados e967pass; todas as três revisões r7 terminaram sem novo defeito material de implementação/testes. Full259source pós-review confere; patch dos dois módulos está revisado e pronto; aplicação canônica permanece adiada até a evidência local real. A consistência1:1 do alvo proposto está registrada abaixo. Runtime preservado/prova assistida/fullguard privado/review final continuam abertos; plano E75 aprovado e ativado; callback Meta validado conforme confirmação humana; prova assistida não oficial confirmou primeiro envio e reply; aguardando primeiro template oficial e reply. Os desvios de sequência/descrição de evidência estão registrados para review final.
 - **Exit condition:** implementação e todas as evidências/reviews/gates de entrega aprovados; estágio continua Pending até os critérios locais reais, sem claim de entrega por aprovação.
 
 ## Scope
@@ -1481,3 +1481,7 @@ The user confirmed “Meta validou o webhook” in response to call_7e60893418bb
 ## Operator checkpoint E75 — nonofficial outbound delivered, reply clarification pending
 
 The operator answered “Chegou” to first-send question call_3a5f579ef8f64bc1947dcf2b5468bd51. This confirms reported recipient delivery of the initiated nonofficial text; it does not explicitly establish the inbound reply. Root requested that narrow clarification without repeating the outbound message. Evidence: evidence/operator-qr-first-send-e75-v1.1.json. Official template/reply proof, module application, one-shot full guard and final review remain pending; no complete two-way or delivery-stage claim is inferred.
+
+## Operator checkpoint E75 — nonofficial round-trip confirmed; official proof requested
+
+The operator explicitly confirmed “Sim, a resposta apareceu no LeadsHug” to call_3c117f5e7e93444196c6fe981cf8de36, completing the nonofficial initiated-send/recipient-reply proof together with the earlier delivery attestation. Root rechecked public health200 with verified TLS and requested the separate official proof through Nova conversa in Local Test Ofc, explicitly selecting the APPROVED catalog model, previewing and confirming once, then checking recipient receipt and inbound reply. The agent performed no recipient/provider action or business-row inspection. Evidence: evidence/operator-qr-reply-confirmed-e75-v1.1.json. Official proof and final delivery gates remain pending.
