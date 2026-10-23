@@ -3,10 +3,12 @@
 
 ## Canonical hierarchy
 
-`Mantenedora -> Setor -> Business Unit (número) -> Conversa/Contato`.
+`Mantenedora -> Setor -> Business Unit (operação de atendimento) -> Conversa/Contato`.
 
 The Business Unit is the minimum authorization and data-isolation boundary. A user may hold grants for one or
 more BUs; no controller, service, repository or frontend adapter may infer access from UI state alone.
+
+A mesma BU pode reunir conexões de WhatsApp e Instagram sob os mesmos vendedores e grants. A conta/perfil ou número do canal não cria outro escopo de autorização: a conexão pertence à BU autorizada. A [decisão de BU operacional](../decisions/leadshug-multichannel-identity-decisions.md) define a arquitetura alvo; a adoção no produto e os contratos de identidade/roteamento exigem TODO próprio, sem criar nova superfície por inferência.
 
 ## Runtime surfaces
 

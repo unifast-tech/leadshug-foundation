@@ -14,6 +14,12 @@ Owns authentication, accounts, Mantenedoras, Setores, Business Units, roles and 
 The canonical BFF contracts live under `api-app` and must be documented here before new endpoints
 are introduced.
 
+## BU operacional multicanal — arquitetura alvo
+
+Conforme [DEC-bu-operational-multichannel](../decisions/leadshug-multichannel-identity-decisions.md), confirmada pelo usuário em2026-10-23, a BU identifica a operação de atendimento, não o número WhatsApp. Contas/perfis e números pertencem às conexões dos canais. A mesma BU reúne WhatsApp e Instagram com os mesmos vendedores e grants; não criar outra identidade organizacional para representar um transporte.
+
+Tenancy continua sendo o owner de Mantenedora, Setor, BU e grants. Canais possui os vínculos de integração; Inbox possui contatos e conversas. Nenhuma conexão concede grant por si só. O produto atual não foi migrado: os endpoints e o cadastro ST-CON-01 abaixo continuam sendo os contratos WhatsApp entregues. Contrato de identidade multicanal, mudanças de schema e adoção Instagram precisam de TODO/revisão/aprovação próprios; o parecer de arquitetura não é aprovação de execução.
+
 
 ## Autorização do cadastro de números ST-CON-01
 

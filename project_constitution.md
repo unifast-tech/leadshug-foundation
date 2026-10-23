@@ -3,7 +3,7 @@
 
 ## Purpose and stack
 
-Esta constituição governa o LeadsHug, uma central multi-tenant de relacionamento por WhatsApp. O stack ativo
+Esta constituição governa o LeadsHug, uma central multi-tenant de relacionamento multicanal, com WhatsApp como canal principal. O stack ativo
 é NestJS, React, PostgreSQL, Prisma, Docker e Railway.
 
 ## Authority hierarchy
@@ -23,9 +23,9 @@ Quando houver conflito, a regra mais específica do produto prevalece sobre a re
 - Web-flow changes require Playwright against a freshly built bundle and the real validation backend using the same `DATABASE_URL` and resolved API port/endpoint as the CI-equivalent job, without exposing secrets.
 
 - Toda implementação possui um TODO ativo, escopo, Definition of Done e evidência de validação.
-- A Mantenedora contém Setores; a Business Unit é o número de WhatsApp.
+- A Mantenedora contém Setores; a Business Unit é a operação de atendimento e o limite mínimo de isolamento, independente de telefone ou plataforma.
 - Grants e leituras são sempre filtrados pela BU e pela conta correta; vazamento entre tenants é falha crítica.
-- Canal oficial e não oficial são transportes da BU; a conversa é unificada pelo par BU/Contato.
+- A mesma BU pode reunir WhatsApp e Instagram sob os mesmos vendedores e grants. Número e perfil pertencem às conexões dos canais; Channel é a abstração de comunicação. A conversa permanece unificada pelo par BU/Contato conforme identidade comprovada, sem presumir equivalência entre pessoas de plataformas diferentes.
 - BFF, API pública, API interna e webhooks são superfícies distintas, com autenticação própria.
 - Documentos institucionais estáticos explicitamente autorizados, como /privacidade.html, são públicos e não resolvem tenant/BU nem consultam dados de negócio. Não alteram a autenticação das superfícies acima. Sua publicação local não autoriza publicação do app Meta ou produção.
 - Domínio e regras de negócio pertencem ao backend NestJS; React consome contratos explícitos.
@@ -33,6 +33,10 @@ Quando houver conflito, a regra mais específica do produto prevalece sobre a re
 - Serviços executam em Docker e são promovidos pela topologia Railway declarada no projeto.
 - Histórico de atendimento é persistente, consultável conforme permissão e auditável.
 - Templates, disparos, CRM e campanhas só entram em execução mediante TODO e contrato próprios.
+
+## Multichannel adoption boundary
+
+A decisão [DEC-bu-operational-multichannel](decisions/leadshug-multichannel-identity-decisions.md), confirmada pelo usuário em2026-10-23, estabelece a arquitetura alvo de BU operacional. O produto entregue e os contratos ST-CON existentes continuam limitados às implementações WhatsApp. Evolução de identidade/schema, cadastro Instagram, rotas de resposta e novos endpoints dependem de seus TODOs, revisão, aprovação e evidências; atualizar a definição não comprova migração nem disponibilidade. As demais decisões de identidade e roteamento nesse registro continuam propostas.
 
 ## TODO governance
 
