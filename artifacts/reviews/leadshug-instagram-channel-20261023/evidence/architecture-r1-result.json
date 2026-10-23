@@ -1,0 +1,48 @@
+{
+  "review_kind": "architecture_opinion",
+  "reviewer": "/root/instagram_plan_architecture_r1",
+  "model": "gpt-6.1-sol",
+  "effort": "xhigh",
+  "context_isolation": "fork_turns none",
+  "reviewed_foundation_baseline": "e21d077b041e74c4a9261d97aba6321732926af2",
+  "outcome": "changes_required",
+  "read_only": true,
+  "findings": [
+    {
+      "id": "IG-ARCH-R1-01",
+      "severity": "high",
+      "locus": "TODO:590-596,619-620; channel.ts:56; outbound.service.ts:325; message-acceptance.service.ts:237",
+      "finding": "Same-BU references do not prove ContactIdentity.contactId equals Conversation.contactId or channel/provider resource equals route resource.",
+      "resolution_required": "Immutable route with composite contact/BU/resource invariants, typed context schemaVersion2 and server-derived recipient; narrow eligibility policy port."
+    },
+    {
+      "id": "IG-ARCH-R1-02",
+      "severity": "high",
+      "locus": "TODO:179,192,249,596,599; initial-message.service.ts:74,88,156; outbound.service.ts:65,507; schema.prisma:443,468",
+      "finding": "Cutover reader lacks state-specific handling and request/fingerprint/original snapshot preservation.",
+      "resolution_required": "State-action matrix for PREPARED/SENDING/UNCERTAIN/AMBIGUOUS/accepted/terminal/unknown; no rewrite of requestFingerprint or originalConversation.updatedAt and no provider calls during v1 recovery."
+    },
+    {
+      "id": "IG-ARCH-R1-03",
+      "severity": "high",
+      "locus": "TODO:243-245,250,593,622; public/conversations.controller.ts:36,54,62,199,214; number-registration.service.ts:113,256; incoming.service.ts:80",
+      "finding": "Multiple business WhatsApp numbers per BU contradict legacy account_id=BU singular number and existing Typebot session semantics.",
+      "resolution_required": "One durable WhatsApp business resource per BU, official+Evolution over same proven number; multiple Instagram accounts allowed; reject second WA identity by partial unique and conflict before promotion. Multiple WA numbers deferred to separate contract."
+    },
+    {
+      "id": "IG-ARCH-R1-04",
+      "severity": "medium",
+      "locus": "TODO:185,519,614,619,632; initial-message.service.ts:195,200; prisma-channel-resolver.ts:161,175,424",
+      "finding": "Ten-channel truncation, per-channel work and temporal pcv gates remain unspecified.",
+      "resolution_required": "Batch only relevant routes/connections; explicit pagination and cardinality-derived reply options; seed >10connections and fixed query/time budgets."
+    }
+  ],
+  "positions": {
+    "correctness": "favorable after route and cutover fixes",
+    "performance": "viable indexed/batched; no measurements",
+    "elegance": "focused concepts; one WhatsApp resource avoids unsupported primary routing",
+    "structural_soundness": "preserve provider dedup namespace and durable identities",
+    "operational_fit": "DM-first human reply; real proof and WhatsApp regression remain required"
+  },
+  "not_a_final_review_or_implementation_approval": true
+}

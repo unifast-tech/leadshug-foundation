@@ -1,0 +1,11 @@
+{
+  "stage": "planning-review-baseline",
+  "branch": "main",
+  "baseline_commit": "e21d077b041e74c4a9261d97aba6321732926af2",
+  "push_reference": "origin/main",
+  "remote_tracking_equals_local_head": true,
+  "published_todo_sha256": "1b5d1e18b35a472cdfa990488fdf5eac788cec363ae4372906f61f8cbee612a1",
+  "scope_change_in_gate_update": false,
+  "product_execution_authorized": false,
+  "carried_foundation_differences_preserved": 4
+}
