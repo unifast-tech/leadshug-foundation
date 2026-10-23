@@ -1,0 +1,180 @@
+{
+  "kind": "Root source-grounded r4 triage; causal regressions and bounded HOW pending",
+  "recorded_at_utc": "2026-10-23T03:12:43.466012+00:00",
+  "source_seal": "all-source-seal-e64-v1.1.json",
+  "after_review_recheck": "after-review-source-recheck-e64-v1.1.json",
+  "rows": [
+    {
+      "finding_id": "F-1DF50690",
+      "source_finding_id": "ARCH-ST04-R4-01",
+      "severity": "high",
+      "classification": "release-blocker",
+      "status": "open",
+      "resolution": "Integrate after actual causal reproduction",
+      "source_support": "OutboundService.sendInitial's claim callback evaluates validateDispatchContext, including the trusted text window and credential version, before currentActorHasGrant executes FOR SHARE OF u, r, b. That authorization query can block. After it returns, claimInitial rechecks database time against only leaseExpiresAt and commits SENDING without reevaluating the window or credential tuple. A trusted window can expire during the wait while the 90-second lease remains live, allowing an official text POST outside the approved window. A credential-version change during the same interval also lacks a pinned credential row or final recheck. This violates D02/D04/D06 at the durable claim boundary. The existing expiry/revocation tests exercise other orderings; the embedded evidence does not demonstrate this ordering. Exploitability is source-supported and unexecuted here; the blast radius is an initial outbound operation in an authorized BU.",
+      "current_source_bindings": [
+        {
+          "path": "api-app/src/domain/inbox/outbound.service.ts",
+          "sha256": "1056f18f9767dc5d425a3504c70252f92c91dbf07dc1bbe558ee6a03d9032867"
+        },
+        {
+          "path": "api-app/src/domain/inbox/dispatch-admission.service.ts",
+          "sha256": "bebcc9813d5b5b03121c1da1844e85f11251aa261e2bf7665e1b894de0b4d7fc"
+        },
+        {
+          "path": "api-app/src/surfaces/bff/conversations.controller.ts",
+          "sha256": "f8682cc211695df59caaa3f32799ad6a0444e120d683592e32984a71d71c8c1d"
+        },
+        {
+          "path": "api-app/src/integrations/channels/prisma-channel-resolver.ts",
+          "sha256": "60005fd226534a178b646d6ec775bb059ec55cc4cfea24a3d72d2c6e4a1ca64a"
+        },
+        {
+          "path": "api-app/src/domain/message-templates/template-observation.service.ts",
+          "sha256": "41c7c640fd31ca0759d0d88647e24c74787597dcf75fd8a3c773fe6e02965488"
+        }
+      ],
+      "five_question_evidence_loop": {
+        "coverage_gap": "Actual E64 covered expiry/revocation/races in other orderings, not an actor lock acquired after context eligibility or a cross-owner refresh/initial lock cycle.",
+        "reproduction": "Not yet runtime reproduced. Add deterministic owned PostgreSQL/BFF barriers or actual emitted SQL/EXPLAIN; no private/live/provider proof inferred.",
+        "why_existing_green": "Existing assertions did not combine these exact schedules/access paths. Passing aggregate counts do not prove an unexecuted ordering.",
+        "protection": "Causal test before production change; retain all transport counters, receipt/Message/slot ownership, typed compatibility and previous fixes. Separate invalid fixture/timing/support failures.",
+        "rule_candidate": "Project-level finite lock/deadline/query-plan guard candidates only. No Delphi/analyzer change or generic platform admitted."
+      },
+      "options": [
+        {
+          "id": "A",
+          "action": "Assess nonblocking shared actor/channel/credential pins and final DB-time deadline predicate after all eligibility reads, retaining exact approved identity→contact→conversation→intent order and protected ST05 owner.",
+          "assessment": "preferred bounded in-scope HOW if causal proof confirms, not production authorization yet"
+        },
+        {
+          "id": "B",
+          "action": "Revise public/frozen lock contract or protected ST05 owner only if bounded compatible approach fails.",
+          "assessment": "requires concrete renewed review/approval before dependent changes, not automatically authorized"
+        },
+        {
+          "id": "C",
+          "action": "Deliver known gap as debt.",
+          "assessment": "rejected; current release blocker"
+        }
+      ],
+      "same_scope_boundary": "No new user objective/public state/channel/provider/route/retry/Message owner; only existing final fence correctness and bounded recovery queries. Protected owner remains byteexact; any actual frozen-order deviation must be surfaced before edits."
+    },
+    {
+      "finding_id": "F-7C61C9F4",
+      "source_finding_id": "ARCH-ST04-R4-03",
+      "severity": "medium",
+      "classification": "release-blocker",
+      "status": "open",
+      "resolution": "Integrate after actual causal reproduction",
+      "source_support": "InitialMessageService.options requests the latest 11 intents by createdAt/id for a conversation and BU. The supplied intent indexes do not support that ordering: the conversation index places slotReleasedAt and state before createdAt and omits the id tie-breaker. Consequently, LIMIT 11 bounds returned rows while PostgreSQL must examine and sort the conversation's accumulated attempt history. Released attempts are retained, so this work grows over time. Active ordinary-admission listing has a similar ordering mismatch when many tokens remain unreleased. The embedded EPS evidence covers inbox ordering, message existence and trusted-window projections, without a plan for these new recovery-history queries. This is a source/schema-supported access-path gap, without a measured outage claim.",
+      "current_source_bindings": [
+        {
+          "path": "api-app/src/domain/inbox/initial-message.service.ts",
+          "sha256": "61a52116f29e5753ed27bae607dbebd5dfdb5b1fd1dc8954a02602e8d81a8e6e"
+        },
+        {
+          "path": "api-app/src/domain/inbox/dispatch-admission.service.ts",
+          "sha256": "bebcc9813d5b5b03121c1da1844e85f11251aa261e2bf7665e1b894de0b4d7fc"
+        },
+        {
+          "path": "api-app/prisma/schema.prisma",
+          "sha256": "d2c94a0b0908d268f498ed0e288924343abeb1bb206d71f8291063caec50fbed"
+        },
+        {
+          "path": "api-app/prisma/migrations/20261022150000_initial_message_admissions/migration.sql",
+          "sha256": "78963dce996b2cec9e0990812a5091725238f9995e892c196e614ce9b2a6464f"
+        }
+      ],
+      "five_question_evidence_loop": {
+        "coverage_gap": "Actual E64 did not exercise high-history ordered recovery queries.",
+        "reproduction": "Not yet runtime reproduced. Add deterministic owned PostgreSQL/BFF barriers or actual emitted SQL/EXPLAIN; no private/live/provider proof inferred.",
+        "why_existing_green": "Existing assertions did not combine these exact schedules/access paths. Passing aggregate counts do not prove an unexecuted ordering.",
+        "protection": "Causal test before production change; retain all transport counters, receipt/Message/slot ownership, typed compatibility and previous fixes. Separate invalid fixture/timing/support failures.",
+        "rule_candidate": "Project-level finite lock/deadline/query-plan guard candidates only. No Delphi/analyzer change or generic platform admitted."
+      },
+      "options": [
+        {
+          "id": "A",
+          "action": "Add exact ordered indexes in admitted current schema/unapplied ST04 migration and measure actual plans; retain quota/unique indexes.",
+          "assessment": "preferred bounded in-scope HOW if causal proof confirms, not production authorization yet"
+        },
+        {
+          "id": "B",
+          "action": "Revise public/frozen lock contract or protected ST05 owner only if bounded compatible approach fails.",
+          "assessment": "requires concrete renewed review/approval before dependent changes, not automatically authorized"
+        },
+        {
+          "id": "C",
+          "action": "Deliver known gap as debt.",
+          "assessment": "rejected; current release blocker"
+        }
+      ],
+      "same_scope_boundary": "No new user objective/public state/channel/provider/route/retry/Message owner; only existing final fence correctness and bounded recovery queries. Protected owner remains byteexact; any actual frozen-order deviation must be surfaced before edits."
+    },
+    {
+      "finding_id": "F-3119C7D6",
+      "source_finding_id": "ARCH-ST04-R4-02",
+      "severity": "medium",
+      "classification": "release-blocker",
+      "status": "open",
+      "resolution": "Integrate after actual causal reproduction",
+      "source_support": "Initial claim and accepted local completion hold provider_resource_identities FOR SHARE before currentActorHasGrant requests shared locks on user, grant and BU rows. The preserved TemplateObservationService.ownsLease takes user/BU/grant/channel FOR UPDATE before requesting that same identity FOR UPDATE. A concurrent refresh can therefore hold the BU/user lock while waiting for the identity, as the initial transaction holds the identity while waiting for the BU/user lock. PostgreSQL must abort a participant. During accepted local completion this can unnecessarily leave a confirmed external send locally blocked. The cycle is directly supported by both embedded owners; its occurrence was not reproduced in this review. The blast radius is concurrent refresh and initial dispatch/completion for the shared official resource.",
+      "current_source_bindings": [
+        {
+          "path": "api-app/src/domain/inbox/outbound.service.ts",
+          "sha256": "1056f18f9767dc5d425a3504c70252f92c91dbf07dc1bbe558ee6a03d9032867"
+        },
+        {
+          "path": "api-app/src/domain/inbox/dispatch-admission.service.ts",
+          "sha256": "bebcc9813d5b5b03121c1da1844e85f11251aa261e2bf7665e1b894de0b4d7fc"
+        },
+        {
+          "path": "api-app/src/surfaces/bff/conversations.controller.ts",
+          "sha256": "f8682cc211695df59caaa3f32799ad6a0444e120d683592e32984a71d71c8c1d"
+        },
+        {
+          "path": "api-app/src/integrations/channels/prisma-channel-resolver.ts",
+          "sha256": "60005fd226534a178b646d6ec775bb059ec55cc4cfea24a3d72d2c6e4a1ca64a"
+        },
+        {
+          "path": "api-app/src/domain/message-templates/template-observation.service.ts",
+          "sha256": "41c7c640fd31ca0759d0d88647e24c74787597dcf75fd8a3c773fe6e02965488"
+        }
+      ],
+      "five_question_evidence_loop": {
+        "coverage_gap": "Actual E64 covered expiry/revocation/races in other orderings, not an actor lock acquired after context eligibility or a cross-owner refresh/initial lock cycle.",
+        "reproduction": "Not yet runtime reproduced. Add deterministic owned PostgreSQL/BFF barriers or actual emitted SQL/EXPLAIN; no private/live/provider proof inferred.",
+        "why_existing_green": "Existing assertions did not combine these exact schedules/access paths. Passing aggregate counts do not prove an unexecuted ordering.",
+        "protection": "Causal test before production change; retain all transport counters, receipt/Message/slot ownership, typed compatibility and previous fixes. Separate invalid fixture/timing/support failures.",
+        "rule_candidate": "Project-level finite lock/deadline/query-plan guard candidates only. No Delphi/analyzer change or generic platform admitted."
+      },
+      "options": [
+        {
+          "id": "A",
+          "action": "Assess nonblocking shared actor/channel/credential pins and final DB-time deadline predicate after all eligibility reads, retaining exact approved identity→contact→conversation→intent order and protected ST05 owner.",
+          "assessment": "preferred bounded in-scope HOW if causal proof confirms, not production authorization yet"
+        },
+        {
+          "id": "B",
+          "action": "Revise public/frozen lock contract or protected ST05 owner only if bounded compatible approach fails.",
+          "assessment": "requires concrete renewed review/approval before dependent changes, not automatically authorized"
+        },
+        {
+          "id": "C",
+          "action": "Deliver known gap as debt.",
+          "assessment": "rejected; current release blocker"
+        }
+      ],
+      "same_scope_boundary": "No new user objective/public state/channel/provider/route/retry/Message owner; only existing final fence correctness and bounded recovery queries. Protected owner remains byteexact; any actual frozen-order deviation must be surfaced before edits."
+    }
+  ],
+  "writer_authority": {
+    "scope": "TEST ONLY and bounded design analysis before root source seal/actual API RED; no production/schema change yet",
+    "normal_guard": "/tmp/stcon04-authority-e65-tests.json",
+    "routing_guard": "/tmp/stcon04-routing-e65-tests.json",
+    "single_writer": "stcon04_continuation"
+  },
+  "migration_rule": "prisma-schema-migration-always-on preserves migrations applied outside isolated disposable environments. Three ST04 migrations have only run in disposable isolated DB, never preserved runtime; bounded current-source amendment is eligible after test proof, no history rewrite of delivered migrations.",
+  "image_status": "E64 images are historical tested candidate; no activation approval request while3material issues unresolved. Fresh fixed sources require full proof/current images/affected fresh review."
+}

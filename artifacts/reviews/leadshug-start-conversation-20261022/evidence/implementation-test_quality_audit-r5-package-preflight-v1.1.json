@@ -1,0 +1,10 @@
+{
+  "kind": "Fresh complete output request, same unchanged current E64 TQA candidate",
+  "recorded_at_utc": "2026-10-23T02:58:33.886305+00:00",
+  "package_sha256": "b063206a5398316870ea54698300e331e38f4343ce82c38b752f3b9f704f7d59",
+  "unchanged_embedded_r4_package_sha256": "7fed0bfd0288a46d4f9bd68928b0ef94f42f980a219db5249dde137819a7abb8",
+  "actual_input_characters": 1043744,
+  "input_limit": 1048576,
+  "reason": "R4 terminal/schema-valid but incomplete mandatory workload output; full eight-section assessment now explicit. Same complete package, plus actual existing CI-parity marker. No source change, no live reviewer replacement or elapsed-time interruption.",
+  "static_encoding_round_trip": "Root verified all255IDs/pathSHA/matched text/classification/rationale/support/test anchors reconstruct the original current artifact exactly."
+}

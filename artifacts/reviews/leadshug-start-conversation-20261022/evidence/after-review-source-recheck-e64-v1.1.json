@@ -1,0 +1,9 @@
+{
+  "kind": "After all r4/r5 reviewers actual terminal, before any writer release",
+  "recorded_at_utc": "2026-10-23T03:05:27.068988+00:00",
+  "source_seal": "all-source-seal-e64-v1.1.json",
+  "count": 259,
+  "fingerprint": "70c038f24f15cf4a26a65c545bc9e3fba336a67a9cde7bfcb8cdec9910949340",
+  "matches_full_inventory_and_bytes": true,
+  "limits": "Current E64 immutable all-run postseal remains unchanged; this additional recheck covers review lifecycle. No private inspection."
+}

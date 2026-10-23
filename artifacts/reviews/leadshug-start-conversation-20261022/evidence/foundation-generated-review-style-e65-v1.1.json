@@ -1,0 +1,15 @@
+{
+  "kind": "Canonical generated merge/dispatch EOF style warnings, exact bytes preserved",
+  "recorded_at_utc": "2026-10-23T03:20:01.092837+00:00",
+  "actual_exit_code": 2,
+  "command": "git.exe diff --cached --check",
+  "stdout_sha256": "fb777961a5f3772f03b9509fa97c952bd3d240600834cb063baf34655588bcba",
+  "actual_diagnostics": [
+    "artifacts/reviews/leadshug-start-conversation-20261022/implementation-architecture_adherence-r4-merge-v1.1.md:63: new blank line at EOF.",
+    "artifacts/reviews/leadshug-start-conversation-20261022/implementation-cutover_integrity_audit-r4-merge-v1.1.md:53: new blank line at EOF.",
+    "artifacts/reviews/leadshug-start-conversation-20261022/implementation-test_quality_audit-r4-merge-v1.1.md:43: new blank line at EOF.",
+    "artifacts/reviews/leadshug-start-conversation-20261022/implementation-test_quality_audit-r5-dispatch-v1.1.md:154: new blank line at EOF.",
+    "artifacts/reviews/leadshug-start-conversation-20261022/implementation-test_quality_audit-r5-merge-v1.1.md:71: new blank line at EOF."
+  ],
+  "classification": "Five generated artifact EOF blank-line warnings only; no claim of clean diff-check or rule waiver. Immutable actual reviewer dispatch/strict-merge bytes retained for provenance. Product sources/private inputs untouched."
+}

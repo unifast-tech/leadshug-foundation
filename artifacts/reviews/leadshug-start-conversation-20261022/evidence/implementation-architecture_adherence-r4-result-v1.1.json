@@ -1,0 +1,65 @@
+{
+  "schema_version": "subagent-review-result-v1",
+  "artifact_kind": "subagent_review_result",
+  "dispatch_path": "/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/artifacts/reviews/leadshug-start-conversation-20261022/evidence/implementation-architecture_adherence-r4-dispatch-v1.1.json",
+  "review_kind": "architecture_adherence",
+  "reviewer_label": "fresh-no-context-architecture-r4",
+  "overall_assessment": "Changes requested. The candidate substantially preserves the approved architecture: D01 manual opening and uniqueness; D03 common dispatch and sole MessageAcceptance ownership; D05 shared catalog, fresh account eligibility and pinned protocol payload; D07 finite ordinary admission; D08 independent NAMED/POSITIONAL renderer; D09 external-request limits and quotas; and D10 positive commit/readback certainty. The intentional Channel-union and trusted-window supersedes remain within approved intent. However, the final initial claim can consume eligibility checked before a blocking authorization read, undermining D02/D04/D06. Its locking also introduces a concrete cycle with the preserved ST05 observation owner. Recent-attempt query indexing leaves a separate bounded-I/O gap. These findings follow from the embedded source; their specific schedules were not runtime-reproduced by this reviewer. The recorded r1/r2/r3 corrections remain supported: PREPARED recovery, safe conflicts, ordinary settlement/outcome preservation, winner-only realtime, history existence lookup, Unicode snapshots, BU dialog ownership and individual observation availability are visible or supported by the current receipts. Historical chronology remains partial test-first evidence. Security risk remains high and safe attack simulation is required. Supplied E64 evidence reports exercised session/grant revocation, forged tenant grants, object-ID isolation, descriptor/credential mismatch, unavailable templates, concurrent replay, persistence faults, signed timestamp provenance and browser/storage races against disposable PostgreSQL/BFF/browser with fake external providers. The reviewed boundaries include session/CSRF, tenant/BU and object authorization, credential/account binding, persistence/commit certainty and provider dispatch. Supplied threat-intelligence references are OWASP API1 (https://api-security.owasp.org/editions/2023/en/0xa1-broken-object-level-authorization/) and API4 (https://api-security.owasp.org/editions/2023/en/0xa4-unrestricted-resource-consumption/); no fresh retrieval or independent execution occurred in this no-tool review. The findings identify additional source-supported abuse/failure hypotheses, without demonstrating tenant breakout or live-provider exploitation.",
+  "recommended_path": "Add causal regressions and resolve the three findings within the approved finite design, then regenerate source-bound evidence and obtain fresh assessment of the affected claims. Preserve existing owners, the one-send abstraction, protected ST05 semantics and the recorded finding dispositions. Retain explicit follow-up gates for DOD11 preserved-runtime migration/image/API assurance, DOD12 operator-controlled unofficial and actually APPROVED official first-send/reply proof, and DOD13 independent TQA/cutover/final/debt assessment, module consolidation and canonical delivery guards. The full diff-guard exception and opaque Compose configuration access remain separately proposed authorization boundaries. E64 GREEN supports the synthetic candidate; it does not close those gates. Residual risks remain external ambiguity after claim/risk release, best-effort realtime crash gaps, unverified actual account readiness and the inherited SEC-R6-04, OPS-R4-01 and TQA-ST05-03 limitations. The formalizable hints below are candidates only; no Delphi changes are proposed.",
+  "performance_position": "mixed",
+  "elegance_position": "acceptable",
+  "structural_soundness_position": "mixed",
+  "operational_fit_position": "mixed",
+  "findings": [
+    {
+      "finding_id": "ARCH-ST04-R4-01",
+      "severity": "high",
+      "category": "security",
+      "formalizable_hint": "yes",
+      "candidate_rule_level": "project",
+      "title": "Initial claim can authorize dispatch using eligibility observed before an authorization lock wait",
+      "rationale": "OutboundService.sendInitial's claim callback evaluates validateDispatchContext, including the trusted text window and credential version, before currentActorHasGrant executes FOR SHARE OF u, r, b. That authorization query can block. After it returns, claimInitial rechecks database time against only leaseExpiresAt and commits SENDING without reevaluating the window or credential tuple. A trusted window can expire during the wait while the 90-second lease remains live, allowing an official text POST outside the approved window. A credential-version change during the same interval also lacks a pinned credential row or final recheck. This violates D02/D04/D06 at the durable claim boundary. The existing expiry/revocation tests exercise other orderings; the embedded evidence does not demonstrate this ordering. Exploitability is source-supported and unexecuted here; the blast radius is an initial outbound operation in an authorized BU.",
+      "suggested_action": "Arrange the claim so all potentially blocking authorization/lock acquisition precedes the final eligibility evaluation, pin mutable channel/credential inputs through claim commit, and evaluate the applicable trusted window using current database time at the final boundary. Coordinate the lock strategy with ARCH-ST04-R4-02. Add PostgreSQL barriers that hold the actor/grant lock, let the trusted window expire or rotate the credential version, then resume; require zero provider POSTs and no authoritative SENDING claim.",
+      "affected_paths": [
+        "api-app/src/domain/inbox/outbound.service.ts",
+        "api-app/src/domain/inbox/dispatch-admission.service.ts",
+        "api-app/src/surfaces/bff/conversations.controller.ts",
+        "api-app/test/initial-message.e2e-spec.ts"
+      ]
+    },
+    {
+      "finding_id": "ARCH-ST04-R4-02",
+      "severity": "medium",
+      "category": "structural_soundness",
+      "formalizable_hint": "yes",
+      "candidate_rule_level": "project",
+      "title": "Initial lifecycle transactions introduce a lock cycle with ST05 observation refresh",
+      "rationale": "Initial claim and accepted local completion hold provider_resource_identities FOR SHARE before currentActorHasGrant requests shared locks on user, grant and BU rows. The preserved TemplateObservationService.ownsLease takes user/BU/grant/channel FOR UPDATE before requesting that same identity FOR UPDATE. A concurrent refresh can therefore hold the BU/user lock while waiting for the identity, as the initial transaction holds the identity while waiting for the BU/user lock. PostgreSQL must abort a participant. During accepted local completion this can unnecessarily leave a confirmed external send locally blocked. The cycle is directly supported by both embedded owners; its occurrence was not reproduced in this review. The blast radius is concurrent refresh and initial dispatch/completion for the shared official resource.",
+      "suggested_action": "Remove the cycle through a bounded locking strategy compatible with the frozen identity/contact/conversation/intent ordering and protected ST05 behavior. Explicitly assess any needed protected-owner or approved-order change against renewed-approval requirements. Add a deterministic PostgreSQL overlap between actual observation refresh and initial claim/local completion, proving completion without deadlock, repeated provider dispatch or fabricated local success.",
+      "affected_paths": [
+        "api-app/src/domain/inbox/dispatch-admission.service.ts",
+        "api-app/src/domain/inbox/outbound.service.ts",
+        "api-app/src/surfaces/bff/conversations.controller.ts",
+        "api-app/src/domain/message-templates/template-observation.service.ts",
+        "api-app/test/initial-message.e2e-spec.ts"
+      ]
+    },
+    {
+      "finding_id": "ARCH-ST04-R4-03",
+      "severity": "medium",
+      "category": "performance",
+      "formalizable_hint": "yes",
+      "candidate_rule_level": "project",
+      "title": "Recent-attempt projection lacks an index supporting its bounded chronological lookup",
+      "rationale": "InitialMessageService.options requests the latest 11 intents by createdAt/id for a conversation and BU. The supplied intent indexes do not support that ordering: the conversation index places slotReleasedAt and state before createdAt and omits the id tie-breaker. Consequently, LIMIT 11 bounds returned rows while PostgreSQL must examine and sort the conversation's accumulated attempt history. Released attempts are retained, so this work grows over time. Active ordinary-admission listing has a similar ordering mismatch when many tokens remain unreleased. The embedded EPS evidence covers inbox ordering, message existence and trusted-window projections, without a plan for these new recovery-history queries. This is a source/schema-supported access-path gap, without a measured outage claim.",
+      "suggested_action": "Add narrowly scoped indexes supporting the actual recent-intent and applicable active-admission predicates and createdAt/id ordering, while retaining slot-uniqueness and quota indexes. Capture the emitted SQL and EXPLAIN ANALYZE with substantial released-attempt history and active-token fixtures; verify ordered bounded access rather than relying on returned-row counts.",
+      "affected_paths": [
+        "api-app/src/domain/inbox/initial-message.service.ts",
+        "api-app/src/domain/inbox/dispatch-admission.service.ts",
+        "api-app/prisma/schema.prisma",
+        "api-app/prisma/migrations/20261022150000_initial_message_admissions/migration.sql",
+        "api-app/test/dispatch-admission.e2e-spec.ts"
+      ]
+    }
+  ]
+}

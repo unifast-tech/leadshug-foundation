@@ -1,0 +1,9 @@
+{
+  "kind": "R4 TQA actual terminal collection and full-workload sufficiency assessment",
+  "recorded_at_utc": "2026-10-23T02:57:37.957836+00:00",
+  "session_id": 82474,
+  "actual_exit_code": 0,
+  "result_sha256": "3a1057f133f99ead7d8e5478cb64d2e972844ee4258c8710fcc90ca58eb683b5",
+  "assessment": "Candidate acceptable with only low delivery-only note, but overall paragraph does not explicitly report required CI/platform matrix, individual static-signal population assessment, scenario-isolation correction, five separate method answers and decision-by-decision positions. Schema-valid result is retained; not counted as complete independent TQA clearance.",
+  "next": "Fresh r5 with SAME complete candidate package and explicit multi-section output checklist; actual local CI-parity marker added for visibility. No source/test edit or runner rerun; no live reviewer interruption."
+}

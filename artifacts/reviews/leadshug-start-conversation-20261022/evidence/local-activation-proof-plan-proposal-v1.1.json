@@ -61,7 +61,7 @@
     "Record only safe outcome/state/timestamps and source-runtime attestation. Do not persist phone/contact/body/token.",
     "No automated sends, new contacts, routing changes, migration/registration at Meta, or Railway deployment."
   ],
-  "current_status": "Actual E64 fullALL0/API368/PG444/Web54/browser89 with independent259source/93browser binding. Both current exact-source Alpine images built/offline inspected. Fresh architecture/security/TQA/cutover r4 challenge next; no preserved runtime or operator first-send proof.",
+  "current_status": "E64 complete candidate and images are historical. Architecture r4 identifies3open claim/lock/query blockers; causal tests/compatible remediation pending. No activation request until fresh corrected proof/images/assessment.",
   "build_context_positive_inputs": {
     "api": {
       "roots": [
