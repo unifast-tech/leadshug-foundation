@@ -1,0 +1,22 @@
+{
+  "root_read_actual_stdout": true,
+  "receipts": [
+    {
+      "kind": "authority",
+      "raw_receipt": "authority-e67-output-v1.1.json",
+      "format": "lossless JSON envelope of actual text stdout",
+      "actual_outcome": "go",
+      "raw_stdout_sha256": "6afcdcd82d2c6e5990fe1dbd961b8095d6ae74e98a1126e0fa0fc44f421cdab3",
+      "artifact_sha256": "6ff45897cca9c6a502cb123618d6fc4c646a949719340b38d264fa5e118b3043"
+    },
+    {
+      "kind": "routing",
+      "raw_receipt": "routing-e67-output-v1.1.json",
+      "format": "lossless JSON envelope of actual text stdout",
+      "actual_outcome": "go",
+      "raw_stdout_sha256": "2faa75dab7b8348dbf5d0855ef5faf56cadd81ac53e916a24f5f1be5ee9cde0b",
+      "artifact_sha256": "3ce7b395a2aee8d91baa14b4add379270cdf077d96482664343fd2b699345689"
+    }
+  ],
+  "representation_note": "Initial staged plain text preserved canonical trailing whitespace and failed git diff --check exit2 at routing line11. Before commit, wrap exact raw text losslessly in JSON. Original temporary stdout remains unmodified; no canonical-tool output or result normalized."
+}

@@ -1,0 +1,5 @@
+{
+  "format": "Lossless JSON envelope of actual textual canonical-guard stdout; not guard-native JSON",
+  "raw_stdout": "Agent Role Routing Guard\nRule: paced.agent-role-routing\nOverall outcome: go\n\nContext:\n  - allowed_roles: routine-executor\n  - client: codex\n  - contract_id: delphi.agent-role-routing.v1\n  - contract_path: /mnt/c/Unifast/delphi-ai/config/agent_role_routing.json\n  - exception_in_effect: False\n  - exception_reason: \n  - execution_topology: primary-checkout-single-writer\n  - expected_efforts: medium\n  - expected_models: gpt-6-luna\n  - max_concurrent_writers: 1\n  - proof_mode: declared\n  - required_lane: executor\n  - selected_effort: medium\n  - selected_model: gpt-6-luna\n  - selected_model_family: routine_executor\n  - selected_role: routine-executor\n  - surface: implementation-validation\n  - waiver_in_effect: False\n  - waiver_reference_present: False\n  - worktree_authorization: not-authorized\n  - worktree_authorization_reference_present: False\n\nViolations:\n  - none\n",
+  "raw_stdout_sha256": "2faa75dab7b8348dbf5d0855ef5faf56cadd81ac53e916a24f5f1be5ee9cde0b"
+}

@@ -1,0 +1,105 @@
+{
+  "checkpoint": "E66 complete causal reproduction before r4 production/schema fixes",
+  "recorded_at_utc": "2026-10-23T03:47:49.993023+00:00",
+  "command": "bash scripts/test-channels-local.sh api",
+  "executor_session_id": 10804,
+  "exit_code": 1,
+  "stdout_sha256": "cab16d6dd7de438a1590e356890dc66c847db8a99a7eadce4c932d1058c56bf6",
+  "source_fingerprint": "aaf6068e4d381a8c6ebcc476616c8266550410d3d30aac4e219c533025fcb360",
+  "full259source_postseal": true,
+  "owned_cleanup_observed": true,
+  "production_changed_since_e64": false,
+  "phases": {
+    "unit": {
+      "files": 34,
+      "passed_tests": 368,
+      "failed_tests": 0
+    },
+    "postgresql": {
+      "passed_files": 32,
+      "failed_files": 1,
+      "passed_tests": 444,
+      "failed_tests": 5,
+      "total_tests": 449
+    },
+    "web_browser": "not run"
+  },
+  "findings": [
+    {
+      "id": "ARCH-ST04-R4-01-window",
+      "classification": "causal assertion failure",
+      "actual_status": 201,
+      "expected_status": 409,
+      "actor_lock_wait_observed": true,
+      "database_clock_crossed_window_expiry": true,
+      "lease_still_live": true,
+      "limits": "Final provider delta is measured after release and response. Later zero-OUT/released-state assertions not reached after actual201-vs409 failure.",
+      "actual_final_provider_posts_delta": 1,
+      "actual_posts_while_blocked_delta": 0
+    },
+    {
+      "id": "ARCH-ST04-R4-01-credential",
+      "classification": "causal assertion failure",
+      "actual_status": 201,
+      "expected_status": 409,
+      "actor_lock_wait_observed": true,
+      "synthetic_credential_rotated_while_role_lock_held": true,
+      "actual_final_provider_posts_delta": 1,
+      "limits": "Later zero-Message/released-state assertions not reached after status failure."
+    },
+    {
+      "id": "ARCH-ST04-R4-02-claim",
+      "classification": "causal actual PostgreSQL deadlock increase",
+      "actual_refresh_status": 200,
+      "actual_send_status": 409,
+      "database_deadlocks_before": 0,
+      "database_deadlocks_after": 1,
+      "limits": "Subsequent slot/effect assertions after failed deadlock assertion not reached."
+    },
+    {
+      "id": "ARCH-ST04-R4-02-local-completion",
+      "classification": "causal actual PostgreSQL deadlock increase",
+      "actual_refresh_status": 200,
+      "database_deadlocks_before": 1,
+      "database_deadlocks_after": 2,
+      "limits": "Subsequent one-POST/truthful receipt-state assertions after deadlock check not reached."
+    },
+    {
+      "id": "ARCH-ST04-R4-03",
+      "classification": "causal actual captured-SQL EXPLAIN assertion failure before index change",
+      "recent": {
+        "sql": "SELECT \"public\".\"initial_message_intents\".\"id\", \"public\".\"initial_message_intents\".\"conversation_id\", \"public\".\"initial_message_intents\".\"bu_id\", \"public\".\"initial_message_intents\".\"actor_id\", \"public\".\"initial_message_intents\".\"idempotency_key\", \"public\".\"initial_message_intents\".\"owner_nonce\", \"public\".\"initial_message_intents\".\"request_fingerprint\", \"public\".\"initial_message_intents\".\"request\", \"public\".\"initial_message_intents\".\"selected_context\", \"public\".\"initial_message_intents\".\"state\"::text, \"public\".\"initial_message_intents\".\"lease_expires_at\", \"public\".\"initial_message_intents\".\"dispatch_deadline_at\", \"public\".\"initial_message_intents\".\"external_message_id\", \"public\".\"initial_message_intents\".\"slot_released_at\", \"public\".\"initial_message_intents\".\"risk_acknowledged_at\", \"public\".\"initial_message_intents\".\"risk_acknowledged_by_actor_id\", \"public\".\"initial_message_intents\".\"created_at\", \"public\".\"initial_message_intents\".\"updated_at\" FROM \"public\".\"initial_message_intents\" WHERE (\"public\".\"initial_message_intents\".\"conversation_id\" = $1 AND \"public\".\"initial_message_intents\".\"bu_id\" = $2) ORDER BY \"public\".\"initial_message_intents\".\"created_at\" DESC, \"public\".\"initial_message_intents\".\"id\" DESC LIMIT $3 OFFSET $4",
+        "params": [
+          "bf7f3467-1015-4c3d-bd8b-6f2203509211",
+          "278ddc8f-adcf-456e-b916-1b44eb0f856d",
+          11,
+          0
+        ],
+        "nodeTypes": [
+          "Limit",
+          "Sort",
+          "Seq Scan"
+        ],
+        "scannedRows": 2048
+      },
+      "active": {
+        "sql": "SELECT \"public\".\"dispatch_admissions\".\"id\", \"public\".\"dispatch_admissions\".\"conversation_id\", \"public\".\"dispatch_admissions\".\"bu_id\", \"public\".\"dispatch_admissions\".\"caller\"::text, \"public\".\"dispatch_admissions\".\"actor_id\", \"public\".\"dispatch_admissions\".\"owner_nonce\", \"public\".\"dispatch_admissions\".\"selected_context\", \"public\".\"dispatch_admissions\".\"state\"::text, \"public\".\"dispatch_admissions\".\"expires_at\", \"public\".\"dispatch_admissions\".\"dispatch_deadline_at\", \"public\".\"dispatch_admissions\".\"released_at\", \"public\".\"dispatch_admissions\".\"risk_acknowledged_at\", \"public\".\"dispatch_admissions\".\"risk_acknowledged_by_actor_id\", \"public\".\"dispatch_admissions\".\"created_at\", \"public\".\"dispatch_admissions\".\"updated_at\" FROM \"public\".\"dispatch_admissions\" WHERE (\"public\".\"dispatch_admissions\".\"conversation_id\" = $1 AND \"public\".\"dispatch_admissions\".\"bu_id\" = $2 AND \"public\".\"dispatch_admissions\".\"released_at\" IS NULL) ORDER BY \"public\".\"dispatch_admissions\".\"created_at\" DESC, \"public\".\"dispatch_admissions\".\"id\" DESC LIMIT $3 OFFSET $4",
+        "params": [
+          "bf7f3467-1015-4c3d-bd8b-6f2203509211",
+          "278ddc8f-adcf-456e-b916-1b44eb0f856d",
+          11,
+          0
+        ],
+        "nodeTypes": [
+          "Limit",
+          "Sort",
+          "Seq Scan"
+        ],
+        "scannedRows": 256
+      },
+      "soft_assertion_failures": 4,
+      "limits": "Disposable synthetic2048released intents/256active admissions only; actual BFF SQL/params, no forced planner, no real customer load or universal latency claim."
+    }
+  ],
+  "next": "Implement bounded shared initial/ordinary final DB-clock predicate, channel/credential pins and nonwaiting actor fence, plus exact ordered indexes; preserve approved relative lock order and protected ST05 bytes. Independent causal-oracle coverage and fresh canonical API/ALL proofs required before activation."
+}

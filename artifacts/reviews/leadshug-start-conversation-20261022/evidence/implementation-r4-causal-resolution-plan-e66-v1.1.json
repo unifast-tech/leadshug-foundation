@@ -1,0 +1,26 @@
+{
+  "kind": "Root same-scope HOW adjudication after actualE66 failures; implementation not yet validated",
+  "recorded_at_utc": "2026-10-23T03:47:50.004293+00:00",
+  "causal_receipt": "api-result-e66-v1.1.json",
+  "actual_full259postseal": true,
+  "chosen_option": "Bounded in-scope nonwaiting row pins and atomic eligibility deadline, exact ordered indexes",
+  "scope_classification": "Correctness of already-approved finite dispatch and bounded recovery queries; no new WHAT/publicroute/state/provider/automaticretry/Messageowner. Frozen identity\u2192contact\u2192conversation\u2192intent order and protected ST05 owner preserved.",
+  "authorized_paths": [
+    "api-app/src/surfaces/bff/conversations.controller.ts",
+    "api-app/src/integrations/channels/prisma-channel-resolver.ts",
+    "api-app/src/domain/inbox/outbound.service.ts",
+    "api-app/src/domain/inbox/dispatch-admission.service.ts",
+    "their existing admitted focused specs",
+    "api-app/test/initial-message.e2e-spec.ts",
+    "api-app/prisma/schema.prisma",
+    "api-app/prisma/migrations/20261022150000_initial_message_admissions/migration.sql"
+  ],
+  "requirements": [
+    "SQL NOWAIT conflict rolls back transaction; translate error outside aborted transaction through existing truthful blocked/local-incomplete semantics. Early standalone actor query contention must not expose generic500.",
+    "Pin mutable channel/credential rows through claim commit then validate complete live tuple; use existing single trusted-window policy expiresAt, strict DBclock predicate in same SENDING update for shared ordinary/initial claims.",
+    "Preserve all lease/slot/idempotency/commit-readback/receipt/legacy ACKunknown diagnostics; no provider retry or protected owner mutation.",
+    "New test-only barriers call real policy/resolver then pause AFTER actual evaluation/pins; separately prove final deadline and actual concurrent rotation lock wait, with actual counters and drained finally. NOWAIT refusal tests must state changed schedule rather than claim old wait still executed.",
+    "Add indexes matching actual conversation+BU and createdAt/id order; retain quota/unique indexes. Current150000 migration only ran isolated disposable DB; accepted/delivered migration history untouched. Schema/client/build/migrations through canonical runner."
+  ],
+  "limitations": "Normal authority/routing GO still required; no preservedDB/runtime/provider/private inspection. None of3material findings closed before actual corrected proof and fresh affected review."
+}

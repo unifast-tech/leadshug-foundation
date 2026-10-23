@@ -1,0 +1,5 @@
+{
+  "format": "Lossless JSON envelope of actual textual canonical-guard stdout; not guard-native JSON",
+  "raw_stdout": "TODO Authority Guard\nRule: paced.todo.authority-process\nOverall outcome: go\n\nContext:\n  - approval_scope_present: True\n  - approval_section_present: True\n  - architecture_governance_required: True\n  - architecture_governance_section_present: True\n  - architecture_review_gates_required: True\n  - architecture_supersede_trigger: True\n  - current_delivery_stage: Pending\n  - delivery_claim: False\n  - delivery_gate_rows:\n  - execution_authority_granted: True\n  - promotion_routing_rows: 21\n  - require_delivery_gates: False\n  - routing_preflight_outcome: go\n  - routing_preflight_required: True\n  - routing_preflight_section_present: True\n  - rules_ingestion_rows: 10\n  - todo_path: foundation_documentation/todos/active/features/TODO-leadshug-start-conversation-by-contact.md\n  - validation_mode: execution-authority\n\nViolations:\n  - none\n",
+  "raw_stdout_sha256": "6afcdcd82d2c6e5990fe1dbd961b8095d6ae74e98a1126e0fa0fc44f421cdab3"
+}

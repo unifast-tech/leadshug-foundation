@@ -1,0 +1,22 @@
+{
+  "kind": "Primary documentation check supporting bounded HOW; no runtime/product proof",
+  "recorded_at_utc": "2026-10-23T03:41:46.828225+00:00",
+  "sources": [
+    {
+      "url": "https://www.postgresql.org/docs/16/sql-select.html",
+      "section": "The Locking Clause",
+      "verified_semantics": "NOWAIT errors immediately for conflicting selected row locks. It does not prevent the normal table-level ROW SHARE lock from waiting. No claim of universal nonblocking execution."
+    },
+    {
+      "url": "https://www.postgresql.org/docs/16/functions-datetime.html",
+      "section": "9.9.5 Current Date/Time",
+      "verified_semantics": "clock_timestamp gives actual current time, including changes during a statement; transaction_timestamp/now remain transaction-start values."
+    },
+    {
+      "url": "https://www.postgresql.org/docs/16/explicit-locking.html",
+      "section": "13.3.4 Deadlocks",
+      "verified_semantics": "A cycle can involve row locks; PostgreSQL aborts a participant. Consistent ordering is preferred. The bounded proposal retains approved relative lock order and refuses selected conflicting row pins rather than waiting or automatically retrying provider dispatch."
+    }
+  ],
+  "limits": "Actual code behavior remains subject to causal PostgreSQL tests. No generic analyzer change, new retry, lock-order waiver, or live system action authorized."
+}
