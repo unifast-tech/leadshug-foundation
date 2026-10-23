@@ -1,0 +1,12 @@
+{
+  "checkpoint": "E56 terminal full positive source recheck",
+  "stage": "After actual executor terminal and owned cleanup; BEFORE writer release",
+  "count": 259,
+  "fingerprint": "d35a20e1f0760b3270e1525a5afb47edc8e0786fb15f794355ffb29bd73c4eb6",
+  "matches_preseal_full_inventory_and_bytes": true,
+  "record_reference": "api-source-seal-e56-v1.1.json#records",
+  "stdout_sha256": "5d1fbed10fa662c2ac804433009ba0e6700decaa7cea421bf160bdbf91b054da",
+  "executor_reported_exit_code": 1,
+  "recorded_at_utc": "2026-10-23T01:12:48.121306+00:00",
+  "boundary": "Only declared positive public roots and7 exact publicfiles; no actual env/data/process inspection."
+}

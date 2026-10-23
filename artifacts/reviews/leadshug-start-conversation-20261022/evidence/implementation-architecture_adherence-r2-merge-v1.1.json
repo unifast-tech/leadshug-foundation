@@ -1,0 +1,76 @@
+{
+  "schema_version": "subagent-review-merge-v2",
+  "artifact_kind": "subagent_review_merge",
+  "authoritative": false,
+  "edit_policy": "derived_merge_packet",
+  "dispatch_path": "/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/artifacts/reviews/leadshug-start-conversation-20261022/evidence/implementation-architecture_adherence-r2-dispatch-v1.1.json",
+  "review_kind": "architecture_adherence",
+  "review_count": 1,
+  "reviewer_labels": [
+    "fresh-bounded-architecture-reviewer-r2"
+  ],
+  "highest_finding_severity": "medium",
+  "axis_summary": {
+    "performance": "acceptable",
+    "elegance": "acceptable",
+    "structural_soundness": "acceptable",
+    "operational_fit": "mixed"
+  },
+  "recommended_paths": [
+    "Resolve these findings within the current TODO, add focused regressions and refresh affected validation and review evidence. Then proceed through separately authorized preserved-local activation, source/image verification, migration preflight and assisted channel proof. DOD-11/12/13, module consolidation and the canonical diff guard remain open gates."
+  ],
+  "exact_next_step": "Record reviewer resolutions in the governing TODO using the machine-checkable resolution table or equivalent gate ledger, then extract the derived resolution packet and decide whether another bounded review pass is still required.",
+  "findings": [
+    {
+      "finding_id": "F-91766E02",
+      "severity": "medium",
+      "title": "Initial preview ignores per-template observation availability",
+      "rationale": "TemplateObservationService can mark an individual observation unavailable while retaining its APPROVED status and leaving its catalog page fresh and available. getCatalog then returns page.available=true with item.available=false. InitialMessageService.preview and submit check page availability and item status, but never item.available. They therefore accept an observation that the preserved ST05 owner explicitly reports unavailable, contrary to the normative requirement to consume observation freshness and availability independently of authoring support flags. Fresh dispatch revalidation reduces external risk but does not correct this local consumer divergence.",
+      "suggested_action": "Require the selected observation's availability in preview and new-attempt preparation without using supported or eligible as initial-send support flags. Add a producer-to-consumer regression with a fresh catalog page, an unavailable APPROVED observation and zero dispatch; retain positive POSITIONAL coverage with supported=false and available=true.",
+      "reviewer_labels": [
+        "fresh-bounded-architecture-reviewer-r2"
+      ],
+      "source_finding_ids": [
+        "ARCH-ST04-R2-03"
+      ],
+      "category": "adherence",
+      "formalizable_hint": "partial",
+      "candidate_rule_level": "project",
+      "candidate_rule_id": "n/a"
+    },
+    {
+      "finding_id": "F-9D491F93",
+      "severity": "medium",
+      "title": "Changing BU during manual open can leave the dialog permanently busy",
+      "rationale": "Inbox keeps the same NovaConversa instance mounted when trocarBu changes buId. NovaConversa advances openGeneration, but retains saving=true from an outstanding request. The old request's finally deliberately skips setSaving(false) after that generation change. Its late response is safely ignored, but both the submit and Fechar buttons remain disabled in the new BU, leaving the dialog unusable.",
+      "suggested_action": "Give the dialog fresh state when its BU changes, for example through BU-keyed mounting, while retaining the late-response fence. Add a browser regression that holds an actual open response, changes BU and verifies that the current dialog remains usable and the previous response cannot open a conversation.",
+      "reviewer_labels": [
+        "fresh-bounded-architecture-reviewer-r2"
+      ],
+      "source_finding_ids": [
+        "ARCH-ST04-R2-02"
+      ],
+      "category": "operational_fit",
+      "formalizable_hint": "partial",
+      "candidate_rule_level": "project",
+      "candidate_rule_id": "n/a"
+    },
+    {
+      "finding_id": "F-2A26268E",
+      "severity": "medium",
+      "title": "Admission persistence failures can erase ordinary transport outcomes",
+      "rationale": "OutboundService.send handles settlement failure for the corrected ACCEPTED success path, but its BLOCKED, REJECTED and UNKNOWN branches still await settleOrdinary or releasePrepared without protecting the established transport result. An inconclusive admission write/readback can therefore escape as ADMISSION_COMMIT_UNCONFIRMED or another exception without the required outcome/evidence. For ACK_WITHOUT_ID, it also prevents finishUnknown from executing the preserved diagnostic path. This diverges from SCOPE-09 and D-07 caller compatibility.",
+      "suggested_action": "Preserve the established transport outcome and diagnostic handling when admission persistence fails, while retaining conservative exclusion and avoiding provider retries. Add fault cases for settlement/release exceptions after UNKNOWN, ACK_WITHOUT_ID and definitive refusal; verify safe response metadata, diagnostic persistence and unchanged provider counters.",
+      "reviewer_labels": [
+        "fresh-bounded-architecture-reviewer-r2"
+      ],
+      "source_finding_ids": [
+        "ARCH-ST04-R2-01"
+      ],
+      "category": "adherence",
+      "formalizable_hint": "partial",
+      "candidate_rule_level": "project",
+      "candidate_rule_id": "n/a"
+    }
+  ]
+}

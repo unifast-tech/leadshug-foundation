@@ -1,0 +1,59 @@
+{
+  "schema_version": "subagent-review-merge-v2",
+  "artifact_kind": "subagent_review_merge",
+  "authoritative": false,
+  "edit_policy": "derived_merge_packet",
+  "dispatch_path": "/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/artifacts/reviews/leadshug-start-conversation-20261022/evidence/implementation-test_quality_audit-r3-dispatch-v1.1.json",
+  "review_kind": "test_quality_audit",
+  "review_count": 1,
+  "reviewer_labels": [
+    "fresh-no-context-tqa-r3"
+  ],
+  "highest_finding_severity": "medium",
+  "axis_summary": {
+    "performance": "acceptable",
+    "elegance": "mixed",
+    "structural_soundness": "mixed",
+    "operational_fit": "mixed"
+  },
+  "recommended_paths": [
+    "return_for_targeted_test_quality_remediation_and_evidence_completion"
+  ],
+  "exact_next_step": "Record reviewer resolutions in the governing TODO using the machine-checkable resolution table or equivalent gate ledger, then extract the derived resolution packet and decide whether another bounded review pass is still required.",
+  "findings": [
+    {
+      "finding_id": "F-D7518029",
+      "severity": "medium",
+      "title": "The main approved-template E2E test is an overlarge sequential scenario with coupled failure reachability",
+      "rationale": "Evidence: api-app/test/initial-message.e2e-spec.ts contains one long test beginning \u201cpreviews and sends approved NAMED and POSITIONAL templates...\u201d that shares mutable fake-provider modes, latches, catalog state, grant revocation, deadline manipulation, owner races, positive wire assertions, and seven negative cases. An early failure prevents later contract assertions from being reached, which the chronology already demonstrates can obscure what was actually proved. Current green status does not remove this diagnostic and maintenance risk.",
+      "suggested_action": "A) Split this scenario into independently seeded E2E cases grouped by template eligibility, claim/preflight fencing, owner race, protocol payload, and negative no-POST behavior; recommended. B) Retain common helpers but make each behavior an independently runnable test with local setup and explicit counter baseline. C) Keep the monolith unchanged and accept reduced failure localization and reachability; not recommended. Rerun the affected suites and canonical all after restructuring.",
+      "reviewer_labels": [
+        "fresh-no-context-tqa-r3"
+      ],
+      "source_finding_ids": [
+        "TQA-R3-02"
+      ],
+      "category": "tests",
+      "formalizable_hint": "partial",
+      "candidate_rule_level": "none",
+      "candidate_rule_id": "n/a"
+    },
+    {
+      "finding_id": "F-EB21E40D",
+      "severity": "medium",
+      "title": "Remaining high-heuristic static TQA signals are not individually dispositioned",
+      "rationale": "Evidence: test-quality-public-roots-e54-v1.1.json reports exit 2 with 196 status-only, 4 no-exception-only, 16 ambient-subject, and 29 mock hints. It convincingly explains the five hard-bypass matches as Prisma pagination arguments, but the package provides neither locations nor adjacent-assertion dispositions for the remaining signals. The audit rubric requires those patterns to be assessed, especially for a high-risk cross-stack delivery claim.",
+      "suggested_action": "A) Attach a bounded machine-readable inventory for every remaining signal with path, line, classification, and rationale, then rerun this independent TQA review; recommended. B) Narrow the scan only with an approved, semantics-preserving rule that still reports every excluded signal and reason. C) Leave aggregate high signals unresolved; this is not acceptable for TQA gate completion.",
+      "reviewer_labels": [
+        "fresh-no-context-tqa-r3"
+      ],
+      "source_finding_ids": [
+        "TQA-R3-01"
+      ],
+      "category": "tests",
+      "formalizable_hint": "yes",
+      "candidate_rule_level": "paced",
+      "candidate_rule_id": "tqa-static-signal-disposition-required"
+    }
+  ]
+}

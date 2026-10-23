@@ -1,0 +1,12 @@
+{
+  "kind": "E57 source-preflight fixture refinements and scoped ordinary fix",
+  "actual_runner_started": false,
+  "previous_actual_causal_receipt": "api-result-e56-v1.1.json",
+  "source_seal": "api-source-seal-e57-v1.1.json",
+  "ordinary_fix": "Catch only admission release/settlement errors after a captured transport result, preserve typed projection and finishUnknown. Existing positive accepted settlement proof is unchanged. Same cleanup treatment preserves accepted-without-fence UNKNOWN, no invented acceptance.",
+  "fixture_preflight": [
+    "New actual ST05 unavailable-observation setup respects shared10s debounce using existing controlled observation clock advanced10_001ms, page remains fresh<300s; spy restored. No sealed producer/timestamp/budget change.",
+    "Independently seeded protocol has exact3POST/3OUT (NAMED,POSITIONAL,bounded), indexes0/1. Separate owner-race case retains original fourth POST/OUT via its own +1delta assertions and local request data. Original effects preserved, not dropped."
+  ],
+  "not_claimed": "These preflight defects were not runtime RED; E56 stopped at unit before PG. Template availability and BU UI production remain E54 and must still reproduce before fixes."
+}

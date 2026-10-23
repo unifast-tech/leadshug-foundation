@@ -1,0 +1,9 @@
+{
+  "kind": "Actual post-review full source check before test-only r2 remediation release",
+  "recorded_at_utc": "2026-10-23T01:00:14.604674+00:00",
+  "count": 259,
+  "fingerprint": "604a6867f1d715ffac564e6a47c68539e0b07a657b046145542d42620cbbbe0c",
+  "all_inventory_and_bytes_match": true,
+  "review_lifecycle": "All architecture r2, cutover r2, TQA r2-retry1 and TQA r3 actual terminal; no live reviewer remains.",
+  "scope": "Positive public roots plus7exactfiles only; original full-run postseal not overwritten."
+}

@@ -46,12 +46,12 @@ Este v1.1 substitui a autoridade ativa da minuta revisada em 2026-10-19. O origi
 
 - **Current delivery stage:** `Pending`
 - **Qualifiers:** `none`
-- **Next exact step:** revisar o candidato E54 integral em r2 independente, resolver eventuais findings e concluir imagens/proposta concreta antes da aprovação da ativação local preservada e teste assistido.
+- **Next exact step:** regressões causais e divisão fiel do teste de template em casos independentes; capturar falhas antes da correção, revisar250sinais estáticos e validar o candidato consolidado.
 
 ## Active Work State (Required While TODO Remains In `active/`)
 
-- **Work state:** `review`
-- **Why this state now:** candidato corrigido E54 terminal0:364APIunit/439PostgreSQL/54Web/88browser; inventário259 e93 hashes/served-bundle conferidos. Findings r1 integrados com prova atual; r2 e gates de runtime/operador/módulos/guards permanecem pendentes. Perfil corrente Assurance / Tester-Quality com Security-Adversarial; próximo handoff DevOps limitado à preparação de imagens, sem ativação preservada ainda.
+- **Work state:** `implementation`
+- **Why this state now:** E54 regressão completa e imagens passaram, mas revisão r2 confirmou3falhas e TQA r3 confirmou2pendências de qualidade. Todos permanecem release-blockers atuais; correção em escopo com regressões causais/testes isolados e inventário integral de250sinais. Nenhuma ativação real/entrega; fontes E54 verificadas após todos os revisores terminarem.
 - **Exit condition:** implementação e todas as evidências/reviews/gates de entrega aprovados; estágio continua Pending até os critérios locais reais, sem claim de entrega por aprovação.
 
 ## Scope
@@ -785,6 +785,15 @@ Fresh internal r1 architecture/TQA results are derived challenge evidence; the r
 | F-8D9F2A1C | internal no-context test_quality_audit r1 / TQA-ST04-01 | high | release-blocker | fix in current TODO; preserve approved intent | fixed | Input clamps and named/positional snapshot validation use code points; E51 causal RED then current unit and Unicode browser proof; separate JSON bound preserved. Current evidence/implementation-r1-resolution-v1.1.json and all-result-e54-v1.1.json; fresh r2 challenge pending. |
 | F-9EFF5F01 | internal no-context test_quality_audit r1 / TQA-ST04-04 | medium | release-blocker | fix in current TODO; preserve approved intent | fixed | Chronology corrected explicitly: absent-module/fixture/detector failures and post-hoc reversion never business assertion test-first; mixed sequencing remains disclosed, not retroactively fixed. Current evidence/implementation-r1-resolution-v1.1.json and all-result-e54-v1.1.json; fresh r2 challenge pending. |
 | F-B360C531 | internal no-context test_quality_audit r1 / TQA-ST04-03 | medium | release-blocker | fix in current TODO; preserve approved intent | fixed | Actual EALB early UI409 unchanged slot, disposable expiry ACK200, successor and late-old local reconciliation isolating owner/provider verified in full E54. Current evidence/implementation-r1-resolution-v1.1.json and all-result-e54-v1.1.json; fresh r2 challenge pending. |
+| F-2A26268E | internal no-context architecture_adherence r2 / ARCH-ST04-R2-01 | medium | release-blocker | causal regression then bounded fix | open | Protect transport outcome/evidence and inherited ACK_WITHOUT_ID diagnostic persistence from ordinary settlement/release uncertainty. Keep conservative admission exclusion and no provider retry. evidence/implementation-r2-finding-triage-v1.1.json |
+| F-9D491F93 | internal no-context architecture_adherence r2 / ARCH-ST04-R2-02 | medium | release-blocker | causal regression then bounded fix | open | Fresh BU-scoped dialog state while preserving late-response fence; current UI may use keyed mount or equivalent bounded reset. evidence/implementation-r2-finding-triage-v1.1.json |
+| F-91766E02 | internal no-context architecture_adherence r2 / ARCH-ST04-R2-03 | medium | release-blocker | causal regression then bounded fix | open | Consume observation.available independently of approved textual support; block local preview/preparation on unavailable item and retain supported=false/available=true POSITIONAL. evidence/implementation-r2-finding-triage-v1.1.json |
+| F-D7518029 | internal no-context test_quality_audit r3 / TQA-R3-02 | medium | release-blocker | complete current test-quality evidence | open | Refactor the owned initial-message template monolith into independently seeded contract-focused cases, preserving every positive/negative assertion, provider baseline, race/latch and cleanup; no product changes in this test-only step. evidence/implementation-r2-finding-triage-v1.1.json |
+| F-EB21E40D | internal no-context test_quality_audit r3 / TQA-R3-01 | medium | release-blocker | complete current test-quality evidence | open | Attach all250signals with exact canonical-pattern path/line/current source hash, adjacent assertions and individual dispositions; preserve full positive-root raw high exit2 and any actual inherited weaknesses. Root owns evidence, no Delphi/analyzer edits. evidence/implementation-r2-finding-triage-v1.1.json |
+
+
+Fresh r2 architecture exposed three in-scope source-confirmed failures; causal test proof is still pending. Cutover found no current implementation-integrity blocker, and its low delivery-gate note remains an explicit prerequisite. TQA output completeness is still being completed.
+
 
 ## TODO Closeout Disposition
 
@@ -1259,3 +1268,28 @@ Canonical ALL session2734 actually terminated0 with owned cleanup:34APIunitfiles
 ## Execution checkpoint E54 — concrete images and fresh reviews
 
 After full terminal/postseal, both positive-only Alpine image builds actually passed: API e73a20bf17bcf0e4b9f9285e3d754b283f060a7a2a498c1a45fbb6614fd9be85 and Web cd9480a1b0e047828eab18e93fb24c64eaefaf142809bcce235c274ceb3d12fb. Root verified archive/build hashes, current schema and exact Web image bundle against actual E54 served/dist. Offline metadata is not preserved-runtime DB/native health. No application entrypoint/Compose/privateinput/tunnel/migration/actual provider activation occurred. Architecture r2 and first cutover review are live; TQA r2 actually terminated before a review turn with stdin-character ceiling1048576. One complete fresh retry uses lossless JSON whitespace compaction only, all24fullsources and complete rubric retained, exactstdin1033623. No live reviewer was replaced/repackaged and no gate PASS is inferred. Evidence: image-build-attestation-e54-v1.1.json, image-build-root-collection-e54-v1.1.json and implementation-test_quality_audit-r2-tool-failure-v1.1.json.
+
+
+## Execution checkpoint E54 — r2 failure paths require correction
+
+Architecture r2 actually terminated0/one turn/no tools with three medium findings; root confirmed current source for ordinary outcome masking, BU manual-open busy-state retention and per-item catalog availability omission. No existing test failure or runtime RED is claimed yet. All three stay release-blockers in this TODO, with test-first reproduction planned in admitted files; sealed ST05 producer/harness remains unchanged. Cutover r2 actually completed with no implementation-integrity blocker, only remaining delivery-gate note. TQA r2-retry1 was schema-valid/acceptable but too terse for all mandatory outputs; full fresh r3 preserves the complete package and explicit rubric, still live. No product edit/reviewer interruption occurred. Built E54 images are candidate build evidence only and cannot authorize later changed-source activation. See evidence/implementation-r2-finding-triage-v1.1.json and implementation-review-collection-r2-v1.1.json.
+
+
+## Execution checkpoint E54 — full TQA challenge and remediation release
+
+TQA r3 actually terminated0/one turn/no tools and was strictly merged. Its complete report covers all five questions, capability/DI/CI/platform boundaries and D01–D10, while identifying250static-signal location/disposition evidence and an oversized sequential approved-template test as material quality gaps. Both are current release-blockers, not waived. Root captured all250 exact canonical-pattern signals via rg JSON on the same four complete public roots, with source hashes/adjacent lines; dispositions remain pending. All current reviewers are now terminal, and a separate full259after-review source recheck matches E54 before sole-writer test-only remediation. E54 full-run postseal remains immutable. Source tests may now reproduce the3architecture defects and isolate the existing template cases; product fixes await causal results. No protected ST05 producer/harness edit, new feature, runtime activation or final gate claim.
+
+
+## Execution checkpoint E55/E56 — causal test-only candidate frozen
+
+E55 was a prepared preflight only, never run. Root refined the BU browser test to use the exact seeded alternate BU and fill a fresh current-BU phone, allowing correct key-mount reset semantics. The unavailable observation case now captures a valid original preview and asserts both preview and new-submit rejection with soft assertions so counters are still reached. E56 seals259public files and all38protected sources; only four admitted test files differ from E54, with product byte-exact. Four ordinary projection fault unit cases, actual-PG/BFF rollback plus missing-ID diagnostic verification, independent template scenario groups and unavailable-owner producer/consumer case, and real held-response BU browser regression are prepared. Canonical API may fail at new unit assertions before PG; unreached phases will not be counted. No causal RED/fix/runtime claim yet. Evidence: api-source-seal-e56-v1.1.json and candidate-source-preflight-e55-v1.1.json.
+
+
+## Execution checkpoint E56 — ordinary outcome masking causal RED
+
+Canonical API session84269 actually exited1 with owned cleanup. Build/lint/migrations passed;34unitfiles had364pass/4newfail. The new response assertions reproduce admission release/settlement errors masking BLOCKED, REJECTED, transportUNKNOWN and ACK_WITHOUT_ID before diagnostic completion. Production was exact E54. Later per-case counters and all PostgreSQL tests were not reached and are not counted as evidence. Root full259postseal matches d35a20e1; stdout5d1fbed1 matches actual output. The sole writer may next correct only ordinary outcome preservation after normalGO, keeping UI/template production frozen, then run fresh API to reach the real-PG fault and unavailable-observation checks. No actual preserved runtime/provider proof or current full GREEN. Evidence: api-result-e56-v1.1.json and api-source-recheck-e56-v1.1.json.
+
+
+## Execution checkpoint E57 — narrow ordinary fix and faithful test setup frozen
+
+Only OutboundService ordinary result-bookkeeping projection is corrected after actual E56unitRED; template/UI production stay E54. Source-preflight also corrects the new unavailable-observation fixture to respect the actual shared10s owner debounce with the existing controlled clock, retaining page freshness and restoration. Independent protocol now has exact3POST/OUT and correct NAMED/POSITIONAL indexes; separate owner-CAS keeps its own fourth effect/message delta. These are unexecuted test-precondition/refactor refinements, not product REDs or dropped assertions. Full259preseal and38protected matches precede canonical API; no fresh result yet. Evidence: api-source-seal-e57-v1.1.json and candidate-source-preflight-e57-v1.1.json.

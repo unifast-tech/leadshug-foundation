@@ -1,0 +1,155 @@
+{
+  "kind": "Root r2 three-finding triage and source-grounded evidence-loop preparation",
+  "recorded_at_utc": "2026-10-23T00:58:45.099988+00:00",
+  "source_seal": "all-source-seal-e54-v1.1.json",
+  "rows": [
+    {
+      "finding_id": "F-91766E02",
+      "source_finding_id": "ARCH-ST04-R2-03",
+      "severity": "medium",
+      "classification": "release-blocker",
+      "status": "open",
+      "planned_resolution": "Integrate",
+      "actual_resolution": "Pending causal regression and correction; source confirmed, no runtime RED/fix claimed.",
+      "source_path": "api-app/src/domain/inbox/initial-message.service.ts",
+      "same_scope_basis": "Existing approved D07/SCOPE09 transport compatibility, frontend async owner and observation freshness contract; no new feature/provider/state/API/migration.",
+      "options": [
+        {
+          "id": "A",
+          "action": "Consume observation.available independently of approved textual support; block local preview/preparation on unavailable item and retain supported=false/available=true POSITIONAL.",
+          "assessment": "recommended in current admitted product/test files"
+        },
+        {
+          "id": "B",
+          "action": "Broaden sealed producer/platform or invent new API/state",
+          "assessment": "unnecessary, not authorized"
+        },
+        {
+          "id": "C",
+          "action": "Deliver current known gap",
+          "assessment": "not acceptable"
+        }
+      ],
+      "coverage_gap": "Existing fresh approved catalog/status/semantic tests do not cover fresh page with individual APPROVED observation marked unavailable by preserved ST05 owner.",
+      "five_question_evidence_loop": {
+        "1": "Existing fresh approved catalog/status/semantic tests do not cover fresh page with individual APPROVED observation marked unavailable by preserved ST05 owner.",
+        "2": "Root inspected exact current E54 source. No actual private DB/payload was accessed. Capture valid owned disposable BFF/PG state and real served browser failure before fixes.",
+        "3": "E54 full GREEN did not combine these producer/consumer/fault paths; no existing failure or runtime reproduction is claimed yet.",
+        "4": "Add exact current-contract regression before product fix; preserve valid fixture owners, real BFF/UI and provider/Message/admission counters. Classify fixture/support failure separately.",
+        "5": "No generic Delphi/analyzer change authorized. Evaluate finite product semantic guards/fresh owner lifecycle; existing project behavioral harness is the immediate protection, any formalizable hint remains candidate only."
+      },
+      "sequencing": "Wait actual terminal of live E54 TQA r3 then root source recheck and test-only sole-writer release; production remains unchanged through causal reproduction.",
+      "remediation_owner": "stcon04_continuation single code writer; root assurance"
+    },
+    {
+      "finding_id": "F-9D491F93",
+      "source_finding_id": "ARCH-ST04-R2-02",
+      "severity": "medium",
+      "classification": "release-blocker",
+      "status": "open",
+      "planned_resolution": "Integrate",
+      "actual_resolution": "Pending causal regression and correction; source confirmed, no runtime RED/fix claimed.",
+      "source_path": "web-app/src/telas/Inbox.tsx",
+      "same_scope_basis": "Existing approved D07/SCOPE09 transport compatibility, frontend async owner and observation freshness contract; no new feature/provider/state/API/migration.",
+      "options": [
+        {
+          "id": "A",
+          "action": "Fresh BU-scoped dialog state while preserving late-response fence; current UI may use keyed mount or equivalent bounded reset.",
+          "assessment": "recommended in current admitted product/test files"
+        },
+        {
+          "id": "B",
+          "action": "Broaden sealed producer/platform or invent new API/state",
+          "assessment": "unnecessary, not authorized"
+        },
+        {
+          "id": "C",
+          "action": "Deliver current known gap",
+          "assessment": "not acceptable"
+        }
+      ],
+      "coverage_gap": "Existing browser covers stale preview and conversation switch, not manual-open request outstanding across BU change.",
+      "five_question_evidence_loop": {
+        "1": "Existing browser covers stale preview and conversation switch, not manual-open request outstanding across BU change.",
+        "2": "Root inspected exact current E54 source. No actual private DB/payload was accessed. Capture valid owned disposable BFF/PG state and real served browser failure before fixes.",
+        "3": "E54 full GREEN did not combine these producer/consumer/fault paths; no existing failure or runtime reproduction is claimed yet.",
+        "4": "Add exact current-contract regression before product fix; preserve valid fixture owners, real BFF/UI and provider/Message/admission counters. Classify fixture/support failure separately.",
+        "5": "No generic Delphi/analyzer change authorized. Evaluate finite product semantic guards/fresh owner lifecycle; existing project behavioral harness is the immediate protection, any formalizable hint remains candidate only."
+      },
+      "sequencing": "Wait actual terminal of live E54 TQA r3 then root source recheck and test-only sole-writer release; production remains unchanged through causal reproduction.",
+      "remediation_owner": "stcon04_continuation single code writer; root assurance"
+    },
+    {
+      "finding_id": "F-2A26268E",
+      "source_finding_id": "ARCH-ST04-R2-01",
+      "severity": "medium",
+      "classification": "release-blocker",
+      "status": "open",
+      "planned_resolution": "Integrate",
+      "actual_resolution": "Pending causal regression and correction; source confirmed, no runtime RED/fix claimed.",
+      "source_path": "api-app/src/domain/inbox/outbound.service.ts",
+      "same_scope_basis": "Existing approved D07/SCOPE09 transport compatibility, frontend async owner and observation freshness contract; no new feature/provider/state/API/migration.",
+      "options": [
+        {
+          "id": "A",
+          "action": "Protect transport outcome/evidence and inherited ACK_WITHOUT_ID diagnostic persistence from ordinary settlement/release uncertainty. Keep conservative admission exclusion and no provider retry.",
+          "assessment": "recommended in current admitted product/test files"
+        },
+        {
+          "id": "B",
+          "action": "Broaden sealed producer/platform or invent new API/state",
+          "assessment": "unnecessary, not authorized"
+        },
+        {
+          "id": "C",
+          "action": "Deliver current known gap",
+          "assessment": "not acceptable"
+        }
+      ],
+      "coverage_gap": "Existing ordinary tests exercise no-id/UNKNOWN/refusal and ACCEPTED-settlement fault separately; their combination with persistence failures lacks proof.",
+      "five_question_evidence_loop": {
+        "1": "Existing ordinary tests exercise no-id/UNKNOWN/refusal and ACCEPTED-settlement fault separately; their combination with persistence failures lacks proof.",
+        "2": "Root inspected exact current E54 source. No actual private DB/payload was accessed. Capture valid owned disposable BFF/PG state and real served browser failure before fixes.",
+        "3": "E54 full GREEN did not combine these producer/consumer/fault paths; no existing failure or runtime reproduction is claimed yet.",
+        "4": "Add exact current-contract regression before product fix; preserve valid fixture owners, real BFF/UI and provider/Message/admission counters. Classify fixture/support failure separately.",
+        "5": "No generic Delphi/analyzer change authorized. Evaluate finite product semantic guards/fresh owner lifecycle; existing project behavioral harness is the immediate protection, any formalizable hint remains candidate only."
+      },
+      "sequencing": "Wait actual terminal of live E54 TQA r3 then root source recheck and test-only sole-writer release; production remains unchanged through causal reproduction.",
+      "remediation_owner": "stcon04_continuation single code writer; root assurance"
+    }
+  ],
+  "protected_boundary": "template-observation.service.ts and inherited ST05 harness/producer remain sealed. Fix only already-admitted new consumer/outbound/Inbox/test paths.",
+  "current_images": "E54 built images prove current candidate build only; do not activate them after later product changes, fresh images/source binding required.",
+  "stage": "InProgress/Pending; no implementation release while current reviewer live.",
+  "test_quality_r3": [
+    {
+      "finding_id": "F-D7518029",
+      "source_finding_id": "TQA-R3-02",
+      "review_kind": "test_quality_audit",
+      "severity": "medium",
+      "classification": "release-blocker",
+      "status": "open",
+      "planned_resolution": "Integrate",
+      "actual_resolution": "Pending current evidence completion/test-only restructuring, not waived.",
+      "planned_action": "Refactor the owned initial-message template monolith into independently seeded contract-focused cases, preserving every positive/negative assertion, provider baseline, race/latch and cleanup; no product changes in this test-only step.",
+      "scope_basis": "Already-admitted test quality and exact initial-message test surface; no new product feature or policy.",
+      "owner": "stcon04_continuation sole code writer",
+      "rule_hint": "Reviewer candidate retained only; no PACED tool/rule change authorized."
+    },
+    {
+      "finding_id": "F-EB21E40D",
+      "source_finding_id": "TQA-R3-01",
+      "review_kind": "test_quality_audit",
+      "severity": "medium",
+      "classification": "release-blocker",
+      "status": "open",
+      "planned_resolution": "Integrate",
+      "actual_resolution": "Pending current evidence completion/test-only restructuring, not waived.",
+      "planned_action": "Attach all250signals with exact canonical-pattern path/line/current source hash, adjacent assertions and individual dispositions; preserve full positive-root raw high exit2 and any actual inherited weaknesses. Root owns evidence, no Delphi/analyzer edits.",
+      "scope_basis": "Already-admitted test quality and exact initial-message test surface; no new product feature or policy.",
+      "owner": "root evidence",
+      "rule_hint": "Reviewer candidate retained only; no PACED tool/rule change authorized."
+    }
+  ],
+  "current_review_lifecycle": "All current reviewers actually terminal; complete full259source after-review recheck matches E54. Test-only remediation may proceed after fresh normal authority GO."
+}

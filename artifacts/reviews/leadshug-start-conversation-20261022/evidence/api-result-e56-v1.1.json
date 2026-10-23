@@ -1,0 +1,54 @@
+{
+  "checkpoint": "E56 actual causal ordinary outcome-projection unit RED",
+  "recorded_at_utc": "2026-10-23T01:13:22.175311+00:00",
+  "command": "bash scripts/test-channels-local.sh api",
+  "executor_session_id": 84269,
+  "exit_code": 1,
+  "stdout_sha256": "5d1fbed10fa662c2ac804433009ba0e6700decaa7cea421bf160bdbf91b054da",
+  "source_fingerprint": "d35a20e1f0760b3270e1525a5afb47edc8e0786fb15f794355ffb29bd73c4eb6",
+  "full259source_postseal": true,
+  "owned_cleanup_observed": true,
+  "phases": {
+    "migrations_lint_build": "passed",
+    "unit": {
+      "files": 34,
+      "passed_tests": 364,
+      "failed_tests": 4
+    },
+    "postgresql": "not reached",
+    "web_browser": "not run"
+  },
+  "reached_assertion_failures": [
+    {
+      "case": "BLOCKED unclaimed release failure",
+      "line": 167,
+      "expected": "409/BLOCKED/CHANNEL_CONTEXT_CHANGED",
+      "actual": "synthetic admission release/readback error escapes"
+    },
+    {
+      "case": "REJECTED settlement failure",
+      "line": 210,
+      "expected": "400/REJECTED/PROVIDER_REFUSED",
+      "actual": "synthetic settlement/readback error escapes"
+    },
+    {
+      "case": "transport UNKNOWN settlement failure",
+      "line": 247,
+      "expected": "400/UNKNOWN/TRANSPORT_UNCONFIRMED/META_RECUSOU",
+      "actual": "synthetic uncertain settlement error escapes"
+    },
+    {
+      "case": "ACK_WITHOUT_ID settlement failure",
+      "line": 264,
+      "expected": "409/AMBIGUOUS_SEND_RECORDED/ACK_WITHOUT_ID/RECORDED",
+      "actual": "synthetic uncertain settlement error escapes before diagnostic completion"
+    }
+  ],
+  "limits": [
+    "Actual assertion RED before any product fix; production remains byte-exact E54.",
+    "Later same-case provider/acceptance/diagnostic counters are not counted as passed after the failed response expectation.",
+    "New real-PG/BFF fault and unavailable observation cases were not reached. No current BFF payload/row before-fix inspection claimed.",
+    "Other two architecture defects remain source-confirmed, not runtime reproduced yet."
+  ],
+  "next": "After current normalGO release ONLY ordinary captured-outcome protection; template/UI production unchanged. Then fresh canonical API reaches PG."
+}
