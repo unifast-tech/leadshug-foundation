@@ -46,7 +46,7 @@ Este v1.1 substitui a autoridade ativa da minuta revisada em 2026-10-19. O origi
 
 - **Current delivery stage:** `Pending`
 - **Qualifiers:** `none`
-- **Next exact step:** aguardar o resultado do primeiro texto não oficial iniciado pelo operador via Nova conversa na Local Test BU; em seguida testar primeiro template oficial aprovado e respectivos replies. O operador confirmou a validação Meta do callback E75. Guard canônico único já autorizado reservado ao fechamento após a prova; sem nova aprovação para esse plano.
+- **Next exact step:** confirmar explicitamente o reply não oficial no Atendimento: o operador informou “Chegou” para o primeiro envio, confirmando a chegada ao destinatário, mas ainda sem confirmação separada do retorno; em seguida testar primeiro template oficial aprovado e reply. O operador confirmou a validação Meta do callback E75. Guard canônico único já autorizado reservado ao fechamento após a prova; sem nova aprovação para esse plano.
 
 ## Active Work State (Required While TODO Remains In `active/`)
 
@@ -1477,3 +1477,7 @@ Evidence: evidence/runtime-activation-executor-e75-v1.1.json; evidence/runtime-t
 ## Operator checkpoint E75 — Meta callback validated; first-send proof requested
 
 The user confirmed “Meta validou o webhook” in response to call_7e60893418bb4948b45fa1080435d2fe. This is an operator attestation, not an agent inspection of Meta settings. Root rechecked current public health with verified TLS: HTTP200. No provider/private/runtime mutation occurred. The operator was guided through Atendimento → Local Test BU → Nova conversa → explicit-DDI contact → Abrir ou reutilizar → WhatsApp não oficial → Texto → Pré-visualizar → Confirmar primeiro envio once, followed by recipient receipt and inbound reply. No incoming-first action was requested. The official approved-template proof follows this result; neither proof is yet claimed. Evidence: evidence/operator-meta-callback-confirmed-e75-v1.1.json. Delivery remains Pending; module consolidation, the already authorized one-shot full guard and final review remain pending.
+
+## Operator checkpoint E75 — nonofficial outbound delivered, reply clarification pending
+
+The operator answered “Chegou” to first-send question call_3a5f579ef8f64bc1947dcf2b5468bd51. This confirms reported recipient delivery of the initiated nonofficial text; it does not explicitly establish the inbound reply. Root requested that narrow clarification without repeating the outbound message. Evidence: evidence/operator-qr-first-send-e75-v1.1.json. Official template/reply proof, module application, one-shot full guard and final review remain pending; no complete two-way or delivery-stage claim is inferred.

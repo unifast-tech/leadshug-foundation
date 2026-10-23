@@ -1,0 +1,14 @@
+{
+  "kind": "Partial operator proof: nonofficial first outbound delivery",
+  "recorded_at_utc": "2026-10-23T14:39:43.267179+00:00",
+  "question_id": "call_3a5f579ef8f64bc1947dcf2b5468bd51",
+  "operator_answer": "Chegou",
+  "channel": "nonofficial",
+  "business_unit": "Local Test BU",
+  "outbound_delivery": "confirmed by operator",
+  "inbound_reply": "not yet explicitly confirmed; clarification requested",
+  "provenance": "User attestation only; no business rows, application logs, recipient actions or provider settings inspected by agent.",
+  "official_template_proof": "pending",
+  "delivery_stage": "Pending",
+  "full_guard": "Authorized; not executed."
+}
