@@ -6,7 +6,7 @@ ST-IG-03 — Conectar Instagram e atender DMs na mesma BU dos WhatsApps
 ## Artifact Identity
 - **Artifact type:** `tactical_execution_contract`
 - **Artifact status:** Review
-- **Contract version:** 1.2 — architecture reviewed, awaiting critique, sem execução autorizada.
+- **Contract version:** 1.3 — critique findings integrated, awaiting re-review, sem execução autorizada.
 - **Template:** copiado de `delphi-ai/templates/todo_template.md` em2026-10-23; seções aplicáveis preenchidas abaixo.
 
 ## Context
@@ -31,24 +31,24 @@ Este TODO define WHAT, exclusões e critérios de entrega. Planejamento e baseli
 ## Delivery Status Canon (Required)
 - **Current delivery stage:** Pending
 - **Qualifiers:** Blocked
-- **Next exact step:** publicar a baseline revisada v1.2 e concluir crítica independente/Plan Review; depois executar coherence/scope/authority preflight antes de pedir aprovação.
+- **Next exact step:** publicar a baseline reconvergida v1.3 e rerodar crítica independente/Plan Review; depois executar coherence/scope/authority preflight antes de pedir aprovação.
 
 ## Active Work State (Required While TODO Remains In `active/`)
 - **Work state:** blocked
-- **Why this state now:** arquitetura r2go após integrar os achados; contrato v1.2 aguarda crítica independente e guards.
+- **Why this state now:** arquitetura r2go; três achados da crítica r1 integrados ao candidato v1.3 aguardam re-review e guards.
 - **Exit condition:** plano reconvergido, dependências pré-aprovação resolvidas, guards preflight-go e aprovação explícita antes de execução.
 
 ## Blocker Notes (Required if `Qualifiers` includes `Blocked`)
 - **Blocker:** crítica/Plan Review e preflight finais ainda não concluídos; não há autorização de implementação.
 - **Why blocked now:** protocolo e arquitetura revisados; não pedir aprovação sem crítica/guards finais nem inferir permissões da conta real.
-- **What unblocks it:** crítica da baseline v1.2 e guards de preapproval; valores/saúde da instalação serão verificados na fase runtime própria.
+- **What unblocks it:** crítica da baseline v1.3 e guards de preapproval; valores/saúde da instalação serão verificados na fase runtime própria.
 - **Owner / source:** strategic steward para contrato/reviews; operador para painel Meta.
 - **Last confirmed truth:** conta profissional e acesso disponíveis; app existente oferece Instagram; BU conjunta escolhida. Não reenviar perguntas já respondidas, migrar número ou desconectar WhatsApp.
 
 ## Scope
 - [ ] SCOPE-01 Consolidar, após aprovação, as propostas DEC-qualified-contact-conversation, DEC-business-resource-provider-identity e DEC-explicit-channel-routing nos owners canônicos, distinguindo arquitetura e entrega.
 - [ ] SCOPE-02 Estabelecer contato local e identidade externa qualificada, recursos empresariais e rotas imutáveis; no máximo um recurso empresarial WhatsApp durável por BU (oficial+Evolution no mesmo número comprovado) e múltiplas contas Instagram; preservar IDs de BU/conversa/mensagem e identidades técnicas existentes.
-- [ ] SCOPE-03 Migrar consumidores de telefone/tipo para identidade/rota; BFF multicanal, API pública e Typebot preservados no subconjunto WhatsApp, sem Instagram acidental.
+- [ ] SCOPE-03 Migrar consumidores de telefone/tipo para identidade/rota; BFF multicanal, API pública, Typebot e Consultar (lista/drilldown/CSV) preservados no subconjunto WhatsApp, sem Instagram acidental.
 - [ ] SCOPE-04 Conexão Instagram Login no app existente com configuração própria do produto, tentativas por ator/sessão/BU, autorização server-side, armazenamento cifrado, reautorização e desconexão locais explícitas.
 - [ ] SCOPE-05 Ingresso Instagram autenticado, normalização textual, deduplicação transacional e estado honesto de recebimento; nenhum sucesso inferido de OAuth/challenge sintético.
 - [ ] SCOPE-06 Implementação Instagram registrada no Channel; política textual por recurso; envio pelo único OutboundService e aceitação comuns, sem fallback e sem retry externo ambíguo.
@@ -107,6 +107,7 @@ Baselines Git não representam checkout limpo: `artifacts/reviews/leadshug-insta
 | API | src/domain/historico/cobertura.ts | M | leituras justificadas |
 | API | src/integrations/channels/** | A,M,?? | composição e resolver por vínculo/rota |
 | API | src/integrations/instagram/** | A,?? | cliente/protocolo Instagram isolados |
+| API | src/surfaces/bff/me.controller.ts | M | Bound legacy BU connections projection to compatible WhatsApp max2; preserve grants and other controller behavior |
 | API | src/surfaces/bff/bff.module.ts | A,M,?? | projeções/registro dos controllers governantes de conexão/inbox |
 | API | src/surfaces/bff/conversations.controller.ts | A,M,?? | projeções/registro dos controllers governantes de conexão/inbox |
 | API | src/surfaces/bff/channels.controller.ts | A,M,?? | projeções/registro dos controllers governantes de conexão/inbox |
@@ -122,6 +123,10 @@ Baselines Git não representam checkout limpo: `artifacts/reviews/leadshug-insta
 | API | test/api-publica.e2e-spec.ts | M | API antiga não trata ID Instagram como telefone |
 | API | test/atendimento.e2e-spec.ts | M | inbox/claim/readback |
 | API | test/webhooks.e2e-spec.ts | M | autenticação, echo e dedup |
+| API | test/historico.e2e-spec.ts | M | Canonical fixtures and qualified WhatsApp Consultar boundary assertions; preserve all existing scenarios/assertions |
+| API | test/painel.e2e-spec.ts | M | Canonical fixture-only adaptation for mandatory contact identity; preserve all existing scenarios/assertions/counters |
+| API | test/historico-atividades.e2e-spec.ts | M | Canonical fixture-only adaptation for mandatory contact identity; preserve all existing scenarios/assertions/counters |
+| API | test/setores.e2e-spec.ts | M | Canonical fixture-only adaptation for mandatory contact identity; preserve all existing scenarios/assertions/counters |
 | API | test/helpers.ts | M | seed determinístico por identidade |
 | API | test/browser-server.cjs | M | backend real e fake de fronteira HTTP |
 | API | test/timeline-fixtures.cjs | M | persistência/identidade sintéticas |
@@ -182,8 +187,8 @@ Baselines Git não representam checkout limpo: `artifacts/reviews/leadshug-insta
 | API | src/integrations/meta/message-template.client.spec.ts | ?? | Inherited public source ONLY; byte-exact baseline hash required, NO new Instagram mutation |
 | API | src/integrations/meta/message-template.client.ts | ?? | Inherited public source ONLY; byte-exact baseline hash required, NO new Instagram mutation |
 | API | src/surfaces/bff/message-templates.controller.ts | ?? | Inherited public source ONLY; byte-exact baseline hash required, NO new Instagram mutation |
-| API | test/conversation-start.e2e-spec.ts | ?? | Inherited public source ONLY; byte-exact baseline hash required, NO new Instagram mutation |
-| API | test/dispatch-admission.e2e-spec.ts | ?? | Inherited public source ONLY; byte-exact baseline hash required, NO new Instagram mutation |
+| API | test/conversation-start.e2e-spec.ts | A,M,?? | Canonical fixture/qualified lookup/context adaptations only; preserve all scenarios/assertions/counters and deliberate v1 cutover cases; baseline hash retained, final freeze lifted per IG-CRIT-R1-01 |
+| API | test/dispatch-admission.e2e-spec.ts | A,M,?? | Canonical fixture/qualified lookup/context adaptations only; preserve all scenarios/assertions/counters and deliberate v1 cutover cases; baseline hash retained, final freeze lifted per IG-CRIT-R1-01 |
 | API | test/message-template-bff.e2e-spec.ts | ?? | Inherited public source ONLY; byte-exact baseline hash required, NO new Instagram mutation |
 | API | test/message-template-drafts.e2e-spec.ts | ?? | Inherited public source ONLY; byte-exact baseline hash required, NO new Instagram mutation |
 | API | test/message-template-management.e2e-spec.ts | ?? | Inherited public source ONLY; byte-exact baseline hash required, NO new Instagram mutation |
@@ -217,7 +222,7 @@ Baselines Git não representam checkout limpo: `artifacts/reviews/leadshug-insta
 | Foundation | todos/completed/features/TODO-leadshug-start-conversation-by-contact.md | any | preservar prova anterior |
 
 ### Diff Deviation Analysis
-Superfícies root/safe runner/CI/compose/gateway e diferenças públicas herdadas estão admitidas por caminhos exatos e inventário de preservação em evidence/inherited-public-preservation.json. Só a zona de mutação desta fatia pode ganhar alterações; herança fora dela deve manter hashes/deleções e índice root. O resíduo root109bytes conserva a admissão exata anterior e exige companion autorizado posterior. Não executar guards integrais que enumerem/leiam/hash privados até o plano específico posterior; code approval não concede essa exceção. Nada será restaurado automaticamente para satisfazer guard.
+Superfícies root/safe runner/CI/compose/gateway e diferenças públicas herdadas estão admitidas por caminhos exatos e inventário de preservação em evidence/inherited-public-preservation-v1.1.json. Só a zona de mutação desta fatia pode ganhar alterações; herança fora dela deve manter hashes/deleções e índice root. O resíduo root109bytes conserva a admissão exata anterior e exige companion autorizado posterior. Não executar guards integrais que enumerem/leiam/hash privados até o plano específico posterior; code approval não concede essa exceção. Nada será restaurado automaticamente para satisfazer guard.
 
 ## Bounded But Elastic Guardrails
 - **May stay inside this TODO:** nomes privados de classes, índices e testes dentro das responsabilidades congeladas; correções exigidas pelo mesmo percurso.
@@ -230,7 +235,7 @@ Superfícies root/safe runner/CI/compose/gateway e diferenças públicas herdada
 - [ ] DOD-04 Webhook autentica raw body e app correto antes de conteúdo; nova entrada e replay concorrem sem duplicar contato/conversa/mensagem/unread; echo não vira entrada nem autoria humana inventada.
 - [ ] DOD-05 DM textual aparece na lista/thread da BU; resposta usa rota exata pelo Channel/OutboundService, respeita política e conserva distinção entre aceitação e entrega.
 - [ ] DOD-06 Cadastro/Atendimento apresentam BU, conta/origem e remetente sem tratar ID Instagram como telefone; ações/rascunhos e respostas assíncronas estão vinculados à BU/rota/geração.
-- [ ] DOD-07 API v1 e Typebot WhatsApp mantêm contratos e isolamento; Instagram não entra por telefone ou ativa bot por acidente; autoria/modelos/janela atuais preservados.
+- [ ] DOD-07 API v1, Typebot e Consultar/lista/drilldown/CSV WhatsApp mantêm contratos e isolamento; projeções legadas de conexões carregam no máximo os dois bindings WhatsApp compatíveis e não hidratam Instagram; Instagram não entra por telefone ou ativa bot por acidente; autoria/modelos/janela atuais preservados.
 - [ ] DOD-08 Harness de dependência abstrata, batch/queries limitadas e invariantes PostgreSQL/concorrência passam; nenhum framework genérico ou fallback escondido.
 - [ ] DOD-09 ALL canônico com fontes seladas, migrações descartáveis e Playwright mutation contra backend real passa, com admissão CI de todos os novos cenários e sem segredos operacionais.
 - [ ] DOD-10 Em plano runtime posterior aprovado: DM real Instagram→LeadsHug→resposta no aparelho e retomada; nova troca nos dois WhatsApps. Teste Meta sintético não substitui essas provas.
@@ -296,7 +301,7 @@ Cada SCOPE/DOD/VAL terá linha com o texto exato do critério e prova específic
 - D-06 DM individual textual recebida primeiro; política própria, sem HUMAN_AGENT, prospecção, mídia/grupos ou templates. Bots Instagram desabilitados explicitamente.
 - D-07 Único sender/aceitação e resultados ACCEPTED/BLOCKED/REJECTED/UNKNOWN; preservar idempotência/admissões, autoria, dedup e fences; erro/timeout não autoriza novo POST.
 - D-08 Migração versionada preserva IDs/histórico e bytes lógicos de request/fingerprint/snapshots/deadlines v1; a matriz de estados abaixo governa recuperação local sem provider HTTP. Contexto v2 e novas identidades somente para novos writes; não rehash/rewrite v1 nem derivar rota histórica de BU.phone/canal disponível.
-- D-09 API pública v1 conserva semântica WhatsApp: accounts/conversations/messages/claim/release não aceitam nem projetam Instagram como telefone; rotas BFF evoluem com React. Typebot/session/webhooks OUT existentes devem qualificar identidade e manter automação Instagram bloqueada.
+- D-09 Consultar/lista/drilldown/CSV conservam o contrato por telefone apenas para identidades WhatsApp qualificadas, com número empresarial do recurso único comprovado; Instagram fica no Atendimento e não nessa consulta. Projeções legadas de conexões de BU retornam no máximo os dois bindings WhatsApp compatíveis; Instagram usa catálogo paginado. API pública v1 conserva semântica WhatsApp: accounts/conversations/messages/claim/release não aceitam nem projetam Instagram como telefone; rotas BFF evoluem com React. Typebot/session/webhooks OUT existentes devem qualificar identidade e manter automação Instagram bloqueada.
 - D-10 Test-first e ALL real-backend com fontes frescas; isolamento e capacidade também provados com duas contas Instagram sintéticas na mesma BU. Prova real exige plano posterior e não habilita produção/App Review.
 
 ## Module Decision Baseline Snapshot (Required Before APROVADO)
@@ -363,11 +368,11 @@ D-01..D-10 e as cláusulas normativas são o candidato revisado a baseline, não
 - **Gate decision:** required
 - **Trigger stage:** before the first planning-side review or guard run
 - **Baseline branch:** main
-- **Baseline commit:** 92c282326c953eda96650c2ae2d26643b4070cb9
+- **Baseline commit:** c59c3782a362a923f8b6efe3432b31e27563ad8d
 - **Baseline push reference:** origin/main
 - **Gate status:** no_material_findings
-- **Findings summary:** baseline v1.1 publicada após integrar os quatro achados r1 e reconvergir Q-IG-01/02; reviews permitidas, sem execução de produto.
-- **Evidence / reference:** artifacts/reviews/leadshug-instagram-channel-20261023/evidence/review-baseline-freeze-r2.json
+- **Findings summary:** baseline v1.2 publicada após r2go e alinhamento das projeções; crítica permitida, sem execução de produto.
+- **Evidence / reference:** artifacts/reviews/leadshug-instagram-channel-20261023/evidence/review-baseline-freeze-r3.json
 - **Pre-freeze packet-prep rule:** prepared-pre-freeze não equivale a passed; guards formais só depois do commit/push.
 
 ## Gate: Review Scope Drift
@@ -437,7 +442,7 @@ Contrato de API proposto e modelo físico a seguir; lista estrita e herança pú
 Local primeiro, projeto runtime existente `leadshug_channels_local`; validação descartável `leadshug_channels_validation`, conforme runner. NÃO executar runtime nesta tarefa. Ativação, acesso opaco ao .env.testing, migração em DB real e callbacks/túneis dependem de plano próprio posterior. Plano deverá provar preservação de peers/volumes, snapshots/admissões pendentes, versões/checksums e abort-before-write em conflito. Lock timeout5s/statement60s nos comandos de migração; nenhum reset. Aprovação de código não publica app Meta nem autoriza produção.
 
 ## Plan Review Gate
-**Status:** arquitetura r2go, findings r1/r2 integrados; Plan Review sete lentes e crítica ainda pendentes. Não declarar passado antes da rodada reconvergida.
+**Status:** arquitetura r2go, findings r1/r2 integrados; crítica r1 realizou sete lentes e exigiu três correções, agora integradas; rerun pendente. Não declarar passado antes da rodada reconvergida.
 
 ### Review Sections
 - [ ] Architecture
@@ -496,8 +501,8 @@ Q-IG-01/02 estão reconvergidos para review; arquitetura/crítica e guards ainda
 - **Critique isolation mode:** fresh internal no-context reviewer
 - **Internal reviewer mandate:** required; não implementing agent; wait status-based, external provider não satisfaz gate.
 - **Canonical multi-lane audit protocol (when required):** audit-protocol-triple-review, posterior à implementação e adicional à crítica.
-- **Critique status:** not_run
-- **Evidence / reference:** pending-freeze.
+- **Critique status:** findings_integrated
+- **Evidence / reference:** artifacts/reviews/leadshug-instagram-channel-20261023/evidence/critique-r1-result.json; três achados integrados ao candidato v1.3, rerun após publicar baseline.
 
 ## Rules Acknowledgement / Ingestion
 Planejadas; ingestão vinculante somente após APROVADO. Não há waiver.
@@ -554,7 +559,7 @@ Planned: telefone sintético, segredo global, provider branch nos consumers, fal
 - **Disposition:** blocked
 - **Disposition reason:** contrato em preparação e revisão; não implementado.
 - **Post-commit/push status:** pending
-- **Next path/status action:** manter ativo; publicar baseline v1.2, concluir crítica/guards antes de aprovação.
+- **Next path/status action:** manter ativo; publicar baseline v1.3, concluir crítica/guards antes de aprovação.
 
 ## Security Risk Assessment
 - **Risk level:** high
@@ -775,3 +780,18 @@ Essa disposição resolve a proposta documental para a nova rodada; não muda o 
 | IG-ARCH-R2-02 | Integrated | closed | limites Instagram separados de WhatsApp4096/parser; correção inspecionada pelo reviewer |
 
 Parecer terminal r2go, estático e sem execução; receipt architecture-r2-result.json. Crítica independente e guards de aprovação ainda pendentes.
+
+## Normative critique r1 integration — candidate v1.3
+
+As três correções abaixo integram o parecer changes_required de critique-r1-result.json; nenhum teste/código foi editado. Publicar esta baseline e rerodar crítica antes de aprovação.
+
+- IG-CRIT-R1-01: seis arquivos exatos de regressão admitidos acima. conversation-start e dispatch-admission deixam de ter freeze final byte-exact, mas hashes originais continuam fatos de baseline. Só fixtures canônicas, lookup qualificado e contextos versionados podem ser adaptados; preservar todos os cenários, asserts, contadores e evidência causal. Casos v1 deliberados continuam como cutover, não writers novos. Os outros quatro arquivos recebem apenas fixtures, exceto historico que também testa a fronteira explícita abaixo. Não interceptar Prisma nem criar writer/trigger legado para satisfazer fixtures obsoletas. A política v1.1 de preservação governa essas exceções; as observações anteriores não são apagadas.
+- IG-CRIT-R1-02: GET /api/bff/business-units e seu detalhe preservam a projeção legacy channels/canais apenas WhatsApp, no máximo os dois bindings compatíveis do recurso empresarial durável único. Resolver bindings atuais/proveniência antes de readiness; desconectado não é apagado para esconder ambiguidade. Histórico de bindings aposentados não vira catálogo implícito. Incompatibilidade/cardinalidade excedida é conflito explícito, sem take/slice silencioso. me.controller.ts é admitido somente para essa projeção limitada; grants/criação e outras responsabilidades ficam preservadas. A UI Instagram usa channel-connections paginado, sem hidratar toda a conta via business-units. Testes provam zero contas Instagram nessa projeção, inclusive com12contas, consultas limitadas e ausência de HTTP externo.
+- IG-CRIT-R1-03: Consultar legado (lista, drilldown e CSV) é WhatsApp-only. historico.service.ts filtra por identidade WhatsApp qualificada, usa telefone do peer e número empresarial do recurso comprovado único, nunca Conversation.contact/BU.phone como autoridade. BU só Instagram não produz linha telefônica; BU mista exclui Instagram; IGSID numérico igual a E.164 não colide nem revela conversa. Preservar filtros, paginação, grants e histórico WhatsApp; os testes de historico cobrem esses três casos sem enfraquecer os anteriores. Instagram continua na caixa de Atendimento; Consultar multicanal exige contrato próprio futuro, sem Web/controller novos nesta fatia.
+- Webhook de saída para parceiro: owner atualmente sem import/call nos fontes públicos verificados. Não implementar nem registrar novo caller Instagram; nenhum caminho novo para esse serviço dormente, nenhuma expansão de contrato parceiro. Typebot continua bloqueado antes de trigger/session/client para Instagram.
+
+| Finding ID | Resolution | Status | Evidence |
+| --- | --- | --- | --- |
+| IG-CRIT-R1-01 | Integrated | awaiting re-review | seis caminhos exatos e política de preservação v1.1 |
+| IG-CRIT-R1-02 | Integrated | awaiting re-review | produtor BU legacy limitado e Instagram paginado |
+| IG-CRIT-R1-03 | Integrated | awaiting re-review | Consultar WhatsApp qualificado, testes de isolamento/collision |

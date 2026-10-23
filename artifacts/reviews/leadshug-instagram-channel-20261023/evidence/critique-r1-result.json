@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-23",
+  "reviewKind": "critique",
+  "reviewer": "/root/instagram_plan_critique_r1",
+  "isolation": "fresh internal no-context",
+  "model": "gpt-6.1-sol",
+  "effort": "xhigh",
+  "baseline": "c59c3782a362a923f8b6efe3432b31e27563ad8d",
+  "outcome": "changes_required",
+  "findings": [
+    {
+      "id": "IG-CRIT-R1-01",
+      "severity": "high",
+      "summary": "admit six exact regression files for canonical fixtures/lookups/contexts; preserve assertions and deliberate legacy cutover cases"
+    },
+    {
+      "id": "IG-CRIT-R1-02",
+      "severity": "medium",
+      "summary": "bound legacy BU controller connections projection to max2 compatible WhatsApp bindings; IG paginated catalogue"
+    },
+    {
+      "id": "IG-CRIT-R1-03",
+      "severity": "medium",
+      "summary": "preserve phone-addressed Consultar/list/drilldown/CSV as qualified WhatsApp subset; IG remains Atendimento only"
+    }
+  ],
+  "lenses": {
+    "Architecture": "favorable after bounded corrections",
+    "CodeQuality": "sound DI and common owners; admit necessary paths",
+    "Tests": "strong strategy but incompatible frozen fixtures must be corrected",
+    "Performance": "acceptable proposed budgets conditional on bounded BU producer",
+    "Security": "no additional planning blocker; real eligibility remains gate",
+    "Elegance": "favorable cohesive DM human reply",
+    "StructuralSoundness": "favorable conditional on canonical fixtures without shadow v1 writer"
+  },
+  "limitations": "static read-only planning review; no tests/runtime/network/private access; rerun affected critique after publishing corrections"
+}
