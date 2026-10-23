@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-23",
+  "kind": "public-source observation for later checkpoint preparation",
+  "observedPublicPath": "web-app/public/privacidade.html",
+  "observations": [
+    "Line37 describes the platform specifically as WhatsApp attendance",
+    "Lines51-52 describe telephone/contact messages and WhatsApp account/number integration identifiers",
+    "Lines66-76 describe WhatsApp integration and Meta/WhatsApp sharing",
+    "Line94 describes organization-and-number access boundaries",
+    "The approved strict changed-path table does not admit this public HTML file"
+  ],
+  "nextAction": "During CP4/CP5 preparation, assess the finished Instagram data flow and prepare an exact, reviewed companion-path proposal for this public page if needed. No modification is authorized by this observation. Seek user path validation only after the proposal is concrete and reviewable.",
+  "currentCodeWorkBlocked": false,
+  "runtimeBoundary": "Instagram activation remains under the already required separately approved runtime plan; do not treat the current WhatsApp-specific page as proof that the Instagram description is ready.",
+  "privateInputsUsed": false,
+  "legalOrComplianceClaim": "none; public source and strict-scope observation only"
+}

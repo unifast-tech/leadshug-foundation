@@ -1,0 +1,112 @@
+{
+  "schema_version": "subagent-review-dispatch-v1",
+  "artifact_kind": "subagent_review_dispatch",
+  "authoritative": false,
+  "edit_policy": "derived_dispatch_packet",
+  "review_kind": "architecture_adherence",
+  "bounded_package_path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/adherence-cp1-r2-package.json",
+  "reviewer_count": 1,
+  "no_context_required": true,
+  "required_axes": [
+    "adherence",
+    "structural_soundness",
+    "operational_fit",
+    "performance",
+    "elegance"
+  ],
+  "focus_points": [
+    "Compare the delivered bounded package against the frozen Architecture Change Governance contract and Decision Baseline.",
+    "Identify any implementation path, temporary exception, or missing protection harness that diverges from the approved target steady-state.",
+    "Do not redesign the approved architecture unless the delivered evidence exposes a material defect or an approval-breaking divergence.",
+    "For each material finding, add category and formalizable-hint when you can judge them honestly.",
+    "When assessing design, seek the simplest faithful Clean Code/SOLID design for the approved intent. Do not invent future-facing work or erase explicit TODO intent. Planning review may challenge proposed intent; delivery review must preserve approved intent or return for renewed approval."
+  ],
+  "result_contract_fields": [
+    "overall_assessment",
+    "recommended_path",
+    "performance_position",
+    "elegance_position",
+    "structural_soundness_position",
+    "operational_fit_position",
+    "findings[].finding_id (optional)",
+    "findings[].category (optional)",
+    "findings[].formalizable_hint (optional)",
+    "findings[].candidate_rule_level (optional)",
+    "findings[]"
+  ],
+  "todo_path": "foundation_documentation/todos/active/features/TODO-leadshug-instagram-channel.md",
+  "historical_disposition_policy": [
+    "Resolved findings are historical context only. Do not reopen them unless the current bounded package materially changes the same locus/behavior or fresh evidence shows regression.",
+    "Challenged findings stay closed unless the current bounded package materially changes the same locus/behavior or the prior rationale is objectively insufficient.",
+    "Deferred findings must cite the recorded follow-up/waiver path first. Re-raise them only when the current bounded package changes the same locus or closure now depends on that deferred risk.",
+    "Unresolved findings remain valid to re-raise until they are fixed, challenged, or formally deferred with authority."
+  ],
+  "historical_dispositions": [
+    {
+      "source_kind": "promotion_routing",
+      "finding_id": "IG-CP1-R1-01",
+      "carry_forward_class": "unresolved",
+      "source_disposition": "classification=release-blocker; routing=fix in this TODO; status=open",
+      "summary": "immutable qualified peer is SCOPE-02/DOD-01",
+      "reference": "approved v1.3; adherence-cp1-r1-result.json"
+    },
+    {
+      "source_kind": "promotion_routing",
+      "finding_id": "IG-CP1-R1-02",
+      "carry_forward_class": "unresolved",
+      "source_disposition": "classification=release-blocker; routing=fix in this TODO; status=open",
+      "summary": "current provider attachment equality is SCOPE-02/DOD-01",
+      "reference": "approved v1.3; adherence-cp1-r1-result.json"
+    },
+    {
+      "source_kind": "promotion_routing",
+      "finding_id": "IG-CP1-R1-03",
+      "carry_forward_class": "unresolved",
+      "source_disposition": "classification=release-blocker; routing=fix in this TODO; status=open",
+      "summary": "durable cross-adapter resource ownership is SCOPE-02/DOD-01",
+      "reference": "approved v1.3; adherence-cp1-r1-result.json"
+    },
+    {
+      "source_kind": "promotion_routing",
+      "finding_id": "IG-CP1-R1-04",
+      "carry_forward_class": "unresolved",
+      "source_disposition": "classification=release-blocker; routing=fix in this TODO; status=open",
+      "summary": "qualified contact reuse is SCOPE-02,03",
+      "reference": "approved v1.3; adherence-cp1-r1-result.json"
+    },
+    {
+      "source_kind": "promotion_routing",
+      "finding_id": "IG-CP1-R1-05",
+      "carry_forward_class": "unresolved",
+      "source_disposition": "classification=release-blocker; routing=fix in this TODO; status=open",
+      "summary": "retained ownership/cardinality is SCOPE-02/DOD-01",
+      "reference": "approved v1.3; adherence-cp1-r1-result.json"
+    },
+    {
+      "source_kind": "promotion_routing",
+      "finding_id": "IG-CP1-R1-06",
+      "carry_forward_class": "unresolved",
+      "source_disposition": "classification=release-blocker; routing=fix in this TODO; status=open",
+      "summary": "safe canonical migration is DOD-02/VAL-02",
+      "reference": "approved v1.3; adherence-cp1-r1-result.json"
+    },
+    {
+      "source_kind": "promotion_routing",
+      "finding_id": "IG-CP1-R1-07",
+      "carry_forward_class": "unresolved",
+      "source_disposition": "classification=release-blocker; routing=fix in this TODO; status=open",
+      "summary": "preserved regression tests are SCOPE-08/DOD-09",
+      "reference": "approved v1.3; admitted six regression companions"
+    },
+    {
+      "source_kind": "promotion_routing",
+      "finding_id": "IG-CP1-R1-08",
+      "carry_forward_class": "unresolved",
+      "source_disposition": "classification=release-blocker; routing=fix in this TODO; status=open",
+      "summary": "required historical cohort is DOD-02/VAL-02",
+      "reference": "approved v1.3; adherence-cp1-r1-result.json"
+    }
+  ],
+  "goal": "Fresh bounded CP1 re-review of actual fixes for eight prior findings; no delivery acceptance",
+  "review_result_dispatch_path": "/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/adherence-cp1-r2-dispatch.json"
+}

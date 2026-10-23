@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-23",
+  "state": "prepared-unapplied; technical-flow verification and independent review pending",
+  "kind": "concrete-companion-path-proposal-preparation",
+  "requestedPath": "web-app/public/privacidade.html",
+  "currentSourceSha256": "d0f72c588f0f014de46a327e34d6b26125ca115bc973b56bbb926cd8519e701d",
+  "proposedDiff": "public-policy-companion-proposed.diff",
+  "reason": "The approved strict changed-path table does not admit this WhatsApp-specific public HTML page; Instagram activation needs a matching technical data-flow description.",
+  "scopeOfDraft": "Ten exact textual replacements covering channel description, identifiers, purposes, provider sharing, BU access and authorization. Responsible entity/contact, legal bases, rights, deletion process and retention periods unchanged.",
+  "preApplicationGates": [
+    "Finish actual Instagram data flow and compare each proposed factual statement against implementation and tests",
+    "Verify retained webhook purge/retention description applies to Instagram records; do not guess",
+    "Verify public provider privacy link; current web retrieval returned429, not a validated availability claim",
+    "Independent bounded review of exact diff and strict companion admission proposal",
+    "User validation of the concrete companion path under the strict TODO",
+    "Application only by serialized product writer after admission; version date updated at application"
+  ],
+  "primaryTechnicalContract": "primary-instagram-contract-r1.json; approved ST-IG-03 v1.3",
+  "legalOrComplianceAssertion": "none; this draft adjusts technical data-flow descriptions and does not constitute a completed legal review",
+  "productModified": false,
+  "blocksCurrentCP1": false,
+  "approvalRequested": false,
+  "runtimeOrMetaAuthorityGranted": false
+}

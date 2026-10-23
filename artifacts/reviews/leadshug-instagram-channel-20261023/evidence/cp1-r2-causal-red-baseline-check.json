@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-23",
+  "purpose": "CP1 r2 new lifecycle RED on original frozen product baseline",
+  "sourceManifest": "cp1-r1-repair-source-manifest.json",
+  "checkedPublicPaths": 35,
+  "mismatches": [],
+  "newRegressionPath": "api-app/test/instagram-lifecycle.e2e-spec.ts",
+  "redLog": "foundation_documentation/artifacts/tmp/instagram-channel-implementation/cp1-api-instagram-r3-red-02.log",
+  "redLogStateAtObservation": "reported in progress; result not yet accepted",
+  "limits": "Exact preexisting 35 public paths only; no private files, repository inventory or runtime inspection."
+}

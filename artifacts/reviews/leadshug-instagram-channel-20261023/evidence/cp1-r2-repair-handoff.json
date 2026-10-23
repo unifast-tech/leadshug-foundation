@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-23",
+  "kind": "serialized-approved-cp1-r2-repair-handoff",
+  "authority": "ST-IG-03 v1.3 APROVADO; original routing/authority GO retained; no new functional scope",
+  "orchestratorProfile": "strategic-cto",
+  "executor": "/root/instagram_cp1_executor",
+  "executorProfile": "operational-coder",
+  "routingReceipt": "routing-execution-cp1.json",
+  "topology": "primary-checkout-single-writer",
+  "preconditions": {
+    "previousExecutorTerminal": true,
+    "r2ReviewerTerminal": true,
+    "fullApiValidatorTerminal": true
+  },
+  "openFindings": [
+    "IG-CP1-R1-02",
+    "IG-CP1-R1-03",
+    "IG-CP1-R2-01",
+    "IG-CP1-R2-02"
+  ],
+  "priorClosuresToPreserve": [
+    "IG-CP1-R1-01",
+    "IG-CP1-R1-04",
+    "IG-CP1-R1-05",
+    "IG-CP1-R1-06",
+    "IG-CP1-R1-08"
+  ],
+  "validationObligation": "IG-CP1-R1-07 fixture preparation corrected; full API suite remains RED, must restore all assertions",
+  "requiredSequence": [
+    "add actual service/request PostgreSQL regressions before product fixes",
+    "capture causal RED on existing product source",
+    "repair final persisted association, admin proof, business scope and honest renewal staging",
+    "capture api-instagram GREEN",
+    "freeze source and capture complete api result",
+    "stop sole writer for fresh independent CP1 r3 review"
+  ],
+  "repairConstraints": [
+    "no identity guessed from BU.phone or previous channel",
+    "retained business ownership survives channel detach; preserve existing detach/history contract",
+    "canonical response projection must not rewrite preserved legacy contact",
+    "preserve protected regression tests and all scenario/counter assertions"
+  ],
+  "forbidden": "private files/runtime/Meta, broader Git scans, worktrees/copies, product Git writes; only canonical disposable synthetic runner",
+  "completionClaim": false
+}

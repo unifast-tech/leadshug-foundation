@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-23",
+  "command": "bash scripts/test-channels-local.sh api-instagram",
+  "log": {
+    "path": "foundation_documentation/artifacts/tmp/instagram-channel-implementation/cp1-api-instagram-r3-red-02.log",
+    "bytes": 32929,
+    "sha256": "a728ed08b5867f6e844b75c7364f0c6e88d2da3a2a427a9cece38f7b7929e3d1"
+  },
+  "rootObservedSummaryAndHeadings": [
+    "Test Files  36 passed (36)",
+    "Tests  379 passed (379)",
+    "\u23af\u23af\u23af\u23af\u23af\u23af\u23af Failed Tests 6 \u23af\u23af\u23af\u23af\u23af\u23af\u23af",
+    "FAIL  test/instagram-lifecycle.e2e-spec.ts > Instagram CP1 WhatsApp ownership lifecycle (PostgreSQL) > claims the freshly confirmed official number before credential promotion",
+    "FAIL  test/instagram-lifecycle.e2e-spec.ts > Instagram CP1 WhatsApp ownership lifecycle (PostgreSQL) > claims a pending managed Evolution pairing only after current provider proof",
+    "FAIL  test/instagram-lifecycle.e2e-spec.ts > Instagram CP1 WhatsApp ownership lifecycle (PostgreSQL) > claims a migrated managed unmapped provider and rejects a foreign retained owner without trust changes",
+    "FAIL  test/instagram-lifecycle.e2e-spec.ts > Instagram CP1 WhatsApp ownership lifecycle (PostgreSQL) > creates a WhatsApp route from an actual claimed owner and canonical PERSON identity",
+    "FAIL  test/instagram-lifecycle.e2e-spec.ts > Instagram CP1 WhatsApp ownership lifecycle (PostgreSQL) > completes a managed RENEW only after the replacement instance proves the retained number",
+    "FAIL  test/instagram-lifecycle.e2e-spec.ts > Instagram CP1 WhatsApp ownership lifecycle (PostgreSQL) > rejects a replacement RENEW instance that proves a different number and retains the old owner",
+    "Test Files  1 failed | 2 passed (3)",
+    "Tests  6 failed | 12 passed (18)",
+    "runner_exit=1"
+  ],
+  "sourceBaselineReceipt": "cp1-r2-causal-red-baseline-check.json",
+  "executorInterpretation": "Actual confirm rejects valid atomic transition; administrative verify succeeds without resource ownership; actual renewal fails reservation. WA route test has a fixture property defect (identityId vs id), so that failure is not accepted as causal product proof. Executor is correcting only fixtures and splitting foreign-owner assertions before rerunning unchanged production baseline.",
+  "outcome": "partial causal RED; not GREEN or checkpoint acceptance",
+  "runtime": "synthetic disposable validation only"
+}

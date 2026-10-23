@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-23",
+  "kind": "causal-behavioral-RED-before-r2-production-repairs",
+  "command": "bash scripts/test-channels-local.sh api-instagram",
+  "log": {
+    "path": "foundation_documentation/artifacts/tmp/instagram-channel-implementation/cp1-api-instagram-r3-red-04.log",
+    "bytes": 33228,
+    "sha256": "3005da91c3ba49ca75b05bce07282c41414bffa6168040870fab25a2b4c46102"
+  },
+  "rootObservedSummaryAndHeadings": [
+    "Test Files  36 passed (36)",
+    "Tests  379 passed (379)",
+    "\u23af\u23af\u23af\u23af\u23af\u23af\u23af Failed Tests 7 \u23af\u23af\u23af\u23af\u23af\u23af\u23af",
+    "FAIL  test/instagram-lifecycle.e2e-spec.ts > Instagram CP1 WhatsApp ownership lifecycle (PostgreSQL) > claims the freshly confirmed official number before credential promotion",
+    "FAIL  test/instagram-lifecycle.e2e-spec.ts > Instagram CP1 WhatsApp ownership lifecycle (PostgreSQL) > claims a pending managed Evolution pairing only after current provider proof",
+    "FAIL  test/instagram-lifecycle.e2e-spec.ts > Instagram CP1 WhatsApp ownership lifecycle (PostgreSQL) > claims a migrated managed unmapped provider only after provider proof",
+    "FAIL  test/instagram-lifecycle.e2e-spec.ts > Instagram CP1 WhatsApp ownership lifecycle (PostgreSQL) > rejects a foreign retained owner before trust or link mutation",
+    "FAIL  test/instagram-lifecycle.e2e-spec.ts > Instagram CP1 WhatsApp ownership lifecycle (PostgreSQL) > creates a WhatsApp route from an actual claimed owner and canonical PERSON identity",
+    "FAIL  test/instagram-lifecycle.e2e-spec.ts > Instagram CP1 WhatsApp ownership lifecycle (PostgreSQL) > completes a managed RENEW only after the replacement instance proves the retained number",
+    "FAIL  test/instagram-lifecycle.e2e-spec.ts > Instagram CP1 WhatsApp ownership lifecycle (PostgreSQL) > rejects a replacement RENEW instance that proves a different number and retains the old owner",
+    "Test Files  1 failed | 2 passed (3)",
+    "Tests  7 failed | 12 passed (19)",
+    "runner_exit=1"
+  ],
+  "preFixSourceSeal": {
+    "baseline": "cp1-r1-repair-source-manifest.json",
+    "original35MismatchesReportedByExecutor": [],
+    "independentEarlierBaselineCheck": "cp1-r2-causal-red-baseline-check.json",
+    "newSpec": "api-app/test/instagram-lifecycle.e2e-spec.ts",
+    "newSpecSha256": "d2ef18a8e8693892a905099ab20e1ebe7e4c84e6ef5b5aedf2e6ce908c15e091",
+    "rootObservedSpecMatchesSeal": true
+  },
+  "executorReportedCausalDefects": [
+    "fresh official confirmation returns409 for valid mapping/promotion transaction",
+    "pending and migrated administrative verify report trust without business/provider linkage",
+    "foreign retained owner verification wrongly returns200 PENDING_RECEIPT after correct module/BU fixture",
+    "actual claimed WA resource route insert violates platform scope CHECK",
+    "actual same-number and changed-number RENEW fail500 at attachment staging"
+  ],
+  "outcome": "RED:7/19Instagram e2e cases failed;379units passed",
+  "excludedEarlierAttempts": "red-01 lint-only failure; red-02 route fixture defect and red-03 foreign-owner module denial are not used as proof of those product defects",
+  "next": "repair these approved invariants, target GREEN, full API GREEN, fresh independent CP1 review",
+  "privateOrRealRuntimeUsed": false,
+  "deliveryAcceptance": false
+}

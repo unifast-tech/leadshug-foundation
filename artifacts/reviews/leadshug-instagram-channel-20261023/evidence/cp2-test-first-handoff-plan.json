@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "kind": "derived-test-first-checkpoint-plan",
+  "governingTodo": "foundation_documentation/todos/active/features/TODO-leadshug-instagram-channel.md",
+  "contractVersion": "1.3 approved",
+  "checkpoint": "CP2 OAuth and authenticated ingress",
+  "state": "prepared; execution depends on accepted CP1",
+  "authority": "Derived from the approved protocol, endpoint, identity and validation clauses. Does not alter scope or establish runtime readiness.",
+  "executionOwner": "serialized operational-coder; primary checkout",
+  "validationOwner": "scripts/test-channels-local.sh api-instagram on leadshug_channels_validation only",
+  "primaryProtocolEvidence": "primary-instagram-contract-r1.json",
+  "testApproach": "Use actual Nest routes, session/CSRF/grant checks and PostgreSQL transactions. Fake only the external HTTP boundary. Add and execute new regressions as causal RED before their implementation; preserve the full API/ALL gates.",
+  "cases": [
+    {
+      "id": "CP2-CONFIG",
+      "contract": "D-05; SCOPE-04; product-specific configuration",
+      "proof": "Absent, partial or malformed Instagram configuration disables only Instagram and makes zero provider calls. Public capability/DTO never exposes secrets. WhatsApp configuration cannot satisfy Instagram configuration."
+    },
+    {
+      "id": "CP2-AUTHZ",
+      "contract": "BFF endpoint authorization and durable attempt ownership",
+      "proof": "Unauthenticated, wrong BU, insufficient role, missing CSRF and another actor/session cannot create, inspect, confirm, advance or cancel an attempt. Denial occurs before provider work and private candidate disclosure."
+    },
+    {
+      "id": "CP2-IDEMPOTENCY",
+      "contract": "OAuth request-key and persistent budgets",
+      "proof": "Same key/body returns the same reservation; mismatched body conflicts. Twenty overlapping requests claim once. Limits of ten attempts per actor/hour and thirty per BU/hour survive service recreation; rejection reports Retry-After without HTTP."
+    },
+    {
+      "id": "CP2-CALLBACK",
+      "contract": "state/session/expiry/CAS before one-use code exchange",
+      "proof": "Wrong, missing, expired or replayed state, cross-session callback and concurrent callback lose before code exchange. Correct callback exchanges code once and redirects without code/state/token; no-store and no-referrer are present."
+    },
+    {
+      "id": "CP2-TOKEN",
+      "contract": "mandatory short-to-long exchange; minimal permissions",
+      "proof": "Code exchange targets the fixed Instagram endpoint. Missing management/messages permission, malformed or ambiguous envelope, invalid long-token expiry or failed exchange leaves active credentials untouched. Code is never persisted. Acquisition and actual expires_in support the sixty-second expiry margin."
+    },
+    {
+      "id": "CP2-IDENTITY",
+      "contract": "app-scoped authorization reference distinct from /me user_id",
+      "proof": "Use synthetic references deliberately different from one another. Only the verified professional user_id binds entry.id/resource ownership; authorization id is preserved separately. No numeric conversion, username merge or user/browser-supplied peer/account authority."
+    },
+    {
+      "id": "CP2-CONFIRM",
+      "contract": "explicit candidate confirmation and ownership before subscription",
+      "proof": "Candidate cannot send or announce receipt. Confirmation atomically claims the exact resource, associates the provider/channel and promotes ciphertext by current generation. Cross-BU owner and different-account reauthorization preserve losing credentials/grants. Subscription starts only after committed local mapping."
+    },
+    {
+      "id": "CP2-UNCERTAINTY",
+      "contract": "bounded administrative stage and read-before-retry",
+      "proof": "Timeout or inconclusive subscription cannot become a ready channel or blind repeated POST. Explicit advance observes before retry, with at most three ten-second requests, forty-second stage budget, sixty-second lease and ten-second cooldown. Concurrent advance cannot duplicate the mutation."
+    },
+    {
+      "id": "CP2-CANCEL",
+      "contract": "cancellation/disconnection preserve ownership and partial facts",
+      "proof": "Cancel and stale-generation confirmation race safely. Existing active token, retained business ownership, provider identity and message facts survive candidate cancellation. No deletion/revocation of other applications or remote ownership assumed."
+    },
+    {
+      "id": "CP2-SIGNATURE",
+      "contract": "dedicated GET challenge and raw signed POST",
+      "proof": "Challenge does not mark receipt. Missing, wrong or altered-byte signature fails before domain lookup/write. Explicit webhook app secret succeeds; OAuth/WhatsApp secrets fail even when configured. Same semantic JSON with different bytes cannot reuse a signature."
+    },
+    {
+      "id": "CP2-BOUNDS",
+      "contract": "16KiB OAuth; dedicated 8MiB/1000-update ingress",
+      "proof": "Small OAuth endpoints reject overflow. Instagram accepts a valid documented thousand-update batch without silent slicing, rejects over-limit bytes/update count before effects and preserves the existing WhatsApp envelope. Gateway parity is required at CP4, not inferred from Nest alone."
+    },
+    {
+      "id": "CP2-ORIENTATION",
+      "contract": "account/peer direction and opaque message identity",
+      "proof": "IN entry.id equals recipient professional account; sender is a qualified opaque peer. Echo reverses orientation. Equal external strings across two Instagram accounts or WhatsApp remain separate contacts/routes. Unknown/stale attachment cannot route to another connection."
+    },
+    {
+      "id": "CP2-WINDOW",
+      "contract": "signed original IN text timestamp qualifies human reply",
+      "proof": "Only eligible IN text supplies the response window. Missing/invalid or more-than-five-minute-future original timestamp, delayed old message, entry.time, echo/self/deleted/unsupported/read/reaction and local creation cannot open or extend it. No unsolicited initial or automation is enabled."
+    },
+    {
+      "id": "CP2-REPLAY",
+      "contract": "transactional acceptance and honest partial delivery",
+      "proof": "Twenty overlapping deliveries create one message, route and unread effect. A failure after part of a batch yields retryable failure; replay commits remaining work without duplicating prior accepted entries. Never acknowledge dropped work with HTTP 200."
+    },
+    {
+      "id": "CP2-RECEIPT",
+      "contract": "receipt is proven only by accepted real-resource ingress",
+      "proof": "OAuth, /me, challenge and successful subscription remain pending receipt. Accepted signed synthetic provider text verifies only the configured synthetic resource. Unknown accounts, rejected signatures and stale generation cannot verify receiving. Real Meta/device evidence remains CP6."
+    },
+    {
+      "id": "CP2-SAFE-OUTPUT",
+      "contract": "SCOPE-04/05 audit and configuration confidentiality",
+      "proof": "Success/error DTOs, redirect headers, persisted history and client-visible events contain neither raw tokens/code/state nor raw provider response/URLs. Safe identifiers and state codes suffice to recover the attempt. Real secrets/logs remain outside this checkpoint."
+    }
+  ],
+  "laterRequired": "CP3 shared outbound/policy/v2 cutover; CP4 UI and gateway/CI parity; CP5 full ALL, concurrency/performance and independent audits; CP6 separately approved real rollout and device proof.",
+  "notEvidence": "No case has been run by preparing this plan. It grants no private-input, runtime, Meta, publication or product Git authority."
+}

@@ -1,0 +1,45 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-23",
+  "command": "bash scripts/test-channels-local.sh api",
+  "executor": "/root/instagram_cp1_executor",
+  "target": "leadshug_channels_validation synthetic disposable DB",
+  "reportedExitCode": 1,
+  "rootObservedSummary": [
+    "Test Files  36 passed (36)",
+    "Tests  379 passed (379)",
+    "Test Files  8 failed | 27 passed (35)",
+    "Tests  17 failed | 453 passed (470)",
+    "runner_exit=1"
+  ],
+  "rootObservedFailureHeadings": [
+    "FAIL  test/channel-transport.e2e-spec.ts > common Channel outbound (PostgreSQL)",
+    "FAIL  test/number-onboarding-flow.e2e-spec.ts > BFF number registration workflow (PostgreSQL)",
+    "FAIL  test/atendimento.e2e-spec.ts > atendimento > serializes old-instance ingress against a real managed RENEW and rejects stale content",
+    "FAIL  test/canais.e2e-spec.ts > canais da BU > regras do v\u00ednculo > remover exige ADMIN e libera o tipo para ser conectado de novo",
+    "FAIL  test/channel-transport.e2e-spec.ts > common Channel outbound (PostgreSQL) > fences a held send after a real same-resource REAUTORIZAR generation change",
+    "FAIL  test/conversation-start.e2e-spec.ts > manual conversation open (PostgreSQL) > reuses a formatted legacy WhatsApp PERSON row before channel readiness",
+    "FAIL  test/message-template-drafts.e2e-spec.ts > message template drafts (PostgreSQL) > keeps draft history through channel detach and does not authorize a replacement channel",
+    "FAIL  test/modulos.e2e-spec.ts > m\u00f3dulos: env \u00e9 o teto, a Mantenedora escolhe dentro dele (ADR-0016) > piso OFICIAL completa o fluxo novo mesmo sem m\u00f3dulo n\u00e3o oficial",
+    "FAIL  test/number-onboarding-bci.e2e-spec.ts > BCI-DUPLICATE-SUBMIT-OR-REPLAY (PostgreSQL) > repeats 20 overlapping create/finalize operations five times, with mismatched-key negative controls",
+    "FAIL  test/number-onboarding-bci.e2e-spec.ts > BCI-DUPLICATE-SUBMIT-OR-REPLAY (PostgreSQL) > barriers 20 overlapping pair/delete attempts then proves delete and recreate fencing in five rounds",
+    "FAIL  test/number-onboarding-flow.e2e-spec.ts > BFF number registration workflow (PostgreSQL) > recovers the same one-use nonce for idempotent create and connects only after provider subscribe plus receipt",
+    "FAIL  test/number-onboarding-flow.e2e-spec.ts > BFF number registration workflow (PostgreSQL) > keeps an active credential unchanged after wrong-phone confirmation and post-auth cancellation",
+    "FAIL  test/number-onboarding-flow.e2e-spec.ts > BFF number registration workflow (PostgreSQL) > recovers a promoted pending registration after expiry with a fresh authorized session",
+    "FAIL  test/number-onboarding-flow.e2e-spec.ts > BFF number registration workflow (PostgreSQL) > allows only one BU to reserve a concurrently selected provider resource",
+    "FAIL  test/number-onboarding-flow.e2e-spec.ts > BFF number registration workflow (PostgreSQL) > atomically prevents official enrollment from taking a different phone after Evolution proves the BU phone",
+    "FAIL  test/number-onboarding-flow.e2e-spec.ts > BFF number registration workflow (PostgreSQL) > renews a managed Evolution identity through cleanup then creates the reserved replacement once",
+    "FAIL  test/number-onboarding-flow.e2e-spec.ts > BFF number registration workflow (PostgreSQL) > retains ambiguous managed cleanup and reconciles it before creating after unlink",
+    "FAIL  test/number-onboarding-flow.e2e-spec.ts > BFF number registration workflow (PostgreSQL) > fences a held old verification across verified RENEW and accepts the same inbound key only after current X verification",
+    "FAIL  test/number-onboarding-flow.e2e-spec.ts > BFF number registration workflow (PostgreSQL) > rejects a divergent Evolution owner phone before accepting content"
+  ],
+  "log": {
+    "path": "foundation_documentation/artifacts/tmp/instagram-channel-implementation/cp1-api-full-resume-01.log",
+    "bytes": 220718,
+    "sha256": "cd93096df5f42dfe44ed38b0509330dd6c3cd5c461316ddd90954019fbadd5fa"
+  },
+  "sourceManifest": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp1-r1-repair-source-manifest.json",
+  "manifestMismatches": [],
+  "outcome": "RED;27/35e2e files and453/470cases passed,17cases failed",
+  "limits": "379units and targeted12IGcases pass; complete API regressions remain, no ALL/runtime/provider proof. Preserve immutable tests and existing assertions; resolve product transition/compatibility defects."
+}

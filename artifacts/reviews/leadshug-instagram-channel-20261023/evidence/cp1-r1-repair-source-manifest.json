@@ -1,0 +1,186 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-23",
+  "kind": "cp1-r1-repair-frozen-public-source-manifest",
+  "files": [
+    {
+      "path": "api-app/prisma/schema.prisma",
+      "sha256": "eb9699c58b29617ed2df21eaab4dcf08697128e561b93994075b2bc088ef4db7",
+      "bytes": 47530
+    },
+    {
+      "path": "api-app/prisma/migrations/20261023180000_instagram_adapter_type/migration.sql",
+      "sha256": "32208cc03faafa9e56c9c9a08dfab5c6342d4dd96a68b19e5c853c64c947f5cf",
+      "bytes": 245
+    },
+    {
+      "path": "api-app/prisma/migrations/20261023190000_instagram_identity_routes/migration.sql",
+      "sha256": "a14da275ae70764664092ca872ddabb59b019b8ee436dbd100a732bb4749c95f",
+      "bytes": 18049
+    },
+    {
+      "path": "api-app/src/domain/channels/transport/channel.ts",
+      "sha256": "6f17741e198c79939d3542858b0595cb70afcdf8f281af77e44484e77c95d1b6",
+      "bytes": 10551
+    },
+    {
+      "path": "api-app/src/domain/channels/channels.service.ts",
+      "sha256": "77bc9f129315e8808f97917fbfba1eb9aedee44619efb1fd463a9b279b1ae102",
+      "bytes": 36752
+    },
+    {
+      "path": "api-app/src/domain/channels/number-registration.service.ts",
+      "sha256": "6f256430f609eed1a2fae72493268bf028135e0b8e6d34016c95ae0fef951631",
+      "bytes": 44938
+    },
+    {
+      "path": "api-app/src/domain/channels/channel-credential-resolver.ts",
+      "sha256": "af79858c6c5039b2913806d3c9140e4f3cd8ea06eeb87e81ca59ab6995c7a963",
+      "bytes": 6532
+    },
+    {
+      "path": "api-app/src/domain/inbox/contact-identity.ts",
+      "sha256": "41d56b56f315e30e3f4c76b580993bf2ffabea3cef623e43583b6363dd7f51e9",
+      "bytes": 3229
+    },
+    {
+      "path": "api-app/src/domain/inbox/conversation-start.service.ts",
+      "sha256": "7d3cfd1df058051e18c2537f98f8d990ec4e95e3536328022709da811e5779bc",
+      "bytes": 3319
+    },
+    {
+      "path": "api-app/src/domain/inbox/message-acceptance.service.ts",
+      "sha256": "a33143acaed5992d29e9028e52477d669106f82437cff051039c5afe31cddaad",
+      "bytes": 17603
+    },
+    {
+      "path": "api-app/src/domain/inbox/historico.service.ts",
+      "sha256": "8b1123d45553f438146e615a5b7d144b2d524344f6011fb4443b162f2de1a7e7",
+      "bytes": 6306
+    },
+    {
+      "path": "api-app/src/surfaces/public/conversations.controller.ts",
+      "sha256": "12fe72cc69911ab5ec50b8e5d9d2338febc34471a9773854be967b9154d55eac",
+      "bytes": 12497
+    },
+    {
+      "path": "api-app/src/domain/channels/transport/channel-operation-context.spec.ts",
+      "sha256": "7c29336e78bd91e52ab585afc218fe74a723fee486c07e277fbd06dfec72a435",
+      "bytes": 1973
+    },
+    {
+      "path": "api-app/src/domain/inbox/contact-identity.spec.ts",
+      "sha256": "6587b7b53ac5ce9726f8c8bcf48cce47efbc2ede8b0f7bf9fe3113026a7ab848",
+      "bytes": 1395
+    },
+    {
+      "path": "api-app/test/instagram-identity.e2e-spec.ts",
+      "sha256": "a20e91cd59554cd1f88e8491509d1d64eb1effb9025bba28c2f059d158084f37",
+      "bytes": 14134
+    },
+    {
+      "path": "api-app/test/instagram-migration.e2e-spec.ts",
+      "sha256": "2c8efa09269c993def74a520275ef9413a5d5bdc3447da310abd3c74a7a3f73d",
+      "bytes": 27691
+    },
+    {
+      "path": "api-app/test/helpers.ts",
+      "sha256": "d3e7d0e45ecd45b7eba2ae2f2617f536b2928e7ad880f01dede66997a1f5c147",
+      "bytes": 22001
+    },
+    {
+      "path": "api-app/test/timeline-fixtures.cjs",
+      "sha256": "4fe47383dc0e2921db8ff08fd3235d083f1c419bd0c570123c5fe6cee3ce63fb",
+      "bytes": 41305
+    },
+    {
+      "path": "api-app/test/webhooks.e2e-spec.ts",
+      "sha256": "33c0267d8f5b5aa54b577f0461dfc117ba2af9aa7037f5cf7a0094354fbefa3f",
+      "bytes": 28254
+    },
+    {
+      "path": "api-app/test/number-onboarding-typebot.e2e-spec.ts",
+      "sha256": "5c447913be4f9b2a2d699f96b43cfd9df837317897be372044b7f02dcf76e809",
+      "bytes": 19778
+    },
+    {
+      "path": "api-app/test/number-onboarding-flow.e2e-spec.ts",
+      "sha256": "36d28652dbdd2102c77d55f642fb8448b0befed0835b8021b16b47ea7e922688",
+      "bytes": 82565
+    },
+    {
+      "path": "api-app/test/conversation-start.e2e-spec.ts",
+      "sha256": "93cac3cad902629605bbc6f4cbb6735afa95f0356b71db7de5d81e94699cf15d",
+      "bytes": 15966
+    },
+    {
+      "path": "api-app/test/api-publica.e2e-spec.ts",
+      "sha256": "bf6a2a2932ba9b586c9478c2f3d2c662b1b0874f26f1d6752cb72d2af43ca363",
+      "bytes": 20403
+    },
+    {
+      "path": "api-app/test/atendimento.e2e-spec.ts",
+      "sha256": "f57834be474b1c86858dab4a13a7a18bd26d1ee907de2828b6454dab7af07be9",
+      "bytes": 40950
+    },
+    {
+      "path": "api-app/test/channel-transport.e2e-spec.ts",
+      "sha256": "aaeb875e420b4e3d5d7c8aac57ebf71f31415385b0a8cbb48fd2449b9bf054f0",
+      "bytes": 37334
+    },
+    {
+      "path": "api-app/test/dispatch-admission.e2e-spec.ts",
+      "sha256": "8ba8028f5da55c5fa10b256fbfe7bccea5b46e6f7cba6dfb461f79988d2b9344",
+      "bytes": 52251
+    },
+    {
+      "path": "api-app/test/historico-atividades.e2e-spec.ts",
+      "sha256": "529cfad68489bcb6b2d1368505d58f9c4f1e2a18deac8074b86b0204d7f427b1",
+      "bytes": 7919
+    },
+    {
+      "path": "api-app/test/historico.e2e-spec.ts",
+      "sha256": "4f729b9fcdfb219857b857d8f1b4baa33c0d50834b5fd9ea563723e880cbae55",
+      "bytes": 8273
+    },
+    {
+      "path": "api-app/test/number-onboarding-caller-scoping.e2e-spec.ts",
+      "sha256": "cdfdc7adc4c558a9787dcd8da212b5eede87b520774b278934f1d75c8488d5d1",
+      "bytes": 5952
+    },
+    {
+      "path": "api-app/test/number-onboarding-message-acceptance.e2e-spec.ts",
+      "sha256": "836aeda3eed8ae0a934ef36ad6eb37ce81673e734a429accdbf4b2fb3628ddc7",
+      "bytes": 6703
+    },
+    {
+      "path": "api-app/test/number-onboarding-pcv.e2e-spec.ts",
+      "sha256": "b059087dace84e40dfe03132c87c02a43b2d21c8ea8306f8de9f691bb1bd1972",
+      "bytes": 44431
+    },
+    {
+      "path": "api-app/test/painel.e2e-spec.ts",
+      "sha256": "910975e63b3ee48a983107a9aaf4906924a103f6b353481f03dccfb934d64237",
+      "bytes": 2933
+    },
+    {
+      "path": "api-app/test/setores.e2e-spec.ts",
+      "sha256": "8eec2be051aa9d71116b57b84ff5c3e863aca2005f61782c33ea87bd868cd203",
+      "bytes": 17500
+    },
+    {
+      "path": "api-app/src/domain/channels/business-resource-ownership.ts",
+      "sha256": "6c69c08bbc54190c25f63f2afa0873d97e1c41f1015579fcacaea2aaeb3e99b5",
+      "bytes": 5546
+    },
+    {
+      "path": "api-app/src/domain/inbox/conversation-start.service.spec.ts",
+      "sha256": "990218e230543ea511275a5bd876433a38bcd2c680f6657f15348bcc57714577",
+      "bytes": 5237
+    }
+  ],
+  "scope": "Exact35public paths confirmed by executor; source frozen during complete API run and fresh static checkpoint review",
+  "privateInputsUsed": false,
+  "validationClaim": "targeted proof only; full API pending",
+  "noAuxiliaryCheckoutOrSourceCopies": true
+}

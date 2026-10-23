@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-23",
+  "checkpoint": "CP1 r1 repairs targeted validation",
+  "executor": "/root/instagram_cp1_executor",
+  "command": "bash scripts/test-channels-local.sh api-instagram",
+  "target": "leadshug_channels_validation disposable synthetic DB",
+  "sourceManifest": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp1-r1-repair-source-manifest.json",
+  "reportedExitCode": 0,
+  "rootObservedLogSummary": [
+    "Test Files  36 passed (36)",
+    "Tests  379 passed (379)",
+    "Test Files  2 passed (2)",
+    "Tests  12 passed (12)",
+    "runner_exit=0"
+  ],
+  "log": {
+    "path": "foundation_documentation/artifacts/tmp/instagram-channel-implementation/cp1-api-instagram-resume-05.log",
+    "sha256": "7ec528268a840278b85deafdf40e1e176d02b733090a1c23439f6f7b4b1d8092",
+    "bytes": 20815
+  },
+  "reportedPassingStages": [
+    "30migrations deployed",
+    "lint",
+    "build",
+    "10identity PostgreSQL cases",
+    "2actual historical migration preservation/abort cases"
+  ],
+  "limits": "379unit and12IGe2e cases only. Not full API/ALL or independent finding closure. Fixture diagnostics in earlier iterations were post-change failures, not causal pre-implementation RED. No real runtime or private inputs."
+}

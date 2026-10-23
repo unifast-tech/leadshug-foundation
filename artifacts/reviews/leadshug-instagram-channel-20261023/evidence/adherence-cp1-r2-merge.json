@@ -1,0 +1,93 @@
+{
+  "schema_version": "subagent-review-merge-v2",
+  "artifact_kind": "subagent_review_merge",
+  "authoritative": false,
+  "edit_policy": "derived_merge_packet",
+  "dispatch_path": "/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/adherence-cp1-r2-dispatch.json",
+  "review_kind": "architecture_adherence",
+  "review_count": 1,
+  "reviewer_labels": [
+    "instagram_cp1_adherence_r2"
+  ],
+  "highest_finding_severity": "high",
+  "axis_summary": {
+    "performance": "unknown",
+    "elegance": "mixed",
+    "structural_soundness": "mixed",
+    "operational_fit": "regresses"
+  },
+  "recommended_paths": [
+    "Keep CP1 changes_required. Record closure of IG-CP1-R1-01/04/05/06/08, retain IG-CP1-R1-02/03 and the unproved validation portion of IG-CP1-R1-07, and integrate both new findings below. Repair final-row association validation, explicit unverified renewal staging, administrative resource claims and the WhatsApp route scope. Prove the actual confirmation, pending-to-verified and renewal service paths against disposable PostgreSQL, including foreign-owner rejection and unchanged losing credentials/grants. Preserve all original regression assertions, capture the complete API result on newly frozen sources, and obtain another bounded CP1 review. Provider proof must precede business-resource association; do not fill a renewed instance's owner from the retained channel merely to satisfy constraints. Preserve the approved CP2\u2013CP6 sequence and inherited restrictions; this checkpoint grants no delivery, runtime or Meta acceptance."
+  ],
+  "exact_next_step": "Record reviewer resolutions in the governing TODO using the machine-checkable resolution table or equivalent gate ledger, then extract the derived resolution packet and decide whether another bounded review pass is still required.",
+  "findings": [
+    {
+      "finding_id": "F-9995A6CC",
+      "severity": "high",
+      "title": "Renewal cannot stage an unproved instance on a retained channel",
+      "rationale": "After successful pairing, the channel retains a nonnull businessIdentityId. During RENEW, api-app/src/domain/channels/channels.service.ts:116 retires the old provider mapping, :126 resets trust while retaining that business identity, and :130 creates the new instance's ProviderResourceIdentity without a business identity. The consistency checks at api-app/prisma/migrations/20261023190000_instagram_identity_routes/migration.sql:288 and :323 reject this mapped-channel/unmapped-provider staging state when the reservation transaction commits. Renewal therefore fails before completePairing can obtain provider proof. Unlike the obsolete-tuple problem, this remains invalid under the current checks even when they inspect final rows.",
+      "suggested_action": "Represent the renewed instance explicitly as unverified, noneligible staging until its own provider proof establishes the resource. Keep the retained business owner immutable and enforce full current attachment equality before trust, ingress acceptance or credential promotion. Do not infer the new instance's business identity from the previous channel owner. Add an actual successful RENEW regression plus a different-number proof case that remains blocked without changing ownership.",
+      "reviewer_labels": [
+        "instagram_cp1_adherence_r2"
+      ],
+      "source_finding_ids": [
+        "IG-CP1-R2-02"
+      ],
+      "category": "operational_fit",
+      "formalizable_hint": "yes",
+      "candidate_rule_level": "project",
+      "candidate_rule_id": "n/a"
+    },
+    {
+      "finding_id": "F-818E8D13",
+      "severity": "high",
+      "title": "Deferred consistency checks validate obsolete row versions",
+      "rationale": "api-app/prisma/migrations/20261023190000_instagram_identity_routes/migration.sql:277 validates the queued trigger's NEW tuple against the channel's current row. Official confirmation creates an unmapped provider at api-app/src/domain/channels/number-registration.service.ts:290, then invokes the claim at :297, which maps channel and provider in the same transaction. At commit, the INSERT trigger still carries business_identity_id=null while its channel lookup sees the completed mapping; migration.sql:288 therefore rejects this valid final state. The direct helper concurrency test creates provider rows in separate transactions and cannot expose this production confirmation failure.",
+      "suggested_action": "Make deferred checks validate the final persisted association for the affected identity/channel rather than obsolete queued tuples. Retain rejection of wrong BU/resource/adapter combinations. Add a PostgreSQL service/request regression that performs the actual fresh official confirmation and commits its resource claim and credential promotion.",
+      "reviewer_labels": [
+        "instagram_cp1_adherence_r2"
+      ],
+      "source_finding_ids": [
+        "IG-CP1-R1-02"
+      ],
+      "category": "structural_soundness",
+      "formalizable_hint": "yes",
+      "candidate_rule_level": "project",
+      "candidate_rule_id": "n/a"
+    },
+    {
+      "finding_id": "F-239EEDF1",
+      "severity": "high",
+      "title": "Claimed WhatsApp resources cannot satisfy the route scope constraints",
+      "rationale": "api-app/src/domain/channels/business-resource-ownership.ts:6 defines the business scope as WHATSAPP, and :77 persists that value for every claimed resource. However, api-app/prisma/migrations/20261023190000_instagram_identity_routes/migration.sql:163 requires a WhatsApp route's business_scope_reference to equal BU. The composite FK at :175 simultaneously requires that field to equal the resource's actual scope_reference. Consequently, no ConversationRoute can reference a WhatsApp resource created by the production claim helper. Current route tests create only Instagram routes, so their GREEN result misses this contradiction in CP1's route foundation.",
+      "suggested_action": "Establish one consistent WhatsApp business-scope representation across the claim owner, schema and route constraints while preserving the distinct contact scope. Add a positive PostgreSQL route test using the actual claimed WhatsApp resource and canonical person identity, followed by the required negative ownership and contact checks.",
+      "reviewer_labels": [
+        "instagram_cp1_adherence_r2"
+      ],
+      "source_finding_ids": [
+        "IG-CP1-R2-01"
+      ],
+      "category": "architecture",
+      "formalizable_hint": "yes",
+      "candidate_rule_level": "project",
+      "candidate_rule_id": "n/a"
+    },
+    {
+      "finding_id": "F-839B0C31",
+      "severity": "high",
+      "title": "Administrative verification still bypasses durable business ownership",
+      "rationale": "api-app/src/domain/channels/channels.service.ts:321 enters the final verification transaction, but :328\u2013334 consult only BU.phone and mark the channel verified without calling claimWhatsAppBusinessResource. The new claim is invoked by completePairing at :238, not by verificar. A new Evolution pairing that initially lacks an open/proved number can therefore acquire trust later through administrative verify without any BusinessChannelIdentity claim. Existing managed mappings intentionally left unmapped by migration have the same path. Matching BU.phone does not reject a number durably owned through another adapter in another BU. The helper-only ownership test does not exercise this bypass.",
+      "suggested_action": "Invoke the shared transactional claim with the freshly provider-proved canonical number before verification becomes trusted for either adapter. Cover pending Evolution pairing followed by verification, migrated managed mappings, and a foreign retained business owner through actual service/request paths. Reject conflicts before trust changes and preserve credentials, grants and ownership for the loser.",
+      "reviewer_labels": [
+        "instagram_cp1_adherence_r2"
+      ],
+      "source_finding_ids": [
+        "IG-CP1-R1-03"
+      ],
+      "category": "security",
+      "formalizable_hint": "yes",
+      "candidate_rule_level": "project",
+      "candidate_rule_id": "n/a"
+    }
+  ]
+}

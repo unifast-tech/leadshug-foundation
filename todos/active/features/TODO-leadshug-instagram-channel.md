@@ -10,7 +10,7 @@ ST-IG-03 — Conectar Instagram e atender DMs na mesma BU dos WhatsApps
 - **Template:** copiado de `delphi-ai/templates/todo_template.md` em2026-10-23; seções aplicáveis preenchidas abaixo.
 
 ## Context
-O usuário priorizou Instagram antes de histórico, confirmou conta profissional para teste e acesso para autorizá-la, confirmou a configuração com login do Instagram no app Meta existente e escolheu reunir os canais na mesma BU. A BU operacional está consolidada como arquitetura alvo; contatos, ownership empresarial e rota continuam propostas até aprovação deste contrato. ST-CON-01/04/05/06 são baseline local entregue, não código que este TODO possa substituir silenciosamente. Preservar dados e recuperar envios pendentes exige mais que acrescentar INSTAGRAM ao enum.
+O usuário priorizou Instagram antes de histórico, confirmou conta profissional para teste e acesso para autorizá-la, confirmou a configuração com login do Instagram no app Meta existente e escolheu reunir os canais na mesma BU. A BU operacional, contatos qualificados, ownership empresarial e rota foram ratificados pelo APROVADO v1.3 e consolidados como arquitetura alvo. A implementação e suas provas continuam em curso. ST-CON-01/04/05/06 são baseline local entregue, não código que este TODO possa substituir silenciosamente. Preservar dados e recuperar envios pendentes exige mais que acrescentar INSTAGRAM ao enum.
 
 ## Framing Source & Story Slice
 - **Feature brief:** `foundation_documentation/artifacts/feature-briefs/leadshug-instagram-channel-20261023.md`
@@ -20,7 +20,7 @@ O usuário priorizou Instagram antes de histórico, confirmou conta profissional
 - **Design evidence:** `foundation_documentation/artifacts/analysis/leadshug-multichannel-identity-definition-20261023.md`.
 
 ## Contract Boundary
-Este TODO define WHAT, exclusões e critérios de entrega. Planejamento e baseline abaixo são propostas para aprovação. “Pode fazer” em2026-10-23 autorizou preparar o TODO/revisão, não código, banco, credenciais, runtime ou Meta. O aprovado será exclusivamente a versão revisada, após APROVADO explícito e authority guard go. Qualquer alteração material de escopo, decisões, validação, rota pública ou padrões de diff exige reconvergência e nova aprovação; descobertas locais que preservam o objetivo podem ser concretizadas dentro dele.
+Este TODO define WHAT, exclusões e critérios de entrega. A baseline v1.3 abaixo foi revisada e aprovada explicitamente em2026-10-23. “Pode fazer” em2026-10-23 autorizou preparar o TODO/revisão, não código, banco, credenciais, runtime ou Meta. A execução está limitada à versão revisada e aprovada, com authority guard go registrado. Qualquer alteração material de escopo, decisões, validação, rota pública ou padrões de diff exige reconvergência e nova aprovação; descobertas locais que preservam o objetivo podem ser concretizadas dentro dele.
 
 ## Implementation Intent
 - **Current delivery:** DM individual textual Instagram, iniciada pelo usuário externo; conexão explícita na BU; resposta humana pelo mesmo recurso; evolução necessária de identidade e roteamento com regressão WhatsApp.
@@ -31,7 +31,7 @@ Este TODO define WHAT, exclusões e critérios de entrega. Planejamento e baseli
 ## Delivery Status Canon (Required)
 - **Current delivery stage:** Pending
 - **Qualifiers:** none
-- **Next exact step:** CP1: integrar os oito findings da revisão independente r1, ampliar a prova preservativa e obter API completo GREEN sobre fontes estáveis; sem acessar dados reais.
+- **Next exact step:** CP1: concluir os findings remanescentes r1/r2 e restaurar API completo GREEN sobre fontes estáveis; sem acessar dados reais.
 
 ## Active Work State (Required While TODO Remains In `active/`)
 - **Work state:** implementation
@@ -299,8 +299,8 @@ Linhas por critério exato; evidência futura permanece planned, sem alegação 
 ### Handoff Log
 | From Profile | To Profile | Why the Handoff Exists | Touched Surfaces | Status / Evidence |
 | --- | --- | --- | --- | --- |
-| strategic-cto | operational-coder | contrato e código após aprovação | API/Web | planned, sem código |
-| operational-coder | strategic-cto | consolidação de domínio/constituição | Foundation | planned |
+| strategic-cto | operational-coder | contrato e código após aprovação | API/Web | active CP1; sole writer and authority/routing receipts recorded below |
+| operational-coder | strategic-cto | consolidação de domínio/constituição | Foundation | SCOPE-01 consolidated; implementation evidence remains pending |
 | operational-coder | operational-devops | rollout local com migrações/HTTPS | runtime aprovado depois | planned |
 | operational-coder | assurance-tester-quality | testes e revisões | provas consolidadas | planned |
 
@@ -582,18 +582,20 @@ Historical planning observation retained: IG-REV-01..04, strategic source, high/
 
 | Finding ID | Severity | Classification | Routing Decision | Same TODO / Split Rationale | Status | Approval / Follow-up Reference |
 | --- | --- | --- | --- | --- | --- | --- |
-| IG-CP1-R1-01 | high | release-blocker | fix in this TODO | immutable qualified peer is SCOPE-02/DOD-01 | open | approved v1.3; adherence-cp1-r1-result.json |
+| IG-CP1-R1-01 | high | release-blocker | fix in this TODO | immutable qualified peer is SCOPE-02/DOD-01 | closed by r2 | adherence-cp1-r2-result.json; source/proof repair reviewed; no delivery acceptance |
 | IG-CP1-R1-02 | high | release-blocker | fix in this TODO | current provider attachment equality is SCOPE-02/DOD-01 | open | approved v1.3; adherence-cp1-r1-result.json |
 | IG-CP1-R1-03 | high | release-blocker | fix in this TODO | durable cross-adapter resource ownership is SCOPE-02/DOD-01 | open | approved v1.3; adherence-cp1-r1-result.json |
-| IG-CP1-R1-04 | high | release-blocker | fix in this TODO | qualified contact reuse is SCOPE-02,03 | open | approved v1.3; adherence-cp1-r1-result.json |
-| IG-CP1-R1-05 | medium | release-blocker | fix in this TODO | retained ownership/cardinality is SCOPE-02/DOD-01 | open | approved v1.3; adherence-cp1-r1-result.json |
-| IG-CP1-R1-06 | medium | release-blocker | fix in this TODO | safe canonical migration is DOD-02/VAL-02 | open | approved v1.3; adherence-cp1-r1-result.json |
+| IG-CP1-R1-04 | high | release-blocker | fix in this TODO | qualified contact reuse is SCOPE-02,03 | closed by r2 | adherence-cp1-r2-result.json; source/proof repair reviewed; no delivery acceptance |
+| IG-CP1-R1-05 | medium | release-blocker | fix in this TODO | retained ownership/cardinality is SCOPE-02/DOD-01 | closed by r2 | adherence-cp1-r2-result.json; source/proof repair reviewed; no delivery acceptance |
+| IG-CP1-R1-06 | medium | release-blocker | fix in this TODO | safe canonical migration is DOD-02/VAL-02 | closed by r2 | adherence-cp1-r2-result.json; source/proof repair reviewed; no delivery acceptance |
 | IG-CP1-R1-07 | medium | release-blocker | fix in this TODO | preserved regression tests are SCOPE-08/DOD-09 | open | approved v1.3; admitted six regression companions |
-| IG-CP1-R1-08 | medium | release-blocker | fix in this TODO | required historical cohort is DOD-02/VAL-02 | open | approved v1.3; adherence-cp1-r1-result.json |
+| IG-CP1-R1-08 | medium | release-blocker | fix in this TODO | required historical cohort is DOD-02/VAL-02 | closed by r2 | adherence-cp1-r2-result.json; source/proof repair reviewed; no delivery acceptance |
+| IG-CP1-R2-01 | high | release-blocker | fix in this TODO | one coherent WA business scope is SCOPE-02/DOD-01 | open | approved v1.3; adherence-cp1-r2-result.json |
+| IG-CP1-R2-02 | high | release-blocker | fix in this TODO | honest unverified renewal staging is SCOPE-02/DOD-01 | open | approved v1.3; adherence-cp1-r2-result.json |
 
 ## TODO Closeout Disposition
 - **Disposition:** blocked
-- **Disposition reason:** implementação aprovada em curso; oito findings CP1 e demais checkpoints/gates abertos, sem entrega parcial aceita.
+- **Disposition reason:** implementação aprovada em curso; findings CP1 remanescentes e demais checkpoints/gates abertos, sem entrega parcial aceita.
 - **Post-commit/push status:** pending
 - **Next path/status action:** manter ativo em implementation; corrigir CP1 e continuar CP2..CP6 sob a aprovação e os limites existentes.
 
@@ -837,13 +839,13 @@ As três correções abaixo integram o parecer changes_required de critique-r1-r
 
 Arquitetura r2 e crítica r2 retornaram go. Crítica revisou as sete lentes e fechou os três findings r1. Coherence e scope-drift retornaram go; nenhuma das23seções materiais mudou após a baseline revisada. Authority preflight é estrutural, não execução. Full diff guard/runtime/API/Meta/provas físicas ainda não foram executados nesta preparação e permanecem para suas fases próprias. APROVADO do contrato não autoriza leitura privada, banco real, callbacks, envio externo, Git de produto, produção ou App Review.
 
-Authority preflight final: `artifacts/reviews/leadshug-instagram-channel-20261023/evidence/authority-preflight-final-r4.json`, outcome preflight-go, execution_authority_granted=false. Aprovação humana permanece pendente.
+Authority preflight final: `artifacts/reviews/leadshug-instagram-channel-20261023/evidence/authority-preflight-final-r4.json`, outcome preflight-go, execution_authority_granted=false. Naquele preflight, aprovação humana permanecia pendente; ela foi recebida posteriormente e registrada em approval-execution-cp1.json.
 
 ## Execution Checkpoints — approved v1.3
 
 | Checkpoint | State | Owner / next proof |
 | --- | --- | --- |
-| CP1 Identity/route/state cutover | running; changes required r1 | serial executor; repair8findings, complete API + preservation proof, fresh re-review |
+| CP1 Identity/route/state cutover | running; changes required r2 | serial executor; repair4current r2 blockers + API regressions, fresh re-review |
 | CP2 OAuth/ingress | pending | follows CP1 accepted checkpoint |
 | CP3 Channel/policy/consumers | pending | shared sender/acceptance only |
 | CP4 UI/CI/browser | pending | profile handoff for CI/runtime tooling |
@@ -856,7 +858,7 @@ Authority preflight final: `artifacts/reviews/leadshug-instagram-channel-2026102
 - Root atua em Strategic/CTO para documentação; `/root/instagram_cp1_executor` é o único writer de produto, gpt-6-luna medium, Operational/Coder. Nenhum worktree, cópia ou Git de produto.
 - SCOPE-01 documental concluído: três decisões Accepted e todos os alvos canônicos consolidados, com receipt `artifacts/reviews/leadshug-instagram-channel-20261023/evidence/canonical-consolidation-cp1.json`. Lifecycle exit0 após corrigir a forma das referências de evidência. Isso não comprova migração/schema ou Instagram operando.
 - Profile classifier não catalogava decisions/** como regra explícita: resultado review-required adjudicado pelo SCOPE-01 e caminho exato já aprovado, sem ampliar escopo ou alterar o classificador; receipt próprio.
-- CP1 de código está em andamento; RED/GREEN e prova PostgreSQL ainda pendentes. Demais critérios continuam abertos.
+- Initial CP1 handoff: code implementation started with RED/GREEN and PostgreSQL proof pending. Subsequent attempts and their remaining limits are recorded below; other checkpoints remain open.
 
 CP1 RED report: executor ran `bash scripts/test-channels-local.sh api` on disposable synthetic DB;28baseline migrations/lint/build passed,34/35unit files passed, three new context cases failed on missing v2/exact-v1 parser exports. Report in `evidence/cp1-red-reported.json`; GREEN/schema/ownership/route/state proof remain pending.
 
@@ -872,15 +874,34 @@ Independent no-context review returned `changes_required`; schema-valid result a
 
 | Finding ID | Resolution | Usefulness | Formalizable | Candidate Rule Level | Candidate Rule ID | Rationale / Evidence |
 | --- | --- | --- | --- | --- | --- | --- |
-| IG-CP1-R1-01 | Integrated | useful | yes | project | n/a | open: freeze qualified peer/contact ownership behind immutable routes; negative PostgreSQL mutations required |
+| IG-CP1-R1-01 | Integrated | useful | yes | project | n/a | closed by r2: freeze qualified peer/contact ownership behind immutable routes; negative PostgreSQL mutations required |
 | IG-CP1-R1-02 | Integrated | useful | yes | project | n/a | open: enforce provider attachment equality with channel BU/resource/adapter; preserve explicitly unmapped legacy rows |
 | IG-CP1-R1-03 | Integrated | useful | yes | project | n/a | open: central transactional provider-proved WhatsApp resource claim before verification/credential promotion; concurrent cross-adapter/BUs and retained-owner proof |
-| IG-CP1-R1-04 | Integrated | useful | yes | project | n/a | open: manual start must reuse canonical WhatsApp PERSON conversation before readiness and under creation fence; real service regressions |
-| IG-CP1-R1-05 | Integrated | useful | yes | project | n/a | open: append-only business ownership/tombstone; deletion/reclaim and disconnected cardinality proof |
-| IG-CP1-R1-06 | Integrated | useful | yes | project | n/a | open: one explicit person-address grammar; invalid legacy address/collision abort preserves all original facts |
+| IG-CP1-R1-04 | Integrated | useful | yes | project | n/a | closed by r2: manual start must reuse canonical WhatsApp PERSON conversation before readiness and under creation fence; real service regressions |
+| IG-CP1-R1-05 | Integrated | useful | yes | project | n/a | closed by r2: append-only business ownership/tombstone; deletion/reclaim and disconnected cardinality proof |
+| IG-CP1-R1-06 | Integrated | useful | yes | project | n/a | closed by r2: one explicit person-address grammar; invalid legacy address/collision abort preserves all original facts |
 | IG-CP1-R1-07 | Integrated | useful | partial | project | n/a | open: two bulk fixtures need canonical contact IDs; preserve15k/60row datasets and all EXPLAIN/query/HTTP assertions; locate remaining API failure |
-| IG-CP1-R1-08 | Integrated | useful | partial | project | n/a | open: actual pre-upgrade cohort must include both adapters/groups/incomplete provenance/all persisted states; compare all original rows and safe aborts |
+| IG-CP1-R1-08 | Integrated | useful | partial | project | n/a | closed by r2: actual pre-upgrade cohort must include both adapters/groups/incomplete provenance/all persisted states; compare all original rows and safe aborts |
 
-All eight findings remain open for implementation and fresh re-review. Performance is unmeasured; no full API/ALL or CP1 acceptance is claimed. CP3 still owns v2 dispatch wiring, state-specific v1 local-only recovery and the remaining consumers; CP2..CP6 stay required as already approved. No finding has been waived or routed away from this delivery.
+At the r1 handoff, all eight findings remained open for implementation and fresh re-review; current per-ID dispositions are updated by r2 below. Performance is unmeasured; no full API/ALL or CP1 acceptance is claimed. CP3 still owns v2 dispatch wiring, state-specific v1 local-only recovery and the remaining consumers; CP2..CP6 stay required as already approved. No finding has been waived or routed away from this delivery.
 
 Complete captured API attempt20261023-01: exit1;36unit files/373cases passed;34of35e2e files and462of464cases passed. Both remaining failures are the canonical contactId bulk-fixture defects in IG-CP1-R1-07; the corrected isolated migration and cross-account route tests passed. Receipt `evidence/cp1-full-api-before-repair.json` records the full synthetic log hash and the root-observed summaries. Both validator and reviewer became terminal before the coder resumed as sole writer for findings01..08; no concurrent source changes were used as proof.
+
+## CP1 Finding Resolution Ledger — adherence r2
+
+Fresh no-context review returned `changes_required`; result/merge in `evidence/adherence-cp1-r2-{result,merge}.json`. Frozen35source hashes and TODO matched before/after. R1-01/04/05/06/08 are closed for this checkpoint's source/preservation proof; R1-02/03 remain open. R1-07 fixture preparations are repaired but full API acceptance remains open. No waiver or expanded functional scope.
+
+| Finding ID | Resolution | Usefulness | Formalizable | Candidate Rule Level | Candidate Rule ID | Rationale / Evidence |
+| --- | --- | --- | --- | --- | --- | --- |
+| IG-CP1-R1-02 | Integrated | useful | yes | project | n/a | open: deferred checks must validate final persisted rows, not obsolete queued NEW; actual official confirmation regression |
+| IG-CP1-R1-03 | Integrated | useful | yes | project | n/a | open: administrative verification must claim freshly provider-proved resource before trust for either adapter; no BU.phone authority |
+| IG-CP1-R2-01 | Integrated | useful | yes | project | n/a | open: align WA business scope across real claim and route CHECK/FK; positive route using actual owner required |
+| IG-CP1-R2-02 | Integrated | useful | yes | project | n/a | open: renewed provider remains explicitly unverified/noneligible until its own proof; never prefill its business identity from retained channel |
+
+The complete captured API rerun is RED:36unit files/379cases passed;27of35e2e files and453of470cases passed,17cases failed. Root observed the full summary and all35source hashes remained unchanged; `evidence/cp1-r1-repair-full-api-red.json` preserves exact failure headings/log hash. Repair transition defects and restore compatibility rather than weakening regression assertions. Business-resource tombstone retention is distinct from retaining a channel row; existing detach/history behavior and canonical phone response projections must remain coherent without rewriting stored legacy data. The next sole-writer handoff follows terminal review and validator states. CP1 and the entire Instagram delivery remain incomplete.
+
+Serialized r2 repair handoff: `evidence/cp1-r2-repair-handoff.json`; prior executor, reviewer and validator terminal before resuming the sole coder. New production-path regressions must run as causal RED before their fixes. Full API GREEN and fresh CP1 review remain required.
+
+CP2 preparation only: `evidence/cp2-test-first-handoff-plan.json` derives sixteen OAuth/ingress test obligations from the approved v1.3 clauses. It grants no additional scope and records no executed case; CP2 execution still depends on accepted CP1.
+
+CP1 r2 causal RED established before production repairs: `evidence/cp1-r2-causal-red.json`. The corrected actual lifecycle suite reached all seven intended defects, with379unit cases passing and7of19Instagram e2e cases failing. Original35source hashes were preserved through the pre-fix seal; the new lifecycle spec hash was independently matched. Earlier lint/fixture-only failures are explicitly excluded as product RED evidence. Product repair follows this seal; GREEN and fresh review remain pending.
