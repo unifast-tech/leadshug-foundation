@@ -1,0 +1,38 @@
+{
+  "schema_version": "gate-finding-resolution-v1",
+  "artifact_kind": "gate_finding_resolution",
+  "authoritative": false,
+  "edit_policy": "derived_from_todo",
+  "todo_path": "foundation_documentation/todos/active/features/TODO-leadshug-start-conversation-by-contact.md",
+  "review_kind": "cutover_integrity_audit",
+  "gate_status": "findings_integrated",
+  "findings": [
+    {
+      "finding_id": "F-8ADB0DC2",
+      "resolution": "Integrated",
+      "usefulness": "useful",
+      "formalizable": "partial",
+      "candidate_rule_level": "paced",
+      "candidate_rule_id": "n/a",
+      "rationale": "Existing DOD11\u201313 gates remain open; candidate tests and offline images do not prove delivery. Complete stage-appropriate reviews, runtime/operator proof and final guards."
+    },
+    {
+      "finding_id": "F-D1EE7E11",
+      "resolution": "Integrated",
+      "usefulness": "useful",
+      "formalizable": "no",
+      "candidate_rule_level": "none",
+      "candidate_rule_id": "n/a",
+      "rationale": "Request the concrete bounded runtime/private-input plan only after current authorized reviews; no real sender action or activation is inferred."
+    },
+    {
+      "finding_id": "F-0DBB4CB5",
+      "resolution": "Integrated",
+      "usefulness": "useful",
+      "formalizable": "partial",
+      "candidate_rule_level": "project",
+      "candidate_rule_id": "n/a",
+      "rationale": "Apply/review the two-module consolidation and obtain the explicit exact full-guard exception. No current defect or compatibility bridge is established."
+    }
+  ]
+}

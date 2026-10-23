@@ -1,0 +1,10 @@
+{
+  "kind": "Generated current r7 review artifact formatting diagnostic; not product validation",
+  "actual_exit_code": 2,
+  "diagnostic_line_count": 90,
+  "raw_generated_diagnostic": "foundation_documentation/artifacts/tmp/stcon04-r7-review-runtime/foundation-diff-check-r7.txt",
+  "sha256": "f163b4035cb7e4fda7f3f0fd0c3f2842aef3023ff8f4f32c9ae8de5807a77000",
+  "policy": "Embedded public-source and exact raw scan formatting are preserved; no source normalization or false clean claim. Only owned Foundation review artifacts/TODO staged. Four carried files remain unstaged.",
+  "staged_owned_count_before_this_receipt": 77,
+  "recorded_at_utc": "2026-10-23T13:21:00.907421+00:00"
+}

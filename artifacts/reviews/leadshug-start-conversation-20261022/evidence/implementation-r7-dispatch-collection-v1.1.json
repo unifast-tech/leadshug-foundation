@@ -1,0 +1,42 @@
+{
+  "kind": "Actual fresh E74 r7 review launches; no verdict inferred",
+  "recorded_at_utc": "2026-10-23T12:54:14.607604+00:00",
+  "reviews": [
+    {
+      "review_kind": "architecture_adherence",
+      "session_id": 86025,
+      "model": "gpt-6.1-sol",
+      "effort": "xhigh",
+      "state": "launched; no terminal result yet",
+      "package": "foundation_documentation/artifacts/reviews/leadshug-start-conversation-20261022/implementation-architecture_adherence-r7-package-v1.1.md",
+      "package_sha256": "136bccf684e5ce5945fb94cb51c6db76d6bcc63b5222898ce5a940bfea33fe72",
+      "dispatch": "foundation_documentation/artifacts/reviews/leadshug-start-conversation-20261022/implementation-architecture_adherence-r7-dispatch-v1.1.md",
+      "dispatch_sha256": "94ac44526c324d5f75c8597a9f868676f9af0bcb77a7419ce001b3bef5f521b2",
+      "complete_prompt_characters": 1016339,
+      "complete_prompt_sha256": "cb48725596bcb515bf884ce9b47f2cb6cec635c0201710d7d2a8450413b8c7bf",
+      "no_context": true,
+      "tools_and_edits_prohibited": true,
+      "runner": "delphi-ai/tools/subagent_review_run.py",
+      "isolated_project_context": false
+    },
+    {
+      "review_kind": "cutover_integrity_audit",
+      "session_id": 3767,
+      "model": "gpt-5.6-terra",
+      "effort": "xhigh",
+      "state": "launched; no terminal result yet",
+      "package": "foundation_documentation/artifacts/reviews/leadshug-start-conversation-20261022/implementation-cutover_integrity_audit-r7-package-v1.1.md",
+      "package_sha256": "4322c816e191a9c839d55520c21f82f9c1ba4b61b0cc149842765a5d88ad6e3d",
+      "dispatch": "foundation_documentation/artifacts/reviews/leadshug-start-conversation-20261022/implementation-cutover_integrity_audit-r7-dispatch-v1.1.md",
+      "dispatch_sha256": "7bc7fdbfa69d3fc7bb0e1146746eddae25a9bd7ee846871a8cb74b20dd7f2903",
+      "complete_prompt_characters": 796661,
+      "complete_prompt_sha256": "1457d769b70cd80e65e41b0c75ed092ccaf7b593ed57e47b53c2a392f5a1d0c3",
+      "no_context": true,
+      "tools_and_edits_prohibited": true,
+      "runner": "delphi-ai/tools/subagent_review_run.py",
+      "isolated_project_context": false
+    }
+  ],
+  "test_quality_audit": "Not dispatched: full applicable package still undergoing bounded evidence deduplication. No full audit pass claimed.",
+  "source_frozen": true
+}

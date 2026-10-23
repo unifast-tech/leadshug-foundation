@@ -1,0 +1,76 @@
+{
+  "schema_version": "subagent-review-merge-v2",
+  "artifact_kind": "subagent_review_merge",
+  "authoritative": false,
+  "edit_policy": "derived_merge_packet",
+  "dispatch_path": "/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/artifacts/reviews/leadshug-start-conversation-20261022/evidence/implementation-cutover_integrity_audit-r7-dispatch-v1.1.json",
+  "review_kind": "cutover_integrity_audit",
+  "review_count": 1,
+  "reviewer_labels": [
+    "fresh-no-context-cutover-r7"
+  ],
+  "highest_finding_severity": "high",
+  "axis_summary": {
+    "performance": "acceptable",
+    "elegance": "acceptable",
+    "structural_soundness": "acceptable",
+    "operational_fit": "mixed"
+  },
+  "recommended_paths": [
+    "preserve_the_current_canonical_path_and_complete_the_explicit_delivery_gates"
+  ],
+  "exact_next_step": "Record reviewer resolutions in the governing TODO using the machine-checkable resolution table or equivalent gate ledger, then extract the derived resolution packet and decide whether another bounded review pass is still required.",
+  "findings": [
+    {
+      "finding_id": "F-8ADB0DC2",
+      "severity": "high",
+      "title": "Final delivery gates remain open",
+      "rationale": "E74 binds a strong disposable candidate, but DOD-11 through DOD-13 remain incomplete. Current independent review completion, preserved-runtime migration/health/provenance, assisted operator proof, canonical diff guard, module consolidation, and final closure cannot be inferred from the synthetic GREEN result or offline images.",
+      "suggested_action": "Do not activate, promote, or mark delivery complete. Complete and independently adjudicate the required delivery and final guards under their approved boundaries.",
+      "reviewer_labels": [
+        "fresh-no-context-cutover-r7"
+      ],
+      "source_finding_ids": [
+        "F-035510C8"
+      ],
+      "category": "residual_risk",
+      "formalizable_hint": "partial",
+      "candidate_rule_level": "paced",
+      "candidate_rule_id": "n/a"
+    },
+    {
+      "finding_id": "F-D1EE7E11",
+      "severity": "medium",
+      "title": "Preserved-runtime and assisted operator proof remain pending",
+      "rationale": "The package expressly limits E74 to disposable PostgreSQL, BFF, browser, fake-provider, and offline-image evidence. It does not prove the approved additive migration, source/runtime binding, first unofficial send, approved official-template send, or recipient replies in the preserved local target.",
+      "suggested_action": "After explicit runtime-plan approval and preflight, obtain the bounded source/runtime attestation and operator-assisted proofs without automated recipient actions.",
+      "reviewer_labels": [
+        "fresh-no-context-cutover-r7"
+      ],
+      "source_finding_ids": [
+        "F-91F64098"
+      ],
+      "category": "operational_fit",
+      "formalizable_hint": "no",
+      "candidate_rule_level": "none",
+      "candidate_rule_id": "n/a"
+    },
+    {
+      "finding_id": "F-0DBB4CB5",
+      "severity": "medium",
+      "title": "Canonical module consolidation and full diff inspection remain pending",
+      "rationale": "The r7 module patch is a clearly labeled proposal rather than applied canonical documentation, and the canonical cross-repository diff guard remains unrun because its private-boundary exception is unapproved. This is not an unauthorized compatibility bridge in the implementation, but it blocks closeout.",
+      "suggested_action": "Obtain explicit authority for the bounded diff inspection if still required, run the canonical guard, apply and review the approved module consolidation at its authorized stage, then complete closeout consistency checks.",
+      "reviewer_labels": [
+        "fresh-no-context-cutover-r7"
+      ],
+      "source_finding_ids": [
+        "F-300A50BF"
+      ],
+      "category": "adherence",
+      "formalizable_hint": "partial",
+      "candidate_rule_level": "project",
+      "candidate_rule_id": "n/a"
+    }
+  ]
+}

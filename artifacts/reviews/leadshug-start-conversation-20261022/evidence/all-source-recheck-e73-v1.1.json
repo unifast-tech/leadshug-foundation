@@ -1,0 +1,12 @@
+{
+  "checkpoint": "E73 terminal full positive source recheck",
+  "stage": "After actual executor terminal and owned cleanup; BEFORE writer release",
+  "count": 259,
+  "fingerprint": "589c753670cfcf54020b785e6bae6b85ec1a8b4bab707f333f8e64d8aaf38c8e",
+  "matches_preseal_full_inventory_and_bytes": true,
+  "record_reference": "all-source-seal-e73-v1.1.json#records",
+  "stdout_sha256": "d6540b2284788bbb2333b44ae0b4cf928141fff81f191e07ed4bbda6caa11617",
+  "executor_reported_exit_code": 0,
+  "recorded_at_utc": "2026-10-23T05:48:24.150039+00:00",
+  "boundary": "Only declared positive public roots and7 exact publicfiles; no actual env/data/process inspection."
+}

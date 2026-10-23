@@ -1,0 +1,45 @@
+{
+  "kind": "Root collection of complete actual current static scan and individual source-backed judgments",
+  "recorded_at_utc": "2026-10-23T12:22:57.668996+00:00",
+  "source_seal": "all-source-seal-e74-v1.1.json",
+  "source_fingerprint": "589c753670cfcf54020b785e6bae6b85ec1a8b4bab707f333f8e64d8aaf38c8e",
+  "raw_outcome": "high",
+  "actual_raw_exit_code": 2,
+  "complete_rows": 268,
+  "exact_E64_byte_identical_rows": 230,
+  "current_individual_judgments": 38,
+  "metadata_normalization": "Raw scanner bytes and inventory/root-adjudication bytes are exact originals. Summary/disposition filename references normalized only during derived canonical collection; no source/assertion/signal/rationale or raw outcome altered. E73/E74 raw row sets equal exactly under unchanged259sources.",
+  "artifacts": [
+    {
+      "path": "test-quality-public-roots-output-e74-v1.1.txt",
+      "sha256": "1a096a509c618914002d492fc97203c6520aea4a3d7b38a482218f77e84f72e3",
+      "staged_original_sha256": "1a096a509c618914002d492fc97203c6520aea4a3d7b38a482218f77e84f72e3",
+      "metadata_only_filename_references_normalized": false
+    },
+    {
+      "path": "test-quality-signal-inventory-e74-v1.1.json",
+      "sha256": "62ac33e33af4e71e570720bc6c769355422f3f33a7508073b5499ffdfbdc6457",
+      "staged_original_sha256": "62ac33e33af4e71e570720bc6c769355422f3f33a7508073b5499ffdfbdc6457",
+      "metadata_only_filename_references_normalized": false
+    },
+    {
+      "path": "test-quality-public-roots-e74-v1.1.json",
+      "sha256": "8ceca6d20b90f37f0e6665918e028fc329dc7b12b0ecb66c33a457e96013364c",
+      "staged_original_sha256": "833917c04fc0cf9cfaabb04cae4c8f444fd65ef390ec2c07926fcb6f60a4bb10",
+      "metadata_only_filename_references_normalized": true
+    },
+    {
+      "path": "test-quality-signal-dispositions-e74-v1.1.json",
+      "sha256": "2a300bd83329068b9d59013d29e6cf8495402ceb6067043886d74cae2d0815d1",
+      "staged_original_sha256": "541cfb1b8774a7b0cb199e60a2c686bf848422cb701d87c13bddbfe73b789f71",
+      "metadata_only_filename_references_normalized": true
+    },
+    {
+      "path": "root-static-adjudication-e74-v1.1.json",
+      "sha256": "51df0634e87b14d769649d6b56e5d4abcae1fb887a0eb696715d362364f90081",
+      "staged_original_sha256": "51df0634e87b14d769649d6b56e5d4abcae1fb887a0eb696715d362364f90081",
+      "metadata_only_filename_references_normalized": false
+    }
+  ],
+  "limits": "Root review is not independent whole-workload TQA clearance and does not override the heuristic outcome or remaining delivery gates."
+}

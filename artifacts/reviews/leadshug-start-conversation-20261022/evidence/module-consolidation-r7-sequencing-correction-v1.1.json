@@ -1,0 +1,25 @@
+{
+  "kind": "Root reversible module-patch sequencing correction; proposal remains ready, not canonical",
+  "recorded_at_utc": "2026-10-23T13:19:27.571527+00:00",
+  "event": "Root applied the exact reviewed two-module patch after current r7 candidate assessments, then caught the stricter approved consolidation timing before publication/runtime.",
+  "governing_todo_clauses": [
+    "Expected Changed Paths: integrations-and-channels.md approved payload/window supersede after delivery",
+    "Module Consolidation Gate: Pending after delivery evidence. Update inbox/channels module docs only after accepted reviews and implementation truth"
+  ],
+  "correction": "Reverse only the exact root-owned patch; both canonical files restored byte-for-byte to their original reviewed baselines. No user changes restored/overwritten and no Git history/push included the temporary application.",
+  "reverse_check_exit_code": 0,
+  "reverse_apply_exit_code": 0,
+  "restored": [
+    {
+      "path": "foundation_documentation/modules/inbox-and-conversations.md",
+      "restored_exact_baseline_sha256": "24b3f1edd8f10bf991d61135be2364b49679c43e5894ce024c2d5169921756a2"
+    },
+    {
+      "path": "foundation_documentation/modules/integrations-and-channels.md",
+      "restored_exact_baseline_sha256": "6b1865ab4f27458e1e1e225535e2f4a713e987e18344ca86d3f9411fa6c6f168"
+    }
+  ],
+  "prior_actual_application_receipt_retained": "module-consolidation-r7-applied-v1.1.json",
+  "current_state": "Module patch independently reviewed and concretely prepared; canonical application/1:1 final consistency remains pending until real local delivery evidence.",
+  "no_product_runtime_private_change": true
+}

@@ -1,0 +1,19 @@
+{
+  "kind": "Root actual terminal review collection",
+  "review_kind": "architecture_adherence",
+  "session_id": 86025,
+  "actual_exit_code": 0,
+  "turns_completed": 1,
+  "tool_items": 0,
+  "result_sha256": "9c058fa7aa077a17d6bdc721a481d3e71082760f145e9078508773bca397c91b",
+  "events_sha256": "45f76aa528000807942c02f4de29ccfaa5150649ca4890615fce59dd0bb5b544",
+  "structured_result_parsed": true,
+  "strict_merge_exit_code": 0,
+  "finding_ids": [
+    "F-035510C8",
+    "F-91F64098",
+    "F-300A50BF"
+  ],
+  "status": "Both r6 fixes and prior r4 protections accepted at implementation level; no new material architecture defect. Three already-required delivery gates remain open. TQA still required.",
+  "recorded_at_utc": "2026-10-23T13:05:56.109183+00:00"
+}

@@ -1,0 +1,27 @@
+{
+  "kind": "Independent post-r7 complete positive source recheck",
+  "count": 259,
+  "fingerprint": "589c753670cfcf54020b785e6bae6b85ec1a8b4bab707f333f8e64d8aaf38c8e",
+  "same_inventory_and_bytes": true,
+  "scope": {
+    "positive_roots": [
+      "api-app/src",
+      "api-app/test",
+      "api-app/prisma",
+      "web-app/src",
+      "web-app/e2e"
+    ],
+    "exact_public_files": [
+      ".github/workflows/ci.yml",
+      "api-app/package.json",
+      "api-app/package-lock.json",
+      "scripts/check-channels-ci-parity.py",
+      "scripts/test-channels-local.sh",
+      "web-app/package.json",
+      "web-app/package-lock.json"
+    ]
+  },
+  "all_three_reviews_terminal": true,
+  "boundary": "Only positive public source paths; no root-wide/private inspection or runtime.",
+  "recorded_at_utc": "2026-10-23T13:14:19.974920+00:00"
+}

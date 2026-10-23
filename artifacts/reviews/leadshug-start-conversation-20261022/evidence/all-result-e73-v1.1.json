@@ -1,0 +1,48 @@
+{
+  "checkpoint": "E73 corrected r6 actual full canonical aggregate GREEN; metrics stdout subsequently lost",
+  "recorded_at_utc": "2026-10-23T11:51:43.401697+00:00",
+  "command": "bash scripts/test-channels-local.sh all",
+  "executor_session_id": 13693,
+  "exit_code": 0,
+  "actual_exit_code": 0,
+  "terminal_authority": "Actual executor terminal0/owned cleanup; root read stdout unit/PG/Web aggregates and independently checked all259 sources and recovered actual93record browser manifest. Raw stdout later disappeared from exact owned/tmp path before PCV extraction; phase aggregates and prior hash remain observed, raw current metrics are not invented.",
+  "phases": {
+    "migrations": 28,
+    "lint_and_build": "passed",
+    "api_unit": {
+      "files": 34,
+      "tests": 368,
+      "duration_seconds": 3.68
+    },
+    "api_postgresql": {
+      "files": 33,
+      "tests": 456,
+      "duration_seconds": 279.65
+    },
+    "web_unit": {
+      "files": 7,
+      "tests": 54,
+      "duration_seconds": 0.637
+    },
+    "browser": {
+      "tests": 89,
+      "passed": 89,
+      "duration_minutes": 15.8
+    }
+  },
+  "stdout_sha256": "d6540b2284788bbb2333b44ae0b4cf928141fff81f191e07ed4bbda6caa11617",
+  "source_recheck": "all-source-recheck-e73-v1.1.json",
+  "source_fingerprint": "589c753670cfcf54020b785e6bae6b85ec1a8b4bab707f333f8e64d8aaf38c8e",
+  "full259source_postseal": true,
+  "freshness": "browser-freshness-collection-e73-v1.1.json",
+  "owned_cleanup_observed": true,
+  "specific_proofs": [
+    "All967tests passed, including the five actual E72 causal regressions after the exact two bounded corrections.",
+    "Full259source freeze matches; actualE73 per-run original freshness artifact recovered and93records/bundle equality independently verified."
+  ],
+  "limits": [
+    "Owned disposable PostgreSQL and fake provider only.",
+    "Current complete stdout/PCV extraction cannot be reconstructed after loss of the temporary output. Historical E71 metrics remain historical. Source remains frozen for a justified repeat with durable owned output.",
+    "No actual preserved runtime/provider/operator proof, completed independent r7 review, canonical module application or full-diff guard."
+  ]
+}

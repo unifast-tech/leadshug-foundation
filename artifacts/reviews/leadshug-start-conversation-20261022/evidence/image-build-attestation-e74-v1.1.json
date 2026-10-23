@@ -1,0 +1,96 @@
+{
+  "evidenceType": "local-public-image-build-and-offline-inspection",
+  "run": "E74",
+  "recordedAtUtc": "2026-10-23T12:24:24.479786+00:00",
+  "sourceSeal": "all-source-seal-e74-v1.1.json",
+  "sourceFingerprint": "589c753670cfcf54020b785e6bae6b85ec1a8b4bab707f333f8e64d8aaf38c8e",
+  "builds": {
+    "api": {
+      "sessionId": 42492,
+      "exitCode": 0,
+      "command": "docker.exe build -t leadshug-stcon04-api:e74 - < foundation_documentation/artifacts/tmp/stcon04-e74/build-context-api-e74.tar",
+      "archivePath": "foundation_documentation/artifacts/tmp/stcon04-e74/build-context-api-e74.tar",
+      "archiveSha256": "ec671cbe971395d1d4c2fe4f3cc99920fcb347d9ce5dc3c07ca154060ea042db",
+      "stdoutPath": "foundation_documentation/artifacts/tmp/stcon04-e74/build-api-e74.txt",
+      "stdoutSha256": "9917c1843439f0bdc837a4d2393a81a77ba00d22498c58695eea915479e4c422",
+      "imageId": "sha256:092005eb90275c3ab55e14c6ff2fe5fde241d4bde15324ce84bfb21f0a11c2f2",
+      "platform": "linux/amd64",
+      "entrypoint": [
+        "/entrypoint.sh"
+      ],
+      "cmd": [
+        "node",
+        "dist/main.js"
+      ],
+      "workingDirectory": "/app"
+    },
+    "web": {
+      "sessionId": null,
+      "exitCode": 0,
+      "command": "docker.exe build -t leadshug-stcon04-web:e74 - < foundation_documentation/artifacts/tmp/stcon04-e74/build-context-web-e74.tar",
+      "archivePath": "foundation_documentation/artifacts/tmp/stcon04-e74/build-context-web-e74.tar",
+      "archiveSha256": "959355f4dfc16824cdc8a83632dfda673c8ba71a7d8170d055164e89180152c7",
+      "stdoutPath": "foundation_documentation/artifacts/tmp/stcon04-e74/build-web-e74.txt",
+      "stdoutSha256": "8935a1bc0b08403603a34f523c321fdbdb6115023e3b9f5001df481c08507f62",
+      "imageId": "sha256:9787da8f734123e4f2875ce9b47c7bb23b45a8d64bbba98a830d51dd05f9f53b",
+      "platform": "linux/amd64",
+      "entrypoint": [
+        "/docker-entrypoint.sh"
+      ],
+      "cmd": [
+        "nginx",
+        "-g",
+        "daemon off;"
+      ],
+      "workingDirectory": "/"
+    }
+  },
+  "offlineInspection": {
+    "network": "none",
+    "filesystem": "read-only",
+    "entrypointOverridden": true,
+    "applicationEntrypointStarted": false,
+    "api": {
+      "inspectionReceiptPath": "foundation_documentation/artifacts/tmp/stcon04-e74/inspect-api-e74.json",
+      "inspectionReceiptSha256": "eb4d8f980b37319031e193bfffb5a0b29d90fe9a324d80dbe90571433111b9c5",
+      "nodeVersion": "v22.23.3",
+      "prismaClientVersion": "6.19.3",
+      "distJsCount": 106,
+      "distManifestAggregateSha256": "8c04e9efd81751e93e251867b19864d05baa95c0aaf9809ae5a8b92d47fa7c4b",
+      "distManifestAggregateMethod": "SHA-256 of sorted lines: relative-js-path, space, file SHA-256, newline",
+      "distMainJsSha256": "4939123b00a86d0fb47ed2483ee13cb8ec0fbc374e565653c32724e920c2b9f0",
+      "messageAcceptanceServiceJsSha256": "c39417b3b901d3347014f1735e3881194dadf5da3a5a8049540b6568e7f2d019",
+      "initialMessageServiceJsSha256": "702084dc0a0135af7d31fef56e342145e7925aafc65594eafa20112e8e012b16",
+      "outboundServiceJsSha256": "3ac0314c34de5bdb33b48e90cb52ddcad849fb1697af5cf34e7e8135b3e558a5",
+      "dispatchAdmissionServiceJsSha256": "fdc8586bd835931c11fcfd541db58a32b90ff6515d244b32474a5d88ea495dc1",
+      "prismaSchemaSha256": "19ea60e6e5a1675a4ff12581237b2f91c2359b61d7b8bcb9e8bf1c1ebf26435d",
+      "migrationSha256": {
+        "20261020170000_message_inbound_window_index": "586e709e07736eca0908ab5dcc668cf0e0b317189b4c963b361399848a3c9710",
+        "20261022140000_initial_message_orchestration": "a8b26d5dfc7eb8f658cf703cee0f1f6061b5afa2ad84ca0f37cd4baec9d68437",
+        "20261022150000_initial_message_admissions": "41df36b473c3163e9e29ea1cc6c12df3376994081698be83c83e50a812e3922a",
+        "20261022160000_initial_message_inbox_order": "60e7f76b8ccbee5e51dd939bdf126eeecaa1b1c1871f393a4363add94274a544"
+      }
+    },
+    "web": {
+      "inspectionReceiptPath": "foundation_documentation/artifacts/tmp/stcon04-e74/inspect-web-e74.txt",
+      "inspectionReceiptSha256": "ffe0df470a936034f3e83663d17f8cbf6f9b4bb129dc85bd11e9cd18ce13e9ba",
+      "indexHtmlSha256": "cf24ab6c9ad71d0260042ff483c208f8e087aac7ef14c3f0c9ead052831656dc",
+      "bundlePath": "/usr/share/nginx/html/assets/index-DPFJ9ybt.js",
+      "bundleSha256": "f8e97efa6777dbc496b74cd527b1bae78e7766e4a4d58f752f7816cb62444343",
+      "equalsCurrentServedAndDistBundle": true
+    }
+  },
+  "freshness": {
+    "attestationPath": "foundation_documentation/artifacts/tmp/stcon04-e74/browser-attestation-e74.json",
+    "attestationSha256": "db7f75da51a0505e0efb046121b80efb24f6ba16c8d62ba095ed1d2db9a9251a",
+    "runId": "2026-10-23T12-02-38-838Z",
+    "servedBundleSha256": "f8e97efa6777dbc496b74cd527b1bae78e7766e4a4d58f752f7816cb62444343",
+    "distBundleSha256": "f8e97efa6777dbc496b74cd527b1bae78e7766e4a4d58f752f7816cb62444343"
+  },
+  "limitations": [
+    "No application entrypoint was started.",
+    "No Compose, private env/input, database, provider, tunnel, or preserved runtime was used.",
+    "Build artifacts are local; no deployment or delivery claim is made.",
+    "A preliminary shell input-redirection attempt for the API archive failed on WSL ACL permissions before docker.exe started; after access was restored, the recorded successful API build used the sealed archive hash."
+  ]
+}

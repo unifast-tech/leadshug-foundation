@@ -1,0 +1,44 @@
+{
+  "checkpoint": "E74 unchanged corrected candidate full canonical GREEN; durable output retained",
+  "recorded_at_utc": "2026-10-23T12:20:26.725226+00:00",
+  "command": "bash scripts/test-channels-local.sh all",
+  "executor_session_id": 66605,
+  "exit_code": 0,
+  "actual_exit_code": 0,
+  "terminal_authority": "Owning executor reported actual terminal/cleanup; root independently parsed retained stdout aggregates, matched all259source bytes and93current per-run browser records.",
+  "phases": {
+    "migrations": 28,
+    "lint_and_build": "passed",
+    "api_unit": {
+      "files": 34,
+      "tests": 368,
+      "duration_seconds": 4.39
+    },
+    "api_postgresql": {
+      "files": 33,
+      "tests": 456,
+      "duration_seconds": 309.13
+    },
+    "web_unit": {
+      "files": 7,
+      "tests": 54,
+      "duration_seconds": 0.927
+    },
+    "browser": {
+      "tests": 89,
+      "passed": 89,
+      "duration_minutes": 16.2
+    }
+  },
+  "stdout_sha256": "73a5f43f7ed69e9e00271c55d6cb12e96917f0cb8bed587b3c33e403b62b9751",
+  "source_recheck": "all-source-recheck-e74-v1.1.json",
+  "source_fingerprint": "589c753670cfcf54020b785e6bae6b85ec1a8b4bab707f333f8e64d8aaf38c8e",
+  "full259source_postseal": true,
+  "freshness": "browser-freshness-collection-e74-v1.1.json",
+  "owned_cleanup_observed": true,
+  "repeat_rationale": "E73 passed967 with source/freshness checked, but raw stdout vanished before PCV extraction. Exact source unchanged. This justified repeat retains current complete metrics; no code/test rewrite.",
+  "limits": [
+    "Synthetic provider/DB/BFF/browser only.",
+    "Fresh complete independent r7 review, images, module consolidation, private-boundary full-diff exception, preserved runtime/operator and final gates remain."
+  ]
+}

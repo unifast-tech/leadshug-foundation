@@ -1,0 +1,359 @@
+{
+  "kind": "Root-verified immutable r7 TQA bounded package; dispatch next",
+  "review_kind": "test_quality_audit",
+  "checkpoint": "E74",
+  "package": "foundation_documentation/artifacts/reviews/leadshug-start-conversation-20261022/implementation-test_quality_audit-r7-package-v1.1.md",
+  "bytes": 1015908,
+  "characters": 1014919,
+  "sha256": "49388d7860ae7e4e439c016f3f2f9808455fdcb94154831cab162940121c2eb7",
+  "body_target_chars": 1015000,
+  "source_fingerprint": "589c753670cfcf54020b785e6bae6b85ec1a8b4bab707f333f8e64d8aaf38c8e",
+  "stdout_sha256": "73a5f43f7ed69e9e00271c55d6cb12e96917f0cb8bed587b3c33e403b62b9751",
+  "source_files": [
+    {
+      "path": "api-app/test/conversation-start.e2e-spec.ts",
+      "sha256": "35ead6bdea966ab05a3c9b792316867a918929194570b766767bacebb5bf4f11"
+    },
+    {
+      "path": "api-app/test/dispatch-admission.e2e-spec.ts",
+      "sha256": "da6ae029d8ade6c3e7cc67809e2d971d6585a5888c72d99b294f6fd0a920324f"
+    },
+    {
+      "path": "api-app/test/initial-message.e2e-spec.ts",
+      "sha256": "197aeba4c765168c7fba66ec56209241025a8bfc09475e3100f4be1995d0a13d"
+    },
+    {
+      "path": "api-app/test/channel-transport.e2e-spec.ts",
+      "sha256": "a143b1fdb4ba23883b731b58c78008f06714d80e16b5f077b0bf9763056ba011"
+    },
+    {
+      "path": "api-app/test/helpers.ts",
+      "sha256": "117e4f85c81dda37ab30e7eb23704b31538c8c5161aa7562a844eaf11de6819c"
+    },
+    {
+      "path": "api-app/test/timeline-fixtures.cjs",
+      "sha256": "a8239426ffb80dd430d38fe9f3dfc29d5ad346f77f519320be25e37c1f853d81"
+    },
+    {
+      "path": "api-app/test/browser-server.cjs",
+      "sha256": "02354237e3c0c5f8d918f65cbb833270e2ce02469cfe3e926e3a6790abc106dc"
+    },
+    {
+      "path": "api-app/src/domain/inbox/initial-message-template-renderer.spec.ts",
+      "sha256": "c783e835575ab8cf89af5524e0f02402956975f80faecf6b9d1467c1a8a0bdf0"
+    },
+    {
+      "path": "api-app/src/domain/inbox/channel-window-policy.spec.ts",
+      "sha256": "e20eaefd11256c8ca9f2156560ac23a1478f333b3932e865d1d52666cbd78692"
+    },
+    {
+      "path": "api-app/src/domain/inbox/initial-message.service.spec.ts",
+      "sha256": "e472bc1048f1c24c8edbe3004baceb15cc5a78956653bb2e30ade45843e2ee92"
+    },
+    {
+      "path": "api-app/src/domain/inbox/dispatch-admission.service.spec.ts",
+      "sha256": "687345771d8394ef8317142f38736876e730fc28cfdddd974a0fdd363fa7b78d"
+    },
+    {
+      "path": "api-app/src/domain/inbox/outbound.service.spec.ts",
+      "sha256": "748be057ff4b3cfe1215b87108d7708ca02ed97d7a7d129d9cada5fc1aef8d81"
+    },
+    {
+      "path": "api-app/src/domain/channels/transport/channel-initial-message.spec.ts",
+      "sha256": "46d9c0806eb418401dfbd2e538e78b2ee24e8d674a3962fb88802ecb5923a5fa"
+    },
+    {
+      "path": "api-app/src/integrations/meta/initial-message.client.spec.ts",
+      "sha256": "0467fbad2f0b8666491d93b6efb0b648037fde08ee0655ffb4500747e68fd057"
+    },
+    {
+      "path": "web-app/src/componentes/NovaConversa.spec.ts",
+      "sha256": "84184865db156d6c147e382982e235ea82f16ea9892cb0cc6e59f16ac1393757"
+    },
+    {
+      "path": "web-app/src/api.spec.ts",
+      "sha256": "9712bf3c1409754f3d802f7364cb5756d92762177a0ecc01f7f09120cd38aee9"
+    },
+    {
+      "path": "web-app/e2e/start-conversation.spec.ts",
+      "sha256": "95143e86de9ffec726a95f015f24d8f7dc580f1be92a098a4cbbbb33c34c8284"
+    },
+    {
+      "path": "web-app/e2e/timeline-freshness.ts",
+      "sha256": "3a06fb36e3a9bcf20a12cd8201da2daa3b567775f15e2be5f068e97e840d7f53"
+    },
+    {
+      "path": "api-app/src/surfaces/bff/conversations.controller.ts",
+      "sha256": "0967a901f8fca2fb275c1423a5ccd4d3185b9f55544862d3565c91bb528f19f3"
+    },
+    {
+      "path": "api-app/prisma/migrations/20261022150000_initial_message_admissions/migration.sql",
+      "sha256": "41df36b473c3163e9e29ea1cc6c12df3376994081698be83c83e50a812e3922a"
+    },
+    {
+      "path": "api-app/src/integrations/channels/prisma-channel-resolver.ts",
+      "sha256": "bd6b455d06fd6a5c2b4f09ca7d15ea4a55670a0555abc2744309c68072b6e943"
+    },
+    {
+      "path": "api-app/src/domain/message-templates/template-observation.service.ts",
+      "sha256": "41c7c640fd31ca0759d0d88647e24c74787597dcf75fd8a3c773fe6e02965488"
+    },
+    {
+      "path": "api-app/src/domain/inbox/dispatch-admission.service.ts",
+      "sha256": "2c3e19f9bcacd75d047ee73e5913ad77e9a8700a43427af27556b801234bcda9"
+    },
+    {
+      "path": "api-app/src/domain/inbox/initial-message.service.ts",
+      "sha256": "61a52116f29e5753ed27bae607dbebd5dfdb5b1fd1dc8954a02602e8d81a8e6e"
+    },
+    {
+      "path": "api-app/src/domain/inbox/outbound.service.ts",
+      "sha256": "cb4b2e68c7377411991960c65e3d15cef8bc1aea927049cd99345e523433bd9f"
+    },
+    {
+      "path": "api-app/src/domain/inbox/channel-window-policy.ts",
+      "sha256": "46dfcf887f2ad4ed0670664186e918816699e6541d1670aa9c32ac79a193e43e"
+    },
+    {
+      "path": "api-app/src/domain/inbox/initial-message-template-renderer.ts",
+      "sha256": "a5ce98823c8f0a4480386bc755e392b5f6287107cbfc0ad13ad50c06bc234ecf"
+    },
+    {
+      "path": "web-app/src/componentes/NovaConversa.tsx",
+      "sha256": "2702cae2c4d913d511e33ca8d305ecc03d7ee56f34623877058865d884aa1bdd"
+    },
+    {
+      "path": "api-app/src/domain/inbox/message-acceptance.service.ts",
+      "sha256": "285647f1dee08b14dbae8661743c75198f1be85d5b523e9f73c7d51dfbe30ff4"
+    },
+    {
+      "path": "api-app/test/webhooks.e2e-spec.ts",
+      "sha256": "2da81767ab4366d90ccbd214b12c9570027ea102ee9b5fb27f89aa4db129cdb5"
+    }
+  ],
+  "static_roundtrip_rows": 268,
+  "shared_json_references": 381,
+  "schema_excerpt": {
+    "mode": "excerpt-only",
+    "path": "api-app/prisma/schema.prisma",
+    "sha256": "19ea60e6e5a1675a4ff12581237b2f91c2359b61d7b8bcb9e8bf1c1ebf26435d",
+    "models": [
+      "Message",
+      "InitialMessageIntent",
+      "DispatchAdmission"
+    ]
+  },
+  "r7_proposal_sha256": "acc77074e913bd87e2e037f920b5a226178466f970ee1ae1df9fba85362de16f",
+  "r7_patch_sha256": "70b6d9fc91f037556b936be2b143601aa10339d3313d67b2fe692acada5ace9f",
+  "canonical_module_baselines": [
+    {
+      "path": "foundation_documentation/modules/inbox-and-conversations.md",
+      "baseline_sha256": "24b3f1edd8f10bf991d61135be2364b49679c43e5894ce024c2d5169921756a2",
+      "proposed_lf_text_sha256": "a6711b55b173f2f8b3f6bf83ed4fbb55e6a7e2ffa0132dfd80f594d838d75d44"
+    },
+    {
+      "path": "foundation_documentation/modules/integrations-and-channels.md",
+      "baseline_sha256": "6b1865ab4f27458e1e1e225535e2f4a713e987e18344ca86d3f9411fa6c6f168",
+      "proposed_lf_text_sha256": "3dfd99329d974e5a1aac22f04745017764d4c94b2566e0c63383151b1ef7459f"
+    }
+  ],
+  "limitations": [
+    "Package generation is prohibited until all actual checkpoint receipts pass the strict gates in this helper.",
+    "No reviewer dispatch, package promotion, product/Foundation canonical artifact mutation, or reviewer verdict is performed."
+  ],
+  "staged_original_sha256": "41ea45a190a30bd621ea376ac5455b269e03ab9931caf5da3297793c64d9968c",
+  "root_coverage": [
+    {
+      "path": "api-app/test/conversation-start.e2e-spec.ts",
+      "sha256": "35ead6bdea966ab05a3c9b792316867a918929194570b766767bacebb5bf4f11",
+      "coverage": "explicit unchanged hash-bound summary"
+    },
+    {
+      "path": "api-app/test/dispatch-admission.e2e-spec.ts",
+      "sha256": "da6ae029d8ade6c3e7cc67809e2d971d6585a5888c72d99b294f6fd0a920324f",
+      "coverage": "full source"
+    },
+    {
+      "path": "api-app/test/initial-message.e2e-spec.ts",
+      "sha256": "197aeba4c765168c7fba66ec56209241025a8bfc09475e3100f4be1995d0a13d",
+      "coverage": "full source"
+    },
+    {
+      "path": "api-app/test/channel-transport.e2e-spec.ts",
+      "sha256": "a143b1fdb4ba23883b731b58c78008f06714d80e16b5f077b0bf9763056ba011",
+      "coverage": "explicit unchanged hash-bound summary"
+    },
+    {
+      "path": "api-app/test/helpers.ts",
+      "sha256": "117e4f85c81dda37ab30e7eb23704b31538c8c5161aa7562a844eaf11de6819c",
+      "coverage": "explicit unchanged hash-bound summary"
+    },
+    {
+      "path": "api-app/test/timeline-fixtures.cjs",
+      "sha256": "a8239426ffb80dd430d38fe9f3dfc29d5ad346f77f519320be25e37c1f853d81",
+      "coverage": "explicit unchanged hash-bound summary"
+    },
+    {
+      "path": "api-app/test/browser-server.cjs",
+      "sha256": "02354237e3c0c5f8d918f65cbb833270e2ce02469cfe3e926e3a6790abc106dc",
+      "coverage": "explicit unchanged hash-bound summary"
+    },
+    {
+      "path": "api-app/src/domain/inbox/initial-message-template-renderer.spec.ts",
+      "sha256": "c783e835575ab8cf89af5524e0f02402956975f80faecf6b9d1467c1a8a0bdf0",
+      "coverage": "explicit unchanged hash-bound summary"
+    },
+    {
+      "path": "api-app/src/domain/inbox/channel-window-policy.spec.ts",
+      "sha256": "e20eaefd11256c8ca9f2156560ac23a1478f333b3932e865d1d52666cbd78692",
+      "coverage": "explicit unchanged hash-bound summary"
+    },
+    {
+      "path": "api-app/src/domain/inbox/initial-message.service.spec.ts",
+      "sha256": "e472bc1048f1c24c8edbe3004baceb15cc5a78956653bb2e30ade45843e2ee92",
+      "coverage": "explicit unchanged hash-bound summary"
+    },
+    {
+      "path": "api-app/src/domain/inbox/dispatch-admission.service.spec.ts",
+      "sha256": "687345771d8394ef8317142f38736876e730fc28cfdddd974a0fdd363fa7b78d",
+      "coverage": "full source"
+    },
+    {
+      "path": "api-app/src/domain/inbox/outbound.service.spec.ts",
+      "sha256": "748be057ff4b3cfe1215b87108d7708ca02ed97d7a7d129d9cada5fc1aef8d81",
+      "coverage": "explicit unchanged hash-bound summary"
+    },
+    {
+      "path": "api-app/src/domain/channels/transport/channel-initial-message.spec.ts",
+      "sha256": "46d9c0806eb418401dfbd2e538e78b2ee24e8d674a3962fb88802ecb5923a5fa",
+      "coverage": "explicit unchanged hash-bound summary"
+    },
+    {
+      "path": "api-app/src/integrations/meta/initial-message.client.spec.ts",
+      "sha256": "0467fbad2f0b8666491d93b6efb0b648037fde08ee0655ffb4500747e68fd057",
+      "coverage": "explicit unchanged hash-bound summary"
+    },
+    {
+      "path": "web-app/src/componentes/NovaConversa.spec.ts",
+      "sha256": "84184865db156d6c147e382982e235ea82f16ea9892cb0cc6e59f16ac1393757",
+      "coverage": "explicit unchanged hash-bound summary"
+    },
+    {
+      "path": "web-app/src/api.spec.ts",
+      "sha256": "9712bf3c1409754f3d802f7364cb5756d92762177a0ecc01f7f09120cd38aee9",
+      "coverage": "explicit unchanged hash-bound summary"
+    },
+    {
+      "path": "web-app/e2e/start-conversation.spec.ts",
+      "sha256": "95143e86de9ffec726a95f015f24d8f7dc580f1be92a098a4cbbbb33c34c8284",
+      "coverage": "explicit unchanged hash-bound summary"
+    },
+    {
+      "path": "web-app/e2e/timeline-freshness.ts",
+      "sha256": "3a06fb36e3a9bcf20a12cd8201da2daa3b567775f15e2be5f068e97e840d7f53",
+      "coverage": "explicit unchanged hash-bound summary"
+    },
+    {
+      "path": "api-app/src/surfaces/bff/conversations.controller.ts",
+      "sha256": "0967a901f8fca2fb275c1423a5ccd4d3185b9f55544862d3565c91bb528f19f3",
+      "coverage": "full source"
+    },
+    {
+      "path": "api-app/prisma/migrations/20261022150000_initial_message_admissions/migration.sql",
+      "sha256": "41df36b473c3163e9e29ea1cc6c12df3376994081698be83c83e50a812e3922a",
+      "coverage": "full source"
+    },
+    {
+      "path": "api-app/src/integrations/channels/prisma-channel-resolver.ts",
+      "sha256": "bd6b455d06fd6a5c2b4f09ca7d15ea4a55670a0555abc2744309c68072b6e943",
+      "coverage": "full source"
+    },
+    {
+      "path": "api-app/src/domain/message-templates/template-observation.service.ts",
+      "sha256": "41c7c640fd31ca0759d0d88647e24c74787597dcf75fd8a3c773fe6e02965488",
+      "coverage": "explicit unchanged hash-bound summary"
+    },
+    {
+      "path": "api-app/src/domain/inbox/dispatch-admission.service.ts",
+      "sha256": "2c3e19f9bcacd75d047ee73e5913ad77e9a8700a43427af27556b801234bcda9",
+      "coverage": "full source"
+    },
+    {
+      "path": "api-app/src/domain/inbox/initial-message.service.ts",
+      "sha256": "61a52116f29e5753ed27bae607dbebd5dfdb5b1fd1dc8954a02602e8d81a8e6e",
+      "coverage": "full source"
+    },
+    {
+      "path": "api-app/src/domain/inbox/outbound.service.ts",
+      "sha256": "cb4b2e68c7377411991960c65e3d15cef8bc1aea927049cd99345e523433bd9f",
+      "coverage": "full source"
+    },
+    {
+      "path": "api-app/src/domain/inbox/channel-window-policy.ts",
+      "sha256": "46dfcf887f2ad4ed0670664186e918816699e6541d1670aa9c32ac79a193e43e",
+      "coverage": "full source"
+    },
+    {
+      "path": "api-app/src/domain/inbox/initial-message-template-renderer.ts",
+      "sha256": "a5ce98823c8f0a4480386bc755e392b5f6287107cbfc0ad13ad50c06bc234ecf",
+      "coverage": "full source"
+    },
+    {
+      "path": "web-app/src/componentes/NovaConversa.tsx",
+      "sha256": "2702cae2c4d913d511e33ca8d305ecc03d7ee56f34623877058865d884aa1bdd",
+      "coverage": "explicit unchanged hash-bound summary"
+    },
+    {
+      "path": "api-app/src/domain/inbox/message-acceptance.service.ts",
+      "sha256": "285647f1dee08b14dbae8661743c75198f1be85d5b523e9f73c7d51dfbe30ff4",
+      "coverage": "full source"
+    },
+    {
+      "path": "api-app/test/webhooks.e2e-spec.ts",
+      "sha256": "2da81767ab4366d90ccbd214b12c9570027ea102ee9b5fb27f89aa4db129cdb5",
+      "coverage": "full source"
+    }
+  ],
+  "root_static_verification": {
+    "rows": 268,
+    "unchanged_E64": 230,
+    "current_full_source": 38,
+    "all_core_fields_and_selected_support_verified": true,
+    "exact_current_receipts_checked": 9,
+    "full_raw_metadata_omitted_transparently": true
+  },
+  "root_packaging_corrections": [
+    {
+      "old": "Every `[\"@\",index]` in the historical/current receipt and static-signal JSON blocks resolves to the verbatim value at that index below. Literal arrays with the same shape were escaped as `[\"!\",value]`. The tree dictionary was decoded and compared to every original JSON value before emission.",
+      "new": "Receipt JSON references `[\"@\",index]` use this shared dictionary; static rows use their own `tree_dictionary`. `[\"!\",value]` escapes literal arrays. Receipt round trips were verified.",
+      "count": 1
+    },
+    {
+      "old": "complete lossless inventory and verified round trip",
+      "new": "complete bounded audit view and verified core fields",
+      "count": 1
+    },
+    {
+      "old": "Complete row values are reproduced losslessly in the TQA encoded inventory section",
+      "new": "All core row values and selected support appear in the TQA bounded view",
+      "count": 2
+    }
+  ],
+  "root_additional_exact_source_excerpts": [
+    {
+      "path": "web-app/src/telas/Inbox.tsx",
+      "sha256": "66658161c7c74610288bf6c92583b616bacc1ada0fced27af01997ed22481737",
+      "start_line": 318,
+      "end_line": 345,
+      "mode": "exact source excerpt; not full source"
+    },
+    {
+      "path": "web-app/src/telas/Inbox.tsx",
+      "sha256": "66658161c7c74610288bf6c92583b616bacc1ada0fced27af01997ed22481737",
+      "start_line": 445,
+      "end_line": 468,
+      "mode": "exact source excerpt; not full source"
+    }
+  ],
+  "root_scope_note": "Inbox is supplied as two exact current source excerpts for BU-switch/reset and first-flow composer selection; full NovaConversa UI and full browser tests are embedded. This bounded excerpt coverage is explicit, not a full-Inbox source claim."
+}

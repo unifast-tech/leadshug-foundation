@@ -1,0 +1,320 @@
+{
+  "kind": "Current E74 executed adversarial proof map for fresh independent challenge",
+  "risk_level": "high",
+  "attack_simulation_decision": "required",
+  "source_seal": "all-source-seal-e74-v1.1.json",
+  "execution_state": "Actual E74 canonical ALL terminal exit0 with full259 postseal; current execution metrics are in same-run receipt. This is test-only evidence and does not authorize product dispatch, runtime, or delivery.",
+  "threat_intelligence": [
+    {
+      "source": "OWASP API1:2023 Broken Object Level Authorization",
+      "url": "https://api-security.owasp.org/editions/2023/en/0xa1-broken-object-level-authorization/",
+      "consulted_date": "2026-10-22",
+      "paraphrase": "Every object-based action needs permission checks for that object. A valid login and an opaque UUID alone do not establish authorization.",
+      "applies_to": "BU/conversation/channel/template/attempt/admission ownership; forged grants and foreign references."
+    },
+    {
+      "source": "OWASP API4:2023 Unrestricted Resource Consumption",
+      "url": "https://api-security.owasp.org/editions/2023/en/0xa4-unrestricted-resource-consumption/",
+      "consulted_date": "2026-10-22",
+      "paraphrase": "Bound execution time, pages, operation counts and third-party resource use. Concurrent valid calls can consume provider and server resources.",
+      "applies_to": "Actor/account limits, bounded template/membership pages, overall lease/preflight budget, one external POST, local-only recovery."
+    }
+  ],
+  "surfaces": [
+    {
+      "entry": "Authenticated BFF open/options/preview/initial/read/reconcile/ack",
+      "boundary": "Session+CSRF+current home-tenant/BU role before detailed validation; current grant after awaits/inside mutation",
+      "abuse": "Forge cross-tenant BU grant; change object IDs; revoke session/role while provider GET held",
+      "source_tests": [
+        "api-app/test/initial-message.e2e-spec.ts"
+      ],
+      "current_receipt": "all-result-e74-v1.1.json; all-source-recheck-e74-v1.1.json",
+      "historical_e45_status": "Actual forged cross-tenant grant case295 and current session/grant negative scenarios in approved-template compound329 passed E45; exact BFF current grant/CSRF tested with real PG.",
+      "status": "Corresponding negative scenarios passed again in full E74; source tests are bound to current seal. Historical description is retained separately, not current line numbering.",
+      "source_hashes": [
+        {
+          "path": "api-app/test/initial-message.e2e-spec.ts",
+          "sha256": "197aeba4c765168c7fba66ec56209241025a8bfc09475e3100f4be1995d0a13d"
+        }
+      ]
+    },
+    {
+      "entry": "Selected Channel descriptor and scoped credential",
+      "boundary": "Immutable BU/channel/origin/resource/generation/epoch/version/account/window context; no browser credentials/account override",
+      "abuse": "Confuse descriptor/transport account or use rotated/retired resource before POST",
+      "source_tests": [
+        "api-app/src/domain/channels/transport/channel-initial-message.spec.ts",
+        "api-app/test/channel-transport.e2e-spec.ts"
+      ],
+      "current_receipt": "all-result-e74-v1.1.json; all-source-recheck-e74-v1.1.json",
+      "historical_e45_status": "Actual nine-field immutable context/substitution tests and channel-transport regressions passed E45; no real credential/provider probing.",
+      "status": "Corresponding negative scenarios passed again in full E74; source tests are bound to current seal. Historical description is retained separately, not current line numbering.",
+      "source_hashes": [
+        {
+          "path": "api-app/src/domain/channels/transport/channel-initial-message.spec.ts",
+          "sha256": "46d9c0806eb418401dfbd2e538e78b2ee24e8d674a3962fb88802ecb5923a5fa"
+        },
+        {
+          "path": "api-app/test/channel-transport.e2e-spec.ts",
+          "sha256": "a143b1fdb4ba23883b731b58c78008f06714d80e16b5f077b0bf9763056ba011"
+        }
+      ]
+    },
+    {
+      "entry": "Template catalog/preview/provider preflight",
+      "boundary": "Sanitized shared catalog, exact bounded renderer, fresh same-account eligibility/status and grant membership",
+      "abuse": "Use paused/unknown/off-account/changed/duplicate template; unbounded pages; inject provider fields",
+      "source_tests": [
+        "api-app/test/initial-message.e2e-spec.ts",
+        "api-app/src/domain/inbox/initial-message-template-renderer.spec.ts"
+      ],
+      "current_receipt": "all-result-e74-v1.1.json; all-source-recheck-e74-v1.1.json",
+      "historical_e45_status": "Actual approved-template compound329 covers off-account/paused/unknown/changed/duplicate/unexhausted and no-dispatch counters; renderer length/parameter boundaries passed356API.",
+      "status": "Corresponding negative scenarios passed again in full E74; source tests are bound to current seal. Historical description is retained separately, not current line numbering.",
+      "source_hashes": [
+        {
+          "path": "api-app/test/initial-message.e2e-spec.ts",
+          "sha256": "197aeba4c765168c7fba66ec56209241025a8bfc09475e3100f4be1995d0a13d"
+        },
+        {
+          "path": "api-app/src/domain/inbox/initial-message-template-renderer.spec.ts",
+          "sha256": "c783e835575ab8cf89af5524e0f02402956975f80faecf6b9d1467c1a8a0bdf0"
+        }
+      ]
+    },
+    {
+      "entry": "Initial/ordinary dispatch admissions and local acceptance",
+      "boundary": "Durable owned slot, immutable key/request/context, positive claim readback; exactly one POST maximum per intent, no automatic retry",
+      "abuse": "Concurrent replay, delayed preflight after expiry, commit ACK loss, late outcome after explicit risk release, echo unique conflict",
+      "source_tests": [
+        "api-app/test/dispatch-admission.e2e-spec.ts",
+        "api-app/test/initial-message.e2e-spec.ts"
+      ],
+      "current_receipt": "all-result-e74-v1.1.json; all-source-recheck-e74-v1.1.json",
+      "historical_e45_status": "Actual dispatch-admission commit/rollback and immutable deadline, late-receipt/successor/echo barriers passed435PG; five20-request waves preserve1dispatch/Message each.",
+      "status": "Corresponding negative scenarios passed again in full E74; source tests are bound to current seal. Historical description is retained separately, not current line numbering.",
+      "source_hashes": [
+        {
+          "path": "api-app/test/dispatch-admission.e2e-spec.ts",
+          "sha256": "da6ae029d8ade6c3e7cc67809e2d971d6585a5888c72d99b294f6fd0a920324f"
+        },
+        {
+          "path": "api-app/test/initial-message.e2e-spec.ts",
+          "sha256": "197aeba4c765168c7fba66ec56209241025a8bfc09475e3100f4be1995d0a13d"
+        }
+      ]
+    },
+    {
+      "entry": "Signed official webhook timestamp",
+      "boundary": "Verified signature/current resource/positive integer nonfuture timestamp; no createdAt/nonofficial fallback",
+      "abuse": "Manufacture free-text window with invalid/future/foreign/duplicate/nonofficial IN",
+      "source_tests": [
+        "api-app/test/webhooks.e2e-spec.ts",
+        "api-app/src/domain/inbox/channel-window-policy.spec.ts"
+      ],
+      "current_receipt": "all-result-e74-v1.1.json; all-source-recheck-e74-v1.1.json",
+      "historical_e45_status": "Timestamp policy invalid/future/nonofficial/foreign-resource cases and signed webhook tests passed E45; source-bound BFF/public/BOT regression preserved.",
+      "status": "Corresponding negative scenarios passed again in full E74; source tests are bound to current seal. Historical description is retained separately, not current line numbering.",
+      "source_hashes": [
+        {
+          "path": "api-app/test/webhooks.e2e-spec.ts",
+          "sha256": "2da81767ab4366d90ccbd214b12c9570027ea102ee9b5fb27f89aa4db129cdb5"
+        },
+        {
+          "path": "api-app/src/domain/inbox/channel-window-policy.spec.ts",
+          "sha256": "e20eaefd11256c8ca9f2156560ac23a1478f333b3932e865d1d52666cbd78692"
+        }
+      ]
+    },
+    {
+      "entry": "Browser compose/recovery/storage and safe errors",
+      "boundary": "Actor/BU/conversation-scoped immutable snapshot, explicit confirmation, no automatic POST on reload; escaped React text, closed safe error fields",
+      "abuse": "Double-trigger, stale A-B-A preview, quota/storage failure before dispatch, lost response followed by context refusal and new key",
+      "source_tests": [
+        "web-app/e2e/start-conversation.spec.ts",
+        "web-app/src/api.spec.ts"
+      ],
+      "current_receipt": "all-result-e74-v1.1.json; all-source-recheck-e74-v1.1.json",
+      "historical_e45_status": "Actual escaped preview, delayed A-B-A, session refusal, storage write/read failure and lost-response same-key replay passed85browser. Ordinary recovery action proof still pending E46.",
+      "status": "Actual PREPARED UI, ordinary90s recovery, EALB early409/expired acknowledgment/successor/late-old isolation, Unicode input/preview/send, storage read/write and same-key replay passed full E74. EALB/PREPARED expiry is explicit disposable fixture arrangement; ordinary90s case uses actual wait.",
+      "source_hashes": [
+        {
+          "path": "web-app/e2e/start-conversation.spec.ts",
+          "sha256": "95143e86de9ffec726a95f015f24d8f7dc580f1be92a098a4cbbbb33c34c8284"
+        },
+        {
+          "path": "web-app/src/api.spec.ts",
+          "sha256": "9712bf3c1409754f3d802f7364cb5756d92762177a0ecc01f7f09120cd38aee9"
+        }
+      ]
+    }
+  ],
+  "validation_safety": "Owned disposable synthetic DB/provider boundary only. No actual provider probes, contacts, private data/env/log inspection or destructive test.",
+  "residuals": [
+    "SEC-R6-04 existing management recovery read budget debt not silently resolved; new initial recovery performs no provider I/O.",
+    "OPS-R4-01 and TQA-ST05-03 retained.",
+    "Procedural E02/E04/E18/E35a stay in independent assurance packet; no blanket privacy compliance claim.",
+    "Candidate map does not replace final security findings/decision, independent review, actual runtime proof or canonical guards.",
+    "Canonical npm ci emitted inherited dependency audit warnings; package/lock source remains unchanged and no dependency remediation/scope expansion or blanket dependency-clean claim is made.",
+    "No actual preserved local activation, real provider eligibility/send or recipient reply proof for ST04 yet."
+  ],
+  "promotion_candidates": "None proposed; no Delphi edits.",
+  "findings_state": "R1 corrections have actual full current regression proof; fresh r2 independent security/architecture and final runtime/closure gates remain.",
+  "recorded_at_utc": "2026-10-23T12:22:57.885756+00:00",
+  "current_remediation_reference": "implementation-r6-resolution-e74-v1.1.json",
+  "prior_remediation_reference": "implementation-r2-r3-resolution-v1.1.json",
+  "rebind_method": "Current terminal fullALL, independent full259source postseal and93browser manifest binding. Historical-labelled evidence remains historical; source hashes in current path records rebound. Current automated proof does not close operator/runtime/module/review/guard gates.",
+  "current_r4_correction_proof": {
+    "reference": "implementation-r4-resolution-e74-v1.1.json",
+    "same_run_pcv_reference": "pcv-eps-e74-v1.1.json",
+    "claim_window": "Both ordinary and initial SENDING CAS enforce captured trusted expiry against the actual DB clock.",
+    "mutable_context": "Actual BU/channel/credential pins and actor/grant NOWAIT fence preserve the approved lock order and fail closed under contention.",
+    "st05_overlap": "Actual unmodified ST05 refresh races at claim and known-acceptance local completion have zero deadlocks and retain truthful outcomes.",
+    "access_paths": "Actual captured-query EXPLAIN uses one partial ordered active-admission index for options and whole-conversation conflict and an ordered intent index; exact metrics are in current PCV."
+  },
+  "current_additional_attack_proof": [
+    "Individually unavailable cached observation cannot authorize a new preview/reservation/POST.",
+    "Local settlement failure cannot erase captured BLOCKED/REJECTED/UNKNOWN/ACK_WITHOUT_ID; uncertain admission stays excluded.",
+    "BU dialog owner switches cannot let held old response control current UI."
+  ],
+  "source_fingerprint": "589c753670cfcf54020b785e6bae6b85ec1a8b4bab707f333f8e64d8aaf38c8e",
+  "current_r6_correction_proof": {
+    "artifact": "implementation-r6-resolution-e74-v1.1.json",
+    "sha256": "b437befd4b4b1915d2181b10d1f5681de077fc8216fde7559bf8d3a1be2e7c7b",
+    "source_seal": "all-source-seal-e74-v1.1.json",
+    "source_fingerprint": "589c753670cfcf54020b785e6bae6b85ec1a8b4bab707f333f8e64d8aaf38c8e",
+    "stdout_sha256": "73a5f43f7ed69e9e00271c55d6cb12e96917f0cb8bed587b3c33e403b62b9751",
+    "finding_ids": [
+      "F-CF091066",
+      "F-5E961B39"
+    ],
+    "resolution": {
+      "kind": "Root resolution of both r6 causal findings against current full source-bound proof; independent r7 remains required",
+      "recorded_at_utc": "2026-10-23T12:20:47.197456+00:00",
+      "source_seal": "all-source-seal-e74-v1.1.json",
+      "source_fingerprint": "589c753670cfcf54020b785e6bae6b85ec1a8b4bab707f333f8e64d8aaf38c8e",
+      "all_result": "all-result-e74-v1.1.json",
+      "stdout_sha256": "73a5f43f7ed69e9e00271c55d6cb12e96917f0cb8bed587b3c33e403b62b9751",
+      "rows": [
+        {
+          "finding_id": "F-CF091066",
+          "source_finding_id": "ARCH-ST04-R6-01",
+          "severity": "medium",
+          "resolution": "Integrated",
+          "problem": "Current verified identity could qualify a trusted timestamp while its managed lifecycle was false.",
+          "correction": "Read managed_lifecycle in the existing same FOR SHARE identity projection; pass only that locked boolean to private timestamp qualification. Preserve Message/receipt acceptance; duplicate reconciliation never promotes a prior null timestamp. No extra query, caller flag, lock-order change or provider call.",
+          "sources": [
+            {
+              "path": "api-app/src/domain/inbox/message-acceptance.service.ts",
+              "lines": [
+                120,
+                148,
+                188,
+                212
+              ],
+              "sha256": "285647f1dee08b14dbae8661743c75198f1be85d5b523e9f73c7d51dfbe30ff4"
+            },
+            {
+              "path": "api-app/test/webhooks.e2e-spec.ts",
+              "lines": [
+                123,
+                144,
+                149,
+                152,
+                163
+              ],
+              "sha256": "2da81767ab4366d90ccbd214b12c9570027ea102ee9b5fb27f89aa4db129cdb5"
+            }
+          ],
+          "actual_proof_markers": [
+            "does not promote an inbound timestamp received while the current resource is unmanaged"
+          ],
+          "actual_proof": "Signed-webhook/PG matrix passes: retained IN/unread and null trusted timestamp, closed window before/after lifecycle activation, duplicate without promotion, later new managed IN opens window, zero provider effects.",
+          "causal_evidence": "api-result-e72-v1.1.json",
+          "limits": "Actual E72 read-projection defect, not an outbound exploit or actual provider effect."
+        },
+        {
+          "finding_id": "F-5E961B39",
+          "source_finding_id": "TQA-R6-01",
+          "severity": "medium",
+          "resolution": "Integrated",
+          "problem": "Native deadlock statistics silently defaulted to zero on invalid results.",
+          "correction": "Test helper requires exactly one row and a nonnegative native bigint; malformed/missing/ambiguous results fail the test. Real counter overlap probes remain.",
+          "sources": [
+            {
+              "path": "api-app/test/initial-message.e2e-spec.ts",
+              "lines": [
+                78,
+                145,
+                149,
+                1280,
+                1318,
+                1357,
+                1399
+              ],
+              "sha256": "197aeba4c765168c7fba66ec56209241025a8bfc09475e3100f4be1995d0a13d"
+            }
+          ],
+          "actual_proof_markers": [
+            "fails closed when native deadlock statistics are",
+            "ST04_ST05_CLAIM_OVERLAP ",
+            "ST04_ST05_LOCAL_OVERLAP "
+          ],
+          "actual_proof": "All four isolated empty/malformed/multiple/negative fixtures reject; actual unchanged ST05-owner claim/local overlap probes pass with native zero-deadlock deltas.",
+          "causal_evidence": "api-result-e72-v1.1.json",
+          "limits": "One helper query is substituted once and restored in finally. This test-only helper does not authorize product dispatch; no actual missing native statistics are claimed."
+        }
+      ],
+      "r6_collection": "implementation-review-collection-r6-v1.1.json",
+      "test_first_boundary": "E72 actual test-only API RED reached four statistics failures and four lifecycle soft assertions before the two exact E73 fixes. E73 actual967pass/postseal/browser is retained; unchanged E74 repeats only to retain lost raw stdout/metrics. No earlier unreached assertion or actual outbound exploit is relabeled.",
+      "remaining": [
+        "Fresh complete eight-section TQA; terse r6 response insufficient",
+        "Current architecture/security/cutover and module review",
+        "Current offline images plus approved preserved runtime/operator/full-diff/final gates"
+      ],
+      "boundary": "Positive public sources and owned synthetic evidence only; no private environment/business/provider inspection."
+    },
+    "status_note": "Root-authored resolution artifact reproduced as supplied; map rebinding does not independently adjudicate it."
+  },
+  "current_same_run_pcv_reference": {
+    "artifact": "current-synthetic-pcv-samples-e74-v1.1.json",
+    "sha256": "75595b6d8884606d36279d02bce24a6f82bb2e695b72707bbd62be6018ca39ae",
+    "metric_count": 18,
+    "source_seal": "all-source-seal-e74-v1.1.json",
+    "stdout_sha256": "73a5f43f7ed69e9e00271c55d6cb12e96917f0cb8bed587b3c33e403b62b9751"
+  },
+  "current_actual_all_result": {
+    "artifact": "all-result-e74-v1.1.json",
+    "sha256": "e8c56ed6745b3a1d66f9bf2dde86704a5a58f8d936e1ff763f7e75b0e3386818",
+    "exit_code": 0,
+    "source_fingerprint": "589c753670cfcf54020b785e6bae6b85ec1a8b4bab707f333f8e64d8aaf38c8e",
+    "stdout_sha256": "73a5f43f7ed69e9e00271c55d6cb12e96917f0cb8bed587b3c33e403b62b9751",
+    "phases": {
+      "migrations": 28,
+      "lint_and_build": "passed",
+      "api_unit": {
+        "files": 34,
+        "tests": 368,
+        "duration_seconds": 4.39
+      },
+      "api_postgresql": {
+        "files": 33,
+        "tests": 456,
+        "duration_seconds": 309.13
+      },
+      "web_unit": {
+        "files": 7,
+        "tests": 54,
+        "duration_seconds": 0.927
+      },
+      "browser": {
+        "tests": 89,
+        "passed": 89,
+        "duration_minutes": 16.2
+      }
+    }
+  },
+  "current_statistics_test_only_boundary": "Statistics helper metrics are test-only evidence and are not product dispatch authorization.",
+  "collection_rebinding_note": "Root corrected stale current-checkpoint strings/r4 refs/source hashes in the staged generic map. Historical-labelled/approved-criterion fields remain exact. Current rows bind actualE74 ALL/PCV/source/freshness; no measurement or closure is invented.",
+  "staged_original_sha256": "0e93d697d31e6e5b7f7bd856d6fe61e83b4078bfa4c963bcdf3488ff80178243"
+}

@@ -1,0 +1,370 @@
+{
+  "kind": "Current E74 full-execution producer-to-consumer crosswalk",
+  "recorded_at_utc": "2026-10-23T12:22:57.829870+00:00",
+  "source_seal": "all-source-seal-e74-v1.1.json",
+  "state": "Actual E74 canonical ALL terminal exit0 with full259 postseal; current execution metrics are in same-run receipt. This is test-only evidence and does not authorize product dispatch, runtime, or delivery.",
+  "rows": [
+    {
+      "id": "manual-open",
+      "producer": "ConversationStartService atomically returns created/reused row without send/read/claim/automation",
+      "consumers": [
+        "NovaConversa dialog POST and onOpened",
+        "Inbox selected manual conversation / truthful list order"
+      ],
+      "exact_test_references": [
+        "api-app/test/conversation-start.e2e-spec.ts:25",
+        "api-app/test/conversation-start.e2e-spec.ts:64",
+        "api-app/test/conversation-start.e2e-spec.ts:153",
+        "api-app/test/conversation-start.e2e-spec.ts:177",
+        "web-app/e2e/start-conversation.spec.ts:74"
+      ],
+      "consumer_state": "implemented + evidenced",
+      "actual_receipts": [
+        "all-result-e74-v1.1.json",
+        "browser-freshness-collection-e74-v1.1.json"
+      ],
+      "historical_evidence": "E45 atomic PG5x20/no automation and real browser open/reuse passed; E46 corresponding browser regression passed.",
+      "evidence_and_limit": "Relevant API/PG/served-browser scenarios passed full E74. Exact test file references remain source anchors; historical line numbers describe older source and are not asserted as current positions."
+    },
+    {
+      "id": "qualified-window",
+      "producer": "Verified signed Meta IN timestamp accepted only for current managed identity; Message.officialInboundAt nullable",
+      "consumers": [
+        "PrismaChannelResolver.inspectForConversation",
+        "PrismaChannelResolver.inspectManyForConversations via BFF/public listing",
+        "OutboundService ordinary BFF/PUBLIC/BOT",
+        "Initial text dispatch claim in transaction"
+      ],
+      "exact_test_references": [
+        "api-app/src/domain/inbox/channel-window-policy.spec.ts",
+        "api-app/test/webhooks.e2e-spec.ts",
+        "api-app/test/number-onboarding-pcv.e2e-spec.ts",
+        "api-app/test/number-onboarding-typebot.e2e-spec.ts",
+        "api-app/test/api-publica.e2e-spec.ts",
+        "web-app/e2e/channel-transport.spec.ts"
+      ],
+      "consumer_state": "implemented + evidenced",
+      "actual_receipts": [
+        "all-result-e74-v1.1.json",
+        "browser-freshness-collection-e74-v1.1.json"
+      ],
+      "historical_evidence": "E45 signed timestamp/resource policy, BFF/public/BOT projected/send regressions and raw/substitution tests passed; public index/query counts in actual PCV receipt.",
+      "evidence_and_limit": "Relevant API/PG/served-browser scenarios passed full E74. Exact test file references remain source anchors; historical line numbers describe older source and are not asserted as current positions."
+    },
+    {
+      "id": "shared-template-catalog",
+      "producer": "ST05 bounded catalog projector/lease/TTL remains owner; initial renderer consumes unchanged components",
+      "consumers": [
+        "Shared catalog route and PrimeiraMensagem template selector",
+        "Read-only local preview/escaped React text",
+        "Fresh same-account remote eligibility before new dispatch"
+      ],
+      "exact_test_references": [
+        "api-app/src/domain/inbox/initial-message-template-renderer.spec.ts:18",
+        "api-app/src/domain/inbox/initial-message-template-renderer.spec.ts:64",
+        "api-app/test/initial-message.e2e-spec.ts:329",
+        "web-app/e2e/start-conversation.spec.ts:447"
+      ],
+      "consumer_state": "implemented + evidenced",
+      "actual_receipts": [
+        "all-result-e74-v1.1.json",
+        "browser-freshness-collection-e74-v1.1.json"
+      ],
+      "historical_evidence": "E45 renderer exact bounds/NAMED/POSITIONAL, real catalog refresh, escaped read-only preview, same-account fresh membership before dispatch passed. Protected authoring/catalog browser cases passed E46.",
+      "evidence_and_limit": "Relevant API/PG/served-browser scenarios passed full E74. Exact test file references remain source anchors; historical line numbers describe older source and are not asserted as current positions."
+    },
+    {
+      "id": "abstract-channel-union",
+      "producer": "One Channel.sendMessage(text|approved-template), readonly supportedKinds, awaited operation fence",
+      "consumers": [
+        "OutboundService ordinary calls",
+        "Initial coordinator through same OutboundService",
+        "Meta adapter concrete formatter",
+        "Evolution adapter text-only typed refusal"
+      ],
+      "exact_test_references": [
+        "api-app/src/domain/channels/transport/channel-dependencies.spec.ts",
+        "api-app/src/domain/channels/transport/channel-initial-message.spec.ts:46",
+        "api-app/src/domain/channels/transport/channel-initial-message.spec.ts:62",
+        "api-app/test/channel-transport.e2e-spec.ts"
+      ],
+      "consumer_state": "implemented + evidenced",
+      "actual_receipts": [
+        "all-result-e74-v1.1.json",
+        "browser-freshness-collection-e74-v1.1.json"
+      ],
+      "historical_evidence": "E45 dependency/substitution, Evolution typed zeroHTTP, raw Meta account/recipient protocol and ordinary BFF/public/BOT text regressions passed.",
+      "evidence_and_limit": "Relevant API/PG/served-browser scenarios passed full E74. Exact test file references remain source anchors; historical line numbers describe older source and are not asserted as current positions."
+    },
+    {
+      "id": "durable-intent-outcome",
+      "producer": "Immutable original key/body/context and truthful persisted receipt/uncertainty/state projection",
+      "consumers": [
+        "Scoped BFF create/read/reconcile/ack routes with session+grant+CSRF",
+        "api.ts safe closed error metadata",
+        "PrimeiraMensagem explicit recovery/exact retry and actor+BU+conversation sessionStorage"
+      ],
+      "exact_test_references": [
+        "api-app/test/dispatch-admission.e2e-spec.ts:165",
+        "api-app/test/dispatch-admission.e2e-spec.ts:196",
+        "api-app/test/initial-message.e2e-spec.ts:95",
+        "api-app/test/initial-message.e2e-spec.ts:206",
+        "web-app/e2e/start-conversation.spec.ts:198",
+        "web-app/e2e/start-conversation.spec.ts:266",
+        "web-app/e2e/start-conversation.spec.ts:599"
+      ],
+      "consumer_state": "implemented + evidenced",
+      "actual_receipts": [
+        "all-result-e74-v1.1.json",
+        "browser-freshness-collection-e74-v1.1.json"
+      ],
+      "historical_evidence": "E45 actual PG barriers/readback/CAS and browser read/reconcile/ACK, failed local storage read/write, lost-response original-key replay passed. E46 those browser cases pass.",
+      "evidence_and_limit": "Relevant API/PG/served-browser scenarios passed full E74. Exact test file references remain source anchors; historical line numbers describe older source and are not asserted as current positions."
+    },
+    {
+      "id": "shared-admission-interlock",
+      "producer": "Ordinary per-owner tokens and exclusive initial slot use same conversation lock; no SENDING clock takeover",
+      "consumers": [
+        "BFF ordinary composer empty/unresolved gate",
+        "PUBLIC ordinary sender through ConversationsService",
+        "BOT ordinary sender through IncomingService",
+        "Initial reservation and explicit local risk release controls",
+        "OrdinaryRecovery actual scoped reconcile/acknowledge controls on reopened thread"
+      ],
+      "exact_test_references": [
+        "api-app/test/dispatch-admission.e2e-spec.ts:328",
+        "api-app/test/dispatch-admission.e2e-spec.ts:367",
+        "api-app/test/dispatch-admission.e2e-spec.ts:379",
+        "api-app/test/dispatch-admission.e2e-spec.ts:434",
+        "api-app/test/dispatch-admission.e2e-spec.ts:457",
+        "api-app/test/channel-transport.e2e-spec.ts",
+        "api-app/test/api-publica.e2e-spec.ts",
+        "web-app/e2e/start-conversation.spec.ts:531"
+      ],
+      "consumer_state": "implemented + evidenced",
+      "actual_receipts": [
+        "all-result-e74-v1.1.json",
+        "browser-freshness-collection-e74-v1.1.json"
+      ],
+      "historical_evidence": "E45 real PG races/ordinary concurrency, public/BOT and empty BFF mapping pass; E47 actual ordinary BFF browser uncertain send→reopen→reconcile→real90s risk ACK→composer return with unchanged provider/audit snapshots passed.",
+      "evidence_and_limit": "Relevant API/PG/served-browser scenarios passed full E74. Exact test file references remain source anchors; historical line numbers describe older source and are not asserted as current positions."
+    },
+    {
+      "id": "prepared-safe-action",
+      "producer": "Valid durable PREPARED projected as RECONCILE, GET read-only",
+      "consumers": [
+        "PrimeiraMensagem existing local recovery action",
+        "Scoped BFF reconcile"
+      ],
+      "exact_test_references": [
+        "api-app/test/initial-message.e2e-spec.ts",
+        "web-app/e2e/start-conversation.spec.ts"
+      ],
+      "evidence_and_limit": "Current full E74: live202 unchanged slot then synthetic DB expiry local reject/release, zero provider/Message. Actual compiled reserveInitial fixture uses canonical request/fingerprint and90s lease.",
+      "consumer_state": "implemented + evidenced",
+      "actual_receipts": [
+        "all-result-e74-v1.1.json"
+      ]
+    },
+    {
+      "id": "known-ack-local-blocked-risk-release",
+      "producer": "EXTERNAL_ACCEPTED_LOCAL_BLOCKED safe state, immutable original deadline, scoped409 metadata",
+      "consumers": [
+        "Actual UI early acknowledgment409",
+        "Explicit after-deadline acknowledgment200",
+        "Successor and late-old local recovery"
+      ],
+      "exact_test_references": [
+        "api-app/test/initial-message.e2e-spec.ts",
+        "web-app/e2e/start-conversation.spec.ts"
+      ],
+      "evidence_and_limit": "E74 real BFF early ACK_TOO_EARLY409 leaves slot/provider/Message unchanged; synthetic disposable deadline expiry permits one successor, later original local completion never reacquires slot or changes current owner. No disabled-button requirement invented.",
+      "consumer_state": "implemented + evidenced",
+      "actual_receipts": [
+        "all-result-e74-v1.1.json"
+      ]
+    },
+    {
+      "id": "unicode-contract",
+      "producer": "Server code-point limits4096 text/1024 template values",
+      "consumers": [
+        "NovaConversa input clamp",
+        "Scoped session snapshot restore",
+        "Escaped preview and actual initial POST"
+      ],
+      "exact_test_references": [
+        "web-app/src/componentes/NovaConversa.spec.ts",
+        "web-app/e2e/start-conversation.spec.ts"
+      ],
+      "evidence_and_limit": "E51 real positional snapshot RED precedes fix; E74 named and positional1024/1025 plus text4096/4097 unit bounds, actual4096-text and1024-positional browser input/preview/send. No separate named full-browser1024 claim.",
+      "consumer_state": "implemented + evidenced",
+      "actual_receipts": [
+        "all-result-e74-v1.1.json",
+        "web-result-e51-v1.1.json"
+      ]
+    }
+  ],
+  "external_proof_boundary": "Synthetic provider boundary plus real disposable BFF/PostgreSQL/browser. User attests own template APPROVED; same-account first-template actual send/reply and nonofficial first-send/reply are pending source-bound local activation.",
+  "assurance_boundary": "No full diff-guard, required implementation reviews, runtime activation or criterion checkbox promoted.",
+  "remaining_required_gates": [
+    "Fresh architecture/TQA/cutover assessment and material finding resolution",
+    "Concrete Alpine images then separately approved preserved-local activation/migrations/operator first-send/reply",
+    "Modules, full canonical diff inspection exception/guard and final closure gates"
+  ],
+  "current_remediation_reference": "implementation-r6-resolution-e74-v1.1.json",
+  "prior_remediation_reference": "implementation-r2-r3-resolution-v1.1.json",
+  "rebind_method": "Current terminal fullALL, independent full259source postseal and93browser manifest binding. Historical-labelled evidence remains historical; source hashes in current path records rebound. Current automated proof does not close operator/runtime/module/review/guard gates.",
+  "current_r4_correction_proof": {
+    "reference": "implementation-r4-resolution-e74-v1.1.json",
+    "same_run_pcv_reference": "pcv-eps-e74-v1.1.json",
+    "claim_window": "Both ordinary and initial SENDING CAS enforce captured trusted expiry against the actual DB clock.",
+    "mutable_context": "Actual BU/channel/credential pins and actor/grant NOWAIT fence preserve the approved lock order and fail closed under contention.",
+    "st05_overlap": "Actual unmodified ST05 refresh races at claim and known-acceptance local completion have zero deadlocks and retain truthful outcomes.",
+    "access_paths": "Actual captured-query EXPLAIN uses one partial ordered active-admission index for options and whole-conversation conflict and an ordered intent index; exact metrics are in current PCV."
+  },
+  "current_additional_crossings": [
+    "ST05 per-item availability→initial preview and new-submit guards; actual producer transition plus zero effects.",
+    "Captured ordinary outcome→local bookkeeping→safe legacy error/diagnostic owner; real PostgreSQL rollback.",
+    "BU selection→dialog key/unmount generation→held real BFF result; actual UI controls and stale-response fencing."
+  ],
+  "source_fingerprint": "589c753670cfcf54020b785e6bae6b85ec1a8b4bab707f333f8e64d8aaf38c8e",
+  "current_r6_correction_proof": {
+    "artifact": "implementation-r6-resolution-e74-v1.1.json",
+    "sha256": "b437befd4b4b1915d2181b10d1f5681de077fc8216fde7559bf8d3a1be2e7c7b",
+    "source_seal": "all-source-seal-e74-v1.1.json",
+    "source_fingerprint": "589c753670cfcf54020b785e6bae6b85ec1a8b4bab707f333f8e64d8aaf38c8e",
+    "stdout_sha256": "73a5f43f7ed69e9e00271c55d6cb12e96917f0cb8bed587b3c33e403b62b9751",
+    "finding_ids": [
+      "F-CF091066",
+      "F-5E961B39"
+    ],
+    "resolution": {
+      "kind": "Root resolution of both r6 causal findings against current full source-bound proof; independent r7 remains required",
+      "recorded_at_utc": "2026-10-23T12:20:47.197456+00:00",
+      "source_seal": "all-source-seal-e74-v1.1.json",
+      "source_fingerprint": "589c753670cfcf54020b785e6bae6b85ec1a8b4bab707f333f8e64d8aaf38c8e",
+      "all_result": "all-result-e74-v1.1.json",
+      "stdout_sha256": "73a5f43f7ed69e9e00271c55d6cb12e96917f0cb8bed587b3c33e403b62b9751",
+      "rows": [
+        {
+          "finding_id": "F-CF091066",
+          "source_finding_id": "ARCH-ST04-R6-01",
+          "severity": "medium",
+          "resolution": "Integrated",
+          "problem": "Current verified identity could qualify a trusted timestamp while its managed lifecycle was false.",
+          "correction": "Read managed_lifecycle in the existing same FOR SHARE identity projection; pass only that locked boolean to private timestamp qualification. Preserve Message/receipt acceptance; duplicate reconciliation never promotes a prior null timestamp. No extra query, caller flag, lock-order change or provider call.",
+          "sources": [
+            {
+              "path": "api-app/src/domain/inbox/message-acceptance.service.ts",
+              "lines": [
+                120,
+                148,
+                188,
+                212
+              ],
+              "sha256": "285647f1dee08b14dbae8661743c75198f1be85d5b523e9f73c7d51dfbe30ff4"
+            },
+            {
+              "path": "api-app/test/webhooks.e2e-spec.ts",
+              "lines": [
+                123,
+                144,
+                149,
+                152,
+                163
+              ],
+              "sha256": "2da81767ab4366d90ccbd214b12c9570027ea102ee9b5fb27f89aa4db129cdb5"
+            }
+          ],
+          "actual_proof_markers": [
+            "does not promote an inbound timestamp received while the current resource is unmanaged"
+          ],
+          "actual_proof": "Signed-webhook/PG matrix passes: retained IN/unread and null trusted timestamp, closed window before/after lifecycle activation, duplicate without promotion, later new managed IN opens window, zero provider effects.",
+          "causal_evidence": "api-result-e72-v1.1.json",
+          "limits": "Actual E72 read-projection defect, not an outbound exploit or actual provider effect."
+        },
+        {
+          "finding_id": "F-5E961B39",
+          "source_finding_id": "TQA-R6-01",
+          "severity": "medium",
+          "resolution": "Integrated",
+          "problem": "Native deadlock statistics silently defaulted to zero on invalid results.",
+          "correction": "Test helper requires exactly one row and a nonnegative native bigint; malformed/missing/ambiguous results fail the test. Real counter overlap probes remain.",
+          "sources": [
+            {
+              "path": "api-app/test/initial-message.e2e-spec.ts",
+              "lines": [
+                78,
+                145,
+                149,
+                1280,
+                1318,
+                1357,
+                1399
+              ],
+              "sha256": "197aeba4c765168c7fba66ec56209241025a8bfc09475e3100f4be1995d0a13d"
+            }
+          ],
+          "actual_proof_markers": [
+            "fails closed when native deadlock statistics are",
+            "ST04_ST05_CLAIM_OVERLAP ",
+            "ST04_ST05_LOCAL_OVERLAP "
+          ],
+          "actual_proof": "All four isolated empty/malformed/multiple/negative fixtures reject; actual unchanged ST05-owner claim/local overlap probes pass with native zero-deadlock deltas.",
+          "causal_evidence": "api-result-e72-v1.1.json",
+          "limits": "One helper query is substituted once and restored in finally. This test-only helper does not authorize product dispatch; no actual missing native statistics are claimed."
+        }
+      ],
+      "r6_collection": "implementation-review-collection-r6-v1.1.json",
+      "test_first_boundary": "E72 actual test-only API RED reached four statistics failures and four lifecycle soft assertions before the two exact E73 fixes. E73 actual967pass/postseal/browser is retained; unchanged E74 repeats only to retain lost raw stdout/metrics. No earlier unreached assertion or actual outbound exploit is relabeled.",
+      "remaining": [
+        "Fresh complete eight-section TQA; terse r6 response insufficient",
+        "Current architecture/security/cutover and module review",
+        "Current offline images plus approved preserved runtime/operator/full-diff/final gates"
+      ],
+      "boundary": "Positive public sources and owned synthetic evidence only; no private environment/business/provider inspection."
+    },
+    "status_note": "Root-authored resolution artifact reproduced as supplied; map rebinding does not independently adjudicate it."
+  },
+  "current_same_run_pcv_reference": {
+    "artifact": "current-synthetic-pcv-samples-e74-v1.1.json",
+    "sha256": "75595b6d8884606d36279d02bce24a6f82bb2e695b72707bbd62be6018ca39ae",
+    "metric_count": 18,
+    "source_seal": "all-source-seal-e74-v1.1.json",
+    "stdout_sha256": "73a5f43f7ed69e9e00271c55d6cb12e96917f0cb8bed587b3c33e403b62b9751"
+  },
+  "current_actual_all_result": {
+    "artifact": "all-result-e74-v1.1.json",
+    "sha256": "e8c56ed6745b3a1d66f9bf2dde86704a5a58f8d936e1ff763f7e75b0e3386818",
+    "exit_code": 0,
+    "source_fingerprint": "589c753670cfcf54020b785e6bae6b85ec1a8b4bab707f333f8e64d8aaf38c8e",
+    "stdout_sha256": "73a5f43f7ed69e9e00271c55d6cb12e96917f0cb8bed587b3c33e403b62b9751",
+    "phases": {
+      "migrations": 28,
+      "lint_and_build": "passed",
+      "api_unit": {
+        "files": 34,
+        "tests": 368,
+        "duration_seconds": 4.39
+      },
+      "api_postgresql": {
+        "files": 33,
+        "tests": 456,
+        "duration_seconds": 309.13
+      },
+      "web_unit": {
+        "files": 7,
+        "tests": 54,
+        "duration_seconds": 0.927
+      },
+      "browser": {
+        "tests": 89,
+        "passed": 89,
+        "duration_minutes": 16.2
+      }
+    }
+  },
+  "current_statistics_test_only_boundary": "Statistics helper metrics are test-only evidence and are not product dispatch authorization.",
+  "collection_rebinding_note": "Root corrected stale current-checkpoint strings/r4 refs/source hashes in the staged generic map. Historical-labelled/approved-criterion fields remain exact. Current rows bind actualE74 ALL/PCV/source/freshness; no measurement or closure is invented.",
+  "staged_original_sha256": "cab114f553f67ee5a12c8fd902f3dc9beace7227c33f5e2bb5203883146d5f24"
+}

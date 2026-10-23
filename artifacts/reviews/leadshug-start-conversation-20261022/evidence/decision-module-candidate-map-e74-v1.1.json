@@ -1,0 +1,481 @@
+{
+  "kind": "Current E74 executed decision/module map for fresh independent challenge",
+  "recorded_at_utc": "2026-10-23T12:22:57.911672+00:00",
+  "approved_baseline": "TODO Decision Baseline (Frozen Before Implementation), D-01 through D-10 exact wording remains authority",
+  "source_seal": "all-source-seal-e74-v1.1.json",
+  "execution_receipt": "all-result-e74-v1.1.json",
+  "current_status": "Actual E74 canonical ALL terminal exit0 with full259 postseal; current execution metrics are in same-run receipt. This is test-only evidence and does not authorize product dispatch, runtime, or delivery.",
+  "canonical_module_baselines": [
+    {
+      "path": "foundation_documentation/modules/inbox-and-conversations.md",
+      "sha256": "24b3f1edd8f10bf991d61135be2364b49679c43e5894ce024c2d5169921756a2"
+    },
+    {
+      "path": "foundation_documentation/modules/integrations-and-channels.md",
+      "sha256": "6b1865ab4f27458e1e1e225535e2f4a713e987e18344ca86d3f9411fa6c6f168"
+    }
+  ],
+  "rows": [
+    {
+      "decision_id": "D-01",
+      "proposed_handling": "Preserve",
+      "implementation_claim": "BU/contact unique, normalization and no-send manual open; COALESCE order for empty rows.",
+      "implementation_sources": [
+        {
+          "path": "api-app/src/domain/inbox/conversation-start.service.ts",
+          "sha256": "97ee440ce06007eac1aed98e0afe4997056722c8d62508a0698655a2de5d1118"
+        },
+        {
+          "path": "api-app/src/domain/inbox/conversations.service.ts",
+          "sha256": "6dba438e7e59dff56b2b98413532210bac62b7d744cf1b80c5a2c748923b431c"
+        },
+        {
+          "path": "api-app/src/domain/inbox/incoming.service.ts",
+          "sha256": "390d48de06ad863b9d9c47344c1eb2919d0ba07aa96626b0ef1596fcbde4795b"
+        }
+      ],
+      "test_sources": [
+        {
+          "path": "api-app/test/conversation-start.e2e-spec.ts",
+          "sha256": "35ead6bdea966ab05a3c9b792316867a918929194570b766767bacebb5bf4f11"
+        }
+      ],
+      "promotion_target": "inbox: manual open and truthful empty state",
+      "assessment": "Current full E74 candidate proof; original frozen decision remains authority, independent r2 assessment pending."
+    },
+    {
+      "decision_id": "D-02",
+      "proposed_handling": "Supersede (Intentional)",
+      "implementation_claim": "Text-only payload restriction becomes one discriminated sendMessage union with declared kinds; narrow management capability remains separate.",
+      "implementation_sources": [
+        {
+          "path": "api-app/src/domain/channels/transport/channel.ts",
+          "sha256": "49b24179666a0fa90becfb2bf24ebc31acde7bf342b34d3b110a42465ccb69f9"
+        },
+        {
+          "path": "api-app/src/integrations/channels/meta-channel.ts",
+          "sha256": "99a9ca01a57527a76de54cdbdf8b49f65b5dcceb1a71abce883d1845c6cd8f26"
+        },
+        {
+          "path": "api-app/src/integrations/channels/evolution-channel.ts",
+          "sha256": "6a41ef2f3b0ee9e5c6b381d54faf48b0b2c672e52751f8be1480ad01cb178a34"
+        },
+        {
+          "path": "api-app/src/integrations/channels/channel-transport.module.ts",
+          "sha256": "4aa42bb2e873c576b63b5ac1f50db368fbecb189fe91be19f3b7fb726733370d"
+        }
+      ],
+      "test_sources": [
+        {
+          "path": "api-app/src/domain/channels/transport/channel-initial-message.spec.ts",
+          "sha256": "46d9c0806eb418401dfbd2e538e78b2ee24e8d674a3962fb88802ecb5923a5fa"
+        },
+        {
+          "path": "api-app/src/domain/channels/transport/channel-dependencies.spec.ts",
+          "sha256": "f59d838baf635c0ce0d1ebe725c88fbb0b19fac42e9b382452e31fd38e0511a3"
+        }
+      ],
+      "promotion_target": "integrations: ST06 payload supersede, historical ST05 D09 unchanged",
+      "assessment": "Current full E74 candidate proof; original frozen decision remains authority, independent r2 assessment pending."
+    },
+    {
+      "decision_id": "D-03",
+      "proposed_handling": "Preserve",
+      "implementation_claim": "Inbox coordinator uses common OutboundService and same MessageAcceptance owner; transactional collaboration stays there.",
+      "implementation_sources": [
+        {
+          "path": "api-app/src/domain/inbox/initial-message.service.ts",
+          "sha256": "61a52116f29e5753ed27bae607dbebd5dfdb5b1fd1dc8954a02602e8d81a8e6e"
+        },
+        {
+          "path": "api-app/src/domain/inbox/outbound.service.ts",
+          "sha256": "cb4b2e68c7377411991960c65e3d15cef8bc1aea927049cd99345e523433bd9f"
+        },
+        {
+          "path": "api-app/src/domain/inbox/message-acceptance.service.ts",
+          "sha256": "285647f1dee08b14dbae8661743c75198f1be85d5b523e9f73c7d51dfbe30ff4"
+        }
+      ],
+      "test_sources": [
+        {
+          "path": "api-app/test/dispatch-admission.e2e-spec.ts",
+          "sha256": "da6ae029d8ade6c3e7cc67809e2d971d6585a5888c72d99b294f6fd0a920324f"
+        }
+      ],
+      "promotion_target": "inbox: first-send ownership and tx boundaries",
+      "assessment": "Current full E74 candidate proof; original frozen decision remains authority, independent r2 assessment pending."
+    },
+    {
+      "decision_id": "D-04",
+      "proposed_handling": "Supersede (Intentional)",
+      "implementation_claim": "Qualified signed Meta IN timestamp replaces historical createdAt latest-IN window; timeline timestamp/cursors preserved.",
+      "implementation_sources": [
+        {
+          "path": "api-app/src/domain/inbox/channel-window-policy.ts",
+          "sha256": "46dfcf887f2ad4ed0670664186e918816699e6541d1670aa9c32ac79a193e43e"
+        },
+        {
+          "path": "api-app/src/surfaces/webhooks/meta.controller.ts",
+          "sha256": "261bf12e6ef021e00d90000a714ff54c66e3753f85d287a95015035fb584518f"
+        },
+        {
+          "path": "api-app/src/integrations/channels/prisma-channel-resolver.ts",
+          "sha256": "bd6b455d06fd6a5c2b4f09ca7d15ea4a55670a0555abc2744309c68072b6e943"
+        }
+      ],
+      "test_sources": [
+        {
+          "path": "api-app/src/domain/inbox/channel-window-policy.spec.ts",
+          "sha256": "e20eaefd11256c8ca9f2156560ac23a1478f333b3932e865d1d52666cbd78692"
+        },
+        {
+          "path": "api-app/test/webhooks.e2e-spec.ts",
+          "sha256": "2da81767ab4366d90ccbd214b12c9570027ea102ee9b5fb27f89aa4db129cdb5"
+        },
+        {
+          "path": "api-app/test/number-onboarding-pcv.e2e-spec.ts",
+          "sha256": "3825b0286f9906781e83666616caa05417647ee47c022763fc76e39a3c4ddca0"
+        }
+      ],
+      "promotion_target": "inbox/integrations: trusted-window provenance and bounded query",
+      "assessment": "Current full E74 candidate proof; original frozen decision remains authority, independent r2 assessment pending."
+    },
+    {
+      "decision_id": "D-05",
+      "proposed_handling": "Preserve with bounded initial-send addition",
+      "implementation_claim": "Same ST05 catalog; local preview and independent renderer/current same-account eligibility; Meta wire account pin/full international recipient.",
+      "implementation_sources": [
+        {
+          "path": "api-app/src/domain/inbox/initial-message-template-renderer.ts",
+          "sha256": "a5ce98823c8f0a4480386bc755e392b5f6287107cbfc0ad13ad50c06bc234ecf"
+        },
+        {
+          "path": "api-app/src/domain/inbox/initial-message.service.ts",
+          "sha256": "61a52116f29e5753ed27bae607dbebd5dfdb5b1fd1dc8954a02602e8d81a8e6e"
+        },
+        {
+          "path": "api-app/src/integrations/meta/initial-message.client.ts",
+          "sha256": "e21efb3df6910c0b740afec40da919542f672302429217268fdb56c282446721"
+        }
+      ],
+      "test_sources": [
+        {
+          "path": "api-app/test/initial-message.e2e-spec.ts",
+          "sha256": "197aeba4c765168c7fba66ec56209241025a8bfc09475e3100f4be1995d0a13d"
+        },
+        {
+          "path": "api-app/test/channel-transport.e2e-spec.ts",
+          "sha256": "a143b1fdb4ba23883b731b58c78008f06714d80e16b5f077b0bf9763056ba011"
+        }
+      ],
+      "promotion_target": "inbox/integrations: eligible template first-send, no authoring changes",
+      "assessment": "Current full E74 candidate proof; original frozen decision remains authority, independent r2 assessment pending."
+    },
+    {
+      "decision_id": "D-06",
+      "proposed_handling": "New bounded first-send contract",
+      "implementation_claim": "Captured request/key/slot/context; all GET preflight then same-operation claim and onePOST; local-only reconciliation and explicit elapsed-deadline risk ACK.",
+      "implementation_sources": [
+        {
+          "path": "api-app/src/domain/inbox/initial-message.service.ts",
+          "sha256": "61a52116f29e5753ed27bae607dbebd5dfdb5b1fd1dc8954a02602e8d81a8e6e"
+        },
+        {
+          "path": "api-app/src/domain/inbox/dispatch-admission.service.ts",
+          "sha256": "2c3e19f9bcacd75d047ee73e5913ad77e9a8700a43427af27556b801234bcda9"
+        },
+        {
+          "path": "api-app/src/surfaces/bff/conversations.controller.ts",
+          "sha256": "0967a901f8fca2fb275c1423a5ccd4d3185b9f55544862d3565c91bb528f19f3"
+        }
+      ],
+      "test_sources": [
+        {
+          "path": "api-app/test/initial-message.e2e-spec.ts",
+          "sha256": "197aeba4c765168c7fba66ec56209241025a8bfc09475e3100f4be1995d0a13d"
+        },
+        {
+          "path": "api-app/test/dispatch-admission.e2e-spec.ts",
+          "sha256": "da6ae029d8ade6c3e7cc67809e2d971d6585a5888c72d99b294f6fd0a920324f"
+        }
+      ],
+      "promotion_target": "inbox: immutable intent and local recovery",
+      "assessment": "Current full E74 candidate proof; original frozen decision remains authority, independent r2 assessment pending."
+    },
+    {
+      "decision_id": "D-07",
+      "proposed_handling": "Preserve ordinary semantics with explicit interlock",
+      "implementation_claim": "Owner tokens exclude initial intent while ordinary requests remain concurrent; uncertain token never expires into blind takeover. BFF empty thread requires first flow, public/BOT legacy behavior retained without slot.",
+      "implementation_sources": [
+        {
+          "path": "api-app/src/domain/inbox/outbound.service.ts",
+          "sha256": "cb4b2e68c7377411991960c65e3d15cef8bc1aea927049cd99345e523433bd9f"
+        },
+        {
+          "path": "api-app/src/domain/inbox/dispatch-admission.service.ts",
+          "sha256": "2c3e19f9bcacd75d047ee73e5913ad77e9a8700a43427af27556b801234bcda9"
+        },
+        {
+          "path": "web-app/src/telas/Inbox.tsx",
+          "sha256": "66658161c7c74610288bf6c92583b616bacc1ada0fced27af01997ed22481737"
+        }
+      ],
+      "test_sources": [
+        {
+          "path": "api-app/test/dispatch-admission.e2e-spec.ts",
+          "sha256": "da6ae029d8ade6c3e7cc67809e2d971d6585a5888c72d99b294f6fd0a920324f"
+        },
+        {
+          "path": "api-app/test/channel-transport.e2e-spec.ts",
+          "sha256": "a143b1fdb4ba23883b731b58c78008f06714d80e16b5f077b0bf9763056ba011"
+        },
+        {
+          "path": "web-app/e2e/start-conversation.spec.ts",
+          "sha256": "95143e86de9ffec726a95f015f24d8f7dc580f1be92a098a4cbbbb33c34c8284"
+        }
+      ],
+      "promotion_target": "inbox/integrations: ordinary interlock and finite recovery; browser proof pending",
+      "assessment": "Current full E74 candidate proof; original frozen decision remains authority, independent r2 assessment pending."
+    },
+    {
+      "decision_id": "D-08",
+      "proposed_handling": "New bounded textual subset",
+      "implementation_claim": "NAMED/POSITIONAL plain text from unchanged catalog components; static header/footer, <=20values, Unicode length and context-bound escaped read-only preview.",
+      "implementation_sources": [
+        {
+          "path": "api-app/src/domain/inbox/initial-message-template-renderer.ts",
+          "sha256": "a5ce98823c8f0a4480386bc755e392b5f6287107cbfc0ad13ad50c06bc234ecf"
+        },
+        {
+          "path": "web-app/src/componentes/NovaConversa.tsx",
+          "sha256": "2702cae2c4d913d511e33ca8d305ecc03d7ee56f34623877058865d884aa1bdd"
+        }
+      ],
+      "test_sources": [
+        {
+          "path": "api-app/src/domain/inbox/initial-message-template-renderer.spec.ts",
+          "sha256": "c783e835575ab8cf89af5524e0f02402956975f80faecf6b9d1467c1a8a0bdf0"
+        },
+        {
+          "path": "web-app/e2e/start-conversation.spec.ts",
+          "sha256": "95143e86de9ffec726a95f015f24d8f7dc580f1be92a098a4cbbbb33c34c8284"
+        }
+      ],
+      "promotion_target": "inbox: template subset and preview safety",
+      "assessment": "Current full E74 candidate proof; original frozen decision remains authority, independent r2 assessment pending."
+    },
+    {
+      "decision_id": "D-09",
+      "proposed_handling": "New bounded budgets/local proof",
+      "implementation_claim": "Max6GET+1POST,10s/request75s aggregate90s immutable reservation; actor10/min,account60/hour. Additive migration and later approved preserved local proof.",
+      "implementation_sources": [
+        {
+          "path": "api-app/src/integrations/meta/initial-message.client.ts",
+          "sha256": "e21efb3df6910c0b740afec40da919542f672302429217268fdb56c282446721"
+        },
+        {
+          "path": "api-app/src/domain/inbox/dispatch-admission.service.ts",
+          "sha256": "2c3e19f9bcacd75d047ee73e5913ad77e9a8700a43427af27556b801234bcda9"
+        }
+      ],
+      "test_sources": [
+        {
+          "path": "api-app/src/integrations/meta/initial-message.client.spec.ts",
+          "sha256": "0467fbad2f0b8666491d93b6efb0b648037fde08ee0655ffb4500747e68fd057"
+        },
+        {
+          "path": "api-app/test/dispatch-admission.e2e-spec.ts",
+          "sha256": "da6ae029d8ade6c3e7cc67809e2d971d6585a5888c72d99b294f6fd0a920324f"
+        }
+      ],
+      "promotion_target": "integrations/inbox: budget invariants; actual-runtime proof pending",
+      "assessment": "Current full E74 candidate proof; original frozen decision remains authority, independent r2 assessment pending."
+    },
+    {
+      "decision_id": "D-10",
+      "proposed_handling": "Preserve sole Message owner and explicit local certainty",
+      "implementation_claim": "Positive commit/captured-key exact readback distinguishes ACK loss vs rollback; no claim/noPOST, no fake RECORDED or unsafe release; canonical opaque account hash namespace remains byte-compatible.",
+      "implementation_sources": [
+        {
+          "path": "api-app/src/domain/inbox/dispatch-admission.service.ts",
+          "sha256": "2c3e19f9bcacd75d047ee73e5913ad77e9a8700a43427af27556b801234bcda9"
+        },
+        {
+          "path": "api-app/src/domain/inbox/initial-message.service.ts",
+          "sha256": "61a52116f29e5753ed27bae607dbebd5dfdb5b1fd1dc8954a02602e8d81a8e6e"
+        },
+        {
+          "path": "api-app/src/domain/inbox/message-acceptance.service.ts",
+          "sha256": "285647f1dee08b14dbae8661743c75198f1be85d5b523e9f73c7d51dfbe30ff4"
+        },
+        {
+          "path": "api-app/src/integrations/channels/account-reference.ts",
+          "sha256": "da2b4572b07477407f9adf08c30c3876d10f92ae157cfadb3b8bdc5fc99d0d24"
+        }
+      ],
+      "test_sources": [
+        {
+          "path": "api-app/test/dispatch-admission.e2e-spec.ts",
+          "sha256": "da6ae029d8ade6c3e7cc67809e2d971d6585a5888c72d99b294f6fd0a920324f"
+        },
+        {
+          "path": "api-app/test/initial-message.e2e-spec.ts",
+          "sha256": "197aeba4c765168c7fba66ec56209241025a8bfc09475e3100f4be1995d0a13d"
+        }
+      ],
+      "promotion_target": "inbox/integrations: commit certainty, CAS, known receipt and opaque account",
+      "assessment": "Current full E74 candidate proof; original frozen decision remains authority, independent r2 assessment pending."
+    }
+  ],
+  "current_remediation_reference": "implementation-r6-resolution-e74-v1.1.json",
+  "prior_remediation_reference": "implementation-r2-r3-resolution-v1.1.json",
+  "rebind_method": "Current terminal fullALL, independent full259source postseal and93browser manifest binding. Historical-labelled evidence remains historical; source hashes in current path records rebound. Current automated proof does not close operator/runtime/module/review/guard gates.",
+  "current_r4_correction_proof": {
+    "reference": "implementation-r4-resolution-e74-v1.1.json",
+    "same_run_pcv_reference": "pcv-eps-e74-v1.1.json",
+    "claim_window": "Both ordinary and initial SENDING CAS enforce captured trusted expiry against the actual DB clock.",
+    "mutable_context": "Actual BU/channel/credential pins and actor/grant NOWAIT fence preserve the approved lock order and fail closed under contention.",
+    "st05_overlap": "Actual unmodified ST05 refresh races at claim and known-acceptance local completion have zero deadlocks and retain truthful outcomes.",
+    "access_paths": "Actual captured-query EXPLAIN uses one partial ordered active-admission index for options and whole-conversation conflict and an ordered intent index; exact metrics are in current PCV."
+  },
+  "source_fingerprint": "589c753670cfcf54020b785e6bae6b85ec1a8b4bab707f333f8e64d8aaf38c8e",
+  "current_r6_correction_proof": {
+    "artifact": "implementation-r6-resolution-e74-v1.1.json",
+    "sha256": "b437befd4b4b1915d2181b10d1f5681de077fc8216fde7559bf8d3a1be2e7c7b",
+    "source_seal": "all-source-seal-e74-v1.1.json",
+    "source_fingerprint": "589c753670cfcf54020b785e6bae6b85ec1a8b4bab707f333f8e64d8aaf38c8e",
+    "stdout_sha256": "73a5f43f7ed69e9e00271c55d6cb12e96917f0cb8bed587b3c33e403b62b9751",
+    "finding_ids": [
+      "F-CF091066",
+      "F-5E961B39"
+    ],
+    "resolution": {
+      "kind": "Root resolution of both r6 causal findings against current full source-bound proof; independent r7 remains required",
+      "recorded_at_utc": "2026-10-23T12:20:47.197456+00:00",
+      "source_seal": "all-source-seal-e74-v1.1.json",
+      "source_fingerprint": "589c753670cfcf54020b785e6bae6b85ec1a8b4bab707f333f8e64d8aaf38c8e",
+      "all_result": "all-result-e74-v1.1.json",
+      "stdout_sha256": "73a5f43f7ed69e9e00271c55d6cb12e96917f0cb8bed587b3c33e403b62b9751",
+      "rows": [
+        {
+          "finding_id": "F-CF091066",
+          "source_finding_id": "ARCH-ST04-R6-01",
+          "severity": "medium",
+          "resolution": "Integrated",
+          "problem": "Current verified identity could qualify a trusted timestamp while its managed lifecycle was false.",
+          "correction": "Read managed_lifecycle in the existing same FOR SHARE identity projection; pass only that locked boolean to private timestamp qualification. Preserve Message/receipt acceptance; duplicate reconciliation never promotes a prior null timestamp. No extra query, caller flag, lock-order change or provider call.",
+          "sources": [
+            {
+              "path": "api-app/src/domain/inbox/message-acceptance.service.ts",
+              "lines": [
+                120,
+                148,
+                188,
+                212
+              ],
+              "sha256": "285647f1dee08b14dbae8661743c75198f1be85d5b523e9f73c7d51dfbe30ff4"
+            },
+            {
+              "path": "api-app/test/webhooks.e2e-spec.ts",
+              "lines": [
+                123,
+                144,
+                149,
+                152,
+                163
+              ],
+              "sha256": "2da81767ab4366d90ccbd214b12c9570027ea102ee9b5fb27f89aa4db129cdb5"
+            }
+          ],
+          "actual_proof_markers": [
+            "does not promote an inbound timestamp received while the current resource is unmanaged"
+          ],
+          "actual_proof": "Signed-webhook/PG matrix passes: retained IN/unread and null trusted timestamp, closed window before/after lifecycle activation, duplicate without promotion, later new managed IN opens window, zero provider effects.",
+          "causal_evidence": "api-result-e72-v1.1.json",
+          "limits": "Actual E72 read-projection defect, not an outbound exploit or actual provider effect."
+        },
+        {
+          "finding_id": "F-5E961B39",
+          "source_finding_id": "TQA-R6-01",
+          "severity": "medium",
+          "resolution": "Integrated",
+          "problem": "Native deadlock statistics silently defaulted to zero on invalid results.",
+          "correction": "Test helper requires exactly one row and a nonnegative native bigint; malformed/missing/ambiguous results fail the test. Real counter overlap probes remain.",
+          "sources": [
+            {
+              "path": "api-app/test/initial-message.e2e-spec.ts",
+              "lines": [
+                78,
+                145,
+                149,
+                1280,
+                1318,
+                1357,
+                1399
+              ],
+              "sha256": "197aeba4c765168c7fba66ec56209241025a8bfc09475e3100f4be1995d0a13d"
+            }
+          ],
+          "actual_proof_markers": [
+            "fails closed when native deadlock statistics are",
+            "ST04_ST05_CLAIM_OVERLAP ",
+            "ST04_ST05_LOCAL_OVERLAP "
+          ],
+          "actual_proof": "All four isolated empty/malformed/multiple/negative fixtures reject; actual unchanged ST05-owner claim/local overlap probes pass with native zero-deadlock deltas.",
+          "causal_evidence": "api-result-e72-v1.1.json",
+          "limits": "One helper query is substituted once and restored in finally. This test-only helper does not authorize product dispatch; no actual missing native statistics are claimed."
+        }
+      ],
+      "r6_collection": "implementation-review-collection-r6-v1.1.json",
+      "test_first_boundary": "E72 actual test-only API RED reached four statistics failures and four lifecycle soft assertions before the two exact E73 fixes. E73 actual967pass/postseal/browser is retained; unchanged E74 repeats only to retain lost raw stdout/metrics. No earlier unreached assertion or actual outbound exploit is relabeled.",
+      "remaining": [
+        "Fresh complete eight-section TQA; terse r6 response insufficient",
+        "Current architecture/security/cutover and module review",
+        "Current offline images plus approved preserved runtime/operator/full-diff/final gates"
+      ],
+      "boundary": "Positive public sources and owned synthetic evidence only; no private environment/business/provider inspection."
+    },
+    "status_note": "Root-authored resolution artifact reproduced as supplied; map rebinding does not independently adjudicate it."
+  },
+  "current_same_run_pcv_reference": {
+    "artifact": "current-synthetic-pcv-samples-e74-v1.1.json",
+    "sha256": "75595b6d8884606d36279d02bce24a6f82bb2e695b72707bbd62be6018ca39ae",
+    "metric_count": 18,
+    "source_seal": "all-source-seal-e74-v1.1.json",
+    "stdout_sha256": "73a5f43f7ed69e9e00271c55d6cb12e96917f0cb8bed587b3c33e403b62b9751"
+  },
+  "current_actual_all_result": {
+    "artifact": "all-result-e74-v1.1.json",
+    "sha256": "e8c56ed6745b3a1d66f9bf2dde86704a5a58f8d936e1ff763f7e75b0e3386818",
+    "exit_code": 0,
+    "source_fingerprint": "589c753670cfcf54020b785e6bae6b85ec1a8b4bab707f333f8e64d8aaf38c8e",
+    "stdout_sha256": "73a5f43f7ed69e9e00271c55d6cb12e96917f0cb8bed587b3c33e403b62b9751",
+    "phases": {
+      "migrations": 28,
+      "lint_and_build": "passed",
+      "api_unit": {
+        "files": 34,
+        "tests": 368,
+        "duration_seconds": 4.39
+      },
+      "api_postgresql": {
+        "files": 33,
+        "tests": 456,
+        "duration_seconds": 309.13
+      },
+      "web_unit": {
+        "files": 7,
+        "tests": 54,
+        "duration_seconds": 0.927
+      },
+      "browser": {
+        "tests": 89,
+        "passed": 89,
+        "duration_minutes": 16.2
+      }
+    }
+  },
+  "current_statistics_test_only_boundary": "Statistics helper metrics are test-only evidence and are not product dispatch authorization.",
+  "collection_rebinding_note": "Root corrected stale current-checkpoint strings/r4 refs/source hashes in the staged generic map. Historical-labelled/approved-criterion fields remain exact. Current rows bind actualE74 ALL/PCV/source/freshness; no measurement or closure is invented.",
+  "staged_original_sha256": "681c83072a066108f7c12fbb05e9ac32a3c8809fe046366bbef292f2397039ba"
+}

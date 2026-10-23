@@ -1,0 +1,19 @@
+{
+  "kind": "Root actual terminal review collection",
+  "review_kind": "cutover_integrity_audit",
+  "session_id": 3767,
+  "actual_exit_code": 0,
+  "turns_completed": 1,
+  "tool_items": 0,
+  "result_sha256": "e27609a2da1c1a98f78957f6615e20680f77f6b00ebf38052342d2c9776e4608",
+  "events_sha256": "b681a179e8f16a23bd07b6ce8d7eb062d2fadde05491ac7742aec3b7fc675bd4",
+  "structured_result_parsed": true,
+  "strict_merge_exit_code": 0,
+  "finding_ids": [
+    "F-035510C8",
+    "F-91F64098",
+    "F-300A50BF"
+  ],
+  "status": "No new product defect reported; three explicit later-stage delivery gates remain open, not waived",
+  "recorded_at_utc": "2026-10-23T12:54:57.810510+00:00"
+}

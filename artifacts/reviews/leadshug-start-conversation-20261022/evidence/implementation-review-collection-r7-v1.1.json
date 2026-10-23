@@ -1,0 +1,28 @@
+{
+  "kind": "Current r7 candidate finding adjudication and module/decision consistency",
+  "recorded_at_utc": "2026-10-23T13:17:45.630928+00:00",
+  "reviews": [
+    {
+      "review_kind": "architecture_adherence",
+      "collection": "implementation-architecture_adherence-r7-collection-v1.1.json",
+      "collection_sha256": "26d205f229609381b3588f9e8966b6509dd91f82c4c948873e01e7425fdc6a61"
+    },
+    {
+      "review_kind": "test_quality_audit",
+      "collection": "implementation-test_quality_audit-r7-collection-v1.1.json",
+      "collection_sha256": "8f3e495d4fcac4f6b3a60eff400206ddb58307e5868f663cb299d41d11640f0f"
+    },
+    {
+      "review_kind": "cutover_integrity_audit",
+      "collection": "implementation-cutover_integrity_audit-r7-collection-v1.1.json",
+      "collection_sha256": "e5c0cd0c382b36a88bb07180cfbadadf74c58395f13964711c093f5c7ea57c8a"
+    }
+  ],
+  "new_material_product_or_test_defects": 0,
+  "decision_rows": 10,
+  "module_baseline_rows": 7,
+  "module_patch_applied": true,
+  "post_review_source_recheck": "post-r7-source-recheck-e74-v1.1.json",
+  "root_resolution": "All current operational findings integrated/open; module-consolidation portion satisfied by exact patch; no runtime/fullguard/operator/final waiver.",
+  "required_next_step": "One precise human runtime/opaque-input/fullguard approval; no dependent action before response."
+}

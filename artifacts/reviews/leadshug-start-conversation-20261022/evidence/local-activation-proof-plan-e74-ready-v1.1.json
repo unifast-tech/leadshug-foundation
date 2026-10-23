@@ -1,0 +1,182 @@
+{
+  "kind": "Concrete reviewed E74 local activation and assisted proof plan; awaiting explicit bounded approval",
+  "governing_todo": "foundation_documentation/todos/active/features/TODO-leadshug-start-conversation-by-contact.md",
+  "preconditions": [
+    "Frozen complete candidate passes canonical all with identical pre/post public source manifest.",
+    "Required independent implementation/migration/security/architecture assessments resolve material findings.",
+    "Full diff guard inspection exception is separately explicit; no inferred private inspection.",
+    "Reconfirm preserved local project identity from exact approved public topology and safe selected Docker metadata; stop on unexpected topology/resources."
+  ],
+  "proposed_target": {
+    "project": "leadshug_channels_local",
+    "profile": "channels-local",
+    "public_composition": [
+      "docker-compose.yml",
+      "docker-compose.channels.yml"
+    ],
+    "operator_origin": "existing loopback gateway on127.0.0.1:8083; current availability unknown",
+    "services_to_replace": [
+      "api",
+      "web"
+    ],
+    "services_to_preserve": [
+      "postgres",
+      "gateway",
+      "evolution-postgres",
+      "evolution-redis",
+      "evolution"
+    ],
+    "data": "All existing volumes, BUs, channels, credentials and conversation history preserved. No reset/drop/truncate/deletion."
+  },
+  "build_provenance": [
+    "Use explicit positive public build-input inventory from principal checkout; no root-wide context capture or private traversal.",
+    "No copied writable checkout/worktree; disposable build context/archive is a generated build artifact only.",
+    "Record approved public input hashes, image IDs/digests, API compiled hashes and Web built/served bundle equality.",
+    "Do not claim an unbuilt source fingerprint as the served image. Fresh attestation must precede interpreting operator/browser proof.",
+    "Public Dockerfiles were inspected for this proposal: API explicitly COPYs package/lock,prisma,src,tsconfigs,nest-cli and docker/entrypoint; Web uses COPY . . in its builder, so its generated build context must contain only individually admitted public inputs (never the whole checkout). These Dockerfiles are not mutated. Actual Alpine image health is required; Debian disposable-suite results alone do not establish native runtime compatibility."
+  ],
+  "proposed_private_exception": {
+    "purpose": "Mechanical Compose consumption of the existing private test configuration to preserve current runtime settings.",
+    "allowed": "Only existing .env.testing as an opaque input to existing Compose; no printing/copying/dumping values. Local migration process may use its existing DB connection in-memory.",
+    "forbidden": "No .local-files access; no process argument/env/log dumps; no manual token/provider probe; no credential/session password read by agent; no private-file edits unless separately concrete and approved.",
+    "unknown": "HTTPS current hostname/process state unknown; no existing tunnel adopted/killed by assumption. If origin change requires private-file mutation, prepare exact bounded change first."
+  },
+  "migration": [
+    "Only three approved additive initial_message migrations from sealed source after disposable deploy/status/schema proof.",
+    "Preflight exact local TEST database/service; record migration names/checksums/status and no unexpected pending drift.",
+    "SET lock_timeout5s and statement_timeout60s as in approved SQL; stop on lock/migration failure; no blind retry/reset.",
+    "No destructive down migration; rollback assessment is application compatibility plus preserved data, not dropping new tables/columns.",
+    "Rollback assessment: an older API does not enforce the new initial-intent interlock. Do not automatically revert to an old API after a possible dispatch or while an initial outcome is unresolved; stop outbound use, preserve data and review the exact attempt in the normal UI. No destructive down/reset or blind migration retry is admitted. Initial activation checks precede operator sends."
+  ],
+  "activation": [
+    "Recreate only selected API/Web using newly verified local images, no pull/restart of preserved providers or databases.",
+    "Verify health and compiled/bundle equality through the existing gateway.",
+    "Public gateway config uses static upstream host resolution. After API/Web replacement, validate nginx config and gracefully reload only the existing gateway process so it resolves current API/Web container addresses; preserve its container/network/volume. Record health and served bundle after reload, not an old cached upstream. No provider/database restart.",
+    "If a new owned temporary HTTPS tunnel is needed, validate DNS/TLS/health/assets and then have operator update Meta callback/privacy URLs; no automatic provider configuration changes."
+  ],
+  "assisted_proof": [
+    "Operator logs in normally; agent does not extract OWNER password or enumerate live business rows.",
+    "In the nonofficial BU, operator opens a consenting test contact with explicit DDI, previews and confirms one first text; recipient replies.",
+    "In the official BU, operator selects the already-approved own-account text template through the shared catalog, fills fictitious/test values, previews and confirms once; recipient replies.",
+    "Record only safe outcome/state/timestamps and source-runtime attestation. Do not persist phone/contact/body/token.",
+    "No automated sends, new contacts, routing changes, migration/registration at Meta, or Railway deployment."
+  ],
+  "current_status": "All three fresh r7 reviews actually terminal0/strictmerge0, one turn and zero tools each; no new material product/test defect. Current967test/source/image/PCV receipts remain valid and all259public source bytes were rechecked after reviews. Existing runtime/operator/module/fullguard/final delivery gates remain open.",
+  "build_context_positive_inputs": {
+    "api": {
+      "roots": [
+        "api-app/src",
+        "api-app/prisma"
+      ],
+      "exact_files": [
+        "api-app/Dockerfile",
+        "api-app/package.json",
+        "api-app/package-lock.json",
+        "api-app/tsconfig.json",
+        "api-app/tsconfig.build.json",
+        "api-app/nest-cli.json",
+        "api-app/docker/entrypoint.sh"
+      ]
+    },
+    "web": {
+      "roots": [
+        "web-app/src"
+      ],
+      "exact_files": [
+        "web-app/Dockerfile",
+        "web-app/package.json",
+        "web-app/package-lock.json",
+        "web-app/tsconfig.json",
+        "web-app/vite.config.ts",
+        "web-app/index.html",
+        "web-app/nginx/default.conf.template",
+        "web-app/docker/40-config-js.sh",
+        "web-app/public/config.js",
+        "web-app/public/privacidade.html"
+      ]
+    },
+    "policy": "Reject symlinks; hash each positive input, produce generated archive only. Exclude every .env, node_modules, existing dist, e2e/test artifacts and all unlisted paths. Add no extra file by discovery or implicit COPY context. Source specs under admitted src remain public build inputs; build exclusions remain canonical."
+  },
+  "prepared_build_context_receipt": "positive-build-contexts-e74-v1.1.json",
+  "entrypoint_scope": "Existing API entrypoint mechanically keeps ownership of the preserved named file volume at /dados/arquivos, then runs as node. No host .local-files bind, agent content inspection, payload mutation or file deletion is proposed.",
+  "candidate_receipt": "all-result-e74-v1.1.json",
+  "build_context_current_recheck": "image-build-root-collection-e74-v1.1.json",
+  "concrete_images": {
+    "api": {
+      "tag": "leadshug-stcon04-api:e74",
+      "image_id": "sha256:092005eb90275c3ab55e14c6ff2fe5fde241d4bde15324ce84bfb21f0a11c2f2",
+      "archive_sha256": "ec671cbe971395d1d4c2fe4f3cc99920fcb347d9ce5dc3c07ca154060ea042db"
+    },
+    "web": {
+      "tag": "leadshug-stcon04-web:e74",
+      "image_id": "sha256:9787da8f734123e4f2875ce9b47c7bb23b45a8d64bbba98a830d51dd05f9f53b",
+      "archive_sha256": "959355f4dfc16824cdc8a83632dfda673c8ba71a7d8170d055164e89180152c7"
+    }
+  },
+  "concrete_image_evidence": [
+    "positive-build-contexts-e74-v1.1.json",
+    "image-build-attestation-e74-v1.1.json",
+    "image-build-root-collection-e74-v1.1.json"
+  ],
+  "current_source_fingerprint": "589c753670cfcf54020b785e6bae6b85ec1a8b4bab707f333f8e64d8aaf38c8e",
+  "current_web_bundle_sha256": "f8e97efa6777dbc496b74cd527b1bae78e7766e4a4d58f752f7816cb62444343",
+  "recorded_at_utc": "2026-10-23T13:20:19.743938+00:00",
+  "historical_images": "E71/E64 images are historical. Only the exact corrected E74 API and verified equivalent Web ID below are proposed for activation.",
+  "approved_additive_migration_inputs": [
+    {
+      "path": "api-app/prisma/migrations/20261022140000_initial_message_orchestration/migration.sql",
+      "sha256": "a8b26d5dfc7eb8f658cf703cee0f1f6061b5afa2ad84ca0f37cd4baec9d68437"
+    },
+    {
+      "path": "api-app/prisma/migrations/20261022150000_initial_message_admissions/migration.sql",
+      "sha256": "41df36b473c3163e9e29ea1cc6c12df3376994081698be83c83e50a812e3922a"
+    },
+    {
+      "path": "api-app/prisma/migrations/20261022160000_initial_message_inbox_order/migration.sql",
+      "sha256": "60e7f76b8ccbee5e51dd939bdf126eeecaa1b1c1871f393a4363add94274a544"
+    }
+  ],
+  "canonical_guard_private_exception": {
+    "status": "not approved; not executed",
+    "purpose": "One exact canonical full read-only TODO diff guard at final validation; its Git enumeration may list/stat/read/hash actual private paths, unlike the permitted positive-only collectors.",
+    "command": "python3 delphi-ai/tools/todo_diff_expectation_guard.py foundation_documentation/todos/active/features/TODO-leadshug-start-conversation-by-contact.md --repo-root /mnt/c/unifast/leadshug/leadshug_now_docker --json-output /tmp/stcon04-final-diff-guard-private.json",
+    "restrictions": "Raw output remains0600owned/tmp; report only counts/codes/hashes/outcome. No manual env/token reads, private-file edits/deletions, business-row or process/env/log inspection. Stop and classify actual violations; do not prune the guard or remove private files to make it pass.",
+    "governing_boundary": "TODO Out of Scope forbids private file enumeration/stat/hash/traversal; VAL-08 separately gates preserved-local activation. These are exact exceptions for a later bounded human approval, not inferred code approval."
+  },
+  "readiness_stop_conditions": [
+    "Expected project/service/labels/images/volumes differ or gateway ownership is not established by selected safe metadata.",
+    "Pending migration set/checksums differ from the three approved inputs, or any migration lock/statement/status check fails; no automatic retry/reset/resolve/down.",
+    "Current source fingerprint, built API, served Web, native health or TLS/DNS binding fails.",
+    "A private config edit or provider/routing/registration change is needed; prepare exact separate change instead of inspecting secrets.",
+    "Any unresolved material current review finding, missing approved same-account template or unavailable consensual test contact prevents the corresponding real proof."
+  ],
+  "approval_bundle": "Only after all already-authorized candidate/review work is concrete: preserve data/peers and activate these two images, apply only the three exact additive migrations, safe gateway reload and owned HTTPS, opaque existing .env.testing Compose input, operator-driven own-channel first sends/replies, plus the one canonical read-only full diff guard exception. No Railway/product Git/provider routing or automated recipient contact.",
+  "current_proof_evidence": [
+    "all-result-e74-v1.1.json",
+    "all-source-recheck-e74-v1.1.json",
+    "browser-freshness-collection-e74-v1.1.json",
+    "current-synthetic-pcv-samples-e74-v1.1.json",
+    "implementation-r6-resolution-e74-v1.1.json",
+    "seal-metadata-provenance-e74-v1.1.json"
+  ],
+  "current_reviews": "Architecture/security, full eight-section TQA and cutover are complete for the E74 implementation candidate. This is not activation/private-inspection authority or final delivery approval.",
+  "governing_explicit_approval_reason": {
+    "todo": "foundation_documentation/todos/active/features/TODO-leadshug-start-conversation-by-contact.md",
+    "validation_step": "VAL-08 — local source-bound API/Web activation and owned stable/temporary HTTPS only under later approved runtime plan",
+    "private_boundary_quote": "Ler/listar/stat/hash/traversar/montar api-app/.local-files/, .env ou .env.testing; ler argumentos/process env/logs/linhas de negócio.",
+    "meaning": "Original implementation approval excludes these surfaces. Only the precisely proposed opaque Compose test input and one full canonical read-only diff guard are requested exceptions; no manual secret inspection or business-row inspection."
+  },
+  "new_migration_count": 3,
+  "related_inherited_migration_note": "The offline image attests four related hashes including the inherited ST06 window index. Only the three exact20261022 additive migrations listed here may be applied; the fourth is not new authorization.",
+  "reviewed_proposal_sha256": "d950dfda0196fe60208ac141f19ea6189488294465e4680c6083ab83c3d090f8",
+  "current_review_evidence": [
+    "implementation-architecture_adherence-r7-collection-v1.1.json",
+    "implementation-test_quality_audit-r7-collection-v1.1.json",
+    "implementation-cutover_integrity_audit-r7-collection-v1.1.json",
+    "post-r7-source-recheck-e74-v1.1.json",
+    "implementation-review-collection-r7-current-state-v1.1.json"
+  ],
+  "canonical_module_state": "Exact two-module patch reviewed and concretely prepared, current canonical modules remain at the reviewed baseline. Apply and verify at the approved consolidation stage after preserved-runtime/operator proof. Root temporary application was reversed before publication; exact sequencing correction is recorded.",
+  "module_state_evidence": "module-consolidation-r7-sequencing-correction-v1.1.json",
+  "approval_state": "Not approved. No preserved-local activation, migrations, opaque private input, full private-boundary guard, recipient actions or provider updates have been performed under this plan."
+}

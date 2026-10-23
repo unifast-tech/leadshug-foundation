@@ -1,0 +1,43 @@
+{
+  "kind": "Complete current public-root static-signal scan receipt; dispositions and independent TQA pending",
+  "recorded_at_utc": "2026-10-23T12:20:53.430547+00:00",
+  "source_seal": "all-source-seal-e74-v1.1.json",
+  "source_fingerprint": "589c753670cfcf54020b785e6bae6b85ec1a8b4bab707f333f8e64d8aaf38c8e",
+  "command": [
+    "bash",
+    "delphi-ai/tools/test_quality_audit.sh",
+    "--path",
+    "api-app/src",
+    "--path",
+    "api-app/test",
+    "--path",
+    "web-app/src",
+    "--path",
+    "web-app/e2e"
+  ],
+  "exit_code": 2,
+  "actual_exit_code": 2,
+  "raw_sha256": "1a096a509c618914002d492fc97203c6520aea4a3d7b38a482218f77e84f72e3",
+  "stdout_sha256": "1a096a509c618914002d492fc97203c6520aea4a3d7b38a482218f77e84f72e3",
+  "counts": {
+    "hard_bypass": 5,
+    "test_support": 0,
+    "auth_shortcut": 0,
+    "status_only": 201,
+    "no_exception_only": 4,
+    "ambient_subject_fallback": 21,
+    "di_override": 0,
+    "mock_hint": 37
+  },
+  "durable_raw": "test-quality-public-roots-output-e74-v1.1.txt",
+  "individual_inventory": "test-quality-signal-inventory-e74-v1.1.json",
+  "individual_dispositions": "test-quality-signal-dispositions-e74-v1.1.json",
+  "remaining_signals": "All268 actual raw signals retain source-bound per-row root judgments; complete independent TQA challenge remains. Raw high/exit2 is unchanged.",
+  "limits": "Actual E74 full ALL0 and independent full259 source recheck, same-run93 browser freshness. Static scan is a separate public-root command, not ALL stdout, not current PCV, and not delivery proof.",
+  "raw_outcome_line": "Outcome heuristic: high",
+  "exact_test_focus_skip_crosscheck": {
+    "exit_code": 1,
+    "matches": 0,
+    "scope": "Same four complete positive public roots; supplementary only."
+  }
+}

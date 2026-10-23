@@ -1,0 +1,32 @@
+{
+  "kind": "Actual root rejection of stale E73 browser attestation export",
+  "recorded_at_utc": "2026-10-23T11:44:50.834719+00:00",
+  "source_seal": "all-source-seal-e73-v1.1.json",
+  "source_fingerprint": "589c753670cfcf54020b785e6bae6b85ec1a8b4bab707f333f8e64d8aaf38c8e",
+  "actual_terminal_exit": 0,
+  "executor_session_id": 13693,
+  "stdout_sha256": "d6540b2284788bbb2333b44ae0b4cf928141fff81f191e07ed4bbda6caa11617",
+  "full259_source_recheck": "all-source-recheck-e73-v1.1.json",
+  "rejected_attestation_sha256": "39a2836c0d50c6845cb7833f46ba2e7b6f6e45bda0b9af101bcc280306ac73cd",
+  "historical_identical_attestation_reference": "browser-freshness-e71-v1.1.json",
+  "rejected_run_id": "2026-10-23T04-36-32-969Z",
+  "rejected_captured_at": "2026-10-23T04:36:32.969Z",
+  "mismatches": [
+    {
+      "path": "api-app/src/domain/inbox/message-acceptance.service.ts",
+      "exported_attestation_sha256": "71194c70b12cb920054586a7a86266d90f8eca0b7008b1b5688627e0694979f1",
+      "current_source_sha256": "285647f1dee08b14dbae8661743c75198f1be85d5b523e9f73c7d51dfbe30ff4"
+    },
+    {
+      "path": "api-app/test/initial-message.e2e-spec.ts",
+      "exported_attestation_sha256": "44ce516d60168219ddc5aec66ef89ecbb7483b36959a5c3f3620174f0eaf5e55",
+      "current_source_sha256": "197aeba4c765168c7fba66ec56209241025a8bfc09475e3100f4be1995d0a13d"
+    },
+    {
+      "path": "api-app/test/webhooks.e2e-spec.ts",
+      "exported_attestation_sha256": "e9f80894181676b2fcb4ec18339a6ebdb1e189f3f13374cd1c2e77d13e647f4a",
+      "current_source_sha256": "2da81767ab4366d90ccbd214b12c9570027ea102ee9b5fb27f89aa4db129cdb5"
+    }
+  ],
+  "disposition": "Root actual postseal failed attestation source mismatch after full259 succeeded. Root read the exported file and observed E71 runID plus these3hashes. Aggregate967pass and source freeze are actual; current browser freshness is unaccepted. Original /tmp export subsequently disappeared; executor asked for exact artifact location. No fresh review/activation/repeat is inferred."
+}

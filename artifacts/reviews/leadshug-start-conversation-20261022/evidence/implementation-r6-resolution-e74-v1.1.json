@@ -1,0 +1,86 @@
+{
+  "kind": "Root resolution of both r6 causal findings against current full source-bound proof; independent r7 remains required",
+  "recorded_at_utc": "2026-10-23T12:20:47.197456+00:00",
+  "source_seal": "all-source-seal-e74-v1.1.json",
+  "source_fingerprint": "589c753670cfcf54020b785e6bae6b85ec1a8b4bab707f333f8e64d8aaf38c8e",
+  "all_result": "all-result-e74-v1.1.json",
+  "stdout_sha256": "73a5f43f7ed69e9e00271c55d6cb12e96917f0cb8bed587b3c33e403b62b9751",
+  "rows": [
+    {
+      "finding_id": "F-CF091066",
+      "source_finding_id": "ARCH-ST04-R6-01",
+      "severity": "medium",
+      "resolution": "Integrated",
+      "problem": "Current verified identity could qualify a trusted timestamp while its managed lifecycle was false.",
+      "correction": "Read managed_lifecycle in the existing same FOR SHARE identity projection; pass only that locked boolean to private timestamp qualification. Preserve Message/receipt acceptance; duplicate reconciliation never promotes a prior null timestamp. No extra query, caller flag, lock-order change or provider call.",
+      "sources": [
+        {
+          "path": "api-app/src/domain/inbox/message-acceptance.service.ts",
+          "lines": [
+            120,
+            148,
+            188,
+            212
+          ],
+          "sha256": "285647f1dee08b14dbae8661743c75198f1be85d5b523e9f73c7d51dfbe30ff4"
+        },
+        {
+          "path": "api-app/test/webhooks.e2e-spec.ts",
+          "lines": [
+            123,
+            144,
+            149,
+            152,
+            163
+          ],
+          "sha256": "2da81767ab4366d90ccbd214b12c9570027ea102ee9b5fb27f89aa4db129cdb5"
+        }
+      ],
+      "actual_proof_markers": [
+        "does not promote an inbound timestamp received while the current resource is unmanaged"
+      ],
+      "actual_proof": "Signed-webhook/PG matrix passes: retained IN/unread and null trusted timestamp, closed window before/after lifecycle activation, duplicate without promotion, later new managed IN opens window, zero provider effects.",
+      "causal_evidence": "api-result-e72-v1.1.json",
+      "limits": "Actual E72 read-projection defect, not an outbound exploit or actual provider effect."
+    },
+    {
+      "finding_id": "F-5E961B39",
+      "source_finding_id": "TQA-R6-01",
+      "severity": "medium",
+      "resolution": "Integrated",
+      "problem": "Native deadlock statistics silently defaulted to zero on invalid results.",
+      "correction": "Test helper requires exactly one row and a nonnegative native bigint; malformed/missing/ambiguous results fail the test. Real counter overlap probes remain.",
+      "sources": [
+        {
+          "path": "api-app/test/initial-message.e2e-spec.ts",
+          "lines": [
+            78,
+            145,
+            149,
+            1280,
+            1318,
+            1357,
+            1399
+          ],
+          "sha256": "197aeba4c765168c7fba66ec56209241025a8bfc09475e3100f4be1995d0a13d"
+        }
+      ],
+      "actual_proof_markers": [
+        "fails closed when native deadlock statistics are",
+        "ST04_ST05_CLAIM_OVERLAP ",
+        "ST04_ST05_LOCAL_OVERLAP "
+      ],
+      "actual_proof": "All four isolated empty/malformed/multiple/negative fixtures reject; actual unchanged ST05-owner claim/local overlap probes pass with native zero-deadlock deltas.",
+      "causal_evidence": "api-result-e72-v1.1.json",
+      "limits": "One helper query is substituted once and restored in finally. This test-only helper does not authorize product dispatch; no actual missing native statistics are claimed."
+    }
+  ],
+  "r6_collection": "implementation-review-collection-r6-v1.1.json",
+  "test_first_boundary": "E72 actual test-only API RED reached four statistics failures and four lifecycle soft assertions before the two exact E73 fixes. E73 actual967pass/postseal/browser is retained; unchanged E74 repeats only to retain lost raw stdout/metrics. No earlier unreached assertion or actual outbound exploit is relabeled.",
+  "remaining": [
+    "Fresh complete eight-section TQA; terse r6 response insufficient",
+    "Current architecture/security/cutover and module review",
+    "Current offline images plus approved preserved runtime/operator/full-diff/final gates"
+  ],
+  "boundary": "Positive public sources and owned synthetic evidence only; no private environment/business/provider inspection."
+}

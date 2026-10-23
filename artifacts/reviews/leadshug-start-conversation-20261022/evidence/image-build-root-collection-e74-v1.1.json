@@ -1,0 +1,65 @@
+{
+  "kind": "Root independent positive archives/build stdout/offline image receipt/source/browser binding",
+  "recorded_at_utc": "2026-10-23T12:25:55.044261+00:00",
+  "source_seal": "all-source-seal-e74-v1.1.json",
+  "source_fingerprint": "589c753670cfcf54020b785e6bae6b85ec1a8b4bab707f333f8e64d8aaf38c8e",
+  "actual_builds_exit0": true,
+  "file_checks": [
+    {
+      "service": "api",
+      "kind": "archive",
+      "sha256": "ec671cbe971395d1d4c2fe4f3cc99920fcb347d9ce5dc3c07ca154060ea042db",
+      "matches": true
+    },
+    {
+      "service": "api",
+      "kind": "build_stdout",
+      "sha256": "9917c1843439f0bdc837a4d2393a81a77ba00d22498c58695eea915479e4c422",
+      "matches": true
+    },
+    {
+      "service": "api",
+      "kind": "selected_image_ID_platform",
+      "matches": true,
+      "image_id": "sha256:092005eb90275c3ab55e14c6ff2fe5fde241d4bde15324ce84bfb21f0a11c2f2",
+      "platform": "linux/amd64"
+    },
+    {
+      "service": "web",
+      "kind": "archive",
+      "sha256": "959355f4dfc16824cdc8a83632dfda673c8ba71a7d8170d055164e89180152c7",
+      "matches": true
+    },
+    {
+      "service": "web",
+      "kind": "build_stdout",
+      "sha256": "8935a1bc0b08403603a34f523c321fdbdb6115023e3b9f5001df481c08507f62",
+      "matches": true
+    },
+    {
+      "service": "web",
+      "kind": "selected_image_ID_platform",
+      "matches": true,
+      "image_id": "sha256:9787da8f734123e4f2875ce9b47c7bb23b45a8d64bbba98a830d51dd05f9f53b",
+      "platform": "linux/amd64"
+    },
+    {
+      "service": "api",
+      "kind": "offline_inspection",
+      "sha256": "eb4d8f980b37319031e193bfffb5a0b29d90fe9a324d80dbe90571433111b9c5",
+      "matches": true
+    },
+    {
+      "service": "web",
+      "kind": "offline_inspection",
+      "sha256": "ffe0df470a936034f3e83663d17f8cbf6f9b4bb129dc85bd11e9cd18ce13e9ba",
+      "matches": true
+    }
+  ],
+  "schema_all_four_related_migration_hashes_match": true,
+  "new_additive_migration_count_for_future_activation": 3,
+  "served_dist_offline_web_bundle_equal": true,
+  "build_receipt": "image-build-attestation-e74-v1.1.json",
+  "build_receipt_sha256": "991451ac0dab27a8c552b61df54a8936b0ed8e39a8e481511debad985199d312",
+  "limits": "Only new owned public image metadata/artifacts selected. No application startup, private Compose input, existing service/container/process/env/log/business data or provider access. Fourth related migration is already inherited source, not a fourth new migration authorization."
+}

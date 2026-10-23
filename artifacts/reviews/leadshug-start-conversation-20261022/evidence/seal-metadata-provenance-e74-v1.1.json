@@ -1,0 +1,17 @@
+{
+  "kind": "Explicit metadata provenance for unchanged-source E74 repeat preseal",
+  "recorded_at_utc": "2026-10-23T12:11:10.364179+00:00",
+  "source_seal": "all-source-seal-e74-v1.1.json",
+  "source_seal_sha256": "40ad3c8844a20d2d688269ac60f0b2648460bb3c26d6e6bf2fe912fcd5694d4c",
+  "source_fingerprint": "589c753670cfcf54020b785e6bae6b85ec1a8b4bab707f333f8e64d8aaf38c8e",
+  "source_delta_from_e73": [],
+  "current_exact_public_git_heads": {
+    "root": "80e3940126f22a941f90dba4f5e801b6c0eb2f58",
+    "api": "db5a86758a165fac8a1ab587599c37b17890530c",
+    "web": "74b9d4b714044829796f875d00553f077c1c329d",
+    "foundation": "d32e07ed98a6bb9eae42d5f0e45e81d07d466cc7"
+  },
+  "current_stdout_path": "foundation_documentation/artifacts/tmp/stcon04-e74/executor-all-e74.txt",
+  "current_preworker_attestation_path": "foundation_documentation/artifacts/tmp/stcon04-e74/browser-attestation-e74.json",
+  "disclosure": "E74 seal was copied from E73 after root re-enumerated and matched all259 current source records. Its recorded_at_utc/checkpoint/exact_source_delta/repeat_rationale are E74-specific. The retained captured_at_utc, synthetic_stdout_planned, previous_seal, exact_delta_from_previous and fresh_git_identity fields describe the historical E73 seal lineage, not a newly invoked E74 capture. This supplement makes current stream/identity explicit without rewriting immutable seal bytes. Current terminal receipt and independent postseal must bind actual E74 stdout before review."
+}

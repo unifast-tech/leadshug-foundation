@@ -1,0 +1,21 @@
+{
+  "kind": "E74 unchanged source preflight for durable repeat validation",
+  "recorded_at_utc": "2026-10-23T11:53:03Z",
+  "source_seal": "all-source-seal-e74-v1.1.json",
+  "source_fingerprint": "589c753670cfcf54020b785e6bae6b85ec1a8b4bab707f333f8e64d8aaf38c8e",
+  "source_count": 259,
+  "current_source_recheck": {
+    "checked_count": 259,
+    "changed_paths": [],
+    "all_protected_and_exact_companion_checks_match": true
+  },
+  "exact_delta_from_e73": [],
+  "repeat_rationale": "E73 canonical ALL reached exit 0, but its owned /tmp stdout and metrics disappeared after the terminal receipt. Repeat once without source changes to retain durable actual stdout and the current-run browser attestation.",
+  "normal_authority": "authority-e74-v1.1.json",
+  "routing": "routing-e74-v1.1.json",
+  "command": "bash scripts/test-channels-local.sh all",
+  "durable_stdout": "foundation_documentation/artifacts/tmp/stcon04-e74/executor-all-e74.txt",
+  "durable_browser_attestation": "foundation_documentation/artifacts/tmp/stcon04-e74/browser-attestation-e74.json",
+  "freeze": "No product or test source edits during the runner; wait for actual terminal and independent root postseal.",
+  "limits": "This is a repeat solely for durable evidence retention; no promotion, preserved-runtime activation, or real provider interaction is authorized."
+}

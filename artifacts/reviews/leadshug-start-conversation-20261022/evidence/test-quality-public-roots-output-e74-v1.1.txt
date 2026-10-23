@@ -1,0 +1,298 @@
+Test Quality Audit
+Repository: /mnt/c/unifast/leadshug/leadshug_now_docker
+Outcome heuristic: high
+
+Scan paths:
+  - /mnt/c/unifast/leadshug/leadshug_now_docker/api-app/src
+  - /mnt/c/unifast/leadshug/leadshug_now_docker/api-app/test
+  - /mnt/c/unifast/leadshug/leadshug_now_docker/web-app/src
+  - /mnt/c/unifast/leadshug/leadshug_now_docker/web-app/e2e
+
+Hard bypass markers:
+  - 35:      skip: (pagina - 1) * limite,
+  - 51:      skip: (pagina - 1) * limite,
+  - 38:        skip: (pagina - 1) * porPagina,
+  - 101:        skip: (pagina - 1) * porPagina,
+  - 53:        skip: (pagina - 1) * limite,
+
+Test-only support route usage:
+  - none
+
+Auth shortcut hints:
+  - none
+
+Status-only assertion hints:
+  - 9:  expect(response.status()).toBe(201);
+  - 41:  expect(response.status()).toBe(200);
+  - 43:  expect(webhook.status).toBe(200);
+  - 153:    expect(burst.status()).toBe(201);
+  - 212:    expect(burst.status()).toBe(201);
+  - 235:    expect(burst.status()).toBe(201);
+  - 256:    expect(burst.status()).toBe(201);
+  - 281:    expect(burst.status()).toBe(201);
+  - 301:    expect(claimStatus.statusCode).toBe(201);
+  - 365:          expect(lateTie.status()).toBe(201);
+  - 376:          expect(webhook.status).toBe(200);
+  - 445:      expect(event.status).toBe(200);
+  - 516:      expect(secondEvent.status).toBe(200);
+  - 717:    expect(populateSecondary.status()).toBe(201);
+  - 718:    expect(populateOtherBu.status()).toBe(201);
+  - 18:  expect(res.status()).toBe(201);
+  - 353:    expect((await inviteResponse).status()).toBe(201);
+  - 379:    expect((await inviteResponse).status()).toBe(201);
+  - 108:    expect(response.status()).toBe(201);
+  - 162:    expect(retryResponse.status()).toBe(201);
+  - 206:      expect(competingResponse.status()).toBe(201);
+  - 273:    expect(retryResponse.status()).toBe(201);
+  - 8:  expect(response.status()).toBe(201);
+  - 105:    expect((await oldResponse).status()).toBe(201);
+  - 137:    expect(opened.status()).toBe(201);
+  - 182:    expect((await sendResponse).status()).toBe(201);
+  - 208:    expect(prepared.status()).toBe(201);
+  - 220:    expect((await openedResponse).status()).toBe(200);
+  - 226:    expect((await getAttempt).status()).toBe(200);
+  - 231:    expect(live.status()).toBe(202);
+  - 243:    expect(expire.status()).toBe(200);
+  - 249:    expect(expired.status()).toBe(200);
+  - 280:    }).then((response) => expect(response.status()).toBe(200));
+  - 344:    expect((await reopen).status()).toBe(200);
+  - 353:    }).then((response) => expect(response.status()).toBe(200));
+  - 460:      expect((await reusedResponse).status()).toBe(200);
+  - 481:      expect(replayResponse.status()).toBe(200);
+  - 513:    await request.post(`${FIXTURES}/send-mode`, { data: { mode: 'unknown' } }).then((response) => expect(response.status()).toBe(200));
+  - 558:    expect(options.status()).toBe(200);
+  - 574:    expect(reconciled.status()).toBe(200);
+  - 589:    expect(acknowledged.status()).toBe(200);
+  - 669:    expect(opened.status()).toBe(200);
+  - 698:    expect(catalogResponse.status()).toBe(200);
+  - 722:    expect((await sendResponse).status()).toBe(201);
+  - 750:    }).then((response) => expect(response.status()).toBe(200));
+  - 758:    expect(opened.status()).toBe(201);
+  - 783:    expect((await reopenedResponse).status()).toBe(200);
+  - 790:    expect(expire.status()).toBe(200);
+  - 798:    expect((await ackResponse).status()).toBe(200);
+  - 815:    }).then((response) => expect(response.status()).toBe(200));
+  - 823:    expect(opened.status()).toBe(201);
+  - 839:    expect(revoked.status()).toBe(200);
+  - 843:    expect(released.status()).toBe(200);
+  - 851:    expect(restored.status()).toBe(200);
+  - 855:    expect((await reconcileResponse).status()).toBe(200);
+  - 879:    }).then((response) => expect(response.status()).toBe(200));
+  - 887:    expect(opened.status()).toBe(201);
+  - 901:    expect((await request.post(`${FIXTURES}/revoke`, { data: { userId: fixture.userId, businessUnitId: fixture.businessUnitId } })).status()).toBe(200);
+  - 904:    })).status()).toBe(200);
+  - 911:    expect(restoredGrant.status()).toBe(200);
+  - 919:    expect(earlyReadResponse.status()).toBe(200);
+  - 944:    expect(expired.status()).toBe(200);
+  - 948:    expect(eligibleReadResponse.status()).toBe(200);
+  - 956:    expect((await ackResponse).status()).toBe(200);
+  - 968:    expect(successor.status()).toBe(201);
+  - 980:    expect(late.status).toBe(200);
+  - 1004:    expect(opened.status()).toBe(201);
+  - 1091:      expect(opened.status()).toBe(201);
+  - 1125:        expect(response.status(), JSON.stringify({ code: result?.code, state: result?.state, preAdmission: result?.preAdmission })).toBe(201);
+  - 83:  expect(reservation.status()).toBe(201);
+  - 152:    expect(response.status()).toBe(201);
+  - 180:  expect(submitted.status()).toBe(201);
+  - 187:  expect(individual.status()).toBe(200);
+  - 191:  expect(catalog.status()).toBe(200);
+  - 261:    expect(catalogResponse.status()).toBe(200);
+  - 287:  expect(submitB.status()).toBe(201);
+  - 294:  expect(initialBObservationResponse.status()).toBe(200);
+  - 382:    expect(newerPageResponse.status()).toBe(200);
+  - 394:    expect(passiveResponse.status()).toBe(200);
+  - 403:    expect(oldPageResponse.status()).toBe(200);
+  - 491:        expect(crossResponse.status()).toBe(202);
+  - 506:      expect(leaderResponse.status()).toBe(200);
+  - 520:        expect(fetched202?.status).toBe(202);
+  - 523:        expect(crossResponse.status()).toBe(202);
+  - 561:      expect(response.status()).toBe(200);
+  - 586:    expect(oldCatalogResponse.status()).toBe(200);
+  - 622:      expect(response.status()).toBe(200);
+  - 634:      expect(response.status()).toBe(200);
+  - 663:    expect(individualResponse.status()).toBe(200);
+  - 666:    expect(localCatalogRead.status()).toBe(200);
+  - 678:    expect(catalogRequest.status()).toBe(200);
+  - 761:    expect(reconcile.status()).toBe(200);
+  - 769:    expect(explicitRefresh.status()).toBe(200);
+  - 787:    expect(catalogResponse.status()).toBe(200);
+  - 799:    expect(operationResponseReal.status()).toBe(200);
+  - 888:    expect(reconcile.status()).toBe(200);
+  - 897:    expect(explicitRefresh.status()).toBe(200);
+  - 905:    expect(catalogResponse.status()).toBe(200);
+  - 914:    expect((await operationResponsePromise).status()).toBe(200);
+  - 916:    expect(draftResponse.status()).toBe(200);
+  - 1034:    expect(reconcile.status()).toBe(200);
+  - 1042:    expect(explicitRefresh.status()).toBe(200);
+  - 1050:    expect(catalogResponse.status()).toBe(200);
+  - 1059:    expect((await manualResponsePromise).status()).toBe(200);
+  - 1061:    expect(draftResponse.status()).toBe(200);
+  - 1132:  await expect.poll(() => createStatus).toBe(201);
+  - 1165:      expect(response.status()).toBe(201);
+  - 1169:    expect(response.status()).toBe(200);
+  - 1252:  expect(submitted.status()).toBe(201);
+  - 1286:  expect(initialIndividual.response.status()).toBe(200);
+  - 1303:    expect(response.status()).toBe(200);
+  - 1315:  expect(freshIndividual.status()).toBe(200);
+  - 1321:  expect(staleCatalogResponse.status()).toBe(200);
+  - 1336:  expect(reloadedIndividual.response.status()).toBe(200);
+  - 1345:  expect(reloadedCatalogResponse.status()).toBe(200);
+  - 1361:    expect(response.status()).toBe(200);
+  - 1374:  expect(freshCatalogResponse.status()).toBe(200);
+  - 1379:  expect(staleIndividualResponse.status()).toBe(200);
+  - 1391:  expect(eligibleCatalogResponse.status()).toBe(200);
+  - 1415:  expect(approvedBeforeFailure.response.status()).toBe(200);
+  - 1435:  expect(recoveredAfterContradiction.response.status()).toBe(200);
+  - 1488:  expect(warmApprovedIndividual.response.status()).toBe(200);
+  - 1498:  expect(warmCatalogResponse.status()).toBe(200);
+  - 1535:  expect(leaderResponse.status()).toBe(200);
+  - 1572:  expect(uiLeaderResponse.status()).toBe(200);
+  - 1596:  expect(refusalResponse.status()).toBe(201);
+  - 1612:  expect(retryResponse.status()).toBe(201);
+  - 1627:  expect((await submitResponse).status()).toBe(201);
+  - 1633:  expect((await statusResponse).status()).toBe(200);
+  - 1698:  expect(lostOperationRead.status).toBe(200);
+  - 1812:  expect(copyResponse.status()).toBe(201);
+  - 1934:    expect(reconcile.status()).toBe(200);
+  - 1941:    expect(explicitRefresh.status()).toBe(200);
+  - 1954:    expect(actualOperationResponse.status()).toBe(200);
+  - 1956:    expect(heldOperationResponse?.status).toBe(200);
+  - 1992:  expect(submitResponse.status()).toBe(201);
+  - 2003:  expect(firstRefresh.status()).toBe(200);
+  - 2013:    expect(historicalRefresh.status()).toBe(200);
+  - 2047:  expect(staleDraftResponse.status()).toBe(200);
+  - 2066:  expect(afterFailedCurrentRefresh.status()).toBe(200);
+  - 2080:  expect(renewedRefresh.status()).toBe(200);
+  - 2107:  expect(submitResponse.status()).toBe(201);
+  - 2118:  expect(individualResponse.status()).toBe(200);
+  - 2133:  expect(catalogResponse.status()).toBe(200);
+  - 2202:  expect(submitResponse.status()).toBe(201);
+  - 2209:  expect(originalDraftResponse.status()).toBe(200);
+  - 2224:  expect(catalogResponse.status()).toBe(200);
+  - 2242:  expect(openedDraftResponse.status()).toBe(200);
+  - 2264:  expect(currentDraftResponse.status()).toBe(200);
+  - 2367:    expect(catalogResponse.status()).toBe(200);
+  - 2377:    expect(passiveResponse.status()).toBe(200);
+  - 2389:    expect(oldIndividualResponse.status()).toBe(200);
+  - 2404:    expect(derivedResponse.status()).toBe(200);
+  - 2431:  expect(draftResponse.status()).toBe(200);
+  - 2514:    expect(individualResponse.status()).toBe(200);
+  - 2521:    expect(passiveResponse.status()).toBe(200);
+  - 2532:    expect(oldCatalogResponse.status()).toBe(200);
+  - 7:  expect(response.status()).toBe(201);
+  - 143:    expect(responseAntiga.status()).toBe(201);
+  - 206:        expect(actualStatus).toBe(201);
+  - 209:      expect(auditResponse.status()).toBe(200);
+  - 82:    expect((await pending).status).toBe(200);
+  - 108:    expect((await pending).status).toBe(200);
+  - 126:    expect((await pending).status).toBe(200);
+  - 562:        expect(own.status, JSON.stringify(own.body)).toBe(200);
+  - 304:    expect(responseA.status).toBe(201);
+  - 305:    expect(responseB.status).toBe(201);
+  - 344:    expect(response.status).toBe(201);
+  - 430:    expect(response.status).toBe(201);
+  - 715:    expect(response!.status).not.toBe(201);
+  - 473:        expect(first.status).toBe(201);
+  - 682:      expect(submittedDraft.status, JSON.stringify({ status: submittedDraft.status, code: submittedDraft.body?.code })).toBe(201);
+  - 698:      expect(originalPreview.status, JSON.stringify({ status: originalPreview.status, code: originalPreview.body?.code })).toBe(200);
+  - 1320:          expect(refreshResponse.status).toBe(200);
+  - 1401:          expect(refreshResponse.status).toBe(200);
+  - 1468:        expect(accepted.status).toBe(201);
+  - 28:      expect(res.status).toBe(200);
+  - 34:      expect(res.status).toBe(200);
+  - 377:      expect(replay.status).toBe(201);
+  - 687:    expect(resumed.status, JSON.stringify(resumed.body)).toBe(200);
+  - 895:      expect(renewed.status).toBe(200);
+  - 58:      expect(winner.status).toBe(200);
+  - 80:      expect((await verificationResult).status).toBe(200);
+  - 139:      expect(first.status).toBe(200);
+  - 235:      expect(unlinked.status).toBe(204);
+  - 284:      expect(renewed.status).toBe(200);
+  - 677:          expect(resposta.status).toBe(200);
+  - 409:      expect(submitted.status).toBe(201);
+  - 415:      expect(refresh.status).toBe(200);
+  - 430:      expect(detail.status).toBe(200);
+  - 431:      expect(operation.status).toBe(200);
+  - 450:      expect(staleContext.status).toBe(200);
+  - 487:      expect(submitted.status).toBe(201);
+  - 508:      expect(refresh.status).toBe(200);
+  - 522:      expect(detail.status).toBe(200);
+  - 523:      expect(operation.status).toBe(200);
+  - 542:      expect(changedAccountDetail.status).toBe(200);
+  - 543:      expect(changedAccountOperation.status).toBe(200);
+  - 610:      expect(submitted.status).toBe(201);
+  - 305:      expect(response.status, JSON.stringify(response.body)).toBe(200);
+  - 315:      expect(response.status, JSON.stringify(response.body)).toBe(200);
+
+No-exception-only assertion hints:
+  - 39:    expect(() => verificarConfiguracao({} as NodeJS.ProcessEnv)).not.toThrow();
+  - 43:    expect(() => verificarConfiguracao(COM_PISO)).not.toThrow();
+  - 54:    expect(() => verificarConfiguracao(completo)).not.toThrow();
+  - 76:    expect(() => verificarConfiguracao({ ...fields, GRAPH_VERSION: 'v26.0' } as NodeJS.ProcessEnv)).not.toThrow();
+
+Ambient subject fallback hints:
+  - 92:    completedMigrations = Number(rows[0]?.count ?? 0);
+  - 215:        lockWaiters = Number(rows[0]?.count ?? 0);
+  - 261:        lockWaiters = Number(rows[0]?.count ?? 0);
+  - 431:          databaseNow = rows[0]?.databaseNow ?? null;
+  - 58:    if (rows[0]?.waiting) return true;
+  - 72:    if (rows[0]?.waiting) return;
+  - 84:  const deadlocks = rows[0]?.deadlocks;
+  - 96:    if (rows[0]?.reached) return;
+  - 327:      const root = rows[0]?.['QUERY PLAN']?.[0]?.Plan;
+  - 443:    return (rows[0] as unknown as Candidate | undefined) ?? null;
+  - 224:    const current = rows[0];
+  - 242:    const row = rows[0];
+  - 162:          user = rows[0] ?? null;
+  - 77:      if (!rows[0] || rows[0].bu_id !== context.buId || rows[0].current_channel_id !== context.channelId) throw new ConflictException({ code: 'IDENTITY_NOT_CURRENT' });
+  - 221:    const identity = rows[0];
+  - 500:    const current = rows[0];
+  - 610:    const now = rows[0]?.now;
+  - 621:    const now = rows[0]?.now;
+  - 715:    const row = rows[0];
+  - 741:    if (!rows[0] || !(rows[0].now instanceof Date)) throw new ServiceUnavailableException({ code: 'ADMISSION_CLOCK_UNAVAILABLE' });
+  - 742:    return rows[0].now;
+
+DI override hints:
+  - none
+
+Mock / fallback hints:
+  - 140:    const publish = vi.spyOn(app.get(RealtimeService), 'publicarNaBu');
+  - 194:      vi.spyOn(boundary, 'run').mockImplementation(async (phase, work) => {
+  - 337:      const boundarySpy = vi.spyOn(boundary, 'run').mockImplementation(async (phase, work) => {
+  - 151:    const query = vi.spyOn(queryTarget, '$queryRaw').mockResolvedValue(rows);
+  - 550:    const mark = vi.spyOn(admission, 'markInitialAmbiguous').mockImplementation((input) =>
+  - 670:    const observationClockSpy = vi.spyOn(observationClock, 'now').mockImplementation(() => new Date(observationNow));
+  - 981:      const verificationSpy = vi.spyOn(sessions, 'verificar').mockImplementation((token, now) => {
+  - 1032:        const windowSpy = vi.spyOn(policy, 'inspectInTransaction').mockImplementation(async (tx, reference) => {
+  - 1113:        const resolverSpy = vi.spyOn(resolver, 'validateOperationContextInTransaction').mockImplementation(async (tx, expected, selected) => {
+  - 1209:        const resolverSpy = vi.spyOn(resolver, 'validateOperationContextInTransaction').mockImplementation(async (tx, expected, selected) => {
+  - 1279:        const observationClockSpy = vi.spyOn(observationClock, 'now').mockImplementation(() => new Date(clockNow));
+  - 1356:        const observationClockSpy = vi.spyOn(observationClock, 'now').mockImplementation(() => new Date(Date.now() + 10_001));
+  - 541:    const publish = vi.spyOn(app.get(RealtimeService), 'publicarNaBu');
+  - 618:    const wrapped = vi.spyOn(acceptance, 'acceptInTransaction').mockImplementation(async (tx, input, beforeConversationMutation) => {
+  - 677:    const publish = vi.spyOn(app.get(RealtimeService), 'publicarNaBu');
+  - 703:    const settle = vi.spyOn(admission, 'settleOrdinary').mockImplementation((input) =>
+  - 730:    const settle = vi.spyOn(admission, 'settleOrdinary').mockImplementation(async (input) => {
+  - 402:    const clockSpy = vi.spyOn(clock, 'now').mockImplementation(() => new Date(now));
+  - 730:    const spy = vi.spyOn(boundary, 'run').mockImplementation(async (phase, work) => {
+  - 752:    vi.spyOn(boundary, 'run').mockImplementation(async (phase, work) => {
+  - 803:    vi.spyOn(boundary, 'run').mockImplementation(async (phase, work) => {
+  - 850:    vi.spyOn(boundary, 'run').mockImplementation(async (phase, work) => {
+  - 922:    vi.spyOn(boundary, 'run').mockImplementation(async (phase, work) => {
+  - 998:    vi.spyOn(boundary, 'run').mockImplementation(async (phase, work) => {
+  - 1580:    if (fault !== 'none') vi.spyOn(boundary, 'run').mockImplementation(async (phase, work) => {
+  - 1983:    const boundarySpy = vi.spyOn(boundary, 'run').mockImplementation((phase, work) => originalRun(phase, (tx) => {
+  - 2057:    const clockSpy = vi.spyOn(clock, 'now').mockImplementation(() => new Date(now));
+  - 2152:    const clockSpy = vi.spyOn(clock, 'now').mockImplementation(() => new Date(now));
+  - 2223:    const clockSpy = vi.spyOn(clock, 'now').mockImplementation(() => new Date(now));
+  - 2231:    const boundarySpy = vi.spyOn(boundary, 'run').mockImplementation(async (phase, work) => {
+  - 2352:    const clockSpy = vi.spyOn(clock, 'now').mockImplementation(() => new Date(now));
+  - 112:    const numberPages = vi.spyOn(metaFake, 'numerosDaWaba')
+  - 157:    const adapterPort = vi.spyOn(metaFake, 'verificarNumeroVinculado').mockImplementation((wabaId, phoneNumberId, accessToken) =>
+  - 915:      const publish = vi.spyOn(app.get(RealtimeService), 'publicarNaBu');
+  - 167:    const start = vi.spyOn(typebotFake, 'iniciar').mockResolvedValue({ sessionId: 'two-text-session', messages: [
+  - 24:    vi.spyOn(Date, 'now').mockImplementation(() => now);
+  - 330:    const clock = vi.spyOn(Date, 'now').mockImplementation(() => now);
+
+Counts: hard_bypass=5 test_support=0 auth_shortcut=0 status_only=201 no_exception_only=4 ambient_subject_fallback=21 di_override=0 mock_hint=37

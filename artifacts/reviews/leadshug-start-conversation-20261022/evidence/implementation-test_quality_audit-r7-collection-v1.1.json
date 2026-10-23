@@ -1,0 +1,23 @@
+{
+  "kind": "Root actual terminal complete r7 TQA collection",
+  "review_kind": "test_quality_audit",
+  "session_id": 29761,
+  "actual_exit_code": 0,
+  "turns_completed": 1,
+  "tool_items": 0,
+  "result_sha256": "61e06d1c67a06f7974760c045fe98cc5d61b14e82b60a8b5e096bc9bd2060123",
+  "events_sha256": "024d146410f6976f9b8618e8834d743b0138c3cef266245ebc8e3490b21a1496",
+  "structured_result_parsed": true,
+  "strict_merge_exit_code": 0,
+  "eight_substantive_sections_present": true,
+  "five_method_questions_explicit": true,
+  "complete_static_inventory_addressed": 268,
+  "report_characters": 4624,
+  "substantiveness_basis": "Root read all eight sections: actual scope/delta; state and side-effect oracles; honest mixed RED chronology; five explicit questions; all268 signals and category counts; actual967/CI/DI/platform; D01-D10/security/performance; debt and pending gates. This is semantic adjudication, not a character threshold.",
+  "collection_note": "An initial root collection assertion demanded an arbitrary >5000 report characters; it rejected this4624-character response without writing a receipt. That threshold was not an audit requirement. No reviewer rerun, result mutation, relaxation of the eight-section workload or claim of extra content occurred.",
+  "finding_ids": [
+    "F-035510C8"
+  ],
+  "status": "No new material test-quality defect established; synthetic candidate accepted, already-required delivery/runtime/operator/module/fullguard/final gates stay open.",
+  "recorded_at_utc": "2026-10-23T13:14:17.019257+00:00"
+}

@@ -1,0 +1,20 @@
+{
+  "kind": "Actual fresh complete r7 TQA launch; no verdict inferred",
+  "recorded_at_utc": "2026-10-23T13:10:19.985302+00:00",
+  "review_kind": "test_quality_audit",
+  "session_id": 29761,
+  "model": "gpt-5.6-terra",
+  "effort": "xhigh",
+  "package": "foundation_documentation/artifacts/reviews/leadshug-start-conversation-20261022/implementation-test_quality_audit-r7-package-v1.1.md",
+  "package_sha256": "49388d7860ae7e4e439c016f3f2f9808455fdcb94154831cab162940121c2eb7",
+  "dispatch": "foundation_documentation/artifacts/reviews/leadshug-start-conversation-20261022/implementation-test_quality_audit-r7-dispatch-v1.1.md",
+  "dispatch_sha256": "04b0f0249cd29b32d59800160536a991b767971d1d9655e7af10c7c0c890acf7",
+  "complete_prompt_characters": 1035915,
+  "complete_prompt_sha256": "620ca32f87a546d391cf156cb31eb0beae3ab30a0fe49b261f0ba8841b94f2ca",
+  "no_context": true,
+  "tools_and_edits_prohibited": true,
+  "root_static_validation": "All268 exact core fields and selected semantic support;230 unchangedE64,38 current rows whose complete current source is embedded. Raw high/exit2 preserved; per-row view transparently omits duplicate metadata/unselected support.",
+  "root_current_receipts_checked": 9,
+  "source_frozen": true,
+  "remaining": "Wait actual terminal and substantiveness check of full eight-section audit; no runtime/guard/closure approval inferred."
+}
