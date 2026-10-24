@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-24",
+  "kind": "bounded-causal-red-with-qualified-reach",
+  "command": "bash scripts/test-channels-local.sh api-instagram",
+  "log": "foundation_documentation/artifacts/tmp/instagram-channel-implementation/cp2-red-subscription-unknown-01.log",
+  "sha256": "b891ec16c815dacc552c212f6f53d7906b925f7eb57a8d87b4b9406d33638424",
+  "exit": 1,
+  "unitPassed": 395,
+  "integration": {
+    "passed": 45,
+    "failed": 2,
+    "total": 47
+  },
+  "preEditOrder": "Sole executor explicitly reported only test edits before run, no subscription production correction or source edits during run. Root matched log hash and terminal summaries, not an independently sealed pre-edit product manifest.",
+  "reachedFailures": [
+    "Unexpected speculative GET before first subscription POST.",
+    "Second recovery scenario counted2GETs before cooldown."
+  ],
+  "qualification": "Does not prove that every later UNKNOWN, malformed-envelope, crash or cross-attempt assertion was reached; remaining behavioral proof must be identified separately. This is not a confirmation-idempotency RED. No current acceptance."
+}

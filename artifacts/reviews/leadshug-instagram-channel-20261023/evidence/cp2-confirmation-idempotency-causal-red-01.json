@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-24",
+  "kind": "real-boundary-causal-red",
+  "findingId": "IG-CP2-ROOT-04",
+  "command": "bash scripts/test-channels-local.sh api-instagram",
+  "log": "foundation_documentation/artifacts/tmp/instagram-channel-implementation/cp2-red-confirm-idempotency-01.log",
+  "sha256": "bd5625888de968bef23f2e3a16bf6b68e11d67f15f7995df104b9f164f3427fe",
+  "exit": 1,
+  "unitPassed": 395,
+  "integration": {
+    "passed": 45,
+    "failed": 2,
+    "total": 47
+  },
+  "preEditOrder": "Sole executor explicitly reported only test additions before subscription and confirmation product corrections; no edits during runner. Root matched exact terminal log hash and summary, not a separately sealed pre-edit product manifest.",
+  "reachedFailure": "Confirmation without Idempotency-Key returned200 and progressed instead of400. The first new ROOT04 assertion failed at the actual authenticated BFF/PostgreSQL boundary.",
+  "notReached": "Invalid-key and remaining later confirmation replay assertions were not reached; do not attribute their proof to this RED.",
+  "otherFailure": "The existing subscription scenario still observed two speculative GETs where zero was expected.",
+  "acceptance": "none; correction and meaningful positive/concurrent proof pending"
+}

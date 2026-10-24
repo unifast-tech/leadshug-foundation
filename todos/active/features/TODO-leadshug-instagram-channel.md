@@ -31,7 +31,7 @@ Este TODO define WHAT, exclusões e critérios de entrega. A baseline v1.3 abaix
 ## Delivery Status Canon (Required)
 - **Current delivery stage:** Pending
 - **Qualifiers:** none
-- **Next exact step:** executar CP2 OAuth/registro e ingresso Instagram autenticado, test-first em PostgreSQL descartável; depois CP3..CP6.
+- **Next exact step:** concluir prova/revisão da segurança CP2 e confirmação idempotente; continuar CP3 independente com a obrigação de observação própria CP2 explicitamente aberta, depois CP4..CP6.
 
 ## Active Work State (Required While TODO Remains In `active/`)
 - **Work state:** implementation
@@ -611,9 +611,13 @@ Historical planning observation retained: IG-REV-01..04, strategic source, high/
 | IG-CP2-ROOT-01 | medium | release-blocker | fix in this TODO | accurate persisted budget backoff under SCOPE-04/VAL-03 | open; static, behavioral case requested | cp2-root-static-observations.json |
 | IG-CP2-ROOT-02 | high | release-blocker | fix in this TODO | current post-HTTP lease fence under SCOPE-04/VAL-03 | open; static, delayed authorization case requested | cp2-root-static-observations.json |
 | IG-CP2-ROOT-03 | medium | release-blocker | fix in this TODO | actual credential acquisition/expiry under DOD-03/VAL-03 | open; static, delayed profile case requested | cp2-root-static-observations.json |
+| IG-CP2-ROOT-04 | high | release-blocker | fix in this TODO | Existing UUID key and durable replay/conflict contract also governs OAuth confirmation | open; static, real-boundary RED requested | cp2-confirmation-static-observation.json |
 | IG-SUBPROTO-01 | high | release-blocker | resolve primary protocol in this TODO | Own-subscription GET envelope, ID subject and completeness remain unproved; do not infer unsupported from omission | open; primary prerequisite | subscription-protocol-opinion-result.json |
 | IG-SUBPROTO-02 | medium | release-blocker | preserve UNKNOWN fence in admitted code | An unexplained empty or mismatched-ID observation cannot permit a second POST after uncertainty | open; implementation/proof requested | subscription-protocol-opinion-result.json |
 | IG-SUBPROTO-03 | medium | release-blocker | retain typed identity purposes in this TODO | No speculative parent-app configuration or guessed ID comparison; same approved OAuth path | open; current-source review pending | subscription-protocol-opinion-result.json |
+| IG-SUBREC-02 | high | release-blocker | fix in this TODO; related to IG-SUBPROTO-02 | Resource-lifecycle dispatch fence survives new attempt, reauthorization, lease expiry and crash | open; behavioral RED/proof in progress | subscription-recovery-concretization-result.json |
+| IG-SUBREC-03 | medium | release-blocker | retain with IG-SUBPROTO-01 in this TODO | UNKNOWN is valid, but own-account observation remains mandatory and unaccepted | open; primary protocol | subscription-recovery-concretization-result.json |
+| IG-SUBREC-04 | medium | by-design/no-action | proposed investigation remains unexecuted | Bounded empirical observations cannot establish universal completeness or authorize repeated mutation | documented; no execution authority inferred | subscription-recovery-concretization-result.json |
 
 ## TODO Closeout Disposition
 - **Disposition:** blocked
@@ -1064,3 +1068,22 @@ Initial mutation and retry have distinct proof requirements: the documented firs
 Root-observed receipts cp2-postimplementation-diagnostic-red-04..08.json retain actual failed rounds, reached assertions and executor diagnoses. Round8 passed395unit and43/47integration; the remaining ingress scope defect was corrected only after that run terminated. Source remains mutable and CP2 unaccepted; no current acceptance follows from aggregate counts. ROOT01..03 have reported corrections and later behavioral assertions, but no separate pre-fix causal RED was captured for those static findings.
 
 The path-only broad Git status deviation is retained in cp2-inventory-boundary-deviation.json: one unauthorized inventory command, no content/credential exposure or writes reported. Root did not inspect, reproduce or copy its raw output. No private-file authority or evidence claim follows. Existing runtime and35immutable public-path boundaries remain unchanged.
+
+The current mutable confirmation controller/service/spec do not consume or persist a confirmation request key despite the approved endpoint contract. IG-CP2-ROOT-04 records this static gap and requests real BFF/PostgreSQL causal RED followed by one-promotion/one-dispatch replay proof. The executor was notified without changing source during its active runner. No new scope or acceptance is inferred. Callback return-route alignment remains within the admitted controller/UI responsibility; the protected App.tsx is not to be edited.
+
+## CP2 recovery concretization — independent sequencing
+
+Fresh strongest opinion subscription-recovery-concretization-result.json is terminal and strict merge passed. It confirms that the existing approved contract does not guarantee automatic successful recovery independent of provider evidence: truthful durable UNKNOWN is valid. It also confirms that a permanent no-op cannot satisfy the required own-account read. IG-SUBPROTO-01 and IG-SUBREC-03 stay open until the supported primary protocol, implementation and proof are established. No safety or consumer criterion is waived.
+
+| Finding ID | Resolution | Usefulness | Formalizable | Candidate Rule Level | Candidate Rule ID | Rationale / Evidence |
+| --- | --- | --- | --- | --- | --- | --- |
+| IG-SUBPROTO-01 | Integrated | useful | partial | project | n/a | Remains primary prerequisite before recovery acceptance and delivery |
+| IG-SUBREC-02 | Integrated | useful | yes | project | n/a | Resource-lifecycle fence and crash uncertainty are existing subscription safety obligations; causal tests in progress |
+| IG-SUBREC-03 | Integrated | useful | yes | project | n/a | Honest pending does not erase the explicit own-account observation requirement |
+| IG-SUBREC-04 | Integrated | useful | partial | none | n/a | Two-GET operator proposal only; no provider activity authorized or executed, no universal inference |
+
+Sequencing HOW is concretized as follows: finish current CP2 safety/idempotency proof and fresh source review with exact limits; independent CP3 implementation may then proceed without waiting for the provider-protocol clarification, while CP2 remains unaccepted. Overlapping source writes remain serialized, and no source changes occur during frozen validation/review. This is no new functional scope or gate waiver: all sixteen CP2 obligations, the missing own-account read, CP3–CP6, complete UI/browser and assurance gates remain mandatory before delivery.
+
+User readiness confirmation on2026-10-24: the professional Instagram test account is added, with no test token generated. instagram-test-account-readiness-20261024.json records only this state. No credential acquisition or provider operation follows; synthetic implementation continues. The proposed operator investigation remains unexecuted and currently lacks its existing-token prerequisite.
+
+Qualified causal receipts cp2-subscription-unknown-causal-red-01.json and cp2-confirmation-idempotency-causal-red-01.json preserve the actually reached failures. ROOT04 missing key returned200 instead of400; subsequent invalid-key assertions were not reached. Subscription assertions observed speculative GETs; these rounds do not prove every downstream UNKNOWN/crash/cross-attempt case. No aggregate RED/GREEN count substitutes for the exact remaining obligations.

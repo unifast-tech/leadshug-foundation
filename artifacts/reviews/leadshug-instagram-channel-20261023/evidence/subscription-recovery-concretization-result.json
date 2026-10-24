@@ -1,0 +1,55 @@
+{
+  "schema_version": "subagent-review-result-v1",
+  "artifact_kind": "subagent_review_result",
+  "dispatch_path": "/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/subscription-recovery-concretization-dispatch.json",
+  "review_kind": "architecture_opinion",
+  "reviewer_label": "instagram_subscription_recovery_opinion",
+  "overall_assessment": "The conservative first-POST plus durable UNCERTAIN/UNKNOWN fence is the simplest faithful interim architecture. The approved clauses require safe explicit recovery and an own-account observation capability; they do not guarantee successful automatic recovery independently of provider evidence. Independent CP3 implementation may proceed while IG-SUBPROTO-01 remains explicitly open. That sequencing does not complete CP2, accept the recovery criterion, waive any consumer obligation, or authorize provider activity. This is an architecture opinion, not current-source adherence or delivery acceptance.",
+  "recommended_path": "Implement and source-review the durable first-dispatch fence, documented success handling, explicit advance boundary, and narrow subscription observer now. Persist dispatch intent before HTTP and conservatively retain uncertainty after any possibly dispatched mutation whose outcome was not durably established. Preserve that fence across authorization attempts for the same resource. Model observation as own-confirmed, conclusively-absent, or UNKNOWN; until the GET contract is established, do not invent parsing, identity comparisons, or absence evidence. UNKNOWN preserves pending and permits no further subscription mutation. Keep the actual own-account-read obligation explicitly incomplete where its protocol is unavailable. Establish GET support, response envelope, own-app identification, visibility and completeness semantics before accepting that obligation or enabling absence-based repeat POST. Continue independent CP3 work without changing the remaining checkpoint requirements. The main tradeoff is reduced automatic progress after uncertainty in exchange for truthful state and prevention of unsupported repeat mutation. A narrow state machine improves elegance and structural soundness; request limits keep performance acceptable without a measured throughput claim.",
+  "performance_position": "acceptable",
+  "elegance_position": "strong_positive",
+  "structural_soundness_position": "strong_positive",
+  "operational_fit_position": "mixed",
+  "findings": [
+    {
+      "finding_id": "IG-SUBPROTO-01",
+      "severity": "high",
+      "category": "architecture",
+      "formalizable_hint": "partial",
+      "candidate_rule_level": "project",
+      "title": "The primary GET contract remains an acceptance prerequisite",
+      "rationale": "The bounded package expressly retains this finding as open. The documented POST does not establish GET support, response shape, own-app identity, visibility, pagination completeness, or when an empty result proves absence. Conservative UNKNOWN handling preserves safety while these facts are missing, but does not close the unresolved observation requirement. Neither omission from documentation nor an installation-specific response establishes the missing universal contract.",
+      "suggested_action": "Carry IG-SUBPROTO-01 forward explicitly through independent CP3 work. Require the supported observation contract and corresponding implementation proof before recovery-criterion acceptance and final delivery. Keep all CP2 obligations and CP4 through CP6 requirements intact."
+    },
+    {
+      "finding_id": "IG-SUBREC-02",
+      "severity": "high",
+      "category": "structural_soundness",
+      "formalizable_hint": "yes",
+      "candidate_rule_level": "project",
+      "title": "The uncertainty fence must belong to the resource lifecycle",
+      "rationale": "A new attempt, reauthorization, expired lease, or crash cannot prove that an earlier subscription POST did not reach Meta. A durable dispatch claim provides an at-most-once local dispatch policy, not an exactly-once provider outcome. Recording intent before HTTP can leave an operation uncertain even when a crash prevented transmission; that conservative loss of progress is consistent with the proposed no-repeat rule. A documented success:true confirms the subscription request but still does not replace the required authenticated ingress receipt.",
+      "suggested_action": "Preserve dispatch history and uncertainty across attempts for the same verified resource. Permit the first POST only with durable evidence that no prior dispatch is recorded. After uncertainty, permit another POST only through a fresh authorized claim supported by primary-established conclusive own absence. Keep HTTP outside transactions and retain existing lease, authorization, ownership, budget, cooldown and receipt gates."
+    },
+    {
+      "finding_id": "IG-SUBREC-03",
+      "severity": "medium",
+      "category": "adherence",
+      "formalizable_hint": "yes",
+      "candidate_rule_level": "project",
+      "title": "UNKNOWN is a valid recovery outcome, but does not erase the read obligation",
+      "rationale": "Nothing in the approved clauses guarantees eventual automatic success after every uncertain mutation. Honest durable pending is therefore valid when evidence remains inconclusive. However, a handler that permanently returns UNKNOWN without an implemented supported observation path cannot be accepted as delivery of the explicit own-account-read requirement. Avoiding a speculative GET is a reasonable interim safety choice; claiming that this completes recovery would dilute approved scope.",
+      "suggested_action": "Retain the explicit advance observation boundary and typed UNKNOWN outcome. If the protocol is unavailable, report that limitation truthfully and keep the observation criterion open instead of issuing guessed requests or treating a no-op as a completed read. Once supported, perform only the bounded own-account observation within the approved request, timeout and lease limits; never inspect or mutate other-app subscriptions."
+    },
+    {
+      "finding_id": "IG-SUBREC-04",
+      "severity": "medium",
+      "category": "operational_fit",
+      "formalizable_hint": "partial",
+      "candidate_rule_level": "none",
+      "title": "The proposed two-GET investigation provides bounded empirical evidence",
+      "rationale": "The proposed operator sequence can materially clarify whether the selected installation accepts the requested endpoint and fields, what response shape and paging markers appear, and which locally known identifiers equal returned identifiers. It cannot establish general GET support, identifier namespace semantics, complete own-app visibility, consistency after uncertain POST, or conclusive absence. Two requests leave no allowance for following pagination. An empty response cannot authorize another POST; an error code cannot by itself prove endpoint non-support. Local identifier equality is an observed equality, not a general identity contract.",
+      "suggested_action": "Treat the plan solely as a separately authorized operator investigation: at most the two proposed GETs, an already eligible token, the stated host and version, no retries or additional credential acquisition, and stop if prerequisites are unavailable. Report only the proposed sanitized classifications, allowing multiple local identity matches where applicable. Use results to refine the primary-contract question, not to clear the uncertainty fence or close IG-SUBPROTO-01. This opinion grants no execution authority."
+    }
+  ]
+}

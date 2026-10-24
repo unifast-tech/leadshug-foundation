@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-24",
+  "kind": "static-observation-not-dynamic-proof",
+  "findingId": "IG-CP2-ROOT-04",
+  "severity": "high",
+  "subject": "OAuth confirmation durable idempotency",
+  "normative": "TODO endpoint contract requires UUID Idempotency-Key and durable replay/conflict for OAuth creations and confirmations.",
+  "observed": "Current controller confirm reads no key; service confirm accepts no key and requires CANDIDATE_READY. Spec confirms with no key. A later identical confirm therefore lacks persisted same-key replay contract.",
+  "paths": [
+    "api-app/src/surfaces/bff/instagram-authorizations.controller.ts",
+    "api-app/src/domain/channels/instagram-authorization.service.ts",
+    "api-app/test/instagram-cp2.e2e-spec.ts"
+  ],
+  "requestedProof": "Before product correction, meaningful missing/invalid key and concurrent same-key replay vs payload-conflict RED at real BFF/PostgreSQL boundary; prove one durable promotion and one external subscription dispatch. Preserve existing scenarios.",
+  "qualification": "Static observation only; no pre-fix dynamic execution claimed; executor notified while runner active, no edits during active run. Same approved WHAT and admitted paths, no new permission."
+}
