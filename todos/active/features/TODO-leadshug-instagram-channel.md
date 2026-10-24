@@ -633,6 +633,8 @@ Historical planning observation retained: IG-REV-01..04, strategic source, high/
 
 | IG-CP2-ROOT-08 | medium | release-blocker | reprove stable candidate in this TODO | Executor edited authorization source during GREEN05, invalidating current-source proof | open; separate frozen validation lane required | cp2-r1-midrun-edit-deviation.json |
 
+| IG-CP2-ROOT-09 | medium | release-blocker | validate actual current candidate in this TODO | Executor consulted non-authoritative backup instructions and misread empty exact-path Git diff; root corrected authority and positive hash evidence | open; clean frozen proof and complete adherence required | cp2-residual-context-alignment-deviation.json |
+
 ## TODO Closeout Disposition
 - **Disposition:** blocked
 - **Disposition reason:** implementação aprovada em curso; CP1 aceito, findings CP2 e demais checkpoints/gates abertos, sem entrega parcial aceita.
@@ -1158,3 +1160,19 @@ The test-only writer became terminal; root matched reported sources and sealed23
 Validation02 reached a causal expiry race: confirmation returned200instead of409after the durable claim expired before the mapping transaction. R1-01/ROOT02 remain open. The callback failure was an overly strict relative-URL test assumption; the fourth observation conflicts with the approved three-request budget and must be corrected without raising/resetting that budget or weakening confidentiality. cp2-residual-code-only-repair-handoff.json assigns one serialized code/test writer with NO runner authority, addressing all remaining admitted current-clock/credential/deadline/CAS/history fences and meaningful independent tests. Root will refreeze and dispatch a separate validator after the writer is terminal. No source edits during validation/review.
 
 No CP2 acceptance follows. The primary observer, precontroller session confidentiality companion, public privacy companion and outbound-byte proposal remain open with their exact authority limits. CP3..CP6 and all complete regression/browser/assurance/physical gates remain required.
+
+## CP2 code-only candidate — terminal and refreeze
+
+The residual code-only executor is terminal without running validation. Root matched8reported changed paths, allother228frozen public paths,35preservation rows and3rootindex references. cp2-residual-code-only-terminal-reconciliation.json records the exact candidate. Repairs and new cases remain NOTRUN; source hash agreement is not correctness evidence.
+
+IG-CP2-ROOT-09 retains an instruction/evidence alignment lapse: reported backup instruction reads and an inaccurate committed/baseline inference from empty exact-path Git diff. Edits paused; principal instructions/profile/TODO were reloaded, scope corrected and same admitted path ownership preserved. Root did not inspect/copy backup files, and no exposure, Git write or sourcecopy is inferred. Independent actualsource review and clean stable validation are mandatory; backup context/emptydiff cannot substantiate acceptance.
+
+An executor static concern about the expiry-test barrier is qualified: the test releases the first blocker before waiting for the claim, and prior frozen validation02 reached the response assertion only after claimSeen/CANDIDATE_READY assertions passed. That observation does not prove the newly repaired version; the separate rerun determines its actual reached result. No assertion is weakened on speculation.
+
+Current236publicfiles and this TODO are frozen for one separate api-instagram validation. No source/TODO writer during the run; only distinct evidence outputs. After terminal matching, fullAPI/freshcompleteCP2adherence and then independentCP3 remain required, without waiving primaryobserver, pendinghuman companions or CP4..CP6.
+
+## CP2 validation03 — builder failure and narrow causal proof lane
+
+The separate frozen validation03 is terminal, with236source/TODO/35preservation/3index matched. Prisma generation stopped atP1012because the two new resource-history indexes have colliding generated truncated names; migrations/lint/build/unit/integration were NOTREACHED. cp2-residual-validation-03-result.json preserves this as builder-only evidence, not a functional result.
+
+Freeze03 ended only for a fresh narrow code/test-only lane: explicit unique short indexmaps matching SQL names, with identical columns/order, plus one actualBFF/PG natural signed-session expiry case. Existing ROOT02/R1-06 require current authorization after waits; requireActorTx currently verifies the session before awaiting the user row. This is a static concern, not a proven exploit. cp2-session-clock-static-observation.json and cp2-index-clock-proof-handoff.json bind the three admitted paths and causal proof plan. The service stays unchanged so a later separate runner can establish RED. Actual SessionService signing/verification, realPG waits and current BFF are used; no auth/clock/transaction mocks, private data or runtime authority. No runner in writer lane.

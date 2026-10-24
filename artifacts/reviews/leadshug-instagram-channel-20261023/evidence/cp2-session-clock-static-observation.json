@@ -1,0 +1,11 @@
+{
+  "kind": "cp2-current-session-clock-static-observation",
+  "findingAssociation": "IG-CP2-ROOT-02/R1-06 existing live-current-auth obligations",
+  "sourceManifest": "cp2-residual-validation-frozen-manifest-03.json",
+  "source": "api-app/src/domain/channels/instagram-authorization.service.ts:620",
+  "observation": "requireActorTx verifies signed session before awaited app_users FOR SHARE / BU / grant reads. Callback claim after helper waits checks stage/attempt/lease clocks but not signed session expiry; first HTTP exchange has no new predispatch session check. Current password-change-afterHTTP case does not prove natural expiry while a PG authorization wait is held.",
+  "qualification": "Static source concern, no dynamic exploit/proof run. No source fix under activevalidation.",
+  "causalProofPlan": "Use normal SessionService.assinar(uid,historicalIssuedAt) with synthetic existing user/password timestamps and near24h expiry; real BFF create binds same validcookie; hold actual app_users row while callback blocks in requireActorTx FOR SHARE; prove PG lock waiter, let actual token expiry pass, release. Assert no externalHTTP or candidate/mapping/credential promotion. No auth mocks, clockpatch, transactionmock, or actual operational/private data.",
+  "scope": "Only existing admitted residualspec, normal public session service read-only, actual disposablePG and externalHTTPfake.",
+  "next": "Narrow test-first/index-builder lane; then separate frozen actualrun before production auth-clock repair."
+}

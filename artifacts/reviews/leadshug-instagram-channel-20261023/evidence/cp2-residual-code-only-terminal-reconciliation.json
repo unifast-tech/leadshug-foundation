@@ -1,0 +1,22 @@
+{
+  "kind": "cp2-code-only-writer-terminal-reconciliation",
+  "date": "2026-10-24",
+  "writerTerminal": true,
+  "reportedEightHashesMatched": {
+    "api-app/src/domain/channels/instagram-authorization.service.ts": "7f68bcbb9e2f0272cf9f73a0571dc59e3caba80d4777f1e93118dffc7ec90122",
+    "api-app/src/integrations/instagram/instagram-http.client.ts": "90cee062c25df090bf590087324bb2be139762a2183dac0c473f17aa8bea10ad",
+    "api-app/src/surfaces/webhooks/instagram.controller.ts": "abda838bdfcbced9bbe6801ed8388e4e97b74bcea3ee65259883131b9be467a4",
+    "api-app/prisma/schema.prisma": "755a59d3021d3cffea86b2354a98539e7440a3c8e83313a9c1169815812a2322",
+    "api-app/prisma/migrations/20261024100000_instagram_authorization_attempts/migration.sql": "d9e41f8a531612589547926b309c172823fc9566a9545f55ebbe428b4e12c01f",
+    "api-app/test/helpers.ts": "15270016f5402f787c6e24b5dfc8f4ab366efe08c1c5b01ea69f6427548a193c",
+    "api-app/test/instagram-cp2.e2e-spec.ts": "ee0960e0718833a9018bcd2db32001e7ac034210d03c7924fd141385396a9f44",
+    "api-app/test/instagram-cp2-residual.e2e-spec.ts": "b75f7f536a77dd96ca118c84d806e8153776a2b24c5fe963be938e03c110ef35"
+  },
+  "allOtherFrozenPathsUnchanged": true,
+  "preservedRows": 35,
+  "rootIndexMatched": true,
+  "execution": "No runner/tests/lint/build in writer lane; all new proof NOTRUN",
+  "staticBarrierConcern": "Executor suggested initialclaim blocker prevents claimSeen; root challenged using exact source sequencing: releaseFirst precedes claimSeen and prior frozen validation02 reached response assert291 only after claimSeen/CANDIDATE_READY assertions. No unreachable conclusion or weakening follows; current version still requires real rerun.",
+  "instructionsDeviation": "cp2-residual-context-alignment-deviation.json",
+  "next": "Freeze current236source/T for one separate api-instagram validation; allwriters terminal. Pending3humanchanges remain untouched; primaryobserver open; no CP2 acceptance."
+}

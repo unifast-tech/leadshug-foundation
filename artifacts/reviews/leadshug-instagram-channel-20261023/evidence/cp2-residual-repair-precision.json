@@ -1,0 +1,11 @@
+{
+  "kind": "cp2-approved-repair-precision",
+  "date": "2026-10-24",
+  "changesApprovedWHAT": false,
+  "authority": "Existing R1 ROOT02/04 findings and approved durable request/administrative deadline clauses; sent to solewriter before implementation completion.",
+  "callbackStage": "ROOT02 covers OAuth callback as well as confirmation/advance. Persist/bind one40s stage deadline distinct from60s callback lease; cap all3 external exchanges and body reads by remaining stage budget and10s/request. Actual clock after DB waits and provider success/error controls terminal CAS.",
+  "perInvocation": "Immutable40s applies to each explicit administrative invocation. A later authorized recovery/advance is a new bounded invocation; it does not renew old lease holder, retry one-use code, rewrite original request/hash/context or authorize a second uncertain subscription mutation. Do not impose permanent40s since firstmapping that would contradict explicit later recovery.",
+  "historicalCompletedReplay": "After current authorization/key/body checks, completed durable confirmation replays the original immutable safe result with zeroHTTP/zero promotion/newmutation. This historical fact is distinct from current usability/advance. Live current resource/generation/credential/expiry checks apply to new/resumed work and completion, not to erasing or rewriting an earlier completed receipt.",
+  "preservation": "Genuine committed receipt/message/unread facts survive stale or expired current operations; unknown subscription result remains mutation-fenced across attempts/reauth/cancel/crash.",
+  "pendingHuman": "No changes to pending session middleware/privacy/outbound-byte proposals."
+}

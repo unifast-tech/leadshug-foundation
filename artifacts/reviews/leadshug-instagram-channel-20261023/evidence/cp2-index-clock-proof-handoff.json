@@ -1,0 +1,21 @@
+{
+  "kind": "cp2-index-name-and-clock-proof-code-only-handoff",
+  "authority": "ST-IG-03v1.3 admitted schema/migration/test; validation03terminal, root236/T matched; no scope expansion",
+  "profile": "Operational/Coder nestjs/prisma/postgresql",
+  "ownedWrites": [
+    "api-app/prisma/schema.prisma",
+    "api-app/prisma/migrations/20261024100000_instagram_authorization_attempts/migration.sql",
+    "api-app/test/instagram-cp2-residual.e2e-spec.ts"
+  ],
+  "readFirst": [
+    "cp2-residual-validation-03-result.json",
+    "cp2-session-clock-static-observation.json",
+    "cp2-residual-validation-frozen-manifest-03.json",
+    "cp2-residual-context-alignment-deviation.json",
+    "inherited-public-preservation-v1.2.json"
+  ],
+  "indexFix": "Give the two new indexes explicit unique short maps, identical to short unique SQL CREATE INDEX names, max63bytes; same columns/order/meaning. No other schema/migration changes or actualDB activity.",
+  "testFirst": "Add independent real Nest/BFF/PG natural session expiry at held user-row authorization wait. Use real app SessionService.assinar with explicit historical issuedAt (24h minus a fewseconds), synthetic old user/password timestamps so valid normalguards pass. Same cookie createsattempt/state. Hold app_users row FOR UPDATE before callback; prove actual FOR SHARE waiter via pg_stat_activity (not fixed sleep alone). Wait actual signed expiry then release while40s stage remains valid. Assert one combined persisted fact snapshot: zero providerHTTP, status still AUTHORIZATION_PENDING/no candidate/no mapping/credential promotion. Safe callback303/headers/redaction preserved. No SessionService/domain/auth/grant/Prisma/transaction mocks, no globalclockpatch, no .env reads. Do not change service code; capture causalRED in later separate validator.",
+  "noExecution": "No runner/lint/build/test commands. Static exact-path inspection only; terminal with3filehashes and NOTRUN map. No Gitcommands/backups/private/actualenv/runtime/provider/Meta/worktrees/copies/subagents/GOAL/Foundation writes.",
+  "preserve": "All priorcases/assertions and35immutable/index retained. Source fixes beyond indexname prohibited in this lane, even obvious authclock defect. Root freezes then separatevalidator."
+}

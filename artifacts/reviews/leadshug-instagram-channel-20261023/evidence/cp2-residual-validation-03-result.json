@@ -1,0 +1,17 @@
+{
+  "kind": "cp2-residual-validation-build-only-failure",
+  "command": "bash scripts/test-channels-local.sh api-instagram",
+  "exit": 1,
+  "log": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp2-residual-validation-03.log",
+  "logSha256": "bb61bd424bd8f1420e407a514efb7e63d4a96bd5bfa76db022195202fe813de2",
+  "prismaGenerate": "P1012 duplicate generated indexname instagram_authorization_attempts_professional_user_id_subsc_idx for professionalUserId/subscriptionRequests and professionalUserId/subscriptionState schema326/327",
+  "migrations": "NOT REACHED",
+  "lint": "NOT REACHED",
+  "build": "NOT REACHED",
+  "unit": "NOT REACHED",
+  "e2e": "NOT REACHED",
+  "rootMatched236AndTodo": true,
+  "executorMatchedPreservation35AndIndex3": true,
+  "functionalProof": false,
+  "freeze": "All lanes terminal; narrow thaw for explicit indexnames+new causal natural-session-expiry test only, no other production changes or runner."
+}

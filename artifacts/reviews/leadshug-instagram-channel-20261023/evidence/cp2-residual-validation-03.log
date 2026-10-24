@@ -1,0 +1,111 @@
+ Network leadshug_channels_validation_validation  Creating
+ Network leadshug_channels_validation_validation  Created
+ Volume "leadshug_channels_validation_validation_pg_data"  Creating
+ Volume "leadshug_channels_validation_validation_pg_data"  Created
+ Volume "leadshug_channels_validation_channels_api_workspace"  Creating
+ Volume "leadshug_channels_validation_channels_api_workspace"  Created
+ Volume "leadshug_channels_validation_channels_api_node_modules"  Creating
+ Volume "leadshug_channels_validation_channels_api_node_modules"  Created
+ Volume "leadshug_channels_validation_channels_web_workspace"  Creating
+ Volume "leadshug_channels_validation_channels_web_workspace"  Created
+ Volume "leadshug_channels_validation_channels_web_node_modules"  Creating
+ Volume "leadshug_channels_validation_channels_web_node_modules"  Created
+ Volume "leadshug_channels_validation_channels_npm_cache"  Creating
+ Volume "leadshug_channels_validation_channels_npm_cache"  Created
+ Volume "leadshug_channels_validation_channels_playwright_cache"  Creating
+ Volume "leadshug_channels_validation_channels_playwright_cache"  Created
+ Container leadshug_channels_validation-validation-postgres-1  Creating
+ Container leadshug_channels_validation-validation-postgres-1  Created
+ Container leadshug_channels_validation-validation-postgres-1  Starting
+ Container leadshug_channels_validation-validation-postgres-1  Started
+Runner Node: v22.23.3
+debconf: delaying package configuration, since apt-utils is not installed
+{"guard": "channels-ci-parity-v1", "mutations_rejected": ["missing-pr-trigger", "missing-channels-job", "missing-retained-guard", "weakened-job-gate", "swallowed-job-errors", "skipped-validate-step", "swallowed-retained-job", "skipped-retained-admission", "missing-retained-private-checkout", "missing-common-guard", "swallowed-common-guard-failure", "missing-instagram-selector", "widened-instagram-selector", "extra-runner-arguments-accepted", "missing-e2e", "swallowed-e2e-failure", "missing-browser", "missing-migrate", "missing-generate", "missing-lint", "reordered-suite", "missing-shell-guard", "widened-wsl-socket", "changed-wsl-host-prefix", "wrong-wsl-mask-source", "missing-wsl-overlay"], "outer_wrapper": {"collision_control": {"compose_calls": 0, "exit_code": 1}, "empty_config_control": {"compose_calls": [["compose", "--project-name", "leadshug_channels_validation", "--env-file", "/workspace/.env.example", "--env-file", "/tmp/tmp.aYz26b0BA5", "-f", "/workspace/docker-compose.yml", "-f", "/workspace/docker-compose.channels.yml", "--profile", "validation", "config", "--quiet"]], "exit_code": 0}, "inventory_failures": {"network": {"compose_calls": 0, "docker_calls": 3, "exit_code": 1}, "ps": {"compose_calls": 0, "docker_calls": 1, "exit_code": 1}, "volume": {"compose_calls": 0, "docker_calls": 2, "exit_code": 1}}, "mandatory_failure_cleanup": {"cleanup_observed": true, "compose_lifecycle": ["run", "down"], "exit_code": 42, "provider_or_real_docker_invoked": false, "required_leaf": "fake python3 reached through actual RUNNER_SCRIPT and returned 42"}, "native_path_control": {"exit_code": 0, "overlay_added": false, "posix_bind_paths_preserved": true}, "unsupported_wsl_socket_control": {"docker_calls": 0, "exit_code": 1}, "wsl_bind_path_control": {"skipped": "self-test checkout is not on a WSL-mounted drive"}}, "yaml": "safe-no-alias-no-duplicates"}
+OpenSSL: OpenSSL 3.0.22 25 Aug 2026 (Library: OpenSSL 3.0.22 25 Aug 2026)
+Principal API/Web source binds and API/root dotenv masks verified before npm.
+npm warn deprecated glob@10.5.0: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
+
+added 555 packages, and audited 556 packages in 27s
+
+138 packages are looking for funding
+  run `npm fund` for details
+
+19 vulnerabilities (4 moderate, 11 high, 4 critical)
+
+To address issues that do not require attention, run:
+  npm audit fix
+
+To address all issues (including breaking changes), run:
+  npm audit fix --force
+
+Run `npm audit` for details.
+npm notice
+npm notice New major version of npm available! 10.9.9 -> 12.2.1
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.1
+npm notice To update run: npm install -g npm@12.2.1
+npm notice
+Environment variables loaded from .env
+Prisma schema loaded from prisma/schema.prisma
+prisma                  : 6.19.3
+@prisma/client          : 6.19.3
+Computed binaryTarget   : debian-openssl-3.0.x
+Operating System        : linux
+Architecture            : x64
+Node.js                 : v22.23.3
+TypeScript              : 5.9.3
+Query Engine (Node-API) : libquery-engine c2990dca591cba766e3b7ef5d9e8a84796e47ab7 (at node_modules/@prisma/engines/libquery_engine-debian-openssl-3.0.x.so.node)
+PSL                     : @prisma/prisma-schema-wasm 7.1.1-3.c2990dca591cba766e3b7ef5d9e8a84796e47ab7
+Schema Engine           : schema-engine-cli c2990dca591cba766e3b7ef5d9e8a84796e47ab7 (at node_modules/@prisma/engines/schema-engine-debian-openssl-3.0.x)
+Default Engines Hash    : c2990dca591cba766e3b7ef5d9e8a84796e47ab7
+Studio                  : 0.511.0
+
+> @leadshug/api@0.1.0 prisma:generate
+> prisma generate
+
+Environment variables loaded from .env
+Prisma schema loaded from prisma/schema.prisma
+Error: Prisma schema validation - (get-dmmf wasm)
+Error code: P1012
+[1;91merror[0m: [1mError parsing attribute "@@index": The given constraint name `instagram_authorization_attempts_professional_user_id_subsc_idx` has to be unique in the following namespace: global for primary key, indexes and unique constraints. Please provide a different name using the `map` argument.[0m
+  [1;94m-->[0m  [4mprisma/schema.prisma:326[0m
+[1;94m   | [0m
+[1;94m325 | [0m  @@index([status, expiresAt])
+[1;94m326 | [0m  [1;91m@@index([professionalUserId, subscriptionRequests])[0m
+[1;94m   | [0m
+[1;91merror[0m: [1mError parsing attribute "@@index": The given constraint name `instagram_authorization_attempts_professional_user_id_subsc_idx` has to be unique in the following namespace: global for primary key, indexes and unique constraints. Please provide a different name using the `map` argument.[0m
+  [1;94m-->[0m  [4mprisma/schema.prisma:327[0m
+[1;94m   | [0m
+[1;94m326 | [0m  @@index([professionalUserId, subscriptionRequests])
+[1;94m327 | [0m  [1;91m@@index([professionalUserId, subscriptionState])[0m
+[1;94m   | [0m
+
+Validation Error Count: 2
+[Context: getDmmf]
+
+Prisma CLI Version : 6.19.3
+ Container leadshug_channels_validation-validation-postgres-1  Stopping
+ Container leadshug_channels_validation-validation-postgres-1  Stopped
+ Container leadshug_channels_validation-validation-postgres-1  Removing
+ Container leadshug_channels_validation-validation-postgres-1  Removed
+ Volume leadshug_channels_validation_channels_api_workspace  Removing
+ Volume leadshug_channels_validation_channels_npm_cache  Removing
+ Volume leadshug_channels_validation_leadshug_pg_data  Removing
+ Volume leadshug_channels_validation_channels_api_node_modules  Removing
+ Volume leadshug_channels_validation_leadshug_arquivos  Removing
+ Volume leadshug_channels_validation_channels_web_node_modules  Removing
+ Volume leadshug_channels_validation_channels_web_workspace  Removing
+ Volume leadshug_channels_validation_validation_pg_data  Removing
+ Volume leadshug_channels_validation_channels_playwright_cache  Removing
+ Network leadshug_channels_validation_validation  Removing
+ Volume leadshug_channels_validation_leadshug_arquivos  Removed
+ Volume leadshug_channels_validation_channels_web_workspace  Removed
+ Network leadshug_channels_validation_validation  Removed
+ Volume leadshug_channels_validation_leadshug_pg_data  Removed
+ Volume leadshug_channels_validation_channels_api_node_modules  Removed
+ Volume leadshug_channels_validation_validation_pg_data  Removed
+ Volume leadshug_channels_validation_channels_npm_cache  Removed
+ Volume leadshug_channels_validation_channels_playwright_cache  Removed
+ Volume leadshug_channels_validation_channels_web_node_modules  Removed
+ Volume leadshug_channels_validation_channels_api_workspace  Removed
+
+VALIDATION_EXIT_CODE=1

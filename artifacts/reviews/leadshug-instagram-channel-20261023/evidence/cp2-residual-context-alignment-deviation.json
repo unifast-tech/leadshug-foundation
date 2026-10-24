@@ -1,0 +1,17 @@
+{
+  "kind": "executor-context-and-evidence-alignment-deviation",
+  "date": "2026-10-24",
+  "findingId": "IG-CP2-ROOT-09",
+  "severity": "medium",
+  "route": "release-blocker",
+  "observed": "Executor initially reported workspace backup instructions as authority and denied principal AGENTS/main existence; later corrected and admitted reading backup main/profile docs. Also inferred committed/baseline state from empty exact-path git diff, invalid because new/untracked files omitted.",
+  "reportedOutsideContextRead": [
+    "Backup LeadsHug/leadshug-engineering/main_instructions.md",
+    "corresponding backup profile-selection-method.md; exact complete secondpath not confidently reported"
+  ],
+  "precision": "Root does not read/hash/copy backup files or assert their public/private classification; only reported instruction-document reads are known. No credential/data exposure, new source copy, auxiliary checkout or Git mutation inferred.",
+  "containment": "Edits paused; executor reloaded exact authoritative principal AGENTS/main/profile/operational_coder/TODO, corrected scope nestjs/prisma/postgresql, resumed same admitted paths. Root matched8reported sourcehashes, other228frozen paths unchanged,35preserved and3index entries. Writer now terminal. Emptydiff excluded from all evidence; positive file hashes govern.",
+  "requiredBeforeResolution": "Clean frozen validation and fresh complete actualsource adherence against approvedT/maininstructions only. Do not accept code, scope, historicalcommits or proof from backup/misreport.",
+  "authority": "No new WHAT/path/private/runtime/Git authority. Existing scope remains.",
+  "resolution": "open pending independent source and stable validation"
+}
