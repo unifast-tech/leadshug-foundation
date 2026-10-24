@@ -1,0 +1,87 @@
+{
+  "kind": "cp3-consumer-preparation05-root-qualified",
+  "date": "2026-10-24",
+  "authority": "Read-only preparation; core04 sole writer active on disjoint core paths. No consumer dispatch/acceptance, no source/tests/runtime/private/provider action.",
+  "readset": [
+    {
+      "path": "api-app/src/domain/inbox/historico.service.ts",
+      "sha256": "8b1123d45553f438146e615a5b7d144b2d524344f6011fb4443b162f2de1a7e7"
+    },
+    {
+      "path": "api-app/src/domain/inbox/incoming.service.ts",
+      "sha256": "390d48de06ad863b9d9c47344c1eb2919d0ba07aa96626b0ef1596fcbde4795b"
+    },
+    {
+      "path": "api-app/src/surfaces/public/conversations.controller.ts",
+      "sha256": "9e38cfc5d02f8206cbb87e981e87c91af3ea7a7efb5c6ffa4a6fc1fb5ec935b8"
+    },
+    {
+      "path": "api-app/src/surfaces/bff/me.controller.ts",
+      "sha256": "0edd826d4e9a3c0b8cde4334bf2e88f360f5f5e9d5db99e5dfc4382b5bf71bb0"
+    },
+    {
+      "path": "api-app/src/surfaces/bff/historico.controller.ts",
+      "sha256": "3bab5868bfabde5d37be8b4d2579c8dc417307904d53c743c8a7ce522526b84a"
+    },
+    {
+      "path": "api-app/src/domain/inbox/contact-identity.ts",
+      "sha256": "41d56b56f315e30e3f4c76b580993bf2ffabea3cef623e43583b6363dd7f51e9"
+    },
+    {
+      "path": "api-app/prisma/schema.prisma",
+      "sha256": "6fb1db37c44cb601e86afd441175ec14e94ec00f37616e4a5b7a915feceb3b8d"
+    },
+    {
+      "path": "api-app/test/historico.e2e-spec.ts",
+      "sha256": "4f729b9fcdfb219857b857d8f1b4baa33c0d50834b5fd9ea563723e880cbae55"
+    },
+    {
+      "path": "api-app/test/api-publica.e2e-spec.ts",
+      "sha256": "bf6a2a2932ba9b586c9478c2f3d2c662b1b0874f26f1d6752cb72d2af43ca363"
+    },
+    {
+      "path": "api-app/test/number-onboarding-typebot.e2e-spec.ts",
+      "sha256": "5c447913be4f9b2a2d699f96b43cfd9df837317897be372044b7f02dcf76e809"
+    },
+    {
+      "path": "api-app/src/domain/integration/outbound-webhook.service.ts",
+      "sha256": "fdc13f9aadcc8f0e9c566643b7da08cf7cb0aec63c821ef98025e4f2a3baee1b"
+    },
+    {
+      "path": "api-app/src/realtime/realtime.service.ts",
+      "sha256": "69d43aa7b694fa744819823f7e24071c250b390ad54d09446b2f2c797a7f3829"
+    }
+  ],
+  "facts": [
+    {
+      "path": "api-app/src/domain/inbox/historico.service.ts",
+      "lines": "30-75,83-130,135-191",
+      "finding": "History list/filter/drilldown/CSV use legacy contact and BU.phone without qualified WA route. Must preserve pagination/order/unread/audit/CSV escaping while restricting to canonical WA contact route and unique WA businessresource."
+    },
+    {
+      "path": "api-app/src/surfaces/bff/me.controller.ts",
+      "lines": "160-181",
+      "finding": "Legacy /business-units projection hydrates all channels. Restrict to compatible WA bindings (max2, no readiness filter hiding conflict); IG belongs separate paged catalog."
+    },
+    {
+      "path": "api-app/src/surfaces/public/conversations.controller.ts",
+      "lines": "50-68,70-203,228-305",
+      "finding": "Source03 already added some WA route/origin/contact filters and explicit newWA route. Complete and verify everyendpoint: accounts currently include no-WA businessresource BUs with nullnumber; no first-route guess/IG account, no accidental numericIGphone selection."
+    },
+    {
+      "path": "api-app/src/domain/inbox/incoming.service.ts",
+      "lines": "49-103",
+      "finding": "IncomingService current ChannelOrigin import now includesIG after coretypeevolution; no explicit qualifiedWA automation guard before Typebot triggers/session. Actual IGwebhook bypassesIncoming and callsAcceptance directly, so a signedIG+trigger zeroTypebot test is a journeyregression, not a causalproof of new Incomingguard."
+    }
+  ],
+  "testPlan": [
+    "New admitted test/*instagram*.e2e-spec.ts may prove consumer isolation with two coherent canonical contact/business/provider/route graphs in oneBU; matching numericpeer strings remain separatecontacts. Use actualNest/session/PG and signedIGingress where journeyproof isclaimed. No IGpeer-as-phone shortcut.",
+    "History list/drilldown/CSV excludesIG andusescanonicalbusinessnumber; permissions/filters/paging/ordering/unread/exportquoting unchanged. Publicv1 accounts/list/thread/messages/claim/release cannot mutate/reveal IG; same-phone realWA route remainsvalid, so identicalnumericIGstring alone isnot invalidphoneproof.",
+    "IGsignedIN withactiveBU/globalTypebottrigger/syntheticexistingsession cannotstart/continue/newsession/OUT. A direct actualIncomingService unsupportedplatform integrationcase may separately prove defensiveguard before effects; do not falselyclaim existingIGwebhook traversesIncoming.",
+    "Existinghistorico/public/Typebot scenarios/counters retained. Some baselinefixtures may need exactcanonicalresourceproof adaptation after actual failures; use approvedpath/companionlimits, no assertionweakening or globalHTTP/domainmocks."
+  ],
+  "partnerQualification": "Root searched only public API src for OutboundWebhookService/enviar references. Found declaration only, no callers. Realtime is scoped WebSocket publishing, not partner HTTP. This is static current non-wiring evidence, not proof an existing partner webhook delivers. No new IG connection to dormant partner service may be added. Testcounterat syntheticlocalhost receiver can support no-new-activation only, never invent a positive WA partner feature.",
+  "browserSupplement": "Realtime uses /ws and authenticated nativecookie upgrades. Proposed test-only TLSfrontdoor must forward real WS upgrades to Nest and streamHTTP, not juststaticGET/API REST. Preserve originalOrigin/nativecookie and existingHTTPWAtests; no globalOriginrewrite or unsupportedPlaywrightconfig edit.",
+  "readsetQualification": "Root independently hashed the exact stable public source/test paths above; these current source hashes are authoritative for this preparation. Control-file hashes in the advisory are navigation metadata, not additional correctness proof. No evolving core04 source or validator logs used.",
+  "status": "NOTRUN; root/executor recheck after core04 terminal. Fullconsumer and laterALL/assurance/runtimeproof mandatory."
+}

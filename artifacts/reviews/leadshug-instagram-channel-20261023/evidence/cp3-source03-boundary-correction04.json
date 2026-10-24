@@ -1,0 +1,22 @@
+{
+  "kind": "cp3-source03-writer-boundary-correction04",
+  "date": "2026-10-24",
+  "classification": "Two accidental writer-handoff path violations; bothpaths arealready withinapprovedTsourceglobs, so no newhumanWHAT/pathapproval isneeded to correctownchanges. Currentnarrowhand-offsealsstillgovern; noautomaticGitrestore/userworkdiscard/privateaccess/runtime/runner.",
+  "oauthClient": {
+    "path": "api-app/src/integrations/instagram/instagram-http.client.ts",
+    "originalSha256": "0a38a8fb164a27b92c3f6c357eb3bd4a529b012206bb4bd5fe4d7ccec13c0287",
+    "observedAccidentalSha256": "25723fc1e28565327b678e7dc93191e73b5abb5d70ee7475283fca077c22a787",
+    "change": "OnlynewoutboundsendMessage methodaddedbeforeauthorizationUrl. RootRAMremovalofexactownmethodreconstructedoriginalSHA. Author recognizedscopeerror andremovedonlyownmethod; rootindependentlyconfirmedexactoriginalbytes.",
+    "disposition": "Corrected, fullCP2OAuth/exchange/subscription/request/clocksourcepreserved exactly. Newoutboundbelongs alreadyadmittedinstagram-messaging.client.ts. Numeric-only/doublyescapedregex andUTF16length newdraftdefects flaggedbeforeanytestrun, correctinownednewclient toopaqueIDs/currentapprovedcodepointWHAT."
+  },
+  "officialPolicy": {
+    "path": "api-app/src/domain/inbox/channel-window-policy.ts",
+    "originalSha256": "46dfcf887f2ad4ed0670664186e918816699e6541d1670aa9c32ac79a193e43e",
+    "observedAccidentalSha256": "0a34aee234293a2012d4adad3a8a811a73d5b1c1f71d05474217bd0a90e7e7b9",
+    "change": "Officialevidence/query/SQL/purepredicatebroadenedtoIGoutsidewriter21pathlist. No runner/proof reliedonthiscandidate.",
+    "disposition": "Corrected androotindependentlyverifiedexactoriginalSHA. Afterfourreverts, remainingownSQLcast OFICIAL::ChannelType wasremovedbyauthor; rootRAMreconstructionprovedthatlastcastwasalldifference. No unidentifiedpriorformat/userdrift, noproducttesthadreliedonnewcandidate. IGspecificpolicyimplementationremainsrequiredinownedeligibility/resolver/outbound/BFFpaths.",
+    "restoredSha256": "46dfcf887f2ad4ed0670664186e918816699e6541d1670aa9c32ac79a193e43e"
+  },
+  "readerQualification": "Read-onlyCP4readerincidentallyhashedmodifiedOAuthclientwhileinspectingconfig; notimmutable/finalsourceevidence. Configbodyitselfunchangedbynewmethod, exactoriginalsourcewasreconstructedandrestored. No formalreviewacceptanceclaimfromthatread.",
+  "next": "Finishcorrections/fullownedimplementation, reportallpathhashes. Rootscopecheck/completepreflight thenfreeze/separatecurrentAPI/review; currentpreimplementationREDremainsvalidhistorical."
+}

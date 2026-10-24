@@ -1,0 +1,65 @@
+{
+  "kind": "cp3-core-source-continuation04",
+  "date": "2026-10-24",
+  "authority": "Same approved ST-IG-03 v1.3. Source03 terminal is PARTIAL, NOTRUN and unaccepted. No active code writer or validator. Continue core work first; a serialized consumer lane follows. All complete feature/CP2/CP3 obligations stay open.",
+  "ownedPaths": [
+    "api-app/src/domain/channels/transport/channel.ts",
+    "api-app/src/domain/channels/channel-credential-resolver.ts",
+    "api-app/src/integrations/channels/channel-adapter-factory.ts",
+    "api-app/src/integrations/channels/channel-adapter-registry.ts",
+    "api-app/src/integrations/channels/channel-transport.module.ts",
+    "api-app/src/integrations/channels/prisma-channel-resolver.ts",
+    "api-app/src/integrations/channels/instagram-channel.ts",
+    "api-app/src/integrations/instagram/instagram-messaging.client.ts",
+    "api-app/src/integrations/instagram/instagram.module.ts",
+    "api-app/src/domain/inbox/channel-eligibility-policy.ts",
+    "api-app/src/domain/inbox/outbound.service.ts",
+    "api-app/src/domain/inbox/initial-message.service.ts",
+    "api-app/src/domain/inbox/dispatch-admission.service.ts",
+    "api-app/src/domain/inbox/conversations.service.ts",
+    "api-app/src/domain/inbox/conversation-start.service.ts",
+    "api-app/src/surfaces/bff/conversations.controller.ts",
+    "api-app/src/domain/inbox/message-acceptance.service.ts"
+  ],
+  "allowedUnitSpecs": [
+    "api-app/src/domain/channels/transport/channel-initial-message.spec.ts",
+    "api-app/src/domain/channels/transport/channel-operation-context.spec.ts",
+    "api-app/src/domain/channels/transport/channel-dependencies.spec.ts",
+    "api-app/src/domain/inbox/outbound.service.spec.ts",
+    "api-app/src/domain/inbox/initial-message.service.spec.ts",
+    "api-app/src/domain/inbox/conversation-start.service.spec.ts",
+    "api-app/src/domain/inbox/channel-window-policy.spec.ts",
+    "api-app/src/domain/inbox/dispatch-admission.service.spec.ts"
+  ],
+  "newUnitSpecGlobs": [
+    "api-app/src/domain/inbox/*eligibility*.spec.ts",
+    "api-app/src/integrations/channels/*instagram*.spec.ts",
+    "api-app/src/integrations/instagram/*messaging*.spec.ts"
+  ],
+  "sealed": "All old E2E and helpers, OAuth HTTP client and authorization service, OfficialChannelWindowPolicy, schema/migrations, Web/browser/runtime/Meta, protected inherited clients. Both accidental03 path edits were restored to exact originals and recorded. No further edits there.",
+  "basis": [
+    "cp3-source03-terminal-preflight.json",
+    "cp3-source03-boundary-correction04.json",
+    "cp3-test-first02-result.json",
+    "cp3-test-first02-frozen-manifest.json",
+    "cp3-source-handoff03.json",
+    "cp3-fixture-concretization-qualified.json",
+    "cp3-primary-message-wire-verification.json",
+    "current approved TODO normative sections and module contracts"
+  ],
+  "requiredCore": [
+    "Implement actual inversion of dependency: abstract ChannelEligibilityPolicy with current-operation single/transactional inspection and bounded batch behavior, concrete official/Evolution/Instagram policies selected only in DI composition. ResolvedChannelOperation carries the abstract policy. Common Outbound/Initial/resolver/BFF consumers call that abstraction. Remove static evaluate plus scattered origin-switch window helpers. No new Channel methods, universal capability framework, duplicate sender or future operation.",
+    "Instagram batch is one bounded SQL query for the exact supplied conversation/resource pairs and current DB clock, not N repeated calls. Official wraps its unchanged established policy; pure expiry calculation can be shared. IG IN/origin/resource/peer/original qualified timestamp only; unknown/future/echo/read/OUT never opens a window. IG only human reply, no initial/automation/templates. Preserve existing WA eligibility and template semantics.",
+    "Correct credential metadata selects to include every field used (expiresAt currently read without selecting it). Match provider/BU/generation/version/key/business/resource/account and token expiry. GET metadata never decrypts or performs provider HTTP. IG factory locallyConfigured cannot always return true when required product configuration is absent.",
+    "Use one server-owned route/context construction and projection boundary. Existing BFF reply-options delegates to common domain/resolver metadata owner, not duplicate controller loops that construct context/readiness and N per-account queries. Return the exact frozen DTO/labels/fingerprint. Neutral Instagram recipient label when name is unknown, no fake telephone/username from opaque ID. BFF strict explicit V2 body stays, validating text as actual string/IDs/generation, preserving scope-first errors.",
+    "Bind new send to exact route/contact/contactIdentity/business/provider/channel/account/generation/credential tuple; pins and equality include channel.businessIdentityId and identity.businessIdentityId, not only route existence. Never implicit first binding or wrong-account fallback. Reply metadata can choose a single explicit route, while missing selection with ambiguous routes blocks. WA public/automation resolution stays qualified and cannot infer IG from latest origin.",
+    "New explicit WA initial selection must establish a route from the proven selected business resource and canonical contact identity; a newly opened conversation currently has no route, so bind cannot just fail every first send. Do not create historical routes from V1 snapshots/BU.phone, do not alter existing conversation.updatedAt to manufacture a CAS.",
+    "Runtime new ordinary/initial writers use strict V2; unknown/malformed schemas fail closed. Preserve exact V1 local recovery and add V2 known-ACK local recovery with version-dispatching parser. Current reconcileInitial is V1-only and would strand every new V2 accepted intent. Keep distinct historical validation, never hand V1 a sendable Channel or convert/rehash snapshots. Current credential version/expiry alone must not invalidate a proven historical receipt. V2 accepted IG account comparison currently maps to null incorrectly; fix exact account provenance. Preserve actor/snapshot/deadline/receipt and existing association/grant/CAS failures as local blocked.",
+    "Final locked claim and last provider boundary must recheck operation policy and tuple with fresh DB/current time. Keep original persistent deadlines/recovery state semantics; do not rewrite historical dispatch deadlines to make checks pass. Ensure expiry crossing after an awaited claim cannot authorize an expired new dispatch; a fresh captured deadline guard after last await is needed. No HTTP in transactions or automatic retry. Correctly distinguish no-dispatch BLOCKED from post-dispatch UNKNOWN/ACK without ID and exact known-ACK local completion.",
+    "Use route-derived peer and contact address for all new reply/initial message payload and acceptance/recovery; never legacy conversation.contact as transport address. WA remains normalized through canonical identity; IG context carries exact account namespace. MessageAcceptanceService remains sole Message owner.",
+    "Concretize only admitted unit fixtures for the real V2/policy collaborator contract, preserving scenarios/assertions/counters and deliberate V1 recovery. Do not use as-never/any or optional policy fallback to hide an invalid operational context. New E2E and helpers stay byte-identical. No test/lint/build/runner by source writer."
+  ],
+  "consumerBoundary": "Historico/me/public full projection/Typebot consumers remain mandatory under next serialized lane. They are outside this narrower core writer; do not claim full CP3 from a core pass. Initial options are core: exact applicable WA subset only, no IG or silent channel take10, max compatible WA resource cardinality.",
+  "textLimit": "Current approved 1000 Unicode codepoints for IG and existing WA4096 behavior; pending UTF-8 byte proposal is not validated. No silent numeric contract change, truncation or split.",
+  "completion": "Return actual touched paths/hashes/new files and a concrete complete/not-complete checklist for every requiredCore item. No runtime/private/provider/network/Git/source copies/docs. Root static preflight then serialized remaining consumer/fixture lanes and canonical full API/fresh review. Do not stop at complexity alone or partial helpful result; implement the entire owned core slice. No checkpoint/feature acceptance."
+}

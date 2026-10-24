@@ -31,16 +31,16 @@ Este TODO define WHAT, exclusões e critérios de entrega. A baseline v1.3 abaix
 ## Delivery Status Canon (Required)
 - **Current delivery stage:** Pending
 - **Qualifiers:** none
-- **Next exact step:** implementar CP3Channel/política/rotas/v2 e qualificação dos consumidores com um único writer sob cp3-source-handoff03.json; preservar os novos specs RED, CP2fonte18 e caminhos protegidos. Depois congelar e validar API completa/revisão de aderência. Primary,3propostas humanas e CP4..CP6 seguem obrigatórios.
+- **Next exact step:** concluir o núcleo CP3 sob cp3-core-source-handoff04.json: política abstrata resolvida, metadados/rotas, recuperação v1/v2 e fences. Depois executar a lane serializada de consumidores e fixtures, congelar e validar a API completa/revisão. CP2 e CP4..CP6 continuam obrigatórios.
 
 ## Active Work State (Required While TODO Remains In `active/`)
 - **Work state:** implementation
-- **Why this state now:** CP1 aceito; serviço18 passou398unit/555integrações da API completa. Revisão afetada r5 não encontrou novo defeito material; root reconciliou ambas as lanes e resolveu ROOT02/SUBREC02 com prova causal atual. CP2 segue não aceito por primary/precontroller; CP3 independente pode começar pela sequência já registrada.
+- **Why this state now:** fonte03 terminou parcial e sem execução de testes; preflight identificou lacunas concretas de abstração/batch, credenciais, rotas e recuperação v2. Os dois erros de caminhos foram corrigidos com bytes originais exatos. A prova anterior continua histórica, não valida a candidata03.
 - **Exit condition:** todos os checkpoints e critérios validados, revisões/guards completos e prova runtime posterior explicitamente aprovada; nenhum fechamento parcial implícito.
 
 ## Blocker Notes
 - **Blocker:** none for remaining admitted code/disposable synthetic validation. Session middleware, privacy HTML and outbound UTF-8 proposals await explicit human validation; primary own-subscription observation remains unresolved, with no gate waiver.
-- **Last confirmed truth:** ambas lanes18/r5 terminais;242fontes/TODO/108entradas+24review/35preservações/3índices e4outputs conferidos;398unit/555E2E sem falhas. R5 leu12corpos/11faixas/15evidências/16obrigações/17callers e suplementa R4 completo sem substituir sua proveniência. Primary e3propostas humanas continuam abertas; nenhuma ativação real autorizada.
+- **Last confirmed truth:** preimplementation02 passou398unit/97integrações antigas e falhou nos dois novos GET404; fonte03 mudou14fontes existentes e criou3, ainda NOTRUN.230fontes existentes/35preservações/3índices conferidos; nenhuma diferença corrente fora da lane. Primary e3propostas humanas continuam abertas.
 - **Runtime boundary:** ativação real, leitura privada, Meta e prova física dependem do plano posterior; nenhuma autorização herdada é reutilizada.
 
 ## Scope
@@ -1329,3 +1329,19 @@ The separatecanonical api-instagram invocation terminatedexit1. Rootmatched244so
 Explicitthaw is one solecodewriter under cp3-source-handoff03.json: exact21sourcepaths andlistedunitcompanions/newpurpose-specificunitglobs inapproveddomains. Implement ChannelInstagram/composition, operation-specificeligibility, strictV2operationalresolver/newwriters andseparateexactV1localfactrecovery; explicitBFFreplyoptions/existingPOSTcontext andqualifiedWAonlypublic/Typebot/Consultar/legacyprojections. Channel stayssendMessage+supportedKinds only; no new sender/framework/retry/fallback. DTOconcretizationisboundtoactualnewtestsandapprovedroutecontract. Keepcurrent1000characterWHAT untilhumanbyteproposalvalidated; do notsilentlychangeit. No newE2E/helper/schema/CP2OAuth/http/webhook/protectedclient/middleware/privacy edits inthislane; preserveall35immutablefilesandlimitedcompanions. Anyunavoidablepathneedmustbeconcretelyreportedbeforemutation.
 
 The newtwoE2Es remainbytefrozen causaloracles. Operationalunitmockfixtures mayconcretizetheactualV2contract withoutweakeningassertions orconvertingdeliberatehistoricalV1. No runnerwhilewriteractive; returnterminalallpathhashes beforeseparatecurrentcompleteAPIandfreshadherence. Helperspriorbyte-reconstructionqualificationandallmandatoryconsumer/primary/human/CP4..CP6/ALL/stress/assurance/physicalobligationsremain. No checkpoint/featureaccepted bythisthaw.
+
+
+## CP3 source03 — partial, static gaps and serialized core continuation04
+
+Source03 is terminal and explicitly incomplete. Root matched14 changed existing files and3new files (including channel-eligibility-policy.ts),230unchanged existing sources,35preserved rows and3rootindex entries. Both new CP3E2Es/current helper and restored OAuth/window sources remain exact. No lint/build/unit/E2E ran on this candidate. The current qualified404RED receipt remains historical; source03 is not validated or accepted.
+
+| Finding ID | Severity | Classification | Routing Decision | Same TODO rationale | Status | Evidence |
+| --- | --- | --- | --- | --- | --- | --- |
+| IG-CP3-ROOT-01 | high | release-blocker | fix in this TODO | D-04/D-06 abstract operation policy and bounded batch are approved scope | open | cp3-source03-terminal-preflight.json; static policy/origin switches and IG N queries |
+| IG-CP3-ROOT-02 | high | release-blocker | fix in this TODO | new strictV2 and historical local recovery/tuple proof are approved scope | open | metadata expiry not selected; V2 knownACK reader absent; explicit newWA route absent; accepted-account comparison/legacy credential coupling |
+| IG-CP3-ROOT-03 | high | release-blocker | fix in this TODO | SCOPE-03 requires all public/Typebot/Consultar/legacy consumers | open | author acknowledged remaining consumers; no subset acceptance |
+| IG-CP3-ROOT-04 | medium | release-blocker | retain corrected provenance in this TODO | writer-path discipline and originalCP2 preservation | corrected qualified | cp3-source03-boundary-correction04.json; own additions removed exactly before any runner |
+
+Root authorized only removal of the writer's accidental send method from the sealed OAuth client and four IG widenings plus the remaining own SQL cast from the sealed official window policy. Exact original hashes were reconstructed in memory and independently verified after correction; no Git restore, private backup or user-work discard occurred. The outgoing implementation moved into the already admitted new messaging client. These corrections add no human scope/WHAT deviation. The read-only CP4 advisor incidentally observed the changed OAuth hash while checking config; that read is not frozen or final-source evidence.
+
+Explicit thaw04 is one fresh sole code writer for the exact core paths/unit companions in cp3-core-source-handoff04.json. Required structural work includes actual abstract operation-policy DI, bounded IG batch, one metadata/context owner, exact credential/route provenance, new explicitWA route proof and separate V1/V2 local recovery. Complete consumers follow in their own serialized lane; no approved goal is removed. The two E2Es/helper/CP2 sources/schema/protected clients remain sealed, no runner with a writer active. Root preflight and all later fullAPI/fresh adherence/consumer/ALL/stress/security/TQA/cutover/final/physical gates remain mandatory. Primary observer and the three pending human proposals stay open.

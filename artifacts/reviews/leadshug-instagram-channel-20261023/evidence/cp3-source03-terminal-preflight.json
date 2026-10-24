@@ -1,0 +1,148 @@
+{
+  "kind": "cp3-source03-terminal-partial-preflight",
+  "date": "2026-10-24",
+  "writerTerminal": true,
+  "complete": false,
+  "changedExisting": [
+    {
+      "path": "api-app/src/domain/channels/channel-credential-resolver.ts",
+      "sha256": "e521450e1d9a643bb5a0619c39b635ef33f8e3e5b8d562d56c6980b6177123bc",
+      "bytes": 8080
+    },
+    {
+      "path": "api-app/src/domain/channels/transport/channel.ts",
+      "sha256": "d09a3dafbad6d7eb9c5b3b2732b3671cd1b82c4a5c64921a87df35520fbe93e3",
+      "bytes": 11525
+    },
+    {
+      "path": "api-app/src/domain/inbox/conversations.service.ts",
+      "sha256": "95ddb9cdfa159dc6f0903bece4a1b44bad613d312658134bc58ef6aa41a1f7d9",
+      "bytes": 9274
+    },
+    {
+      "path": "api-app/src/domain/inbox/initial-message.service.spec.ts",
+      "sha256": "470bd95e58fa891ffa67f43b8d5a7d69a907a909f9bd72a3a86b838036b257ce",
+      "bytes": 7031
+    },
+    {
+      "path": "api-app/src/domain/inbox/initial-message.service.ts",
+      "sha256": "3bd216aee9534aa4714e4a7a7459a6f0271aeddc7710928b552d09574e3a90c6",
+      "bytes": 24849
+    },
+    {
+      "path": "api-app/src/domain/inbox/outbound.service.spec.ts",
+      "sha256": "5fe87f8afa08208875e7b167d91915aaae013c5d5def4fc3fdbf06b21d86f06b",
+      "bytes": 23569
+    },
+    {
+      "path": "api-app/src/domain/inbox/outbound.service.ts",
+      "sha256": "3a138a5a2db9276efd6fbab0027c7aa3eed6ba8e38e01d944114294b434bf6c5",
+      "bytes": 42486
+    },
+    {
+      "path": "api-app/src/integrations/channels/channel-adapter-factory.ts",
+      "sha256": "199603f2211f3c29aafa2aa69adc5a65a3d4f7ddd5dd0647f3e4df90e0788d03",
+      "bytes": 454
+    },
+    {
+      "path": "api-app/src/integrations/channels/channel-adapter-registry.ts",
+      "sha256": "1b2f99236d1a2d76e662384191c2d68835b3d331199111babb52334a26ee5de6",
+      "bytes": 1003
+    },
+    {
+      "path": "api-app/src/integrations/channels/channel-transport.module.ts",
+      "sha256": "6399322d21de5b3157a2f42893d084da8eae4b0a85e42df93922bca769086cf9",
+      "bytes": 2740
+    },
+    {
+      "path": "api-app/src/integrations/channels/prisma-channel-resolver.ts",
+      "sha256": "be09f9ab66720ac6a93f47903a795d4d07894c923b7dc0482b27d234229a3f00",
+      "bytes": 35715
+    },
+    {
+      "path": "api-app/src/integrations/instagram/instagram.module.ts",
+      "sha256": "93d8eff59bd7284967d8a608eb0df7cb30d1759f36d003800e53c01cd0c65eba",
+      "bytes": 425
+    },
+    {
+      "path": "api-app/src/surfaces/bff/conversations.controller.ts",
+      "sha256": "b4cdef45ff1207746fb1a53528dd4e9d3b58ffe82e12ca0d478409b834bdb005",
+      "bytes": 26018
+    },
+    {
+      "path": "api-app/src/surfaces/public/conversations.controller.ts",
+      "sha256": "9e38cfc5d02f8206cbb87e981e87c91af3ea7a7efb5c6ffa4a6fc1fb5ec935b8",
+      "bytes": 15011
+    }
+  ],
+  "newFiles": [
+    {
+      "path": "api-app/src/integrations/channels/instagram-channel.ts",
+      "sha256": "408412859e85f73592038ddfd5031e064783f3dc4c34db7ca4054d4e27325c14",
+      "bytes": 1875
+    },
+    {
+      "path": "api-app/src/integrations/instagram/instagram-messaging.client.ts",
+      "sha256": "1ac0f8701d3fc75e8a2d0cf69acb3dfd9eef9680e5c1a000aa570379233ac699",
+      "bytes": 2544
+    },
+    {
+      "path": "api-app/src/domain/inbox/channel-eligibility-policy.ts",
+      "sha256": "221cc6b2aa9f626ad1e763bd51489ff83f275768a2d0b378ae19c01b97189d52",
+      "bytes": 4051
+    }
+  ],
+  "unchangedExisting": 230,
+  "outsideOwnedChanges": [],
+  "preserved": 35,
+  "rootIndex": [
+    "160000 5db3fbe2043428749895fc3ff6441e9457467dd0 0\tapi-app",
+    "160000 40828a20f2d6c3a1443e7ee132f42483840d6abb 0\tfoundation_documentation",
+    "160000 6c99c27dafdce8ed9b461d17aaaaa491b8ae16e9 0\tweb-app"
+  ],
+  "sealedCP2AndNewE2EHelper": "Both accidental edits restored exactly; source18 OAuth/window bytes and both causalCP3specs/currenthelper unchanged; no source03test/run.",
+  "findings": [
+    {
+      "id": "IG-CP3-ROOT-01",
+      "severity": "high",
+      "status": "open",
+      "evidence": [
+        "src/domain/inbox/channel-eligibility-policy.ts static evaluate/origin-switchfunctions",
+        "inspectOperationWindows IG per-reference loop",
+        "outbound/resolver/BFF concrete origin and duplicated policy/projection branches"
+      ],
+      "required": "Resolved abstract operation-specific policy collaborator and bounded batch query; shared callers depend on abstract policy."
+    },
+    {
+      "id": "IG-CP3-ROOT-02",
+      "severity": "high",
+      "status": "open",
+      "evidence": [
+        "credential-resolver selects no expiresAt then reads expiresAt (two metadata paths)",
+        "outbound.reconcileInitial parses onlyV1 despite newV2 writers",
+        "resolver.validateLegacyAcceptedContext requirescurrentcredentialversion",
+        "bind requires route while newWAconversation path creates none",
+        "V2accepted-account check mapsIGto null; expectedIGaccountnonnull"
+      ],
+      "required": "Correct metadata/tuple/knownACK version-dispatch/local recovery/newexplicitWAroute withoutV1conversion orhistory guesses. Preserve existing protected code."
+    },
+    {
+      "id": "IG-CP3-ROOT-03",
+      "severity": "high",
+      "status": "open",
+      "evidence": [
+        "writer confirms Historico/me/fullpublicv1/Typebot notcomplete",
+        "old sharedBFF UI/tests still need actualV2contract adaptation in lateradmittedlanes"
+      ],
+      "required": "Finish all approvedWAconsumerqualification and currentfullproof; no subset acceptance."
+    },
+    {
+      "id": "IG-CP3-ROOT-04",
+      "severity": "medium",
+      "status": "corrected qualified",
+      "evidence": "cp3-source03-boundary-correction04.json",
+      "required": "Two writer-path violations restored exactly beforeanyrunner; retain provenance/no prior currentproof claim."
+    }
+  ],
+  "qualification": "Static evidence only, not compiler/test failure or formal review. Initialoptions take10 appears removed/WAfilterwritten despiteauthorreportincomplete; still needs exactIGconversation applicability/route proof and tests. No broad claims fromauthorfinal. Partial state requires serialized continuation, not acceptance or canonicalvalidation yet."
+}

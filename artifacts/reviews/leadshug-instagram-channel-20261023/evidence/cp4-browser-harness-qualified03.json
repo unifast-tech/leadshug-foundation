@@ -1,0 +1,110 @@
+{
+  "kind": "cp4-browser-harness-concretization03-qualified",
+  "date": "2026-10-24",
+  "authority": "Read-only advisory, not CP4 dispatch/acceptance. Core04 sole writer remains independent; no browser/source/private/runtime action.",
+  "reader": "instagram_cp3_fixture_reader terminal bounded public reads, no writes/tests/build/runner/DB/provider/network. Shell public read/hash/search commands were used, so do not interpret earlier no-commands wording literally.",
+  "readsetMatched": [
+    {
+      "path": "web-app/e2e/number-onboarding.spec.ts",
+      "sha256": "47fdb27c0b592dfe8df31b8ad1be219d96720abdc00660bc15f6b2c03096f31b",
+      "reported": "47fdb27c0b592dfe8df31b8ad1be219d96720abdc00660bc15f6b2c03096f31b"
+    },
+    {
+      "path": "web-app/e2e/number-onboarding-freshness.ts",
+      "sha256": "880b49f8fa428568692b92a883dd00c5ce76214b1f2db5b35cafb9b0553ed9ad",
+      "reported": "880b49f8fa428568692b92a883dd00c5ce76214b1f2db5b35cafb9b0553ed9ad"
+    },
+    {
+      "path": "web-app/e2e/timeline-freshness.ts",
+      "sha256": "3a06fb36e3a9bcf20a12cd8201da2daa3b567775f15e2be5f068e97e840d7f53",
+      "reported": "3a06fb36e3a9bcf20a12cd8201da2daa3b567775f15e2be5f068e97e840d7f53"
+    },
+    {
+      "path": "web-app/e2e/channel-transport.spec.ts",
+      "sha256": "6960a14dbd30f317253ae577196bc62c252c0446b5c75885b82d08f1753b3542",
+      "reported": "6960a14dbd30f317253ae577196bc62c252c0446b5c75885b82d08f1753b3542"
+    },
+    {
+      "path": "web-app/e2e/start-conversation.spec.ts",
+      "sha256": "95143e86de9ffec726a95f015f24d8f7dc580f1be92a098a4cbbbb33c34c8284",
+      "reported": "95143e86de9ffec726a95f015f24d8f7dc580f1be92a098a4cbbbb33c34c8284"
+    },
+    {
+      "path": "web-app/e2e/message-templates.spec.ts",
+      "sha256": "95b6c55145dbd40b8aff0e59484781bf1450eb3f174b1f7ce2ee7dbf9474d68f",
+      "reported": "95b6c55145dbd40b8aff0e59484781bf1450eb3f174b1f7ce2ee7dbf9474d68f"
+    },
+    {
+      "path": "api-app/test/browser-server.cjs",
+      "sha256": "02354237e3c0c5f8d918f65cbb833270e2ce02469cfe3e926e3a6790abc106dc",
+      "reported": "02354237e3c0c5f8d918f65cbb833270e2ce02469cfe3e926e3a6790abc106dc"
+    },
+    {
+      "path": "api-app/test/timeline-fixtures.cjs",
+      "sha256": "4fe47383dc0e2921db8ff08fd3235d083f1c419bd0c570123c5fe6cee3ce63fb",
+      "reported": "4fe47383dc0e2921db8ff08fd3235d083f1c419bd0c570123c5fe6cee3ce63fb"
+    },
+    {
+      "path": "web-app/playwright.config.ts",
+      "sha256": "53e9a54e97c9b785135d94846d99eb77c6f05789a58f27128544f9b2c903a63d",
+      "reported": "53e9a54e97c9b785135d94846d99eb77c6f05789a58f27128544f9b2c903a63d"
+    },
+    {
+      "path": "web-app/src/api.ts",
+      "sha256": "7c80a2e738655c5b54382e2805d5e8e808b80e25af283ca90402e932a3d3794c",
+      "reported": "7c80a2e738655c5b54382e2805d5e8e808b80e25af283ca90402e932a3d3794c"
+    },
+    {
+      "path": "web-app/src/telas/Numeros.tsx",
+      "sha256": "22cf5877d6336e4c22b8650402c5913b064278b9ba639e20e10f9a80c00fc791",
+      "reported": "22cf5877d6336e4c22b8650402c5913b064278b9ba639e20e10f9a80c00fc791"
+    },
+    {
+      "path": "web-app/src/telas/Inbox.tsx",
+      "sha256": "66658161c7c74610288bf6c92583b616bacc1ada0fced27af01997ed22481737",
+      "reported": "66658161c7c74610288bf6c92583b616bacc1ada0fced27af01997ed22481737"
+    },
+    {
+      "path": "web-app/src/config.ts",
+      "sha256": "ca30d02d04774b79d6e62715c83c49dd23f1db02f0b49ec6781634acbf09befb",
+      "reported": "ca30d02d04774b79d6e62715c83c49dd23f1db02f0b49ec6781634acbf09befb"
+    },
+    {
+      "path": "web-app/public/config.js",
+      "sha256": "1ad17fefa4173ed847cabd79e7fdc1b262fa19ea4ff33c3ef435e141275fb532",
+      "reported": "1ad17fefa4173ed847cabd79e7fdc1b262fa19ea4ff33c3ef435e141275fb532"
+    }
+  ],
+  "readsetDifferences": [],
+  "roots": [
+    {
+      "path": "scripts/test-channels-local.sh",
+      "fact": "Lines207-212 install/check openssl inside canonical disposable validation runner; this establishes planned package availability, not an executed TLS test."
+    },
+    {
+      "path": "docker-compose.channels.yml",
+      "fact": "validation-runner node22.23.3-bookworm-slim; API3100/fixture3101/preview4173 synthetic shared DB. No live listener/collision/process/container inventory was read."
+    }
+  ],
+  "facts": [
+    "Existing browser harness builds actual API, uses actual PG database equality/disposable name guards, starts fixture/API/preview and global freshness checks actual servedJS against built bundle. Preserve it and all WA regression journeys.",
+    "Fixed Instagram config requires HTTPS and exact callback path. Current HTTP-only4173/API3100 cannot by itself prove a genuine configured HTTPS OAuth return. Do not rewrite redirect_uri toHTTP, fake cookies/session, or claim a fulfilled document proves an actual backend callback.",
+    "playwright.config.ts is not in approved ExpectedChangedPaths. Keep it unchanged. App.tsx/privacy/session middleware retain separate protection/admission requirements."
+  ],
+  "viablePreparedHOW": [
+    "In admitted browser-server.cjs only, consider an additional loopback-only test HTTPS frontdoor (e.g.4174, not yet live validated), ephemeral synthetic cert generated with runner openssl in owned temp dir. Proxy /api to realNest and static/assets to actualVitepreview with exact same browser-visible host; native browser cookie/Set-Cookie and original Origin remain intact. No BFF response/domain/session stubs.",
+    "Admitted new instagram*.spec.ts can use per-spec ignoreHTTPSErrors and absolute HTTPSfrontdoor URL, preserving global Playwrightconfig and existingHTTPWAjourneys. Synthetic INSTAGRAM_REDIRECT_URI exactlynames thatfrontdoorcallback. Providerauthorizationdocument alone is faked using real server-issued state/redirect URI and synthetic code; callback itself navigates through TLSproxy to realNest/PG and safe303.",
+    "Do not blindly change global WEB_ORIGIN fromHTTP4173: preserve oldWA/invitation tests and inspect actual originalOrigin/cookie/CORS behavior. Root public search found WEB_ORIGIN chiefly CORS/invitation, not callbackauthentication; require actualbrowser verification, never rewriteOrigin to simulateallowedcaller.",
+    "Introduce synthetic provider state only at injected INSTAGRAM_HTTP_FETCH boundary; deny unlisted external requests, reset grant/subscription/safeHTTPcounters/barriers. Signed rawINtext helper POSTs actual /webhooks/instagram and lets real acceptance create contact/routes. No directDBIG inboxseed for flow proof.",
+    "Actual HTTPS servedJS/bundle/backend provenance and API responses/durable effects must be verified; current HTTPglobalfreshness is useful but alone doesnot prove newTLSfrontdoor. Listener/cert cleanup scoped to own synthetic fixtures.",
+    "Root confirmed RealtimeService is real WebSocket /ws with session/grant authentication; TLSfrontdoor must proxy the actual upgrade and preserve nativecookie, not drop realtime or replace it with polling-only proof. No BFF/WS mocks."
+  ],
+  "scenarios": [
+    "Connecttwoaccounts inoneBU with actualbrowsercallback; pendingreceipthonestbeforeHMACIN; confirm/reload/cancel/reauth rights.",
+    "Sameopaquepeer separateaccountcontacts/conversations/routes; exactreplyV2 metadata/POST/account+peer and Message; stalecontext/credential/closedwindow/crossaccountzeroHTTP.",
+    "Nativecookiecallback boolean without values, safe redirects/text, no code/state/query in diagnostics; A-B-A late fetch/send responses and drafts fenced.",
+    "Preserve bothWAordinary/initialtext/template/Modelos flows; noIGinitial/template/automation andnoIGphone display."
+  ],
+  "readerQualification": "A broadTODOsearch briefly returned laterCP3summary lines and readerincidentallyhashed source03mutatedOAuthclient whilecheckingconfig. Neither is accepted current frozen-source proof. OAuthclient subsequently restoredexact0a38a8fb...; rootreconstructedconfigunchanged. No validatorlog or activecore04source wasread.",
+  "status": "NOTRUN. Recheck actual finalCP3 DTOs and core source before execution. Runtime/Meta/private activation and three human proposals remain outside this preparation."
+}
