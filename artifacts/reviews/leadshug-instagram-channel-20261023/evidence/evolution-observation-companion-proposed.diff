@@ -37,7 +37,7 @@ diff --git a/api-app/src/integrations/evolution/evolution.client.ts b/api-app/sr
 diff --git a/api-app/src/integrations/evolution/evolution.client.spec.ts b/api-app/src/integrations/evolution/evolution.client.spec.ts
 --- a/api-app/src/integrations/evolution/evolution.client.spec.ts
 +++ b/api-app/src/integrations/evolution/evolution.client.spec.ts
-@@ -57,6 +57,50 @@ describe('EvolutionHttpClient instance creation response', () => {
+@@ -57,6 +57,55 @@ describe('EvolutionHttpClient instance creation response', () => {
      expect(String(fetchFake.mock.calls[0][0])).toContain('/instance/delete/lh-exact-name');
    });
  
@@ -47,7 +47,11 @@ diff --git a/api-app/src/integrations/evolution/evolution.client.spec.ts b/api-a
 +    { label: 'string', json: async () => '[]' },
 +    { label: 'invalid JSON', json: async () => { throw new SyntaxError('malformed'); } },
 +    { label: 'malformed row', json: async () => [{ name: 'another-instance' }, null] },
-+    { label: 'malformed optional field', json: async () => [{ name: 'another-instance', ownerJid: 7 }] },
++    { label: 'missing name', json: async () => [{ instanceName: 'lh-target' }] },
++    { label: 'non-string name', json: async () => [{ name: 7 }] },
++    { label: 'blank name', json: async () => [{ name: '   ' }] },
++    { label: 'malformed ownerJid', json: async () => [{ name: 'another-instance', ownerJid: 7 }] },
++    { label: 'malformed connectionStatus', json: async () => [{ name: 'another-instance', connectionStatus: 7 }] },
 +    { label: 'duplicate exact names', json: async () => [{ name: 'lh-target' }, { name: 'lh-target' }] },
 +  ])('rejects $label inventory as an ambiguous observation', async ({ json }) => {
 +    process.env.EVOLUTION_API_URL = 'https://evolution.invalid';
@@ -71,17 +75,18 @@ diff --git a/api-app/src/integrations/evolution/evolution.client.spec.ts b/api-a
 +    expect(fetchFake).toHaveBeenCalledTimes(1);
 +  });
 +
-+  it('returns the exact unique matching observation from a valid inventory', async () => {
++  it.each([
++    { label: 'omitted optional fields', row: { name: 'lh-target' }, expected: { name: 'lh-target', ownerJid: null, connectionStatus: null } },
++    { label: 'null optional fields', row: { name: 'lh-target', ownerJid: null, connectionStatus: null }, expected: { name: 'lh-target', ownerJid: null, connectionStatus: null } },
++    { label: 'populated optional fields', row: { name: 'lh-target', ownerJid: '15551234567@s.whatsapp.net', connectionStatus: 'open' }, expected: { name: 'lh-target', ownerJid: '15551234567@s.whatsapp.net', connectionStatus: 'open' } },
++  ])('preserves the unique matching observation with $label', async ({ row, expected }) => {
 +    process.env.EVOLUTION_API_URL = 'https://evolution.invalid';
 +    process.env.EVOLUTION_API_KEY = 'fixture-key';
 +    const fetchFake = vi.fn().mockResolvedValue({ ok: true, json: async () => [
-+      { name: 'another-instance' },
-+      { name: 'lh-target', ownerJid: '15551234567@s.whatsapp.net', connectionStatus: 'open' },
++      { name: 'another-instance' }, row,
 +    ] });
 +    vi.stubGlobal('fetch', fetchFake);
-+    await expect(new EvolutionHttpClient().consultarInstancia('lh-target')).resolves.toEqual({
-+      name: 'lh-target', ownerJid: '15551234567@s.whatsapp.net', connectionStatus: 'open',
-+    });
++    await expect(new EvolutionHttpClient().consultarInstancia('lh-target')).resolves.toEqual(expected);
 +    expect(fetchFake).toHaveBeenCalledTimes(1);
 +  });
 +

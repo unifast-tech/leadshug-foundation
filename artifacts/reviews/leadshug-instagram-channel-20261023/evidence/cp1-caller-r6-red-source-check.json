@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 1,
+  "kind": "caller-r6-causal-red-source-check",
+  "baseline": "cp1-caller-r6-baseline.json",
+  "changes": [
+    {
+      "path": "api-app/test/instagram-lifecycle.e2e-spec.ts",
+      "baselineSha256": "3452ec9481087843201266c8b5a57f794e33f961babc0ac4fb70c9e040267e1f",
+      "currentSha256": "2a11da2a88e35cd75618c865bf5f9e2cb1d952ab2d73fe1cc83b7839f3e1456d"
+    }
+  ],
+  "productionUnchanged": true,
+  "privateInputsUsed": false
+}

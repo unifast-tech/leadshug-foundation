@@ -31,7 +31,7 @@ Este TODO define WHAT, exclusões e critérios de entrega. A baseline v1.3 abaix
 ## Delivery Status Canon (Required)
 - **Current delivery stage:** Pending
 - **Qualifiers:** none
-- **Next exact step:** CP1: concluir revisão da proposta delimitada para observação Evolution; obter validação dos dois caminhos protegidos antes de corrigir R5-01. API completo r5 passou; demais checkpoints pendentes.
+- **Next exact step:** CP1: fonte r6 congelada para API completo e crítica independente da proposta revisada; após ambas terminarem, solicitar validação limitada dos dois caminhos protegidos. Retomada passou379unit/26IG; parser200malformado ainda não alterado.
 
 ## Active Work State (Required While TODO Remains In `active/`)
 - **Work state:** implementation
@@ -599,6 +599,9 @@ Historical planning observation retained: IG-REV-01..04, strategic source, high/
 | IG-CP1-ROOT-01 | high | release-blocker | fix in this TODO | pending current ingress remains retryable without content/trust before proof | closed by r5 | adherence-cp1-r5-result.json; metadata-only staged retry and accepted-key proof retained |
 | IG-CP1-R4-01 | high | release-blocker | repeat affected proof in this TODO | four mutations violated the explicit r4 freeze; preserve evidence and validate current bytes anew | closed by r5 | adherence-cp1-r5-result.json; cp1-frozen-full-api-green-r5.json; new stable proof replaces invalidated acceptance |
 | IG-CP1-R5-01 | medium | release-blocker | bounded companion in this TODO; protected path validation required | current staged cleanup guarantee depends on a truthful absence observation; inherited adapter weakness is not a new Instagram regression | open; proposed only | adherence-cp1-r5-result.json; evolution-observation-companion-proposal.json |
+| IG-EVOCOMP-01 | medium | release-blocker | fix admitted caller lifecycle in this TODO | conclusive cleanup must recover same reserved operation and permit one create, without widening protected paths | open | evolution-observation-companion-critique-result.json |
+| IG-EVOCOMP-02 | medium | release-blocker | strengthen proposed tests before source admission | independent malformed name/state and null projection branches need concrete proof plan | open; proposal only | evolution-observation-companion-critique-result.json |
+| IG-EVOCOMP-03 | low | release-blocker | correct proposal wording before validation | exact subject and absence contract must be clear to approving user; small same-artifact correction | open; proposal only | evolution-observation-companion-critique-result.json |
 
 ## TODO Closeout Disposition
 - **Disposition:** blocked
@@ -964,3 +967,17 @@ Status: proposed, unapplied, awaiting independent proposal review and human path
 The candidate in `evidence/evolution-observation-companion-proposal.json` and its exact `evolution-observation-companion-proposed.diff` admits only `api-app/src/integrations/evolution/evolution.client.ts` and `api-app/src/integrations/evolution/evolution.client.spec.ts` for strict inventory-shape/ambiguity interpretation and unit regressions. Existing response projection and confirmed absence stay compatible. No new request, fallback, send/auth/signature behavior, dependency or real-runtime action is included. The already-admitted lifecycle spec must prove malformed actual-adapter observation retains CLEANUP_PENDING with zero new creates and that valid absence/deletion enables recovery.
 
 The current immutable-path rows and preservation policy are NOT lifted by this proposal. If validated, root will record the limited exception while retaining original hashes as baseline facts; the remaining inherited files stay byte-exact. Test-first causal RED/GREEN, frozen complete API and fresh review remain required after implementation. No code change can start on these paths before validation.
+
+## Observation companion critique — bounded reconvergence
+
+The independent proposal critique found the guard itself statically correct, but requires proposal refresh before asking human validation. IG-EVOCOMP-01 is a concrete existing caller transition: ERROR/CLEANUP_AMBIGUOUS can retain pendingCleanup fields after the prior provider was reconciled, while INITIAL cannot resume and RENEW refuses. Root classifies this as a release-blocker for the same staged cleanup guarantee and will first repair the already-admitted service/lifecycle paths, without asking permission for work already authorized. This discovery does not lift the protected adapter files.
+
+IG-EVOCOMP-02 and03 are release-blockers to proposal readiness, not claims of executed patch failure: strengthen independent name/connectionStatus and omitted/null projection tests; identify WhatsApp/Evolution pairing precisely and preserve valid nonmatching inventory absence. Actual-adapter tests must use synthetic config and intercept only the exact HTTP boundary with real Response parsing, retain real authenticated service/BFF and PostgreSQL behavior, restore hooks/env/globals in finally, and prove both safety and eventual explicit recovery/single create. Both retained-renewal cleanup and post-unlink recovery are required.
+
+Next source phase owns only channels.service.ts and instagram-lifecycle.e2e-spec.ts for the caller transition. Protected client/spec remain unchanged until later explicit validation. Preserve r5 full-GREEN as its exact historical source receipt; after caller edits, current-source proof must be recaptured before further acceptance.
+
+## CP1 r6 caller recovery — frozen validation
+
+The clean causal RED in `evidence/cp1-caller-r6-causal-red.json` reproduced exactly one lifecycle failure through the actual EvolutionHttpClient/Response boundary; the earlier run1 remains qualified because of fixture teardown noise. `cp1-caller-r6-targeted-green.json` records379unit and26Instagram cases passing after the admitted caller repair. It retains the same reservation, generation, pairing epoch and attempt, resolves the exact managed cleanup tuple and advances to RESERVED_NEVER_CREATED before one create; new staging remains unproved and ingress blocked. All37immutable inherited public paths still match.
+
+Caller, lifecycle test, all other37sources, TODO and proposal revision3 are now frozen for separate complete API validation and a fresh independent companion/caller critique. Revision3 only updates the caller dependency/proof status after the actual repair; revision2 strengthened the proposed unit cases and clarified absence semantics. The adapter diff remains unapplied. No CP1 acceptance, path exception, private/runtime permission or delivery claim follows from targeted GREEN.

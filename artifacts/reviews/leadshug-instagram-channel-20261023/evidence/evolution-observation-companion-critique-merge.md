@@ -1,0 +1,63 @@
+# PACED Subagent Review Merge: critique
+
+## Merge Identity
+- **Artifact kind:** `subagent_review_merge`
+- **Authoritative:** `false`
+- **Edit policy:** `derived_merge_packet`
+- **Dispatch path:** `/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/evolution-observation-companion-critique-dispatch.json`
+- **Review count:** `1`
+- **Highest finding severity:** `medium`
+
+## Axis Summary
+- **Performance:** `acceptable`
+- **Elegance:** `acceptable`
+- **Structural soundness:** `mixed`
+- **Operational fit:** `mixed`
+
+## Recommended Paths
+- `Refresh the bounded proposal to include the caller recovery transition and stronger test obligations described below. Then request explicit human validation of only the two protected Evolution paths, retaining their original preservation hashes as baseline facts. Keep any caller repair within already-admitted lifecycle surfaces and existing generation, epoch, attempt, ownership and lease fences. Freeze a concrete actual-adapter regression plan: delegate the observation to EvolutionHttpClient with synthetic configuration, intercept only the exact fetchInstances HTTP boundary with real Response JSON parsing, retain authenticated BFF/service and PostgreSQL behavior, and restore hooks, globals and synthetic environment changes in finally. Cover retained-renewal cleanup and post-unlink recovery through malformed observation, preserved CLEANUP_PENDING/zero new creates, valid absence or confirmed exact deletion, and explicit recovery with one reserved replacement create. After path validation, require causal RED/GREEN, frozen complete API and fresh review. This critique grants no implementation authority or CP1 acceptance; CP2–CP6, ALL, browser, independent audits and separately approved runtime/Meta proof remain required.`
+
+## Merged Findings
+### F-F4630A65 [medium] Renewal cleanup can remain permanently blocked after a later conclusive observation
+- **Reviewers:** evolution_observation_companion_critique
+- **Category:** `operational_fit`
+- **Formalizable hint:** `yes`
+- **Candidate rule level:** `project`
+- **Candidate rule id:** `n/a`
+- **Suggested action:** Explicitly include a fenced recovery transition in the proposal using already-admitted caller surfaces. Preserve the same reserved replacement, generation, pairing epoch and attempt; reconcile the exact prior cleanup tuple and reach RESERVED_NEVER_CREATED before permitting its single create. Require the actual-adapter lifecycle regression to continue beyond CLEANUP_COMPLETED_RETRY_PAIR and prove successful explicit recovery, rather than stopping at safe refusal or a cleaned tombstone.
+- **Rationale:** The proposed guard correctly routes malformed successful observations into the existing completePairing catch. At channels.service.ts:168–171, that catch preserves the prior cleanup identity and sets the current attempt to ERROR/CLEANUP_AMBIGUOUS. A subsequent INITIAL can reconcile the detached prior identity through :47–67 and mark it CLEANED, but that branch neither clears the live channel's pendingCleanup tuple nor advances its attempt. The next INITIAL fails CHANNEL_SLOT_OCCUPIED because canResume at :93–96 excludes CLEANUP_AMBIGUOUS; RENEW fails CLEANUP_RECOVERY_REQUIRED at :97. Thus parser-only hardening preserves uncertainty but does not establish the proposal's promised recovery after valid absence/deletion. This is a static caller-transition finding, not an executed failure or a claim that the adapter introduced the underlying recovery defect. Existing lifecycle coverage exercises successful renewal cleanup and post-unlink ambiguity, but does not cover this retained-renewal error-to-recovery sequence.
+
+### F-56618C2E [medium] Added unit cases do not protect independent validation and compatibility branches
+- **Reviewers:** evolution_observation_companion_critique
+- **Category:** `tests`
+- **Formalizable hint:** `partial`
+- **Candidate rule level:** `project`
+- **Candidate rule id:** `n/a`
+- **Suggested action:** Extend the proposed table with missing/non-string/blank names and malformed connectionStatus, and add matching-row cases with omitted and null optional fields. Retain valid nonmatching absence, unique matching projection, duplicate rejection, one-request assertions and every existing test. These remain bounded adapter tests; they supplement the required actual-adapter product-path regression.
+- **Rationale:** The proposed.diff cases meaningfully detect the original non-array/invalid-JSON defect, a null row, malformed ownerJid and duplicate target names. However, removing the new name validation or the connectionStatus validation would still leave every proposed case passing. For example, [{name:'another-instance',connectionStatus:7}] would again become conclusive absence if that independent check regressed. The positive matching case supplies both optional fields, so preservation of null projection for a matching row with missing or null optional fields is also unproved.
+
+### F-659B38A0 [low] Product-path wording contradicts the preserved absence contract
+- **Reviewers:** evolution_observation_companion_critique
+- **Category:** `adherence`
+- **Formalizable hint:** `no`
+- **Candidate rule level:** `none`
+- **Candidate rule id:** `n/a`
+- **Suggested action:** Name the WhatsApp/Evolution pairing/renewal flow explicitly. State that conclusive absence requires a fully validated inventory without the exact target, including [] and valid nonmatching rows. Make coverage of both currently reachable cleanup paths explicit rather than conditional.
+- **Rationale:** The proposal's required_product_path_regression_case_if_accepted calls this an 'Instagram create/renew pairing flow' and later describes valid [] as the 'only absence case'. The actual flow is WhatsApp/Evolution pairing exercised by the Instagram lifecycle regression spec. The proposal's own behavior definition and diff correctly preserve valid nonmatching inventories as absence too. The root clarification resolves the intended subject, but the frozen proposal still contains both misleading statements.
+
+## Reviewer Summaries
+### evolution_observation_companion_critique
+- **Assessment:** Proposal refresh required before requesting limited source admission. The exact adapter guard is correct for its declared semantics: valid empty and nonmatching inventories preserve absence; a unique matching row preserves projection; non-array payloads, malformed JSON normalized by chamar(), malformed rows/optional fields and duplicate matching names fail with fixed safe EvolutionIndisponivelError messages. The diff preserves existing assertions and changes no sends, authentication, URLs, signatures, timeouts or HTTP counts. Architecture and code quality are appropriate for a narrow integration-boundary repair, without parallel provider probes or a new domain path. However, current caller recovery contains a concrete transition gap, and the proposed unit coverage omits independent parts of the new contract. The complete Frontend/Consumer Matrix was considered: existing connection lifecycle consumers remain relevant, and CP4 browser obligations are not waived. TODO, proposed.diff and both protected-source hashes matched the package before and after review. No edits, tests, runners, runtime, network or private-input access occurred. Recorded 379 unit/483 e2e GREEN covers existing source, not this unapplied proposal.
+- **Recommended path:** `Refresh the bounded proposal to include the caller recovery transition and stronger test obligations described below. Then request explicit human validation of only the two protected Evolution paths, retaining their original preservation hashes as baseline facts. Keep any caller repair within already-admitted lifecycle surfaces and existing generation, epoch, attempt, ownership and lease fences. Freeze a concrete actual-adapter regression plan: delegate the observation to EvolutionHttpClient with synthetic configuration, intercept only the exact fetchInstances HTTP boundary with real Response JSON parsing, retain authenticated BFF/service and PostgreSQL behavior, and restore hooks, globals and synthetic environment changes in finally. Cover retained-renewal cleanup and post-unlink recovery through malformed observation, preserved CLEANUP_PENDING/zero new creates, valid absence or confirmed exact deletion, and explicit recovery with one reserved replacement create. After path validation, require causal RED/GREEN, frozen complete API and fresh review. This critique grants no implementation authority or CP1 acceptance; CP2–CP6, ALL, browser, independent audits and separately approved runtime/Meta proof remain required.`
+- **Performance:** `acceptable`
+- **Elegance:** `acceptable`
+- **Structural soundness:** `mixed`
+- **Operational fit:** `mixed`
+- **Findings:**
+  - [medium] IG-EVOCOMP-01 Renewal cleanup can remain permanently blocked after a later conclusive observation: The proposed guard correctly routes malformed successful observations into the existing completePairing catch. At channels.service.ts:168–171, that catch preserves the prior cleanup identity and sets the current attempt to ERROR/CLEANUP_AMBIGUOUS. A subsequent INITIAL can reconcile the detached prior identity through :47–67 and mark it CLEANED, but that branch neither clears the live channel's pendingCleanup tuple nor advances its attempt. The next INITIAL fails CHANNEL_SLOT_OCCUPIED because canResume at :93–96 excludes CLEANUP_AMBIGUOUS; RENEW fails CLEANUP_RECOVERY_REQUIRED at :97. Thus parser-only hardening preserves uncertainty but does not establish the proposal's promised recovery after valid absence/deletion. This is a static caller-transition finding, not an executed failure or a claim that the adapter introduced the underlying recovery defect. Existing lifecycle coverage exercises successful renewal cleanup and post-unlink ambiguity, but does not cover this retained-renewal error-to-recovery sequence.
+  - [medium] IG-EVOCOMP-02 Added unit cases do not protect independent validation and compatibility branches: The proposed.diff cases meaningfully detect the original non-array/invalid-JSON defect, a null row, malformed ownerJid and duplicate target names. However, removing the new name validation or the connectionStatus validation would still leave every proposed case passing. For example, [{name:'another-instance',connectionStatus:7}] would again become conclusive absence if that independent check regressed. The positive matching case supplies both optional fields, so preservation of null projection for a matching row with missing or null optional fields is also unproved.
+  - [low] IG-EVOCOMP-03 Product-path wording contradicts the preserved absence contract: The proposal's required_product_path_regression_case_if_accepted calls this an 'Instagram create/renew pairing flow' and later describes valid [] as the 'only absence case'. The actual flow is WhatsApp/Evolution pairing exercised by the Instagram lifecycle regression spec. The proposal's own behavior definition and diff correctly preserve valid nonmatching inventories as absence too. The root clarification resolves the intended subject, but the frozen proposal still contains both misleading statements.
+
+## Exact Next Step
+Record reviewer resolutions in the governing TODO using the machine-checkable resolution table or equivalent gate ledger, then extract the derived resolution packet and decide whether another bounded review pass is still required.
+

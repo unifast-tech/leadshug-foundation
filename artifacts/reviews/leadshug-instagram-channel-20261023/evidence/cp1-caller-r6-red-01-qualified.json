@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "kind": "caller-r6-qualified-first-red",
+  "log": {
+    "path": "foundation_documentation/artifacts/tmp/instagram-channel-implementation/cp1-caller-r6-red-01.log",
+    "sha256": "67f8280accb19f0506971cd14e5d1eb094db005b6e1ecca63c463e6fc045d5f6",
+    "bytes": 41788
+  },
+  "rootSummary": [
+    "Test Files  36 passed (36)",
+    "Tests  379 passed (379)",
+    "Test Files  3 failed (3)",
+    "Tests  18 failed | 8 passed (26)"
+  ],
+  "executorReportedExit": 1,
+  "causalObservation": "Actual retained-renewal cleanup reconciliation reached subsequent INITIAL returning CHANNEL_SLOT_OCCUPIED instead of expected200.",
+  "suiteLimit": "Stopped failing test left fixture pending-cleanup FK tuple; later teardown/setup failures prevent clean suite evidence. Test-only finally hygiene will isolate that fixture after assertions before re-run.",
+  "preProductionProof": "cp1-caller-r6-red-source-check.json",
+  "protectedSourcesChanged": false,
+  "acceptance": false
+}

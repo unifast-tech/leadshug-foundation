@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "kind": "cp1-caller-recovery-r6-causal-red",
+  "command": "bash scripts/test-channels-local.sh api-instagram",
+  "executorReportedExit": 1,
+  "log": {
+    "path": "foundation_documentation/artifacts/tmp/instagram-channel-implementation/cp1-caller-r6-red-02.log",
+    "sha256": "6de38aec03bd4b894077cd0f7d8258c33fee129b25535babba27ae3328f54580",
+    "bytes": 24292
+  },
+  "rootObservedSummary": [
+    "Test Files  36 passed (36)",
+    "Tests  379 passed (379)",
+    "Test Files  1 failed | 2 passed (3)",
+    "Tests  1 failed | 25 passed (26)"
+  ],
+  "causalObservation": "Real authenticated retained renewal with EvolutionHttpClient and actual Response parsing: valid absence reconciles prior resource CLEANED; subsequent INITIAL cannot resume exact ERROR/CLEANUP_AMBIGUOUS reservation and returns CHANNEL_SLOT_OCCUPIED instead of200. Exactly one selected e2e failure; no fixture teardown cascade.",
+  "qualification": "Clean RED before production service edits per executor and prior source-check; current service repair has since begun. Protected adapter/spec remain frozen. Run1 retained qualified, no CP1 acceptance.",
+  "cleanup": "Root observed disposable network/container/volume removal in terminal log."
+}

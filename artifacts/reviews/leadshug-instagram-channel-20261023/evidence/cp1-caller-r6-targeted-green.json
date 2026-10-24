@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "kind": "cp1-caller-r6-targeted-green",
+  "command": "bash scripts/test-channels-local.sh api-instagram",
+  "executorReportedExit": 0,
+  "rootObservedSummary": [
+    "Test Files  36 passed (36)",
+    "Tests  379 passed (379)",
+    "Test Files  3 passed (3)",
+    "Tests  26 passed (26)"
+  ],
+  "migrations": "30 applied, lint/build passed",
+  "log": {
+    "path": "foundation_documentation/artifacts/tmp/instagram-channel-implementation/cp1-caller-r6-green-01.log",
+    "sha256": "56383e4a491038ef1c982768b5f6c5c7e46c372b0c239553b48e002928b505ce",
+    "bytes": 23113
+  },
+  "sourceManifest": "cp1-caller-r6-frozen-source-manifest.json",
+  "changedSinceR5": [
+    "api-app/src/domain/channels/channels.service.ts",
+    "api-app/test/instagram-lifecycle.e2e-spec.ts"
+  ],
+  "immutableInherited": {
+    "checked": 37,
+    "mismatches": []
+  },
+  "cleanup": "Terminal disposable container/network/volume removal observed",
+  "qualification": "Real adapter with synthetic Response JSON parsing; legitimate HTTP ambiguity then validated absence, exact same reservation and one create. Malformed200 guard remains proposed/unapplied; no full API/current review or CP1 acceptance yet."
+}

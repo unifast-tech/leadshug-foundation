@@ -1,0 +1,49 @@
+{
+  "schemaVersion": 1,
+  "kind": "bounded-unapplied-companion-critique-r2-with-implemented-caller",
+  "objective": "Fresh independent complete review of revised proposal plus actual admitted caller recovery repair. Verify prior three findings and full preservation/evidence. Proposed protected diff remains unapplied, not patch acceptance.",
+  "governingTodo": {
+    "path": "foundation_documentation/todos/active/features/TODO-leadshug-instagram-channel.md",
+    "sha256": "27aff5c718d327162d07c87d608e13ec7b8b3c73f8bbc7b457c3c9d7f2b30015"
+  },
+  "proposal": "evolution-observation-companion-proposal.json",
+  "proposalDiff": {
+    "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/evolution-observation-companion-proposed.diff",
+    "sha256": "cc5453aeb245e1a9996e0006e3f1207b3d60bf6667c284815e282fe7457072ce"
+  },
+  "currentSource": {
+    "api-app/src/integrations/evolution/evolution.client.ts": "b0824e8fd4f801a239521855aaa02da5e0943a8c86c4ac8778e2f1f352821698",
+    "api-app/src/integrations/evolution/evolution.client.spec.ts": "119d962fdcd9c895b75845dca74d8506147e11480d74b82e8c37f29f97c04081"
+  },
+  "additionalExactRead": [
+    "api-app/src/domain/channels/channels.service.ts",
+    "api-app/test/instagram-lifecycle.e2e-spec.ts",
+    "foundation_documentation/project_constitution.md",
+    "foundation_documentation/modules/integrations-and-channels.md",
+    "foundation_documentation/policies/scope_subscope_governance.md"
+  ],
+  "evidence": [
+    "adherence-cp1-r5-result.json",
+    "cp1-r5-finding-classification.json",
+    "cp1-frozen-full-api-green-r5.json",
+    "inherited-public-preservation-v1.1.json",
+    "evolution-observation-companion-proposal.json",
+    "evolution-observation-companion-critique-result.json",
+    "evolution-observation-companion-critique-merge.json",
+    "cp1-caller-r6-causal-red.json",
+    "cp1-caller-r6-targeted-green.json",
+    "cp1-caller-r6-red-01-qualified.json",
+    "cp1-caller-recovery-handoff-r6.json"
+  ],
+  "frontendConsumerContract": "Read complete governing TODO Frontend/Consumer Matrix. No new producer/route/UI here; existing connection lifecycle outcomes use existing channels endpoint/connection UI. Current same-slice service regression and later CP4 browser/CP5 ALL obligations remain mandatory, no UI waiver.",
+  "strictBounds": "Only consultarInstancia observation interpretation and meaningful adapter unit cases on the two protected paths proposed; actual product-path malformed observation/no-CLEANED/zero-create proof required in already-admitted Instagram spec. Keep existing actual[]/nonmatching valid absence, known single observation and all existing tests. No arbitrary HTTP probing, fallback, send/auth/URL/signature/dependency/runtime/private changes.",
+  "readOnlyCheck": "Root git apply --check -p2 passed; no application/tests. You may repeat --check only if useful, no mutation or runner.",
+  "knownLimits": "Targeted current379unit/26IG GREEN. A separate validator runs fullAPI, no source edits allowed until both terminal. Prior379unit/483e2e applies historical r5 bytes only. Protected adapter diff still unapplied; its actual malformed200 obligations await human admission. No CP1 acceptance or CP2..CP6 waiver.",
+  "collection": "Fresh no-context native internal reviewer, canonical dispatch + strict schema merge; bounded file-set must inspect actual protected source and exact candidate diff.",
+  "forbidden": "No writes, tests/runners, private .env reads/list/hash, .local-files, actual runtime/DB/logs/process args/env/volumes, broad scans/Git status/diff or worktrees/copies/product Git writes. No GOAL tools.",
+  "proposalRevision": 3,
+  "proposalSha256": "007c77c1f99192eef48c60f0a0803dd394fba0992866db246a8d6ed8ed3182b4",
+  "sourceManifest": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp1-caller-r6-frozen-source-manifest.json",
+  "sourceFreeze": "Writer terminal. All37sources plus protected2, TODO and proposal/diff frozen until both lanes terminal. Check hashes before/after. Read any of37manifest files if needed; minimum inspect actual service/test/protected2/diff, full TODO and listed evidence. No weaker package than original critique.",
+  "priorFindings": "IG-EVOCOMP-01 caller transition is now source/test repaired, must challenge exact tuple/lease/stale fences and actual-adapter fixture. IG-EVOCOMP-02 stronger table and03 clarified semantics updated in proposed diff/artifacts, not executed adapter tests. IG-CP1-R5-01 remains open pending protected-path admission/implementation. r5 supported historical closures are not global acceptance of current bytes."
+}

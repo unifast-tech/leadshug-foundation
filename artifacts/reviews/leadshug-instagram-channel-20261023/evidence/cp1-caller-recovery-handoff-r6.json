@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "kind": "cp1-admitted-caller-recovery-handoff-r6",
+  "authority": "Approved ST-IG-03 v1.3; no protected-path expansion",
+  "finding": "IG-EVOCOMP-01",
+  "priorSourceManifest": "cp1-r4-residual-frozen-source-manifest.json",
+  "ownedPaths": [
+    "api-app/src/domain/channels/channels.service.ts",
+    "api-app/test/instagram-lifecycle.e2e-spec.ts"
+  ],
+  "precondition": "r5 reviewer/full API and proposal critique terminal; no active source reader/freeze",
+  "objective": "Restore explicit recovery of the same reserved replacement after retained renewal cleanup ambiguity becomes conclusively resolved, preserving generation/epoch/attempt/owner and creating exactly once.",
+  "sequence": [
+    "Use actual authenticated pairing lifecycle + PostgreSQL and the real EvolutionHttpClient observation boundary with exact synthetic fetch stub/Response parsing; no fabricated DB results",
+    "Capture causal RED with valid eventual absence/deletion, demonstrating CHANNEL_SLOT_OCCUPIED/CLEANUP_RECOVERY_REQUIRED after prior CLEANED; do not edit protected adapter or unit file",
+    "Repair current fenced cleanup/resume transition inside admitted ChannelsService; no blind retry/create or lost uncertainty",
+    "Capture targeted GREEN then become terminal with source hashes; no full runner/repair loop after root freeze"
+  ],
+  "guidance": "A narrowly fenced CLEANUP_AMBIGUOUS resume for the retained pending cleanup tuple may be simplest; it must still reconcile exact prior instance under current operation fence, advance existing attempt to RESERVED_NEVER_CREATED before its first create, and retain other stale/cancel/lease exclusions. No arbitrary ERROR resumption.",
+  "realBoundary": "Delegate only plain fake observation method to actual EvolutionHttpClient with synthetic env; stub exact GETfetchInstances using actual Response.json. Keep remaining fake provider counts/inventory and real DB/service paths. Restore in finally. Use legitimate ambiguity (synthetic timeout/HTTPfailure) then valid[]/validated nonmatching absence or confirmed deletion; malformed200 guard awaits separate protected admission.",
+  "forbidden": "protected Evolution client/spec writes; private/real runtime/Meta; product Git/worktrees/copies; new GOAL tools; weakened assertions; fabricated DB transactions/constraints",
+  "later": "Root will update proposal then collect complete API/current-source review before requesting protected-path validation. No CP1 or Instagram delivery claim."
+}
