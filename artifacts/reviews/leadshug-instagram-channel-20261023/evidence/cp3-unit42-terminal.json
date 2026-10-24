@@ -1,0 +1,27 @@
+{
+  "kind": "root-reconciled-unit42-fixture-terminal",
+  "currentSourcesMatched": 261,
+  "changed": [
+    "api-app/src/domain/inbox/dispatch-admission.service.spec.ts",
+    "api-app/src/domain/inbox/outbound.service.spec.ts"
+  ],
+  "preserved": 35,
+  "indexMatched": true,
+  "reverseExactFixtureProof": [
+    {
+      "path": "api-app/src/domain/inbox/dispatch-admission.service.spec.ts",
+      "reverseExact": true,
+      "changes": "Only conversation fixture metadata, canonical route/contact identity shape and three valid stored selectedContext fixtures; all assertions/counters/scenarios exact."
+    },
+    {
+      "path": "api-app/src/domain/inbox/outbound.service.spec.ts",
+      "reverseExact": true,
+      "changes": "Only four canonical peer literals/default oracles; historical conversation presentation and prior $transaction fixture preserved."
+    }
+  ],
+  "hashes": {
+    "api-app/src/domain/inbox/dispatch-admission.service.spec.ts": "db2a52ba256592ba4a7a7f55a64b73c4188ed48b1d72c192b8f1baefb60d0809",
+    "api-app/src/domain/inbox/outbound.service.spec.ts": "11d961f30f98ec6b2d79b279e8c3cefdb0e1f686f0c036419e1e4a14b1ce31d9"
+  },
+  "tests": "NOTRUN; production/native source unchanged since qualifiedAPI41. CompletecanonicalAPI43 required."
+}

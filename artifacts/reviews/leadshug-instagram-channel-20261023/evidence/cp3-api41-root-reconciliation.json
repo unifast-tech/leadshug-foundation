@@ -1,0 +1,41 @@
+{
+  "kind": "root-reconciled-api41-terminal",
+  "exitCode": 1,
+  "sourcesMatched": 261,
+  "boundInputsMatched": 669,
+  "todoMatched": true,
+  "preservationRowsMatched": 35,
+  "rootIndexMatched": true,
+  "logBytes": 49153,
+  "logSha256": "c4feef22a8cc272cc28027813c3463c0dd1fcf47309e69072cba83bc8554a1c8",
+  "passed": [
+    "parity26mutations",
+    "Prisma generation",
+    "31migrations/schema current",
+    "lint",
+    "build"
+  ],
+  "unit": {
+    "passed": 397,
+    "total": 424,
+    "passedFiles": 37,
+    "totalFiles": 39,
+    "failed": 27
+  },
+  "failures": [
+    {
+      "path": "api-app/src/domain/inbox/dispatch-admission.service.spec.ts",
+      "count": 7,
+      "reached": "Incomplete mocked route only{id} or stored selectedContext only{providerResourceIdentityId} is rejected by canonical V2 peer proof before original reservation/state/fence assertions.",
+      "qualification": "Stack label prisma.$transaction.isolationLevel identifies callback location, not a demonstrated transaction-isolation invocation defect; no assertion about isolation-level arguments failed in inspected bodies."
+    },
+    {
+      "path": "api-app/src/domain/inbox/outbound.service.spec.ts",
+      "count": 20,
+      "reached": "Official WhatsApp PERSON fixture uses user:opaque as qualified externalPeerId; normalization rejects it before intended ownership/error/ACK branches.",
+      "qualification": "Preserve test purpose of canonical recipient distinct from historical presentation by using valid synthetic E164 peer. Do not remove canonical production validation."
+    }
+  ],
+  "notReached": "ALL E2E: nativeP2002count3/nineoracles/auth6/lockscope/query/ACK/CSV/CP2clocks/batch; no current integration proof or acceptance",
+  "next": "Explicit test-only unit42 thaw; all production/currentnative source immutable, no runner until terminalrefreeze."
+}

@@ -1,0 +1,33 @@
+{
+  "kind": "unit42-test-fixture-only-handoff",
+  "governingTodo": "foundation_documentation/todos/active/features/TODO-leadshug-instagram-channel.md",
+  "sourceBaseline": "cp3-unit42-public-baseline.json",
+  "failureEvidence": "cp3-api41-root-reconciliation.json",
+  "ownedExisting": [
+    {
+      "path": "api-app/src/domain/inbox/dispatch-admission.service.spec.ts",
+      "sha256": "7ea198eafff32b95f863b1124d73b3cec1d09a8910923793f66b176474535961",
+      "bytes": 14738
+    },
+    {
+      "path": "api-app/src/domain/inbox/outbound.service.spec.ts",
+      "sha256": "000b7ebfd5f18442b6c0fef34efbdd8faee2e1cfb6f99fbf4a632bfe4c683b7e",
+      "bytes": 29240
+    }
+  ],
+  "ownedNew": [],
+  "authority": "authority-cp3-unit42.json",
+  "routing": "routing-cp3-unit42.json",
+  "objective": "Align only existing unit fixtures with admitted canonical peer/route proof; preserve every behavior assertion and native/public contract",
+  "rules": [
+    "FIRST read this exact absolute handoff. No discovery before/after: no Git commands, rg --files/find/workspace listings, private.env/logs/runtime/provider/Docker/DB/test/build/runner/worktrees/copies/branches. Root owns Foundation. Solewriter on principalcheckout. Read only explicit positive baseline files plus literal known instructions/T/workflows. No GOAL tools.",
+    "Product code and every native E2E/other unit spec are frozen. Fix only actual mock fixture shapes/values in these two files; no assertions/scenarios/counters/timeouts removed or relaxed, no production normalization/fences changed. If actual production defect appears, stop/report concrete evidence, no newpath edits.",
+    "Dispatch unit setup currently mocks route as {id:route-1}; canonical helper needs full matched route/contactIdentity with same context ids/BU/contact/business/platform/namespace/scope/canonicalexternalpeer and conversation.contactType. Give mocks actual contract values. Mock conversation metadata must support V1 canonical fallback if a deliberate V1 test exists. Minimal selectedContext {providerResourceIdentityId} fixtures in lateACK/risk/reject cases are not valid persisted snapshots: use legitimate full same V2 context unless case explicitly exercises historicalV1, which must stayV1. Preserve nonce/CAS/timestamps/actorcall/rollback assertions.",
+    "Outbound official WHATSAPP PERSON qualifiedpeer user:opaque invalid. Use valid synthetic E164 qualified peer, retain distinct historical presentation if that is the case purpose; update exact expected fixture strings consistently, not arbitraryweakmatches. Preserve any real Instagram opaque-identity cases as Instagram (do not normalize IG). Keep captured route identity vs mutable presentation tests meaningful.",
+    "Preserve prior36b ordinary fixture $transaction:vi.fn() unless a particular intended unit needs real explicit callback fixture; do not reintroduce emptytransaction-body execution that yields unrelated accepted-incomplete. Preserve existing trust-boundary/auth36 assertions, exactcallcounts, claim/finalboundary behavior.",
+    "No runner now. Root will independently compare fixture-only changes and original assertion preservation before a new single completecanonicalAPI. Label API41 as unitfixture barrier, not causal product RED or flaky waiver. Report exacthash/bytes/changedfixture data and NOTRUN.",
+    "Any publicpath missingfrompositivebaseline or newmutablepath must be reported first; no broad search to discover it."
+  ],
+  "complete": "Twofixturefiles staticready, exactsha/bytes/oldassertpreservation, NOTRUN",
+  "blocked": "Newpath/WHAT/productdefect/authority unclear: report beforeaction"
+}

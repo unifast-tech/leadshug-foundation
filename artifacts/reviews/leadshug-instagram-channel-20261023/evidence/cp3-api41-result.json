@@ -1,0 +1,126 @@
+{
+  "kind": "cp3-api41-canonical-full-api-result",
+  "date": "2026-10-24",
+  "command": "bash scripts/test-channels-local.sh api",
+  "invocations": 1,
+  "exitCode": 1,
+  "terminalOutcome": "FAILED during unit tests; E2E stage not reached",
+  "log": {
+    "path": "cp3-api41-api.log",
+    "bytes": 49153,
+    "sha256": "c4feef22a8cc272cc28027813c3463c0dd1fcf47309e69072cba83bc8554a1c8",
+    "completeStdoutStderr": true
+  },
+  "preflight": {
+    "files": 261,
+    "exact": true,
+    "boundInputs": 669,
+    "exactBoundInputs": true,
+    "preservationRows": 35,
+    "rootGitlinks": 3,
+    "authority": "GO",
+    "routing": "GO",
+    "outputsAbsent": true
+  },
+  "postflight": {
+    "files": 261,
+    "exact": true,
+    "boundInputs": 669,
+    "exactBoundInputs": true,
+    "preservationRows": 35,
+    "rootGitlinks": 3
+  },
+  "stages": [
+    {
+      "name": "channels parity/self-guards",
+      "status": "PASS",
+      "parityMutationsRejected": 26
+    },
+    {
+      "name": "Prisma client generation",
+      "status": "PASS",
+      "evidence": "Prisma Client v6.19.3 generated in 300ms"
+    },
+    {
+      "name": "database migrations",
+      "status": "PASS",
+      "migrations": 31,
+      "evidence": "all migrations applied; schema up to date"
+    },
+    {
+      "name": "lint",
+      "status": "PASS"
+    },
+    {
+      "name": "build",
+      "status": "PASS"
+    },
+    {
+      "name": "unit tests",
+      "status": "FAIL",
+      "files": {
+        "passed": 37,
+        "failed": 2,
+        "total": 39
+      },
+      "tests": {
+        "passed": 397,
+        "failed": 27,
+        "total": 424
+      }
+    },
+    {
+      "name": "E2E tests",
+      "status": "NOT_REACHED"
+    }
+  ],
+  "failures": [
+    {
+      "file": "api-app/src/domain/inbox/dispatch-admission.service.spec.ts",
+      "failedTests": 7,
+      "representativeCases": [
+        "stores distinct ordinary owner tokens with their scoped caller and selected context",
+        "refuses an initial reservation while any ordinary token remains unreleased",
+        "refuses a new ordinary token while an initial slot remains active",
+        "allows an initial intent for an existing conversation with message history",
+        "records a late provider ID after risk release without reacquiring the slot",
+        "keeps a current authorization fence inside initial risk acknowledgment transaction",
+        "uses the database timestamp to classify a rejected undispatched initial intent"
+      ],
+      "bodies": "Full native failure bodies and stack traces are preserved in cp3-api41-api.log (lines 334 onward); include transaction mock/isolation-level failures and assertions on conflict/record/fence outcomes."
+    },
+    {
+      "file": "api-app/src/domain/inbox/outbound.service.spec.ts",
+      "failedTests": 20,
+      "commonObservedFailure": "Error: Invalid WhatsApp person address. from normalizeWhatsAppPersonPeer at contact-identity.ts:20:11, causing the expected status/response assertions to fail before their intended cases execute.",
+      "representativeCase": "OutboundService error projection > reserves an ordinary owner before preflight and claims it only at the final provider boundary",
+      "bodies": "All 20 complete native failure sections preserved in cp3-api41-api.log (lines 456-940)."
+    }
+  ],
+  "counts": {
+    "parityMutationsRejected": 26,
+    "migrations": 31,
+    "unitFilesPassed": 37,
+    "unitFilesFailed": 2,
+    "unitPassed": 397,
+    "unitFailed": 27,
+    "unitTotal": 424,
+    "dispatchAdmissionUnitFailures": 7,
+    "outboundUnitFailures": 20,
+    "e2eFiles": 0,
+    "e2eTests": 0
+  },
+  "requestedProofs": {
+    "nativeP2002Count3": "NOT_REACHED; E2E stage did not run. No API41 fresh P2002 count assertion evidence.",
+    "newAuthorizationFenceSix": "NOT_REACHED; E2E stage did not run.",
+    "newLockSerializedScopeGroups": "NOT_REACHED; E2E stage did not run.",
+    "queryAckAndCSVCases": "NOT_REACHED; E2E stage did not run.",
+    "cp2StrictClock": "NOT_REACHED",
+    "instagram1000Batch": "NOT_REACHED"
+  },
+  "notes": [
+    "The selector completed parity/generate/migrate/lint/build and then failed in unit tests; the canonical full suite stopped before E2E.",
+    "No E2E proof or downstream assertion is inferred from historical API35 or selected API39 runs.",
+    "No fixes, retry, additional command, source/input change, or Git write occurred."
+  ]
+}

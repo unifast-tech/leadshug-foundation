@@ -31,7 +31,7 @@ Este TODO define WHAT, exclusões e critérios de entrega. A baseline v1.3 abaix
 ## Delivery Status Canon (Required)
 - **Current delivery stage:** Pending
 - **Qualifiers:** none
-- **Next exact step:** selar a candidata de261 fontes para UMA execução completa da API41 e revisão afetada. Todos os writers estão terminais; patches locks37/query38/consumer39/40 e relógios ainda NOTRUN. O RED37b e seis casos de autorização aprovados são provas históricas. CP4 integral segue obrigatório.
+- **Next exact step:** selar261 fontes/T/inputs para UMA API completa43 após unit42 terminal. Root reconstruiu exatamente as fixtures anteriores: só formas/valores de preparo mudaram, asserts/counters preservados. Produção/native ainda sem prova43; CP4 e demais gates obrigatórios.
 
 ## Active Work State (Required While TODO Remains In `active/`)
 - **Work state:** implementation
@@ -1579,3 +1579,17 @@ One fresh independent sole writer now owns only the harness spec and native CSV 
 Root independently matched261 positive public sources, exactly the two owned test changes,35 preservation rows and3 root index entries. The first AST revision produced deterministic false positives on abstract imports/policy names and provider literals; the same bounded writer corrected them before execution. Positive abstract dispatch/policy/platform/address fixtures and negative concrete-provider fixtures are retained. This remains a bounded static harness, not a complete dataflow analyzer. The native CSV case now asserts exact full ordered rows, actual exclusions/date filters, finite real query/delegate reads, and denial of an ambiguous matching conversation with zero messages. The old expanded-IN assertion was strengthened to allow legitimate relational IN(SELECT) while forbidding full-ID parameter fanout.
 
 All writers are terminal and all current source is NOTRUN. Root will freeze exact261 sources/current TODO/positive bound inputs for ONE complete `bash scripts/test-channels-local.sh api` invocation, not a selected-only replacement. No source/TODO/input writer during execution; the separate validation lane may write only its four unique before/log/after/result artifacts. No autofix, retry or private/runtime/Git expansion. Root must reconcile terminal bytes and actual assertion reachability before thaw. The incident limitations and code-before-test provenance remain explicit; no retroactive authorization or RED/GREEN claim. Fresh affected adherence carrying complete prior review coverage follows; all CP4/primary/human/CP5/CP6/ALL/assurance/physical obligations remain mandatory.
+
+
+### CP3 API41 terminal: unit fixture barrier, integration unreached
+
+Root independently matched261 sources/current TODO/669 positive inputs/35 preservation rows/3 index entries and complete log49153bytes SHA c4feef22a8cc272cc28027813c3463c0dd1fcf47309e69072cba83bc8554a1c8. Parity26, generation,31 migrations, lint and build passed. Units397/424 passed (37/39 files), with27 failures in two fixtures. The seven dispatch cases stop at incomplete mocked route/stored context before the intended state/actor oracles; the stack label mentioning transaction isolation is a source location, not proof of isolation-argument failure. Twenty outbound cases use a WhatsApp PERSON qualified peer user:opaque and stop at canonical validation before their intended branches.
+
+No E2E was reached. No native lock/P2002/auth/query/ACK/CSV/temporal/batch result is inferred or transferred from previous source. Explicit thaw is now one fresh test-only unit42 writer for two admitted inbox unit specs; all production and native tests remain immutable. Fixtures must match the real canonical tuple and valid synthetic WhatsApp peer while preserving every original assertion, state, caller, nonce, counter and distinct historical presentation test purpose. No weakening production normalization or converting deliberate historicalV1 cases. After terminal root reconciliation, a new exact freeze and complete canonical API invocation are required. See `evidence/cp3-api41-root-reconciliation.json` and `evidence/cp3-unit42-handoff.json`.
+
+
+### CP3 unit42 terminal and complete API43 candidate
+
+Root matched261 current public sources, only two unit fixture changes,35 preservation rows and3 root index entries. Reversing only the added conversation/route/contact-identity fixture shape, three complete stored contexts and four outbound qualified-peer literals reconstructed both exact pre42 file hashes. All assertions/scenarios/counters are preserved. Historical presentation remains distinct; no production or native source changed. No tests/build/runner ran in this writer lane.
+
+The18 abstraction-protection unit cases passed in the qualified API41 run; that does not transfer proof to the27 unreached unit branches or any E2E. Root now freezes261 current sources/this TODO/positive inputs for ONE new complete canonical API43 invocation. All writers are terminal; no source/TODO/input mutation while validation runs, no autofix/retry and no private/runtime/Git expansion. Fresh affected adherence carrying complete prior coverage follows after terminal reconciliation; CP4/primary/human/later gates remain required.
