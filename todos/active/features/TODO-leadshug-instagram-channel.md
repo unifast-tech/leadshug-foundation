@@ -31,16 +31,16 @@ Este TODO define WHAT, exclusões e critérios de entrega. A baseline v1.3 abaix
 ## Delivery Status Canon (Required)
 - **Current delivery stage:** Pending
 - **Qualifiers:** none
-- **Next exact step:** conciliar API completa e revisão independente CP1 sobre39fontes congeladas; se aceito, executar CP2 OAuth/ingresso e continuar CP3..CP6.
+- **Next exact step:** executar CP2 OAuth/registro e ingresso Instagram autenticado, test-first em PostgreSQL descartável; depois CP3..CP6.
 
 ## Active Work State (Required While TODO Remains In `active/`)
 - **Work state:** implementation
-- **Why this state now:** usuário validou os dois caminhos da Evolution; exceção limitada registrada, demais preservações e exclusões vigentes.
+- **Why this state now:** CP1 aceito após revisão completa e395unit/490integração; iniciar CP2 dentro do contrato aprovado, preservando demais restrições.
 - **Exit condition:** todos os checkpoints e critérios validados, revisões/guards completos e prova runtime posterior explicitamente aprovada; nenhum fechamento parcial implícito.
 
 ## Blocker Notes
 - **Blocker:** none for approved code/disposable synthetic validation; two-path admission received.
-- **Last confirmed truth:** guard admitido aplicado nas hashes exatas revisadas;395unit/32Instagram passaram;35preservações intactas; fullAPI/revisão atual pendentes.
+- **Last confirmed truth:** CP1r8 completo:395unit/490integração,39fontes/TODO/contexto e35preservações conferidas; revisão independente sem findings; ambas lanes terminais.
 - **Runtime boundary:** ativação real, leitura privada, Meta e prova física dependem do plano posterior; nenhuma autorização herdada é reutilizada.
 
 ## Scope
@@ -302,7 +302,7 @@ Linhas por critério exato; evidência futura permanece planned, sem alegação 
 ### Handoff Log
 | From Profile | To Profile | Why the Handoff Exists | Touched Surfaces | Status / Evidence |
 | --- | --- | --- | --- | --- |
-| strategic-cto | operational-coder | contrato e código após aprovação | API/Web | active CP1; sole writer and authority/routing receipts recorded below |
+| strategic-cto | operational-coder | contrato e código após aprovação | API/Web | CP1 accepted; CP2 sole writer next, authority/routing receipts recorded below |
 | operational-coder | strategic-cto | consolidação de domínio/constituição | Foundation | SCOPE-01 consolidated; implementation evidence remains pending |
 | operational-coder | operational-devops | rollout local com migrações/HTTPS | runtime aprovado depois | planned |
 | operational-coder | assurance-tester-quality | testes e revisões | provas consolidadas | planned |
@@ -601,7 +601,7 @@ Historical planning observation retained: IG-REV-01..04, strategic source, high/
 | IG-CP1-R3-04 | low | release-blocker | fix in this TODO | required ownership concurrency proof cannot assume winner scheduling; fix assertions in this TODO | closed by r5 | adherence-cp1-r5-result.json; actual-winner concurrency assertion retained |
 | IG-CP1-ROOT-01 | high | release-blocker | fix in this TODO | pending current ingress remains retryable without content/trust before proof | closed by r5 | adherence-cp1-r5-result.json; metadata-only staged retry and accepted-key proof retained |
 | IG-CP1-R4-01 | high | release-blocker | repeat affected proof in this TODO | four mutations violated the explicit r4 freeze; preserve evidence and validate current bytes anew | closed by r5 | adherence-cp1-r5-result.json; cp1-frozen-full-api-green-r5.json; new stable proof replaces invalidated acceptance |
-| IG-CP1-R5-01 | medium | release-blocker | bounded companion in this TODO; protected path validation required | current staged cleanup guarantee depends on a truthful absence observation; inherited adapter weakness is not a new Instagram regression | open; admitted guard applied, fresh proof/review pending | evolution-observation-companion-user-validation.json; cp1-observation-r8-targeted-green.json |
+| IG-CP1-R5-01 | medium | release-blocker | bounded companion in this TODO; protected path validation required | current staged cleanup guarantee depends on a truthful absence observation; inherited adapter weakness is not a new Instagram regression | closed by r8 complete review/current full API | cp1-r8-acceptance.json; adherence-cp1-r8-result.json; cp1-observation-r8-full-api-green.json |
 | IG-EVOCOMP-01 | medium | release-blocker | fix admitted caller lifecycle in this TODO | conclusive cleanup must recover same reserved operation and permit one create, without widening protected paths | closed by r3/current full API; protected parser remains R5-01 | evolution-observation-companion-critique-r3-result.json; cp1-caller-r7-full-api-green.json |
 | IG-EVOCOMP-02 | medium | release-blocker | strengthen proposed tests before source admission | independent malformed name/state and null projection branches need concrete proof plan | proposal resolved r2; implementation not admitted | evolution-observation-companion-critique-r2-result.json |
 | IG-EVOCOMP-03 | low | release-blocker | correct proposal wording before validation | exact subject and absence contract must be clear to approving user; small same-artifact correction | proposal resolved r2; implementation not admitted | evolution-observation-companion-critique-r2-result.json |
@@ -1025,3 +1025,13 @@ After targeted terminal proof, freeze39sources and require full API plus fresh c
 User-admitted client/spec equal the exact reviewed candidate hashes. The clean product RED reached four actual authenticated BFF/PostgreSQL CLEANUP_PENDING→CLEANED violations with the original client; the separate unit RED reached11malformed/ambiguous response failures. `evidence/cp1-observation-r8-targeted-green.json` records395unit and32Instagram passes after the guard. All qualified fixture/query/projection/count attempts remain separately retained; none is presented as product failure or acceptance. Tests fake external HTTP only, reflect inventory truth, verify no deletion/create after malformed observation, and prove explicit eventual recovery and blocked ingress before identity.
 
 The writer is terminal. `evidence/cp1-observation-r8-frozen-source-manifest.json` seals39exact public product paths;35remaining immutable inherited rows match. Source/TODO and review artifacts are frozen until both the validation-only full API executor and fresh complete CP1 adherence reviewer are terminal. No repair during either lane. R5-01 remains open for adjudication after matching current-source evidence. Prior supported closures and r4 invalidation history remain intact. This checkpoint is not delivery: CP2..CP6, complete consumer/UI/browser/freshness/ALL/pcv/security/TQA/cutover/final reviews and separately approved real runtime/Meta proof remain mandatory.
+
+## CP1 r8 accepted — CP2 execution handoff
+
+Both frozen lanes are terminal with no source/TODO drift. `evidence/cp1-observation-r8-full-api-green.json` records30migrations, lint/build,395unit and490integration passes; `evidence/adherence-cp1-r8-result.json` is the fresh COMPLETE bounded39source review, no findings and all four positions acceptable. Strict merge passed. `evidence/cp1-r8-acceptance.json` closes R5-01 with the combined current-source proof; prior closures and invalidated history remain. No capacity/browser/realprovider claim follows.
+
+| Finding ID | Resolution | Usefulness | Formalizable | Candidate Rule Level | Candidate Rule ID | Rationale / Evidence |
+| --- | --- | --- | --- | --- | --- | --- |
+| IG-CP1-R5-01 | Integrated | useful | yes | project | n/a | Exact user-admitted guard, real-adapter product/unit causal RED, both cleanup recovery proofs and395unit/490fullintegration GREEN, fresh complete review on matching39sources |
+
+CP2 continues under APROVADOv1.3, not a renewed approval boundary. A fresh serialized operational coder implements OAuth/authorization and raw signed ingress using `evidence/cp2-execution-handoff.json`, all16obligations in the prepared test-first plan and verified primary protocol. No other code writer or runner is active. Root retains documentation ownership. Existing WhatsApp contracts,35immutable rows and six regression restrictions remain. Actual env/private/runtime/Meta/tunnel/device work is still excluded until its later concrete plan. CP2 must end in complete checkpoint proof, not merely a partial OAuth endpoint; CP3..CP6 remain mandatory.

@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "kind": "serialized-cp2-execution-handoff",
+  "date": "2026-10-24",
+  "authority": "User APROVADO ST-IG-03v1.3; CP1accepted cp1-r8-acceptance.json; this derives approved WHAT only.",
+  "owner": "fresh routine-executor gpt-6-luna medium Operational/Coder; primary-checkout single product writer; root docs only",
+  "objective": "Complete CP2 OAuth and signed ingress; all16obligations. DMfirst human reply remains whole story delivered only after CP3..CP6.",
+  "readFirst": [
+    "foundation_documentation/todos/active/features/TODO-leadshug-instagram-channel.md",
+    "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp1-r8-acceptance.json",
+    "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp1-observation-r8-frozen-source-manifest.json",
+    "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/inherited-public-preservation-v1.2.json",
+    "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/primary-instagram-contract-r1.json",
+    "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp2-test-first-handoff-plan.json",
+    "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp2-bounded-integration-notes.json"
+  ],
+  "rules": "Reload applicable boundary, Prisma/PostgreSQL/security/auth/workflow rules before edits. No GOALtools (higher instruction); do not use generic verify_context broad private inventory; follow manual checklist positive publicpaths. Require routing/authority GO.",
+  "admittedProductSurfaces": [
+    "api-app/prisma/schema.prisma",
+    "api-app/prisma/migrations/*_instagram_*/migration.sql",
+    "api-app/src/domain/channels/** (small IGauthorization owner, credentials expiry/AAD; preserve WA)",
+    "api-app/src/domain/inbox/** (shared acceptance/current INGroute/qualified timestamp, not parallel acceptance)",
+    "api-app/src/integrations/instagram/** (new fixed-purpose HTTP boundary)",
+    "api-app/src/integrations/channels/** (composition only as necessary)",
+    "api-app/src/surfaces/bff/instagram-authorizations.controller.ts",
+    "api-app/src/surfaces/bff/bff.module.ts",
+    "api-app/src/surfaces/webhooks/** (IGcontroller/module registration, preserve WA)",
+    "api-app/src/infra/http/body-parsers*",
+    "api-app/src/infra/config/modulos*",
+    "api-app/src/domain/historico/catalogo.ts and cobertura.ts if safe event/justified read needed",
+    "api-app/test/*instagram*.e2e-spec.ts",
+    "api-app/test/helpers.ts only canonical fixture/test-support if necessary; preserve scenarios/counters",
+    "api-app/.env.example only public config names if necessary (never realenv)"
+  ],
+  "scopeControl": "Only paths admitted in governing TODO; list exact modifications. No general WArefactor, protected35paths or extra dependency. Report concrete scope issue rather than silently widen. CP1service remains frozen unless actual CP2integration requires approved identity semantics and narrow justified change. Root tooling/Web/gateway/CI serialized CP4owner later, not this writer.",
+  "sequence": [
+    "Bounded source inspection; report concise concrete approach/owned paths, continue approved work without asking routine permission.",
+    "Add real authenticated Nest/BFF/PostgreSQL black-box causalRED before production implementation; do not import absent production modules causing unitcompile stop before intended endpointRED. Qualify first failed assertions honestly.",
+    "Implement OAuth+configuration/candidate verification/ciphertext/exact ownership/subscription state; tests fake only exact fixed provider HTTP.",
+    "Implement raw signed GET/POST ingestion through shared owner with bounds/orientation/dedup/original signed timestamp/truthful receipt; no IGTypebot/initial/automation.",
+    "Canonical api-instagram targeted GREEN; preserve all failure logs; report exact source/evidence and STOP before full API/fresh adherence. Both OAuth and ingress required CP2. Root then freezes all source for independent validation/review."
+  ],
+  "protocolCritical": [
+    "Separate explicit product credentials/purposes; no WAfallback; fixed official hosts/endpoints; v26 explicit installation value; namespace uses app/APIfamily+professionalID, not Graphversion.",
+    "One-time code CAS/state/session/expiry before HTTP; durable idempotent replay returns same usable URL with state hash-only, e.g.purpose-bound HMAC nonce derived from strong durable fields; no raw code/state/token persistence/logging/DTO.",
+    "Short-to-long exchange mandatory; /me verified user_id distinct from appscoped authref; opaque stringIDs, reject unsafe numeric without coercion/new dependency; actualexpires_in/acquiredAt/60smargin.",
+    "ADMIN+ scoped grant/current actor checks; candidate explicit confirm claims durable ownership atomically before promotion/subscription; cancelled/reauth cannot change owner or active old token.",
+    "10actor/30BUattempts per hour durable, state10min, operation60s lease/cooldown10s/max3requests×10s/40s stage; HTTP outside tx; ambiguous subscription requires read-before-POST explicit advance, no blind retry.",
+    "16KiBOAuth/8MiBIG raw exact route before global1MiB parse; preflight1000updates before effects, no silentdrop; challenge does not prove receipt.",
+    "RawHMAC correct explicit webhook secret before domain lookup; orientation entry.id matchesprofessional, INpeer vsOUTecho; exactnamespacedidentity; originaltimestamp controls24h, future>5min doesnotopen; echo/self/read/unsupported/deleted never opens.",
+    "Actual APIresponses and effects honest; no DB transaction/result mocks or production testingoverride.20overlap idempotency/replay/partialbatch preserve previous commits and do not ack lost work."
+  ],
+  "validation": {
+    "owner": "bash scripts/test-channels-local.sh api-instagram",
+    "namespace": "leadshug_channels_validation only",
+    "targetedLogPrefix": "cp2-",
+    "fullApi": "root later after terminal source freeze; no overlapping runners",
+    "noAcceptance": "Targeted is diagnostic; fullAPI/fresh CP2review, laterALL/browser/pcv/audits/runtime proof still mandatory."
+  },
+  "forbidden": "Private.envread/list/hash except publicexamples; .local-files; actualruntime/DB/logs/credentials/processargs/containers/volumes; Meta/tunnels/device/outboundactualnetwork; Gitstatus/diff/inventory/index/history/productcommits/gitlinks; worktrees/copies; source edits during active tests or after terminal without handoff. Retain SEC-R6-04/OPS-R4-01/TQA-ST05-03."
+}

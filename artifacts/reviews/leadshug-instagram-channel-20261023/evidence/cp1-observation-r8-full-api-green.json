@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "kind": "root-observed-frozen-full-api-green-r8",
+  "command": "bash scripts/test-channels-local.sh api",
+  "invocations": 1,
+  "exit": 0,
+  "log": "foundation_documentation/artifacts/tmp/instagram-channel-implementation/cp1-api-full-r8-01.log",
+  "sha256": "fabb4e5a2e4debb0c9ec39aaac75ef1f7c5df9680c4566e804c8ff8d72c6edbd",
+  "bytes": 198571,
+  "migrations": 30,
+  "schemaStatus": "up to date",
+  "lint": "passed",
+  "build": "passed",
+  "unit": {
+    "files": 36,
+    "passed": 395
+  },
+  "integration": {
+    "files": 36,
+    "passed": 490
+  },
+  "freezeCheck": {
+    "manifest": "cp1-observation-r8-frozen-source-manifest.json",
+    "matchedSources": 39,
+    "matchedTodo": true,
+    "matchedContext": true,
+    "immutablePreservationRows": 35,
+    "candidateHashesMatched": 2,
+    "mismatches": []
+  },
+  "cleanup": "Canonical validation container/network/volumes removed in log; validator reports disposable namespace cleaned. No operational runtime work.",
+  "limits": "Complete API proof only. Browser/ALL/pcv/CP2..CP6/real-provider proof remain required; no delivery acceptance."
+}

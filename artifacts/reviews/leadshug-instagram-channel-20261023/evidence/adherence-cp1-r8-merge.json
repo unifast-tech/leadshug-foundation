@@ -1,0 +1,24 @@
+{
+  "schema_version": "subagent-review-merge-v2",
+  "artifact_kind": "subagent_review_merge",
+  "authoritative": false,
+  "edit_policy": "derived_merge_packet",
+  "dispatch_path": "/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/adherence-cp1-r8-dispatch.json",
+  "review_kind": "architecture_adherence",
+  "review_count": 1,
+  "reviewer_labels": [
+    "instagram_cp1_adherence_r8"
+  ],
+  "highest_finding_severity": "none",
+  "axis_summary": {
+    "performance": "acceptable",
+    "elegance": "acceptable",
+    "structural_soundness": "acceptable",
+    "operational_fit": "acceptable"
+  },
+  "recommended_paths": [
+    "After both frozen lanes become terminal, reconcile the full API result and its exact39-source/TODO checks with this review. Close IG-CP1-R5-01 only through that combined adjudication; targeted GREEN and historical r5/r7 full API receipts cannot establish current-source complete validation. Preserve failures and use a later serialized handoff if repair is required. If CP1 is accepted, continue CP2\u2013CP6 under the approved contract. Full frontend/consumer work, v2 writers and state-specific v1 local-only recovery, browser/freshness, canonical ALL, pcv-1, security, TQA, cutover, final review and separately approved real-runtime/Meta/physical proof remain mandatory. Retain inherited SEC-R6-04, OPS-R4-01 and TQA-ST05-03 restrictions. No backend-only delivery acceptance or checkpoint waiver follows."
+  ],
+  "exact_next_step": "Record reviewer resolutions in the governing TODO using the machine-checkable resolution table or equivalent gate ledger, then extract the derived resolution packet and decide whether another bounded review pass is still required.",
+  "findings": []
+}

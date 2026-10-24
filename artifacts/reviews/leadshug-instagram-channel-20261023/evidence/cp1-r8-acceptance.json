@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "kind": "root-checkpoint-adjudication",
+  "date": "2026-10-24",
+  "checkpoint": "CP1",
+  "outcome": "accepted; continue CP2",
+  "sourceManifest": "cp1-observation-r8-frozen-source-manifest.json",
+  "review": {
+    "result": "adherence-cp1-r8-result.json",
+    "sha256": "e299f122b5509c30ccfb506f1d427edeed3175701ed83e94d44e608a06006942",
+    "merge": "adherence-cp1-r8-merge.json",
+    "findings": 0,
+    "positions": "all4acceptable",
+    "fullPackage": true
+  },
+  "currentCompleteApi": "cp1-observation-r8-full-api-green.json",
+  "proof": {
+    "unitPassed": 395,
+    "integrationPassed": 490,
+    "sourcesMatched": 39,
+    "immutableMatches": 35,
+    "exactUserAdmittedCandidateMatches": 2,
+    "bothLanesTerminalBeforeTodoOrSourceEdit": true
+  },
+  "findingDisposition": {
+    "IG-CP1-R5-01": "Integrated; release-blocker closed by exact user-admitted guard, causal actual-boundary product/unit RED, full GREEN and fresh COMPLETE source review. No malformed observation releases cleanup; confirmed absence permits explicit eventual recovery.",
+    "priorClosures": "Preserved per r8review; no waiver/new finding."
+  },
+  "delivery": "Pending; this is checkpoint acceptance only. CP2..CP6 and every applicable approval/consumer/browser/ALL/pcv/security/TQA/cutover/final/realruntime requirement remain. No private or Meta scope grant."
+}
