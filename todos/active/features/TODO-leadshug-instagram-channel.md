@@ -31,7 +31,7 @@ Este TODO define WHAT, exclusões e critérios de entrega. A baseline v1.3 abaix
 ## Delivery Status Canon (Required)
 - **Current delivery stage:** Pending
 - **Qualifiers:** none
-- **Next exact step:** executar o reparo16 serializado em dois caminhos, sem runner; corrigir clocks finais, cleanup após HTTP e fencing GET/null, mantendo os testes causais. Depois selar fontes/TODO e validar separadamente, repetir API completa/revisão e seguir CP3..CP6; obrigações primárias/humanas permanecem abertas.
+- **Next exact step:** validar separadamente a fonte16 selada, repetindo os mesmos testes causais e controles; nenhum writer de fonte/TODO durante a execução. Após reconciliação terminal, repetir API completa/revisão e seguir CP3..CP6; obrigações primárias/humanas permanecem abertas.
 
 ## Active Work State (Required While TODO Remains In `active/`)
 - **Work state:** implementation
@@ -889,8 +889,8 @@ Authority preflight final: `artifacts/reviews/leadshug-instagram-channel-2026102
 
 | Checkpoint | State | Owner / next proof |
 | --- | --- | --- |
-| CP1 Identity/route/state cutover | r5/full API terminal; source admission pending | previous defects and freeze evidence closed; inherited observation ambiguity R5-01 requires bounded companion validation |
-| CP2 OAuth/ingress | in progress; not accepted | candidate17 targeted GREEN; full API RED and review changes_required; repair below |
+| CP1 Identity/route/state cutover | accepted r8 | cp1-r8-acceptance.json; source companion validated and proved, no Instagram runtime claim |
+| CP2 OAuth/ingress | in progress; not accepted | qualified causal RED15 retained; source16 terminal, separately frozen validation next; primary/session companion remain open |
 | CP3 Channel/policy/consumers | pending | shared sender/acceptance only |
 | CP4 UI/CI/browser | pending | profile handoff for CI/runtime tooling |
 | CP5 independent audits | pending | consolidated source and ALL evidence |
@@ -1243,3 +1243,10 @@ Separate validation15 passed31migrations/lint/build/398unit and84of91selectedint
 The seventh failure is a stale ordinaryGET fixture: firstPOST1 plus laterGET1 gives2within the currentattempt budget3. Correct only the final counter to afterPost.subscriptionRequests+1 and2, retaining the earlier1, UNKNOWN, exactoneGET/zeroPOST and allother assertions. Do not change the product requestbudget. ROOT15 exactaccount fixture passed selected15; completeAPI rerun remains pending.
 
 All lanes are terminal. Explicitthaw under cp2-r3-final-clock-source-repair-16.json assigns the sole codewriter only api-app/src/domain/channels/instagram-authorization.service.ts and the one counter correction in api-app/test/instagram-cp2-finalization.e2e-spec.ts. Allother239frozen sources remain immutable. Final database-time predicates and synchronous guards after last awaitedfactwrite must reject expired current operation/credential facts; centralized exact-original-token settlement cleanup must preserve successors and independentreceipt/cancellation. GET/null finalization rechecks the current tuple inside its own lockedtransaction. Historical authorizedCOMPLETED/knownACK recovery stays immutable zeroHTTP despite current credential changes. No runner/Git/private/runtime/docs authority in this writer lane. Root refreezes after terminal and dispatches separate validation16, then currentcompleteAPI/freshcompleteCP2review. No CP2 acceptance, primaryobserver waiver, humancompanion admission or CP3..CP6 reduction follows.
+
+
+## CP2 source16 — terminal reconciliation and frozen validation
+
+The sole writer is terminal; root matched bothreported pathhashes, allother239sources,35preservedfiles and3rootindex refs in cp2-r3-source16-terminal-reconciliation.json. Reconstructing the exact prior test bytes proves its only change is the agreed ordinaryGET counter correction. Preexecution static alignment required a second pass within the same service/pathscope: finalclock facts now come from the current lockedtransaction, with DB-time mutation predicates and a fresh synchronous max(DBclock,Date.now) check afterlastmutation/auditawait. One captured-original-token finally covers settledcontinuations, and GET/null revalidates inside its finaltransaction. Source changes remain NOTRUN.
+
+All241explicitpublicsources/currentTODO/boundinputs are frozen for one separate canonical api-instagram validation16. No source/TODO/inputwriter during the run; only unique evidence outputs. Root will reconcile exactterminalhashes and reached assertions before currentcompleteAPI/freshcompleteCP2review. No acceptance follows from static inspection; allsix causalRED qualifications, originalseverity/openfindings, ownprimaryobserver, threependinghumanproposals, all16obligations, CP3..CP6 and mandatoryconsumers/ALL/assurance/runtime remain.

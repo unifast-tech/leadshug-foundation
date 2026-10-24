@@ -1,0 +1,18 @@
+{
+  "kind": "cp2-r3-source16-preexecution-static-alignment",
+  "status": "same bounded code-only repair16 resumed; NO runner consumed",
+  "initialTerminalReportedHashes": {
+    "api-app/src/domain/channels/instagram-authorization.service.ts": "605addbf3f9d9314cd12e05fa79b329fb5ea3881830acf8a0192e789baa7a89a",
+    "api-app/test/instagram-cp2-finalization.e2e-spec.ts": "223739cd8cd4a529203cd8e686b297f2e51c53147be35b5916f1f353e99d3fe5"
+  },
+  "other239SourcesMatched": true,
+  "incompleteRequirements": [
+    "Subscription finalclock snapshots were captured at dispatch claim, not current final lockedtuple; tests deliberatelyshortenpersisted clocks afterclaim.",
+    "Finalcallback dropped prior timeWHERE instead of actualDBtime mutation predicates; subscription success/error retains Date beforeauthorizationawait.",
+    "DBclockquery timestamp alone precedes queryresponseawait; finalguard must include genuinelyfresh synchronous comparison afterlastawait."
+  ],
+  "routing": "ExistingROOT02 residual, same explicitrepair16authority; no newWHAT or newpath admission",
+  "required": "Currentimmutablelockedtuplefacts+DBtime mutation predicates+finalsyncfreshchecks, coherentonehelper rather thanouterclaim snapshots. Exacttokenfinally andGETinsideTX revalidation retained.",
+  "testBoundary": "Only stalecountercorrection preserved; allother239paths unchanged; no test weakening/private/runtime/Meta/Git/runner authority",
+  "next": "Writer terminal -> root actualsource/preservation reconciliation -> freeze separatevalidator16/fullAPI/freshcomplete review; no acceptance"
+}

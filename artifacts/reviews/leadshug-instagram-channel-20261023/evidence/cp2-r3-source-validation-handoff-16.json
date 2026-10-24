@@ -1,0 +1,12 @@
+{
+  "kind": "cp2-r3-source-validation-only16",
+  "command": "bash scripts/test-channels-local.sh api-instagram",
+  "times": 1,
+  "freeze": "cp2-r3-source-frozen-manifest-16.json",
+  "sourceCount": 241,
+  "boundInputCount": 77,
+  "log": "cp2-r3-source-validation-16.log",
+  "routing": "routing-cp2-r2-causal-validation.json",
+  "authority": "authority-cp2-r3-validation16.json",
+  "instructions": "Separatevalidator one canonical disposable invocation, no retries/autofix/source/T/input/Git/private/runtime/provider/Meta writes. Check241/T/boundinputs/35preserved/3index beforeafter. Onlynewlogwrite; rootownsreceipt. Preserve actual commandexit/logsha andcaselevel reached/unreached qualification. RED15causalrows andcontrols needcurrentGREEN. RootreconcileafterTERMINAL; completeAPI/freshcompleteCP2review/allprimary/pendinghuman/CP3..CP6 remain."
+}

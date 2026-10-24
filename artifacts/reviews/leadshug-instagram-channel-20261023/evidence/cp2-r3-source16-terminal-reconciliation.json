@@ -1,0 +1,21 @@
+{
+  "kind": "cp2-r3-source16-terminal-reconciliation",
+  "writer": "instagram_cp2_source16",
+  "terminal": true,
+  "ownedPaths": {
+    "api-app/src/domain/channels/instagram-authorization.service.ts": "fce5e125b245e516067e60cdda5ac8f653beda2bb795641b8b2c699c420662b8",
+    "api-app/test/instagram-cp2-finalization.e2e-spec.ts": "223739cd8cd4a529203cd8e686b297f2e51c53147be35b5916f1f353e99d3fe5"
+  },
+  "other239SourcesMatched": true,
+  "preservationMatched": 35,
+  "rootIndex": [
+    "160000 5db3fbe2043428749895fc3ff6441e9457467dd0 0\tapi-app",
+    "160000 40828a20f2d6c3a1443e7ee132f42483840d6abb 0\tfoundation_documentation",
+    "160000 6c99c27dafdce8ed9b461d17aaaaa491b8ae16e9 0\tweb-app"
+  ],
+  "preexecutionStaticAlignment": "cp2-r3-source16-preexecution-alignment.json",
+  "implemented": "Currentlocked callback/subscription facts, actualDB-time finalUPDATEpredicates, max(DBclock,Date.now) afterlastwrite/auditawait, insideGETnullcurrenttuple, originaltokenonly settlementfinally. HistoricalauthorizedzeroHTTP replay preserved.",
+  "validation": "NOTRUN; separatefrozenvalidator16 next",
+  "qualification": "Source/body/hash agreement is not correctness/causalGREEN or CP2acceptance. Allprimary/pendinghuman/CP3..CP6 remain.",
+  "onlyCounterFixtureLiteralPreimageMatched": true
+}
