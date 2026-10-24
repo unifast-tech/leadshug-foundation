@@ -1,0 +1,25 @@
+{
+  "kind": "cp3-test-first-concretization-after-source13-preparation",
+  "status": "Preparationonly; NOT executionauthority while CP2review/fullAPI sources/T frozen",
+  "basis": [
+    "cp3-bounded-integration-preparation.json",
+    "cp3-type-boundary-preparation.json",
+    "cp3-execution-preparation-after-r1.json",
+    "Approved ST-IG-03 v1.3"
+  ],
+  "testCompanionsProposed": [
+    "api-app/test/instagram-cp3-routing.e2e-spec.ts",
+    "api-app/test/instagram-cp3-v1-cutover.e2e-spec.ts"
+  ],
+  "admission": "Bothnewpaths inside alreadyapproved test/*instagram*.e2e-spec.ts and canonicalapi-instagram selector. No route/runner/CIchangeneeded fornewcompanions. Rootmustrecheckfinalsource/Tscopebeforeanydispatch.",
+  "fixturePrinciple": "ActualNest/BFF/PostgreSQL and sharedowners; fakeonlyInstagramHTTP/WAexternalproviderboundaries. ExistingOAuth/ingress can establishqualifiedidentity/receipt with syntheticcredentials; providerfakecurrentlyrejects /messages, explicitlynotimplemented. No domain/resolver/session/Prisma mocks.",
+  "requiredCases": [
+    "TwoINSTAGRAMbusinessaccounts sameBU/sameopaquepeer musthave distinctcontactidentity/conversation/route, explicitrouteoption->post selectsoneexactaccount/peer; stale/mismatchedroute/resource/generation/credential failbeforeclaim/HTTP.",
+    "Actual originalqualified signed INtext for exactaccount+peer opens24h; echo/OUT/ignored/read/wrongaccount/invalidoldfuturetimestamp donotopen. Initialconversation/Typebot/APIv1/Consultar remainWhatsAppsubset, numericIGpeer doesnotbecomephone.",
+    "V2strictnewordinary+initial reservations mustpersist exactschemaVersion2; unknownschema/extrafields failclosed. PreservecommonChannel sendMessage/supportedKinds only.",
+    "EveryV1admission/acceptancestate must retain originalrequest/canonical/fingerprint/context/nonce/actor/deadline/providerreceipt/IDs/originalConversation.updatedAt and exclusion. KnownACK completeslocally fromexactassociation withzeroHTTP; ambiguous/unproved/unknownversions blockandneverconverttoV2/sendableChannel.",
+    "Samebusinessresource WAofficial/Evolution regressions preservewindow/sendformat/initialapprovedtemplate/knownACKrecovery andpublicprojections max2WAconnections."
+  ],
+  "pendingHumanBoundary": "Outbound1000characters vs1000UTF8bytes proposal stillpending. Independentroute/context/WA/policycodecanadvanceafterCP2reconciliation; no unauthorizednumericcontract or concreteoutboundlimit choice. TestASCII smallbodies fitbothpossiblelimits, do notclaimlimitsproof. IGtransportimplementation/composerfinalbounds remainpending explicitapproval. Protectedprivacy/sessionmiddleware unchanged.",
+  "sequencing": "AfterterminalfullAPI/currentfreshcompleteCP2review rootadjudicates safetyfindings, updatesexacthandoff/Tledger, thawsonewriter. Test-onlywriterterminal -> rootfreeze -> separatecausalvalidator; sourcewriteronlyafternextrootthaw. No implementation orrunner now."
+}

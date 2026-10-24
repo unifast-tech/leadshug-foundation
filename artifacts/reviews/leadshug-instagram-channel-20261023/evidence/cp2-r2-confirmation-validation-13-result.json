@@ -1,0 +1,31 @@
+{
+  "kind": "cp2-r2-confirmation-validation13-stable-selected-green",
+  "command": "bash scripts/test-channels-local.sh api-instagram",
+  "exit": 0,
+  "log": "cp2-r2-confirmation-validation-13.log",
+  "logSha256": "094e7007b18f30b3b614f81c78a22de8c36037b4b309949aec79281f3881eba0",
+  "migrations": 31,
+  "lint": "PASS",
+  "build": "PASS",
+  "unit": {
+    "files": 37,
+    "passed": 398
+  },
+  "e2e": {
+    "files": 7,
+    "passed": 77,
+    "failed": 0
+  },
+  "rootPostMatched": {
+    "sources": 239,
+    "todo": true,
+    "inputs": 15,
+    "preserved": 35,
+    "index": 3
+  },
+  "validatorTerminal": true,
+  "reachedQualification": "Log records caselevelPASS; strict19x409CONFIRMATION_IN_PROGRESS assertion and subsequentwinner/audit/onePOST/credential/replay assertions allreached. Actual individualvalues are not separatelyprinted. NaturalPGsession/matchedcontrol, recovery, receipt/cancel and successorholdercases passed.",
+  "reportCorrection": "Validator narrative accidentallycarried18+1codemix from run12into run13; rootrejects thatinconsistent claim. Current exacthashbound bindingteststrictarray requires19CONFIRMATION_IN_PROGRESS; no assertionschanged. Agentaskedtoreread source/log andcorrect withoutnewrun.",
+  "acceptance": "SelectedstableGREEN only; completeAPI+fresh60source/51inputreviewstillpending. No CP2/fullfeatureacceptance or primaryobserver/consumerwaiver.",
+  "freeze": "Freshadherencer3active; current239/T/15 and51reviewinputs immutable untilbothterminal."
+}

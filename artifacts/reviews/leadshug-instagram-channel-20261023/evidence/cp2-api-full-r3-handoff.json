@@ -1,0 +1,11 @@
+{
+  "kind": "cp2-api-full-r3-validation-only",
+  "command": "bash scripts/test-channels-local.sh api",
+  "times": 1,
+  "sourceManifest": "cp2-r2-confirmation-frozen-manifest-13.json",
+  "reviewInputFreeze": "adherence-cp2-r3-input-freeze.json",
+  "log": "cp2-api-full-r3-01.log",
+  "routing": "routing-cp2-r2-causal-validation.json",
+  "authority": "authority-cp2-r2-confirmation13.json",
+  "instructions": "Exactlyonce complete canonicaldisposableAPI now previousrun13terminal/rootmatched. Current239/T/15inputs and51reviewinputs/35/index immutable; sourceadherencer3active. Checkbeforeafter. Onlynewlog write; no source/T/inputs/private/runtime/provider/Meta/Git mutation. Do notread revieweroutputs/interruptreviewer. No retries/autofix. Rootownsresult. Qualificationonlylog+reachedassertions, nevercarrypreviousrunactuals. Fullpublicregressions/indexquery/catalogcoverage etc mustexecute unmodified."
+}

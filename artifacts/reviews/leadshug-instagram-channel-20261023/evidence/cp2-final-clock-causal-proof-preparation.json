@@ -1,0 +1,13 @@
+{
+  "kind": "post-final-await-clock-causal-proof-preparation",
+  "status": "Preparationonly; no source/T/inputs writes or newexecutor during currentreview/fullAPI",
+  "trigger": "ReviewerR3 interim static candidates, no finalfinding/dynamicclaimyet",
+  "testPlan": [
+    "ActualNest/PostgreSQL callback withlive valid signedsession throughout. Providerboundaryhook mayshorten current persistedlease/deadline to a stillfutureinstant beforefinalTX; no clocks/auth/Prisma mocks. Install exact-attempt BEFOREUPDATE trigger onlyonCANDIDATE_READY transition usingboundedPGadvisorybarrier. Observe real blocked writer/pg_blocking_pids, waitnaturalphaseexpiry thenrelease <4.5s (original5sTX). Expectedrollback/no candidatefact/audit, matchedliveclockcontrol holdsidenticalduration andsucceeds. PreserveHTTPcallcounts already legitimatelyperformed.",
+    "Repeat actualsubscription completion success/error resultwrite with exactattempt trigger andmatchedlivecontrol; capture lease/deadline/credentialmargin beforevalidfinalcheck andexpire duringlastrealDBUPDATE/auditwait. Expectlatefactsnotcommitted, exacttoken oldholder cleanup afterHTTPsettled, successor untouched, receipt/cancel independent. Tokenmargin case canuse actual providerexpires_in justabove60s (not fakeDate.now), then shortDBwaitcrossesmargin. Eachcase mustlog onlysyntheticsafe facts/reachedassertions.",
+    "WHERE clock_timestamp guards alone are evaluatedbefore a BEFOREUPDATE triggerwait anddonot prove finalcommit-clock safety. Any fixneeds fresh synchronous phaseclock assertion afterlastawait withcaptured immutablelocked deadlines/margin, or equallysafe final boundary thatrollsbackafterwait. Signedsession-only finalwrapper doesnotrefreshlease/deadline/credential clocks. Preserve real5sTX/no extensions.",
+    "No assertion canclaim expiry causal ifwaitnotobserved ormatchesdifferentclock. Distinguish wholecase duration fromeachTX. Ensureactualfinitebarriers/finallyrelease/awaitall. Do notraise transactiontimeout orsleep15s andcreditPrismaabort."
+  ],
+  "sourceDirection": "Do notimplementbeforecompleteR3/fullAPIterminalandrootadjudication. Small owner-private finalclock guard/closure peractualphase mayavoidre-querying facts already locked. Broader subscribeAfterMapping exact-token finally maycover everypostHTTP branch while retaining holder duringactualawait; reviewer/executor mustconcretizewithoutduplicatecleanup/framework. No newWHAT/schema/config/Channelmethod.",
+  "acceptance": "No exploit/sourcebug closure orapprovedrepair inferred fromthisplan. All16obligations/currentprimary/humancompanions andCP3..CP6 remain."
+}

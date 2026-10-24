@@ -1,0 +1,40 @@
+{
+  "kind": "current-frozen-complete-api-r3-qualified-diagnostic",
+  "date": "2026-10-24",
+  "command": "bash scripts/test-channels-local.sh api",
+  "exit": 1,
+  "log": "cp2-api-full-r3-01.log",
+  "logSha256": "11b3a591b89b221b7d10b79e7047152ab73caffccdd9e3782b844e0391c714a6",
+  "migrations": 31,
+  "lint": "PASS",
+  "build": "PASS",
+  "unit": {
+    "files": 37,
+    "passed": 398
+  },
+  "e2e": {
+    "files": 40,
+    "passed": 534,
+    "failed": 1,
+    "total": 535
+  },
+  "failure": {
+    "case": "Instagram malformed-entry account preflight",
+    "source": "api-app/test/instagram-cp2.e2e-spec.ts:1017",
+    "actual": "UnqualifiedfindFirst(BU,typeIG) returnedsynthetic-second-professional-ig-id",
+    "expected": "synthetic-professional-ig-id",
+    "qualification": "Earlyidentitycheckfailed; laterreceipt/resource/positive/preflight/noeffectassertionsNOTREACHED. Staticfixturequeryisambiguous under2accounts sameBU; no productioningressregression inferred."
+  },
+  "knownEarlierFailures": "OtherfivecompleteAPIr2failures absent; actualfixture/index/catalogcases mustbequalified bytheirsource/assertions, no aggregateCP5proof implied. Allselectedbinding/recovery/session/cancelpassed.",
+  "rootPostMatched": {
+    "sources": 239,
+    "todo": true,
+    "boundInputs": 15,
+    "reviewInputs": 51,
+    "preserved": 35,
+    "index": 3
+  },
+  "validatorTerminal": true,
+  "thaw": "NONE yet; freshcompleteR3review stillactive, current239/T/inputs frozen. Rootmustwaitterminaladjudicationbeforeanycode/Trepair.",
+  "acceptance": "No fullAPI/CP2/featureacceptance; allCP3..CP6 andprimary/humanproposals unchanged."
+}

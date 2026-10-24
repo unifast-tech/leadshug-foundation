@@ -1,0 +1,8 @@
+{
+  "kind": "fullapi-r3-midrun-fixture-observation-not-terminal",
+  "status": "Read-onlystaticclassification; fullrunner/reviewer stillactive, noedit/thaw",
+  "source": "api-app/test/instagram-cp2.e2e-spec.ts:1016",
+  "actualReported": "FullAPI malformedentrypreflight case fails early activeChannel.businessIdentity.externalResourceId expectedsynthetic-professional-ig-id, actualsynthetic-second-professional-ig-id. Laterpositive/preflight/assertions not reached inthisrun.",
+  "staticCauseCandidate": "Casequeries findFirst({buId,type:INSTAGRAM}) although earliercases create2IGaccounts inthesameBU. Unspecifiedroworder cannotname professionalId. Laterreceiptsnapshot/readback repeatsambiguous findFirst. Qualify exactbusinessIdentity/resource/channel alreadyknown; neverrelax identity assertion or selectarbitraryfirst. Earlier47selectedPASS doesnotprove deterministicfixture.",
+  "qualification": "Not a provider/ingressproductionregression proof. Fullrunterminal+allhashmatches and completefreshreviewrequired beforeadjudication/repair. Retain everypositivecontrol/preflight/noeffect assertion and originalcasecounts. No source change now."
+}
