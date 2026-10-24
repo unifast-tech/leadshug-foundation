@@ -22,9 +22,10 @@
     "api-app/test/helpers.ts",
     "api-app/src/domain/historico/cobertura.ts",
     "api-app/test/instagram-cp2-recovery.e2e-spec.ts",
-    "api-app/test/instagram-cp2-binding.e2e-spec.ts"
+    "api-app/test/instagram-cp2-binding.e2e-spec.ts",
+    "api-app/src/integrations/instagram/instagram-http.client.spec.ts"
   ],
-  "authority": "Approved ST-IG-03v1.3 existing scope and pathpatterns. Two new Instagram specs optional exact admittedpattern; no othernewfiles. Foundation/TODO/roottooling remain rootowned.",
+  "authority": "Approved ST-IG-03v1.3 existing scope and pathpatterns. Two new Instagram specs optional exact admittedpattern; no othernewfiles. Foundation/TODO/roottooling remain rootowned. Exact optional HTTP unit companion is inside approved src/integrations/instagram/** A,?? pattern; rootadmitted for remainingdeadline/body proof, no protectedpath deviation.",
   "readFirst": [
     "AGENTS.md",
     "delphi-ai/main_instructions.md",
@@ -61,7 +62,7 @@
     "primary own-observer GETschema/identity/completeness"
   ],
   "constraints": [
-    "Only listed12paths maychange, atmostonecodewriter. No runner/lint/build/test execution; rootfreezes afterterminal and separatevalidator.",
+    "Only listed13paths maychange, atmostonecodewriter. No runner/lint/build/test execution; rootfreezes afterterminal and separatevalidator.",
     "No Git/status/diffinventory/write, private/.envreal/list/hash, operationalDB/conversations/logs/processargs/env/containers/volumes/provider/Meta/tunnel, worktree/auxcheckout/copy, temporarysourcecopies or Foundation edits.",
     "No sourceacceptanceclaim from untrackedemptyGitdiff; use exactpublichashes and staticdescription.",
     "Current CP2r2historical evidence immutable. CP3..CP6/React/assurance/realproof not waived."

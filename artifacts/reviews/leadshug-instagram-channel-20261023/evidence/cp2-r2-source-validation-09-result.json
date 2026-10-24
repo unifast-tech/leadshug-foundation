@@ -1,0 +1,53 @@
+{
+  "kind": "cp2-r2-source-validation-09-diagnostic-red",
+  "command": "bash scripts/test-channels-local.sh api-instagram",
+  "exit": 1,
+  "log": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp2-r2-source-validation-09.log",
+  "logSha256": "2c1a1b5441b42bce4559081b0430931693fabea2705990d32ebfa1a4defbeb11",
+  "migrations": 31,
+  "lint": "passed",
+  "build": "passed",
+  "unit": {
+    "files": 37,
+    "passed": 398,
+    "newNativeFetchHTTPProofs": 3
+  },
+  "e2e": {
+    "files": 7,
+    "passed": 69,
+    "failed": 4,
+    "total": 73
+  },
+  "failures": [
+    {
+      "case": "Bounds",
+      "actual": "New setup CONNECT expected201 got429 beforelimitprobes",
+      "meaning": "Actor/BUbudget fixture collision; no currentlimitproof fromthiscase."
+    },
+    {
+      "case": "Actual CONNECT/REAUTHORIZE binding",
+      "actual": "Waited8s for firstsubscriptionPOST; timeout",
+      "meaning": "Firstconfirmprematureresponse notcaptured, no overlapassertionreached. Mustcaptureearlyresponse and actualcause; no assumptionfalseowner."
+    },
+    {
+      "case": "Actualwriterrecovery",
+      "actual": "Replayexpected200 got500; same syntheticfault activeonCOMPLETEDwrite",
+      "meaning": "StaticROOT10 fixtureconfound: triggernotdisabledbeforereplay. Firstfault/snapshotassertions reached, no successfulrecoveryproof."
+    },
+    {
+      "case": "Receipt/cancel holder",
+      "actual": "Removed instagramSubscriptionRequests undefined vs1",
+      "meaning": "Stale fixture expects invented globalcounter; preserve perattempt capandbindingholder/dispatchhistory assertions, no lifetimebudget."
+    }
+  ],
+  "supported": "Naturalshortexpirycase PASSED5025ms total acrossdistinctcontrol+expiredtransactions, not5sheldclaim; previoususerrowexpirycausalRED isrepaired inthatspecificcase. Nativefetchbody/header/normalprotocol/redirectunitproof passed; missing delayedpre-requestguard budget case remainsROOT11.",
+  "remaining": "ROOT12finalawait sessionfence/static, exactnewbinding/recoverybehaviorunproved, fullfreshconfirmation/expirytakeovermatrixnotimplemented, completeAPI/currentreviewandalllatergatespending.",
+  "rootPostMatched": {
+    "sources": 239,
+    "todo": true,
+    "inputs": 8,
+    "preserved": 35,
+    "index": 3
+  },
+  "freeze": "Terminal matched. No implicitthaw; next exactcode/testhandoff required."
+}

@@ -1,0 +1,28 @@
+{
+  "kind": "cp2-r2-source-code-only-terminal",
+  "date": "2026-10-24",
+  "writerTerminal": true,
+  "changed": {
+    "api-app/src/domain/channels/instagram-authorization.service.ts": "ea4447cf2500404b813163028749f7070ac20a11929af76c3ef0ce6182e01650",
+    "api-app/src/integrations/instagram/instagram-http.client.ts": "b45c71a971588aa54cc8c90a0be65edc40833d94ce3ca094bbc017385549a024",
+    "api-app/src/surfaces/webhooks/instagram.controller.ts": "611502e0a6a9bb8158e204edb0a031b65591bc07c29e61dd021790a3ad0ae9f0",
+    "api-app/src/infra/http/body-parsers.ts": "81e5ce92417a5322d65140da0888180fbe7e346a31b40e5662994883bac9948d",
+    "api-app/prisma/schema.prisma": "6fb1db37c44cb601e86afd441175ec14e94ec00f37616e4a5b7a915feceb3b8d",
+    "api-app/prisma/migrations/20261024100000_instagram_authorization_attempts/migration.sql": "56fa3232606291fcb457dfca8696d0a5e952bc87c46562594c4bc883ac6c15bc",
+    "api-app/test/instagram-cp2.e2e-spec.ts": "cd48ad0c31c9bd09baae4b66364dd94fd3611db370570479af7efe9d9af93701",
+    "api-app/test/instagram-cp2-residual.e2e-spec.ts": "eb8d0cbd1da01d36ae99e2bc17de7f6c56094325160b7a8a172b4e1e0681c043",
+    "api-app/test/helpers.ts": "b01da6b1e6fcd5f13aa2e28f77c63df7d2e2b2967332d740006888184e44b9dc",
+    "api-app/src/domain/historico/cobertura.ts": "f19a8f904807dbc07aebc9e5a9be91e440c0af10b5cb6ef00b1c86bb329ef12a",
+    "api-app/test/instagram-cp2-recovery.e2e-spec.ts": "e7b11801aea01a211c63d333ea086771963e6424c91d4750f5df74136d8d827d",
+    "api-app/test/instagram-cp2-binding.e2e-spec.ts": "36085deb6c00bec58dcbc8c808ec9c332bafc315feb2577241b7ff46458f5a00",
+    "api-app/src/integrations/instagram/instagram-http.client.spec.ts": "dee87c2ef6be9f1b0b5884353c37823a88fc5f7ae4315c677bf62fd23cdc98a3"
+  },
+  "priorManifest": "cp2-r2-causal-frozen-manifest-08.json",
+  "priorPaths": 236,
+  "currentPaths": 239,
+  "unchangedOther226Paths": true,
+  "preserved": 35,
+  "rootIndex": 3,
+  "proof": "NO RUNNER/LINT/BUILD/TEST by writer. Only source/staticterminal hashes matched.",
+  "remaining": "Full fresh-confirmation/expiry-takeover matrix notimplemented, testsallNOTRUN, ownobserver+pendinghumancompanions+CP3..CP6 notwaived."
+}

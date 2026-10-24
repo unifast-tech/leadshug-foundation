@@ -1,0 +1,30 @@
+{
+  "kind": "cp2-r2-static-observations-during-frozen09",
+  "status": "Read-only static observations, NOT dynamicfindings, no sourcewrite or validatorchange; source239/T/8inputs remainfrozen.",
+  "observations": [
+    {
+      "id": "IG-CP2-ROOT-10",
+      "severity": "medium",
+      "source": "api-app/test/instagram-cp2-recovery.e2e-spec.ts",
+      "fact": "Temporary trigger unconditionallyraises on exactattempt confirmation_state COMPLETED; remainsinstalled during replay, onlydropped infinally afterreplay.",
+      "meaning": "First fault canestablishinterruption, but the repeated fault blocks successfulreplay untildisabled. If actualrun fails500onreplay thisisfixture issue, not evidence brokenproductrecovery.",
+      "next": "Afterterminal, drop/disable exacttemporaryfault after reached first-failure/snapshotassertions andbefore replay, retain idempotentfinallycleanup. Keep realactualwriter and all immutablefacts/counter assertions."
+    },
+    {
+      "id": "IG-CP2-ROOT-11",
+      "severity": "medium",
+      "source": "api-app/src/integrations/instagram/instagram-http.client.ts:104-108",
+      "fact": "remainingMs calculated before awaited beforeProviderRequest; afterawait deadline positivitychecked but AbortSignal.timeout uses oldremainingMs.",
+      "meaning": "Successful slowauthorizationcheck canconsume a positivefraction ofremainingabsolute budget, then nativebody timeout extends beyondoriginaldeadline. Sourcechecknot executedexploit; currentloopback tests omit delayedguard.",
+      "next": "Afterterminal, compute actualremaining after finalpre-dispatchawait and use min10s/currentremaining; include actualnativebody stall with delaybeforeguard and measured absolute deadline, plus positivecontrol. Retain aftersuccess/errorauthority checks."
+    },
+    {
+      "id": "IG-CP2-ROOT-12",
+      "severity": "medium",
+      "source": "api-app/src/domain/channels/instagram-authorization.service.ts requireSubscriptionOrReceipt/assertSubscriptionTuple and revalidateCallbackOwner",
+      "fact": "Final requireActorTx ends withsessioncheck, then callers await tuple/lease rowqueries before returning pre-provider check.",
+      "meaning": "Needs exact finalactorclock placement assessment: a sessioncould expire during later DBwait/IO. Existing shortuserrowtest onlyproves requireActorTx ownwait; do notassert wholelastawait matrixclosed.",
+      "next": "Afterterminal/currentsource review inspect allfinalpre-dispatch/mutation exits; keep a small synchronous actualsignedsessioncheck immediately after finalawait using lockedactor/grantfacts, no generic framework orauthbypass. Add causal realPG finalrowwait ifreachable, preserve currentauthorder."
+    }
+  ]
+}

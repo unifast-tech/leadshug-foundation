@@ -1,0 +1,7 @@
+{
+  "kind": "cp2-r2-root-HOW-recalibration",
+  "confirmed": "TODO774 max3requests peradministrativestage; bindingverify/advance lease and10scooldown; durable resource mutationhistory prevents secondPOSTfromUNKNOWN. Current perattemptcountercap retained.",
+  "invalidated": "Executor inferred resource-lifetime max3GETs and wanted tosplit composite reauth/cancel scenario. This isnot approvedWHAT andwouldbreak accepted observationflow.",
+  "direction": "No resource-lifetimebudgetgate. Preserve bounded perattemptstages; newattemptcannotbypasssharedholder/cooldown or firstPOSThistory. Adapt fixturetimingtruthfully, notcounterresets/scenarioloss.",
+  "authority": "RootHOWclarification of existing approvedT774, not scopechange/waiver. No testsrunning or sourceacceptance."
+}

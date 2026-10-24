@@ -1,0 +1,37 @@
+{
+  "kind": "cp2-r2-code-only-followup-09",
+  "state": "GO only after root09terminal239/T/8/35/indexmatch; no validator/reviewer active.",
+  "routing": "routing-cp2-r2-source-repair.json",
+  "authority": "ApprovedsameST-IG-03v1.3/13ownedpaths; rootHOWconcretization, no WHATchange",
+  "ownedPaths": [
+    "api-app/src/domain/channels/instagram-authorization.service.ts",
+    "api-app/src/integrations/instagram/instagram-http.client.ts",
+    "api-app/src/integrations/instagram/instagram-http.client.spec.ts",
+    "api-app/test/instagram-cp2.e2e-spec.ts",
+    "api-app/test/instagram-cp2-residual.e2e-spec.ts",
+    "api-app/test/instagram-cp2-binding.e2e-spec.ts",
+    "api-app/test/instagram-cp2-recovery.e2e-spec.ts"
+  ],
+  "readEvidence": [
+    "cp2-r2-source-validation-09-result.json",
+    "cp2-r2-source-static-followup-09.json",
+    "cp2-r2-source-repair-handoff.json",
+    "cp2-r2-source-repair-preparation.json",
+    "adherence-cp2-r2-merge.json"
+  ],
+  "fixes": [
+    "Boundscase mustuse own fresh tenant/actor/BU for attemptsetup and everycorresponding route/count so prior actorquota doesnotprevent bounds. Keep quota capandallbounds/preflight/assertions; no counterreset.",
+    "Bindingcase failAfterSubscription throwsBEFORE afterRequestHook (helpers233), so barrierneverentered. Keep fakebehaviorunchanged. Instead holdfirstPOST inlocalhook then throwfixed syntheticlostACKerror AFTER release to makeUNCERTAIN. Captureearlyconfirmationresponse inrace tofailpromptly with exactstatus/safecode, finallycleanup/awaitall. PreserveactualCONNECT/REAUTHORIZE/noHTTP/no credentialpromotion/sharedcooldown.",
+    "Recoverytrigger staysactivebefore replay and repeatedlyfailsCOMPLETED. Disable/drop exactfault afterfirstactualinterruptedresponse+committedsnapshot checks BEFORE replay; retain idempotentfinallydrop. Preserveactualwriterboundary/immutablefacts/counters/conflicts.",
+    "Receiptcase references removed invented globalinstagramSubscriptionRequests; replace with exactperattempt subscriptionRequests=1 plus retained firstPOSTtombstone/holder/cooldown facts. No resource-lifetimebudget, deletingproof orassertionweakening.",
+    "ROOT11: remainingtimeout measuredAFTER awaitedpre-dispatch guard; use min10s/actualremaining. Add loopbacknativebody test with delayed guard consuming partofshortabsolute budget, matchedpositivecontrol and header/body elapsed assertions. Retain realabort and redirects:error. Preserve conservative tokenacquisition clock; newlyaddedpostheaders authwait/bodytime mustnot creditextratokenlifetime (e.g anchorlongtoken conservatively atrequeststart or equallysafe metadata, norecordafter/me).",
+    "ROOT12: source mustcheck actualsignedsession at lastawait boundary for transactioncommit and pre-providerreturn, not onlyatendofrequireActorTx beforetuple/UPDATEwaits. A small owner-private finalsyncassert/session-transaction wrapper may consolidatefinalchecks rather than scatterfullDBrequeries. Keep currentactor/grant/status/ownershipfacts locked/current, nosharedauth/PrismaService edits/framework. Add causal actualPGattemptrow wait with matchedlivecontrol undersame5sTX, afteractorcheck andbefore claimUPDATE/ownerquery, provingexpiredclaimrollsbackAUTHpending/noHTTP. Noauth/clock/domain/Prismamocks or5stimeoutincrease.",
+    "Add realfresh confirmation concurrency: freshCONNECTcandidate,20first confirmrequests SAME originalkey/emptybody, holdproviderPOST untilotherinflightrequestsclassified withfinitebarriers. Onepromotion/credentialv1/POST/audit; expectedcurrent409IN_PROGRESS losers; latercompletedreplaysameimmutableDTO/noHTTP. Neveruseonlypreviouscompletedcache. Keep createrequestquota separate.",
+    "Continue exactcurrent r2success/error expiry/lease/generation/credentialtakeover proof rows asmateriallyreachable; use actual persistedstatechanges/PGbarriers/fakeexternalonly, explicitNOTRUN/reached, no blanketcoverageclaim. If remainingmatrixcannotfitboundedhandoff, identifyexactmissingcasesatterminal, notsilentlycomplete."
+  ],
+  "constraints": [
+    "Sole codewriter, only7exactpaths mutable subsetof13previouslyadmitted. RootownsT/evidence. No runner/tests/lint/build/Git/private/runtime/provider/tunnel/worktrees/copies.",
+    "Allother232frozen09sourcepaths unchanged; existing3pendinghumanproposals and ownobserver untouched/unaccepted. No budgetresets/newdecoder/fallback.",
+    "Become terminal with exacteverychangedpathSHA and conciseNOTRUN. Separatevalidatorafterrootfreeze."
+  ]
+}
