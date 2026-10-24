@@ -1,0 +1,275 @@
+{
+  "role": "Active preservation policy v1.2; limited user-admitted Evolution companion; original v1.1 unchanged historical evidence",
+  "rows": [
+    {
+      "repository": "api-app",
+      "path": "prisma/migrations/20261020170000_message_inbound_window_index/migration.sql",
+      "status": "??",
+      "sha256": "586e709e07736eca0908ab5dcc668cf0e0b317189b4c963b361399848a3c9710"
+    },
+    {
+      "repository": "api-app",
+      "path": "prisma/migrations/20261021130000_message_template_drafts/migration.sql",
+      "status": "??",
+      "sha256": "3feab40fed1c9be1bac9e43464fd587d57693424c4b3012d8c4b8536661d51dd"
+    },
+    {
+      "repository": "api-app",
+      "path": "prisma/migrations/20261021150000_message_template_operations/migration.sql",
+      "status": "??",
+      "sha256": "2822bff860b5aa3476e7614f6a5d5515520dfd8e40708767d1bc4c5bfe2d991d"
+    },
+    {
+      "repository": "api-app",
+      "path": "prisma/migrations/20261022140000_initial_message_orchestration/migration.sql",
+      "status": "??",
+      "sha256": "a8b26d5dfc7eb8f658cf703cee0f1f6061b5afa2ad84ca0f37cd4baec9d68437"
+    },
+    {
+      "repository": "api-app",
+      "path": "prisma/migrations/20261022150000_initial_message_admissions/migration.sql",
+      "status": "??",
+      "sha256": "41df36b473c3163e9e29ea1cc6c12df3376994081698be83c83e50a812e3922a"
+    },
+    {
+      "repository": "api-app",
+      "path": "prisma/migrations/20261022160000_initial_message_inbox_order/migration.sql",
+      "status": "??",
+      "sha256": "60e7f76b8ccbee5e51dd939bdf126eeecaa1b1c1871f393a4363add94274a544"
+    },
+    {
+      "repository": "api-app",
+      "path": "src/domain/message-templates/template-definition.spec.ts",
+      "status": "??",
+      "sha256": "9a60549d1c79d73889fd2d47b7ea3bb25b8a0bf140da805f64216decc6ff9d97"
+    },
+    {
+      "repository": "api-app",
+      "path": "src/domain/message-templates/template-definition.ts",
+      "status": "??",
+      "sha256": "1f28bfd19454b1e187b854c4f2e9785b59e7726032c20f82d62460d87401203c"
+    },
+    {
+      "repository": "api-app",
+      "path": "src/domain/message-templates/template-draft.service.ts",
+      "status": "??",
+      "sha256": "429a078fb48d5a66601d83883275dcc12cea659692e463e94a17d41d5cdf0713"
+    },
+    {
+      "repository": "api-app",
+      "path": "src/domain/message-templates/template-management.dependencies.spec.ts",
+      "status": "??",
+      "sha256": "a03a567e5b96a348b4ab40bb18282a555d30ad3533e6efb929c5d2f2614c82b2"
+    },
+    {
+      "repository": "api-app",
+      "path": "src/domain/message-templates/template-management.ports.spec.ts",
+      "status": "??",
+      "sha256": "ddf581459b66bf0eb26ec710ded050f45713e5dd5317066cea574dacf57a68bc"
+    },
+    {
+      "repository": "api-app",
+      "path": "src/domain/message-templates/template-management.ports.ts",
+      "status": "??",
+      "sha256": "c7ed169d87a4224f82f8d1abe109bfa02b913bb2cb63303fc6477673f45ed693"
+    },
+    {
+      "repository": "api-app",
+      "path": "src/domain/message-templates/template-observation.service.ts",
+      "status": "??",
+      "sha256": "41c7c640fd31ca0759d0d88647e24c74787597dcf75fd8a3c773fe6e02965488"
+    },
+    {
+      "repository": "api-app",
+      "path": "src/domain/message-templates/template-submission.service.ts",
+      "status": "??",
+      "sha256": "a2b8b33ecfb0af165c2b94b50703d18a364d5b64ef581bbdd7659325bc631709"
+    },
+    {
+      "repository": "api-app",
+      "path": "src/domain/message-templates/template-transaction-boundary.ts",
+      "status": "??",
+      "sha256": "ea3e0550ad5c82b263391dbfb3dae6b9e8656d219f18aa0d7c55cd5668722123"
+    },
+    {
+      "repository": "api-app",
+      "path": "src/integrations/message-templates/template-management.module.ts",
+      "status": "??",
+      "sha256": "aabfb344eab0b244772f0a2a8066dbae71bb24973a0a498c69af676c17f0acdd"
+    },
+    {
+      "repository": "api-app",
+      "path": "src/integrations/message-templates/template-management.resolver.ts",
+      "status": "??",
+      "sha256": "1d26d05183645def5b0ef4ba317f7d024b3a08c610c910593a35308309e99e00"
+    },
+    {
+      "repository": "api-app",
+      "path": "src/integrations/meta/initial-message.client.spec.ts",
+      "status": "??",
+      "sha256": "0467fbad2f0b8666491d93b6efb0b648037fde08ee0655ffb4500747e68fd057"
+    },
+    {
+      "repository": "api-app",
+      "path": "src/integrations/meta/initial-message.client.ts",
+      "status": "??",
+      "sha256": "e21efb3df6910c0b740afec40da919542f672302429217268fdb56c282446721"
+    },
+    {
+      "repository": "api-app",
+      "path": "src/integrations/meta/message-template.client.spec.ts",
+      "status": "??",
+      "sha256": "6b42b44577e2c06ae73fb0525dac10b99f7364a04e2c04184dc303c6d47872b8"
+    },
+    {
+      "repository": "api-app",
+      "path": "src/integrations/meta/message-template.client.ts",
+      "status": "??",
+      "sha256": "8dff223f7a97632cf228800cdbbb12ce6f5b151efc5fa30411d03e5ec3280cb5"
+    },
+    {
+      "repository": "api-app",
+      "path": "src/surfaces/bff/message-templates.controller.ts",
+      "status": "??",
+      "sha256": "0e0449a80852a4513f626d0df7b1a5bb17b034eeceb50f53842fb91454ff4491"
+    },
+    {
+      "repository": "api-app",
+      "path": "test/message-template-bff.e2e-spec.ts",
+      "status": "??",
+      "sha256": "e0212463856dace44908e3762aa206d1ed86deeb95ebbdc926a354d1518902e4"
+    },
+    {
+      "repository": "api-app",
+      "path": "test/message-template-drafts.e2e-spec.ts",
+      "status": "??",
+      "sha256": "1a7367fc0a97fb9f727276b38186cddb796fc965ce4a9ec9e1078603670f2996"
+    },
+    {
+      "repository": "api-app",
+      "path": "test/message-template-management.e2e-spec.ts",
+      "status": "??",
+      "sha256": "788fe852c821c62533f560eaa14057789ebb5d2e1ed8fb57affa74b5f7e31d1a"
+    },
+    {
+      "repository": "api-app",
+      "path": "src/integrations/meta/meta.client.spec.ts",
+      "status": "M",
+      "sha256": "d7e76f5c392afab1638363d3c851f8ce8c5223ff27c64801a79fdc8ec00d5e7a"
+    },
+    {
+      "repository": "api-app",
+      "path": "src/integrations/meta/meta.client.ts",
+      "status": "M",
+      "sha256": "9f954f6c1c2bd10030f5eed0cb42e493d6e480106bcfc3f44977cb97a716d34f"
+    },
+    {
+      "repository": "api-app",
+      "path": "src/surfaces/public/public.module.ts",
+      "status": "M",
+      "sha256": "00a96d54fde7061f61f4ddf2b9cef836a02ad77ca29b62ea422695b9d8f90ef8"
+    },
+    {
+      "repository": "web-app",
+      "path": "src/telas/Modelos.spec.ts",
+      "status": "??",
+      "sha256": "123e1b345342bdba0d1e9de07886c5116fd21c66d92d77a9fd814478142adf52"
+    },
+    {
+      "repository": "web-app",
+      "path": "src/telas/Modelos.tsx",
+      "status": "??",
+      "sha256": "ec5410d1e38a5dd963fe48d3ba715697d9c49cd574875c784fa8e6300275771c"
+    },
+    {
+      "repository": "web-app",
+      "path": "src/App.tsx",
+      "status": "M",
+      "sha256": "2d9f3b3d03658a8d6d6132986346f3be8f36a2582faca29285b3d46c9920307e"
+    },
+    {
+      "repository": "foundation_documentation",
+      "path": "artifacts/reviews/leadshug-channel-abstraction-20261020/evidence/v13-public-product.diff",
+      "status": "M",
+      "sha256": "a72cb8992947be39fbb43caed9b1a32d422a59cc9257f0e48a9826cc5e5574d8"
+    },
+    {
+      "repository": "foundation_documentation",
+      "path": "artifacts/reviews/leadshug-start-conversation-20261022/evidence/test-quality-public-roots-output-e53-v1.1.txt",
+      "status": "M",
+      "sha256": "8712e8c7016766c20c424fa3f1711582a83074b11d0207538e178ecf77fa2eff"
+    },
+    {
+      "repository": "foundation_documentation",
+      "path": "artifacts/reviews/leadshug-start-conversation-20261022/evidence/test-quality-public-roots-output-e54-v1.1.txt",
+      "status": "M",
+      "sha256": "7bf27069cd8756cbddf3dff5d807d8e3d86387f93e2dc9b75c64853009de9b0c"
+    },
+    {
+      "repository": "foundation_documentation",
+      "path": "artifacts/reviews/leadshug-start-conversation-20261022/evidence/test-quality-public-roots-output-e64-v1.1.txt",
+      "status": "M",
+      "sha256": "5070fc5a17d6dd3198cf5b12a561f48039c780b8492814da92fd002a909aafef"
+    }
+  ],
+  "root_index": [
+    "160000 5db3fbe2043428749895fc3ff6441e9457467dd0 0\tapi-app",
+    "160000 40828a20f2d6c3a1443e7ee132f42483840d6abb 0\tfoundation_documentation",
+    "160000 6c99c27dafdce8ed9b461d17aaaaa491b8ae16e9 0\tweb-app"
+  ],
+  "root_retained_stray_reference": "completed ST-CON-04 v1.2 receipt; no new inspection performed",
+  "private_inputs_used": false,
+  "supersedesPolicyOf": "inherited-public-preservation-v1.1.json (policy only; original hashes unchanged)",
+  "mutableRegressionCompanions": [
+    {
+      "repository": "api-app",
+      "path": "test/conversation-start.e2e-spec.ts",
+      "baselineSha256": "35ead6bdea966ab05a3c9b792316867a918929194570b766767bacebb5bf4f11",
+      "allowedChange": "canonical fixture/qualified lookup/versioned context only; history file also explicit WhatsApp boundary assertions; preserve all existing scenarios/assertions/counters and deliberate v1 cutover cases"
+    },
+    {
+      "repository": "api-app",
+      "path": "test/dispatch-admission.e2e-spec.ts",
+      "baselineSha256": "da6ae029d8ade6c3e7cc67809e2d971d6585a5888c72d99b294f6fd0a920324f",
+      "allowedChange": "canonical fixture/qualified lookup/versioned context only; history file also explicit WhatsApp boundary assertions; preserve all existing scenarios/assertions/counters and deliberate v1 cutover cases"
+    },
+    {
+      "repository": "api-app",
+      "path": "test/historico.e2e-spec.ts",
+      "baselineSha256": "edbe852f763861aee8e3a12b29c949336e05461b9df1ca52ce06e0a0a56b10ff",
+      "allowedChange": "canonical fixture/qualified lookup/versioned context only; history file also explicit WhatsApp boundary assertions; preserve all existing scenarios/assertions/counters and deliberate v1 cutover cases"
+    },
+    {
+      "repository": "api-app",
+      "path": "test/painel.e2e-spec.ts",
+      "baselineSha256": "c2e030984418012d6c74a35ff0440b7d463bfe6df42d088d7087ec09985ecbbb",
+      "allowedChange": "canonical fixture/qualified lookup/versioned context only; history file also explicit WhatsApp boundary assertions; preserve all existing scenarios/assertions/counters and deliberate v1 cutover cases"
+    },
+    {
+      "repository": "api-app",
+      "path": "test/historico-atividades.e2e-spec.ts",
+      "baselineSha256": "cf91005abba689fa6b1227a65e2453a590fb0c687d647b802abe9f24fa761333",
+      "allowedChange": "canonical fixture/qualified lookup/versioned context only; history file also explicit WhatsApp boundary assertions; preserve all existing scenarios/assertions/counters and deliberate v1 cutover cases"
+    },
+    {
+      "repository": "api-app",
+      "path": "test/setores.e2e-spec.ts",
+      "baselineSha256": "e45b7ab64ee06975afc07232fac788a73b9a6d66ffb60cd42ea6824b450247ec",
+      "allowedChange": "canonical fixture/qualified lookup/versioned context only; history file also explicit WhatsApp boundary assertions; preserve all existing scenarios/assertions/counters and deliberate v1 cutover cases"
+    }
+  ],
+  "approvedExceptions": [
+    {
+      "path": "api-app/src/integrations/evolution/evolution.client.ts",
+      "originalSha256": "b0824e8fd4f801a239521855aaa02da5e0943a8c86c4ac8778e2f1f352821698",
+      "scope": "exact reviewed observation guard/unit cases only",
+      "authorization": "evolution-observation-companion-user-validation.json"
+    },
+    {
+      "path": "api-app/src/integrations/evolution/evolution.client.spec.ts",
+      "originalSha256": "119d962fdcd9c895b75845dca74d8506147e11480d74b82e8c37f29f97c04081",
+      "scope": "exact reviewed observation guard/unit cases only",
+      "authorization": "evolution-observation-companion-user-validation.json"
+    }
+  ]
+}

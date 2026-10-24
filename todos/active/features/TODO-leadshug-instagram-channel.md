@@ -30,21 +30,18 @@ Este TODO define WHAT, exclusões e critérios de entrega. A baseline v1.3 abaix
 
 ## Delivery Status Canon (Required)
 - **Current delivery stage:** Pending
-- **Qualifiers:** Blocked
-- **Next exact step:** validar admissão limitada de evolution.client.ts e evolution.client.spec.ts conforme evidence/evolution-observation-companion-admission-ready.json; após confirmação, registrar exceção, executar RED/GREEN e provas de cleanup, API completo/revisão e retomar CP2..CP6.
+- **Qualifiers:** none
+- **Next exact step:** executar RED real-adapter nas duas limpezas e unit RED, guard aprovado/GREEN; depois39fontes congeladas, API completo/revisão CP1 e seguir CP2..CP6.
 
 ## Active Work State (Required While TODO Remains In `active/`)
-- **Work state:** blocked
-- **Why this state now:** caller já corrigido e validado; o próximo reparo necessário depende de dois caminhos explicitamente preservados, com proposta concreta revisada e validação humana pendente.
-- **Exit condition:** validação explícita dos dois caminhos restaura implementation; conclusão continua exigindo todos os checkpoints, critérios e provas, sem fechamento parcial.
+- **Work state:** implementation
+- **Why this state now:** usuário validou os dois caminhos da Evolution; exceção limitada registrada, demais preservações e exclusões vigentes.
+- **Exit condition:** todos os checkpoints e critérios validados, revisões/guards completos e prova runtime posterior explicitamente aprovada; nenhum fechamento parcial implícito.
 
 ## Blocker Notes
-- **Blocker:** validação limitada dos dois caminhos protegidos da Evolution ainda não recebida.
-- **Why blocked now:** CP1 depende da interpretação honesta de observação, mas o contrato exige preservação byte-exact desses caminhos e user validation on deviation.
-- **What unblocks it:** confirmar a admissão pontual em `evidence/evolution-observation-companion-admission-ready.json`; nenhum novo escopo funcional/runtime é proposto.
-- **Owner / source:** usuário, conforme Diff Expectation Contract e proteção explícita dos arquivos herdados.
-- **Last confirmed truth:** fonte r7 passou379unit/486APIe2e e revisão independente r3 sem apontamentos;37fontes congeladas e37heranças preservadas conferidas. Não reinvestigar esses resultados como se fossem desconhecidos.
-- **Runtime boundary:** ativação local real, leitura privada, Meta e prova física dependem do plano próprio posterior já exigido no contrato; não bloqueiam CP1..CP5.
+- **Blocker:** none for approved code/disposable synthetic validation; two-path admission received.
+- **Last confirmed truth:** caller r7 passou379unit/486APIintegration e crítica r3 sem apontamentos; client/spec nas hashes originais antes do novo RED.
+- **Runtime boundary:** ativação real, leitura privada, Meta e prova física dependem do plano posterior; nenhuma autorização herdada é reutilizada.
 
 ## Scope
 - [x] SCOPE-01 Consolidar, após aprovação, as propostas DEC-qualified-contact-conversation, DEC-business-resource-provider-identity e DEC-explicit-channel-routing nos owners canônicos, distinguindo arquitetura e entrega.
@@ -193,8 +190,8 @@ Baselines Git não representam checkout limpo: `artifacts/reviews/leadshug-insta
 | API | test/message-template-bff.e2e-spec.ts | ?? | Inherited public source ONLY; byte-exact baseline hash required, NO new Instagram mutation |
 | API | test/message-template-drafts.e2e-spec.ts | ?? | Inherited public source ONLY; byte-exact baseline hash required, NO new Instagram mutation |
 | API | test/message-template-management.e2e-spec.ts | ?? | Inherited public source ONLY; byte-exact baseline hash required, NO new Instagram mutation |
-| API | src/integrations/evolution/evolution.client.spec.ts | M | Inherited public source ONLY; byte-exact baseline hash required, NO new Instagram mutation |
-| API | src/integrations/evolution/evolution.client.ts | M | Inherited public source ONLY; byte-exact baseline hash required, NO new Instagram mutation |
+| API | src/integrations/evolution/evolution.client.spec.ts | M | Limited user-validated Evolution observation guard/unit tests; exact scope and original hashes in evidence/evolution-observation-companion-user-validation.json; no unrelated mutation |
+| API | src/integrations/evolution/evolution.client.ts | M | Limited user-validated Evolution observation guard/unit tests; exact scope and original hashes in evidence/evolution-observation-companion-user-validation.json; no unrelated mutation |
 | API | src/integrations/meta/meta.client.spec.ts | M | Inherited public source ONLY; byte-exact baseline hash required, NO new Instagram mutation |
 | API | src/integrations/meta/meta.client.ts | M | Inherited public source ONLY; byte-exact baseline hash required, NO new Instagram mutation |
 | API | src/surfaces/public/public.module.ts | M | Inherited public source ONLY; byte-exact baseline hash required, NO new Instagram mutation |
@@ -223,7 +220,9 @@ Baselines Git não representam checkout limpo: `artifacts/reviews/leadshug-insta
 | Foundation | todos/completed/features/TODO-leadshug-start-conversation-by-contact.md | any | preservar prova anterior |
 
 ### Diff Deviation Analysis
-Superfícies root/safe runner/CI/compose/gateway e diferenças públicas herdadas estão admitidas por caminhos exatos e inventário de preservação em evidence/inherited-public-preservation-v1.1.json. Só a zona de mutação desta fatia pode ganhar alterações; herança fora dela deve manter hashes/deleções e índice root. O resíduo root109bytes conserva a admissão exata anterior e exige companion autorizado posterior. Não executar guards integrais que enumerem/leiam/hash privados até o plano específico posterior; code approval não concede essa exceção. Nada será restaurado automaticamente para satisfazer guard.
+Superfícies root/safe runner/CI/compose/gateway e diferenças públicas herdadas estão admitidas por caminhos exatos e inventário de preservação em evidence/inherited-public-preservation-v1.2.json. Só a zona de mutação desta fatia pode ganhar alterações; herança fora dela deve manter hashes/deleções e índice root. O resíduo root109bytes conserva a admissão exata anterior e exige companion autorizado posterior. Não executar guards integrais que enumerem/leiam/hash privados até o plano específico posterior; code approval não concede essa exceção. Nada será restaurado automaticamente para satisfazer guard.
+
+Active v1.2 preserves35inherited rows plus two user-admitted Evolution paths. Complete original v1.1 policy and hashes remain unchanged historical evidence.
 
 ## Bounded But Elastic Guardrails
 - **May stay inside this TODO:** nomes privados de classes, índices e testes dentro das responsabilidades congeladas; correções exigidas pelo mesmo percurso.
@@ -1012,3 +1011,11 @@ Both frozen lanes are terminal. `evidence/cp1-caller-r7-full-api-green.json` rec
 | IG-CP1-ROOT-R7-01 | Integrated | useful | yes | project | n/a | Post-provider-error revalidation propagates denial before ambiguity transaction; actual BFF passwordChangedAt revocation RED/GREEN, full API and r3 support closure |
 
 `evidence/evolution-observation-companion-admission-ready.json` binds the exact protected two-path diff to its review and current caller proof. The read-only apply check passed again. No exception has been granted or applied: original immutable rows and hashes remain authoritative. IG-CP1-R5-01 remains open pending explicit human path validation, then actual adapter RED/GREEN and both real-boundary cleanup regressions, frozen full API and fresh affected review. CP2..CP6, UI/browser, ALL/pcv/security/TQA/cutover/final review and separately approved real runtime/Meta proof remain mandatory.
+
+## Limited Evolution source admission — user validated
+
+User answered **“Validar os dois arquivos”** to admission-ready question `call_4056c67b34054c88bcbe41f341ffb3b8`. `evidence/evolution-observation-companion-user-validation.json` binds reviewed proposal/diff, original source hashes and expected candidate hashes. Only the two client/spec mutation restrictions are lifted for the reviewed observation guard/tests. Original v1.3 business decisions, other35immutable rows, six regression-companion restrictions and private/runtime/Meta/Git exclusions remain unchanged. Original v1.1 evidence and all prior review/RED/GREEN history remain intact.
+
+Execution is test-first: real-adapter retained-renewal and post-unlink malformed observation RED with client/unit unchanged; then unit RED; then exact reviewed guard and GREEN. Stable tuple checks apply to an existing replacement reservation; post-unlink recovery must never resurrect a cancelled/deleted channel or attempt. No DB result fabrication, weakened prior scenario, new HTTP/fallback or general Evolution refactor is authorized.
+
+After targeted terminal proof, freeze39sources and require full API plus fresh complete CP1 adherence. CP1 acceptance enables CP2 and is not a stopping point; all CP2..CP6 and delivery criteria remain required.

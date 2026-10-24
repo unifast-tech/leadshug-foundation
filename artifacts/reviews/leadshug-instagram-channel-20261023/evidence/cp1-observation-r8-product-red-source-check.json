@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "kind": "cp1-observation-r8-product-pre-red-source-seal",
+  "r7ManifestChecked": 37,
+  "changedPaths": [
+    {
+      "path": "api-app/test/instagram-lifecycle.e2e-spec.ts",
+      "previousSha256": "680e4f648551518cd05f2cb3bf2840621b381c1e9e5959aa028e379f03467325",
+      "testOnlySha256": "433e4674eb71f583b975aa76d43e62437a4772449d043dd8ef54675418d1ed54"
+    }
+  ],
+  "clientAndUnitUnchanged": {
+    "api-app/src/integrations/evolution/evolution.client.ts": "b0824e8fd4f801a239521855aaa02da5e0943a8c86c4ac8778e2f1f352821698",
+    "api-app/src/integrations/evolution/evolution.client.spec.ts": "119d962fdcd9c895b75845dca74d8506147e11480d74b82e8c37f29f97c04081"
+  },
+  "immutableActive35Matched": true,
+  "basis": "Root exact positive public paths; no private reads/inventory. Product-path tests added before any adapter/unit changes.",
+  "outcome": "RED not yet recorded; no acceptance"
+}

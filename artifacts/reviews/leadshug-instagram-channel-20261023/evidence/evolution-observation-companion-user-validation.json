@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "kind": "limited-user-source-admission",
+  "userAnswer": "Validar os dois arquivos",
+  "questionCallId": "call_4056c67b34054c88bcbe41f341ffb3b8",
+  "status": "APPROVED_IMPLEMENTATION_AUTHORIZED",
+  "scope": "Exact reviewed inventory guard and adapter tests; already-admitted lifecycle tests required",
+  "admissionReady": {
+    "path": "evolution-observation-companion-admission-ready.json",
+    "sha256": "08287e6a0066cd9ca299083a08d291414d7f9fb4c32d5da4c97e45a8d0409180"
+  },
+  "proposal": {
+    "path": "evolution-observation-companion-proposal.json",
+    "revision": 4,
+    "sha256": "3c9cea26d4a67a777dea029eb6408e00d13fefafae85b943c3c2e612bbc55b93"
+  },
+  "exactDiff": {
+    "path": "evolution-observation-companion-proposed.diff",
+    "sha256": "cc5453aeb245e1a9996e0006e3f1207b3d60bf6667c284815e282fe7457072ce",
+    "gitApplyCheck": "passed, read-only; not applied"
+  },
+  "originalSourceHashes": {
+    "api-app/src/integrations/evolution/evolution.client.ts": "b0824e8fd4f801a239521855aaa02da5e0943a8c86c4ac8778e2f1f352821698",
+    "api-app/src/integrations/evolution/evolution.client.spec.ts": "119d962fdcd9c895b75845dca74d8506147e11480d74b82e8c37f29f97c04081"
+  },
+  "expectedReviewedCandidateHashes": {
+    "api-app/src/integrations/evolution/evolution.client.ts": "195a43d05523ff810564b2d7c4772db2857cc10781774c39bdfa133cd1f62674",
+    "api-app/src/integrations/evolution/evolution.client.spec.ts": "d0332bb64966dc65287697473fa768e000630fe178374960f4738716ae542769"
+  },
+  "candidateCalculation": "In-memory unique exact hunk context replacement, permitting Git line-offset; no source mutation",
+  "preservationOriginalPolicySha256": "120d31379c3646ab9fd7d7570e142b1e8341428b7189f499b9139dccb2f87dcb",
+  "privateRuntimeMetaProductGitAuthority": false,
+  "cp1Accepted": false
+}

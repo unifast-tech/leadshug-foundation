@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "kind": "cp1-observation-r8-executor-handoff",
+  "authority": "User Validar os dois arquivos + approved ST-IG-03 v1.3",
+  "ownedPaths": [
+    "api-app/src/integrations/evolution/evolution.client.ts",
+    "api-app/src/integrations/evolution/evolution.client.spec.ts",
+    "api-app/test/instagram-lifecycle.e2e-spec.ts"
+  ],
+  "currentCallerFrozenHash": "3783c1b2a3afa982b4e9d719c71c172df1717bda7ba380ef143c9dd06045805f",
+  "sequence": [
+    "Add actual authenticated BFF/PostgreSQL retained-renewal and post-unlink tests using real EvolutionHttpClient and exact synthetic fetchInstances Response; keep client/unit unchanged. Canonical api-instagram product RED must reach e2e after unit379pass.",
+    "Add exact proposed unit cases with client unchanged; canonical unit RED separately (runner stops before e2e on unit failure).",
+    "Apply only exact reviewed consultarInstancia guard; preserve all old assertions.",
+    "Targeted canonical GREEN, terminal hashes/logs then STOP; root freezes39and fullAPI/fresh complete CP1 review."
+  ],
+  "productProof": "Both reachable paths: malformed object200 and invalidJSON preserve CLEANUP_PENDING and zero creates/unconfirmed deletion. Then validated absence ([] or valid nonmatching) or exact confirmed deletion permits explicit recovery/one create. Retained renewal keeps generation/epoch/attempt/name; post-unlink new explicit reservation under retained owner, no old cancelled attempt resurrection. Prove unproved identity/blocked ingress remains.",
+  "httpBoundary": "Delegate only fake consultarInstancia to actual client using synthetic config; exact host/path/method fetch allowlist, real Response/json; effect counts/inventory honest; restore hooks/env/globals and release waits in finally. No DB result interception or production hooks.",
+  "preservation": "Active v1.2 has35immutable rows; all r7manifest paths except owned spec stay frozen. Service no edits without root new handoff after actual defect report.",
+  "candidateHashes": {
+    "api-app/src/integrations/evolution/evolution.client.ts": "195a43d05523ff810564b2d7c4772db2857cc10781774c39bdfa133cd1f62674",
+    "api-app/src/integrations/evolution/evolution.client.spec.ts": "d0332bb64966dc65287697473fa768e000630fe178374960f4738716ae542769"
+  },
+  "redEvidence": "Primary observed contract failure is valid causal RED; report exactly reached assertions. Do not rerun solely to claim every downstream assertion failed; fixture failures require qualification/correction.",
+  "forbidden": "real env/private/runtime/Meta, productGit/index/worktrees/copies, GOAL, dependencies/arbitrary selectors/concurrent runners",
+  "command": "bash scripts/test-channels-local.sh api-instagram; disposable validation namespace only",
+  "logs": [
+    "cp1-observation-r8-product-red-01.log",
+    "cp1-observation-r8-unit-red-01.log",
+    "cp1-observation-r8-green-01.log"
+  ]
+}

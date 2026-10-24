@@ -37,5 +37,14 @@
     ],
     "outcome": "web official opens returned429/not accessible; no wire-type conclusion accepted. Third-party search results not used as authority. Recheck primary source when CP2 starts; preserve opaque identifiers without lossy conversion.",
     "codeOrScopeChange": false
+  },
+  "publicProtocolRecheckFollowup": {
+    "officialUrl": "https://developers.facebook.com/documentation/instagram-platform/instagram-api-with-instagram-login/business-login",
+    "status": 200,
+    "bodySha256": "a064cca47304871115540612982462a3468e2dcb8aeea51e6da2d6fe6c8bbd18",
+    "retrieval": "Public urllib HTTPS; no credentials or provider API calls",
+    "observation": "The detected user_id example uses a quoted placeholder. No unsafe numeric literal was observed by this bounded extraction; it does not prove every live response type.",
+    "implementationImplication": "Strict string identity decoding and rejection of numeric/rounded IDs remains consistent with the frozen opaque-ID contract. Test unsafe numeric inputs fail closed; do not invent a lossy coercion, numeric fallback, dependency or generic JSON parser based on the earlier unconfirmed concern. Actual provider envelope remains CP6 evidence.",
+    "codeOrScopeChange": false
   }
 }
