@@ -31,7 +31,7 @@ Este TODO define WHAT, exclusões e critérios de entrega. A baseline v1.3 abaix
 ## Delivery Status Canon (Required)
 - **Current delivery stage:** Pending
 - **Qualifiers:** none
-- **Next exact step:** congelar a candidata27 com fixtures24/sender25/batch26 reconciliados e executar UMA validação canônica completa da API. Todos os writers estão terminais. Última candidata executada22:406unitPASS e530/569E2EPASS,39falhas qualificadas; alterações24..26 ainda NOTRUN, sem aceite de checkpoint.
+- **Next exact step:** congelar candidata29 com syntax28 reconciliado e executar UMA validação canônica completa da API. API27 parou em lint no fechamento sintático do work.push;31migrações/generate/paridade passaram, build/unit/E2E não alcançados. Nenhuma nova prova funcional desde API22.
 
 ## Active Work State (Required While TODO Remains In `active/`)
 - **Work state:** implementation

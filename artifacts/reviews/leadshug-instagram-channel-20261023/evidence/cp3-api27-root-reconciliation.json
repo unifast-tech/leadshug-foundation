@@ -1,0 +1,20 @@
+{
+  "kind": "root-reconciled-api27",
+  "exitCode": 1,
+  "positiveSourcesMatched": 256,
+  "boundInputsMatched": 542,
+  "todoMatched": true,
+  "preservationRowsMatched": 35,
+  "rootIndexMatched": true,
+  "logSha256": "24d180849b44e2bba871204a2734ebd3796495611a0d17ce451ac8b5daec3009",
+  "logBytes": 13886,
+  "proved": "26 parity mutations; Prisma generate;31migrations/up-to-date; lint reached failed at instagram.controller.ts133 missing object closing brace in work.push.",
+  "notReached": [
+    "build",
+    "unit",
+    "E2E",
+    "batch initial/replay assertions",
+    "strict CP2 final-clock assertion"
+  ],
+  "state": "RED; no new product behavior or checkpoint acceptance proof."
+}

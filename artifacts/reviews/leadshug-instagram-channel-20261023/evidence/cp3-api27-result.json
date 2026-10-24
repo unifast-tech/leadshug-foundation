@@ -1,0 +1,93 @@
+{
+  "kind": "cp3-api27-canonical-api-validation-result",
+  "date": "2026-10-24",
+  "command": "bash scripts/test-channels-local.sh api",
+  "invocations": 1,
+  "exitCode": 1,
+  "terminalOutcome": "FAILED",
+  "log": {
+    "path": "cp3-api27-api.log",
+    "bytes": 13886,
+    "sha256": "24d180849b44e2bba871204a2734ebd3796495611a0d17ce451ac8b5daec3009",
+    "completeStdoutStderr": true
+  },
+  "preflight": {
+    "fileCount": 256,
+    "allExact": true,
+    "preservationRows": 35,
+    "rootGitlinks": 3,
+    "authority": "GO",
+    "routing": "GO"
+  },
+  "postflight": {
+    "fileCount": 256,
+    "allExact": true,
+    "preservationRows": 35,
+    "rootGitlinks": 3
+  },
+  "stages": [
+    {
+      "name": "channels parity/self-guards",
+      "status": "PASS",
+      "evidence": "parity guard emitted 26 rejected-mutation cases; canonical wrapper validation continued"
+    },
+    {
+      "name": "Prisma client generation",
+      "status": "PASS",
+      "evidence": "Prisma Client v6.19.3 generated in 311ms"
+    },
+    {
+      "name": "database migrations",
+      "status": "PASS",
+      "evidence": "31 migrations found and applied; subsequent status reported schema up to date"
+    },
+    {
+      "name": "lint",
+      "status": "FAIL",
+      "evidence": "/workspace/api-app/src/surfaces/webhooks/instagram.controller.ts\n  133:9  error  Parsing error: ', expected\n\u2716 1 problem (1 error, 0 warnings)"
+    },
+    {
+      "name": "build",
+      "status": "NOT_REACHED"
+    },
+    {
+      "name": "unit tests",
+      "status": "NOT_REACHED",
+      "count": null
+    },
+    {
+      "name": "E2E tests",
+      "status": "NOT_REACHED",
+      "count": null
+    }
+  ],
+  "assertions": {
+    "allTestAssertions": "NOT_REACHED (runner stopped at lint)",
+    "strictCp2ClockUnder2000ms": "NOT_REACHED",
+    "batchInitialPostUnder15000ms": "NOT_REACHED",
+    "batchReplayAndEffectAssertions": "NOT_REACHED"
+  },
+  "batchMarkers": {
+    "initialRequest": "NOT_REACHED",
+    "replayRequest": "NOT_REACHED"
+  },
+  "counts": {
+    "parityMutationsRejected": 26,
+    "prismaMigrations": 31,
+    "lintErrors": 1,
+    "unitTests": 0,
+    "e2eTests": 0
+  },
+  "failureBody": {
+    "file": "api-app/src/surfaces/webhooks/instagram.controller.ts",
+    "line": 133,
+    "column": 9,
+    "message": "Parsing error: ',' expected",
+    "summary": "\u2716 1 problem (1 error, 0 warnings)"
+  },
+  "notes": [
+    "No build, unit suite, or E2E suite executed because lint failed.",
+    "No batch performance, replay/effect, strict-clock, or test assertion evidence was reached.",
+    "No checkpoint, provider, browser, or delivery acceptance claim is made."
+  ]
+}
