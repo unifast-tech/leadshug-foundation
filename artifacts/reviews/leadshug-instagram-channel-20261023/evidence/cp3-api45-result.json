@@ -1,0 +1,114 @@
+{
+  "kind": "cp3-api45-canonical-full-api-result",
+  "date": "2026-10-24",
+  "command": "bash scripts/test-channels-local.sh api",
+  "invocations": 1,
+  "exitCode": 0,
+  "terminalOutcome": "PASS (full canonical API validation only)",
+  "log": {
+    "path": "cp3-api45-api.log",
+    "bytes": 226548,
+    "sha256": "07fd007b5795d91b324b1f2baf8e315004271c6957639c9cfb7c51eb2070aa8a",
+    "completeStdoutStderr": true
+  },
+  "preflight": {
+    "files": 261,
+    "exact": true,
+    "boundInputs": 690,
+    "exactBoundInputs": true,
+    "preservationRows": 35,
+    "rootGitlinks": 3,
+    "authority": "GO",
+    "routing": "GO",
+    "outputsAbsent": true
+  },
+  "postflight": {
+    "files": 261,
+    "exact": true,
+    "boundInputs": 690,
+    "exactBoundInputs": true,
+    "preservationRows": 35,
+    "rootGitlinks": 3
+  },
+  "stages": [
+    {
+      "name": "channels parity/self-guards",
+      "status": "PASS",
+      "parityMutationsRejected": 26
+    },
+    {
+      "name": "Prisma client generation",
+      "status": "PASS",
+      "evidence": "Prisma Client v6.19.3 generated in 275ms"
+    },
+    {
+      "name": "database migrations",
+      "status": "PASS",
+      "migrations": 31,
+      "evidence": "all applied; schema up to date"
+    },
+    {
+      "name": "lint",
+      "status": "PASS"
+    },
+    {
+      "name": "build",
+      "status": "PASS"
+    },
+    {
+      "name": "unit tests",
+      "status": "PASS",
+      "files": 39,
+      "passed": 424,
+      "failed": 0
+    },
+    {
+      "name": "E2E tests",
+      "status": "PASS",
+      "files": 55,
+      "passed": 586,
+      "failed": 0
+    }
+  ],
+  "requestedProofs": {
+    "oldNativeP2002": "PASS: dispatch-admission real P2002 race rollback/readback/retry case passed in 545ms with the frozen count-3/nine-oracle assertions. Native log shows passing case rather than a separate count scalar.",
+    "newAuthorizationFences": "PASS: 6/6 tests in instagram-cp3-authorization-fences.e2e-spec.ts (5157ms).",
+    "nativeSerializedLockScopes": "PASS: full CP3 native dispatch lock case passed (739ms); all same-account IG, independent-account, and formatted-WA assertions in that case completed, including the formerly blocking WA fixture.",
+    "queryBoundaries": "PASS: 4/4 tests in instagram-cp3-query-boundaries.e2e-spec.ts; explicit route/read boundary and IG-only BU readiness queries completed.",
+    "ackCases": "PASS: 4/4 CP3 Instagram ACK/local-fact cases (credential delete, metadata version change, shortened expiry, real generation conflict).",
+    "csv": "PASS: new CP3 CSV boundary case 1/1 and existing historical CSV controls pass.",
+    "cp2FinalClock": "PASS: strict CP2 final-clock file 9/9 tests (20113ms suite); no timing threshold modified.",
+    "cp2ResidualClock": "PASS: CP2 residual file 12/12 tests, including natural session-expiry matched-live case.",
+    "batch": "PASS: initial 1000 updates elapsedMs=5099.176; replay 1000 elapsedMs=3344.715; full batch test passed in 8471ms. The initial <=15000ms assertion and all following count/replay/malformed/oversize/echo/read checks were reached."
+  },
+  "counts": {
+    "parityMutationsRejected": 26,
+    "migrations": 31,
+    "unitFiles": 39,
+    "unitPassed": 424,
+    "unitFailed": 0,
+    "e2eFiles": 55,
+    "e2ePassed": 586,
+    "e2eFailed": 0,
+    "p2002RecoveryCasePassed": 1,
+    "nativeP2002ExpectedCount": 3,
+    "authorizationFenceTestsPassed": 6,
+    "nativeLockCasePassed": 1,
+    "nativeLockGroupsPassed": 3,
+    "cp3QueryBoundaryTestsPassed": 4,
+    "cp3AckCasesPassed": 4,
+    "cp3CsvBoundaryTestsPassed": 1,
+    "cp2FinalClockTestsPassed": 9,
+    "cp2ResidualClockTestsPassed": 12,
+    "batchInitialUpdates": 1000,
+    "batchInitialElapsedMs": 5099.176,
+    "batchReplayUpdates": 1000,
+    "batchReplayElapsedMs": 3344.715
+  },
+  "failures": [],
+  "notes": [
+    "All full canonical API stages and test assertions completed successfully for this frozen candidate.",
+    "This is local API validation evidence only; it does not assert ALL, browser, current formal review, provider protocol, real runtime, checkpoint, or feature-gate acceptance.",
+    "No source/input change, autofix, retry, additional validation command, or Git write occurred."
+  ]
+}

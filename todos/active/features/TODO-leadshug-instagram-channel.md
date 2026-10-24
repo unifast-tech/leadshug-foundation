@@ -31,16 +31,16 @@ Este TODO define WHAT, exclusões e critérios de entrega. A baseline v1.3 abaix
 ## Delivery Status Canon (Required)
 - **Current delivery stage:** Pending
 - **Qualifiers:** none
-- **Next exact step:** corrigir somente os5caminhos admitidos do repair44 após API43 terminal/root exatos: fixtureWA, preparação12contas, parsingerroCSV, expectativaBUinativa e recuperação segura deACKcomcontexto desconhecido. Depois nova validação congelada e adherence afetada; CP4 completo permanece obrigatório.
+- **Next exact step:** executar adherence46afetada independente em2pacotes complementares completos após rootAPI45GREEN(424unit/586E2E), levando todos os achados35/provas45/deltas atuais. Depois consolidar achados e implementar CP4 completo; nenhum aceite parcial de feature.
 
 ## Active Work State (Required While TODO Remains In `active/`)
 - **Work state:** implementation
-- **Why this state now:** API35 passou lint/build/412unit/570E2E com256fontes/T/602inputs/35preservações/3gitlinks exatos. Ambas revisões35 completaram, strictmerge válido e união52corpos conferida. Há achados de fonte atuais integrados; CP4 e gates restantes continuam obrigatórios.
+- **Why this state now:** API45 completaGREEN sobre261fontes/T/690inputs/35preservações/3gitlinks; lint/build/31mig/424unit/586E2E. Sourcefixes35..44 têm prova de execução, aguardam adherence46afetada. CP4 e gates restantes continuam obrigatórios.
 - **Exit condition:** todos os checkpoints e critérios validados, revisões/guards completos e prova runtime posterior explicitamente aprovada; nenhum fechamento parcial implícito.
 
 ## Blocker Notes
 - **Blocker:** none for remaining admitted code/disposable synthetic validation. Exact OAuth-session v2 source is applied; corrected infrastructure tests24 passed in API29 with native503 and callback confidentiality controls. Browser/gateway proof remains unvalidated. Privacy HTML and outbound UTF-8 proposals await explicit human validation; primary own-subscription observation remains unresolved, no gate waiver.
-- **Last confirmed truth:** API35 completaGREEN:31migrações/lint/build/412unit39files/570E2E50files. NativeP2002 passou541ms preservando9asserts/count3; controlelive3278ms manteve4500;9casos finalclock passaram. Lote1000 inicial5026.66ms/replay3368.475ms com todos os efeitos/preflight. Root conferiu256fontes/T/602inputs/35preservações/3index/log223104bytes SHAa61dcc1490f56d96f900ae3675d6d0604f213386d7f42129e8d69ba745129def. GREEN é somente API; adherence35 changes_required, sem aceiteCP3.
+- **Last confirmed truth:** API45 completaGREEN:424unit39files/586E2E55files; auth6/ACK4/query4/CSV1/native lock3grupos/P2002count3/finalclock9/residual12 passaram. Lote1000 inicial5099.176ms/replay3344.715ms e asserts seguintes passaram. Root conferiu261fontes/T/690inputs/35preservações/3gitlinks/log226548bytes SHA07fd007b5795d91b324b1f2baf8e315004271c6957639c9cfb7c51eb2070aa8a. Evidência somente API; fonteadherence46/CP4/primário/runtime ainda pendentes.
 - **Runtime boundary:** ativação real, leitura privada, Meta e prova física dependem do plano posterior; nenhuma autorização herdada é reutilizada.
 
 ## Scope
@@ -1597,3 +1597,11 @@ The18 abstraction-protection unit cases passed in the qualified API41 run; that 
 ## CP3 API43 terminal and repair44 qualification — 2026-10-24
 
 Root conferiu261fontes/T/677inputs/35preservações/3gitlinks/log235174bytes SHA7134cd8b6f04d1f585f25cb125a1b8d329e318876a8e1ccd9da4f9b39122fb11. Lint/build/31mig/424unit passaram;580/586E2E,6falhas. `cp3-api43-root-reconciliation.json` qualifica as provas e `cp3-repair44-handoff.json` limita5caminhos. Instagram same-account wait/different-account independence completaram antes da falha da fixtureWA; a contençãoWA ainda não executou. CSV409 com body{} não prova payloadausente dado content-typeCSV. Duas preparações12contas atingiram orçamento10/ator/hora; orçamento de produto e12contas serão preservados. O cenárioBU confirmou lock e depois prevenção final correta dePOST(409/REJECTED/zeroMessage/zeroPOST); expectativa histórica será alinhada ao fence atual, sem remover seu oráculo de bloqueio. Reconciliação deACK conhecido comcontexto desconhecido404 é regressão a corrigir para503seguro, sem mutação/envio/rota inventada. Auth6/ACK4/finalclock9/P2002count3/lote1000 passaram. Não há aceiteCP3 nem waiverCP4/primário/reviews/runtime.
+
+## CP3 repair44 terminal — 2026-10-24
+
+`cp3-repair44-terminal.json` registra5caminhos exatos e256fontes preservadas. Root rejeitou estaticamente o primeiro envelope503novo: foi removido antes de testes; retorno dehintescopado/read-only permite ao ownerexistente preservarCONFIRMED/RECORDED/RECONCILE no503deACK. NativeV1asserts não mudaram. Os4ajustes de teste preservam cenários/limites/casos positivos e corrigem somente preparo/parsing ou expectativa agora incompatível com o fence final requerido. TudoNOTRUN; próxima rodadaAPI45completa congelada.
+
+## CP3 API45 complete GREEN and affected adherence46 preparation — 2026-10-24
+
+`cp3-api45-root-reconciliation.json` sela root independente:261fontes/T/690inputs/35preservações/3gitlinks/log exatos, comando único exit0,424unit+586E2E. Os6casos anteriores agora passaram sem reduzircoorte12, orçamento deproduto, limites de tempo ou oráculos causais. Locks completaram3grupos, V1unknownACK preservou503canônico, BUinativa mantevezeroPOST/REJECTED. Auth6/ACK4/query4/CSV1/P2002count3/finalclock9/residual12/lote1000 passaram. Próxima revisão é afetada e complementar à união52já revisada35: todos os deltas desdeAPI35 e seus testes serão cobertos integralmente, preservando41corpos anteriores ainda idênticos. A+B carregam rubricas10obrigações/5eixos e ausência atual dos consumersCP4; nenhuma lane isolada aceitaCP3 ou entrega. CP4 deverá ser implementado integralmente depois da reconciliação.

@@ -1,0 +1,43 @@
+{
+  "kind": "root-qualified-repair44-terminal",
+  "sourceCount": 261,
+  "changedPaths": [
+    {
+      "path": "api-app/src/domain/inbox/dispatch-admission.service.ts",
+      "bytes": 48540,
+      "sha256": "559039c84b20ac986b6bc3b2b0590a50a6be9454634d7bbb2c05d706c5a387e4"
+    },
+    {
+      "path": "api-app/test/initial-message.e2e-spec.ts",
+      "bytes": 122472,
+      "sha256": "f35e939d81f537458b08e91ab9a98632bd4f614892f86fbf1632dda8ce95ed17"
+    },
+    {
+      "path": "api-app/test/instagram-cp3-csv-boundaries.e2e-spec.ts",
+      "bytes": 14963,
+      "sha256": "311609e3e03a3ad3088e82035cc0a53fde3822abd346617d0566988aea548795"
+    },
+    {
+      "path": "api-app/test/instagram-cp3-locks.e2e-spec.ts",
+      "bytes": 14422,
+      "sha256": "e571b7438a4ef88a5645ba14b32c457357c00e1e557d2dcb85b9ad44e9bbbfb4"
+    },
+    {
+      "path": "api-app/test/instagram-cp3-query-boundaries.e2e-spec.ts",
+      "bytes": 13341,
+      "sha256": "b8e360136c9c501e2e1f54e6c22ba2adbea108dbd2c19ab6a23e0751509aeacc"
+    }
+  ],
+  "allOther256SourcesExactToAPI43": true,
+  "writerTerminal": true,
+  "tests": "NOTRUN",
+  "qualifications": [
+    "Only five approvedpaths changed. Scope did notexpand.",
+    "Root staticread rejected first unknown-context custom503 envelope before execution. Writer removedcustomexception and returns scopedhint read-only after actorcheck, delegating canonical knownACK503 to existing Outbound caller; no nativeassert changed.",
+    "CSV retains409+exactcode, reads historical CSV content-type response.text JSON.",
+    "12account cohort retains all actual OAuth+PG mappings; only synthetic completedattemptcreatedAt aged2..13hours, productionbudgets unchanged.",
+    "BU readiness test retains lockwait/zeroPOSTwhilepinned; afterinactivecommit asserts409/REJECTED/zeroPOST/zeroMessage/nullReceipt, as required by finalactorfence.",
+    "FormattedWA Contact createdseparately before ConversationcontactId, allnativewait/scopeoracles retained."
+  ],
+  "next": "One full canonicalAPI45 under newfrozen261/T/boundinputs/35/3; nofreshPASSuntil terminal."
+}
