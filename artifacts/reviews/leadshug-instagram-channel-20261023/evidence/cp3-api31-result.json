@@ -1,0 +1,112 @@
+{
+  "kind": "cp3-api31-canonical-api-validation-result",
+  "date": "2026-10-24",
+  "command": "bash scripts/test-channels-local.sh api",
+  "invocations": 1,
+  "exitCode": 1,
+  "terminalOutcome": "FAILED",
+  "log": {
+    "path": "cp3-api31-api.log",
+    "bytes": 13992,
+    "sha256": "5fe3fe57ed4d99af5b90a20821c615824c6b9ed1fce3d31870c41c34d30f4172",
+    "completeStdoutStderr": true
+  },
+  "preflight": {
+    "fileCount": 256,
+    "allExact": true,
+    "preservationRows": 35,
+    "rootGitlinks": 3,
+    "authority": "GO",
+    "routing": "GO"
+  },
+  "postflight": {
+    "fileCount": 256,
+    "allExact": true,
+    "preservationRows": 35,
+    "rootGitlinks": 3
+  },
+  "stages": [
+    {
+      "name": "channels parity/self-guards",
+      "status": "PASS",
+      "evidence": "26 parity mutation cases rejected; wrapper checks passed"
+    },
+    {
+      "name": "Prisma client generation",
+      "status": "PASS",
+      "evidence": "generated successfully; complete detail in native log"
+    },
+    {
+      "name": "database migrations",
+      "status": "PASS",
+      "evidence": "31 migrations applied and schema up to date"
+    },
+    {
+      "name": "lint",
+      "status": "FAIL",
+      "evidence": "/workspace/api-app/test/dispatch-admission.e2e-spec.ts:741:29 Unsafe usage of ThrowStatement no-unsafe-finally; :742:41 same; :743:61 same. \u2716 3 problems (3 errors, 0 warnings)"
+    },
+    {
+      "name": "build",
+      "status": "NOT_REACHED"
+    },
+    {
+      "name": "unit tests",
+      "status": "NOT_REACHED",
+      "count": null
+    },
+    {
+      "name": "E2E tests",
+      "status": "NOT_REACHED",
+      "count": null
+    }
+  ],
+  "failureBody": {
+    "file": "api-app/test/dispatch-admission.e2e-spec.ts",
+    "diagnostics": [
+      {
+        "line": 741,
+        "column": 29,
+        "rule": "no-unsafe-finally",
+        "message": "Unsafe usage of ThrowStatement"
+      },
+      {
+        "line": 742,
+        "column": 41,
+        "rule": "no-unsafe-finally",
+        "message": "Unsafe usage of ThrowStatement"
+      },
+      {
+        "line": 743,
+        "column": 61,
+        "rule": "no-unsafe-finally",
+        "message": "Unsafe usage of ThrowStatement"
+      }
+    ],
+    "summary": "\u2716 3 problems (3 errors, 0 warnings)"
+  },
+  "assertions": {
+    "nativeP2002Count3": "NOT_REACHED",
+    "liveControlTiming": "NOT_REACHED",
+    "strictCp2Clock": "NOT_REACHED",
+    "instagramBatchInitialAndReplay": "NOT_REACHED"
+  },
+  "batchMarkers": {
+    "initialStarted": "NOT_REACHED",
+    "initialCompleted": "NOT_REACHED",
+    "replayStarted": "NOT_REACHED",
+    "replayCompleted": "NOT_REACHED"
+  },
+  "counts": {
+    "parityMutationsRejected": 26,
+    "prismaMigrations": 31,
+    "lintErrors": 3,
+    "unitTests": 0,
+    "e2eTests": 0
+  },
+  "notes": [
+    "Lint failure stopped the canonical runner before build, unit, and E2E stages.",
+    "No native P2002 race, timing, strict-clock, or batch assertion was reached on API31.",
+    "No source fix/retry or threshold change was performed; no checkpoint/provider/browser/delivery acceptance claim is made."
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "kind": "root-static-finally32",
+  "changedOnly": [
+    "api-app/test/dispatch-admission.e2e-spec.ts"
+  ],
+  "rootRead": "Complete error collection/finally/rethrow block; no explicit throw remains within finally. Existing nativequeue/counter3 and ordinary assertions retained. All other production and tests matched baseline30.",
+  "sha256": "f01410bfefa27d4763bd4460b3d6c14dc3e1985bf3d96f42e06c56007349ae09",
+  "state": "NOTRUN, no behavioral/lint GREEN."
+}

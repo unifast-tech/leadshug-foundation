@@ -1,0 +1,22 @@
+{
+  "kind": "root-reconciled-api31",
+  "exitCode": 1,
+  "sourcesMatched": 256,
+  "boundInputsMatched": 568,
+  "todoMatched": true,
+  "preservedRowsMatched": 35,
+  "rootIndexMatched": true,
+  "logSha256": "5fe3fe57ed4d99af5b90a20821c615824c6b9ed1fce3d31870c41c34d30f4172",
+  "logBytes": 13992,
+  "passed": "parity26/generate/31migrations",
+  "failed": "Lint no-unsafe-finally at dispatch-admission741..743; three explicit error throws in finally.",
+  "notReached": [
+    "build",
+    "unit",
+    "E2E",
+    "P2002nativequeue/counter3",
+    "livecontrol/strictclock/batch assertions"
+  ],
+  "reviewQualification": "Prepared CP3review31 package/dispatch generated but canonical fresh reviewer NOT launched; no reviewresult or completedreview claim. Rebind exact corrected candidate before actual dispatch.",
+  "state": "RED; same active approved test-only correction, no new product behavior."
+}
