@@ -1,0 +1,23 @@
+{
+  "kind": "cp2-residual-test-only-terminal-reconciliation",
+  "testWriterTerminal": true,
+  "allReportedHashesMatched": {
+    "api-app/src/domain/channels/instagram-authorization.service.ts": "28e93bc3bb7295531dd897dc2d5d8d9fbd8a146b8269018fa5d81bf44114f2bf",
+    "api-app/src/surfaces/bff/instagram-authorizations.controller.ts": "618795b4cb3291c48652b63fce969a10977e32ab0adc2683e40cfbe392b3b62b",
+    "api-app/src/surfaces/webhooks/instagram.controller.ts": "058ce48e4a65615c4f9522e1b88bfbc7fc7b6b913889d810b40ffddb8d654fab",
+    "api-app/src/integrations/instagram/instagram-http.client.ts": "44fb5cf9f5ba0a5217a1f227e0296c8c2c4297be2e8df23a721bcc1a71a3072f",
+    "api-app/prisma/schema.prisma": "f0a993304e2f01180cb06d6e55efa1d41aaf97cf9c5a58b3517b2fcb760f4fc8",
+    "api-app/prisma/migrations/20261024100000_instagram_authorization_attempts/migration.sql": "0ae5a0b0e91f2f364de9b92437a48c1e3cbadb31b3890acb42192f5842f3d472",
+    "api-app/test/instagram-cp2.e2e-spec.ts": "59ff0b9777432cf07b55824b1e9b2461af9bb2036dd48b6b934276dbcfda3467",
+    "api-app/test/helpers.ts": "b2c1cd30da31f90179f6273c2acfb524477d87faaa43e426115c60e86e7889c3",
+    "api-app/src/domain/historico/catalogo.ts": "9c785f32a1c9fd10c40de2a0185932aaa16ae68dcccd7a42831fa284ad40f60b",
+    "api-app/src/domain/historico/cobertura.ts": "26a3cf3cb363e7d59122468f31cf77879261a473f6c8b6e6d07a0d396ff5f532",
+    "api-app/test/instagram-cp2-residual.e2e-spec.ts": "c7c97e872ea8000db8985edc3b6635a88d654ce9b3e2acd64c2e1f6c219dd152"
+  },
+  "preservationMatched": 35,
+  "rootIndexMatched": true,
+  "allNewCases": "NOT RUN",
+  "sessionRevocationLimitation": "Stateless signed session claims: no revocation store/endpoint; retained real grant-revocation await proof. No session mock introduced.",
+  "freezeManifest": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp2-residual-validation-frozen-manifest.json",
+  "next": "One separate validation-only api-instagram run; no code fixes during execution."
+}

@@ -1,0 +1,20 @@
+{
+  "kind": "cp2-residual-validation-terminal-diagnostic",
+  "date": "2026-10-24",
+  "command": "bash scripts/test-channels-local.sh api-instagram",
+  "exit": 1,
+  "log": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp2-residual-validation-01.log",
+  "logSha256": "40d383c4b1b9e0a50793908f33f9db4c97d56333c4f7a49e09382e9d317f600f",
+  "migrationsApplied": 31,
+  "prismaGenerated": true,
+  "lint": "FAILED unused outsider in test/instagram-cp2-residual.e2e-spec.ts:101",
+  "build": "NOT REACHED",
+  "unit": "NOT REACHED",
+  "e2e": "NOT REACHED",
+  "functionalProof": false,
+  "rootMatchedFrozenSources": 236,
+  "rootMatchedTodo": true,
+  "preservationAndIndex": "executor reports35and3matched; sourcefreeze includesoldinheritedsources; retainedrootreconciliation",
+  "freeze": "Validator terminal; lifted only for test-only unused binding correction. Production and all other paths remain unchanged. No runner in writer lane.",
+  "next": "Remove unused variable binding while retaining actual outsider tenant setup and assertions, terminal; refreeze and separate validation-only once."
+}

@@ -1,0 +1,48 @@
+{
+  "kind": "read-only-static-preparation-during-frozen-validator",
+  "date": "2026-10-24",
+  "sourceManifest": "cp2-residual-validation-frozen-manifest.json",
+  "notExecutionAuthority": true,
+  "remainingConcreteConcerns": [
+    {
+      "path": "api-app/src/domain/channels/instagram-authorization.service.ts",
+      "concern": "Mapping transaction reads CANDIDATE_READY after resource wait without locking exact attempt and rechecking current expiresAt/credential60s margin inside same final CAS. First claim check cannot replace this."
+    },
+    {
+      "path": "api-app/src/domain/channels/instagram-authorization.service.ts",
+      "concern": "Callback error handler checks lease with read then later CAS lacks leaseDeadline/expiresAt; use exact current wall clock predicates after awaited locks."
+    },
+    {
+      "path": "api-app/src/domain/channels/instagram-authorization.service.ts",
+      "concern": "Provider call has no final before-HTTP actor/resource/credential tuple validation. Credential expiry absent from tuple select. Final confirmation key/hash write lacks current holder/status/resource checks. advance returns cached SUBSCRIBED without current tuple."
+    },
+    {
+      "path": "api-app/src/integrations/instagram/instagram-http.client.ts",
+      "concern": "Subscription helpers do not receive persisted operation deadline. requestJson always10s, rather than min10s/current remaining stage budget; response parsing must stay bounded too."
+    },
+    {
+      "path": "api-app/src/domain/channels/instagram-authorization.service.ts",
+      "concern": "Historical resource subscription query findMany loads unbounded history; use bounded existence queries preserving resource-global durable mutation fence."
+    }
+  ],
+  "proofLimits": [
+    {
+      "test": "CP2-DEADLINE real subscription response residual",
+      "limit": "Mutates persisted deadline and credential expiry together during fake HTTP await. A pass cannot independently prove credential expiry fence or natural wall-clock deadline transition. Split independent assertions/cases before closing ROOT02."
+    },
+    {
+      "test": "Session revocation during OAuth await",
+      "limit": "Stateless session has no revocation store/endpoint; passwordChangedAt/status/grants are real revocation mechanisms. Preserve real grant await proof and add real persisted user/password revocation if required; no auth mocks."
+    }
+  ],
+  "pendingHumanUntouched": [
+    "session middleware companion",
+    "public privacy HTML",
+    "outbound UTF8 byte proposal"
+  ],
+  "primaryObserverStillOpen": [
+    "IG-SUBPROTO-01",
+    "IG-SUBREC-03"
+  ],
+  "next": "Await terminal immutable canonical run; preserve exact diagnostics and source proof, then explicit thaw/serialized code-only repair. No edits during active validation."
+}
