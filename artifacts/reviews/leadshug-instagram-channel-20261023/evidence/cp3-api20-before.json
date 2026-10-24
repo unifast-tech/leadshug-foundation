@@ -1,0 +1,31 @@
+{
+  "kind": "cp3-api20-validation-before",
+  "capturedAt": "2026-10-24T18:32:52Z",
+  "manifest": "cp3-api20-frozen-manifest.json",
+  "sourceCount": 254,
+  "sourcesMatched": 254,
+  "sourceMismatches": [],
+  "todoMatched": true,
+  "todoSha256": "6d97e8722fbf964d58dcd46e60a4b4d89219df3bb9beb1b10c474492ff4234c5",
+  "todoBytes": 242197,
+  "boundInputCount": 242,
+  "boundInputsMatched": 242,
+  "boundInputMismatches": [],
+  "preservationManifest": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/inherited-public-preservation-v1.2.json",
+  "preservationRowCount": 35,
+  "rootIndexExpected": [
+    "160000 5db3fbe2043428749895fc3ff6441e9457467dd0 0\tapi-app",
+    "160000 40828a20f2d6c3a1443e7ee132f42483840d6abb 0\tfoundation_documentation",
+    "160000 6c99c27dafdce8ed9b461d17aaaaa491b8ae16e9 0\tweb-app"
+  ],
+  "rootIndexActual": [
+    "160000 5db3fbe2043428749895fc3ff6441e9457467dd0 0\tapi-app",
+    "160000 40828a20f2d6c3a1443e7ee132f42483840d6abb 0\tfoundation_documentation",
+    "160000 6c99c27dafdce8ed9b461d17aaaaa491b8ae16e9 0\tweb-app"
+  ],
+  "rootIndexMatched": true,
+  "writerTerminal": true,
+  "foundationCommit": "a1eba195176896cc0c02d679c345b51521372fd3",
+  "authorizedOutputsAbsent": true,
+  "preflightPass": true
+}

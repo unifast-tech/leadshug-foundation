@@ -1,0 +1,11 @@
+{
+  "kind": "root-api20-terminal-reconciliation",
+  "sources": 254,
+  "boundInputs": 242,
+  "preservedRows": 35,
+  "rootIndexMatched": 3,
+  "todoMatched": true,
+  "logSha256": "6511939a4476b40c0896d9e91c41b78b5cc91343cc1b7a2beb81381fc6763422",
+  "rootRead": "Actual log compiler bodies read after terminal, all positive hashes recomputed. Lint passed; build TS2322 enum string[] widening in history resource filter and readonly origin tuple, cascading TS2339 lost select inference. No product test assertions reached; no GREEN/current unit/OAuth/clock proof.",
+  "next": "Lift20 freeze; one bounded compiler21 writer, type annotations only, then separate complete API22 candidate."
+}

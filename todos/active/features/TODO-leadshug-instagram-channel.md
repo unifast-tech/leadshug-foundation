@@ -1452,3 +1452,11 @@ Root conferiu254fontes/T/228inputs/35preservações/3índices e SHA do log compl
 
 ### Lint19 terminal — candidata completa20 preparada
 Root inverteu apenas as duas expansões void/return e reproduziu o SHA original exato de me.controller.ts, preservando CRLF; as outras253fontes permanecem iguais. A nova candidata254/T/inputs positivos será selada para UMA execução canônica completa conforme cp3-api20-validation-handoff.json. Nenhuma edição de fonte/T/inputs/autofix/retry ocorrerá durante a rodada. Testes ainda NOTRUN nesta candidata.
+
+
+### API20 terminal — compilação do histórico
+Root reconferiu254fontes/T/242inputs/35preservações/3índices e hash do log. Lint passou; build parou em7erros TypeScript no histórico: enum de provider ampliado para string[], tuple readonly e inferência de select consequente. Unit/E2E/OAuth/clock ainda não alcançados. Freeze20 encerrado; cp3-compiler21-handoff.json limita o próximo writer a tipagem Prisma do filtro/localwhere e import type, preservando todos os filtros/fatos/queries/testes. Nenhum aceite ou GREEN de produto.
+
+
+### Compiler21 terminal — nova candidata API22
+Root reproduziu o SHA anterior exato do histórico ao inverter somente import/type/const e confirmou253demais fontes iguais. As annotations contextuais usam o contrato gerado Prisma sem cast permissivo. Candidata254/T/inputs será selada para UMA execução completa API22, sem writer/retry concorrente. Prova anterior20 é somente lint/compilação interrompida. Preparação CP4 também identificou endpoints de catálogo/verify/disconnect ainda ausentes e a reativação da mesma conta após tombstone como percurso obrigatório; não há UI/backend de conexões aceito por antecipação.

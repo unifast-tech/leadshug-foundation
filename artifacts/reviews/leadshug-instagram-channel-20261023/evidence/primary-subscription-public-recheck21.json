@@ -1,0 +1,13 @@
+{
+  "kind": "primary-public-protocol-recheck21",
+  "date": "2026-10-24",
+  "urls": [
+    "https://developers.facebook.com/documentation/instagram-platform/webhooks/setup.md",
+    "https://developers.facebook.com/docs/instagram-platform/instagram-api-with-instagram-login/reference/ig-user/subscribed_apps/"
+  ],
+  "observations": [
+    "Official current setup Markdown returned HTTP200 and states InstagramLogin uses InstagramUsertoken and graph.instagram.com account/subscribed_apps POST; success:true. No ownapp GET response/identity/completeness/negativeabsence semantics established.",
+    "Guessed older reference URL returned404; exactprimarysearch returned no results. Thirdparty search results not relied on."
+  ],
+  "effect": "No protocol improvement or code/contract change; SUBPROTO01/SUBREC03 remain open. No actualprovider/private data accessed."
+}

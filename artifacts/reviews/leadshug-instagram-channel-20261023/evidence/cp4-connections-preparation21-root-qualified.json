@@ -1,0 +1,19 @@
+{
+  "kind": "root-qualified-cp4-connections-preparation21",
+  "status": "Preparation only; no sourcewrite/review/test acceptance",
+  "approvedRoutes": "T753-833 existing GET channel-connections and byUUID verify/disconnect, plus OAuth current CONNECT/REAUTHORIZE. No newWHAT.",
+  "actualGaps": [
+    "No channel-connections routes currently implemented. Legacy /channels GET reads all types/unbounded.",
+    "REAUTHORIZE requires existing matching credential; correct localdisconnect removal/detach would otherwise prevent any sameaccount reactivation."
+  ],
+  "qualifiedHow": [
+    "Use second controller class in already-admitted channels.controller.ts, register bff.module.ts; do not use advisor newcontroller path outside exact list. Tests must match admitted *instagram*.e2e-spec.ts, not unadmitted channel-connections spec name.",
+    "Small domain/channels catalogue service: stable localopaque cursor<=512/limit1..50 default20, fixedBU query limit+1 continuation, safeusername/WAcanonicaldisplay/no rawIGIDs/credentials/provider fanout. LegacyWA projection validates compatible resource/cardinality, no silently sliced subset.",
+    "IG verify/disconnect remain existing InstagramAuthorizationService lifecycle owner, reusing actor/session/resource lock/livegrant/lease/deadline/cooldown; no duplicate independently fenced IG lifecycle or blind advance→POST onverify.",
+    "Verify is explicit bounded observation only. CurrentGET observer UNKNOWN neverproves absence/ownsubscription/receipt; do not change states toconnected fromprofile.",
+    "Disconnect atomically disableslocalbinding/incrementsgeneration/invalidatescredentials and activeoperationleases; retains BCI/providerowner/routes/messages/attempts. No guessed GraphDELETE/remoteCLEANED: reportcleanup pending unless ownscope proved.",
+    "Complete safe REAUTHORIZE of disconnected sameBU/samebusiness account under expectedGeneration and absentcredential CAS; reject foreignresource and changedlivecredential; remaponly sameownedtombstone withfreshversion/generation. This is existing reauthorization lifecycle HOW, not new operation enum/resource transfer. Existing completed snapshots/ACK recovery unaffected.",
+    "Add nativePG auth/scoping/cursor/negativegeneration/livegrant/lease/cooldown/UNKNOWN/noeffects/disconnect→sameaccountreactivate/inflightfence/history tests; no fixture rewrite of ownerfacts."
+  ],
+  "otherCP4": "Preps18/19 safe display, strictV2 composer and shared Incoming realtime remain required. API currentcandidate awaitingcompleteproof."
+}

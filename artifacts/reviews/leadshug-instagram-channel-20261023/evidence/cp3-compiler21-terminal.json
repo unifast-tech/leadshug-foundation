@@ -1,0 +1,10 @@
+{
+  "kind": "root-static-compiler21-reconciliation",
+  "sources": 254,
+  "changed": [
+    "api-app/src/domain/inbox/historico.service.ts"
+  ],
+  "newSha256": "7ca439cfd8bc766202c09ce1a9a2a536b16d2040b9ebe7aae5afd6297fe910b0",
+  "reverseExact": "Reversing only import and three typing changes reproduces original5258... exactly; CRLF preserved; no runtime semantic/test changes.",
+  "validation": "NOTRUN"
+}

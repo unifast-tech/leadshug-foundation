@@ -1,0 +1,13 @@
+{
+  "kind": "cp3-compiler21-executor-handoff",
+  "profile": "Operational / Coder",
+  "source": "api-app/src/domain/inbox/historico.service.ts",
+  "sha256": "5258d2f36d06c52b7cff55cfd7d5c3dffb981895f8a0661169bf18a316d3d098",
+  "allowedChanges": [
+    "Import type Prisma from @prisma/client.",
+    "Explicitly type messageResourceFilter return Prisma.MessageWhereInput so provider in array remains generated ChannelType enum values.",
+    "Explicitly type the local messagesDoPar where object Prisma.MessageWhereInput and remove readonly as const on channelOrigin in tuple only as required.",
+    "No other semantic/SQL/filter/auth/field/pagination/test changes. No unsafe cast/any/ts-ignore/lintconfig. Preserve source line endings."
+  ],
+  "execution": "Sole product source writer. No tests/runner/npm/Docker/Git/docs/private/env/provider/tunnel/operational work. Report exact full narrow diff/hash; NOTRUN."
+}
