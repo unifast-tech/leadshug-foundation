@@ -1,0 +1,11 @@
+{
+  "kind": "cp2-r2-causal-validation-only",
+  "command": "bash scripts/test-channels-local.sh api-instagram",
+  "times": 1,
+  "freeze": "cp2-r2-causal-frozen-manifest-07.json",
+  "log": "cp2-r2-causal-red-07.log",
+  "routing": "routing-cp2-r2-causal-validation.json",
+  "authority": "authority-cp2-r2-causal-validation.json",
+  "instructions": "Only canonical disposable leadshug_channels_validation runner; no source/TODO changes. Verify236sources/TODO/7boundinputs/35preserved/3rootindex before and after. No privatefile/env/config/container/loginventory; canonicalrunner controls own synthetic topology. Read principalAGENTS/main/OperationalDevOps/necessary declaredworkflows. Save public synthetic log only, not operationaldata. No adhochostnode/test, rerun, newcontainer or fallback.",
+  "report": "Terminal commandexit/logSHA/migrations/lint/build/unit/e2e/failures; identify exact reached/control/sessionbarrier fields, phase before firstfailure. No claim if timeout/mismatch preventscausality. Preserve errors; no fix. Afterterminalrootmatches, separatecodermayrepair."
+}

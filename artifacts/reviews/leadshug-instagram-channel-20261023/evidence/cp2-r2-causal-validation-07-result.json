@@ -1,0 +1,21 @@
+{
+  "kind": "cp2-r2-causal-validation-07-builder-red",
+  "command": "bash scripts/test-channels-local.sh api-instagram",
+  "exit": 1,
+  "log": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp2-r2-causal-red-07.log",
+  "logSha256": "87a1ae2ea2c9d96b818af38d5f6530f6c9b9771cde105195f5107a77f4488af1",
+  "migrations": 31,
+  "lint": "no-useless-assignment main735 credentialBeforeCancel",
+  "build": "NOTREACHED",
+  "unit": "NOTREACHED",
+  "e2e": "NOTREACHED",
+  "causalRed": false,
+  "postRootMatched": {
+    "sources": 236,
+    "todo": true,
+    "inputs": 7,
+    "preserved": 35,
+    "index": 3
+  },
+  "thaw": "Only exact unused assignment correction in main spec, no runner until terminal/refreeze."
+}

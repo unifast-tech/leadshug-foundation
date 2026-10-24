@@ -1,0 +1,31 @@
+{
+  "kind": "cp2-r2-bounded-primary-observer-recheck",
+  "date": "2026-10-24",
+  "operations": "Only public Meta documentation reads and domain-constrained publicsearch; no account/API/token/provider/runtime calls.",
+  "evidence": [
+    {
+      "url": "https://developers.facebook.com/documentation/instagram-platform/llms.txt",
+      "sha256": "80be6ad54ec924055207c382cb54645913b22a69178614463bf704fd3eb9b596",
+      "meaning": "Public docs index includes webhooks/setup and IGUser reference; no subscribedapps reference listed."
+    },
+    {
+      "url": "https://developers.facebook.com/documentation/instagram-platform/webhooks/setup.md",
+      "sha256": "80a9c42d68bbd4ed81ff14755225af2e070eab5b85bafe2685c63cd561d20408",
+      "bytes": 18668,
+      "meaning": "Instagram credentials section explicitly documents POST graph.instagram.com/v26.0/account/subscribed_apps and success:true. GET observation/completeness not established."
+    },
+    {
+      "url": "https://developers.facebook.com/documentation/instagram-platform/instagram-graph-api/reference/ig-user.md",
+      "sha256": "cd99a87c3a23a5cb7cea2b2a0c26fb19e9cccd0818bd641c19dc55f645bf7367",
+      "bytes": 15593,
+      "meaning": "No subscribed_apps string found; this does not prove GET unsupported."
+    }
+  ],
+  "notAccepted": [
+    "Third-party search snippets",
+    "Guessing application-ID namespace from app-parent ID or professional account",
+    "Empty response proving subscription absence",
+    "Retry mutation from UNKNOWN"
+  ],
+  "disposition": "Own observer remains unaccepted. No normative/code change or gate waiver. Independent CP3 may still proceed after safety repair per prior approved sequencing."
+}

@@ -1,0 +1,7 @@
+{
+  "kind": "cp2-r2-test-only-preexecution-static-defect",
+  "finding": "Expired-probe authorization attempt created under ownerCookie, but callback uses newly signed shortsession; immutable sessionHash differs, so callback can fail before claimed PG wait.",
+  "status": "No validator dispatched, no run consumed. Manifest06 historical only; explicit root thaw residual spec for same-cookie fixture correction.",
+  "authority": "Existing two-spec test-only handoff, narrower concrete fixture correction; no production/runners authorized.",
+  "expectedCorrection": "Sign/prepare shortsession first; create and callback with exactly same cookie; preserve naturalexpiry/wait/control/allassertions. Freshterminalhash and newfreeze07 required."
+}

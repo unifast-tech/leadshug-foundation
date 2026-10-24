@@ -31,16 +31,16 @@ Este TODO define WHAT, exclusões e critérios de entrega. A baseline v1.3 abaix
 ## Delivery Status Canon (Required)
 - **Current delivery stage:** Pending
 - **Qualifiers:** none
-- **Next exact step:** concluir o reparo CP2 em lane somente código, com prazo/credencial/CAS atuais; refreeze e validação separada; API completa/revisão antes de CP3independente, sem aceitar a observação própria ainda aberta. CP4..CP6 permanecem.
+- **Next exact step:** reparar fontes/provas CP2r2 admitidas em lane somente código, conforme handoff revisado; refreeze e validação separada/API completa/revisão. CP3independente pode seguir sem aceitar o observer próprio; CP4..CP6 permanecem.
 
 ## Active Work State (Required While TODO Remains In `active/`)
 - **Work state:** implementation
-- **Why this state now:** CP1 aceito; validação CP2 residual02 estável passou395unit e64de67integração selecionada; expiração no mapping exige reparo. Um executor somente código, sem runner; CP2 ainda não aceito.
+- **Why this state now:** CP1 aceito; CP2r2 completo estável passou395unit e522de528integração. Revisão completa terminal exige correções de sessão pós-espera, operação por vínculo, preflight e limites nas variantes de rota. Um executor somente testes, sem runner; CP2 ainda não aceito.
 - **Exit condition:** todos os checkpoints e critérios validados, revisões/guards completos e prova runtime posterior explicitamente aprovada; nenhum fechamento parcial implícito.
 
 ## Blocker Notes
 - **Blocker:** none for remaining admitted code/disposable synthetic validation. Session middleware, privacy HTML and outbound UTF-8 proposals await explicit human validation; primary own-subscription observation remains unresolved, with no gate waiver.
-- **Last confirmed truth:** CP1r8 aceito; CP2 residual02 terminal com31migrações/lint/build,395unit e64de67integração selecionada. Root confirmou236fontes/TODO,35preservações e3referências do índice antes do thaw; reparo serializado somente código em curso, sem aceitação CP2.
+- **Last confirmed truth:** CP1r8 aceito; CP2r2 completo terminal com31migrações/lint/build,395unit e522de528integração. Root confirmou236fontes/TODO,42entradas de revisão,35preservações e3referências do índice antes do thaw somente testes. Revisão changes_required com10findings, sem aceitação CP2.
 - **Runtime boundary:** ativação real, leitura privada, Meta e prova física dependem do plano posterior; nenhuma autorização herdada é reutilizada.
 
 ## Scope
@@ -1182,3 +1182,9 @@ Freeze03 ended only for a fresh narrow code/test-only lane: explicit unique shor
 Both frozen lanes are terminal. Root matched236sources, this TODO,42boundinputs,35preservedfiles and3rootindex refs in cp2-r2-both-terminal-reconciliation.json. Complete fresh review is changes_required with10findings; cp2-r2-root-adjudication.json integrates every finding and preserves supported repairs without claiming checkpoint acceptance. Stable fullAPI passed31migrations/lint/build/395unit and522of528integration; six failures are classified in cp2-api-full-r2-result.json. Catalog coverage has one obsolete callbackGET entry; the indexed SQL case failed fixture setup before plan assertions. Four Instagram failures reflect concrete counter/cooldown/mapped-snapshot fixture defects. The15second natural-session PASS is confounded by5second transaction timeout; it does not prove live postwait authorization.
 
 The frozen r2 source/input package remains immutable historical evidence. Thaw is now limited to one fresh test-only writer for the two admitted Instagram specs, as cp2-r2-causal-test-only-handoff.json. No production edit or runner in that lane. It establishes short causal PG/session RED with a matched live control, structural entry preflight/route-alias probes, and corrects fixtures without lowering guarantees. Root will refreeze before a separate disposable validator, then assign the admitted source repair. Primary observer, pendinghuman protected companions, actual writer recovery, all16obligations and CP3..CP6 remain required; ROOT08/09 still need clean validation acceptance.
+
+## CP2 r2 causal proof — source repair authorized
+
+Validation07 stopped at one unused test initialization; no functional proof. After exact two-literal fixture correction and refreeze08, the separate runner passed31migrations/lint/build/395unit and68of71selectedintegration. cp2-r2-causal-validation-08-result.json records the actual finalsession snapshot: one externalrequest and EXCHANGING after naturalexpiry, despite zero candidate/mapping/credential facts. The reached finalassertion follows a matched livecontrol and realPG waiter/expiry/<4.5s assertions in the byte-bound source; fields were not separately printed. This is qualified causalRED, distinct from the15s timeoutconfound. Missingentryaccount returned200; laterzeroeffect/numericcases were not reached. OAuthalias returned429 instead413, reaching domainbudget rather than the declared16KiBparser. LaterIGalias proof remains open. Previousfourfixture failures are absent in this selectedrun.
+
+Alllanes terminal and root236/TODO/7inputs/35preserved/3index matched. Explicitthaw is now one fresh source/test-only writer under cp2-r2-source-repair-handoff.json, owning twelve exactadmittedpaths including twooptionalInstagramrecovery/binding specs. No runner whilewriter active. It covers final liveauthorization, durable bindingholder/cooldown acrossreceipt/cancel, actualwriterfault recovery, ingresspreflight/effectivealiases, obsoleteGETcoverage and bounded15000row fixture. Protectedhumancompanions and ownprimaryobserver remain open. Newcode is NOTRUN until terminal/refreeze/separatevalidation; no checkpoint/delivery acceptance. CP3..CP6 and all mandatory gates remain.

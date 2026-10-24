@@ -1,0 +1,70 @@
+{
+  "kind": "cp2-r2-source-and-proof-code-only-handoff",
+  "date": "2026-10-24",
+  "state": "GO after root frozen08/7inputs/35preservation/3index reconciliation; allwriters/validators terminal. No runtime/testexecutionauthority.",
+  "objective": "Repair current CP2 admitted safety/ingress/resourceholder defects, actual writer recovery proof and fullAPI twoextra failures; preserve currentpassedcontracts and prepare separate stablevalidation.",
+  "profile": "Operational / Coder",
+  "scopes": [
+    "nestjs",
+    "prisma",
+    "postgresql"
+  ],
+  "routing": "routing-cp2-r2-source-repair.json",
+  "ownedPaths": [
+    "api-app/src/domain/channels/instagram-authorization.service.ts",
+    "api-app/src/integrations/instagram/instagram-http.client.ts",
+    "api-app/src/surfaces/webhooks/instagram.controller.ts",
+    "api-app/src/infra/http/body-parsers.ts",
+    "api-app/prisma/schema.prisma",
+    "api-app/prisma/migrations/20261024100000_instagram_authorization_attempts/migration.sql",
+    "api-app/test/instagram-cp2.e2e-spec.ts",
+    "api-app/test/instagram-cp2-residual.e2e-spec.ts",
+    "api-app/test/helpers.ts",
+    "api-app/src/domain/historico/cobertura.ts",
+    "api-app/test/instagram-cp2-recovery.e2e-spec.ts",
+    "api-app/test/instagram-cp2-binding.e2e-spec.ts"
+  ],
+  "authority": "Approved ST-IG-03v1.3 existing scope and pathpatterns. Two new Instagram specs optional exact admittedpattern; no othernewfiles. Foundation/TODO/roottooling remain rootowned.",
+  "readFirst": [
+    "AGENTS.md",
+    "delphi-ai/main_instructions.md",
+    "delphi-ai/profiles/operational_coder.md",
+    "foundation_documentation/todos/active/features/TODO-leadshug-instagram-channel.md"
+  ],
+  "requiredEvidence": [
+    "adherence-cp2-r2-result.json",
+    "adherence-cp2-r2-merge.json",
+    "cp2-r2-root-adjudication.json",
+    "cp2-r2-causal-validation-08-result.json",
+    "cp2-r2-source-repair-preparation.json",
+    "cp2-api-full-r2-result.json",
+    "inherited-public-preservation-v1.2.json",
+    "cp2-r2-causal-frozen-manifest-08.json"
+  ],
+  "HOW": "Use every current source/proof requirement in cp2-r2-source-repair-preparation.json including actualWriterInterruptionHOW, bindingProofHOW and additionalTestPrecision. Do not merely fix three observed assertions; complete admitted current-source findings and meaningfulproof.",
+  "mandatoryDetails": [
+    "Keep source instructions exclusively principalcheckout; never backup/projectcopy. If instruction missing, tellroot exactpath, do not fallback. Publicsource readmanifest236 plus twooptionalnewadmittedspecs, exactprincipalinstructions only.",
+    "Final current signed-session proof after all relevant waits and immediatelybefore first/laterHTTP + before success/errorfacts; firstexchange currentlyissuesPOSTbeforeownercheck. No SessionService/PrismaService/authhelper changes or mocks.",
+    "Single persisted operation holder+10scooldown per resource/binding survives cancel and independentreceipt that clearattemptfields;60slease/fixed40sinvocation/10srequest ceilings distinct. Protect promotion and subscriptiondispatch; actual CONNECT/REAUTHORIZE overlap and stalecompletion. No HTTPinsideTX, no secondPOSTfromUNKNOWN.",
+    "Correct missingentryaccount wholebatchpreflight with actualcontext beforeeffects. Preserve numeric-type403 envelope behavior unless explicitlyjustified, exactzeroeffectassertions. Legitimateunsupported events and domainretryablepartialbatches remain.",
+    "Align endpointparserregex with effectivecase/trailing routing; prove1-8MiB canonical+aliasacceptance in additiontamper401/over8MiB413. PreserveWAparser/globalrouting.",
+    "Real interrupted-writer proof aftercommittedmapping/subscription but beforeconfirmationresult, exacttemporarydisposablePGfault no applicationhook; retain originalkey/body/hash/snapshot. No claimprocessrestart.",
+    "Freshconcurrentconfirmations and success/error expiry/lease/generation/credentialtakeover coverage stillrequired per16obligationmap. Use finitebarriers/finally; no test skips/mockeddomainorPrismaoutcomes.",
+    "Remove obsoleteGET entry from write-method coverage only; retain callbacktransactionalaudit and explainmethod-indexlimitation incomment. Do noteditcoverage spec.",
+    "15000row fixture helper boundedchunk strategy preservingrowIDs/ordering/45000relatedfacts/allindexassertions, noglobaltimeoutincrease/no protectedspecweakening.",
+    "Adapt specific expectedconcurrencyresponse only where newlyenforcedalreadyapprovedbindingholder explainsit: exact409/429 codes/noHTTPdelta; neverbroadenallstatusassertions or deletea scenario. Preserve completedreplay/independentreceipt/immutable originalexpectedGeneration."
+  ],
+  "pendingUntouched": [
+    "api-app/src/surfaces/bff/session.middleware.ts",
+    "web-app/public/privacidade.html",
+    "1000UTF8outboundproposal",
+    "primary own-observer GETschema/identity/completeness"
+  ],
+  "constraints": [
+    "Only listed12paths maychange, atmostonecodewriter. No runner/lint/build/test execution; rootfreezes afterterminal and separatevalidator.",
+    "No Git/status/diffinventory/write, private/.envreal/list/hash, operationalDB/conversations/logs/processargs/env/containers/volumes/provider/Meta/tunnel, worktree/auxcheckout/copy, temporarysourcecopies or Foundation edits.",
+    "No sourceacceptanceclaim from untrackedemptyGitdiff; use exactpublichashes and staticdescription.",
+    "Current CP2r2historical evidence immutable. CP3..CP6/React/assurance/realproof not waived."
+  ],
+  "terminal": "Exacteverychanged/newpath+SHA256, unchangedothermanifestpaths, conciseproofdescription and remainingNOTRUN. Become terminal before rootdispatchesrunner. If extra path/materialWHATneeded, stopandmessage root."
+}
