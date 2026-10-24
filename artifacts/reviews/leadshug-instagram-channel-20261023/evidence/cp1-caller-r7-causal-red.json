@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "kind": "cp1-caller-r7-causal-red",
+  "command": "bash scripts/test-channels-local.sh api-instagram",
+  "executorReportedExit": 1,
+  "log": {
+    "path": "foundation_documentation/artifacts/tmp/instagram-channel-implementation/cp1-caller-r7-red-02.log",
+    "sha256": "08cfc6cdbeb97fa4e29fabc674617a00770d962a43befaa5e62c6fd13905a74f",
+    "bytes": 25461
+  },
+  "rootObservedSummary": [
+    "Test Files  36 passed (36)",
+    "Tests  379 passed (379)",
+    "Test Files  1 failed | 2 passed (3)",
+    "Tests  1 failed | 26 passed (27)"
+  ],
+  "causalObservation": "Real persisted lease expiry; B commits same reservation PENDING_NUMBER/RESERVED_NEVER_CREATED at version5 with cleared pending tuple. After releasing delayed A, direct persisted attempt equality fails: version6 ERROR/CLEANUP_AMBIGUOUS. Exact new race alone fails among27selected cases.",
+  "qualification": "Direct attempt overwrite is proved. Subsequent prior-identity equality/response assertions and eventual single create are downstream of this failing equality and must execute in GREEN, not claimed dynamically proved by RED. Pre-repair production source check in cp1-caller-r7-red2-source-check.json.",
+  "cleanup": "Root observed terminal disposable validation resources removal.",
+  "notAcceptance": "No CP1/delivery acceptance or protected path exception."
+}

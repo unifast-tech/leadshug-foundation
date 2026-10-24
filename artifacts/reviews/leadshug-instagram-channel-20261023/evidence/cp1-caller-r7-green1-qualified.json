@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "kind": "cp1-caller-r7-green1-build-failure",
+  "log": {
+    "path": "foundation_documentation/artifacts/tmp/instagram-channel-implementation/cp1-caller-r7-green-01.log",
+    "sha256": "c83ec3431b5e11060180cf7da963002f80547501bbc44977d64cb05015301e72",
+    "bytes": 14725
+  },
+  "outcome": "Runner failed at TypeScript build after lint, no unit/e2e outcome. Not GREEN evidence.",
+  "diagnostics": [
+    "src/domain/channels/channels.service.ts:197:13 - error TS2322: Type 'string | null' is not assignable to type 'string | StringFilter<\"ProviderResourceIdentity\"> | undefined'.",
+    "src/domain/channels/channels.service.ts:197:79 - error TS2322: Type 'string | null' is not assignable to type 'string | StringFilter<\"ProviderResourceIdentity\"> | undefined'."
+  ],
+  "qualification": "Narrow optional cleanup tuple values were not kept narrowed across transaction callback; writer correcting local constant bindings. Causal RED before service repair remains separately valid.",
+  "cleanup": "Disposable resource removal observed"
+}

@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "kind": "cp1-caller-r7-auth-pre-red-source-check",
+  "hashes": {
+    "api-app/src/domain/channels/channels.service.ts": "dc3c6f829aa02d2a68f027d101273eaf0a57746d57d7f4cac31563ea19eeb81d",
+    "api-app/test/instagram-lifecycle.e2e-spec.ts": "a41abb8f03ba8ebce649714754adf6e4e6bb43edec16fcaf76eb79c214054b2c",
+    "api-app/src/integrations/evolution/evolution.client.ts": "b0824e8fd4f801a239521855aaa02da5e0943a8c86c4ac8778e2f1f352821698",
+    "api-app/src/integrations/evolution/evolution.client.spec.ts": "119d962fdcd9c895b75845dca74d8506147e11480d74b82e8c37f29f97c04081"
+  },
+  "basis": "Root verified current service matches writer-reported post-race-GREEN02 hash, before provider-error post-call auth repair. Only test added to reproduce actual passwordChangedAt invalidation; protected source hashes unchanged.",
+  "qualification": "Test-first source seal, auth outcome pending; intermediate GREEN does not cover this newly added case"
+}

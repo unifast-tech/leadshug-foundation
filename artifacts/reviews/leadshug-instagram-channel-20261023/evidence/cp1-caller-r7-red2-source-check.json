@@ -1,0 +1,13 @@
+{
+  "schemaVersion": 1,
+  "kind": "cp1-caller-r7-red2-source-check",
+  "changedPaths": [
+    {
+      "path": "api-app/test/instagram-lifecycle.e2e-spec.ts",
+      "baselineSha": "b71ef98a4fd0e09e53fe50f2f5abfe0f370016fc58a85ec64025a5867a5f0321",
+      "testOnlySha": "f2ca6bada993e7cd223bbfbfb7314120afc82147e3b3d0996e05e9bbe26e62c9"
+    }
+  ],
+  "productionUnchanged": true,
+  "qualification": "Before clean RED02/service repair, root rechecked exact37public source manifest; only assertion-order test changes"
+}

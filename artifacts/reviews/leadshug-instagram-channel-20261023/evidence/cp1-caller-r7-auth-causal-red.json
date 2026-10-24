@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "kind": "cp1-caller-r7-auth-causal-red",
+  "command": "bash scripts/test-channels-local.sh api-instagram",
+  "executorReportedExit": 1,
+  "log": {
+    "path": "foundation_documentation/artifacts/tmp/instagram-channel-implementation/cp1-caller-r7-auth-red-03.log",
+    "sha256": "a17ccf15aec9486067a4708d078ecd423fbdf953ab33350fa63da04123d98214",
+    "bytes": 24737
+  },
+  "rootObservedSummary": [
+    "Test Files  36 passed (36)",
+    "Tests  379 passed (379)",
+    "Test Files  1 failed | 2 passed (3)",
+    "Tests  1 failed | 27 passed (28)"
+  ],
+  "causalObservation": "Actual authenticated BFF fixture request held at real EvolutionHttpClient HTTP boundary; persisted AppUser.passwordChangedAt invalidates original session; after synthetic503 the service still persists ERROR/CLEANUP_AMBIGUOUS instead of retaining PENDING_NUMBER/PAIRING. Direct database assertion fails, sole new failing case.",
+  "qualification": "Pre-repair source seal in cp1-caller-r7-auth-red3-source-check.json. Later identity/no-create/response assertions must execute in GREEN; prior RED02 separately proves response200instead401. RED01 is fixture-only failure. No protected path edits/admission.",
+  "cleanup": "Root observed terminal disposable resource removal"
+}

@@ -20,11 +20,22 @@
     "Per-update partial batch retry cannot HTTP200 silentlydrop; preflight bounds before any batch effects.",
     "20overlap tests must not assume contenderorder or fake DB outcomes.",
     "Keep authenticated BFF prefix unchanged. OAuth callback is top-level GET with state/session binding, so existing SameSite=Lax cookie can apply; route errors/303 headers and gateway query suppression must avoid code/state disclosure even on denied callbacks.",
-    "Qualified account/peer namespace must use the configured app + API family and verified professional account, with opaque strings; Graph version changes must not manufacture a different contact/resource namespace. Keep authorization app-scoped user ref separate."
+    "Qualified account/peer namespace must use the configured app + API family and verified professional account, with opaque strings; Graph version changes must not manufacture a different contact/resource namespace. Keep authorization app-scoped user ref separate.",
+    "Before CP2 token decoder implementation, recheck the official token-response wire type of the app-scoped authorization user_id. Test deliberately beyond JavaScript safe integer precision; never coerce or persist a rounded opaque identifier. Professional /me user_id remains the verified business resource authority. This is decoder HOW, not permission to merge identities or alter the approved namespace."
   ],
   "testFirstNotes": [
     "For absent new feature, prefer black-box authenticated endpoint assertions that fail on actual missing route/capability or signature behavior, rather than compile failures from importing not-yet-existing implementation.",
     "Fake external HTTP only. New fake must stay exact-host/purpose bounded, synthetic credentials and immutable endpoint allowlist; no production arbitrary base-url override just for test convenience.",
     "If CP2 is internally sequenced OAuth then signed ingress, both remain required CP2 work with all16obligations and a final stable full-API + review; an intermediate targeted pass is not full checkpoint acceptance."
-  ]
+  ],
+  "publicProtocolRecheck": {
+    "date": "2026-10-23",
+    "question": "Whether the token exchange app-scoped user_id may be a numeric JSON literal outside JS safe integer precision",
+    "officialUrls": [
+      "https://developers.facebook.com/docs/instagram-platform/instagram-api-with-instagram-login/business-login",
+      "https://developers.facebook.com/documentation/instagram-platform/instagram-login/access-tokens"
+    ],
+    "outcome": "web official opens returned429/not accessible; no wire-type conclusion accepted. Third-party search results not used as authority. Recheck primary source when CP2 starts; preserve opaque identifiers without lossy conversion.",
+    "codeOrScopeChange": false
+  }
 }

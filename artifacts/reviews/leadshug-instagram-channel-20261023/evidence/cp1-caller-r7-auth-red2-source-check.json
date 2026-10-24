@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "kind": "cp1-caller-r7-auth-red2-source-check",
+  "hashes": {
+    "api-app/src/domain/channels/channels.service.ts": "dc3c6f829aa02d2a68f027d101273eaf0a57746d57d7f4cac31563ea19eeb81d",
+    "api-app/test/instagram-lifecycle.e2e-spec.ts": "e73237c33b893f5bd5a3cc55afe67d7cd3d03e6324a5d835bd2fd614342ea9c6",
+    "api-app/src/integrations/evolution/evolution.client.ts": "b0824e8fd4f801a239521855aaa02da5e0943a8c86c4ac8778e2f1f352821698",
+    "api-app/src/integrations/evolution/evolution.client.spec.ts": "119d962fdcd9c895b75845dca74d8506147e11480d74b82e8c37f29f97c04081"
+  },
+  "basis": "Root current exact public hashes match reported clean test-only seal before auth service repair; no private inventory",
+  "qualification": "Fixture corrected; product auth outcome still pending"
+}

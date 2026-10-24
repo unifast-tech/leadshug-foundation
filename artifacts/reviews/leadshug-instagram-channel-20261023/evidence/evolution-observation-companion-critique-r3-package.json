@@ -1,0 +1,66 @@
+{
+  "schemaVersion": 1,
+  "kind": "bounded-unapplied-companion-critique-r3-with-caller-r7",
+  "objective": "Fresh full bounded affected review after proven r2 stale-failure defect and root auth omission repairs. Preserve entire prior package/lenses/scope; review current37sources as needed, minimum actual caller/spec/protected2/diff and exact controller revalidation dependency. Proposed protected guard is not applied or accepted.",
+  "governingTodo": {
+    "path": "foundation_documentation/todos/active/features/TODO-leadshug-instagram-channel.md",
+    "sha256": "fdaafcdbd555479c8050a9c689b0f221c43b9a126c5605f905a997d35424f5c8"
+  },
+  "proposal": "evolution-observation-companion-proposal.json",
+  "proposalDiff": {
+    "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/evolution-observation-companion-proposed.diff",
+    "sha256": "cc5453aeb245e1a9996e0006e3f1207b3d60bf6667c284815e282fe7457072ce"
+  },
+  "currentSource": {
+    "api-app/src/integrations/evolution/evolution.client.ts": "b0824e8fd4f801a239521855aaa02da5e0943a8c86c4ac8778e2f1f352821698",
+    "api-app/src/integrations/evolution/evolution.client.spec.ts": "119d962fdcd9c895b75845dca74d8506147e11480d74b82e8c37f29f97c04081"
+  },
+  "additionalExactRead": [
+    "api-app/src/domain/channels/channels.service.ts",
+    "api-app/test/instagram-lifecycle.e2e-spec.ts",
+    "foundation_documentation/project_constitution.md",
+    "foundation_documentation/modules/integrations-and-channels.md",
+    "foundation_documentation/policies/scope_subscope_governance.md",
+    "api-app/src/surfaces/bff/channels.controller.ts"
+  ],
+  "evidence": [
+    "adherence-cp1-r5-result.json",
+    "cp1-r5-finding-classification.json",
+    "cp1-frozen-full-api-green-r5.json",
+    "inherited-public-preservation-v1.1.json",
+    "evolution-observation-companion-proposal.json",
+    "evolution-observation-companion-critique-result.json",
+    "evolution-observation-companion-critique-merge.json",
+    "cp1-caller-r6-causal-red.json",
+    "cp1-caller-r6-targeted-green.json",
+    "cp1-caller-r6-red-01-qualified.json",
+    "cp1-caller-recovery-handoff-r6.json",
+    "evolution-observation-companion-critique-r2-result.json",
+    "evolution-observation-companion-critique-r2-merge.json",
+    "cp1-caller-r6-full-api-green.json",
+    "cp1-caller-r7-finding-classification.json",
+    "cp1-caller-r7-auth-revalidation-finding.json",
+    "cp1-caller-recovery-handoff-r7.json",
+    "cp1-caller-r7-causal-red.json",
+    "cp1-caller-r7-auth-causal-red.json",
+    "cp1-caller-r7-targeted-green.json",
+    "cp1-caller-r7-red-01-qualified.json",
+    "cp1-caller-r7-green1-qualified.json",
+    "cp1-caller-r7-auth-red1-qualified.json",
+    "cp1-caller-r7-auth-red2-response-evidence.json"
+  ],
+  "frontendConsumerContract": "Read complete governing TODO Frontend/Consumer Matrix. No new producer/route/UI here; existing connection lifecycle outcomes use existing channels endpoint/connection UI. Current same-slice service regression and later CP4 browser/CP5 ALL obligations remain mandatory, no UI waiver.",
+  "strictBounds": "Only consultarInstancia observation interpretation and meaningful adapter unit cases on the two protected paths proposed; actual product-path malformed observation/no-CLEANED/zero-create proof required in already-admitted Instagram spec. Keep existing actual[]/nonmatching valid absence, known single observation and all existing tests. No arbitrary HTTP probing, fallback, send/auth/URL/signature/dependency/runtime/private changes.",
+  "readOnlyCheck": "Root git apply --check -p2 passed; no application/tests. You may repeat --check only if useful, no mutation or runner.",
+  "knownLimits": "Current targeted379unit/28IG GREEN on sealed r7 bytes. Separate validator runs full API now, no repair. r6 complete379unit/484e2e is exact historical source only. Protected diff unapplied; malformed200 both-path proof awaits human admission. No CP1 acceptance/CP2..CP6 waiver.",
+  "collection": "Fresh no-context native internal reviewer, canonical dispatch + strict schema merge; bounded file-set must inspect actual protected source and exact candidate diff.",
+  "forbidden": "No writes, tests/runners, private .env reads/list/hash, .local-files, actual runtime/DB/logs/process args/env/volumes, broad scans/Git status/diff or worktrees/copies/product Git writes. No GOAL tools.",
+  "proposalRevision": 4,
+  "proposalSha256": "3c9cea26d4a67a777dea029eb6408e00d13fefafae85b943c3c2e612bbc55b93",
+  "sourceManifest": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp1-caller-r7-frozen-source-manifest.json",
+  "sourceFreeze": "All37sources, protected2, context controller, TODO/proposal/diff frozen until reviewer+validator terminal. Verify before/after. No source/TODO/proposal mutations by any agent. Writer terminal.",
+  "priorFindings": "Normal IG-EVOCOMP-01 recovery and proposed02/03 tests/wording supported by r2; preserve unless changed locus/fresh insufficiency. IG-EVOCOMP-R2-01 and IG-CP1-ROOT-R7-01 current source/test repairs need independent validation. IG-CP1-R5-01 remains open pending protected-path admission/implementation. r5 source closures carry as historical at unchanged loci; no global current acceptance.",
+  "contextSourceHashes": {
+    "api-app/src/surfaces/bff/channels.controller.ts": "c7a3917c84ac1921b757fd7bca5a9b0b29ab2078312fcf2fd421104ef41a6182"
+  }
+}

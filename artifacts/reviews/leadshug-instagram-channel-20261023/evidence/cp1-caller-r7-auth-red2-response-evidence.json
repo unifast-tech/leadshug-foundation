@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "kind": "cp1-caller-r7-auth-red2-response-evidence",
+  "log": {
+    "path": "foundation_documentation/artifacts/tmp/instagram-channel-implementation/cp1-caller-r7-auth-red-02.log",
+    "sha256": "3b963f9e257c91c3b3209f4ecc7768c9d618cc6356958b44ae67904cc4ef7d84",
+    "bytes": 24369
+  },
+  "rootObservedSummary": [
+    "Test Files  36 passed (36)",
+    "Tests  379 passed (379)",
+    "Test Files  1 failed | 2 passed (3)",
+    "Tests  1 failed | 27 passed (28)"
+  ],
+  "causalObservation": "Actual authenticated BFF cookie initially valid; real user passwordChangedAt advanced while real EvolutionHttpClient synthetic HTTP observation held. After a503, API returned200 instead of401. This is legitimate primary authorization-contract causal RED.",
+  "qualification": "Persisted-fact assertions follow first response assertion and were not reached; do not claim dynamic DB overwrite from this run. Writer started reordered RED03 to capture direct facts before service edits; no production auth fix yet.",
+  "cleanup": "Disposable resources removed"
+}

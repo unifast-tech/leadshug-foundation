@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "kind": "cp1-caller-r7-intermediate-race-green",
+  "command": "bash scripts/test-channels-local.sh api-instagram",
+  "executorReportedExit": 0,
+  "log": {
+    "path": "foundation_documentation/artifacts/tmp/instagram-channel-implementation/cp1-caller-r7-green-02.log",
+    "sha256": "bcfa0bffd0465a466af564990ab9e16ab3cbdc68bc55b1a4c7443809c60dd7f2",
+    "bytes": 23326
+  },
+  "rootObservedSummary": [
+    "Test Files  36 passed (36)",
+    "Tests  379 passed (379)",
+    "Test Files  3 passed (3)",
+    "Tests  27 passed (27)"
+  ],
+  "qualification": "Race regression and prior26cases pass, but subsequent auth revalidation finding remains open and spec now contains an additional unrun case. This is exact intermediate evidence, not final current-source/CP1 acceptance. Full37source freeze and full API/review wait final auth repair.",
+  "cleanup": "Terminal disposable removal observed"
+}

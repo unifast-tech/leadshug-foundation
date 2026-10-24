@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "kind": "cp1-caller-r7-red1-qualified",
+  "log": {
+    "path": "foundation_documentation/artifacts/tmp/instagram-channel-implementation/cp1-caller-r7-red-01.log",
+    "sha256": "b336fee1d94a9b4c167591f6d5e6c09462468db81e5dfb6d5ad000a6a91dd6b3",
+    "bytes": 24271
+  },
+  "rootObservedSummary": [
+    "Test Files  36 passed (36)",
+    "Tests  379 passed (379)",
+    "Test Files  1 failed | 2 passed (3)",
+    "Tests  1 failed | 26 passed (27)"
+  ],
+  "qualification": "Real takeover completed. First post-A assertion sees stale request HTTP200 instead of409; DB preservation assertions followed it and were not reached. This is causal external outcome evidence, not executed proof of internal overwrite. Test assertion order revised before clean RED02. No production service edits.",
+  "laterRequired": "Clean direct persisted-fact RED, then admitted repair and GREEN"
+}

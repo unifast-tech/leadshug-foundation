@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "kind": "cp1-caller-r7-final-targeted-green",
+  "command": "bash scripts/test-channels-local.sh api-instagram",
+  "executorReportedExit": 0,
+  "rootObservedSummary": [
+    "Test Files  36 passed (36)",
+    "Tests  379 passed (379)",
+    "Test Files  3 passed (3)",
+    "Tests  28 passed (28)"
+  ],
+  "log": {
+    "path": "foundation_documentation/artifacts/tmp/instagram-channel-implementation/cp1-caller-r7-auth-green-01.log",
+    "sha256": "399bbf51b562a7f479dba16b5933dead9e0e78507aaa5e36d7caeee316256100",
+    "bytes": 23474
+  },
+  "migrations": "all30, lint/build passed",
+  "sourceManifest": "cp1-caller-r7-frozen-source-manifest.json",
+  "inheritedPreservation": {
+    "checked": 37,
+    "mismatches": []
+  },
+  "proofs": [
+    "Delayed actual-adapter HTTP owner A with expired persisted lease cannot overwrite B cleared tuple/attempt/cleaned prior; B reservation later creates once and stays unproved",
+    "Actual BFF passwordChangedAt invalidation during503 provider observation returns401 before ambiguity transaction; attempt/identity facts retained"
+  ],
+  "redReferences": [
+    "cp1-caller-r7-causal-red.json",
+    "cp1-caller-r7-auth-causal-red.json"
+  ],
+  "qualifiedHistoricalRuns": [
+    "cp1-caller-r7-red-01-qualified.json",
+    "cp1-caller-r7-green1-qualified.json",
+    "cp1-caller-r7-auth-red1-qualified.json",
+    "cp1-caller-r7-auth-red2-response-evidence.json"
+  ],
+  "cleanup": "Root observed terminal disposable resource removal",
+  "qualification": "Current379unit/28IG GREEN, full API/fresh source critique pending. Protected observation guard remains proposed, unapplied; no CP1/Instagram acceptance."
+}

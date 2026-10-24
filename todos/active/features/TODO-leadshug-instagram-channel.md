@@ -31,7 +31,7 @@ Este TODO define WHAT, exclusões e critérios de entrega. A baseline v1.3 abaix
 ## Delivery Status Canon (Required)
 - **Current delivery stage:** Pending
 - **Qualifiers:** none
-- **Next exact step:** CP1: corrigir IG-EVOCOMP-R2-01 nos dois caminhos de caller já admitidos, com lease expirado real e RED/GREEN; depois nova fonte congelada para API completo/revisão. R6 API379unit/484e2e passou; adapter protegido segue inalterado.
+- **Next exact step:** CP1: fonte r7 congelada para API completo e crítica independente r3 da proposta/caller; após ambas terminarem, solicitar validação limitada dos dois caminhos protegidos.379unit/28IG passaram; parser malformado ainda não aplicado.
 
 ## Active Work State (Required While TODO Remains In `active/`)
 - **Work state:** implementation
@@ -603,6 +603,7 @@ Historical planning observation retained: IG-REV-01..04, strategic source, high/
 | IG-EVOCOMP-02 | medium | release-blocker | strengthen proposed tests before source admission | independent malformed name/state and null projection branches need concrete proof plan | proposal resolved r2; implementation not admitted | evolution-observation-companion-critique-r2-result.json |
 | IG-EVOCOMP-03 | low | release-blocker | correct proposal wording before validation | exact subject and absence contract must be clear to approving user; small same-artifact correction | proposal resolved r2; implementation not admitted | evolution-observation-companion-critique-r2-result.json |
 | IG-EVOCOMP-R2-01 | medium | release-blocker | fence late failure mutation in same admitted caller/test paths | same-attempt recovery must retain later holder facts after lease takeover; inherited catch is not a new adapter regression | open; static, causal RED required | evolution-observation-companion-critique-r2-result.json; cp1-caller-r7-finding-classification.json |
+| IG-CP1-ROOT-R7-01 | medium | release-blocker | revalidate authorization before provider-error fact mutation in same admitted paths | live DB lease does not replace post-call session/grant revalidation; same existing lifecycle contract, no new middleware scope | open; static, causal test required | cp1-caller-r7-auth-revalidation-finding.json |
 
 ## TODO Closeout Disposition
 - **Disposition:** blocked
@@ -988,3 +989,11 @@ Caller, lifecycle test, all other37sources, TODO and proposal revision3 are now 
 Both r6 frozen lanes are terminal and source hashes matched. `cp1-caller-r6-full-api-green.json` records379unit/484integration passes on those exact bytes; no source repair occurred during either lane. The independent critique supports normal same-attempt recovery and proposed tests/wording02/03, but finds an inherited unfenced catch that can regress a later holder after lease expiry (IG-EVOCOMP-R2-01). Ordinary10s HTTP timeouts do not bound asynchronous authorization/database waits or suspension beyond45s. This is static evidence until a real PostgreSQL interleaving proves it.
 
 Root routes that finding as a release-blocker for the same recovery guarantee, on the two already-admitted caller/spec paths. Next writer must capture causal RED, then persist ambiguity only under exact current tuple/ownership/live lease fencing; lost/stale ownership must not rewrite later RESERVED_NEVER_CREATED, terminal or cancelled state or reopen cleaned resources. No protected path admission or parallel provider probe is authorized. The old r6 proof is preserved, and new full/API review is required after repair.
+
+R7 root source cross-check identified IG-CP1-ROOT-R7-01 before terminal acceptance: the new fenced provider-error mutation still needs post-call authorization revalidation. The sole writer agrees the controller contract applies. Finish the active targeted run without editing; then add actual authenticated BFF/PostgreSQL revoked-grant/provider-error causal coverage before the narrow service correction. A live lease alone does not authorize actor writes, and revalidation failure must propagate without mutating newer facts. The scope remains the two already-admitted paths.
+
+## CP1 r7 final caller freeze
+
+`cp1-caller-r7-causal-red.json` proves the actual stale holder overwrote a later recovered attempt; `cp1-caller-r7-auth-causal-red.json` proves failure-fact mutation after actual passwordChangedAt session invalidation. Earlier response-only, setup and build attempts remain separately qualified. `cp1-caller-r7-targeted-green.json` records30migrations, lint/build,379unit and28Instagram integration passes after the admitted repairs. The ambiguity transaction locks prior provider→BU→channel, verifies exact pending tuple/live lease/compatible attempt, and post-provider-error revalidation propagates actor denial before mutation. Stale revalidation lies outside provider catches. Same reservation, exactly-one create and unproved ingress guarantees pass.
+
+All37immutable inherited public hashes match. Only the two admitted caller/test paths changed since r6. All37current sources, protected client/spec, governing TODO and proposal revision4/diff are frozen for separate full API and fresh complete affected critique r3. Protected diff remains byte-identical to revision2 and unapplied; actual-adapter malformed observation proof on both paths still requires later human admission. No code, TODO or proposal edits until both lanes terminal; validation-only lane cannot repair. No CP1 or delivery acceptance.

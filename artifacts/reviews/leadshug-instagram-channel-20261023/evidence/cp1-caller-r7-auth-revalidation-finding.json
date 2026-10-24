@@ -1,0 +1,13 @@
+{
+  "schemaVersion": 1,
+  "kind": "bounded-r7-root-revalidation-finding",
+  "finding": "IG-CP1-ROOT-R7-01",
+  "severity": "medium",
+  "classification": "release-blocker",
+  "source": "Root exact-source read of current new recordAmbiguousCleanup closure; writer independently agrees current controller revalidation contract applies",
+  "locus": "channels.service.ts completePairing provider-error catch -> recordAmbiguousCleanup transaction",
+  "observation": "Successful provider response reaches operation revalidation outside catches. Rejected provider call enters ambiguity transaction without a post-call authorization revalidation. Live lease/current tuple DB checks do not check revoked session/grant.",
+  "qualification": "Static source finding, not executed exploit or attribution to protected adapter; prior post-error omission was inherited. Require actual authenticated BFF/PostgreSQL HTTP-error + revoked-grant causal RED before repair.",
+  "scope": "same admitted service/lifecycle paths only; no protected/actor middleware changes",
+  "action": "Finish active GREEN02 without source edits. Then narrow test-first auth failure regression and propagate revalidation failure before fenced error-state transaction. No HTTP inside transaction, keep correct lease transaction."
+}

@@ -2,8 +2,8 @@
   "artifact_type": "proposed_scope_companion",
   "status": "PROPOSED_UNAPPLIED",
   "date": "2026-10-23",
-  "classification": "pending root strategic review; no source finding classified here",
-  "scope": "Minimal Evolution inventory observation guard and adapter unit coverage; accompanying product-path obligations remain gated by a separate already-admitted caller recovery repair.",
+  "classification": "Root routed inherited observation ambiguity as same-objective release-blocker in cp1-r5-finding-classification.json; source exception not granted.",
+  "scope": "Minimal Evolution inventory observation guard and adapter unit coverage; necessary caller recovery and fencing implemented on already-admitted paths, targeted proof complete and independent/full proof pending.",
   "authority": "Preparation-only delegation. This proposal grants no implementation authority. Approved TODO and CP1 sources remain frozen during the validator and independent review.",
   "governance": {
     "approved_todo": "foundation_documentation/todos/active/features/TODO-leadshug-instagram-channel.md",
@@ -53,23 +53,31 @@
   "proposal_diff_file": "evolution-observation-companion-proposed.diff",
   "proposal_diff": "diff --git a/api-app/src/integrations/evolution/evolution.client.ts b/api-app/src/integrations/evolution/evolution.client.ts\n--- a/api-app/src/integrations/evolution/evolution.client.ts\n+++ b/api-app/src/integrations/evolution/evolution.client.ts\n@@ -79,12 +79,30 @@ export class EvolutionHttpClient implements EvolutionClient {\n   async consultarInstancia(nome: string): Promise<InstanciaObservada | null> {\n     const query = new URLSearchParams({ instanceName: nome });\n     const data = await this.chamar('GET', `/instance/fetchInstances?${query.toString()}`);\n-    const instances = Array.isArray(data) ? data : [];\n-    const found = instances.find((item) => item && typeof item === 'object' && (item as { name?: unknown }).name === nome) as Record<string, unknown> | undefined;\n+    if (!Array.isArray(data)) {\n+      throw new EvolutionIndisponivelError('A Evolution retornou invent\u00e1rio de inst\u00e2ncias inv\u00e1lido.');\n+    }\n+    const instances = data.map((item) => {\n+      if (!isRecord(item) || typeof item.name !== 'string' || !item.name.trim()) {\n+        throw new EvolutionIndisponivelError('A Evolution retornou invent\u00e1rio de inst\u00e2ncias inv\u00e1lido.');\n+      }\n+      if (\n+        (item.ownerJid !== undefined && item.ownerJid !== null && typeof item.ownerJid !== 'string') ||\n+        (item.connectionStatus !== undefined && item.connectionStatus !== null && typeof item.connectionStatus !== 'string')\n+      ) {\n+        throw new EvolutionIndisponivelError('A Evolution retornou invent\u00e1rio de inst\u00e2ncias inv\u00e1lido.');\n+      }\n+      return item;\n+    });\n+    const matches = instances.filter((item) => item.name === nome);\n+    if (matches.length > 1) {\n+      throw new EvolutionIndisponivelError('A Evolution retornou invent\u00e1rio de inst\u00e2ncias amb\u00edguo.');\n+    }\n+    const found = matches[0];\n     if (!found) return null;\n     return {\n       name: typeof found.name === 'string' ? found.name : nome,\n       ownerJid: typeof found.ownerJid === 'string' ? found.ownerJid : null,\n       connectionStatus: typeof found.connectionStatus === 'string' ? found.connectionStatus : null,\n     };\n   }\ndiff --git a/api-app/src/integrations/evolution/evolution.client.spec.ts b/api-app/src/integrations/evolution/evolution.client.spec.ts\n--- a/api-app/src/integrations/evolution/evolution.client.spec.ts\n+++ b/api-app/src/integrations/evolution/evolution.client.spec.ts\n@@ -57,6 +57,55 @@ describe('EvolutionHttpClient instance creation response', () => {\n     expect(String(fetchFake.mock.calls[0][0])).toContain('/instance/delete/lh-exact-name');\n   });\n \n+  it.each([\n+    { label: 'object', json: async () => ({ instances: [] }) },\n+    { label: 'null', json: async () => null },\n+    { label: 'string', json: async () => '[]' },\n+    { label: 'invalid JSON', json: async () => { throw new SyntaxError('malformed'); } },\n+    { label: 'malformed row', json: async () => [{ name: 'another-instance' }, null] },\n+    { label: 'missing name', json: async () => [{ instanceName: 'lh-target' }] },\n+    { label: 'non-string name', json: async () => [{ name: 7 }] },\n+    { label: 'blank name', json: async () => [{ name: '   ' }] },\n+    { label: 'malformed ownerJid', json: async () => [{ name: 'another-instance', ownerJid: 7 }] },\n+    { label: 'malformed connectionStatus', json: async () => [{ name: 'another-instance', connectionStatus: 7 }] },\n+    { label: 'duplicate exact names', json: async () => [{ name: 'lh-target' }, { name: 'lh-target' }] },\n+  ])('rejects $label inventory as an ambiguous observation', async ({ json }) => {\n+    process.env.EVOLUTION_API_URL = 'https://evolution.invalid';\n+    process.env.EVOLUTION_API_KEY = 'fixture-key';\n+    const fetchFake = vi.fn().mockResolvedValue({ ok: true, json });\n+    vi.stubGlobal('fetch', fetchFake);\n+    await expect(new EvolutionHttpClient().consultarInstancia('lh-target'))\n+      .rejects.toBeInstanceOf(EvolutionIndisponivelError);\n+    expect(fetchFake).toHaveBeenCalledTimes(1);\n+  });\n+\n+  it.each([\n+    { label: 'empty inventory', rows: [] },\n+    { label: 'valid nonmatching inventory', rows: [{ name: 'another-instance', ownerJid: null, connectionStatus: null }] },\n+  ])('returns confirmed absence for $label', async ({ rows }) => {\n+    process.env.EVOLUTION_API_URL = 'https://evolution.invalid';\n+    process.env.EVOLUTION_API_KEY = 'fixture-key';\n+    const fetchFake = vi.fn().mockResolvedValue({ ok: true, json: async () => rows });\n+    vi.stubGlobal('fetch', fetchFake);\n+    await expect(new EvolutionHttpClient().consultarInstancia('lh-target')).resolves.toBeNull();\n+    expect(fetchFake).toHaveBeenCalledTimes(1);\n+  });\n+\n+  it.each([\n+    { label: 'omitted optional fields', row: { name: 'lh-target' }, expected: { name: 'lh-target', ownerJid: null, connectionStatus: null } },\n+    { label: 'null optional fields', row: { name: 'lh-target', ownerJid: null, connectionStatus: null }, expected: { name: 'lh-target', ownerJid: null, connectionStatus: null } },\n+    { label: 'populated optional fields', row: { name: 'lh-target', ownerJid: '15551234567@s.whatsapp.net', connectionStatus: 'open' }, expected: { name: 'lh-target', ownerJid: '15551234567@s.whatsapp.net', connectionStatus: 'open' } },\n+  ])('preserves the unique matching observation with $label', async ({ row, expected }) => {\n+    process.env.EVOLUTION_API_URL = 'https://evolution.invalid';\n+    process.env.EVOLUTION_API_KEY = 'fixture-key';\n+    const fetchFake = vi.fn().mockResolvedValue({ ok: true, json: async () => [\n+      { name: 'another-instance' }, row,\n+    ] });\n+    vi.stubGlobal('fetch', fetchFake);\n+    await expect(new EvolutionHttpClient().consultarInstancia('lh-target')).resolves.toEqual(expected);\n+    expect(fetchFake).toHaveBeenCalledTimes(1);\n+  });\n+\n   it('rejects redirects without following them or exposing the configured key', async () => {\n     process.env.EVOLUTION_API_URL = 'https://evolution.invalid';\n     process.env.EVOLUTION_API_KEY = 'fixture-secret-key';\n",
   "validation": {
-    "source_hashes_rechecked": true,
-    "todo_and_sources_edited": false,
-    "tests_run": false,
-    "runners_run": false,
-    "git_or_runtime_operations": false,
-    "runtime_network_private_or_product_git_operations": false,
-    "git_apply_check": "passed",
-    "json_embedded_diff_match": true
+    "protected_source_hashes_rechecked": true,
+    "protected_sources_edited": false,
+    "proposed_adapter_tests_run": false,
+    "caller_targeted_tests": "cp1-caller-r7-targeted-green.json",
+    "current_full_api_and_independent_review": "pending at this freeze",
+    "git_apply_check": "passed on unchanged protected diff before prior review; can repeat read-only",
+    "json_embedded_diff_match": true,
+    "operational_runtime_private_network_meta_product_git_operations": false,
+    "historicalPreparationNote": "Earlier validation false fields described the preparation-only drafter. Current caller test execution and authorized Foundation documentation commits are separately recorded; no claim that all workspace work was read-only."
   },
-  "proposalRevision": 3,
+  "proposalRevision": 4,
   "supersedesAtCommit": "4ca4daef",
   "critiqueResultReference": "evolution-observation-companion-critique-result.json",
   "historicalReviewHashesNote": "The original r1 proposal is committed in Foundation at 4ca4daef. Any hashes in its earlier preservation/review records describe the r1 baseline only; they are historical facts, not claims over this refreshed proposal revision.",
   "caller_recovery_dependency": {
     "finding": "IG-EVOCOMP-01",
-    "status": "Implemented only in already-admitted caller/service and lifecycle spec; targeted RED/GREEN receipt cp1-caller-r6-targeted-green.json. Current-source full API and independent review pending; malformed200 adapter repair still unapplied.",
-    "required_transition": "Preserve the same reserved replacement and its generation, pairing epoch, and attempt while reconciling the exact prior cleanup tuple. After conclusive absence or exact deletion confirmation, reach RESERVED_NEVER_CREATED before the single replacement create. Keep all ownership, lease, and stale-operation fences."
+    "status": "Admitted caller recovery/race/auth repair implemented and targeted379unit/28IG GREEN in cp1-caller-r7-targeted-green.json; full API and fresh source critique pending. Both malformed200 cleanup-path obligations remain proposed until protected-path admission.",
+    "required_transition": "Preserve the same reserved replacement and its generation, pairing epoch, and attempt while reconciling the exact prior cleanup tuple. After conclusive absence or exact deletion confirmation, reach RESERVED_NEVER_CREATED before the single replacement create. Keep all ownership, lease, and stale-operation fences.",
+    "sourceManifest": "cp1-caller-r7-frozen-source-manifest.json",
+    "proofReferences": [
+      "cp1-caller-r6-causal-red.json",
+      "cp1-caller-r7-causal-red.json",
+      "cp1-caller-r7-auth-causal-red.json",
+      "cp1-caller-r7-targeted-green.json"
+    ]
   },
   "actual_adapter_real_boundary_plan": {
     "status": "proposed proof plan; not executed",
@@ -80,9 +88,12 @@
     "cleanup": "Restore consultarInstancia, fetch stub/global, and every synthetic environment value in finally, including when assertions fail."
   },
   "review_findings_addressed": {
-    "IG-EVOCOMP-01": "Caller repaired on already-admitted paths; actual EvolutionHttpClient with legitimate HTTP ambiguity then validated absence proves same reservation and single replacement create. Current-source full API/review pending; both malformed observation cleanup-path obligations remain mandatory after separate path admission.",
+    "IG-EVOCOMP-01": "Normal same-attempt recovery supported by r2 review; r7 race/auth refinements causally tested on same admitted paths. Full current-source independent validation pending.",
     "IG-EVOCOMP-02": "Added independent missing/non-string/blank name, malformed connectionStatus, and matching row omitted/null optional-field cases while retaining prior cases and one-request assertions.",
-    "IG-EVOCOMP-03": "Clarified WhatsApp/Evolution pairing/renewal exercised by the Instagram lifecycle spec and defined conclusive absence as validated inventory without target, including [] and valid nonmatching rows."
+    "IG-EVOCOMP-03": "Clarified WhatsApp/Evolution pairing/renewal exercised by the Instagram lifecycle spec and defined conclusive absence as validated inventory without target, including [] and valid nonmatching rows.",
+    "IG-EVOCOMP-R2-01": "Stale failure persistence fenced under provider\u2192BU\u2192channel locks and exact live lease/current tuple; real takeover regression passes in final r7 targeted run.",
+    "IG-CP1-ROOT-R7-01": "Post-provider-error actor revalidation occurs before transaction; real BFF passwordChangedAt invalidation503 regression passes, unauthorized failure facts not committed."
   },
-  "revision3Reason": "After r6 causal RED/GREEN, refresh only factual caller dependency and proof references before fresh full review. Adapter/spec proposed diff unchanged from revision2."
+  "revision3Reason": "After r6 causal RED/GREEN, refresh only factual caller dependency and proof references before fresh full review. Adapter/spec proposed diff unchanged from revision2.",
+  "revision4Reason": "Current admitted caller repair now includes exact cleanup recovery, transactional stale-error fence and post-provider-error authorization revalidation, with real causal tests. Proposed protected adapter/spec diff unchanged from revision2."
 }
