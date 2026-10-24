@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "kind": "cp1-caller-r7-frozen-full-api-green",
+  "command": "bash scripts/test-channels-local.sh api",
+  "executorReportedExit": 0,
+  "rootObservedSummary": [
+    "Test Files  36 passed (36)",
+    "Tests  379 passed (379)",
+    "Test Files  36 passed (36)",
+    "Tests  486 passed (486)"
+  ],
+  "migrations": "30 recognized; schema up-to-date, lint/build passed",
+  "log": {
+    "path": "foundation_documentation/artifacts/tmp/instagram-channel-implementation/cp1-api-full-r7-01.log",
+    "sha256": "0ea880b0fa45365e5d7c317ec297f5130d5ca15e199f9c2579106ad6228dc46a",
+    "bytes": 197881
+  },
+  "rootFrozenCheck": {
+    "sourceManifest": "cp1-caller-r7-frozen-source-manifest.json",
+    "checked": 37,
+    "mismatches": [],
+    "todoSha256": "fdaafcdbd555479c8050a9c689b0f221c43b9a126c5605f905a997d35424f5c8",
+    "protected2AndContext": "all matched",
+    "proposalAndDiff": "matched"
+  },
+  "inheritedPreservation": {
+    "checked": 37,
+    "mismatches": []
+  },
+  "cleanup": "Root terminal log removal observed; validator reports filtered validation-only containers/volumes/networks empty",
+  "review": "evolution-observation-companion-critique-r3-result.json, no material findings",
+  "qualification": "Current caller proof only. IG-CP1-R5-01 observation guard unapplied; CP1/Instagram not accepted. CP2..CP6 and all remaining gates required."
+}

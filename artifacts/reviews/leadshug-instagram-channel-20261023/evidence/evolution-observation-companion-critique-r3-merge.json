@@ -1,0 +1,24 @@
+{
+  "schema_version": "subagent-review-merge-v2",
+  "artifact_kind": "subagent_review_merge",
+  "authoritative": false,
+  "edit_policy": "derived_merge_packet",
+  "dispatch_path": "/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/evolution-observation-companion-critique-r3-dispatch.json",
+  "review_kind": "critique",
+  "review_count": 1,
+  "reviewer_labels": [
+    "evolution_companion_critique_r3"
+  ],
+  "highest_finding_severity": "none",
+  "axis_summary": {
+    "performance": "acceptable",
+    "elegance": "acceptable",
+    "structural_soundness": "acceptable",
+    "operational_fit": "acceptable"
+  },
+  "recommended_paths": [
+    "After both frozen lanes become terminal, reconcile the separate validator's current-source complete API result before advancing. Record the two caller finding resolutions, then request human validation limited to the two protected Evolution paths; this critique grants no admission or implementation approval. After admission, require causal adapter RED/GREEN and both mandatory actual-adapter product-path regressions: retained-renewal cleanup and post-unlink recovery must preserve CLEANUP_PENDING with zero creates or unconfirmed deletion effects after malformed200/invalid JSON, then explicitly recover after validated absence or confirmed exact deletion. Preserve authenticated BFF/service and PostgreSQL behavior, exact synthetic HTTP interception, real Response parsing, cleanup of hooks/globals/environment, and the applicable reservation/generation/epoch/attempt and single-create guarantees. IG-CP1-R5-01 remains open until that implementation and proof converge. Obtain frozen complete API evidence and fresh affected review afterward. No CP1 acceptance, browser waiver or delivery claim follows; CP2\u2013CP6, browser/freshness, canonical ALL, pcv-1, security, TQA, cutover, final review and separately approved runtime/Meta proof remain mandatory."
+  ],
+  "exact_next_step": "Record reviewer resolutions in the governing TODO using the machine-checkable resolution table or equivalent gate ledger, then extract the derived resolution packet and decide whether another bounded review pass is still required.",
+  "findings": []
+}

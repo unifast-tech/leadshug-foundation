@@ -1,0 +1,58 @@
+{
+  "schemaVersion": 1,
+  "kind": "bounded-source-admission-ready-for-user-validation",
+  "status": "PENDING_USER_VALIDATION_UNAPPLIED",
+  "governingTodo": "foundation_documentation/todos/active/features/TODO-leadshug-instagram-channel.md",
+  "reviewedTodoSha256": "fdaafcdbd555479c8050a9c689b0f221c43b9a126c5605f905a997d35424f5c8",
+  "currentTrackingTodoSha256": "1b5276b454c48a45393e2f47a4da1b4469f29f07d91c9d180b643f94e9953fc8",
+  "reason": "Inherited Evolution consultarInstancia maps malformed successful inventory to null/absence, which can release cleanup uncertainty incorrectly; necessary same-objective repair R5-01. Authorized caller recovery/race/auth work is complete and current proof passed before this request.",
+  "requiredUserValidationRule": {
+    "quote": "User validation: required on deviation",
+    "protectedQuote": "Inherited public source ONLY; byte-exact baseline hash required, NO new Instagram mutation",
+    "source": "TODO Diff Expectation Contract and exact inherited client/spec rows"
+  },
+  "requestedPaths": {
+    "api-app/src/integrations/evolution/evolution.client.ts": "b0824e8fd4f801a239521855aaa02da5e0943a8c86c4ac8778e2f1f352821698",
+    "api-app/src/integrations/evolution/evolution.client.spec.ts": "119d962fdcd9c895b75845dca74d8506147e11480d74b82e8c37f29f97c04081"
+  },
+  "scope": "Only consultarInstancia inventory shape/ambiguity interpretation plus meaningful adapter unit cases. Preserve validated empty/nonmatching absence and unique-row projection; malformed/ambiguous successful response throws existing safe EvolutionIndisponivelError.",
+  "proposal": {
+    "path": "evolution-observation-companion-proposal.json",
+    "revision": 4,
+    "sha256": "3c9cea26d4a67a777dea029eb6408e00d13fefafae85b943c3c2e612bbc55b93"
+  },
+  "exactDiff": {
+    "path": "evolution-observation-companion-proposed.diff",
+    "sha256": "cc5453aeb245e1a9996e0006e3f1207b3d60bf6667c284815e282fe7457072ce",
+    "gitApplyCheck": "passed, read-only; not applied"
+  },
+  "independentCritique": {
+    "result": "evolution-observation-companion-critique-r3-result.json",
+    "sha256": "a67475908f3ade592ed2c083abbd21e7a868f2a98fc2c1f1d4780346cef7ecca",
+    "materialFindings": 0,
+    "allFourPositions": "acceptable"
+  },
+  "currentCallerValidation": {
+    "targeted": "cp1-caller-r7-targeted-green.json",
+    "completeApi": "cp1-caller-r7-full-api-green.json",
+    "unit": 379,
+    "apiIntegration": 486,
+    "frozen37SourcesMatched": true,
+    "immutable37RowsMatched": true
+  },
+  "afterValidation": [
+    "Record limited exception for these two paths, retaining original immutable policy/hashes as historical baseline and remaining35preservation rows",
+    "Test-first adapter regression and narrow guard; preserve all existing assertions",
+    "Actual-adapter authenticated BFF/PostgreSQL malformed200/invalidJSON regressions for retained renewal and post-unlink; preserve uncertainty/zero creates then explicit valid recovery/single create and applicable tuple guarantees",
+    "Frozen complete API and fresh affected review before CP1 acceptance, then approved CP2..CP6 work"
+  ],
+  "excludedFromRequest": [
+    "New HTTP requests or fallback; send/auth/signature/URL/timeout/dependency changes",
+    "Private env/runtime/Meta/resource changes or product Git/worktrees",
+    "Privacy page admission or other future unreviewed companions"
+  ],
+  "protectedSourceEditsAuthorized": false,
+  "cp1Accepted": false,
+  "instagramDelivered": false,
+  "runtimeAuthorized": false
+}

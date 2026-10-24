@@ -30,16 +30,20 @@ Este TODO define WHAT, exclusões e critérios de entrega. A baseline v1.3 abaix
 
 ## Delivery Status Canon (Required)
 - **Current delivery stage:** Pending
-- **Qualifiers:** none
-- **Next exact step:** CP1: fonte r7 congelada para API completo e crítica independente r3 da proposta/caller; após ambas terminarem, solicitar validação limitada dos dois caminhos protegidos.379unit/28IG passaram; parser malformado ainda não aplicado.
+- **Qualifiers:** Blocked
+- **Next exact step:** validar admissão limitada de evolution.client.ts e evolution.client.spec.ts conforme evidence/evolution-observation-companion-admission-ready.json; após confirmação, registrar exceção, executar RED/GREEN e provas de cleanup, API completo/revisão e retomar CP2..CP6.
 
 ## Active Work State (Required While TODO Remains In `active/`)
-- **Work state:** implementation
-- **Why this state now:** usuário respondeu APROVADO ao contrato v1.3 em2026-10-23; execução por checkpoints, um writer, authority normal exigido antes do primeiro código.
-- **Exit condition:** todos os checkpoints e critérios validados, revisões/guards completos e prova runtime posterior explicitamente aprovada; nenhum fechamento parcial implícito.
+- **Work state:** blocked
+- **Why this state now:** caller já corrigido e validado; o próximo reparo necessário depende de dois caminhos explicitamente preservados, com proposta concreta revisada e validação humana pendente.
+- **Exit condition:** validação explícita dos dois caminhos restaura implementation; conclusão continua exigindo todos os checkpoints, critérios e provas, sem fechamento parcial.
 
 ## Blocker Notes
-- **Blocker:** none for approved code/disposable synthetic validation. Human approval was received; no unresolved planning blocker.
+- **Blocker:** validação limitada dos dois caminhos protegidos da Evolution ainda não recebida.
+- **Why blocked now:** CP1 depende da interpretação honesta de observação, mas o contrato exige preservação byte-exact desses caminhos e user validation on deviation.
+- **What unblocks it:** confirmar a admissão pontual em `evidence/evolution-observation-companion-admission-ready.json`; nenhum novo escopo funcional/runtime é proposto.
+- **Owner / source:** usuário, conforme Diff Expectation Contract e proteção explícita dos arquivos herdados.
+- **Last confirmed truth:** fonte r7 passou379unit/486APIe2e e revisão independente r3 sem apontamentos;37fontes congeladas e37heranças preservadas conferidas. Não reinvestigar esses resultados como se fossem desconhecidos.
 - **Runtime boundary:** ativação local real, leitura privada, Meta e prova física dependem do plano próprio posterior já exigido no contrato; não bloqueiam CP1..CP5.
 
 ## Scope
@@ -599,11 +603,11 @@ Historical planning observation retained: IG-REV-01..04, strategic source, high/
 | IG-CP1-ROOT-01 | high | release-blocker | fix in this TODO | pending current ingress remains retryable without content/trust before proof | closed by r5 | adherence-cp1-r5-result.json; metadata-only staged retry and accepted-key proof retained |
 | IG-CP1-R4-01 | high | release-blocker | repeat affected proof in this TODO | four mutations violated the explicit r4 freeze; preserve evidence and validate current bytes anew | closed by r5 | adherence-cp1-r5-result.json; cp1-frozen-full-api-green-r5.json; new stable proof replaces invalidated acceptance |
 | IG-CP1-R5-01 | medium | release-blocker | bounded companion in this TODO; protected path validation required | current staged cleanup guarantee depends on a truthful absence observation; inherited adapter weakness is not a new Instagram regression | open; proposed only | adherence-cp1-r5-result.json; evolution-observation-companion-proposal.json |
-| IG-EVOCOMP-01 | medium | release-blocker | fix admitted caller lifecycle in this TODO | conclusive cleanup must recover same reserved operation and permit one create, without widening protected paths | normal path supported r2; stale variant R2-01 remains | evolution-observation-companion-critique-r2-result.json; cp1-caller-r6-full-api-green.json |
+| IG-EVOCOMP-01 | medium | release-blocker | fix admitted caller lifecycle in this TODO | conclusive cleanup must recover same reserved operation and permit one create, without widening protected paths | closed by r3/current full API; protected parser remains R5-01 | evolution-observation-companion-critique-r3-result.json; cp1-caller-r7-full-api-green.json |
 | IG-EVOCOMP-02 | medium | release-blocker | strengthen proposed tests before source admission | independent malformed name/state and null projection branches need concrete proof plan | proposal resolved r2; implementation not admitted | evolution-observation-companion-critique-r2-result.json |
 | IG-EVOCOMP-03 | low | release-blocker | correct proposal wording before validation | exact subject and absence contract must be clear to approving user; small same-artifact correction | proposal resolved r2; implementation not admitted | evolution-observation-companion-critique-r2-result.json |
-| IG-EVOCOMP-R2-01 | medium | release-blocker | fence late failure mutation in same admitted caller/test paths | same-attempt recovery must retain later holder facts after lease takeover; inherited catch is not a new adapter regression | open; static, causal RED required | evolution-observation-companion-critique-r2-result.json; cp1-caller-r7-finding-classification.json |
-| IG-CP1-ROOT-R7-01 | medium | release-blocker | revalidate authorization before provider-error fact mutation in same admitted paths | live DB lease does not replace post-call session/grant revalidation; same existing lifecycle contract, no new middleware scope | open; static, causal test required | cp1-caller-r7-auth-revalidation-finding.json |
+| IG-EVOCOMP-R2-01 | medium | release-blocker | fence late failure mutation in same admitted caller/test paths | same-attempt recovery must retain later holder facts after lease takeover; inherited catch is not a new adapter regression | closed by r3/current full API | evolution-observation-companion-critique-r3-result.json; cp1-caller-r7-full-api-green.json |
+| IG-CP1-ROOT-R7-01 | medium | release-blocker | revalidate authorization before provider-error fact mutation in same admitted paths | live DB lease does not replace post-call session/grant revalidation; same existing lifecycle contract, no new middleware scope | closed by r3/current full API | evolution-observation-companion-critique-r3-result.json; cp1-caller-r7-full-api-green.json |
 
 ## TODO Closeout Disposition
 - **Disposition:** blocked
@@ -997,3 +1001,14 @@ R7 root source cross-check identified IG-CP1-ROOT-R7-01 before terminal acceptan
 `cp1-caller-r7-causal-red.json` proves the actual stale holder overwrote a later recovered attempt; `cp1-caller-r7-auth-causal-red.json` proves failure-fact mutation after actual passwordChangedAt session invalidation. Earlier response-only, setup and build attempts remain separately qualified. `cp1-caller-r7-targeted-green.json` records30migrations, lint/build,379unit and28Instagram integration passes after the admitted repairs. The ambiguity transaction locks prior provider→BU→channel, verifies exact pending tuple/live lease/compatible attempt, and post-provider-error revalidation propagates actor denial before mutation. Stale revalidation lies outside provider catches. Same reservation, exactly-one create and unproved ingress guarantees pass.
 
 All37immutable inherited public hashes match. Only the two admitted caller/test paths changed since r6. All37current sources, protected client/spec, governing TODO and proposal revision4/diff are frozen for separate full API and fresh complete affected critique r3. Protected diff remains byte-identical to revision2 and unapplied; actual-adapter malformed observation proof on both paths still requires later human admission. No code, TODO or proposal edits until both lanes terminal; validation-only lane cannot repair. No CP1 or delivery acceptance.
+
+## CP1 r7 validation complete; bounded source admission ready
+
+Both frozen lanes are terminal. `evidence/cp1-caller-r7-full-api-green.json` records379unit/486APIintegration passes on the exact frozen r7 source; all37sources, protected2, controller, TODO/proposal/diff and37immutable inherited rows matched. Fresh `evolution-observation-companion-critique-r3-result.json` found no material issue and supports closure of the stale-failure and revoked-session caller findings. Earlier qualified attempts and invalidated r4 history remain intact. This closes the currently authorized caller work, not CP1 or the Instagram delivery.
+
+| Finding ID | Resolution | Usefulness | Formalizable | Candidate rule level | Candidate rule ID | Rationale |
+| --- | --- | --- | --- | --- | --- | --- |
+| IG-EVOCOMP-R2-01 | Integrated | useful | yes | project | n/a | Exact live operation fence and compatible attempt guards prevent late failure from regressing newer facts; real takeover RED/GREEN, current full API and independent r3 support closure |
+| IG-CP1-ROOT-R7-01 | Integrated | useful | yes | project | n/a | Post-provider-error revalidation propagates denial before ambiguity transaction; actual BFF passwordChangedAt revocation RED/GREEN, full API and r3 support closure |
+
+`evidence/evolution-observation-companion-admission-ready.json` binds the exact protected two-path diff to its review and current caller proof. The read-only apply check passed again. No exception has been granted or applied: original immutable rows and hashes remain authoritative. IG-CP1-R5-01 remains open pending explicit human path validation, then actual adapter RED/GREEN and both real-boundary cleanup regressions, frozen full API and fresh affected review. CP2..CP6, UI/browser, ALL/pcv/security/TQA/cutover/final review and separately approved real runtime/Meta proof remain mandatory.

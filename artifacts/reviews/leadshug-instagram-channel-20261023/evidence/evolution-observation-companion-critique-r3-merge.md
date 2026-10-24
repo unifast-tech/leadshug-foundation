@@ -1,0 +1,34 @@
+# PACED Subagent Review Merge: critique
+
+## Merge Identity
+- **Artifact kind:** `subagent_review_merge`
+- **Authoritative:** `false`
+- **Edit policy:** `derived_merge_packet`
+- **Dispatch path:** `/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/evolution-observation-companion-critique-r3-dispatch.json`
+- **Review count:** `1`
+- **Highest finding severity:** `none`
+
+## Axis Summary
+- **Performance:** `acceptable`
+- **Elegance:** `acceptable`
+- **Structural soundness:** `acceptable`
+- **Operational fit:** `acceptable`
+
+## Recommended Paths
+- `After both frozen lanes become terminal, reconcile the separate validator's current-source complete API result before advancing. Record the two caller finding resolutions, then request human validation limited to the two protected Evolution paths; this critique grants no admission or implementation approval. After admission, require causal adapter RED/GREEN and both mandatory actual-adapter product-path regressions: retained-renewal cleanup and post-unlink recovery must preserve CLEANUP_PENDING with zero creates or unconfirmed deletion effects after malformed200/invalid JSON, then explicitly recover after validated absence or confirmed exact deletion. Preserve authenticated BFF/service and PostgreSQL behavior, exact synthetic HTTP interception, real Response parsing, cleanup of hooks/globals/environment, and the applicable reservation/generation/epoch/attempt and single-create guarantees. IG-CP1-R5-01 remains open until that implementation and proof converge. Obtain frozen complete API evidence and fresh affected review afterward. No CP1 acceptance, browser waiver or delivery claim follows; CP2–CP6, browser/freshness, canonical ALL, pcv-1, security, TQA, cutover, final review and separately approved runtime/Meta proof remain mandatory.`
+
+## Merged Findings
+- `none`
+
+## Reviewer Summaries
+### evolution_companion_critique_r3
+- **Assessment:** No material findings in the complete bounded proposal/caller package. Current source supports resolving IG-EVOCOMP-R2-01 and IG-CP1-ROOT-R7-01: provider catches exclude stale revalidation, both provider-error branches revalidate authorization before mutation, and recordAmbiguousCleanup locks the exact managed prior identity, then BU and channel, before checking the current tuple, live lease, pending cleanup identity/name and compatible attempt state. Failed checks roll back without regressing later-holder, terminal or cancelled facts. HTTP remains outside transactions. The authenticated PostgreSQL takeover regression compares persisted attempt and prior-identity facts after releasing the stale holder, then proves the retained reservation creates once and remains unproved. The authorization regression invalidates the real BFF session during an actual-adapter HTTP failure and asserts unchanged lifecycle facts plus401. Recorded causal RED and targeted379unit/28IG GREEN are appropriately qualified; this reviewer executed no tests. Normal IG-EVOCOMP-01 recovery and proposal02/03 resolutions remain supported; unchanged historical closures were preserved. The exact unapplied adapter guard rejects malformed/ambiguous inventory while preserving validated empty/nonmatching absence and unique-row projection. Proposed unit cases cover independent validation and nullable projection branches without removing existing assertions. Architecture, code quality, tests, security, performance, elegance, structural soundness and operational fit were assessed. Performance is acceptable by inspection: linear inventory validation, no added HTTP, and bounded identity-based transaction work; capacity remains unmeasured. The complete governing TODO, Frontend/Consumer Matrix and listed evidence were considered. All43 frozen entries, comprising37 sources, protected2, controller, TODO, proposal and diff, matched before and after review. All37 immutable preservation rows match; embedded and file diffs agree, retaining SHA256 cc5453aeb245e1a9996e0006e3f1207b3d60bf6667c284815e282fe7457072ce. Inspection stayed within declared public files; no writes, test/runner execution, operational runtime, network, private-input or Git actions occurred.
+- **Recommended path:** `After both frozen lanes become terminal, reconcile the separate validator's current-source complete API result before advancing. Record the two caller finding resolutions, then request human validation limited to the two protected Evolution paths; this critique grants no admission or implementation approval. After admission, require causal adapter RED/GREEN and both mandatory actual-adapter product-path regressions: retained-renewal cleanup and post-unlink recovery must preserve CLEANUP_PENDING with zero creates or unconfirmed deletion effects after malformed200/invalid JSON, then explicitly recover after validated absence or confirmed exact deletion. Preserve authenticated BFF/service and PostgreSQL behavior, exact synthetic HTTP interception, real Response parsing, cleanup of hooks/globals/environment, and the applicable reservation/generation/epoch/attempt and single-create guarantees. IG-CP1-R5-01 remains open until that implementation and proof converge. Obtain frozen complete API evidence and fresh affected review afterward. No CP1 acceptance, browser waiver or delivery claim follows; CP2–CP6, browser/freshness, canonical ALL, pcv-1, security, TQA, cutover, final review and separately approved runtime/Meta proof remain mandatory.`
+- **Performance:** `acceptable`
+- **Elegance:** `acceptable`
+- **Structural soundness:** `acceptable`
+- **Operational fit:** `acceptable`
+
+## Exact Next Step
+Record reviewer resolutions in the governing TODO using the machine-checkable resolution table or equivalent gate ledger, then extract the derived resolution packet and decide whether another bounded review pass is still required.
+
