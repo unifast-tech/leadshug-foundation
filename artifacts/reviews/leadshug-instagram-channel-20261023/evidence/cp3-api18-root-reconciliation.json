@@ -1,0 +1,13 @@
+{
+  "kind": "root-api18-terminal-reconciliation",
+  "date": "2026-10-24",
+  "sourcesMatched": 254,
+  "boundInputsMatched": 228,
+  "preservedRowsMatched": 35,
+  "rootIndexMatched": 3,
+  "todoSha256": "9fa2936a381597cb5679dd3554c2a165cdf5d4eebecb2cb8feb8e58a5fbc29ce",
+  "logSha256": "24e6e8b8184c93a5e1df3d3618e0fca8ec448e35f25aee9acfaefc5ed9465c73",
+  "rootRead": "Actual complete result and log tail read; exact positive hashes independently recomputed. No product test assertion reached. Setup/parity/31migration pass does not establish API correctness.",
+  "classification": "Lint-only stop: two unused destructured private projection fields in already-admitted me.controller.ts. All later stages NOT_REACHED. No checkpoint accepted.",
+  "next": "Thaw exactly one source for two explicit unused-value discards, no semantic projection/auth/grant/test changes; independently reconcile then fresh one complete canonical API run."
+}

@@ -1,0 +1,124 @@
+{
+  "kind": "cp3-api18-api-validation-result",
+  "date": "2026-10-24",
+  "command": "bash scripts/test-channels-local.sh api",
+  "invocations": 1,
+  "exitCode": 1,
+  "outcome": "FAIL",
+  "preflight": {
+    "passed": true,
+    "positivePublicSources": {
+      "expected": 254,
+      "matched": 254
+    },
+    "todoSha256": "9fa2936a381597cb5679dd3554c2a165cdf5d4eebecb2cb8feb8e58a5fbc29ce",
+    "boundInputs": {
+      "expected": 228,
+      "matched": 228
+    },
+    "preservationRows": {
+      "expected": 35,
+      "matched": 35
+    },
+    "rootIndexEntries": {
+      "expected": 3,
+      "matched": true
+    },
+    "writersTerminal": true
+  },
+  "postflight": {
+    "passed": true,
+    "positivePublicSources": {
+      "expected": 254,
+      "matched": 254
+    },
+    "boundInputs": {
+      "expected": 228,
+      "matched": 228
+    },
+    "preservationRows": {
+      "expected": 35,
+      "matched": 35
+    },
+    "rootIndexEntries": {
+      "expected": 3,
+      "matched": true
+    },
+    "sourceTodoInputChanges": 0
+  },
+  "log": {
+    "path": "cp3-api18-api.log",
+    "sha256": "24e6e8b8184c93a5e1df3d3618e0fca8ec448e35f25aee9acfaefc5ed9465c73",
+    "bytes": 13989,
+    "captured": "complete synthetic stdout and stderr"
+  },
+  "stages": [
+    {
+      "stage": "runner setup and validation guard",
+      "status": "passed",
+      "evidence": "Principal API/Web source binds and dotenv masks verified before npm; CI parity guard returned its synthetic assertions, including 26 rejected mutations."
+    },
+    {
+      "stage": "Prisma client generation",
+      "status": "passed",
+      "evidence": "Prisma Client v6.19.3 generated."
+    },
+    {
+      "stage": "PostgreSQL migration deploy",
+      "status": "passed",
+      "migrationsFound": 31,
+      "migrationsApplied": 31,
+      "evidence": "All migrations successfully applied on canonical disposable validation topology."
+    },
+    {
+      "stage": "API lint",
+      "status": "failed",
+      "errors": 2,
+      "files": [
+        "api-app/src/surfaces/bff/me.controller.ts"
+      ],
+      "diagnostics": [
+        "187:37 '_businessIdentityId' is defined but never used",
+        "253:35 '_businessIdentityId' is defined but never used"
+      ]
+    },
+    {
+      "stage": "build",
+      "status": "not_reached"
+    },
+    {
+      "stage": "unit tests",
+      "status": "not_reached",
+      "currentCount": 0,
+      "historicalCount": 406,
+      "historicalOnly": true
+    },
+    {
+      "stage": "complete E2E/API integration tests",
+      "status": "not_reached",
+      "currentCount": 0,
+      "assertionsReached": 0
+    },
+    {
+      "stage": "OAuth infrastructure real-PostgreSQL table-fault spec",
+      "status": "not_reached"
+    },
+    {
+      "stage": "strict CP2 clock measurement (<2000ms)",
+      "status": "not_reached",
+      "thresholdChanged": false
+    }
+  ],
+  "assertionReachability": {
+    "CIParityMutationGuard": {
+      "status": "reached",
+      "mutationsRejected": 26
+    },
+    "productUnitAndE2EAssertions": {
+      "status": "not_reached",
+      "count": 0
+    }
+  },
+  "classification": "Lint failure stopped the canonical runner before build, current unit suite, E2E/API integration assertions, OAuth infrastructure-fault spec, and timing measurement. No GREEN claim for unreached tests; source10 406-unit result remains historical only. CP2 strict <2000ms criterion retained.",
+  "manifestAndFrozenInputsUnchanged": true
+}

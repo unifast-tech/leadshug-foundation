@@ -1,0 +1,14 @@
+{
+  "kind": "cp3-lint19-executor-handoff",
+  "profile": "Operational / Coder",
+  "scope": [
+    "nestjs",
+    "typescript"
+  ],
+  "source": "api-app/src/surfaces/bff/me.controller.ts",
+  "sha256": "67d71a3e24342d850c313be32275d5f73b82521f44f6a5229cc6784948549098",
+  "allowedChange": "Only the two map destructuring bodies at current187/253: explicitly consume the omitted _businessIdentityId with void _businessIdentityId then return existing rest object. Keep exact existing filters/selects/projections/auth/grants and other file bytes. No lint suppression/config/new helper/API/schema change.",
+  "forbidden": "No other file writes, no tests/runner/Docker/npm/Git/private/env/operational/Meta/tunnel commands. All other sources and T immutable to executor.",
+  "terminal": "Report exact hash and full narrow diff; validation NOTRUN. Root owns all docs.",
+  "authority": "Approved ST-IG-03 v1.3; me.controller.ts exact admitted projection path. No WHAT deviation."
+}

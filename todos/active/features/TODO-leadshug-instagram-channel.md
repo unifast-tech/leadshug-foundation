@@ -1444,3 +1444,11 @@ Root conferiu254fontes, exatamente7caminhos alterados e35preservações. Compara
 Root conferiu254fontes públicas, somente os três onboarding specs admitidos alterados,35preservações e3índices mantidos. Diffs completos em relação aos originais RAM confirmam qualificações de fixture sem remover/assert/frouxar métricas, preservando500rawSQL e outras amostras. Caller recebe uma IN pública assinada antes do trigger, mantendo o propósito de credencial por recurso; isso não prova primeiro envio. Typebot conserva o ingresso real e somente declara WABA atual. PCV acrescenta rotas selecionadas antes das medições30/25, sem novo helper/per-row durante o request. Prova estática em cp3-fixture17-terminal-reconciliation.json, ainda NOTRUN.
 
 Todos os writers ficam terminais e a candidata254/T/inputs positivos será selada para UMA execução canônica completa da API conforme cp3-api18-validation-handoff.json. Não haverá autofix, retry interno ou mutação durante a rodada. A adjudicação posterior separa compilação/fixture/reachability/produto e medidas; não inferir GREEN ou aceite dos testes não alcançados. CP2primary, pendências humanas, consumidorUI/realtime/browser e demais gates permanecem abertos.
+
+
+### API18 terminal — lint bloqueou antes de testes
+Root conferiu254fontes/T/228inputs/35preservações/3índices e SHA do log completo. Parity/setup/generate/31migrações passaram; lint parou em duas variáveis descartadas na projeção WA de me.controller.ts. Build/unit/E2E/OAuthfault/clock não foram alcançados; nenhum GREEN ou aceite. cp3-api18-root-reconciliation.json registra a prova atual. O freeze18 está encerrado. Thaw19 permite somente tornar explícito o descarte dos dois campos omitidos, no caminho já admitido, sem alterar seleção/projeção/grants/auth/testes; conferência root precede nova execução completa. CP4..CP6 e todas as pendências permanecem obrigatórias.
+
+
+### Lint19 terminal — candidata completa20 preparada
+Root inverteu apenas as duas expansões void/return e reproduziu o SHA original exato de me.controller.ts, preservando CRLF; as outras253fontes permanecem iguais. A nova candidata254/T/inputs positivos será selada para UMA execução canônica completa conforme cp3-api20-validation-handoff.json. Nenhuma edição de fonte/T/inputs/autofix/retry ocorrerá durante a rodada. Testes ainda NOTRUN nesta candidata.

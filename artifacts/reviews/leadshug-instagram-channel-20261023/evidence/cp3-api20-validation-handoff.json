@@ -1,0 +1,15 @@
+{
+  "kind": "cp3-complete-api-validation20",
+  "date": "2026-10-24",
+  "command": "bash scripts/test-channels-local.sh api",
+  "times": 1,
+  "freeze": "cp3-api20-frozen-manifest.json",
+  "sourceCount": 254,
+  "log": "cp3-api20-api.log",
+  "beforeOutput": "cp3-api20-before.json",
+  "afterOutput": "cp3-api20-after.json",
+  "resultOutput": "cp3-api20-result.json",
+  "instructions": "ExactlyONEcanonicalinvocation fromprincipalcheckout afterallwriters terminal/rootreconciled19. Validate positive254sources/currentT/allboundInputs/35preservedrows/3rootIndex beforeandafter; writes ONLYfour namedoutputs log/before/after/result. No autofix/retry/alternateinvocation/source/T/inputwrites duringrun. No Git/private/env/operationalDB/volume/container/provider/tunnel work. Canonicalrunner alone owns leadshug_channels_validation, NEVER leadshug_channels_local. Do not invoke broadgit/privateenumeration/hashguards. Capturecomplete synthetic stdoutstderr tofixedlog, exitcode, SHA/stages/testcounts/assertionsreached; concise progress every~minute.",
+  "classification": "Full API includes31migration setup/generate/lint/build/406historicalunitcount pluscurrentcompleteE2E allspecs. Reportactualcounts notguessed. Compilation/setup/unit errors precede laterproof. Real nativePG signedIG+WA ingress/isolation/canonicalroutes/V1recovery/strictV2/contextfences/OAuthsessionfaults/readconsumers/Typebot/PCV/EPS/RLS/stress allincluded; unrunassertionsnotGREEN. CP2finalclock strict<2000ms retained; classify actual measurement separately, no thresholdincrease.",
+  "remaining": "NotALL/Web/browser/currentformalreview/primaryproviderprotocol/realruntime orcheckpointacceptance. CP4 UI/realtime/source work remains after adjudication."
+}

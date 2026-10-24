@@ -1,0 +1,10 @@
+{
+  "kind": "root-static-lint19-reconciliation",
+  "sources": 254,
+  "changed": [
+    "api-app/src/surfaces/bff/me.controller.ts"
+  ],
+  "newSha256": "e3e2db03e3b301235e78cb800217fc3b01b5bd44e4b309c3f40930ea93b4df06",
+  "reverseExact": "Reversing only both void-rest callback expansions reproduces original67d71... exactly, preserving CRLF. Initial text-normalizing audit assertion failed before writes; corrected byte-exact audit passes. No functional/auth/selection/test changes.",
+  "validation": "NOTRUN; canonical API18 stopped at lint before all product assertions"
+}
