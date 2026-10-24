@@ -1,0 +1,21 @@
+{
+  "candidate": "cp3-red51",
+  "preflight": "pass",
+  "command": "bash scripts/test-channels-local.sh api-instagram",
+  "counts": {
+    "frozen_sources": 261,
+    "bound_inputs": 709,
+    "preservation_rows": 35,
+    "root_gitlinks": 3
+  },
+  "outputs_absent": true,
+  "source_mismatches": [],
+  "bound_input_mismatches": [],
+  "preservation_mismatches": [],
+  "observed_root_index": [
+    "160000 5db3fbe2043428749895fc3ff6441e9457467dd0 0\tapi-app",
+    "160000 40828a20f2d6c3a1443e7ee132f42483840d6abb 0\tfoundation_documentation",
+    "160000 6c99c27dafdce8ed9b461d17aaaaa491b8ae16e9 0\tweb-app"
+  ],
+  "errors": []
+}

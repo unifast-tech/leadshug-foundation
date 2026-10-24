@@ -1,0 +1,49 @@
+{
+  "kind": "cp3-red51-root-reconciliation",
+  "date": "2026-10-24",
+  "sourceRowsExact": 261,
+  "todoExact": true,
+  "boundInputsExact": 709,
+  "preservationExact": 35,
+  "rootGitlinksExact": 3,
+  "log": {
+    "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp3-red51-api.log",
+    "bytes": 59549,
+    "sha256": "42e044aa07f58fd1fc677417d4f28b785bf2aa6ac079c3564dfbc292e68f87de"
+  },
+  "exitCode": 1,
+  "passed": {
+    "units": 426,
+    "e2e": 123,
+    "migrations": 31
+  },
+  "failedE2E": 9,
+  "causalProof": [
+    {
+      "case": "actualWAinitialdisconnect",
+      "reached": "Actualdisconnect committed/channelremoved/providerdetached/livegrant+deadlinechecked. FirstzeroPOSTassert expected0 got1; 503 INITIAL_LOCAL_ACCEPTANCE_UNCONFIRMED/ACCEPTED_LOCAL_INCOMPLETE. A46causalRED forinitialWA path.",
+      "unreached": "Subsequent409/BLOCKED asserts."
+    },
+    {
+      "case": "B46IGrecipientoptions",
+      "reached": "Expected0 choices got2; no-provider-send asserts laterNOTREACHED."
+    }
+  ],
+  "notCausal": [
+    {
+      "case": "encryptedIGreauthorization",
+      "barrier": "Confirm expected200 got409 BEFOREcrypto/version/mutationcompletion/provider-count. Rootsource confirms REAUTHORIZEconfirm requires expectedGeneration; newtest wronglysentemptybody. No actualencryptedrotationREDyet."
+    },
+    {
+      "case": "ordinaryWA disconnect",
+      "barrier": "Request completedbeforeheldfinalgap. Rootsource confirms ordinaryrouteassertOrdinaryDispatchAllowed requires actualinitialmessage; previewcreatesroute but doesnotcompletefirstsend. Newtest usedonlypreview. No ordinaryWAcountREDyet."
+    },
+    {
+      "cases": 5,
+      "barrier": "ExtraenumerablefakeaccessToken changedstrictold3-field records, knownfixturecompatgap; threeACK/tworoutingcasesfailbeforelateroracles. No currentfullregressionpassclaim."
+    }
+  ],
+  "preexecutionRootQualification": "Earlier keyIdinequality corrected before51; theseotherfixturegaps discovered afterfreeze. No source/input mutation/retry during51.",
+  "next": "Limited test-only52 repairtwoexistingpaths, thenseparatecanonical53beforeproductionrepair. AllproductionstillAPI45.",
+  "status": "Terminal/rootindependentlyreconciled;51freeze ended; no CP3/featureacceptance."
+}

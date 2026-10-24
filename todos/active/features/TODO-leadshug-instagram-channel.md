@@ -31,7 +31,7 @@ Este TODO define WHAT, exclusões e critérios de entrega. A baseline v1.3 abaix
 ## Delivery Status Canon (Required)
 - **Current delivery stage:** Pending
 - **Qualifiers:** none
-- **Next exact step:** teste nativo50 de reautorização cifrada e desconexão reais antes do reparo A46; API49 reproduziu B46, opinião47 integrou HOW. CP4 completo permanece obrigatório.
+- **Next exact step:** executar uma prova canônica api-instagram53 das fixtures52 corrigidas; exigir rotação cifrada e desconexão ordinária efetivamente alcançadas antes de reparar produção. CP4 completo segue obrigatório.
 
 ## Active Work State (Required While TODO Remains In `active/`)
 - **Work state:** implementation
@@ -651,7 +651,6 @@ Historical planning observation retained: IG-REV-01..04, strategic source, high/
 | IG-CP3-B35-05 | medium | release-blocker | fix in this TODO | Bound internal CSV hydration preserving full public output and filters | closed original defect by API45/adherence46; newA46 remains open | cp3-api45-root-reconciliation.json; cp3-adherence46-root-adjudication.json |
 | IG-CP3-A46-01 | high | release-blocker | fix in this TODO | coherent provider/currentactor final observation is IG-ARCH-R1-01/DOD-03 | open; nativecausal proof then faithfulHOW repair | cp3-adherence46a-raw.json; cp3-adherence46-root-adjudication.json |
 | IG-CP3-B46-01 | medium | release-blocker | fix in this TODO | options and dispatch must share recipient-qualified initial eligibility | open; preserve12cohort/WApositive and addIGnegative | cp3-adherence46b-raw.json; cp3-adherence46-root-adjudication.json |
-
 | F-B338F932 | high | release-blocker | fix in this TODO | alias A46-01; same coherent final observation obligation | open; HOW47 integrated, nativeproof/source pending | cp3-final-fence47-opinion-merge.json |
 | F-B67948FF | high | release-blocker | fix in this TODO | preserve signed-session fence after new awaitedCOMMIT | open; pairedactor fence required by repairHOW, not newWHAT | cp3-final-fence47-opinion-merge.json |
 | F-82E76A38 | high | release-blocker | fix in this TODO | causal mutation-first and actualPG serialization proof of sameapprovedfence | open; native50testfirst thenGREENcontrols | cp3-final-fence47-opinion-merge.json |
@@ -1643,3 +1642,21 @@ Alllanes terminal,49freeze ended. cp3-final-fence50-test-only-handoff.json thaws
 | F-B67948FF | Integrated | useful | yes | project | n/a | Pure signed-session/time check after final COMMIT await; source/proof pending; rootadjudication47 |
 | F-82E76A38 | Integrated | useful | partial | project | n/a | Mutation-first zeroPOST and authorization-first realPG serialization; native50testfirst; rootadjudication47 |
 | F-175B5680 | Integrated | useful | partial | project | n/a | Existing localordering contract clarified, no atomicproviderclaim; source/proof pending; rootadjudication47 |
+
+## CP3 native test50 terminal — 2026-10-24
+
+Root matched only the two authorized test paths against API49; all259other sources are unchanged, including every production byte. The six original authorization case bodies are byte-identical. The new three cases complete actual Instagram BFF reauthorization with changed encrypted token/version and resolver decryption, or actual WhatsApp lifecycle disconnection, before releasing the old final gap. Role/deadline and unchanged IG receipt/ownership/generation are checked after mutation. Zero message POST is the decisive first assertion after the pending request settles. The root corrected an erroneous keyId inequality before execution: token rotation retains the configured encryption key. No RED was claimed from that incorrect fixture. Helpers only capture the synthetic bearer in fake HTTP records.
+
+All writers are terminal; native50 remains NOTRUN. The next freeze covers current261sources/T/positiveinputs for exactly one separate canonical api-instagram51 run. No source/T/input edits, autofix or retries during validation. Actual setup, mutation commit, crypto checks and decisive failure must be reached before claiming A46 RED. Existing B46 RED is historical49; guard48 has passing unit proof without a claimed RED. Root reconciles terminal bytes before any source52thaw. Complete CP4 and all pending primary/human/later gates remain required.
+
+## CP3 native51 qualified RED and fixture52 — 2026-10-24
+
+Root independently matched261sources/T/709inputs/35preservations/3gitlinks/log59549bytes SHA42e044aa07f58fd1fc677417d4f28b785bf2aa6ac079c3564dfbc292e68f87de.31migrations/lint/build/426unit passed;123/132selectedE2E,9failures. Actual WA initial disconnect committed before release and the decisive zeroPOST assertion saw1; response503 ACCEPTED_LOCAL_INCOMPLETE. This is causalA46RED for that path. B46 again expected0 choices/got2. Other two new A46 cases are unproved: IGconfirm omitted required expectedGeneration and returned409 before rotation; WAordinary used preview without a completed firstsend and never reached the heldgap. Five old tests failed from the added enumerable fake-token field, before later ACK/routing assertions. Earlier test50 wording that other fake behavior stayed intact was too broad; actual record shape changed. No production regression or fullGREEN is claimed from those fixture failures.
+
+Alllanes terminal and51freeze ended. Only two existing test paths thaw under cp3-fixture52-handoff.json: preserve old fake-message shape with separate synthetic auth capture, send the required generation on real REAUTHORIZEconfirm, and complete an actual first WA send before the ordinary race. Preserve six old bodies, reached initialWAoracle, all thresholds and259other sourcepaths; production remains exactAPI45. No runner with writer. Root freezes after terminal for one separate canonical53 proof; actual encrypted rotation and ordinary-disconnect assertions must reach before production repair. Advisory HOW47 stays integrated, not implemented. Full CP4 and all primary/human/later gates remain mandatory.
+
+## CP3 fixture52 terminal and prospective RED53 — 2026-10-24
+
+Root verified only the same two test files changed, all259other sources and all productionAPI45bytes unchanged. Six original authorization case bodies remain byte-exact. Fake message records again have their original three fields; a resettable WeakMap holds synthetic bearer observations separately. REAUTHORIZE checks its clean callback/ready candidate and supplies the generation required by the actual confirmation owner. The ordinary WA case completes a real first send (201/SUCCEEDED/CONFIRMED/RECORDED) before reply options and its counter baseline. InitialWA causal and all original timing/count oracles remain. These corrections are NOTRUN.
+
+All writers are terminal. Freeze current261sources/T/positiveinputs for exactly one separate api-instagram53 invocation, no edits/retries/autofix while active. Actual crypto rotation and ordinary WA disconnect must reach their first provider-count assertion to supplement the already reached initialWA51RED; old fixture compatibility must be rechecked. Root reconciles terminal receipt before any production54thaw. Full CP4, primary/human and later gates remain required.

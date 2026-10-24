@@ -1,0 +1,22 @@
+{
+  "candidate": "cp3-red51",
+  "postflight": "pass",
+  "counts": {
+    "source_rows": 261,
+    "source_mismatches": 0,
+    "bound_input_rows": 709,
+    "bound_input_mismatches": 0,
+    "preservation_rows": 35,
+    "preservation_mismatches": 0,
+    "root_gitlinks": 3,
+    "root_index_exact": true,
+    "errors": []
+  },
+  "log": {
+    "path": "cp3-red51-api.log",
+    "bytes": 59549,
+    "sha256": "42e044aa07f58fd1fc677417d4f28b785bf2aa6ac079c3564dfbc292e68f87de",
+    "complete_stdout_stderr": true
+  },
+  "errors": []
+}

@@ -1,0 +1,26 @@
+{
+  "kind": "cp3-test50-root-reconciliation",
+  "date": "2026-10-24",
+  "writerTerminal": true,
+  "comparedSourceRows": 261,
+  "unchangedOtherRows": 259,
+  "onlyChangedPaths": [
+    {
+      "path": "api-app/test/helpers.ts",
+      "bytes": 34702,
+      "sha256": "191b460ea9224969b80aa0053ec12e14851da76c6682bf9ee261be4c79d60455"
+    },
+    {
+      "path": "api-app/test/instagram-cp3-authorization-fences.e2e-spec.ts",
+      "bytes": 26652,
+      "sha256": "93b8d4468b18ce940bbb2ceb4023f7a6a7424a14c1df9bc6934689312c123780"
+    }
+  ],
+  "originalSixCaseBodiesByteExact": true,
+  "helperDelta": "Only synthetic bearer capture on fake messages: one recordtype field and Authorizationheader extraction; currentotherfakebehaviors intact.",
+  "preexecutionCorrection": "Root caught wrong keyId inequality (same configuredencryptionkey remains equal across tokenrotation), fixedbeforeexecution. Retained actualversion/nonce/ciphertext/tag/decrypt replacement. Added receipt/status/verifiedEpoch preservation and postlifecycle livegrant/deadline checks. No REDclaim fromincorrectfixture.",
+  "testCases": "Three native mutation-first zeroPOST oracles for realIGreauthorization and realWAordinary/initialdisconnect. Actualcommittedlifecycle andcryptoasserts precederelease; zeroPOSTdecisivefirstafterpending withsafestatusdiagnostics.",
+  "status": "NOTRUN; no causal proof untilcanonical51reachesactualassertions.",
+  "production": "AllAPI45productionbytes unchanged. No source repair.",
+  "next": "Exactly once canonical api-instagram51; no writer while active; rootreconcile before explicitsource52thaw."
+}

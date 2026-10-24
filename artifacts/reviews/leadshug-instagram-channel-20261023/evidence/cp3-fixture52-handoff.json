@@ -1,0 +1,23 @@
+{
+  "kind": "cp3-fixture52-test-only-handoff",
+  "authority": "ExistingapprovedST-IG-03twoadmittedtestpaths; native51terminal/rootmatched. No productionrepairauthority.",
+  "writePaths": [
+    {
+      "path": "api-app/test/helpers.ts",
+      "bytes": 34702,
+      "sha256": "191b460ea9224969b80aa0053ec12e14851da76c6682bf9ee261be4c79d60455"
+    },
+    {
+      "path": "api-app/test/instagram-cp3-authorization-fences.e2e-spec.ts",
+      "bytes": 26652,
+      "sha256": "93b8d4468b18ce940bbb2ceb4023f7a6a7424a14c1df9bc6934689312c123780"
+    }
+  ],
+  "readManifest": "cp3-red51-frozen-manifest.json",
+  "tasks": [
+    "Restoreexact3-field instagramFake.messages records; recordsyntheticbearerseparately (smallWeakMap keyedbyactualrecord orseparatetracewithcorrectreset). Authspecdiagnosticreadsseparatetrace; preserveoldACK/routingstricttoEqual tests unchanged. No realsecret/extraserializations.",
+    "OnlyREAUTHORIZEconfirm sends {expectedGeneration:fixture.generation}; CONNECTconfirm remains {}. Assert callbacksafeLocation selectsattempt and safeGETstatus CANDIDATE_READY beforeconfirm; retainstrict200withsafe code/statusdiagnostic, never printstate/code/URLscontainingparams. Preserve actualcrypto/version/ownership/receipt/livegrant/deadline checks beforegaprelease.",
+    "PrimeWAordinarycase with oneactualrealBFF initialpreview+submit201 BEFOREreplyoptions/heldordinaryPOST. Previewaloneleavesvirginconversationineligible. ProveinitialMessagewasaccepted, thenbaselineEvolutioncounts afterpriming. KeepordinaryV2 and actualdisconnect/zeroPOSTfirstrequiredassert; no servicebypass/DBfake/prodguardrelaxation.",
+    "RetaininitialWAcausalcasebyteexact excepttrace-sharing changesifstrictlyneeded; all6oldauthcasebodiesexact. Preserveeveryexistingthreshold/counter/oracle. No tests/builds/runners/Git/private/runtime/Meta/docs/goals. All259otherpaths immutable. Returnterminalhashes/NOTRUN."
+  ]
+}

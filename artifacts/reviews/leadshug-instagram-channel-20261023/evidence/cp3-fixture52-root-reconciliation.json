@@ -1,0 +1,29 @@
+{
+  "kind": "cp3-fixture52-root-reconciliation",
+  "date": "2026-10-24",
+  "writerTerminal": true,
+  "comparedRows": 261,
+  "onlyChangedPaths": [
+    {
+      "path": "api-app/test/helpers.ts",
+      "bytes": 34866,
+      "sha256": "6fb12605a0db3c1a44dacefb355349ed05f500582106334e8b43487aedada979"
+    },
+    {
+      "path": "api-app/test/instagram-cp3-authorization-fences.e2e-spec.ts",
+      "bytes": 28104,
+      "sha256": "8e95ce1ed4911e3a44a8dbbf6e26f1b35ae61d4b76bc50020fb7f3fb7af5d3c4"
+    }
+  ],
+  "unchanged259OtherPaths": true,
+  "productionExactAPI45": true,
+  "sixOriginalAuthBodiesByteExact": true,
+  "inspection": [
+    "Legacyfake3fieldmessageobjectrestored; syntheticbearerkeptinWeakMap keyedbyactualrecord andresetinlimparBanco. Old strictACK/routingtests unchanged.",
+    "REAUTHORIZEcallbackcleanattemptLocation +safeGETCANDIDATE_READY checks; confirmexpectedGenerationbody matchesactualownercontract, strict200andcode/statusdiagnostic retained.",
+    "WAordinary nowactuallycompletes BFFinitialsubmit201/SUCCEEDED/CONFIRMED/RECORDED beforefetchreplyoptions/baseline/heldreply. No domainbypass/DBfixtureforge.",
+    "InitialWAcausalcase and old6authcontrols unchanged. No productionrepair; all3zeroPOSToracles and409remain."
+  ],
+  "state": "NOTRUN; nextcanonical53mustreachactualIGcrypto andordinaryWAoracles.",
+  "claims": "Earlier51REDqualifications preserved; no retries/thresholdweakening or fullproof claim."
+}

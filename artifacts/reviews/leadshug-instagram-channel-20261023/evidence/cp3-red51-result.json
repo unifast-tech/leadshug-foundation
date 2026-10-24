@@ -1,0 +1,121 @@
+{
+  "candidate": "cp3-red51",
+  "command": "bash scripts/test-channels-local.sh api-instagram",
+  "invocations": 1,
+  "exit_code": 1,
+  "log": {
+    "path": "cp3-red51-api.log",
+    "bytes": 59549,
+    "sha256": "42e044aa07f58fd1fc677417d4f28b785bf2aa6ac079c3564dfbc292e68f87de",
+    "complete_stdout_stderr": true
+  },
+  "stages": {
+    "parity_guard": "passed; 26 mutation rejects",
+    "prisma_client_generation": "passed (6.19.3)",
+    "migrations": "31/31 applied",
+    "schema_current": "passed",
+    "lint": "passed",
+    "build": "passed",
+    "unit": {
+      "files_passed": 39,
+      "tests_passed": 426,
+      "tests_failed": 0
+    },
+    "e2e": {
+      "files_passed": 18,
+      "files_failed": 4,
+      "files_total": 22,
+      "tests_passed": 123,
+      "tests_failed": 9,
+      "tests_total": 132,
+      "duration": "188.71s"
+    }
+  },
+  "failures": [
+    {
+      "case": "accepted fact, credential delete",
+      "classification": "fixture-shape mismatch; not product result",
+      "assertion": "strict toEqual expected original 3-field message record; received additional accessToken",
+      "frame": "instagram-cp3-accepted-facts.e2e-spec.ts:90:48",
+      "reached_after_post": true
+    },
+    {
+      "case": "accepted fact, metadata-version-change",
+      "classification": "fixture-shape mismatch; not product result",
+      "frame": "instagram-cp3-accepted-facts.e2e-spec.ts:90:48"
+    },
+    {
+      "case": "accepted fact, shorten-expiry",
+      "classification": "fixture-shape mismatch; not product result",
+      "frame": "instagram-cp3-accepted-facts.e2e-spec.ts:90:48"
+    },
+    {
+      "case": "ordinary Instagram reply after real reauthorization rotates credential",
+      "classification": "A46 setup failed before provider-count oracle; no causal RED claim",
+      "assertion": "expected reauthorization callback 200, got 409",
+      "frame": "instagram-cp3-authorization-fences.e2e-spec.ts:134:111"
+    },
+    {
+      "case": "ordinary WhatsApp reply after real disconnect",
+      "classification": "A46 held-boundary setup did not reach final provider boundary; no causal RED claim",
+      "assertion": "request completed before reaching held final provider boundary",
+      "frame": "instagram-cp3-authorization-fences.e2e-spec.ts:65:32"
+    },
+    {
+      "case": "initial WhatsApp send after real disconnect",
+      "classification": "A46 causal RED reached at zero-provider-post oracle",
+      "assertion": "expected provider POST delta 0, actual 1; response 503 INITIAL_LOCAL_ACCEPTANCE_UNCONFIRMED / ACCEPTED_LOCAL_INCOMPLETE",
+      "frame": "instagram-cp3-authorization-fences.e2e-spec.ts:234:139",
+      "reachability": "provider count assertion was first failure in this case; preceding setup/lifecycle steps completed"
+    },
+    {
+      "case": "B46 mixed-channel Instagram recipient initialOptions",
+      "classification": "expected causal RED reached",
+      "assertion": "expected options length 0, actual 2",
+      "frame": "instagram-cp3-query-boundaries.e2e-spec.ts:183:21",
+      "unreached": [
+        "subsequent Meta/Evolution/Instagram provider-count assertions"
+      ]
+    },
+    {
+      "case": "routing same opaque peer through selected V2 route",
+      "classification": "fixture-shape mismatch; not product result",
+      "assertion": "received extra accessToken in recorded fake message",
+      "frame": "instagram-cp3-routing.e2e-spec.ts:125:50"
+    },
+    {
+      "case": "routing ACK without message ID",
+      "classification": "fixture-shape mismatch; not product result",
+      "assertion": "received extra accessToken in recorded fake message",
+      "frame": "instagram-cp3-routing.e2e-spec.ts:295:54"
+    }
+  ],
+  "full_failure_bodies_and_stacks": "\u23af\u23af\u23af\u23af\u23af\u23af\u23af Failed Tests 9 \u23af\u23af\u23af\u23af\u23af\u23af\u23af\n\n FAIL  test/instagram-cp3-accepted-facts.e2e-spec.ts > CP3 Instagram ACK and immutable accepted local fact (PostgreSQL) > persists one exact accepted Message when the credential is delete after the actual provider POST\n FAIL  test/instagram-cp3-accepted-facts.e2e-spec.ts > CP3 Instagram ACK and immutable accepted local fact (PostgreSQL) > persists one exact accepted Message when the credential is metadata-version-change after the actual provider POST\n FAIL  test/instagram-cp3-accepted-facts.e2e-spec.ts > CP3 Instagram ACK and immutable accepted local fact (PostgreSQL) > persists one exact accepted Message when the credential is shorten-expiry after the actual provider POST\nAssertionError: expected [ { \u2026(4) } ] to deeply equal [ { \u2026(3) } ]\n\n- Expected\n+ Received\n\n  Array [\n    Object {\n+     \"accessToken\": \"synthetic-long-lived-token\",\n      \"accountId\": \"synthetic-cp3-accepted-3beb6a10-da84-4af8-9ead-51d451193e5d\",\n      \"recipientId\": \"synthetic-cp3-peer-79c35850-a41a-4aa6-8d6f-f2b841ac89d3\",\n      \"text\": \"accepted fact delete\",\n    },\n  ]\n\n \u276f test/instagram-cp3-accepted-facts.e2e-spec.ts:90:48\n     88|       expect(response!.status).toBe(201);\n     89|       expect(postCount()).toBe(beforePost + 1);\n     90|       expect(instagramFake.messages.slice(-1)).toEqual([{ accountId: c\u2026\n       |                                                ^\n     91|       const binding = await prisma.providerResourceIdentity.findFirstO\u2026\n     92|         buId, currentChannelId: current.option.channelId, businessIden\u2026\n\n\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af[1/9]\u23af\n\n FAIL  test/instagram-cp3-authorization-fences.e2e-spec.ts > CP3 current BFF authorization at the provider boundary (PostgreSQL) > blocks an ordinary Instagram reply after a completed real reauthorization rotates its credential\nError: expected 200 \"OK\", got 409 \"Conflict\"\n \u276f test/instagram-cp3-authorization-fences.e2e-spec.ts:134:111\n    132|         .query({ state, code: `synthetic-reauthorize-${fixture.account\u2026\n    133|       await request(app.getHttpServer()).post(`/api/bff/instagram-auth\u2026\n    134|         .set('Cookie', cookie).set('x-requested-with', 'teste').set('i\u2026\n       |                                                                                                               ^\n    135| \n    136|       const afterCredential = await prisma.channelCredential.findUniqu\u2026\n \u276f Test._assertStatus node_modules/supertest/lib/test.js:309:14\n \u276f node_modules/supertest/lib/test.js:365:13\n \u276f Test._assertFunction node_modules/supertest/lib/test.js:342:13\n \u276f Test.assert node_modules/supertest/lib/test.js:195:23\n \u276f localAssert node_modules/supertest/lib/test.js:138:14\n \u276f fn node_modules/supertest/lib/test.js:156:7\n \u276f Test.callback node_modules/superagent/src/node/index.js:904:3\n \u276f fn node_modules/superagent/src/node/index.js:1183:18\n \u276f IncomingMessage.<anonymous> node_modules/superagent/src/node/parsers/json.js:19:7\n\n\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af[2/9]\u23af\n\n FAIL  test/instagram-cp3-authorization-fences.e2e-spec.ts > CP3 current BFF authorization at the provider boundary (PostgreSQL) > blocks an ordinary WhatsApp reply after real channel disconnection at the held final boundary\nError: Request completed before reaching the held final provider boundary.\n \u276f test/instagram-cp3-authorization-fences.e2e-spec.ts:65:32\n     63|   const waitForFinalBoundary = async (atBoundary: Promise<void>, pendi\u2026\n     64|     atBoundary,\n     65|     pending.then(() => { throw new Error('Request completed before rea\u2026\n       |                                ^\n     66|   ]);\n     67| \n \u276f test/instagram-cp3-authorization-fences.e2e-spec.ts:183:7\n\n\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af[3/9]\u23af\n\n FAIL  test/instagram-cp3-authorization-fences.e2e-spec.ts > CP3 current BFF authorization at the provider boundary (PostgreSQL) > blocks an initial WhatsApp send after real channel disconnection at the held final boundary\nAssertionError: {\"status\":503,\"code\":\"INITIAL_LOCAL_ACCEPTANCE_UNCONFIRMED\",\"outcome\":\"ACCEPTED_LOCAL_INCOMPLETE\",\"postDelta\":1}: expected 1 to be +0 // Object.is equality\n\n- Expected\n+ Received\n\n- 0\n+ 1\n\n \u276f test/instagram-cp3-authorization-fences.e2e-spec.ts:234:139\n    232|       const response = await pending;\n    233|       const postDelta = evolutionFake.enviados.length - before;\n    234|       expect(postDelta, JSON.stringify({ status: response.status, code\u2026\n       |                                                                                                                                           ^\n    235|       expect(response.status).toBe(409);\n    236|       expect(response.body).toMatchObject({ code: 'CHANNEL_CONTEXT_CHA\u2026\n\n\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af[4/9]\u23af\n\n FAIL  test/instagram-cp3-query-boundaries.e2e-spec.ts > CP3 selected and bounded channel queries (real Nest/PostgreSQL) > offers no WhatsApp initial operation to an Instagram recipient in a mixed-channel BU\nAssertionError: expected [ { \u2026(7) }, { \u2026(7) } ] to have a length of +0 but got 2\n\n- Expected\n+ Received\n\n- 0\n+ 2\n\n \u276f test/instagram-cp3-query-boundaries.e2e-spec.ts:183:21\n    181|       instagram: instagramFake.messages.length };\n    182|     const options = await app.get(ChannelResolver).initialOptions(inst\u2026\n    183|     expect(options).toHaveLength(0);\n       |                     ^\n    184|     expect(metaFake.enviados).toHaveLength(sentBefore.meta);\n    185|     expect(evolutionFake.enviados).toHaveLength(sentBefore.evolution);\n\n\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af[5/9]\u23af\n\n FAIL  test/instagram-cp3-routing.e2e-spec.ts > Instagram CP3 explicit route and reply contract > binds the same opaque peer to two real Instagram accounts and sends only through the selected V2 route\nAssertionError: expected [ { \u2026(4) } ] to deeply equal [ { \u2026(3) } ]\n\n- Expected\n+ Received\n\n  Array [\n    Object {\n+     \"accessToken\": \"synthetic-long-lived-token\",\n      \"accountId\": \"synthetic-cp3-account-one\",\n      \"recipientId\": \"same-opaque-cp3-peer\",\n      \"text\": \"Obrigado pelo contato\",\n    },\n  ]\n\n \u276f test/instagram-cp3-routing.e2e-spec.ts:125:50\n    123|       diagnosticPersistence: acceptedReply.body.diagnosticPersistence \u2026\n    124|     expect(instagramFake.calls.filter((call) => call.method === 'POST'\u2026\n    125|     expect(instagramFake.messages.slice(before)).toEqual([{ accountId:\u2026\n       |                                                  ^\n    126|       recipientId: firstRoute.contactIdentity.externalPeerId, text }]);\n    127|     const selectedResource = await prisma.providerResourceIdentity.fin\u2026\n\n\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af[6/9]\u23af\n\n FAIL  test/instagram-cp3-routing.e2e-spec.ts > Instagram CP3 explicit route and reply contract > records an Instagram ACK without a message ID as one scoped ambiguous diagnostic\nAssertionError: expected [ { \u2026(4) } ] to deeply equal [ { \u2026(3) } ]\n\n- Expected\n+ Received\n\n  Array [\n    Object {\n+     \"accessToken\": \"synthetic-long-lived-token\",\n      \"accountId\": \"synthetic-cp3-unknown-fc419952-e54d-41ba-adb5-68ad439b1c7d\",\n      \"recipientId\": \"synthetic-cp3-unknown-peer-a4d2ac6f-3975-48ac-823f-fdb59d3830f3\",\n      \"text\": \"Resposta com confirma\u00e7\u00e3o amb\u00edgua\",\n    },\n  ]\n\n \u276f test/instagram-cp3-routing.e2e-spec.ts:295:54\n    293|       evidence: 'ACK_WITHOUT_ID', diagnosticPersistence: 'RECORDED' });\n    294|     expect(instagramFake.calls.filter((call) => call.method === 'POST'\u2026\n    295|     expect(instagramFake.messages.slice(sentBefore)).toEqual([{ accoun\u2026\n       |                                                      ^\n    296|     const resource = await prisma.providerResourceIdentity.findFirstOr\u2026\n    297|       buId, businessIdentityId: route.businessIdentityId, currentChann\u2026\n\n\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af[7/9]\u23af\n\n Test Files  4 failed | 18 passed (22)\n      Tests  9 failed | 123 passed (132)\n   Start at  22:47:18\n   Duration  188.71s (transform 7.88s, setup 123ms, collect 41.26s, tests 143.46s, environment 3ms, prepare 1.21s)",
+  "reached_controls": {
+    "authorization_fences": "6/9 passed; includes grant revoked after claim, signed session expiry and matched live controls",
+    "query_boundaries": "4/5 passed",
+    "native_lock_groups": "all three passed: same-account IG peer, different-account independence, formatted WhatsApp; test709ms/file1705ms",
+    "CSV": "1/1 passed",
+    "CP2_final_clock": "9/9 passed",
+    "accepted_facts": "generation-conflict case passed; three other cases stopped at strict fixture shape assertion after actual post"
+  },
+  "new_A46_causal_oracle_status": {
+    "real_IG_reauthorization_encrypted_token": "not reached; callback rejected 409 before provider-count assertion",
+    "ordinary_WA_disconnect": "not reached; request completed before held final provider boundary",
+    "initial_WA_disconnect": "reached; one provider POST observed where expected zero"
+  },
+  "historical_B46_negative": "expected zero options, actual two; causal negative reached; downstream provider-count assertions not reached",
+  "official_new_unit_cases_RED": "not claimed; unit suite passed but not evidence of their native RED path",
+  "freeze_postflight": {
+    "source_rows": 261,
+    "source_mismatches": 0,
+    "bound_input_rows": 709,
+    "bound_input_mismatches": 0,
+    "preservation_rows": 35,
+    "preservation_mismatches": 0,
+    "root_gitlinks": 3,
+    "root_index_exact": true,
+    "errors": []
+  },
+  "scope": "one local canonical synthetic api-instagram run only; no acceptance, release, checkpoint, or real-provider claim"
+}

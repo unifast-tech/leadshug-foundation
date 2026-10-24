@@ -1,0 +1,7 @@
+{
+  "kind": "raw-log-byte-preservation",
+  "rawPath": "artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp3-red51-api.log",
+  "bytes": 59549,
+  "sha256": "42e044aa07f58fd1fc677417d4f28b785bf2aa6ac079c3564dfbc292e68f87de",
+  "checks": "Other17ownedstagedpaths ordinarydiffcheckpass. OnlyrawAPI51log uses boundedwhitespace blank-at-eol/blank-at-eof exclusions; exactwirebytes preserved. No productlint/test/scopegatewaiver. Active53outputsnotstaged."
+}

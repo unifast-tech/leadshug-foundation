@@ -1,0 +1,24 @@
+{
+  "kind": "postfreeze50-fake-message-shape-static-observation",
+  "status": "Staticsourcecompatibilitygap observed during51; execution result pending. No source/T/input mutation or active-run interruption.",
+  "sourceRows": [
+    {
+      "path": "api-app/test/helpers.ts",
+      "bytes": 34702,
+      "sha256": "191b460ea9224969b80aa0053ec12e14851da76c6682bf9ee261be4c79d60455"
+    },
+    {
+      "path": "api-app/test/instagram-cp3-accepted-facts.e2e-spec.ts",
+      "bytes": 7663,
+      "sha256": "b7688a717a42e73b5bc8955204b9ad5beb5e98b7232b7cb3311a8032bf556488"
+    },
+    {
+      "path": "api-app/test/instagram-cp3-routing.e2e-spec.ts",
+      "bytes": 21532,
+      "sha256": "fb01016fbce4294ba68c1223c14fc05c184255ab388bf6688e92d702d29ee823"
+    }
+  ],
+  "observation": "New enumerable accessToken field changes instagramFake.messages objectshape. Existing accepted-facts:90 androuting:125,295 compare exactold3-field objects withtoEqual. Those tests can failbefore laterACKassertions, independently of currentproductdefect.",
+  "correctionToPriorRootStatement": "Otherfakebehaviorsintact in test50reconciliation was too broad: transport/payload/counters preserved, but recordedmessageshape and strictfixture compatibility changed. Root inspectedthislaterthanfreeze; do notclaimoldregressioncasespassuntilrerun.",
+  "next": "Letcanonical51terminate naturally. ReconcileactualreachednativeA46RED separately. Then preserveoldmessageobjectshape with separate minimal syntheticauthtrace inhelpers+nativefixture, keeping existingassertions unmodified. No productfix onclaim ofunreachedcrypto/mutationassertions."
+}
