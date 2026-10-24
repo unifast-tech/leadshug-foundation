@@ -1,0 +1,273 @@
+{
+  "kind": "closed-affected-CP3-source-adherence46-b",
+  "status": "prepared before dispatch, no review yet",
+  "governingTodo": {
+    "path": "foundation_documentation/todos/active/features/TODO-leadshug-instagram-channel.md",
+    "sha256": "31bd61dcb040e2794725948a31fb0957b73a51d5a5e61020c8572bdbcc1cc59a",
+    "bytes": 273528
+  },
+  "governingReadRanges": [
+    [
+      1,
+      911
+    ],
+    [
+      1155,
+      1162
+    ],
+    [
+      1306,
+      1328
+    ],
+    [
+      1369,
+      1375
+    ],
+    [
+      1489,
+      1607
+    ]
+  ],
+  "foundationFrozenAuthorityCommit": "8913c8aaf63e19cf66102fcfb4cb8667a2887e9b",
+  "requiredSourceBodies": [
+    {
+      "path": "api-app/prisma/schema.prisma",
+      "sha256": "6fb1db37c44cb601e86afd441175ec14e94ec00f37616e4a5b7a915feceb3b8d",
+      "bytes": 51597
+    },
+    {
+      "path": "api-app/src/integrations/channels/prisma-channel-resolver.ts",
+      "sha256": "607a14170052225551396210293625f26182385c7bc7fa1e6acfa318c405aa0f",
+      "bytes": 64107
+    },
+    {
+      "path": "api-app/src/domain/inbox/historico.service.ts",
+      "sha256": "91a7ae76b8f514cf283148b51b4476a9dd8ee77313df8b898f8f367bce81fe22",
+      "bytes": 9192
+    },
+    {
+      "path": "api-app/src/domain/inbox/historico.service.spec.ts",
+      "sha256": "eb1ca83e588c58382a332aee0fdda200f3eb6cb5f8c0cbd430e9790623393ec0",
+      "bytes": 1015
+    },
+    {
+      "path": "api-app/src/domain/channels/transport/channel-dependencies.spec.ts",
+      "sha256": "f427d97f992ce07b85b2bda3ee7f61ea7b75aa2c0863f1d6c04fdf7c9adc0b46",
+      "bytes": 9234
+    },
+    {
+      "path": "api-app/src/domain/inbox/initial-message.service.ts",
+      "sha256": "aa33ca7ed6f74cabd878ebccec9529dd6a32b8311dad107babbc212d905ecc41",
+      "bytes": 24534
+    },
+    {
+      "path": "api-app/src/domain/inbox/conversations.service.ts",
+      "sha256": "1aa8ad944527529255b589af45f5e1d05aa0bc36d504f2315330ca9ed546cd5b",
+      "bytes": 9520
+    },
+    {
+      "path": "api-app/src/domain/inbox/incoming.service.ts",
+      "sha256": "62776c3152c3b486aade744c4daf4830d16d032aded69eee9e9a55b3fefc38f8",
+      "bytes": 8594
+    },
+    {
+      "path": "api-app/src/domain/channels/transport/channel.ts",
+      "sha256": "aa6485060287910d586d17b8cbffe2f194b1b3a29fb71c697f27e0b78c28ffbf",
+      "bytes": 13235
+    },
+    {
+      "path": "api-app/src/domain/inbox/channel-eligibility-policy.ts",
+      "sha256": "9812de537d5e5f0c84ae9b824b7343f8dfd9f63dfa0520f6da9a7063d2d13eee",
+      "bytes": 9602
+    },
+    {
+      "path": "api-app/src/domain/channels/channel-credential-resolver.ts",
+      "sha256": "34f25985091f0c0873b682bc3d27f7eb0cde95a56e5b74497afdc541f79f7630",
+      "bytes": 9525
+    },
+    {
+      "path": "api-app/test/instagram-cp3-query-boundaries.e2e-spec.ts",
+      "sha256": "b8e360136c9c501e2e1f54e6c22ba2adbea108dbd2c19ab6a23e0751509aeacc",
+      "bytes": 13341
+    },
+    {
+      "path": "api-app/test/instagram-cp3-csv-boundaries.e2e-spec.ts",
+      "sha256": "311609e3e03a3ad3088e82035cc0a53fde3822abd346617d0566988aea548795",
+      "bytes": 14963
+    },
+    {
+      "path": "api-app/test/instagram-cp3-routing.e2e-spec.ts",
+      "sha256": "fb01016fbce4294ba68c1223c14fc05c184255ab388bf6688e92d702d29ee823",
+      "bytes": 21532
+    },
+    {
+      "path": "api-app/test/helpers.ts",
+      "sha256": "79c9343d80b72b1d8c378d6946bf38997133d528117b11a4fc1827fa3e52586c",
+      "bytes": 34495
+    },
+    {
+      "path": "api-app/test/number-onboarding-pcv.e2e-spec.ts",
+      "sha256": "d88fc37e462a73ae938bafee14e3b6d784c4d9287319db41f4a857688220f235",
+      "bytes": 45175
+    },
+    {
+      "path": "api-app/test/initial-message.e2e-spec.ts",
+      "sha256": "f35e939d81f537458b08e91ab9a98632bd4f614892f86fbf1632dda8ce95ed17",
+      "bytes": 122472
+    },
+    {
+      "path": "api-app/src/domain/inbox/dispatch-admission.service.ts",
+      "sha256": "559039c84b20ac986b6bc3b2b0590a50a6be9454634d7bbb2c05d706c5a387e4",
+      "bytes": 48540
+    }
+  ],
+  "requiredSourceCount": 18,
+  "requiredEvidence": [
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp3-adherence35-root-adjudication.json",
+      "sha256": "d17bd6e9deae04b0c5276b4e49520de11a41f1ecef2803aa387aaba5d777f6de",
+      "bytes": 13386
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp3-adherence35a-raw.json",
+      "sha256": "8de5b9d8f143ef1639d78462a386e79a1aeac5c5f663c3109dae1ead0b8d32a3",
+      "bytes": 11311
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp3-adherence35b-raw.json",
+      "sha256": "031f958b422b0bcabfdc66dcb5e9ca3c6156b59305f99e9d9bc52de6aa3b780c",
+      "bytes": 11336
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp3-adherence35a-merge.json",
+      "sha256": "7870ac5fe4c45d0e36be3b19ec447affc0d4dd3b7e31d9af3b822b6431ea7c56",
+      "bytes": 9917
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp3-adherence35b-merge.json",
+      "sha256": "ad9f0d781076b7efcde3af7ad116f1cc7d9d237dd9f71c42cf7bb4fdd7c448cb",
+      "bytes": 11671
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp3-api45-root-reconciliation.json",
+      "sha256": "4ed54d84ff162b52e18a57e9e92a31a9936e2d9e32d3f6d8b51f66ae08c169f0",
+      "bytes": 3310
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp3-api45-result.json",
+      "sha256": "293aaa58ccea7b0b9bc66bb96ee3e129fa8a8920cd1e1565b6082508a410f04e",
+      "bytes": 4197
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp3-api43-root-reconciliation.json",
+      "sha256": "013c340cd669a43b0f7406b5ecb687d4c7cf13dee66ff63a71ca5165d292dd29",
+      "bytes": 2349
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp3-repair44-terminal.json",
+      "sha256": "ec5f6e149b492558fbe6bc26d39c0ef91c5e1bb267630b1fd47ada1af92ca12a",
+      "bytes": 2076
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp3-repair44-handoff.json",
+      "sha256": "4e906ec70f9586df832e5d7c15446f9521f35cf4625cc179cd83641fc5eb4649",
+      "bytes": 3508
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp3-lock37-production-terminal.json",
+      "sha256": "198673bbe4e7d496b3377832e1347dfc3af47734c2203f49f35a8f155b19cc42",
+      "bytes": 913
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp3-query38-terminal.json",
+      "sha256": "9fcb4576233a34143586d77b3c16e112804c07b8c3bc49a9ef58376c53f12b8f",
+      "bytes": 1295
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp3-consumer39-terminal-qualified.json",
+      "sha256": "bc7c159a00d0bbe6eb020c32506b407e683f115a4220f5fb5da826cd7e0bba44",
+      "bytes": 2068
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp3-consumer39-read-boundary-incident.json",
+      "sha256": "eab1b753030625c7ebc16e0e1fa7c503c894c5193d931c36762eca66670ee10f",
+      "bytes": 3125
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp3-consumer40-terminal.json",
+      "sha256": "21bff91d640decd56fc81432f12098c31217f9d62f5e4ff8c05af60d64a0bc07",
+      "bytes": 1340
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp3-unit42-terminal.json",
+      "sha256": "b350190ae52641fbac7fbd6358bdccfb97839b43a7f0a6acce32e45ff36ab347",
+      "bytes": 1259
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp4-readonly-preparation29-root-qualified.json",
+      "sha256": "9f6c36ffd9cb42aaf62a52feb27b5c8d2041a9df689cb6f657dd8be3021a1e01",
+      "bytes": 3063
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp4-connections-preparation21-root-qualified.json",
+      "sha256": "3e9e59a0f972fa7d02b33833515c8bc4d15b00dee5847fbb1f710916ce4a7969",
+      "bytes": 2543
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp4-safe-display-preparation22.json",
+      "sha256": "3c293fbad9d81c24172633bb03ff254daad12219ec2226db3033985685e19639",
+      "bytes": 3214
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp4-browser-composer-preparation23-root-qualified.json",
+      "sha256": "9923d9fcd1045355665ec9793968c6431518f0d363e18a914e063f74dbff79c2",
+      "bytes": 4783
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp4-live-ingress-preparation19.json",
+      "sha256": "d2044b6eb5bf4c53b9d0e7ce3cb7c20f1b66a0a28cc91dddadeba8829f2f993e",
+      "bytes": 2333
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/primary-subscription-index-research40.json",
+      "sha256": "10c684467046785d87396a31d01ef80ef878d5f9bd2de7fc753a7d899602285d",
+      "bytes": 2739
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/inherited-public-preservation-v1.2.json",
+      "sha256": "f3540c342924a22c2be160613f954e22fbdcb51e34f691a9f00a51d14b2619e3",
+      "bytes": 11761
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp3-adherence46-coverage.json",
+      "sha256": "75d1cb313bee1528fbf6147ad870904262472aa7e8f4b614bdb655e266ae307d",
+      "bytes": 12050
+    }
+  ],
+  "mandatoryObligations": [
+    "Channel abstract sendMessage/supportedKinds with actual DI; business send/policy callers depend on abstract operation policy/contract, concrete provider protocol isolated; no growing generic plugin framework or hidden concrete dispatch switch/fallback.",
+    "Strict V2 new writers capture current immutable route/business/provider/contact address/credential generation/version/fingerprint before external send; selected route never silently falls back or borrows another account/lastIN. TwoIGaccounts/samepeer remain distinct; route/account stale denial precedes external POST.",
+    "Qualified captured address flows unchanged to knownACK and UNKNOWN diagnostic local owner; one shared OutboundService/admission/MessageAcceptance; accepted/blocked/refused/uncertain semantics never fabricate success or retry external uncertainty.",
+    "Shared canonical contact proof and provider identity→peer advisory→conversation lock order; real WA verified ingress creates route, legacy presentation preserved while canonical peer governs equality. Compare newP2002 causal test to actual owner order; no DB/domain mocks, counters or assertions weakened.",
+    "Operation-specific policy and qualified timestamps; official text24h from qualified actualIN, approvedtemplate firstsend outsidewindow, nonofficial text policy; IG only inbound-originated textual24h, no templates/prospecting/groups/Typebot accidental. Keep CURRENT1000characters normative pending humanUTF8 change.",
+    "Historical V1 accepted facts and exact key/generation/account tuple replay local-only after present credential removal/rotation; no historical provider redispatch or mutation of stored fingerprints/deadlines/receipts. Legitimate NEW V2 sends remain eligible after permitted oldslot release.",
+    "APIv1/account_id/phone, Typebot, Consultar/list/drilldown/CSV, legacyBU projection remain WA-only and bounded; never treatIGopaquepeer as phone or BU.phone as authority; noN+1/whole-history/per-rowprovidercalls, nativePCV limits unchanged.",
+    "Bounded1000/8MiB signedIG ingress completepreflight, max4 independentpeer workers ordered withinpeer, anomalous sameaccount/samemessage/differentpeer originalflatserial preservesfirstwinner. Failure stopsnewwork/drainsstarted writes, no200lostwork; no globalqueue or cached stale resource fences.",
+    "Performance/elegance/structure/operationalfit under actual inspected code and measured proof: reject scatteredconditions, duplicated ownership/metadata/admission, unnecessary layers/queries, retry/fallback/constraint bypass; report remaining risks without inventing benchmark/runtime pass.",
+    "All CP4 consumers and runtime/assurance obligations remain mandatory. Identify current missing consumers and keep them open within approved delivery; this review cannot accept backend-onlyfeature or waive them."
+  ],
+  "reviewPart": "b",
+  "focus": "Bounded queries and complete CSV semantics, dependency harness, legitimate native fixtures and updated initial BU-readiness outcome, account-safe operation policy",
+  "wholeGate": "A26+B18, common9, union35 COMPLETE current full bodies; covers all19changed/new sinceAPI35 and all11changed ofprior52.41oldbodies unchanged independentlyhashed and carriedforward from complete35. Bothcomplementary strictresults plusrootfreeze/evidence reconciliation required. Notwholefeatureacceptance.",
+  "validationQualification": "Root independently reconciled API45:261sources/T/690inputs/35preservation/3gitlinks/loghash;424unit+586E2E GREEN. All6API43failures fixed44 without changedproductbudgets/cohort/thresholds. API43 no freshlockWA until45; all3groups nowpassed. Seeactualproofs; no realprovider/browser/ALL pass. Testauthoring39aftercode nottestfirst; readboundaryincident retained. Clockduration performance.now preserves all numeric/absolute fences. Credentialversion ACKcase is metadata-version only, not cryptographic rotation.",
+  "frontendConsumerMatrix": "Actual current governingT456..474 and fullCP4prep enclosed. CP4connections/lifecycle/safedisplay/strictV2composer/realtimeIncoming/HTTPSbrowser notimplemented or evidenced. No approvedwaiver. Known gaps remain releaseblockers within this sameapprovedTODO. Do not accept backend-onlyfeature or claim plannedconsumers delivered.",
+  "remainingOpen": "Primary ownsubscription GET ID/envelope/visibility/completeness proof+observer unresolved; humanUTF8bytes andprotectedprivacy proposalspending; allCP4/CP5/CP6/ALL/security/TQA/cutover/final/physicalruntime explicitlyapprovedplan remain mandatory.",
+  "outputRequirements": "Return canonical architecture_adherence JSON perdispatch. Inspect ALL enclosed current fullsource bodies and evidence; explicitly cover all10obligations and all5axes performance/elegance/structural/operational/architecture. Accurately scope positions toaffectedlane and carriedforwardproof. Flag newreal defects or missedfailuremodes, distinguish knownplannedCP4gaps fromcurrentCP3defects. No invented historicalpasses/peerreads, no tooling/files/network. No softened thresholds/fixtureworkarounds accepted merelybecause GREEN.",
+  "reviewExecution": {
+    "canonicalRunner": "delphi-ai/tools/subagent_review_run.py",
+    "model": "gpt-6.1-sol",
+    "reasoningEffort": "xhigh",
+    "configurationOnlyArgvInjection": true,
+    "plan": "cp3-adherence46-execution-plan.json"
+  }
+}

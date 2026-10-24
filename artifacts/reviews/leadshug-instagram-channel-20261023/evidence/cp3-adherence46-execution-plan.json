@@ -1,0 +1,66 @@
+{
+  "kind": "cp3-adherence46-canonical-execution-plan",
+  "reviewKind": "architecture_adherence",
+  "model": "gpt-6.1-sol",
+  "effort": "xhigh",
+  "freshContext": true,
+  "canonicalRunner": "delphi-ai/tools/subagent_review_run.py",
+  "canonicalRunnerSha256": "36ea0185160cf660ae58a89dd2fbb0bd488d7a1634ee42831aa26e14a83afe77",
+  "isolateProjectContext": true,
+  "configuration": "Canonical runner has no effort argument. In-memory command wrapper adds only CLI --strict-config -c model_reasoning_effort=\"xhigh\" to its codex exec argv. build_prompt, stdin, ephemeral/read-only flags, model, collection, turn.completed requirement, outputs and schema merge remain canonical and unchanged. No executable/helper/config file is created or edited.",
+  "lifecycle": "Wait naturally while running; terminal failure required before retry; package frozen after dispatch; both lanes required.",
+  "promptSizes": {
+    "a": {
+      "chars": 977589,
+      "bytes": 980399,
+      "packageSha256": "6a517322853e1b0253055dd5843cf3012ec8c2aed3db4331422f759425e8f92e",
+      "sourceCount": 26,
+      "dispatchSha256": "d7517b476b01043de89e78bd956bd63eba6763966d92d0cb8bf8a0373bc5ea90"
+    },
+    "b": {
+      "chars": 848449,
+      "bytes": 851035,
+      "packageSha256": "7d6c385101a0248a98e23fe375ee9817dc319805322996aa1bd1747be1021b86",
+      "sourceCount": 18,
+      "dispatchSha256": "bba3be1c113e15cc23c599d487e141936e0210f3d65e55d7469a36db58e03412"
+    }
+  },
+  "derivedCarryForwardCorrection": {
+    "canonicalHelperSourceUnchanged": true,
+    "reason": "Explicit open/pending rows were automatically labelled resolved; root corrected only derived dispatch classes before anyreview, preserving all source text and schema-validating with canonical helper.",
+    "ids": {
+      "a": [
+        "IG-CP2-ROOT-02",
+        "IG-SUBPROTO-01",
+        "IG-SUBREC-02",
+        "IG-SUBREC-03",
+        "IG-CP2-R1-04",
+        "IG-CP2-R1-06",
+        "IG-OAUTH-SESSCOMP-01",
+        "IG-CP3-ROOT-01",
+        "IG-CP3-ROOT-02",
+        "IG-CP3-ROOT-03",
+        "IG-CP3-ROOT-07",
+        "IG-CP3-A-01",
+        "IG-CP3-A-02",
+        "IG-CP3-B35-05"
+      ],
+      "b": [
+        "IG-CP2-ROOT-02",
+        "IG-SUBPROTO-01",
+        "IG-SUBREC-02",
+        "IG-SUBREC-03",
+        "IG-CP2-R1-04",
+        "IG-CP2-R1-06",
+        "IG-OAUTH-SESSCOMP-01",
+        "IG-CP3-ROOT-01",
+        "IG-CP3-ROOT-02",
+        "IG-CP3-ROOT-03",
+        "IG-CP3-ROOT-07",
+        "IG-CP3-A-01",
+        "IG-CP3-A-02",
+        "IG-CP3-B35-05"
+      ]
+    }
+  }
+}

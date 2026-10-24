@@ -1,0 +1,291 @@
+{
+  "kind": "cp3-adherence46-complete-affected-coverage",
+  "priorCompleteReview": "cp3-adherence35-root-adjudication.json",
+  "priorCompleteBodies": 52,
+  "priorUnchanged41": [
+    {
+      "path": "api-app/prisma/schema.prisma",
+      "sha256": "6fb1db37c44cb601e86afd441175ec14e94ec00f37616e4a5b7a915feceb3b8d",
+      "bytes": 51597
+    },
+    {
+      "path": "api-app/src/domain/channels/business-resource-ownership.ts",
+      "sha256": "72d47b7d2031f19b7bdf5bf2a2a1077753fa43a8b85af73c1552f65e73b2b1a8",
+      "bytes": 5953
+    },
+    {
+      "path": "api-app/src/domain/channels/channel-credential-resolver.spec.ts",
+      "sha256": "a60d142fcc335de43c5a697d9f7758f722883a1725c824dd0a4b4f0a2f7fb03b",
+      "bytes": 4021
+    },
+    {
+      "path": "api-app/src/domain/channels/channel-credential-resolver.ts",
+      "sha256": "34f25985091f0c0873b682bc3d27f7eb0cde95a56e5b74497afdc541f79f7630",
+      "bytes": 9525
+    },
+    {
+      "path": "api-app/src/domain/channels/channel-provider-readiness.ts",
+      "sha256": "8e47f5c0a0ad5f667c58212dbad3f15b84379d24a3d5d99cd4f1886e5dcca816",
+      "bytes": 831
+    },
+    {
+      "path": "api-app/src/domain/channels/receipt-attempt-convergence.ts",
+      "sha256": "ca8cb841fab2574866c3508ab41aa0a269608a20658db18840b2b89f0c281512",
+      "bytes": 920
+    },
+    {
+      "path": "api-app/src/domain/channels/transport/channel-operation-context.spec.ts",
+      "sha256": "7c29336e78bd91e52ab585afc218fe74a723fee486c07e277fbd06dfec72a435",
+      "bytes": 1973
+    },
+    {
+      "path": "api-app/src/domain/channels/transport/channel.ts",
+      "sha256": "aa6485060287910d586d17b8cbffe2f194b1b3a29fb71c697f27e0b78c28ffbf",
+      "bytes": 13235
+    },
+    {
+      "path": "api-app/src/domain/inbox/channel-eligibility-policy.ts",
+      "sha256": "9812de537d5e5f0c84ae9b824b7343f8dfd9f63dfa0520f6da9a7063d2d13eee",
+      "bytes": 9602
+    },
+    {
+      "path": "api-app/src/domain/inbox/channel-window-policy.ts",
+      "sha256": "46dfcf887f2ad4ed0670664186e918816699e6541d1670aa9c32ac79a193e43e",
+      "bytes": 5700
+    },
+    {
+      "path": "api-app/src/domain/inbox/conversation-start.service.ts",
+      "sha256": "76ec095570fcacaa5bc48aabd30ab31adc9387bf399cf046fd9d8a1889528700",
+      "bytes": 3439
+    },
+    {
+      "path": "api-app/src/domain/inbox/message-acceptance.service.spec.ts",
+      "sha256": "72d71a92eabb9b0a83d6a280f853b036ebeaf15a8c0bd1ceff34723757ef6ad9",
+      "bytes": 5479
+    },
+    {
+      "path": "api-app/src/domain/inbox/message-acceptance.service.ts",
+      "sha256": "1c47d314fd333a8826a121a9a593eeb54e0d156af2a0f4ade494dfee3250f131",
+      "bytes": 27690
+    },
+    {
+      "path": "api-app/src/integrations/channels/account-reference.ts",
+      "sha256": "da2b4572b07477407f9adf08c30c3876d10f92ae157cfadb3b8bdc5fc99d0d24",
+      "bytes": 424
+    },
+    {
+      "path": "api-app/src/integrations/channels/channel-adapter-factory.ts",
+      "sha256": "199603f2211f3c29aafa2aa69adc5a65a3d4f7ddd5dd0647f3e4df90e0788d03",
+      "bytes": 454
+    },
+    {
+      "path": "api-app/src/integrations/channels/channel-adapter-registry.ts",
+      "sha256": "1b2f99236d1a2d76e662384191c2d68835b3d331199111babb52334a26ee5de6",
+      "bytes": 1003
+    },
+    {
+      "path": "api-app/src/integrations/channels/channel-transport.module.ts",
+      "sha256": "2bf7b4d9c99e412125c9b59f0ac32cffaf6f5e870622e94baa814755942493ac",
+      "bytes": 3312
+    },
+    {
+      "path": "api-app/src/integrations/channels/evolution-channel.ts",
+      "sha256": "6a41ef2f3b0ee9e5c6b381d54faf48b0b2c672e52751f8be1480ad01cb178a34",
+      "bytes": 2211
+    },
+    {
+      "path": "api-app/src/integrations/channels/instagram-channel.ts",
+      "sha256": "ed53f4eb0119ec6187c115e5816412d0cd2ef00213d83f341efd8640bac5f526",
+      "bytes": 2375
+    },
+    {
+      "path": "api-app/src/integrations/channels/meta-channel.ts",
+      "sha256": "99a9ca01a57527a76de54cdbdf8b49f65b5dcceb1a71abce883d1845c6cd8f26",
+      "bytes": 3900
+    },
+    {
+      "path": "api-app/src/integrations/instagram/instagram-messaging.client.spec.ts",
+      "sha256": "3864f476790507972a241fdd0842d5d5a5be5a03fa9394134b0330f24f416f50",
+      "bytes": 1692
+    },
+    {
+      "path": "api-app/src/integrations/instagram/instagram-messaging.client.ts",
+      "sha256": "a5efd1ced025fa3822126cd4deada4ca5c31505edefa3cc71d85a475a9de28a5",
+      "bytes": 2815
+    },
+    {
+      "path": "api-app/src/integrations/instagram/instagram.module.ts",
+      "sha256": "93d8eff59bd7284967d8a608eb0df7cb30d1759f36d003800e53c01cd0c65eba",
+      "bytes": 425
+    },
+    {
+      "path": "api-app/test/dispatch-admission.e2e-spec.ts",
+      "sha256": "b67794d5d9327e517f27620292e71fa3d9986d0f6aa259c59a07052497e6a5d5",
+      "bytes": 58517
+    },
+    {
+      "path": "api-app/test/helpers.ts",
+      "sha256": "79c9343d80b72b1d8c378d6946bf38997133d528117b11a4fc1827fa3e52586c",
+      "bytes": 34495
+    },
+    {
+      "path": "api-app/test/instagram-cp2-commit-fences.e2e-spec.ts",
+      "sha256": "4d402c4a3e7e26e44d7a5ef209ee3554e09009727abf1e01dd907d73f22c5951",
+      "bytes": 22906
+    },
+    {
+      "path": "api-app/test/instagram-cp3-routing.e2e-spec.ts",
+      "sha256": "fb01016fbce4294ba68c1223c14fc05c184255ab388bf6688e92d702d29ee823",
+      "bytes": 21532
+    },
+    {
+      "path": "api-app/test/instagram-cp3-v1-cutover.e2e-spec.ts",
+      "sha256": "efe52d6fb58ccd2781c8e6d07b2a3bc467bc83e6b962a03a5014b5ff759191b9",
+      "bytes": 32002
+    },
+    {
+      "path": "api-app/src/domain/inbox/incoming.service.ts",
+      "sha256": "62776c3152c3b486aade744c4daf4830d16d032aded69eee9e9a55b3fefc38f8",
+      "bytes": 8594
+    },
+    {
+      "path": "api-app/src/surfaces/bff/me.controller.ts",
+      "sha256": "e3e2db03e3b301235e78cb800217fc3b01b5bd44e4b309c3f40930ea93b4df06",
+      "bytes": 10911
+    },
+    {
+      "path": "api-app/src/surfaces/public/conversations.controller.ts",
+      "sha256": "05d0b10a275579d24be8a9654a19436bef5dbfb49a090def83eec3e03ddd4ce6",
+      "bytes": 17887
+    },
+    {
+      "path": "api-app/src/surfaces/webhooks/evolution.controller.ts",
+      "sha256": "91d7d098ac77368b67537025e1169484fecd6acaf9f609bd272bbee60ea0071c",
+      "bytes": 10030
+    },
+    {
+      "path": "api-app/src/surfaces/webhooks/instagram-ingress-scheduling.spec.ts",
+      "sha256": "95a65f42662cc8d9eadc752b39bac54390f184d26535c2b554df49274e6e71bd",
+      "bytes": 8717
+    },
+    {
+      "path": "api-app/src/surfaces/webhooks/instagram-ingress-scheduling.ts",
+      "sha256": "dc1801e9935c4db6e9648e7d4a00d84303b5cad7a98539d6c4f84fa8c2923986",
+      "bytes": 1950
+    },
+    {
+      "path": "api-app/src/surfaces/webhooks/instagram.controller.ts",
+      "sha256": "00b97ed246bf28d1a72a0cd9dbc7fea437e5ca67da05a8e1cd7f3439e1874be0",
+      "bytes": 10257
+    },
+    {
+      "path": "api-app/src/surfaces/webhooks/meta.controller.ts",
+      "sha256": "261bf12e6ef021e00d90000a714ff54c66e3753f85d287a95015035fb584518f",
+      "bytes": 7195
+    },
+    {
+      "path": "api-app/src/surfaces/webhooks/webhooks.module.ts",
+      "sha256": "8fc09e2844fd002c18793d194be8ac471d75811b71ce24038a9948e27e5fb48f",
+      "bytes": 1209
+    },
+    {
+      "path": "api-app/test/instagram-consumer-boundaries.e2e-spec.ts",
+      "sha256": "12d57362ff6601f0bc5ce2c601d5d4bd15d6bbe4608a2d0be59cf0d92e07e805",
+      "bytes": 15961
+    },
+    {
+      "path": "api-app/test/instagram-cp2.e2e-spec.ts",
+      "sha256": "2afc8055cfe08975e60918cfd9f68409a628686376faafaaaa9fc9d94da509ac",
+      "bytes": 119304
+    },
+    {
+      "path": "api-app/test/instagram-cp3-whatsapp-ingress.e2e-spec.ts",
+      "sha256": "5ddac42e0edcee85534ebc5831792a188930d35e0605ce9fe77c15db3353a510",
+      "bytes": 14450
+    },
+    {
+      "path": "api-app/test/number-onboarding-pcv.e2e-spec.ts",
+      "sha256": "d88fc37e462a73ae938bafee14e3b6d784c4d9287319db41f4a857688220f235",
+      "bytes": 45175
+    }
+  ],
+  "priorChanged11": [
+    "api-app/src/domain/channels/transport/channel-dependencies.spec.ts",
+    "api-app/src/domain/inbox/contact-identity.ts",
+    "api-app/src/domain/inbox/dispatch-admission.service.spec.ts",
+    "api-app/src/domain/inbox/dispatch-admission.service.ts",
+    "api-app/src/domain/inbox/initial-message.service.ts",
+    "api-app/src/domain/inbox/outbound.service.spec.ts",
+    "api-app/src/domain/inbox/outbound.service.ts",
+    "api-app/src/integrations/channels/prisma-channel-resolver.ts",
+    "api-app/src/surfaces/bff/conversations.controller.ts",
+    "api-app/src/domain/inbox/conversations.service.ts",
+    "api-app/src/domain/inbox/historico.service.ts"
+  ],
+  "allAPI35ToAPI45ChangedOrNew19": [
+    "api-app/src/domain/channels/transport/channel-dependencies.spec.ts",
+    "api-app/src/domain/inbox/contact-identity.ts",
+    "api-app/src/domain/inbox/conversations.service.ts",
+    "api-app/src/domain/inbox/dispatch-admission.service.spec.ts",
+    "api-app/src/domain/inbox/dispatch-admission.service.ts",
+    "api-app/src/domain/inbox/historico.service.ts",
+    "api-app/src/domain/inbox/initial-message.service.ts",
+    "api-app/src/domain/inbox/outbound.service.spec.ts",
+    "api-app/src/domain/inbox/outbound.service.ts",
+    "api-app/src/integrations/channels/prisma-channel-resolver.ts",
+    "api-app/src/surfaces/bff/conversations.controller.ts",
+    "api-app/test/initial-message.e2e-spec.ts",
+    "api-app/test/instagram-cp2-final-clock.e2e-spec.ts",
+    "api-app/test/instagram-cp2-residual.e2e-spec.ts",
+    "api-app/test/instagram-cp3-accepted-facts.e2e-spec.ts",
+    "api-app/test/instagram-cp3-authorization-fences.e2e-spec.ts",
+    "api-app/test/instagram-cp3-csv-boundaries.e2e-spec.ts",
+    "api-app/test/instagram-cp3-locks.e2e-spec.ts",
+    "api-app/test/instagram-cp3-query-boundaries.e2e-spec.ts"
+  ],
+  "completeAffectedUnion": [
+    "api-app/prisma/schema.prisma",
+    "api-app/src/domain/access/access.service.ts",
+    "api-app/src/domain/access/scope.ts",
+    "api-app/src/domain/channels/channel-credential-resolver.ts",
+    "api-app/src/domain/channels/transport/channel-dependencies.spec.ts",
+    "api-app/src/domain/channels/transport/channel.ts",
+    "api-app/src/domain/inbox/channel-eligibility-policy.ts",
+    "api-app/src/domain/inbox/contact-identity.ts",
+    "api-app/src/domain/inbox/conversations.service.ts",
+    "api-app/src/domain/inbox/dispatch-admission.service.spec.ts",
+    "api-app/src/domain/inbox/dispatch-admission.service.ts",
+    "api-app/src/domain/inbox/historico.service.spec.ts",
+    "api-app/src/domain/inbox/historico.service.ts",
+    "api-app/src/domain/inbox/incoming.service.ts",
+    "api-app/src/domain/inbox/initial-message.service.ts",
+    "api-app/src/domain/inbox/message-acceptance.service.ts",
+    "api-app/src/domain/inbox/outbound.service.spec.ts",
+    "api-app/src/domain/inbox/outbound.service.ts",
+    "api-app/src/infra/session/session.service.ts",
+    "api-app/src/integrations/channels/prisma-channel-resolver.ts",
+    "api-app/src/surfaces/bff/conversations.controller.ts",
+    "api-app/src/surfaces/bff/session.middleware.ts",
+    "api-app/test/dispatch-admission.e2e-spec.ts",
+    "api-app/test/helpers.ts",
+    "api-app/test/initial-message.e2e-spec.ts",
+    "api-app/test/instagram-cp2-final-clock.e2e-spec.ts",
+    "api-app/test/instagram-cp2-residual.e2e-spec.ts",
+    "api-app/test/instagram-cp3-accepted-facts.e2e-spec.ts",
+    "api-app/test/instagram-cp3-authorization-fences.e2e-spec.ts",
+    "api-app/test/instagram-cp3-csv-boundaries.e2e-spec.ts",
+    "api-app/test/instagram-cp3-locks.e2e-spec.ts",
+    "api-app/test/instagram-cp3-query-boundaries.e2e-spec.ts",
+    "api-app/test/instagram-cp3-routing.e2e-spec.ts",
+    "api-app/test/instagram-cp3-v1-cutover.e2e-spec.ts",
+    "api-app/test/number-onboarding-pcv.e2e-spec.ts"
+  ],
+  "counts": {
+    "a": 26,
+    "b": 18,
+    "union": 35
+  },
+  "allChangedCovered": true,
+  "apiProof": "cp3-api45-root-reconciliation.json",
+  "scope": "Affected source re-review plus carried-forward41 byte-identical fullbody priorreads. Neitherlanealone completes wholeaffected gate or CP4/feature."
+}
