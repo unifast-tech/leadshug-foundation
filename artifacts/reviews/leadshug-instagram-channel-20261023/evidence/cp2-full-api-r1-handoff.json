@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "kind": "frozen-validation-only-cp2-full-api-handoff",
+  "owner": "fresh routine-executor gpt-6-luna medium",
+  "authority": "APROVADO ST-IG-03v1.3; source freeze in governing TODO; routing-full-api-cp2-r1.json GO; no implementation authority in this lane",
+  "readFirst": [
+    "foundation_documentation/todos/active/features/TODO-leadshug-instagram-channel.md",
+    "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp2-candidate17-frozen-public-manifest.json",
+    "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp2-targeted-green-candidate-17.json",
+    "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/inherited-public-preservation-v1.2.json"
+  ],
+  "exactCommand": "bash scripts/test-channels-local.sh api",
+  "log": "foundation_documentation/artifacts/tmp/instagram-channel-implementation/cp2-api-full-r1-01.log",
+  "commandCount": 1,
+  "before": "Match every234explicit manifest file hash and frozen TODO hash; preserve35immutable rows and3rootindex references. Positive file reads/hashes only; no directory/Git inventory. If any mismatch stop and report without running or editing.",
+  "execution": "Canonical disposable leadshug_channels_validation only with synthetic fixtures/external HTTP fakes. Capture exact command exit and stdout/stderr in the unique public synthetic log; never overwrite a retained log. No other runner, lint/build command or broadening. Do not read real env/runtime/process args/volumes, actualservices/Meta/otherprovider/tunnels/devices, gitstatus/diff/private paths. Manual positive readiness instead of generic private inventory.",
+  "after": "Match same source/TODO/preservation/index before/after. Return exact exit/logSHA, migrations/lint/build, exact unit/e2e summary/files and honest failing assertions. Do not infer product repair, acceptance or measured performance beyond output. Do not repeat failure or fix code.",
+  "freeze": "No source, TODO, package, envexample, Git/index, migration or app/runtime writes. Runtime operations only those owned by canonical disposable runner. Root retains docs ownership; agent may write only its unique captured canonical synthetic log. Fresh source reviewer active concurrently, do not wait for or modify its work. Become terminal after summary.",
+  "goalTools": "Do not create/use GOALtools. No worktrees/copies/branches/subagents. Read applicable AGENTS/profile/routing rules without forbidden broad commands."
+}

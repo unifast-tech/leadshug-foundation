@@ -1,0 +1,120 @@
+{
+  "schemaVersion": 1,
+  "kind": "executor-reported-not-independent-acceptance",
+  "spec": "api-app/test/instagram-cp2.e2e-spec.ts",
+  "cases": [
+    {
+      "id": "CP2-CONFIG",
+      "contract": "D-05; SCOPE-04; product-specific configuration",
+      "proof": "Absent, partial or malformed Instagram configuration disables only Instagram and makes zero provider calls. Public capability/DTO never exposes secrets. WhatsApp configuration cannot satisfy Instagram configuration.",
+      "executorReportedLocation": "CP2-CONFIG partial/absent config and public metadata cases",
+      "status": "reported, targetedGREEN; independent reached-assertion review pending"
+    },
+    {
+      "id": "CP2-AUTHZ",
+      "contract": "BFF endpoint authorization and durable attempt ownership",
+      "proof": "Unauthenticated, wrong BU, insufficient role, missing CSRF and another actor/session cannot create, inspect, confirm, advance or cancel an attempt. Denial occurs before provider work and private candidate disclosure.",
+      "executorReportedLocation": "unauthenticated route plus CP2-AUTHZ role/CSRF/session cases",
+      "status": "reported, targetedGREEN; independent reached-assertion review pending"
+    },
+    {
+      "id": "CP2-IDEMPOTENCY",
+      "contract": "OAuth request-key and persistent budgets",
+      "proof": "Same key/body returns the same reservation; mismatched body conflicts. Twenty overlapping requests claim once. Limits of ten attempts per actor/hour and thirty per BU/hour survive service recreation; rejection reports Retry-After without HTTP.",
+      "executorReportedLocation": "CP2-IDEMPOTENCY and main OAuth case: key validation, held confirmation duplicate409, completed replay/conflict, one POST",
+      "status": "reported, targetedGREEN; independent reached-assertion review pending"
+    },
+    {
+      "id": "CP2-CALLBACK",
+      "contract": "state/session/expiry/CAS before one-use code exchange",
+      "proof": "Wrong, missing, expired or replayed state, cross-session callback and concurrent callback lose before code exchange. Correct callback exchanges code once and redirects without code/state/token; no-store and no-referrer are present.",
+      "executorReportedLocation": "CP2-CALLBACK and main OAuth: session-bound one-time state, expiry and post-await revalidation",
+      "status": "reported, targetedGREEN; independent reached-assertion review pending"
+    },
+    {
+      "id": "CP2-TOKEN",
+      "contract": "mandatory short-to-long exchange; minimal permissions",
+      "proof": "Code exchange targets the fixed Instagram endpoint. Missing management/messages permission, malformed or ambiguous envelope, invalid long-token expiry or failed exchange leaves active credentials untouched. Code is never persisted. Acquisition and actual expires_in support the sixty-second expiry margin.",
+      "executorReportedLocation": "CP2-TOKEN plus main OAuth: mandatory long token, permissions, exact IDs, acquisition/expiry",
+      "status": "reported, targetedGREEN; independent reached-assertion review pending"
+    },
+    {
+      "id": "CP2-IDENTITY",
+      "contract": "app-scoped authorization reference distinct from /me user_id",
+      "proof": "Use synthetic references deliberately different from one another. Only the verified professional user_id binds entry.id/resource ownership; authorization id is preserved separately. No numeric conversion, username merge or user/browser-supplied peer/account authority.",
+      "executorReportedLocation": "main OAuth and cross-resource assertions distinguish authref vs professionalID",
+      "status": "reported, targetedGREEN; independent reached-assertion review pending"
+    },
+    {
+      "id": "CP2-CONFIRM",
+      "contract": "explicit candidate confirmation and ownership before subscription",
+      "proof": "Candidate cannot send or announce receipt. Confirmation atomically claims the exact resource, associates the provider/channel and promotes ciphertext by current generation. Cross-BU owner and different-account reauthorization preserve losing credentials/grants. Subscription starts only after committed local mapping.",
+      "executorReportedLocation": "CP2-CONFIRM and main explicit confirmation durable ownership before POST",
+      "status": "reported, targetedGREEN; independent reached-assertion review pending"
+    },
+    {
+      "id": "CP2-UNCERTAINTY",
+      "contract": "bounded administrative stage and read-before-retry",
+      "proof": "Timeout or inconclusive subscription cannot become a ready channel or blind repeated POST. Explicit advance observes before retry, with at most three ten-second requests, forty-second stage budget, sixty-second lease and ten-second cooldown. Concurrent advance cannot duplicate the mutation.",
+      "executorReportedLocation": "combined CP2-ORIENTATION case: first POST, bounded observer UNKNOWN, cooldown/budget/stage, concurrent advance and cross-attempt fence",
+      "status": "reported, targetedGREEN; independent reached-assertion review pending"
+    },
+    {
+      "id": "CP2-CANCEL",
+      "contract": "cancellation/disconnection preserve ownership and partial facts",
+      "proof": "Cancel and stale-generation confirmation race safely. Existing active token, retained business ownership, provider identity and message facts survive candidate cancellation. No deletion/revocation of other applications or remote ownership assumed.",
+      "executorReportedLocation": "CP2-CANCEL stale candidate plus combined orientation in-flight GET cancellation/late409/preserved facts",
+      "status": "reported, targetedGREEN; independent reached-assertion review pending"
+    },
+    {
+      "id": "CP2-SIGNATURE",
+      "contract": "dedicated GET challenge and raw signed POST",
+      "proof": "Challenge does not mark receipt. Missing, wrong or altered-byte signature fails before domain lookup/write. Explicit webhook app secret succeeds; OAuth/WhatsApp secrets fail even when configured. Same semantic JSON with different bytes cannot reuse a signature.",
+      "executorReportedLocation": "challenge and unsigned/raw tamper/wrong-purpose signature shared acceptance cases",
+      "status": "reported, targetedGREEN; independent reached-assertion review pending"
+    },
+    {
+      "id": "CP2-BOUNDS",
+      "contract": "16KiB OAuth; dedicated 8MiB/1000-update ingress",
+      "proof": "Small OAuth endpoints reject overflow. Instagram accepts a valid documented thousand-update batch without silent slicing, rejects over-limit bytes/update count before effects and preserves the existing WhatsApp envelope. Gateway parity is required at CP4, not inferred from Nest alone.",
+      "executorReportedLocation": "CP2-BOUNDS16KiBOAuth/8MiBIG and whole-batch structural preflight",
+      "status": "reported, targetedGREEN; independent reached-assertion review pending"
+    },
+    {
+      "id": "CP2-ORIENTATION",
+      "contract": "account/peer direction and opaque message identity",
+      "proof": "IN entry.id equals recipient professional account; sender is a qualified opaque peer. Echo reverses orientation. Equal external strings across two Instagram accounts or WhatsApp remain separate contacts/routes. Unknown/stale attachment cannot route to another connection.",
+      "executorReportedLocation": "combined account-directed IN and echo/self/read cases",
+      "status": "reported, targetedGREEN; independent reached-assertion review pending"
+    },
+    {
+      "id": "CP2-WINDOW",
+      "contract": "signed original IN text timestamp qualifies human reply",
+      "proof": "Only eligible IN text supplies the response window. Missing/invalid or more-than-five-minute-future original timestamp, delayed old message, entry.time, echo/self/deleted/unsupported/read/reaction and local creation cannot open or extend it. No unsolicited initial or automation is enabled.",
+      "executorReportedLocation": "combined original signed event timestamp and ineligible timestamp cases",
+      "status": "reported, targetedGREEN; independent reached-assertion review pending"
+    },
+    {
+      "id": "CP2-REPLAY",
+      "contract": "transactional acceptance and honest partial delivery",
+      "proof": "Twenty overlapping deliveries create one message, route and unread effect. A failure after part of a batch yields retryable failure; replay commits remaining work without duplicating prior accepted entries. Never acknowledge dropped work with HTTP 200.",
+      "executorReportedLocation": "20overlapping deliveries and partial-batch first commit/later retry",
+      "status": "reported, targetedGREEN; independent reached-assertion review pending"
+    },
+    {
+      "id": "CP2-RECEIPT",
+      "contract": "receipt is proven only by accepted real-resource ingress",
+      "proof": "OAuth, /me, challenge and successful subscription remain pending receipt. Accepted signed synthetic provider text verifies only the configured synthetic resource. Unknown accounts, rejected signatures and stale generation cannot verify receiving. Real Meta/device evidence remains CP6.",
+      "executorReportedLocation": "held POST signed IN race, late-result preservation and later unknown-resource receipt",
+      "status": "reported, targetedGREEN; independent reached-assertion review pending"
+    },
+    {
+      "id": "CP2-SAFE-OUTPUT",
+      "contract": "SCOPE-04/05 audit and configuration confidentiality",
+      "proof": "Success/error DTOs, redirect headers, persisted history and client-visible events contain neither raw tokens/code/state nor raw provider response/URLs. Safe identifiers and state codes suffice to recover the attempt. Real secrets/logs remain outside this checkpoint.",
+      "executorReportedLocation": "CONFIG and main OAuth DTO/redirect/persisted-candidate safe fields",
+      "status": "reported, targetedGREEN; independent reached-assertion review pending"
+    }
+  ],
+  "qualification": "Map names and aggregate counts do not close exact criteria. No primary own-account observation proof; review all assertions, missing cases and normative limits honestly."
+}

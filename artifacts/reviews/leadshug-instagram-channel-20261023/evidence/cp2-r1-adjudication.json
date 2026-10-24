@@ -1,0 +1,33 @@
+{
+  "kind": "cp2-r1-root-adjudication",
+  "date": "2026-10-24",
+  "reviewResultSha256": "fb542859f9a6978d2bc91ce32a9002d395ab3162f3b4854040b9335644539687",
+  "collectionMerge": "strict exit0; not acceptance",
+  "originalDefectsClosed": [
+    "IG-CP2-ROOT-01",
+    "IG-CP2-ROOT-03",
+    "IG-CP2-ROOT-05",
+    "IG-CP2-ROOT-06",
+    "IG-SUBPROTO-02",
+    "IG-SUBPROTO-03"
+  ],
+  "residualsOpen": [
+    "IG-CP2-ROOT-02",
+    "IG-CP2-ROOT-04",
+    "IG-SUBREC-02",
+    "IG-SUBPROTO-01",
+    "IG-SUBREC-03",
+    "IG-CP2-R1-01",
+    "IG-CP2-R1-02",
+    "IG-CP2-R1-03",
+    "IG-CP2-R1-04",
+    "IG-CP2-R1-05",
+    "IG-CP2-R1-06"
+  ],
+  "newFullApiFinding": "IG-CP2-ROOT-07",
+  "classification": "all unresolved release-blocker in same TODO",
+  "cp2Accepted": false,
+  "freezeLiftedFor": "one serialized admitted repair",
+  "byteLimitApproval": "pending",
+  "runtimeAuthority": "none"
+}

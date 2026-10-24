@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-24",
+  "kind": "frozen-complete-api-diagnostic-red",
+  "command": "bash scripts/test-channels-local.sh api",
+  "executions": 1,
+  "validator": "instagram_cp2_full_api_r1 terminal; no retry/source repair",
+  "log": "foundation_documentation/artifacts/tmp/instagram-channel-implementation/cp2-api-full-r1-01.log",
+  "sha256": "90c1b6fb653a882f88c52fbce0bac9e7a8b6b87c5878f9924360524519f695c5",
+  "bytes": 204056,
+  "exit": 1,
+  "migrationsApplied": 31,
+  "lint": "passed",
+  "build": "passed",
+  "unitPassed": 395,
+  "integration": {
+    "passed": 504,
+    "failed": 1,
+    "total": 505,
+    "filesPassed": 36,
+    "filesTotal": 37,
+    "durationSeconds": 441.98
+  },
+  "soleFailure": {
+    "spec": "api-app/test/cobertura-do-catalogo.e2e-spec.ts",
+    "meaning": "Five new write routes missing action catalog classification or justified explicit exemption. Do not weaken this coverage test.",
+    "routes": [
+      "POST /api/bff/business-units/:buId/instagram-authorizations",
+      "POST /api/bff/instagram-authorizations/:id/advance",
+      "POST /api/bff/instagram-authorizations/:id/cancel",
+      "POST /api/bff/instagram-authorizations/:id/confirm",
+      "POST /webhooks/instagram"
+    ]
+  },
+  "rootPostMatch": {
+    "sources": 234,
+    "todoSha256": "5c9c3858968263a9567a6609a9928b5e59f47502b3ac871ff4044b948e848283",
+    "boundedInputs": 26,
+    "immutableRows": 35,
+    "rootIndexEntries": 3,
+    "allMatched": true
+  },
+  "qualification": "No CP2/delivery acceptance. Fresh complete source reviewer remains active; maintain freeze until terminal. Unrelated historical CP1 closures retained subject to actual unchanged/newly-tested behavior."
+}

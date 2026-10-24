@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-24",
+  "kind": "real-boundary-causal-red",
+  "command": "bash scripts/test-channels-local.sh api-instagram",
+  "log": "foundation_documentation/artifacts/tmp/instagram-channel-implementation/cp2-red-cancel-inflight-01.log",
+  "sha256": "a52342529ba0bd25fb7133084c79c5fc919a1fc591ec5a37ebf7d72e667f18a8",
+  "exit": 1,
+  "unitPassed": 395,
+  "integration": {
+    "passed": 45,
+    "failed": 2,
+    "total": 47
+  },
+  "reached": "During held own-account GET, authenticated BFF cancel returned MAPPED_PENDING_SUBSCRIPTION instead of terminal CANCELLED. No cancellation product correction had been applied, per sole executor.",
+  "notReached": "Later assertions releasing GET and checking preserved partial facts were not reached at that failed cancellation assertion.",
+  "otherFailure": "Fixture attempts to filter ConversationRoute by nonexistent channelId; must use qualified businessIdentityId.",
+  "qualification": "Root matched exact log and terminal summaries; no independently sealed pre-edit manifest or live-provider proof."
+}

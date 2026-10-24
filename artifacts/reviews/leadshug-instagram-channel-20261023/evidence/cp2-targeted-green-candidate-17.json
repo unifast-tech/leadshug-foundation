@@ -1,0 +1,86 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-24",
+  "kind": "cp2-targeted-green-candidate",
+  "executor": "instagram_cp2_executor terminal; no source/runner edits after run17",
+  "command": "bash scripts/test-channels-local.sh api-instagram",
+  "log": "foundation_documentation/artifacts/tmp/instagram-channel-implementation/cp2-api-instagram-17.log",
+  "sha256": "19ddb688af1af64c2c2d2b2342555e2c009b2932cda7bd7ad3fef168b3814a4b",
+  "exit": 0,
+  "migrationsApplied": 31,
+  "lint": "passed",
+  "build": "passed",
+  "unitPassed": 395,
+  "integration": {
+    "passed": 47,
+    "failed": 0,
+    "total": 47,
+    "files": 4
+  },
+  "ownedPaths": [
+    {
+      "path": "api-app/prisma/schema.prisma",
+      "sha256": "b949eaad88126633bf13b967bed94ac118b0f78dd21f1d57d1c29483a0a66b20"
+    },
+    {
+      "path": "api-app/prisma/migrations/20261024100000_instagram_authorization_attempts/migration.sql",
+      "sha256": "6b957f64290b87a4ea66e6e85122090ad0c62ac8cb539ffa4bad18d436d4a634"
+    },
+    {
+      "path": "api-app/src/integrations/instagram/instagram-http.client.ts",
+      "sha256": "495fa359361137869bec86d1f132e2ac71f726a52566eb4f6ebb0e532d94225d"
+    },
+    {
+      "path": "api-app/src/integrations/instagram/instagram.module.ts",
+      "sha256": "8b4cfcae27fd552eabf731ee50b270e6809af809d2e61eccc1757864749803a5"
+    },
+    {
+      "path": "api-app/src/domain/channels/instagram-authorization.service.ts",
+      "sha256": "91c895bdcd04219a65137ddc342e52757c181b6db750666aa1c1630de059060f"
+    },
+    {
+      "path": "api-app/src/surfaces/bff/instagram-authorizations.controller.ts",
+      "sha256": "463b82a9d754de3580fce5a8e72b548561722ed876798223c61584fc7f83ffad"
+    },
+    {
+      "path": "api-app/src/surfaces/bff/bff.module.ts",
+      "sha256": "a6d2544ea66c693f53b9fd3e92e8a6044462c6e3a1c1ce36fb8e4feac9a4c1b2"
+    },
+    {
+      "path": "api-app/src/surfaces/webhooks/instagram.controller.ts",
+      "sha256": "42a862976be112c5e7c5f5fa99dc6124fc8acf3e69262c6a5d6d568cb2f25c8f"
+    },
+    {
+      "path": "api-app/src/surfaces/webhooks/webhooks.module.ts",
+      "sha256": "8fc09e2844fd002c18793d194be8ac471d75811b71ce24038a9948e27e5fb48f"
+    },
+    {
+      "path": "api-app/src/infra/http/body-parsers.ts",
+      "sha256": "a968f4175b21e8f3aee11a18821c6978bc0a9e2d936b49d4ea70e9a0e7e1677e"
+    },
+    {
+      "path": "api-app/src/domain/inbox/message-acceptance.service.ts",
+      "sha256": "59f24070854e400881266ed723ddd754d47e40b7de0975a7eb7a39a62a64d9cc"
+    },
+    {
+      "path": "api-app/src/domain/channels/channel-credential-crypto.ts",
+      "sha256": "b5f4ab6a5e7386fda28e4b1b0622918dfda8506da5ee2ad60b983e8c93f1c40a"
+    },
+    {
+      "path": "api-app/test/helpers.ts",
+      "sha256": "6a3dbfab9724452437e9ea6583307059ce9b0b6f85b1560e6e8dd7eda023e05c"
+    },
+    {
+      "path": "api-app/test/instagram-cp2.e2e-spec.ts",
+      "sha256": "1547f40ae926e735af09ab7f9094323fa5cd85b51d39174ad441ef592e8eef98"
+    },
+    {
+      "path": "api-app/.env.example",
+      "sha256": "5ae334bc61c924eb44b61c89c0e6127be7e410ea571ab2ffe180fab949452a66"
+    }
+  ],
+  "rootObserved": "Matched all15reported current path hashes, terminal log hash/test summaries, all35inherited immutable rows and exact3root git index entries; no broad inventory/private input.",
+  "coverageQualification": "Executor maps15CP2specs to16obligations; current source/assertions require independent review. Counts do not close each criterion or own-account observation. No ROOT01..03pre-fix causal RED is claimed.",
+  "unresolved": "IG-SUBPROTO-01 and IG-SUBREC-03 primary own-account GET semantics/observation remain open. Unknown cannot permit another POST; signed accepted current-resource IN is independent receipt evidence. Numeric text-byte-limit proposal pending user validation; no runtime/provider/private authority.",
+  "acceptance": "none; frozen complete API and fresh complete CP2 source adherence next, independent CP3 sequencing later without accepting missing observation."
+}

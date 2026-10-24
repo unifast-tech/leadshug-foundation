@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-24",
+  "kind": "postimplementation-diagnostic-red",
+  "command": "bash scripts/test-channels-local.sh api-instagram",
+  "log": "foundation_documentation/artifacts/tmp/instagram-channel-implementation/cp2-api-instagram-14.log",
+  "sha256": "2d0e43ca8cef84721e6c3e4f1bb8235f2ebc0862207dc4bbeb21ef753b7cd03d",
+  "exit": 1,
+  "unitPassed": 395,
+  "integration": {
+    "passed": 45,
+    "failed": 2,
+    "total": 47
+  },
+  "reachedPositive": "OAuth main case including held subscription POST and concurrent signed receipt passed, per executor; exact state assertions remain subject to frozen fresh review.",
+  "failures": [
+    "Raw-ingress case assumes empty DB although prior meaningful receipt-race fixture now persists a message. Correct to baseline-relative deltas while retaining exact assertions.",
+    "Orientation replay reaches later receipt-state expectation; executor reports reconciliation still needed. Do not classify this remaining state question as a proved fixture-only defect."
+  ],
+  "qualification": "Mutable source; no complete checkpoint acceptance. Cancellation after mapping/HTTP remains unproved and will receive its own reached causal RED before its product correction. Own-account observation still unaccepted.",
+  "observation": "Root matched exact terminal hash and bounded unit/e2e counts; executor diagnoses distinguished from independently proved source outcomes."
+}

@@ -1,0 +1,111 @@
+{
+  "schemaVersion": 1,
+  "kind": "frozen-review-input-binding",
+  "files": [
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/adherence-cp2-r1-dispatch.json",
+      "sha256": "a6c348b860fa3fe4f0d668ca9d79c650334d64382afe7cde0386b3034eb1b9a3"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/adherence-cp2-r1-dispatch.md",
+      "sha256": "1e555be4e1c7779e5a8f0c4b53d1db1df95f48625ff16765c9b1ff736716fcab"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/adherence-cp2-r1-package.json",
+      "sha256": "e52c3bd11a4c5f797722ee98387666dd87145ddbe7e42eb725895f8ab16a9576"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/authority-review-cp2-candidate17.json",
+      "sha256": "9a55b1ae1f23e6aa028192b893368f894ddd03671f786fff95514cbb1a294e65"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp1-r8-acceptance.json",
+      "sha256": "808f7d73392d6995db6d94c39489b5320be187f1c571e8e5c2491f42bc654457"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp2-cancellation-inflight-causal-red-01.json",
+      "sha256": "ba117ec2eea4634eb94ce42d92f77653f23cd0cfb10080bf6f38a6c6bed75bc2"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp2-candidate17-frozen-public-manifest.json",
+      "sha256": "0461410a8d42dad56509126f334c380e63c11531cff6959a3d6f6086b56703de"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp2-candidate17-reported-coverage.json",
+      "sha256": "d6987e7b6705d6ce83bdeea899b55c4f46f0473b0964f544d18fa55fae0ba152"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp2-confirmation-idempotency-causal-red-01.json",
+      "sha256": "90ae764c893cedc6e0cc65851e2133b36c7b0dd660d6b7f655fadecec6ec8199"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp2-confirmation-static-observation.json",
+      "sha256": "a2d02bb9ca2984c6f9955346785c5065caadc750b071ed2d684a43d8d5cf4f8b"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp2-execution-handoff.json",
+      "sha256": "7a306b858fa4d8967104b6e3426018a9a371ad459811e78b2a6837e0b293bf87"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp2-full-api-r1-handoff.json",
+      "sha256": "813ad8935e0673b4fdc8d32d635c5b0d34a7aa041abf192b67eeda41d3a5f329"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp2-inventory-boundary-deviation.json",
+      "sha256": "6af8ff89f568917facfd54b69d7cd6198e9e6dcbb9f1dbb4ba156f3167e77422"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp2-primary-profile-version-recheck.json",
+      "sha256": "b8eef2af862483b0a80ad9be21d58da6fbc64860bead1a88ae248ced3e58694d"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp2-primary-subscription-recheck.json",
+      "sha256": "763ec16748bf6b3e9ef986696cba5667aa3c8cc3c11543ab0aca6bf1222aba9f"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp2-primary-token-envelope-recheck.json",
+      "sha256": "342fe0b55b181eb0ac81ea62d7844d22a542b104cd01b39bc25d6595b76dea85"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp2-reauthorization-receipt-observations.json",
+      "sha256": "2800816c32ec7cfedc50101a74d5b69e54630e87616e9500af5b6f6bc55fce1f"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp2-root-static-observations.json",
+      "sha256": "35634659c0ec0514b04385eb67a956c3e3c98e20d5f7e69d0e0329d34ef4bf59"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp2-targeted-green-candidate-17.json",
+      "sha256": "cb0d007b82f49be898bea224f12301e908d1a7d041f65936f8108355b8df3acb"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp2-test-first-handoff-plan.json",
+      "sha256": "2f3c8e5d92580626e77631aa823f7749e0f629cb781a8b60c0578feeba9c9a62"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/inherited-public-preservation-v1.2.json",
+      "sha256": "f3540c342924a22c2be160613f954e22fbdcb51e34f691a9f00a51d14b2619e3"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/primary-instagram-contract-r1.json",
+      "sha256": "a4264c3df341c4eeba6acf5ff4af9b7b4ba8192bb77728db47dc0b3fd6d08894"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/routing-adherence-cp2-r1.json",
+      "sha256": "83ea2fffbfe67558b6db7f143a2a62986761521dfd2513f07d214218ebaa0e10"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/routing-full-api-cp2-r1.json",
+      "sha256": "9b01c282075dd3432b9f1bb886150c4de1c5525b4aec5571ad8a3695dd6fbca0"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/subscription-protocol-opinion-result.json",
+      "sha256": "3bc57a6e1bce80c3e5d02eff1aa261bdd7b447d5696a1c72701691e3d9ea7bd1"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/subscription-recovery-concretization-result.json",
+      "sha256": "95a34da9c2de10a43df3e866557420783f678f6e4d9170a7ade006f8997046ab"
+    }
+  ],
+  "policy": "Source/TODO manifest plus these bounded inputs remain unchanged until both lanes terminal. Root writes only distinct output/receipt artifacts; new human approval recorded separately until thaw."
+}

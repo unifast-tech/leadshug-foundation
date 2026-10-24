@@ -1,0 +1,15 @@
+{
+  "kind": "cp2-r1-post-terminal-freeze-reconciliation",
+  "date": "2026-10-24",
+  "bothReviewAndFullApiTerminal": true,
+  "sourceFilesMatched": 234,
+  "reviewInputsMatched": 26,
+  "todoMatched": true,
+  "preservationRowsMatched": 35,
+  "rootIndexMatched": true,
+  "fullApiOutcome": "RED: five Instagram action-catalog routes unclassified",
+  "reviewOutcome": "changes_required",
+  "cp2Accepted": false,
+  "privateInputsUsed": false,
+  "next": "Reconcile exact reviewer JSON and findings, then thaw for sole-writer admitted repair; retain immutable frozen candidate evidence."
+}

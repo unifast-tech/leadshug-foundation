@@ -31,11 +31,11 @@ Este TODO define WHAT, exclusões e critérios de entrega. A baseline v1.3 abaix
 ## Delivery Status Canon (Required)
 - **Current delivery stage:** Pending
 - **Qualifiers:** none
-- **Next exact step:** concluir prova/revisão da segurança CP2 e confirmação idempotente; continuar CP3 independente com a obrigação de observação própria CP2 explicitamente aberta, depois CP4..CP6.
+- **Next exact step:** corrigir CP2r1 e catálogo com provas PostgreSQL causais; refreeze/API completa/revisão; depois CP3independente com observação própria aberta, CP4..CP6.
 
 ## Active Work State (Required While TODO Remains In `active/`)
 - **Work state:** implementation
-- **Why this state now:** CP1 aceito após revisão completa e395unit/490integração; iniciar CP2 dentro do contrato aprovado, preservando demais restrições.
+- **Why this state now:** CP1 aceito; CP2r1 exige correções após395unit/504de505integração; reparo serializado, sem aceitação CP2.
 - **Exit condition:** todos os checkpoints e critérios validados, revisões/guards completos e prova runtime posterior explicitamente aprovada; nenhum fechamento parcial implícito.
 
 ## Blocker Notes
@@ -287,7 +287,7 @@ Linhas por critério exato; evidência futura permanece planned, sem alegação 
 ## External Dependency Readiness (Required When External Systems Matter)
 | Dependency | Why It Matters | Status (`unknown|healthy|degraded|failing|rate-limited|stale`) | Last Verified | Verification Method | Adjustment / Workaround |
 | --- | --- | --- | --- | --- | --- |
-| Conta profissional e acesso humano | autorização/prova real | healthy | 2026-10-23, declaração humana | usuário confirmou disponibilidade | não é teste de API/token |
+| Conta profissional e acesso humano | autorização/prova real | healthy | 2026-10-24, declaração humana | conta adicionada, sem token de teste gerado | não é teste de API/token; geração aguarda plano apropriado |
 | Opção Instagram no app existente | reutilização da instalação | healthy | 2026-10-23, declaração humana | usuário consultou o painel | não comprova configuração/Advanced Access |
 | Documentação Meta detalhada | OAuth/assinatura/expiração/eligibilidade | healthy | 2026-10-23 | leitura direta pública200 de Business Login, get-started, Messaging e Webhooks; hashes no receipt primário | 429da ferramenta web foi observação anterior, não limite corrente; conta real continua unknown |
 | Conta/app/API Instagram efetivos | campos, permissões e entrega | unknown | n/a | nenhuma API/segredo consultados | gates próprios, sem copiar WABA/SDK WhatsApp |
@@ -608,24 +608,32 @@ Historical planning observation retained: IG-REV-01..04, strategic source, high/
 | IG-EVOCOMP-R2-01 | medium | release-blocker | fence late failure mutation in same admitted caller/test paths | same-attempt recovery must retain later holder facts after lease takeover; inherited catch is not a new adapter regression | closed by r3/current full API | evolution-observation-companion-critique-r3-result.json; cp1-caller-r7-full-api-green.json |
 | IG-CP1-ROOT-R7-01 | medium | release-blocker | revalidate authorization before provider-error fact mutation in same admitted paths | live DB lease does not replace post-call session/grant revalidation; same existing lifecycle contract, no new middleware scope | closed by r3/current full API | evolution-observation-companion-critique-r3-result.json; cp1-caller-r7-full-api-green.json |
 
-| IG-CP2-ROOT-01 | medium | release-blocker | fix in this TODO | accurate persisted budget backoff under SCOPE-04/VAL-03 | open; static, behavioral case requested | cp2-root-static-observations.json |
-| IG-CP2-ROOT-02 | high | release-blocker | fix in this TODO | current post-HTTP lease fence under SCOPE-04/VAL-03 | open; static, delayed authorization case requested | cp2-root-static-observations.json |
-| IG-CP2-ROOT-03 | medium | release-blocker | fix in this TODO | actual credential acquisition/expiry under DOD-03/VAL-03 | open; static, delayed profile case requested | cp2-root-static-observations.json |
-| IG-CP2-ROOT-04 | high | release-blocker | fix in this TODO | Existing UUID key and durable replay/conflict contract also governs OAuth confirmation | open; static, real-boundary RED requested | cp2-confirmation-static-observation.json |
-| IG-CP2-ROOT-05 | medium | release-blocker | verify and fix in this TODO | Successful connected-channel reauthorization must preserve resource/receipt and known subscription | open; static, positive case not reached | cp2-reauthorization-receipt-observations.json |
-| IG-CP2-ROOT-06 | high | release-blocker | fix in this TODO | Eligible authenticated current-resource ingress must provide independent receipt after ambiguous dispatch | open; reached403 with executor diagnosis | cp2-reauthorization-receipt-observations.json |
+| IG-CP2-ROOT-01 | medium | release-blocker | fix in this TODO | accurate persisted budget backoff under SCOPE-04/VAL-03 | closed original defect by CP2 r1; persisted actor/BU backoff assertions; no pre-fix causal RED inferred | adherence-cp2-r1-result.json; prior evidence retained |
+| IG-CP2-ROOT-02 | high | release-blocker | fix in this TODO | current post-HTTP lease fence under SCOPE-04/VAL-03 | open; original successful callback-clock repair supported; remaining phase/lease/error fences open | adherence-cp2-r1-result.json; prior evidence retained |
+| IG-CP2-ROOT-03 | medium | release-blocker | fix in this TODO | actual credential acquisition/expiry under DOD-03/VAL-03 | closed original defect by CP2 r1; acquisition before delayed profile; no pre-fix causal RED inferred | adherence-cp2-r1-result.json; prior evidence retained |
+| IG-CP2-ROOT-04 | high | release-blocker | fix in this TODO | Existing UUID key and durable replay/conflict contract also governs OAuth confirmation | open; original missing-key repair proved; interrupted mapping replay open | adherence-cp2-r1-result.json; prior evidence retained |
+| IG-CP2-ROOT-05 | medium | release-blocker | verify and fix in this TODO | Successful connected-channel reauthorization must preserve resource/receipt and known subscription | closed original defect by CP2 r1; connected reauthorization preserves receipt/messages without another POST | adherence-cp2-r1-result.json; prior evidence retained |
+| IG-CP2-ROOT-06 | high | release-blocker | fix in this TODO | Eligible authenticated current-resource ingress must provide independent receipt after ambiguous dispatch | closed original defect by CP2 r1; signed ingress during held POST and after uncertainty | adherence-cp2-r1-result.json; prior evidence retained |
 | IG-SUBPROTO-01 | high | release-blocker | resolve primary protocol in this TODO | Own-subscription GET envelope, ID subject and completeness remain unproved; do not infer unsupported from omission | open; primary prerequisite | subscription-protocol-opinion-result.json |
-| IG-SUBPROTO-02 | medium | release-blocker | preserve UNKNOWN fence in admitted code | An unexplained empty or mismatched-ID observation cannot permit a second POST after uncertainty | open; implementation/proof requested | subscription-protocol-opinion-result.json |
-| IG-SUBPROTO-03 | medium | release-blocker | retain typed identity purposes in this TODO | No speculative parent-app configuration or guessed ID comparison; same approved OAuth path | open; current-source review pending | subscription-protocol-opinion-result.json |
-| IG-SUBREC-02 | high | release-blocker | fix in this TODO; related to IG-SUBPROTO-02 | Resource-lifecycle dispatch fence survives new attempt, reauthorization, lease expiry and crash | open; behavioral RED/proof in progress | subscription-recovery-concretization-result.json |
+| IG-SUBPROTO-02 | medium | release-blocker | preserve UNKNOWN fence in admitted code | An unexplained empty or mismatched-ID observation cannot permit a second POST after uncertainty | closed original defect by CP2 r1; UNKNOWN preserves mutation fence; concurrent lifecycle stays SUBREC-02 | adherence-cp2-r1-result.json; prior evidence retained |
+| IG-SUBPROTO-03 | medium | release-blocker | retain typed identity purposes in this TODO | No speculative parent-app configuration or guessed ID comparison; same approved OAuth path | closed original defect by CP2 r1; distinct identity purposes; no speculative parent-app configuration | adherence-cp2-r1-result.json; prior evidence retained |
+| IG-SUBREC-02 | high | release-blocker | fix in this TODO; related to IG-SUBPROTO-02 | Resource-lifecycle dispatch fence survives new attempt, reauthorization, lease expiry and crash | open; sequential preservation proved; concurrent resource dispatch/promotion fence open | adherence-cp2-r1-result.json; prior evidence retained |
 | IG-SUBREC-03 | medium | release-blocker | retain with IG-SUBPROTO-01 in this TODO | UNKNOWN is valid, but own-account observation remains mandatory and unaccepted | open; primary protocol | subscription-recovery-concretization-result.json |
 | IG-SUBREC-04 | medium | by-design/no-action | proposed investigation remains unexecuted | Bounded empirical observations cannot establish universal completeness or authorize repeated mutation | documented; no execution authority inferred | subscription-recovery-concretization-result.json |
 
+| IG-CP2-R1-01 | high | release-blocker | fix in this TODO | Confirmation can promote an expired candidate or overwrite cancellation | open; fresh source review, causal proof pending | adherence-cp2-r1-result.json |
+| IG-CP2-R1-02 | medium | release-blocker | fix in this TODO | Instagram authorization admission diverges from current BU scope and error ordering | open; fresh source review, causal proof pending | adherence-cp2-r1-result.json |
+| IG-CP2-R1-03 | high | release-blocker | fix in this TODO | The Instagram HTTP boundary follows redirects beyond its validated endpoints | open; fresh source review, causal proof pending | adherence-cp2-r1-result.json |
+| IG-CP2-R1-04 | medium | release-blocker | fix in this TODO | Failed OAuth callbacks retain sensitive query URLs without the required response protections | open; fresh source review, causal proof pending | adherence-cp2-r1-result.json |
+| IG-CP2-R1-05 | medium | release-blocker | fix in this TODO | Whole-batch preflight does not validate the supported message structure | open; fresh source review, causal proof pending | adherence-cp2-r1-result.json |
+| IG-CP2-R1-06 | medium | release-blocker | fix in this TODO | The reported sixteen-obligation map exceeds the behavioral proof actually present | open; fresh source review, causal proof pending | adherence-cp2-r1-result.json |
+| IG-CP2-ROOT-07 | medium | release-blocker | fix in this TODO | Five Instagram write routes need safe catalog/audit classification | open; full API coverage failure reached | cp2-action-catalog-observation.json |
+
 ## TODO Closeout Disposition
 - **Disposition:** blocked
-- **Disposition reason:** implementação aprovada em curso; findings CP1 remanescentes e demais checkpoints/gates abertos, sem entrega parcial aceita.
+- **Disposition reason:** implementação aprovada em curso; CP1 aceito, findings CP2 e demais checkpoints/gates abertos, sem entrega parcial aceita.
 - **Post-commit/push status:** pending
-- **Next path/status action:** manter ativo em implementation; corrigir CP1 e continuar CP2..CP6 sob a aprovação e os limites existentes.
+- **Next path/status action:** manter ativo em implementation; corrigir CP2 e continuar CP3..CP6 sob a aprovação e os limites existentes.
 
 ## Security Risk Assessment
 - **Risk level:** high
@@ -874,7 +882,7 @@ Authority preflight final: `artifacts/reviews/leadshug-instagram-channel-2026102
 | Checkpoint | State | Owner / next proof |
 | --- | --- | --- |
 | CP1 Identity/route/state cutover | r5/full API terminal; source admission pending | previous defects and freeze evidence closed; inherited observation ambiguity R5-01 requires bounded companion validation |
-| CP2 OAuth/ingress | pending | follows CP1 accepted checkpoint |
+| CP2 OAuth/ingress | in progress; not accepted | candidate17 targeted GREEN; full API RED and review changes_required; repair below |
 | CP3 Channel/policy/consumers | pending | shared sender/acceptance only |
 | CP4 UI/CI/browser | pending | profile handoff for CI/runtime tooling |
 | CP5 independent audits | pending | consolidated source and ALL evidence |
@@ -1062,8 +1070,8 @@ The strongest fresh bounded architecture opinion is terminal with changes_requir
 | Finding ID | Resolution | Usefulness | Formalizable | Candidate Rule Level | Candidate Rule ID | Rationale / Evidence |
 | --- | --- | --- | --- | --- | --- | --- |
 | IG-SUBPROTO-01 | Integrated | useful | partial | project | n/a | Primary-contract prerequisite remains open; subscription-protocol-opinion-result.json |
-| IG-SUBPROTO-02 | Integrated | useful | yes | project | n/a | Unproved observation remains UNKNOWN and preserves the durable mutation fence; implementation and proof pending |
-| IG-SUBPROTO-03 | Integrated | useful | partial | project | n/a | OAuth client, professional account and parent-app purposes remain distinct without speculative configuration |
+| IG-SUBPROTO-02 | Integrated | useful | yes | project | closed original defect by CP2 r1; UNKNOWN preserves mutation fence; concurrent lifecycle stays SUBREC-02 | adherence-cp2-r1-result.json; prior evidence retained |
+| IG-SUBPROTO-03 | Integrated | useful | partial | project | closed original defect by CP2 r1; distinct identity purposes; no speculative parent-app configuration | adherence-cp2-r1-result.json; prior evidence retained |
 
 Initial mutation and retry have distinct proof requirements: the documented first POST can be dispatched once only under a durable claim proving no earlier dispatch. A prior uncertain dispatch requires observation before any retry, and UNKNOWN never permits another mutation. This is subordinate HOW within the approved read-before-retry contract, not a waiver of the unresolved recovery criterion. Actual provider/private investigation remains excluded until a concrete later plan is approved.
 
@@ -1080,7 +1088,7 @@ Fresh strongest opinion subscription-recovery-concretization-result.json is term
 | Finding ID | Resolution | Usefulness | Formalizable | Candidate Rule Level | Candidate Rule ID | Rationale / Evidence |
 | --- | --- | --- | --- | --- | --- | --- |
 | IG-SUBPROTO-01 | Integrated | useful | partial | project | n/a | Remains primary prerequisite before recovery acceptance and delivery |
-| IG-SUBREC-02 | Integrated | useful | yes | project | n/a | Resource-lifecycle fence and crash uncertainty are existing subscription safety obligations; causal tests in progress |
+| IG-SUBREC-02 | Integrated | useful | yes | project | open; sequential preservation proved; concurrent resource dispatch/promotion fence open | adherence-cp2-r1-result.json; prior evidence retained |
 | IG-SUBREC-03 | Integrated | useful | yes | project | n/a | Honest pending does not erase the explicit own-account observation requirement |
 | IG-SUBREC-04 | Integrated | useful | partial | none | n/a | Two-GET operator proposal only; no provider activity authorized or executed, no universal inference |
 
@@ -1093,3 +1101,32 @@ Qualified causal receipts cp2-subscription-unknown-causal-red-01.json and cp2-co
 Current candidate observations ROOT05/06 are retained in cp2-reauthorization-receipt-observations.json, with exact static/reached qualifications. A fixture failure did not prove positive connected reauthorization. A pending external subscription result cannot itself fabricate a receipt or become a circular prerequisite for accepting the actual eligible signed message that supplies receipt proof. Preserve the current identity/credential/generation/owner fences and all partial-batch replay obligations.
 
 Primary send-limit mismatch is a proposed normative reconvergence only: instagram-text-byte-limit-ready.json binds the exact reviewed change from1000characters to1000UTF8bytes for outbound Instagram. Fresh critique found no proposal defects and strict merge passed; explicit user validation is pending. The governing numeric rules and product have not been changed under this proposal. All unrelated authorized work continues.
+
+## CP2 candidate17 frozen — full API and complete source adherence
+
+Sole executor is terminal. cp2-targeted-green-candidate-17.json records31disposable migrations, lint/build,395unit and47integration passes. Root matched all15reported changed paths, exact terminal log hash, all35immutable public rows and three preserved root index references. The exact16-obligation map is executor-reported and remains subject to assertion/source review; aggregate GREEN alone closes none of the current findings. Qualified failed and causal rounds remain retained.
+
+Current source and this TODO are frozen for a separate validation-only complete API runner and fresh complete CP2 source-adherence review. Neither lane may edit sources or TODO; root collects evidence only. Both lanes must become terminal and source/context hashes must match before any repair or next code writer. New human approval, if received during this freeze, is recorded separately and applied to the governing TODO only after these lanes terminate.
+
+The source review covers all approved OAuth/ingress/security/idempotency/receipt/uncertainty obligations and shared-owner regressions, not only residual fixes. It must carry the unresolved own-account primary protocol/read as open and all declared CP4consumers as still required under approved checkpoint sequencing. No backend-only delivery or UI waiver is inferred. ROOT01..06 and other code findings remain open for adjudication; no complete CP2 or functional delivery acceptance. Independent CP3 may follow truthful evidence reconciliation under the recorded opinion while missing primary observation remains explicitly unaccepted.
+
+## CP2 r1 reconciled — admitted repair, no checkpoint acceptance
+
+Both frozen lanes are terminal. cp2-r1-post-terminal-freeze-reconciliation.json matched234public sources, frozen TODO,26inputs,35preservation rows and3index references before thaw. Complete API:31migrations, lint/build,395unit and504/505integration; five Instagram write routes lack catalog classification. Fresh complete adherence strict collection passed with changes_required and ten findings. Original closures above are supported; ROOT02/04 and SUBREC02 retain residual defects. SUBPROTO01/SUBREC03 remain unaccepted primary-protocol obligations.
+
+| Finding ID | Resolution | Usefulness | Formalizable | Rule Level | Follow-up | Rationale / Evidence |
+| --- | --- | --- | --- | --- | --- | --- |
+| IG-SUBPROTO-01 | Integrated | useful | partial | project | n/a | The own-account observation criterion remains unimplemented as an accepted protocol; adherence-cp2-r1-result.json |
+| IG-CP2-R1-01 | Integrated | useful | yes | project | n/a | Confirmation can promote an expired candidate or overwrite cancellation; adherence-cp2-r1-result.json |
+| IG-SUBREC-02 | Integrated | useful | yes | project | n/a | The first subscription dispatch is not serialized across the resource lifecycle; adherence-cp2-r1-result.json |
+| IG-CP2-ROOT-04 | Integrated | useful | yes | project | n/a | A committed mapping cannot resume confirmation using its original CONNECT request; adherence-cp2-r1-result.json |
+| IG-CP2-ROOT-02 | Integrated | useful | yes | project | n/a | Administrative phase deadlines and live fences are not enforced throughout every await; adherence-cp2-r1-result.json |
+| IG-CP2-R1-02 | Integrated | useful | yes | project | n/a | Instagram authorization admission diverges from current BU scope and error ordering; adherence-cp2-r1-result.json |
+| IG-CP2-R1-03 | Integrated | useful | yes | project | n/a | The Instagram HTTP boundary follows redirects beyond its validated endpoints; adherence-cp2-r1-result.json |
+| IG-CP2-R1-04 | Integrated | useful | yes | project | n/a | Failed OAuth callbacks retain sensitive query URLs without the required response protections; adherence-cp2-r1-result.json |
+| IG-CP2-R1-05 | Integrated | useful | yes | project | n/a | Whole-batch preflight does not validate the supported message structure; adherence-cp2-r1-result.json |
+| IG-CP2-R1-06 | Integrated | useful | partial | project | n/a | The reported sixteen-obligation map exceeds the behavioral proof actually present; adherence-cp2-r1-result.json |
+
+All unresolved findings are release-blockers of this approved delivery. cp2-r1-repair-handoff.json assigns one fresh routine executor admitted OAuth/ingress/catalog fixes and real BFF/PostgreSQL causal tests. Root retains Foundation ownership. Access helpers may be reused/read, not edited merely because a review lists them. Preserve existing scenarios, inherited bytes, WhatsApp semantics and independent receipt. No blanket route exemptions or domain/transaction mocks.
+
+Source freeze is lifted for this serialized repair. After targeted terminal proof, refreeze exact source/inputs for complete API and fresh affected source review. Independent CP3 may proceed under the recorded sequencing, without accepting CP2 or waiving the own-account observation, consumers or later gates. CP4..CP6, ALL/pcv/security/TQA/cutover/final and separately approved real runtime remain mandatory. The proposed1000UTF-8-byte correction still awaits human validation; no change to its normative clauses here.

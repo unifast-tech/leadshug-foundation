@@ -1,0 +1,41 @@
+{
+  "kind": "serialized-cp2-r1-repair-handoff",
+  "authority": "ST-IG-03 v1.3 APROVADO; existing admitted paths only; cp2-r1-adjudication.json; routing-cp2-r1-repair.json GO",
+  "objective": "Repair all concrete CP2r1 safety/idempotency/security/ingress and ROOT07 catalog findings; add meaningful causal real BFF/PostgreSQL proof; preserve original scenarios and WhatsApp. Return targeted terminal candidate, not delivery acceptance.",
+  "profile": "Operational / Coder; nestjs, prisma, postgresql; root owns Foundation documents",
+  "readFirst": [
+    "foundation_documentation/todos/active/features/TODO-leadshug-instagram-channel.md",
+    "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/adherence-cp2-r1-result.json",
+    "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp2-r1-adjudication.json",
+    "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp2-action-catalog-observation.json",
+    "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp2-test-first-handoff-plan.json",
+    "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/inherited-public-preservation-v1.2.json",
+    "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp2-candidate17-frozen-public-manifest.json"
+  ],
+  "ownedProductPaths": [
+    "api-app/src/domain/channels/instagram-authorization.service.ts",
+    "api-app/src/integrations/instagram/instagram-http.client.ts",
+    "api-app/src/surfaces/bff/instagram-authorizations.controller.ts",
+    "api-app/src/surfaces/webhooks/instagram.controller.ts",
+    "api-app/src/domain/inbox/message-acceptance.service.ts",
+    "api-app/prisma/schema.prisma",
+    "api-app/prisma/migrations/20261024100000_instagram_authorization_attempts/migration.sql",
+    "api-app/test/instagram-cp2.e2e-spec.ts",
+    "api-app/test/helpers.ts",
+    "api-app/src/domain/historico/catalogo.ts",
+    "api-app/src/domain/historico/cobertura.ts"
+  ],
+  "guidance": [
+    "Read complete exact review; fix all residuals, not only a selected easy subset. Keep code simple: one resource lifecycle lock and bounded persisted resource dispatch fact, shared by promotion/dispatch/confirmation/cancel as appropriate; stable lock order, no HTTP within transactions. Final current-time CAS after awaited DB authorization/locks; PostgreSQL NOW is transaction-start, not wall clock after lock waits. Bound requests by immutable40s stage/10s individual and60s lease; honor AbortSignal at fake boundary.",
+    "Preserve immutable original confirmation request vs mapped tuple; real postmapping interruption/replay same body/key cannot promote twice or issue another POST. Scope auth before payload/key/config decisions; reuse protected AccessService/role semantics without changing protected files; explicit object not arrays.",
+    "No hardcoded guessed subscription GET identity/envelope/completeness. SUBPROTO01/SUBREC03 stay open; do not claim observer acceptance. UNKNOWN survives cancellation/new attempts/reauth/crash. One success/actual signed IN must not be regressed by late failure or replaced holders.",
+    "OAuth redirect:error and safe callback headers/clean redirect on failures, safe classification only; no code/state/providerquery in Location/body/audit.",
+    "Safe admin audit events within canonical catalog/transactions; exact justified webhook technical exemption possible; no blanket exemption or disabling catalog spec. Catalog spec itself read-only.",
+    "Pure wholebatch structural preflight before effects; distinguish unsupported/echo/read vs malformed supported mid/message. Prove1000distinct updates/replay exact contact/conversation/route/message/unread counts, fresh20concurrent first deliveries, no domain/Prisma/transaction mocks.",
+    "Add missing real cases identified R1-06 across config/auth/session/lease/errors/cancellation/reauth/crash/signature/rawbytes/orientation/receipt/safehistory. Use externalHTTP and realPG barriers only. Do not lower assertions/change deadlines merely to pass. Preserve existing tests.",
+    "Outbound1000UTF8byte proposal remains PENDING human validation: do not implement or change outbound limit yet; CP3 owns send code. Inbound must not gain that outbound limit."
+  ],
+  "validation": "Canonical bash scripts/test-channels-local.sh api-instagram only, disposable leadshug_channels_validation synthetic fixtures; unique append-only logs cp2-r1-repair-red-01.log / cp2-r1-repair-targeted-01.log etc. Capture causal RED BEFORE production repairs. First inspect fake limits and real lock barriers; no noncanonical runner. FullAPI/fresh review are later root-authorized frozen lanes after you terminal.",
+  "constraints": "Only one product/runtime writer (you), principal checkout. No worktrees/copies/branches/subagents, productGit/index writes, Gitstatus/diff/broadinventory, real.env/private/process/operationalDB/logs/credentials/Meta/tunnels/devices. Read/hash exact positive publicfiles only.35immutable rows +3root index remain. Foundation edits root-only except unique synthetic test logs. If another path seems needed send concrete request to root, do not edit it. No GOALtools.",
+  "report": "Frequent compact progress with concrete changed files, reached assertions, safe unique log paths/SHA+exact counts/failures. Before every source repair wait active test terminal. At finish provide all ownedpathhashes, exact reached/pending proof map, keep primary observation open, become terminal."
+}

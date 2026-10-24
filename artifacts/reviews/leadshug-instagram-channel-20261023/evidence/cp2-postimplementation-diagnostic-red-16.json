@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-24",
+  "kind": "postimplementation-diagnostic-red",
+  "command": "bash scripts/test-channels-local.sh api-instagram",
+  "log": "foundation_documentation/artifacts/tmp/instagram-channel-implementation/cp2-api-instagram-16.log",
+  "sha256": "35a11c630353b2f7a32a5326e04f09f9c24173e0e997a0b960182e2ca93b76c0",
+  "exit": 1,
+  "unitPassed": 395,
+  "integration": {
+    "passed": 46,
+    "failed": 1,
+    "total": 47
+  },
+  "reachedPositive": "Full orientation test passed per executor: UNKNOWN observation, cross-attempt reauthorization fence, in-flight GET cancellation with late409 and partial credential/channel facts preserved, later signed-IN receipt. Source still mutable; exact assertions need fresh review.",
+  "remainingFailure": "One test fixture filter still uses nonexistent ConversationRoute.channelId; actual schema uses businessIdentityId.",
+  "qualification": "No final checkpoint acceptance; full API/frozen source review and unresolved primary observation remain required."
+}

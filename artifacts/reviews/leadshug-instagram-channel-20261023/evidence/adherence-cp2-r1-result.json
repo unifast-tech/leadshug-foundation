@@ -1,0 +1,168 @@
+{
+  "schema_version": "subagent-review-result-v1",
+  "artifact_kind": "subagent_review_result",
+  "dispatch_path": "/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/adherence-cp2-r1-dispatch.json",
+  "review_kind": "architecture_adherence",
+  "reviewer_label": "instagram_cp2_adherence_r1",
+  "overall_assessment": "changes_required",
+  "recommended_path": "Retain the approved architecture: a small Instagram HTTP boundary, durable authorization/resource ownership, short PostgreSQL transactions, and the existing MessageAcceptanceService and OutboundService owners. Repair the bounded findings below and obtain meaningful affected proof before checkpoint adjudication. All 234 explicitly public source hashes and the governing TODO hash matched the freeze; this review executed no tests, provider requests or runtime inspection and read no active full-API output. Historical CP1 closures remain supported and are not reopened. IG-CP2-ROOT-01 has a supported original code repair: Retry-After now derives from persisted limiting attempts, with actor and BU assertions. IG-CP2-ROOT-03 has a supported original code repair: acquisition and expiry are captured immediately after the long-token response, before delayed /me, with a reached expiry-anchor assertion. No separate pre-fix causal RED is inferred for ROOT01..03. ROOT02's original captured-acquisition-clock defect is repaired on successful callback completion, but complete current-clock/phase fencing and its delayed-authorization proof remain open. ROOT04's omitted-key defect is repaired, with durable key/hash/result fields and reached missing/invalid-key, held duplicate and completed replay assertions; crash/resume and promotion/cancellation defects still prevent acceptance of its complete idempotency guarantee. ROOT05's original connected-reauthorization defect is supported repaired by the same-resource path and assertions preserving connection, receipt and messages without another subscription POST. ROOT06's circular receipt prerequisite is supported repaired: mapped current-resource signed IN can reach shared acceptance during a held first POST and after uncertainty, and committed receipt survives the tested late success. SUBPROTO02's conservative empty/mismatched observation fence and SUBPROTO03's separate OAuth/professional identity purposes are supported repaired; there is no speculative parent-app configuration or guessed returned-ID comparison. SUBREC02 has useful durable cross-attempt history, but its concurrent resource-lifecycle guarantee remains open. IG-SUBPROTO-01 and IG-SUBREC-03 remain explicitly unaccepted: issuing a GET and discarding its response is not an established own-account observer. No CP2, full-API or functional delivery acceptance is granted. After both frozen lanes become terminal and evidence is reconciled, independent CP3 may proceed under the approved sequencing while the observation criterion remains open. CP3 shared reply/policy, legacy API/Consultar/Typebot boundaries, CP4 actual React/operator consumers, gateway/CI/browser/freshness, CP5 ALL/pcv/security/TQA/cutover/final reviews and CP6 separately approved real proof remain mandatory. The current public API and Consultar sources still use legacy contact/phone projections; these are concrete remaining CP3 consumer obligations, not completed multichannel consumers or a waiver. The proposed 1000 UTF-8-byte outbound correction remains pending human validation; this review does not approve it.",
+  "performance_position": "mixed",
+  "elegance_position": "mixed",
+  "structural_soundness_position": "mixed",
+  "operational_fit_position": "mixed",
+  "findings": [
+    {
+      "finding_id": "IG-SUBPROTO-01",
+      "severity": "high",
+      "category": "adherence",
+      "formalizable_hint": "partial",
+      "candidate_rule_level": "project",
+      "title": "The own-account observation criterion remains unimplemented as an accepted protocol",
+      "rationale": "The explicit open list and governing TODO take precedence over the dispatch history's erroneous resolved labels. The sealed primary evidence establishes the initial Instagram Login subscription POST and success:true, but not GET support, returned identity purpose, own-app visibility, completeness or conclusive absence. instagram-http.client.ts:83-90 issues the provisional GET and returns null for every successful envelope. That preserves UNKNOWN safely and the spec proves no further POST for empty and unrecognized responses, but it cannot establish subscription presence or absence. IG-SUBREC-03 therefore remains open with IG-SUBPROTO-01. This is an existing SCOPE-04 and normative own-account-read obligation, not a demand for guaranteed automatic recovery.",
+      "suggested_action": "Keep both IDs explicitly open through subsequent checkpoints. Establish the primary observation contract before accepting this criterion, then implement only its documented own-account recognition/completeness semantics with confirmed, conclusively absent and UNKNOWN outcomes. UNKNOWN must continue preserving the durable mutation fence. Do not infer a new identifier, configuration purpose, permission or provider investigation authority from this review.",
+      "affected_paths": [
+        "api-app/src/integrations/instagram/instagram-http.client.ts",
+        "api-app/src/domain/channels/instagram-authorization.service.ts",
+        "api-app/test/instagram-cp2.e2e-spec.ts",
+        "foundation_documentation/todos/active/features/TODO-leadshug-instagram-channel.md"
+      ]
+    },
+    {
+      "finding_id": "IG-CP2-R1-01",
+      "severity": "high",
+      "category": "structural_soundness",
+      "formalizable_hint": "yes",
+      "candidate_rule_level": "project",
+      "title": "Confirmation can promote an expired candidate or overwrite cancellation",
+      "rationale": "Static source finding; no dynamic exploit was executed. confirm reads CANDIDATE_READY in the mapping transaction at instagram-authorization.service.ts:235, but does not lock that attempt row or check expiresAt. It later promotes the credential and unconditionally updates the attempt by id at lines 259-260. cancel locks the attempt and commits CANCELLED at lines 153-166. Cancellation can therefore commit after the mapping transaction's read and before its final update; confirmation can then restore MAPPED_PENDING_SUBSCRIPTION and replace credentials after cancellation. Independently, an unused CANDIDATE_READY attempt remains promotable beyond its ten-minute expiry while its long-lived credential remains valid. These violate the approved TTL, CAS, cancellation and candidate-versus-active boundaries in DOD-03 and CP2-CANCEL/CONFIRM.",
+      "suggested_action": "Acquire the exact attempt ownership lock before reading promotion eligibility, recheck current session/grant, expiry, status and generation under that lock, and make the terminal promotion update conditional on that same tuple. Use one transaction so losing the cancellation/expiry fence rolls back credential and mapping writes. Add actual BFF/PostgreSQL causal cases for cancellation between eligibility read and promotion and for confirmation after candidate expiry, asserting unchanged active credentials, ownership and message facts.",
+      "affected_paths": [
+        "api-app/src/domain/channels/instagram-authorization.service.ts",
+        "api-app/test/instagram-cp2.e2e-spec.ts"
+      ]
+    },
+    {
+      "finding_id": "IG-SUBREC-02",
+      "severity": "high",
+      "category": "structural_soundness",
+      "formalizable_hint": "yes",
+      "candidate_rule_level": "project",
+      "title": "The first subscription dispatch is not serialized across the resource lifecycle",
+      "rationale": "Static concurrency finding. subscribeAfterMapping reads prior attempts at lines 311-315, then claims only the current attempt's operationLeaseUntil at lines 320-325. Different attempts for the same resource share no exclusive resource/channel dispatch claim. Reauthorization also reads and upserts the active credential without locking or comparing the previously observed credential version at lines 239-259. A CONNECT claim and a same-resource REAUTHORIZE can interleave while the first claim is not yet visible: both prior-history reads can report no dispatch, both per-attempt claims can succeed with their respective credential snapshots, and both can reach the first-POST branch. Post-HTTP revalidation cannot retract either external effect. Concurrent reauthorizations can also both calculate the same next credential version and overwrite one another. Sequential cross-attempt UNKNOWN assertions do not exercise these interleavings. The history lookup additionally hydrates every historical matching attempt without a professional-resource index, making administrative work grow with retained history.",
+      "suggested_action": "Put first-dispatch intent and operation ownership behind one existing resource/channel lifecycle fence, serialized in a short transaction before HTTP. Reauthorization promotion must participate in that fence and compare its captured current generation/credential version. Retain dispatch evidence across cancellation, new attempts, lease expiry and crashes. Prefer a bounded indexed resource fact or existence lookup over loading all historical attempts; no generic workflow framework is needed. Prove overlapping CONNECT/REAUTHORIZE, competing reauthorizations and crash-after-claim recovery with real PostgreSQL barriers and exact provider POST counts.",
+      "affected_paths": [
+        "api-app/src/domain/channels/instagram-authorization.service.ts",
+        "api-app/prisma/schema.prisma",
+        "api-app/prisma/migrations/20261024100000_instagram_authorization_attempts/migration.sql",
+        "api-app/test/instagram-cp2.e2e-spec.ts"
+      ]
+    },
+    {
+      "finding_id": "IG-CP2-ROOT-04",
+      "severity": "medium",
+      "category": "operational_fit",
+      "formalizable_hint": "yes",
+      "candidate_rule_level": "project",
+      "title": "A committed mapping cannot resume confirmation using its original CONNECT request",
+      "rationale": "The original missing-key defect is repaired, but the complete durable confirmation contract remains open. A CONNECT confirmation originally hashes expectedGeneration as null. Mapping then changes the attempt's expectedGeneration to the channel generation at line 260. If execution stops after mapping commits but before confirmation completion is saved, the same key/body can resume after the in-progress interval, but line 208 compares the now-populated attempt generation with the original omitted expectedGeneration and returns CHANNEL_GENERATION_STALE. Sending expectedGeneration:1 instead conflicts with the already-persisted original request hash. Completed-result replay tests bypass this branch and do not prove interrupted confirmation recovery.",
+      "suggested_action": "Preserve the immutable confirmation request separately from the mapped operation tuple. Resume a matching durable request using its saved mapped generation/credential/resource context, with current authorization and ownership checks, without requiring the caller to change its original body. Capture real commit/interruption or acknowledgement-loss proof after mapping and before completion; prove replay performs no second promotion or subscription POST and conflicting bodies remain 409.",
+      "affected_paths": [
+        "api-app/src/domain/channels/instagram-authorization.service.ts",
+        "api-app/prisma/schema.prisma",
+        "api-app/test/instagram-cp2.e2e-spec.ts"
+      ]
+    },
+    {
+      "finding_id": "IG-CP2-ROOT-02",
+      "severity": "medium",
+      "category": "adherence",
+      "formalizable_hint": "yes",
+      "candidate_rule_level": "project",
+      "title": "Administrative phase deadlines and live fences are not enforced throughout every await",
+      "rationale": "The successful callback no longer reuses token acquisition time as its completion clock, which supports that original repair. Remaining static gaps prevent full closure. Callback failure reads a live lease at line 109, then its update at line 111 omits expiry and lease-deadline predicates. Subscription captures now before asynchronous transaction authorization at line 301, checks the forty-second stage only at claim admission, and uses a fresh fixed ten-second request timeout regardless of remaining stage time. Completion/assertSubscriptionTuple checks neither stage deadline nor credential expiry, and its tuple reads are not held behind the resource operation fence. Callback processing has a sixty-second lease but no explicit forty-second administrative-stage deadline. The callback spec replaces a lease token, rather than delaying authorization across an actual lease deadline; it does not demonstrate the original requested delayed-authorization fence or the provider-error paths. This finding does not claim that a newer holder was dynamically overwritten.",
+      "suggested_action": "Use a single immutable stage deadline and actual current time at final claim/mutation predicates; cap each HTTP request by both ten seconds and remaining stage time. Revalidate the exact current operation/resource/generation/credential tuple before dispatch and after success or error, under the appropriate short database fence. Keep token acquisition time separate. Add held PostgreSQL authorization/lock cases that cross the real lease or stage deadline and release both successful and failed provider responses, proving no stale promotion, subsequent HTTP or later-holder fact mutation.",
+      "affected_paths": [
+        "api-app/src/domain/channels/instagram-authorization.service.ts",
+        "api-app/src/integrations/instagram/instagram-http.client.ts",
+        "api-app/test/instagram-cp2.e2e-spec.ts"
+      ]
+    },
+    {
+      "finding_id": "IG-CP2-R1-02",
+      "severity": "medium",
+      "category": "security",
+      "formalizable_hint": "yes",
+      "candidate_rule_level": "project",
+      "title": "Instagram authorization admission diverges from current BU scope and error ordering",
+      "rationale": "The approved endpoint contract requires authorization before payload errors, 404 outside scope and 403 for insufficient role within a known scoped BU. create validates body in the controller and configuration/key in the service before BU authorization. requireActorTx checks raw user_bu_roles but does not resolve the active BU scope used by AccessService; absent grants always produce 403, and retained grants on an inactive BU can still admit create because the later BU lookup has no status predicate. instagram-cp2.e2e-spec.ts:240 explicitly expects 403 for another tenant's BU, contradicting the frozen 404 contract. Confirm/advance/cancel also validate bodies before resolving attempt authorization, and their object checks accept an empty array as an empty body. Session middleware correctly provides initial session/CSRF protection, but it does not resolve these domain-scope differences.",
+      "suggested_action": "Reuse the existing active-BU scope semantics before request-shape/key/configuration decisions, then retain current transaction-level session/grant revalidation for writes and post-provider phases. Distinguish outside-scope 404 from in-scope insufficient-role 403 and reject non-object/array payloads explicitly. Correct the contradictory test expectation and add the denial matrix across create/get/confirm/advance/cancel, including malformed requests from unauthorized actors and an inactive BU with retained grants, with zero provider work and zero mutation.",
+      "affected_paths": [
+        "api-app/src/surfaces/bff/instagram-authorizations.controller.ts",
+        "api-app/src/domain/channels/instagram-authorization.service.ts",
+        "api-app/src/domain/access/access.service.ts",
+        "api-app/src/domain/access/require-role.ts",
+        "api-app/test/instagram-cp2.e2e-spec.ts"
+      ]
+    },
+    {
+      "finding_id": "IG-CP2-R1-03",
+      "severity": "high",
+      "category": "security",
+      "formalizable_hint": "yes",
+      "candidate_rule_level": "project",
+      "title": "The Instagram HTTP boundary follows redirects beyond its validated endpoints",
+      "rationale": "Static source finding. requestJson validates only the initial URL hostname and calls native fetch without redirect:'error' at instagram-http.client.ts:101-104. Native fetch follows redirects by default. A 307/308 from the OAuth endpoint can therefore forward the form containing client_secret and the one-use code to a redirect target that was never checked. Redirect chains also introduce requests outside the declared three-request budget. Existing Evolution HTTP code explicitly rejects redirects, but the Instagram fake neither exercises redirect behavior nor asserts the redirect option. This violates the fixed-host, secret-boundary and bounded-I/O contract; no actual redirect or secret exposure was observed.",
+      "suggested_action": "Reject redirects at the Instagram boundary for every credential-bearing request. Add actual HTTP-boundary tests for redirect responses and assert one attempted request, no followed target, generic safe error output and unchanged active credentials. Preserve the exact documented OAuth/token/profile/subscription endpoints and avoid introducing caller-controlled URLs or fallback hosts.",
+      "affected_paths": [
+        "api-app/src/integrations/instagram/instagram-http.client.ts",
+        "api-app/test/helpers.ts",
+        "api-app/test/instagram-cp2.e2e-spec.ts"
+      ]
+    },
+    {
+      "finding_id": "IG-CP2-R1-04",
+      "severity": "medium",
+      "category": "security",
+      "formalizable_hint": "yes",
+      "candidate_rule_level": "project",
+      "title": "Failed OAuth callbacks retain sensitive query URLs without the required response protections",
+      "rationale": "The callback controller sets no-store/no-referrer and redirects only after authorizations.callback succeeds. Invalid state, provider refusal, missing permissions, expired ownership and other failures throw before those headers are set. There is no general response protection in main.ts, AppModule or the inspected exception filter that supplies them. Consequently the browser can remain on a code/state-bearing callback URL with an ordinary error response. The spec asserts safe redirect headers only on success. This is a current CP2-SAFE-OUTPUT/callback contract gap; gateway logging parity remains the separately required CP4 responsibility.",
+      "suggested_action": "Apply callback confidentiality headers before validation and cover unsuccessful callback outcomes with a safe return path that removes code/state/provider error query data while retaining the appropriate safe failure classification. Include session/state/provider-error/expired cases and assert no sensitive value in Location or response body. Preserve the later mandatory gateway/query-log and real-browser verification rather than treating controller tests as that proof.",
+      "affected_paths": [
+        "api-app/src/surfaces/bff/instagram-authorizations.controller.ts",
+        "api-app/test/instagram-cp2.e2e-spec.ts"
+      ]
+    },
+    {
+      "finding_id": "IG-CP2-R1-05",
+      "severity": "medium",
+      "category": "adherence",
+      "formalizable_hint": "yes",
+      "candidate_rule_level": "project",
+      "title": "Whole-batch preflight does not validate the supported message structure",
+      "rationale": "Static source finding. The preflight validates entry arrays, sender/recipient IDs and text length, but does not validate a present message object's shape or textual message ID before the first write. For example, a valid first text followed by message:{mid:42,text:'unaccounted'} passes preflight; the first commits, the second is silently skipped by the processing loop, and the request returns 200. The existing malformed-batch test only covers an invalid sender ID. This differs from the deliberate partial-work recovery case, where an unknown current resource yields a non-200 response and replay completes the remaining work. The approved CP2-BOUNDS/REPLAY contract requires malformed structural batches to fail before effects and forbids acknowledging lost supported work.",
+      "suggested_action": "Introduce a small pure preflight/normalization step for the supported Instagram event shapes before any domain work. Validate required textual message fields and distinguish valid unsupported/read/echo events from malformed supported messages. Reject malformed batches before writes; retain per-message transactional dedup and retryable failure for later domain/database failures. Add malformed message-shape/MID cases after an otherwise valid first update and assert zero committed effects.",
+      "affected_paths": [
+        "api-app/src/surfaces/webhooks/instagram.controller.ts",
+        "api-app/test/instagram-cp2.e2e-spec.ts"
+      ]
+    },
+    {
+      "finding_id": "IG-CP2-R1-06",
+      "severity": "medium",
+      "category": "tests",
+      "formalizable_hint": "partial",
+      "candidate_rule_level": "project",
+      "title": "The reported sixteen-obligation map exceeds the behavioral proof actually present",
+      "rationale": "The main CP2 spec provides useful real Nest/PostgreSQL coverage for every obligation area, but 47 aggregate passes include preserved CP1 cases and do not complete the exact CP2 claims. CONFIG removes only client ID, without the absent/malformed configuration matrix. AUTHZ does not exercise denial on all attempt operations and contains the incorrect cross-tenant status expectation. IDEMPOTENCY's twenty requests replay an already-existing reservation; confirmation has one held duplicate and four completed replays, without interrupted mapping recovery or fresh overlapping claims. CALLBACK covers cancellation, grant removal and lease-token replacement after a successful HTTP boundary, but not delayed authorization across actual expiry or corresponding provider-error paths. TOKEN/IDENTITY provide meaningful scope/envelope/opaque-ID and acquisition tests, but lack near-expiry sixty-second-margin and long-exchange failure cases. CONFIRM/CANCEL omit the promotion races identified above. UNCERTAINTY proves conservative empty/mismatched UNKNOWN and sequential cross-attempt preservation, but not concurrent resource claims or crash-after-dispatch-intent. SIGNATURE tests altered content and the WhatsApp secret, without the separately named OAuth-secret and semantically identical/different-byte cases. BOUNDS sends 1000 copies of one MID, producing one message, so it cannot establish acceptance of 1000 distinct updates without loss. REPLAY similarly sends one message first and only then overlaps twenty replays; it does not exercise twenty first deliveries racing to create one contact/conversation/message/unread effect. ORIENTATION/WINDOW cover two-account peers and old/future/missing timestamps, but not the full self/deleted/unsupported qualification matrix. RECEIPT covers held-POST late success and later uncertainty recovery, but not late provider error or replaced-holder completion after receipt. SAFE-OUTPUT checks selected DTO/ciphertext/success-redirect fields without the required failure-response and history/event assertions. These are checkpoint proof gaps, not proof of every possible exploit.",
+      "suggested_action": "Replace the reported-complete map with exact reached assertions and explicit pending rows. Through the sole writer, add meaningful real-boundary causal regressions for the source findings and the missing CP2 cases, preserving every prior scenario. Use fresh concurrent claims/deliveries, HTTP-only barriers, real PostgreSQL constraints and a fake that honors abort signals; do not fabricate domain/transaction results. Prove a 1000-distinct-update batch and replay with exact message/contact/route/unread counts. Keep the larger five-wave concurrency, 10000-conversation EPS/RLS thresholds, fifteen-second batch measurement, browser/freshness, ALL and independent assurance requirements explicitly assigned to their approved CP4/CP5 gates. Historical CP1 proof and its closures remain intact; this review grants no new full-API result.",
+      "affected_paths": [
+        "api-app/test/instagram-cp2.e2e-spec.ts",
+        "api-app/test/helpers.ts",
+        "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp2-candidate17-reported-coverage.json",
+        "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp2-test-first-handoff-plan.json",
+        "foundation_documentation/todos/active/features/TODO-leadshug-instagram-channel.md"
+      ]
+    }
+  ]
+}

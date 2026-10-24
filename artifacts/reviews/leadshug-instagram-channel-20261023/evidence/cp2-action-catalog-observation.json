@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "findingId": "IG-CP2-ROOT-07",
+  "severity": "medium",
+  "classification": "release-blocker",
+  "source": "cp2-r1-full-api-diagnostic-red.json",
+  "actualFailure": "Five Instagram write routes unclassified; canonical full API gate fails.",
+  "repairBoundary": [
+    "api-app/src/domain/historico/catalogo.ts",
+    "api-app/src/domain/historico/cobertura.ts",
+    "already admitted owning Instagram service/controller/module paths as necessary"
+  ],
+  "requirements": "Integrate required safe meaningful audit events in existing owner/catalog or document only genuine explicit technical exemptions. Never store token/code/rawstate/providerpayload/DMcontent in audit. Preserve full catalog-coverage test and existing WA semantics; do not blanket-exempt Instagram. Deduplicate business effects consistently with durable idempotency.",
+  "scope": "Existing approved catalog/cobertura and owner paths; no user path-admission request needed. Record in governing ledger only after fresh reviewer terminates and freeze thaws.",
+  "state": "open; no source/TODO edit while reviewer active"
+}

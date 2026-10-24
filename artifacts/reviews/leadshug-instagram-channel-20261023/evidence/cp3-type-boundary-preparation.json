@@ -1,0 +1,51 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-24",
+  "kind": "read-only-cp3-type-boundary-preparation",
+  "reader": "instagram_cp3_type_boundary_reader; gpt-6-luna medium; terminal; no writes/tests",
+  "routing": "routing-preparation-cp3-type-boundary.json GO",
+  "authority": "Preparation only; CP2source/TODO frozen and both independent lanes still active. No CP3execution/acceptance or scope expansion.",
+  "actualDependencies": [
+    {
+      "path": "api-app/src/domain/channels/transport/channel.ts",
+      "fact": "Strict exact V1, V2 and version-dispatch parsers exist. Public ChannelOperationContext alias and ResolvedChannelOperation.context still V1; parseChannelOperationContext is explicitly legacy-only."
+    },
+    {
+      "path": "api-app/src/integrations/channels/prisma-channel-resolver.ts",
+      "fact": "bind constructs untagged V1; contextStatus/transaction validators consume channelOrigin/requiresWindow. Latest-message/sole-channel selection must become exact route binding."
+    },
+    {
+      "path": "api-app/src/domain/inbox/outbound.service.ts",
+      "fact": "Regular and initial send currently reserve operation.context and dispatch Channel; reconciliation imports V1 parser for local known-ACK completion. Typed helpers still V1."
+    },
+    {
+      "path": "api-app/src/domain/inbox/initial-message.service.ts",
+      "fact": "New initial reservations and preview/generation/template equality consume V1 alias."
+    },
+    {
+      "path": "api-app/src/domain/inbox/dispatch-admission.service.ts",
+      "fact": "Stores/compares opaque JSON and extracts resourceID for lock order; no context type/parser import. Can retain exact old JSON while caller creates V2."
+    },
+    {
+      "path": "api-app/src/integrations/channels/channel-adapter-registry.ts",
+      "fact": "Registry/factory keys use WhatsApp ChannelOrigin; needs adapter-origin composition for IG. Meta/Evolution concrete Channels use common message/options and credentials, not operation-context type."
+    },
+    {
+      "path": "api-app/src/integrations/meta",
+      "fact": "Protected initial-message/message-template/meta client sources/specs inspected have no operation-context type dependency; their unit tests cover direct provider wire contracts, not common Channel V1 dispatch."
+    }
+  ],
+  "viableStrategy": [
+    "Make every new operational resolved context, resolver result, Outbound/Initial writer/helper and serializer explicitly strict V2. Use server route/contact/business/resource/channel/generation/credential tuple.",
+    "Keep explicit exact V1 persisted-record recovery type/path separate. Do not broaden operational alias to V1|V2 and expose a send-capable Channel for V1.",
+    "Legacy path validates original proved association and exact known receipt and settles locally; it never converts/rehashes stored originals or calls sendMessage/provider HTTP. Current eligibility cannot manufacture original association.",
+    "Preserve generic ChannelMessage/provider-client contracts and protected client suites. No unavoidable protected-path admission blocker identified; any actual new protected locus must be concretely reviewed before user validation, not guessed."
+  ],
+  "proofObligations": [
+    "Every newly reserved ordinary/initial JSON parses exactly asV2 and matches selected immutable route/account/peer; malformed/unknown schemas fail closed.",
+    "Actual PostgreSQL cases for every V1 state preserve original request/canonicalrequest/context/fingerprint/nonce/deadline/receipt/IDs/actor/originalConversation.updatedAt and initial exclusion; zero Channel.sendMessage/providerHTTP on all V1 paths.",
+    "Known accepted V1 completes one local Message from exact receipt/original proved association; unproved/unknown/ambiguous association remains held or requires explicit existing risk acknowledgement after original deadline, never v1\u2192v2 send.",
+    "Common outbound/initial contract tests prove V2 route-specific WA and IG dispatch; unchanged low-level Meta unit tests prove wire format only."
+  ],
+  "limitation": "Advisory import/use graph on current frozen candidate; root/executor must recheck after CP2fixes. No compiler/test run, no conformance/acceptance claim. Existing35immutable rows and six regression-companion restrictions remain. Reviewed text-byte-limit correction remains pending explicit user validation."
+}

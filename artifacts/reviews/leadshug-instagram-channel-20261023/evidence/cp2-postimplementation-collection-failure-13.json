@@ -1,0 +1,13 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-24",
+  "kind": "test-collection-failure-not-functional-proof",
+  "command": "bash scripts/test-channels-local.sh api-instagram",
+  "log": "foundation_documentation/artifacts/tmp/instagram-channel-implementation/cp2-api-instagram-13.log",
+  "sha256": "9feaf4887713f84489f6aee7a16de0cc61ff5ec36439ea6227b86ec2738aa325",
+  "exit": 1,
+  "unitPassed": 395,
+  "diagnosis": "Duplicate local identifier from a partial patch prevents collecting the new CP2 integration spec. No production failure/success or receipt-race proof follows.",
+  "qualification": "Sole executor retained unique log and corrected the fixture after terminal run. Existing eligible partial-batch expectations are to be preserved: initial unmapped second resource rejected with first fact retained; later correctly mapped/qualified replay accepted without duplicate first fact.",
+  "next": "Unique round14 active per executor; no source edits during runner. CP2CANCEL mapped/inflight branch and Q01 observation remain explicitly unproved; no acceptance."
+}
