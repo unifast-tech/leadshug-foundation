@@ -1,0 +1,12 @@
+{
+  "kind": "cp2-r4-causal-validation-only17",
+  "command": "bash scripts/test-channels-local.sh api-instagram",
+  "times": 1,
+  "freeze": "cp2-r4-test17-frozen-manifest.json",
+  "sourceCount": 242,
+  "boundInputCount": 93,
+  "log": "cp2-r4-causal-validation-17.log",
+  "routing": "routing-cp2-r2-causal-validation.json",
+  "authority": "authority-cp2-r4-validation17.json",
+  "instructions": "Separate validator one canonical disposable invocation; no retry/autofix/source/T/input/Git/private/runtime/provider/Meta writes. Check242/T/boundinputs/35preserved/3index beforeafter. Only new log write; rootownsreceipt. Preserve actual commandexit/logsha and caselevel reached/unreached qualification. All6new17tests must be individually classified: mapping actual62vs65expiry; deliberatelyshortenedTTL beforeproviderPOST; native signedexpiry across actualdeferredCOMMIT; matchedlivecontrols. Actual PGqueue/eligiblethenexpired/normalTXduration/snapshots beforedecisiveassertion required for causal RED. Native verifier/cookie setup failures are fixture, not productproof. Preserve complete prior91tests. No primary/runtime/browser/featureacceptance. RootreconcileafterTERMINAL beforeproductionthaw."
+}

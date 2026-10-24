@@ -1,0 +1,56 @@
+{
+  "kind": "cp2-r4-causal-validation17b-qualified-red",
+  "command": "bash scripts/test-channels-local.sh api-instagram",
+  "times": 1,
+  "exit": 1,
+  "migrations": 31,
+  "lint": "PASS",
+  "build": "PASS",
+  "unit": {
+    "files": 37,
+    "passed": 398,
+    "failed": 0
+  },
+  "e2e": {
+    "files": 10,
+    "total": 97,
+    "passed": 94,
+    "failed": 3,
+    "priorPreservedPassed": 91
+  },
+  "log": "cp2-r4-causal-validation-17b.log",
+  "logSha256": "a41ad910851bdfde91dd76c1e26bf5adb1e0bbf9529cdf6a85599f9a78f08e93",
+  "rootPostMatched": {
+    "sources": 242,
+    "todo": true,
+    "inputs": 100,
+    "preserved": 35,
+    "index": 3
+  },
+  "causal": [
+    {
+      "id": "ROOT02-final-mapping",
+      "eligibleThenExpired": "Actual UPDATE queue, candidate lifetime exact62seconds, margin>60s beforewait and <=60s after2.2seconds, stillqueued; normal elapsed/holder<4.5s assertions reached.",
+      "actual": "409 but MAPPED_PENDING_SUBSCRIPTION, candidateFieldsPreserved=false, providerResource/channel/credential/owner each1; NEWPOST0.",
+      "expected": "409 with full mapping rollback, candidate preserved, allowner/channel/credential/provider effects0; NEWPOST0.",
+      "control": "Actual65second candidate/equal2.2second wait passed200/onepromotion/onePOST/pendingreceipt."
+    },
+    {
+      "id": "ROOT02-preHTTP-TTL",
+      "eligibleThenExpired": "Actual subscription-claim UPDATE queue while persisted shortenedTTL future; afterwait TTLexpired before release; native session, credential margin and40s invocation window live, normal request/holder<4.5s; decisive assertions reached.",
+      "actual": "409 but NEWPOST1, requests1, OBSERVING.",
+      "expected": "409 NEWPOST0 requests0 NOT_STARTED; alreadylegitimate mapping retained.",
+      "control": "Equal measured hold/liveTTL actual200/onePOST/SUBSCRIBED passed.",
+      "qualification": "Deliberately shortened persisted10minuteTTL robustness, not natural10minute expiry."
+    },
+    {
+      "id": "SUBREC02-postCOMMIT-cleanup",
+      "eligibleThenExpired": "Actual deferred COMMIT queue while native signed session valid; native verifier-null expiry observed before release withCOMMIT stillqueued, normal timingbounds passed.",
+      "actual": "401 NEWPOST0 requests1 OBSERVING; originalbindingholder remains while attemptlease/cooldown/firstPOSTintent retained.",
+      "expected": "Only exactoriginal bindingholder released; claim history/counter/tombstone/attemptlease retained.",
+      "control": "Equal-duration live native session actual200/onePOST/SUBSCRIBED/normalrelease passed."
+    }
+  ],
+  "notClaimed": "No primary observer, pending human companion, real provider/runtime/browser/CP2/feature acceptance.17prior unit measurement failure remains honestly preE2E;17b monotonic unit thresholds passed without relaxation.",
+  "next": "Only admitted authorization service source repair18; no testchanges or runner. Root terminalfreeze then one complete canonicalAPI containing both targeted97 and allprior API cases; fresh affected adherence with unchanged completeR4 obligations carried."
+}

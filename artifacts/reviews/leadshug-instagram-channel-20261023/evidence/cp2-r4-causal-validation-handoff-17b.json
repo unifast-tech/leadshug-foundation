@@ -1,0 +1,12 @@
+{
+  "kind": "cp2-r4-causal-validation-only17b",
+  "command": "bash scripts/test-channels-local.sh api-instagram",
+  "times": 1,
+  "freeze": "cp2-r4-test17b-frozen-manifest.json",
+  "sourceCount": 242,
+  "boundInputCount": 100,
+  "log": "cp2-r4-causal-validation-17b.log",
+  "routing": "routing-cp2-r2-causal-validation.json",
+  "authority": "authority-cp2-r4-validation17b.json",
+  "instructions": "One separate complete canonical disposable invocation; no retry/autofix/source/T/input/Git/private/runtime/Meta/provider writes. Beforeafter exact242/T/inputs/35preserved/3rootindex. Onlynewlogwrite; rootownsreceipt.17unittimingfailure was preE2E; unit monotonic measurement changed with exactpreimageproof/unchangedthresholds. All6newcases and91prior individuallyactual reached/unreached. No causal RED unless actualPGqueue/eligibilitycrossing/nativeexpiry/normalduration and decisiveassertions reached; all3controls actualpassed. No acceptance fromstaticproof."
+}

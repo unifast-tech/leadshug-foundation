@@ -1,0 +1,19 @@
+{
+  "kind": "cp2-r4-test17-preexecution-reconciliation",
+  "writerTerminal": true,
+  "newTest": {
+    "path": "api-app/test/instagram-cp2-commit-fences.e2e-spec.ts",
+    "sha256": "2a59106818d2169dc49a3267a9ce11b26ece1790fec07f8297eb049c69cdad0f",
+    "cases": 6,
+    "executed": false
+  },
+  "matched": {
+    "priorSources": 241,
+    "historicalInputs": 77,
+    "preserved": 35,
+    "rootIndex": 3
+  },
+  "rootRead": "Complete new spec; eager real Nest HTTP, observed actual PG UPDATE/COMMIT queues; native verifier-null expiry before release; safe snapshots/counts/candidate preservation; exact provider lifetime; matched controls; all HTTP/holder cleanup and SQL artifact removal.",
+  "qualification": "Shortened persisted attempt TTL is robustness, not natural ten-minute expiry. Native signed session minted about3seconds before OAuth setup; must remain live at observed COMMIT queue. No domain/session/Prisma/clock mocks. Normal5s transaction and below4.5s request/holder assertions unchanged. No RED/GREEN claim before execution.",
+  "pending": "Primary observer, three human proposals and all CP3..CP6 obligations unwaived."
+}

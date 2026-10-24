@@ -1,0 +1,14 @@
+{
+  "kind": "cp2-r4-unit17b-terminal-reconciliation",
+  "writerTerminal": true,
+  "path": "api-app/src/integrations/instagram/instagram-http.client.spec.ts",
+  "sha256": "3a8676acdead9b9eebe9e18c1525c98d41a2f8b11c112da07100cac07a59901b",
+  "exactPreimageMatches": "49d791fa2d6112bf0d084e7d97c16efee9180c2516f2d9c5a60df4ef41a7141d",
+  "scope": "Only import performance and two monotonic elapsed starts/assertions; original Date.now absolute deadlines,875/1500thresholds and all scenarios/assertions intact.",
+  "matched": {
+    "otherSources": 241,
+    "preservation": 35,
+    "rootIndex": 3
+  },
+  "execution": "NOTRUN; one complete canonical17b after rootfreeze"
+}

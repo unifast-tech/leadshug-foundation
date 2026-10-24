@@ -1,0 +1,18 @@
+{
+  "kind": "cp2-r4-source-only-repair18",
+  "ownedPaths": [
+    "api-app/src/domain/channels/instagram-authorization.service.ts"
+  ],
+  "sourceBeforeSha256": "fce5e125b245e516067e60cdda5ac8f653beda2bb795641b8b2c699c420662b8",
+  "freezePrior": "cp2-r4-test17b-frozen-manifest.json",
+  "routing": "routing-cp2-r2-source-repair.json",
+  "basis": [
+    "cp2-r4-causal-validation-17b-result.json",
+    "adherence-cp2-r4-result.json",
+    "cp2-r4-root-adjudication.json"
+  ],
+  "required": "Repair three causally reached boundaries coherently inside existing owner: finalmapping afterlastawaitedpromotion clock guard against locked actualcandidate margin/attemptTTL/phase; subscription activephase attemptTTL atclaim and finalbeforeactualprovider request; originalaccount/token cleanup must cover acquisition actorTransaction await throwingafterCOMMIT, without early release while HTTP pending. Small private coherent guard/lifecycle allowed; no new framework. Audit all17actorTransaction callsites by activephase vs authorizedhistoricalfact and explain classification.",
+  "preserve": "Exactly existing tests/counters/exclusions/firstPOSTtombstone/cooldown/40sphase/60slease/3perstagebudget/normal5sTX/providerHTTPoutsideTX/independentreceipt/cancel/successor CAS/signedsession/currentgrant/historical completed or knownACKlocalrecovery zeroHTTP despite currentcredential orattempt clocks. Cleanup original token only; do not clear history or reset requestcounter. Native401 postCOMMIT test expects attemptlease stillpresent and onlyresourceholderreleased.",
+  "forbidden": "NO test/srcother/docs edits, runner/lint/build/Git/worktree/copies/private.env/process/runtime/provider/Meta. Allother241sources preserved. No bytes/privacy/middleware/primaryprotocol change. RootownsT/E.",
+  "completion": "Return terminal exactserviceSHA, boundedchangedfunction summary, actual17callerclassification and NOTRUN. Rootindependentlyreconciles before fullAPI/freshaffectedreview; CP3..CP6/primary/threehumanproposals remain mandatory."
+}

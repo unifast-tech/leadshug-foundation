@@ -1,0 +1,10 @@
+{
+  "kind": "cp2-r4-unit-timing-test-only17b",
+  "ownedPaths": [
+    "api-app/src/integrations/instagram/instagram-http.client.spec.ts"
+  ],
+  "beforeSha256": "49d791fa2d6112bf0d084e7d97c16efee9180c2516f2d9c5a60df4ef41a7141d",
+  "basis": "cp2-r4-causal-validation-17-result.json",
+  "routing": "routing-cp2-r2-test-only.json",
+  "instructions": "Change only elapsed-duration measurement from Date.now to monotonic node performance.now in two existing tests. Keep Date.now startedAt/absolute deadlineAt semantics separate and unchanged, all875ms/1500ms thresholds/nativeHTTP/cancellation/guard/body/requests/scenarios. No source/fixture weakening or production change, no runner/build/lint/Git/private/runtime/docs. Report exact SHA/NOTRUN. Root freeze/separate validator afterward."
+}

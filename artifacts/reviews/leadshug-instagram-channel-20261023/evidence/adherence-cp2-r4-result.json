@@ -1,0 +1,98 @@
+{
+  "schema_version": "subagent-review-result-v1",
+  "artifact_kind": "subagent_review_result",
+  "dispatch_path": "/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/adherence-cp2-r4-dispatch.json",
+  "review_kind": "architecture_adherence",
+  "reviewer_label": "instagram_cp2_adherence_r4-native-gpt-6.1-sol-xhigh",
+  "overall_assessment": "changes_required; complete approved CP2 source/evidence adherence review, all16 obligations and five axes. The core ownership/protocol/security architecture and qualified source16 repairs are supported, while two precise static clock/cleanup boundaries, primary own observation and precontroller confidentiality remain open. This is neither CP2 acceptance nor overall feature completion.",
+  "recommended_path": "Adherence: mixed, changes required. Keep the approved WHAT and single PostgreSQL/common MessageAcceptance ownership. Repair only the exact mapping-clock/dispatch-TTL and claim-acquisition cleanup boundaries in the existing owner with causal real-PG proof; retain current locked-clock, GET-null tuple and exact-token-finally repairs and all closed unchanged CP1/original CP2 findings. Performance: acceptable for the inspected bounded indexed queries/HTTP-outside-transaction design and native absolute timeout proof; production capacity/SLO and CP5 lanes remain unproved. Elegance and structural soundness: mixed because the coherent small owner-local design still has inconsistent final-boundary coverage; no framework/redesign/new config is needed. Operational fit: mixed because safe durable UNKNOWN prevents blind mutation but cannot satisfy primary own observation, and exact cleanup must cover acquisition. Security: dedicated raw HMAC/AAD/session/grant/fixed-host/redaction boundaries are supported; unadmitted precontroller companion and later browser/gateway proof remain required. Test quality: materially stronger causal source16 proof with explicit static versus executed limits in all16 rows; root must reconcile the excluded current full-API receipt before acceptance. All three human proposals, primary observer, CP3 through CP6, all consumers/ALL/PCV/security/TQA/cutover/final and later approved physical proof remain unwaived.",
+  "performance_position": "acceptable",
+  "elegance_position": "mixed",
+  "structural_soundness_position": "mixed",
+  "operational_fit_position": "mixed",
+  "findings": [
+    {
+      "finding_id": "IG-SUBPROTO-01",
+      "severity": "high",
+      "category": "adherence",
+      "formalizable_hint": "partial",
+      "candidate_rule_level": "project",
+      "title": "Own-account subscription observation remains an unaccepted primary-contract obligation",
+      "rationale": "Existing SCOPE-04/DOD-03/CP2-UNCERTAINTY requirement; retain IG-SUBREC-03 with this ID. Current instagram-http.client.ts:84-92 makes the provisional GET but returns null for every successful response. Safe UNKNOWN and the durable first-POST history prevent speculative repeated mutation, but do not implement the required own-account observation. The frozen primary rechecks/opinions do not establish the supported GET contract, returned identity subject, own-app visibility or conclusive-empty semantics. This is a source/evidence limitation, not a conclusion that documentation omission proves GET unsupported. No provider operation was performed by this reviewer.",
+      "suggested_action": "Keep both IDs open while independent CP3 work follows the approved sequence. Establish the primary own-account observation contract and then implement only supported identity/completeness semantics with meaningful proof. Preserve durable UNKNOWN/no-repeat history. Infer no parent-app identity/configuration, alternate login, broader permission, retry or provider investigation authority. This review does not waive observation or accept CP2.",
+      "affected_paths": [
+        "api-app/src/integrations/instagram/instagram-http.client.ts",
+        "api-app/src/domain/channels/instagram-authorization.service.ts",
+        "foundation_documentation/todos/active/features/TODO-leadshug-instagram-channel.md"
+      ]
+    },
+    {
+      "finding_id": "IG-CP2-ROOT-02",
+      "severity": "medium",
+      "category": "adherence",
+      "formalizable_hint": "yes",
+      "candidate_rule_level": "project",
+      "title": "Final mapping promotion and mapped dispatch eligibility still leave current-clock boundaries unchecked",
+      "rationale": "Static residual under existing SCOPE-04/DOD-03/VAL-03 and CP2-CONFIRM/TOKEN/UNCERTAINTY; no dynamic reproduction is claimed. Source16 materially repairs callback success/error and subscription success/error/GET-null final clocks using current locked facts, database-time UPDATE predicates and max(DB clock, Date.now) after the last awaited mutation; all six qualified RED15 counterparts and matched controls are GREEN16. Preserve those repairs and the closed original R1-01 TTL/cancel/CAS defect. A separate candidate-to-active mapping transaction still ends with UPDATE at service368-376, whose TTL/deadline/credential-margin WHERE is evaluated before a possible UPDATE-trigger wait. After that awaited statement,378 checks only signed session before379 returns, and actorTransaction824-831 also checks only session. A still-authorized final-promotion wait can cross attempt TTL, operation deadline or the 60-second credential margin while committing the active credential/channel mutation366-376. Subscription acquisition457-518 and its pre-HTTP assertSubscriptionTuple724-746 additionally omit attempt.expiresAt, although final settlement580/690 checks it. An already expired mapped attempt with otherwise live tuple/deadline/credential can therefore claim and reach its first POST before final settlement refuses the stale result. The bound final-clock cases target callback/subscription settlement and earlier promotion eligibility, not these final-promotion or mapped pre-HTTP TTL intervals. Legacy WhatsApp mapped-attempt recovery has its separate existing contract and supplies no Instagram waiver.",
+      "suggested_action": "Complete the same owner-local current-clock contract: retain immutable current locked mapping clock facts and check fresh max(database clock, Date.now) after the final awaited mapping write so a crossed boundary rolls back; include current attempt TTL in new dispatch/observation eligibility. Preserve historical authorized COMPLETED zero-HTTP replay, independent accepted receipt and existing resource ownership. Add real PostgreSQL final-promotion delay and mapped pre-HTTP TTL regressions with matched live controls inside the normal transaction budget; no auth/clock/domain/transaction mocks or timeout increases. Keep the governing high-severity release-blocker routing unchanged; this result classifies the bounded remaining static defect and does not downgrade the TODO.",
+      "affected_paths": [
+        "api-app/src/domain/channels/instagram-authorization.service.ts",
+        "api-app/test/instagram-cp2-final-clock.e2e-spec.ts",
+        "api-app/test/instagram-cp2.e2e-spec.ts",
+        "foundation_documentation/todos/active/features/TODO-leadshug-instagram-channel.md"
+      ]
+    },
+    {
+      "finding_id": "IG-SUBREC-02",
+      "severity": "medium",
+      "category": "structural_soundness",
+      "formalizable_hint": "yes",
+      "candidate_rule_level": "project",
+      "title": "The subscription cleanup boundary starts after a committed claim can already reject",
+      "rationale": "Static residual of the existing exact-original-holder contract, CP2-UNCERTAINTY/CANCEL/RECEIPT; no duplicate POST, lost receipt or executed failure is claimed. Source16 now wraps all postclaim provider/finalization continuations519-600 in one finally and releases only the original token653-657. The real post-POST SQL-fault and queued successful GET/null successor cases are qualified GREEN16, including their ordinary/no-fault controls; retain those supported fixes. Acquisition actorTransaction is still awaited at457-518 before try519. actorTransaction825-829 can commit the binding claim and attempt OBSERVING state, then its fresh signed-session assertion830 can throw after COMMIT resumes. If a valid session expires during this asynchronous COMMIT boundary, execution never enters try519 and skips finally598-600 although no HTTP began; the durable original binding holder remains until its60-second lease expires. Existing natural signed-expiry tests block inside transaction work and prove rollback; they do not reach a claim committed before the postcommit session assertion rejects.",
+      "suggested_action": "Extend the single owner-local cleanup lifecycle around the acquisition await, including rejection after a committed claim, releasing only the matching original token when no HTTP is pending. Preserve durable first-POST intent, cooldown, successor token, cancelled attempt and independent receipt/messages/unread. Prove the boundary with an actual PostgreSQL claim-COMMIT delay, a naturally expiring signed session and matched live control under the normal transaction budget; a deferred real database trigger can reach COMMIT without mocking transaction outcomes. Never clear a successor or release while external HTTP is still pending. Retain the governing release-blocker routing and supported R3/source16 repairs.",
+      "affected_paths": [
+        "api-app/src/domain/channels/instagram-authorization.service.ts",
+        "api-app/test/instagram-cp2-finalization.e2e-spec.ts",
+        "api-app/test/instagram-cp2-residual.e2e-spec.ts",
+        "foundation_documentation/todos/active/features/TODO-leadshug-instagram-channel.md"
+      ]
+    },
+    {
+      "finding_id": "IG-CP2-R1-04",
+      "severity": "medium",
+      "category": "security",
+      "formalizable_hint": "yes",
+      "candidate_rule_level": "project",
+      "title": "Precontroller callback denials still lack the protected clean-URL failure path",
+      "rationale": "Existing CP2-CALLBACK/SAFE-OUTPUT requirement. instagram-authorizations.controller.ts:37-54 sets no-store/no-referrer before its reached failures and returns a fixed allowlisted303; those repairs remain supported. Unmodified session.middleware.ts:78-117 can deny absent/expired/revoked sessions, mandatory password change, onboarding or infrastructure failures before controller entry without the callback-specific headers/clean redirect. Sensitive code/state query remains the error-document URL at this boundary. The exact v2 session companion is a reviewed pending human proposal, not admitted source or implemented behavior. Closure of the companion proposal finding does not close R1-04. No browser, gateway or private-log result was inspected or inferred.",
+      "suggested_action": "Keep R1-04 open. Once the human admits the exact protected-path companion, apply it in a serialized writer lane and prove actual Nest/PostgreSQL known denials plus unexpected precontroller failure with ordinary-route/auth-order preservation. Keep fixed-text React consumer and actual browser/gateway confidentiality in approved CP4. This review grants no path admission, approval or waiver; privacy HTML and outbound UTF-8-byte proposals also remain unadmitted.",
+      "affected_paths": [
+        "api-app/src/surfaces/bff/session.middleware.ts",
+        "api-app/src/surfaces/bff/instagram-authorizations.controller.ts",
+        "api-app/test/instagram-cp2.e2e-spec.ts",
+        "foundation_documentation/todos/active/features/TODO-leadshug-instagram-channel.md"
+      ]
+    },
+    {
+      "finding_id": "IG-CP2-R1-06",
+      "severity": "medium",
+      "category": "tests",
+      "formalizable_hint": "partial",
+      "candidate_rule_level": "project",
+      "title": "The complete sixteen-obligation review supports stronger proof but retains precise current acceptance gaps",
+      "rationale": "All62 required actual source bodies, full1252-line approved TODO and all61 frozen evidence semantics were reviewed; the complete sixteen-row map and exact hashes are in adherence-cp2-r4-collection.json. Qualified source16 passed31 migrations/lint/build/398unit/91selected integration; actual assertions support the six causal repairs, not universal boundary coverage. Previously missing nine configuration variants, strict20 fresh confirmations with exactly19 CONFIRMATION_IN_PROGRESS plus winner/audit/version/onePOST/replay, real committed-writer fault-disabled original-key recovery, historical COMPLETED replay after actual credential-version rotation/current expiry, and second real Nest/same-PG quota/URL replay are now supported; do not re-raise them as missing. Current precise test gaps are the final-promotion/pre-HTTP TTL and acquisition-postcommit-cleanup paths above plus the unaccepted own observer/precontroller path. Preserve accurate reached/unreached metadata: shortened persisted lease/deadline cases prove robustness, not natural60-second expiry; combined subscription clocks do not isolate each; actual callback expires_in62 margin/control65 and short natural signed-session PostgreSQL waits are distinct; old15-second timeout-confounded proof and midrun-edited GREEN05 remain invalid. The bound whole API R3 was534/535 because an unqualified account fixture selected the wrong account; current exactprofessional/channel fixture passes selected16. The newer current full-API receipt is outside this frozen package, unread and unassumed, so full current API remains for root reconciliation. ROOT08/ROOT09/ROOT15 stay open pending authoritative adjudication; neither aggregate counts nor381 hash matches close them. No production ingress regression or missing index is inferred from the historical fixture failures.",
+      "suggested_action": "Add only meaningful causal cases tied to the current static findings, with provider-only fakes, real PostgreSQL barriers/faults and finite reliable cleanup/live controls. Root must reconcile the separate terminal full-current-API receipt against the exact freeze and adjudicate the nine authoritative open IDs. Keep all original scenarios/counters and already closed unchanged CP1/original CP2 repairs. CP3 reply transport/policy/all consumers; CP4 actual React/operator OAuth/capability/connection/inbox/pagination/disconnect/verify plus CI/gateway/browser/freshness; CP5 canonical ALL, all four PCV lanes, five-wave20/resource/ingress stress,10000-conversation EPS/RLS,<=15-second1000-batch measurement, security/TQA/cutover/adherence/final; and CP6 separately approved physical Instagram and both WhatsApp-device proof remain mandatory in their approved sequence. This complete checkpoint review is not final independent TQA, full-feature acceptance, a consumer waiver or admission of any pending human proposal.",
+      "affected_paths": [
+        "api-app/test/instagram-cp2-final-clock.e2e-spec.ts",
+        "api-app/test/instagram-cp2-finalization.e2e-spec.ts",
+        "api-app/test/instagram-cp2.e2e-spec.ts",
+        "api-app/test/instagram-cp2-residual.e2e-spec.ts",
+        "api-app/test/instagram-cp2-binding.e2e-spec.ts",
+        "api-app/test/instagram-cp2-recovery.e2e-spec.ts",
+        "api-app/test/helpers.ts",
+        "foundation_documentation/todos/active/features/TODO-leadshug-instagram-channel.md"
+      ]
+    }
+  ]
+}

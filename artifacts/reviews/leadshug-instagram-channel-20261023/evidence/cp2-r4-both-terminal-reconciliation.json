@@ -1,0 +1,29 @@
+{
+  "kind": "cp2-r4-both-terminal-root-reconciliation",
+  "sourceManifest": "cp2-r3-source-frozen-manifest-16.json",
+  "reviewInputFreeze": "adherence-cp2-r4-input-freeze.json",
+  "fullApiReceipt": "cp2-api-full-r4-result.json",
+  "rootMatched": {
+    "sources": 241,
+    "todo": true,
+    "boundInputs": 77,
+    "reviewEvidence": 61,
+    "reviewPackage": true,
+    "reviewOutputs": {
+      "adherence-cp2-r4-result.json": "dc7ca0ad8a7eea3a50ee7f418af137157cbb2d9160c49daa003d253762a3e771",
+      "adherence-cp2-r4-collection.json": "0d4c5044d3ec50a6ffa69d2f91c461b01c60e867238ed403cbc82d72903edbdf",
+      "adherence-cp2-r4-merge.json": "cc7fd6afd06fab763c96e0b70d8add0c087eee9b64648ba1375a5ed573bcb436",
+      "adherence-cp2-r4-merge.md": "d64b3d413c30e0a4ea446e274b1ab2354ac8cbdb78cedbc8f7e1ce0c34721421"
+    },
+    "preserved": 35,
+    "index": [
+      "160000 5db3fbe2043428749895fc3ff6441e9457467dd0 0\tapi-app",
+      "160000 40828a20f2d6c3a1443e7ee132f42483840d6abb 0\tfoundation_documentation",
+      "160000 6c99c27dafdce8ed9b461d17aaaaa491b8ae16e9 0\tweb-app"
+    ]
+  },
+  "reviewerCompleteTerminal": true,
+  "validatorCompleteTerminal": true,
+  "qualification": "R4complete62actualsources/all16/5axes changesrequired; fullAPIcurrent398unit549E2E passed independently matchedfreeze. No CP2acceptance, primaryobserver/humanproposal waiver or CP3..CP6 reduction.",
+  "next": "Rootadjudicate all5sameIDs and exactproofclosures; thawonlyone newapproved-globtestfile for realPG causalproof, productionunchanged."
+}

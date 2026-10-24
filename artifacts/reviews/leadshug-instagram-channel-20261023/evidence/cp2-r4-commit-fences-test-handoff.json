@@ -1,0 +1,37 @@
+{
+  "kind": "cp2-r4-commit-fences-test-only-handoff17",
+  "status": "ApprovedexistingWHAT HOW; executeonlyafterauthorityGO andallpriorlanesterminal",
+  "ownedPaths": [
+    "api-app/test/instagram-cp2-commit-fences.e2e-spec.ts"
+  ],
+  "productionUnchanged": "All241existing source16paths remain exact frozen cp2-r3-source-frozen-manifest-16.json; especiallyservicefce5e125...",
+  "routing": "routing-cp2-r2-test-only.json GO gpt-6-luna medium",
+  "readEvidence": [
+    "adherence-cp2-r4-result.json",
+    "cp2-r4-root-adjudication.json",
+    "cp2-r4-final-boundary-proof-preparation.json",
+    "cp2-r3-source-validation-16-result.json",
+    "cp2-api-full-r4-result.json",
+    "cp2-r3-test-preexecution-alignment.json",
+    "cp2-r3-test-preexecution-main-alignment.json"
+  ],
+  "readSource": [
+    "api-app/src/domain/channels/instagram-authorization.service.ts",
+    "api-app/src/integrations/instagram/instagram-http.client.ts",
+    "api-app/src/infra/session/session.service.ts",
+    "api-app/test/helpers.ts",
+    "api-app/test/instagram-cp2-final-clock.e2e-spec.ts",
+    "api-app/test/instagram-cp2-finalization.e2e-spec.ts",
+    "api-app/test/instagram-cp2-residual.e2e-spec.ts"
+  ],
+  "requiredCases": "Sixminimum cases: each ofthree exactstaticboundaries has actualPG wait/queuedobservation andequal-duration livecontrol; useexistingactualNest/BFF/samePrisma/nativeSessionService andfakeonlyexternalHTTP. No domaindirect call/mocks toskipboundary. Fullpreparationfilecontainsdetaileddesign.",
+  "casePrecision": [
+    "Mappingcandidate->active finalUPDATE withactualproviderexpires_in62 vscontrol65, source16eligible>60sbeforewait then2.2s crossedactualmargin, normal5sTX. Responsemayalready409 due latercredentialguard: decisiveproof is rollback/noactivepromotion/owner/channel/credential/candidate preservation, zero NEWsubscriptionPOST. Capture safeactualsnapshotcounts/status/booleanfacts beforefirstfailingassert; no token/code/state/rawcipher dumps. Controls mustreachactualonepromotion/onePOST/pendingreceipt.",
+    "PreHTTP mappedattemptTTL: deliberatelyshortenpersistedexpiresAt whilefuture beforeconfirm. RealBEFOREUPDATEsubscriptionclaim OBSERVING wait crossesTTL whilephase40s/session/credentiallive. Responsemayalready409 duefinalguard: decisiveassertion zero NEWsubscriptionPOST (exclude3earlierOAuthHTTP) afteractualwait/expiredTTL. MappinglegitimatelycommittedwhileTTLlive isnot rolledback retroactively; preservecorrectexistingfacts. Matchedsamewait liveTTL control actuallyonePOST. Labelshortenedmetadata robustness, notnatural10minexpiry.",
+    "PostCOMMITacquisitioncleanup: NativeSessionService.assinar(uid,historicalissuedAt) yields signed~2s remainingexpiry withoutmockingverification/time. ActualDEFERRABLEINITIALLYDEFERRED AFTERROWtrigger onlyclaim OBSERVING obtainsPGlock atCOMMIT afterhandlerchecks. Observewait+stillvalidsession, letnativenaturalexpiry occur normalTX<5s, releaseCOMMIT. Source16actual401/zeroNEWHTTP butcommittedcounter1/tombstone/attemptlease; bindingexactoriginalholder mustbereleased notretained. Liveequalwaitsessioncontrol onePOST andnormalrelease. Preserve counters/cooldown/tombstone/independentfacts; no inventedrequestreset/nonce change."
+  ],
+  "fixtures": "One newtestfile maycontain boundedprivate testfixtures/barrier/trigger functions, no exportedframework. Existinghelpersreadonly, no /messagesextensionneeded. Eachcaseuniqueaccount/attempt/owner asneeded; actualOAuth andstates, exactuniqueaccountlookup notfindFirstambiguous. No actorquota/timer/txnlimit increases. PersistedIDs areTEXT, no ::uuid equality cast. Prisma queryRaw pgvoid results ::text AS locked. ConstrainttriggerONLYspecificattempt/state.",
+  "cleanup": "Finitebounded PGbarriers, actualqueuedstate observations and clockeligibility crossing BEFOREoutcome; releaseholder synchronously/idempotently; awaitHTTP+holdertasks inallfinally BEFOREdroppingtrigger/function. Avoid detachedasync/doublecleanup, pooledPIDinequality andsleep-only evidence. No silent swallowedassertion/skip/relaxation.",
+  "forbidden": "NO tests/lint/build/runner/Git/worktrees/copies/docswrites/private.env*real/.local-files/processenv/args/operationalDB/logs/containerinventory/runtime/Meta/provider/network. Onlynewtestfilewrites. RootownsT/evidence. No rootguard/finalcodefix now.",
+  "completion": "Returnterminal exactnewfileSHA/newtests names/boundedreadset andNOTRUN. Rootwillcheckall241unchanged/35preserved/3index, thawdocumentledger, freeze242/currentT/inputs andassignseparatecausalvalidator17. No sourceeditduringrunner. FullAPI/currentfreshreview andindependentCP3followsafetyreconciliation; allprimary/pendinghuman/CP3..CP6 mandatory."
+}

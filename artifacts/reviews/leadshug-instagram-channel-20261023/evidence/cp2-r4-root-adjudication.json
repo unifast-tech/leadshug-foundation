@@ -1,0 +1,62 @@
+{
+  "kind": "cp2-r4-root-adjudication",
+  "review": "adherence-cp2-r4-result.json",
+  "strictMerge": "PASS exit0; complete62actualsources/fullT/61evidence/all16/5axes",
+  "bothTerminal": "cp2-r4-both-terminal-reconciliation.json",
+  "currentCompleteApi": "cp2-api-full-r4-result.json; independentlyrootmatched398unit/549E2E; excludedfromfrozenreviewinputs andnotreadbyreviewer",
+  "disposition": [
+    {
+      "ids": [
+        "IG-SUBPROTO-01",
+        "IG-SUBREC-03"
+      ],
+      "resolution": "Integrated",
+      "classification": "release-blocker",
+      "status": "open; ownprimaryobserver unsupported/unaccepted; no protocol/identity/config/provider-investigation inference"
+    },
+    {
+      "ids": [
+        "IG-CP2-ROOT-02"
+      ],
+      "resolution": "Integrated",
+      "classification": "release-blocker",
+      "governingSeverity": "high retained, reviewer mediumstatic residual doesnotdowngrade",
+      "status": "open finalmappingpostUPDATEclock +mappedpreHTTPattemptTTL; preserve sixqualifiedsource16GREENrepairs",
+      "proof": "SpecificnewcausalPGwait/matchedcontrols needed; currentlystatic notexecutedexploit"
+    },
+    {
+      "ids": [
+        "IG-SUBREC-02"
+      ],
+      "resolution": "Integrated",
+      "classification": "release-blocker",
+      "governingSeverity": "high retained",
+      "status": "open acquisitionpostCOMMITsessionrejectionbeforefinally; source16settledcontinuation/GETtuple/SQLfaultcleanup supported",
+      "proof": "ActualdeferredCOMMITwait/naturalsignedexpiry/matchedcontrol needed"
+    },
+    {
+      "ids": [
+        "IG-CP2-R1-04"
+      ],
+      "resolution": "Integrated",
+      "classification": "release-blocker",
+      "status": "open pending exact human sessioncompanion admission; no source waiver"
+    },
+    {
+      "ids": [
+        "IG-CP2-R1-06"
+      ],
+      "resolution": "Integrated",
+      "classification": "release-blocker",
+      "status": "open exactnewboundaryproof/primary/precontroller plusfinalconsumers/gates; strict20/config9/realNestquota/current-usabilityreplay/recovery nowactuallysupported"
+    }
+  ],
+  "qualifiedClosures": {
+    "IG-CP2-ROOT-08": "Originalmidrun-edit sourceproof defect replacedby stable241/T/77 selected16+currentfullAPI andcompleteR4actualsource review; GREEN05 staysinvalid. No overallcorrectness/featureacceptance.",
+    "IG-CP2-ROOT-09": "Originalbackupinstruction/emptydiffinference replacedby currentprincipal/publicsource actualbodyreview plusstablefullAPI. R4filename-onlybootstrap discovery noted separately: notopened/used, exactpath reminder enforced, no inventedcontent/credentialexposure; no copyingorbaselineinference frombackup. FullCP5audit stillmandatory.",
+    "IG-CP2-ROOT-15": "Exactprofessional/channel selection passedselected16andunfiltered549; historicalR3 fixturefailure notproductioningressregression."
+  },
+  "processPrecision": "R4honestcapacitycontinuations retainedsamecompletepackage/model/inputs untilall62read; no reducedscope, no falsepartialmerge, strictfinalcollectioncomplete. Rootreconciled source/evidence/output/preservation/index.",
+  "next": "Test-onlyoneNEWapproved-globinstagram-cp2-commit-fences.e2e-spec.ts, sixminimumactualboundarycases+controls, no source/runner; all241source16pathsunchanged. Rootfreeze/separatecausal17; thenonecoherentremainingownerrepair, currentvalidation/review andindependentCP3underrecordedsequencing.",
+  "notGranted": "No pendingbytes/privacy/middleware admission, primarywaiver, CP2/featureacceptance, private/runtime/Meta/provider/Gitcode authority. WholeCP3..CP6/allconsumers/ALL/stress/assurance/physical remain."
+}

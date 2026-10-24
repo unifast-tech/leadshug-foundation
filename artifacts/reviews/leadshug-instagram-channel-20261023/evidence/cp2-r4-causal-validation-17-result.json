@@ -1,0 +1,26 @@
+{
+  "kind": "cp2-r4-causal-validation17-terminal-before-e2e",
+  "command": "bash scripts/test-channels-local.sh api-instagram",
+  "times": 1,
+  "exit": 1,
+  "migrations": 31,
+  "lint": "PASS",
+  "build": "PASS",
+  "unit": {
+    "files": 37,
+    "passed": 397,
+    "failed": 1
+  },
+  "e2e": "NOT STARTED; all6new and prior91unreached",
+  "failure": "instagram-http.client.spec.ts native response.json deadline elapsed1499ms against unchanged875ms; bodyStarted and guardCompleted true; Vitest monotonic case duration721ms. Distinct time-source discrepancy suggests wall-clock measurement is confounded; does not prove a provider cancellation regression or any of three new boundary defects.",
+  "log": "cp2-r4-causal-validation-17.log",
+  "logSha256": "84e78f0514782c21f65681542cb87532b2244278edfbff770439e24339d04549",
+  "rootPostMatched": {
+    "sources": 242,
+    "todo": true,
+    "inputs": 93,
+    "preserved": 35,
+    "index": 3
+  },
+  "next": "One test-only unit elapsed-measurement refinement to monotonic performance.now, preserving Date.now absolute provider deadline, native realHTTP, abort and threshold875; then separate one complete canonical run. No product repair or weaker assertion from17."
+}
