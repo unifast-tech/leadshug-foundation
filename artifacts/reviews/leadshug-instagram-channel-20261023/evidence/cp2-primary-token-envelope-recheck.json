@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-24",
+  "kind": "public-primary-protocol-recheck",
+  "retrieval": "web tool inaccessible; direct public HTTPS urllib returned200, no credential/provider API requests",
+  "businessLogin": {
+    "url": "https://developers.facebook.com/documentation/instagram-platform/instagram-api-with-instagram-login/business-login",
+    "status": 200,
+    "sha256": "c812d7f85c005c20e839be7c34e92a49855ad638873c8602e2c1960e7d95cafd",
+    "observations": [
+      "Current code example wraps one token record in data array.",
+      "user_id is a quoted string placeholder, distinct from professional /me identity.",
+      "permissions is shown as comma-separated string, not an array. Validate actual decoded scope set against required permissions.",
+      "Sample does not prove every live envelope variation; fail closed on ambiguous/multiple records and malformed identity. No numeric coercion is authorized."
+    ]
+  },
+  "accessTokenReference": {
+    "url": "https://developers.facebook.com/documentation/instagram-platform/reference/access_token",
+    "status": 200,
+    "sha256": "0a526c769b9b2cb20e263f1a9ccc86ac62e387c15d35e1becd55e360e48e6e16"
+  },
+  "authority": "Concrete decoder HOW for approved protocol, not new scope/behavior/private/runtime authority. Original primary contract remains; no live grant or real delivery proof."
+}

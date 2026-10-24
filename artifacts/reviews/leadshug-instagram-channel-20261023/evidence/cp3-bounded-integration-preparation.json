@@ -1,0 +1,76 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-24",
+  "kind": "read-only-advisory-cp3-preparation",
+  "authority": "Preparation only, no CP3 execution or acceptance. CP2 sole writer active; recheck actual source before CP3. Derived from approved ST-IG-03v1.3.",
+  "reader": "instagram_cp3_preparation_reader; gpt-6-luna medium; routing-preparation-cp3.json GO",
+  "owners": [
+    "OutboundService single regular/initial sender and ACK classification; DispatchAdmissionService reservation/lease/nonces/idempotency/recovery; InitialMessageService preview/options; MessageAcceptanceService common durable acceptance.",
+    "OfficialChannelWindowPolicy current qualified official WA timestamp; wrap it behind small ChannelEligibilityPolicy resolved with operation, IG policy24h exact qualified INtext; no new Channel methods/catalog.",
+    "PrismaChannelResolver currently latest adapter/sole available channel, cannot govern multiaccount routing; use explicit immutable route/captured tuple and exact provider/credential.",
+    "IncomingService Typebot activation currently generic INtext; explicitly prove WA eligibility before bot trigger/session. IG never initial/automation."
+  ],
+  "approvedCutover": "Every new writer uses the strict schemaVersion=2 tuple. The exact untagged v1 reader only reads/replays/locally completes proven facts. Preserve request, canonical request, fingerprint, context, nonce, originalConversation.updatedAt, deadlines, actor, receipt and IDs. PREPARED retains the original exclusion until expiry and local proof of no dispatch. SENDING stays held, then classifies ambiguous locally. AMBIGUOUS/UNCERTAIN requires explicit risk acknowledgement after the original deadline. EXTERNAL_ACCEPTED states complete locally from the exact receipt and original proved association. Terminal facts remain untouched; unknown versions or unproved mappings block. No rehash, v1-to-v2 conversion, HTTP retry, ACK erasure or BU.phone inference.",
+  "currentRiskyAssumptionsToRecheck": [
+    "Outbound directly injects the WhatsApp window policy, consumes v1 context and uses conversation.contact as recipient.",
+    "Resolver selection by latest.channelOrigin or sole available channel cannot identify the route/account; this is an approved CP3 obligation, not a new CP1 defect.",
+    "Initial options take(10) silently truncates inventory. Initial conversation stays WhatsApp-only; connection and route catalogs need explicit pagination.",
+    "HistoricoService uses conversation.contact and BU.phone. Consultar list, drilldown and CSV require qualified WhatsApp identity and the proved resource phone.",
+    "Public controller projects b.channels without a platform subset. Legacy projection allows at most two compatible WhatsApp bindings and no Instagram hydration."
+  ],
+  "testFirstObligations": [
+    {
+      "id": "CP3-ROUTE",
+      "proof": "Real BFF options-to-post across two Instagram accounts in the same BU and same opaque peer: only the selected account transport is called. Stale account/generation/context, new input on another route, another contact in the same BU or another provider resource fails before HTTP."
+    },
+    {
+      "id": "CP3-POLICY",
+      "proof": "Only original qualified signed IN text for the exact account/peer opens 24 hours. Wrong account, echo, OUT, invalid/old/future timestamp and expiry fail before claim or HTTP. Instagram initial and automation fail before claim or Typebot."
+    },
+    {
+      "id": "CP3-WA",
+      "proof": "Official and Evolution adapters for the same proved business resource preserve latest-message selection, window, send format and BFF/public/Typebot/Consultar scenarios."
+    },
+    {
+      "id": "CP3-V1",
+      "proof": "Actual PostgreSQL fixtures cover every v1 state and compare all preserved fields before and after. Known ACK completes one local Message with original actor/content/time/provider ID and zero HTTP. Unknown/unproved association remains blocked; exclusion, deadlines and originalConversation.updatedAt persist."
+    },
+    {
+      "id": "CP3-CONSULTAR",
+      "proof": "List, drilldown and CSV cover WhatsApp-only, mixed and Instagram-only BUs plus numeric Instagram peer collision. Preserve prior pagination/count/filter/CSV behavior with no Instagram leak."
+    },
+    {
+      "id": "CP3-PUBLIC",
+      "proof": "API v1 accounts, conversations, messages, claim and release remain WhatsApp-only and tenant-scoped. They never interpret IGSID as a phone."
+    }
+  ],
+  "explicitPublicReadSet": [
+    "api-app/src/domain/channels/transport/channel.ts",
+    "api-app/src/domain/inbox/outbound.service.ts",
+    "api-app/src/domain/inbox/initial-message.service.ts",
+    "api-app/src/domain/inbox/dispatch-admission.service.ts",
+    "api-app/src/domain/inbox/conversation-start.service.ts",
+    "api-app/src/domain/inbox/channel-window-policy.ts",
+    "api-app/src/domain/inbox/historico.service.ts",
+    "api-app/src/domain/inbox/conversations.service.ts",
+    "api-app/src/domain/inbox/incoming.service.ts",
+    "api-app/src/integrations/channels/channel-adapter-registry.ts",
+    "api-app/src/integrations/channels/prisma-channel-resolver.ts",
+    "api-app/src/integrations/channels/meta-channel.ts",
+    "api-app/src/integrations/channels/evolution-channel.ts",
+    "api-app/src/surfaces/bff/conversations.controller.ts",
+    "api-app/src/surfaces/public/conversations.controller.ts",
+    "api-app/test/initial-message.e2e-spec.ts",
+    "api-app/test/dispatch-admission.e2e-spec.ts",
+    "api-app/test/channel-transport.e2e-spec.ts",
+    "api-app/test/api-publica.e2e-spec.ts",
+    "api-app/test/number-onboarding-typebot.e2e-spec.ts"
+  ],
+  "immediatePublicDependencies": [
+    "api-app/src/domain/inbox/message-acceptance.service.ts",
+    "api-app/src/domain/channels/channel-credential-resolver.ts",
+    "api-app/src/integrations/channels/channel-transport.module.ts",
+    "api-app/src/integrations/channels/channel-adapter-factory.ts"
+  ],
+  "noEvidenceClaim": "No tests/sourcechanges/runtime/network/Git/private inputs. This advisory is not a frozen manifest or review finding; root must recheck materially changed source and explicitpath admission before execution."
+}

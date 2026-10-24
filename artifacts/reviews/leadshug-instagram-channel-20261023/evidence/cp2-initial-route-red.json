@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-24",
+  "kind": "cp2-initial-causal-route-red",
+  "command": "bash scripts/test-channels-local.sh api-instagram",
+  "exit": 1,
+  "log": "foundation_documentation/artifacts/tmp/instagram-channel-implementation/cp2-red-initial-01.log",
+  "sha256": "15f220ed91238baa8de073f9e7ebc8ba76a3cefc8f791b50713e68f3184b5e62",
+  "unitPassed": 395,
+  "integration": {
+    "passed": 33,
+    "failed": 2,
+    "total": 35,
+    "files": 4
+  },
+  "causality": "Two new challenge/unsigned ingress assertions fail on actual missingGET/POST /webhooks/instagram404; existing authenticated BFFsession rejects unauthenticated authorization401 as expected. No compile/setup failure. This proves absentroutes only, not later OAuth/signature/DB behavior.",
+  "executorReportedNewSpecSha256": "ae8f0307380b2b60fdf32ab526bc70ab50febedac124f6835e9b3d04795a3e92",
+  "qualification": "No separate root39source preREDseal claimed. Exactnewsourcepath and order of production edits requested; detailed16case proof stillrequired beforeCP2acceptance.",
+  "storage": "Exact synthetic /tmp log reported by executor copied byte-for-byte to canonical public artifact path; no other /tmp read/inventory.",
+  "executorReportedOrder": {
+    "newSpec": "api-app/test/instagram-cp2.e2e-spec.ts",
+    "productionEditsBeforeRed": false,
+    "firstProductionEdit": "after terminalRED",
+    "basis": "Executor explicit report; rootlog hash/actual404summaries independently matched, no separate39source preREDseal claimed."
+  }
+}

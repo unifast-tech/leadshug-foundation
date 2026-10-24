@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-24",
+  "kind": "advisory-frontend-preparation",
+  "state": "Preparation only; CP4 execution waits accepted CP2 and CP3. No source/runtime authority added.",
+  "basis": [
+    "Approved complete TODO Frontend / Consumer Matrix and Flow Evidence Planning Matrix",
+    "Bounded public reads of web-app/src/telas/Numeros.tsx and Inbox.tsx; mutable source, recheck before execution."
+  ],
+  "observations": [
+    "Numeros currently derives its cards from legacy bu.channels and treats every nonofficial type as unofficial WhatsApp. Keep that legacy projection bounded to compatible WhatsApp and use the approved explicit paged connection catalog for Instagram.",
+    "Existing /numeros route and sidebar stay reachable without changing protected App.tsx. The admitted page may present numbers and channel connections with explicit Instagram account information; no new route needed.",
+    "Inbox currently shows janela.canal and imports the WhatsApp initial-message flow. Ordinary replies need server-owned route/channel options and captured context; initial by telephone and approved templates remain WhatsApp-only."
+  ],
+  "approvedProofObligations": [
+    "Connect, confirm, pending receipt, cancel and reauthorize persist through reload; ADMIN+ controls scoped to selected BU.",
+    "Two Instagram accounts in one BU with same opaque peer remain distinct; select exact route/account, preserve draft while context changes, block stale submit before HTTP; BU A→B→A cannot render or submit late A/B responses.",
+    "Qualified current text window displays eligible or blocked state honestly. No direct Instagram initial conversation, template or automation option.",
+    "WA onboarding, regular reply, first-send text/template and Modelos regressions retained with real backend.",
+    "Catalog pages expose continuation (default20/max50), never silently truncate or hydrate all Instagram into legacy bu.channels. No provider fan-out per card/conversation."
+  ],
+  "browserHarnessIdea": "Fake only external Instagram OAuth popup/request and provider HTTP at their explicit boundaries; preserve real Nest session/CSRF/state/CAS/PostgreSQL. A Playwright interception of the fixed provider authorization page may navigate the real configured callback with synthetic code/state; never intercept BFF domain responses or fabricate DB outcomes. Recheck canonical browser-server.cjs and freshness owners before implementation.",
+  "display": "Show account/platform and known username/name. Unknown peer can use a clear Instagram-contact label; do not display opaque IGSID as telephone or fetch profiles per list row.",
+  "laterDevOps": "Serialized root runner/gateway/CI owner handles route-only8MiB ingress and16KiB OAuth parity, callback-query log suppression, explicit synthetic configuration, current bundle/backend proof and positive public freshness inventory. No actual env or tunnel work authorized.",
+  "privacyBoundary": "Existing public policy companion remains proposed and unapplied. Recheck actual completed data flow and review the concrete public-file diff before requesting its explicit admission if needed; no premature approval request or legal/retention promise."
+}
