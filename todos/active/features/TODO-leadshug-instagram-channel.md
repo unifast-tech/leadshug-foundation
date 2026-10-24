@@ -31,7 +31,7 @@ Este TODO define WHAT, exclusões e critérios de entrega. A baseline v1.3 abaix
 ## Delivery Status Canon (Required)
 - **Current delivery stage:** Pending
 - **Qualifiers:** none
-- **Next exact step:** adaptar fixtures15 conforme cp3-fixture-lane15-handoff.json após core14 terminal/root reconciliado (254fontes públicas, NOTRUN). Depois fixtures16 e validação canônica consolidada; última execução fonte10(406unit/97de103E2E), sem aceite de checkpoint.
+- **Next exact step:** selar a candidata17 (254fontes públicas) e executar uma validação canônica completa da API conforme cp3-api18-validation-handoff.json. Todos os writers estão terminais; nenhuma fonte/T/input muda durante a rodada. Última execução anterior: fonte10(406unit/97de103E2E); fontes11..17 ainda NOTRUN, sem aceite de checkpoint.
 
 ## Active Work State (Required While TODO Remains In `active/`)
 - **Work state:** implementation
@@ -1344,6 +1344,7 @@ Source03 is terminal and explicitly incomplete. Root matched14 changed existing 
 | IG-CP3-ROOT-04 | medium | release-blocker | retain corrected provenance in this TODO | writer-path discipline and originalCP2 preservation | corrected qualified | cp3-source03-boundary-correction04.json; own additions removed exactly before any runner |
 | IG-CP3-ROOT-05 | high | release-blocker | fix in this TODO | SCOPE02/06 actual verified WA ingress must establish reply route | open; shared acceptance repair14 | cp3-message-acceptance-wa-ingress14-handoff.json |
 | IG-CP3-ROOT-06 | high | release-blocker | fix in this TODO | canonical peer identity must govern acceptance while preserving legacy presentation | open; shared acceptance repair14 | cp3-message-acceptance-wa-ingress14-handoff.json |
+| IG-CP3-ROOT-07 | high | release-blocker | fix in this TODO | identity/contact-advisory/conversation lock order shared acceptance | open; source16 companion repairs newly introduced ordering before callback; no dynamic deadlock claimed | cp3-fixture16-lock-order-companion.json |
 
 Root authorized only removal of the writer's accidental send method from the sealed OAuth client and four IG widenings plus the remaining own SQL cast from the sealed official window policy. Exact original hashes were reconstructed in memory and independently verified after correction; no Git restore, private backup or user-work discard occurred. The outgoing implementation moved into the already admitted new messaging client. These corrections add no human scope/WHAT deviation. The read-only CP4 advisor incidentally observed the changed OAuth hash while checking config; that read is not frozen or final-source evidence.
 
@@ -1419,3 +1420,27 @@ Root encontrou duas lacunas adicionais no owner comum: ingresso WA autenticado a
 Root conferiu254fontes públicas, somente MessageAcceptance alterado e um spec novo;35preservações e3índices mantidos. A correção usa identidade canônica para entradas/eco/resultados/diagnóstico, mantém display legado e deriva rota apenas de ingresso atual comprovado. Foram corrigidos estaticamente o enum do guard, a comparação de telefone formatado e o eco com conversa explícita; nenhuma execução ocorreu. Findings ROOT05/06 continuam abertos até validação/revisão.
 
 Fixtures seguem serializadas em `cp3-fixture-lane15-handoff.json` (helpers/atendimento/transporte/boundaries) e `cp3-fixture-lane16-handoff.json` (initial/admission/public/history). WABA é opção explícita para recurso operacional atual, defaultnull preservado. Rotas sintéticas são opt-in apenas para conversas manualmente semeadas; ingresso real deve criá-las no produto. Abertura/preview inicial continua com o owner real de rota, sem efeito global na fixture; seeds históricos V1 e templates preservados. Correções estáticas de fixture não provam o produto e não dispensam a suíte atual completa.
+
+
+### Fixtures15 terminal — conferência estática e próxima lane16
+Root conferiu254fontes e somente5caminhos admitidos alterados, com35preservados. Os25/17cenários e89/59linhas de asserts de domínio originais foram mantidos; transporte acrescenta2asserts. O helper thenable foi corrigido antes de rodar, preservando o início não bloqueante dos testes com envio retido. Seeder permanece sem prova por default, e o empate conserva as linhas originais. No serviço, root reconstruiu o hash14 exato ao inverter somente as duas assinaturas de helpers. Isso é conferência estática, não GREEN/TQA/aceite. cp3-fixture15-terminal-reconciliation.json contém qualificações completas.
+
+Correção da preparação: a comparação RAM do arquivo original confirma que o caso public claimoverlap já tinha uma IN; fonte15 a qualifica no lugar, sem acrescentar mensagem. A leitura anterior que afirmou ausência de IN fica invalidada. Somente pinned-bot recebe a IN anterior adicional autorizada. Lane16 inclui quatro E2E e dois companions unitários já dentro de inbox/**; depois os consumidores onboarding remanescentes exigem fixtures canônicas próprias, sem reduzir EPS/RLS/counters. Nenhuma execução ocorreu nas fontes11..15.
+
+
+### Source16 lock-order discovery and remaining onboarding fixtures
+A revisão estática encontrou o novo lock canônico adquirido após o callback inicial que pode bloquear a conversa. O companion16 corrige a ordem real no serviço comum, preservando o oracle do teste em vez de adaptá-lo à inversão; ainda sem execução ou prova de deadlock. A fixture de quota também separa a conta dos60novosV2 da conta dos60seedsV1 para impedir um falso positivo, e os dois POSTs de settlement restantes devem capturar contexto nativo.
+
+A preparação17 ficou em três specs onboarding já admitidos. Root verificou que o caso PCV500 é somente SQL EXPLAIN/latestRows, não endpoint; essa amostra inteira deve permanecer sem rota e sem nova prova WABA. Só30/25pais dos endpoints e o caso único de janela necessitam rotas sintéticas antes da medição; helper atual é suficiente. A inferência anterior do advisor de que500rotas e um helper bulk novo seriam necessários foi rejeitada antes de qualquer edição. O caso caller-scoping recebe pré-condição IN oficial qualificada para responder, sem se apresentar como teste de primeiro envio.
+
+Preparações CP4 em cp4-readonly-preparation18-root-qualified.json e cp4-live-ingress-preparation19.json não implementam/validam UI. O ingresso IG atual grava pelo owner comum, mas não publica evento de realtime; o Atendimento usa WS e fallback60s. A integração posterior deve completar esse consumidor, preservando dedup/zeroTypebot/escopo e revalidando a candidata inteira.
+
+
+### Fixtures16 terminal — candidata ainda não executada
+Root conferiu254fontes, exatamente7caminhos alterados e35preservações. Comparação das quatro E2E retém declarações e linhas de assertions originais, acrescentando0/60na quota; units estendem a ordem canônica sem perder callback-beforetimestamp/insert nem no-rewrite de eco. A tentativa de criar segundo Official na mesma BU foi rejeitada estaticamente pelo índice parcial e removida antes de rodar. SeedsV1 guardam conta histórica987654321; novas60reservas usam123456789, e o outro tenant prova a conta compartilhada atual por contextoV2 real. Lock canônico é adquirido uma vez antes do callback e reutilizado. cp3-fixture16-terminal-reconciliation.json registra as qualificações; não há GREEN ou aceite. Próxima lane17 limitada aos três specs onboarding preparados, seguida de validação completa da API.
+
+
+### Fixtures17 terminal — candidata completa API preparada
+Root conferiu254fontes públicas, somente os três onboarding specs admitidos alterados,35preservações e3índices mantidos. Diffs completos em relação aos originais RAM confirmam qualificações de fixture sem remover/assert/frouxar métricas, preservando500rawSQL e outras amostras. Caller recebe uma IN pública assinada antes do trigger, mantendo o propósito de credencial por recurso; isso não prova primeiro envio. Typebot conserva o ingresso real e somente declara WABA atual. PCV acrescenta rotas selecionadas antes das medições30/25, sem novo helper/per-row durante o request. Prova estática em cp3-fixture17-terminal-reconciliation.json, ainda NOTRUN.
+
+Todos os writers ficam terminais e a candidata254/T/inputs positivos será selada para UMA execução canônica completa da API conforme cp3-api18-validation-handoff.json. Não haverá autofix, retry interno ou mutação durante a rodada. A adjudicação posterior separa compilação/fixture/reachability/produto e medidas; não inferir GREEN ou aceite dos testes não alcançados. CP2primary, pendências humanas, consumidorUI/realtime/browser e demais gates permanecem abertos.

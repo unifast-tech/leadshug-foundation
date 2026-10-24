@@ -1,0 +1,15 @@
+{
+  "kind": "cp3-fixture16-canonical-lock-order-companion",
+  "date": "2026-10-24",
+  "authority": "Approved shared acceptance/lock ordering contract; actual core14 added canonical advisory acquisition after initial conversation CAS callback, violating identity-to-canonical-contact-to-conversation order. Fix actual product order, not weaken new unit oracle.",
+  "additionalOwnedPath": "api-app/src/domain/inbox/message-acceptance.service.ts",
+  "baselineSha256": "59ecd5470a7273e527f479de12208155765d613f6e9aaed40ab68f7a423989bf",
+  "requirements": [
+    "acceptInTransaction after held currentidentity and keyedprior read must resolve/lock exactcanonicalpeer BEFORE beforeConversationMutation callback (which maylockconversation). Reuse capturedvalidatedpeer in reconcile/acceptIncomingConversation/loadOutboundConversation; mandatorynarrowparam, no secondresolve/advisory aftercallback or optionalbypass. Preserve callbackbefore anyconversation timestamp/keyedinsert, no providerHTTP undertransaction.",
+    "recordAmbiguousOutbound already identity->resolvePeer->conversation; preserve. KnownV1sender recovery stilllocal/no-routefabrication. No coreotherpath, schema, runtime or policychanges.",
+    "Unit originalcallback-beforetimestamp/insert oracle retained. New canonicalcontact lock must sit before originalCAS, not change assertion to permit inversion. Unitsequencematches sourceordering afterrepair.",
+    "Dispatch rate fixture: first60 currentV2reservations use account123456789. Legacy60 REJECTED V1seeds and otherTenantCURRENTchannel must share DIFFERENT explicit syntheticWABA/accountRef so priorcurrent60 cannot falsely satisfy crossTenantquota iflegacyseedreadbreaks. Addnativecounts proving0matchingnewaccount beforelegacyseeds,60after; originalcount/provider/deadline oracles allretained.",
+    "Dispatch last2ordinary BFFPOSTs original710/740 stillold{texto}; use nativeGET tuple BEFORE rollback/readback fault instrumentation so reachactualprovider settlement invariants. Preserve alloriginalassertions. No testsrun."
+  ],
+  "restrictions": "Same solewriter16, exactlyadditionalservice plus alreadyowned6paths. Helpers readonly; use existingobterSelecaoRespostaV2. No runner/lint/build/test/Git/docs/private/runtime/network. Return updatedhashes + exactdiff obligations."
+}

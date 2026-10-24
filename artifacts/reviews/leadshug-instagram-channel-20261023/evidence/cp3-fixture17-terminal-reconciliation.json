@@ -1,0 +1,20 @@
+{
+  "kind": "root-static-terminal17-reconciliation",
+  "date": "2026-10-24",
+  "sources": 254,
+  "changedExisting": [
+    "api-app/test/number-onboarding-caller-scoping.e2e-spec.ts",
+    "api-app/test/number-onboarding-pcv.e2e-spec.ts",
+    "api-app/test/number-onboarding-typebot.e2e-spec.ts"
+  ],
+  "preserved": 35,
+  "rootIndex": [
+    "160000 5db3fbe2043428749895fc3ff6441e9457467dd0 0\tapi-app",
+    "160000 40828a20f2d6c3a1443e7ee132f42483840d6abb 0\tfoundation_documentation",
+    "160000 6c99c27dafdce8ed9b461d17aaaaa491b8ae16e9 0\tweb-app"
+  ],
+  "state": "NOTRUN; no checkpoint acceptance",
+  "actualDiff": "Root read full RAM-original diffs of3files. Caller exactlyoneactualsignedpublicIN added, existingBFFIN/timestampqualified and nativeV2tuple, existingBOTeventtimestamp. Typebot onlycurrentWABAoption. PCV exactsetupadditions30/25selectedroutes beforemeasurements, oneEvolutionwindow-scope route. No newhelper or500rawSQL/otherbudget/threshold/assert changes.",
+  "qualification": "Preexistingchangesinworkingtree werepreserved; emptyGitdiff/history isnotbaselineproof. Positivehash/RAMdiff only. New provideraccount/resource fixtures aredeclaredsynthetic, no productionproof or actualMeta call.",
+  "next": "Freeze254sources/currentT/positiveinputs for EXACTLYONE canonical bash scripts/test-channels-local.sh api. Allwriters terminal; no source/autofix/retryduringrun."
+}

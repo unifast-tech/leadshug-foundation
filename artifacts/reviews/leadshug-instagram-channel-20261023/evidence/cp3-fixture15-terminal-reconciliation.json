@@ -1,0 +1,60 @@
+{
+  "kind": "root-static-terminal-reconciliation15",
+  "date": "2026-10-24",
+  "sources": 254,
+  "changedExisting": [
+    "api-app/src/domain/inbox/message-acceptance.service.ts",
+    "api-app/test/atendimento.e2e-spec.ts",
+    "api-app/test/channel-transport.e2e-spec.ts",
+    "api-app/test/helpers.ts",
+    "api-app/test/instagram-consumer-boundaries.e2e-spec.ts"
+  ],
+  "preserved": 35,
+  "state": "NOTRUN; no acceptance",
+  "staticCounts": [
+    {
+      "path": "api-app/test/helpers.ts",
+      "scenariosBefore": 0,
+      "scenariosNow": 0,
+      "standaloneExpectBefore": 0,
+      "standaloneExpectNow": 0
+    },
+    {
+      "path": "api-app/test/atendimento.e2e-spec.ts",
+      "scenariosBefore": 25,
+      "scenariosNow": 25,
+      "standaloneExpectBefore": 89,
+      "standaloneExpectNow": 89
+    },
+    {
+      "path": "api-app/test/channel-transport.e2e-spec.ts",
+      "scenariosBefore": 17,
+      "scenariosNow": 17,
+      "standaloneExpectBefore": 59,
+      "standaloneExpectNow": 61
+    }
+  ],
+  "originalAssertionLines": [
+    {
+      "path": "api-app/test/atendimento.e2e-spec.ts",
+      "missingOriginalAssertionLines": [],
+      "additionalAssertionLines": []
+    },
+    {
+      "path": "api-app/test/channel-transport.e2e-spec.ts",
+      "missingOriginalAssertionLines": [],
+      "additionalAssertionLines": [
+        "expect(await prisma.message.count({ where: { conversationId } })).toBe(0);",
+        "expect(thread.body.janela).toMatchObject({ canal: 'NAO_OFICIAL' });"
+      ]
+    }
+  ],
+  "rootQualified": [
+    "Read full actual RAM diffs vs before15 originals; all original25/17cases and89/59standaloneassertions retained,2additional transportassertions. Counts/lines are static not test-quality or executionproof.",
+    "Reconstructed exact4531d8 source14 hash by reversing ONLYtwohelper parameter types; no other servicebehavior changed.",
+    "Fixed thenablehelper before any run; defaultseedunqualified and tie originalrows exact; actual metadata captures beforeparallel dispatch.",
+    "Correction to prep15/16: original retained RAM source proves public claimoverlap already contained one public inbound row. Current15qualifies that row INPLACE; no additionalIN there. Earlier no-IN claim invalidated. Pinned-bot case alone adds one older qualified OfficialIN, as explicitlyadjudicated.",
+    "Prior Python staticcount regex failed AFTER emitting diffs; no count proof from failedcommand. Corrected pureJS count/assertionline comparison recorded here."
+  ],
+  "remaining": "Next serialized16 fourE2E+twoUnitcompanions, then17remainingonboardingfixtures before canonicalfullAPI. No source/runtime/private/provider change or checkpoint waiver."
+}

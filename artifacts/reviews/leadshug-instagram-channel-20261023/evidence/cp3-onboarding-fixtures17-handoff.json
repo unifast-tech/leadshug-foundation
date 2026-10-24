@@ -1,0 +1,40 @@
+{
+  "kind": "cp3-qualified-onboarding-fixtures17-handoff",
+  "date": "2026-10-24",
+  "state": "PREPARED; only after16terminal/rootreconciled",
+  "authority": "Already approved test/*onboarding*.e2e-spec.ts fixture adaptations; no scope expansion",
+  "ownedPaths": [
+    "api-app/test/number-onboarding-caller-scoping.e2e-spec.ts",
+    "api-app/test/number-onboarding-typebot.e2e-spec.ts",
+    "api-app/test/number-onboarding-pcv.e2e-spec.ts"
+  ],
+  "baseline": [
+    {
+      "path": "api-app/test/number-onboarding-caller-scoping.e2e-spec.ts",
+      "sha256": "cdfdc7adc4c558a9787dcd8da212b5eede87b520774b278934f1d75c8488d5d1"
+    },
+    {
+      "path": "api-app/test/number-onboarding-typebot.e2e-spec.ts",
+      "sha256": "5c447913be4f9b2a2d699f96b43cfd9df837317897be372044b7f02dcf76e809"
+    },
+    {
+      "path": "api-app/test/number-onboarding-pcv.e2e-spec.ts",
+      "sha256": "b059087dace84e40dfe03132c87c02a43b2d21c8ea8306f8de9f691bb1bd1972"
+    }
+  ],
+  "rootQualifiedAdvisory": [
+    "Readonlyinventory17 predicted neededroutes for500row OUT-heavyPCV, but actual root fullcase read shows ONLY rawEXPLAIN/latestRows SQL, no endpoint. NOroute/currentWABA required there; preserve entire500case exactly. No newbulkroutehelper isneeded for that imaginarydependency.",
+    "Only30Officialpage and25Evolutionparents plusonewindow-scopecase require explicitroute setup before requestmeasurement. Existing single-route helper onthese bounded30/25fixtures is sufficient; do not addprospectivebulkframework/helper mutation.",
+    "Callerpublicoperation has NOhistory and Officialpolicy nowrequiresverifiedwindow regardlesslegacyfalsefixturefield. One actualsignedpublicIN beforebottriggercreation is admitted here, suppliescurrentroute/windowwithout automationextraOUT; preservepublicrequestcontract andexact3OUT/tokenassertions. Existingbot signedIN event also lacks timestamp; addvalidtimestamp tosameevent, no extraBOTmessage."
+  ],
+  "requirements": [
+    "Caller-scoping: explicit provedWabaId percurrentOfficialbinding, preservingdistinctsealedtokens andall3resources/BUgrants. ExistingBFFIN qualifyINPLACE selectedprovider identity/currentofficialInboundAt, explicitmanualroute, realnative reply-options tuple withBFFPOST. Public keepownrequestbody, admitoneactualsignedIN topublicresource/phone withtimestamp BEFOREcreatingbottrigger (no Typebotactivation), thenordinarypublicreply. ExistingBOTsignedIN getsoriginalactiontimestamp soverifiedwindow isqualified; no routeinjectionafterwebhook. Exact3credentialcalls/righttokenwrongresource rejection/3acceptedOUT remain. Documentchangedordinaryfixtureprecondition, notfirst-sendcapabilityproof.",
+    "Typebot: onlysharedOfficialfixture explicitcurrentWABA; preserveallninecases,trigger/sessionkeys,heldorigin/windowexpiry/retirement/nullID/two-textstop/echo/barriers/providercounts/queueunread exactly. RoutefromactualsignedIN through sharedproductionowner only.",
+    "PCV:30Officialpage currentWABA optin; explicitcanonicalroute for each30manuallyseededconversation viaexistinghelper before listener/request; preserve30latest+720oldertrustedIN and EXPLAIN/original4subsetquerycounts/zeroHTTP assertions. These counts are namedprojectioncategories, not allDBqueries.",
+    "PCV:25parentEvolution deep latestpage explicitselectedroute beforemeasurement, keep all12500roughhistoryrows/500perparent/ties/emptyfacts/limit4/lookahead/params/indexsort/loop/rowsremoved/hydrationassertions unchanged.",
+    "PCV:window-scope manuallyseededEvoIN keepsnoOfficialwindowproof; attach itscanonicalroute through explicitlyselectedEvolutionchannel only. OriginalzeroWindowQuery/oneLatestAnyQuery/availabletrue unchanged.",
+    "PCV500OUT-heavy rawEXPLAINcase/10kEPSidentitylookup/2000tombstones/24+1lookups/RLS5x6reads/indexlocktimeout/calibration allbytebodypreserved, no route or inferredwindow/change there. No threshold/timeout/iteration/assertweakening.",
+    "Allhelpers/product/otheroldtests/snapshotsV1/templates/CP2sources readonly. No fullproofclaim from staticqualification."
+  ],
+  "restrictions": "Soleprincipalcodewriter17 only3testpaths. No runner/test/lint/build/private/env/Git/runtime/network/Meta/docs/root/Web mutations. NohelpernewbulkAPI. Return3terminalhashes/precisechanges/remainingobligations. Fresh canonicalfullAPI afterallwriters terminal."
+}

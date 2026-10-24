@@ -1,0 +1,31 @@
+{
+  "kind": "cp4-live-ingress-preparation-root19",
+  "date": "2026-10-24",
+  "state": "READONLY preparation, not implemented/tested/accepted",
+  "readset": [
+    {
+      "path": "api-app/src/surfaces/webhooks/instagram.controller.ts",
+      "sha256": "611502e0a6a9bb8158e204edb0a031b65591bc07c29e61dd021790a3ad0ae9f0"
+    },
+    {
+      "path": "api-app/src/domain/inbox/incoming.service.ts",
+      "sha256": "62776c3152c3b486aade744c4daf4830d16d032aded69eee9e9a55b3fefc38f8"
+    },
+    {
+      "path": "api-app/src/surfaces/webhooks/webhooks.module.ts",
+      "sha256": "8fc09e2844fd002c18793d194be8ac471d75811b71ce24038a9948e27e5fb48f"
+    },
+    {
+      "path": "web-app/src/telas/Inbox.tsx",
+      "sha256": "66658161c7c74610288bf6c92583b616bacc1ada0fced27af01997ed22481737"
+    }
+  ],
+  "actualGap": "Instagram controller calls MessageAcceptance directly and never publishes RealtimeService. Inbox subscribes nativeBU-scoped WS and its fallbackpoll is60seconds. WA normalized ingress uses IncomingService, which publishes once on creationWinner. NewIGDM would rely onpoll/manualrefresh until this consumer path isjoined.",
+  "candidateHow": "Route verified normalizedInstagram IN through existing sharedIncomingService with explicit contactAddress and newinstagramInboundAt passthrough to the sameMessageAcceptance; no new sender/framework. Incoming IGorigin guard returns beforeTypebotquery. ExistingWebhooksModule alreadyprovidesIncomingService. PreserveCP2signature/envelope/window/account/generation/dedup/receipt rules; noproviderHTTP/transactionrealtime. Emit onceonlyactualcreationWinner viaexisting sharedowner; no echo/replay duplicateeffects orpartnerHTTP.",
+  "proofNeeded": [
+    "realnativeWS/nativecookie/PG authenticatedIGsignedIN createsoneBU-scopedevent and updatesInbox list/open thread withoutmanualrefresh; sameopaquepeer/account isolation",
+    "replayedIN emitsnoadditionalmessage/unread/event; foreignBUlistener getsnone; IGzeroTypebottrigger/session/providercalls",
+    "1000updates <=15s/replay/WAeventsemantics andallCP2tests revalidated onnewcandidate; earlierCP2source18proof remainshistorical"
+  ],
+  "scope": "SCOPE05/07 existingadmittedInboxandwebhookpaths, explicit later root sourcehandoff required; no write authorizedbythisprep whilefixture16writeractive. Main CP4UIproducer planremains18."
+}

@@ -1,0 +1,82 @@
+{
+  "kind": "root-terminal-static-reconciliation16",
+  "date": "2026-10-24",
+  "sources": 254,
+  "changedExisting": [
+    "api-app/src/domain/inbox/incoming.typebot.integration.spec.ts",
+    "api-app/src/domain/inbox/message-acceptance.service.spec.ts",
+    "api-app/src/domain/inbox/message-acceptance.service.ts",
+    "api-app/test/api-publica.e2e-spec.ts",
+    "api-app/test/dispatch-admission.e2e-spec.ts",
+    "api-app/test/historico.e2e-spec.ts",
+    "api-app/test/initial-message.e2e-spec.ts"
+  ],
+  "preserved": 35,
+  "state": "NOTRUN, noacceptance",
+  "staticScenarioDeclarationsAndAssertionLines": [
+    {
+      "path": "api-app/test/initial-message.e2e-spec.ts",
+      "scenariosBefore": 14,
+      "scenariosNow": 14,
+      "originalAssertionLinesMissing": [],
+      "additionalAssertionLines": []
+    },
+    {
+      "path": "api-app/test/dispatch-admission.e2e-spec.ts",
+      "scenariosBefore": 22,
+      "scenariosNow": 22,
+      "originalAssertionLinesMissing": [],
+      "additionalAssertionLines": [
+        "expect(accountRowsBeforeLegacySeeds[0]?.count).toBe(0);",
+        "expect(accountRowsAfterLegacySeeds[0]?.count).toBe(60);"
+      ]
+    },
+    {
+      "path": "api-app/test/api-publica.e2e-spec.ts",
+      "scenariosBefore": 19,
+      "scenariosNow": 19,
+      "originalAssertionLinesMissing": [],
+      "additionalAssertionLines": []
+    },
+    {
+      "path": "api-app/test/historico.e2e-spec.ts",
+      "scenariosBefore": 11,
+      "scenariosNow": 11,
+      "originalAssertionLinesMissing": [],
+      "additionalAssertionLines": []
+    },
+    {
+      "path": "api-app/src/domain/inbox/message-acceptance.service.spec.ts",
+      "scenariosBefore": 2,
+      "scenariosNow": 2,
+      "originalAssertionLinesMissing": [
+        "expect(order).toEqual(['identity-lock', 'original-cas', 'conversation-timestamp', 'message-create']);",
+        "expect(order).toEqual(['original-cas:true']);"
+      ],
+      "additionalAssertionLines": [
+        "expect(order.filter((item) => item !== 'canonical-contact-lock'))",
+        "expect(order.filter((item) => item === 'canonical-contact-lock')).toHaveLength(1);",
+        "expect(order.indexOf('identity-lock')).toBeLessThan(order.indexOf('canonical-contact-lock'));",
+        "expect(order.indexOf('canonical-contact-lock')).toBeLessThan(order.indexOf('original-cas'));",
+        "expect(order.filter((item) => !item.startsWith('canonical-contact-lock'))).toEqual(['original-cas:true']);",
+        "expect(order.indexOf('canonical-contact-lock')).toBeLessThan(order.indexOf('original-cas:true'));",
+        "expect(tx.conversationRoute.createMany).not.toHaveBeenCalled();"
+      ]
+    },
+    {
+      "path": "api-app/src/domain/inbox/incoming.typebot.integration.spec.ts",
+      "scenariosBefore": 3,
+      "scenariosNow": 3,
+      "originalAssertionLinesMissing": [],
+      "additionalAssertionLines": []
+    }
+  ],
+  "qualification": "Declarationcounts andlinecomparison arestatic, not actual executedcasecount. E2E alloriginalassertionlines retained; unitorderassertions explicitlyextended to include canonicalcontactfence whileoriginal filteredorder and callback-beforetimestamp/insert remain. Full TQA later.",
+  "rootCorrections": [
+    "Productioncanonicalpeer acquiredonce before callback whichcanlockconversation; captured mandatorypeer reused, no newadvisoryafterCAS. No dynamicdeadlock proof claimed.",
+    "Legacy60 V1quota snapshots use DIFFERENTaccountref987654321 fromfirst60newV2account123456789; zero-before/60-after count proveslegacyaccountsource. An attemptedsecondliveOfficialbinding in sameBU wasremoved beforeanyrun becauseSQLpartialuniqueindex disallowsit. Seedhistoricalaccount remainscaptured, not rebound.",
+    "Two settlementPOSTs useactualnativeV2tuple beforefaultspies; historicalV1/newV2 protocols separate.",
+    "HistorydeclaresdurableWAresourceonly, nochannel/route; initialsharedbeforeEach andtemplatebodyunchanged. No helperchange in16."
+  ],
+  "next": "threeonboardingfixtures17 then canonicalfullAPI currentcandidate; all CP2primary/human/CP4..CP6/gates remainmandatory."
+}
