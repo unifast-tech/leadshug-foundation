@@ -1,0 +1,17 @@
+{
+  "kind": "root-qualified-duration-clock40-preparation",
+  "status": "NOTIMPLEMENTED",
+  "reason": "API37b reached two unchanged strict duration failures; final-clock elapsed4637ms vs wholecase2013ms shows inconsistent duration observations, not a proven cause or waiver.",
+  "plannedPaths": [
+    "api-app/test/instagram-cp2-final-clock.e2e-spec.ts",
+    "api-app/test/instagram-cp2-residual.e2e-spec.ts"
+  ],
+  "changes": [
+    "Use performance.now only for elapsed-duration origins/differences, relative hold remainder, and finite polling observation deadlines. Keep all absolute persisted/session/token/credential/window deadlines on Date.now.",
+    "Final-clock: waitForAttemptWriter deadline/loop; waitStartedAt origins/deltas; relative hold loop after absolute shortenedDeadline crossing. Keep absolute shortenedDeadline wait and all credential 60second margin checks.",
+    "Residual: both callbackStartedAt/releasedAt origins for matched durations, polling waiter deadlines/loops including later tests. Keep issuedAt = Date.now-24h+ceil(matchedHoldMs)+500, actual signed-session expiration loop, all credential/lease/TTL writes/checks and ingress timestamps. Monotonic delta remains a duration used in the absolute Date-origin calculation.",
+    "Retain every threshold (2000/4000/4500/750ms and polling budgets), holdMs2000, cases/assertions/counters/causal wait observation and cleanup. No minimum hold or arbitrary delay in this first narrow correction.",
+    "Prove reverse-exact replacement only at changed duration expressions reproduces prior file bytes; no production changes. No test execution in writer lane. Root will validate separately."
+  ],
+  "limits": "SessionService uses millisecond claims without rounding. Vitest E2E fileParallelism=false/maxWorkers=1. No cause attributed to global fake Date or OS time sync without evidence. Current temporal safety assertions remain mandatory."
+}

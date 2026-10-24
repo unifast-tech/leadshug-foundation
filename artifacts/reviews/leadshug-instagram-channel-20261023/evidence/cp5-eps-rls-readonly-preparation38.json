@@ -1,0 +1,22 @@
+{
+  "kind": "root-qualified-cp5-eps-rls-readonly-preparation",
+  "status": "NOTIMPLEMENTED",
+  "sourceQualification": "Read-only preparation observed resolver during query38 writer; only constraints from unchanged schema/helpers/current TODO are relied on. Re-read final CP4 consumers and resolver before binding execution.",
+  "plannedPath": "api-app/test/instagram-cp5-eps-rls.e2e-spec.ts",
+  "seed": [
+    "Two tenants/BUs,10000 conversations each,12Instagram accounts plus uniqueWAresource/twoadapters per BU. Existing canonical bulk helper isWAonly; keep bounded IG bulk seed local to new spec if sufficient.",
+    "Use actual local synthetic OAuth/signature setup for24account tuples, derive qualified account scope from persisted actual routes. Bulk contact/identity/conversation/route/history createMany in finite chunks, no per-conversation HTTP/crypto/transaction. Fixtures outside measured requests.",
+    "Preserve exact schema/FKs/credential AAD/current binding/receipt/window; no ready flags on unproved mismatched fixtures."
+  ],
+  "measurements": [
+    "Real signed-session Nest HTTP endpoints, actual Prisma/PG, external HTTPfake only. Warmup then5waves x20requests=100samples per lookup/options/list requestclass. No direct resolver/raw SQL latency substitution.",
+    "performance.now p95<=1000ms lookup/options and<=2000ms list50; actual page size/selected tuple and max8domain SQLqueries/page with zero provider HTTP. Do not use IG-ineligible initialOptions as Instagram options.",
+    "Observe each page query budget with actual query events; a global concurrent wave count alone proves only aggregate, NOT per-request maximum. Specify attribution or separately prove per-page worst-shape plus honest aggregate stress evidence. Do not silently equate ORM calls with emitted SQL.",
+    "Capture synthetic runner Node/PG versions, known Compose image refs and observed CPU/memory/DB metadata; no operational Docker/processargs/env. Missing runtime resource bounds remain explicit, never claim pinning from absence."
+  ],
+  "rls": [
+    "Same20000 sample,5overlapped bursts20realreaders+20signed synthetic ingress requests. Use real webhook/DB acceptance/qualified routes, not direct DB inserts for measured messages.",
+    "Unique mids/expected effects, peer/order/BU/owner invariants, no unexpected error/deadlock/pending lock, unchanged provider counters and read budgets. No actual Meta/operational traffic."
+  ],
+  "later": "Must bind final current source, canonical selector/parity/freeze and existing safe runner after CP4. Existing isolated1000batch<=15s replay evidence retained/repeated when its ingress integration changes. No gate acceptance or runtime approval."
+}

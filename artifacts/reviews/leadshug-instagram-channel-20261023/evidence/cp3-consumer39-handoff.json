@@ -1,0 +1,59 @@
+{
+  "kind": "consumer39-and-clocks40-serialized-source-handoff",
+  "governingTodo": "foundation_documentation/todos/active/features/TODO-leadshug-instagram-channel.md",
+  "objective": "Complete remaining admitted CP3 CSV/harness findings plus duration-only measurement correction, preserving all public behavior and causal oracles",
+  "sourceBaseline": "cp3-consumer39-public-baseline.json",
+  "preparations": [
+    "cp3-consumer39-readonly-preparation.json",
+    "cp3-clocks40-readonly-preparation.json"
+  ],
+  "ownedExisting": [
+    {
+      "path": "api-app/src/domain/channels/transport/channel-dependencies.spec.ts",
+      "sha256": "f59d838baf635c0ce0d1ebe725c88fbb0b19fac42e9b382452e31fd38e0511a3",
+      "bytes": 2383
+    },
+    {
+      "path": "api-app/src/domain/inbox/historico.service.spec.ts",
+      "sha256": "eb1ca83e588c58382a332aee0fdda200f3eb6cb5f8c0cbd430e9790623393ec0",
+      "bytes": 1015
+    },
+    {
+      "path": "api-app/src/domain/inbox/historico.service.ts",
+      "sha256": "7ca439cfd8bc766202c09ce1a9a2a536b16d2040b9ebe7aae5afd6297fe910b0",
+      "bytes": 8078
+    },
+    {
+      "path": "api-app/src/domain/inbox/initial-message.service.ts",
+      "sha256": "ed7dac94eb2125525d66553b059b63f1770651dc30638e262fd33e157c6f188a",
+      "bytes": 24541
+    },
+    {
+      "path": "api-app/test/instagram-cp2-final-clock.e2e-spec.ts",
+      "sha256": "acbd91214c09c401da50e2a62a6937fe08c6facbbc30d06f667cc3884dcee774",
+      "bytes": 20179
+    },
+    {
+      "path": "api-app/test/instagram-cp2-residual.e2e-spec.ts",
+      "sha256": "295ac89fb550d3b5ffeedf8336de2c480a5c2fd901b1f49caa6d29a719cddf52",
+      "bytes": 56523
+    }
+  ],
+  "ownedNew": [
+    "api-app/test/instagram-cp3-csv-boundaries.e2e-spec.ts"
+  ],
+  "authority": "authority-cp3-consumer39.json",
+  "routing": "routing-cp3-consumer39.json",
+  "rules": [
+    "Sole product writer principal checkout, no Git/worktree/private/runtime/Meta/provider/test/build/runner commands. Root owns Foundation. All other254 existing sources stay exact; read only positive public baseline paths and exact governing workflows. No GOAL tools.",
+    "Read all preparations and existing service/unit/native fixture patterns. Implement bounded full-CSV record hydration preserving complete returned string, every row/filter/order/escaping/grant and WA qualification; output memory is necessarily proportional to output, no claim of constant-memory output. No truncation/public limit/new streaming contract/long transaction.",
+    "Ambiguity validation must include matching conversations with zero matching messages, finite conversation pages with take2 identity sentinel. Message pages keyset(createdAt,id), qualified conversation relation and existing resource/date filters; combine cursor OR with existing resource OR through AND so neither overwrites the other. No all-conversationID map/fanout. Preserve partial-phone/conversationlastMessageAt and messagecreatedAt filters; historical orphan/resource behavior.",
+    "New meaningful native CSV test >2pages, same timestamps/tie IDs, escaping/dates/partialcontact, excludedIG/group/foreignBU, orphan/resource; assert completeoutput/noomission/dup and actualfiniteDBreads. Existing tests remain intact; unitfixtures may adapt actual batchedquery contract only, no assertions/cases removed.",
+    "Extend current small dependency harness to IG clients/tokens/concretepolicy imports and initialconsumer. Detect adapterOrigin concrete client/dispatch/policy selection including ternary/switch; allow abstract policies and qualified-address proof. Use existing TypeScript AST if appropriate; no framework/general-purpose architectureengine/globalfile exemptions. Add negativecoupling and positiveaddress fixtures. In initial preview use operation.eligibilityPolicy.requiresWindow, samebehavior.",
+    "Apply clock40 exact duration-only conversion: performance.now for elapsed/polling/relativeholds; Date.now for absoluteactualsession/credential/persistedexpiry remains. Preserve ALL numericlimits/holds/cases/causal waits. Supply reverse-exact original reconstruction proof via compact changed-expression mapping; no production clock changes.",
+    "Keep auth36/canonical locks37/query38 source and tests frozen. Byte/privacy pending proposals untouched. Newtests authored beforeproduction where meaningful; no executedRED/GREEN claim withoutactualrun. No sourceexecution now; root consolidates then fullcanonicalAPI.",
+    "If real extra path needed, report first; no unownededits. No checkpoint/delivery acceptance."
+  ],
+  "complete": "Source readback, exactsha/bytes/cases/assertpreservation and NOTRUN status; allpromises/hooks cleanup safe",
+  "blocked": "Authority/WHAT/path insufficient: report concrete need, no scope expansion"
+}

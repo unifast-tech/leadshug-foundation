@@ -1,0 +1,21 @@
+{
+  "kind": "root-reconciled-query38-static-terminal",
+  "changedExisting": [
+    "api-app/src/integrations/channels/prisma-channel-resolver.ts"
+  ],
+  "new": [
+    "api-app/test/instagram-cp3-query-boundaries.e2e-spec.ts",
+    "api-app/test/instagram-cp3-accepted-facts.e2e-spec.ts"
+  ],
+  "existingSourcesMatched": 258,
+  "currentSources": 260,
+  "preservedRows": 35,
+  "rootIndexMatched": true,
+  "hashes": {
+    "api-app/src/integrations/channels/prisma-channel-resolver.ts": "607a14170052225551396210293625f26182385c7bc7fa1e6acfa318c405aa0f",
+    "api-app/test/instagram-cp3-query-boundaries.e2e-spec.ts": "dc0c0bb8b54a3eda245cfc5951286b64b5a7565caf25fd555a236eb27f7c6038",
+    "api-app/test/instagram-cp3-accepted-facts.e2e-spec.ts": "b7688a717a42e73b5bc8955204b9ad5beb5e98b7232b7cb3311a8032bf556488"
+  },
+  "qualifiedFollowup": "First terminal read missed allBU manual readiness and nonnull provenance classification; same bounded writer corrected before any execution. Current helper removed, selected/batch/reply/initial paths inspected. Lone pending nullBCI fixture now genuinely unverified. Metadata-version change explicitly labeled; no false full-rotation claim.",
+  "tests": "NOTRUN; native causal cases authored before production, no dynamic RED claim; fresh adherence pending"
+}

@@ -31,7 +31,7 @@ Este TODO define WHAT, exclusões e critérios de entrega. A baseline v1.3 abaix
 ## Delivery Status Canon (Required)
 - **Current delivery stage:** Pending
 - **Qualifiers:** none
-- **Next exact step:** consolidar ROOT01/ROOT02 no writer query38, após conferência do patch de locks37. A correção de locks ainda não foi executada; o RED37b e os seis casos de autorização aprovados permanecem provas históricas. Depois: harness/CSV e relógios de duração, validação completa e revisão, seguidos de CP4 integral.
+- **Next exact step:** concluir o writer único consumer39/clocks40, depois selar fontes para a API completa e revisão afetada. Root conferiu os patches locks37/query38, ainda NOTRUN. O RED37b e os seis casos de autorização aprovados permanecem provas históricas. CP4 integral segue obrigatório.
 
 ## Active Work State (Required While TODO Remains In `active/`)
 - **Work state:** implementation
@@ -637,6 +637,18 @@ Historical planning observation retained: IG-REV-01..04, strategic source, high/
 | IG-CP2-ROOT-09 | medium | release-blocker | validate actual current candidate in this TODO | Executor consulted non-authoritative backup instructions and misread empty exact-path Git diff; root corrected authority and positive hash evidence | closed original backup-input/emptydiff inference by currentprincipal/publicproof; filename-only metadata note retained | cp2-r4-root-adjudication.json; adherence-cp2-r4-collection.json; cp2-api-full-r4-result.json |
 
 | IG-CP2-ROOT-15 | medium | release-blocker | fix test fixture in this TODO | Exact account selection is required under multiaccount CP2 proof | closed exactaccount fixture; selected16 andfull549 passed | cp2-api-full-r4-result.json; adherence-cp2-r4-result.json |
+
+| IG-CP3-ROOT-01 | high | release-blocker | fix in this TODO | Exact selection and bounded WA discovery are SCOPE-03/06 and DOD-07/08 | open; original policy/batch repairs supported, query38 source underway | cp3-adherence35-root-adjudication.json; cp3-query38-handoff.json |
+| IG-CP3-ROOT-02 | high | release-blocker | fix in this TODO | Strict V2, historical accepted-fact tuple and no redispatch are approved scope | open; ordinary accepted-fact credential coupling in query38 | cp3-adherence35-root-adjudication.json; cp3-query38-handoff.json |
+| IG-CP3-ROOT-03 | high | release-blocker | fix in this TODO | All declared connections/UI/projection/realtime/browser consumers remain required | open; CP4 integral and later gates required | cp3-adherence35-root-adjudication.json; CP4 qualified preparation receipts |
+| IG-CP3-ROOT-04 | medium | release-blocker | fix in this TODO | Writer-path discipline and preservation remain authoritative | corrected qualified; no dynamic proof invalidation inferred | cp3-source03-boundary-correction04.json |
+| IG-CP3-ROOT-05 | high | release-blocker | fix in this TODO | Actual verified WA ingress must establish its qualified reply route | closed original defect by API35 and complete complementary adherence35 | cp3-api35-root-reconciliation.json; cp3-adherence35-root-adjudication.json |
+| IG-CP3-ROOT-06 | high | release-blocker | fix in this TODO | Canonical peer identity governs acceptance while preserving legacy presentation | closed original defect by API35 and complete complementary adherence35 | cp3-api35-root-reconciliation.json; cp3-adherence35-root-adjudication.json |
+| IG-CP3-ROOT-07 | high | release-blocker | fix in this TODO | Provider identity, qualified peer and conversation lock order is shared | open; native RED37b; source37 repaired but NOTRUN | cp3-lock37b-red-root-reconciliation.json; cp3-lock37-production-terminal.json |
+| IG-CP3-ROOT-08 | high | release-blocker | fix in this TODO | Accepted and uncertain facts retain captured qualified Instagram address | closed original defect by native API35 and complete complementary adherence35 | cp3-api35-root-reconciliation.json; cp3-adherence35-root-adjudication.json |
+| IG-CP3-A-01 | high | release-blocker | fix in this TODO | Current human actor/session/grant fence is DOD-03 and VAL-03 | open for fresh source adherence; six native negative/live controls passed37b | cp3-auth36-terminal.json; cp3-lock37b-red-root-reconciliation.json |
+| IG-CP3-A-02 | medium | release-blocker | fix in this TODO | Dependency harness must catch concrete Instagram coupling and initial consumer | open; bounded consumer39 correction prepared | cp3-adherence35-root-adjudication.json; cp3-consumer39-readonly-preparation.json |
+| IG-CP3-B35-05 | medium | release-blocker | fix in this TODO | Bound internal CSV hydration preserving full public output and filters | open; inherited issue, no new regression proved; consumer39 prepared | cp3-adherence35-root-adjudication.json; cp3-consumer39-readonly-preparation.json |
 
 ## TODO Closeout Disposition
 - **Disposition:** blocked
@@ -1336,16 +1348,7 @@ The newtwoE2Es remainbytefrozen causaloracles. Operationalunitmockfixtures mayco
 
 Source03 is terminal and explicitly incomplete. Root matched14 changed existing files and3new files (including channel-eligibility-policy.ts),230unchanged existing sources,35preserved rows and3rootindex entries. Both new CP3E2Es/current helper and restored OAuth/window sources remain exact. No lint/build/unit/E2E ran on this candidate. The current qualified404RED receipt remains historical; source03 is not validated or accepted.
 
-| Finding ID | Severity | Classification | Routing Decision | Same TODO rationale | Status | Evidence |
-| --- | --- | --- | --- | --- | --- | --- |
-| IG-CP3-ROOT-01 | high | release-blocker | fix in this TODO | D-04/D-06 abstract operation policy and bounded batch are approved scope | open | cp3-source03-terminal-preflight.json; static policy/origin switches and IG N queries |
-| IG-CP3-ROOT-02 | high | release-blocker | fix in this TODO | new strictV2 and historical local recovery/tuple proof are approved scope | open | metadata expiry not selected; V2 knownACK reader absent; explicit newWA route absent; accepted-account comparison/legacy credential coupling |
-| IG-CP3-ROOT-03 | high | release-blocker | fix in this TODO | SCOPE-03 requires all public/Typebot/Consultar/legacy consumers | open | author acknowledged remaining consumers; no subset acceptance |
-| IG-CP3-ROOT-04 | medium | release-blocker | retain corrected provenance in this TODO | writer-path discipline and originalCP2 preservation | corrected qualified | cp3-source03-boundary-correction04.json; own additions removed exactly before any runner |
-| IG-CP3-ROOT-05 | high | release-blocker | fix in this TODO | SCOPE02/06 actual verified WA ingress must establish reply route | open; shared acceptance repair14 | cp3-message-acceptance-wa-ingress14-handoff.json |
-| IG-CP3-ROOT-06 | high | release-blocker | fix in this TODO | canonical peer identity must govern acceptance while preserving legacy presentation | open; shared acceptance repair14 | cp3-message-acceptance-wa-ingress14-handoff.json |
-| IG-CP3-ROOT-07 | high | release-blocker | fix in this TODO | identity/contact-advisory/conversation lock order shared acceptance | open; source16 companion repairs newly introduced ordering before callback; no dynamic deadlock claimed | cp3-fixture16-lock-order-companion.json |
-| IG-CP3-ROOT-08 | high | release-blocker | fix in this TODO | D-02/D-04/D-07 require qualified captured IG address for accepted and uncertain local facts | open pending fresh adherence; sender25 applied, both native cases PASS29 | cp3-sender25-terminal.json; cp3-api29-root-reconciliation.json; API22 historical503 retained |
+Current routing of these source03 findings is consolidated in the governing Promotion Finding Routing Ledger; the original source03 receipt remains historical evidence.
 
 Root authorized only removal of the writer's accidental send method from the sealed OAuth client and four IG widenings plus the remaining own SQL cast from the sealed official window policy. Exact original hashes were reconstructed in memory and independently verified after correction; no Git restore, private backup or user-work discard occurred. The outgoing implementation moved into the already admitted new messaging client. These corrections add no human scope/WHAT deviation. The read-only CP4 advisor incidentally observed the changed OAuth hash while checking config; that read is not frozen or final-source evidence.
 
@@ -1542,3 +1545,16 @@ The sole lock37 writer then became terminal. Root independently matched all258 p
 Explicit thaw now assigns only the four exact paths in `evidence/cp3-query38-handoff.json` to one routine executor on the principal checkout. ROOT01 requires exact selected lookup before unrelated hydration and bounded WhatsApp-only discovery with cardinality/provenance classification before readiness. ROOT02 separates captured accepted-fact association from present credential usability, while retaining current pre-dispatch authorization and genuine identity/generation conflicts. Native PostgreSQL and actual external-HTTP-boundary tests must preserve all original assertions and strict limits. No runner is active during this writer lane. Root retains Foundation ownership.
 
 The source patch, query38 preparation and native cases convey no CP3 acceptance. Consumer harness/CSV, duration-only timing corrections, current complete API and fresh source review remain required before CP4. Primary own-subscription observation, the two pending human proposals, full frontend/connections/realtime/browser consumers, CP5/CP6 and authorized real runtime proof remain unwaived.
+
+Current CP3 promotion routing rows were consolidated into the governing Promotion Finding Routing Ledger above, including all three new adherence35 findings. This is a documentary reconciliation of existing classifications and original-defect closures; it grants no checkpoint or delivery acceptance.
+
+
+### CP3 query38 terminal; consumer39 and duration clocks40 serialized
+
+Root reconciled all258 prior public source paths, exactly one changed resolver, two new admitted native specs,35 preservation rows and3 root index entries. The existing routing spec remains byte-identical. A first static read found incomplete manual readiness and provenance handling; the same writer corrected these within its existing handoff before any execution. The final source removes the all-BU discovery helper, bounds WhatsApp discovery in SQL with a third sentinel, and classifies current ownership/cardinality before credential/window eligibility. Exact selected routes avoid unrelated latest-message/channel hydration. Batch and reply projections retain route-scoped reads.
+
+Native query and accepted-fact cases are authored but NOTRUN. They cover the12-account cohort, bounded manual/initial discovery, genuine unverified null-owner pending and unready duplicate controls, selected/batch/reply lookup, credential deletion/metadata-version/expiry changes after actual HTTP POST, and a genuine generation conflict. The version-only test is explicitly a metadata-version mutation, not proof of a usable cryptographically replaced credential. No dynamic RED or GREEN is inferred from source. `evidence/cp3-query38-terminal.json` binds the current260-source baseline.
+
+Explicit thaw is now one new sole product writer under `evidence/cp3-consumer39-handoff.json`, limited to its six existing paths and one native CSV spec. It completes the inherited bounded-record CSV finding without changing the full returned output, extends the small dependency harness to Instagram and the initial consumer, and derives initial preview metadata through the abstract policy. The two clock companions change elapsed durations/polling to monotonic time while preserving absolute session/credential/database expiry checks, every numeric threshold, hold and existing assertion. Root requires reverse-exact clock reconstruction before validation.
+
+No test/build/runner is active during the writer lane. Root retains Foundation ownership. After terminal reconciliation, one complete canonical API invocation will cover the new cases and all regressions, followed by fresh affected-source adherence carrying the complete prior review coverage. All pending primary/human obligations, full CP4 consumers and later assurance/physical gates remain required.
