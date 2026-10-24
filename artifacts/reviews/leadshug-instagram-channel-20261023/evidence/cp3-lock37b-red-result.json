@@ -1,0 +1,129 @@
+{
+  "kind": "cp3-lock37b-red-canonical-api-instagram-result",
+  "date": "2026-10-24",
+  "command": "bash scripts/test-channels-local.sh api-instagram",
+  "invocations": 1,
+  "exitCode": 1,
+  "terminalOutcome": "FAILED E2E (native causal lock assertion plus two preserved timing-bound failures)",
+  "log": {
+    "path": "cp3-lock37b-red-api.log",
+    "bytes": 50839,
+    "sha256": "9ba87a8f50492f83bcd797232a496876677179d29212079d157c46a432bf95bf",
+    "completeStdoutStderr": true
+  },
+  "preflight": {
+    "sources": 258,
+    "exact": true,
+    "boundInputs": 655,
+    "exactBoundInputs": true,
+    "preservationRows": 35,
+    "rootGitlinks": 3,
+    "authority": "GO",
+    "routing": "GO"
+  },
+  "postflight": {
+    "sources": 258,
+    "exact": true,
+    "boundInputs": 655,
+    "exactBoundInputs": true,
+    "preservationRows": 35,
+    "rootGitlinks": 3
+  },
+  "stages": [
+    {
+      "name": "channels parity/self-guards",
+      "status": "PASS",
+      "parityMutationsRejected": 26
+    },
+    {
+      "name": "Prisma client generation",
+      "status": "PASS",
+      "evidence": "Prisma Client v6.19.3 generated in 263ms"
+    },
+    {
+      "name": "database migrations",
+      "status": "PASS",
+      "migrations": 31,
+      "evidence": "all applied; schema up to date"
+    },
+    {
+      "name": "lint",
+      "status": "PASS"
+    },
+    {
+      "name": "build",
+      "status": "PASS"
+    },
+    {
+      "name": "selected unit tests",
+      "status": "PASS",
+      "files": 39,
+      "passed": 414,
+      "failed": 0
+    },
+    {
+      "name": "selected Instagram E2E",
+      "status": "FAIL",
+      "files": {
+        "passed": 16,
+        "failed": 3,
+        "total": 19
+      },
+      "tests": {
+        "passed": 116,
+        "failed": 3,
+        "total": 119
+      }
+    }
+  ],
+  "failures": [
+    {
+      "file": "api-app/test/instagram-cp3-locks.e2e-spec.ts",
+      "case": "Instagram CP3 qualified dispatch locks (native PostgreSQL) > serializes canonical formatted WhatsApp and same-account Instagram peers while keeping another account scope independent",
+      "body": "Error: Reservation completed before the native canonical peer wait was observed. At waitForPeerWaiter (test/instagram-cp3-locks.e2e-spec.ts:123:17), propagated at :191:7 through runWithCleanup :157:13 and test :184:5.",
+      "classification": "The intended native PostgreSQL lock test executed and reached its reservation/wait observation assertion; reservation completed before the canonical peer waiter was observed. This is not a lint, fixture setup, or timeout failure. The lock/wait proof did not pass, and the root cause (product behavior versus observation timing) is not resolved by this run."
+    },
+    {
+      "file": "api-app/test/instagram-cp2-final-clock.e2e-spec.ts",
+      "case": "Instagram CP2 final operation and credential clocks > matched live subscription success survives the same final-write wait",
+      "body": "AssertionError: expected 4637 to be less than 4500; runSubscriptionFinalWrite at :169:42.",
+      "classification": "Existing 4500ms instrumentation bound failed; no threshold change. This alone is not evidence of provider temporal-policy violation."
+    },
+    {
+      "file": "api-app/test/instagram-cp2-residual.e2e-spec.ts",
+      "case": "Instagram CP2 residual BFF and PostgreSQL proofs > CP2-SESSION-CLOCK residual: natural expiry after a short real user-row wait blocks exchange while a matched live session succeeds",
+      "body": "AssertionError: expected 1390 to be less than 750; test/instagram-cp2-residual.e2e-spec.ts:170:54.",
+      "classification": "Matched-hold timing delta bound failed (1390ms vs 750ms); the test\u2019s preceding per-hold <4500ms assertion was passed. No threshold change or temporal-policy breach claim."
+    }
+  ],
+  "requestedProofs": {
+    "nativeCanonicalPeerWait": "REACHED but failed: reservation completed before native canonical peer wait was observed; no successful serialization/isolation proof from this case.",
+    "authorizationFenceCases": "PASS: test/instagram-cp3-authorization-fences.e2e-spec.ts, all 6 tests passed (first selected run on this candidate).",
+    "P2002Count3": "NOT RUN in this selector; original dispatch-admission P2002 test is outside api-instagram. API35 prior full API run had that case pass, but this run adds no fresh count3 proof.",
+    "batch": "PASS: initial-started/initial-completed updates=1000, elapsed=5353.98ms; replay-started/replay-completed updates=1000, elapsed=3571.371ms; full CP2 batch case passed in 8952ms, so <=15000ms initial assertion and follow-up count/replay/malformed/oversize/echo/read assertions were reached.",
+    "strictCp2Clock": "FAIL one of 9 final-clock tests; file summary 8 pass/1 fail. Exact live subscription elapsed=4637ms versus unchanged 4500ms bound.",
+    "liveControlTiming": "PASS commit-fences equal-duration live-session control case reported 3306ms; CP2 final-clock live subscription counterpart failed at 4637ms."
+  },
+  "counts": {
+    "parityMutationsRejected": 26,
+    "migrations": 31,
+    "unitFiles": 39,
+    "unitPassed": 414,
+    "unitFailed": 0,
+    "e2eFilesPassed": 16,
+    "e2eFilesFailed": 3,
+    "e2ePassed": 116,
+    "e2eFailed": 3,
+    "nativeAuthorizationFenceCasesPassed": 6,
+    "nativeLockCaseFailed": 1,
+    "batchInitialUpdates": 1000,
+    "batchInitialElapsedMs": 5353.98,
+    "batchReplayUpdates": 1000,
+    "batchReplayElapsedMs": 3571.371
+  },
+  "notes": [
+    "Only the three listed E2E tests failed; selected unit suite fully passed.",
+    "No source/input mutation, autofix, retry, additional build, or test command was performed.",
+    "This validation does not close broader review/checkpoint/feature gates."
+  ]
+}

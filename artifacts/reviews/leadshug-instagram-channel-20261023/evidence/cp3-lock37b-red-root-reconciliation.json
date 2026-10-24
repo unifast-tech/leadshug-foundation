@@ -1,0 +1,26 @@
+{
+  "kind": "root-reconciled-lock37b-native-red",
+  "sourcesMatched": 258,
+  "boundInputsMatched": 655,
+  "preservationRowsMatched": 35,
+  "rootIndexMatched": true,
+  "todoMatched": true,
+  "exitCode": 1,
+  "logSha256": "9ba87a8f50492f83bcd797232a496876677179d29212079d157c46a432bf95bf",
+  "logBytes": 50839,
+  "passed": "parity26/generate/31migrations/lint/build/414unit39files;116of119selectedE2E16of19files",
+  "causalRed": "ROOT07 native waiter oracle reached: reservation completed before canonical peer wait. Not a fixture/lint/default5s transaction timeout. Later different-account and formattedWA parts of same test unreached.",
+  "authorization36": "All6native currentauthority negative/livecontrols passed. Earlierunitfixture restored and414units passed. Originalsecurity defect has supportingcurrentproof, freshsourceadherence stillpending.",
+  "timingFailures": [
+    {
+      "file": "instagram-cp2-final-clock.e2e-spec.ts",
+      "fact": "Date.now elapsed4637ms failed4500 although wholecase runner2013ms. Laterresponse/provider/localassertions in that case unreached;9filecases8passed."
+    },
+    {
+      "file": "instagram-cp2-residual.e2e-spec.ts",
+      "fact": "Individualhold<4500 passed; matchedhold delta1390 failed750. Latercallback outcome/confidentiality/provider/state assertions unreached. Bothintervals useDate.now; no claimedproductregressionorflakywaiver."
+    }
+  ],
+  "batch": "Initial1000 5353.98ms;replay3571.371ms;wholecase8952ms/allsubsequentassertions reached.",
+  "notCovered": "FullAPI/nativeP2002count3/ALL/browser/assurance/provider/runtime/currentcompleteadherence; no checkpointacceptance."
+}

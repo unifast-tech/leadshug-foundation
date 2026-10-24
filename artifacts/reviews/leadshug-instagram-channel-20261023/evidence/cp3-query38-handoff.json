@@ -1,0 +1,35 @@
+{
+  "kind": "cp3-query38-sole-writer-handoff",
+  "governingTodo": "foundation_documentation/todos/active/features/TODO-leadshug-instagram-channel.md",
+  "objective": "ROOT01 exact/bounded selection and ROOT02 accepted-fact independence; native causal proof without changing approved WHAT",
+  "sourceBaseline": "cp3-query38-public-baseline.json",
+  "preparation": "cp3-query38-readonly-preparation.json",
+  "ownedExisting": [
+    {
+      "path": "api-app/src/integrations/channels/prisma-channel-resolver.ts",
+      "sha256": "dcbbeaae17da0b7bf2e6c354c6446ae4570904ce7356450415f016bc8dc68478",
+      "bytes": 55174
+    },
+    {
+      "path": "api-app/test/instagram-cp3-routing.e2e-spec.ts",
+      "sha256": "fb01016fbce4294ba68c1223c14fc05c184255ab388bf6688e92d702d29ee823",
+      "bytes": 21532
+    }
+  ],
+  "ownedNew": [
+    "api-app/test/instagram-cp3-query-boundaries.e2e-spec.ts",
+    "api-app/test/instagram-cp3-accepted-facts.e2e-spec.ts"
+  ],
+  "authority": "authority-cp3-query38.json",
+  "routing": "routing-cp3-query38.json",
+  "rules": [
+    "Principal checkout sole writer. Root owns Foundation. No Git/worktree/private/runtime/provider commands or tests/build/runners. Exact positive public reads only; T and prep govern. No interface/public-contract expansion.",
+    "Read existing resolver/tests/schema constraints/helpers. Author meaningful native cases before production patch; no test-first RED claim unless actually executed. Real Nest/PostgreSQL/signed callback/provider fake HTTP only. Trace real query arguments while delegating real execution, no rule/result mocks.",
+    "Implement ALL qualified queryPlan/nativeProof/acceptedFactPlan in prep. Explicit selected branch before latest/allBU load; bounded WhatsApp DB filters and third sentinel; provenance/cardinality before readiness incl pending-null owner and duplicate-unready. Keep page batching<=8 and no N+1; exact qualified business/provider/route/account context.",
+    "After actual HTTP ACK, do not gate immutable local accepted fact on current credential existence/version/expiry margin. Preserve genuine captured association/generation/pairing conflicts; all credential/current-human fences BEFORE dispatch; never external retry on local conflict/UNKNOWN. Post-ACK tests hook actual messages POST and assert exact one external send and exact persisted tuple.",
+    "Preserve all original assertions/scenarios/counters/default bounds, authorization36 and canonical locks37. Do not remove test coverage or loosen thresholds. Preserve primary own-subscription UNKNOWN gate; no made-up observation.",
+    "No unadmitted paths. If small actual companion needed, report first. Finish with readback/hash and exact test NOTRUN status."
+  ],
+  "complete": "Bounded source+native cases ready for separate root consolidation/validation",
+  "blocked": "Unresolved WHAT/authority/path: report needed decision, do not broaden"
+}

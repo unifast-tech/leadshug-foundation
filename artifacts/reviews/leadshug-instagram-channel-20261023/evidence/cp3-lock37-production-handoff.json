@@ -1,0 +1,57 @@
+{
+  "kind": "cp3-lock37-production-after-native-red-handoff",
+  "governingTodo": "foundation_documentation/todos/active/features/TODO-leadshug-instagram-channel.md",
+  "objective": "ROOT07 exact shared provideridentity\u2192qualifiedpeer\u2192conversation mutex for applicableV2 dispatchlifecycles preserving approvedhistoricalV1 recovery.",
+  "sourceBaseline": "cp3-lock37b-public-baseline.json",
+  "ownedExisting": [
+    {
+      "path": "api-app/src/domain/inbox/contact-identity.ts",
+      "sha256": "41d56b56f315e30e3f4c76b580993bf2ffabea3cef623e43583b6363dd7f51e9",
+      "bytes": 3229
+    },
+    {
+      "path": "api-app/src/domain/inbox/dispatch-admission.service.ts",
+      "sha256": "cffe2e92dab3543180b40a99658399a2407681b9ed564e937c1dbf29f88dce56",
+      "bytes": 48197
+    },
+    {
+      "path": "api-app/src/domain/inbox/outbound.service.ts",
+      "sha256": "34e7b98462228f37ff2915cfbdf067fa2b2591a198d9ae7d8779976e35db5a26",
+      "bytes": 50880
+    },
+    {
+      "path": "api-app/test/dispatch-admission.e2e-spec.ts",
+      "sha256": "b67794d5d9327e517f27620292e71fa3d9986d0f6aa259c59a07052497e6a5d5",
+      "bytes": 58517
+    },
+    {
+      "path": "api-app/test/instagram-cp3-v1-cutover.e2e-spec.ts",
+      "sha256": "efe52d6fb58ccd2781c8e6d07b2a3bc467bc83e6b962a03a5014b5ff759191b9",
+      "bytes": 32002
+    }
+  ],
+  "ownedNew": [],
+  "preparation": "cp3-lock37-readonly-preparation.json",
+  "authority": "authority-cp3-lock37-production.json",
+  "routing": "routing-cp3-lock37-production.json",
+  "rules": [
+    "Onlysolewriter/principalcheckout/noGit/worktrees/private/runtime/provider. RootownsFoundation. Exactpositivepublicreads only. ReadactualTandqualifiedprep; no broadercapability/newpubliccontract/Channelmethod.",
+    "Read allapplicable paths reserveOrdinary/reserveInitial/claimOrdinary/claimInitial/lockInitialOwner/ackOrdinaryRisk/reconcileOrdinary and privateoutbound.finalizeInitial. V2 resolvepersistedroute+ContactIdentity fromcapturedtuple beforeconversationlock; sharedcanonicalkey must be sameasMessageAcceptance. Add one smallreusablehelper iffaithful, avoidshadowmutexes/duplicatedaddress derivations. Preserve provideridentityfirst.",
+    "IGscopeReference isaccountqualified, so sameopaquepeer inDIFFERENTaccounts MUSTremainindependent. Qualifiedsameaccount/peer serializes. Earlierprepagentwrongadvice corrected inrootprep; do notreproducewrongtest.",
+    "V1reader intentionallydoesNOTrequireConversationRoute. DerivecanonicalWAaddress fromexisting persistedconversationbu/contact/contactType, preserveacceptance exactlocalContactproof and allcurrentV1states/noexternalretry. Do not createidentity/route inthehistoricalmutexhelper.",
+    "Privateoutbound.finalizeInitial onlycalledinsharedacceptance beforeCommit afterprovider/peer/conv locks: re-readallcalls, preferremove redundantlegacyadvisory key ifguaranteedunder canonicalowner instead of takinganotherdifferentpeerkeyafterconvlock. Keep existingrow/intent/CASchecks.",
+    "Preserve auth36 trustedfinalactor fences/capturedaddress/nativecases, batch/finalclockcurrentrepairs; preserveexistingnativeP2002fixture NINEoracles/count3/default5s. No testassertion/timeout/threshold weakening. Existingdispatch/V1tests mayonlyadapt fixtures minimally ifessentialto realcontract, reportexactoriginalassertpreservation.",
+    "Author meaningfulnativecontention tests FIRSTbeforeproductionpatch (noexecutedREDclaimunlessactuallyrun). Gatevia nativepg_locks/actualdelegation, formattedWA canonicalsamepeer, sameIGaccount/peer serialize, diffaccountscopeproceeds; alwaysrelease/settlepending/restoreinfinally. No mocks ofactualPGidentity/rules.",
+    "NO test/build/runner commands now; rootconsolidates next boundedrepairs thenfreezes canonicalAPI. Staticreadback/hashreport only; futurevalidationNOTRUN.",
+    "Keep newlocktest SHA155fdfff84cf22ca60979969423723dbf6cbe6807a4eefefcfdb649afd00c189 byteexact unlessactualnewfixturedefect isreportedfirst. RootobservedrealcausalRED, productionrepaircanproceed.",
+    "Classify settleOrdinary/releasePrepared: they lockonlyconv\u2192admission, neverlaterprovider/peer, so valid suffix-only bookkeeping. Preserve originalnonce/CAS/localacceptedfact/definitiveabort independence; do notrequirefreshroute/credential justtotakeeverylock. No wrong shadowkey orreverseorder."
+  ],
+  "complete": "Ownedsource+causalnativecases, statichashreadback, compact exactstatus; nocheckpointclaim.",
+  "blocked": "ExactboundaryorWHATinsufficient: reportneededpath, do notbroaden.",
+  "preserveTest": {
+    "path": "api-app/test/instagram-cp3-locks.e2e-spec.ts",
+    "sha256": "155fdfff84cf22ca60979969423723dbf6cbe6807a4eefefcfdb649afd00c189",
+    "bytes": 14368
+  },
+  "causalEvidence": "cp3-lock37b-red-root-reconciliation.json"
+}

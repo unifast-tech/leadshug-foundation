@@ -31,7 +31,7 @@ Este TODO define WHAT, exclusões e critérios de entrega. A baseline v1.3 abaix
 ## Delivery Status Canon (Required)
 - **Current delivery stage:** Pending
 - **Qualifiers:** none
-- **Next exact step:** congelar258fontes/T/inputs com auth36 aplicado e ROOT07produto ainda inalterado; UMA validação canônica api-instagram para RED nativo do novo teste de locks. Separar defeito alcançado de erro de fixture/lint/tipo. Depois, correção ROOT07/ROOT01/ROOT02/harness/CSV, validação completa/revisão atual e CP4 integral.
+- **Next exact step:** consolidar ROOT01/ROOT02 no writer query38, após conferência do patch de locks37. A correção de locks ainda não foi executada; o RED37b e os seis casos de autorização aprovados permanecem provas históricas. Depois: harness/CSV e relógios de duração, validação completa e revisão, seguidos de CP4 integral.
 
 ## Active Work State (Required While TODO Remains In `active/`)
 - **Work state:** implementation
@@ -1522,3 +1522,23 @@ Auth36 changed the shared unit setup transaction mock from historical `vi.fn()` 
 
 
 Auth36b is terminal: root reversed the exact one-line unit mock change in RAM and reproduced the prior ad8e4f19 hash; all other257sources matched. Current unit source SHA000b7ebfd5f18442b6c0fef34efbdd8faee2e1cfb6f99fbf4a632bfe4c683b7e. No new validation yet. A new258source/currentT/input freeze authorizes one separate api-instagram diagnostic attempt37b, preserving the previous failure and unreached native proof. No ROOT07 production repair until terminal native reach adjudication.
+
+
+## CP3 lock37b — native RED reached; current authorization cases passed
+
+Root matched258sources/T/655inputs/35preservations/3index/log50839bytes SHA9ba87a8f50492f83bcd797232a496876677179d29212079d157c46a432bf95bf. Canonical api-instagram passed lint/build/414unit and116/119selectedE2E. The new native lock case reached the precise oracle: reservation completed before the PostgreSQL canonical peer wait. This is causalRED for missing reserveOrdinary serialization; later scope-independence/formattedWA groups remained unreached. It proves no production deadlock. All six auth36 native revoke/expiry/live controls passed. Full1000batch/replay passed5353.98/3571.371ms with all downstream assertions.
+
+Two unchanged CP2 timing controls failed: final-clock used Date.now elapsed4637ms while runner wholecase was2013ms, failing4500 before later state assertions; residual individualhold passed4500 but matchedhold delta1390 failed750 before callback/confidentiality/state assertions. These are open measurement failures, no discarded failure/flaky waiver or product-regression inference. Separate duration-only monotonic-clock concretization will retain absolute signed-session/provider/DB expiry checks, numeric limits and all existing oracles. A matched expiry hold may need to wait at least its measured live-control duration as well as actual absolute expiry; no shorter/incomparable control accepted.
+
+Freeze37b ended after root reconciliation. Sole writer37 now owns only its five admitted existing paths for canonical peer order plus its one new test; the test remains bytefrozen causal oracle unless a separately explained fixture defect is found. Classify every conversation-lock caller: settleOrdinary/releasePrepared take only the conversation/admission suffix and no later provider/peer lock, so retain original nonce/CAS/knownfact/definitiveabort behavior without adding a fresh route or credential dependency. ReconcileOrdinary joins provider→peer→conversation; initial finalize is already called solely under common acceptance locks and must remove its extra wrong legacy key. V1 local-only recovery never demands a new route. Then bounded query/acceptedfact/harness/CSV corrections precede a completeAPI run and fresh adherence. No checkpoint or feature accepted.
+
+
+### CP3 lock37: terminal source reconciliation and query38 continuation (2026-10-24)
+
+The selected API37b run reached the actual PostgreSQL waiter oracle and reproduced ROOT07: reservation completed before the canonical peer wait was observed. Six native authorization36 cases and all414 unit tests passed. Two unchanged temporal controls failed their existing strict duration bounds; no threshold or product assertion is waived. The batch1000 case passed both initial and replay assertions. The root reconciliation binds258 sources,655 public inputs,35 preserved rows,3 root index entries and the complete log. This is selected API evidence, not complete API or checkpoint acceptance.
+
+The sole lock37 writer then became terminal. Root independently matched all258 public sources, classified exactly three admitted source changes, preserved both existing dispatch/V1 specs and the causal native lock spec byte-exact, and matched35 preservation rows plus3 index entries. The source patch establishes provider identity → account-qualified peer → conversation order for paths acquiring those locks. V1 recovery derives the WhatsApp peer from persisted conversation fields without requiring a route. Conversation-only bookkeeping retains its valid lock-order suffix. A nullable helper local type was corrected before compiler execution. The patch has not been run; the original RED remains historical evidence. See `evidence/cp3-lock37-production-terminal.json`.
+
+Explicit thaw now assigns only the four exact paths in `evidence/cp3-query38-handoff.json` to one routine executor on the principal checkout. ROOT01 requires exact selected lookup before unrelated hydration and bounded WhatsApp-only discovery with cardinality/provenance classification before readiness. ROOT02 separates captured accepted-fact association from present credential usability, while retaining current pre-dispatch authorization and genuine identity/generation conflicts. Native PostgreSQL and actual external-HTTP-boundary tests must preserve all original assertions and strict limits. No runner is active during this writer lane. Root retains Foundation ownership.
+
+The source patch, query38 preparation and native cases convey no CP3 acceptance. Consumer harness/CSV, duration-only timing corrections, current complete API and fresh source review remain required before CP4. Primary own-subscription observation, the two pending human proposals, full frontend/connections/realtime/browser consumers, CP5/CP6 and authorized real runtime proof remain unwaived.

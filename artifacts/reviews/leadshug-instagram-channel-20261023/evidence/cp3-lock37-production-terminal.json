@@ -1,0 +1,19 @@
+{
+  "kind": "root-reconciled-lock37-source-terminal",
+  "changed": [
+    "api-app/src/domain/inbox/contact-identity.ts",
+    "api-app/src/domain/inbox/dispatch-admission.service.ts",
+    "api-app/src/domain/inbox/outbound.service.ts"
+  ],
+  "sourceCount": 258,
+  "preserved": 35,
+  "rootIndexMatched": true,
+  "hashes": {
+    "api-app/src/domain/inbox/contact-identity.ts": "7fc075ab2a17f55edc0d082c4628e6f47cfe0db7f6d0dec346000c20de04ae4a",
+    "api-app/src/domain/inbox/dispatch-admission.service.ts": "455d50767dc4bdb339e492eff053b74b712d814ecf139b821b65eb69bfdc03b8",
+    "api-app/src/domain/inbox/outbound.service.ts": "37bcfc6cdc9e3ba53f8ee97ec68c923d07aab8bb90492b60872ece10ae473c30"
+  },
+  "nativeLockTestPreserved": true,
+  "tests": "NOTRUN since production repair; RED37b remains historical; no acceptance",
+  "staticCorrection": "Nullable helper result type corrected before any compiler execution."
+}
