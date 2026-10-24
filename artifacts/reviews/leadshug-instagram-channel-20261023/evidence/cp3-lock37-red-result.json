@@ -1,0 +1,110 @@
+{
+  "kind": "cp3-lock37-red-canonical-api-instagram-result",
+  "date": "2026-10-24",
+  "command": "bash scripts/test-channels-local.sh api-instagram",
+  "invocations": 1,
+  "exitCode": 1,
+  "terminalOutcome": "FAILED",
+  "log": {
+    "path": "cp3-lock37-red-api.log",
+    "bytes": 18753,
+    "sha256": "7ddb33b75d42866f1aa710a1b5bd78ec94b44edc08574991bb18b74525337084",
+    "completeStdoutStderr": true
+  },
+  "preflight": {
+    "sources": 258,
+    "allExact": true,
+    "boundInputs": 644,
+    "allExactBoundInputs": true,
+    "preservationRows": 35,
+    "rootGitlinks": 3,
+    "authority": "GO",
+    "routing": "GO"
+  },
+  "postflight": {
+    "sources": 258,
+    "allExact": true,
+    "boundInputs": 644,
+    "allExactBoundInputs": true,
+    "preservationRows": 35,
+    "rootGitlinks": 3
+  },
+  "stages": [
+    {
+      "name": "channels parity/self-guards",
+      "status": "PASS",
+      "evidence": "26 mutation cases rejected; wrapper checks passed"
+    },
+    {
+      "name": "Prisma client generation",
+      "status": "PASS",
+      "evidence": "Prisma Client v6.19.3 generated successfully"
+    },
+    {
+      "name": "database migrations",
+      "status": "PASS",
+      "migrations": 31,
+      "evidence": "all migrations applied; schema up to date"
+    },
+    {
+      "name": "lint",
+      "status": "PASS"
+    },
+    {
+      "name": "build",
+      "status": "PASS"
+    },
+    {
+      "name": "selected unit tests",
+      "status": "FAIL",
+      "files": {
+        "passed": 38,
+        "failed": 1,
+        "total": 39
+      },
+      "tests": {
+        "passed": 413,
+        "failed": 1,
+        "total": 414
+      }
+    },
+    {
+      "name": "selected Instagram E2E/native lock test",
+      "status": "NOT_REACHED"
+    }
+  ],
+  "failureBody": {
+    "file": "api-app/src/domain/inbox/outbound.service.spec.ts",
+    "case": "OutboundService error projection > reserves an ordinary owner before preflight and claims it only at the final provider boundary",
+    "message": "ServiceUnavailableException: Service Unavailable Exception",
+    "stack": [
+      "OutboundService.acceptedIncomplete at api-app/src/domain/inbox/outbound.service.ts:864:12",
+      "OutboundService.send at api-app/src/domain/inbox/outbound.service.ts:549:18",
+      "api-app/src/domain/inbox/outbound.service.spec.ts:227:5"
+    ],
+    "runnerSummary": "Test Files 1 failed | 38 passed (39); Tests 1 failed | 413 passed (414); Duration 4.86s"
+  },
+  "requestedProofs": {
+    "newNativeLockTest": "NOT_REACHED: selected suite stopped at unit failure before Instagram E2E stage; no native canonical-peer-wait result was observed.",
+    "P2002Count3": "NOT_RUN in this API-instagram lane; existing P2002 case is outside selector and remains only prior API35 evidence.",
+    "initialAndReplayBatch": "NOT_REACHED",
+    "strictClock": "NOT_REACHED",
+    "liveControlTiming": "NOT_REACHED"
+  },
+  "counts": {
+    "parityMutationsRejected": 26,
+    "migrations": 31,
+    "unitFilesPassed": 38,
+    "unitFilesFailed": 1,
+    "unitTestsPassed": 413,
+    "unitTestsFailed": 1,
+    "selectedInstagramE2EFiles": 0,
+    "selectedInstagramE2ETests": 0
+  },
+  "notes": [
+    "The runner passed parity/generate/migrate/lint/build then failed in the selected unit suite.",
+    "The expected lock37 new native scenario was not reached, so this is a RED validation result, not fixture, lock proof, or timeout evidence.",
+    "No source/input mutation, autofix, retry, or extra test command was performed.",
+    "All broader API/ALL/review/checkpoint/feature gates remain pending."
+  ]
+}

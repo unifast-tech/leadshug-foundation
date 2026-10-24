@@ -1,0 +1,32 @@
+{
+  "kind": "root-qualified-cp3-consumer39-preparation",
+  "status": "NOTIMPLEMENTED",
+  "findings": [
+    "A-02 medium: dependency protection harness",
+    "B35-05 medium: inherited CSV hydration; no new regression proved"
+  ],
+  "csvPlan": [
+    "Preserve the existing complete CSV string, rows, filters, ordering, escaping, grants and WhatsApp qualification. No truncation, public output limit or new streaming API. Only record hydration is bounded; retained output necessarily uses memory proportional to output size.",
+    "Preserve the ambiguity check for every matching conversation, including those without matching messages: bounded conversation pages with at most two relevant identities as an ambiguity sentinel. Do not retain all conversation IDs or a full map.",
+    "Read messages in finite pages through the qualified conversation relation and existing resource/date filters, with createdAt/id keyset ordering. Include only current-page qualified contact/display context. Preserve partial-phone and conversation lastMessageAt filters as well as message dates.",
+    "Render page chunks into the full return string. Do not introduce a long export transaction or claim an atomic snapshot that the existing implementation never provided."
+  ],
+  "csvProof": [
+    "Native CSV with more than two pages, equal timestamps, quotes/semicolon/newline escaping, date/partial-contact filters, excluded Instagram/group/foreign BU, and preserved historical orphan/qualified resource cases.",
+    "Assert complete output without omissions or duplicates, not only query shape. Actual database delegates/traces must demonstrate finite page reads and no all-ID fanout. Preserve existing test assertions."
+  ],
+  "harnessPlan": [
+    "Extend the existing small dependency harness for Instagram clients/tokens, concrete eligibility-policy imports and InitialMessageService. Allow abstract policy/types and legitimate qualified-address validation.",
+    "Detect dispatch/client/policy selection through adapterOrigin, including ternary and switch forms. Avoid broad file exemptions or rejecting all platform proof. Use the existing TypeScript dependency if AST inspection is needed; no new framework.",
+    "Add negative concrete-coupling fixtures and positive qualified-address mapping fixtures. A bounded static harness supports review and does not claim complete arbitrary dataflow analysis.",
+    "InitialMessageService.preview currently derives requiresWindow from adapterOrigin. Use operation.eligibilityPolicy.requiresWindow for identical existing behavior through the abstract policy."
+  ],
+  "plannedPaths": [
+    "api-app/src/domain/inbox/historico.service.ts",
+    "api-app/src/domain/inbox/historico.service.spec.ts",
+    "api-app/test/instagram-cp3-csv-boundaries.e2e-spec.ts",
+    "api-app/src/domain/channels/transport/channel-dependencies.spec.ts",
+    "api-app/src/domain/inbox/initial-message.service.ts"
+  ],
+  "scope": "Preparation only. Root must bind exact existing/new paths after prior writer terminal. No protected privacy/byte/App/runtime changes."
+}

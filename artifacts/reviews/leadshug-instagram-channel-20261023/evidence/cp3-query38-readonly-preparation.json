@@ -1,0 +1,31 @@
+{
+  "kind": "root-qualified-cp3-query38-preparation",
+  "status": "NOTIMPLEMENTED",
+  "findings": [
+    "ROOT01 high: exact selected lookup and bounded WhatsApp options",
+    "ROOT02 high: accepted fact independent of current credential"
+  ],
+  "queryPlan": [
+    "Move explicit route/channel handling before latest-message and BU-wide hydration. Query the scoped route, then its exact selected binding; retain platform, business/provider association, generation and fingerprint checks.",
+    "Initial options/manual readiness must query WhatsApp types in the database, at most two plus a third sentinel. Classify duplicate adapters, cardinality and incompatible provenance before readiness. A lone unverified null-BCI binding remains pending/unavailable. Do not hide incompatible or unready duplicates.",
+    "Use the unique durable WhatsApp business resource. No BU.phone fallback. findCompatibleWhatsAppChannel alone is insufficient because it filters incompatible nonnull owners and lacks provider metadata.",
+    "Keep page-scoped batch resolution and query limits. Check per-resource cardinality before credential/window processing wherever find/continue could hide current conflicts. Preserve explicit route choices."
+  ],
+  "nativeProof": [
+    "Real Nest/PostgreSQL cohort: twelve Instagram accounts plus official and Evolution on one WhatsApp resource. Trace actual Prisma queries/delegates without replacing domain rules or DB results. Selected lookup must avoid unrelated Instagram hydration; initial/manual SQL must filter WhatsApp and hydrate at most two compatible bindings.",
+    "Native null-BCI pending control and canonical plus null-BCI duplicate adapter control. Partial SQL indexes allow that duplicate without disabling constraints; reject before readiness. Preserve public/initial/window behavior.",
+    "These query tests do not replace the frozen EPS/RLS measurements."
+  ],
+  "acceptedFactPlan": [
+    "contextAfterDispatch proves the captured immutable association, not present credential usability. Retain BU/conversation/contact/route/business/provider/account/generation/pairing conflicts. Keep all credential/version/expiry/readiness checks before dispatch.",
+    "Use instagramFake.afterRequestHook after the actual POST: delete the credential, rotate version, or shorten expiry across the safety margin while HTTP is held. Assert one POST and one exact local Message when ownership is unchanged. A real generation conflict must remain incomplete with no redispatch.",
+    "Label metadata shortening honestly; do not call it natural expiry. Restore HTTP hooks and settle all requests in cleanup. Preserve current authorization and qualified-address fences."
+  ],
+  "plannedPaths": [
+    "api-app/src/integrations/channels/prisma-channel-resolver.ts",
+    "api-app/test/instagram-cp3-routing.e2e-spec.ts",
+    "api-app/test/instagram-cp3-query-boundaries.e2e-spec.ts",
+    "api-app/test/instagram-cp3-accepted-facts.e2e-spec.ts"
+  ],
+  "scope": "Preparation only. No code thaw, contract change, provider/private/runtime authority, or checkpoint acceptance."
+}

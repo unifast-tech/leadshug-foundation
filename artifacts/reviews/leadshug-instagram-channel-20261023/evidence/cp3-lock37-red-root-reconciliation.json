@@ -1,0 +1,20 @@
+{
+  "kind": "root-reconciled-lock37-red-attempt",
+  "sourcesMatched": 258,
+  "boundInputsMatched": 644,
+  "preservationRowsMatched": 35,
+  "rootIndexMatched": true,
+  "todoMatched": true,
+  "exitCode": 1,
+  "logSha256": "7ddb33b75d42866f1aa710a1b5bd78ec94b44edc08574991bb18b74525337084",
+  "logBytes": 18753,
+  "passed": "parity26/generate/31migrations/lint/build/413of414unit",
+  "failure": "Existing ordinary-owner unit test now executes the full finalizeOutbound callback with an empty transaction object; acceptedIncomplete localFailure. Auth36 changed setup.$transaction from vi.fn() to callback({}) while finalauthority had subsequently changed toautocommit. Exacthistorical35source confirms originalvi.fn().",
+  "unreached": [
+    "ALLselectedIGnativeE2E",
+    "newcanonicalpeer-lockcausaloracle",
+    "auth36sixnativecases",
+    "batch/clock/livecontrols"
+  ],
+  "adjudication": "Testfixture regression fromauth36, not ROOT07causalRED or productregressionproof. Restore onlyoriginalsetuptransactionmock; retain alloldasserts/newauthcases and productionhashes, thennewseparatelyfrozenapi-instagram attempt."
+}

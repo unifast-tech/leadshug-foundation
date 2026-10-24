@@ -1,0 +1,9 @@
+{
+  "kind": "root-reconciled-auth36b-one-line-unit-fixture",
+  "path": "api-app/src/domain/inbox/outbound.service.spec.ts",
+  "sha256": "000b7ebfd5f18442b6c0fef34efbdd8faee2e1cfb6f99fbf4a632bfe4c683b7e",
+  "reverseExactPriorHash": true,
+  "allOther257SourceHashesExact": true,
+  "tests": "NOTRUN",
+  "change": "Restore original vi.fn transaction mock, preserving every assertion/new auth test; no production changes."
+}
