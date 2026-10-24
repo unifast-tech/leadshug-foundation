@@ -1,0 +1,93 @@
+{
+  "schema_version": "subagent-review-merge-v2",
+  "artifact_kind": "subagent_review_merge",
+  "authoritative": false,
+  "edit_policy": "derived_merge_packet",
+  "dispatch_path": "/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp3-adherence46b-dispatch.json",
+  "review_kind": "architecture_adherence",
+  "review_count": 1,
+  "reviewer_labels": [
+    "cp3-adherence46b-no-context"
+  ],
+  "highest_finding_severity": "high",
+  "axis_summary": {
+    "performance": "mixed",
+    "elegance": "acceptable",
+    "structural_soundness": "mixed",
+    "operational_fit": "mixed"
+  },
+  "recommended_paths": [
+    "Inspected all 18 enclosed source bodies, five governing excerpts and 24 evidence artifacts without tools or additional reads. This result covers affected lane B; the complementary lane and root freeze/coverage reconciliation remain necessary. The recorded 41 unchanged prior body reviews are carried forward, not claimed as fresh inspections. Obligation coverage: (1) the abstract Channel and operation-policy contracts remain appropriate, with generic business consumers and carried-forward DI composition; the protection-harness residual below remains. (2) exact selected-route lookup, strict V2 parsing and captured fingerprints have source support; native routing preserves distinct conversations for identical peers under two Instagram accounts. (3) post-ACK contextStatus no longer requires current credentials, while retained ownership/generation checks and the recorded four ACK cases support the original credential-coupling repair; complete sender/acceptance inspection belongs to the complementary lane. (4) inspected admission paths now acquire provider identity, qualified peer and conversation in order; conversation-only bookkeeping retains a valid suffix. API45 records all three native lock groups and preserved P2002 assertions/count three, without establishing a historical production deadlock. (5) qualified resource windows and Instagram human-reply-only policy remain intact, but initial-options recipient eligibility is inconsistent as detailed below. The approved 1000-character limit remains normative. (6) exact historical parsers and local-only admission recovery preserve the V1 boundary; the unknown-context repair returns a scoped read-only hint rather than inventing a route or redispatching. Complete historical recovery coverage requires the complementary lane. (7) selected and WhatsApp discovery reads are bounded; CSV now pages conversations and messages while preserving full output, qualification, filters, ordering and escaping. Public API and legacy BU consumers retain their recorded unchanged review coverage. (8) scheduler source coverage is carried forward; API45 records the complete 1000-update/replay case at 5099.176/3344.715 ms, including downstream assertions. (9) affected read shapes improve performance and the small contracts remain reasonably simple, but the frozen full EPS/RLS cohorts and broader assurance are not established by these API results. The documented read-boundary incident and code-before-test authorship remain qualifications; GREEN does not establish retroactive RED/test-first compliance. (10) complete CP4 and subsequent gates remain mandatory. Fix the two current CP3 gaps below within the approved owners, preserve all existing assertions and budgets, reconcile fresh frozen validation and complementary review, then complete CP4. Retain primary protocol, OAuth gateway/browser, ALL, security, TQA, cutover, final review and separately approved physical-runtime gates. Pending privacy and UTF-8 proposals confer no implementation authority."
+  ],
+  "exact_next_step": "Record reviewer resolutions in the governing TODO using the machine-checkable resolution table or equivalent gate ledger, then extract the derived resolution packet and decide whether another bounded review pass is still required.",
+  "findings": [
+    {
+      "finding_id": "F-EC5E6076",
+      "severity": "high",
+      "title": "Recorded CP4 consumers remain mandatory delivery blockers",
+      "rationale": "The recorded follow-up paths are cp4-connections-preparation21-root-qualified.json, cp4-safe-display-preparation22.json, cp4-browser-composer-preparation23-root-qualified.json and cp4-live-ingress-preparation19.json. They explicitly retain the paginated connection lifecycle, safe account/peer projections, strict V2 React composer, shared Incoming/realtime integration and HTTPS real-backend browser proof. Inspected list projections still expose legacy contact fields, and replyOptions still uses raw WABA display and an unqualified latest authorization username. These are acknowledged CP4 obligations with no waiver, not newly inferred CP3 regressions. API45 establishes neither their implementation nor browser/ALL acceptance.",
+      "suggested_action": "Keep ROOT-03 open in this TODO and implement complete CP4, including lifecycle recovery, mapped-account display, draft/context fencing, native realtime, browser freshness and CI parity. Complete the remaining assurance and approved runtime gates before claiming functional delivery.",
+      "reviewer_labels": [
+        "cp3-adherence46b-no-context"
+      ],
+      "source_finding_ids": [
+        "IG-CP3-ROOT-03"
+      ],
+      "category": "residual_risk",
+      "formalizable_hint": "partial",
+      "candidate_rule_level": "project",
+      "candidate_rule_id": "n/a"
+    },
+    {
+      "finding_id": "F-9A55552D",
+      "severity": "high",
+      "title": "Primary own-subscription observation remains unresolved",
+      "rationale": "The recorded follow-up is IG-SUBPROTO-01 together with IG-SUBREC-03. primary-subscription-index-research40.json explicitly leaves the Instagram Login GET envelope, returned ID namespace, visibility and completeness unproved. The synthetic subscribed_apps envelope in helpers.ts is a fixture assumption and cannot establish that protocol. Preserving UNKNOWN and preventing repeated mutation provides protection but does not fulfill the approved own-account observation obligation. No current API pass closes this release gate.",
+      "suggested_action": "Retain both findings as open and establish the required primary protocol evidence before accepting or implementing conclusive subscription/absence interpretation. Preserve UNKNOWN and the no-repeat fence; do not substitute Facebook Page semantics, guessed ID equality or undocumented completeness assumptions.",
+      "reviewer_labels": [
+        "cp3-adherence46b-no-context"
+      ],
+      "source_finding_ids": [
+        "IG-SUBPROTO-01"
+      ],
+      "category": "operational_fit",
+      "formalizable_hint": "partial",
+      "candidate_rule_level": "project",
+      "candidate_rule_id": "n/a"
+    },
+    {
+      "finding_id": "F-7CB5D352",
+      "severity": "medium",
+      "title": "Initial options advertise eligible WhatsApp operations for an Instagram recipient",
+      "rationale": "initialOptions verifies only that the conversation exists, then evaluates the BU's WhatsApp connections without qualifying the conversation's recipient identity. In a mixed BU, an Instagram-only contact therefore receives an available Evolution text option and potentially an available official template option. resolveForInitial subsequently rejects those same choices because ensureExplicitWhatsAppInitialRoute requires a WhatsApp contact identity. The new bounded-query test actually supplies a conversation created by signed Instagram ingress and expects two WhatsApp choices. This preserves query bounds while accepting inconsistent options and dispatch eligibility, contrary to the frozen requirement that both use the same trusted operation context. No wrong-recipient POST is demonstrated; dispatch currently fails closed.",
+      "suggested_action": "Qualify the conversation's recipient platform before advertising initial-send eligibility, using bounded canonical identity reads. Keep Instagram contacts ineligible for initial WhatsApp operations. Use a genuine WhatsApp conversation for the positive bounded-options fixture and add a mixed-BU Instagram negative control, preserving the twelve-account cohort, connection budgets and zero-effect assertions.",
+      "reviewer_labels": [
+        "cp3-adherence46b-no-context"
+      ],
+      "source_finding_ids": [
+        "IG-CP3-B46-01"
+      ],
+      "category": "adherence",
+      "formalizable_hint": "yes",
+      "candidate_rule_level": "project",
+      "candidate_rule_id": "n/a"
+    },
+    {
+      "finding_id": "F-25A37399",
+      "severity": "medium",
+      "title": "Concrete operation-policy dependencies can still pass the protection harness",
+      "rationale": "The harness now covers Instagram imports, tokens, adapterOrigin branches and InitialMessageService, supporting those portions of A-02. However, a direct OfficialChannelWindowPolicy import/reference passes: its module is outside policyModule and its name matches none of the concrete-name checks. A valid namespace import followed by new policies.OfficialEligibilityPolicy(windows) also passes because policy import inspection handles only named imports and the identifier matcher omits Official classes. These are ordinary concrete policy dependencies forbidden by the approved abstract-policy boundary, including the specific OfficialChannelWindowPolicy dependency being retired. This is a remaining protection gap, not evidence that current consumers contain those dependencies.",
+      "suggested_action": "Extend the existing bounded guard and negative fixtures to reject the concrete window-policy dependency and concrete eligibility-policy namespace access. Retain positive abstract dispatch, abstract policy and legitimate address-validation controls; no general dataflow framework is needed.",
+      "reviewer_labels": [
+        "cp3-adherence46b-no-context"
+      ],
+      "source_finding_ids": [
+        "IG-CP3-A-02"
+      ],
+      "category": "tests",
+      "formalizable_hint": "yes",
+      "candidate_rule_level": "project",
+      "candidate_rule_id": "n/a"
+    }
+  ]
+}

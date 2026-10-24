@@ -1,0 +1,53 @@
+# PACED Subagent Review Merge: architecture_adherence
+
+## Merge Identity
+- **Artifact kind:** `subagent_review_merge`
+- **Authoritative:** `false`
+- **Edit policy:** `derived_merge_packet`
+- **Dispatch path:** `/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp3-adherence46a-dispatch.json`
+- **Review count:** `1`
+- **Highest finding severity:** `high`
+
+## Axis Summary
+- **Performance:** `mixed`
+- **Elegance:** `acceptable`
+- **Structural soundness:** `mixed`
+- **Operational fit:** `mixed`
+
+## Recommended Paths
+- `Repair the final provider-fence interleaving within the existing shared owners and approved contract, add native pre-POST lifecycle-mutation controls, then freeze and validate the affected candidate. Reconcile both complementary review results and current evidence before closing individual CP3 findings. Complete all CP4 consumers and the remaining primary-protocol, browser, ALL, performance, assurance, cutover and separately approved physical-runtime gates. Preserve the recorded provenance limitations and pending human decisions.`
+
+## Merged Findings
+### F-2C9162B5 [high] Recorded CP4 consumers and remaining delivery gates remain open
+- **Reviewers:** cp3-adherence46a-fresh-no-context
+- **Category:** `operational_fit`
+- **Formalizable hint:** `partial`
+- **Candidate rule level:** `project`
+- **Candidate rule id:** `n/a`
+- **Suggested action:** Keep ROOT-03 open in this TODO and implement the complete recorded CP4 producer/consumer work with native PostgreSQL, WS and real-backend browser proofs. Retain the primary-observer and subsequent gates, respect the exact admitted OAuth middleware scope, and preserve the current character limit while the UTF-8 and protected privacy proposals await their required human decisions.
+- **Rationale:** The recorded follow-up paths are cp4-connections-preparation21-root-qualified.json, cp4-safe-display-preparation22.json, cp4-browser-composer-preparation23-root-qualified.json and cp4-live-ingress-preparation19.json. The governing TODO explicitly retains their unimplemented connection catalogue/verify/disconnect/reactivation lifecycle, qualified account/peer display, strict V2 React composer and asynchronous context fences, shared Incoming/realtime publication, and HTTPS browser/freshness/CI proofs. Current list/thread projections still expose legacy contact presentation, and replyOptions still selects the latest authorization username without successful same-account mapping qualification. These are acknowledged CP4 obligations, not newly attributed CP3 regressions. Primary own-subscription observation remains unresolved under primary-subscription-index-research40.json; API45 does not close it or the remaining ALL, assurance, performance, cutover and physical-runtime gates. No waiver permits backend-only delivery.
+
+### F-689DDFEE [high] Final provider validation can become stale during subsequent awaited checks
+- **Reviewers:** cp3-adherence46a-fresh-no-context
+- **Category:** `adherence`
+- **Formalizable hint:** `partial`
+- **Candidate rule level:** `project`
+- **Candidate rule id:** `n/a`
+- **Suggested action:** Make the final local observation coherently validate the captured provider, generation, credential, readiness and actor facts at the last awaited boundary, followed by synchronous session/deadline checks. Preserve abstract policy ownership, short transactions and HTTP outside transactions. Add native held-boundary cases for actual reauthorization and disconnect with a live actor, requiring zero message POSTs and matched unchanged-context controls.
+- **Rationale:** After the claim transaction releases its locks, OutboundService.finalProviderFence awaits contextBeforeDispatch, then policy.inspect, then the actor callback. The callback locks only user, grant and BU rows; its final checks cover the signed session and captured deadlines. A credential replacement or generation-changing disconnect committed after the provider-context observation can therefore escape this common fence while the actor remains authorized and the operation retains its previously decrypted credential. The Channel contract provides no guarantee of another provider-tuple observation after these awaits. The native authorization tests hold this same context-read boundary but mutate only grants/session; accepted-fact tests mutate credentials after POST. This is an uncovered source-supported interleaving, not a demonstrated production failure. It conflicts with IG-ARCH-R1-01's requirement to validate the captured current tuple before external dispatch.
+
+## Reviewer Summaries
+### cp3-adherence46a-fresh-no-context
+- **Assessment:** Changes required. Inspected all 26 enclosed current source bodies, five governing excerpts and 24 evidence bodies without tools or additional context. Obligation coverage: (1) the common sender uses abstract Channel and operation-policy contracts; actual adapter composition is carried forward from review35. (2) strict V2 parsing, exact route selection and captured ownership are present, but final provider validation has the interleaving below. (3) captured qualified addresses reach shared known-ACK and UNKNOWN acceptance without external retry. (4) applicable admission paths now use provider→qualified peer→conversation locking; conversation-only bookkeeping preserves the valid suffix. The native contention and preserved P2002 bodies support the reported repairs. (5) operation-specific windows and Instagram human-only textual replies are preserved; the current 1000-character contract remains normative. (6) exact V1 readers preserve historical facts and perform local-only recovery; current credential usability no longer gates ordinary known-ACK completion. The Instagram version-change case proves metadata mutation, not cryptographic rotation. (7) selected lookups and WhatsApp discovery are scoped and bounded; current CSV, dependency-harness and remaining consumer bodies require complementary lane B. (8) scheduler/preflight inspection is carried forward, while the packaged API45 reconciliation reports successful 1000-update and replay execution. (9) bounded query improvements and the small policy boundary are positive; complete frozen performance measurements remain outstanding, and final validation is structurally fragmented. (10) full CP4 and subsequent delivery gates remain mandatory. API45 reports 424 unit and 586 E2E passes; this reviewer neither executed them nor independently inspected the referenced log. The 41 unchanged prior body reviews are carried evidence, not fresh reads. Recorded read-boundary and code-before-test qualifications remain intact. This lane alone cannot accept CP3 or the feature.
+- **Recommended path:** `Repair the final provider-fence interleaving within the existing shared owners and approved contract, add native pre-POST lifecycle-mutation controls, then freeze and validate the affected candidate. Reconcile both complementary review results and current evidence before closing individual CP3 findings. Complete all CP4 consumers and the remaining primary-protocol, browser, ALL, performance, assurance, cutover and separately approved physical-runtime gates. Preserve the recorded provenance limitations and pending human decisions.`
+- **Performance:** `mixed`
+- **Elegance:** `acceptable`
+- **Structural soundness:** `mixed`
+- **Operational fit:** `mixed`
+- **Findings:**
+  - [high] IG-CP3-A46-01 Final provider validation can become stale during subsequent awaited checks: After the claim transaction releases its locks, OutboundService.finalProviderFence awaits contextBeforeDispatch, then policy.inspect, then the actor callback. The callback locks only user, grant and BU rows; its final checks cover the signed session and captured deadlines. A credential replacement or generation-changing disconnect committed after the provider-context observation can therefore escape this common fence while the actor remains authorized and the operation retains its previously decrypted credential. The Channel contract provides no guarantee of another provider-tuple observation after these awaits. The native authorization tests hold this same context-read boundary but mutate only grants/session; accepted-fact tests mutate credentials after POST. This is an uncovered source-supported interleaving, not a demonstrated production failure. It conflicts with IG-ARCH-R1-01's requirement to validate the captured current tuple before external dispatch.
+  - [high] IG-CP3-ROOT-03 Recorded CP4 consumers and remaining delivery gates remain open: The recorded follow-up paths are cp4-connections-preparation21-root-qualified.json, cp4-safe-display-preparation22.json, cp4-browser-composer-preparation23-root-qualified.json and cp4-live-ingress-preparation19.json. The governing TODO explicitly retains their unimplemented connection catalogue/verify/disconnect/reactivation lifecycle, qualified account/peer display, strict V2 React composer and asynchronous context fences, shared Incoming/realtime publication, and HTTPS browser/freshness/CI proofs. Current list/thread projections still expose legacy contact presentation, and replyOptions still selects the latest authorization username without successful same-account mapping qualification. These are acknowledged CP4 obligations, not newly attributed CP3 regressions. Primary own-subscription observation remains unresolved under primary-subscription-index-research40.json; API45 does not close it or the remaining ALL, assurance, performance, cutover and physical-runtime gates. No waiver permits backend-only delivery.
+
+## Exact Next Step
+Record reviewer resolutions in the governing TODO using the machine-checkable resolution table or equivalent gate ledger, then extract the derived resolution packet and decide whether another bounded review pass is still required.
+

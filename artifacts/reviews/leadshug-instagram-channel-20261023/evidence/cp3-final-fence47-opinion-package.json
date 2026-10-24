@@ -1,0 +1,171 @@
+{
+  "kind": "closed-focused-final-provider-fence47-HOW-opinion",
+  "reviewKind": "architecture_opinion",
+  "governingTodo": {
+    "path": "foundation_documentation/todos/active/features/TODO-leadshug-instagram-channel.md",
+    "bytes": 276303,
+    "sha256": "d43e788f8ee4057d6a6deda7862c24b21d7c54f0eb227bebe71859855b1e9056"
+  },
+  "requiredSourceBodies": [
+    {
+      "path": "api-app/src/domain/channels/transport/channel.ts",
+      "bytes": 13235,
+      "sha256": "aa6485060287910d586d17b8cbffe2f194b1b3a29fb71c697f27e0b78c28ffbf"
+    },
+    {
+      "path": "api-app/src/domain/inbox/channel-eligibility-policy.ts",
+      "bytes": 9602,
+      "sha256": "9812de537d5e5f0c84ae9b824b7343f8dfd9f63dfa0520f6da9a7063d2d13eee"
+    },
+    {
+      "path": "api-app/src/integrations/channels/prisma-channel-resolver.ts",
+      "bytes": 64107,
+      "sha256": "607a14170052225551396210293625f26182385c7bc7fa1e6acfa318c405aa0f"
+    },
+    {
+      "path": "api-app/src/domain/inbox/outbound.service.ts",
+      "bytes": 49351,
+      "sha256": "37bcfc6cdc9e3ba53f8ee97ec68c923d07aab8bb90492b60872ece10ae473c30"
+    },
+    {
+      "path": "api-app/src/domain/inbox/dispatch-admission.service.ts",
+      "bytes": 48540,
+      "sha256": "559039c84b20ac986b6bc3b2b0590a50a6be9454634d7bbb2c05d706c5a387e4"
+    },
+    {
+      "path": "api-app/src/domain/channels/channel-credential-resolver.ts",
+      "bytes": 9525,
+      "sha256": "34f25985091f0c0873b682bc3d27f7eb0cde95a56e5b74497afdc541f79f7630"
+    },
+    {
+      "path": "api-app/src/domain/inbox/initial-message.service.ts",
+      "bytes": 24534,
+      "sha256": "aa33ca7ed6f74cabd878ebccec9529dd6a32b8311dad107babbc212d905ecc41"
+    },
+    {
+      "path": "api-app/src/domain/inbox/conversations.service.ts",
+      "bytes": 9520,
+      "sha256": "1aa8ad944527529255b589af45f5e1d05aa0bc36d504f2315330ca9ed546cd5b"
+    },
+    {
+      "path": "api-app/src/surfaces/bff/conversations.controller.ts",
+      "bytes": 21521,
+      "sha256": "799a1866c203557b9a115c327dfb466b40c71cb937218997c1a2fecec6ad34e2"
+    },
+    {
+      "path": "api-app/src/infra/session/session.service.ts",
+      "bytes": 5483,
+      "sha256": "884618471c7cc58c037f04d20c790979409bbbcfc2fe61b34312b2625b28e200"
+    },
+    {
+      "path": "api-app/src/domain/access/access.service.ts",
+      "bytes": 2390,
+      "sha256": "2ef3761a138d7c8c386c5ddb4bf2a2000c960328789834bde5e12135a1ea66e7"
+    },
+    {
+      "path": "api-app/src/domain/access/scope.ts",
+      "bytes": 5701,
+      "sha256": "412f68eb157328855c87cb86b6b89cc1c267eee7068dc59c0abbe085074db26d"
+    },
+    {
+      "path": "api-app/src/integrations/channels/instagram-channel.ts",
+      "bytes": 2375,
+      "sha256": "ed53f4eb0119ec6187c115e5816412d0cd2ef00213d83f341efd8640bac5f526"
+    },
+    {
+      "path": "api-app/src/integrations/channels/meta-channel.ts",
+      "bytes": 3900,
+      "sha256": "99a9ca01a57527a76de54cdbdf8b49f65b5dcceb1a71abce883d1845c6cd8f26"
+    },
+    {
+      "path": "api-app/src/integrations/channels/evolution-channel.ts",
+      "bytes": 2211,
+      "sha256": "6a41ef2f3b0ee9e5c6b381d54faf48b0b2c672e52751f8be1480ad01cb178a34"
+    },
+    {
+      "path": "api-app/src/integrations/instagram/instagram-messaging.client.ts",
+      "bytes": 2815,
+      "sha256": "a5efd1ced025fa3822126cd4deada4ca5c31505edefa3cc71d85a475a9de28a5"
+    },
+    {
+      "path": "api-app/src/domain/channels/channels.service.ts",
+      "bytes": 46758,
+      "sha256": "3783c1b2a3afa982b4e9d719c71c172df1717bda7ba380ef143c9dd06045805f"
+    },
+    {
+      "path": "api-app/src/domain/channels/instagram-authorization.service.ts",
+      "bytes": 73878,
+      "sha256": "2ecfcbfe83de72da41f3b89543df021d164168cccc13254b63c1069a84e6263a"
+    },
+    {
+      "path": "api-app/test/instagram-cp3-authorization-fences.e2e-spec.ts",
+      "bytes": 15205,
+      "sha256": "ac62369b48608336ab89e1a865881927d3a1ab5c1821653e6006a24318a30411"
+    },
+    {
+      "path": "api-app/test/helpers.ts",
+      "bytes": 34495,
+      "sha256": "79c9343d80b72b1d8c378d6946bf38997133d528117b11a4fc1827fa3e52586c"
+    }
+  ],
+  "sourceCount": 20,
+  "evidence": [
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp3-adherence46a-raw.json",
+      "bytes": 7301,
+      "sha256": "d6bd798c4dfd1c0afadc67c81fd13dcc0f88c7d385bdc14d20e47c71bc4bebc2"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp3-adherence46b-raw.json",
+      "bytes": 9994,
+      "sha256": "e0bc9ca5ee93a9f40370c06e1b1609641f6bb8531e97931c1b09f56e1f38cf08"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp3-adherence46-root-adjudication.json",
+      "bytes": 3703,
+      "sha256": "56bc6fe372e9bfda183e5cd45b13d56bc0d04f1370102036802080fa5e98b39a"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp3-api45-root-reconciliation.json",
+      "bytes": 3310,
+      "sha256": "4ed54d84ff162b52e18a57e9e92a31a9936e2d9e32d3f6d8b51f66ae08c169f0"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp3-api45-result.json",
+      "bytes": 4197,
+      "sha256": "293aaa58ccea7b0b9bc66bb96ee3e129fa8a8920cd1e1565b6082508a410f04e"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp3-auth36-terminal.json",
+      "bytes": 1615,
+      "sha256": "c27674ac93dc888fa817fa78f2e2263b1fd44fba9dc2756f25492e1ed43a0b83"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp3-repair44-terminal.json",
+      "bytes": 2076,
+      "sha256": "ec5f6e149b492558fbe6bc26d39c0ef91c5e1bb267630b1fd47ada1af92ca12a"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/primary-subscription-index-research40.json",
+      "bytes": 2739,
+      "sha256": "10c684467046785d87396a31d01ef80ef878d5f9bd2de7fc753a7d899602285d"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp4-connections-preparation21-root-qualified.json",
+      "bytes": 2543,
+      "sha256": "3e9e59a0f972fa7d02b33833515c8bc4d15b00dee5847fbb1f710916ce4a7969"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp4-browser-composer-preparation23-root-qualified.json",
+      "bytes": 4783,
+      "sha256": "9923d9fcd1045355665ec9793968c6431518f0d363e18a914e063f74dbff79c2"
+    }
+  ],
+  "question": "Choose the simplest faithful HOW to fix IG-CP3-A46-01 under the EXISTING approved WHAT. Do not reopen Channel architecture or waive delivery. Current finalProviderFence awaits contextBeforeDispatch then policy.inspect then BFFactor callback; mutable provider/generation/credential facts can change during the later awaits while actor remains live. All API45 tests pass but do not cover this interleaving. Existing callback locks actor/grant/BU rows, not provider facts. Current bound adapters do extra context checks BEFORE common callback, not after it. Need a coherent last awaited local authorization observation covering the captured current tuple AND current actor, followed by synchronous signed-session/deadline/window/credential-margin checks and provider HTTP OUTSIDE any transaction. Preserve no-redispatch ACK/V1 facts and common sender/policy owners.\nAssess a short coherent transaction reusing current resolver validation and actor callback with appropriate NOWAIT row pins and canonical lock order, versus a genuinely simpler atomic final read/port if actually feasible. The current callback checks signed session after its raw query; a new transaction adds a later awaited COMMIT, so explicitly preserve a synchronous session-expiry check after that last await, not only captured operation deadline. Do not solve by repeatedly alternating context and actor reads, holding transaction over provider HTTP, broad locks, extending deadlines, provider-specific branches in generic sender, new plugin framework, or guessed external protocol. No product/schema/config/HTTProute change outside existing approved intent is authorized by this opinion.\nSpecify concrete internal signatures/data flow, minimal existing admitted source/test paths, lock order and transient contention outcome, and why actor/policy/provider facts cannot become mixed DURING remaining awaits. Be precise about the unavoidable instant after a valid final local observation: do not claim atomic external network effects with DB state. Identify the correct linearization/acceptance interpretation within current contract, not a hidden criterion waiver.\nPlan faithful native causal RED then GREEN controls using actual successful reauthorization (encrypted credential replacement, not metadata-only change), actual existing WhatsApp disconnect, real PostgreSQL and provider HTTP fake only. Existing auth helper holds contextBeforeDispatch AFTER its delegated read; this is a real current interleaving because more awaits follow, but after a coherent final observation the same test-inserted post-read pause could manufacture a false stale failure. Define native oracles that prove a mutation committed BEFORE final authorization prevents POST, and prove correct serialization if the coherent final observation pins rows so lifecycle mutation must wait. Preserve actual grant/session negative+live controls, current P2002/lock thresholds and no wrong-account POST. No fixture assertions weakened merely to accommodate design; explain necessary observation-hook adaptation honestly.\nAll review advice is HOW only; if any recommendation changes WHAT/validation scope, flag it instead of implementing. Complete CP4 and primary GET proof remain open independently. Return canonical architecture_opinion JSON, all five positions and concrete recommendation. No tools or source edits.",
+  "authority": "Existing approvedSTIG03v1.3, no product edits fromopinion; exactprotectedOAuthmiddleware/access/session/concreteproviderclients preserved. Advice doesnotapprove newWHAT or runtime.",
+  "frontendConsumerMatrix": "Actual normative T matrix enclosed. CP4connections/lifecycle/safeprojection/composer/realtime/HTTPSbrowser NOTimplemented/no waiver; full featuredelivery stillmandatory. This review only chooses HOW for currenthighA46 interleaving.",
+  "currentTests": "RootAPI45 full424unit+586E2E GREEN for matching261/T690inputs35rows3links; doesnotprove uncovered A46 race. Current20fullbodies are actualAPI45source. NewnativecausalRED notyet authored/run.",
+  "model": "gpt-6.1-sol",
+  "effort": "xhigh",
+  "execution": "Canonical runner/closedstdin/no tools; onlystrictCLI model_reasoning_effort=xhigh argvconfig in-memory; no runnerfile/config edit."
+}

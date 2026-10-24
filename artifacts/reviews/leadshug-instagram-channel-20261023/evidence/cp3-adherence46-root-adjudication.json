@@ -1,0 +1,84 @@
+{
+  "kind": "root-adjudicated-complementary-cp3-adherence46",
+  "status": "changes_required",
+  "all261SourcesTodo34Inputs35Preservations3GitlinksExact": true,
+  "sourceBodies": {
+    "a": 26,
+    "b": 18,
+    "union": 35,
+    "priorUnchangedCarried": 41,
+    "all19DeltaSourcesCovered": true
+  },
+  "bothCanonicalTurnCompleted": true,
+  "bothStrictSchemaMergesPassed": true,
+  "sourceFreeze": "d9c9139238f428f67f9bae5fa89e6fbe15f2e73c",
+  "apiProof": "cp3-api45-root-reconciliation.json",
+  "qualifications": [
+    "Fresh current35body union+41unchanged carried from original52body review; no peer-lane actualread claim.",
+    "Source46finalfence defect is supported interleaving, not executedproductionfailure. Need nativecausal RED beforeprodrepair.",
+    "Readboundaryincident and code-before-test consumer39 preserved. Metadata-version ACKcase notcryptographicrotation.",
+    "Root corrected14explicitopen/pending classes in derived dispatch beforelaunch; no canonicalhelpercodechange.",
+    "Canonical runner retained; only documentedstrictCLI xhigh argvconfigurationaddedinmemory; noexecutable/config/source edits."
+  ],
+  "findings": [
+    {
+      "id": "IG-CP3-A46-01",
+      "severity": "high",
+      "resolution": "Integrated",
+      "classification": "release-blocker",
+      "route": "fix in this TODO",
+      "state": "open; final provider tuple/actor observation must be coherent at last awaited local boundary",
+      "next": "Focused HOW opinion, native actualreauthorize/disconnect causalcontrols, source repair within existing sharedowners."
+    },
+    {
+      "id": "IG-CP3-B46-01",
+      "severity": "medium",
+      "resolution": "Integrated",
+      "classification": "release-blocker",
+      "route": "fix in this TODO",
+      "state": "open; initialOptions wrongly offers WA for IGcontact whiledispatchdenies",
+      "next": "Boundedcanonicalrecipient eligibility inoptions; genuineWApositivefixture+mixedBUIGnegative; retain12accountcohort."
+    },
+    {
+      "id": "IG-CP3-A-02",
+      "alias": "B46 guardfinding",
+      "severity": "medium",
+      "resolution": "Integrated",
+      "classification": "release-blocker",
+      "route": "fix in this TODO",
+      "state": "partiallyfixed; concreteOfficialWindow andnamespaceOfficialEligibility imports evadeguard",
+      "next": "Exactnegativefixtures+boundedASTguard withoutfutureframework; preservepositiveabstract/addresscontrols."
+    },
+    {
+      "id": "IG-CP3-ROOT-03",
+      "alias": "both46lanes",
+      "severity": "high",
+      "resolution": "Integrated",
+      "classification": "release-blocker",
+      "route": "fix in this TODO",
+      "state": "open; completeCP4 andlatergatesmandatory"
+    },
+    {
+      "id": "IG-SUBPROTO-01",
+      "alias": "IG-SUBREC-03",
+      "severity": "high",
+      "resolution": "Integrated",
+      "classification": "release-blocker",
+      "route": "resolve primary protocol in this TODO",
+      "state": "open; no conclusiveGETID/envelope/completeness/absenceguess"
+    }
+  ],
+  "originalFindingClosures": [
+    {
+      "ids": [
+        "IG-CP3-ROOT-01",
+        "IG-CP3-ROOT-02",
+        "IG-CP3-ROOT-07",
+        "IG-CP3-A-01",
+        "IG-CP3-B35-05"
+      ],
+      "basis": "Original boundedselection, credentialcoupling, peerlocks, currenthumanfencepresence andunboundedCSV sourceissues fixed and supported bycurrentAPI45 andaffected46source. NewA46-01 remains independentlyopen; A-02 partial. Nowholecheckpoint/delivery acceptance."
+    }
+  ],
+  "next": "Concretize A46 coherent final-fence HOW without relaxing last-boundary/shortTX/HTTPoutsideTX and with faithful native linearization controls, then test-first remaining source corrections; fullCP4 remains in sequence."
+}

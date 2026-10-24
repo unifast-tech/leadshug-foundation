@@ -1,0 +1,25 @@
+{
+  "kind": "focused-final-fence47-opinion-execution",
+  "model": "gpt-6.1-sol",
+  "effort": "xhigh",
+  "canonicalRunner": "delphi-ai/tools/subagent_review_run.py",
+  "argvOnlyConfiguration": "--strict-config -c model_reasoning_effort=\"xhigh\" injected in-memory into canonical codex exec argv; no executable/helper/config edit; canonical prompt, stdout/stderr/events/turn.completed collection unchanged",
+  "promptChars": 661380,
+  "promptBytes": 663761,
+  "packageSha256": "f6092565c1f5606bf75234a3bfa4377df93a1fcf73bf0155260b08e4f781fd96",
+  "dispatchSha256": "e2f9948930cbfed98ec112944cf0f6dfbd3da3aae9e85dd6eb21014ed89044ab",
+  "derivedCarryForwardClassesCorrected": [
+    "IG-CP2-ROOT-02",
+    "IG-SUBPROTO-01",
+    "IG-SUBREC-02",
+    "IG-SUBREC-03",
+    "IG-CP2-R1-04",
+    "IG-CP2-R1-06",
+    "IG-OAUTH-SESSCOMP-01",
+    "IG-CP3-ROOT-03",
+    "IG-CP3-A-02",
+    "IG-CP3-A46-01",
+    "IG-CP3-B46-01"
+  ],
+  "lifecycle": "Wait naturally while live; no source/T/input mutation or package reduction. Adviceonly, no productwrite/runtime authority."
+}

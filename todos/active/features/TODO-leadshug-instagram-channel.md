@@ -31,7 +31,7 @@ Este TODO define WHAT, exclusões e critérios de entrega. A baseline v1.3 abaix
 ## Delivery Status Canon (Required)
 - **Current delivery stage:** Pending
 - **Qualifiers:** none
-- **Next exact step:** executar adherence46afetada independente em2pacotes complementares completos após rootAPI45GREEN(424unit/586E2E), levando todos os achados35/provas45/deltas atuais. Depois consolidar achados e implementar CP4 completo; nenhum aceite parcial de feature.
+- **Next exact step:** concretizar HOW de fence final coerente paraA46-01 em opinião técnica delimitada, depois REDcausal de reautorização/desconexão e elegibilidade inicial antes de reparar os3achados46. API45GREEN preservada como baseline; CP4 completo segue obrigatório.
 
 ## Active Work State (Required While TODO Remains In `active/`)
 - **Work state:** implementation
@@ -638,17 +638,19 @@ Historical planning observation retained: IG-REV-01..04, strategic source, high/
 
 | IG-CP2-ROOT-15 | medium | release-blocker | fix test fixture in this TODO | Exact account selection is required under multiaccount CP2 proof | closed exactaccount fixture; selected16 andfull549 passed | cp2-api-full-r4-result.json; adherence-cp2-r4-result.json |
 
-| IG-CP3-ROOT-01 | high | release-blocker | fix in this TODO | Exact selection and bounded WA discovery are SCOPE-03/06 and DOD-07/08 | open; original policy/batch repairs supported, query38 source underway | cp3-adherence35-root-adjudication.json; cp3-query38-handoff.json |
-| IG-CP3-ROOT-02 | high | release-blocker | fix in this TODO | Strict V2, historical accepted-fact tuple and no redispatch are approved scope | open; ordinary accepted-fact credential coupling in query38 | cp3-adherence35-root-adjudication.json; cp3-query38-handoff.json |
+| IG-CP3-ROOT-01 | high | release-blocker | fix in this TODO | Exact selection and bounded WA discovery are SCOPE-03/06 and DOD-07/08 | closed original defect by API45/adherence46; newA46 remains open | cp3-api45-root-reconciliation.json; cp3-adherence46-root-adjudication.json |
+| IG-CP3-ROOT-02 | high | release-blocker | fix in this TODO | Strict V2, historical accepted-fact tuple and no redispatch are approved scope | closed original defect by API45/adherence46; newA46 remains open | cp3-api45-root-reconciliation.json; cp3-adherence46-root-adjudication.json |
 | IG-CP3-ROOT-03 | high | release-blocker | fix in this TODO | All declared connections/UI/projection/realtime/browser consumers remain required | open; CP4 integral and later gates required | cp3-adherence35-root-adjudication.json; CP4 qualified preparation receipts |
 | IG-CP3-ROOT-04 | medium | release-blocker | fix in this TODO | Writer-path discipline and preservation remain authoritative | corrected qualified; no dynamic proof invalidation inferred | cp3-source03-boundary-correction04.json |
 | IG-CP3-ROOT-05 | high | release-blocker | fix in this TODO | Actual verified WA ingress must establish its qualified reply route | closed original defect by API35 and complete complementary adherence35 | cp3-api35-root-reconciliation.json; cp3-adherence35-root-adjudication.json |
 | IG-CP3-ROOT-06 | high | release-blocker | fix in this TODO | Canonical peer identity governs acceptance while preserving legacy presentation | closed original defect by API35 and complete complementary adherence35 | cp3-api35-root-reconciliation.json; cp3-adherence35-root-adjudication.json |
-| IG-CP3-ROOT-07 | high | release-blocker | fix in this TODO | Provider identity, qualified peer and conversation lock order is shared | open; native RED37b; source37 repaired but NOTRUN | cp3-lock37b-red-root-reconciliation.json; cp3-lock37-production-terminal.json |
+| IG-CP3-ROOT-07 | high | release-blocker | fix in this TODO | Provider identity, qualified peer and conversation lock order is shared | closed original defect by API45/adherence46; newA46 remains open | cp3-api45-root-reconciliation.json; cp3-adherence46-root-adjudication.json |
 | IG-CP3-ROOT-08 | high | release-blocker | fix in this TODO | Accepted and uncertain facts retain captured qualified Instagram address | closed original defect by native API35 and complete complementary adherence35 | cp3-api35-root-reconciliation.json; cp3-adherence35-root-adjudication.json |
-| IG-CP3-A-01 | high | release-blocker | fix in this TODO | Current human actor/session/grant fence is DOD-03 and VAL-03 | open for fresh source adherence; six native negative/live controls passed37b | cp3-auth36-terminal.json; cp3-lock37b-red-root-reconciliation.json |
-| IG-CP3-A-02 | medium | release-blocker | fix in this TODO | Dependency harness must catch concrete Instagram coupling and initial consumer | open; bounded consumer39 correction prepared | cp3-adherence35-root-adjudication.json; cp3-consumer39-readonly-preparation.json |
-| IG-CP3-B35-05 | medium | release-blocker | fix in this TODO | Bound internal CSV hydration preserving full public output and filters | open; inherited issue, no new regression proved; consumer39 prepared | cp3-adherence35-root-adjudication.json; cp3-consumer39-readonly-preparation.json |
+| IG-CP3-A-01 | high | release-blocker | fix in this TODO | Current human actor/session/grant fence is DOD-03 and VAL-03 | closed original defect by API45/adherence46; newA46 remains open | cp3-api45-root-reconciliation.json; cp3-adherence46-root-adjudication.json |
+| IG-CP3-A-02 | medium | release-blocker | fix in this TODO | Dependency harness must catch concrete Instagram coupling and initial consumer | open; partial fix proved45, Official window/namespace policy guard residual46 | cp3-adherence46b-raw.json; cp3-adherence46-root-adjudication.json |
+| IG-CP3-B35-05 | medium | release-blocker | fix in this TODO | Bound internal CSV hydration preserving full public output and filters | closed original defect by API45/adherence46; newA46 remains open | cp3-api45-root-reconciliation.json; cp3-adherence46-root-adjudication.json |
+| IG-CP3-A46-01 | high | release-blocker | fix in this TODO | coherent provider/currentactor final observation is IG-ARCH-R1-01/DOD-03 | open; nativecausal proof then faithfulHOW repair | cp3-adherence46a-raw.json; cp3-adherence46-root-adjudication.json |
+| IG-CP3-B46-01 | medium | release-blocker | fix in this TODO | options and dispatch must share recipient-qualified initial eligibility | open; preserve12cohort/WApositive and addIGnegative | cp3-adherence46b-raw.json; cp3-adherence46-root-adjudication.json |
 
 ## TODO Closeout Disposition
 - **Disposition:** blocked
@@ -1605,3 +1607,17 @@ Root conferiu261fontes/T/677inputs/35preservações/3gitlinks/log235174bytes SHA
 ## CP3 API45 complete GREEN and affected adherence46 preparation — 2026-10-24
 
 `cp3-api45-root-reconciliation.json` sela root independente:261fontes/T/690inputs/35preservações/3gitlinks/log exatos, comando único exit0,424unit+586E2E. Os6casos anteriores agora passaram sem reduzircoorte12, orçamento deproduto, limites de tempo ou oráculos causais. Locks completaram3grupos, V1unknownACK preservou503canônico, BUinativa mantevezeroPOST/REJECTED. Auth6/ACK4/query4/CSV1/P2002count3/finalclock9/residual12/lote1000 passaram. Próxima revisão é afetada e complementar à união52já revisada35: todos os deltas desdeAPI35 e seus testes serão cobertos integralmente, preservando41corpos anteriores ainda idênticos. A+B carregam rubricas10obrigações/5eixos e ausência atual dos consumersCP4; nenhuma lane isolada aceitaCP3 ou entrega. CP4 deverá ser implementado integralmente depois da reconciliação.
+
+## CP3 affected adherence46 terminal — 2026-10-24
+
+Ambas lanes retornaramturn.completed e strictmerge válido; root conferiu261fontes/T/34inputs/35preservações/3index. União35corpos atuais cobre19deltas desdeAPI35 e11mudados da revisão52original;41antigos preservados porhash. `cp3-adherence46-root-adjudication.json` integra3achados atuais: A46-01 finalProviderFence lê contexto antes de awaits posteriores de política/ator, permitindo provider tuple obsoleto; B46-01 initialOptions ofereceWAparacontatoIG emBUmista embora dispatchrecuse; A-02 ainda não detectaOfficialChannelWindowPolicy e namespaceOfficialEligibilityPolicy. São fixes dentro doWHATaprovado. Antes da fonte, obter HOW coerente e provaREDcausal sem teste artificial após última observação; shortTX/HTTPfora deTX, política abstrata, locks e knownACK permanecem. ROOT03/CP4integral e primaryGET/SUBREC03 seguemopen; propostasprivacidade/UTF8pendentes sem autoridade. Defeitos originais ROOT01/02/07/A01/CSV35-05 têm fonte/prova45+46; o novoA46permaneceopen independente. Sem aceiteCP3/feature.
+
+### CP3 adherence46 finding resolution
+
+| Finding ID | Resolution | Usefulness | Formalizable | Candidate Rule Level | Candidate Rule ID | Rationale / Evidence |
+| --- | --- | --- | --- | --- | --- | --- |
+| IG-CP3-A46-01 | Integrated | useful | partial | project | n/a | Current provider andactor facts need coherent lastlocal observation; nativecausal proof and HOWreview before source; cp3-adherence46-root-adjudication.json |
+| IG-CP3-B46-01 | Integrated | useful | yes | project | n/a | Initialoptions mustrejectIGrecipients; actualWApositive andIGnegative boundedtests required; cp3-adherence46b-raw.json |
+| IG-CP3-A-02 | Integrated | useful | yes | project | n/a | Residual Official window/namespace policy dependencies require guardnegativefixtures; current consumers notclaimedconcrete; cp3-adherence46b-raw.json |
+| IG-CP3-ROOT-03 | Integrated | useful | partial | project | n/a | CP4whole/latergatesremainopeninTODO, no waiver; both46reviews |
+| IG-SUBPROTO-01 | Integrated | useful | partial | project | n/a | OwnGETprotocol unproved; retainUNKNOWN/no-repeat andSUBREC03, no copiedPage/guessedabsence; cp3-adherence46b-raw.json |
