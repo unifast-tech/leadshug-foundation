@@ -1,0 +1,86 @@
+{
+  "kind": "cp2-r3-causal-validation15-qualified-red",
+  "command": "bash scripts/test-channels-local.sh api-instagram",
+  "exit": 1,
+  "log": "cp2-r3-causal-validation-15.log",
+  "logSha256": "9ab7e386909f61324090873f8b1ddd4d4e2545f8d4828c44ec03a0ab214541b4",
+  "migrations": 31,
+  "lint": "PASS",
+  "build": "PASS",
+  "unit": {
+    "files": 37,
+    "passed": 398
+  },
+  "e2e": {
+    "files": 9,
+    "passed": 84,
+    "failed": 7,
+    "total": 91
+  },
+  "causalRows": [
+    {
+      "case": "callbackshortlease/deadline",
+      "reached": "actualPGUPDATEwait, stillfuturethenexpired shortenedmetadata, normalTXbudget,303,legit3HTTP",
+      "actual": "CANDIDATE_READY persisted instead ofEXCHANGING",
+      "notReached": "candidateCiphertext/professionalID/auditrollback assertions afterfailedstatus",
+      "control": "equal-duration livecallback PASS",
+      "classification": "causalRED of shortenedpersistedclock robustness, notnatural60slease"
+    },
+    {
+      "case": "callbackactualcredentialmargin",
+      "reached": "actualproviderexpires_in62, eligiblebeforefinalUPDATEwait, observedissued upperbound<=60margin after2.2s, actualPGwait,303/3HTTP",
+      "actual": "CANDIDATE_READY instead ofEXCHANGING",
+      "notReached": "ciphertext/audit assertions afterfailedstatus",
+      "control": "same2.2s with65slifetime PASS",
+      "classification": "causalRED actualcandidate60smargin"
+    },
+    {
+      "case": "subscriptionsuccessclock",
+      "reached": "actualPGfinalUPDATEwait, deliberatelyshortened deadline/lease plusactual62sexpires margincrossed, response409 already, onePOST",
+      "actual": "MAPPED_PENDING_RECEIPT committed despite409, expectedMAPPED_PENDING_SUBSCRIPTION",
+      "notReached": "OBSERVING/lease/receipt/tombstone assertions afterfailedstatus",
+      "control": "livelease and2.2s credentialmargin controls PASS",
+      "classification": "causalRED combinedshortdeadline/credential-boundary stalefact, notisolatedeachclock"
+    },
+    {
+      "case": "subscriptionprovidersettlementerrorclock",
+      "reached": "actualPGfinalUPDATEwait, shortenedfuturemetadata expired, <4.5s",
+      "actual": "200 instead409",
+      "notReached": "laterPOSTcount/databasefacts assertions",
+      "control": "samewait liveUNCERTAINsettlement PASS",
+      "classification": "causalRED shortenedmetadataoperationclock"
+    },
+    {
+      "case": "postPOSTfinalDBfaultcleanup",
+      "reached": "actualtargetedSQLfault aftersettledPOST, rolledbacksubscriptionwrite, onePOST/counter1, faultdisabled, independentsignedIN andoriginalkeylocalrecovery/tombstone allassertionsbeforelastflag",
+      "actual": "capturedoriginalholder releasebeforeIN=false insteadtrue",
+      "control": "no-faultoriginalPOSTnormalfinalization PASS",
+      "classification": "causalRED exactoldholdercleanup; recovery/receipt alreadyprovedbeforefailure"
+    },
+    {
+      "case": "GETnulltakeover",
+      "reached": "actual2stageFIFO A/P/B/Q/C/R queue, successorupdateinsideC andcommit beforeR, HTTPGETsettled/currentproviderCallcheckprecededtakeover",
+      "actual": "200 instead409",
+      "notReached": "expectedcode/remainingGET/POST deltas/attempt/successor snapshots afterfailedresponse",
+      "control": "ordinarycontrol200/UNCERTAINbody/oneGETzeroPOST reached, thenobsoletecounterfixturefailed",
+      "classification": "causalRED successfulGETcontinuation postcheckgap, no duplicatePOST/lostreceiptclaim"
+    }
+  ],
+  "fixtureFailure": {
+    "case": "ordinaryGETnullcontrol finalAttempt.subscriptionRequests",
+    "actual": 2,
+    "expectedByStaleTest": 1,
+    "contract": "Perattemptbudget counts firstPOST+laterGET=2 (within3), no secondPOST. Correctexacttest to afterPost+1 and2; do notalterproductbudget."
+  },
+  "otherSupported": "Allprior77/currentstrictconcurrency/recovery/receipt/session/root15 andnewcompleted-usabilityreplay/config/apprecreationcases passed. No unchangedproduction edit duringproof.",
+  "rootPostMatched": {
+    "sources": 241,
+    "todo": true,
+    "inputs": 72,
+    "preserved": 35,
+    "index": 3
+  },
+  "validatorTerminal": true,
+  "qualification": "Root derivescausalRED onlyfromactual reachedbarrier/clock/assertion ordering with matchedcontrols and unchangedproduction, notfromaggregatefailcounts. These failures doNOT prove correctfuture denial/rollback/cleanup, whichmustbeGREENafterrepair. Purelysyntheticdisposable/noMeta.",
+  "next": "Explicit2pathcode-onlyservicefix +1countfixturecorrection; terminal/refreeze/separatevalidation16/fullAPI/freshreview; no pendinghuman/primarywaiver."
+}

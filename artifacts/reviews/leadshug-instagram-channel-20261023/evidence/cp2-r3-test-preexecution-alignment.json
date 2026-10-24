@@ -1,0 +1,24 @@
+{
+  "kind": "cp2-r3-test-only-terminal-static-alignment-beforevalidation",
+  "writerTerminal": true,
+  "initialChangedPaths": {
+    "api-app/test/instagram-cp2.e2e-spec.ts": "dcaf911d23fd8dcfe4a29eb946ba4355d5f8ab9af91f7bd59c4f89faee4e4d2c",
+    "api-app/test/instagram-cp2-residual.e2e-spec.ts": "295ac89fb550d3b5ffeedf8336de2c480a5c2fd901b1f49caa6d29a719cddf52",
+    "api-app/test/instagram-cp2-final-clock.e2e-spec.ts": "4e395e83543dc5edcbea73fc311311e9570d187426f75ab00894bf5e8b937e48",
+    "api-app/test/instagram-cp2-finalization.e2e-spec.ts": "57962b4a6f1f877da74e5b6f6e366d67d73ace2910325746c8c7d18a4fff2023"
+  },
+  "allOther237Source13Matched": true,
+  "preservation": 35,
+  "index": 3,
+  "validation": "NOTRUN, no runner consumed",
+  "staticFixtureDefects": [
+    "Prisma String id hasPostgreSQLTEXT type; trigger NEW.id=literal::uuid isnot typecorrect. RemoveUUIDcast/useTEXT andvalidate generatedUUIDbeforeinterpolation, no schemachange.",
+    "queryRaw SELECT pg_advisory_xact_lock returnsPGvoid; sourceuses ::text AS locked. Newfixtureholders need same supportedcast ornon-returningexecute primitive.",
+    "Newblockertransactions set45000ms despite normal5sbudget; remove newoverrides, allholds mustcompleteunder5s. SUT staysdefault.",
+    "Subscriptionexpiredclock case expect200 before unchangedfactassertions conflicts intendedcorrect409. Branch expectedstatus409expired/200live; keep everyclock/barrier/state/factassertion.",
+    "Postresponseguard P andproviderpostcheck Q canuse SAMEpooledbackendPID in differenttransactions. Do notassertdifferentPID; B acquiring transaction-scoped advisorybetweenP/Q provesPcommitted. Retain actualqueue/blockingobservations, optionallycapturetransactionidentity ifmeaningful.",
+    "Successortakeovermustupdate rows INSIDEholderC transaction afteradvisoryacquisition, notautocommitoutsideC. Cacquired barrier shouldsignalafterboundtakeovermutation. ObserveRqueuebeforeCcommit/release; no auth/domainhooks.",
+    "Finalclockbarrier.release startsasyncDROPcleanup then iscalledagainfinally. Separate synchronousunblock fromonce-only cleanup aftertargetwriter settled, ormemoize onecleanupPromise. No concurrentlydroppedtriggers/unhandledcleanup."
+  ],
+  "thaw": "Onlytwo newclock/finalization specs; main/residual hashes above remainfixed. Sameapprovedcausalproofscope; no product/helper/runner/T/doc/Git/private/runtime writes, no testcommands. ReturnterminalnewSHAs."
+}

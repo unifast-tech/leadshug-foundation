@@ -1,0 +1,17 @@
+{
+  "kind": "cp2-r3-main-only-preexecution-alignment",
+  "writerTerminal": true,
+  "hashesMatched": {
+    "api-app/test/instagram-cp2.e2e-spec.ts": "dcaf911d23fd8dcfe4a29eb946ba4355d5f8ab9af91f7bd59c4f89faee4e4d2c",
+    "api-app/test/instagram-cp2-residual.e2e-spec.ts": "295ac89fb550d3b5ffeedf8336de2c480a5c2fd901b1f49caa6d29a719cddf52",
+    "api-app/test/instagram-cp2-final-clock.e2e-spec.ts": "acbd91214c09c401da50e2a62a6937fe08c6facbbc30d06f667cc3884dcee774",
+    "api-app/test/instagram-cp2-finalization.e2e-spec.ts": "a767d0c58e3b8fd00500ae4b49adfdebff8361477acc4e8b304255d49a1186c2"
+  },
+  "validation": "NOTRUN; no runner consumed",
+  "thaw": "ONLY api-app/test/instagram-cp2.e2e-spec.ts",
+  "corrections": [
+    "Actual IG REAUTHORIZE promotes credentialVERSION while keeping channel/credentialGENERATION. NewerCredential.generation > oldgeneration is an invented contract. Assertsamegeneration + greaterVERSION, preserveactualreauthorization andexpiredcurrentcredential cachedreplay/zeroHTTP/no promotion. Do notmutateproduction ormanufacturegenerationincrease.",
+    "App-recreationquota probe mustsend throughfresh secondary actualNestapp againstsamePG withoutlimparBanco/reset. Keepprimaryfixtureapp/prismaalive andoriginalafterAllowner unchanged; closeonlysecondary in finally. Same10intents, originalreplay,11th429/RetryAfter andpersistedaudit/count/zeroHTTPassertions. No primaryapp.close/reassignment ascleanup shortcut."
+  ],
+  "preserve": "Other3testSHAs above fixed, allother237source13 fixed; no prod/helper/docs/T/runner/tests/lint/build/Git/private/runtime writes. ReturnterminalmainSHA."
+}

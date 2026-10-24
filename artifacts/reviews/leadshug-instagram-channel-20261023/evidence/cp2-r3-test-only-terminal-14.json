@@ -1,0 +1,20 @@
+{
+  "kind": "cp2-r3-test-only-terminal14",
+  "writerTerminal": true,
+  "changedPaths": {
+    "api-app/test/instagram-cp2.e2e-spec.ts": "86e116a8889bafcb45e686714e9c4671708e98117760e4853354532f5971ccf4",
+    "api-app/test/instagram-cp2-residual.e2e-spec.ts": "295ac89fb550d3b5ffeedf8336de2c480a5c2fd901b1f49caa6d29a719cddf52",
+    "api-app/test/instagram-cp2-final-clock.e2e-spec.ts": "acbd91214c09c401da50e2a62a6937fe08c6facbbc30d06f667cc3884dcee774",
+    "api-app/test/instagram-cp2-finalization.e2e-spec.ts": "a767d0c58e3b8fd00500ae4b49adfdebff8361477acc4e8b304255d49a1186c2"
+  },
+  "allOther237Source13Matched": true,
+  "preserved": 35,
+  "index": 3,
+  "production": "Everyproduction source13unchanged, especiallyauthorizationservice5d73c2b6eca68a9e5260475715a9240931661ac703294c562e43e67ff0f778b3",
+  "testOnly": "ROOT15exactaccountfixture; completedoriginalreplayafterversionrotation/currentexpiredcredential;samegenerationcontract; 10intentbudgetacrossactualsecondaryNestapp; missingwebhook/crypto config; finalUPDATEclocks+matchedcontrols; postPOSTDBfaultcleanup; 2stageFIFOGETnulltakeover+control",
+  "staticCorrectionEvidence": [
+    "cp2-r3-test-preexecution-alignment.json",
+    "cp2-r3-test-preexecution-main-alignment.json"
+  ],
+  "validation": "NOTRUN; staticcorrectionsconsumednorunner. CandidateexpectedREDmustbequalifiedbyactualbarrier/clock/reachedassertions afterseparatecanonicalvalidation. No productiondefectclaimedfromtestconstruction."
+}

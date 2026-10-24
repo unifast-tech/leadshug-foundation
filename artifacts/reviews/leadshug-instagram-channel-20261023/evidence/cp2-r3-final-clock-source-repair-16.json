@@ -1,0 +1,28 @@
+{
+  "kind": "cp2-r3-final-clock-source-only-repair16",
+  "precondition": "Validator15terminalandroot241/T/72/35/index/logmatch, qualifiedcausalrows retained",
+  "routing": "routing-cp2-r2-source-repair.json",
+  "ownedPaths": [
+    "api-app/src/domain/channels/instagram-authorization.service.ts",
+    "api-app/test/instagram-cp2-finalization.e2e-spec.ts"
+  ],
+  "readEvidence": [
+    "adherence-cp2-r3-result.json",
+    "cp2-r3-root-adjudication.json",
+    "cp2-r3-causal-validation-15-result.json",
+    "cp2-r3-production-repair-preparation.json",
+    "cp2-r3-final-clock-test-only-handoff.json"
+  ],
+  "requiredFixes": [
+    "Implement currentDBtime predicates and final synchronous operation/deadline/TTL/credentialmargin checks fromimmutablelockedfacts afterlastUPDATE/auditawait beforeTXreturn. Callbackcandidate,subscription success/error/observation allrelevant clocks; actorTransaction freshsignedchecks retainedseparate. AvoidoldDatebeforeauthorizationawait. WHEREclockaloneprecedesactualtriggerwait; finalfreshguardmustrollback. No newtimeout/schema/framework/Channelmethod/config.",
+    "Centralizeowner-local settlement/finalization cleanup: allpaths afteractualHTTPsettlement (includinglater tuplevalidation/DBrollback/GETnullfinalization/actorrejection) releaseonlyoriginal bindingtoken; holdthroughactualHTTPawait+facttransaction. Preserve successor/cooldown/tombstone andeveryindependentreceipt/cancel/message/unread fact. Remove redundantcleanup ifonecoherentfinallyownsit. Noauthbypassfordomainwrites.",
+    "Inside GETnullfinalization transaction revalidate exactbinding/channel/resource/generation/credentialversion/lease tuple beforewrite, notjust priorproviderCallcheck. Preserve independentlyacceptedreceiptwithoutcircularprovider gate. Two-stageFIFO testmustreject409 originalcurrent-contextcode witholdattempt/successor preserved.",
+    "PreserveknownpastACK/receipt/COMPLETEDimmutable authorizedzeroHTTPreplays includingcurrentexpiredcredential andactualnewversion; doNOTimpose currentdispatchclockonpurehistoricalcompletion. Originalkey/body/hash/audit/admissionfacts unchanged.",
+    "ONLYtestchange permitted: successfulGETnullordinarycontrol finalAttempt.subscriptionRequests stale1 afterafterPost1+GET1 mustassert afterPost.subscriptionRequests+1 and2. Preserve earlierafterPost1, UNKNOWN, exactoneGETzeroPOST/allotherassertions. No other test edits/weaken/skip/timeouts."
+  ],
+  "constraints": [
+    "Solecodewriter, twoexactpaths; allother239frozen15sourcesunchanged. RootownsT/evidence. NO tests/lint/build/runner/Git/private/runtime/Meta/provider/worktrees/copies/docswrites.",
+    "HTTPalwaysoutsideDBtransactions;3requestsperstage/currentattempt,40sop/60slease/10scooldown/10srequest remain, no global lifetimebudget orspeculativeGETidentity. Pendingbytes/privacy/sessionmiddleware/primaryobserver untouched/unaccepted.",
+    "Readallcausalqualifications; source15stillunchangedproduction13 at5d73... untilthiswriter. ReturnterminalexacteverypathSHA/concisechangedflow+NOTRUN, rootrefreeze/separatevalidator. WholeCP3..CP6/allconsumers/assurance/runtime remainsgoal."
+  ]
+}

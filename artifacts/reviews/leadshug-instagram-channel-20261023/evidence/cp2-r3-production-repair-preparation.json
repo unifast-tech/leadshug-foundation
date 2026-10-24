@@ -1,0 +1,23 @@
+{
+  "kind": "cp2-r3-production-repair-preparation-NOT-DISPATCH",
+  "state": "Production13/T/241sources currentlyfrozen forvalidation15; no implementationauthority fromthisartifact. Awaitterminalactualcausalreceipts/rootadjudication.",
+  "productionOwnerCandidate": [
+    "api-app/src/domain/channels/instagram-authorization.service.ts"
+  ],
+  "basis": [
+    "adherence-cp2-r3-result.json ROOT02/SUBREC02",
+    "cp2-r3-root-adjudication.json",
+    "cp2-r3-final-clock-test-only-handoff.json",
+    "cp2-r3-test-preexecution-alignment.json"
+  ],
+  "concretization": [
+    "Finalcallback candidate writes mustuse actualDBclock predicates forlockedlease/deadline/attemptTTL/candidate60smargin andfinalsynchronousfreshclockassertion AFTERlastactualUPDATE/auditawait beforeTXreturn; WHEREclockpredicatealoneprecedesBEFOREUPDATEtriggerwait. Capture immutablelockeddeadlinefacts; do notcreditoldcommittedAt acrosslaterawait. Signed-session validity isseparate/currentwrapper stays.",
+    "Finalsubscription success/error/observationwrites similarlyrefresh DBclock+relevantcredentialmargin/bindlease/deadline, finalsyncassert fromlockedtuple. AvoidDatecachedbeforelastrequireActorTx. Meaningfulsource13causaltests choose409expirednotstale200. PreserveactualpriorACK/receipt andimmutableCOMPLETEDcachedreplay/current-usabilitychanged localrecovery as historicalfacts: doNOT reimpose newdispatch clocks onauthorizedpurelocalcompletion.",
+    "One smallowner-local subscriptiontupleproof maycarry receiptConfirmed plus finalclockclosure capturinglockedDatefacts, or equallyclearprivatehelper; allcurrenttuple identity fields/generation/credentialversion/resource/token remainexact. No generalframework, configurationornewChannelmethod.",
+    "Placeexact-token release in one coherent owner-local settlement/finalization boundary covering EVERYpostHTTP continuation (success/error/GETnull/finalDBrollback/actorrejection). Retainholderthroughactual awaitedHTTP andfactscommit; alwayspreserve successor token, cooldown,firstPOSTtombstone,acceptedreceipt/cancel/message/unread. Removeunnecessaryduplicatedrelease paths ifcentralfinallyownsallcases. Capture originalresourceID/lease atclaim; avoidcleanup dependingonmutableresultfacts. No actorbypassfordomainwrites; cleanupserverclaimonly.",
+    "GETnull observationfinalization mustcall exactcurrenttuple validation INSIDE its ownlockedtransaction beforeattemptwrite, includingtoken/generation/version/resource. ProviderCall priorcheck isnot enough: actualtwo-stageFIFO GETtest targetsafterlastcheck. If independentreceipt alreadycommitted preserve/returnitsfact withoutcircularproviderstatus gate.",
+    "Keep3requestsperadministrativestage/currentattempt; globalholder/cooldown/one-ever uncertainPOST history allretain. No resource-lifetimebudget, nosecondmutationafterUNKNOWN, no GETdecoder guessed IDs, no tokenpurpose changes.",
+    "Allother240test/sourcefiles remainfixed unless rootprovesandexplicitlythaws concretefixturedefect afterterminalvalidation. No writer-runner coexistence. Rootrefreezes servicehash andseparatevalidator afterterminal. FullcanonicalAPI+freshcompleteactualsource reviewfollow."
+  ],
+  "pending": "PrimaryownGET observer andthreehumanproposals remainunadmitted; wholeCP3..CP6/all16/consumers/ALL/assurance/physical gates unchanged."
+}

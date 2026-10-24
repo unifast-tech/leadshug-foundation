@@ -1,0 +1,22 @@
+{
+  "kind": "cp2-r3-causal-validation14-builder-only",
+  "command": "bash scripts/test-channels-local.sh api-instagram",
+  "exit": 1,
+  "log": "cp2-r3-causal-validation-14.log",
+  "logSha256": "521f6205f92c830097bdcb9c5222e6ff38573bfe40fb1d97f6b786eadb729fcd",
+  "migrations": 31,
+  "lint": "no-useless-assignment:finalization78 holderReleasedBeforeReceipt initialassignment",
+  "build": "NOTREACHED",
+  "unit": "NOTREACHED",
+  "e2e": "NOTREACHED",
+  "validatorTerminal": true,
+  "rootPostMatched": {
+    "sources": 241,
+    "todo": true,
+    "inputs": 70,
+    "preserved": 35,
+    "index": 3
+  },
+  "qualification": "No causalfunctionalproof. Wrapper/setup/migrations only. Currentproduction13 unchanged.",
+  "thaw": "Only exactunusedinitialization correction newfinalizationspec, noassertionchange; terminal/refreeze/separatevalidator."
+}

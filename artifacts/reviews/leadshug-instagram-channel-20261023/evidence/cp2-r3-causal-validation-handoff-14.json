@@ -1,0 +1,12 @@
+{
+  "kind": "cp2-r3-causal-validation-only14",
+  "command": "bash scripts/test-channels-local.sh api-instagram",
+  "times": 1,
+  "freeze": "cp2-r3-causal-frozen-manifest-14.json",
+  "sourceCount": 241,
+  "boundInputCount": 70,
+  "log": "cp2-r3-causal-validation-14.log",
+  "routing": "routing-cp2-r2-causal-validation.json",
+  "authority": "authority-cp2-r3-validation14.json",
+  "instructions": "Separatevalidationonly; production13unchanged, testwriterTERMINAL. Match241/T/allboundinputs/35preserved/3index beforeafter. Exactlyonce canonicaldisposablecommand, onlynewlogwrite. No source/T/inputs/private/runtime/provider/Meta/Git mutation. No retries/autofix. Rootownsreceipt. Report compiler/lint errors separatefromfunctional. FornewRED state exactbarrier/clock/positivecontrol/assertionreached vsfixturefailure, no count-onlyclaim. Plainlylabelpersistedlease shorteningrobustness. Preserveactual91anticipatedcasesifactualdifferentreportactual; old77andallnewcasebodiesmustexecute. Do notcarrypriorroundactualvalues."
+}

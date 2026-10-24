@@ -1,0 +1,14 @@
+{
+  "kind": "cp2-r3-lint-only-terminal15",
+  "writerTerminal": true,
+  "change": {
+    "api-app/test/instagram-cp2-finalization.e2e-spec.ts": "7b5d1b3cbf59186841fa1cc7772a92a62b428ef8542c3f0773cca922c04ce6bb"
+  },
+  "literalPreimageMatched": true,
+  "allOther240Matched": true,
+  "todo": true,
+  "inputs": 70,
+  "preserved": 35,
+  "index": 3,
+  "validation": "NOTRUN, onlyunusedinitialassignment removed; no assertions/capture/cleanup changed"
+}
