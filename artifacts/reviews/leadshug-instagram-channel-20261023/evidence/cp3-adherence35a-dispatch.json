@@ -1,0 +1,408 @@
+{
+  "schema_version": "subagent-review-dispatch-v1",
+  "artifact_kind": "subagent_review_dispatch",
+  "authoritative": false,
+  "edit_policy": "derived_dispatch_packet",
+  "review_kind": "architecture_adherence",
+  "bounded_package_path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp3-adherence35a-closed-package.md",
+  "reviewer_count": 1,
+  "no_context_required": true,
+  "required_axes": [
+    "adherence",
+    "structural_soundness",
+    "operational_fit",
+    "performance",
+    "elegance"
+  ],
+  "focus_points": [
+    "Compare the delivered bounded package against the frozen Architecture Change Governance contract and Decision Baseline.",
+    "Identify any implementation path, temporary exception, or missing protection harness that diverges from the approved target steady-state.",
+    "Do not redesign the approved architecture unless the delivered evidence exposes a material defect or an approval-breaking divergence.",
+    "For each material finding, add category and formalizable-hint when you can judge them honestly.",
+    "When assessing design, seek the simplest faithful Clean Code/SOLID design for the approved intent. Do not invent future-facing work or erase explicit TODO intent. Planning review may challenge proposed intent; delivery review must preserve approved intent or return for renewed approval."
+  ],
+  "result_contract_fields": [
+    "overall_assessment",
+    "recommended_path",
+    "performance_position",
+    "elegance_position",
+    "structural_soundness_position",
+    "operational_fit_position",
+    "findings[].finding_id (optional)",
+    "findings[].category (optional)",
+    "findings[].formalizable_hint (optional)",
+    "findings[].candidate_rule_level (optional)",
+    "findings[]"
+  ],
+  "todo_path": "foundation_documentation/todos/active/features/TODO-leadshug-instagram-channel.md",
+  "historical_disposition_policy": [
+    "Resolved findings are historical context only. Do not reopen them unless the current bounded package materially changes the same locus/behavior or fresh evidence shows regression.",
+    "Challenged findings stay closed unless the current bounded package materially changes the same locus/behavior or the prior rationale is objectively insufficient.",
+    "Deferred findings must cite the recorded follow-up/waiver path first. Re-raise them only when the current bounded package changes the same locus or closure now depends on that deferred risk.",
+    "Unresolved findings remain valid to re-raise until they are fixed, challenged, or formally deferred with authority."
+  ],
+  "historical_dispositions": [
+    {
+      "source_kind": "promotion_routing",
+      "finding_id": "IG-CP1-R1-01",
+      "carry_forward_class": "resolved",
+      "source_disposition": "classification=release-blocker; routing=fix in this TODO; status=closed by r2",
+      "summary": "immutable qualified peer is SCOPE-02/DOD-01",
+      "reference": "adherence-cp1-r2-result.json; source/proof repair reviewed; no delivery acceptance"
+    },
+    {
+      "source_kind": "promotion_routing",
+      "finding_id": "IG-CP1-R1-02",
+      "carry_forward_class": "resolved",
+      "source_disposition": "classification=release-blocker; routing=fix in this TODO; status=closed by r3",
+      "summary": "current provider attachment equality is SCOPE-02/DOD-01",
+      "reference": "adherence-cp1-r3-result.json; final persisted association defect repaired; actual official confirmation proved"
+    },
+    {
+      "source_kind": "promotion_routing",
+      "finding_id": "IG-CP1-R1-03",
+      "carry_forward_class": "resolved",
+      "source_disposition": "classification=release-blocker; routing=fix in this TODO; status=closed by r5",
+      "summary": "durable cross-adapter resource ownership is SCOPE-02/DOD-01",
+      "reference": "adherence-cp1-r5-result.json; exact current quarantine recovery after actual prior receipt"
+    },
+    {
+      "source_kind": "promotion_routing",
+      "finding_id": "IG-CP1-R1-04",
+      "carry_forward_class": "resolved",
+      "source_disposition": "classification=release-blocker; routing=fix in this TODO; status=closed by r2",
+      "summary": "qualified contact reuse is SCOPE-02,03",
+      "reference": "adherence-cp1-r2-result.json; source/proof repair reviewed; no delivery acceptance"
+    },
+    {
+      "source_kind": "promotion_routing",
+      "finding_id": "IG-CP1-R1-05",
+      "carry_forward_class": "resolved",
+      "source_disposition": "classification=release-blocker; routing=fix in this TODO; status=closed by r2",
+      "summary": "retained ownership/cardinality is SCOPE-02/DOD-01",
+      "reference": "adherence-cp1-r2-result.json; source/proof repair reviewed; no delivery acceptance"
+    },
+    {
+      "source_kind": "promotion_routing",
+      "finding_id": "IG-CP1-R1-06",
+      "carry_forward_class": "resolved",
+      "source_disposition": "classification=release-blocker; routing=fix in this TODO; status=closed by r2",
+      "summary": "safe canonical migration is DOD-02/VAL-02",
+      "reference": "adherence-cp1-r2-result.json; source/proof repair reviewed; no delivery acceptance"
+    },
+    {
+      "source_kind": "promotion_routing",
+      "finding_id": "IG-CP1-R1-07",
+      "carry_forward_class": "resolved",
+      "source_disposition": "classification=release-blocker; routing=fix in this TODO; status=closed by r5",
+      "summary": "preserved regression tests are SCOPE-08/DOD-09",
+      "reference": "cp1-frozen-full-api-green-r5.json; complete379unit/483e2e GREEN on matching37sources"
+    },
+    {
+      "source_kind": "promotion_routing",
+      "finding_id": "IG-CP1-R1-08",
+      "carry_forward_class": "resolved",
+      "source_disposition": "classification=release-blocker; routing=fix in this TODO; status=closed by r2",
+      "summary": "required historical cohort is DOD-02/VAL-02",
+      "reference": "adherence-cp1-r2-result.json; source/proof repair reviewed; no delivery acceptance"
+    },
+    {
+      "source_kind": "promotion_routing",
+      "finding_id": "IG-CP1-R2-01",
+      "carry_forward_class": "resolved",
+      "source_disposition": "classification=release-blocker; routing=fix in this TODO; status=closed by r3",
+      "summary": "one coherent WA business scope is SCOPE-02/DOD-01",
+      "reference": "adherence-cp1-r3-result.json; WA business scope BU agrees with CHECK/FK and actual positive route"
+    },
+    {
+      "source_kind": "promotion_routing",
+      "finding_id": "IG-CP1-R2-02",
+      "carry_forward_class": "resolved",
+      "source_disposition": "classification=release-blocker; routing=fix in this TODO; status=closed by r3",
+      "summary": "honest unverified renewal staging is SCOPE-02/DOD-01",
+      "reference": "adherence-cp1-r3-result.json; original reservation/proof defect repaired; distinct pending lifecycle findings remain below"
+    },
+    {
+      "source_kind": "promotion_routing",
+      "finding_id": "IG-CP1-R3-01",
+      "carry_forward_class": "resolved",
+      "source_disposition": "classification=release-blocker; routing=fix in this TODO; status=closed by r5",
+      "summary": "single-create/read-before-retry after pending renewal is SCOPE-02/08",
+      "reference": "adherence-cp1-r5-result.json; single create and read-before-retry retained"
+    },
+    {
+      "source_kind": "promotion_routing",
+      "finding_id": "IG-CP1-R3-02",
+      "carry_forward_class": "resolved",
+      "source_disposition": "classification=release-blocker; routing=fix in this TODO; status=closed by r5",
+      "summary": "managed cleanup ownership survives staged unlink under SCOPE-02/08",
+      "reference": "adherence-cp1-r5-result.json; current staged unlink and stale snapshot fence repaired"
+    },
+    {
+      "source_kind": "promotion_routing",
+      "finding_id": "IG-CP1-R3-03",
+      "carry_forward_class": "resolved",
+      "source_disposition": "classification=release-blocker; routing=fix in this TODO; status=closed by r5",
+      "summary": "durable quarantine and later correct-proof recovery preserve existing channel contract",
+      "reference": "adherence-cp1-r5-result.json; wrong-number quarantine and correct-proof recovery retained"
+    },
+    {
+      "source_kind": "promotion_routing",
+      "finding_id": "IG-CP1-R3-04",
+      "carry_forward_class": "resolved",
+      "source_disposition": "classification=release-blocker; routing=fix in this TODO; status=closed by r5",
+      "summary": "required ownership concurrency proof cannot assume winner scheduling; fix assertions in this TODO",
+      "reference": "adherence-cp1-r5-result.json; actual-winner concurrency assertion retained"
+    },
+    {
+      "source_kind": "promotion_routing",
+      "finding_id": "IG-CP1-ROOT-01",
+      "carry_forward_class": "resolved",
+      "source_disposition": "classification=release-blocker; routing=fix in this TODO; status=closed by r5",
+      "summary": "pending current ingress remains retryable without content/trust before proof",
+      "reference": "adherence-cp1-r5-result.json; metadata-only staged retry and accepted-key proof retained"
+    },
+    {
+      "source_kind": "promotion_routing",
+      "finding_id": "IG-CP1-R4-01",
+      "carry_forward_class": "resolved",
+      "source_disposition": "classification=release-blocker; routing=repeat affected proof in this TODO; status=closed by r5",
+      "summary": "four mutations violated the explicit r4 freeze; preserve evidence and validate current bytes anew",
+      "reference": "adherence-cp1-r5-result.json; cp1-frozen-full-api-green-r5.json; new stable proof replaces invalidated acceptance"
+    },
+    {
+      "source_kind": "promotion_routing",
+      "finding_id": "IG-CP1-R5-01",
+      "carry_forward_class": "resolved",
+      "source_disposition": "classification=release-blocker; routing=bounded companion in this TODO; protected path validation required; status=closed by r8 complete review/current full API",
+      "summary": "current staged cleanup guarantee depends on a truthful absence observation; inherited adapter weakness is not a new Instagram regression",
+      "reference": "cp1-r8-acceptance.json; adherence-cp1-r8-result.json; cp1-observation-r8-full-api-green.json"
+    },
+    {
+      "source_kind": "promotion_routing",
+      "finding_id": "IG-EVOCOMP-01",
+      "carry_forward_class": "resolved",
+      "source_disposition": "classification=release-blocker; routing=fix admitted caller lifecycle in this TODO; status=closed by r3/current full API; protected parser remains R5-01",
+      "summary": "conclusive cleanup must recover same reserved operation and permit one create, without widening protected paths",
+      "reference": "evolution-observation-companion-critique-r3-result.json; cp1-caller-r7-full-api-green.json"
+    },
+    {
+      "source_kind": "promotion_routing",
+      "finding_id": "IG-EVOCOMP-02",
+      "carry_forward_class": "resolved",
+      "source_disposition": "classification=release-blocker; routing=strengthen proposed tests before source admission; status=proposal resolved r2; implementation not admitted",
+      "summary": "independent malformed name/state and null projection branches need concrete proof plan",
+      "reference": "evolution-observation-companion-critique-r2-result.json"
+    },
+    {
+      "source_kind": "promotion_routing",
+      "finding_id": "IG-EVOCOMP-03",
+      "carry_forward_class": "resolved",
+      "source_disposition": "classification=release-blocker; routing=correct proposal wording before validation; status=proposal resolved r2; implementation not admitted",
+      "summary": "exact subject and absence contract must be clear to approving user; small same-artifact correction",
+      "reference": "evolution-observation-companion-critique-r2-result.json"
+    },
+    {
+      "source_kind": "promotion_routing",
+      "finding_id": "IG-EVOCOMP-R2-01",
+      "carry_forward_class": "resolved",
+      "source_disposition": "classification=release-blocker; routing=fence late failure mutation in same admitted caller/test paths; status=closed by r3/current full API",
+      "summary": "same-attempt recovery must retain later holder facts after lease takeover; inherited catch is not a new adapter regression",
+      "reference": "evolution-observation-companion-critique-r3-result.json; cp1-caller-r7-full-api-green.json"
+    },
+    {
+      "source_kind": "promotion_routing",
+      "finding_id": "IG-CP1-ROOT-R7-01",
+      "carry_forward_class": "resolved",
+      "source_disposition": "classification=release-blocker; routing=revalidate authorization before provider-error fact mutation in same admitted paths; status=closed by r3/current full API",
+      "summary": "live DB lease does not replace post-call session/grant revalidation; same existing lifecycle contract, no new middleware scope",
+      "reference": "evolution-observation-companion-critique-r3-result.json; cp1-caller-r7-full-api-green.json"
+    },
+    {
+      "source_kind": "promotion_routing",
+      "finding_id": "IG-CP2-ROOT-01",
+      "carry_forward_class": "resolved",
+      "source_disposition": "classification=release-blocker; routing=fix in this TODO; status=closed original defect by CP2 r1; persisted actor/BU backoff assertions; no pre-fix causal RED inferred",
+      "summary": "accurate persisted budget backoff under SCOPE-04/VAL-03",
+      "reference": "adherence-cp2-r1-result.json; prior evidence retained"
+    },
+    {
+      "source_kind": "promotion_routing",
+      "finding_id": "IG-CP2-ROOT-02",
+      "carry_forward_class": "resolved",
+      "source_disposition": "classification=release-blocker; routing=fix in this TODO; status=open; source16 clocks proved; residual finalmapping and mapped preHTTP attemptTTL",
+      "summary": "current post-HTTP lease fence under SCOPE-04/VAL-03",
+      "reference": "adherence-cp2-r4-result.json; cp2-r4-root-adjudication.json"
+    },
+    {
+      "source_kind": "promotion_routing",
+      "finding_id": "IG-CP2-ROOT-03",
+      "carry_forward_class": "resolved",
+      "source_disposition": "classification=release-blocker; routing=fix in this TODO; status=closed original defect by CP2 r1; acquisition before delayed profile; no pre-fix causal RED inferred",
+      "summary": "actual credential acquisition/expiry under DOD-03/VAL-03",
+      "reference": "adherence-cp2-r1-result.json; prior evidence retained"
+    },
+    {
+      "source_kind": "promotion_routing",
+      "finding_id": "IG-CP2-ROOT-04",
+      "carry_forward_class": "resolved",
+      "source_disposition": "classification=release-blocker; routing=fix in this TODO; status=closed original key/recovery defect; strict20 and actualnewversion/currentexpiry historical replay passed",
+      "summary": "Existing UUID key and durable replay/conflict contract also governs OAuth confirmation",
+      "reference": "adherence-cp2-r4-result.json; cp2-r3-source-validation-16-result.json; cp2-api-full-r4-result.json"
+    },
+    {
+      "source_kind": "promotion_routing",
+      "finding_id": "IG-CP2-ROOT-05",
+      "carry_forward_class": "resolved",
+      "source_disposition": "classification=release-blocker; routing=verify and fix in this TODO; status=closed original defect by CP2 r1; connected reauthorization preserves receipt/messages without another POST",
+      "summary": "Successful connected-channel reauthorization must preserve resource/receipt and known subscription",
+      "reference": "adherence-cp2-r1-result.json; prior evidence retained"
+    },
+    {
+      "source_kind": "promotion_routing",
+      "finding_id": "IG-CP2-ROOT-06",
+      "carry_forward_class": "resolved",
+      "source_disposition": "classification=release-blocker; routing=fix in this TODO; status=closed original defect by CP2 r1; signed ingress during held POST and after uncertainty",
+      "summary": "Eligible authenticated current-resource ingress must provide independent receipt after ambiguous dispatch",
+      "reference": "adherence-cp2-r1-result.json; prior evidence retained"
+    },
+    {
+      "source_kind": "promotion_routing",
+      "finding_id": "IG-SUBPROTO-01",
+      "carry_forward_class": "resolved",
+      "source_disposition": "classification=release-blocker; routing=resolve primary protocol in this TODO; status=open; primary prerequisite",
+      "summary": "Own-subscription GET envelope, ID subject and completeness remain unproved; do not infer unsupported from omission",
+      "reference": "subscription-protocol-opinion-result.json"
+    },
+    {
+      "source_kind": "promotion_routing",
+      "finding_id": "IG-SUBPROTO-02",
+      "carry_forward_class": "resolved",
+      "source_disposition": "classification=release-blocker; routing=preserve UNKNOWN fence in admitted code; status=closed original defect by CP2 r1; UNKNOWN preserves mutation fence; concurrent lifecycle stays SUBREC-02",
+      "summary": "An unexplained empty or mismatched-ID observation cannot permit a second POST after uncertainty",
+      "reference": "adherence-cp2-r1-result.json; prior evidence retained"
+    },
+    {
+      "source_kind": "promotion_routing",
+      "finding_id": "IG-SUBPROTO-03",
+      "carry_forward_class": "resolved",
+      "source_disposition": "classification=release-blocker; routing=retain typed identity purposes in this TODO; status=closed original defect by CP2 r1; distinct identity purposes; no speculative parent-app configuration",
+      "summary": "No speculative parent-app configuration or guessed ID comparison; same approved OAuth path",
+      "reference": "adherence-cp2-r1-result.json; prior evidence retained"
+    },
+    {
+      "source_kind": "promotion_routing",
+      "finding_id": "IG-SUBREC-02",
+      "carry_forward_class": "resolved",
+      "source_disposition": "classification=release-blocker; routing=fix in this TODO; related to IG-SUBPROTO-02; status=open; source16 settledcleanup/GETtuple proved; acquisition postCOMMIT cleanup residual",
+      "summary": "Resource-lifecycle dispatch fence survives new attempt, reauthorization, lease expiry and crash",
+      "reference": "adherence-cp2-r4-result.json; cp2-r4-root-adjudication.json"
+    },
+    {
+      "source_kind": "promotion_routing",
+      "finding_id": "IG-SUBREC-03",
+      "carry_forward_class": "resolved",
+      "source_disposition": "classification=release-blocker; routing=retain with IG-SUBPROTO-01 in this TODO; status=open; primary protocol",
+      "summary": "UNKNOWN is valid, but own-account observation remains mandatory and unaccepted",
+      "reference": "subscription-recovery-concretization-result.json"
+    },
+    {
+      "source_kind": "promotion_routing",
+      "finding_id": "IG-SUBREC-04",
+      "carry_forward_class": "resolved",
+      "source_disposition": "classification=by-design/no-action; routing=proposed investigation remains unexecuted; status=documented; no execution authority inferred",
+      "summary": "Bounded empirical observations cannot establish universal completeness or authorize repeated mutation",
+      "reference": "subscription-recovery-concretization-result.json"
+    },
+    {
+      "source_kind": "promotion_routing",
+      "finding_id": "IG-CP2-R1-01",
+      "carry_forward_class": "resolved",
+      "source_disposition": "classification=release-blocker; routing=fix in this TODO; status=closed original TTL/cancel/CAS defect; final clocks remain ROOT02",
+      "summary": "Confirmation can promote an expired candidate or overwrite cancellation",
+      "reference": "adherence-cp2-r3-result.json; qualified stable11..13"
+    },
+    {
+      "source_kind": "promotion_routing",
+      "finding_id": "IG-CP2-R1-02",
+      "carry_forward_class": "resolved",
+      "source_disposition": "classification=release-blocker; routing=fix in this TODO; status=closed original authorization order/activeBU/array defect",
+      "summary": "Instagram authorization admission diverges from current BU scope and error ordering",
+      "reference": "adherence-cp2-r3-result.json; qualified stable11..13"
+    },
+    {
+      "source_kind": "promotion_routing",
+      "finding_id": "IG-CP2-R1-03",
+      "carry_forward_class": "resolved",
+      "source_disposition": "classification=release-blocker; routing=fix in this TODO; status=closed original redirect defect; native fetch boundary proof",
+      "summary": "The Instagram HTTP boundary follows redirects beyond its validated endpoints",
+      "reference": "adherence-cp2-r3-result.json; qualified stable11..13"
+    },
+    {
+      "source_kind": "promotion_routing",
+      "finding_id": "IG-CP2-R1-04",
+      "carry_forward_class": "resolved",
+      "source_disposition": "classification=release-blocker; routing=fix in this TODO; status=open; exact user-admitted v2 source applied12; infrastructure/fullAPI/gateway/browser proof NOTRUN",
+      "summary": "Failed OAuth callbacks retain sensitive query URLs without the required response protections",
+      "reference": "adherence-cp2-r3-result.json; oauth-callback-session-companion-ready-v2.json"
+    },
+    {
+      "source_kind": "promotion_routing",
+      "finding_id": "IG-CP2-R1-05",
+      "carry_forward_class": "resolved",
+      "source_disposition": "classification=release-blocker; routing=fix in this TODO; status=closed original preflight defect and exactaccount fixture; currentfullAPI passed",
+      "summary": "Whole-batch preflight does not validate the supported message structure",
+      "reference": "adherence-cp2-r4-result.json; cp2-api-full-r4-result.json"
+    },
+    {
+      "source_kind": "promotion_routing",
+      "finding_id": "IG-CP2-R1-06",
+      "carry_forward_class": "resolved",
+      "source_disposition": "classification=release-blocker; routing=fix in this TODO; status=open; exact finalmapping/preHTTP TTL/postCOMMIT proof plus primary/precontroller; replay/config/secondNest now supported",
+      "summary": "The reported sixteen-obligation map exceeds the behavioral proof actually present",
+      "reference": "adherence-cp2-r4-result.json; cp2-r4-root-adjudication.json; cp2-api-full-r4-result.json"
+    },
+    {
+      "source_kind": "promotion_routing",
+      "finding_id": "IG-CP2-ROOT-07",
+      "carry_forward_class": "resolved",
+      "source_disposition": "classification=release-blocker; routing=fix in this TODO; status=closed original audit/catalog defect; complete canonical coverage passed",
+      "summary": "Five Instagram write routes need safe catalog/audit classification",
+      "reference": "adherence-cp2-r3-result.json; cp2-api-full-r3-result.json"
+    },
+    {
+      "source_kind": "promotion_routing",
+      "finding_id": "IG-OAUTH-SESSCOMP-01",
+      "carry_forward_class": "resolved",
+      "source_disposition": "classification=release-blocker; routing=revise companion in same TODO; status=proposal resolved by terminal r2; source unadmitted, implementation proof pending",
+      "summary": "Unexpected precontroller callback failure also needs clean generic failure redirect",
+      "reference": "oauth-callback-session-companion-critique-result.json"
+    },
+    {
+      "source_kind": "promotion_routing",
+      "finding_id": "IG-CP2-ROOT-08",
+      "carry_forward_class": "resolved",
+      "source_disposition": "classification=release-blocker; routing=reprove stable candidate in this TODO; status=closed original source-drift proof defect by stable16/fullAPI/currentcompleteR4; GREEN05 remains invalid",
+      "summary": "Executor edited authorization source during GREEN05, invalidating current-source proof",
+      "reference": "cp2-r4-root-adjudication.json; cp2-api-full-r4-result.json; adherence-cp2-r4-collection.json"
+    },
+    {
+      "source_kind": "promotion_routing",
+      "finding_id": "IG-CP2-ROOT-09",
+      "carry_forward_class": "resolved",
+      "source_disposition": "classification=release-blocker; routing=validate actual current candidate in this TODO; status=closed original backup-input/emptydiff inference by currentprincipal/publicproof; filename-only metadata note retained",
+      "summary": "Executor consulted non-authoritative backup instructions and misread empty exact-path Git diff; root corrected authority and positive hash evidence",
+      "reference": "cp2-r4-root-adjudication.json; adherence-cp2-r4-collection.json; cp2-api-full-r4-result.json"
+    },
+    {
+      "source_kind": "promotion_routing",
+      "finding_id": "IG-CP2-ROOT-15",
+      "carry_forward_class": "resolved",
+      "source_disposition": "classification=release-blocker; routing=fix test fixture in this TODO; status=closed exactaccount fixture; selected16 andfull549 passed",
+      "summary": "Exact account selection is required under multiaccount CP2 proof",
+      "reference": "cp2-api-full-r4-result.json; adherence-cp2-r4-result.json"
+    }
+  ],
+  "goal": "Complete your complementary CP3 source scope; whole52body gate requires both A+B, allfiveaxes and no partial acceptance.",
+  "review_result_dispatch_path": "/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp3-adherence35a-dispatch.json"
+}

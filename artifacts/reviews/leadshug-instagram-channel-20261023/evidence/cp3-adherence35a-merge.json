@@ -1,0 +1,127 @@
+{
+  "schema_version": "subagent-review-merge-v2",
+  "artifact_kind": "subagent_review_merge",
+  "authoritative": false,
+  "edit_policy": "derived_merge_packet",
+  "dispatch_path": "/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp3-adherence35a-dispatch.json",
+  "review_kind": "architecture_adherence",
+  "review_count": 1,
+  "reviewer_labels": [
+    "cp3-adherence35a-no-context"
+  ],
+  "highest_finding_severity": "high",
+  "axis_summary": {
+    "performance": "mixed",
+    "elegance": "mixed",
+    "structural_soundness": "mixed",
+    "operational_fit": "mixed"
+  },
+  "recommended_paths": [
+    "Fix the identified source and protection-harness defects within the approved architecture and this TODO. Re-freeze the affected candidate, obtain canonical validation and affected independent review, then combine both complementary reviews through root union/freeze reconciliation. Preserve every recorded CP2, CP4\u2013CP6, ALL, assurance and runtime gate."
+  ],
+  "exact_next_step": "Record reviewer resolutions in the governing TODO using the machine-checkable resolution table or equivalent gate ledger, then extract the derived resolution packet and decide whether another bounded review pass is still required.",
+  "findings": [
+    {
+      "finding_id": "F-01366BED",
+      "severity": "high",
+      "title": "The final send boundary does not revalidate current authorization",
+      "rationale": "IG-ARCH-R1-01 requires current grants before provider POST. Ordinary replies enter OutboundService with attribution only: claimOrdinary validates route, credential and policy, while finalProviderFence checks context, window and deadlines without checking the session, actor or current grant. Initial sends validate the actor during the claim transaction, but subsequent post-commit context/window awaits also have no final actor check. Revocation or session expiry during those waits can therefore leave dispatch authorized.",
+      "suggested_action": "Carry a server-owned authorization fence through the shared ordinary and initial send paths and revalidate it at the final provider boundary after claim completion. Preserve short transactions, HTTP outside transactions and existing error ordering. Add native delayed-boundary tests for grant revocation and session expiry, with zero-POST assertions and matched live controls.",
+      "reviewer_labels": [
+        "cp3-adherence35a-no-context"
+      ],
+      "source_finding_ids": [
+        "IG-CP3-A-01"
+      ],
+      "category": "security",
+      "formalizable_hint": "partial",
+      "candidate_rule_level": "project",
+      "candidate_rule_id": "n/a"
+    },
+    {
+      "finding_id": "F-77E0CE1F",
+      "severity": "high",
+      "title": "Ordinary known-ACK completion still depends on current credential availability",
+      "rationale": "contextStatus(context, false) still requires an official/Instagram credential and, for Instagram, more than 60 seconds of remaining validity. OutboundService calls this after receiving ACCEPTED and refuses Message acceptance when it returns CHANGED. A credential removed during the request, or an Instagram token crossing the safety margin during an otherwise valid POST, prevents local completion of the exact known receipt despite unchanged route/resource ownership. This retains the credential-coupling residual forbidden by the frozen post-ACK contract.",
+      "suggested_action": "Separate pre-dispatch credential eligibility from post-ACK association proof. Complete known receipts through the existing acceptance owner using the captured immutable tuple without requiring a currently usable credential. Retain genuine ownership/generation conflict fences. Prove paused-HTTP credential removal, rotation and safety-margin crossing with one POST and exact local receipt ownership.",
+      "reviewer_labels": [
+        "cp3-adherence35a-no-context"
+      ],
+      "source_finding_ids": [
+        "IG-CP3-ROOT-02"
+      ],
+      "category": "adherence",
+      "formalizable_hint": "yes",
+      "candidate_rule_level": "project",
+      "candidate_rule_id": "n/a"
+    },
+    {
+      "finding_id": "F-440846A6",
+      "severity": "high",
+      "title": "Explicit route selection and WhatsApp options still hydrate every BU connection",
+      "rationale": "selectCandidate calls channels(buId), which loads all BU bindings and their provider identities even when routeId/channelId are explicitly supplied. initialOptions and hasReadyChannelForNewConversation also load that complete multichannel collection before filtering WhatsApp in memory. This directly contradicts IG-ARCH-R1-04's exact selected lookups and bounded WhatsApp-only options. The batched window implementation and API29 ingress timings do not establish compliance for these reads.",
+      "suggested_action": "Resolve explicit selections by their exact scoped IDs. Query only compatible WhatsApp bindings for initial options/readiness and explicitly reject excess cardinality before readiness filtering. Preserve page-scoped batching and add native query/admission assertions using the approved twelve-account cohort; retain the frozen EPS/RLS measurements as outstanding.",
+      "reviewer_labels": [
+        "cp3-adherence35a-no-context"
+      ],
+      "source_finding_ids": [
+        "IG-CP3-ROOT-01"
+      ],
+      "category": "performance",
+      "formalizable_hint": "yes",
+      "candidate_rule_level": "project",
+      "candidate_rule_id": "n/a"
+    },
+    {
+      "finding_id": "F-143DDD90",
+      "severity": "medium",
+      "title": "V2 admission owners do not share the canonical peer advisory lock",
+      "rationale": "MessageAcceptance uses lockContactIdentityAddress with the qualified address object, matching the repaired native P2002 fixture. reserveInitial instead hashes [buId, contactIdentityId]; claimOrdinary, claimInitial and lockInitialOwner hash [buId, Conversation.contact]; reserveOrdinary proceeds directly from provider identity to conversation locking. finalizeInitialInTransaction also acquires the legacy contact-string key. These keys do not serialize with the canonical peer lock required by the dispatch's shared identity\u2192peer\u2192conversation invariant. The new P2002 fixture proves only the acceptance key, and remains NOTRUN here; no production deadlock is inferred.",
+      "suggested_action": "Use the shared qualified-address lock owner consistently for affected V2 lifecycle paths before conversation locking. Preserve the explicitly bounded V1 compatibility behavior. Add native lock-order coverage across admission and acceptance owners without changing the P2002 assertions, counters or transaction timeout.",
+      "reviewer_labels": [
+        "cp3-adherence35a-no-context"
+      ],
+      "source_finding_ids": [
+        "IG-CP3-ROOT-07"
+      ],
+      "category": "structural_soundness",
+      "formalizable_hint": "yes",
+      "candidate_rule_level": "project",
+      "candidate_rule_id": "n/a"
+    },
+    {
+      "finding_id": "F-98B8C588",
+      "severity": "medium",
+      "title": "The dependency protection harness omits Instagram coupling",
+      "rationale": "channel-dependencies.spec.ts rejects imports under integrations/meta, evolution and channels, but permits integrations/instagram imports. Its injection-token fixtures omit Instagram, and concrete comparison detection omits the new adapterOrigin property. InitialMessageService is also outside its inspected consumer set. Thus the mandated protection harness can remain green after introducing an Instagram client or dispatch-specific concrete dependency into a business send consumer, despite the current DI composition being structurally appropriate.",
+      "suggested_action": "Extend the existing bounded harness to cover Instagram clients/tokens and relevant send consumers. Add negative fixtures for dispatch coupling through adapterOrigin and direct concrete policy dependencies, while allowing legitimate qualified-address validation. Keep the solution small and specific to the approved boundary.",
+      "reviewer_labels": [
+        "cp3-adherence35a-no-context"
+      ],
+      "source_finding_ids": [
+        "IG-CP3-A-02"
+      ],
+      "category": "tests",
+      "formalizable_hint": "yes",
+      "candidate_rule_level": "project",
+      "candidate_rule_id": "n/a"
+    },
+    {
+      "finding_id": "F-FFF98226",
+      "severity": "medium",
+      "title": "Recorded consumer and operational follow-ups remain delivery blockers",
+      "rationale": "The recorded follow-up paths are cp4-connections-preparation21-root-qualified.json, cp4-safe-display-preparation22.json and cp4-readonly-preparation29-root-qualified.json. They explicitly retain missing paginated connection lifecycle surfaces, safe account/peer projections, strict V2 React consumers and shared Incoming/realtime delivery. The inspected replyOptions query still chooses the latest authorization username without durable mapped-account qualification, and the BFF now requires V2 fields that the recorded legacy UI does not send. These are planned CP4 obligations with no waiver. Primary subscription observation, OAuth browser/gateway proof, pending human proposals and CP5/CP6 validation also remain open.",
+      "suggested_action": "Carry these recorded follow-ups through CP4 and the remaining approved gates without accepting a backend-only feature. Complete connection lifecycle, safe display, composer/context fencing, native WS/browser/freshness/CI coverage and ALL validation; retain independent assurance and separately approved real-runtime proof.",
+      "reviewer_labels": [
+        "cp3-adherence35a-no-context"
+      ],
+      "source_finding_ids": [
+        "IG-CP3-ROOT-03"
+      ],
+      "category": "residual_risk",
+      "formalizable_hint": "partial",
+      "candidate_rule_level": "project",
+      "candidate_rule_id": "n/a"
+    }
+  ]
+}

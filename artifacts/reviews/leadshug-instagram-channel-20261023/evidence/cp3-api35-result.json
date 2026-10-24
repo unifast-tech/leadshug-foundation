@@ -1,0 +1,96 @@
+{
+  "kind": "cp3-api35-canonical-api-validation-result",
+  "date": "2026-10-24",
+  "command": "bash scripts/test-channels-local.sh api",
+  "invocations": 1,
+  "exitCode": 0,
+  "terminalOutcome": "PASS (canonical API validation only)",
+  "log": {
+    "path": "cp3-api35-api.log",
+    "bytes": 223104,
+    "sha256": "a61dcc1490f56d96f900ae3675d6d0604f213386d7f42129e8d69ba745129def",
+    "completeStdoutStderr": true
+  },
+  "preflight": {
+    "fileCount": 256,
+    "allExact": true,
+    "preservationRows": 35,
+    "rootGitlinks": 3,
+    "authority": "GO",
+    "routing": "GO"
+  },
+  "postflight": {
+    "fileCount": 256,
+    "allExact": true,
+    "preservationRows": 35,
+    "rootGitlinks": 3
+  },
+  "stages": [
+    {
+      "name": "channels parity/self-guards",
+      "status": "PASS",
+      "parityMutationsRejected": 26
+    },
+    {
+      "name": "Prisma client generation",
+      "status": "PASS",
+      "evidence": "Prisma Client v6.19.3 generated in 289ms"
+    },
+    {
+      "name": "database migrations",
+      "status": "PASS",
+      "migrations": 31,
+      "evidence": "all migrations applied; schema up to date"
+    },
+    {
+      "name": "lint",
+      "status": "PASS"
+    },
+    {
+      "name": "build",
+      "status": "PASS"
+    },
+    {
+      "name": "unit tests",
+      "status": "PASS",
+      "files": 39,
+      "passed": 412,
+      "failed": 0
+    },
+    {
+      "name": "E2E tests",
+      "status": "PASS",
+      "files": 50,
+      "passed": 570,
+      "failed": 0
+    }
+  ],
+  "assertions": {
+    "nativeP2002RaceAndCleanup": "PASS: dispatch-admission case \u201crolls back the whole initial completion on a real P2002 race, exact-reads back, and retries one local transaction\u201d completed in 541ms. Test passed with its retained original count-3/native race assertions; log does not separately print the scalar P2002 count.",
+    "liveControlTiming": "PASS: equal-duration live-session control in instagram-cp2-commit-fences.e2e-spec.ts passed, reported case duration 3278ms (previous 4500ms bound unchanged).",
+    "strictCp2Clock": "PASS: instagram-cp2-final-clock.e2e-spec.ts 9/9 passed. Log has case durations (including 1912ms and 1921ms for provider-error settlement cases) but emits no separate strict-assertion scalar; all assertions in the passing file completed.",
+    "instagramBatch": "PASS: [IG-BATCH-PHASE] initial-started updates=1000; initial-completed updates=1000 elapsedMs=5026.66; replay-started updates=1000; replay-completed updates=1000 elapsedMs=3368.475. Full batch case passed in 8421ms; initial <=15000ms assertion and subsequent count/replay/malformed/oversize/echo/read checks reached."
+  },
+  "counts": {
+    "parityMutationsRejected": 26,
+    "prismaMigrations": 31,
+    "unitFiles": 39,
+    "unitPassed": 412,
+    "unitFailed": 0,
+    "e2eFiles": 50,
+    "e2ePassed": 570,
+    "e2eFailed": 0,
+    "nativeP2002ExpectedCount": 3,
+    "batchInitialUpdates": 1000,
+    "batchInitialElapsedMs": 5026.66,
+    "batchReplayUpdates": 1000,
+    "batchReplayElapsedMs": 3368.475,
+    "liveControlReportedCaseDurationMs": 3278,
+    "strictClockFileTestsPassed": 9
+  },
+  "failures": [],
+  "notes": [
+    "Canonical API validation passed all stages and tests for this frozen candidate. This is not ALL/Web/browser/current formal review/provider protocol/real runtime/checkpoint acceptance.",
+    "No source fix/retry or threshold change was performed."
+  ]
+}

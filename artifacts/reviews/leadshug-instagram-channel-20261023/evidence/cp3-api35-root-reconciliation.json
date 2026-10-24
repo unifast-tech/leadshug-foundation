@@ -1,0 +1,19 @@
+{
+  "kind": "root-reconciled-api35",
+  "sourcesMatched": 256,
+  "boundInputsMatched": 602,
+  "todoMatched": true,
+  "preservedRowsMatched": 35,
+  "rootIndexMatched": true,
+  "exitCode": 0,
+  "logSha256": "a61dcc1490f56d96f900ae3675d6d0604f213386d7f42129e8d69ba745129def",
+  "logBytes": 223104,
+  "passed": "parity26/generate/31migrations/lint/build/412unit39files/570E2E50files",
+  "assertions": {
+    "nativeP2002RaceAndCleanup": "PASS: dispatch-admission case \u201crolls back the whole initial completion on a real P2002 race, exact-reads back, and retries one local transaction\u201d completed in 541ms. Test passed with its retained original count-3/native race assertions; log does not separately print the scalar P2002 count.",
+    "liveControlTiming": "PASS: equal-duration live-session control in instagram-cp2-commit-fences.e2e-spec.ts passed, reported case duration 3278ms (previous 4500ms bound unchanged).",
+    "strictCp2Clock": "PASS: instagram-cp2-final-clock.e2e-spec.ts 9/9 passed. Log has case durations (including 1912ms and 1921ms for provider-error settlement cases) but emits no separate strict-assertion scalar; all assertions in the passing file completed.",
+    "instagramBatch": "PASS: [IG-BATCH-PHASE] initial-started updates=1000; initial-completed updates=1000 elapsedMs=5026.66; replay-started updates=1000; replay-completed updates=1000 elapsedMs=3368.475. Full batch case passed in 8421ms; initial <=15000ms assertion and subsequent count/replay/malformed/oversize/echo/read checks reached."
+  },
+  "scope": "API only; CP3 source findings and CP2/4/5/6, other required assurance/provider/browser/runtime gates remain. No checkpoint/delivery acceptance."
+}
