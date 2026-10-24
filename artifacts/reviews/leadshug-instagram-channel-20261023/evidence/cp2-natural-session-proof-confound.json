@@ -1,0 +1,15 @@
+{
+  "kind": "natural-session-expiry-proof-confound",
+  "date": "2026-10-24",
+  "associatedFindings": [
+    "IG-CP2-ROOT-02",
+    "IG-CP2-R1-06"
+  ],
+  "observed": "Newtestpassed after15.163s withzeroHTTP/AUTHORIZATION_PENDING. The expiry chosen is now+15000ms; callback claim is interactive $transaction with no timeoutoverride. PrismaService subclassesPrismaClient without transactionOptions; setupApp override only adds query logging.",
+  "primarySource": "https://www.prisma.io/docs/orm/v6/prisma-client/queries/transactions",
+  "primaryFact": "Interactive transaction default timeout5seconds, default maxWait2seconds; source consulted2026-10-24. Prisma dependency publicpackage ^6.0.0.",
+  "inference": "Five-second transaction expiry may roll back blockedcallback claim before signed-session expires at15seconds. Sourceclaims stillchecked beforeawaitFORSHARE. The pass does not isolate live-session revalidation; actualrollbackcause was not captured in log. No vulnerability/exploit dynamicallyclaimed.",
+  "requiredProof": "Use actual signedexpiry within existingtransactionbudget (with measured margin), establish exact PGwaiter/blocker and release while actualclaimtransaction is still live, or a legitimate alreadyadmitted producttimeout design with independentcontrol demonstrating nonexpiredsession passes samewait. Do not increase transactiontimeout merely to manufacturepass or mockauth/clock/transactions. A matched non-expired-session control under same shorterhold can distinguishgeneric rollback/blockedcallback from sessionexpiry.",
+  "scope": "Existing admitted source/tests only, aftercurrentfrozenlanesterminal. Protected sessionmiddleware unchangedpendinghuman.",
+  "disposition": "Freshreview must assess sourcegap and proof confound; no ROOT02 closure from testpass."
+}

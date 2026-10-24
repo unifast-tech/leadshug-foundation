@@ -1,0 +1,18 @@
+{
+  "kind": "cp2-residual-validation-lint-only-failure",
+  "command": "bash scripts/test-channels-local.sh api-instagram",
+  "exit": 1,
+  "log": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp2-residual-validation-04.log",
+  "logSha256": "f095f8aa2364fc2038dc7a78887d243233fc692c28c931b2c4dad29d1ca73968",
+  "migrationsApplied": 31,
+  "lint": "2 errors/0warnings: service409 prefer-const deadlineAt; residualspec63 no-useless-assignment callbackStartedAt",
+  "build": "NOT REACHED",
+  "unit": "NOT REACHED",
+  "e2e": "NOT REACHED",
+  "functionalProof": false,
+  "naturalSessionExpiry": "NOT REACHED, no dynamicproof",
+  "postClaimExpiry": "NOT REACHED in04; prior02 reached actual response expected409 got200",
+  "rootMatched236AndTodo": true,
+  "executorMatchedPreservation35AndIndex3": true,
+  "freeze": "All lanes terminal; narrow thaw only literal const/unused-assignment correction, no semantic auth/clock changes. Refreeze separatevalidator."
+}

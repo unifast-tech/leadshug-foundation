@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "kind": "frozen-validation-only-complete-api-r2-handoff",
+  "owner": "fresh routine-executor gpt-6-luna medium",
+  "authority": "Approved ST-IG-03v1.3 sameactual236source/T freeze; routing/authorityfullr2 GO required; no codewriteractive",
+  "readFirst": [
+    "foundation_documentation/todos/active/features/TODO-leadshug-instagram-channel.md",
+    "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp2-residual-validation-frozen-manifest-05.json",
+    "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp2-residual-validation-05-result.json",
+    "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/inherited-public-preservation-v1.2.json"
+  ],
+  "exactCommand": "bash scripts/test-channels-local.sh api",
+  "log": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp2-api-full-r2-01.log",
+  "commandCount": 1,
+  "before": "Independently match236explicitmanifest hashes/frozenTODO,35preservation and3rootindex. No directory/Gitinventory. Stop on mismatch.",
+  "execution": "Canonical disposable leadshug_channels_validation only with synthetic fixtures/external HTTP fakes. Capture exact command exit and stdout/stderr in the unique public synthetic log; never overwrite a retained log. No other runner, lint/build command or broadening. Do not read real env/runtime/process args/volumes, actualservices/Meta/otherprovider/tunnels/devices, gitstatus/diff/private paths. Manual positive readiness instead of generic private inventory.",
+  "after": "Matchsame236/T/35/index. Return exactexit/logSHA, reachedmigrations/lint/build/unit/e2e counts andactualfailedassertions. Currentselected70suite4failknown, no acceptanceexpected; broadfullAPIjustified tocheckcatalog andsharedregressionsafter8changedsource. No retries/fixes.",
+  "freeze": "No source/TODO/package/config/Git/index edits; onecanonicaldisposablevalidation only. Separate freshcompleteadherence alsoactive, bothmustterminal before rootthaw. Agent writesonlyunique capturedsyntheticlog.",
+  "goalTools": "Do not create/use GOALtools. No worktrees/copies/branches/subagents. Read applicable AGENTS/profile/routing rules without forbidden broad commands."
+}

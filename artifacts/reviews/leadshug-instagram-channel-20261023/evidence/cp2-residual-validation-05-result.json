@@ -1,0 +1,67 @@
+{
+  "kind": "cp2-residual-stable-validation-05-terminal",
+  "command": "bash scripts/test-channels-local.sh api-instagram",
+  "exit": 1,
+  "log": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp2-residual-validation-05.log",
+  "logSha256": "309f9e966c96fe741caa483c254a092fe21cc9b60f42f53db2b42e934798965f",
+  "migrationsApplied": 31,
+  "lint": "passed",
+  "build": "passed",
+  "unit": {
+    "files": 36,
+    "passed": 395
+  },
+  "e2e": {
+    "files": 5,
+    "passed": 66,
+    "failed": 4,
+    "total": 70
+  },
+  "actualFailures": [
+    {
+      "case": "credential-margin callback",
+      "actual": "global POSTcount18",
+      "expected": 3,
+      "source": "residualspec501",
+      "reached": "candidateCiphertext null and zero credential assertions before bad count",
+      "qualification": "Investigate absolute accumulatedfakecount; no globalreset or proofweakening inferred"
+    },
+    {
+      "case": "orientation fourthrequestbudget",
+      "actual": 429,
+      "expected": 409,
+      "source": "cp2spec652",
+      "notReached": "exactbodycode/HTTPcounters andlaterreauth/cancel stages",
+      "qualification": "Inspect cooldown vs totalbudget predicate and fixture setup; preserve approvedbudget3/cooldown10s"
+    },
+    {
+      "case": "concurrent same-resource subscription claims",
+      "actual": "30s testtimeout",
+      "source": "cp2spec",
+      "qualification": "Exact failing await/facts not established; inspect current mappedversion fixture and real lock/barrier"
+    },
+    {
+      "case": "synthetic persisted CONNECT replay",
+      "actual": 409,
+      "expected": 200,
+      "source": "cp2spec1117",
+      "notReached": "laterresult/credential assertions and current realwriter probe",
+      "qualification": "Persisted syntheticshape vs newimmutable mappedCredentialVersion must be reviewed; never turn actual replay into newPOST/promotion"
+    }
+  ],
+  "naturalSessionExpiry": {
+    "observed": "PASS15.163s; actualuserrowwait, claimsvalidthenexpired, protected303; combinedfacts zeroHTTP/AUTHORIZATION_PENDING/no candidate/mapping/credential",
+    "qualification": "NOT CAUSAL AUTH-FENCE CLOSURE: 15s hold exceeds documented default5s interactivePrisma transaction timeout; actual PrismaService/testoverride have no transactionOptions override. Timeout rollback plausible confound, exactruntimecause notcaptured. Exclude before claiming sessionclock safety; see cp2-natural-session-proof-confound.json"
+  },
+  "postClaimExpiry": {
+    "qualification": "Case exists active in residualspec314; default log does not print its individual passing result. File reports12cases/1failure (credential-margin) with no skips. Source+framework count support a derived pass, but root grants no exact criterion closure or separateprinted-case proof before independent review."
+  },
+  "rootPostMatched": {
+    "sources": 236,
+    "todo": true,
+    "preservation": 35,
+    "indexReferences": 3
+  },
+  "freeze": "Remain frozen for complete actualsource adherence and one separate completeAPI diagnostic; no source/TODOwriter until both terminal and allhashesmatch. All new humanapproval applies onlyafterthaw.",
+  "CP2Accepted": false
+}
