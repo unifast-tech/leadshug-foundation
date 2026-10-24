@@ -1,0 +1,17 @@
+{
+  "kind": "cp2-r2-qualified11-narrow-repair",
+  "routing": "routing-cp2-r2-source-repair.json",
+  "authority": "Approved ST-IG-03 v1.3, same service/test owned paths; no WHAT change",
+  "precondition": "Validator11 terminal and root independently matched239/T/9/35/index/logSHA; receipt cp2-r2-lint-validation-11-result.json",
+  "ownedPaths": [
+    "api-app/src/domain/channels/instagram-authorization.service.ts",
+    "api-app/test/instagram-cp2-binding.e2e-spec.ts",
+    "api-app/test/instagram-cp2-residual.e2e-spec.ts"
+  ],
+  "instructions": [
+    "Inspect exact run11 two failures. Concurrency predicate hides actualstatus/code; replace with equivalent strict ordered status/code list assertion or finite diagnostic message. Retain exactly19x409 CONFIRMATION_IN_PROGRESS, original20 fresh requests, heldPOST, winner/replay/audit/credential assertions. Do not guess relaxed permissible codes or change pool/timeouts/runner. If source static defect established fix locally and document exactcause; otherwise diagnostic-only for next actual run.",
+    "Receipt/cancel: providerCall catches settled provider error, then actorTransaction assertSubscriptionTuple throws for CANCELLED before releaseBindingOperation; original bindinglease remains. Ensure exact-token holder release after actual HTTP completion even if result revalidation/cancellation/session/credential/generation rejects, preserving original409 and all independently committed receipt/cancel facts; exact-token CAS must never clear successor. Do not release holder while externalPOST pending, bypass actor authority for domainwrites, restore cancellation, undo receipt, or erase cooldown/tombstone. Cover success/error stale result cleanup and retain allassertions. Prefer owner-local structuredfinally cleanup without changing domain contract.",
+    "Only3 paths writable, allother236 sources immutable. No test/lint/build/runtime/provider/Git/private/document writes. Rootowns artifacts/T. Return terminal with hashes, exact diagnostic qualification and NOTRUN; no tests until independentrefreeze."
+  ],
+  "pending": "Bytes/privacy/sessionmiddleware and primaryGET observer untouched/unaccepted"
+}

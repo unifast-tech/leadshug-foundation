@@ -1,0 +1,20 @@
+{
+  "kind": "cp2-r2-followup-validation10-builder-only",
+  "exit": 1,
+  "command": "bash scripts/test-channels-local.sh api-instagram",
+  "log": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp2-r2-followup-validation-10.log",
+  "logSha256": "41d411be35529c11b224a5e19071a06d6ee7dc2db4503dbc22ca6aa70a6a49ef",
+  "migrations": 31,
+  "lint": "3no-useless-assignment main920/921/952",
+  "build": "NOTREACHED",
+  "unit": "NOTREACHED",
+  "e2e": "NOTREACHED",
+  "rootPostMatched": {
+    "sources": 239,
+    "todo": true,
+    "inputs": 9,
+    "preserved": 35,
+    "index": 3
+  },
+  "thaw": "Only unused3initializations main-spec correction; no assertions/flows removed, no runner until terminal/refreeze."
+}

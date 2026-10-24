@@ -1,0 +1,12 @@
+{
+  "kind": "cp2-r2-current-binding-completion-static-observation",
+  "findingId": "IG-CP2-ROOT-14",
+  "severity": "medium",
+  "sourceSnapshot": "cp2-r2-source-frozen-manifest-09.json",
+  "source": "instagram-authorization.service providerCall/assertSubscriptionTuple",
+  "fact": "09 tuple selectsresourceidentityid withoutglobalbindingtoken/until; providerCall releasesbindingholder before finalsuccess/error facttransaction.",
+  "qualification": "Static sourcefence concern, not executedduplicatePOST/dataexposure. CurrentfirstPOSThistory/versionCAS andindependentreceipt protections remain supported; actualtakeover combinations unproved.",
+  "direction": "Within existing7pathfollowup, retain/checkexactbindingholder token/lease aroundpreHTTP andfinalauthorizedproviderfactwrites; releasecomparetoken after ownedfactcompletion/equallysafeordering. LateA cannotclearlaterB/overwritefacts evenifAattemptlease valid. Actualsignedreceipt remainsindependentalreadytrue; cleanupnevererasesit.",
+  "proof": "Hold externalrequest, replace/expire bindingholder usingrealPG teststate, settle success/error, compare newerholder/credential/channel/attempt/receipt facts; no secondPOST. Persistedshorteningqualifiedasrobustnessnotnatural60s.",
+  "scope": "Approved r2 currentholder semantics; no newWHAT/path/runtimeauthority; writer notified, no runneractive."
+}

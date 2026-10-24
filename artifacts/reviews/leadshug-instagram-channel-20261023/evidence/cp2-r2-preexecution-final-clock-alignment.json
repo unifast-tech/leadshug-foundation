@@ -1,0 +1,15 @@
+{
+  "kind": "cp2-r2-preexecution-final-clock-alignment",
+  "state": "No validator dispatched or execution consumed. Previous7pathwriterterminal, rootstaticcheck preventedfreeze; onlyservice/main narrowfollowupactive.",
+  "fact": "Callback claimUPDATE transaction returns/commits before signed-session finalcheck. Added mainattempt-row case shortens attemptTTL800ms, normal signedcookie unchanged: wrongclock for requested signedexpiry proof; livecontrolreleasedimmediately, notmatchedhold.",
+  "direction": "Ownerprivate actorTransaction wraps actualPrisma transaction, alwaysfresh synchronous signed-session check afterfinalawait INSIDE callback beforecommit, againaftertxawait before returning. ExistingDBauthorization/SQLclocks kept; noHTTPinTX; independent ingress untouched. No optionalcachedclaims bypass in finalhelper.",
+  "test": "Actualnaturalsignedsession with samecookie creation/callback; precise PGblocker/waiterPID; expirationduringattemptUPDATE wait under5s; rollbackAUTHpending/noHTTP. Matchedlivecontrolsamehold. AttemptTTL case separate andqualified.",
+  "fiveOtherReportedHashesRootMatched": {
+    "api-app/src/integrations/instagram/instagram-http.client.ts": "0a38a8fb164a27b92c3f6c357eb3bd4a529b012206bb4bd5fe4d7ccec13c0287",
+    "api-app/src/integrations/instagram/instagram-http.client.spec.ts": "49d791fa2d6112bf0d084e7d97c16efee9180c2516f2d9c5a60df4ef41a7141d",
+    "api-app/test/instagram-cp2-residual.e2e-spec.ts": "cee239122de9f6f19b1285b447a6f5a3d85755536fda9e081fff442d51c5ecc7",
+    "api-app/test/instagram-cp2-binding.e2e-spec.ts": "26772d3bb778ba8e13457e1d1551cf7755d31384b59a11df4dfe70c4d83ef28c",
+    "api-app/test/instagram-cp2-recovery.e2e-spec.ts": "a75d9687f300486c9acf9ed38587f9fa507fcaeecd11588af5530e631cb1f856"
+  },
+  "notAcceptance": true
+}

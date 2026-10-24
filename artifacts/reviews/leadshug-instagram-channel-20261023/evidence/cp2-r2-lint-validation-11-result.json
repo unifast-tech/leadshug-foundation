@@ -1,0 +1,41 @@
+{
+  "kind": "cp2-r2-lint-validation11-functional-qualified",
+  "command": "bash scripts/test-channels-local.sh api-instagram",
+  "exit": 1,
+  "log": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp2-r2-lint-validation-11.log",
+  "logSha256": "8af224c41f33c1526fc243243985d8694fdaad8ba33b7c26ea9fe7ef36cc339c",
+  "migrations": 31,
+  "lint": "PASS",
+  "build": "PASS",
+  "unit": {
+    "files": 37,
+    "passed": 398
+  },
+  "e2e": {
+    "files": 7,
+    "passed": 75,
+    "failed": 2,
+    "total": 77
+  },
+  "qualifiedPasses": [
+    "Natural signed-session expiry after actual PostgreSQL attempt-row wait, matched live control",
+    "Real committed-writer fault disabled and original-key/body recovery replay",
+    "Binding takeover refuses late success and lost acknowledgement",
+    "Canonical/alias ingress and OAuth bounds"
+  ],
+  "remaining": [
+    "Twenty fresh concurrent confirmations: loser response predicate differs, actual safe status/code distribution not yet captured",
+    "Receipt then cancellation with late provider error: original binding holder retained; cleanup flow requires analysis"
+  ],
+  "rootPostMatched": {
+    "sources": 239,
+    "todo": true,
+    "inputs": 9,
+    "preserved": 35,
+    "index": 3
+  },
+  "validatorTerminal": true,
+  "runtime": "Canonical disposable only; no real provider/Meta invocation",
+  "acceptance": "Not complete CP2/fullAPI/feature proof; later assertions after each failed assertion remain unreached",
+  "thaw": "Root may authorize only exact next corrective writer paths after this immutable reconciliation"
+}

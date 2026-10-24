@@ -1,0 +1,250 @@
+ Network leadshug_channels_validation_validation  Creating
+ Network leadshug_channels_validation_validation  Created
+ Volume "leadshug_channels_validation_channels_playwright_cache"  Creating
+ Volume "leadshug_channels_validation_channels_playwright_cache"  Created
+ Volume "leadshug_channels_validation_validation_pg_data"  Creating
+ Volume "leadshug_channels_validation_validation_pg_data"  Created
+ Volume "leadshug_channels_validation_channels_api_workspace"  Creating
+ Volume "leadshug_channels_validation_channels_api_workspace"  Created
+ Volume "leadshug_channels_validation_channels_api_node_modules"  Creating
+ Volume "leadshug_channels_validation_channels_api_node_modules"  Created
+ Volume "leadshug_channels_validation_channels_web_workspace"  Creating
+ Volume "leadshug_channels_validation_channels_web_workspace"  Created
+ Volume "leadshug_channels_validation_channels_web_node_modules"  Creating
+ Volume "leadshug_channels_validation_channels_web_node_modules"  Created
+ Volume "leadshug_channels_validation_channels_npm_cache"  Creating
+ Volume "leadshug_channels_validation_channels_npm_cache"  Created
+ Container leadshug_channels_validation-validation-postgres-1  Creating
+ Container leadshug_channels_validation-validation-postgres-1  Created
+ Container leadshug_channels_validation-validation-postgres-1  Starting
+ Container leadshug_channels_validation-validation-postgres-1  Started
+Runner Node: v22.23.3
+debconf: delaying package configuration, since apt-utils is not installed
+{"guard": "channels-ci-parity-v1", "mutations_rejected": ["missing-pr-trigger", "missing-channels-job", "missing-retained-guard", "weakened-job-gate", "swallowed-job-errors", "skipped-validate-step", "swallowed-retained-job", "skipped-retained-admission", "missing-retained-private-checkout", "missing-common-guard", "swallowed-common-guard-failure", "missing-instagram-selector", "widened-instagram-selector", "extra-runner-arguments-accepted", "missing-e2e", "swallowed-e2e-failure", "missing-browser", "missing-migrate", "missing-generate", "missing-lint", "reordered-suite", "missing-shell-guard", "widened-wsl-socket", "changed-wsl-host-prefix", "wrong-wsl-mask-source", "missing-wsl-overlay"], "outer_wrapper": {"collision_control": {"compose_calls": 0, "exit_code": 1}, "empty_config_control": {"compose_calls": [["compose", "--project-name", "leadshug_channels_validation", "--env-file", "/workspace/.env.example", "--env-file", "/tmp/tmp.gW54CX8XPV", "-f", "/workspace/docker-compose.yml", "-f", "/workspace/docker-compose.channels.yml", "--profile", "validation", "config", "--quiet"]], "exit_code": 0}, "inventory_failures": {"network": {"compose_calls": 0, "docker_calls": 3, "exit_code": 1}, "ps": {"compose_calls": 0, "docker_calls": 1, "exit_code": 1}, "volume": {"compose_calls": 0, "docker_calls": 2, "exit_code": 1}}, "mandatory_failure_cleanup": {"cleanup_observed": true, "compose_lifecycle": ["run", "down"], "exit_code": 42, "provider_or_real_docker_invoked": false, "required_leaf": "fake python3 reached through actual RUNNER_SCRIPT and returned 42"}, "native_path_control": {"exit_code": 0, "overlay_added": false, "posix_bind_paths_preserved": true}, "unsupported_wsl_socket_control": {"docker_calls": 0, "exit_code": 1}, "wsl_bind_path_control": {"skipped": "self-test checkout is not on a WSL-mounted drive"}}, "yaml": "safe-no-alias-no-duplicates"}
+OpenSSL: OpenSSL 3.0.22 25 Aug 2026 (Library: OpenSSL 3.0.22 25 Aug 2026)
+Principal API/Web source binds and API/root dotenv masks verified before npm.
+npm warn deprecated glob@10.5.0: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
+
+added 555 packages, and audited 556 packages in 26s
+
+138 packages are looking for funding
+  run `npm fund` for details
+
+19 vulnerabilities (4 moderate, 11 high, 4 critical)
+
+To address issues that do not require attention, run:
+  npm audit fix
+
+To address all issues (including breaking changes), run:
+  npm audit fix --force
+
+Run `npm audit` for details.
+npm notice
+npm notice New major version of npm available! 10.9.9 -> 12.2.1
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.1
+npm notice To update run: npm install -g npm@12.2.1
+npm notice
+Environment variables loaded from .env
+Prisma schema loaded from prisma/schema.prisma
+prisma                  : 6.19.3
+@prisma/client          : 6.19.3
+Computed binaryTarget   : debian-openssl-3.0.x
+Operating System        : linux
+Architecture            : x64
+Node.js                 : v22.23.3
+TypeScript              : 5.9.3
+Query Engine (Node-API) : libquery-engine c2990dca591cba766e3b7ef5d9e8a84796e47ab7 (at node_modules/@prisma/engines/libquery_engine-debian-openssl-3.0.x.so.node)
+PSL                     : @prisma/prisma-schema-wasm 7.1.1-3.c2990dca591cba766e3b7ef5d9e8a84796e47ab7
+Schema Engine           : schema-engine-cli c2990dca591cba766e3b7ef5d9e8a84796e47ab7 (at node_modules/@prisma/engines/schema-engine-debian-openssl-3.0.x)
+Default Engines Hash    : c2990dca591cba766e3b7ef5d9e8a84796e47ab7
+Studio                  : 0.511.0
+
+> @leadshug/api@0.1.0 prisma:generate
+> prisma generate
+
+Environment variables loaded from .env
+Prisma schema loaded from prisma/schema.prisma
+
+✔ Generated Prisma Client (v6.19.3) to ./node_modules/@prisma/client in 301ms
+
+Start by importing your Prisma Client (See: https://pris.ly/d/importing-client)
+
+Tip: Interested in query caching in just a few lines of code? Try Accelerate today! https://pris.ly/tip-3-accelerate
+
+┌─────────────────────────────────────────────────────────┐
+│  Update available 6.19.3 -> 8.0.0-rc.27                 │
+│                                                         │
+│  This is a major update - please follow the guide at    │
+│  https://pris.ly/d/major-version-upgrade                │
+│                                                         │
+│  Run the following to update                            │
+│    npm i --save-dev prisma@latest                       │
+│    npm i @prisma/client@latest                          │
+└─────────────────────────────────────────────────────────┘
+
+added 105 packages, and audited 106 packages in 4s
+
+16 packages are looking for funding
+  run `npm fund` for details
+
+9 vulnerabilities (5 moderate, 2 high, 2 critical)
+
+To address issues that do not require attention, run:
+  npm audit fix
+
+To address all issues (including breaking changes), run:
+  npm audit fix --force
+
+Run `npm audit` for details.
+
+> @leadshug/api@0.1.0 prisma:migrate
+> prisma migrate deploy
+
+Environment variables loaded from .env
+Prisma schema loaded from prisma/schema.prisma
+Datasource "db": PostgreSQL database "leadshug_timeline_channels_ci", schema "public" at "validation-postgres:5432"
+
+31 migrations found in prisma/migrations
+
+Applying migration `20260818125556_nucleo_v1_tenancy_identidade_atendimento`
+Applying migration `20260821175101_modulos_e_marca_por_mantenedora`
+Applying migration `20260821180000_tres_papeis_owner_admin_atendente`
+Applying migration `20260821190000_setor_e_proveniencia_do_grant`
+Applying migration `20260821190500_concessao_de_setor_e_fato_proprio`
+Applying migration `20260821200000_historico_de_atividades`
+Applying migration `20260821210000_wizard_de_onboarding`
+Applying migration `20260821220000_preserva_modulo_ja_em_uso`
+Applying migration `20260824122559_perfil_do_proprio_usuario`
+Applying migration `20260824125224_arquivos_logo_e_avatar`
+Applying migration `20260824125227_arquivos_dono`
+Applying migration `20260824125334_avatar_e_do_usuario_nao_da_bu`
+Applying migration `20260824161138_convite_e_recuperacao_de_senha`
+Applying migration `20260827170000_cor_secundaria`
+Applying migration `20260831130000_cores_primarias_por_tema`
+Applying migration `20260901120000_typebot_bots_and_triggers`
+Applying migration `20260901130000_typebot_sessions`
+Applying migration `20261015120000_number_onboarding_foundation`
+Applying migration `20261015130000_number_onboarding_provider_resource_ownership_immutable`
+Applying migration `20261015140000_number_onboarding_channel_operation_fence`
+Applying migration `20261015150000_number_onboarding_managed_cleanup`
+Applying migration `20261016160000_number_onboarding_current_channel_identity_index`
+Applying migration `20261020170000_message_inbound_window_index`
+Applying migration `20261021130000_message_template_drafts`
+Applying migration `20261021150000_message_template_operations`
+Applying migration `20261022140000_initial_message_orchestration`
+Applying migration `20261022150000_initial_message_admissions`
+Applying migration `20261022160000_initial_message_inbox_order`
+Applying migration `20261023180000_instagram_adapter_type`
+Applying migration `20261023190000_instagram_identity_routes`
+Applying migration `20261024100000_instagram_authorization_attempts`
+
+The following migration(s) have been applied:
+
+migrations/
+  └─ 20260818125556_nucleo_v1_tenancy_identidade_atendimento/
+    └─ migration.sql
+  └─ 20260821175101_modulos_e_marca_por_mantenedora/
+    └─ migration.sql
+  └─ 20260821180000_tres_papeis_owner_admin_atendente/
+    └─ migration.sql
+  └─ 20260821190000_setor_e_proveniencia_do_grant/
+    └─ migration.sql
+  └─ 20260821190500_concessao_de_setor_e_fato_proprio/
+    └─ migration.sql
+  └─ 20260821200000_historico_de_atividades/
+    └─ migration.sql
+  └─ 20260821210000_wizard_de_onboarding/
+    └─ migration.sql
+  └─ 20260821220000_preserva_modulo_ja_em_uso/
+    └─ migration.sql
+  └─ 20260824122559_perfil_do_proprio_usuario/
+    └─ migration.sql
+  └─ 20260824125224_arquivos_logo_e_avatar/
+    └─ migration.sql
+  └─ 20260824125227_arquivos_dono/
+    └─ migration.sql
+  └─ 20260824125334_avatar_e_do_usuario_nao_da_bu/
+    └─ migration.sql
+  └─ 20260824161138_convite_e_recuperacao_de_senha/
+    └─ migration.sql
+  └─ 20260827170000_cor_secundaria/
+    └─ migration.sql
+  └─ 20260831130000_cores_primarias_por_tema/
+    └─ migration.sql
+  └─ 20260901120000_typebot_bots_and_triggers/
+    └─ migration.sql
+  └─ 20260901130000_typebot_sessions/
+    └─ migration.sql
+  └─ 20261015120000_number_onboarding_foundation/
+    └─ migration.sql
+  └─ 20261015130000_number_onboarding_provider_resource_ownership_immutable/
+    └─ migration.sql
+  └─ 20261015140000_number_onboarding_channel_operation_fence/
+    └─ migration.sql
+  └─ 20261015150000_number_onboarding_managed_cleanup/
+    └─ migration.sql
+  └─ 20261016160000_number_onboarding_current_channel_identity_index/
+    └─ migration.sql
+  └─ 20261020170000_message_inbound_window_index/
+    └─ migration.sql
+  └─ 20261021130000_message_template_drafts/
+    └─ migration.sql
+  └─ 20261021150000_message_template_operations/
+    └─ migration.sql
+  └─ 20261022140000_initial_message_orchestration/
+    └─ migration.sql
+  └─ 20261022150000_initial_message_admissions/
+    └─ migration.sql
+  └─ 20261022160000_initial_message_inbox_order/
+    └─ migration.sql
+  └─ 20261023180000_instagram_adapter_type/
+    └─ migration.sql
+  └─ 20261023190000_instagram_identity_routes/
+    └─ migration.sql
+  └─ 20261024100000_instagram_authorization_attempts/
+    └─ migration.sql
+      
+All migrations have been successfully applied.
+Environment variables loaded from .env
+Prisma schema loaded from prisma/schema.prisma
+Datasource "db": PostgreSQL database "leadshug_timeline_channels_ci", schema "public" at "validation-postgres:5432"
+
+31 migrations found in prisma/migrations
+
+Database schema is up to date!
+
+> @leadshug/api@0.1.0 lint
+> eslint "{src,test}/**/*.ts"
+
+
+/workspace/api-app/test/instagram-cp2.e2e-spec.ts
+  920:9  error  The value assigned to 'expiredWaitReached' is not used in subsequent statements  no-useless-assignment
+  921:9  error  The value assigned to 'expiredWaitMs' is not used in subsequent statements       no-useless-assignment
+  952:9  error  The value assigned to 'liveWaitReached' is not used in subsequent statements     no-useless-assignment
+
+✖ 3 problems (3 errors, 0 warnings)
+
+ Container leadshug_channels_validation-validation-postgres-1  Stopping
+ Container leadshug_channels_validation-validation-postgres-1  Stopped
+ Container leadshug_channels_validation-validation-postgres-1  Removing
+ Container leadshug_channels_validation-validation-postgres-1  Removed
+ Volume leadshug_channels_validation_validation_pg_data  Removing
+ Volume leadshug_channels_validation_channels_api_workspace  Removing
+ Volume leadshug_channels_validation_channels_api_node_modules  Removing
+ Volume leadshug_channels_validation_channels_npm_cache  Removing
+ Volume leadshug_channels_validation_leadshug_arquivos  Removing
+ Volume leadshug_channels_validation_channels_web_workspace  Removing
+ Volume leadshug_channels_validation_leadshug_pg_data  Removing
+ Volume leadshug_channels_validation_channels_web_node_modules  Removing
+ Volume leadshug_channels_validation_channels_playwright_cache  Removing
+ Network leadshug_channels_validation_validation  Removing
+ Volume leadshug_channels_validation_leadshug_arquivos  Removed
+ Volume leadshug_channels_validation_validation_pg_data  Removed
+ Network leadshug_channels_validation_validation  Removed
+ Volume leadshug_channels_validation_leadshug_pg_data  Removed
+ Volume leadshug_channels_validation_channels_npm_cache  Removed
+ Volume leadshug_channels_validation_channels_api_workspace  Removed
+ Volume leadshug_channels_validation_channels_api_node_modules  Removed
+ Volume leadshug_channels_validation_channels_playwright_cache  Removed
+ Volume leadshug_channels_validation_channels_web_workspace  Removed
+ Volume leadshug_channels_validation_channels_web_node_modules  Removed

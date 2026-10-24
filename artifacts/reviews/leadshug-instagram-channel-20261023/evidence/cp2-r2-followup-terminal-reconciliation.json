@@ -1,0 +1,19 @@
+{
+  "kind": "cp2-r2-followup-terminal-reconciliation",
+  "writerTerminal": true,
+  "changed": {
+    "api-app/src/domain/channels/instagram-authorization.service.ts": "e40caea2470101de8063f560fe09fd0f8d674ee84daa27f4361abf5a3c6bc56b",
+    "api-app/src/integrations/instagram/instagram-http.client.ts": "0a38a8fb164a27b92c3f6c357eb3bd4a529b012206bb4bd5fe4d7ccec13c0287",
+    "api-app/src/integrations/instagram/instagram-http.client.spec.ts": "49d791fa2d6112bf0d084e7d97c16efee9180c2516f2d9c5a60df4ef41a7141d",
+    "api-app/test/instagram-cp2.e2e-spec.ts": "40e0e772dc59494774b357a0abe94df9abdb0e9bba3504992b453ff50593cb1c",
+    "api-app/test/instagram-cp2-residual.e2e-spec.ts": "cee239122de9f6f19b1285b447a6f5a3d85755536fda9e081fff442d51c5ecc7",
+    "api-app/test/instagram-cp2-binding.e2e-spec.ts": "26772d3bb778ba8e13457e1d1551cf7755d31384b59a11df4dfe70c4d83ef28c",
+    "api-app/test/instagram-cp2-recovery.e2e-spec.ts": "a75d9687f300486c9acf9ed38587f9fa507fcaeecd11588af5530e631cb1f856"
+  },
+  "sources": 239,
+  "allOther232SourcesUnchanged": true,
+  "preserved": 35,
+  "index": 3,
+  "proof": "Source/static only; followup NOTRUN. Originaltwo-pathterminal lackedcommitclockproof andwas corrected BEFOREvalidation; exactpreexecutionalignment artifactretained.",
+  "remaining": "Full expiry/lease/generation/credentialtakeovermatrix, completeAPI/freshreview, ownobserver/humancompanions andCP3..CP6 stillrequired."
+}
