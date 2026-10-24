@@ -1,0 +1,37 @@
+{
+  "kind": "cp3-consumer-implementation-handoff05-prepared",
+  "date": "2026-10-24",
+  "state": "PREPARED ONLY; dispatch after core04 terminal root reconciliation. First bounded phase is test-only on the new consumer isolation spec; freeze and run canonical actual PostgreSQL proof before production consumer changes. Same approved ST-IG-03 v1.3, no CP acceptance.",
+  "profile": "Operational/Coder, gpt-6-luna medium, principal checkout, one product writer total",
+  "basis": [
+    "cp3-consumer-qualified-preparation05.json",
+    "cp3-core-source-handoff04.json",
+    "current governing TODO normative IG-ARCH-R1-01..04 and Frontend / Consumer Matrix",
+    "modules/inbox-and-conversations.md",
+    "modules/integrations-and-channels.md",
+    "modules/audit-and-history.md"
+  ],
+  "ownedPaths": [
+    "api-app/src/domain/inbox/historico.service.ts",
+    "api-app/src/domain/inbox/incoming.service.ts",
+    "api-app/src/surfaces/public/conversations.controller.ts",
+    "api-app/src/surfaces/bff/me.controller.ts",
+    "api-app/test/instagram-consumer-isolation.e2e-spec.ts"
+  ],
+  "conditionalNewHelper": "A narrowly shared WhatsApp-qualified consumer helper under api-app/src/domain/inbox/ is within the approved TODO glob; report concrete filename/purpose before creating so root can reconcile lane ownership. No universal capability/provider framework.",
+  "requirements": [
+    "Consultar remains WhatsApp-only: list/count/contact filter/drilldown/messages/CSV use canonical WA contact/route and sole durable WA business resource, never BU.phone or IG opaque peer as phone. Preserve pagination, filters, chronology, rights, unread invariance, CSV quoting and export audit. Preserve supported historical messages; do not require nonexistent old provider fields or rewrite legacy facts merely to filter. Qualification must be proved via retained canonical associations.",
+    "Public v1 accounts/list/thread/messages/claim/release/respond stay WA-only and qualified by the requested BU, canonical WA person identity and sole WA business resource. No arbitrary first route or latest-IG-origin fallback. Exclude IG-only/no-WA-resource BUs from WA accounts. A numeric IG peer can separately be a legitimate WA number with a distinct proved WA identity; isolate exact contact/resource instead of blanket numeric rejection.",
+    "Legacy /business-units channels projection includes at most the compatible official and Evolution bindings for its single WA resource. Never hydrate all IG channels, hide conflict by filtering readiness, or silently truncate. Preserve all grants/roles/other controller behavior; separate paged channel catalog owns IG.",
+    "Typebot must prove WA platform/contact/resource/provider binding before any trigger/session lookup or client call. Preserve historical session keys, WA tenant/global triggers/session ownership, queued behavior, epochs/window/echo/dedup and all existing counters. Do not generalize session keys for IG. Signed IG webhook currently bypasses IncomingService; test that actual journey as regression, and test actual IncomingService defensive guard separately if claiming its causal coverage.",
+    "Add real Nest/PostgreSQL integration proof, synthetic actors with native sessions and real constraints: same BU with qualified WA and two IG resources, same-looking numeric peer strings kept as distinct contacts, history/public isolation, me projection, scope denials, no Typebot activation for IG and retained WA control. Fake only external provider/Typebot boundaries. Existing Typebot fake counters already exported in helpers. Do not mock domain services, sessions, grants, Prisma/transactions or return fake BFF responses.",
+    "Partner OutboundWebhookService has no current source callers; do not add IG wiring or invent an existing positive WA partner-delivery feature. A synthetic receiver counter can prove no-new-activation only. Realtime is real scoped WebSocket, not partner HTTP.",
+    "Keep all old tests/helpers/new CP3 routing and V1 cutover specs byte-identical in this lane. If a baseline fixture needs canonical proof adaptation, identify actual need for the later serialized fixture owner rather than weakening or deleting assertions. No production data migrations, backfills, route guesses or history resets."
+  ],
+  "restrictions": "No tests/build/lint/runner/runtime/private files/provider calls/network/Git/docs/source copies. Do not touch core04 paths, sealed OAuth/window clients, schema/migrations, Web or old E2E/helpers. Return exact touched path hashes and remaining obligations; no checkpoint acceptance.",
+  "validationLater": "Root consolidates terminal sources, then canonical API validation and fresh source adherence, plus complete later browser/ALL/assurance/runtime gates. Known incomplete source is not a validation candidate.",
+  "phaseBoundary": {
+    "testFirst": "Initial ownership permits only api-app/test/instagram-consumer-isolation.e2e-spec.ts. Read current actual core and stable consumer sources; write meaningful consumer assertions that fail on current missing WA isolation, not merely implementation-mirroring mocks. Report actual exact file/hash before any canonical run.",
+    "implementation": "After root actual RED/result adjudication and explicit followup, four production owned paths may be edited; keep the frozen consumer isolation test unchanged. Existing old tests/helpers are a subsequent serialized fixture lane. No parallel source writers."
+  }
+}

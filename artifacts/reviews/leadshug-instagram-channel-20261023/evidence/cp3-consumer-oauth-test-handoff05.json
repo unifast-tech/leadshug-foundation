@@ -1,0 +1,33 @@
+{
+  "kind": "cp3-consumer-and-oauth-session-test-first-handoff05",
+  "date": "2026-10-24",
+  "profile": "Operational/Coder, routine executor gpt-6-luna medium, sole product writer principal checkout",
+  "authority": "Same approved ST-IG-03 v1.3 plus exact user OAuth session v2 path admission. Core04 terminal248 positive public source baseline; no code writer/validator active. Initially TESTS ONLY.",
+  "ownedPaths": [
+    "api-app/test/instagram-consumer-isolation.e2e-spec.ts",
+    "api-app/test/instagram-oauth-session.e2e-spec.ts"
+  ],
+  "requiredReads": [
+    "AGENTS.md",
+    "delphi-ai/main_instructions.md",
+    "delphi-ai/profiles/operational_coder.md",
+    "governing TODO normative clauses/current consumer matrix",
+    "modules/inbox-and-conversations.md",
+    "modules/integrations-and-channels.md",
+    "modules/audit-and-history.md",
+    "policies/scope_subscope_governance.md",
+    "cp3-consumer-source-handoff05.json",
+    "cp3-consumer-qualified-preparation05.json",
+    "cp3-fixture-qualified-preparation06.json",
+    "oauth-callback-session-companion-proposal-v2.json",
+    "oauth-callback-session-companion-proposal-v2.diff",
+    "oauth-callback-session-user-admission-v2.json"
+  ],
+  "requirements": [
+    "Implement meaningful consumer isolation integration spec from prepared handoff05, real Nest/native sessions/actual PostgreSQL with canonical WA plus2IG accounts and same-looking numeric peer, no domain/Prisma/Session mocks. Preserve helpers and old specs. External provider/Typebot fakes only. Actual signed IG ingestion journey is distinct from direct Incoming defensive coverage; qualify what really executes.",
+    "Implement OAuth session confidentiality integration spec before middleware changes. Actual no/invalid session; inactive/password-changed/must-change-password/onboarding pending actors through native session and PG; GET callback aliases/case/trailing slash; fixed query-free303 plus no-store/no-referrer and zero downstream/provider effects. Noncallback controls preserve original status/error order and never redirect merely because query contains code/state. Valid session callback continues to real controller/state/CAS, not a public exemption.",
+    "Unexpected infrastructure errors need truthful failure origin. Prefer actual disposable PostgreSQL failure with guaranteed finally restoration and serialization if safe; if only a focused boundary fault can induce an origin, record its exact limitation. Do not mock authentication/grant/transaction results to manufacture integration proof; do not claim unexecuted session-service faults. Preserve original DB/schema/migration facts after the case.",
+    "Tests should be RED on current missing consumer isolation/precontroller confidentiality after build/units reach them. Root alone freezes and assigns separate canonical validator after test writer terminal. No tests/build/lint/runner from this source-writing lane. Do not edit any production file yet, including newly-admitted middleware."
+  ],
+  "restrictions": "Only two new spec files. No other source/tests/helpers, docs, private files/env/runtime/provider/network/Git/worktrees/copies. Report actual new hashes and exact oracles/qualification. Actual outside path need before mutation. Do not weaken assertions for current implementation."
+}

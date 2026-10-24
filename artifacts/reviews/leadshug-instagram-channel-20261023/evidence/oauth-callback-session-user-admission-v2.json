@@ -1,0 +1,17 @@
+{
+  "kind": "user-path-admission-oauth-session-v2",
+  "date": "2026-10-24",
+  "questionCall": "call_99741f4364ad445eac91376a11faa152",
+  "answer": "Validar o ajuste do retorno OAuth",
+  "path": "api-app/src/surfaces/bff/session.middleware.ts",
+  "sourceSha256": "80d8be0072b817ec34b3eb7d29218835bd218a40670c1f917d0b1787b0b57211",
+  "candidateSha256": "3106e6c8c512457878c6d1368fa924ef14688ca1204d274b084d94974dd662b5",
+  "patch": "oauth-callback-session-companion-proposal-v2.diff",
+  "patchSha256": "cf878cd18ca1e46c2988be2e7b486bfff66e5b52b17e07ad607e2e26d2796132",
+  "scope": "Exact reviewed v2 confidentiality change only. Existing auth mandatory and other routes preserved. No private/runtime/Meta/Git authority. Product write remains serialized and tests/consumer/browser/freshreview mandatory.",
+  "state": "admitted, not yet applied",
+  "otherPendingHuman": [
+    "privacy HTML companion",
+    "1000 UTF-8 bytes numeric contract"
+  ]
+}

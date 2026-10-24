@@ -1,0 +1,106 @@
+{
+  "kind": "cp3-core04-terminal-source-preflight",
+  "date": "2026-10-24",
+  "writerTerminal": true,
+  "sourceExecution": "NOTRUN",
+  "sourceClaim": "Executor reports all10 owned core items implemented; root static checks do not constitute acceptance. Consumer/public200, fixtures, fullAPI, freshreview and laterCPs still mandatory.",
+  "changedExisting": [
+    {
+      "path": "api-app/src/domain/channels/channel-credential-resolver.ts",
+      "sha256": "23b191d57af23506e1d86660d4df62c861dce328c635cb86dfb6a0f93a266a53",
+      "bytes": 9589
+    },
+    {
+      "path": "api-app/src/domain/channels/transport/channel.ts",
+      "sha256": "6ca4be2112c637bee13066e503519fd9dda2fdda2c6d507d044c97be2d54449d",
+      "bytes": 13235
+    },
+    {
+      "path": "api-app/src/domain/inbox/conversations.service.ts",
+      "sha256": "625d0908aed0dbc68440737eca55f4c9687dac5b4ec009a85383f99f680d79f2",
+      "bytes": 9407
+    },
+    {
+      "path": "api-app/src/domain/inbox/dispatch-admission.service.spec.ts",
+      "sha256": "7ea198eafff32b95f863b1124d73b3cec1d09a8910923793f66b176474535961",
+      "bytes": 14738
+    },
+    {
+      "path": "api-app/src/domain/inbox/dispatch-admission.service.ts",
+      "sha256": "cffe2e92dab3543180b40a99658399a2407681b9ed564e937c1dbf29f88dce56",
+      "bytes": 48197
+    },
+    {
+      "path": "api-app/src/domain/inbox/initial-message.service.spec.ts",
+      "sha256": "7d6bd42f336c935b1d14e412a962cb5866ffc106d80534c0d0e3d7be9aa13d86",
+      "bytes": 7368
+    },
+    {
+      "path": "api-app/src/domain/inbox/initial-message.service.ts",
+      "sha256": "5295daea8e72526042d8c1c1c7e9d443516fa817ef319bbba9ccd82c840666a0",
+      "bytes": 24538
+    },
+    {
+      "path": "api-app/src/domain/inbox/outbound.service.spec.ts",
+      "sha256": "4987978746c3d8fb114f5d1320a084ed51b51a86d2611b50c055737bd5fc8d73",
+      "bytes": 25367
+    },
+    {
+      "path": "api-app/src/domain/inbox/outbound.service.ts",
+      "sha256": "519c8515a37f282b714e62d2f42e3e1ebac2a58d138b7c4d3ebf716303370a34",
+      "bytes": 48513
+    },
+    {
+      "path": "api-app/src/integrations/channels/channel-transport.module.ts",
+      "sha256": "2bf7b4d9c99e412125c9b59f0ac32cffaf6f5e870622e94baa814755942493ac",
+      "bytes": 3312
+    },
+    {
+      "path": "api-app/src/integrations/channels/prisma-channel-resolver.ts",
+      "sha256": "90567aedf1cb5dcfc5649e3e80b41f6507b527afd64c9a3d2511dd8abc922297",
+      "bytes": 54430
+    },
+    {
+      "path": "api-app/src/surfaces/bff/conversations.controller.ts",
+      "sha256": "d2d274cb1d1aeb36c48bea05896e22b5105723701e56d51dac77c4f43dc66064",
+      "bytes": 21462
+    },
+    {
+      "path": "api-app/src/integrations/channels/instagram-channel.ts",
+      "sha256": "ed53f4eb0119ec6187c115e5816412d0cd2ef00213d83f341efd8640bac5f526",
+      "bytes": 2375
+    },
+    {
+      "path": "api-app/src/integrations/instagram/instagram-messaging.client.ts",
+      "sha256": "a5efd1ced025fa3822126cd4deada4ca5c31505edefa3cc71d85a475a9de28a5",
+      "bytes": 2815
+    },
+    {
+      "path": "api-app/src/domain/inbox/channel-eligibility-policy.ts",
+      "sha256": "17ceec2f808cca4169c922d67c914660985b60b50ffaf45dd97f76f086b47c2a",
+      "bytes": 9713
+    }
+  ],
+  "newFiles": [
+    {
+      "path": "api-app/src/integrations/instagram/instagram-messaging.client.spec.ts",
+      "sha256": "3864f476790507972a241fdd0842d5d5a5be5a03fa9394134b0330f24f416f50",
+      "bytes": 1692
+    }
+  ],
+  "unchangedExisting": 232,
+  "outsideOwnedChanges": [],
+  "preserved": 35,
+  "rootIndex": [
+    "160000 5db3fbe2043428749895fc3ff6441e9457467dd0 0\tapi-app",
+    "160000 40828a20f2d6c3a1443e7ee132f42483840d6abb 0\tfoundation_documentation",
+    "160000 6c99c27dafdce8ed9b461d17aaaaa491b8ae16e9 0\tweb-app"
+  ],
+  "staticCorrections": "Root caught SQL row pair-key mismatch, initial template policy rejection, post-claim time-of-check gap and nonexistent Message.contact in readback; writer corrected. Actual PostgreSQL boundary and integration proof remain required.",
+  "notClaimed": [
+    "CP3 accepted",
+    "new candidate tested",
+    "CP2 protocol resolved",
+    "browser or runtime ready"
+  ]
+}

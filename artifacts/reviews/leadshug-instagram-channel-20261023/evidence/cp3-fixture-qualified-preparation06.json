@@ -1,0 +1,66 @@
+{
+  "kind": "cp3-fixture-preparation06-root-qualified",
+  "date": "2026-10-24",
+  "status": "READ-ONLY PREPARATION; no fixture mutation/runner, not validation or source acceptance",
+  "readset": [
+    {
+      "path": "api-app/test/atendimento.e2e-spec.ts",
+      "sha256": "f57834be474b1c86858dab4a13a7a18bd26d1ee907de2828b6454dab7af07be9"
+    },
+    {
+      "path": "api-app/test/channel-transport.e2e-spec.ts",
+      "sha256": "13bb550b521e5b6fbee8c69d74668d70f081b231d5410f559467ed86855664df"
+    },
+    {
+      "path": "api-app/test/initial-message.e2e-spec.ts",
+      "sha256": "197aeba4c765168c7fba66ec56209241025a8bfc09475e3100f4be1995d0a13d"
+    },
+    {
+      "path": "api-app/test/webhooks.e2e-spec.ts",
+      "sha256": "33c0267d8f5b5aa54b577f0461dfc117ba2af9aa7037f5cf7a0094354fbefa3f"
+    },
+    {
+      "path": "api-app/test/helpers.ts",
+      "sha256": "24ad56d00b787dadf9558f793d2c20ee8cfeef170b4ce2a9d94cb18e3981114c"
+    },
+    {
+      "path": "api-app/test/instagram-cp3-v1-cutover.e2e-spec.ts",
+      "sha256": "e1f20c12dcedb047ec6f4175e5838e4d7ace67419906f93962d11b56ab8b0332"
+    },
+    {
+      "path": "api-app/test/instagram-cp3-routing.e2e-spec.ts",
+      "sha256": "7741d4815f7a4066984225f7c327bcc47ec167604da300b3a3368796fd8aeb60"
+    }
+  ],
+  "contract": "Authorized ordinary BFF sends obtain actual authenticated GET reply-options and POST returned schemaVersion=2, routeId, channelId, expectedGeneration and contextFingerprint with texto. Do not fabricate context or bypass domain/session/PG. Initial preview/commit remains its own protocol.",
+  "pathMap": [
+    {
+      "path": "api-app/test/atendimento.e2e-spec.ts",
+      "anchors": "responder61-65; sends92,119,155,184,300,320,341,382,419; preserve raw foreign404 at326",
+      "adaptation": "Use real options for authorized send, retain every provider/Message/queue/unread/race assertion. Default signed actual Meta ingress produces route. Manual helper conversations103-197/358-385 need explicitly proved selected channel route, not a blanket fixture behavior."
+    },
+    {
+      "path": "api-app/test/channel-transport.e2e-spec.ts",
+      "anchors": "sends104-111,128-133,183-188,216-224,293-316,338-360,368-374,384-404,414-435,463-467,534-560; setup88-95,123-129,164-185,210-224,278-296,495-507,520-536",
+      "adaptation": "Use actual option per actor/conversation/channel. Acquire both metadata tuples before concurrent paired sends; preserve all existing barriers/counters/5waves20. Raw401/403/404 at236-244 remain authorization-before-payload cases. Missing initial context325-328 remains no-send oracle, not permission to invent a route/default."
+    },
+    {
+      "path": "api-app/test/initial-message.e2e-spec.ts",
+      "anchors": "ordinary242-250; no-initial163-166; PREPARED interlock202-210; manual initial125-142",
+      "adaptation": "Ordinary positive gets actual reply metadata; negative gate should use genuine tuple if available to reach intended gate, otherwise preserve no-send and report final error ordering. Keep query-bound/noCOUNT proofs with explicit measured boundary. Initial preview/commit route comes from selected proved channel and canonical peer; do not convert stored V1."
+    },
+    {
+      "path": "api-app/test/helpers.ts",
+      "anchors": "criarConversaFixture18-31; criarCanalVerificado391-438",
+      "adaptation": "Current conversation fixture creates canonical WA contact but no route. If adding a fixture helper, require explicit conversation + verified selected channel and canonical contact/business/provider proof; call only at qualified test cases. Never infer from BU.phone/first channel or auto-create historical routes for V1. Existing external HTTP fakes/counters/hooks remain; helper exact-old reconstruction was not proven, retain previous qualification."
+    },
+    {
+      "path": "api-app/test/instagram-cp3-v1-cutover.e2e-spec.ts",
+      "anchors": "412-416",
+      "adaptation": "Already uses real reply-options for new V2 send. Keep entire V1 state/deadline/request/snapshot recovery cases and causal CP3 routing specs unchanged; these are sealed for later fixture owner."
+    }
+  ],
+  "units": "Core04 owns required policy/operation unit fixtures now. Later owner must recheck terminal actual units and any exact missing caller; keep policy required, no optional/permissive/as-never compatibility escape.",
+  "scope": "Listed source paths admitted by current TODO; actual mutation awaits explicit serialized fixture handoff after core04/consumer source consolidation. Any outside admitted path requires adjudication before edit.",
+  "preservation": "Root independently matched seven exact stable public test/helper hashes above while core04 mutated disjoint product/unit paths. No current core correctness or test pass inferred."
+}

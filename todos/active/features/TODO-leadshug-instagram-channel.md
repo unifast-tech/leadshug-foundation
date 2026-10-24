@@ -31,16 +31,16 @@ Este TODO define WHAT, exclusões e critérios de entrega. A baseline v1.3 abaix
 ## Delivery Status Canon (Required)
 - **Current delivery stage:** Pending
 - **Qualifiers:** none
-- **Next exact step:** concluir o núcleo CP3 sob cp3-core-source-handoff04.json: política abstrata resolvida, metadados/rotas, recuperação v1/v2 e fences. Depois executar a lane serializada de consumidores e fixtures, congelar e validar a API completa/revisão. CP2 e CP4..CP6 continuam obrigatórios.
+- **Next exact step:** preparar a prova PostgreSQL de isolamento dos consumidores CP3 sob cp3-consumer-source-handoff05.json, inicialmente somente o novo teste. Núcleo04 terminou com15arquivos existentes alterados+1spec novo, sem execução; preflight público não encontrou mudanças fora da lane. Depois consolidar consumidores/fixtures e validar API completa/revisão. CP2 e CP4..CP6 continuam obrigatórios.
 
 ## Active Work State (Required While TODO Remains In `active/`)
 - **Work state:** implementation
-- **Why this state now:** fonte03 terminou parcial e sem execução de testes; preflight identificou lacunas concretas de abstração/batch, credenciais, rotas e recuperação v2. Os dois erros de caminhos foram corrigidos com bytes originais exatos. A prova anterior continua histórica, não valida a candidata03.
+- **Why this state now:** núcleo04 declara as obrigações de fonte implementadas; root corrigiu por handoff lacunas de política de template, chave SQL, fence pós-claim e campo inexistente no readback. A candidata segue NOTRUN e não aceita. Restam isolamento dos consumidores, fixtures e prova da fonte consolidada; a evidência histórica não valida esta candidata.
 - **Exit condition:** todos os checkpoints e critérios validados, revisões/guards completos e prova runtime posterior explicitamente aprovada; nenhum fechamento parcial implícito.
 
 ## Blocker Notes
-- **Blocker:** none for remaining admitted code/disposable synthetic validation. Session middleware, privacy HTML and outbound UTF-8 proposals await explicit human validation; primary own-subscription observation remains unresolved, with no gate waiver.
-- **Last confirmed truth:** preimplementation02 passou398unit/97integrações antigas e falhou nos dois novos GET404; fonte03 mudou14fontes existentes e criou3, ainda NOTRUN.230fontes existentes/35preservações/3índices conferidos; nenhuma diferença corrente fora da lane. Primary e3propostas humanas continuam abertas.
+- **Blocker:** none for remaining admitted code/disposable synthetic validation. Session middleware v2 was explicitly admitted2026-10-24 and awaits serialized application/proof; privacy HTML and outbound UTF-8 proposals await explicit human validation; primary own-subscription observation remains unresolved, with no gate waiver.
+- **Last confirmed truth:** preimplementation02 passou398unit/97integrações antigas e falhou nos dois novos GET404. Fonte04 é NOTRUN; preflight248caminhos confirmou15existentes alterados+1spec novo sobre fonte03,35preservações/3índices e zero mudança fora da lane. Middleware v2 admitido, não aplicado; primary e2propostas humanas continuam abertos.
 - **Runtime boundary:** ativação real, leitura privada, Meta e prova física dependem do plano posterior; nenhuma autorização herdada é reutilizada.
 
 ## Scope
@@ -105,6 +105,7 @@ Baselines Git não representam checkout limpo: `artifacts/reviews/leadshug-insta
 | API | src/domain/historico/cobertura.ts | M | leituras justificadas |
 | API | src/integrations/channels/** | A,M,?? | composição e resolver por vínculo/rota |
 | API | src/integrations/instagram/** | A,?? | cliente/protocolo Instagram isolados |
+| API | src/surfaces/bff/session.middleware.ts | M | Exact reviewed OAuth callback confidentiality v2 only; user admitted2026-10-24, original/candidate hashes in oauth-callback-session-user-admission-v2.json |
 | API | src/surfaces/bff/me.controller.ts | M | Bound legacy BU connections projection to compatible WhatsApp max2; preserve grants and other controller behavior |
 | API | src/surfaces/bff/bff.module.ts | A,M,?? | projeções/registro dos controllers governantes de conexão/inbox |
 | API | src/surfaces/bff/conversations.controller.ts | A,M,?? | projeções/registro dos controllers governantes de conexão/inbox |
@@ -1345,3 +1346,21 @@ Source03 is terminal and explicitly incomplete. Root matched14 changed existing 
 Root authorized only removal of the writer's accidental send method from the sealed OAuth client and four IG widenings plus the remaining own SQL cast from the sealed official window policy. Exact original hashes were reconstructed in memory and independently verified after correction; no Git restore, private backup or user-work discard occurred. The outgoing implementation moved into the already admitted new messaging client. These corrections add no human scope/WHAT deviation. The read-only CP4 advisor incidentally observed the changed OAuth hash while checking config; that read is not frozen or final-source evidence.
 
 Explicit thaw04 is one fresh sole code writer for the exact core paths/unit companions in cp3-core-source-handoff04.json. Required structural work includes actual abstract operation-policy DI, bounded IG batch, one metadata/context owner, exact credential/route provenance, new explicitWA route proof and separate V1/V2 local recovery. Complete consumers follow in their own serialized lane; no approved goal is removed. The two E2Es/helper/CP2 sources/schema/protected clients remain sealed, no runner with a writer active. Root preflight and all later fullAPI/fresh adherence/consumer/ALL/stress/security/TQA/cutover/final/physical gates remain mandatory. Primary observer and the three pending human proposals stay open.
+
+
+## CP3 core04 terminal source reconciliation — consumer test-first preparation
+
+Executor único terminal. `cp3-core04-terminal-preflight.json` e `cp3-core04-public-baseline.json` registram248caminhos públicos:15existentes alterados e1spec novo em relação à fonte03;35preservados e3ponteiros do índice coincidem; nenhuma alteração fora da lane. Não houve teste/build/lint/runner pelo writer. O root leu as fronteiras corrigidas de política, metadados, rota inicial, claim final e readback; a conferência estática não aceita o núcleo nem encerra findings de corretude.
+
+O ACK sem ID conserva UNKNOWN/ACK_WITHOUT_ID. A recuperação v2 usa a rota/identidade canônicas; v1 mantém a comparação histórica. A verificação final após claim volta a conferir contexto/janela e aplica as bordas originais de prazo antes de HTTP. Essas implementações ainda exigem provas reais descartáveis e revisão independente, inclusive falha temporal pós-claim; não transformar declaração do executor em GREEN.
+
+A lane seguinte está preparada em `cp3-consumer-source-handoff05.json`: primeiro somente `test/instagram-consumer-isolation.e2e-spec.ts`, depois adjudicação do resultado PostgreSQL e followup explícito antes de mudar os quatro consumidores. A projeção pública que ainda admite200registros deve ser alinhada ao limite50aprovado, preservando paginação/continuação. `cp3-fixture-qualified-preparation06.json` qualifica os ajustes posteriores de testes: opções reais do servidor, rota WA comprovada e preservação dos cenários/counters/v1. As fontes fora da lane e os helpers/E2Es existentes continuam preservados.
+
+IG-CP3-ROOT-01/02 permanecem pendentes de validação/revisão; IG-CP3-ROOT-03 permanece aberto nos consumidores. Não há aceite CP3, disponibilidade Instagram, mudança de arquivos humanos pendentes ou ativação privada/runtime.
+
+
+## Human admission — exact OAuth session callback v2
+
+Em2026-10-24 o usuário respondeu `Validar o ajuste do retorno OAuth` à call_99741f4364ad445eac91376a11faa152. O receipt `oauth-callback-session-user-admission-v2.json` vincula fonte original80d8be.../CRLF, candidata3106e6... e diff/review/merge exatos já apresentados. O caminho singular `api-app/src/surfaces/bff/session.middleware.ts` está admitido somente para essa mudança. Continua sem alteração nesta anotação; autenticação, ordem e exceções das outras rotas devem permanecer idênticas. Não tornar callback público nem ampliar a admissão para outras mudanças nesse middleware.
+
+A execução será serializada: primeiro testes de negação confidencial pela sessão/Nest/PostgreSQL reais, controle de outras rotas e qualificação dos faults de infraestrutura; depois aplicação dos bytes revisados por writer único e validação. A prova de Numeros/gateway/browser e fullAPI/freshadherence continua obrigatória. R1-04 não está encerrado. A admissão não cobre `.env`, runtime, Meta, credenciais, worktrees ou Git de produto. Privacy HTML e limite1000UTF8bytes continuam pendentes; as menções históricas a3propostas pendentes acima descrevem seus momentos anteriores.
