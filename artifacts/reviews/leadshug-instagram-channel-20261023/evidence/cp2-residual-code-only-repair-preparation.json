@@ -1,0 +1,48 @@
+{
+  "kind": "cp2-residual-code-only-repair-preparation",
+  "state": "NOT DISPATCHED; frozen validator active",
+  "basis": [
+    "adherence-cp2-r1-result.json",
+    "cp2-residual-static-followup-preparation.json",
+    "cp2-r1-repair-handoff.json"
+  ],
+  "objective": "Complete already-approved CP2 safety/idempotency/auth/ingress fixes with no runner in writer lane; tests remain rigorous and evidence honest.",
+  "candidateOwnedPaths": [
+    "api-app/src/domain/channels/instagram-authorization.service.ts",
+    "api-app/src/integrations/instagram/instagram-http.client.ts",
+    "api-app/src/surfaces/bff/instagram-authorizations.controller.ts",
+    "api-app/src/surfaces/webhooks/instagram.controller.ts",
+    "api-app/src/domain/inbox/message-acceptance.service.ts",
+    "api-app/prisma/schema.prisma",
+    "api-app/prisma/migrations/20261024100000_instagram_authorization_attempts/migration.sql",
+    "api-app/test/instagram-cp2.e2e-spec.ts",
+    "api-app/test/instagram-cp2-residual.e2e-spec.ts",
+    "api-app/test/helpers.ts",
+    "api-app/src/domain/historico/catalogo.ts",
+    "api-app/src/domain/historico/cobertura.ts"
+  ],
+  "requiredHOW": [
+    "Use one documented stable lock order resource advisory+provider row -> channel -> exact attempt. Re-read live status, ownership, immutable original request/hash/key, expiry and credential60s margin after all waits in same mapping transaction. Exact attempt row lock and current-clock CAS prevent cancel/expiry wins from later promotion. Never overwrite immutable original CONNECT generation to mapped generation.",
+    "Callback completion AND provider-error mutation require exact current attempt/status/lease/leaseuntil/expiresAt/actor/session after locks and before final CAS. Use actual current clock, not transaction-start NOW or a pre-await captured clock. Do not persist code/raw state/provider error.",
+    "Keep one immutable40s deadline per explicit administrative invocation, separate from60s stale-holder lease and10s cooldown. Pass remaining absolute deadline through subscription HTTP helpers; each HTTP and response body parse bounded by min10s,current remaining. Revalidate live actor/resource/channel generation/credential version+expiry and attempt holder immediately before every external call and before every successful/error fact change. No HTTP inside transactions.",
+    "Replace unbounded resource-attempt history findMany with bounded existence/first queries preserving resource-global durable mutation fence. Unknown, lost ACK, canceled/new attempts and lease expiry never authorize another mutation. No hypothetical GET decoder/parent ID/config; own observation still open.",
+    "Cached advance/replay/completion cannot newly claim success using stale generation/credential/version/owner/canceled holder. Preserve genuine committed receipt independently: an expired credential or late provider error may block current operation but must not erase channel/message/unread/receipt facts or enable another POST.",
+    "Complete catalog classification/audit exact semantic writes; preserve scoped access precedence and wholebatch structural preflight distinct supported vs unsupported. Fix current source concerns even if a weak test happens to pass."
+  ],
+  "testQuality": [
+    "Use real BFF/session/grants/Prisma/PostgreSQL barriers, external HTTP fake only. No auth/transaction/domain stubs. Split deadlines and credential expiry independent tests so passing one does not hide the other. Synthetic persisted deadline shortening is robustness proof, not a claim of naturally elapsed40s. Verify actual timeout signal remaining budget and real post-lock current-time fences.",
+    "Stateless signed sessions have no token revocation endpoint. For actual session invalidation during await use persisted user status/passwordChangedAt plus normal signed session verification, preserving actual grant-revocation await proof. Never manufacture a revocation-store claim or mock SessionService.",
+    "Keep successful1000distinct exact persisted counts/replay and meaningful20concurrent first creates/deliveries. Report performance only if isolated initial batch was actually timed under15s. Preserve original cases/assertions; repair only concrete proven fixture/harness defect."
+  ],
+  "pendingHumanUntouched": [
+    "api-app/src/surfaces/bff/session.middleware.ts",
+    "web-app/public/privacidade.html",
+    "outbound1000UTF8byte normative proposal"
+  ],
+  "serialization": "Root must first match frozen validation terminal; only then record explicit thaw and routing/authority GO before dispatch. No runner/lint/build/test/operational/Meta/private work in writer lane. Become terminal with hashes then separate validator.",
+  "notAcceptance": [
+    "CP2primary ownobserver",
+    "CP3..CP6",
+    "all later reviews/ALL/pcv/browser/physicalruntime"
+  ]
+}

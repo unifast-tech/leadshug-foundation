@@ -1,0 +1,55 @@
+{
+  "kind": "frozen-cp2-residual-validation-terminal-red",
+  "date": "2026-10-24",
+  "command": "bash scripts/test-channels-local.sh api-instagram",
+  "exit": 1,
+  "log": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp2-residual-validation-02.log",
+  "logSha256": "3bdba368eea7c8163894401559c2ab4c192b14eb73df7079b15361cc5bce2070",
+  "migrations": 31,
+  "lint": "passed",
+  "build": "passed",
+  "unit": {
+    "files": 36,
+    "passed": 395
+  },
+  "e2e": {
+    "files": 5,
+    "passed": 64,
+    "failed": 3,
+    "total": 67
+  },
+  "failures": [
+    {
+      "case": "CP2-DEADLINE expiry after durable claim before mapping",
+      "actual": 200,
+      "expected": 409,
+      "source": "instagram-cp2-residual.e2e-spec.ts:291",
+      "notReached": "later channel/credential/POST assertions",
+      "classification": "reached causal RED for live mapping expiry concern; does not prove every later fact"
+    },
+    {
+      "case": "CP2-CALLBACK takeover safe redirect",
+      "actual": "absolute configured synthetic origin /numeros?instagramAuthorizationError=OAUTH_ATTEMPT_STALE",
+      "expected": "relative prefix",
+      "source": "instagram-cp2.e2e-spec.ts:319",
+      "notReached": "later redaction/provider delta assertions",
+      "classification": "test assumption mismatch: inspect exact allowed origin/path/query, do not weaken confidentiality"
+    },
+    {
+      "case": "CP2-ORIENTATION/WINDOW empty observation",
+      "actual": 409,
+      "expected": 200,
+      "source": "instagram-cp2.e2e-spec.ts:619",
+      "notReached": "later uncertainty/POST/reauth/cancel assertions",
+      "classification": "investigate actual stale context cause; no status weakening or automatic POST"
+    }
+  ],
+  "rootPostMatched": {
+    "sources": 236,
+    "todo": true,
+    "preservation": 35,
+    "rootIndex": 3
+  },
+  "freeze": "All lanes terminal; explicit thaw for code-only existing admitted repair. No runner in writer lane.",
+  "acceptance": false
+}

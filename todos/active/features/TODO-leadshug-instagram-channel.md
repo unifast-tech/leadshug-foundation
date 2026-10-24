@@ -31,16 +31,16 @@ Este TODO define WHAT, exclusões e critérios de entrega. A baseline v1.3 abaix
 ## Delivery Status Canon (Required)
 - **Current delivery stage:** Pending
 - **Qualifiers:** none
-- **Next exact step:** corrigir CP2r1 e catálogo com provas PostgreSQL causais; refreeze/API completa/revisão; depois CP3independente com observação própria aberta, CP4..CP6.
+- **Next exact step:** concluir o reparo CP2 em lane somente código, com prazo/credencial/CAS atuais; refreeze e validação separada; API completa/revisão antes de CP3independente, sem aceitar a observação própria ainda aberta. CP4..CP6 permanecem.
 
 ## Active Work State (Required While TODO Remains In `active/`)
 - **Work state:** implementation
-- **Why this state now:** CP1 aceito; CP2r1 exige correções após395unit/504de505integração; reparo serializado, sem aceitação CP2.
+- **Why this state now:** CP1 aceito; validação CP2 residual02 estável passou395unit e64de67integração selecionada; expiração no mapping exige reparo. Um executor somente código, sem runner; CP2 ainda não aceito.
 - **Exit condition:** todos os checkpoints e critérios validados, revisões/guards completos e prova runtime posterior explicitamente aprovada; nenhum fechamento parcial implícito.
 
 ## Blocker Notes
-- **Blocker:** none for approved code/disposable synthetic validation; two-path admission received.
-- **Last confirmed truth:** CP1r8 completo:395unit/490integração,39fontes/TODO/contexto e35preservações conferidas; revisão independente sem findings; ambas lanes terminais.
+- **Blocker:** none for remaining admitted code/disposable synthetic validation. Session middleware, privacy HTML and outbound UTF-8 proposals await explicit human validation; primary own-subscription observation remains unresolved, with no gate waiver.
+- **Last confirmed truth:** CP1r8 aceito; CP2 residual02 terminal com31migrações/lint/build,395unit e64de67integração selecionada. Root confirmou236fontes/TODO,35preservações e3referências do índice antes do thaw; reparo serializado somente código em curso, sem aceitação CP2.
 - **Runtime boundary:** ativação real, leitura privada, Meta e prova física dependem do plano posterior; nenhuma autorização herdada é reutilizada.
 
 ## Scope
@@ -1150,3 +1150,11 @@ cp2-r1-repair-result-01..05 receipts retain exact qualified diagnostic outcomes;
 Next writer is fresh test-only, with no runner/sourceproduction authority: repair the four harness/assertion defects and add remaining actual-boundary CP2proof. Then it becomes terminal. Root alone freezes exactcurrent sources/TODO/reviewinputs and dispatches a separate validation-only executor. No active productwriter during validation; after every terminal result root explicitly thaws any repair. No edits during a running test or review. Primary observer obligation, fullAPI/currentreview and allCP3..CP6 remain mandatory.
 
 Sessioncompanion v2 is now proposal-converged: complete terminal r2critique has zero findings/allpositionsacceptable and strictmergeexit0. Initial native turn had capacity failure after saving outputs; samecomplete frozenpackage continuation verified them and completed successfully, without fallback/reduction/waiver. oauth-callback-session-companion-ready-v2.json binds exact sourcehash/CRLF/candidate/diff. Explicit onepath humanvalidation is requested and pending; session.middleware.ts remains unchanged/unadmitted. IG-OAUTH-SESSCOMP-01 closes atproposal level only; R1-04 remains open until actualsource/consumer/gateway/browserproof. Privacyfile and outboundbyte proposals also await human replies.
+
+## CP2 residual proof — frozen validation and code-only repair
+
+The test-only writer became terminal; root matched reported sources and sealed236publicfiles plus this TODO. Separate validation01 stopped at one unused test binding after31migrations/Prisma; no functional assertions ran. After a one-binding test-only correction and refreeze, validation02 passed31migrations, lint/build and395unit;64of67selected integration passed. Root rechecked236sources/TODO,35immutable rows and3rootindex refs after both lanes terminated. Receipts retain exact log hashes and unexecuted downstream assertions.
+
+Validation02 reached a causal expiry race: confirmation returned200instead of409after the durable claim expired before the mapping transaction. R1-01/ROOT02 remain open. The callback failure was an overly strict relative-URL test assumption; the fourth observation conflicts with the approved three-request budget and must be corrected without raising/resetting that budget or weakening confidentiality. cp2-residual-code-only-repair-handoff.json assigns one serialized code/test writer with NO runner authority, addressing all remaining admitted current-clock/credential/deadline/CAS/history fences and meaningful independent tests. Root will refreeze and dispatch a separate validator after the writer is terminal. No source edits during validation/review.
+
+No CP2 acceptance follows. The primary observer, precontroller session confidentiality companion, public privacy companion and outbound-byte proposal remain open with their exact authority limits. CP3..CP6 and all complete regression/browser/assurance/physical gates remain required.
