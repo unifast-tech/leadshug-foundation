@@ -1,0 +1,97 @@
+{
+  "kind": "cp2-r2-root-adjudication",
+  "date": "2026-10-24",
+  "basis": [
+    "cp2-r2-both-terminal-reconciliation.json",
+    "adherence-cp2-r2-result.json",
+    "adherence-cp2-r2-merge.json",
+    "cp2-api-full-r2-result.json"
+  ],
+  "resolution": [
+    {
+      "findingId": "IG-SUBPROTO-01",
+      "decision": "Integrated",
+      "rationale": "Keep both IDs open through independent CP3 work. Obtain the supported primary observation contract before recovery acceptance, then implement only its documented own identity, required fields and completeness rules. UNKNOWN continues fencing mutation. Add no guessed product/parent-app/account equality, new parent configuration, alternate login, blind retry or unauthorized provider investigation.",
+      "releaseBlocker": true
+    },
+    {
+      "findingId": "IG-CP2-ROOT-02",
+      "decision": "Integrated",
+      "rationale": "Within the admitted authorization owner, retain locked current actor/grant facts and revalidate signed-session expiry using actual time after the last relevant wait, immediately before irreversible dispatch or mutation, and after provider success/error. Keep operation and token-acquisition clocks distinct. First establish a real BFF/PG short-wait RED inside the live transaction budget with exact waiter/blocker evidence and a matched non-expired-session control; then repair and prove zero HTTP/promotion after expiry. Do not raise transaction timeouts merely to manufacture proof or edit the pending protected middleware.",
+      "releaseBlocker": true
+    },
+    {
+      "findingId": "IG-SUBREC-02",
+      "decision": "Integrated",
+      "rationale": "Make new/resumed subscription work and reauthorization promotion participate in one resource/binding operation fence, with shared lease/cooldown admission and current credential CAS, while retaining durable dispatch history across cancel/new attempt/reauthorization/crash. Keep HTTP outside transactions. Repair the synthetic snapshots with their truthful mapped version, make barriers fail promptly on denied requests and always release/restore hooks, and add an actual CONNECT/REAUTHORIZE writer overlap proving one POST, bounded observation and preserved later-holder facts. Do not treat two hand-built mapped rows as proof of the real promotion path.",
+      "releaseBlocker": true
+    },
+    {
+      "findingId": "IG-CP2-R1-04",
+      "decision": "Integrated",
+      "rationale": "Retain R1-04 open. After explicit admission of the exact protected-path companion, use the serialized writer to apply and verify it without changing ordinary route/session enforcement. Prove known denials and unexpected precontroller failure at real Nest/PG boundaries, then fixed-text consumer, browser and gateway confidentiality. This review grants no path admission or source-write authority.",
+      "releaseBlocker": true
+    },
+    {
+      "findingId": "IG-CP2-R1-05",
+      "decision": "Integrated",
+      "rationale": "Keep supported-event normalization attached to its entry. Before any domain writes, require the bounded nonempty account identity needed by every supported text event and reject a malformed batch. Preserve deliberate valid unsupported/read/echo handling and domain-failure partial commits/replay. Add valid-first plus missing/empty/invalid entry-account cases asserting non-200 and zero effects, without loosening the existing MID or1000-distinct-update assertions.",
+      "releaseBlocker": true
+    },
+    {
+      "findingId": "IG-CP2-R2-01",
+      "decision": "Integrated",
+      "rationale": "Make the endpoint-specific parser matcher agree with effective routing for these admitted routes, preserving dynamic identifier values and existing WhatsApp parser behavior. Add actual Nest tests for canonical/case/trailing-slash variants, with16KiB OAuth rejection and the same raw-signature/8MiB Instagram behavior. Do not change global routing semantics merely to satisfy this local protection.",
+      "releaseBlocker": true
+    },
+    {
+      "findingId": "IG-CP2-ROOT-04",
+      "decision": "Integrated",
+      "rationale": "Preserve the synthetic snapshot scenario and populate its truthful immutable mapped version. Add a separate real BFF/PG interruption or ACK-loss case after the actual writer commits mapping and before durable result completion, then replay the original CONNECT empty body/key. Assert unchanged credential version/ciphertext, original request hash, one promotion/at-most-one POST, correct result completion and409 for changed bodies. Also prove completed historical replay remains immutable and zeroHTTP after current credential/generation usability changes, subject to current authorization.",
+      "releaseBlocker": true
+    },
+    {
+      "findingId": "IG-CP2-R2-02",
+      "decision": "Integrated",
+      "rationale": "Capture the relevant call count or index immediately before this callback and assert exactly its three fixed protocol requests, retaining every confidentiality, candidate and credential assertion. Preserve accumulated history and all prior scenarios; do not globally reset counters to hide calls or lower the expected guarantee. Keep the delayed /me hook and request/body timeout proof distinct.",
+      "releaseBlocker": true
+    },
+    {
+      "findingId": "IG-CP2-R2-03",
+      "decision": "Integrated",
+      "rationale": "Retain both cooldown and exhausted-budget scenarios. For the independent exhaustion probe, establish the required elapsed cooldown in its own real persisted fixture, then require409 SUBSCRIPTION_REQUEST_BUDGET_EXHAUSTED, unchanged request/history fields and zero provider delta. Preserve the cap of3 and cooldown10 seconds; do not reorder production checks merely to satisfy a confounded expected status. Restore meaningful execution of every later scenario and ensure HTTP hooks are always released.",
+      "releaseBlocker": true
+    },
+    {
+      "findingId": "IG-CP2-R1-06",
+      "decision": "Integrated",
+      "rationale": "Replace reported-complete language with current reached assertions and explicit remaining rows for all16 IDs. Correct the four independent test defects and add causal real-boundary coverage for the source findings, actual writer interruption, fresh confirmation concurrency, expired/replaced success/error holders and HTTP remaining-time/body-read behavior. Fake only the provider boundary; preserve scenarios, source IDs and durable facts. Use finite barriers with reliable cleanup and truthful local deltas. Keep five-wave20-request/resource/ingress stress,10000-conversation EPS/RLS, fifteen-second batch measurement, ALL, browser/freshness and independent TQA/security/cutover/final explicitly assigned to CP4/CP5. This review is not that final TQA gate and does not waive consumers or CP6.",
+      "releaseBlocker": true
+    }
+  ],
+  "supportedClosures": [
+    "R1-01 cancellation/expiry/current CAS source repairs; active postclaim case derived pass",
+    "R1-02 auth ordering/active BU/array repair",
+    "R1-03 redirect:error fixed hosts",
+    "Original ROOT01/03/05/06 and SUBPROTO02/03 remain supported"
+  ],
+  "partial": [
+    "ROOT02 deadline/current SQL guards repaired, session-after-wait remains",
+    "ROOT04 immutable original body/hash and completed replay repaired; actual interrupted writer pending",
+    "SUBREC02 firstPOST durable history/resource locking/CAS repaired; live lease/cooldown still attempt-local",
+    "R1-04 controller only; middleware human admission pending",
+    "R1-05 MID repair only; entry account identity preflight remains"
+  ],
+  "fullApiExtra": [
+    "ROOT07 obsolete GET callback coverage entry: remove inaccurate registration in admitted cobertura.ts; preserve coverage spec",
+    "Conversation indexed fixture fails setup at 5.242s default TX timeout, no assertion on index reached; inspect and bound batch fixture workload without weakening plan assertions"
+  ],
+  "root08root09": "Clean actual-principal frozen source and review reconciled, but validation still RED; retain release blockers until clean stable checks. No exposure or codecopy inferred.",
+  "notAcceptance": [
+    "CP2",
+    "CP3..CP6",
+    "own subscription observer",
+    "pending protected companions",
+    "later consumers and gates"
+  ]
+}

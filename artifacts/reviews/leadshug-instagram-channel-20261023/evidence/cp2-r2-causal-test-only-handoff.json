@@ -1,0 +1,43 @@
+{
+  "kind": "cp2-r2-causal-test-only-handoff",
+  "authority": "Approved ST-IG-03 v1.3; explicit thaw only the following two admitted specs after both prior lanes terminal and root freeze reconciliation. No production edit or runner.",
+  "profile": "Operational / Coder",
+  "scope": [
+    "nestjs",
+    "prisma",
+    "postgresql"
+  ],
+  "routing": "routing-cp2-r2-test-only.json",
+  "ownedPaths": [
+    "api-app/test/instagram-cp2.e2e-spec.ts",
+    "api-app/test/instagram-cp2-residual.e2e-spec.ts"
+  ],
+  "readFirst": [
+    "AGENTS.md",
+    "delphi-ai/main_instructions.md",
+    "delphi-ai/profiles/operational_coder.md",
+    "foundation_documentation/todos/active/features/TODO-leadshug-instagram-channel.md"
+  ],
+  "evidenceRead": [
+    "adherence-cp2-r2-result.json",
+    "adherence-cp2-r2-merge.json",
+    "cp2-r2-root-adjudication.json",
+    "cp2-api-full-r2-result.json",
+    "cp2-natural-session-proof-confound.json",
+    "inherited-public-preservation-v1.2.json"
+  ],
+  "requirements": [
+    "Replace confounded15s natural expiry test with real signed-session short actual PG user-row wait strictly below existing5s application transaction budget. Matched nonexpired control same measured hold must show live provider exchange/candidate. Expired probe must establish valid before block, actual pg_blocking_pids waiter, natural expiry while blocked, release under5s (normally2-3s), expected zero provider/candidate after release. No fake clock, session/auth/transaction mock or application timeout increase. Keep original confidentiality and fact assertions. Static source unchanged so causal RED expected. If cannot guarantee timing, report concretely; never count timeout as proof.",
+    "Correct credential-margin shared call-history assertion using local delta before callback and exact3 requests for shortPOST,longGET,profileGET. Do not reset shared counters globally or remove confidentiality/expiry assertions.",
+    "Fourth observation: retain immediate429 cooldown probe and separately establish elapsed cooldown then exact409 SUBSCRIPTION_REQUEST_BUDGET_EXHAUSTED with zero extraHTTP and durable requestCount3. Preserve later reauth/cancel/partial-batch scenarios.",
+    "Repair both synthetic mapped snapshots to include truthful mappedCredentialVersion and immutable original expectedGeneration. Preserve generation/version/ciphertext/counter assertions. Finite Promise barriers must fail promptly on early denied requests and always release hooks/await requests in finally, not hang30s. Synthetic snapshot is not actual-writer recovery proof.",
+    "Add supported text malformed entry.id missing/empty/invalid mixed-batch probes, real HMAC/rawbytes, earlier valid event; assert400 and zero message/conversation/identity/route/unread/receipt effects. Unsupported legitimate events remain accepted.",
+    "Add canonical/case/trailing-slash actual Nest route parser probes: OAuth16KiB rejection for otherwise valid whitespace-padded17KiB JSON, IG same rawsignature/8MiB behavior for effective aliases. No global routing changes, no lower payloadlimits.",
+    "Keep every existing scenario; fix older profile-delay hook pathname to actual /v26.0/me rather than silently missingdelay. Preserve explicit source IDs and no test skip/todo/only."
+  ],
+  "boundary": [
+    "Principal checkout only; only owned2paths mutable; all source reads inside236positive manifest05 plus exact listed principal authority. No .env/private/runtime/provider/Git inventory/worktrees/backups/runner/lint/build/tests.",
+    "SessionMiddleware/privacyHTML/outboundbytes remain pendinghuman and untouched; no ownobserver decoder guesses."
+  ],
+  "terminal": "Return exact2source SHA256 and concise changes/remaining proof; no tests run; root freezes and separate validator. Stop and ask root for any additional path, do not self expand."
+}

@@ -1,0 +1,13 @@
+{
+  "kind": "cp2-r2-both-terminal-root-reconciliation",
+  "sources": 236,
+  "todoMatched": true,
+  "boundInputs": 42,
+  "preservation": 35,
+  "index": 3,
+  "reviewTerminal": true,
+  "validationTerminal": true,
+  "review": "changes_required",
+  "notAcceptance": true,
+  "thaw": "Only subsequent explicit serialized handoff; no implicit mutation authority."
+}

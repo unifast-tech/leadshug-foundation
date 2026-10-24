@@ -1,0 +1,62 @@
+{
+  "kind": "current-frozen-complete-api-r2-diagnostic-red",
+  "date": "2026-10-24",
+  "command": "bash scripts/test-channels-local.sh api",
+  "exit": 1,
+  "log": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp2-api-full-r2-01.log",
+  "logSha256": "7ca4ca131deec7d4fb382415c3a092995ed7fa383cdd029edc289ec5a9280ec3",
+  "migrations": 31,
+  "lint": "passed",
+  "build": "passed",
+  "unit": {
+    "files": 36,
+    "passed": 395
+  },
+  "e2e": {
+    "files": 38,
+    "passed": 522,
+    "failed": 6,
+    "total": 528
+  },
+  "failures": [
+    {
+      "case": "catalog coverage",
+      "actual": "GET /api/bff/instagram-authorizations/callback appears as registeredremoved-route coverage entry",
+      "expected": "no obsolete coverage entries",
+      "meaning": "Additional canonical auditcoverage failure beyond4selectedcases; root resolvesafterreviewterminal, no catalogtestweakening."
+    },
+    {
+      "case": "conversation-start indexed SQL fixture setup",
+      "actual": "interactive transaction timeout5s, elapsed5.242s; helpers58/test143",
+      "meaning": "Failure before indexedplan assertion: NOT established missingindex/wrongordering/productregression. Inspect fixture workload and legitimate transactionbudget afterbothlanes terminal."
+    },
+    {
+      "case": "CP2 credential margin",
+      "actual": "global subscription POSTcount18 instead3",
+      "source": "residual501"
+    },
+    {
+      "case": "CP2 fourthrequestbudget",
+      "actual": "429instead409",
+      "source": "cp2spec652"
+    },
+    {
+      "case": "CP2 resourceconcurrency",
+      "actual": "30s timeout"
+    },
+    {
+      "case": "CP2 syntheticmappedCONNECTreplay",
+      "actual": "409instead200",
+      "source": "cp2spec1117"
+    }
+  ],
+  "qualifications": "Natural15s sessiontestpassed observedfacts but5sinteractiveTXconfound excludes causal liveauthclosure. Postclaimcaseindividualresultnotprinted; actualactivecase/fullfilecount adjudication required, no skipped inference or exactcriterionacceptance fromaggregate. No fullgatepass.",
+  "rootPostMatched": {
+    "sources": 236,
+    "todo": true,
+    "preservation": 35,
+    "indexReferences": 3,
+    "boundInputs": 42
+  },
+  "freeze": "FullAPI terminal. Source/T/42inputs remain frozen until completeadherence_r2 also terminal; NO codefix, rerun orTODOchange yet. Root distinct outputartifacts only."
+}

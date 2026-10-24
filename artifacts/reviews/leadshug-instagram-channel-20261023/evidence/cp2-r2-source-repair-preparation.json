@@ -1,0 +1,27 @@
+{
+  "kind": "cp2-r2-source-repair-preparation-not-dispatch",
+  "profile": "Strategic / CTO-Tech-Lead",
+  "state": "Preparation only while sole testwriter active; production remains unchanged until causal RED separate validator terminal.",
+  "requiredHOW": {
+    "session": "Current signed token verification after every relevant DB/resource/channel/attempt/grant wait, immediately before first and later external HTTP, before current success/error promotion. Retain locked user/password/grant facts and expected tuple. Prefer small private helper, no new authframework/publicsession change. Current time not transactionstart.",
+    "bindingOperation": "One persisted subscription-operation holder/cooldown owned by exact Instagram business/provider binding, shared across attempts/reauthorization/cancel/receipt. Resource lock then channel/attempt order; check before reauth credential promotion AND new/resumed external operation. Do not infer terminalHTTP from signedreceipt/cancel clearing attempt fields. Preserve original durable firstPOSThistory and versionCAS. HTTPoutsideTX. Exact lease token/tuple owns completion; late A cannot release/overwrite B. May use minimal purpose-specific fields on admitted providerresource model+migration if attempt-level evidence cannot retain holder through receipt/cancel. Avoid reusable framework or speculativechannel APIs.",
+    "preflight": "Normalize supported events with their entry context; validate required businessaccountID/MID/peers/text before first effect. Retain supported/unsupported distinctions, retryabledomainfailure partialbatch semantics and exact originalrawsignature.",
+    "effectiveRoutes": "Case-insensitive local path match, optional trailing slash matching actual Express route behavior, dynamicID values untouched. Retain OAuth16KiB and IG8MiB/rawbytes and WA1MiB semantics; no globalrouting change.",
+    "coverage": "COBERTURA_DE_ROTAS is exclusively methodsPOST/PATCH/PUT/DELETE by canonical introspection; remove obsolete GET mapentry, retain actual callback transactional audit and add a precise comment near callbackeventowner. Do not weaken/edit the canonical coverage spec or blanketexempt routes.",
+    "bulkFixture": "Inspect admitted helper criarConversasFixtureEmLote default5sTX and fixed large seed workload. A bounded deterministic chunk strategy preserving atomicity per qualified contact/identity/conversation row, IDs/order/allscenario counts is preferable to unbounded bulk DBtransaction or globaltimeout change. Do not change conversation-start protected assertions, indexchecks/counters or operational DB. Need current failurequalification; diagnostic5.242s doesnotproveindexregression."
+  },
+  "actualProofStillNeeded": [
+    "Short causal sessionexpiry + matched livecontrol before/afterrepair",
+    "CONNECT and REAUTHORIZE actualwriter overlap liveholder+cooldown, no duplicatePOST, unchanged refusedpromotion, laterholderfacts",
+    "Actual interrupted realwriter mapping, same originalkey/body/hash replay and conflict409, credentialgeneration/version/ciphertext unchanged, onepromotion atmostonePOST",
+    "Fresh confirmations concurrency, remaining16obligation rows with exactreached facts",
+    "Provider success/error withsession/generation/credential/lease/deadline replacement/expiry, no cleanup erasingeligible independentreceipt",
+    "Allcompleteregression/freshsourceadherence then CP3..CP6"
+  ],
+  "pendingHuman": [
+    "session.middleware.ts",
+    "privacidade.html",
+    "1000UTF8bytes"
+  ],
+  "protocol": "Primary GET ownobserver remainsunaccepted; no guessedID/schema/config/retry."
+}

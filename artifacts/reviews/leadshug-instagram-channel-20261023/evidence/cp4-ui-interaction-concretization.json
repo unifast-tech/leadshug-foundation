@@ -1,0 +1,28 @@
+{
+  "kind": "cp4-ui-interaction-preparation-only",
+  "date": "2026-10-24",
+  "authority": "Derived HOW from approvedST-IG-03v1.3/consumer matrix, no source/runtime change or new scope. CP2 source/T/input freeze remains intact. Reconcile actual CP3 DTOs beforeexecution.",
+  "connections": [
+    "Use existing /numeros route; App.tsx remains protected. BU represents operation; independent connection cards identify platform and verified business account. New local paged catalog20/max50, explicit loadmore; no perrowproviderHTTP. Legacy bu.channels stays atmost2compatibleWhatsApp bindings.",
+    "ADMIN+ can begin Instagram Login and explicitly confirm the server-returned professional account. ATENDENTE+ can view readiness; API remains authoritative. No manual token field or arbitrary account/peer input in browser.",
+    "OAuthsuccess/channelmapping/providerinscription remain awaiting receipt. Show ready only after actual accepted signed eligibleIN; unknown/partial status has explicit verify/recovery action and preserved durableattempt, never auto-POST subscription.",
+    "Disconnect is explicit local lifecycle with expectedgeneration; preserve history/ownership and show remote cleanup pending when scope/ownership is unproved. Do not revoke another app/transfer resource or delete BU."
+  ],
+  "inbox": [
+    "Show platform and business account with conversation. WhatsApp contact remains proved phone; Instagram uses known name/username or neutral contact label; never format opaque IGSID as phone. No new peerprofile fanout or CRM/merge. Message preview helps distinguish unknown contacts.",
+    "Capture explicit route/channel/generation/fingerprint before composing. One eligible choice may be presented as selected, but no silent cross-account fallback. Preserve current WhatsApp supported selection policy within its proved resource.",
+    "Draft is bound to conversation/BU/route/account/credential context; A\u2192B\u2192A, late fetch/preview/send completion cannot overwrite or submit draft for another destination. Preserve a recoverable draft with clear stale-context outcome.",
+    "Ordinary reply goes through existing messages endpoint and abstract Channel; show supported kinds/current policy from trusted options. Instagram initially human text reply only after original account/peer IN within24h; no template/proactive/Typebot choice.",
+    "New conversation by phone and templates remain WhatsApp-only, including IG-only BUs. UI must follow server eligibility; no IG reservation/claim or invented recipient. Preserve existing sender/ACK/unknown noautomaticrepeat behavior."
+  ],
+  "callbackPrivacy": [
+    "Success/error redirect consumers accept only fixed safe code/attemptUUID parameters; fixed text for generic INSTAGRAM_AUTHORIZATION_UNAVAILABLE and known denials. Never reflect raw query/provider error or infer success from any genericfailure.",
+    "Server auth/state remain mandatory. Pending sessionmiddleware companion is not applied by this plan. Gateway headers/log/query protections, same-origin popup handling and actualbrowser proof still required.",
+    "Public privacy static HTML remains pending human pathadmission; reviewed proposal must match final dataflow/effective date before apply, no publication authorization. Outbound byte-limit proposal remains pending, not enacted here."
+  ],
+  "browserProof": [
+    "Playwright uses actual Nest/PostgreSQL and public fresh-source inputs. Fake only external Instagram OAuth/providerHTTP at boundary, never BFF response/domain/session/grant/transaction results.",
+    "Exercise actual connect/confirm/pendingreceipt/signedingress/reply route flow plus twoaccounts samepeer sameBU, rights/closedwindow/stalecontext/replacedcredential/badcallback and A\u2192B\u2192A. Preserve bothWhatsApp/template/initial journeys."
+  ],
+  "notAcceptance": "No UIcode written or tested. CP2 fullAPI/source review active; CP3 and allCP4..CP6 remain mandatory. No backend-only waiver."
+}
