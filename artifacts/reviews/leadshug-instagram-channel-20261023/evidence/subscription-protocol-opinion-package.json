@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "kind": "bounded-summary-primary-protocol-architecture-opinion",
+  "question": "For Instagram API with Instagram Login on graph.instagram.com/v26.0/IG_ID/subscribed_apps, what is the official GET response subject/id and how can the installation positively recognize its OWN app subscription? Specifically, is data[].id a professional account ID, Instagram product OAuth client ID, or parent Meta app ID? Is GET supported for this login path? Find PRIMARY evidence and a faithful bounded solution for already-approved read-before-retry.",
+  "authority": "User APROVADO ST-IG-03v1.3, CP1accepted, CP2implementation active with sole writer. This is no-context read-only primary research/opinion, NOT source adherence or new code/runtime authority.",
+  "baseline": {
+    "todo": "foundation_documentation/todos/active/features/TODO-leadshug-instagram-channel.md",
+    "sha256": "74d1b2901a46c0c2f427204381f9d2a6d7933e124f8bff3e9dc3de575098877b",
+    "source": "CP1r8 accepted39source proof,395unit/490integration. CP2mutable; no current source acceptance claimed."
+  },
+  "requiredContext": [
+    "foundation_documentation/todos/active/features/TODO-leadshug-instagram-channel.md",
+    "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/primary-instagram-contract-r1.json",
+    "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp2-primary-token-envelope-recheck.json",
+    "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp2-primary-subscription-recheck.json",
+    "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp2-root-static-observations.json"
+  ],
+  "currentBoundedObservation": "Provisional client matches subscribed_apps data[].id to professional accountId. This is unproven. Do not replace it with another guessed ID. The implementation is now keeping uncertainty fail-closed pending actual protocol evidence.",
+  "knownPrimaryEvidence": [
+    "Official webhook setup distinguishes Instagram Login user token+graph.instagram.com from Unified/Facebook paths. POST /IG_ID/subscribed_apps with subscribed_fields=messages returns success:true.",
+    "Business-login example returns token in a one-record data array, user_id string app-scoped authorization reference and CSV permissions. /me.user_id is the separate verified professional ID.",
+    "Product OAuth client_id/secret come from Instagram product, not automatically Meta WhatsApp config. Webhook App Secret explicitly configured by purpose; raw values may legitimately coincide by explicit installation.",
+    "Our bounded GET-source search did not establish its id field or exact supported response. No live credential/provider API request authorized."
+  ],
+  "primaryUrls": [
+    "https://developers.facebook.com/documentation/instagram-platform/webhooks/setup.md",
+    "https://developers.facebook.com/documentation/instagram-platform/instagram-api-with-instagram-login/business-login",
+    "https://www.postman.com/meta/instagram/documentation/6yqw8pt/instagram-api"
+  ],
+  "retrievalHints": "web tool Meta often inaccessible, public urllib Mozilla/5.0 works. setup.md yields actual text/markdown; many guessed reference.md URLs return200HTML notfound, must check content. Only primary Meta docs/official Meta Postman/official Meta SDK/sample source can establish technical facts. Third-party examples may only help navigation, never proof.",
+  "constraints": [
+    "Read-before-retry of uncertain administrative subscription, no blind repeated mutation; at most3requests\u00d710s,40s stage budget,60s lease/cooldown10s; actual identity confirmed before durable mapping/credential promotion/subscription.",
+    "No arbitrary production base URL, no extra dependency/framework/fallback, no silent waiver. Missing/partial IGconfig disablesIGonly. No Meta WhatsApp configuration fallback.",
+    "All complete Frontend/Consumer Matrix and CP2..CP6 obligations remain, not waived by opinion. Actual grant/envelope/device proof later separately approved; no pretending primary doc is live proof.",
+    "If unavoidable config/contract change is proposed, distinguish subordinate approved HOW from approval-material drift. Return primary exactlinks/hash/excerpt facts and unknowns, not unjustified new surface."
+  ],
+  "lenses": "Correctness, performance, elegance, structural soundness, operational fit; explicit unknown if evidence unavailable. Opinion must not invent provider behavior to unblock code.",
+  "forbidden": "No writes, tests/runtime/actualGraphAPI/Metaaccount requests/credentials/realenv/private/list/hash/.local-files/processargs/Git/worktrees/copies/GOAL. Public documentation HTTPS only.",
+  "collection": "Fresh native no-context reviewer, strict architecture_opinion JSON via dispatch; no broad code/repo inventory."
+}

@@ -1,0 +1,13 @@
+{
+  "schemaVersion": 1,
+  "kind": "qualified-pretest-lint-failure",
+  "log": "foundation_documentation/artifacts/tmp/instagram-channel-implementation/cp2-postimplementation-qualified-01.log",
+  "sha256": "27264b72fe7c91d31bee494e979bdca6d1d0c5da3624d306be779a18172f1e02",
+  "command": "bash scripts/test-channels-local.sh api-instagram",
+  "exit": 1,
+  "migrationsApplied": 31,
+  "failure": "Two no-explicit-any decoder lint errors; executor reports replaced with unknown before next run.",
+  "testsReached": false,
+  "qualification": "No unit/integration GREEN or product behavior failure claimed. Full synthetic log preserved; future runner logs write directly to canonical artifact path.",
+  "noRuntimeClaim": true
+}

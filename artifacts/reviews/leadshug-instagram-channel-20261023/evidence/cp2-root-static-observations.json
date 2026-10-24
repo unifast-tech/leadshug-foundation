@@ -1,0 +1,45 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-24",
+  "kind": "root-bounded-static-observations-during-implementation",
+  "sourceState": "Mutable CP2 source; advisory findings, no frozen review or dynamic exploit claim. Root read exact public service lines1..120 and HTTP client lines55..145.",
+  "observations": [
+    {
+      "id": "IG-CP2-ROOT-01",
+      "status": "static; causal behavior test requested",
+      "classification": "release-blocker for CP2 validation",
+      "path": "api-app/src/domain/channels/instagram-authorization.service.ts",
+      "evidence": "since is constructed as Date.now()-1h; retryAfter computes 1h-(Date.now()-since), collapsing near0 then max1 rather than actual available quota time.",
+      "action": "Compute from persisted relevant attempts and prove meaningful Retry-After without weakening durable budgets."
+    },
+    {
+      "id": "IG-CP2-ROOT-02",
+      "status": "static; causal lease-delay test requested",
+      "classification": "release-blocker",
+      "path": "api-app/src/domain/channels/instagram-authorization.service.ts",
+      "evidence": "Captured acquiredAt precedes async transaction authorization work but is reused in callbackLeaseUntil>acquiredAt selection/update. A delayed revalidation can admit completion after actual lease expiry.",
+      "action": "Use current clock under exact locked/CAS ownership fence; preserve acquisition instant separately. Prove expired/stale operation cannot promote candidate or regress later holder."
+    },
+    {
+      "id": "IG-CP2-ROOT-03",
+      "status": "static; delayed profile test requested",
+      "classification": "release-blocker",
+      "paths": [
+        "api-app/src/integrations/instagram/instagram-http.client.ts",
+        "api-app/src/domain/channels/instagram-authorization.service.ts"
+      ],
+      "evidence": "Client receives long-token expires_in before awaiting /me; service sets acquisition after whole exchangeCode result. Credential expiry extends by profile/other post-acquisition delay.",
+      "action": "Capture acquisition/expiry at long-token response, propagate exact metadata and test delayed /me cannot extend lifetime or60second margin."
+    },
+    {
+      "id": "IG-CP2-ROOT-Q01",
+      "status": "unconfirmed protocol question; not an established defect",
+      "classification": "resolve before subscription proof",
+      "path": "api-app/src/integrations/instagram/instagram-http.client.ts",
+      "evidence": "subscribedFields matches data[].id against professional accountId. Need primary confirmation of returned subscription subject/app identity; bounded primary recheck confirmed host/purpose but not GET id semantics.",
+      "action": "Verify primary contract and realistic HTTP fixture; never guess account/app equivalence or infer other app subscription as own. No new config/fallback is inferred."
+    }
+  ],
+  "routing": "Same already-admitted CP2 files and approved OAuth/budget/credential/subscription guarantees; no material scope change, private/runtime authority or user approval request. Executor informed to add real behavioral cases before narrow fixes where applicable.",
+  "later": "Include disposition and honest causal/qualified evidence in complete CP2 review package."
+}

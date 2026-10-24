@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-24",
+  "kind": "public-primary-subscription-recheck",
+  "retrieval": "Public official HTTPS only; web search returned no results, urllib200. No credentials or provider API calls.",
+  "pages": [
+    {
+      "url": "https://developers.facebook.com/documentation/instagram-platform/instagram-api-with-instagram-login/get-started",
+      "sha256": "a65140ae554ec70f5a9eded4399e131d714a6b57ec02f5a623fb4435f3621eb9"
+    },
+    {
+      "url": "https://developers.facebook.com/documentation/instagram-platform/webhooks/setup",
+      "sha256": "30db96ab7475907d0030a74aaf47252a6b34b40dff6cdc4419cb5cc2999f7eb4"
+    },
+    {
+      "url": "https://developers.facebook.com/documentation/instagram-platform/instagram-graph-api/reference/ig-user/subscribed_apps",
+      "sha256": "91e9590fb78e7cb5503fd9810015a9fb809a205069ec519b0263df7e84bd5f9b"
+    }
+  ],
+  "confirmed": "Setup page explicitly distinguishes Unified/Facebook credentials using graph.facebook.com from Instagram Login using an Instagram user token and POST graph.instagram.com/v26.0/IG_ID/subscribed_apps; successful mutation returns success:true. Existing approved host/purpose contract remains.",
+  "notResolved": "This bounded extraction did not determine the GET subscription app.id relationship between product OAuth client ID and parent Meta app ID. No identity equivalence, different-ID requirement, fallback, new configuration or code change is inferred. Actual provider envelope/grant remains later real proof.",
+  "authority": "Research only; no source, scope, private/runtime/Meta authority change."
+}

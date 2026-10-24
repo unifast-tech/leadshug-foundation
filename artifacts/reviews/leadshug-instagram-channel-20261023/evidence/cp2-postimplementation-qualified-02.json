@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "kind": "qualified-pretest-typecheck-failure",
+  "log": "foundation_documentation/artifacts/tmp/instagram-channel-implementation/cp2-postimplementation-qualified-02.log",
+  "sha256": "0530b933bb1e23db2e6865f3dbcf27d7cc0c7cd350b36a868b1d255136b1c0ff",
+  "command": "bash scripts/test-channels-local.sh api-instagram",
+  "exit": 1,
+  "migrationsApplied": 31,
+  "testsReached": false,
+  "qualification": "No unit/integration GREEN or product behavior failure claimed; executor correcting actual integration typings. Log copied exactly from reported synthetic /tmp path, no other inventory.",
+  "noRuntimeClaim": true
+}

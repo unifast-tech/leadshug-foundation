@@ -1,0 +1,13 @@
+{
+  "schemaVersion": 1,
+  "kind": "qualified-pretest-build-failure",
+  "command": "bash scripts/test-channels-local.sh api-instagram",
+  "log": "foundation_documentation/artifacts/tmp/instagram-channel-implementation/cp2-api-instagram-03.log",
+  "sha256": "924cab010f98aa720a54d2015e37082115bd514c08ed291598c164af69a8dda7",
+  "exit": 1,
+  "migrationsApplied": 31,
+  "lint": "passed",
+  "build": "failed; one TooManyRequestsException symbol error",
+  "testsReached": false,
+  "qualification": "No behavior proof/acceptance. Executor reports corrected branch/Retry-After and is expanding missing coverage before next full diagnostic. No operational runtime evidence."
+}

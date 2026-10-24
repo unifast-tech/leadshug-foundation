@@ -608,6 +608,10 @@ Historical planning observation retained: IG-REV-01..04, strategic source, high/
 | IG-EVOCOMP-R2-01 | medium | release-blocker | fence late failure mutation in same admitted caller/test paths | same-attempt recovery must retain later holder facts after lease takeover; inherited catch is not a new adapter regression | closed by r3/current full API | evolution-observation-companion-critique-r3-result.json; cp1-caller-r7-full-api-green.json |
 | IG-CP1-ROOT-R7-01 | medium | release-blocker | revalidate authorization before provider-error fact mutation in same admitted paths | live DB lease does not replace post-call session/grant revalidation; same existing lifecycle contract, no new middleware scope | closed by r3/current full API | evolution-observation-companion-critique-r3-result.json; cp1-caller-r7-full-api-green.json |
 
+| IG-CP2-ROOT-01 | medium | release-blocker | fix in this TODO | accurate persisted budget backoff under SCOPE-04/VAL-03 | open; static, behavioral case requested | cp2-root-static-observations.json |
+| IG-CP2-ROOT-02 | high | release-blocker | fix in this TODO | current post-HTTP lease fence under SCOPE-04/VAL-03 | open; static, delayed authorization case requested | cp2-root-static-observations.json |
+| IG-CP2-ROOT-03 | medium | release-blocker | fix in this TODO | actual credential acquisition/expiry under DOD-03/VAL-03 | open; static, delayed profile case requested | cp2-root-static-observations.json |
+
 ## TODO Closeout Disposition
 - **Disposition:** blocked
 - **Disposition reason:** implementação aprovada em curso; findings CP1 remanescentes e demais checkpoints/gates abertos, sem entrega parcial aceita.
@@ -1035,3 +1039,9 @@ Both frozen lanes are terminal with no source/TODO drift. `evidence/cp1-observat
 | IG-CP1-R5-01 | Integrated | useful | yes | project | n/a | Exact user-admitted guard, real-adapter product/unit causal RED, both cleanup recovery proofs and395unit/490fullintegration GREEN, fresh complete review on matching39sources |
 
 CP2 continues under APROVADOv1.3, not a renewed approval boundary. A fresh serialized operational coder implements OAuth/authorization and raw signed ingress using `evidence/cp2-execution-handoff.json`, all16obligations in the prepared test-first plan and verified primary protocol. No other code writer or runner is active. Root retains documentation ownership. Existing WhatsApp contracts,35immutable rows and six regression restrictions remain. Actual env/private/runtime/Meta/tunnel/device work is still excluded until its later concrete plan. CP2 must end in complete checkpoint proof, not merely a partial OAuth endpoint; CP3..CP6 remain mandatory.
+
+## CP2 implementation — initial route RED and concrete observations
+
+`evidence/cp2-initial-route-red.json` retains the clean395unit/33integration-pass/2route404fail diagnostic before any production edits, as explicitly reported by the executor. It proves route absence only; no downstream OAuth/signature behavior is inferred. Three later pre-test lint/build failures remain qualified in separate receipts, with31migrations applied to the disposable database. All16CP2 obligations remain required before acceptance.
+
+`evidence/cp2-root-static-observations.json` records three concrete static risks in currently mutable admitted source: budget backoff collapses to1second, captured acquisition time is reused as a stale callback-lease clock, and credential acquisition is recorded after /me delay. They remain open until meaningful behavioral proof and narrow correction; no dynamic exploit is claimed. The same artifact records Q01 as an unresolved subscription-envelope question, not an established defect: verify app/account identity semantics from primary evidence before accepting read-before-write. No guessed identity equivalence, new config, fallback or scope grant follows. User-approved WHAT,35immutable paths and runtime/private exclusions remain unchanged.
