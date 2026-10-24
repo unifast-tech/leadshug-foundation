@@ -1,0 +1,49 @@
+{
+  "kind": "cp3-repair44-exact-handoff",
+  "authority": "ApprovedST-IG-03v1.3 existing admitted paths; HOW corrections only",
+  "readManifest": "cp3-api43-frozen-manifest.json",
+  "writePaths": [
+    {
+      "path": "api-app/src/domain/inbox/dispatch-admission.service.ts",
+      "bytes": 48132,
+      "sha256": "455d50767dc4bdb339e492eff053b74b712d814ecf139b821b65eb69bfdc03b8"
+    },
+    {
+      "path": "api-app/test/initial-message.e2e-spec.ts",
+      "bytes": 123166,
+      "sha256": "226fdde3b8875573688a625b76ce879d3da733cfb13c2bfe85bb14377bee7608"
+    },
+    {
+      "path": "api-app/test/instagram-cp3-csv-boundaries.e2e-spec.ts",
+      "bytes": 14965,
+      "sha256": "d952fe4299610c9297603617315395d9cff1c26209c30f97de13f8046c48c6d9"
+    },
+    {
+      "path": "api-app/test/instagram-cp3-locks.e2e-spec.ts",
+      "bytes": 14368,
+      "sha256": "155fdfff84cf22ca60979969423723dbf6cbe6807a4eefefcfdb649afd00c189"
+    },
+    {
+      "path": "api-app/test/instagram-cp3-query-boundaries.e2e-spec.ts",
+      "bytes": 12869,
+      "sha256": "dc0c0bb8b54a3eda245cfc5951286b64b5a7565caf25fd555a236eb27f7c6038"
+    }
+  ],
+  "allOtherSourcesPreserved": true,
+  "tests": "NOTRUN until later canonical validator; do not execute tests/builds/Git/Docker/runtime",
+  "tasks": [
+    "Locks case completed same-account Instagram peer waiter and different-account independence groups before failing at formatted-WA fixture line211. Only formatted-WA native contention remains unexecuted; whole caseFAIL. Agent all-lock NOT_PROVEN summary is overbroad.",
+    "CSV409 body{} is not proof of omitted error payload: legacy CSV content-type means Supertest may expose JSON as response.text. Verify text before changing product.",
+    "Two query cases hit real10authorizations/actor/hour during12-account setup. Preserve12-account cohort and production budgets; realistic older completed authorization fixtures or distinct granted actors can establish setup.",
+    "BU readiness update genuinely waits for claim transaction, then newer final current-actor fence observes INATIVO and correctly prevents POST. Log pins zeroPOST/zeroMessage/409/REJECTED/NONE. Prior expectation of onePOST conflicts with required final fence; update only this outcome to current contract while retaining lock-wait and zero-before-release assertions.",
+    "Unknown context reconcile404 is product regression from lockInitialOwner unknown->null: preserve scoped known ACK and return explicit safe503 without dispatch, guess, rewritten receipt or unlocked mutation."
+  ],
+  "constraints": [
+    "Retain original6failurecase IDs/scenarios; no thresholds weakened, no suppressedfailures, no broadcatch or guessed route/context, no production rate-limit change.",
+    "Unknown context is read-only blocked known receipt. Do not relax lockCapturedPeer/lockInitialOwner dispatch/mutation validation globally.",
+    "CSV assert actual safe JSON body from response.text if content-type historicalCSV; retain409 andexactcode.",
+    "WA fixture create Contact separately then uncheckedconversation scalarcontactId (or fullycheckedrelations), retain formattedpresentation+canonicaladdress andallnativewaitoracles.",
+    "12IG accounts remainreal successfulOAuth/providerfake+PG; age only completed mapped attemptcreatedAt in this test when appropriate, documenting12connections acrosshours; do not dropcohort/disableratelimit or mockresolver.",
+    "Oneproductwriter; exactpublicreadmanifest; no broadGit/search/inventory; noFoundationedits."
+  ]
+}

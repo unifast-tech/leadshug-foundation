@@ -1,0 +1,150 @@
+{
+  "kind": "cp3-api43-canonical-full-api-result",
+  "date": "2026-10-24",
+  "command": "bash scripts/test-channels-local.sh api",
+  "invocations": 1,
+  "exitCode": 1,
+  "terminalOutcome": "FAILED: full suite completed with six E2E failures",
+  "log": {
+    "path": "cp3-api43-api.log",
+    "bytes": 235174,
+    "sha256": "7134cd8b6f04d1f585f25cb125a1b8d329e318876a8e1ccd9da4f9b39122fb11",
+    "completeStdoutStderr": true
+  },
+  "preflight": {
+    "files": 261,
+    "exact": true,
+    "boundInputs": 677,
+    "exactBoundInputs": true,
+    "preservationRows": 35,
+    "rootGitlinks": 3,
+    "authority": "GO",
+    "routing": "GO",
+    "outputsAbsent": true
+  },
+  "postflight": {
+    "files": 261,
+    "exact": true,
+    "boundInputs": 677,
+    "exactBoundInputs": true,
+    "preservationRows": 35,
+    "rootGitlinks": 3
+  },
+  "stages": [
+    {
+      "name": "channels parity/self-guards",
+      "status": "PASS",
+      "parityMutationsRejected": 26
+    },
+    {
+      "name": "Prisma client generation",
+      "status": "PASS",
+      "evidence": "Prisma Client v6.19.3 generated in 272ms"
+    },
+    {
+      "name": "database migrations",
+      "status": "PASS",
+      "migrations": 31,
+      "evidence": "all applied; schema up to date"
+    },
+    {
+      "name": "lint",
+      "status": "PASS"
+    },
+    {
+      "name": "build",
+      "status": "PASS"
+    },
+    {
+      "name": "unit tests",
+      "status": "PASS",
+      "files": 39,
+      "passed": 424,
+      "failed": 0
+    },
+    {
+      "name": "E2E tests",
+      "status": "FAIL",
+      "files": {
+        "passed": 50,
+        "failed": 5,
+        "total": 55
+      },
+      "tests": {
+        "passed": 580,
+        "failed": 6,
+        "total": 586
+      }
+    }
+  ],
+  "failures": [
+    {
+      "file": "api-app/test/initial-message.e2e-spec.ts",
+      "case": "initial message BFF journey > covers claim pins BU readiness through its database commit in an independently seeded Meta template journey",
+      "body": "AssertionError: expected [201, 503] to include 409 at test/initial-message.e2e-spec.ts:1251:30."
+    },
+    {
+      "file": "api-app/test/instagram-cp3-csv-boundaries.e2e-spec.ts",
+      "case": "Instagram CP3 CSV finite database reads > streams full ordered CSV pages with ties, filters and WhatsApp qualification",
+      "body": "HTTP expect(409) passed but body assertion failed: expected {} to match { code: \"WHATSAPP_CONTACT_IDENTITY_AMBIGUOUS\" } at line 210."
+    },
+    {
+      "file": "api-app/test/instagram-cp3-locks.e2e-spec.ts",
+      "case": "Instagram CP3 qualified dispatch locks (native PostgreSQL) > serializes canonical formatted WhatsApp and same-account Instagram peers while keeping another account scope independent",
+      "body": "PrismaClientValidationError at test/instagram-cp3-locks.e2e-spec.ts:211:54: Argument `bu` is missing for prisma.conversation.create(). The test failed during WA conversation fixture construction before canonical peer waiter/native-lock assertions."
+    },
+    {
+      "file": "api-app/test/instagram-cp3-query-boundaries.e2e-spec.ts",
+      "failedCases": 2,
+      "cases": [
+        "resolves an explicit route before reading latest messages or hydrating unrelated BU channels",
+        "keeps manual WhatsApp readiness false for an Instagram-only BU with bounded SQL"
+      ],
+      "body": "Both failed during connectAccount setup: expected 201 Created, got 429 Too Many Requests at line 36; target query/readiness assertions were not reached."
+    },
+    {
+      "file": "api-app/test/instagram-cp3-v1-cutover.e2e-spec.ts",
+      "case": "Instagram CP3 strict V1 read and local cutover > recovers every V1 ordinary and initial state locally while preserving immutable request facts and exclusions",
+      "body": "AssertionError: expected 404 to be 503 at line 337 while checking unknown-context reconcile."
+    }
+  ],
+  "requestedProofs": {
+    "oldNativeP2002": "PASS: dispatch-admission case \u201crolls back the whole initial completion on a real P2002 race, exact-reads back, and retries one local transaction\u201d passed in 597ms with its retained native count-3/nine-oracle assertions. The log reports the case pass, not a separate P2002 scalar.",
+    "authorizationSix": "PASS: instagram-cp3-authorization-fences.e2e-spec.ts 6/6 tests passed (5452ms).",
+    "nativeLockSerializedScopes": "NOT_PROVEN: lock test was reached but failed in fixture construction because required relation `bu` was missing; canonical peer wait/scope-group assertions did not run.",
+    "queryBoundaries": "PARTIAL: 2 query-boundary cases passed, 2 failed at OAuth connect setup (429), before target query/read assertions.",
+    "ackCases": "PASS: all four CP3 Instagram ACK/local-fact tests passed (credential delete, metadata version change, shortened expiry, generation conflict).",
+    "csv": "PARTIAL/FAIL: new CP3 CSV endpoint returned expected 409 but omitted required error code WHATSAPP_CONTACT_IDENTITY_AMBIGUOUS; existing history CSV control cases pass in their own suite.",
+    "strictCp2Clock": "PASS: final-clock file completed 9/9 tests (20362ms suite); all retained assertions passed. Test durations do not substitute for internal clock scalar measurements.",
+    "batch": "PASS: initial-started/initial-completed updates=1000, elapsedMs=5303.925; replay-started/replay-completed updates=1000, elapsedMs=3563.978; batch case passed in 8897ms, reaching <=15000ms initial assertion and subsequent count/replay/malformed/oversize/echo/read assertions."
+  },
+  "counts": {
+    "parityMutationsRejected": 26,
+    "migrations": 31,
+    "unitFiles": 39,
+    "unitPassed": 424,
+    "unitFailed": 0,
+    "e2eFilesPassed": 50,
+    "e2eFilesFailed": 5,
+    "e2ePassed": 580,
+    "e2eFailed": 6,
+    "p2002RecoveryCasePassed": 1,
+    "nativeP2002ExpectedCount": 3,
+    "authorizationFenceTestsPassed": 6,
+    "nativeLockCaseReachedFixture": true,
+    "nativeLockWaitProof": false,
+    "cp3AckCasesPassed": 4,
+    "queryBoundaryCasesPassed": 2,
+    "queryBoundaryCasesFailedBeforeAssertions": 2,
+    "cp2FinalClockTestsPassed": 9,
+    "batchInitialUpdates": 1000,
+    "batchInitialElapsedMs": 5303.925,
+    "batchReplayUpdates": 1000,
+    "batchReplayElapsedMs": 3563.978
+  },
+  "notes": [
+    "The canonical run reached and completed the full API suite; overall E2E remains failed on the six listed test cases.",
+    "The new lock case did not establish serialization: it failed before lock observation due to Prisma fixture validation, not a timeout or a passed lock proof.",
+    "No source/input mutation, autofix, retry, or extra command occurred. This is validation evidence only; broader review/checkpoint/feature gates remain pending."
+  ]
+}

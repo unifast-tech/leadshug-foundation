@@ -31,7 +31,7 @@ Este TODO define WHAT, exclusões e critérios de entrega. A baseline v1.3 abaix
 ## Delivery Status Canon (Required)
 - **Current delivery stage:** Pending
 - **Qualifiers:** none
-- **Next exact step:** selar261 fontes/T/inputs para UMA API completa43 após unit42 terminal. Root reconstruiu exatamente as fixtures anteriores: só formas/valores de preparo mudaram, asserts/counters preservados. Produção/native ainda sem prova43; CP4 e demais gates obrigatórios.
+- **Next exact step:** corrigir somente os5caminhos admitidos do repair44 após API43 terminal/root exatos: fixtureWA, preparação12contas, parsingerroCSV, expectativaBUinativa e recuperação segura deACKcomcontexto desconhecido. Depois nova validação congelada e adherence afetada; CP4 completo permanece obrigatório.
 
 ## Active Work State (Required While TODO Remains In `active/`)
 - **Work state:** implementation
@@ -1593,3 +1593,7 @@ No E2E was reached. No native lock/P2002/auth/query/ACK/CSV/temporal/batch resul
 Root matched261 current public sources, only two unit fixture changes,35 preservation rows and3 root index entries. Reversing only the added conversation/route/contact-identity fixture shape, three complete stored contexts and four outbound qualified-peer literals reconstructed both exact pre42 file hashes. All assertions/scenarios/counters are preserved. Historical presentation remains distinct; no production or native source changed. No tests/build/runner ran in this writer lane.
 
 The18 abstraction-protection unit cases passed in the qualified API41 run; that does not transfer proof to the27 unreached unit branches or any E2E. Root now freezes261 current sources/this TODO/positive inputs for ONE new complete canonical API43 invocation. All writers are terminal; no source/TODO/input mutation while validation runs, no autofix/retry and no private/runtime/Git expansion. Fresh affected adherence carrying complete prior coverage follows after terminal reconciliation; CP4/primary/human/later gates remain required.
+
+## CP3 API43 terminal and repair44 qualification — 2026-10-24
+
+Root conferiu261fontes/T/677inputs/35preservações/3gitlinks/log235174bytes SHA7134cd8b6f04d1f585f25cb125a1b8d329e318876a8e1ccd9da4f9b39122fb11. Lint/build/31mig/424unit passaram;580/586E2E,6falhas. `cp3-api43-root-reconciliation.json` qualifica as provas e `cp3-repair44-handoff.json` limita5caminhos. Instagram same-account wait/different-account independence completaram antes da falha da fixtureWA; a contençãoWA ainda não executou. CSV409 com body{} não prova payloadausente dado content-typeCSV. Duas preparações12contas atingiram orçamento10/ator/hora; orçamento de produto e12contas serão preservados. O cenárioBU confirmou lock e depois prevenção final correta dePOST(409/REJECTED/zeroMessage/zeroPOST); expectativa histórica será alinhada ao fence atual, sem remover seu oráculo de bloqueio. Reconciliação deACK conhecido comcontexto desconhecido404 é regressão a corrigir para503seguro, sem mutação/envio/rota inventada. Auth6/ACK4/finalclock9/P2002count3/lote1000 passaram. Não há aceiteCP3 nem waiverCP4/primário/reviews/runtime.

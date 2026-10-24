@@ -1,0 +1,35 @@
+{
+  "kind": "root-independent-api43-reconciliation",
+  "date": "2026-10-24",
+  "sourceFiles": 261,
+  "todoSha256": "841d20eeb8a81dbfc939491a2ffcfaf62179a9f1574757b519a1724b5bc322e3",
+  "boundInputs": 677,
+  "preservationRows": 35,
+  "rootGitlinks": [
+    "160000 5db3fbe2043428749895fc3ff6441e9457467dd0 0\tapi-app",
+    "160000 40828a20f2d6c3a1443e7ee132f42483840d6abb 0\tfoundation_documentation",
+    "160000 6c99c27dafdce8ed9b461d17aaaaa491b8ae16e9 0\tweb-app"
+  ],
+  "allExact": true,
+  "log": {
+    "bytes": 235174,
+    "sha256": "7134cd8b6f04d1f585f25cb125a1b8d329e318876a8e1ccd9da4f9b39122fb11"
+  },
+  "outcome": "424unitPASS;580/586E2E;6failures; notCP3acceptance",
+  "qualifications": [
+    "Locks case completed same-account Instagram peer waiter and different-account independence groups before failing at formatted-WA fixture line211. Only formatted-WA native contention remains unexecuted; whole caseFAIL. Agent all-lock NOT_PROVEN summary is overbroad.",
+    "CSV409 body{} is not proof of omitted error payload: legacy CSV content-type means Supertest may expose JSON as response.text. Verify text before changing product.",
+    "Two query cases hit real10authorizations/actor/hour during12-account setup. Preserve12-account cohort and production budgets; realistic older completed authorization fixtures or distinct granted actors can establish setup.",
+    "BU readiness update genuinely waits for claim transaction, then newer final current-actor fence observes INATIVO and correctly prevents POST. Log pins zeroPOST/zeroMessage/409/REJECTED/NONE. Prior expectation of onePOST conflicts with required final fence; update only this outcome to current contract while retaining lock-wait and zero-before-release assertions.",
+    "Unknown context reconcile404 is product regression from lockInitialOwner unknown->null: preserve scoped known ACK and return explicit safe503 without dispatch, guess, rewritten receipt or unlocked mutation."
+  ],
+  "freshPassed": [
+    "P2002 recovery597ms all9assertions/count3",
+    "6authorization fences",
+    "4ACK/localfacts",
+    "9finalclock cases",
+    "1000initial5303.925ms/replay3563.978ms +allsubsequent assertions"
+  ],
+  "freezeReleasedAfterRootVerification": true,
+  "next": "Narrow repair44 then new canonical frozen validation; affected formal review and fullCP4 remain mandatory."
+}
