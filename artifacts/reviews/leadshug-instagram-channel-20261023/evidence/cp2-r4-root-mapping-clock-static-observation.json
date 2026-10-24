@@ -1,0 +1,11 @@
+{
+  "kind": "cp2-r4-root-static-mapping-final-clock-observation",
+  "status": "Staticconcern only; notcausalRED, no code/T/input change whilefullAPI+R4review active",
+  "source": "api-app/src/domain/channels/instagram-authorization.service.ts",
+  "sourceSha256": "fce5e125b245e516067e60cdda5ac8f653beda2bb795641b8b2c699c420662b8",
+  "existingFinding": "IG-CP2-ROOT-02 everyawait currentoperation/credentialclock; do not reopenclosedoriginalR1-01 solelybylabel",
+  "locus": "confirm mapping actorTransaction: lockedcurrent candidate; rawpromotedUPDATE DBclockWHERE; awaitUPDATE; assertSignedSession; returnmapping withoutfreshoperation/TTL/candidate60smargin afterawait.",
+  "riskQualification": "WHERE evaluated beforeBEFOREUPDATEwait; lastawait couldcross persisteddeadline oractualcandidatecredentialmargin andcommitmappedcredential, eveniflater subscribeAfterMapping deniesHTTP. ExistingGREEN16 coverscallback andsubscriptionfinalwrites, notthisspecificmappingfinalUPDATE barrier. No actualexploit/duplicatePOST/credentialloss isclaimed.",
+  "nextAfterBothTerminal": "Adjudicate against completeR4 review; ifstillopen, narrowtest-only actualPG mappingfinalUPDATEwait +equal-durationlivecontrol usingactualcandidateexpires_in margin oraccuratelylabeledshortenedpersistedclock; verifyrollback/noactivepromotion/candidatepreservation beforeanysourcefix. Retainactualnormal5sTX/freshsession andnoHTTPS/provider calls beyond synthetic boundary.",
+  "authority": "No newWHAT/pathadmission; boundedknownROOT02repair onlyafterterminalthaw; no runtime/private/Meta/Git."
+}

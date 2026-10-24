@@ -1,0 +1,33 @@
+{
+  "kind": "cp2-api-full-r4-current-source16-qualified-green",
+  "command": "bash scripts/test-channels-local.sh api",
+  "times": 1,
+  "exit": 0,
+  "log": "cp2-api-full-r4-01.log",
+  "logSha256": "584211714e2cb064489b988f129bf22ed0a6dc546ba0c588790dde0c79e76285",
+  "migrations": 31,
+  "lint": "PASS",
+  "build": "PASS",
+  "unit": {
+    "files": 37,
+    "passed": 398
+  },
+  "e2e": {
+    "files": 42,
+    "passed": 549,
+    "failed": 0,
+    "reportedDurationSeconds": 564.77
+  },
+  "rootPostMatched": {
+    "sources": 241,
+    "todo": true,
+    "boundInputs": 77,
+    "selectedReceiptExtra": true,
+    "preserved": 35,
+    "index": 3
+  },
+  "validatorTerminal": true,
+  "supported": "ROOT15exactaccountfixture nowpassedunfiltered; allsource16causaltests/control assertions andallcurrentAPIregressions passed on stablematchedbytes. Alloriginalscenario/assertions retained, no runnerautofix/retry.",
+  "qualification": "No actualprovider/runtime/browser/capacityclaim; fullCP2source review stillpending/incompletecurrentturn; primaryobserver andprotectedhumanproposals remain open. AggregateGREENdoesnotestablisheverypossibleboundary.",
+  "next": "Keepreviewsource/T/inputs frozen throughcompleteR4collection; thenrootadjudicateactualfindings beforeanythaw. CP3..CP6/allconsumers/ALL/assurance remain."
+}

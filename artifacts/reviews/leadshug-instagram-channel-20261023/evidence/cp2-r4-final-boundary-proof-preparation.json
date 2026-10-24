@@ -1,0 +1,22 @@
+{
+  "kind": "cp2-r4-final-boundary-proof-preparation-only",
+  "state": "NOTDISPATCH; currentcompleteR4review/source/T/inputs frozen. No test/source/runner authority fromthisartifact.",
+  "basis": "ExistingROOT02/SUBREC02 actualfinalphase/currentauthcleanup contract; staticloci requireterminaladjudication. No dynamicfailure claimed.",
+  "candidateOwnedPath": "api-app/test/instagram-cp2-commit-fences.e2e-spec.ts insideapprovedinstagramtestglob, canonicalselector",
+  "candidateCases": [
+    {
+      "name": "mappingfinalpromotion actualcredentialmargin",
+      "boundary": "ActualNest/BFF/OAuth/PG, providerexpires_in62 vs matched65, actualBEFOREUPDATE wait only CANDIDATE_READY->MAPPED_PENDING_SUBSCRIPTION; candidateeligible>60sbeforewait, normal5sTX, matched2.2swait crossesactualmargin62only.",
+      "assertions": "Deniedstaleactivepromotion mustrollback mapping/credential/owner/channel/candidate effects; no subscriptionPOST. Livecontrol samewait passesonepromotion/onePOST/pendingreceipt. Preferactualreauthorizationoldcredentialpreservation ifboundedfixture, plusfreshCONNECT proof; preservecurrentactor/key/session. WHERE pretriggerclockalone insufficient.",
+      "qualification": "Actualcandidate60smargin proof, notnatural60slease. Setupeligibility/barrier/issuedtime/budget mustbeobservedbeforecallingcausalRED."
+    },
+    {
+      "name": "postcommitclaim signedexpiry exactholdercleanup",
+      "boundary": "Actualsignedsession via SessionService.assinar(uid, historicalissuedAt leaving~2s), actualverification withfreshdefaulttime; realPG DEFERRABLEINITIALLYDEFERRED AFTERROWtrigger onlysubscriptionclaim OBSERVING transition. HoldatCOMMIT afterhandlerchecks, observetriggerwait/sessionstillvalid, letnativesessionexpire undernormal5sTX, thenreleaseCOMMIT. No sessions/clock/Prisma/transactionmocks.",
+      "assertions": "Request401 afteractualcommittedclaim, zeroexternalHTTP; exactoriginalbindingholder released despitepostcommitassert failure, durablecounter/cooldown/tombstone remain, no successor/receiptfacts cleared. Equal-durationvalidsessioncontrol actuallysubscribesonce/releasesnormally.",
+      "qualification": "Naturalshortsignedsession acrossactualCOMMITwait; do notsubstitute15swait/Prisma timeout ormanuallyexpiredDBlease. Verifyactualcommittedrow andtargetstate beforeholderassert."
+    }
+  ],
+  "requirements": "FiniteobservedPGbarriers, boundedsafehold<4.5s/currentnormal5s, awaitrequestandallholdertasks infinally beforeDROP; no detachedasync/sleeponlyproof. Preserveallprior241sources; firsttest-onlywriterterminal->rootfreeze->separatecausalvalidator; thenboundedcoherentsourcefixafterrootthaw.",
+  "otherPhaseAudit": "Beforeanynextsourcefix classifyall17actorTransactioncallers: newactive callback/confirmationclaims/mapping requirecurrentphasechecks throughfinalawait, historicalCOMPLETED/knownACK/receipt/cancel localfacts mustNOTinheritnewdispatchclock. Preserveactorwrappercurrentauthorization andall40s/60s/10s/budget3. Avoidlayeredpointpatches; onecoherentprivateguard canserveactualphases withoutframework."
+}

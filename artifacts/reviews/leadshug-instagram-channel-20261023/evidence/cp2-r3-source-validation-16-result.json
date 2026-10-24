@@ -1,0 +1,32 @@
+{
+  "kind": "cp2-r3-source-validation16-qualified-green",
+  "command": "bash scripts/test-channels-local.sh api-instagram",
+  "times": 1,
+  "exit": 0,
+  "log": "cp2-r3-source-validation-16.log",
+  "logSha256": "16a98a07fcb0403d3fe73ab87ca4f03318bbada05d834b5a89899c34a70ae811",
+  "migrations": 31,
+  "lint": "PASS",
+  "build": "PASS",
+  "unit": {
+    "files": 37,
+    "passed": 398
+  },
+  "e2e": {
+    "files": 9,
+    "passed": 91,
+    "failed": 0
+  },
+  "rootPostMatched": {
+    "sources": 241,
+    "todo": true,
+    "inputs": 77,
+    "preserved": 35,
+    "index": 3
+  },
+  "validatorTerminal": true,
+  "causalGreen": "All6qualifiedRED15rows and matchedlive/no-faultcontrols passed; testedbarrierassertions and laterrollback/cleanup/recovery/successor assertions nowreached. ActualSQLfault/signedreceipt/originalkeylocalrecovery withnoadditionalPOST passed. GETcontrolUNKNOWN/oneGET/zeroPOST/counter2 andqueuedtakeoverdenial passed.",
+  "qualification": "Shortenedpersistedclocks remainrobustnesscases, notnatural60sexpiry; subscriptioncombinedclock isnotisolatedproofeachclock. Actualcredential60smargin usesproviderexpires_in. No realMeta/runtime/browser/primaryobserver acceptance.",
+  "prior": "cp2-r3-causal-validation-15-result.json",
+  "next": "SeparatefullcanonicalAPI on samefrozenbytes, freshcompleteCP2actualsource review; pendinghuman/primary/CP3..CP6 remain."
+}

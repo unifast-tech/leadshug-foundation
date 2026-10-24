@@ -1,0 +1,14 @@
+{
+  "kind": "cp2-full-api-source16-validation-only",
+  "command": "bash scripts/test-channels-local.sh api",
+  "times": 1,
+  "freeze": "cp2-r3-source-frozen-manifest-16.json",
+  "extraBoundInput": {
+    "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp2-r3-source-validation-16-result.json",
+    "sha256": "f291fb7275df938c8b0d66f3b8f8b2e11dd70f9ee4b8255da2a2287890976486"
+  },
+  "log": "cp2-api-full-r4-01.log",
+  "authority": "authority-cp2-r3-validation16.json",
+  "routing": "routing-cp2-r2-causal-validation.json",
+  "policy": "Same frozen241sources/T/77inputs +newselectedreceipt; no source/T/inputwriter, one canonicaldisposablefullAPI invocation, noretry/autofix/Git/private/runtime/provider/Meta. Onlynewlog output; check35preserved/3index beforeafter, actualfailures reached/unreached. Rootreceipt/adjudication afterterminal."
+}
