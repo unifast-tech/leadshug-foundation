@@ -1,0 +1,68 @@
+{
+  "command": "bash scripts/test-channels-local.sh api-instagram",
+  "invocations": 1,
+  "exit_code": 1,
+  "log": {
+    "bytes": 50872,
+    "sha256": "4da4077d5c770ab195dd80f3751fce09a8652557d7251caadc71071ab4603af7",
+    "complete_captured_stdout_stderr": true
+  },
+  "stages": {
+    "parity_guard": "passed; 26 mutation rejects",
+    "prisma_client_generation": "passed (6.19.3)",
+    "migrations": "31/31 applied",
+    "schema_current": "passed",
+    "lint": "passed",
+    "build": "passed",
+    "unit": {
+      "files_passed": 39,
+      "tests_passed": 426,
+      "failures": 0
+    },
+    "e2e": {
+      "files_passed": 21,
+      "files_failed": 1,
+      "files_total": 22,
+      "tests_passed": 128,
+      "tests_failed": 1,
+      "tests_total": 129
+    }
+  },
+  "failure": {
+    "file": "test/instagram-cp3-query-boundaries.e2e-spec.ts",
+    "case": "offers no WhatsApp initial operation to an Instagram recipient in a mixed-channel BU",
+    "assertion": "expect(options).toHaveLength(0)",
+    "expected": 0,
+    "actual": 2,
+    "first_stack_frame": "test/instagram-cp3-query-boundaries.e2e-spec.ts:183:21",
+    "full_failure_body": "\u23af\u23af\u23af\u23af\u23af\u23af\u23af Failed Tests 1 \u23af\u23af\u23af\u23af\u23af\u23af\u23af\n\n FAIL  test/instagram-cp3-query-boundaries.e2e-spec.ts > CP3 selected and bounded channel queries (real Nest/PostgreSQL) > offers no WhatsApp initial operation to an Instagram recipient in a mixed-channel BU\nAssertionError: expected [ { \u2026(7) }, { \u2026(7) } ] to have a length of +0 but got 2\n\n- Expected\n+ Received\n\n- 0\n+ 2\n\n \u276f test/instagram-cp3-query-boundaries.e2e-spec.ts:183:21\n    181|       instagram: instagramFake.messages.length };\n    182|     const options = await app.get(ChannelResolver).initialOptions(inst\u2026\n    183|     expect(options).toHaveLength(0);\n       |                     ^\n    184|     expect(metaFake.enviados).toHaveLength(sentBefore.meta);\n    185|     expect(evolutionFake.enviados).toHaveLength(sentBefore.evolution);\n\n\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af[1/1]\u23af"
+  },
+  "reached": {
+    "earlier_query_boundary_case": "manual WhatsApp readiness false for Instagram-only BU with bounded SQL passed",
+    "authorization_fences": "6 tests passed",
+    "CSV_boundary": "1 test passed",
+    "native_lock_groups": "same-account IG, different-account independence, and formatted WhatsApp all passed; suite 709ms, file 1665ms",
+    "CP2_batches": "batch case passed; 8431ms",
+    "CP2_clocks": "all listed final-clock cases passed in suite; no new numeric claim extracted"
+  },
+  "unreached_or_unproven": {
+    "later_assertions_in_failed_case": [
+      "no provider sends (Meta/Evolution)",
+      "no Instagram sends"
+    ],
+    "newOfficialCaseRED": "not claimed; unit authored/fixed cases only passed in unit suite"
+  },
+  "scope": "single local canonical synthetic api-instagram run; no release/checkpoint/provider claim",
+  "freeze_postflight": {
+    "source_rows": 261,
+    "source_mismatches": 0,
+    "bound_input_rows": 695,
+    "bound_input_mismatches": 0,
+    "preservation_rows": 35,
+    "preservation_mismatches": 0,
+    "root_gitlinks": 3,
+    "root_index_exact": true,
+    "errors": []
+  },
+  "manifest_metadata_qualification": "foundationCommit and writerTerminal inherited from prior API45 template; current source proof is exact frozen row match, and root reported actual Foundation HEAD 0272c8198df5435eb76f4ff31be1a6efec6f9df0"
+}

@@ -1,0 +1,15 @@
+{
+  "kind": "raw-evidence-whitespace-preservation",
+  "status": "Raw bytes preserved; nonraw stagedpaths normalcheckpassed.",
+  "initialCheck": "git diff --cached --check rejected canonical rawAPI49 log trailingwhitespace and generatedreviewmerge finalblankline. No sourceorartifact wasnormalized.",
+  "rawPaths": [
+    "artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp3-red49-api.log",
+    "artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp3-final-fence47-opinion-merge.md"
+  ],
+  "rawHashes": {
+    "artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp3-red49-api.log": "4da4077d5c770ab195dd80f3751fce09a8652557d7251caadc71071ab4603af7",
+    "artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp3-final-fence47-opinion-merge.md": "0e9198bc00e708af506a2cdeac7e5b2541492e159ae7e53c435c35dd4083ec5a"
+  },
+  "boundedCheck": "Only these2rawpaths checked with core.whitespace=-blank-at-eol,-blank-at-eof; allother20stagedpaths passed ordinarydiffcheck. No productlint/test/scopegate waiver.",
+  "sourceValidation": "API49 exactlog rootreconciled; opinion47 raw/events/merge exact and terminal. Whitespace partofrecordedrawcapture."
+}

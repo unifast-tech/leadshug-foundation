@@ -1,0 +1,26 @@
+{
+  "kind": "cp3-red49-root-reconciliation",
+  "date": "2026-10-24",
+  "sourcesExact": 261,
+  "todoExact": true,
+  "boundInputsExact": 695,
+  "preservationExact": 35,
+  "rootGitlinksExact": 3,
+  "log": {
+    "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp3-red49-api.log",
+    "bytes": 50872,
+    "sha256": "4da4077d5c770ab195dd80f3751fce09a8652557d7251caadc71071ab4603af7"
+  },
+  "exitCode": 1,
+  "scope": "One canonical api-instagram selected diagnostic, not full API/ALL/feature acceptance.",
+  "passed": {
+    "units": 426,
+    "e2e": 128,
+    "migrations": 31,
+    "authCases": 6
+  },
+  "causalRED": "B46 mixed-channel Instagram recipient initialOptions expected0 got2. Real OAuth/PG/signedinbound fixture completed; decisive options assertion reached. Following no-provider-send asserts NOTREACHED.",
+  "guard48": "Two new Official guard negatives authored+guardchanged before execution; 426unitPASS, no executedRED claim.",
+  "metadataQualification": "Freeze copied historical foundationCommit from API45; actual FoundationHEAD at49freeze0272c8198df5435eb76f4ff31be1a6efec6f9df0. writerTerminal=true is accurate for test48; inherited template detail is not newproof. Exactcurrentbytes are authority. Frozenmanifest notrewritten.",
+  "status": "Terminal and independently reconciled; freeze49 ended. Only explicit next test-only two-paththaw; no productrepair yet."
+}

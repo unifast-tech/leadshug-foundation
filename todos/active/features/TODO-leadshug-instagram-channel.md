@@ -31,11 +31,11 @@ Este TODO define WHAT, exclusões e critérios de entrega. A baseline v1.3 abaix
 ## Delivery Status Canon (Required)
 - **Current delivery stage:** Pending
 - **Qualifiers:** none
-- **Next exact step:** concretizar HOW de fence final coerente paraA46-01 em opinião técnica delimitada, depois REDcausal de reautorização/desconexão e elegibilidade inicial antes de reparar os3achados46. API45GREEN preservada como baseline; CP4 completo segue obrigatório.
+- **Next exact step:** teste nativo50 de reautorização cifrada e desconexão reais antes do reparo A46; API49 reproduziu B46, opinião47 integrou HOW. CP4 completo permanece obrigatório.
 
 ## Active Work State (Required While TODO Remains In `active/`)
 - **Work state:** implementation
-- **Why this state now:** API45 completaGREEN sobre261fontes/T/690inputs/35preservações/3gitlinks; lint/build/31mig/424unit/586E2E. Sourcefixes35..44 têm prova de execução, aguardam adherence46afetada. CP4 e gates restantes continuam obrigatórios.
+- **Why this state now:** API45 completaGREEN histórica; adherence46 apontou3gaps, API49 reproduziu elegibilidadeIG incorreta(426unit/128E2Epassaram,1RED). Opinião47 integrou fence transacional curto e checagem síncrona pósCOMMIT; ainda não implementado.
 - **Exit condition:** todos os checkpoints e critérios validados, revisões/guards completos e prova runtime posterior explicitamente aprovada; nenhum fechamento parcial implícito.
 
 ## Blocker Notes
@@ -651,6 +651,11 @@ Historical planning observation retained: IG-REV-01..04, strategic source, high/
 | IG-CP3-B35-05 | medium | release-blocker | fix in this TODO | Bound internal CSV hydration preserving full public output and filters | closed original defect by API45/adherence46; newA46 remains open | cp3-api45-root-reconciliation.json; cp3-adherence46-root-adjudication.json |
 | IG-CP3-A46-01 | high | release-blocker | fix in this TODO | coherent provider/currentactor final observation is IG-ARCH-R1-01/DOD-03 | open; nativecausal proof then faithfulHOW repair | cp3-adherence46a-raw.json; cp3-adherence46-root-adjudication.json |
 | IG-CP3-B46-01 | medium | release-blocker | fix in this TODO | options and dispatch must share recipient-qualified initial eligibility | open; preserve12cohort/WApositive and addIGnegative | cp3-adherence46b-raw.json; cp3-adherence46-root-adjudication.json |
+
+| F-B338F932 | high | release-blocker | fix in this TODO | alias A46-01; same coherent final observation obligation | open; HOW47 integrated, nativeproof/source pending | cp3-final-fence47-opinion-merge.json |
+| F-B67948FF | high | release-blocker | fix in this TODO | preserve signed-session fence after new awaitedCOMMIT | open; pairedactor fence required by repairHOW, not newWHAT | cp3-final-fence47-opinion-merge.json |
+| F-82E76A38 | high | release-blocker | fix in this TODO | causal mutation-first and actualPG serialization proof of sameapprovedfence | open; native50testfirst thenGREENcontrols | cp3-final-fence47-opinion-merge.json |
+| F-175B5680 | medium | release-blocker | fix in this TODO | clarify existing local orderingpoint; never atomicDB+HTTP claim | HOW integrated; implementation/proof pending | cp3-final-fence47-opinion-merge.json |
 
 ## TODO Closeout Disposition
 - **Disposition:** blocked
@@ -1621,3 +1626,20 @@ Ambas lanes retornaramturn.completed e strictmerge válido; root conferiu261font
 | IG-CP3-A-02 | Integrated | useful | yes | project | n/a | Residual Official window/namespace policy dependencies require guardnegativefixtures; current consumers notclaimedconcrete; cp3-adherence46b-raw.json |
 | IG-CP3-ROOT-03 | Integrated | useful | partial | project | n/a | CP4whole/latergatesremainopeninTODO, no waiver; both46reviews |
 | IG-SUBPROTO-01 | Integrated | useful | partial | project | n/a | OwnGETprotocol unproved; retainUNKNOWN/no-repeat andSUBREC03, no copiedPage/guessedabsence; cp3-adherence46b-raw.json |
+
+## CP3 opinion47 and RED49 reconciled — 2026-10-24
+
+Opinion47 returnedturn.completed/strictmerge; root matched20fullsources/T/18inputs/35preservations/3gitlinks. HOW only: one short pinned final transaction in existingOutbound/Admission owners, provider→qualifiedpeer→conversation nonwaiting protection, currentresolver/policy/actor in same transaction; paired signed-session check and originaldeadline/window/60scredentialmargin synchronously after awaitedCOMMIT. HTTP stays outside transaction. Mutation committed before decisiveprotection preventsPOST; authorization-first mutation blocked by that observation is orderedafter it. No atomicDB+external-effect claim, retry, newframework, route/schema/protectedpath or WHAT change. KnownACK/V1localrecovery remain. Rootadjudication and four findings in cp3-final-fence47-* retained; no finding closed by opinion alone.
+
+API49 root independently matched261sources/T/695inputs/35preservations/3gitlinks/log50872bytes SHA4da4077d5c770ab195dd80f3751fce09a8652557d7251caadc71071ab4603af7.31migrations/lint/build/426unit passed;128/129selectedE2E, sole B46causalRED initialOptions expected0 got2 foractualIGrecipient in mixedBU. Following provider-sendasserts not reached. AllgenuineWApositives and12account cohort passed; newOfficialguardcases passed but no executedRED claim. Frozenmanifest stale historicalFoundationCommit metadata is explicitlyqualified, not rewritten.
+
+Alllanes terminal,49freeze ended. cp3-final-fence50-test-only-handoff.json thaws only authorization-fences spec and minimal syntheticHTTP-token capture in helpers. Preserve six currentauthcases and all259otherpaths; productionAPI45bytes remain immutable. Append fullactual encryptedIG REAUTHORIZE and actualWA disconnectordinary/initial atoldgap, with lifecyclecommit/crypto/livegrant/deadline assertions and decisivezeroPOSTassertfirst. No runner whilewriter. Native50 is NOTRUN untilterminal/rootfreeze/separatecanonicalvalidation; productionrepair followscausalproof. RemainingprimaryGET, privacy/UTF8 humanproposals, completeCP4andCP5/6/ALL/assurance/physicalproof remainunwaived.
+
+### Opinion47 finding resolution
+
+| Finding ID | Resolution | Usefulness | Formalizable | Candidate Rule Level | Candidate Rule ID | Rationale / Evidence |
+| --- | --- | --- | --- | --- | --- | --- |
+| F-B338F932 | Integrated | useful | partial | project | n/a | A46 alias; short coherent final transaction, source/proof pending; rootadjudication47 |
+| F-B67948FF | Integrated | useful | yes | project | n/a | Pure signed-session/time check after final COMMIT await; source/proof pending; rootadjudication47 |
+| F-82E76A38 | Integrated | useful | partial | project | n/a | Mutation-first zeroPOST and authorization-first realPG serialization; native50testfirst; rootadjudication47 |
+| F-175B5680 | Integrated | useful | partial | project | n/a | Existing localordering contract clarified, no atomicproviderclaim; source/proof pending; rootadjudication47 |

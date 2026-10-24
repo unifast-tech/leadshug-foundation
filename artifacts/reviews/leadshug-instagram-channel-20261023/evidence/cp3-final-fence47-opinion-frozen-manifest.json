@@ -1,0 +1,214 @@
+{
+  "kind": "focused-final-fence47-frozen-inputs",
+  "sources": [
+    {
+      "path": "api-app/src/domain/channels/transport/channel.ts",
+      "bytes": 13235,
+      "sha256": "aa6485060287910d586d17b8cbffe2f194b1b3a29fb71c697f27e0b78c28ffbf"
+    },
+    {
+      "path": "api-app/src/domain/inbox/channel-eligibility-policy.ts",
+      "bytes": 9602,
+      "sha256": "9812de537d5e5f0c84ae9b824b7343f8dfd9f63dfa0520f6da9a7063d2d13eee"
+    },
+    {
+      "path": "api-app/src/integrations/channels/prisma-channel-resolver.ts",
+      "bytes": 64107,
+      "sha256": "607a14170052225551396210293625f26182385c7bc7fa1e6acfa318c405aa0f"
+    },
+    {
+      "path": "api-app/src/domain/inbox/outbound.service.ts",
+      "bytes": 49351,
+      "sha256": "37bcfc6cdc9e3ba53f8ee97ec68c923d07aab8bb90492b60872ece10ae473c30"
+    },
+    {
+      "path": "api-app/src/domain/inbox/dispatch-admission.service.ts",
+      "bytes": 48540,
+      "sha256": "559039c84b20ac986b6bc3b2b0590a50a6be9454634d7bbb2c05d706c5a387e4"
+    },
+    {
+      "path": "api-app/src/domain/channels/channel-credential-resolver.ts",
+      "bytes": 9525,
+      "sha256": "34f25985091f0c0873b682bc3d27f7eb0cde95a56e5b74497afdc541f79f7630"
+    },
+    {
+      "path": "api-app/src/domain/inbox/initial-message.service.ts",
+      "bytes": 24534,
+      "sha256": "aa33ca7ed6f74cabd878ebccec9529dd6a32b8311dad107babbc212d905ecc41"
+    },
+    {
+      "path": "api-app/src/domain/inbox/conversations.service.ts",
+      "bytes": 9520,
+      "sha256": "1aa8ad944527529255b589af45f5e1d05aa0bc36d504f2315330ca9ed546cd5b"
+    },
+    {
+      "path": "api-app/src/surfaces/bff/conversations.controller.ts",
+      "bytes": 21521,
+      "sha256": "799a1866c203557b9a115c327dfb466b40c71cb937218997c1a2fecec6ad34e2"
+    },
+    {
+      "path": "api-app/src/infra/session/session.service.ts",
+      "bytes": 5483,
+      "sha256": "884618471c7cc58c037f04d20c790979409bbbcfc2fe61b34312b2625b28e200"
+    },
+    {
+      "path": "api-app/src/domain/access/access.service.ts",
+      "bytes": 2390,
+      "sha256": "2ef3761a138d7c8c386c5ddb4bf2a2000c960328789834bde5e12135a1ea66e7"
+    },
+    {
+      "path": "api-app/src/domain/access/scope.ts",
+      "bytes": 5701,
+      "sha256": "412f68eb157328855c87cb86b6b89cc1c267eee7068dc59c0abbe085074db26d"
+    },
+    {
+      "path": "api-app/src/integrations/channels/instagram-channel.ts",
+      "bytes": 2375,
+      "sha256": "ed53f4eb0119ec6187c115e5816412d0cd2ef00213d83f341efd8640bac5f526"
+    },
+    {
+      "path": "api-app/src/integrations/channels/meta-channel.ts",
+      "bytes": 3900,
+      "sha256": "99a9ca01a57527a76de54cdbdf8b49f65b5dcceb1a71abce883d1845c6cd8f26"
+    },
+    {
+      "path": "api-app/src/integrations/channels/evolution-channel.ts",
+      "bytes": 2211,
+      "sha256": "6a41ef2f3b0ee9e5c6b381d54faf48b0b2c672e52751f8be1480ad01cb178a34"
+    },
+    {
+      "path": "api-app/src/integrations/instagram/instagram-messaging.client.ts",
+      "bytes": 2815,
+      "sha256": "a5efd1ced025fa3822126cd4deada4ca5c31505edefa3cc71d85a475a9de28a5"
+    },
+    {
+      "path": "api-app/src/domain/channels/channels.service.ts",
+      "bytes": 46758,
+      "sha256": "3783c1b2a3afa982b4e9d719c71c172df1717bda7ba380ef143c9dd06045805f"
+    },
+    {
+      "path": "api-app/src/domain/channels/instagram-authorization.service.ts",
+      "bytes": 73878,
+      "sha256": "2ecfcbfe83de72da41f3b89543df021d164168cccc13254b63c1069a84e6263a"
+    },
+    {
+      "path": "api-app/test/instagram-cp3-authorization-fences.e2e-spec.ts",
+      "bytes": 15205,
+      "sha256": "ac62369b48608336ab89e1a865881927d3a1ab5c1821653e6006a24318a30411"
+    },
+    {
+      "path": "api-app/test/helpers.ts",
+      "bytes": 34495,
+      "sha256": "79c9343d80b72b1d8c378d6946bf38997133d528117b11a4fc1827fa3e52586c"
+    }
+  ],
+  "todo": {
+    "path": "foundation_documentation/todos/active/features/TODO-leadshug-instagram-channel.md",
+    "bytes": 276303,
+    "sha256": "d43e788f8ee4057d6a6deda7862c24b21d7c54f0eb227bebe71859855b1e9056"
+  },
+  "inputs": [
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp3-adherence46a-raw.json",
+      "bytes": 7301,
+      "sha256": "d6bd798c4dfd1c0afadc67c81fd13dcc0f88c7d385bdc14d20e47c71bc4bebc2"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp3-adherence46b-raw.json",
+      "bytes": 9994,
+      "sha256": "e0bc9ca5ee93a9f40370c06e1b1609641f6bb8531e97931c1b09f56e1f38cf08"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp3-adherence46-root-adjudication.json",
+      "bytes": 3703,
+      "sha256": "56bc6fe372e9bfda183e5cd45b13d56bc0d04f1370102036802080fa5e98b39a"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp3-api45-root-reconciliation.json",
+      "bytes": 3310,
+      "sha256": "4ed54d84ff162b52e18a57e9e92a31a9936e2d9e32d3f6d8b51f66ae08c169f0"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp3-api45-result.json",
+      "bytes": 4197,
+      "sha256": "293aaa58ccea7b0b9bc66bb96ee3e129fa8a8920cd1e1565b6082508a410f04e"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp3-auth36-terminal.json",
+      "bytes": 1615,
+      "sha256": "c27674ac93dc888fa817fa78f2e2263b1fd44fba9dc2756f25492e1ed43a0b83"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp3-repair44-terminal.json",
+      "bytes": 2076,
+      "sha256": "ec5f6e149b492558fbe6bc26d39c0ef91c5e1bb267630b1fd47ada1af92ca12a"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/primary-subscription-index-research40.json",
+      "bytes": 2739,
+      "sha256": "10c684467046785d87396a31d01ef80ef878d5f9bd2de7fc753a7d899602285d"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp4-connections-preparation21-root-qualified.json",
+      "bytes": 2543,
+      "sha256": "3e9e59a0f972fa7d02b33833515c8bc4d15b00dee5847fbb1f710916ce4a7969"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp4-browser-composer-preparation23-root-qualified.json",
+      "bytes": 4783,
+      "sha256": "9923d9fcd1045355665ec9793968c6431518f0d363e18a914e063f74dbff79c2"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp3-final-fence47-opinion-package.json",
+      "sha256": "9a48dcbee41412fa0bc824de44e8ebe00dcd01c83ce15fc67b18294a1aeab234",
+      "bytes": 10933
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp3-final-fence47-opinion-closed-package.md",
+      "sha256": "f6092565c1f5606bf75234a3bfa4377df93a1fcf73bf0155260b08e4f781fd96",
+      "bytes": 636788
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp3-final-fence47-opinion-dispatch.json",
+      "sha256": "64923e6efc2c30bc1f1c3fa5b7d99fac969f80a30e89ea2cd80117fc2a75c6c4",
+      "bytes": 31302
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp3-final-fence47-opinion-dispatch.md",
+      "sha256": "e2f9948930cbfed98ec112944cf0f6dfbd3da3aae9e85dd6eb21014ed89044ab",
+      "bytes": 26645
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp3-final-fence47-opinion-execution-plan.json",
+      "sha256": "738b557d9f58ef43218af084fce8f475e6f74cb747219015e603a2f80321b20b",
+      "bytes": 1056
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/authority-cp3-final-fence47.json",
+      "sha256": "59d93936b805056bb4979d0f5d282849fb2b5a12852329012309f284195061e5",
+      "bytes": 870
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/routing-cp3-final-fence47.json",
+      "sha256": "7bb31790f3a2008f6696b1c3ed59d112d0cb38fc2d0dd6e2327b8cbca9edcb23",
+      "bytes": 1007
+    },
+    {
+      "path": "delphi-ai/tools/subagent_review_run.py",
+      "sha256": "36ea0185160cf660ae58a89dd2fbb0bd488d7a1634ee42831aa26e14a83afe77",
+      "bytes": 6332
+    }
+  ],
+  "rootIndex": [
+    "160000 5db3fbe2043428749895fc3ff6441e9457467dd0 0\tapi-app",
+    "160000 40828a20f2d6c3a1443e7ee132f42483840d6abb 0\tfoundation_documentation",
+    "160000 6c99c27dafdce8ed9b461d17aaaaa491b8ae16e9 0\tweb-app"
+  ],
+  "preservationManifest": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/inherited-public-preservation-v1.2.json",
+  "foundationCommit": "0272c8198df5435eb76f4ff31be1a6efec6f9df0",
+  "policy": "FocusedHOWopinion20fullsource bodies andT/inputs immutable untilterminal+root. Disjointtest-onlypreparation may modify only2excludedpaths; no production source mutation/testcommands/Git/private/runtime. API45proof is historical toits261source snapshot; no claim newtests passed. No wholecandidate gate acceptance from narrowopinion.",
+  "parallelTestOnlyPaths": [
+    "api-app/src/domain/channels/transport/channel-dependencies.spec.ts",
+    "api-app/test/instagram-cp3-query-boundaries.e2e-spec.ts"
+  ]
+}

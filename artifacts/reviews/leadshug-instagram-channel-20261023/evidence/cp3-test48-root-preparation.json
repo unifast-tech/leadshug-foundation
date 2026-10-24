@@ -1,0 +1,27 @@
+{
+  "kind": "cp3-test48-root-preparation",
+  "date": "2026-10-24",
+  "writerTerminal": true,
+  "sourcesCompared": 261,
+  "deltas": [
+    {
+      "path": "api-app/src/domain/channels/transport/channel-dependencies.spec.ts",
+      "bytes": 10281,
+      "sha256": "45b98948ea0600a29537bb4546ad8f25e43bfea4a3248e5b912ab60b139e10f3"
+    },
+    {
+      "path": "api-app/test/instagram-cp3-query-boundaries.e2e-spec.ts",
+      "bytes": 15363,
+      "sha256": "7bada2a66635d8dc1e5cee18c3d4b9b331201b4714baf846d7711861a284de21"
+    }
+  ],
+  "focusedOpinionFrozenRows": 39,
+  "opinionFrozenRowsExact": true,
+  "rootInspection": [
+    "All initial-options positives now open genuine WhatsApp conversation through real BFF; no IG recipient borrowing for pending/cardinality assertions.",
+    "Separate mixed-channel IG negative expects zero initial choices and unchanged actual sent arrays; expected RED until B46 repair.",
+    "Bounded guard covers named OfficialChannelWindowPolicy and namespaced concrete policy access while preserving existing abstract/type/address controls."
+  ],
+  "execution": "NOTRUN",
+  "claim": "Test preparation only; no causal executed RED or feature acceptance."
+}

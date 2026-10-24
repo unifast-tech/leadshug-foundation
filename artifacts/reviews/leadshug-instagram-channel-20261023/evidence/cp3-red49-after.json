@@ -1,0 +1,22 @@
+{
+  "candidate": "cp3-red49",
+  "postflight": "pass",
+  "verified_at": "terminal-after-run",
+  "counts": {
+    "source_rows": 261,
+    "source_mismatches": 0,
+    "bound_input_rows": 695,
+    "bound_input_mismatches": 0,
+    "preservation_rows": 35,
+    "preservation_mismatches": 0,
+    "root_gitlinks": 3,
+    "root_index_exact": true,
+    "errors": []
+  },
+  "log": {
+    "bytes": 50872,
+    "sha256": "4da4077d5c770ab195dd80f3751fce09a8652557d7251caadc71071ab4603af7",
+    "complete_captured_stdout_stderr": true
+  },
+  "errors": []
+}

@@ -1,0 +1,48 @@
+{
+  "kind": "cp3-final-fence47-root-adjudication",
+  "date": "2026-10-24",
+  "status": "HOW integrated; implementation/proof pending",
+  "sourceRows": 20,
+  "todoExact": true,
+  "inputsExact": 18,
+  "preservationRowsExact": 35,
+  "rootGitlinksExact": 3,
+  "terminalTurnCompleted": true,
+  "strictMergePassed": true,
+  "outputs": [
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp3-final-fence47-opinion-raw.json",
+      "bytes": 15374,
+      "sha256": "82a4ab9ac6fa185b7513d52cd814ad11e10f392dc6fa78dbfcc8ebbee7de0573"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp3-final-fence47-opinion-events.jsonl",
+      "bytes": 16013,
+      "sha256": "10e8ca8a2e0a0dad4d8ecf7eeea9346b72335dc79b84ed8caead4283d3546844"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp3-final-fence47-opinion-stderr.log",
+      "bytes": 1608,
+      "sha256": "12624953475f30972a8c36719789c4131acc67f6fad6eb898cf25ef25ac847a7"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp3-final-fence47-opinion-merge.json",
+      "bytes": 14812,
+      "sha256": "3bab67ae390952066d520482b4504202b3acb5775c6aab55a3f2d8e1ee411808"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp3-final-fence47-opinion-merge.md",
+      "bytes": 20617,
+      "sha256": "0e9198bc00e708af506a2cdeac7e5b2541492e159ae7e53c435c35dd4083ec5a"
+    }
+  ],
+  "resolution": "Integrated advisory HOW, useful, project-partial. No newWHAT, route, schema, framework, protectedpath or waiver.",
+  "decision": [
+    "Use one short ReadCommitted final authorization transaction owned by OutboundService, with existing DispatchAdmissionService pin helper. Canonical provider -> qualifiedpeer -> conversation nonwaiting protection, then current resolver/channel/credential/BU pins, same abstract policy, actor last. No providerHTTP in transaction and no retries.",
+    "Introduce small paired ActorDispatchFence validateInTransaction/isSessionCurrent passed BFF->Conversations/Initial->Outbound. Reuse protected SessionService API without editing it. Final pure session/dispatchdeadline/window/strict60scredential check AFTER awaitedCOMMIT; no later localauthorization await.",
+    "Appendactual encryptedIGreauthorization andactualChannelsService WA disconnect tests before productionrepair. Mutation committed before decisiveprotection mustzeroPOST. Protected authorization-first schedule mustprove actualPGblocking and one capturedaccount/peerPOST; never awaitblockedmutationinsidebarrier. Preserve oldgrant/sessioncontrols, ACK/V1acceptance/recovery.",
+    "Coherentlocalauthorization is an orderingpoint conditional on commit and puretimechecks; no atomicDB+providerclaim. Postauthorizationmutationdoesnot eraseknownACK orauthorize redispatch.",
+    "B46 initialOptions canonicalrecipientnegative and A02 boundedguard remainindependent; allCP4/primary/human/latergates remainopen."
+  ],
+  "currentFreeze": "API49 canonical RED active/frozen; no source/T mutations until49terminal+root. Opinion47 frozeninput lifetime has ended after this reconciliation; historicalbytes remain retained."
+}

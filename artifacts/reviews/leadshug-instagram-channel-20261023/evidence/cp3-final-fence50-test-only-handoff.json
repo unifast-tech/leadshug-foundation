@@ -1,0 +1,34 @@
+{
+  "kind": "cp3-final-fence50-test-only-handoff",
+  "date": "2026-10-24",
+  "authority": "Existing approvedST-IG-03 v1.3; admitted two testpaths. API49terminal rootreconciled; opinion47terminal strictmerged rootintegrated advisoryHOW.",
+  "writePaths": [
+    {
+      "path": "api-app/test/instagram-cp3-authorization-fences.e2e-spec.ts",
+      "bytes": 15205,
+      "sha256": "ac62369b48608336ab89e1a865881927d3a1ab5c1821653e6006a24318a30411"
+    },
+    {
+      "path": "api-app/test/helpers.ts",
+      "bytes": 34495,
+      "sha256": "79c9343d80b72b1d8c378d6946bf38997133d528117b11a4fc1827fa3e52586c"
+    }
+  ],
+  "readManifest": "cp3-red49-frozen-manifest.json",
+  "opinion": "cp3-final-fence47-opinion-raw.json",
+  "rootAdjudication": "cp3-final-fence47-root-adjudication.json",
+  "constraints": [
+    "Soleproductwriter; source/testonly, no production/schema/config/docs/helperframework changes. Other259frozenpaths exact.",
+    "No tests/builds/runners/Git/private/env/runtime/Meta/processinspection. No goals unlessexplicituserrequest. NOTRUN untilrootfreeze/separatevalidator.",
+    "Preserve all6existing real grant/session negatives/livecontrols, deadlines/oracles. Testboundarydelegates realcontext, never mocks decision/Prisma/lifecycle.",
+    "Sourceproduction remains exactAPI45; captureactualawaited lifecyclecommit before releasing old gap. No executedRED claim untilactualrun.",
+    "Zero-provider-message-POST assertion is decisive first after awaitingpendingresponse, beforeexpected409; WApostPOSTackmayproduce503, which mustnot hidecountfailure. Safe actualstatus/counterdiagnostics onlysynthetic.",
+    "All pendingprimary/privacy/UTF8/CP4whole/latergates remain; nocheckpointacceptance."
+  ],
+  "tasks": [
+    "Extend existing IG fixture return account/channel/peer/route/generation; ordinaryreplyheldat publiccontextBeforeDispatch oldproviderread. Full realBFF REAUTHORIZE create/callback/confirm sameaccount with different syntheticlongtoken. Proveactiveversionadvance, encryptedmaterialreplacement and normalChannelCredentialResolver decryptnewtoken; ownership/resource/receipt/gen unchanged; grant/deadline live. RequiredzeroPOST then409BLOCKED afterrelease. CurrentexpectedRED becausecapturedoldcredentialcanPOST.",
+    "Actual ChannelsService.desconectar for selectedNAO_OFICIAL resource during heldoldboundary: oneordinaryV2 reply (realpreview establishesroute) andoneinitialsend. Awaitchannelremoved/resourcecurrentChannelIdnull, verifyadmission/intent/grant/deadline; release; requirezeroEvolutionmessagePOST then409BLOCKED. No fake lifecycle/credentialmetadata-only mutation.",
+    "Minimalhelpers-only synthetic fakeHTTP capture accessToken on instagramFake.messages toprove captured old vs rotatedtoken ifPOSToccurs; memory-only, no secrets/realruntime/logging. Preserve all existingfakepayload/counterbehaviors.",
+    "Authorization-first PGserialization andpostCOMMITsession controls follow sourceHOW in later explicitlyauthorized testphase; do not implement speculative locks or weakenmutationfirstproof now."
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "kind": "disjoint-test-only-preparation48",
+  "authority": "ExistingapprovedSTIGv1.3 admittedpaths; sourcefixnotauthorizedbythishandoff",
+  "writePaths": [
+    {
+      "path": "api-app/src/domain/channels/transport/channel-dependencies.spec.ts",
+      "sha256": "f427d97f992ce07b85b2bda3ee7f61ea7b75aa2c0863f1d6c04fdf7c9adc0b46",
+      "bytes": 9234
+    },
+    {
+      "path": "api-app/test/instagram-cp3-query-boundaries.e2e-spec.ts",
+      "sha256": "b8e360136c9c501e2e1f54e6c22ba2adbea108dbd2c19ab6a23e0751509aeacc",
+      "bytes": 13341
+    }
+  ],
+  "readManifest": "cp3-api45-frozen-manifest.json",
+  "constraints": [
+    "Oneproductwriter; onlytwoexcludedtestpaths; focusedopinion20sources/T/inputs immutable.",
+    "No tests/builds/runners/Docker/Git/private/env/runtime/Foundation edits; NOTRUN.",
+    "No production resolver/policy/port changes. Nativefinalfenceauthfile is opinioninput and MUST NOT change yet.",
+    "Maintain existingcases/cohort12/actualOAuth+PG/delegatequerytraces/productbudgets; genuineWApositive +separateIGnegative.",
+    "Guardfixturefirst authoredbeforeguardadjustment, but no executedRED claim; retain allabstract/address positivecontrols."
+  ],
+  "tasks": [
+    "B46-01: existing boundedinitialoptions positive test uses IGconversation incorrectly. Use genuineWAconversation from real BFF /conversations/open aspositive. Preserve originalsignedIGingress asownnegativecontrol; add mixedBUIGrecipient eligibility negative requires no eligibleWAinitial text/template/no providerPOST, currentlyexpectedRED untilresolverfix. Preserve12account tests elsewhere.",
+    "A-02 residual: newnegativefixtures for named OfficialChannelWindowPolicy and namespace concrete OfficialEligibilityPolicy (alsootherconcretepolicy nameswherealreadycontracted), and bounded existingAST/import guard fix tocatchthem. Retain abstract namespace/type/address andall existingpositivecontrols. No generalframework or wholeprogram dataflow."
+  ]
+}
