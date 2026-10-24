@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-24",
+  "kind": "postimplementation-diagnostic-red",
+  "command": "bash scripts/test-channels-local.sh api-instagram",
+  "log": "foundation_documentation/artifacts/tmp/instagram-channel-implementation/cp2-api-instagram-04.log",
+  "sha256": "ef79e744957f5514296d9405d3eb0b0e0c23a2f089183616c2a898265cdc3725",
+  "exit": 1,
+  "migrationsApplied": 31,
+  "lint": "passed",
+  "build": "passed",
+  "unitPassed": 395,
+  "integration": {
+    "passed": 35,
+    "failed": 12,
+    "total": 47
+  },
+  "qualification": "First OAuth reservation returns500, cascading to missing channel/webhook failures; root cause under executor investigation. Two explicit fixture mismatches reported (verify token literal; capability call without session). No pre-fix causal claim or current CP2 acceptance. Passing legacy migration guard-error scenario is expected, not a separate failure.",
+  "outstanding": "All16obligations need reached/asserted proof. ROOT01..03 behavioral proof and Q01 primary subscription question remain open; no operational/runtime claim.",
+  "executorDiagnosis": {
+    "production": "New Prisma attempt model required three subscription-tracking columns missing from its new disposable-only migration. Product schema/migration mismatch explains initial DB failures; corrected within admitted new migration after run4terminal.",
+    "fields": [
+      "subscription_started_at",
+      "last_subscription_attempt_at",
+      "subscription_requests"
+    ],
+    "fixtures": "Challenge token expectation corrected to synthetic helper configuration; capability case now authenticates real BFF session.",
+    "qualification": "Successful migrate deploy/status alone did not establish schema equivalence. No existing operational migration applied or edited by this diagnosis."
+  }
+}

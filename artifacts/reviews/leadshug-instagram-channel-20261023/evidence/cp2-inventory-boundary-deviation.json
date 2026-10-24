@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-24",
+  "kind": "procedural-boundary-deviation",
+  "actor": "instagram_cp2_executor",
+  "reportedAction": "One accidental broad read-only git status --short; no Git write.",
+  "restriction": "Explicit prohibition on broad repository/status/private-path inventory; this action was outside the handoff even without writes.",
+  "exposure": "Executor explicitly reports only path/status names, no values, file contents or credentials. Root did not read, request, reproduce or copy raw output and did not perform a replacement scan.",
+  "correction": [
+    "No further Git/status/diff/inventory actions by executor; positive explicit source paths only.",
+    "Root corrected false inference that visible CI/scripts/Web differences were concurrent root edits. Root has written Foundation documentation only; other product surfaces are prior baseline, not new concurrent writers.",
+    "Single product writer remains API CP2 executor. Read-only preparation agents performed no source/test/runtime writes. Current runner4 kept active without edits or duplicate runner."
+  ],
+  "scope": "No private/runtime/Meta authority granted. No credential revocation workflow inferred from path-only output. Existing security/privacy restrictions remain.",
+  "proofQualification": "Current static fixes1\u20133 were implemented before a separate causalRED was captured; do not claim such RED occurred. Require honest post-fix behavioral proof and affected review. No rollback or extra runner authorized by this artifact."
+}

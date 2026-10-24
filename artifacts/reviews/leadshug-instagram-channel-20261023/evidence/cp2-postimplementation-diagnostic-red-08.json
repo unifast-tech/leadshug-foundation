@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-24",
+  "kind": "postimplementation-diagnostic-red",
+  "command": "bash scripts/test-channels-local.sh api-instagram",
+  "log": "foundation_documentation/artifacts/tmp/instagram-channel-implementation/cp2-api-instagram-08.log",
+  "sha256": "021796524143978c07b47a92c7cafde00a2ce74c3976a3d0da9a033b3f589877",
+  "exit": 1,
+  "migrationsApplied": 31,
+  "lint": "passed",
+  "build": "passed",
+  "unitPassed": 395,
+  "integration": {
+    "passed": 43,
+    "failed": 4,
+    "total": 47
+  },
+  "qualification": "Three actual PostgreSQL ingress cases violated conversation_routes_platform_scope_check. Business and peer identity scopes diverged. Executor aligned app/API/account-qualified scope after terminal run; cancellation state failure followed absent receipt. Configured-version /me alignment also applied from primary evidence.",
+  "acceptance": "not accepted; all16 obligations and primary-protocol uncertainty remain subject to reached proof and fresh review",
+  "observation": "Root matched exact log hash and bounded terminal test summary; causal diagnosis from sole executor, no new runtime/provider action."
+}

@@ -611,6 +611,9 @@ Historical planning observation retained: IG-REV-01..04, strategic source, high/
 | IG-CP2-ROOT-01 | medium | release-blocker | fix in this TODO | accurate persisted budget backoff under SCOPE-04/VAL-03 | open; static, behavioral case requested | cp2-root-static-observations.json |
 | IG-CP2-ROOT-02 | high | release-blocker | fix in this TODO | current post-HTTP lease fence under SCOPE-04/VAL-03 | open; static, delayed authorization case requested | cp2-root-static-observations.json |
 | IG-CP2-ROOT-03 | medium | release-blocker | fix in this TODO | actual credential acquisition/expiry under DOD-03/VAL-03 | open; static, delayed profile case requested | cp2-root-static-observations.json |
+| IG-SUBPROTO-01 | high | release-blocker | resolve primary protocol in this TODO | Own-subscription GET envelope, ID subject and completeness remain unproved; do not infer unsupported from omission | open; primary prerequisite | subscription-protocol-opinion-result.json |
+| IG-SUBPROTO-02 | medium | release-blocker | preserve UNKNOWN fence in admitted code | An unexplained empty or mismatched-ID observation cannot permit a second POST after uncertainty | open; implementation/proof requested | subscription-protocol-opinion-result.json |
+| IG-SUBPROTO-03 | medium | release-blocker | retain typed identity purposes in this TODO | No speculative parent-app configuration or guessed ID comparison; same approved OAuth path | open; current-source review pending | subscription-protocol-opinion-result.json |
 
 ## TODO Closeout Disposition
 - **Disposition:** blocked
@@ -1045,3 +1048,19 @@ CP2 continues under APROVADOv1.3, not a renewed approval boundary. A fresh seria
 `evidence/cp2-initial-route-red.json` retains the clean395unit/33integration-pass/2route404fail diagnostic before any production edits, as explicitly reported by the executor. It proves route absence only; no downstream OAuth/signature behavior is inferred. Three later pre-test lint/build failures remain qualified in separate receipts, with31migrations applied to the disposable database. All16CP2 obligations remain required before acceptance.
 
 `evidence/cp2-root-static-observations.json` records three concrete static risks in currently mutable admitted source: budget backoff collapses to1second, captured acquisition time is reused as a stale callback-lease clock, and credential acquisition is recorded after /me delay. They remain open until meaningful behavioral proof and narrow correction; no dynamic exploit is claimed. The same artifact records Q01 as an unresolved subscription-envelope question, not an established defect: verify app/account identity semantics from primary evidence before accepting read-before-write. No guessed identity equivalence, new config, fallback or scope grant follows. User-approved WHAT,35immutable paths and runtime/private exclusions remain unchanged.
+
+## CP2 protocol opinion and reached diagnostic proof
+
+The strongest fresh bounded architecture opinion is terminal with changes_required; strict merge passed. This was a frozen-summary protocol opinion, not source adherence. Public primary sources establish the initial Instagram Login subscription POST and success:true, but did not establish the GET envelope, returned ID namespace, own-app visibility or conclusive-empty semantics. Their omission does not establish unsupported. No replacement identity or configuration is inferred.
+
+| Finding ID | Resolution | Usefulness | Formalizable | Candidate Rule Level | Candidate Rule ID | Rationale / Evidence |
+| --- | --- | --- | --- | --- | --- | --- |
+| IG-SUBPROTO-01 | Integrated | useful | partial | project | n/a | Primary-contract prerequisite remains open; subscription-protocol-opinion-result.json |
+| IG-SUBPROTO-02 | Integrated | useful | yes | project | n/a | Unproved observation remains UNKNOWN and preserves the durable mutation fence; implementation and proof pending |
+| IG-SUBPROTO-03 | Integrated | useful | partial | project | n/a | OAuth client, professional account and parent-app purposes remain distinct without speculative configuration |
+
+Initial mutation and retry have distinct proof requirements: the documented first POST can be dispatched once only under a durable claim proving no earlier dispatch. A prior uncertain dispatch requires observation before any retry, and UNKNOWN never permits another mutation. This is subordinate HOW within the approved read-before-retry contract, not a waiver of the unresolved recovery criterion. Actual provider/private investigation remains excluded until a concrete later plan is approved.
+
+Root-observed receipts cp2-postimplementation-diagnostic-red-04..08.json retain actual failed rounds, reached assertions and executor diagnoses. Round8 passed395unit and43/47integration; the remaining ingress scope defect was corrected only after that run terminated. Source remains mutable and CP2 unaccepted; no current acceptance follows from aggregate counts. ROOT01..03 have reported corrections and later behavioral assertions, but no separate pre-fix causal RED was captured for those static findings.
+
+The path-only broad Git status deviation is retained in cp2-inventory-boundary-deviation.json: one unauthorized inventory command, no content/credential exposure or writes reported. Root did not inspect, reproduce or copy its raw output. No private-file authority or evidence claim follows. Existing runtime and35immutable public-path boundaries remain unchanged.

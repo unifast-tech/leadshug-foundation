@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-24",
+  "kind": "postimplementation-diagnostic-red",
+  "command": "bash scripts/test-channels-local.sh api-instagram",
+  "log": "foundation_documentation/artifacts/tmp/instagram-channel-implementation/cp2-api-instagram-06.log",
+  "sha256": "0733e4d7038ad0073b7340c802629666da9b53de97dbb78789883bac7395dfe3",
+  "exit": 1,
+  "migrationsApplied": 31,
+  "lint": "passed",
+  "build": "passed",
+  "unitPassed": 395,
+  "integration": {
+    "passed": 39,
+    "failed": 8,
+    "total": 47
+  },
+  "qualification": "Initial concurrent Supertest requests reset an unbound server; listener and compound AppUser fixture selector corrected after terminal run. Earlier initial failure cascaded to downstream missing-channel assertions.",
+  "acceptance": "not accepted; all16 obligations and primary-protocol uncertainty remain subject to reached proof and fresh review",
+  "observation": "Root matched exact log hash and bounded terminal test summary; causal diagnosis from sole executor, no new runtime/provider action."
+}

@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-24",
+  "kind": "postimplementation-targeted-green-qualified",
+  "command": "bash scripts/test-channels-local.sh api-instagram",
+  "log": "foundation_documentation/artifacts/tmp/instagram-channel-implementation/cp2-api-instagram-09.log",
+  "sha256": "e4625ca144f3d1e1eee82c0da434434254d97c7416deed007224c6b65039544a",
+  "exit": 0,
+  "migrationsApplied": 31,
+  "lint": "passed",
+  "build": "passed",
+  "unitPassed": 395,
+  "integration": {
+    "passed": 47,
+    "failed": 0,
+    "total": 47
+  },
+  "qualification": "Current mutable candidate before subsequent subscription UNKNOWN/fence correction. Source is not frozen, no CP2 acceptance or conclusive subscription-GET primary proof. Full API and fresh source review remain required. Root matched exact terminal log hash and bounded test summaries."
+}

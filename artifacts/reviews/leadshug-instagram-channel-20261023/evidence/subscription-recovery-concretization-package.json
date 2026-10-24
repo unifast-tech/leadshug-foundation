@@ -1,0 +1,44 @@
+{
+  "kind": "bounded-summary-architecture-opinion",
+  "immutable": true,
+  "scope": "Resolve subordinate HOW of approved subscription-recovery semantics; no source acceptance, no provider or private authority, no actual execution.",
+  "governingTodo": "foundation_documentation/todos/active/features/TODO-leadshug-instagram-channel.md",
+  "approvedClauses": [
+    "DOD-03 OAuth ADMIN+, idempotent, session/resource verified; encrypted credentials; expired/revoked never enable send; reauthorization cannot change resource/owner silently.",
+    "POST /instagram-authorizations/:id/confirm: operator explicitly confirms readable server candidate; durable ownership/mapping before subscription; waits for real receipt.",
+    "POST /instagram-authorizations/:id/advance: explicit recovery; up to3 requests of10s,40s stage,60s lease; read-before-retry; ambiguous subscription never automatic repeat mutation.",
+    "OAuth/exchange/subscription/send: one dispatch per claim, HTTP outside transaction, persistent actor and BU budgets,10s cooldown; listings no provider calls.",
+    "Subscribe app messages and account /IG_ID/subscribed_apps on graph.instagram.com after local mapping; distinct checks. Read only own account subscription; ambiguous mutation requires read-before-retry without touching other app subscriptions.",
+    "Actual Meta/private/runtime operations require later concrete plan; no code approval grants that authority."
+  ],
+  "primaryFacts": {
+    "POST": "Actual official Meta webhooks/setup.md documents Instagram Login POST graph.instagram.com/v26.0/IG_ID/subscribed_apps and success:true, Instagram User access token.",
+    "GET": "Prior fresh strongest opinion IG-SUBPROTO-01 did not establish GET support/envelope, own-app visibility, ID subject or complete/empty semantics; omissions do not prove unsupported.",
+    "identities": "Product OAuth client, professional /me.user_id and parent Meta app have distinct purposes; no equality or inequality is inferred.",
+    "sources": [
+      "https://developers.facebook.com/documentation/instagram-platform/webhooks/setup.md",
+      "https://developers.facebook.com/documentation/instagram-platform/instagram-api-with-instagram-login/business-login.md",
+      "https://developers.facebook.com/documentation/instagram-platform/instagram-api-with-instagram-login/get-started.md"
+    ]
+  },
+  "priorOpinion": {
+    "finding": "IG-SUBPROTO-01 high remains open before recovery criterion acceptance; no hidden waiver",
+    "recommended": "own confirmed / conclusively absent / UNKNOWN observer; preserve pending fence on UNKNOWN; obtain primary contract; an installation observation is empirical, not universal guarantee."
+  },
+  "proposedFaithfulImplementation": [
+    "A first documented POST is allowed exactly once under a durable claim proving no prior subscription dispatch for the same resource, including across attempt/reauthorization boundaries.",
+    "A definite success:true confirms own subscription request; connection still requires actual authenticated ingress receipt.",
+    "Any timeout, malformed/negative success or crash-after-dispatch stays durable UNCERTAIN; no background or blind mutation retry.",
+    "Explicit advance may perform the bounded own-account read, but unresolved response schema/ID/empty semantics always returns UNKNOWN. It never compares a guessed account/client/parent ID to permit mutation.",
+    "Only a later primary-supported conclusive own absence could authorize another POST. Until then, unknown remains pending; new authorization attempt cannot clear prior uncertain resource fence.",
+    "No guessed configuration, generic framework, provider fallback, other-app subscription mutation or broader scope."
+  ],
+  "questions": [
+    "Does the approved observable contract actually require a provider-independent successful automatic recovery from an uncertain subscription, or does honest durable pending/UNKNOWN with read-before-retry satisfy it until the provider offers conclusive evidence? Do not invent either a waiver or an unstated success guarantee.",
+    "Can the conservative implementation be source-reviewed and CP3 independent work proceed while the primary GET uncertainty remains explicitly open as final delivery/real-provider prerequisite? Distinguish checkpoint sequencing from functional delivery acceptance.",
+    "Is it more faithful/simpler to avoid an unproved GET entirely and retain pending awaiting separately approved real proof, or does that violate the explicit own-account-read requirement? State precise remaining blocker.",
+    "If empirical investigation is needed, evaluate a proposed operator-only maximum2 read-only GET plan using an already eligible existing Instagram User token in an official/private REST tool: v26.0/me?fields=user_id, then v26.0/IG_ID/subscribed_apps?fields=id,subscribed_fields. No token generation/new permission, POST/DELETE/send, local env/runtime access or automatic retry; if host/token unavailable stop. Operator reports only HTTP/error code, collection shape, paging presence and ID namespace matches compared locally (professional/client/parent/other), not token/raw payload/IDs. Would this materially resolve the HOW, and what cannot be inferred? This is a proposal only, not authorized or executed."
+  ],
+  "consumerMatrix": "No new producer surface from this opinion. Existing approved OAuth UI confirmation, safe pending states, paged connections and real inbox consumer remain required at CP4. No backend-only substitute or UI waiver. All CP2 sixteen obligations, CP3 shared send/eligibility, CP4UI/CI/browser, CP5assurance and CP6separatelyapproved real IG+WA proof remain required.",
+  "reviewBoundary": "Read this immutable package and generated dispatch only. Public primary URLs may be fetched for exact disputed protocol. Do not inspect mutable product sources, current TODO beyond package, private files or provider accounts. Root/source writer continues independent mutable CP2 work. This opinion neither approves implementation nor closes source findings."
+}

@@ -1,0 +1,10 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-24",
+  "kind": "public-primary-protocol-recheck",
+  "url": "https://developers.facebook.com/documentation/instagram-platform/instagram-api-with-instagram-login/get-started.md",
+  "rawSha256": "41bd42ba9c152be5d2bf69a8d4bf2ec9831d0649b520bc2f93b509d632552526",
+  "fact": "Actual official markdown body documents graph.instagram.com/v26.0/me?fields=user_id,username. HTML-pre wrapper decoded; Page Not Found rejected.",
+  "implementationConsequence": "Profile Graph lookup uses configured v26.0; token exchange /access_token remains its distinct documented endpoint.",
+  "qualification": "Public documentation only; no account/provider/private request. Does not resolve subscribed_apps GET envelope or ID namespace."
+}

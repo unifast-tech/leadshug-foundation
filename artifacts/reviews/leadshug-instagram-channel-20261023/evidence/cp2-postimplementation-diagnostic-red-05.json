@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-24",
+  "kind": "postimplementation-diagnostic-red",
+  "command": "bash scripts/test-channels-local.sh api-instagram",
+  "log": "foundation_documentation/artifacts/tmp/instagram-channel-implementation/cp2-api-instagram-05.log",
+  "sha256": "5de868f60ce7fc81083d9114ec61eefde80d55cdd2e5c61c7d7598689cf698ab",
+  "exit": 1,
+  "migrationsApplied": 31,
+  "lint": "passed",
+  "build": "passed",
+  "unitPassed": 395,
+  "integration": {
+    "passed": 37,
+    "failed": 10,
+    "total": 47
+  },
+  "qualification": "OAuth reserve remained500: executor identified PostgreSQL advisory-lock void deserialization; locks corrected to text projection after terminal run. No downstream claim beyond reached assertions.",
+  "acceptance": "not accepted; all16 obligations and primary-protocol uncertainty remain subject to reached proof and fresh review",
+  "observation": "Root matched exact log hash and bounded terminal test summary; causal diagnosis from sole executor, no new runtime/provider action."
+}
